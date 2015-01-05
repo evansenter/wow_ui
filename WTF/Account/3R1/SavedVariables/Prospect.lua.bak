@@ -1,0 +1,72 @@
+
+ProspectOreHerbsTable = {
+	["72092"] = {
+		["timesLooted"] = 49,
+		["Wild Jade"] = {
+			["count"] = 3,
+			["total"] = 3,
+		},
+		["Imperial Amethyst"] = {
+			["count"] = 5,
+			["total"] = 5,
+		},
+		["Vermilion Onyx"] = {
+			["count"] = 2,
+			["total"] = 2,
+		},
+		["Sun's Radiance"] = {
+			["count"] = 3,
+			["total"] = 3,
+		},
+		["looted"] = 124,
+		["Alexandrite"] = {
+			["count"] = 5,
+			["total"] = 5,
+		},
+		["Lapis Lazuli"] = {
+			["count"] = 9,
+			["total"] = 11,
+		},
+		["Pandarian Garnet"] = {
+			["count"] = 9,
+			["total"] = 11,
+		},
+		["Sunstone"] = {
+			["count"] = 14,
+			["total"] = 15,
+		},
+		["Sparkling Shard"] = {
+			["count"] = 40,
+			["total"] = 63,
+		},
+		["Primordial Ruby"] = {
+			["count"] = 2,
+			["total"] = 2,
+		},
+		["Tiger Opal"] = {
+			["count"] = 13,
+			["total"] = 14,
+		},
+		["River's Heart"] = {
+			["count"] = 5,
+			["total"] = 5,
+		},
+		["Roguestone"] = {
+			["count"] = 14,
+			["total"] = 14,
+		},
+	},
+}
+ProspectOptions = {
+	["tooltip"] = true,
+	["verbose"] = true,
+	["alwaysUseMod"] = false,
+	["badFrames"] = {
+	},
+	["goodFrames"] = {
+	},
+	["mod"] = "shift",
+	["precision"] = 0,
+	["btn"] = 2,
+	["autoloot"] = false,
+}

@@ -1,0 +1,185 @@
+
+Bartender4DB = {
+	["namespaces"] = {
+		["ActionBars"] = {
+			["profiles"] = {
+				["Pandatal - Illidan"] = {
+					["actionbars"] = {
+						{
+							["version"] = 3,
+							["padding"] = 6,
+							["hidehotkey"] = true,
+							["position"] = {
+								["x"] = -254.0000152587891,
+								["point"] = "BOTTOM",
+								["y"] = 43.99999618530273,
+							},
+						}, -- [1]
+						{
+							["enabled"] = false,
+							["version"] = 3,
+							["position"] = {
+								["x"] = -231.5000915527344,
+								["point"] = "CENTER",
+								["y"] = -189.5000610351563,
+							},
+						}, -- [2]
+						{
+							["rows"] = 12,
+							["version"] = 3,
+							["position"] = {
+								["x"] = -43.5,
+								["point"] = "RIGHT",
+								["y"] = 248.0000305175781,
+							},
+							["padding"] = 6,
+						}, -- [3]
+						{
+							["rows"] = 12,
+							["enabled"] = false,
+							["version"] = 3,
+							["position"] = {
+								["x"] = -359.4400634765625,
+								["point"] = "RIGHT",
+								["y"] = 227.5599975585938,
+							},
+							["padding"] = 5,
+						}, -- [4]
+						{
+							["version"] = 3,
+							["position"] = {
+								["x"] = -254.0000152587891,
+								["point"] = "BOTTOM",
+								["y"] = 120,
+							},
+							["padding"] = 6,
+						}, -- [5]
+						{
+							["version"] = 3,
+							["position"] = {
+								["x"] = -254.0000152587891,
+								["point"] = "BOTTOM",
+								["y"] = 82,
+							},
+							["padding"] = 6,
+						}, -- [6]
+						{
+						}, -- [7]
+						{
+						}, -- [8]
+						[10] = {
+						},
+					},
+				},
+			},
+		},
+		["LibDualSpec-1.0"] = {
+		},
+		["ExtraActionBar"] = {
+			["profiles"] = {
+				["Pandatal - Illidan"] = {
+					["enabled"] = false,
+					["version"] = 3,
+					["position"] = {
+						["x"] = -31.49996948242188,
+						["point"] = "BOTTOM",
+						["y"] = 223,
+					},
+				},
+			},
+		},
+		["MicroMenu"] = {
+			["profiles"] = {
+				["Pandatal - Illidan"] = {
+					["enabled"] = false,
+					["version"] = 3,
+					["position"] = {
+						["x"] = 37.5,
+						["point"] = "BOTTOM",
+						["scale"] = 1,
+						["y"] = 41.75,
+					},
+				},
+			},
+		},
+		["XPBar"] = {
+		},
+		["BlizzardArt"] = {
+			["profiles"] = {
+				["Pandatal - Illidan"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = -512,
+						["point"] = "BOTTOM",
+						["y"] = 47,
+					},
+				},
+			},
+		},
+		["Vehicle"] = {
+			["profiles"] = {
+				["Pandatal - Illidan"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = 99.50006103515625,
+						["point"] = "CENTER",
+						["y"] = 47.49993896484375,
+					},
+				},
+			},
+		},
+		["BagBar"] = {
+			["profiles"] = {
+				["Pandatal - Illidan"] = {
+					["enabled"] = false,
+					["version"] = 3,
+					["onebag"] = true,
+					["position"] = {
+						["x"] = 463.5,
+						["point"] = "BOTTOM",
+						["y"] = 41.75,
+					},
+				},
+			},
+		},
+		["StanceBar"] = {
+			["profiles"] = {
+				["Pandatal - Illidan"] = {
+					["enabled"] = false,
+					["version"] = 3,
+					["position"] = {
+						["x"] = -460,
+						["point"] = "BOTTOM",
+						["scale"] = 1,
+						["y"] = 116,
+					},
+				},
+			},
+		},
+		["PetBar"] = {
+			["profiles"] = {
+				["Pandatal - Illidan"] = {
+					["enabled"] = false,
+					["version"] = 3,
+					["position"] = {
+						["x"] = -120,
+						["point"] = "BOTTOM",
+						["y"] = 116,
+					},
+				},
+			},
+		},
+		["RepBar"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Pandatal - Illidan"] = "Pandatal - Illidan",
+	},
+	["profiles"] = {
+		["Pandatal - Illidan"] = {
+			["blizzardVehicle"] = true,
+			["focuscastmodifier"] = false,
+			["outofrange"] = "hotkey",
+		},
+	},
+}

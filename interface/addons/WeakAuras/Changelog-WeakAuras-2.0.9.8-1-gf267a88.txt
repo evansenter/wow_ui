@@ -1,0 +1,2 @@
+Benjamin Staneck:
+	- Fix taint while deleting auras

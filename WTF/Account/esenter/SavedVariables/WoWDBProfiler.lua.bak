@@ -1,0 +1,312 @@
+
+WoWDBProfilerData = {
+	["profileKeys"] = {
+		["Noq - Eredar"] = "Default",
+	},
+	["version"] = 16,
+	["build_num"] = 17128,
+	["global"] = {
+		["npcs"] = {
+			[42177] = {
+				["battle_pet_data"] = {
+					["Uncommon"] = {
+						["level_1"] = {
+							["speed"] = 10,
+							["max_health"] = 156,
+							["attack"] = 9,
+						},
+					},
+				},
+			},
+			[47944] = {
+				["battle_pet_data"] = {
+					["Rare"] = {
+						["level_1"] = {
+							["speed"] = 10,
+							["max_health"] = 161,
+							["attack"] = 11,
+						},
+					},
+				},
+			},
+			[32591] = {
+				["battle_pet_data"] = {
+					["Uncommon"] = {
+						["level_1"] = {
+							["speed"] = 11,
+							["max_health"] = 145,
+							["attack"] = 11,
+						},
+					},
+				},
+			},
+			[62114] = {
+				["wild_pet"] = true,
+				["battle_pet_data"] = {
+					["Uncommon"] = {
+						["level_1"] = {
+							["speed"] = 13,
+							["max_health"] = 145,
+							["attack"] = 10,
+						},
+					},
+				},
+			},
+			[35394] = {
+				["battle_pet_data"] = {
+					["Rare"] = {
+						["level_5"] = {
+							["speed"] = 52,
+							["max_health"] = 360,
+							["attack"] = 65,
+						},
+					},
+				},
+			},
+			[33194] = {
+				["battle_pet_data"] = {
+					["Uncommon"] = {
+						["level_1"] = {
+							["speed"] = 10,
+							["max_health"] = 153,
+							["attack"] = 11,
+						},
+					},
+				},
+			},
+			[70451] = {
+				["wild_pet"] = true,
+				["battle_pet_data"] = {
+					["Rare"] = {
+						["level_5"] = {
+							["speed"] = 58,
+							["max_health"] = 340,
+							["attack"] = 61,
+						},
+					},
+				},
+			},
+			[33198] = {
+				["battle_pet_data"] = {
+					["Uncommon"] = {
+						["level_1"] = {
+							["speed"] = 11,
+							["max_health"] = 148,
+							["attack"] = 11,
+						},
+					},
+				},
+			},
+			[67233] = {
+				["battle_pet_data"] = {
+					["Uncommon"] = {
+						["level_1"] = {
+							["speed"] = 10,
+							["max_health"] = 160,
+							["attack"] = 10,
+						},
+					},
+				},
+			},
+			[21018] = {
+				["battle_pet_data"] = {
+					["Uncommon"] = {
+						["level_3"] = {
+							["speed"] = 34,
+							["max_health"] = 251,
+							["attack"] = 28,
+						},
+					},
+				},
+			},
+			[10259] = {
+				["battle_pet_data"] = {
+					["Uncommon"] = {
+						["level_1"] = {
+							["speed"] = 10,
+							["max_health"] = 160,
+							["attack"] = 10,
+						},
+					},
+				},
+			},
+			[15706] = {
+				["battle_pet_data"] = {
+					["Uncommon"] = {
+						["level_1"] = {
+							["speed"] = 10,
+							["max_health"] = 151,
+							["attack"] = 10,
+						},
+					},
+				},
+			},
+			[32589] = {
+				["battle_pet_data"] = {
+					["Uncommon"] = {
+						["level_1"] = {
+							["speed"] = 11,
+							["max_health"] = 148,
+							["attack"] = 11,
+						},
+					},
+				},
+			},
+			[36871] = {
+				["battle_pet_data"] = {
+					["Rare"] = {
+						["level_1"] = {
+							["speed"] = 8,
+							["max_health"] = 161,
+							["attack"] = 13,
+						},
+					},
+				},
+			},
+			[48242] = {
+				["battle_pet_data"] = {
+					["Uncommon"] = {
+						["level_1"] = {
+							["speed"] = 9,
+							["max_health"] = 166,
+							["attack"] = 9,
+						},
+					},
+				},
+			},
+			[61883] = {
+				["battle_pet_data"] = {
+					["Rare"] = {
+						["level_3"] = {
+							["speed"] = 47,
+							["max_health"] = 217,
+							["attack"] = 31,
+						},
+					},
+				},
+			},
+			[62116] = {
+				["wild_pet"] = true,
+				["battle_pet_data"] = {
+					["Poor"] = {
+						["level_1"] = {
+							["speed"] = 8,
+							["max_health"] = 142,
+							["attack"] = 9,
+						},
+					},
+				},
+			},
+			[67230] = {
+				["battle_pet_data"] = {
+					["Uncommon"] = {
+						["level_1"] = {
+							["speed"] = 11,
+							["max_health"] = 157,
+							["attack"] = 9,
+						},
+					},
+				},
+			},
+			[29726] = {
+				["battle_pet_data"] = {
+					["Uncommon"] = {
+						["level_7"] = {
+							["speed"] = 75,
+							["max_health"] = 474,
+							["attack"] = 67,
+						},
+					},
+				},
+			},
+			[21055] = {
+				["battle_pet_data"] = {
+					["Uncommon"] = {
+						["level_1"] = {
+							["speed"] = 11,
+							["max_health"] = 148,
+							["attack"] = 10,
+						},
+					},
+				},
+			},
+			[32841] = {
+				["battle_pet_data"] = {
+					["Uncommon"] = {
+						["level_1"] = {
+							["speed"] = 10,
+							["max_health"] = 153,
+							["attack"] = 11,
+						},
+					},
+				},
+			},
+			[7562] = {
+				["battle_pet_data"] = {
+					["Uncommon"] = {
+						["level_1"] = {
+							["speed"] = 10,
+							["max_health"] = 151,
+							["attack"] = 10,
+						},
+					},
+				},
+			},
+			[37865] = {
+				["battle_pet_data"] = {
+					["Uncommon"] = {
+						["level_1"] = {
+							["speed"] = 10,
+							["max_health"] = 145,
+							["attack"] = 12,
+						},
+					},
+				},
+			},
+			[23909] = {
+				["battle_pet_data"] = {
+					["Rare"] = {
+						["level_1"] = {
+							["speed"] = 10,
+							["max_health"] = 155,
+							["attack"] = 12,
+						},
+					},
+				},
+			},
+			[68664] = {
+				["battle_pet_data"] = {
+					["Rare"] = {
+						["level_1"] = {
+							["speed"] = 12,
+							["max_health"] = 152,
+							["attack"] = 12,
+						},
+					},
+				},
+			},
+			[62829] = {
+				["battle_pet_data"] = {
+					["Uncommon"] = {
+						["level_1"] = {
+							["speed"] = 10,
+							["max_health"] = 153,
+							["attack"] = 10,
+						},
+						["level_4"] = {
+							["speed"] = 40,
+							["max_health"] = 314,
+							["attack"] = 40,
+						},
+					},
+				},
+			},
+		},
+		["quests"] = {
+			[31815] = {
+			},
+			[28790] = {
+			},
+		},
+	},
+}

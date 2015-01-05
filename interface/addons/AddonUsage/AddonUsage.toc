@@ -1,0 +1,8 @@
+## Interface: 60000
+## Title: Addon Usage
+## Notes: Displays addon memory/cpu usage.
+## Author: Gello
+## Version: 2.0.6
+AddonUsage.xml
+AddonUsage.lua
+

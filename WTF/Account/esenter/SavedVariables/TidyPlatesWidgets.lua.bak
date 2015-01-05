@@ -1,0 +1,12 @@
+
+TidyPlatesWidgetData = {
+	["UnitClass"] = {
+		["Khatek"] = "PALADIN",
+	},
+	["CachedAuraDurations"] = {
+	},
+	["UnitDescriptions"] = {
+	},
+	["UnitGuild"] = {
+	},
+}

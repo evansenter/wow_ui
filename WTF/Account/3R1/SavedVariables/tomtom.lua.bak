@@ -1,0 +1,20 @@
+
+TomTomDB = {
+	["profileKeys"] = {
+		["Natal - Illidan"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}
+TomTomWaypoints = nil
+TomTomWaypointsMF = {
+	["profileKeys"] = {
+		["Natal - Illidan"] = "Natal - Illidan",
+	},
+	["profiles"] = {
+		["Natal - Illidan"] = {
+		},
+	},
+}

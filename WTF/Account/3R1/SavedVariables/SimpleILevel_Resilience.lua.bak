@@ -1,0 +1,9 @@
+
+SIL_ResilSettings = {
+	["profileKeys"] = {
+		["Natal - Illidan"] = "Default",
+	},
+	["global"] = {
+		["paperdoll"] = false,
+	},
+}

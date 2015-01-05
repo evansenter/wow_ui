@@ -1,0 +1,25 @@
+
+ElvCharacterDB = {
+	["ChatEditHistory"] = {
+	},
+	["ChatLog"] = {
+		["1373674948.197"] = {
+			"^LFW_V2200", -- [1]
+			"Natalan", -- [2]
+			"", -- [3]
+			"5. TCForwarder2IIll", -- [4]
+			"Natalan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			5, -- [8]
+			"TCForwarder2IIll", -- [9]
+			0, -- [10]
+			24258, -- [11]
+			"0x040000000663D914", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			[20] = "CHAT_MSG_CHANNEL",
+		},
+	},
+}

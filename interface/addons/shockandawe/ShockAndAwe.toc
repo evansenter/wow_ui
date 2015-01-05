@@ -1,0 +1,27 @@
+## Interface: 60000
+## Title: ShockAndAwe
+## Version: 7.16
+## Author: Levva of EU Khadgar 
+## Notes: Enhance Shaman timer information for Shields, Shocks, Windfury, Stormstrike & Maelstrom
+## X-Category: Shaman
+## SavedVariablesPerCharacter: ShockAndAweDBPC
+## Revision: $Id: ShockAndAwe.toc 405 2013-09-08 20:02:35Z bertelmonster $
+## OptionalDeps: LibStub, CallbackHandler-1.0, AceAddon-3.0, AceEvent-3.0, AceDB-3.0, AceLocale-3.0, AceConsole-3.0, AceGUI-3.0, AceConfig-3.0, AceTimer-3.0, LibSharedMedia-3.0, LibAboutPanel, SCT, TopScoreFu
+## X-Curse-Packaged-Version: v7.16
+## X-Curse-Project-Name: ShockAndAwe
+## X-Curse-Project-ID: shockandawe
+## X-Curse-Repository-ID: wow/shockandawe/mainline
+
+#@no-lib-strip@
+embeds.xml
+#@end-no-lib-strip@.
+
+Locales\Locales.xml
+ShockAndAwe.lua
+Bindings.lua
+Options.lua
+Uptime.lua
+Stats.lua
+Priority.lua
+Export.lua
+News.lua

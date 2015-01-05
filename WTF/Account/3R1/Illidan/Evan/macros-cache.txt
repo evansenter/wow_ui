@@ -1,0 +1,75 @@
+VER 3 010000000000001C "Binding Heal" "INV_MISC_QUESTIONMARK"
+#showtooltip Binding Heal
+/run UIErrorsFrame:UnregisterEvent("UI_ERROR_MESSAGE")
+/use Archangel
+/use Binding Heal
+/run UIErrorsFrame:RegisterEvent("UI_ERROR_MESSAGE")
+END
+VER 3 010000000000001D "Dispel Magic" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [harm]Dispel Magic
+/use [@targettarget]Dispel Magic
+END
+VER 3 0100000000000009 "DPS Penance" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/run UIErrorsFrame:UnregisterEvent("UI_ERROR_MESSAGE")
+/use [harm]Penance
+/use [@targettarget]Penance
+/use Penance
+/run UIErrorsFrame:RegisterEvent("UI_ERROR_MESSAGE")
+END
+VER 3 0100000000000018 "Flash Heal" "INV_MISC_QUESTIONMARK"
+#showtooltip Flash Heal
+/run UIErrorsFrame:UnregisterEvent("UI_ERROR_MESSAGE")
+/use Archangel
+/use Flash Heal
+/run UIErrorsFrame:RegisterEvent("UI_ERROR_MESSAGE")
+END
+VER 3 0100000000000005 "HF" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [harm]Holy Fire
+/use [@targettarget]Holy Fire
+END
+VER 3 0100000000000007 "HWC" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [harm]Holy Word: Chastise
+/use [@targettarget]Holy Word: Chastise
+END
+VER 3 010000000000001B "Mana" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [@targettarget][]Shadowfiend
+/use 13
+/use 14
+END
+VER 3 0100000000000019 "PoH" "INV_MISC_QUESTIONMARK"
+#showtooltip Prayer of Healing
+/run UIErrorsFrame:UnregisterEvent("UI_ERROR_MESSAGE")
+/use Archangel
+/use Prayer of Healing
+/run UIErrorsFrame:RegisterEvent("UI_ERROR_MESSAGE")
+END
+VER 3 0100000000000015 "Purify" "INV_MISC_QUESTIONMARK"
+#showtooltip Purify
+/cast [target=mouseover,exists][help][target=player] Purify
+END
+VER 3 0100000000000006 "Smite" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [harm]Smite
+/use [@targettarget]Smite
+END
+VER 3 0100000000000008 "SWD" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [harm]Shadow Word: Death
+/use [@targettarget]Shadow Word: Death
+END
+VER 3 0100000000000004 "SWP" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [harm]Shadow Word: Pain
+/use [@targettarget]Shadow Word: Pain
+END
+VER 3 010000000000001F "Tier 5" "INV_Misc_QuestionMark"
+/use [talent:5/1]Twist of Fate;[talent:5/2]Power Infusion;[talent:5/3]Spirit Shell
+END
+VER 3 010000000000001E "Tier 6" "INV_MISC_QUESTIONMARK"
+/use [talent:6/1]Cascade;[talent:6/2]Divine Star;[talent:6/3]Halo
+END

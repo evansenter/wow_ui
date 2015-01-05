@@ -1,0 +1,16 @@
+VER 3 0100000000000004 "Cancel SEF" "Ability_Siege_Engineer_Magnetic_Lasso"
+/cancelaura Storm, Earth, and Fire
+END
+VER 3 0100000000000002 "Chi Wave" "INV_MISC_QUESTIONMARK"
+#showtooltip Chi Wave
+/use [nomod, @player] Chi Wave
+/use [mod:ctrl] Chi Wave
+END
+VER 3 0100000000000001 "Detox" "INV_MISC_QUESTIONMARK"
+#showtooltip Detox
+/cast [@mouseover,help,nodead] Detox;Detox
+END
+VER 3 0100000000000003 "SEF" "INV_MISC_QUESTIONMARK"
+#showtooltip Storm, Earth, and Fire
+/cast [target=mouseover] Storm, Earth, and Fire
+END

@@ -1,0 +1,59 @@
+TODO: (Updated 09-NOV-2014)
+
+
+Combines
+[spell] = itemid|skill|components|recipe|yield
+spell = spellId of the skill to craft the itemid
+itemid = itemid crafted if it differs from index (Optional)
+skill =
+	A = Alchemy
+	B = Blacksmithing
+	D = Enchanting
+	E = Engineering
+	I = Inscription
+	J = Jewelcrafting
+	L = Leatherworking
+	T = Tailoring
+	W = Cooking
+	X = First Aid
+	Y = Mining
+	# = level
+components =
+  itemid[:num] ...
+recipe = recipeid (Optional)
+yield = how many the combine makes (Optional)
+
+
+Components
+[itemid] = "source"
+source
+	V = Vendor (Only items with unlimited supply)
+	D = Dropped
+	C = Crafted
+	M = Mined
+	H = Herbalism
+	S = Skinned
+	F = Fished
+	E = Disenchanted
+	G = Gathered (No skill required)
+	P = Pickpocketed
+
+
+Zones
+[index]name
+
+
+Vendors
+[index]name|zone|faction|location|comment
+
+
+Recipes
+[recipeid]#|source|price|level
+# = combine id
+source
+	D = Drop
+	V = Vendor
+	Q = Quest
+	# index to table vendors
+price = Vendor sell price (Optional)
+level = faction rank needed (Optional)

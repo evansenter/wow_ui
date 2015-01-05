@@ -1,0 +1,17 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\FrameXML\UI.xsd">	
+	<Script file="WoWNotifier.lua" />
+	<Frame name="WoWNotifier">
+		<Scripts>
+			<OnLoad>
+				self:RegisterEvent("LFG_PROPOSAL_SHOW");
+				self:RegisterEvent("PET_BATTLE_QUEUE_PROPOSE_MATCH");				
+				self:RegisterEvent("UPDATE_BATTLEFIELD_STATUS");
+				self:RegisterEvent("ADDON_LOADED");
+				print("WoWNotifier has registered.");				
+				print("WoWNotifier: Use /wn help or /wownotifier help to get a list of commands!");				
+			</OnLoad>
+			<OnEvent function="WoWNotifier_OnEvent">				
+			</OnEvent>
+		</Scripts>
+	</Frame>
+</Ui>

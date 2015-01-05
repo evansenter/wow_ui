@@ -1,0 +1,43 @@
+
+DeadlyBossModsDB = {
+	["namespaces"] = {
+		["DBM-Party-MoP"] = {
+		},
+		["DBM-PvP"] = {
+		},
+		["DeadlyBarTimers"] = {
+		},
+		["DBM-DMF"] = {
+		},
+		["DBM-Scenario-MoP"] = {
+		},
+		["LibDualSpec-1.0"] = {
+		},
+		["DBM-ThroneofThunder"] = {
+		},
+		["DBM-Brawlers"] = {
+		},
+		["DBM-Pandaria"] = {
+		},
+		["DBM-MogushanVaults"] = {
+		},
+		["DBM-TerraceofEndlessSpring"] = {
+		},
+		["DBM-SiegeOfOrgrimmar"] = {
+		},
+		["DBM-WorldEvents"] = {
+		},
+		["DBM-HeartofFear"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Natal - Illidan"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["ForumsMessageShown"] = 11270,
+			["SettingsMessageShown"] = true,
+			["HelpMessageShown"] = true,
+		},
+	},
+}

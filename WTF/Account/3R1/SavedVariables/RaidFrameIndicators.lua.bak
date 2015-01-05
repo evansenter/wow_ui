@@ -1,0 +1,21 @@
+
+IndicatorsDB = {
+	["profileKeys"] = {
+		["Evan - Illidan"] = "Evan - Illidan",
+	},
+	["profiles"] = {
+		["Evan - Illidan"] = {
+			["showTooltip3"] = false,
+			["indicatorFont"] = "ElvUI Pixel",
+			["showDebuffs"] = true,
+			["stackColor3"] = true,
+			["showDispelDebuffs"] = true,
+			["iconSize3"] = 16,
+			["auras3"] = "Grace\n",
+			["showDecimals3"] = false,
+			["stack3"] = false,
+			["size3"] = 12,
+			["showBuffs"] = true,
+		},
+	},
+}

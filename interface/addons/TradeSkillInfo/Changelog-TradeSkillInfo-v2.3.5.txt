@@ -1,0 +1,186 @@
+------------------------------------------------------------------------
+r722 | ethancentaurai | 2014-12-12 18:31:42 +0000 (Fri, 12 Dec 2014) | 1 line
+Changed paths:
+   A /tags/v2.3.5 (from /trunk:721)
+
+Tagging as v2.3.5. Now with less debug spam!
+------------------------------------------------------------------------
+r721 | ethancentaurai | 2014-12-12 18:30:18 +0000 (Fri, 12 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/TradeskillInfo.lua
+
+Whoops, forgot to disable debug messages.
+------------------------------------------------------------------------
+r719 | ethancentaurai | 2014-12-12 17:30:57 +0000 (Fri, 12 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/README.md
+
+Updated README.
+------------------------------------------------------------------------
+r718 | ethancentaurai | 2014-12-12 17:26:58 +0000 (Fri, 12 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Data/Data.lua
+
+Ran the dataminer to pick up changes from recent hotfixes.
+------------------------------------------------------------------------
+r717 | ethancentaurai | 2014-12-06 20:30:12 +0000 (Sat, 06 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/TradeskillInfoOptions.lua
+
+Added missing phrase to WoWace Localization app. Fixes ticket 99.
+------------------------------------------------------------------------
+r716 | ethancentaurai | 2014-12-06 15:34:28 +0000 (Sat, 06 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/TradeskillInfo.lua
+
+Merchant colouring now only requires one single hook instead of 5 hooks and 3 events.
+------------------------------------------------------------------------
+r715 | ethancentaurai | 2014-12-06 15:17:20 +0000 (Sat, 06 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/TradeskillInfo.lua
+   M /trunk/TradeskillInfoOptions.lua
+
+Added options to colour-code recipes sold by merchants, on by default.
+------------------------------------------------------------------------
+r714 | ethancentaurai | 2014-12-06 14:10:15 +0000 (Sat, 06 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/TradeskillInfo.lua
+
+Minor event handler tweaks.
+------------------------------------------------------------------------
+r713 | ethancentaurai | 2014-12-06 10:22:59 +0000 (Sat, 06 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Data/Data.lua
+
+Ran the dataminer to pick up changes from recent hotfixes.
+------------------------------------------------------------------------
+r711 | ethancentaurai | 2014-12-03 23:17:22 +0000 (Wed, 03 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/TradeskillInfo.lua
+
+Safety checks are now slightly less strict.
+------------------------------------------------------------------------
+r710 | ethancentaurai | 2014-12-03 20:11:26 +0000 (Wed, 03 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Data/Data.lua
+
+One more dataminer run.
+------------------------------------------------------------------------
+r709 | ethancentaurai | 2014-12-03 20:08:25 +0000 (Wed, 03 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/TradeskillInfo.lua
+
+Use the IsNPCCrafting() API instead of a nil check.
+------------------------------------------------------------------------
+r708 | ethancentaurai | 2014-12-03 14:41:18 +0000 (Wed, 03 Dec 2014) | 1 line
+Changed paths:
+   M /trunk/Data/Data.lua
+
+Ran the dataminer to pick up changes from recent hotfixes.
+------------------------------------------------------------------------
+r707 | ethancentaurai | 2014-11-26 17:01:21 +0000 (Wed, 26 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/Data/Data.lua
+
+Ran the dataminer to pick up changes from today's hotfixes.
+------------------------------------------------------------------------
+r706 | ethancentaurai | 2014-11-26 09:26:12 +0000 (Wed, 26 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/TradeskillInfo.lua
+
+Break out of a for loop once we've found what we're looking for.
+------------------------------------------------------------------------
+r705 | ethancentaurai | 2014-11-26 09:21:56 +0000 (Wed, 26 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/TradeskillInfo.lua
+
+Fixed an error on line 1462.
+------------------------------------------------------------------------
+r704 | ethancentaurai | 2014-11-25 21:25:41 +0000 (Tue, 25 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/TradeskillInfo.lua
+
+Removed deprecated code.
+------------------------------------------------------------------------
+r703 | ethancentaurai | 2014-11-25 09:21:34 +0000 (Tue, 25 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/TradeskillInfo.lua
+
+Fixed a "string expected, got nil" error when speaking to Ahm in your garrison's enchanting study.
+------------------------------------------------------------------------
+r701 | ethancentaurai | 2014-11-21 20:19:47 +0000 (Fri, 21 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/Data/Data.lua
+
+Daily dataminer run.
+------------------------------------------------------------------------
+r700 | ethancentaurai | 2014-11-21 20:17:27 +0000 (Fri, 21 Nov 2014) | 2 lines
+Changed paths:
+   M /trunk/TradeskillInfo.lua
+   M /trunk/TradeskillInfoOptions.lua
+
+Added an option to only add extra data to recipe tooltips, off by default.
+Requested by Maelynn on WoWinterface.
+------------------------------------------------------------------------
+r699 | ethancentaurai | 2014-11-21 18:28:15 +0000 (Fri, 21 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/TradeskillInfo.lua
+
+Extra data on recipe tooltips now obeys the Learnable By and Known By visibility settings.
+------------------------------------------------------------------------
+r698 | ethancentaurai | 2014-11-19 18:44:49 +0000 (Wed, 19 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/Data/Data.lua
+
+Daily dataminer run.
+------------------------------------------------------------------------
+r696 | ethancentaurai | 2014-11-18 23:22:23 +0000 (Tue, 18 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/Data/Data.lua
+
+Ran the dataminer.
+------------------------------------------------------------------------
+r695 | ethancentaurai | 2014-11-16 14:11:17 +0000 (Sun, 16 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/TradeskillInfo.lua
+
+Prevent the addon from adding extra tooltip information while in combat.
+------------------------------------------------------------------------
+r694 | ethancentaurai | 2014-11-15 22:03:56 +0000 (Sat, 15 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/TradeskillInfo.lua
+
+Fixed an error that occurs when a recipe search returns no results.
+------------------------------------------------------------------------
+r692 | ethancentaurai | 2014-11-13 11:20:45 +0000 (Thu, 13 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/Data/Notes.txt
+
+Update developer notes to match new data layout.
+------------------------------------------------------------------------
+r691 | ethancentaurai | 2014-11-13 11:19:27 +0000 (Thu, 13 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/Data/Data.lua
+
+Ran the dataminer to bring in new WoD recipe data.
+------------------------------------------------------------------------
+r690 | ethancentaurai | 2014-11-11 17:46:03 +0000 (Tue, 11 Nov 2014) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+Do not include the datamining script in packages.
+------------------------------------------------------------------------
+r689 | ethancentaurai | 2014-11-09 15:21:10 +0000 (Sun, 09 Nov 2014) | 1 line
+Changed paths:
+   D /trunk/Data/Components.lua
+   M /trunk/Data/Data.lua
+   D /trunk/Data/FirstAid.lua
+   D /trunk/Data/Professions
+   D /trunk/Data/Recipes.lua
+   D /trunk/Data/SpecialCases.lua
+   M /trunk/TradeskillInfo.lua
+   M /trunk/TradeskillInfo.toc
+   M /trunk/TradeskillInfoUI/TradeskillInfoUI.lua
+
+Ran the dataminer. THIS UPDATE WILL RESET YOUR SAVED VARIABLES.
+------------------------------------------------------------------------

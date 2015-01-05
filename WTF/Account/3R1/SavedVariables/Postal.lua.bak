@@ -1,0 +1,17 @@
+
+Postal3DB = {
+	["global"] = {
+		["BlackBook"] = {
+			["alts"] = {
+				"Natal|Illidan|Horde|90|PRIEST", -- [1]
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Natal - Illidan"] = "Natal - Illidan",
+	},
+	["profiles"] = {
+		["Natal - Illidan"] = {
+		},
+	},
+}

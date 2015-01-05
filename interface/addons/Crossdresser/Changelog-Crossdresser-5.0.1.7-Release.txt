@@ -1,0 +1,21 @@
+tag 5.0.1.7-Release
+e357398f8650fe8c542dddfd8558c8ed94375063
+tekkub :bear:  <tekkub@gmail.com>
+2012-11-25 05:28:55 -0700
+
+Weekly build
+
+
+--------------------
+
+tekkub :bear: :
+	- Weekly build 5.0.1.7-Release
+	- Update changelog for 5.0.1.7-Release
+	- Update changelog for 5.0.1.6-Beta
+	- Weekly build 5.0.1.6-Beta
+	- Updating TOC to 50001
+	- README update
+	- Fixes for 5.0
+	- Supposedly this fixes something for someone
+	- Lib update
+	- Add support for AddonLoader's LoadOn-InterfaceOptions thingy

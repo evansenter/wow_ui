@@ -1,0 +1,4 @@
+
+AmrSettings = {
+	["Region"] = "US",
+}

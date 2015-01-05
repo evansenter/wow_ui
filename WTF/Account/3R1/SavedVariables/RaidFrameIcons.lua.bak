@@ -1,0 +1,11 @@
+
+RaidFrameIconsDB = {
+	["profileKeys"] = {
+		["Evan - Illidan"] = "Evan - Illidan",
+	},
+	["profiles"] = {
+		["Evan - Illidan"] = {
+			["iconSize"] = 20,
+		},
+	},
+}

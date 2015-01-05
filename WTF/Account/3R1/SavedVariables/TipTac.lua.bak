@@ -1,0 +1,20 @@
+
+TipTac_Config = {
+	["fontSizeDelta"] = 3,
+	["classification_rare"] = "%s|r (Rare) ",
+	["classification_elite"] = "+%s ",
+	["barsCondenseValues"] = true,
+	["left"] = 903.000061035156,
+	["modifyFonts"] = true,
+	["classification_trivial"] = "~%s ",
+	["classification_worldboss"] = "%s|r (Boss) ",
+	["healthBar"] = true,
+	["classification_rareelite"] = "+%s|r (Rare) ",
+	["showDebuffs"] = false,
+	["targetYouText"] = "<<YOU>>",
+	["top"] = 612.000061035156,
+	["classification_minus"] = "-%s ",
+	["healthBarText"] = "value",
+	["showBuffs"] = false,
+	["classification_normal"] = "%s ",
+}

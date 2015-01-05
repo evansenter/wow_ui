@@ -1,0 +1,84 @@
+VER 3 0100000000000004 "Cancel SEF" "INV_MISC_QUESTIONMARK"
+#showtooltip Storm, Earth, and Fire
+/cancelaura Storm, Earth, and Fire
+END
+VER 3 010000000000000C "Defensive" "INV_MISC_QUESTIONMARK"
+#showtooltip 14
+/cast Dampen Harm
+/use 13
+/use 14
+/cast Fortifying Brew
+END
+VER 3 0100000000000001 "Detox" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [@mouseover,help,nodead][]Detox
+END
+VER 3 0100000000000015 "Enveloping Mist" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [@mouseover,help,nodead][]Enveloping Mist
+END
+VER 3 0100000000000014 "Renewing Mist" "INV_MISC_QUESTIONMARK"
+#showtooltip Renewing Mist
+/use Thunder Focus Tea
+/use 13
+/use 14
+/use [@mouseover,help,nodead][]Renewing Mist
+END
+VER 3 0100000000000008 "RoP" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [@player]Ring of Peace
+END
+VER 3 0100000000000016 "Soothing Mist" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [@mouseover,help,nodead][]Soothing Mist
+END
+VER 3 010000000000000F "Surging Mist" "INV_MISC_QUESTIONMARK"
+#showtooltip Surging Mist
+/use Thunder Focus Tea
+/use [@mouseover,help,nodead][]Surging Mist
+END
+VER 3 0100000000000006 "TEB" "INV_MISC_QUESTIONMARK"
+#showtooltip Tigereye Brew
+/use 13
+/use 14
+/cast Tigereye Brew
+END
+VER 3 0100000000000011 "Tier 2" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [talent:2/1,nochanneling:Fists of Fury]Chi Wave;[talent:2/2,@player,nochanneling:Fists of Fury]Zen Sphere;[talent:2/3,nochanneling:Fists of Fury]Chi Burst
+END
+VER 3 0100000000000017 "Tier 2 MW" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [talent:2/1,@mouseover,help,nodead]Chi Wave;[talent:2/1]Chi Wave;[talent:2/2,@player,@mouseover,help,nodead]Zen Sphere;[talent:2/3]Chi Burst
+END
+VER 3 0100000000000012 "Tier 4" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [talent:4/1,@player]Ring of Peace;[talent:4/2]Charging Ox Wave;[talent:4/3]Leg Sweep
+END
+VER 3 0100000000000010 "Tier 5" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [talent:5/1]Healing Elixirs;[talent:5/2]Dampen Harm;[talent:5/3]Diffuse Magic
+END
+VER 3 0100000000000005 "Tier 6" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [talent:6/2,nochanneling:Fists of Fury]Invoke Xuen, the White Tiger;[talent:6/1,nochanneling:Fists of Fury]Rushing Jade Wind
+/use 14
+END
+VER 3 010000000000000E "ToD" "INV_MISC_QUESTIONMARK"
+#showtooltip Touch of Death
+/use Fortifying Brew
+/use Touch of Death
+END
+VER 3 010000000000000D "ToK" "INV_MISC_QUESTIONMARK"
+#showtooltip Touch of Karma
+/use Fortifying Brew
+/use Touch of Karma
+END
+VER 3 0100000000000007 "Transcendence" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [nomod]Transcendence: Transfer;[mod:shift][mod:alt]Transcendence
+END
+VER 3 0100000000000013 "WW Stance" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use !Stance of the Fierce Tiger
+END

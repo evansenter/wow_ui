@@ -1,0 +1,118 @@
+
+ActionBarSaverDB = {
+	["restoreRank"] = false,
+	["macro"] = false,
+	["sets"] = {
+		["DEATHKNIGHT"] = {
+		},
+		["WARRIOR"] = {
+		},
+		["SHAMAN"] = {
+		},
+		["MAGE"] = {
+		},
+		["PRIEST"] = {
+			["holy"] = {
+				"macro|1||Flash Heal|Interface\\Icons\\Spell_Holy_FlashHeal|#showtooltip Flash Heal/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Inner Focus/n/cast Archangel/n/use 13/n/use 14/n/cast Flash Heal/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")", -- [1]
+				"spell|2050||Heal||", -- [2]
+				"macro|3||Greater Heal|Interface\\Icons\\Spell_Holy_GreaterHeal|#showtooltip Greater Heal/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Inner Focus/n/cast Archangel/n/use 13/n/use 14/n/cast Greater Heal/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")", -- [3]
+				"spell|88684||Holy Word: Serenity||", -- [4]
+				"macro|5||PWS|Interface\\Icons\\Spell_Holy_PowerWordShield|#showtooltip Power Word: Shield/n/cast Power Word: Shield/n/use 1", -- [5]
+				"spell|139||Renew||", -- [6]
+				"macro|7||Cascade|Interface\\Icons\\ability_priest_cascade|#showtooltip Cascade/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Archangel/n/cast Cascade/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")", -- [7]
+				"spell|586||Fade||", -- [8]
+				"spell|8122||Psychic Scream||", -- [9]
+				"spell|73413||Inner Will||", -- [10]
+				"spell|588||Inner Fire||", -- [11]
+				"spell|21562||Power Word: Fortitude||", -- [12]
+				"macro|13||SWP|Interface\\Icons\\Spell_Shadow_ShadowWordPain|#showtooltip Shadow Word: Pain/n/cast [harm] Shadow Word: Pain/n/cast [@targettarget] Shadow Word: Pain", -- [13]
+				"macro|14||HF|Interface\\Icons\\Spell_Holy_SearingLight|#showtooltip Holy Fire/n/cast [harm] Holy Fire/n/cast [@targettarget] Holy Fire", -- [14]
+				"macro|15||Smite|Interface\\Icons\\Spell_Holy_HolySmite|#showtooltip Smite/n/cast [harm] Smite/n/cast [@targettarget] Smite", -- [15]
+				"macro|16||HWC|INTERFACE\\ICONS\\spell_holy_persuitofjustice|#showtooltip Holy Word: Chastise/n/cast [harm] Holy Word: Chastise/n/cast [@targettarget] Holy Word: Chastise", -- [16]
+				"macro|17||SWD|Interface\\Icons\\Spell_Shadow_DemonicFortitude|#showtooltip Shadow Word: Death/n/cast [harm] Shadow Word: Death/n/cast [@targettarget] Shadow Word: Death", -- [17]
+				"spell|48045||Mind Sear||", -- [18]
+				"macro|19||Cascade|Interface\\Icons\\ability_priest_cascade|#showtooltip Cascade/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Archangel/n/cast Cascade/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")", -- [19]
+				"spell|586||Fade||", -- [20]
+				"spell|8122||Psychic Scream||", -- [21]
+				"spell|73413||Inner Will||", -- [22]
+				"spell|588||Inner Fire||", -- [23]
+				"spell|21562||Power Word: Fortitude||", -- [24]
+				"macro|25||Ready Check|Interface\\Icons\\INV_MISC_DMC01|/i Please wait and hit ready when you're good to go./n/raid Please wait and hit ready when you're good to go./n/readycheck", -- [25]
+				"macro|26||Pull!|Interface\\Icons\\Spell_Shadow_UnstableAfllictions|/dbm pull 10", -- [26]
+				"macro|27||Max Camera|Interface\\Icons\\Spell_Arcane_TeleportTolBarad|/console CameraDistanceMaxFactor 100", -- [27]
+				"macro|28||Macros|Interface\\Icons\\INV_Glyph_MajorWarlock|/macro", -- [28]
+				"macro|29||Vent|Interface\\Icons\\ABILITY_MONK_ZENFLIGHT|/raid [Vent] uranium.typefrag.com 12059 Tits (case sensitive) T i t s/n/p [Vent] uranium.typefrag.com 12059 Tits (case sensitive) T i t s", -- [29]
+				"equipmentset|Holy|", -- [30]
+				"equipmentset|Disc|", -- [31]
+				"spell|83968||Mass Resurrection|Guild Perk|", -- [32]
+				"spell|1706||Levitate||", -- [33]
+				"spell|110426||Tailoring||", -- [34]
+				"spell|110400||Enchanting||", -- [35]
+				"spell|13262||Disenchant||", -- [36]
+				"macro|37||Serenity|INTERFACE\\ICONS\\priest_icon_chakra|#showtooltip Chakra: Serenity/n/cast Chakra: Serenity/n/cast Inner Fire", -- [37]
+				"macro|38||Sanctuary|INTERFACE\\ICONS\\priest_icon_chakra_blue|#showtooltip Chakra: Sanctuary/n/cast Chakra: Sanctuary/n/cast Inner Will", -- [38]
+				"macro|39||Chastise|INTERFACE\\ICONS\\priest_icon_chakra_red|#showtooltip Chakra: Chastise/n/cast Chakra: Chastise/n/cast Inner Fire", -- [39]
+				nil, -- [40]
+				nil, -- [41]
+				nil, -- [42]
+				"spell|81208||Chakra: Serenity||", -- [43]
+				"spell|81206||Chakra: Sanctuary||", -- [44]
+				nil, -- [45]
+				nil, -- [46]
+				nil, -- [47]
+				nil, -- [48]
+				"spell|73325||Leap of Faith||", -- [49]
+				"spell|2006||Resurrection||", -- [50]
+				"spell|64901||Hymn of Hope||", -- [51]
+				"spell|108920||Void Tendrils||", -- [52]
+				"macro|53||Mindbender|Interface\\Icons\\Spell_Shadow_SoulLeech_3|#showtooltip Mindbender/n/cast [harm] Mindbender/n/cast [@targettarget] Mindbender", -- [53]
+				"spell|28730||Arcane Torrent|Racial|", -- [54]
+				"spell|108968||Void Shift||", -- [55]
+				"item|76093||Potion of the Jade Serpent", -- [56]
+				"item|76098||Master Mana Potion", -- [57]
+				"item|5512||Healthstone", -- [58]
+				"companion|135418|||MOUNT|", -- [59]
+				"item|6948||Hearthstone", -- [60]
+				"spell|32375||Mass Dispel||", -- [61]
+				"macro|62||Purify|Interface\\Icons\\Spell_Holy_DispelMagic|#showtooltip Purify/n/cast [target=mouseover,exists] Purify; Purify", -- [62]
+				"spell|528||Dispel Magic||", -- [63]
+				"macro|64||PoH|Interface\\Icons\\Spell_Holy_PrayerOfHealing02|#showtooltip Prayer of Healing/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Inner Focus/n/cast Archangel/n/use 13/n/use 14/n/cast Prayer of Healing/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")", -- [64]
+				"spell|19236||Desperate Prayer||", -- [65]
+				"macro|66||Binding Heal|Interface\\Icons\\Spell_Holy_BlindingHeal|#showtooltip Binding Heal/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Archangel/n/cast Binding Heal/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")", -- [66]
+				"spell|34861||Circle of Healing||", -- [67]
+				"spell|47788||Guardian Spirit||", -- [68]
+				"spell|724||Lightwell||", -- [69]
+				"spell|64843||Divine Hymn||", -- [70]
+				"macro|71||PoM|Interface\\Icons\\Spell_Holy_PrayerOfMendingtga|#showtooltip Prayer of Mending/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Prayer of Mending/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")", -- [71]
+				"spell|6346||Fear Ward||", -- [72]
+				"spell|589||Shadow Word: Pain||", -- [73]
+				nil, -- [74]
+				nil, -- [75]
+				nil, -- [76]
+				"macro|77||DP|Interface\\Icons\\INV_MISC_QUESTIONMARK|#showtooltip Devouring Plague/n/use 13/n/use 14/n/cast Devouring Plague", -- [77]
+				"spell|139||Renew||", -- [78]
+				nil, -- [79]
+				"spell|586||Fade||", -- [80]
+				"spell|8122||Psychic Scream||", -- [81]
+				"spell|73413||Inner Will||", -- [82]
+				"spell|588||Inner Fire||", -- [83]
+				"spell|21562||Power Word: Fortitude||", -- [84]
+			},
+		},
+		["WARLOCK"] = {
+		},
+		["ROGUE"] = {
+		},
+		["HUNTER"] = {
+		},
+		["DRUID"] = {
+		},
+		["MONK"] = {
+		},
+		["PALADIN"] = {
+		},
+	},
+	["spellSubs"] = {
+	},
+	["checkCount"] = false,
+}

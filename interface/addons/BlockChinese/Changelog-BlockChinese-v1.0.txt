@@ -1,0 +1,12 @@
+tag v1.0
+51f4985c16874ca3c35620ae92b9163c357cd5b0
+Ketho <ngsc1@live.cn>
+2014-11-07 16:56:40 +0800
+
+Tagging as v1.0
+
+
+--------------------
+
+Ketho:
+	- Include Japanese and Korean again to stop font size abuse

@@ -1,0 +1,59 @@
+------------------------------------------------------------------------
+r11 | reckoner04 | 2013-01-03 18:31:07 +0000 (Thu, 03 Jan 2013) | 1 line
+Changed paths:
+   A /tags/v1.1 (from /trunk:10)
+
+Release v1.1.
+------------------------------------------------------------------------
+r10 | reckoner04 | 2013-01-03 18:29:38 +0000 (Thu, 03 Jan 2013) | 1 line
+Changed paths:
+   M /trunk/ReckonersProMending.lua
+
+Adjusted settings (inline groups).
+------------------------------------------------------------------------
+r8 | reckoner04 | 2013-01-02 11:50:10 +0000 (Wed, 02 Jan 2013) | 1 line
+Changed paths:
+   M /trunk
+
+v1.0
+------------------------------------------------------------------------
+r7 | reckoner04 | 2013-01-02 00:39:36 +0000 (Wed, 02 Jan 2013) | 1 line
+Changed paths:
+   M /trunk/ReckonersProMending.toc
+
+Adjust interface number in .toc.
+------------------------------------------------------------------------
+r6 | reckoner04 | 2013-01-01 23:11:11 +0000 (Tue, 01 Jan 2013) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+Try url: ... in .pkgmeta.
+------------------------------------------------------------------------
+r4 | reckoner04 | 2013-01-01 22:46:08 +0000 (Tue, 01 Jan 2013) | 1 line
+Changed paths:
+   A /trunk/.pkgmeta
+
+Added .pkgmeta.
+------------------------------------------------------------------------
+r3 | reckoner04 | 2013-01-01 20:20:35 +0000 (Tue, 01 Jan 2013) | 1 line
+Changed paths:
+   M /trunk/ReckonersProMending.toc
+
+Version update (.toc).
+------------------------------------------------------------------------
+r2 | reckoner04 | 2013-01-01 19:40:53 +0000 (Tue, 01 Jan 2013) | 1 line
+Changed paths:
+   A /trunk/ReckonersProMending.lua
+   A /trunk/ReckonersProMending.toc
+   A /trunk/ReckonersProMending.xml
+
+First commit. Upload core files (.lua, .doc, .xml).
+------------------------------------------------------------------------
+r1 | svn | 2013-01-01 18:49:01 +0000 (Tue, 01 Jan 2013) | 1 line
+Changed paths:
+   A /branches
+   A /tags
+   A /trunk
+
+reckonerspromending/mainline: Initial Import
+------------------------------------------------------------------------

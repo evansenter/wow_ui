@@ -1,0 +1,25 @@
+------------------------------------------------------------------------
+r23 | lombra | 2014-10-17 13:58:29 +0000 (Fri, 17 Oct 2014) | 2 lines
+Changed paths:
+   A /tags/1.0.7 (from /trunk:22)
+
+Tagging as 1.0.7.
+- Updated with new Libra version to fix dual profile toggling.
+------------------------------------------------------------------------
+r21 | lombra | 2014-10-16 22:41:05 +0000 (Thu, 16 Oct 2014) | 2 lines
+Changed paths:
+   M /trunk
+   M /trunk/.pkgmeta
+   D /trunk/AceDBUI.lua
+   M /trunk/Core.lua
+   M /trunk/DBM-Profiles.toc
+
+- Updates for 6.0 and updated libraries.
+- Implement Libra for AceDB control panel.
+------------------------------------------------------------------------
+r20 | lombra | 2014-04-29 21:16:09 +0000 (Tue, 29 Apr 2014) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+
+- Add DBM Core dependency to pkgmeta and specify package name.
+------------------------------------------------------------------------

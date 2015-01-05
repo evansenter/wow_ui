@@ -1,0 +1,8 @@
+2015-01-04  MMOSimca  <MMOSimca@gmail.com>
+
+[837a3a525a76] [6.0.3-7]
+* Main.lua:
+
+And fixed new CHAT_LOOT_x timer system to work properly.
+
+

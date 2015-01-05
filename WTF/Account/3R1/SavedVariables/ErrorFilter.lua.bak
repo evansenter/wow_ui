@@ -1,0 +1,10 @@
+
+ErrorFilterDB = {
+	["profileKeys"] = {
+		["Combustion - Illidan"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

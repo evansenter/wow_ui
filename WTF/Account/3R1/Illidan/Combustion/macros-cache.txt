@@ -1,0 +1,80 @@
+VER 3 0100000000000053 "AT Fire" "INV_MISC_QUESTIONMARK"
+#showtooltip Alter Time
+/stopcasting
+/use Potion of the Jade Serpent
+/cast Berserking
+/use 10
+/cast Presence of Mind
+/cast Alter Time
+END
+VER 3 010000000000004A "AT Frost" "INV_MISC_QUESTIONMARK"
+#showtooltip Alter Time
+/stopcasting
+/use Potion of the Jade Serpent
+/cast Berserking
+/use 10
+/cast Icy Veins
+/cast Alter Time
+/cast Frostbolt
+END
+VER 3 0100000000000045 "Blink" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/stopcasting
+/cast Blink
+END
+VER 3 0100000000000052 "Combustion" "INV_MISC_QUESTIONMARK"
+#showtooltip Combustion
+/stopcasting
+/cast Berserking
+/cast Combustion
+END
+VER 3 0100000000000042 "Counterspell" "INV_Misc_QuestionMark"
+#showtooltip
+/stopcasting
+/cast Counterspell
+END
+VER 3 010000000000004B "Freeze" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [nopet][target=pet, dead] Summon Water Elemental; Freeze
+END
+VER 3 010000000000004E "Frozen Orb" "INV_MISC_QUESTIONMARK"
+#showtooltip Frozen Orb
+/use 10
+/cast Frozen Orb
+END
+VER 3 0100000000000046 "Ice Block" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/stopcasting
+/cancelaura Ice Block
+/cast Ice Block
+END
+VER 3 0100000000000051 "Ice Ward" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@player] Ice Ward
+END
+VER 3 0100000000000048 "Invisibility" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/stopcasting
+/cast Invisibility
+END
+VER 3 0100000000000050 "Portals" "SPELL_ARCANE_PORTAL_VALEOFBLOSSOMS"
+/magenuggets ports
+END
+VER 3 010000000000004F "Remove Curse" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [@mouseover,help][@target,help] [@player] Remove Curse
+END
+VER 3 0100000000000047 "Slow Fall" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,nodead,help][nodead,help][@player] Slow Fall
+END
+VER 3 0100000000000044 "Spellsteal" "INV_Misc_QuestionMark"
+#showtooltip
+/stopcasting
+/cast [@focus,exists][@target] Spellsteal
+END
+VER 3 0100000000000049 "Tier 1 Talent" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use Ice Floes
+/use Blazing Speed
+END

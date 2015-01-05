@@ -1,0 +1,13 @@
+## Interface: 60000
+## Title: Masque: |cff267EFFTrinity|r
+## Author: Maul
+## Version: Centauri-5
+## Notes: Masque Skins originally made for Trinity Bars by Maul
+## Note: Adornment skins by Tonedef of WoWInterface
+## DefaultState: enabled
+## Dependencies: Masque
+## X-Copyright: Copyright© 2006-2014 Connor H. Chenoweth, aka Maul - All rights reserved.
+## X-Email: trinityui@live.com
+## X-Versioning: Stars
+
+Masque_Trinity.lua

@@ -1,0 +1,14 @@
+
+LinkLootDB = {
+	["profileKeys"] = {
+		["Pandatal - Illidan"] = "Deafult",
+	},
+	["profiles"] = {
+		["Deafult"] = {
+			["General"] = {
+				["autoLinkWhenLootMaster"] = false,
+				["showMinimapIcon"] = false,
+			},
+		},
+	},
+}

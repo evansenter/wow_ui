@@ -1,0 +1,57 @@
+
+EPGP_DB = {
+	["namespaces"] = {
+		["boss"] = {
+		},
+		["loot"] = {
+		},
+		["warnings"] = {
+		},
+		["whisper"] = {
+		},
+		["log"] = {
+		},
+		["gptooltip"] = {
+		},
+		["announce"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Natal - Illidan"] = "Slash Cry",
+	},
+	["global"] = {
+		["last_version"] = "5.10.4",
+		["last_tier"] = 600,
+	},
+	["profiles"] = {
+		["Natal - Illidan"] = {
+			["min_ep"] = 500,
+			["extras_p"] = 50,
+			["decay_p"] = 40,
+			["outsiders"] = 0,
+			["base_gp"] = 100,
+		},
+		["Slash Cry"] = {
+			["bonus_loot_log"] = {
+				{
+					["player"] = "Cptnadsack",
+					["coinsLeft"] = "14",
+					["timestamp"] = "2014-10-23 19:34:00",
+					["currencyID"] = "0",
+				}, -- [1]
+				{
+					["player"] = "Cptnadsack",
+					["coinsLeft"] = "13",
+					["timestamp"] = "2014-10-23 19:40:00",
+					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112733:0:0:0:0:0:0:0:90:0:5:2:449:448|h[Wall-Borer Bracers]|h|r",
+				}, -- [2]
+			},
+			["min_ep"] = 500,
+			["extras_p"] = 50,
+			["decay_p"] = 40,
+			["outsiders"] = 0,
+			["base_gp"] = 100,
+		},
+	},
+}

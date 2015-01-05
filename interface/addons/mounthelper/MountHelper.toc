@@ -1,0 +1,23 @@
+## Interface: 60000
+## Title: MountHelper
+## Notes: Helper for mountmacros.
+## Author: Toomy a.k.a Metsavend of Quel'Thalas EU
+## X-Version: release14.2
+## OptionalDeps: Ace-3.0
+## SavedVariablesPerCharacter: mountHelperCfgDB
+## X-Curse-Packaged-Version: release14.2
+## X-Curse-Project-Name: MountHelper
+## X-Curse-Project-ID: mounthelper
+## X-Curse-Repository-ID: wow/mounthelper/mainline
+embeds.xml
+locales\locale.lua
+locales\locale_deDE.lua
+locales\locale_esES.lua
+locales\locale_esMX.lua
+locales\locale_frFR.lua
+locales\locale_koKR.lua
+locales\locale_ruRU.lua
+locales\locale_zhCN.lua
+locales\locale_zhTW.lua
+MountHelperDB.lua
+MountHelper.lua

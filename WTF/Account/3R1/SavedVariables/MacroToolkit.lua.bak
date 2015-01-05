@@ -1,0 +1,18 @@
+
+MacroToolkitDB = {
+	["global"] = {
+		["backups"] = {
+		},
+		["ebackups"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Comet - Illidan"] = "profile",
+	},
+	["profiles"] = {
+		["profile"] = {
+			["x"] = 437.399841308594,
+			["y"] = 484.000030517578,
+		},
+	},
+}

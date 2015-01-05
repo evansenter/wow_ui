@@ -1,0 +1,6 @@
+
+_NPCScanOptionsCharacter = {
+	["Version"] = 3,
+	["Achievements"] = {
+	},
+}

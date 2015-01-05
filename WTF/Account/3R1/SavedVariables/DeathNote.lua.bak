@@ -1,0 +1,10 @@
+
+DeathNoteDB = {
+	["profileKeys"] = {
+		["Natal - Illidan"] = "Natal - Illidan",
+	},
+	["profiles"] = {
+		["Natal - Illidan"] = {
+		},
+	},
+}
