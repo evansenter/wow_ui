@@ -4,15 +4,15 @@ ReckonersProMendingDB = {
 		["Venala - Cho'gall"] = "Default",
 		["Combustion - Illidan"] = "Default",
 		["Pandatal - Illidan"] = "Default",
-		["Metal - Illidan"] = "Default",
+		["Plane - Illidan"] = "Default",
 		["Colton - Dark Iron"] = "Default",
 		["Natalan - Dark Iron"] = "Default",
 		["Centromere - Dark Iron"] = "Default",
-		["Natal - Illidan"] = "Default",
-		["Comet - Illidan"] = "Default",
 		["Natalan - Illidan"] = "Default",
+		["Comet - Illidan"] = "Default",
+		["Natal - Illidan"] = "Default",
 		["Evan - Illidan"] = "Evan - Illidan",
-		["Plane - Illidan"] = "Default",
+		["Metal - Illidan"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -43,16 +43,16 @@ ReckonersProMendingDB = {
 				0.749166548252106, -- [4]
 			},
 			["chargeheight"] = 6,
-			["bartexture"] = "BantoBar",
-			["barwidth"] = 133,
-			["y"] = -575,
-			["x"] = -362,
-			["chargetexture"] = "Armory",
 			["chargecolorfg"] = {
 				nil, -- [1]
 				1, -- [2]
 				1, -- [3]
 			},
+			["barwidth"] = 133,
+			["y"] = -575,
+			["x"] = -362,
+			["chargetexture"] = "Armory",
+			["bartexture"] = "BantoBar",
 			["baricon"] = false,
 		},
 	},

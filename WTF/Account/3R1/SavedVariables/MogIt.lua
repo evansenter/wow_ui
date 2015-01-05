@@ -1,16 +1,16 @@
 
 MogItDB = {
-	["profileKeys"] = {
-		["Combustion - Illidan"] = "Default",
-		["Metal - Illidan"] = "Comet - Illidan",
-		["Evan - Illidan"] = "Default",
-		["Plane - Illidan"] = "Default",
-		["Centromere - Dark Iron"] = "Default",
-		["Natal - Illidan"] = "Default",
-		["Comet - Illidan"] = "Comet - Illidan",
-	},
 	["global"] = {
 		["version"] = "3.4.0",
+	},
+	["profileKeys"] = {
+		["Comet - Illidan"] = "Comet - Illidan",
+		["Metal - Illidan"] = "Comet - Illidan",
+		["Natal - Illidan"] = "Default",
+		["Combustion - Illidan"] = "Default",
+		["Centromere - Dark Iron"] = "Default",
+		["Evan - Illidan"] = "Default",
+		["Plane - Illidan"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -21,15 +21,15 @@ MogItDB = {
 			["previewProps"] = {
 				{
 					["y"] = 0,
-					["x"] = 0,
-					["w"] = 334.999877929688,
 					["h"] = 384.999877929688,
+					["w"] = 334.999877929688,
+					["x"] = 0,
 				}, -- [1]
 			},
-			["gridWidth"] = 599.999938964844,
+			["gridHeight"] = 399.999969482422,
 			["y"] = 0,
 			["x"] = 0,
-			["gridHeight"] = 399.999969482422,
+			["gridWidth"] = 599.999938964844,
 		},
 		["Comet - Illidan"] = {
 			["y"] = 0,
@@ -44,28 +44,28 @@ MogItDB = {
 }
 MogItWishlist = {
 	["profileKeys"] = {
-		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Comet - Illidan"] = "Comet - Illidan",
 		["Metal - Illidan"] = "Metal - Illidan",
+		["Natal - Illidan"] = "Natal - Illidan",
+		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
 		["Evan - Illidan"] = "Evan - Illidan",
 		["Plane - Illidan"] = "Plane - Illidan",
-		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
-		["Natal - Illidan"] = "Natal - Illidan",
-		["Comet - Illidan"] = "Comet - Illidan",
 	},
 	["profiles"] = {
-		["Combustion - Illidan"] = {
+		["Comet - Illidan"] = {
 		},
 		["Metal - Illidan"] = {
+		},
+		["Natal - Illidan"] = {
+		},
+		["Combustion - Illidan"] = {
+		},
+		["Centromere - Dark Iron"] = {
 		},
 		["Evan - Illidan"] = {
 		},
 		["Plane - Illidan"] = {
-		},
-		["Centromere - Dark Iron"] = {
-		},
-		["Natal - Illidan"] = {
-		},
-		["Comet - Illidan"] = {
 		},
 	},
 }

@@ -1,7 +1,7 @@
 
 AmrDb = {
 	["Talents"] = {
-		"1201212", -- [1]
+		"1221112", -- [1]
 		"1211212", -- [2]
 	},
 	["LastCharacterImportDate"] = "10/17/14 13:07:11",
@@ -22,7 +22,7 @@ AmrDb = {
 			"|cff0070dd|Hitem:109807:0:0:0:0:0:0:0:100:0:2:1:524|h[Lightbinder Leggings]|h|r", -- [7]
 			"|cffa335ee|Hitem:116003:0:0:0:0:0:0:0:100:0:4:0|h[Spectator's Sandals of Carnage]|h|r", -- [8]
 			"|cffa335ee|Hitem:115999:0:5343:0:0:0:0:0:100:0:4:1:563|h[Rotmonger Bracers]|h|r", -- [9]
-			"|cff0070dd|Hitem:109846:0:0:0:0:0:0:0:100:0:2:2:499:524|h[Gloves of Swirling Light]|h|r", -- [10]
+			"|cffa335ee|Hitem:113610:0:0:0:0:0:0:0:100:0:3:0|h[Meatmonger's Gory Grips]|h|r", -- [10]
 			"|cffa335ee|Hitem:118299:5301:0:0:0:0:0:0:100:0:11:0|h[Timeless Solium Band of Lifegiving]|h|r", -- [11]
 			"|cff0070dd|Hitem:109767:5301:0:0:0:0:0:0:100:0:1:1:522|h[Ring of Purified Light]|h|r", -- [12]
 			"|cffa335ee|Hitem:112317:0:0:0:0:0:0:0:100:0:13:2:525:530|h[Winged Hourglass]|h|r", -- [13]
@@ -49,25 +49,8 @@ AmrDb = {
 			"|cffe6cc80|Hitem:105690:0:4637:4637:0:0:0:0:100:0:6:0|h[Hellscream's War Staff]|h|r", -- [16]
 		}, -- [2]
 	},
-	["Glyphs"] = {
-		{
-			147072, -- [1]
-			55673, -- [2]
-			147776, -- [3]
-			119872, -- [4]
-			145722, -- [5]
-			63248, -- [6]
-		}, -- [1]
-		{
-			58009, -- [1]
-			119866, -- [2]
-			147776, -- [3]
-			89489, -- [4]
-			145722, -- [5]
-			119853, -- [6]
-		}, -- [2]
-	},
-	["Class"] = "PRIEST",
+	["Region"] = "US",
+	["LastCharacterImport"] = "$7;Illidan;Evan;Slash Cry;13;2;90;10:600,4:600;1;s1;21;1211220;55673,2,7573,82474,1350,704;q1;98599s7u493x4653y0c11e4896;766s10u12x0y0c11e-465;1s1u0x378y-378c41;2881s15u0x0c1e-8;3531s6u-12x-4y-17z17c230;6649s12u-2b450x-17c3d104427;131s3u14b0x21y-21c13e383d104468;165s16u0b0x17c2e-364d104503;22s9u-12b-1e-28d103811;1s5u12b1x4y-4z-17c123e4d104523;1s11u-12b0x17c2d104524;35s8u12b0x4c1e8d104552;95s14u0b-1d102309;71s13u0b0d102299;6s2u-14b1d104477$g\\4653\\76693\\4815,4653,4578\\20 _Haste_\\83147,76693,76627@g\\5031\\95345\\\\Courageous\\@g\\4649\\76699\\4816,4649,4584\\20 _Haste_\\83142,76699,76633@g\\4632\\76681\\4632,4566\\10 _Haste_, 10 _CriticalStrike_\\76681,76615@g\\4647\\76697\\4818,4647,4582\\20 _CriticalStrike_\\83146,76697,76631@g\\4611\\76660\\4611,4545\\5 _Intellect_, 10 _CriticalStrike_\\76660,76594@g\\4591\\76640\\4591,4524\\10 _Spirit_, 10 _CriticalStrike_\\76640,76574@e\\4896\\0\\125497\\19 _Intellect_, 11 _Spirit_\\38426=3@e\\4431\\74720\\104417\\11 _Haste_\\74250=2@e\\4423\\74712\\104403\\12 _Intellect_\\74249=3,74250=3@e\\4806\\87559\\121195\\15 _Intellect_, 5 _CriticalStrike_\\39354=1,79255=3@e\\4442\\74724\\104427\\Jade Spirit\\74250=4,74248=10@e\\4414\\74703\\104389\\12 _Intellect_\\74248=3@e\\4418\\74707\\104393\\15 _Spirit_\\74249=4@e\\4426\\74715\\104407\\11 _Haste_\\74249=2,74250=1@e\\4895\\0\\125496\\19 _Intellect_, 11 _CriticalStrike_\\38426=3@e\\4419\\74708\\104395\\5 All Stats\\74249=2,74250=3",
 	["Specs"] = {
 		21, -- [1]
 		20, -- [2]
@@ -97,15 +80,11 @@ AmrDb = {
 		[391] = 12,
 		[392] = 192,
 		[614] = 1,
-		[-1] = 3698347,
+		[-1] = 3909587,
 		[416] = 26,
 	},
-	["SendSettings"] = {
-		["SendTo"] = "",
-		["SendGems"] = true,
-		["SendEnchants"] = true,
-		["SendEnchantMaterials"] = true,
-		["SendToType"] = "a friend",
+	["IconInfo"] = {
+		["minimapPos"] = 141.874669027745,
 	},
 	["LogData"] = {
 		["_wipes"] = {
@@ -115,43 +94,43 @@ AmrDb = {
 			[1136] = "disabled",
 			[1205] = "disabled",
 		},
-		["_lastZone"] = "Highmaul",
 		["_lastDiff"] = 14,
+		["_lastZone"] = "Highmaul",
 	},
 	["BagItems"] = {
 		"|cff1eff00|Hitem:114120:0:0:0:0:0:0:0:100:0:0:0|h[Big Crate of Salvage]|h|r", -- [1]
 		"|cff1eff00|Hitem:114120:0:0:0:0:0:0:0:100:0:0:0|h[Big Crate of Salvage]|h|r", -- [2]
 		"|cffffffff|Hitem:5512:0:0:0:0:0:0:0:100:0:3:0|h[Healthstone]|h|r", -- [3]
-		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [4]
-		"|cffffffff|Hitem:113823:0:0:0:0:0:0:0:100:0:0:0|h[Crusted Iron Horde Pauldrons]|h|r", -- [5]
-		"|cffffffff|Hitem:110560:0:0:0:0:0:0:0:100:0:11:0|h[Garrison Hearthstone]|h|r", -- [6]
-		"|cffffffff|Hitem:6218:0:0:0:0:0:0:0:100:0:0:0|h[Runed Copper Rod]|h|r", -- [7]
-		"|cffffffff|Hitem:118428:0:0:0:0:0:0:0:100:0:0:0|h[Legion Chili]|h|r", -- [8]
-		"|cffffffff|Hitem:6256:0:0:0:0:0:0:0:100:0:0:0|h[Fishing Pole]|h|r", -- [9]
-		"|cff1eff00|Hitem:10938:0:0:0:0:0:0:0:100:0:0:0|h[Lesser Magic Essence]|h|r", -- [10]
-		"|cff1eff00|Hitem:10939:0:0:0:0:0:0:0:100:0:0:0|h[Greater Magic Essence]|h|r", -- [11]
-		"|cff1eff00|Hitem:113261:0:0:0:0:0:0:0:100:0:0:0|h[Sorcerous Fire]|h|r", -- [12]
-		"|cff1eff00|Hitem:114745:0:0:0:0:0:0:0:100:0:0:0|h[Braced Armor Enhancement]|h|r", -- [13]
-		"|cff1eff00|Hitem:114128:0:0:0:0:0:0:0:100:0:0:0|h[Balanced Weapon Enhancement]|h|r", -- [14]
-		"|cff0070dd|Hitem:118354:0:0:0:0:0:0:0:100:0:1:0|h[Follower Re-training Certificate]|h|r", -- [15]
-		"|cff0070dd|Hitem:10978:0:0:0:0:0:0:0:100:0:0:0|h[Small Glimmering Shard]|h|r", -- [16]
-		"|cff0070dd|Hitem:11138:0:0:0:0:0:0:0:100:0:0:0|h[Small Glowing Shard]|h|r", -- [17]
-		"|cff0070dd|Hitem:34053:0:0:0:0:0:0:0:100:0:0:0|h[Small Dream Shard]|h|r", -- [18]
-		"|cff0070dd|Hitem:74252:0:0:0:0:0:0:0:100:0:0:0|h[Small Ethereal Shard]|h|r", -- [19]
-		"|cff0070dd|Hitem:118922:0:0:0:0:0:0:0:100:0:11:0|h[Oralius' Whispering Crystal]|h|r", -- [20]
-		"|cff0070dd|Hitem:110005:0:0:0:0:0:0:0:100:0:2:1:524|h[Crystalline Blood Drop]|h|r", -- [21]
-		"|cff0070dd|Hitem:119181:0:0:0:0:0:0:0:100:0:2:1:524|h[Hoof of Yalnu]|h|r", -- [22]
-		"|cffa335ee|Hitem:113588:0:0:0:0:0:0:0:100:0:0:0|h[Temporal Crystal]|h|r", -- [23]
-		"|cffa335ee|Hitem:114131:0:0:0:0:0:0:0:100:0:0:0|h[Power Overrun Weapon Enhancement]|h|r", -- [24]
-		"|cffff8000|Hitem:102247:5302:5343:0:0:0:0:836114944:100:505:0:0|h[Jina-Kang, Kindness of Chi-Ji]|h|r", -- [25]
+		"|cff0070dd|Hitem:109846:0:0:0:0:0:0:0:100:0:2:2:499:524|h[Gloves of Swirling Light]|h|r", -- [4]
+		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [5]
+		"|cffffffff|Hitem:113823:0:0:0:0:0:0:0:100:0:0:0|h[Crusted Iron Horde Pauldrons]|h|r", -- [6]
+		"|cffffffff|Hitem:110560:0:0:0:0:0:0:0:100:0:11:0|h[Garrison Hearthstone]|h|r", -- [7]
+		"|cffffffff|Hitem:6218:0:0:0:0:0:0:0:100:0:0:0|h[Runed Copper Rod]|h|r", -- [8]
+		"|cffffffff|Hitem:118428:0:0:0:0:0:0:0:100:0:0:0|h[Legion Chili]|h|r", -- [9]
+		"|cffffffff|Hitem:6256:0:0:0:0:0:0:0:100:0:0:0|h[Fishing Pole]|h|r", -- [10]
+		"|cff1eff00|Hitem:10938:0:0:0:0:0:0:0:100:0:0:0|h[Lesser Magic Essence]|h|r", -- [11]
+		"|cff1eff00|Hitem:10939:0:0:0:0:0:0:0:100:0:0:0|h[Greater Magic Essence]|h|r", -- [12]
+		"|cff1eff00|Hitem:113261:0:0:0:0:0:0:0:100:0:0:0|h[Sorcerous Fire]|h|r", -- [13]
+		"|cff1eff00|Hitem:114745:0:0:0:0:0:0:0:100:0:0:0|h[Braced Armor Enhancement]|h|r", -- [14]
+		"|cff1eff00|Hitem:114128:0:0:0:0:0:0:0:100:0:0:0|h[Balanced Weapon Enhancement]|h|r", -- [15]
+		"|cff0070dd|Hitem:118354:0:0:0:0:0:0:0:100:0:1:0|h[Follower Re-training Certificate]|h|r", -- [16]
+		"|cff0070dd|Hitem:10978:0:0:0:0:0:0:0:100:0:0:0|h[Small Glimmering Shard]|h|r", -- [17]
+		"|cff0070dd|Hitem:11138:0:0:0:0:0:0:0:100:0:0:0|h[Small Glowing Shard]|h|r", -- [18]
+		"|cff0070dd|Hitem:34053:0:0:0:0:0:0:0:100:0:0:0|h[Small Dream Shard]|h|r", -- [19]
+		"|cff0070dd|Hitem:74252:0:0:0:0:0:0:0:100:0:0:0|h[Small Ethereal Shard]|h|r", -- [20]
+		"|cff0070dd|Hitem:118922:0:0:0:0:0:0:0:100:0:11:0|h[Oralius' Whispering Crystal]|h|r", -- [21]
+		"|cff0070dd|Hitem:110005:0:0:0:0:0:0:0:100:0:2:1:524|h[Crystalline Blood Drop]|h|r", -- [22]
+		"|cff0070dd|Hitem:119181:0:0:0:0:0:0:0:100:0:2:1:524|h[Hoof of Yalnu]|h|r", -- [23]
+		"|cffa335ee|Hitem:113588:0:0:0:0:0:0:0:100:0:0:0|h[Temporal Crystal]|h|r", -- [24]
+		"|cffa335ee|Hitem:114131:0:0:0:0:0:0:0:100:0:0:0|h[Power Overrun Weapon Enhancement]|h|r", -- [25]
+		"|cffff8000|Hitem:102247:5302:5343:0:0:0:0:836114944:100:505:0:0|h[Jina-Kang, Kindness of Chi-Ji]|h|r", -- [26]
 	},
-	["Professions"] = {
-		["Tailoring"] = 642,
-		["Archaeology"] = 2,
-		["Fishing"] = 600,
-		["Cooking"] = 16,
-		["First Aid"] = 12,
-		["Enchanting"] = 638,
+	["SendSettings"] = {
+		["SendTo"] = "",
+		["SendGems"] = true,
+		["SendEnchants"] = true,
+		["SendEnchantMaterials"] = true,
+		["SendToType"] = "a friend",
 	},
 	["VoidItems"] = {
 		"|cff0070dd|Hitem:93550:0:0:0:0:0:0:356991616:100:0:0:0|h[Crafted Dreadful Gladiator's Mooncloth Gloves]|h|r", -- [1]
@@ -302,11 +281,33 @@ AmrDb = {
 		[1270] = 6,
 	},
 	["Faction"] = "Horde",
-	["IconInfo"] = {
-		["minimapPos"] = 141.874669027745,
+	["Professions"] = {
+		["Tailoring"] = 642,
+		["Archaeology"] = 2,
+		["Fishing"] = 600,
+		["Cooking"] = 16,
+		["First Aid"] = 12,
+		["Enchanting"] = 638,
 	},
-	["LastCharacterImport"] = "$7;Illidan;Evan;Slash Cry;13;2;90;10:600,4:600;1;s1;21;1211220;55673,2,7573,82474,1350,704;q1;98599s7u493x4653y0c11e4896;766s10u12x0y0c11e-465;1s1u0x378y-378c41;2881s15u0x0c1e-8;3531s6u-12x-4y-17z17c230;6649s12u-2b450x-17c3d104427;131s3u14b0x21y-21c13e383d104468;165s16u0b0x17c2e-364d104503;22s9u-12b-1e-28d103811;1s5u12b1x4y-4z-17c123e4d104523;1s11u-12b0x17c2d104524;35s8u12b0x4c1e8d104552;95s14u0b-1d102309;71s13u0b0d102299;6s2u-14b1d104477$g\\4653\\76693\\4815,4653,4578\\20 _Haste_\\83147,76693,76627@g\\5031\\95345\\\\Courageous\\@g\\4649\\76699\\4816,4649,4584\\20 _Haste_\\83142,76699,76633@g\\4632\\76681\\4632,4566\\10 _Haste_, 10 _CriticalStrike_\\76681,76615@g\\4647\\76697\\4818,4647,4582\\20 _CriticalStrike_\\83146,76697,76631@g\\4611\\76660\\4611,4545\\5 _Intellect_, 10 _CriticalStrike_\\76660,76594@g\\4591\\76640\\4591,4524\\10 _Spirit_, 10 _CriticalStrike_\\76640,76574@e\\4896\\0\\125497\\19 _Intellect_, 11 _Spirit_\\38426=3@e\\4431\\74720\\104417\\11 _Haste_\\74250=2@e\\4423\\74712\\104403\\12 _Intellect_\\74249=3,74250=3@e\\4806\\87559\\121195\\15 _Intellect_, 5 _CriticalStrike_\\39354=1,79255=3@e\\4442\\74724\\104427\\Jade Spirit\\74250=4,74248=10@e\\4414\\74703\\104389\\12 _Intellect_\\74248=3@e\\4418\\74707\\104393\\15 _Spirit_\\74249=4@e\\4426\\74715\\104407\\11 _Haste_\\74249=2,74250=1@e\\4895\\0\\125496\\19 _Intellect_, 11 _CriticalStrike_\\38426=3@e\\4419\\74708\\104395\\5 All Stats\\74249=2,74250=3",
-	["Region"] = "US",
+	["Class"] = "PRIEST",
+	["Glyphs"] = {
+		{
+			147072, -- [1]
+			55673, -- [2]
+			147776, -- [3]
+			119872, -- [4]
+			145722, -- [5]
+			63248, -- [6]
+		}, -- [1]
+		{
+			58009, -- [1]
+			119866, -- [2]
+			147776, -- [3]
+			89489, -- [4]
+			145722, -- [5]
+			119853, -- [6]
+		}, -- [2]
+	},
 	["BankItemsAndCounts"] = {
 		[109132] = 3,
 		[94289] = 2,
@@ -353,39 +354,39 @@ AmrDb = {
 		[10938] = 3,
 		[10939] = 5,
 		[10940] = 12,
-		[118936] = 1,
+		[109129] = 28,
 		[52723] = 1,
-		[34055] = 19,
-		[113478] = 6,
+		[109119] = 61,
+		[120945] = 10,
 		[115504] = 8,
-		[52555] = 61,
 		[101677] = 1,
+		[52555] = 61,
 		[89112] = 7,
 		[76061] = 20,
 		[109126] = 145,
-		[102218] = 20,
-		[109131] = 11,
+		[22445] = 88,
+		[34057] = 1,
 		[11082] = 2,
 		[11083] = 5,
 		[11084] = 1,
 		[52718] = 33,
 		[34053] = 6,
-		[34057] = 1,
-		[113264] = 47,
-		[34054] = 100,
-		[11138] = 1,
-		[111556] = 108,
-		[16204] = 10,
-		[11135] = 4,
+		[109131] = 11,
 		[52722] = 1,
+		[11135] = 4,
+		[16204] = 10,
+		[111556] = 108,
+		[11138] = 1,
+		[34054] = 100,
+		[113264] = 47,
 		[116053] = 3,
-		[22445] = 88,
+		[102218] = 20,
 		[22447] = 22,
 		[22449] = 3,
 		[34486] = 1,
-		[120945] = 10,
-		[109119] = 61,
+		[113478] = 6,
+		[34055] = 19,
 		[109124] = 15,
-		[109129] = 28,
+		[118936] = 1,
 	},
 }
