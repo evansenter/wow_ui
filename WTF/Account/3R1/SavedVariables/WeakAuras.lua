@@ -3385,10 +3385,10 @@ WeakAurasSaved = {
 				["use_tooltip"] = true,
 				["custom_hide"] = "timed",
 				["debuffType"] = "HELPFUL",
-				["subeventSuffix"] = "_CAST_START",
-				["type"] = "aura",
-				["unevent"] = "auto",
 				["tooltip_operator"] = "find('%s')",
+				["type"] = "aura",
+				["subeventSuffix"] = "_CAST_START",
+				["unevent"] = "auto",
 				["event"] = "Cooldown Progress (Spell)",
 				["name"] = "115308",
 				["countOperator"] = "==",
@@ -3510,13 +3510,13 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["debuffType"] = "HELPFUL",
 				["type"] = "custom",
+				["subeventPrefix"] = "SPELL",
+				["unevent"] = "auto",
 				["names"] = {
 				},
-				["unevent"] = "auto",
-				["use_unit"] = true,
 				["use_inverse"] = false,
 				["event"] = "Chat Message",
-				["subeventPrefix"] = "SPELL",
+				["use_unit"] = true,
 				["subeventSuffix"] = "_CAST_START",
 				["use_spellName"] = true,
 				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 62606 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    \n    if chargesCurrent <= 0 then\n        return true\n    end\n    return false\nend\n\n\n\n",
@@ -5396,10 +5396,10 @@ WeakAurasSaved = {
 				["spellName"] = 26297,
 			},
 			["desaturateBackground"] = false,
-			["textSize"] = 16,
-			["sparkRotationMode"] = "AUTO",
-			["desaturateForeground"] = false,
 			["displayTextLeft"] = " ",
+			["sparkRotationMode"] = "AUTO",
+			["textSize"] = 16,
+			["desaturateForeground"] = false,
 			["borderInset"] = 11,
 			["borderColor"] = {
 				1, -- [1]
@@ -6235,14 +6235,14 @@ WeakAurasSaved = {
 			["selfPoint"] = "CENTER",
 			["trigger"] = {
 				["type"] = "status",
+				["unit"] = "player",
+				["subeventSuffix"] = "_CAST_START",
+				["subeventPrefix"] = "SPELL",
+				["percenthealth"] = "25",
+				["event"] = "Health",
 				["names"] = {
 					"Tiger Power", -- [1]
 				},
-				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["percenthealth"] = "25",
-				["event"] = "Health",
-				["subeventPrefix"] = "SPELL",
 				["use_unit"] = true,
 				["unevent"] = "auto",
 				["inverse"] = true,
@@ -7319,13 +7319,13 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["debuffType"] = "HELPFUL",
 				["type"] = "custom",
-				["subeventPrefix"] = "SPELL",
+				["use_unit"] = true,
 				["custom_type"] = "status",
-				["names"] = {
-				},
+				["subeventPrefix"] = "SPELL",
 				["use_inverse"] = false,
 				["event"] = "Chat Message",
-				["use_unit"] = true,
+				["names"] = {
+				},
 				["subeventSuffix"] = "_CAST_START",
 				["use_spellName"] = true,
 				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return true\n    end\n    return false\nend",
@@ -9862,7 +9862,7 @@ WeakAurasSaved = {
 				},
 				["type"] = "aura",
 				["use_unit"] = true,
-				["unevent"] = "auto",
+				["tooltip_operator"] = "find('%s')",
 				["subeventPrefix"] = "SPELL",
 				["name"] = "115308",
 				["event"] = "Cooldown Progress (Spell)",
@@ -9873,8 +9873,8 @@ WeakAurasSaved = {
 				},
 				["countOperator"] = ">",
 				["count"] = "0",
-				["tooltip_operator"] = "find('%s')",
 				["subeventSuffix"] = "_CAST_START",
+				["unevent"] = "auto",
 				["fullscan"] = true,
 			},
 			["text"] = true,
@@ -13109,10 +13109,10 @@ WeakAurasSaved = {
 					"Heating Up", -- [1]
 				},
 				["custom_hide"] = "timed",
-				["tooltip_operator"] = "find('%s')",
+				["unevent"] = "auto",
 				["type"] = "aura",
 				["event"] = "Cooldown Progress (Spell)",
-				["subeventSuffix"] = "_CAST_START",
+				["tooltip_operator"] = "find('%s')",
 				["count"] = "0",
 				["use_spellId"] = true,
 				["countOperator"] = ">",
@@ -13123,7 +13123,7 @@ WeakAurasSaved = {
 				},
 				["spellName"] = 115203,
 				["unit"] = "player",
-				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 				["subeventPrefix"] = "SPELL",
 			},
@@ -15091,7 +15091,7 @@ WeakAurasSaved = {
 				["names"] = {
 					"Brain Freeze", -- [1]
 				},
-				["tooltip_operator"] = "find('%s')",
+				["unevent"] = "auto",
 				["use_unit"] = true,
 				["name"] = "115308",
 				["countOperator"] = ">",
@@ -15102,8 +15102,8 @@ WeakAurasSaved = {
 				},
 				["event"] = "Cooldown Progress (Spell)",
 				["count"] = "0",
-				["unevent"] = "auto",
 				["subeventSuffix"] = "_CAST_START",
+				["tooltip_operator"] = "find('%s')",
 				["fullscan"] = true,
 			},
 			["text"] = true,
@@ -17466,19 +17466,19 @@ WeakAurasSaved = {
 				["type"] = "status",
 				["spellId"] = "44457",
 				["unevent"] = "auto",
-				["subeventPrefix"] = "SPELL",
+				["unit"] = "target",
 				["use_inverse"] = true,
 				["event"] = "Cooldown Progress (Spell)",
-				["names"] = {
-					"Frost Bomb", -- [1]
-				},
+				["subeventPrefix"] = "SPELL",
 				["use_unit"] = true,
 				["use_spellId"] = true,
 				["inverse"] = true,
 				["use_spellName"] = true,
 				["spellName"] = 102355,
 				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "target",
+				["names"] = {
+					"Frost Bomb", -- [1]
+				},
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = false,
@@ -19010,8 +19010,8 @@ WeakAurasSaved = {
 				["custom_hide"] = "timed",
 				["unit"] = "player",
 				["type"] = "custom",
+				["custom_type"] = "status",
 				["unevent"] = "auto",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
 				["debuffType"] = "HELPFUL",
 				["countOperator"] = ">",
@@ -19021,7 +19021,7 @@ WeakAurasSaved = {
 				["count"] = "0",
 				["event"] = "Power",
 				["check"] = "update",
-				["custom_type"] = "status",
+				["subeventSuffix"] = "_CAST_START",
 				["percentpower"] = "100",
 				["percentpower_operator"] = "<",
 			},
@@ -19686,15 +19686,15 @@ WeakAurasSaved = {
 				["custom_hide"] = "timed",
 				["use_inverse"] = true,
 				["event"] = "Cooldown Progress (Spell)",
-				["names"] = {
-				},
+				["subeventPrefix"] = "SPELL",
 				["subeventSuffix"] = "_CAST_START",
 				["use_spellName"] = true,
 				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 62606 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    \n    if chargesCurrent > 0 then\n        return true\n    end\n    return false\nend\n\n\n\n",
 				["unit"] = "player",
 				["check"] = "update",
-				["subeventPrefix"] = "SPELL",
 				["use_unit"] = true,
+				["names"] = {
+				},
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = true,
@@ -21015,12 +21015,12 @@ WeakAurasSaved = {
 				["spellId"] = "118864",
 				["subeventPrefix"] = "SPELL",
 				["unit"] = "player",
-				["unevent"] = "auto",
+				["tooltip_operator"] = "find('%s')",
 				["custom_hide"] = "timed",
-				["subeventSuffix"] = "_CAST_START",
+				["unevent"] = "auto",
 				["type"] = "aura",
 				["count"] = "0",
-				["tooltip_operator"] = "find('%s')",
+				["subeventSuffix"] = "_CAST_START",
 				["event"] = "Cooldown Progress (Spell)",
 				["name"] = "115308",
 				["countOperator"] = ">",
@@ -23140,12 +23140,10 @@ WeakAurasSaved = {
 				["type"] = "aura",
 				["spellId"] = "44457",
 				["unevent"] = "auto",
-				["unit"] = "target",
+				["use_unit"] = true,
 				["ownOnly"] = true,
 				["event"] = "Burning Embers",
-				["names"] = {
-					"Frostbolt", -- [1]
-				},
+				["unit"] = "target",
 				["use_spellId"] = true,
 				["use_spellName"] = true,
 				["spellIds"] = {
@@ -23153,7 +23151,9 @@ WeakAurasSaved = {
 				["subeventPrefix"] = "SPELL",
 				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 115098,
-				["use_unit"] = true,
+				["names"] = {
+					"Frostbolt", -- [1]
+				},
 				["custom_hide"] = "timed",
 			},
 			["text"] = true,
@@ -23577,19 +23577,19 @@ WeakAurasSaved = {
 				["type"] = "status",
 				["spellId"] = "44457",
 				["unevent"] = "auto",
+				["subeventPrefix"] = "SPELL",
+				["use_inverse"] = true,
+				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 					"Frost Bomb", -- [1]
 				},
-				["use_inverse"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["unit"] = "target",
 				["subeventSuffix"] = "_CAST_START",
 				["use_spellId"] = true,
 				["inverse"] = true,
 				["use_unit"] = true,
 				["use_spellName"] = true,
 				["spellName"] = 77758,
-				["subeventPrefix"] = "SPELL",
+				["unit"] = "target",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = false,
@@ -26461,10 +26461,10 @@ WeakAurasSaved = {
 				["use_unit"] = true,
 				["use_totemType"] = true,
 				["spellName"] = 0,
-				["custom_type"] = "status",
-				["type"] = "custom",
-				["subeventSuffix"] = "_CAST_START",
 				["unevent"] = "auto",
+				["type"] = "custom",
+				["custom_type"] = "status",
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 				["totemType"] = 1,
 				["event"] = "Action Usable",
@@ -26582,10 +26582,10 @@ WeakAurasSaved = {
 				["use_unit"] = true,
 				["use_totemType"] = true,
 				["custom_hide"] = "timed",
-				["unevent"] = "auto",
-				["type"] = "custom",
-				["subeventSuffix"] = "_CAST_START",
 				["custom_type"] = "status",
+				["type"] = "custom",
+				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 0,
 				["totemType"] = 1,
 				["event"] = "Action Usable",
@@ -32034,12 +32034,12 @@ WeakAurasSaved = {
 				["spellId"] = "57761",
 				["subeventPrefix"] = "SPELL",
 				["unit"] = "player",
-				["unevent"] = "auto",
+				["tooltip_operator"] = "find('%s')",
 				["debuffType"] = "HELPFUL",
-				["subeventSuffix"] = "_CAST_START",
+				["unevent"] = "auto",
 				["type"] = "aura",
 				["name"] = "115308",
-				["tooltip_operator"] = "find('%s')",
+				["subeventSuffix"] = "_CAST_START",
 				["event"] = "Cooldown Progress (Spell)",
 				["count"] = "0",
 				["countOperator"] = "==",
@@ -32562,17 +32562,17 @@ WeakAurasSaved = {
 				["type"] = "custom",
 				["custom_hide"] = "timed",
 				["subeventSuffix"] = "_CAST_START",
-				["use_unit"] = true,
+				["names"] = {
+				},
 				["use_inverse"] = false,
 				["event"] = "Action Usable",
-				["unit"] = "player",
+				["use_unit"] = true,
 				["unevent"] = "auto",
 				["use_spellName"] = true,
 				["custom"] = "function()\n    local _, cd, _ = GetSpellCooldown(123402);\n    return cd == 0;\nend",
 				["subeventPrefix"] = "SPELL",
 				["check"] = "update",
-				["names"] = {
-				},
+				["unit"] = "player",
 				["custom_type"] = "status",
 				["debuffType"] = "HELPFUL",
 			},
@@ -33348,18 +33348,18 @@ WeakAurasSaved = {
 				["spellId"] = "109964",
 				["unevent"] = "auto",
 				["custom_hide"] = "timed",
-				["unit"] = "player",
+				["use_unit"] = true,
 				["event"] = "Cooldown Progress (Spell)",
-				["names"] = {
-					"Spirit Shell", -- [1]
-				},
+				["unit"] = "player",
 				["subeventSuffix"] = "_CAST_START",
 				["use_spellId"] = true,
 				["spellIds"] = {
 				},
 				["subeventPrefix"] = "SPELL",
 				["use_spellName"] = true,
-				["use_unit"] = true,
+				["names"] = {
+					"Spirit Shell", -- [1]
+				},
 				["debuffType"] = "HELPFUL",
 				["fullscan"] = true,
 			},
@@ -36116,10 +36116,10 @@ WeakAurasSaved = {
 				},
 				["useCount"] = true,
 				["spellName"] = 115203,
-				["subeventSuffix"] = "_CAST_START",
+				["unevent"] = "auto",
 				["type"] = "aura",
 				["name"] = "115308",
-				["tooltip_operator"] = "find('%s')",
+				["subeventSuffix"] = "_CAST_START",
 				["event"] = "Cooldown Progress (Spell)",
 				["count"] = "0",
 				["countOperator"] = "==",
@@ -36129,7 +36129,7 @@ WeakAurasSaved = {
 				["spellIds"] = {
 				},
 				["custom_hide"] = "timed",
-				["unevent"] = "auto",
+				["tooltip_operator"] = "find('%s')",
 				["unit"] = "player",
 				["debuffType"] = "HELPFUL",
 				["subeventPrefix"] = "SPELL",
@@ -37049,19 +37049,19 @@ WeakAurasSaved = {
 				["type"] = "aura",
 				["use_inverse"] = false,
 				["unevent"] = "auto",
-				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
 				["ownOnly"] = true,
 				["event"] = "Cooldown Progress (Spell)",
-				["names"] = {
-					"Shuffle", -- [1]
-				},
+				["subeventPrefix"] = "SPELL",
 				["use_unit"] = true,
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["subeventSuffix"] = "_CAST_START",
 				["inverse"] = true,
-				["unit"] = "player",
+				["names"] = {
+					"Shuffle", -- [1]
+				},
 				["spellName"] = 121253,
 				["custom_hide"] = "timed",
 			},
@@ -40128,10 +40128,10 @@ WeakAurasSaved = {
 				["use_tooltip"] = true,
 				["custom_hide"] = "timed",
 				["debuffType"] = "HELPFUL",
-				["tooltip_operator"] = "find('%s')",
-				["type"] = "aura",
-				["unevent"] = "auto",
 				["subeventSuffix"] = "_CAST_START",
+				["type"] = "aura",
+				["tooltip_operator"] = "find('%s')",
+				["unevent"] = "auto",
 				["countOperator"] = "==",
 				["use_spellName"] = true,
 				["event"] = "Cooldown Progress (Spell)",
@@ -42118,7 +42118,7 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["displayTextLeft"] = " ",
+			["textSize"] = 16,
 			["borderInset"] = 11,
 			["borderColor"] = {
 				1, -- [1]
@@ -42146,13 +42146,13 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["debuffType"] = "HELPFUL",
 				["type"] = "status",
-				["subeventPrefix"] = "SPELL",
+				["use_unit"] = true,
 				["unevent"] = "auto",
-				["names"] = {
-				},
+				["subeventPrefix"] = "SPELL",
 				["remaining_operator"] = "<",
 				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
+				["names"] = {
+				},
 				["subeventSuffix"] = "_CAST_START",
 				["use_spellName"] = true,
 				["spellIds"] = {
@@ -42230,8 +42230,8 @@ WeakAurasSaved = {
 			["sparkDesature"] = false,
 			["orientation"] = "VERTICAL_INVERSE",
 			["crop_x"] = 0.409999996423721,
-			["textSize"] = 16,
 			["desaturateForeground"] = false,
+			["displayTextLeft"] = " ",
 		},
 		["Living Bomb Unusable"] = {
 			["user_y"] = 0,
@@ -42431,6 +42431,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_combat"] = true,
 				["class"] = {
 					["single"] = "SHAMAN",
 					["multi"] = {
@@ -42442,7 +42443,6 @@ WeakAurasSaved = {
 						[3] = true,
 					},
 				},
-				["use_combat"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -45317,17 +45317,17 @@ WeakAurasSaved = {
 				["type"] = "custom",
 				["custom_type"] = "status",
 				["subeventSuffix"] = "_CAST_START",
-				["use_unit"] = true,
+				["names"] = {
+				},
 				["use_inverse"] = false,
 				["event"] = "Chat Message",
-				["unit"] = "player",
+				["use_unit"] = true,
 				["subeventPrefix"] = "SPELL",
 				["use_spellName"] = true,
 				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return true\n    end\n    return false\nend",
 				["unevent"] = "auto",
 				["check"] = "update",
-				["names"] = {
-				},
+				["unit"] = "player",
 				["spellName"] = 115399,
 				["custom_hide"] = "timed",
 			},
@@ -47849,12 +47849,12 @@ WeakAurasSaved = {
 					"Spell Reflection", -- [1]
 				},
 				["use_tooltip"] = true,
+				["debuffType"] = "HELPFUL",
 				["custom_hide"] = "timed",
-				["spellName"] = 115203,
 				["use_unit"] = true,
 				["type"] = "aura",
 				["subeventPrefix"] = "SPELL",
-				["tooltip_operator"] = "find('%s')",
+				["unevent"] = "auto",
 				["unit"] = "player",
 				["use_spellName"] = true,
 				["event"] = "Cooldown Progress (Spell)",
@@ -47865,9 +47865,9 @@ WeakAurasSaved = {
 				["spellIds"] = {
 				},
 				["countOperator"] = "==",
-				["unevent"] = "auto",
 				["subeventSuffix"] = "_CAST_START",
-				["debuffType"] = "HELPFUL",
+				["tooltip_operator"] = "find('%s')",
+				["spellName"] = 115203,
 			},
 			["text"] = true,
 			["stickyDuration"] = false,
@@ -48567,12 +48567,10 @@ WeakAurasSaved = {
 				["type"] = "aura",
 				["spellId"] = "44457",
 				["unevent"] = "auto",
-				["unit"] = "target",
+				["subeventPrefix"] = "SPELL",
 				["ownOnly"] = true,
 				["event"] = "Burning Embers",
-				["names"] = {
-					"Rising Sun Kick", -- [1]
-				},
+				["unit"] = "target",
 				["use_spellName"] = true,
 				["use_spellId"] = true,
 				["spellIds"] = {
@@ -48580,7 +48578,9 @@ WeakAurasSaved = {
 				["use_unit"] = true,
 				["spellName"] = 115098,
 				["subeventSuffix"] = "_CAST_START",
-				["subeventPrefix"] = "SPELL",
+				["names"] = {
+					"Rising Sun Kick", -- [1]
+				},
 				["custom_hide"] = "timed",
 			},
 			["text"] = true,
@@ -49095,7 +49095,7 @@ WeakAurasSaved = {
 				["spellName"] = 115203,
 				["type"] = "aura",
 				["use_unit"] = true,
-				["tooltip_operator"] = "find('%s')",
+				["unevent"] = "auto",
 				["count"] = "0",
 				["name"] = "115308",
 				["countOperator"] = "==",
@@ -49105,8 +49105,8 @@ WeakAurasSaved = {
 				["spellIds"] = {
 				},
 				["event"] = "Cooldown Progress (Spell)",
-				["unevent"] = "auto",
 				["subeventSuffix"] = "_CAST_START",
+				["tooltip_operator"] = "find('%s')",
 				["custom_hide"] = "timed",
 				["useCount"] = true,
 			},
@@ -51758,6 +51758,22 @@ WeakAurasSaved = {
 			["texture"] = "Textures\\SpellActivationOverlays\\GenericArc_01",
 			["xOffset"] = 240,
 			["selfPoint"] = "CENTER",
+			["id"] = "Mage Proc Ending Right",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "pulse",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
 			["trigger"] = {
 				["rem"] = "3",
 				["subeventSuffix"] = "_CAST_START",
@@ -51783,21 +51799,12 @@ WeakAurasSaved = {
 				["custom_hide"] = "timed",
 				["useRem"] = true,
 			},
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["type"] = "preset",
-					["duration_type"] = "seconds",
-					["preset"] = "pulse",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
+			["rotation"] = 0,
+			["frameStrata"] = 1,
+			["width"] = 180,
+			["discrete_rotation"] = 0,
+			["desaturate"] = false,
+			["numTriggers"] = 3,
 			["additional_triggers"] = {
 				{
 					["trigger"] = {
@@ -51848,13 +51855,6 @@ WeakAurasSaved = {
 					},
 				}, -- [2]
 			},
-			["rotation"] = 0,
-			["frameStrata"] = 1,
-			["width"] = 180,
-			["discrete_rotation"] = 0,
-			["desaturate"] = false,
-			["numTriggers"] = 3,
-			["id"] = "Mage Proc Ending Right",
 			["height"] = 380,
 			["rotate"] = true,
 			["load"] = {
@@ -54194,7 +54194,7 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["displayTextLeft"] = " ",
+			["textSize"] = 16,
 			["borderInset"] = 11,
 			["rotation"] = 0,
 			["stacksFont"] = "ABF",
@@ -54382,8 +54382,8 @@ WeakAurasSaved = {
 			["sparkDesature"] = false,
 			["orientation"] = "VERTICAL_INVERSE",
 			["crop_x"] = 0.409999996423721,
-			["textSize"] = 16,
 			["desaturateForeground"] = false,
+			["displayTextLeft"] = " ",
 		},
 		["Chi Wave MW Unusable"] = {
 			["user_y"] = 0,
@@ -54719,8 +54719,8 @@ WeakAurasSaved = {
 					"Raging Blow!", -- [1]
 				},
 				["type"] = "aura",
+				["unevent"] = "auto",
 				["subeventSuffix"] = "_CAST_START",
-				["use_targetRequired"] = false,
 				["power_operator"] = ">=",
 				["power"] = "90",
 				["event"] = "Action Usable",
@@ -54731,7 +54731,7 @@ WeakAurasSaved = {
 				},
 				["debuffType"] = "HELPFUL",
 				["countOperator"] = ">",
-				["unevent"] = "auto",
+				["use_targetRequired"] = false,
 				["custom_hide"] = "timed",
 				["use_unit"] = true,
 			},
@@ -55172,10 +55172,10 @@ WeakAurasSaved = {
 				["use_tooltip"] = true,
 				["debuffType"] = "HELPFUL",
 				["custom_hide"] = "timed",
-				["tooltip_operator"] = "find('%s')",
-				["type"] = "aura",
-				["subeventSuffix"] = "_CAST_START",
 				["unevent"] = "auto",
+				["type"] = "aura",
+				["tooltip_operator"] = "find('%s')",
+				["subeventSuffix"] = "_CAST_START",
 				["event"] = "Cooldown Progress (Spell)",
 				["name"] = "115308",
 				["countOperator"] = "==",
@@ -55497,10 +55497,10 @@ WeakAurasSaved = {
 					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration"] = "1",
-					["type"] = "custom",
-					["duration_type"] = "seconds",
 					["use_color"] = true,
+					["type"] = "custom",
+					["duration"] = "1",
+					["duration_type"] = "seconds",
 					["colorType"] = "custom",
 					["scaley"] = 1,
 					["alpha"] = 0,
@@ -55533,6 +55533,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_combat"] = true,
 				["class"] = {
 					["single"] = "MAGE",
 					["multi"] = {
@@ -55545,7 +55546,6 @@ WeakAurasSaved = {
 						[2] = true,
 					},
 				},
-				["use_combat"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -55987,12 +55987,12 @@ WeakAurasSaved = {
 					"Brain Freeze", -- [1]
 				},
 				["subeventPrefix"] = "SPELL",
+				["spellName"] = 115203,
 				["debuffType"] = "HELPFUL",
-				["custom_hide"] = "timed",
 				["unit"] = "player",
 				["type"] = "aura",
+				["unevent"] = "auto",
 				["subeventSuffix"] = "_CAST_START",
-				["tooltip_operator"] = "find('%s')",
 				["use_unit"] = true,
 				["count"] = "0",
 				["countOperator"] = "==",
@@ -56003,8 +56003,8 @@ WeakAurasSaved = {
 				},
 				["event"] = "Cooldown Progress (Spell)",
 				["name"] = "115308",
-				["unevent"] = "auto",
-				["spellName"] = 115203,
+				["tooltip_operator"] = "find('%s')",
+				["custom_hide"] = "timed",
 				["fullscan"] = true,
 			},
 			["text"] = true,
@@ -56500,7 +56500,7 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["displayTextLeft"] = " ",
+			["textSize"] = 16,
 			["borderInset"] = 11,
 			["borderColor"] = {
 				1, -- [1]
@@ -56627,8 +56627,8 @@ WeakAurasSaved = {
 			["sparkDesature"] = false,
 			["orientation"] = "VERTICAL_INVERSE",
 			["crop_x"] = 0.409999996423721,
-			["textSize"] = 16,
 			["desaturateForeground"] = false,
+			["displayTextLeft"] = " ",
 		},
 		["Raging Blow Unusable"] = {
 			["user_y"] = 0,
@@ -59443,12 +59443,12 @@ WeakAurasSaved = {
 					"Last Stand", -- [1]
 				},
 				["use_tooltip"] = true,
+				["spellName"] = 115203,
 				["debuffType"] = "HELPFUL",
-				["custom_hide"] = "timed",
-				["subeventSuffix"] = "_CAST_START",
-				["type"] = "aura",
-				["tooltip_operator"] = "find('%s')",
 				["unevent"] = "auto",
+				["type"] = "aura",
+				["subeventSuffix"] = "_CAST_START",
+				["tooltip_operator"] = "find('%s')",
 				["event"] = "Cooldown Progress (Spell)",
 				["spellIds"] = {
 				},
@@ -59461,7 +59461,7 @@ WeakAurasSaved = {
 				["unit"] = "player",
 				["subeventPrefix"] = "SPELL",
 				["use_unit"] = true,
-				["spellName"] = 115203,
+				["custom_hide"] = "timed",
 			},
 			["text"] = true,
 			["stickyDuration"] = false,
@@ -60701,7 +60701,7 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["textSize"] = 14,
+			["desaturateForeground"] = false,
 			["borderInset"] = 11,
 			["actions"] = {
 				["start"] = {
@@ -60844,8 +60844,8 @@ WeakAurasSaved = {
 			["sparkDesature"] = false,
 			["orientation"] = "VERTICAL_INVERSE",
 			["crop_x"] = 0.409999996423721,
-			["desaturateForeground"] = false,
 			["displayTextLeft"] = " ",
+			["textSize"] = 14,
 		},
 		["Tiger's Lust"] = {
 			["xOffset"] = -6.1035156250e-005,
@@ -61313,12 +61313,12 @@ WeakAurasSaved = {
 					"Shield Wall", -- [1]
 				},
 				["use_tooltip"] = true,
+				["debuffType"] = "HELPFUL",
 				["custom_hide"] = "timed",
-				["spellName"] = 115203,
 				["use_unit"] = true,
 				["type"] = "aura",
 				["subeventPrefix"] = "SPELL",
-				["tooltip_operator"] = "find('%s')",
+				["unevent"] = "auto",
 				["unit"] = "player",
 				["use_spellName"] = true,
 				["event"] = "Cooldown Progress (Spell)",
@@ -61329,9 +61329,9 @@ WeakAurasSaved = {
 				["spellIds"] = {
 				},
 				["countOperator"] = "==",
-				["unevent"] = "auto",
 				["subeventSuffix"] = "_CAST_START",
-				["debuffType"] = "HELPFUL",
+				["tooltip_operator"] = "find('%s')",
+				["spellName"] = 115203,
 			},
 			["text"] = true,
 			["stickyDuration"] = false,
@@ -61573,17 +61573,17 @@ WeakAurasSaved = {
 				["type"] = "custom",
 				["spellName"] = 115295,
 				["subeventSuffix"] = "_CAST_START",
-				["use_unit"] = true,
+				["names"] = {
+				},
 				["use_inverse"] = true,
 				["event"] = "Action Usable",
-				["unit"] = "player",
+				["use_unit"] = true,
 				["unevent"] = "auto",
 				["use_spellName"] = true,
 				["custom"] = "function()\n    _, cd, _ = GetSpellCooldown(123402)\n    return cd > 0\nend",
 				["subeventPrefix"] = "SPELL",
 				["check"] = "update",
-				["names"] = {
-				},
+				["unit"] = "player",
 				["custom_type"] = "status",
 				["debuffType"] = "HELPFUL",
 			},
@@ -62288,10 +62288,10 @@ WeakAurasSaved = {
 				["type"] = "status",
 				["spellId"] = "112948",
 				["unevent"] = "auto",
-				["use_unit"] = true,
+				["unit"] = "target",
 				["ownOnly"] = true,
 				["event"] = "Cooldown Progress (Spell)",
-				["subeventPrefix"] = "SPELL",
+				["use_unit"] = true,
 				["subeventSuffix"] = "_CAST_START",
 				["use_spellName"] = true,
 				["inverse"] = true,
@@ -62300,7 +62300,7 @@ WeakAurasSaved = {
 				},
 				["spellName"] = 77758,
 				["use_spellId"] = true,
-				["unit"] = "target",
+				["subeventPrefix"] = "SPELL",
 				["debuffType"] = "HARMFUL",
 			},
 			["text"] = true,
@@ -63247,8 +63247,8 @@ WeakAurasSaved = {
 				["debuffType"] = "HELPFUL",
 				["spellName"] = 115203,
 				["type"] = "aura",
+				["subeventSuffix"] = "_CAST_START",
 				["tooltip_operator"] = "find('%s')",
-				["unevent"] = "auto",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_spellName"] = true,
 				["countOperator"] = "==",
@@ -63259,7 +63259,7 @@ WeakAurasSaved = {
 				},
 				["name"] = "Brain Freeze",
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
+				["unevent"] = "auto",
 				["custom_hide"] = "timed",
 				["subeventPrefix"] = "SPELL",
 			},
@@ -63581,7 +63581,7 @@ WeakAurasSaved = {
 					["scalex"] = 1,
 					["scaley"] = 1,
 					["colorType"] = "custom",
-					["duration"] = "1",
+					["use_color"] = true,
 					["alpha"] = 0,
 					["colorB"] = 0.301960784313726,
 					["y"] = 0,
@@ -63590,8 +63590,8 @@ WeakAurasSaved = {
 					["x"] = 0,
 					["colorFunc"] = "return function(progress, r1, g1, b1, a1, r2, g2, b2, a2)\n    local base = UnitPower(\"player\"); \n    local progress = base / 120;\n    \n    return r1 + (progress * (r2 - r1)), g1 + (progress * (g2 - g1)), b1 + (progress * (b2 - b1)), a1 + (progress * (a2 - a1))\nend",
 					["rotate"] = 0,
-					["use_color"] = true,
 					["duration_type"] = "seconds",
+					["duration"] = "1",
 				},
 				["finish"] = {
 					["duration_type"] = "seconds",
@@ -64132,12 +64132,12 @@ WeakAurasSaved = {
 				["spellId"] = "44544",
 				["use_unit"] = true,
 				["subeventPrefix"] = "SPELL",
+				["spellName"] = 115203,
 				["debuffType"] = "HELPFUL",
-				["custom_hide"] = "timed",
 				["unit"] = "player",
 				["type"] = "aura",
+				["tooltip_operator"] = "find('%s')",
 				["subeventSuffix"] = "_CAST_START",
-				["unevent"] = "auto",
 				["names"] = {
 					"Fingers of Frost", -- [1]
 				},
@@ -64150,8 +64150,8 @@ WeakAurasSaved = {
 				},
 				["event"] = "Cooldown Progress (Spell)",
 				["count"] = "0",
-				["tooltip_operator"] = "find('%s')",
-				["spellName"] = 115203,
+				["unevent"] = "auto",
+				["custom_hide"] = "timed",
 				["fullscan"] = true,
 			},
 			["text"] = true,
@@ -64844,53 +64844,6 @@ WeakAurasSaved = {
 			["texture"] = "Textures\\SpellActivationOverlays\\GenericArc_01",
 			["disjunctive"] = false,
 			["selfPoint"] = "CENTER",
-			["trigger"] = {
-				["rem"] = "3",
-				["subeventSuffix"] = "_CAST_START",
-				["event"] = "Health",
-				["names"] = {
-					"Acceleration", -- [1]
-					"Toxic Power", -- [2]
-					"Berserking", -- [3]
-					"Time Warp", -- [4]
-					"Bloodlust", -- [5]
-					"Ancient Hysteria", -- [6]
-					"Mastermind", -- [7]
-					"Potion of the Jade Serpent", -- [8]
-					"Drums of War", -- [9]
-				},
-				["debuffType"] = "HELPFUL",
-				["subeventPrefix"] = "SPELL",
-				["spellIds"] = {
-				},
-				["type"] = "aura",
-				["remOperator"] = "<=",
-				["unit"] = "player",
-				["custom_hide"] = "timed",
-				["useRem"] = true,
-			},
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["type"] = "preset",
-					["duration_type"] = "seconds",
-					["preset"] = "pulse",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["id"] = "Mage Proc Ending Left",
-			["rotation"] = 0,
-			["frameStrata"] = 1,
-			["width"] = 180,
-			["discrete_rotation"] = 0,
-			["desaturate"] = false,
-			["numTriggers"] = 3,
 			["additional_triggers"] = {
 				{
 					["trigger"] = {
@@ -64941,6 +64894,53 @@ WeakAurasSaved = {
 					},
 				}, -- [2]
 			},
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "pulse",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["rem"] = "3",
+				["subeventSuffix"] = "_CAST_START",
+				["event"] = "Health",
+				["names"] = {
+					"Acceleration", -- [1]
+					"Toxic Power", -- [2]
+					"Berserking", -- [3]
+					"Time Warp", -- [4]
+					"Bloodlust", -- [5]
+					"Ancient Hysteria", -- [6]
+					"Mastermind", -- [7]
+					"Potion of the Jade Serpent", -- [8]
+					"Drums of War", -- [9]
+				},
+				["debuffType"] = "HELPFUL",
+				["subeventPrefix"] = "SPELL",
+				["spellIds"] = {
+				},
+				["type"] = "aura",
+				["remOperator"] = "<=",
+				["unit"] = "player",
+				["custom_hide"] = "timed",
+				["useRem"] = true,
+			},
+			["rotation"] = 0,
+			["frameStrata"] = 1,
+			["width"] = 180,
+			["discrete_rotation"] = 0,
+			["desaturate"] = false,
+			["numTriggers"] = 3,
+			["id"] = "Mage Proc Ending Left",
 			["height"] = 380,
 			["rotate"] = true,
 			["load"] = {
@@ -66892,10 +66892,10 @@ WeakAurasSaved = {
 				["use_tooltip"] = true,
 				["custom_hide"] = "timed",
 				["debuffType"] = "HELPFUL",
-				["subeventSuffix"] = "_CAST_START",
-				["type"] = "aura",
-				["unevent"] = "auto",
 				["tooltip_operator"] = "find('%s')",
+				["type"] = "aura",
+				["subeventSuffix"] = "_CAST_START",
+				["unevent"] = "auto",
 				["event"] = "Cooldown Progress (Spell)",
 				["name"] = "115308",
 				["countOperator"] = "==",
@@ -69668,10 +69668,10 @@ WeakAurasSaved = {
 				["use_unit"] = true,
 				["use_totemType"] = true,
 				["custom_hide"] = "timed",
-				["unevent"] = "auto",
-				["type"] = "custom",
-				["subeventSuffix"] = "_CAST_START",
 				["custom_type"] = "status",
+				["type"] = "custom",
+				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 0,
 				["totemName"] = "Soothe Earth Spirit",
 				["event"] = "Action Usable",
@@ -71894,7 +71894,7 @@ WeakAurasSaved = {
 					["scalex"] = 1,
 					["scaley"] = 1,
 					["colorA"] = 1,
-					["duration_type"] = "seconds",
+					["use_color"] = true,
 					["alpha"] = 0,
 					["x"] = 0,
 					["y"] = 0,
@@ -71903,8 +71903,8 @@ WeakAurasSaved = {
 					["colorB"] = 0,
 					["colorFunc"] = "return function(progress, r1, g1, b1, a1, r2, g2, b2, a2)\n    local base, positive, negative = UnitAttackPower(\"player\"); \n    local value = base + positive + negative;\n    local left_bound = 50000;\n    local range = 50000;\n    \n    if value < left_bound then\n        progress = 0;\n    elseif value < left_bound + range then\n        progress = (value - left_bound) / range;\n    else\n        progress = 1;\n    end\n    \n    return r1 + (progress * (r2 - r1)), g1 + (progress * (g2 - g1)), b1 + (progress * (b2 - b1)), a1 + (progress * (a2 - a1))\nend",
 					["rotate"] = 0,
-					["use_color"] = true,
 					["duration"] = "1",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
 					["type"] = "none",
@@ -72222,13 +72222,13 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["debuffType"] = "HELPFUL",
 				["type"] = "custom",
-				["subeventPrefix"] = "SPELL",
+				["use_unit"] = true,
 				["unevent"] = "auto",
-				["names"] = {
-				},
+				["subeventPrefix"] = "SPELL",
 				["use_inverse"] = true,
 				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
+				["names"] = {
+				},
 				["subeventSuffix"] = "_CAST_START",
 				["use_spellName"] = true,
 				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return false\n    end\n    return true\nend\n\n\n\n",
@@ -73041,47 +73041,6 @@ WeakAurasSaved = {
 			["texture"] = "Textures\\SpellActivationOverlays\\GenericArc_01",
 			["anchorPoint"] = "CENTER",
 			["selfPoint"] = "CENTER",
-			["id"] = "EB Stacking",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["type"] = "preset",
-					["preset"] = "pulse",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["trigger"] = {
-				["type"] = "aura",
-				["subeventSuffix"] = "_CAST_START",
-				["debuffType"] = "HELPFUL",
-				["rem"] = "4",
-				["event"] = "Health",
-				["unit"] = "player",
-				["subeventPrefix"] = "SPELL",
-				["useCount"] = true,
-				["spellIds"] = {
-				},
-				["names"] = {
-					"Elusive Brew", -- [1]
-				},
-				["remOperator"] = "<",
-				["count"] = "6",
-				["countOperator"] = ">=",
-				["custom_hide"] = "timed",
-			},
-			["width"] = 400,
-			["frameStrata"] = 5,
-			["desaturate"] = true,
-			["rotation"] = 270,
-			["discrete_rotation"] = 0,
-			["numTriggers"] = 2,
 			["additional_triggers"] = {
 				{
 					["trigger"] = {
@@ -73103,6 +73062,47 @@ WeakAurasSaved = {
 					["untrigger"] = {
 					},
 				}, -- [1]
+			},
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["type"] = "preset",
+					["preset"] = "pulse",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["id"] = "EB Stacking",
+			["width"] = 400,
+			["frameStrata"] = 5,
+			["desaturate"] = true,
+			["rotation"] = 270,
+			["discrete_rotation"] = 0,
+			["numTriggers"] = 2,
+			["trigger"] = {
+				["type"] = "aura",
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+				["rem"] = "4",
+				["event"] = "Health",
+				["unit"] = "player",
+				["subeventPrefix"] = "SPELL",
+				["useCount"] = true,
+				["spellIds"] = {
+				},
+				["names"] = {
+					"Elusive Brew", -- [1]
+				},
+				["remOperator"] = "<",
+				["count"] = "6",
+				["countOperator"] = ">=",
+				["custom_hide"] = "timed",
 			},
 			["height"] = 175,
 			["rotate"] = true,
@@ -74100,8 +74100,8 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["customTextUpdate"] = "update",
+			["desaturateForeground"] = false,
 			["textSize"] = 20,
-			["displayTextLeft"] = " ",
 			["foregroundColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -74211,7 +74211,7 @@ WeakAurasSaved = {
 			["sparkDesature"] = false,
 			["orientation"] = "VERTICAL_INVERSE",
 			["crop_x"] = 0.409999996423721,
-			["desaturateForeground"] = false,
+			["displayTextLeft"] = " ",
 			["actions"] = {
 				["start"] = {
 				},
@@ -75765,8 +75765,8 @@ WeakAurasSaved = {
 				["debuffType"] = "HELPFUL",
 				["custom_hide"] = "timed",
 				["type"] = "custom",
+				["unevent"] = "auto",
 				["custom_type"] = "status",
-				["subeventSuffix"] = "_CAST_START",
 				["names"] = {
 					"Mana Tea", -- [1]
 				},
@@ -75778,7 +75778,7 @@ WeakAurasSaved = {
 				["custom"] = "function()\n    local _, _, _, stack_count = UnitBuff(\"player\", \"Mana Tea\")\n    \n    if stack_count and stack_count == 20 then\n        return true\n    else\n        return false\n    end\nend",
 				["use_unit"] = true,
 				["check"] = "update",
-				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["percentpower"] = "100",
 				["percentpower_operator"] = "==",
 			},
@@ -76040,10 +76040,10 @@ WeakAurasSaved = {
 					["type"] = "none",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "custom",
-					["duration"] = "1",
 					["use_color"] = true,
+					["type"] = "custom",
+					["duration_type"] = "seconds",
+					["duration"] = "1",
 					["colorType"] = "custom",
 					["scaley"] = 1,
 					["alpha"] = 0,
@@ -76081,6 +76081,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_combat"] = true,
 				["class"] = {
 					["single"] = "MAGE",
 					["multi"] = {
@@ -76093,7 +76094,6 @@ WeakAurasSaved = {
 						[2] = true,
 					},
 				},
-				["use_combat"] = true,
 				["size"] = {
 					["multi"] = {
 					},
@@ -76431,7 +76431,7 @@ WeakAurasSaved = {
 				["spellName"] = 115203,
 				["type"] = "aura",
 				["use_unit"] = true,
-				["unevent"] = "auto",
+				["tooltip_operator"] = "find('%s')",
 				["subeventPrefix"] = "SPELL",
 				["name"] = "115308",
 				["countOperator"] = "==",
@@ -76442,8 +76442,8 @@ WeakAurasSaved = {
 				},
 				["use_spellName"] = true,
 				["event"] = "Cooldown Progress (Spell)",
-				["tooltip_operator"] = "find('%s')",
 				["subeventSuffix"] = "_CAST_START",
+				["unevent"] = "auto",
 				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
@@ -76592,8 +76592,8 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["custom_hide"] = "timed",
 				["type"] = "custom",
+				["subeventSuffix"] = "_CAST_START",
 				["custom_type"] = "status",
-				["unevent"] = "auto",
 				["spellName"] = 115399,
 				["use_unit"] = true,
 				["event"] = "Cooldown Progress (Spell)",
@@ -76605,7 +76605,7 @@ WeakAurasSaved = {
 				["unit"] = "player",
 				["check"] = "update",
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
+				["unevent"] = "auto",
 				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
@@ -78366,12 +78366,10 @@ WeakAurasSaved = {
 				["type"] = "aura",
 				["spellId"] = "44457",
 				["unevent"] = "auto",
-				["unit"] = "target",
+				["subeventPrefix"] = "SPELL",
 				["ownOnly"] = true,
 				["event"] = "Burning Embers",
-				["names"] = {
-					"Flame Shock", -- [1]
-				},
+				["unit"] = "target",
 				["use_spellId"] = true,
 				["use_spellName"] = true,
 				["spellIds"] = {
@@ -78379,7 +78377,9 @@ WeakAurasSaved = {
 				["use_unit"] = true,
 				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 115098,
-				["subeventPrefix"] = "SPELL",
+				["names"] = {
+					"Flame Shock", -- [1]
+				},
 				["custom_hide"] = "timed",
 			},
 			["text"] = true,
@@ -78908,7 +78908,7 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["textSize"] = 18,
+			["desaturateForeground"] = false,
 			["borderInset"] = 11,
 			["actions"] = {
 				["start"] = {
@@ -79054,8 +79054,152 @@ WeakAurasSaved = {
 			["sparkDesature"] = false,
 			["orientation"] = "VERTICAL_INVERSE",
 			["crop_x"] = 0.409999996423721,
-			["desaturateForeground"] = false,
 			["displayTextLeft"] = " ",
+			["textSize"] = 18,
+		},
+		["PW Solace Unusable"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 129250,
+			},
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["fontFlags"] = "OUTLINE",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["use_inverse"] = false,
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["debuffType"] = "HELPFUL",
+				["use_spellName"] = true,
+				["names"] = {
+				},
+				["subeventPrefix"] = "SPELL",
+				["subeventSuffix"] = "_CAST_START",
+				["unit"] = "player",
+				["spellName"] = 129250,
+				["custom_hide"] = "timed",
+			},
+			["desaturate"] = true,
+			["rotation"] = 0,
+			["font"] = "ABF",
+			["height"] = 32,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["load"] = {
+				["talent"] = {
+					["single"] = 9,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "PRIEST",
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["parent"] = "PW Solace 2.0",
+			["selfPoint"] = "CENTER",
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["xOffset"] = 0,
+			["mirror"] = false,
+			["inverse"] = false,
+			["regionType"] = "icon",
+			["yOffset"] = 0,
+			["blendMode"] = "BLEND",
+			["anchorPoint"] = "CENTER",
+			["crop_y"] = 0.41,
+			["frameStrata"] = 1,
+			["customTextUpdate"] = "update",
+			["additional_triggers"] = {
+			},
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "PW Solace Unusable",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+					["glow_action"] = "show",
+				},
+				["finish"] = {
+				},
+			},
+			["alpha"] = 1,
+			["width"] = 32,
+			["icon"] = true,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["numTriggers"] = 1,
+			["desaturateForeground"] = false,
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.41,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
 		},
 		["Rising Sun Kick Debuff w/ No CD"] = {
 			["textFlags"] = "None",
@@ -79290,172 +79434,6 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
-		},
-		["Chi Brew Usable"] = {
-			["user_y"] = 0,
-			["user_x"] = 0,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["untrigger"] = {
-				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return true\n    end\n    return false\nend\n\n\n\n\n\n",
-				["spellName"] = 115399,
-			},
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturateBackground"] = false,
-			["sameTexture"] = true,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_action"] = "hide",
-					["glow_frame"] = "WeakAuras:Chi Brew Usable",
-				},
-				["finish"] = {
-				},
-			},
-			["fontFlags"] = "OUTLINE",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["trigger"] = {
-				["debuffType"] = "HELPFUL",
-				["type"] = "custom",
-				["custom_type"] = "status",
-				["subeventSuffix"] = "_CAST_START",
-				["use_unit"] = true,
-				["use_inverse"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["unit"] = "player",
-				["subeventPrefix"] = "SPELL",
-				["use_spellName"] = true,
-				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return false\n    end\n    return true\nend\n\n\n\n",
-				["unevent"] = "auto",
-				["check"] = "update",
-				["names"] = {
-				},
-				["custom_hide"] = "timed",
-				["spellName"] = 115399,
-			},
-			["desaturate"] = false,
-			["rotation"] = 0,
-			["font"] = "ABF",
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["height"] = 32,
-			["parent"] = "Chi Brew 1.0",
-			["load"] = {
-				["talent"] = {
-					["single"] = 9,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "MONK",
-					["multi"] = {
-					},
-				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = false,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-						true, -- [1]
-						[3] = true,
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["displayIcon"] = "Interface\\Icons\\ability_monk_chibrew",
-			["selfPoint"] = "CENTER",
-			["fontSize"] = 14,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["inverse"] = false,
-			["mirror"] = false,
-			["xOffset"] = 0,
-			["regionType"] = "icon",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["blendMode"] = "BLEND",
-			["anchorPoint"] = "CENTER",
-			["frameStrata"] = 1,
-			["icon"] = true,
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "status",
-						["unevent"] = "auto",
-						["power_operator"] = ">",
-						["use_power"] = true,
-						["event"] = "Chi Power",
-						["subeventPrefix"] = "SPELL",
-						["power"] = "2",
-						["unit"] = "player",
-						["use_unit"] = true,
-						["subeventSuffix"] = "_CAST_START",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-			},
-			["customTextUpdate"] = "update",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Chi Brew Usable",
-			["yOffset"] = 0,
-			["alpha"] = 1,
-			["width"] = 32,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["crop_y"] = 0.41,
-			["numTriggers"] = 2,
-			["desaturateForeground"] = false,
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.41,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
 		},
 		["Xuen WW 1.0"] = {
 			["backdropColor"] = {
@@ -81169,15 +81147,15 @@ WeakAurasSaved = {
 				["custom_hide"] = "timed",
 				["use_inverse"] = false,
 				["event"] = "Chat Message",
-				["names"] = {
-				},
+				["subeventPrefix"] = "SPELL",
 				["subeventSuffix"] = "_CAST_START",
 				["use_spellName"] = true,
 				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 108839 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return true\n    end\n    return false\nend",
 				["unit"] = "player",
 				["check"] = "update",
-				["subeventPrefix"] = "SPELL",
 				["use_unit"] = true,
+				["names"] = {
+				},
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = true,
@@ -82055,8 +82033,8 @@ WeakAurasSaved = {
 				["unit"] = "player",
 				["useCount"] = true,
 				["use_unit"] = true,
+				["spellName"] = 115203,
 				["custom_hide"] = "timed",
-				["debuffType"] = "HELPFUL",
 				["subeventSuffix"] = "_CAST_START",
 				["type"] = "aura",
 				["count"] = "2",
@@ -82074,7 +82052,7 @@ WeakAurasSaved = {
 				["names"] = {
 					"Brain Freeze", -- [1]
 				},
-				["spellName"] = 115203,
+				["debuffType"] = "HELPFUL",
 				["fullscan"] = true,
 			},
 			["text"] = true,
@@ -83087,7 +83065,7 @@ WeakAurasSaved = {
 					["scaley"] = 1,
 					["scalex"] = 1,
 					["colorB"] = 0,
-					["use_color"] = true,
+					["duration_type"] = "seconds",
 					["alpha"] = 0,
 					["colorType"] = "custom",
 					["y"] = 0,
@@ -83096,8 +83074,8 @@ WeakAurasSaved = {
 					["colorA"] = 1,
 					["colorFunc"] = "return function(progress, r1, g1, b1, a1, r2, g2, b2, a2)\n    local base = UnitPower(\"player\"); \n    local progress = base / 120;\n    \n    return r1 + (progress * (r2 - r1)), g1 + (progress * (g2 - g1)), b1 + (progress * (b2 - b1)), a1 + (progress * (a2 - a1))\nend",
 					["rotate"] = 0,
-					["duration_type"] = "seconds",
 					["duration"] = "1",
+					["use_color"] = true,
 				},
 				["finish"] = {
 					["duration_type"] = "seconds",
@@ -85210,13 +85188,13 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["debuffType"] = "HELPFUL",
 				["type"] = "custom",
+				["subeventPrefix"] = "SPELL",
+				["unevent"] = "auto",
 				["names"] = {
 				},
-				["unevent"] = "auto",
-				["use_unit"] = true,
 				["use_inverse"] = true,
 				["event"] = "Cooldown Progress (Spell)",
-				["subeventPrefix"] = "SPELL",
+				["use_unit"] = true,
 				["subeventSuffix"] = "_CAST_START",
 				["use_spellName"] = true,
 				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 62606 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    \n    if chargesCurrent > 0 then\n        return true\n    end\n    return false\nend\n\n\n\n",
@@ -86484,8 +86462,8 @@ WeakAurasSaved = {
 					"Might of Ursoc", -- [1]
 				},
 				["type"] = "aura",
+				["subeventSuffix"] = "_CAST_START",
 				["tooltip_operator"] = "find('%s')",
-				["unevent"] = "auto",
 				["count"] = "0",
 				["use_spellName"] = true,
 				["countOperator"] = "==",
@@ -86496,7 +86474,7 @@ WeakAurasSaved = {
 				},
 				["event"] = "Cooldown Progress (Spell)",
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
+				["unevent"] = "auto",
 				["debuffType"] = "HELPFUL",
 				["subeventPrefix"] = "SPELL",
 			},
@@ -88996,10 +88974,10 @@ WeakAurasSaved = {
 				["use_tooltip"] = true,
 				["custom_hide"] = "timed",
 				["debuffType"] = "HELPFUL",
-				["unevent"] = "auto",
-				["type"] = "aura",
-				["subeventSuffix"] = "_CAST_START",
 				["tooltip_operator"] = "find('%s')",
+				["type"] = "aura",
+				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["countOperator"] = "==",
 				["use_spellId"] = true,
 				["event"] = "Cooldown Progress (Spell)",
@@ -92813,10 +92791,10 @@ WeakAurasSaved = {
 				["use_tooltip"] = true,
 				["use_unit"] = true,
 				["custom_hide"] = "timed",
-				["tooltip_operator"] = "find('%s')",
+				["subeventSuffix"] = "_CAST_START",
 				["type"] = "aura",
 				["event"] = "Cooldown Progress (Spell)",
-				["unevent"] = "auto",
+				["tooltip_operator"] = "find('%s')",
 				["count"] = "0",
 				["use_spellId"] = true,
 				["countOperator"] = "==",
@@ -92827,7 +92805,7 @@ WeakAurasSaved = {
 				},
 				["spellName"] = 115203,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
+				["unevent"] = "auto",
 				["debuffType"] = "HELPFUL",
 				["subeventPrefix"] = "SPELL",
 			},
@@ -97873,15 +97851,15 @@ WeakAurasSaved = {
 				["spellName"] = 115399,
 				["use_inverse"] = true,
 				["event"] = "Cooldown Progress (Spell)",
-				["names"] = {
-				},
+				["subeventPrefix"] = "SPELL",
 				["subeventSuffix"] = "_CAST_START",
 				["use_spellName"] = true,
 				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 108839 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return false\n    end\n    return true\nend\n\n\n\n",
 				["unit"] = "player",
 				["check"] = "update",
-				["subeventPrefix"] = "SPELL",
 				["use_unit"] = true,
+				["names"] = {
+				},
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -98783,18 +98761,18 @@ WeakAurasSaved = {
 				["spellId"] = "116740",
 				["unevent"] = "auto",
 				["spellName"] = 122470,
-				["unit"] = "player",
+				["subeventPrefix"] = "SPELL",
 				["event"] = "Cooldown Progress (Spell)",
-				["names"] = {
-				},
+				["use_unit"] = true,
 				["subeventSuffix"] = "_CAST_START",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["debuffType"] = "HELPFUL",
 				["use_spellId"] = true,
-				["use_unit"] = true,
-				["subeventPrefix"] = "SPELL",
+				["names"] = {
+				},
+				["unit"] = "player",
 				["fullscan"] = true,
 			},
 			["text"] = true,
@@ -99029,7 +99007,7 @@ WeakAurasSaved = {
 				["unit"] = "player",
 				["type"] = "aura",
 				["spellName"] = 115203,
-				["tooltip_operator"] = "find('%s')",
+				["unevent"] = "auto",
 				["names"] = {
 					"Tooth and Claw", -- [1]
 				},
@@ -99043,8 +99021,8 @@ WeakAurasSaved = {
 				["use_spellId"] = true,
 				["name"] = "115308",
 				["event"] = "Cooldown Progress (Spell)",
-				["unevent"] = "auto",
 				["subeventSuffix"] = "_CAST_START",
+				["tooltip_operator"] = "find('%s')",
 			},
 			["text"] = true,
 			["stickyDuration"] = false,
@@ -99388,14 +99366,14 @@ WeakAurasSaved = {
 				["use_unit"] = true,
 				["useCount"] = true,
 				["subeventPrefix"] = "SPELL",
+				["custom_hide"] = "timed",
 				["spellName"] = 23881,
-				["debuffType"] = "HELPFUL",
 				["unit"] = "player",
 				["type"] = "aura",
 				["names"] = {
 					"Bloodsurge", -- [1]
 				},
-				["subeventSuffix"] = "_CAST_START",
+				["unevent"] = "auto",
 				["power_operator"] = "<",
 				["countOperator"] = ">=",
 				["event"] = "Power",
@@ -99405,9 +99383,9 @@ WeakAurasSaved = {
 				["spellIds"] = {
 				},
 				["use_power"] = true,
-				["unevent"] = "auto",
 				["power"] = "90",
-				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
 				["fullscan"] = true,
 			},
 			["desaturate"] = false,
@@ -101153,12 +101131,12 @@ WeakAurasSaved = {
 				["subeventPrefix"] = "SPELL",
 				["countOperator"] = "<",
 				["unit"] = "player",
-				["inverse"] = true,
+				["count"] = "5",
 				["use_spellName"] = true,
+				["inverse"] = true,
+				["event"] = "Cooldown Progress (Spell)",
 				["spellIds"] = {
 				},
-				["event"] = "Cooldown Progress (Spell)",
-				["count"] = "5",
 				["names"] = {
 					"Vital Mists", -- [1]
 				},
@@ -101400,7 +101378,7 @@ WeakAurasSaved = {
 				["spellName"] = 115203,
 				["type"] = "aura",
 				["use_unit"] = true,
-				["tooltip_operator"] = "find('%s')",
+				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
 				["use_spellId"] = true,
 				["event"] = "Cooldown Progress (Spell)",
@@ -101411,8 +101389,8 @@ WeakAurasSaved = {
 				},
 				["name"] = "115308",
 				["countOperator"] = "==",
-				["subeventSuffix"] = "_CAST_START",
 				["unevent"] = "auto",
+				["tooltip_operator"] = "find('%s')",
 				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
@@ -101894,14 +101872,14 @@ WeakAurasSaved = {
 				["use_power"] = true,
 				["unit"] = "player",
 				["use_unit"] = true,
-				["custom_hide"] = "custom",
-				["custom_type"] = "event",
+				["debuffType"] = "HELPFUL",
+				["unevent"] = "auto",
 				["inverse"] = true,
-				["spellName"] = 100130,
-				["power"] = "90",
+				["custom_hide"] = "custom",
+				["subeventSuffix"] = "_CAST_START",
 				["type"] = "custom",
 				["events"] = "PLAYER_REGEN_DISABLED,TEB_OPTIMAL,TEB_NOT_OPTIMAL",
-				["unevent"] = "auto",
+				["custom_type"] = "event",
 				["power_operator"] = "<",
 				["use_spellName"] = true,
 				["event"] = "Chat Message",
@@ -101910,8 +101888,8 @@ WeakAurasSaved = {
 				["use_inverse"] = true,
 				["use_spellId"] = true,
 				["custom"] = "function(event)\nprint(event)\n    if event == \"TEB_NOT_OPTIMAL\" or event == \"PLAYER_REGEN_DISABLED\" then \n        return true \n    else \n        return false \n    end\nend",
-				["subeventSuffix"] = "_CAST_START",
-				["debuffType"] = "HELPFUL",
+				["power"] = "90",
+				["spellName"] = 100130,
 				["names"] = {
 				},
 				["subeventPrefix"] = "SPELL",
@@ -102406,7 +102384,7 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 		},
-		["PW Solace Unusable"] = {
+		["Chi Brew Usable"] = {
 			["user_y"] = 0,
 			["user_x"] = 0,
 			["color"] = {
@@ -102416,7 +102394,8 @@ WeakAurasSaved = {
 				0.75, -- [4]
 			},
 			["untrigger"] = {
-				["spellName"] = 129250,
+				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return true\n    end\n    return false\nend\n\n\n\n\n\n",
+				["spellName"] = 115399,
 			},
 			["foregroundColor"] = {
 				1, -- [1]
@@ -102426,11 +102405,14 @@ WeakAurasSaved = {
 			},
 			["desaturateBackground"] = false,
 			["sameTexture"] = true,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_action"] = "hide",
+					["glow_frame"] = "WeakAuras:Chi Brew Usable",
+				},
+				["finish"] = {
+				},
 			},
 			["fontFlags"] = "OUTLINE",
 			["animation"] = {
@@ -102448,31 +102430,35 @@ WeakAurasSaved = {
 				},
 			},
 			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["use_inverse"] = false,
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
 				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
+				["type"] = "custom",
+				["custom_type"] = "status",
+				["subeventSuffix"] = "_CAST_START",
 				["names"] = {
 				},
+				["use_inverse"] = true,
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
+				["use_spellName"] = true,
+				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return false\n    end\n    return true\nend\n\n\n\n",
+				["unevent"] = "auto",
+				["check"] = "update",
 				["unit"] = "player",
-				["spellName"] = 129250,
 				["custom_hide"] = "timed",
+				["spellName"] = 115399,
 			},
-			["desaturate"] = true,
+			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["height"] = 32,
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
+			["height"] = 32,
+			["parent"] = "Chi Brew 1.0",
 			["load"] = {
 				["talent"] = {
 					["single"] = 9,
@@ -102480,7 +102466,7 @@ WeakAurasSaved = {
 					},
 				},
 				["class"] = {
-					["single"] = "PRIEST",
+					["single"] = "MONK",
 					["multi"] = {
 					},
 				},
@@ -102490,16 +102476,17 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
+				["use_spec"] = false,
 				["race"] = {
 					["multi"] = {
 					},
 				},
 				["use_combat"] = true,
 				["spec"] = {
-					["single"] = 1,
+					["single"] = 3,
 					["multi"] = {
 						true, -- [1]
+						[3] = true,
 					},
 				},
 				["size"] = {
@@ -102507,43 +102494,56 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["parent"] = "PW Solace 2.0",
+			["displayIcon"] = "Interface\\Icons\\ability_monk_chibrew",
 			["selfPoint"] = "CENTER",
-			["fontSize"] = 13,
+			["fontSize"] = 14,
 			["displayStacks"] = " ",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
 			["stickyDuration"] = false,
-			["xOffset"] = 0,
-			["mirror"] = false,
 			["inverse"] = false,
+			["mirror"] = false,
+			["xOffset"] = 0,
 			["regionType"] = "icon",
-			["yOffset"] = 0,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["blendMode"] = "BLEND",
 			["anchorPoint"] = "CENTER",
-			["crop_y"] = 0.41,
 			["frameStrata"] = 1,
-			["customTextUpdate"] = "update",
+			["icon"] = true,
 			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "status",
+						["unevent"] = "auto",
+						["power_operator"] = ">",
+						["use_power"] = true,
+						["event"] = "Chi Power",
+						["subeventPrefix"] = "SPELL",
+						["power"] = "2",
+						["unit"] = "player",
+						["use_unit"] = true,
+						["subeventSuffix"] = "_CAST_START",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
 			},
+			["customTextUpdate"] = "update",
 			["stacksContainment"] = "INSIDE",
 			["zoom"] = 0,
 			["auto"] = true,
 			["compress"] = false,
-			["id"] = "PW Solace Unusable",
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-					["glow_action"] = "show",
-				},
-				["finish"] = {
-				},
-			},
+			["id"] = "Chi Brew Usable",
+			["yOffset"] = 0,
 			["alpha"] = 1,
 			["width"] = 32,
-			["icon"] = true,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["numTriggers"] = 1,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["crop_y"] = 0.41,
+			["numTriggers"] = 2,
 			["desaturateForeground"] = false,
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
@@ -102872,17 +102872,17 @@ WeakAurasSaved = {
 				["type"] = "custom",
 				["custom_hide"] = "timed",
 				["unevent"] = "auto",
-				["names"] = {
-				},
+				["unit"] = "player",
 				["use_inverse"] = true,
 				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
+				["names"] = {
+				},
 				["subeventPrefix"] = "SPELL",
 				["use_spellName"] = true,
 				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return false\n    end\n    return true\nend\n\n\n\n",
 				["subeventSuffix"] = "_CAST_START",
 				["check"] = "update",
-				["unit"] = "player",
+				["use_unit"] = true,
 				["custom_type"] = "status",
 				["debuffType"] = "HELPFUL",
 			},
@@ -104106,14 +104106,14 @@ WeakAurasSaved = {
 			["selfPoint"] = "CENTER",
 			["trigger"] = {
 				["type"] = "status",
-				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
-				["percenthealth"] = "25",
-				["event"] = "Health",
+				["subeventSuffix"] = "_CAST_START",
 				["names"] = {
 					"Tiger Power", -- [1]
 				},
+				["percenthealth"] = "25",
+				["event"] = "Health",
+				["unit"] = "player",
 				["use_unit"] = true,
 				["unevent"] = "auto",
 				["inverse"] = true,
@@ -106520,7 +106520,7 @@ WeakAurasSaved = {
 					["scalex"] = 1,
 					["scaley"] = 1,
 					["colorA"] = 1,
-					["duration"] = "1",
+					["use_color"] = true,
 					["alpha"] = 0,
 					["x"] = 0,
 					["y"] = 0,
@@ -106529,8 +106529,8 @@ WeakAurasSaved = {
 					["colorB"] = 0.870588235294118,
 					["colorFunc"] = "return function(progress, r1, g1, b1, a1, r2, g2, b2, a2)\n    local base, positive, negative = UnitAttackPower(\"player\"); \n    local value = base + positive + negative;\n    local left_bound = 50000;\n    local range = 50000;\n    \n    if value < left_bound then\n        progress = 0;\n    elseif value < left_bound + range then\n        progress = (value - left_bound) / range;\n    else\n        progress = 1;\n    end\n    \n    return r1 + (progress * (r2 - r1)), g1 + (progress * (g2 - g1)), b1 + (progress * (b2 - b1)), a1 + (progress * (a2 - a1))\nend",
 					["rotate"] = 0,
-					["use_color"] = true,
 					["duration_type"] = "seconds",
+					["duration"] = "1",
 				},
 				["finish"] = {
 					["duration_type"] = "seconds",
@@ -108177,10 +108177,10 @@ WeakAurasSaved = {
 				["type"] = "aura",
 				["spellName"] = 115203,
 				["subeventSuffix"] = "_CAST_START",
-				["use_percentpower"] = false,
+				["unit"] = "player",
 				["ownOnly"] = true,
 				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
+				["use_percentpower"] = false,
 				["names"] = {
 					"Fortifying Brew", -- [1]
 				},
@@ -108190,7 +108190,7 @@ WeakAurasSaved = {
 				["subeventPrefix"] = "SPELL",
 				["unevent"] = "auto",
 				["debuffType"] = "HELPFUL",
-				["unit"] = "player",
+				["use_unit"] = true,
 				["custom_hide"] = "timed",
 			},
 			["text"] = true,
@@ -108462,13 +108462,13 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["debuffType"] = "HELPFUL",
 				["type"] = "custom",
-				["subeventPrefix"] = "SPELL",
+				["use_unit"] = true,
 				["custom_type"] = "status",
-				["names"] = {
-				},
+				["subeventPrefix"] = "SPELL",
 				["use_inverse"] = true,
 				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
+				["names"] = {
+				},
 				["subeventSuffix"] = "_CAST_START",
 				["use_spellName"] = true,
 				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return false\n    end\n    return true\nend\n\n\n\n",
@@ -108832,10 +108832,10 @@ WeakAurasSaved = {
 					"Pyroblast!", -- [1]
 				},
 				["custom_hide"] = "timed",
-				["subeventSuffix"] = "_CAST_START",
+				["unevent"] = "auto",
 				["type"] = "aura",
 				["event"] = "Cooldown Progress (Spell)",
-				["tooltip_operator"] = "find('%s')",
+				["subeventSuffix"] = "_CAST_START",
 				["name"] = "115308",
 				["use_spellId"] = true,
 				["countOperator"] = "==",
@@ -108846,7 +108846,7 @@ WeakAurasSaved = {
 				},
 				["spellName"] = 115203,
 				["unit"] = "player",
-				["unevent"] = "auto",
+				["tooltip_operator"] = "find('%s')",
 				["debuffType"] = "HELPFUL",
 				["subeventPrefix"] = "SPELL",
 			},
@@ -109313,10 +109313,10 @@ WeakAurasSaved = {
 				["use_unit"] = true,
 				["use_totemType"] = true,
 				["custom_hide"] = "timed",
-				["unevent"] = "auto",
-				["type"] = "custom",
-				["subeventSuffix"] = "_CAST_START",
 				["custom_type"] = "status",
+				["type"] = "custom",
+				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 0,
 				["totemName"] = "Soothe Earth Spirit",
 				["event"] = "Action Usable",

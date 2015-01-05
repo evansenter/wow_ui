@@ -424,8 +424,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
+							["fadeoutalpha"] = 0.25,
 							["version"] = 3,
-							["fadeoutdelay"] = 0,
 							["position"] = {
 								["scale"] = 0.899999976158142,
 								["x"] = -39.1502451380075,
@@ -435,7 +435,7 @@ Bartender4DB = {
 							["padding"] = 5,
 							["rows"] = 12,
 							["fadeout"] = true,
-							["fadeoutalpha"] = 0.25,
+							["fadeoutdelay"] = 0,
 						}, -- [3]
 						{
 							["buttons"] = 4,

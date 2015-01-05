@@ -144,10 +144,10 @@ MSBTProfiles_SavedVars = {
 				["INCOMING_SPELL_DOT"] = {
 					["disabled"] = true,
 				},
-				["PET_INCOMING_ABSORB"] = {
+				["PET_INCOMING_DAMAGE_CRIT"] = {
 					["disabled"] = true,
 				},
-				["PET_INCOMING_DAMAGE_CRIT"] = {
+				["PET_OUTGOING_ABSORB"] = {
 					["disabled"] = true,
 				},
 				["PET_INCOMING_SPELL_BLOCK"] = {
@@ -204,7 +204,7 @@ MSBTProfiles_SavedVars = {
 				["PET_INCOMING_HOT"] = {
 					["disabled"] = true,
 				},
-				["PET_OUTGOING_ABSORB"] = {
+				["PET_INCOMING_ABSORB"] = {
 					["disabled"] = true,
 				},
 				["OUTGOING_SPELL_DOT"] = {
@@ -218,6 +218,9 @@ MSBTProfiles_SavedVars = {
 				},
 			},
 			["scrollAreas"] = {
+				["Static"] = {
+					["offsetY"] = -280,
+				},
 				["Incoming"] = {
 					["stickyDirection"] = "Up",
 					["direction"] = "Up",
@@ -226,17 +229,14 @@ MSBTProfiles_SavedVars = {
 					["animationStyle"] = "Straight",
 					["stickyBehavior"] = "Normal",
 				},
+				["Notification"] = {
+					["offsetY"] = 150,
+				},
 				["Outgoing"] = {
 					["behavior"] = "MSBT_NORMAL",
 					["direction"] = "Up",
 					["offsetX"] = 250,
 					["animationStyle"] = "Straight",
-				},
-				["Notification"] = {
-					["offsetY"] = 150,
-				},
-				["Static"] = {
-					["offsetY"] = -280,
 				},
 			},
 			["normalFontName"] = "ABF",

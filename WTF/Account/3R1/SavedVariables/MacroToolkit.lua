@@ -16,11 +16,11 @@ MacroToolkitDB = {
 	},
 	["profileKeys"] = {
 		["Metal - Illidan"] = "profile",
+		["Comet - Illidan"] = "profile",
 		["Plane - Illidan"] = "profile",
-		["Combustion - Illidan"] = "profile",
 		["Natal - Illidan"] = "profile",
 		["Evan - Illidan"] = "profile",
-		["Comet - Illidan"] = "profile",
+		["Combustion - Illidan"] = "profile",
 	},
 	["global"] = {
 		["ebackups"] = {
