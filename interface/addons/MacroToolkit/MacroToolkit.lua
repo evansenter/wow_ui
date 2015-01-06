@@ -997,7 +997,12 @@ function MT:ShowDetails()
 	MacroToolkitExtend:Enable()
 end
 
-function MT:IsDynamic(index) return strlower(select(2, GetMacroInfo(index))) == "interface\\icons\\inv_misc_questionmark" end
+function MT:IsDynamic(index)
+	if not index then return false end
+	local body = select(2, GetMacroInfo(index))
+	if not body or body == "" then return false end
+	return strlower(body) == "interface\\icons\\inv_misc_questionmark"
+end
 
 function MT:SaveMacro()
 	if InCombatLockdown() then

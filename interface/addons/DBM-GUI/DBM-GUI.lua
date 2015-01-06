@@ -44,7 +44,7 @@
 
 
 
-local revision =("$Revision: 12298 $"):sub(12, -3)
+local revision =("$Revision: 12309 $"):sub(12, -3)
 local FrameTitle = "DBM_GUI_Option_"	-- all GUI frames get automatically a name FrameTitle..ID
 
 local PanelPrototype = {}
@@ -1550,7 +1550,7 @@ local function CreateOptionsMenu()
 			DBM:PlayCountSound(1, DBM.Options.CountdownVoice2)
 		end
 		)
-		CountSoundDropDown2:SetPoint("LEFT", CountSoundDropDown, "RIGHT", 30, 0)
+		CountSoundDropDown2:SetPoint("LEFT", CountSoundDropDown, "RIGHT", 40, 0)
 
 		local CountSoundDropDown3 = raidwarnoptions:CreateDropdown(L.CountdownVoice3, DBM.Counts,
 		DBM.Options.CountdownVoice3, function(value)

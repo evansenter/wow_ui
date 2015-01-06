@@ -1,4 +1,23 @@
 subversion:
+	- Omega via svn r12322: Make Yike appear better in US client drop down menus
+	- Omega via svn r12321: Translator list update
+	- tandanu via svn r12320: some work on pausing timers
+	problems:
+	 * the smooth move animations
+	 * handle flash properly
+	
+	turns out that this feature isn't needed after all at the moment
+	- Omega via svn r12319: Debug cleanup and fixes.
+	- Omega via svn r12318: Add voice for moving out of moss
+	- ultrashining via svn r12317: zhTW update
+	- Omega via svn r12316: Add some margok notes and template
+	- Omega via svn r12315: More fixes to koragh. It's coming along.
+	- nbluewiz via svn r12314: # Fix wired sound for Zaela # If boss engaged by npc, first timer is wired. so disable first timer for Yalnu.
+	- Omega via svn r12313: jesus christ, more bugs, hard to test shit when the coding is so fucked up
+	- Omega via svn r12312: Fix more fail
+	- Omega via svn r12311: tweaks
+	- Omega via svn r12310: it's almost a shame no one reports these bugs. you'd think SOMOENE would have noticed lava burst was spamming ever 1 second
+	- Omega via svn r12309: improve spacing in GUI
 	- Omega via svn r12308: Fix error
 	- Omega via svn r12307: Fix some arrow misusages Fixed bug where /dbm arrow move was basically useless.
 	- ultrashining via svn r12306: zhTW update

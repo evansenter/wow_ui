@@ -5,8 +5,8 @@ FX_Saved = {
 	["Timers"] = {
 	},
 	["Healthstone"] = {
+		["Evan"] = 0,
 		["Metal"] = 0,
-		["Evan"] = 1,
 	},
 	["Exceptions"] = {
 		["Hellfire Channeler"] = 0,
@@ -18,7 +18,7 @@ FX_Saved = {
 		["Fathom-Guard Tidalvess"] = 1,
 		["Fathom-Guard Sharkkis"] = 1,
 	},
-	["Update"] = 10170.805,
+	["Update"] = 35489.568,
 	["Profiles"] = {
 		["Active"] = 1,
 		["Characters"] = {
@@ -618,13 +618,16 @@ FX_Saved = {
 					">> %s is fading in %s <<", -- [1]
 					[0] = 1,
 				},
+				["Output"] = {
+					"MyProChannel", -- [1]
+					[0] = true,
+				},
+				["TalentOffsetX"] = 0,
 				["HealthstoneMinColor"] = {
 					0.93, -- [1]
 					1, -- [2]
 					0, -- [3]
 				},
-				["TalentOffsetX"] = 0,
-				["SummonHeight"] = 12,
 				["HealthstoneExpand"] = false,
 				["TimerResistsColor"] = {
 					1, -- [1]
@@ -711,10 +714,7 @@ FX_Saved = {
 					0.21, -- [2]
 					0.93, -- [3]
 				},
-				["Output"] = {
-					"MyProChannel", -- [1]
-					[0] = true,
-				},
+				["SummonHeight"] = 12,
 				["SoulstoneReadySound"] = {
 					"Sound\\Spells\\SimonGame_Visual_GameTick.wav", -- [1]
 					1, -- [2]
@@ -1124,126 +1124,17 @@ FX_Saved = {
 		},
 	},
 	["RaidStatus"] = {
-		["Pandimal-Thrall"] = {
-			-2, -- [1]
-			8431.081, -- [2]
-			"WARRIOR", -- [3]
-		},
-		["Twigsniped-Draka"] = {
-			-2, -- [1]
-			9765.217, -- [2]
-			"HUNTER", -- [3]
-		},
-		["Younie-Runetotem"] = {
-			-2, -- [1]
-			9765.217, -- [2]
-			"DRUID", -- [3]
-		},
-		["Metal"] = {
-			0, -- [1]
-			10170.805, -- [2]
-			"WARRIOR", -- [3]
-			"v1.980.8", -- [4]
-		},
-		["Slaves-Kargath"] = {
-			-2, -- [1]
-			9765.217, -- [2]
-			"DEATHKNIGHT", -- [3]
-		},
-		["Chups-Cho'gall"] = {
-			-2, -- [1]
-			9765.217, -- [2]
-			"MONK", -- [3]
-		},
 		["Evan"] = {
-			-2, -- [1]
-			9809.036, -- [2]
+			0, -- [1]
+			35489.568, -- [2]
 			"PRIEST", -- [3]
 			"v1.980.8", -- [4]
 		},
-		["Shootrun"] = {
+		["Metal"] = {
 			-2, -- [1]
-			9765.217, -- [2]
-			"HUNTER", -- [3]
-		},
-		["Mymin-Dunemaul"] = {
-			-2, -- [1]
-			9765.217, -- [2]
-			"MAGE", -- [3]
-		},
-		["Yöp-Mannoroth"] = {
-			-2, -- [1]
-			9751.218, -- [2]
+			35460.886, -- [2]
 			"WARRIOR", -- [3]
-		},
-		["Unknown"] = {
-			-2, -- [1]
-			9495.714, -- [2]
-		},
-		["Bubblytwo"] = {
-			-2, -- [1]
-			9128.58, -- [2]
-			"DEATHKNIGHT", -- [3]
-		},
-		["Stealthynaga-BleedingHollow"] = {
-			-2, -- [1]
-			9765.217, -- [2]
-			"DRUID", -- [3]
-		},
-		["Patwa-Hyjal"] = {
-			-2, -- [1]
-			9699.216, -- [2]
-			"SHAMAN", -- [3]
-		},
-		["Tèchninè-Detheroc"] = {
-			-2, -- [1]
-			9765.217, -- [2]
-			"DEATHKNIGHT", -- [3]
-		},
-		["Nertharul-Blackrock"] = {
-			-2, -- [1]
-			9765.217, -- [2]
-			"WARRIOR", -- [3]
-		},
-		["Fattsack-Bloodscalp"] = {
-			-2, -- [1]
-			9765.217, -- [2]
-			"SHAMAN", -- [3]
-		},
-		["Dyron-Shadowmoon"] = {
-			-2, -- [1]
-			9765.217, -- [2]
-			"DEATHKNIGHT", -- [3]
-		},
-		["Poonjabberz-Andorhal"] = {
-			-2, -- [1]
-			9763.716, -- [2]
-			"PALADIN", -- [3]
-		},
-		["Dooug-Azralon"] = {
-			-2, -- [1]
-			9765.217, -- [2]
-			"SHAMAN", -- [3]
-		},
-		["Gweenn-KulTiras"] = {
-			-2, -- [1]
-			9765.217, -- [2]
-			"HUNTER", -- [3]
-		},
-		["Diamondprox-Stonemaul"] = {
-			-2, -- [1]
-			9765.217, -- [2]
-			"DRUID", -- [3]
-		},
-		["Mualim"] = {
-			-2, -- [1]
-			9765.217, -- [2]
-			"PALADIN", -- [3]
-		},
-		["Okorr-KulTiras"] = {
-			-2, -- [1]
-			9128.58, -- [2]
-			"DEATHKNIGHT", -- [3]
+			"v1.980.8", -- [4]
 		},
 	},
 	["GROUPED"] = false,

@@ -1,16 +1,16 @@
 
 MogItDB = {
-	["global"] = {
-		["version"] = "3.4.0",
-	},
 	["profileKeys"] = {
-		["Plane - Illidan"] = "Default",
-		["Metal - Illidan"] = "Comet - Illidan",
-		["Natal - Illidan"] = "Default",
 		["Comet - Illidan"] = "Comet - Illidan",
-		["Centromere - Dark Iron"] = "Default",
+		["Metal - Illidan"] = "Comet - Illidan",
 		["Evan - Illidan"] = "Default",
 		["Combustion - Illidan"] = "Default",
+		["Centromere - Dark Iron"] = "Default",
+		["Natal - Illidan"] = "Default",
+		["Plane - Illidan"] = "Default",
+	},
+	["global"] = {
+		["version"] = "3.4.0",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -24,8 +24,8 @@ MogItDB = {
 					["h"] = 384.999877929688,
 				}, -- [1]
 			},
-			["gridHeight"] = 399.999969482422,
 			["gridWidth"] = 599.999938964844,
+			["gridHeight"] = 399.999969482422,
 			["minimap"] = {
 				["minimapPos"] = 221.510638623936,
 				["hide"] = true,
@@ -44,28 +44,28 @@ MogItDB = {
 }
 MogItWishlist = {
 	["profileKeys"] = {
-		["Plane - Illidan"] = "Plane - Illidan",
-		["Metal - Illidan"] = "Metal - Illidan",
-		["Natal - Illidan"] = "Natal - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
-		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
+		["Metal - Illidan"] = "Metal - Illidan",
 		["Evan - Illidan"] = "Evan - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
+		["Natal - Illidan"] = "Natal - Illidan",
+		["Plane - Illidan"] = "Plane - Illidan",
 	},
 	["profiles"] = {
-		["Plane - Illidan"] = {
-		},
-		["Metal - Illidan"] = {
-		},
-		["Natal - Illidan"] = {
-		},
 		["Comet - Illidan"] = {
 		},
-		["Centromere - Dark Iron"] = {
+		["Metal - Illidan"] = {
 		},
 		["Evan - Illidan"] = {
 		},
 		["Combustion - Illidan"] = {
+		},
+		["Centromere - Dark Iron"] = {
+		},
+		["Natal - Illidan"] = {
+		},
+		["Plane - Illidan"] = {
 		},
 	},
 }

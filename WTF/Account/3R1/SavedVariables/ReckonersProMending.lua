@@ -16,43 +16,43 @@ ReckonersProMendingDB = {
 	},
 	["profiles"] = {
 		["Default"] = {
-			["font"] = "ABF",
-			["bartexture"] = "ElvUI Norm",
 			["y"] = -575,
-			["x"] = -534,
+			["font"] = "ABF",
 			["chargetexture"] = "ElvUI Norm",
+			["bartexture"] = "ElvUI Norm",
+			["x"] = -534,
 		},
 		["Evan - Illidan"] = {
-			["chargeheight"] = 6,
 			["barheight"] = 18,
-			["bartexture"] = "BantoBar",
-			["barwidth"] = 133,
 			["chargecolorbg"] = {
 				0, -- [1]
 				0, -- [2]
 				0, -- [3]
 				0.75, -- [4]
 			},
+			["barcolorfg"] = {
+				nil, -- [1]
+				1, -- [2]
+				1, -- [3]
+			},
+			["font"] = "ABF",
 			["barcolorbg"] = {
 				0, -- [1]
 				0, -- [2]
 				0, -- [3]
 				0.749166548252106, -- [4]
 			},
-			["barcolorfg"] = {
-				nil, -- [1]
-				1, -- [2]
-				1, -- [3]
-			},
+			["chargeheight"] = 6,
+			["bartexture"] = "BantoBar",
+			["barwidth"] = 133,
+			["y"] = -575,
+			["x"] = -362,
 			["chargetexture"] = "Armory",
-			["font"] = "ABF",
 			["chargecolorfg"] = {
 				nil, -- [1]
 				1, -- [2]
 				1, -- [3]
 			},
-			["x"] = -362,
-			["y"] = -575,
 			["baricon"] = false,
 		},
 	},
