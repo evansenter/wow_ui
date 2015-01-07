@@ -21,6 +21,13 @@ AngryAssign_Pages = {
 		["UpdateId"] = 4137302632,
 		["Contents"] = "Stun rotation:\nDoom\nAkroma\nEklypto\nCannibal",
 	},
+	[1844579180] = {
+		["Updated"] = 1420603594,
+		["Name"] = "twins 4 heal",
+		["Id"] = 1844579180,
+		["UpdateId"] = 185480060,
+		["Contents"] = "Whirlwind (emp):\n1) (emp) Devo +  Hockey + Gandalf + Hemo + Spirit Link\n2) (emp) Twin(Hymn) + Lan(Barrier) + Tokman + Azpek\n\n\nRubble:\n2)  Scar  + Tokman + Hemo\n3)  Devo + Bluto (Smoke) + Gandalf + Hemo + Spirit Link\n4)  Twin + Lanfear + Hockey\n5)  Scar + Tokman + Hemo\n\nQuake\n2) Twin  + NVs \n3) Akroma + HS + personals",
+	},
 	[1454628185] = {
 		["Updated"] = 1419998164,
 		["Name"] = "SICKSADWORLD1",
@@ -43,10 +50,10 @@ AngryAssign_Pages = {
 		["Contents"] = "Shadow:\n1) DJ, Tokman, doom\n2) Scar, Gandalf, brun, Comet\n3) twin, Charlie, myth\n\nSHIELDS:\nTokman\nHockey\nAzpek\nCharlie\nCannibal\n\nIce orbs:\n1) Scar, DJ, Hockey\n2) Packa, Brun, Azpek\n3) Atmos, Doom, Myth",
 	},
 	[223793571] = {
-		["Updated"] = 1419911743,
-		["Name"] = "Twins",
+		["Updated"] = 1420603269,
+		["Name"] = "Twins 5 heal",
 		["Id"] = 223793571,
-		["UpdateId"] = 901150786,
+		["UpdateId"] = 4277487332,
 		["Contents"] = "Whirlwind (emp):\n1) (emp) Dj(Tranq) + Hockey + Cexcells\n2) (emp) Twin(Hymn) + Lan(Barrier) + Cexcells + Azpek\n\nShout:\n2) Devo\n4) Devo\n\nRubble:\n2)  Scar  + Tokman + Hemo\n3)  Dj tranq + Bluto (Smoke)\n4)  Twin + Lanfear + Cexcells + Hockey\n5)  Scar + Tokman + Hemo\n\nQuake\n2) Twin + Captain + NVs \n3) Akroma + HS + personals",
 	},
 	[1969626899] = {

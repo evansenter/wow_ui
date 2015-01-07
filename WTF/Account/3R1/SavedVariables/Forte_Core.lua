@@ -5,8 +5,8 @@ FX_Saved = {
 	["Timers"] = {
 	},
 	["Healthstone"] = {
-		["Evan"] = 0,
 		["Metal"] = 0,
+		["Evan"] = 0,
 	},
 	["Exceptions"] = {
 		["Hellfire Channeler"] = 0,
@@ -18,7 +18,7 @@ FX_Saved = {
 		["Fathom-Guard Tidalvess"] = 1,
 		["Fathom-Guard Sharkkis"] = 1,
 	},
-	["Update"] = 35489.568,
+	["Update"] = 47369.783,
 	["Profiles"] = {
 		["Active"] = 1,
 		["Characters"] = {
@@ -304,7 +304,12 @@ FX_Saved = {
 							},
 							["Swing"] = false,
 							["Warn"] = true,
-							["Flip"] = false,
+							["Buff"] = {
+								1, -- [1]
+								1, -- [2]
+								1, -- [3]
+								[0] = true,
+							},
 							["scale"] = 1,
 							["IconTime"] = true,
 							["Hide"] = false,
@@ -402,12 +407,7 @@ FX_Saved = {
 							},
 							["SplashFactor"] = 4,
 							["Height"] = 24,
-							["Buff"] = {
-								1, -- [1]
-								1, -- [2]
-								1, -- [3]
-								[0] = true,
-							},
+							["Flip"] = false,
 							["MinRange"] = {
 								0, -- [1]
 								[0] = false,
@@ -618,15 +618,11 @@ FX_Saved = {
 					">> %s is fading in %s <<", -- [1]
 					[0] = 1,
 				},
+				["SummonHeight"] = 12,
+				["Chill"] = 0.05,
 				["Output"] = {
 					"MyProChannel", -- [1]
 					[0] = true,
-				},
-				["TalentOffsetX"] = 0,
-				["HealthstoneMinColor"] = {
-					0.93, -- [1]
-					1, -- [2]
-					0, -- [3]
 				},
 				["HealthstoneExpand"] = false,
 				["TimerResistsColor"] = {
@@ -653,20 +649,22 @@ FX_Saved = {
 							["SecondSplashMax"] = 3,
 							["x"] = 615.680118045806,
 							["lock"] = true,
-							["Enable"] = true,
+							["scale"] = 1.5,
 							["y"] = 434.560014686584,
 							["alpha"] = 0.6,
-							["scale"] = 1.5,
+							["Enable"] = true,
 						}, -- [1]
 					},
 				},
 				["SoulstoneMax"] = 10,
 				["TimerSortOrder"] = "buff selfdebuff debuff cooldown notarget target",
 				["SoulstoneWidth"] = 100,
-				["TimerFadeSound"] = {
-					"Sound\\Spells\\ShaysBell.wav", -- [1]
-					2, -- [2]
-					[0] = true,
+				["DiffNoneColor"] = {
+					0, -- [1]
+					1, -- [2]
+					0, -- [3]
+					0.2, -- [4]
+					[0] = false,
 				},
 				["TimerFadeSpeed"] = 0.5,
 				["DruidColor"] = {
@@ -679,14 +677,14 @@ FX_Saved = {
 					0, -- [2]
 					0.6, -- [3]
 				},
-				["CooldownLeft"] = {
-					">> %s is ready in %s <<", -- [1]
-					[0] = 1,
-				},
 				["SoulstoneFadeSound"] = {
 					"Interface\\AddOns\\Forte_Core\\Sounds\\SoulstoneExpire.mp3", -- [1]
 					1, -- [2]
 					[0] = true,
+				},
+				["CooldownLeft"] = {
+					">> %s is ready in %s <<", -- [1]
+					[0] = 1,
 				},
 				["GlobalSpark"] = {
 					0.7, -- [1]
@@ -701,12 +699,10 @@ FX_Saved = {
 				["SoulstoneTexture"] = "Interface\\Addons\\SharedMedia\\statusbar\\BantoBar",
 				["SplashStrata"] = "MEDIUM",
 				["OptionsHeight"] = 440,
-				["DiffNoneColor"] = {
-					0, -- [1]
-					1, -- [2]
-					0, -- [3]
-					0.2, -- [4]
-					[0] = false,
+				["TimerFadeSound"] = {
+					"Sound\\Spells\\ShaysBell.wav", -- [1]
+					2, -- [2]
+					[0] = true,
 				},
 				["SoulstoneStrata"] = "MEDIUM",
 				["SoulstoneMaxColor"] = {
@@ -714,13 +710,17 @@ FX_Saved = {
 					0.21, -- [2]
 					0.93, -- [3]
 				},
-				["SummonHeight"] = 12,
+				["HealthstoneMinColor"] = {
+					0.93, -- [1]
+					1, -- [2]
+					0, -- [3]
+				},
 				["SoulstoneReadySound"] = {
 					"Sound\\Spells\\SimonGame_Visual_GameTick.wav", -- [1]
 					1, -- [2]
 					[0] = true,
 				},
-				["Chill"] = 0.05,
+				["TalentOffsetX"] = 0,
 				["SummonMeetingStone"] = false,
 				["GlobalScale"] = 1,
 				["LoadDelay"] = 1,
@@ -880,8 +880,8 @@ FX_Saved = {
 							["Focus"] = true,
 							["Test"] = false,
 							["TicksNext"] = true,
-							["Hide"] = false,
 							["Texture"] = "Interface\\Addons\\SharedMedia\\statusbar\\BantoBar",
+							["Hide"] = false,
 							["TargetBgColor"] = {
 								0, -- [1]
 								0, -- [2]
@@ -1097,7 +1097,7 @@ FX_Saved = {
 			},
 		},
 		["Cooldown Timer"] = {
-			["Specifics"] = {
+			["Frame Sizing"] = {
 				["expand"] = true,
 			},
 			["Splash Icons"] = {
@@ -1106,34 +1106,34 @@ FX_Saved = {
 			["Spell Coloring/Filtering"] = {
 				["expand"] = true,
 			},
-			["Frame Sizing"] = {
+			["Specifics"] = {
 				["expand"] = true,
 			},
 			["Time Range"] = {
 				["expand"] = false,
 			},
-			["Buffs/Debuffs (on me only)"] = {
+			["My Cooldowns"] = {
 				["expand"] = false,
 			},
 			["Frame Appearance"] = {
 				["expand"] = true,
 			},
-			["My Cooldowns"] = {
+			["Buffs/Debuffs (on me only)"] = {
 				["expand"] = false,
 			},
 		},
 	},
 	["RaidStatus"] = {
-		["Evan"] = {
-			0, -- [1]
-			35489.568, -- [2]
-			"PRIEST", -- [3]
-			"v1.980.8", -- [4]
-		},
 		["Metal"] = {
 			-2, -- [1]
-			35460.886, -- [2]
+			46263.609, -- [2]
 			"WARRIOR", -- [3]
+			"v1.980.8", -- [4]
+		},
+		["Evan"] = {
+			0, -- [1]
+			47369.783, -- [2]
+			"PRIEST", -- [3]
 			"v1.980.8", -- [4]
 		},
 	},

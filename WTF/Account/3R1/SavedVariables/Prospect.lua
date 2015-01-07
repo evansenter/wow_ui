@@ -19,9 +19,9 @@ ProspectOreHerbsTable = {
 			["total"] = 3,
 		},
 		["looted"] = 276,
-		["Alexandrite"] = {
-			["count"] = 24,
-			["total"] = 25,
+		["Roguestone"] = {
+			["count"] = 32,
+			["total"] = 32,
 		},
 		["Lapis Lazuli"] = {
 			["count"] = 20,
@@ -51,9 +51,9 @@ ProspectOreHerbsTable = {
 			["count"] = 6,
 			["total"] = 6,
 		},
-		["Roguestone"] = {
-			["count"] = 32,
-			["total"] = 32,
+		["Alexandrite"] = {
+			["count"] = 24,
+			["total"] = 25,
 		},
 	},
 }
@@ -64,9 +64,9 @@ ProspectOptions = {
 	["badFrames"] = {
 	},
 	["mod"] = "shift",
+	["precision"] = 0,
 	["goodFrames"] = {
 	},
-	["precision"] = 0,
 	["btn"] = 3,
 	["autoloot"] = false,
 }

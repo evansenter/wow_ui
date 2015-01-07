@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1133, "DBM-Party-WoD", 3, 536)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12303 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 12335 $"):sub(12, -3))
 mod:SetCreatureID(80005)
 mod:SetEncounterID(1736)
 mod:SetZone()
@@ -14,7 +14,6 @@ mod:RegisterEventsInCombat(
 	"SPELL_AURA_REMOVED 163447",
 	"SPELL_CAST_START 162066 162058"
 )
-
 
 local warnFreezingSnare			= mod:NewTargetAnnounce(162066, 3)
 local warnSpinningSpear			= mod:NewSpellAnnounce(162058, 3)
