@@ -2,6 +2,13 @@
 Quartz3DB = {
 	["namespaces"] = {
 		["Swing"] = {
+			["profiles"] = {
+				["Pandatal - Illidan"] = {
+					["swingposition"] = "free",
+					["y"] = 0,
+					["x"] = 0,
+				},
+			},
 		},
 		["Buff"] = {
 		},
@@ -144,8 +151,8 @@ Quartz3DB = {
 	["profileKeys"] = {
 		["Venala - Cho'gall"] = "Default",
 		["Combustion - Illidan"] = "Pandatal - Illidan",
-		["Centromere - Dark Iron"] = "Pandatal - Illidan",
 		["Pandatal - Illidan"] = "Pandatal - Illidan",
+		["Centromere - Dark Iron"] = "Pandatal - Illidan",
 		["Plane - Illidan"] = "Pandatal - Illidan",
 		["Colton - Dark Iron"] = "Default",
 		["Natalan - Dark Iron"] = "Default",

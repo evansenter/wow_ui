@@ -79,7 +79,7 @@ ActionBarSaverDB = {
 				[93] = "macro|93||Vigilance|Interface\\Icons\\Ability_Warrior_Vigilance|#showtooltip Vigilance/n/cast [@mouseover,help,nodead] Vigilance",
 				[49] = "spell|6343||Thunder Clap||",
 				[63] = "spell|18499||Berserker Rage||",
-				[98] = "spell|23922||Shield Slam||",
+				[25] = "macro|25||Ready?|Interface\\Icons\\INV_Gizmo_01|/i Ready check./n/readycheck",
 				[94] = "spell|871||Shield Wall||",
 				[28] = "macro|28||Combat Log|Interface\\Icons\\PASSIVE_MONK_TEACHINGSOFMONASTERY|/combatlog",
 				[32] = "item|109220||Draenic Armor Potion",
@@ -94,9 +94,9 @@ ActionBarSaverDB = {
 				[41] = "macro|41||Extra Action|Interface\\Icons\\INV_Misc_Herb_Whispervine|/click ExtraActionButton1",
 				[97] = "spell|20243||Devastate||",
 				[57] = "item|111441||Grilled Gulper",
-				[17] = "spell|6673||Battle Shout||",
+				[66] = "macro|66||Tier 6|Interface\\Icons\\Ability_Warrior_BloodBath|#showtooltip/n/cast [talent:6/1] Avatar; [talent:6/2] Bloodbath; [talent:6/3] Bladestorm/n/cast Blood Fury",
 				[69] = "macro|69||Intervene|Interface\\Icons\\Ability_Warrior_VictoryRush|#showtooltip Intervene/n/cast [@mouseover,help,nodead] Intervene",
-				[25] = "macro|25||Ready?|Interface\\Icons\\INV_Gizmo_01|/i Ready check./n/readycheck",
+				[98] = "spell|23922||Shield Slam||",
 				[29] = "macro|29||Macro|Interface\\Icons\\Ability_Spy|/mac",
 				[67] = "spell|112048||Shield Barrier||",
 				[83] = "spell|18499||Berserker Rage||",
@@ -105,28 +105,28 @@ ActionBarSaverDB = {
 				[68] = "macro|68||Shield Charge|Interface\\Icons\\Ability_Defend|#showtooltip Shield Block/n/cast Shield Block/n/cast Blood Fury",
 				[101] = "spell|6552||Pummel||",
 				[100] = "spell|107570||Storm Bolt||",
-				[36] = "spell|158737||Blacksmithing||",
+				[71] = "spell|100||Charge||",
 				[35] = "spell|158752||Leatherworking||",
 				[85] = "spell|20243||Devastate||",
 				[51] = "spell|57755||Heroic Throw||",
 				[103] = "spell|1160||Demoralizing Shout||",
 				[70] = "spell|12975||Last Stand||",
 				[86] = "spell|23922||Shield Slam||",
-				[102] = "spell|5246||Intimidating Shout||",
+				[26] = "macro|26||Pull|Interface\\Icons\\INV_Gizmo_RocketBootExtreme|/i DBM Pull./n/dbm pull 12",
 				[30] = "macro|30||Focus|Interface\\Icons\\Ability_Priest_Phantasm|/focus",
-				[71] = "spell|100||Charge||",
+				[36] = "spell|158737||Blacksmithing||",
 				[87] = "spell|6572||Revenge||",
 				[52] = "spell|23920||Spell Reflection||",
 				[60] = "macro|60||HS / GHS|Interface\\ICONS\\INV_MISC_RUNE_01.BLP|#showtooltip/n/use [nomod]Hearthstone;[mod:shift][mod:alt]Garrison Hearthstone",
 				[72] = "spell|114192||Mocking Banner||",
 				[88] = "spell|107570||Storm Bolt||",
 				[104] = "spell|1715||Hamstring||",
-				[26] = "macro|26||Pull|Interface\\Icons\\INV_Gizmo_RocketBootExtreme|/i DBM Pull./n/dbm pull 12",
+				[102] = "spell|5246||Intimidating Shout||",
 				[73] = "spell|5308||Execute||",
 				[89] = "spell|6552||Pummel||",
 				[105] = "macro|105||Vigilance|Interface\\Icons\\Ability_Warrior_Vigilance|#showtooltip Vigilance/n/cast [@mouseover,help,nodead] Vigilance",
 				[61] = "spell|355||Taunt||",
-				[66] = "macro|66||Tier 6|Interface\\Icons\\Ability_Warrior_BloodBath|#showtooltip/n/cast [talent:6/1] Avatar; [talent:6/2] Bloodbath; [talent:6/3] Bladestorm/n/cast Blood Fury",
+				[17] = "spell|6673||Battle Shout||",
 				[90] = "spell|5246||Intimidating Shout||",
 				[27] = "macro|27||Camera|Interface\\Icons\\Spell_Shadow_EvilEye|/console CameraDistanceMaxFactor 9000",
 			},
@@ -943,19 +943,19 @@ ActionBarSaverDB = {
 				"macro|4||Soothing Mist|Interface\\Icons\\ability_monk_soothingmists|#showtooltip/n/use [@mouseover,help,nodead][]Soothing Mist", -- [4]
 				"spell|116705||Spear Hand Strike||", -- [5]
 				"spell|115078||Paralysis||", -- [6]
-				"macro|7||Tier 4|Interface\\Icons\\ability_monk_legsweep|#showtooltip/n/use [talent:4/1,@player]Ring of Peace;[talent:4/2]Charging Ox Wave;[talent:4/3]Leg Sweep", -- [7]
+				"macro|7||Tier 4|Interface\\Icons\\ability_monk_chargingoxwave|#showtooltip/n/use [talent:4/1,@player]Ring of Peace;[talent:4/2]Charging Ox Wave;[talent:4/3]Leg Sweep", -- [7]
 				"spell|154436||Stance of the Spirited Crane|Mistweaver Stance|", -- [8]
 				"spell|115080||Touch of Death||", -- [9]
 				"spell|115203||Fortifying Brew||", -- [10]
 				"macro|11||Purge Template|Interface\\Icons\\ability_rogue_imrovedrecuperate|#showtooltip/n/use [@mouseover,help,nodead][]Detox", -- [11]
 				"spell|115921||Legacy of the Emperor||", -- [12]
-				"spell|108557||Jab||", -- [13]
+				"spell|100780||Jab||", -- [13]
 				"spell|100787||Tiger Palm||", -- [14]
 				"spell|100784||Blackout Kick||", -- [15]
 				"spell|107428||Rising Sun Kick||", -- [16]
 				"spell|116705||Spear Hand Strike||", -- [17]
 				"spell|115078||Paralysis||", -- [18]
-				"macro|19||Tier 4|Interface\\Icons\\ability_monk_legsweep|#showtooltip/n/use [talent:4/1,@player]Ring of Peace;[talent:4/2]Charging Ox Wave;[talent:4/3]Leg Sweep", -- [19]
+				"macro|19||Tier 4|Interface\\Icons\\ability_monk_chargingoxwave|#showtooltip/n/use [talent:4/1,@player]Ring of Peace;[talent:4/2]Charging Ox Wave;[talent:4/3]Leg Sweep", -- [19]
 				"spell|115070||Stance of the Wise Serpent|Mistweaver Stance|", -- [20]
 				"spell|115080||Touch of Death||", -- [21]
 				"spell|115203||Fortifying Brew||", -- [22]
@@ -967,7 +967,7 @@ ActionBarSaverDB = {
 				"macro|28||Combat Log|Interface\\Icons\\PASSIVE_MONK_TEACHINGSOFMONASTERY|/combatlog", -- [28]
 				"macro|29||Macro|Interface\\Icons\\Ability_Spy|/mac", -- [29]
 				"macro|30||Focus|Interface\\Icons\\Ability_Priest_Phantasm|/focus", -- [30]
-				"spell|161332||Call to Arms||", -- [31]
+				"spell|161691||Garrison Ability||", -- [31]
 				"item|109222||Draenic Mana Potion", -- [32]
 				"macro|33||Transcendence|Interface\\Icons\\Spell_Shaman_SpectralTransformation|#showtooltip/n/use [nomod]Transcendence: Transfer;[mod:shift][mod:alt]Transcendence", -- [33]
 				"spell|83968||Mass Resurrection|Guild Perk|", -- [34]
@@ -1014,7 +1014,7 @@ ActionBarSaverDB = {
 				[76] = "spell|115175||Soothing Mist||",
 				[77] = "spell|116705||Spear Hand Strike||",
 				[78] = "spell|115078||Paralysis||",
-				[85] = "spell|108557||Jab||",
+				[85] = "spell|100780||Jab||",
 				[87] = "spell|100784||Blackout Kick||",
 				[89] = "spell|116705||Spear Hand Strike||",
 				[91] = "spell|115310||Revival||",
@@ -1275,7 +1275,7 @@ ActionBarSaverDB = {
 				[86] = "spell|100787||Tiger Palm||",
 				[26] = "macro|26||Pull!|Interface\\Icons\\Spell_Shadow_UnstableAfllictions|/dbm pull 10",
 				[30] = "equipmentset|Deeps|",
-				[36] = "spell|51005||Milling||",
+				[71] = "spell|121827||Roll||",
 				[87] = "spell|100784||Blackout Kick||",
 				[52] = "spell|137562||Nimble Brew||",
 				[60] = "item|6948||Hearthstone",
@@ -1289,7 +1289,7 @@ ActionBarSaverDB = {
 				[61] = "spell|123904||Invoke Xuen, the White Tiger||",
 				[74] = "spell|100787||Tiger Palm||",
 				[69] = "spell|115072||Expel Harm||",
-				[71] = "spell|121827||Roll||",
+				[36] = "spell|51005||Milling||",
 			},
 		},
 		["PALADIN"] = {

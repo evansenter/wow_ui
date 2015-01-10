@@ -866,16 +866,16 @@ end
 
 function MT:UpdateIcon(this, justicon)
 	local index, icon = select(3, string.find(this:GetName(), "MTSB(%d+)"))
-	index = MT:GetExMacroIndex(index)
+	--index = MT:GetExMacroIndex(index)
 	if not index then return end
 	local macro, isspell, item = this:GetAttribute("macrotext"), false, ""
-	local isdynamic = this:GetAttribute("dynamic")
-	if not justicon and not isdynamic then return end
+	--local isdynamic = this:GetAttribute("dynamic")
+	--if not justicon and not isdynamic then return end
 	local mtext = {strsplit("\n", macro)}
 	local showtext
 	if mtext[1] then
-		if strsub(mtext[1], 1, 6) == "#show " then showtext = strsub(line, 7)
-		elseif strsub(mtext[1], 1, 1) == "#showtooltip " then showtext = strsub(line, 14) end
+		if strsub(mtext[1], 1, 6) == "#show " then showtext = strsub(mtext[1], 7)
+		elseif strsub(mtext[1], 1, 1) == "#showtooltip " then showtext = strsub(mtext[1], 14) end
 	end
 	if showtext then
 		showtext = strtrim(showtext)
@@ -907,16 +907,16 @@ function MT:UpdateIcon(this, justicon)
  
 	for _, mline in ipairs(mtext) do
 		if mline then
-			local _, _, cmd, args = MT:ParseMacro(mline)
+			local cmd = select(3, MT:ParseMacro(mline))
 			if MT:IsCast(cmd) or MT:IsCastSequence(cmd) then
-				local spell, target = SecureCmdOptionParse(args)
+				local spell, target = SecureCmdOptionParse(mline)
 				if MT:IsCastSequence(cmd) then
 					local idx, it, sp = QueryCastSequence(spell)
 					spell = sp or it
 					if string.sub(spell, 1, 1) == "!" then spell = string.sub(spell, 2) end
 				end
 				if spell then
-					_, _, icon = GetSpellInfo(spell)
+					icon = select(3, GetSpellInfo(spell))
 					if icon then
 						if not justicon then SetMacroSpell(index, spell, target) end
 						isspell = true

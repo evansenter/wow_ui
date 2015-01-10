@@ -49,6 +49,7 @@ local function CreateCheckBox (parent, anchorTo, x, y, text)
         self:SetScript("OnLeave", function(self, motion, ...)
             GameTooltip:Hide ()
         end)
+        return frm
     end
     
     function frm:Bind (varname)
@@ -56,6 +57,7 @@ local function CreateCheckBox (parent, anchorTo, x, y, text)
             g_BulkOrder[varname] = self:GetChecked ()
         end)
         table.insert (checkboxes, {frm, varname})
+        return frm
     end
     
     return frm
@@ -66,14 +68,11 @@ end
 function BulkOrder_CreateOptions ()
     -- Default values!
     g_BulkOrder = g_BulkOrder or {}
-    if g_BulkOrder.ExcludeTradingPost==nil then 
-        g_BulkOrder.ExcludeTradingPost = true 
-    end
-    if g_BulkOrder.ExcludeWarMill==nil then 
-        g_BulkOrder.ExcludeWarMill = true 
-    end
-    if g_BulkOrder.ExcludeGoblinWorkshop==nil then 
-        g_BulkOrder.ExcludeGoblinWorkshop = true 
+    
+    for _,v in ipairs({string.split (' ', 'ExcludeTradingPost ExcludeWarMill ExcludeGoblinWorkshop RemindProfBuildings RemindMine RemindHerbGarden')}) do
+        if g_BulkOrder[v]==nil then 
+            g_BulkOrder[v] = true 
+        end
     end
 
     -- GUI stuff!
@@ -118,36 +117,66 @@ function BulkOrder_CreateOptions ()
     local y=-6
     
     Options.chkTradingPost = Options:CreateCheckBox (TitleExclude, 0, y, 'Trading Post')
-    Options.chkTradingPost:Bind ('ExcludeTradingPost', false, true)
-    Options.chkTradingPost:SetTooltip ('Exclude Trading Post', 'If this option is checked, BulkOrder will NOT automatically start work orders in the Trading Post.')
+        :Bind ('ExcludeTradingPost', false, true)
+        :SetTooltip ('Exclude Trading Post', 'If this option is checked, BulkOrder will NOT automatically start work orders in the Trading Post.')
     y=y-25
     
     Options.chkWarMill = Options:CreateCheckBox (TitleExclude, 0, y, 'Dwarven Bunker/ War Mill')
-    Options.chkWarMill:Bind ('ExcludeWarMill', false, true)
-    Options.chkWarMill:SetTooltip ('Exclude Dwarven Bunker/ War Mill', 'If this option is checked, BulkOrder will NOT automatically start work orders in the Dwarven Bunker/ War Mill.')
+        :Bind ('ExcludeWarMill', false, true)
+        :SetTooltip ('Exclude Dwarven Bunker/ War Mill', 'If this option is checked, BulkOrder will NOT automatically start work orders in the Dwarven Bunker/ War Mill.')
     y=y-25
     
     Options.chkGoblinWorkshop = Options:CreateCheckBox (TitleExclude, 0, y, 'Gnomish Gearworks/ Goblin Workshop')
-    Options.chkGoblinWorkshop:Bind ('ExcludeGoblinWorkshop', false, true)
-    Options.chkGoblinWorkshop:SetTooltip ('Exclude Gnomish Gearworks/ Goblin Workshop', 'If this option is checked, BulkOrder will NOT automatically start work orders in the Gnomish Gearworks/ Goblin Workshop.')
+        :Bind ('ExcludeGoblinWorkshop', false, true)
+        :SetTooltip ('Exclude Gnomish Gearworks/ Goblin Workshop', 'If this option is checked, BulkOrder will NOT automatically start work orders in the Gnomish Gearworks/ Goblin Workshop.')
     y=y-25
     
     Options.chkEverything = Options:CreateCheckBox (TitleExclude, 0, y, 'EVERYTHING!')
-    Options.chkEverything:Bind ('ExcludeEverything', false, true)
-    Options.chkEverything:SetTooltip ('Exclude Everything!', 'If this option is checked, BulkOrder will NOT automatically start work orders in any buildings, ever.\nYou will have to manually press the Start All Work Orders button like some sort of cave man.')
+        :Bind ('ExcludeEverything', false, true)
+        :SetTooltip ('Exclude Everything!', 'If this option is checked, BulkOrder will NOT automatically start work orders in any buildings, ever.\nYou will have to manually press the Start All Work Orders button like some sort of cave man.')
     y=y-25
     
     
+    -- Reminder
+    local moretext = Options:CreateFontString (nil, "ARTWORK", "GameFontHighlight")
+    moretext:SetPoint ("TOPLEFT", 8, -275)
+    moretext:SetText ('The first time you enter your garrison after logging in, BulkOrder will remind you if you have buildings that have no work orders queued.')
+    moretext:SetWidth (500)
+    moretext:SetJustifyH ("LEFT")
+    Options.moretext = moretext
+
+    local TitleReminder = Options:CreateFontString (nil, "ARTWORK", "GameFontHighlight")
+    TitleReminder:SetPoint ("TOPLEFT", 8, -315)
+    TitleReminder:SetText ('Remind me about:')
+    Options.TitleReminder = TitleReminder
+    local y=-6
+    
+    Options.chkRemindProfBuildings = Options:CreateCheckBox (TitleReminder, 0, y, 'Profession Buildings')
+        :Bind ('RemindProfBuildings', false, true)
+        :SetTooltip ('Profession Buildings', 'If this option is checked, BulkOrder will remind you to start work orders in all your profession buildings.')
+    y=y-25
+    
+    Options.chkRemindMine = Options:CreateCheckBox (TitleReminder, 0, y, 'Mine')
+        :Bind ('RemindMine', false, true)
+        :SetTooltip ('Mine', 'If this option is checked, BulkOrder will remind you to start work orders in your mine.')
+    y=y-25
+    
+    Options.chkRemindHerbGarden = Options:CreateCheckBox (TitleReminder, 0, y, 'Herb Garden')
+        :Bind ('RemindHerbGarden', false, true)
+        :SetTooltip ('Herb Garden', 'If this option is checked, BulkOrder will remind you to start work orders in your herb garden.')
+    y=y-25
+    
+
     -- Misc
     local TitleMisc = Options:CreateFontString (nil, "ARTWORK", "GameFontHighlight")
-    TitleMisc:SetPoint ("TOPLEFT", 8, -265)
+    TitleMisc:SetPoint ("TOPLEFT", 8, -435)
     TitleMisc:SetText ('Misc.:')
     Options.TitleMisc = TitleMisc
     local y=-6
     
     Options.chkHideButton = Options:CreateCheckBox (TitleMisc, 0, y, 'Hide Button')
-    Options.chkHideButton:Bind ('HideButton', false, true)
-    Options.chkHideButton:SetTooltip ('Hide Button', 'If this option is checked, the work orders window will not display the additional Start All Work Orders button.')
+        :Bind ('HideButton', false, true)
+        :SetTooltip ('Hide Button', 'If this option is checked, the work orders window will not display the additional Start All Work Orders button.')
     y=y-25
     
     

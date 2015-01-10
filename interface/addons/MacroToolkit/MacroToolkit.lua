@@ -550,6 +550,7 @@ function MT:ExtendMacro(save, macrobody, idx, exists)
 		MacroToolkitText:GetScript("OnTextChanged")(MacroToolkitText)
 		MT:UpdateCharLimit()
 	end
+	return n
 end
 
 --function to modify any extended macro created prior to the fix that passes
@@ -1017,7 +1018,9 @@ function MT:SaveMacro()
 			MT.db.global.extra[tostring(MTF.selectedMacro)].body = MacroToolkitText:GetText()
 			_G[format("MTSB%d", MTF.selectedMacro)]:SetAttribute("macrotext", MacroToolkitText:GetText())
 		else
-			if MacroToolkitText.extended then MT:ExtendMacro(true)
+			if MacroToolkitText.extended then
+				local n = MT:ExtendMacro(true)
+				MT:UpdateIcon(_G[n])
 			else EditMacro(MTF.selectedMacro, nil, nil, MacroToolkitText:GetText()) end
 		end
 		MTF.textChanged = nil

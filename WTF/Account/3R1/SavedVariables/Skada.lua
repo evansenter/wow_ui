@@ -8,8 +8,8 @@ SkadaDB = {
 	["profileKeys"] = {
 		["Venala - Cho'gall"] = "Default",
 		["Combustion - Illidan"] = "Pandatal - Illidan",
-		["Centromere - Dark Iron"] = "Pandatal - Illidan",
 		["Pandatal - Illidan"] = "Pandatal - Illidan",
+		["Centromere - Dark Iron"] = "Pandatal - Illidan",
 		["Plane - Illidan"] = "Pandatal - Illidan",
 		["Colton - Dark Iron"] = "Default",
 		["Natalan - Dark Iron"] = "Default",
@@ -49,7 +49,6 @@ SkadaDB = {
 						["font"] = "ABF",
 					},
 					["x"] = 5.99948120117188,
-					["mode"] = "Healing",
 					["background"] = {
 						["height"] = 97.9999160766602,
 						["color"] = {
@@ -57,6 +56,7 @@ SkadaDB = {
 							["b"] = 0,
 						},
 					},
+					["mode"] = "Healing",
 					["name"] = "Healing",
 				}, -- [1]
 				{
@@ -163,7 +163,6 @@ SkadaDB = {
 					["barfont"] = "ABF",
 					["barslocked"] = true,
 					["name"] = "Healing",
-					["mode"] = "DPS",
 					["background"] = {
 						["color"] = {
 							["a"] = 0.200000047683716,
@@ -171,6 +170,7 @@ SkadaDB = {
 						},
 						["height"] = 97.9999160766602,
 					},
+					["mode"] = "DPS",
 					["x"] = 5.99948120117188,
 					["title"] = {
 						["color"] = {
@@ -228,13 +228,7 @@ SkadaDB = {
 					["snapto"] = true,
 					["mode"] = "Damage",
 					["modeincombat"] = "",
-					["buttons"] = {
-						["segment"] = true,
-						["menu"] = true,
-						["mode"] = true,
-						["report"] = true,
-						["reset"] = true,
-					},
+					["bartexture"] = "BantoBar",
 					["barwidth"] = 407.999664306641,
 					["barspacing"] = 0,
 					["background"] = {
@@ -257,7 +251,13 @@ SkadaDB = {
 					["classcolorbars"] = true,
 					["point"] = "LEFT",
 					["enabletitle"] = true,
-					["bartexture"] = "BantoBar",
+					["buttons"] = {
+						["segment"] = true,
+						["menu"] = true,
+						["mode"] = true,
+						["report"] = true,
+						["reset"] = true,
+					},
 					["name"] = "Damage",
 				}, -- [2]
 			},
@@ -309,7 +309,7 @@ SkadaDB = {
 					["barslocked"] = true,
 					["modeincombat"] = "",
 					["wipemode"] = "",
-					["set"] = "current",
+					["set"] = "total",
 					["hidden"] = false,
 					["y"] = 187.000122070313,
 					["barfont"] = "ABF",
@@ -339,6 +339,7 @@ SkadaDB = {
 					["snapto"] = true,
 					["name"] = "Damage",
 					["enabletitle"] = true,
+					["bartexture"] = "BantoBar",
 					["buttons"] = {
 						["report"] = true,
 						["menu"] = true,
@@ -347,7 +348,6 @@ SkadaDB = {
 						["segment"] = true,
 						["reset"] = true,
 					},
-					["bartexture"] = "BantoBar",
 					["barwidth"] = 410.999542236328,
 					["barspacing"] = 1,
 					["point"] = "BOTTOMLEFT",
@@ -389,10 +389,10 @@ SkadaDB = {
 				["hide"] = true,
 			},
 			["report"] = {
-				["number"] = 7,
-				["channel"] = "instance_chat",
+				["number"] = 2,
+				["channel"] = "officer",
 				["target"] = "murlocobama",
-				["mode"] = "Enemy damage taken",
+				["mode"] = "Healing",
 			},
 			["tooltiprows"] = 10,
 			["setstokeep"] = 30,

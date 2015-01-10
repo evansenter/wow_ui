@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod("GRDTrash", "DBM-Party-WoD", 3)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12335 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 12357 $"):sub(12, -3))
 --mod:SetModelID(47785)
 mod:SetZone()
 
@@ -73,7 +73,7 @@ end
 function mod:SPELL_CAST_SUCCESS(args)
 	if not self.Options.Enabled or self:IsDifficulty("normal5") then return end
 	local spellId = args.spellId
-	if spellId == 163966 then
+	if spellId == 163966 and self:AntiSpam(2, 3) then
 		warnActivating:Show()
 		specWarnActivating:Show(args.sourceName)
 	end

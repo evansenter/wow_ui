@@ -1,6 +1,5 @@
 
 OmniCC4Config = {
-	["version"] = "6.0.10",
 	["groups"] = {
 		{
 			["id"] = "Ignore",
@@ -17,7 +16,7 @@ OmniCC4Config = {
 			["enabled"] = true,
 		}, -- [2]
 	},
-	["engine"] = "AniUpdater",
+	["version"] = "6.0.10",
 	["groupSettings"] = {
 		["Pandatal"] = {
 			["enabled"] = true,
@@ -203,4 +202,5 @@ OmniCC4Config = {
 			},
 		},
 	},
+	["engine"] = "AniUpdater",
 }

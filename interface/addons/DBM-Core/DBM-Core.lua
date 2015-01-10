@@ -53,7 +53,7 @@
 --  Globals/Default Options  --
 -------------------------------
 DBM = {
-	Revision = tonumber(("$Revision: 12338 $"):sub(12, -3)),
+	Revision = tonumber(("$Revision: 12368 $"):sub(12, -3)),
 	DisplayVersion = "6.0.12 alpha", -- the string that is shown as version
 	ReleaseRevision = 12328 -- the revision of the latest stable version that is available
 }
@@ -297,7 +297,7 @@ local timerRequestInProgress = false
 local updateNotificationDisplayed = 0
 local tooltipsHidden = false
 local SWFilterDisabed = false
-local fakeBWRevision = 12508
+local fakeBWRevision = 12525
 
 local enableIcons = true -- set to false when a raid leader or a promoted player has a newer version of DBM
 local guiRequested = false
@@ -1032,6 +1032,7 @@ do
 				"UNIT_SPELLCAST_SUCCEEDED",
 				"ENCOUNTER_START",
 				"ENCOUNTER_END",
+				"BOSS_KILL",
 				"UNIT_DIED",
 				"UNIT_DESTROYED",
 				"UNIT_HEALTH mouseover target focus player",
@@ -3239,7 +3240,9 @@ do
 	end
 	
 	syncHandlers["RBW2"] = function(sender, spellId, spellName)
+		if sender == playerName then return end
 		if DBM.Options.DebugLevel > 2 or (Transcriptor and Transcriptor:IsLogging()) then
+			if not spellName then spellName = UNKNOWN end
 			DBM:Debug("RAID_BOSS_WHISPER on "..sender.." with spell of "..spellName.." ("..spellId..")")
 		end
 	end
@@ -3972,6 +3975,10 @@ do
 				return
 			end
 		end
+	end
+	
+	function DBM:BOSS_KILL(encounterID, name)
+		self:Debug("BOSS_KILL event fired: "..encounterID.." "..name)
 	end
 
 	local function checkExpressionList(exp, str)
@@ -5204,10 +5211,12 @@ function DBM:ToggleGarrisonAlertsFrame(toggle, custom)
 		GarrisonUnregistered = true
 		AlertFrame:UnregisterEvent("GARRISON_MISSION_FINISHED")
 		AlertFrame:UnregisterEvent("GARRISON_BUILDING_ACTIVATABLE")
+--		AlertFrame:UnregisterEvent("GARRISON_RANDOM_MISSION_ADDED")--6.1
 	elseif toggle == 0 and GarrisonUnregistered then
 		GarrisonUnregistered = false
 		AlertFrame:RegisterEvent("GARRISON_MISSION_FINISHED")
 		AlertFrame:RegisterEvent("GARRISON_BUILDING_ACTIVATABLE")
+--		AlertFrame:RegisterEvent("GARRISON_RANDOM_MISSION_ADDED")--6.1
 	end
 end
 
@@ -6203,6 +6212,10 @@ function bossModPrototype:CanRemoveCurse()
 	return class == "DRUID" or class == "MAGE"
 end
 
+function bossModPrototype:CanRemovePoison()
+	return class == "DRUID" or class == "MONK" or class == "PALADIN"
+end
+
 function bossModPrototype:IsMagicDispeller()
 	return class == "MAGE" or class == "PRIEST" or class == "SHAMAN"
 end
@@ -6516,6 +6529,8 @@ do
 			end
 		elseif announceType == "phase" or announceType == "prephase" then
 			text = DBM_CORE_AUTO_ANNOUNCE_TEXTS[announceType]:format(tostring(spellId))
+		elseif announceType == "phasechange" then
+			text = DBM_CORE_AUTO_ANNOUNCE_TEXTS.spell
 		else
 			text = DBM_CORE_AUTO_ANNOUNCE_TEXTS[announceType]:format(spellName)
 		end
@@ -6604,6 +6619,10 @@ do
 
 	function bossModPrototype:NewPhaseAnnounce(phase, color, icon, ...)
 		return newAnnounce(self, "phase", phase, color or 1, icon or "Interface\\Icons\\Spell_Nature_WispSplode", ...)
+	end
+
+	function bossModPrototype:NewPhaseChangeAnnounce(color, icon, ...)
+		return newAnnounce(self, "phasechange", 0, color or 1, icon or "Interface\\Icons\\Spell_Nature_WispSplode", ...)
 	end
 
 	function bossModPrototype:NewPrePhaseAnnounce(phase, color, icon, ...)
@@ -7165,6 +7184,10 @@ do
 
 	function bossModPrototype:NewSpecialWarningMove(text, optionDefault, ...)
 		return newSpecialWarning(self, "move", text, nil, optionDefault, ...)
+	end
+	
+	function bossModPrototype:NewSpecialWarningDodge(text, optionDefault, ...)
+		return newSpecialWarning(self, "dodge", text, nil, optionDefault, ...)
 	end
 	
 	function bossModPrototype:NewSpecialWarningMoveAway(text, optionDefault, ...)

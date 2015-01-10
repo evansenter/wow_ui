@@ -331,10 +331,10 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 				["INCOMING_DODGE"] = {
-					["colorG"] = 1,
-					["fontSize"] = 26,
 					["alwaysSticky"] = true,
 					["colorR"] = 1,
+					["colorG"] = 1,
+					["fontSize"] = 26,
 				},
 				["PET_INCOMING_BLOCK"] = {
 					["disabled"] = true,
@@ -519,10 +519,10 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 				["INCOMING_PARRY"] = {
-					["colorG"] = 1,
-					["fontSize"] = 26,
 					["alwaysSticky"] = true,
 					["colorR"] = 1,
+					["colorG"] = 1,
+					["fontSize"] = 26,
 				},
 			},
 			["scrollAreas"] = {

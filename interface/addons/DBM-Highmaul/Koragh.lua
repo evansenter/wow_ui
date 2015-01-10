@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1153, "DBM-Highmaul", nil, 477)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12331 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 12353 $"):sub(12, -3))
 mod:SetCreatureID(79015)
 mod:SetEncounterID(1723)
 mod:SetZone()
@@ -28,7 +28,7 @@ local warnVulnerability				= mod:NewTargetAnnounce(160734, 1)
 local warnTrample					= mod:NewTargetCountAnnounce(163101, 3)--Technically it's supression field, then trample, but everyone is going to know it more by trample cause that's the part of it that matters
 local warnExpelMagicFire			= mod:NewSpellAnnounce(162185, 3)
 local warnExpelMagicShadow			= mod:NewSpellAnnounce(162184, 3, nil, mod:IsHealer())
-local warnExpelMagicFrost			= mod:NewSpellAnnounce(161411, 3)
+local warnExpelMagicFrost			= mod:NewTargetAnnounce(161411, 3)
 local warnExpelMagicArcane			= mod:NewTargetAnnounce(162186, 4)--Everyone, so they know to avoid him
 local warnBallsSoon					= mod:NewPreWarnAnnounce(161612, 6.5, 2)
 local warnBallsHit					= mod:NewCountAnnounce(161612, 2)
@@ -48,7 +48,7 @@ local specWarnExpelMagicArcaneYou	= mod:NewSpecialWarningMoveAway(162186, nil, n
 local specWarnExpelMagicArcane		= mod:NewSpecialWarningTaunt(162186, nil, nil, nil, nil, nil, true)
 local yellExpelMagicArcane			= mod:NewYell(162186)
 local specWarnBallsSoon				= mod:NewSpecialWarningPreWarn(161612, nil, 6.5, nil, nil, nil, nil, true)
-local specWarnMCSoon				= mod:NewSpecialWarningPreWarn(163472, true, 6.5)
+--local specWarnMCSoon				= mod:NewSpecialWarningPreWarn(163472, true, 6.5)
 local specWarnMC					= mod:NewSpecialWarningSwitch(163472, mod:IsDps())
 local specWarnForfeitPower			= mod:NewSpecialWarningInterrupt(163517)--Spammy?
 local specWarnExpelMagicFel			= mod:NewSpecialWarningYou(172895)--Maybe needs "do not move" warning or at very least "try not to move" since sometimes you have to move for trample.
@@ -106,14 +106,15 @@ local function ballsWarning(self)
 		specWarnBallsSoon:Show()
 		voiceBalls:Play("161612")
 	else
-		if self:IsMythic() and self.vb.ballsCount+1 % 2 then
-			specWarnMCSoon:Show()
+		if self:IsMythic() and ((self.vb.ballsCount+1) % 2) == 0 then
+--			specWarnMCSoon:Show()
 		end
 	end
 end
 
 local function checkBossForgot(self)
 	DBM:Debug("checkBossForgot ran, which means expected balls 10 seconds late, starting 20 second timer for next balls")
+--	self.vb.ballsCount = self.vb.ballsCount + 1
 	timerBallsCD:Start(20, self.vb.ballsCount+1)
 	countdownBalls:Start(20)
 	self:Schedule(13.5, ballsWarning, self)
@@ -125,6 +126,10 @@ local function returnPosition(self)
 	if self.Options.FelArrow and lastX and LastY then
 		DBM.Arrow:ShowRunTo(lastX, LastY, 1, 5)
 	end
+end
+
+function mod:FrostTarget(targetname, uId)
+	warnExpelMagicFrost:Show(targetname)
 end
 
 function mod:OnCombatStart(delay)
@@ -185,7 +190,6 @@ function mod:SPELL_CAST_START(args)
 		end
 		voiceExpelMagicShadow:Play("healall")
 	elseif args:IsSpellID(172747) then
-		warnExpelMagicFrost:Show()
 		specWarnExpelMagicFrost:Show()
 		if self.vb.shieldCharging then
 			timerExpelMagicFrostCD:Start(83)
@@ -199,9 +203,10 @@ function mod:SPELL_CAST_START(args)
 			timerExpelMagicFrost:Start(21.5)
 		end
 		voiceExpelMagicFrost:Play("161411")
+		self:BossTargetScanner(79015, "FrostTarget", 0.1, 16)
 	elseif spellId == 163517 then
 		warnForfeitPower:Show()
-		local guid = args.souceGUID
+		local guid = args.sourceGUID
 		if (guid == UnitGUID("target")) or (guid == UnitGUID("focus")) then
 			specWarnForfeitPower:Show(args.sourceName)
 		end
@@ -263,7 +268,7 @@ function mod:SPELL_AURA_APPLIED(args)
 				voiceExpelMagicArcane:Play("changemt")
 			end
 		end
-	elseif spellId == 161242 and self:AntiSpam(5, args.destName) and not self:IsLFR() then--Players may wabble in and out of it and we don't want to spam add them to table.
+	elseif spellId == 161242 and self:AntiSpam(23, args.destName) and not self:IsLFR() then--Players may wabble in and out of it and we don't want to spam warnings.
 		warnCausticEnergy:CombinedShow(1, args.destName)--Two targets on mythic, which is why combinedshow. (10 on LFR. too much spam and not important, so disabled in LFR)
 	elseif spellId == 163472 then
 		warnMC:CombinedShow(0.5, args.destName)
@@ -280,7 +285,7 @@ function mod:SPELL_AURA_APPLIED(args)
 			specWarnExpelMagicFel:Show()
 			timerExpelMagicFel:Start()
 			countdownFel:Start()
-			yellExpelMagicFel:Schedule(10)--Yell right before expire, not apply
+			yellExpelMagicFel:Schedule(11)--Yell right before expire, not apply
 			lastX, LastY = UnitPosition("player")
 			self:Schedule(7, returnPosition, self)
 		end
@@ -375,10 +380,6 @@ function mod:SPELL_AURA_REMOVED(args)
 	end
 end
 
---"<16.8 14:52:14> [CHAT_MSG_MONSTER_YELL] CHAT_MSG_MONSTER_YELL#I will crush you!#Ko'ragh###Serrinne##0#0##0#565#nil#0#false#false", -- [5422]
---"<57.9 14:52:55> [CHAT_MSG_MONSTER_YELL] CHAT_MSG_MONSTER_YELL#Silence!#Ko'ragh###Hesptwo-BetaLevelingRealm02##0#0##0#568#nil#0#false#false", -- [18204]
---"<106.1 14:53:43> [CHAT_MSG_MONSTER_YELL] CHAT_MSG_MONSTER_YELL#Quiet!#Ko'ragh###Kevo-Level100PvP##0#0##0#572#nil#0#false#false", -- [30685]
---"<77.9 14:43:24> [CHAT_MSG_MONSTER_YELL] CHAT_MSG_MONSTER_YELL#I will tear you in half!#Ko'ragh###Turkeyburger##0#0##0#510#nil#0#false#false", -- [23203]
 function mod:CHAT_MSG_MONSTER_YELL(msg, _, _, _, target)
 	if msg:find(L.supressionTarget1) or msg:find(L.supressionTarget2) or msg:find(L.supressionTarget3) or msg:find(L.supressionTarget4) then
 		self:SendSync("ChargeTo", target)--Sync since we have poor language support for many languages.

@@ -50,13 +50,13 @@ SkadaPerCharDB = {
 						["damage"] = 7079,
 						["max"] = 7079,
 						["name"] = "Ice Nova",
-						["glancing"] = 0,
+						["min"] = 7079,
 						["multistrike"] = 1,
 						["critical"] = 1,
 						["blocked"] = 0,
 						["totalhits"] = 1,
 						["resisted"] = 0,
-						["min"] = 7079,
+						["glancing"] = 0,
 						["absorbed"] = 0,
 					},
 					["Attack"] = {
@@ -65,13 +65,13 @@ SkadaPerCharDB = {
 						["damage"] = 22192,
 						["max"] = 14519,
 						["name"] = "Attack",
-						["glancing"] = 0,
+						["min"] = 7673,
 						["multistrike"] = 0,
 						["critical"] = 0,
 						["blocked"] = 0,
 						["totalhits"] = 2,
 						["resisted"] = 0,
-						["min"] = 7673,
+						["glancing"] = 0,
 						["absorbed"] = 0,
 					},
 					["Auto Shot"] = {
@@ -80,13 +80,13 @@ SkadaPerCharDB = {
 						["damage"] = 3609,
 						["max"] = 3609,
 						["name"] = "Auto Shot",
-						["glancing"] = 0,
+						["min"] = 3609,
 						["multistrike"] = 0,
 						["critical"] = 0,
 						["blocked"] = 0,
 						["totalhits"] = 1,
 						["resisted"] = 0,
-						["min"] = 3609,
+						["glancing"] = 0,
 						["absorbed"] = 0,
 					},
 					["Arcane Shot"] = {
@@ -95,13 +95,13 @@ SkadaPerCharDB = {
 						["damage"] = 4803,
 						["max"] = 4803,
 						["name"] = "Arcane Shot",
-						["glancing"] = 0,
+						["min"] = 4803,
 						["multistrike"] = 0,
 						["critical"] = 0,
 						["blocked"] = 0,
 						["totalhits"] = 1,
 						["resisted"] = 0,
-						["min"] = 4803,
+						["glancing"] = 0,
 						["absorbed"] = 0,
 					},
 				},
@@ -164,8 +164,6 @@ SkadaPerCharDB = {
 				["hdonespell"] = {
 				},
 				["taken"] = 0,
-				["done"] = 0,
-				["htaken"] = 18961,
 				["htakenspell"] = {
 					["Spirit Bond"] = {
 						["min"] = 6320,
@@ -176,6 +174,8 @@ SkadaPerCharDB = {
 						["hits"] = 3,
 					},
 				},
+				["htaken"] = 18961,
+				["done"] = 0,
 			},
 			["Boario"] = {
 				["players"] = {
@@ -184,8 +184,6 @@ SkadaPerCharDB = {
 				["hdonespell"] = {
 				},
 				["taken"] = 0,
-				["done"] = 0,
-				["htaken"] = 10488,
 				["htakenspell"] = {
 					["Lifebloom"] = {
 						["min"] = 2171,
@@ -204,6 +202,8 @@ SkadaPerCharDB = {
 						["hits"] = 1,
 					},
 				},
+				["htaken"] = 10488,
+				["done"] = 0,
 			},
 			["Gilgorath-Rexxar"] = {
 				["players"] = {
@@ -228,8 +228,6 @@ SkadaPerCharDB = {
 					},
 				},
 				["taken"] = 0,
-				["done"] = 0,
-				["htaken"] = 19278,
 				["htakenspell"] = {
 					["Chimaera Shot"] = {
 						["min"] = 6246,
@@ -248,6 +246,8 @@ SkadaPerCharDB = {
 						["hits"] = 1,
 					},
 				},
+				["htaken"] = 19278,
+				["done"] = 0,
 			},
 			["Direbeak Windroc"] = {
 				["players"] = {
@@ -262,10 +262,10 @@ SkadaPerCharDB = {
 				["hdonespell"] = {
 				},
 				["taken"] = 0,
-				["done"] = 14519,
-				["htaken"] = 0,
 				["htakenspell"] = {
 				},
+				["htaken"] = 0,
+				["done"] = 14519,
 			},
 			["Lolzard"] = {
 				["players"] = {
@@ -282,8 +282,6 @@ SkadaPerCharDB = {
 					},
 				},
 				["taken"] = 0,
-				["done"] = 0,
-				["htaken"] = 6180,
 				["htakenspell"] = {
 					["Spirit Bond"] = {
 						["min"] = 709,
@@ -294,6 +292,8 @@ SkadaPerCharDB = {
 						["hits"] = 2,
 					},
 				},
+				["htaken"] = 6180,
+				["done"] = 0,
 			},
 			["Yøgapants-BleedingHollow"] = {
 				["players"] = {
@@ -308,8 +308,6 @@ SkadaPerCharDB = {
 				["hdonespell"] = {
 				},
 				["taken"] = 0,
-				["done"] = 8412,
-				["htaken"] = 19395,
 				["htakenspell"] = {
 					["Spirit Bond"] = {
 						["min"] = 6465,
@@ -320,6 +318,8 @@ SkadaPerCharDB = {
 						["hits"] = 3,
 					},
 				},
+				["htaken"] = 19395,
+				["done"] = 8412,
 			},
 			["Wazzdk-Stormrage"] = {
 				["players"] = {
@@ -336,8 +336,6 @@ SkadaPerCharDB = {
 					},
 				},
 				["taken"] = 0,
-				["done"] = 0,
-				["htaken"] = 14090,
 				["htakenspell"] = {
 					["Unholy Strength"] = {
 						["min"] = 14090,
@@ -348,6 +346,8 @@ SkadaPerCharDB = {
 						["hits"] = 1,
 					},
 				},
+				["htaken"] = 14090,
+				["done"] = 0,
 			},
 			["Neozzd"] = {
 				["players"] = {
@@ -388,8 +388,6 @@ SkadaPerCharDB = {
 					},
 				},
 				["taken"] = 0,
-				["done"] = 0,
-				["htaken"] = 59375,
 				["htakenspell"] = {
 					["Lifebloom"] = {
 						["min"] = 2366,
@@ -424,6 +422,8 @@ SkadaPerCharDB = {
 						["hits"] = 2,
 					},
 				},
+				["htaken"] = 59375,
+				["done"] = 0,
 			},
 			["Youngpro-Frostmane"] = {
 				["players"] = {
@@ -446,8 +446,6 @@ SkadaPerCharDB = {
 					},
 				},
 				["taken"] = 0,
-				["done"] = 7079,
-				["htaken"] = 0,
 				["htakenspell"] = {
 					["Leech"] = {
 						["min"] = 0,
@@ -458,6 +456,8 @@ SkadaPerCharDB = {
 						["hits"] = 4,
 					},
 				},
+				["htaken"] = 0,
+				["done"] = 7079,
 			},
 			["Thesixdeuce-Gilneas"] = {
 				["players"] = {
@@ -474,8 +474,6 @@ SkadaPerCharDB = {
 					},
 				},
 				["taken"] = 0,
-				["done"] = 0,
-				["htaken"] = 0,
 				["htakenspell"] = {
 					["Leech"] = {
 						["min"] = 0,
@@ -486,6 +484,8 @@ SkadaPerCharDB = {
 						["hits"] = 6,
 					},
 				},
+				["htaken"] = 0,
+				["done"] = 0,
 			},
 			["Spirit Beast"] = {
 				["players"] = {
@@ -502,8 +502,6 @@ SkadaPerCharDB = {
 					},
 				},
 				["taken"] = 0,
-				["done"] = 0,
-				["htaken"] = 3868,
 				["htakenspell"] = {
 					["Spirit Bond"] = {
 						["min"] = 1289,
@@ -514,6 +512,8 @@ SkadaPerCharDB = {
 						["hits"] = 3,
 					},
 				},
+				["htaken"] = 3868,
+				["done"] = 0,
 			},
 			["MYGROWLISOFF"] = {
 				["players"] = {
@@ -530,8 +530,6 @@ SkadaPerCharDB = {
 					},
 				},
 				["taken"] = 0,
-				["done"] = 0,
-				["htaken"] = 8735,
 				["htakenspell"] = {
 					["Spirit Bond"] = {
 						["min"] = 1607,
@@ -542,6 +540,8 @@ SkadaPerCharDB = {
 						["hits"] = 2,
 					},
 				},
+				["htaken"] = 8735,
+				["done"] = 0,
 			},
 			["Trustisalie"] = {
 				["players"] = {
@@ -550,8 +550,6 @@ SkadaPerCharDB = {
 				["hdonespell"] = {
 				},
 				["taken"] = 0,
-				["done"] = 0,
-				["htaken"] = 20807,
 				["htakenspell"] = {
 					["Flash Heal"] = {
 						["min"] = 0,
@@ -570,6 +568,8 @@ SkadaPerCharDB = {
 						["hits"] = 2,
 					},
 				},
+				["htaken"] = 20807,
+				["done"] = 0,
 			},
 			["Hawkchicken"] = {
 				["players"] = {
@@ -610,8 +610,6 @@ SkadaPerCharDB = {
 					},
 				},
 				["taken"] = 0,
-				["done"] = 0,
-				["htaken"] = 26575,
 				["htakenspell"] = {
 					["Ysera's Gift"] = {
 						["min"] = 11716,
@@ -638,6 +636,8 @@ SkadaPerCharDB = {
 						["hits"] = 4,
 					},
 				},
+				["htaken"] = 26575,
+				["done"] = 0,
 			},
 			["Thorncoat Talbuk"] = {
 				["players"] = {
@@ -652,10 +652,10 @@ SkadaPerCharDB = {
 				["hdonespell"] = {
 				},
 				["taken"] = 0,
-				["done"] = 7673,
-				["htaken"] = 0,
 				["htakenspell"] = {
 				},
+				["htaken"] = 0,
+				["done"] = 7673,
 			},
 			["Dkpheonix-Durotan"] = {
 				["players"] = {
@@ -672,8 +672,6 @@ SkadaPerCharDB = {
 					},
 				},
 				["taken"] = 0,
-				["done"] = 0,
-				["htaken"] = 0,
 				["htakenspell"] = {
 					["Devouring Plague"] = {
 						["min"] = 0,
@@ -684,6 +682,8 @@ SkadaPerCharDB = {
 						["hits"] = 6,
 					},
 				},
+				["htaken"] = 0,
+				["done"] = 0,
 			},
 			["Khàleesi"] = {
 				["players"] = {
@@ -708,10 +708,10 @@ SkadaPerCharDB = {
 					},
 				},
 				["taken"] = 0,
-				["done"] = 0,
-				["htaken"] = 0,
 				["htakenspell"] = {
 				},
+				["htaken"] = 0,
+				["done"] = 0,
 			},
 			["Nickodeemis"] = {
 				["players"] = {
@@ -736,8 +736,6 @@ SkadaPerCharDB = {
 					},
 				},
 				["taken"] = 0,
-				["done"] = 0,
-				["htaken"] = 8352,
 				["htakenspell"] = {
 					["Grimoire of Sacrifice"] = {
 						["min"] = 8352,
@@ -756,6 +754,8 @@ SkadaPerCharDB = {
 						["hits"] = 1,
 					},
 				},
+				["htaken"] = 8352,
+				["done"] = 0,
 			},
 			["Statechamp-Proudmoore"] = {
 				["players"] = {
@@ -780,8 +780,6 @@ SkadaPerCharDB = {
 					},
 				},
 				["taken"] = 0,
-				["done"] = 0,
-				["htaken"] = 60283,
 				["htakenspell"] = {
 					["Bloodthirst Heal"] = {
 						["min"] = 3767,
@@ -800,6 +798,8 @@ SkadaPerCharDB = {
 						["hits"] = 3,
 					},
 				},
+				["htaken"] = 60283,
+				["done"] = 0,
 			},
 			["Dannkkush"] = {
 				["players"] = {
@@ -816,8 +816,6 @@ SkadaPerCharDB = {
 					},
 				},
 				["taken"] = 0,
-				["done"] = 0,
-				["htaken"] = 4521,
 				["htakenspell"] = {
 					["Spirit Bond"] = {
 						["min"] = 1284,
@@ -828,6 +826,8 @@ SkadaPerCharDB = {
 						["hits"] = 3,
 					},
 				},
+				["htaken"] = 4521,
+				["done"] = 0,
 			},
 		},
 		["power"] = {
