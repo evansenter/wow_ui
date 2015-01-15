@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1162, "DBM-BlackrockFoundry", nil, 457)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12290 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 12406 $"):sub(12, -3))
 mod:SetCreatureID(77692)
 mod:SetEncounterID(1713)
 mod:SetZone()
@@ -52,7 +52,7 @@ local countdownThunderingBlows		= mod:NewCountdown(60, 157054)
 local countdownTremblingEarth		= mod:NewCountdownFades("Alt25", 173917)
 
 local voiceGraspingEarth 			= mod:NewVoice(157060)--157060, safenow
-local voiceWarpedArmor				= mod:NewVoice(156766, mod:IsTank())
+local voiceWarpedArmor				= mod:NewVoice(156766)
 
 
 mod.vb.mountainCast = 0

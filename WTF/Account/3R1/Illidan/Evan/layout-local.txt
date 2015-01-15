@@ -20,13 +20,6 @@ X: -116
 Y: 120
 W: 615
 H: 550
-Frame: DBMMinimapButton
-FrameLevel: 3
-Anchor: TOPRIGHT
-X: -164
-Y: -138
-W: 32
-H: 32
 Frame: RaidUtility_ShowButton
 FrameLevel: 1
 Anchor: TOPLEFT
@@ -34,6 +27,13 @@ X: 412
 Y: 1
 W: 136
 H: 18
+Frame: DBMMinimapButton
+FrameLevel: 3
+Anchor: TOPRIGHT
+X: -164
+Y: -138
+W: 32
+H: 32
 Frame: LightwellCounterForm
 FrameLevel: 1
 Anchor: BOTTOM

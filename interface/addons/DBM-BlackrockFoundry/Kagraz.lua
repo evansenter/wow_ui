@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1123, "DBM-BlackrockFoundry", nil, 457)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12307 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 12406 $"):sub(12, -3))
 mod:SetCreatureID(76814)--76794 Cinder Wolf, 80590 Aknor Steelbringer
 mod:SetEncounterID(1689)
 mod:SetZone()
@@ -71,7 +71,7 @@ local voiceMoltenTorrent				= mod:NewVoice(154932) --runin
 local voiceFixate						= mod:NewVoice(154952) --justrun
 local voiceCinderWolves					= mod:NewVoice(155776, not mod:IsHealer()) --killmob
 local voiceBlazinRadiance				= mod:NewVoice(155277)  --runaway (scatter if we have power system)
-local voiceRisingFlames					= mod:NewVoice(163284, mod:IsTank())  --changemt
+local voiceRisingFlames					= mod:NewVoice(163284)  --changemt
 local voiceFireStorm					= mod:NewVoice(155493) --aoe
 
 mod:AddRangeFrameOption("10/6")

@@ -16,11 +16,11 @@ MacroToolkitDB = {
 	},
 	["profileKeys"] = {
 		["Metal - Illidan"] = "profile",
-		["Comet - Illidan"] = "profile",
 		["Plane - Illidan"] = "profile",
+		["Combustion - Illidan"] = "profile",
 		["Natal - Illidan"] = "profile",
 		["Evan - Illidan"] = "profile",
-		["Combustion - Illidan"] = "profile",
+		["Comet - Illidan"] = "profile",
 	},
 	["global"] = {
 		["ebackups"] = {
@@ -30,8 +30,8 @@ MacroToolkitDB = {
 	},
 	["profiles"] = {
 		["profile"] = {
-			["y"] = 603.999572753906,
-			["x"] = 594.399780273438,
+			["y"] = 463.999603271484,
+			["x"] = 52.3997917175293,
 			["override"] = true,
 			["fonts"] = {
 				["edfont"] = "ABF",

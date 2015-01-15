@@ -5,6 +5,11 @@ VER 3 010000000000001C "Binding Heal" "INV_MISC_QUESTIONMARK"
 /use Binding Heal
 /run UIErrorsFrame:RegisterEvent("UI_ERROR_MESSAGE")
 END
+VER 3 0100000000000020 "DH" "INV_Misc_QuestionMark"
+#showtooltip Divine Hymn
+/use 14
+/use Divine Hymn
+END
 VER 3 010000000000001D "Dispel Magic" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /use [harm]Dispel Magic
@@ -69,6 +74,7 @@ VER 3 0100000000000004 "SWP" "INV_MISC_QUESTIONMARK"
 END
 VER 3 010000000000001F "Tier 5" "INV_Misc_QuestionMark"
 /use [talent:5/1]Twist of Fate;[talent:5/2]Power Infusion;[talent:5/3]Spirit Shell
+/use 14
 END
 VER 3 010000000000001E "Tier 6" "INV_MISC_QUESTIONMARK"
 /use [talent:6/1]Cascade;[talent:6/2]Divine Star;[talent:6/3]Halo

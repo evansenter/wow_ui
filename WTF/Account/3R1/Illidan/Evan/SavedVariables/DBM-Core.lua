@@ -3,6 +3,7 @@ DBM_SavedOptions = {
 	["SpecialWarningFontSize"] = 50,
 	["DontShowFarWarnings"] = true,
 	["SpecialWarningFlashAlph2"] = 0.3,
+	["AlwaysPlayVoice"] = false,
 	["ShowSWarningsInChat"] = true,
 	["DontShowPT"] = false,
 	["StatusEnabled"] = true,

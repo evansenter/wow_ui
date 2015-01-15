@@ -132,3 +132,35 @@ L:SetOptionLocalization({
 L:SetMiscLocalization({
 	MassiveWave		= "A Massive Wave of Zombies is Approaching!"
 })
+
+--------------------------
+--  Garrison Invasions  --
+--------------------------
+L = DBM:GetModLocalization("GarrisonInvasions")
+
+L:SetGeneralLocalization({
+	name = "Garrison Invasinos"
+})
+
+L:SetWarningLocalization({
+	specWarnRylak	= "Darkwing Scavenger Incoming",
+	specWarnWorker	= "Terrified worker in open",
+	specWarnSpy		= "A spy has snuck in"
+})
+
+L:SetOptionLocalization({
+	specWarnRylak	= "Show special warning when a rylak is incoming",
+	specWarnWorker	= "Show special warning when a terrified worker is caught in open",
+	specWarnSpy		= "Show special warning when a spy has snuck in"
+})
+
+L:SetMiscLocalization({
+	--General
+	preCombat			= "To arms! To your posts!",--Common in all yells, rest varies based on invasion
+	rylakSpawn			= "The commotion of the battle attracts a rylak!",--Source npc Darkwing Scavenger, target playername
+	terrifiedWorker		= "A terrified worker is caught in the open!",
+	sneakySpy			= "spy has snuck in amidst the chaos!",--Shortened to cut out "horde/alliance"
+	--Ogre
+	GorianwarCaller		= "A Gorian Warcaller joins the battle to raise morale!",--Maybe combined "add" special warning for ogre specific adds?
+	WildfireElemental	= "A Wildfire Elemental is being summoned at the front gates!"--Maybe combined "add" special warning for ogre specific adds?
+})

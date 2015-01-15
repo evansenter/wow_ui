@@ -86,7 +86,7 @@ VER 3 0000000000000044 "Tier 3" "INV_Misc_QuestionMark"
 END
 VER 3 0000000000000043 "Tier 7" "INV_Misc_QuestionMark"
 #showtooltip
-/use [talent:7/1]Hurricane Strike;[talent:7/2]Chi Explosion;[talent:7/3]Serenity
+/use [talent:7/1]Soul Dance;[talent:7/2]Chi Explosion;[talent:7/3]Serenity
 /use 14
 END
 VER 3 000000000000003E "Tiger Palm" "INV_MISC_QUESTIONMARK"
@@ -95,5 +95,5 @@ VER 3 000000000000003E "Tiger Palm" "INV_MISC_QUESTIONMARK"
 END
 VER 3 0000000000000046 "Tiger's Lust" "INV_Misc_QuestionMark"
 #showtooltip
-/use [@mouseover,help,nodead][]Tiger's Lust
+/use [@player][@mouseover,help,nodead][]Tiger's Lust
 END

@@ -1,57 +1,57 @@
 
 HandyNotesDB = {
 	["profileKeys"] = {
-		["Plane - Illidan"] = "Plane - Illidan",
+		["Comet - Illidan"] = "Comet - Illidan",
 		["Metal - Illidan"] = "Metal - Illidan",
 		["Natal - Illidan"] = "Natal - Illidan",
-		["Comet - Illidan"] = "Comet - Illidan",
+		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
 		["Evan - Illidan"] = "Evan - Illidan",
-		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Plane - Illidan"] = "Plane - Illidan",
 	},
 	["profiles"] = {
-		["Plane - Illidan"] = {
+		["Comet - Illidan"] = {
+			["icon_alpha_minimap"] = 0.75,
+			["icon_alpha"] = 0.75,
 		},
 		["Metal - Illidan"] = {
 		},
 		["Natal - Illidan"] = {
 		},
-		["Comet - Illidan"] = {
-			["icon_alpha_minimap"] = 0.75,
-			["icon_alpha"] = 0.75,
+		["Combustion - Illidan"] = {
 		},
 		["Centromere - Dark Iron"] = {
 		},
 		["Evan - Illidan"] = {
 		},
-		["Combustion - Illidan"] = {
+		["Plane - Illidan"] = {
 		},
 	},
 }
 HandyNotes_HandyNotesDB = {
 	["profileKeys"] = {
-		["Plane - Illidan"] = "Plane - Illidan",
+		["Comet - Illidan"] = "Comet - Illidan",
 		["Metal - Illidan"] = "Metal - Illidan",
 		["Natal - Illidan"] = "Natal - Illidan",
-		["Comet - Illidan"] = "Comet - Illidan",
+		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
 		["Evan - Illidan"] = "Evan - Illidan",
-		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Plane - Illidan"] = "Plane - Illidan",
 	},
 	["profiles"] = {
-		["Plane - Illidan"] = {
+		["Comet - Illidan"] = {
 		},
 		["Metal - Illidan"] = {
 		},
 		["Natal - Illidan"] = {
 		},
-		["Comet - Illidan"] = {
+		["Combustion - Illidan"] = {
 		},
 		["Centromere - Dark Iron"] = {
 		},
 		["Evan - Illidan"] = {
 		},
-		["Combustion - Illidan"] = {
+		["Plane - Illidan"] = {
 		},
 	},
 }

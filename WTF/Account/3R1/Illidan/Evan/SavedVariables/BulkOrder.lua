@@ -1,6 +1,10 @@
 
 g_BulkOrder = {
-	["ExcludeTradingPost"] = true,
-	["ExcludeWarMill"] = true,
-	["ExcludeGoblinWorkshop"] = true,
+	["ExcludeTradingPost"] = false,
+	["RemindProfBuildings"] = true,
+	["ExcludeWarMill"] = false,
+	["RemindHerbGarden"] = false,
+	["timestamp"] = 1421264435,
+	["ExcludeGoblinWorkshop"] = false,
+	["RemindMine"] = false,
 }

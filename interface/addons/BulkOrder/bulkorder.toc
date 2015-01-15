@@ -1,9 +1,9 @@
 ## Interface: 60000
 ## Title: BulkOrder
 ## Author: Malsomnus
-## SavedVariables: 
+## SavedVariables: g_BulkOrderGlobal
 ## SavedVariablesPerCharacter: g_BulkOrder
-## Version: v1.10
+## Version: v1.11
 
 options.lua
 bulkorder.lua

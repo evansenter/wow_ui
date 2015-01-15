@@ -1,0 +1,14 @@
+------------------------------------------------------------------------
+r21 | cybeloras | 2015-01-12 06:33:44 +0000 (Mon, 12 Jan 2015) | 1 line
+Changed paths:
+   A /tags/5.1.0 (from /trunk:20)
+
+Tagging as 5.1.0
+------------------------------------------------------------------------
+r20 | cybeloras | 2015-01-12 06:33:02 +0000 (Mon, 12 Jan 2015) | 1 line
+Changed paths:
+   M /trunk/BlizzBuffsFacade.lua
+   M /trunk/BlizzBuffsFacade.toc
+
+Fixed an issue with stack text appearing below the texture's leve.
+------------------------------------------------------------------------

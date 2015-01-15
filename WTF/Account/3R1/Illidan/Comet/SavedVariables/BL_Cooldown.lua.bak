@@ -1,0 +1,66 @@
+
+BLCDrosterReload = {
+	["Player-57-05DF4D8D"] = {
+		["talents"] = {
+			[20175] = {
+				["name_localized"] = "Dampen Harm",
+				["talent_id"] = 20175,
+				["spell_id"] = 122278,
+				["column"] = 2,
+				["icon"] = "Interface\\Icons\\ability_monk_dampenharm",
+				["tier"] = 5,
+			},
+			[19819] = {
+				["name_localized"] = "Rushing Jade Wind",
+				["talent_id"] = 19819,
+				["spell_id"] = 116847,
+				["column"] = 1,
+				["icon"] = "Interface\\Icons\\ability_monk_rushingjadewind",
+				["tier"] = 6,
+			},
+			[19995] = {
+				["name_localized"] = "Leg Sweep",
+				["talent_id"] = 19995,
+				["spell_id"] = 119381,
+				["column"] = 3,
+				["icon"] = "Interface\\Icons\\ability_monk_legsweep",
+				["tier"] = 4,
+			},
+			[20185] = {
+				["name_localized"] = "Chi Wave",
+				["talent_id"] = 20185,
+				["spell_id"] = 115098,
+				["column"] = 1,
+				["icon"] = "Interface\\Icons\\ability_monk_chiwave",
+				["tier"] = 2,
+			},
+			[19304] = {
+				["name_localized"] = "Momentum",
+				["talent_id"] = 19304,
+				["spell_id"] = 115174,
+				["column"] = 3,
+				["icon"] = "Interface\\Icons\\ability_monk_standingkick",
+				["tier"] = 1,
+			},
+			[21191] = {
+				["name_localized"] = "Serenity",
+				["talent_id"] = 21191,
+				["spell_id"] = 152173,
+				["column"] = 3,
+				["icon"] = "Interface\\Icons\\ability_monk_serenity",
+				["tier"] = 7,
+			},
+			[19772] = {
+				["name_localized"] = "Chi Brew",
+				["talent_id"] = 19772,
+				["spell_id"] = 115399,
+				["column"] = 3,
+				["icon"] = "Interface\\Icons\\ability_monk_chibrew",
+				["tier"] = 3,
+			},
+		},
+		["class"] = "MONK",
+		["name"] = "Comet",
+		["spec"] = 268,
+	},
+}

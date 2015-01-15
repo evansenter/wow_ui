@@ -21,6 +21,13 @@ AngryAssign_Pages = {
 		["UpdateId"] = 4137302632,
 		["Contents"] = "Stun rotation:\nDoom\nAkroma\nEklypto\nCannibal",
 	},
+	[1154251909] = {
+		["Updated"] = 1421109080,
+		["Name"] = "Brackenspore 4 healz",
+		["Id"] = 1154251909,
+		["UpdateId"] = 2419849787,
+		["Contents"] = "Infesting Spores Order (4healz):\n1) Akroma + Devo + Smoke + Eklypto + Gandalf\n2) Tranq  + Tokman + N Vigil (Druids)\n3) DJ(tree) + Akroma + Hemo\n4) Hymn + Barrier +  N Vigil (Druids)\n5)Akroma + Devo + Smoke + Eklypto + Gandalf\n6) Tranq + Tokman +  N Vigil (Druids)\n7) Dj(tree) + Akroma  + Hemo\n8) Hymn + Barrier + N Vigil (Druids)\n\nIntterupt Order:\nEkylpto - Doom - Hemo",
+	},
 	[1844579180] = {
 		["Updated"] = 1420603594,
 		["Name"] = "twins 4 heal",
@@ -43,11 +50,18 @@ AngryAssign_Pages = {
 		["Contents"] = "1st Int Ad Explosion:\nLanfar + Scar +",
 	},
 	[695236951] = {
-		["Updated"] = 1419989987,
+		["Updated"] = 1421200077,
 		["Name"] = "boss",
 		["Id"] = 695236951,
-		["UpdateId"] = 3649487249,
-		["Contents"] = "Shadow:\n1) DJ, Tokman, doom\n2) Scar, Gandalf, brun, Comet\n3) twin, Charlie, myth\n\nSHIELDS:\nTokman\nHockey\nAzpek\nCharlie\nCannibal\n\nIce orbs:\n1) Scar, DJ, Hockey\n2) Packa, Brun, Azpek\n3) Atmos, Doom, Myth",
+		["UpdateId"] = 3836675217,
+		["Contents"] = "Shadow:\n1) DJ, Tokman, doom\n2) Scar, Gandalf, brun, Comet\n3) twin, Charlie, myth\n\nSHIELDS:\nMyth\nAzpek\nHockey\nGandalf\n\nIce orbs:\n1) Scar, DJ, Hockey\n2) Packa, Brun, Azpek\n3) Atmos, Doom, Myth",
+	},
+	[704661539] = {
+		["Updated"] = 1421293723,
+		["Name"] = "butcher",
+		["Id"] = 704661539,
+		["UpdateId"] = 3581370618,
+		["Contents"] = "Healing Cds:\n1) Tide + Gandalf\n2) Barrier + Smoke + Akroma (Right before Blue 2nd stack)\n3) Hymn + Cexcells + Rally (Right before Green 2nd stack)",
 	},
 	[223793571] = {
 		["Updated"] = 1420677848,
@@ -71,11 +85,11 @@ AngryAssign_Pages = {
 		["Contents"] = "Advertising Space for Sale, Contact Kemsa\n\nBy Reading this you just proved it works!",
 	},
 	[1763909478] = {
-		["Updated"] = 1420764582,
+		["Updated"] = 1421207437,
 		["Name"] = "Brakenspore",
 		["Id"] = 1763909478,
-		["UpdateId"] = 3802525211,
-		["Contents"] = "Infesting Spores Order:\n1) Akroma + Devo + Smoke + Eklypto + Cex\n2) Tranq + SLink + Tokman\n3) Tide + Akroma + Cannibal + \n4) Hymn + Barrier\n5)Akroma + Devo + Smoke + Eklypto + Cex\n6) Tranq + Link + Tokman\n7) Tide + Akroma + Cannibal + \n8) Hymn + Barrier\n\nRoar Order:\nDj - Brun - Redpaws - Crime",
+		["UpdateId"] = 906432904,
+		["Contents"] = "Infesting Spores Order:\n1) Akroma + Devo + Smoke + Eklypto + Cex\n2) Tranq + SLink + Gandalf\n3) Tide + Akroma + Cannibal + \n4) Hymn + Barrier\n5)Akroma + Devo + Smoke + Eklypto + Cex\n6) Tranq + Link + Gandalf\n7) Tide + Akroma + Cannibal + \n8) Hymn + Barrier\n\nRoar Order:\nDj - Brun - Redpaws - Crime",
 	},
 	[45058146] = {
 		["Updated"] = 1419905154,
@@ -104,8 +118,8 @@ AngryAssign_State = {
 	},
 	["directionUp"] = false,
 	["display"] = {
-		["y"] = -150.5,
-		["x"] = 19.9995346069336,
+		["y"] = -78.5,
+		["x"] = 46.9995460510254,
 		["point"] = "TOPLEFT",
 		["scale"] = 1,
 		["hidden"] = false,

@@ -3,6 +3,8 @@ BulkOrder_data = data
 
 g_BulkOrder = g_BulkOrder or {}
 
+-----------------------------------------------------------------
+
 local GARRISON_RESOURCES = 824
 
 local WARMILL = 1
@@ -72,14 +74,14 @@ end
 
 -----------------------------------------------------------------
 
-local function CreateListFrame ()
+local function CreateReminderFrame ()
     -- A point!
     -- Because the frame gets anchored to the fontstring, and fontstrings apparently can't be moved (?)
     local point = CreateFrame ("Frame", nil, UIParent)
     point:SetSize (1,1)
     point:SetPoint ("CENTER", UIParent, "CENTER", 0, -250)
     
-    local f = CreateFrame ("Frame", nil, UIParent)
+    local f = CreateFrame ("Frame", 'frmBulkOrderReminder', UIParent)
     f:SetBackdrop ({
         bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background",
         edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Gold-Border",
@@ -90,10 +92,6 @@ local function CreateListFrame ()
     f.lbl:SetPoint ("CENTER", point, "CENTER")
     f.lbl:SetTextColor (1.0,1.0,1.0)
     f.lbl:SetJustifyH ("LEFT")
-    
-    f:SetPoint ("TOPLEFT", f.lbl, "TOPLEFT", -12, 12)
-    f:SetPoint ("BOTTOMRIGHT", f.lbl, "BOTTOMRIGHT", 12, -12)
-    f:Hide ()
     
     -- Make movable
     point:SetMovable (true)
@@ -113,25 +111,35 @@ local function CreateListFrame ()
         point:StopMovingOrSizing ()
     end)
     
-    -- X button
-    f.btnX = CreateFrame ("EditBox", nil, f)
-    f.btnX:SetPoint ("TOPRIGHT", f, "TOPRIGHT")
-    f.btnX:SetSize (10,12)
-    f.btnX:SetTextColor (1.0,0.77,0.27,1.0)
-    f.btnX:SetTextInsets (0, 0, 2, 2)
-    f.btnX:SetFont ("Fonts\\FRIZQT__.TTF", 11)
-    f.btnX:SetAutoFocus (false)
-    f.btnX:Disable ()
-    f.btnX:SetText ('x')
-    f.btnX:SetScript ("OnMouseDown", function (self, button)
-        f:Hide ()
-    end)            
-    
-
     function f:SetText (txt)
         f.lbl:SetText (txt)
     end
     
+    -- Config button
+    local btn = CreateFrame ("Button", '', f, "UIPanelButtonTemplate")
+    f.btn = btn
+    btn:SetText ("Configure")
+    btn:SetPoint ("TOPLEFT", f.lbl, "BOTTOMLEFT", 0, -12)
+    btn:SetPoint ("TOPRIGHT", f.lbl, "BOTTOMRIGHT", 8, -12)
+    btn:SetHeight (22)
+    btn:SetScript("OnClick", function()
+        InterfaceOptionsFrame_OpenToCategory (BulkOrderOptions)
+        InterfaceOptionsFrame_OpenToCategory (BulkOrderOptions)     -- Sigh, Blizzard
+    end)
+    
+
+    f:SetPoint ("TOPLEFT", f.lbl, "TOPLEFT", -12, 12)
+    f:SetPoint ("BOTTOMRIGHT", f.btn, "BOTTOMRIGHT", 12, -6)
+
+    -- X button
+    f.btnX = CreateFrame ("Button", nil, f, "UIPanelCloseButton")
+    f.btnX:SetPoint ("TOPRIGHT", f, "TOPRIGHT", 1, 1)
+    f.btnX:SetSize (18,18)
+    f.btnX:SetScript ("OnClick", function (self, button)
+        f:Hide ()
+    end)            
+
+
     return f
 end
 
@@ -143,7 +151,6 @@ local function RemindWorkOrders ()
         [3] = g_BulkOrder.RemindHerbGarden,
         [4] = g_BulkOrder.RemindMine,
     }
-    a=sizes
     
     local reminder_Buildings = {}
     for size,b in pairs(sizes) do
@@ -163,20 +170,16 @@ local function RemindWorkOrders ()
     end
     
     if #lst > 0 then
-        local f = CreateListFrame ()
-        f:SetText ('|cFFFFFF00WorkOrders Reminder|r\n\n'..string.join ('\n',unpack (lst)))
-        f:Show ()
+        local f = CreateReminderFrame ()
+        f:SetText ('|cFFFFFF00Work Orders Reminder|r\n\n'..string.join ('\n',unpack (lst)))
     end
 end
-
 
 local reminderListShown = false
 function RemindWorkOrders_Wrapper ()
     if reminderListShown==false and C_Garrison.IsOnGarrisonMap () then
         reminderListShown = true
         RemindWorkOrders ()
-        frmBulkOrder:UnregisterEvent ("ZONE_CHANGED_NEW_AREA")
-        frmBulkOrder:UnregisterEvent ("PLAYER_ENTERING_WORLD")
     end
 end
 
@@ -249,7 +252,6 @@ end)
 f:OnEvent ("ADDON_LOADED", function (name)
     if name==THIS_ADDON then
         BulkOrder_CreateOptions ()
-        --RemindWorkOrders_Wrapper ()
     end
 end)
 
@@ -285,20 +287,50 @@ end)
 
 -----------------------------------------------------------------
 
+-- It's just so hard for Blizz to add an event that actually says "The game API is now ready to be queried"...
+-- By this point I'm surprised their functions don't just return the string "go fuck urself trololol".
+
 f:OnEvent ("ZONE_CHANGED_NEW_AREA", RemindWorkOrders_Wrapper)
-f:OnEvent ("PLAYER_ENTERING_WORLD", function ()
-    -- It's just so hard for Blizz to add an event that actually says "The game API is now ready to be queried"...
-    -- By this point I'm surprised their functions don't just return the string "go fuck urself trololol".
-    f.elapsed = 0
-    f:SetScript ("OnUpdate", function (self, elapsed)
-        f.elapsed = f.elapsed + elapsed
-        if f.elapsed > 3 then
-            f:SetScript ("OnUpdate", nil)
+
+f.initSequence = {
+    GARRISON_BUILDING_LIST_UPDATE = false, 
+    PLAYER_ENTERING_WORLD = false, 
+    GARRISON_LANDINGPAGE_SHIPMENTS = false
+}
+for event,_ in pairs(f.initSequence) do
+    f:OnEvent (event, function ()
+        f.initSequence[event] = true
+        
+        -- If all events have happened, then we can run the reminder code
+        local b = true
+        for k,v in pairs(f.initSequence) do
+            b = b and v
+        end
+        if b then
             RemindWorkOrders_Wrapper ()
+            for k,_ in pairs(f.initSequence) do
+                f:UnregisterEvent (k)
+            end
         end
     end)
+end
+
+--[[
+f:OnEvent ("GARRISON_BUILDING_LIST_UPDATE", function ()
+    initChecklist.GARRISON_BUILDING_LIST_UPDATE = true
+    RemindWorkOrders_Wrapper ()
 end)
 
+f:OnEvent ("PLAYER_ENTERING_WORLD", function ()
+    initChecklist.PLAYER_ENTERING_WORLD = true
+    RemindWorkOrders_Wrapper ()
+end)
+
+f:OnEvent ("GARRISON_LANDINGPAGE_SHIPMENTS", function ()
+    initChecklist.GARRISON_LANDINGPAGE_SHIPMENTS = true
+    RemindWorkOrders_Wrapper ()
+end)
+]]
 -----------------------------------------------------------------
 
 --function f:SHIPMENT_UPDATE (shipmentStarted) end

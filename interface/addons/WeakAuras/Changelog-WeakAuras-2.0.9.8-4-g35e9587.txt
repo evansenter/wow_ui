@@ -1,0 +1,7 @@
+Infus:
+	- Add spellId matching for combat log trigger
+	Helps in creating cross-language triggers.
+	- Remove whitespace before importing
+	- Deleting a aura should stop its animations
+Benjamin Staneck:
+	- Fix taint while deleting auras

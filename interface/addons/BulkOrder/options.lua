@@ -30,8 +30,24 @@ end
 
 
 
+-----------------------------------------------------------------
 
+StaticPopupDialogs["BULKORDER_CONFIRMAPPLYTOALL"] = {
+    text = "Are you sure you want to apply these settings to all of your characters?",
+    button1 = "Yes",
+    button2 = "No",
+    OnAccept = function ()
+        ApplySettingsToAllToons ()
+    end,
+    timeout = 0,
+    hideOnEscape = true,
+    preferredIndex = 3,  -- avoid some UI taint, see http://www.wowace.com/announcements/how-to-avoid-some-ui-taint/
+}
 
+function ApplySettingsToAllToons ()
+    g_BulkOrderGlobal = g_BulkOrder
+    g_BulkOrderGlobal.timestamp = time ()
+end
 -----------------------------------------------------------------
 
 local function CreateCheckBox (parent, anchorTo, x, y, text)
@@ -67,11 +83,15 @@ end
 
 function BulkOrder_CreateOptions ()
     -- Default values!
-    g_BulkOrder = g_BulkOrder or {}
-    
-    for _,v in ipairs({string.split (' ', 'ExcludeTradingPost ExcludeWarMill ExcludeGoblinWorkshop RemindProfBuildings RemindMine RemindHerbGarden')}) do
-        if g_BulkOrder[v]==nil then 
-            g_BulkOrder[v] = true 
+    if g_BulkOrderGlobal and g_BulkOrderGlobal.timestamp and (g_BulkOrderGlobal.timestamp > (g_BulkOrder.timestamp or 0)) then
+        g_BulkOrder = g_BulkOrderGlobal
+    else
+        g_BulkOrder = g_BulkOrder or {}
+        
+        for _,v in ipairs({string.split (' ', 'ExcludeTradingPost ExcludeWarMill ExcludeGoblinWorkshop RemindProfBuildings RemindMine RemindHerbGarden')}) do
+            if g_BulkOrder[v]==nil then 
+                g_BulkOrder[v] = true 
+            end
         end
     end
 
@@ -95,93 +115,94 @@ function BulkOrder_CreateOptions ()
         '- In addition, work orders at the Trading Post or Dwarven Bunker/ War Mill are by default not automatic, which you can change with these options.',
     }
     local sometext = Options:CreateFontString (nil, "ARTWORK", "GameFontHighlight")
-    sometext:SetPoint ("TOPLEFT", 8, -40)
+    sometext:SetPoint ("TOPLEFT", 16, -40)
+    sometext:SetPoint ("TOPRIGHT", -16, -40)
+    sometext:SetWordWrap (true)
     sometext:SetText (string.join ('\n', unpack (txt)))
-    sometext:SetWidth (500)
     sometext:SetJustifyH ("LEFT")
+    sometext:SetJustifyV ("TOP")
+    sometext:SetHeight (80)
     Options.sometext = sometext
     
     -----------------------------------------------------------------
     
     local Title = Options:CreateFontString (nil, "ARTWORK", "GameFontNormalLarge")
-    Title:SetPoint ("TOPLEFT", 8, -16)
+    Title:SetPoint ("TOPLEFT", 16, -16)
     Title:SetText (Options.name)
     Options.Title = Title
 
     
     -- Exclude buildings
     local TitleExclude = Options:CreateFontString (nil, "ARTWORK", "GameFontHighlight")
-    TitleExclude:SetPoint ("TOPLEFT", 8, -130)
+    TitleExclude:SetPoint ("TOPLEFT", sometext, "BOTTOMLEFT", 0, -15)
     TitleExclude:SetText ('Exclude these buildings:')
     Options.TitleExclude = TitleExclude
-    local y=-6
     
-    Options.chkTradingPost = Options:CreateCheckBox (TitleExclude, 0, y, 'Trading Post')
+    local dy = 2
+    Options.chkTradingPost = Options:CreateCheckBox (TitleExclude, 0, -5, 'Trading Post')
         :Bind ('ExcludeTradingPost', false, true)
         :SetTooltip ('Exclude Trading Post', 'If this option is checked, BulkOrder will NOT automatically start work orders in the Trading Post.')
-    y=y-25
     
-    Options.chkWarMill = Options:CreateCheckBox (TitleExclude, 0, y, 'Dwarven Bunker/ War Mill')
+    Options.chkWarMill = Options:CreateCheckBox (Options.chkTradingPost, 0, dy, 'Dwarven Bunker/ War Mill')
         :Bind ('ExcludeWarMill', false, true)
         :SetTooltip ('Exclude Dwarven Bunker/ War Mill', 'If this option is checked, BulkOrder will NOT automatically start work orders in the Dwarven Bunker/ War Mill.')
-    y=y-25
     
-    Options.chkGoblinWorkshop = Options:CreateCheckBox (TitleExclude, 0, y, 'Gnomish Gearworks/ Goblin Workshop')
+    Options.chkGoblinWorkshop = Options:CreateCheckBox (Options.chkWarMill, 0, dy, 'Gnomish Gearworks/ Goblin Workshop')
         :Bind ('ExcludeGoblinWorkshop', false, true)
         :SetTooltip ('Exclude Gnomish Gearworks/ Goblin Workshop', 'If this option is checked, BulkOrder will NOT automatically start work orders in the Gnomish Gearworks/ Goblin Workshop.')
-    y=y-25
     
-    Options.chkEverything = Options:CreateCheckBox (TitleExclude, 0, y, 'EVERYTHING!')
+    Options.chkEverything = Options:CreateCheckBox (Options.chkGoblinWorkshop, 0, dy, 'EVERYTHING!')
         :Bind ('ExcludeEverything', false, true)
         :SetTooltip ('Exclude Everything!', 'If this option is checked, BulkOrder will NOT automatically start work orders in any buildings, ever.\nYou will have to manually press the Start All Work Orders button like some sort of cave man.')
-    y=y-25
     
     
     -- Reminder
     local moretext = Options:CreateFontString (nil, "ARTWORK", "GameFontHighlight")
-    moretext:SetPoint ("TOPLEFT", 8, -275)
+    moretext:SetPoint ("TOPLEFT", Options.chkEverything, "BOTTOMLEFT", 0, -30)
     moretext:SetText ('The first time you enter your garrison after logging in, BulkOrder will remind you if you have buildings that have no work orders queued.')
     moretext:SetWidth (500)
     moretext:SetJustifyH ("LEFT")
     Options.moretext = moretext
 
     local TitleReminder = Options:CreateFontString (nil, "ARTWORK", "GameFontHighlight")
-    TitleReminder:SetPoint ("TOPLEFT", 8, -315)
+    TitleReminder:SetPoint ("TOPLEFT", moretext, "BOTTOMLEFT", 0, -15)
     TitleReminder:SetText ('Remind me about:')
     Options.TitleReminder = TitleReminder
-    local y=-6
     
-    Options.chkRemindProfBuildings = Options:CreateCheckBox (TitleReminder, 0, y, 'Profession Buildings')
+    Options.chkRemindProfBuildings = Options:CreateCheckBox (TitleReminder, 0, -5, 'Profession Buildings')
         :Bind ('RemindProfBuildings', false, true)
         :SetTooltip ('Profession Buildings', 'If this option is checked, BulkOrder will remind you to start work orders in all your profession buildings.')
-    y=y-25
     
-    Options.chkRemindMine = Options:CreateCheckBox (TitleReminder, 0, y, 'Mine')
+    Options.chkRemindMine = Options:CreateCheckBox (Options.chkRemindProfBuildings, 0, dy, 'Mine')
         :Bind ('RemindMine', false, true)
         :SetTooltip ('Mine', 'If this option is checked, BulkOrder will remind you to start work orders in your mine.')
-    y=y-25
     
-    Options.chkRemindHerbGarden = Options:CreateCheckBox (TitleReminder, 0, y, 'Herb Garden')
+    Options.chkRemindHerbGarden = Options:CreateCheckBox (Options.chkRemindMine, 0, dy, 'Herb Garden')
         :Bind ('RemindHerbGarden', false, true)
         :SetTooltip ('Herb Garden', 'If this option is checked, BulkOrder will remind you to start work orders in your herb garden.')
-    y=y-25
     
 
     -- Misc
     local TitleMisc = Options:CreateFontString (nil, "ARTWORK", "GameFontHighlight")
-    TitleMisc:SetPoint ("TOPLEFT", 8, -435)
+    TitleMisc:SetPoint ("TOPLEFT", Options.chkRemindHerbGarden, "BOTTOMLEFT", 0, -30)
     TitleMisc:SetText ('Misc.:')
     Options.TitleMisc = TitleMisc
-    local y=-6
     
-    Options.chkHideButton = Options:CreateCheckBox (TitleMisc, 0, y, 'Hide Button')
+    Options.chkHideButton = Options:CreateCheckBox (TitleMisc, 0, -5, 'Hide Button')
         :Bind ('HideButton', false, true)
         :SetTooltip ('Hide Button', 'If this option is checked, the work orders window will not display the additional Start All Work Orders button.')
-    y=y-25
     
     
     
     
-
+    -- Apply To All
+    local btnApplyToAll = CreateFrame ("Button", '', Options, "UIPanelButtonTemplate")
+    btnApplyToAll:SetSize (200,25)
+    btnApplyToAll:SetPoint ("BOTTOMLEFT", Options, "BOTTOMLEFT", 16, 8)
+    btnApplyToAll:SetText ("Apply to ALL characters!")
+    btnApplyToAll:SetScript ("OnClick", function ()
+        StaticPopup_Show ("BULKORDER_CONFIRMAPPLYTOALL")
+    end)
+    
 end
 

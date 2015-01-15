@@ -4,13 +4,13 @@ MogItDB = {
 		["version"] = "3.4.0",
 	},
 	["profileKeys"] = {
-		["Plane - Illidan"] = "Default",
+		["Comet - Illidan"] = "Comet - Illidan",
 		["Metal - Illidan"] = "Comet - Illidan",
 		["Natal - Illidan"] = "Default",
-		["Comet - Illidan"] = "Comet - Illidan",
+		["Combustion - Illidan"] = "Default",
 		["Centromere - Dark Iron"] = "Default",
 		["Evan - Illidan"] = "Default",
-		["Combustion - Illidan"] = "Default",
+		["Plane - Illidan"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -54,21 +54,15 @@ MogItDB = {
 }
 MogItWishlist = {
 	["profileKeys"] = {
-		["Plane - Illidan"] = "Plane - Illidan",
+		["Comet - Illidan"] = "Comet - Illidan",
 		["Metal - Illidan"] = "Metal - Illidan",
 		["Natal - Illidan"] = "Natal - Illidan",
-		["Comet - Illidan"] = "Comet - Illidan",
+		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
 		["Evan - Illidan"] = "Evan - Illidan",
-		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Plane - Illidan"] = "Plane - Illidan",
 	},
 	["profiles"] = {
-		["Plane - Illidan"] = {
-		},
-		["Metal - Illidan"] = {
-		},
-		["Natal - Illidan"] = {
-		},
 		["Comet - Illidan"] = {
 			["sets"] = {
 				{
@@ -78,13 +72,13 @@ MogItWishlist = {
 						["ShoulderSlot"] = "item:99386:0",
 						["MainHandSlot"] = "item:113591:0",
 						["BackSlot"] = "item:118812:0",
-						["SecondaryHandSlot"] = "item:103961:0",
+						["ShirtSlot"] = "item:89195:0",
 						["FeetSlot"] = "item:87067:0",
 						["HeadSlot"] = "item:109171:0",
 						["HandsSlot"] = "item:105845:0",
-						["WaistSlot"] = "item:87022:0",
 						["LegsSlot"] = "item:95729:0",
-						["ShirtSlot"] = "item:89195:0",
+						["WaistSlot"] = "item:87022:0",
+						["SecondaryHandSlot"] = "item:103961:0",
 					},
 					["name"] = "Red Goggles",
 					["alternateItems"] = {
@@ -92,11 +86,17 @@ MogItWishlist = {
 				}, -- [1]
 			},
 		},
+		["Metal - Illidan"] = {
+		},
+		["Natal - Illidan"] = {
+		},
+		["Combustion - Illidan"] = {
+		},
 		["Centromere - Dark Iron"] = {
 		},
 		["Evan - Illidan"] = {
 		},
-		["Combustion - Illidan"] = {
+		["Plane - Illidan"] = {
 		},
 	},
 }

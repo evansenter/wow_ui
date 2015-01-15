@@ -37,7 +37,7 @@ VER 3 0100000000000007 "HWC" "INV_MISC_QUESTIONMARK"
 END
 VER 3 010000000000001B "Mana" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/use [@targettarget]Shadowfiend
+/use [@targettarget][]Shadowfiend
 /use 13
 /use 14
 END

@@ -1,10 +1,11 @@
 local mod	= DBM:NewMod(1196, "DBM-Highmaul", nil, 477)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12318 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 12407 $"):sub(12, -3))
 mod:SetCreatureID(78491)
 mod:SetEncounterID(1720)
 mod:SetZone()
+--Has no audio files
 
 mod:RegisterCombat("combat")
 
@@ -63,7 +64,7 @@ local countdownInfestingSpores		= mod:NewCountdown(57, 159996)--The variation on
 local countdownFungalFleshEater		= mod:NewCountdown("Alt120", "ej9995", not mod:IsHealer())
 
 local voiceInfestingSpores			= mod:NewVoice(159996)
-local voiceRot						= mod:NewVoice(163241, mod:IsTank() or mod:IsHealer())
+local voiceRot						= mod:NewVoice("OptionVersion2", 163241)
 local voiceLivingMushroom			= mod:NewVoice(160022)
 local voiceRejuvMushroom			= mod:NewVoice(160021)
 local voiceMindFungus				= mod:NewVoice(163141, mod:IsDps())
@@ -230,10 +231,12 @@ function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, _, _, spellId)
 		specWarnExplodingFungus:Show()
 		timerSpecialCD:Start()
 		voiceExplodingFungus:Play("watchstep")
+		voiceExplodingFungus:Schedule(15, "specialsoon")
 	elseif spellId == 160425 then
 		warnWaves:Show()
 		specWarnWaves:Show()
 		timerSpecialCD:Start()
 		voiceWaves:Play("watchwave")
+		voiceWaves:Schedule(15, "specialsoon")
 	end
 end
