@@ -1,4 +1,75 @@
 subversion:
+	- ultrashining via svn r12485: zhTW update
+	- nbluewiz via svn r12484: # koKR update.
+	- nbluewiz via svn r12483: # re-enable world boss "C" sync.
+	- Omega via svn r12482: Don't load if DBM-Profiles is loaded, to avoid conflicts.
+	- Omega via svn r12481: Antispam
+	- nbluewiz via svn r12480: # block mod stuff.
+	- Omega via svn r12479: Add new string
+	- nbluewiz via svn r12478: # revert it. find better way.
+	- nbluewiz via svn r12477: # block timer recovery in worldboss. # fix kill count can be -1.
+	- Omega via svn r12476: Fix writing functions to global space where not needed.
+	- Omega via svn r12475: CN update
+	- Omega via svn r12474: Small tweak
+	- Omega via svn r12473: Fix at least two cases where it was loading prot rules instead of glad. Those nil checks happened regularly. This way is better, no chance of being wrong ever.
+	- Omega via svn r12472: insert more timer lines
+	- Omega via svn r12471: No idea how this was lost
+	- nbluewiz via svn r12470: # koKR update.
+	- Omega via svn r12469: Disable bugs message. too many messages at once for new users with help message turned on.
+	- Omega via svn r12468: Re-enable help message for languages, but limit to the 4 languages needed instead of everyone.
+	- nbluewiz via svn r12467: # line elements. Twin Ogron is for test purpose.
+	- Omega via svn r12466: Shorten one string, because of text overlap
+	- Omega via svn r12465: Language tweak, and push to curse. because, now this needs more testers!
+	- nbluewiz via svn r12464: # fix stack overflow.
+	- Omega via svn r12463: That debug prints for each sub mod, so make it debuglevel 2
+	- Omega via svn r12462: More clarification
+	- Omega via svn r12461: Debug
+	- nbluewiz via svn r12460: # dropdown fix, clear word.
+	- Omega via svn r12459: Fix error
+	- Omega via svn r12458: Mod updates
+	- nbluewiz via svn r12457: # option gui order.
+	- nbluewiz via svn r12456: # fix bug.
+	- nbluewiz via svn r12455: # fix switching spec bug.
+	- nbluewiz via svn r12454: # sound copy options.
+	- Omega via svn r12453: Another local update
+	- nbluewiz via svn r12452: # gladiator fix.
+	- Omega via svn r12451: local update
+	- nbluewiz via svn r12450: # individual profile for glad stance.
+	- nbluewiz via svn r12449: # fix dual profile bug.
+	- nbluewiz via svn r12448: # fix stupid.
+	- nbluewiz via svn r12447: # fix fix fix
+	- Omega via svn r12446: Fix two mod regressions
+	- nbluewiz via svn r12445: # one more fix
+	- nbluewiz via svn r12444: # fix bug.
+	- nbluewiz via svn r12443: profile alpha updates. some have no locals, many minor bugs. since this is very broken alpha. need to test. and all mods are need to be update. (currently only draenor and highmaul)
+	- Omega via svn r12442: Eng Update
+	- Omega via svn r12441: Eng Update
+	- Omega via svn r12440: Oops, have to remove this too
+	- Omega via svn r12439: Interrupt count, and another prune
+	- Omega via svn r12438: Even better
+	- Omega via svn r12437: Tweet to option order. Move tank warnings together, and at bottom.
+	- Omega via svn r12436: Some tweaks
+	- Omega via svn r12435: Next phase of GUI improvements. sub categories for "announces" This will cause some option default resets for some announces.
+	- Omega via svn r12434: Fix regression in AddBoolOption change that caused options to be invisible.
+	- Omega via svn r12433: add Switch count warning. Cleaned up redundant code in NewSpecialWarningStack and NewSpecialWarningPreWarn. No reason to do OptionVersion code twice. Pass args on and let it run once. Only special treatment those need is time/stack arg which is handled very cleanly.
+	- nbluewiz via svn r12432: # little LoadMod tweak. there are more things to go.
+	- nbluewiz via svn r12431: # oops fix stupid.
+	- nbluewiz via svn r12430: # filter army of the dead on target scanning.
+	- Omega via svn r12429: Add nil check for targetName
+	- Omega via svn r12428: Fix spam issue where timer for mark of chaos might end and mark of chaos 1 second late, causing double taunt spam (bad warning for accelerated assault taunt 0.5 sec before mark of chaos goes out)
+	- nbluewiz via svn r12427: # koKR update.
+	- Omega via svn r12426: BRF
+	- Omega via svn r12425: Delete a ton of redundant warnings. DBM biggest complaint is spam and i agree. In fact most people i ask say same thing. No need for special warning and regular warnings that happen at same time and say the SAME THING. In this update, removed all general warnings that are just duplicates of existing special warnings. Kept general warnings that do not have special warnings or provide actual important information like target names or stack count.
+	- Omega via svn r12424: Support option version directly in AddBoolOption. So that mods like margok can reset option defaults. Since I was bad and made everything on by default when i consolidated. Updated announce option defaults on Margok Fix invalid spellid on margok Increased checknearby size as a small safety net to people being right on border, so they know to still check how close. Reduce tank swap spam some more.
+	- Omega via svn r12423: increase reqeust timers time, still too fast for some
+	- Omega via svn r12422: Couple fixes
+	- Omega via svn r12421: Shadow Council
+	- nbluewiz via svn r12420: # koKR update.
+	- Omega via svn r12419: Fix auto accept for people who have "show offline guildies" enabled.
+	- Omega via svn r12418: Fix error
+	- Omega via svn r12417: Invasion mod doesn't load, more debug to figure out why
+	- Omega via svn r12416: Fix another bad option default
+	- Omega via svn r12415: bump BW version
 	- Omega via svn r12414: Fix bad option default
 	- Omega via svn r12413: Fix a bug where accelerated assault warnings would not fire if mark of chaos timer returns 0 (expired, or disabled)
 	- Omega via svn r12412: Should be functional invasion mod loading

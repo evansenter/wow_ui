@@ -239,65 +239,13 @@ function WeakAuras.IsOptionsOpen()
   return false;
 end
 
-WeakAuras.unusedOverlayGlows = {}
-WeakAuras.numOverlayGlows = 0
-
-local function OverlayGlowAnimOutFinished(animGroup)
-  local overlay = animGroup:GetParent()
-  local frame = overlay:GetParent()
-  overlay:Hide()
-  tinsert(WeakAuras.unusedOverlayGlows, overlay)
-  frame.overlay = nil
-end
-
-local function OverlayGlow_OnHide(self)
-  if self.animOut:IsPlaying() then
-    self.animOut:Stop()
-    OverlayGlowAnimOutFinished(self.animOut)
-  end
-end
-
-local function GetOverlayGlow()
-  local overlay = tremove(WeakAuras.unusedOverlayGlows)
-  if not overlay then
-    WeakAuras.numOverlayGlows = WeakAuras.numOverlayGlows + 1
-    overlay = CreateFrame("Frame", "WeakAurasGlowOverlay"..WeakAuras.numOverlayGlows, UIParent, "ActionBarButtonSpellActivationAlert")
-    overlay.animOut:SetScript("OnFinished", OverlayGlowAnimOutFinished)
-    overlay:SetScript("OnHide", OverlayGlow_OnHide)
-  end
-  return overlay
-end
-
+local LBG = LibStub("LibButtonGlow-1.0")
 local function WeakAuras_ShowOverlayGlow(frame)
-  if frame.overlay then
-    if frame.overlay.animOut:IsPlaying() then
-      frame.overlay.animOut:Stop()
-      frame.overlay.animIn:Play()
-    end
-  else
-    frame.overlay = GetOverlayGlow()
-    local frameWidth, frameHeight = frame:GetSize()
-    frame.overlay:SetParent(frame)
-    frame.overlay:ClearAllPoints()
-    --Make the height/width available before the next frame:
-    frame.overlay:SetSize(frameWidth * 1.4, frameHeight * 1.4)
-    frame.overlay:SetPoint("TOPLEFT", frame, "TOPLEFT", -frameWidth * 0.2, frameHeight * 0.2)
-    frame.overlay:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", frameWidth * 0.2, -frameHeight * 0.2)
-    frame.overlay.animIn:Play()
-  end
+  LBG.ShowOverlayGlow(frame)
 end
 
 local function WeakAuras_HideOverlayGlow(frame)
-  if frame.overlay then
-    if frame.overlay.animIn:IsPlaying() then
-      frame.overlay.animIn:Stop()
-    end
-    if frame:IsVisible() then
-      frame.overlay.animOut:Play()
-    else
-      OverlayGlowAnimOutFinished(frame.overlay.animOut)
-    end
-  end
+  LBG.HideOverlayGlow(frame)
 end
 
 local function forbidden()
@@ -910,8 +858,7 @@ do
           WeakAuras.ScanEvents("RUNE_COOLDOWN_CHANGED", id);
         end
       elseif(startTime > 0 and duration > 0) then
-        -- GCD
-        -- Do nothing
+        -- GCD, do nothing
       else
         if(runeCdExps[id]) then
           -- Somehow CheckCooldownReady caught the rune cooldown before the timer callback
@@ -1969,6 +1916,8 @@ function WeakAuras.SetEventDynamics(id, triggernum, data, ending)
     else
       if(data.durationFunc) then
         local duration, expirationTime, static, inverse = data.durationFunc(trigger);
+        duration = type(duration) == "number" and duration or 0;
+        expirationTime = type(expirationTime) == "number" and expirationTime or 0;
         if(type(static) == "string") then
           static = data.durationFunc;
         end
@@ -3100,6 +3049,17 @@ function WeakAuras.Modernize(data)
       load[protoname] = nil;
     end
   end
+  
+  local fixEmberTrigger = function(trigger)
+    if (trigger.power and not trigger.ember) then
+      trigger.ember = tostring(tonumber(trigger.power) * 10);
+      trigger.use_ember = trigger.use_power
+      trigger.ember_operator = trigger.power_operator;
+      trigger.power = nil;
+      trigger.use_power = nil;
+      trigger.power_operator = nil;
+    end
+  end
 
   -- upgrade from singleselecting talents to multi select, see ticket 52
   if (type(load.talent) == "number") then
@@ -3114,14 +3074,33 @@ function WeakAuras.Modernize(data)
     local trigger, untrigger;
     if(triggernum == 0) then
       trigger = data.trigger;
+      untrigger = data.untrigger;
     elseif(data.additional_triggers and data.additional_triggers[triggernum]) then
       trigger = data.additional_triggers[triggernum].trigger;
+      untrigger = data.additional_triggers[triggernum].untrigger;
     end
+    -- Add status/event information to triggers
     if(trigger and trigger.event and (trigger.type == "status" or trigger.type == "event")) then
       local prototype = event_prototypes[trigger.event];
       if(prototype) then
         trigger.type = prototype.type;
       end
+    end
+    -- Convert ember trigger
+    if (trigger and trigger.type and trigger.event and trigger.type == "status" and trigger.event == "Burning Embers") then
+      fixEmberTrigger(trigger);
+      fixEmberTrigger(untrigger);
+    end
+
+    if (trigger and trigger.type and trigger.event and trigger.type == "status" and trigger.event == "Cooldown Progress (Spell)") then
+        if (not trigger.showOn) then
+            if (trigger.use_inverse) then
+                trigger.showOn = "showOnReady"
+            else
+                trigger.showOn = "showOnCooldown"
+            end
+            trigger.use_inverse = nil
+        end
     end
   end
 
@@ -3828,20 +3807,21 @@ function WeakAuras.SetRegion(data, cloneId)
           end
         end
         function region:Expand()
-          if(region.preShow) then
-            region:PreShow();
-          end
-          region.toShow = true;
           region.toHide = false;
-          parent:EnsureTrays();
+
           if(WeakAuras.IsAnimating(region) == "finish" or region.groupHiding or (not region:IsVisible() or (cloneId and region.justCreated))) then
+            if(region.preShow) then
+              region:PreShow();
+            end
+            region.toShow = true;
+            parent:EnsureTrays();
             region.justCreated = nil;
             WeakAuras.PerformActions(data, "start");
             if not(WeakAuras.Animate("display", id, "start", data.animation.start, region, true, startMainAnimation, nil, cloneId)) then
-            startMainAnimation();
+              startMainAnimation();
             end
+            parent:ControlChildren();
           end
-          parent:ControlChildren();
         end
       elseif not(data.controlledChildren) then
         function region:Collapse()
@@ -4473,6 +4453,8 @@ function WeakAuras.CanHaveDuration(data)
     WeakAuras.event_prototypes[data.trigger.event].init(data.trigger);
     end
     local current, maximum, custom = WeakAuras.event_prototypes[data.trigger.event].durationFunc(data.trigger);
+    current = type(current) ~= "number" and current or 0
+    maximum = type(maximum) ~= "number" and maximum or 0
     if(custom) then
     return {current = current, maximum = maximum};
     else
@@ -5234,4 +5216,11 @@ function WeakAuras.RemoveGTFO()
     end
     WeakAuras.event_types["GTFO"] = nil;
   end
+end
+
+function WeakAuras.EnsureString(input)
+   if (input == nil) then
+     return "";
+   end
+   return tostring(input);
 end

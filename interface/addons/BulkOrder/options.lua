@@ -45,7 +45,10 @@ StaticPopupDialogs["BULKORDER_CONFIRMAPPLYTOALL"] = {
 }
 
 function ApplySettingsToAllToons ()
-    g_BulkOrderGlobal = g_BulkOrder
+    g_BulkOrderGlobal = {}
+    for k,v in pairs(g_BulkOrder) do
+        g_BulkOrderGlobal[k] = v
+    end
     g_BulkOrderGlobal.timestamp = time ()
 end
 -----------------------------------------------------------------
@@ -71,6 +74,7 @@ local function CreateCheckBox (parent, anchorTo, x, y, text)
     function frm:Bind (varname)
         self:SetScript ("OnClick", function (self, ...)
             g_BulkOrder[varname] = self:GetChecked ()
+            g_BulkOrder.timestamp = time ()
         end)
         table.insert (checkboxes, {frm, varname})
         return frm
@@ -84,7 +88,9 @@ end
 function BulkOrder_CreateOptions ()
     -- Default values!
     if g_BulkOrderGlobal and g_BulkOrderGlobal.timestamp and (g_BulkOrderGlobal.timestamp > (g_BulkOrder.timestamp or 0)) then
-        g_BulkOrder = g_BulkOrderGlobal
+        for k,v in pairs(g_BulkOrderGlobal) do
+            g_BulkOrder[k] = v
+        end
     else
         g_BulkOrder = g_BulkOrder or {}
         

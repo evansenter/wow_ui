@@ -56,12 +56,12 @@ AngryAssign_Pages = {
 		["UpdateId"] = 3836675217,
 		["Contents"] = "Shadow:\n1) DJ, Tokman, doom\n2) Scar, Gandalf, brun, Comet\n3) twin, Charlie, myth\n\nSHIELDS:\nMyth\nAzpek\nHockey\nGandalf\n\nIce orbs:\n1) Scar, DJ, Hockey\n2) Packa, Brun, Azpek\n3) Atmos, Doom, Myth",
 	},
-	[704661539] = {
-		["Updated"] = 1421293723,
-		["Name"] = "butcher",
-		["Id"] = 704661539,
-		["UpdateId"] = 3581370618,
-		["Contents"] = "Healing Cds:\n1) Tide + Gandalf\n2) Barrier + Smoke + Akroma (Right before Blue 2nd stack)\n3) Hymn + Cexcells + Rally (Right before Green 2nd stack)",
+	[45058146] = {
+		["Updated"] = 1419905154,
+		["Name"] = "Slangin' Gurt",
+		["Id"] = 45058146,
+		["UpdateId"] = 2133170203,
+		["Contents"] = "Spas's Slangin' Gurt'\n\nIf its good and creamy, it's spasweezy\n\n~This message has been approved by Spas~",
 	},
 	[223793571] = {
 		["Updated"] = 1420677848,
@@ -91,38 +91,38 @@ AngryAssign_Pages = {
 		["UpdateId"] = 906432904,
 		["Contents"] = "Infesting Spores Order:\n1) Akroma + Devo + Smoke + Eklypto + Cex\n2) Tranq + SLink + Gandalf\n3) Tide + Akroma + Cannibal + \n4) Hymn + Barrier\n5)Akroma + Devo + Smoke + Eklypto + Cex\n6) Tranq + Link + Gandalf\n7) Tide + Akroma + Cannibal + \n8) Hymn + Barrier\n\nRoar Order:\nDj - Brun - Redpaws - Crime",
 	},
-	[45058146] = {
-		["Updated"] = 1419905154,
-		["Name"] = "Slangin' Gurt",
-		["Id"] = 45058146,
-		["UpdateId"] = 2133170203,
-		["Contents"] = "Spas's Slangin' Gurt'\n\nIf its good and creamy, it's spasweezy\n\n~This message has been approved by Spas~",
+	[704661539] = {
+		["Updated"] = 1421376365,
+		["Name"] = "butcher",
+		["Id"] = 704661539,
+		["UpdateId"] = 4172416317,
+		["Contents"] = "Healing Cds:\n1) Tranq + Gandalf\n2) Smoke + Barrier  + Tide (Right before Blue 2nd stack)\n3) Hymn + Cexcells + Rally (Right before Green 2nd stack)\n4) Spirit Link + Barrier (1st stack after 4th bounding cleave)",
 	},
 }
 AngryAssign_State = {
+	["display"] = {
+		["y"] = -11.5,
+		["x"] = -2.00009155273438,
+		["point"] = "TOP",
+		["scale"] = 1,
+		["hidden"] = false,
+	},
+	["locked"] = true,
 	["tree"] = {
 		["groups"] = {
 		},
 		["scrollvalue"] = 0,
-		["fullwidth"] = 665.999938964844,
+		["treesizable"] = true,
 		["selected"] = 45058146,
 		["treewidth"] = 175,
-		["treesizable"] = true,
+		["fullwidth"] = 665.999938964844,
 	},
-	["locked"] = true,
+	["directionUp"] = false,
 	["window"] = {
 		["height"] = 499.999969482422,
 		["top"] = 850,
 		["left"] = 610,
 		["width"] = 700,
-	},
-	["directionUp"] = false,
-	["display"] = {
-		["y"] = -78.5,
-		["x"] = 46.9995460510254,
-		["point"] = "TOPLEFT",
-		["scale"] = 1,
-		["hidden"] = false,
 	},
 }
 AngryAssign_Config = {

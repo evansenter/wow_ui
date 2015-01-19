@@ -224,6 +224,7 @@ DBM_CORE_AUTO_SPEC_WARN_TEXTS.soon		= "Скоро %s"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.prewarn	= "%s через %s"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.dispel 	= "%s на |3-5(>%%s<) - рассейте заклинание"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.interrupt	= "%s - прервите"
+DBM_CORE_AUTO_SPEC_WARN_TEXTS.interruptcount	= "%s - прервите (%%d)"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.you 		= "%s на вас"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.target 	= "%s на |3-5(>%%s<)"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.taunt		= "%s на >%%s< - затаунти"
@@ -238,6 +239,7 @@ DBM_CORE_AUTO_SPEC_WARN_TEXTS.reflect 	= "%s на |3-5(>%%s<) - прекрати
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.count 	= "%s! (%%d)"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.stack 	= "На вас %%d стаков от %s"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.switch 	= ">%s< - переключитесь"
+DBM_CORE_AUTO_SPEC_WARN_TEXTS.switchcount 	= ">%s< - переключитесь (%%d)"
 
 -- Auto-generated Special Warning Localizations
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.spell 		= "Спец-предупреждение для $spell:%s"
@@ -261,6 +263,8 @@ DBM_CORE_AUTO_SPEC_WARN_OPTIONS.reflect 	= "Спец-предупреждени�
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.count 		= "Спец-предупреждение для $spell:%s"
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.stack 		= "Спец-предупреждение, когда на вас >=%d стаков $spell:%s"
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.switch		= "Спец-предупреждение о смене цели для $spell:%s"
+DBM_CORE_AUTO_SPEC_WARN_OPTIONS.switchcount = DBM_CORE_AUTO_SPEC_WARN_OPTIONS.switch
+DBM_CORE_AUTO_SPEC_WARN_OPTIONS.interruptcount	= DBM_CORE_AUTO_SPEC_WARN_OPTIONS.interrupt
 
 -- Auto-generated Timer Localizations
 DBM_CORE_AUTO_TIMER_TEXTS.target 		= "%s: >%%s<"

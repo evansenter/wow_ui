@@ -70,8 +70,7 @@ AmrDb = {
 		[823] = 236,
 		[-1] = 16841209,
 	},
-	["Professions"] = {
-	},
+	["LastCharacterImport"] = "",
 	["LogData"] = {
 		["_wipes"] = {
 		},
@@ -125,7 +124,8 @@ AmrDb = {
 		"|cffa335ee|Hitem:112319:0:0:0:0:0:0:0:100:0:13:2:525:530|h[Knight's Badge]|h|r", -- [39]
 		"|cffa335ee|Hitem:118298:5284:0:0:0:0:0:0:100:0:11:0|h[Timeless Solium Band of the Bulwark]|h|r", -- [40]
 	},
-	["LastCharacterImport"] = "",
+	["Professions"] = {
+	},
 	["VoidItems"] = {
 		"|cffa335ee|Hitem:112785:0:0:0:0:0:0:0:100:491:6:2:450:448|h[Gar'tok, Strength of the Faithful]|h|r", -- [1]
 		"|cffa335ee|Hitem:112949:0:0:0:0:0:0:0:100:491:6:2:450:448|h[Greatsword of Pride's Fall]|h|r", -- [2]
@@ -167,52 +167,51 @@ AmrDb = {
 	},
 	["BankItems"] = {
 		"|cffffffff|Hitem:109693:0:0:0:0:0:0:0:100:0:0:0|h[Draenic Dust]|h|r", -- [1]
-		"|cff1eff00|Hitem:111556:0:0:0:0:0:0:0:100:0:0:0|h[Hexweave Cloth]|h|r", -- [2]
+		"|cff1eff00|Hitem:88567:0:0:0:0:0:0:0:100:0:0:0|h[Ghost Iron Lockbox]|h|r", -- [2]
 		"|cff1eff00|Hitem:88567:0:0:0:0:0:0:0:100:0:0:0|h[Ghost Iron Lockbox]|h|r", -- [3]
 		"|cff1eff00|Hitem:88567:0:0:0:0:0:0:0:100:0:0:0|h[Ghost Iron Lockbox]|h|r", -- [4]
-		"|cff1eff00|Hitem:88567:0:0:0:0:0:0:0:100:0:0:0|h[Ghost Iron Lockbox]|h|r", -- [5]
-		"|cff1eff00|Hitem:88567:0:0:0:0:0:0:0:100:0:9:0|h[Ghost Iron Lockbox]|h|r", -- [6]
-		"|cff1eff00|Hitem:64400:0:0:0:0:0:0:0:100:0:14:0|h[Banner of Cooperation]|h|r", -- [7]
-		"|cff0070dd|Hitem:118148:0:0:0:0:0:0:0:100:0:11:1:577|h[Plainsthunder Bracers]|h|r", -- [8]
-		"|cff0070dd|Hitem:118135:0:0:0:0:0:0:0:100:0:11:1:577|h[Plainshunter Claws]|h|r", -- [9]
-		"|cff0070dd|Hitem:64401:0:0:0:0:0:0:0:100:0:14:0|h[Standard of Unity]|h|r", -- [10]
-		"|cff0070dd|Hitem:118372:0:0:0:0:0:0:0:100:0:11:0|h[Orgrimmar Tabard]|h|r", -- [11]
-		"|cff0070dd|Hitem:98920:0:0:0:0:0:0:0:100:0:0:0|h[Crafted Malevolent Gladiator's Shield Wall]|h|r", -- [12]
-		"|cff0070dd|Hitem:118246:0:0:0:0:0:0:0:100:0:0:0|h[Call of the Wolfmother]|h|r", -- [13]
-		"|cff0070dd|Hitem:118883:0:0:0:0:0:0:0:100:0:0:0|h[Bronzed Elekk Statue]|h|r", -- [14]
-		"|cff0070dd|Hitem:110011:0:0:0:0:0:0:0:100:0:20:1:521|h[Fires of the Sun]|h|r", -- [15]
-		"|cff0070dd|Hitem:42765:0:0:0:0:0:0:741126208:100:0:0:0|h[Gauntlets of the Disturbed Giant]|h|r", -- [16]
-		"|cff0070dd|Hitem:118750:0:0:0:0:0:0:0:100:0:0:0|h[Reiver Gauntlets]|h|r", -- [17]
-		"|cff0070dd|Hitem:39680:0:0:0:0:0:0:1508140800:100:0:0:0|h[Vambraces of the Vengeance Bringer]|h|r", -- [18]
-		"|cff0070dd|Hitem:42768:0:0:0:0:0:0:1743363072:100:0:0:0|h[Boots of the Unbowed Protector]|h|r", -- [19]
-		"|cff0070dd|Hitem:109802:0:0:0:0:0:0:0:100:0:2:2:499:524|h[Gutcrusher Stompers]|h|r", -- [20]
-		"|cff0070dd|Hitem:27985:0:0:0:0:0:0:1005255616:100:0:0:0|h[Deathforge Girdle]|h|r", -- [21]
-		"|cff0070dd|Hitem:65625:0:0:0:0:0:0:397245984:100:0:0:0|h[Faceguard of the Horde]|h|r", -- [22]
-		"|cff0070dd|Hitem:109985:0:0:0:0:0:0:0:100:0:2:1:524|h[Incarnadine Greathelm]|h|r", -- [23]
-		"|cff0070dd|Hitem:6975:0:0:0:0:0:0:1230391936:100:0:0:0|h[Whirlwind Axe]|h|r", -- [24]
-		"|cff0070dd|Hitem:35576:0:0:0:0:0:0:-1752229888:100:0:0:0|h[Ingvar's Monolithic Cleaver]|h|r", -- [25]
-		"|cff0070dd|Hitem:35595:0:0:0:0:0:0:1297615680:100:0:0:0|h[Glacier Sharpened Vileblade]|h|r", -- [26]
-		"|cff0070dd|Hitem:87509:0:0:0:0:0:0:0:100:0:5:0|h[Fist of Fate]|h|r", -- [27]
-		"|cff0070dd|Hitem:118758:4441:0:0:0:0:0:0:100:0:0:0|h[Tharbek's Horrific Posessor]|h|r", -- [28]
-		"|cff0070dd|Hitem:119394:0:0:0:0:0:0:0:100:0:0:0|h[Kurlosh's Kidneyslicer]|h|r", -- [29]
-		"|cffa335ee|Hitem:99747:0:0:0:0:0:0:0:100:491:0:0|h[Gauntlets of the Cursed Protector]|h|r", -- [30]
-		"|cffa335ee|Hitem:64402:0:0:0:0:0:0:0:100:0:14:0|h[Battle Standard of Coordination]|h|r", -- [31]
-		"|cffa335ee|Hitem:99198:4432:4632:4632:0:0:0:0:100:491:0:0|h[Gauntlets of the Prehistoric Marauder]|h|r", -- [32]
-		"|cffa335ee|Hitem:112796:4429:4587:0:0:0:0:0:100:505:5:1:449|h[Malkorok's Giant Stompers]|h|r", -- [33]
-		"|cffa335ee|Hitem:112419:0:0:0:0:0:0:0:100:491:5:1:449|h[Treads of Unchained Hate]|h|r", -- [34]
-		"|cffa335ee|Hitem:112953:0:0:0:0:0:0:0:100:491:5:1:449|h[Greaves of Sublime Superiority]|h|r", -- [35]
-		"|cffa335ee|Hitem:112933:4823:4587:4587:4632:0:0:0:100:491:3:0|h[Legplates of Unthinking Strife]|h|r", -- [36]
-		"|cffa335ee|Hitem:112482:0:4632:4587:4587:0:0:0:100:491:5:1:449|h[Poisonbinder Girth]|h|r", -- [37]
-		"|cffa335ee|Hitem:99047:4419:4647:4647:4647:0:0:0:100:491:14:0|h[Battleplate of the Prehistoric Marauder]|h|r", -- [38]
-		"|cffa335ee|Hitem:101796:4907:0:0:0:0:-370:2123300932:100:491:0:0|h[Cliffbreaker Pauldrons of the Earthshaker]|h|r", -- [39]
-		"|cffa335ee|Hitem:112705:0:0:0:0:0:0:0:100:491:6:1:450|h[Krugruk's Rigid Shoulderplates]|h|r", -- [40]
-		"|cffa335ee|Hitem:99418:0:0:0:0:0:0:0:100:491:14:0|h[Helmet of the Prehistoric Marauder]|h|r", -- [41]
-		"|cffa335ee|Hitem:117355:0:0:0:0:0:0:0:100:0:1:1:573|h[The Horseman's Horrific Hood]|h|r", -- [42]
-		"|cffa335ee|Hitem:9372:0:0:0:0:0:0:1767531648:100:0:0:0|h[Sul'thraze the Lasher]|h|r", -- [43]
-		"|cffa335ee|Hitem:112949:4441:4587:0:0:0:0:0:100:505:3:1:448|h[Greatsword of Pride's Fall]|h|r", -- [44]
-		"|cffa335ee|Hitem:112921:0:0:0:0:0:0:0:100:491:3:0|h[Kil'ruk's Furious Blade]|h|r", -- [45]
-		"|cffe6cc80|Hitem:105679:4444:4632:4632:0:0:0:0:100:0:3:0|h[Hellscream's Decapitator]|h|r", -- [46]
-		"|cffe6cc80|Hitem:104405:4444:4632:4632:0:0:0:0:100:0:5:0|h[Hellscream's Decapitator]|h|r", -- [47]
+		"|cff1eff00|Hitem:88567:0:0:0:0:0:0:0:100:0:9:0|h[Ghost Iron Lockbox]|h|r", -- [5]
+		"|cff1eff00|Hitem:64400:0:0:0:0:0:0:0:100:0:14:0|h[Banner of Cooperation]|h|r", -- [6]
+		"|cff0070dd|Hitem:118148:0:0:0:0:0:0:0:100:0:11:1:577|h[Plainsthunder Bracers]|h|r", -- [7]
+		"|cff0070dd|Hitem:118135:0:0:0:0:0:0:0:100:0:11:1:577|h[Plainshunter Claws]|h|r", -- [8]
+		"|cff0070dd|Hitem:64401:0:0:0:0:0:0:0:100:0:14:0|h[Standard of Unity]|h|r", -- [9]
+		"|cff0070dd|Hitem:118372:0:0:0:0:0:0:0:100:0:11:0|h[Orgrimmar Tabard]|h|r", -- [10]
+		"|cff0070dd|Hitem:98920:0:0:0:0:0:0:0:100:0:0:0|h[Crafted Malevolent Gladiator's Shield Wall]|h|r", -- [11]
+		"|cff0070dd|Hitem:118246:0:0:0:0:0:0:0:100:0:0:0|h[Call of the Wolfmother]|h|r", -- [12]
+		"|cff0070dd|Hitem:118883:0:0:0:0:0:0:0:100:0:0:0|h[Bronzed Elekk Statue]|h|r", -- [13]
+		"|cff0070dd|Hitem:110011:0:0:0:0:0:0:0:100:0:20:1:521|h[Fires of the Sun]|h|r", -- [14]
+		"|cff0070dd|Hitem:42765:0:0:0:0:0:0:741126208:100:0:0:0|h[Gauntlets of the Disturbed Giant]|h|r", -- [15]
+		"|cff0070dd|Hitem:118750:0:0:0:0:0:0:0:100:0:0:0|h[Reiver Gauntlets]|h|r", -- [16]
+		"|cff0070dd|Hitem:39680:0:0:0:0:0:0:1508140800:100:0:0:0|h[Vambraces of the Vengeance Bringer]|h|r", -- [17]
+		"|cff0070dd|Hitem:42768:0:0:0:0:0:0:1743363072:100:0:0:0|h[Boots of the Unbowed Protector]|h|r", -- [18]
+		"|cff0070dd|Hitem:109802:0:0:0:0:0:0:0:100:0:2:2:499:524|h[Gutcrusher Stompers]|h|r", -- [19]
+		"|cff0070dd|Hitem:27985:0:0:0:0:0:0:1005255616:100:0:0:0|h[Deathforge Girdle]|h|r", -- [20]
+		"|cff0070dd|Hitem:65625:0:0:0:0:0:0:397245984:100:0:0:0|h[Faceguard of the Horde]|h|r", -- [21]
+		"|cff0070dd|Hitem:109985:0:0:0:0:0:0:0:100:0:2:1:524|h[Incarnadine Greathelm]|h|r", -- [22]
+		"|cff0070dd|Hitem:6975:0:0:0:0:0:0:1230391936:100:0:0:0|h[Whirlwind Axe]|h|r", -- [23]
+		"|cff0070dd|Hitem:35576:0:0:0:0:0:0:-1752229888:100:0:0:0|h[Ingvar's Monolithic Cleaver]|h|r", -- [24]
+		"|cff0070dd|Hitem:35595:0:0:0:0:0:0:1297615680:100:0:0:0|h[Glacier Sharpened Vileblade]|h|r", -- [25]
+		"|cff0070dd|Hitem:87509:0:0:0:0:0:0:0:100:0:5:0|h[Fist of Fate]|h|r", -- [26]
+		"|cff0070dd|Hitem:118758:4441:0:0:0:0:0:0:100:0:0:0|h[Tharbek's Horrific Posessor]|h|r", -- [27]
+		"|cff0070dd|Hitem:119394:0:0:0:0:0:0:0:100:0:0:0|h[Kurlosh's Kidneyslicer]|h|r", -- [28]
+		"|cffa335ee|Hitem:99747:0:0:0:0:0:0:0:100:491:0:0|h[Gauntlets of the Cursed Protector]|h|r", -- [29]
+		"|cffa335ee|Hitem:64402:0:0:0:0:0:0:0:100:0:14:0|h[Battle Standard of Coordination]|h|r", -- [30]
+		"|cffa335ee|Hitem:99198:4432:4632:4632:0:0:0:0:100:491:0:0|h[Gauntlets of the Prehistoric Marauder]|h|r", -- [31]
+		"|cffa335ee|Hitem:112796:4429:4587:0:0:0:0:0:100:505:5:1:449|h[Malkorok's Giant Stompers]|h|r", -- [32]
+		"|cffa335ee|Hitem:112419:0:0:0:0:0:0:0:100:491:5:1:449|h[Treads of Unchained Hate]|h|r", -- [33]
+		"|cffa335ee|Hitem:112953:0:0:0:0:0:0:0:100:491:5:1:449|h[Greaves of Sublime Superiority]|h|r", -- [34]
+		"|cffa335ee|Hitem:112933:4823:4587:4587:4632:0:0:0:100:491:3:0|h[Legplates of Unthinking Strife]|h|r", -- [35]
+		"|cffa335ee|Hitem:112482:0:4632:4587:4587:0:0:0:100:491:5:1:449|h[Poisonbinder Girth]|h|r", -- [36]
+		"|cffa335ee|Hitem:99047:4419:4647:4647:4647:0:0:0:100:491:14:0|h[Battleplate of the Prehistoric Marauder]|h|r", -- [37]
+		"|cffa335ee|Hitem:101796:4907:0:0:0:0:-370:2123300932:100:491:0:0|h[Cliffbreaker Pauldrons of the Earthshaker]|h|r", -- [38]
+		"|cffa335ee|Hitem:112705:0:0:0:0:0:0:0:100:491:6:1:450|h[Krugruk's Rigid Shoulderplates]|h|r", -- [39]
+		"|cffa335ee|Hitem:99418:0:0:0:0:0:0:0:100:491:14:0|h[Helmet of the Prehistoric Marauder]|h|r", -- [40]
+		"|cffa335ee|Hitem:117355:0:0:0:0:0:0:0:100:0:1:1:573|h[The Horseman's Horrific Hood]|h|r", -- [41]
+		"|cffa335ee|Hitem:9372:0:0:0:0:0:0:1767531648:100:0:0:0|h[Sul'thraze the Lasher]|h|r", -- [42]
+		"|cffa335ee|Hitem:112949:4441:4587:0:0:0:0:0:100:505:3:1:448|h[Greatsword of Pride's Fall]|h|r", -- [43]
+		"|cffa335ee|Hitem:112921:0:0:0:0:0:0:0:100:491:3:0|h[Kil'ruk's Furious Blade]|h|r", -- [44]
+		"|cffe6cc80|Hitem:105679:4444:4632:4632:0:0:0:0:100:0:3:0|h[Hellscream's Decapitator]|h|r", -- [45]
+		"|cffe6cc80|Hitem:104405:4444:4632:4632:0:0:0:0:100:0:5:0|h[Hellscream's Decapitator]|h|r", -- [46]
 	},
 	["Glyphs"] = {
 		{
@@ -236,7 +235,7 @@ AmrDb = {
 		[109132] = 3,
 		[42765] = 1,
 		[112482] = 1,
-		[110609] = 48,
+		[110609] = 2,
 		[118372] = 1,
 		[112419] = 1,
 		[109125] = 4,
@@ -246,28 +245,28 @@ AmrDb = {
 		[99418] = 1,
 		[118246] = 1,
 		[118135] = 1,
-		[109126] = 36,
+		[109126] = 26,
 		[109134] = 2,
 		[2880] = 3,
-		[113262] = 26,
-		[110611] = 299,
+		[113262] = 30,
+		[110611] = 367,
 		[64400] = 1,
-		[109119] = 322,
+		[109119] = 162,
 		[9372] = 1,
-		[111556] = 1,
+		[111556] = 3,
 		[35595] = 1,
 		[109802] = 1,
-		[113263] = 50,
+		[113263] = 57,
 		[98920] = 1,
 		[109985] = 1,
 		[118883] = 1,
-		[109128] = 20,
-		[111557] = 198,
+		[109128] = 47,
+		[111557] = 205,
 		[111589] = 13,
 		[76061] = 27,
 		[64401] = 1,
 		[35576] = 1,
-		[109129] = 18,
+		[109129] = 29,
 		[3685] = 30,
 		[99747] = 1,
 		[109693] = 1,
@@ -277,30 +276,31 @@ AmrDb = {
 		[118758] = 1,
 		[110011] = 1,
 		[27985] = 1,
-		[108257] = 295,
+		[108257] = 367,
 		[42768] = 1,
 		[101796] = 1,
 		[65625] = 1,
+		[104405] = 1,
 		[87509] = 1,
 		[119394] = 1,
 		[64402] = 1,
 		[112933] = 1,
-		[118148] = 1,
-		[112949] = 1,
 		[109131] = 12,
-		[113261] = 18,
-		[99047] = 1,
+		[112949] = 1,
+		[113261] = 23,
+		[112921] = 1,
+		[111658] = 3,
 		[6975] = 1,
 		[99198] = 1,
 		[120945] = 6,
-		[109118] = 346,
-		[112953] = 1,
-		[111658] = 3,
 		[112796] = 1,
+		[111366] = 3,
+		[112953] = 1,
+		[109118] = 126,
 		[117355] = 1,
 		[105679] = 1,
-		[112921] = 1,
+		[99047] = 1,
 		[109124] = 37,
-		[104405] = 1,
+		[118148] = 1,
 	},
 }

@@ -9,6 +9,7 @@ AmrDb = {
 	["CharacterName"] = "Evan",
 	["Race"] = "Pandaren",
 	["ActiveSpec"] = 1,
+	["Guild"] = "Slash Cry",
 	["Level"] = 100,
 	["Equipped"] = {
 		{
@@ -48,6 +49,24 @@ AmrDb = {
 			"|cffe6cc80|Hitem:105690:0:4637:4637:0:0:0:0:100:0:6:0|h[Hellscream's War Staff]|h|r", -- [16]
 		}, -- [2]
 	},
+	["Glyphs"] = {
+		{
+			147072, -- [1]
+			55673, -- [2]
+			147776, -- [3]
+			119872, -- [4]
+			145722, -- [5]
+			55675, -- [6]
+		}, -- [1]
+		{
+			58009, -- [1]
+			119866, -- [2]
+			147776, -- [3]
+			89489, -- [4]
+			145722, -- [5]
+			119853, -- [6]
+		}, -- [2]
+	},
 	["BankItems"] = {
 		"|cff0070dd|Hitem:11177:0:0:0:0:0:0:0:100:0:0:0|h[Small Radiant Shard]|h|r", -- [1]
 		"|cffa335ee|Hitem:115504:0:0:0:0:0:0:0:100:0:0:0|h[Fractured Temporal Crystal]|h|r", -- [2]
@@ -68,6 +87,86 @@ AmrDb = {
 		"|cff0070dd|Hitem:52723:0:0:0:0:0:0:792967168:100:0:0:0|h[Runed Elementium Rod]|h|r", -- [17]
 		"|cff0070dd|Hitem:118372:0:0:0:0:0:0:0:100:0:11:0|h[Orgrimmar Tabard]|h|r", -- [18]
 		"|cff0070dd|Hitem:118936:0:0:0:0:0:0:0:100:0:11:0|h[Manual of Void-Calling]|h|r", -- [19]
+	},
+	["Specs"] = {
+		21, -- [1]
+		20, -- [2]
+	},
+	["Options"] = {
+	},
+	["Region"] = "US",
+	["Currencies"] = {
+		[402] = 1,
+		[823] = 282,
+		[391] = 12,
+		[392] = 192,
+		[614] = 1,
+		[-1] = 7202064,
+		[416] = 26,
+	},
+	["Class"] = "PRIEST",
+	["LogData"] = {
+		["_wipes"] = {
+		},
+		["_autoLog"] = {
+			[1228] = "disabled",
+			[1136] = "disabled",
+			[1205] = "disabled",
+		},
+		["_lastZone"] = "FW Horde Garrison Level 3",
+		["_lastDiff"] = 1,
+	},
+	["BagItems"] = {
+		"|cffa335ee|Hitem:116290:0:0:0:0:0:0:0:100:0:4:0|h[Emblem of Gushing Wounds]|h|r", -- [1]
+		"|cff9d9d9d|Hitem:107471:0:0:0:0:0:0:0:100:0:0:0|h[Latent Elemental Core]|h|r", -- [2]
+		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [3]
+		"|cffffffff|Hitem:113823:0:0:0:0:0:0:0:100:0:0:0|h[Crusted Iron Horde Pauldrons]|h|r", -- [4]
+		"|cffffffff|Hitem:110560:0:0:0:0:0:0:0:100:0:11:0|h[Garrison Hearthstone]|h|r", -- [5]
+		"|cffffffff|Hitem:6218:0:0:0:0:0:0:0:100:0:0:0|h[Runed Copper Rod]|h|r", -- [6]
+		"|cffffffff|Hitem:5512:0:0:0:0:0:0:0:100:0:3:0|h[Healthstone]|h|r", -- [7]
+		"|cffffffff|Hitem:6256:0:0:0:0:0:0:0:100:0:0:0|h[Fishing Pole]|h|r", -- [8]
+		"|cff1eff00|Hitem:10939:0:0:0:0:0:0:0:100:0:0:0|h[Greater Magic Essence]|h|r", -- [9]
+		"|cff1eff00|Hitem:11174:0:0:0:0:0:0:0:100:0:0:0|h[Lesser Nether Essence]|h|r", -- [10]
+		"|cff1eff00|Hitem:34055:0:0:0:0:0:0:0:100:0:0:0|h[Greater Cosmic Essence]|h|r", -- [11]
+		"|cff1eff00|Hitem:74250:0:0:0:0:0:0:0:100:0:0:0|h[Mysterious Essence]|h|r", -- [12]
+		"|cff1eff00|Hitem:113264:0:0:0:0:0:0:0:100:0:0:0|h[Sorcerous Air]|h|r", -- [13]
+		"|cff1eff00|Hitem:120301:0:0:0:0:0:0:0:100:0:1:0|h[Armor Enhancement Token]|h|r", -- [14]
+		"|cff0070dd|Hitem:118354:0:0:0:0:0:0:0:100:0:1:0|h[Follower Re-training Certificate]|h|r", -- [15]
+		"|cff0070dd|Hitem:11084:0:0:0:0:0:0:0:100:0:0:0|h[Large Glimmering Shard]|h|r", -- [16]
+		"|cff0070dd|Hitem:11139:0:0:0:0:0:0:0:100:0:0:0|h[Large Glowing Shard]|h|r", -- [17]
+		"|cff0070dd|Hitem:22448:0:0:0:0:0:0:0:100:0:0:0|h[Small Prismatic Shard]|h|r", -- [18]
+		"|cff0070dd|Hitem:22449:0:0:0:0:0:0:0:100:0:0:0|h[Large Prismatic Shard]|h|r", -- [19]
+		"|cff0070dd|Hitem:74252:0:0:0:0:0:0:0:100:0:0:0|h[Small Ethereal Shard]|h|r", -- [20]
+		"|cff0070dd|Hitem:118922:0:0:0:0:0:0:0:100:0:11:0|h[Oralius' Whispering Crystal]|h|r", -- [21]
+		"|cff0070dd|Hitem:110005:0:0:0:0:0:0:0:100:0:2:1:524|h[Crystalline Blood Drop]|h|r", -- [22]
+		"|cff0070dd|Hitem:119181:0:0:0:0:0:0:0:100:0:2:1:524|h[Hoof of Yalnu]|h|r", -- [23]
+		"|cffa335ee|Hitem:114822:0:0:0:0:0:0:0:100:0:0:0|h[Heavily Reinforced Armor Enhancement]|h|r", -- [24]
+		"|cffa335ee|Hitem:114131:0:0:0:0:0:0:0:100:0:0:0|h[Power Overrun Weapon Enhancement]|h|r", -- [25]
+		"|cffff8000|Hitem:102247:5302:5343:0:0:0:0:836114944:100:505:0:0|h[Jina-Kang, Kindness of Chi-Ji]|h|r", -- [26]
+	},
+	["Professions"] = {
+		["Tailoring"] = 652,
+		["Archaeology"] = 2,
+		["Fishing"] = 600,
+		["Cooking"] = 16,
+		["First Aid"] = 12,
+		["Enchanting"] = 653,
+	},
+	["LastCharacterImport"] = "$7;Illidan;Evan;Slash Cry;13;2;90;10:600,4:600;1;s1;21;1211220;55673,2,7573,82474,1350,704;q1;98599s7u493x4653y0c11e4896;766s10u12x0y0c11e-465;1s1u0x378y-378c41;2881s15u0x0c1e-8;3531s6u-12x-4y-17z17c230;6649s12u-2b450x-17c3d104427;131s3u14b0x21y-21c13e383d104468;165s16u0b0x17c2e-364d104503;22s9u-12b-1e-28d103811;1s5u12b1x4y-4z-17c123e4d104523;1s11u-12b0x17c2d104524;35s8u12b0x4c1e8d104552;95s14u0b-1d102309;71s13u0b0d102299;6s2u-14b1d104477$g\\4653\\76693\\4815,4653,4578\\20 _Haste_\\83147,76693,76627@g\\5031\\95345\\\\Courageous\\@g\\4649\\76699\\4816,4649,4584\\20 _Haste_\\83142,76699,76633@g\\4632\\76681\\4632,4566\\10 _Haste_, 10 _CriticalStrike_\\76681,76615@g\\4647\\76697\\4818,4647,4582\\20 _CriticalStrike_\\83146,76697,76631@g\\4611\\76660\\4611,4545\\5 _Intellect_, 10 _CriticalStrike_\\76660,76594@g\\4591\\76640\\4591,4524\\10 _Spirit_, 10 _CriticalStrike_\\76640,76574@e\\4896\\0\\125497\\19 _Intellect_, 11 _Spirit_\\38426=3@e\\4431\\74720\\104417\\11 _Haste_\\74250=2@e\\4423\\74712\\104403\\12 _Intellect_\\74249=3,74250=3@e\\4806\\87559\\121195\\15 _Intellect_, 5 _CriticalStrike_\\39354=1,79255=3@e\\4442\\74724\\104427\\Jade Spirit\\74250=4,74248=10@e\\4414\\74703\\104389\\12 _Intellect_\\74248=3@e\\4418\\74707\\104393\\15 _Spirit_\\74249=4@e\\4426\\74715\\104407\\11 _Haste_\\74249=2,74250=1@e\\4895\\0\\125496\\19 _Intellect_, 11 _CriticalStrike_\\38426=3@e\\4419\\74708\\104395\\5 All Stats\\74249=2,74250=3",
+	["Reps"] = {
+		[1269] = 7,
+		[1337] = 6,
+		[1341] = 7,
+		[1375] = 7,
+		[1387] = 0,
+		[1376] = 0,
+		[1435] = 7,
+		[1388] = 7,
+		[1270] = 6,
+	},
+	["Faction"] = "Horde",
+	["IconInfo"] = {
+		["minimapPos"] = 141.874669027745,
 	},
 	["VoidItems"] = {
 		"|cff0070dd|Hitem:93550:0:0:0:0:0:0:356991616:100:0:0:0|h[Crafted Dreadful Gladiator's Mooncloth Gloves]|h|r", -- [1]
@@ -206,104 +305,12 @@ AmrDb = {
 		"|cffa335ee|Hitem:77078:0:0:0:0:0:0:0:100:0:0:0|h[Scintillating Rods]|h|r", -- [134]
 		"|cff0070dd|Hitem:119353:0:0:0:0:0:0:0:100:0:0:0|h[Matron's Supple Gloves]|h|r", -- [135]
 	},
-	["Specs"] = {
-		21, -- [1]
-		20, -- [2]
-	},
-	["Options"] = {
-	},
-	["Region"] = "US",
-	["Currencies"] = {
-		[402] = 1,
-		[416] = 26,
-		[823] = 282,
-		[392] = 192,
-		[614] = 1,
-		[-1] = 7202064,
-		[391] = 12,
-	},
-	["IconInfo"] = {
-		["minimapPos"] = 141.874669027745,
-	},
-	["LogData"] = {
-		["_wipes"] = {
-		},
-		["_autoLog"] = {
-			[1228] = "disabled",
-			[1136] = "disabled",
-			[1205] = "disabled",
-		},
-		["_lastDiff"] = 1,
-		["_lastZone"] = "FW Horde Garrison Level 3",
-	},
-	["BagItems"] = {
-		"|cffa335ee|Hitem:116290:0:0:0:0:0:0:0:100:0:4:0|h[Emblem of Gushing Wounds]|h|r", -- [1]
-		"|cff9d9d9d|Hitem:107471:0:0:0:0:0:0:0:100:0:0:0|h[Latent Elemental Core]|h|r", -- [2]
-		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [3]
-		"|cffffffff|Hitem:113823:0:0:0:0:0:0:0:100:0:0:0|h[Crusted Iron Horde Pauldrons]|h|r", -- [4]
-		"|cffffffff|Hitem:110560:0:0:0:0:0:0:0:100:0:11:0|h[Garrison Hearthstone]|h|r", -- [5]
-		"|cffffffff|Hitem:6218:0:0:0:0:0:0:0:100:0:0:0|h[Runed Copper Rod]|h|r", -- [6]
-		"|cffffffff|Hitem:5512:0:0:0:0:0:0:0:100:0:3:0|h[Healthstone]|h|r", -- [7]
-		"|cffffffff|Hitem:6256:0:0:0:0:0:0:0:100:0:0:0|h[Fishing Pole]|h|r", -- [8]
-		"|cff1eff00|Hitem:10939:0:0:0:0:0:0:0:100:0:0:0|h[Greater Magic Essence]|h|r", -- [9]
-		"|cff1eff00|Hitem:11174:0:0:0:0:0:0:0:100:0:0:0|h[Lesser Nether Essence]|h|r", -- [10]
-		"|cff1eff00|Hitem:34055:0:0:0:0:0:0:0:100:0:0:0|h[Greater Cosmic Essence]|h|r", -- [11]
-		"|cff1eff00|Hitem:74250:0:0:0:0:0:0:0:100:0:0:0|h[Mysterious Essence]|h|r", -- [12]
-		"|cff1eff00|Hitem:113264:0:0:0:0:0:0:0:100:0:0:0|h[Sorcerous Air]|h|r", -- [13]
-		"|cff1eff00|Hitem:120301:0:0:0:0:0:0:0:100:0:1:0|h[Armor Enhancement Token]|h|r", -- [14]
-		"|cff0070dd|Hitem:118354:0:0:0:0:0:0:0:100:0:1:0|h[Follower Re-training Certificate]|h|r", -- [15]
-		"|cff0070dd|Hitem:11084:0:0:0:0:0:0:0:100:0:0:0|h[Large Glimmering Shard]|h|r", -- [16]
-		"|cff0070dd|Hitem:11139:0:0:0:0:0:0:0:100:0:0:0|h[Large Glowing Shard]|h|r", -- [17]
-		"|cff0070dd|Hitem:22448:0:0:0:0:0:0:0:100:0:0:0|h[Small Prismatic Shard]|h|r", -- [18]
-		"|cff0070dd|Hitem:22449:0:0:0:0:0:0:0:100:0:0:0|h[Large Prismatic Shard]|h|r", -- [19]
-		"|cff0070dd|Hitem:74252:0:0:0:0:0:0:0:100:0:0:0|h[Small Ethereal Shard]|h|r", -- [20]
-		"|cff0070dd|Hitem:118922:0:0:0:0:0:0:0:100:0:11:0|h[Oralius' Whispering Crystal]|h|r", -- [21]
-		"|cff0070dd|Hitem:110005:0:0:0:0:0:0:0:100:0:2:1:524|h[Crystalline Blood Drop]|h|r", -- [22]
-		"|cff0070dd|Hitem:119181:0:0:0:0:0:0:0:100:0:2:1:524|h[Hoof of Yalnu]|h|r", -- [23]
-		"|cffa335ee|Hitem:114822:0:0:0:0:0:0:0:100:0:0:0|h[Heavily Reinforced Armor Enhancement]|h|r", -- [24]
-		"|cffa335ee|Hitem:114131:0:0:0:0:0:0:0:100:0:0:0|h[Power Overrun Weapon Enhancement]|h|r", -- [25]
-		"|cffff8000|Hitem:102247:5302:5343:0:0:0:0:836114944:100:505:0:0|h[Jina-Kang, Kindness of Chi-Ji]|h|r", -- [26]
-	},
 	["SendSettings"] = {
 		["SendTo"] = "",
 		["SendGems"] = true,
 		["SendEnchants"] = true,
 		["SendEnchantMaterials"] = true,
 		["SendToType"] = "a friend",
-	},
-	["LastCharacterImport"] = "$7;Illidan;Evan;Slash Cry;13;2;90;10:600,4:600;1;s1;21;1211220;55673,2,7573,82474,1350,704;q1;98599s7u493x4653y0c11e4896;766s10u12x0y0c11e-465;1s1u0x378y-378c41;2881s15u0x0c1e-8;3531s6u-12x-4y-17z17c230;6649s12u-2b450x-17c3d104427;131s3u14b0x21y-21c13e383d104468;165s16u0b0x17c2e-364d104503;22s9u-12b-1e-28d103811;1s5u12b1x4y-4z-17c123e4d104523;1s11u-12b0x17c2d104524;35s8u12b0x4c1e8d104552;95s14u0b-1d102309;71s13u0b0d102299;6s2u-14b1d104477$g\\4653\\76693\\4815,4653,4578\\20 _Haste_\\83147,76693,76627@g\\5031\\95345\\\\Courageous\\@g\\4649\\76699\\4816,4649,4584\\20 _Haste_\\83142,76699,76633@g\\4632\\76681\\4632,4566\\10 _Haste_, 10 _CriticalStrike_\\76681,76615@g\\4647\\76697\\4818,4647,4582\\20 _CriticalStrike_\\83146,76697,76631@g\\4611\\76660\\4611,4545\\5 _Intellect_, 10 _CriticalStrike_\\76660,76594@g\\4591\\76640\\4591,4524\\10 _Spirit_, 10 _CriticalStrike_\\76640,76574@e\\4896\\0\\125497\\19 _Intellect_, 11 _Spirit_\\38426=3@e\\4431\\74720\\104417\\11 _Haste_\\74250=2@e\\4423\\74712\\104403\\12 _Intellect_\\74249=3,74250=3@e\\4806\\87559\\121195\\15 _Intellect_, 5 _CriticalStrike_\\39354=1,79255=3@e\\4442\\74724\\104427\\Jade Spirit\\74250=4,74248=10@e\\4414\\74703\\104389\\12 _Intellect_\\74248=3@e\\4418\\74707\\104393\\15 _Spirit_\\74249=4@e\\4426\\74715\\104407\\11 _Haste_\\74249=2,74250=1@e\\4895\\0\\125496\\19 _Intellect_, 11 _CriticalStrike_\\38426=3@e\\4419\\74708\\104395\\5 All Stats\\74249=2,74250=3",
-	["Reps"] = {
-		[1269] = 7,
-		[1337] = 6,
-		[1341] = 7,
-		[1375] = 7,
-		[1387] = 0,
-		[1376] = 0,
-		[1270] = 6,
-		[1388] = 7,
-		[1435] = 7,
-	},
-	["Faction"] = "Horde",
-	["Professions"] = {
-	},
-	["Class"] = "PRIEST",
-	["Glyphs"] = {
-		{
-			147072, -- [1]
-			55673, -- [2]
-			147776, -- [3]
-			119872, -- [4]
-			145722, -- [5]
-			55675, -- [6]
-		}, -- [1]
-		{
-			58009, -- [1]
-			119866, -- [2]
-			147776, -- [3]
-			89489, -- [4]
-			145722, -- [5]
-			119853, -- [6]
-		}, -- [2]
 	},
 	["BankItemsAndCounts"] = {
 		[109132] = 3,
@@ -354,41 +361,41 @@ AmrDb = {
 		[10938] = 6,
 		[10939] = 7,
 		[10940] = 31,
-		[34057] = 1,
-		[52723] = 1,
+		[118936] = 1,
 		[34055] = 26,
-		[109129] = 28,
-		[120945] = 10,
+		[111556] = 197,
+		[113478] = 6,
 		[76061] = 20,
-		[115504] = 1,
-		[52555] = 83,
-		[101677] = 1,
-		[89112] = 7,
-		[22445] = 140,
 		[109126] = 134,
-		[52722] = 1,
+		[115504] = 1,
+		[101677] = 1,
+		[52555] = 83,
+		[89112] = 7,
+		[102218] = 20,
 		[10978] = 1,
+		[113264] = 62,
+		[34052] = 2,
 		[11082] = 2,
 		[11083] = 13,
 		[11084] = 2,
 		[52718] = 47,
 		[34053] = 7,
 		[109131] = 11,
-		[11135] = 6,
-		[16204] = 19,
-		[52720] = 2,
-		[11138] = 2,
 		[34054] = 183,
-		[34052] = 2,
-		[113264] = 62,
+		[11138] = 2,
+		[52720] = 2,
+		[16204] = 19,
+		[11135] = 6,
+		[34057] = 1,
+		[52722] = 1,
 		[116053] = 3,
-		[102218] = 20,
+		[22445] = 140,
 		[22447] = 43,
 		[22449] = 4,
 		[34486] = 1,
-		[113478] = 6,
-		[111556] = 197,
+		[120945] = 10,
+		[109129] = 28,
 		[109124] = 15,
-		[118936] = 1,
+		[52723] = 1,
 	},
 }

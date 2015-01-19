@@ -1050,17 +1050,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["spellName"] = 12292,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 12292,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -1226,20 +1226,20 @@ WeakAurasSaved = {
 			},
 			["trigger"] = {
 				["type"] = "status",
-				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
-				["use_inverse"] = true,
-				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 				},
+				["use_unit"] = true,
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
-				["use_unit"] = true,
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["unevent"] = "auto",
 				["spellName"] = 18499,
 			},
 			["desaturate"] = false,
@@ -1338,6 +1338,7 @@ WeakAurasSaved = {
 						["use_spellName"] = true,
 						["custom_hide"] = "timed",
 						["unit"] = "player",
+						["showOn"] = "showOnCooldown",
 						["subeventSuffix"] = "_CAST_START",
 						["use_unit"] = true,
 						["spellName"] = 23881,
@@ -1779,16 +1780,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 123986,
 			},
 			["text"] = true,
@@ -1995,16 +1997,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 51533,
 			},
 			["text"] = true,
@@ -2809,17 +2812,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 46924,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -3058,17 +3061,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 6807,
 			},
 			["desaturate"] = false,
@@ -3742,16 +3745,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 115098,
 			},
 			["text"] = true,
@@ -4067,16 +4071,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 724,
 			},
 			["text"] = true,
@@ -4325,17 +4330,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["spellName"] = 12292,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 12292,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -4485,17 +4490,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 8050,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -4901,17 +4906,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 116680,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -5153,17 +5158,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["spellName"] = 113656,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 113656,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -5313,23 +5318,23 @@ WeakAurasSaved = {
 				},
 			},
 			["trigger"] = {
-				["debuffType"] = "HELPFUL",
-				["type"] = "status",
+				["spellName"] = 81700,
 				["use_remaining"] = false,
-				["unevent"] = "auto",
-				["remaining_operator"] = "<=",
-				["use_inverse"] = false,
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["remaining"] = "12",
-				["use_spellName"] = true,
+				["type"] = "status",
+				["subeventSuffix"] = "_CAST_START",
 				["names"] = {
 				},
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
+				["remaining_operator"] = "<=",
+				["event"] = "Cooldown Progress (Spell)",
 				["unit"] = "player",
-				["spellName"] = 81700,
+				["unevent"] = "auto",
+				["remaining"] = "12",
+				["use_unit"] = true,
+				["use_spellName"] = true,
+				["showOn"] = "showOnCooldown",
+				["subeventPrefix"] = "SPELL",
 				["custom_hide"] = "timed",
+				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = true,
 			["rotation"] = 0,
@@ -6105,17 +6110,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 51533,
 			},
 			["desaturate"] = false,
@@ -6590,6 +6595,7 @@ WeakAurasSaved = {
 						["use_spellName"] = true,
 						["custom_hide"] = "timed",
 						["unit"] = "player",
+						["showOn"] = "showOnCooldown",
 						["subeventSuffix"] = "_CAST_START",
 						["use_unit"] = true,
 						["spellName"] = 107428,
@@ -6789,17 +6795,18 @@ WeakAurasSaved = {
 				["type"] = "status",
 				["unevent"] = "auto",
 				["debuffType"] = "HELPFUL",
-				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 				},
+				["use_unit"] = true,
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
-				["use_unit"] = true,
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 152173,
 			},
 			["text"] = true,
@@ -8188,17 +8195,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["spellName"] = 123402,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = false,
@@ -8310,12 +8317,13 @@ WeakAurasSaved = {
 						["use_charges"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["subeventPrefix"] = "SPELL",
-						["use_spellName"] = true,
 						["spellName"] = 115295,
+						["use_spellName"] = true,
 						["subeventSuffix"] = "_CAST_START",
 						["use_unit"] = true,
-						["unit"] = "player",
+						["showOn"] = "showOnCooldown",
 						["charges"] = "0",
+						["unit"] = "player",
 						["custom_hide"] = "timed",
 					},
 					["untrigger"] = {
@@ -8484,17 +8492,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 88684,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -8716,16 +8724,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 123904,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
@@ -9070,17 +9079,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 8050,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -9585,26 +9594,26 @@ WeakAurasSaved = {
 			["fontFlags"] = "OUTLINE",
 			["selfPoint"] = "CENTER",
 			["trigger"] = {
-				["use_inverse"] = false,
+				["use_totemName"] = true,
 				["use_unit"] = true,
 				["use_totemType"] = true,
 				["spellName"] = 2062,
 				["type"] = "status",
-				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 				["unit"] = "player",
 				["event"] = "Cooldown Progress (Spell)",
-				["totemType"] = 2,
+				["totemName"] = 0,
 				["subeventPrefix"] = "SPELL",
 				["use_spellName"] = true,
 				["inverse"] = true,
-				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
-				["use_totemName"] = true,
-				["totemName"] = 0,
+				["showOn"] = "showOnCooldown",
+				["totemType"] = 2,
 				["names"] = {
 					"Searing Flames", -- [1]
 				},
+				["unevent"] = "auto",
 			},
 			["stickyDuration"] = false,
 			["rotation"] = 0,
@@ -9693,16 +9702,16 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "status",
 						["subeventSuffix"] = "_CAST_START",
-						["use_inverse"] = false,
 						["event"] = "Cooldown Progress (Spell)",
 						["subeventPrefix"] = "SPELL",
-						["use_spellName"] = true,
 						["spellName"] = 2894,
+						["use_spellName"] = true,
 						["use_unit"] = true,
 						["unevent"] = "auto",
+						["showOn"] = "showOnCooldown",
+						["unit"] = "player",
 						["names"] = {
 						},
-						["unit"] = "player",
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -10224,17 +10233,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 14914,
 			},
 			["desaturate"] = false,
@@ -10363,17 +10372,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["spellName"] = 73680,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = false,
@@ -10759,16 +10768,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 6807,
 			},
 			["text"] = true,
@@ -10890,17 +10900,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["spellName"] = 116847,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 116847,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = true,
@@ -11213,17 +11223,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 12292,
 			},
 			["desaturate"] = false,
@@ -11458,16 +11468,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 107428,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["text"] = true,
@@ -12126,20 +12137,20 @@ WeakAurasSaved = {
 			},
 			["trigger"] = {
 				["type"] = "status",
-				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
-				["use_inverse"] = false,
-				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 				},
+				["use_unit"] = true,
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
-				["use_unit"] = true,
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 147489,
+				["unevent"] = "auto",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -12365,17 +12376,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["spellName"] = 22812,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = false,
@@ -12585,24 +12596,25 @@ WeakAurasSaved = {
 				},
 			},
 			["trigger"] = {
+				["spellId"] = "112948",
+				["ownOnly"] = true,
+				["subeventPrefix"] = "SPELL",
 				["custom_hide"] = "timed",
 				["type"] = "status",
-				["spellId"] = "112948",
-				["subeventSuffix"] = "_CAST_START",
+				["unevent"] = "auto",
+				["spellName"] = 102355,
+				["event"] = "Cooldown Progress (Spell)",
+				["unit"] = "target",
+				["use_spellName"] = true,
+				["use_spellId"] = true,
+				["inverse"] = true,
 				["names"] = {
 					"Weakened Armor", -- [1]
 				},
-				["ownOnly"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["subeventPrefix"] = "SPELL",
-				["spellName"] = 102355,
-				["use_spellId"] = true,
-				["inverse"] = true,
-				["unit"] = "target",
-				["use_spellName"] = true,
-				["use_unit"] = true,
-				["unevent"] = "auto",
+				["showOn"] = "showOnCooldown",
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HARMFUL",
+				["use_unit"] = true,
 			},
 			["text"] = true,
 			["sparkRotation"] = 0,
@@ -12990,17 +13002,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["spellName"] = 107428,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = false,
@@ -13714,17 +13726,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 26297,
 			},
 			["desaturate"] = false,
@@ -13970,17 +13982,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 33395,
 			},
 			["desaturate"] = false,
@@ -14407,20 +14419,20 @@ WeakAurasSaved = {
 			},
 			["trigger"] = {
 				["type"] = "status",
-				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
-				["use_inverse"] = false,
-				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 				},
+				["use_unit"] = true,
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
-				["use_unit"] = true,
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 152173,
+				["unevent"] = "auto",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -14553,17 +14565,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 84714,
 			},
 			["desaturate"] = false,
@@ -14867,16 +14879,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 122470,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
@@ -15119,19 +15132,19 @@ WeakAurasSaved = {
 			},
 			["trigger"] = {
 				["type"] = "status",
-				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
-				["use_inverse"] = true,
+				["spellName"] = 107570,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 107570,
-				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
-				["use_targetRequired"] = true,
+				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_targetRequired"] = true,
+				["showOn"] = "showOnReady",
 				["subeventPrefix"] = "SPELL",
+				["unevent"] = "auto",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -15481,17 +15494,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 120668,
 			},
 			["desaturate"] = false,
@@ -16276,17 +16289,17 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "status",
 						["subeventSuffix"] = "_CAST_START",
-						["use_inverse"] = true,
+						["custom_hide"] = "timed",
 						["event"] = "Cooldown Progress (Spell)",
 						["subeventPrefix"] = "SPELL",
-						["custom_hide"] = "timed",
-						["use_spellName"] = true,
 						["spellName"] = 2894,
+						["use_spellName"] = true,
 						["use_unit"] = true,
-						["unevent"] = "auto",
 						["names"] = {
 						},
+						["showOn"] = "showOnReady",
 						["unit"] = "player",
+						["unevent"] = "auto",
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -16354,19 +16367,19 @@ WeakAurasSaved = {
 			},
 			["trigger"] = {
 				["type"] = "status",
-				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
-				["use_inverse"] = true,
-				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 				},
-				["use_spellName"] = true,
 				["use_unit"] = true,
-				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
+				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["use_targetRequired"] = true,
+				["unevent"] = "auto",
 				["spellName"] = 112048,
 			},
 			["desaturate"] = false,
@@ -16801,17 +16814,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 33878,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -18046,24 +18059,24 @@ WeakAurasSaved = {
 				},
 			},
 			["trigger"] = {
-				["debuffType"] = "HARMFUL",
+				["spellName"] = 102355,
 				["type"] = "status",
 				["spellId"] = "44457",
+				["subeventSuffix"] = "_CAST_START",
+				["unit"] = "target",
 				["unevent"] = "auto",
-				["subeventPrefix"] = "SPELL",
-				["use_inverse"] = true,
 				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 					"Frost Bomb", -- [1]
 				},
-				["use_unit"] = true,
 				["use_spellId"] = true,
-				["inverse"] = true,
 				["use_spellName"] = true,
-				["spellName"] = 102355,
-				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "target",
+				["inverse"] = true,
+				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
+				["use_unit"] = true,
 				["custom_hide"] = "timed",
+				["debuffType"] = "HARMFUL",
 			},
 			["desaturate"] = false,
 			["rotation"] = 0,
@@ -18696,16 +18709,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 114049,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["text"] = true,
@@ -19020,17 +19034,18 @@ WeakAurasSaved = {
 				["type"] = "status",
 				["unevent"] = "auto",
 				["debuffType"] = "HELPFUL",
-				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 				},
+				["use_unit"] = true,
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
-				["use_unit"] = true,
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 18499,
 			},
 			["text"] = true,
@@ -19250,16 +19265,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 88684,
 			},
 			["text"] = true,
@@ -19828,18 +19844,18 @@ WeakAurasSaved = {
 				["type"] = "status",
 				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["unit"] = "player",
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 					"Mindbender", -- [1]
 				},
-				["subeventPrefix"] = "SPELL",
-				["unevent"] = "auto",
+				["use_spellName"] = true,
 				["use_unit"] = true,
+				["unevent"] = "auto",
+				["showOn"] = "showOnReady",
 				["use_remaining"] = false,
+				["subeventPrefix"] = "SPELL",
 				["spellName"] = 34433,
 			},
 			["selfPoint"] = "CENTER",
@@ -20786,11 +20802,11 @@ WeakAurasSaved = {
 				["subeventSuffix"] = "_CAST_START",
 				["use_spellName"] = true,
 				["inverse"] = true,
-				["unit"] = "player",
 				["totemName"] = 0,
-				["use_inverse"] = true,
+				["showOn"] = "showOnReady",
 				["use_unit"] = true,
 				["custom_hide"] = "timed",
+				["unit"] = "player",
 			},
 			["desaturate"] = false,
 			["rotation"] = 0,
@@ -20863,16 +20879,16 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "status",
 						["subeventSuffix"] = "_CAST_START",
-						["use_inverse"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["subeventPrefix"] = "SPELL",
-						["use_spellName"] = true,
 						["debuffType"] = "HELPFUL",
+						["use_spellName"] = true,
 						["unit"] = "player",
 						["names"] = {
 						},
-						["unevent"] = "auto",
+						["showOn"] = "showOnReady",
 						["use_unit"] = true,
+						["unevent"] = "auto",
 						["spellName"] = 2894,
 					},
 					["untrigger"] = {
@@ -20942,7 +20958,7 @@ WeakAurasSaved = {
 				},
 			},
 			["trigger"] = {
-				["use_inverse"] = true,
+				["use_totemName"] = true,
 				["use_unit"] = true,
 				["use_totemType"] = true,
 				["spellName"] = 2062,
@@ -20951,17 +20967,17 @@ WeakAurasSaved = {
 				["subeventPrefix"] = "SPELL",
 				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
-				["totemType"] = 2,
+				["totemName"] = 0,
 				["subeventSuffix"] = "_CAST_START",
 				["use_spellName"] = true,
 				["inverse"] = true,
-				["unit"] = "player",
 				["custom_hide"] = "timed",
-				["use_totemName"] = true,
-				["totemName"] = 0,
+				["showOn"] = "showOnReady",
+				["totemType"] = 2,
 				["names"] = {
 					"Searing Flames", -- [1]
 				},
+				["unit"] = "player",
 			},
 			["desaturate"] = false,
 			["rotation"] = 0,
@@ -21029,16 +21045,16 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "status",
 						["subeventSuffix"] = "_CAST_START",
-						["use_inverse"] = false,
 						["event"] = "Cooldown Progress (Spell)",
 						["subeventPrefix"] = "SPELL",
-						["use_spellName"] = true,
 						["spellName"] = 2894,
+						["use_spellName"] = true,
 						["use_unit"] = true,
 						["unevent"] = "auto",
+						["showOn"] = "showOnCooldown",
+						["unit"] = "player",
 						["names"] = {
 						},
-						["unit"] = "player",
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -22129,17 +22145,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 88684,
 			},
 			["desaturate"] = false,
@@ -22286,17 +22302,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 114049,
 			},
 			["desaturate"] = false,
@@ -22542,17 +22558,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["spellName"] = 107428,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 107428,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -23061,17 +23077,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["spellName"] = 33878,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 33878,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = true,
@@ -23295,17 +23311,17 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "status",
 						["subeventSuffix"] = "_CAST_START",
-						["use_inverse"] = false,
+						["debuffType"] = "HELPFUL",
 						["event"] = "Cooldown Progress (Spell)",
 						["subeventPrefix"] = "SPELL",
-						["debuffType"] = "HELPFUL",
-						["use_spellName"] = true,
 						["unit"] = "player",
+						["use_spellName"] = true,
 						["names"] = {
 						},
-						["unevent"] = "auto",
 						["use_unit"] = true,
+						["showOn"] = "showOnCooldown",
 						["spellName"] = 2894,
+						["unevent"] = "auto",
 						["custom_hide"] = "timed",
 					},
 					["untrigger"] = {
@@ -23932,16 +23948,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 120517,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
@@ -24157,24 +24174,24 @@ WeakAurasSaved = {
 				},
 			},
 			["trigger"] = {
-				["debuffType"] = "HARMFUL",
+				["spellName"] = 77758,
 				["type"] = "status",
 				["spellId"] = "44457",
+				["subeventSuffix"] = "_CAST_START",
+				["subeventPrefix"] = "SPELL",
 				["unevent"] = "auto",
+				["event"] = "Cooldown Progress (Spell)",
+				["unit"] = "target",
+				["use_spellId"] = true,
+				["use_spellName"] = true,
+				["inverse"] = true,
 				["names"] = {
 					"Frost Bomb", -- [1]
 				},
-				["use_inverse"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["unit"] = "target",
-				["subeventSuffix"] = "_CAST_START",
-				["use_spellId"] = true,
-				["inverse"] = true,
+				["showOn"] = "showOnReady",
 				["use_unit"] = true,
-				["use_spellName"] = true,
-				["spellName"] = 77758,
-				["subeventPrefix"] = "SPELL",
 				["custom_hide"] = "timed",
+				["debuffType"] = "HARMFUL",
 			},
 			["desaturate"] = false,
 			["rotation"] = 0,
@@ -24963,17 +24980,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 107428,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -25226,7 +25243,7 @@ WeakAurasSaved = {
 				},
 			},
 			["trigger"] = {
-				["use_inverse"] = false,
+				["use_totemName"] = true,
 				["use_unit"] = true,
 				["use_totemType"] = true,
 				["spellName"] = 2062,
@@ -25239,13 +25256,13 @@ WeakAurasSaved = {
 				["subeventSuffix"] = "_CAST_START",
 				["use_spellName"] = true,
 				["inverse"] = true,
-				["unit"] = "player",
 				["totemType"] = 2,
-				["use_totemName"] = true,
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 					"Searing Flames", -- [1]
 				},
 				["custom_hide"] = "timed",
+				["unit"] = "player",
 			},
 			["desaturate"] = false,
 			["rotation"] = 0,
@@ -25318,16 +25335,16 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "status",
 						["subeventSuffix"] = "_CAST_START",
-						["use_inverse"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["subeventPrefix"] = "SPELL",
-						["use_spellName"] = true,
 						["debuffType"] = "HELPFUL",
+						["use_spellName"] = true,
 						["unit"] = "player",
 						["names"] = {
 						},
-						["unevent"] = "auto",
+						["showOn"] = "showOnReady",
 						["use_unit"] = true,
+						["unevent"] = "auto",
 						["spellName"] = 2894,
 					},
 					["untrigger"] = {
@@ -25400,17 +25417,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 6807,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -25741,16 +25758,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 115098,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
@@ -26153,17 +26171,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 724,
 			},
 			["desaturate"] = false,
@@ -26286,23 +26304,23 @@ WeakAurasSaved = {
 				},
 			},
 			["trigger"] = {
-				["spellName"] = 102355,
+				["fullscan"] = true,
 				["type"] = "status",
 				["spellId"] = "112948",
-				["unevent"] = "auto",
-				["custom_hide"] = "timed",
-				["use_inverse"] = false,
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["unit"] = "target",
-				["use_spellName"] = true,
-				["use_spellId"] = true,
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HARMFUL",
+				["unit"] = "target",
+				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 				},
-				["subeventSuffix"] = "_CAST_START",
+				["use_spellId"] = true,
+				["use_spellName"] = true,
+				["use_unit"] = true,
 				["subeventPrefix"] = "SPELL",
-				["fullscan"] = true,
+				["showOn"] = "showOnCooldown",
+				["unevent"] = "auto",
+				["custom_hide"] = "timed",
+				["spellName"] = 102355,
 			},
 			["desaturate"] = true,
 			["rotation"] = 0,
@@ -26444,17 +26462,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["spellName"] = 115295,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 115295,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -27379,16 +27397,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["subeventSuffix"] = "_CAST_START",
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["unit"] = "player",
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 121253,
+				["use_spellName"] = true,
 				["use_unit"] = true,
-				["unevent"] = "auto",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["unevent"] = "auto",
 				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
@@ -28134,20 +28153,20 @@ WeakAurasSaved = {
 			},
 			["trigger"] = {
 				["type"] = "status",
-				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
-				["use_inverse"] = true,
-				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 				},
+				["use_unit"] = true,
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
-				["use_unit"] = true,
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["unevent"] = "auto",
 				["spellName"] = 152277,
 			},
 			["desaturate"] = false,
@@ -28285,17 +28304,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 22812,
 			},
 			["desaturate"] = false,
@@ -28442,23 +28461,23 @@ WeakAurasSaved = {
 			},
 			["trigger"] = {
 				["spellId"] = "44457",
-				["use_inverse"] = false,
 				["use_unit"] = true,
-				["spellName"] = 107428,
 				["subeventPrefix"] = "SPELL",
-				["type"] = "status",
+				["spellName"] = 107428,
 				["custom_hide"] = "timed",
-				["unevent"] = "auto",
+				["type"] = "status",
 				["unit"] = "target",
-				["custom_type"] = "status",
+				["subeventSuffix"] = "_CAST_START",
+				["check"] = "update",
+				["debuffType"] = "HARMFUL",
 				["event"] = "Cooldown Progress (Spell)",
-				["use_spellId"] = true,
 				["custom"] = "function()\n    return not UnitIsEnemy(\"player\", \"target\"); \nend\n\n\n\n",
 				["use_spellName"] = true,
+				["use_spellId"] = true,
 				["inverse"] = true,
-				["debuffType"] = "HARMFUL",
-				["check"] = "update",
-				["subeventSuffix"] = "_CAST_START",
+				["custom_type"] = "status",
+				["showOn"] = "showOnCooldown",
+				["unevent"] = "auto",
 				["names"] = {
 				},
 				["fullscan"] = true,
@@ -28611,17 +28630,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 115288,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -29338,23 +29357,23 @@ WeakAurasSaved = {
 				},
 			},
 			["trigger"] = {
-				["spellName"] = 77758,
+				["fullscan"] = true,
 				["type"] = "status",
 				["spellId"] = "112948",
-				["unevent"] = "auto",
-				["use_unit"] = true,
-				["use_inverse"] = false,
-				["event"] = "Cooldown Progress (Spell)",
-				["subeventPrefix"] = "SPELL",
 				["subeventSuffix"] = "_CAST_START",
-				["use_spellId"] = true,
+				["custom_hide"] = "timed",
+				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 				},
-				["custom_hide"] = "timed",
-				["unit"] = "target",
+				["use_spellId"] = true,
 				["use_spellName"] = true,
+				["use_unit"] = true,
 				["debuffType"] = "HARMFUL",
-				["fullscan"] = true,
+				["showOn"] = "showOnCooldown",
+				["unit"] = "target",
+				["unevent"] = "auto",
+				["spellName"] = 77758,
 			},
 			["desaturate"] = true,
 			["rotation"] = 0,
@@ -29673,16 +29692,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 120,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
@@ -30256,17 +30276,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 108978,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -30826,17 +30846,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 129250,
 			},
 			["desaturate"] = false,
@@ -31181,17 +31201,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 88685,
 			},
 			["desaturate"] = false,
@@ -31726,16 +31746,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 107428,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
@@ -32818,16 +32839,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 116847,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
@@ -33515,16 +33537,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 47540,
 			},
 			["text"] = true,
@@ -33730,16 +33753,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 129250,
 			},
 			["text"] = true,
@@ -34163,17 +34187,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 10060,
 			},
 			["desaturate"] = false,
@@ -34550,16 +34574,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 84714,
 			},
 			["text"] = true,
@@ -34759,21 +34784,22 @@ WeakAurasSaved = {
 			},
 			["trigger"] = {
 				["charges_operator"] = "==",
-				["type"] = "status",
-				["unevent"] = "auto",
-				["debuffType"] = "HELPFUL",
-				["use_charges"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
 				["charges"] = "0",
-				["use_spellName"] = true,
+				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["names"] = {
 				},
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
+				["use_charges"] = true,
+				["event"] = "Cooldown Progress (Spell)",
 				["unit"] = "player",
-				["custom_hide"] = "timed",
+				["use_unit"] = true,
+				["use_spellName"] = true,
+				["unevent"] = "auto",
 				["spellName"] = 115295,
+				["showOn"] = "showOnCooldown",
+				["subeventPrefix"] = "SPELL",
+				["type"] = "status",
+				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
 			["progressPrecision"] = 0,
@@ -35014,16 +35040,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 88685,
 			},
 			["text"] = true,
@@ -35158,17 +35185,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 51533,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -35948,17 +35975,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 14914,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -38230,17 +38257,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 116847,
 			},
 			["desaturate"] = false,
@@ -39251,17 +39278,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 11129,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -39491,16 +39518,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 109964,
 			},
 			["text"] = true,
@@ -39727,16 +39755,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 33076,
 			},
 			["text"] = true,
@@ -41089,17 +41118,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 121135,
 			},
 			["desaturate"] = false,
@@ -41204,17 +41233,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["spellName"] = 11129,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = false,
@@ -41677,16 +41706,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 11129,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
@@ -41963,17 +41993,17 @@ WeakAurasSaved = {
 				["subeventPrefix"] = "SPELL",
 				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
-				["totemName"] = 0,
+				["totemType"] = 2,
 				["subeventSuffix"] = "_CAST_START",
 				["use_spellName"] = true,
 				["inverse"] = true,
-				["unit"] = "player",
 				["custom_hide"] = "timed",
-				["use_inverse"] = false,
-				["totemType"] = 2,
+				["showOn"] = "showOnCooldown",
+				["totemName"] = 0,
 				["names"] = {
 					"Searing Flames", -- [1]
 				},
+				["unit"] = "player",
 			},
 			["desaturate"] = true,
 			["rotation"] = 0,
@@ -42042,16 +42072,16 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "status",
 						["subeventSuffix"] = "_CAST_START",
-						["use_inverse"] = false,
 						["event"] = "Cooldown Progress (Spell)",
 						["subeventPrefix"] = "SPELL",
-						["use_spellName"] = true,
 						["spellName"] = 2894,
+						["use_spellName"] = true,
 						["use_unit"] = true,
 						["unevent"] = "auto",
+						["showOn"] = "showOnCooldown",
+						["unit"] = "player",
 						["names"] = {
 						},
-						["unit"] = "player",
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -42174,7 +42204,7 @@ WeakAurasSaved = {
 				},
 			},
 			["trigger"] = {
-				["use_inverse"] = true,
+				["use_totemName"] = true,
 				["subeventPrefix"] = "SPELL",
 				["use_totemType"] = true,
 				["spellName"] = 5394,
@@ -42183,15 +42213,15 @@ WeakAurasSaved = {
 				["totemName"] = "Healing Stream Totem",
 				["event"] = "Cooldown Progress (Spell)",
 				["totemType"] = 3,
-				["use_totemName"] = true,
-				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
-				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["names"] = {
 				},
+				["custom_hide"] = "timed",
+				["showOn"] = "showOnReady",
 				["use_unit"] = true,
 				["debuffType"] = "HELPFUL",
+				["subeventSuffix"] = "_CAST_START",
 			},
 			["desaturate"] = false,
 			["rotation"] = 0,
@@ -42441,17 +42471,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 60103,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -42835,24 +42865,25 @@ WeakAurasSaved = {
 				},
 			},
 			["trigger"] = {
+				["remaining_operator"] = "<",
+				["use_unit"] = true,
+				["remaining"] = "171.5",
 				["debuffType"] = "HELPFUL",
-				["type"] = "status",
+				["use_remaining"] = true,
+				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
-				["unevent"] = "auto",
+				["event"] = "Cooldown Progress (Spell)",
+				["unit"] = "player",
 				["names"] = {
 				},
-				["remaining_operator"] = "<",
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["subeventSuffix"] = "_CAST_START",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
-				["unit"] = "player",
-				["remaining"] = "171.5",
-				["custom_hide"] = "timed",
-				["use_remaining"] = true,
+				["unevent"] = "auto",
+				["showOn"] = "showOnCooldown",
+				["type"] = "status",
 				["spellName"] = 115176,
+				["custom_hide"] = "timed",
 			},
 			["text"] = true,
 			["borderOffset"] = 5,
@@ -43485,7 +43516,7 @@ WeakAurasSaved = {
 			},
 			["anchorPoint"] = "CENTER",
 		},
-		["Chi Brew Timer MW"] = {
+		["Impending Victory Timer"] = {
 			["textFlags"] = "None",
 			["stacksSize"] = 12,
 			["user_x"] = 0,
@@ -43505,14 +43536,271 @@ WeakAurasSaved = {
 			["fontFlags"] = "OUTLINE",
 			["selfPoint"] = "CENTER",
 			["barColor"] = {
-				0.12156862745098, -- [1]
-				1, -- [2]
-				0.474509803921569, -- [3]
+				0.780392156862745, -- [1]
+				0.611764705882353, -- [2]
+				0.431372549019608, -- [3]
 				0.75, -- [4]
 			},
 			["desaturate"] = false,
-			["rotation"] = 0,
+			["progressPrecision"] = 0,
 			["sparkOffsetY"] = 0,
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["single"] = 6,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+						true, -- [2]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["regionType"] = "aurabar",
+			["stacks"] = false,
+			["blendMode"] = "BLEND",
+			["texture"] = "BantoBar",
+			["textFont"] = "ABF",
+			["stacksFont"] = "ABF",
+			["auto"] = false,
+			["compress"] = false,
+			["timerFont"] = "ABF",
+			["alpha"] = 0.75,
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 103840,
+			},
+			["desaturateBackground"] = false,
+			["parent"] = "Impending Victory 2.0",
+			["customTextUpdate"] = "update",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturateForeground"] = false,
+			["borderInset"] = 11,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["displayTextLeft"] = " ",
+			["inverse"] = false,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "fade",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["names"] = {
+				},
+				["use_spellName"] = true,
+				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
+				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
+				["spellName"] = 103840,
+			},
+			["text"] = true,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["stickyDuration"] = false,
+			["borderOffset"] = 5,
+			["sparkWidth"] = 10,
+			["sparkRotationMode"] = "AUTO",
+			["spark"] = false,
+			["height"] = 30,
+			["timerFlags"] = "None",
+			["id"] = "Impending Victory Timer",
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = "%s",
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = "%p",
+			["icon"] = false,
+			["mirror"] = false,
+			["borderEdge"] = "None",
+			["border"] = false,
+			["borderSize"] = 16,
+			["barInFront"] = true,
+			["icon_side"] = "LEFT",
+			["sparkOffsetX"] = 0,
+			["user_y"] = 0,
+			["sparkHeight"] = 30,
+			["timer"] = true,
+			["stacksContainment"] = "INSIDE",
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["timerSize"] = 16,
+			["crop_y"] = 0.41,
+			["additional_triggers"] = {
+			},
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["frameStrata"] = 1,
+			["width"] = 30,
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["rotation"] = 0,
+			["numTriggers"] = 1,
+			["sparkDesature"] = false,
+			["orientation"] = "VERTICAL_INVERSE",
+			["crop_x"] = 0.409999996423721,
+			["textSize"] = 14,
+			["zoom"] = 0,
+		},
+		["Chi Brew Usable with Less Than 2 Chi MW"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["customText"] = "function()\n    local charges = GetSpellCharges(\"115399\");\n    return charges;\nend\n\n\n\n\n\n",
+			["untrigger"] = {
+				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return true\n    end\n    return false\nend\n\n\n\n\n\n",
+				["spellName"] = 115399,
+			},
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["fontFlags"] = "OUTLINE",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["debuffType"] = "HELPFUL",
+				["type"] = "custom",
+				["subeventPrefix"] = "SPELL",
+				["unevent"] = "auto",
+				["names"] = {
+				},
+				["use_inverse"] = true,
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["subeventSuffix"] = "_CAST_START",
+				["use_spellName"] = true,
+				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return false\n    end\n    return true\nend\n\n\n\n",
+				["unit"] = "player",
+				["check"] = "update",
+				["spellName"] = 115399,
+				["custom_type"] = "status",
+				["custom_hide"] = "timed",
+			},
+			["desaturate"] = false,
+			["rotation"] = 0,
+			["font"] = "ABF",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.749166548252106, -- [4]
+			},
+			["height"] = 32,
+			["parent"] = "Chi Brew 1.0 MW",
 			["load"] = {
 				["talent"] = {
 					["single"] = 9,
@@ -43547,13 +43835,106 @@ WeakAurasSaved = {
 					},
 				},
 			},
+			["crop_x"] = 0.41,
+			["stickyDuration"] = false,
+			["fontSize"] = 14,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["xOffset"] = 0,
+			["inverse"] = false,
+			["mirror"] = false,
+			["yOffset"] = 0,
+			["regionType"] = "icon",
+			["anchorPoint"] = "CENTER",
+			["blendMode"] = "BLEND",
+			["customTextUpdate"] = "update",
+			["frameStrata"] = 1,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = true,
+					["glow_frame"] = "WeakAuras:Chi Brew Usable with Less Than 2 Chi MW",
+					["glow_action"] = "show",
+				},
+				["finish"] = {
+				},
+			},
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "status",
+						["unevent"] = "auto",
+						["power_operator"] = "<=",
+						["use_power"] = true,
+						["event"] = "Chi Power",
+						["subeventPrefix"] = "SPELL",
+						["power"] = "2",
+						["unit"] = "player",
+						["use_unit"] = true,
+						["subeventSuffix"] = "_CAST_START",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+			},
+			["icon"] = true,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Chi Brew Usable with Less Than 2 Chi MW",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["alpha"] = 1,
+			["width"] = 32,
+			["selfPoint"] = "CENTER",
+			["desaturateForeground"] = false,
+			["numTriggers"] = 2,
+			["crop_y"] = 0.41,
+			["orientation"] = "VERTICAL",
+			["displayIcon"] = "Interface\\Icons\\ability_monk_chibrew",
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
+		},
+		["Bladestorm Up"] = {
+			["sparkWidth"] = 10,
+			["stacksSize"] = 12,
+			["user_x"] = 0,
+			["xOffset"] = 0,
+			["stacksFlags"] = "None",
+			["yOffset"] = 0,
+			["anchorPoint"] = "CENTER",
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["sameTexture"] = true,
+			["rotateText"] = "NONE",
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				0.901960784313726, -- [1]
+				0.2, -- [2]
+				0.301960784313726, -- [3]
+				0.75, -- [4]
+			},
+			["desaturate"] = false,
+			["rotation"] = 0,
+			["sparkOffsetY"] = 0,
+			["crop_y"] = 0.41,
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
 			["regionType"] = "aurabar",
 			["stacks"] = false,
 			["blendMode"] = "BLEND",
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
-			["zoom"] = 0,
+			["stacksFont"] = "ABF",
 			["auto"] = false,
 			["compress"] = false,
 			["timerFont"] = "ABF",
@@ -43574,77 +43955,76 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["untrigger"] = {
-				["custom"] = "-- CD UNTRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return false\n    end\n    return true\nend",
-				["spellName"] = 115399,
+				["spellName"] = 46924,
 			},
 			["desaturateBackground"] = false,
-			["parent"] = "Chi Brew 1.0 MW",
+			["zoom"] = 0,
 			["customTextUpdate"] = "update",
-			["textColor"] = {
+			["textSize"] = 14,
+			["displayTextLeft"] = " ",
+			["icon"] = false,
+			["borderOffset"] = 5,
+			["borderInset"] = 11,
+			["numTriggers"] = 1,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["preset"] = "fade",
+					["duration_type"] = "seconds",
+				},
+			},
+			["trigger"] = {
+				["type"] = "aura",
+				["unevent"] = "auto",
+				["spellName"] = 46924,
+				["event"] = "Cooldown Progress (Spell)",
+				["names"] = {
+					"Bladestorm", -- [1]
+				},
+				["custom_hide"] = "timed",
+				["use_spellName"] = true,
+				["spellIds"] = {
+				},
+				["unit"] = "player",
+				["subeventSuffix"] = "_CAST_START",
+				["subeventPrefix"] = "SPELL",
+				["use_unit"] = true,
+				["debuffType"] = "HELPFUL",
+			},
+			["text"] = true,
+			["progressPrecision"] = 0,
+			["stickyDuration"] = false,
+			["foregroundColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["displayTextLeft"] = " ",
-			["borderInset"] = 11,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["crop_y"] = 0.41,
-			["inverse"] = false,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["type"] = "preset",
-					["duration_type"] = "seconds",
-					["preset"] = "fade",
-				},
-			},
-			["trigger"] = {
-				["debuffType"] = "HELPFUL",
-				["type"] = "custom",
-				["subeventSuffix"] = "_CAST_START",
-				["custom_type"] = "status",
-				["subeventPrefix"] = "SPELL",
-				["names"] = {
-				},
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["customDuration"] = "-- DURATION\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax, cdStart, cdDuration = GetSpellCharges(SPELL_ID)\n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val) return (val >= 0) end \n    local timeCurrent = GetTime();\n    if (cdStart - cdDuration) > timeCurrent and CHARGES(chargesCurrent) then -- Fully available\n        return 0,0\n    elseif (cdStart - cdDuration) <= timeCurrent and timeCurrent <= (cdStart + cdDuration) and CHARGES(chargesCurrent) then -- Cooldown active\n        return cdDuration, cdStart+cdDuration\n    end\n    return 0,0\nend",
-				["use_spellName"] = true,
-				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return true\n    end\n    return false\nend\n\n\n\n",
-				["unit"] = "player",
-				["check"] = "update",
-				["unevent"] = "auto",
-				["custom_hide"] = "timed",
-				["spellName"] = 115399,
-			},
-			["text"] = true,
-			["borderColor"] = {
+			["timerColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				0.5, -- [4]
+				1, -- [4]
 			},
-			["stickyDuration"] = false,
-			["borderOffset"] = 5,
-			["sparkWidth"] = 10,
-			["sparkRotationMode"] = "AUTO",
-			["spark"] = false,
+			["backgroundColor"] = {
+				0.501960784313726, -- [1]
+				0.501960784313726, -- [2]
+				0.501960784313726, -- [3]
+				0.25, -- [4]
+			},
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
 			["height"] = 30,
 			["timerFlags"] = "None",
-			["id"] = "Chi Brew Timer MW",
+			["additional_triggers"] = {
+			},
 			["sparkBlendMode"] = "ADD",
 			["backdropColor"] = {
 				1, -- [1]
@@ -43654,24 +44034,53 @@ WeakAurasSaved = {
 			},
 			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["displayStacks"] = "%s",
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["single"] = 18,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+						true, -- [2]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
 			},
-			["displayTextRight"] = "%p",
-			["textSize"] = 14,
+			["timerSize"] = 16,
+			["textFlags"] = "None",
 			["mirror"] = false,
 			["borderEdge"] = "None",
 			["border"] = false,
 			["borderSize"] = 16,
-			["barInFront"] = true,
+			["timer"] = true,
 			["icon_side"] = "LEFT",
 			["sparkOffsetX"] = 0,
 			["user_y"] = 0,
 			["sparkHeight"] = 30,
-			["timer"] = true,
+			["barInFront"] = true,
 			["stacksContainment"] = "INSIDE",
 			["stacksColor"] = {
 				1, -- [1]
@@ -43679,26 +44088,25 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["timerSize"] = 16,
-			["icon"] = false,
-			["additional_triggers"] = {
-			},
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["frameStrata"] = 1,
+			["displayTextRight"] = "%p",
+			["desaturateForeground"] = false,
+			["id"] = "Bladestorm Up",
+			["sparkRotation"] = 0,
+			["frameStrata"] = 4,
 			["width"] = 30,
-			["foregroundColor"] = {
+			["sparkRotationMode"] = "AUTO",
+			["spark"] = false,
+			["inverse"] = false,
+			["sparkDesature"] = false,
+			["orientation"] = "VERTICAL_INVERSE",
+			["crop_x"] = 0.409999996423721,
+			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["progressPrecision"] = 0,
-			["numTriggers"] = 1,
-			["sparkDesature"] = false,
-			["orientation"] = "VERTICAL_INVERSE",
-			["crop_x"] = 0.409999996423721,
-			["desaturateForeground"] = false,
-			["stacksFont"] = "ABF",
+			["parent"] = "Bladestorm 1.0",
 		},
 		["Holy Word: Sanctuary Unusable"] = {
 			["user_y"] = 0,
@@ -43744,17 +44152,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 88685,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -44045,47 +44453,75 @@ WeakAurasSaved = {
 				0.241936385631561, -- [4]
 			},
 		},
-		["Bladestorm Up"] = {
-			["sparkWidth"] = 10,
+		["Chi Brew Timer MW"] = {
+			["textFlags"] = "None",
 			["stacksSize"] = 12,
 			["user_x"] = 0,
 			["xOffset"] = 0,
 			["stacksFlags"] = "None",
 			["yOffset"] = 0,
 			["anchorPoint"] = "CENTER",
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
+			["sparkRotation"] = 0,
 			["sameTexture"] = true,
 			["rotateText"] = "NONE",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
+			["backgroundColor"] = {
+				0.501960784313726, -- [1]
+				0.501960784313726, -- [2]
+				0.501960784313726, -- [3]
+				0.25, -- [4]
 			},
 			["fontFlags"] = "OUTLINE",
 			["selfPoint"] = "CENTER",
 			["barColor"] = {
-				0.901960784313726, -- [1]
-				0.2, -- [2]
-				0.301960784313726, -- [3]
+				0.12156862745098, -- [1]
+				1, -- [2]
+				0.474509803921569, -- [3]
 				0.75, -- [4]
 			},
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["sparkOffsetY"] = 0,
-			["crop_y"] = 0.41,
+			["load"] = {
+				["talent"] = {
+					["single"] = 9,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
 			["regionType"] = "aurabar",
 			["stacks"] = false,
 			["blendMode"] = "BLEND",
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
-			["stacksFont"] = "ABF",
+			["zoom"] = 0,
 			["auto"] = false,
 			["compress"] = false,
 			["timerFont"] = "ABF",
@@ -44106,76 +44542,77 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["untrigger"] = {
-				["spellName"] = 46924,
+				["custom"] = "-- CD UNTRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return false\n    end\n    return true\nend",
+				["spellName"] = 115399,
 			},
 			["desaturateBackground"] = false,
-			["zoom"] = 0,
+			["parent"] = "Chi Brew 1.0 MW",
 			["customTextUpdate"] = "update",
-			["textSize"] = 14,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["displayTextLeft"] = " ",
-			["icon"] = false,
-			["borderOffset"] = 5,
 			["borderInset"] = 11,
-			["numTriggers"] = 1,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["crop_y"] = 0.41,
+			["inverse"] = false,
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["duration_type"] = "seconds",
+					["type"] = "none",
 				},
 				["main"] = {
-					["type"] = "none",
 					["duration_type"] = "seconds",
+					["type"] = "none",
 				},
 				["finish"] = {
 					["type"] = "preset",
-					["preset"] = "fade",
 					["duration_type"] = "seconds",
+					["preset"] = "fade",
 				},
 			},
 			["trigger"] = {
-				["type"] = "aura",
-				["unevent"] = "auto",
-				["spellName"] = 46924,
-				["event"] = "Cooldown Progress (Spell)",
-				["names"] = {
-					"Bladestorm", -- [1]
-				},
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
-				["spellIds"] = {
-				},
-				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
-				["subeventPrefix"] = "SPELL",
-				["use_unit"] = true,
 				["debuffType"] = "HELPFUL",
+				["type"] = "custom",
+				["subeventSuffix"] = "_CAST_START",
+				["custom_type"] = "status",
+				["subeventPrefix"] = "SPELL",
+				["names"] = {
+				},
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["customDuration"] = "-- DURATION\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax, cdStart, cdDuration = GetSpellCharges(SPELL_ID)\n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val) return (val >= 0) end \n    local timeCurrent = GetTime();\n    if (cdStart - cdDuration) > timeCurrent and CHARGES(chargesCurrent) then -- Fully available\n        return 0,0\n    elseif (cdStart - cdDuration) <= timeCurrent and timeCurrent <= (cdStart + cdDuration) and CHARGES(chargesCurrent) then -- Cooldown active\n        return cdDuration, cdStart+cdDuration\n    end\n    return 0,0\nend",
+				["use_spellName"] = true,
+				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return true\n    end\n    return false\nend\n\n\n\n",
+				["unit"] = "player",
+				["check"] = "update",
+				["unevent"] = "auto",
+				["custom_hide"] = "timed",
+				["spellName"] = 115399,
 			},
 			["text"] = true,
-			["progressPrecision"] = 0,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
 			["stickyDuration"] = false,
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["backgroundColor"] = {
-				0.501960784313726, -- [1]
-				0.501960784313726, -- [2]
-				0.501960784313726, -- [3]
-				0.25, -- [4]
-			},
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["borderOffset"] = 5,
+			["sparkWidth"] = 10,
+			["sparkRotationMode"] = "AUTO",
+			["spark"] = false,
 			["height"] = 30,
 			["timerFlags"] = "None",
-			["additional_triggers"] = {
-			},
+			["id"] = "Chi Brew Timer MW",
 			["sparkBlendMode"] = "ADD",
 			["backdropColor"] = {
 				1, -- [1]
@@ -44185,53 +44622,24 @@ WeakAurasSaved = {
 			},
 			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["displayStacks"] = "%s",
-			["load"] = {
-				["use_never"] = false,
-				["talent"] = {
-					["single"] = 18,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-					},
-				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						true, -- [1]
-						true, -- [2]
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
-			["timerSize"] = 16,
-			["textFlags"] = "None",
+			["displayTextRight"] = "%p",
+			["textSize"] = 14,
 			["mirror"] = false,
 			["borderEdge"] = "None",
 			["border"] = false,
 			["borderSize"] = 16,
-			["timer"] = true,
+			["barInFront"] = true,
 			["icon_side"] = "LEFT",
 			["sparkOffsetX"] = 0,
 			["user_y"] = 0,
 			["sparkHeight"] = 30,
-			["barInFront"] = true,
+			["timer"] = true,
 			["stacksContainment"] = "INSIDE",
 			["stacksColor"] = {
 				1, -- [1]
@@ -44239,25 +44647,26 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["displayTextRight"] = "%p",
-			["desaturateForeground"] = false,
-			["id"] = "Bladestorm Up",
-			["sparkRotation"] = 0,
-			["frameStrata"] = 4,
+			["timerSize"] = 16,
+			["icon"] = false,
+			["additional_triggers"] = {
+			},
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["frameStrata"] = 1,
 			["width"] = 30,
-			["sparkRotationMode"] = "AUTO",
-			["spark"] = false,
-			["inverse"] = false,
-			["sparkDesature"] = false,
-			["orientation"] = "VERTICAL_INVERSE",
-			["crop_x"] = 0.409999996423721,
-			["textColor"] = {
+			["foregroundColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["parent"] = "Bladestorm 1.0",
+			["progressPrecision"] = 0,
+			["numTriggers"] = 1,
+			["sparkDesature"] = false,
+			["orientation"] = "VERTICAL_INVERSE",
+			["crop_x"] = 0.409999996423721,
+			["desaturateForeground"] = false,
+			["stacksFont"] = "ABF",
 		},
 		["Shield Barrier Timer"] = {
 			["textFlags"] = "None",
@@ -44388,16 +44797,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 112048,
 			},
 			["text"] = true,
@@ -45120,9 +45530,9 @@ WeakAurasSaved = {
 			},
 			["trigger"] = {
 				["type"] = "status",
-				["subeventSuffix"] = "_CAST_START",
+				["unevent"] = "auto",
 				["debuffType"] = "HELPFUL",
-				["use_inverse"] = false,
+				["ownOnly"] = true,
 				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 					"Tiger's Lust", -- [1]
@@ -45132,9 +45542,9 @@ WeakAurasSaved = {
 				["spellIds"] = {
 				},
 				["subeventPrefix"] = "SPELL",
-				["unevent"] = "auto",
+				["showOn"] = "showOnCooldown",
 				["use_unit"] = true,
-				["ownOnly"] = true,
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 116841,
 			},
 			["desaturate"] = false,
@@ -45455,16 +45865,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 26297,
 			},
 			["text"] = true,
@@ -45739,20 +46150,20 @@ WeakAurasSaved = {
 			},
 			["trigger"] = {
 				["type"] = "status",
-				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
-				["use_inverse"] = false,
-				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 				},
+				["use_unit"] = true,
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
-				["use_unit"] = true,
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 115176,
+				["unevent"] = "auto",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -45849,7 +46260,7 @@ WeakAurasSaved = {
 				0.75, -- [4]
 			},
 		},
-		["Chi Tracking CB"] = {
+		["Berserking 1.0"] = {
 			["backdropColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -45857,16 +46268,16 @@ WeakAurasSaved = {
 				0.5, -- [4]
 			},
 			["controlledChildren"] = {
-				"Chi Bar Mask CB", -- [1]
-				"Chi Bar CB", -- [2]
-				"Chi Bar Not in Combat CB", -- [3]
-				"Chi Bar Full CB", -- [4]
+				"Berserking Timer Up", -- [1]
+				"Berserking Timer", -- [2]
+				"Berserking Usable", -- [3]
+				"Berserking Unusable", -- [4]
 			},
 			["borderBackdrop"] = "Blizzard Tooltip",
-			["xOffset"] = 0,
+			["xOffset"] = -80,
 			["border"] = false,
-			["yOffset"] = 4,
-			["anchorPoint"] = "CENTER",
+			["yOffset"] = -90,
+			["regionType"] = "group",
 			["borderSize"] = 16,
 			["borderColor"] = {
 				1, -- [1]
@@ -45874,46 +46285,50 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
+			["expanded"] = false,
+			["borderOffset"] = 5,
+			["selfPoint"] = "BOTTOMLEFT",
+			["id"] = "Berserking 1.0",
+			["untrigger"] = {
+			},
+			["frameStrata"] = 1,
+			["additional_triggers"] = {
+			},
+			["borderEdge"] = "None",
+			["borderInset"] = 11,
+			["numTriggers"] = 1,
+			["trigger"] = {
+				["type"] = "aura",
+				["subeventPrefix"] = "SPELL",
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+				["names"] = {
+				},
+				["event"] = "Health",
+				["unit"] = "player",
+			},
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
 			["actions"] = {
 				["start"] = {
 				},
 				["finish"] = {
 				},
 			},
-			["borderOffset"] = 5,
-			["selfPoint"] = "BOTTOMLEFT",
-			["trigger"] = {
-				["unit"] = "player",
-				["type"] = "aura",
-				["debuffType"] = "HELPFUL",
-				["names"] = {
-				},
-			},
-			["frameStrata"] = 1,
-			["regionType"] = "group",
-			["untrigger"] = {
-			},
-			["borderInset"] = 11,
-			["numTriggers"] = 1,
-			["id"] = "Chi Tracking CB",
-			["borderEdge"] = "None",
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-			},
 			["load"] = {
-				["use_class"] = "true",
-				["race"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -45921,16 +46336,15 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "MONK",
+				["race"] = {
 					["multi"] = {
 					},
 				},
 				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
 					["multi"] = {
 					},
 				},
@@ -45939,7 +46353,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["expanded"] = true,
+			["anchorPoint"] = "CENTER",
 		},
 		["Thrash"] = {
 			["backdropColor"] = {
@@ -46061,23 +46475,23 @@ WeakAurasSaved = {
 			["fontFlags"] = "OUTLINE",
 			["selfPoint"] = "CENTER",
 			["trigger"] = {
-				["custom_hide"] = "timed",
-				["type"] = "status",
 				["spellName"] = 81700,
-				["unevent"] = "auto",
-				["unit"] = "player",
-				["remaining_operator"] = "<=",
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["subeventSuffix"] = "_CAST_START",
-				["remaining"] = "12",
-				["subeventPrefix"] = "SPELL",
+				["use_remaining"] = false,
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
+				["use_unit"] = true,
+				["remaining_operator"] = "<=",
+				["event"] = "Cooldown Progress (Spell)",
+				["unit"] = "player",
+				["type"] = "status",
+				["remaining"] = "12",
+				["unevent"] = "auto",
 				["use_spellName"] = true,
-				["use_inverse"] = true,
-				["use_remaining"] = false,
+				["showOn"] = "showOnReady",
+				["subeventPrefix"] = "SPELL",
 				["debuffType"] = "HELPFUL",
+				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
 			["rotation"] = 0,
@@ -46224,17 +46638,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 73920,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -46579,7 +46993,7 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 		},
-		["Berserking 1.0"] = {
+		["Chi Tracking CB"] = {
 			["backdropColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -46587,16 +47001,16 @@ WeakAurasSaved = {
 				0.5, -- [4]
 			},
 			["controlledChildren"] = {
-				"Berserking Timer Up", -- [1]
-				"Berserking Timer", -- [2]
-				"Berserking Usable", -- [3]
-				"Berserking Unusable", -- [4]
+				"Chi Bar Mask CB", -- [1]
+				"Chi Bar CB", -- [2]
+				"Chi Bar Not in Combat CB", -- [3]
+				"Chi Bar Full CB", -- [4]
 			},
 			["borderBackdrop"] = "Blizzard Tooltip",
-			["xOffset"] = -80,
+			["xOffset"] = 0,
 			["border"] = false,
-			["yOffset"] = -90,
-			["regionType"] = "group",
+			["yOffset"] = 4,
+			["anchorPoint"] = "CENTER",
 			["borderSize"] = 16,
 			["borderColor"] = {
 				1, -- [1]
@@ -46604,50 +47018,46 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["expanded"] = false,
-			["borderOffset"] = 5,
-			["selfPoint"] = "BOTTOMLEFT",
-			["id"] = "Berserking 1.0",
-			["untrigger"] = {
-			},
-			["frameStrata"] = 1,
-			["additional_triggers"] = {
-			},
-			["borderEdge"] = "None",
-			["borderInset"] = 11,
-			["numTriggers"] = 1,
-			["trigger"] = {
-				["type"] = "aura",
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["debuffType"] = "HELPFUL",
-				["names"] = {
-				},
-				["event"] = "Health",
-				["unit"] = "player",
-			},
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
 			["actions"] = {
 				["start"] = {
 				},
 				["finish"] = {
 				},
 			},
+			["borderOffset"] = 5,
+			["selfPoint"] = "BOTTOMLEFT",
+			["trigger"] = {
+				["unit"] = "player",
+				["type"] = "aura",
+				["debuffType"] = "HELPFUL",
+				["names"] = {
+				},
+			},
+			["frameStrata"] = 1,
+			["regionType"] = "group",
+			["untrigger"] = {
+			},
+			["borderInset"] = 11,
+			["numTriggers"] = 1,
+			["id"] = "Chi Tracking CB",
+			["borderEdge"] = "None",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
 			["load"] = {
-				["role"] = {
+				["use_class"] = "true",
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -46655,15 +47065,16 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},
 				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
+				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -46672,7 +47083,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["anchorPoint"] = "CENTER",
+			["expanded"] = true,
 		},
 		["Earth Elemental Totem Enhance Up"] = {
 			["user_y"] = 0,
@@ -46869,17 +47280,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 1719,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -47109,16 +47520,16 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "status",
 						["subeventSuffix"] = "_CAST_START",
-						["use_inverse"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["subeventPrefix"] = "SPELL",
-						["use_spellName"] = true,
 						["debuffType"] = "HELPFUL",
+						["use_spellName"] = true,
 						["unit"] = "player",
 						["names"] = {
 						},
-						["unevent"] = "auto",
+						["showOn"] = "showOnReady",
 						["use_unit"] = true,
+						["unevent"] = "auto",
 						["spellName"] = 2894,
 					},
 					["untrigger"] = {
@@ -47369,17 +47780,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["spellName"] = 115098,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 115098,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = true,
@@ -47694,17 +48105,18 @@ WeakAurasSaved = {
 				["type"] = "status",
 				["unevent"] = "auto",
 				["debuffType"] = "HELPFUL",
-				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 				},
+				["use_unit"] = true,
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
-				["use_unit"] = true,
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 147489,
 			},
 			["text"] = true,
@@ -47966,74 +48378,103 @@ WeakAurasSaved = {
 			["displayTextLeft"] = "Spell Reflection",
 			["borderOffset"] = 12,
 		},
-		["TEB Stack Count Below"] = {
-			["outline"] = false,
+		["Chi Burst MW Usable"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
 			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 123986,
+			},
+			["foregroundColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["displayText"] = "+%s",
-			["yOffset"] = -28,
-			["anchorPoint"] = "CENTER",
-			["customTextUpdate"] = "update",
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
 			["actions"] = {
 				["start"] = {
+					["do_glow"] = true,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Chi Burst MW Usable",
 				},
 				["finish"] = {
 				},
 			},
-			["selfPoint"] = "CENTER",
-			["trigger"] = {
-				["type"] = "aura",
-				["spellId"] = "125195",
-				["subeventSuffix"] = "_CAST_START",
-				["fullscan"] = true,
-				["event"] = "Health",
-				["subeventPrefix"] = "SPELL",
-				["custom_hide"] = "timed",
-				["use_spellId"] = true,
-				["spellIds"] = {
+			["fontFlags"] = "OUTLINE",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
 				},
-				["countOperator"] = "<",
-				["count"] = "10",
-				["unit"] = "player",
-				["names"] = {
-					"Tigereye Brew", -- [1]
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
 				},
-				["debuffType"] = "HELPFUL",
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
 			},
-			["stickyDuration"] = false,
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["names"] = {
+				},
+				["use_spellName"] = true,
+				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
+				["showOn"] = "showOnReady",
+				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
+				["spellName"] = 123986,
+			},
+			["desaturate"] = false,
+			["rotation"] = 0,
 			["font"] = "ABF",
-			["height"] = 14.0799751281738,
+			["height"] = 32,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["load"] = {
-				["use_never"] = false,
 				["talent"] = {
+					["single"] = 6,
 					["multi"] = {
 					},
 				},
-				["class"] = {
-					["single"] = "MONK",
+				["spec"] = {
+					["single"] = 2,
 					["multi"] = {
+						true, -- [1]
 					},
 				},
+				["use_talent"] = true,
 				["use_class"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
 				["role"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
-				["use_name"] = false,
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 3,
+				["race"] = {
 					["multi"] = {
-						[3] = true,
+					},
+				},
+				["use_combat"] = true,
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
 					},
 				},
 				["size"] = {
@@ -48041,49 +48482,45 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["fontSize"] = 14,
-			["displayStacks"] = "%s",
-			["regionType"] = "text",
-			["parent"] = "TEB 3.0",
+			["parent"] = "Chi Burst MW 1.0",
+			["selfPoint"] = "CENTER",
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
 			["xOffset"] = 0,
-			["icon"] = true,
+			["mirror"] = false,
+			["inverse"] = false,
+			["regionType"] = "icon",
+			["yOffset"] = 0,
+			["blendMode"] = "BLEND",
+			["anchorPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["frameStrata"] = 1,
+			["customTextUpdate"] = "update",
+			["id"] = "Chi Burst MW Usable",
 			["stacksContainment"] = "INSIDE",
 			["zoom"] = 0,
-			["justify"] = "CENTER",
-			["desaturate"] = true,
+			["auto"] = true,
+			["compress"] = false,
 			["additional_triggers"] = {
 			},
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-					["preset"] = "grow",
-				},
-			},
-			["frameStrata"] = 4,
-			["width"] = 14.7199821472168,
-			["inverse"] = false,
-			["untrigger"] = {
+			["crop_y"] = 0.41,
+			["alpha"] = 1,
+			["width"] = 31.9999332427979,
+			["icon"] = true,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
 			},
 			["numTriggers"] = 1,
-			["id"] = "TEB Stack Count Below",
-			["disjunctive"] = true,
-			["auto"] = true,
-			["stacksPoint"] = "BOTTOM",
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["desaturateForeground"] = false,
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.41,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
 		},
 		["Icy Veins Timer"] = {
 			["textFlags"] = "None",
@@ -48204,16 +48641,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 12472,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
@@ -48317,103 +48755,74 @@ WeakAurasSaved = {
 			},
 			["parent"] = "Icy Veins 1.0",
 		},
-		["Chi Burst MW Usable"] = {
-			["user_y"] = 0,
-			["user_x"] = 0,
+		["TEB Stack Count Below"] = {
+			["outline"] = false,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				0.75, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 123986,
-			},
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
 				1, -- [4]
 			},
-			["desaturateBackground"] = false,
-			["sameTexture"] = true,
+			["displayText"] = "+%s",
+			["yOffset"] = -28,
+			["anchorPoint"] = "CENTER",
+			["customTextUpdate"] = "update",
 			["actions"] = {
 				["start"] = {
-					["do_glow"] = true,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Chi Burst MW Usable",
 				},
 				["finish"] = {
 				},
 			},
-			["fontFlags"] = "OUTLINE",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
+			["selfPoint"] = "CENTER",
 			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["use_inverse"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
-				["names"] = {
-				},
-				["subeventPrefix"] = "SPELL",
+				["type"] = "aura",
+				["spellId"] = "125195",
 				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
+				["fullscan"] = true,
+				["event"] = "Health",
+				["subeventPrefix"] = "SPELL",
 				["custom_hide"] = "timed",
-				["spellName"] = 123986,
+				["use_spellId"] = true,
+				["spellIds"] = {
+				},
+				["countOperator"] = "<",
+				["count"] = "10",
+				["unit"] = "player",
+				["names"] = {
+					"Tigereye Brew", -- [1]
+				},
+				["debuffType"] = "HELPFUL",
 			},
-			["desaturate"] = false,
-			["rotation"] = 0,
+			["stickyDuration"] = false,
 			["font"] = "ABF",
-			["height"] = 32,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["height"] = 14.0799751281738,
 			["load"] = {
+				["use_never"] = false,
 				["talent"] = {
-					["single"] = 6,
 					["multi"] = {
 					},
 				},
-				["spec"] = {
-					["single"] = 2,
+				["class"] = {
+					["single"] = "MONK",
 					["multi"] = {
-						true, -- [1]
 					},
 				},
-				["use_talent"] = true,
 				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
 				["role"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
+				["use_name"] = false,
 				["use_combat"] = true,
-				["class"] = {
-					["single"] = "MONK",
+				["spec"] = {
+					["single"] = 3,
 					["multi"] = {
+						[3] = true,
 					},
 				},
 				["size"] = {
@@ -48421,45 +48830,49 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["parent"] = "Chi Burst MW 1.0",
-			["selfPoint"] = "CENTER",
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
+			["fontSize"] = 14,
+			["displayStacks"] = "%s",
+			["regionType"] = "text",
+			["parent"] = "TEB 3.0",
 			["xOffset"] = 0,
-			["mirror"] = false,
-			["inverse"] = false,
-			["regionType"] = "icon",
-			["yOffset"] = 0,
-			["blendMode"] = "BLEND",
-			["anchorPoint"] = "CENTER",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["frameStrata"] = 1,
-			["customTextUpdate"] = "update",
-			["id"] = "Chi Burst MW Usable",
+			["icon"] = true,
 			["stacksContainment"] = "INSIDE",
 			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
+			["justify"] = "CENTER",
+			["desaturate"] = true,
 			["additional_triggers"] = {
 			},
-			["crop_y"] = 0.41,
-			["alpha"] = 1,
-			["width"] = 31.9999332427979,
-			["icon"] = true,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "grow",
+				},
+			},
+			["frameStrata"] = 4,
+			["width"] = 14.7199821472168,
+			["inverse"] = false,
+			["untrigger"] = {
 			},
 			["numTriggers"] = 1,
-			["desaturateForeground"] = false,
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.41,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
+			["id"] = "TEB Stack Count Below",
+			["disjunctive"] = true,
+			["auto"] = true,
+			["stacksPoint"] = "BOTTOM",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 		},
 		["Energizing Brew Up Timer"] = {
 			["textFlags"] = "None",
@@ -48837,17 +49250,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["spellName"] = 8050,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = false,
@@ -50140,17 +50553,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["spellName"] = 122470,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 122470,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = true,
@@ -50342,21 +50755,22 @@ WeakAurasSaved = {
 				["ownOnly"] = true,
 				["subeventPrefix"] = "SPELL",
 				["use_tooltip"] = true,
+				["useCount"] = true,
 				["custom_hide"] = "timed",
 				["debuffType"] = "HELPFUL",
-				["useCount"] = true,
-				["type"] = "status",
 				["unevent"] = "auto",
+				["type"] = "status",
 				["subeventSuffix"] = "_CAST_START",
 				["tooltip_operator"] = "find('%s')",
 				["event"] = "Cooldown Progress (Spell)",
+				["name"] = "115308",
 				["countOperator"] = "==",
 				["use_percentpower"] = false,
-				["name"] = "115308",
 				["use_spellName"] = true,
-				["count"] = "0",
 				["use_spellId"] = true,
+				["count"] = "0",
 				["use_unit"] = true,
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 421,
 				["names"] = {
 					"Elusive Brew", -- [1]
@@ -50794,89 +51208,56 @@ WeakAurasSaved = {
 			["spark"] = false,
 			["borderOffset"] = 4,
 		},
-		["Fire Proc Timers"] = {
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["controlledChildren"] = {
-				"Heating Up", -- [1]
-				"Pyroblast", -- [2]
-			},
-			["borderBackdrop"] = "Blizzard Tooltip",
+		["Health Bar Mask"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
 			["xOffset"] = 0,
-			["border"] = false,
-			["yOffset"] = 0,
+			["stacksFlags"] = "None",
+			["yOffset"] = -59,
 			["anchorPoint"] = "CENTER",
-			["borderSize"] = 16,
-			["borderColor"] = {
+			["sparkRotation"] = 0,
+			["rotateText"] = "NONE",
+			["backgroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0, -- [4]
+			},
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
 				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
+				0.490196078431373, -- [2]
+				0.0392156862745098, -- [3]
+				1, -- [4]
 			},
-			["expanded"] = false,
-			["borderOffset"] = 5,
-			["selfPoint"] = "BOTTOMLEFT",
-			["additional_triggers"] = {
-			},
-			["regionType"] = "group",
-			["frameStrata"] = 1,
-			["untrigger"] = {
-			},
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-			},
-			["borderInset"] = 11,
-			["numTriggers"] = 1,
-			["trigger"] = {
-				["type"] = "aura",
-				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
-				["debuffType"] = "HELPFUL",
-				["names"] = {
-				},
-				["event"] = "Health",
-				["subeventPrefix"] = "SPELL",
-			},
-			["borderEdge"] = "None",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
+			["desaturate"] = false,
+			["progressPrecision"] = 0,
+			["sparkOffsetY"] = 0,
 			["load"] = {
-				["role"] = {
-					["multi"] = {
-					},
-				},
+				["use_never"] = false,
 				["talent"] = {
 					["multi"] = {
 					},
 				},
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
+				["use_combat"] = true,
 				["class"] = {
+					["single"] = "DRUID",
 					["multi"] = {
 					},
 				},
@@ -50885,7 +51266,127 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["id"] = "Fire Proc Timers",
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "aurabar",
+			["stacks"] = false,
+			["texture"] = "BantoBar",
+			["textFont"] = "ABF",
+			["stacksFont"] = "ABF",
+			["auto"] = true,
+			["timerFont"] = "ABF",
+			["alpha"] = 0.509999990463257,
+			["borderInset"] = 11,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["sparkOffsetX"] = 0,
+			["parent"] = "Health Tracking",
+			["barInFront"] = true,
+			["customTextUpdate"] = "update",
+			["displayTextLeft"] = " ",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
+				["event"] = "Health",
+				["subeventPrefix"] = "SPELL",
+				["names"] = {
+				},
+				["use_percentpower"] = true,
+				["subeventSuffix"] = "_CAST_START",
+				["unit"] = "player",
+				["custom_hide"] = "timed",
+				["use_unit"] = true,
+				["percentpower"] = "100",
+				["percentpower_operator"] = "<",
+			},
+			["text"] = false,
+			["stickyDuration"] = false,
+			["height"] = 6,
+			["timerFlags"] = "None",
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["borderOffset"] = 5,
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["untrigger"] = {
+			},
+			["border"] = false,
+			["borderEdge"] = "None",
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["borderSize"] = 16,
+			["timer"] = false,
+			["icon_side"] = "RIGHT",
+			["inverse"] = false,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["sparkHeight"] = 30,
+			["sparkRotationMode"] = "AUTO",
+			["timerSize"] = 12,
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = " ",
+			["additional_triggers"] = {
+			},
+			["id"] = "Health Bar Mask",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Energy Bar",
+				},
+				["finish"] = {
+				},
+			},
+			["frameStrata"] = 5,
+			["width"] = 195,
+			["icon"] = false,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["numTriggers"] = 1,
+			["sparkDesature"] = false,
+			["orientation"] = "HORIZONTAL",
+			["spark"] = false,
+			["sparkWidth"] = 10,
+			["textSize"] = 12,
 		},
 		["Flame Shock Timer"] = {
 			["textFlags"] = "None",
@@ -51009,16 +51510,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 8050,
 			},
 			["text"] = true,
@@ -51237,16 +51739,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["spellName"] = 107428,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 107428,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
@@ -51481,56 +51984,89 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 		},
-		["Health Bar Mask"] = {
-			["textFlags"] = "None",
-			["stacksSize"] = 12,
-			["xOffset"] = 0,
-			["stacksFlags"] = "None",
-			["yOffset"] = -59,
-			["anchorPoint"] = "CENTER",
-			["sparkRotation"] = 0,
-			["rotateText"] = "NONE",
-			["backgroundColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0, -- [4]
-			},
-			["fontFlags"] = "OUTLINE",
-			["selfPoint"] = "CENTER",
-			["barColor"] = {
+		["Fire Proc Timers"] = {
+			["backdropColor"] = {
 				1, -- [1]
-				0.490196078431373, -- [2]
-				0.0392156862745098, -- [3]
-				1, -- [4]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
 			},
-			["desaturate"] = false,
-			["progressPrecision"] = 0,
-			["sparkOffsetY"] = 0,
+			["controlledChildren"] = {
+				"Heating Up", -- [1]
+				"Pyroblast", -- [2]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["xOffset"] = 0,
+			["border"] = false,
+			["yOffset"] = 0,
+			["anchorPoint"] = "CENTER",
+			["borderSize"] = 16,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["expanded"] = false,
+			["borderOffset"] = 5,
+			["selfPoint"] = "BOTTOMLEFT",
+			["additional_triggers"] = {
+			},
+			["regionType"] = "group",
+			["frameStrata"] = 1,
+			["untrigger"] = {
+			},
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["borderInset"] = 11,
+			["numTriggers"] = 1,
+			["trigger"] = {
+				["type"] = "aura",
+				["unit"] = "player",
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+				["names"] = {
+				},
+				["event"] = "Health",
+				["subeventPrefix"] = "SPELL",
+			},
+			["borderEdge"] = "None",
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["load"] = {
-				["use_never"] = false,
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
+				["spec"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
-					["single"] = "DRUID",
 					["multi"] = {
 					},
 				},
@@ -51539,127 +52075,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["regionType"] = "aurabar",
-			["stacks"] = false,
-			["texture"] = "BantoBar",
-			["textFont"] = "ABF",
-			["stacksFont"] = "ABF",
-			["auto"] = true,
-			["timerFont"] = "ABF",
-			["alpha"] = 0.509999990463257,
-			["borderInset"] = 11,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["sparkOffsetX"] = 0,
-			["parent"] = "Health Tracking",
-			["barInFront"] = true,
-			["customTextUpdate"] = "update",
-			["displayTextLeft"] = " ",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["debuffType"] = "HELPFUL",
-				["event"] = "Health",
-				["subeventPrefix"] = "SPELL",
-				["names"] = {
-				},
-				["use_percentpower"] = true,
-				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["custom_hide"] = "timed",
-				["use_unit"] = true,
-				["percentpower"] = "100",
-				["percentpower_operator"] = "<",
-			},
-			["text"] = false,
-			["stickyDuration"] = false,
-			["height"] = 6,
-			["timerFlags"] = "None",
-			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["borderOffset"] = 5,
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["untrigger"] = {
-			},
-			["border"] = false,
-			["borderEdge"] = "None",
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["borderSize"] = 16,
-			["timer"] = false,
-			["icon_side"] = "RIGHT",
-			["inverse"] = false,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["sparkHeight"] = 30,
-			["sparkRotationMode"] = "AUTO",
-			["timerSize"] = 12,
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["displayTextRight"] = " ",
-			["additional_triggers"] = {
-			},
-			["id"] = "Health Bar Mask",
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Energy Bar",
-				},
-				["finish"] = {
-				},
-			},
-			["frameStrata"] = 5,
-			["width"] = 195,
-			["icon"] = false,
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["numTriggers"] = 1,
-			["sparkDesature"] = false,
-			["orientation"] = "HORIZONTAL",
-			["spark"] = false,
-			["sparkWidth"] = 10,
-			["textSize"] = 12,
+			["id"] = "Fire Proc Timers",
 		},
 		["Berserker Rage Timer UQT"] = {
 			["textFlags"] = "None",
@@ -51793,17 +52209,18 @@ WeakAurasSaved = {
 				["type"] = "status",
 				["unevent"] = "auto",
 				["custom_hide"] = "timed",
+				["spellName"] = 18499,
 				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
-				["spellName"] = 18499,
+				["unit"] = "player",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
-				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["use_unit"] = true,
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
@@ -51905,14 +52322,14 @@ WeakAurasSaved = {
 				["totemType"] = 2,
 				["event"] = "Cooldown Progress (Spell)",
 				["totemName"] = 0,
-				["use_inverse"] = true,
+				["subeventPrefix"] = "SPELL",
 				["use_spellName"] = true,
 				["inverse"] = true,
-				["debuffType"] = "HELPFUL",
 				["subeventSuffix"] = "_CAST_START",
-				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["unit"] = "player",
 				["custom_hide"] = "timed",
+				["debuffType"] = "HELPFUL",
 			},
 			["stickyDuration"] = false,
 			["rotation"] = 0,
@@ -51995,16 +52412,16 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "status",
 						["subeventSuffix"] = "_CAST_START",
-						["use_inverse"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["subeventPrefix"] = "SPELL",
-						["use_spellName"] = true,
 						["debuffType"] = "HELPFUL",
+						["use_spellName"] = true,
 						["unit"] = "player",
 						["names"] = {
 						},
-						["unevent"] = "auto",
+						["showOn"] = "showOnReady",
 						["use_unit"] = true,
+						["unevent"] = "auto",
 						["spellName"] = 2894,
 					},
 					["untrigger"] = {
@@ -52050,13 +52467,13 @@ WeakAurasSaved = {
 			["stacksPoint"] = "BOTTOMRIGHT",
 			["backgroundOffset"] = 2,
 		},
-		["Stagger Light Text Only"] = {
+		["Raging Blow Usable"] = {
 			["user_y"] = 0,
 			["user_x"] = 0,
-			["xOffset"] = 115,
-			["displayText"] = "%c",
-			["customText"] = "function () \n    local name,_,icon,_,_,_,_,_,_,_,_,_,_,_,value=UnitDebuff(\"player\", GetSpellInfo(124275))\n    if value then\n        if(value > 999999) then value = math.floor(value/1000000) .. \"m\" end\n        if(value > 999) then value = math.floor(value/1000) .. \"k\" end\n        return(value)\n    else return 0\n    end\nend",
-			["yOffset"] = -58,
+			["xOffset"] = 0,
+			["untrigger"] = {
+				["spellName"] = 85288,
+			},
 			["foregroundColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -52065,7 +52482,12 @@ WeakAurasSaved = {
 			},
 			["desaturateBackground"] = false,
 			["sameTexture"] = true,
-			["desaturateForeground"] = false,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
 			["fontFlags"] = "OUTLINE",
 			["animation"] = {
 				["start"] = {
@@ -52082,26 +52504,29 @@ WeakAurasSaved = {
 				},
 			},
 			["trigger"] = {
-				["spellId"] = "124275",
-				["use_inverse"] = true,
+				["use_inverse"] = false,
 				["unit"] = "player",
-				["subcount"] = true,
-				["custom_hide"] = "timed",
+				["subeventPrefix"] = "SPELL",
+				["spellName"] = 85288,
+				["names"] = {
+					"Raging Blow!", -- [1]
+				},
 				["type"] = "aura",
 				["subeventSuffix"] = "_CAST_START",
-				["debuffType"] = "HARMFUL",
-				["event"] = "Cooldown Progress (Spell)",
-				["spellName"] = 121253,
-				["names"] = {
-				},
-				["use_spellId"] = true,
+				["use_targetRequired"] = false,
+				["power_operator"] = ">=",
+				["power"] = "90",
+				["event"] = "Action Usable",
+				["use_power"] = true,
+				["count"] = "2",
+				["use_spellName"] = true,
 				["spellIds"] = {
 				},
-				["subeventPrefix"] = "SPELL",
-				["use_unit"] = true,
-				["use_spellName"] = true,
+				["debuffType"] = "HELPFUL",
+				["countOperator"] = ">",
 				["unevent"] = "auto",
-				["fullscan"] = true,
+				["custom_hide"] = "timed",
+				["use_unit"] = true,
 			},
 			["desaturate"] = false,
 			["rotation"] = 0,
@@ -52110,33 +52535,38 @@ WeakAurasSaved = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				1, -- [4]
+				0.75, -- [4]
 			},
-			["height"] = 19.8399925231934,
-			["outline"] = false,
+			["height"] = 32,
+			["parent"] = "Raging Blow 1.0",
 			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["single"] = 4,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "MONK",
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 1,
-					["multi"] = {
-					},
-				},
 				["race"] = {
 					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+						true, -- [2]
 					},
 				},
 				["size"] = {
@@ -52144,60 +52574,68 @@ WeakAurasSaved = {
 					},
 				},
 			},
+			["displayIcon"] = "Interface\\Icons\\spell_warrior_wildstrike",
 			["stickyDuration"] = false,
+			["fontSize"] = 14,
+			["displayStacks"] = " %s",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["desaturateForeground"] = false,
+			["inverse"] = false,
+			["mirror"] = false,
+			["selfPoint"] = "CENTER",
+			["regionType"] = "icon",
+			["yOffset"] = 0,
+			["blendMode"] = "BLEND",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["frameStrata"] = 1,
+			["crop_y"] = 0.41,
+			["id"] = "Raging Blow Usable",
+			["anchorPoint"] = "CENTER",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "status",
+						["unevent"] = "auto",
+						["power_operator"] = ">=",
+						["use_power"] = true,
+						["event"] = "Power",
+						["subeventPrefix"] = "SPELL",
+						["power"] = "10",
+						["unit"] = "player",
+						["use_unit"] = true,
+						["subeventSuffix"] = "_CAST_START",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+			},
+			["icon"] = true,
+			["alpha"] = 1,
+			["width"] = 32,
+			["customTextUpdate"] = "update",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["numTriggers"] = 2,
 			["actions"] = {
 				["start"] = {
-					["do_glow"] = false,
-					["glow_frame"] = "WeakAuras:Stagger Medium",
-					["do_custom"] = false,
+					["do_glow"] = true,
 					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Raging Blow Usable",
 				},
 				["finish"] = {
 				},
 			},
-			["fontSize"] = 20,
-			["displayStacks"] = "%c",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["icon"] = true,
-			["inverse"] = false,
-			["mirror"] = false,
-			["color"] = {
-				0, -- [1]
-				1, -- [2]
-				0.588235294117647, -- [3]
-				0.800000011920929, -- [4]
-			},
-			["regionType"] = "text",
-			["untrigger"] = {
-				["spellName"] = 121253,
-			},
-			["blendMode"] = "BLEND",
-			["customTextUpdate"] = "update",
-			["frameStrata"] = 4,
-			["anchorPoint"] = "CENTER",
-			["additional_triggers"] = {
-			},
-			["auto"] = true,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["justify"] = "LEFT",
-			["compress"] = false,
-			["id"] = "Stagger Light Text Only",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["alpha"] = 1,
-			["width"] = 7.67999458312988,
-			["crop_y"] = 0.41,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["numTriggers"] = 1,
-			["selfPoint"] = "CENTER",
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
-			["stacksPoint"] = "BOTTOM",
+			["stacksPoint"] = "BOTTOMRIGHT",
 			["backgroundOffset"] = 2,
 		},
 		["Shield Charge Timer"] = {
@@ -52661,6 +53099,7 @@ WeakAurasSaved = {
 						["use_spellName"] = true,
 						["custom_hide"] = "timed",
 						["unit"] = "player",
+						["showOn"] = "showOnCooldown",
 						["subeventSuffix"] = "_CAST_START",
 						["use_unit"] = true,
 						["spellName"] = 107428,
@@ -52753,17 +53192,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 73680,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -52852,13 +53291,13 @@ WeakAurasSaved = {
 			["stacksPoint"] = "BOTTOMRIGHT",
 			["backgroundOffset"] = 2,
 		},
-		["Raging Blow Usable"] = {
+		["Stagger Light Text Only"] = {
 			["user_y"] = 0,
 			["user_x"] = 0,
-			["xOffset"] = 0,
-			["untrigger"] = {
-				["spellName"] = 85288,
-			},
+			["xOffset"] = 115,
+			["displayText"] = "%c",
+			["customText"] = "function () \n    local name,_,icon,_,_,_,_,_,_,_,_,_,_,_,value=UnitDebuff(\"player\", GetSpellInfo(124275))\n    if value then\n        if(value > 999999) then value = math.floor(value/1000000) .. \"m\" end\n        if(value > 999) then value = math.floor(value/1000) .. \"k\" end\n        return(value)\n    else return 0\n    end\nend",
+			["yOffset"] = -58,
 			["foregroundColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -52867,12 +53306,7 @@ WeakAurasSaved = {
 			},
 			["desaturateBackground"] = false,
 			["sameTexture"] = true,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
+			["desaturateForeground"] = false,
 			["fontFlags"] = "OUTLINE",
 			["animation"] = {
 				["start"] = {
@@ -52889,29 +53323,26 @@ WeakAurasSaved = {
 				},
 			},
 			["trigger"] = {
-				["use_inverse"] = false,
+				["spellId"] = "124275",
+				["use_inverse"] = true,
 				["unit"] = "player",
-				["subeventPrefix"] = "SPELL",
-				["spellName"] = 85288,
-				["names"] = {
-					"Raging Blow!", -- [1]
-				},
+				["subcount"] = true,
+				["custom_hide"] = "timed",
 				["type"] = "aura",
 				["subeventSuffix"] = "_CAST_START",
-				["use_targetRequired"] = false,
-				["power_operator"] = ">=",
-				["power"] = "90",
-				["event"] = "Action Usable",
-				["use_power"] = true,
-				["count"] = "2",
-				["use_spellName"] = true,
+				["debuffType"] = "HARMFUL",
+				["event"] = "Cooldown Progress (Spell)",
+				["spellName"] = 121253,
+				["names"] = {
+				},
+				["use_spellId"] = true,
 				["spellIds"] = {
 				},
-				["debuffType"] = "HELPFUL",
-				["countOperator"] = ">",
-				["unevent"] = "auto",
-				["custom_hide"] = "timed",
+				["subeventPrefix"] = "SPELL",
 				["use_unit"] = true,
+				["use_spellName"] = true,
+				["unevent"] = "auto",
+				["fullscan"] = true,
 			},
 			["desaturate"] = false,
 			["rotation"] = 0,
@@ -52920,38 +53351,33 @@ WeakAurasSaved = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				0.75, -- [4]
+				1, -- [4]
 			},
-			["height"] = 32,
-			["parent"] = "Raging Blow 1.0",
+			["height"] = 19.8399925231934,
+			["outline"] = false,
 			["load"] = {
-				["use_never"] = false,
-				["talent"] = {
-					["single"] = 4,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-					},
-				},
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
-				["race"] = {
+				["talent"] = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 2,
+				["class"] = {
+					["single"] = "MONK",
 					["multi"] = {
-						true, -- [1]
-						true, -- [2]
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
 					},
 				},
 				["size"] = {
@@ -52959,68 +53385,60 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\spell_warrior_wildstrike",
 			["stickyDuration"] = false,
-			["fontSize"] = 14,
-			["displayStacks"] = " %s",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["desaturateForeground"] = false,
-			["inverse"] = false,
-			["mirror"] = false,
-			["selfPoint"] = "CENTER",
-			["regionType"] = "icon",
-			["yOffset"] = 0,
-			["blendMode"] = "BLEND",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["frameStrata"] = 1,
-			["crop_y"] = 0.41,
-			["id"] = "Raging Blow Usable",
-			["anchorPoint"] = "CENTER",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "status",
-						["unevent"] = "auto",
-						["power_operator"] = ">=",
-						["use_power"] = true,
-						["event"] = "Power",
-						["subeventPrefix"] = "SPELL",
-						["power"] = "10",
-						["unit"] = "player",
-						["use_unit"] = true,
-						["subeventSuffix"] = "_CAST_START",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-			},
-			["icon"] = true,
-			["alpha"] = 1,
-			["width"] = 32,
-			["customTextUpdate"] = "update",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["numTriggers"] = 2,
 			["actions"] = {
 				["start"] = {
-					["do_glow"] = true,
+					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Stagger Medium",
+					["do_custom"] = false,
 					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Raging Blow Usable",
 				},
 				["finish"] = {
 				},
 			},
+			["fontSize"] = 20,
+			["displayStacks"] = "%c",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["icon"] = true,
+			["inverse"] = false,
+			["mirror"] = false,
+			["color"] = {
+				0, -- [1]
+				1, -- [2]
+				0.588235294117647, -- [3]
+				0.800000011920929, -- [4]
+			},
+			["regionType"] = "text",
+			["untrigger"] = {
+				["spellName"] = 121253,
+			},
+			["blendMode"] = "BLEND",
+			["customTextUpdate"] = "update",
+			["frameStrata"] = 4,
+			["anchorPoint"] = "CENTER",
+			["additional_triggers"] = {
+			},
+			["auto"] = true,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["justify"] = "LEFT",
+			["compress"] = false,
+			["id"] = "Stagger Light Text Only",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["alpha"] = 1,
+			["width"] = 7.67999458312988,
+			["crop_y"] = 0.41,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["numTriggers"] = 1,
+			["selfPoint"] = "CENTER",
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
-			["stacksPoint"] = "BOTTOMRIGHT",
+			["stacksPoint"] = "BOTTOM",
 			["backgroundOffset"] = 2,
 		},
 		["Elusive Brew Uptime"] = {
@@ -53433,17 +53851,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 116847,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -53896,17 +54314,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 18499,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -54062,17 +54480,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 73920,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -54165,378 +54583,6 @@ WeakAurasSaved = {
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
 			["backgroundOffset"] = 2,
-		},
-		["Renewing Mist Charges Background"] = {
-			["outline"] = false,
-			["xOffset"] = 0,
-			["displayText"] = "+%c",
-			["customText"] = "function()\n    local charges = GetSpellCharges(\"115151\");\n    return charges;\nend\n\n\n\n\n\n",
-			["yOffset"] = -29,
-			["anchorPoint"] = "CENTER",
-			["customTextUpdate"] = "update",
-			["icon"] = true,
-			["selfPoint"] = "CENTER",
-			["trigger"] = {
-				["spellId"] = "116740",
-				["names"] = {
-					"Tigereye Brew", -- [1]
-				},
-				["subcount"] = true,
-				["custom_hide"] = "timed",
-				["type"] = "status",
-				["use_health"] = false,
-				["unevent"] = "auto",
-				["percenthealth"] = "0",
-				["event"] = "Health",
-				["subeventPrefix"] = "SPELL",
-				["use_spellId"] = true,
-				["subeventSuffix"] = "_CAST_START",
-				["debuffType"] = "HELPFUL",
-				["use_unit"] = true,
-				["use_percenthealth"] = true,
-				["percenthealth_operator"] = ">",
-				["unit"] = "player",
-			},
-			["stickyDuration"] = false,
-			["progressPrecision"] = 0,
-			["font"] = "ABF",
-			["height"] = 14.0799970626831,
-			["load"] = {
-				["use_never"] = false,
-				["talent"] = {
-					["single"] = 9,
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						[3] = true,
-					},
-				},
-				["use_talent"] = true,
-				["use_name"] = false,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["class"] = {
-					["single"] = "MONK",
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["use_class"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["fontSize"] = 14,
-			["displayStacks"] = "%p",
-			["regionType"] = "text",
-			["parent"] = "Renewing Mist 1.0",
-			["untrigger"] = {
-			},
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["justify"] = "CENTER",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "status",
-						["unevent"] = "auto",
-						["form"] = 1,
-						["event"] = "Stance/Form/Aura",
-						["subeventPrefix"] = "SPELL",
-						["use_form"] = true,
-						["use_unit"] = true,
-						["subeventSuffix"] = "_CAST_START",
-						["unit"] = "player",
-					},
-					["untrigger"] = {
-						["form"] = 1,
-					},
-				}, -- [1]
-			},
-			["id"] = "Renewing Mist Charges Background",
-			["frameStrata"] = 2,
-			["width"] = 14.7199821472168,
-			["color"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0.5, -- [4]
-			},
-			["numTriggers"] = 2,
-			["inverse"] = false,
-			["auto"] = true,
-			["desaturate"] = false,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["preset"] = "slideleft",
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-		},
-		["Ravager Timer"] = {
-			["textFlags"] = "None",
-			["stacksSize"] = 12,
-			["user_x"] = 0,
-			["xOffset"] = 0,
-			["stacksFlags"] = "None",
-			["yOffset"] = 0,
-			["anchorPoint"] = "CENTER",
-			["sparkRotation"] = 0,
-			["sameTexture"] = true,
-			["rotateText"] = "NONE",
-			["backgroundColor"] = {
-				0.501960784313726, -- [1]
-				0.501960784313726, -- [2]
-				0.501960784313726, -- [3]
-				0.25, -- [4]
-			},
-			["fontFlags"] = "OUTLINE",
-			["selfPoint"] = "CENTER",
-			["barColor"] = {
-				0.780392156862745, -- [1]
-				0.611764705882353, -- [2]
-				0.431372549019608, -- [3]
-				0.75, -- [4]
-			},
-			["desaturate"] = false,
-			["rotation"] = 0,
-			["sparkOffsetY"] = 0,
-			["load"] = {
-				["use_never"] = false,
-				["talent"] = {
-					["single"] = 20,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-					},
-				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						true, -- [1]
-						true, -- [2]
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["regionType"] = "aurabar",
-			["stacks"] = false,
-			["blendMode"] = "BLEND",
-			["texture"] = "BantoBar",
-			["textFont"] = "ABF",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["timerFont"] = "ABF",
-			["alpha"] = 0.75,
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 152277,
-			},
-			["desaturateBackground"] = false,
-			["parent"] = "Ravager 1.0",
-			["customTextUpdate"] = "update",
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["displayTextLeft"] = " ",
-			["borderInset"] = 11,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["stacksFont"] = "ABF",
-			["inverse"] = false,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["type"] = "preset",
-					["duration_type"] = "seconds",
-					["preset"] = "fade",
-				},
-			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["debuffType"] = "HELPFUL",
-				["event"] = "Cooldown Progress (Spell)",
-				["subeventPrefix"] = "SPELL",
-				["names"] = {
-				},
-				["use_spellName"] = true,
-				["spellIds"] = {
-				},
-				["use_unit"] = true,
-				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["custom_hide"] = "timed",
-				["spellName"] = 152277,
-			},
-			["text"] = true,
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["stickyDuration"] = false,
-			["borderOffset"] = 5,
-			["sparkWidth"] = 10,
-			["sparkRotationMode"] = "AUTO",
-			["spark"] = false,
-			["height"] = 30,
-			["timerFlags"] = "None",
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "aura",
-						["subeventSuffix"] = "_CAST_START",
-						["ownOnly"] = true,
-						["event"] = "Health",
-						["subeventPrefix"] = "SPELL",
-						["inverse"] = true,
-						["spellIds"] = {
-						},
-						["unit"] = "player",
-						["names"] = {
-							"Recklessness", -- [1]
-						},
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-			},
-			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = "%s",
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["displayTextRight"] = "%p",
-			["textSize"] = 18,
-			["mirror"] = false,
-			["borderEdge"] = "None",
-			["border"] = false,
-			["borderSize"] = 16,
-			["barInFront"] = true,
-			["icon_side"] = "LEFT",
-			["sparkOffsetX"] = 0,
-			["user_y"] = 0,
-			["sparkHeight"] = 30,
-			["timer"] = true,
-			["stacksContainment"] = "INSIDE",
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["timerSize"] = 16,
-			["progressPrecision"] = 0,
-			["id"] = "Ravager Timer",
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["frameStrata"] = 1,
-			["width"] = 30,
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["crop_y"] = 0.41,
-			["numTriggers"] = 2,
-			["sparkDesature"] = false,
-			["orientation"] = "VERTICAL_INVERSE",
-			["crop_x"] = 0.409999996423721,
-			["desaturateForeground"] = false,
-			["icon"] = false,
 		},
 		["Raging Blow Unusable"] = {
 			["user_y"] = 0,
@@ -54682,149 +54728,6 @@ WeakAurasSaved = {
 			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["numTriggers"] = 1,
 			["desaturateForeground"] = false,
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.41,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-		},
-		["Circle of Healing Unusable"] = {
-			["user_y"] = 0,
-			["user_x"] = 0,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 34861,
-			},
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturateBackground"] = false,
-			["sameTexture"] = true,
-			["desaturateForeground"] = false,
-			["fontFlags"] = "OUTLINE",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["use_inverse"] = false,
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
-				["names"] = {
-				},
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["spellName"] = 34861,
-				["custom_hide"] = "timed",
-			},
-			["desaturate"] = true,
-			["rotation"] = 0,
-			["font"] = "ABF",
-			["height"] = 32,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["load"] = {
-				["talent"] = {
-					["single"] = 4,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "PRIEST",
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["parent"] = "CoH 1.0",
-			["selfPoint"] = "CENTER",
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["xOffset"] = 0,
-			["mirror"] = false,
-			["inverse"] = false,
-			["regionType"] = "icon",
-			["yOffset"] = 0,
-			["blendMode"] = "BLEND",
-			["anchorPoint"] = "CENTER",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["frameStrata"] = 1,
-			["customTextUpdate"] = "update",
-			["id"] = "Circle of Healing Unusable",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["additional_triggers"] = {
-			},
-			["crop_y"] = 0.41,
-			["alpha"] = 1,
-			["width"] = 32,
-			["icon"] = true,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-					["glow_action"] = "show",
-				},
-				["finish"] = {
-				},
-			},
-			["numTriggers"] = 1,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -55050,6 +54953,522 @@ WeakAurasSaved = {
 			},
 			["parent"] = "Healing Stream Totem 1.0",
 		},
+		["Renewing Mist Charges Background"] = {
+			["outline"] = false,
+			["xOffset"] = 0,
+			["displayText"] = "+%c",
+			["customText"] = "function()\n    local charges = GetSpellCharges(\"115151\");\n    return charges;\nend\n\n\n\n\n\n",
+			["yOffset"] = -29,
+			["anchorPoint"] = "CENTER",
+			["customTextUpdate"] = "update",
+			["icon"] = true,
+			["selfPoint"] = "CENTER",
+			["trigger"] = {
+				["spellId"] = "116740",
+				["names"] = {
+					"Tigereye Brew", -- [1]
+				},
+				["subcount"] = true,
+				["custom_hide"] = "timed",
+				["type"] = "status",
+				["use_health"] = false,
+				["unevent"] = "auto",
+				["percenthealth"] = "0",
+				["event"] = "Health",
+				["subeventPrefix"] = "SPELL",
+				["use_spellId"] = true,
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+				["use_unit"] = true,
+				["use_percenthealth"] = true,
+				["percenthealth_operator"] = ">",
+				["unit"] = "player",
+			},
+			["stickyDuration"] = false,
+			["progressPrecision"] = 0,
+			["font"] = "ABF",
+			["height"] = 14.0799970626831,
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["single"] = 9,
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						[3] = true,
+					},
+				},
+				["use_talent"] = true,
+				["use_name"] = false,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["use_class"] = true,
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["fontSize"] = 14,
+			["displayStacks"] = "%p",
+			["regionType"] = "text",
+			["parent"] = "Renewing Mist 1.0",
+			["untrigger"] = {
+			},
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["justify"] = "CENTER",
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "status",
+						["unevent"] = "auto",
+						["form"] = 1,
+						["event"] = "Stance/Form/Aura",
+						["subeventPrefix"] = "SPELL",
+						["use_form"] = true,
+						["use_unit"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["unit"] = "player",
+					},
+					["untrigger"] = {
+						["form"] = 1,
+					},
+				}, -- [1]
+			},
+			["id"] = "Renewing Mist Charges Background",
+			["frameStrata"] = 2,
+			["width"] = 14.7199821472168,
+			["color"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.5, -- [4]
+			},
+			["numTriggers"] = 2,
+			["inverse"] = false,
+			["auto"] = true,
+			["desaturate"] = false,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["preset"] = "slideleft",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+		},
+		["Circle of Healing Unusable"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 34861,
+			},
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
+			["desaturateForeground"] = false,
+			["fontFlags"] = "OUTLINE",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["names"] = {
+				},
+				["use_spellName"] = true,
+				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
+				["spellName"] = 34861,
+				["subeventSuffix"] = "_CAST_START",
+				["custom_hide"] = "timed",
+			},
+			["desaturate"] = true,
+			["rotation"] = 0,
+			["font"] = "ABF",
+			["height"] = 32,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["load"] = {
+				["talent"] = {
+					["single"] = 4,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "PRIEST",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["parent"] = "CoH 1.0",
+			["selfPoint"] = "CENTER",
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["xOffset"] = 0,
+			["mirror"] = false,
+			["inverse"] = false,
+			["regionType"] = "icon",
+			["yOffset"] = 0,
+			["blendMode"] = "BLEND",
+			["anchorPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["frameStrata"] = 1,
+			["customTextUpdate"] = "update",
+			["id"] = "Circle of Healing Unusable",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["additional_triggers"] = {
+			},
+			["crop_y"] = 0.41,
+			["alpha"] = 1,
+			["width"] = 32,
+			["icon"] = true,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+					["glow_action"] = "show",
+				},
+				["finish"] = {
+				},
+			},
+			["numTriggers"] = 1,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.41,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
+		},
+		["Ravager Timer"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["user_x"] = 0,
+			["xOffset"] = 0,
+			["stacksFlags"] = "None",
+			["yOffset"] = 0,
+			["anchorPoint"] = "CENTER",
+			["sparkRotation"] = 0,
+			["sameTexture"] = true,
+			["rotateText"] = "NONE",
+			["backgroundColor"] = {
+				0.501960784313726, -- [1]
+				0.501960784313726, -- [2]
+				0.501960784313726, -- [3]
+				0.25, -- [4]
+			},
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				0.780392156862745, -- [1]
+				0.611764705882353, -- [2]
+				0.431372549019608, -- [3]
+				0.75, -- [4]
+			},
+			["desaturate"] = false,
+			["rotation"] = 0,
+			["sparkOffsetY"] = 0,
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["single"] = 20,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+						true, -- [2]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["regionType"] = "aurabar",
+			["stacks"] = false,
+			["blendMode"] = "BLEND",
+			["texture"] = "BantoBar",
+			["textFont"] = "ABF",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["timerFont"] = "ABF",
+			["alpha"] = 0.75,
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 152277,
+			},
+			["desaturateBackground"] = false,
+			["parent"] = "Ravager 1.0",
+			["customTextUpdate"] = "update",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextLeft"] = " ",
+			["borderInset"] = 11,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["stacksFont"] = "ABF",
+			["inverse"] = false,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "fade",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
+				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
+				["names"] = {
+				},
+				["use_unit"] = true,
+				["use_spellName"] = true,
+				["spellIds"] = {
+				},
+				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
+				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
+				["spellName"] = 152277,
+			},
+			["text"] = true,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["stickyDuration"] = false,
+			["borderOffset"] = 5,
+			["sparkWidth"] = 10,
+			["sparkRotationMode"] = "AUTO",
+			["spark"] = false,
+			["height"] = 30,
+			["timerFlags"] = "None",
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "aura",
+						["subeventSuffix"] = "_CAST_START",
+						["ownOnly"] = true,
+						["event"] = "Health",
+						["subeventPrefix"] = "SPELL",
+						["inverse"] = true,
+						["spellIds"] = {
+						},
+						["unit"] = "player",
+						["names"] = {
+							"Recklessness", -- [1]
+						},
+						["debuffType"] = "HELPFUL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+			},
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = "%s",
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = "%p",
+			["textSize"] = 18,
+			["mirror"] = false,
+			["borderEdge"] = "None",
+			["border"] = false,
+			["borderSize"] = 16,
+			["barInFront"] = true,
+			["icon_side"] = "LEFT",
+			["sparkOffsetX"] = 0,
+			["user_y"] = 0,
+			["sparkHeight"] = 30,
+			["timer"] = true,
+			["stacksContainment"] = "INSIDE",
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["timerSize"] = 16,
+			["progressPrecision"] = 0,
+			["id"] = "Ravager Timer",
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["frameStrata"] = 1,
+			["width"] = 30,
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["crop_y"] = 0.41,
+			["numTriggers"] = 2,
+			["sparkDesature"] = false,
+			["orientation"] = "VERTICAL_INVERSE",
+			["crop_x"] = 0.409999996423721,
+			["desaturateForeground"] = false,
+			["icon"] = false,
+		},
 		["Cone of Cold Usable"] = {
 			["user_y"] = 0,
 			["user_x"] = 0,
@@ -55097,17 +55516,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 120,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -55192,6 +55611,299 @@ WeakAurasSaved = {
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
+			},
+		},
+		["Alter Time Usable"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 108978,
+			},
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = true,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Alter Time Usable",
+				},
+				["finish"] = {
+				},
+			},
+			["fontFlags"] = "OUTLINE",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["names"] = {
+				},
+				["use_spellName"] = true,
+				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
+				["showOn"] = "showOnReady",
+				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
+				["spellName"] = 108978,
+			},
+			["desaturate"] = false,
+			["rotation"] = 0,
+			["font"] = "ABF",
+			["height"] = 32,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["single"] = 4,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "MAGE",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+						true, -- [2]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["parent"] = "Alter Time 1.0",
+			["selfPoint"] = "CENTER",
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["xOffset"] = 0,
+			["mirror"] = false,
+			["inverse"] = false,
+			["regionType"] = "icon",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["blendMode"] = "BLEND",
+			["anchorPoint"] = "CENTER",
+			["icon"] = true,
+			["frameStrata"] = 1,
+			["customTextUpdate"] = "update",
+			["additional_triggers"] = {
+			},
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Alter Time Usable",
+			["yOffset"] = 0,
+			["alpha"] = 1,
+			["width"] = 32,
+			["desaturateForeground"] = false,
+			["crop_y"] = 0.41,
+			["numTriggers"] = 1,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.41,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
+		},
+		["Zen Meditation Usable"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 115176,
+			},
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Zen Meditation Usable",
+				},
+				["finish"] = {
+				},
+			},
+			["fontFlags"] = "OUTLINE",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
+				["names"] = {
+				},
+				["use_unit"] = true,
+				["use_spellName"] = true,
+				["spellIds"] = {
+				},
+				["unit"] = "player",
+				["showOn"] = "showOnReady",
+				["custom_hide"] = "timed",
+				["unevent"] = "auto",
+				["spellName"] = 115176,
+			},
+			["desaturate"] = false,
+			["rotation"] = 0,
+			["font"] = "ABF",
+			["height"] = 32,
+			["backgroundOffset"] = 2,
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["single"] = 8,
+					["multi"] = {
+						[21] = true,
+					},
+				},
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["selfPoint"] = "CENTER",
+			["stickyDuration"] = false,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["xOffset"] = 0,
+			["parent"] = "Zen Meditation 1.0 BM",
+			["mirror"] = false,
+			["inverse"] = false,
+			["regionType"] = "icon",
+			["yOffset"] = 0,
+			["blendMode"] = "BLEND",
+			["anchorPoint"] = "CENTER",
+			["customTextUpdate"] = "update",
+			["frameStrata"] = 1,
+			["icon"] = true,
+			["additional_triggers"] = {
+			},
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Zen Meditation Usable",
+			["fontSize"] = 13,
+			["alpha"] = 1,
+			["width"] = 32,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["crop_y"] = 0.41,
+			["numTriggers"] = 1,
+			["desaturateForeground"] = false,
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.41,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
 			},
 		},
 		["Shield Block Up"] = {
@@ -55425,299 +56137,6 @@ WeakAurasSaved = {
 			["crop_x"] = 0.409999996423721,
 			["textSize"] = 16,
 			["desaturateForeground"] = false,
-		},
-		["Zen Meditation Usable"] = {
-			["user_y"] = 0,
-			["user_x"] = 0,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 115176,
-			},
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturateBackground"] = false,
-			["sameTexture"] = true,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Zen Meditation Usable",
-				},
-				["finish"] = {
-				},
-			},
-			["fontFlags"] = "OUTLINE",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["debuffType"] = "HELPFUL",
-				["use_inverse"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["subeventPrefix"] = "SPELL",
-				["names"] = {
-				},
-				["use_spellName"] = true,
-				["spellIds"] = {
-				},
-				["use_unit"] = true,
-				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["custom_hide"] = "timed",
-				["spellName"] = 115176,
-			},
-			["desaturate"] = false,
-			["rotation"] = 0,
-			["font"] = "ABF",
-			["height"] = 32,
-			["backgroundOffset"] = 2,
-			["load"] = {
-				["use_never"] = false,
-				["talent"] = {
-					["single"] = 8,
-					["multi"] = {
-						[21] = true,
-					},
-				},
-				["class"] = {
-					["single"] = "MONK",
-					["multi"] = {
-					},
-				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 1,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["selfPoint"] = "CENTER",
-			["stickyDuration"] = false,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["xOffset"] = 0,
-			["parent"] = "Zen Meditation 1.0 BM",
-			["mirror"] = false,
-			["inverse"] = false,
-			["regionType"] = "icon",
-			["yOffset"] = 0,
-			["blendMode"] = "BLEND",
-			["anchorPoint"] = "CENTER",
-			["customTextUpdate"] = "update",
-			["frameStrata"] = 1,
-			["icon"] = true,
-			["additional_triggers"] = {
-			},
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Zen Meditation Usable",
-			["fontSize"] = 13,
-			["alpha"] = 1,
-			["width"] = 32,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["crop_y"] = 0.41,
-			["numTriggers"] = 1,
-			["desaturateForeground"] = false,
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.41,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-		},
-		["Alter Time Usable"] = {
-			["user_y"] = 0,
-			["user_x"] = 0,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 108978,
-			},
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturateBackground"] = false,
-			["sameTexture"] = true,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = true,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Alter Time Usable",
-				},
-				["finish"] = {
-				},
-			},
-			["fontFlags"] = "OUTLINE",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["use_inverse"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
-				["names"] = {
-				},
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["custom_hide"] = "timed",
-				["spellName"] = 108978,
-			},
-			["desaturate"] = false,
-			["rotation"] = 0,
-			["font"] = "ABF",
-			["height"] = 32,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["load"] = {
-				["use_never"] = false,
-				["talent"] = {
-					["single"] = 4,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "MAGE",
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 1,
-					["multi"] = {
-						true, -- [1]
-						true, -- [2]
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["parent"] = "Alter Time 1.0",
-			["selfPoint"] = "CENTER",
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["xOffset"] = 0,
-			["mirror"] = false,
-			["inverse"] = false,
-			["regionType"] = "icon",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["blendMode"] = "BLEND",
-			["anchorPoint"] = "CENTER",
-			["icon"] = true,
-			["frameStrata"] = 1,
-			["customTextUpdate"] = "update",
-			["additional_triggers"] = {
-			},
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Alter Time Usable",
-			["yOffset"] = 0,
-			["alpha"] = 1,
-			["width"] = 32,
-			["desaturateForeground"] = false,
-			["crop_y"] = 0.41,
-			["numTriggers"] = 1,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.41,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
 		},
 		["Combustion 1.0"] = {
 			["backdropColor"] = {
@@ -56016,17 +56435,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["spellName"] = 73680,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = false,
@@ -56402,17 +56821,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 115098,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -57075,23 +57494,24 @@ WeakAurasSaved = {
 				},
 			},
 			["trigger"] = {
+				["spellName"] = 1535,
 				["type"] = "status",
 				["spellId"] = "44457",
 				["unevent"] = "auto",
-				["custom_hide"] = "timed",
+				["unit"] = "target",
 				["ownOnly"] = true,
 				["event"] = "Cooldown Progress (Spell)",
-				["subeventPrefix"] = "SPELL",
-				["spellName"] = 1535,
-				["use_spellId"] = true,
-				["unit"] = "target",
-				["subeventSuffix"] = "_CAST_START",
 				["use_unit"] = true,
 				["names"] = {
 					"Flame Shock", -- [1]
 				},
+				["use_spellId"] = true,
+				["subeventPrefix"] = "SPELL",
 				["use_spellName"] = true,
+				["showOn"] = "showOnCooldown",
 				["debuffType"] = "HARMFUL",
+				["subeventSuffix"] = "_CAST_START",
+				["custom_hide"] = "timed",
 			},
 			["text"] = true,
 			["sparkRotation"] = 0,
@@ -57356,16 +57776,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 6572,
 			},
 			["text"] = true,
@@ -57674,12 +58095,12 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "status",
 						["unevent"] = "auto",
-						["use_inverse"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["subeventPrefix"] = "SPELL",
 						["use_spellName"] = true,
 						["custom_hide"] = "timed",
 						["unit"] = "player",
+						["showOn"] = "showOnReady",
 						["use_unit"] = true,
 						["subeventSuffix"] = "_CAST_START",
 						["spellName"] = 107428,
@@ -57728,7 +58149,7 @@ WeakAurasSaved = {
 			},
 			["parent"] = "Rising Sun Kick 2.0 MW",
 		},
-		["Shield Charge Up"] = {
+		["Earth Elemental Totem Up Enhance Timer"] = {
 			["textFlags"] = "None",
 			["stacksSize"] = 12,
 			["user_x"] = 0,
@@ -57736,54 +58157,56 @@ WeakAurasSaved = {
 			["stacksFlags"] = "None",
 			["yOffset"] = 0,
 			["anchorPoint"] = "CENTER",
-			["sparkRotation"] = 0,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
 			["sameTexture"] = true,
 			["rotateText"] = "NONE",
-			["backgroundColor"] = {
-				0.501960784313726, -- [1]
-				0.501960784313726, -- [2]
-				0.501960784313726, -- [3]
-				0.25, -- [4]
-			},
+			["icon"] = false,
 			["fontFlags"] = "OUTLINE",
 			["selfPoint"] = "CENTER",
 			["barColor"] = {
-				0.901960784313726, -- [1]
-				0.2, -- [2]
-				0.301960784313726, -- [3]
+				1, -- [1]
+				0, -- [2]
+				0, -- [3]
 				0.75, -- [4]
 			},
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["sparkOffsetY"] = 0,
 			["load"] = {
+				["use_never"] = true,
 				["talent"] = {
-					["single"] = 21,
+					["single"] = 17,
 					["multi"] = {
 					},
 				},
-				["spec"] = {
-					["single"] = 3,
+				["class"] = {
+					["single"] = "SHAMAN",
 					["multi"] = {
-						true, -- [1]
-						[3] = true,
+						["MAGE"] = true,
 					},
 				},
 				["use_talent"] = true,
 				["use_class"] = true,
-				["race"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},
 				["use_spec"] = true,
-				["class"] = {
-					["single"] = "WARRIOR",
+				["race"] = {
 					["multi"] = {
 					},
 				},
 				["use_combat"] = true,
-				["role"] = {
+				["spec"] = {
+					["single"] = 2,
 					["multi"] = {
+						true, -- [1]
+						[3] = true,
 					},
 				},
 				["size"] = {
@@ -57802,12 +58225,7 @@ WeakAurasSaved = {
 			["compress"] = false,
 			["timerFont"] = "ABF",
 			["alpha"] = 0.75,
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["borderInset"] = 11,
 			["stacksPoint"] = "BOTTOMRIGHT",
 			["backgroundOffset"] = 2,
 			["borderBackdrop"] = "Blizzard Tooltip",
@@ -57817,28 +58235,28 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-			["customText"] = "function () \n    local name,_,icon,_,_,_,_,_,_,_,_,_,_,_,value=UnitBuff(\"player\", \"Guard\")\n    if value then\n        if(value > 999999) then value = math.floor(value/1000000) .. \"m\" end\n        if(value > 999) then value = math.floor(value/1000) .. \"k\" end\n        return(value)\n    else return 0\n    end\nend",
 			["untrigger"] = {
-				["spellName"] = 115072,
+				["totemType"] = 2,
+				["spellName"] = 115098,
 			},
 			["desaturateBackground"] = false,
-			["parent"] = "Shield Charge 2.0",
+			["crop_y"] = 0.41,
 			["customTextUpdate"] = "update",
-			["textColor"] = {
+			["sparkColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["textSize"] = 16,
-			["borderColor"] = {
+			["textSize"] = 20,
+			["foregroundColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				0.5, -- [4]
+				1, -- [4]
 			},
-			["borderOffset"] = 5,
-			["icon"] = false,
+			["sparkWidth"] = 10,
+			["spark"] = false,
 			["inverse"] = false,
 			["animation"] = {
 				["start"] = {
@@ -57856,50 +58274,38 @@ WeakAurasSaved = {
 				},
 			},
 			["trigger"] = {
-				["type"] = "aura",
+				["spellId"] = "44457",
+				["use_totemName"] = true,
+				["unit"] = "target",
+				["use_totemType"] = true,
+				["debuffType"] = "HARMFUL",
+				["type"] = "status",
 				["unevent"] = "auto",
-				["debuffType"] = "HELPFUL",
-				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
-				["names"] = {
-					"Shield Charge", -- [1]
-				},
-				["use_spellName"] = true,
-				["spellIds"] = {
-				},
 				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["use_unit"] = true,
+				["event"] = "Totem",
+				["totemType"] = 2,
 				["custom_hide"] = "timed",
-				["spellName"] = 115072,
+				["use_spellName"] = true,
+				["totemName"] = "Earth Elemental Totem",
+				["ownOnly"] = true,
+				["use_unit"] = true,
+				["use_spellId"] = true,
+				["spellName"] = 115098,
+				["names"] = {
+					"Flame Shock", -- [1]
+				},
 			},
 			["text"] = true,
-			["displayTextLeft"] = " ",
+			["borderOffset"] = 5,
 			["stickyDuration"] = false,
-			["sparkWidth"] = 10,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["desaturateForeground"] = false,
+			["sparkRotationMode"] = "AUTO",
+			["sparkRotation"] = 0,
 			["sparkOffsetX"] = 0,
+			["parent"] = "Primal Elementalist Timers Enhance 1.0",
 			["height"] = 30,
 			["timerFlags"] = "None",
 			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "status",
-						["unevent"] = "auto",
-						["form"] = 1,
-						["event"] = "Stance/Form/Aura",
-						["subeventPrefix"] = "SPELL",
-						["use_form"] = true,
-						["use_unit"] = true,
-						["subeventSuffix"] = "_CAST_START",
-						["unit"] = "player",
-						["custom_hide"] = "timed",
-					},
-					["untrigger"] = {
-						["form"] = 1,
-					},
-				}, -- [1]
 			},
 			["sparkBlendMode"] = "ADD",
 			["backdropColor"] = {
@@ -57910,33 +58316,28 @@ WeakAurasSaved = {
 			},
 			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["displayStacks"] = "%s",
+			["stacksFont"] = "ABF",
+			["displayTextRight"] = "%p",
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["mirror"] = false,
+			["borderEdge"] = "None",
+			["barInFront"] = true,
+			["borderSize"] = 16,
+			["border"] = false,
+			["icon_side"] = "LEFT",
 			["timerColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["displayTextRight"] = "%p",
-			["border"] = false,
-			["mirror"] = false,
-			["borderEdge"] = "None",
-			["barInFront"] = true,
-			["borderSize"] = 16,
-			["user_y"] = 0,
-			["icon_side"] = "LEFT",
-			["foregroundColor"] = {
+			["timer"] = true,
+			["sparkHeight"] = 30,
+			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
-			},
-			["sparkRotationMode"] = "AUTO",
-			["sparkHeight"] = 30,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
 			},
 			["stacksContainment"] = "INSIDE",
 			["stacksColor"] = {
@@ -57946,19 +58347,29 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["timerSize"] = 16,
-			["progressPrecision"] = 0,
-			["id"] = "Shield Charge Up",
-			["timer"] = true,
+			["backgroundColor"] = {
+				0.501960784313726, -- [1]
+				0.501960784313726, -- [2]
+				0.501960784313726, -- [3]
+				0.25, -- [4]
+			},
+			["id"] = "Earth Elemental Totem Up Enhance Timer",
+			["displayTextLeft"] = " ",
 			["frameStrata"] = 5,
 			["width"] = 30,
-			["spark"] = false,
-			["crop_y"] = 0.41,
-			["numTriggers"] = 2,
+			["user_y"] = 0,
+			["progressPrecision"] = 0,
+			["numTriggers"] = 1,
 			["sparkDesature"] = false,
 			["orientation"] = "VERTICAL_INVERSE",
 			["crop_x"] = 0.409999996423721,
-			["borderInset"] = 11,
-			["stacksFont"] = "ABF",
+			["desaturateForeground"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
 		},
 		["Circle of Healing Timer"] = {
 			["textFlags"] = "None",
@@ -58082,16 +58493,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 34861,
 			},
 			["text"] = true,
@@ -58383,7 +58795,7 @@ WeakAurasSaved = {
 			},
 			["anchorPoint"] = "CENTER",
 		},
-		["Earth Elemental Totem Up Enhance Timer"] = {
+		["Shield Charge Up"] = {
 			["textFlags"] = "None",
 			["stacksSize"] = 12,
 			["user_x"] = 0,
@@ -58391,56 +58803,54 @@ WeakAurasSaved = {
 			["stacksFlags"] = "None",
 			["yOffset"] = 0,
 			["anchorPoint"] = "CENTER",
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
+			["sparkRotation"] = 0,
 			["sameTexture"] = true,
 			["rotateText"] = "NONE",
-			["icon"] = false,
+			["backgroundColor"] = {
+				0.501960784313726, -- [1]
+				0.501960784313726, -- [2]
+				0.501960784313726, -- [3]
+				0.25, -- [4]
+			},
 			["fontFlags"] = "OUTLINE",
 			["selfPoint"] = "CENTER",
 			["barColor"] = {
-				1, -- [1]
-				0, -- [2]
-				0, -- [3]
+				0.901960784313726, -- [1]
+				0.2, -- [2]
+				0.301960784313726, -- [3]
 				0.75, -- [4]
 			},
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["sparkOffsetY"] = 0,
 			["load"] = {
-				["use_never"] = true,
 				["talent"] = {
-					["single"] = 17,
+					["single"] = 21,
 					["multi"] = {
 					},
 				},
-				["class"] = {
-					["single"] = "SHAMAN",
+				["spec"] = {
+					["single"] = 3,
 					["multi"] = {
-						["MAGE"] = true,
+						true, -- [1]
+						[3] = true,
 					},
 				},
 				["use_talent"] = true,
 				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 2,
+				["use_spec"] = true,
+				["class"] = {
+					["single"] = "WARRIOR",
 					["multi"] = {
-						true, -- [1]
-						[3] = true,
+					},
+				},
+				["use_combat"] = true,
+				["role"] = {
+					["multi"] = {
 					},
 				},
 				["size"] = {
@@ -58459,7 +58869,12 @@ WeakAurasSaved = {
 			["compress"] = false,
 			["timerFont"] = "ABF",
 			["alpha"] = 0.75,
-			["borderInset"] = 11,
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["stacksPoint"] = "BOTTOMRIGHT",
 			["backgroundOffset"] = 2,
 			["borderBackdrop"] = "Blizzard Tooltip",
@@ -58469,28 +58884,28 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
+			["customText"] = "function () \n    local name,_,icon,_,_,_,_,_,_,_,_,_,_,_,value=UnitBuff(\"player\", \"Guard\")\n    if value then\n        if(value > 999999) then value = math.floor(value/1000000) .. \"m\" end\n        if(value > 999) then value = math.floor(value/1000) .. \"k\" end\n        return(value)\n    else return 0\n    end\nend",
 			["untrigger"] = {
-				["totemType"] = 2,
-				["spellName"] = 115098,
+				["spellName"] = 115072,
 			},
 			["desaturateBackground"] = false,
-			["crop_y"] = 0.41,
+			["parent"] = "Shield Charge 2.0",
 			["customTextUpdate"] = "update",
-			["sparkColor"] = {
+			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["textSize"] = 20,
-			["foregroundColor"] = {
+			["textSize"] = 16,
+			["borderColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				1, -- [4]
+				0.5, -- [4]
 			},
-			["sparkWidth"] = 10,
-			["spark"] = false,
+			["borderOffset"] = 5,
+			["icon"] = false,
 			["inverse"] = false,
 			["animation"] = {
 				["start"] = {
@@ -58508,38 +58923,50 @@ WeakAurasSaved = {
 				},
 			},
 			["trigger"] = {
-				["spellId"] = "44457",
-				["use_totemName"] = true,
-				["unit"] = "target",
-				["use_totemType"] = true,
-				["debuffType"] = "HARMFUL",
-				["type"] = "status",
+				["type"] = "aura",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
+				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["event"] = "Totem",
-				["totemType"] = 2,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
-				["totemName"] = "Earth Elemental Totem",
-				["ownOnly"] = true,
-				["use_unit"] = true,
-				["use_spellId"] = true,
-				["spellName"] = 115098,
 				["names"] = {
-					"Flame Shock", -- [1]
+					"Shield Charge", -- [1]
 				},
+				["use_spellName"] = true,
+				["spellIds"] = {
+				},
+				["subeventSuffix"] = "_CAST_START",
+				["unit"] = "player",
+				["use_unit"] = true,
+				["custom_hide"] = "timed",
+				["spellName"] = 115072,
 			},
 			["text"] = true,
-			["borderOffset"] = 5,
+			["displayTextLeft"] = " ",
 			["stickyDuration"] = false,
-			["sparkRotationMode"] = "AUTO",
-			["sparkRotation"] = 0,
+			["sparkWidth"] = 10,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["desaturateForeground"] = false,
 			["sparkOffsetX"] = 0,
-			["parent"] = "Primal Elementalist Timers Enhance 1.0",
 			["height"] = 30,
 			["timerFlags"] = "None",
 			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "status",
+						["unevent"] = "auto",
+						["form"] = 1,
+						["event"] = "Stance/Form/Aura",
+						["subeventPrefix"] = "SPELL",
+						["use_form"] = true,
+						["use_unit"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["unit"] = "player",
+						["custom_hide"] = "timed",
+					},
+					["untrigger"] = {
+						["form"] = 1,
+					},
+				}, -- [1]
 			},
 			["sparkBlendMode"] = "ADD",
 			["backdropColor"] = {
@@ -58550,28 +58977,33 @@ WeakAurasSaved = {
 			},
 			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["displayStacks"] = "%s",
-			["stacksFont"] = "ABF",
-			["displayTextRight"] = "%p",
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["mirror"] = false,
-			["borderEdge"] = "None",
-			["barInFront"] = true,
-			["borderSize"] = 16,
-			["border"] = false,
-			["icon_side"] = "LEFT",
 			["timerColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["timer"] = true,
-			["sparkHeight"] = 30,
-			["textColor"] = {
+			["displayTextRight"] = "%p",
+			["border"] = false,
+			["mirror"] = false,
+			["borderEdge"] = "None",
+			["barInFront"] = true,
+			["borderSize"] = 16,
+			["user_y"] = 0,
+			["icon_side"] = "LEFT",
+			["foregroundColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
+			},
+			["sparkRotationMode"] = "AUTO",
+			["sparkHeight"] = 30,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
 			},
 			["stacksContainment"] = "INSIDE",
 			["stacksColor"] = {
@@ -58581,29 +59013,19 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["timerSize"] = 16,
-			["backgroundColor"] = {
-				0.501960784313726, -- [1]
-				0.501960784313726, -- [2]
-				0.501960784313726, -- [3]
-				0.25, -- [4]
-			},
-			["id"] = "Earth Elemental Totem Up Enhance Timer",
-			["displayTextLeft"] = " ",
+			["progressPrecision"] = 0,
+			["id"] = "Shield Charge Up",
+			["timer"] = true,
 			["frameStrata"] = 5,
 			["width"] = 30,
-			["user_y"] = 0,
-			["progressPrecision"] = 0,
-			["numTriggers"] = 1,
+			["spark"] = false,
+			["crop_y"] = 0.41,
+			["numTriggers"] = 2,
 			["sparkDesature"] = false,
 			["orientation"] = "VERTICAL_INVERSE",
 			["crop_x"] = 0.409999996423721,
-			["desaturateForeground"] = false,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
+			["borderInset"] = 11,
+			["stacksFont"] = "ABF",
 		},
 		["Recklessness Up"] = {
 			["textFlags"] = "None",
@@ -59126,17 +59548,18 @@ WeakAurasSaved = {
 				["type"] = "status",
 				["unevent"] = "auto",
 				["debuffType"] = "HELPFUL",
-				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 				},
+				["use_unit"] = true,
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
-				["use_unit"] = true,
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 46968,
 			},
 			["text"] = true,
@@ -59725,102 +60148,6 @@ WeakAurasSaved = {
 			},
 			["anchorPoint"] = "CENTER",
 		},
-		["Chi Burst MW 1.0"] = {
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["controlledChildren"] = {
-				"Chi Burst MW Timer", -- [1]
-				"Chi Burst MW Usable", -- [2]
-				"Chi Burst MW Unusable", -- [3]
-			},
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["xOffset"] = 40,
-			["border"] = false,
-			["yOffset"] = -230,
-			["regionType"] = "group",
-			["borderSize"] = 16,
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["expanded"] = false,
-			["borderOffset"] = 5,
-			["selfPoint"] = "BOTTOMLEFT",
-			["additional_triggers"] = {
-			},
-			["untrigger"] = {
-			},
-			["frameStrata"] = 1,
-			["id"] = "Chi Burst MW 1.0",
-			["borderEdge"] = "None",
-			["borderInset"] = 11,
-			["numTriggers"] = 1,
-			["trigger"] = {
-				["type"] = "aura",
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["debuffType"] = "HELPFUL",
-				["names"] = {
-				},
-				["event"] = "Health",
-				["unit"] = "player",
-			},
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["load"] = {
-				["use_class"] = "true",
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "MONK",
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["anchorPoint"] = "CENTER",
-		},
 		["Tiger Power Gone Left MW"] = {
 			["xOffset"] = -250,
 			["mirror"] = false,
@@ -59940,6 +60267,102 @@ WeakAurasSaved = {
 				},
 			},
 			["parent"] = "Tiger Power MW",
+		},
+		["Chi Burst MW 1.0"] = {
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["controlledChildren"] = {
+				"Chi Burst MW Timer", -- [1]
+				"Chi Burst MW Usable", -- [2]
+				"Chi Burst MW Unusable", -- [3]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["xOffset"] = 40,
+			["border"] = false,
+			["yOffset"] = -230,
+			["regionType"] = "group",
+			["borderSize"] = 16,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["expanded"] = false,
+			["borderOffset"] = 5,
+			["selfPoint"] = "BOTTOMLEFT",
+			["additional_triggers"] = {
+			},
+			["untrigger"] = {
+			},
+			["frameStrata"] = 1,
+			["id"] = "Chi Burst MW 1.0",
+			["borderEdge"] = "None",
+			["borderInset"] = 11,
+			["numTriggers"] = 1,
+			["trigger"] = {
+				["type"] = "aura",
+				["subeventPrefix"] = "SPELL",
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+				["names"] = {
+				},
+				["event"] = "Health",
+				["unit"] = "player",
+			},
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["load"] = {
+				["use_class"] = "true",
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["anchorPoint"] = "CENTER",
 		},
 		["Stagger Heavy Text Only"] = {
 			["outline"] = false,
@@ -60591,16 +61014,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 73680,
 			},
 			["text"] = true,
@@ -60995,17 +61419,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 116847,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -61231,17 +61655,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 109964,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -61382,17 +61806,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["spellName"] = 107428,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 107428,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -61566,17 +61990,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["spellName"] = 17364,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = false,
@@ -61952,16 +62376,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 10060,
 			},
 			["text"] = true,
@@ -62055,6 +62480,250 @@ WeakAurasSaved = {
 				},
 				["finish"] = {
 				},
+			},
+		},
+		["Rage Count Warrior"] = {
+			["outline"] = false,
+			["fontSize"] = 20,
+			["xOffset"] = -105,
+			["displayText"] = "%p",
+			["customText"] = "function()\n    local tt_name, _ = UnitName(\"targettarget\");\n    \n    if tt_name ~= nil and tt_name ~= \"Comet\" then\n        return tt_name;\n    else\n        return \"\";\n    end\nend\n\n\n\n\n\n",
+			["yOffset"] = -58,
+			["regionType"] = "text",
+			["customTextUpdate"] = "update",
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["anchorPoint"] = "CENTER",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["untrigger"] = {
+			},
+			["justify"] = "RIGHT",
+			["selfPoint"] = "RIGHT",
+			["id"] = "Rage Count Warrior",
+			["additional_triggers"] = {
+			},
+			["frameStrata"] = 1,
+			["width"] = 7.67999458312988,
+			["progressPrecision"] = 0,
+			["font"] = "ABF",
+			["numTriggers"] = 1,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["colorR"] = 0.901960784313726,
+					["type"] = "custom",
+					["scalex"] = 1,
+					["scaley"] = 1,
+					["colorType"] = "custom",
+					["duration"] = "1",
+					["alpha"] = 0,
+					["colorB"] = 0.301960784313726,
+					["y"] = 0,
+					["colorA"] = 1,
+					["colorG"] = 0.2,
+					["x"] = 0,
+					["colorFunc"] = "return function(progress, r1, g1, b1, a1, r2, g2, b2, a2)\n    local base = UnitPower(\"player\"); \n    local progress = base / 120;\n    \n    return r1 + (progress * (r2 - r1)), g1 + (progress * (g2 - g1)), b1 + (progress * (b2 - b1)), a1 + (progress * (a2 - a1))\nend",
+					["rotate"] = 0,
+					["use_color"] = true,
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["height"] = 19.8399925231934,
+			["trigger"] = {
+				["use_power"] = true,
+				["names"] = {
+					"Maelstrom Weapon", -- [1]
+				},
+				["use_powertype"] = false,
+				["custom_hide"] = "timed",
+				["unevent"] = "auto",
+				["type"] = "status",
+				["use_health"] = false,
+				["power"] = "0",
+				["power_operator"] = ">=",
+				["percenthealth"] = "0",
+				["event"] = "Power",
+				["subeventPrefix"] = "SPELL",
+				["subeventSuffix"] = "_CAST_START",
+				["health_operator"] = ">",
+				["health"] = "0",
+				["debuffType"] = "HELPFUL",
+				["use_unit"] = true,
+				["use_percenthealth"] = true,
+				["percenthealth_operator"] = ">",
+				["unit"] = "player",
+			},
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						[2] = true,
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["parent"] = "Melee Pertinent Stats",
+		},
+		["Tiger's Lust"] = {
+			["xOffset"] = -6.1035156250e-005,
+			["yOffset"] = 200,
+			["anchorPoint"] = "CENTER",
+			["customTextUpdate"] = "update",
+			["icon"] = true,
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["trigger"] = {
+				["type"] = "aura",
+				["subeventSuffix"] = "_CAST_START",
+				["ownOnly"] = true,
+				["event"] = "Cooldown Progress (Spell)",
+				["unit"] = "player",
+				["spellName"] = 116841,
+				["use_spellName"] = true,
+				["spellIds"] = {
+				},
+				["use_unit"] = true,
+				["unevent"] = "auto",
+				["subeventPrefix"] = "SPELL",
+				["names"] = {
+					"Tiger's Lust", -- [1]
+				},
+				["debuffType"] = "HELPFUL",
+			},
+			["desaturate"] = false,
+			["progressPrecision"] = 1,
+			["font"] = "ABF",
+			["height"] = 40,
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["single"] = 2,
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_zone"] = false,
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+						["MONK"] = true,
+					},
+				},
+				["zone"] = "Siege of Orgrimmar",
+				["size"] = {
+					["single"] = "ten",
+					["multi"] = {
+						["ten"] = true,
+					},
+				},
+			},
+			["fontSize"] = 16,
+			["displayStacks"] = " ",
+			["regionType"] = "icon",
+			["stickyDuration"] = false,
+			["cooldown"] = true,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["id"] = "Tiger's Lust",
+			["additional_triggers"] = {
+			},
+			["untrigger"] = {
+				["spellName"] = 116841,
+			},
+			["frameStrata"] = 1,
+			["width"] = 40,
+			["animation"] = {
+				["start"] = {
+					["preset"] = "slideright",
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["preset"] = "alphaPulse",
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["inverse"] = false,
+			["numTriggers"] = 1,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.491101145744324, -- [4]
+			},
+			["actions"] = {
+				["start"] = {
+					["do_message"] = true,
+					["message_type"] = "RAID",
+				},
+				["finish"] = {
+				},
+			},
+			["displayIcon"] = "Interface\\Icons\\ability_monk_roll",
+			["stacksPoint"] = "TOPRIGHT",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
 		},
 		["Frost Bomb Empty"] = {
@@ -62209,250 +62878,6 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
-		},
-		["Tiger's Lust"] = {
-			["xOffset"] = -6.1035156250e-005,
-			["yOffset"] = 200,
-			["anchorPoint"] = "CENTER",
-			["customTextUpdate"] = "update",
-			["icon"] = true,
-			["fontFlags"] = "OUTLINE",
-			["selfPoint"] = "CENTER",
-			["trigger"] = {
-				["type"] = "aura",
-				["subeventSuffix"] = "_CAST_START",
-				["ownOnly"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["unit"] = "player",
-				["spellName"] = 116841,
-				["use_spellName"] = true,
-				["spellIds"] = {
-				},
-				["use_unit"] = true,
-				["unevent"] = "auto",
-				["subeventPrefix"] = "SPELL",
-				["names"] = {
-					"Tiger's Lust", -- [1]
-				},
-				["debuffType"] = "HELPFUL",
-			},
-			["desaturate"] = false,
-			["progressPrecision"] = 1,
-			["font"] = "ABF",
-			["height"] = 40,
-			["load"] = {
-				["use_never"] = false,
-				["talent"] = {
-					["single"] = 2,
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_zone"] = false,
-				["class"] = {
-					["single"] = "MONK",
-					["multi"] = {
-						["MONK"] = true,
-					},
-				},
-				["zone"] = "Siege of Orgrimmar",
-				["size"] = {
-					["single"] = "ten",
-					["multi"] = {
-						["ten"] = true,
-					},
-				},
-			},
-			["fontSize"] = 16,
-			["displayStacks"] = " ",
-			["regionType"] = "icon",
-			["stickyDuration"] = false,
-			["cooldown"] = true,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["id"] = "Tiger's Lust",
-			["additional_triggers"] = {
-			},
-			["untrigger"] = {
-				["spellName"] = 116841,
-			},
-			["frameStrata"] = 1,
-			["width"] = 40,
-			["animation"] = {
-				["start"] = {
-					["preset"] = "slideright",
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["preset"] = "alphaPulse",
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-			},
-			["inverse"] = false,
-			["numTriggers"] = 1,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.491101145744324, -- [4]
-			},
-			["actions"] = {
-				["start"] = {
-					["do_message"] = true,
-					["message_type"] = "RAID",
-				},
-				["finish"] = {
-				},
-			},
-			["displayIcon"] = "Interface\\Icons\\ability_monk_roll",
-			["stacksPoint"] = "TOPRIGHT",
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-		},
-		["Rage Count Warrior"] = {
-			["outline"] = false,
-			["fontSize"] = 20,
-			["xOffset"] = -105,
-			["displayText"] = "%p",
-			["customText"] = "function()\n    local tt_name, _ = UnitName(\"targettarget\");\n    \n    if tt_name ~= nil and tt_name ~= \"Comet\" then\n        return tt_name;\n    else\n        return \"\";\n    end\nend\n\n\n\n\n\n",
-			["yOffset"] = -58,
-			["regionType"] = "text",
-			["customTextUpdate"] = "update",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["anchorPoint"] = "CENTER",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["untrigger"] = {
-			},
-			["justify"] = "RIGHT",
-			["selfPoint"] = "RIGHT",
-			["id"] = "Rage Count Warrior",
-			["additional_triggers"] = {
-			},
-			["frameStrata"] = 1,
-			["width"] = 7.67999458312988,
-			["progressPrecision"] = 0,
-			["font"] = "ABF",
-			["numTriggers"] = 1,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["colorR"] = 0.901960784313726,
-					["type"] = "custom",
-					["scalex"] = 1,
-					["scaley"] = 1,
-					["colorType"] = "custom",
-					["duration"] = "1",
-					["alpha"] = 0,
-					["colorB"] = 0.301960784313726,
-					["y"] = 0,
-					["colorA"] = 1,
-					["colorG"] = 0.2,
-					["x"] = 0,
-					["colorFunc"] = "return function(progress, r1, g1, b1, a1, r2, g2, b2, a2)\n    local base = UnitPower(\"player\"); \n    local progress = base / 120;\n    \n    return r1 + (progress * (r2 - r1)), g1 + (progress * (g2 - g1)), b1 + (progress * (b2 - b1)), a1 + (progress * (a2 - a1))\nend",
-					["rotate"] = 0,
-					["use_color"] = true,
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["height"] = 19.8399925231934,
-			["trigger"] = {
-				["use_power"] = true,
-				["names"] = {
-					"Maelstrom Weapon", -- [1]
-				},
-				["use_powertype"] = false,
-				["custom_hide"] = "timed",
-				["unevent"] = "auto",
-				["type"] = "status",
-				["use_health"] = false,
-				["power"] = "0",
-				["power_operator"] = ">=",
-				["percenthealth"] = "0",
-				["event"] = "Power",
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["health_operator"] = ">",
-				["health"] = "0",
-				["debuffType"] = "HELPFUL",
-				["use_unit"] = true,
-				["use_percenthealth"] = true,
-				["percenthealth_operator"] = ">",
-				["unit"] = "player",
-			},
-			["load"] = {
-				["use_never"] = false,
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						[2] = true,
-					},
-				},
-				["use_class"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["parent"] = "Melee Pertinent Stats",
 		},
 		["Ultimatum Proc"] = {
 			["user_y"] = 0,
@@ -62715,20 +63140,20 @@ WeakAurasSaved = {
 			},
 			["trigger"] = {
 				["type"] = "status",
-				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
-				["use_inverse"] = true,
+				["spellName"] = 23881,
 				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
-				["spellName"] = 23881,
+				["unit"] = "player",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
-				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["use_unit"] = true,
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["unevent"] = "auto",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -62907,16 +63332,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 107428,
 			},
 			["text"] = true,
@@ -63044,98 +63470,6 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
-		},
-		["Highmaul Brackenspore Tanking"] = {
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["controlledChildren"] = {
-				"Rot", -- [1]
-				"Infesting Spores", -- [2]
-				"Flesh Eater", -- [3]
-			},
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["xOffset"] = 0,
-			["border"] = false,
-			["yOffset"] = 0,
-			["anchorPoint"] = "CENTER",
-			["borderSize"] = 16,
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["borderOffset"] = 5,
-			["selfPoint"] = "BOTTOMLEFT",
-			["trigger"] = {
-				["type"] = "aura",
-				["spellIds"] = {
-				},
-				["names"] = {
-				},
-				["debuffType"] = "HELPFUL",
-				["unit"] = "player",
-			},
-			["frameStrata"] = 1,
-			["expanded"] = true,
-			["untrigger"] = {
-			},
-			["borderInset"] = 11,
-			["numTriggers"] = 1,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["borderEdge"] = "None",
-			["id"] = "Highmaul Brackenspore Tanking",
-			["load"] = {
-				["use_class"] = false,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["regionType"] = "group",
 		},
 		["Fire Elemental Totem Up"] = {
 			["user_y"] = 0,
@@ -63288,6 +63622,98 @@ WeakAurasSaved = {
 				1, -- [3]
 				1, -- [4]
 			},
+		},
+		["Highmaul Brackenspore Tanking"] = {
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["controlledChildren"] = {
+				"Rot", -- [1]
+				"Infesting Spores", -- [2]
+				"Flesh Eater", -- [3]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["xOffset"] = 0,
+			["border"] = false,
+			["yOffset"] = 0,
+			["anchorPoint"] = "CENTER",
+			["borderSize"] = 16,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["borderOffset"] = 5,
+			["selfPoint"] = "BOTTOMLEFT",
+			["trigger"] = {
+				["type"] = "aura",
+				["spellIds"] = {
+				},
+				["names"] = {
+				},
+				["debuffType"] = "HELPFUL",
+				["unit"] = "player",
+			},
+			["frameStrata"] = 1,
+			["expanded"] = true,
+			["untrigger"] = {
+			},
+			["borderInset"] = 11,
+			["numTriggers"] = 1,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["borderEdge"] = "None",
+			["id"] = "Highmaul Brackenspore Tanking",
+			["load"] = {
+				["use_class"] = false,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["regionType"] = "group",
 		},
 		["Last Stand Uptime"] = {
 			["textFlags"] = "None",
@@ -63653,17 +64079,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["spellName"] = 55342,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 55342,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = true,
@@ -63902,17 +64328,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 121135,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -64375,48 +64801,90 @@ WeakAurasSaved = {
 			["untrigger"] = {
 			},
 		},
-		["Impending Victory Timer"] = {
-			["textFlags"] = "None",
-			["stacksSize"] = 12,
-			["user_x"] = 0,
-			["xOffset"] = 0,
-			["stacksFlags"] = "None",
-			["yOffset"] = 0,
+		["Bluto Get Good"] = {
+			["fontSize"] = 12,
+			["displayStacks"] = "%s",
+			["untrigger"] = {
+			},
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["stacksPoint"] = "BOTTOMRIGHT",
 			["anchorPoint"] = "CENTER",
-			["sparkRotation"] = 0,
-			["sameTexture"] = true,
-			["rotateText"] = "NONE",
-			["backgroundColor"] = {
-				0.501960784313726, -- [1]
-				0.501960784313726, -- [2]
-				0.501960784313726, -- [3]
-				0.25, -- [4]
+			["yOffset"] = 100,
+			["regionType"] = "icon",
+			["xOffset"] = 0,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
 			},
+			["numTriggers"] = 1,
+			["customTextUpdate"] = "update",
+			["trigger"] = {
+				["subeventSuffix"] = "_CAST_START",
+				["type"] = "status",
+				["use_health"] = true,
+				["health_operator"] = "<",
+				["unit"] = "player",
+				["percenthealth"] = "100",
+				["event"] = "Health",
+				["names"] = {
+				},
+				["subeventPrefix"] = "SPELL",
+				["spellIds"] = {
+				},
+				["health"] = "225000",
+				["use_unit"] = true,
+				["unevent"] = "auto",
+				["use_percenthealth"] = true,
+				["percenthealth_operator"] = "==",
+				["debuffType"] = "HELPFUL",
+			},
+			["icon"] = true,
 			["fontFlags"] = "OUTLINE",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = false,
 			["selfPoint"] = "CENTER",
-			["barColor"] = {
-				0.780392156862745, -- [1]
-				0.611764705882353, -- [2]
-				0.431372549019608, -- [3]
-				0.75, -- [4]
-			},
+			["id"] = "Bluto Get Good",
+			["width"] = 64,
+			["frameStrata"] = 1,
 			["desaturate"] = false,
-			["progressPrecision"] = 0,
-			["sparkOffsetY"] = 0,
+			["stickyDuration"] = false,
+			["font"] = "Friz Quadrata TT",
+			["inverse"] = false,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["type"] = "preset",
+					["preset"] = "shake",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["height"] = 64,
+			["displayIcon"] = "Interface\\Icons\\Spell_Arcane_MindMastery",
 			["load"] = {
-				["use_never"] = false,
 				["talent"] = {
-					["single"] = 6,
 					["multi"] = {
 					},
 				},
 				["class"] = {
-					["single"] = "WARRIOR",
 					["multi"] = {
 					},
 				},
-				["use_talent"] = true,
-				["use_class"] = true,
+				["difficulty"] = "mythic",
 				["role"] = {
 					["multi"] = {
 					},
@@ -64425,12 +64893,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
+				["use_combat"] = false,
+				["use_difficulty"] = true,
 				["spec"] = {
-					["single"] = 2,
 					["multi"] = {
-						true, -- [1]
-						true, -- [2]
 					},
 				},
 				["size"] = {
@@ -64438,153 +64904,12 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["regionType"] = "aurabar",
-			["stacks"] = false,
-			["blendMode"] = "BLEND",
-			["texture"] = "BantoBar",
-			["textFont"] = "ABF",
-			["stacksFont"] = "ABF",
-			["auto"] = false,
-			["compress"] = false,
-			["timerFont"] = "ABF",
-			["alpha"] = 0.75,
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 103840,
-			},
-			["desaturateBackground"] = false,
-			["parent"] = "Impending Victory 2.0",
-			["customTextUpdate"] = "update",
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["desaturateForeground"] = false,
-			["borderInset"] = 11,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["displayTextLeft"] = " ",
-			["inverse"] = false,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["type"] = "preset",
-					["duration_type"] = "seconds",
-					["preset"] = "fade",
-				},
-			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
-				["names"] = {
-				},
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["custom_hide"] = "timed",
-				["spellName"] = 103840,
-			},
-			["text"] = true,
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["stickyDuration"] = false,
-			["borderOffset"] = 5,
-			["sparkWidth"] = 10,
-			["sparkRotationMode"] = "AUTO",
-			["spark"] = false,
-			["height"] = 30,
-			["timerFlags"] = "None",
-			["id"] = "Impending Victory Timer",
-			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = "%s",
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["displayTextRight"] = "%p",
-			["icon"] = false,
-			["mirror"] = false,
-			["borderEdge"] = "None",
-			["border"] = false,
-			["borderSize"] = 16,
-			["barInFront"] = true,
-			["icon_side"] = "LEFT",
-			["sparkOffsetX"] = 0,
-			["user_y"] = 0,
-			["sparkHeight"] = 30,
-			["timer"] = true,
-			["stacksContainment"] = "INSIDE",
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["timerSize"] = 16,
-			["crop_y"] = 0.41,
-			["additional_triggers"] = {
-			},
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["frameStrata"] = 1,
-			["width"] = 30,
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["rotation"] = 0,
-			["numTriggers"] = 1,
-			["sparkDesature"] = false,
-			["orientation"] = "VERTICAL_INVERSE",
-			["crop_x"] = 0.409999996423721,
-			["textSize"] = 14,
-			["zoom"] = 0,
 		},
 		["TEB Stack Count Background Over 10"] = {
 			["outline"] = false,
@@ -64878,17 +65203,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["spellName"] = 115072,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 115072,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -65014,17 +65339,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["subeventSuffix"] = "_CAST_START",
-				["use_inverse"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["unit"] = "player",
 				["custom_hide"] = "timed",
-				["use_spellName"] = true,
+				["event"] = "Cooldown Progress (Spell)",
+				["subeventPrefix"] = "SPELL",
 				["debuffType"] = "HELPFUL",
+				["use_spellName"] = true,
 				["names"] = {
 				},
-				["subeventPrefix"] = "SPELL",
 				["unevent"] = "auto",
+				["showOn"] = "showOnReady",
 				["use_unit"] = true,
+				["unit"] = "player",
 				["spellName"] = 121253,
 			},
 			["desaturate"] = false,
@@ -65130,6 +65455,168 @@ WeakAurasSaved = {
 			["anchorPoint"] = "CENTER",
 			["numTriggers"] = 1,
 			["customTextUpdate"] = "update",
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.41,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
+		},
+		["Prayer of Mending Usable"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 33076,
+			},
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
+			["desaturateForeground"] = false,
+			["fontFlags"] = "OUTLINE",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["names"] = {
+				},
+				["use_spellName"] = true,
+				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
+				["showOn"] = "showOnReady",
+				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
+				["spellName"] = 33076,
+			},
+			["desaturate"] = false,
+			["rotation"] = 0,
+			["font"] = "ABF",
+			["height"] = 32,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["single"] = 15,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "PRIEST",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+						true, -- [2]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["parent"] = "Prayer of Mending 1.0",
+			["selfPoint"] = "CENTER",
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["xOffset"] = 0,
+			["mirror"] = false,
+			["inverse"] = false,
+			["regionType"] = "icon",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["blendMode"] = "BLEND",
+			["anchorPoint"] = "CENTER",
+			["yOffset"] = 0,
+			["frameStrata"] = 1,
+			["customTextUpdate"] = "update",
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "aura",
+						["subeventSuffix"] = "_CAST_START",
+						["event"] = "Health",
+						["names"] = {
+							"Divine Insight", -- [1]
+						},
+						["inverse"] = true,
+						["spellIds"] = {
+						},
+						["unit"] = "player",
+						["subeventPrefix"] = "SPELL",
+						["debuffType"] = "HELPFUL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+			},
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Prayer of Mending Usable",
+			["crop_y"] = 0.41,
+			["alpha"] = 1,
+			["width"] = 32,
+			["icon"] = true,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["numTriggers"] = 2,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = true,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Prayer of Mending Usable",
+				},
+				["finish"] = {
+				},
+			},
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -65323,168 +65810,6 @@ WeakAurasSaved = {
 			["borderBackdrop"] = "Blizzard Tooltip",
 			["icon"] = false,
 		},
-		["Prayer of Mending Usable"] = {
-			["user_y"] = 0,
-			["user_x"] = 0,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 33076,
-			},
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturateBackground"] = false,
-			["sameTexture"] = true,
-			["desaturateForeground"] = false,
-			["fontFlags"] = "OUTLINE",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["use_inverse"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
-				["names"] = {
-				},
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["custom_hide"] = "timed",
-				["spellName"] = 33076,
-			},
-			["desaturate"] = false,
-			["rotation"] = 0,
-			["font"] = "ABF",
-			["height"] = 32,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["load"] = {
-				["use_level"] = false,
-				["talent"] = {
-					["single"] = 15,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "PRIEST",
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						true, -- [1]
-						true, -- [2]
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["parent"] = "Prayer of Mending 1.0",
-			["selfPoint"] = "CENTER",
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["xOffset"] = 0,
-			["mirror"] = false,
-			["inverse"] = false,
-			["regionType"] = "icon",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["blendMode"] = "BLEND",
-			["anchorPoint"] = "CENTER",
-			["yOffset"] = 0,
-			["frameStrata"] = 1,
-			["customTextUpdate"] = "update",
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "aura",
-						["subeventSuffix"] = "_CAST_START",
-						["event"] = "Health",
-						["names"] = {
-							"Divine Insight", -- [1]
-						},
-						["inverse"] = true,
-						["spellIds"] = {
-						},
-						["unit"] = "player",
-						["subeventPrefix"] = "SPELL",
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-			},
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Prayer of Mending Usable",
-			["crop_y"] = 0.41,
-			["alpha"] = 1,
-			["width"] = 32,
-			["icon"] = true,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["numTriggers"] = 2,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = true,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Prayer of Mending Usable",
-				},
-				["finish"] = {
-				},
-			},
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.41,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-		},
 		["Rising Sun Kick Unusable"] = {
 			["user_y"] = 0,
 			["user_x"] = 0,
@@ -65529,17 +65854,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["spellName"] = 107428,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 107428,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = true,
@@ -65668,17 +65993,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 26297,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -65817,17 +66142,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 114049,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -65917,465 +66242,6 @@ WeakAurasSaved = {
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
 			["backgroundOffset"] = 2,
-		},
-		["Renewing Mist Timer"] = {
-			["textFlags"] = "None",
-			["stacksSize"] = 12,
-			["user_x"] = 0,
-			["xOffset"] = 0,
-			["stacksFlags"] = "None",
-			["yOffset"] = 0,
-			["anchorPoint"] = "CENTER",
-			["sparkRotation"] = 0,
-			["sameTexture"] = true,
-			["rotateText"] = "NONE",
-			["backgroundColor"] = {
-				0.501960784313726, -- [1]
-				0.501960784313726, -- [2]
-				0.501960784313726, -- [3]
-				0.25, -- [4]
-			},
-			["fontFlags"] = "OUTLINE",
-			["selfPoint"] = "CENTER",
-			["barColor"] = {
-				0.12156862745098, -- [1]
-				1, -- [2]
-				0.474509803921569, -- [3]
-				0.75, -- [4]
-			},
-			["desaturate"] = false,
-			["progressPrecision"] = 0,
-			["sparkOffsetY"] = 0,
-			["load"] = {
-				["talent"] = {
-					["single"] = 4,
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["class"] = {
-					["single"] = "MONK",
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["regionType"] = "aurabar",
-			["stacks"] = false,
-			["blendMode"] = "BLEND",
-			["texture"] = "BantoBar",
-			["textFont"] = "ABF",
-			["stacksFont"] = "ABF",
-			["auto"] = false,
-			["compress"] = false,
-			["timerFont"] = "ABF",
-			["alpha"] = 0.75,
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 115151,
-			},
-			["desaturateBackground"] = false,
-			["parent"] = "Renewing Mist 1.0",
-			["customTextUpdate"] = "update",
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["textSize"] = 16,
-			["borderInset"] = 11,
-			["rotation"] = 0,
-			["zoom"] = 0,
-			["inverse"] = false,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["type"] = "preset",
-					["duration_type"] = "seconds",
-					["preset"] = "fade",
-				},
-			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
-				["names"] = {
-				},
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["custom_hide"] = "timed",
-				["spellName"] = 115151,
-			},
-			["text"] = true,
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["stickyDuration"] = false,
-			["borderOffset"] = 5,
-			["sparkWidth"] = 10,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["spark"] = false,
-			["height"] = 30,
-			["timerFlags"] = "None",
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "status",
-						["subeventSuffix"] = "_CAST_START",
-						["form"] = 1,
-						["event"] = "Stance/Form/Aura",
-						["subeventPrefix"] = "SPELL",
-						["use_form"] = true,
-						["unit"] = "player",
-						["unevent"] = "auto",
-						["use_unit"] = true,
-						["custom_hide"] = "timed",
-					},
-					["untrigger"] = {
-						["form"] = 1,
-					},
-				}, -- [1]
-			},
-			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = "%s",
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["displayTextRight"] = "%p",
-			["displayTextLeft"] = " ",
-			["mirror"] = false,
-			["borderEdge"] = "None",
-			["border"] = false,
-			["borderSize"] = 16,
-			["barInFront"] = true,
-			["icon_side"] = "LEFT",
-			["sparkOffsetX"] = 0,
-			["user_y"] = 0,
-			["sparkHeight"] = 30,
-			["timer"] = true,
-			["stacksContainment"] = "INSIDE",
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["timerSize"] = 16,
-			["sparkRotationMode"] = "AUTO",
-			["id"] = "Renewing Mist Timer",
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["frameStrata"] = 1,
-			["width"] = 30,
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["crop_y"] = 0.41,
-			["numTriggers"] = 2,
-			["sparkDesature"] = false,
-			["orientation"] = "VERTICAL_INVERSE",
-			["crop_x"] = 0.409999996423721,
-			["desaturateForeground"] = false,
-			["icon"] = false,
-		},
-		["Thrash Timer"] = {
-			["textFlags"] = "None",
-			["stacksSize"] = 12,
-			["user_x"] = 0,
-			["xOffset"] = 0,
-			["stacksFlags"] = "None",
-			["yOffset"] = 0,
-			["anchorPoint"] = "CENTER",
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["sameTexture"] = true,
-			["rotateText"] = "NONE",
-			["backgroundColor"] = {
-				0.501960784313726, -- [1]
-				0.501960784313726, -- [2]
-				0.501960784313726, -- [3]
-				0.25, -- [4]
-			},
-			["fontFlags"] = "OUTLINE",
-			["selfPoint"] = "CENTER",
-			["barColor"] = {
-				1, -- [1]
-				0.490196078431373, -- [2]
-				0.0392156862745098, -- [3]
-				0.75, -- [4]
-			},
-			["desaturate"] = false,
-			["rotation"] = 0,
-			["sparkOffsetY"] = 0,
-			["crop_y"] = 0.41,
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["regionType"] = "aurabar",
-			["stacks"] = false,
-			["blendMode"] = "BLEND",
-			["texture"] = "BantoBar",
-			["textFont"] = "ABF",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["timerFont"] = "ABF",
-			["alpha"] = 0.75,
-			["borderInset"] = 11,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 77758,
-			},
-			["desaturateBackground"] = false,
-			["load"] = {
-				["talent"] = {
-					["single"] = 15,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "DRUID",
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["customTextUpdate"] = "update",
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["textSize"] = 16,
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["sparkWidth"] = 10,
-			["spark"] = false,
-			["inverse"] = false,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["type"] = "preset",
-					["duration_type"] = "seconds",
-					["preset"] = "fade",
-				},
-			},
-			["trigger"] = {
-				["custom_hide"] = "timed",
-				["type"] = "status",
-				["spellId"] = "112948",
-				["unevent"] = "auto",
-				["use_unit"] = true,
-				["ownOnly"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["use_spellName"] = true,
-				["inverse"] = true,
-				["names"] = {
-					"Weakened Armor", -- [1]
-				},
-				["spellName"] = 77758,
-				["use_spellId"] = true,
-				["unit"] = "target",
-				["debuffType"] = "HARMFUL",
-			},
-			["text"] = true,
-			["borderOffset"] = 5,
-			["stickyDuration"] = false,
-			["sparkRotationMode"] = "AUTO",
-			["sparkRotation"] = 0,
-			["sparkOffsetX"] = 0,
-			["parent"] = "Thrash",
-			["height"] = 30,
-			["timerFlags"] = "None",
-			["id"] = "Thrash Timer",
-			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = "%s",
-			["stacksFont"] = "ABF",
-			["timerSize"] = 16,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["mirror"] = false,
-			["borderEdge"] = "None",
-			["barInFront"] = true,
-			["borderSize"] = 16,
-			["border"] = false,
-			["icon_side"] = "LEFT",
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["timer"] = true,
-			["sparkHeight"] = 30,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["stacksContainment"] = "INSIDE",
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["displayTextRight"] = "%p",
-			["displayTextLeft"] = " ",
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "aura",
-						["subeventSuffix"] = "_CAST_START",
-						["event"] = "Health",
-						["names"] = {
-							"Thrash", -- [1]
-						},
-						["inverse"] = true,
-						["custom_hide"] = "timed",
-						["subeventPrefix"] = "SPELL",
-						["unit"] = "target",
-						["spellIds"] = {
-						},
-						["debuffType"] = "HARMFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-			},
-			["icon"] = false,
-			["frameStrata"] = 5,
-			["width"] = 30,
-			["user_y"] = 0,
-			["progressPrecision"] = 0,
-			["numTriggers"] = 2,
-			["sparkDesature"] = false,
-			["orientation"] = "VERTICAL_INVERSE",
-			["crop_x"] = 0.409999996423721,
-			["desaturateForeground"] = false,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
 		},
 		["Chi Bar Full Ascension"] = {
 			["sparkWidth"] = 10,
@@ -66559,6 +66425,467 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
+		},
+		["Thrash Timer"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["user_x"] = 0,
+			["xOffset"] = 0,
+			["stacksFlags"] = "None",
+			["yOffset"] = 0,
+			["anchorPoint"] = "CENTER",
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["sameTexture"] = true,
+			["rotateText"] = "NONE",
+			["backgroundColor"] = {
+				0.501960784313726, -- [1]
+				0.501960784313726, -- [2]
+				0.501960784313726, -- [3]
+				0.25, -- [4]
+			},
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				1, -- [1]
+				0.490196078431373, -- [2]
+				0.0392156862745098, -- [3]
+				0.75, -- [4]
+			},
+			["desaturate"] = false,
+			["rotation"] = 0,
+			["sparkOffsetY"] = 0,
+			["crop_y"] = 0.41,
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["regionType"] = "aurabar",
+			["stacks"] = false,
+			["blendMode"] = "BLEND",
+			["texture"] = "BantoBar",
+			["textFont"] = "ABF",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["timerFont"] = "ABF",
+			["alpha"] = 0.75,
+			["borderInset"] = 11,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 77758,
+			},
+			["desaturateBackground"] = false,
+			["load"] = {
+				["talent"] = {
+					["single"] = 15,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "DRUID",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["customTextUpdate"] = "update",
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["textSize"] = 16,
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["sparkWidth"] = 10,
+			["spark"] = false,
+			["inverse"] = false,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "fade",
+				},
+			},
+			["trigger"] = {
+				["spellId"] = "112948",
+				["ownOnly"] = true,
+				["unit"] = "target",
+				["custom_hide"] = "timed",
+				["type"] = "status",
+				["subeventSuffix"] = "_CAST_START",
+				["names"] = {
+					"Weakened Armor", -- [1]
+				},
+				["event"] = "Cooldown Progress (Spell)",
+				["spellName"] = 77758,
+				["use_spellName"] = true,
+				["use_spellId"] = true,
+				["inverse"] = true,
+				["use_unit"] = true,
+				["showOn"] = "showOnCooldown",
+				["unevent"] = "auto",
+				["debuffType"] = "HARMFUL",
+				["subeventPrefix"] = "SPELL",
+			},
+			["text"] = true,
+			["borderOffset"] = 5,
+			["stickyDuration"] = false,
+			["sparkRotationMode"] = "AUTO",
+			["sparkRotation"] = 0,
+			["sparkOffsetX"] = 0,
+			["parent"] = "Thrash",
+			["height"] = 30,
+			["timerFlags"] = "None",
+			["id"] = "Thrash Timer",
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = "%s",
+			["stacksFont"] = "ABF",
+			["timerSize"] = 16,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["mirror"] = false,
+			["borderEdge"] = "None",
+			["barInFront"] = true,
+			["borderSize"] = 16,
+			["border"] = false,
+			["icon_side"] = "LEFT",
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["timer"] = true,
+			["sparkHeight"] = 30,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["stacksContainment"] = "INSIDE",
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = "%p",
+			["displayTextLeft"] = " ",
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "aura",
+						["subeventSuffix"] = "_CAST_START",
+						["event"] = "Health",
+						["names"] = {
+							"Thrash", -- [1]
+						},
+						["inverse"] = true,
+						["custom_hide"] = "timed",
+						["subeventPrefix"] = "SPELL",
+						["unit"] = "target",
+						["spellIds"] = {
+						},
+						["debuffType"] = "HARMFUL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+			},
+			["icon"] = false,
+			["frameStrata"] = 5,
+			["width"] = 30,
+			["user_y"] = 0,
+			["progressPrecision"] = 0,
+			["numTriggers"] = 2,
+			["sparkDesature"] = false,
+			["orientation"] = "VERTICAL_INVERSE",
+			["crop_x"] = 0.409999996423721,
+			["desaturateForeground"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+		},
+		["Renewing Mist Timer"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["user_x"] = 0,
+			["xOffset"] = 0,
+			["stacksFlags"] = "None",
+			["yOffset"] = 0,
+			["anchorPoint"] = "CENTER",
+			["sparkRotation"] = 0,
+			["sameTexture"] = true,
+			["rotateText"] = "NONE",
+			["backgroundColor"] = {
+				0.501960784313726, -- [1]
+				0.501960784313726, -- [2]
+				0.501960784313726, -- [3]
+				0.25, -- [4]
+			},
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				0.12156862745098, -- [1]
+				1, -- [2]
+				0.474509803921569, -- [3]
+				0.75, -- [4]
+			},
+			["desaturate"] = false,
+			["progressPrecision"] = 0,
+			["sparkOffsetY"] = 0,
+			["load"] = {
+				["talent"] = {
+					["single"] = 4,
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["regionType"] = "aurabar",
+			["stacks"] = false,
+			["blendMode"] = "BLEND",
+			["texture"] = "BantoBar",
+			["textFont"] = "ABF",
+			["stacksFont"] = "ABF",
+			["auto"] = false,
+			["compress"] = false,
+			["timerFont"] = "ABF",
+			["alpha"] = 0.75,
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 115151,
+			},
+			["desaturateBackground"] = false,
+			["parent"] = "Renewing Mist 1.0",
+			["customTextUpdate"] = "update",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["textSize"] = 16,
+			["borderInset"] = 11,
+			["rotation"] = 0,
+			["zoom"] = 0,
+			["inverse"] = false,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "fade",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["names"] = {
+				},
+				["use_spellName"] = true,
+				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
+				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
+				["spellName"] = 115151,
+			},
+			["text"] = true,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["stickyDuration"] = false,
+			["borderOffset"] = 5,
+			["sparkWidth"] = 10,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["spark"] = false,
+			["height"] = 30,
+			["timerFlags"] = "None",
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "status",
+						["subeventSuffix"] = "_CAST_START",
+						["form"] = 1,
+						["event"] = "Stance/Form/Aura",
+						["subeventPrefix"] = "SPELL",
+						["use_form"] = true,
+						["unit"] = "player",
+						["unevent"] = "auto",
+						["use_unit"] = true,
+						["custom_hide"] = "timed",
+					},
+					["untrigger"] = {
+						["form"] = 1,
+					},
+				}, -- [1]
+			},
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = "%s",
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = "%p",
+			["displayTextLeft"] = " ",
+			["mirror"] = false,
+			["borderEdge"] = "None",
+			["border"] = false,
+			["borderSize"] = 16,
+			["barInFront"] = true,
+			["icon_side"] = "LEFT",
+			["sparkOffsetX"] = 0,
+			["user_y"] = 0,
+			["sparkHeight"] = 30,
+			["timer"] = true,
+			["stacksContainment"] = "INSIDE",
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["timerSize"] = 16,
+			["sparkRotationMode"] = "AUTO",
+			["id"] = "Renewing Mist Timer",
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["frameStrata"] = 1,
+			["width"] = 30,
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["crop_y"] = 0.41,
+			["numTriggers"] = 2,
+			["sparkDesature"] = false,
+			["orientation"] = "VERTICAL_INVERSE",
+			["crop_x"] = 0.409999996423721,
+			["desaturateForeground"] = false,
+			["icon"] = false,
 		},
 		["EB Full"] = {
 			["xOffset"] = 0,
@@ -67583,6 +67910,473 @@ WeakAurasSaved = {
 				},
 			},
 		},
+		["Stormlash Totem Timer"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["user_x"] = 0,
+			["xOffset"] = 0,
+			["stacksFlags"] = "None",
+			["yOffset"] = 0,
+			["anchorPoint"] = "CENTER",
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["sameTexture"] = true,
+			["rotateText"] = "NONE",
+			["icon"] = false,
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				0, -- [1]
+				0.43921568627451, -- [2]
+				0.870588235294118, -- [3]
+				0.75, -- [4]
+			},
+			["desaturate"] = false,
+			["rotation"] = 0,
+			["sparkOffsetY"] = 0,
+			["crop_y"] = 0.41,
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["regionType"] = "aurabar",
+			["stacks"] = false,
+			["blendMode"] = "BLEND",
+			["texture"] = "BantoBar",
+			["textFont"] = "ABF",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["timerFont"] = "ABF",
+			["alpha"] = 0.75,
+			["borderInset"] = 11,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 120668,
+			},
+			["desaturateBackground"] = false,
+			["load"] = {
+				["use_never"] = true,
+				["talent"] = {
+					["single"] = 4,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "SHAMAN",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+						true, -- [2]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["customTextUpdate"] = "update",
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturateForeground"] = false,
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["sparkWidth"] = 10,
+			["spark"] = false,
+			["inverse"] = false,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "fade",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["names"] = {
+				},
+				["use_spellName"] = true,
+				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
+				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
+				["spellName"] = 120668,
+			},
+			["text"] = true,
+			["sparkRotationMode"] = "AUTO",
+			["stickyDuration"] = false,
+			["sparkRotation"] = 0,
+			["parent"] = "Stormlash Totem Enhance 1.0",
+			["displayTextLeft"] = " ",
+			["timer"] = true,
+			["height"] = 30,
+			["timerFlags"] = "None",
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "aura",
+						["spellId"] = "26297",
+						["subeventSuffix"] = "_CAST_START",
+						["event"] = "Health",
+						["subeventPrefix"] = "SPELL",
+						["use_spellId"] = true,
+						["inverse"] = true,
+						["debuffType"] = "HELPFUL",
+						["unit"] = "player",
+						["names"] = {
+							"Stormlash Totem", -- [1]
+						},
+						["spellIds"] = {
+						},
+						["custom_hide"] = "timed",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+			},
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = "%s",
+			["backgroundColor"] = {
+				0.501960784313726, -- [1]
+				0.501960784313726, -- [2]
+				0.501960784313726, -- [3]
+				0.25, -- [4]
+			},
+			["displayTextRight"] = "%p",
+			["mirror"] = false,
+			["border"] = false,
+			["borderEdge"] = "None",
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["borderSize"] = 16,
+			["barInFront"] = true,
+			["icon_side"] = "LEFT",
+			["user_y"] = 0,
+			["textSize"] = 16,
+			["sparkHeight"] = 30,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["stacksContainment"] = "INSIDE",
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["timerSize"] = 16,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["id"] = "Stormlash Totem Timer",
+			["borderOffset"] = 5,
+			["frameStrata"] = 1,
+			["width"] = 30,
+			["sparkOffsetX"] = 0,
+			["progressPrecision"] = 0,
+			["numTriggers"] = 2,
+			["sparkDesature"] = false,
+			["orientation"] = "VERTICAL_INVERSE",
+			["crop_x"] = 0.409999996423721,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["stacksFont"] = "ABF",
+		},
+		["Berserker Rage Timer FS"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["user_x"] = 0,
+			["xOffset"] = 0,
+			["stacksFlags"] = "None",
+			["yOffset"] = 0,
+			["anchorPoint"] = "CENTER",
+			["sparkRotation"] = 0,
+			["sameTexture"] = true,
+			["rotateText"] = "NONE",
+			["backgroundColor"] = {
+				0.501960784313726, -- [1]
+				0.501960784313726, -- [2]
+				0.501960784313726, -- [3]
+				0.0995556712150574, -- [4]
+			},
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				0.780392156862745, -- [1]
+				0.611764705882353, -- [2]
+				0.431372549019608, -- [3]
+				0.5, -- [4]
+			},
+			["desaturate"] = false,
+			["rotation"] = 0,
+			["sparkOffsetY"] = 0,
+			["crop_y"] = 0.41,
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["regionType"] = "aurabar",
+			["stacks"] = false,
+			["blendMode"] = "BLEND",
+			["texture"] = "BantoBar",
+			["textFont"] = "ABF",
+			["stacksFont"] = "ABF",
+			["auto"] = false,
+			["compress"] = false,
+			["timerFont"] = "ABF",
+			["alpha"] = 0.5,
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 18499,
+			},
+			["desaturateBackground"] = false,
+			["parent"] = "Berserker Rage 2.0 FS",
+			["customTextUpdate"] = "update",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.749166548252106, -- [4]
+			},
+			["displayTextLeft"] = " ",
+			["borderInset"] = 11,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["icon"] = false,
+			["inverse"] = false,
+			["animation"] = {
+				["start"] = {
+					["type"] = "preset",
+					["preset"] = "fade",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "fade",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["names"] = {
+				},
+				["use_spellName"] = true,
+				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
+				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
+				["spellName"] = 18499,
+			},
+			["text"] = true,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["stickyDuration"] = false,
+			["borderOffset"] = 5,
+			["sparkWidth"] = 10,
+			["sparkRotationMode"] = "AUTO",
+			["spark"] = false,
+			["height"] = 30,
+			["timerFlags"] = "None",
+			["id"] = "Berserker Rage Timer FS",
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = "%s",
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = "%p",
+			["desaturateForeground"] = false,
+			["mirror"] = false,
+			["borderEdge"] = "None",
+			["border"] = false,
+			["borderSize"] = 16,
+			["barInFront"] = true,
+			["icon_side"] = "LEFT",
+			["sparkOffsetX"] = 0,
+			["user_y"] = 0,
+			["sparkHeight"] = 30,
+			["timer"] = true,
+			["stacksContainment"] = "INSIDE",
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["timerSize"] = 18,
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["single"] = 7,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+						true, -- [2]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "aura",
+						["subeventSuffix"] = "_CAST_START",
+						["ownOnly"] = true,
+						["event"] = "Health",
+						["subeventPrefix"] = "SPELL",
+						["inverse"] = true,
+						["custom_hide"] = "timed",
+						["names"] = {
+							"Enrage", -- [1]
+						},
+						["unit"] = "player",
+						["spellIds"] = {
+						},
+						["debuffType"] = "HELPFUL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+			},
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["frameStrata"] = 1,
+			["width"] = 30,
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["progressPrecision"] = 0,
+			["numTriggers"] = 2,
+			["sparkDesature"] = false,
+			["orientation"] = "VERTICAL_INVERSE",
+			["crop_x"] = 0.409999996423721,
+			["textSize"] = 16,
+			["zoom"] = 0,
+		},
 		["Xuen WW Usable"] = {
 			["user_y"] = 0,
 			["user_x"] = 0,
@@ -67622,17 +68416,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 123904,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -67726,6 +68520,194 @@ WeakAurasSaved = {
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
+			},
+		},
+		["Fingers of Frost Timer"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["xOffset"] = 50,
+			["stacksFlags"] = "None",
+			["yOffset"] = -35,
+			["anchorPoint"] = "CENTER",
+			["sparkRotation"] = 0,
+			["rotateText"] = "NONE",
+			["icon"] = false,
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				0.333333333333333, -- [1]
+				0.8, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturate"] = false,
+			["sparkOffsetY"] = 0,
+			["load"] = {
+				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "MAGE",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "aurabar",
+			["stacks"] = true,
+			["texture"] = "BantoBar",
+			["textFont"] = "ABF",
+			["borderOffset"] = 12,
+			["auto"] = true,
+			["timerFont"] = "ABF",
+			["alpha"] = 0.75,
+			["borderInset"] = 11,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["sparkOffsetX"] = 0,
+			["parent"] = "Proc Timers",
+			["barInFront"] = true,
+			["sparkRotationMode"] = "AUTO",
+			["displayTextLeft"] = "Ice Lance",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["preset"] = "slideright",
+					["duration_type"] = "seconds",
+					["type"] = "preset",
+				},
+			},
+			["trigger"] = {
+				["spellId"] = "44544",
+				["use_unit"] = true,
+				["subeventPrefix"] = "SPELL",
+				["debuffType"] = "HELPFUL",
+				["custom_hide"] = "timed",
+				["unit"] = "player",
+				["type"] = "aura",
+				["subeventSuffix"] = "_CAST_START",
+				["unevent"] = "auto",
+				["names"] = {
+					"Fingers of Frost", -- [1]
+				},
+				["name"] = "115308",
+				["countOperator"] = "==",
+				["use_percentpower"] = false,
+				["use_spellId"] = true,
+				["use_spellName"] = true,
+				["spellIds"] = {
+				},
+				["event"] = "Cooldown Progress (Spell)",
+				["count"] = "0",
+				["tooltip_operator"] = "find('%s')",
+				["spellName"] = 115203,
+				["fullscan"] = true,
+			},
+			["text"] = true,
+			["stickyDuration"] = false,
+			["timer"] = true,
+			["timerFlags"] = "None",
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["textSize"] = 12,
+			["sparkWidth"] = 10,
+			["border"] = true,
+			["borderEdge"] = "None",
+			["spark"] = false,
+			["borderSize"] = 16,
+			["stacksFont"] = "ABF",
+			["icon_side"] = "RIGHT",
+			["inverse"] = false,
+			["untrigger"] = {
+				["spellName"] = 115203,
+			},
+			["sparkHeight"] = 30,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.700000017881393, -- [4]
+			},
+			["timerSize"] = 12,
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = "%p",
+			["additional_triggers"] = {
+			},
+			["id"] = "Fingers of Frost Timer",
+			["height"] = 14,
+			["frameStrata"] = 1,
+			["width"] = 92,
+			["customTextUpdate"] = "update",
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["numTriggers"] = 1,
+			["sparkDesature"] = false,
+			["orientation"] = "HORIZONTAL",
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["backgroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.5, -- [4]
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
 			},
 		},
 		["Shield Block Usable with Rage"] = {
@@ -67938,573 +68920,6 @@ WeakAurasSaved = {
 			["stacksPoint"] = "BOTTOMRIGHT",
 			["backgroundOffset"] = 2,
 		},
-		["Shield Block Charges"] = {
-			["outline"] = false,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["displayText"] = "+%c",
-			["customText"] = "function()\n    local charges = GetSpellCharges(\"2565\");\n    return charges;\nend\n\n\n\n\n\n",
-			["yOffset"] = -28,
-			["anchorPoint"] = "CENTER",
-			["customTextUpdate"] = "update",
-			["icon"] = true,
-			["selfPoint"] = "RIGHT",
-			["trigger"] = {
-				["spellId"] = "116740",
-				["names"] = {
-					"Tigereye Brew", -- [1]
-				},
-				["subcount"] = true,
-				["custom_hide"] = "timed",
-				["type"] = "status",
-				["use_health"] = false,
-				["unevent"] = "auto",
-				["subeventPrefix"] = "SPELL",
-				["percenthealth"] = "0",
-				["event"] = "Health",
-				["debuffType"] = "HELPFUL",
-				["subeventSuffix"] = "_CAST_START",
-				["use_spellId"] = true,
-				["name"] = "Tigereye Brew",
-				["spellIds"] = {
-				},
-				["unit"] = "player",
-				["use_percenthealth"] = true,
-				["percenthealth_operator"] = ">",
-				["use_unit"] = true,
-			},
-			["desaturate"] = false,
-			["progressPrecision"] = 0,
-			["font"] = "ABF",
-			["height"] = 14.0799751281738,
-			["load"] = {
-				["use_never"] = false,
-				["talent"] = {
-					["single"] = 21,
-					["multi"] = {
-						[9] = true,
-						[21] = true,
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-					},
-				},
-				["use_name"] = false,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-						true, -- [1]
-						[3] = true,
-					},
-				},
-				["use_spec"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["use_class"] = true,
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["fontSize"] = 14,
-			["displayStacks"] = "%p",
-			["regionType"] = "text",
-			["parent"] = "Shield Block 2.0",
-			["untrigger"] = {
-			},
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["justify"] = "CENTER",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["preset"] = "slideleft",
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["id"] = "Shield Block Charges",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["frameStrata"] = 3,
-			["width"] = 14.7199821472168,
-			["xOffset"] = 6,
-			["inverse"] = false,
-			["numTriggers"] = 2,
-			["stickyDuration"] = false,
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["use_form"] = true,
-						["unevent"] = "auto",
-						["form"] = 2,
-						["event"] = "Stance/Form/Aura",
-						["subeventPrefix"] = "SPELL",
-						["use_unit"] = true,
-						["type"] = "status",
-						["subeventSuffix"] = "_CAST_START",
-						["unit"] = "player",
-						["custom_hide"] = "timed",
-					},
-					["untrigger"] = {
-						["form"] = 2,
-					},
-				}, -- [1]
-			},
-			["auto"] = true,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-		},
-		["Fingers of Frost Timer"] = {
-			["textFlags"] = "None",
-			["stacksSize"] = 12,
-			["xOffset"] = 50,
-			["stacksFlags"] = "None",
-			["yOffset"] = -35,
-			["anchorPoint"] = "CENTER",
-			["sparkRotation"] = 0,
-			["rotateText"] = "NONE",
-			["icon"] = false,
-			["fontFlags"] = "OUTLINE",
-			["selfPoint"] = "CENTER",
-			["barColor"] = {
-				0.333333333333333, -- [1]
-				0.8, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturate"] = false,
-			["sparkOffsetY"] = 0,
-			["load"] = {
-				["use_never"] = true,
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "MAGE",
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["regionType"] = "aurabar",
-			["stacks"] = true,
-			["texture"] = "BantoBar",
-			["textFont"] = "ABF",
-			["borderOffset"] = 12,
-			["auto"] = true,
-			["timerFont"] = "ABF",
-			["alpha"] = 0.75,
-			["borderInset"] = 11,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["sparkOffsetX"] = 0,
-			["parent"] = "Proc Timers",
-			["barInFront"] = true,
-			["sparkRotationMode"] = "AUTO",
-			["displayTextLeft"] = "Ice Lance",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["preset"] = "slideright",
-					["duration_type"] = "seconds",
-					["type"] = "preset",
-				},
-			},
-			["trigger"] = {
-				["spellId"] = "44544",
-				["use_unit"] = true,
-				["subeventPrefix"] = "SPELL",
-				["debuffType"] = "HELPFUL",
-				["custom_hide"] = "timed",
-				["unit"] = "player",
-				["type"] = "aura",
-				["subeventSuffix"] = "_CAST_START",
-				["unevent"] = "auto",
-				["names"] = {
-					"Fingers of Frost", -- [1]
-				},
-				["name"] = "115308",
-				["countOperator"] = "==",
-				["use_percentpower"] = false,
-				["use_spellId"] = true,
-				["use_spellName"] = true,
-				["spellIds"] = {
-				},
-				["event"] = "Cooldown Progress (Spell)",
-				["count"] = "0",
-				["tooltip_operator"] = "find('%s')",
-				["spellName"] = 115203,
-				["fullscan"] = true,
-			},
-			["text"] = true,
-			["stickyDuration"] = false,
-			["timer"] = true,
-			["timerFlags"] = "None",
-			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["textSize"] = 12,
-			["sparkWidth"] = 10,
-			["border"] = true,
-			["borderEdge"] = "None",
-			["spark"] = false,
-			["borderSize"] = 16,
-			["stacksFont"] = "ABF",
-			["icon_side"] = "RIGHT",
-			["inverse"] = false,
-			["untrigger"] = {
-				["spellName"] = 115203,
-			},
-			["sparkHeight"] = 30,
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.700000017881393, -- [4]
-			},
-			["timerSize"] = 12,
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["displayTextRight"] = "%p",
-			["additional_triggers"] = {
-			},
-			["id"] = "Fingers of Frost Timer",
-			["height"] = 14,
-			["frameStrata"] = 1,
-			["width"] = 92,
-			["customTextUpdate"] = "update",
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["numTriggers"] = 1,
-			["sparkDesature"] = false,
-			["orientation"] = "HORIZONTAL",
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["backgroundColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0.5, -- [4]
-			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-		},
-		["Berserker Rage Timer FS"] = {
-			["textFlags"] = "None",
-			["stacksSize"] = 12,
-			["user_x"] = 0,
-			["xOffset"] = 0,
-			["stacksFlags"] = "None",
-			["yOffset"] = 0,
-			["anchorPoint"] = "CENTER",
-			["sparkRotation"] = 0,
-			["sameTexture"] = true,
-			["rotateText"] = "NONE",
-			["backgroundColor"] = {
-				0.501960784313726, -- [1]
-				0.501960784313726, -- [2]
-				0.501960784313726, -- [3]
-				0.0995556712150574, -- [4]
-			},
-			["fontFlags"] = "OUTLINE",
-			["selfPoint"] = "CENTER",
-			["barColor"] = {
-				0.780392156862745, -- [1]
-				0.611764705882353, -- [2]
-				0.431372549019608, -- [3]
-				0.5, -- [4]
-			},
-			["desaturate"] = false,
-			["rotation"] = 0,
-			["sparkOffsetY"] = 0,
-			["crop_y"] = 0.41,
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["regionType"] = "aurabar",
-			["stacks"] = false,
-			["blendMode"] = "BLEND",
-			["texture"] = "BantoBar",
-			["textFont"] = "ABF",
-			["stacksFont"] = "ABF",
-			["auto"] = false,
-			["compress"] = false,
-			["timerFont"] = "ABF",
-			["alpha"] = 0.5,
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 18499,
-			},
-			["desaturateBackground"] = false,
-			["parent"] = "Berserker Rage 2.0 FS",
-			["customTextUpdate"] = "update",
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.749166548252106, -- [4]
-			},
-			["displayTextLeft"] = " ",
-			["borderInset"] = 11,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["icon"] = false,
-			["inverse"] = false,
-			["animation"] = {
-				["start"] = {
-					["type"] = "preset",
-					["preset"] = "fade",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["type"] = "preset",
-					["duration_type"] = "seconds",
-					["preset"] = "fade",
-				},
-			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
-				["names"] = {
-				},
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["custom_hide"] = "timed",
-				["spellName"] = 18499,
-			},
-			["text"] = true,
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["stickyDuration"] = false,
-			["borderOffset"] = 5,
-			["sparkWidth"] = 10,
-			["sparkRotationMode"] = "AUTO",
-			["spark"] = false,
-			["height"] = 30,
-			["timerFlags"] = "None",
-			["id"] = "Berserker Rage Timer FS",
-			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = "%s",
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["displayTextRight"] = "%p",
-			["desaturateForeground"] = false,
-			["mirror"] = false,
-			["borderEdge"] = "None",
-			["border"] = false,
-			["borderSize"] = 16,
-			["barInFront"] = true,
-			["icon_side"] = "LEFT",
-			["sparkOffsetX"] = 0,
-			["user_y"] = 0,
-			["sparkHeight"] = 30,
-			["timer"] = true,
-			["stacksContainment"] = "INSIDE",
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["timerSize"] = 18,
-			["load"] = {
-				["use_never"] = false,
-				["talent"] = {
-					["single"] = 7,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-					},
-				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						true, -- [1]
-						true, -- [2]
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "aura",
-						["subeventSuffix"] = "_CAST_START",
-						["ownOnly"] = true,
-						["event"] = "Health",
-						["subeventPrefix"] = "SPELL",
-						["inverse"] = true,
-						["custom_hide"] = "timed",
-						["names"] = {
-							"Enrage", -- [1]
-						},
-						["unit"] = "player",
-						["spellIds"] = {
-						},
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-			},
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["frameStrata"] = 1,
-			["width"] = 30,
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["progressPrecision"] = 0,
-			["numTriggers"] = 2,
-			["sparkDesature"] = false,
-			["orientation"] = "VERTICAL_INVERSE",
-			["crop_x"] = 0.409999996423721,
-			["textSize"] = 16,
-			["zoom"] = 0,
-		},
 		["No Fire Totem Up with FET Unavailable"] = {
 			["user_y"] = 0,
 			["user_x"] = 0,
@@ -68615,16 +69030,16 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "status",
 						["subeventSuffix"] = "_CAST_START",
-						["use_inverse"] = false,
 						["event"] = "Cooldown Progress (Spell)",
 						["subeventPrefix"] = "SPELL",
-						["use_spellName"] = true,
 						["spellName"] = 2894,
+						["use_spellName"] = true,
 						["use_unit"] = true,
 						["unevent"] = "auto",
+						["showOn"] = "showOnCooldown",
+						["unit"] = "player",
 						["names"] = {
 						},
-						["unit"] = "player",
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -68916,80 +69331,46 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 		},
-		["Berserker Rage Unusable UQT"] = {
-			["user_y"] = 0,
+		["Thunder Focus Tea Timer"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
 			["user_x"] = 0,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.749166548252106, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 18499,
-			},
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturateBackground"] = false,
+			["xOffset"] = 0,
+			["stacksFlags"] = "None",
+			["yOffset"] = 0,
+			["anchorPoint"] = "CENTER",
+			["sparkRotation"] = 0,
 			["sameTexture"] = true,
-			["desaturateForeground"] = false,
+			["rotateText"] = "NONE",
+			["backgroundColor"] = {
+				0.501960784313726, -- [1]
+				0.501960784313726, -- [2]
+				0.501960784313726, -- [3]
+				0.25, -- [4]
+			},
 			["fontFlags"] = "OUTLINE",
-			["animation"] = {
-				["start"] = {
-					["type"] = "preset",
-					["preset"] = "fade",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["type"] = "preset",
-					["preset"] = "fade",
-					["duration_type"] = "seconds",
-				},
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				0.12156862745098, -- [1]
+				1, -- [2]
+				0.474509803921569, -- [3]
+				0.75, -- [4]
 			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["spellName"] = 18499,
-				["use_inverse"] = true,
-				["event"] = "Action Usable",
-				["subeventPrefix"] = "SPELL",
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
-				["spellIds"] = {
-				},
-				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
-				["use_unit"] = true,
-				["names"] = {
-				},
-				["debuffType"] = "HELPFUL",
-			},
-			["desaturate"] = true,
-			["rotation"] = 0,
-			["font"] = "ABF",
-			["height"] = 32,
-			["backgroundOffset"] = 2,
+			["desaturate"] = false,
+			["progressPrecision"] = 0,
+			["sparkOffsetY"] = 0,
 			["load"] = {
-				["use_never"] = false,
 				["talent"] = {
-					["single"] = 9,
+					["single"] = 4,
 					["multi"] = {
 					},
 				},
-				["class"] = {
-					["single"] = "WARRIOR",
+				["spec"] = {
+					["single"] = 2,
 					["multi"] = {
+						true, -- [1]
 					},
 				},
-				["use_talent"] = true,
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -69001,11 +69382,9 @@ WeakAurasSaved = {
 					},
 				},
 				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 2,
+				["class"] = {
+					["single"] = "MONK",
 					["multi"] = {
-						true, -- [1]
-						true, -- [2]
 					},
 				},
 				["size"] = {
@@ -69013,58 +69392,171 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["parent"] = "Berserker Rage 2.0 UQT",
-			["selfPoint"] = "CENTER",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["crop_y"] = 0.41,
-			["mirror"] = false,
-			["numTriggers"] = 1,
-			["regionType"] = "icon",
-			["fontSize"] = 13,
+			["regionType"] = "aurabar",
+			["stacks"] = false,
 			["blendMode"] = "BLEND",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["icon"] = true,
-			["alpha"] = 1,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-					["glow_action"] = "show",
-				},
-				["finish"] = {
-				},
-			},
-			["additional_triggers"] = {
-			},
-			["stacksContainment"] = "INSIDE",
+			["texture"] = "BantoBar",
+			["textFont"] = "ABF",
 			["zoom"] = 0,
-			["auto"] = true,
+			["auto"] = false,
 			["compress"] = false,
-			["id"] = "Berserker Rage Unusable UQT",
-			["customTextUpdate"] = "update",
-			["frameStrata"] = 3,
-			["width"] = 32,
-			["anchorPoint"] = "CENTER",
-			["yOffset"] = 0,
-			["inverse"] = false,
-			["xOffset"] = 0,
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.41,
+			["timerFont"] = "ABF",
+			["alpha"] = 0.75,
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 116680,
+			},
+			["desaturateBackground"] = false,
+			["parent"] = "Thunder Focus Tea 1.0",
+			["customTextUpdate"] = "update",
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
+			["desaturateForeground"] = false,
+			["borderInset"] = 11,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["textSize"] = 16,
+			["inverse"] = false,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "fade",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["names"] = {
+				},
+				["use_spellName"] = true,
+				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
+				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
+				["spellName"] = 116680,
+			},
+			["text"] = true,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["stickyDuration"] = false,
+			["borderOffset"] = 5,
+			["sparkWidth"] = 10,
+			["sparkRotationMode"] = "AUTO",
+			["spark"] = false,
+			["height"] = 30,
+			["timerFlags"] = "None",
+			["id"] = "Thunder Focus Tea Timer",
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = "%s",
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = "%p",
+			["icon"] = false,
+			["mirror"] = false,
+			["borderEdge"] = "None",
+			["border"] = false,
+			["borderSize"] = 16,
+			["barInFront"] = true,
+			["icon_side"] = "LEFT",
+			["sparkOffsetX"] = 0,
+			["user_y"] = 0,
+			["sparkHeight"] = 30,
+			["timer"] = true,
+			["stacksContainment"] = "INSIDE",
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["timerSize"] = 16,
+			["crop_y"] = 0.41,
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "status",
+						["unevent"] = "auto",
+						["form"] = 1,
+						["event"] = "Stance/Form/Aura",
+						["subeventPrefix"] = "SPELL",
+						["unit"] = "player",
+						["subeventSuffix"] = "_CAST_START",
+						["use_unit"] = true,
+						["use_form"] = true,
+						["custom_hide"] = "timed",
+					},
+					["untrigger"] = {
+						["form"] = 1,
+					},
+				}, -- [1]
+			},
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["frameStrata"] = 1,
+			["width"] = 30,
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["rotation"] = 0,
+			["numTriggers"] = 2,
+			["sparkDesature"] = false,
+			["orientation"] = "VERTICAL_INVERSE",
+			["crop_x"] = 0.409999996423721,
+			["displayTextLeft"] = " ",
+			["stacksFont"] = "ABF",
 		},
 		["Chi Wave MW Usable"] = {
 			["user_y"] = 0,
@@ -69113,17 +69605,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 115098,
 			},
 			["desaturate"] = false,
@@ -69210,41 +69702,57 @@ WeakAurasSaved = {
 			["stacksPoint"] = "BOTTOMRIGHT",
 			["backgroundOffset"] = 2,
 		},
-		["Fort Brew Uptime"] = {
-			["textFlags"] = "None",
-			["stacksSize"] = 12,
-			["xOffset"] = 45,
-			["stacksFlags"] = "None",
-			["yOffset"] = -40,
-			["anchorPoint"] = "CENTER",
-			["sparkRotation"] = 0,
-			["rotateText"] = "NONE",
-			["backgroundColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0.5, -- [4]
+		["Tempus Repit Up"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["parent"] = "Caster Meta Gem",
+			["untrigger"] = {
+				["spellName"] = 121253,
 			},
-			["fontFlags"] = "OUTLINE",
-			["selfPoint"] = "CENTER",
-			["barColor"] = {
+			["foregroundColor"] = {
 				1, -- [1]
-				0.2, -- [2]
-				0.2, -- [3]
+				1, -- [2]
+				1, -- [3]
 				1, -- [4]
 			},
-			["desaturate"] = false,
-			["progressPrecision"] = 1,
-			["sparkOffsetY"] = 0,
+			["desaturateBackground"] = false,
+			["customTextUpdate"] = "update",
+			["desaturateForeground"] = false,
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["trigger"] = {
+				["type"] = "aura",
+				["unevent"] = "auto",
+				["spellName"] = 121253,
+				["use_inverse"] = true,
+				["event"] = "Cooldown Progress (Spell)",
+				["subeventPrefix"] = "SPELL",
+				["names"] = {
+					"Tempus Repit", -- [1]
+				},
+				["use_spellName"] = true,
+				["spellIds"] = {
+				},
+				["custom_hide"] = "timed",
+				["unit"] = "player",
+				["subeventSuffix"] = "_CAST_START",
+				["use_unit"] = true,
+				["debuffType"] = "HELPFUL",
+			},
+			["desaturate"] = true,
+			["rotation"] = 0,
+			["font"] = "ABF",
+			["height"] = 48,
+			["backgroundOffset"] = 2,
 			["load"] = {
+				["use_never"] = false,
 				["talent"] = {
 					["multi"] = {
 					},
 				},
 				["spec"] = {
-					["single"] = 1,
+					["single"] = 3,
 					["multi"] = {
-						true, -- [1]
 						[3] = true,
 					},
 				},
@@ -69253,15 +69761,21 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = false,
 				["role"] = {
+					["single"] = "DAMAGER",
 					["multi"] = {
+						["DAMAGER"] = true,
 					},
 				},
 				["use_combat"] = true,
 				["class"] = {
-					["single"] = "MONK",
+					["single"] = "MAGE",
 					["multi"] = {
+						["WARLOCK"] = true,
+						["SHAMAN"] = true,
+						["MAGE"] = true,
+						["DRUID"] = true,
+						["PRIEST"] = true,
 					},
 				},
 				["size"] = {
@@ -69269,32 +69783,6 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["regionType"] = "aurabar",
-			["stacks"] = true,
-			["texture"] = "BantoBar",
-			["textFont"] = "ABF",
-			["borderOffset"] = 12,
-			["auto"] = true,
-			["timerFont"] = "ABF",
-			["alpha"] = 0.75,
-			["borderInset"] = 11,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["sparkOffsetX"] = 0,
-			["parent"] = "Monk Defensive Timers",
-			["barInFront"] = true,
-			["sparkRotationMode"] = "AUTO",
-			["textSize"] = 12,
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
@@ -69307,90 +69795,65 @@ WeakAurasSaved = {
 				["finish"] = {
 					["type"] = "preset",
 					["duration_type"] = "seconds",
-					["preset"] = "slideright",
+					["preset"] = "grow",
 				},
 			},
-			["trigger"] = {
-				["type"] = "aura",
-				["spellName"] = 115203,
-				["subeventSuffix"] = "_CAST_START",
-				["use_percentpower"] = false,
-				["ownOnly"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["names"] = {
-					"Fortifying Brew", -- [1]
-				},
-				["use_spellName"] = true,
-				["spellIds"] = {
-				},
-				["subeventPrefix"] = "SPELL",
-				["unevent"] = "auto",
-				["debuffType"] = "HELPFUL",
-				["unit"] = "player",
-				["custom_hide"] = "timed",
-			},
-			["text"] = true,
-			["stickyDuration"] = false,
-			["timer"] = true,
-			["timerFlags"] = "None",
-			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["displayTextLeft"] = "Fort. Brew",
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["border"] = true,
-			["borderEdge"] = "None",
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["borderSize"] = 16,
-			["spark"] = false,
-			["icon_side"] = "RIGHT",
-			["icon"] = false,
-			["inverse"] = false,
-			["sparkHeight"] = 30,
-			["untrigger"] = {
-				["spellName"] = 115203,
-			},
-			["height"] = 14,
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["timerSize"] = 12,
 			["actions"] = {
 				["start"] = {
+					["do_glow"] = true,
+					["glow_frame"] = "WeakAuras:Tempus Repit Up",
+					["glow_action"] = "show",
 				},
 				["finish"] = {
 				},
 			},
-			["id"] = "Fort Brew Uptime",
-			["borderColor"] = {
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["sameTexture"] = true,
+			["mirror"] = false,
+			["numTriggers"] = 1,
+			["regionType"] = "icon",
+			["stickyDuration"] = false,
+			["blendMode"] = "BLEND",
+			["yOffset"] = 90,
+			["xOffset"] = 0,
+			["alpha"] = 1,
+			["fontSize"] = 13,
+			["additional_triggers"] = {
+			},
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Tempus Repit Up",
+			["icon"] = true,
+			["frameStrata"] = 1,
+			["width"] = 48,
+			["anchorPoint"] = "CENTER",
+			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				0.700000017881393, -- [4]
+				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["width"] = 85,
-			["displayTextRight"] = "%p",
-			["customTextUpdate"] = "update",
-			["numTriggers"] = 1,
-			["sparkDesature"] = false,
-			["orientation"] = "HORIZONTAL",
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["sparkWidth"] = 10,
-			["stacksFont"] = "ABF",
+			["inverse"] = false,
+			["crop_y"] = 0.41,
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.41,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 		},
 		["Cone of Cold Unusable"] = {
 			["user_y"] = 0,
@@ -69439,17 +69902,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["spellName"] = 120,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 120,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = true,
@@ -69644,374 +70107,6 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 		},
-		["Tempus Repit Up"] = {
-			["user_y"] = 0,
-			["user_x"] = 0,
-			["parent"] = "Caster Meta Gem",
-			["untrigger"] = {
-				["spellName"] = 121253,
-			},
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturateBackground"] = false,
-			["customTextUpdate"] = "update",
-			["desaturateForeground"] = false,
-			["fontFlags"] = "OUTLINE",
-			["selfPoint"] = "CENTER",
-			["trigger"] = {
-				["type"] = "aura",
-				["unevent"] = "auto",
-				["spellName"] = 121253,
-				["use_inverse"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["subeventPrefix"] = "SPELL",
-				["names"] = {
-					"Tempus Repit", -- [1]
-				},
-				["use_spellName"] = true,
-				["spellIds"] = {
-				},
-				["custom_hide"] = "timed",
-				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
-				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-			},
-			["desaturate"] = true,
-			["rotation"] = 0,
-			["font"] = "ABF",
-			["height"] = 48,
-			["backgroundOffset"] = 2,
-			["load"] = {
-				["use_never"] = false,
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-						[3] = true,
-					},
-				},
-				["use_class"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
-					["single"] = "DAMAGER",
-					["multi"] = {
-						["DAMAGER"] = true,
-					},
-				},
-				["use_combat"] = true,
-				["class"] = {
-					["single"] = "MAGE",
-					["multi"] = {
-						["WARLOCK"] = true,
-						["SHAMAN"] = true,
-						["MAGE"] = true,
-						["DRUID"] = true,
-						["PRIEST"] = true,
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["type"] = "preset",
-					["duration_type"] = "seconds",
-					["preset"] = "grow",
-				},
-			},
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = true,
-					["glow_frame"] = "WeakAuras:Tempus Repit Up",
-					["glow_action"] = "show",
-				},
-				["finish"] = {
-				},
-			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["sameTexture"] = true,
-			["mirror"] = false,
-			["numTriggers"] = 1,
-			["regionType"] = "icon",
-			["stickyDuration"] = false,
-			["blendMode"] = "BLEND",
-			["yOffset"] = 90,
-			["xOffset"] = 0,
-			["alpha"] = 1,
-			["fontSize"] = 13,
-			["additional_triggers"] = {
-			},
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Tempus Repit Up",
-			["icon"] = true,
-			["frameStrata"] = 1,
-			["width"] = 48,
-			["anchorPoint"] = "CENTER",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["inverse"] = false,
-			["crop_y"] = 0.41,
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.41,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-		},
-		["Faerie Swarm Up"] = {
-			["user_y"] = 0,
-			["stacksSize"] = 12,
-			["user_x"] = 0,
-			["xOffset"] = 0,
-			["stacksFlags"] = "None",
-			["yOffset"] = 0,
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["sameTexture"] = true,
-			["rotateText"] = "NONE",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["fontFlags"] = "OUTLINE",
-			["selfPoint"] = "CENTER",
-			["barColor"] = {
-				1, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0.75, -- [4]
-			},
-			["desaturate"] = false,
-			["progressPrecision"] = 0,
-			["sparkOffsetY"] = 0,
-			["crop_y"] = 0.41,
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["regionType"] = "aurabar",
-			["stacks"] = false,
-			["blendMode"] = "BLEND",
-			["texture"] = "BantoBar",
-			["textFont"] = "ABF",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["timerFont"] = "ABF",
-			["alpha"] = 0.75,
-			["borderInset"] = 11,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 102355,
-			},
-			["desaturateBackground"] = false,
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["customTextUpdate"] = "update",
-			["displayTextLeft"] = " ",
-			["desaturateForeground"] = false,
-			["textFlags"] = "None",
-			["sparkWidth"] = 10,
-			["spark"] = false,
-			["inverse"] = false,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["type"] = "preset",
-					["duration_type"] = "seconds",
-					["preset"] = "fade",
-				},
-			},
-			["trigger"] = {
-				["type"] = "aura",
-				["spellId"] = "112948",
-				["subeventSuffix"] = "_CAST_START",
-				["debuffType"] = "HARMFUL",
-				["use_unit"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["names"] = {
-					"Weakened Armor", -- [1]
-				},
-				["unevent"] = "auto",
-				["use_spellId"] = true,
-				["spellIds"] = {
-				},
-				["use_spellName"] = true,
-				["unit"] = "target",
-				["subeventPrefix"] = "SPELL",
-				["custom_hide"] = "timed",
-				["spellName"] = 102355,
-			},
-			["text"] = true,
-			["stacksFont"] = "ABF",
-			["stickyDuration"] = false,
-			["sparkRotationMode"] = "AUTO",
-			["sparkRotation"] = 0,
-			["sparkOffsetX"] = 0,
-			["parent"] = "Faerie Swarm",
-			["height"] = 30,
-			["timerFlags"] = "None",
-			["id"] = "Faerie Swarm Up",
-			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = "%s",
-			["borderOffset"] = 5,
-			["displayTextRight"] = "%p",
-			["border"] = false,
-			["mirror"] = false,
-			["borderEdge"] = "None",
-			["rotation"] = 0,
-			["borderSize"] = 16,
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["icon_side"] = "LEFT",
-			["anchorPoint"] = "CENTER",
-			["timer"] = true,
-			["sparkHeight"] = 30,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["stacksContainment"] = "INSIDE",
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["timerSize"] = 16,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["additional_triggers"] = {
-			},
-			["textSize"] = 16,
-			["frameStrata"] = 5,
-			["width"] = 30,
-			["icon"] = false,
-			["load"] = {
-				["use_never"] = true,
-				["talent"] = {
-					["single"] = 15,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "DRUID",
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["numTriggers"] = 1,
-			["sparkDesature"] = false,
-			["orientation"] = "VERTICAL_INVERSE",
-			["crop_x"] = 0.409999996423721,
-			["barInFront"] = true,
-			["backgroundColor"] = {
-				0.501960784313726, -- [1]
-				0.501960784313726, -- [2]
-				0.501960784313726, -- [3]
-				0.25, -- [4]
-			},
-		},
 		["Tiger Power Fading Left Animated MW"] = {
 			["user_y"] = 0,
 			["user_x"] = 0,
@@ -70165,46 +70260,80 @@ WeakAurasSaved = {
 			["stickyDuration"] = false,
 			["backgroundOffset"] = 2,
 		},
-		["Thunder Focus Tea Timer"] = {
-			["textFlags"] = "None",
-			["stacksSize"] = 12,
+		["Berserker Rage Unusable UQT"] = {
+			["user_y"] = 0,
 			["user_x"] = 0,
-			["xOffset"] = 0,
-			["stacksFlags"] = "None",
-			["yOffset"] = 0,
-			["anchorPoint"] = "CENTER",
-			["sparkRotation"] = 0,
-			["sameTexture"] = true,
-			["rotateText"] = "NONE",
-			["backgroundColor"] = {
-				0.501960784313726, -- [1]
-				0.501960784313726, -- [2]
-				0.501960784313726, -- [3]
-				0.25, -- [4]
-			},
-			["fontFlags"] = "OUTLINE",
-			["selfPoint"] = "CENTER",
-			["barColor"] = {
-				0.12156862745098, -- [1]
+			["color"] = {
+				1, -- [1]
 				1, -- [2]
-				0.474509803921569, -- [3]
-				0.75, -- [4]
+				1, -- [3]
+				0.749166548252106, -- [4]
 			},
-			["desaturate"] = false,
-			["progressPrecision"] = 0,
-			["sparkOffsetY"] = 0,
+			["untrigger"] = {
+				["spellName"] = 18499,
+			},
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
+			["desaturateForeground"] = false,
+			["fontFlags"] = "OUTLINE",
+			["animation"] = {
+				["start"] = {
+					["type"] = "preset",
+					["preset"] = "fade",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["preset"] = "fade",
+					["duration_type"] = "seconds",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["spellName"] = 18499,
+				["use_inverse"] = true,
+				["event"] = "Action Usable",
+				["subeventPrefix"] = "SPELL",
+				["custom_hide"] = "timed",
+				["use_spellName"] = true,
+				["spellIds"] = {
+				},
+				["unit"] = "player",
+				["subeventSuffix"] = "_CAST_START",
+				["use_unit"] = true,
+				["names"] = {
+				},
+				["debuffType"] = "HELPFUL",
+			},
+			["desaturate"] = true,
+			["rotation"] = 0,
+			["font"] = "ABF",
+			["height"] = 32,
+			["backgroundOffset"] = 2,
 			["load"] = {
+				["use_never"] = false,
 				["talent"] = {
-					["single"] = 4,
+					["single"] = 9,
 					["multi"] = {
 					},
 				},
-				["spec"] = {
-					["single"] = 2,
+				["class"] = {
+					["single"] = "WARRIOR",
 					["multi"] = {
-						true, -- [1]
 					},
 				},
+				["use_talent"] = true,
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -70212,6 +70341,120 @@ WeakAurasSaved = {
 				},
 				["use_spec"] = true,
 				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+						true, -- [2]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["parent"] = "Berserker Rage 2.0 UQT",
+			["selfPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["crop_y"] = 0.41,
+			["mirror"] = false,
+			["numTriggers"] = 1,
+			["regionType"] = "icon",
+			["fontSize"] = 13,
+			["blendMode"] = "BLEND",
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["icon"] = true,
+			["alpha"] = 1,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+					["glow_action"] = "show",
+				},
+				["finish"] = {
+				},
+			},
+			["additional_triggers"] = {
+			},
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Berserker Rage Unusable UQT",
+			["customTextUpdate"] = "update",
+			["frameStrata"] = 3,
+			["width"] = 32,
+			["anchorPoint"] = "CENTER",
+			["yOffset"] = 0,
+			["inverse"] = false,
+			["xOffset"] = 0,
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.41,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+		},
+		["Fort Brew Uptime"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["xOffset"] = 45,
+			["stacksFlags"] = "None",
+			["yOffset"] = -40,
+			["anchorPoint"] = "CENTER",
+			["sparkRotation"] = 0,
+			["rotateText"] = "NONE",
+			["backgroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.5, -- [4]
+			},
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				1, -- [1]
+				0.2, -- [2]
+				0.2, -- [3]
+				1, -- [4]
+			},
+			["desaturate"] = false,
+			["progressPrecision"] = 1,
+			["sparkOffsetY"] = 0,
+			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+						[3] = true,
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = false,
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -70226,99 +70469,71 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["regionType"] = "aurabar",
-			["stacks"] = false,
-			["blendMode"] = "BLEND",
+			["stacks"] = true,
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
+			["borderOffset"] = 12,
+			["auto"] = true,
 			["timerFont"] = "ABF",
 			["alpha"] = 0.75,
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 116680,
-			},
-			["desaturateBackground"] = false,
-			["parent"] = "Thunder Focus Tea 1.0",
-			["customTextUpdate"] = "update",
+			["borderInset"] = 11,
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["desaturateForeground"] = false,
-			["borderInset"] = 11,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["textSize"] = 16,
-			["inverse"] = false,
+			["sparkOffsetX"] = 0,
+			["parent"] = "Monk Defensive Timers",
+			["barInFront"] = true,
+			["sparkRotationMode"] = "AUTO",
+			["textSize"] = 12,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
 					["type"] = "preset",
 					["duration_type"] = "seconds",
-					["preset"] = "fade",
+					["preset"] = "slideright",
 				},
 			},
 			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
+				["type"] = "aura",
+				["spellName"] = 115203,
+				["subeventSuffix"] = "_CAST_START",
+				["use_percentpower"] = false,
+				["ownOnly"] = true,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
+					"Fortifying Brew", -- [1]
+				},
+				["use_spellName"] = true,
+				["spellIds"] = {
 				},
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
+				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["unit"] = "player",
 				["custom_hide"] = "timed",
-				["spellName"] = 116680,
 			},
 			["text"] = true,
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
 			["stickyDuration"] = false,
-			["borderOffset"] = 5,
-			["sparkWidth"] = 10,
-			["sparkRotationMode"] = "AUTO",
-			["spark"] = false,
-			["height"] = 30,
+			["timer"] = true,
 			["timerFlags"] = "None",
-			["id"] = "Thunder Focus Tea Timer",
 			["sparkBlendMode"] = "ADD",
 			["backdropColor"] = {
 				1, -- [1]
@@ -70326,70 +70541,160 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = "%s",
-			["timerColor"] = {
+			["displayTextLeft"] = "Fort. Brew",
+			["sparkColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["displayTextRight"] = "%p",
-			["icon"] = false,
-			["mirror"] = false,
+			["border"] = true,
 			["borderEdge"] = "None",
-			["border"] = false,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
 			["borderSize"] = 16,
-			["barInFront"] = true,
-			["icon_side"] = "LEFT",
-			["sparkOffsetX"] = 0,
-			["user_y"] = 0,
+			["spark"] = false,
+			["icon_side"] = "RIGHT",
+			["icon"] = false,
+			["inverse"] = false,
 			["sparkHeight"] = 30,
-			["timer"] = true,
-			["stacksContainment"] = "INSIDE",
+			["untrigger"] = {
+				["spellName"] = 115203,
+			},
+			["height"] = 14,
 			["stacksColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["timerSize"] = 16,
-			["crop_y"] = 0.41,
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "status",
-						["unevent"] = "auto",
-						["form"] = 1,
-						["event"] = "Stance/Form/Aura",
-						["subeventPrefix"] = "SPELL",
-						["unit"] = "player",
-						["subeventSuffix"] = "_CAST_START",
-						["use_unit"] = true,
-						["use_form"] = true,
-						["custom_hide"] = "timed",
-					},
-					["untrigger"] = {
-						["form"] = 1,
-					},
-				}, -- [1]
+			["timerSize"] = 12,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
 			},
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["frameStrata"] = 1,
-			["width"] = 30,
-			["foregroundColor"] = {
+			["id"] = "Fort Brew Uptime",
+			["borderColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				1, -- [4]
+				0.700000017881393, -- [4]
 			},
-			["rotation"] = 0,
-			["numTriggers"] = 2,
+			["frameStrata"] = 1,
+			["width"] = 85,
+			["displayTextRight"] = "%p",
+			["customTextUpdate"] = "update",
+			["numTriggers"] = 1,
 			["sparkDesature"] = false,
-			["orientation"] = "VERTICAL_INVERSE",
-			["crop_x"] = 0.409999996423721,
-			["displayTextLeft"] = " ",
+			["orientation"] = "HORIZONTAL",
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["sparkWidth"] = 10,
 			["stacksFont"] = "ABF",
+		},
+		["SEF"] = {
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["controlledChildren"] = {
+				"SEF_CORE", -- [1]
+				"SEF_1_icon", -- [2]
+				"SEF_1_alert", -- [3]
+				"SEF_1_enemy", -- [4]
+				"SEF_1_name", -- [5]
+				"SEF_1_totem", -- [6]
+				"SEF_2_icon", -- [7]
+				"SEF_2_alert", -- [8]
+				"SEF_2_enemy", -- [9]
+				"SEF_2_name", -- [10]
+				"SEF_2_totem", -- [11]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["xOffset"] = 128,
+			["border"] = false,
+			["yOffset"] = -281,
+			["regionType"] = "group",
+			["borderSize"] = 16,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["expanded"] = false,
+			["borderOffset"] = 5,
+			["selfPoint"] = "BOTTOMLEFT",
+			["id"] = "SEF",
+			["anchorPoint"] = "CENTER",
+			["frameStrata"] = 1,
+			["additional_triggers"] = {
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["borderInset"] = 11,
+			["numTriggers"] = 1,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["trigger"] = {
+				["type"] = "aura",
+				["unit"] = "player",
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+				["names"] = {
+				},
+				["event"] = "Health",
+				["subeventPrefix"] = "SPELL",
+			},
+			["borderEdge"] = "None",
+			["load"] = {
+				["use_class"] = "true",
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["untrigger"] = {
+			},
 		},
 		["Frostbolt Empty"] = {
 			["user_y"] = 0,
@@ -70837,6 +71142,126 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 		},
+		["Attack Power Background Warrior"] = {
+			["outline"] = false,
+			["fontSize"] = 20,
+			["color"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
+			},
+			["displayText"] = "%c",
+			["customText"] = "function()\n    local base, positive, negative = UnitAttackPower(\"player\"); \n    local value = base + positive + negative;\n    \n    if value then\n        if(value > 999999) then value = (0.1 * math.floor(value/10000000) + 0.5) .. \"m\" end\n        if(value > 999) then value = (0.1 * math.floor(value/100) + 0.5) .. \"k\" end\n        return(value)\n    else return 0\n    end\nend\n\n\n\n\n\n\n\n",
+			["yOffset"] = -59,
+			["regionType"] = "text",
+			["customTextUpdate"] = "update",
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["parent"] = "Melee Pertinent Stats",
+			["untrigger"] = {
+			},
+			["justify"] = "LEFT",
+			["selfPoint"] = "LEFT",
+			["additional_triggers"] = {
+			},
+			["id"] = "Attack Power Background Warrior",
+			["frameStrata"] = 2,
+			["width"] = 7.67999458312988,
+			["trigger"] = {
+				["unit"] = "player",
+				["use_powertype"] = true,
+				["custom_hide"] = "timed",
+				["type"] = "status",
+				["use_health"] = false,
+				["unevent"] = "auto",
+				["percenthealth"] = "0",
+				["event"] = "Health",
+				["subeventPrefix"] = "SPELL",
+				["debuffType"] = "HELPFUL",
+				["health_operator"] = ">",
+				["health"] = "0",
+				["names"] = {
+				},
+				["use_unit"] = true,
+				["use_percenthealth"] = true,
+				["percenthealth_operator"] = ">",
+				["subeventSuffix"] = "_CAST_START",
+			},
+			["font"] = "ABF",
+			["numTriggers"] = 1,
+			["anchorPoint"] = "CENTER",
+			["height"] = 19.8399925231934,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["colorR"] = 0,
+					["duration"] = "1",
+					["alphaType"] = "straight",
+					["colorB"] = 0,
+					["colorG"] = 0,
+					["alphaFunc"] = "return function(progress, start, delta)\n  return start + (progress * delta)\nend",
+					["use_alpha"] = false,
+					["type"] = "custom",
+					["scaley"] = 1,
+					["alpha"] = 0,
+					["duration_type"] = "seconds",
+					["y"] = 0,
+					["colorType"] = "custom",
+					["colorA"] = 1,
+					["use_color"] = true,
+					["colorFunc"] = "return function(progress, r1, g1, b1, a1, r2, g2, b2, a2)\n    local base, positive, negative = UnitAttackPower(\"player\"); \n    local value = base + positive + negative;\n    local left_bound = 1250;\n    local range = left_bound * 0.8;\n    \n    if value < left_bound then\n        progress = 0;\n    elseif value < left_bound + range then\n        progress = (value - left_bound) / range;\n    else\n        progress = 1;\n    end\n    \n    return r1 + (progress * (r2 - r1)), g1 + (progress * (g2 - g1)), b1 + (progress * (b2 - b1)), a1 + (progress * (a2 - a1))\nend",
+					["rotate"] = 0,
+					["scalex"] = 1,
+					["x"] = 0,
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["load"] = {
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+						true, -- [2]
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = false,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["xOffset"] = 106,
+		},
 		["Target of Enemy Monk"] = {
 			["outline"] = false,
 			["fontSize"] = 20,
@@ -70939,6 +71364,292 @@ WeakAurasSaved = {
 				},
 			},
 			["regionType"] = "text",
+		},
+		["Penance Unusable"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 47540,
+			},
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["fontFlags"] = "OUTLINE",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["names"] = {
+				},
+				["use_spellName"] = true,
+				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
+				["spellName"] = 47540,
+				["subeventSuffix"] = "_CAST_START",
+				["custom_hide"] = "timed",
+			},
+			["desaturate"] = true,
+			["rotation"] = 0,
+			["font"] = "ABF",
+			["height"] = 32,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["load"] = {
+				["talent"] = {
+					["single"] = 4,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "PRIEST",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["parent"] = "Penance 1.0",
+			["selfPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["xOffset"] = 0,
+			["mirror"] = false,
+			["inverse"] = false,
+			["regionType"] = "icon",
+			["yOffset"] = 0,
+			["blendMode"] = "BLEND",
+			["anchorPoint"] = "CENTER",
+			["fontSize"] = 13,
+			["frameStrata"] = 1,
+			["customTextUpdate"] = "update",
+			["additional_triggers"] = {
+			},
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Penance Unusable",
+			["crop_y"] = 0.41,
+			["alpha"] = 1,
+			["width"] = 32,
+			["icon"] = true,
+			["desaturateForeground"] = false,
+			["numTriggers"] = 1,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+					["glow_action"] = "show",
+				},
+				["finish"] = {
+				},
+			},
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.41,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
+		},
+		["Lightwell Unusable"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 724,
+			},
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+					["glow_action"] = "show",
+				},
+				["finish"] = {
+				},
+			},
+			["fontFlags"] = "OUTLINE",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["names"] = {
+				},
+				["use_spellName"] = true,
+				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
+				["spellName"] = 724,
+				["subeventSuffix"] = "_CAST_START",
+				["custom_hide"] = "timed",
+			},
+			["desaturate"] = true,
+			["rotation"] = 0,
+			["font"] = "ABF",
+			["height"] = 32,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["load"] = {
+				["talent"] = {
+					["single"] = 4,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "PRIEST",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["parent"] = "Lightwell 1.0",
+			["selfPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["xOffset"] = 0,
+			["mirror"] = false,
+			["inverse"] = false,
+			["regionType"] = "icon",
+			["yOffset"] = 0,
+			["blendMode"] = "BLEND",
+			["anchorPoint"] = "CENTER",
+			["fontSize"] = 13,
+			["frameStrata"] = 1,
+			["customTextUpdate"] = "update",
+			["additional_triggers"] = {
+			},
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Lightwell Unusable",
+			["crop_y"] = 0.41,
+			["alpha"] = 1,
+			["width"] = 32,
+			["icon"] = true,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["numTriggers"] = 1,
+			["desaturateForeground"] = false,
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.41,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
 		},
 		["Diffuse Magic Uptime"] = {
 			["sparkWidth"] = 10,
@@ -71130,651 +71841,6 @@ WeakAurasSaved = {
 			},
 			["stacksFont"] = "ABF",
 		},
-		["Penance Unusable"] = {
-			["user_y"] = 0,
-			["user_x"] = 0,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 47540,
-			},
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturateBackground"] = false,
-			["sameTexture"] = true,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["fontFlags"] = "OUTLINE",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["use_inverse"] = false,
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
-				["names"] = {
-				},
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["spellName"] = 47540,
-				["custom_hide"] = "timed",
-			},
-			["desaturate"] = true,
-			["rotation"] = 0,
-			["font"] = "ABF",
-			["height"] = 32,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["load"] = {
-				["talent"] = {
-					["single"] = 4,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "PRIEST",
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 1,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["parent"] = "Penance 1.0",
-			["selfPoint"] = "CENTER",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["xOffset"] = 0,
-			["mirror"] = false,
-			["inverse"] = false,
-			["regionType"] = "icon",
-			["yOffset"] = 0,
-			["blendMode"] = "BLEND",
-			["anchorPoint"] = "CENTER",
-			["fontSize"] = 13,
-			["frameStrata"] = 1,
-			["customTextUpdate"] = "update",
-			["additional_triggers"] = {
-			},
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Penance Unusable",
-			["crop_y"] = 0.41,
-			["alpha"] = 1,
-			["width"] = 32,
-			["icon"] = true,
-			["desaturateForeground"] = false,
-			["numTriggers"] = 1,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-					["glow_action"] = "show",
-				},
-				["finish"] = {
-				},
-			},
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.41,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-		},
-		["Lightwell Unusable"] = {
-			["user_y"] = 0,
-			["user_x"] = 0,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 724,
-			},
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturateBackground"] = false,
-			["sameTexture"] = true,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-					["glow_action"] = "show",
-				},
-				["finish"] = {
-				},
-			},
-			["fontFlags"] = "OUTLINE",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["use_inverse"] = false,
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
-				["names"] = {
-				},
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["spellName"] = 724,
-				["custom_hide"] = "timed",
-			},
-			["desaturate"] = true,
-			["rotation"] = 0,
-			["font"] = "ABF",
-			["height"] = 32,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["load"] = {
-				["talent"] = {
-					["single"] = 4,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "PRIEST",
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["parent"] = "Lightwell 1.0",
-			["selfPoint"] = "CENTER",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["xOffset"] = 0,
-			["mirror"] = false,
-			["inverse"] = false,
-			["regionType"] = "icon",
-			["yOffset"] = 0,
-			["blendMode"] = "BLEND",
-			["anchorPoint"] = "CENTER",
-			["fontSize"] = 13,
-			["frameStrata"] = 1,
-			["customTextUpdate"] = "update",
-			["additional_triggers"] = {
-			},
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Lightwell Unusable",
-			["crop_y"] = 0.41,
-			["alpha"] = 1,
-			["width"] = 32,
-			["icon"] = true,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["numTriggers"] = 1,
-			["desaturateForeground"] = false,
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.41,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-		},
-		["Attack Power Background Warrior"] = {
-			["outline"] = false,
-			["fontSize"] = 20,
-			["color"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				1, -- [4]
-			},
-			["displayText"] = "%c",
-			["customText"] = "function()\n    local base, positive, negative = UnitAttackPower(\"player\"); \n    local value = base + positive + negative;\n    \n    if value then\n        if(value > 999999) then value = (0.1 * math.floor(value/10000000) + 0.5) .. \"m\" end\n        if(value > 999) then value = (0.1 * math.floor(value/100) + 0.5) .. \"k\" end\n        return(value)\n    else return 0\n    end\nend\n\n\n\n\n\n\n\n",
-			["yOffset"] = -59,
-			["regionType"] = "text",
-			["customTextUpdate"] = "update",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["parent"] = "Melee Pertinent Stats",
-			["untrigger"] = {
-			},
-			["justify"] = "LEFT",
-			["selfPoint"] = "LEFT",
-			["additional_triggers"] = {
-			},
-			["id"] = "Attack Power Background Warrior",
-			["frameStrata"] = 2,
-			["width"] = 7.67999458312988,
-			["trigger"] = {
-				["unit"] = "player",
-				["use_powertype"] = true,
-				["custom_hide"] = "timed",
-				["type"] = "status",
-				["use_health"] = false,
-				["unevent"] = "auto",
-				["percenthealth"] = "0",
-				["event"] = "Health",
-				["subeventPrefix"] = "SPELL",
-				["debuffType"] = "HELPFUL",
-				["health_operator"] = ">",
-				["health"] = "0",
-				["names"] = {
-				},
-				["use_unit"] = true,
-				["use_percenthealth"] = true,
-				["percenthealth_operator"] = ">",
-				["subeventSuffix"] = "_CAST_START",
-			},
-			["font"] = "ABF",
-			["numTriggers"] = 1,
-			["anchorPoint"] = "CENTER",
-			["height"] = 19.8399925231934,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["colorR"] = 0,
-					["duration"] = "1",
-					["alphaType"] = "straight",
-					["colorB"] = 0,
-					["colorG"] = 0,
-					["alphaFunc"] = "return function(progress, start, delta)\n  return start + (progress * delta)\nend",
-					["use_alpha"] = false,
-					["type"] = "custom",
-					["scaley"] = 1,
-					["alpha"] = 0,
-					["duration_type"] = "seconds",
-					["y"] = 0,
-					["colorType"] = "custom",
-					["colorA"] = 1,
-					["use_color"] = true,
-					["colorFunc"] = "return function(progress, r1, g1, b1, a1, r2, g2, b2, a2)\n    local base, positive, negative = UnitAttackPower(\"player\"); \n    local value = base + positive + negative;\n    local left_bound = 1250;\n    local range = left_bound * 0.8;\n    \n    if value < left_bound then\n        progress = 0;\n    elseif value < left_bound + range then\n        progress = (value - left_bound) / range;\n    else\n        progress = 1;\n    end\n    \n    return r1 + (progress * (r2 - r1)), g1 + (progress * (g2 - g1)), b1 + (progress * (b2 - b1)), a1 + (progress * (a2 - a1))\nend",
-					["rotate"] = 0,
-					["scalex"] = 1,
-					["x"] = 0,
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["load"] = {
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 1,
-					["multi"] = {
-						true, -- [1]
-						true, -- [2]
-					},
-				},
-				["use_class"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = false,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["xOffset"] = 106,
-		},
-		["Impending Victory 2.0"] = {
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["controlledChildren"] = {
-				"Impending Victory Timer", -- [1]
-				"Impending Victory Usable", -- [2]
-				"Impending Victory Unusable", -- [3]
-			},
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["xOffset"] = 40,
-			["border"] = false,
-			["yOffset"] = -90,
-			["regionType"] = "group",
-			["borderSize"] = 16,
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["expanded"] = false,
-			["borderOffset"] = 5,
-			["selfPoint"] = "BOTTOMLEFT",
-			["id"] = "Impending Victory 2.0",
-			["untrigger"] = {
-			},
-			["frameStrata"] = 1,
-			["additional_triggers"] = {
-			},
-			["borderEdge"] = "None",
-			["borderInset"] = 11,
-			["numTriggers"] = 1,
-			["trigger"] = {
-				["type"] = "aura",
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["debuffType"] = "HELPFUL",
-				["names"] = {
-				},
-				["event"] = "Health",
-				["unit"] = "player",
-			},
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["load"] = {
-				["use_class"] = "true",
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["anchorPoint"] = "CENTER",
-		},
-		["Energizing Brew Unusable"] = {
-			["user_y"] = 0,
-			["user_x"] = 0,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 115288,
-			},
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturateBackground"] = false,
-			["sameTexture"] = true,
-			["desaturateForeground"] = false,
-			["fontFlags"] = "OUTLINE",
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["use_inverse"] = false,
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["spellName"] = 115288,
-				["use_spellName"] = true,
-				["custom_hide"] = "timed",
-				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
-				["subeventPrefix"] = "SPELL",
-				["names"] = {
-				},
-				["debuffType"] = "HELPFUL",
-			},
-			["desaturate"] = true,
-			["rotation"] = 0,
-			["font"] = "ABF",
-			["height"] = 32,
-			["backgroundOffset"] = 2,
-			["load"] = {
-				["talent"] = {
-					["single"] = 4,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "MONK",
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["parent"] = "Energizing Brew 1.0",
-			["selfPoint"] = "CENTER",
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["mirror"] = false,
-			["numTriggers"] = 1,
-			["regionType"] = "icon",
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-					["glow_action"] = "show",
-				},
-				["finish"] = {
-				},
-			},
-			["blendMode"] = "BLEND",
-			["icon"] = true,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["alpha"] = 1,
-			["crop_y"] = 0.41,
-			["id"] = "Energizing Brew Unusable",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["additional_triggers"] = {
-			},
-			["customTextUpdate"] = "update",
-			["frameStrata"] = 1,
-			["width"] = 32,
-			["anchorPoint"] = "CENTER",
-			["yOffset"] = 0,
-			["inverse"] = false,
-			["xOffset"] = 0,
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.41,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-		},
 		["Surging Mist Unusable MW"] = {
 			["user_y"] = 0,
 			["user_x"] = 0,
@@ -71941,6 +72007,149 @@ WeakAurasSaved = {
 			["stacksPoint"] = "BOTTOM",
 			["backgroundOffset"] = 2,
 		},
+		["Energizing Brew Unusable"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 115288,
+			},
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
+			["desaturateForeground"] = false,
+			["fontFlags"] = "OUTLINE",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["spellName"] = 115288,
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["custom_hide"] = "timed",
+				["use_spellName"] = true,
+				["unit"] = "player",
+				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
+				["names"] = {
+				},
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+			},
+			["desaturate"] = true,
+			["rotation"] = 0,
+			["font"] = "ABF",
+			["height"] = 32,
+			["backgroundOffset"] = 2,
+			["load"] = {
+				["talent"] = {
+					["single"] = 4,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["parent"] = "Energizing Brew 1.0",
+			["selfPoint"] = "CENTER",
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["mirror"] = false,
+			["numTriggers"] = 1,
+			["regionType"] = "icon",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+					["glow_action"] = "show",
+				},
+				["finish"] = {
+				},
+			},
+			["blendMode"] = "BLEND",
+			["icon"] = true,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["alpha"] = 1,
+			["crop_y"] = 0.41,
+			["id"] = "Energizing Brew Unusable",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["additional_triggers"] = {
+			},
+			["customTextUpdate"] = "update",
+			["frameStrata"] = 1,
+			["width"] = 32,
+			["anchorPoint"] = "CENTER",
+			["yOffset"] = 0,
+			["inverse"] = false,
+			["xOffset"] = 0,
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.41,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+		},
 		["Mindbender"] = {
 			["color"] = {
 				1, -- [1]
@@ -72008,18 +72217,18 @@ WeakAurasSaved = {
 				["type"] = "status",
 				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
-				["use_inverse"] = true,
+				["spellName"] = 123040,
 				["event"] = "Cooldown Progress (Spell)",
 				["unit"] = "player",
-				["spellName"] = 123040,
-				["use_spellName"] = true,
 				["use_remaining"] = false,
-				["use_unit"] = true,
-				["unevent"] = "auto",
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
+				["unevent"] = "auto",
+				["showOn"] = "showOnReady",
 				["names"] = {
 					"Mindbender", -- [1]
 				},
+				["use_unit"] = true,
 				["debuffType"] = "HELPFUL",
 			},
 			["rotation"] = 0,
@@ -72113,20 +72322,20 @@ WeakAurasSaved = {
 			},
 			["trigger"] = {
 				["type"] = "status",
-				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
-				["use_inverse"] = true,
-				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 				},
+				["use_unit"] = true,
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
-				["use_unit"] = true,
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["unevent"] = "auto",
 				["spellName"] = 147489,
 			},
 			["desaturate"] = false,
@@ -72211,6 +72420,102 @@ WeakAurasSaved = {
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
 			["backgroundOffset"] = 2,
+		},
+		["Impending Victory 2.0"] = {
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["controlledChildren"] = {
+				"Impending Victory Timer", -- [1]
+				"Impending Victory Usable", -- [2]
+				"Impending Victory Unusable", -- [3]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["xOffset"] = 40,
+			["border"] = false,
+			["yOffset"] = -90,
+			["regionType"] = "group",
+			["borderSize"] = 16,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["expanded"] = false,
+			["borderOffset"] = 5,
+			["selfPoint"] = "BOTTOMLEFT",
+			["id"] = "Impending Victory 2.0",
+			["untrigger"] = {
+			},
+			["frameStrata"] = 1,
+			["additional_triggers"] = {
+			},
+			["borderEdge"] = "None",
+			["borderInset"] = 11,
+			["numTriggers"] = 1,
+			["trigger"] = {
+				["type"] = "aura",
+				["subeventPrefix"] = "SPELL",
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+				["names"] = {
+				},
+				["event"] = "Health",
+				["unit"] = "player",
+			},
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["load"] = {
+				["use_class"] = "true",
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["anchorPoint"] = "CENTER",
 		},
 		["Magma Totem Up without FE"] = {
 			["user_y"] = 0,
@@ -72346,17 +72651,17 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "status",
 						["subeventSuffix"] = "_CAST_START",
-						["use_inverse"] = false,
+						["custom_hide"] = "timed",
 						["event"] = "Cooldown Progress (Spell)",
 						["subeventPrefix"] = "SPELL",
-						["custom_hide"] = "timed",
-						["use_spellName"] = true,
 						["spellName"] = 2894,
+						["use_spellName"] = true,
 						["use_unit"] = true,
-						["unevent"] = "auto",
 						["names"] = {
 						},
+						["showOn"] = "showOnCooldown",
 						["unit"] = "player",
+						["unevent"] = "auto",
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -72494,23 +72799,24 @@ WeakAurasSaved = {
 				["names"] = {
 					"Elusive Brew", -- [1]
 				},
-				["custom_hide"] = "timed",
-				["spellName"] = 1535,
-				["type"] = "status",
-				["use_unit"] = true,
-				["unevent"] = "auto",
-				["subeventPrefix"] = "SPELL",
-				["use_spellId"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["use_percentpower"] = false,
-				["count"] = "0",
-				["use_spellName"] = true,
-				["name"] = "115308",
-				["countOperator"] = "==",
-				["tooltip_operator"] = "find('%s')",
-				["subeventSuffix"] = "_CAST_START",
-				["useCount"] = true,
 				["debuffType"] = "HELPFUL",
+				["custom_hide"] = "timed",
+				["use_unit"] = true,
+				["type"] = "status",
+				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
+				["event"] = "Cooldown Progress (Spell)",
+				["count"] = "0",
+				["countOperator"] = "==",
+				["use_percentpower"] = false,
+				["use_spellName"] = true,
+				["use_spellId"] = true,
+				["name"] = "115308",
+				["tooltip_operator"] = "find('%s')",
+				["showOn"] = "showOnCooldown",
+				["useCount"] = true,
+				["spellName"] = 1535,
+				["subeventPrefix"] = "SPELL",
 			},
 			["text"] = true,
 			["stickyDuration"] = false,
@@ -72615,26 +72921,26 @@ WeakAurasSaved = {
 				},
 			},
 			["trigger"] = {
-				["use_inverse"] = false,
+				["use_totemName"] = true,
 				["use_unit"] = true,
 				["use_totemType"] = true,
 				["spellName"] = 2062,
 				["type"] = "status",
 				["subeventSuffix"] = "_CAST_START",
-				["use_totemName"] = true,
+				["subeventPrefix"] = "SPELL",
 				["totemName"] = 0,
 				["event"] = "Cooldown Progress (Spell)",
 				["totemType"] = 2,
-				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
 				["use_spellName"] = true,
 				["inverse"] = true,
-				["debuffType"] = "HELPFUL",
 				["unevent"] = "auto",
-				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
 				["names"] = {
 					"Searing Flames", -- [1]
 				},
+				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
 			["rotation"] = 0,
@@ -72708,16 +73014,16 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "status",
 						["subeventSuffix"] = "_CAST_START",
-						["use_inverse"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["subeventPrefix"] = "SPELL",
-						["use_spellName"] = true,
 						["debuffType"] = "HELPFUL",
+						["use_spellName"] = true,
 						["unit"] = "player",
 						["names"] = {
 						},
-						["unevent"] = "auto",
+						["showOn"] = "showOnReady",
 						["use_unit"] = true,
+						["unevent"] = "auto",
 						["spellName"] = 2894,
 					},
 					["untrigger"] = {
@@ -73329,16 +73635,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["spellName"] = 165341,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 165341,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
@@ -73891,21 +74198,22 @@ WeakAurasSaved = {
 			},
 			["trigger"] = {
 				["charges_operator"] = "==",
-				["type"] = "status",
-				["unevent"] = "auto",
-				["debuffType"] = "HELPFUL",
-				["use_charges"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
 				["charges"] = "0",
-				["use_spellName"] = true,
+				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["names"] = {
 				},
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
+				["use_charges"] = true,
+				["event"] = "Cooldown Progress (Spell)",
 				["unit"] = "player",
-				["custom_hide"] = "timed",
+				["use_unit"] = true,
+				["use_spellName"] = true,
+				["unevent"] = "auto",
 				["spellName"] = 123402,
+				["showOn"] = "showOnCooldown",
+				["subeventPrefix"] = "SPELL",
+				["type"] = "status",
+				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
 			["progressPrecision"] = 0,
@@ -74017,6 +74325,172 @@ WeakAurasSaved = {
 				0.501960784313726, -- [2]
 				0.501960784313726, -- [3]
 				0.25, -- [4]
+			},
+		},
+		["Chi Brew Usable with Less Than 2 Chi"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["parent"] = "Chi Brew 1.0",
+			["untrigger"] = {
+				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return true\n    end\n    return false\nend\n\n\n\n\n\n",
+				["spellName"] = 115399,
+			},
+			["anchorPoint"] = "CENTER",
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = true,
+					["glow_frame"] = "WeakAuras:Chi Brew Usable with Less Than 2 Chi",
+					["glow_action"] = "show",
+				},
+				["finish"] = {
+				},
+			},
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["trigger"] = {
+				["spellName"] = 115399,
+				["type"] = "custom",
+				["custom_hide"] = "timed",
+				["unevent"] = "auto",
+				["names"] = {
+				},
+				["use_inverse"] = true,
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["subeventPrefix"] = "SPELL",
+				["use_spellName"] = true,
+				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return false\n    end\n    return true\nend\n\n\n\n",
+				["subeventSuffix"] = "_CAST_START",
+				["check"] = "update",
+				["unit"] = "player",
+				["custom_type"] = "status",
+				["debuffType"] = "HELPFUL",
+			},
+			["desaturate"] = false,
+			["rotation"] = 0,
+			["font"] = "ABF",
+			["backgroundOffset"] = 2,
+			["height"] = 32,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["load"] = {
+				["talent"] = {
+					["single"] = 9,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = false,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+						true, -- [1]
+						[3] = true,
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["crop_x"] = 0.41,
+			["stickyDuration"] = false,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["desaturateForeground"] = false,
+			["numTriggers"] = 2,
+			["mirror"] = false,
+			["crop_y"] = 0.41,
+			["regionType"] = "icon",
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["blendMode"] = "BLEND",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["alpha"] = 1,
+			["yOffset"] = 0,
+			["id"] = "Chi Brew Usable with Less Than 2 Chi",
+			["customTextUpdate"] = "update",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "status",
+						["unevent"] = "auto",
+						["power_operator"] = "<=",
+						["use_power"] = true,
+						["event"] = "Chi Power",
+						["subeventPrefix"] = "SPELL",
+						["power"] = "2",
+						["unit"] = "player",
+						["use_unit"] = true,
+						["subeventSuffix"] = "_CAST_START",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+			},
+			["fontSize"] = 14,
+			["frameStrata"] = 1,
+			["width"] = 32,
+			["icon"] = true,
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["inverse"] = false,
+			["xOffset"] = 0,
+			["orientation"] = "VERTICAL",
+			["displayIcon"] = "Interface\\Icons\\ability_monk_chibrew",
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
 		},
 		["Berserking Timer Up"] = {
@@ -74234,215 +74708,60 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 		},
-		["Chi Brew Usable with Less Than 2 Chi"] = {
+		["Tiger Power Fading Left Animated"] = {
 			["user_y"] = 0,
 			["user_x"] = 0,
-			["parent"] = "Chi Brew 1.0",
-			["untrigger"] = {
-				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return true\n    end\n    return false\nend\n\n\n\n\n\n",
-				["spellName"] = 115399,
-			},
+			["parent"] = "Tiger Power",
+			["yOffset"] = 0,
 			["anchorPoint"] = "CENTER",
 			["desaturateBackground"] = false,
 			["sameTexture"] = true,
 			["actions"] = {
 				["start"] = {
-					["do_glow"] = true,
-					["glow_frame"] = "WeakAuras:Chi Brew Usable with Less Than 2 Chi",
-					["glow_action"] = "show",
 				},
 				["finish"] = {
 				},
 			},
-			["fontFlags"] = "OUTLINE",
 			["selfPoint"] = "CENTER",
 			["trigger"] = {
-				["spellName"] = 115399,
 				["type"] = "custom",
-				["custom_hide"] = "timed",
-				["unevent"] = "auto",
-				["names"] = {
-				},
-				["use_inverse"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["subeventPrefix"] = "SPELL",
-				["use_spellName"] = true,
-				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return false\n    end\n    return true\nend\n\n\n\n",
-				["subeventSuffix"] = "_CAST_START",
-				["check"] = "update",
-				["unit"] = "player",
-				["custom_type"] = "status",
 				["debuffType"] = "HELPFUL",
+				["subeventSuffix"] = "_CAST_START",
+				["custom_type"] = "status",
+				["rem"] = "4",
+				["event"] = "Health",
+				["names"] = {
+					"Tiger Power", -- [1]
+				},
+				["customDuration"] = "function()\n    local _, _, _, _, _, _, exp_time = UnitBuff(\"player\", \"Tiger Power\")\n    \n    if exp_time then\n        return exp_time - GetTime(), 4, true\n    else\n        return 0, 0, false\n    end\nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+				["check"] = "update",
+				["custom"] = "function()\n    local _, _, _, _, _, _, exp_time = UnitBuff(\"player\", \"Tiger Power\")\n    \n    if exp_time and exp_time - GetTime() <= 4 then\n        return true\n    else\n        return false\n    end\nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+				["subeventPrefix"] = "SPELL",
+				["remOperator"] = "<",
+				["unit"] = "player",
+				["useRem"] = true,
+				["custom_hide"] = "timed",
 			},
 			["desaturate"] = false,
 			["rotation"] = 0,
-			["font"] = "ABF",
-			["backgroundOffset"] = 2,
-			["height"] = 32,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-			},
+			["font"] = "Friz Quadrata TT",
+			["height"] = 250,
+			["rotate"] = true,
 			["load"] = {
+				["use_never"] = false,
 				["talent"] = {
-					["single"] = 9,
 					["multi"] = {
 					},
 				},
-				["class"] = {
-					["single"] = "MONK",
-					["multi"] = {
-					},
-				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = false,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
 				["spec"] = {
-					["single"] = 3,
+					["single"] = 1,
 					["multi"] = {
 						true, -- [1]
 						[3] = true,
 					},
 				},
-				["size"] = {
+				["role"] = {
 					["multi"] = {
-					},
-				},
-			},
-			["crop_x"] = 0.41,
-			["stickyDuration"] = false,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["desaturateForeground"] = false,
-			["numTriggers"] = 2,
-			["mirror"] = false,
-			["crop_y"] = 0.41,
-			["regionType"] = "icon",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["blendMode"] = "BLEND",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["alpha"] = 1,
-			["yOffset"] = 0,
-			["id"] = "Chi Brew Usable with Less Than 2 Chi",
-			["customTextUpdate"] = "update",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "status",
-						["unevent"] = "auto",
-						["power_operator"] = "<=",
-						["use_power"] = true,
-						["event"] = "Chi Power",
-						["subeventPrefix"] = "SPELL",
-						["power"] = "2",
-						["unit"] = "player",
-						["use_unit"] = true,
-						["subeventSuffix"] = "_CAST_START",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-			},
-			["fontSize"] = 14,
-			["frameStrata"] = 1,
-			["width"] = 32,
-			["icon"] = true,
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["inverse"] = false,
-			["xOffset"] = 0,
-			["orientation"] = "VERTICAL",
-			["displayIcon"] = "Interface\\Icons\\ability_monk_chibrew",
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-		},
-		["RoR Timer"] = {
-			["textFlags"] = "None",
-			["stacksSize"] = 12,
-			["user_x"] = 0,
-			["xOffset"] = 0,
-			["stacksFlags"] = "None",
-			["yOffset"] = 90,
-			["anchorPoint"] = "CENTER",
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["sameTexture"] = true,
-			["rotateText"] = "NONE",
-			["backgroundColor"] = {
-				0.501960784313726, -- [1]
-				0.501960784313726, -- [2]
-				0.501960784313726, -- [3]
-				0.25, -- [4]
-			},
-			["fontFlags"] = "OUTLINE",
-			["selfPoint"] = "CENTER",
-			["barColor"] = {
-				0.12156862745098, -- [1]
-				1, -- [2]
-				0.474509803921569, -- [3]
-				0.75, -- [4]
-			},
-			["desaturate"] = false,
-			["rotation"] = 0,
-			["sparkOffsetY"] = 0,
-			["load"] = {
-				["use_never"] = true,
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-						[3] = true,
 					},
 				},
 				["use_class"] = true,
@@ -74450,10 +74769,9 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
+				["name"] = "Pandatal",
+				["use_spec"] = false,
+				["use_name"] = false,
 				["use_combat"] = true,
 				["class"] = {
 					["single"] = "MONK",
@@ -74465,151 +74783,66 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["regionType"] = "aurabar",
-			["stacks"] = false,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["foregroundTexture"] = "Textures\\SpellActivationOverlays\\GenericArc_01",
+			["mirror"] = false,
+			["discrete_rotation"] = 0,
+			["regionType"] = "progresstexture",
+			["stickyDuration"] = false,
 			["blendMode"] = "BLEND",
-			["texture"] = "BantoBar",
-			["textFont"] = "ABF",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["timerFont"] = "ABF",
-			["alpha"] = 1,
-			["borderInset"] = 11,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 121253,
-			},
-			["desaturateBackground"] = false,
-			["borderOffset"] = 5,
-			["customTextUpdate"] = "update",
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturateForeground"] = false,
-			["sparkWidth"] = 10,
-			["spark"] = false,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["numTriggers"] = 1,
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["duration_type"] = "seconds",
+					["type"] = "none",
 				},
 				["main"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["preset"] = "fade",
 					["type"] = "preset",
 					["duration_type"] = "seconds",
-				},
-			},
-			["trigger"] = {
-				["type"] = "aura",
-				["unevent"] = "auto",
-				["custom_hide"] = "timed",
-				["event"] = "Cooldown Progress (Spell)",
-				["subeventPrefix"] = "SPELL",
-				["names"] = {
-					"Re-Origination", -- [1]
-				},
-				["use_spellName"] = true,
-				["spellIds"] = {
-				},
-				["spellName"] = 121253,
-				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
-				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-			},
-			["text"] = true,
-			["sparkRotationMode"] = "AUTO",
-			["stickyDuration"] = false,
-			["sparkRotation"] = 0,
-			["sparkOffsetX"] = 0,
-			["displayTextLeft"] = " ",
-			["actions"] = {
-				["start"] = {
+					["preset"] = "alphaPulse",
 				},
 				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
 				},
 			},
-			["height"] = 42,
-			["timerFlags"] = "None",
+			["backgroundColor"] = {
+				0.12156862745098, -- [1]
+				1, -- [2]
+				0.474509803921569, -- [3]
+				0.491101741790772, -- [4]
+			},
+			["xOffset"] = -250,
+			["numTriggers"] = 1,
+			["texture"] = "Textures\\SpellActivationOverlays\\GenericArc_01",
+			["untrigger"] = {
+				["custom"] = "function()\n    return true\nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+			},
+			["desaturateForeground"] = false,
 			["additional_triggers"] = {
 			},
-			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = "%s",
-			["crop_y"] = 0.41,
-			["displayTextRight"] = "%p",
-			["progressPrecision"] = 1,
-			["mirror"] = false,
-			["borderEdge"] = "None",
-			["timer"] = true,
-			["borderSize"] = 16,
-			["user_y"] = 0,
-			["icon_side"] = "LEFT",
-			["border"] = false,
-			["stacksFont"] = "ABF",
-			["sparkHeight"] = 30,
-			["icon"] = false,
-			["stacksContainment"] = "INSIDE",
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["timerSize"] = 20,
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["id"] = "RoR Timer",
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["compress"] = false,
+			["id"] = "Tiger Power Fading Left Animated",
 			["frameStrata"] = 1,
-			["width"] = 42,
-			["barInFront"] = true,
-			["textSize"] = 20,
-			["inverse"] = false,
-			["sparkDesature"] = false,
-			["orientation"] = "VERTICAL_INVERSE",
-			["crop_x"] = 0.409999996423721,
-			["textColor"] = {
-				1, -- [1]
+			["alpha"] = 1,
+			["width"] = 100,
+			["fontSize"] = 12,
+			["color"] = {
+				0.12156862745098, -- [1]
 				1, -- [2]
-				1, -- [3]
+				0.474509803921569, -- [3]
 				1, -- [4]
 			},
-			["parent"] = "RoR 1.0",
+			["inverse"] = false,
+			["foregroundColor"] = {
+				0.12156862745098, -- [1]
+				1, -- [2]
+				0.474509803921569, -- [3]
+				1, -- [4]
+			},
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.7,
+			["crop_y"] = 0.75,
+			["backgroundOffset"] = 2,
 		},
 		["Chi Burst 1.0"] = {
 			["backdropColor"] = {
@@ -74826,7 +75059,7 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 		},
-		["Enhance AoE Timers"] = {
+		["Expel Harm 1.0 MW"] = {
 			["backdropColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -74834,14 +75067,15 @@ WeakAurasSaved = {
 				0.5, -- [4]
 			},
 			["controlledChildren"] = {
-				"Chain Lightning CD", -- [1]
-				"Fire Nova CD", -- [2]
+				"Expel Harm Timer MW", -- [1]
+				"Expel Harm Usable MW", -- [2]
+				"Expel Harm Unusable MW", -- [3]
 			},
 			["borderBackdrop"] = "Blizzard Tooltip",
-			["xOffset"] = 0,
+			["xOffset"] = 80,
 			["border"] = false,
-			["yOffset"] = 0,
-			["anchorPoint"] = "CENTER",
+			["yOffset"] = -230,
+			["regionType"] = "group",
 			["borderSize"] = 16,
 			["borderColor"] = {
 				1, -- [1]
@@ -74849,45 +75083,53 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
+			["expanded"] = false,
+			["borderOffset"] = 5,
+			["selfPoint"] = "BOTTOMLEFT",
+			["additional_triggers"] = {
+			},
+			["untrigger"] = {
+			},
+			["frameStrata"] = 1,
+			["id"] = "Expel Harm 1.0 MW",
+			["borderEdge"] = "None",
+			["borderInset"] = 11,
+			["numTriggers"] = 1,
+			["trigger"] = {
+				["subeventPrefix"] = "SPELL",
+				["type"] = "aura",
+				["spellIds"] = {
+				},
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+				["names"] = {
+				},
+				["event"] = "Health",
+				["unit"] = "player",
+			},
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
 			["actions"] = {
 				["start"] = {
 				},
 				["finish"] = {
 				},
 			},
-			["borderOffset"] = 5,
-			["selfPoint"] = "BOTTOMLEFT",
-			["trigger"] = {
-				["unit"] = "player",
-				["type"] = "aura",
-				["debuffType"] = "HELPFUL",
-				["names"] = {
-				},
-			},
-			["frameStrata"] = 1,
-			["regionType"] = "group",
-			["untrigger"] = {
-			},
-			["borderInset"] = 11,
-			["numTriggers"] = 1,
-			["id"] = "Enhance AoE Timers",
-			["borderEdge"] = "None",
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-			},
 			["load"] = {
-				["role"] = {
+				["use_class"] = "true",
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -74895,7 +75137,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -74904,6 +75146,7 @@ WeakAurasSaved = {
 					},
 				},
 				["class"] = {
+					["single"] = "MONK",
 					["multi"] = {
 					},
 				},
@@ -74912,7 +75155,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["expanded"] = false,
+			["anchorPoint"] = "CENTER",
 		},
 		["Penance Usable"] = {
 			["user_y"] = 0,
@@ -74953,17 +75196,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 47540,
 			},
 			["desaturate"] = false,
@@ -75260,17 +75503,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 113656,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -75400,17 +75643,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 115151,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -75516,7 +75759,7 @@ WeakAurasSaved = {
 			["stacksPoint"] = "BOTTOMRIGHT",
 			["backgroundOffset"] = 2,
 		},
-		["Expel Harm 1.0 MW"] = {
+		["Enhance AoE Timers"] = {
 			["backdropColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -75524,15 +75767,14 @@ WeakAurasSaved = {
 				0.5, -- [4]
 			},
 			["controlledChildren"] = {
-				"Expel Harm Timer MW", -- [1]
-				"Expel Harm Usable MW", -- [2]
-				"Expel Harm Unusable MW", -- [3]
+				"Chain Lightning CD", -- [1]
+				"Fire Nova CD", -- [2]
 			},
 			["borderBackdrop"] = "Blizzard Tooltip",
-			["xOffset"] = 80,
+			["xOffset"] = 0,
 			["border"] = false,
-			["yOffset"] = -230,
-			["regionType"] = "group",
+			["yOffset"] = 0,
+			["anchorPoint"] = "CENTER",
 			["borderSize"] = 16,
 			["borderColor"] = {
 				1, -- [1]
@@ -75540,53 +75782,45 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["expanded"] = false,
-			["borderOffset"] = 5,
-			["selfPoint"] = "BOTTOMLEFT",
-			["additional_triggers"] = {
-			},
-			["untrigger"] = {
-			},
-			["frameStrata"] = 1,
-			["id"] = "Expel Harm 1.0 MW",
-			["borderEdge"] = "None",
-			["borderInset"] = 11,
-			["numTriggers"] = 1,
-			["trigger"] = {
-				["subeventPrefix"] = "SPELL",
-				["type"] = "aura",
-				["spellIds"] = {
-				},
-				["subeventSuffix"] = "_CAST_START",
-				["debuffType"] = "HELPFUL",
-				["names"] = {
-				},
-				["event"] = "Health",
-				["unit"] = "player",
-			},
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
 			["actions"] = {
 				["start"] = {
 				},
 				["finish"] = {
 				},
 			},
+			["borderOffset"] = 5,
+			["selfPoint"] = "BOTTOMLEFT",
+			["trigger"] = {
+				["unit"] = "player",
+				["type"] = "aura",
+				["debuffType"] = "HELPFUL",
+				["names"] = {
+				},
+			},
+			["frameStrata"] = 1,
+			["regionType"] = "group",
+			["untrigger"] = {
+			},
+			["borderInset"] = 11,
+			["numTriggers"] = 1,
+			["id"] = "Enhance AoE Timers",
+			["borderEdge"] = "None",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
 			["load"] = {
-				["use_class"] = "true",
-				["race"] = {
+				["role"] = {
 					["multi"] = {
 					},
 				},
@@ -75594,7 +75828,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["role"] = {
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -75603,7 +75837,6 @@ WeakAurasSaved = {
 					},
 				},
 				["class"] = {
-					["single"] = "MONK",
 					["multi"] = {
 					},
 				},
@@ -75612,7 +75845,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["anchorPoint"] = "CENTER",
+			["expanded"] = false,
 		},
 		["Energizing Brew Timer"] = {
 			["textFlags"] = "None",
@@ -75736,16 +75969,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 115288,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["text"] = true,
@@ -76077,16 +76311,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 73920,
 			},
 			["text"] = true,
@@ -76163,215 +76398,6 @@ WeakAurasSaved = {
 				0.501960784313726, -- [3]
 				0.25, -- [4]
 			},
-		},
-		["Inferno Blast Timer"] = {
-			["textFlags"] = "None",
-			["stacksSize"] = 12,
-			["user_x"] = 0,
-			["xOffset"] = 0,
-			["stacksFlags"] = "None",
-			["yOffset"] = 0,
-			["anchorPoint"] = "CENTER",
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["sameTexture"] = true,
-			["rotateText"] = "NONE",
-			["icon"] = false,
-			["fontFlags"] = "OUTLINE",
-			["selfPoint"] = "CENTER",
-			["barColor"] = {
-				0.333333333333333, -- [1]
-				0.8, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["desaturate"] = false,
-			["progressPrecision"] = 0,
-			["sparkOffsetY"] = 0,
-			["load"] = {
-				["talent"] = {
-					["single"] = 4,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "MAGE",
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["regionType"] = "aurabar",
-			["stacks"] = false,
-			["blendMode"] = "BLEND",
-			["texture"] = "BantoBar",
-			["textFont"] = "ABF",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["timerFont"] = "ABF",
-			["alpha"] = 0.75,
-			["borderInset"] = 11,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 108853,
-			},
-			["desaturateBackground"] = false,
-			["borderOffset"] = 5,
-			["customTextUpdate"] = "update",
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturateForeground"] = false,
-			["sparkWidth"] = 10,
-			["spark"] = false,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["numTriggers"] = 1,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["type"] = "preset",
-					["preset"] = "fade",
-					["duration_type"] = "seconds",
-				},
-			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
-				["spellName"] = 108853,
-				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
-				["subeventPrefix"] = "SPELL",
-				["names"] = {
-				},
-				["debuffType"] = "HELPFUL",
-			},
-			["text"] = true,
-			["sparkRotationMode"] = "AUTO",
-			["stickyDuration"] = false,
-			["sparkRotation"] = 0,
-			["sparkOffsetX"] = 0,
-			["backgroundColor"] = {
-				0.501960784313726, -- [1]
-				0.501960784313726, -- [2]
-				0.501960784313726, -- [3]
-				0.25, -- [4]
-			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["height"] = 30,
-			["timerFlags"] = "None",
-			["additional_triggers"] = {
-			},
-			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = "%s",
-			["crop_y"] = 0.41,
-			["displayTextRight"] = "%p",
-			["rotation"] = 0,
-			["mirror"] = false,
-			["borderEdge"] = "None",
-			["timer"] = true,
-			["borderSize"] = 16,
-			["border"] = false,
-			["icon_side"] = "LEFT",
-			["user_y"] = 0,
-			["stacksFont"] = "ABF",
-			["sparkHeight"] = 30,
-			["displayTextLeft"] = " ",
-			["stacksContainment"] = "INSIDE",
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["timerSize"] = 16,
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["id"] = "Inferno Blast Timer",
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["frameStrata"] = 1,
-			["width"] = 30,
-			["barInFront"] = true,
-			["textSize"] = 20,
-			["inverse"] = false,
-			["sparkDesature"] = false,
-			["orientation"] = "VERTICAL_INVERSE",
-			["crop_x"] = 0.409999996423721,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["parent"] = "Inferno Blast 1.0",
 		},
 		["Serendipity Stacks Full Right"] = {
 			["user_y"] = 0,
@@ -76637,6 +76663,151 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 		},
+		["RoR Up"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 121253,
+			},
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
+			["desaturateForeground"] = false,
+			["fontFlags"] = "OUTLINE",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["trigger"] = {
+				["type"] = "aura",
+				["unevent"] = "auto",
+				["custom_hide"] = "timed",
+				["use_inverse"] = true,
+				["event"] = "Cooldown Progress (Spell)",
+				["subeventPrefix"] = "SPELL",
+				["names"] = {
+					"Re-Origination", -- [1]
+				},
+				["use_spellName"] = true,
+				["spellIds"] = {
+				},
+				["spellName"] = 121253,
+				["unit"] = "player",
+				["subeventSuffix"] = "_CAST_START",
+				["use_unit"] = true,
+				["debuffType"] = "HELPFUL",
+			},
+			["desaturate"] = true,
+			["rotation"] = 0,
+			["font"] = "ABF",
+			["height"] = 48,
+			["backgroundOffset"] = 2,
+			["load"] = {
+				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+						[3] = true,
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["parent"] = "RoR 1.0",
+			["selfPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = true,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:RoR Up",
+				},
+				["finish"] = {
+				},
+			},
+			["mirror"] = false,
+			["numTriggers"] = 1,
+			["regionType"] = "icon",
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["blendMode"] = "BLEND",
+			["crop_y"] = 0.41,
+			["icon"] = true,
+			["alpha"] = 1,
+			["yOffset"] = 90,
+			["id"] = "RoR Up",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["additional_triggers"] = {
+			},
+			["customTextUpdate"] = "update",
+			["frameStrata"] = 1,
+			["width"] = 48,
+			["anchorPoint"] = "CENTER",
+			["fontSize"] = 13,
+			["inverse"] = false,
+			["xOffset"] = -0.9998779296875,
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.41,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+		},
 		["CoH 1.0"] = {
 			["backdropColor"] = {
 				1, -- [1]
@@ -76778,17 +76949,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 115151,
 			},
 			["desaturate"] = false,
@@ -76985,253 +77156,6 @@ WeakAurasSaved = {
 			},
 			["anchorPoint"] = "CENTER",
 		},
-		["RoR Up"] = {
-			["user_y"] = 0,
-			["user_x"] = 0,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 121253,
-			},
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturateBackground"] = false,
-			["sameTexture"] = true,
-			["desaturateForeground"] = false,
-			["fontFlags"] = "OUTLINE",
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-			},
-			["trigger"] = {
-				["type"] = "aura",
-				["unevent"] = "auto",
-				["custom_hide"] = "timed",
-				["use_inverse"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["subeventPrefix"] = "SPELL",
-				["names"] = {
-					"Re-Origination", -- [1]
-				},
-				["use_spellName"] = true,
-				["spellIds"] = {
-				},
-				["spellName"] = 121253,
-				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
-				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-			},
-			["desaturate"] = true,
-			["rotation"] = 0,
-			["font"] = "ABF",
-			["height"] = 48,
-			["backgroundOffset"] = 2,
-			["load"] = {
-				["use_never"] = true,
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-						[3] = true,
-					},
-				},
-				["use_class"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["class"] = {
-					["single"] = "MONK",
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["parent"] = "RoR 1.0",
-			["selfPoint"] = "CENTER",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = true,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:RoR Up",
-				},
-				["finish"] = {
-				},
-			},
-			["mirror"] = false,
-			["numTriggers"] = 1,
-			["regionType"] = "icon",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["blendMode"] = "BLEND",
-			["crop_y"] = 0.41,
-			["icon"] = true,
-			["alpha"] = 1,
-			["yOffset"] = 90,
-			["id"] = "RoR Up",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["additional_triggers"] = {
-			},
-			["customTextUpdate"] = "update",
-			["frameStrata"] = 1,
-			["width"] = 48,
-			["anchorPoint"] = "CENTER",
-			["fontSize"] = 13,
-			["inverse"] = false,
-			["xOffset"] = -0.9998779296875,
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.41,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-		},
-		["Shield Block 2.0"] = {
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["controlledChildren"] = {
-				"Shield Block Up", -- [1]
-				"Shield Block Timer", -- [2]
-				"Shield Block Usable with Rage", -- [3]
-				"Shield Block Usable", -- [4]
-				"Shield Block Unusable", -- [5]
-				"Shield Block Charges", -- [6]
-				"Shield Block Charges Background", -- [7]
-			},
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["xOffset"] = 120,
-			["border"] = false,
-			["yOffset"] = -90,
-			["regionType"] = "group",
-			["borderSize"] = 16,
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["expanded"] = false,
-			["borderOffset"] = 5,
-			["selfPoint"] = "BOTTOMLEFT",
-			["id"] = "Shield Block 2.0",
-			["untrigger"] = {
-			},
-			["frameStrata"] = 1,
-			["additional_triggers"] = {
-			},
-			["borderEdge"] = "None",
-			["borderInset"] = 11,
-			["numTriggers"] = 1,
-			["trigger"] = {
-				["subeventPrefix"] = "SPELL",
-				["type"] = "aura",
-				["spellIds"] = {
-				},
-				["subeventSuffix"] = "_CAST_START",
-				["debuffType"] = "HELPFUL",
-				["names"] = {
-				},
-				["event"] = "Health",
-				["unit"] = "player",
-			},
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["load"] = {
-				["use_class"] = "true",
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["anchorPoint"] = "CENTER",
-		},
 		["Stormstrike Timer"] = {
 			["textFlags"] = "None",
 			["stacksSize"] = 12,
@@ -77354,16 +77278,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 17364,
 			},
 			["text"] = true,
@@ -77440,6 +77365,108 @@ WeakAurasSaved = {
 				},
 			},
 			["stacksFont"] = "ABF",
+		},
+		["Shield Block 2.0"] = {
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["controlledChildren"] = {
+				"Shield Block Up", -- [1]
+				"Shield Block Timer", -- [2]
+				"Shield Block Usable with Rage", -- [3]
+				"Shield Block Usable", -- [4]
+				"Shield Block Unusable", -- [5]
+				"Shield Block Charges", -- [6]
+				"Shield Block Charges Background", -- [7]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["xOffset"] = 120,
+			["border"] = false,
+			["yOffset"] = -90,
+			["regionType"] = "group",
+			["borderSize"] = 16,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["expanded"] = false,
+			["borderOffset"] = 5,
+			["selfPoint"] = "BOTTOMLEFT",
+			["id"] = "Shield Block 2.0",
+			["untrigger"] = {
+			},
+			["frameStrata"] = 1,
+			["additional_triggers"] = {
+			},
+			["borderEdge"] = "None",
+			["borderInset"] = 11,
+			["numTriggers"] = 1,
+			["trigger"] = {
+				["subeventPrefix"] = "SPELL",
+				["type"] = "aura",
+				["spellIds"] = {
+				},
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+				["names"] = {
+				},
+				["event"] = "Health",
+				["unit"] = "player",
+			},
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["load"] = {
+				["use_class"] = "true",
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["anchorPoint"] = "CENTER",
 		},
 		["Keg Smash 1.0"] = {
 			["backdropColor"] = {
@@ -77529,6 +77556,238 @@ WeakAurasSaved = {
 				},
 			},
 			["regionType"] = "group",
+		},
+		["Alter Time Timer"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["user_x"] = 0,
+			["xOffset"] = 0,
+			["stacksFlags"] = "None",
+			["yOffset"] = 0,
+			["anchorPoint"] = "CENTER",
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["sameTexture"] = true,
+			["rotateText"] = "NONE",
+			["icon"] = false,
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				0.333333333333333, -- [1]
+				0.8, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["desaturate"] = false,
+			["progressPrecision"] = 0,
+			["sparkOffsetY"] = 0,
+			["crop_y"] = 0.41,
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["regionType"] = "aurabar",
+			["stacks"] = false,
+			["blendMode"] = "BLEND",
+			["texture"] = "BantoBar",
+			["textFont"] = "ABF",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["timerFont"] = "ABF",
+			["alpha"] = 0.75,
+			["borderInset"] = 11,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 108978,
+			},
+			["desaturateBackground"] = false,
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["single"] = 4,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "MAGE",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+						true, -- [2]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["customTextUpdate"] = "update",
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturateForeground"] = false,
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["sparkWidth"] = 10,
+			["spark"] = false,
+			["inverse"] = false,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "fade",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["names"] = {
+				},
+				["use_spellName"] = true,
+				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
+				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
+				["spellName"] = 108978,
+			},
+			["text"] = true,
+			["rotation"] = 0,
+			["stickyDuration"] = false,
+			["sparkRotationMode"] = "AUTO",
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["parent"] = "Alter Time 1.0",
+			["timer"] = true,
+			["height"] = 30,
+			["timerFlags"] = "None",
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "aura",
+						["spellId"] = "26297",
+						["subeventSuffix"] = "_CAST_START",
+						["event"] = "Health",
+						["subeventPrefix"] = "SPELL",
+						["use_spellId"] = true,
+						["inverse"] = true,
+						["spellIds"] = {
+						},
+						["unit"] = "player",
+						["names"] = {
+							"Alter Time", -- [1]
+						},
+						["debuffType"] = "HELPFUL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+			},
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = "%s",
+			["displayTextLeft"] = " ",
+			["displayTextRight"] = "%p",
+			["mirror"] = false,
+			["border"] = false,
+			["borderEdge"] = "None",
+			["textSize"] = 16,
+			["borderSize"] = 16,
+			["barInFront"] = true,
+			["icon_side"] = "LEFT",
+			["user_y"] = 0,
+			["stacksFont"] = "ABF",
+			["sparkHeight"] = 30,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["stacksContainment"] = "INSIDE",
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["timerSize"] = 16,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["id"] = "Alter Time Timer",
+			["borderOffset"] = 5,
+			["frameStrata"] = 1,
+			["width"] = 30,
+			["sparkOffsetX"] = 0,
+			["sparkRotation"] = 0,
+			["numTriggers"] = 2,
+			["sparkDesature"] = false,
+			["orientation"] = "VERTICAL_INVERSE",
+			["crop_x"] = 0.409999996423721,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["backgroundColor"] = {
+				0.501960784313726, -- [1]
+				0.501960784313726, -- [2]
+				0.501960784313726, -- [3]
+				0.25, -- [4]
+			},
 		},
 		["Charged Guard Charges Background"] = {
 			["outline"] = false,
@@ -77701,17 +77960,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 115295,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -78268,7 +78527,7 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 		},
-		["Alter Time Timer"] = {
+		["Inferno Blast Timer"] = {
 			["textFlags"] = "None",
 			["stacksSize"] = 12,
 			["user_x"] = 0,
@@ -78296,34 +78555,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["progressPrecision"] = 0,
 			["sparkOffsetY"] = 0,
-			["crop_y"] = 0.41,
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["regionType"] = "aurabar",
-			["stacks"] = false,
-			["blendMode"] = "BLEND",
-			["texture"] = "BantoBar",
-			["textFont"] = "ABF",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["timerFont"] = "ABF",
-			["alpha"] = 0.75,
-			["borderInset"] = 11,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 108978,
-			},
-			["desaturateBackground"] = false,
 			["load"] = {
-				["use_never"] = false,
 				["talent"] = {
 					["single"] = 4,
 					["multi"] = {
@@ -78346,10 +78578,9 @@ WeakAurasSaved = {
 				},
 				["use_combat"] = true,
 				["spec"] = {
-					["single"] = 1,
+					["single"] = 2,
 					["multi"] = {
 						true, -- [1]
-						true, -- [2]
 					},
 				},
 				["size"] = {
@@ -78357,6 +78588,32 @@ WeakAurasSaved = {
 					},
 				},
 			},
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["regionType"] = "aurabar",
+			["stacks"] = false,
+			["blendMode"] = "BLEND",
+			["texture"] = "BantoBar",
+			["textFont"] = "ABF",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["timerFont"] = "ABF",
+			["alpha"] = 0.75,
+			["borderInset"] = 11,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 108853,
+			},
+			["desaturateBackground"] = false,
+			["borderOffset"] = 5,
 			["customTextUpdate"] = "update",
 			["sparkColor"] = {
 				1, -- [1]
@@ -78365,80 +78622,61 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["desaturateForeground"] = false,
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
 			["sparkWidth"] = 10,
 			["spark"] = false,
-			["inverse"] = false,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["numTriggers"] = 1,
 			["animation"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["main"] = {
-					["duration_type"] = "seconds",
 					["type"] = "none",
+					["duration_type"] = "seconds",
 				},
 				["finish"] = {
 					["type"] = "preset",
-					["duration_type"] = "seconds",
 					["preset"] = "fade",
+					["duration_type"] = "seconds",
 				},
 			},
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
+				["spellName"] = 108853,
 				["use_spellName"] = true,
+				["unit"] = "player",
+				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
-				["subeventPrefix"] = "SPELL",
 				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["custom_hide"] = "timed",
-				["spellName"] = 108978,
+				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
-			["rotation"] = 0,
-			["stickyDuration"] = false,
 			["sparkRotationMode"] = "AUTO",
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["stickyDuration"] = false,
+			["sparkRotation"] = 0,
+			["sparkOffsetX"] = 0,
+			["backgroundColor"] = {
+				0.501960784313726, -- [1]
+				0.501960784313726, -- [2]
+				0.501960784313726, -- [3]
+				0.25, -- [4]
 			},
-			["parent"] = "Alter Time 1.0",
-			["timer"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["height"] = 30,
 			["timerFlags"] = "None",
 			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "aura",
-						["spellId"] = "26297",
-						["subeventSuffix"] = "_CAST_START",
-						["event"] = "Health",
-						["subeventPrefix"] = "SPELL",
-						["use_spellId"] = true,
-						["inverse"] = true,
-						["spellIds"] = {
-						},
-						["unit"] = "player",
-						["names"] = {
-							"Alter Time", -- [1]
-						},
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
 			},
 			["sparkBlendMode"] = "ADD",
 			["backdropColor"] = {
@@ -78449,24 +78687,19 @@ WeakAurasSaved = {
 			},
 			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["displayStacks"] = "%s",
-			["displayTextLeft"] = " ",
+			["crop_y"] = 0.41,
 			["displayTextRight"] = "%p",
+			["rotation"] = 0,
 			["mirror"] = false,
-			["border"] = false,
 			["borderEdge"] = "None",
-			["textSize"] = 16,
+			["timer"] = true,
 			["borderSize"] = 16,
-			["barInFront"] = true,
+			["border"] = false,
 			["icon_side"] = "LEFT",
 			["user_y"] = 0,
 			["stacksFont"] = "ABF",
 			["sparkHeight"] = 30,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["displayTextLeft"] = " ",
 			["stacksContainment"] = "INSIDE",
 			["stacksColor"] = {
 				1, -- [1]
@@ -78475,29 +78708,34 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["timerSize"] = 16,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["id"] = "Alter Time Timer",
-			["borderOffset"] = 5,
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["id"] = "Inferno Blast Timer",
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["frameStrata"] = 1,
 			["width"] = 30,
-			["sparkOffsetX"] = 0,
-			["sparkRotation"] = 0,
-			["numTriggers"] = 2,
+			["barInFront"] = true,
+			["textSize"] = 20,
+			["inverse"] = false,
 			["sparkDesature"] = false,
 			["orientation"] = "VERTICAL_INVERSE",
 			["crop_x"] = 0.409999996423721,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
-			["backgroundColor"] = {
-				0.501960784313726, -- [1]
-				0.501960784313726, -- [2]
-				0.501960784313726, -- [3]
-				0.25, -- [4]
-			},
+			["parent"] = "Inferno Blast 1.0",
 		},
 		["Stormstrike Unusable"] = {
 			["user_y"] = 0,
@@ -78538,17 +78776,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 17364,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -78641,154 +78879,6 @@ WeakAurasSaved = {
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
 			["backgroundOffset"] = 2,
-		},
-		["Invoker's Energy Unusable"] = {
-			["user_y"] = 0,
-			["user_x"] = 0,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 55342,
-			},
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturateBackground"] = false,
-			["sameTexture"] = true,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-					["glow_action"] = "show",
-				},
-				["finish"] = {
-				},
-			},
-			["fontFlags"] = "OUTLINE",
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-			},
-			["trigger"] = {
-				["type"] = "aura",
-				["unevent"] = "auto",
-				["spellName"] = 55342,
-				["use_inverse"] = false,
-				["event"] = "Cooldown Progress (Spell)",
-				["names"] = {
-					"Invoker's Energy", -- [1]
-				},
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
-				["spellIds"] = {
-				},
-				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
-				["subeventPrefix"] = "SPELL",
-				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-			},
-			["desaturate"] = true,
-			["rotation"] = 0,
-			["font"] = "ABF",
-			["height"] = 32,
-			["backgroundOffset"] = 2,
-			["load"] = {
-				["use_never"] = true,
-				["talent"] = {
-					["single"] = 16,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "MAGE",
-					["multi"] = {
-					},
-				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						true, -- [1]
-						true, -- [2]
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["parent"] = "Invoker's Energy 1.0",
-			["selfPoint"] = "CENTER",
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["desaturateForeground"] = false,
-			["mirror"] = false,
-			["numTriggers"] = 1,
-			["regionType"] = "icon",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["blendMode"] = "BLEND",
-			["icon"] = true,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["alpha"] = 1,
-			["crop_y"] = 0.41,
-			["additional_triggers"] = {
-			},
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Invoker's Energy Unusable",
-			["customTextUpdate"] = "update",
-			["frameStrata"] = 1,
-			["width"] = 32,
-			["anchorPoint"] = "CENTER",
-			["yOffset"] = 0,
-			["inverse"] = false,
-			["xOffset"] = 0,
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.41,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
 		},
 		["SEF_1_enemy"] = {
 			["sparkWidth"] = 10,
@@ -78968,85 +79058,61 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 		},
-		["Chi Brew 1.0"] = {
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["controlledChildren"] = {
-				"Chi Brew Timer", -- [1]
-				"Chi Brew Usable with Less Than 2 Chi", -- [2]
-				"Chi Brew Usable", -- [3]
-				"Chi Brew Unusable", -- [4]
-				"Chi Brew Charges", -- [5]
-				"Chi Brew Charges Background", -- [6]
-			},
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["xOffset"] = -120,
-			["border"] = false,
-			["yOffset"] = -90,
-			["regionType"] = "group",
-			["borderSize"] = 16,
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["expanded"] = false,
-			["borderOffset"] = 5,
-			["selfPoint"] = "BOTTOMLEFT",
-			["additional_triggers"] = {
-			},
+		["Expel Magic: Fire 2"] = {
+			["xOffset"] = 0,
 			["untrigger"] = {
 			},
-			["frameStrata"] = 1,
-			["id"] = "Chi Brew 1.0",
-			["borderEdge"] = "None",
-			["borderInset"] = 11,
-			["numTriggers"] = 1,
-			["trigger"] = {
-				["type"] = "aura",
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["debuffType"] = "HELPFUL",
-				["names"] = {
-				},
-				["event"] = "Health",
-				["unit"] = "player",
-			},
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
+			["anchorPoint"] = "CENTER",
+			["customTextUpdate"] = "update",
 			["actions"] = {
 				["start"] = {
+					["do_sound"] = true,
+					["sound"] = "Sound\\Spells\\SeepingGaseous_Fel_Nova.wav",
+					["sound_channel"] = "Master",
 				},
 				["finish"] = {
 				},
 			},
+			["fontFlags"] = "OUTLINE",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["trigger"] = {
+				["type"] = "aura",
+				["subeventSuffix"] = "_CAST_START",
+				["event"] = "Health",
+				["names"] = {
+					"Expel Magic: Fire", -- [1]
+				},
+				["spellIds"] = {
+				},
+				["debuffType"] = "HARMFUL",
+				["unit"] = "player",
+				["subeventPrefix"] = "SPELL",
+				["custom_hide"] = "timed",
+			},
+			["desaturate"] = false,
+			["progressPrecision"] = 4,
+			["font"] = "Friz Quadrata TT",
+			["height"] = 50,
 			["load"] = {
-				["use_class"] = "true",
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["talent"] = {
-					["multi"] = {
-					},
-				},
+				["use_level"] = true,
+				["zone"] = "Highmaul",
+				["level_operator"] = ">=",
+				["use_never"] = true,
+				["use_zone"] = false,
+				["use_difficulty"] = false,
 				["race"] = {
 					["multi"] = {
 					},
@@ -79055,8 +79121,16 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
-					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
+				["level"] = "100",
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -79065,39 +79139,204 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["anchorPoint"] = "CENTER",
-		},
-		["Divine Star Timer"] = {
-			["textFlags"] = "None",
-			["stacksSize"] = 12,
-			["user_x"] = 0,
-			["xOffset"] = 0,
-			["stacksFlags"] = "None",
+			["fontSize"] = 18,
+			["displayStacks"] = "%p",
+			["regionType"] = "icon",
+			["parent"] = "Highmaul Encounters",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["icon"] = true,
+			["additional_triggers"] = {
+			},
+			["stickyDuration"] = false,
+			["frameStrata"] = 1,
+			["width"] = 50,
 			["yOffset"] = 0,
-			["anchorPoint"] = "CENTER",
-			["borderColor"] = {
+			["inverse"] = false,
+			["numTriggers"] = 1,
+			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				0.5, -- [4]
+				1, -- [4]
 			},
-			["sameTexture"] = true,
-			["rotateText"] = "NONE",
-			["icon"] = false,
-			["fontFlags"] = "OUTLINE",
 			["selfPoint"] = "CENTER",
-			["barColor"] = {
-				0.329411764705882, -- [1]
-				0.674509803921569, -- [2]
+			["id"] = "Expel Magic: Fire 2",
+			["stacksPoint"] = "CENTER",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+		},
+		["TEB Stack Count Background"] = {
+			["outline"] = false,
+			["color"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.491101145744324, -- [4]
+			},
+			["displayText"] = "(%s)",
+			["untrigger"] = {
+			},
+			["anchorPoint"] = "CENTER",
+			["customTextUpdate"] = "update",
+			["icon"] = true,
+			["selfPoint"] = "CENTER",
+			["trigger"] = {
+				["type"] = "aura",
+				["spellId"] = "125195",
+				["subeventSuffix"] = "_CAST_START",
+				["custom_hide"] = "timed",
+				["event"] = "Health",
+				["countOperator"] = "<",
+				["subeventPrefix"] = "SPELL",
+				["use_spellId"] = true,
+				["useCount"] = true,
+				["spellIds"] = {
+				},
+				["fullscan"] = true,
+				["unit"] = "player",
+				["count"] = "10",
+				["names"] = {
+					"Tigereye Brew", -- [1]
+				},
+				["debuffType"] = "HELPFUL",
+			},
+			["stickyDuration"] = false,
+			["font"] = "ABF",
+			["height"] = 19.8399925231934,
+			["load"] = {
+				["use_never"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["use_name"] = false,
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+						[3] = true,
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["fontSize"] = 20,
+			["displayStacks"] = "%s",
+			["regionType"] = "text",
+			["xOffset"] = 160,
+			["disjunctive"] = true,
+			["desaturate"] = true,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["justify"] = "CENTER",
+			["additional_triggers"] = {
+			},
+			["id"] = "TEB Stack Count Background",
+			["parent"] = "TEB Trackers",
+			["frameStrata"] = 3,
+			["width"] = 18.560022354126,
+			["numTriggers"] = 1,
+			["yOffset"] = -91,
+			["inverse"] = false,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["auto"] = true,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+					["preset"] = "grow",
+				},
+			},
+			["stacksPoint"] = "BOTTOM",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+		},
+		["Divine Insight Usable"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
 				1, -- [3]
 				0.75, -- [4]
 			},
+			["untrigger"] = {
+				["spellName"] = 33076,
+			},
+			["anchorPoint"] = "CENTER",
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
+			["desaturateForeground"] = false,
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["trigger"] = {
+				["type"] = "aura",
+				["unevent"] = "auto",
+				["spellName"] = 33076,
+				["use_inverse"] = true,
+				["event"] = "Cooldown Progress (Spell)",
+				["names"] = {
+					"Divine Insight", -- [1]
+				},
+				["custom_hide"] = "timed",
+				["use_spellName"] = true,
+				["spellIds"] = {
+				},
+				["unit"] = "player",
+				["subeventSuffix"] = "_CAST_START",
+				["subeventPrefix"] = "SPELL",
+				["use_unit"] = true,
+				["debuffType"] = "HELPFUL",
+			},
 			["desaturate"] = false,
-			["progressPrecision"] = 0,
-			["sparkOffsetY"] = 0,
+			["rotation"] = 0,
+			["font"] = "ABF",
+			["height"] = 32,
+			["backgroundOffset"] = 2,
 			["load"] = {
+				["use_level"] = false,
 				["talent"] = {
-					["single"] = 17,
+					["single"] = 15,
 					["multi"] = {
 					},
 				},
@@ -79106,7 +79345,6 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_talent"] = true,
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -79118,9 +79356,10 @@ WeakAurasSaved = {
 				},
 				["use_combat"] = true,
 				["spec"] = {
-					["single"] = 1,
+					["single"] = 2,
 					["multi"] = {
 						true, -- [1]
+						true, -- [2]
 					},
 				},
 				["size"] = {
@@ -79128,44 +79367,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["regionType"] = "aurabar",
-			["stacks"] = false,
-			["blendMode"] = "BLEND",
-			["texture"] = "BantoBar",
-			["textFont"] = "ABF",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["timerFont"] = "ABF",
-			["alpha"] = 0.75,
-			["borderInset"] = 11,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 110744,
-			},
-			["desaturateBackground"] = false,
-			["borderOffset"] = 5,
-			["customTextUpdate"] = "update",
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["textSize"] = 16,
-			["sparkWidth"] = 10,
-			["spark"] = false,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["numTriggers"] = 1,
+			["stickyDuration"] = false,
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
@@ -79176,105 +79378,65 @@ WeakAurasSaved = {
 					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["type"] = "preset",
-					["preset"] = "fade",
+					["type"] = "none",
 					["duration_type"] = "seconds",
 				},
 			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
-				["spellName"] = 110744,
-				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
-				["subeventPrefix"] = "SPELL",
-				["names"] = {
-				},
-				["debuffType"] = "HELPFUL",
-			},
-			["text"] = true,
-			["sparkRotationMode"] = "AUTO",
-			["stickyDuration"] = false,
-			["sparkRotation"] = 0,
-			["sparkOffsetX"] = 0,
-			["desaturateForeground"] = false,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["xOffset"] = 0,
 			["actions"] = {
 				["start"] = {
+					["do_glow"] = true,
+					["glow_frame"] = "WeakAuras:Divine Insight Usable",
+					["glow_action"] = "show",
 				},
 				["finish"] = {
 				},
 			},
-			["height"] = 30,
-			["timerFlags"] = "None",
-			["id"] = "Divine Star Timer",
-			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
+			["mirror"] = false,
+			["numTriggers"] = 1,
+			["regionType"] = "icon",
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
 				0.5, -- [4]
 			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = "%s",
+			["blendMode"] = "BLEND",
+			["parent"] = "Prayer of Mending 1.0",
+			["yOffset"] = 0,
+			["alpha"] = 1,
 			["crop_y"] = 0.41,
-			["displayTextRight"] = "%p",
-			["rotation"] = 0,
-			["mirror"] = false,
-			["borderEdge"] = "None",
-			["timer"] = true,
-			["borderSize"] = 16,
-			["border"] = false,
-			["icon_side"] = "LEFT",
-			["user_y"] = 0,
-			["stacksFont"] = "ABF",
-			["sparkHeight"] = 30,
-			["backgroundColor"] = {
-				0.501960784313726, -- [1]
-				0.501960784313726, -- [2]
-				0.501960784313726, -- [3]
-				0.25, -- [4]
-			},
+			["id"] = "Divine Insight Usable",
 			["stacksContainment"] = "INSIDE",
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["timerSize"] = 16,
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
 			["additional_triggers"] = {
 			},
+			["fontSize"] = 13,
+			["frameStrata"] = 5,
+			["width"] = 32,
+			["customTextUpdate"] = "update",
 			["foregroundColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["frameStrata"] = 1,
-			["width"] = 30,
-			["barInFront"] = true,
-			["displayTextLeft"] = " ",
 			["inverse"] = false,
-			["sparkDesature"] = false,
-			["orientation"] = "VERTICAL_INVERSE",
-			["crop_x"] = 0.409999996423721,
+			["icon"] = true,
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.41,
+			["stacksPoint"] = "BOTTOMRIGHT",
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["parent"] = "Divine Star 1.0",
 		},
 		["Zen Meditation 1.0 BM"] = {
 			["backdropColor"] = {
@@ -79375,7 +79537,7 @@ WeakAurasSaved = {
 			},
 			["anchorPoint"] = "CENTER",
 		},
-		["Stormlash Totem Enhance 1.0"] = {
+		["Chi Brew 1.0"] = {
 			["backdropColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -79383,14 +79545,15 @@ WeakAurasSaved = {
 				0.5, -- [4]
 			},
 			["controlledChildren"] = {
-				"Stormlash Totem Up Timer", -- [1]
-				"Stormlash Totem Timer", -- [2]
-				"Stormlash Totem Usable", -- [3]
-				"Stormlash Totem Up", -- [4]
-				"Stormlash Totem Unusable", -- [5]
+				"Chi Brew Timer", -- [1]
+				"Chi Brew Usable with Less Than 2 Chi", -- [2]
+				"Chi Brew Usable", -- [3]
+				"Chi Brew Unusable", -- [4]
+				"Chi Brew Charges", -- [5]
+				"Chi Brew Charges Background", -- [6]
 			},
 			["borderBackdrop"] = "Blizzard Tooltip",
-			["xOffset"] = 160,
+			["xOffset"] = -120,
 			["border"] = false,
 			["yOffset"] = -90,
 			["regionType"] = "group",
@@ -79409,7 +79572,7 @@ WeakAurasSaved = {
 			["untrigger"] = {
 			},
 			["frameStrata"] = 1,
-			["id"] = "Stormlash Totem Enhance 1.0",
+			["id"] = "Chi Brew 1.0",
 			["borderEdge"] = "None",
 			["borderInset"] = 11,
 			["numTriggers"] = 1,
@@ -79444,6 +79607,7 @@ WeakAurasSaved = {
 				},
 			},
 			["load"] = {
+				["use_class"] = "true",
 				["role"] = {
 					["multi"] = {
 					},
@@ -79461,6 +79625,7 @@ WeakAurasSaved = {
 					},
 				},
 				["class"] = {
+					["single"] = "MONK",
 					["multi"] = {
 					},
 				},
@@ -79471,132 +79636,95 @@ WeakAurasSaved = {
 			},
 			["anchorPoint"] = "CENTER",
 		},
-		["Storm Bolt Timer"] = {
-			["textFlags"] = "None",
-			["stacksSize"] = 12,
+		["Frozen Orb Unusable"] = {
+			["user_y"] = 0,
 			["user_x"] = 0,
-			["xOffset"] = 0,
-			["stacksFlags"] = "None",
-			["yOffset"] = 0,
-			["anchorPoint"] = "CENTER",
-			["sparkRotation"] = 0,
-			["sameTexture"] = true,
-			["rotateText"] = "NONE",
-			["backgroundColor"] = {
-				0.501960784313726, -- [1]
-				0.501960784313726, -- [2]
-				0.501960784313726, -- [3]
-				0.25, -- [4]
-			},
-			["fontFlags"] = "OUTLINE",
-			["selfPoint"] = "CENTER",
-			["barColor"] = {
-				0.780392156862745, -- [1]
-				0.611764705882353, -- [2]
-				0.431372549019608, -- [3]
-				0.75, -- [4]
-			},
-			["desaturate"] = false,
-			["rotation"] = 0,
-			["sparkOffsetY"] = 0,
-			["crop_y"] = 0.41,
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["regionType"] = "aurabar",
-			["stacks"] = false,
-			["blendMode"] = "BLEND",
-			["texture"] = "BantoBar",
-			["textFont"] = "ABF",
-			["stacksFont"] = "ABF",
-			["auto"] = false,
-			["compress"] = false,
-			["timerFont"] = "ABF",
-			["alpha"] = 0.75,
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-			["borderBackdrop"] = "Blizzard Tooltip",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				1, -- [4]
+				0.75, -- [4]
 			},
 			["untrigger"] = {
-				["spellName"] = 107570,
+				["spellName"] = 84714,
+			},
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
 			["desaturateBackground"] = false,
-			["zoom"] = 0,
-			["customTextUpdate"] = "update",
-			["displayTextLeft"] = " ",
+			["sameTexture"] = true,
 			["desaturateForeground"] = false,
-			["borderInset"] = 11,
-			["progressPrecision"] = 0,
-			["textSize"] = 18,
-			["numTriggers"] = 1,
+			["fontFlags"] = "OUTLINE",
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["duration_type"] = "seconds",
+					["type"] = "none",
 				},
 				["main"] = {
-					["type"] = "none",
 					["duration_type"] = "seconds",
+					["type"] = "none",
 				},
 				["finish"] = {
-					["type"] = "preset",
-					["preset"] = "fade",
 					["duration_type"] = "seconds",
+					["type"] = "none",
 				},
 			},
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
-				["spellName"] = 107570,
-				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
-				["subeventPrefix"] = "SPELL",
 				["names"] = {
 				},
-				["debuffType"] = "HELPFUL",
+				["use_spellName"] = true,
+				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
+				["spellName"] = 84714,
+				["subeventSuffix"] = "_CAST_START",
+				["custom_hide"] = "timed",
 			},
-			["text"] = true,
+			["desaturate"] = true,
+			["rotation"] = 0,
+			["font"] = "ABF",
+			["height"] = 32,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
-					["single"] = 10,
+					["single"] = 4,
 					["multi"] = {
 					},
 				},
 				["class"] = {
-					["single"] = "WARRIOR",
+					["single"] = "MAGE",
 					["multi"] = {
 					},
 				},
-				["use_talent"] = true,
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = true,
 				["race"] = {
 					["multi"] = {
 					},
 				},
 				["use_combat"] = true,
 				["spec"] = {
-					["single"] = 2,
+					["single"] = 3,
 					["multi"] = {
 						true, -- [1]
-						true, -- [2]
 					},
 				},
 				["size"] = {
@@ -79604,83 +79732,53 @@ WeakAurasSaved = {
 					},
 				},
 			},
+			["parent"] = "Frozen Orb 1.0",
+			["selfPoint"] = "CENTER",
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
 			["stickyDuration"] = false,
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["xOffset"] = 0,
+			["mirror"] = false,
+			["inverse"] = false,
+			["regionType"] = "icon",
+			["yOffset"] = 0,
+			["blendMode"] = "BLEND",
+			["anchorPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["frameStrata"] = 1,
+			["customTextUpdate"] = "update",
+			["id"] = "Frozen Orb Unusable",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["additional_triggers"] = {
 			},
-			["sparkWidth"] = 10,
+			["crop_y"] = 0.41,
+			["alpha"] = 1,
+			["width"] = 32,
+			["icon"] = true,
 			["actions"] = {
 				["start"] = {
+					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+					["glow_action"] = "show",
 				},
 				["finish"] = {
 				},
 			},
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["height"] = 30,
-			["timerFlags"] = "None",
-			["id"] = "Storm Bolt Timer",
-			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
+			["numTriggers"] = 1,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
 				0.5, -- [4]
 			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = "%s",
-			["sparkRotationMode"] = "AUTO",
-			["timerSize"] = 16,
-			["icon"] = false,
-			["mirror"] = false,
-			["borderEdge"] = "None",
-			["border"] = false,
-			["borderSize"] = 16,
-			["timer"] = true,
-			["icon_side"] = "LEFT",
-			["sparkOffsetX"] = 0,
-			["user_y"] = 0,
-			["sparkHeight"] = 30,
-			["barInFront"] = true,
-			["stacksContainment"] = "INSIDE",
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["displayTextRight"] = "%p",
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["additional_triggers"] = {
-			},
-			["spark"] = false,
-			["frameStrata"] = 1,
-			["width"] = 30,
-			["borderOffset"] = 5,
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["inverse"] = false,
-			["sparkDesature"] = false,
-			["orientation"] = "VERTICAL_INVERSE",
-			["crop_x"] = 0.409999996423721,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["parent"] = "Storm Bolt 1.0",
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.41,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
 		},
 		["Crit Trinket Uptime"] = {
 			["textFlags"] = "None",
@@ -79870,17 +79968,31 @@ WeakAurasSaved = {
 			["spark"] = false,
 			["borderOffset"] = 12,
 		},
-		["Expel Magic: Fire 2"] = {
-			["xOffset"] = 0,
-			["untrigger"] = {
+		["Nether Tempest Usable"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
 			},
-			["anchorPoint"] = "CENTER",
-			["customTextUpdate"] = "update",
+			["untrigger"] = {
+				["spellName"] = 44457,
+			},
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
 			["actions"] = {
 				["start"] = {
-					["do_sound"] = true,
-					["sound"] = "Sound\\Spells\\SeepingGaseous_Fel_Nova.wav",
-					["sound_channel"] = "Master",
+					["do_glow"] = true,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Nether Tempest Usable",
 				},
 				["finish"] = {
 				},
@@ -79901,49 +80013,61 @@ WeakAurasSaved = {
 				},
 			},
 			["trigger"] = {
-				["type"] = "aura",
-				["subeventSuffix"] = "_CAST_START",
-				["event"] = "Health",
+				["spellId"] = "44457",
+				["use_inverse"] = true,
 				["names"] = {
-					"Expel Magic: Fire", -- [1]
-				},
-				["spellIds"] = {
+					"Nether Tempest", -- [1]
 				},
 				["debuffType"] = "HARMFUL",
-				["unit"] = "player",
-				["subeventPrefix"] = "SPELL",
+				["type"] = "aura",
+				["unevent"] = "auto",
+				["use_unit"] = true,
+				["spellName"] = 44457,
+				["event"] = "Burning Embers",
+				["unit"] = "target",
+				["use_spellId"] = true,
+				["use_spellName"] = true,
+				["spellIds"] = {
+				},
+				["ownOnly"] = true,
+				["inverse"] = true,
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
+				["subeventPrefix"] = "SPELL",
 			},
 			["desaturate"] = false,
-			["progressPrecision"] = 4,
-			["font"] = "Friz Quadrata TT",
-			["height"] = 50,
+			["rotation"] = 0,
+			["font"] = "ABF",
+			["backgroundOffset"] = 2,
+			["height"] = 32,
+			["parent"] = "Nether Tempest 1.0",
 			["load"] = {
-				["use_level"] = true,
-				["zone"] = "Highmaul",
-				["level_operator"] = ">=",
 				["use_never"] = true,
-				["use_zone"] = false,
-				["use_difficulty"] = false,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
+				["talent"] = {
+					["single"] = 13,
 					["multi"] = {
 					},
 				},
 				["class"] = {
+					["single"] = "MAGE",
 					["multi"] = {
 					},
 				},
-				["level"] = "100",
-				["talent"] = {
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
 					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
 					},
 				},
 				["size"] = {
@@ -79951,31 +80075,44 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["fontSize"] = 18,
-			["displayStacks"] = "%p",
+			["crop_x"] = 0.41,
+			["stickyDuration"] = false,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["desaturateForeground"] = false,
+			["numTriggers"] = 1,
+			["mirror"] = false,
+			["crop_y"] = 0.41,
 			["regionType"] = "icon",
-			["parent"] = "Highmaul Encounters",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
+			["yOffset"] = 0,
+			["blendMode"] = "BLEND",
+			["customTextUpdate"] = "update",
+			["frameStrata"] = 4,
 			["icon"] = true,
 			["additional_triggers"] = {
 			},
-			["stickyDuration"] = false,
-			["frameStrata"] = 1,
-			["width"] = 50,
-			["yOffset"] = 0,
-			["inverse"] = false,
-			["numTriggers"] = 1,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["anchorPoint"] = "CENTER",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Nether Tempest Usable",
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
 			},
+			["alpha"] = 1,
+			["width"] = 32,
 			["selfPoint"] = "CENTER",
-			["id"] = "Expel Magic: Fire 2",
-			["stacksPoint"] = "CENTER",
+			["fontSize"] = 13,
+			["inverse"] = false,
+			["xOffset"] = 0,
+			["orientation"] = "VERTICAL",
+			["displayIcon"] = "Interface\\Icons\\spell_mage_nethertempest",
+			["stacksPoint"] = "BOTTOMRIGHT",
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -80097,103 +80234,36 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "text",
 		},
-		["TEB Stack Count Background"] = {
-			["outline"] = false,
+		["Invoker's Energy Unusable"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
 			["color"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0.491101145744324, -- [4]
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
 			},
-			["displayText"] = "(%s)",
 			["untrigger"] = {
+				["spellName"] = 55342,
 			},
-			["anchorPoint"] = "CENTER",
-			["customTextUpdate"] = "update",
-			["icon"] = true,
-			["selfPoint"] = "CENTER",
-			["trigger"] = {
-				["type"] = "aura",
-				["spellId"] = "125195",
-				["subeventSuffix"] = "_CAST_START",
-				["custom_hide"] = "timed",
-				["event"] = "Health",
-				["countOperator"] = "<",
-				["subeventPrefix"] = "SPELL",
-				["use_spellId"] = true,
-				["useCount"] = true,
-				["spellIds"] = {
-				},
-				["fullscan"] = true,
-				["unit"] = "player",
-				["count"] = "10",
-				["names"] = {
-					"Tigereye Brew", -- [1]
-				},
-				["debuffType"] = "HELPFUL",
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
-			["stickyDuration"] = false,
-			["font"] = "ABF",
-			["height"] = 19.8399925231934,
-			["load"] = {
-				["use_never"] = true,
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "MONK",
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["use_name"] = false,
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-						[3] = true,
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["fontSize"] = 20,
-			["displayStacks"] = "%s",
-			["regionType"] = "text",
-			["xOffset"] = 160,
-			["disjunctive"] = true,
-			["desaturate"] = true,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["justify"] = "CENTER",
-			["additional_triggers"] = {
-			},
-			["id"] = "TEB Stack Count Background",
-			["parent"] = "TEB Trackers",
-			["frameStrata"] = 3,
-			["width"] = 18.560022354126,
-			["numTriggers"] = 1,
-			["yOffset"] = -91,
-			["inverse"] = false,
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
 			["actions"] = {
 				["start"] = {
+					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+					["glow_action"] = "show",
 				},
 				["finish"] = {
 				},
 			},
-			["auto"] = true,
+			["fontFlags"] = "OUTLINE",
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
@@ -80206,10 +80276,105 @@ WeakAurasSaved = {
 				["finish"] = {
 					["type"] = "none",
 					["duration_type"] = "seconds",
-					["preset"] = "grow",
 				},
 			},
-			["stacksPoint"] = "BOTTOM",
+			["trigger"] = {
+				["type"] = "aura",
+				["unevent"] = "auto",
+				["spellName"] = 55342,
+				["use_inverse"] = false,
+				["event"] = "Cooldown Progress (Spell)",
+				["names"] = {
+					"Invoker's Energy", -- [1]
+				},
+				["custom_hide"] = "timed",
+				["use_spellName"] = true,
+				["spellIds"] = {
+				},
+				["unit"] = "player",
+				["subeventSuffix"] = "_CAST_START",
+				["subeventPrefix"] = "SPELL",
+				["use_unit"] = true,
+				["debuffType"] = "HELPFUL",
+			},
+			["desaturate"] = true,
+			["rotation"] = 0,
+			["font"] = "ABF",
+			["height"] = 32,
+			["backgroundOffset"] = 2,
+			["load"] = {
+				["use_never"] = true,
+				["talent"] = {
+					["single"] = 16,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "MAGE",
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+						true, -- [2]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["parent"] = "Invoker's Energy 1.0",
+			["selfPoint"] = "CENTER",
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["desaturateForeground"] = false,
+			["mirror"] = false,
+			["numTriggers"] = 1,
+			["regionType"] = "icon",
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["blendMode"] = "BLEND",
+			["icon"] = true,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["alpha"] = 1,
+			["crop_y"] = 0.41,
+			["additional_triggers"] = {
+			},
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Invoker's Energy Unusable",
+			["customTextUpdate"] = "update",
+			["frameStrata"] = 1,
+			["width"] = 32,
+			["anchorPoint"] = "CENTER",
+			["yOffset"] = 0,
+			["inverse"] = false,
+			["xOffset"] = 0,
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.41,
+			["stacksPoint"] = "BOTTOMRIGHT",
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -80732,16 +80897,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 23922,
 			},
 			["text"] = true,
@@ -80947,37 +81113,78 @@ WeakAurasSaved = {
 			["untrigger"] = {
 			},
 		},
-		["Chi Brew Usable"] = {
-			["user_y"] = 0,
+		["TEB Currently Up"] = {
+			["sparkWidth"] = 10,
+			["stacksSize"] = 12,
 			["user_x"] = 0,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["untrigger"] = {
-				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return true\n    end\n    return false\nend\n\n\n\n\n\n",
-				["spellName"] = 115399,
-			},
+			["xOffset"] = 0,
+			["stacksFlags"] = "None",
+			["yOffset"] = 0,
 			["foregroundColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["desaturateBackground"] = false,
+			["sparkRotation"] = 0,
 			["sameTexture"] = true,
+			["rotateText"] = "NONE",
 			["actions"] = {
 				["start"] = {
-					["do_glow"] = false,
-					["glow_action"] = "hide",
-					["glow_frame"] = "WeakAuras:Chi Brew Usable",
 				},
 				["finish"] = {
 				},
 			},
 			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				1, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.75, -- [4]
+			},
+			["desaturate"] = false,
+			["progressPrecision"] = 0,
+			["sparkOffsetY"] = 0,
+			["crop_y"] = 0.41,
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["regionType"] = "aurabar",
+			["stacks"] = false,
+			["blendMode"] = "BLEND",
+			["texture"] = "BantoBar",
+			["textFont"] = "ABF",
+			["borderOffset"] = 5,
+			["auto"] = false,
+			["compress"] = false,
+			["timerFont"] = "ABF",
+			["alpha"] = 0.75,
+			["borderInset"] = 11,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
+			["sparkOffsetX"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 113656,
+			},
+			["desaturateBackground"] = false,
+			["parent"] = "TEB 3.0",
+			["customTextUpdate"] = "update",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextLeft"] = " ",
+			["desaturateForeground"] = false,
+			["spark"] = false,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["inverse"] = false,
 			["animation"] = {
 				["start"] = {
 					["duration_type"] = "seconds",
@@ -80988,68 +81195,120 @@ WeakAurasSaved = {
 					["type"] = "none",
 				},
 				["finish"] = {
+					["type"] = "preset",
 					["duration_type"] = "seconds",
-					["type"] = "none",
+					["preset"] = "fade",
 				},
 			},
 			["trigger"] = {
-				["debuffType"] = "HELPFUL",
-				["type"] = "custom",
-				["custom_type"] = "status",
-				["subeventSuffix"] = "_CAST_START",
-				["use_unit"] = true,
-				["use_inverse"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["unit"] = "player",
-				["subeventPrefix"] = "SPELL",
-				["use_spellName"] = true,
-				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return false\n    end\n    return true\nend\n\n\n\n",
-				["unevent"] = "auto",
-				["check"] = "update",
+				["use_castType"] = true,
+				["spellId"] = "116740",
+				["use_spell"] = true,
 				["names"] = {
+					"Tigereye Brew", -- [1]
 				},
+				["debuffType"] = "HELPFUL",
 				["custom_hide"] = "timed",
-				["spellName"] = 115399,
+				["spell"] = "Fists of Fury",
+				["unit"] = "player",
+				["unevent"] = "auto",
+				["subeventPrefix"] = "SPELL",
+				["use_remaining"] = false,
+				["event"] = "Cast",
+				["use_spellName"] = true,
+				["castType"] = "channel",
+				["use_spellId"] = true,
+				["spellIds"] = {
+					116740, -- [1]
+				},
+				["subeventSuffix"] = "_CAST_START",
+				["spellName"] = 113656,
+				["use_unit"] = true,
+				["type"] = "aura",
+				["fullscan"] = true,
 			},
-			["desaturate"] = false,
+			["text"] = true,
+			["sparkRotationMode"] = "AUTO",
+			["stickyDuration"] = false,
 			["rotation"] = 0,
-			["font"] = "ABF",
-			["textColor"] = {
+			["stacksFont"] = "ABF",
+			["icon"] = false,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["height"] = 30,
+			["timerFlags"] = "None",
+			["id"] = "TEB Currently Up",
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = "%s",
+			["textFlags"] = "None",
+			["timerSize"] = 16,
+			["timerColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["height"] = 32,
-			["parent"] = "Chi Brew 1.0",
+			["mirror"] = false,
+			["borderEdge"] = "None",
+			["user_y"] = 0,
+			["borderSize"] = 16,
+			["timer"] = true,
+			["icon_side"] = "LEFT",
+			["barInFront"] = true,
+			["anchorPoint"] = "CENTER",
+			["sparkHeight"] = 30,
+			["border"] = false,
+			["stacksContainment"] = "INSIDE",
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = "%p",
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["additional_triggers"] = {
+			},
+			["textSize"] = 16,
+			["frameStrata"] = 5,
+			["width"] = 30,
 			["load"] = {
 				["talent"] = {
-					["single"] = 9,
+					["single"] = 4,
 					["multi"] = {
 					},
 				},
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["use_class"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
 					},
 				},
-				["use_talent"] = true,
-				["use_class"] = true,
+				["use_combat"] = true,
 				["role"] = {
 					["multi"] = {
-					},
-				},
-				["use_spec"] = false,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-						true, -- [1]
-						[3] = true,
 					},
 				},
 				["size"] = {
@@ -81057,61 +81316,23 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\ability_monk_chibrew",
-			["selfPoint"] = "CENTER",
-			["fontSize"] = 14,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["inverse"] = false,
-			["mirror"] = false,
-			["xOffset"] = 0,
-			["regionType"] = "icon",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["blendMode"] = "BLEND",
-			["anchorPoint"] = "CENTER",
-			["frameStrata"] = 1,
-			["icon"] = true,
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "status",
-						["unevent"] = "auto",
-						["power_operator"] = ">",
-						["use_power"] = true,
-						["event"] = "Chi Power",
-						["subeventPrefix"] = "SPELL",
-						["power"] = "2",
-						["unit"] = "player",
-						["use_unit"] = true,
-						["subeventSuffix"] = "_CAST_START",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-			},
-			["customTextUpdate"] = "update",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Chi Brew Usable",
-			["yOffset"] = 0,
-			["alpha"] = 1,
-			["width"] = 32,
 			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
+				0.501960784313726, -- [1]
+				0.501960784313726, -- [2]
+				0.501960784313726, -- [3]
+				0.25, -- [4]
 			},
-			["crop_y"] = 0.41,
-			["numTriggers"] = 2,
-			["desaturateForeground"] = false,
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.41,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
+			["numTriggers"] = 1,
+			["sparkDesature"] = false,
+			["orientation"] = "VERTICAL_INVERSE",
+			["crop_x"] = 0.409999996423721,
+			["zoom"] = 0,
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 		},
 		["Stagger 1.0"] = {
 			["backdropColor"] = {
@@ -81490,17 +81711,17 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "status",
 						["subeventSuffix"] = "_CAST_START",
-						["use_inverse"] = true,
+						["debuffType"] = "HELPFUL",
 						["event"] = "Cooldown Progress (Spell)",
 						["subeventPrefix"] = "SPELL",
-						["debuffType"] = "HELPFUL",
-						["use_spellName"] = true,
 						["unit"] = "player",
+						["use_spellName"] = true,
 						["names"] = {
 						},
-						["unevent"] = "auto",
 						["use_unit"] = true,
+						["showOn"] = "showOnReady",
 						["spellName"] = 2894,
+						["unevent"] = "auto",
 						["custom_hide"] = "timed",
 					},
 					["untrigger"] = {
@@ -81560,17 +81781,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["spellName"] = 108853,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = false,
@@ -81709,182 +81930,33 @@ WeakAurasSaved = {
 			["stacksPoint"] = "BOTTOMRIGHT",
 			["backgroundOffset"] = 2,
 		},
-		["Frozen Orb Unusable"] = {
-			["user_y"] = 0,
-			["user_x"] = 0,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 84714,
-			},
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturateBackground"] = false,
-			["sameTexture"] = true,
-			["desaturateForeground"] = false,
-			["fontFlags"] = "OUTLINE",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["use_inverse"] = false,
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
-				["names"] = {
-				},
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["spellName"] = 84714,
-				["custom_hide"] = "timed",
-			},
-			["desaturate"] = true,
-			["rotation"] = 0,
-			["font"] = "ABF",
-			["height"] = 32,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["load"] = {
-				["use_never"] = false,
-				["talent"] = {
-					["single"] = 4,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "MAGE",
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["parent"] = "Frozen Orb 1.0",
-			["selfPoint"] = "CENTER",
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["xOffset"] = 0,
-			["mirror"] = false,
-			["inverse"] = false,
-			["regionType"] = "icon",
-			["yOffset"] = 0,
-			["blendMode"] = "BLEND",
-			["anchorPoint"] = "CENTER",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["frameStrata"] = 1,
-			["customTextUpdate"] = "update",
-			["id"] = "Frozen Orb Unusable",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["additional_triggers"] = {
-			},
-			["crop_y"] = 0.41,
-			["alpha"] = 1,
-			["width"] = 32,
-			["icon"] = true,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-					["glow_action"] = "show",
-				},
-				["finish"] = {
-				},
-			},
-			["numTriggers"] = 1,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.41,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-		},
-		["TEB Currently Up"] = {
-			["sparkWidth"] = 10,
+		["Storm Bolt Timer"] = {
+			["textFlags"] = "None",
 			["stacksSize"] = 12,
 			["user_x"] = 0,
 			["xOffset"] = 0,
 			["stacksFlags"] = "None",
 			["yOffset"] = 0,
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["anchorPoint"] = "CENTER",
 			["sparkRotation"] = 0,
 			["sameTexture"] = true,
 			["rotateText"] = "NONE",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
+			["backgroundColor"] = {
+				0.501960784313726, -- [1]
+				0.501960784313726, -- [2]
+				0.501960784313726, -- [3]
+				0.25, -- [4]
 			},
 			["fontFlags"] = "OUTLINE",
 			["selfPoint"] = "CENTER",
 			["barColor"] = {
-				1, -- [1]
-				0, -- [2]
-				0, -- [3]
+				0.780392156862745, -- [1]
+				0.611764705882353, -- [2]
+				0.431372549019608, -- [3]
 				0.75, -- [4]
 			},
 			["desaturate"] = false,
-			["progressPrecision"] = 0,
+			["rotation"] = 0,
 			["sparkOffsetY"] = 0,
 			["crop_y"] = 0.41,
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
@@ -81893,15 +81965,20 @@ WeakAurasSaved = {
 			["blendMode"] = "BLEND",
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
-			["borderOffset"] = 5,
+			["stacksFont"] = "ABF",
 			["auto"] = false,
 			["compress"] = false,
 			["timerFont"] = "ABF",
 			["alpha"] = 0.75,
-			["borderInset"] = 11,
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["stacksPoint"] = "BOTTOMRIGHT",
 			["backgroundOffset"] = 2,
-			["sparkOffsetX"] = 0,
+			["borderBackdrop"] = "Blizzard Tooltip",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -81909,79 +81986,102 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["untrigger"] = {
-				["spellName"] = 113656,
+				["spellName"] = 107570,
 			},
 			["desaturateBackground"] = false,
-			["parent"] = "TEB 3.0",
+			["zoom"] = 0,
 			["customTextUpdate"] = "update",
-			["textColor"] = {
+			["displayTextLeft"] = " ",
+			["desaturateForeground"] = false,
+			["borderInset"] = 11,
+			["progressPrecision"] = 0,
+			["textSize"] = 18,
+			["numTriggers"] = 1,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["preset"] = "fade",
+					["duration_type"] = "seconds",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["custom_hide"] = "timed",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["spellName"] = 107570,
+				["use_spellName"] = true,
+				["unit"] = "player",
+				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
+				["names"] = {
+				},
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+			},
+			["text"] = true,
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["single"] = 10,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+						true, -- [2]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["stickyDuration"] = false,
+			["foregroundColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["displayTextLeft"] = " ",
-			["desaturateForeground"] = false,
-			["spark"] = false,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["inverse"] = false,
-			["animation"] = {
+			["sparkWidth"] = 10,
+			["actions"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
 				},
 				["finish"] = {
-					["type"] = "preset",
-					["duration_type"] = "seconds",
-					["preset"] = "fade",
 				},
 			},
-			["trigger"] = {
-				["use_castType"] = true,
-				["spellId"] = "116740",
-				["use_spell"] = true,
-				["names"] = {
-					"Tigereye Brew", -- [1]
-				},
-				["debuffType"] = "HELPFUL",
-				["custom_hide"] = "timed",
-				["spell"] = "Fists of Fury",
-				["unit"] = "player",
-				["unevent"] = "auto",
-				["subeventPrefix"] = "SPELL",
-				["use_remaining"] = false,
-				["event"] = "Cast",
-				["use_spellName"] = true,
-				["castType"] = "channel",
-				["use_spellId"] = true,
-				["spellIds"] = {
-					116740, -- [1]
-				},
-				["subeventSuffix"] = "_CAST_START",
-				["spellName"] = 113656,
-				["use_unit"] = true,
-				["type"] = "aura",
-				["fullscan"] = true,
-			},
-			["text"] = true,
-			["sparkRotationMode"] = "AUTO",
-			["stickyDuration"] = false,
-			["rotation"] = 0,
-			["stacksFont"] = "ABF",
-			["icon"] = false,
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
 			["height"] = 30,
 			["timerFlags"] = "None",
-			["id"] = "TEB Currently Up",
+			["id"] = "Storm Bolt Timer",
 			["sparkBlendMode"] = "ADD",
 			["backdropColor"] = {
 				1, -- [1]
@@ -81991,24 +82091,19 @@ WeakAurasSaved = {
 			},
 			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["displayStacks"] = "%s",
-			["textFlags"] = "None",
+			["sparkRotationMode"] = "AUTO",
 			["timerSize"] = 16,
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["icon"] = false,
 			["mirror"] = false,
 			["borderEdge"] = "None",
-			["user_y"] = 0,
+			["border"] = false,
 			["borderSize"] = 16,
 			["timer"] = true,
 			["icon_side"] = "LEFT",
-			["barInFront"] = true,
-			["anchorPoint"] = "CENTER",
+			["sparkOffsetX"] = 0,
+			["user_y"] = 0,
 			["sparkHeight"] = 30,
-			["border"] = false,
+			["barInFront"] = true,
 			["stacksContainment"] = "INSIDE",
 			["stacksColor"] = {
 				1, -- [1]
@@ -82017,38 +82112,139 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["displayTextRight"] = "%p",
-			["borderBackdrop"] = "Blizzard Tooltip",
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["additional_triggers"] = {
 			},
-			["textSize"] = 16,
-			["frameStrata"] = 5,
+			["spark"] = false,
+			["frameStrata"] = 1,
 			["width"] = 30,
+			["borderOffset"] = 5,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["inverse"] = false,
+			["sparkDesature"] = false,
+			["orientation"] = "VERTICAL_INVERSE",
+			["crop_x"] = 0.409999996423721,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["parent"] = "Storm Bolt 1.0",
+		},
+		["Chi Brew Usable"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["untrigger"] = {
+				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return true\n    end\n    return false\nend\n\n\n\n\n\n",
+				["spellName"] = 115399,
+			},
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_action"] = "hide",
+					["glow_frame"] = "WeakAuras:Chi Brew Usable",
+				},
+				["finish"] = {
+				},
+			},
+			["fontFlags"] = "OUTLINE",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["debuffType"] = "HELPFUL",
+				["type"] = "custom",
+				["custom_type"] = "status",
+				["subeventSuffix"] = "_CAST_START",
+				["use_unit"] = true,
+				["use_inverse"] = true,
+				["event"] = "Cooldown Progress (Spell)",
+				["unit"] = "player",
+				["subeventPrefix"] = "SPELL",
+				["use_spellName"] = true,
+				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return false\n    end\n    return true\nend\n\n\n\n",
+				["unevent"] = "auto",
+				["check"] = "update",
+				["names"] = {
+				},
+				["custom_hide"] = "timed",
+				["spellName"] = 115399,
+			},
+			["desaturate"] = false,
+			["rotation"] = 0,
+			["font"] = "ABF",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["height"] = 32,
+			["parent"] = "Chi Brew 1.0",
 			["load"] = {
 				["talent"] = {
-					["single"] = 4,
+					["single"] = 9,
 					["multi"] = {
 					},
 				},
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["use_class"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
 				["class"] = {
 					["single"] = "MONK",
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
+				["use_talent"] = true,
+				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
+					},
+				},
+				["use_spec"] = false,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+						true, -- [1]
+						[3] = true,
 					},
 				},
 				["size"] = {
@@ -82056,23 +82252,61 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["backgroundColor"] = {
-				0.501960784313726, -- [1]
-				0.501960784313726, -- [2]
-				0.501960784313726, -- [3]
-				0.25, -- [4]
+			["displayIcon"] = "Interface\\Icons\\ability_monk_chibrew",
+			["selfPoint"] = "CENTER",
+			["fontSize"] = 14,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["inverse"] = false,
+			["mirror"] = false,
+			["xOffset"] = 0,
+			["regionType"] = "icon",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["blendMode"] = "BLEND",
+			["anchorPoint"] = "CENTER",
+			["frameStrata"] = 1,
+			["icon"] = true,
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "status",
+						["unevent"] = "auto",
+						["power_operator"] = ">",
+						["use_power"] = true,
+						["event"] = "Chi Power",
+						["subeventPrefix"] = "SPELL",
+						["power"] = "2",
+						["unit"] = "player",
+						["use_unit"] = true,
+						["subeventSuffix"] = "_CAST_START",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
 			},
-			["numTriggers"] = 1,
-			["sparkDesature"] = false,
-			["orientation"] = "VERTICAL_INVERSE",
-			["crop_x"] = 0.409999996423721,
+			["customTextUpdate"] = "update",
+			["stacksContainment"] = "INSIDE",
 			["zoom"] = 0,
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Chi Brew Usable",
+			["yOffset"] = 0,
+			["alpha"] = 1,
+			["width"] = 32,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
 			},
+			["crop_y"] = 0.41,
+			["numTriggers"] = 2,
+			["desaturateForeground"] = false,
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.41,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
 		},
 		["Forfeit Power"] = {
 			["outline"] = true,
@@ -82391,6 +82625,7 @@ WeakAurasSaved = {
 						["subeventPrefix"] = "SPELL",
 						["use_spellName"] = true,
 						["unit"] = "player",
+						["showOn"] = "showOnCooldown",
 						["subeventSuffix"] = "_CAST_START",
 						["use_unit"] = true,
 						["spellName"] = 8050,
@@ -82517,18 +82752,18 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["spellName"] = 81700,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 81700,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 					"Archangel", -- [1]
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
@@ -82701,17 +82936,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 34861,
 			},
 			["desaturate"] = false,
@@ -82837,17 +83072,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["spellName"] = 165341,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 165341,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = true,
@@ -82965,6 +83200,149 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 		},
+		["Power Infusion Unusable"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 10060,
+			},
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+					["glow_action"] = "show",
+				},
+				["finish"] = {
+				},
+			},
+			["fontFlags"] = "OUTLINE",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["names"] = {
+				},
+				["use_spellName"] = true,
+				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
+				["spellName"] = 10060,
+				["subeventSuffix"] = "_CAST_START",
+				["custom_hide"] = "timed",
+			},
+			["desaturate"] = true,
+			["rotation"] = 0,
+			["font"] = "ABF",
+			["height"] = 32,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["load"] = {
+				["talent"] = {
+					["single"] = 14,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "PRIEST",
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["parent"] = "Power Infusion 1.0",
+			["selfPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["xOffset"] = 0,
+			["mirror"] = false,
+			["inverse"] = false,
+			["regionType"] = "icon",
+			["yOffset"] = 0,
+			["blendMode"] = "BLEND",
+			["anchorPoint"] = "CENTER",
+			["fontSize"] = 13,
+			["frameStrata"] = 1,
+			["customTextUpdate"] = "update",
+			["additional_triggers"] = {
+			},
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Power Infusion Unusable",
+			["crop_y"] = 0.41,
+			["alpha"] = 1,
+			["width"] = 32,
+			["icon"] = true,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["numTriggers"] = 1,
+			["desaturateForeground"] = false,
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.41,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
+		},
 		["PW Solace Unusable"] = {
 			["user_y"] = 0,
 			["user_x"] = 0,
@@ -83009,17 +83387,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 129250,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -83264,12 +83642,12 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "status",
 						["unevent"] = "auto",
-						["use_inverse"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["subeventPrefix"] = "SPELL",
 						["use_spellName"] = true,
 						["custom_hide"] = "timed",
 						["unit"] = "player",
+						["showOn"] = "showOnReady",
 						["use_unit"] = true,
 						["subeventSuffix"] = "_CAST_START",
 						["spellName"] = 107428,
@@ -83342,456 +83720,6 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
-		},
-		["Power Infusion Unusable"] = {
-			["user_y"] = 0,
-			["user_x"] = 0,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 10060,
-			},
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturateBackground"] = false,
-			["sameTexture"] = true,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-					["glow_action"] = "show",
-				},
-				["finish"] = {
-				},
-			},
-			["fontFlags"] = "OUTLINE",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["use_inverse"] = false,
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
-				["names"] = {
-				},
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["spellName"] = 10060,
-				["custom_hide"] = "timed",
-			},
-			["desaturate"] = true,
-			["rotation"] = 0,
-			["font"] = "ABF",
-			["height"] = 32,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["load"] = {
-				["talent"] = {
-					["single"] = 14,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "PRIEST",
-					["multi"] = {
-					},
-				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 1,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["parent"] = "Power Infusion 1.0",
-			["selfPoint"] = "CENTER",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["xOffset"] = 0,
-			["mirror"] = false,
-			["inverse"] = false,
-			["regionType"] = "icon",
-			["yOffset"] = 0,
-			["blendMode"] = "BLEND",
-			["anchorPoint"] = "CENTER",
-			["fontSize"] = 13,
-			["frameStrata"] = 1,
-			["customTextUpdate"] = "update",
-			["additional_triggers"] = {
-			},
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Power Infusion Unusable",
-			["crop_y"] = 0.41,
-			["alpha"] = 1,
-			["width"] = 32,
-			["icon"] = true,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["numTriggers"] = 1,
-			["desaturateForeground"] = false,
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.41,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-		},
-		["Xuen WW 1.0"] = {
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["controlledChildren"] = {
-				"Xuen WW Timer", -- [1]
-				"Xuen WW Usable", -- [2]
-				"Xuen WW Unusable", -- [3]
-			},
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["xOffset"] = 120,
-			["border"] = false,
-			["yOffset"] = -90,
-			["regionType"] = "group",
-			["borderSize"] = 16,
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["expanded"] = false,
-			["borderOffset"] = 5,
-			["selfPoint"] = "BOTTOMLEFT",
-			["id"] = "Xuen WW 1.0",
-			["anchorPoint"] = "CENTER",
-			["frameStrata"] = 1,
-			["additional_triggers"] = {
-			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["borderInset"] = 11,
-			["numTriggers"] = 1,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-			},
-			["trigger"] = {
-				["type"] = "aura",
-				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
-				["debuffType"] = "HELPFUL",
-				["names"] = {
-				},
-				["event"] = "Health",
-				["subeventPrefix"] = "SPELL",
-			},
-			["borderEdge"] = "None",
-			["load"] = {
-				["use_class"] = "true",
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "MONK",
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["untrigger"] = {
-			},
-		},
-		["Mirror Image Timer"] = {
-			["textFlags"] = "None",
-			["stacksSize"] = 12,
-			["user_x"] = 0,
-			["xOffset"] = 0,
-			["stacksFlags"] = "None",
-			["yOffset"] = 0,
-			["anchorPoint"] = "CENTER",
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["sameTexture"] = true,
-			["rotateText"] = "NONE",
-			["icon"] = false,
-			["fontFlags"] = "OUTLINE",
-			["selfPoint"] = "CENTER",
-			["barColor"] = {
-				0.333333333333333, -- [1]
-				0.8, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["desaturate"] = false,
-			["progressPrecision"] = 0,
-			["sparkOffsetY"] = 0,
-			["crop_y"] = 0.41,
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["regionType"] = "aurabar",
-			["stacks"] = false,
-			["blendMode"] = "BLEND",
-			["texture"] = "BantoBar",
-			["textFont"] = "ABF",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["timerFont"] = "ABF",
-			["alpha"] = 0.75,
-			["borderInset"] = 11,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 55342,
-			},
-			["desaturateBackground"] = false,
-			["borderOffset"] = 5,
-			["customTextUpdate"] = "update",
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["displayTextLeft"] = " ",
-			["sparkWidth"] = 10,
-			["spark"] = false,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["numTriggers"] = 1,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["type"] = "preset",
-					["preset"] = "fade",
-					["duration_type"] = "seconds",
-				},
-			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
-				["spellName"] = 55342,
-				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
-				["subeventPrefix"] = "SPELL",
-				["names"] = {
-				},
-				["debuffType"] = "HELPFUL",
-			},
-			["text"] = true,
-			["sparkRotationMode"] = "AUTO",
-			["stickyDuration"] = false,
-			["sparkRotation"] = 0,
-			["sparkOffsetX"] = 0,
-			["textSize"] = 16,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["height"] = 30,
-			["timerFlags"] = "None",
-			["id"] = "Mirror Image Timer",
-			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = "%s",
-			["load"] = {
-				["use_never"] = false,
-				["talent"] = {
-					["single"] = 16,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "MAGE",
-					["multi"] = {
-					},
-				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						true, -- [1]
-						true, -- [2]
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["displayTextRight"] = "%p",
-			["rotation"] = 0,
-			["mirror"] = false,
-			["borderEdge"] = "None",
-			["timer"] = true,
-			["borderSize"] = 16,
-			["border"] = false,
-			["icon_side"] = "LEFT",
-			["user_y"] = 0,
-			["stacksFont"] = "ABF",
-			["sparkHeight"] = 30,
-			["backgroundColor"] = {
-				0.501960784313726, -- [1]
-				0.501960784313726, -- [2]
-				0.501960784313726, -- [3]
-				0.25, -- [4]
-			},
-			["stacksContainment"] = "INSIDE",
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["timerSize"] = 16,
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["additional_triggers"] = {
-			},
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["frameStrata"] = 1,
-			["width"] = 30,
-			["barInFront"] = true,
-			["desaturateForeground"] = false,
-			["inverse"] = false,
-			["sparkDesature"] = false,
-			["orientation"] = "VERTICAL_INVERSE",
-			["crop_x"] = 0.409999996423721,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["parent"] = "Mirror Image 1.0",
 		},
 		["Nether Tempest Up"] = {
 			["textFlags"] = "None",
@@ -84009,6 +83937,314 @@ WeakAurasSaved = {
 			},
 			["parent"] = "Nether Tempest 1.0",
 		},
+		["Mirror Image Timer"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["user_x"] = 0,
+			["xOffset"] = 0,
+			["stacksFlags"] = "None",
+			["yOffset"] = 0,
+			["anchorPoint"] = "CENTER",
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["sameTexture"] = true,
+			["rotateText"] = "NONE",
+			["icon"] = false,
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				0.333333333333333, -- [1]
+				0.8, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["desaturate"] = false,
+			["progressPrecision"] = 0,
+			["sparkOffsetY"] = 0,
+			["crop_y"] = 0.41,
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["regionType"] = "aurabar",
+			["stacks"] = false,
+			["blendMode"] = "BLEND",
+			["texture"] = "BantoBar",
+			["textFont"] = "ABF",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["timerFont"] = "ABF",
+			["alpha"] = 0.75,
+			["borderInset"] = 11,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 55342,
+			},
+			["desaturateBackground"] = false,
+			["borderOffset"] = 5,
+			["customTextUpdate"] = "update",
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextLeft"] = " ",
+			["sparkWidth"] = 10,
+			["spark"] = false,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["numTriggers"] = 1,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["preset"] = "fade",
+					["duration_type"] = "seconds",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["custom_hide"] = "timed",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["spellName"] = 55342,
+				["use_spellName"] = true,
+				["unit"] = "player",
+				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
+				["names"] = {
+				},
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+			},
+			["text"] = true,
+			["sparkRotationMode"] = "AUTO",
+			["stickyDuration"] = false,
+			["sparkRotation"] = 0,
+			["sparkOffsetX"] = 0,
+			["textSize"] = 16,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["height"] = 30,
+			["timerFlags"] = "None",
+			["id"] = "Mirror Image Timer",
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = "%s",
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["single"] = 16,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "MAGE",
+					["multi"] = {
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+						true, -- [2]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["displayTextRight"] = "%p",
+			["rotation"] = 0,
+			["mirror"] = false,
+			["borderEdge"] = "None",
+			["timer"] = true,
+			["borderSize"] = 16,
+			["border"] = false,
+			["icon_side"] = "LEFT",
+			["user_y"] = 0,
+			["stacksFont"] = "ABF",
+			["sparkHeight"] = 30,
+			["backgroundColor"] = {
+				0.501960784313726, -- [1]
+				0.501960784313726, -- [2]
+				0.501960784313726, -- [3]
+				0.25, -- [4]
+			},
+			["stacksContainment"] = "INSIDE",
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["timerSize"] = 16,
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["additional_triggers"] = {
+			},
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["frameStrata"] = 1,
+			["width"] = 30,
+			["barInFront"] = true,
+			["desaturateForeground"] = false,
+			["inverse"] = false,
+			["sparkDesature"] = false,
+			["orientation"] = "VERTICAL_INVERSE",
+			["crop_x"] = 0.409999996423721,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["parent"] = "Mirror Image 1.0",
+		},
+		["Xuen WW 1.0"] = {
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["controlledChildren"] = {
+				"Xuen WW Timer", -- [1]
+				"Xuen WW Usable", -- [2]
+				"Xuen WW Unusable", -- [3]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["xOffset"] = 120,
+			["border"] = false,
+			["yOffset"] = -90,
+			["regionType"] = "group",
+			["borderSize"] = 16,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["expanded"] = false,
+			["borderOffset"] = 5,
+			["selfPoint"] = "BOTTOMLEFT",
+			["id"] = "Xuen WW 1.0",
+			["anchorPoint"] = "CENTER",
+			["frameStrata"] = 1,
+			["additional_triggers"] = {
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["borderInset"] = 11,
+			["numTriggers"] = 1,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["trigger"] = {
+				["type"] = "aura",
+				["unit"] = "player",
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+				["names"] = {
+				},
+				["event"] = "Health",
+				["subeventPrefix"] = "SPELL",
+			},
+			["borderEdge"] = "None",
+			["load"] = {
+				["use_class"] = "true",
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["untrigger"] = {
+			},
+		},
 		["Nether Tempest Empty"] = {
 			["user_y"] = 0,
 			["user_x"] = 0,
@@ -84155,424 +84391,6 @@ WeakAurasSaved = {
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-		},
-		["Serendipity Stacks Full Left"] = {
-			["user_y"] = 0,
-			["user_x"] = 0,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["yOffset"] = -541,
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.642381310462952, -- [4]
-			},
-			["desaturateBackground"] = false,
-			["sameTexture"] = true,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "preset",
-					["preset"] = "pulse",
-				},
-				["finish"] = {
-					["type"] = "preset",
-					["preset"] = "slideright",
-					["duration_type"] = "seconds",
-				},
-			},
-			["trigger"] = {
-				["use_inverse"] = true,
-				["subeventPrefix"] = "SPELL",
-				["useCount"] = true,
-				["spellName"] = 121135,
-				["use_remaining"] = false,
-				["subeventSuffix"] = "_CAST_START",
-				["names"] = {
-					"Serendipity", -- [1]
-				},
-				["countOperator"] = "==",
-				["event"] = "Cooldown Progress (Spell)",
-				["unit"] = "player",
-				["type"] = "aura",
-				["use_spellName"] = true,
-				["count"] = "2",
-				["spellIds"] = {
-				},
-				["unevent"] = "auto",
-				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["custom_hide"] = "timed",
-			},
-			["desaturate"] = false,
-			["rotation"] = 0,
-			["font"] = "Friz Quadrata TT",
-			["height"] = 108.181818181818,
-			["rotate"] = true,
-			["load"] = {
-				["use_never"] = false,
-				["talent"] = {
-					["single"] = 16,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "PRIEST",
-					["multi"] = {
-					},
-				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_name"] = false,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["name"] = "Evan",
-				["use_spec"] = true,
-				["use_class"] = true,
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["fontSize"] = 12,
-			["foregroundTexture"] = "Textures\\SpellActivationOverlays\\White_Tiger",
-			["mirror"] = false,
-			["discrete_rotation"] = 0,
-			["regionType"] = "progresstexture",
-			["crop_y"] = 1.75,
-			["blendMode"] = "ADD",
-			["stickyDuration"] = false,
-			["untrigger"] = {
-				["spellName"] = 121135,
-			},
-			["parent"] = "Serendipity Tracker",
-			["numTriggers"] = 1,
-			["texture"] = "Textures\\SpellActivationOverlays\\Arcane_Missiles",
-			["xOffset"] = -222,
-			["desaturateForeground"] = false,
-			["additional_triggers"] = {
-			},
-			["compress"] = false,
-			["id"] = "Serendipity Stacks Full Left",
-			["frameStrata"] = 2,
-			["alpha"] = 1,
-			["width"] = 50,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["anchorPoint"] = "CENTER",
-			["inverse"] = false,
-			["backgroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.348721623420715, -- [4]
-			},
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 2,
-			["selfPoint"] = "CENTER",
-			["backgroundOffset"] = 2,
-		},
-		["Prayer of Mending Unusable"] = {
-			["user_y"] = 0,
-			["user_x"] = 0,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 33076,
-			},
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturateBackground"] = false,
-			["sameTexture"] = true,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["fontFlags"] = "OUTLINE",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["use_inverse"] = false,
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
-				["names"] = {
-				},
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["spellName"] = 33076,
-				["custom_hide"] = "timed",
-			},
-			["desaturate"] = true,
-			["rotation"] = 0,
-			["font"] = "ABF",
-			["height"] = 32,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["load"] = {
-				["use_level"] = false,
-				["talent"] = {
-					["single"] = 15,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "PRIEST",
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						true, -- [1]
-						true, -- [2]
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["parent"] = "Prayer of Mending 1.0",
-			["selfPoint"] = "CENTER",
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["xOffset"] = 0,
-			["mirror"] = false,
-			["inverse"] = false,
-			["regionType"] = "icon",
-			["yOffset"] = 0,
-			["blendMode"] = "BLEND",
-			["anchorPoint"] = "CENTER",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["frameStrata"] = 1,
-			["customTextUpdate"] = "update",
-			["id"] = "Prayer of Mending Unusable",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "aura",
-						["subeventSuffix"] = "_CAST_START",
-						["event"] = "Health",
-						["names"] = {
-							"Divine Insight", -- [1]
-						},
-						["inverse"] = true,
-						["spellIds"] = {
-						},
-						["unit"] = "player",
-						["subeventPrefix"] = "SPELL",
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-			},
-			["crop_y"] = 0.41,
-			["alpha"] = 1,
-			["width"] = 32,
-			["icon"] = true,
-			["desaturateForeground"] = false,
-			["numTriggers"] = 2,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-					["glow_action"] = "show",
-				},
-				["finish"] = {
-				},
-			},
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.41,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-		},
-		["Aspect of the Fox"] = {
-			["parent"] = "External CDs",
-			["yOffset"] = 260,
-			["anchorPoint"] = "CENTER",
-			["customTextUpdate"] = "update",
-			["icon"] = true,
-			["fontFlags"] = "OUTLINE",
-			["selfPoint"] = "CENTER",
-			["trigger"] = {
-				["unit"] = "player",
-				["type"] = "aura",
-				["spellIds"] = {
-				},
-				["subeventSuffix"] = "_CAST_START",
-				["subeventPrefix"] = "SPELL",
-				["names"] = {
-					"Aspect of the Fox", -- [1]
-				},
-				["event"] = "Health",
-				["debuffType"] = "HELPFUL",
-			},
-			["desaturate"] = false,
-			["progressPrecision"] = 1,
-			["font"] = "ABF",
-			["height"] = 64,
-			["load"] = {
-				["use_never"] = false,
-				["zone"] = "Siege of Orgrimmar",
-				["class"] = {
-					["single"] = "MONK",
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["use_zone"] = false,
-				["size"] = {
-					["single"] = "ten",
-					["multi"] = {
-						["ten"] = true,
-					},
-				},
-			},
-			["fontSize"] = 16,
-			["displayStacks"] = " ",
-			["regionType"] = "icon",
-			["animation"] = {
-				["start"] = {
-					["preset"] = "slideright",
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["preset"] = "alphaPulse",
-					["duration_type"] = "seconds",
-					["type"] = "preset",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["cooldown"] = true,
-			["actions"] = {
-				["start"] = {
-					["do_message"] = true,
-					["message_type"] = "RAID",
-				},
-				["finish"] = {
-				},
-			},
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["untrigger"] = {
-			},
-			["additional_triggers"] = {
-			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["frameStrata"] = 1,
-			["width"] = 64,
-			["inverse"] = false,
-			["xOffset"] = 0,
-			["numTriggers"] = 1,
-			["id"] = "Aspect of the Fox",
-			["stickyDuration"] = false,
-			["displayIcon"] = "Interface\\Icons\\Spell_Holy_Fanaticism",
-			["stacksPoint"] = "TOPRIGHT",
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -84814,6 +84632,424 @@ WeakAurasSaved = {
 			["spark"] = false,
 			["stacksFont"] = "ABF",
 			["icon"] = false,
+		},
+		["Prayer of Mending Unusable"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 33076,
+			},
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["fontFlags"] = "OUTLINE",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["names"] = {
+				},
+				["use_spellName"] = true,
+				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
+				["spellName"] = 33076,
+				["subeventSuffix"] = "_CAST_START",
+				["custom_hide"] = "timed",
+			},
+			["desaturate"] = true,
+			["rotation"] = 0,
+			["font"] = "ABF",
+			["height"] = 32,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["load"] = {
+				["use_level"] = false,
+				["talent"] = {
+					["single"] = 15,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "PRIEST",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+						true, -- [2]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["parent"] = "Prayer of Mending 1.0",
+			["selfPoint"] = "CENTER",
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["xOffset"] = 0,
+			["mirror"] = false,
+			["inverse"] = false,
+			["regionType"] = "icon",
+			["yOffset"] = 0,
+			["blendMode"] = "BLEND",
+			["anchorPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["frameStrata"] = 1,
+			["customTextUpdate"] = "update",
+			["id"] = "Prayer of Mending Unusable",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "aura",
+						["subeventSuffix"] = "_CAST_START",
+						["event"] = "Health",
+						["names"] = {
+							"Divine Insight", -- [1]
+						},
+						["inverse"] = true,
+						["spellIds"] = {
+						},
+						["unit"] = "player",
+						["subeventPrefix"] = "SPELL",
+						["debuffType"] = "HELPFUL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+			},
+			["crop_y"] = 0.41,
+			["alpha"] = 1,
+			["width"] = 32,
+			["icon"] = true,
+			["desaturateForeground"] = false,
+			["numTriggers"] = 2,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+					["glow_action"] = "show",
+				},
+				["finish"] = {
+				},
+			},
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.41,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
+		},
+		["Aspect of the Fox"] = {
+			["parent"] = "External CDs",
+			["yOffset"] = 260,
+			["anchorPoint"] = "CENTER",
+			["customTextUpdate"] = "update",
+			["icon"] = true,
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["trigger"] = {
+				["unit"] = "player",
+				["type"] = "aura",
+				["spellIds"] = {
+				},
+				["subeventSuffix"] = "_CAST_START",
+				["subeventPrefix"] = "SPELL",
+				["names"] = {
+					"Aspect of the Fox", -- [1]
+				},
+				["event"] = "Health",
+				["debuffType"] = "HELPFUL",
+			},
+			["desaturate"] = false,
+			["progressPrecision"] = 1,
+			["font"] = "ABF",
+			["height"] = 64,
+			["load"] = {
+				["use_never"] = false,
+				["zone"] = "Siege of Orgrimmar",
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["use_zone"] = false,
+				["size"] = {
+					["single"] = "ten",
+					["multi"] = {
+						["ten"] = true,
+					},
+				},
+			},
+			["fontSize"] = 16,
+			["displayStacks"] = " ",
+			["regionType"] = "icon",
+			["animation"] = {
+				["start"] = {
+					["preset"] = "slideright",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["preset"] = "alphaPulse",
+					["duration_type"] = "seconds",
+					["type"] = "preset",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["cooldown"] = true,
+			["actions"] = {
+				["start"] = {
+					["do_message"] = true,
+					["message_type"] = "RAID",
+				},
+				["finish"] = {
+				},
+			},
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["untrigger"] = {
+			},
+			["additional_triggers"] = {
+			},
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["frameStrata"] = 1,
+			["width"] = 64,
+			["inverse"] = false,
+			["xOffset"] = 0,
+			["numTriggers"] = 1,
+			["id"] = "Aspect of the Fox",
+			["stickyDuration"] = false,
+			["displayIcon"] = "Interface\\Icons\\Spell_Holy_Fanaticism",
+			["stacksPoint"] = "TOPRIGHT",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+		},
+		["Serendipity Stacks Full Left"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["yOffset"] = -541,
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.642381310462952, -- [4]
+			},
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "preset",
+					["preset"] = "pulse",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["preset"] = "slideright",
+					["duration_type"] = "seconds",
+				},
+			},
+			["trigger"] = {
+				["use_inverse"] = true,
+				["subeventPrefix"] = "SPELL",
+				["useCount"] = true,
+				["spellName"] = 121135,
+				["use_remaining"] = false,
+				["subeventSuffix"] = "_CAST_START",
+				["names"] = {
+					"Serendipity", -- [1]
+				},
+				["countOperator"] = "==",
+				["event"] = "Cooldown Progress (Spell)",
+				["unit"] = "player",
+				["type"] = "aura",
+				["use_spellName"] = true,
+				["count"] = "2",
+				["spellIds"] = {
+				},
+				["unevent"] = "auto",
+				["use_unit"] = true,
+				["debuffType"] = "HELPFUL",
+				["custom_hide"] = "timed",
+			},
+			["desaturate"] = false,
+			["rotation"] = 0,
+			["font"] = "Friz Quadrata TT",
+			["height"] = 108.181818181818,
+			["rotate"] = true,
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["single"] = 16,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "PRIEST",
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_name"] = false,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["name"] = "Evan",
+				["use_spec"] = true,
+				["use_class"] = true,
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["fontSize"] = 12,
+			["foregroundTexture"] = "Textures\\SpellActivationOverlays\\White_Tiger",
+			["mirror"] = false,
+			["discrete_rotation"] = 0,
+			["regionType"] = "progresstexture",
+			["crop_y"] = 1.75,
+			["blendMode"] = "ADD",
+			["stickyDuration"] = false,
+			["untrigger"] = {
+				["spellName"] = 121135,
+			},
+			["parent"] = "Serendipity Tracker",
+			["numTriggers"] = 1,
+			["texture"] = "Textures\\SpellActivationOverlays\\Arcane_Missiles",
+			["xOffset"] = -222,
+			["desaturateForeground"] = false,
+			["additional_triggers"] = {
+			},
+			["compress"] = false,
+			["id"] = "Serendipity Stacks Full Left",
+			["frameStrata"] = 2,
+			["alpha"] = 1,
+			["width"] = 50,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["anchorPoint"] = "CENTER",
+			["inverse"] = false,
+			["backgroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.348721623420715, -- [4]
+			},
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 2,
+			["selfPoint"] = "CENTER",
+			["backgroundOffset"] = 2,
 		},
 		["Thrash Empty"] = {
 			["user_y"] = 0,
@@ -85065,172 +85301,6 @@ WeakAurasSaved = {
 			},
 			["anchorPoint"] = "CENTER",
 		},
-		["Surging Mist Usable MW"] = {
-			["user_y"] = 0,
-			["user_x"] = 0,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 116680,
-			},
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturateBackground"] = false,
-			["sameTexture"] = true,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["fontFlags"] = "OUTLINE",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["trigger"] = {
-				["use_inverse"] = true,
-				["unit"] = "player",
-				["useCount"] = true,
-				["debuffType"] = "HELPFUL",
-				["type"] = "aura",
-				["subeventSuffix"] = "_CAST_START",
-				["names"] = {
-					"Vital Mists", -- [1]
-				},
-				["event"] = "Cooldown Progress (Spell)",
-				["subeventPrefix"] = "SPELL",
-				["countOperator"] = ">=",
-				["use_spellName"] = true,
-				["spellIds"] = {
-				},
-				["use_unit"] = true,
-				["unevent"] = "auto",
-				["count"] = "5",
-				["custom_hide"] = "timed",
-				["spellName"] = 116680,
-			},
-			["desaturate"] = false,
-			["rotation"] = 0,
-			["font"] = "ABF",
-			["height"] = 32,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["load"] = {
-				["talent"] = {
-					["single"] = 4,
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["class"] = {
-					["single"] = "MONK",
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["parent"] = "Surging Mist 1.0 MW",
-			["selfPoint"] = "CENTER",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["xOffset"] = 0,
-			["mirror"] = false,
-			["inverse"] = false,
-			["regionType"] = "icon",
-			["yOffset"] = 0,
-			["blendMode"] = "BLEND",
-			["anchorPoint"] = "CENTER",
-			["fontSize"] = 13,
-			["frameStrata"] = 1,
-			["customTextUpdate"] = "update",
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["use_form"] = true,
-						["subeventSuffix"] = "_CAST_START",
-						["form"] = 2,
-						["event"] = "Stance/Form/Aura",
-						["subeventPrefix"] = "SPELL",
-						["unit"] = "player",
-						["type"] = "status",
-						["unevent"] = "auto",
-						["use_unit"] = true,
-						["custom_hide"] = "timed",
-					},
-					["untrigger"] = {
-						["form"] = 2,
-					},
-				}, -- [1]
-			},
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Surging Mist Usable MW",
-			["crop_y"] = 0.41,
-			["alpha"] = 1,
-			["width"] = 32,
-			["icon"] = true,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = true,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Surging Mist Usable MW",
-				},
-				["finish"] = {
-				},
-			},
-			["numTriggers"] = 2,
-			["desaturateForeground"] = false,
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.41,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-		},
 		["Chi Wave MW 1.0"] = {
 			["backdropColor"] = {
 				1, -- [1]
@@ -85327,66 +85397,270 @@ WeakAurasSaved = {
 			},
 			["anchorPoint"] = "CENTER",
 		},
-		["Fatal Strike"] = {
-			["color"] = {
+		["Dampen Harm Uptime"] = {
+			["sparkWidth"] = 10,
+			["stacksSize"] = 12,
+			["xOffset"] = -45,
+			["stacksFlags"] = "None",
+			["yOffset"] = -20,
+			["anchorPoint"] = "CENTER",
+			["sparkRotation"] = 0,
+			["rotateText"] = "NONE",
+			["icon"] = false,
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				1, -- [1]
+				0.2, -- [2]
+				0.2, -- [3]
+				1, -- [4]
+			},
+			["desaturate"] = false,
+			["sparkOffsetY"] = 0,
+			["load"] = {
+				["talent"] = {
+					["single"] = 14,
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+						[3] = true,
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = false,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["timerColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				0.749165952205658, -- [4]
+				1, -- [4]
 			},
-			["yOffset"] = 150,
-			["anchorPoint"] = "CENTER",
-			["customTextUpdate"] = "update",
-			["actions"] = {
-				["start"] = {
-					["do_message"] = true,
-					["message_type"] = "RAID",
-				},
-				["finish"] = {
-				},
+			["regionType"] = "aurabar",
+			["stacks"] = true,
+			["texture"] = "BantoBar",
+			["textFont"] = "ABF",
+			["borderOffset"] = 12,
+			["auto"] = true,
+			["timerFont"] = "ABF",
+			["alpha"] = 0.75,
+			["borderInset"] = 11,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
-			["fontFlags"] = "OUTLINE",
+			["sparkOffsetX"] = 0,
+			["parent"] = "Monk Defensive Timers",
+			["barInFront"] = true,
+			["sparkRotationMode"] = "AUTO",
+			["textSize"] = 12,
 			["animation"] = {
 				["start"] = {
-					["preset"] = "slideright",
-					["type"] = "none",
 					["duration_type"] = "seconds",
+					["type"] = "none",
 				},
 				["main"] = {
-					["preset"] = "alphaPulse",
-					["type"] = "none",
 					["duration_type"] = "seconds",
+					["type"] = "none",
 				},
 				["finish"] = {
-					["type"] = "none",
 					["duration_type"] = "seconds",
+					["type"] = "preset",
+					["preset"] = "slideleft",
 				},
 			},
 			["trigger"] = {
+				["spellId"] = "115308",
+				["ownOnly"] = true,
 				["unit"] = "player",
+				["use_tooltip"] = true,
+				["names"] = {
+					"Dampen Harm", -- [1]
+				},
+				["custom_hide"] = "timed",
+				["spellName"] = 115203,
+				["type"] = "aura",
+				["use_unit"] = true,
+				["tooltip_operator"] = "find('%s')",
+				["subeventPrefix"] = "SPELL",
+				["use_spellId"] = true,
+				["event"] = "Cooldown Progress (Spell)",
+				["use_percentpower"] = false,
+				["count"] = "0",
+				["use_spellName"] = true,
+				["spellIds"] = {
+				},
+				["name"] = "115308",
+				["countOperator"] = "==",
+				["subeventSuffix"] = "_CAST_START",
+				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
+			},
+			["text"] = true,
+			["stickyDuration"] = false,
+			["timer"] = true,
+			["timerFlags"] = "None",
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["height"] = 14,
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["border"] = true,
+			["borderEdge"] = "None",
+			["untrigger"] = {
+				["spellName"] = 115203,
+			},
+			["borderSize"] = 16,
+			["spark"] = false,
+			["icon_side"] = "RIGHT",
+			["displayTextLeft"] = "Dampen Harm",
+			["numTriggers"] = 1,
+			["sparkHeight"] = 30,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["backgroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.5, -- [4]
+			},
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["timerSize"] = 12,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.700000017881393, -- [4]
+			},
+			["id"] = "Dampen Harm Uptime",
+			["customTextUpdate"] = "update",
+			["frameStrata"] = 1,
+			["width"] = 85,
+			["displayTextRight"] = "%p",
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["inverse"] = false,
+			["sparkDesature"] = false,
+			["orientation"] = "HORIZONTAL",
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["textFlags"] = "None",
+			["stacksFont"] = "ABF",
+		},
+		["Shield Charge 2.0"] = {
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["controlledChildren"] = {
+				"Shield Charge Up", -- [1]
+				"Shield Charge Timer", -- [2]
+				"Shield Charge Usable w/ Enough Rage", -- [3]
+				"Shield Charge Usable", -- [4]
+				"Shield Charge Unusable", -- [5]
+				"Shield Charge Charges", -- [6]
+				"Shield Charge Charges Background", -- [7]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["xOffset"] = 120,
+			["border"] = false,
+			["yOffset"] = -90,
+			["regionType"] = "group",
+			["borderSize"] = 16,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["expanded"] = false,
+			["borderOffset"] = 5,
+			["selfPoint"] = "BOTTOMLEFT",
+			["additional_triggers"] = {
+			},
+			["untrigger"] = {
+			},
+			["frameStrata"] = 1,
+			["id"] = "Shield Charge 2.0",
+			["borderEdge"] = "None",
+			["borderInset"] = 11,
+			["numTriggers"] = 1,
+			["trigger"] = {
+				["subeventPrefix"] = "SPELL",
 				["type"] = "aura",
 				["spellIds"] = {
 				},
 				["subeventSuffix"] = "_CAST_START",
-				["debuffType"] = "HARMFUL",
+				["debuffType"] = "HELPFUL",
 				["names"] = {
-					"Fatal Strike", -- [1]
 				},
 				["event"] = "Health",
-				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
 			},
-			["stickyDuration"] = false,
-			["progressPrecision"] = 1,
-			["font"] = "ABF",
-			["height"] = 50,
-			["load"] = {
-				["use_never"] = true,
-				["zone"] = "Siege of Orgrimmar",
-				["spec"] = {
-					["multi"] = {
-					},
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
 				},
-				["use_class"] = true,
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["load"] = {
+				["use_class"] = "true",
 				["role"] = {
 					["multi"] = {
 					},
@@ -85395,52 +85669,25 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["class"] = {
-					["single"] = "MONK",
-					["multi"] = {
-					},
-				},
-				["use_zone"] = true,
-				["use_combat"] = true,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["size"] = {
-					["single"] = "ten",
+				["spec"] = {
 					["multi"] = {
-						["ten"] = true,
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
 					},
 				},
 			},
-			["fontSize"] = 16,
-			["displayStacks"] = "%s",
-			["regionType"] = "icon",
-			["parent"] = "SoO HUD",
-			["stacksPoint"] = "TOPRIGHT",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["xOffset"] = 0,
-			["id"] = "Fatal Strike",
-			["additional_triggers"] = {
-			},
-			["frameStrata"] = 1,
-			["width"] = 50,
-			["untrigger"] = {
-			},
-			["numTriggers"] = 1,
-			["inverse"] = false,
-			["desaturate"] = false,
-			["selfPoint"] = "CENTER",
-			["icon"] = true,
-			["cooldown"] = true,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["anchorPoint"] = "CENTER",
 		},
 		["Ice Floes Unusable"] = {
 			["user_y"] = 0,
@@ -85591,80 +85838,66 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 		},
-		["Shield Charge 2.0"] = {
-			["backdropColor"] = {
+		["Fatal Strike"] = {
+			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				0.5, -- [4]
+				0.749165952205658, -- [4]
 			},
-			["controlledChildren"] = {
-				"Shield Charge Up", -- [1]
-				"Shield Charge Timer", -- [2]
-				"Shield Charge Usable w/ Enough Rage", -- [3]
-				"Shield Charge Usable", -- [4]
-				"Shield Charge Unusable", -- [5]
-				"Shield Charge Charges", -- [6]
-				"Shield Charge Charges Background", -- [7]
+			["yOffset"] = 150,
+			["anchorPoint"] = "CENTER",
+			["customTextUpdate"] = "update",
+			["actions"] = {
+				["start"] = {
+					["do_message"] = true,
+					["message_type"] = "RAID",
+				},
+				["finish"] = {
+				},
 			},
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["xOffset"] = 120,
-			["border"] = false,
-			["yOffset"] = -90,
-			["regionType"] = "group",
-			["borderSize"] = 16,
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
+			["fontFlags"] = "OUTLINE",
+			["animation"] = {
+				["start"] = {
+					["preset"] = "slideright",
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["preset"] = "alphaPulse",
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
 			},
-			["expanded"] = false,
-			["borderOffset"] = 5,
-			["selfPoint"] = "BOTTOMLEFT",
-			["additional_triggers"] = {
-			},
-			["untrigger"] = {
-			},
-			["frameStrata"] = 1,
-			["id"] = "Shield Charge 2.0",
-			["borderEdge"] = "None",
-			["borderInset"] = 11,
-			["numTriggers"] = 1,
 			["trigger"] = {
-				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
 				["type"] = "aura",
 				["spellIds"] = {
 				},
 				["subeventSuffix"] = "_CAST_START",
-				["debuffType"] = "HELPFUL",
+				["debuffType"] = "HARMFUL",
 				["names"] = {
+					"Fatal Strike", -- [1]
 				},
 				["event"] = "Health",
-				["unit"] = "player",
+				["subeventPrefix"] = "SPELL",
 			},
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
+			["stickyDuration"] = false,
+			["progressPrecision"] = 1,
+			["font"] = "ABF",
+			["height"] = 50,
 			["load"] = {
-				["use_class"] = "true",
+				["use_never"] = true,
+				["zone"] = "Siege of Orgrimmar",
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
@@ -85673,25 +85906,52 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
+				["use_zone"] = true,
+				["use_combat"] = true,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-					},
-				},
 				["size"] = {
+					["single"] = "ten",
 					["multi"] = {
+						["ten"] = true,
 					},
 				},
 			},
-			["anchorPoint"] = "CENTER",
+			["fontSize"] = 16,
+			["displayStacks"] = "%s",
+			["regionType"] = "icon",
+			["parent"] = "SoO HUD",
+			["stacksPoint"] = "TOPRIGHT",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["xOffset"] = 0,
+			["id"] = "Fatal Strike",
+			["additional_triggers"] = {
+			},
+			["frameStrata"] = 1,
+			["width"] = 50,
+			["untrigger"] = {
+			},
+			["numTriggers"] = 1,
+			["inverse"] = false,
+			["desaturate"] = false,
+			["selfPoint"] = "CENTER",
+			["icon"] = true,
+			["cooldown"] = true,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 		},
 		["Crystalline Barrage"] = {
 			["xOffset"] = 0,
@@ -85811,62 +86071,55 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 		},
-		["TEB Stack Size Background"] = {
-			["outline"] = false,
-			["parent"] = "TEB Trackers",
-			["displayText"] = "+%s%",
-			["customText"] = "UnitAura(\"player\", GetSpellInfo(125195))",
-			["untrigger"] = {
-			},
+		["Chi Bar Mask Ascension"] = {
+			["sparkWidth"] = 10,
+			["stacksSize"] = 12,
+			["xOffset"] = 0,
+			["stacksFlags"] = "None",
+			["yOffset"] = -61,
 			["anchorPoint"] = "CENTER",
-			["customTextUpdate"] = "update",
-			["icon"] = true,
-			["selfPoint"] = "LEFT",
-			["trigger"] = {
-				["type"] = "aura",
-				["spellId"] = "116740",
-				["subeventSuffix"] = "_CAST_START",
-				["event"] = "Health",
-				["subeventPrefix"] = "SPELL",
-				["custom_hide"] = "timed",
-				["use_spellId"] = true,
-				["spellIds"] = {
-				},
-				["fullscan"] = true,
-				["unit"] = "player",
-				["names"] = {
-					"Tigereye Brew", -- [1]
-				},
-				["subcount"] = true,
-				["debuffType"] = "HELPFUL",
+			["sparkRotation"] = 0,
+			["rotateText"] = "NONE",
+			["backgroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0, -- [4]
 			},
-			["stickyDuration"] = false,
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				0.12156862745098, -- [1]
+				1, -- [2]
+				0.474509803921569, -- [3]
+				1, -- [4]
+			},
+			["desaturate"] = false,
 			["progressPrecision"] = 0,
-			["font"] = "ABF",
-			["height"] = 19.8399925231934,
+			["sparkOffsetY"] = 0,
 			["load"] = {
-				["use_never"] = true,
 				["talent"] = {
+					["single"] = 8,
 					["multi"] = {
 					},
 				},
 				["spec"] = {
-					["single"] = 3,
 					["multi"] = {
+						true, -- [1]
 						[3] = true,
 					},
 				},
+				["use_talent"] = true,
 				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = true,
-				["use_name"] = false,
+				["use_spec"] = false,
+				["role"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
 				["class"] = {
 					["single"] = "MONK",
@@ -85878,56 +86131,125 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["fontSize"] = 20,
-			["displayStacks"] = "%p",
-			["regionType"] = "text",
-			["desaturate"] = false,
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "aurabar",
+			["stacks"] = false,
+			["texture"] = "BantoBar",
+			["textFont"] = "ABF",
+			["stacksFont"] = "ABF",
 			["auto"] = true,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["justify"] = "LEFT",
-			["id"] = "TEB Stack Size Background",
-			["additional_triggers"] = {
-			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["frameStrata"] = 2,
-			["width"] = 34.5600166320801,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["type"] = "preset",
-					["duration_type"] = "seconds",
-					["preset"] = "slideleft",
-				},
-			},
-			["inverse"] = false,
-			["numTriggers"] = 1,
-			["color"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0.5, -- [4]
-			},
-			["yOffset"] = -91,
-			["xOffset"] = 183,
-			["stacksPoint"] = "BOTTOMRIGHT",
+			["timerFont"] = "ABF",
+			["alpha"] = 0.5,
+			["borderInset"] = 32,
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
+			},
+			["sparkOffsetX"] = 0,
+			["parent"] = "Chi Tracking Ascension",
+			["barInFront"] = true,
+			["sparkRotationMode"] = "AUTO",
+			["textSize"] = 12,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["power_operator"] = "<",
+				["use_power"] = true,
+				["event"] = "Chi Power",
+				["use_unit"] = true,
+				["debuffType"] = "HELPFUL",
+				["names"] = {
+				},
+				["spellIds"] = {
+				},
+				["subeventPrefix"] = "SPELL",
+				["subeventSuffix"] = "_CAST_START",
+				["unit"] = "player",
+				["power"] = "6",
+				["custom_hide"] = "timed",
+			},
+			["text"] = false,
+			["stickyDuration"] = false,
+			["height"] = 10,
+			["timerFlags"] = "None",
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["timer"] = false,
+			["textFlags"] = "None",
+			["border"] = false,
+			["borderEdge"] = "Blizzard Achievement Wood",
+			["icon"] = false,
+			["borderSize"] = 16,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["icon_side"] = "RIGHT",
+			["inverse"] = false,
+			["untrigger"] = {
+			},
+			["sparkHeight"] = 30,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["displayTextRight"] = " ",
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["timerSize"] = 12,
+			["spark"] = false,
+			["additional_triggers"] = {
+			},
+			["id"] = "Chi Bar Mask Ascension",
+			["frameStrata"] = 5,
+			["width"] = 195,
+			["displayTextLeft"] = " ",
+			["customTextUpdate"] = "update",
+			["numTriggers"] = 1,
+			["sparkDesature"] = false,
+			["orientation"] = "HORIZONTAL",
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["borderOffset"] = 4,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
 			},
 		},
 		["Fingers of Frost Timer Right (2 Stacks)"] = {
@@ -86173,17 +86495,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 33395,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -86376,55 +86698,62 @@ WeakAurasSaved = {
 			["untrigger"] = {
 			},
 		},
-		["Chi Bar Mask Ascension"] = {
-			["sparkWidth"] = 10,
-			["stacksSize"] = 12,
-			["xOffset"] = 0,
-			["stacksFlags"] = "None",
-			["yOffset"] = -61,
+		["TEB Stack Size Background"] = {
+			["outline"] = false,
+			["parent"] = "TEB Trackers",
+			["displayText"] = "+%s%",
+			["customText"] = "UnitAura(\"player\", GetSpellInfo(125195))",
+			["untrigger"] = {
+			},
 			["anchorPoint"] = "CENTER",
-			["sparkRotation"] = 0,
-			["rotateText"] = "NONE",
-			["backgroundColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0, -- [4]
+			["customTextUpdate"] = "update",
+			["icon"] = true,
+			["selfPoint"] = "LEFT",
+			["trigger"] = {
+				["type"] = "aura",
+				["spellId"] = "116740",
+				["subeventSuffix"] = "_CAST_START",
+				["event"] = "Health",
+				["subeventPrefix"] = "SPELL",
+				["custom_hide"] = "timed",
+				["use_spellId"] = true,
+				["spellIds"] = {
+				},
+				["fullscan"] = true,
+				["unit"] = "player",
+				["names"] = {
+					"Tigereye Brew", -- [1]
+				},
+				["subcount"] = true,
+				["debuffType"] = "HELPFUL",
 			},
-			["fontFlags"] = "OUTLINE",
-			["selfPoint"] = "CENTER",
-			["barColor"] = {
-				0.12156862745098, -- [1]
-				1, -- [2]
-				0.474509803921569, -- [3]
-				1, -- [4]
-			},
-			["desaturate"] = false,
+			["stickyDuration"] = false,
 			["progressPrecision"] = 0,
-			["sparkOffsetY"] = 0,
+			["font"] = "ABF",
+			["height"] = 19.8399925231934,
 			["load"] = {
+				["use_never"] = true,
 				["talent"] = {
-					["single"] = 8,
 					["multi"] = {
 					},
 				},
 				["spec"] = {
+					["single"] = 3,
 					["multi"] = {
-						true, -- [1]
 						[3] = true,
 					},
 				},
-				["use_talent"] = true,
 				["use_class"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = false,
 				["role"] = {
 					["multi"] = {
 					},
 				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["use_name"] = false,
 				["use_combat"] = true,
 				["class"] = {
 					["single"] = "MONK",
@@ -86436,125 +86765,56 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["regionType"] = "aurabar",
-			["stacks"] = false,
-			["texture"] = "BantoBar",
-			["textFont"] = "ABF",
-			["stacksFont"] = "ABF",
+			["fontSize"] = 20,
+			["displayStacks"] = "%p",
+			["regionType"] = "text",
+			["desaturate"] = false,
 			["auto"] = true,
-			["timerFont"] = "ABF",
-			["alpha"] = 0.5,
-			["borderInset"] = 32,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["sparkOffsetX"] = 0,
-			["parent"] = "Chi Tracking Ascension",
-			["barInFront"] = true,
-			["sparkRotationMode"] = "AUTO",
-			["textSize"] = 12,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["power_operator"] = "<",
-				["use_power"] = true,
-				["event"] = "Chi Power",
-				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["names"] = {
-				},
-				["spellIds"] = {
-				},
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["power"] = "6",
-				["custom_hide"] = "timed",
-			},
-			["text"] = false,
-			["stickyDuration"] = false,
-			["height"] = 10,
-			["timerFlags"] = "None",
-			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["timer"] = false,
-			["textFlags"] = "None",
-			["border"] = false,
-			["borderEdge"] = "Blizzard Achievement Wood",
-			["icon"] = false,
-			["borderSize"] = 16,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["icon_side"] = "RIGHT",
-			["inverse"] = false,
-			["untrigger"] = {
-			},
-			["sparkHeight"] = 30,
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["displayTextRight"] = " ",
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["timerSize"] = 12,
-			["spark"] = false,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["justify"] = "LEFT",
+			["id"] = "TEB Stack Size Background",
 			["additional_triggers"] = {
 			},
-			["id"] = "Chi Bar Mask Ascension",
-			["frameStrata"] = 5,
-			["width"] = 195,
-			["displayTextLeft"] = " ",
-			["customTextUpdate"] = "update",
-			["numTriggers"] = 1,
-			["sparkDesature"] = false,
-			["orientation"] = "HORIZONTAL",
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["borderOffset"] = 4,
 			["actions"] = {
 				["start"] = {
 				},
 				["finish"] = {
 				},
+			},
+			["frameStrata"] = 2,
+			["width"] = 34.5600166320801,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "slideleft",
+				},
+			},
+			["inverse"] = false,
+			["numTriggers"] = 1,
+			["color"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.5, -- [4]
+			},
+			["yOffset"] = -91,
+			["xOffset"] = 183,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
 		},
 		["Whirling"] = {
@@ -86796,16 +87056,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 73680,
 			},
 			["text"] = true,
@@ -87520,16 +87781,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 118000,
 			},
 			["text"] = true,
@@ -88214,17 +88476,18 @@ WeakAurasSaved = {
 				["type"] = "status",
 				["unevent"] = "auto",
 				["custom_hide"] = "timed",
+				["spellName"] = 6343,
 				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
-				["spellName"] = 6343,
+				["unit"] = "player",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
-				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["use_unit"] = true,
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
@@ -88346,17 +88609,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["spellName"] = 107428,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = false,
@@ -88568,6 +88831,218 @@ WeakAurasSaved = {
 			["untrigger"] = {
 			},
 		},
+		["Xuen BM Timer"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["user_x"] = 0,
+			["xOffset"] = 0,
+			["stacksFlags"] = "None",
+			["yOffset"] = 0,
+			["anchorPoint"] = "CENTER",
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["sameTexture"] = true,
+			["rotateText"] = "NONE",
+			["icon"] = false,
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				0.12156862745098, -- [1]
+				1, -- [2]
+				0.474509803921569, -- [3]
+				0.75, -- [4]
+			},
+			["desaturate"] = false,
+			["progressPrecision"] = 0,
+			["sparkOffsetY"] = 0,
+			["crop_y"] = 0.41,
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["regionType"] = "aurabar",
+			["stacks"] = false,
+			["blendMode"] = "BLEND",
+			["texture"] = "BantoBar",
+			["textFont"] = "ABF",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["timerFont"] = "ABF",
+			["alpha"] = 0.75,
+			["borderInset"] = 11,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 123904,
+			},
+			["desaturateBackground"] = false,
+			["borderOffset"] = 5,
+			["customTextUpdate"] = "update",
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["textSize"] = 16,
+			["sparkWidth"] = 10,
+			["spark"] = false,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["numTriggers"] = 1,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["preset"] = "fade",
+					["duration_type"] = "seconds",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["custom_hide"] = "timed",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["spellName"] = 123904,
+				["use_spellName"] = true,
+				["unit"] = "player",
+				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
+				["names"] = {
+				},
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+			},
+			["text"] = true,
+			["sparkRotationMode"] = "AUTO",
+			["stickyDuration"] = false,
+			["sparkRotation"] = 0,
+			["sparkOffsetX"] = 0,
+			["backgroundColor"] = {
+				0.501960784313726, -- [1]
+				0.501960784313726, -- [2]
+				0.501960784313726, -- [3]
+				0.25, -- [4]
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["height"] = 30,
+			["timerFlags"] = "None",
+			["id"] = "Xuen BM Timer",
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = "%s",
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["single"] = 17,
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["displayTextRight"] = "%p",
+			["rotation"] = 0,
+			["mirror"] = false,
+			["borderEdge"] = "None",
+			["timer"] = true,
+			["borderSize"] = 16,
+			["user_y"] = 0,
+			["icon_side"] = "LEFT",
+			["border"] = false,
+			["stacksFont"] = "ABF",
+			["sparkHeight"] = 30,
+			["desaturateForeground"] = false,
+			["stacksContainment"] = "INSIDE",
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["timerSize"] = 16,
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["additional_triggers"] = {
+			},
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["frameStrata"] = 1,
+			["width"] = 30,
+			["barInFront"] = true,
+			["displayTextLeft"] = " ",
+			["inverse"] = false,
+			["sparkDesature"] = false,
+			["orientation"] = "VERTICAL_INVERSE",
+			["crop_x"] = 0.409999996423721,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["parent"] = "Xuen BM 1.0",
+		},
 		["Searing Totem Up"] = {
 			["user_y"] = 0,
 			["user_x"] = 0,
@@ -88722,217 +89197,6 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 		},
-		["Xuen BM Timer"] = {
-			["textFlags"] = "None",
-			["stacksSize"] = 12,
-			["user_x"] = 0,
-			["xOffset"] = 0,
-			["stacksFlags"] = "None",
-			["yOffset"] = 0,
-			["anchorPoint"] = "CENTER",
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["sameTexture"] = true,
-			["rotateText"] = "NONE",
-			["icon"] = false,
-			["fontFlags"] = "OUTLINE",
-			["selfPoint"] = "CENTER",
-			["barColor"] = {
-				0.12156862745098, -- [1]
-				1, -- [2]
-				0.474509803921569, -- [3]
-				0.75, -- [4]
-			},
-			["desaturate"] = false,
-			["progressPrecision"] = 0,
-			["sparkOffsetY"] = 0,
-			["crop_y"] = 0.41,
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["regionType"] = "aurabar",
-			["stacks"] = false,
-			["blendMode"] = "BLEND",
-			["texture"] = "BantoBar",
-			["textFont"] = "ABF",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["timerFont"] = "ABF",
-			["alpha"] = 0.75,
-			["borderInset"] = 11,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 123904,
-			},
-			["desaturateBackground"] = false,
-			["borderOffset"] = 5,
-			["customTextUpdate"] = "update",
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["textSize"] = 16,
-			["sparkWidth"] = 10,
-			["spark"] = false,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["numTriggers"] = 1,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["type"] = "preset",
-					["preset"] = "fade",
-					["duration_type"] = "seconds",
-				},
-			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
-				["spellName"] = 123904,
-				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
-				["subeventPrefix"] = "SPELL",
-				["names"] = {
-				},
-				["debuffType"] = "HELPFUL",
-			},
-			["text"] = true,
-			["sparkRotationMode"] = "AUTO",
-			["stickyDuration"] = false,
-			["sparkRotation"] = 0,
-			["sparkOffsetX"] = 0,
-			["backgroundColor"] = {
-				0.501960784313726, -- [1]
-				0.501960784313726, -- [2]
-				0.501960784313726, -- [3]
-				0.25, -- [4]
-			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["height"] = 30,
-			["timerFlags"] = "None",
-			["id"] = "Xuen BM Timer",
-			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = "%s",
-			["load"] = {
-				["use_never"] = false,
-				["talent"] = {
-					["single"] = 17,
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 1,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["class"] = {
-					["single"] = "MONK",
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["displayTextRight"] = "%p",
-			["rotation"] = 0,
-			["mirror"] = false,
-			["borderEdge"] = "None",
-			["timer"] = true,
-			["borderSize"] = 16,
-			["user_y"] = 0,
-			["icon_side"] = "LEFT",
-			["border"] = false,
-			["stacksFont"] = "ABF",
-			["sparkHeight"] = 30,
-			["desaturateForeground"] = false,
-			["stacksContainment"] = "INSIDE",
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["timerSize"] = 16,
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["additional_triggers"] = {
-			},
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["frameStrata"] = 1,
-			["width"] = 30,
-			["barInFront"] = true,
-			["displayTextLeft"] = " ",
-			["inverse"] = false,
-			["sparkDesature"] = false,
-			["orientation"] = "VERTICAL_INVERSE",
-			["crop_x"] = 0.409999996423721,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["parent"] = "Xuen BM 1.0",
-		},
 		["Flame Shock Timer with no Flame Shock Up"] = {
 			["user_y"] = 0,
 			["stacksSize"] = 12,
@@ -89065,16 +89329,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["spellName"] = 8050,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 8050,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
@@ -89155,151 +89420,6 @@ WeakAurasSaved = {
 			["orientation"] = "VERTICAL_INVERSE",
 			["crop_x"] = 0.409999996423721,
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-		},
-		["Icy Veins Unusable"] = {
-			["user_y"] = 0,
-			["user_x"] = 0,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 12472,
-			},
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturateBackground"] = false,
-			["sameTexture"] = true,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["fontFlags"] = "OUTLINE",
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["use_inverse"] = false,
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["spellName"] = 12472,
-				["use_spellName"] = true,
-				["custom_hide"] = "timed",
-				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
-				["subeventPrefix"] = "SPELL",
-				["names"] = {
-				},
-				["debuffType"] = "HELPFUL",
-			},
-			["desaturate"] = true,
-			["rotation"] = 0,
-			["font"] = "ABF",
-			["height"] = 32,
-			["backgroundOffset"] = 2,
-			["load"] = {
-				["use_never"] = false,
-				["talent"] = {
-					["single"] = 4,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "MAGE",
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-						true, -- [1]
-						true, -- [2]
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["parent"] = "Icy Veins 1.0",
-			["selfPoint"] = "CENTER",
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["desaturateForeground"] = false,
-			["mirror"] = false,
-			["numTriggers"] = 1,
-			["regionType"] = "icon",
-			["crop_y"] = 0.41,
-			["blendMode"] = "BLEND",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["icon"] = true,
-			["alpha"] = 1,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-					["glow_action"] = "show",
-				},
-				["finish"] = {
-				},
-			},
-			["additional_triggers"] = {
-			},
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Icy Veins Unusable",
-			["customTextUpdate"] = "update",
-			["frameStrata"] = 1,
-			["width"] = 32,
-			["anchorPoint"] = "CENTER",
-			["yOffset"] = 0,
-			["inverse"] = false,
-			["xOffset"] = 0,
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.41,
-			["stacksPoint"] = "BOTTOMRIGHT",
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -89430,6 +89550,151 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 		},
+		["Icy Veins Unusable"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 12472,
+			},
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["fontFlags"] = "OUTLINE",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["spellName"] = 12472,
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["custom_hide"] = "timed",
+				["use_spellName"] = true,
+				["unit"] = "player",
+				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
+				["names"] = {
+				},
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+			},
+			["desaturate"] = true,
+			["rotation"] = 0,
+			["font"] = "ABF",
+			["height"] = 32,
+			["backgroundOffset"] = 2,
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["single"] = 4,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "MAGE",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+						true, -- [1]
+						true, -- [2]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["parent"] = "Icy Veins 1.0",
+			["selfPoint"] = "CENTER",
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["desaturateForeground"] = false,
+			["mirror"] = false,
+			["numTriggers"] = 1,
+			["regionType"] = "icon",
+			["crop_y"] = 0.41,
+			["blendMode"] = "BLEND",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["icon"] = true,
+			["alpha"] = 1,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+					["glow_action"] = "show",
+				},
+				["finish"] = {
+				},
+			},
+			["additional_triggers"] = {
+			},
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Icy Veins Unusable",
+			["customTextUpdate"] = "update",
+			["frameStrata"] = 1,
+			["width"] = 32,
+			["anchorPoint"] = "CENTER",
+			["yOffset"] = 0,
+			["inverse"] = false,
+			["xOffset"] = 0,
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.41,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+		},
 		["Bladestorm Timer"] = {
 			["textFlags"] = "None",
 			["stacksSize"] = 12,
@@ -89525,16 +89790,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 46924,
 			},
 			["text"] = true,
@@ -89884,16 +90150,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 22812,
 			},
 			["text"] = true,
@@ -90325,6 +90592,184 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 		},
+		["Chi Bar Full MW"] = {
+			["sparkWidth"] = 10,
+			["stacksSize"] = 12,
+			["xOffset"] = 0,
+			["stacksFlags"] = "None",
+			["yOffset"] = -61,
+			["anchorPoint"] = "CENTER",
+			["sparkRotation"] = 0,
+			["rotateText"] = "NONE",
+			["icon"] = false,
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				0.12156862745098, -- [1]
+				1, -- [2]
+				0.474509803921569, -- [3]
+				1, -- [4]
+			},
+			["desaturate"] = false,
+			["progressPrecision"] = 0,
+			["sparkOffsetY"] = 0,
+			["load"] = {
+				["use_never"] = false,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 2,
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "aurabar",
+			["stacks"] = false,
+			["texture"] = "BantoBar",
+			["textFont"] = "ABF",
+			["borderOffset"] = 4,
+			["auto"] = true,
+			["timerFont"] = "ABF",
+			["alpha"] = 1,
+			["borderInset"] = 32,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["sparkOffsetX"] = 0,
+			["parent"] = "Chi Tracking MW",
+			["barInFront"] = true,
+			["sparkRotationMode"] = "AUTO",
+			["textSize"] = 12,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["preset"] = "alphaPulse",
+					["duration_type"] = "seconds",
+					["type"] = "preset",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["power_operator"] = ">=",
+				["use_power"] = true,
+				["event"] = "Chi Power",
+				["use_unit"] = true,
+				["debuffType"] = "HELPFUL",
+				["names"] = {
+				},
+				["subeventPrefix"] = "SPELL",
+				["subeventSuffix"] = "_CAST_START",
+				["unit"] = "player",
+				["power"] = "5",
+				["custom_hide"] = "timed",
+			},
+			["text"] = false,
+			["stickyDuration"] = false,
+			["height"] = 10,
+			["timerFlags"] = "None",
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["stacksFont"] = "ABF",
+			["textFlags"] = "None",
+			["border"] = false,
+			["borderEdge"] = "Blizzard Achievement Wood",
+			["backgroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.5, -- [4]
+			},
+			["borderSize"] = 16,
+			["timer"] = false,
+			["icon_side"] = "RIGHT",
+			["inverse"] = false,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["sparkHeight"] = 30,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["displayTextRight"] = " ",
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["timerSize"] = 12,
+			["id"] = "Chi Bar Full MW",
+			["additional_triggers"] = {
+			},
+			["displayTextLeft"] = " ",
+			["frameStrata"] = 1,
+			["width"] = 195,
+			["spark"] = false,
+			["customTextUpdate"] = "update",
+			["numTriggers"] = 1,
+			["sparkDesature"] = false,
+			["orientation"] = "HORIZONTAL",
+			["untrigger"] = {
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+		},
 		["Rushing Jade Wind Usable MW DPS"] = {
 			["user_y"] = 0,
 			["user_x"] = 0,
@@ -90354,17 +90799,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["spellName"] = 116847,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 116847,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["stickyDuration"] = false,
@@ -90487,108 +90932,6 @@ WeakAurasSaved = {
 			["stacksPoint"] = "BOTTOMRIGHT",
 			["backgroundOffset"] = 2,
 		},
-		["Rising Sun Kick 2.0 MW"] = {
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["controlledChildren"] = {
-				"Rising Sun Kick Debuff w/ No CD MW", -- [1]
-				"Rising Sun Kick Debuff w/ CD MW", -- [2]
-				"Rising Sun Kick Timer w/ Debuff Up MW", -- [3]
-				"Rising Sun Kick Timer w/ No Debuff Up MW", -- [4]
-				"Rising Sun Kick Usable with Chi MW", -- [5]
-				"Rising Sun Kick Usable without Chi MW", -- [6]
-				"Rising Sun Kick Not Usable MW", -- [7]
-				"Rising Sun Kick Charges", -- [8]
-				"Rising Sun Kick Charges Background", -- [9]
-			},
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["xOffset"] = 0,
-			["border"] = false,
-			["yOffset"] = -230,
-			["regionType"] = "group",
-			["borderSize"] = 16,
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["expanded"] = false,
-			["borderOffset"] = 5,
-			["selfPoint"] = "BOTTOMLEFT",
-			["id"] = "Rising Sun Kick 2.0 MW",
-			["anchorPoint"] = "CENTER",
-			["frameStrata"] = 1,
-			["additional_triggers"] = {
-			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["borderInset"] = 11,
-			["numTriggers"] = 1,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-			},
-			["trigger"] = {
-				["type"] = "aura",
-				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
-				["debuffType"] = "HELPFUL",
-				["names"] = {
-				},
-				["event"] = "Health",
-				["subeventPrefix"] = "SPELL",
-			},
-			["borderEdge"] = "None",
-			["load"] = {
-				["use_class"] = "true",
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "MONK",
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["untrigger"] = {
-			},
-		},
 		["Rushing Jade Wind Usable WW"] = {
 			["user_y"] = 0,
 			["user_x"] = 0,
@@ -90636,17 +90979,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 116847,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -90884,51 +91227,97 @@ WeakAurasSaved = {
 			["stacksPoint"] = "BOTTOMRIGHT",
 			["backgroundOffset"] = 2,
 		},
-		["Chi Bar Full MW"] = {
-			["sparkWidth"] = 10,
-			["stacksSize"] = 12,
-			["xOffset"] = 0,
-			["stacksFlags"] = "None",
-			["yOffset"] = -61,
-			["anchorPoint"] = "CENTER",
-			["sparkRotation"] = 0,
-			["rotateText"] = "NONE",
-			["icon"] = false,
-			["fontFlags"] = "OUTLINE",
-			["selfPoint"] = "CENTER",
-			["barColor"] = {
-				0.12156862745098, -- [1]
+		["Rising Sun Kick 2.0 MW"] = {
+			["backdropColor"] = {
+				1, -- [1]
 				1, -- [2]
-				0.474509803921569, -- [3]
-				1, -- [4]
+				1, -- [3]
+				0.5, -- [4]
 			},
-			["desaturate"] = false,
-			["progressPrecision"] = 0,
-			["sparkOffsetY"] = 0,
+			["controlledChildren"] = {
+				"Rising Sun Kick Debuff w/ No CD MW", -- [1]
+				"Rising Sun Kick Debuff w/ CD MW", -- [2]
+				"Rising Sun Kick Timer w/ Debuff Up MW", -- [3]
+				"Rising Sun Kick Timer w/ No Debuff Up MW", -- [4]
+				"Rising Sun Kick Usable with Chi MW", -- [5]
+				"Rising Sun Kick Usable without Chi MW", -- [6]
+				"Rising Sun Kick Not Usable MW", -- [7]
+				"Rising Sun Kick Charges", -- [8]
+				"Rising Sun Kick Charges Background", -- [9]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["xOffset"] = 0,
+			["border"] = false,
+			["yOffset"] = -230,
+			["regionType"] = "group",
+			["borderSize"] = 16,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["expanded"] = false,
+			["borderOffset"] = 5,
+			["selfPoint"] = "BOTTOMLEFT",
+			["id"] = "Rising Sun Kick 2.0 MW",
+			["anchorPoint"] = "CENTER",
+			["frameStrata"] = 1,
+			["additional_triggers"] = {
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["borderInset"] = 11,
+			["numTriggers"] = 1,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["trigger"] = {
+				["type"] = "aura",
+				["unit"] = "player",
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+				["names"] = {
+				},
+				["event"] = "Health",
+				["subeventPrefix"] = "SPELL",
+			},
+			["borderEdge"] = "None",
 			["load"] = {
-				["use_never"] = false,
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 2,
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
+				["use_class"] = "true",
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
 				["class"] = {
 					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
+				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -90937,129 +91326,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["regionType"] = "aurabar",
-			["stacks"] = false,
-			["texture"] = "BantoBar",
-			["textFont"] = "ABF",
-			["borderOffset"] = 4,
-			["auto"] = true,
-			["timerFont"] = "ABF",
-			["alpha"] = 1,
-			["borderInset"] = 32,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["sparkOffsetX"] = 0,
-			["parent"] = "Chi Tracking MW",
-			["barInFront"] = true,
-			["sparkRotationMode"] = "AUTO",
-			["textSize"] = 12,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["preset"] = "alphaPulse",
-					["duration_type"] = "seconds",
-					["type"] = "preset",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["power_operator"] = ">=",
-				["use_power"] = true,
-				["event"] = "Chi Power",
-				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["names"] = {
-				},
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["power"] = "5",
-				["custom_hide"] = "timed",
-			},
-			["text"] = false,
-			["stickyDuration"] = false,
-			["height"] = 10,
-			["timerFlags"] = "None",
-			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["stacksFont"] = "ABF",
-			["textFlags"] = "None",
-			["border"] = false,
-			["borderEdge"] = "Blizzard Achievement Wood",
-			["backgroundColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0.5, -- [4]
-			},
-			["borderSize"] = 16,
-			["timer"] = false,
-			["icon_side"] = "RIGHT",
-			["inverse"] = false,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["sparkHeight"] = 30,
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["displayTextRight"] = " ",
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["timerSize"] = 12,
-			["id"] = "Chi Bar Full MW",
-			["additional_triggers"] = {
-			},
-			["displayTextLeft"] = " ",
-			["frameStrata"] = 1,
-			["width"] = 195,
-			["spark"] = false,
-			["customTextUpdate"] = "update",
-			["numTriggers"] = 1,
-			["sparkDesature"] = false,
-			["orientation"] = "HORIZONTAL",
 			["untrigger"] = {
-			},
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
 			},
 		},
 		["Energy Bar Mask"] = {
@@ -91519,17 +91786,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 113656,
 			},
 			["desaturate"] = false,
@@ -91767,16 +92034,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 33395,
 			},
 			["text"] = true,
@@ -92222,100 +92490,6 @@ WeakAurasSaved = {
 			},
 			["parent"] = "Primal Elementalist Resto Timers 1.0",
 		},
-		["Cascade 1.0"] = {
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["controlledChildren"] = {
-				"Cascade Timer", -- [1]
-				"Cascade Usable", -- [2]
-				"Cascade Unusable", -- [3]
-			},
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["xOffset"] = 40,
-			["border"] = false,
-			["yOffset"] = -230,
-			["regionType"] = "group",
-			["borderSize"] = 16,
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["expanded"] = true,
-			["borderOffset"] = 5,
-			["selfPoint"] = "BOTTOMLEFT",
-			["id"] = "Cascade 1.0",
-			["untrigger"] = {
-			},
-			["frameStrata"] = 1,
-			["additional_triggers"] = {
-			},
-			["borderEdge"] = "None",
-			["borderInset"] = 11,
-			["numTriggers"] = 1,
-			["trigger"] = {
-				["type"] = "aura",
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["debuffType"] = "HELPFUL",
-				["names"] = {
-				},
-				["event"] = "Health",
-				["unit"] = "player",
-			},
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["load"] = {
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["anchorPoint"] = "CENTER",
-		},
 		["Rushing Jade Wind Up BM"] = {
 			["textFlags"] = "None",
 			["stacksSize"] = 12,
@@ -92530,6 +92704,100 @@ WeakAurasSaved = {
 				0.25, -- [4]
 			},
 		},
+		["Cascade 1.0"] = {
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["controlledChildren"] = {
+				"Cascade Timer", -- [1]
+				"Cascade Usable", -- [2]
+				"Cascade Unusable", -- [3]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["xOffset"] = 40,
+			["border"] = false,
+			["yOffset"] = -230,
+			["regionType"] = "group",
+			["borderSize"] = 16,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["expanded"] = true,
+			["borderOffset"] = 5,
+			["selfPoint"] = "BOTTOMLEFT",
+			["id"] = "Cascade 1.0",
+			["untrigger"] = {
+			},
+			["frameStrata"] = 1,
+			["additional_triggers"] = {
+			},
+			["borderEdge"] = "None",
+			["borderInset"] = 11,
+			["numTriggers"] = 1,
+			["trigger"] = {
+				["type"] = "aura",
+				["subeventPrefix"] = "SPELL",
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+				["names"] = {
+				},
+				["event"] = "Health",
+				["unit"] = "player",
+			},
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["load"] = {
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["anchorPoint"] = "CENTER",
+		},
 		["External CDs"] = {
 			["backdropColor"] = {
 				1, -- [1]
@@ -92570,7 +92838,7 @@ WeakAurasSaved = {
 				["unit"] = "player",
 			},
 			["frameStrata"] = 1,
-			["expanded"] = false,
+			["expanded"] = true,
 			["untrigger"] = {
 			},
 			["borderInset"] = 11,
@@ -92620,61 +92888,96 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "group",
 		},
-		["Multistrike Trinket Uptime"] = {
-			["sparkWidth"] = 10,
-			["stacksSize"] = 12,
-			["xOffset"] = 136,
-			["stacksFlags"] = "None",
-			["yOffset"] = -40,
-			["anchorPoint"] = "CENTER",
+		["Healing Stream Totem 1.0"] = {
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["controlledChildren"] = {
+				"Healing Stream Totem Timer", -- [1]
+				"Mana Tide Totem Timer", -- [2]
+				"Mana Tide Totem Up", -- [3]
+				"Healing Tide Totem Up Timer", -- [4]
+				"Healing Tide Totem Up", -- [5]
+				"Healing Stream Totem Up Timer", -- [6]
+				"Healing Stream Totem Up", -- [7]
+				"Healing Stream Totem Usable", -- [8]
+				"Healing Stream Totem Unusable", -- [9]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["xOffset"] = 80,
+			["border"] = false,
+			["yOffset"] = -230,
+			["regionType"] = "group",
+			["borderSize"] = 16,
 			["borderColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				0.700000017881393, -- [4]
+				0.5, -- [4]
 			},
-			["rotateText"] = "NONE",
+			["expanded"] = false,
+			["borderOffset"] = 5,
+			["selfPoint"] = "BOTTOMLEFT",
+			["id"] = "Healing Stream Totem 1.0",
+			["untrigger"] = {
+			},
+			["frameStrata"] = 1,
+			["additional_triggers"] = {
+			},
+			["borderEdge"] = "None",
+			["borderInset"] = 11,
+			["numTriggers"] = 1,
+			["trigger"] = {
+				["type"] = "aura",
+				["subeventPrefix"] = "SPELL",
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+				["names"] = {
+				},
+				["event"] = "Health",
+				["unit"] = "player",
+			},
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
 			["actions"] = {
 				["start"] = {
 				},
 				["finish"] = {
 				},
 			},
-			["fontFlags"] = "OUTLINE",
-			["selfPoint"] = "CENTER",
-			["barColor"] = {
-				0.12156862745098, -- [1]
-				1, -- [2]
-				0.474509803921569, -- [3]
-				1, -- [4]
-			},
-			["desaturate"] = false,
-			["sparkOffsetY"] = 0,
 			["load"] = {
-				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-						true, -- [1]
-						[3] = true,
-					},
-				},
-				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = false,
-				["class"] = {
-					["single"] = "MONK",
+				["talent"] = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["race"] = {
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
 					["multi"] = {
 					},
 				},
@@ -92683,130 +92986,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["regionType"] = "aurabar",
-			["stacks"] = true,
-			["texture"] = "BantoBar",
-			["textFont"] = "ABF",
-			["stacksFont"] = "ABF",
-			["auto"] = true,
-			["timerFont"] = "ABF",
-			["alpha"] = 0.75,
-			["borderInset"] = 11,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["parent"] = "Monk Defensive Timers",
-			["barInFront"] = true,
-			["customTextUpdate"] = "update",
-			["displayTextLeft"] = "Multistrike",
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["preset"] = "slideright",
-					["type"] = "preset",
-				},
-			},
-			["trigger"] = {
-				["spellId"] = "115308",
-				["ownOnly"] = true,
-				["subeventPrefix"] = "SPELL",
-				["use_tooltip"] = true,
-				["custom_hide"] = "timed",
-				["debuffType"] = "HELPFUL",
-				["unevent"] = "auto",
-				["type"] = "aura",
-				["subeventSuffix"] = "_CAST_START",
-				["tooltip_operator"] = "find('%s')",
-				["countOperator"] = "==",
-				["use_spellId"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["use_percentpower"] = false,
-				["spellIds"] = {
-				},
-				["use_spellName"] = true,
-				["count"] = "0",
-				["name"] = "115308",
-				["use_unit"] = true,
-				["spellName"] = 115203,
-				["names"] = {
-					"Balanced Fate", -- [1]
-				},
-				["unit"] = "player",
-			},
-			["text"] = true,
-			["stickyDuration"] = false,
-			["height"] = 14,
-			["timerFlags"] = "None",
-			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["borderOffset"] = 12,
-			["spark"] = false,
-			["border"] = true,
-			["borderEdge"] = "None",
-			["sparkOffsetX"] = 0,
-			["borderSize"] = 16,
-			["untrigger"] = {
-				["spellName"] = 115203,
-			},
-			["icon_side"] = "RIGHT",
-			["timer"] = true,
-			["numTriggers"] = 1,
-			["sparkHeight"] = 30,
-			["icon"] = false,
-			["timerSize"] = 12,
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["displayTextRight"] = "%p",
-			["sparkRotationMode"] = "AUTO",
-			["id"] = "Multistrike Trinket Uptime",
-			["backgroundColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0.5, -- [4]
-			},
-			["frameStrata"] = 1,
-			["width"] = 87,
-			["sparkRotation"] = 0,
-			["textSize"] = 12,
-			["inverse"] = false,
-			["sparkDesature"] = false,
-			["orientation"] = "HORIZONTAL",
-			["textFlags"] = "None",
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["anchorPoint"] = "CENTER",
 		},
 		["Feral Spirit 1.0"] = {
 			["backdropColor"] = {
@@ -93120,17 +93300,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 12472,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -93265,17 +93445,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 115072,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -93730,16 +93910,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 60103,
 			},
 			["text"] = true,
@@ -93856,17 +94037,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 123986,
 			},
 			["desaturate"] = false,
@@ -94007,20 +94188,20 @@ WeakAurasSaved = {
 			},
 			["trigger"] = {
 				["type"] = "status",
-				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
-				["use_inverse"] = false,
-				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 				},
+				["use_unit"] = true,
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
-				["use_unit"] = true,
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 18499,
+				["unevent"] = "auto",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -94828,18 +95009,18 @@ WeakAurasSaved = {
 				["custom_hide"] = "timed",
 				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 47536,
-				["use_inverse"] = false,
+				["subeventPrefix"] = "SPELL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["unit"] = "player",
+				["remOperator"] = "<=",
 				["use_spellName"] = true,
-				["unevent"] = "auto",
 				["names"] = {
 					"Lucidity", -- [1]
 				},
-				["remOperator"] = "<=",
+				["unevent"] = "auto",
+				["showOn"] = "showOnCooldown",
+				["unit"] = "player",
 				["rem"] = "3",
-				["subeventPrefix"] = "SPELL",
 				["debuffType"] = "HELPFUL",
 			},
 			["text"] = false,
@@ -94955,17 +95136,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 22812,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -95316,20 +95497,20 @@ WeakAurasSaved = {
 			},
 			["trigger"] = {
 				["type"] = "status",
-				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
-				["use_inverse"] = false,
-				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 				},
+				["use_unit"] = true,
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
-				["use_unit"] = true,
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 152277,
+				["unevent"] = "auto",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -95715,22 +95896,23 @@ WeakAurasSaved = {
 				},
 			},
 			["trigger"] = {
-				["type"] = "status",
-				["debuffType"] = "HELPFUL",
-				["unevent"] = "auto",
+				["custom_hide"] = "timed",
 				["use_remaining"] = true,
+				["use_unit"] = true,
+				["subeventSuffix"] = "_CAST_START",
+				["subeventPrefix"] = "SPELL",
 				["remaining_operator"] = "<",
 				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["use_spellName"] = true,
-				["remaining"] = "21.25",
 				["names"] = {
 				},
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["custom_hide"] = "timed",
+				["use_spellName"] = true,
+				["remaining"] = "21.25",
+				["unevent"] = "auto",
 				["spellName"] = 113656,
+				["showOn"] = "showOnCooldown",
+				["unit"] = "player",
+				["type"] = "status",
+				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
 			["progressPrecision"] = 0,
@@ -95936,16 +96118,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 116847,
 			},
 			["text"] = true,
@@ -96057,17 +96240,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["spellName"] = 107428,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = false,
@@ -96771,16 +96954,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 116847,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
@@ -96954,23 +97138,23 @@ WeakAurasSaved = {
 			},
 			["trigger"] = {
 				["spellId"] = "44457",
-				["use_inverse"] = false,
 				["use_unit"] = true,
-				["spellName"] = 107428,
 				["subeventPrefix"] = "SPELL",
-				["type"] = "status",
+				["spellName"] = 107428,
 				["names"] = {
 				},
+				["type"] = "status",
 				["custom_type"] = "status",
 				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "target",
-				["event"] = "Cooldown Progress (Spell)",
+				["check"] = "update",
 				["unevent"] = "auto",
+				["event"] = "Cooldown Progress (Spell)",
 				["custom"] = "function()\n    return not UnitIsEnemy(\"player\", \"target\"); \nend\n\n\n\n",
 				["use_spellId"] = true,
-				["inverse"] = true,
 				["use_spellName"] = true,
-				["check"] = "update",
+				["inverse"] = true,
+				["unit"] = "target",
+				["showOn"] = "showOnCooldown",
 				["debuffType"] = "HARMFUL",
 				["custom_hide"] = "timed",
 				["fullscan"] = true,
@@ -97106,17 +97290,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 165341,
 			},
 			["desaturate"] = false,
@@ -97477,11 +97661,11 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "status",
 						["unevent"] = "auto",
-						["use_inverse"] = true,
 						["event"] = "Cooldown Progress (Spell)",
 						["subeventPrefix"] = "SPELL",
 						["use_spellName"] = true,
 						["unit"] = "player",
+						["showOn"] = "showOnReady",
 						["use_unit"] = true,
 						["subeventSuffix"] = "_CAST_START",
 						["spellName"] = 8050,
@@ -97602,17 +97786,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["spellName"] = 6807,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 6807,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -97891,17 +98075,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 120668,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -98114,16 +98298,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 115072,
 			},
 			["text"] = true,
@@ -98240,17 +98425,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 123402,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -98623,96 +98808,61 @@ WeakAurasSaved = {
 			["untrigger"] = {
 			},
 		},
-		["Healing Stream Totem 1.0"] = {
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["controlledChildren"] = {
-				"Healing Stream Totem Timer", -- [1]
-				"Mana Tide Totem Timer", -- [2]
-				"Mana Tide Totem Up", -- [3]
-				"Healing Tide Totem Up Timer", -- [4]
-				"Healing Tide Totem Up", -- [5]
-				"Healing Stream Totem Up Timer", -- [6]
-				"Healing Stream Totem Up", -- [7]
-				"Healing Stream Totem Usable", -- [8]
-				"Healing Stream Totem Unusable", -- [9]
-			},
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["xOffset"] = 80,
-			["border"] = false,
-			["yOffset"] = -230,
-			["regionType"] = "group",
-			["borderSize"] = 16,
+		["Multistrike Trinket Uptime"] = {
+			["sparkWidth"] = 10,
+			["stacksSize"] = 12,
+			["xOffset"] = 136,
+			["stacksFlags"] = "None",
+			["yOffset"] = -40,
+			["anchorPoint"] = "CENTER",
 			["borderColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				0.5, -- [4]
+				0.700000017881393, -- [4]
 			},
-			["expanded"] = false,
-			["borderOffset"] = 5,
-			["selfPoint"] = "BOTTOMLEFT",
-			["id"] = "Healing Stream Totem 1.0",
-			["untrigger"] = {
-			},
-			["frameStrata"] = 1,
-			["additional_triggers"] = {
-			},
-			["borderEdge"] = "None",
-			["borderInset"] = 11,
-			["numTriggers"] = 1,
-			["trigger"] = {
-				["type"] = "aura",
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["debuffType"] = "HELPFUL",
-				["names"] = {
-				},
-				["event"] = "Health",
-				["unit"] = "player",
-			},
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
+			["rotateText"] = "NONE",
 			["actions"] = {
 				["start"] = {
 				},
 				["finish"] = {
 				},
 			},
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				0.12156862745098, -- [1]
+				1, -- [2]
+				0.474509803921569, -- [3]
+				1, -- [4]
+			},
+			["desaturate"] = false,
+			["sparkOffsetY"] = 0,
 			["load"] = {
-				["role"] = {
-					["multi"] = {
-					},
-				},
 				["talent"] = {
 					["multi"] = {
 					},
 				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
 				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+						true, -- [1]
+						[3] = true,
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
 					["multi"] = {
 					},
 				},
+				["use_spec"] = false,
 				["class"] = {
+					["single"] = "MONK",
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
 					["multi"] = {
 					},
 				},
@@ -98721,7 +98871,130 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["anchorPoint"] = "CENTER",
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "aurabar",
+			["stacks"] = true,
+			["texture"] = "BantoBar",
+			["textFont"] = "ABF",
+			["stacksFont"] = "ABF",
+			["auto"] = true,
+			["timerFont"] = "ABF",
+			["alpha"] = 0.75,
+			["borderInset"] = 11,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["parent"] = "Monk Defensive Timers",
+			["barInFront"] = true,
+			["customTextUpdate"] = "update",
+			["displayTextLeft"] = "Multistrike",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["preset"] = "slideright",
+					["type"] = "preset",
+				},
+			},
+			["trigger"] = {
+				["spellId"] = "115308",
+				["ownOnly"] = true,
+				["subeventPrefix"] = "SPELL",
+				["use_tooltip"] = true,
+				["custom_hide"] = "timed",
+				["debuffType"] = "HELPFUL",
+				["unevent"] = "auto",
+				["type"] = "aura",
+				["subeventSuffix"] = "_CAST_START",
+				["tooltip_operator"] = "find('%s')",
+				["countOperator"] = "==",
+				["use_spellId"] = true,
+				["event"] = "Cooldown Progress (Spell)",
+				["use_percentpower"] = false,
+				["spellIds"] = {
+				},
+				["use_spellName"] = true,
+				["count"] = "0",
+				["name"] = "115308",
+				["use_unit"] = true,
+				["spellName"] = 115203,
+				["names"] = {
+					"Balanced Fate", -- [1]
+				},
+				["unit"] = "player",
+			},
+			["text"] = true,
+			["stickyDuration"] = false,
+			["height"] = 14,
+			["timerFlags"] = "None",
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["borderOffset"] = 12,
+			["spark"] = false,
+			["border"] = true,
+			["borderEdge"] = "None",
+			["sparkOffsetX"] = 0,
+			["borderSize"] = 16,
+			["untrigger"] = {
+				["spellName"] = 115203,
+			},
+			["icon_side"] = "RIGHT",
+			["timer"] = true,
+			["numTriggers"] = 1,
+			["sparkHeight"] = 30,
+			["icon"] = false,
+			["timerSize"] = 12,
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextRight"] = "%p",
+			["sparkRotationMode"] = "AUTO",
+			["id"] = "Multistrike Trinket Uptime",
+			["backgroundColor"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.5, -- [4]
+			},
+			["frameStrata"] = 1,
+			["width"] = 87,
+			["sparkRotation"] = 0,
+			["textSize"] = 12,
+			["inverse"] = false,
+			["sparkDesature"] = false,
+			["orientation"] = "HORIZONTAL",
+			["textFlags"] = "None",
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 		},
 		["Searing Flames 1.0"] = {
 			["backdropColor"] = {
@@ -99048,17 +99321,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["spellName"] = 11129,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 11129,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = true,
@@ -99247,16 +99520,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 1719,
 			},
 			["text"] = true,
@@ -99426,17 +99700,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 109964,
 			},
 			["desaturate"] = false,
@@ -99564,17 +99838,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 73680,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -100022,21 +100296,21 @@ WeakAurasSaved = {
 				["use_totemType"] = true,
 				["spellName"] = 2062,
 				["type"] = "status",
-				["subeventSuffix"] = "_CAST_START",
+				["unevent"] = "auto",
 				["names"] = {
 					"Searing Flames", -- [1]
 				},
 				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
-				["totemName"] = 0,
+				["totemType"] = 2,
 				["unit"] = "player",
 				["use_spellName"] = true,
 				["inverse"] = true,
-				["unevent"] = "auto",
 				["debuffType"] = "HELPFUL",
-				["use_inverse"] = true,
-				["totemType"] = 2,
+				["showOn"] = "showOnReady",
+				["totemName"] = 0,
 				["use_unit"] = true,
+				["subeventSuffix"] = "_CAST_START",
 			},
 			["desaturate"] = false,
 			["rotation"] = 0,
@@ -100125,16 +100399,16 @@ WeakAurasSaved = {
 					["trigger"] = {
 						["type"] = "status",
 						["subeventSuffix"] = "_CAST_START",
-						["use_inverse"] = false,
 						["event"] = "Cooldown Progress (Spell)",
 						["subeventPrefix"] = "SPELL",
-						["use_spellName"] = true,
 						["spellName"] = 2894,
+						["use_spellName"] = true,
 						["use_unit"] = true,
 						["unevent"] = "auto",
+						["showOn"] = "showOnCooldown",
+						["unit"] = "player",
 						["names"] = {
 						},
-						["unit"] = "player",
 						["debuffType"] = "HELPFUL",
 					},
 					["untrigger"] = {
@@ -100207,17 +100481,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 122470,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -100400,18 +100674,18 @@ WeakAurasSaved = {
 				["spellId"] = "116740",
 				["unevent"] = "auto",
 				["spellName"] = 122470,
-				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
 				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
+				["names"] = {
+				},
 				["subeventSuffix"] = "_CAST_START",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
 				["debuffType"] = "HELPFUL",
 				["use_spellId"] = true,
-				["names"] = {
-				},
-				["unit"] = "player",
+				["use_unit"] = true,
+				["subeventPrefix"] = "SPELL",
 				["fullscan"] = true,
 			},
 			["text"] = true,
@@ -100931,17 +101205,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 5394,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -101244,17 +101518,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 120517,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -101340,46 +101614,97 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 		},
-		["Dampen Harm Uptime"] = {
-			["sparkWidth"] = 10,
-			["stacksSize"] = 12,
-			["xOffset"] = -45,
-			["stacksFlags"] = "None",
-			["yOffset"] = -20,
-			["anchorPoint"] = "CENTER",
-			["sparkRotation"] = 0,
-			["rotateText"] = "NONE",
-			["icon"] = false,
-			["fontFlags"] = "OUTLINE",
-			["selfPoint"] = "CENTER",
-			["barColor"] = {
+		["Surging Mist Usable MW"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["color"] = {
 				1, -- [1]
-				0.2, -- [2]
-				0.2, -- [3]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 116680,
+			},
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
 				1, -- [4]
 			},
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["fontFlags"] = "OUTLINE",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["use_inverse"] = true,
+				["unit"] = "player",
+				["useCount"] = true,
+				["debuffType"] = "HELPFUL",
+				["type"] = "aura",
+				["subeventSuffix"] = "_CAST_START",
+				["names"] = {
+					"Vital Mists", -- [1]
+				},
+				["event"] = "Cooldown Progress (Spell)",
+				["subeventPrefix"] = "SPELL",
+				["countOperator"] = ">=",
+				["use_spellName"] = true,
+				["spellIds"] = {
+				},
+				["use_unit"] = true,
+				["unevent"] = "auto",
+				["count"] = "5",
+				["custom_hide"] = "timed",
+				["spellName"] = 116680,
+			},
 			["desaturate"] = false,
-			["sparkOffsetY"] = 0,
+			["rotation"] = 0,
+			["font"] = "ABF",
+			["height"] = 32,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["load"] = {
 				["talent"] = {
-					["single"] = 14,
+					["single"] = 4,
 					["multi"] = {
 					},
 				},
 				["spec"] = {
-					["single"] = 1,
+					["single"] = 2,
 					["multi"] = {
 						true, -- [1]
-						[3] = true,
 					},
 				},
-				["use_talent"] = true,
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
 					},
 				},
-				["use_spec"] = false,
+				["use_spec"] = true,
 				["race"] = {
 					["multi"] = {
 					},
@@ -101395,140 +101720,65 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["regionType"] = "aurabar",
-			["stacks"] = true,
-			["texture"] = "BantoBar",
-			["textFont"] = "ABF",
-			["borderOffset"] = 12,
-			["auto"] = true,
-			["timerFont"] = "ABF",
-			["alpha"] = 0.75,
-			["borderInset"] = 11,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["sparkOffsetX"] = 0,
-			["parent"] = "Monk Defensive Timers",
-			["barInFront"] = true,
-			["sparkRotationMode"] = "AUTO",
-			["textSize"] = 12,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "preset",
-					["preset"] = "slideleft",
-				},
-			},
-			["trigger"] = {
-				["spellId"] = "115308",
-				["ownOnly"] = true,
-				["unit"] = "player",
-				["use_tooltip"] = true,
-				["names"] = {
-					"Dampen Harm", -- [1]
-				},
-				["custom_hide"] = "timed",
-				["spellName"] = 115203,
-				["type"] = "aura",
-				["use_unit"] = true,
-				["tooltip_operator"] = "find('%s')",
-				["subeventPrefix"] = "SPELL",
-				["use_spellId"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["use_percentpower"] = false,
-				["count"] = "0",
-				["use_spellName"] = true,
-				["spellIds"] = {
-				},
-				["name"] = "115308",
-				["countOperator"] = "==",
-				["subeventSuffix"] = "_CAST_START",
-				["unevent"] = "auto",
-				["debuffType"] = "HELPFUL",
-			},
-			["text"] = true,
+			["parent"] = "Surging Mist 1.0 MW",
+			["selfPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
 			["stickyDuration"] = false,
-			["timer"] = true,
-			["timerFlags"] = "None",
-			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["height"] = 14,
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["border"] = true,
-			["borderEdge"] = "None",
-			["untrigger"] = {
-				["spellName"] = 115203,
-			},
-			["borderSize"] = 16,
-			["spark"] = false,
-			["icon_side"] = "RIGHT",
-			["displayTextLeft"] = "Dampen Harm",
-			["numTriggers"] = 1,
-			["sparkHeight"] = 30,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["backgroundColor"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0.5, -- [4]
-			},
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["timerSize"] = 12,
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.700000017881393, -- [4]
-			},
-			["id"] = "Dampen Harm Uptime",
-			["customTextUpdate"] = "update",
+			["xOffset"] = 0,
+			["mirror"] = false,
+			["inverse"] = false,
+			["regionType"] = "icon",
+			["yOffset"] = 0,
+			["blendMode"] = "BLEND",
+			["anchorPoint"] = "CENTER",
+			["fontSize"] = 13,
 			["frameStrata"] = 1,
-			["width"] = 85,
-			["displayTextRight"] = "%p",
+			["customTextUpdate"] = "update",
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["use_form"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["form"] = 2,
+						["event"] = "Stance/Form/Aura",
+						["subeventPrefix"] = "SPELL",
+						["unit"] = "player",
+						["type"] = "status",
+						["unevent"] = "auto",
+						["use_unit"] = true,
+						["custom_hide"] = "timed",
+					},
+					["untrigger"] = {
+						["form"] = 2,
+					},
+				}, -- [1]
+			},
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Surging Mist Usable MW",
+			["crop_y"] = 0.41,
+			["alpha"] = 1,
+			["width"] = 32,
+			["icon"] = true,
 			["actions"] = {
 				["start"] = {
+					["do_glow"] = true,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Surging Mist Usable MW",
 				},
 				["finish"] = {
 				},
 			},
-			["inverse"] = false,
-			["sparkDesature"] = false,
-			["orientation"] = "HORIZONTAL",
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["textFlags"] = "None",
-			["stacksFont"] = "ABF",
+			["numTriggers"] = 2,
+			["desaturateForeground"] = false,
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.41,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
 		},
 		["Ice Floes Usable"] = {
 			["user_y"] = 0,
@@ -101916,17 +102166,18 @@ WeakAurasSaved = {
 				["type"] = "status",
 				["unevent"] = "auto",
 				["custom_hide"] = "timed",
+				["spellName"] = 23881,
 				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
-				["spellName"] = 23881,
+				["unit"] = "player",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
-				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["use_unit"] = true,
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
@@ -102271,17 +102522,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 115072,
 			},
 			["desaturate"] = false,
@@ -102768,17 +103019,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["subeventSuffix"] = "_CAST_START",
-				["use_inverse"] = false,
-				["event"] = "Cooldown Progress (Spell)",
-				["unit"] = "player",
 				["spellName"] = 121253,
-				["use_spellName"] = true,
-				["use_unit"] = true,
-				["unevent"] = "auto",
+				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
+				["use_unit"] = true,
+				["use_spellName"] = true,
+				["unevent"] = "auto",
 				["names"] = {
 				},
+				["showOn"] = "showOnCooldown",
 				["debuffType"] = "HELPFUL",
+				["unit"] = "player",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -103118,17 +103369,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 123904,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -103266,17 +103517,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 23881,
 			},
 			["desaturate"] = false,
@@ -103586,94 +103837,80 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 		},
-		["Nether Tempest Usable"] = {
-			["user_y"] = 0,
-			["user_x"] = 0,
-			["color"] = {
+		["Stormlash Totem Enhance 1.0"] = {
+			["backdropColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				0.75, -- [4]
+				0.5, -- [4]
+			},
+			["controlledChildren"] = {
+				"Stormlash Totem Up Timer", -- [1]
+				"Stormlash Totem Timer", -- [2]
+				"Stormlash Totem Usable", -- [3]
+				"Stormlash Totem Up", -- [4]
+				"Stormlash Totem Unusable", -- [5]
+			},
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["xOffset"] = 160,
+			["border"] = false,
+			["yOffset"] = -90,
+			["regionType"] = "group",
+			["borderSize"] = 16,
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["expanded"] = false,
+			["borderOffset"] = 5,
+			["selfPoint"] = "BOTTOMLEFT",
+			["additional_triggers"] = {
 			},
 			["untrigger"] = {
-				["spellName"] = 44457,
 			},
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturateBackground"] = false,
-			["sameTexture"] = true,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = true,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Nether Tempest Usable",
+			["frameStrata"] = 1,
+			["id"] = "Stormlash Totem Enhance 1.0",
+			["borderEdge"] = "None",
+			["borderInset"] = 11,
+			["numTriggers"] = 1,
+			["trigger"] = {
+				["type"] = "aura",
+				["subeventPrefix"] = "SPELL",
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+				["names"] = {
 				},
-				["finish"] = {
-				},
+				["event"] = "Health",
+				["unit"] = "player",
 			},
-			["fontFlags"] = "OUTLINE",
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["duration_type"] = "seconds",
+					["type"] = "none",
 				},
 				["main"] = {
-					["type"] = "none",
 					["duration_type"] = "seconds",
+					["type"] = "none",
 				},
 				["finish"] = {
-					["type"] = "none",
 					["duration_type"] = "seconds",
+					["type"] = "none",
 				},
 			},
-			["trigger"] = {
-				["spellId"] = "44457",
-				["use_inverse"] = true,
-				["names"] = {
-					"Nether Tempest", -- [1]
+			["actions"] = {
+				["start"] = {
 				},
-				["debuffType"] = "HARMFUL",
-				["type"] = "aura",
-				["unevent"] = "auto",
-				["use_unit"] = true,
-				["spellName"] = 44457,
-				["event"] = "Burning Embers",
-				["unit"] = "target",
-				["use_spellId"] = true,
-				["use_spellName"] = true,
-				["spellIds"] = {
+				["finish"] = {
 				},
-				["ownOnly"] = true,
-				["inverse"] = true,
-				["custom_hide"] = "timed",
-				["subeventSuffix"] = "_CAST_START",
-				["subeventPrefix"] = "SPELL",
 			},
-			["desaturate"] = false,
-			["rotation"] = 0,
-			["font"] = "ABF",
-			["backgroundOffset"] = 2,
-			["height"] = 32,
-			["parent"] = "Nether Tempest 1.0",
 			["load"] = {
-				["use_never"] = true,
-				["talent"] = {
-					["single"] = 13,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "MAGE",
-					["multi"] = {
-					},
-				},
-				["use_talent"] = true,
-				["use_class"] = true,
 				["role"] = {
+					["multi"] = {
+					},
+				},
+				["talent"] = {
 					["multi"] = {
 					},
 				},
@@ -103681,11 +103918,12 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["spec"] = {
-					["single"] = 1,
 					["multi"] = {
-						true, -- [1]
+					},
+				},
+				["class"] = {
+					["multi"] = {
 					},
 				},
 				["size"] = {
@@ -103693,50 +103931,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["stickyDuration"] = false,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["desaturateForeground"] = false,
-			["numTriggers"] = 1,
-			["mirror"] = false,
-			["crop_y"] = 0.41,
-			["regionType"] = "icon",
-			["yOffset"] = 0,
-			["blendMode"] = "BLEND",
-			["customTextUpdate"] = "update",
-			["frameStrata"] = 4,
-			["icon"] = true,
-			["additional_triggers"] = {
-			},
 			["anchorPoint"] = "CENTER",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Nether Tempest Usable",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["alpha"] = 1,
-			["width"] = 32,
-			["selfPoint"] = "CENTER",
-			["fontSize"] = 13,
-			["inverse"] = false,
-			["xOffset"] = 0,
-			["orientation"] = "VERTICAL",
-			["displayIcon"] = "Interface\\Icons\\spell_mage_nethertempest",
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
 		},
 		["Healing Stream Totem Up Timer"] = {
 			["textFlags"] = "None",
@@ -103997,17 +104192,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 46924,
 			},
 			["desaturate"] = false,
@@ -104226,16 +104421,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 123986,
 			},
 			["text"] = true,
@@ -105410,13 +105606,13 @@ WeakAurasSaved = {
 				["unit"] = "player",
 				["use_unit"] = true,
 				["custom_hide"] = "custom",
-				["unevent"] = "auto",
+				["custom_type"] = "event",
 				["inverse"] = true,
 				["spellName"] = 100130,
-				["subeventSuffix"] = "_CAST_START",
+				["power"] = "90",
 				["type"] = "custom",
 				["events"] = "PLAYER_REGEN_DISABLED,TEB_OPTIMAL,TEB_NOT_OPTIMAL",
-				["custom_type"] = "event",
+				["unevent"] = "auto",
 				["power_operator"] = "<",
 				["use_spellName"] = true,
 				["event"] = "Chat Message",
@@ -105425,7 +105621,7 @@ WeakAurasSaved = {
 				["use_inverse"] = true,
 				["use_spellId"] = true,
 				["custom"] = "function(event)\nprint(event)\n    if event == \"TEB_NOT_OPTIMAL\" or event == \"PLAYER_REGEN_DISABLED\" then \n        return true \n    else \n        return false \n    end\nend",
-				["power"] = "90",
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 				["names"] = {
 				},
@@ -105572,17 +105768,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 12292,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -105670,52 +105866,37 @@ WeakAurasSaved = {
 			["stacksPoint"] = "BOTTOMRIGHT",
 			["backgroundOffset"] = 2,
 		},
-		["Divine Insight Usable"] = {
-			["user_y"] = 0,
+		["Divine Star Timer"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
 			["user_x"] = 0,
-			["color"] = {
+			["xOffset"] = 0,
+			["stacksFlags"] = "None",
+			["yOffset"] = 0,
+			["anchorPoint"] = "CENTER",
+			["borderColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				0.75, -- [4]
+				0.5, -- [4]
 			},
-			["untrigger"] = {
-				["spellName"] = 33076,
-			},
-			["anchorPoint"] = "CENTER",
-			["desaturateBackground"] = false,
 			["sameTexture"] = true,
-			["desaturateForeground"] = false,
+			["rotateText"] = "NONE",
+			["icon"] = false,
 			["fontFlags"] = "OUTLINE",
 			["selfPoint"] = "CENTER",
-			["trigger"] = {
-				["type"] = "aura",
-				["unevent"] = "auto",
-				["spellName"] = 33076,
-				["use_inverse"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["names"] = {
-					"Divine Insight", -- [1]
-				},
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
-				["spellIds"] = {
-				},
-				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
-				["subeventPrefix"] = "SPELL",
-				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
+			["barColor"] = {
+				0.329411764705882, -- [1]
+				0.674509803921569, -- [2]
+				1, -- [3]
+				0.75, -- [4]
 			},
 			["desaturate"] = false,
-			["rotation"] = 0,
-			["font"] = "ABF",
-			["height"] = 32,
-			["backgroundOffset"] = 2,
+			["progressPrecision"] = 0,
+			["sparkOffsetY"] = 0,
 			["load"] = {
-				["use_level"] = false,
 				["talent"] = {
-					["single"] = 15,
+					["single"] = 17,
 					["multi"] = {
 					},
 				},
@@ -105724,6 +105905,7 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
+				["use_talent"] = true,
 				["use_class"] = true,
 				["role"] = {
 					["multi"] = {
@@ -105735,10 +105917,9 @@ WeakAurasSaved = {
 				},
 				["use_combat"] = true,
 				["spec"] = {
-					["single"] = 2,
+					["single"] = 1,
 					["multi"] = {
 						true, -- [1]
-						true, -- [2]
 					},
 				},
 				["size"] = {
@@ -105746,7 +105927,44 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["stickyDuration"] = false,
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["regionType"] = "aurabar",
+			["stacks"] = false,
+			["blendMode"] = "BLEND",
+			["texture"] = "BantoBar",
+			["textFont"] = "ABF",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["timerFont"] = "ABF",
+			["alpha"] = 0.75,
+			["borderInset"] = 11,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 110744,
+			},
+			["desaturateBackground"] = false,
+			["borderOffset"] = 5,
+			["customTextUpdate"] = "update",
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["textSize"] = 16,
+			["sparkWidth"] = 10,
+			["spark"] = false,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["numTriggers"] = 1,
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
@@ -105757,65 +105975,106 @@ WeakAurasSaved = {
 					["duration_type"] = "seconds",
 				},
 				["finish"] = {
-					["type"] = "none",
+					["type"] = "preset",
+					["preset"] = "fade",
 					["duration_type"] = "seconds",
 				},
 			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["xOffset"] = 0,
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["custom_hide"] = "timed",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["spellName"] = 110744,
+				["use_spellName"] = true,
+				["unit"] = "player",
+				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
+				["names"] = {
+				},
+				["subeventSuffix"] = "_CAST_START",
+				["debuffType"] = "HELPFUL",
+			},
+			["text"] = true,
+			["sparkRotationMode"] = "AUTO",
+			["stickyDuration"] = false,
+			["sparkRotation"] = 0,
+			["sparkOffsetX"] = 0,
+			["desaturateForeground"] = false,
 			["actions"] = {
 				["start"] = {
-					["do_glow"] = true,
-					["glow_frame"] = "WeakAuras:Divine Insight Usable",
-					["glow_action"] = "show",
 				},
 				["finish"] = {
 				},
 			},
-			["mirror"] = false,
-			["numTriggers"] = 1,
-			["regionType"] = "icon",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
+			["height"] = 30,
+			["timerFlags"] = "None",
+			["id"] = "Divine Star Timer",
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
 				0.5, -- [4]
 			},
-			["blendMode"] = "BLEND",
-			["parent"] = "Prayer of Mending 1.0",
-			["yOffset"] = 0,
-			["alpha"] = 1,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = "%s",
 			["crop_y"] = 0.41,
-			["id"] = "Divine Insight Usable",
+			["displayTextRight"] = "%p",
+			["rotation"] = 0,
+			["mirror"] = false,
+			["borderEdge"] = "None",
+			["timer"] = true,
+			["borderSize"] = 16,
+			["border"] = false,
+			["icon_side"] = "LEFT",
+			["user_y"] = 0,
+			["stacksFont"] = "ABF",
+			["sparkHeight"] = 30,
+			["backgroundColor"] = {
+				0.501960784313726, -- [1]
+				0.501960784313726, -- [2]
+				0.501960784313726, -- [3]
+				0.25, -- [4]
+			},
 			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["timerSize"] = 16,
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["additional_triggers"] = {
 			},
-			["fontSize"] = 13,
-			["frameStrata"] = 5,
-			["width"] = 32,
-			["customTextUpdate"] = "update",
 			["foregroundColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
+			["frameStrata"] = 1,
+			["width"] = 30,
+			["barInFront"] = true,
+			["displayTextLeft"] = " ",
 			["inverse"] = false,
-			["icon"] = true,
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.41,
-			["stacksPoint"] = "BOTTOMRIGHT",
+			["sparkDesature"] = false,
+			["orientation"] = "VERTICAL_INVERSE",
+			["crop_x"] = 0.409999996423721,
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
+			["parent"] = "Divine Star 1.0",
 		},
 		["Bloodbath Timer"] = {
 			["textFlags"] = "None",
@@ -105946,16 +106205,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 12292,
 			},
 			["text"] = true,
@@ -106091,17 +106351,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["spellName"] = 60103,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = false,
@@ -106190,60 +106450,49 @@ WeakAurasSaved = {
 			["stacksPoint"] = "BOTTOMRIGHT",
 			["backgroundOffset"] = 2,
 		},
-		["Tiger Power Fading Left Animated"] = {
-			["user_y"] = 0,
+		["RoR Timer"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
 			["user_x"] = 0,
-			["parent"] = "Tiger Power",
-			["yOffset"] = 0,
+			["xOffset"] = 0,
+			["stacksFlags"] = "None",
+			["yOffset"] = 90,
 			["anchorPoint"] = "CENTER",
-			["desaturateBackground"] = false,
-			["sameTexture"] = true,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
 			},
+			["sameTexture"] = true,
+			["rotateText"] = "NONE",
+			["backgroundColor"] = {
+				0.501960784313726, -- [1]
+				0.501960784313726, -- [2]
+				0.501960784313726, -- [3]
+				0.25, -- [4]
+			},
+			["fontFlags"] = "OUTLINE",
 			["selfPoint"] = "CENTER",
-			["trigger"] = {
-				["type"] = "custom",
-				["debuffType"] = "HELPFUL",
-				["subeventSuffix"] = "_CAST_START",
-				["custom_type"] = "status",
-				["rem"] = "4",
-				["event"] = "Health",
-				["names"] = {
-					"Tiger Power", -- [1]
-				},
-				["customDuration"] = "function()\n    local _, _, _, _, _, _, exp_time = UnitBuff(\"player\", \"Tiger Power\")\n    \n    if exp_time then\n        return exp_time - GetTime(), 4, true\n    else\n        return 0, 0, false\n    end\nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
-				["check"] = "update",
-				["custom"] = "function()\n    local _, _, _, _, _, _, exp_time = UnitBuff(\"player\", \"Tiger Power\")\n    \n    if exp_time and exp_time - GetTime() <= 4 then\n        return true\n    else\n        return false\n    end\nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
-				["subeventPrefix"] = "SPELL",
-				["remOperator"] = "<",
-				["unit"] = "player",
-				["useRem"] = true,
-				["custom_hide"] = "timed",
+			["barColor"] = {
+				0.12156862745098, -- [1]
+				1, -- [2]
+				0.474509803921569, -- [3]
+				0.75, -- [4]
 			},
 			["desaturate"] = false,
 			["rotation"] = 0,
-			["font"] = "Friz Quadrata TT",
-			["height"] = 250,
-			["rotate"] = true,
+			["sparkOffsetY"] = 0,
 			["load"] = {
-				["use_never"] = false,
+				["use_never"] = true,
 				["talent"] = {
 					["multi"] = {
 					},
 				},
 				["spec"] = {
-					["single"] = 1,
+					["single"] = 3,
 					["multi"] = {
-						true, -- [1]
 						[3] = true,
-					},
-				},
-				["role"] = {
-					["multi"] = {
 					},
 				},
 				["use_class"] = true,
@@ -106251,9 +106500,10 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["name"] = "Pandatal",
-				["use_spec"] = false,
-				["use_name"] = false,
+				["role"] = {
+					["multi"] = {
+					},
+				},
 				["use_combat"] = true,
 				["class"] = {
 					["single"] = "MONK",
@@ -106265,66 +106515,151 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["foregroundTexture"] = "Textures\\SpellActivationOverlays\\GenericArc_01",
-			["mirror"] = false,
-			["discrete_rotation"] = 0,
-			["regionType"] = "progresstexture",
-			["stickyDuration"] = false,
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["regionType"] = "aurabar",
+			["stacks"] = false,
 			["blendMode"] = "BLEND",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["type"] = "preset",
-					["duration_type"] = "seconds",
-					["preset"] = "alphaPulse",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["backgroundColor"] = {
-				0.12156862745098, -- [1]
+			["texture"] = "BantoBar",
+			["textFont"] = "ABF",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["timerFont"] = "ABF",
+			["alpha"] = 1,
+			["borderInset"] = 11,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+				1, -- [1]
 				1, -- [2]
-				0.474509803921569, -- [3]
-				0.491101741790772, -- [4]
+				1, -- [3]
+				1, -- [4]
 			},
-			["xOffset"] = -250,
-			["numTriggers"] = 1,
-			["texture"] = "Textures\\SpellActivationOverlays\\GenericArc_01",
 			["untrigger"] = {
-				["custom"] = "function()\n    return true\nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+				["spellName"] = 121253,
+			},
+			["desaturateBackground"] = false,
+			["borderOffset"] = 5,
+			["customTextUpdate"] = "update",
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
 			},
 			["desaturateForeground"] = false,
+			["sparkWidth"] = 10,
+			["spark"] = false,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["numTriggers"] = 1,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["preset"] = "fade",
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+				},
+			},
+			["trigger"] = {
+				["type"] = "aura",
+				["unevent"] = "auto",
+				["custom_hide"] = "timed",
+				["event"] = "Cooldown Progress (Spell)",
+				["subeventPrefix"] = "SPELL",
+				["names"] = {
+					"Re-Origination", -- [1]
+				},
+				["use_spellName"] = true,
+				["spellIds"] = {
+				},
+				["spellName"] = 121253,
+				["unit"] = "player",
+				["subeventSuffix"] = "_CAST_START",
+				["use_unit"] = true,
+				["debuffType"] = "HELPFUL",
+			},
+			["text"] = true,
+			["sparkRotationMode"] = "AUTO",
+			["stickyDuration"] = false,
+			["sparkRotation"] = 0,
+			["sparkOffsetX"] = 0,
+			["displayTextLeft"] = " ",
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["height"] = 42,
+			["timerFlags"] = "None",
 			["additional_triggers"] = {
 			},
-			["compress"] = false,
-			["id"] = "Tiger Power Fading Left Animated",
-			["frameStrata"] = 1,
-			["alpha"] = 1,
-			["width"] = 100,
-			["fontSize"] = 12,
-			["color"] = {
-				0.12156862745098, -- [1]
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				1, -- [1]
 				1, -- [2]
-				0.474509803921569, -- [3]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = "%s",
+			["crop_y"] = 0.41,
+			["displayTextRight"] = "%p",
+			["progressPrecision"] = 1,
+			["mirror"] = false,
+			["borderEdge"] = "None",
+			["timer"] = true,
+			["borderSize"] = 16,
+			["user_y"] = 0,
+			["icon_side"] = "LEFT",
+			["border"] = false,
+			["stacksFont"] = "ABF",
+			["sparkHeight"] = 30,
+			["icon"] = false,
+			["stacksContainment"] = "INSIDE",
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
 				1, -- [4]
 			},
-			["inverse"] = false,
+			["timerSize"] = 20,
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["id"] = "RoR Timer",
 			["foregroundColor"] = {
-				0.12156862745098, -- [1]
+				1, -- [1]
 				1, -- [2]
-				0.474509803921569, -- [3]
+				1, -- [3]
 				1, -- [4]
 			},
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.7,
-			["crop_y"] = 0.75,
-			["backgroundOffset"] = 2,
+			["frameStrata"] = 1,
+			["width"] = 42,
+			["barInFront"] = true,
+			["textSize"] = 20,
+			["inverse"] = false,
+			["sparkDesature"] = false,
+			["orientation"] = "VERTICAL_INVERSE",
+			["crop_x"] = 0.409999996423721,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["parent"] = "RoR 1.0",
 		},
 		["Injured"] = {
 			["parent"] = "Highmaul Encounters",
@@ -107046,82 +107381,43 @@ WeakAurasSaved = {
 			["sparkWidth"] = 10,
 			["stacksFont"] = "ABF",
 		},
-		["Chi Brew Usable with Less Than 2 Chi MW"] = {
-			["user_y"] = 0,
-			["user_x"] = 0,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["customText"] = "function()\n    local charges = GetSpellCharges(\"115399\");\n    return charges;\nend\n\n\n\n\n\n",
-			["untrigger"] = {
-				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return true\n    end\n    return false\nend\n\n\n\n\n\n",
-				["spellName"] = 115399,
-			},
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturateBackground"] = false,
-			["sameTexture"] = true,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["fontFlags"] = "OUTLINE",
-			["animation"] = {
+		["Pale Vitriol"] = {
+			["xOffset"] = 0,
+			["yOffset"] = 150,
+			["anchorPoint"] = "CENTER",
+			["customTextUpdate"] = "update",
+			["actions"] = {
 				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
+					["message_type"] = "SAY",
+					["do_message"] = true,
+					["message"] = "Pale Vitriol on me!",
 				},
 				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
 				},
 			},
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
 			["trigger"] = {
-				["debuffType"] = "HELPFUL",
-				["type"] = "custom",
-				["subeventPrefix"] = "SPELL",
-				["unevent"] = "auto",
-				["names"] = {
-				},
-				["use_inverse"] = true,
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["subeventSuffix"] = "_CAST_START",
-				["use_spellName"] = true,
-				["custom"] = "-- CD TRIGGER\nfunction()\n    local SPELL_ID = 115399 -- Set to SpellID of tracked ability\n    local chargesCurrent, chargesMax = GetSpellCharges(SPELL_ID)    \n    -- Function to check current number of charges to trigger\n    local CHARGES = function(val)\n        return (val < chargesMax)\n    end \n    if CHARGES(chargesCurrent) then\n        return false\n    end\n    return true\nend\n\n\n\n",
 				["unit"] = "player",
-				["check"] = "update",
-				["spellName"] = 115399,
-				["custom_type"] = "status",
-				["custom_hide"] = "timed",
+				["type"] = "aura",
+				["spellIds"] = {
+				},
+				["subeventSuffix"] = "_CAST_START",
+				["subeventPrefix"] = "SPELL",
+				["names"] = {
+					"Pale Vitriol", -- [1]
+				},
+				["event"] = "Health",
+				["debuffType"] = "HARMFUL",
 			},
 			["desaturate"] = false,
-			["rotation"] = 0,
+			["progressPrecision"] = 1,
 			["font"] = "ABF",
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.749166548252106, -- [4]
-			},
-			["height"] = 32,
-			["parent"] = "Chi Brew 1.0 MW",
+			["height"] = 45,
 			["load"] = {
-				["talent"] = {
-					["single"] = 9,
+				["use_never"] = false,
+				["zone"] = "Siege of Orgrimmar",
+				["spec"] = {
 					["multi"] = {
 					},
 				},
@@ -107130,87 +107426,79 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
+				["difficulty"] = "mythic",
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 2,
+				["use_zone"] = false,
+				["use_difficulty"] = true,
+				["role"] = {
 					["multi"] = {
-						true, -- [1]
+					},
+				},
+				["use_combat"] = true,
+				["talent"] = {
+					["multi"] = {
 					},
 				},
 				["size"] = {
+					["single"] = "twenty",
 					["multi"] = {
+						["ten"] = true,
+						["twenty"] = true,
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["stickyDuration"] = false,
-			["fontSize"] = 14,
+			["fontSize"] = 16,
 			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["xOffset"] = 0,
-			["inverse"] = false,
-			["mirror"] = false,
-			["yOffset"] = 0,
 			["regionType"] = "icon",
-			["anchorPoint"] = "CENTER",
-			["blendMode"] = "BLEND",
-			["customTextUpdate"] = "update",
-			["frameStrata"] = 1,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = true,
-					["glow_frame"] = "WeakAuras:Chi Brew Usable with Less Than 2 Chi MW",
-					["glow_action"] = "show",
-				},
-				["finish"] = {
-				},
-			},
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "status",
-						["unevent"] = "auto",
-						["power_operator"] = "<=",
-						["use_power"] = true,
-						["event"] = "Chi Power",
-						["subeventPrefix"] = "SPELL",
-						["power"] = "2",
-						["unit"] = "player",
-						["use_unit"] = true,
-						["subeventSuffix"] = "_CAST_START",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-			},
 			["icon"] = true,
+			["cooldown"] = false,
 			["stacksContainment"] = "INSIDE",
 			["zoom"] = 0,
 			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Chi Brew Usable with Less Than 2 Chi MW",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["alpha"] = 1,
-			["width"] = 32,
-			["selfPoint"] = "CENTER",
-			["desaturateForeground"] = false,
-			["numTriggers"] = 2,
-			["crop_y"] = 0.41,
-			["orientation"] = "VERTICAL",
-			["displayIcon"] = "Interface\\Icons\\ability_monk_chibrew",
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
+			["stickyDuration"] = false,
+			["additional_triggers"] = {
+			},
+			["animation"] = {
+				["start"] = {
+					["preset"] = "slideright",
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["preset"] = "alphaPulse",
+					["duration_type"] = "seconds",
+					["type"] = "preset",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["preset"] = "shrink",
+					["duration_type"] = "seconds",
+				},
+			},
+			["frameStrata"] = 1,
+			["width"] = 45,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.90044554322958, -- [4]
+			},
+			["numTriggers"] = 1,
+			["inverse"] = false,
+			["untrigger"] = {
+			},
+			["id"] = "Pale Vitriol",
+			["displayIcon"] = "Interface\\Icons\\Spell_Holy_Fanaticism",
+			["stacksPoint"] = "TOPRIGHT",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 		},
 		["Maelstrom Stacks Background"] = {
 			["outline"] = false,
@@ -107357,17 +107645,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["spellName"] = 123904,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 123904,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = true,
@@ -107685,16 +107973,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 14914,
 			},
 			["text"] = true,
@@ -107903,17 +108192,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["spellName"] = 116847,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 116847,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = true,
@@ -108106,100 +108395,202 @@ WeakAurasSaved = {
 			},
 			["anchorPoint"] = "CENTER",
 		},
-		["SEF"] = {
-			["backdropColor"] = {
+		["Faerie Swarm Up"] = {
+			["user_y"] = 0,
+			["stacksSize"] = 12,
+			["user_x"] = 0,
+			["xOffset"] = 0,
+			["stacksFlags"] = "None",
+			["yOffset"] = 0,
+			["foregroundColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				0.5, -- [4]
+				1, -- [4]
 			},
-			["controlledChildren"] = {
-				"SEF_CORE", -- [1]
-				"SEF_1_icon", -- [2]
-				"SEF_1_alert", -- [3]
-				"SEF_1_enemy", -- [4]
-				"SEF_1_name", -- [5]
-				"SEF_1_totem", -- [6]
-				"SEF_2_icon", -- [7]
-				"SEF_2_alert", -- [8]
-				"SEF_2_enemy", -- [9]
-				"SEF_2_name", -- [10]
-				"SEF_2_totem", -- [11]
-			},
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["xOffset"] = 128,
-			["border"] = false,
-			["yOffset"] = -281,
-			["regionType"] = "group",
-			["borderSize"] = 16,
 			["borderColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				0.5, -- [4]
 			},
-			["expanded"] = false,
-			["borderOffset"] = 5,
-			["selfPoint"] = "BOTTOMLEFT",
-			["id"] = "SEF",
-			["anchorPoint"] = "CENTER",
-			["frameStrata"] = 1,
-			["additional_triggers"] = {
-			},
+			["sameTexture"] = true,
+			["rotateText"] = "NONE",
 			["actions"] = {
 				["start"] = {
 				},
 				["finish"] = {
 				},
 			},
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				1, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.75, -- [4]
+			},
+			["desaturate"] = false,
+			["progressPrecision"] = 0,
+			["sparkOffsetY"] = 0,
+			["crop_y"] = 0.41,
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["regionType"] = "aurabar",
+			["stacks"] = false,
+			["blendMode"] = "BLEND",
+			["texture"] = "BantoBar",
+			["textFont"] = "ABF",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["timerFont"] = "ABF",
+			["alpha"] = 0.75,
 			["borderInset"] = 11,
-			["numTriggers"] = 1,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 102355,
+			},
+			["desaturateBackground"] = false,
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["customTextUpdate"] = "update",
+			["displayTextLeft"] = " ",
+			["desaturateForeground"] = false,
+			["textFlags"] = "None",
+			["sparkWidth"] = 10,
+			["spark"] = false,
+			["inverse"] = false,
 			["animation"] = {
 				["start"] = {
-					["type"] = "none",
 					["duration_type"] = "seconds",
+					["type"] = "none",
 				},
 				["main"] = {
-					["type"] = "none",
 					["duration_type"] = "seconds",
+					["type"] = "none",
 				},
 				["finish"] = {
-					["type"] = "none",
+					["type"] = "preset",
 					["duration_type"] = "seconds",
+					["preset"] = "fade",
 				},
 			},
 			["trigger"] = {
 				["type"] = "aura",
-				["unit"] = "player",
+				["spellId"] = "112948",
 				["subeventSuffix"] = "_CAST_START",
-				["debuffType"] = "HELPFUL",
+				["debuffType"] = "HARMFUL",
+				["use_unit"] = true,
+				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
+					"Weakened Armor", -- [1]
 				},
-				["event"] = "Health",
+				["unevent"] = "auto",
+				["use_spellId"] = true,
+				["spellIds"] = {
+				},
+				["use_spellName"] = true,
+				["unit"] = "target",
 				["subeventPrefix"] = "SPELL",
+				["custom_hide"] = "timed",
+				["spellName"] = 102355,
 			},
+			["text"] = true,
+			["stacksFont"] = "ABF",
+			["stickyDuration"] = false,
+			["sparkRotationMode"] = "AUTO",
+			["sparkRotation"] = 0,
+			["sparkOffsetX"] = 0,
+			["parent"] = "Faerie Swarm",
+			["height"] = 30,
+			["timerFlags"] = "None",
+			["id"] = "Faerie Swarm Up",
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = "%s",
+			["borderOffset"] = 5,
+			["displayTextRight"] = "%p",
+			["border"] = false,
+			["mirror"] = false,
 			["borderEdge"] = "None",
+			["rotation"] = 0,
+			["borderSize"] = 16,
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["icon_side"] = "LEFT",
+			["anchorPoint"] = "CENTER",
+			["timer"] = true,
+			["sparkHeight"] = 30,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["stacksContainment"] = "INSIDE",
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["timerSize"] = 16,
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["additional_triggers"] = {
+			},
+			["textSize"] = 16,
+			["frameStrata"] = 5,
+			["width"] = 30,
+			["icon"] = false,
 			["load"] = {
-				["use_class"] = "true",
-				["role"] = {
-					["multi"] = {
-					},
-				},
+				["use_never"] = true,
 				["talent"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["spec"] = {
+					["single"] = 15,
 					["multi"] = {
 					},
 				},
 				["class"] = {
-					["single"] = "MONK",
+					["single"] = "DRUID",
 					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+						true, -- [1]
 					},
 				},
 				["size"] = {
@@ -108207,7 +108598,16 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["untrigger"] = {
+			["numTriggers"] = 1,
+			["sparkDesature"] = false,
+			["orientation"] = "VERTICAL_INVERSE",
+			["crop_x"] = 0.409999996423721,
+			["barInFront"] = true,
+			["backgroundColor"] = {
+				0.501960784313726, -- [1]
+				0.501960784313726, -- [2]
+				0.501960784313726, -- [3]
+				0.25, -- [4]
 			},
 		},
 		["Divine Star Unusable"] = {
@@ -108257,17 +108657,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["spellName"] = 110744,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 110744,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = true,
@@ -108495,20 +108895,20 @@ WeakAurasSaved = {
 			},
 			["trigger"] = {
 				["type"] = "status",
-				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
-				["use_inverse"] = true,
-				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 				},
+				["use_unit"] = true,
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
-				["use_unit"] = true,
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["unevent"] = "auto",
 				["spellName"] = 152173,
 			},
 			["desaturate"] = false,
@@ -108605,112 +109005,96 @@ WeakAurasSaved = {
 				0.75, -- [4]
 			},
 		},
-		["Stormlash Totem Timer"] = {
-			["textFlags"] = "None",
-			["stacksSize"] = 12,
-			["user_x"] = 0,
-			["xOffset"] = 0,
-			["stacksFlags"] = "None",
-			["yOffset"] = 0,
-			["anchorPoint"] = "CENTER",
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["sameTexture"] = true,
-			["rotateText"] = "NONE",
-			["icon"] = false,
-			["fontFlags"] = "OUTLINE",
-			["selfPoint"] = "CENTER",
-			["barColor"] = {
-				0, -- [1]
-				0.43921568627451, -- [2]
-				0.870588235294118, -- [3]
-				0.75, -- [4]
-			},
-			["desaturate"] = false,
-			["rotation"] = 0,
-			["sparkOffsetY"] = 0,
-			["crop_y"] = 0.41,
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["regionType"] = "aurabar",
-			["stacks"] = false,
-			["blendMode"] = "BLEND",
-			["texture"] = "BantoBar",
-			["textFont"] = "ABF",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["timerFont"] = "ABF",
-			["alpha"] = 0.75,
-			["borderInset"] = 11,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-			["borderBackdrop"] = "Blizzard Tooltip",
+		["Shield Block Charges"] = {
+			["outline"] = false,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["untrigger"] = {
-				["spellName"] = 120668,
+			["displayText"] = "+%c",
+			["customText"] = "function()\n    local charges = GetSpellCharges(\"2565\");\n    return charges;\nend\n\n\n\n\n\n",
+			["yOffset"] = -28,
+			["anchorPoint"] = "CENTER",
+			["customTextUpdate"] = "update",
+			["icon"] = true,
+			["selfPoint"] = "RIGHT",
+			["trigger"] = {
+				["spellId"] = "116740",
+				["names"] = {
+					"Tigereye Brew", -- [1]
+				},
+				["subcount"] = true,
+				["custom_hide"] = "timed",
+				["type"] = "status",
+				["use_health"] = false,
+				["unevent"] = "auto",
+				["subeventPrefix"] = "SPELL",
+				["percenthealth"] = "0",
+				["event"] = "Health",
+				["debuffType"] = "HELPFUL",
+				["subeventSuffix"] = "_CAST_START",
+				["use_spellId"] = true,
+				["name"] = "Tigereye Brew",
+				["spellIds"] = {
+				},
+				["unit"] = "player",
+				["use_percenthealth"] = true,
+				["percenthealth_operator"] = ">",
+				["use_unit"] = true,
 			},
-			["desaturateBackground"] = false,
+			["desaturate"] = false,
+			["progressPrecision"] = 0,
+			["font"] = "ABF",
+			["height"] = 14.0799751281738,
 			["load"] = {
-				["use_never"] = true,
+				["use_never"] = false,
 				["talent"] = {
-					["single"] = 4,
+					["single"] = 21,
 					["multi"] = {
+						[9] = true,
+						[21] = true,
 					},
 				},
 				["class"] = {
-					["single"] = "SHAMAN",
+					["single"] = "WARRIOR",
 					["multi"] = {
 					},
 				},
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
+				["use_name"] = false,
 				["race"] = {
 					["multi"] = {
 					},
 				},
-				["use_combat"] = true,
 				["spec"] = {
-					["single"] = 2,
+					["single"] = 3,
 					["multi"] = {
 						true, -- [1]
-						true, -- [2]
+						[3] = true,
 					},
 				},
+				["use_spec"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["use_class"] = true,
 				["size"] = {
 					["multi"] = {
 					},
 				},
 			},
-			["customTextUpdate"] = "update",
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
+			["fontSize"] = 14,
+			["displayStacks"] = "%p",
+			["regionType"] = "text",
+			["parent"] = "Shield Block 2.0",
+			["untrigger"] = {
 			},
-			["desaturateForeground"] = false,
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["sparkWidth"] = 10,
-			["spark"] = false,
-			["inverse"] = false,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["justify"] = "CENTER",
 			["animation"] = {
 				["start"] = {
 					["duration_type"] = "seconds",
@@ -108721,121 +109105,51 @@ WeakAurasSaved = {
 					["type"] = "none",
 				},
 				["finish"] = {
-					["type"] = "preset",
+					["preset"] = "slideleft",
 					["duration_type"] = "seconds",
-					["preset"] = "fade",
+					["type"] = "none",
 				},
 			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
-				["names"] = {
-				},
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["custom_hide"] = "timed",
-				["spellName"] = 120668,
-			},
-			["text"] = true,
-			["sparkRotationMode"] = "AUTO",
-			["stickyDuration"] = false,
-			["sparkRotation"] = 0,
-			["parent"] = "Stormlash Totem Enhance 1.0",
-			["displayTextLeft"] = " ",
-			["timer"] = true,
-			["height"] = 30,
-			["timerFlags"] = "None",
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "aura",
-						["spellId"] = "26297",
-						["subeventSuffix"] = "_CAST_START",
-						["event"] = "Health",
-						["subeventPrefix"] = "SPELL",
-						["use_spellId"] = true,
-						["inverse"] = true,
-						["debuffType"] = "HELPFUL",
-						["unit"] = "player",
-						["names"] = {
-							"Stormlash Totem", -- [1]
-						},
-						["spellIds"] = {
-						},
-						["custom_hide"] = "timed",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-			},
-			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = "%s",
-			["backgroundColor"] = {
-				0.501960784313726, -- [1]
-				0.501960784313726, -- [2]
-				0.501960784313726, -- [3]
-				0.25, -- [4]
-			},
-			["displayTextRight"] = "%p",
-			["mirror"] = false,
-			["border"] = false,
-			["borderEdge"] = "None",
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["borderSize"] = 16,
-			["barInFront"] = true,
-			["icon_side"] = "LEFT",
-			["user_y"] = 0,
-			["textSize"] = 16,
-			["sparkHeight"] = 30,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["stacksContainment"] = "INSIDE",
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["timerSize"] = 16,
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["id"] = "Stormlash Totem Timer",
-			["borderOffset"] = 5,
-			["frameStrata"] = 1,
-			["width"] = 30,
-			["sparkOffsetX"] = 0,
-			["progressPrecision"] = 0,
-			["numTriggers"] = 2,
-			["sparkDesature"] = false,
-			["orientation"] = "VERTICAL_INVERSE",
-			["crop_x"] = 0.409999996423721,
+			["id"] = "Shield Block Charges",
 			["actions"] = {
 				["start"] = {
 				},
 				["finish"] = {
 				},
 			},
-			["stacksFont"] = "ABF",
+			["frameStrata"] = 3,
+			["width"] = 14.7199821472168,
+			["xOffset"] = 6,
+			["inverse"] = false,
+			["numTriggers"] = 2,
+			["stickyDuration"] = false,
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["use_form"] = true,
+						["unevent"] = "auto",
+						["form"] = 2,
+						["event"] = "Stance/Form/Aura",
+						["subeventPrefix"] = "SPELL",
+						["use_unit"] = true,
+						["type"] = "status",
+						["subeventSuffix"] = "_CAST_START",
+						["unit"] = "player",
+						["custom_hide"] = "timed",
+					},
+					["untrigger"] = {
+						["form"] = 2,
+					},
+				}, -- [1]
+			},
+			["auto"] = true,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 		},
 		["Rising Sun Kick Timer w/ Debuff Up MW"] = {
 			["textFlags"] = "None",
@@ -108959,16 +109273,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 107428,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
@@ -109498,17 +109813,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 115098,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -110396,361 +110711,6 @@ WeakAurasSaved = {
 			["backgroundOffset"] = 2,
 			["parent"] = "Fire Proc Timers",
 		},
-		["Cascade Timer"] = {
-			["textFlags"] = "None",
-			["stacksSize"] = 12,
-			["user_x"] = 0,
-			["xOffset"] = 0,
-			["stacksFlags"] = "None",
-			["yOffset"] = 0,
-			["anchorPoint"] = "CENTER",
-			["borderColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["sameTexture"] = true,
-			["rotateText"] = "NONE",
-			["icon"] = false,
-			["fontFlags"] = "OUTLINE",
-			["selfPoint"] = "CENTER",
-			["barColor"] = {
-				0.329411764705882, -- [1]
-				0.674509803921569, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["desaturate"] = false,
-			["progressPrecision"] = 0,
-			["sparkOffsetY"] = 0,
-			["crop_y"] = 0.41,
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["regionType"] = "aurabar",
-			["stacks"] = false,
-			["blendMode"] = "BLEND",
-			["texture"] = "BantoBar",
-			["textFont"] = "ABF",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["timerFont"] = "ABF",
-			["alpha"] = 0.75,
-			["borderInset"] = 11,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-			["borderBackdrop"] = "Blizzard Tooltip",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 121135,
-			},
-			["desaturateBackground"] = false,
-			["load"] = {
-				["talent"] = {
-					["single"] = 16,
-					["multi"] = {
-					},
-				},
-				["spec"] = {
-					["single"] = 1,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["use_talent"] = true,
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["class"] = {
-					["single"] = "PRIEST",
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["customTextUpdate"] = "update",
-			["sparkColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["displayTextLeft"] = " ",
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["sparkWidth"] = 10,
-			["spark"] = false,
-			["inverse"] = false,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["type"] = "preset",
-					["duration_type"] = "seconds",
-					["preset"] = "fade",
-				},
-			},
-			["trigger"] = {
-				["type"] = "status",
-				["unevent"] = "auto",
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
-				["names"] = {
-				},
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["custom_hide"] = "timed",
-				["spellName"] = 121135,
-			},
-			["text"] = true,
-			["rotation"] = 0,
-			["stickyDuration"] = false,
-			["sparkRotationMode"] = "AUTO",
-			["sparkOffsetX"] = 0,
-			["parent"] = "Cascade 1.0",
-			["timer"] = true,
-			["height"] = 30,
-			["timerFlags"] = "None",
-			["id"] = "Cascade Timer",
-			["sparkBlendMode"] = "ADD",
-			["backdropColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.5, -- [4]
-			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = "%s",
-			["backgroundColor"] = {
-				0.501960784313726, -- [1]
-				0.501960784313726, -- [2]
-				0.501960784313726, -- [3]
-				0.25, -- [4]
-			},
-			["displayTextRight"] = "%p",
-			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
-			["mirror"] = false,
-			["borderEdge"] = "None",
-			["desaturateForeground"] = false,
-			["borderSize"] = 16,
-			["barInFront"] = true,
-			["icon_side"] = "LEFT",
-			["border"] = false,
-			["stacksFont"] = "ABF",
-			["sparkHeight"] = 30,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["stacksContainment"] = "INSIDE",
-			["stacksColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["timerSize"] = 16,
-			["borderOffset"] = 5,
-			["additional_triggers"] = {
-			},
-			["timerColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["frameStrata"] = 1,
-			["width"] = 30,
-			["sparkRotation"] = 0,
-			["user_y"] = 0,
-			["numTriggers"] = 1,
-			["sparkDesature"] = false,
-			["orientation"] = "VERTICAL_INVERSE",
-			["crop_x"] = 0.409999996423721,
-			["textSize"] = 20,
-			["actions"] = {
-				["start"] = {
-				},
-				["finish"] = {
-				},
-			},
-		},
-		["Archangel Up"] = {
-			["user_y"] = 0,
-			["user_x"] = 0,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["untrigger"] = {
-				["spellName"] = 81700,
-			},
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["desaturateBackground"] = false,
-			["sameTexture"] = true,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-					["glow_action"] = "show",
-				},
-				["finish"] = {
-				},
-			},
-			["fontFlags"] = "OUTLINE",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["trigger"] = {
-				["type"] = "aura",
-				["unevent"] = "auto",
-				["debuffType"] = "HELPFUL",
-				["use_inverse"] = false,
-				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
-				["names"] = {
-					"Archangel", -- [1]
-				},
-				["use_spellName"] = true,
-				["spellIds"] = {
-				},
-				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
-				["unit"] = "player",
-				["custom_hide"] = "timed",
-				["spellName"] = 81700,
-			},
-			["desaturate"] = false,
-			["rotation"] = 0,
-			["font"] = "ABF",
-			["height"] = 32,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["load"] = {
-				["talent"] = {
-					["single"] = 4,
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "PRIEST",
-					["multi"] = {
-					},
-				},
-				["use_class"] = true,
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["spec"] = {
-					["single"] = 1,
-					["multi"] = {
-						true, -- [1]
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
-			["parent"] = "Archangel 1.0",
-			["selfPoint"] = "CENTER",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["xOffset"] = 0,
-			["mirror"] = false,
-			["inverse"] = false,
-			["regionType"] = "icon",
-			["yOffset"] = 0,
-			["blendMode"] = "BLEND",
-			["anchorPoint"] = "CENTER",
-			["fontSize"] = 13,
-			["frameStrata"] = 1,
-			["customTextUpdate"] = "update",
-			["additional_triggers"] = {
-			},
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Archangel Up",
-			["crop_y"] = 0.41,
-			["alpha"] = 1,
-			["width"] = 32,
-			["icon"] = true,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["numTriggers"] = 1,
-			["desaturateForeground"] = false,
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.41,
-			["stacksPoint"] = "BOTTOMRIGHT",
-			["backgroundOffset"] = 2,
-		},
 		["Magic Guard Unusable"] = {
 			["user_y"] = 0,
 			["user_x"] = 0,
@@ -110912,6 +110872,362 @@ WeakAurasSaved = {
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
+			},
+		},
+		["Archangel Up"] = {
+			["user_y"] = 0,
+			["user_x"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 81700,
+			},
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["desaturateBackground"] = false,
+			["sameTexture"] = true,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+					["glow_action"] = "show",
+				},
+				["finish"] = {
+				},
+			},
+			["fontFlags"] = "OUTLINE",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["trigger"] = {
+				["type"] = "aura",
+				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
+				["use_inverse"] = false,
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["names"] = {
+					"Archangel", -- [1]
+				},
+				["use_spellName"] = true,
+				["spellIds"] = {
+				},
+				["subeventPrefix"] = "SPELL",
+				["subeventSuffix"] = "_CAST_START",
+				["unit"] = "player",
+				["custom_hide"] = "timed",
+				["spellName"] = 81700,
+			},
+			["desaturate"] = false,
+			["rotation"] = 0,
+			["font"] = "ABF",
+			["height"] = 32,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["load"] = {
+				["talent"] = {
+					["single"] = 4,
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "PRIEST",
+					["multi"] = {
+					},
+				},
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["parent"] = "Archangel 1.0",
+			["selfPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["xOffset"] = 0,
+			["mirror"] = false,
+			["inverse"] = false,
+			["regionType"] = "icon",
+			["yOffset"] = 0,
+			["blendMode"] = "BLEND",
+			["anchorPoint"] = "CENTER",
+			["fontSize"] = 13,
+			["frameStrata"] = 1,
+			["customTextUpdate"] = "update",
+			["additional_triggers"] = {
+			},
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Archangel Up",
+			["crop_y"] = 0.41,
+			["alpha"] = 1,
+			["width"] = 32,
+			["icon"] = true,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["numTriggers"] = 1,
+			["desaturateForeground"] = false,
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.41,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
+		},
+		["Cascade Timer"] = {
+			["textFlags"] = "None",
+			["stacksSize"] = 12,
+			["user_x"] = 0,
+			["xOffset"] = 0,
+			["stacksFlags"] = "None",
+			["yOffset"] = 0,
+			["anchorPoint"] = "CENTER",
+			["borderColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["sameTexture"] = true,
+			["rotateText"] = "NONE",
+			["icon"] = false,
+			["fontFlags"] = "OUTLINE",
+			["selfPoint"] = "CENTER",
+			["barColor"] = {
+				0.329411764705882, -- [1]
+				0.674509803921569, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["desaturate"] = false,
+			["progressPrecision"] = 0,
+			["sparkOffsetY"] = 0,
+			["crop_y"] = 0.41,
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["regionType"] = "aurabar",
+			["stacks"] = false,
+			["blendMode"] = "BLEND",
+			["texture"] = "BantoBar",
+			["textFont"] = "ABF",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["timerFont"] = "ABF",
+			["alpha"] = 0.75,
+			["borderInset"] = 11,
+			["stacksPoint"] = "BOTTOMRIGHT",
+			["backgroundOffset"] = 2,
+			["borderBackdrop"] = "Blizzard Tooltip",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["untrigger"] = {
+				["spellName"] = 121135,
+			},
+			["desaturateBackground"] = false,
+			["load"] = {
+				["talent"] = {
+					["single"] = 16,
+					["multi"] = {
+					},
+				},
+				["spec"] = {
+					["single"] = 1,
+					["multi"] = {
+						true, -- [1]
+					},
+				},
+				["use_talent"] = true,
+				["use_class"] = true,
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["class"] = {
+					["single"] = "PRIEST",
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
+			["customTextUpdate"] = "update",
+			["sparkColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["displayTextLeft"] = " ",
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["sparkWidth"] = 10,
+			["spark"] = false,
+			["inverse"] = false,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "fade",
+				},
+			},
+			["trigger"] = {
+				["type"] = "status",
+				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
+				["names"] = {
+				},
+				["use_spellName"] = true,
+				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
+				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
+				["spellName"] = 121135,
+			},
+			["text"] = true,
+			["rotation"] = 0,
+			["stickyDuration"] = false,
+			["sparkRotationMode"] = "AUTO",
+			["sparkOffsetX"] = 0,
+			["parent"] = "Cascade 1.0",
+			["timer"] = true,
+			["height"] = 30,
+			["timerFlags"] = "None",
+			["id"] = "Cascade Timer",
+			["sparkBlendMode"] = "ADD",
+			["backdropColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.5, -- [4]
+			},
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = "%s",
+			["backgroundColor"] = {
+				0.501960784313726, -- [1]
+				0.501960784313726, -- [2]
+				0.501960784313726, -- [3]
+				0.25, -- [4]
+			},
+			["displayTextRight"] = "%p",
+			["sparkTexture"] = "Interface\\CastingBar\\UI-CastingBar-Spark",
+			["mirror"] = false,
+			["borderEdge"] = "None",
+			["desaturateForeground"] = false,
+			["borderSize"] = 16,
+			["barInFront"] = true,
+			["icon_side"] = "LEFT",
+			["border"] = false,
+			["stacksFont"] = "ABF",
+			["sparkHeight"] = 30,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["stacksContainment"] = "INSIDE",
+			["stacksColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["timerSize"] = 16,
+			["borderOffset"] = 5,
+			["additional_triggers"] = {
+			},
+			["timerColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["frameStrata"] = 1,
+			["width"] = 30,
+			["sparkRotation"] = 0,
+			["user_y"] = 0,
+			["numTriggers"] = 1,
+			["sparkDesature"] = false,
+			["orientation"] = "VERTICAL_INVERSE",
+			["crop_x"] = 0.409999996423721,
+			["textSize"] = 20,
+			["actions"] = {
+				["start"] = {
+				},
+				["finish"] = {
+				},
 			},
 		},
 		["Infesting Spores"] = {
@@ -111304,16 +111620,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 5394,
 			},
 			["text"] = true,
@@ -111552,17 +111869,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["spellName"] = 73920,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = false,
@@ -112161,17 +112478,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 116680,
 			},
 			["desaturate"] = false,
@@ -113978,17 +114295,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 110744,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -114217,17 +114534,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 23881,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -115195,17 +115512,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 123986,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -115454,17 +115771,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["spellName"] = 120517,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 120517,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = true,
@@ -115927,17 +116244,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["spellName"] = 108853,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 108853,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = true,
@@ -116116,16 +116433,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 23881,
 			},
 			["text"] = true,
@@ -116282,17 +116600,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["spellName"] = 123904,
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["spellName"] = 123904,
-				["use_spellName"] = true,
 				["custom_hide"] = "timed",
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = true,
@@ -116426,20 +116744,20 @@ WeakAurasSaved = {
 			},
 			["trigger"] = {
 				["type"] = "status",
-				["unevent"] = "auto",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 23881,
-				["use_inverse"] = false,
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["subeventPrefix"] = "SPELL",
-				["custom_hide"] = "timed",
+				["unit"] = "player",
 				["use_spellName"] = true,
 				["spellIds"] = {
 				},
-				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["use_unit"] = true,
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["unevent"] = "auto",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = true,
@@ -116570,17 +116888,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = false,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnCooldown",
 				["spellName"] = 123986,
+				["subeventSuffix"] = "_CAST_START",
 				["custom_hide"] = "timed",
 			},
 			["desaturate"] = true,
@@ -116717,17 +117035,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 18499,
 			},
 			["desaturate"] = false,
@@ -116821,6 +117139,7 @@ WeakAurasSaved = {
 						["use_spellName"] = true,
 						["custom_hide"] = "timed",
 						["unit"] = "player",
+						["showOn"] = "showOnCooldown",
 						["subeventSuffix"] = "_CAST_START",
 						["use_unit"] = true,
 						["spellName"] = 23881,
@@ -118311,17 +118630,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 55342,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -119099,16 +119418,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 33878,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnCooldown",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["text"] = true,
@@ -120863,17 +121183,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["custom_hide"] = "timed",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["custom_hide"] = "timed",
-				["use_spellName"] = true,
 				["spellName"] = 108853,
+				["use_spellName"] = true,
 				["unit"] = "player",
-				["subeventSuffix"] = "_CAST_START",
 				["subeventPrefix"] = "SPELL",
+				["showOn"] = "showOnReady",
 				["names"] = {
 				},
+				["subeventSuffix"] = "_CAST_START",
 				["debuffType"] = "HELPFUL",
 			},
 			["desaturate"] = false,
@@ -121006,17 +121326,17 @@ WeakAurasSaved = {
 			["trigger"] = {
 				["type"] = "status",
 				["unevent"] = "auto",
-				["use_inverse"] = true,
+				["debuffType"] = "HELPFUL",
 				["event"] = "Cooldown Progress (Spell)",
 				["use_unit"] = true,
-				["debuffType"] = "HELPFUL",
-				["use_spellName"] = true,
 				["names"] = {
 				},
+				["use_spellName"] = true,
 				["subeventPrefix"] = "SPELL",
-				["subeventSuffix"] = "_CAST_START",
 				["unit"] = "player",
+				["showOn"] = "showOnReady",
 				["custom_hide"] = "timed",
+				["subeventSuffix"] = "_CAST_START",
 				["spellName"] = 1719,
 			},
 			["desaturate"] = false,
@@ -121327,26 +121647,27 @@ WeakAurasSaved = {
 		["Living Bomb"] = "Interface\\Icons\\Ability_Mage_LivingBomb",
 		["Fingers of Frost"] = "Interface\\Icons\\Ability_Mage_WintersGrasp",
 		["Maelstrom Weapon"] = "Interface\\Icons\\Spell_Shaman_MaelstromWeapon",
+		["Pale Vitriol"] = "Interface\\Icons\\inv_misc_bone_07",
 		["Energizing Brew"] = "Interface\\Icons\\ability_monk_energizingwine",
 		["Nether Tempest"] = "Interface\\Icons\\spell_mage_nethertempest",
-		["Arcane Volatility"] = "Interface\\Icons\\Spell_Arcane_Arcane04",
 		["Death Note"] = "Interface\\Icons\\ability_monk_touchofdeath",
+		["Arcane Volatility"] = "Interface\\Icons\\Spell_Arcane_Arcane04",
 		["Rot"] = "Interface\\Icons\\Ability_Creature_Disease_02",
-		["Combustion"] = "Interface\\Icons\\Spell_Fire_SealOfFire",
 		["Ignite"] = "Interface\\Icons\\Spell_Fire_Incinerate",
+		["Combustion"] = "Interface\\Icons\\Spell_Fire_SealOfFire",
 		["Brain Freeze"] = "Interface\\Icons\\Ability_Mage_BrainFreeze",
 		["Set to Blow"] = "Interface\\Icons\\INV_Misc_Bomb_07",
 		["Weakened Blows"] = "Interface\\Icons\\INV_Relics_TotemofRage",
-		["Last Stand"] = "Interface\\Icons\\Spell_Holy_AshesToAshes",
+		["Tempus Repit"] = "Interface\\Icons\\Spell_Nature_Invisibilty",
 		["Might of Ursoc"] = "Interface\\Icons\\spell_druid_mightofursoc",
 		["Mana Tea"] = "Interface\\Icons\\inv_misc_herb_jadetealeaf",
 		["Archmage's Incandescence"] = "Interface\\Icons\\Spell_Holy_MindSooth",
 		["Malformed Blood"] = "Interface\\Icons\\ability_deathwing_bloodcorruption_earth",
-		["Hand of Protection"] = "Interface\\Icons\\Spell_Holy_SealOfProtection",
-		["Thunder Focus Tea"] = "Interface\\Icons\\ability_monk_thunderfocustea",
 		["Shuffle"] = "Interface\\Icons\\ability_monk_shuffle",
+		["Thunder Focus Tea"] = "Interface\\Icons\\ability_monk_thunderfocustea",
+		["Hand of Protection"] = "Interface\\Icons\\Spell_Holy_SealOfProtection",
 		["Vengeance"] = "Interface\\Icons\\Spell_Shadow_Charm",
-		["Prayer of Mending"] = "Interface\\Icons\\Spell_Holy_PrayerOfMendingtga",
+		["Legacy of the Emperor"] = "Interface\\Icons\\ability_monk_legacyoftheemperor",
 		["Malicious Blast"] = "Interface\\Icons\\Ability_Warlock_Eradication",
 		["Heating Up"] = "Interface\\Icons\\Ability_Mage_HotStreak",
 		["Momentum"] = "Interface\\Icons\\ability_monk_standingkick",
@@ -121356,17 +121677,17 @@ WeakAurasSaved = {
 		["Angelic Feather"] = "Interface\\Icons\\ability_priest_angelicfeather",
 		["Time Warp"] = "INTERFACE\\ICONS\\ability_mage_timewarp",
 		["Tigereye Brew"] = "Interface\\Icons\\spell_brew_dark",
-		["Serendipity"] = "Interface\\Icons\\Spell_Holy_Serendipity",
 		["Guard"] = "Interface\\Icons\\ability_monk_guard",
+		["Serendipity"] = "Interface\\Icons\\Spell_Holy_Serendipity",
 		["Acceleration"] = "INTERFACE\\ICONS\\ability_hunter_posthaste",
 		["Ancestral Swiftness"] = "Interface\\Icons\\Spell_Shaman_ElementalOath",
 		["Anima Font"] = "Interface\\Icons\\ability_rhyolith_volcano",
 		["Ancient Hysteria"] = "Interface\\Icons\\Spell_Shadow_UnholyFrenzy",
 		["Crystal Shell"] = "Interface\\Icons\\INV_DataCrystal01",
 		["Unleash Flame"] = "INTERFACE\\ICONS\\spell_shaman_unleashweapon_flame",
-		["Legacy of the Emperor"] = "Interface\\Icons\\ability_monk_legacyoftheemperor",
+		["Prayer of Mending"] = "Interface\\Icons\\Spell_Holy_PrayerOfMendingtga",
 		["Bloodlust"] = "Interface\\Icons\\Spell_Nature_BloodLust",
-		["Tempus Repit"] = "Interface\\Icons\\Spell_Nature_Invisibilty",
+		["Last Stand"] = "Interface\\Icons\\Spell_Holy_AshesToAshes",
 		["Rising Sun Kick"] = "Interface\\Icons\\ability_monk_risingsunkick",
 		["Flame Shock"] = "Interface\\Icons\\Spell_Fire_FlameShock",
 		["Fixate"] = "Interface\\Icons\\ability_fixated_state_red",

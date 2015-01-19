@@ -267,5 +267,23 @@ L.PizzaTimer_Secs 			= "Sec"
 L.PizzaTimer_ButtonStart 	= "Start timer"
 L.PizzaTimer_BroadCast		= "Broadcast to raid"
 
+L.Panel_Profile				= "Profiles"
+L.Area_CreateProfile        = "Profile Creation"
+L.EnterProfileName			= "Enter profile name"
+L.CreateProfile				= "Create profile for DBM Core Options"
+L.Area_ApplyProfile			= "Set Active Profile for DBM Core Options"
+L.SelectProfileToApply		= "Select profile to apply"
+L.Area_DeleteProfile		= "Remove Profile for DBM Core Options"
+L.SelectProfileToDelete		= "Select profile to delete"
+L.Area_DualProfile			= "Boss mod profile options"
+L.DualProfile				= "Enable support for different boss mod options per spec. (Managing of boss mod profiles is done from loaded boss mod stats screen)"
+
+L.Area_ModProfile			= "Copy mod settings from another char/spec or delete mod settings"
+L.ModAllReset				= "Reset all mod settings"
+L.ModAllStatReset			= "Reset all mod stats"
+L.SelectModProfileCopy		= "Copy all settings from"
+L.SelectModProfileCopySound	= "Copy just sound setting from"
+L.SelectModProfileDelete	= "Delete mod settings for"
+
 -- Misc
 L.FontHeight	= 16
