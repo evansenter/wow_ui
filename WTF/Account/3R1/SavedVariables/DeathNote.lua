@@ -3,26 +3,14 @@ DeathNoteDB = {
 	["profileKeys"] = {
 		["Metal - Illidan"] = "Metal - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Comet - Illidan"] = "Comet - Illidan",
 		["Evan - Illidan"] = "Evan - Illidan",
 		["Natal - Illidan"] = "Natal - Illidan",
-		["Comet - Illidan"] = "Comet - Illidan",
 	},
 	["profiles"] = {
 		["Metal - Illidan"] = {
 		},
 		["Combustion - Illidan"] = {
-		},
-		["Evan - Illidan"] = {
-		},
-		["Natal - Illidan"] = {
-			["display_filters"] = {
-				["buff_gains"] = false,
-				["buff_fades"] = false,
-			},
-			["display"] = {
-				["namelist"] = 2,
-			},
-			["keep_data"] = false,
 		},
 		["Comet - Illidan"] = {
 			["display_filters"] = {
@@ -35,11 +23,23 @@ DeathNoteDB = {
 			["display"] = {
 				["w"] = 1013.00030517578,
 				["y"] = 59.9998779296875,
-				["x"] = 186.499908447266,
 				["namelist"] = 2,
+				["x"] = 186.499908447266,
 				["h"] = 621.999938964844,
 			},
 			["max_deaths"] = 500,
+		},
+		["Evan - Illidan"] = {
+		},
+		["Natal - Illidan"] = {
+			["display_filters"] = {
+				["buff_fades"] = false,
+				["buff_gains"] = false,
+			},
+			["display"] = {
+				["namelist"] = 2,
+			},
+			["keep_data"] = false,
 		},
 	},
 }
