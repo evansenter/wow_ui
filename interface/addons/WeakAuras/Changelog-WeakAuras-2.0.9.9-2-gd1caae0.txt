@@ -1,0 +1,2 @@
+Steffen Buehl:
+	- change dungeon difficulty load condition from select to multiselect

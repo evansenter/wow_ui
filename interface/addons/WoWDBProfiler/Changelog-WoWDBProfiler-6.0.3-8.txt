@@ -1,8 +1,0 @@
-2015-01-13  MMOSimca  <MMOSimca@gmail.com>
-
-[181c7f8cd087] [6.0.3-8]
-* Main.lua:
-
-Removed hacky workaround for duplicate world bosses, since the only use was in MoP and nobody will care about that boss now.
-
-

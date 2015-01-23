@@ -15,6 +15,7 @@
 				self:RegisterEvent("READY_CHECK");		
 				self:RegisterEvent("PLAYER_FLAGS_CHANGED");
 				self:RegisterEvent("SCREENSHOT_SUCCEEDED");
+				self:RegisterEvent("BATTLEFIELD_MGR_ENTRY_INVITE");
 				print("WoWNotifier has registered.");				
 				print("WoWNotifier: Use /wn help or /wownotifier help to get a list of commands!");	
 				self.TimeSinceLastUpdate = 0;

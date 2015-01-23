@@ -32,3 +32,4 @@ WeakAurasModelPaths: disabled
 WeakAurasOptions: enabled
 WeakAurasTutorials: disabled
 blockchinese: enabled
+DBM-Profiles: disabled

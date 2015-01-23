@@ -110,3 +110,4 @@ masque_renaitre: disabled
 Malkorok: disabled
 TipTac: enabled
 TipTacOptions: enabled
+DBM-Profiles: disabled

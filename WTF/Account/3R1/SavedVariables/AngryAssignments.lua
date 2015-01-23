@@ -92,22 +92,14 @@ AngryAssign_Pages = {
 		["Contents"] = "Infesting Spores Order:\n1) Akroma + Devo + Smoke + Eklypto + Cex\n2) Tranq + SLink + Gandalf\n3) Tide + Akroma + Cannibal + \n4) Hymn + Barrier\n5)Akroma + Devo + Smoke + Eklypto + Cex\n6) Tranq + Link + Gandalf\n7) Tide + Akroma + Cannibal + \n8) Hymn + Barrier\n\nRoar Order:\nDj - Brun - Redpaws - Crime",
 	},
 	[704661539] = {
-		["Updated"] = 1421376365,
+		["Updated"] = 1421977295,
 		["Name"] = "butcher",
 		["Id"] = 704661539,
-		["UpdateId"] = 4172416317,
-		["Contents"] = "Healing Cds:\n1) Tranq + Gandalf\n2) Smoke + Barrier  + Tide (Right before Blue 2nd stack)\n3) Hymn + Cexcells + Rally (Right before Green 2nd stack)\n4) Spirit Link + Barrier (1st stack after 4th bounding cleave)",
+		["UpdateId"] = 1935696513,
+		["Contents"] = "Healing Cds:\n1) Hymn + Gandalf\n2) Barrier  + Tide (Right before Blue 2nd stack)\n3) Akroma + Zaebies + Rally (Right before Green 2nd stack)\n4) Spirit Link + Smoke + G2 Healing Tonics (1st stack after 4th bounding cleave)",
 	},
 }
 AngryAssign_State = {
-	["display"] = {
-		["y"] = -11.5,
-		["x"] = -2.00009155273438,
-		["point"] = "TOP",
-		["scale"] = 1,
-		["hidden"] = false,
-	},
-	["locked"] = true,
 	["tree"] = {
 		["groups"] = {
 		},
@@ -117,13 +109,21 @@ AngryAssign_State = {
 		["treewidth"] = 175,
 		["fullwidth"] = 665.999938964844,
 	},
-	["directionUp"] = false,
+	["locked"] = true,
 	["window"] = {
 		["height"] = 499.999969482422,
 		["top"] = 850,
 		["left"] = 610,
 		["width"] = 700,
 	},
+	["display"] = {
+		["y"] = -11.5,
+		["x"] = -2.00009155273438,
+		["point"] = "TOP",
+		["scale"] = 1,
+		["hidden"] = false,
+	},
+	["directionUp"] = false,
 }
 AngryAssign_Config = {
 	["backdropColor"] = "0000003e",

@@ -154,8 +154,8 @@ Postal3DB = {
 		["Evan - Illidan"] = {
 			["BlackBook"] = {
 				["recent"] = {
-					"Twinspirit|Illidan|Horde", -- [1]
-					"Comet|Illidan|Horde", -- [2]
+					"Comet|Illidan|Horde", -- [1]
+					"Twinspirit|Illidan|Horde", -- [2]
 					"Metal|Illidan|Horde", -- [3]
 					"Centromere-Dark Iron|Illidan|Horde", -- [4]
 					"Natal|Illidan|Horde", -- [5]
@@ -180,8 +180,8 @@ Postal3DB = {
 		["Metal - Illidan"] = {
 			["BlackBook"] = {
 				["recent"] = {
-					"Comet|Illidan|Horde", -- [1]
-					"Evan|Illidan|Horde", -- [2]
+					"Evan|Illidan|Horde", -- [1]
+					"Comet|Illidan|Horde", -- [2]
 				},
 			},
 		},

@@ -77,6 +77,31 @@ function WoWNotifier_OnEvent(self, event, arg1, ...)
 		end
 	end
 	
+
+	--BATTLEFIELD_MGR_ENTRY_INVITE
+	-- TODO: Update to World PvP Queue
+	if event == "BATTLEFIELD_MGR_ENTRY_INVITE" then				
+		if IsPVPNotifying then
+		tempf = CreateFrame("Frame", nil, UIParent);
+				tempf:SetFrameStrata("HIGH");
+				tempf:SetWidth(20)
+				tempf:SetHeight(20)							
+				local t = tempf:CreateTexture(nil, "ARTWORK");
+				t:SetTexture([[Interface\BUTTONS\WHITE8X8]])
+				t:SetAllPoints(tempf);					
+				tempf.texture = t;
+				
+				t:SetVertexColor(1, 1, 0);
+							
+				tempf:SetPoint("TOPLEFT", 0,0);
+				tempf:Show();				
+			print("WoWNotifier detected a group invite. Sending notification...")
+			TakeScreenshot();		
+			if (IsgxRestarting) then
+				ConsoleExec("gxRestart");
+			end	
+		end
+	end	
 	
 	
 	if event == "LFG_LIST_APPLICATION_STATUS_UPDATED" then	
@@ -422,16 +447,16 @@ SlashCmdList["WOWNOTIFIER"] = function(msg)
 		print([[WoW Notifier Help:
 /wn /wownotifier - Displays the current notification status.
 /wn (on/off) - Disable or enable all notifications.
-/wn (lfg/lfr/scenario) - Disable or enable LFG/LFR/Scenario notifications.
+/wn (lfg/lfr) - Disable or enable LFG/LFR notifications.
 /wn pet - Disable or enable Pet Battle notifications.
-/wn pvp - Disable or enable Player versus Player notifications
-/wn help - Show this message.
+/wn pvp - Disable or enable Player versus Player notifications.
 /wn gx - Disable or enable calling gxRestart for notifications.
 /wn afk - Disable or enable AFK notifications.
 /wn (rc/ready) - Disable or enable ready check notifications.
 /wn (gm/missions) - Disable or enable Garrison Mission completion notifications.
 /wn (pm/premade) - Disable or enable Premade Group invite notifications.
 /wn (gp/group) - Disable or enable regular Group invite notifications.
+/wn help - Show this message.
 ]]);
 		return;
 	end
@@ -448,11 +473,11 @@ SlashCmdList["WOWNOTIFIER"] = function(msg)
 		if myCheckButton:GetChecked() then
 			IsNotifying = false
 			myCheckButton:SetChecked(IsNotifying);
-			print("LFG/LFR/Scenario Notifications disabled.");		
+			print("LFG/LFR Notifications disabled.");		
 		else
 			IsNotifying = true
 			myCheckButton:SetChecked(IsNotifying);
-			print("LFG/LFR/Scenario Notifications enabled.");
+			print("LFG/LFR Notifications enabled.");
 		end
 		return;
 	end

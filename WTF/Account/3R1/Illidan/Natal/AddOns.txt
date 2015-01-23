@@ -61,3 +61,4 @@ HeadCount: enabled
 HeadCount2: enabled
 CT_RaidTracker: enabled
 MizusRaidTracker: enabled
+DBM-Profiles: disabled

@@ -116,3 +116,4 @@ Masque_Serenity: disabled
 masque_renaitre: disabled
 TipTac: enabled
 TipTacOptions: enabled
+DBM-Profiles: disabled

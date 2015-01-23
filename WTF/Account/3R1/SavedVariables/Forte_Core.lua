@@ -6,7 +6,6 @@ FX_Saved = {
 	},
 	["Healthstone"] = {
 		["Metal"] = 0,
-		["Evan"] = 0,
 	},
 	["Exceptions"] = {
 		["Hellfire Channeler"] = 0,
@@ -18,7 +17,7 @@ FX_Saved = {
 		["Master Engineer Telonicus"] = 1,
 		["Fathom-Guard Sharkkis"] = 1,
 	},
-	["Update"] = 273640.115,
+	["Update"] = 18954.301,
 	["Profiles"] = {
 		["Active"] = 1,
 		["Characters"] = {
@@ -1125,15 +1124,9 @@ FX_Saved = {
 	},
 	["RaidStatus"] = {
 		["Metal"] = {
-			-2, -- [1]
-			273187.391, -- [2]
-			"WARRIOR", -- [3]
-			"v1.980.8", -- [4]
-		},
-		["Evan"] = {
 			0, -- [1]
-			273640.115, -- [2]
-			"PRIEST", -- [3]
+			18954.301, -- [2]
+			"WARRIOR", -- [3]
 			"v1.980.8", -- [4]
 		},
 	},

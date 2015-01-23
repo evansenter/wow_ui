@@ -22,12 +22,12 @@ ElvDB = {
 			["Ereinion"] = 2181,
 		},
 		["Illidan"] = {
-			["Comet"] = 45637975,
-			["Evan"] = 8840130,
+			["Comet"] = 27010057,
+			["Evan"] = 9470750,
 			["Combustion"] = 3728207,
 			["Natal"] = 272625,
 			["Plane"] = 498891,
-			["Metal"] = 16097251,
+			["Metal"] = 16647013,
 		},
 	},
 	["namespaces"] = {
@@ -2574,16 +2574,16 @@ ElvPrivateDB = {
 				["enable"] = false,
 			},
 			["general"] = {
-				["normTex"] = "BantoBar",
-				["glossTex"] = "BantoBar",
 				["chatBubbles"] = "nobackdrop",
 				["raidmarkerbar"] = {
 					["enable"] = false,
 				},
 				["namefont"] = "ABF",
+				["normTex"] = "BantoBar",
 				["minimapbar"] = {
 					["mouseover"] = true,
 				},
+				["glossTex"] = "BantoBar",
 				["dmgfont"] = "ABF",
 			},
 			["tooltip"] = {
@@ -2599,20 +2599,20 @@ ElvPrivateDB = {
 			["actionbar"] = {
 				["enable"] = false,
 			},
-			["skins"] = {
-				["blizzard"] = {
-					["achievement"] = false,
-					["pvp"] = false,
-					["losscontrol"] = false,
-					["trade"] = false,
-					["enable"] = false,
-					["lfg"] = false,
-					["talent"] = false,
-					["spellbook"] = false,
-				},
-			},
 			["farmer"] = {
 				["enabled"] = false,
+			},
+			["skins"] = {
+				["blizzard"] = {
+					["losscontrol"] = false,
+					["lfg"] = false,
+					["spellbook"] = false,
+					["trade"] = false,
+					["pvp"] = false,
+					["enable"] = false,
+					["talent"] = false,
+					["achievement"] = false,
+				},
 			},
 			["install_complete"] = "6.992",
 		},
@@ -2655,18 +2655,18 @@ ElvPrivateDB = {
 				["enable"] = false,
 			},
 			["general"] = {
+				["normTex"] = "BantoBar",
+				["glossTex"] = "BantoBar",
+				["chatBubbles"] = "nobackdrop",
+				["raidmarkerbar"] = {
+					["enable"] = false,
+				},
+				["namefont"] = "ABF",
 				["minimapbar"] = {
 					["backdrop"] = true,
 					["mouseover"] = true,
 					["buttonSize"] = 24,
 				},
-				["raidmarkerbar"] = {
-					["enable"] = false,
-				},
-				["namefont"] = "ABF",
-				["normTex"] = "BantoBar",
-				["chatBubbles"] = "nobackdrop",
-				["glossTex"] = "BantoBar",
 				["dmgfont"] = "ABF",
 			},
 			["tooltip"] = {
@@ -2687,14 +2687,14 @@ ElvPrivateDB = {
 			},
 			["skins"] = {
 				["blizzard"] = {
-					["spellbook"] = false,
-					["losscontrol"] = false,
-					["pvp"] = false,
-					["enable"] = false,
-					["tradeskill"] = false,
-					["talent"] = false,
 					["achievement"] = false,
+					["tradeskill"] = false,
+					["spellbook"] = false,
 					["lfg"] = false,
+					["losscontrol"] = false,
+					["talent"] = false,
+					["enable"] = false,
+					["pvp"] = false,
 				},
 				["addons"] = {
 					["WeakAurasSkin"] = false,
@@ -2730,10 +2730,10 @@ ElvPrivateDB = {
 			["tooltip"] = {
 				["enable"] = false,
 			},
+			["install_complete"] = "7.62",
 			["auras"] = {
 				["enable"] = false,
 			},
-			["install_complete"] = "7.62",
 		},
 	},
 }

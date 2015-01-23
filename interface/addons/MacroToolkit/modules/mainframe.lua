@@ -865,6 +865,10 @@ function MT:CreateMTFrame()
 end
 
 function MT:UpdateIcon(this, justicon)
+	--this is proving difficult to get working properly, so disabled for the time being
+	return
+	
+	--[[
 	local index, icon = select(3, string.find(this:GetName(), "MTSB(%d+)"))
 	--index = MT:GetExMacroIndex(index)
 	if not index then return end
@@ -935,6 +939,7 @@ function MT:UpdateIcon(this, justicon)
 		if not justicon then SetMacroItem(index, item) end
 	end
 	if justicon then return icon end
+	]]--
 end
 
 function MT:CreateSecureFrames()

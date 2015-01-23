@@ -11,8 +11,8 @@ HandyNotesDB = {
 	},
 	["profiles"] = {
 		["Comet - Illidan"] = {
-			["icon_alpha"] = 0.75,
 			["icon_alpha_minimap"] = 0.75,
+			["icon_alpha"] = 0.75,
 		},
 		["Metal - Illidan"] = {
 		},

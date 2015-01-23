@@ -1,0 +1,11 @@
+## Interface: 60000
+## Title: nRange
+## Author: Nuggs
+## Version: 0.8.9
+## Notes: Teleport range checker for locks and monks.
+## DefaultState: Enabled
+## LoadOnDemand: 0
+## SavedVariables: nRange_Data
+## OptionalDeps:
+nRange.lua
+modules\nRangeComm.lua
