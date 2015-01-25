@@ -15,19 +15,19 @@ DeathNoteDB = {
 		["Comet - Illidan"] = {
 			["display_filters"] = {
 				["hide_misses"] = true,
-				["debuff_gains"] = false,
-				["buff_gains"] = false,
 				["debuff_fades"] = false,
 				["buff_fades"] = false,
+				["debuff_gains"] = false,
+				["buff_gains"] = false,
 			},
+			["max_deaths"] = 500,
 			["display"] = {
-				["w"] = 1013.00030517578,
 				["y"] = 59.9998779296875,
 				["namelist"] = 2,
 				["x"] = 186.499908447266,
+				["w"] = 1013.00030517578,
 				["h"] = 621.999938964844,
 			},
-			["max_deaths"] = 500,
 		},
 		["Evan - Illidan"] = {
 		},

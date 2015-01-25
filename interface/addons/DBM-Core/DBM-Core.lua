@@ -53,9 +53,9 @@
 --  Globals/Default Options  --
 -------------------------------
 DBM = {
-	Revision = tonumber(("$Revision: 12542 $"):sub(12, -3)),
-	DisplayVersion = "6.0.13 alpha", -- the string that is shown as version
-	ReleaseRevision = 12504 -- the revision of the latest stable version that is available
+	Revision = tonumber(("$Revision: 12555 $"):sub(12, -3)),
+	DisplayVersion = "6.0.14 alpha", -- the string that is shown as version
+	ReleaseRevision = 12542 -- the revision of the latest stable version that is available
 }
 
 -- Legacy crap; that stupid "Version" field was never a good idea.
@@ -118,7 +118,7 @@ DBM.DefaultOptions = {
 	StatusEnabled = true,
 	WhisperStats = false,
 	HideBossEmoteFrame = true,
-	SpamBlockBossWhispers = false,
+	SpamBlockBossWhispers = true,
 	ShowMinimapButton = false,
 	ShowSpecialWarnings = true,
 	ShowFlashFrame = true,
@@ -286,6 +286,7 @@ local connectedServers = GetAutoCompleteRealms()
 local _, class = UnitClass("player")
 local LastInstanceMapID = -1
 local LastGroupSize = 0
+local LastInstanceType = nil
 local queuedBattlefield = {}
 local loadDelay = nil
 local loadDelay2 = nil
@@ -314,7 +315,7 @@ local iconSetPerson = {}
 local addsGUIDs = {}
 
 local voiceRevision = 2
-local fakeBWRevision = 12550
+local fakeBWRevision = 12584
 
 local enableIcons = true -- set to false when a raid leader or a promoted player has a newer version of DBM
 local guiRequested = false
@@ -1345,11 +1346,7 @@ end
 --  Profile  --
 ---------------
 function DBM:CreateProfile(name)
-	if not name or name == "" then
-		self:AddMsg(DBM_CORE_PROFILE_CREATE_ERROR)
-	end
-	name = name:gsub(" ", "")
-	if name == "" then
+	if not name or name == "" or name:gsub("%s", "") then
 		self:AddMsg(DBM_CORE_PROFILE_CREATE_ERROR)
 	end
 	-- create profile
@@ -1391,6 +1388,10 @@ function DBM:DeleteProfile(name)
 	usedProfile = "Default"--Restore to default
 	DBM_UsedProfile = usedProfile
 	self.Options = DBM_AllSavedOptions[usedProfile]
+	if not self.Options then
+		-- the default profile got lost somehow (maybe WoW crashed and the saved variables file got corrupted)
+		self:CreateProfile("Default")
+	end
 	-- rearrange position
 	self.Bars:DeleteProfile(name, "DBM")
 	self:RepositionFrames()
@@ -1658,18 +1659,29 @@ SlashCmdList["DEADLYBOSSMODS"] = function(msg)
 	end
 end
 
-SLASH_DBMRANGE1 = "/range"
-SLASH_DBMRANGE2 = "/distance"
-SlashCmdList["DBMRANGE"] = function(msg)
-	if DBM.RangeCheck:IsShown() then
-		DBM.RangeCheck:Hide()
-	else
-		local r = tonumber(msg)
-		if r and (r < 50) then
-			DBM.RangeCheck:Show(r, nil, true)
+do
+	local function updateRangeFrame(r, reverse)
+		if DBM.RangeCheck:IsShown() then
+			DBM.RangeCheck:Hide()
 		else
-			DBM.RangeCheck:Show(10, nil, true)
+			if r and (r < 201) then
+				DBM.RangeCheck:Show(r, nil, true, nil, reverse)
+			else
+				DBM.RangeCheck:Show(10, nil, true, nil, reverse)
+			end
 		end
+	end
+	SLASH_DBMRANGE1 = "/range"
+	SLASH_DBMRANGE2 = "/distance"
+	SLASH_DBMRRANGE1 = "/rrange"
+	SLASH_DBMRRANGE2 = "/rdistance"
+	SlashCmdList["DBMRANGE"] = function(msg)
+		local r = tonumber(msg)
+		updateRangeFrame(r, false)
+	end
+	SlashCmdList["DBMRRANGE"] = function(msg)
+		local r = tonumber(msg)
+		updateRangeFrame(r, true)
 	end
 end
 
@@ -2445,7 +2457,7 @@ end
 
 function DBM:SetRaidWarningPositon()
 	RaidWarningFrame:ClearAllPoints()
-	RaidWarningFrame:SetPoint(DBM.Options.RaidWarningPosition.Point, UIParent, DBM.Options.RaidWarningPosition.Point, DBM.Options.RaidWarningPosition.X, DBM.Options.RaidWarningPosition.Y)
+	RaidWarningFrame:SetPoint(self.Options.RaidWarningPosition.Point, UIParent, self.Options.RaidWarningPosition.Point, self.Options.RaidWarningPosition.X, self.Options.RaidWarningPosition.Y)
 end
 
 function DBM:LoadModOptions(modId, inCombat, first)
@@ -2841,8 +2853,8 @@ do
 		-- load special warning options
 		DBM:UpdateSpecialWarningOptions()
 		-- set this with a short delay to prevent issues with other addons also trying to do the same thing with another position ;)
-		DBM:Schedule(5, DBM.SetRaidWarningPositon)
-		DBM:Schedule(20, DBM.SetRaidWarningPositon)--A second attempt after we are sure all other mods are loaded, so we can work around issues with movemanything or other mods.
+		DBM:Schedule(5, DBM.SetRaidWarningPositon, DBM)
+		DBM:Schedule(20, DBM.SetRaidWarningPositon, DBM)--A second attempt after we are sure all other mods are loaded, so we can work around issues with movemanything or other mods.
 	end
 end
 
@@ -3074,11 +3086,13 @@ do
 		LastGroupSize = instanceGroupSize
 		difficultyIndex = difficulty
 		if instanceType == "none" or C_Garrison:IsOnGarrisonMap() then
+			LastInstanceType = "none"
 			if not targetEventsRegistered then
 				DBM:RegisterShortTermEvents("UPDATE_MOUSEOVER_UNIT", "UNIT_TARGET_UNFILTERED", "SCENARIO_UPDATE")
 				targetEventsRegistered = true
 			end
 		else
+			LastInstanceType = instanceType
 			if targetEventsRegistered then
 				DBM:UnregisterShortTermEvents()
 				targetEventsRegistered = false
@@ -3318,9 +3332,8 @@ do
 
 	syncHandlers["C"] = function(sender, delay, mod, modRevision, startHp, dbmRevision, tX, tY)
 		if sender == playerName then return end
-		local _, instanceType = GetInstanceInfo()
-		if instanceType == "pvp" then return end
-		if instanceType == "none" and (not UnitAffectingCombat("player") or #inCombat > 0) then--world boss
+		if LastInstanceType == "pvp" then return end
+		if LastInstanceType == "none" and (not UnitAffectingCombat("player") or #inCombat > 0) then--world boss
 			tX = tonumber(tX or 0) or 0
 			tY = tonumber(tY or 0) or 0
 			local range
@@ -3583,7 +3596,7 @@ do
 			raid[sender].locale = locale
 			raid[sender].enabledIcons = iconEnabled or "false"
 			DBM:Debug("Received version info from "..sender.." : Rev - "..revision..", Ver - "..version..", Rev Diff - "..(revision - DBM.Revision), 3)
-			if version > tonumber(DBM.Version) then -- Update reminder
+			if version > tonumber(DBM.Version) and LastInstanceType ~= "pvp" then -- Update reminder
 				if not checkEntry(newerVersionPerson, sender) then
 					newerVersionPerson[#newerVersionPerson + 1] = sender
 					DBM:Debug("Newer version detected from "..sender.." : Rev - "..revision..", Ver - "..version..", Rev Diff - "..(revision - DBM.Revision), 3)
@@ -4500,7 +4513,6 @@ end
 
 function checkWipe(confirm)
 	if #inCombat > 0 then
-		local _, instanceType = GetInstanceInfo()
 		if not savedDifficulty or not difficultyText or not difficultyIndex then--prevent error if savedDifficulty or difficultyText is nil
 			savedDifficulty, difficultyText, difficultyIndex = DBM:GetCurrentInstanceDifficulty()
 		end
@@ -4520,7 +4532,7 @@ function checkWipe(confirm)
 			wipe = 0
 		elseif savedDifficulty == "worldboss" and UnitIsDeadOrGhost("player") then -- On dead or ghost, unit combat status detection would be fail. If you ghost in instance, that means wipe. But in worldboss, ghost means not wipe. So do not wipe.
 			wipe = 0
-		elseif bossuIdFound and instanceType == "raid" then -- Combat started by IEEU and no boss exist and no EncounterProgress marked, that means wipe
+		elseif bossuIdFound and LastInstanceType == "raid" then -- Combat started by IEEU and no boss exist and no EncounterProgress marked, that means wipe
 			wipe = 2
 			for i = 1, 5 do
 				if UnitExists("boss"..i) then
@@ -5202,8 +5214,7 @@ do
 
 	function DBM:StartLogging(timer, checkFunc)
 		self:Unschedule(DBM.StopLogging)
-		local _, instanceType = GetInstanceInfo()
-		if self.Options.LogOnlyRaidBosses and ((instanceType ~= "raid") or IsPartyLFG()) then return end
+		if self.Options.LogOnlyRaidBosses and ((LastInstanceType ~= "raid") or IsPartyLFG()) then return end
 		if self.Options.AutologBosses then--Start logging here to catch pre pots.
 			if not LoggingCombat() then
 				autoLog = true
@@ -7682,8 +7693,26 @@ do
 	function specialWarningPrototype:Show(...)
 		if DBM.Options.ShowSpecialWarnings and (not self.option or self.mod.Options[self.option]) and not moving and frame then
 			if self.announceType == "taunt" and DBM.Options.FilterTankSpec and not self.mod:IsTank() then return end--Don't tell non tanks to taunt, ever.
-			local msg = pformat(self.text, ...)
+			local argTable = {...}
+			if #self.combinedtext > 0 then
+				--Throttle spam.
+				local combinedText = table.concat(self.combinedtext, "<, >")
+				if self.combinedcount == 1 then
+					combinedText = combinedText.." "..DBM_CORE_GENERIC_WARNING_OTHERS
+				elseif self.combinedcount > 1 then
+					combinedText = combinedText.." "..DBM_CORE_GENERIC_WARNING_OTHERS2:format(self.combinedcount)
+				end
+				--Process
+				for i = 1, #argTable do
+					if type(argTable[i]) == "string" then
+						argTable[i] = combinedText
+					end
+				end
+			end
+			local msg = pformat(self.text, unpack(argTable))
 			local text = msg:gsub(">.-<", stripServerName)
+			self.combinedcount = 0
+			self.combinedtext = {}
 			font:SetText(text)
 			if DBM.Options.ShowSWarningsInChat then
 				local colorCode = ("|cff%.2x%.2x%.2x"):format(DBM.Options.SpecialWarningFontCol[1] * 255, DBM.Options.SpecialWarningFontCol[2] * 255, DBM.Options.SpecialWarningFontCol[3] * 255)
@@ -7712,7 +7741,27 @@ do
 					DBM:PlaySpecialWarningSound(soundId or 1)
 				end
 			end
+		else
+			self.combinedcount = 0
+			self.combinedtext = {}
 		end
+	end
+
+	function specialWarningPrototype:CombinedShow(delay, ...)
+		local argTable = {...}
+		for i = 1, #argTable do
+			if type(argTable[i]) == "string" then
+				if #self.combinedtext < 8 then--Throttle spam. We may not need more than 9 targets..
+					if not checkEntry(self.combinedtext, argTable[i]) then
+						self.combinedtext[#self.combinedtext + 1] = argTable[i]
+					end
+				else
+					self.combinedcount = self.combinedcount + 1
+				end
+			end
+		end
+		unschedule(self.Show, self.mod, self)
+		schedule(delay or 0.5, self.Show, self.mod, self, ...)
 	end
 
 	function specialWarningPrototype:DelayedShow(delay, ...)
@@ -7746,6 +7795,8 @@ do
 		local obj = setmetatable(
 			{
 				text = self.localization.warnings[text],
+				combinedtext = {},
+				combinedcount = 0,
 				mod = self,
 				sound = not noSound,
 				flash = runSound,--Set flash color to hard coded runsound (even if user sets custom sounds)
@@ -7797,6 +7848,8 @@ do
 		local obj = setmetatable( -- todo: fix duplicate code
 			{
 				text = text,
+				combinedtext = {},
+				combinedcount = 0,
 				announceType = announceType,
 				mod = self,
 				sound = not noSound,

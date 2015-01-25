@@ -56,8 +56,8 @@ Postal3DB = {
 		["Metal - Illidan"] = {
 			["BlackBook"] = {
 				["recent"] = {
-					"Evan|Illidan|Horde", -- [1]
-					"Comet|Illidan|Horde", -- [2]
+					"Comet|Illidan|Horde", -- [1]
+					"Evan|Illidan|Horde", -- [2]
 				},
 			},
 		},
@@ -105,8 +105,8 @@ Postal3DB = {
 		["Comet - Illidan"] = {
 			["BlackBook"] = {
 				["recent"] = {
-					"Evan|Illidan|Horde", -- [1]
-					"Metal|Illidan|Horde", -- [2]
+					"Metal|Illidan|Horde", -- [1]
+					"Evan|Illidan|Horde", -- [2]
 					"Azimyth|Illidan|Horde", -- [3]
 					"Twinspirit|Illidan|Horde", -- [4]
 					"Combustion|Illidan|Horde", -- [5]
@@ -145,9 +145,9 @@ Postal3DB = {
 		["Evan - Illidan"] = {
 			["BlackBook"] = {
 				["recent"] = {
-					"Comet|Illidan|Horde", -- [1]
-					"Twinspirit|Illidan|Horde", -- [2]
-					"Metal|Illidan|Horde", -- [3]
+					"Metal|Illidan|Horde", -- [1]
+					"Comet|Illidan|Horde", -- [2]
+					"Twinspirit|Illidan|Horde", -- [3]
 					"Centromere-Dark Iron|Illidan|Horde", -- [4]
 					"Natal|Illidan|Horde", -- [5]
 					"Combustion|Illidan|Horde", -- [6]

@@ -2,7 +2,7 @@
 AmrDb = {
 	["Talents"] = {
 		"3133213", -- [1]
-		"3132223", -- [2]
+		"3122322", -- [2]
 	},
 	["LastCharacterImportDate"] = "10/19/14 23:40:35",
 	["RealmName"] = "Illidan",
@@ -49,23 +49,12 @@ AmrDb = {
 			"|cffa335ee|Hitem:113591:5337:0:0:0:0:0:0:100:0:6:1:567|h[The Bladefist]|h|r", -- [17]
 		}, -- [2]
 	},
-	["Glyphs"] = {
-		{
-			125901, -- [1]
-			123334, -- [2]
-			125154, -- [3]
-			146950, -- [4]
-			125872, -- [5]
-			159536, -- [6]
-		}, -- [1]
-		{
-			125901, -- [1]
-			125678, -- [2]
-			125154, -- [3]
-			159490, -- [4]
-			125872, -- [5]
-			120477, -- [6]
-		}, -- [2]
+	["SendSettings"] = {
+		["SendTo"] = "evan",
+		["SendGems"] = true,
+		["SendEnchants"] = true,
+		["SendEnchantMaterials"] = true,
+		["SendToType"] = "mail",
 	},
 	["BankItems"] = {
 		"|cffffffff|Hitem:118345:0:0:0:0:0:0:0:100:0:4:0|h[Arcane Crystal Conduit]|h|r", -- [1]
@@ -87,103 +76,104 @@ AmrDb = {
 		"|cff0070dd|Hitem:109917:5300:5342:0:0:0:0:0:100:0:2:2:523:524|h[Three-Clefthoof Cape]|h|r", -- [17]
 		"|cff0070dd|Hitem:118367:0:0:0:0:0:0:0:100:0:14:0|h[Orgrimmar Chestguard]|h|r", -- [18]
 		"|cff0070dd|Hitem:119224:0:0:0:0:0:0:0:100:0:0:0|h[Foereaver Polearm]|h|r", -- [19]
-		"|cffa335ee|Hitem:116855:0:0:0:0:0:0:0:100:0:0:1:545|h[Stingtail's Toxic Stinger]|h|r", -- [20]
-		"|cffa335ee|Hitem:119461:5331:0:0:0:0:0:0:100:0:11:1:576|h[Skullthumper of Trials]|h|r", -- [21]
-		"|cff0070dd|Hitem:110055:5331:0:0:0:0:0:0:100:0:2:2:499:524|h[Gutwrench Goreaxe]|h|r", -- [22]
-		"|cff0070dd|Hitem:110058:0:0:0:0:0:0:0:100:0:2:1:524|h[Bloodied Hand of Woe]|h|r", -- [23]
-		"|cffa335ee|Hitem:87214:0:0:0:0:0:0:1250168192:100:0:0:0|h[Blingtron 4000]|h|r", -- [24]
-		"|cffa335ee|Hitem:64402:0:0:0:0:0:0:0:100:0:14:0|h[Battle Standard of Coordination]|h|r", -- [25]
-		"|cffa335ee|Hitem:86960:0:0:0:0:0:0:1024400384:100:445:0:0|h[Tornado-Summoning Censer]|h|r", -- [26]
-		"|cffa335ee|Hitem:91453:4424:0:0:0:0:0:0:100:479:0:0|h[Malevolent Gladiator's Cape of Cruelty]|h|r", -- [27]
-		"|cffa335ee|Hitem:94960:0:0:0:0:0:0:1117088512:100:465:0:0|h[Constantly Accelerating Cloak]|h|r", -- [28]
-		"|cffa335ee|Hitem:113657:5313:0:0:0:0:0:0:100:0:5:1:566|h[Cloak of Creeping Necrosis]|h|r", -- [29]
-		"|cffa335ee|Hitem:113637:5300:0:0:0:0:0:0:100:0:5:1:566|h[Cloak of Frenzied Rage]|h|r", -- [30]
-		"|cffa335ee|Hitem:94532:0:0:0:0:0:0:1882864640:100:467:0:0|h[Rune of Re-Origination]|h|r", -- [31]
-		"|cffa335ee|Hitem:113834:0:0:0:0:0:0:0:100:0:5:1:566|h[Pol's Blinded Eye]|h|r", -- [32]
-		"|cffa335ee|Hitem:115796:5301:0:0:0:0:0:0:100:0:13:4:525:539:83:539|h[Shifting Taladite Ring of the Savage]|h|r", -- [33]
-		"|cffa335ee|Hitem:90091:0:0:0:0:0:0:127226496:100:0:0:0|h[Handwraps of the Regal Lord]|h|r", -- [34]
-		"|cffa335ee|Hitem:89945:0:0:0:0:0:0:830715904:100:445:0:0|h[Gauntlets of the Shadow's Caress]|h|r", -- [35]
-		"|cffa335ee|Hitem:86977:0:0:0:0:0:0:2133390080:100:445:0:0|h[Clutches of Dying Hope]|h|r", -- [36]
-		"|cffa335ee|Hitem:94777:4433:4593:0:0:0:0:414219520:100:465:0:0|h[Grips of Vampiric Cruelty]|h|r", -- [37]
-		"|cffa335ee|Hitem:95266:4430:4618:0:0:0:0:0:100:467:0:0|h[Fire-Charm Grips]|h|r", -- [38]
-		"|cffa335ee|Hitem:95276:4431:4610:0:0:0:0:0:100:467:0:0|h[Fire-Charm Gauntlets]|h|r", -- [39]
-		"|cffa335ee|Hitem:96650:4430:4647:0:0:0:0:0:100:467:0:0|h[Fire-Charm Gauntlets]|h|r", -- [40]
-		"|cffa335ee|Hitem:112548:0:0:0:0:0:0:0:100:491:6:2:450:448|h[Gloves of the Golden Protector]|h|r", -- [41]
-		"|cffa335ee|Hitem:99141:4433:4650:4650:0:0:0:978487168:100:493:0:0|h[Gauntlets of Seven Sacred Seals]|h|r", -- [42]
-		"|cffa335ee|Hitem:105845:4430:4647:4647:0:0:0:0:100:493:0:0|h[Siid's Silent Stranglers]|h|r", -- [43]
-		"|cffa335ee|Hitem:113602:0:0:0:0:0:0:0:100:0:5:1:566|h[Throat-Ripper Gauntlets]|h|r", -- [44]
-		"|cffa335ee|Hitem:113832:0:0:0:0:0:0:0:100:0:3:0|h[Treacherous Palms]|h|r", -- [45]
-		"|cffa335ee|Hitem:90095:0:0:0:0:0:0:127226496:100:0:0:0|h[Bracers of the Regal Lord]|h|r", -- [46]
-		"|cffa335ee|Hitem:104429:0:0:0:0:0:0:1222336768:100:491:0:0|h[Bracers of Purified Spirit]|h|r", -- [47]
-		"|cffa335ee|Hitem:105616:4416:0:0:0:0:0:1673448448:100:493:0:0|h[Bomber's Blackened Wristwatch]|h|r", -- [48]
-		"|cffa335ee|Hitem:113634:0:0:0:0:0:0:0:100:0:5:3:564:43:566|h[Bracers of Spare Skin]|h|r", -- [49]
-		"|cffa335ee|Hitem:90089:0:0:0:0:0:0:127226496:100:0:0:0|h[Treads of the Regal Lord]|h|r", -- [50]
-		"|cffa335ee|Hitem:86320:0:0:0:0:0:0:346465920:100:445:0:0|h[Asani's Uncleansed Sandals]|h|r", -- [51]
-		"|cffa335ee|Hitem:87067:0:0:0:0:0:0:1464795776:100:445:0:0|h[Phasewalker Striders]|h|r", -- [52]
-		"|cffa335ee|Hitem:86943:0:0:0:0:0:0:1303529344:100:445:0:0|h[Boots of the Still Breath]|h|r", -- [53]
-		"|cffa335ee|Hitem:94269:4428:4610:4610:0:0:0:416879232:100:467:0:0|h[Quilen Hide Boots]|h|r", -- [54]
-		"|cffa335ee|Hitem:96531:4428:4649:0:0:0:0:682556416:100:467:0:0|h[Spurs of the Storm Cavalry]|h|r", -- [55]
-		"|cffa335ee|Hitem:104684:0:0:0:0:0:0:508137856:100:491:0:0|h[Stonetoe's Tormented Treads]|h|r", -- [56]
-		"|cffa335ee|Hitem:95007:4428:4647:4603:0:0:0:98894080:100:467:0:0|h[Twist-Toe Tabi]|h|r", -- [57]
-		"|cffa335ee|Hitem:104488:0:0:0:0:0:0:1112771200:100:491:0:0|h[Unrepentant Heels]|h|r", -- [58]
-		"|cffa335ee|Hitem:104488:4428:4617:0:0:0:0:1238554240:100:505:0:0|h[Unrepentant Heels]|h|r", -- [59]
-		"|cffa335ee|Hitem:113664:0:0:0:0:0:0:0:100:0:5:1:566|h[Sandals of Mycoid Musing]|h|r", -- [60]
-		"|cffa335ee|Hitem:90093:0:0:0:0:0:0:127226496:100:0:0:0|h[Legwraps of the Regal Lord]|h|r", -- [61]
-		"|cffa335ee|Hitem:87013:0:0:0:0:0:0:1739814400:100:445:0:0|h[Stoneflesh Leggings]|h|r", -- [62]
-		"|cffa335ee|Hitem:95268:4822:4814:4593:0:0:0:0:100:465:0:0|h[Fire-Charm Leggings]|h|r", -- [63]
-		"|cffa335ee|Hitem:95125:4822:4652:0:0:0:0:0:100:465:0:0|h[Legguards of Hidden Knives]|h|r", -- [64]
-		"|cffa335ee|Hitem:96652:4822:4814:4814:0:0:0:0:100:467:0:0|h[Fire-Charm Legguards]|h|r", -- [65]
-		"|cffa335ee|Hitem:96642:4822:4649:4593:0:0:0:0:100:467:0:0|h[Fire-Charm Leggings]|h|r", -- [66]
-		"|cffa335ee|Hitem:99143:4822:4650:4650:0:0:0:0:100:493:0:0|h[Legguards of Seven Sacred Seals]|h|r", -- [67]
-		"|cffa335ee|Hitem:99145:4822:4647:4647:0:0:0:1388339968:100:505:0:0|h[Leggings of Seven Sacred Seals]|h|r", -- [68]
-		"|cffa335ee|Hitem:104600:0:0:0:0:0:0:1764262656:100:491:0:0|h[Shado-Pan Reliquary Kilt]|h|r", -- [69]
-		"|cffa335ee|Hitem:104533:4822:4592:4592:0:0:0:1446480256:100:493:0:0|h[Riou's Vigilant Leggings]|h|r", -- [70]
-		"|cffa335ee|Hitem:90088:0:0:0:0:0:0:127226496:100:0:0:0|h[Greatbelt of the Regal Lord]|h|r", -- [71]
-		"|cffa335ee|Hitem:50069:0:0:0:0:0:0:1978497280:100:0:0:0|h[Professor's Bloodied Smock]|h|r", -- [72]
-		"|cffa335ee|Hitem:94811:0:4621:4650:4650:0:0:39220224:100:467:0:0|h[Featherflight Belt]|h|r", -- [73]
-		"|cffa335ee|Hitem:101877:0:0:0:0:0:-362:91291746:100:491:0:0|h[Fire-Chanter Waistband of the Fireflash]|h|r", -- [74]
-		"|cffa335ee|Hitem:103927:0:4610:4592:4647:0:0:798945664:100:493:0:0|h[Damron's Belt of Darkness]|h|r", -- [75]
-		"|cffa335ee|Hitem:103928:0:4643:4617:4643:0:0:1047643264:100:493:0:0|h[Cord of Black Dreams]|h|r", -- [76]
-		"|cffa335ee|Hitem:104532:0:4610:4592:4647:0:0:928981760:100:493:0:0|h[Damron's Belt of Darkness]|h|r", -- [77]
-		"|cffa335ee|Hitem:104639:0:4643:4649:4643:0:0:1526892416:100:493:0:0|h[Cord of Black Dreams]|h|r", -- [78]
-		"|cffa335ee|Hitem:113636:0:0:0:0:0:0:0:100:0:5:1:566|h[Belt of Bloody Guts]|h|r", -- [79]
-		"|cffa335ee|Hitem:113636:0:0:0:0:0:0:0:100:0:3:0|h[Belt of Bloody Guts]|h|r", -- [80]
-		"|cffa335ee|Hitem:113636:0:0:0:0:0:0:0:100:0:6:1:567|h[Belt of Bloody Guts]|h|r", -- [81]
-		"|cffa335ee|Hitem:90090:0:0:0:0:0:0:127226496:100:0:0:0|h[Chestwrap of the Regal Lord]|h|r", -- [82]
-		"|cffa335ee|Hitem:86180:0:0:0:0:0:0:1309611648:100:445:0:0|h[Robes of Eighty Lights]|h|r", -- [83]
-		"|cffa335ee|Hitem:89950:0:0:0:0:0:0:1075404416:100:445:0:0|h[Wrap of Instant Petrification]|h|r", -- [84]
-		"|cffa335ee|Hitem:94987:4419:4649:4649:0:0:0:1603125120:100:465:0:0|h[Fusion Slasher Chestguard]|h|r", -- [85]
-		"|cffa335ee|Hitem:95265:4419:4621:4649:4593:0:0:0:100:465:0:0|h[Fire-Charm Tunic]|h|r", -- [86]
-		"|cffa335ee|Hitem:95275:4419:4618:4649:4652:0:0:0:100:465:0:0|h[Fire-Charm Chestguard]|h|r", -- [87]
-		"|cffa335ee|Hitem:102960:0:0:0:0:0:0:0:100:0:0:0|h[Grievous Gladiator's Copperskin Tunic]|h|r", -- [88]
-		"|cffa335ee|Hitem:96639:4419:4812:4649:4592:0:0:0:100:465:0:0|h[Fire-Charm Tunic]|h|r", -- [89]
-		"|cffa335ee|Hitem:96649:4419:4650:4650:4650:0:0:0:100:467:0:0|h[Fire-Charm Chestguard]|h|r", -- [90]
-		"|cffa335ee|Hitem:104705:0:0:0:0:0:0:1544887680:100:491:0:0|h[Robes of the Blackened Watcher]|h|r", -- [91]
-		"|cffa335ee|Hitem:112788:0:0:0:0:0:0:0:100:491:4:1:451|h[Robes of the Warrior's Fall]|h|r", -- [92]
-		"|cffa335ee|Hitem:103835:0:0:0:0:0:0:1019121024:100:491:0:0|h[Lazahk's Lost Shadowrap]|h|r", -- [93]
-		"|cffa335ee|Hitem:105770:0:0:0:0:0:0:357632000:100:491:0:0|h[Zoo-Per's Superior Chestguard]|h|r", -- [94]
-		"|cffa335ee|Hitem:99391:0:0:0:0:0:0:0:100:491:0:0|h[Vest of Seven Sacred Seals]|h|r", -- [95]
-		"|cffa335ee|Hitem:114497:0:0:0:0:0:0:0:100:0:1:1:148|h[Chestguard of Determined Resolve of the Deft]|h|r", -- [96]
-		"|cffa335ee|Hitem:114497:0:0:0:0:0:0:0:100:0:1:2:233:560|h[Chestguard of Determined Resolve of the Strategist]|h|r", -- [97]
-		"|cffa335ee|Hitem:113601:0:0:0:0:0:0:0:100:0:5:1:566|h[Chestguard of the Roaring Crowd]|h|r", -- [98]
-		"|cffa335ee|Hitem:90094:0:0:0:0:0:0:127226496:100:0:0:0|h[Shoulderguards of the Regal Lord]|h|r", -- [99]
-		"|cffa335ee|Hitem:87041:0:0:0:0:0:0:1241432064:100:445:0:0|h[Spaulders of the Divided Mind]|h|r", -- [100]
-		"|cffa335ee|Hitem:95279:4914:4610:4647:0:0:0:0:100:465:0:0|h[Fire-Charm Shoulderguards]|h|r", -- [101]
-		"|cffa335ee|Hitem:94791:4914:4649:0:0:0:0:773398272:100:465:0:0|h[Poisonblood Bladeshoulders]|h|r", -- [102]
-		"|cffa335ee|Hitem:105053:0:0:0:0:0:0:1132369280:100:491:0:0|h[Shoulderguards of the Righteous Stand]|h|r", -- [103]
-		"|cffa335ee|Hitem:96444:4914:4649:0:0:0:0:93272704:100:467:0:0|h[Poisonblood Bladeshoulders]|h|r", -- [104]
-		"|cffa335ee|Hitem:112740:0:0:0:0:0:0:0:100:491:5:2:449:448|h[Ricocheting Shoulderguards]|h|r", -- [105]
-		"|cffa335ee|Hitem:112492:0:0:0:0:0:0:0:100:491:4:1:451|h[Shoulders of the Roiling Inferno]|h|r", -- [106]
-		"|cffa335ee|Hitem:99146:4914:4609:4609:0:0:0:0:100:493:0:0|h[Spaulders of Seven Sacred Seals]|h|r", -- [107]
-		"|cffa335ee|Hitem:99144:4914:4650:4650:0:0:0:0:100:493:0:0|h[Shoulderguards of Seven Sacred Seals]|h|r", -- [108]
-		"|cffa335ee|Hitem:104656:0:0:0:0:0:0:1430044672:100:491:0:0|h[Hopeglow Spaulders]|h|r", -- [109]
-		"|cffa335ee|Hitem:99381:0:0:0:0:0:0:0:100:491:0:0|h[Mantle of Seven Sacred Seals]|h|r", -- [110]
-		"|cffa335ee|Hitem:104510:0:0:0:0:0:0:820844544:100:491:0:0|h[Ricocheting Shoulderguards]|h|r", -- [111]
-		"|cffa335ee|Hitem:104555:4804:4647:4647:0:0:0:1538239616:100:493:0:0|h[Shoulderguards of the Righteous Stand]|h|r", -- [112]
-		"|cffa335ee|Hitem:113640:5331:0:0:0:0:0:0:100:0:5:1:566|h[Earthwarped Bladestaff]|h|r", -- [113]
-		"|cffa335ee|Hitem:115334:0:0:0:0:0:0:0:100:0:1:1:202|h[Grandiose Scepter of the Harmonious]|h|r", -- [114]
-		"|cffa335ee|Hitem:113591:5331:0:0:0:0:0:0:100:0:5:2:40:566|h[The Bladefist]|h|r", -- [115]
-		"|cffa335ee|Hitem:113667:5331:0:0:0:0:0:0:100:0:5:1:566|h[Phemos' Double Slasher]|h|r", -- [116]
+		"|cff0070dd|Hitem:37749:0:0:0:0:0:0:0:100:0:0:0|h[Shocking Claws]|h|r", -- [20]
+		"|cffa335ee|Hitem:116855:0:0:0:0:0:0:0:100:0:0:1:545|h[Stingtail's Toxic Stinger]|h|r", -- [21]
+		"|cffa335ee|Hitem:119461:5331:0:0:0:0:0:0:100:0:11:1:576|h[Skullthumper of Trials]|h|r", -- [22]
+		"|cff0070dd|Hitem:110055:5331:0:0:0:0:0:0:100:0:2:2:499:524|h[Gutwrench Goreaxe]|h|r", -- [23]
+		"|cff0070dd|Hitem:110058:0:0:0:0:0:0:0:100:0:2:1:524|h[Bloodied Hand of Woe]|h|r", -- [24]
+		"|cffa335ee|Hitem:87214:0:0:0:0:0:0:1250168192:100:0:0:0|h[Blingtron 4000]|h|r", -- [25]
+		"|cffa335ee|Hitem:64402:0:0:0:0:0:0:0:100:0:14:0|h[Battle Standard of Coordination]|h|r", -- [26]
+		"|cffa335ee|Hitem:86960:0:0:0:0:0:0:1024400384:100:445:0:0|h[Tornado-Summoning Censer]|h|r", -- [27]
+		"|cffa335ee|Hitem:91453:4424:0:0:0:0:0:0:100:479:0:0|h[Malevolent Gladiator's Cape of Cruelty]|h|r", -- [28]
+		"|cffa335ee|Hitem:94960:0:0:0:0:0:0:1117088512:100:465:0:0|h[Constantly Accelerating Cloak]|h|r", -- [29]
+		"|cffa335ee|Hitem:113657:5313:0:0:0:0:0:0:100:0:5:1:566|h[Cloak of Creeping Necrosis]|h|r", -- [30]
+		"|cffa335ee|Hitem:113637:5300:0:0:0:0:0:0:100:0:5:1:566|h[Cloak of Frenzied Rage]|h|r", -- [31]
+		"|cffa335ee|Hitem:94532:0:0:0:0:0:0:1882864640:100:467:0:0|h[Rune of Re-Origination]|h|r", -- [32]
+		"|cffa335ee|Hitem:113834:0:0:0:0:0:0:0:100:0:5:1:566|h[Pol's Blinded Eye]|h|r", -- [33]
+		"|cffa335ee|Hitem:115796:5301:0:0:0:0:0:0:100:0:13:4:525:539:83:539|h[Shifting Taladite Ring of the Savage]|h|r", -- [34]
+		"|cffa335ee|Hitem:90091:0:0:0:0:0:0:127226496:100:0:0:0|h[Handwraps of the Regal Lord]|h|r", -- [35]
+		"|cffa335ee|Hitem:89945:0:0:0:0:0:0:830715904:100:445:0:0|h[Gauntlets of the Shadow's Caress]|h|r", -- [36]
+		"|cffa335ee|Hitem:86977:0:0:0:0:0:0:2133390080:100:445:0:0|h[Clutches of Dying Hope]|h|r", -- [37]
+		"|cffa335ee|Hitem:94777:4433:4593:0:0:0:0:414219520:100:465:0:0|h[Grips of Vampiric Cruelty]|h|r", -- [38]
+		"|cffa335ee|Hitem:95266:4430:4618:0:0:0:0:0:100:467:0:0|h[Fire-Charm Grips]|h|r", -- [39]
+		"|cffa335ee|Hitem:95276:4431:4610:0:0:0:0:0:100:467:0:0|h[Fire-Charm Gauntlets]|h|r", -- [40]
+		"|cffa335ee|Hitem:96650:4430:4647:0:0:0:0:0:100:467:0:0|h[Fire-Charm Gauntlets]|h|r", -- [41]
+		"|cffa335ee|Hitem:112548:0:0:0:0:0:0:0:100:491:6:2:450:448|h[Gloves of the Golden Protector]|h|r", -- [42]
+		"|cffa335ee|Hitem:99141:4433:4650:4650:0:0:0:978487168:100:493:0:0|h[Gauntlets of Seven Sacred Seals]|h|r", -- [43]
+		"|cffa335ee|Hitem:105845:4430:4647:4647:0:0:0:0:100:493:0:0|h[Siid's Silent Stranglers]|h|r", -- [44]
+		"|cffa335ee|Hitem:113602:0:0:0:0:0:0:0:100:0:5:1:566|h[Throat-Ripper Gauntlets]|h|r", -- [45]
+		"|cffa335ee|Hitem:113832:0:0:0:0:0:0:0:100:0:3:0|h[Treacherous Palms]|h|r", -- [46]
+		"|cffa335ee|Hitem:90095:0:0:0:0:0:0:127226496:100:0:0:0|h[Bracers of the Regal Lord]|h|r", -- [47]
+		"|cffa335ee|Hitem:104429:0:0:0:0:0:0:1222336768:100:491:0:0|h[Bracers of Purified Spirit]|h|r", -- [48]
+		"|cffa335ee|Hitem:105616:4416:0:0:0:0:0:1673448448:100:493:0:0|h[Bomber's Blackened Wristwatch]|h|r", -- [49]
+		"|cffa335ee|Hitem:113634:0:0:0:0:0:0:0:100:0:5:3:564:43:566|h[Bracers of Spare Skin]|h|r", -- [50]
+		"|cffa335ee|Hitem:90089:0:0:0:0:0:0:127226496:100:0:0:0|h[Treads of the Regal Lord]|h|r", -- [51]
+		"|cffa335ee|Hitem:86320:0:0:0:0:0:0:346465920:100:445:0:0|h[Asani's Uncleansed Sandals]|h|r", -- [52]
+		"|cffa335ee|Hitem:87067:0:0:0:0:0:0:1464795776:100:445:0:0|h[Phasewalker Striders]|h|r", -- [53]
+		"|cffa335ee|Hitem:86943:0:0:0:0:0:0:1303529344:100:445:0:0|h[Boots of the Still Breath]|h|r", -- [54]
+		"|cffa335ee|Hitem:94269:4428:4610:4610:0:0:0:416879232:100:467:0:0|h[Quilen Hide Boots]|h|r", -- [55]
+		"|cffa335ee|Hitem:96531:4428:4649:0:0:0:0:682556416:100:467:0:0|h[Spurs of the Storm Cavalry]|h|r", -- [56]
+		"|cffa335ee|Hitem:104684:0:0:0:0:0:0:508137856:100:491:0:0|h[Stonetoe's Tormented Treads]|h|r", -- [57]
+		"|cffa335ee|Hitem:95007:4428:4647:4603:0:0:0:98894080:100:467:0:0|h[Twist-Toe Tabi]|h|r", -- [58]
+		"|cffa335ee|Hitem:104488:0:0:0:0:0:0:1112771200:100:491:0:0|h[Unrepentant Heels]|h|r", -- [59]
+		"|cffa335ee|Hitem:104488:4428:4617:0:0:0:0:1238554240:100:505:0:0|h[Unrepentant Heels]|h|r", -- [60]
+		"|cffa335ee|Hitem:113664:0:0:0:0:0:0:0:100:0:5:1:566|h[Sandals of Mycoid Musing]|h|r", -- [61]
+		"|cffa335ee|Hitem:90093:0:0:0:0:0:0:127226496:100:0:0:0|h[Legwraps of the Regal Lord]|h|r", -- [62]
+		"|cffa335ee|Hitem:87013:0:0:0:0:0:0:1739814400:100:445:0:0|h[Stoneflesh Leggings]|h|r", -- [63]
+		"|cffa335ee|Hitem:95268:4822:4814:4593:0:0:0:0:100:465:0:0|h[Fire-Charm Leggings]|h|r", -- [64]
+		"|cffa335ee|Hitem:95125:4822:4652:0:0:0:0:0:100:465:0:0|h[Legguards of Hidden Knives]|h|r", -- [65]
+		"|cffa335ee|Hitem:96652:4822:4814:4814:0:0:0:0:100:467:0:0|h[Fire-Charm Legguards]|h|r", -- [66]
+		"|cffa335ee|Hitem:96642:4822:4649:4593:0:0:0:0:100:467:0:0|h[Fire-Charm Leggings]|h|r", -- [67]
+		"|cffa335ee|Hitem:99143:4822:4650:4650:0:0:0:0:100:493:0:0|h[Legguards of Seven Sacred Seals]|h|r", -- [68]
+		"|cffa335ee|Hitem:99145:4822:4647:4647:0:0:0:1388339968:100:505:0:0|h[Leggings of Seven Sacred Seals]|h|r", -- [69]
+		"|cffa335ee|Hitem:104600:0:0:0:0:0:0:1764262656:100:491:0:0|h[Shado-Pan Reliquary Kilt]|h|r", -- [70]
+		"|cffa335ee|Hitem:104533:4822:4592:4592:0:0:0:1446480256:100:493:0:0|h[Riou's Vigilant Leggings]|h|r", -- [71]
+		"|cffa335ee|Hitem:90088:0:0:0:0:0:0:127226496:100:0:0:0|h[Greatbelt of the Regal Lord]|h|r", -- [72]
+		"|cffa335ee|Hitem:50069:0:0:0:0:0:0:1978497280:100:0:0:0|h[Professor's Bloodied Smock]|h|r", -- [73]
+		"|cffa335ee|Hitem:94811:0:4621:4650:4650:0:0:39220224:100:467:0:0|h[Featherflight Belt]|h|r", -- [74]
+		"|cffa335ee|Hitem:101877:0:0:0:0:0:-362:91291746:100:491:0:0|h[Fire-Chanter Waistband of the Fireflash]|h|r", -- [75]
+		"|cffa335ee|Hitem:103927:0:4610:4592:4647:0:0:798945664:100:493:0:0|h[Damron's Belt of Darkness]|h|r", -- [76]
+		"|cffa335ee|Hitem:103928:0:4643:4617:4643:0:0:1047643264:100:493:0:0|h[Cord of Black Dreams]|h|r", -- [77]
+		"|cffa335ee|Hitem:104532:0:4610:4592:4647:0:0:928981760:100:493:0:0|h[Damron's Belt of Darkness]|h|r", -- [78]
+		"|cffa335ee|Hitem:104639:0:4643:4649:4643:0:0:1526892416:100:493:0:0|h[Cord of Black Dreams]|h|r", -- [79]
+		"|cffa335ee|Hitem:113636:0:0:0:0:0:0:0:100:0:5:1:566|h[Belt of Bloody Guts]|h|r", -- [80]
+		"|cffa335ee|Hitem:113636:0:0:0:0:0:0:0:100:0:3:0|h[Belt of Bloody Guts]|h|r", -- [81]
+		"|cffa335ee|Hitem:113636:0:0:0:0:0:0:0:100:0:6:1:567|h[Belt of Bloody Guts]|h|r", -- [82]
+		"|cffa335ee|Hitem:90090:0:0:0:0:0:0:127226496:100:0:0:0|h[Chestwrap of the Regal Lord]|h|r", -- [83]
+		"|cffa335ee|Hitem:86180:0:0:0:0:0:0:1309611648:100:445:0:0|h[Robes of Eighty Lights]|h|r", -- [84]
+		"|cffa335ee|Hitem:89950:0:0:0:0:0:0:1075404416:100:445:0:0|h[Wrap of Instant Petrification]|h|r", -- [85]
+		"|cffa335ee|Hitem:94987:4419:4649:4649:0:0:0:1603125120:100:465:0:0|h[Fusion Slasher Chestguard]|h|r", -- [86]
+		"|cffa335ee|Hitem:95265:4419:4621:4649:4593:0:0:0:100:465:0:0|h[Fire-Charm Tunic]|h|r", -- [87]
+		"|cffa335ee|Hitem:95275:4419:4618:4649:4652:0:0:0:100:465:0:0|h[Fire-Charm Chestguard]|h|r", -- [88]
+		"|cffa335ee|Hitem:102960:0:0:0:0:0:0:0:100:0:0:0|h[Grievous Gladiator's Copperskin Tunic]|h|r", -- [89]
+		"|cffa335ee|Hitem:96639:4419:4812:4649:4592:0:0:0:100:465:0:0|h[Fire-Charm Tunic]|h|r", -- [90]
+		"|cffa335ee|Hitem:96649:4419:4650:4650:4650:0:0:0:100:467:0:0|h[Fire-Charm Chestguard]|h|r", -- [91]
+		"|cffa335ee|Hitem:104705:0:0:0:0:0:0:1544887680:100:491:0:0|h[Robes of the Blackened Watcher]|h|r", -- [92]
+		"|cffa335ee|Hitem:112788:0:0:0:0:0:0:0:100:491:4:1:451|h[Robes of the Warrior's Fall]|h|r", -- [93]
+		"|cffa335ee|Hitem:103835:0:0:0:0:0:0:1019121024:100:491:0:0|h[Lazahk's Lost Shadowrap]|h|r", -- [94]
+		"|cffa335ee|Hitem:105770:0:0:0:0:0:0:357632000:100:491:0:0|h[Zoo-Per's Superior Chestguard]|h|r", -- [95]
+		"|cffa335ee|Hitem:99391:0:0:0:0:0:0:0:100:491:0:0|h[Vest of Seven Sacred Seals]|h|r", -- [96]
+		"|cffa335ee|Hitem:114497:0:0:0:0:0:0:0:100:0:1:1:148|h[Chestguard of Determined Resolve of the Deft]|h|r", -- [97]
+		"|cffa335ee|Hitem:114497:0:0:0:0:0:0:0:100:0:1:2:233:560|h[Chestguard of Determined Resolve of the Strategist]|h|r", -- [98]
+		"|cffa335ee|Hitem:113601:0:0:0:0:0:0:0:100:0:5:1:566|h[Chestguard of the Roaring Crowd]|h|r", -- [99]
+		"|cffa335ee|Hitem:90094:0:0:0:0:0:0:127226496:100:0:0:0|h[Shoulderguards of the Regal Lord]|h|r", -- [100]
+		"|cffa335ee|Hitem:87041:0:0:0:0:0:0:1241432064:100:445:0:0|h[Spaulders of the Divided Mind]|h|r", -- [101]
+		"|cffa335ee|Hitem:95279:4914:4610:4647:0:0:0:0:100:465:0:0|h[Fire-Charm Shoulderguards]|h|r", -- [102]
+		"|cffa335ee|Hitem:94791:4914:4649:0:0:0:0:773398272:100:465:0:0|h[Poisonblood Bladeshoulders]|h|r", -- [103]
+		"|cffa335ee|Hitem:105053:0:0:0:0:0:0:1132369280:100:491:0:0|h[Shoulderguards of the Righteous Stand]|h|r", -- [104]
+		"|cffa335ee|Hitem:96444:4914:4649:0:0:0:0:93272704:100:467:0:0|h[Poisonblood Bladeshoulders]|h|r", -- [105]
+		"|cffa335ee|Hitem:112740:0:0:0:0:0:0:0:100:491:5:2:449:448|h[Ricocheting Shoulderguards]|h|r", -- [106]
+		"|cffa335ee|Hitem:112492:0:0:0:0:0:0:0:100:491:4:1:451|h[Shoulders of the Roiling Inferno]|h|r", -- [107]
+		"|cffa335ee|Hitem:99146:4914:4609:4609:0:0:0:0:100:493:0:0|h[Spaulders of Seven Sacred Seals]|h|r", -- [108]
+		"|cffa335ee|Hitem:99144:4914:4650:4650:0:0:0:0:100:493:0:0|h[Shoulderguards of Seven Sacred Seals]|h|r", -- [109]
+		"|cffa335ee|Hitem:104656:0:0:0:0:0:0:1430044672:100:491:0:0|h[Hopeglow Spaulders]|h|r", -- [110]
+		"|cffa335ee|Hitem:99381:0:0:0:0:0:0:0:100:491:0:0|h[Mantle of Seven Sacred Seals]|h|r", -- [111]
+		"|cffa335ee|Hitem:104510:0:0:0:0:0:0:820844544:100:491:0:0|h[Ricocheting Shoulderguards]|h|r", -- [112]
+		"|cffa335ee|Hitem:104555:4804:4647:4647:0:0:0:1538239616:100:493:0:0|h[Shoulderguards of the Righteous Stand]|h|r", -- [113]
+		"|cffa335ee|Hitem:113640:5331:0:0:0:0:0:0:100:0:5:1:566|h[Earthwarped Bladestaff]|h|r", -- [114]
+		"|cffa335ee|Hitem:115334:0:0:0:0:0:0:0:100:0:1:1:202|h[Grandiose Scepter of the Harmonious]|h|r", -- [115]
+		"|cffa335ee|Hitem:113591:5331:0:0:0:0:0:0:100:0:5:2:40:566|h[The Bladefist]|h|r", -- [116]
+		"|cffa335ee|Hitem:113667:5331:0:0:0:0:0:0:100:0:5:1:566|h[Phemos' Double Slasher]|h|r", -- [117]
 	},
 	["Specs"] = {
 		15, -- [1]
@@ -196,82 +186,10 @@ AmrDb = {
 		[402] = 1,
 		[361] = 1,
 		[390] = 1110,
-		[823] = 733,
+		[823] = 744,
 		[392] = 50,
-		[-1] = 18029679,
+		[-1] = 30733201,
 		[615] = 1,
-	},
-	["SendSettings"] = {
-		["SendTo"] = "evan",
-		["SendGems"] = true,
-		["SendEnchants"] = true,
-		["SendEnchantMaterials"] = true,
-		["SendToType"] = "mail",
-	},
-	["LogData"] = {
-		["_wipes"] = {
-		},
-		["_autoLog"] = {
-			[1228] = "disabled",
-			[1136] = "disabled",
-			[1205] = "disabled",
-		},
-		["_lastDiff"] = 1,
-		["_lastZone"] = "FW Horde Garrison Level 3",
-	},
-	["BagItems"] = {
-		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [1]
-		"|cffffffff|Hitem:110560:0:0:0:0:0:0:0:100:0:11:0|h[Garrison Hearthstone]|h|r", -- [2]
-		"|cffffffff|Hitem:20815:0:0:0:0:0:0:0:100:0:0:0|h[Jeweler's Kit]|h|r", -- [3]
-		"|cffffffff|Hitem:87216:0:0:0:0:0:0:0:100:0:11:0|h[Thermal Anvil]|h|r", -- [4]
-		"|cffffffff|Hitem:87216:0:0:0:0:0:0:0:100:0:11:0|h[Thermal Anvil]|h|r", -- [5]
-		"|cffffffff|Hitem:87216:0:0:0:0:0:0:0:100:0:11:0|h[Thermal Anvil]|h|r", -- [6]
-		"|cffffffff|Hitem:10498:0:0:0:0:0:0:2111593344:100:0:0:0|h[Gyromatic Micro-Adjustor]|h|r", -- [7]
-		"|cffffffff|Hitem:5512:0:0:0:0:0:0:0:100:0:6:0|h[Healthstone]|h|r", -- [8]
-		"|cffffffff|Hitem:5956:0:0:0:0:0:0:0:100:0:0:0|h[Blacksmith Hammer]|h|r", -- [9]
-		"|cffffffff|Hitem:6219:0:0:0:0:0:0:1499919744:100:0:0:0|h[Arclight Spanner]|h|r", -- [10]
-		"|cffffffff|Hitem:6256:0:0:0:0:0:0:0:100:0:14:0|h[Fishing Pole]|h|r", -- [11]
-		"|cff1eff00|Hitem:114745:0:0:0:0:0:0:0:100:0:0:0|h[Braced Armor Enhancement]|h|r", -- [12]
-		"|cff0070dd|Hitem:118922:0:0:0:0:0:0:0:100:0:11:0|h[Oralius' Whispering Crystal]|h|r", -- [13]
-		"|cff0070dd|Hitem:119926:0:0:0:0:0:0:0:100:0:7:1:547|h[Primal Combatant's Badge of Conquest]|h|r", -- [14]
-		"|cff0070dd|Hitem:119933:0:0:0:0:0:0:0:100:0:14:0|h[Primal Combatant's Medallion of Cruelty]|h|r", -- [15]
-		"|cff0070dd|Hitem:119884:0:0:0:0:0:0:0:100:0:14:0|h[Primal Combatant's Ironskin Gloves]|h|r", -- [16]
-		"|cff0070dd|Hitem:119872:0:0:0:0:0:0:0:100:0:7:0|h[Primal Combatant's Bindings of Prowess]|h|r", -- [17]
-		"|cff0070dd|Hitem:119886:0:0:0:0:0:0:0:100:0:7:0|h[Primal Combatant's Ironskin Legguards]|h|r", -- [18]
-		"|cff0070dd|Hitem:115325:5335:0:0:0:0:0:0:100:0:1:2:190:42|h[Turbulent Spire of the Merciless]|h|r", -- [19]
-		"|cffa335ee|Hitem:109644:0:0:0:0:0:0:0:100:0:14:0|h[Walter]|h|r", -- [20]
-		"|cffa335ee|Hitem:114131:0:0:0:0:0:0:0:100:0:0:0|h[Power Overrun Weapon Enhancement]|h|r", -- [21]
-		"|cffa335ee|Hitem:113605:5312:0:0:0:0:0:0:100:0:6:1:567|h[Fireproof Greatcloak]|h|r", -- [22]
-		"|cffa335ee|Hitem:118812:5313:0:0:0:0:0:0:100:0:0:0|h[Flamelicked Cloak of Kaufebyrd]|h|r", -- [23]
-		"|cffa335ee|Hitem:112317:0:0:0:0:0:0:0:100:0:13:2:525:529|h[Winged Hourglass]|h|r", -- [24]
-		"|cffa335ee|Hitem:112319:0:0:0:0:0:0:0:100:0:13:2:530:527|h[Knight's Badge]|h|r", -- [25]
-		"|cffa335ee|Hitem:114551:0:0:0:0:0:0:0:100:0:1:0|h[Grandiose Prescience]|h|r", -- [26]
-		"|cffa335ee|Hitem:113650:0:0:0:0:0:0:0:100:0:5:1:566|h[Pillar of the Earth]|h|r", -- [27]
-		"|cffa335ee|Hitem:113846:5299:0:0:0:0:0:0:100:0:5:1:566|h[Seal of Unbound Frost]|h|r", -- [28]
-		"|cffa335ee|Hitem:113651:5301:0:0:0:0:0:0:100:0:5:2:41:566|h[Signet of Crystalline Barrage]|h|r", -- [29]
-		"|cffa335ee|Hitem:118304:0:0:0:0:0:0:0:100:0:14:0|h[Spellbound Solium Band of the Immortal Spirit]|h|r", -- [30]
-		"|cffa335ee|Hitem:118303:5299:0:0:0:0:0:0:100:0:14:0|h[Spellbound Solium Band of Sorcerous Invincibility]|h|r", -- [31]
-		"|cffa335ee|Hitem:114539:0:0:0:0:0:0:0:100:0:1:1:396|h[Dreamsleep Locket of the Diviner]|h|r", -- [32]
-		"|cffa335ee|Hitem:113662:5293:0:0:0:0:0:0:100:0:6:1:567|h[Collar of Wailing Mouths]|h|r", -- [33]
-		"|cffa335ee|Hitem:114622:0:0:0:0:0:0:0:100:0:0:0|h[Goredrenched Weaponry]|h|r", -- [34]
-	},
-	["IconInfo"] = {
-		["minimapPos"] = 141.788998964142,
-	},
-	["LastCharacterImport"] = "$11;Illidan;Comet;Slash Cry;13;2;90;6:600,5:600;1;.s1;15;3133310;120483,2851,1820,718,29,21049;.q1;99388s10u491x4633y0c11e4431;1s1u0x398y-398c41;2399s6f363u0;459s15u14x0c1e-8;1741s14u-14;8440s8u0b448b2x0c1e4d105424;63s17u0b0x-46c3e7d104448;1s3u0b-2b2x0y0c33e372d105445;255s11u0b0x60c2d104524;31s13u0b0d104553;39s12u0b0x-14c1d104578;3s9u0b-2b2e-392d105577;23s7u0b-2b2x-46y0c33e411d105596;80s5u0b-2b2x46y0z14c112e-406d105629;16s16u0b-2b2x-14c1e23d105649;15s2u0b0d104477$g\\4633\\76682\\4633,4567\\5 _Intellect_, 10 _CriticalStrike_\\76682,76616@g\\5031\\95345\\\\Courageous\\@g\\4587\\76636\\4817,4587,4520\\20 _CriticalStrike_\\83144,76636,76570@g\\4647\\76697\\4818,4647,4582\\20 _CriticalStrike_\\83146,76697,76631@e\\4431\\74720\\104417\\11 _Haste_\\74250=2@e\\4423\\74712\\104403\\12 _Intellect_\\74249=3,74250=3@e\\4427\\74716\\104408\\11 _CriticalStrike_\\74249=2,74250=1@e\\4434\\74729\\104445\\11 _Intellect_\\74250=3@e\\4806\\87559\\121195\\15 _Intellect_, 5 _CriticalStrike_\\39354=1,79255=3@e\\4414\\74703\\104389\\12 _Intellect_\\74248=3@e\\4825\\82445\\122392\\19 _Intellect_, 11 _CriticalStrike_\\82447=1@e\\4419\\74708\\104395\\5 All Stats\\74249=2,74250=3@e\\4442\\74724\\104427\\Jade Spirit\\74250=4,74248=10",
-	["Reps"] = {
-		[1269] = 7,
-		[1337] = 7,
-		[1341] = 5,
-		[1375] = 7,
-		[1387] = 0,
-		[1376] = 0,
-		[1435] = 7,
-		[1388] = 7,
-		[1270] = 6,
-	},
-	["Faction"] = "Horde",
-	["Professions"] = {
 	},
 	["VoidItems"] = {
 		"|cffa335ee|Hitem:69210:0:0:0:0:0:0:0:100:0:0:0|h[Renowned Guild Tabard]|h|r", -- [1]
@@ -435,7 +353,97 @@ AmrDb = {
 		"|cff0070dd|Hitem:113789:0:0:0:0:0:0:0:100:0:14:0|h[Thunderlord Girdle]|h|r", -- [159]
 		"|cffa335ee|Hitem:116206:0:0:0:0:0:0:0:100:0:4:0|h[Warmage's Legwraps]|h|r", -- [160]
 	},
+	["LogData"] = {
+		["_wipes"] = {
+		},
+		["_autoLog"] = {
+			[1228] = "disabled",
+			[1136] = "disabled",
+			[1205] = "disabled",
+		},
+		["_lastDiff"] = 0,
+		["_lastZone"] = "Draenor",
+	},
+	["BagItems"] = {
+		"|cffa335ee|Hitem:113611:0:0:0:0:0:0:0:100:0:5:1:566|h[Flenser's Hookring]|h|r", -- [1]
+		"|cff0070dd|Hitem:114129:0:0:0:0:0:0:0:100:0:0:0|h[Striking Weapon Enhancement]|h|r", -- [2]
+		"|cff1eff00|Hitem:113263:0:0:0:0:0:0:0:100:0:0:0|h[Sorcerous Earth]|h|r", -- [3]
+		"|cff1eff00|Hitem:113261:0:0:0:0:0:0:0:100:0:0:0|h[Sorcerous Fire]|h|r", -- [4]
+		"|cffffffff|Hitem:114116:0:0:0:0:0:0:0:100:0:0:0|h[Bag of Salvaged Goods]|h|r", -- [5]
+		"|cff0070dd|Hitem:118474:0:0:0:0:0:0:0:100:0:0:0|h[Supreme Manual of Dance]|h|r", -- [6]
+		"|cff0070dd|Hitem:114311:0:0:0:0:0:0:0:100:0:1:1:486|h[Shadow-Gorged Bracers of the Decimator]|h|r", -- [7]
+		"|cff0070dd|Hitem:114476:0:0:0:0:0:0:0:100:0:1:1:170|h[Beastminder Cabochon of the Aurora]|h|r", -- [8]
+		"|cff1eff00|Hitem:114120:0:0:0:0:0:0:0:100:0:0:0|h[Big Crate of Salvage]|h|r", -- [9]
+		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [10]
+		"|cffffffff|Hitem:110560:0:0:0:0:0:0:0:100:0:11:0|h[Garrison Hearthstone]|h|r", -- [11]
+		"|cffffffff|Hitem:20815:0:0:0:0:0:0:0:100:0:0:0|h[Jeweler's Kit]|h|r", -- [12]
+		"|cffffffff|Hitem:87216:0:0:0:0:0:0:0:100:0:11:0|h[Thermal Anvil]|h|r", -- [13]
+		"|cffffffff|Hitem:87216:0:0:0:0:0:0:0:100:0:11:0|h[Thermal Anvil]|h|r", -- [14]
+		"|cffffffff|Hitem:87216:0:0:0:0:0:0:0:100:0:11:0|h[Thermal Anvil]|h|r", -- [15]
+		"|cffffffff|Hitem:10498:0:0:0:0:0:0:2111593344:100:0:0:0|h[Gyromatic Micro-Adjustor]|h|r", -- [16]
+		"|cffffffff|Hitem:5956:0:0:0:0:0:0:0:100:0:0:0|h[Blacksmith Hammer]|h|r", -- [17]
+		"|cffffffff|Hitem:6219:0:0:0:0:0:0:1499919744:100:0:0:0|h[Arclight Spanner]|h|r", -- [18]
+		"|cffffffff|Hitem:6256:0:0:0:0:0:0:0:100:0:14:0|h[Fishing Pole]|h|r", -- [19]
+		"|cff1eff00|Hitem:114745:0:0:0:0:0:0:0:100:0:0:0|h[Braced Armor Enhancement]|h|r", -- [20]
+		"|cff0070dd|Hitem:118922:0:0:0:0:0:0:0:100:0:11:0|h[Oralius' Whispering Crystal]|h|r", -- [21]
+		"|cff0070dd|Hitem:119926:0:0:0:0:0:0:0:100:0:7:1:547|h[Primal Combatant's Badge of Conquest]|h|r", -- [22]
+		"|cff0070dd|Hitem:119933:0:0:0:0:0:0:0:100:0:14:0|h[Primal Combatant's Medallion of Cruelty]|h|r", -- [23]
+		"|cff0070dd|Hitem:119884:0:0:0:0:0:0:0:100:0:14:0|h[Primal Combatant's Ironskin Gloves]|h|r", -- [24]
+		"|cff0070dd|Hitem:119872:0:0:0:0:0:0:0:100:0:7:0|h[Primal Combatant's Bindings of Prowess]|h|r", -- [25]
+		"|cff0070dd|Hitem:119886:0:0:0:0:0:0:0:100:0:7:0|h[Primal Combatant's Ironskin Legguards]|h|r", -- [26]
+		"|cff0070dd|Hitem:115325:5335:0:0:0:0:0:0:100:0:1:2:190:42|h[Turbulent Spire of the Merciless]|h|r", -- [27]
+		"|cffa335ee|Hitem:109644:0:0:0:0:0:0:0:100:0:14:0|h[Walter]|h|r", -- [28]
+		"|cffa335ee|Hitem:113605:5312:0:0:0:0:0:0:100:0:6:1:567|h[Fireproof Greatcloak]|h|r", -- [29]
+		"|cffa335ee|Hitem:118812:5313:0:0:0:0:0:0:100:0:0:0|h[Flamelicked Cloak of Kaufebyrd]|h|r", -- [30]
+		"|cffa335ee|Hitem:112317:0:0:0:0:0:0:0:100:0:13:2:525:529|h[Winged Hourglass]|h|r", -- [31]
+		"|cffa335ee|Hitem:112319:0:0:0:0:0:0:0:100:0:13:2:530:527|h[Knight's Badge]|h|r", -- [32]
+		"|cffa335ee|Hitem:114551:0:0:0:0:0:0:0:100:0:1:0|h[Grandiose Prescience]|h|r", -- [33]
+		"|cffa335ee|Hitem:113650:0:0:0:0:0:0:0:100:0:5:1:566|h[Pillar of the Earth]|h|r", -- [34]
+		"|cffa335ee|Hitem:113846:5299:0:0:0:0:0:0:100:0:5:1:566|h[Seal of Unbound Frost]|h|r", -- [35]
+		"|cffa335ee|Hitem:113651:5301:0:0:0:0:0:0:100:0:5:2:41:566|h[Signet of Crystalline Barrage]|h|r", -- [36]
+		"|cffa335ee|Hitem:118304:0:0:0:0:0:0:0:100:0:14:0|h[Spellbound Solium Band of the Immortal Spirit]|h|r", -- [37]
+		"|cffa335ee|Hitem:118303:5299:0:0:0:0:0:0:100:0:14:0|h[Spellbound Solium Band of Sorcerous Invincibility]|h|r", -- [38]
+		"|cffa335ee|Hitem:114539:0:0:0:0:0:0:0:100:0:1:1:396|h[Dreamsleep Locket of the Diviner]|h|r", -- [39]
+		"|cffa335ee|Hitem:113662:5293:0:0:0:0:0:0:100:0:6:1:567|h[Collar of Wailing Mouths]|h|r", -- [40]
+		"|cffa335ee|Hitem:114622:0:0:0:0:0:0:0:100:0:0:0|h[Goredrenched Weaponry]|h|r", -- [41]
+	},
+	["IconInfo"] = {
+		["minimapPos"] = 141.788998964142,
+	},
+	["LastCharacterImport"] = "$11;Illidan;Comet;Slash Cry;13;2;90;6:600,5:600;1;.s1;15;3133310;120483,2851,1820,718,29,21049;.q1;99388s10u491x4633y0c11e4431;1s1u0x398y-398c41;2399s6f363u0;459s15u14x0c1e-8;1741s14u-14;8440s8u0b448b2x0c1e4d105424;63s17u0b0x-46c3e7d104448;1s3u0b-2b2x0y0c33e372d105445;255s11u0b0x60c2d104524;31s13u0b0d104553;39s12u0b0x-14c1d104578;3s9u0b-2b2e-392d105577;23s7u0b-2b2x-46y0c33e411d105596;80s5u0b-2b2x46y0z14c112e-406d105629;16s16u0b-2b2x-14c1e23d105649;15s2u0b0d104477$g\\4633\\76682\\4633,4567\\5 _Intellect_, 10 _CriticalStrike_\\76682,76616@g\\5031\\95345\\\\Courageous\\@g\\4587\\76636\\4817,4587,4520\\20 _CriticalStrike_\\83144,76636,76570@g\\4647\\76697\\4818,4647,4582\\20 _CriticalStrike_\\83146,76697,76631@e\\4431\\74720\\104417\\11 _Haste_\\74250=2@e\\4423\\74712\\104403\\12 _Intellect_\\74249=3,74250=3@e\\4427\\74716\\104408\\11 _CriticalStrike_\\74249=2,74250=1@e\\4434\\74729\\104445\\11 _Intellect_\\74250=3@e\\4806\\87559\\121195\\15 _Intellect_, 5 _CriticalStrike_\\39354=1,79255=3@e\\4414\\74703\\104389\\12 _Intellect_\\74248=3@e\\4825\\82445\\122392\\19 _Intellect_, 11 _CriticalStrike_\\82447=1@e\\4419\\74708\\104395\\5 All Stats\\74249=2,74250=3@e\\4442\\74724\\104427\\Jade Spirit\\74250=4,74248=10",
+	["Reps"] = {
+		[1269] = 7,
+		[1337] = 7,
+		[1341] = 5,
+		[1375] = 7,
+		[1387] = 0,
+		[1376] = 0,
+		[1270] = 6,
+		[1388] = 7,
+		[1435] = 7,
+	},
+	["Faction"] = "Horde",
+	["Professions"] = {
+	},
 	["Class"] = "MONK",
+	["Glyphs"] = {
+		{
+			125901, -- [1]
+			123334, -- [2]
+			125154, -- [3]
+			146950, -- [4]
+			125872, -- [5]
+			159536, -- [6]
+		}, -- [1]
+		{
+			125901, -- [1]
+			125678, -- [2]
+			125154, -- [3]
+			159490, -- [4]
+			125872, -- [5]
+			120477, -- [6]
+		}, -- [2]
+	},
 	["BankItemsAndCounts"] = {
 		[104532] = 1,
 		[112740] = 1,
@@ -454,12 +462,13 @@ AmrDb = {
 		[94987] = 1,
 		[103928] = 1,
 		[113634] = 1,
-		[109124] = 242,
+		[109124] = 259,
 		[90095] = 1,
 		[87067] = 1,
 		[95275] = 1,
 		[113667] = 1,
-		[109125] = 196,
+		[109125] = 203,
+		[37749] = 1,
 		[116855] = 1,
 		[95276] = 1,
 		[50069] = 1,
@@ -468,7 +477,7 @@ AmrDb = {
 		[104600] = 1,
 		[86320] = 1,
 		[113637] = 1,
-		[109127] = 179,
+		[109127] = 199,
 		[113478] = 6,
 		[118100] = 3,
 		[116395] = 1,
@@ -486,7 +495,7 @@ AmrDb = {
 		[101877] = 1,
 		[95279] = 1,
 		[99391] = 1,
-		[109129] = 162,
+		[109129] = 167,
 		[96650] = 1,
 		[112492] = 1,
 		[89112] = 9,
@@ -512,9 +521,9 @@ AmrDb = {
 		[113834] = 1,
 		[105770] = 1,
 		[115508] = 43,
-		[115524] = 549,
+		[115524] = 591,
 		[118345] = 1,
-		[113261] = 67,
+		[113261] = 97,
 		[90088] = 1,
 		[104639] = 1,
 		[119461] = 1,
@@ -522,60 +531,60 @@ AmrDb = {
 		[89945] = 1,
 		[99141] = 1,
 		[87427] = 1,
-		[109118] = 372,
+		[109118] = 234,
 		[96639] = 1,
 		[95125] = 1,
-		[115796] = 1,
-		[113262] = 43,
+		[118346] = 1,
+		[113262] = 77,
 		[87013] = 1,
 		[90089] = 1,
 		[104656] = 1,
 		[26045] = 100,
 		[118235] = 1,
-		[111366] = 463,
-		[109119] = 547,
-		[113263] = 113,
+		[111366] = 505,
+		[109119] = 486,
+		[113263] = 117,
 		[113295] = 9,
-		[86960] = 1,
-		[99381] = 1,
+		[115334] = 1,
+		[104555] = 1,
 		[119224] = 1,
 		[104705] = 1,
+		[99381] = 1,
 		[95265] = 1,
-		[64401] = 1,
 		[99143] = 1,
-		[95268] = 1,
-		[113657] = 1,
-		[64402] = 1,
+		[99146] = 1,
+		[115796] = 1,
+		[90090] = 1,
 		[109917] = 1,
 		[116053] = 3,
-		[113264] = 116,
-		[104684] = 1,
+		[113264] = 114,
+		[113657] = 1,
 		[90091] = 1,
-		[26044] = 40,
+		[105053] = 1,
+		[109133] = 1,
 		[113602] = 1,
-		[104533] = 1,
-		[109128] = 186,
-		[113832] = 1,
+		[113991] = 1,
+		[103835] = 1,
 		[94777] = 1,
-		[113636] = 3,
+		[112788] = 1,
 		[99144] = 1,
-		[94791] = 1,
+		[96649] = 1,
 		[120945] = 21,
 		[96642] = 1,
-		[96649] = 1,
-		[112788] = 1,
-		[103835] = 1,
-		[118346] = 1,
-		[113991] = 1,
+		[94791] = 1,
+		[113636] = 3,
+		[113832] = 1,
+		[109128] = 186,
+		[104533] = 1,
 		[112548] = 1,
-		[109133] = 1,
-		[105053] = 1,
+		[26044] = 40,
+		[104684] = 1,
 		[96531] = 1,
-		[90090] = 1,
-		[99146] = 1,
+		[95268] = 1,
+		[64401] = 1,
 		[113664] = 1,
 		[99145] = 1,
-		[104555] = 1,
-		[115334] = 1,
+		[86960] = 1,
+		[64402] = 1,
 	},
 }

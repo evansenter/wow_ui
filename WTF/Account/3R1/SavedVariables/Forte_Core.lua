@@ -17,7 +17,7 @@ FX_Saved = {
 		["Master Engineer Telonicus"] = 1,
 		["Fathom-Guard Sharkkis"] = 1,
 	},
-	["Update"] = 18954.301,
+	["Update"] = 14826.62,
 	["Profiles"] = {
 		["Active"] = 1,
 		["Characters"] = {
@@ -1125,7 +1125,7 @@ FX_Saved = {
 	["RaidStatus"] = {
 		["Metal"] = {
 			0, -- [1]
-			18954.301, -- [2]
+			14826.62, -- [2]
 			"WARRIOR", -- [3]
 			"v1.980.8", -- [4]
 		},

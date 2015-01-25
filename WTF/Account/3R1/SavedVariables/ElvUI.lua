@@ -17,12 +17,12 @@ ElvDB = {
 	},
 	["gold"] = {
 		["Illidan"] = {
-			["Metal"] = 16647013,
+			["Metal"] = 13230833,
 			["Combustion"] = 3728207,
 			["Natal"] = 272625,
-			["Evan"] = 9470750,
+			["Evan"] = 2727781,
 			["Plane"] = 498891,
-			["Comet"] = 28438923,
+			["Comet"] = 3677993831,
 		},
 		["Dark Iron"] = {
 			["Centromere"] = 229053,
@@ -2371,15 +2371,21 @@ ElvPrivateDB = {
 			["nameplate"] = {
 				["enable"] = false,
 			},
-			["unitframe"] = {
-				["enable"] = false,
-			},
 			["general"] = {
-				["normTex"] = "BantoBar",
 				["chatBubbles"] = "nobackdrop",
 				["namefont"] = "ABF",
+				["normTex"] = "BantoBar",
 				["glossTex"] = "BantoBar",
 				["dmgfont"] = "ABF",
+			},
+			["tooltip"] = {
+				["enable"] = false,
+			},
+			["auras"] = {
+				["enable"] = false,
+			},
+			["unitframe"] = {
+				["enable"] = false,
 			},
 			["actionbar"] = {
 				["enable"] = false,
@@ -2388,12 +2394,6 @@ ElvPrivateDB = {
 				["blizzard"] = {
 					["enable"] = false,
 				},
-			},
-			["tooltip"] = {
-				["enable"] = false,
-			},
-			["auras"] = {
-				["enable"] = false,
 			},
 			["install_complete"] = "7.62",
 		},
@@ -2528,6 +2528,8 @@ ElvPrivateDB = {
 				["enable"] = false,
 			},
 			["general"] = {
+				["normTex"] = "BantoBar",
+				["dmgfont"] = "ABF",
 				["minimapbar"] = {
 					["mouseover"] = true,
 				},
@@ -2535,9 +2537,7 @@ ElvPrivateDB = {
 					["enable"] = false,
 				},
 				["namefont"] = "ABF",
-				["normTex"] = "BantoBar",
 				["chatBubbles"] = "nobackdrop",
-				["dmgfont"] = "ABF",
 				["glossTex"] = "BantoBar",
 			},
 			["tooltip"] = {
@@ -2553,20 +2553,20 @@ ElvPrivateDB = {
 			["farmer"] = {
 				["enabled"] = false,
 			},
-			["actionbar"] = {
-				["enable"] = false,
-			},
 			["skins"] = {
 				["blizzard"] = {
-					["losscontrol"] = false,
-					["lfg"] = false,
-					["spellbook"] = false,
-					["trade"] = false,
-					["pvp"] = false,
-					["enable"] = false,
-					["talent"] = false,
 					["achievement"] = false,
+					["talent"] = false,
+					["enable"] = false,
+					["lfg"] = false,
+					["losscontrol"] = false,
+					["pvp"] = false,
+					["trade"] = false,
+					["spellbook"] = false,
 				},
+			},
+			["actionbar"] = {
+				["enable"] = false,
 			},
 			["install_complete"] = "6.992",
 		},
@@ -2628,16 +2628,16 @@ ElvPrivateDB = {
 			["general"] = {
 				["normTex"] = "BantoBar",
 				["dmgfont"] = "ABF",
-				["chatBubbles"] = "nobackdrop",
-				["raidmarkerbar"] = {
-					["enable"] = false,
-				},
-				["namefont"] = "ABF",
 				["minimapbar"] = {
 					["mouseover"] = true,
 					["backdrop"] = true,
 					["buttonSize"] = 24,
 				},
+				["raidmarkerbar"] = {
+					["enable"] = false,
+				},
+				["namefont"] = "ABF",
+				["chatBubbles"] = "nobackdrop",
 				["glossTex"] = "BantoBar",
 			},
 			["tooltip"] = {
