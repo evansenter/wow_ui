@@ -14,32 +14,32 @@ MacroToolkitDB = {
 			},
 		},
 	},
-	["global"] = {
-		["backups"] = {
-		},
-		["ebackups"] = {
-		},
-	},
 	["profileKeys"] = {
 		["Metal - Illidan"] = "profile",
-		["Comet - Illidan"] = "profile",
 		["Plane - Illidan"] = "profile",
-		["Evan - Illidan"] = "profile",
-		["Natal - Illidan"] = "profile",
 		["Combustion - Illidan"] = "profile",
+		["Natal - Illidan"] = "profile",
+		["Evan - Illidan"] = "profile",
+		["Comet - Illidan"] = "profile",
+	},
+	["global"] = {
+		["ebackups"] = {
+		},
+		["backups"] = {
+		},
 	},
 	["profiles"] = {
 		["profile"] = {
-			["y"] = 650.99951171875,
-			["x"] = 679.399475097656,
+			["y"] = 513.999572753906,
+			["x"] = 1096.3994140625,
 			["override"] = true,
 			["fonts"] = {
 				["edfont"] = "ABF",
 				["edsize"] = 12,
 				["mfont"] = "ABF",
 				["mifont"] = "ABF",
-				["misize"] = 12,
 				["errsize"] = 12,
+				["misize"] = 12,
 				["errfont"] = "ABF",
 			},
 		},

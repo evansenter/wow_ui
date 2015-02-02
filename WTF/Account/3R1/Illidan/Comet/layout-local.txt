@@ -9,7 +9,7 @@ H: 240
 Frame: RaidUtility_ShowButton
 FrameLevel: 1
 Anchor: TOP
-X: 0
+X: -5
 Y: 1
 W: 136
 H: 18

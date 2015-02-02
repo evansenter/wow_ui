@@ -3,6 +3,11 @@ VER 3 0100000000000007 "Bladestorm" "INV_Misc_QuestionMark"
 /cast Blood Fury
 /cast [talent:6/3] Bladestorm
 END
+VER 3 010000000000000A "Dev. / HS" "INV_Misc_QuestionMark"
+#showtooltip
+/cast Heroic Strike
+/cast Devastate
+END
 VER 3 0100000000000001 "Heroic Leap" "INV_Misc_QuestionMark"
 #showtooltip
 /cast !Heroic Leap
@@ -17,9 +22,9 @@ VER 3 0100000000000006 "Recklessness" "INV_Misc_QuestionMark"
 /cast Blood Fury
 END
 VER 3 0100000000000009 "Shield Charge" "INV_Misc_QuestionMark"
-#showtooltip Shield Charge
+#showtooltip Shield Block
+/cast Shield Block
 /cast Blood Fury
-/cast Shield Charge
 END
 VER 3 0100000000000004 "Tier 6" "INV_Misc_QuestionMark"
 #showtooltip

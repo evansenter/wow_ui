@@ -861,6 +861,7 @@ function MT:CreateMTFrame()
 	mtbind:SetScript("OnClick", function() if not MT.MTKF then MT.MTKF = MT:CreateBindingFrame() end; MT.MTKF:Show() end)
 
 	MT:UpdateInterfaceOptions()
+	tinsert(UISpecialFrames, "MacroToolkitFrame")
 	return mtframe
 end
 

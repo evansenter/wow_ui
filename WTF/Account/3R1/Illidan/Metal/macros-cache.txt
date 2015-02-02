@@ -38,5 +38,5 @@ VER 3 0100000000000005 "Tier 7" "INV_Misc_QuestionMark"
 END
 VER 3 0100000000000002 "Vigilance" "INV_Misc_QuestionMark"
 #showtooltip Vigilance
-/cast [@mouseover,help,nodead] Vigilance
+/cast [@mouseover,help,nodead][] Vigilance
 END

@@ -1,8 +1,8 @@
 
 AmrDb = {
 	["Talents"] = {
-		"3133213", -- [1]
-		"3122322", -- [2]
+		"3132213", -- [1]
+		"3132223", -- [2]
 	},
 	["LastCharacterImportDate"] = "10/19/14 23:40:35",
 	["RealmName"] = "Illidan",
@@ -13,7 +13,7 @@ AmrDb = {
 	["Equipped"] = {
 		{
 			"|cffa335ee|Hitem:109171:0:0:0:0:0:0:0:100:0:13:3:527:531:79|h[Night-Vision Mechshades of the Savage]|h|r", -- [1]
-			"|cffa335ee|Hitem:114539:0:0:0:0:0:0:0:100:0:1:1:396|h[Dreamsleep Locket of the Diviner]|h|r", -- [2]
+			"|cffa335ee|Hitem:113662:5293:0:0:0:0:0:0:100:0:6:1:567|h[Collar of Wailing Mouths]|h|r", -- [2]
 			"|cffa335ee|Hitem:118890:0:0:0:0:0:0:0:100:0:0:0|h[Studded Frostboar Leather Spaulders]|h|r", -- [3]
 			nil, -- [4]
 			"|cffa335ee|Hitem:113601:0:0:0:0:0:0:0:100:0:6:1:567|h[Chestguard of the Roaring Crowd]|h|r", -- [5]
@@ -22,12 +22,13 @@ AmrDb = {
 			"|cffa335ee|Hitem:113649:0:0:0:0:0:0:0:100:0:6:1:567|h[Mountainwalker's Boots]|h|r", -- [8]
 			"|cffa335ee|Hitem:113634:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Bracers of Spare Skin]|h|r", -- [9]
 			"|cffa335ee|Hitem:113832:0:0:0:0:0:0:0:100:0:6:1:567|h[Treacherous Palms]|h|r", -- [10]
-			"|cffa335ee|Hitem:118304:0:0:0:0:0:0:0:100:0:14:0|h[Spellbound Solium Band of the Immortal Spirit]|h|r", -- [11]
-			"|cffa335ee|Hitem:113651:5301:0:0:0:0:0:0:100:0:5:2:41:566|h[Signet of Crystalline Barrage]|h|r", -- [12]
-			"|cffa335ee|Hitem:112317:0:0:0:0:0:0:0:100:0:13:2:525:529|h[Winged Hourglass]|h|r", -- [13]
-			"|cffa335ee|Hitem:114551:0:0:0:0:0:0:0:100:0:1:0|h[Grandiose Prescience]|h|r", -- [14]
-			"|cffa335ee|Hitem:118812:5313:0:0:0:0:0:0:100:0:0:0|h[Flamelicked Cloak of Kaufebyrd]|h|r", -- [15]
-			"|cff0070dd|Hitem:115325:5335:0:0:0:0:0:0:100:0:1:2:190:42|h[Turbulent Spire of the Merciless]|h|r", -- [16]
+			"|cffa335ee|Hitem:118303:5299:0:0:0:0:0:0:100:0:14:0|h[Spellbound Solium Band of Sorcerous Invincibility]|h|r", -- [11]
+			"|cffa335ee|Hitem:113846:5299:0:0:0:0:0:0:100:0:5:1:566|h[Seal of Unbound Frost]|h|r", -- [12]
+			"|cffa335ee|Hitem:113650:0:0:0:0:0:0:0:100:0:5:1:566|h[Pillar of the Earth]|h|r", -- [13]
+			"|cffa335ee|Hitem:112319:0:0:0:0:0:0:0:100:0:13:2:530:527|h[Knight's Badge]|h|r", -- [14]
+			"|cffa335ee|Hitem:113605:5312:0:0:0:0:0:0:100:0:6:1:567|h[Fireproof Greatcloak]|h|r", -- [15]
+			"|cffa335ee|Hitem:113591:5334:5349:0:0:0:0:0:100:0:6:3:565:43:567|h[The Bladefist]|h|r", -- [16]
+			"|cffa335ee|Hitem:113591:5337:0:0:0:0:0:0:100:0:6:1:567|h[The Bladefist]|h|r", -- [17]
 		}, -- [1]
 		{
 			"|cffa335ee|Hitem:109171:0:0:0:0:0:0:0:100:0:13:3:527:531:79|h[Night-Vision Mechshades of the Savage]|h|r", -- [1]
@@ -49,13 +50,7 @@ AmrDb = {
 			"|cffa335ee|Hitem:113591:5337:0:0:0:0:0:0:100:0:6:1:567|h[The Bladefist]|h|r", -- [17]
 		}, -- [2]
 	},
-	["SendSettings"] = {
-		["SendTo"] = "evan",
-		["SendGems"] = true,
-		["SendEnchants"] = true,
-		["SendEnchantMaterials"] = true,
-		["SendToType"] = "mail",
-	},
+	["Class"] = "MONK",
 	["BankItems"] = {
 		"|cffffffff|Hitem:118345:0:0:0:0:0:0:0:100:0:4:0|h[Arcane Crystal Conduit]|h|r", -- [1]
 		"|cffffffff|Hitem:118344:0:0:0:0:0:0:0:100:0:4:0|h[Arcane Crystal Casing]|h|r", -- [2]
@@ -176,7 +171,7 @@ AmrDb = {
 		"|cffa335ee|Hitem:113667:5331:0:0:0:0:0:0:100:0:5:1:566|h[Phemos' Double Slasher]|h|r", -- [117]
 	},
 	["Specs"] = {
-		15, -- [1]
+		14, -- [1]
 		16, -- [2]
 	},
 	["Options"] = {
@@ -186,10 +181,94 @@ AmrDb = {
 		[402] = 1,
 		[361] = 1,
 		[390] = 1110,
-		[823] = 744,
+		[823] = 844,
 		[392] = 50,
-		[-1] = 30733201,
+		[-1] = 3362852130,
 		[615] = 1,
+	},
+	["Glyphs"] = {
+		{
+			125901, -- [1]
+			123401, -- [2]
+			125154, -- [3]
+			146950, -- [4]
+			125872, -- [5]
+			124997, -- [6]
+		}, -- [1]
+		{
+			125901, -- [1]
+			125678, -- [2]
+			125154, -- [3]
+			159490, -- [4]
+			125872, -- [5]
+			120477, -- [6]
+		}, -- [2]
+	},
+	["LogData"] = {
+		["_wipes"] = {
+		},
+		["_autoLog"] = {
+			[1228] = "disabled",
+			[1136] = "disabled",
+			[1205] = "disabled",
+		},
+		["_lastDiff"] = 1,
+		["_lastZone"] = "FW Horde Garrison Level 3",
+	},
+	["BagItems"] = {
+		"|cffffffff|Hitem:97985:0:0:0:0:0:0:0:100:0:0:0|h[Dusty Old Robot]|h|r", -- [1]
+		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [2]
+		"|cffffffff|Hitem:110560:0:0:0:0:0:0:0:100:0:11:0|h[Garrison Hearthstone]|h|r", -- [3]
+		"|cffffffff|Hitem:20815:0:0:0:0:0:0:0:100:0:0:0|h[Jeweler's Kit]|h|r", -- [4]
+		"|cffffffff|Hitem:87216:0:0:0:0:0:0:0:100:0:11:0|h[Thermal Anvil]|h|r", -- [5]
+		"|cffffffff|Hitem:87216:0:0:0:0:0:0:0:100:0:11:0|h[Thermal Anvil]|h|r", -- [6]
+		"|cffffffff|Hitem:10498:0:0:0:0:0:0:2111593344:100:0:0:0|h[Gyromatic Micro-Adjustor]|h|r", -- [7]
+		"|cffffffff|Hitem:109155:0:0:0:0:0:0:0:100:0:0:0|h[Greater Draenic Intellect Flask]|h|r", -- [8]
+		"|cffffffff|Hitem:5956:0:0:0:0:0:0:0:100:0:0:0|h[Blacksmith Hammer]|h|r", -- [9]
+		"|cffffffff|Hitem:6219:0:0:0:0:0:0:1499919744:100:0:0:0|h[Arclight Spanner]|h|r", -- [10]
+		"|cffffffff|Hitem:6256:0:0:0:0:0:0:0:100:0:14:0|h[Fishing Pole]|h|r", -- [11]
+		"|cff0070dd|Hitem:118354:0:0:0:0:0:0:0:100:0:0:0|h[Follower Re-training Certificate]|h|r", -- [12]
+		"|cff0070dd|Hitem:118427:0:0:0:0:0:0:0:100:0:1:0|h[Autographed Hearthstone Card]|h|r", -- [13]
+		"|cff0070dd|Hitem:111820:0:0:0:0:0:0:0:100:0:0:0|h[Swapblaster]|h|r", -- [14]
+		"|cff0070dd|Hitem:118475:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone Strategy Guide]|h|r", -- [15]
+		"|cff0070dd|Hitem:118922:0:0:0:0:0:0:0:100:0:11:0|h[Oralius' Whispering Crystal]|h|r", -- [16]
+		"|cff0070dd|Hitem:119926:0:0:0:0:0:0:0:100:0:7:1:547|h[Primal Combatant's Badge of Conquest]|h|r", -- [17]
+		"|cff0070dd|Hitem:119933:0:0:0:0:0:0:0:100:0:14:0|h[Primal Combatant's Medallion of Cruelty]|h|r", -- [18]
+		"|cff0070dd|Hitem:119884:0:0:0:0:0:0:0:100:0:14:0|h[Primal Combatant's Ironskin Gloves]|h|r", -- [19]
+		"|cff0070dd|Hitem:119872:0:0:0:0:0:0:0:100:0:7:0|h[Primal Combatant's Bindings of Prowess]|h|r", -- [20]
+		"|cff0070dd|Hitem:119886:0:0:0:0:0:0:0:100:0:7:0|h[Primal Combatant's Ironskin Legguards]|h|r", -- [21]
+		"|cff0070dd|Hitem:115325:5335:0:0:0:0:0:0:100:0:1:2:190:42|h[Turbulent Spire of the Merciless]|h|r", -- [22]
+		"|cffa335ee|Hitem:109644:0:0:0:0:0:0:0:100:0:14:0|h[Walter]|h|r", -- [23]
+		"|cffa335ee|Hitem:113657:5313:0:0:0:0:0:0:100:0:6:1:567|h[Cloak of Creeping Necrosis]|h|r", -- [24]
+		"|cffa335ee|Hitem:118812:5313:0:0:0:0:0:0:100:0:0:0|h[Flamelicked Cloak of Kaufebyrd]|h|r", -- [25]
+		"|cffa335ee|Hitem:112317:0:0:0:0:0:0:0:100:0:13:2:525:529|h[Winged Hourglass]|h|r", -- [26]
+		"|cffa335ee|Hitem:113612:0:0:0:0:0:0:0:100:0:3:0|h[Scales of Doom]|h|r", -- [27]
+		"|cffa335ee|Hitem:112318:0:0:0:0:0:0:0:100:0:13:2:530:527|h[Skull of War]|h|r", -- [28]
+		"|cffa335ee|Hitem:113842:0:0:0:0:0:0:0:100:0:5:1:566|h[Emblem of Caustic Healing]|h|r", -- [29]
+		"|cffa335ee|Hitem:111271:5327:0:0:0:0:0:0:100:0:14:0|h[Primal Gladiator's Ring of Prowess]|h|r", -- [30]
+		"|cffa335ee|Hitem:113651:5301:0:0:0:0:0:0:100:0:5:2:41:566|h[Signet of Crystalline Barrage]|h|r", -- [31]
+		"|cffa335ee|Hitem:118304:5301:0:0:0:0:0:0:100:0:14:0|h[Spellbound Solium Band of the Immortal Spirit]|h|r", -- [32]
+		"|cffa335ee|Hitem:118302:5327:0:0:0:0:0:0:100:0:11:0|h[Spellbound Solium Band of Fatal Strikes]|h|r", -- [33]
+		"|cffa335ee|Hitem:113851:5320:5349:0:0:0:0:0:100:0:5:2:564:566|h[Reaver's Nose Ring]|h|r", -- [34]
+		"|cffa335ee|Hitem:113598:5294:0:0:0:0:0:0:100:0:6:1:567|h[Champion's Medallion]|h|r", -- [35]
+	},
+	["IconInfo"] = {
+		["minimapPos"] = 141.788998964142,
+	},
+	["LastCharacterImport"] = "$11;Illidan;Comet;Slash Cry;13;2;90;6:600,5:600;1;.s1;15;3133310;120483,2851,1820,718,29,21049;.q1;99388s10u491x4633y0c11e4431;1s1u0x398y-398c41;2399s6f363u0;459s15u14x0c1e-8;1741s14u-14;8440s8u0b448b2x0c1e4d105424;63s17u0b0x-46c3e7d104448;1s3u0b-2b2x0y0c33e372d105445;255s11u0b0x60c2d104524;31s13u0b0d104553;39s12u0b0x-14c1d104578;3s9u0b-2b2e-392d105577;23s7u0b-2b2x-46y0c33e411d105596;80s5u0b-2b2x46y0z14c112e-406d105629;16s16u0b-2b2x-14c1e23d105649;15s2u0b0d104477$g\\4633\\76682\\4633,4567\\5 _Intellect_, 10 _CriticalStrike_\\76682,76616@g\\5031\\95345\\\\Courageous\\@g\\4587\\76636\\4817,4587,4520\\20 _CriticalStrike_\\83144,76636,76570@g\\4647\\76697\\4818,4647,4582\\20 _CriticalStrike_\\83146,76697,76631@e\\4431\\74720\\104417\\11 _Haste_\\74250=2@e\\4423\\74712\\104403\\12 _Intellect_\\74249=3,74250=3@e\\4427\\74716\\104408\\11 _CriticalStrike_\\74249=2,74250=1@e\\4434\\74729\\104445\\11 _Intellect_\\74250=3@e\\4806\\87559\\121195\\15 _Intellect_, 5 _CriticalStrike_\\39354=1,79255=3@e\\4414\\74703\\104389\\12 _Intellect_\\74248=3@e\\4825\\82445\\122392\\19 _Intellect_, 11 _CriticalStrike_\\82447=1@e\\4419\\74708\\104395\\5 All Stats\\74249=2,74250=3@e\\4442\\74724\\104427\\Jade Spirit\\74250=4,74248=10",
+	["Reps"] = {
+		[1269] = 7,
+		[1337] = 7,
+		[1341] = 5,
+		[1375] = 7,
+		[1387] = 0,
+		[1376] = 0,
+		[1435] = 7,
+		[1388] = 7,
+		[1270] = 6,
+	},
+	["Faction"] = "Horde",
+	["Professions"] = {
 	},
 	["VoidItems"] = {
 		"|cffa335ee|Hitem:69210:0:0:0:0:0:0:0:100:0:0:0|h[Renowned Guild Tabard]|h|r", -- [1]
@@ -353,96 +432,12 @@ AmrDb = {
 		"|cff0070dd|Hitem:113789:0:0:0:0:0:0:0:100:0:14:0|h[Thunderlord Girdle]|h|r", -- [159]
 		"|cffa335ee|Hitem:116206:0:0:0:0:0:0:0:100:0:4:0|h[Warmage's Legwraps]|h|r", -- [160]
 	},
-	["LogData"] = {
-		["_wipes"] = {
-		},
-		["_autoLog"] = {
-			[1228] = "disabled",
-			[1136] = "disabled",
-			[1205] = "disabled",
-		},
-		["_lastDiff"] = 0,
-		["_lastZone"] = "Draenor",
-	},
-	["BagItems"] = {
-		"|cffa335ee|Hitem:113611:0:0:0:0:0:0:0:100:0:5:1:566|h[Flenser's Hookring]|h|r", -- [1]
-		"|cff0070dd|Hitem:114129:0:0:0:0:0:0:0:100:0:0:0|h[Striking Weapon Enhancement]|h|r", -- [2]
-		"|cff1eff00|Hitem:113263:0:0:0:0:0:0:0:100:0:0:0|h[Sorcerous Earth]|h|r", -- [3]
-		"|cff1eff00|Hitem:113261:0:0:0:0:0:0:0:100:0:0:0|h[Sorcerous Fire]|h|r", -- [4]
-		"|cffffffff|Hitem:114116:0:0:0:0:0:0:0:100:0:0:0|h[Bag of Salvaged Goods]|h|r", -- [5]
-		"|cff0070dd|Hitem:118474:0:0:0:0:0:0:0:100:0:0:0|h[Supreme Manual of Dance]|h|r", -- [6]
-		"|cff0070dd|Hitem:114311:0:0:0:0:0:0:0:100:0:1:1:486|h[Shadow-Gorged Bracers of the Decimator]|h|r", -- [7]
-		"|cff0070dd|Hitem:114476:0:0:0:0:0:0:0:100:0:1:1:170|h[Beastminder Cabochon of the Aurora]|h|r", -- [8]
-		"|cff1eff00|Hitem:114120:0:0:0:0:0:0:0:100:0:0:0|h[Big Crate of Salvage]|h|r", -- [9]
-		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [10]
-		"|cffffffff|Hitem:110560:0:0:0:0:0:0:0:100:0:11:0|h[Garrison Hearthstone]|h|r", -- [11]
-		"|cffffffff|Hitem:20815:0:0:0:0:0:0:0:100:0:0:0|h[Jeweler's Kit]|h|r", -- [12]
-		"|cffffffff|Hitem:87216:0:0:0:0:0:0:0:100:0:11:0|h[Thermal Anvil]|h|r", -- [13]
-		"|cffffffff|Hitem:87216:0:0:0:0:0:0:0:100:0:11:0|h[Thermal Anvil]|h|r", -- [14]
-		"|cffffffff|Hitem:87216:0:0:0:0:0:0:0:100:0:11:0|h[Thermal Anvil]|h|r", -- [15]
-		"|cffffffff|Hitem:10498:0:0:0:0:0:0:2111593344:100:0:0:0|h[Gyromatic Micro-Adjustor]|h|r", -- [16]
-		"|cffffffff|Hitem:5956:0:0:0:0:0:0:0:100:0:0:0|h[Blacksmith Hammer]|h|r", -- [17]
-		"|cffffffff|Hitem:6219:0:0:0:0:0:0:1499919744:100:0:0:0|h[Arclight Spanner]|h|r", -- [18]
-		"|cffffffff|Hitem:6256:0:0:0:0:0:0:0:100:0:14:0|h[Fishing Pole]|h|r", -- [19]
-		"|cff1eff00|Hitem:114745:0:0:0:0:0:0:0:100:0:0:0|h[Braced Armor Enhancement]|h|r", -- [20]
-		"|cff0070dd|Hitem:118922:0:0:0:0:0:0:0:100:0:11:0|h[Oralius' Whispering Crystal]|h|r", -- [21]
-		"|cff0070dd|Hitem:119926:0:0:0:0:0:0:0:100:0:7:1:547|h[Primal Combatant's Badge of Conquest]|h|r", -- [22]
-		"|cff0070dd|Hitem:119933:0:0:0:0:0:0:0:100:0:14:0|h[Primal Combatant's Medallion of Cruelty]|h|r", -- [23]
-		"|cff0070dd|Hitem:119884:0:0:0:0:0:0:0:100:0:14:0|h[Primal Combatant's Ironskin Gloves]|h|r", -- [24]
-		"|cff0070dd|Hitem:119872:0:0:0:0:0:0:0:100:0:7:0|h[Primal Combatant's Bindings of Prowess]|h|r", -- [25]
-		"|cff0070dd|Hitem:119886:0:0:0:0:0:0:0:100:0:7:0|h[Primal Combatant's Ironskin Legguards]|h|r", -- [26]
-		"|cff0070dd|Hitem:115325:5335:0:0:0:0:0:0:100:0:1:2:190:42|h[Turbulent Spire of the Merciless]|h|r", -- [27]
-		"|cffa335ee|Hitem:109644:0:0:0:0:0:0:0:100:0:14:0|h[Walter]|h|r", -- [28]
-		"|cffa335ee|Hitem:113605:5312:0:0:0:0:0:0:100:0:6:1:567|h[Fireproof Greatcloak]|h|r", -- [29]
-		"|cffa335ee|Hitem:118812:5313:0:0:0:0:0:0:100:0:0:0|h[Flamelicked Cloak of Kaufebyrd]|h|r", -- [30]
-		"|cffa335ee|Hitem:112317:0:0:0:0:0:0:0:100:0:13:2:525:529|h[Winged Hourglass]|h|r", -- [31]
-		"|cffa335ee|Hitem:112319:0:0:0:0:0:0:0:100:0:13:2:530:527|h[Knight's Badge]|h|r", -- [32]
-		"|cffa335ee|Hitem:114551:0:0:0:0:0:0:0:100:0:1:0|h[Grandiose Prescience]|h|r", -- [33]
-		"|cffa335ee|Hitem:113650:0:0:0:0:0:0:0:100:0:5:1:566|h[Pillar of the Earth]|h|r", -- [34]
-		"|cffa335ee|Hitem:113846:5299:0:0:0:0:0:0:100:0:5:1:566|h[Seal of Unbound Frost]|h|r", -- [35]
-		"|cffa335ee|Hitem:113651:5301:0:0:0:0:0:0:100:0:5:2:41:566|h[Signet of Crystalline Barrage]|h|r", -- [36]
-		"|cffa335ee|Hitem:118304:0:0:0:0:0:0:0:100:0:14:0|h[Spellbound Solium Band of the Immortal Spirit]|h|r", -- [37]
-		"|cffa335ee|Hitem:118303:5299:0:0:0:0:0:0:100:0:14:0|h[Spellbound Solium Band of Sorcerous Invincibility]|h|r", -- [38]
-		"|cffa335ee|Hitem:114539:0:0:0:0:0:0:0:100:0:1:1:396|h[Dreamsleep Locket of the Diviner]|h|r", -- [39]
-		"|cffa335ee|Hitem:113662:5293:0:0:0:0:0:0:100:0:6:1:567|h[Collar of Wailing Mouths]|h|r", -- [40]
-		"|cffa335ee|Hitem:114622:0:0:0:0:0:0:0:100:0:0:0|h[Goredrenched Weaponry]|h|r", -- [41]
-	},
-	["IconInfo"] = {
-		["minimapPos"] = 141.788998964142,
-	},
-	["LastCharacterImport"] = "$11;Illidan;Comet;Slash Cry;13;2;90;6:600,5:600;1;.s1;15;3133310;120483,2851,1820,718,29,21049;.q1;99388s10u491x4633y0c11e4431;1s1u0x398y-398c41;2399s6f363u0;459s15u14x0c1e-8;1741s14u-14;8440s8u0b448b2x0c1e4d105424;63s17u0b0x-46c3e7d104448;1s3u0b-2b2x0y0c33e372d105445;255s11u0b0x60c2d104524;31s13u0b0d104553;39s12u0b0x-14c1d104578;3s9u0b-2b2e-392d105577;23s7u0b-2b2x-46y0c33e411d105596;80s5u0b-2b2x46y0z14c112e-406d105629;16s16u0b-2b2x-14c1e23d105649;15s2u0b0d104477$g\\4633\\76682\\4633,4567\\5 _Intellect_, 10 _CriticalStrike_\\76682,76616@g\\5031\\95345\\\\Courageous\\@g\\4587\\76636\\4817,4587,4520\\20 _CriticalStrike_\\83144,76636,76570@g\\4647\\76697\\4818,4647,4582\\20 _CriticalStrike_\\83146,76697,76631@e\\4431\\74720\\104417\\11 _Haste_\\74250=2@e\\4423\\74712\\104403\\12 _Intellect_\\74249=3,74250=3@e\\4427\\74716\\104408\\11 _CriticalStrike_\\74249=2,74250=1@e\\4434\\74729\\104445\\11 _Intellect_\\74250=3@e\\4806\\87559\\121195\\15 _Intellect_, 5 _CriticalStrike_\\39354=1,79255=3@e\\4414\\74703\\104389\\12 _Intellect_\\74248=3@e\\4825\\82445\\122392\\19 _Intellect_, 11 _CriticalStrike_\\82447=1@e\\4419\\74708\\104395\\5 All Stats\\74249=2,74250=3@e\\4442\\74724\\104427\\Jade Spirit\\74250=4,74248=10",
-	["Reps"] = {
-		[1269] = 7,
-		[1337] = 7,
-		[1341] = 5,
-		[1375] = 7,
-		[1387] = 0,
-		[1376] = 0,
-		[1270] = 6,
-		[1388] = 7,
-		[1435] = 7,
-	},
-	["Faction"] = "Horde",
-	["Professions"] = {
-	},
-	["Class"] = "MONK",
-	["Glyphs"] = {
-		{
-			125901, -- [1]
-			123334, -- [2]
-			125154, -- [3]
-			146950, -- [4]
-			125872, -- [5]
-			159536, -- [6]
-		}, -- [1]
-		{
-			125901, -- [1]
-			125678, -- [2]
-			125154, -- [3]
-			159490, -- [4]
-			125872, -- [5]
-			120477, -- [6]
-		}, -- [2]
+	["SendSettings"] = {
+		["SendTo"] = "evan",
+		["SendGems"] = true,
+		["SendEnchants"] = true,
+		["SendEnchantMaterials"] = true,
+		["SendToType"] = "mail",
 	},
 	["BankItemsAndCounts"] = {
 		[104532] = 1,
@@ -462,12 +457,12 @@ AmrDb = {
 		[94987] = 1,
 		[103928] = 1,
 		[113634] = 1,
-		[109124] = 259,
+		[109124] = 183,
 		[90095] = 1,
 		[87067] = 1,
 		[95275] = 1,
 		[113667] = 1,
-		[109125] = 203,
+		[109125] = 247,
 		[37749] = 1,
 		[116855] = 1,
 		[95276] = 1,
@@ -477,8 +472,9 @@ AmrDb = {
 		[104600] = 1,
 		[86320] = 1,
 		[113637] = 1,
-		[109127] = 199,
-		[113478] = 6,
+		[110609] = 57,
+		[109127] = 147,
+		[113478] = 7,
 		[118100] = 3,
 		[116395] = 1,
 		[90146] = 4,
@@ -495,8 +491,8 @@ AmrDb = {
 		[101877] = 1,
 		[95279] = 1,
 		[99391] = 1,
-		[109129] = 167,
-		[96650] = 1,
+		[109129] = 245,
+		[86960] = 1,
 		[112492] = 1,
 		[89112] = 9,
 		[113640] = 1,
@@ -521,9 +517,9 @@ AmrDb = {
 		[113834] = 1,
 		[105770] = 1,
 		[115508] = 43,
-		[115524] = 591,
+		[115524] = 479,
 		[118345] = 1,
-		[113261] = 97,
+		[113261] = 110,
 		[90088] = 1,
 		[104639] = 1,
 		[119461] = 1,
@@ -531,60 +527,62 @@ AmrDb = {
 		[89945] = 1,
 		[99141] = 1,
 		[87427] = 1,
-		[109118] = 234,
+		[109118] = 638,
 		[96639] = 1,
 		[95125] = 1,
-		[118346] = 1,
-		[113262] = 77,
+		[115796] = 1,
+		[113262] = 87,
 		[87013] = 1,
 		[90089] = 1,
 		[104656] = 1,
+		[111557] = 35,
 		[26045] = 100,
 		[118235] = 1,
-		[111366] = 505,
-		[109119] = 486,
-		[113263] = 117,
+		[111366] = 633,
+		[109119] = 682,
+		[109693] = 30,
 		[113295] = 9,
-		[115334] = 1,
-		[104555] = 1,
+		[118346] = 1,
+		[99381] = 1,
+		[104684] = 1,
 		[119224] = 1,
 		[104705] = 1,
-		[99381] = 1,
-		[95265] = 1,
+		[26044] = 40,
+		[64401] = 1,
 		[99143] = 1,
-		[99146] = 1,
-		[115796] = 1,
-		[90090] = 1,
+		[94791] = 1,
+		[95268] = 1,
+		[64402] = 1,
 		[109917] = 1,
 		[116053] = 3,
-		[113264] = 114,
-		[113657] = 1,
+		[113264] = 134,
+		[109128] = 222,
 		[90091] = 1,
-		[105053] = 1,
-		[109133] = 1,
-		[113602] = 1,
-		[113991] = 1,
-		[103835] = 1,
+		[113657] = 1,
+		[113263] = 69,
+		[113832] = 1,
+		[113636] = 3,
+		[120945] = 21,
 		[94777] = 1,
-		[112788] = 1,
+		[95265] = 1,
 		[99144] = 1,
 		[96649] = 1,
-		[120945] = 21,
-		[96642] = 1,
-		[94791] = 1,
-		[113636] = 3,
-		[113832] = 1,
-		[109128] = 186,
 		[104533] = 1,
+		[96642] = 1,
+		[112788] = 1,
+		[113991] = 1,
+		[113602] = 1,
+		[109133] = 1,
+		[103835] = 1,
 		[112548] = 1,
-		[26044] = 40,
-		[104684] = 1,
+		[96650] = 1,
+		[90090] = 1,
 		[96531] = 1,
-		[95268] = 1,
-		[64401] = 1,
+		[105053] = 1,
+		[99146] = 1,
 		[113664] = 1,
 		[99145] = 1,
-		[86960] = 1,
-		[64402] = 1,
+		[104555] = 1,
+		[115334] = 1,
 	},
 }

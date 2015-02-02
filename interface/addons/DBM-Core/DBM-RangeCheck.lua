@@ -113,13 +113,18 @@ do
 
 	local function setRange(self, range)
 		rangeCheck:Hide()
-		rangeCheck:Show(range, mainFrame.filter, true)
+		rangeCheck:Show(range, mainFrame.filter, true, mainFrame.redCircleNumPlayers or 1)
+	end
+	
+	local function setThreshold(self, threshold)
+		rangeCheck:Hide()
+		rangeCheck:Show(mainFrame.range, mainFrame.filter, true, threshold)
 	end
 
 	local function setFrames(self, option)
 		DBM.Options.RangeFrameFrames = option
 		rangeCheck:Hide()
-		rangeCheck:Show(mainFrame.range, mainFrame.filter, true)
+		rangeCheck:Show(mainFrame.range, mainFrame.filter, true, mainFrame.redCircleNumPlayers or 1)
 	end
 
 	local function toggleLocked()
@@ -135,6 +140,14 @@ do
 			info.hasArrow = true
 			info.keepShownOnClick = true
 			info.menuList = "range"
+			UIDropDownMenu_AddButton(info, 1)
+
+			info = UIDropDownMenu_CreateInfo()
+			info.text = DBM_CORE_RANGECHECK_SETTHRESHOLD
+			info.notCheckable = true
+			info.hasArrow = true
+			info.keepShownOnClick = true
+			info.menuList = "threshold"
 			UIDropDownMenu_AddButton(info, 1)
 
 			info = UIDropDownMenu_CreateInfo()
@@ -224,6 +237,55 @@ do
 				info.func = setRange
 				info.arg1 = 28
 				info.checked = (mainFrame.range == 28)
+				UIDropDownMenu_AddButton(info, 2)
+			elseif menu == "threshold" then
+				info = UIDropDownMenu_CreateInfo()
+				info.text = 1
+				info.func = setThreshold
+				info.arg1 = 1
+				info.checked = (mainFrame.redCircleNumPlayers == 1)
+				UIDropDownMenu_AddButton(info, 2)
+
+				info = UIDropDownMenu_CreateInfo()
+				info.text = 2
+				info.func = setThreshold
+				info.arg1 = 2
+				info.checked = (mainFrame.redCircleNumPlayers == 2)
+				UIDropDownMenu_AddButton(info, 2)
+				
+				info = UIDropDownMenu_CreateInfo()
+				info.text = 3
+				info.func = setThreshold
+				info.arg1 = 3
+				info.checked = (mainFrame.redCircleNumPlayers == 3)
+				UIDropDownMenu_AddButton(info, 2)
+				
+				info = UIDropDownMenu_CreateInfo()
+				info.text = 4
+				info.func = setThreshold
+				info.arg1 = 4
+				info.checked = (mainFrame.redCircleNumPlayers == 4)
+				UIDropDownMenu_AddButton(info, 2)
+				
+				info = UIDropDownMenu_CreateInfo()
+				info.text = 5
+				info.func = setThreshold
+				info.arg1 = 5
+				info.checked = (mainFrame.redCircleNumPlayers == 5)
+				UIDropDownMenu_AddButton(info, 2)
+				
+				info = UIDropDownMenu_CreateInfo()
+				info.text = 6
+				info.func = setThreshold
+				info.arg1 = 6
+				info.checked = (mainFrame.redCircleNumPlayers == 6)
+				UIDropDownMenu_AddButton(info, 2)
+				
+				info = UIDropDownMenu_CreateInfo()
+				info.text = 8
+				info.func = setThreshold
+				info.arg1 = 8
+				info.checked = (mainFrame.redCircleNumPlayers == 8)
 				UIDropDownMenu_AddButton(info, 2)
 			elseif menu == "sounds" then
 				info = UIDropDownMenu_CreateInfo()
@@ -319,11 +381,19 @@ end
 ------------------------
 --  Create the frame  --
 ------------------------
+local frameBackdrop = {
+	bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background",
+	tile = true,
+	tileSize = 16,
+	insets = { left = 2, right = 14, top = 2, bottom = 2 },
+}
+
 function createTextFrame()
 	local elapsed = 0
 	local textFrame = CreateFrame("GameTooltip", "DBMRangeCheck", UIParent, "GameTooltipTemplate")
 	dropdownFrame = CreateFrame("Frame", "DBMRangeCheckDropdown", textFrame, "UIDropDownMenuTemplate")
 	textFrame:SetFrameStrata("DIALOG")
+	textFrame:SetBackdrop(frameBackdrop)
 	textFrame:SetPoint(DBM.Options.RangeFramePoint, UIParent, DBM.Options.RangeFramePoint, DBM.Options.RangeFrameX, DBM.Options.RangeFrameY)
 	textFrame:SetHeight(64)
 	textFrame:SetWidth(64)
@@ -437,7 +507,7 @@ end
 --  OnUpdate  --
 ----------------
 do
-	local rotation, pixelsperyard, activeDots, numPlayers, circleColor, prevRange, prevNumClosePlayer, prevclosestRange, prevColor, prevType = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+	local rotation, pixelsperyard, activeDots, numPlayers, circleColor, prevRange, prevThreshold, prevNumClosePlayer, prevclosestRange, prevColor, prevType = 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 	local unitList = {}
 
 	local function setDot(id)
@@ -501,11 +571,11 @@ do
 			textFrame:ClearLines()
 			textFrame:SetText(DBM_CORE_RANGECHECK_HEADER:format(activeRange), 1, 1, 1)
 		end
-		if rEnabled and prevRange ~= activeRange then
+		if rEnabled and (prevRange ~= activeRange or prevThreshold ~= mainFrame.redCircleNumPlayers) then
 			prevRange = activeRange
 			pixelsperyard = min(radarFrame:GetWidth(), radarFrame:GetHeight()) / (activeRange * 3)
 			radarFrame.circle:SetSize(activeRange * pixelsperyard * 2, activeRange * pixelsperyard * 2)
-			radarFrame.text:SetText(DBM_CORE_RANGERADAR_HEADER:format(activeRange))
+			radarFrame.text:SetText(DBM_CORE_RANGERADAR_HEADER:format(activeRange, mainFrame.redCircleNumPlayers))
 		end
 
 		local playerX, playerY, _, playerMapId = UnitPosition("player")
@@ -561,7 +631,7 @@ do
 			textFrame:Show()
 		end
 		if rEnabled then
-			if prevNumClosePlayer ~= closePlayer or prevclosestRange ~= closestRange or prevtype ~= type then
+			if prevNumClosePlayer ~= closePlayer or prevclosestRange ~= closestRange or prevType ~= type then
 				if closePlayer == 1 then
 					radarFrame.inRangeText:SetText(DBM_CORE_RANGERADAR_IN_RANGE_TEXTONE:format(closetName, closestRange))
 				else

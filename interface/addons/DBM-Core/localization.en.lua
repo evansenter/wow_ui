@@ -54,8 +54,12 @@ DBM_CORE_TRANSCRIPTOR_LOG_END		= "Transcriptor logging ended."
 
 DBM_CORE_PROFILE_CREATED			= "'%s' profile created."
 DBM_CORE_PROFILE_CREATE_ERROR		= "Create profile failed. Invalid profile name."
+DBM_CORE_PROFILE_CREATE_ERROR_D		= "Create profile failed. '%s' profile already exists."
 DBM_CORE_PROFILE_APPLIED			= "'%s' profile applied."
 DBM_CORE_PROFILE_APPLY_ERROR		= "Apply profile failed. '%s' profile does not exist."
+DBM_CORE_PROFILE_COPIED				= "'%s' profile copied."
+DBM_CORE_PROFILE_COPY_ERROR			= "Copy profile failed. '%s' profile does not exist."
+DBM_CORE_PROFILE_COPY_ERROR_SELF	= "Cannot copy profile to itself."
 DBM_CORE_PROFILE_DELETED			= "'%s' profile deleted. 'Default' profile will be applied."
 DBM_CORE_PROFILE_DELETE_ERROR		= "Delete profile failed. '%s' profile does not exist."
 DBM_CORE_PROFILE_CANNOT_DELETE		= "Cannot delete 'Default' profile."
@@ -150,8 +154,9 @@ DBM_PIZZA_ERROR_USAGE				= "Usage: /dbm [broadcast] timer <time> <text>. <time> 
 DBM_CORE_MINIMAP_TOOLTIP_HEADER		= "Deadly Boss Mods"
 DBM_CORE_MINIMAP_TOOLTIP_FOOTER		= "Shift+click or right-click to move\nAlt+shift+click for free drag and drop"
 
-DBM_CORE_RANGECHECK_HEADER			= "Range Check (%d yd)"
+DBM_CORE_RANGECHECK_HEADER			= "Range Check (%dyd)"
 DBM_CORE_RANGECHECK_SETRANGE		= "Set range"
+DBM_CORE_RANGECHECK_SETTHRESHOLD	= "Set player threshold"
 DBM_CORE_RANGECHECK_SOUNDS			= "Sounds"
 DBM_CORE_RANGECHECK_SOUND_OPTION_1	= "Sound when one player is in range"
 DBM_CORE_RANGECHECK_SOUND_OPTION_2	= "Sound when more than one player is in range"
@@ -163,7 +168,7 @@ DBM_CORE_RANGECHECK_OPTION_FRAMES	= "Frames"
 DBM_CORE_RANGECHECK_OPTION_RADAR	= "Show radar frame"
 DBM_CORE_RANGECHECK_OPTION_TEXT		= "Show text frame"
 DBM_CORE_RANGECHECK_OPTION_BOTH		= "Show both frames"
-DBM_CORE_RANGERADAR_HEADER			= "Range Radar (%dyd)"
+DBM_CORE_RANGERADAR_HEADER			= "Range:%d Players:%d"
 DBM_CORE_RANGERADAR_IN_RANGE_TEXT	= "%d in range (%dyd)"--Multi
 DBM_CORE_RANGERADAR_IN_RANGE_TEXTONE= "%s (%0.1fyd)"--One target
 
@@ -352,6 +357,8 @@ DBM_CORE_AUTO_YELL_OPTION_TEXT			= "Yell when you are affected by $spell:%s"
 DBM_CORE_AUTO_YELL_ANNOUNCE_TEXT		= "%s on " .. UnitName("player") .. "!"
 DBM_CORE_AUTO_RANGE_OPTION_TEXT			= "Show range frame (%s) for $spell:%s"--string used for range so we can use things like "5/2" as a value for that field
 DBM_CORE_AUTO_RANGE_OPTION_TEXT_SHORT	= "Show range frame (%s)"--For when a range frame is just used for more than one thing
+DBM_CORE_AUTO_RRANGE_OPTION_TEXT		= "Show reverse range frame (%s) for $spell:%s"--Reverse range frame (green when players in range, red when not)
+DBM_CORE_AUTO_RRANGE_OPTION_TEXT_SHORT	= "Show reverse range frame (%s)"
 DBM_CORE_AUTO_INFO_FRAME_OPTION_TEXT	= "Show info frame for $spell:%s"
 DBM_CORE_AUTO_READY_CHECK_OPTION_TEXT	= "Play ready check sound when boss is pulled (even if it's not targeted)"
 

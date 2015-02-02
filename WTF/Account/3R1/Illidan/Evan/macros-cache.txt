@@ -27,6 +27,7 @@ VER 3 0100000000000018 "Flash Heal" "INV_MISC_QUESTIONMARK"
 #showtooltip Flash Heal
 /run UIErrorsFrame:UnregisterEvent("UI_ERROR_MESSAGE")
 /use Archangel
+/use 14
 /use Flash Heal
 /run UIErrorsFrame:RegisterEvent("UI_ERROR_MESSAGE")
 END
@@ -42,14 +43,13 @@ VER 3 0100000000000007 "HWC" "INV_MISC_QUESTIONMARK"
 END
 VER 3 010000000000001B "Mana" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/use [@targettarget][]Shadowfiend
-/use 13
-/use 14
+/use [harm][@targettarget,harm][]Shadowfiend
 END
 VER 3 0100000000000019 "PoH" "INV_MISC_QUESTIONMARK"
 #showtooltip Prayer of Healing
 /run UIErrorsFrame:UnregisterEvent("UI_ERROR_MESSAGE")
 /use Archangel
+/use 14
 /use Prayer of Healing
 /run UIErrorsFrame:RegisterEvent("UI_ERROR_MESSAGE")
 END
