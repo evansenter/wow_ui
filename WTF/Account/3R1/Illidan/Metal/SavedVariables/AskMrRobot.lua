@@ -31,7 +31,7 @@ AmrDb = {
 			"|cffa335ee|Hitem:118295:5284:0:0:0:0:0:0:100:0:14:0|h[Timeless Solium Band of Brutality]|h|r", -- [11]
 			"|cffa335ee|Hitem:113643:5284:0:0:0:0:0:0:100:0:5:1:566|h[Eye of Tectus]|h|r", -- [12]
 			"|cffa335ee|Hitem:113658:0:0:0:0:0:0:0:100:0:5:1:566|h[Bottle of Infesting Spores]|h|r", -- [13]
-			"|cff0070dd|Hitem:110010:0:5339:0:0:0:0:0:100:0:2:2:523:524|h[Mote of Corruption]|h|r", -- [14]
+			"|cffa335ee|Hitem:114552:0:0:0:0:0:0:0:100:0:1:0|h[Grandiose Carnage]|h|r", -- [14]
 			"|cffa335ee|Hitem:113830:5281:0:0:0:0:0:0:100:0:5:1:566|h[Cloak of Ruminant Deception]|h|r", -- [15]
 			"|cffa335ee|Hitem:113606:5330:0:0:0:0:0:0:100:0:5:2:561:566|h[Butcher's Bloody Cleaver]|h|r", -- [16]
 			"|cffa335ee|Hitem:113606:5331:0:0:0:0:0:0:100:0:5:1:566|h[Butcher's Bloody Cleaver]|h|r", -- [17]
@@ -74,7 +74,7 @@ AmrDb = {
 			159701, -- [6]
 		}, -- [2]
 	},
-	["Class"] = "WARRIOR",
+	["Region"] = "US",
 	["Specs"] = {
 		33, -- [1]
 		34, -- [2]
@@ -136,7 +136,7 @@ AmrDb = {
 		[823] = 289,
 		[-1] = 45251058,
 	},
-	["RealmName"] = "Illidan",
+	["LastCharacterImport"] = "",
 	["LogData"] = {
 		["_wipes"] = {
 		},
@@ -145,8 +145,8 @@ AmrDb = {
 			[1136] = "disabled",
 			[1205] = "disabled",
 		},
-		["_lastZone"] = "FW Horde Garrison Level 3",
 		["_lastDiff"] = 1,
+		["_lastZone"] = "FW Horde Garrison Level 3",
 	},
 	["BagItems"] = {
 		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [1]
@@ -175,7 +175,8 @@ AmrDb = {
 		"|cffa335ee|Hitem:114622:0:0:0:0:0:0:0:100:0:0:0|h[Goredrenched Weaponry]|h|r", -- [24]
 		"|cffa335ee|Hitem:113667:5331:0:0:0:0:0:0:100:0:5:2:561:566|h[Phemos' Double Slasher]|h|r", -- [25]
 	},
-	["Professions"] = {
+	["IconInfo"] = {
+		["minimapPos"] = 142.399548566353,
 	},
 	["VoidItems"] = {
 		"|cffa335ee|Hitem:112785:0:0:0:0:0:0:0:100:491:6:2:450:448|h[Gar'tok, Strength of the Faithful]|h|r", -- [1]
@@ -207,16 +208,15 @@ AmrDb = {
 		[1375] = 3,
 		[1387] = 0,
 		[1376] = 0,
-		[1435] = 3,
-		[1388] = 4,
 		[1270] = 3,
+		[1388] = 4,
+		[1435] = 3,
 	},
 	["Faction"] = "Horde",
-	["IconInfo"] = {
-		["minimapPos"] = 142.399548566353,
+	["Professions"] = {
 	},
-	["LastCharacterImport"] = "",
-	["Region"] = "US",
+	["RealmName"] = "Illidan",
+	["Class"] = "WARRIOR",
 	["BankItemsAndCounts"] = {
 		[109132] = 3,
 		[42765] = 1,
@@ -266,9 +266,9 @@ AmrDb = {
 		[101796] = 1,
 		[101677] = 1,
 		[65625] = 1,
-		[104405] = 1,
+		[111658] = 3,
 		[98920] = 1,
-		[112921] = 1,
+		[109131] = 12,
 		[87509] = 1,
 		[119394] = 1,
 		[64402] = 1,
@@ -277,18 +277,18 @@ AmrDb = {
 		[112949] = 1,
 		[109118] = 944,
 		[99418] = 1,
-		[118883] = 1,
-		[6975] = 1,
-		[99198] = 1,
-		[120945] = 6,
-		[112796] = 1,
-		[109133] = 2,
-		[111366] = 4,
 		[112953] = 1,
+		[6975] = 1,
+		[111366] = 4,
+		[109133] = 2,
+		[112796] = 1,
+		[120945] = 6,
+		[99198] = 1,
+		[118883] = 1,
 		[117355] = 1,
 		[105679] = 1,
-		[109131] = 12,
+		[112921] = 1,
 		[109124] = 3,
-		[111658] = 3,
+		[104405] = 1,
 	},
 }

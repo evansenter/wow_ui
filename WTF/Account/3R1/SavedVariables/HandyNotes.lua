@@ -1,57 +1,57 @@
 
 HandyNotesDB = {
 	["profileKeys"] = {
-		["Comet - Illidan"] = "Comet - Illidan",
-		["Metal - Illidan"] = "Metal - Illidan",
-		["Natal - Illidan"] = "Natal - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
-		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
+		["Metal - Illidan"] = "Metal - Illidan",
 		["Evan - Illidan"] = "Evan - Illidan",
 		["Plane - Illidan"] = "Plane - Illidan",
+		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
+		["Natal - Illidan"] = "Natal - Illidan",
+		["Comet - Illidan"] = "Comet - Illidan",
 	},
 	["profiles"] = {
-		["Comet - Illidan"] = {
-			["icon_alpha_minimap"] = 0.75,
-			["icon_alpha"] = 0.75,
-		},
-		["Metal - Illidan"] = {
-		},
-		["Natal - Illidan"] = {
-		},
 		["Combustion - Illidan"] = {
 		},
-		["Centromere - Dark Iron"] = {
+		["Metal - Illidan"] = {
 		},
 		["Evan - Illidan"] = {
 		},
 		["Plane - Illidan"] = {
+		},
+		["Centromere - Dark Iron"] = {
+		},
+		["Natal - Illidan"] = {
+		},
+		["Comet - Illidan"] = {
+			["icon_alpha_minimap"] = 0.75,
+			["icon_alpha"] = 0.75,
 		},
 	},
 }
 HandyNotes_HandyNotesDB = {
 	["profileKeys"] = {
-		["Comet - Illidan"] = "Comet - Illidan",
-		["Metal - Illidan"] = "Metal - Illidan",
-		["Natal - Illidan"] = "Natal - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
-		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
+		["Metal - Illidan"] = "Metal - Illidan",
 		["Evan - Illidan"] = "Evan - Illidan",
 		["Plane - Illidan"] = "Plane - Illidan",
+		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
+		["Natal - Illidan"] = "Natal - Illidan",
+		["Comet - Illidan"] = "Comet - Illidan",
 	},
 	["profiles"] = {
-		["Comet - Illidan"] = {
-		},
-		["Metal - Illidan"] = {
-		},
-		["Natal - Illidan"] = {
-		},
 		["Combustion - Illidan"] = {
 		},
-		["Centromere - Dark Iron"] = {
+		["Metal - Illidan"] = {
 		},
 		["Evan - Illidan"] = {
 		},
 		["Plane - Illidan"] = {
+		},
+		["Centromere - Dark Iron"] = {
+		},
+		["Natal - Illidan"] = {
+		},
+		["Comet - Illidan"] = {
 		},
 	},
 }

@@ -53,9 +53,9 @@
 --  Globals/Default Options  --
 -------------------------------
 DBM = {
-	Revision = tonumber(("$Revision: 12654 $"):sub(12, -3)),
-	DisplayVersion = "6.0.14 alpha", -- the string that is shown as version
-	ReleaseRevision = 12542 -- the revision of the latest stable version that is available
+	Revision = tonumber(("$Revision: 12658 $"):sub(12, -3)),
+	DisplayVersion = "6.0.15 alpha", -- the string that is shown as version
+	ReleaseRevision = 12656 -- the revision of the latest stable version that is available
 }
 
 -- Legacy crap; that stupid "Version" field was never a good idea.
@@ -320,7 +320,6 @@ local iconSetRevision = {}
 local iconSetPerson = {}
 local addsGUIDs = {}
 
-local voiceRevision = 2
 local fakeBWRevision = 12596
 
 local enableIcons = true -- set to false when a raid leader or a promoted player has a newer version of DBM
@@ -1086,14 +1085,14 @@ do
 				"UPDATE_BATTLEFIELD_STATUS",
 				"CINEMATIC_START",
 				"PLAYER_LEVEL_UP",
-				"LFG_COMPLETION_REWARD",
 				"CHALLENGE_MODE_START",
 				"CHALLENGE_MODE_RESET",
 				"CHALLENGE_MODE_END",
 				"ACTIVE_TALENT_GROUP_CHANGED",
 				"UPDATE_SHAPESHIFT_FORM",
 				"PARTY_INVITE_REQUEST",
-				"LOADING_SCREEN_DISABLED"
+				"LOADING_SCREEN_DISABLED",
+				"SCENARIO_CRITERIA_UPDATE"
 			)
 			RolePollPopup:UnregisterEvent("ROLE_POLL_BEGIN")
 			self:GROUP_ROSTER_UPDATE()
@@ -3050,8 +3049,9 @@ function DBM:CINEMATIC_START()
 	end
 end
 
-function DBM:LFG_COMPLETION_REWARD()
-	if #inCombat > 0 and C_Scenario.IsInScenario() then
+function DBM:SCENARIO_CRITERIA_UPDATE()
+	local _, currentStage, numStages = C_Scenario.GetInfo()
+	if #inCombat > 0 and currentStage > numStages and C_Scenario.IsInScenario() then
 		for i = #inCombat, 1, -1 do
 			local v = inCombat[i]
 			if v.inScenario then
@@ -8111,7 +8111,7 @@ do
 		local activeVP = self.Options.ChosenVoicePack
 		--Check if voice pack out of date
 		if activeVP ~= "None" and activeVP == value then
-			if self.VoiceVersions[value] < voiceRevision then--Version will be bumped when new voice packs released that contain new voices.
+			if self.VoiceVersions[value] < 3 then--Version will be bumped when new voice packs released that contain new voices.
 				self:AddMsg(DBM_CORE_VOICE_PACK_OUTDATED)
 				SWFilterDisabed = true
 			else
