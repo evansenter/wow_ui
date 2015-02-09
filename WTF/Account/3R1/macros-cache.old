@@ -8,11 +8,17 @@ END
 VER 3 0000000000000028 "Camera" "Spell_Shadow_EvilEye"
 /console CameraDistanceMaxFactor 9000
 END
+VER 3 0000000000000048 "Cancel HoP" "Ability_Paladin_InfusionofLight"
+/cancelaura Hand of Protection
+END
 VER 3 0000000000000030 "Cloak" "INV_MISC_QUESTIONMARK"
 /use 15
 END
 VER 3 0000000000000029 "Combat Log" "PASSIVE_MONK_TEACHINGSOFMONASTERY"
 /combatlog
+END
+VER 3 0000000000000047 "Deathnote" "Ability_Hunter_MurderofCrows"
+/deathnote
 END
 VER 3 0000000000000041 "EH WA" "INV_MISC_QUESTIONMARK"
 #showtooltip

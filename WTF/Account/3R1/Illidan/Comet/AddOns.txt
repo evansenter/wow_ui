@@ -148,3 +148,4 @@ CT_RaidTracker: enabled
 MizusRaidTracker: enabled
 DBM-Profiles: disabled
 nRange: disabled
+BL_Cooldown: disabled

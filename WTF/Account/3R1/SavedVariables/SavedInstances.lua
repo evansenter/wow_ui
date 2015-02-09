@@ -4,7 +4,7 @@ SavedInstancesDB = {
 	["Toons"] = {
 		["Combustion - Illidan"] = {
 			["lastbossyell"] = "Greeb Ramrocket",
-			["WeeklyResetTime"] = 1422961215,
+			["WeeklyResetTime"] = 1423566004,
 			["LastSeen"] = 1418168788,
 			["Class"] = "MAGE",
 			["currency"] = {
@@ -135,15 +135,15 @@ SavedInstancesDB = {
 			["Skills"] = {
 			},
 			["ILe"] = 576.266662597656,
-			["DailyResetTime"] = 1422961207,
+			["DailyResetTime"] = 1423479611,
 			["Quests"] = {
 			},
 			["IL"] = 578.266662597656,
 		},
 		["Metal - Illidan"] = {
-			["lastbossyell"] = "Tectus: Normal",
-			["WeeklyResetTime"] = 1422961215,
-			["LastSeen"] = 1422922471,
+			["lastbossyell"] = "Tectus: Heroic",
+			["WeeklyResetTime"] = 1423566004,
+			["LastSeen"] = 1423456811,
 			["Class"] = "WARRIOR",
 			["currency"] = {
 				[402] = {
@@ -180,7 +180,7 @@ SavedInstancesDB = {
 					["weeklyMax"] = 0,
 					["earnedThisWeek"] = 0,
 					["totalMax"] = 20000,
-					["amount"] = 329,
+					["amount"] = 404,
 				},
 				[241] = {
 					["weeklyMax"] = 0,
@@ -192,7 +192,7 @@ SavedInstancesDB = {
 					["weeklyMax"] = 0,
 					["earnedThisWeek"] = 0,
 					["totalMax"] = 10000,
-					["amount"] = 1435,
+					["amount"] = 2352,
 				},
 				[515] = {
 					["weeklyMax"] = 0,
@@ -201,7 +201,7 @@ SavedInstancesDB = {
 					["amount"] = 0,
 				},
 				[390] = {
-					["weeklyMax"] = 9700,
+					["weeklyMax"] = 10700,
 					["earnedThisWeek"] = 0,
 					["totalMax"] = 0,
 					["amount"] = 0,
@@ -229,7 +229,7 @@ SavedInstancesDB = {
 					["weeklyMax"] = 3,
 					["earnedThisWeek"] = 3,
 					["totalMax"] = 10,
-					["amount"] = 3,
+					["amount"] = 5,
 				},
 				[738] = {
 					["weeklyMax"] = 0,
@@ -265,141 +265,147 @@ SavedInstancesDB = {
 			["Level"] = 100,
 			["LClass"] = "Warrior",
 			["RBGrating"] = 0,
-			["PlayedTotal"] = 764883,
-			["lastbossyelltime"] = 1422590804,
-			["Money"] = 38510916,
-			["Zone"] = "Town Hall",
+			["PlayedTotal"] = 771776,
+			["lastbossyelltime"] = 1423438005,
+			["Money"] = 322422,
+			["Zone"] = "Frostwall",
 			["Show"] = "saved",
-			["DailyResetTime"] = 1422961207,
-			["lastboss"] = "Tectus, The Living Mountain: Normal",
+			["DailyResetTime"] = 1423479611,
+			["lastboss"] = "Tectus, The Living Mountain: Heroic",
 			["BonusRoll"] = {
+				{
+					["money"] = 350894,
+					["time"] = 1423438025,
+					["name"] = "Tectus, The Living Mountain: Heroic",
+					["currencyID"] = 994,
+				}, -- [1]
 				{
 					["money"] = 287879,
 					["time"] = 1422408784,
 					["name"] = "Tectus, The Living Mountain: Heroic",
 					["currencyID"] = 994,
-				}, -- [1]
+				}, -- [2]
 				{
 					["item"] = "|cffa335ee|Hitem:113658:0:0:0:0:0:0:0:100:0:5:1:566|h[Bottle of Infesting Spores]|h|r",
 					["time"] = 1422407684,
 					["name"] = "Brackenspore: Heroic",
 					["currencyID"] = 994,
-				}, -- [2]
+				}, -- [3]
 				{
 					["money"] = 292606,
 					["name"] = "Tectus, The Living Mountain: Heroic",
 					["time"] = 1422229096,
 					["currencyID"] = 994,
-				}, -- [3]
+				}, -- [4]
 				{
 					["time"] = 1422150422,
 					["name"] = "The Butcher: Heroic",
 					["item"] = "|cffa335ee|Hitem:113606:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Butcher's Bloody Cleaver]|h|r",
 					["currencyID"] = 994,
-				}, -- [4]
+				}, -- [5]
 				{
 					["money"] = 296944,
 					["name"] = "Twin Ogron: Heroic",
 					["time"] = 1422077042,
 					["currencyID"] = 994,
-				}, -- [5]
+				}, -- [6]
 				{
 					["time"] = 1422074526,
 					["name"] = "Brackenspore: Heroic",
 					["item"] = "|cffa335ee|Hitem:113659:0:0:0:0:0:0:0:100:0:5:1:566|h[Fleshchewer Greatbelt]|h|r",
 					["currencyID"] = 994,
-				}, -- [6]
+				}, -- [7]
 				{
 					["money"] = 201455,
 					["time"] = 1421200445,
 					["name"] = "Ko'ragh: Heroic",
 					["currencyID"] = 994,
-				}, -- [7]
+				}, -- [8]
 				{
 					["item"] = "|cffa335ee|Hitem:113831:0:0:0:0:0:0:0:100:0:5:1:566|h[Chestplate of Arcane Volatility]|h|r",
 					["time"] = 1421199498,
 					["name"] = "Twin Ogron: Heroic",
 					["currencyID"] = 994,
-				}, -- [8]
+				}, -- [9]
 				{
 					["money"] = 309506,
 					["time"] = 1421198567,
 					["name"] = "Tectus, The Living Mountain: Heroic",
 					["currencyID"] = 994,
-				}, -- [9]
+				}, -- [10]
 				{
 					["money"] = 263747,
 					["time"] = 1421197725,
 					["name"] = "Brackenspore: Heroic",
 					["currencyID"] = 994,
-				}, -- [10]
+				}, -- [11]
 				{
 					["money"] = 378150,
 					["time"] = 1421196118,
 					["name"] = "Kargath Bladefist: Heroic",
 					["currencyID"] = 994,
-				}, -- [11]
+				}, -- [12]
 				{
 					["money"] = 257589,
 					["time"] = 1418258986,
 					["name"] = "Kargath Bladefist: Heroic",
 					["currencyID"] = 994,
-				}, -- [12]
+				}, -- [13]
 				{
 					["money"] = 324495,
 					["time"] = 1418095523,
 					["name"] = "Kargath Bladefist: Heroic",
 					["currencyID"] = 994,
-				}, -- [13]
+				}, -- [14]
 			},
-			["PlayedLevel"] = 212051,
-			["IL"] = 667.0625,
-			["ILe"] = 666.0625,
+			["PlayedLevel"] = 218944,
+			["IL"] = 668.125,
+			["ILe"] = 666.5,
 			["Skills"] = {
 				[171391] = {
-					["Expires"] = 1422961206,
+					["Expires"] = 1423479601,
 					["Title"] = "Leatherworking: Burnished Leather",
 					["Link"] = "|cffffd000|Henchant:171391|h[Leatherworking: Burnished Leather]|h|r",
 				},
 				[171690] = {
-					["Expires"] = 1422961206,
+					["Expires"] = 1423479601,
 					["Title"] = "Blacksmithing: Truesteel Ingot",
 					["Link"] = "|cffffd000|Henchant:171690|h[Blacksmithing: Truesteel Ingot]|h|r",
 				},
 				[176090] = {
-					["Expires"] = 1422961206,
+					["Expires"] = 1423479601,
 					["Title"] = "Blacksmithing: Secrets of Draenor Blacksmithing",
 					["Link"] = "|cffffd000|Henchant:176090|h[Blacksmithing: Secrets of Draenor Blacksmithing]|h|r",
 				},
 				[176089] = {
-					["Expires"] = 1422961206,
+					["Expires"] = 1423479601,
 					["Title"] = "Leatherworking: Secrets of Draenor Leatherworking",
 					["Link"] = "|cffffd000|Henchant:176089|h[Leatherworking: Secrets of Draenor Leatherworking]|h|r",
 				},
 			},
 			["Quests"] = {
 				[37454] = {
-					["Expires"] = 1422961213,
+					["Expires"] = 1423566003,
 					["Title"] = "Sealing Fate: Piles of Gold",
 					["Zone"] = "Warspear",
 				},
+				[36058] = {
+					["Expires"] = 1423566001,
+					["Title"] = "Seal of Tempered Fate: Armory",
+					["Link"] = "|cffffff00|Hquest:36058:90|h[Seal of Tempered Fate: Armory]|h|r",
+				},
 				[36054] = {
-					["Expires"] = 1422961213,
+					["Expires"] = 1423566003,
 					["Title"] = "Sealing Fate: Gold",
 					["Zone"] = "Warspear",
 				},
-				[37455] = {
-					["Expires"] = 1422961213,
-					["Title"] = "Sealing Fate: Immense Fortune of Gold",
-					["Zone"] = "Warspear",
-				},
 			},
-			["lastbosstime"] = 1422590810,
+			["lastbosstime"] = 1423438012,
 		},
 		["Evan - Illidan"] = {
 			["lastbossyell"] = "Iron Warmaster: Looking For Raid",
-			["WeeklyResetTime"] = 1422961215,
-			["LastSeen"] = 1422922616,
+			["WeeklyResetTime"] = 1423566004,
+			["LastSeen"] = 1423457055,
 			["Class"] = "PRIEST",
 			["currency"] = {
 				[402] = {
@@ -436,7 +442,7 @@ SavedInstancesDB = {
 					["weeklyMax"] = 0,
 					["earnedThisWeek"] = 0,
 					["totalMax"] = 20000,
-					["amount"] = 1414,
+					["amount"] = 506,
 				},
 				[241] = {
 					["weeklyMax"] = 0,
@@ -448,7 +454,7 @@ SavedInstancesDB = {
 					["weeklyMax"] = 0,
 					["earnedThisWeek"] = 0,
 					["totalMax"] = 10000,
-					["amount"] = 473,
+					["amount"] = 640,
 				},
 				[515] = {
 					["weeklyMax"] = 0,
@@ -457,7 +463,7 @@ SavedInstancesDB = {
 					["amount"] = 0,
 				},
 				[390] = {
-					["weeklyMax"] = 9700,
+					["weeklyMax"] = 10700,
 					["earnedThisWeek"] = 0,
 					["totalMax"] = 0,
 					["amount"] = 0,
@@ -482,9 +488,9 @@ SavedInstancesDB = {
 				},
 				[994] = {
 					["weeklyMax"] = 3,
-					["earnedThisWeek"] = 1,
+					["earnedThisWeek"] = 3,
 					["totalMax"] = 10,
-					["amount"] = 8,
+					["amount"] = 10,
 				},
 				[738] = {
 					["weeklyMax"] = 0,
@@ -520,41 +526,51 @@ SavedInstancesDB = {
 			["Level"] = 100,
 			["LClass"] = "Priest",
 			["RBGrating"] = 0,
-			["PlayedTotal"] = 7560444,
+			["PlayedTotal"] = 7564683,
 			["lastbossyelltime"] = 1422855528,
-			["Money"] = 61867730,
-			["Zone"] = "Town Hall",
+			["Money"] = 31273982,
+			["Zone"] = "Tailoring Emporium",
 			["Show"] = "saved",
 			["lastboss"] = "Brackenspore: Looking For Raid",
 			["Skills"] = {
 				[168835] = {
-					["Expires"] = 1422961208,
+					["Expires"] = 1423479601,
 					["Title"] = "Tailoring: Hexweave Cloth",
 					["Link"] = "|cffffd000|Henchant:168835|h[Tailoring: Hexweave Cloth]|h|r",
 				},
 				[169092] = {
-					["Expires"] = 1422961208,
+					["Expires"] = 1423479601,
 					["Title"] = "Enchanting: Temporal Crystal",
 					["Link"] = "|cffffd000|Henchant:169092|h[Enchanting: Temporal Crystal]|h|r",
 				},
-				[177043] = {
-					["Expires"] = 1422961208,
-					["Title"] = "Enchanting: Secrets of Draenor Enchanting",
-					["Link"] = "|cffffd000|Henchant:177043|h[Enchanting: Secrets of Draenor Enchanting]|h|r",
-				},
 				[176058] = {
-					["Expires"] = 1422961208,
+					["Expires"] = 1423479601,
 					["Title"] = "Tailoring: Secrets of Draenor Tailoring",
 					["Link"] = "|cffffd000|Henchant:176058|h[Tailoring: Secrets of Draenor Tailoring]|h|r",
 				},
+				[177043] = {
+					["Expires"] = 1423479601,
+					["Title"] = "Enchanting: Secrets of Draenor Enchanting",
+					["Link"] = "|cffffd000|Henchant:177043|h[Enchanting: Secrets of Draenor Enchanting]|h|r",
+				},
 			},
-			["PlayedLevel"] = 117154,
+			["PlayedLevel"] = 121393,
 			["IL"] = 640.5,
 			["ILe"] = 640.5,
-			["DailyResetTime"] = 1422961207,
+			["DailyResetTime"] = 1423479611,
 			["Quests"] = {
+				[36056] = {
+					["Expires"] = 1423566000,
+					["Title"] = "Sealing Fate: Garrison Resources",
+					["Zone"] = "Warspear",
+				},
+				[36055] = {
+					["Expires"] = 1423566000,
+					["Title"] = "Sealing Fate: Apexis Crystals",
+					["Zone"] = "Warspear",
+				},
 				[36058] = {
-					["Expires"] = 1422961193,
+					["Expires"] = 1423566000,
 					["Title"] = "Seal of Tempered Fate: Armory",
 					["Link"] = "|cffffff00|Hquest:36058:90|h[Seal of Tempered Fate: Armory]|h|r",
 				},
@@ -562,7 +578,7 @@ SavedInstancesDB = {
 			["lastbosstime"] = 1422855920,
 		},
 		["Plane - Illidan"] = {
-			["WeeklyResetTime"] = 1422961215,
+			["WeeklyResetTime"] = 1423566004,
 			["LastSeen"] = 1418075238,
 			["Class"] = "DRUID",
 			["currency"] = {
@@ -689,7 +705,7 @@ SavedInstancesDB = {
 			["Show"] = "saved",
 			["IL"] = 492.200012207031,
 			["PlayedLevel"] = 20342,
-			["DailyResetTime"] = 1422961207,
+			["DailyResetTime"] = 1423479611,
 			["ILe"] = 485.600006103516,
 			["Skills"] = {
 			},
@@ -831,10 +847,10 @@ SavedInstancesDB = {
 			["Skills"] = {
 			},
 			["ILe"] = 562.625,
-			["DailyResetTime"] = 1422961207,
+			["DailyResetTime"] = 1423479611,
 			["Quests"] = {
 			},
-			["WeeklyResetTime"] = 1422961215,
+			["WeeklyResetTime"] = 1423566004,
 		},
 		["Natal - Illidan"] = {
 			["IL"] = 572.533325195313,
@@ -967,345 +983,339 @@ SavedInstancesDB = {
 			["Skills"] = {
 			},
 			["ILe"] = 534.200012207031,
-			["DailyResetTime"] = 1422961207,
+			["DailyResetTime"] = 1423479611,
 			["Quests"] = {
 			},
-			["WeeklyResetTime"] = 1422961215,
+			["WeeklyResetTime"] = 1423566004,
 		},
 		["Comet - Illidan"] = {
-			["lastbossyell"] = "Snurk Bucksquick",
+			["lastbossyell"] = "Siegemaker: Heroic",
 			["IL"] = 680.4375,
-			["LastSeen"] = 1422927017,
+			["LastSeen"] = 1423457191,
 			["Class"] = "MONK",
 			["currency"] = {
 				[402] = {
-					["earnedThisWeek"] = 0,
+					["amount"] = 1,
 					["weeklyMax"] = 0,
 					["totalMax"] = 0,
-					["amount"] = 1,
+					["earnedThisWeek"] = 0,
 				},
 				[789] = {
-					["earnedThisWeek"] = 0,
+					["amount"] = 0,
 					["weeklyMax"] = 0,
 					["totalMax"] = 0,
-					["amount"] = 0,
+					["earnedThisWeek"] = 0,
 				},
 				[395] = {
-					["earnedThisWeek"] = 0,
+					["amount"] = 0,
 					["weeklyMax"] = 0,
 					["totalMax"] = 0,
-					["amount"] = 0,
+					["earnedThisWeek"] = 0,
 				},
 				[697] = {
-					["earnedThisWeek"] = 0,
+					["amount"] = 0,
 					["weeklyMax"] = 0,
 					["totalMax"] = 20,
-					["amount"] = 0,
+					["earnedThisWeek"] = 0,
 				},
 				[776] = {
-					["earnedThisWeek"] = 0,
+					["amount"] = 0,
 					["weeklyMax"] = 0,
 					["totalMax"] = 20,
-					["amount"] = 0,
+					["earnedThisWeek"] = 0,
 				},
 				[823] = {
-					["earnedThisWeek"] = 0,
+					["amount"] = 999,
 					["weeklyMax"] = 0,
 					["totalMax"] = 20000,
-					["amount"] = 853,
+					["earnedThisWeek"] = 0,
 				},
 				[241] = {
-					["earnedThisWeek"] = 0,
+					["amount"] = 0,
 					["weeklyMax"] = 0,
 					["totalMax"] = 0,
-					["amount"] = 0,
+					["earnedThisWeek"] = 0,
 				},
 				[824] = {
-					["earnedThisWeek"] = 0,
+					["amount"] = 9970,
 					["weeklyMax"] = 0,
 					["totalMax"] = 10000,
-					["amount"] = 9833,
+					["earnedThisWeek"] = 0,
 				},
 				[515] = {
-					["earnedThisWeek"] = 0,
+					["amount"] = 0,
 					["weeklyMax"] = 0,
 					["totalMax"] = 0,
-					["amount"] = 0,
+					["earnedThisWeek"] = 0,
 				},
 				[390] = {
 					["earnedThisWeek"] = 0,
-					["weeklyMax"] = 7340,
+					["weeklyMax"] = 8340,
 					["amount"] = 1110,
 					["totalMax"] = 0,
 					["season"] = "Season Total Earned: |cffffffff2360",
 				},
 				[391] = {
-					["earnedThisWeek"] = 0,
+					["amount"] = 0,
 					["weeklyMax"] = 0,
 					["totalMax"] = 0,
-					["amount"] = 0,
+					["earnedThisWeek"] = 0,
 				},
 				[752] = {
-					["earnedThisWeek"] = 0,
+					["amount"] = 0,
 					["weeklyMax"] = 0,
 					["totalMax"] = 20,
-					["amount"] = 0,
+					["earnedThisWeek"] = 0,
 				},
 				[392] = {
-					["amount"] = 50,
+					["amount"] = 55,
 					["weeklyMax"] = 0,
 					["earnedThisWeek"] = 0,
 					["totalMax"] = 4000,
-					["season"] = "Season Total Earned: |cffffffff1093",
+					["season"] = "Season Total Earned: |cffffffff1097",
 				},
 				[994] = {
-					["earnedThisWeek"] = 3,
+					["amount"] = 2,
 					["weeklyMax"] = 3,
 					["totalMax"] = 10,
-					["amount"] = 2,
+					["earnedThisWeek"] = 3,
 				},
 				[738] = {
-					["earnedThisWeek"] = 0,
+					["amount"] = 258,
 					["weeklyMax"] = 0,
 					["totalMax"] = 0,
-					["amount"] = 258,
+					["earnedThisWeek"] = 0,
 				},
 				[416] = {
-					["earnedThisWeek"] = 0,
+					["amount"] = 0,
 					["weeklyMax"] = 0,
 					["totalMax"] = 0,
-					["amount"] = 0,
+					["earnedThisWeek"] = 0,
 				},
 				[396] = {
-					["earnedThisWeek"] = 0,
+					["amount"] = 0,
 					["weeklyMax"] = 1000,
 					["totalMax"] = 3000,
-					["amount"] = 0,
+					["earnedThisWeek"] = 0,
 				},
 				[81] = {
-					["earnedThisWeek"] = 0,
+					["amount"] = 0,
 					["weeklyMax"] = 0,
 					["totalMax"] = 0,
-					["amount"] = 0,
+					["earnedThisWeek"] = 0,
 				},
 				[777] = {
-					["earnedThisWeek"] = 0,
+					["amount"] = 18379,
 					["weeklyMax"] = 0,
 					["totalMax"] = 0,
-					["amount"] = 18379,
+					["earnedThisWeek"] = 0,
 				},
 			},
 			["Level"] = 100,
 			["LClass"] = "Monk",
 			["RBGrating"] = 0,
 			["Skills"] = {
-				[170700] = {
-					["Expires"] = 1422961206,
-					["Title"] = "Jewelcrafting: Taladite Crystal",
-					["Link"] = "|cffffd000|Henchant:170700|h[Jewelcrafting: Taladite Crystal]|h|r",
-				},
 				[169080] = {
-					["Expires"] = 1422961206,
+					["Expires"] = 1423479600,
 					["Title"] = "Engineering: Gearspring Parts",
 					["Link"] = "|cffffd000|Henchant:169080|h[Engineering: Gearspring Parts]|h|r",
 				},
-				[176087] = {
-					["Expires"] = 1422961206,
-					["Title"] = "Jewelcrafting: Secrets of Draenor Jewelcrafting",
-					["Link"] = "|cffffd000|Henchant:176087|h[Jewelcrafting: Secrets of Draenor Jewelcrafting]|h|r",
-				},
 				[177054] = {
-					["Expires"] = 1422961206,
+					["Expires"] = 1423479600,
 					["Title"] = "Engineering: Secrets of Draenor Engineering",
 					["Link"] = "|cffffd000|Henchant:177054|h[Engineering: Secrets of Draenor Engineering]|h|r",
 				},
+				[176087] = {
+					["Expires"] = 1423479600,
+					["Title"] = "Jewelcrafting: Secrets of Draenor Jewelcrafting",
+					["Link"] = "|cffffd000|Henchant:176087|h[Jewelcrafting: Secrets of Draenor Jewelcrafting]|h|r",
+				},
+				[170700] = {
+					["Expires"] = 1423479600,
+					["Title"] = "Jewelcrafting: Taladite Crystal",
+					["Link"] = "|cffffd000|Henchant:170700|h[Jewelcrafting: Taladite Crystal]|h|r",
+				},
 			},
-			["PlayedTotal"] = 6349531,
+			["PlayedTotal"] = 6459910,
 			["Show"] = "saved",
-			["lastbossyelltime"] = 1422926929,
-			["Money"] = 3378107072,
-			["Zone"] = "Orgrimmar",
-			["lastboss"] = "Imperator Mar'gok: Heroic",
+			["lastbossyelltime"] = 1423453877,
+			["Money"] = 3401456224,
+			["Zone"] = "Town Hall",
+			["lastboss"] = "Blackhand: Heroic",
 			["BonusRoll"] = {
+				{
+					["money"] = 202129,
+					["time"] = 1423030064,
+					["name"] = "Kromog, Legend of the Mountain: Heroic",
+					["currencyID"] = 994,
+				}, -- [1]
+				{
+					["money"] = 221789,
+					["name"] = "Operator Thogar: Heroic",
+					["time"] = 1423022892,
+					["currencyID"] = 994,
+				}, -- [2]
+				{
+					["item"] = "|cffa335ee|Hitem:113870:0:0:0:0:0:0:0:100:0:5:1:566|h[Vest of Forceful Fury]|h|r",
+					["time"] = 1423014877,
+					["name"] = "Gruul: Heroic",
+					["currencyID"] = 994,
+				}, -- [3]
 				{
 					["time"] = 1422583761,
 					["name"] = "The Butcher: Heroic",
 					["item"] = "|cffa335ee|Hitem:113634:0:0:0:0:0:0:0:100:0:5:1:566|h[Bracers of Spare Skin]|h|r",
 					["currencyID"] = 994,
-				}, -- [1]
+				}, -- [4]
 				{
 					["money"] = 293074,
 					["name"] = "Brackenspore: Mythic",
 					["time"] = 1422499333,
 					["currencyID"] = 994,
-				}, -- [2]
+				}, -- [5]
 				{
 					["item"] = "|cffa335ee|Hitem:113832:0:0:0:0:0:0:0:100:0:6:1:567|h[Treacherous Palms]|h|r",
 					["time"] = 1422415975,
 					["name"] = "Twin Ogron: Mythic",
 					["currencyID"] = 994,
-				}, -- [3]
+				}, -- [6]
 				{
 					["money"] = 289430,
 					["time"] = 1422414503,
 					["name"] = "Kargath Bladefist: Mythic",
 					["currencyID"] = 994,
-				}, -- [4]
+				}, -- [7]
 				{
 					["name"] = "The Butcher: Heroic",
 					["item"] = "|cffa335ee|Hitem:113611:0:0:0:0:0:0:0:100:0:5:1:566|h[Flenser's Hookring]|h|r",
 					["time"] = 1421990085,
 					["currencyID"] = 994,
-				}, -- [5]
+				}, -- [8]
 				{
 					["money"] = 205771,
 					["name"] = "The Butcher: Mythic",
 					["time"] = 1421980861,
 					["currencyID"] = 994,
-				}, -- [6]
+				}, -- [9]
 				{
 					["item"] = "|cffa335ee|Hitem:113657:0:0:0:0:0:0:0:100:0:6:1:567|h[Cloak of Creeping Necrosis]|h|r",
 					["time"] = 1421210225,
 					["name"] = "Brackenspore: Mythic",
 					["currencyID"] = 994,
-				}, -- [7]
+				}, -- [10]
 				{
 					["money"] = 261431,
 					["time"] = 1421206561,
 					["name"] = "Twin Ogron: Mythic",
 					["currencyID"] = 994,
-				}, -- [8]
+				}, -- [11]
 				{
 					["money"] = 356185,
 					["name"] = "The Butcher: Heroic",
 					["time"] = 1421197015,
 					["currencyID"] = 994,
-				}, -- [9]
+				}, -- [12]
 				{
 					["money"] = 340543,
 					["time"] = 1420678400,
 					["name"] = "Twin Ogron: Mythic",
 					["currencyID"] = 994,
-				}, -- [10]
+				}, -- [13]
 				{
 					["money"] = 283462,
 					["name"] = "Kargath Bladefist: Mythic",
 					["time"] = 1420602849,
 					["currencyID"] = 994,
-				}, -- [11]
+				}, -- [14]
 				{
 					["time"] = 1420592089,
 					["name"] = "The Butcher: Heroic",
 					["item"] = "|cffa335ee|Hitem:113634:0:0:0:0:0:0:0:100:0:5:3:564:43:566|h[Bracers of Spare Skin]|h|r",
 					["currencyID"] = 994,
-				}, -- [12]
+				}, -- [15]
 				{
 					["money"] = 391309,
 					["time"] = 1419997023,
 					["name"] = "Twin Ogron: Mythic",
 					["currencyID"] = 994,
-				}, -- [13]
+				}, -- [16]
 				{
 					["money"] = 361760,
 					["time"] = 1419994943,
 					["name"] = "Kargath Bladefist: Mythic",
 					["currencyID"] = 994,
-				}, -- [14]
+				}, -- [17]
 				{
 					["time"] = 1419992255,
 					["name"] = "Imperator Mar'gok: Heroic",
 					["item"] = "|cffa335ee|Hitem:113851:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Reaver's Nose Ring]|h|r",
 					["currencyID"] = 994,
-				}, -- [15]
+				}, -- [18]
 				{
 					["money"] = 323584,
 					["time"] = 1419986937,
 					["name"] = "The Butcher: Heroic",
 					["currencyID"] = 994,
-				}, -- [16]
+				}, -- [19]
 				{
 					["money"] = 398506,
 					["name"] = "Kargath Bladefist: Mythic",
 					["time"] = 1419908801,
 					["currencyID"] = 994,
-				}, -- [17]
+				}, -- [20]
 				{
 					["time"] = 1419903434,
 					["name"] = "Twin Ogron: Heroic",
 					["item"] = "|cffa335ee|Hitem:113667:0:0:0:0:0:0:0:100:0:5:1:566|h[Phemos' Double Slasher]|h|r",
 					["currencyID"] = 994,
-				}, -- [18]
+				}, -- [21]
 				{
 					["money"] = 355249,
 					["name"] = "The Butcher: Heroic",
 					["time"] = 1419900659,
 					["currencyID"] = 994,
-				}, -- [19]
+				}, -- [22]
 				{
 					["money"] = 297487,
 					["name"] = "Kargath Bladefist: Mythic",
 					["time"] = 1418865121,
 					["currencyID"] = 994,
-				}, -- [20]
+				}, -- [23]
 				{
 					["money"] = 333153,
 					["time"] = 1418777938,
 					["name"] = "The Butcher: Heroic",
 					["currencyID"] = 994,
-				}, -- [21]
+				}, -- [24]
 				{
 					["money"] = 216569,
 					["time"] = 1418776757,
 					["name"] = "Kargath Bladefist: Heroic",
 					["currencyID"] = 994,
-				}, -- [22]
-				{
-					["money"] = 295726,
-					["time"] = 1418182924,
-					["name"] = "The Butcher: Heroic",
-					["currencyID"] = 994,
-				}, -- [23]
-				{
-					["time"] = 1418181549,
-					["name"] = "Tectus, The Living Mountain: Heroic",
-					["item"] = "|cffa335ee|Hitem:113640:0:0:0:0:0:0:0:100:0:5:1:566|h[Earthwarped Bladestaff]|h|r",
-					["currencyID"] = 994,
-				}, -- [24]
-				{
-					["money"] = 307738,
-					["time"] = 1418173917,
-					["name"] = "Kargath Bladefist: Heroic",
-					["currencyID"] = 994,
 				}, -- [25]
 			},
-			["PlayedLevel"] = 944890,
-			["WeeklyResetTime"] = 1422961215,
-			["ILe"] = 676.3125,
-			["DailyResetTime"] = 1422961207,
+			["PlayedLevel"] = 1055269,
+			["WeeklyResetTime"] = 1423566004,
+			["ILe"] = 679.1875,
+			["DailyResetTime"] = 1423479611,
 			["Quests"] = {
 				[36056] = {
-					["Expires"] = 1422961212,
+					["Expires"] = 1423566002,
 					["Title"] = "Sealing Fate: Garrison Resources",
 					["Zone"] = "Warspear",
 				},
 				[37456] = {
-					["Expires"] = 1422961212,
+					["Expires"] = 1423566002,
 					["Title"] = "Sealing Fate: Stockpiled Garrison Resources",
 					["Zone"] = "Warspear",
 				},
-				[37321] = {
-					["Link"] = "|cff40c040|Hquest:37321:90|h[Jewelcrafting Special Order:  A Yellow Brighter Than Gold]|h|r",
-					["Zone"] = "Frostwall",
-					["Title"] = "Jewelcrafting Special Order:  A Yellow Brighter Than Gold",
-					["isDaily"] = true,
-				},
 				[36058] = {
-					["Expires"] = 1422961214,
+					["Expires"] = 1423566002,
 					["Title"] = "Seal of Tempered Fate: Armory",
 					["Link"] = "|cffffff00|Hquest:36058:90|h[Seal of Tempered Fate: Armory]|h|r",
 				},
 			},
-			["lastbosstime"] = 1422598167,
+			["lastbosstime"] = 1423453880,
 		},
 	},
 	["Tooltip"] = {
@@ -1417,20 +1427,11 @@ SavedInstancesDB = {
 			["Show"] = "saved",
 		},
 		["The Everbloom"] = {
-			["LFDID"] = 866,
-			["Expansion"] = 5,
 			["Show"] = "saved",
-			["RecLevel"] = 100,
-			["Evan - Illidan"] = {
-				[2] = {
-					["Expires"] = 0,
-					["Extended"] = false,
-					["Link"] = "|cffff8000|Hinstancelock:Player-57-0583ABC7:1279:2:27|h[The Everbloom]|h|r",
-					["ID"] = 910612350,
-					["Locked"] = false,
-				},
-			},
+			["Expansion"] = 5,
+			["LFDID"] = 866,
 			["Raid"] = false,
+			["RecLevel"] = 100,
 		},
 		["Zul'Aman"] = {
 			["LFDID"] = 340,
@@ -1460,9 +1461,6 @@ SavedInstancesDB = {
 			["LFDID"] = 851,
 			["Show"] = "saved",
 			["Comet - Illidan"] = {
-			},
-			["RecLevel"] = 100,
-			["Evan - Illidan"] = {
 				[2] = {
 					false, -- [1]
 					false, -- [2]
@@ -1471,9 +1469,12 @@ SavedInstancesDB = {
 					false, -- [5]
 					false, -- [6]
 					true, -- [7]
-					["Expires"] = 1422961207,
+					["Expires"] = 1423566002,
 					["ID"] = -7,
 				},
+			},
+			["RecLevel"] = 100,
+			["Evan - Illidan"] = {
 			},
 			["Raid"] = true,
 		},
@@ -1522,20 +1523,11 @@ SavedInstancesDB = {
 			["Show"] = "saved",
 		},
 		["Bloodmaul Slag Mines"] = {
-			["Show"] = "saved",
-			["Expansion"] = 5,
 			["LFDID"] = 859,
-			["Raid"] = false,
-			["Evan - Illidan"] = {
-				[2] = {
-					["Expires"] = 0,
-					["Extended"] = false,
-					["Link"] = "|cffff8000|Hinstancelock:Player-57-0583ABC7:1175:2:15|h[Bloodmaul Slag Mines]|h|r",
-					["ID"] = 913737907,
-					["Locked"] = false,
-				},
-			},
+			["Expansion"] = 5,
+			["Show"] = "saved",
 			["RecLevel"] = 91,
+			["Raid"] = false,
 		},
 		["Dragon Soul"] = {
 			["LFDID"] = 448,
@@ -1684,17 +1676,6 @@ SavedInstancesDB = {
 			},
 			["Raid"] = true,
 			["Evan - Illidan"] = {
-				[2] = {
-					false, -- [1]
-					false, -- [2]
-					false, -- [3]
-					true, -- [4]
-					true, -- [5]
-					true, -- [6]
-					false, -- [7]
-					["Expires"] = 1422961207,
-					["ID"] = -7,
-				},
 			},
 			["RecLevel"] = 100,
 		},
@@ -2232,18 +2213,18 @@ SavedInstancesDB = {
 			["Expansion"] = 5,
 			["Metal - Illidan"] = {
 				[15] = {
-					["Expires"] = 1422979206,
+					["Expires"] = 1423584002,
 					["Extended"] = false,
-					["Link"] = "|cffff8000|Hinstancelock:Player-57-080DF31D:1228:15:127|h[Highmaul]|h|r",
-					["ID"] = 175773604,
+					["Link"] = "|cffff8000|Hinstancelock:Player-57-080DF31D:1228:15:40|h[Highmaul]|h|r",
+					["ID"] = 569548972,
 					["Locked"] = true,
 				},
 				[14] = {
-					["Expires"] = 1422979206,
+					["Expires"] = 0,
 					["Extended"] = false,
 					["Link"] = "|cffff8000|Hinstancelock:Player-57-080DF31D:1228:14:59|h[Highmaul]|h|r",
 					["ID"] = 175741626,
-					["Locked"] = true,
+					["Locked"] = false,
 				},
 			},
 			["Show"] = "saved",
@@ -2257,17 +2238,17 @@ SavedInstancesDB = {
 					["Locked"] = false,
 				},
 				[16] = {
-					["Expires"] = 1422979206,
+					["Expires"] = 0,
 					["Extended"] = false,
 					["Link"] = "|cffff8000|Hinstancelock:Player-57-05DF4D8D:1228:16:28|h[Highmaul]|h|r",
 					["ID"] = 175793956,
-					["Locked"] = true,
+					["Locked"] = false,
 				},
 				[15] = {
-					["Expires"] = 1422979206,
+					["Expires"] = 1423584001,
 					["Extended"] = false,
-					["Link"] = "|cffff8000|Hinstancelock:Player-57-05DF4D8D:1228:15:126|h[Highmaul]|h|r",
-					["ID"] = 567887825,
+					["Link"] = "|cffff8000|Hinstancelock:Player-57-05DF4D8D:1228:15:2|h[Highmaul]|h|r",
+					["ID"] = 185882793,
 					["Locked"] = true,
 				},
 			},
@@ -2412,11 +2393,27 @@ SavedInstancesDB = {
 			["Raid"] = true,
 		},
 		["Blackrock Foundry"] = {
-			["LFDID"] = 900,
+			["Show"] = "saved",
 			["Expansion"] = 5,
+			["LFDID"] = 900,
+			["Comet - Illidan"] = {
+				[15] = {
+					["Expires"] = 1423584001,
+					["Extended"] = false,
+					["Link"] = "|cffff8000|Hinstancelock:Player-57-05DF4D8D:1205:15:767|h[Blackrock Foundry]|h|r",
+					["ID"] = 176977951,
+					["Locked"] = true,
+				},
+				[14] = {
+					["Expires"] = 1423584001,
+					["Extended"] = false,
+					["Link"] = "|cffff8000|Hinstancelock:Player-57-05DF4D8D:1205:14:256|h[Blackrock Foundry]|h|r",
+					["ID"] = 177226207,
+					["Locked"] = true,
+				},
+			},
 			["Raid"] = true,
 			["RecLevel"] = 100,
-			["Show"] = "saved",
 		},
 		["Temple of the Jade Serpent"] = {
 			["LFDID"] = 468,
@@ -2520,17 +2517,6 @@ SavedInstancesDB = {
 			},
 			["Raid"] = true,
 			["Evan - Illidan"] = {
-				[2] = {
-					true, -- [1]
-					true, -- [2]
-					true, -- [3]
-					false, -- [4]
-					false, -- [5]
-					false, -- [6]
-					false, -- [7]
-					["Expires"] = 1422961207,
-					["ID"] = -7,
-				},
 			},
 			["RecLevel"] = 100,
 		},
@@ -2850,7 +2836,7 @@ SavedInstancesDB = {
 		["R1ClassColor"] = true,
 		["R0ClassColor"] = true,
 	},
-	["histGeneration"] = 424,
+	["histGeneration"] = 447,
 	["QuestDB"] = {
 		["Daily"] = {
 			[37319] = 976,
@@ -2872,12 +2858,12 @@ SavedInstancesDB = {
 			["expires"] = 1423461540,
 		},
 		["AccountDaily"] = {
-			[34774] = 1011,
+			[34774] = 988,
 			[31752] = 993,
 		},
 		["Weekly"] = {
 			[32640] = 862,
-			["expires"] = 1422961206,
+			["expires"] = 1423566002,
 			[32641] = 862,
 			[37457] = 1011,
 			[36054] = 1011,
@@ -2896,11 +2882,22 @@ SavedInstancesDB = {
 			[36058] = -1,
 		},
 		["AccountWeekly"] = {
-			["expires"] = 1422961206,
+			["expires"] = 1423566002,
 		},
 	},
-	["DailyResetTime"] = 1422961207,
+	["DailyResetTime"] = 1423479611,
 	["Quests"] = {
+		[34774] = {
+			["isDaily"] = true,
+			["Title"] = "Blingtron 5000",
+			["Zone"] = "Blackrock Foundry",
+		},
+		[31752] = {
+			["Link"] = "|cffffff00|Hquest:31752:90|h[Blingtron 4000]|h|r",
+			["Zone"] = "Grimrail Depot",
+			["Title"] = "Blingtron 4000",
+			["isDaily"] = true,
+		},
 	},
 	["spelltip"] = {
 		[71041] = {

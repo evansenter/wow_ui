@@ -1,0 +1,12 @@
+tag v5.11.5
+7eaab7542b26e22e9419f8335bdad1caac278446
+Chip Turner <cturner@pattern.net>
+2015-02-03 21:19:01 -0800
+
+update for BRF
+
+
+--------------------
+
+Chip Turner:
+	- 10 ilvl decay and BRF base ilvl from kieron

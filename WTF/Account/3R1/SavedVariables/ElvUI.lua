@@ -17,12 +17,12 @@ ElvDB = {
 	},
 	["gold"] = {
 		["Illidan"] = {
-			["Metal"] = 38510916,
+			["Metal"] = 10322422,
 			["Natal"] = 272625,
-			["Evan"] = 62334077,
+			["Evan"] = 34023982,
 			["Combustion"] = 3728207,
 			["Plane"] = 498891,
-			["Comet"] = 3378107072,
+			["Comet"] = 3401456224,
 		},
 		["Dark Iron"] = {
 			["Centromere"] = 229053,
@@ -2557,15 +2557,15 @@ ElvPrivateDB = {
 				["enable"] = false,
 			},
 			["general"] = {
-				["minimapbar"] = {
-					["mouseover"] = true,
-				},
+				["chatBubbles"] = "nobackdrop",
 				["raidmarkerbar"] = {
 					["enable"] = false,
 				},
 				["namefont"] = "ABF",
 				["normTex"] = "BantoBar",
-				["chatBubbles"] = "nobackdrop",
+				["minimapbar"] = {
+					["mouseover"] = true,
+				},
 				["dmgfont"] = "ABF",
 				["glossTex"] = "BantoBar",
 			},
@@ -2579,11 +2579,11 @@ ElvPrivateDB = {
 				["disableBlizzard"] = false,
 				["enable"] = false,
 			},
-			["farmer"] = {
-				["enabled"] = false,
-			},
 			["actionbar"] = {
 				["enable"] = false,
+			},
+			["farmer"] = {
+				["enabled"] = false,
 			},
 			["skins"] = {
 				["blizzard"] = {
@@ -2689,11 +2689,11 @@ ElvPrivateDB = {
 				["blizzard"] = {
 					["achievement"] = false,
 					["tradeskill"] = false,
-					["pvp"] = false,
 					["lfg"] = false,
+					["talent"] = false,
 					["losscontrol"] = false,
 					["enable"] = false,
-					["talent"] = false,
+					["pvp"] = false,
 					["spellbook"] = false,
 				},
 				["addons"] = {

@@ -5,6 +5,10 @@ g_BulkOrder = g_BulkOrder or {}
 
 -----------------------------------------------------------------
 
+local Version60100 = (GetBuildInfo ():match ('^6.0') == nil)
+
+-----------------------------------------------------------------
+
 local GARRISON_RESOURCES = 824
 
 local WARMILL = 1
@@ -57,19 +61,29 @@ end
 -----------------------------------------------------------------
 
 local THROTTLE = 0.2
-
+local LastTime = 0  -- Just to prevent it from trying to queue all more than once >.>
 function StartAllWorkOrders ()
-    frmBulkOrder.elapsed = 0
-    frmBulkOrder:SetScript ("OnUpdate", function (self, elapsed)
-        self.elapsed = self.elapsed + elapsed
-        if self.elapsed > THROTTLE then
-            self.elapsed = 0
-            C_Garrison.RequestShipmentCreation ()
-            if self.maxShipments == C_Garrison.GetNumPendingShipments () then
-                self:SetScript ("OnUpdate", nil)
-            end
+    if Version60100 then
+        -- Exciting new version wherein Blizzard totally added this new functionality BECAUSE OF ME I AM THE GREATEST WOOHOO /cough
+        if GarrisonCapacitiveDisplayFrame.available and (GetTime() - LastTime > 3) then
+            LastTime = GetTime ()
+            C_Garrison.RequestShipmentCreation (GarrisonCapacitiveDisplayFrame.available)
         end
-    end)
+    else
+        -- Boring old version
+        frmBulkOrder.elapsed = 0
+        frmBulkOrder:SetScript ("OnUpdate", function (self, elapsed)
+            self.elapsed = self.elapsed + elapsed
+            if self.elapsed > THROTTLE then
+                self.elapsed = 0
+                C_Garrison.RequestShipmentCreation ()
+                if self.maxShipments == C_Garrison.GetNumPendingShipments () then
+                    self:SetScript ("OnUpdate", nil)
+                end
+            end
+        end)
+    end
+    
 end
 
 -----------------------------------------------------------------
@@ -77,7 +91,7 @@ end
 local function CreateReminderFrame ()
     -- A point!
     -- Because the frame gets anchored to the fontstring, and fontstrings apparently can't be moved (?)
-    local point = CreateFrame ("Frame", nil, UIParent)
+    local point = CreateFrame ("Frame", 'frmBulkOrderReminderPoint', UIParent)
     point:SetSize (1,1)
     point:SetPoint ("CENTER", UIParent, "CENTER", 0, -250)
     
@@ -139,10 +153,11 @@ local function CreateReminderFrame ()
         f:Hide ()
     end)            
 
+    f:Hide ();
 
     return f
 end
-
+CreateReminderFrame ()
 -----------------------------------------------------------------
 
 local function RemindWorkOrders ()
@@ -170,8 +185,8 @@ local function RemindWorkOrders ()
     end
     
     if #lst > 0 then
-        local f = CreateReminderFrame ()
-        f:SetText ('|cFFFFFF00Work Orders Reminder|r\n\n'..string.join ('\n',unpack (lst)))
+        frmBulkOrderReminder:SetText ('|cFFFFFF00Work Orders Reminder|r\n\n'..string.join ('\n',unpack (lst)))
+        frmBulkOrderReminder:Show ()
     end
 end
 
@@ -197,27 +212,6 @@ function f:OnEvent (event, func)
         func (...)
     end
 end
---[[function f:EnableAutoOrders ()
-    g_BulkOrder.autoOrders = true
-    if self.windowIsOpen then
-        StartAllWorkOrders ()
-    end
-end
-
-function f:DisableAutoOrders ()
-    g_BulkOrder.autoOrders = false
-    self:SetScript ("OnUpdate", nil)
-end
-
-function f:ReportAutoOrders ()
-    local msg = colortext ('CCCCCC','[BulkOrder]:') .. ' Automatic work orders are %s!'
-    
-    if g_BulkOrder.autoOrders then
-        print (msg:format (colortext (GREEN, 'ON')))
-    else
-        print (msg:format (colortext (RED, 'OFF')))
-    end
-end]]
 
 -- Event handlers
 -----------------------------------------------------------------
@@ -226,7 +220,7 @@ f:OnEvent ("SHIPMENT_CRAFTER_OPENED", function (containerID)
     --f.windowIsOpen = true
     f:SetScript ("OnUpdate", nil)    -- Really stupid game bug...
     
-    if not GarrisonCapacitiveDisplayFrame.StartAllWorkOrdersButton then
+    if (not GarrisonCapacitiveDisplayFrame.StartAllWorkOrdersButton) and (not Version60100) then
         local btn = CreateFrame ("Button", nil, GarrisonCapacitiveDisplayFrame, "UIPanelButtonTemplate")
         GarrisonCapacitiveDisplayFrame.StartAllWorkOrdersButton = btn
         btn:SetPoint ("BOTTOM", GarrisonCapacitiveDisplayFrame.StartWorkOrderButton, "TOP", 0, 2)
@@ -258,11 +252,14 @@ end)
 -----------------------------------------------------------------
 
 f:OnEvent ("SHIPMENT_CRAFTER_INFO", function (success, _, maxShipments, plotID) 
-    GarrisonCapacitiveDisplayFrame.StartAllWorkOrdersButton:SetShown (not g_BulkOrder.HideButton)
-    
     -- The normal button's enabled state can tell us whether the player has the resources for more work orders. Let's use that.
     local enabled = GarrisonCapacitiveDisplayFrame.StartWorkOrderButton:IsEnabled ()
-    GarrisonCapacitiveDisplayFrame.StartAllWorkOrdersButton:SetEnabled (enabled)
+    
+    if GarrisonCapacitiveDisplayFrame.StartAllWorkOrdersButton then 
+        GarrisonCapacitiveDisplayFrame.StartAllWorkOrdersButton:SetShown (not g_BulkOrder.HideButton) 
+        GarrisonCapacitiveDisplayFrame.StartAllWorkOrdersButton:SetEnabled (enabled)
+    end
+    
     if not enabled then
         f:SetScript ("OnUpdate", nil)
         return

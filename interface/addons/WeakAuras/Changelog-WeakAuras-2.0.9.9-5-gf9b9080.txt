@@ -1,0 +1,16 @@
+Infus:
+	- Rewrite Ignore Rune CD
+	Apparently a spell cd due to a rune has always a duration of 10.
+	So, rewrite the ignore rune cd option to use that fact. And track
+	the spell cooldowns but disregard any update that has a duration of
+	10 for those spells.
+	- Fix remaining time check for some auras
+	Ticket-number: 68
+	- Fix sorting in dynamic groups
+	We need to set the duration information in the region before we
+	call expand, as expand will call controlChildren, which sorts
+	according to the duration info.
+	
+	Ticket-number: 156
+Steffen Buehl:
+	- change dungeon difficulty load condition from select to multiselect

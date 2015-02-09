@@ -2,6 +2,7 @@ local ADDON, data = ...
 
 local checkboxes = {}   -- Will contain {checkbox, variable} pairs. Used in the refresh function.
 
+local Version60100 = (GetBuildInfo ():match ('^6.0') == nil)
 
 --[[
 local L = setmetatable({}, { __index = function(t, k)
@@ -189,14 +190,16 @@ function BulkOrder_CreateOptions ()
     
 
     -- Misc
-    local TitleMisc = Options:CreateFontString (nil, "ARTWORK", "GameFontHighlight")
-    TitleMisc:SetPoint ("TOPLEFT", Options.chkRemindHerbGarden, "BOTTOMLEFT", 0, -30)
-    TitleMisc:SetText ('Misc.:')
-    Options.TitleMisc = TitleMisc
+    if not Version60100 then
+        local TitleMisc = Options:CreateFontString (nil, "ARTWORK", "GameFontHighlight")
+        TitleMisc:SetPoint ("TOPLEFT", Options.chkRemindHerbGarden, "BOTTOMLEFT", 0, -30)
+        TitleMisc:SetText ('Misc.:')
+        Options.TitleMisc = TitleMisc
     
-    Options.chkHideButton = Options:CreateCheckBox (TitleMisc, 0, -5, 'Hide Button')
-        :Bind ('HideButton', false, true)
-        :SetTooltip ('Hide Button', 'If this option is checked, the work orders window will not display the additional Start All Work Orders button.')
+        Options.chkHideButton = Options:CreateCheckBox (TitleMisc, 0, -5, 'Hide Button')
+            :Bind ('HideButton', false, true)
+            :SetTooltip ('Hide Button', 'If this option is checked, the work orders window will not display the additional Start All Work Orders button.')
+    end
     
     
     

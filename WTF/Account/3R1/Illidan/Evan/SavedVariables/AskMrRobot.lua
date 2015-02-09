@@ -57,34 +57,60 @@ AmrDb = {
 		["SendEnchantMaterials"] = true,
 		["SendToType"] = "a friend",
 	},
-	["BankItems"] = {
-		"|cff0070dd|Hitem:52720:0:0:0:0:0:0:0:100:0:0:0|h[Small Heavenly Shard]|h|r", -- [1]
-		"|cff1eff00|Hitem:16202:0:0:0:0:0:0:0:100:0:0:0|h[Lesser Eternal Essence]|h|r", -- [2]
-		"|cff0070dd|Hitem:11177:0:0:0:0:0:0:0:100:0:0:0|h[Small Radiant Shard]|h|r", -- [3]
-		"|cff1eff00|Hitem:11134:0:0:0:0:0:0:0:100:0:0:0|h[Lesser Mystic Essence]|h|r", -- [4]
-		"|cffffffff|Hitem:115508:0:0:0:0:0:0:0:100:0:0:0|h[Draenic Stone]|h|r", -- [5]
-		"|cffffffff|Hitem:101677:0:0:0:0:0:0:0:100:0:11:0|h[Thunderlord Grapple]|h|r", -- [6]
-		"|cffffffff|Hitem:82467:0:0:0:0:0:0:1962154240:100:0:0:0|h[Ruthers' Harness]|h|r", -- [7]
-		"|cff1eff00|Hitem:34486:0:0:0:0:0:0:1281266560:100:0:0:0|h[Old Crafty]|h|r", -- [8]
-		"|cff0070dd|Hitem:119001:0:0:0:0:0:0:0:100:0:11:0|h[Mystery Keg]|h|r", -- [9]
-		"|cff0070dd|Hitem:52723:0:0:0:0:0:0:792967168:100:0:0:0|h[Runed Elementium Rod]|h|r", -- [10]
-		"|cff0070dd|Hitem:118372:0:0:0:0:0:0:0:100:0:11:0|h[Orgrimmar Tabard]|h|r", -- [11]
-	},
+	["Region"] = "US",
 	["Specs"] = {
 		21, -- [1]
 		20, -- [2]
 	},
 	["Options"] = {
 	},
-	["Region"] = "US",
+	["BankItems"] = {
+		"|cff0070dd|Hitem:52720:0:0:0:0:0:0:0:100:0:0:0|h[Small Heavenly Shard]|h|r", -- [1]
+		"|cff1eff00|Hitem:16202:0:0:0:0:0:0:0:100:0:0:0|h[Lesser Eternal Essence]|h|r", -- [2]
+		"|cff0070dd|Hitem:11177:0:0:0:0:0:0:0:100:0:0:0|h[Small Radiant Shard]|h|r", -- [3]
+		"|cff0070dd|Hitem:11139:0:0:0:0:0:0:0:100:0:0:0|h[Large Glowing Shard]|h|r", -- [4]
+		"|cff1eff00|Hitem:11134:0:0:0:0:0:0:0:100:0:0:0|h[Lesser Mystic Essence]|h|r", -- [5]
+		"|cffffffff|Hitem:115508:0:0:0:0:0:0:0:100:0:0:0|h[Draenic Stone]|h|r", -- [6]
+		"|cffffffff|Hitem:101677:0:0:0:0:0:0:0:100:0:11:0|h[Thunderlord Grapple]|h|r", -- [7]
+		"|cffffffff|Hitem:82467:0:0:0:0:0:0:1962154240:100:0:0:0|h[Ruthers' Harness]|h|r", -- [8]
+		"|cff1eff00|Hitem:34486:0:0:0:0:0:0:1281266560:100:0:0:0|h[Old Crafty]|h|r", -- [9]
+		"|cff0070dd|Hitem:119001:0:0:0:0:0:0:0:100:0:11:0|h[Mystery Keg]|h|r", -- [10]
+		"|cff0070dd|Hitem:52723:0:0:0:0:0:0:792967168:100:0:0:0|h[Runed Elementium Rod]|h|r", -- [11]
+		"|cff0070dd|Hitem:118372:0:0:0:0:0:0:0:100:0:11:0|h[Orgrimmar Tabard]|h|r", -- [12]
+	},
 	["Currencies"] = {
 		[402] = 1,
 		[416] = 26,
-		[391] = 12,
+		[823] = 1404,
 		[392] = 192,
 		[614] = 1,
 		[-1] = 62224724,
-		[823] = 1404,
+		[391] = 12,
+	},
+	["LastCharacterImport"] = "$7;Illidan;Evan;Slash Cry;13;2;90;10:600,4:600;1;s1;21;1211220;55673,2,7573,82474,1350,704;q1;98599s7u493x4653y0c11e4896;766s10u12x0y0c11e-465;1s1u0x378y-378c41;2881s15u0x0c1e-8;3531s6u-12x-4y-17z17c230;6649s12u-2b450x-17c3d104427;131s3u14b0x21y-21c13e383d104468;165s16u0b0x17c2e-364d104503;22s9u-12b-1e-28d103811;1s5u12b1x4y-4z-17c123e4d104523;1s11u-12b0x17c2d104524;35s8u12b0x4c1e8d104552;95s14u0b-1d102309;71s13u0b0d102299;6s2u-14b1d104477$g\\4653\\76693\\4815,4653,4578\\20 _Haste_\\83147,76693,76627@g\\5031\\95345\\\\Courageous\\@g\\4649\\76699\\4816,4649,4584\\20 _Haste_\\83142,76699,76633@g\\4632\\76681\\4632,4566\\10 _Haste_, 10 _CriticalStrike_\\76681,76615@g\\4647\\76697\\4818,4647,4582\\20 _CriticalStrike_\\83146,76697,76631@g\\4611\\76660\\4611,4545\\5 _Intellect_, 10 _CriticalStrike_\\76660,76594@g\\4591\\76640\\4591,4524\\10 _Spirit_, 10 _CriticalStrike_\\76640,76574@e\\4896\\0\\125497\\19 _Intellect_, 11 _Spirit_\\38426=3@e\\4431\\74720\\104417\\11 _Haste_\\74250=2@e\\4423\\74712\\104403\\12 _Intellect_\\74249=3,74250=3@e\\4806\\87559\\121195\\15 _Intellect_, 5 _CriticalStrike_\\39354=1,79255=3@e\\4442\\74724\\104427\\Jade Spirit\\74250=4,74248=10@e\\4414\\74703\\104389\\12 _Intellect_\\74248=3@e\\4418\\74707\\104393\\15 _Spirit_\\74249=4@e\\4426\\74715\\104407\\11 _Haste_\\74249=2,74250=1@e\\4895\\0\\125496\\19 _Intellect_, 11 _CriticalStrike_\\38426=3@e\\4419\\74708\\104395\\5 All Stats\\74249=2,74250=3",
+	["LogData"] = {
+		["_wipes"] = {
+		},
+		["_autoLog"] = {
+			[1228] = "disabled",
+			[1136] = "disabled",
+			[1205] = "disabled",
+		},
+		["_lastDiff"] = 1,
+		["_lastZone"] = "FW Horde Garrison Level 3",
+	},
+	["BagItems"] = {
+		"|cffa335ee|Hitem:115998:0:0:0:0:0:0:0:100:0:4:0|h[Sterilized Handwraps]|h|r", -- [1]
+		"|cffffffff|Hitem:5512:0:0:0:0:0:0:0:100:0:4:0|h[Healthstone]|h|r", -- [2]
+		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [3]
+		"|cffffffff|Hitem:113823:0:0:0:0:0:0:0:100:0:0:0|h[Crusted Iron Horde Pauldrons]|h|r", -- [4]
+		"|cffffffff|Hitem:110560:0:0:0:0:0:0:0:100:0:11:0|h[Garrison Hearthstone]|h|r", -- [5]
+		"|cffffffff|Hitem:6218:0:0:0:0:0:0:0:100:0:0:0|h[Runed Copper Rod]|h|r", -- [6]
+		"|cffffffff|Hitem:6256:0:0:0:0:0:0:0:100:0:0:0|h[Fishing Pole]|h|r", -- [7]
+		"|cff0070dd|Hitem:118922:0:0:0:0:0:0:0:100:0:11:0|h[Oralius' Whispering Crystal]|h|r", -- [8]
+	},
+	["IconInfo"] = {
+		["minimapPos"] = 141.874669027745,
 	},
 	["VoidItems"] = {
 		"|cff0070dd|Hitem:93550:0:0:0:0:0:0:356991616:100:0:0:0|h[Crafted Dreadful Gladiator's Mooncloth Gloves]|h|r", -- [1]
@@ -225,31 +251,6 @@ AmrDb = {
 		"|cff0070dd|Hitem:37817:0:0:0:0:0:0:0:100:0:0:0|h[Branch of Sinful Reprieve]|h|r", -- [136]
 		"|cffff8000|Hitem:102247:0:0:0:0:0:0:836114944:100:505:0:0|h[Jina-Kang, Kindness of Chi-Ji]|h|r", -- [137]
 	},
-	["LogData"] = {
-		["_wipes"] = {
-		},
-		["_autoLog"] = {
-			[1228] = "disabled",
-			[1136] = "disabled",
-			[1205] = "disabled",
-		},
-		["_lastDiff"] = 1,
-		["_lastZone"] = "FW Horde Garrison Level 3",
-	},
-	["BagItems"] = {
-		"|cffa335ee|Hitem:115998:0:0:0:0:0:0:0:100:0:4:0|h[Sterilized Handwraps]|h|r", -- [1]
-		"|cffffffff|Hitem:5512:0:0:0:0:0:0:0:100:0:4:0|h[Healthstone]|h|r", -- [2]
-		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [3]
-		"|cffffffff|Hitem:113823:0:0:0:0:0:0:0:100:0:0:0|h[Crusted Iron Horde Pauldrons]|h|r", -- [4]
-		"|cffffffff|Hitem:110560:0:0:0:0:0:0:0:100:0:11:0|h[Garrison Hearthstone]|h|r", -- [5]
-		"|cffffffff|Hitem:6218:0:0:0:0:0:0:0:100:0:0:0|h[Runed Copper Rod]|h|r", -- [6]
-		"|cffffffff|Hitem:6256:0:0:0:0:0:0:0:100:0:0:0|h[Fishing Pole]|h|r", -- [7]
-		"|cff0070dd|Hitem:118922:0:0:0:0:0:0:0:100:0:11:0|h[Oralius' Whispering Crystal]|h|r", -- [8]
-	},
-	["IconInfo"] = {
-		["minimapPos"] = 141.874669027745,
-	},
-	["LastCharacterImport"] = "$7;Illidan;Evan;Slash Cry;13;2;90;10:600,4:600;1;s1;21;1211220;55673,2,7573,82474,1350,704;q1;98599s7u493x4653y0c11e4896;766s10u12x0y0c11e-465;1s1u0x378y-378c41;2881s15u0x0c1e-8;3531s6u-12x-4y-17z17c230;6649s12u-2b450x-17c3d104427;131s3u14b0x21y-21c13e383d104468;165s16u0b0x17c2e-364d104503;22s9u-12b-1e-28d103811;1s5u12b1x4y-4z-17c123e4d104523;1s11u-12b0x17c2d104524;35s8u12b0x4c1e8d104552;95s14u0b-1d102309;71s13u0b0d102299;6s2u-14b1d104477$g\\4653\\76693\\4815,4653,4578\\20 _Haste_\\83147,76693,76627@g\\5031\\95345\\\\Courageous\\@g\\4649\\76699\\4816,4649,4584\\20 _Haste_\\83142,76699,76633@g\\4632\\76681\\4632,4566\\10 _Haste_, 10 _CriticalStrike_\\76681,76615@g\\4647\\76697\\4818,4647,4582\\20 _CriticalStrike_\\83146,76697,76631@g\\4611\\76660\\4611,4545\\5 _Intellect_, 10 _CriticalStrike_\\76660,76594@g\\4591\\76640\\4591,4524\\10 _Spirit_, 10 _CriticalStrike_\\76640,76574@e\\4896\\0\\125497\\19 _Intellect_, 11 _Spirit_\\38426=3@e\\4431\\74720\\104417\\11 _Haste_\\74250=2@e\\4423\\74712\\104403\\12 _Intellect_\\74249=3,74250=3@e\\4806\\87559\\121195\\15 _Intellect_, 5 _CriticalStrike_\\39354=1,79255=3@e\\4442\\74724\\104427\\Jade Spirit\\74250=4,74248=10@e\\4414\\74703\\104389\\12 _Intellect_\\74248=3@e\\4418\\74707\\104393\\15 _Spirit_\\74249=4@e\\4426\\74715\\104407\\11 _Haste_\\74249=2,74250=1@e\\4895\\0\\125496\\19 _Intellect_, 11 _CriticalStrike_\\38426=3@e\\4419\\74708\\104395\\5 All Stats\\74249=2,74250=3",
 	["Reps"] = {
 		[1269] = 7,
 		[1337] = 6,
@@ -285,43 +286,41 @@ AmrDb = {
 	},
 	["BankItemsAndCounts"] = {
 		[98619] = 2,
-		[102218] = 20,
 		[16202] = 1,
 		[22447] = 4,
 		[120945] = 10,
 		[34056] = 4,
 		[11134] = 1,
-		[109125] = 95,
-		[109129] = 102,
+		[109125] = 123,
+		[109129] = 72,
 		[10978] = 2,
 		[52718] = 3,
 		[52720] = 1,
 		[115508] = 1,
 		[11138] = 3,
+		[11139] = 1,
 		[119001] = 1,
-		[109693] = 103,
+		[109126] = 113,
 		[89112] = 7,
 		[11177] = 1,
-		[111556] = 377,
+		[111556] = 448,
 		[34053] = 2,
 		[101677] = 1,
-		[113588] = 16,
+		[113588] = 2,
 		[116053] = 3,
-		[109127] = 37,
+		[109127] = 55,
 		[109131] = 11,
 		[115502] = 6,
 		[52723] = 1,
 		[74249] = 5,
+		[111557] = 76,
 		[22448] = 7,
-		[111557] = 141,
-		[113261] = 2,
-		[38682] = 120,
-		[113681] = 24,
+		[38682] = 117,
 		[82467] = 1,
-		[109126] = 124,
-		[109124] = 4,
+		[109693] = 21,
+		[113478] = 7,
 		[109128] = 15,
-		[113478] = 6,
+		[113681] = 24,
 		[34486] = 1,
 		[118372] = 1,
 	},

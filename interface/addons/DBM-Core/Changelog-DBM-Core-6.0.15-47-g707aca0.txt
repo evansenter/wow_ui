@@ -1,0 +1,48 @@
+subversion:
+	- Omega via svn r12812: Some tweaks
+	- Omega via svn r12811: Add gruul and darmoc berserks Hold off on kromog 8 minute normal berserk until blizzard answers the WTF on it. (8min normal, none on heroic?)
+	- nbluewiz via svn r12810: # re-fix health order.
+	- nbluewiz via svn r12809: # fix profile creation error. # fix lua error in kromog.
+	- Omega via svn r12808: Rearrange boss order to match progression difficulty order, vs bad dungeon journal order. LFRers will disagree with order, since LFr forces you to do first 3 in a fixed order with oregorger before gruul, but i'm sorting on difficulty order for normal+, not linear LFR order.
+	- nbluewiz via svn r12807: # try to fix unknown yell bug?
+	- nbluewiz via svn r12806: # add collect ore warn.
+	- nbluewiz via svn r12805: # fix lua error.
+	- nbluewiz via svn r12804: # fix bad default.
+	- nbluewiz via svn r12803: # fix acid torrent cd.
+	- nbluewiz via svn r12802: # fix voice also.
+	- Omega via svn r12801: Tweak
+	- Omega via svn r12800: Fixed width font menus
+	- Omega via svn r12799: french update
+	- nbluewiz via svn r12798: # double line special warning.
+	- nbluewiz via svn r12797: # fix another error.
+	- nbluewiz via svn r12796: # fix error.
+	- nbluewiz via svn r12795: # blast rate warn.
+	- nbluewiz via svn r12794: # better end specials warn.
+	- Omega via svn r12793: Improve attach slag bomb behavior for tanks
+	- nbluewiz via svn r12792: # fix untranslated spell.
+	- nbluewiz via svn r12791: # generic mount warning for darmac.
+	- Omega via svn r12790: Add note to known issues thread.
+	- Omega via svn r12789: Tweak
+	- nbluewiz via svn r12788: # Savage Howl, this may simple and better.
+	- Omega via svn r12787: change savage howl to generic warning
+	- Omega via svn r12786: Count shattering smashes Improve warnings to show to relevant rolls to reduce unnecessary warnings Fix voice spam bugs Added countdown for Shattering Smash Added countdown for slag bombs Added countdown for marked for death Added taunt warning for attach slag bomb for the forced tank swap.
+	- nbluewiz via svn r12785: # fix heroic bad inferno slice cd after rampage.
+	- nbluewiz via svn r12784: # change first gruul timer to special timer.
+	- nbluewiz via svn r12783: # bad typo.
+	- nbluewiz via svn r12782: # adjust some kromog timer by video.
+	- nbluewiz via svn r12781: # oops bad timer.
+	- nbluewiz via svn r12780: # add fire storm ended. # fix Blazin Radiance warn showing at end.
+	- nbluewiz via svn r12779: # fix thogar info frame update.
+	- Omega via svn r12778: Tweak
+	- Omega via svn r12777: Add elementalists remaining warning Add countdown for blast Refactor blast timer to be less jittery
+	- nbluewiz via svn r12776: # fix bad tab.
+	- nbluewiz via svn r12775: # fix range frame hide bug.
+	- Omega via svn r12774: Switch to UnitPosition for boat
+	- Omega via svn r12773: Add optional nearby too (spammy in stack strats, so off by default)
+	- Omega via svn r12772: Remove unused, tweaks
+	- Omega via svn r12771: Re-enable melt, with target warning off by default.
+	- Omega via svn r12770: Use mod schedule. not DBM schedule, that way it stops when mod:stop is called Tweaks
+	- Omega via svn r12769: VP authors readme update
+	- TOM_RUS via svn r12768: ruRU update
+	- nbluewiz via svn r12767: # Timer cancel and recovery on boat or leave boat. # ship timer cancel below 25% or all ship player returned. # small adjust some timer.
+	- tandanu via svn r12766: increment version number
