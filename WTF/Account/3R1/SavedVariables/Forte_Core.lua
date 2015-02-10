@@ -18,7 +18,7 @@ FX_Saved = {
 		["Fathom-Guard Tidalvess"] = 1,
 		["Fathom-Guard Sharkkis"] = 1,
 	},
-	["Update"] = 10815.038,
+	["Update"] = 34533.911,
 	["Profiles"] = {
 		["Active"] = 1,
 		["Characters"] = {
@@ -1126,13 +1126,13 @@ FX_Saved = {
 	["RaidStatus"] = {
 		["Evan"] = {
 			0, -- [1]
-			10815.038, -- [2]
+			34533.911, -- [2]
 			"PRIEST", -- [3]
 			"v1.980.8", -- [4]
 		},
 		["Metal"] = {
 			-2, -- [1]
-			10571.223, -- [2]
+			34457.284, -- [2]
 			"WARRIOR", -- [3]
 			"v1.980.8", -- [4]
 		},

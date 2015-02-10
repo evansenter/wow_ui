@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(959, "DBM-BlackrockFoundry", nil, 457)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12812 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 12833 $"):sub(12, -3))
 mod:SetCreatureID(77325)--68168
 mod:SetEncounterID(1704)
 mod:SetZone()
@@ -11,8 +11,8 @@ mod:RegisterCombat("combat")
 
 mod:RegisterEventsInCombat(
 	"SPELL_CAST_START 155992 159142 156928 158054",
-	"SPELL_AURA_APPLIED 156096 157000 156667 156401 156653",
-	"SPELL_AURA_REMOVED 156096 157000 156667",
+	"SPELL_AURA_APPLIED 156096 157000 156667 156401 156653 159179",
+	"SPELL_AURA_REMOVED 156096 157000 156667 159179",
 	"SPELL_PERIODIC_DAMAGE 156401",
 	"SPELL_PERIODIC_MISSED 156401",
 	"SPELL_ENERGIZE 104915",
@@ -37,8 +37,8 @@ local specWarnThrowSlagBombs		= mod:NewSpecialWarningMove(156030, nil, nil, nil,
 local specWarnShatteringSmash		= mod:NewSpecialWarningCount(155992, "Melee", nil, nil, nil, nil, 2)
 local specWarnMoltenSlag			= mod:NewSpecialWarningMove(156401)
 --Stage Two: Storage Warehouse
-local specWarnSiegemaker			= mod:NewSpecialWarningSwitch("OptionVersion2", "ej9571", false)
-local specWarnSiegemakerPlatingFades= mod:NewSpecialWarningFades(156667, "Dps")
+local specWarnSiegemaker			= mod:NewSpecialWarningSpell("ej9571", false)--Kiter switch. off by default. 
+local specWarnSiegemakerPlatingFades= mod:NewSpecialWarningFades(156667, "Dps")--Plating removed, NOW dps switch
 local specWarnFixate				= mod:NewSpecialWarningRun(156653, nil, nil, nil, 4)
 local yellFixate					= mod:NewYell(156653)
 --Stage Three: Iron Crucible
@@ -65,8 +65,9 @@ local timerAttachSlagBombsCD		= mod:NewCDTimer(26, 157000)--26-28. Do to increas
 local timerSlagBomb					= mod:NewCastTimer(5, 157015)
 
 local countdownShatteringSmash		= mod:NewCountdown(45.5, 155992)
-local countdownSlagBombs			= mod:NewCountdown("Alt25", 155992, "Melee")
+local countdownSlagBombs			= mod:NewCountdown("Alt25", 156030, "Melee")
 local countdownMarkedforDeath		= mod:NewCountdown("AltTwo25", 156096, "-Tank")
+local countdownMarkedforDeathFades	= mod:NewCountdownFades("AltTwo5", 156096)--Same voice should be fine, never will overlap, and both for same spell, so people will understand
 
 local voicePhaseChange				= mod:NewVoice(nil, nil, DBM_CORE_AUTO_VOICE2_OPTION_TEXT)
 local voiceSiegemaker				= mod:NewVoice("ej9571", "Dps") -- ej9571.ogg tank coming
@@ -78,12 +79,20 @@ local voiceAttachSlagBombs			= mod:NewVoice(157000) --target: runout;
 
 mod:AddSetIconOption("SetIconOnMarked", 156096, true)
 mod:AddRangeFrameOption("6/10")
+mod:AddHudMapOption("HudMapOnMFD", 156096)
 
 mod.vb.phase = 1
 mod.vb.SlagEruption = 0
 mod.vb.smashCount = 0
-
 local UnitDebuff = UnitDebuff
+local DBMHudMap = DBMHudMap
+local free = DBMHudMap.free
+local hudEnabled = false
+local function register(e)	
+	DBMHudMap:RegisterEncounterMarker(e)
+	return e
+end
+local MFDMarkers={}
 
 function mod:OnCombatStart(delay)
 	self.vb.phase = 1
@@ -98,12 +107,21 @@ function mod:OnCombatStart(delay)
 	end
 	timerMarkedforDeathCD:Start(36-delay)
 	countdownMarkedforDeath:Start(36-delay)
+	if self.Options.HudMapOnMFD then
+		hudEnabled = true
+		table.wipe(MFDMarkers)
+		DBMHudMap:Enable()
+	end
 end
 
 function mod:OnCombatEnd()
 --	self:UnregisterShortTermEvents()
 	if self.Options.RangeFrame then
 		DBM.RangeCheck:Hide()
+	end
+	if hudEnabled then
+		hudEnabled = false
+		DBMHudMap:FreeEncounterMarkers()
 	end
 end
 
@@ -152,20 +170,28 @@ function mod:SPELL_AURA_APPLIED(args)
 	local spellId = args.spellId
 	if spellId == 156096 then
 		warnMarkedforDeath:CombinedShow(0.5, args.destName)
-		if self.vb.phase == 3 then
-			timerMarkedforDeathCD:Start(21.5)
-		else
-			timerMarkedforDeathCD:Start()
+		if hudEnabled then
+			MFDMarkers[args.destName] = register(DBMHudMap:PlaceRangeMarkerOnPartyMember("highlight", args.destName, 5, 5, 1, 0, 0, 0.5):Pulse(0.5, 0.5))
 		end
-		timerImpalingThrow:Start()
 		if args:IsPlayer() then
 			specWarnMarkedforDeath:Show()
 			yellMarkedforDeath:Yell()
 			voiceMarkedforDeath:Play("findshelter")
+			countdownMarkedforDeathFades:Start()
 		end
 		if self:AntiSpam(2, 3) then
+			local timer = 15.5
+			if self.vb.phase == 3 then
+				timer = 21.5
+			elseif self.vb.phase == 2 then
+				timer = 16
+			else
+				timer = 15
+			end
+			timerImpalingThrow:Start()
 			self:Schedule(0.5, checkMarked)
-			countdownMarkedforDeath:Start()
+			timerMarkedforDeathCD:Start(timer)
+			countdownMarkedforDeath:Start(timer)
 		end
 		if self.Options.SetIconOnMarked then
 			self:SetSortedIcon(1, args.destName, 1, 2)
@@ -184,20 +210,21 @@ function mod:SPELL_AURA_APPLIED(args)
 			if self.Options.RangeFrame then
 				DBM.RangeCheck:Show(10)
 			end
-		else--Tank stuff
-			if spellId == 159179 then--tank version
+		end
+		--Tank stuff
+		if spellId == 159179 then--tank version
+			if not args:IsPlayer() then
 				specWarnAttachSlagBombsOther:Show(args.destName)
-				voiceAttachSlagBombs:Play("changemt")
 			end
+			voiceAttachSlagBombs:Play("changemt")
 		end
 	elseif spellId == 156667 then
-		if not self.Options.SpecWarnej9571switch2 then
+		if not self.Options.SpecWarnej9571spell then
 			warnSiegemaker:Show()
 		else
 			specWarnSiegemaker:Show()
 		end
 		timerSiegemakerCD:Start()
-		voiceSiegemaker:Play("ej9571")
 	elseif spellId == 156401 and args:IsPlayer() and self:AntiSpam(2, 1) then
 		specWarnMoltenSlag:Show()
 	elseif spellId == 156653 then
@@ -214,42 +241,25 @@ end
 function mod:SPELL_AURA_REMOVED(args)
 	local spellId = args.spellId
 	if spellId == 156096 then
+		if hudEnabled then
+			if MFDMarkers[args.destName] then
+				MFDMarkers[args.destName] = free(MFDMarkers[args.destName])
+			end
+		end
 		timerImpalingThrow:Cancel()
 		if self.Options.SetIconOnMarked then
 			self:SetIcon(args.destName, 0)
 		end
-	elseif spellId == 157000 and args:IsPlayer() then
+	elseif (spellId == 157000 or spellId == 159179) and args:IsPlayer() then
 		timerSlagBomb:Cancel()
 		if self.Options.RangeFrame then
 			DBM.RangeCheck:Hide()
 		end
 	elseif spellId == 156667 then
 		specWarnSiegemakerPlatingFades:Show()
+		voiceSiegemaker:Play("ej9571")
 	end
 end
-
---[[
-Just in case SPELL_ENERGIZE method doesn't work
-do
-	local targetsHit = 0
-	local function updateSmash(self)
-		DBM:Debug("updateSmash is running, 4 targets not hit?")
-	end
-	function mod:SPELL_DAMAGE(_, _, _, _, destGUID, _, _, _, spellId)
-		if spellId == 158054 then
-			targetsHit = targetsHit + 1
-			self:Unschedule(updateSmash)
-			self:Schedule(3, updateSmash, self)
-			if targetsHit >= 4 then
-				self:UnregisterShortTermEvents()--Unregister events and do nothing else, we're done. hit enough targets
-				self:Unschedule(updateSmash)
-				targetsHit = 0
-				DBM:Debug("updateSmash should be aborted. At least 4 targets hit.")
-			end
-		end
-	end
-	mod.SPELL_MISSED = mod.SPELL_DAMAGE
-end--]]
 
 function mod:SPELL_ENERGIZE(_, _, _, _, destGUID, _, _, _, spellId, _, _, amount)
 	if spellId == 104915 and destGUID == UnitGUID("boss1") then

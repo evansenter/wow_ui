@@ -2,7 +2,7 @@
 AmrDb = {
 	["Talents"] = {
 		"2323332", -- [1]
-		"2313333", -- [2]
+		"2313323", -- [2]
 	},
 	["LastCharacterImportDate"] = "",
 	["SendSettings"] = {
@@ -31,7 +31,7 @@ AmrDb = {
 			"|cffa335ee|Hitem:118295:5284:0:0:0:0:0:0:100:0:14:0|h[Timeless Solium Band of Brutality]|h|r", -- [11]
 			"|cffa335ee|Hitem:113643:5284:0:0:0:0:0:0:100:0:5:1:566|h[Eye of Tectus]|h|r", -- [12]
 			"|cffa335ee|Hitem:113658:0:0:0:0:0:0:0:100:0:5:1:566|h[Bottle of Infesting Spores]|h|r", -- [13]
-			"|cffa335ee|Hitem:114552:0:0:0:0:0:0:0:100:0:1:0|h[Grandiose Carnage]|h|r", -- [14]
+			"|cffa335ee|Hitem:114552:0:0:0:0:0:0:0:100:0:1:1:41|h[Grandiose Carnage]|h|r", -- [14]
 			"|cffa335ee|Hitem:113830:5281:0:0:0:0:0:0:100:0:5:1:566|h[Cloak of Ruminant Deception]|h|r", -- [15]
 			"|cffa335ee|Hitem:113606:5330:0:0:0:0:0:0:100:0:5:2:561:566|h[Butcher's Bloody Cleaver]|h|r", -- [16]
 			"|cffa335ee|Hitem:113606:5331:0:0:0:0:0:0:100:0:5:1:566|h[Butcher's Bloody Cleaver]|h|r", -- [17]
@@ -56,6 +56,7 @@ AmrDb = {
 			"|cffa335ee|Hitem:113666:0:0:0:0:0:0:0:100:0:5:1:566|h[Absalom's Bloody Bulwark]|h|r", -- [17]
 		}, -- [2]
 	},
+	["Class"] = "WARRIOR",
 	["Glyphs"] = {
 		{
 			115943, -- [1]
@@ -74,12 +75,17 @@ AmrDb = {
 			159701, -- [6]
 		}, -- [2]
 	},
-	["Class"] = "WARRIOR",
 	["Specs"] = {
 		33, -- [1]
 		34, -- [2]
 	},
 	["Options"] = {
+	},
+	["Region"] = "US",
+	["Currencies"] = {
+		[392] = 69,
+		[823] = 404,
+		[-1] = 7941788,
 	},
 	["BankItems"] = {
 		"|cffffffff|Hitem:109124:0:0:0:0:0:0:0:100:0:0:0|h[Frostweed]|h|r", -- [1]
@@ -132,12 +138,6 @@ AmrDb = {
 		"|cffe6cc80|Hitem:105679:4444:4632:4632:0:0:0:0:100:0:3:0|h[Hellscream's Decapitator]|h|r", -- [48]
 		"|cffe6cc80|Hitem:104405:4444:4632:4632:0:0:0:0:100:0:5:0|h[Hellscream's Decapitator]|h|r", -- [49]
 	},
-	["Currencies"] = {
-		[392] = 69,
-		[823] = 404,
-		[-1] = 4116934,
-	},
-	["RealmName"] = "Illidan",
 	["LogData"] = {
 		["_wipes"] = {
 		},
@@ -146,58 +146,41 @@ AmrDb = {
 			[1136] = "disabled",
 			[1205] = "disabled",
 		},
-		["_lastZone"] = "FW Horde Garrison Level 3",
 		["_lastDiff"] = 1,
+		["_lastZone"] = "FW Horde Garrison Level 3",
 	},
 	["BagItems"] = {
 		"|cff0070dd|Hitem:67061:0:0:0:0:0:0:0:100:0:0:0|h[Bulwark of the Scorned Man]|h|r", -- [1]
 		"|cff0070dd|Hitem:87454:0:0:0:0:0:0:0:100:0:0:0|h[Light-Sealed Casque]|h|r", -- [2]
-		"|cffffffff|Hitem:5512:0:0:0:0:0:0:0:100:0:5:0|h[Healthstone]|h|r", -- [3]
-		"|cffa335ee|Hitem:113660:0:0:0:0:0:0:0:100:0:5:1:566|h[Mosscrusher Sabatons]|h|r", -- [4]
-		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [5]
-		"|cffffffff|Hitem:113822:0:0:0:0:0:0:0:100:0:0:0|h[Ravaged Iron Horde Belt]|h|r", -- [6]
-		"|cffffffff|Hitem:110560:0:0:0:0:0:0:0:100:0:11:0|h[Garrison Hearthstone]|h|r", -- [7]
-		"|cffffffff|Hitem:109223:0:0:0:0:0:0:0:100:0:0:0|h[Healing Tonic]|h|r", -- [8]
-		"|cffffffff|Hitem:5956:0:0:0:0:0:0:0:100:0:0:0|h[Blacksmith Hammer]|h|r", -- [9]
-		"|cffffffff|Hitem:2901:0:0:0:0:0:0:0:100:0:0:0|h[Mining Pick]|h|r", -- [10]
-		"|cffffffff|Hitem:6219:0:0:0:0:0:0:14150448:100:0:0:0|h[Arclight Spanner]|h|r", -- [11]
-		"|cffffffff|Hitem:6256:0:0:0:0:0:0:0:100:0:14:0|h[Fishing Pole]|h|r", -- [12]
-		"|cff1eff00|Hitem:114807:0:0:0:0:0:0:0:100:0:0:0|h[War Ravaged Armor Set]|h|r", -- [13]
-		"|cff0070dd|Hitem:71637:0:0:0:0:0:0:-2043103936:100:0:0:0|h[Mysterious Grimoire]|h|r", -- [14]
-		"|cff0070dd|Hitem:118100:0:0:0:0:0:0:0:100:0:0:0|h[Highmaul Relic]|h|r", -- [15]
-		"|cff0070dd|Hitem:116395:0:0:0:0:0:0:0:100:0:0:0|h[Comprehensive Outpost Construction Guide]|h|r", -- [16]
-		"|cff0070dd|Hitem:114808:0:0:0:0:0:0:0:100:0:0:0|h[Fortified Armor Enhancement]|h|r", -- [17]
-		"|cff0070dd|Hitem:118475:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone Strategy Guide]|h|r", -- [18]
-		"|cff0070dd|Hitem:118922:0:0:0:0:0:0:0:100:0:11:0|h[Oralius' Whispering Crystal]|h|r", -- [19]
-		"|cff0070dd|Hitem:110011:0:0:0:0:0:0:0:100:0:2:1:524|h[Fires of the Sun]|h|r", -- [20]
-		"|cff0070dd|Hitem:110010:0:5339:0:0:0:0:0:100:0:2:2:523:524|h[Mote of Corruption]|h|r", -- [21]
-		"|cff0070dd|Hitem:37757:0:0:0:0:0:0:0:100:0:0:0|h[Charlotte's Chastizing Pauldrons]|h|r", -- [22]
-		"|cffa335ee|Hitem:113606:5331:0:0:0:0:0:0:100:0:5:1:566|h[Butcher's Bloody Cleaver]|h|r", -- [23]
-		"|cffa335ee|Hitem:113830:5281:0:0:0:0:0:0:100:0:5:1:566|h[Cloak of Ruminant Deception]|h|r", -- [24]
-		"|cffa335ee|Hitem:114552:0:0:0:0:0:0:0:100:0:1:0|h[Grandiose Carnage]|h|r", -- [25]
-		"|cffa335ee|Hitem:113643:5284:0:0:0:0:0:0:100:0:5:1:566|h[Eye of Tectus]|h|r", -- [26]
-		"|cffa335ee|Hitem:118295:5284:0:0:0:0:0:0:100:0:14:0|h[Timeless Solium Band of Brutality]|h|r", -- [27]
-		"|cffa335ee|Hitem:40187:0:0:0:0:0:0:0:100:0:0:0|h[Poignant Sabatons]|h|r", -- [28]
-		"|cffa335ee|Hitem:114234:0:0:0:0:0:0:0:100:0:13:3:38:534:526|h[Truesteel Greaves of the Fireflash]|h|r", -- [29]
-		"|cffa335ee|Hitem:115799:5285:0:0:0:0:0:0:100:0:13:4:525:540:67:540|h[Glowing Taladite Pendant of the Savage]|h|r", -- [30]
-		"|cffa335ee|Hitem:114230:0:0:0:0:0:0:0:100:0:13:3:79:525:534|h[Truesteel Helm of the Savage]|h|r", -- [31]
-		"|cffa335ee|Hitem:113667:5331:0:0:0:0:0:0:100:0:5:2:561:566|h[Phemos' Double Slasher]|h|r", -- [32]
+		"|cffa335ee|Hitem:113660:0:0:0:0:0:0:0:100:0:5:1:566|h[Mosscrusher Sabatons]|h|r", -- [3]
+		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [4]
+		"|cffffffff|Hitem:113822:0:0:0:0:0:0:0:100:0:0:0|h[Ravaged Iron Horde Belt]|h|r", -- [5]
+		"|cffffffff|Hitem:110560:0:0:0:0:0:0:0:100:0:11:0|h[Garrison Hearthstone]|h|r", -- [6]
+		"|cffffffff|Hitem:5956:0:0:0:0:0:0:0:100:0:0:0|h[Blacksmith Hammer]|h|r", -- [7]
+		"|cffffffff|Hitem:2901:0:0:0:0:0:0:0:100:0:0:0|h[Mining Pick]|h|r", -- [8]
+		"|cffffffff|Hitem:6219:0:0:0:0:0:0:14150448:100:0:0:0|h[Arclight Spanner]|h|r", -- [9]
+		"|cffffffff|Hitem:6256:0:0:0:0:0:0:0:100:0:14:0|h[Fishing Pole]|h|r", -- [10]
+		"|cff1eff00|Hitem:114807:0:0:0:0:0:0:0:100:0:0:0|h[War Ravaged Armor Set]|h|r", -- [11]
+		"|cff0070dd|Hitem:71637:0:0:0:0:0:0:-2043103936:100:0:0:0|h[Mysterious Grimoire]|h|r", -- [12]
+		"|cff0070dd|Hitem:118100:0:0:0:0:0:0:0:100:0:0:0|h[Highmaul Relic]|h|r", -- [13]
+		"|cff0070dd|Hitem:116395:0:0:0:0:0:0:0:100:0:0:0|h[Comprehensive Outpost Construction Guide]|h|r", -- [14]
+		"|cff0070dd|Hitem:114808:0:0:0:0:0:0:0:100:0:0:0|h[Fortified Armor Enhancement]|h|r", -- [15]
+		"|cff0070dd|Hitem:118475:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone Strategy Guide]|h|r", -- [16]
+		"|cff0070dd|Hitem:118922:0:0:0:0:0:0:0:100:0:11:0|h[Oralius' Whispering Crystal]|h|r", -- [17]
+		"|cff0070dd|Hitem:110011:0:0:0:0:0:0:0:100:0:2:1:524|h[Fires of the Sun]|h|r", -- [18]
+		"|cff0070dd|Hitem:110010:0:5339:0:0:0:0:0:100:0:2:2:523:524|h[Mote of Corruption]|h|r", -- [19]
+		"|cff0070dd|Hitem:37757:0:0:0:0:0:0:0:100:0:0:0|h[Charlotte's Chastizing Pauldrons]|h|r", -- [20]
+		"|cffa335ee|Hitem:113606:5331:0:0:0:0:0:0:100:0:5:1:566|h[Butcher's Bloody Cleaver]|h|r", -- [21]
+		"|cffa335ee|Hitem:113830:5281:0:0:0:0:0:0:100:0:5:1:566|h[Cloak of Ruminant Deception]|h|r", -- [22]
+		"|cffa335ee|Hitem:114552:0:0:0:0:0:0:0:100:0:1:0|h[Grandiose Carnage]|h|r", -- [23]
+		"|cffa335ee|Hitem:113643:5284:0:0:0:0:0:0:100:0:5:1:566|h[Eye of Tectus]|h|r", -- [24]
+		"|cffa335ee|Hitem:118295:5284:0:0:0:0:0:0:100:0:14:0|h[Timeless Solium Band of Brutality]|h|r", -- [25]
+		"|cffa335ee|Hitem:40187:0:0:0:0:0:0:0:100:0:0:0|h[Poignant Sabatons]|h|r", -- [26]
+		"|cffa335ee|Hitem:114234:0:0:0:0:0:0:0:100:0:13:3:38:534:526|h[Truesteel Greaves of the Fireflash]|h|r", -- [27]
+		"|cffa335ee|Hitem:115799:5285:0:0:0:0:0:0:100:0:13:4:525:540:67:540|h[Glowing Taladite Pendant of the Savage]|h|r", -- [28]
+		"|cffa335ee|Hitem:114230:0:0:0:0:0:0:0:100:0:13:3:79:525:534|h[Truesteel Helm of the Savage]|h|r", -- [29]
+		"|cffa335ee|Hitem:113667:5331:0:0:0:0:0:0:100:0:5:2:561:566|h[Phemos' Double Slasher]|h|r", -- [30]
 	},
-	["Professions"] = {
-	},
-	["LastCharacterImport"] = "",
-	["Reps"] = {
-		[1269] = 3,
-		[1337] = 3,
-		[1341] = 3,
-		[1375] = 3,
-		[1387] = 0,
-		[1376] = 0,
-		[1435] = 3,
-		[1388] = 4,
-		[1270] = 3,
-	},
-	["Faction"] = "Horde",
 	["IconInfo"] = {
 		["minimapPos"] = 142.399548566353,
 	},
@@ -232,7 +215,22 @@ AmrDb = {
 		"|cff0070dd|Hitem:37795:0:0:0:0:0:0:0:100:0:0:0|h[Grips of the Valiant Champion]|h|r", -- [28]
 		"|cff0070dd|Hitem:118781:0:0:0:0:0:0:0:100:0:2:0|h[Gorestained Hatchet]|h|r", -- [29]
 	},
-	["Region"] = "US",
+	["Reps"] = {
+		[1269] = 3,
+		[1337] = 3,
+		[1341] = 3,
+		[1375] = 3,
+		[1387] = 0,
+		[1376] = 0,
+		[1435] = 3,
+		[1388] = 4,
+		[1270] = 3,
+	},
+	["Faction"] = "Horde",
+	["Professions"] = {
+	},
+	["LastCharacterImport"] = "",
+	["RealmName"] = "Illidan",
 	["BankItemsAndCounts"] = {
 		[109132] = 3,
 		[42765] = 1,
@@ -282,9 +280,9 @@ AmrDb = {
 		[101796] = 1,
 		[101677] = 1,
 		[65625] = 1,
-		[104405] = 1,
+		[111658] = 3,
 		[98920] = 1,
-		[112921] = 1,
+		[118148] = 1,
 		[87509] = 1,
 		[119394] = 1,
 		[64402] = 1,
@@ -293,18 +291,18 @@ AmrDb = {
 		[112949] = 1,
 		[109118] = 866,
 		[99418] = 1,
-		[118883] = 1,
-		[6975] = 1,
-		[99198] = 1,
-		[120945] = 6,
-		[112796] = 1,
-		[109133] = 2,
-		[111366] = 4,
 		[112953] = 1,
+		[6975] = 1,
+		[111366] = 4,
+		[109133] = 2,
+		[112796] = 1,
+		[120945] = 6,
+		[99198] = 1,
+		[118883] = 1,
 		[117355] = 1,
 		[105679] = 1,
-		[118148] = 1,
+		[112921] = 1,
 		[109124] = 1,
-		[111658] = 3,
+		[104405] = 1,
 	},
 }

@@ -61,7 +61,7 @@ VER 3 0000000000000039 "Mumble" "INV_Misc_Trinketpanda_06"
 END
 VER 3 0000000000000027 "Pull" "INV_Gizmo_RocketBootExtreme"
 /i DBM Pull.
-/dbm pull 12
+/dbm pull 10
 END
 VER 3 0000000000000037 "Purge Template" "INV_MISC_QUESTIONMARK"
 #showtooltip

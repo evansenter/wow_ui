@@ -36,8 +36,8 @@ W: 136
 H: 18
 Frame: StormEarthAndFireAnchor
 FrameLevel: 0
-Anchor: BOTTOM
+Anchor: CENTER
 X: -48
-Y: 74
+Y: -184
 W: 6
 H: 6

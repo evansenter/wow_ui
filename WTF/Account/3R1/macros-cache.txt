@@ -30,6 +30,11 @@ END
 VER 3 000000000000002B "Focus" "Ability_Priest_Phantasm"
 /focus
 END
+VER 3 0000000000000049 "Guard" "INV_Misc_QuestionMark"
+#showtooltip Guard
+/use 13
+/cast Guard
+END
 VER 3 0000000000000034 "HS / GHS" "INV_Misc_QuestionMark"
 #showtooltip
 /use [nomod]Hearthstone;[mod:shift][mod:alt]Garrison Hearthstone

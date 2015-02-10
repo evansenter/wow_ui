@@ -1,24 +1,18 @@
 
 HandyNotesDB = {
 	["profileKeys"] = {
-		["Combustion - Illidan"] = "Combustion - Illidan",
-		["Metal - Illidan"] = "Metal - Illidan",
-		["Evan - Illidan"] = "Evan - Illidan",
 		["Plane - Illidan"] = "Plane - Illidan",
-		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
+		["Metal - Illidan"] = "Metal - Illidan",
 		["Natal - Illidan"] = "Natal - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
+		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
+		["Evan - Illidan"] = "Evan - Illidan",
+		["Combustion - Illidan"] = "Combustion - Illidan",
 	},
 	["profiles"] = {
-		["Combustion - Illidan"] = {
-		},
-		["Metal - Illidan"] = {
-		},
-		["Evan - Illidan"] = {
-		},
 		["Plane - Illidan"] = {
 		},
-		["Centromere - Dark Iron"] = {
+		["Metal - Illidan"] = {
 		},
 		["Natal - Illidan"] = {
 		},
@@ -26,32 +20,38 @@ HandyNotesDB = {
 			["icon_alpha_minimap"] = 0.75,
 			["icon_alpha"] = 0.75,
 		},
+		["Centromere - Dark Iron"] = {
+		},
+		["Evan - Illidan"] = {
+		},
+		["Combustion - Illidan"] = {
+		},
 	},
 }
 HandyNotes_HandyNotesDB = {
 	["profileKeys"] = {
-		["Combustion - Illidan"] = "Combustion - Illidan",
-		["Metal - Illidan"] = "Metal - Illidan",
-		["Evan - Illidan"] = "Evan - Illidan",
 		["Plane - Illidan"] = "Plane - Illidan",
-		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
+		["Metal - Illidan"] = "Metal - Illidan",
 		["Natal - Illidan"] = "Natal - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
+		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
+		["Evan - Illidan"] = "Evan - Illidan",
+		["Combustion - Illidan"] = "Combustion - Illidan",
 	},
 	["profiles"] = {
-		["Combustion - Illidan"] = {
-		},
-		["Metal - Illidan"] = {
-		},
-		["Evan - Illidan"] = {
-		},
 		["Plane - Illidan"] = {
 		},
-		["Centromere - Dark Iron"] = {
+		["Metal - Illidan"] = {
 		},
 		["Natal - Illidan"] = {
 		},
 		["Comet - Illidan"] = {
+		},
+		["Centromere - Dark Iron"] = {
+		},
+		["Evan - Illidan"] = {
+		},
+		["Combustion - Illidan"] = {
 		},
 	},
 }

@@ -1,4 +1,29 @@
 subversion:
+	- Omega via svn r12837: Fix "target" which was basically just passing nil.
+	- TOM_RUS via svn r12836: ruRU update
+	- nbluewiz via svn r12835: # koKR update.
+	- Omega via svn r12834: Fix typos
+	- Omega via svn r12833: Add another test to gruul Tweaks and micro optimizing. Fix some global leaks that have probably existed here since original mod. Still one leak i can't figure out because i can't figure out the intent.
+	- Omega via svn r12832: Don't do hud like range frame. Support multiple options within a single mod if warranted. More tweaks to enable/disable
+	- Omega via svn r12831: Fix two bugs
+	- Omega via svn r12830: Add blast furnace berserk timer. Make the tuesday hotfix adjustments to marked for death Fix a bug where countdown was wrong in phase 3 on marked for death, plus micro optimize timers while at it so they only fire :Start once. Added countdown for fades by request.
+	- Omega via svn r12829: Add trash warnings for the mini boss before blackhand
+	- Omega via svn r12828: And make it on by default.
+	- Omega via svn r12827: Attempt to kill frame when not in combat. and activate it in combat only if mods use it.
+	- TOM_RUS via svn r12826: Comment out unused table for visibility
+	- Omega via svn r12825: Tweaks, notes
+	- TOM_RUS via svn r12824: Experimental HudMap stuff
+	- Omega via svn r12823: Global option. disabled by default while testing, and feedback is under way
+	- Omega via svn r12822: Add basic option prototype for now that may need tweaking later.
+	- Omega via svn r12821: Some tweaks to blackhand as well as fix placement for one of voice files More berserk timer fixes.
+	- Omega via svn r12820: Hide range frame on tank debuff fade too
+	- nbluewiz via svn r12819: # fix wrong bw version.
+	- nbluewiz via svn r12818: # bw version.
+	- nbluewiz via svn r12817: # koKR update.
+	- Omega via svn r12816: remove legacy stuff Add dispel warning to blast furnace.
+	- Omega via svn r12815: CN update
+	- Omega via svn r12814: Fix option bug
+	- Omega via svn r12813: works better when spellid is registered
 	- Omega via svn r12812: Some tweaks
 	- Omega via svn r12811: Add gruul and darmoc berserks Hold off on kromog 8 minute normal berserk until blizzard answers the WTF on it. (8min normal, none on heroic?)
 	- nbluewiz via svn r12810: # re-fix health order.

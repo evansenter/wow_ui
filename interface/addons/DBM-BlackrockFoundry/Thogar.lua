@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1147, "DBM-BlackrockFoundry", nil, 457)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12807 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 12831 $"):sub(12, -3))
 mod:SetCreatureID(76906)--81315 Crack-Shot, 81197 Raider, 77487 Grom'kar Firemender, 80791 Grom'kar Man-at-Arms, 81318 Iron Gunnery Sergeant, 77560 Obliterator Cannon, 81612 Deforester
 mod:SetEncounterID(1692)
 mod:SetZone()
@@ -35,7 +35,7 @@ local specWarnEnkindle				= mod:NewSpecialWarningStack(155921, nil, 2)--Maybe ne
 local specWarnEnkindleOther			= mod:NewSpecialWarningTaunt(155921)
 local specWarnTrain					= mod:NewSpecialWarningDodge(176312, nil, nil, nil, 3)
 --Adds
-local specWarnCauterizingBolt		= mod:NewSpecialWarningInterrupt(160140, not "Healer")
+local specWarnCauterizingBolt		= mod:NewSpecialWarningInterrupt("OptionVersion2", 160140, "-Healer")
 local specWarnIronbellow			= mod:NewSpecialWarningSpell(163753, nil, nil, nil, 2)
 local specWarnDelayedSiegeBomb		= mod:NewSpecialWarningYou(159481)
 local yellDelayedSiegeBomb			= mod:NewYell(159481)

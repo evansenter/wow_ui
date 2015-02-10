@@ -1,0 +1,13 @@
+tag v6.0.3-6
+02d40d5c4b645dfcfc341243ebe850179799f902
+Elvador <>
+2015-02-07 13:34:35 +0100
+
+Tagging as v6.0.3-6
+
+
+--------------------
+
+Elvador:
+	- Add russian localization
+	- Actually use spanish localization

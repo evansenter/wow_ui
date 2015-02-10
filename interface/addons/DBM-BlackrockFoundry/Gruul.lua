@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1161, "DBM-BlackrockFoundry", nil, 457)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12811 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 12833 $"):sub(12, -3))
 mod:SetCreatureID(76877)
 mod:SetEncounterID(1691)
 mod:SetZone()
@@ -49,9 +49,8 @@ local voiceInfernoSlice				= mod:NewVoice(155080) --gathershare. maybe change to
 local voiceOverheadSmash			= mod:NewVoice(155301) --shockwave
 local voiceShatter					= mod:NewVoice(155326)--Spread/Scatter
 
---local berserkTimer				= mod:NewBerserkTimer(360)--Said to be 6 minutes. Unconfirmed.
-
 mod:AddRangeFrameOption(8, 155530)
+mod:AddHudMapOption("HudMapOnShatter", 155530, false)--Might be overwhelming. up to 8 targets on non mythic, and on mythic, 20 of them. So off by default
 
 mod.vb.smashCount = 0
 mod.vb.sliceCount = 0
@@ -67,6 +66,14 @@ do
 		end
 	end
 end
+local DBMHudMap = DBMHudMap
+local free = DBMHudMap.free
+local hudEnabled = false
+local function register(e)	
+	DBMHudMap:RegisterEncounterMarker(e)
+	return e
+end
+local ShatterMarker = {}
 
 local function clearRampage(self)
 	self.vb.rampage = false
@@ -92,18 +99,29 @@ function mod:OnCombatStart(delay)
 		self:RegisterShortTermEvents(
 			"UNIT_POWER_FREQUENT boss1"
 			)
-		if self:IsHeroic() then--6 min berserk on heroic. none found for normal, even going 14 min pulls
+		if self:IsHeroic() then
 			berserkTimer:Start(-delay)
+		elseif self:IsNormal() then
+			berserkTimer:Start(480-delay)
 		end
 	end
 	timerSpecialCD:Start(-delay)
 	timerRampageCD:Start(-delay)--Variable. But seen as low as 108 in LFR, normal, mythic
+	if self.Options.HudMapOnShatter then
+		hudEnabled = true
+		table.wipe(ShatterMarker)
+		DBMHudMap:Enable()
+	end
 end
 
 function mod:OnCombatEnd()
 	self:UnregisterShortTermEvents()
 	if self.Options.RangeFrame then
 		DBM.RangeCheck:Hide()
+	end
+	if hudEnabled then
+		hudEnabled = false
+		DBMHudMap:FreeEncounterMarkers()--Disable is called already by FreeEncounterMarkers so no need to call it here
 	end
 end 
 
@@ -161,6 +179,9 @@ function mod:SPELL_AURA_APPLIED(args)
 			end
 			voiceShatter:Play("scatter")
 		end
+		if hudEnabled then
+			ShatterMarker[args.destName] = register(DBMHudMap:PlaceRangeMarkerOnPartyMember("timer", args.destName, 8, 8, 0, 1, 0, 0.6):Appear():RegisterForAlerts():Rotate(360, 9.5))
+		end
 	elseif spellId == 155539 then
 		self.vb.rampage = true
 		self.vb.smashCount = 0
@@ -183,8 +204,15 @@ mod.SPELL_AURA_APPLIED_DOSE = mod.SPELL_AURA_APPLIED
 
 function mod:SPELL_AURA_REMOVED(args)
 	local spellId = args.spellId
-	if spellId == 155323 and args:IsPlayer() and self.Options.RangeFrame then
-		DBM.RangeCheck:Hide()
+	if spellId == 155323 then
+		if args:IsPlayer() and self.Options.RangeFrame then
+			DBM.RangeCheck:Hide()
+		end
+		if hudEnabled then
+			if ShatterMarker[args.destName] then
+				ShatterMarker[args.destName] = free(ShatterMarker[args.destName])
+			end
+		end
 	elseif spellId == 155539 then
 		specWarnRampageEnded:Show()
 		timerRampageCD:Start()

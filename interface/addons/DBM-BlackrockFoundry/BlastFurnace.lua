@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1154, "DBM-BlackrockFoundry", nil, 457)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12797 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 12830 $"):sub(12, -3))
 mod:SetCreatureID(76809, 76806)--76809 foreman feldspar, 76806 heart of the mountain, 76809 Security Guard, 76810 Furnace Engineer, 76811 Bellows Operator, 76815 Primal Elementalist, 78463 Slag Elemental, 76821 Firecaller
 mod:SetEncounterID(1690)
 mod:SetZone()
@@ -12,7 +12,7 @@ mod:RegisterCombat("combat")
 mod:RegisterEventsInCombat(
 	"SPELL_CAST_START 160379 155186 156937 177756",
 	"SPELL_CAST_SUCCESS 155179 174726",
-	"SPELL_AURA_APPLIED 155192 155196 158345 155242 155181 176121 155225 156934",
+	"SPELL_AURA_APPLIED 155192 155196 158345 155242 155181 176121 155225 156934 155173",
 	"SPELL_AURA_APPLIED_DOSE 155242",
 	"SPELL_AURA_REMOVED 155192 176121",
 	"SPELL_PERIODIC_DAMAGE 156932 155223",
@@ -53,6 +53,7 @@ local specWarnPyroclasm			= mod:NewSpecialWarningInterrupt(156937, false)
 local specVolatileFire			= mod:NewSpecialWarningMoveAway(176121)
 local yellVolatileFire			= mod:NewYell(176121)
 local specWarnShieldsDown		= mod:NewSpecialWarningSwitch("ej9655", "Dps")
+local specWarnEarthShield		= mod:NewSpecialWarningDispel(155173, "MagicDispeller")
 --Phase 3
 local specWarnHeartoftheMountain= mod:NewSpecialWarningSwitch("ej10808", "Tank")
 local specWarnHeat				= mod:NewSpecialWarningStack(155242, nil, 3, nil, nil, nil, nil, 2)
@@ -67,6 +68,8 @@ local timerEngineer				= mod:NewNextTimer(41, "ej9649", nil, nil, nil, 155179)
 local timerBellowsOperator		= mod:NewNextTimer(64, "ej9650", nil, nil, nil, 155181)
 --Phase 2
 local timerShieldsDown			= mod:NewBuffActiveTimer(30, 158345, nil, "Dps")--Anyone else need?
+
+local berserkTimer				= mod:NewBerserkTimer(780)
 
 local countdownBlast			= mod:NewCountdown(30, 155209, "Healer")
 local countdownBellowsOperator	= mod:NewCountdown("OptionVersion2", "Alt64", "ej9650", "-Healer")
@@ -106,6 +109,7 @@ function mod:OnCombatStart(delay)
 	countdownEngineer:Start(55)
 	timerBlastCD:Start(30-delay)
 	countdownBlast:Start(30-delay)
+	berserkTimer:Start(-delay)
 end
 
 function mod:OnCombatEnd()
@@ -203,6 +207,8 @@ function mod:SPELL_AURA_APPLIED(args)
 		if args:IsPlayer() then
 			specWarnRuptureOn:Show()
 		end
+	elseif spellId == 155173 and not args:IsDestTypePlayer() then
+		specWarnEarthShield:Show(args.destName)
 	end
 end
 mod.SPELL_AURA_APPLIED_DOSE = mod.SPELL_AURA_APPLIED

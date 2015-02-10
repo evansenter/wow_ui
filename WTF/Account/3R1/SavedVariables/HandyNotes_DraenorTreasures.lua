@@ -1,13 +1,13 @@
 
 DraenorTreasuresDB = {
 	["profileKeys"] = {
-		["Combustion - Illidan"] = "Default",
-		["Metal - Illidan"] = "Default",
-		["Evan - Illidan"] = "Default",
 		["Plane - Illidan"] = "Default",
-		["Centromere - Dark Iron"] = "Default",
+		["Metal - Illidan"] = "Default",
 		["Natal - Illidan"] = "Default",
 		["Comet - Illidan"] = "Default",
+		["Centromere - Dark Iron"] = "Default",
+		["Evan - Illidan"] = "Default",
+		["Combustion - Illidan"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
