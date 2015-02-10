@@ -1,4 +1,6 @@
 subversion:
+	- Omega via svn r12839: Hud options for iron maidens
+	- Omega via svn r12838: Remove bad
 	- Omega via svn r12837: Fix "target" which was basically just passing nil.
 	- TOM_RUS via svn r12836: ruRU update
 	- nbluewiz via svn r12835: # koKR update.
