@@ -53,7 +53,7 @@
 --  Globals/Default Options  --
 -------------------------------
 DBM = {
-	Revision = tonumber(("$Revision: 12839 $"):sub(12, -3)),
+	Revision = tonumber(("$Revision: 12841 $"):sub(12, -3)),
 	DisplayVersion = "6.0.16 alpha", -- the string that is shown as version
 	ReleaseRevision = 12764 -- the revision of the latest stable version that is available
 }
@@ -204,7 +204,7 @@ DBM.DefaultOptions = {
 	DontShowRangeFrame = false,
 	DontRestoreRange = false,
 	DontShowInfoFrame = false,
-	DontShowHudMap = false,
+	DontShowHudMap2 = false,
 	DontShowHealthFrame = false,
 	DontPlayCountdowns = false,
 	DontShowPT2 = false,
@@ -5561,6 +5561,9 @@ do
 			SetCVar("Sound_EnableSFX", 1)
 		end
 		if self.Options.RestoreRange then self.Options.RestoreRange = nil end--User DCed while this was true, clear it
+		if not DBMHudMap then--User updated from a version without HudMap, then reloaded ui. This is a no go.
+			self:Schedule(35, function() self:AddMsg(DBM_CORE_UPDATE_REQUIRES_RELAUNCH) end)
+		end
 	end
 end
 

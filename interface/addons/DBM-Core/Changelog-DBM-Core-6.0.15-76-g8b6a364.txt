@@ -1,4 +1,6 @@
 subversion:
+	- Omega via svn r12841: Detect if Hud loaded, and if not, alert user that they need to restart client to avoid broken mods that'll result in nil errors if they update and only reloadui.
+	- Omega via svn r12840: Force default reset for those that used alpha with it off by default.
 	- Omega via svn r12839: Hud options for iron maidens
 	- Omega via svn r12838: Remove bad
 	- Omega via svn r12837: Fix "target" which was basically just passing nil.
