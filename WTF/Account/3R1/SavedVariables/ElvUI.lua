@@ -17,12 +17,12 @@ ElvDB = {
 	},
 	["gold"] = {
 		["Illidan"] = {
-			["Metal"] = 5893652,
+			["Metal"] = 11953612,
 			["Evan"] = 38459961,
 			["Combustion"] = 3728207,
 			["Natal"] = 272625,
 			["Plane"] = 498891,
-			["Comet"] = 3380078373,
+			["Comet"] = 2736528333,
 		},
 		["Dark Iron"] = {
 			["Centromere"] = 229053,
@@ -1312,7 +1312,7 @@ ElvDB = {
 				["TooltipMover"] = "BOTTOMRIGHTElvUIParentBOTTOMRIGHT-3285",
 				["ElvUF_TankMover"] = "BOTTOMLEFTElvUIParentBOTTOMLEFT4389",
 				["BossHeaderMover"] = "BOTTOMLEFTElvUIParentBOTTOMLEFT4350",
-				["TotemBarMover"] = "TOPLEFTElvUIParentTOPLEFT4-44",
+				["TotemBarMover"] = "TOPLEFTElvUIParentTOPLEFT4-45",
 				["MinimapMover"] = "TOPRIGHTElvUIParentTOPRIGHT-4-4",
 				["RightChatMover"] = "BOTTOMRIGHTElvUIParentBOTTOMRIGHT-44",
 				["ElvUF_Raid40Mover"] = "TOPLEFTElvUIParentBOTTOMLEFT4424",
@@ -2392,10 +2392,10 @@ ElvPrivateDB = {
 			["tooltip"] = {
 				["enable"] = false,
 			},
-			["install_complete"] = "7.62",
 			["auras"] = {
 				["enable"] = false,
 			},
+			["install_complete"] = "7.62",
 		},
 		["Centromere - Dark Iron"] = {
 			["nameplate"] = {

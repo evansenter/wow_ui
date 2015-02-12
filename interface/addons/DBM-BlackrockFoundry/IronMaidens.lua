@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1203, "DBM-BlackrockFoundry", nil, 457)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12839 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 12890 $"):sub(12, -3))
 mod:SetCreatureID(77557, 77231, 77477)
 mod:SetEncounterID(1695)
 mod:SetZone()
@@ -131,17 +131,12 @@ local savedAbilityTime = {}
 local below25 = false
 local playerOnBoat = false
 local DBMHudMap = DBMHudMap
-local free = DBMHudMap.free
-local function register(e)	
-	DBMHudMap:RegisterEncounterMarker(e)
-	return e
-end
 local RapidFireMarkers={}
 local BloodritualMarkers={}
 
 local function isPlayerOnBoat()
-	local _, y = UnitPosition("player")
-	if y < 3196 then
+	local _, x = UnitPosition("player")
+	if x < 3196 then
 		return false
 	else
 		return true
@@ -150,9 +145,9 @@ end
 
 local function checkBoatPlayer(self)
 	for uId in DBM:GetGroupMembers() do 
-		local _, y, _, playerMapId = UnitPosition(uId)
+		local _, x, _, playerMapId = UnitPosition(uId)
 		if playerMapId == 1205 then
-			if y > 3196 then--found player on boat
+			if x > 3196 then--found player on boat
 				self:Schedule(1, checkBoatPlayer, self)
 				return
 			end
@@ -211,14 +206,14 @@ function mod:OnCombatStart(delay)
 	if self.Options.HudMapOnRapidFire or self.Options.HudMapOnBloodRitual then
 		table.wipe(RapidFireMarkers)
 		table.wipe(BloodritualMarkers)
-		DBMHudMap:Enable()
+		self:EnableHudMap()
 	end
 end
 
 function mod:OnCombatEnd()
 	self:UnregisterShortTermEvents()
 	if self.Options.HudMapOnRapidFire or self.Options.HudMapOnBloodRitual then
-		DBMHudMap:FreeEncounterMarkers()
+		self:DisableHudMap()
 	end
 end
 
@@ -339,7 +334,7 @@ function mod:SPELL_AURA_APPLIED(args)
 			self:SetIcon(args.destName, 2)
 		end
 		if self.Options.HudMapOnBloodRitual and not BloodritualMarkers[args.destName] then
-			BloodritualMarkers[args.destName] = register(DBMHudMap:PlaceRangeMarkerOnPartyMember("highlight", args.destName, 5, 5, 1, 0, 0, 0.5):Pulse(0.5, 0.5))
+			BloodritualMarkers[args.destName] = self:RegisterMarker(DBMHudMap:PlaceRangeMarkerOnPartyMember("highlight", args.destName, 3.5, 7, 1, 0, 0, 0.5):Pulse(0.5, 0.5))
 		end
 	elseif spellId == 156631 and (noFilter or not isPlayerOnBoat()) then
 		if self:AntiSpam(5, args.destName) then--check antispam so we don't warn if we got a user sync 3 seconds ago.
@@ -348,7 +343,7 @@ function mod:SPELL_AURA_APPLIED(args)
 				self:SetIcon(args.destName, 1, 7)
 			end
 			if self.Options.HudMapOnRapidFire and not RapidFireMarkers[args.destName] then
-				RapidFireMarkers[args.destName] = register(DBMHudMap:PlaceRangeMarkerOnPartyMember("highlight", args.destName, 5, 5, 0, 1, 0, 0.5):Pulse(0.5, 0.5))
+				RapidFireMarkers[args.destName] = self:RegisterMarker(DBMHudMap:PlaceRangeMarkerOnPartyMember("highlight", args.destName, 5, 9, 1, 1, 0, 0.5):Pulse(0.5, 0.5))
 			end
 		end
 	elseif spellId == 156601 then
@@ -369,11 +364,11 @@ function mod:SPELL_AURA_REMOVED(args)
 	if spellId == 159724 and self.Options.SetIconOnBloodRitual then
 		self:SetIcon(args.destName, 0)
 		if self.Options.HudMapOnBloodRitual and BloodritualMarkers[args.destName] then
-			BloodritualMarkers[args.destName] = free(BloodritualMarkers[args.destName])
+			BloodritualMarkers[args.destName] = self:FreeMarker(BloodritualMarkers[args.destName])
 		end
 	elseif spellId == 156631 and self.Options.HudMapOnRapidFire then
 		if RapidFireMarkers[args.destName] then
-			RapidFireMarkers[args.destName] = free(RapidFireMarkers[args.destName])
+			RapidFireMarkers[args.destName] = self:FreeMarker(RapidFireMarkers[args.destName])
 		end
 	end
 end
@@ -434,7 +429,7 @@ function mod:OnSync(msg, guid)
 				self:SetIcon(targetName, 1, 10)
 			end
 			if self.Options.HudMapOnRapidFire and not RapidFireMarkers[targetName] then
-				RapidFireMarkers[targetName] = register(DBMHudMap:PlaceRangeMarkerOnPartyMember("highlight", targetName, 5, 5, 0, 1, 0, 0.5):Pulse(0.5, 0.5))
+				RapidFireMarkers[targetName] = self:RegisterMarker(DBMHudMap:PlaceRangeMarkerOnPartyMember("highlight", targetName, 5, 12, 1, 1, 0, 0.5):Pulse(0.5, 0.5))
 			end
 		end
 	elseif msg == "Ship" and guid then--technically not guid but it's fine.
@@ -446,17 +441,23 @@ function mod:OnSync(msg, guid)
 		end
 		timerBombardmentAlphaCD:Start(15)
 		if guid == Marak then
-			timerBloodRitualCD:Cancel()
-			timerHeartSeekerCD:Cancel()
+			self:Schedule(7, function()
+				timerBloodRitualCD:Cancel()
+				timerHeartSeekerCD:Cancel()
+			end)
 			voiceShip:Play("1695ukurogg")
 		elseif guid == Sorka then
-			timerBladeDashCD:Cancel()
-			timerConvulsiveShadowsCD:Cancel()
-			timerDarkHuntCD:Cancel()
+			self:Schedule(7, function()
+				timerBladeDashCD:Cancel()
+				timerConvulsiveShadowsCD:Cancel()
+				timerDarkHuntCD:Cancel()
+			end)
 			voiceShip:Play("1695gorak")
 		elseif guid == Garan then
-			timerRapidFireCD:Cancel()
-			timerPenetratingShotCD:Cancel()
+			self:Schedule(7, function()
+				timerRapidFireCD:Cancel()
+				timerPenetratingShotCD:Cancel()
+			end)
 			voiceShip:Play("1695uktar")
 		end
 	end
@@ -486,6 +487,7 @@ function mod:UNIT_POWER_FREQUENT(_, powerType)
 		timerHeartSeekerCD:Cancel()
 		timerConvulsiveShadowsCD:Cancel()
 		timerPenetratingShotCD:Cancel()
+		timerBombardmentAlphaCD:Cancel()
 	elseif power == 0 and playerOnBoat then -- leave boat
 		playerOnBoat = false
 		recoverTimers()

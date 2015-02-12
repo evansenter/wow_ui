@@ -62,7 +62,6 @@ END
 VER 3 0100000000000005 "Tier 6" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /use [talent:6/2,nochanneling:Fists of Fury]Invoke Xuen, the White Tiger;[talent:6/1,nochanneling:Fists of Fury]Rushing Jade Wind
-/use 13
 /use 14
 END
 VER 3 010000000000000E "ToD" "INV_MISC_QUESTIONMARK"

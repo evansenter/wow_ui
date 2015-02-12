@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1162, "DBM-BlackrockFoundry", nil, 457)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12821 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 12860 $"):sub(12, -3))
 mod:SetCreatureID(77692)
 mod:SetEncounterID(1713)
 mod:SetZone()
@@ -58,7 +58,7 @@ function mod:OnCombatStart(delay)
 	timerStoneBreathCD:Start(8-delay, 1)--8-10
 	timerWarpedArmorCD:Start(15-delay)
 	timerSlamCD:Start(25-delay)--More data needed
-	timerRipplingSmashCD:Start(30-delay)
+	timerRipplingSmashCD:Start(23.5-delay)
 	timerGraspingEarthCD:Start(51-delay)
 	berserkTimer:Start(-delay)--8 minutes on normal and heroic verified, but sometimes late?
 end

@@ -6,7 +6,6 @@ FX_Saved = {
 	},
 	["Healthstone"] = {
 		["Metal"] = 0,
-		["Evan"] = 0,
 	},
 	["Exceptions"] = {
 		["Hellfire Channeler"] = 0,
@@ -18,7 +17,7 @@ FX_Saved = {
 		["Master Engineer Telonicus"] = 1,
 		["Fathom-Guard Sharkkis"] = 1,
 	},
-	["Update"] = 91789.571,
+	["Update"] = 254070.25,
 	["Profiles"] = {
 		["Active"] = 1,
 		["Characters"] = {
@@ -277,12 +276,7 @@ FX_Saved = {
 								},
 							},
 							["GroupOverride"] = true,
-							["Buff"] = {
-								1, -- [1]
-								1, -- [2]
-								1, -- [3]
-								[0] = true,
-							},
+							["Flip"] = false,
 							["Height"] = 24,
 							["Detail"] = true,
 							["Enchant"] = {
@@ -292,7 +286,12 @@ FX_Saved = {
 								[0] = true,
 							},
 							["Swing"] = false,
-							["Flip"] = false,
+							["Buff"] = {
+								1, -- [1]
+								1, -- [2]
+								1, -- [3]
+								[0] = true,
+							},
 							["Warn"] = true,
 							["scale"] = 1,
 							["IconTime"] = true,
@@ -665,7 +664,7 @@ FX_Saved = {
 							["SpacingHeight"] = 2,
 							["TicksNext"] = true,
 							["lock"] = true,
-							["Hide"] = false,
+							["Texture"] = "Interface\\Addons\\SharedMedia\\statusbar\\BantoBar",
 							["HideLonger"] = {
 								30, -- [1]
 								[0] = false,
@@ -827,7 +826,7 @@ FX_Saved = {
 								1, -- [4]
 								[0] = false,
 							},
-							["Texture"] = "Interface\\Addons\\SharedMedia\\statusbar\\BantoBar",
+							["Hide"] = false,
 							["Test"] = false,
 							["ForceMax"] = false,
 							["alpha"] = 1,
@@ -917,8 +916,8 @@ FX_Saved = {
 				},
 				["GlobalScale"] = 1,
 				["SummonMeetingStone"] = false,
-				["Chill"] = 0.05,
 				["TalentOffsetX"] = 0,
+				["Chill"] = 0.05,
 				["HealthstoneTexture"] = "Interface\\Addons\\SharedMedia\\statusbar\\BantoBar",
 				["TimeLeftNoTarg"] = {
 					">> %s is fading in %s <<", -- [1]
@@ -943,12 +942,10 @@ FX_Saved = {
 					[0] = true,
 				},
 				["RightClickIconOptions"] = true,
-				["DiffNoneColor"] = {
-					0, -- [1]
-					1, -- [2]
-					0, -- [3]
-					0.2, -- [4]
-					[0] = false,
+				["TimerFadeSound"] = {
+					"Sound\\Spells\\ShaysBell.wav", -- [1]
+					2, -- [2]
+					[0] = true,
 				},
 				["OptionsHeight"] = 440,
 				["SoulstoneMax"] = 10,
@@ -958,18 +955,21 @@ FX_Saved = {
 					0.49, -- [2]
 					0.04, -- [3]
 				},
-				["TimerFadeSound"] = {
-					"Sound\\Spells\\ShaysBell.wav", -- [1]
-					2, -- [2]
-					[0] = true,
+				["DiffNoneColor"] = {
+					0, -- [1]
+					1, -- [2]
+					0, -- [3]
+					0.2, -- [4]
+					[0] = false,
 				},
 				["TimerFadeSpeed"] = 0.5,
 				["SoulstoneWidth"] = 100,
 				["SoulstoneTexture"] = "Interface\\Addons\\SharedMedia\\statusbar\\BantoBar",
 				["SoulstoneHeight"] = 12,
-				["CooldownLeft"] = {
-					">> %s is ready in %s <<", -- [1]
-					[0] = 1,
+				["SoulstoneFadeSound"] = {
+					"Interface\\AddOns\\Forte_Core\\Sounds\\SoulstoneExpire.mp3", -- [1]
+					1, -- [2]
+					[0] = true,
 				},
 				["GlobalSpark"] = {
 					0.7, -- [1]
@@ -980,10 +980,9 @@ FX_Saved = {
 					1, -- [2]
 					1, -- [3]
 				},
-				["SoulstoneFadeSound"] = {
-					"Interface\\AddOns\\Forte_Core\\Sounds\\SoulstoneExpire.mp3", -- [1]
-					1, -- [2]
-					[0] = true,
+				["CooldownLeft"] = {
+					">> %s is ready in %s <<", -- [1]
+					[0] = 1,
 				},
 				["SoulstoneMinColor"] = {
 					1, -- [1]
@@ -998,9 +997,9 @@ FX_Saved = {
 						{
 							["SplashGlow"] = true,
 							["SecondSplashMax"] = 3,
-							["scale"] = 1.5,
-							["lock"] = true,
 							["Enable"] = true,
+							["lock"] = true,
+							["scale"] = 1.5,
 							["y"] = 434.560014686584,
 							["alpha"] = 0.6,
 							["x"] = 615.680118045806,
@@ -1097,7 +1096,7 @@ FX_Saved = {
 			},
 		},
 		["Cooldown Timer"] = {
-			["My Cooldowns"] = {
+			["Buffs/Debuffs (on me only)"] = {
 				["expand"] = false,
 			},
 			["Splash Icons"] = {
@@ -1106,43 +1105,27 @@ FX_Saved = {
 			["Spell Coloring/Filtering"] = {
 				["expand"] = true,
 			},
-			["Specifics"] = {
+			["Frame Sizing"] = {
 				["expand"] = true,
 			},
 			["Time Range"] = {
 				["expand"] = false,
 			},
-			["Buffs/Debuffs (on me only)"] = {
+			["My Cooldowns"] = {
 				["expand"] = false,
 			},
 			["Frame Appearance"] = {
 				["expand"] = true,
 			},
-			["Frame Sizing"] = {
+			["Specifics"] = {
 				["expand"] = true,
 			},
 		},
 	},
 	["RaidStatus"] = {
-		["Jiinxette"] = {
-			-2, -- [1]
-			91782.075, -- [2]
-			"WARLOCK", -- [3]
-		},
-		["Evan"] = {
-			-2, -- [1]
-			91101.869, -- [2]
-			"PRIEST", -- [3]
-			"v1.980.8", -- [4]
-		},
-		["Twinspirit"] = {
-			-2, -- [1]
-			91661.895, -- [2]
-			"PRIEST", -- [3]
-		},
 		["Metal"] = {
 			0, -- [1]
-			91789.571, -- [2]
+			254070.25, -- [2]
 			"WARRIOR", -- [3]
 			"v1.980.8", -- [4]
 		},

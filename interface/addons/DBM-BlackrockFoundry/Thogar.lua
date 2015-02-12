@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1147, "DBM-BlackrockFoundry", nil, 457)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12831 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 12888 $"):sub(12, -3))
 mod:SetCreatureID(76906)--81315 Crack-Shot, 81197 Raider, 77487 Grom'kar Firemender, 80791 Grom'kar Man-at-Arms, 81318 Iron Gunnery Sergeant, 77560 Obliterator Cannon, 81612 Deforester
 mod:SetEncounterID(1692)
 mod:SetZone()
@@ -10,9 +10,9 @@ mod:SetUsedIcons(8, 7, 2, 1)
 mod:RegisterCombat("combat")
 
 mod:RegisterEventsInCombat(
-	"SPELL_CAST_START 160140 163753",
+	"SPELL_CAST_START 160140 163753 159481",
 	"SPELL_CAST_SUCCESS 155864",
-	"SPELL_AURA_APPLIED 155921 159481 165195",
+	"SPELL_AURA_APPLIED 155921 165195",
 	"SPELL_AURA_APPLIED_DOSE 155921",
 	"UNIT_DIED",
 	"CHAT_MSG_MONSTER_YELL"
@@ -70,20 +70,48 @@ local Deforester = EJ_GetSectionInfo(10329)
 --Note, all trains spawn 5 second after yell for that train
 --this means that for 5 second cd trains you may see a yell for NEXT train as previous train is showing up. Do not confuse this!
 --Also be aware that older beta videos are wrong, blizz has changed train orders few times, so don't try to fill in missing data by putting "thogar" into youtube unless it's a RECENT LIVE video.
+
 local mythicTrains = {
 	[1] = { [4] = ManOArms },--+7 after pull
-	[2] = { [1] = Deforester },--+5 after 1
-	[3] = { [2] = Train },--+5 after 2.
-	[4] = { [3] = Train },--+15 after 3.
-	[5] = { ["specialw"] = L.threeTrains, ["speciali"] = L.threeRandom, [1] = Train, [2] = Train, [3] = Train, [4] = Train },--+15 after 4
+	[2] = { [1] = Deforester },--+5 or +7 after 1
+	[3] = { [2] = Train },--++5 or +7 after 2.
+	[4] = { [3] = Train },--+13 after 3.
+	[5] = { ["specialw"] = L.threeTrains, ["speciali"] = L.threeRandom, [1] = Train, [2] = Train, [3] = Train, [4] = Train },--+17 after 4
 	[6] = { [1] = Cannon, [4] = Cannon },--+15 after 5
 	[7] = { [2] = Train },--+5 after 6.
 	[8] = { [3] = Train },--+5 after 7.
 	[9] = { [2] = Train },--+15 after 8.
-	[10] = { [2] = Reinforcements, [3] = Reinforcements },--+20 after 9
-	[11] = { [1] = Train, [4] = Train },--+15 after 10.
+	[10] = { [2] = Reinforcements, [3] = Reinforcements },--+18 after 9
+	[11] = { [1] = Train, [4] = Train },--+17 after 10.
 	[12] = { [2] = Train, [4] = Train },--+15 after 11
-	--Unknown After 12
+	--Unknown Train types After 12
+--	[13] = { [2] = Train },--+15 after 12
+--	[14] = { [2] = Train },--+13 after 13
+	--Yell Sometimes missing for 15
+--	[15] = { [2] = Train },--+5 after 14
+	--Yell Sometimes missing for 15
+--	[16] = { [2] = Train },--+10 after 15
+--	[17] = { [2] = Train },--+11 after 16
+--	[18] = { [2] = Train },--+17 after 17
+--	[19] = { [2] = Train },--+15 after 18
+--	[20] = { [2] = Train },--+15 after 19
+--	[21] = { [2] = Train },--+15 after 20
+--	[22] = { [2] = Train },--+5 after 21
+--	[23] = { [2] = Train },--+18 after 22
+--	[24] = { [2] = Train },--+15 after 23
+--	[25] = { [2] = Train },--+15 after 24
+--	[26] = { [2] = Train },--+5 or +7 after 25
+--	[27] = { [2] = Train },--+10 after 26
+--	[28] = { [2] = Train },--+15 after 27
+--	[29] = { [2] = Train },--+15 after 28
+--	[30] = { [2] = Train },--+10 after 29
+--	[31] = { [2] = Train },--+18 after 30
+--	[32] = { [2] = Train },--+15 after 31
+--	[33] = { [2] = Train },--+7 after 32
+--	[34] = { [2] = Train },--+5 after 33
+--	[35] = { [2] = Train },--+10 after 34
+--	[36] = { [2] = Train },--+5 after 35
+	--Unknown Train types & times After 36 (7:28)
 }
 
 --https://www.youtube.com/watch?v=_W8vy5Gc5q4
@@ -287,6 +315,15 @@ function mod:test(num)
 	DBM.InfoFrame:Show(5, "function", updateInfoFrame, sortInfoFrame)
 end
 
+function mod:BombTarget(targetname, uId)
+	if not targetname then return end
+	warnDelayedSiegeBomb:Show(targetname)
+	if targetname == UnitName("player") then
+		specWarnDelayedSiegeBomb:Show()
+		yellDelayedSiegeBomb:Yell()
+	end
+end
+
 function mod:OnCombatStart(delay)
 	self.vb.trainCount = 0
 	self.vb.infoCount = 0
@@ -314,7 +351,7 @@ end
 
 function mod:SPELL_CAST_SUCCESS(args)
 	local spellId = args.spellId
-	if spellId == 155864 then
+	if spellId == 155864 and self:AntiSpam(2, 4) then
 		warnProtoGrenade:Show()
 		timerProtoGrenadeCD:Start()
 	end
@@ -329,6 +366,8 @@ function mod:SPELL_CAST_START(args)
 			specWarnIronbellow:Show()
 		end
 		timerIronbellowCD:Start(12, args.sourceGUID)
+	elseif spellId == 159481 then
+		self:BossTargetScanner(args.sourceGUID, "BombTarget", 0.05, 25)
 	end
 end
 
@@ -346,12 +385,6 @@ function mod:SPELL_AURA_APPLIED(args)
 					specWarnEnkindleOther:Show(args.destName)
 				end
 			end
-		end
-	elseif spellId == 159481 then
-		warnDelayedSiegeBomb:CombinedShow(1, args.destName)
-		if args:IsPlayer() then
-			specWarnDelayedSiegeBomb:Show()
-			yellDelayedSiegeBomb:Yell()
 		end
 	elseif spellId == 165195 and args:IsPlayer() then
 		specWarnProtoGrenade:Show()
@@ -377,26 +410,32 @@ function mod:CHAT_MSG_MONSTER_YELL(msg, npc, _, _, target)
 		showTrainWarning(self)
 		if msg == "Fake" then
 			countdownTrain:Start(2.5)
-			self:Schedule(1.5, laneCheck, self)
+			laneCheck(self)
 			self:Schedule(2.5, showInfoFrame)
 		else
 			countdownTrain:Start()
-			self:Schedule(4, laneCheck, self)
+			self:Schedule(2.5, laneCheck, self)
 			self:Schedule(5, showInfoFrame)
 		end
 		if self:IsMythic() then
 			if mythicVoice[count] then
 				voiceTrain:Play("Thogar\\"..mythicVoice[count])
 			end
-			--+5 added to all timers so timers are for train coming down the lane.
-			--yes this means sometimes two timers up at a time instead of one. this is fine, fight doesn't have many timers.
+			--5 second trains on mythic have variation. 5 or 7. This seems intended.
+			--It seems that they offset eachother too. So if train 2 was 5 seconds after 1, train 3 is always 7 seconds after 2
+			--But if train 2 was the 7. then train 3 will be the 5 instead, keeping train 4 always on same schedule.
+			--Coding all the 5 or 7 trains as 5 seems like best solution
 			local expectedTime
-			if count == 1 or count == 2 or count == 6 or count == 7 then
-				expectedTime = 5
-			elseif count == 9 then
-				expectedTime = 20
-			else
+			if count == 1 or count == 2 or count == 6 or count == 7 or count == 14 or count == 21 or count == 25 or count == 32 or count == 33 or count == 35 then
+				expectedTime = 5--or 7 :\
+			elseif count == 15 or count == 16 or count == 26 or count == 29 or count == 34 then
+				expectedTime = 10
+			elseif count == 3 or count == 13 then
+				expectedTime = 13
+			elseif count == 8 or count == 11 or count == 12 or count == 18 or count == 19 or count == 20 or count == 23 or count == 24 or count == 27 or count == 28 or count == 31 then
 				expectedTime = 15
+			elseif count == 4 or count == 9 or count == 10 or count == 17 or count == 22 or count == 30 then
+				expectedTime = 17--or 18
 			end
 			if expectedTime then
 				if msg == "Fake" then expectedTime = expectedTime - 2.5 end
@@ -406,7 +445,7 @@ function mod:CHAT_MSG_MONSTER_YELL(msg, npc, _, _, target)
 				print("Train Set: "..count..". DBM has no train data beyond this point. Send us videos if you can.")
 				timerTrainCD:Start(count)
 			end
-			if count == 1 then--I'm sure they spawn again sometime later, find that data
+			if count == 1 or count == 20 or count == 24 then--24 seems kind of off, it's possible 25 missing a yell and where true man at arms is
 				specWarnManOArms:Show()
 			end
 		else
@@ -423,7 +462,7 @@ function mod:CHAT_MSG_MONSTER_YELL(msg, npc, _, _, target)
 			local expectedTime
 			if count == 2 or count == 4 or count == 6 or count == 18 then
 				expectedTime = 5
-			elseif count == 1 or count == 10 or count == 14 or count == 15 or count == 20 or count == 28 then
+			elseif count == 1 or count == 10 or count == 12 or count == 14 or count == 15 or count == 20 or count == 28 then
 				expectedTime = 10
 			elseif count == 3 or count == 8 or count == 11 or count == 16 or count == 23 or count == 27 then
 				expectedTime = 15
@@ -448,7 +487,7 @@ function mod:CHAT_MSG_MONSTER_YELL(msg, npc, _, _, target)
 				specWarnManOArms:Show()
 				if self.Options.SetIconOnAdds then
 					self:ScanForMobs(80791, 0, 8, 2, 0.2, 15)--Man At Arms scanner marking 8 down
-					self:ScanForMobs(87841, 1, 1, 2, 0.2, 15)--Fire Mender scanner marking 1 up
+					self:ScanForMobs(77487, 1, 1, 2, 0.2, 15)--Fire Mender scanner marking 1 up
 				end
 			end
 		end

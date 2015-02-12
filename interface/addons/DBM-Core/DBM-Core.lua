@@ -53,7 +53,7 @@
 --  Globals/Default Options  --
 -------------------------------
 DBM = {
-	Revision = tonumber(("$Revision: 12841 $"):sub(12, -3)),
+	Revision = tonumber(("$Revision: 12892 $"):sub(12, -3)),
 	DisplayVersion = "6.0.16 alpha", -- the string that is shown as version
 	ReleaseRevision = 12764 -- the revision of the latest stable version that is available
 }
@@ -330,7 +330,7 @@ local iconSetRevision = {}
 local iconSetPerson = {}
 local addsGUIDs = {}
 
-local fakeBWRevision = 12699
+local fakeBWRevision = 12721
 
 local enableIcons = true -- set to false when a raid leader or a promoted player has a newer version of DBM
 local guiRequested = false
@@ -6126,6 +6126,27 @@ function bossModPrototype:RegisterOnUpdateHandler(func, interval)
 	updateFunctions[self] = func
 end
 
+function bossModPrototype:RegisterMarker(marker)
+	DBMHudMap:RegisterEncounterMarker(marker)
+	return marker
+end
+
+function bossModPrototype:FreeMarker(marker, owner, id, noAnimate)
+	return DBMHudMap.free(marker, owner, id, noAnimate)
+end
+
+function bossModPrototype:FreeMarkers()
+	DBMHudMap:FreeEncounterMarkers()
+end
+
+function bossModPrototype:EnableHudMap()
+	DBMHudMap:Enable()
+end
+
+function bossModPrototype:DisableHudMap()
+	DBMHudMap:Disable()
+end
+
 --------------
 --  Events  --
 --------------
@@ -6330,7 +6351,7 @@ do
 		return name, uid, bossuid
 	end
 
-	function bossModPrototype:BossTargetScanner(cidOrGuid, returnFunc, scanInterval, scanTimes, scanOnlyBoss, isEnemyScan, includeTank, isFinalScan)
+	function bossModPrototype:BossTargetScanner(cidOrGuid, returnFunc, scanInterval, scanTimes, scanOnlyBoss, isEnemyScan, includeTank, isFinalScan, targetFilter)
 		--Increase scan count
 		local cidOrGuid = cidOrGuid or self.creatureId
 		if not cidOrGuid then return end
@@ -6341,13 +6362,13 @@ do
 		local scanTimes = scanTimes or 16
 		local targetname, targetuid, bossuid = self:GetBossTarget(cidOrGuid, scanOnlyBoss)
 		--Do scan
-		if targetname and targetname ~= DBM_CORE_UNKNOWN then
+		if targetname and targetname ~= DBM_CORE_UNKNOWN or (targetFilter and targetFilter ~= targetname) then
 			if not IsInGroup() then scanTimes = 1 end--Solo, no reason to keep scanning, give faster warning. But only if first scan is actually a valid target, which is why i have this check HERE
 			if (isEnemyScan and UnitIsFriend("player", targetuid) or self:IsTanking(targetuid, bossuid)) and not isFinalScan and not includeTank then--On player scan, ignore tanks. On enemy scan, ignore friendly player.
 				if targetScanCount[cidOrGuid] < scanTimes then--Make sure no infinite loop.
-					self:ScheduleMethod(scanInterval, "BossTargetScanner", cidOrGuid, returnFunc, scanInterval, scanTimes, scanOnlyBoss, isEnemyScan, includeTank)--Scan multiple times to be sure it's not on something other then tank (or friend on enemy scan).
+					self:ScheduleMethod(scanInterval, "BossTargetScanner", cidOrGuid, returnFunc, scanInterval, scanTimes, scanOnlyBoss, isEnemyScan, includeTank, nil, targetFilter)--Scan multiple times to be sure it's not on something other then tank (or friend on enemy scan).
 				else--Go final scan.
-					self:BossTargetScanner(cidOrGuid, returnFunc, scanInterval, scanTimes, scanOnlyBoss, isEnemyScan, includeTank, true)
+					self:BossTargetScanner(cidOrGuid, returnFunc, scanInterval, scanTimes, scanOnlyBoss, isEnemyScan, includeTank, true, targetFilter)
 				end
 			else--Scan success. (or failed to detect right target.) But some spells can be used on tanks, anyway warns tank if player scan. (enemy scan block it)
 				targetScanCount[cidOrGuid] = nil--Reset count for later use.
@@ -6358,7 +6379,7 @@ do
 			end
 		else--target was nil, lets schedule a rescan here too.
 			if targetScanCount[cidOrGuid] < scanTimes then--Make sure not to infinite loop here as well.
-				self:ScheduleMethod(scanInterval, "BossTargetScanner", cidOrGuid, returnFunc, scanInterval, scanTimes, scanOnlyBoss, isEnemyScan, includeTank)
+				self:ScheduleMethod(scanInterval, "BossTargetScanner", cidOrGuid, returnFunc, scanInterval, scanTimes, scanOnlyBoss, isEnemyScan, includeTank, nil, targetFilter)
 			else
 				targetScanCount[cidOrGuid] = nil--Reset count for later use.
 				self:UnscheduleMethod("BossTargetScanner", cidOrGuid, returnFunc)--Unschedule all checks just to be sure none are running, we are done.
@@ -7444,7 +7465,7 @@ do
 				end
 			end
 			--This callback sucks, it needs useful information for external mods to listen to it better, such as mod and spellid
-			fireEvent("DBM_Announce", message)
+			fireEvent("DBM_Announce", text)
 		else
 			self.combinedcount = 0
 			self.combinedtext = {}

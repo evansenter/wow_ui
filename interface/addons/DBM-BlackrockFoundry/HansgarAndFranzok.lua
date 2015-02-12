@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1155, "DBM-BlackrockFoundry", nil, 457)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12802 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 12885 $"):sub(12, -3))
 mod:SetCreatureID(76974, 76973)
 mod:SetEncounterID(1693)
 mod:SetZone()
@@ -22,11 +22,16 @@ mod:RegisterEventsInCombat(
 --TODO, collect more data to figure out how roar starts/resumes on jump down. One pull/kill is not a sufficient sampling.
 local warnSkullcracker					= mod:NewSpellAnnounce(153470, 3, nil, false)--This seems pretty worthless.
 local warnShatteredVertebrae			= mod:NewStackAnnounce(157139, 2, nil, "Tank")--Possibly useless or changed. Needs further logs.
+local warnJumpSlam						= mod:NewTargetAnnounce("ej9854", 3)--Find pretty icon
 
+local specWarnJumpSlam					= mod:NewSpecialWarningYou("ej9854")
+local specWarnJumpSlamNear				= mod:NewSpecialWarningClose("ej9854")
+local yellJumpSlam						= mod:NewYell("ej9854")
 local specWarnDisruptingRoar			= mod:NewSpecialWarningCast("OptionVersion2", 160838, "SpellCaster")
 local specWarnShatteredVertebrae		= mod:NewSpecialWarningStack(157139, nil, 2, nil, nil, nil, nil, 2)--stack guessed
 local specWarnShatteredVertebraeOther	= mod:NewSpecialWarningTaunt(157139)
-local specWarnCripplingSupplex			= mod:NewSpecialWarningPreWarn("OptionVersion2", 156938, "Tank|Healer", 3.5, nil, nil, 3)--pop a cooldown, or die.
+--Move specWarnCripplingSupplex to a health check, warn when near 85, 55, or 25%
+local specWarnCripplingSupplex			= mod:NewSpecialWarningPreWarn("OptionVersion2", 156938, "Tank|Healer", 9, nil, nil, 3)--pop a cooldown.
 local specWarnSearingPlates				= mod:NewSpecialWarningSpell(161570, nil, nil, nil, 2)
 local specWarnStampers					= mod:NewSpecialWarningSpell(174825, nil, nil, nil, 2)
 local specWarnSearingPlatesEnd			= mod:NewSpecialWarningEnd(161570)
@@ -40,6 +45,8 @@ mod:AddTimerLine(ENCOUNTER_JOURNAL_SECTION_FLAG12)
 local timerSmartStamperCD				= mod:NewNextTimer(12, 162124)--Activation
 local timerStamperDodge					= mod:NewTimer(10, "timerStamperDodge", 160582)--Time until stamper falls (spell name fits well, time you have to stamper dodge)
 
+local berserkTimer						= mod:NewBerserkTimer(360)
+
 local countCripplingSupplex				= mod:NewCountdown("OptionVersion2", "Alt9.5", 156938, "Tank|Healer")
 
 local voiceEnvironmentalThreats			= mod:NewVoice("ej10089")
@@ -48,15 +55,33 @@ local voiceShatteredVertebrae			= mod:NewVoice(157139)
 mod.vb.phase = 1
 mod.vb.stamperDodgeCount = 0
 mod.vb.bossUp = "NoBody"
+mod.vb.lastJumpTarget = UNKNOWN
+mod.vb.firstJump = false
+
+function mod:JumpTarget(targetname, uId)
+	if not targetname then return end
+	self.vb.lastJumpTarget = targetname
+	if targetname == UnitName("player") then
+		specWarnJumpSlam:Show()
+		yellJumpSlam:Yell()
+	elseif self:CheckNearby(12, targetname) then--Near warning disabled on mythic, mythic mechanic requires being near it on purpose. Plus raid always stacked
+		specWarnJumpSlamNear:Show(targetname)
+	else
+		warnJumpSlam:Show(targetname)--No reason to show this if you got a special warning. so reduce spam and display this only to let you know jump is far away and you're safe
+	end
+end
 
 function mod:OnCombatStart(delay)
 	self.vb.phase = 1
 	self.vb.stamperDodgeCount = 0
 	self.vb.bossUp = "NoBody"
+	self.vb.lastJumpTarget = UNKNOWN
+	self.vb.firstJump = false
 	timerSkullcrackerCD:Start(20-delay)
 	timerDisruptingRoarCD:Start(-delay)
 	if self:IsMythic() then
 		timerSmartStamperCD:Start(13-delay)
+		berserkTimer:Start(-delay)
 	end
 end
 
@@ -99,13 +124,13 @@ function mod:SPELL_AURA_APPLIED(args)
 				voiceShatteredVertebrae:Play("changemt")
 			end
 		end
-	elseif spellId == 162124 and self:AntiSpam(2, args.sourceGUID) then
+	elseif spellId == 162124 and self:AntiSpam(3, args.sourceGUID) then
 		self.vb.stamperDodgeCount = self.vb.stamperDodgeCount + 1
 		timerStamperDodge:Start(nil, self.vb.stamperDodgeCount)--Multiple timers at once is intended. But capped at 3
 		--Run antispam code. If raid moves too fast MANY stampers spawn at once. This code will auto cancel timers as new timers are added once we reach 3
-		--So only max of 3 bars at once. Cancel current -2 all new timer start
-		if self.vb.stamperDodgeCount >= 3 then
-			timerStamperDodge:Cancel(self.vb.stamperDodgeCount-2)
+		--So only max of 3 bars at once. Cancel current -3 all new timer start
+		if self.vb.stamperDodgeCount >= 3 then--Bugged (has to be DBM-core or DBT).
+			timerStamperDodge:Cancel(self.vb.stamperDodgeCount-3)--This is canceling ALL timers, not just the one with this arg.
 		end
 	end
 end
@@ -134,20 +159,33 @@ function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, _, _, spellId)
 			specWarnSearingPlates:Show()
 			voiceEnvironmentalThreats:Play("watchstep")	
 		end
-	--"<944.72 23:32:59> [UNIT_SPELLCAST_SUCCEEDED] Hans'gar [[boss1:Crippling Suplex::0:156546]]", -- [5133]--Pre cast, Hidden from UI/player
-	--"<948.55 23:33:03> [UNIT_SPELLCAST_SUCCEEDED] Hans'gar [[boss1:Crippling Suplex::0:156609]]", -- [5752]--Grab, Already too late to hit a cd
-	--"<951.15 23:33:06> [CLEU] SPELL_CAST_START#Vehicle-0-3783-1205-31925-76974-0000518B7D#Franzok##nil#156938#Crippling Suplex#nil#nil", -- [6168]--First thing player sees, too bad you've been stunned for 2.5 seconds already.
+	--"<944.72 23:32:59> [UNIT_SPELLCAST_SUCCEEDED] Hans'gar [[boss1:Crippling Suplex::0:156546]]", -- [5133]--Pre cast, Stuns main tank
+	--"<948.55 23:33:03> [UNIT_SPELLCAST_SUCCEEDED] Hans'gar [[boss1:Crippling Suplex::0:156609]]", -- [5752]--Secondary target (off tank) no stun
+	--"<951.15 23:33:06> [CLEU] SPELL_CAST_START#Vehicle-0-3783-1205-31925-76974-0000518B7D#Franzok##nil#156938#Crippling Suplex#nil#nil", -- [6168]--cast bar for damage
 	--"<954.06 23:33:08> [CLEU] SPELL_CAST_SUCCESS#Vehicle-0-3783-1205-31925-76974-0000518B7D#Franzok#Player-76-0580DD5F#playerName#156938#Crippling Suplex#nil#nil", -- [6639]--SMASH (5.5 seconds after stun, VERY tight to cover attack with 6 second cd)
 	--http://blue.mmo-champion.com/topic/360651-blackrock-foundry-clarification-known-issues/
 	elseif spellId == 156546 or spellId == 156542 then
-		specWarnCripplingSupplex:Show()--Try and hit CD right before stun (156609)
-		if self:IsTank() then
-			timerCripplingSupplex:Start(3.5)
-			countCripplingSupplex:Start(3.5)
-		else
-			timerCripplingSupplex:Start()
-			countCripplingSupplex:Start()
+		specWarnCripplingSupplex:Show()
+		timerCripplingSupplex:Start()
+		countCripplingSupplex:Start()
+	elseif spellId == 157926 then--Jump Activation
+		self.vb.firstJump = false--So reset firstjump
+		self.vb.lastJumpTarget = UNKNOWN
+	elseif spellId == 157922 then--First jump must use 157922
+		if not self.vb.firstJump then
+			self.vb.firstJump = true
+			self.vb.lastJumpTarget = UnitName(uId.."target")--It'll be highest threat at this point, baseline for our first filter
+		else--Not first jump
+			if self.vb.lastJumpTarget then
+				self:BossTargetScanner(UnitGUID(uId), "JumpTarget", 0.05, 30, nil, nil, true, nil, self.vb.lastJumpTarget)--1.5 seconds worth of scans, because i've seen it take as long as 1.2 to get target, and yet, still faster than 157923 by 0.6 seconds. Most often, it finds target in 0.5 or less
+			else
+				--This shouldn't happen, but just in case
+				DBM:Debug("self.vb.lastJumpTarget is nil, target scanning for jump will be slower", 2)
+			end
 		end
+	elseif spellId == 157923 and not self.vb.lastJumpTarget then--Fallback
+		DBM:Debug("Using slower scan fallback: 157923", 2)
+		self:BossTargetScanner(UnitGUID(uId), "JumpTarget", 0.02, 10, nil, nil, true)
 	end
 end
 
@@ -165,8 +203,8 @@ function mod:UNIT_TARGETABLE_CHANGED(uId)
 				voiceEnvironmentalThreats:Play("gather")--Must restack for smart stampers
 			else
 				if self.vb.phase == 2 then
-					specWarnSearingPlatesEnd:Schedule(3)
-					voiceEnvironmentalThreats:Schedule(3, "safenow")
+					specWarnSearingPlatesEnd:Show()
+					voiceEnvironmentalThreats:Play("safenow")
 				else
 					specWarnStampersEnd:Show()
 					voiceEnvironmentalThreats:Play("safenow")

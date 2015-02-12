@@ -4,10 +4,10 @@ FrameLevel: 1
 Anchor: BOTTOM
 X: -2
 Y: 172
-W: 128
-H: 64
+W: 316
+H: 119
 Frame: ColorPickerFrame
-FrameLevel: 12
+FrameLevel: 21
 Anchor: CENTER
 X: 0
 Y: 0
@@ -27,6 +27,13 @@ X: -164
 Y: -63
 W: 32
 H: 32
+Frame: ScriptErrorsFrame
+FrameLevel: 1
+Anchor: LEFT
+X: 126
+Y: -52
+W: 500
+H: 300
 Frame: RaidUtility_ShowButton
 FrameLevel: 1
 Anchor: TOP

@@ -193,7 +193,7 @@ HermesDB2 = {
 				["duration"] = "3",
 			},
 		},
-		["clientTime"] = 91794.942,
+		["clientTime"] = 255062.899,
 		["durations"] = {
 			[31224] = 90,
 			[5394] = 30,
@@ -756,7 +756,7 @@ HermesDB2 = {
 				}, -- [1]
 			},
 		},
-		["serverTime"] = 1423604216,
+		["serverTime"] = 1423767496,
 	},
 	["profileKeys"] = {
 		["Comet - Illidan"] = "Comet - Illidan",

@@ -121,8 +121,6 @@ AngryAssign_Pages = {
 	},
 }
 AngryAssign_State = {
-	["directionUp"] = false,
-	["locked"] = true,
 	["window"] = {
 		["height"] = 499.999969482422,
 		["top"] = 850,
@@ -136,6 +134,8 @@ AngryAssign_State = {
 		["scale"] = 1,
 		["hidden"] = false,
 	},
+	["directionUp"] = false,
+	["locked"] = true,
 	["tree"] = {
 		["groups"] = {
 		},

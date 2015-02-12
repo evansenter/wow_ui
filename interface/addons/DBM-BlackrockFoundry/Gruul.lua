@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1161, "DBM-BlackrockFoundry", nil, 457)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12833 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 12861 $"):sub(12, -3))
 mod:SetCreatureID(76877)
 mod:SetEncounterID(1691)
 mod:SetZone()
@@ -32,7 +32,7 @@ local specWarnRampageEnded			= mod:NewSpecialWarningEnd(155539)
 local specWarnOverheadSmash			= mod:NewSpecialWarningCount(155301, nil, nil, nil, 2, nil, 2)
 local specWarnPetrifyingSlam		= mod:NewSpecialWarningMoveAway(155326, nil, nil, nil, 3, nil, 2)
 
-local timerInfernoSliceCD			= mod:NewCDCountTimer(13, 155080)--Variable do to energy bugs (gruul not gain power consistently)
+local timerInfernoSliceCD			= mod:NewCDCountTimer(12, 155080)--Variable do to energy bugs (gruul not gain power consistently)
 local timerSpecialCD				= mod:NewCDSpecialTimer(20.5)
 local timerPetrifyingSlamCD			= mod:NewCDCountTimer(60, 155323)--60-70 variation
 local timerOverheadSmashCD			= mod:NewCDCountTimer(25, 155301)--25-42 variation
@@ -42,7 +42,7 @@ local timerRampageCD				= mod:NewCDTimer(107, 155539)--Variable, may be even sho
 
 local berserkTimer					= mod:NewBerserkTimer(360)
 
-local countdownInfernoSlice			= mod:NewCountdown(13, 155080, "Tank")
+local countdownInfernoSlice			= mod:NewCountdown(12, 155080, "Tank")
 
 local voiceInfernoSlice				= mod:NewVoice(155080) --gathershare. maybe change to "InfernoSlice".
 --local voiceCrumblingRoar			= mod:NewVoice(155730)
@@ -67,12 +67,7 @@ do
 	end
 end
 local DBMHudMap = DBMHudMap
-local free = DBMHudMap.free
-local hudEnabled = false
-local function register(e)	
-	DBMHudMap:RegisterEncounterMarker(e)
-	return e
-end
+local hudEnabled = false--Only to avoid calling self.Options.HudMapOnShatter 20x in under a second when shatter goes out (20x SPELL_AURA_APPLIED events)
 local ShatterMarker = {}
 
 local function clearRampage(self)
@@ -99,7 +94,7 @@ function mod:OnCombatStart(delay)
 		self:RegisterShortTermEvents(
 			"UNIT_POWER_FREQUENT boss1"
 			)
-		if self:IsHeroic() then
+		if self:IsDifficulty("mythic", "heroic") then
 			berserkTimer:Start(-delay)
 		elseif self:IsNormal() then
 			berserkTimer:Start(480-delay)
@@ -110,7 +105,7 @@ function mod:OnCombatStart(delay)
 	if self.Options.HudMapOnShatter then
 		hudEnabled = true
 		table.wipe(ShatterMarker)
-		DBMHudMap:Enable()
+		self:EnableHudMap()
 	end
 end
 
@@ -121,7 +116,7 @@ function mod:OnCombatEnd()
 	end
 	if hudEnabled then
 		hudEnabled = false
-		DBMHudMap:FreeEncounterMarkers()--Disable is called already by FreeEncounterMarkers so no need to call it here
+		self:DisableHudMap()
 	end
 end 
 
@@ -180,7 +175,7 @@ function mod:SPELL_AURA_APPLIED(args)
 			voiceShatter:Play("scatter")
 		end
 		if hudEnabled then
-			ShatterMarker[args.destName] = register(DBMHudMap:PlaceRangeMarkerOnPartyMember("timer", args.destName, 8, 8, 0, 1, 0, 0.6):Appear():RegisterForAlerts():Rotate(360, 9.5))
+			ShatterMarker[args.destName] = self:RegisterMarker(DBMHudMap:PlaceRangeMarkerOnPartyMember("timer", args.destName, 8, 10, 0, 1, 0, 0.6):Appear():RegisterForAlerts():Rotate(360, 9.5))
 		end
 	elseif spellId == 155539 then
 		self.vb.rampage = true
@@ -210,7 +205,7 @@ function mod:SPELL_AURA_REMOVED(args)
 		end
 		if hudEnabled then
 			if ShatterMarker[args.destName] then
-				ShatterMarker[args.destName] = free(ShatterMarker[args.destName])
+				ShatterMarker[args.destName] = self:FreeMarker(ShatterMarker[args.destName])
 			end
 		end
 	elseif spellId == 155539 then
@@ -255,7 +250,7 @@ do
 			DBM:Debug("Massive power gain detected. Updating Inferno Slice timer.")
 			local timeElapsed = bossPower / 10 --Divide it by 10 (cause he gains 10 power per second and we need to know how many seconds to subtrack from CD)
 			local timeRemaining = 10-timeElapsed
-			timerInfernoSliceCD:Update(timeElapsed+3, 13, self.vb.sliceCount+1)--+3 because total time is 13, else, it's timeElapsed, 10
+			timerInfernoSliceCD:Update(timeElapsed+2, 12, self.vb.sliceCount+1)--+3 because total time is 13, else, it's timeElapsed, 10
 			countdownInfernoSlice:Cancel()
 			countdownInfernoSlice:Start(timeRemaining)
 		end
