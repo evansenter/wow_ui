@@ -788,8 +788,11 @@ GTFO.SpellID["156823"] = {
 	sound = 1;
 };
 
--- Flamebender Ka'graz
--- TODO: Singe - too many stacks?
+GTFO.SpellID["155049"] = {
+	--desc = "Singe (Flamebender Ka'graz)";
+	sound = 1;
+	applicationOnly = true;
+};
 
 GTFO.SpellID["155314"] = {
 	--desc = "Lava Slash (Flamebender Ka'graz)";
@@ -799,7 +802,6 @@ GTFO.SpellID["155314"] = {
 GTFO.SpellID["156713"] = {
 	--desc = "Unquenchable Flame (Flamebender Ka'graz)";
 	sound = 1;
-	test = true;
 };
 
 GTFO.SpellID["155484"] = {

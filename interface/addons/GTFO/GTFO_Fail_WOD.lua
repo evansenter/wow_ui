@@ -663,9 +663,30 @@ GTFO.SpellID["155187"] = {
 };
 
 -- Beastlord Darmac
--- TODO: Pin Down - spear impact
 -- TODO: Cannonball Barrage - avoidable?
 -- TODO: Heavy Smash - non-tank fail
+
+GTFO.SpellID["154960"] = {
+	--desc = "Pinned Down (Beastlord Darmac)";
+	sound = 3;
+	applicationOnly = true;
+};
+
+GTFO.SpellID["155061"] = {
+	--desc = "Rend and Tear (Beastlord Darmac)";
+	sound = 3;
+	tankSound = 0;
+	applicationOnly = true;
+	meleeOnly = true;
+};
+
+GTFO.SpellID["162283"] = {
+	--desc = "Rend and Tear (Beastlord Darmac)";
+	sound = 3;
+	tankSound = 0;
+	applicationOnly = true;
+	meleeOnly = true;
+};
 
 GTFO.SpellID["163182"] = {
 	--desc = "Crushing Slam (Iron Smith)";
@@ -673,10 +694,27 @@ GTFO.SpellID["163182"] = {
 	tankSound = 0;
 };
 
--- Flamebender Ka'graz
--- TODO: Charring Breath - non-tank fail, tank fail if debuffed
--- TODO: Magma Monsoon - avoidable?
--- TODO: Devastating Slam - non-tank fail
+GTFO.SpellID["178179"] = {
+	--desc = "Lava Blast (Iron Flametwister)";
+	sound = 3;
+};
+
+GTFO.SpellID["156018"] = {
+	--desc = "Devastating Slam (Aknor Steelbringer)";
+	sound = 3;
+	tankSound = 0;
+};
+
+GTFO.SpellID["163633"] = {
+	--desc = "Magma Monsoon (Flamebender Ka'graz)";
+	sound = 3;
+};
+
+GTFO.SpellID["155074"] = {
+	--desc = "Charring Breath (Flamebender Ka'graz)";
+	sound = 3;
+	tankSound = 0;
+};
 
 GTFO.SpellID["158140"] = {
 	--desc = "Pulverize (Hans'gar and Franzok)";
@@ -700,11 +738,8 @@ GTFO.SpellID["156554"] = {
 -- TODO: Slag Bomb - Avoidable?
 -- TODO: Volatile Fire - Avoidable?
 
--- Kromog
-
-GTFO.SpellID["156713"] = {
+GTFO.SpellID["157055"] = {
 	--desc = "Thundering Blows (Kromog)";
-	test = true; -- Not sure if this works, untested
 	soundFunction = function() -- Warn only on the first hit
 		if (GTFO_FindEvent("ThunderingFail")) then
 			return 0;
@@ -720,11 +755,25 @@ GTFO.SpellID["156713"] = {
 GTFO.SpellID["161923"] = {
 	--desc = "Rune of Crushing Earth (Kromog)";
 	sound = 3;
-	tankSound = 0; -- Could be off-tank's job to clear these?
+};
+
+GTFO.SpellID["157247"] = {
+	--desc = "Reverberations (Kromog)";
+	sound = 3;
+};
+
+GTFO.SpellID["162349"] = {
+	--desc = "Fists of Stone (Kromog)";
+	sound = 3;
+	tankSound = 0;
+};
+
+GTFO.SpellID["157659"] = {
+	--desc = "Rippling Smash (Kromog)";
+	sound = 3;
 };
 
 -- TODO: Slam 156704 - fail if too close? 
--- TODO: Reverberations 157247 - avoidable?
 -- TODO: Call of the Mountain
 
 -- The Iron Maidens

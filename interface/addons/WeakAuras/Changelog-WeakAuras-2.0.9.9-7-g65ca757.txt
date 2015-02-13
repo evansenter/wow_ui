@@ -1,4 +1,11 @@
 Infus:
+	- Aurabar: Add color option for icon
+	Allows for separately making the icon transparent, since every
+	other part has a color setting, this kind of makes sense.
+	
+	Ticket-number: 245
+	- Import tooltip: Truncate on more than 30 auras
+	Ticket-number: 182
 	- Rewrite Ignore Rune CD
 	Apparently a spell cd due to a rune has always a duration of 10.
 	So, rewrite the ignore rune cd option to use that fact. And track

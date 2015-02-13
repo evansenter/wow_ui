@@ -53,7 +53,7 @@
 --  Globals/Default Options  --
 -------------------------------
 DBM = {
-	Revision = tonumber(("$Revision: 12892 $"):sub(12, -3)),
+	Revision = tonumber(("$Revision: 12907 $"):sub(12, -3)),
 	DisplayVersion = "6.0.16 alpha", -- the string that is shown as version
 	ReleaseRevision = 12764 -- the revision of the latest stable version that is available
 }
@@ -330,7 +330,7 @@ local iconSetRevision = {}
 local iconSetPerson = {}
 local addsGUIDs = {}
 
-local fakeBWRevision = 12721
+local fakeBWRevision = 12733
 
 local enableIcons = true -- set to false when a raid leader or a promoted player has a newer version of DBM
 local guiRequested = false
@@ -7465,7 +7465,7 @@ do
 				end
 			end
 			--This callback sucks, it needs useful information for external mods to listen to it better, such as mod and spellid
-			fireEvent("DBM_Announce", text)
+			fireEvent("DBM_Announce", message)
 		else
 			self.combinedcount = 0
 			self.combinedtext = {}

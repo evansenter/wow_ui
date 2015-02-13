@@ -17,12 +17,12 @@ ElvDB = {
 	},
 	["gold"] = {
 		["Illidan"] = {
-			["Metal"] = 11953612,
-			["Evan"] = 38459961,
+			["Metal"] = 13003612,
+			["Evan"] = 39734931,
 			["Combustion"] = 3728207,
 			["Natal"] = 272625,
 			["Plane"] = 498891,
-			["Comet"] = 2736528333,
+			["Comet"] = 2708212220,
 		},
 		["Dark Iron"] = {
 			["Centromere"] = 229053,
@@ -2392,10 +2392,10 @@ ElvPrivateDB = {
 			["tooltip"] = {
 				["enable"] = false,
 			},
+			["install_complete"] = "7.62",
 			["auras"] = {
 				["enable"] = false,
 			},
-			["install_complete"] = "7.62",
 		},
 		["Centromere - Dark Iron"] = {
 			["nameplate"] = {
@@ -2660,12 +2660,12 @@ ElvPrivateDB = {
 				["blizzard"] = {
 					["achievement"] = false,
 					["tradeskill"] = false,
-					["spellbook"] = false,
-					["talent"] = false,
-					["losscontrol"] = false,
-					["lfg"] = false,
-					["enable"] = false,
 					["pvp"] = false,
+					["lfg"] = false,
+					["losscontrol"] = false,
+					["enable"] = false,
+					["talent"] = false,
+					["spellbook"] = false,
 				},
 				["addons"] = {
 					["WeakAurasSkin"] = false,

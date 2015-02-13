@@ -56,39 +56,25 @@ AmrDb = {
 			"|cffa335ee|Hitem:113666:0:0:0:0:0:0:0:100:0:5:1:566|h[Absalom's Bloody Bulwark]|h|r", -- [17]
 		}, -- [2]
 	},
-	["Region"] = "US",
-	["VoidItems"] = {
-		"|cffa335ee|Hitem:112785:0:0:0:0:0:0:0:100:491:6:2:450:448|h[Gar'tok, Strength of the Faithful]|h|r", -- [1]
-		"|cffa335ee|Hitem:112949:0:0:0:0:0:0:0:100:491:6:2:450:448|h[Greatsword of Pride's Fall]|h|r", -- [2]
-		"|cffa335ee|Hitem:105807:0:0:0:0:0:0:0:100:505:0:0|h[Magdalena's Murderous Crown]|h|r", -- [3]
-		"|cffa335ee|Hitem:99414:0:0:0:0:0:0:0:100:491:14:0|h[Pauldrons of the Prehistoric Marauder]|h|r", -- [4]
-		"|cffa335ee|Hitem:105783:0:0:0:0:0:0:0:100:491:0:0|h[Greatbelt of the Crendor]|h|r", -- [5]
-		"|cffa335ee|Hitem:99413:0:0:0:0:0:0:0:100:491:14:0|h[Legplates of the Prehistoric Marauder]|h|r", -- [6]
-		"|cffa335ee|Hitem:112757:0:0:0:0:0:0:0:100:491:6:1:450|h[Wolf-Rider Spurs]|h|r", -- [7]
-		"|cffa335ee|Hitem:112733:0:0:0:0:0:0:0:100:491:5:1:449|h[Wall-Borer Bracers]|h|r", -- [8]
-		"|cffa335ee|Hitem:112703:0:0:0:0:0:0:0:100:505:6:1:450|h[Evil Eye of Galakras]|h|r", -- [9]
-		"|cffa335ee|Hitem:112850:0:0:0:0:0:0:0:100:505:6:1:450|h[Thok's Tail Tip]|h|r", -- [10]
-		"|cff0070dd|Hitem:116427:0:0:0:0:0:0:0:100:0:13:1:184|h[Smoldering Breastplate of the Merciless]|h|r", -- [11]
-		"|cff0070dd|Hitem:114911:0:0:0:0:0:0:0:100:0:11:0|h[Mighty Gorian Cleaver]|h|r", -- [12]
-		"|cff0070dd|Hitem:117571:0:0:0:0:0:0:0:100:0:0:0|h[Gordunni Skullthumper]|h|r", -- [13]
-		"|cff0070dd|Hitem:112261:0:0:0:0:0:0:0:100:0:0:0|h[Forgotten Vindicator's Blade]|h|r", -- [14]
-		"|cffa335ee|Hitem:118223:0:0:0:0:0:0:0:100:0:0:1:545|h[Sunclaw]|h|r", -- [15]
-		"|cff0070dd|Hitem:111490:0:0:0:0:0:0:0:100:0:0:0|h[Cindermaw's Blazing Talon]|h|r", -- [16]
-		"|cff0070dd|Hitem:111484:0:0:0:0:0:0:0:100:0:0:0|h[Cold Tusk]|h|r", -- [17]
-		"|cff0070dd|Hitem:116835:0:0:0:0:0:0:0:100:0:0:0|h[Assassin's Spear]|h|r", -- [18]
-		"|cff0070dd|Hitem:116837:0:0:0:0:0:0:0:100:0:0:0|h[Spooky Scythe]|h|r", -- [19]
-		"|cff0070dd|Hitem:116116:0:0:0:0:0:0:0:100:0:0:0|h[Blazegrease Greatsword]|h|r", -- [20]
-		"|cff0070dd|Hitem:116426:0:0:0:0:0:0:0:100:0:13:1:164|h[Smoldering Helm of the Aurora]|h|r", -- [21]
-		"|cff0070dd|Hitem:118079:0:0:0:0:0:0:0:100:0:11:1:577|h[Admiral Taylor's Ceremonial Sword]|h|r", -- [22]
-		"|cffa335ee|Hitem:112867:0:0:0:0:0:0:0:100:0:11:1:576|h[Abandoned Dark Iron Handaxe]|h|r", -- [23]
-		"|cff0070dd|Hitem:13075:0:0:0:0:0:0:0:100:0:0:0|h[Direwing Legguards]|h|r", -- [24]
-		"|cff0070dd|Hitem:87445:0:0:0:0:0:0:0:100:0:0:0|h[Gauntlets of Blurring Fingers]|h|r", -- [25]
-		"|cff0070dd|Hitem:37783:0:0:0:0:0:0:0:100:0:0:0|h[Blood-Tempered Spaulders]|h|r", -- [26]
-		"|cff0070dd|Hitem:37786:0:0:0:0:0:0:0:100:0:0:0|h[Legguards of the Forlorn Seas]|h|r", -- [27]
-		"|cff0070dd|Hitem:37795:0:0:0:0:0:0:0:100:0:0:0|h[Grips of the Valiant Champion]|h|r", -- [28]
-		"|cff0070dd|Hitem:118781:0:0:0:0:0:0:0:100:0:2:0|h[Gorestained Hatchet]|h|r", -- [29]
-		"|cffa335ee|Hitem:113667:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Phemos' Double Slasher]|h|r", -- [30]
+	["Glyphs"] = {
+		{
+			115943, -- [1]
+			58098, -- [2]
+			115946, -- [3]
+			94372, -- [4]
+			123779, -- [5]
+			58355, -- [6]
+		}, -- [1]
+		{
+			68164, -- [1]
+			58098, -- [2]
+			58099, -- [3]
+			94372, -- [4]
+			63327, -- [5]
+			159701, -- [6]
+		}, -- [2]
 	},
+	["RealmName"] = "Illidan",
 	["Specs"] = {
 		33, -- [1]
 		34, -- [2]
@@ -154,9 +140,7 @@ AmrDb = {
 		[823] = 500,
 		[-1] = 11678612,
 	},
-	["IconInfo"] = {
-		["minimapPos"] = 142.399548566353,
-	},
+	["LastCharacterImport"] = "",
 	["LogData"] = {
 		["_wipes"] = {
 		},
@@ -198,8 +182,41 @@ AmrDb = {
 		"|cffa335ee|Hitem:114230:0:0:0:0:0:0:0:100:0:13:3:79:525:534|h[Truesteel Helm of the Savage]|h|r", -- [27]
 		"|cffa335ee|Hitem:113606:5331:0:0:0:0:0:0:100:0:5:1:566|h[Butcher's Bloody Cleaver]|h|r", -- [28]
 	},
-	["RealmName"] = "Illidan",
-	["LastCharacterImport"] = "",
+	["IconInfo"] = {
+		["minimapPos"] = 142.399548566353,
+	},
+	["VoidItems"] = {
+		"|cffa335ee|Hitem:112785:0:0:0:0:0:0:0:100:491:6:2:450:448|h[Gar'tok, Strength of the Faithful]|h|r", -- [1]
+		"|cffa335ee|Hitem:112949:0:0:0:0:0:0:0:100:491:6:2:450:448|h[Greatsword of Pride's Fall]|h|r", -- [2]
+		"|cffa335ee|Hitem:105807:0:0:0:0:0:0:0:100:505:0:0|h[Magdalena's Murderous Crown]|h|r", -- [3]
+		"|cffa335ee|Hitem:99414:0:0:0:0:0:0:0:100:491:14:0|h[Pauldrons of the Prehistoric Marauder]|h|r", -- [4]
+		"|cffa335ee|Hitem:105783:0:0:0:0:0:0:0:100:491:0:0|h[Greatbelt of the Crendor]|h|r", -- [5]
+		"|cffa335ee|Hitem:99413:0:0:0:0:0:0:0:100:491:14:0|h[Legplates of the Prehistoric Marauder]|h|r", -- [6]
+		"|cffa335ee|Hitem:112757:0:0:0:0:0:0:0:100:491:6:1:450|h[Wolf-Rider Spurs]|h|r", -- [7]
+		"|cffa335ee|Hitem:112733:0:0:0:0:0:0:0:100:491:5:1:449|h[Wall-Borer Bracers]|h|r", -- [8]
+		"|cffa335ee|Hitem:112703:0:0:0:0:0:0:0:100:505:6:1:450|h[Evil Eye of Galakras]|h|r", -- [9]
+		"|cffa335ee|Hitem:112850:0:0:0:0:0:0:0:100:505:6:1:450|h[Thok's Tail Tip]|h|r", -- [10]
+		"|cff0070dd|Hitem:116427:0:0:0:0:0:0:0:100:0:13:1:184|h[Smoldering Breastplate of the Merciless]|h|r", -- [11]
+		"|cff0070dd|Hitem:114911:0:0:0:0:0:0:0:100:0:11:0|h[Mighty Gorian Cleaver]|h|r", -- [12]
+		"|cff0070dd|Hitem:117571:0:0:0:0:0:0:0:100:0:0:0|h[Gordunni Skullthumper]|h|r", -- [13]
+		"|cff0070dd|Hitem:112261:0:0:0:0:0:0:0:100:0:0:0|h[Forgotten Vindicator's Blade]|h|r", -- [14]
+		"|cffa335ee|Hitem:118223:0:0:0:0:0:0:0:100:0:0:1:545|h[Sunclaw]|h|r", -- [15]
+		"|cff0070dd|Hitem:111490:0:0:0:0:0:0:0:100:0:0:0|h[Cindermaw's Blazing Talon]|h|r", -- [16]
+		"|cff0070dd|Hitem:111484:0:0:0:0:0:0:0:100:0:0:0|h[Cold Tusk]|h|r", -- [17]
+		"|cff0070dd|Hitem:116835:0:0:0:0:0:0:0:100:0:0:0|h[Assassin's Spear]|h|r", -- [18]
+		"|cff0070dd|Hitem:116837:0:0:0:0:0:0:0:100:0:0:0|h[Spooky Scythe]|h|r", -- [19]
+		"|cff0070dd|Hitem:116116:0:0:0:0:0:0:0:100:0:0:0|h[Blazegrease Greatsword]|h|r", -- [20]
+		"|cff0070dd|Hitem:116426:0:0:0:0:0:0:0:100:0:13:1:164|h[Smoldering Helm of the Aurora]|h|r", -- [21]
+		"|cff0070dd|Hitem:118079:0:0:0:0:0:0:0:100:0:11:1:577|h[Admiral Taylor's Ceremonial Sword]|h|r", -- [22]
+		"|cffa335ee|Hitem:112867:0:0:0:0:0:0:0:100:0:11:1:576|h[Abandoned Dark Iron Handaxe]|h|r", -- [23]
+		"|cff0070dd|Hitem:13075:0:0:0:0:0:0:0:100:0:0:0|h[Direwing Legguards]|h|r", -- [24]
+		"|cff0070dd|Hitem:87445:0:0:0:0:0:0:0:100:0:0:0|h[Gauntlets of Blurring Fingers]|h|r", -- [25]
+		"|cff0070dd|Hitem:37783:0:0:0:0:0:0:0:100:0:0:0|h[Blood-Tempered Spaulders]|h|r", -- [26]
+		"|cff0070dd|Hitem:37786:0:0:0:0:0:0:0:100:0:0:0|h[Legguards of the Forlorn Seas]|h|r", -- [27]
+		"|cff0070dd|Hitem:37795:0:0:0:0:0:0:0:100:0:0:0|h[Grips of the Valiant Champion]|h|r", -- [28]
+		"|cff0070dd|Hitem:118781:0:0:0:0:0:0:0:100:0:2:0|h[Gorestained Hatchet]|h|r", -- [29]
+		"|cffa335ee|Hitem:113667:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Phemos' Double Slasher]|h|r", -- [30]
+	},
 	["Reps"] = {
 		[1269] = 3,
 		[1337] = 3,
@@ -215,24 +232,7 @@ AmrDb = {
 	["Professions"] = {
 	},
 	["Class"] = "WARRIOR",
-	["Glyphs"] = {
-		{
-			115943, -- [1]
-			58098, -- [2]
-			115946, -- [3]
-			94372, -- [4]
-			123779, -- [5]
-			58355, -- [6]
-		}, -- [1]
-		{
-			68164, -- [1]
-			58098, -- [2]
-			58099, -- [3]
-			94372, -- [4]
-			63327, -- [5]
-			159701, -- [6]
-		}, -- [2]
-	},
+	["Region"] = "US",
 	["BankItemsAndCounts"] = {
 		[109132] = 3,
 		[42765] = 1,
@@ -297,8 +297,8 @@ AmrDb = {
 		[112949] = 1,
 		[99198] = 1,
 		[120945] = 6,
-		[87454] = 1,
 		[6975] = 1,
+		[87454] = 1,
 		[112796] = 1,
 		[109133] = 2,
 		[113295] = 2,

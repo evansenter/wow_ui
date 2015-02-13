@@ -1,4 +1,19 @@
 subversion:
+	- nbluewiz via svn r12907: # comment clean.
+	- ultrashining via svn r12906: zhTW update
+	- nbluewiz via svn r12905: # thogar mythic update.
+	- Omega via svn r12904: Forgot to remove this
+	- Omega via svn r12903: #Darmac update *Hopefully fix bug that caused timers not to update when darmac dismounted on mythic difficulty *Fixed bug where epicenter warnings were missing when cast by faultine *Fixed bug where epicenter warnings cast by darmac would spam *Added GTFO warnings for inferno pyre, Flame infusion, and Epicenter *Added timer and countdown for epicenter *Fixed a bug where call of the pack and pin down could incorrectly update *Fixed a bug where not all timers would update on beast death on mythic difficulty (absorbing a beast now seems to reset ALL ability cds despite boss already being dismounted ahead of time, not just one absorbed on mythic difficulty)
+	- Omega via svn r12902: Fix two bugs
+	- Omega via svn r12901: do not reset tantrumCount
+	- nbluewiz via svn r12900: # re-enable timer extend code for margok. just extend timers below 10 sec by 10 sec.
+	- nbluewiz via svn r12899: # change option default for healer.
+	- Omega via svn r12898: Add thogar notes.
+	- nbluewiz via svn r12897: # berserk hotfixed in Kromog.
+	- Omega via svn r12896: don't show warnRetchedBlackrock if you already saw a special warning for same cast. Added count to acid torrent.
+	- Omega via svn r12895: Mythic Kromog updates
+	- nbluewiz via svn r12894: # bw version
+	- Omega via svn r12893: revert callback change, that made it worse. honestly the no strip hack needs to be changed. it logs terrible messages.
 	- Omega via svn r12892: Add another trash warning
 	- Omega via svn r12891: another highmaul hud, this time for MC targets on koragh
 	- Omega via svn r12890: Reduce size of blood ritual hud, since it has a much smaller radius of avoidance in game as well, and to also deemphasize the orb size for melee. Rapid fire is more important one to emphasize Add some Hud options to margok

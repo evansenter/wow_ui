@@ -17,7 +17,7 @@ FX_Saved = {
 		["Master Engineer Telonicus"] = 1,
 		["Fathom-Guard Sharkkis"] = 1,
 	},
-	["Update"] = 254070.25,
+	["Update"] = 87311.861,
 	["Profiles"] = {
 		["Active"] = 1,
 		["Characters"] = {
@@ -923,13 +923,16 @@ FX_Saved = {
 					">> %s is fading in %s <<", -- [1]
 					[0] = 1,
 				},
+				["Output"] = {
+					"MyProChannel", -- [1]
+					[0] = true,
+				},
+				["SummonSpace"] = 1,
 				["HealthstoneMinColor"] = {
 					0.93, -- [1]
 					1, -- [2]
 					0, -- [3]
 				},
-				["SummonSpace"] = 1,
-				["SummonHeight"] = 12,
 				["SoulstoneMaxColor"] = {
 					0.64, -- [1]
 					0.21, -- [2]
@@ -1016,10 +1019,7 @@ FX_Saved = {
 				["ShowReady"] = false,
 				["SoulstoneStrata"] = "MEDIUM",
 				["HealthstoneExpand"] = false,
-				["Output"] = {
-					"MyProChannel", -- [1]
-					[0] = true,
-				},
+				["SummonHeight"] = 12,
 				["SoulstoneReadySound"] = {
 					"Sound\\Spells\\SimonGame_Visual_GameTick.wav", -- [1]
 					1, -- [2]
@@ -1125,7 +1125,7 @@ FX_Saved = {
 	["RaidStatus"] = {
 		["Metal"] = {
 			0, -- [1]
-			254070.25, -- [2]
+			87311.861, -- [2]
 			"WARRIOR", -- [3]
 			"v1.980.8", -- [4]
 		},

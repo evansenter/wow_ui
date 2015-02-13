@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1128, "DBM-Highmaul", nil, 477)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12889 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 12899 $"):sub(12, -3))
 mod:SetCreatureID(78714)
 mod:SetEncounterID(1721)
 mod:SetZone()
@@ -22,7 +22,7 @@ mod:RegisterEventsInCombat(
 )
 
 local warnChainHurl					= mod:NewTargetAnnounce(159947, 3)--Warn for cast too?
-local warnOpenWounds				= mod:NewStackAnnounce(159178, 2, nil, "Tank")
+local warnOpenWounds				= mod:NewStackAnnounce(159178, 2, nil, "Tank|Healer")
 local warnPillar					= mod:NewSpellAnnounce("ej9394", 3, nil, 159202)
 local warnOnTheHunt					= mod:NewTargetAnnounce(162497, 4)
 
@@ -41,7 +41,7 @@ local timerPillarCD					= mod:NewNextTimer(20, "ej9394", nil, nil, nil, 159202)
 local timerChainHurlCD				= mod:NewNextTimer(106, 159947)--177776
 local timerSweeperCD				= mod:NewTimer(55, "timerSweeperCD", 177258)
 local timerBerserkerRushCD			= mod:NewCDTimer(45, 158986)--45 to 70 variation. Small indication that you can use a sequence to get it a little more accurate but even then it's variable. Pull1: 48, 60, 46, 70, 45, 51, 46, 70. Pull2: 48, 60, 50, 55, 45. Mythic pull1, 48, 50, 57, 49
-local timerImpaleCD					= mod:NewCDTimer(45, 159113, nil, "Tank")--Highly variable now, seems better adjusted for berserker rush interaction
+local timerImpaleCD					= mod:NewCDTimer(45, 159113, nil, "Tank|Healer")--Highly variable now, seems better adjusted for berserker rush interaction
 mod:AddTimerLine(ENCOUNTER_JOURNAL_SECTION_FLAG12)
 local timerTigerCD					= mod:NewNextTimer(110, "ej9396", nil, "-Tank", nil, 162497)
 

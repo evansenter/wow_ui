@@ -1,12 +1,25 @@
 ------------------------------------------------------------------------
-r158 | zensunim | 2015-02-09 02:12:36 +0000 (Mon, 09 Feb 2015) | 4 lines
+r161 | zensunim | 2015-02-13 08:24:59 +0000 (Fri, 13 Feb 2015) | 2 lines
 Changed paths:
-   A /tags/4.35.10 (from /trunk:157)
+   A /tags/4.35.11 (from /trunk:160)
 
-4.35.10
-* Added WoD spells for Brawler's Guild
-* Added WoD spells for Highmaul
-* Added WoD spells for Blackrock Foundry
+4.35.11 
+- Added WoD spells for Blackrock Foundry
+------------------------------------------------------------------------
+r160 | zensunim | 2015-02-13 08:24:17 +0000 (Fri, 13 Feb 2015) | 1 line
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO.toc
+   M /trunk/GTFO_Fail_WOD.lua
+   M /trunk/GTFO_Spells_WOD.lua
+
+Prepping for 4.35.11
+------------------------------------------------------------------------
+r159 | zensunim | 2015-02-09 05:04:04 +0000 (Mon, 09 Feb 2015) | 1 line
+Changed paths:
+   M /trunk/GTFO_Fail_WOD.lua
+
+Kromog fails
 ------------------------------------------------------------------------
 r157 | zensunim | 2015-02-09 02:12:07 +0000 (Mon, 09 Feb 2015) | 1 line
 Changed paths:
@@ -51,21 +64,4 @@ Changed paths:
    M /trunk/GTFO_Spells_WOD.lua
 
 Highmaul spells & Brawler's Guild
-------------------------------------------------------------------------
-r150 | zensunim | 2015-01-12 08:03:26 +0000 (Mon, 12 Jan 2015) | 1 line
-Changed paths:
-   M /trunk/GTFO.lua
-   M /trunk/GTFO.toc
-   M /trunk/GTFO_Spells_WOD.lua
-
-Prepping for 4.35.9
-------------------------------------------------------------------------
-r149 | zensunim | 2015-01-12 02:41:52 +0000 (Mon, 12 Jan 2015) | 1 line
-Changed paths:
-   M /trunk/GTFO.lua
-   M /trunk/GTFO.toc
-   M /trunk/GTFO_Fail_WOD.lua
-   M /trunk/GTFO_Spells_WOD.lua
-
-Draenor and Highmaul spells and fixes
 ------------------------------------------------------------------------
