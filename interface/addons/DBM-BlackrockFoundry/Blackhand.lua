@@ -1,11 +1,12 @@
 local mod	= DBM:NewMod(959, "DBM-BlackrockFoundry", nil, 457)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12846 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 12975 $"):sub(12, -3))
 mod:SetCreatureID(77325)--68168
 mod:SetEncounterID(1704)
 mod:SetZone()
 mod:SetUsedIcons(2, 1)
+mod:SetHotfixNoticeRev(12813)
 
 mod:RegisterCombat("combat")
 
@@ -14,7 +15,7 @@ mod:RegisterEventsInCombat(
 	"SPELL_AURA_APPLIED 156096 157000 156667 156401 156653 159179",
 	"SPELL_AURA_REMOVED 156096 157000 156667 159179",
 	"SPELL_PERIODIC_DAMAGE 156401",
-	"SPELL_PERIODIC_MISSED 156401",
+	"SPELL_ABSORBED 156401",
 	"SPELL_ENERGIZE 104915",
 	"UNIT_SPELLCAST_SUCCEEDED boss1"
 )
@@ -38,7 +39,7 @@ local specWarnShatteringSmash		= mod:NewSpecialWarningCount(155992, "Melee", nil
 local specWarnMoltenSlag			= mod:NewSpecialWarningMove(156401)
 --Stage Two: Storage Warehouse
 local specWarnSiegemaker			= mod:NewSpecialWarningSpell("ej9571", false)--Kiter switch. off by default. 
-local specWarnSiegemakerPlatingFades= mod:NewSpecialWarningFades(156667, "Dps")--Plating removed, NOW dps switch
+local specWarnSiegemakerPlatingFades= mod:NewSpecialWarningFades("OptionVersion2", 156667, "Ranged")--Plating removed, NOW dps switch
 local specWarnFixate				= mod:NewSpecialWarningRun(156653, nil, nil, nil, 4)
 local yellFixate					= mod:NewYell(156653)
 --Stage Three: Iron Crucible
@@ -70,7 +71,7 @@ local countdownMarkedforDeath		= mod:NewCountdown("AltTwo25", 156096, "-Tank")
 local countdownMarkedforDeathFades	= mod:NewCountdownFades("AltTwo5", 156096)--Same voice should be fine, never will overlap, and both for same spell, so people will understand
 
 local voicePhaseChange				= mod:NewVoice(nil, nil, DBM_CORE_AUTO_VOICE2_OPTION_TEXT)
-local voiceSiegemaker				= mod:NewVoice("ej9571", "Dps") -- ej9571.ogg tank coming
+local voiceSiegemaker				= mod:NewVoice("OptionVersion2", "ej9571", "Ranged") -- ej9571.ogg tank coming
 local voiceShatteringSmash			= mod:NewVoice(155992, "Melee") --carefly
 local voiceMarkedforDeath			= mod:NewVoice(156096) --target: findshelter; else: 156096.ogg marked for death
 local voiceDemolition				= mod:NewVoice(156425) --AOE
@@ -86,7 +87,6 @@ mod.vb.SlagEruption = 0
 mod.vb.smashCount = 0
 local UnitDebuff = UnitDebuff
 local DBMHudMap = DBMHudMap
-local MFDMarkers={}
 
 function mod:OnCombatStart(delay)
 	self.vb.phase = 1
@@ -102,8 +102,7 @@ function mod:OnCombatStart(delay)
 	timerMarkedforDeathCD:Start(36-delay)
 	countdownMarkedforDeath:Start(36-delay)
 	if self.Options.HudMapOnMFD then
-		table.wipe(MFDMarkers)
-		self:EnableHudMap()
+		DBMHudMap:Enable()
 	end
 end
 
@@ -113,7 +112,7 @@ function mod:OnCombatEnd()
 		DBM.RangeCheck:Hide()
 	end
 	if self.Options.HudMapOnMFD then
-		self:DisableHudMap()
+		DBMHudMap:Disable()
 	end
 end
 
@@ -162,9 +161,6 @@ function mod:SPELL_AURA_APPLIED(args)
 	local spellId = args.spellId
 	if spellId == 156096 then
 		warnMarkedforDeath:CombinedShow(0.5, args.destName)
-		if self.Options.HudMapOnMFD then
-			MFDMarkers[args.destName] = self:RegisterMarker(DBMHudMap:PlaceRangeMarkerOnPartyMember("highlight", args.destName, 5, 5, 1, 0, 0, 0.5):Pulse(0.5, 0.5))
-		end
 		if args:IsPlayer() then
 			specWarnMarkedforDeath:Show()
 			yellMarkedforDeath:Yell()
@@ -182,9 +178,25 @@ function mod:SPELL_AURA_APPLIED(args)
 			self:Schedule(0.5, checkMarked)
 			timerMarkedforDeathCD:Start(timer)
 			countdownMarkedforDeath:Start(timer)
+			if DBM.Options.DebugMode then--Experimental smash timer adjusting for marked for death delays
+				DBM:Debug("Running experimental timerShatteringSmashCD adjust because debugmode is enabled", 2)
+				local elapsed, total = timerShatteringSmashCD:GetTime()
+				local remaining = total - elapsed
+				DBM:Debug("Smash Elapsed: "..elapsed.." Smash Total: "..total.." Smash Remaining: "..remaining.." MFD Timer: "..timer, 2)
+				if (remaining > timer) and (remaining < timer+5.5) then--Marked for death will come off cd before timerShatteringSmashCD comes off cd and delay the cast
+					local extend = (timer+5)-remaining
+					DBM:Debug("Delay detected, updating smash timer now. Extend: "..extend)
+					timerShatteringSmashCD:Update(elapsed, total+extend, self.vb.smashCount+1)
+					countdownShatteringSmash:Cancel()
+					countdownShatteringSmash:Start(remaining+extend)
+				end
+			end
 		end
 		if self.Options.SetIconOnMarked then
 			self:SetSortedIcon(1, args.destName, 1, 2)
+		end
+		if self.Options.HudMapOnMFD then
+			DBMHudMap:RegisterRangeMarkerOnPartyMember(spellId, "highlight", args.destName, 5, 5, 1, 1, 0, 0.5, nil, true):Pulse(0.5, 0.5)
 		end
 	elseif spellId == 157000 or spellId == 159179 then--Combine tank version with non tank version
 		warnAttachSlagBombs:CombinedShow(0.5, args.destName)
@@ -231,9 +243,7 @@ function mod:SPELL_AURA_REMOVED(args)
 	local spellId = args.spellId
 	if spellId == 156096 then
 		if self.Options.HudMapOnMFD then
-			if MFDMarkers[args.destName] then
-				MFDMarkers[args.destName] = self:FreeMarker(MFDMarkers[args.destName])
-			end
+			DBMHudMap:FreeEncounterMarkerByTarget(spellId, args.destName)
 		end
 		timerImpalingThrow:Cancel()
 		if self.Options.SetIconOnMarked then
@@ -267,7 +277,7 @@ function mod:SPELL_PERIODIC_DAMAGE(_, _, _, _, destGUID, _, _, _, spellId)
 		specWarnMoltenSlag:Show()
 	end
 end
-mod.SPELL_PERIODIC_MISSED = mod.SPELL_PERIODIC_DAMAGE
+mod.SPELL_ABSORBED = mod.SPELL_PERIODIC_DAMAGE
 
 function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, _, _, spellId)
 	if (spellId == 156031 or spellId == 156998) and self:AntiSpam(2, 2) then--156031 phase 1, 156991 phase 2. 156998 is also usuable for phase 2 but 156991

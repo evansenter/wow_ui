@@ -5,7 +5,7 @@
 ## Author: Elvador
 ## SavedVariables: ThogarAssistDB
 ## OptionalDeps: Ace3
-## X-Curse-Packaged-Version: v6.0.3-7
+## X-Curse-Packaged-Version: v6.0.3-9
 ## X-Curse-Project-Name: Thogar Assist
 ## X-Curse-Project-ID: thogar-assist
 ## X-Curse-Repository-ID: wow/thogar-assist/mainline
@@ -17,6 +17,7 @@ embeds.xml
 Locales\enUS.lua
 Locales\deDE.lua
 Locales\esES.lua
+Locales\frFR.lua
 Locales\koKR.lua
 Locales\ruRU.lua
 Locales\zhCN.lua

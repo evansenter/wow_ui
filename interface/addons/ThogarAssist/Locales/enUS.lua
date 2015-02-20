@@ -66,6 +66,14 @@ L["Toggle whether or not the Thogar Assist window should be locked or not."] = t
 L["Close"] = true
 L["Closes the Thogar Assist Window."] = true
 
+L["Use icon config of %s"] = true
+L["Lane 1: %s, Lane 2: %s, Lane 3: %s, Lane 4: %s"] = true
+L["Config sent to raid"] = true
+L["Send icons to raid"] = true
+L["Sending raid icons requires leader or assist."] = true
+
+L["Sound played when you are in a lane where a train will be incoming soon"] = true
+L["Train warning sound"] = true
 
 L["This is an early release. The train data may not be complete. If you want to help complete it, please message me on curse."] = true
 

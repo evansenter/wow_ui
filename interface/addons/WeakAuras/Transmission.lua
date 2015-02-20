@@ -9,7 +9,7 @@ local bit_band, bit_lshift, bit_rshift = bit.band, bit.lshift, bit.rshift
 local WeakAuras = WeakAuras;
 local L = WeakAuras.L;
 
-local version = 1420;
+local version = 1421;
 local versionString = WeakAuras.versionString;
 
 local regionOptions = WeakAuras.regionOptions;
@@ -165,6 +165,8 @@ function WeakAuras.DisplayStub(regionType)
             ["unit"] = "player"
         },
         ["actions"] = {
+            ["init"] = {
+            },
             ["start"] = {
             },
             ["finish"] = {
@@ -634,9 +636,23 @@ function WeakAuras.ShowDisplayTooltip(data, children, icon, icons, import, compr
             importbutton = ItemRefTooltip.WeakAuras_Tooltip_Button;
             importbutton:SetPoint("BOTTOMRIGHT", ItemRefTooltip, "BOTTOMRIGHT", -20, 8);
             importbutton:SetWidth(100);
-            if not WeakAurasSaved.import_disabled then
+            importbutton:RegisterEvent("PLAYER_REGEN_ENABLED");
+            importbutton:RegisterEvent("PLAYER_REGEN_DISABLED");
 
-                importbutton:SetText("Import");
+            local function onCombat(self, event)
+              if (event == "PLAYER_REGEN_ENABLED") then
+                importbutton:Enable();
+              else
+                importbutton:Disable();
+              end
+            end
+
+            importbutton:SetScript("OnEvent", onCombat);
+            if (InCombatLockdown()) then
+              importbutton:Disable();
+            end
+            if not WeakAurasSaved.import_disabled then
+                importbutton:SetText(L["Import"]);
                 importbutton:SetScript("OnClick", function()
                 WeakAuras.OpenOptions();
 

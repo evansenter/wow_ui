@@ -24,6 +24,10 @@ L:SetOptionLocalization({
 	warnBlastFrequency	= "$spell:155209 시전 빈도 증가시 알림 보기"
 })
 
+L:SetMiscLocalization({
+	heatRegulator		= "열기 조절 장치"
+})
+
 ------------------
 -- Hans'gar And Franzok --
 ------------------
@@ -60,6 +64,14 @@ L= DBM:GetModLocalization(1122)
 -- Operator Thogar --
 --------------------------
 L= DBM:GetModLocalization(1147)
+
+L:SetWarningLocalization({
+	specWarnSplitSoon	= "10초 안에 공격대 상하로 분리하세요!"
+})
+
+L:SetOptionLocalization({
+	specWarnSplitSoon	= "공격대 분리 10초 전에 특수 경고 보기"
+})
 
 L:SetMiscLocalization({
 	Train			= "기차",

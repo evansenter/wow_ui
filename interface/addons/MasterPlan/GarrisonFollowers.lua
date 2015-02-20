@@ -1,17 +1,7 @@
 local _, T = ...
 if T.Mark ~= 23 then return end
 local G, L = T.Garrison, T.L
-
-local function countFreeFollowers(f, finfo)
-	local ret = 0
-	for i=1,f and #f or 0 do
-		local st = finfo[f[i]].status
-		if not (st == GARRISON_FOLLOWER_INACTIVE or st == GARRISON_FOLLOWER_WORKING or T.config.ignore[f[i]]) then
-			ret = ret + 1
-		end
-	end
-	return ret
-end
+local countFreeFollowers = G.countFreeFollowers
 
 local mechanicsFrame = CreateFrame("Frame")
 mechanicsFrame:SetSize(1,1) mechanicsFrame:Hide()
@@ -51,11 +41,15 @@ local CreateMechanicButton do
 		else
 			GameTooltip:AddLine(ico .. self.name)
 			if ci and #ci > 0 then
-				GameTooltip:AddLine(L"Can be countered by:", 1,1,1)
-				G.sortByFollowerLevels(ci, finfo)
+				if not self.isDouble then
+					GameTooltip:AddLine(L"Can be countered by:", 1,1,1)
+					G.sortByFollowerLevels(ci, finfo)
+				end
 				for i=1,#ci do
 					GameTooltip:AddDoubleLine(G.GetFollowerLevelDescription(ci[i], nil, finfo[ci[i]]), G.GetOtherCounterIcons(finfo[ci[i]], self.id), 1,1,1)
 				end
+			elseif self.isDouble then
+				GameTooltip:AddLine(L"You have no followers with duplicate counter combinations.", 1,1,1, 1)
 			else
 				GameTooltip:AddLine(L"You have no followers to counter this mechanic.", 1,0.50,0, 1)
 			end
@@ -155,7 +149,7 @@ end)
 
 local icons = setmetatable({}, {__index=function(self, k)
 	local f = CreateMechanicButton(mechanicsFrame)
-	f:SetPoint("LEFT", 24*k-20, 0)
+	f:SetPoint("LEFT", 23*k-20, 0)
 	self[k] = f
 	return f
 end})
@@ -196,6 +190,21 @@ local function syncTotals()
 		ico.info, ico.isTraitGroup = m, true
 		i = i + 1
 	end
+
+	local di, doubles, t = G.GetDoubleCounters(finfo), {}, {}
+	for k,v in pairs(di) do
+		if k > 0 and #v > 1 then
+			G.sortByFollowerLevels(v, finfo)
+			for i=1,#v do
+				doubles[#doubles+1] = v[i]
+			end
+			wipe(t)
+		end
+	end
+	local ico, cc = icons[i], countFreeFollowers(doubles, finfo)
+	ico.Icon:SetTexture("Interface\\Icons\\Inv_Misc_Book_11")
+	ico.Count:SetText(cc and cc > 0 and cc or "")
+	ico.info, ico.name, ico.isDouble = doubles, L"Duplicate counters", true
 end
 GarrisonMissionFrame.FollowerTab:HookScript("OnShow", function(self)
 	mechanicsFrame:SetParent(self)
@@ -396,34 +405,16 @@ GarrisonMissionFrame.FollowerTab.AbilitiesFrame.Counters[1]:SetScript("OnLeave",
 end)
 
 local function ShowPotentialAbilityTooltip(owner, classSpec, dropCounter, altTitle)
-	local c = T.SpecCounters[classSpec]
-	if c then
-		GameTooltip:SetOwner(owner, "ANCHOR_NONE")
-		GameTooltip:AddLine(altTitle or (ITEM_QUALITY_COLORS[4].hex .. L"Epic Ability"), 1,1,1)
-		if not altTitle then
-			GameTooltip:AddLine(L"An additional random ability is unlocked when this follower reaches epic quality.", 1,1,1, 1)
-		end
-		GameTooltip:AddLine((altTitle and "" or "|n") .. L"Potential counters:")
-		local ci, finfo = G.GetCounterInfo(), G.GetFollowerInfo()
-		for i=1,#c do
-			if c[i] == dropCounter then
-				dropCounter = nil
-			else
-				local _, name, ico = G.GetMechanicInfo(c[i])
-				GameTooltip:AddDoubleLine("|TInterface\\Buttons\\UI-Quickslot2:18:2:-1:0:64:64:31:32:31:32|t|T" .. ico .. ":16:16:0:0:64:64:5:59:5:59|t " .. name,  "(" .. countFreeFollowers(ci[c[i]], finfo) .. ")", 1,1,1, 1,1,1)
-			end
-		end
-		GameTooltip:SetBackdropColor(0,0,0)
-		GameTooltip:Show()
-	end
+	GameTooltip:SetOwner(owner, "ANCHOR_NONE")
+	return G.SetClassSpecTooltip(GameTooltip, classSpec, altTitle, dropCounter)
 end
 local function RecruitAbility_OnEnter(self)
 	if self.abilityID == -1 then
 		local cs, other, p = self.classSpec, self.otherCounter, self:GetParent()
 		if p and not cs then cs, other = p.classSpec, p.otherCounter end
-		if cs then
-			ShowPotentialAbilityTooltip(self, cs, other)
+		if cs and ShowPotentialAbilityTooltip(self, cs, other) then
 			GameTooltip:SetPoint("TOPLEFT", self.Icon, "BOTTOMRIGHT")
+			GameTooltip:Show()
 		end
 	elseif self.abilityID and self.abilityID > 0 then
 		GarrisonFollowerAbilityTooltip:ClearAllPoints()
@@ -457,10 +448,9 @@ hooksecurefunc("GarrisonRecruitSelectFrame_UpdateRecruits", function(waiting)
 	end
 end)
 local function ClassSpecFrame_OnEnter(self)
-	local cs = self:GetParent().classSpec
-	if cs then
-		ShowPotentialAbilityTooltip(self, cs, nil, self:GetParent().ClassSpec:GetText())
+	if ShowPotentialAbilityTooltip(self, self.follower) then
 		GameTooltip:SetPoint("TOPRIGHT", self, "BOTTOMRIGHT")
+		GameTooltip:Show()
 	end
 end
 hooksecurefunc("GarrisonMissionFrame_SetFollowerPortrait", function(port, fi)
@@ -507,6 +497,7 @@ hooksecurefunc("GarrisonMissionFrame_SetFollowerPortrait", function(port, fi)
 			hf:SetScript("OnLeave", RecruitAbility_OnLeave)
 			p.Class.HoverFrame = hf
 		end
+		p.Class.HoverFrame.follower = fi
 		p.Class.HoverFrame:SetShown(not not p.classSpec)
 	end
 end)
@@ -531,8 +522,9 @@ end
 local GarrisonFollowerList_SortFollowers = GarrisonFollowerList_SortFollowers
 function _G.GarrisonFollowerList_SortFollowers(followerList)
 	local searchString = followerList.SearchBox and followerList.SearchBox:GetText() or ""
+	local dupQuery, lss = (L"Duplicate counters"):lower(), searchString:lower()
 	
-	if searchString:match("[;+]") and searchString:match("[^%s;+]") then
+	if (searchString:match("[;+]") and searchString:match("[^%s;+]")) or (lss == dupQuery or lss == "duplicate counters") then
 		local showUncollected, list, q, s = followerList.showUncollected, followerList.followersList, {}
 		
 		for qs in searchString:gmatch("[^;]+") do
@@ -548,17 +540,35 @@ function _G.GarrisonFollowerList_SortFollowers(followerList)
 		end
 		
 		wipe(list)
+		local dupSet
 		for i=1, #followerList.followers do
 			local fi = followerList.followers[i]
 			if showUncollected or fi.isCollected then
-				local matched, id, spec = true, fi.followerID, T.SpecCounters[fi.classSpec]
-				
+				local matched, id, spec, filterDup = true, fi.followerID, T.SpecCounters[fi.classSpec], false
 				for i=1,#q do
-					if not C_Garrison.SearchForFollower(id, q[i]) then
+					local q = q[i]
+					local ql = q:lower()
+					if ql == dupQuery or ql == "duplicate counters" then
+						filterDup = true
+					elseif not C_Garrison.SearchForFollower(id, q) then
 						matched = false
 						break
 					end
 				end
+				if matched and filterDup then
+					if not dupSet then
+						dupSet = {}
+						for k,v in pairs(G.GetDoubleCounters(G.GetFollowerInfo())) do
+							if k > 0 and #v > 1 then
+								for i=1,#v do
+									dupSet[v[i]] = 1
+								end
+							end
+						end
+					end
+					matched = not not dupSet[id]
+				end
+				
 				for i=1,s and matched and #s or 0 do
 					local ok, qm = false, s[i]
 					for j=1,#spec do
@@ -583,3 +593,4 @@ function _G.GarrisonFollowerList_SortFollowers(followerList)
 	
 	return GarrisonFollowerList_SortFollowers(followerList)
 end
+GarrisonMissionFrameFollowers.SearchBox:SetMaxLetters(0)

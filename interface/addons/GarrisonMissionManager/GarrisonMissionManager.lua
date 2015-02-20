@@ -98,15 +98,17 @@ local CheckPartyForProfessionFollowers
 local events_filtered_followers_dirty = {
    GARRISON_FOLLOWER_LIST_UPDATE = true,
    GARRISON_FOLLOWER_XP_CHANGED = true,
+   GARRISON_FOLLOWER_ADDED = true,
    GARRISON_FOLLOWER_REMOVED = true,
+   GARRISON_UPDATE = true,
 }
+
 local events_top_for_mission_dirty = {
    GARRISON_MISSION_NPC_OPENED = true,
    GARRISON_MISSION_LIST_UPDATE = true,
 }
 
 local events_for_buildings = {
-   GARRISON_BUILDING_LIST_UPDATE = true,
    GARRISON_BUILDINGS_SWAPPED = true,
    GARRISON_BUILDING_ACTIVATED = true,
    GARRISON_BUILDING_PLACED = true,
@@ -131,9 +133,23 @@ event_frame:SetScript("OnEvent", function(self, event, arg1)
    if events_for_buildings[event] then
       c_garrison_cache.GetBuildings = nil
       c_garrison_cache.salvage_yard_level = nil
+
       if GarrisonBuildingFrame:IsVisible() then
          addon_env.GarrisonBuilding_UpdateCurrentFollowers()
          addon_env.GarrisonBuilding_UpdateButtons()
+      end
+   end
+
+   if addon_env.RegisterManualInterraction then
+      -- function is not deleted - no manual interraction was registered yet
+      -- scan buildings/followers more agressively
+      if events_filtered_followers_dirty[event] then
+         addon_env.GarrisonBuilding_UpdateCurrentFollowers()
+         addon_env.GarrisonBuilding_UpdateBestFollowers()
+      end
+
+      if events_for_buildings[event] then
+         addon_env.GarrisonBuilding_UpdateBuildings()
       end
    end
 
@@ -146,8 +162,8 @@ event_frame:SetScript("OnEvent", function(self, event, arg1)
 end)
 for event in pairs(events_top_for_mission_dirty) do event_frame:RegisterEvent(event) end
 for event in pairs(events_filtered_followers_dirty) do event_frame:RegisterEvent(event) end
+for event in pairs(events_for_buildings) do RegisterEvent(event_frame, event) end
 event_frame:RegisterEvent("ADDON_LOADED")
-event_frame:RegisterEvent("GARRISON_BUILDING_LIST_UPDATE")
 
 local gmm_buttons = {}
 addon_env.gmm_buttons = gmm_buttons
@@ -470,6 +486,7 @@ end
 
 local available_missions = {}
 local function BestForCurrentSelectedMission()
+   if addon_env.RegisterManualInterraction then addon_env.RegisterManualInterraction() end
    local missionInfo = MissionPage.missionInfo
    local mission_id = missionInfo.missionID
 
@@ -614,6 +631,7 @@ local function MissionPage_PartyButtonOnClick(self)
 end
 
 local function MissionList_PartyButtonOnClick(self)
+   if addon_env.RegisterManualInterraction then addon_env.RegisterManualInterraction() end
    -- mission_page_pending_click = 1
    return self:GetParent():Click()
 end

@@ -91,12 +91,12 @@ AngryAssign_Pages = {
 		["UpdateId"] = 185480060,
 		["Contents"] = "Whirlwind (emp):\n1) (emp) Devo +  Hockey + Gandalf + Hemo + Spirit Link\n2) (emp) Twin(Hymn) + Lan(Barrier) + Tokman + Azpek\n\n\nRubble:\n2)  Scar  + Tokman + Hemo\n3)  Devo + Bluto (Smoke) + Gandalf + Hemo + Spirit Link\n4)  Twin + Lanfear + Hockey\n5)  Scar + Tokman + Hemo\n\nQuake\n2) Twin  + NVs \n3) Akroma + HS + personals",
 	},
-	[774473661] = {
-		["Updated"] = 1422416935,
-		["Name"] = "bracken new",
-		["Id"] = 774473661,
-		["UpdateId"] = 416964799,
-		["Contents"] = "Infesting Spores Order:\n1) Akroma + Devo + Smoke + Gandalf\n2) Draxi + Devo + Zaebies + Ekylpto\n3) Revival + Akroma + Hemol + \n4) Hymn + Barrier + Cexcells + Draxi\n5)Akroma + Devo + Smoke +  Gandalf\n6) Draxi + Devo + Zaebies + Ekylpto\n7) Revival + Akroma + Hemol +\n8) Hymn + Barrier + Cexcells + Draxi\n\nRoar Order:\nBrun - Crime\n\nLoh Order:\nAmara - Akroma - Draxxi",
+	[1154863405] = {
+		["Updated"] = 1424399043,
+		["Name"] = "Beastlord ",
+		["Id"] = 1154863405,
+		["UpdateId"] = 1296062330,
+		["Contents"] = "Tantrum Healing Cds:\n1: Tranq/Princip\n2: Rev/Strpol\n3: Hymn/Goargrim\n4: Freed/Toppies\n5: Vamp/Loki/Mtnk\nRepeat\n\nRoar Order For Last Phase:\n1: Anahkin\n2. KoV\n3: Bharay\n\n\nLAST PHASE:\nVAMP\nFREED\nREV/Mtnk/Goargrim\nHymn\nDEAD",
 	},
 	[223793571] = {
 		["Updated"] = 1420677848,
@@ -105,13 +105,6 @@ AngryAssign_Pages = {
 		["UpdateId"] = 191581569,
 		["Contents"] = "Whirlwind (emp):\n1) (emp) Dj(Tranq) + Hockey + Cexcells\n2) (emp) Twin(Hymn) + Lan(Barrier) + Cexcells + Azpek\n\nShout:\n2) Devo\n4) Devo\n\nRubble:\n2)  Scar  + Tokman + Hemo + Gandalf\n3)  Dj tranq + Bluto (Smoke) + \n4)  Twin + Lanfear + Cexcells + Hockey\n5)  Scar + Tokman + Hemo + Gandalf\n\nQuake\n2) Twin + Captain + NVs \n3) Akroma + HS + personals",
 	},
-	[1969626899] = {
-		["Updated"] = 1419298420,
-		["Name"] = "Ko'ragh",
-		["Id"] = 1969626899,
-		["UpdateId"] = 2397313823,
-		["Contents"] = "Myth\nCharlie\nAzpek\nHockeyy",
-	},
 	[836809314] = {
 		["Updated"] = 1418272376,
 		["Name"] = "Add Space",
@@ -119,20 +112,42 @@ AngryAssign_Pages = {
 		["UpdateId"] = 3815448723,
 		["Contents"] = "Advertising Space for Sale, Contact Kemsa\n\nBy Reading this you just proved it works!",
 	},
+	[1969626899] = {
+		["Updated"] = 1419298420,
+		["Name"] = "Ko'ragh",
+		["Id"] = 1969626899,
+		["UpdateId"] = 2397313823,
+		["Contents"] = "Myth\nCharlie\nAzpek\nHockeyy",
+	},
+	[533536495] = {
+		["Updated"] = 1424408607,
+		["Name"] = "Gruul",
+		["Id"] = 533536495,
+		["UpdateId"] = 208859558,
+		["Contents"] = "Slice CDS:\n8: Hymn/Freed/Toppies\n9: Rev/Vamp/Goargrim\n\n \n\nOverhead Smash\nUse Personals/Tonic(if needed)",
+	},
+	[774473661] = {
+		["Updated"] = 1422416935,
+		["Name"] = "bracken new",
+		["Id"] = 774473661,
+		["UpdateId"] = 416964799,
+		["Contents"] = "Infesting Spores Order:\n1) Akroma + Devo + Smoke + Gandalf\n2) Draxi + Devo + Zaebies + Ekylpto\n3) Revival + Akroma + Hemol + \n4) Hymn + Barrier + Cexcells + Draxi\n5)Akroma + Devo + Smoke +  Gandalf\n6) Draxi + Devo + Zaebies + Ekylpto\n7) Revival + Akroma + Hemol +\n8) Hymn + Barrier + Cexcells + Draxi\n\nRoar Order:\nBrun - Crime\n\nLoh Order:\nAmara - Akroma - Draxxi",
+	},
 }
 AngryAssign_State = {
 	["tree"] = {
 		["groups"] = {
 		},
 		["scrollvalue"] = 0,
-		["fullwidth"] = 665.999938964844,
 		["selected"] = 45058146,
-		["treewidth"] = 175,
 		["treesizable"] = true,
+		["treewidth"] = 175,
+		["fullwidth"] = 665.999938964844,
 	},
+	["directionUp"] = false,
 	["display"] = {
-		["y"] = -2.5,
-		["x"] = 156.000213623047,
+		["y"] = -185.500244140625,
+		["x"] = 45.0002250671387,
 		["point"] = "TOPLEFT",
 		["scale"] = 1,
 		["hidden"] = false,
@@ -144,11 +159,9 @@ AngryAssign_State = {
 		["width"] = 700,
 	},
 	["locked"] = true,
-	["directionUp"] = false,
 }
 AngryAssign_Config = {
 	["backdropColor"] = "0000003e",
-	["backdropShow"] = true,
 	["fontHeight"] = 14,
 	["fontName"] = "Arial Narrow",
 }

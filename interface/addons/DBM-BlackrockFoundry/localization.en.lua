@@ -23,6 +23,10 @@ L:SetOptionLocalization({
 	warnBlastFrequency	= "Announce when $spell:155209 frequency increased"
 })
 
+L:SetMiscLocalization({
+	heatRegulator		= "Heat Regulator"
+})
+
 ------------------
 -- Hans'gar And Franzok --
 ------------------
@@ -59,6 +63,14 @@ L= DBM:GetModLocalization(1122)
 -- Operator Thogar --
 --------------------------
 L= DBM:GetModLocalization(1147)
+
+L:SetWarningLocalization({
+	specWarnSplitSoon	= "Raid split in 10"
+})
+
+L:SetOptionLocalization({
+	specWarnSplitSoon	= "Show special warning 10 seconds before raid split"
+})
 
 L:SetMiscLocalization({
 	Train			= GetSpellInfo(174806),

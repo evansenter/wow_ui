@@ -1,11 +1,12 @@
 local mod	= DBM:NewMod(1155, "DBM-BlackrockFoundry", nil, 457)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12885 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 12975 $"):sub(12, -3))
 mod:SetCreatureID(76974, 76973)
 mod:SetEncounterID(1693)
 mod:SetZone()
 --mod:SetUsedIcons(5, 4, 3, 2, 1)
+mod:SetHotfixNoticeRev(12934)
 
 mod:RegisterCombat("combat")
 
@@ -45,7 +46,7 @@ mod:AddTimerLine(ENCOUNTER_JOURNAL_SECTION_FLAG12)
 local timerSmartStamperCD				= mod:NewNextTimer(12, 162124)--Activation
 local timerStamperDodge					= mod:NewTimer(10, "timerStamperDodge", 160582)--Time until stamper falls (spell name fits well, time you have to stamper dodge)
 
-local berserkTimer						= mod:NewBerserkTimer(360)
+--local berserkTimer						= mod:NewBerserkTimer(360)
 
 local countCripplingSupplex				= mod:NewCountdown("OptionVersion2", "Alt9.5", 156938, "Tank|Healer")
 
@@ -55,12 +56,14 @@ local voiceShatteredVertebrae			= mod:NewVoice(157139)
 mod.vb.phase = 1
 mod.vb.stamperDodgeCount = 0
 mod.vb.bossUp = "NoBody"
-mod.vb.lastJumpTarget = UNKNOWN
+mod.vb.lastJumpTarget = "None"
 mod.vb.firstJump = false
 
 function mod:JumpTarget(targetname, uId)
 	if not targetname then return end
-	self.vb.lastJumpTarget = targetname
+	if DBM.Options.DebugMode then
+		self.vb.lastJumpTarget = targetname
+	end
 	if targetname == UnitName("player") then
 		specWarnJumpSlam:Show()
 		yellJumpSlam:Yell()
@@ -75,13 +78,13 @@ function mod:OnCombatStart(delay)
 	self.vb.phase = 1
 	self.vb.stamperDodgeCount = 0
 	self.vb.bossUp = "NoBody"
-	self.vb.lastJumpTarget = UNKNOWN
+	self.vb.lastJumpTarget = "None"
 	self.vb.firstJump = false
 	timerSkullcrackerCD:Start(20-delay)
 	timerDisruptingRoarCD:Start(-delay)
 	if self:IsMythic() then
 		timerSmartStamperCD:Start(13-delay)
-		berserkTimer:Start(-delay)
+--		berserkTimer:Start(-delay)
 	end
 end
 
@@ -170,22 +173,32 @@ function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, _, _, spellId)
 		countCripplingSupplex:Start()
 	elseif spellId == 157926 then--Jump Activation
 		self.vb.firstJump = false--So reset firstjump
-		self.vb.lastJumpTarget = UNKNOWN
-	elseif spellId == 157922 then--First jump must use 157922
+		self.vb.lastJumpTarget = "None"
+		DBM:Debug("157926: Jump Activation")
+	elseif spellId == 157922 and DBM.Options.DebugMode then--First jump must use 157922
+		DBM:Debug("157922: boss target "..UnitName(uId.."target"))
 		if not self.vb.firstJump then
+			DBM:Debug("157922: firstJump true")
 			self.vb.firstJump = true
-			self.vb.lastJumpTarget = UnitName(uId.."target")--It'll be highest threat at this point, baseline for our first filter
+			if UnitExists(uId.."target") then
+				self.vb.lastJumpTarget = UnitName(uId.."target")--It'll be highest threat at this point, baseline for our first filter
+			end
+			self:BossTargetScanner(UnitGUID(uId), "JumpTarget", 0.1, 13, nil, nil, false)--Don't include tank in first scan should be enough of a filter for first, it'll grab whatever first non tank target he gets and set that as first jump target and it will be valid
 		else--Not first jump
-			if self.vb.lastJumpTarget then
-				self:BossTargetScanner(UnitGUID(uId), "JumpTarget", 0.05, 30, nil, nil, true, nil, self.vb.lastJumpTarget)--1.5 seconds worth of scans, because i've seen it take as long as 1.2 to get target, and yet, still faster than 157923 by 0.6 seconds. Most often, it finds target in 0.5 or less
+			DBM:Debug("157922: firstJump false")
+			if self.vb.lastJumpTarget ~= "None" then--First jump was successful, the rest should work work perfectly by grabbing new targets only if they don't match last target
+				DBM:Debug("157922: lastJumpTarget exists for "..self.vb.lastJumpTarget)
+				self:BossTargetScanner(UnitGUID(uId), "JumpTarget", 0.1, 13, nil, nil, true, nil, self.vb.lastJumpTarget)--1.3 seconds worth of scans, because i've seen it take as long as 1.2 to get target, and yet, still faster than 157923 by 0.6 seconds. Most often, it finds target in 0.5 or less
 			else
-				--This shouldn't happen, but just in case
-				DBM:Debug("self.vb.lastJumpTarget is nil, target scanning for jump will be slower", 2)
+				DBM:Debug("self.vb.lastJumpTarget is unknown, target scanning for jump will be slower")
 			end
 		end
-	elseif spellId == 157923 and not self.vb.lastJumpTarget then--Fallback
-		DBM:Debug("Using slower scan fallback: 157923", 2)
-		self:BossTargetScanner(UnitGUID(uId), "JumpTarget", 0.02, 10, nil, nil, true)
+	elseif spellId == 157923 then--Fallback
+		DBM:Debug("157923: boss target "..UnitName(uId.."target"))
+		if self.vb.lastJumpTarget == "None" then
+			DBM:Debug("Using slower scan fallback: 157923", 2)
+			self:BossTargetScanner(UnitGUID(uId), "JumpTarget", 0.02, 15, nil, nil, true)
+		end
 	end
 end
 

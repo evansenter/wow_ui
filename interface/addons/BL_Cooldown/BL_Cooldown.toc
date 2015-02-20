@@ -1,5 +1,5 @@
 ## Interface: 60000
-## Version: 3.61
+## Version: 3.62
 ## Title: |cffc41f3bBlood Legion|r Cooldown
 ## Notes: Minimalistic Visual Raid Cooldowns
 ## OptionalDeps: ElvUI
@@ -7,7 +7,7 @@
 ## SavedVariablesPerCharacter: BLCDrosterReload
 ## DefaultState: Enabled
 ## LoadOnDemand: 0
-## X-Curse-Packaged-Version: 3.61
+## X-Curse-Packaged-Version: 3.62
 ## X-Curse-Project-Name: Blood Legion Cooldown
 ## X-Curse-Project-ID: bl_cooldown
 ## X-Curse-Repository-ID: wow/bl_cooldown/mainline

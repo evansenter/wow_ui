@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1197, "DBM-Highmaul", nil, 477)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12900 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 12958 $"):sub(12, -3))
 mod:SetCreatureID(77428, 78623)
 mod:SetEncounterID(1705)
 mod:SetZone()
@@ -183,8 +183,6 @@ local chogallName = EJ_GetEncounterInfo(167)
 local inter1 = EJ_GetSectionInfo(9891)
 local inter2 = EJ_GetSectionInfo(9893)
 local DBMHudMap = DBMHudMap
-local markOfChaosMarkers={}
-local brandedMarkers={}
 
 local debuffFilterMark, debuffFilterBranded, debuffFilterFixate, debuffFilterGaze
 do
@@ -320,8 +318,7 @@ function mod:OnCombatStart(delay)
 		self:SetBossHPInfoToHighest(1)
 	end
 	if self.Options.HudMapOnMarkOfChaos or self.Options.HudMapOnBranded then
-		table.wipe(markOfChaosMarkers)
-		self:EnableHudMap()
+		DBMHudMap:Enable()
 	end
 end
 
@@ -334,7 +331,7 @@ function mod:OnCombatEnd()
 	end
 	self:UnregisterShortTermEvents()
 	if self.Options.HudMapOnMarkOfChaos or self.Options.HudMapOnBranded then
-		self:DisableHudMap()
+		DBMHudMap:Disable()
 	end
 end
 
@@ -657,8 +654,8 @@ function mod:SPELL_AURA_APPLIED(args)
 				end
 			end
 			updateRangeFrame(self)--Update it here cause we don't need it before stacks get to relevant levels.
-			if self.Options.HudMapOnBranded and not brandedMarkers[args.destName] then
-				brandedMarkers[args.destName] = self:RegisterMarker(DBMHudMap:PlaceRangeMarkerOnPartyMember("highlight", args.destName, 4, 5, 0, 0, 1, 0.5):Pulse(0.5, 0.5))
+			if self.Options.HudMapOnBranded then
+				DBMHudMap:RegisterRangeMarkerOnPartyMember(spellId, "highlight", args.destName, 4, 5, 0, 0, 1, 0.5, nil, true):Pulse(0.5, 0.5)
 			end
 		end
 	elseif spellId == 158553 then
@@ -719,10 +716,10 @@ function mod:SPELL_AURA_APPLIED(args)
 			end
 		end
 		updateRangeFrame(self)
-		if self.Options.HudMapOnMarkOfChaos and not markOfChaosMarkers[args.destName] then
-			markOfChaosMarkers[args.destName] = self:RegisterMarker(DBMHudMap:PlaceRangeMarkerOnPartyMember("highlight", args.destName, 5, 7, 1, 0, 0, 0.5):Pulse(0.5, 0.5))
+		if self.Options.HudMapOnMarkOfChaos then
+			DBMHudMap:RegisterRangeMarkerOnPartyMember(spellId, "highlight", args.destName, 5, 7, 1, 0, 0, 0.5, nil, true):Pulse(0.5, 0.5)
 		end
-	elseif spellId == 157801 then
+	elseif spellId == 157801 and self:CheckDispelFilter() then
 		specWarnSlow:CombinedShow(1, args.destName)
 		voiceSlow:Play("dispelnow")
 	elseif spellId == 165102 then
@@ -786,8 +783,8 @@ function mod:SPELL_AURA_REMOVED(args)
 		if spellId == 164178 then
 			self:Unschedule(trippleMarkCheck)
 		end
-		if self.Options.HudMapOnMarkOfChaos and markOfChaosMarkers[args.destName] then
-			markOfChaosMarkers[args.destName] = self:FreeMarker(markOfChaosMarkers[args.destName])
+		if self.Options.HudMapOnMarkOfChaos then
+			DBMHudMap:FreeEncounterMarkerByTarget(spellId, args.destName)
 		end
 	elseif spellId == 157763 and args:IsPlayer() and self.Options.RangeFrame then
 		updateRangeFrame(self)
@@ -800,8 +797,8 @@ function mod:SPELL_AURA_REMOVED(args)
 			self:SetIcon(args.destName, 0)
 		end
 		updateRangeFrame(self)
-		if self.Options.HudMapOnBranded and brandedMarkers[args.destName] then
-			brandedMarkers[args.destName] = self:FreeMarker(brandedMarkers[args.destName])
+		if self.Options.HudMapOnBranded then
+			DBMHudMap:FreeEncounterMarkerByTarget(spellId, args.destName)
 		end
 	elseif spellId == 165102 and self.Options.SetIconOnInfiniteDarkness then
 		self:SetIcon(args.destName, 0)
@@ -914,7 +911,7 @@ function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, _, _, spellId)
 		--but casts can be delayed 3-13 seconds based on how many get backed up in queue :\
 		local n = 10 -- just extend 10s if left time is below 10s.
 		if tr1 > 0 and tr1 < 10 then
-			countdownArcaneWrath:Start(tr1+n)
+		--	countdownArcaneWrath:Start(tr1+n)
 			timerArcaneWrathCD:Start(tr1+n)
 		end
 		if tr2 > 0 and tr2 < 10 then
@@ -925,11 +922,11 @@ function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, _, _, spellId)
 		end
 		if tr4 > 0 and tr4 < 10 then
 			timerMarkOfChaosCD:Start(tr4+n)
-			countdownMarkofChaos:Start(tr4+n)
+		--	countdownMarkofChaos:Start(tr4+n)
 		end
 		if tr5 > 0 and tr5 < 10 then
 			timerForceNovaCD:Start(tr5+n)
-			countdownForceNova:Start(tr5+n)
+		--	countdownForceNova:Start(tr5+n)
 		end
 		self.vb.phase = 2
 		warnPhase:Show(DBM_CORE_AUTO_ANNOUNCE_TEXTS.phase:format(2))

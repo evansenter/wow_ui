@@ -21,7 +21,7 @@ local GetPlayerFacing = GetPlayerFacing
 local LibStub = LibStub
 local InterfaceOptionsFrame_OpenToCategory = InterfaceOptionsFrame_OpenToCategory
 
-local addon = CreateFrame("Frame")
+local addon = CreateFrame("Frame", "ThogarAssist")
 local media = LibStub("LibSharedMedia-3.0")
 
 local defaults = {
@@ -37,6 +37,7 @@ local defaults = {
 		height = 160,
 		myblipscale = 12,
 		trainwarning = 5,
+		trainwarningsound = "Double Ring",
 		trainsooncolor = {r=1,g=0,b=0},
 		traintherecolor = {r=1,g=1,b=0},
 		trainmovingcolor = {r=1,g=0.5,b=0},
@@ -65,6 +66,7 @@ local simulating = false
 local inFight = false
 local lanesUsed = {}
 local trainDataNotCompleteMessageShown = false
+local soundPlayed = 0
 
 local mapData = {2599.9990234375, 1733.3330078125}
 -- /run local _,a,b,c,d = GetCurrentMapZone(); print(-c+a, -d+b)
@@ -106,7 +108,7 @@ trainDataPerDifficulty[15] = {
 	{ ["spawnTime"] = 163, 	["departureTime"] = 166, 	["lane"] = 1, 	["type"] = 1, 	["length"] = 100 , 	["stays"] = false, 	["leftToRight"] = false},
 	{ ["spawnTime"] = 163, 	["departureTime"] = 166, 	["lane"] = 4, 	["type"] = 1, 	["length"] = 100 , 	["stays"] = false, 	["leftToRight"] = true},
 	{ ["spawnTime"] = 172, 	["departureTime"] = 220, 	["lane"] = 1, 	["type"] = 3, 	["length"] = 100, 	["stays"] =  true, 	["leftToRight"] = false},
-	{ ["spawnTime"] = 182, 	["departureTime"] = 185, 	["lane"] = 2, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 187, 	["departureTime"] = 190, 	["lane"] = 2, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
 	{ ["spawnTime"] = 198, 	["departureTime"] = 221, 	["lane"] = 4, 	["type"] = 2, 	["length"] = 100, 	["stays"] =  true, 	["leftToRight"] = true}, --departs when all adds are dead
 	{ ["spawnTime"] = 218, 	["departureTime"] = 222, 	["lane"] = 3, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
 	{ ["spawnTime"] = 227, 	["departureTime"] = 231, 	["lane"] = 2, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
@@ -134,31 +136,67 @@ trainDataPerDifficulty[14] = trainDataPerDifficulty[15] -- TODO normal may be th
 
 -- 16: Mythic
 trainDataPerDifficulty[16] = {
-	{ ["spawnTime"] = 12, 	["departureTime"] = 23, 	["lane"] = 4, 	["type"] = 4, 	["length"] = 50, 	["stays"] = false, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 13, 	["departureTime"] = 23, 	["lane"] = 4, 	["type"] = 4, 	["length"] = 50, 	["stays"] = false, 	["leftToRight"] = true},
 	{ ["spawnTime"] = 18, 	["departureTime"] = 46, 	["lane"] = 1, 	["type"] = 5, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
-	{ ["spawnTime"] = 23, 	["departureTime"] = 26, 	["lane"] = 2, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 22, 	["departureTime"] = 25, 	["lane"] = 2, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
 	{ ["spawnTime"] = 38, 	["departureTime"] = 41, 	["lane"] = 3, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
-	{ ["spawnTime"] = 62, 	["departureTime"] = 65, 	["lane"] = 1, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
-	{ ["spawnTime"] = 62, 	["departureTime"] = 65, 	["lane"] = 2, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
-	{ ["spawnTime"] = 62, 	["departureTime"] = 65, 	["lane"] = 3, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
-	{ ["spawnTime"] = 62, 	["departureTime"] = 65, 	["lane"] = 4, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
-	{ ["spawnTime"] = 78, 	["departureTime"] = 125, 	["lane"] = 1, 	["type"] = 3, 	["length"] = 100, 	["stays"] = true, 	["leftToRight"] = false},
-	{ ["spawnTime"] = 78, 	["departureTime"] = 125, 	["lane"] = 4, 	["type"] = 3, 	["length"] = 100, 	["stays"] = true, 	["leftToRight"] = true},
-	{ ["spawnTime"] = 83, 	["departureTime"] = 86, 	["lane"] = 2, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
-	{ ["spawnTime"] = 98, 	["departureTime"] = 101, 	["lane"] = 3, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
-	{ ["spawnTime"] = 113, 	["departureTime"] = 116, 	["lane"] = 2, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
-	{ ["spawnTime"] = 133, 	["departureTime"] = 155, 	["lane"] = 2, 	["type"] = 2, 	["length"] = 100, 	["stays"] = true, 	["leftToRight"] = true}, -- adds need to be killed
-	{ ["spawnTime"] = 133, 	["departureTime"] = 155, 	["lane"] = 3, 	["type"] = 2, 	["length"] = 100, 	["stays"] = true, 	["leftToRight"] = false}, -- adds need to be killed
-	{ ["spawnTime"] = 158, 	["departureTime"] = 161, 	["lane"] = 4, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
-	{ ["spawnTime"] = 158, 	["departureTime"] = 161, 	["lane"] = 1, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
-	{ ["spawnTime"] = 173, 	["departureTime"] = 176, 	["lane"] = 1, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
-	{ ["spawnTime"] = 173, 	["departureTime"] = 176, 	["lane"] = 2, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
-	{ ["spawnTime"] = 173, 	["departureTime"] = 176, 	["lane"] = 3, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
-	{ ["spawnTime"] = 173, 	["departureTime"] = 176, 	["lane"] = 4, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
-	{ ["spawnTime"] = 194, 	["departureTime"] = 197, 	["lane"] = 1, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
-	{ ["spawnTime"] = 194, 	["departureTime"] = 197, 	["lane"] = 2, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
-	{ ["spawnTime"] = 194, 	["departureTime"] = 197, 	["lane"] = 3, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
-	{ ["spawnTime"] = 194, 	["departureTime"] = 197, 	["lane"] = 4, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 58, 	["departureTime"] = 61, 	["lane"] = 1, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 58, 	["departureTime"] = 61, 	["lane"] = 2, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 58, 	["departureTime"] = 61, 	["lane"] = 3, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 58, 	["departureTime"] = 61, 	["lane"] = 4, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 74, 	["departureTime"] = 77, 	["lane"] = 1, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 74, 	["departureTime"] = 77, 	["lane"] = 2, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 74, 	["departureTime"] = 77, 	["lane"] = 3, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 74, 	["departureTime"] = 77, 	["lane"] = 4, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 83, 	["departureTime"] = 128, 	["lane"] = 1, 	["type"] = 3, 	["length"] = 100, 	["stays"] = true, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 83, 	["departureTime"] = 128, 	["lane"] = 4, 	["type"] = 3, 	["length"] = 100, 	["stays"] = true, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 99, 	["departureTime"] = 102, 	["lane"] = 2, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 112, 	["departureTime"] = 116, 	["lane"] = 3, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 148, 	["departureTime"] = 170, 	["lane"] = 2, 	["type"] = 2, 	["length"] = 100, 	["stays"] = true, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 148, 	["departureTime"] = 170, 	["lane"] = 3, 	["type"] = 2, 	["length"] = 100, 	["stays"] = true, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 173, 	["departureTime"] = 176, 	["lane"] = 1, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 176, 	["departureTime"] = 204, 	["lane"] = 4, 	["type"] = 5, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 182, 	["departureTime"] = 210, 	["lane"] = 1, 	["type"] = 5, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 187, 	["departureTime"] = 190, 	["lane"] = 3, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 200, 	["departureTime"] = 203, 	["lane"] = 3, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 200, 	["departureTime"] = 203, 	["lane"] = 2, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 219, 	["departureTime"] = 222, 	["lane"] = 1, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 219, 	["departureTime"] = 222, 	["lane"] = 2, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 219, 	["departureTime"] = 222, 	["lane"] = 3, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 219, 	["departureTime"] = 222, 	["lane"] = 4, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 232, 	["departureTime"] = 222, 	["lane"] = 1, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 232, 	["departureTime"] = 222, 	["lane"] = 2, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 232, 	["departureTime"] = 222, 	["lane"] = 3, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 232, 	["departureTime"] = 222, 	["lane"] = 4, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 248, 	["departureTime"] = 257, 	["lane"] = 1, 	["type"] = 4, 	["length"] = 50, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 248, 	["departureTime"] = 293, 	["lane"] = 4, 	["type"] = 3, 	["length"] = 100, 	["stays"] = true, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 265, 	["departureTime"] = 293, 	["lane"] = 1, 	["type"] = 5, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 270, 	["departureTime"] = 273, 	["lane"] = 2, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 270, 	["departureTime"] = 273, 	["lane"] = 3, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 289, 	["departureTime"] = 292, 	["lane"] = 2, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 289, 	["departureTime"] = 292, 	["lane"] = 3, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false}, -- dunno if this exists
+	{ ["spawnTime"] = 302, 	["departureTime"] = 334, 	["lane"] = 2, 	["type"] = 2, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 302, 	["departureTime"] = 313, 	["lane"] = 3, 	["type"] = 4, 	["length"] = 50, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 323, 	["departureTime"] = 326, 	["lane"] = 4, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 333, 	["departureTime"] = 336, 	["lane"] = 3, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 347, 	["departureTime"] = 350, 	["lane"] = 1, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 347, 	["departureTime"] = 350, 	["lane"] = 2, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 347, 	["departureTime"] = 350, 	["lane"] = 3, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 347, 	["departureTime"] = 350, 	["lane"] = 4, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 362, 	["departureTime"] = 365, 	["lane"] = 1, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 362, 	["departureTime"] = 365, 	["lane"] = 2, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 362, 	["departureTime"] = 365, 	["lane"] = 3, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 362, 	["departureTime"] = 365, 	["lane"] = 4, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 367, 	["departureTime"] = 400, 	["lane"] = 4, 	["type"] = 2, 	["length"] = 100, 	["stays"] = true, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 373, 	["departureTime"] = 419, 	["lane"] = 1, 	["type"] = 3, 	["length"] = 100, 	["stays"] = true, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 394, 	["departureTime"] = 422, 	["lane"] = 2, 	["type"] = 5, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 394, 	["departureTime"] = 422, 	["lane"] = 3, 	["type"] = 5, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 413, 	["departureTime"] = 416, 	["lane"] = 4, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 413, 	["departureTime"] = 416, 	["lane"] = 1, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 429, 	["departureTime"] = 461, 	["lane"] = 1, 	["type"] = 2, 	["length"] = 100, 	["stays"] = true, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 429, 	["departureTime"] = 457, 	["lane"] = 4, 	["type"] = 5, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 438, 	["departureTime"] = 441, 	["lane"] = 2, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 440, 	["departureTime"] = 468, 	["lane"] = 3, 	["type"] = 5, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
 }
 
 -- 17: LFR
@@ -195,6 +233,17 @@ local texRaidIconCoords={
 	["rt8"] = {.75,1,.25,.5},
 }
 
+local raidIconsForChat={
+	"|TInterface\\TARGETINGFRAME\\UI-RaidTargetingIcons.png:16:16:0:0:256:256:0:64:0:64|t",
+	"|TInterface\\TARGETINGFRAME\\UI-RaidTargetingIcons.png:16:16:0:0:256:256:64:128:0:64|t",
+	"|TInterface\\TARGETINGFRAME\\UI-RaidTargetingIcons.png:16:16:0:0:256:256:128:192:0:64|t",
+	"|TInterface\\TARGETINGFRAME\\UI-RaidTargetingIcons.png:16:16:0:0:256:256:192:256:0:64|t",
+	"|TInterface\\TARGETINGFRAME\\UI-RaidTargetingIcons.png:16:16:0:0:256:256:0:64:64:128|t",
+	"|TInterface\\TARGETINGFRAME\\UI-RaidTargetingIcons.png:16:16:0:0:256:256:64:128:64:128|t",
+	"|TInterface\\TARGETINGFRAME\\UI-RaidTargetingIcons.png:16:16:0:0:256:256:128:192:64:128|t",
+	"|TInterface\\TARGETINGFRAME\\UI-RaidTargetingIcons.png:16:16:0:0:256:256:192:256:64:128|t"
+}
+
 local display = nil
 
 local unlock = "Interface\\AddOns\\ThogarAssist\\Textures\\icons\\lock"
@@ -206,6 +255,7 @@ local L = LibStub("AceLocale-3.0"):GetLocale("ThogarAssist")
 
 
 local function updateDisplay()
+	if not display then return end
 	local width, height = display:GetWidth(), display:GetHeight()
 	local ppy = min(width, height)
 	display.lanegird:SetSize(ppy, ppy)
@@ -220,11 +270,10 @@ local function updateDisplay()
 	display["lane3"]:SetPoint("CENTER", 0, -(ppy) / 8)
 	display["lane4"]:SetPoint("CENTER", 0, -(ppy) / 8 * 3)
 	
-	display["lane1highlight"]:SetAllPoints(display["lane1"])
-	display["lane2highlight"]:SetAllPoints(display["lane2"])
-	display["lane3highlight"]:SetAllPoints(display["lane3"])
-	display["lane4highlight"]:SetAllPoints(display["lane4"])
-	
+	for i = 1,4 do
+		display["lane"..i.."highlight"]:SetAllPoints(display["lane"..i])
+		display["lane"..i.."border"]:SetAllPoints(display["lane"..i])
+	end
 	
 	local laneX = "lane%dhighlight"
 	for i=1, 4 do
@@ -510,6 +559,15 @@ local function ensureDisplay()
 		display[laneX:format(i)]:SetAlpha(0)
 	end
 	
+	laneX = "lane%dborder"
+	for i=1, 4 do
+		display[laneX:format(i)] = display:CreateTexture(nil, "OVERLAY")
+		display[laneX:format(i)]:SetDrawLayer("OVERLAY", 4)
+		display[laneX:format(i)]:SetTexture("Interface\\AddOns\\ThogarAssist\\Textures\\laneborder.tga")
+		display[laneX:format(i)]:SetVertexColor(1,0,0)
+		display[laneX:format(i)]:SetAlpha(0)
+	end
+	
 	local laneXicon = "lane%dicon"
 	for i=1, 4 do
 		display[laneXicon:format(i)] = display:CreateTexture(nil, "OVERLAY", nil, 3)
@@ -563,8 +621,8 @@ local function ensureDisplay()
 	encounter_start_button:SetText("esb")
 	encounter_start_button:SetHeight(16)
 	encounter_start_button:SetWidth(16)
-	encounter_start_button:SetScript("OnClick", function() addon:ENCOUNTER_START("ENCOUNTER_START", 1692, "", 15, 20) end)
-	--encounter_start_button:SetScript("OnClick", function() addon:ENCOUNTER_START("ENCOUNTER_START", 1692, "", 16, 20) end)
+	--encounter_start_button:SetScript("OnClick", function() addon:ENCOUNTER_START("ENCOUNTER_START", 1692, "", 15, 20) end)
+	encounter_start_button:SetScript("OnClick", function() addon:ENCOUNTER_START("ENCOUNTER_START", 1692, "", 16, 20) end)
 	--]]
 	-- debug stuff end
 	
@@ -628,6 +686,16 @@ local function displayTrainOnLane(lane, length, color, leftToRight, trainType)
 	end		
 end
 
+local function warnLane(lane)
+	for i=1,4 do
+		display["lane"..i.."border"]:SetAlpha(lane == i and 1 or 0)
+		if lane == i and GetTime()-soundPlayed > 10 then
+			PlaySoundFile(media:Fetch("sound", addon.db.profile.trainwarningsound), "MASTER")
+			soundPlayed = GetTime()
+		end
+	end
+end
+
 local function clearLane(lane)
 	displayTrainOnLane(lane, 0)
 end
@@ -683,26 +751,40 @@ do
 		setDot((srcX-roomX)/roomWidth, (srcY-roomY)/roomHeight, myblip)
 	end
 
-	function addon:highlightMyLane(srcY)
+	function addon:getMyLane(srcY)
 		local roomY = 0.18051677942276
 		local roomHeight = 0.19867861270905
 		local value = (srcY-roomY)/roomHeight
 		if value >= 0 and value < 0.25 then
+			return 1
+		elseif value >= 0.25 and value < 0.5 then
+			return 2
+		elseif value >= 0.5 and value < 0.75 then
+			return 3
+		elseif value >= 0.75 and value <= 1 then
+			return 4
+		end
+	end
+	
+	
+	function addon:highlightMyLane(srcY)
+		local lane = self:getMyLane(srcY)
+		if lane == 1 then
 			display["lane1highlight"]:SetAlpha(0.5)
 			display["lane2highlight"]:SetAlpha(0)
 			display["lane3highlight"]:SetAlpha(0)
 			display["lane4highlight"]:SetAlpha(0)
-		elseif value >= 0.25 and value < 0.5 then
+		elseif lane == 2 then
 			display["lane1highlight"]:SetAlpha(0)
 			display["lane2highlight"]:SetAlpha(0.5)
 			display["lane3highlight"]:SetAlpha(0)
 			display["lane4highlight"]:SetAlpha(0)
-		elseif value >= 0.5 and value < 0.75 then
+		elseif lane == 3 then
 			display["lane1highlight"]:SetAlpha(0)
 			display["lane2highlight"]:SetAlpha(0)
 			display["lane3highlight"]:SetAlpha(0.5)
 			display["lane4highlight"]:SetAlpha(0)
-		elseif value >= 0.75 and value <= 1 then
+		elseif lane == 4 then
 			display["lane1highlight"]:SetAlpha(0)
 			display["lane2highlight"]:SetAlpha(0)
 			display["lane3highlight"]:SetAlpha(0)
@@ -727,6 +809,7 @@ do
 		end
 			
 		lanesUsed = {}
+		local laneToWarn = nil
 		timeInCombat = GetTime() - combatStartedTime
 		window.tic:SetText(string.format("%.0fs", timeInCombat))
 		for k,train in pairs(trainData) do
@@ -751,9 +834,15 @@ do
 						addon.callbacks:Fire("TACB_TrainIncomingSoon",train.lane, train.type, train.leftToRight)
 					end
 				end
+				if train.type ~= 5 and train.lane == self:getMyLane(srcY) then
+					if not (train.type == 3 and train.spawnTime < timeInCombat) then
+						laneToWarn = train.lane
+					end
+				end
 				table.insert(lanesUsed, train.lane)
 			end
 		end
+		warnLane(laneToWarn)
 		for i=1,4 do
 			local used = false
 			for k,v in pairs(lanesUsed) do
@@ -767,7 +856,6 @@ do
 		end
 	end
 end
-
 
 local function newTrainSim()
 	trainCounter = trainCounter + 1
@@ -873,6 +961,28 @@ local function slashCommand(input)
 	end
 end
 
+local function sendIconConfig()
+	if UnitIsGroupLeader("player") or UnitIsRaidOfficer("player") then
+		local text = addon:Serialize(ThogarAssist:GetLaneIcons(true))
+		addon:SendCommMessage("TA_Icons", text, "RAID")
+		print("|cffaa00ffThogar Assist:|r "..L["Config sent to raid"].." - "..L["Lane 1: %s, Lane 2: %s, Lane 3: %s, Lane 4: %s"]:format(raidIconsForChat[ThogarAssist:GetLaneIcon(1, true)], raidIconsForChat[ThogarAssist:GetLaneIcon(2, true)], raidIconsForChat[ThogarAssist:GetLaneIcon(3, true)], raidIconsForChat[ThogarAssist:GetLaneIcon(4, true)]))
+	else
+		print("|cffaa00ffThogar Assist:|r "..L["Sending raid icons requires leader or assist."])
+	end
+end
+
+local function recieveIconConfig(prefix, msg, chan, sender)
+	if prefix ~= "TA_Icons" then return end
+	if sender == UnitName("player") then return end
+	
+	success, t = addon:Deserialize(msg)
+	if success then
+		local popup_text = "Thogar Assist: "..L["Use icon config of %s"]:format(sender).."?\n"..L["Lane 1: %s, Lane 2: %s, Lane 3: %s, Lane 4: %s"]:format(raidIconsForChat[t[1]],raidIconsForChat[t[2]], raidIconsForChat[t[3]], raidIconsForChat[t[4]])
+		StaticPopupDialogs["TA_NewIconConfig"] = { text=popup_text, button1= YES, button2= NO, OnAccept = function(self) ThogarAssist:SetLaneIcons(t) end, timeout = 0, hideOnEscape = 1}
+        StaticPopup_Show("TA_NewIconConfig")
+	end	
+end
+
 local options = {
 	type = "group",
 	handler = addon,
@@ -916,6 +1026,14 @@ local options = {
 			name = L["Train warning"],
 			desc = L["How many seconds should a train be displayed before it arrives"],
 			min = 0, max = 10, step = 0.5,
+		},
+		trainwarningsound = {
+			order = 315,
+			name = L["Train warning sound"],
+			desc = L["Sound played when you are in a lane where a train will be incoming soon"],
+			type = 'select',
+			dialogControl = 'LSM30_Sound',
+			values = media:HashTable("sound"),
 		},
 		highlightlane = {
 			type = "toggle",
@@ -1140,23 +1258,35 @@ local options = {
 						rt8 = "|TInterface\\TARGETINGFRAME\\UI-RaidTargetingIcons.png:20:20:0:0:256:256:192:256:64:128|t "..L["Skull"],
 			},
 		},
+		laneraidicons_send = {
+			order = 740,
+			type = "execute",
+			name = L["Send icons to raid"],
+			func = function() sendIconConfig() end,
+		},
 	}
 }
 
 local function OnEvent(self, event, ...)
 	if event == "ADDON_LOADED" then
-		if select(1,...)	== "ThogarAssist" then
+		if select(1,...) == "ThogarAssist" then
+			self:UnregisterEvent("ADDON_LOADED")
 			LibStub("AceTimer-3.0"):Embed(addon)
 			LibStub("AceEvent-3.0"):Embed(addon)
+			LibStub("AceSerializer-3.0"):Embed(addon)
+			LibStub("AceComm-3.0"):Embed(addon)
+			addon:RegisterComm("TA_Icons", recieveIconConfig)
 			self.db = LibStub("AceDB-3.0"):New("ThogarAssistDB", defaults, true)
 			LibStub("AceConfig-3.0"):RegisterOptionsTable("Thogar Assist", options)
 			LibStub("AceConfigDialog-3.0"):AddToBlizOptions("Thogar Assist", "Thogar Assist")
 			addon.callbacks = LibStub("CallbackHandler-1.0"):New(addon)
 			SlashCmdList.ThogarAssist = slashCommand
 			SLASH_ThogarAssist1 = "/thogar"
-			self:UnregisterEvent("ADDON_LOADED")
+			SLASH_ThogarAssist2 = "/thogarassist"
+			SLASH_ThogarAssist3 = "/ta"
 			addon:RegisterEvent("ENCOUNTER_START")
 			addon:RegisterEvent("ENCOUNTER_END")
+			media:Register("sound", "Double Ring", "Interface\\AddOns\\ThogarAssist\\Sounds\\double_ring.mp3")
 		end
 	end
 end
@@ -1167,7 +1297,7 @@ function addon:ENCOUNTER_START(event, encounterID, encounterName, difficultyID, 
 		--print("TA", "Thogar Fight: ", difficultyID)
 		if trainDataPerDifficulty[difficultyID] then
 			if not trainDataNotCompleteMessageShown then
-				print("|cffaa00ffThogar Assist:|r "..L["This is an early release. The train data may not be complete. If you want to help complete it, please message me on curse."])
+				--print("|cffaa00ffThogar Assist:|r "..L["This is an early release. The train data may not be complete. If you want to help complete it, please message me on curse."])
 				trainDataNotCompleteMessageShown = true
 			end
 			--print("TA", "got trainData!")
@@ -1214,4 +1344,56 @@ addon:SetScript("OnUpdate", function(self, elapsed)
 	end
 end)
 
+-- API Stuff
+function ThogarAssist:GetLaneIcon(lane, asInt)
+	local icon = nil
+	if lane == 1 then		icon = addon.db.profile.laneraidicon1
+	elseif lane == 2 then	icon = addon.db.profile.laneraidicon2
+	elseif lane == 3 then	icon = addon.db.profile.laneraidicon3
+	elseif lane == 4 then	icon = addon.db.profile.laneraidicon4
+	end
+	if icon then
+		if asInt then
+			return tonumber(icon:sub(3))
+		else
+			return icon
+		end
+	end
+	return false
+end
+
+function ThogarAssist:SetLaneIcon(lane, icon)
+	if type(icon) == "number" then
+		if icon < 1 or icon > 8 then return end
+		icon = "rt"..icon
+	elseif type(icon) == "string" then
+		if icon:len() ~= 3 or not icon:match("rt%d") then return end
+		if tonumber(icon:match("%d")) < 1 or tonumber(icon:match("%d")) > 8 then return end
+	else
+		return
+	end
+	if lane == 1 then		addon.db.profile.laneraidicon1 = icon updateDisplay() return true
+	elseif lane == 2 then	addon.db.profile.laneraidicon2 = icon updateDisplay() return true
+	elseif lane == 3 then	addon.db.profile.laneraidicon3 = icon updateDisplay() return true
+	elseif lane == 4 then	addon.db.profile.laneraidicon4 = icon updateDisplay() return true
+	end
+	return false
+end
+
+function ThogarAssist:GetLaneIcons(asInt)
+	local t = {}
+	for i = 1,4 do
+		table.insert(t, self:GetLaneIcon(i, asInt))
+	end
+	return t
+end
+
+function ThogarAssist:SetLaneIcons(t)
+	if type(t) ~= "table" then return end
+	for k,v in pairs(t) do
+		if type(k) == "number" and k > 0 and k < 5 then
+			self:SetLaneIcon(k, v)
+		end
+	end
+end
 

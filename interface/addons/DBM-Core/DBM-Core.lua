@@ -53,9 +53,9 @@
 --  Globals/Default Options  --
 -------------------------------
 DBM = {
-	Revision = tonumber(("$Revision: 12907 $"):sub(12, -3)),
-	DisplayVersion = "6.0.16 alpha", -- the string that is shown as version
-	ReleaseRevision = 12764 -- the revision of the latest stable version that is available
+	Revision = tonumber(("$Revision: 12982 $"):sub(12, -3)),
+	DisplayVersion = "6.0.17 alpha", -- the string that is shown as version
+	ReleaseRevision = 12955 -- the revision of the latest stable version that is available
 }
 
 -- support for git svn which doesn't support svn keyword expansion
@@ -64,7 +64,13 @@ if not DBM.Revision then
 	DBM.Revision = DBM.ReleaseRevision
 end
 
-DBM_UseDualProfile = false
+-- dual profile setup
+local _, class = UnitClass("player")
+DBM_UseDualProfile = true
+if class == "MAGE" or class == "WARLOCK" and class == "HUNTER" and class == "ROGUE" then
+	DBM_UseDualProfile = false
+end
+DBM_CharSavedRevision = 1
 
 DBM.DefaultOptions = {
 	WarningColors = {
@@ -122,6 +128,9 @@ DBM.DefaultOptions = {
 	AlwaysShowHealthFrame = false,
 	ShowBigBrotherOnCombatStart = false,
 	FilterTankSpec = true,
+	FilterInterrupt = true,
+	FilterDispel = true,
+	FilterSelfHud = true,
 	AutologBosses = false,
 	AdvancedAutologBosses = false,
 	LogOnlyRaidBosses = false,
@@ -299,7 +308,6 @@ local playerLevel = UnitLevel("player")
 local playerRealm = GetRealmName()
 local gladStance = GetSpellInfo(156291)
 local connectedServers = GetAutoCompleteRealms()
-local _, class = UnitClass("player")
 local LastInstanceMapID = -1
 local LastGroupSize = 0
 local LastInstanceType = nil
@@ -330,7 +338,7 @@ local iconSetRevision = {}
 local iconSetPerson = {}
 local addsGUIDs = {}
 
-local fakeBWRevision = 12733
+local fakeBWRevision = 12756
 
 local enableIcons = true -- set to false when a raid leader or a promoted player has a newer version of DBM
 local guiRequested = false
@@ -363,7 +371,7 @@ local IsInRaid, IsInGroup, IsInInstance = IsInRaid, IsInGroup, IsInInstance
 local UnitAffectingCombat, InCombatLockdown, IsEncounterInProgress = UnitAffectingCombat, InCombatLockdown, IsEncounterInProgress
 local UnitGUID, UnitHealth, UnitHealthMax, UnitBuff = UnitGUID, UnitHealth, UnitHealthMax, UnitBuff
 local UnitExists, UnitIsDead, UnitIsFriend, UnitIsUnit, UnitIsAFK = UnitExists, UnitIsDead, UnitIsFriend, UnitIsUnit, UnitIsAFK
-local GetSpellInfo, EJ_GetSectionInfo, GetSpellTexture, GetActiveSpecGroup = GetSpellInfo, EJ_GetSectionInfo, GetSpellTexture, GetActiveSpecGroup
+local GetSpellInfo, EJ_GetSectionInfo, GetSpellTexture, GetActiveSpecGroup, GetSpellCooldown = GetSpellInfo, EJ_GetSectionInfo, GetSpellTexture, GetActiveSpecGroup, GetSpellCooldown
 local EJ_GetEncounterInfo, EJ_GetCreatureInfo, GetDungeonInfo = EJ_GetEncounterInfo, EJ_GetCreatureInfo, GetDungeonInfo
 local GetInstanceInfo = GetInstanceInfo
 local UnitPosition, GetCurrentMapDungeonLevel, GetMapInfo, GetCurrentMapZone, SetMapToCurrentZone = UnitPosition, GetCurrentMapDungeonLevel, GetMapInfo, GetCurrentMapZone, SetMapToCurrentZone
@@ -2666,7 +2674,7 @@ function DBM:LoadAllModDefaultOption(modId)
 		mod.Options = {}
 		mod.Options = defaultOptions
 		_G[savedVarsName][fullname][id][profileNum] = {}
-		_G[savedVarsName][fullname][id][profileNum] = defaultOptions
+		_G[savedVarsName][fullname][id][profileNum] = mod.Options
 	end
 	self:AddMsg(DBM_CORE_ALLMOD_DEFAULT_LOADED)
 	-- update gui if showing
@@ -2703,7 +2711,7 @@ function DBM:LoadModDefaultOption(mod)
 	mod.Options = {}
 	mod.Options = defaultOptions
 	_G[savedVarsName][fullname][mod.id][profileNum] = {}
-	_G[savedVarsName][fullname][mod.id][profileNum] = defaultOptions
+	_G[savedVarsName][fullname][mod.id][profileNum] = mod.Options
 	self:AddMsg(DBM_CORE_MOD_DEFAULT_LOADED)
 	-- update gui if showing
 	if DBM_GUI and DBM_GUI.currentViewing and DBM_GUI_OptionsFrame:IsShown() then
@@ -2917,6 +2925,14 @@ do
 		dbmIsEnabled = DBM.Options.Enabled or true
 		DBM:AddDefaultOptions(DBM.Options, DBM.DefaultOptions)
 		DBM_AllSavedOptions[usedProfile] = DBM.Options
+
+		-- force enable dual profile (change default)
+		if DBM_CharSavedRevision < 12976 then
+			if class ~= "MAGE" and class ~= "WARLOCK" and class ~= "HUNTER" and class ~= "ROGUE" then
+				DBM_UseDualProfile = true
+			end
+		end
+		DBM_CharSavedRevision = DBM.Revision
 
 		-- load special warning options
 		DBM:UpdateWarningOptions()
@@ -6126,27 +6142,6 @@ function bossModPrototype:RegisterOnUpdateHandler(func, interval)
 	updateFunctions[self] = func
 end
 
-function bossModPrototype:RegisterMarker(marker)
-	DBMHudMap:RegisterEncounterMarker(marker)
-	return marker
-end
-
-function bossModPrototype:FreeMarker(marker, owner, id, noAnimate)
-	return DBMHudMap.free(marker, owner, id, noAnimate)
-end
-
-function bossModPrototype:FreeMarkers()
-	DBMHudMap:FreeEncounterMarkers()
-end
-
-function bossModPrototype:EnableHudMap()
-	DBMHudMap:Enable()
-end
-
-function bossModPrototype:DisableHudMap()
-	DBMHudMap:Disable()
-end
-
 --------------
 --  Events  --
 --------------
@@ -6222,6 +6217,25 @@ function bossModPrototype:IsTrivial(level)
 		return true
 	end
 	return false
+end
+
+function bossModPrototype:CheckInterruptFilter(sourceGUID)
+	if not DBM.Options.FilterInterrupt then return true end
+	if UnitGUID("target") == sourceGUID or UnitGUID("focus") == sourceGUID then
+		return true
+	end
+	return false
+end
+
+function bossModPrototype:CheckDispelFilter()
+	if not DBM.Options.FilterDispel then return true end
+	--Druid: Nature's Cure (88423), Remove Corruption (2782), Monk: Detox (115450), Priest: Purify (527), Plaadin: Cleanse (4987), Shaman: Cleanse Spirit (51886), Purify Spirit (77130), Mage: Remove Curse (475)
+	--start, duration, enable = GetSpellCooldown
+	--start & duration == 0 if spell not on cd
+	if (GetSpellCooldown(88423)) ~= 0 or (GetSpellCooldown(2782)) ~= 0 or (GetSpellCooldown(115450)) ~= 0 or (GetSpellCooldown(527)) ~= 0 or (GetSpellCooldown(4987)) ~= 0 or (GetSpellCooldown(51886)) ~= 0 or (GetSpellCooldown(77130)) ~= 0 or (GetSpellCooldown(475)) ~= 0 then
+		return false
+	end
+	return true
 end
 
 function bossModPrototype:IsCriteriaCompleted(criteriaIDToCheck)
@@ -8652,7 +8666,7 @@ do
 		return schedule(t, self.Start, self.mod, self, ...)
 	end
 
-	function timerPrototype:Unschedule(t, ...)
+	function timerPrototype:Unschedule(...)
 		return unschedule(self.Start, self.mod, self, ...)
 	end
 

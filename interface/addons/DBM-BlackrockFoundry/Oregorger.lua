@@ -1,10 +1,11 @@
 local mod	= DBM:NewMod(1202, "DBM-BlackrockFoundry", nil, 457)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12896 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 12975 $"):sub(12, -3))
 mod:SetCreatureID(77182)
 mod:SetEncounterID(1696)
 mod:SetZone()
+mod:SetHotfixNoticeRev(12963)
 
 mod:RegisterCombat("combat")
 
@@ -14,7 +15,7 @@ mod:RegisterEventsInCombat(
 	"SPELL_AURA_REMOVED_DOSE 156834",
 	"SPELL_CAST_SUCCESS 156390 156834",
 	"SPELL_PERIODIC_DAMAGE 156203",
-	"SPELL_PERIODIC_MISSED 156203",
+	"SPELL_ABSORBED 156203",
 	"UNIT_SPELLCAST_SUCCEEDED boss1"
 )
 
@@ -94,7 +95,7 @@ function mod:SPELL_CAST_START(args)
 		countdownAcidTorrent:Start()
 		voiceAcidTorrent:Schedule(3, "changemt")
 	elseif spellId == 156179 then
-		self:BossTargetScanner(77182, "RetchedBlackrockTarget", 0.02, 16)
+		self:ScheduleMethod(0.1, "BossTargetScanner", 77182, "RetchedBlackrockTarget", 0.04, 8)--give 0.1 delay before scan start.
 		timerRetchedBlackrockCD:Start()
 	end
 end
@@ -147,7 +148,7 @@ function mod:SPELL_PERIODIC_DAMAGE(_, _, _, _, destGUID, _, _, _, spellId)
 		voiceRetchedBlackrock:Play("runaway")
 	end
 end
-mod.SPELL_PERIODIC_MISSED = mod.SPELL_PERIODIC_DAMAGE
+mod.SPELL_ABSORBED = mod.SPELL_PERIODIC_DAMAGE
 
 function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, _, _, spellId)
 	if spellId == 165127 then--Hunger Dive Phase

@@ -1,11 +1,12 @@
 local mod	= DBM:NewMod(1147, "DBM-BlackrockFoundry", nil, 457)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12907 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 12975 $"):sub(12, -3))
 mod:SetCreatureID(76906)--81315 Crack-Shot, 81197 Raider, 77487 Grom'kar Firemender, 80791 Grom'kar Man-at-Arms, 81318 Iron Gunnery Sergeant, 77560 Obliterator Cannon, 81612 Deforester
 mod:SetEncounterID(1692)
 mod:SetZone()
 mod:SetUsedIcons(8, 7, 2, 1)
+mod:SetHotfixNoticeRev(12936)
 
 mod:RegisterCombat("combat")
 
@@ -34,6 +35,7 @@ local specWarnProtoGrenade			= mod:NewSpecialWarningMove(165195, nil, nil, nil, 
 local specWarnEnkindle				= mod:NewSpecialWarningStack(155921, nil, 2)--Maybe need 3 for new cd?
 local specWarnEnkindleOther			= mod:NewSpecialWarningTaunt(155921)
 local specWarnTrain					= mod:NewSpecialWarningDodge(176312, nil, nil, nil, 3)
+local specWarnSplitSoon				= mod:NewSpecialWarning("specWarnSplitSoon")--TODO, maybe include types in the split?
 --Adds
 local specWarnCauterizingBolt		= mod:NewSpecialWarningInterrupt("OptionVersion2", 160140, "-Healer")
 local specWarnIronbellow			= mod:NewSpecialWarningSpell(163753, nil, nil, nil, 2)
@@ -60,12 +62,14 @@ mod:AddSetIconOption("SetIconOnAdds", "ej9549", false, true)
 
 mod.vb.trainCount = 0
 mod.vb.infoCount = 0
+local GetTime = GetTime
 local MovingTrain = GetSpellInfo(176312)
 local Train = GetSpellInfo(174806)
 local Cannon = GetSpellInfo(62357)
 local Reinforcements = EJ_GetSectionInfo(9537)
 local ManOArms = EJ_GetSectionInfo(9549)
 local Deforester = EJ_GetSectionInfo(10329)
+local fakeYellTime = 0
 
 --Note, all trains spawn 5 second after yell for that train
 --this means that for 5 second cd trains you may see a yell for NEXT train as previous train is showing up. Do not confuse this!
@@ -81,7 +85,7 @@ local mythicTrains = {
 	[7] = { [1] = Cannon, [4] = Cannon },--+10 after 6.(01:17)
 	[8] = { [2] = Train },--+15 after 7.(01:32)
 	[9] = { [3] = Train },--+15 after 8.(01:47)
-	[10] = { [2] = Reinforcements, [3] = Reinforcements },--+35 after 9.(02:22)
+	[10] = { [2] = Reinforcements, [3] = Reinforcements },--+35 after 9.(02:22) Split
 	[11] = { [1] = Train, [4] = Train },--+25 after 10.(02:47)
 	[12] = { [4] = Deforester },--+5 after 11.(02:52)
 	[13] = { [1] = Deforester },--+5 after 12.(02:57)
@@ -92,7 +96,7 @@ local mythicTrains = {
 	[18] = { [1] = ManOArms, [4] = Cannon },--+15 after 17.(04:02)
 	[19] = { [1] = Deforester, [2] = Train, [3] = Train },--+20 after 18.(04:22)
 	[20] = { [2] = Train, [3] = Train },--+20(or +21) after 19.(04:42)
-	[21] = { [2] = ManOArms, [3] = ManOArms },--+15 after 20.(04:57)
+	[21] = { [2] = ManOArms, [3] = ManOArms },--+15 after 20.(04:57) Split
 	[22] = { [2] = Reinforcements, [4] = Train },--+20 after 21.(05:17)
 	[23] = { [2] = Train, [3] = Train },--+10 after 22.(05:27)
 	[24] = { ["specialw"] = L.threeTrains, ["speciali"] = L.threeRandom, [1] = Train, [2] = Train, [3] = Train, [4] = Train },--+15 after 23.(05:42)
@@ -109,7 +113,8 @@ local mythicTrains = {
 	[35] = { ["specialw"] = L.threeTrains, ["speciali"] = L.threeRandom, [1] = Train, [2] = Train, [3] = Train, [4] = Train },--+10 after 34.(07:52) (or 1,3 train?)
 }
 
---https://www.youtube.com/watch?v=_W8vy5Gc5q4
+--https://www.youtube.com/watch?v=yUgrmvksk7g
+--https://www.youtube.com/watch?v=Gny-suQV8to
 local otherTrains = {
 	[1] = { [4] = Train },--+12 after pull (0:12)
 	[2] = { [2] = Train },--+10 after 1 (0:22)
@@ -119,7 +124,7 @@ local otherTrains = {
 	[6] = { [2] = Train },--+25 after 5 (1:12)
 	[7] = { [3] = ManOArms },--+5 after 6 (1:17)
 	[8] = { [1] = Train },--+25 after 7 (1:42)
-	[9] = { [2] = Reinforcements, [3] = Reinforcements },--+15 after 8 (1:57)
+	[9] = { [2] = Reinforcements, [3] = Reinforcements },--+15 after 8 (1:57) Split
 	[10] = { [1] = Train, [4] = Train },--+40 after 9 (2:37)
 	[11] = { [1] = Cannon },--+10 after 10 (2:47)
 	[12] = { [2] = Train },--+15 after 11 (3:02)
@@ -133,14 +138,18 @@ local otherTrains = {
 	[20] = { [1] = Cannon, [4] = Cannon },--+30 after 19 (5:02)
 	[21] = { [2] = Train },--+10 after 20 (5:12)
 	[22] = { [2] = Train },--+25 after 21 (5:37)
-	[23] = { [2] = Reinforcements, [3] = ManOArms },--+30 after 22 (6:07)
+	[23] = { [2] = Reinforcements, [3] = ManOArms },--+30 after 22 (6:07) Split
 	[24] = { ["specialw"] = L.oneTrain, ["speciali"] = L.oneRandom, [1] = Train, [2] = Train, [3] = Train, [4] = Train },--+15 after 23? (6:22). Lane 4, but if reinforcements aren't dead from wave 23, lane 2 (because reinforcements cart still blocking lane 4) Not Actually random. But detecting if reinforcement cart still in way impossible :\
 	[25] = { [1] = Train },--+20 after 24 (6:42)
-	--Everything under here needs review for hotfix
-	[26] = { [1] = Cannon, [4] = Reinforcements },--+20 after 25 (7:02)
-	[27] = { [3] = Train },--+25 after 26 (7:27)
-	[28] = { [2] = ManOArms, [3] = ManOArms },--+15 after 27 (7:42)
-	[29] = { [4] = Train },--+10 after 28 (7:52)
+	[26] = { [1] = Cannon, [4] = Reinforcements },--+10 after 25 (6:52)
+	[27] = { [2] = Train },--+15 after 26 (7:07)
+	[28] = { [3] = Train },--+10 after 27 (7:17)
+	[29] = { [3] = ManOArms },--+20 after 28 (7:37)
+	[30] = { [1] = Train, [4] = Train },--+5 after 29 (7:42) 
+	[31] = { [4] = Train },--+15 after 30 (7:57) (guessed.)--seems berserk. 4 trains in a row (interval 4 sec.)
+	[32] = { [3] = Train },--+4 after 31 (8:01)
+	[33] = { [2] = Train },--+4 after 32 (8:05)
+	[34] = { [1] = Train },--+4 after 33 (8:09)
 }
 
 local function fakeTrainYell(self)
@@ -222,9 +231,14 @@ local otherVoice = {
 	[24] = "AX",
 	[25] = "A1",--Possibly also random?
 	[26] = "C1D4",--Don't worry, B14 will be used on mythic i'm sure. sorry about this messup
-	[27] = "A3",
-	[28] = "D23",
-	[29] = "A4",
+	[27] = "A2",
+	[28] = "A3",
+	[29] = "D3",
+	[30] = "A14",
+	[31] = "A4",
+	[32] = "A3",
+	[33] = "A2",
+	[34] = "A1",
 }
 
 local function showTrainWarning(self)
@@ -344,6 +358,7 @@ function mod:BombTarget(targetname, uId)
 end
 
 function mod:OnCombatStart(delay)
+	fakeYellTime = 0
 	self.vb.trainCount = 0
 	self.vb.infoCount = 0
 	timerProtoGrenadeCD:Start(6-delay)
@@ -378,7 +393,7 @@ end
 
 function mod:SPELL_CAST_START(args)
 	local spellId = args.spellId
-	if spellId == 160140 then
+	if spellId == 160140 and self:CheckInterruptFilter(args.sourceGUID) then
 		specWarnCauterizingBolt:Show(args.sourceName)
 	elseif spellId == 163753 then
 		if self:AntiSpam(3, 1) then
@@ -422,89 +437,109 @@ function mod:UNIT_DIED(args)
 end
 
 function mod:CHAT_MSG_MONSTER_YELL(msg, npc, _, _, target)
-	if target == L.Train and (self:AntiSpam(5, 3) or msg == "Fake") then--yell sometimes bugged?
+	if target == L.Train then
+		local adjusted = (GetTime() - fakeYellTime) < 2-- yell followed by fakeyell within 2 sec. this should realyell of scheduled fakeyell. so do not increase count and only do adjust.
 		self:Unschedule(fakeTrainYell)--Always unschedule
-		self.vb.trainCount = self.vb.trainCount + 1
-		local count = self.vb.trainCount
-		showTrainWarning(self)
+		if not adjusted then--do not adjust visible warn to prevent confusing. (although fakeyell worked early, maximum 3.5 sec. this is no matter. only adjust scheduled things.)
+			self.vb.trainCount = self.vb.trainCount + 1
+			showTrainWarning(self)
+			if msg == "Fake" then
+				countdownTrain:Start(3.5)
+				laneCheck(self)
+			else
+				countdownTrain:Start()
+				self:Schedule(1.5, laneCheck, self)
+			end
+		end
+		self:Unschedule(showInfoFrame)
 		if msg == "Fake" then
-			countdownTrain:Start(2.5)
-			laneCheck(self)
-			self:Schedule(2.5, showInfoFrame)
+			self:Schedule(3.5, showInfoFrame)
 		else
-			countdownTrain:Start()
-			self:Schedule(2.5, laneCheck, self)
 			self:Schedule(5, showInfoFrame)
 		end
+		local count = self.vb.trainCount
 		if self:IsMythic() then
-			if mythicVoice[count] then
+			if mythicVoice[count] and not adjusted then
 				voiceTrain:Play("Thogar\\"..mythicVoice[count])
 			end
-			--5 second trains on mythic have variation. 5 or 7. This seems intended.
-			--It seems that they offset eachother too. So if train 2 was 5 seconds after 1, train 3 is always 7 seconds after 2
-			--But if train 2 was the 7. then train 3 will be the 5 instead, keeping train 4 always on same schedule.
-			--Coding all the 5 or 7 trains as 5 seems like best solution
 			local expectedTime
-			if count == 1 or count == 2 or count == 6 or count == 11 or count == 12 or count == 13 or count == 25 or count == 26 or count == 32 then
+			if count == 1 or count == 2 or count == 11 or count == 12 or count == 13 or count == 25 or count == 26 or count == 32 then
 				expectedTime = 5
 			elseif count == 6 or count == 14 or count == 22 or count == 30 or count == 31 or count == 34 then
 				expectedTime = 10
-			elseif count == 3 or count == 5 or count == 7 or count == 8 or count == 16 or count == 17 or count == 23 or count == 24 or count == 29 or count == 33 then
+			elseif count == 3 or count == 5 or count == 7 or count == 8 or count == 16 or count == 17 or count == 20 or count == 23 or count == 24 or count == 29 or count == 33 then
 				expectedTime = 15
-			elseif count == 4 or count == 15 or count == 18 or count == 19 or count == 20 or count == 21 or count == 27 or count == 28 then
+				if count == 20 then
+					specWarnSplitSoon:Cancel()
+					specWarnSplitSoon:Schedule(5)
+				end
+			elseif count == 4 or count == 15 or count == 18 or count == 19  or count == 21 or count == 27 or count == 28 then
 				expectedTime = 20
 			elseif count == 10 then
 				expectedTime = 25
 			elseif count == 9 then
 				expectedTime = 35
+				specWarnSplitSoon:Cancel()
+				specWarnSplitSoon:Schedule(25)--10 is a split, pre warn 10 seconds before 10
 			end
 			if expectedTime then
-				if msg == "Fake" then expectedTime = expectedTime - 2.5 end
+				if msg == "Fake" then
+					fakeYellTime = GetTime()
+					expectedTime = expectedTime - 1.5
+				end
+				self:Schedule(expectedTime + 1.5, fakeTrainYell, self)--Schedule fake yell 1.5 seconds after we should have seen one.
+				timerTrainCD:Unschedule(count+1)
 				timerTrainCD:Schedule(5, expectedTime, count+1)
-				self:Schedule(expectedTime+2.5, fakeTrainYell, self)--Schedule fake yell 2.5 seconds after we should have seen one.
 			else
 				print("Train Set: "..count..". DBM has no train data beyond this point. Send us videos if you can.")
-				timerTrainCD:Start(count)
+				timerTrainCD:Start(5, count)
 			end
-			if count == 1 or count == 18 or count == 21 or count == 34 then
+			if (count == 1 or count == 18 or count == 21 or count == 34) and not adjusted then
 				specWarnManOArms:Show()
 			end
 		else
-			if otherVoice[count] then
+			if otherVoice[count] and not adjusted then
 				voiceTrain:Play("Thogar\\"..otherVoice[count])
 			end
-			--Next Train 5 seconds after: 2, 4, 6, 18
-			--Next Train 10 seconds after: 1, 10, 14, 15, 20, 28
-			--Next Train 15 seconds after: 3, 8, 11, 16, 23, 27
-			--Next Train 20 seconds after: 13, 17, 24, 25
-			--Next Train 25 seconds after: 5, 7, 21, 26
-			--Next Train 30 seconds after: 19
-			--Next Train 40 seconds after: 9
 			local expectedTime
-			if count == 2 or count == 4 or count == 6 or count == 18 then
+			if count == 31 or count == 32 or count == 33 then
+				expectedTime = 4
+			elseif count == 2 or count == 4 or count == 6 or count == 18  or count == 29 then
 				expectedTime = 5
-			elseif count == 1 or count == 10 or count == 12 or count == 14 or count == 15 or count == 20 or count == 28 then
+			elseif count == 1 or count == 10 or count == 12 or count == 14 or count == 15 or count == 20 or count == 25 or count == 27 then
 				expectedTime = 10
-			elseif count == 3 or count == 8 or count == 11 or count == 16 or count == 23 or count == 27 then
+			elseif count == 3 or count == 8 or count == 11 or count == 16 or count == 23 or count == 26 or count == 30 then
 				expectedTime = 15
-			elseif count == 13 or count == 17 or count == 24 or count == 25 then
+				if count == 8 then
+					specWarnSplitSoon:Cancel()
+					specWarnSplitSoon:Schedule(5)
+				end
+			elseif count == 13 or count == 17 or count == 24 or count == 28 then
 				expectedTime = 20
-			elseif count == 5 or count == 7 or count == 21 or count == 26 then
+			elseif count == 5 or count == 7 or count == 21 then
 				expectedTime = 25
 			elseif count == 19 or count == 22 then
 				expectedTime = 30
+				if count == 22 then
+					specWarnSplitSoon:Cancel()
+					specWarnSplitSoon:Schedule(20)
+				end
 			elseif count == 9 then
 				expectedTime = 40
 			end
 			if expectedTime then
-				if msg == "Fake" then expectedTime = expectedTime - 2.5 end
-				timerTrainCD:Schedule(5, expectedTime, count+1)--Show timer for next train from current yell (previous yell already has timer for yell this train is for so no 5 second timer needed)
-				self:Schedule(expectedTime+2.5, fakeTrainYell, self)--Schedule fake yell 2.5 seconds after we should have seen one.
+				if msg == "Fake" then
+					fakeYellTime = GetTime()
+					expectedTime = expectedTime - 1.5
+				end
+				self:Schedule(expectedTime + 1.5, fakeTrainYell, self)--Schedule fake yell 1.5 seconds after we should have seen one.
+				timerTrainCD:Unschedule(count+1)
+				timerTrainCD:Schedule(5, expectedTime, count+1)
 			else
 				print("Train Set: "..count..". DBM has no train data beyond this point. Send us videos if you can.")
 				timerTrainCD:Start(5, count)--Show timer for incoming train for current yell if we have no data for next
 			end
-			if count == 7 or count == 17 or count == 23 or count == 28 then--I'm sure they spawn again sometime later, find that data
+			if (count == 7 or count == 17 or count == 23 or count == 28) and not adjusted then--I'm sure they spawn again sometime later, find that data
 				specWarnManOArms:Show()
 				if self.Options.SetIconOnAdds then
 					self:ScanForMobs(80791, 0, 8, 2, 0.2, 15)--Man At Arms scanner marking 8 down

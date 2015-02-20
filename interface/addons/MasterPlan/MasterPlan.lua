@@ -14,6 +14,8 @@ local defaults = {
 	xpPerGold=0,
 	xpCapGrace=2000,
 	goldRewardThreshold=2000000,
+	levelDecay=0.9,
+	currencyWasteThreshold=0.25,
 	ignore={},
 	complete={},
 }

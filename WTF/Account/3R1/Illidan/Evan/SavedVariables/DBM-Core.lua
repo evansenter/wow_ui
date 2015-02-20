@@ -1,3 +1,4 @@
 
 DBM_UsedProfile = "Comet"
-DBM_UseDualProfile = false
+DBM_UseDualProfile = true
+DBM_CharSavedRevision = 12982

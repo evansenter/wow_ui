@@ -1,11 +1,12 @@
 local mod	= DBM:NewMod(1161, "DBM-BlackrockFoundry", nil, 457)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12861 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 12975 $"):sub(12, -3))
 mod:SetCreatureID(76877)
 mod:SetEncounterID(1691)
 mod:SetZone()
 --mod:SetUsedIcons(8, 7, 6, 4, 2, 1)
+mod:SetHotfixNoticeRev(12859)
 
 mod:RegisterCombat("combat")
 
@@ -15,6 +16,8 @@ mod:RegisterEventsInCombat(
 	"SPELL_AURA_APPLIED 155323 155539 155078",
 	"SPELL_AURA_APPLIED_DOSE 155078",
 	"SPELL_AURA_REMOVED 155323 155539",
+	"SPELL_PERIODIC_DAMAGE 173192",
+	"SPELL_ABSORBED 173192",
 	"UNIT_SPELLCAST_SUCCEEDED boss1"
 )
 
@@ -30,6 +33,7 @@ local specWarnInfernoSlice			= mod:NewSpecialWarningCount(155080, "Tank|Healer",
 local specWarnRampage				= mod:NewSpecialWarningSpell(155539, nil, nil, nil, 2)
 local specWarnRampageEnded			= mod:NewSpecialWarningEnd(155539)
 local specWarnOverheadSmash			= mod:NewSpecialWarningCount(155301, nil, nil, nil, 2, nil, 2)
+local specWarnCaveIn				= mod:NewSpecialWarningMove(173192)
 local specWarnPetrifyingSlam		= mod:NewSpecialWarningMoveAway(155326, nil, nil, nil, 3, nil, 2)
 
 local timerInfernoSliceCD			= mod:NewCDCountTimer(12, 155080)--Variable do to energy bugs (gruul not gain power consistently)
@@ -48,6 +52,7 @@ local voiceInfernoSlice				= mod:NewVoice(155080) --gathershare. maybe change to
 --local voiceCrumblingRoar			= mod:NewVoice(155730)
 local voiceOverheadSmash			= mod:NewVoice(155301) --shockwave
 local voiceShatter					= mod:NewVoice(155326)--Spread/Scatter
+local voiceCaveIn					= mod:NewVoice(173192)
 
 mod:AddRangeFrameOption(8, 155530)
 mod:AddHudMapOption("HudMapOnShatter", 155530, false)--Might be overwhelming. up to 8 targets on non mythic, and on mythic, 20 of them. So off by default
@@ -68,7 +73,6 @@ do
 end
 local DBMHudMap = DBMHudMap
 local hudEnabled = false--Only to avoid calling self.Options.HudMapOnShatter 20x in under a second when shatter goes out (20x SPELL_AURA_APPLIED events)
-local ShatterMarker = {}
 
 local function clearRampage(self)
 	self.vb.rampage = false
@@ -104,8 +108,7 @@ function mod:OnCombatStart(delay)
 	timerRampageCD:Start(-delay)--Variable. But seen as low as 108 in LFR, normal, mythic
 	if self.Options.HudMapOnShatter then
 		hudEnabled = true
-		table.wipe(ShatterMarker)
-		self:EnableHudMap()
+		DBMHudMap:Enable()
 	end
 end
 
@@ -116,7 +119,7 @@ function mod:OnCombatEnd()
 	end
 	if hudEnabled then
 		hudEnabled = false
-		self:DisableHudMap()
+		DBMHudMap:Disable()
 	end
 end 
 
@@ -175,7 +178,7 @@ function mod:SPELL_AURA_APPLIED(args)
 			voiceShatter:Play("scatter")
 		end
 		if hudEnabled then
-			ShatterMarker[args.destName] = self:RegisterMarker(DBMHudMap:PlaceRangeMarkerOnPartyMember("timer", args.destName, 8, 10, 0, 1, 0, 0.6):Appear():RegisterForAlerts():Rotate(360, 9.5))
+			DBMHudMap:RegisterRangeMarkerOnPartyMember(spellId, "timer", args.destName, 8, 10, 0, 1, 0, 0.6):Appear():RegisterForAlerts():Rotate(360, 9.5)
 		end
 	elseif spellId == 155539 then
 		self.vb.rampage = true
@@ -204,9 +207,7 @@ function mod:SPELL_AURA_REMOVED(args)
 			DBM.RangeCheck:Hide()
 		end
 		if hudEnabled then
-			if ShatterMarker[args.destName] then
-				ShatterMarker[args.destName] = self:FreeMarker(ShatterMarker[args.destName])
-			end
+			DBMHudMap:FreeEncounterMarkerByTarget(spellId, args.destName)
 		end
 	elseif spellId == 155539 then
 		specWarnRampageEnded:Show()
@@ -240,6 +241,13 @@ function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, _, _, spellId)
 	end
 end
 
+function mod:SPELL_PERIODIC_DAMAGE(_, _, _, _, destGUID, _, _, _, spellId)
+	if spellId == 173192 and destGUID == UnitGUID("player") and self:AntiSpam(2) then
+		specWarnCaveIn:Show()
+		voiceCaveIn:Play("runaway")
+	end
+end
+mod.SPELL_ABSORBED = mod.SPELL_PERIODIC_DAMAGE
 
 do
 	local lastPower = 0
