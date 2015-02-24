@@ -135,6 +135,8 @@ AngryAssign_Pages = {
 	},
 }
 AngryAssign_State = {
+	["directionUp"] = false,
+	["locked"] = true,
 	["tree"] = {
 		["groups"] = {
 		},
@@ -144,7 +146,6 @@ AngryAssign_State = {
 		["treewidth"] = 175,
 		["fullwidth"] = 665.999938964844,
 	},
-	["directionUp"] = false,
 	["display"] = {
 		["y"] = -185.500244140625,
 		["x"] = 45.0002250671387,
@@ -158,7 +159,6 @@ AngryAssign_State = {
 		["left"] = 610,
 		["width"] = 700,
 	},
-	["locked"] = true,
 }
 AngryAssign_Config = {
 	["backdropColor"] = "0000003e",

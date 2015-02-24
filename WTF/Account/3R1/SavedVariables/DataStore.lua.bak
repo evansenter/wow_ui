@@ -1,0 +1,20 @@
+
+DataStoreDB = {
+	["profileKeys"] = {
+		["Comet - Illidan"] = "Comet - Illidan",
+	},
+	["global"] = {
+		["Version"] = 1,
+		["Characters"] = {
+			["Default.Illidan.Comet"] = {
+				["guildName"] = "Mind Games",
+				["faction"] = "Horde",
+			},
+		},
+		["Guilds"] = {
+			["Default.Illidan.Mind Games"] = {
+				["faction"] = "Horde",
+			},
+		},
+	},
+}

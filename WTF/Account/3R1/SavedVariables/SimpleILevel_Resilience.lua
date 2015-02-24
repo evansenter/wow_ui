@@ -7,9 +7,9 @@ SIL_ResilSettings = {
 		["Colton - Dark Iron"] = "Default",
 		["Ereinion - Dark Iron"] = "Default",
 		["Comet - Illidan"] = "Default",
-		["Plane - Illidan"] = "Default",
-		["Evan - Illidan"] = "Default",
 		["Natal - Illidan"] = "Default",
+		["Evan - Illidan"] = "Default",
+		["Plane - Illidan"] = "Default",
 	},
 	["global"] = {
 		["tooltip"] = 0,

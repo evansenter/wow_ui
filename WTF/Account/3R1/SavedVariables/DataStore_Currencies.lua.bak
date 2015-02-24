@@ -1,0 +1,84 @@
+
+DataStore_CurrenciesDB = {
+	["profileKeys"] = {
+		["Comet - Illidan"] = "Comet - Illidan",
+	},
+	["global"] = {
+		["Reference"] = {
+			["Currencies"] = {
+				"Player vs. Player|", -- [1]
+				"Conquest Points|Interface\\Icons\\PVPCurrency-Conquest-Horde", -- [2]
+				"Honor Points|Interface\\Icons\\PVPCurrency-Honor-Horde", -- [3]
+				"Unused|", -- [4]
+				"Elder Charm of Good Fortune|Interface\\Icons\\inv_misc_coin_17", -- [5]
+				"Essence of Corrupted Deathwing|Interface\\Icons\\inv_elemental_primal_shadow", -- [6]
+				"Illustrious Jewelcrafter's Token|Interface\\Icons\\inv_misc_token_argentdawn3", -- [7]
+				"Ironpaw Token|Interface\\Icons\\inv_relics_idolofferocity", -- [8]
+				"Justice Points|Interface\\Icons\\pvecurrency-justice", -- [9]
+				"Lesser Charm of Good Fortune|Interface\\Icons\\inv_misc_coin_18", -- [10]
+				"Mogu Rune of Fate|Interface\\Icons\\archaeology_5_0_mogucoin", -- [11]
+				"Timeless Coin|Interface\\Icons\\timelesscoin", -- [12]
+				"Valor Points|Interface\\Icons\\pvecurrency-valor", -- [13]
+				"Warforged Seal|Interface\\Icons\\inv_arcane_orb", -- [14]
+				"Warlords of Draenor|", -- [15]
+				"Apexis Crystal|Interface\\Icons\\inv_apexis_draenor", -- [16]
+				"Garrison Resources|Interface\\Icons\\inv_garrison_resource", -- [17]
+				"Seal of Tempered Fate|Interface\\Icons\\ability_animusorbs", -- [18]
+			},
+			["CurrencyTextRev"] = {
+				["Elder Charm of Good Fortune"] = 5,
+				["Illustrious Jewelcrafter's Token"] = 7,
+				["Garrison Resources"] = 17,
+				["Valor Points"] = 13,
+				["Warforged Seal"] = 14,
+				["Player vs. Player"] = 1,
+				["Unused"] = 4,
+				["Honor Points"] = 3,
+				["Seal of Tempered Fate"] = 18,
+				["Conquest Points"] = 2,
+				["Essence of Corrupted Deathwing"] = 6,
+				["Apexis Crystal"] = 16,
+				["Justice Points"] = 9,
+				["Ironpaw Token"] = 8,
+				["Timeless Coin"] = 12,
+				["Warlords of Draenor"] = 15,
+				["Mogu Rune of Fate"] = 11,
+				["Lesser Charm of Good Fortune"] = 10,
+			},
+		},
+		["Characters"] = {
+			["Default.Illidan.Comet"] = {
+				["Currencies"] = {
+					3, -- [1]
+					142084, -- [2]
+					7046, -- [3]
+					9, -- [4]
+					10, -- [5]
+					140, -- [6]
+					142, -- [7]
+					144, -- [8]
+					18, -- [9]
+					33044, -- [10]
+					22, -- [11]
+					2352536, -- [12]
+					26, -- [13]
+					28, -- [14]
+					31, -- [15]
+					45984, -- [16]
+					1268258, -- [17]
+					164, -- [18]
+				},
+				["lastUpdate"] = 1424741559,
+				["CurrencyInfo"] = {
+					[395] = "0-0-0-0",
+					[396] = "0-0-1000-300099",
+					[390] = "1110-0-10340-0",
+					[823] = "359-0-0-20000",
+					[392] = "55-0-0-4000",
+					[994] = "1-0-0-10",
+					[824] = "9908-0-0-10000",
+				},
+			},
+		},
+	},
+}

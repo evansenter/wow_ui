@@ -8,9 +8,9 @@ ProspectOptions = {
 	["badFrames"] = {
 	},
 	["mod"] = "shift",
+	["precision"] = 0,
 	["goodFrames"] = {
 	},
-	["precision"] = 0,
 	["btn"] = 3,
 	["autoloot"] = false,
 }

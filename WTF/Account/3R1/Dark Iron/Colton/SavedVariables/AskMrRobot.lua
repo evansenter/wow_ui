@@ -30,18 +30,7 @@ AmrDb = {
 			"|cffa335ee|Hitem:72844:0:0:0:0:0:0:1040692480:85:0:0:0|h[Pit Lord's Destroyer]|h|r", -- [16]
 		}, -- [1]
 	},
-	["Glyphs"] = {
-		{
-		}, -- [1]
-		{
-		}, -- [2]
-	},
-	["Specs"] = {
-		1, -- [1]
-		2, -- [2]
-	},
-	["Options"] = {
-	},
+	["Guild"] = "Rated Baddie Grounds",
 	["BankItems"] = {
 		"|cffffffff|Hitem:62584:0:0:0:0:0:0:1131640320:85:0:0:0|h[Fortune Card]|h|r", -- [1]
 		"|cffffffff|Hitem:45581:0:0:0:0:0:0:0:85:0:0:0|h[Orgrimmar Tabard]|h|r", -- [2]
@@ -56,6 +45,13 @@ AmrDb = {
 		"|cffa335ee|Hitem:51132:3253:3502:0:0:0:0:1560846272:85:0:0:0|h[Sanctified Scourgelord Handguards]|h|r", -- [11]
 		"|cffa335ee|Hitem:71061:4126:3994:3985:0:0:0:0:85:0:0:0|h[Elementium Deathplate Greaves]|h|r", -- [12]
 	},
+	["Specs"] = {
+		1, -- [1]
+		2, -- [2]
+	},
+	["Options"] = {
+	},
+	["Region"] = "US",
 	["Currencies"] = {
 		[416] = 4,
 		[391] = 3,
@@ -64,18 +60,27 @@ AmrDb = {
 		[-1] = 0,
 		[241] = 48,
 	},
+	["Class"] = "DEATHKNIGHT",
 	["LogData"] = {
 		["_wipes"] = {
 		},
 		["_autoLog"] = {
+			[1228] = "disabled",
 			[1136] = "disabled",
+			[1205] = "disabled",
 		},
 		["_lastZone"] = "Kalimdor",
 		["_lastDiff"] = 0,
 	},
 	["BagItems"] = {
 	},
-	["Class"] = "DEATHKNIGHT",
+	["SendSettings"] = {
+		["SendTo"] = "",
+		["SendGems"] = true,
+		["SendEnchants"] = true,
+		["SendEnchantMaterials"] = true,
+		["SendToType"] = "a friend",
+	},
 	["LastCharacterImport"] = "",
 	["Reps"] = {
 		[1269] = 3,
@@ -89,29 +94,34 @@ AmrDb = {
 		[1435] = 3,
 	},
 	["Faction"] = "Horde",
+	["Professions"] = {
+		["Cooking"] = 525,
+		["Blacksmithing"] = 525,
+		["Archaeology"] = 1,
+		["Fishing"] = 185,
+		["Mining"] = 525,
+		["First Aid"] = 525,
+	},
 	["IconInfo"] = {
 	},
-	["SendSettings"] = {
-		["SendTo"] = "",
-		["SendGems"] = true,
-		["SendEnchants"] = true,
-		["SendEnchantMaterials"] = true,
-		["SendToType"] = "a friend",
-	},
-	["Professions"] = {
+	["Glyphs"] = {
+		{
+		}, -- [1]
+		{
+		}, -- [2]
 	},
 	["BankItemsAndCounts"] = {
 		[50857] = 1,
 		[50094] = 1,
-		[71061] = 1,
-		[51132] = 1,
-		[62913] = 1,
 		[50096] = 1,
-		[62584] = 1,
 		[50097] = 1,
-		[50854] = 1,
-		[50098] = 1,
 		[50853] = 1,
 		[45581] = 1,
+		[62584] = 1,
+		[51132] = 1,
+		[50854] = 1,
+		[50098] = 1,
+		[71061] = 1,
+		[62913] = 1,
 	},
 }

@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1203, "DBM-BlackrockFoundry", nil, 457)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12975 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 13087 $"):sub(12, -3))
 mod:SetCreatureID(77557, 77231, 77477)
 mod:SetEncounterID(1695)
 mod:SetZone()
@@ -60,6 +60,7 @@ local warnSanguineStrikes				= mod:NewTargetAnnounce(156601, 3, nil, "Healer")
 --Ship
 local specWarnBombardmentAlpha			= mod:NewSpecialWarningCount(157854, nil, nil, nil, 2)--From ship, but affects NON ship.
 local specWarnBombardmentOmega			= mod:NewSpecialWarningCount(157886, nil, nil, nil, 3)--From ship, but affects NON ship.
+local specWarnReturnBase				= mod:NewSpecialWarning("specWarnReturnBase")
 ----Blackrock Deckhand
 local specWarnEarthenbarrier			= mod:NewSpecialWarningInterrupt("OptionVersion2", 158708, "-Healer", nil, nil, nil, nil, 2)
 ----Shattered Hand Deckhand
@@ -92,13 +93,14 @@ local yellHeartseeker					= mod:NewYell(158010, nil, false)
 mod:AddTimerLine(Ship)
 local timerShipCD						= mod:NewNextTimer(198, "ej10019", nil, nil, nil, 76204)
 local timerBombardmentAlphaCD			= mod:NewNextTimer(18, 157854)
-local timerWarmingUp					= mod:NewCastTimer(90, 158849)--Word is not good.
+local timerWarmingUp					= mod:NewCastTimer(90, 158849)
 --Ground
 ----Admiral Gar'an
 mod:AddTimerLine(Garan)
 local timerRapidFireCD					= mod:NewCDTimer(30.5, 156626)
 local timerDarkHuntCD					= mod:NewCDTimer("OptionVersion2", 13.5, 158315, nil, false)--Important to know you have it, not very important to know it's coming soon.
 local timerPenetratingShotCD			= mod:NewCDTimer(30, 164271)--22-30 at least. maybe larger variation. Just small LFR sample size.
+local timerDeployTurretCD				= mod:NewCDTimer(20.5, 158599)--20.5-23.5
 ----Enforcer Sorka
 mod:AddTimerLine(Sorka)
 local timerBloodRitualCD				= mod:NewNextTimer(21, 158078)
@@ -129,14 +131,15 @@ mod.vb.ship = 0
 mod.vb.alphaOmega = 0
 --mod.vb.below25 = false
 
-local UnitPosition, GetTime =  UnitPosition, GetTime
+local UnitPosition, UnitIsConnected, GetTime =  UnitPosition, UnitIsConnected, GetTime
 local savedAbilityTime = {}
 local playerOnBoat = false
+local boatMissionDone = false
 local DBMHudMap = DBMHudMap
 
 local function isPlayerOnBoat()
-	local _, x = UnitPosition("player")
-	if x < 3196 then
+	local _, y = UnitPosition("player")
+	if y < 3196 then
 		return false
 	else
 		return true
@@ -144,17 +147,25 @@ local function isPlayerOnBoat()
 end
 
 local function checkBoatPlayer(self)
+	DBM:Debug("checkBoatPlayer running", 3)
 	for uId in DBM:GetGroupMembers() do 
-		local _, x, _, playerMapId = UnitPosition(uId)
-		if playerMapId == 1205 then
-			if x > 3196 then--found player on boat
+		local _, y, _, playerMapId = UnitPosition(uId)
+		if UnitIsConnected(uId) and playerMapId == 1205 then
+			if y > 3196 then--found player on boat
 				self:Schedule(1, checkBoatPlayer, self)
 				return
 			end
 		end
 	end
+	DBM:Debug("checkBoatPlayer finished")
 	timerBombardmentAlphaCD:Cancel()
 	timerWarmingUp:Cancel()
+end
+
+local function boatReturnWarning()
+	if boatMissionDone and isPlayerOnBoat() then
+		specWarnReturnBase:Show()
+	end
 end
 
 local function recoverTimers()
@@ -193,6 +204,7 @@ function mod:OnCombatStart(delay)
 	self.vb.phase = 1
 	self.vb.ship = 0
 	self.vb.alphaOmega = 1
+	boatMissionDone = false
 --	if self:IsMythic() then
 --		self.vb.below25 = true--On mythic, they continue going onto boat until 20%
 --	else
@@ -238,6 +250,7 @@ function mod:SPELL_CAST_START(args)
 	elseif spellId == 158599 and (noFilter or not isPlayerOnBoat()) then
 		specWarnDeployTurret:Show()
 		voiceDeployTurret:Play("158599")
+		timerDeployTurretCD:Start()
 	elseif spellId == 155794 then
 		savedAbilityTime["BladeDash"] = GetTime()
 		if noFilter or not isPlayerOnBoat() then
@@ -267,9 +280,12 @@ function mod:SPELL_CAST_SUCCESS(args)
 	if not DBM.Options.DontShowFarWarnings then
 		noFilter = true
 	end
-	if spellId == 157854 and (noFilter or not isPlayerOnBoat()) then
-		specWarnBombardmentAlpha:Show(self.vb.alphaOmega)
-		timerBombardmentAlphaCD:Start()
+	if spellId == 157854 then
+		self:Schedule(14, boatReturnWarning)
+		if noFilter or not isPlayerOnBoat() then
+			specWarnBombardmentAlpha:Show(self.vb.alphaOmega)
+			timerBombardmentAlphaCD:Start()
+		end
 	elseif spellId == 157886 and (noFilter or not isPlayerOnBoat()) then
 		specWarnBombardmentOmega:Show(self.vb.alphaOmega)
 		self.vb.alphaOmega = self.vb.alphaOmega + 1
@@ -343,7 +359,7 @@ function mod:SPELL_AURA_APPLIED(args)
 		end
 	elseif spellId == 156631 and (noFilter or not isPlayerOnBoat()) then
 		if self:AntiSpam(5, args.destName) then--check antispam so we don't warn if we got a user sync 3 seconds ago.
-			if self:CheckNearby(5, args.destName) then
+			if self:CheckNearby(5, args.destName) and self.Options.SpecWarn156631close then
 				specWarnRapidFireNear:Show(args.destName)
 			else
 				warnRapidFire:Show(args.destName)
@@ -397,10 +413,15 @@ function mod:UNIT_DIED(args)
 	elseif cid == 77557 then--Gar'an
 		timerRapidFireCD:Cancel()
 		timerPenetratingShotCD:Cancel()
+		timerDeployTurretCD:Cancel()
 	elseif cid == 77231 then--Sorka
 		timerBladeDashCD:Cancel()
 		timerConvulsiveShadowsCD:Cancel()
 		timerDarkHuntCD:Cancel()
+	elseif cid == 78351 or cid == 78341 or cid == 78343 then--boat bosses
+		self:Schedule(1, function()--wait 1s boat player ready to return.
+			boatMissionDone = true
+		end)
 	end
 end
 
@@ -433,7 +454,7 @@ function mod:OnSync(msg, guid)
 	if msg == "RapidFireTarget" and guid then
 		local targetName = DBM:GetFullPlayerNameByGUID(guid)
 		if self:AntiSpam(5, targetName) then--Set antispam if we got a sync, to block 3 second late SPELL_AURA_APPLIED if we got the early warning
-			if self:CheckNearby(5, targetName) then
+			if self:CheckNearby(5, targetName) and self.Options.SpecWarn156631close then
 				specWarnRapidFireNear:Show(targetName)
 			else
 				warnRapidFire:Show(targetName)
@@ -470,6 +491,7 @@ function mod:OnSync(msg, guid)
 			self:Schedule(7, function()
 				timerRapidFireCD:Cancel()
 				timerPenetratingShotCD:Cancel()
+				timerDeployTurretCD:Cancel()
 			end)
 			voiceShip:Play("1695uktar")
 		end
@@ -495,6 +517,7 @@ function mod:UNIT_POWER_FREQUENT(_, powerType)
 	local power = UnitPower("player", 10)
 	if power == 1 and not playerOnBoat then -- on boat
 		playerOnBoat = true
+		boatMissionDone = false
 		timerBloodRitualCD:Cancel()
 		timerRapidFireCD:Cancel()
 		timerBladeDashCD:Cancel()
@@ -504,6 +527,9 @@ function mod:UNIT_POWER_FREQUENT(_, powerType)
 		timerBombardmentAlphaCD:Cancel()
 	elseif power == 0 and playerOnBoat then -- leave boat
 		playerOnBoat = false
+		boatMissionDone = false
 		recoverTimers()
+		self:Unschedule(boatReturnWarning)
+		DBM:Debug("Player Leaving Boat")
 	end
 end

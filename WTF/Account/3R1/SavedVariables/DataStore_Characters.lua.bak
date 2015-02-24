@@ -1,0 +1,33 @@
+
+DataStore_CharactersDB = {
+	["profileKeys"] = {
+		["Comet - Illidan"] = "Comet - Illidan",
+	},
+	["global"] = {
+		["Characters"] = {
+			["Default.Illidan.Comet"] = {
+				["XPMax"] = 854100,
+				["played"] = 6706665,
+				["guildRankName"] = "Trial",
+				["isResting"] = false,
+				["lastUpdate"] = 1424741584,
+				["class"] = "Monk",
+				["race"] = "Blood Elf",
+				["level"] = 100,
+				["XP"] = 6211,
+				["RestXP"] = 0,
+				["money"] = 2377801041,
+				["gender"] = 2,
+				["guildRankIndex"] = 5,
+				["guildName"] = "Mind Games",
+				["subZone"] = "The Crucible",
+				["name"] = "Comet",
+				["faction"] = "Horde",
+				["englishRace"] = "BloodElf",
+				["zone"] = "Blackrock Foundry",
+				["lastLogoutTimestamp"] = 1424741584,
+				["englishClass"] = "MONK",
+			},
+		},
+	},
+}

@@ -1,0 +1,23 @@
+
+DataStore_AgendaDB = {
+	["profileKeys"] = {
+		["Comet - Illidan"] = "Comet - Illidan",
+	},
+	["global"] = {
+		["Options"] = {
+			["WeeklyResetHour"] = 6,
+			["WeeklyResetDay"] = 2,
+			["NextWeeklyReset"] = "2015-02-24",
+		},
+		["Characters"] = {
+			["Default.Illidan.Comet"] = {
+				["lastUpdate"] = 1424741558,
+				["DungeonIDs"] = {
+					["Blackrock Foundry Mythic|179309980"] = "52040|1424741561|0|1",
+					["Highmaul Heroic|265090788"] = "52040|1424741561|0|1",
+					["Blackrock Foundry Heroic|179092125"] = "52040|1424741561|0|1",
+				},
+			},
+		},
+	},
+}

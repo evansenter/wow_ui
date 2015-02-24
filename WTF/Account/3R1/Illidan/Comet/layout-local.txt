@@ -1,6 +1,6 @@
 Version: 1
 Frame: ColorPickerFrame
-FrameLevel: 1
+FrameLevel: 21
 Anchor: CENTER
 X: 0
 Y: 0
@@ -15,9 +15,9 @@ W: 260
 H: 150
 Frame: frmBulkOrderReminderPoint
 FrameLevel: 1
-Anchor: CENTER
+Anchor: BOTTOM
 X: 0
-Y: -250
+Y: 249
 W: 1
 H: 1
 Frame: DBMMinimapButton

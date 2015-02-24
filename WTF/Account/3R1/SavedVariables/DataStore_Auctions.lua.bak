@@ -1,0 +1,6 @@
+
+DataStore_AuctionsDB = {
+	["profileKeys"] = {
+		["Comet - Illidan"] = "Comet - Illidan",
+	},
+}

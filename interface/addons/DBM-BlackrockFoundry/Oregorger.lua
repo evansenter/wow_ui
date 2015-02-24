@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1202, "DBM-BlackrockFoundry", nil, 457)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12975 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 13074 $"):sub(12, -3))
 mod:SetCreatureID(77182)
 mod:SetEncounterID(1696)
 mod:SetZone()
@@ -41,7 +41,7 @@ local timerExplosiveShardCD			= mod:NewCDTimer("OptionVersion3", 12, 156390, nil
 local timerExplosiveShard			= mod:NewCastTimer(3.5, 156390, nil, "MeleeDps")
 local timerRetchedBlackrockCD		= mod:NewCDTimer("OptionVersion2", 17, 156179, nil, "Ranged")--Every 17-23 seconds
 
-local countdownAcidTorrent			= mod:NewCountdown(23, 156240, "Tank")
+local countdownAcidTorrent			= mod:NewCountdown(13, 156240, "Tank")
 
 local voicePhaseChange				= mod:NewVoice(nil, nil, DBM_CORE_AUTO_VOICE2_OPTION_TEXT)
 local voiceRetchedBlackrock			= mod:NewVoice(156203)  --runaway
@@ -61,7 +61,7 @@ function mod:RetchedBlackrockTarget(targetname, uId)
 			specWarnRetchedBlackrock:Show()
 		end
 		yellRetchedBlackrock:Yell()
-	elseif self:CheckNearby(6, targetname) then
+	elseif self:CheckNearby(10, targetname) then
 		specWarnRetchedBlackrockNear:Show(targetname)
 	else
 		warnRetchedBlackrock:Show(targetname)
@@ -95,7 +95,7 @@ function mod:SPELL_CAST_START(args)
 		countdownAcidTorrent:Start()
 		voiceAcidTorrent:Schedule(3, "changemt")
 	elseif spellId == 156179 then
-		self:ScheduleMethod(0.1, "BossTargetScanner", 77182, "RetchedBlackrockTarget", 0.04, 8)--give 0.1 delay before scan start.
+		self:ScheduleMethod(0.1, "BossTargetScanner", 77182, "RetchedBlackrockTarget", 0.04, 16)--give 0.1 delay before scan start.
 		timerRetchedBlackrockCD:Start()
 	end
 end
@@ -168,7 +168,7 @@ end
 
 function mod:UNIT_POWER_FREQUENT()
 	local ore = UnitPower("boss1")
-	if self:AntiSpam(10) and lastOre ~= ore then
+	if (self:AntiSpam(10) or ore == 100) and lastOre ~= ore then
 		lastOre = ore
 		warnCollectOre:Show(ore)
 	end

@@ -20,6 +20,13 @@ X: -233
 Y: 79
 W: 615
 H: 550
+Frame: frmBulkOrderReminderPoint
+FrameLevel: 1
+Anchor: CENTER
+X: 0
+Y: -250
+W: 1
+H: 1
 Frame: DBMMinimapButton
 FrameLevel: 3
 Anchor: TOPRIGHT

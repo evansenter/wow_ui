@@ -1,0 +1,112 @@
+
+DataStore_TalentsDB = {
+	["profileKeys"] = {
+		["Comet - Illidan"] = "Comet - Illidan",
+	},
+	["global"] = {
+		["Characters"] = {
+			["Default.Illidan.Comet"] = {
+				["Class"] = "MONK",
+				["lastUpdate"] = 1424741558,
+				["GlyphList"] = {
+					11, -- [1]
+					16250, -- [2]
+					16506, -- [3]
+					19354, -- [4]
+					18170, -- [5]
+					16570, -- [6]
+					18186, -- [7]
+					18202, -- [8]
+					16490, -- [9]
+					16410, -- [10]
+					18266, -- [11]
+					15978, -- [12]
+					18218, -- [13]
+					16346, -- [14]
+					16426, -- [15]
+					16314, -- [16]
+					16522, -- [17]
+					16650, -- [18]
+					15962, -- [19]
+					18234, -- [20]
+					16218, -- [21]
+					18282, -- [22]
+					16026, -- [23]
+					16554, -- [24]
+					16234, -- [25]
+					16618, -- [26]
+					16186, -- [27]
+					18250, -- [28]
+					18298, -- [29]
+					15994, -- [30]
+					19394, -- [31]
+					13, -- [32]
+					16732, -- [33]
+					16668, -- [34]
+					16284, -- [35]
+					16636, -- [36]
+					16540, -- [37]
+					16460, -- [38]
+					16476, -- [39]
+					16716, -- [40]
+					16684, -- [41]
+				},
+				["ActiveTalents"] = 1,
+			},
+		},
+		["Reference"] = {
+			["GlyphNames"] = {
+				[1013] = "Renewing Mist",
+				[1015] = "Breath of Fire",
+				[1136] = "Floating Butterfly",
+				[1140] = "Victory Roll",
+				[1021] = "Leer of the Ox",
+				[1026] = "Life Cocoon",
+				[1030] = "Fortifying Brew",
+				[1034] = "Targeted Expulsion",
+				[1038] = "Touch of Karma",
+				[1042] = "Zen Flight",
+				[1137] = "Flying Serpent",
+				[1141] = "Freedom Roll",
+				[1212] = "Flying Fists",
+				[1031] = "Detox",
+				[1035] = "Fists of Fury",
+				[1039] = "Honor",
+				[1014] = "Touch of Death",
+				[1138] = "Keg Smash",
+				[1142] = "Soothing Mist",
+				[1209] = "Detoxing",
+				[1028] = "Rising Tiger Kick",
+				[1032] = "Nimble Brew",
+				[1040] = "Paralysis",
+				[1044] = "Water Roll",
+				[1135] = "Expel Harm",
+				[1139] = "Renewed Tea",
+				[1143] = "Zen Focus",
+				[1033] = "Jab",
+				[1025] = "Fortuitous Spheres",
+				[1029] = "Spirit Roll",
+				[997] = "Rapid Rolling",
+				[999] = "Zen Meditation",
+				[1041] = "Fighting Pose",
+				[1045] = "Crackling Tiger Lightning",
+				[1017] = "Flying Serpent Kick",
+				[1019] = "Mana Tea",
+				[1001] = "Surging Mist",
+				[1011] = "Transcendence",
+				[998] = "Guard",
+			},
+		},
+	},
+}
+DataStore_TalentsRefDB = {
+	["profileKeys"] = {
+		["Comet - Illidan"] = "Comet - Illidan",
+	},
+	["global"] = {
+		["MONK"] = {
+			["Locale"] = "enUS",
+			["Version"] = 19342,
+		},
+	},
+}

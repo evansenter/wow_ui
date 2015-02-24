@@ -3,19 +3,19 @@ ElvCharacterDB = {
 	["ChatEditHistory"] = {
 	},
 	["ChatLog"] = {
-		["1413755566.525"] = {
+		["1413755410.359"] = {
 			"^LFW_H", -- [1]
-			"Ereinion-DarkIron", -- [2]
+			"Anylianya-DemonSoul", -- [2]
 			"", -- [3]
 			"5. TCForwarder6IIll", -- [4]
-			"Ereinion", -- [5]
+			"Anylianya-DemonSoul", -- [5]
 			"", -- [6]
 			0, -- [7]
 			5, -- [8]
 			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			938, -- [11]
-			"Player-157-03F35C75", -- [12]
+			921, -- [11]
+			"Player-157-06E9BEC2", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
@@ -47,19 +47,19 @@ ElvCharacterDB = {
 			nil, -- [19]
 			"CHAT_MSG_CHANNEL", -- [20]
 		},
-		["1413755410.359"] = {
+		["1413755566.525"] = {
 			"^LFW_H", -- [1]
-			"Anylianya-DemonSoul", -- [2]
+			"Ereinion-DarkIron", -- [2]
 			"", -- [3]
 			"5. TCForwarder6IIll", -- [4]
-			"Anylianya-DemonSoul", -- [5]
+			"Ereinion", -- [5]
 			"", -- [6]
 			0, -- [7]
 			5, -- [8]
 			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			921, -- [11]
-			"Player-157-06E9BEC2", -- [12]
+			938, -- [11]
+			"Player-157-03F35C75", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]

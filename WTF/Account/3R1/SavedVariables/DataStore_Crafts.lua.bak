@@ -1,0 +1,37 @@
+
+DataStore_CraftsDB = {
+	["profileKeys"] = {
+		["Comet - Illidan"] = "Comet - Illidan",
+	},
+	["global"] = {
+		["Characters"] = {
+			["Default.Illidan.Comet"] = {
+				["Professions"] = {
+					["Cooking"] = {
+						["MaxRank"] = 700,
+						["Rank"] = 1,
+					},
+					["Fishing"] = {
+						["MaxRank"] = 700,
+						["Rank"] = 700,
+					},
+					["Jewelcrafting"] = {
+						["MaxRank"] = 700,
+						["Rank"] = 700,
+					},
+					["First Aid"] = {
+						["MaxRank"] = 700,
+						["Rank"] = 106,
+					},
+					["Engineering"] = {
+						["MaxRank"] = 700,
+						["Rank"] = 700,
+					},
+				},
+				["Prof2"] = "Jewelcrafting",
+				["lastUpdate"] = 1424741559,
+				["Prof1"] = "Engineering",
+			},
+		},
+	},
+}

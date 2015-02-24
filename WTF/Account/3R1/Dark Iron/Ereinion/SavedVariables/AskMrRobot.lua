@@ -29,6 +29,7 @@ AmrDb = {
 			"|cff1eff00|Hitem:42796:0:0:0:0:0:0:331664512:81:0:0:0|h[Lantern of Enchanted Flame]|h|r", -- [17]
 		}, -- [1]
 	},
+	["Region"] = "US",
 	["Specs"] = {
 	},
 	["Options"] = {
@@ -63,14 +64,21 @@ AmrDb = {
 		["_wipes"] = {
 		},
 		["_autoLog"] = {
+			[1228] = "disabled",
 			[1136] = "disabled",
+			[1205] = "disabled",
 		},
-		["_lastDiff"] = 0,
 		["_lastZone"] = "Kalimdor",
+		["_lastDiff"] = 0,
 	},
 	["BagItems"] = {
 	},
-	["Glyphs"] = {
+	["SendSettings"] = {
+		["SendTo"] = "",
+		["SendGems"] = true,
+		["SendEnchants"] = true,
+		["SendEnchantMaterials"] = true,
+		["SendToType"] = "a friend",
 	},
 	["LastCharacterImport"] = "",
 	["Reps"] = {
@@ -80,12 +88,7 @@ AmrDb = {
 	},
 	["Professions"] = {
 	},
-	["SendSettings"] = {
-		["SendTo"] = "",
-		["SendGems"] = true,
-		["SendEnchants"] = true,
-		["SendEnchantMaterials"] = true,
-		["SendToType"] = "a friend",
+	["Glyphs"] = {
 	},
 	["BankItemsAndCounts"] = {
 		[28963] = 1,
@@ -102,7 +105,7 @@ AmrDb = {
 		[42780] = 52,
 		[32864] = 1,
 		[41174] = 1,
-		[28966] = 1,
+		[29272] = 1,
 		[30213] = 1,
 		[30215] = 1,
 		[29370] = 1,
@@ -111,6 +114,6 @@ AmrDb = {
 		[34073] = 1,
 		[6365] = 1,
 		[10498] = 1,
-		[29272] = 1,
+		[28966] = 1,
 	},
 }

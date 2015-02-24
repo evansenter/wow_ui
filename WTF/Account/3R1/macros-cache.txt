@@ -5,10 +5,13 @@ VER 3 000000000000003F "Blackout Kick" "INV_MISC_QUESTIONMARK"
 #showtooltip Blackout Kick
 /use [nochanneling:Fists of Fury]Blackout Kick
 END
+VER 3 000000000000004A "Buy Shit" "INV_Misc_QuestionMark"
+/run BuyMerchantItem(3)
+END
 VER 3 0000000000000028 "Camera" "Spell_Shadow_EvilEye"
 /console CameraDistanceMaxFactor 9000
 END
-VER 3 0000000000000048 "Cancel HoP" "Ability_Paladin_InfusionofLight"
+VER 3 0000000000000048 "Cancel HoP" "Spell_Holy_SealOfProtection"
 /cancelaura Hand of Protection
 END
 VER 3 0000000000000030 "Cloak" "INV_MISC_QUESTIONMARK"

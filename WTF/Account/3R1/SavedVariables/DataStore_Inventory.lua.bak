@@ -1,0 +1,52 @@
+
+DataStore_InventoryDB = {
+	["profileKeys"] = {
+		["Comet - Illidan"] = "Comet - Illidan",
+	},
+	["global"] = {
+		["Characters"] = {
+			["Default.Illidan.Comet"] = {
+				["Inventory"] = {
+					"|cffa335ee|Hitem:115556:0:0:0:0:0:0:0:100:0:5:1:566|h[Helm of the Somber Gaze]|h|r", -- [1]
+					"|cffffffff|Hitem:113952:5319:0:0:0:0:0:0:100:0:6:1:567|h[]|h|r", -- [2]
+					"|cffffffff|Hitem:113924:0:0:0:0:0:0:0:100:0:3:0|h[]|h|r", -- [3]
+					nil, -- [4]
+					"|cffffffff|Hitem:113601:0:0:0:0:0:0:0:100:0:6:1:567|h[]|h|r", -- [5]
+					"|cffffffff|Hitem:113636:0:0:0:0:0:0:0:100:0:6:2:43:567|h[]|h|r", -- [6]
+					"|cffffffff|Hitem:113856:0:5348:0:0:0:0:0:100:0:5:2:564:566|h[]|h|r", -- [7]
+					"|cffffffff|Hitem:113649:0:0:0:0:0:0:0:100:0:6:1:567|h[]|h|r", -- [8]
+					"|cffffffff|Hitem:113962:0:0:0:0:0:0:0:100:0:5:1:566|h[]|h|r", -- [9]
+					"|cffffffff|Hitem:113832:0:5348:0:0:0:0:0:100:0:6:2:565:567|h[]|h|r", -- [10]
+					"|cffa335ee|Hitem:118303:5326:0:0:0:0:0:0:100:0:14:0|h[Spellbound Solium Band of Sorcerous Invincibility]|h|r", -- [11]
+					"|cffffffff|Hitem:113846:5326:0:0:0:0:0:0:100:0:5:1:566|h[]|h|r", -- [12]
+					"|cffa335ee|Hitem:113834:0:5348:0:0:0:0:0:100:0:6:2:565:567|h[Pol's Blinded Eye]|h|r", -- [13]
+					"|cffa335ee|Hitem:112319:0:0:0:0:0:0:0:100:0:13:2:530:527|h[Knight's Badge]|h|r", -- [14]
+					"|cffffffff|Hitem:113605:5312:0:0:0:0:0:0:100:0:6:1:567|h[]|h|r", -- [15]
+					"|cffffffff|Hitem:113591:5330:5348:0:0:0:0:0:100:0:6:3:565:43:567|h[]|h|r", -- [16]
+					"|cffffffff|Hitem:113965:5336:5348:0:0:0:0:0:100:0:5:3:564:43:566|h[]|h|r", -- [17]
+				},
+				["averageItemLvl"] = 680.9375,
+				["overallAIL"] = 682.875,
+				["lastUpdate"] = 1424741558,
+			},
+		},
+		["Guilds"] = {
+			["Default.Illidan.Mind Games"] = {
+				["Members"] = {
+					["Lustwar"] = {
+						["averageItemLvl"] = 672,
+					},
+					["Lustya"] = {
+						["averageItemLvl"] = 683,
+					},
+					["Lustea"] = {
+						["averageItemLvl"] = 551,
+					},
+					["Comet"] = {
+						["averageItemLvl"] = 680,
+					},
+				},
+			},
+		},
+	},
+}

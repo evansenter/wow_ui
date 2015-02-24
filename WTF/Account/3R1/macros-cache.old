@@ -8,7 +8,7 @@ END
 VER 3 0000000000000028 "Camera" "Spell_Shadow_EvilEye"
 /console CameraDistanceMaxFactor 9000
 END
-VER 3 0000000000000048 "Cancel HoP" "Ability_Paladin_InfusionofLight"
+VER 3 0000000000000048 "Cancel HoP" "Spell_Holy_SealOfProtection"
 /cancelaura Hand of Protection
 END
 VER 3 0000000000000030 "Cloak" "INV_MISC_QUESTIONMARK"
@@ -55,14 +55,8 @@ VER 3 0000000000000038 "Logs" "INV_Inscription_MajorGlyph01"
 /ra http://www.worldoflogs.com/guilds/290422/
 /ra http://www.warcraftlogs.com/guilds/usercalendar/8101
 END
-VER 3 0000000000000036 "Lust" "ACHIEVEMENT_GUILDPERK_FASTTRACK_RANK2"
-/i Lust now!
-END
 VER 3 000000000000002A "Macro" "Ability_Spy"
 /mac
-END
-VER 3 0000000000000039 "Mumble" "INV_Misc_Trinketpanda_06"
-/ra Mumble: bendis.typefrag.com 6870 peteisgay
 END
 VER 3 0000000000000027 "Pull" "INV_Gizmo_RocketBootExtreme"
 /i DBM Pull.

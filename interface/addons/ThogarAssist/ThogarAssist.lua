@@ -84,8 +84,9 @@ local mapData = {2599.9990234375, 1733.3330078125}
 --   2: small Adds
 --   3: cannon
 --   4: big Adds (men at arms + firemender)
---   5: fire 
+--   5: fire
 --   6: random gap (3x trainType 1)
+--   7: enrage (4x trainType 1)
 --	{ ["spawnTime"] = , 	["departureTime"] = , 	["lane"] = , 	["type"] = , 	["length"] = , 	["stays"] = , 	["leftToRight"] = },
 local trainDataPerDifficulty = {}
 
@@ -117,13 +118,13 @@ trainDataPerDifficulty[15] = {
 	{ ["spawnTime"] = 252, 	["departureTime"] = 298, 	["lane"] = 4, 	["type"] = 3, 	["length"] = 100, 	["stays"] =  true, 	["leftToRight"] = true},
 	{ ["spawnTime"] = 273, 	["departureTime"] = 276, 	["lane"] = 1, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
 	{ ["spawnTime"] = 279, 	["departureTime"] = 282, 	["lane"] = 3, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
-	{ ["spawnTime"] = 308, 	["departureTime"] = 356, 	["lane"] = 1, 	["type"] = 3, 	["length"] = 100, 	["stays"] =  true, 	["leftToRight"] = false}, 
-	{ ["spawnTime"] = 308, 	["departureTime"] = 356, 	["lane"] = 4, 	["type"] = 3, 	["length"] = 100, 	["stays"] =  true, 	["leftToRight"] = true}, 
+	{ ["spawnTime"] = 308, 	["departureTime"] = 356, 	["lane"] = 1, 	["type"] = 3, 	["length"] = 100, 	["stays"] =  true, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 308, 	["departureTime"] = 356, 	["lane"] = 4, 	["type"] = 3, 	["length"] = 100, 	["stays"] =  true, 	["leftToRight"] = true},
 	{ ["spawnTime"] = 318, 	["departureTime"] = 320, 	["lane"] = 2, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
 	{ ["spawnTime"] = 343, 	["departureTime"] = 346, 	["lane"] = 2, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
 	{ ["spawnTime"] = 373, 	["departureTime"] = 404, 	["lane"] = 2, 	["type"] = 2, 	["length"] = 75, 	["stays"] =  true, 	["leftToRight"] = true},
-	{ ["spawnTime"] = 373, 	["departureTime"] = 384, 	["lane"] = 3, 	["type"] = 4, 	["length"] = 50, 	["stays"] =  true, 	["leftToRight"] = false}, 
-	{ ["spawnTime"] = 388, 	["departureTime"] = 391, 	["lane"] = 4, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false}, 
+	{ ["spawnTime"] = 373, 	["departureTime"] = 384, 	["lane"] = 3, 	["type"] = 4, 	["length"] = 50, 	["stays"] =  true, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 388, 	["departureTime"] = 391, 	["lane"] = 4, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
 	{ ["spawnTime"] = 408, 	["departureTime"] = 411, 	["lane"] = 1, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
 	{ ["spawnTime"] = 418, 	["departureTime"] = 446, 	["lane"] = 1, 	["type"] = 3, 	["length"] = 100, 	["stays"] = true, 	["leftToRight"] = true},  -- does it depart? softenrage?
 	{ ["spawnTime"] = 418, 	["departureTime"] = 448, 	["lane"] = 4, 	["type"] = 2, 	["length"] = 75, 	["stays"] = true, 	["leftToRight"] = true},
@@ -197,6 +198,15 @@ trainDataPerDifficulty[16] = {
 	{ ["spawnTime"] = 429, 	["departureTime"] = 457, 	["lane"] = 4, 	["type"] = 5, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
 	{ ["spawnTime"] = 438, 	["departureTime"] = 441, 	["lane"] = 2, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
 	{ ["spawnTime"] = 440, 	["departureTime"] = 468, 	["lane"] = 3, 	["type"] = 5, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 468, 	["departureTime"] = 479, 	["lane"] = 1, 	["type"] = 4, 	["length"] = 50, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 478, 	["departureTime"] = 481, 	["lane"] = 1, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 478, 	["departureTime"] = 481, 	["lane"] = 2, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 478, 	["departureTime"] = 481, 	["lane"] = 3, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 478, 	["departureTime"] = 481, 	["lane"] = 4, 	["type"] = 6, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 492, 	["departureTime"] = 495, 	["lane"] = 1, 	["type"] = 7, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 492, 	["departureTime"] = 495, 	["lane"] = 2, 	["type"] = 7, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 492, 	["departureTime"] = 495, 	["lane"] = 3, 	["type"] = 7, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 492, 	["departureTime"] = 495, 	["lane"] = 4, 	["type"] = 7, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
 }
 
 -- 17: LFR
@@ -220,6 +230,7 @@ local texTrainTypes={
 	["type4"] = "Interface\\AddOns\\ThogarAssist\\Textures\\adds_big.tga",
 	["type5"] = "Interface\\AddOns\\ThogarAssist\\Textures\\adds_fire.tga",
 	["type6"] = "Interface\\AddOns\\ThogarAssist\\Textures\\adds_randomtrain.tga",
+	["type7"] = "Interface\\AddOns\\ThogarAssist\\Textures\\adds_enragetrain.tga",
 }
 
 local texRaidIconCoords={
@@ -259,7 +270,7 @@ local function updateDisplay()
 	local width, height = display:GetWidth(), display:GetHeight()
 	local ppy = min(width, height)
 	display.lanegird:SetSize(ppy, ppy)
-	
+
 	local laneX = "lane%d"
 	for i=1, 4 do
 		display[laneX:format(i)]:SetSize((ppy), ppy * 0.25) -- 1/4 per lane
@@ -269,28 +280,28 @@ local function updateDisplay()
 	display["lane2"]:SetPoint("CENTER", 0, (ppy) / 8)
 	display["lane3"]:SetPoint("CENTER", 0, -(ppy) / 8)
 	display["lane4"]:SetPoint("CENTER", 0, -(ppy) / 8 * 3)
-	
+
 	for i = 1,4 do
 		display["lane"..i.."highlight"]:SetAllPoints(display["lane"..i])
 		display["lane"..i.."border"]:SetAllPoints(display["lane"..i])
 	end
-	
+
 	local laneX = "lane%dhighlight"
 	for i=1, 4 do
 		display[laneX:format(i)]:SetTexture(addon.db.profile.yourlanecolor.r,addon.db.profile.yourlanecolor.g,addon.db.profile.yourlanecolor.b,0.75)
 	end
-	
+
 	if not addon.db.profile.highlightlane then
 		for i = 1,4 do
 			display["lane"..i.."highlight"]:SetAlpha(0)
 		end
 	end
-	
+
 	display["lane1icon"]:SetPoint("CENTER", 0, (ppy) / 8 * 3)
 	display["lane2icon"]:SetPoint("CENTER", 0, (ppy) / 8)
 	display["lane3icon"]:SetPoint("CENTER", 0, -(ppy) / 8)
 	display["lane4icon"]:SetPoint("CENTER", 0, -(ppy) / 8 * 3)
-	
+
 	if addon.db.profile.lanenumbers then
 		for i = 1,4 do
 			display.lanenumber[i]:Show()
@@ -300,7 +311,7 @@ local function updateDisplay()
 			display.lanenumber[i]:Hide()
 		end
 	end
-	
+
 	local lanenumber_anchor, lanenumber_xoffset, lanenumber_multi
 	if addon.db.profile.lanenumbers_position == 'leftinside' then
 		lanenumber_anchor = "LEFT"
@@ -323,7 +334,7 @@ local function updateDisplay()
 	display.lanenumber[2]:SetPoint("CENTER", display, lanenumber_anchor, (width-ppy)/2*lanenumber_multi+lanenumber_xoffset, (ppy) / 8)
 	display.lanenumber[3]:SetPoint("CENTER", display, lanenumber_anchor, (width-ppy)/2*lanenumber_multi+lanenumber_xoffset, -(ppy) / 8)
 	display.lanenumber[4]:SetPoint("CENTER", display, lanenumber_anchor, (width-ppy)/2*lanenumber_multi+lanenumber_xoffset, -(ppy) / 8 * 3)
-	if addon.db.profile.lanenumbers_inverse then 
+	if addon.db.profile.lanenumbers_inverse then
 		for i = 1,4 do
 			display.lanenumber[i]:SetText(5-i)
 		end
@@ -332,9 +343,9 @@ local function updateDisplay()
 			display.lanenumber[i]:SetText(i)
 		end
 	end
-	
-	
-	
+
+
+
 	if addon.db.profile.laneraidicons then
 		for i = 1,4 do
 			display["lane"..i.."raidicon"]:SetAlpha(1)
@@ -344,7 +355,7 @@ local function updateDisplay()
 			display["lane"..i.."raidicon"]:SetAlpha(0)
 		end
 	end
-	
+
 	local laneraidicon_anchor, laneraidicon_xoffset, laneraidicon_multi
 	if addon.db.profile.laneraidicons_position == 'leftinside' then
 		laneraidicon_anchor = "LEFT"
@@ -383,8 +394,8 @@ local function updateDisplay()
 	for i=1,4 do
 		display["lane"..i.."raidicon"]:SetSize(20,20)
 	end
-	
-	if addon.db.profile.lanenumbers_inverse then 
+
+	if addon.db.profile.lanenumbers_inverse then
 		display["lane1raidicon"]:SetTexCoord(unpack(texRaidIconCoords[addon.db.profile.laneraidicon4]));
 		display["lane2raidicon"]:SetTexCoord(unpack(texRaidIconCoords[addon.db.profile.laneraidicon3]));
 		display["lane3raidicon"]:SetTexCoord(unpack(texRaidIconCoords[addon.db.profile.laneraidicon2]));
@@ -395,7 +406,7 @@ local function updateDisplay()
 		display["lane3raidicon"]:SetTexCoord(unpack(texRaidIconCoords[addon.db.profile.laneraidicon3]));
 		display["lane4raidicon"]:SetTexCoord(unpack(texRaidIconCoords[addon.db.profile.laneraidicon4]));
 	end
-	
+
 	-- fonts
 	for i=1,4 do
 		display.lanenumber[i]:SetFont(media:Fetch("font", addon.db.profile.font) or STANDARD_TEXT_FONT, addon.db.profile.font_size or 12, addon.db.profile.font_outline and "OUTLINE" or "")
@@ -474,14 +485,14 @@ local function onControlEnter(self)
 	GameTooltip:Show()
 end
 local function onControlLeave() GameTooltip:Hide() end
-local function closeWindow() 
-	if window then 
-		window:Hide() 
-		windowShown = false 
-	end 
-	if addon then 
-		addon:Hide() 
-	end 
+local function closeWindow()
+	if window then
+		window:Hide()
+		windowShown = false
+	end
+	if addon then
+		addon:Hide()
+	end
 end
 
 local function ensureDisplay()
@@ -533,14 +544,14 @@ local function ensureDisplay()
 	header:SetText("Thogar Assist")
 	header:SetPoint("BOTTOM", display, "TOP", 0, 4)
 	display.header = header
-	
+
 	local lanegird = display:CreateTexture(nil, "OVERLAY")
 	lanegird:SetPoint("CENTER")
 	lanegird:SetTexture([[Interface\AddOns\ThogarAssist\Textures\lanes.tga]])
 	lanegird:SetBlendMode("ADD")
 	display.lanegird = lanegird
 	display.lanegird:SetAlpha(1)
-	
+
 	local laneX = "lane%d"
 	for i=1, 4 do
 		display[laneX:format(i)] = display:CreateTexture(nil, "OVERLAY")
@@ -549,7 +560,7 @@ local function ensureDisplay()
 		display[laneX:format(i)]:SetBlendMode("ADD")
 		display[laneX:format(i)]:SetAlpha(0.5)
 	end
-	
+
 	laneX = "lane%dhighlight"
 	for i=1, 4 do
 		display[laneX:format(i)] = display:CreateTexture(nil, "OVERLAY")
@@ -558,7 +569,7 @@ local function ensureDisplay()
 		display[laneX:format(i)]:SetBlendMode("BLEND")
 		display[laneX:format(i)]:SetAlpha(0)
 	end
-	
+
 	laneX = "lane%dborder"
 	for i=1, 4 do
 		display[laneX:format(i)] = display:CreateTexture(nil, "OVERLAY")
@@ -567,13 +578,13 @@ local function ensureDisplay()
 		display[laneX:format(i)]:SetVertexColor(1,0,0)
 		display[laneX:format(i)]:SetAlpha(0)
 	end
-	
+
 	local laneXicon = "lane%dicon"
 	for i=1, 4 do
 		display[laneXicon:format(i)] = display:CreateTexture(nil, "OVERLAY", nil, 3)
 		display[laneXicon:format(i)]:SetTexture(texTrainTypes.type6)
 	end
-	
+
 	local drag = CreateFrame("Frame", nil, display)
 	drag.frame = display
 	drag:SetFrameLevel(display:GetFrameLevel() + 10) -- place this above everything
@@ -592,7 +603,7 @@ local function ensureDisplay()
 	tex:SetHeight(16)
 	tex:SetBlendMode("ADD")
 	tex:SetPoint("CENTER", drag)
-	
+
 	local lanenumber = {}
 	for i=1,4 do
 		lanenumber[i] = display:CreateFontString(nil, "OVERLAY", "GameFontNormal")
@@ -600,7 +611,7 @@ local function ensureDisplay()
 		lanenumber[i]:SetText(i)
 	end
 	display.lanenumber = lanenumber
-	
+
 	laneX = "lane%draidicon"
 	for i=1,4 do
 		display[laneX:format(i)] = display:CreateTexture(nil, "OVERLAY")
@@ -625,7 +636,7 @@ local function ensureDisplay()
 	encounter_start_button:SetScript("OnClick", function() addon:ENCOUNTER_START("ENCOUNTER_START", 1692, "", 16, 20) end)
 	--]]
 	-- debug stuff end
-	
+
 	window = display
 
 	local x = addon.db.profile.posx
@@ -671,7 +682,7 @@ local function displayTrainOnLane(lane, length, color, leftToRight, trainType)
 			display["lane"..lane]:SetTexture(texTrainLength["l"..length])
 		end
 		display["lane"..lane]:SetVertexColor(color.r,color.g,color.b,1)
-		
+
 		if trainType then
 			display["lane"..lane.."icon"]:SetVertexColor(1,1,1,1)
 			display["lane"..lane.."icon"]:SetTexture(texTrainTypes["type"..trainType])
@@ -683,7 +694,7 @@ local function displayTrainOnLane(lane, length, color, leftToRight, trainType)
 			end
 			display["lane"..lane.."icon"]:SetPoint(point, relativeTo, relativePoint, xOffset, yOffset)
 		end
-	end		
+	end
 end
 
 local function warnLane(lane)
@@ -702,7 +713,7 @@ end
 
 local function clearAllTrains()
 	for i=1,4 do
-		displayTrainOnLane(i,0)		
+		displayTrainOnLane(i,0)
 	end
 end
 
@@ -724,7 +735,7 @@ do
 		local width, height = display:GetWidth(), display:GetHeight()
 		--local range = activeRange and activeRange or 10
 		-- range * 3, so we have 3x radius space
-		
+
 		local pixperyard = min(width, height) / (range * 3)
 
 
@@ -735,7 +746,7 @@ do
 		blip:SetPoint("CENTER", display, "CENTER", x, -y)
 
 		blip:SetSize(addon.db.profile.myblipscale*pixperyard, addon.db.profile.myblipscale*pixperyard)
-		
+
 		-- do some rotation
 		local bearing = GetPlayerFacing()
 		local hAngle = bearing - rad(225)
@@ -755,18 +766,18 @@ do
 		local roomY = 0.18051677942276
 		local roomHeight = 0.19867861270905
 		local value = (srcY-roomY)/roomHeight
-		if value >= 0 and value < 0.25 then
+		if value >= 0 and value < 0.24 then
 			return 1
-		elseif value >= 0.25 and value < 0.5 then
+		elseif value >= 0.24 and value < 0.5 then
 			return 2
-		elseif value >= 0.5 and value < 0.75 then
+		elseif value >= 0.5 and value < 0.76 then
 			return 3
-		elseif value >= 0.75 and value <= 1 then
+		elseif value >= 0.76 and value <= 1 then
 			return 4
 		end
 	end
-	
-	
+
+
 	function addon:highlightMyLane(srcY)
 		local lane = self:getMyLane(srcY)
 		if lane == 1 then
@@ -791,11 +802,11 @@ do
 			display["lane4highlight"]:SetAlpha(0.5)
 		end
 	end
-	
-	
+
+
 	function addon:updateData()
 		if simulating or not inFight then return end
-		
+
 		local srcX, srcY = GetPlayerMapPosition("player")
 		if srcX == 0 and srcY == 0 then
 			SetMapToCurrentZone()
@@ -803,11 +814,11 @@ do
 		end
 
 		addon:setMyDot(srcX, srcY)
-		
+
 		if addon.db.profile.highlightlane then
 			addon:highlightMyLane(srcY)
 		end
-			
+
 		lanesUsed = {}
 		local laneToWarn = nil
 		timeInCombat = GetTime() - combatStartedTime
@@ -862,26 +873,26 @@ local function newTrainSim()
 	local l = 0
 	local ltr = false
 	local color = {}
-	local n 
-	
+	local n
+
 	if 		trainCounter%4 == 1 then l = 50
 	elseif trainCounter%4 == 2 then l = 75
 	elseif trainCounter%4 == 3 then l = 100
 	else 	l = 0 end
-	
+
 	if math.random(1,2) == 1 then ltr = true end
 
 	n = math.random(1,3)
 	if n == 1 then
 		color = addon.db.profile.trainsooncolor
-	elseif n == 2 then 
+	elseif n == 2 then
 		color = addon.db.profile.trainmovingcolor
 	else
 		color = addon.db.profile.traintherecolor
 	end
-	
+
 	displayTrainOnLane(math.random(1,4),l,color,ltr,math.random(1,4))
-	
+
 	if trainCounter < 10 then
 		addon:ScheduleTimer(newTrainSim, 0.5)
 	else
@@ -892,12 +903,12 @@ end
 
 local function realTrainSim()
 	trainCounter = trainCounter + 1
-	local randomTrain = trainDataPerDifficulty[15][math.random(1,#trainDataPerDifficulty[15])]
+	local randomTrain = trainDataPerDifficulty[16][math.random(1,#trainDataPerDifficulty[16])]
 	local color
 	local n = math.random(1,3)
 	if n == 1 then
 		color = addon.db.profile.trainsooncolor
-	elseif n == 2 then 
+	elseif n == 2 then
 		color = addon.db.profile.trainmovingcolor
 	else
 		color = addon.db.profile.traintherecolor
@@ -941,7 +952,7 @@ local function openWindow()
 	-- Start the show!
 	window:Show()
 	-- debug
-	combatStartedTime = GetTime() 
+	combatStartedTime = GetTime()
 	windowShown = true
 	updateDisplay()
 end
@@ -974,13 +985,13 @@ end
 local function recieveIconConfig(prefix, msg, chan, sender)
 	if prefix ~= "TA_Icons" then return end
 	if sender == UnitName("player") then return end
-	
+
 	success, t = addon:Deserialize(msg)
 	if success then
 		local popup_text = "Thogar Assist: "..L["Use icon config of %s"]:format(sender).."?\n"..L["Lane 1: %s, Lane 2: %s, Lane 3: %s, Lane 4: %s"]:format(raidIconsForChat[t[1]],raidIconsForChat[t[2]], raidIconsForChat[t[3]], raidIconsForChat[t[4]])
 		StaticPopupDialogs["TA_NewIconConfig"] = { text=popup_text, button1= YES, button2= NO, OnAccept = function(self) ThogarAssist:SetLaneIcons(t) end, timeout = 0, hideOnEscape = 1}
         StaticPopup_Show("TA_NewIconConfig")
-	end	
+	end
 end
 
 local options = {
@@ -1303,18 +1314,18 @@ function addon:ENCOUNTER_START(event, encounterID, encounterName, difficultyID, 
 			--print("TA", "got trainData!")
 			simulating = false
 			inFight = true
-			
+
 			addon:Show()
 			trainData = trainDataPerDifficulty[difficultyID]
-			
+
 			for k,v in pairs(trainData) do--test this shit
 				trainData[k].trainDisplayed = nil
 				trainData[k].warningDisplayed = nil
 			end
-			
+
 			openWindow()
 			myblip:Show()
-			combatStartedTime = GetTime() 
+			combatStartedTime = GetTime()
 		end
 	end
 end
