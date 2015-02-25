@@ -49,6 +49,13 @@ AngryAssign_Pages = {
 		["UpdateId"] = 3148356357,
 		["Contents"] = "Whirlwind (emp):\n1) (emp) Draxxi + Hockey + Cexcells\n2) (emp) Twin(Hymn) + Lan(Barrier) + Cexcells + Azpek\n\nShout:\n2) Akroma\n3) Draxxi\n4) Akroma\n5) Draxxi\n\nRubble:\n2)  Comet  + Zaebies + Hemo + Gandalf\n3)  Draxxi + Bluto (Smoke) + \n4)  Twin + Lanfear + Cexcells + Hockey\n5)  Comet + Zaebies + Hemo + Gandalf\n\nQuake\n2) Twin +  + NVs \n3) Akroma +Tonics + personals",
 	},
+	[20828138] = {
+		["Updated"] = 1424830953,
+		["Name"] = "Furnace",
+		["Id"] = 20828138,
+		["UpdateId"] = 2467529262,
+		["Contents"] = "p2 Cd Rotation:\nBlast#:\n4:tranq\n6:rev\n8:hymn\n10; devo\n12: devo",
+	},
 	[45058146] = {
 		["Updated"] = 1419905154,
 		["Name"] = "Slangin' Gurt",
@@ -141,10 +148,16 @@ AngryAssign_State = {
 		["groups"] = {
 		},
 		["scrollvalue"] = 0,
-		["selected"] = 45058146,
 		["treesizable"] = true,
+		["selected"] = 45058146,
 		["treewidth"] = 175,
 		["fullwidth"] = 665.999938964844,
+	},
+	["window"] = {
+		["height"] = 499.999969482422,
+		["top"] = 850,
+		["left"] = 610,
+		["width"] = 700,
 	},
 	["display"] = {
 		["y"] = -185.500244140625,
@@ -152,12 +165,6 @@ AngryAssign_State = {
 		["point"] = "TOPLEFT",
 		["scale"] = 1,
 		["hidden"] = false,
-	},
-	["window"] = {
-		["height"] = 499.999969482422,
-		["top"] = 850,
-		["left"] = 610,
-		["width"] = 700,
 	},
 }
 AngryAssign_Config = {

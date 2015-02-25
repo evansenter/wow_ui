@@ -1,4 +1,4 @@
-## Interface: 60000
+## Interface: 60100
 ## Title: Storm, Earth, and Fire
 ## Author: Eridius
 ## Notes: Tracker for Storm, Earth, and Fire spirits

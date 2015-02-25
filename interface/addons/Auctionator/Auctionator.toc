@@ -1,4 +1,4 @@
-## Interface: 60000
+## Interface: 60100
 ## Title: Auctionator
 ## Version: 3.2.2
 ## Author: Zirco

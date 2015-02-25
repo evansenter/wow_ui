@@ -1,4 +1,4 @@
-## Interface: 60000
+## Interface: 60100
 ## X-Curse-Packaged-Version: 4.6.7
 ## X-Curse-Project-Name: Bartender4
 ## X-Curse-Project-ID: bartender4

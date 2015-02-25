@@ -1,4 +1,4 @@
-## Interface: 60000
+## Interface: 60100
 ## Version: 5.0.1.37
 ## Title: Lightwell Buddy
 ## Notes: Allows the user to send random messages for lightwell events, also tracks the number of uses and total amount the lightwell healed for.

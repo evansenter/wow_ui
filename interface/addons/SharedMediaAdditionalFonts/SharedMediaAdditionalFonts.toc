@@ -1,4 +1,4 @@
-## Interface: 60000
+## Interface: 60100
 ## X-Curse-Packaged-Version: 1.0.18
 ## X-Curse-Project-Name: SharedMediaAdditionalFonts
 ## X-Curse-Project-ID: shared-media-additional-fonts

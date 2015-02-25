@@ -1,4 +1,4 @@
-## Interface: 60000
+## Interface: 60100
 ## Title: Reckoner's ProMending
 ## Notes: Reckoner's ProMending is a Priest addon that gives you a timer bar showing you which unit currently has your Prayer of Mending with how many charges and time left.
 ## Author: Reckoner

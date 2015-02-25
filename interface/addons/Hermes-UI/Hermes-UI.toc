@@ -1,4 +1,4 @@
-## Interface: 60000
+## Interface: 60100
 ## Title: Hermes [|cffeda55fUI|r]
 ## Author: Virtual (virtual#1157 @ US-Alleria)
 ## Notes: UI plugin for Hermes

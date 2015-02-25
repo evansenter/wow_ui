@@ -1,0 +1,12 @@
+tag v6.1.0-1
+d80373ab523447fdcf0b87de1665c81c8b6ec2e3
+Elvador <>
+2015-02-25 00:00:05 +0100
+
+Tagging as v6.1.0-1
+
+
+--------------------
+
+Elvador:
+	- ToC bump

@@ -1,4 +1,4 @@
-﻿## Interface: 60000
+## Interface: 60100
 ## Title: Raid Frame Indicators
 
 ## Version: 1.8

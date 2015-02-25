@@ -1,4 +1,4 @@
-## Interface: 60000
+## Interface: 60100
 ## Version: 15.01.14
 ## Title: TipTacOptions
 ## Author: Aezay (Earthen Ring EU)

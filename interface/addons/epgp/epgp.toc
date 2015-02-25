@@ -1,4 +1,4 @@
-## Interface: 60000
+## Interface: 60100
 ## Title: EPGP
 ## Notes: Effort Points/Gear Points Loot System
 ## Author: Alkis Evlogimenos

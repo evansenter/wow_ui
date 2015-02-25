@@ -1,4 +1,4 @@
-﻿## Interface: 60000
+## Interface: 60100
 ## X-Compatible-With: 50400
 ## Title: Masque Skinner: ShadowedUF
 ## Version: 1.5.2

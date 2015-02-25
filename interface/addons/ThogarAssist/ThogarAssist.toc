@@ -1,11 +1,11 @@
-## Interface: 60000
+## Interface: 60100
 ## Title: Thogar Assist
 ## Notes: Displays incoming trains in the Thogar encounter
 ## DefaultState: enabled
 ## Author: Elvador
 ## SavedVariables: ThogarAssistDB
 ## OptionalDeps: Ace3
-## X-Curse-Packaged-Version: v6.0.3-10
+## X-Curse-Packaged-Version: v6.1.0-1
 ## X-Curse-Project-Name: Thogar Assist
 ## X-Curse-Project-ID: thogar-assist
 ## X-Curse-Repository-ID: wow/thogar-assist/mainline

@@ -1,4 +1,4 @@
-## Interface: 60000
+## Interface: 60100
 ## Title: Deadly Boss Mods Profiles
 ## Notes: AceDB profiles for Deadly Boss Mods.
 ## Version: 1.0.7
