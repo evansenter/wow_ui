@@ -6,7 +6,7 @@ if not DataStore then return end
 
 local addonName = "DataStore_Garrisons"
 
-_G[addonName] = LibStub("AceAddon-3.0"):NewAddon(addonName, "AceConsole-3.0", "AceEvent-3.0")
+_G[addonName] = LibStub("AceAddon-3.0"):NewAddon(addonName, "AceConsole-3.0", "AceEvent-3.0", "AceComm-3.0", "AceTimer-3.0")
 
 local addon = _G[addonName]
 
@@ -34,8 +34,11 @@ local AddonDB_Defaults = {
 				numFollowersAtiLevel645 = 0,
 				numRareFollowers = 0,
 				numEpicFollowers = 0,
-				Buildings = {},		-- List of buildings
-				Followers = {},		-- List of followers
+				Buildings = {},				-- List of buildings
+				Followers = {},				-- List of followers
+				AvailableMissions = {},		-- List of available missions
+				ActiveMissions = {},			-- List of active/in-progress missions
+				ActiveMissionsInfo = {},	-- List of start times for active/in-progress missions
 			}
 		}
 	}
@@ -229,7 +232,7 @@ local function ScanFollowers()
 	local name		-- follower name
 	local link		-- follower link
 	local id			-- follower id
-	local rarity, level, iLevel, ability1, ability2, ability3, ability4
+	local rarity, level, iLevel, ability1, ability2, ability3, ability4, trait1, trait2, trait3, trait4
 	
 	local numFollowers = 0	-- number of followers
 	local num100 = 0	-- number of followers at level 100
@@ -266,21 +269,22 @@ local function ScanFollowers()
 		if id and id ~= 0 then
 			IncTableIndex(counters, C_Garrison.GetFollowerAbilityCounterMechanicInfo(id))
 		end
-		
-		-- id = tonumber(id)
-		-- if not id or id == 0 then return end	-- exit if id is invalid
-
-		-- local counterID = C_Garrison.GetFollowerAbilityCounterMechanicInfo(id)
-		-- if not counters[counterID] then
-			-- counters[counterID] = 0
-		-- end
-		-- counters[counterID] = counters[counterID] + 1
 	end
+
+	local isInactive		-- is a follower inactive or not ?
 	
 	for k, follower in pairs(followersList) do
 		name = follower.name
 		id = follower.followerID		-- by default, the id should be this one (numeric)
-
+		
+		isInactive = nil
+		if type(follower.followerID) == "string" then	-- if the type is string, it's a GUID
+			local status = C_Garrison.GetFollowerStatus(follower.followerID)
+			if status and status == GARRISON_FOLLOWER_INACTIVE then
+				isInactive = true
+			end
+		end
+		
 		if follower.isCollected then
 			-- if the follower is collected, the id will be a GUID (string)
 			-- therefore, it has to be extracted from the link
@@ -294,6 +298,7 @@ local function ScanFollowers()
 			info.xp = follower.xp
 			info.levelXP = follower.levelXP
 			info.link = link
+			info.isInactive = isInactive
 			-- followers[name] = info
 			followers[id] = info
 			
@@ -351,10 +356,98 @@ local function ScanFollowers()
 	c.AbilityCounters = counters
 	
 	addon.ThisCharacter.lastUpdate = time()
+	
+	addon:SendMessage("DATASTORE_GARRISON_FOLLOWERS_UPDATED")
 end
 
 local function ScanResourceCollectionTime()
 	addon.ThisCharacter.lastResourceCollection = time()
+end
+
+local function ScanAvailableMissions()
+	local missionsList = C_Garrison.GetAvailableMissions()
+	if not missionsList then return end
+	
+	local missions = addon.ThisCharacter.AvailableMissions
+	wipe(missions)
+
+	for k, mission in pairs(missionsList) do
+		local info = {}
+		local id = mission.missionID
+		
+		info.cost = mission.cost
+		info.durationSeconds = mission.durationSeconds
+		info.level = mission.level
+		info.iLevel = mission.iLevel
+		info.type = mission.type
+		info.typeAtlas = mission.typeAtlas
+		
+		-- name : C_Garrison.GetMissionName
+		-- link : C_Garrison.GetMissionLink
+		-- num followers :  C_Garrison.GetMissionMaxFollowers
+		-- rewards + type : C_Garrison.GetMissionRewardInfo
+		
+		-- expiration ??
+
+		missions[id] = info
+	end
+	
+	addon.ThisCharacter.lastUpdate = time()
+end
+
+local function ScanActiveMissions()
+	local missionsList = C_Garrison.GetInProgressMissions()
+	if not missionsList then return end
+	
+	local missions = addon.ThisCharacter.ActiveMissions
+	wipe(missions)
+	
+	for k, mission in pairs(missionsList) do
+		local info = {}
+		local id = mission.missionID
+		
+		info.cost = mission.cost
+		info.durationSeconds = mission.durationSeconds
+		info.level = mission.level
+		info.iLevel = mission.iLevel
+		info.type = mission.type
+		info.typeAtlas = mission.typeAtlas
+				
+		if mission.followers then
+			info.followers = {}
+			for _, followerGUID in pairs(mission.followers) do
+				local link = C_Garrison.GetFollowerLink(followerGUID)
+				local id = link:match("garrfollower:(%d+)")
+				table.insert(info.followers, tonumber(id))
+			end
+		end
+
+		-- rewards + type : C_Garrison.GetMissionRewardInfo
+		missions[id] = info
+	end
+
+	addon.ThisCharacter.lastUpdate = time()
+end
+
+local function ScanActiveMissionInfo(missionID)
+	if type(missionID) ~= "number" then return end
+	
+	-- Save the mission start time separately.
+	-- The list of active missions does not provide a duration in seconds (only text) or 
+	-- a timestamp for the actual start time of that mission.. so keep track of it manually
+
+	-- Note: the times are kept in a separate table
+	--  this ensures that if the events GARRISON_MISSION_STARTED & GARRISON_MISSION_LIST_UPDATE 
+	--  are triggered in a different order, the system will not fail.
+	
+	local missionInfo = addon.ThisCharacter.ActiveMissionsInfo
+	local info = {}
+	
+	info.startTime = time()
+	local _, _, _, successChance = C_Garrison.GetPartyMissionInfo(missionID)
+	info.successChance = successChance
+	
+	missionInfo[missionID] = info
 end
 
 -- *** Event Handlers ***
@@ -392,6 +485,21 @@ local function OnShowLootToast(event, lootType, link, quantity, specID, sex, isP
 	if link and link:match("currency:824") and lootSource == 10 then	
 		ScanResourceCollectionTime()
 	end
+end
+
+local function OnGarrisonMissionListUpdate()
+	ScanAvailableMissions()
+	ScanActiveMissions()
+end
+
+local function OnGarrisonMissionStarted(event, missionID)
+	-- ScanAvailableMissions() not needed, done by the list update
+	-- only re-scan in progress
+	ScanActiveMissionInfo(missionID)
+end
+
+local function OnGarrisonMissionFinished()
+	ScanAvailableMissions()
 end
 
 local function OnAddonLoaded(event, addonName)
@@ -483,6 +591,57 @@ local function _GetUncollectedResources(character)
 	return GetNumUncollectedResources(character.lastResourceCollection)
 end
 
+local function _GetAvailableMissions(character)
+	return character.AvailableMissions
+end
+
+local function _GetAvailableMissionInfo(character, id)
+	local mission = character.AvailableMissions[id]
+	if not mission then return end
+
+	return mission.type, mission.typeAtlas, mission.level, mission.iLevel, mission.cost, mission.durationSeconds
+end
+
+local function _GetNumAvailableMissions(character)
+	local count = 0
+	
+	for k, v in pairs(character.AvailableMissions) do
+		count = count + 1
+	end
+	
+	return count
+end
+
+local function _GetActiveMissions(character)
+	return character.ActiveMissions
+end
+
+local function _GetActiveMissionInfo(character, id)
+	local mission = character.ActiveMissions[id]
+	if not mission then return end
+
+	local remainingTime, successChance
+	
+	if character.ActiveMissionsInfo[id] then
+		local info = character.ActiveMissionsInfo[id]
+		successChance = info.successChance
+		remainingTime = mission.durationSeconds - (time() - info.startTime)
+		remainingTime = (remainingTime > 0) and remainingTime or 0
+	end
+	
+	return mission.type, mission.typeAtlas, mission.level, mission.iLevel, mission.cost, mission.durationSeconds, mission.followers, remainingTime, successChance
+end
+
+local function _GetNumActiveMissions(character)
+	local count = 0
+	
+	for k, v in pairs(character.ActiveMissions) do
+		count = count + 1
+	end
+	
+	return count
+end
+
 local PublicMethods = {
 	GetFollowers = _GetFollowers,
 	GetFollowerInfo = _GetFollowerInfo,
@@ -498,6 +657,12 @@ local PublicMethods = {
 	GetNumEpicFollowers = _GetNumEpicFollowers,
 	GetBuildingInfo = _GetBuildingInfo,
 	GetUncollectedResources = _GetUncollectedResources,
+	GetAvailableMissions = _GetAvailableMissions,
+	GetAvailableMissionInfo = _GetAvailableMissionInfo,
+	GetNumAvailableMissions = _GetNumAvailableMissions,
+	GetActiveMissions = _GetActiveMissions,
+	GetActiveMissionInfo = _GetActiveMissionInfo,
+	GetNumActiveMissions = _GetNumActiveMissions,
 }
 
 function addon:OnInitialize()
@@ -517,20 +682,38 @@ function addon:OnInitialize()
 	DataStore:SetCharacterBasedMethod("GetNumEpicFollowers")
 	DataStore:SetCharacterBasedMethod("GetBuildingInfo")
 	DataStore:SetCharacterBasedMethod("GetUncollectedResources")
+	DataStore:SetCharacterBasedMethod("GetAvailableMissions")
+	DataStore:SetCharacterBasedMethod("GetAvailableMissionInfo")
+	DataStore:SetCharacterBasedMethod("GetNumAvailableMissions")
+	DataStore:SetCharacterBasedMethod("GetActiveMissions")
+	DataStore:SetCharacterBasedMethod("GetActiveMissionInfo")
+	DataStore:SetCharacterBasedMethod("GetNumActiveMissions")
 end
 
 function addon:OnEnable()
-	-- addon:RegisterEvent("PLAYER_ALIVE", OnPlayerAlive)
+	-- Followers
 	addon:RegisterEvent("GARRISON_FOLLOWER_ADDED", OnFollowerAdded)
 	addon:RegisterEvent("GARRISON_FOLLOWER_LIST_UPDATE", OnFollowerListUpdate)
 	addon:RegisterEvent("GARRISON_FOLLOWER_REMOVED", OnFollowerRemoved)
 	addon:RegisterEvent("ADDON_LOADED", OnAddonLoaded)
 	
-	-- addon:RegisterEvent("GARRISON_UPDATE", OnGarrisonUpdate)
+	-- Buildings
 	addon:RegisterEvent("GARRISON_BUILDING_ACTIVATED", OnGarrisonBuildingActivated)
 	addon:RegisterEvent("GARRISON_BUILDING_UPDATE", OnGarrisonBuildingUpdate)
 	addon:RegisterEvent("GARRISON_BUILDING_REMOVED", OnGarrisonBuildingRemoved)
 	addon:RegisterEvent("SHOW_LOOT_TOAST", OnShowLootToast)
+	
+	-- Missions
+	addon:ScheduleTimer(function()
+			-- To avoid the long list of GARRISON_MISSION_LIST_UPDATE at startup, make the initial scan 3 seconds later ..
+			ScanAvailableMissions()
+
+			-- .. then register the event
+			addon:RegisterEvent("GARRISON_MISSION_LIST_UPDATE", OnGarrisonMissionListUpdate)
+		end, 3)	
+	
+	addon:RegisterEvent("GARRISON_MISSION_STARTED", OnGarrisonMissionStarted)
+	addon:RegisterEvent("GARRISON_MISSION_FINISHED", OnGarrisonMissionFinished)
 	
 	addon:SetupOptions()
 	if GetOption("ReportUncollected") then
@@ -547,5 +730,8 @@ function addon:OnDisable()
 	addon:UnregisterEvent("GARRISON_BUILDING_UPDATE")
 	addon:UnregisterEvent("GARRISON_BUILDING_REMOVED")
 	addon:UnregisterEvent("SHOW_LOOT_TOAST")
+	addon:UnregisterEvent("GARRISON_MISSION_LIST_UPDATE")
+	addon:UnregisterEvent("GARRISON_MISSION_STARTED")
+	addon:UnregisterEvent("GARRISON_MISSION_FINISHED")
 	addon:UnregisterEvent("ADDON_LOADED")
 end

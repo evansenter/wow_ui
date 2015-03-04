@@ -3,8 +3,8 @@ DeathNoteDB = {
 	["profileKeys"] = {
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Metal - Illidan"] = "Metal - Illidan",
-		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
+		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Evan - Illidan"] = "Evan - Illidan",
 		["Natal - Illidan"] = "Natal - Illidan",
 		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
@@ -20,13 +20,11 @@ DeathNoteDB = {
 			},
 			["display"] = {
 				["y"] = 151.499877929688,
-				["h"] = 773.000244140625,
 				["namelist"] = 2,
-				["w"] = 796.999938964844,
 				["x"] = 45.4998474121094,
+				["w"] = 796.999938964844,
+				["h"] = 773.000244140625,
 			},
-		},
-		["Combustion - Illidan"] = {
 		},
 		["Comet - Illidan"] = {
 			["display_filters"] = {
@@ -44,6 +42,8 @@ DeathNoteDB = {
 				["x"] = 59.5002746582031,
 			},
 			["max_deaths"] = 75,
+		},
+		["Combustion - Illidan"] = {
 		},
 		["Evan - Illidan"] = {
 		},

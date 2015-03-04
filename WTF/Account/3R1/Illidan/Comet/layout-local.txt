@@ -16,8 +16,8 @@ H: 150
 Frame: frmBulkOrderReminderPoint
 FrameLevel: 1
 Anchor: BOTTOM
-X: 0
-Y: 249
+X: 10
+Y: 207
 W: 1
 H: 1
 Frame: DBMMinimapButton

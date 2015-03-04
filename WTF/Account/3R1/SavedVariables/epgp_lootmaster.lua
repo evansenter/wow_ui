@@ -14,16 +14,16 @@ EPGPLootMaster = {
 	["profiles"] = {
 		["Metal - Illidan"] = {
 		},
-		["Natal - Illidan"] = {
-		},
-		["Comet - Illidan"] = {
-			["hideMLOnCombat"] = false,
-		},
 		["Evan - Illidan"] = {
+		},
+		["Combustion - Illidan"] = {
+		},
+		["Natal - Illidan"] = {
 		},
 		["Centromere - Dark Iron"] = {
 		},
-		["Combustion - Illidan"] = {
+		["Comet - Illidan"] = {
+			["hideMLOnCombat"] = false,
 		},
 	},
 }

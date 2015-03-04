@@ -44,7 +44,7 @@ ActionBarSaverDB = {
 				[84] = "spell|6673||Battle Shout||",
 				[100] = "spell|1680||Whirlwind||",
 				[17] = "spell|6673||Battle Shout||",
-				[35] = "spell|158737||Blacksmithing||",
+				[69] = "macro|69||Intervene|Interface\\Icons\\Ability_Warrior_VictoryRush|#showtooltip Intervene/n/cast [@mouseover,help,nodead] Intervene",
 				[85] = "spell|23881||Bloodthirst||",
 				[51] = "spell|57755||Heroic Throw||",
 				[26] = "macro|26||Pull|Interface\\Icons\\INV_Gizmo_RocketBootExtreme|/i DBM Pull./n/dbm pull 10",
@@ -62,7 +62,7 @@ ActionBarSaverDB = {
 				[98] = "spell|85288||Raging Blow||",
 				[37] = "macro|37||Target Focus|Interface\\Icons\\Spell_Magic_PolymorphRabbit|/tar focus",
 				[89] = "spell|6552||Pummel||",
-				[69] = "macro|69||Intervene|Interface\\Icons\\Ability_Warrior_VictoryRush|#showtooltip Intervene/n/cast [@mouseover,help,nodead] Intervene",
+				[35] = "spell|158737||Blacksmithing||",
 				[61] = "macro|61||Tier 7|Interface\\Icons\\warrior_talent_icon_ravager|#showtooltip Ravager/n/cast Blood Fury/n/cast [talent:7/2] Ravager",
 				[74] = "spell|100130||Wild Strike||",
 				[90] = "spell|1715||Hamstring||",
@@ -81,7 +81,7 @@ ActionBarSaverDB = {
 				[39] = "macro|39||Deathnote|Interface\\Icons\\Ability_Hunter_MurderofCrows|/deathnote",
 				[77] = "spell|6552||Pummel||",
 				[93] = "macro|93||Vigilance|Interface\\Icons\\Ability_Warrior_Vigilance|#showtooltip Vigilance/n/cast [@mouseover,help,nodead][] Vigilance",
-				[65] = "macro|65||Dev. / HS|Interface\\Icons\\Ability_Rogue_Ambush|#showtooltip/n/cast Heroic Strike/n/cast Devastate",
+				[33] = "spell|83958||Mobile Banking|Guild Perk|",
 				[63] = "spell|18499||Berserker Rage||",
 				[17] = "spell|6673||Battle Shout||",
 				[94] = "spell|871||Shield Wall||",
@@ -94,9 +94,9 @@ ActionBarSaverDB = {
 				[80] = "spell|23920||Spell Reflection||",
 				[96] = "spell|6673||Battle Shout||",
 				[73] = "spell|5308||Execute||",
-				[33] = "spell|83958||Mobile Banking|Guild Perk|",
-				[69] = "macro|69||Intervene|Interface\\Icons\\Ability_Warrior_VictoryRush|#showtooltip Intervene/n/cast [@mouseover,help,nodead] Intervene",
-				[97] = "spell|20243||Devastate||",
+				[65] = "macro|65||Dev. / HS|Interface\\Icons\\Ability_Rogue_Ambush|#showtooltip/n/cast Heroic Strike/n/cast Devastate",
+				[35] = "spell|158752||Leatherworking||",
+				[49] = "spell|6343||Thunder Clap||",
 				[57] = "item|5512||Healthstone",
 				[66] = "macro|66||Tier 6|Interface\\Icons\\Ability_Warrior_Bladestorm|#showtooltip/n/cast [talent:6/1] Avatar; [talent:6/2] Bloodbath; [talent:6/3] Bladestorm/n/cast Blood Fury",
 				[51] = "spell|57755||Heroic Throw||",
@@ -104,13 +104,13 @@ ActionBarSaverDB = {
 				[29] = "macro|29||Macro|Interface\\Icons\\Ability_Spy|/mac",
 				[34] = "spell|83968||Mass Resurrection|Guild Perk|",
 				[83] = "spell|18499||Berserker Rage||",
-				[50] = "macro|50||Heroic Leap|Interface\\Icons\\Ability_HeroicLeap|#showtooltip/n/cast !Heroic Leap",
+				[99] = "spell|6572||Revenge||",
 				[58] = "item|109223||Healing Tonic",
 				[68] = "macro|68||Shield Charge|Interface\\Icons\\Ability_Defend|#showtooltip Shield Block/n/cast Shield Block/n/cast Blood Fury",
 				[26] = "macro|26||Pull|Interface\\Icons\\INV_Gizmo_RocketBootExtreme|/i DBM Pull./n/dbm pull 10",
 				[100] = "spell|118000||Dragon Roar||",
 				[71] = "spell|100||Charge||",
-				[35] = "spell|158752||Leatherworking||",
+				[69] = "macro|69||Intervene|Interface\\Icons\\Ability_Warrior_VictoryRush|#showtooltip Intervene/n/cast [@mouseover,help,nodead] Intervene",
 				[85] = "spell|20243||Devastate||",
 				[101] = "spell|6552||Pummel||",
 				[103] = "spell|1160||Demoralizing Shout||",
@@ -125,12 +125,12 @@ ActionBarSaverDB = {
 				[72] = "spell|114192||Mocking Banner||",
 				[88] = "spell|118000||Dragon Roar||",
 				[104] = "spell|1715||Hamstring||",
-				[99] = "spell|6572||Revenge||",
+				[50] = "macro|50||Heroic Leap|Interface\\Icons\\Ability_HeroicLeap|#showtooltip/n/cast !Heroic Leap",
 				[37] = "macro|37||Target Focus|Interface\\Icons\\Spell_Magic_PolymorphRabbit|/tar focus",
 				[89] = "spell|6552||Pummel||",
 				[105] = "macro|105||Vigilance|Interface\\Icons\\Ability_Warrior_Vigilance|#showtooltip Vigilance/n/cast [@mouseover,help,nodead][] Vigilance",
 				[61] = "spell|355||Taunt||",
-				[49] = "spell|6343||Thunder Clap||",
+				[97] = "spell|20243||Devastate||",
 				[90] = "spell|5246||Intimidating Shout||",
 				[2] = "spell|114030||Vigilance||",
 			},
@@ -980,7 +980,7 @@ ActionBarSaverDB = {
 				[58] = "item|5512||Healthstone",
 				[68] = "spell|115080||Touch of Death||",
 				[84] = "spell|115921||Legacy of the Emperor||",
-				[71] = "spell|121827||Roll||",
+				[36] = "spell|51005||Milling||",
 				[35] = "spell|110417||Inscription||",
 				[85] = "spell|100780||Jab||",
 				[51] = "spell|119996||Transcendence: Transfer||",
@@ -989,7 +989,7 @@ ActionBarSaverDB = {
 				[86] = "spell|100787||Tiger Palm||",
 				[26] = "macro|26||Pull!|Interface\\Icons\\Spell_Shadow_UnstableAfllictions|/dbm pull 10",
 				[30] = "equipmentset|Deeps|",
-				[36] = "spell|51005||Milling||",
+				[71] = "spell|121827||Roll||",
 				[87] = "spell|100784||Blackout Kick||",
 				[52] = "spell|137562||Nimble Brew||",
 				[60] = "item|6948||Hearthstone",
@@ -1006,9 +1006,9 @@ ActionBarSaverDB = {
 				[67] = "spell|101545||Flying Serpent Kick||",
 			},
 			["ww"] = {
-				"macro|1||Jab|Interface\\Icons\\ability_monk_jab|#showtooltip Jab/n/use [nochanneling:Fists of Fury]Jab", -- [1]
+				"macro|1||Jab|Interface\\Icons\\INV_Spear_03|#showtooltip Jab/n/use [nochanneling:Fists of Fury]Jab", -- [1]
 				"macro|2||Tiger Palm|Interface\\Icons\\ability_monk_tigerpalm|#showtooltip Tiger Palm/n/use [nochanneling:Fists of Fury]Tiger Palm", -- [2]
-				"macro|3||Blackout Kick|Interface\\Icons\\ability_monk_chiexplosion|#showtooltip Blackout Kick/n/use [nochanneling:Fists of Fury]Blackout Kick", -- [3]
+				"macro|3||Blackout Kick|Interface\\Icons\\ability_monk_roundhousekick|#showtooltip Blackout Kick/n/use [nochanneling:Fists of Fury]Blackout Kick", -- [3]
 				"macro|4||RSK|Interface\\Icons\\ability_monk_risingsunkick|#showtooltip Rising Sun Kick/n/use [nochanneling:Fists of Fury]Rising Sun Kick", -- [4]
 				"spell|116705||Spear Hand Strike||", -- [5]
 				"spell|115078||Paralysis||", -- [6]
@@ -1018,9 +1018,9 @@ ActionBarSaverDB = {
 				"spell|115203||Fortifying Brew||", -- [10]
 				"macro|11||Detox|Interface\\Icons\\ability_rogue_imrovedrecuperate|#showtooltip/n/use [@mouseover,help,nodead][]Detox", -- [11]
 				"spell|116781||Legacy of the White Tiger||", -- [12]
-				"macro|13||Jab|Interface\\Icons\\ability_monk_jab|#showtooltip Jab/n/use [nochanneling:Fists of Fury]Jab", -- [13]
+				"macro|13||Jab|Interface\\Icons\\INV_Spear_03|#showtooltip Jab/n/use [nochanneling:Fists of Fury]Jab", -- [13]
 				"macro|14||Tiger Palm|Interface\\Icons\\ability_monk_tigerpalm|#showtooltip Tiger Palm/n/use [nochanneling:Fists of Fury]Tiger Palm", -- [14]
-				"macro|15||Blackout Kick|Interface\\Icons\\ability_monk_chiexplosion|#showtooltip Blackout Kick/n/use [nochanneling:Fists of Fury]Blackout Kick", -- [15]
+				"macro|15||Blackout Kick|Interface\\Icons\\ability_monk_roundhousekick|#showtooltip Blackout Kick/n/use [nochanneling:Fists of Fury]Blackout Kick", -- [15]
 				"macro|16||RSK|Interface\\Icons\\ability_monk_risingsunkick|#showtooltip Rising Sun Kick/n/use [nochanneling:Fists of Fury]Rising Sun Kick", -- [16]
 				"spell|116705||Spear Hand Strike||", -- [17]
 				"spell|115078||Paralysis||", -- [18]
@@ -1036,7 +1036,7 @@ ActionBarSaverDB = {
 				"macro|28||Combat Log|Interface\\Icons\\PASSIVE_MONK_TEACHINGSOFMONASTERY|/combatlog", -- [28]
 				"macro|29||Macro|Interface\\Icons\\Ability_Spy|/mac", -- [29]
 				"macro|30||Focus|Interface\\Icons\\Ability_Priest_Phantasm|/focus", -- [30]
-				"spell|161332||Call to Arms||", -- [31]
+				"spell|161691||Garrison Ability||", -- [31]
 				"item|109217||Draenic Agility Potion", -- [32]
 				"macro|33||Transcendence|Interface\\Icons\\Spell_Shaman_SpectralTransformation|#showtooltip/n/use [nomod]Transcendence: Transfer;[mod:shift][mod:alt]Transcendence", -- [33]
 				"spell|83968||Mass Resurrection|Guild Perk|", -- [34]
@@ -1056,13 +1056,13 @@ ActionBarSaverDB = {
 				nil, -- [48]
 				"macro|49||SCK|Interface\\Icons\\ability_monk_cranekick_new|#showtooltip Spinning Crane Kick/n/use [nochanneling:Fists of Fury]Spinning Crane Kick", -- [49]
 				"macro|50||Belt|Interface\\ICONS\\INV_Leather_RaidMonk_O_01Belt.blp|/use 6", -- [50]
-				"macro|51||Tier 3|Interface\\Icons\\ability_monk_ascension|#showtooltip/n/use [talent:3/1]Power Strikes;[talent:3/2]Ascension;[talent:3/3]Chi Brew", -- [51]
+				"macro|51||Tier 3|Interface\\Icons\\ability_monk_chibrew|#showtooltip/n/use [talent:3/1]Power Strikes;[talent:3/2]Ascension;[talent:3/3]Chi Brew", -- [51]
 				"spell|137562||Nimble Brew||", -- [52]
 				"macro|53||Cancel SEF|Interface\\Icons\\spell_sandstorm|#showtooltip Storm, Earth, and Fire/n/cancelaura Storm, Earth, and Fire", -- [53]
-				"macro|54||Tier 5|Interface\\Icons\\spell_monk_diffusemagic|#showtooltip/n/use [talent:5/1]Healing Elixirs;[talent:5/2]Dampen Harm;[talent:5/3]Diffuse Magic", -- [54]
+				"macro|54||Tier 5|Interface\\Icons\\ability_monk_dampenharm|#showtooltip/n/use [talent:5/1]Healing Elixirs;[talent:5/2]Dampen Harm;[talent:5/3]Diffuse Magic", -- [54]
 				"spell|115176||Zen Meditation||", -- [55]
 				"spell|117952||Crackling Jade Lightning||", -- [56]
-				"macro|57||Tier 7|Interface\\Icons\\ability_monk_chiexplosion|#showtooltip/n/use [talent:7/1]Soul Dance;[talent:7/2]Chi Explosion;[talent:7/3]Serenity/n/use 14", -- [57]
+				"macro|57||Tier 7|Interface\\Icons\\ability_monk_serenity|#showtooltip/n/use [talent:7/1]Soul Dance;[talent:7/2]Chi Explosion;[talent:7/3]Serenity/n/use 14", -- [57]
 				"item|109223||Healing Tonic", -- [58]
 				nil, -- [59]
 				"macro|60||HS / GHS|Interface\\ICONS\\INV_MISC_RUNE_01.BLP|#showtooltip/n/use [nomod]Hearthstone;[mod:shift][mod:alt]Garrison Hearthstone", -- [60]
@@ -1073,14 +1073,14 @@ ActionBarSaverDB = {
 				"spell|122470||Touch of Karma||", -- [65]
 				"macro|66||TEB|Interface\\Icons\\ability_monk_tigereyebrandy|#showtooltip Tigereye Brew/n/use 13/n/use 14/n/cast Tigereye Brew", -- [66]
 				"spell|101545||Flying Serpent Kick||", -- [67]
-				"macro|68||Tier 6|Interface\\Icons\\ability_monk_summontigerstatue|#showtooltip/n/use [talent:6/2,nochanneling:Fists of Fury]Invoke Xuen, the White Tiger;[talent:6/1,nochanneling:Fists of Fury]Rushing Jade Wind/n/use 14", -- [68]
+				"macro|68||Tier 6|Interface\\Icons\\ability_monk_summontigerstatue|#showtooltip/n/use [talent:6/2,nochanneling:Fists of Fury]Invoke Xuen, the White Tiger;[talent:6/1,nochanneling:Fists of Fury]Rushing Jade Wind", -- [68]
 				"spell|115072||Expel Harm||", -- [69]
-				"macro|70||Tier 2|Interface\\Icons\\Spell_Arcane_ArcaneTorrent|#showtooltip/n/use [talent:2/1,nochanneling:Fists of Fury]Chi Wave;[talent:2/2,@player,nochanneling:Fists of Fury]Zen Sphere;[talent:2/3,nochanneling:Fists of Fury]Chi Burst", -- [70]
+				"macro|70||Tier 2|Interface\\Icons\\ability_monk_chiwave|#showtooltip/n/use [talent:2/1,nochanneling:Fists of Fury]Chi Wave;[talent:2/2,@player,nochanneling:Fists of Fury]Zen Sphere;[talent:2/3,nochanneling:Fists of Fury]Chi Burst", -- [70]
 				"spell|109132||Roll||", -- [71]
 				"spell|115178||Resuscitate||", -- [72]
-				"spell|100780||Jab||", -- [73]
+				"spell|115698||Jab||", -- [73]
 				"spell|100787||Tiger Palm||", -- [74]
-				"spell|152174||Chi Explosion||", -- [75]
+				"spell|100784||Blackout Kick||", -- [75]
 				"spell|107428||Rising Sun Kick||", -- [76]
 				"spell|116705||Spear Hand Strike||", -- [77]
 				"spell|115078||Paralysis||", -- [78]
@@ -1090,9 +1090,9 @@ ActionBarSaverDB = {
 				"spell|115203||Fortifying Brew||", -- [82]
 				"macro|83||Detox|Interface\\Icons\\ability_rogue_imrovedrecuperate|#showtooltip/n/use [@mouseover,help,nodead][]Detox", -- [83]
 				"spell|116781||Legacy of the White Tiger||", -- [84]
-				"spell|100780||Jab||", -- [85]
+				"spell|115698||Jab||", -- [85]
 				"spell|100787||Tiger Palm||", -- [86]
-				"spell|152174||Chi Explosion||", -- [87]
+				"spell|100784||Blackout Kick||", -- [87]
 				nil, -- [88]
 				"spell|116705||Spear Hand Strike||", -- [89]
 				nil, -- [90]
@@ -1104,7 +1104,7 @@ ActionBarSaverDB = {
 				"spell|126892||Zen Pilgrimage||", -- [96]
 			},
 			["bm"] = {
-				"spell|100780||Jab||", -- [1]
+				"spell|115698||Jab||", -- [1]
 				"spell|100787||Tiger Palm||", -- [2]
 				"spell|100784||Blackout Kick||", -- [3]
 				"macro|4||Keg Smash|Interface\\Icons\\achievement_brewery_2|#showtooltip Keg Smash/n/use Keg Smash", -- [4]
@@ -1152,12 +1152,12 @@ ActionBarSaverDB = {
 				nil, -- [46]
 				nil, -- [47]
 				"item|76096||Darkwater Potion", -- [48]
-				"macro|49||SCK|Interface\\Icons\\ability_monk_rushingjadewind|#showtooltip Spinning Crane Kick/n/use [nochanneling:Fists of Fury]Spinning Crane Kick", -- [49]
+				"macro|49||SCK|Interface\\Icons\\ability_monk_cranekick_new|#showtooltip Spinning Crane Kick/n/use [nochanneling:Fists of Fury]Spinning Crane Kick", -- [49]
 				"macro|50||Belt|interface\\ICONS\\INV_Leather_RaidDruid_O_01Buckle.blp|/use 6", -- [50]
 				"macro|51||Tier 3|Interface\\Icons\\ability_monk_ascension|#showtooltip/n/use [talent:3/1]Power Strikes;[talent:3/2]Ascension;[talent:3/3]Chi Brew", -- [51]
 				"spell|137562||Nimble Brew||", -- [52]
 				"spell|115315||Summon Black Ox Statue||", -- [53]
-				"macro|54||Tier 5|Interface\\Icons\\ability_monk_jasmineforcetea|#showtooltip/n/use [talent:5/1]Healing Elixirs;[talent:5/2]Dampen Harm;[talent:5/3]Diffuse Magic", -- [54]
+				"macro|54||Tier 5|Interface\\Icons\\ability_monk_dampenharm|#showtooltip/n/use [talent:5/1]Healing Elixirs;[talent:5/2]Dampen Harm;[talent:5/3]Diffuse Magic", -- [54]
 				"spell|115176||Zen Meditation||", -- [55]
 				"spell|117952||Crackling Jade Lightning||", -- [56]
 				"macro|57||Tier 7|Interface\\Icons\\ability_monk_serenity|#showtooltip/n/use [talent:7/1]Soul Dance;[talent:7/2]Chi Explosion;[talent:7/3]Serenity/n/use 14", -- [57]
@@ -1171,12 +1171,12 @@ ActionBarSaverDB = {
 				"spell|115181||Breath of Fire||", -- [65]
 				"spell|115308||Elusive Brew|Active Mitigation|", -- [66]
 				"macro|67||Guard|Interface\\Icons\\ability_monk_guard|#showtooltip Guard/n/use 13/n/cast Guard", -- [67]
-				"macro|68||Tier 6|Interface\\Icons\\ability_monk_rushingjadewind|#showtooltip/n/use [talent:6/2,nochanneling:Fists of Fury]Invoke Xuen, the White Tiger;[talent:6/1,nochanneling:Fists of Fury]Rushing Jade Wind", -- [68]
+				"macro|68||Tier 6|Interface\\Icons\\ability_monk_summontigerstatue|#showtooltip/n/use [talent:6/2,nochanneling:Fists of Fury]Invoke Xuen, the White Tiger;[talent:6/1,nochanneling:Fists of Fury]Rushing Jade Wind", -- [68]
 				"spell|115072||Expel Harm||", -- [69]
-				"macro|70||Tier 2|Interface\\Icons\\Spell_Arcane_ArcaneTorrent|#showtooltip/n/use [talent:2/1,nochanneling:Fists of Fury]Chi Wave;[talent:2/2,@player,nochanneling:Fists of Fury]Zen Sphere;[talent:2/3,nochanneling:Fists of Fury]Chi Burst", -- [70]
+				"macro|70||Tier 2|Interface\\Icons\\ability_monk_forcesphere|#showtooltip/n/use [talent:2/1,nochanneling:Fists of Fury]Chi Wave;[talent:2/2,@player,nochanneling:Fists of Fury]Zen Sphere;[talent:2/3,nochanneling:Fists of Fury]Chi Burst", -- [70]
 				"spell|109132||Roll||", -- [71]
 				"spell|115178||Resuscitate||", -- [72]
-				"spell|100780||Jab||", -- [73]
+				"spell|115698||Jab||", -- [73]
 				"spell|100787||Tiger Palm||", -- [74]
 				"spell|100784||Blackout Kick||", -- [75]
 				"spell|121253||Keg Smash||", -- [76]
@@ -1188,7 +1188,7 @@ ActionBarSaverDB = {
 				"spell|115203||Fortifying Brew||", -- [82]
 				nil, -- [83]
 				"spell|116781||Legacy of the White Tiger||", -- [84]
-				"spell|100780||Jab||", -- [85]
+				"spell|115698||Jab||", -- [85]
 				"spell|100787||Tiger Palm||", -- [86]
 				"spell|100784||Blackout Kick||", -- [87]
 				"spell|121253||Keg Smash||", -- [88]
@@ -1214,7 +1214,7 @@ ActionBarSaverDB = {
 				"spell|115203||Fortifying Brew||", -- [10]
 				"macro|11||Purge Template|Interface\\Icons\\ability_rogue_imrovedrecuperate|#showtooltip/n/use [@mouseover,help,nodead][]Detox", -- [11]
 				"spell|115921||Legacy of the Emperor||", -- [12]
-				"spell|115693||Jab||", -- [13]
+				"spell|115698||Jab||", -- [13]
 				"spell|100787||Tiger Palm||", -- [14]
 				"spell|100784||Blackout Kick||", -- [15]
 				"spell|107428||Rising Sun Kick||", -- [16]
@@ -1241,21 +1241,21 @@ ActionBarSaverDB = {
 				"macro|37||Target Focus|Interface\\Icons\\Spell_Magic_PolymorphRabbit|/tar focus", -- [37]
 				"macro|38||Extra Action|Interface\\Icons\\INV_Misc_Herb_Whispervine|/click ExtraActionButton1", -- [38]
 				"macro|39||Deathnote|Interface\\Icons\\Ability_Hunter_MurderofCrows|/deathnote", -- [39]
-				"item|111820||Swapblaster", -- [40]
-				nil, -- [41]
+				"item|118812||Flamelicked Cloak of Kaufebyrd", -- [40]
+				"item|111820||Swapblaster", -- [41]
 				nil, -- [42]
 				nil, -- [43]
 				nil, -- [44]
 				nil, -- [45]
 				nil, -- [46]
 				nil, -- [47]
-				"item|76096||Darkwater Potion", -- [48]
+				nil, -- [48]
 				"spell|116847||Rushing Jade Wind||", -- [49]
 				"macro|50||Belt|Interface\\ICONS\\INV_Leather_RaidMonk_O_01Belt.blp|/use 6", -- [50]
-				"spell|115399||Chi Brew||", -- [51]
+				"macro|51||Tier 3|Interface\\Icons\\ability_monk_chibrew|#showtooltip/n/use [talent:3/1]Power Strikes;[talent:3/2]Ascension;[talent:3/3]Chi Brew", -- [51]
 				"spell|137562||Nimble Brew||", -- [52]
 				"spell|115313||Summon Jade Serpent Statue||", -- [53]
-				"macro|54||Tier 5|Interface\\Icons\\spell_monk_diffusemagic|#showtooltip/n/use [talent:5/1]Healing Elixirs;[talent:5/2]Dampen Harm;[talent:5/3]Diffuse Magic", -- [54]
+				"macro|54||Tier 5|Interface\\Icons\\ability_monk_dampenharm|#showtooltip/n/use [talent:5/1]Healing Elixirs;[talent:5/2]Dampen Harm;[talent:5/3]Diffuse Magic", -- [54]
 				"spell|115080||Touch of Death||", -- [55]
 				"spell|117952||Crackling Jade Lightning||", -- [56]
 				"item|113842||Emblem of Caustic Healing", -- [57]
@@ -1279,11 +1279,10 @@ ActionBarSaverDB = {
 				[76] = "spell|115175||Soothing Mist||",
 				[77] = "spell|116705||Spear Hand Strike||",
 				[78] = "spell|115078||Paralysis||",
-				[85] = "spell|115693||Jab||",
+				[85] = "spell|115698||Jab||",
 				[87] = "spell|100784||Blackout Kick||",
 				[89] = "spell|116705||Spear Hand Strike||",
 				[91] = "spell|115310||Revival||",
-				[93] = "item|105438||Rook's Unlucky Talisman",
 				[97] = "spell|115151||Renewing Mist||",
 				[99] = "spell|115310||Revival||",
 				[101] = "spell|116680||Thunder Focus Tea||",

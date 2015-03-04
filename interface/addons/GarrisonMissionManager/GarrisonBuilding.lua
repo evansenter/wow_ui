@@ -46,7 +46,7 @@ local function GarrisonBuilding_UpdateBestFollowers()
    if buildings_count == 0 then return end
    wipe(best_followers)
    for plotID in pairs(building_follower_slot) do
-      local possible_followers = C_Garrison.GetPossibleFollowersForBuilding(plotID)
+      local possible_followers = c_garrison_cache.GetPossibleFollowersForBuilding[plotID]
       if possible_followers and #possible_followers > 0 then
          local best_follower
          for follower_idx = 1, #possible_followers do
@@ -73,7 +73,8 @@ end
 addon_env.GarrisonBuilding_UpdateBestFollowers = GarrisonBuilding_UpdateBestFollowers
 
 local last_broker_text
-local concat_list = {}
+addon_env.concat_list = addon_env.concat_list or {}
+local concat_list = addon_env.concat_list
 GarrisonBuilding_UpdateCurrentFollowers = function()
    if buildings_count == 0 then return end
    wipe(current_followers)
@@ -171,11 +172,6 @@ GarrisonBuilding_UpdateButtons = function()
 end
 addon_env.GarrisonBuilding_UpdateButtons = GarrisonBuilding_UpdateButtons
 
-local function GarrisonBuilding_HideTooltip()
-   return GameTooltip:Hide()
-end
-addon_env.HideTooltip = GarrisonBuilding_HideTooltip
-
 -- hide_buildings - if true, only buildings with working followers will be shown
 --                  if false, buildings that have no followers to assign will be in list too
 local function RemoveAllWorkers_TooltipSetText(self, hide_buildings)
@@ -185,7 +181,7 @@ local function RemoveAllWorkers_TooltipSetText(self, hide_buildings)
    for plotID in pairs(building_follower_slot) do
       local followerName = current_followers[plotID]
       if followerName or (not hide_buildings and not best_followers[plotID]) then
-         if idx ~= 0 then 
+         if idx ~= 0 then
             idx = idx + 1
             concat_list[idx] = "\n"
          end
@@ -215,7 +211,7 @@ local function AssignAllWorkers_TooltipSetText()
    for plotID in pairs(building_follower_slot) do
       if not current_followers[plotID] then
          local best_follower = best_followers[plotID]
-         if idx ~= 0 then 
+         if idx ~= 0 then
             idx = idx + 1
             concat_list[idx] = "\n"
          end
@@ -375,11 +371,11 @@ local function GarrisonBuilding_ButtonsInit()
    button:SetHeight(50)
    button:SetPoint("LEFT", anchor, "RIGHT", 0, 0)
    button:SetPoint("TOP", anchor.InfoBox, "TOP", 0, 0)
-   button:SetScript('OnEnter', AssignAllWorkers_TooltipShow) 
-   button:SetScript('OnLeave', GarrisonBuilding_HideTooltip)
+   button:SetScript('OnEnter', AssignAllWorkers_TooltipShow)
+   button:SetScript('OnLeave', addon_env.HideGameTooltip)
    button:SetScript("OnMouseDown", nil)
    button:SetScript("OnMouseUp", nil)
-   button:HookScript("OnShow", function(self) self:GetScript("OnDisable")(self) end)
+   button:HookScript("OnShow", addon_env.OnShowEmulateDisabled)
    gmm_buttons['assign_all_workers_disabled'] = button
 
    local button = CreateFrame("Button", nil, anchor, "UIPanelButtonTemplate")
@@ -390,7 +386,7 @@ local function GarrisonBuilding_ButtonsInit()
    button:SetPoint("TOP", anchor.InfoBox, "TOP", 0, 0)
    button:SetScript('OnClick', AssignAllWorkers)
    button:SetScript('OnEnter', AssignAllWorkers_TooltipShow)
-   button:SetScript('OnLeave', GarrisonBuilding_HideTooltip)
+   button:SetScript('OnLeave', addon_env.HideGameTooltip)
    gmm_buttons['assign_all_workers'] = button
    local prev = button
 
@@ -401,7 +397,7 @@ local function GarrisonBuilding_ButtonsInit()
    button:SetPoint("TOPLEFT", prev, "BOTTOMLEFT", 0, 0)
    button:SetScript('OnClick', RemoveAllWorkers)
    button:SetScript('OnEnter', RemoveAllWorkers_TooltipShow)
-   button:SetScript('OnLeave', GarrisonBuilding_HideTooltip)
+   button:SetScript('OnLeave', addon_env.HideGameTooltip)
    gmm_buttons['remove_all_workers'] = button
 end
 

@@ -360,7 +360,7 @@
 
 
 	<!-- The main Pawn configuration UI -->
-	<Frame name="PawnUIFrame" toplevel="true" parent="UIParent" frameStrata="MEDIUM" hidden="true" movable="true" enableMouse="true">
+	<Frame name="PawnUIFrame" toplevel="true" parent="UIParent" hidden="true" movable="true" enableMouse="true"><!-- WAS: frameStrata="MEDIUM" -->
 	 	<Anchors><Anchor point="CENTER" relativeTo="UIParent" relativePoint="CENTER" /></Anchors>
 		<Size><AbsDimension x="800" y="525" /></Size>
 
@@ -1003,7 +1003,7 @@
 						<Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="70" y="-72" /></Offset></Anchor></Anchors>
 						<Size><AbsDimension x="485" y="298" /></Size>
 						<ScrollChild>
-							<Frame name="PawnUICompareScrollContent" frameStrata="HIGH">
+							<Frame name="PawnUICompareScrollContent"><!-- WAS: frameStrata="HIGH" -->
 								<Anchors><Anchor point="TOPLEFT" /></Anchors>
 								<Size><AbsDimension x="465" y="100" /></Size>
 								<!-- Content is added dynamically, and size is updated dynamically as well. -->
@@ -1147,7 +1147,7 @@
 						<Anchors><Anchor point="TOPLEFT"><Offset><AbsDimension x="25" y="-98" /></Offset></Anchor></Anchors>
 						<Size><AbsDimension x="535" y="329" /></Size>
 						<ScrollChild>
-							<Frame name="PawnUIGemScrollContent" frameStrata="HIGH">
+							<Frame name="PawnUIGemScrollContent"><!-- WAS: frameStrata="HIGH" -->
 								<Anchors><Anchor point="TOPLEFT" /></Anchors>
 								<Size><AbsDimension x="465" y="100" /></Size>
 								<!-- Content is added dynamically, and size is updated dynamically as well. -->

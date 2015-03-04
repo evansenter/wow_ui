@@ -552,7 +552,7 @@ function PawnSetDefaultKeybindings()
 	-- default Pawn options have been set already.  Doing this multiple times is harmless.
 	if not PawnCommon then VgerCore.Fail("Can't set keybindings until Pawn starts to initialize.") return end
 
-	if PawnOptions.LastKeybindingsSet == nil  then PawnOptions.LastKeybindingsSet = 0 end
+	if PawnOptions.LastKeybindingsSet == nil then PawnOptions.LastKeybindingsSet = 0 end
 	local BindingSet = false
 	
 	-- Keybindings for opening the Pawn UI and setting comparison items.
@@ -580,7 +580,7 @@ end
 -- Sets a keybinding to its default value if it's not already assigned to something else.  Returns true if anything was changed.
 function PawnSetKeybindingIfAvailable(Key, Binding)
 	-- Is this key already bound?
-	local ExistingBinding = GetBindingAction(Key)
+	local ExistingBinding = GetBindingAction(Key, true) -- true: check overrides as well (ElvUI compatibility)
 	if not ExistingBinding or ExistingBinding == "" then
 		-- Bind this key to its default Pawn action.
 		SetBinding(Key, Binding)

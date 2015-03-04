@@ -1,7 +1,7 @@
-## Interface: 60100
+﻿## Interface: 60100
 ## Title: Raid Frame Icons
 
-## Version: 1.12
+## Version: 1.13
 ## Author: Szandos
 ## Notes: Adds raid icons the standard raid frames
 ## SavedVariables: RaidFrameIconsDB

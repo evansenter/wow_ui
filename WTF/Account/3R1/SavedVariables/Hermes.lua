@@ -3,8 +3,8 @@ HermesDB2 = {
 	["profileKeys"] = {
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Metal - Illidan"] = "Comet - Illidan",
-		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
+		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Evan - Illidan"] = "Comet - Illidan",
 		["Natal - Illidan"] = "Natal - Illidan",
 		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
@@ -21,8 +21,8 @@ HermesDB2 = {
 			[47528] = {
 				["duration"] = "4",
 			},
-			[47788] = {
-				["duration"] = "10",
+			[57994] = {
+				["duration"] = "3",
 			},
 			[48792] = {
 				["duration"] = "12",
@@ -30,8 +30,8 @@ HermesDB2 = {
 			[5394] = {
 				["duration"] = "15",
 			},
-			[57994] = {
-				["duration"] = "3",
+			[47788] = {
+				["duration"] = "10",
 			},
 			[108920] = {
 				["duration"] = "20",
@@ -57,7 +57,7 @@ HermesDB2 = {
 			[115176] = {
 				["duration"] = "8",
 			},
-			[871] = {
+			[22812] = {
 				["duration"] = "12",
 			},
 			[109964] = {
@@ -78,22 +78,22 @@ HermesDB2 = {
 			[22842] = {
 				["duration"] = "20",
 			},
-			[102342] = {
-				["duration"] = "12",
+			[96231] = {
+				["duration"] = "4",
 			},
 			[33206] = {
 				["duration"] = "8",
 			},
-			[114028] = {
+			[31224] = {
 				["duration"] = "5",
 			},
 			[102060] = {
 				["duration"] = "4",
 			},
-			[1044] = {
-				["duration"] = "6",
+			[20594] = {
+				["2ndcooldown"] = "6",
 			},
-			[22812] = {
+			[871] = {
 				["duration"] = "12",
 			},
 			[45438] = {
@@ -108,11 +108,11 @@ HermesDB2 = {
 			[5211] = {
 				["duration"] = "5",
 			},
-			[96231] = {
-				["duration"] = "4",
+			[102342] = {
+				["duration"] = "12",
 			},
-			[86659] = {
-				["duration"] = "8",
+			[49039] = {
+				["duration"] = "10",
 			},
 			[642] = {
 				["duration"] = "8",
@@ -129,14 +129,14 @@ HermesDB2 = {
 			[12975] = {
 				["duration"] = "20",
 			},
-			[61336] = {
-				["duration"] = "12",
+			[47476] = {
+				["duration"] = "5",
 			},
 			[6552] = {
 				["duration"] = "4",
 			},
-			[20594] = {
-				["2ndcooldown"] = "6",
+			[1044] = {
+				["duration"] = "6",
 			},
 			[116849] = {
 				["duration"] = "12",
@@ -177,16 +177,16 @@ HermesDB2 = {
 			[31821] = {
 				["duration"] = "6",
 			},
-			[47476] = {
-				["duration"] = "5",
+			[61336] = {
+				["duration"] = "12",
 			},
 			[48707] = {
 				["duration"] = "5",
 			},
-			[49039] = {
-				["duration"] = "10",
+			[86659] = {
+				["duration"] = "8",
 			},
-			[31224] = {
+			[114028] = {
 				["duration"] = "5",
 			},
 			[49028] = {
@@ -764,8 +764,8 @@ HermesDB2 = {
 			["Pandaren"] = "Pandaren",
 			["Goblin"] = "Goblin",
 		},
-		["clientTime"] = 14827.879,
-		["serverTime"] = 1424844539,
+		["clientTime"] = 57136.151,
+		["serverTime"] = 1425499804,
 	},
 	["profiles"] = {
 		["Colton - Dark Iron"] = {
@@ -796,11 +796,11 @@ HermesDB2 = {
 									["scale"] = 1,
 									["hideNoSender"] = false,
 									["merged"] = false,
-									["coloredBorders"] = true,
 									["w"] = 250,
+									["coloredBorders"] = true,
 									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
 									["y"] = 675.000122070313,
-									["x"] = 835.000061035156,
+									["h"] = 150,
 									["locked"] = false,
 									["cellAnchor"] = "TOPLEFT",
 									["colorNS"] = {
@@ -810,7 +810,7 @@ HermesDB2 = {
 										["b"] = 0.5,
 									},
 									["padding"] = 5,
-									["h"] = 150,
+									["x"] = 835.000061035156,
 									["colorU"] = {
 										["a"] = 1,
 										["r"] = 0.5,
@@ -1446,11 +1446,11 @@ HermesDB2 = {
 									["merged"] = false,
 									["hideNoSender"] = false,
 									["scale"] = 1,
-									["x"] = 340.000061035156,
-									["w"] = 249.999938964844,
+									["h"] = 150.000030517578,
+									["coloredBorders"] = true,
 									["cellAnchor"] = "TOPLEFT",
 									["y"] = 1102.00024414062,
-									["h"] = 150.000030517578,
+									["x"] = 340.000061035156,
 									["colorNS"] = {
 										["a"] = 0.75,
 										["b"] = 0.5,
@@ -1460,7 +1460,7 @@ HermesDB2 = {
 									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
 									["locked"] = false,
 									["padding"] = 5,
-									["coloredBorders"] = true,
+									["w"] = 249.999938964844,
 									["colorU"] = {
 										["a"] = 1,
 										["b"] = 0.5,
@@ -1473,655 +1473,6 @@ HermesDB2 = {
 							["playerfilters"] = {
 							},
 							["name"] = "Default",
-							["filterplayertype"] = "disabled",
-							["filterconnection"] = true,
-							["filterdead"] = false,
-							["includeAll"] = true,
-							["enabled"] = true,
-						}, -- [1]
-					},
-				},
-			},
-			["spells"] = {
-				{
-					["enabled"] = false,
-					["name"] = "Amplify Magic",
-					["id"] = 159916,
-					["class"] = "MAGE",
-					["icon"] = "Interface\\Icons\\Spell_Magic_ManaGain",
-				}, -- [1]
-				{
-					["enabled"] = false,
-					["name"] = "Ancestral Guidance",
-					["id"] = 108281,
-					["class"] = "SHAMAN",
-					["icon"] = "Interface\\Icons\\ability_shaman_ancestralguidance",
-				}, -- [2]
-				{
-					["enabled"] = false,
-					["name"] = "Anti-Magic Shell",
-					["id"] = 48707,
-					["class"] = "DEATHKNIGHT",
-					["icon"] = "Interface\\Icons\\Spell_Shadow_AntiMagicShell",
-				}, -- [3]
-				{
-					["enabled"] = false,
-					["name"] = "Anti-Magic Zone",
-					["id"] = 51052,
-					["class"] = "DEATHKNIGHT",
-					["icon"] = "Interface\\Icons\\Spell_DeathKnight_AntiMagicZone",
-				}, -- [4]
-				{
-					["enabled"] = false,
-					["name"] = "Ardent Defender",
-					["id"] = 31850,
-					["class"] = "PALADIN",
-					["icon"] = "Interface\\Icons\\Spell_Holy_ArdentDefender",
-				}, -- [5]
-				{
-					["enabled"] = false,
-					["name"] = "Army of the Dead",
-					["id"] = 42650,
-					["class"] = "DEATHKNIGHT",
-					["icon"] = "Interface\\Icons\\Spell_DeathKnight_ArmyOfTheDead",
-				}, -- [6]
-				{
-					["enabled"] = false,
-					["name"] = "Aspect of the Fox",
-					["id"] = 172106,
-					["class"] = "HUNTER",
-					["icon"] = "INTERFACE\\ICONS\\ability_hunter_aspectofthefox",
-				}, -- [7]
-				{
-					["enabled"] = false,
-					["name"] = "Barkskin",
-					["id"] = 22812,
-					["class"] = "DRUID",
-					["icon"] = "Interface\\Icons\\Spell_Nature_StoneClawTotem",
-				}, -- [8]
-				{
-					["enabled"] = false,
-					["name"] = "Blind",
-					["id"] = 2094,
-					["class"] = "ROGUE",
-					["icon"] = "Interface\\Icons\\Spell_Shadow_MindSteal",
-				}, -- [9]
-				{
-					["enabled"] = false,
-					["name"] = "Bloodlust",
-					["id"] = 2825,
-					["class"] = "SHAMAN",
-					["icon"] = "Interface\\Icons\\Spell_Nature_BloodLust",
-				}, -- [10]
-				{
-					["enabled"] = false,
-					["name"] = "Bone Shield",
-					["id"] = 49222,
-					["class"] = "DEATHKNIGHT",
-					["icon"] = "INTERFACE\\ICONS\\ability_deathknight_boneshield",
-				}, -- [11]
-				{
-					["enabled"] = false,
-					["name"] = "Cenarion Ward",
-					["id"] = 102351,
-					["class"] = "DRUID",
-					["icon"] = "Interface\\Icons\\Ability_Druid_NaturalPerfection",
-				}, -- [12]
-				{
-					["enabled"] = false,
-					["name"] = "Cloak of Shadows",
-					["id"] = 31224,
-					["class"] = "ROGUE",
-					["icon"] = "Interface\\Icons\\Spell_Shadow_NetherCloak",
-				}, -- [13]
-				{
-					["enabled"] = false,
-					["name"] = "Counterspell",
-					["id"] = 2139,
-					["class"] = "MAGE",
-					["icon"] = "Interface\\Icons\\Spell_Frost_IceShock",
-				}, -- [14]
-				{
-					["enabled"] = false,
-					["name"] = "Create Soulwell",
-					["id"] = 29893,
-					["class"] = "WARLOCK",
-					["icon"] = "Interface\\Icons\\Spell_Shadow_Shadesofdarkness",
-				}, -- [15]
-				{
-					["enabled"] = false,
-					["name"] = "Dancing Rune Weapon",
-					["id"] = 49028,
-					["class"] = "DEATHKNIGHT",
-					["icon"] = "Interface\\Icons\\INV_Sword_07",
-				}, -- [16]
-				{
-					["enabled"] = false,
-					["name"] = "Death Grip",
-					["id"] = 49576,
-					["class"] = "DEATHKNIGHT",
-					["icon"] = "Interface\\Icons\\Spell_DeathKnight_Strangulate",
-				}, -- [17]
-				{
-					["enabled"] = false,
-					["name"] = "Death Pact",
-					["id"] = 48743,
-					["class"] = "DEATHKNIGHT",
-					["icon"] = "Interface\\Icons\\Spell_Shadow_DeathPact",
-				}, -- [18]
-				{
-					["enabled"] = false,
-					["name"] = "Devotion Aura",
-					["id"] = 31821,
-					["class"] = "PALADIN",
-					["icon"] = "Interface\\Icons\\Spell_Holy_AuraMastery",
-				}, -- [19]
-				{
-					["enabled"] = false,
-					["name"] = "Disrupting Shout",
-					["id"] = 102060,
-					["class"] = "WARRIOR",
-					["icon"] = "Interface\\Icons\\warrior_disruptingshout",
-				}, -- [20]
-				{
-					["enabled"] = false,
-					["name"] = "Divine Hymn",
-					["id"] = 64843,
-					["class"] = "PRIEST",
-					["icon"] = "Interface\\Icons\\Spell_Holy_DivineHymn",
-				}, -- [21]
-				{
-					["enabled"] = false,
-					["name"] = "Divine Protection",
-					["id"] = 498,
-					["class"] = "PALADIN",
-					["icon"] = "Interface\\Icons\\spell_holy_divineprotection",
-				}, -- [22]
-				{
-					["enabled"] = false,
-					["name"] = "Divine Shield",
-					["id"] = 642,
-					["class"] = "PALADIN",
-					["icon"] = "Interface\\Icons\\spell_holy_divineshield",
-				}, -- [23]
-				{
-					["enabled"] = false,
-					["name"] = "Every Man for Himself",
-					["id"] = 59752,
-					["class"] = "ANY",
-					["icon"] = "Interface\\Icons\\Spell_Shadow_Charm",
-				}, -- [24]
-				{
-					["enabled"] = false,
-					["name"] = "Fist of Justice",
-					["id"] = 105593,
-					["class"] = "PALADIN",
-					["icon"] = "Interface\\Icons\\Spell_Holy_FistOfJustice",
-				}, -- [25]
-				{
-					["enabled"] = false,
-					["name"] = "Frenzied Regeneration",
-					["id"] = 22842,
-					["class"] = "DRUID",
-					["icon"] = "Interface\\Icons\\Ability_BullRush",
-				}, -- [26]
-				{
-					["enabled"] = false,
-					["name"] = "Guardian Spirit",
-					["id"] = 47788,
-					["class"] = "PRIEST",
-					["icon"] = "Interface\\Icons\\Spell_Holy_GuardianSpirit",
-				}, -- [27]
-				{
-					["enabled"] = false,
-					["name"] = "Guardian of Ancient Kings",
-					["id"] = 86659,
-					["class"] = "PALADIN",
-					["icon"] = "Interface\\Icons\\Spell_Holy_Heroism",
-				}, -- [28]
-				{
-					["enabled"] = false,
-					["name"] = "Hammer of Justice",
-					["id"] = 853,
-					["class"] = "PALADIN",
-					["icon"] = "Interface\\Icons\\Spell_Holy_SealOfMight",
-				}, -- [29]
-				{
-					["enabled"] = false,
-					["name"] = "Hand of Freedom",
-					["id"] = 1044,
-					["class"] = "PALADIN",
-					["icon"] = "Interface\\Icons\\Spell_Holy_SealOfValor",
-				}, -- [30]
-				{
-					["enabled"] = false,
-					["name"] = "Hand of Protection",
-					["id"] = 1022,
-					["class"] = "PALADIN",
-					["icon"] = "Interface\\Icons\\Spell_Holy_SealOfProtection",
-				}, -- [31]
-				{
-					["enabled"] = false,
-					["name"] = "Hand of Purity",
-					["id"] = 114039,
-					["class"] = "PALADIN",
-					["icon"] = "Interface\\Icons\\Spell_Holy_SealOfWisdom",
-				}, -- [32]
-				{
-					["enabled"] = false,
-					["name"] = "Hand of Sacrifice",
-					["id"] = 6940,
-					["class"] = "PALADIN",
-					["icon"] = "Interface\\Icons\\Spell_Holy_SealOfSacrifice",
-				}, -- [33]
-				{
-					["enabled"] = false,
-					["name"] = "Hand of Salvation",
-					["id"] = 1038,
-					["class"] = "PALADIN",
-					["icon"] = "Interface\\Icons\\Spell_Holy_SealOfSalvation",
-				}, -- [34]
-				{
-					["enabled"] = false,
-					["name"] = "Healing Stream Totem",
-					["id"] = 5394,
-					["class"] = "SHAMAN",
-					["icon"] = "Interface\\Icons\\INV_Spear_04",
-				}, -- [35]
-				{
-					["enabled"] = false,
-					["name"] = "Healing Tide Totem",
-					["id"] = 108280,
-					["class"] = "SHAMAN",
-					["icon"] = "Interface\\Icons\\ability_shaman_healingtide",
-				}, -- [36]
-				{
-					["enabled"] = false,
-					["name"] = "Ice Block",
-					["id"] = 45438,
-					["class"] = "MAGE",
-					["icon"] = "Interface\\Icons\\Spell_Frost_Frost",
-				}, -- [37]
-				{
-					["enabled"] = false,
-					["name"] = "Icebound Fortitude",
-					["id"] = 48792,
-					["class"] = "DEATHKNIGHT",
-					["icon"] = "Interface\\Icons\\Spell_DeathKnight_IceBoundFortitude",
-				}, -- [38]
-				{
-					["enabled"] = false,
-					["name"] = "Incarnation: Tree of Life",
-					["id"] = 33891,
-					["class"] = "DRUID",
-					["icon"] = "Interface\\Icons\\Ability_Druid_ImprovedTreeForm",
-				}, -- [39]
-				{
-					["enabled"] = false,
-					["name"] = "Ironbark",
-					["id"] = 102342,
-					["class"] = "DRUID",
-					["icon"] = "Interface\\Icons\\spell_druid_ironbark",
-				}, -- [40]
-				{
-					["enabled"] = false,
-					["name"] = "Kick",
-					["id"] = 1766,
-					["class"] = "ROGUE",
-					["icon"] = "Interface\\Icons\\Ability_Kick",
-				}, -- [41]
-				{
-					["enabled"] = false,
-					["name"] = "Last Stand",
-					["id"] = 12975,
-					["class"] = "WARRIOR",
-					["icon"] = "Interface\\Icons\\Spell_Holy_AshesToAshes",
-				}, -- [42]
-				{
-					["enabled"] = false,
-					["name"] = "Lay on Hands",
-					["id"] = 633,
-					["class"] = "PALADIN",
-					["icon"] = "Interface\\Icons\\Spell_Holy_LayOnHands",
-				}, -- [43]
-				{
-					["enabled"] = false,
-					["name"] = "Leap of Faith",
-					["id"] = 73325,
-					["class"] = "PRIEST",
-					["icon"] = "INTERFACE\\ICONS\\priest_spell_leapoffaith_a",
-				}, -- [44]
-				{
-					["enabled"] = false,
-					["name"] = "Lichborne",
-					["id"] = 49039,
-					["class"] = "DEATHKNIGHT",
-					["icon"] = "Interface\\Icons\\Spell_Shadow_RaiseDead",
-				}, -- [45]
-				{
-					["enabled"] = false,
-					["name"] = "Life Cocoon",
-					["id"] = 116849,
-					["class"] = "MONK",
-					["icon"] = "Interface\\Icons\\ability_monk_chicocoon",
-				}, -- [46]
-				{
-					["enabled"] = false,
-					["name"] = "Mass Spell Reflection",
-					["id"] = 114028,
-					["class"] = "WARRIOR",
-					["icon"] = "Interface\\Icons\\Ability_Warrior_ShieldBreak",
-				}, -- [47]
-				{
-					["enabled"] = false,
-					["name"] = "Mighty Bash",
-					["id"] = 5211,
-					["class"] = "DRUID",
-					["icon"] = "Interface\\Icons\\Ability_Druid_Bash",
-				}, -- [48]
-				{
-					["enabled"] = false,
-					["name"] = "Mind Freeze",
-					["id"] = 47528,
-					["class"] = "DEATHKNIGHT",
-					["icon"] = "Interface\\Icons\\Spell_DeathKnight_MindFreeze",
-				}, -- [49]
-				{
-					["enabled"] = false,
-					["name"] = "Misdirection",
-					["id"] = 34477,
-					["class"] = "HUNTER",
-					["icon"] = "Interface\\Icons\\Ability_Hunter_Misdirection",
-				}, -- [50]
-				{
-					["enabled"] = false,
-					["name"] = "Nature's Vigil",
-					["id"] = 124974,
-					["class"] = "DRUID",
-					["icon"] = "Interface\\Icons\\Achievement_Zone_Feralas",
-				}, -- [51]
-				{
-					["enabled"] = false,
-					["name"] = "Pain Suppression",
-					["id"] = 33206,
-					["class"] = "PRIEST",
-					["icon"] = "Interface\\Icons\\Spell_Holy_PainSupression",
-				}, -- [52]
-				{
-					["enabled"] = false,
-					["name"] = "Power Word: Barrier",
-					["id"] = 62618,
-					["class"] = "PRIEST",
-					["icon"] = "Interface\\Icons\\spell_holy_powerwordbarrier",
-				}, -- [53]
-				{
-					["enabled"] = false,
-					["name"] = "Pummel",
-					["id"] = 6552,
-					["class"] = "WARRIOR",
-					["icon"] = "Interface\\Icons\\INV_Gauntlets_04",
-				}, -- [54]
-				{
-					["enabled"] = false,
-					["name"] = "Raise Ally",
-					["id"] = 61999,
-					["class"] = "DEATHKNIGHT",
-					["icon"] = "Interface\\Icons\\Spell_Shadow_DeadofNight",
-				}, -- [55]
-				{
-					["enabled"] = false,
-					["name"] = "Raise Dead",
-					["id"] = 46584,
-					["class"] = "DEATHKNIGHT",
-					["icon"] = "Interface\\Icons\\Spell_Shadow_AnimateDead",
-				}, -- [56]
-				{
-					["enabled"] = false,
-					["name"] = "Rallying Cry",
-					["id"] = 97462,
-					["class"] = "WARRIOR",
-					["icon"] = "INTERFACE\\ICONS\\ability_toughness",
-				}, -- [57]
-				{
-					["enabled"] = false,
-					["name"] = "Rebirth",
-					["id"] = 20484,
-					["class"] = "DRUID",
-					["icon"] = "Interface\\Icons\\Spell_Nature_Reincarnation",
-				}, -- [58]
-				{
-					["enabled"] = false,
-					["name"] = "Rebuke",
-					["id"] = 96231,
-					["class"] = "PALADIN",
-					["icon"] = "Interface\\Icons\\spell_holy_rebuke",
-				}, -- [59]
-				{
-					["enabled"] = false,
-					["name"] = "Reincarnation",
-					["id"] = 20608,
-					["class"] = "SHAMAN",
-					["icon"] = "INTERFACE\\ICONS\\spell_shaman_improvedreincarnation",
-				}, -- [60]
-				{
-					["enabled"] = false,
-					["name"] = "Repentance",
-					["id"] = 20066,
-					["class"] = "PALADIN",
-					["icon"] = "Interface\\Icons\\Spell_Holy_PrayerOfHealing",
-				}, -- [61]
-				{
-					["enabled"] = false,
-					["name"] = "Revival",
-					["id"] = 115310,
-					["class"] = "MONK",
-					["icon"] = "Interface\\Icons\\spell_monk_revival",
-				}, -- [62]
-				{
-					["enabled"] = false,
-					["name"] = "Ritual of Summoning",
-					["id"] = 698,
-					["class"] = "WARLOCK",
-					["icon"] = "Interface\\Icons\\Spell_Shadow_Twilight",
-				}, -- [63]
-				{
-					["enabled"] = false,
-					["name"] = "Shattering Throw",
-					["id"] = 64382,
-					["class"] = "WARRIOR",
-					["icon"] = "Interface\\Icons\\Ability_Warrior_ShatteringThrow",
-				}, -- [64]
-				{
-					["enabled"] = false,
-					["name"] = "Shield Wall",
-					["id"] = 871,
-					["class"] = "WARRIOR",
-					["icon"] = "Interface\\Icons\\Ability_Warrior_ShieldWall",
-				}, -- [65]
-				{
-					["enabled"] = false,
-					["name"] = "Shroud of Concealment",
-					["id"] = 114018,
-					["class"] = "ROGUE",
-					["icon"] = "Interface\\Icons\\ability_rogue_shroudofconcealment",
-				}, -- [66]
-				{
-					["enabled"] = false,
-					["name"] = "Smoke Bomb",
-					["id"] = 76577,
-					["class"] = "ROGUE",
-					["icon"] = "INTERFACE\\ICONS\\ability_rogue_smoke",
-				}, -- [67]
-				{
-					["enabled"] = false,
-					["name"] = "Soulstone",
-					["id"] = 20707,
-					["class"] = "WARLOCK",
-					["icon"] = "Interface\\Icons\\Spell_Shadow_SoulGem",
-				}, -- [68]
-				{
-					["enabled"] = false,
-					["name"] = "Spirit Link Totem",
-					["id"] = 98008,
-					["class"] = "SHAMAN",
-					["icon"] = "Interface\\Icons\\Spell_Shaman_SpiritLink",
-				}, -- [69]
-				{
-					["enabled"] = false,
-					["name"] = "Spirit Shell",
-					["id"] = 109964,
-					["class"] = "PRIEST",
-					["icon"] = "Interface\\Icons\\ability_shaman_astralshift",
-				}, -- [70]
-				{
-					["enabled"] = false,
-					["name"] = "Stampeding Roar",
-					["id"] = 106898,
-					["class"] = "DRUID",
-					["icon"] = "INTERFACE\\ICONS\\spell_druid_stampedingroar_cat",
-				}, -- [71]
-				{
-					["enabled"] = false,
-					["name"] = "Stoneform",
-					["id"] = 20594,
-					["class"] = "ANY",
-					["icon"] = "Interface\\Icons\\Spell_Shadow_UnholyStrength",
-				}, -- [72]
-				{
-					["enabled"] = false,
-					["name"] = "Strangulate",
-					["id"] = 47476,
-					["class"] = "DEATHKNIGHT",
-					["icon"] = "Interface\\Icons\\Spell_Shadow_SoulLeech_3",
-				}, -- [73]
-				{
-					["enabled"] = false,
-					["name"] = "Summon Water Elemental",
-					["id"] = 31687,
-					["class"] = "MAGE",
-					["icon"] = "Interface\\Icons\\Spell_Frost_SummonWaterElemental_2",
-				}, -- [74]
-				{
-					["enabled"] = false,
-					["name"] = "Survival Instincts",
-					["id"] = 61336,
-					["class"] = "DRUID",
-					["icon"] = "Interface\\Icons\\Ability_Druid_TigersRoar",
-				}, -- [75]
-				{
-					["enabled"] = false,
-					["name"] = "Time Warp",
-					["id"] = 80353,
-					["class"] = "MAGE",
-					["icon"] = "INTERFACE\\ICONS\\ability_mage_timewarp",
-				}, -- [76]
-				{
-					["enabled"] = false,
-					["name"] = "Tranquility",
-					["id"] = 740,
-					["class"] = "DRUID",
-					["icon"] = "Interface\\Icons\\Spell_Nature_Tranquility",
-				}, -- [77]
-				{
-					["enabled"] = false,
-					["name"] = "Tricks of the Trade",
-					["id"] = 57934,
-					["class"] = "ROGUE",
-					["icon"] = "Interface\\Icons\\Ability_Rogue_TricksOftheTrade",
-				}, -- [78]
-				{
-					["enabled"] = false,
-					["name"] = "Vampiric Blood",
-					["id"] = 55233,
-					["class"] = "DEATHKNIGHT",
-					["icon"] = "Interface\\Icons\\Spell_Shadow_LifeDrain",
-				}, -- [79]
-				{
-					["enabled"] = false,
-					["name"] = "Vampiric Embrace",
-					["id"] = 15286,
-					["class"] = "PRIEST",
-					["icon"] = "Interface\\Icons\\Spell_Shadow_UnsummonBuilding",
-				}, -- [80]
-				{
-					["enabled"] = false,
-					["name"] = "Void Tendrils",
-					["id"] = 108920,
-					["class"] = "PRIEST",
-					["icon"] = "Interface\\Icons\\spell_priest_voidtendrils",
-				}, -- [81]
-				{
-					["enabled"] = false,
-					["name"] = "Wind Shear",
-					["id"] = 57994,
-					["class"] = "SHAMAN",
-					["icon"] = "Interface\\Icons\\Spell_Nature_Cyclone",
-				}, -- [82]
-				{
-					["enabled"] = false,
-					["name"] = "Zen Meditation",
-					["id"] = 115176,
-					["class"] = "MONK",
-					["icon"] = "Interface\\Icons\\ability_monk_zenmeditation",
-				}, -- [83]
-			},
-		},
-		["Combustion - Illidan"] = {
-			["items"] = {
-				{
-					["enabled"] = false,
-					["name"] = "Mirror of Broken Images",
-					["id"] = -62466,
-					["class"] = "ANY",
-					["icon"] = "Interface\\ICONS\\INV_Misc_Platnumdisks.blp",
-				}, -- [1]
-			},
-			["welcome"] = true,
-			["pluginState"] = {
-				["UI"] = true,
-			},
-			["plugins"] = {
-				["Hermes-UI"] = {
-					["views"] = {
-						{
-							["module"] = "GridButtons",
-							["filterrange"] = true,
-							["filter10man"] = true,
-							["filterself"] = false,
-							["filter25man"] = true,
-							["profiles"] = {
-								["GridButtons"] = {
-									["merged"] = false,
-									["hideNoSender"] = false,
-									["scale"] = 1,
-									["h"] = 150,
-									["coloredBorders"] = true,
-									["cellAnchor"] = "TOPLEFT",
-									["y"] = 675.000122070313,
-									["x"] = 835.000061035156,
-									["colorNS"] = {
-										["a"] = 0.75,
-										["b"] = 0.5,
-										["g"] = 0.5,
-										["r"] = 0.5,
-									},
-									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
-									["locked"] = false,
-									["padding"] = 5,
-									["w"] = 250,
-									["colorU"] = {
-										["a"] = 1,
-										["b"] = 0.5,
-										["g"] = 0.5,
-										["r"] = 0.5,
-									},
-								},
-							},
-							["name"] = "Default",
-							["playerfilters"] = {
-							},
-							["abilities"] = {
-							},
 							["filterplayertype"] = "disabled",
 							["filterconnection"] = true,
 							["filterdead"] = false,
@@ -3351,11 +2702,11 @@ HermesDB2 = {
 									["scale"] = 1,
 									["hideNoSender"] = true,
 									["merged"] = false,
+									["w"] = 233.295700073242,
 									["coloredBorders"] = true,
-									["w"] = 254.666915893555,
 									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
-									["y"] = 1195,
-									["x"] = 1465.33117675781,
+									["y"] = 1195.88842773438,
+									["h"] = 186.246963500977,
 									["locked"] = true,
 									["cellAnchor"] = "TOPRIGHT",
 									["colorNS"] = {
@@ -3365,7 +2716,7 @@ HermesDB2 = {
 										["b"] = 0.5,
 									},
 									["padding"] = 5,
-									["h"] = 199.667007446289,
+									["x"] = 1488.59826660156,
 									["colorU"] = {
 										["a"] = 1,
 										["r"] = 0.5,
@@ -3461,8 +2812,8 @@ HermesDB2 = {
 									["npUseNameplate"] = true,
 									["npFont"] = "Friz Quadrata TT",
 									["hideNoCooldown"] = false,
-									["npTextSide"] = "right",
 									["barCCUFont"] = false,
+									["npTextSide"] = "right",
 									["npOutlineFont"] = true,
 									["merged"] = false,
 									["npH"] = 15,
@@ -3520,19 +2871,14 @@ HermesDB2 = {
 										["r"] = 0,
 									},
 									["barFont"] = "Friz Quadrata TT",
-									["osFGColor"] = {
-										["a"] = 1,
-										["b"] = 0,
-										["g"] = 1,
-										["r"] = 0,
-									},
+									["npW"] = 120,
 									["barColorC"] = {
 										["a"] = 0.74,
 										["b"] = 0.55,
 										["g"] = 0.55,
 										["r"] = 0.55,
 									},
-									["locked"] = false,
+									["barCCA"] = true,
 									["osEnabled"] = false,
 									["barLocation"] = "BOTTOM",
 									["barCCC"] = true,
@@ -3542,7 +2888,12 @@ HermesDB2 = {
 										["g"] = 1,
 										["r"] = 1,
 									},
-									["npW"] = 120,
+									["osFGColor"] = {
+										["a"] = 1,
+										["b"] = 0,
+										["g"] = 1,
+										["r"] = 0,
+									},
 									["barBGColorU"] = {
 										["a"] = 0.16,
 										["b"] = 0,
@@ -3568,12 +2919,7 @@ HermesDB2 = {
 										["r"] = 0.94,
 									},
 									["npUseIcon"] = true,
-									["barColorA"] = {
-										["a"] = 1,
-										["b"] = 0.94,
-										["g"] = 0.94,
-										["r"] = 0.94,
-									},
+									["npUseNameplate"] = true,
 									["barPadding"] = 10,
 									["barColorCFont"] = {
 										["a"] = 1,
@@ -3581,7 +2927,12 @@ HermesDB2 = {
 										["g"] = 1,
 										["r"] = 1,
 									},
-									["npUseNameplate"] = true,
+									["barColorA"] = {
+										["a"] = 1,
+										["b"] = 0.94,
+										["g"] = 0.94,
+										["r"] = 0.94,
+									},
 									["npFontColor"] = {
 										["a"] = 0.76,
 										["b"] = 0.92,
@@ -3591,31 +2942,31 @@ HermesDB2 = {
 									["barCCU"] = false,
 									["npFontSize"] = 12,
 									["npH"] = 15,
-									["scale"] = 1,
+									["npOutlineFont"] = true,
 									["barShowTime"] = true,
 									["npFont"] = "Friz Quadrata TT",
 									["osCooldownDirection"] = "right",
 									["barShowSpellName"] = false,
-									["npTextSide"] = "right",
+									["barCCUFont"] = false,
 									["npIcon"] = "right",
 									["barThickFont"] = false,
 									["npTexture"] = "Blizzard",
 									["barIconMerged"] = "left",
 									["barCooldownDirection"] = "right",
 									["barH"] = 14,
-									["barCCUFont"] = false,
+									["npTextSide"] = "right",
 									["barGap"] = 1,
 									["npCCBar"] = false,
 									["barBGCCU"] = false,
 									["merged"] = false,
 									["npThickFont"] = false,
-									["npOutlineFont"] = true,
+									["scale"] = 1,
 									["barBGCCC"] = true,
 									["barCCAFont"] = false,
 									["growUp"] = false,
 									["barTextRatio"] = 65,
 									["barCCCFont"] = true,
-									["barCCA"] = true,
+									["locked"] = false,
 									["barFontSize"] = 12,
 									["barBGColorC"] = {
 										["a"] = 0.16,
@@ -3633,26 +2984,26 @@ HermesDB2 = {
 									["locked"] = false,
 									["barCooldownDirection"] = "right",
 									["hideSelf"] = false,
+									["barGap"] = 1,
 									["osFGColor"] = {
 										["a"] = 1,
 										["b"] = 0,
 										["g"] = 1,
 										["r"] = 0,
 									},
-									["barGap"] = 1,
-									["x"] = 870.000061035156,
+									["font"] = "Friz Quadrata TT",
 									["bartexture"] = "Blizzard",
-									["barwidth"] = 180,
+									["growup"] = false,
 									["osCooldownDirection"] = "right",
 									["alpha"] = 1,
-									["barShowSpellName"] = false,
-									["y"] = 609,
-									["font"] = "Friz Quadrata TT",
 									["barCooldownStyle"] = "full",
+									["y"] = 609,
+									["x"] = 870.000061035156,
+									["barShowSpellName"] = false,
 									["osCooldownStyle"] = "full",
 									["osEnabled"] = false,
 									["barIcon"] = "left",
-									["growup"] = false,
+									["barwidth"] = 180,
 									["textratio"] = 60,
 								},
 							},
@@ -3788,6 +3139,655 @@ HermesDB2 = {
 			},
 			["welcome"] = true,
 		},
+		["Combustion - Illidan"] = {
+			["items"] = {
+				{
+					["enabled"] = false,
+					["name"] = "Mirror of Broken Images",
+					["id"] = -62466,
+					["class"] = "ANY",
+					["icon"] = "Interface\\ICONS\\INV_Misc_Platnumdisks.blp",
+				}, -- [1]
+			},
+			["welcome"] = true,
+			["pluginState"] = {
+				["UI"] = true,
+			},
+			["plugins"] = {
+				["Hermes-UI"] = {
+					["views"] = {
+						{
+							["module"] = "GridButtons",
+							["filterrange"] = true,
+							["filter10man"] = true,
+							["filterself"] = false,
+							["filter25man"] = true,
+							["profiles"] = {
+								["GridButtons"] = {
+									["merged"] = false,
+									["hideNoSender"] = false,
+									["scale"] = 1,
+									["x"] = 835.000061035156,
+									["w"] = 250,
+									["cellAnchor"] = "TOPLEFT",
+									["y"] = 675.000122070313,
+									["h"] = 150,
+									["colorNS"] = {
+										["a"] = 0.75,
+										["b"] = 0.5,
+										["g"] = 0.5,
+										["r"] = 0.5,
+									},
+									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
+									["locked"] = false,
+									["padding"] = 5,
+									["coloredBorders"] = true,
+									["colorU"] = {
+										["a"] = 1,
+										["b"] = 0.5,
+										["g"] = 0.5,
+										["r"] = 0.5,
+									},
+								},
+							},
+							["name"] = "Default",
+							["playerfilters"] = {
+							},
+							["abilities"] = {
+							},
+							["filterplayertype"] = "disabled",
+							["filterconnection"] = true,
+							["filterdead"] = false,
+							["includeAll"] = true,
+							["enabled"] = true,
+						}, -- [1]
+					},
+				},
+			},
+			["spells"] = {
+				{
+					["enabled"] = false,
+					["name"] = "Amplify Magic",
+					["id"] = 159916,
+					["class"] = "MAGE",
+					["icon"] = "Interface\\Icons\\Spell_Magic_ManaGain",
+				}, -- [1]
+				{
+					["enabled"] = false,
+					["name"] = "Ancestral Guidance",
+					["id"] = 108281,
+					["class"] = "SHAMAN",
+					["icon"] = "Interface\\Icons\\ability_shaman_ancestralguidance",
+				}, -- [2]
+				{
+					["enabled"] = false,
+					["name"] = "Anti-Magic Shell",
+					["id"] = 48707,
+					["class"] = "DEATHKNIGHT",
+					["icon"] = "Interface\\Icons\\Spell_Shadow_AntiMagicShell",
+				}, -- [3]
+				{
+					["enabled"] = false,
+					["name"] = "Anti-Magic Zone",
+					["id"] = 51052,
+					["class"] = "DEATHKNIGHT",
+					["icon"] = "Interface\\Icons\\Spell_DeathKnight_AntiMagicZone",
+				}, -- [4]
+				{
+					["enabled"] = false,
+					["name"] = "Ardent Defender",
+					["id"] = 31850,
+					["class"] = "PALADIN",
+					["icon"] = "Interface\\Icons\\Spell_Holy_ArdentDefender",
+				}, -- [5]
+				{
+					["enabled"] = false,
+					["name"] = "Army of the Dead",
+					["id"] = 42650,
+					["class"] = "DEATHKNIGHT",
+					["icon"] = "Interface\\Icons\\Spell_DeathKnight_ArmyOfTheDead",
+				}, -- [6]
+				{
+					["enabled"] = false,
+					["name"] = "Aspect of the Fox",
+					["id"] = 172106,
+					["class"] = "HUNTER",
+					["icon"] = "INTERFACE\\ICONS\\ability_hunter_aspectofthefox",
+				}, -- [7]
+				{
+					["enabled"] = false,
+					["name"] = "Barkskin",
+					["id"] = 22812,
+					["class"] = "DRUID",
+					["icon"] = "Interface\\Icons\\Spell_Nature_StoneClawTotem",
+				}, -- [8]
+				{
+					["enabled"] = false,
+					["name"] = "Blind",
+					["id"] = 2094,
+					["class"] = "ROGUE",
+					["icon"] = "Interface\\Icons\\Spell_Shadow_MindSteal",
+				}, -- [9]
+				{
+					["enabled"] = false,
+					["name"] = "Bloodlust",
+					["id"] = 2825,
+					["class"] = "SHAMAN",
+					["icon"] = "Interface\\Icons\\Spell_Nature_BloodLust",
+				}, -- [10]
+				{
+					["enabled"] = false,
+					["name"] = "Bone Shield",
+					["id"] = 49222,
+					["class"] = "DEATHKNIGHT",
+					["icon"] = "INTERFACE\\ICONS\\ability_deathknight_boneshield",
+				}, -- [11]
+				{
+					["enabled"] = false,
+					["name"] = "Cenarion Ward",
+					["id"] = 102351,
+					["class"] = "DRUID",
+					["icon"] = "Interface\\Icons\\Ability_Druid_NaturalPerfection",
+				}, -- [12]
+				{
+					["enabled"] = false,
+					["name"] = "Cloak of Shadows",
+					["id"] = 31224,
+					["class"] = "ROGUE",
+					["icon"] = "Interface\\Icons\\Spell_Shadow_NetherCloak",
+				}, -- [13]
+				{
+					["enabled"] = false,
+					["name"] = "Counterspell",
+					["id"] = 2139,
+					["class"] = "MAGE",
+					["icon"] = "Interface\\Icons\\Spell_Frost_IceShock",
+				}, -- [14]
+				{
+					["enabled"] = false,
+					["name"] = "Create Soulwell",
+					["id"] = 29893,
+					["class"] = "WARLOCK",
+					["icon"] = "Interface\\Icons\\Spell_Shadow_Shadesofdarkness",
+				}, -- [15]
+				{
+					["enabled"] = false,
+					["name"] = "Dancing Rune Weapon",
+					["id"] = 49028,
+					["class"] = "DEATHKNIGHT",
+					["icon"] = "Interface\\Icons\\INV_Sword_07",
+				}, -- [16]
+				{
+					["enabled"] = false,
+					["name"] = "Death Grip",
+					["id"] = 49576,
+					["class"] = "DEATHKNIGHT",
+					["icon"] = "Interface\\Icons\\Spell_DeathKnight_Strangulate",
+				}, -- [17]
+				{
+					["enabled"] = false,
+					["name"] = "Death Pact",
+					["id"] = 48743,
+					["class"] = "DEATHKNIGHT",
+					["icon"] = "Interface\\Icons\\Spell_Shadow_DeathPact",
+				}, -- [18]
+				{
+					["enabled"] = false,
+					["name"] = "Devotion Aura",
+					["id"] = 31821,
+					["class"] = "PALADIN",
+					["icon"] = "Interface\\Icons\\Spell_Holy_AuraMastery",
+				}, -- [19]
+				{
+					["enabled"] = false,
+					["name"] = "Disrupting Shout",
+					["id"] = 102060,
+					["class"] = "WARRIOR",
+					["icon"] = "Interface\\Icons\\warrior_disruptingshout",
+				}, -- [20]
+				{
+					["enabled"] = false,
+					["name"] = "Divine Hymn",
+					["id"] = 64843,
+					["class"] = "PRIEST",
+					["icon"] = "Interface\\Icons\\Spell_Holy_DivineHymn",
+				}, -- [21]
+				{
+					["enabled"] = false,
+					["name"] = "Divine Protection",
+					["id"] = 498,
+					["class"] = "PALADIN",
+					["icon"] = "Interface\\Icons\\spell_holy_divineprotection",
+				}, -- [22]
+				{
+					["enabled"] = false,
+					["name"] = "Divine Shield",
+					["id"] = 642,
+					["class"] = "PALADIN",
+					["icon"] = "Interface\\Icons\\spell_holy_divineshield",
+				}, -- [23]
+				{
+					["enabled"] = false,
+					["name"] = "Every Man for Himself",
+					["id"] = 59752,
+					["class"] = "ANY",
+					["icon"] = "Interface\\Icons\\Spell_Shadow_Charm",
+				}, -- [24]
+				{
+					["enabled"] = false,
+					["name"] = "Fist of Justice",
+					["id"] = 105593,
+					["class"] = "PALADIN",
+					["icon"] = "Interface\\Icons\\Spell_Holy_FistOfJustice",
+				}, -- [25]
+				{
+					["enabled"] = false,
+					["name"] = "Frenzied Regeneration",
+					["id"] = 22842,
+					["class"] = "DRUID",
+					["icon"] = "Interface\\Icons\\Ability_BullRush",
+				}, -- [26]
+				{
+					["enabled"] = false,
+					["name"] = "Guardian Spirit",
+					["id"] = 47788,
+					["class"] = "PRIEST",
+					["icon"] = "Interface\\Icons\\Spell_Holy_GuardianSpirit",
+				}, -- [27]
+				{
+					["enabled"] = false,
+					["name"] = "Guardian of Ancient Kings",
+					["id"] = 86659,
+					["class"] = "PALADIN",
+					["icon"] = "Interface\\Icons\\Spell_Holy_Heroism",
+				}, -- [28]
+				{
+					["enabled"] = false,
+					["name"] = "Hammer of Justice",
+					["id"] = 853,
+					["class"] = "PALADIN",
+					["icon"] = "Interface\\Icons\\Spell_Holy_SealOfMight",
+				}, -- [29]
+				{
+					["enabled"] = false,
+					["name"] = "Hand of Freedom",
+					["id"] = 1044,
+					["class"] = "PALADIN",
+					["icon"] = "Interface\\Icons\\Spell_Holy_SealOfValor",
+				}, -- [30]
+				{
+					["enabled"] = false,
+					["name"] = "Hand of Protection",
+					["id"] = 1022,
+					["class"] = "PALADIN",
+					["icon"] = "Interface\\Icons\\Spell_Holy_SealOfProtection",
+				}, -- [31]
+				{
+					["enabled"] = false,
+					["name"] = "Hand of Purity",
+					["id"] = 114039,
+					["class"] = "PALADIN",
+					["icon"] = "Interface\\Icons\\Spell_Holy_SealOfWisdom",
+				}, -- [32]
+				{
+					["enabled"] = false,
+					["name"] = "Hand of Sacrifice",
+					["id"] = 6940,
+					["class"] = "PALADIN",
+					["icon"] = "Interface\\Icons\\Spell_Holy_SealOfSacrifice",
+				}, -- [33]
+				{
+					["enabled"] = false,
+					["name"] = "Hand of Salvation",
+					["id"] = 1038,
+					["class"] = "PALADIN",
+					["icon"] = "Interface\\Icons\\Spell_Holy_SealOfSalvation",
+				}, -- [34]
+				{
+					["enabled"] = false,
+					["name"] = "Healing Stream Totem",
+					["id"] = 5394,
+					["class"] = "SHAMAN",
+					["icon"] = "Interface\\Icons\\INV_Spear_04",
+				}, -- [35]
+				{
+					["enabled"] = false,
+					["name"] = "Healing Tide Totem",
+					["id"] = 108280,
+					["class"] = "SHAMAN",
+					["icon"] = "Interface\\Icons\\ability_shaman_healingtide",
+				}, -- [36]
+				{
+					["enabled"] = false,
+					["name"] = "Ice Block",
+					["id"] = 45438,
+					["class"] = "MAGE",
+					["icon"] = "Interface\\Icons\\Spell_Frost_Frost",
+				}, -- [37]
+				{
+					["enabled"] = false,
+					["name"] = "Icebound Fortitude",
+					["id"] = 48792,
+					["class"] = "DEATHKNIGHT",
+					["icon"] = "Interface\\Icons\\Spell_DeathKnight_IceBoundFortitude",
+				}, -- [38]
+				{
+					["enabled"] = false,
+					["name"] = "Incarnation: Tree of Life",
+					["id"] = 33891,
+					["class"] = "DRUID",
+					["icon"] = "Interface\\Icons\\Ability_Druid_ImprovedTreeForm",
+				}, -- [39]
+				{
+					["enabled"] = false,
+					["name"] = "Ironbark",
+					["id"] = 102342,
+					["class"] = "DRUID",
+					["icon"] = "Interface\\Icons\\spell_druid_ironbark",
+				}, -- [40]
+				{
+					["enabled"] = false,
+					["name"] = "Kick",
+					["id"] = 1766,
+					["class"] = "ROGUE",
+					["icon"] = "Interface\\Icons\\Ability_Kick",
+				}, -- [41]
+				{
+					["enabled"] = false,
+					["name"] = "Last Stand",
+					["id"] = 12975,
+					["class"] = "WARRIOR",
+					["icon"] = "Interface\\Icons\\Spell_Holy_AshesToAshes",
+				}, -- [42]
+				{
+					["enabled"] = false,
+					["name"] = "Lay on Hands",
+					["id"] = 633,
+					["class"] = "PALADIN",
+					["icon"] = "Interface\\Icons\\Spell_Holy_LayOnHands",
+				}, -- [43]
+				{
+					["enabled"] = false,
+					["name"] = "Leap of Faith",
+					["id"] = 73325,
+					["class"] = "PRIEST",
+					["icon"] = "INTERFACE\\ICONS\\priest_spell_leapoffaith_a",
+				}, -- [44]
+				{
+					["enabled"] = false,
+					["name"] = "Lichborne",
+					["id"] = 49039,
+					["class"] = "DEATHKNIGHT",
+					["icon"] = "Interface\\Icons\\Spell_Shadow_RaiseDead",
+				}, -- [45]
+				{
+					["enabled"] = false,
+					["name"] = "Life Cocoon",
+					["id"] = 116849,
+					["class"] = "MONK",
+					["icon"] = "Interface\\Icons\\ability_monk_chicocoon",
+				}, -- [46]
+				{
+					["enabled"] = false,
+					["name"] = "Mass Spell Reflection",
+					["id"] = 114028,
+					["class"] = "WARRIOR",
+					["icon"] = "Interface\\Icons\\Ability_Warrior_ShieldBreak",
+				}, -- [47]
+				{
+					["enabled"] = false,
+					["name"] = "Mighty Bash",
+					["id"] = 5211,
+					["class"] = "DRUID",
+					["icon"] = "Interface\\Icons\\Ability_Druid_Bash",
+				}, -- [48]
+				{
+					["enabled"] = false,
+					["name"] = "Mind Freeze",
+					["id"] = 47528,
+					["class"] = "DEATHKNIGHT",
+					["icon"] = "Interface\\Icons\\Spell_DeathKnight_MindFreeze",
+				}, -- [49]
+				{
+					["enabled"] = false,
+					["name"] = "Misdirection",
+					["id"] = 34477,
+					["class"] = "HUNTER",
+					["icon"] = "Interface\\Icons\\Ability_Hunter_Misdirection",
+				}, -- [50]
+				{
+					["enabled"] = false,
+					["name"] = "Nature's Vigil",
+					["id"] = 124974,
+					["class"] = "DRUID",
+					["icon"] = "Interface\\Icons\\Achievement_Zone_Feralas",
+				}, -- [51]
+				{
+					["enabled"] = false,
+					["name"] = "Pain Suppression",
+					["id"] = 33206,
+					["class"] = "PRIEST",
+					["icon"] = "Interface\\Icons\\Spell_Holy_PainSupression",
+				}, -- [52]
+				{
+					["enabled"] = false,
+					["name"] = "Power Word: Barrier",
+					["id"] = 62618,
+					["class"] = "PRIEST",
+					["icon"] = "Interface\\Icons\\spell_holy_powerwordbarrier",
+				}, -- [53]
+				{
+					["enabled"] = false,
+					["name"] = "Pummel",
+					["id"] = 6552,
+					["class"] = "WARRIOR",
+					["icon"] = "Interface\\Icons\\INV_Gauntlets_04",
+				}, -- [54]
+				{
+					["enabled"] = false,
+					["name"] = "Raise Ally",
+					["id"] = 61999,
+					["class"] = "DEATHKNIGHT",
+					["icon"] = "Interface\\Icons\\Spell_Shadow_DeadofNight",
+				}, -- [55]
+				{
+					["enabled"] = false,
+					["name"] = "Raise Dead",
+					["id"] = 46584,
+					["class"] = "DEATHKNIGHT",
+					["icon"] = "Interface\\Icons\\Spell_Shadow_AnimateDead",
+				}, -- [56]
+				{
+					["enabled"] = false,
+					["name"] = "Rallying Cry",
+					["id"] = 97462,
+					["class"] = "WARRIOR",
+					["icon"] = "INTERFACE\\ICONS\\ability_toughness",
+				}, -- [57]
+				{
+					["enabled"] = false,
+					["name"] = "Rebirth",
+					["id"] = 20484,
+					["class"] = "DRUID",
+					["icon"] = "Interface\\Icons\\Spell_Nature_Reincarnation",
+				}, -- [58]
+				{
+					["enabled"] = false,
+					["name"] = "Rebuke",
+					["id"] = 96231,
+					["class"] = "PALADIN",
+					["icon"] = "Interface\\Icons\\spell_holy_rebuke",
+				}, -- [59]
+				{
+					["enabled"] = false,
+					["name"] = "Reincarnation",
+					["id"] = 20608,
+					["class"] = "SHAMAN",
+					["icon"] = "INTERFACE\\ICONS\\spell_shaman_improvedreincarnation",
+				}, -- [60]
+				{
+					["enabled"] = false,
+					["name"] = "Repentance",
+					["id"] = 20066,
+					["class"] = "PALADIN",
+					["icon"] = "Interface\\Icons\\Spell_Holy_PrayerOfHealing",
+				}, -- [61]
+				{
+					["enabled"] = false,
+					["name"] = "Revival",
+					["id"] = 115310,
+					["class"] = "MONK",
+					["icon"] = "Interface\\Icons\\spell_monk_revival",
+				}, -- [62]
+				{
+					["enabled"] = false,
+					["name"] = "Ritual of Summoning",
+					["id"] = 698,
+					["class"] = "WARLOCK",
+					["icon"] = "Interface\\Icons\\Spell_Shadow_Twilight",
+				}, -- [63]
+				{
+					["enabled"] = false,
+					["name"] = "Shattering Throw",
+					["id"] = 64382,
+					["class"] = "WARRIOR",
+					["icon"] = "Interface\\Icons\\Ability_Warrior_ShatteringThrow",
+				}, -- [64]
+				{
+					["enabled"] = false,
+					["name"] = "Shield Wall",
+					["id"] = 871,
+					["class"] = "WARRIOR",
+					["icon"] = "Interface\\Icons\\Ability_Warrior_ShieldWall",
+				}, -- [65]
+				{
+					["enabled"] = false,
+					["name"] = "Shroud of Concealment",
+					["id"] = 114018,
+					["class"] = "ROGUE",
+					["icon"] = "Interface\\Icons\\ability_rogue_shroudofconcealment",
+				}, -- [66]
+				{
+					["enabled"] = false,
+					["name"] = "Smoke Bomb",
+					["id"] = 76577,
+					["class"] = "ROGUE",
+					["icon"] = "INTERFACE\\ICONS\\ability_rogue_smoke",
+				}, -- [67]
+				{
+					["enabled"] = false,
+					["name"] = "Soulstone",
+					["id"] = 20707,
+					["class"] = "WARLOCK",
+					["icon"] = "Interface\\Icons\\Spell_Shadow_SoulGem",
+				}, -- [68]
+				{
+					["enabled"] = false,
+					["name"] = "Spirit Link Totem",
+					["id"] = 98008,
+					["class"] = "SHAMAN",
+					["icon"] = "Interface\\Icons\\Spell_Shaman_SpiritLink",
+				}, -- [69]
+				{
+					["enabled"] = false,
+					["name"] = "Spirit Shell",
+					["id"] = 109964,
+					["class"] = "PRIEST",
+					["icon"] = "Interface\\Icons\\ability_shaman_astralshift",
+				}, -- [70]
+				{
+					["enabled"] = false,
+					["name"] = "Stampeding Roar",
+					["id"] = 106898,
+					["class"] = "DRUID",
+					["icon"] = "INTERFACE\\ICONS\\spell_druid_stampedingroar_cat",
+				}, -- [71]
+				{
+					["enabled"] = false,
+					["name"] = "Stoneform",
+					["id"] = 20594,
+					["class"] = "ANY",
+					["icon"] = "Interface\\Icons\\Spell_Shadow_UnholyStrength",
+				}, -- [72]
+				{
+					["enabled"] = false,
+					["name"] = "Strangulate",
+					["id"] = 47476,
+					["class"] = "DEATHKNIGHT",
+					["icon"] = "Interface\\Icons\\Spell_Shadow_SoulLeech_3",
+				}, -- [73]
+				{
+					["enabled"] = false,
+					["name"] = "Summon Water Elemental",
+					["id"] = 31687,
+					["class"] = "MAGE",
+					["icon"] = "Interface\\Icons\\Spell_Frost_SummonWaterElemental_2",
+				}, -- [74]
+				{
+					["enabled"] = false,
+					["name"] = "Survival Instincts",
+					["id"] = 61336,
+					["class"] = "DRUID",
+					["icon"] = "Interface\\Icons\\Ability_Druid_TigersRoar",
+				}, -- [75]
+				{
+					["enabled"] = false,
+					["name"] = "Time Warp",
+					["id"] = 80353,
+					["class"] = "MAGE",
+					["icon"] = "INTERFACE\\ICONS\\ability_mage_timewarp",
+				}, -- [76]
+				{
+					["enabled"] = false,
+					["name"] = "Tranquility",
+					["id"] = 740,
+					["class"] = "DRUID",
+					["icon"] = "Interface\\Icons\\Spell_Nature_Tranquility",
+				}, -- [77]
+				{
+					["enabled"] = false,
+					["name"] = "Tricks of the Trade",
+					["id"] = 57934,
+					["class"] = "ROGUE",
+					["icon"] = "Interface\\Icons\\Ability_Rogue_TricksOftheTrade",
+				}, -- [78]
+				{
+					["enabled"] = false,
+					["name"] = "Vampiric Blood",
+					["id"] = 55233,
+					["class"] = "DEATHKNIGHT",
+					["icon"] = "Interface\\Icons\\Spell_Shadow_LifeDrain",
+				}, -- [79]
+				{
+					["enabled"] = false,
+					["name"] = "Vampiric Embrace",
+					["id"] = 15286,
+					["class"] = "PRIEST",
+					["icon"] = "Interface\\Icons\\Spell_Shadow_UnsummonBuilding",
+				}, -- [80]
+				{
+					["enabled"] = false,
+					["name"] = "Void Tendrils",
+					["id"] = 108920,
+					["class"] = "PRIEST",
+					["icon"] = "Interface\\Icons\\spell_priest_voidtendrils",
+				}, -- [81]
+				{
+					["enabled"] = false,
+					["name"] = "Wind Shear",
+					["id"] = 57994,
+					["class"] = "SHAMAN",
+					["icon"] = "Interface\\Icons\\Spell_Nature_Cyclone",
+				}, -- [82]
+				{
+					["enabled"] = false,
+					["name"] = "Zen Meditation",
+					["id"] = 115176,
+					["class"] = "MONK",
+					["icon"] = "Interface\\Icons\\ability_monk_zenmeditation",
+				}, -- [83]
+			},
+		},
 		["Evan - Illidan"] = {
 			["items"] = {
 				{
@@ -3817,11 +3817,11 @@ HermesDB2 = {
 									["merged"] = false,
 									["hideNoSender"] = false,
 									["scale"] = 1,
-									["h"] = 150.000091552734,
-									["coloredBorders"] = true,
+									["x"] = 257.000183105469,
+									["w"] = 249.999908447266,
 									["cellAnchor"] = "TOPLEFT",
 									["y"] = 811.000183105469,
-									["x"] = 257.000183105469,
+									["h"] = 150.000091552734,
 									["colorNS"] = {
 										["a"] = 0.75,
 										["b"] = 0.5,
@@ -3831,7 +3831,7 @@ HermesDB2 = {
 									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
 									["locked"] = false,
 									["padding"] = 5,
-									["w"] = 249.999908447266,
+									["coloredBorders"] = true,
 									["colorU"] = {
 										["a"] = 1,
 										["b"] = 0.5,
@@ -4466,11 +4466,11 @@ HermesDB2 = {
 									["scale"] = 1,
 									["hideNoSender"] = false,
 									["merged"] = false,
-									["w"] = 250,
 									["coloredBorders"] = true,
+									["w"] = 250,
 									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
 									["y"] = 675.000122070313,
-									["h"] = 150,
+									["x"] = 835.000061035156,
 									["locked"] = false,
 									["cellAnchor"] = "TOPLEFT",
 									["colorNS"] = {
@@ -4480,7 +4480,7 @@ HermesDB2 = {
 										["b"] = 0.5,
 									},
 									["padding"] = 5,
-									["x"] = 835.000061035156,
+									["h"] = 150,
 									["colorU"] = {
 										["a"] = 1,
 										["r"] = 0.5,
@@ -5115,11 +5115,11 @@ HermesDB2 = {
 									["scale"] = 1,
 									["hideNoSender"] = false,
 									["merged"] = false,
-									["w"] = 250,
 									["coloredBorders"] = true,
+									["w"] = 250,
 									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
 									["y"] = 675.000122070313,
-									["h"] = 150,
+									["x"] = 835.000061035156,
 									["locked"] = false,
 									["cellAnchor"] = "TOPLEFT",
 									["colorNS"] = {
@@ -5129,7 +5129,7 @@ HermesDB2 = {
 										["b"] = 0.5,
 									},
 									["padding"] = 5,
-									["x"] = 835.000061035156,
+									["h"] = 150,
 									["colorU"] = {
 										["a"] = 1,
 										["r"] = 0.5,

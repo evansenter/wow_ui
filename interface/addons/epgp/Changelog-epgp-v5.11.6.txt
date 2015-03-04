@@ -1,0 +1,12 @@
+tag v5.11.6
+8fff6fdfde4ba254a866cd1af0207bde72fb04b5
+Chip Turner <cturner@pattern.net>
+2015-02-25 22:23:38 -0800
+
+fix issue with EP dropdown reason
+
+
+--------------------
+
+Chip Turner:
+	- fix (hopefully permanently) the filter for the EP dropdown reason

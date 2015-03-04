@@ -549,7 +549,11 @@ and Pawn.</p>
 	changes, and Pawn remembers its value based on whether you were in a PvP 
 	zone or not at the last time it was calculated.&nbsp; I need to figure out a 
 	solution for this.&nbsp; (Probably for now I'll have to always value the 
-	item at its PvE value.)<br />(Primal Combatant, Primal Gladiator)</li>
+	item at its PvE value.)<br />(Primal Combatant, Primal Gladiator)<ul>
+		<li>The same problem reportedly occurs in challenge mode dungeons, since 
+		they also scale gear.</li>
+	</ul>
+	</li>
 	<li>If you purchase a second Khadgar ring, Pawn will probably think that 
 	your two rings are your best and second-best items for each of your specs, 
 	but they're Unique-Equipped so you can't use both.&nbsp; (I should maintain 
@@ -590,6 +594,13 @@ and Pawn.</p>
 	tooltips that makes it impossible for Pawn to read some stats off of them 
 	anymore.&nbsp; For example, it redefines ITEM_MOD_CRIT_RATING so that what 
 	would normally be "+25 Critical Strike" shows up as "Crit +25".)</li>
+	<li>I should add a feature to the Values tab to import Ask Mr. Robot stat 
+	weights.&nbsp; (They can be exported from the AMR character page: click the 
+	green arrow button, then Best in Slot, then Edit Weights, then Share.)<ul>
+		<li>For this to work well I'd need some templates to start from, since 
+		those stat weights won't include useful things like usable weapons.</li>
+	</ul>
+	</li>
 </ul>
 <h3>Features that I may remove in Pawn 2.0 after Warlords of Draenor launches 
 (and people are mostly at level 100)</h3>
@@ -610,8 +621,20 @@ and Pawn.</p>
 	GetItemStats instead of parsing tooltips.&nbsp; That's much closer to a 
 	reality in WoD, as long as Blizzard updates it to support mythic items and 
 	other items with a difficulty level.)</li>
+		<li>I might remove the "special effects not included" warning message 
+		since it's not really relevant most of the time; it usually just shows 
+		up on trinkets and enchantments, and trinkets don't get Pawn values and 
+		enchantments aren't applicable if item current values are disabled.</li>
+		<li>I'll probably change the (?) icon to an orange diamond to be 
+		consistent with Diablo III.</li>
 </ul>
 <h2>Updates</h2>
+<h3>Version 1.9.14</h3>
+<ul>
+	<li>Fixed a bug where sometimes Pawn would save over custom key bindings set 
+	up by certain addons, such as ElvUI.</li>
+	<li>Included updates and improvements to the Italian translation.</li>
+</ul>
 <h3>Version 1.9.13</h3>
 <ul>
 	<li>Included a variety of updates and improvements to the French 

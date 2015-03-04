@@ -3,8 +3,8 @@ DataStore_TalentsDB = {
 	["profileKeys"] = {
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Metal - Illidan"] = "Metal - Illidan",
-		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
+		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Evan - Illidan"] = "Evan - Illidan",
 		["Natal - Illidan"] = "Natal - Illidan",
 		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
@@ -58,7 +58,7 @@ DataStore_TalentsDB = {
 			},
 			["Default.Illidan.Evan"] = {
 				["ActiveTalents"] = 2,
-				["lastUpdate"] = 1424844524,
+				["lastUpdate"] = 1425498701,
 				["Class"] = "PRIEST",
 				["GlyphList"] = {
 					11, -- [1]
@@ -158,9 +158,105 @@ DataStore_TalentsDB = {
 					17276, -- [32]
 				},
 			},
-			["Default.Illidan.Metal"] = {
+			["Default.Illidan.Comet"] = {
 				["ActiveTalents"] = 2,
-				["lastUpdate"] = 1424752860,
+				["lastUpdate"] = 1425500125,
+				["Class"] = "MONK",
+				["GlyphList"] = {
+					11, -- [1]
+					16250, -- [2]
+					16506, -- [3]
+					19354, -- [4]
+					18170, -- [5]
+					16570, -- [6]
+					18186, -- [7]
+					19402, -- [8]
+					18202, -- [9]
+					16490, -- [10]
+					16410, -- [11]
+					18266, -- [12]
+					15978, -- [13]
+					18218, -- [14]
+					16346, -- [15]
+					16426, -- [16]
+					16314, -- [17]
+					16522, -- [18]
+					16650, -- [19]
+					15962, -- [20]
+					18234, -- [21]
+					16218, -- [22]
+					18282, -- [23]
+					16026, -- [24]
+					16554, -- [25]
+					16234, -- [26]
+					16618, -- [27]
+					16186, -- [28]
+					18250, -- [29]
+					18298, -- [30]
+					15994, -- [31]
+					13, -- [32]
+					16892, -- [33]
+					16732, -- [34]
+					16668, -- [35]
+					16284, -- [36]
+					16636, -- [37]
+					16540, -- [38]
+					16460, -- [39]
+					16476, -- [40]
+					16716, -- [41]
+					16684, -- [42]
+				},
+			},
+			["Default.Dark Iron.Colton"] = {
+				["ActiveTalents"] = 1,
+				["lastUpdate"] = 1424741732,
+				["GlyphList"] = {
+					11, -- [1]
+					8202, -- [2]
+					8426, -- [3]
+					12298, -- [4]
+					12314, -- [5]
+					8330, -- [6]
+					12346, -- [7]
+					8314, -- [8]
+					8410, -- [9]
+					8250, -- [10]
+					8394, -- [11]
+					8442, -- [12]
+					8922, -- [13]
+					8346, -- [14]
+					8490, -- [15]
+					8906, -- [16]
+					8522, -- [17]
+					17746, -- [18]
+					8258, -- [19]
+					17794, -- [20]
+					17762, -- [21]
+					17778, -- [22]
+					8498, -- [23]
+					17826, -- [24]
+					17042, -- [25]
+					17842, -- [26]
+					17858, -- [27]
+					17010, -- [28]
+					13, -- [29]
+					19276, -- [30]
+					8940, -- [31]
+					8892, -- [32]
+					8300, -- [33]
+					8236, -- [34]
+					8364, -- [35]
+					8860, -- [36]
+					12380, -- [37]
+					8468, -- [38]
+					8868, -- [39]
+					17188, -- [40]
+				},
+				["Class"] = "DEATHKNIGHT",
+			},
+			["Default.Illidan.Metal"] = {
+				["ActiveTalents"] = 1,
+				["lastUpdate"] = 1425499308,
 				["GlyphList"] = {
 					11, -- [1]
 					7962, -- [2]
@@ -276,102 +372,6 @@ DataStore_TalentsDB = {
 				},
 				["Class"] = "SHAMAN",
 			},
-			["Default.Illidan.Comet"] = {
-				["ActiveTalents"] = 1,
-				["lastUpdate"] = 1424844591,
-				["Class"] = "MONK",
-				["GlyphList"] = {
-					11, -- [1]
-					16250, -- [2]
-					16506, -- [3]
-					19354, -- [4]
-					18170, -- [5]
-					16570, -- [6]
-					18186, -- [7]
-					19402, -- [8]
-					18202, -- [9]
-					16490, -- [10]
-					16410, -- [11]
-					18266, -- [12]
-					15978, -- [13]
-					18218, -- [14]
-					16346, -- [15]
-					16426, -- [16]
-					16314, -- [17]
-					16522, -- [18]
-					16650, -- [19]
-					15962, -- [20]
-					18234, -- [21]
-					16218, -- [22]
-					18282, -- [23]
-					16026, -- [24]
-					16554, -- [25]
-					16234, -- [26]
-					16618, -- [27]
-					16186, -- [28]
-					18250, -- [29]
-					18298, -- [30]
-					15994, -- [31]
-					13, -- [32]
-					16892, -- [33]
-					16732, -- [34]
-					16668, -- [35]
-					16284, -- [36]
-					16636, -- [37]
-					16540, -- [38]
-					16460, -- [39]
-					16476, -- [40]
-					16716, -- [41]
-					16684, -- [42]
-				},
-			},
-			["Default.Dark Iron.Colton"] = {
-				["ActiveTalents"] = 1,
-				["lastUpdate"] = 1424741732,
-				["GlyphList"] = {
-					11, -- [1]
-					8202, -- [2]
-					8426, -- [3]
-					12298, -- [4]
-					12314, -- [5]
-					8330, -- [6]
-					12346, -- [7]
-					8314, -- [8]
-					8410, -- [9]
-					8250, -- [10]
-					8394, -- [11]
-					8442, -- [12]
-					8922, -- [13]
-					8346, -- [14]
-					8490, -- [15]
-					8906, -- [16]
-					8522, -- [17]
-					17746, -- [18]
-					8258, -- [19]
-					17794, -- [20]
-					17762, -- [21]
-					17778, -- [22]
-					8498, -- [23]
-					17826, -- [24]
-					17042, -- [25]
-					17842, -- [26]
-					17858, -- [27]
-					17010, -- [28]
-					13, -- [29]
-					19276, -- [30]
-					8940, -- [31]
-					8892, -- [32]
-					8300, -- [33]
-					8236, -- [34]
-					8364, -- [35]
-					8860, -- [36]
-					12380, -- [37]
-					8468, -- [38]
-					8868, -- [39]
-					17188, -- [40]
-				},
-				["Class"] = "DEATHKNIGHT",
-			},
 		},
 		["Reference"] = {
 			["GlyphNames"] = {
@@ -388,7 +388,7 @@ DataStore_TalentsDB = {
 				[762] = "Wind and Thunder",
 				[223] = "Healing Wave",
 				[318] = "Frost Nova",
-				[763] = "Death From Above",
+				[763] = "Death from Above",
 				[1019] = "Mana Tea",
 				[764] = "Victorious Throw",
 				[1020] = "Blazing Trail",
@@ -632,7 +632,7 @@ DataStore_TalentsDB = {
 				[519] = "Death Grip",
 				[556] = "Unholy Command",
 				[771] = "Death Coil",
-				[502] = "Shield Slam",
+				[1003] = "Mind Flay",
 				[252] = "Purify",
 				[557] = "Outbreak",
 				[524] = "Icy Touch",
@@ -645,7 +645,7 @@ DataStore_TalentsDB = {
 				[1017] = "Flying Serpent Kick",
 				[220] = "Wind Shear",
 				[1006] = "Vampiric Embrace",
-				[1003] = "Mind Flay",
+				[502] = "Shield Slam",
 				[751] = "Deluge",
 				[1044] = "Water Roll",
 				[1007] = "Heavens",
@@ -681,8 +681,8 @@ DataStore_TalentsRefDB = {
 	["profileKeys"] = {
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Metal - Illidan"] = "Metal - Illidan",
-		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
+		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Evan - Illidan"] = "Evan - Illidan",
 		["Natal - Illidan"] = "Natal - Illidan",
 		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
@@ -694,7 +694,7 @@ DataStore_TalentsRefDB = {
 		},
 		["WARRIOR"] = {
 			["Locale"] = "enUS",
-			["Version"] = 19342,
+			["Version"] = 19702,
 		},
 		["WARLOCK"] = {
 			["Locale"] = "enUS",
@@ -710,11 +710,11 @@ DataStore_TalentsRefDB = {
 		},
 		["MONK"] = {
 			["Locale"] = "enUS",
-			["Version"] = 19678,
+			["Version"] = 19702,
 		},
 		["PRIEST"] = {
 			["Locale"] = "enUS",
-			["Version"] = 19678,
+			["Version"] = 19702,
 		},
 	},
 }

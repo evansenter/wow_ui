@@ -3,8 +3,8 @@ DataStore_MailsDB = {
 	["profileKeys"] = {
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Metal - Illidan"] = "Metal - Illidan",
-		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
+		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Evan - Illidan"] = "Evan - Illidan",
 		["Natal - Illidan"] = "Natal - Illidan",
 		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
@@ -12,58 +12,60 @@ DataStore_MailsDB = {
 	["global"] = {
 		["Characters"] = {
 			["Default.Illidan.Evan"] = {
-				["lastUpdate"] = 1424844721,
+				["lastUpdate"] = 1425499830,
 				["Mails"] = {
 					{
-						["icon"] = "Interface\\ICONS\\INV_Misc_Note_01.blp",
-						["sender"] = "Srikka",
-						["subject"] = "Shiny Trinkets",
-						["returned"] = false,
-						["money"] = 0,
-						["text"] = "Seek me out in Warspear if you wish to find secrets hidden in the shadows and corners of the world. I have ancient maps to guide on your way.",
-						["lastCheck"] = 1424844513,
-						["daysLeft"] = 29.5800113677979,
-					}, -- [1]
-					{
-						["sender"] = "Comet",
-						["count"] = 1,
-						["link"] = "|cff1eff00|Hitem:106651:0:0:0:0:0:0:0:100:0:0:1:96|h[Spirestrider Legguards of the Quickblade]|h|r",
-						["lastCheck"] = 1424844721,
-						["icon"] = "Interface\\ICONS\\INV_Pant_Mail_DraenorQuest95_B_01.blp",
-						["daysLeft"] = 30,
-					}, -- [2]
-				},
-				["lastVisitDate"] = "2015/02/25 01:08",
-			},
-			["Default.Illidan.Metal"] = {
-				["lastUpdate"] = 1424752928,
-				["lastVisitDate"] = "2015/02/23 23:42",
-			},
-			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1424844728,
-				["Mails"] = {
-					{
-						["lastCheck"] = 1424844728,
-						["sender"] = "Srikka",
-						["subject"] = "Shiny Trinkets",
-						["returned"] = false,
-						["money"] = 0,
-						["text"] = "Seek me out in Warspear if you wish to find secrets hidden in the shadows and corners of the world. I have ancient maps to guide on your way.",
-						["icon"] = "Interface\\ICONS\\INV_Misc_Note_01.blp",
-						["daysLeft"] = 29.5503940582275,
-					}, -- [1]
-					{
-						["lastCheck"] = 1424844728,
+						["lastCheck"] = 1425498801,
 						["sender"] = "The Postmaster",
 						["subject"] = "Recovered Item",
 						["returned"] = false,
 						["money"] = 0,
 						["text"] = "We recovered a lost item in the twisting nether and noted that it was yours.\n\nPlease find said object enclosed.",
 						["icon"] = "Interface\\ICONS\\INV_Misc_Note_01.blp",
-						["daysLeft"] = 29.5658569335938,
+						["daysLeft"] = 29.1472110748291,
+					}, -- [1]
+					{
+						["sender"] = "Comet",
+						["count"] = 1,
+						["link"] = "|cffa335ee|Hitem:31340:0:0:0:0:0:0:0:100:0:0:0|h[Will of Edward the Odd]|h|r",
+						["lastCheck"] = 1425499830,
+						["icon"] = "Interface\\ICONS\\INV_Chest_Cloth_43.blp",
+						["daysLeft"] = 30,
 					}, -- [2]
+					{
+						["sender"] = "Metal",
+						["count"] = 32,
+						["link"] = "|cffffffff|Hitem:111557:0:0:0:0:0:0:0:100:0:0:0|h[Sumptuous Fur]|h|r",
+						["icon"] = "Interface\\ICONS\\INV_misc_nativebeastfur.blp",
+						["lastCheck"] = 1425499739,
+						["daysLeft"] = 30,
+					}, -- [3]
+					{
+						["sender"] = "Metal",
+						["count"] = 1,
+						["link"] = "|cff1eff00|Hitem:116493:0:0:0:0:0:0:0:100:0:0:1:114|h[Vinewrapped Bow of the Feverflare]|h|r",
+						["icon"] = "Interface\\ICONS\\INV_Bow_1h_DraenorQuest95_B_01.blp",
+						["lastCheck"] = 1425499739,
+						["daysLeft"] = 30,
+					}, -- [4]
+					{
+						["sender"] = "Comet",
+						["count"] = 1,
+						["link"] = "|cff1eff00|Hitem:116636:0:0:0:0:0:0:0:100:0:0:1:111|h[Oshu'gun Scepter of the Feverflare]|h|r",
+						["lastCheck"] = 1425499830,
+						["icon"] = "Interface\\ICONS\\INV_Mace_1h_DraenorQuest95_B_01.blp",
+						["daysLeft"] = 30,
+					}, -- [5]
 				},
-				["lastVisitDate"] = "2015/02/25 01:12",
+				["lastVisitDate"] = "2015/03/04 14:53",
+			},
+			["Default.Illidan.Comet"] = {
+				["lastUpdate"] = 1425499963,
+				["lastVisitDate"] = "2015/03/04 15:12",
+			},
+			["Default.Illidan.Metal"] = {
+				["lastUpdate"] = 1425499753,
+				["lastVisitDate"] = "2015/03/04 15:09",
 			},
 		},
 	},

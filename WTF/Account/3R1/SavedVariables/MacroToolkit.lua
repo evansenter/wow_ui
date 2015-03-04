@@ -16,13 +16,13 @@ MacroToolkitDB = {
 	},
 	["profileKeys"] = {
 		["Colton - Dark Iron"] = "profile",
-		["Plane - Illidan"] = "profile",
-		["Ereinion - Dark Iron"] = "profile",
-		["Natal - Illidan"] = "profile",
 		["Combustion - Illidan"] = "profile",
+		["Metal - Illidan"] = "profile",
+		["Natal - Illidan"] = "profile",
+		["Plane - Illidan"] = "profile",
 		["Comet - Illidan"] = "profile",
 		["Evan - Illidan"] = "profile",
-		["Metal - Illidan"] = "profile",
+		["Ereinion - Dark Iron"] = "profile",
 	},
 	["global"] = {
 		["ebackups"] = {

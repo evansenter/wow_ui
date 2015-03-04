@@ -84,6 +84,13 @@ AngryAssign_Pages = {
 		["UpdateId"] = 1063064695,
 		["Contents"] = "1st Int Ad Explosion:\nLanfar + Scar +",
 	},
+	[1606217381] = {
+		["Updated"] = 1425446580,
+		["Name"] = "Mythic Ore",
+		["Id"] = 1606217381,
+		["UpdateId"] = 4134799225,
+		["Contents"] = "1 - Lust Guidance\n2 - Vampally Devo, Toppies Amp\n3 - Healing Tide\n4 - Freed Devo, Goargrim Rally\n5 - Personals\n6 - Revival\n7 - Healing Tonic/ Sikonos AMZ on Ranged\n2nd Phase - Mtnk Rally/Hymn\n\nTank CDs\n\nA = Vamp Sac\nB = Freed Sac\nC = Tank Personal Minor / Innocentz Sac\nD = Life Cacoon\nE =  Fuzzi Sac\nF = Vigilance Goargrim\nG = Tank Personal\n\nInterrupts\n\n1st Kov\n2nd Goargrim\n3rd Sikonos\n4th Princip\n5th Strpol\nRinse and Repeat\n\nMelee: Star --> Diamond --> Square --> Moon\nRanged: Triangle --> Condom --> Far Blue --> Port --> \nStarting Area",
+	},
 	[1763909478] = {
 		["Updated"] = 1421207437,
 		["Name"] = "Brakenspore",
@@ -99,11 +106,18 @@ AngryAssign_Pages = {
 		["Contents"] = "Whirlwind (emp):\n1) (emp) Devo +  Hockey + Gandalf + Hemo + Spirit Link\n2) (emp) Twin(Hymn) + Lan(Barrier) + Tokman + Azpek\n\n\nRubble:\n2)  Scar  + Tokman + Hemo\n3)  Devo + Bluto (Smoke) + Gandalf + Hemo + Spirit Link\n4)  Twin + Lanfear + Hockey\n5)  Scar + Tokman + Hemo\n\nQuake\n2) Twin  + NVs \n3) Akroma + HS + personals",
 	},
 	[1154863405] = {
-		["Updated"] = 1424399043,
+		["Updated"] = 1425438008,
 		["Name"] = "Beastlord ",
 		["Id"] = 1154863405,
-		["UpdateId"] = 1296062330,
-		["Contents"] = "Tantrum Healing Cds:\n1: Tranq/Princip\n2: Rev/Strpol\n3: Hymn/Goargrim\n4: Freed/Toppies\n5: Vamp/Loki/Mtnk\nRepeat\n\nRoar Order For Last Phase:\n1: Anahkin\n2. KoV\n3: Bharay\n\n\nLAST PHASE:\nVAMP\nFREED\nREV/Mtnk/Goargrim\nHymn\nDEAD",
+		["UpdateId"] = 4287273478,
+		["Contents"] = "Tantrum Healing Cds:\n1: Healing Tide/Toppies\n2: Rev/Loki\n3: Freed/Goargrim\n4: Hymn/Toppies/ Lustya Guidance\n5: Vamp/Loki\nRepeat\n\nRoar Order For Last Phase:\n1: Arsenal\n2. KoV\n3: Lustya\n\nLAST PHASE\nSPIRIT LINK ON MELEE AND TANKS/PERSONALS\nFREED/PALLY DEVOs\nREV and HYMN\nEverything!\nDEAD",
+	},
+	[412556291] = {
+		["Updated"] = 1424913949,
+		["Name"] = "Oregorger",
+		["Id"] = 412556291,
+		["UpdateId"] = 729592596,
+		["Contents"] = "Acid Torrent Healing Rotation\n1:Hymn/Toppies\n2:Vampally/Goargrim\n3:Freed/Mtnk\n4:Tranq/Loki\n\nTransition\nRev/Personals/Tonics",
 	},
 	[223793571] = {
 		["Updated"] = 1420677848,
@@ -127,11 +141,12 @@ AngryAssign_Pages = {
 		["Contents"] = "Myth\nCharlie\nAzpek\nHockeyy",
 	},
 	[533536495] = {
-		["Updated"] = 1424408607,
+		["Updated"] = 1425443707,
 		["Name"] = "Gruul",
 		["Id"] = 533536495,
-		["UpdateId"] = 208859558,
-		["Contents"] = "Slice CDS:\n8: Hymn/Freed/Toppies\n9: Rev/Vamp/Goargrim\n\n \n\nOverhead Smash\nUse Personals/Tonic(if needed)",
+		["UpdateId"] = 2031360237,
+		["Backup"] = "Slice Cooldown Order:\n8: Hymn/Freed/Toppies\n9: Rev/Vamp/Goargrim\n10: Tranq/Loki \n\nPulls: Comet Pull\n1: {triangle} Vikid---Ironbark\n2:{triangle} Vikid---Personal\n3:{square}Vikid----Sac(inno)\n4:{diamond}Comet----Personal\n5:{diamond}Comet--Sac(Vamp)\n6:{triangle} Comet---Life Cocoon\n7:{square} Vikid----Guardian Spirit\n8:{square} Vikid----Personals\n9:{diamond} Vikid--Personals/Pain Suppression\nIntermission. Repeat.",
+		["Contents"] = "Slice Cooldown Order:\n7: Sikonos AMZ/Freed/Toppies\n9: Hymn//Vamp/Goargrim\n10/Phase2: Revival/Loki \n\nPulls: Comet Pull\n1:{Triangle} Vikid---Sac (Vamp)\n2:{Triangle}  Vikid---Personal\n3:{square}Vikid----Sac (Inno)/Vigilance Goargarim\n4:{diamond}Comet----Personal\n5:{diamond}Comet--Sac (Freed)\n6:{triangle} Comet---Life Cocoon\n7:{square} Vikid----Personals\n8:{square} Vikid----Personals/ Smoke\n9:{diamond} Vikid--Personals/Guardian Spirit/Fuzzican\nIntermission. Repeat.\nSwap Tank Names for the 2ND PHASE!",
 	},
 	[774473661] = {
 		["Updated"] = 1422416935,
@@ -142,14 +157,21 @@ AngryAssign_Pages = {
 	},
 }
 AngryAssign_State = {
-	["directionUp"] = false,
+	["display"] = {
+		["y"] = -185.500244140625,
+		["x"] = 45.0002250671387,
+		["point"] = "TOPLEFT",
+		["scale"] = 1,
+		["hidden"] = false,
+	},
 	["locked"] = true,
+	["directionUp"] = false,
 	["tree"] = {
 		["groups"] = {
 		},
 		["scrollvalue"] = 0,
+		["selected"] = 412556291,
 		["treesizable"] = true,
-		["selected"] = 45058146,
 		["treewidth"] = 175,
 		["fullwidth"] = 665.999938964844,
 	},
@@ -158,13 +180,6 @@ AngryAssign_State = {
 		["top"] = 850,
 		["left"] = 610,
 		["width"] = 700,
-	},
-	["display"] = {
-		["y"] = -185.500244140625,
-		["x"] = 45.0002250671387,
-		["point"] = "TOPLEFT",
-		["scale"] = 1,
-		["hidden"] = false,
 	},
 }
 AngryAssign_Config = {

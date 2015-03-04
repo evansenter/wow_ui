@@ -3,8 +3,8 @@ DataStore_AgendaDB = {
 	["profileKeys"] = {
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Metal - Illidan"] = "Metal - Illidan",
-		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
+		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Evan - Illidan"] = "Evan - Illidan",
 		["Natal - Illidan"] = "Natal - Illidan",
 		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
@@ -13,7 +13,7 @@ DataStore_AgendaDB = {
 		["Options"] = {
 			["WeeklyResetHour"] = 6,
 			["WeeklyResetDay"] = 2,
-			["NextWeeklyReset"] = "2015-03-03",
+			["NextWeeklyReset"] = "2015-03-10",
 		},
 		["Characters"] = {
 			["Default.Dark Iron.Ereinion"] = {
@@ -25,22 +25,17 @@ DataStore_AgendaDB = {
 						["note"] = "",
 					},
 				},
-				["lastUpdate"] = 1424844327,
+				["lastUpdate"] = 1425498701,
 			},
 			["Default.Illidan.Combustion"] = {
 				["lastUpdate"] = 1424741664,
 			},
-			["Default.Illidan.Metal"] = {
-				["lastUpdate"] = 1424752859,
-			},
-			["Default.Illidan.Natal"] = {
-				["lastUpdate"] = 1424741647,
-			},
 			["Default.Illidan.Comet"] = {
 				["DungeonIDs"] = {
-					["Blackrock Foundry Heroic|179987498"] = "553853|1424844548|0|1",
+					["Blackrock Foundry Heroic|180959267"] = "503094|1425500126|0|1",
+					["Blackrock Foundry Mythic|180919555"] = "503094|1425500126|0|1",
 				},
-				["lastUpdate"] = 1424844547,
+				["lastUpdate"] = 1425500125,
 			},
 			["Default.Dark Iron.Colton"] = {
 				["Contacts"] = {
@@ -78,6 +73,12 @@ DataStore_AgendaDB = {
 					},
 				},
 				["lastUpdate"] = 1424741733,
+			},
+			["Default.Illidan.Metal"] = {
+				["lastUpdate"] = 1425499308,
+			},
+			["Default.Illidan.Natal"] = {
+				["lastUpdate"] = 1424741647,
 			},
 		},
 	},

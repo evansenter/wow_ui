@@ -13,7 +13,7 @@ local maxdiff = 16 -- max number of instance difficulties
 local maxcol = 4 -- max columns per player+instance
 
 addon.svnrev = {}
-addon.svnrev["SavedInstances.lua"] = tonumber(("$Revision: 420 $"):match("%d+"))
+addon.svnrev["SavedInstances.lua"] = tonumber(("$Revision: 425 $"):match("%d+"))
 
 -- local (optimal) references to provided functions
 local table, math, bit, string, pairs, ipairs, unpack, strsplit, time, type, wipe, tonumber, select, strsub = 
@@ -173,6 +173,7 @@ local _specialQuests = {
   [37638] = { zone=GARRISON_LOCATION_TOOLTIP, aid=9162 }, -- Bronze Defender
   [37639] = { zone=GARRISON_LOCATION_TOOLTIP, aid=9164 }, -- Silver Defender
   [37640] = { zone=GARRISON_LOCATION_TOOLTIP, aid=9165 }, -- Golden Defender
+  [38482] = { zone=GARRISON_LOCATION_TOOLTIP, aid=9826 }, -- Platinum Defender
 }
 function addon:specialQuests()
   for qid, qinfo in pairs(_specialQuests) do
@@ -1013,6 +1014,7 @@ function addon:UpdateInstanceData()
     local instance = vars.db.Instances[info.name]
    if info.remove then -- cleanup hook
     vars.db.Instances[info.name] = nil
+    addon.WorldBosses[eid] = nil
    else
     if not instance then
       added = added + 1
@@ -1344,6 +1346,7 @@ function addon:UpdateToonData()
 	end
 	t.currency = t.currency or {}
 	for _,idx in pairs(currency) do
+	  if addon.logout then break end -- currency is unreliable during logout
 	  local ci = t.currency[idx] or {}
 	  _, ci.amount, _, ci.earnedThisWeek, ci.weeklyMax, ci.totalMax = GetCurrencyInfo(idx)
           if idx == 396 then -- VP has a weekly max scaled by 100

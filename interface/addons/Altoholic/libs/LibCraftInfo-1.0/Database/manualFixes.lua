@@ -22,3 +22,10 @@ This means:
 if the spell is learned by a recipe item, use the 5th parameter to pass the recipe's itemID.
 
 --]]
+
+
+local lib = LibStub("LibCraftInfo-1.0")
+
+lib:DeleteCraftInfo(57021)
+lib:DeleteCraftInfo(57244)
+lib:DeleteCraftInfo(162836)

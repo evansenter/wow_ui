@@ -83,8 +83,8 @@ AmrDb = {
 			[1136] = "disabled",
 			[1205] = "disabled",
 		},
-		["_lastDiff"] = 0,
-		["_lastZone"] = "Draenor",
+		["_lastDiff"] = 1,
+		["_lastZone"] = "FW Horde Garrison Level 3",
 	},
 	["BagItems"] = {
 		"|cffffffff|Hitem:6948:0:0:0:0:0:0:0:100:0:0:0|h[Hearthstone]|h|r", -- [1]

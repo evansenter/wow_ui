@@ -20,7 +20,7 @@ PawnLocal =
 	CrystalOfFearName = "Crystal of Fear",
 	DebugOffCommand = "侦错 关",
 	DebugOnCommand = "侦错 开",
-	DecimalSeparator = ".", -- Needs review
+	DecimalSeparator = ".",
 	DeleteScaleConfirmation = "你确定你要删除 %s? 这将不能复原. 确定输入 \"%s\" :",
 	DidntUnderstandMessage = "   (?) 无法识别 \"%s\".",
 	EnchantedStatsHeader = "(当前值)",
@@ -55,7 +55,7 @@ PawnLocal =
 	RenameScaleEnterName = "%s 的新名为:",
 	SocketBonusValueCalculationMessage = "   -- 插槽加成是值得的: %g",
 	StatNameText = "1 |cffffffff%s|r 价值:",
-	ThousandsSeparator = ",", -- Needs review
+	ThousandsSeparator = ",",
 	TooltipBestAnnotation = "%s  |cff8ec3e6(最佳)|r",
 	TooltipBestAnnotationSimple = "%s  插槽最佳",
 	TooltipBigUpgradeAnnotation = "%s  |TInterface\\AddOns\\Pawn\\Textures\\UpgradeArrow:0|t|cff00ff00 提升%s|r",
@@ -345,11 +345,13 @@ PawnLocal =
 		AboutHeader = "关于 Pawn",
 		AboutReadme = "新手？看看“准备开始”标签。",
 		AboutTab = "关于",
-		AboutTranslation = "简体中文by：贫僧法号智障 三区 阿扎达斯 | NGA论坛ID：bigbamboo",
+		AboutTranslation = "简中汉化：巴拉巴拉土豆精#5188",
 		AboutVersion = "版本 %s",
 		AboutWebsite = [=[想要更多作者Vger的插件，请访问vgermods.com。
 
-Wowhead负责默认的评分尺度的统计与设定。]=],
+默认的评分尺度的统计与设定来自于Wowhead。
+
+简中汉化：巴拉巴拉土豆精#5188   |   NGA论坛ID：bigbamboo]=],
 		CompareClearItems = "清除",
 		CompareClearItemsTooltip = "移除两件对照的物品.",
 		CompareCogwheelSockets = "齿轮插槽",

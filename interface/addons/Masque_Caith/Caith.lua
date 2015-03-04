@@ -3,7 +3,7 @@
 	please see the included License.txt file.
 
 	* File.....: Caith.lua
-	* Revision.: 91
+	* Revision.: 93
 	* Author...: StormFX
 
 	Caith Skin
@@ -15,9 +15,9 @@ if not MSQ then return end
 -- Caith
 MSQ:AddSkin("Caith", {
 	Author = "StormFX",
-	Version = "6.0.0",
+	Version = "6.1.0",
 	Shape = "Square",
-	Masque_Version = 60000,
+	Masque_Version = 60100,
 	Backdrop = {
 		Width = 42,
 		Height = 42,

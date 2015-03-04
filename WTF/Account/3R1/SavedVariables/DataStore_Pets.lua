@@ -3,8 +3,8 @@ DataStore_PetsDB = {
 	["profileKeys"] = {
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Metal - Illidan"] = "Metal - Illidan",
-		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
+		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Evan - Illidan"] = "Evan - Illidan",
 		["Natal - Illidan"] = "Natal - Illidan",
 		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
@@ -67,7 +67,7 @@ DataStore_PetsDB = {
 				},
 			},
 			["Default.Illidan.Evan"] = {
-				["lastUpdate"] = 1424844327,
+				["lastUpdate"] = 1425498701,
 				["CRITTER"] = {
 					89670, -- [1]
 					78683, -- [2]
@@ -93,37 +93,8 @@ DataStore_PetsDB = {
 					55068, -- [3]
 				},
 			},
-			["Default.Illidan.Metal"] = {
-				["lastUpdate"] = 1424752859,
-				["CRITTER"] = {
-					69452, -- [1]
-					173542, -- [2]
-					170273, -- [3]
-					170270, -- [4]
-					155838, -- [5]
-					148061, -- [6]
-					168668, -- [7]
-					55068, -- [8]
-					10678, -- [9]
-					42609, -- [10]
-					164212, -- [11]
-					62510, -- [12]
-				},
-			},
-			["Default.Illidan.Natal"] = {
-				["lastUpdate"] = 1424741647,
-				["CRITTER"] = {
-					148049, -- [1]
-					69452, -- [2]
-					67416, -- [3]
-					142028, -- [4]
-					55068, -- [5]
-					67417, -- [6]
-					62491, -- [7]
-				},
-			},
 			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1424844547,
+				["lastUpdate"] = 1425500125,
 				["CRITTER"] = {
 					69452, -- [1]
 					89039, -- [2]
@@ -157,6 +128,35 @@ DataStore_PetsDB = {
 					61348, -- [10]
 					35911, -- [11]
 					26529, -- [12]
+				},
+			},
+			["Default.Illidan.Metal"] = {
+				["lastUpdate"] = 1425499308,
+				["CRITTER"] = {
+					69452, -- [1]
+					173542, -- [2]
+					170273, -- [3]
+					170270, -- [4]
+					155838, -- [5]
+					148061, -- [6]
+					168668, -- [7]
+					55068, -- [8]
+					10678, -- [9]
+					42609, -- [10]
+					164212, -- [11]
+					62510, -- [12]
+				},
+			},
+			["Default.Illidan.Natal"] = {
+				["lastUpdate"] = 1424741647,
+				["CRITTER"] = {
+					148049, -- [1]
+					69452, -- [2]
+					67416, -- [3]
+					142028, -- [4]
+					55068, -- [5]
+					67417, -- [6]
+					62491, -- [7]
 				},
 			},
 		},

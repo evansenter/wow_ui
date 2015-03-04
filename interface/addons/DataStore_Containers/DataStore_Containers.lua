@@ -140,6 +140,12 @@ local function GetThisGuild()
 		local key = format("%s.%s.%s", THIS_ACCOUNT, GetRealmName(), guild)
 		return addon.db.global.Guilds[key]
 	end
+
+	-- tentative fix, to review after 6.1
+	-- local guildKey = DataStore:GetGuild()
+	-- if guildKey then
+		-- return addon.db.global.Guilds[guildKey]
+	-- end
 end
 
 local function GetBankTimestamps(guild)
