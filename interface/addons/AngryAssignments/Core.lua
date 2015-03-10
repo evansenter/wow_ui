@@ -12,8 +12,8 @@ BINDING_NAME_AngryAssign_LOCK = "Toggle Lock"
 BINDING_NAME_AngryAssign_DISPLAY = "Toggle Display"
 BINDING_NAME_AngryAssign_OUTPUT = "Output Assignment to Chat"
 
-local AngryAssign_Version = 'v1.5.3'
-local AngryAssign_Timestamp = '20150120072928'
+local AngryAssign_Version = 'v1.6.0'
+local AngryAssign_Timestamp = '20150310061316'
 
 local protocolVersion = 1
 local comPrefix = "AnAss"..protocolVersion
@@ -605,6 +605,7 @@ local function AngryAssign_TextChanged(widget, event, value)
 	AngryAssign.window.button_revert:SetDisabled(false)
 	AngryAssign.window.button_restore:SetDisabled(false)
 	AngryAssign.window.button_display:SetDisabled(true)
+	AngryAssign.window.button_output:SetDisabled(true)
 end
 
 local function AngryAssign_TextEntered(widget, event, value)
@@ -632,7 +633,7 @@ function AngryAssign:CreateWindow()
 	AngryAssign.window = window
 
 	AngryAssign_Window = window.frame
-	window.frame:SetMinResize(600, 300)
+	window.frame:SetMinResize(660, 400)
 	window.frame:SetFrameStrata("HIGH")
 	window.frame:SetFrameLevel(1)
 	tinsert(UISpecialFrames, "AngryAssign_Window")
@@ -693,6 +694,16 @@ function AngryAssign:CreateWindow()
 	button_restore:SetCallback("OnClick", AngryAssign_RestorePage)
 	tree:AddChild(button_restore)
 	window.button_restore = button_restore
+	
+	local button_output = AceGUI:Create("Button")
+	button_output:SetText("Output")
+	button_output:SetWidth(80)
+	button_output:SetHeight(22)
+	button_output:ClearAllPoints()
+	button_output:SetPoint("BOTTOMLEFT", button_restore.frame, "BOTTOMRIGHT", 5, 0)
+	button_output:SetCallback("OnClick", AngryAssign_OutputDisplayed)
+	tree:AddChild(button_output)
+	window.button_output = button_output
 
 	window:PauseLayout()
 	local button_add = AceGUI:Create("Button")
@@ -734,16 +745,6 @@ function AngryAssign:CreateWindow()
 	button_clear:SetCallback("OnClick", AngryAssign_ClearPage)
 	window:AddChild(button_clear)
 	window.button_clear = button_clear
-	
-	local button_output = AceGUI:Create("Button")
-	button_output:SetText("Output")
-	button_output:SetWidth(80)
-	button_output:SetHeight(19)
-	button_output:ClearAllPoints()
-	button_output:SetPoint("BOTTOMRIGHT", button_clear.frame, "BOTTOMLEFT", -5, 0)
-	button_output:SetCallback("OnClick", AngryAssign_OutputDisplayed)
-	window:AddChild(button_output)
-	window.button_output = button_output
 
 	self:UpdateSelected(true)
 	
@@ -935,12 +936,14 @@ function AngryAssign:UpdateSelected(destructive)
 		self.window.button_rename:SetDisabled(false)
 		self.window.button_revert:SetDisabled(not self.window.text.button:IsEnabled())
 		self.window.button_display:SetDisabled(self.window.text.button:IsEnabled())
+		self.window.button_output:SetDisabled(self.window.text.button:IsEnabled())
 		self.window.button_restore:SetDisabled(not self.window.text.button:IsEnabled() and page.Backup == page.Contents)
 		self.window.text:SetDisabled(false)
 	else
 		self.window.button_rename:SetDisabled(true)
 		self.window.button_revert:SetDisabled(true)
 		self.window.button_display:SetDisabled(true)
+		self.window.button_output:SetDisabled(true)
 		self.window.button_restore:SetDisabled(true)
 		self.window.text:SetDisabled(true)
 	end
@@ -952,11 +955,9 @@ function AngryAssign:UpdateSelected(destructive)
 	if permission then
 		self.window.button_add:SetDisabled(false)
 		self.window.button_clear:SetDisabled(false)
-		self.window.button_output:SetDisabled(false)
 	else
 		self.window.button_add:SetDisabled(true)
 		self.window.button_clear:SetDisabled(true)
-		self.window.button_output:SetDisabled(true)
 	end
 end
 
@@ -1502,6 +1503,15 @@ function AngryAssign:UpdateDisplayed()
 				end
 				return word
 			end)
+			:gsub(ci_pattern('{spell%s+(%d+)}'), function(id)
+				return GetSpellLink(id)
+			end)
+			:gsub(ci_pattern('{boss%s+(%d+)}'), function(id)
+				return select(5, EJ_GetEncounterInfo(id))
+			end)
+			:gsub(ci_pattern('{journal%s+(%d+)}'), function(id)
+				return select(9, EJ_GetSectionInfo(id))
+			end)
 			:gsub(ci_pattern('{star}'), "{rt1}")
 			:gsub(ci_pattern('{circle}'), "{rt2}")
 			:gsub(ci_pattern('{diamond}'), "{rt3}")
@@ -1523,6 +1533,17 @@ function AngryAssign:UpdateDisplayed()
 			:gsub(ci_pattern('{dps}'), "|TInterface\\LFGFrame\\UI-LFG-ICON-PORTRAITROLES:0:0:0:0:64:64:20:39:22:41|t")
 			:gsub(ci_pattern('{hero}'), "{heroism}")
 			:gsub(ci_pattern('{heroism}'), "|TInterface\\Icons\\ABILITY_Shaman_Heroism:0|t")
+			:gsub(ci_pattern('{hunter}'), "|TInterface\\GLUES\\CHARACTERCREATE\\UI-CHARACTERCREATE-CLASSES:0:0:0:0:64:64:0:16:16:32|t")
+			:gsub(ci_pattern('{warrior}'), "|TInterface\\GLUES\\CHARACTERCREATE\\UI-CHARACTERCREATE-CLASSES:0:0:0:0:64:64:0:16:0:16|t")
+			:gsub(ci_pattern('{rogue}'), "|TInterface\\GLUES\\CHARACTERCREATE\\UI-CHARACTERCREATE-CLASSES:0:0:0:0:64:64:32:48:0:16|t")
+			:gsub(ci_pattern('{mage}'), "|TInterface\\GLUES\\CHARACTERCREATE\\UI-CHARACTERCREATE-CLASSES:0:0:0:0:64:64:16:32:0:16|t")
+			:gsub(ci_pattern('{priest}'), "|TInterface\\GLUES\\CHARACTERCREATE\\UI-CHARACTERCREATE-CLASSES:0:0:0:0:64:64:32:48:16:32|t")
+			:gsub(ci_pattern('{warlock}'), "|TInterface\\GLUES\\CHARACTERCREATE\\UI-CHARACTERCREATE-CLASSES:0:0:0:0:64:64:48:64:16:32|t")
+			:gsub(ci_pattern('{paladin}'), "|TInterface\\GLUES\\CHARACTERCREATE\\UI-CHARACTERCREATE-CLASSES:0:0:0:0:64:64:0:16:32:48|t")
+			:gsub(ci_pattern('{deathknight}'), "|TInterface\\GLUES\\CHARACTERCREATE\\UI-CHARACTERCREATE-CLASSES:0:0:0:0:64:64:16:32:32:48|t")
+			:gsub(ci_pattern('{druid}'), "|TInterface\\GLUES\\CHARACTERCREATE\\UI-CHARACTERCREATE-CLASSES:0:0:0:0:64:64:48:64:0:16|t")
+			:gsub(ci_pattern('{monk}'), "|TInterface\\GLUES\\CHARACTERCREATE\\UI-CHARACTERCREATE-CLASSES:0:0:0:0:64:64:32:48:32:48|t")
+			:gsub(ci_pattern('{shaman}'), "|TInterface\\GLUES\\CHARACTERCREATE\\UI-CHARACTERCREATE-CLASSES:0:0:0:0:64:64:16:32:16:32|t")
 
 		self.display_text:Clear()
 		local lines = { strsplit("\n", text) }
@@ -1544,13 +1565,14 @@ function AngryAssign:UpdateDisplayed()
 end
 
 function AngryAssign_OutputDisplayed()
-	return AngryAssign:OutputDisplayed()
+	return AngryAssign:OutputDisplayed( AngryAssign:SelectedId() )
 end
-function AngryAssign:OutputDisplayed()
+function AngryAssign:OutputDisplayed(id)
 	if not self:PermissionCheck() then
 		self:Print( RED_FONT_COLOR_CODE .. "You don't have permission to output a page.|r" )
 	end
-	local page = AngryAssign_Pages[ AngryAssign_State.displayed ]
+	if not id then id = AngryAssign_State.displayed end
+	local page = AngryAssign_Pages[ id ]
 	local channel
 	if IsInGroup(LE_PARTY_CATEGORY_INSTANCE) or IsInRaid(LE_PARTY_CATEGORY_INSTANCE) then
 		channel = "INSTANCE_CHAT"
@@ -1561,6 +1583,57 @@ function AngryAssign:OutputDisplayed()
 	end
 	if channel and page then
 		local output = page.Contents
+
+		output = output:gsub("||", "|")
+			:gsub(ci_pattern('|r'), "")
+			:gsub(ci_pattern('|cblue'), "")
+			:gsub(ci_pattern('|cgreen'), "")
+			:gsub(ci_pattern('|cred'), "")
+			:gsub(ci_pattern('|cyellow'), "")
+			:gsub(ci_pattern('|corange'), "")
+			:gsub(ci_pattern('|cpink'), "")
+			:gsub(ci_pattern('|cpurple'), "")
+			:gsub(ci_pattern('|cpurple'), "")
+			:gsub(ci_pattern('|c%w?%w?%w?%w?%w?%w?%w?%w?'), "")
+			:gsub(ci_pattern('{spell%s+(%d+)}'), function(id)
+				return GetSpellLink(id)
+			end)
+			:gsub(ci_pattern('{boss%s+(%d+)}'), function(id)
+				return select(5, EJ_GetEncounterInfo(id))
+			end)
+			:gsub(ci_pattern('{journal%s+(%d+)}'), function(id)
+				return select(9, EJ_GetSectionInfo(id))
+			end)
+			:gsub(ci_pattern('{star}'), "{rt1}")
+			:gsub(ci_pattern('{circle}'), "{rt2}")
+			:gsub(ci_pattern('{diamond}'), "{rt3}")
+			:gsub(ci_pattern('{triangle}'), "{rt4}")
+			:gsub(ci_pattern('{moon}'), "{rt5}")
+			:gsub(ci_pattern('{square}'), "{rt6}")
+			:gsub(ci_pattern('{cross}'), "{rt7}")
+			:gsub(ci_pattern('{x}'), "{rt7}")
+			:gsub(ci_pattern('{skull}'), "{rt8}")
+			:gsub(ci_pattern('{healthstone}'), "{hs}")
+			:gsub(ci_pattern('{hs}'), 'Healthstone')
+			:gsub(ci_pattern('{bl}'), 'Bloodlust')
+			:gsub(ci_pattern('{icon%s+([%w_]+)}'), '')
+			:gsub(ci_pattern('{damage}'), 'Damage')
+			:gsub(ci_pattern('{tank}'), 'Tanks')
+			:gsub(ci_pattern('{healer}'), 'Healers')
+			:gsub(ci_pattern('{dps}'), 'Damage')
+			:gsub(ci_pattern('{hero}'), "{heroism}")
+			:gsub(ci_pattern('{heroism}'), 'Heroism')
+			:gsub(ci_pattern('{hunter}'), LOCALIZED_CLASS_NAMES_MALE["HUNTER"])
+			:gsub(ci_pattern('{warrior}'), LOCALIZED_CLASS_NAMES_MALE["WARRIOR"])
+			:gsub(ci_pattern('{rogue}'), LOCALIZED_CLASS_NAMES_MALE["ROGUE"])
+			:gsub(ci_pattern('{mage}'), LOCALIZED_CLASS_NAMES_MALE["MAGE"])
+			:gsub(ci_pattern('{priest}'), LOCALIZED_CLASS_NAMES_MALE["PRIEST"])
+			:gsub(ci_pattern('{warlock}'), LOCALIZED_CLASS_NAMES_MALE["WARLOCK"])
+			:gsub(ci_pattern('{paladin}'), LOCALIZED_CLASS_NAMES_MALE["PALADIN"])
+			:gsub(ci_pattern('{deathknight}'), LOCALIZED_CLASS_NAMES_MALE["DEATHKNIGHT"])
+			:gsub(ci_pattern('{druid}'), LOCALIZED_CLASS_NAMES_MALE["DRUID"])
+			:gsub(ci_pattern('{monk}'), LOCALIZED_CLASS_NAMES_MALE["MONK"])
+			:gsub(ci_pattern('{shaman}'), LOCALIZED_CLASS_NAMES_MALE["SHAMAN"])
 		
 		local lines = { strsplit("\n", output) }
 		for _, line in ipairs(lines) do

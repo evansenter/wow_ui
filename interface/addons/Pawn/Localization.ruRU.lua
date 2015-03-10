@@ -322,7 +322,7 @@ For more information on customizing Pawn, please see the help file (Readme.htm) 
 		Timeless = "^Вневременной предмет$",
 		UpgradeLevel = "^Уровень улучшения:",
 		Use = "Используется:",
-		Versatility = "^%+([%d%.,]+) к универсальности$",
+		Versatility = "^%+([%d%.,]+) к [показателю ]-универсальности$",
 		Wand = "^Жезл$",
 		Warforged = "^Предмет закален в бою$",
 		WeaponDamage = "^Урон: ([%d%.,]+) %- ([%d%.,]+)$",

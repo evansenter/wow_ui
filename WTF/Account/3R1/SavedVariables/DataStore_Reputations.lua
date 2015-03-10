@@ -68,7 +68,7 @@ DataStore_ReputationsDB = {
 				},
 			},
 			["Default.Illidan.Evan"] = {
-				["lastUpdate"] = 1425498701,
+				["lastUpdate"] = 1425967274,
 				["guildName"] = "Mind Games",
 				["guildRep"] = 21000,
 				["Factions"] = {
@@ -200,7 +200,7 @@ DataStore_ReputationsDB = {
 				},
 			},
 			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1425500125,
+				["lastUpdate"] = 1425967219,
 				["guildName"] = "Mind Games",
 				["guildRep"] = 42999,
 				["Factions"] = {
@@ -320,7 +320,7 @@ DataStore_ReputationsDB = {
 				["guildName"] = "Rated Baddie Grounds",
 			},
 			["Default.Illidan.Metal"] = {
-				["lastUpdate"] = 1425499308,
+				["lastUpdate"] = 1425964301,
 				["Factions"] = {
 					[106] = 4300,
 					[122] = 9335,
@@ -335,7 +335,7 @@ DataStore_ReputationsDB = {
 					[78] = 9017,
 					[24] = 4928,
 					[56] = 92,
-					[33] = 7264,
+					[128] = 3008,
 					[57] = 1249,
 					[17] = 1875,
 					[68] = 5716,
@@ -344,6 +344,7 @@ DataStore_ReputationsDB = {
 					[70] = 2865,
 					[71] = 2858,
 					[52] = 561,
+					[33] = 7264,
 					[72] = 2858,
 					[27] = 11,
 					[113] = 3100,
@@ -356,7 +357,7 @@ DataStore_ReputationsDB = {
 					[39] = 5090,
 					[20] = 2151,
 				},
-				["guildRep"] = 21625,
+				["guildRep"] = 21750,
 				["guildName"] = "Mind Games",
 			},
 			["Default.Illidan.Natal"] = {

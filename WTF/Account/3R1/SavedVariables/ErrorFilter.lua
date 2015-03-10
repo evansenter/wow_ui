@@ -16,8 +16,8 @@ ErrorFilterDB = {
 			["mode"] = 3,
 		},
 		["Comet - Illidan"] = {
-			["throttle"] = false,
 			["mode"] = 3,
+			["throttle"] = false,
 		},
 	},
 }

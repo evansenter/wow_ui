@@ -37,27 +37,27 @@ DataStore_InventoryDB = {
 			},
 			["Default.Illidan.Evan"] = {
 				["Inventory"] = {
-					"|cffffffff|Hitem:115996:0:0:0:0:0:0:0:100:0:4:1:560|h[]|h|r", -- [1]
+					"|cffa335ee|Hitem:115996:0:0:0:0:0:0:0:100:0:4:1:560|h[Fel-Flame Coronet]|h|r", -- [1]
 					"|cffffffff|Hitem:116286:5294:0:0:0:0:0:0:100:0:4:1:560|h[]|h|r", -- [2]
-					"|cffffffff|Hitem:115997:0:0:0:0:0:0:0:100:0:4:0|h[]|h|r", -- [3]
+					"|cffa335ee|Hitem:115997:0:0:0:0:0:0:0:100:0:4:0|h[Twin-Gaze Spaulders]|h|r", -- [3]
 					53, -- [4]
 					"|cffffffff|Hitem:116000:0:5343:0:0:0:0:0:100:0:4:1:563|h[]|h|r", -- [5]
 					"|cffffffff|Hitem:109826:0:0:0:0:0:0:0:100:0:2:1:524|h[]|h|r", -- [6]
-					"|cffffffff|Hitem:109807:0:0:0:0:0:0:0:100:0:2:1:524|h[]|h|r", -- [7]
+					"|cff0070dd|Hitem:109807:0:0:0:0:0:0:0:100:0:2:1:524|h[Lightbinder Leggings]|h|r", -- [7]
 					"|cffa335ee|Hitem:116003:0:0:0:0:0:0:0:100:0:4:0|h[Spectator's Sandals of Carnage]|h|r", -- [8]
 					"|cffa335ee|Hitem:115999:0:5343:0:0:0:0:0:100:0:4:1:563|h[Rotmonger Bracers]|h|r", -- [9]
 					"|cffa335ee|Hitem:113610:0:0:0:0:0:0:0:100:0:3:0|h[Meatmonger's Gory Grips]|h|r", -- [10]
-					"|cffffffff|Hitem:118299:5301:0:0:0:0:0:0:100:0:11:0|h[]|h|r", -- [11]
+					"|cffa335ee|Hitem:118299:5301:0:0:0:0:0:0:100:0:11:0|h[Timeless Solium Band of Lifegiving]|h|r", -- [11]
 					"|cffffffff|Hitem:109767:5301:0:0:0:0:0:0:100:0:1:1:522|h[]|h|r", -- [12]
 					"|cffa335ee|Hitem:112317:0:0:0:0:0:0:0:100:0:13:2:525:530|h[Winged Hourglass]|h|r", -- [13]
 					"|cffa335ee|Hitem:113842:0:0:0:0:0:0:0:100:0:3:0|h[Emblem of Caustic Healing]|h|r", -- [14]
 					"|cffffffff|Hitem:114819:5302:0:0:0:0:0:0:100:0:13:3:525:538:21|h[]|h|r", -- [15]
-					"|cff0070dd|Hitem:119181:0:0:0:0:0:0:0:100:0:2:1:524|h[Hoof of Yalnu]|h|r", -- [16]
+					"|cffffffff|Hitem:119181:0:0:0:0:0:0:0:100:0:2:1:524|h[]|h|r", -- [16]
 					118849, -- [17]
 				},
 				["averageItemLvl"] = 640.5,
 				["overallAIL"] = 641.133361816406,
-				["lastUpdate"] = 1425498770,
+				["lastUpdate"] = 1425967274,
 			},
 			["Default.Illidan.Combustion"] = {
 				["Inventory"] = {
@@ -90,7 +90,7 @@ DataStore_InventoryDB = {
 					nil, -- [4]
 					"|cffa335ee|Hitem:113951:0:0:0:0:0:0:0:100:0:6:1:567|h[Unrendable Wolfhide Robes]|h|r", -- [5]
 					"|cffa335ee|Hitem:119335:0:0:0:0:0:0:0:100:0:6:2:562:567|h[Eyeripper Girdle]|h|r", -- [6]
-					"|cffa335ee|Hitem:113989:0:0:0:0:0:0:0:100:0:5:1:566|h[Shattering Smash Leggings]|h|r", -- [7]
+					"|cffa335ee|Hitem:115557:0:0:0:0:0:0:0:100:0:5:1:566|h[Legwraps of the Somber Gaze]|h|r", -- [7]
 					"|cffa335ee|Hitem:113895:0:0:0:0:0:0:0:100:0:5:1:566|h[Furnace Tender's Treads]|h|r", -- [8]
 					"|cffa335ee|Hitem:116181:0:0:0:0:0:0:0:100:0:13:3:146:535:593|h[Supple Bracers of the Deft]|h|r", -- [9]
 					"|cffa335ee|Hitem:113832:0:5349:0:0:0:0:0:100:0:6:2:565:567|h[Treacherous Palms]|h|r", -- [10]
@@ -103,7 +103,7 @@ DataStore_InventoryDB = {
 				},
 				["averageItemLvl"] = 686.066650390625,
 				["overallAIL"] = 687.400024414063,
-				["lastUpdate"] = 1425500125,
+				["lastUpdate"] = 1425967219,
 			},
 			["Default.Dark Iron.Colton"] = {
 				["Inventory"] = {
@@ -131,26 +131,26 @@ DataStore_InventoryDB = {
 			["Default.Illidan.Metal"] = {
 				["Inventory"] = {
 					"|cffa335ee|Hitem:113600:0:5339:0:0:0:0:0:100:0:3:1:563|h[Casque of the Iron Bomber]|h|r", -- [1]
-					"|cffa335ee|Hitem:118846:5317:0:0:0:0:0:0:100:0:0:0|h[Gorget of Primal Might]|h|r", -- [2]
-					"|cffa335ee|Hitem:114231:0:0:0:0:0:0:0:100:0:13:3:527:534:66|h[Truesteel Pauldrons of the Savage]|h|r", -- [3]
+					"|cffffffff|Hitem:118846:5317:0:0:0:0:0:0:100:0:0:0|h[]|h|r", -- [2]
+					"|cffffffff|Hitem:114231:0:0:0:0:0:0:0:100:0:13:3:527:534:66|h[]|h|r", -- [3]
 					38, -- [4]
-					"|cffa335ee|Hitem:113831:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Chestplate of Arcane Volatility]|h|r", -- [5]
+					"|cffffffff|Hitem:113831:0:0:0:0:0:0:0:100:0:5:2:561:566|h[]|h|r", -- [5]
 					"|cffa335ee|Hitem:113659:0:0:0:0:0:0:0:100:0:5:1:566|h[Fleshchewer Greatbelt]|h|r", -- [6]
 					"|cffa335ee|Hitem:113921:0:0:0:0:0:0:0:100:0:5:1:566|h[Firestorm Legplates]|h|r", -- [7]
 					"|cffa335ee|Hitem:113660:0:0:0:0:0:0:0:100:0:6:1:567|h[Mosscrusher Sabatons]|h|r", -- [8]
 					"|cffa335ee|Hitem:119331:0:0:0:0:0:0:0:100:0:5:1:566|h[Bracers of Visceral Force]|h|r", -- [9]
-					"|cffa335ee|Hitem:113632:0:0:0:0:0:0:0:100:0:5:2:40:566|h[Gauntlets of the Heavy Hand]|h|r", -- [10]
-					"|cffa335ee|Hitem:118300:5324:0:0:0:0:0:0:100:0:11:0|h[Spellbound Solium Band of Sorcerous Strength]|h|r", -- [11]
-					"|cffa335ee|Hitem:113644:5284:0:0:0:0:0:0:100:0:6:1:567|h[Earthfury Band]|h|r", -- [12]
-					"|cffa335ee|Hitem:113658:0:0:0:0:0:0:0:100:0:5:1:566|h[Bottle of Infesting Spores]|h|r", -- [13]
-					"|cffa335ee|Hitem:114552:0:0:0:0:0:0:0:100:0:1:1:41|h[Grandiose Carnage]|h|r", -- [14]
-					"|cffa335ee|Hitem:113830:5281:0:0:0:0:0:0:100:0:5:1:566|h[Cloak of Ruminant Deception]|h|r", -- [15]
+					"|cffa335ee|Hitem:113632:0:0:0:0:0:0:0:100:0:6:2:562:567|h[Gauntlets of the Heavy Hand]|h|r", -- [10]
+					"|cffa335ee|Hitem:118303:5326:0:0:0:0:0:0:100:0:14:0|h[Spellbound Solium Band of Sorcerous Invincibility]|h|r", -- [11]
+					"|cffa335ee|Hitem:113644:5324:0:0:0:0:0:0:100:0:6:1:567|h[Earthfury Band]|h|r", -- [12]
+					"|cffa335ee|Hitem:112319:0:0:0:0:0:0:0:100:0:13:2:525:530|h[Knight's Badge]|h|r", -- [13]
+					"|cffa335ee|Hitem:113658:0:0:0:0:0:0:0:100:0:5:1:566|h[Bottle of Infesting Spores]|h|r", -- [14]
+					"|cffffffff|Hitem:118816:5300:0:0:0:0:0:0:100:0:0:0|h[]|h|r", -- [15]
 					"|cffa335ee|Hitem:113862:5330:0:0:0:0:0:0:100:0:5:1:566|h[Taner's Terrible Spine]|h|r", -- [16]
-					"|cffa335ee|Hitem:113606:5330:0:0:0:0:0:0:100:0:5:2:561:566|h[Butcher's Bloody Cleaver]|h|r", -- [17]
+					"|cffffffff|Hitem:113666:0:0:0:0:0:0:0:100:0:5:1:566|h[]|h|r", -- [17]
 				},
-				["averageItemLvl"] = 672.9375,
-				["overallAIL"] = 673.25,
-				["lastUpdate"] = 1425499308,
+				["averageItemLvl"] = 673.25,
+				["overallAIL"] = 674.5625,
+				["lastUpdate"] = 1425964301,
 			},
 			["Default.Illidan.Natal"] = {
 				["Inventory"] = {
@@ -230,14 +230,11 @@ DataStore_InventoryDB = {
 			},
 			["Default.Illidan.Mind Games"] = {
 				["Members"] = {
-					["Lustya"] = {
-						["averageItemLvl"] = 685,
+					["Wardìck"] = {
+						["averageItemLvl"] = 512,
 					},
-					["Lustwar"] = {
-						["averageItemLvl"] = 678,
-					},
-					["Nuttcancer"] = {
-						["averageItemLvl"] = 642,
+					["Angelaura"] = {
+						["averageItemLvl"] = 643,
 					},
 					["Evan"] = {
 						["averageItemLvl"] = 640,
@@ -245,32 +242,62 @@ DataStore_InventoryDB = {
 					["Lustea"] = {
 						["averageItemLvl"] = 551,
 					},
-					["Comet"] = {
-						["averageItemLvl"] = 685,
-					},
-					["Levels"] = {
-						["averageItemLvl"] = 658,
+					["Kaylenlee"] = {
+						["averageItemLvl"] = 624,
 					},
 					["Purrnado"] = {
-						["averageItemLvl"] = 666,
+						["averageItemLvl"] = 668,
 					},
-					["Boston"] = {
-						["averageItemLvl"] = 533,
+					["Pandiana"] = {
+						["averageItemLvl"] = 630,
+					},
+					["Princip"] = {
+						["averageItemLvl"] = 680,
+					},
+					["Necrochimp"] = {
+						["averageItemLvl"] = 662,
+					},
+					["Svetty"] = {
+						["averageItemLvl"] = 549,
 					},
 					["Lokian"] = {
 						["averageItemLvl"] = 607,
 					},
-					["Princip"] = {
-						["averageItemLvl"] = 681,
+					["Aleenaa"] = {
+						["averageItemLvl"] = 620,
 					},
-					["Wardìck"] = {
-						["averageItemLvl"] = 512,
+					["Shoestorm"] = {
+						["averageItemLvl"] = 73,
 					},
-					["Kaylenlee"] = {
-						["averageItemLvl"] = 624,
+					["Aldrassarr"] = {
+						["averageItemLvl"] = 620,
+					},
+					["Lustya"] = {
+						["averageItemLvl"] = 685,
+					},
+					["Lustwar"] = {
+						["averageItemLvl"] = 677,
+					},
+					["Boston"] = {
+						["averageItemLvl"] = 533,
+					},
+					["Nuttcancer"] = {
+						["averageItemLvl"] = 642,
+					},
+					["Comet"] = {
+						["averageItemLvl"] = 686,
+					},
+					["Levels"] = {
+						["averageItemLvl"] = 660,
+					},
+					["Greenpotato"] = {
+						["averageItemLvl"] = 537,
+					},
+					["Aurassarr"] = {
+						["averageItemLvl"] = 682,
 					},
 					["Metal"] = {
-						["averageItemLvl"] = 672,
+						["averageItemLvl"] = 673,
 					},
 				},
 			},

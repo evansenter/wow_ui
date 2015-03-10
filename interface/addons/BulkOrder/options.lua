@@ -4,33 +4,6 @@ local checkboxes = {}   -- Will contain {checkbox, variable} pairs. Used in the 
 
 local Version60100 = (GetBuildInfo ():match ('^6.0') == nil)
 
---[[
-local L = setmetatable({}, { __index = function(t, k)
-    local v = tostring(k)
-    t[k] = v
-    return v
-end })
-
-if GetLocale() == "deDE" then
-    L["Miscellaneous:"] = "Verscheidene:"
-    L["Use Garrison Resources"] = "Garnisonressourcen verwenden"
-    L["If this option is checked, BulkOrder will automatically queue work orders even if they use garrison resources."] = "Wenn diese Option aktiviert ist, wird BulkOrder automatisch die Arbeitsaufträge einreihen, auch wenn sie Garnisonressourcen verwenden."
-    L["While this add-on is installed, opening a work orders window will automatically queue up all available work orders."] = "Wenn dieses Addon aktiviert ist, wird alle verfügbare Arbeitsaufträge bei der Öffnung eines Arbeitsauftragfenster automatisch eingereiht werden."
-    L["You can avoid the automatic work orders by holding LEFT SHIFT down while clicking on the work orders NPC."] = "Man kann die Automatisierung durch Drücken der Shift-Taste bei Interaktion mit dem Arbeitsauftrag-NPC verhindern."
-    L["In addition, work orders that use garrison resources are by default not automatic, unless you enable the above option."] = "Arbeitsaufträge, die Garnisonressourcen verwenden, werden nicht automatisiert werden, außer wenn die obige Option aktiviert ist."
-
-elseif GetLocale() == "esES" or GetLocale() == "esMX" then
-    L["Miscellaneous:"] = "Misceláneo:"
-    L["Use Garrison Resources"] = "Usar recursos de la ciudadela"
-    L["If this option is checked, BulkOrder will automatically queue work orders even if they use garrison resources."] = "Si esta opción se activa, BulkOrder pondrá automaticamente los pedidos en cola, incluso si requieren recursos de la ciudadela."
-    L["While this add-on is installed, opening a work orders window will automatically queue up all available work orders."] = "Si este addon se activa, todos los pedidos disponibles se pondrán en cola al abrir una ventana de pedidos."
-    L["You can avoid the automatic work orders by holding LEFT SHIFT down while clicking on the work orders NPC."] = "Para evitar la automación de pedidos, presiona la tecla Mayús izquierda al hacer clic en el PNJ de pedidos."
-    L["In addition, work orders that use garrison resources are by default not automatic, unless you enable the above option."] = "Además, los pedidos que requieren recursos de la ciudadela no están automatizados por defecto menos que se active la opción anterior."
-end
---]]
-
-
-
 -----------------------------------------------------------------
 
 StaticPopupDialogs["BULKORDER_CONFIRMAPPLYTOALL"] = {
@@ -95,7 +68,7 @@ function BulkOrder_CreateOptions ()
     else
         g_BulkOrder = g_BulkOrder or {}
         
-        for _,v in ipairs({string.split (' ', 'ExcludeTradingPost ExcludeWarMill ExcludeGoblinWorkshop RemindProfBuildings RemindMine RemindHerbGarden')}) do
+        for _,v in ipairs({string.split (' ', 'ExcludeTradingPost ExcludeWarMill ExcludeGoblinWorkshop RemindProfBuildings RemindWarMill RemindLumberMill RemindTradingPost RemindBarn RemindGoblinWorkshop RemindGladiatorSanctum RemindMine RemindHerbGarden RemindGathering')}) do
             if g_BulkOrder[v]==nil then 
                 g_BulkOrder[v] = true 
             end
@@ -165,7 +138,7 @@ function BulkOrder_CreateOptions ()
     
     -- Reminder
     local moretext = Options:CreateFontString (nil, "ARTWORK", "GameFontHighlight")
-    moretext:SetPoint ("TOPLEFT", Options.chkEverything, "BOTTOMLEFT", 0, -30)
+    moretext:SetPoint ("TOPLEFT", Options.chkEverything, "BOTTOMLEFT", 0, -20)
     moretext:SetText ('The first time you enter your garrison after logging in, BulkOrder will remind you if you have buildings that have no work orders queued.')
     moretext:SetWidth (500)
     moretext:SetJustifyH ("LEFT")
@@ -176,17 +149,47 @@ function BulkOrder_CreateOptions ()
     TitleReminder:SetText ('Remind me about:')
     Options.TitleReminder = TitleReminder
     
-    Options.chkRemindProfBuildings = Options:CreateCheckBox (TitleReminder, 0, -5, 'Profession Buildings')
+    dy = -3
+    
+    Options.chkRemindProfBuildings = Options:CreateCheckBox (TitleReminder, 0, dy, 'Profession Buildings')
         :Bind ('RemindProfBuildings', false, true)
         :SetTooltip ('Profession Buildings', 'If this option is checked, BulkOrder will remind you to start work orders in all your profession buildings.')
     
-    Options.chkRemindMine = Options:CreateCheckBox (Options.chkRemindProfBuildings, 0, dy, 'Mine')
+    Options.chkRemindWarMill = Options:CreateCheckBox (Options.chkRemindProfBuildings, 0, dy, 'Dwarven Bunker/ War Mill')
+        :Bind ('RemindWarMill', false, true)
+        :SetTooltip ('Dwarven Bunker/ War Mill', 'If this option is checked, BulkOrder will remind you to start work orders in your Dwarven Bunker/ War Mill.')
+    
+    Options.chkRemindLumberMill = Options:CreateCheckBox (Options.chkRemindWarMill, 0, dy, 'Lumber Mill')
+        :Bind ('RemindLumberMill', false, true)
+        :SetTooltip ('Lumber Mill', 'If this option is checked, BulkOrder will remind you to start work orders in your Lumber Mill.')
+    
+    Options.chkRemindTradingPost = Options:CreateCheckBox (Options.chkRemindLumberMill, 0, dy, 'Trading Post')
+        :Bind ('RemindTradingPost', false, true)
+        :SetTooltip ('Trading Post', 'If this option is checked, BulkOrder will remind you to start work orders in your Trading Post.')
+    
+    Options.chkRemindGladiatorSanctum = Options:CreateCheckBox (Options.chkRemindTradingPost, 0, dy, 'Gladiator\'s Sanctum')
+        :Bind ('RemindGladiatorSanctum', false, true)
+        :SetTooltip ('Gladiator\'s Sanctum', 'If this option is checked, BulkOrder will remind you to start work orders in your Gladiator\'s Sanctum.')
+    
+    Options.chkRemindBarn = Options:CreateCheckBox (TitleReminder, 250, dy, 'Barn')
+        :Bind ('RemindBarn', false, true)
+        :SetTooltip ('Barn', 'If this option is checked, BulkOrder will remind you to start work orders in your Barn.')
+    
+    Options.chkRemindGoblinWorkshop = Options:CreateCheckBox (Options.chkRemindBarn, 0, dy, 'Gnomish Gearworks/ Goblin Workshop')
+        :Bind ('RemindWorkshop', false, true)
+        :SetTooltip ('Gnomish Gearworks/ Goblin Workshop', 'If this option is checked, BulkOrder will remind you to start work orders in your Gnomish Gearworks/ Goblin Workshop.')
+    
+    Options.chkRemindMine = Options:CreateCheckBox (Options.chkRemindGoblinWorkshop, 0, dy, 'Mine')
         :Bind ('RemindMine', false, true)
         :SetTooltip ('Mine', 'If this option is checked, BulkOrder will remind you to start work orders in your mine.')
     
     Options.chkRemindHerbGarden = Options:CreateCheckBox (Options.chkRemindMine, 0, dy, 'Herb Garden')
         :Bind ('RemindHerbGarden', false, true)
         :SetTooltip ('Herb Garden', 'If this option is checked, BulkOrder will remind you to start work orders in your herb garden.')
+    
+    Options.chkRemindGathering = Options:CreateCheckBox (Options.chkRemindHerbGarden, 0, dy, 'Gathering')
+        :Bind ('RemindGathering', false, true)
+        :SetTooltip ('Gathering', 'If this option is checked, BulkOrder will remind you every day to do your mining/ herbing.')
     
 
     -- Misc

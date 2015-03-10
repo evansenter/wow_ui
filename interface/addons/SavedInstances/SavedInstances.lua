@@ -13,7 +13,7 @@ local maxdiff = 16 -- max number of instance difficulties
 local maxcol = 4 -- max columns per player+instance
 
 addon.svnrev = {}
-addon.svnrev["SavedInstances.lua"] = tonumber(("$Revision: 425 $"):match("%d+"))
+addon.svnrev["SavedInstances.lua"] = tonumber(("$Revision: 427 $"):match("%d+"))
 
 -- local (optimal) references to provided functions
 local table, math, bit, string, pairs, ipairs, unpack, strsplit, time, type, wipe, tonumber, select, strsub = 
@@ -3543,6 +3543,7 @@ local trade_spells = {
 	[175880] = true,	-- Secrets of Draenor
 	[156587] = true,	-- Alchemical Catalyst (4)
 	[168042] = true,	-- Alchemical Catalyst (10), 3 charges w/ 24hr recharge
+	[181643] = "xmute",	-- Transmute: Savage Blood
 
 
         -- Enchanting

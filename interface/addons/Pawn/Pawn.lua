@@ -8,7 +8,7 @@
 ------------------------------------------------------------
 
 
-PawnVersion = 1.910
+PawnVersion = 1.915
 
 -- Pawn requires this version of VgerCore:
 local PawnVgerCoreVersionRequired = 1.09
@@ -167,7 +167,7 @@ function PawnInitialize()
 	end
 	if not CurrentLocaleIsSupported then
 		-- No need to translate this string...
-		local WrongLocaleMessage = "Sorry, this version of Pawn is for English, French, German, Portuguese, Russian, Simplified Chinese, and Traditional Chinese only."
+		local WrongLocaleMessage = "Sorry, this version of Pawn is for English, French, German, Italian, Portuguese, Russian, Spanish, Simplified Chinese, and Traditional Chinese only."
 		VgerCore.Message(VgerCore.Color.Salmon .. WrongLocaleMessage)
 		message(WrongLocaleMessage)
 	end
@@ -332,10 +332,9 @@ function PawnInitialize()
 	end
 	
 	-- AtlasLoot Enhanced compatibility
-	if AtlasLootTooltipTEMP then -- old versions
-		VgerCore.HookInsecureFunction(AtlasLootTooltipTEMP, "SetHyperlink", function(self, ...) PawnUpdateTooltip("AtlasLootTooltipTEMP", "SetHyperlink", ...) end)
-	elseif AtlasLootTooltip then -- new versions; doesn't work
+	if AtlasLootTooltip then
 		VgerCore.HookInsecureFunction(AtlasLootTooltip, "SetHyperlink", function(self, ...) PawnUpdateTooltip("AtlasLootTooltip", "SetHyperlink", ...) end)
+		VgerCore.HookInsecureFunction(AtlasLootTooltip, "SetItemByID", function(self, ...) PawnUpdateTooltip("AtlasLootTooltip", "SetItemByID", ...) end)
 	end
 
 	-- LinkWrangler compatibility -- hook the Link Wrangler item link tooltips.

@@ -5,7 +5,6 @@ FX_Saved = {
 	["Timers"] = {
 	},
 	["Healthstone"] = {
-		["Metal"] = 0,
 		["Evan"] = 0,
 	},
 	["Exceptions"] = {
@@ -18,7 +17,7 @@ FX_Saved = {
 		["Fathom-Guard Tidalvess"] = 1,
 		["Fathom-Guard Sharkkis"] = 1,
 	},
-	["Update"] = 57129.999,
+	["Update"] = 12638.394,
 	["Profiles"] = {
 		["Active"] = 1,
 		["Characters"] = {
@@ -1124,15 +1123,9 @@ FX_Saved = {
 		},
 	},
 	["RaidStatus"] = {
-		["Metal"] = {
-			0, -- [1]
-			57129.999, -- [2]
-			"WARRIOR", -- [3]
-			"v1.980.8", -- [4]
-		},
 		["Evan"] = {
-			-2, -- [1]
-			56137.157, -- [2]
+			0, -- [1]
+			12638.394, -- [2]
 			"PRIEST", -- [3]
 			"v1.980.8", -- [4]
 		},

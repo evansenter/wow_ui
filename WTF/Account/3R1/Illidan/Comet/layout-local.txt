@@ -1,6 +1,6 @@
 Version: 1
 Frame: ColorPickerFrame
-FrameLevel: 21
+FrameLevel: 15
 Anchor: CENTER
 X: 0
 Y: 0
@@ -27,3 +27,17 @@ X: -164
 Y: -64
 W: 32
 H: 32
+Frame: PawnUIFrame
+FrameLevel: 20
+Anchor: CENTER
+X: 0
+Y: 0
+W: 800
+H: 525
+Frame: StormEarthAndFireAnchor
+FrameLevel: 0
+Anchor: CENTER
+X: -49
+Y: 147
+W: 6
+H: 6

@@ -25,17 +25,23 @@ DataStore_AgendaDB = {
 						["note"] = "",
 					},
 				},
-				["lastUpdate"] = 1425498701,
+				["lastUpdate"] = 1425967274,
 			},
 			["Default.Illidan.Combustion"] = {
 				["lastUpdate"] = 1424741664,
 			},
 			["Default.Illidan.Comet"] = {
 				["DungeonIDs"] = {
-					["Blackrock Foundry Heroic|180959267"] = "503094|1425500126|0|1",
-					["Blackrock Foundry Mythic|180919555"] = "503094|1425500126|0|1",
+					["Highmaul Heroic|166407194"] = "35982|1425967221|0|1",
+					["Blackrock Foundry Mythic|180919555"] = "35982|1425967221|0|1",
+					["Highmaul Mythic|181716397"] = "35982|1425967221|0|1",
+					["Blackrock Foundry Heroic|180959267"] = "35982|1425967221|0|1",
 				},
-				["lastUpdate"] = 1425500125,
+				["lastUpdate"] = 1425967219,
+				["LFGDungeons"] = {
+					["846.Count"] = 1,
+					["846.Kromog, Legend of the Mountain"] = true,
+				},
 			},
 			["Default.Dark Iron.Colton"] = {
 				["Contacts"] = {
@@ -75,7 +81,7 @@ DataStore_AgendaDB = {
 				["lastUpdate"] = 1424741733,
 			},
 			["Default.Illidan.Metal"] = {
-				["lastUpdate"] = 1425499308,
+				["lastUpdate"] = 1425964301,
 			},
 			["Default.Illidan.Natal"] = {
 				["lastUpdate"] = 1424741647,

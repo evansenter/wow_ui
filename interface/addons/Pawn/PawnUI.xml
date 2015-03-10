@@ -1,4 +1,4 @@
-﻿<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../FrameXML.old/UI.xsd">
+﻿<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ../../../BlizzardInterfaceCode/UI.xsd">
 
 	<!--
 		Pawn by Vger-Azjol-Nerub
@@ -115,7 +115,7 @@
 		</HighlightTexture>
 	</Button>
 	
-	<Button name="PawnUIFrame_ScaleSelector_ItemTemplate" virtual="true" inherits="PawnUIFrame_Generic_ItemTemplate">
+	<Button name="PawnUIFrame_ScaleSelector_ItemTemplate" virtual="true" inherits="PawnUIFrame_Generic_ItemTemplate" useParentLevel="true">
 		<Size><AbsDimension x="140" y="16" /></Size>
 		<DisabledFont style="PawnFontBlueSmall" />
 		<Scripts>

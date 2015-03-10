@@ -586,9 +586,9 @@ DBM_AllSavedOptions = {
 		["DontShowFlexMessage"] = false,
 		["ChosenVoicePack"] = "None",
 		["RangeFrameRadarY"] = -100,
-		["WarningX"] = 0,
+		["HPFrameMaxEntries"] = 5,
 		["WorldBossNearAlert"] = false,
-		["DontShowBossAnnounces"] = false,
+		["WarningX"] = 0,
 		["SpecialWarningFlashCol4"] = {
 			1, -- [1]
 			0, -- [2]
@@ -597,7 +597,7 @@ DBM_AllSavedOptions = {
 		["SpecialWarningFlashRepeatAmount"] = 1,
 		["AutoAcceptFriendInvite"] = false,
 		["WarningIconChat"] = true,
-		["HPFrameMaxEntries"] = 5,
+		["DontShowBossAnnounces"] = false,
 		["HideGuildChallengeUpdates"] = true,
 		["DontShowCTCount"] = false,
 		["SpecialWarningY"] = 82.9997253417969,

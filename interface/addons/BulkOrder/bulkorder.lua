@@ -14,6 +14,9 @@ local GARRISON_RESOURCES = 824
 local WARMILL = 1
 local TRADINGPOST = 2
 local GOBLINWORKSHOP = 3
+local BARN = 4
+local LUMBERMILL = 5
+local GLADIATORSANCTUM = 6
 
 local BUILDINGS = {
     [8] = WARMILL,
@@ -25,6 +28,15 @@ local BUILDINGS = {
     [162] = GOBLINWORKSHOP,
     [163] = GOBLINWORKSHOP,
     [164] = GOBLINWORKSHOP,
+    [24] = BARN,
+    [25] = BARN,
+    [133] = BARN,
+    [40] = LUMBERMILL,
+    [41] = LUMBERMILL,
+    [138] = LUMBERMILL,
+    [159] = GLADIATORSANCTUM,
+    [160] = GLADIATORSANCTUM,
+    [161] = GLADIATORSANCTUM,
 }
 
 local GARRISON_MAPS = {
@@ -37,6 +49,7 @@ local GARRISON_MAPS = {
     [1159] = true, -- SMV Alliance Garrison Level 3
     [1160] = true, -- SMV Alliance Garrison Level 4
 }
+
 -----------------------------------------------------------------
 
 local RED = 'FF0000'
@@ -163,25 +176,54 @@ CreateReminderFrame ()
 local function RemindWorkOrders ()
     local sizes = {
         [0] = g_BulkOrder.RemindProfBuildings,
+        [1] = true,     -- building-specific settings
+        [2] = true,     -- building-specific settings
         [3] = g_BulkOrder.RemindHerbGarden,
         [4] = g_BulkOrder.RemindMine,
+    }
+    
+    local specific_buildings = {
+        [WARMILL] = g_BulkOrder.RemindWarMill,
+        [LUMBERMILL] = g_BulkOrder.RemindLumberMill,
+        [BARN] = g_BulkOrder.RemindBarn,
+        [TRADINGPOST] = g_BulkOrder.RemindTradingPost,
+        [GOBLINWORKSHOP] = g_BulkOrder.RemindWorkshop,
+        [GLADIATORSANCTUM] = g_BulkOrder.RemindGladiatorSanctum,
+    }
+    
+    -- Some buildings have work orders only at high enough levels...
+    local buildings_without_workorders = {
+        [8] = true,
+        [162] = true,
+        [163] = true,
     }
     
     local reminder_Buildings = {}
     for size,b in pairs(sizes) do
         if b then
-            for _,v in ipairs(C_Garrison.GetBuildingsForSize(size)) do
+            for _,v in ipairs(C_Garrison.GetBuildingsForSize (size)) do
                 reminder_Buildings[v.name] = true
             end
         end
     end
-
+    
     local lst = {}
     for i,v in pairs(C_Garrison.GetBuildings ()) do
         local name,_,shipmentCapacity, shipmentsReady, shipmentsTotal = C_Garrison.GetLandingPageShipmentInfo (v.buildingID)
-        if reminder_Buildings[name] and ((shipmentsTotal or 0) - (shipmentsReady or 0)) < 2 then
+        local queued = (shipmentsTotal or 0) - (shipmentsReady or 0)
+        local reminderIsEnabled = specific_buildings[BUILDINGS[v.buildingID]] ~= false
+        local buildingHasWorkOrders = not buildings_without_workorders[v.buildingID]
+        local minQueue = 2
+        if BUILDINGS[v.buildingID]==GOBLINWORKSHOP then minQueue = 1 end
+        
+        if reminder_Buildings[name] and (queued < minQueue) and reminderIsEnabled and buildingHasWorkOrders then
             table.insert (lst, name)
         end
+    end
+    
+    -- Also check the mining/ herbing thing. This 36799 quest is a daily tracking quest that checks whether you've worked your mine/ garden today
+    if (not IsQuestFlaggedCompleted (36799)) and g_BulkOrder.RemindGathering then
+        table.insert (lst, "Don't forget to do your daily mining/ herbing!")
     end
     
     if #lst > 0 then
@@ -206,8 +248,16 @@ f:SetScript ("OnEvent", function (f, event, ...)
         f[event] (f, ...)
     end
 end)
-function f:OnEvent (event, func)
-    f:RegisterEvent (event)
+function f:OnEvent (event, arg2, arg3)
+    local unit, func
+    if type(arg2)=='string' then
+        f:RegisterUnitEvent (event, arg2)
+        func = arg3
+    else
+        f:RegisterEvent (event)
+        func = arg2
+    end
+    
     f[event] = function (self, ...)
         func (...)
     end
@@ -284,6 +334,12 @@ end)
 
 -----------------------------------------------------------------
 
+f:OnEvent ("UNIT_SPELLCAST_SUCCEEDED", 'player', function (unitID, spell, rank, lineID, spellID)
+
+end)
+
+-----------------------------------------------------------------
+
 -- It's just so hard for Blizz to add an event that actually says "The game API is now ready to be queried"...
 -- By this point I'm surprised their functions don't just return the string "go fuck urself trololol".
 
@@ -311,6 +367,7 @@ for event,_ in pairs(f.initSequence) do
         end
     end)
 end
+
 
 --[[
 f:OnEvent ("GARRISON_BUILDING_LIST_UPDATE", function ()

@@ -3,7 +3,7 @@
 ## Author: Malsomnus
 ## SavedVariables: g_BulkOrderGlobal
 ## SavedVariablesPerCharacter: g_BulkOrder
-## Version: v1.13
+## Version: v1.15
 
 options.lua
 bulkorder.lua
