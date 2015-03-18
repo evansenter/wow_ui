@@ -7,17 +7,17 @@ ErrorFilterDB = {
 		["Colton - Dark Iron"] = "Default",
 		["Ereinion - Dark Iron"] = "Default",
 		["Comet - Illidan"] = "Comet - Illidan",
-		["Combustion - Illidan"] = "Default",
-		["Evan - Illidan"] = "Default",
 		["Natal - Illidan"] = "Default",
+		["Evan - Illidan"] = "Default",
+		["Combustion - Illidan"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
 			["mode"] = 3,
 		},
 		["Comet - Illidan"] = {
-			["mode"] = 3,
 			["throttle"] = false,
+			["mode"] = 3,
 		},
 	},
 }

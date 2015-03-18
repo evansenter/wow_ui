@@ -63,7 +63,7 @@ END
 VER 3 010000000000000E "ToD" "INV_MISC_QUESTIONMARK"
 #showtooltip Touch of Death
 /use Fortifying Brew
-/use Touch of Death
+/use [@mouseover,harm,nodead][] Touch of Death
 END
 VER 3 010000000000000D "ToK" "INV_MISC_QUESTIONMARK"
 #showtooltip Touch of Karma

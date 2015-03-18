@@ -1,7 +1,7 @@
 
 StormEarthAndFireDB = {
-	["playTargetSoundOnMaster"] = false,
-	["configMode"] = false,
 	["playDeathSoundOnMaster"] = false,
+	["configMode"] = false,
+	["playTargetSoundOnMaster"] = false,
 	["growDown"] = false,
 }

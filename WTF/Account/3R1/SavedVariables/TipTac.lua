@@ -7,12 +7,7 @@ TipTac_Config = {
 	["barHeight"] = 12,
 	["left"] = 5.99998378753662,
 	["healthBarText"] = "value",
-	["tipColor"] = {
-		0.101960784313725, -- [1]
-		0.101960784313725, -- [2]
-		0.101960784313725, -- [3]
-		0.75, -- [4]
-	},
+	["anchorWorldTipPoint"] = "TOPLEFT",
 	["modifyFonts"] = true,
 	["anchorWorldUnitPoint"] = "TOPLEFT",
 	["classification_trivial"] = "~%s ",
@@ -20,26 +15,31 @@ TipTac_Config = {
 	["hideFactionText"] = true,
 	["classification_rareelite"] = "+%s|r (Rare) ",
 	["anchorFrameUnitPoint"] = "TOPLEFT",
-	["anchorWorldTipPoint"] = "TOPLEFT",
+	["tipColor"] = {
+		0.101960784313725, -- [1]
+		0.101960784313725, -- [2]
+		0.101960784313725, -- [3]
+		0.75, -- [4]
+	},
 	["showDebuffs"] = false,
 	["healthBar"] = true,
 	["iconRaid"] = false,
-	["classification_normal"] = "%s ",
+	["targetYouText"] = "<<YOU>>",
 	["tipBorderColor"] = {
 		0.301960784313726, -- [1]
 		0.301960784313726, -- [2]
 		0.4, -- [3]
 		0.500001192092896, -- [4]
 	},
-	["targetYouText"] = "<<YOU>>",
+	["classification_normal"] = "%s ",
+	["fontFace"] = "Interface\\Addons\\Skada\\fonts\\ABF.ttf",
+	["top"] = 1193.00024414063,
 	["gradientColor"] = {
 		0.8, -- [1]
 		0.8, -- [2]
 		0.8, -- [3]
 		0.100000023841858, -- [4]
 	},
-	["top"] = 1193.00024414063,
-	["fontFace"] = "Interface\\Addons\\Skada\\fonts\\ABF.ttf",
 	["barFontFace"] = "Interface\\Addons\\Skada\\fonts\\ABF.ttf",
 	["barTexture"] = "Interface\\Addons\\SharedMedia\\statusbar\\BantoBar",
 	["classification_minus"] = "-%s ",

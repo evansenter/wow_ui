@@ -1,0 +1,12 @@
+tag v1.1a
+050dacd719960365808cc81ef21acde802b2eabb
+Ketho <ngsc1@live.cn>
+2015-03-17 17:07:28 +0100
+
+Tagging as v1.1a
+
+
+--------------------
+
+Ketho:
+	- Update for WoD

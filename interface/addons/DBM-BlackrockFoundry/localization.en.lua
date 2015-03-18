@@ -5,6 +5,12 @@ local L
 ---------------
 L= DBM:GetModLocalization(1161)
 
+L:SetOptionLocalization({
+	MythicSoakBehavior	= "Set Mythic difficulty group soak preference for special warnings",
+	ThreeGroup			= "3 Group 1 stack each strat",
+	TwoGroup			= "2 Group 2 stacks each strat" 
+})
+
 ---------------------------
 -- Oregorger, The Devourer --
 ---------------------------
@@ -55,6 +61,10 @@ L= DBM:GetModLocalization(1123)
 --------------------
 L= DBM:GetModLocalization(1162)
 
+L:SetMiscLocalization({
+	ExRTNotice		= "%s sent ExRT rune position assignents. Your position: %s"
+})
+
 --------------------------
 -- Beastlord Darmac --
 --------------------------
@@ -70,7 +80,10 @@ L:SetWarningLocalization({
 })
 
 L:SetOptionLocalization({
-	specWarnSplitSoon	= "Show special warning 10 seconds before raid split"
+	specWarnSplitSoon	= "Show special warning 10 seconds before raid split",
+	InfoFrameSpeed		= "Set when InfoFrame shows next train information",
+	Immediately			= "As soon as doors open for current train",
+	Delayed				= "After current train has come out" 
 })
 
 L:SetMiscLocalization({
@@ -104,6 +117,17 @@ L:SetMiscLocalization({
 -- Blackhand --
 --------------------------
 L= DBM:GetModLocalization(959)
+
+L:SetWarningLocalization({
+	specWarnMFDPosition	= "Marked Position: %s"
+})
+
+L:SetMiscLocalization({
+	customMFDSay	= "Marked %s on %s",
+	left			= "left",
+	center			= "center",
+	right			= "right"
+})
 
 -------------
 --  Trash  --

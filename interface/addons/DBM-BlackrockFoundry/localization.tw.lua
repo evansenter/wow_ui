@@ -6,6 +6,12 @@ local L
 ---------------
 L= DBM:GetModLocalization(1161)
 
+L:SetOptionLocalization({
+	MythicSoakBehavior	= "為神話模式團隊設置分傷戰術的團隊警告",
+	ThreeGroup			= "三小隊一層的戰術",
+	TwoGroup			= "兩小隊兩層的戰術" 
+})
+
 ---------------------------
 -- Oregorger, The Devourer --
 ---------------------------
@@ -48,6 +54,10 @@ L= DBM:GetModLocalization(1123)
 --------------------
 L= DBM:GetModLocalization(1162)
 
+L:SetMiscLocalization({
+	ExRTNotice		= "%s發送ExRT的符文位置分配。你的位置為:%s"
+})
+
 --------------------------
 -- Beastlord Darmac --
 --------------------------
@@ -63,7 +73,10 @@ L:SetWarningLocalization({
 })
 
 L:SetOptionLocalization({
-	specWarnSplitSoon	= "團隊分開10秒前顯示特別警告"
+	specWarnSplitSoon	= "團隊分開10秒前顯示特別警告",
+	InfoFrameSpeed		= "設定何時訊息框架顯示下一次列車的資訊",
+	Immediately			= "車門一開後立即顯示此班列車",
+	Delayed				= "在此班列車出站之後" 
 })
 
 L:SetMiscLocalization({
@@ -90,13 +103,24 @@ L:SetOptionLocalization({
 })
 
 L:SetMiscLocalization({
-	shipMessage		= "準備裝填無畏號的主炮了！"
+	shipMessage		= "準備裝填無畏號的主砲了！"
 })
 
 --------------------------
 -- Blackhand --
 --------------------------
 L= DBM:GetModLocalization(959)
+
+L:SetWarningLocalization({
+	specWarnMFDPosition	= "死亡標記站位：%s"
+})
+
+L:SetMiscLocalization({
+	customMFDSay	= "%2$s中了%1$s死亡標記",
+	left			= "左方",
+	center			= "中間",
+	right			= "右方"
+})
 
 -------------
 --  Trash  --

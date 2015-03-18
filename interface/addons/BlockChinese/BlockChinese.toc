@@ -3,7 +3,7 @@
 ## Title: BlockChinese
 ## Notes: Blocks Chinese Chat
 ## Author: Ketho @ EU-Boulderfist
-## X-Curse-Packaged-Version: v1.0
+## X-Curse-Packaged-Version: v1.1a
 ## X-Curse-Project-Name: BlockChinese
 ## X-Curse-Project-ID: blockchinese
 ## X-Curse-Repository-ID: wow/blockchinese/mainline

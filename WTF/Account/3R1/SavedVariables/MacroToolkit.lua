@@ -14,34 +14,34 @@ MacroToolkitDB = {
 			},
 		},
 	},
-	["profileKeys"] = {
-		["Colton - Dark Iron"] = "profile",
-		["Combustion - Illidan"] = "profile",
-		["Metal - Illidan"] = "profile",
-		["Natal - Illidan"] = "profile",
-		["Plane - Illidan"] = "profile",
-		["Comet - Illidan"] = "profile",
-		["Evan - Illidan"] = "profile",
-		["Ereinion - Dark Iron"] = "profile",
-	},
 	["global"] = {
-		["ebackups"] = {
-		},
 		["backups"] = {
 		},
+		["ebackups"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Colton - Dark Iron"] = "profile",
+		["Metal - Illidan"] = "profile",
+		["Ereinion - Dark Iron"] = "profile",
+		["Evan - Illidan"] = "profile",
+		["Plane - Illidan"] = "profile",
+		["Comet - Illidan"] = "profile",
+		["Natal - Illidan"] = "profile",
+		["Combustion - Illidan"] = "profile",
 	},
 	["profiles"] = {
 		["profile"] = {
-			["y"] = 517.999816894531,
-			["x"] = 834.399291992188,
+			["y"] = 320.999847412109,
+			["x"] = 331.399230957031,
 			["override"] = true,
 			["fonts"] = {
 				["edfont"] = "ABF",
 				["edsize"] = 12,
 				["mfont"] = "ABF",
 				["mifont"] = "ABF",
-				["errsize"] = 12,
 				["misize"] = 12,
+				["errsize"] = 12,
 				["errfont"] = "ABF",
 			},
 		},

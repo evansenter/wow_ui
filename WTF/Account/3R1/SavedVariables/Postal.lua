@@ -1,5 +1,20 @@
 
 Postal3DB = {
+	["profileKeys"] = {
+		["Venala - Cho'gall"] = "Venala - Cho'gall",
+		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Metal - Illidan"] = "Metal - Illidan",
+		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
+		["Natalan - Illidan"] = "Natalan - Illidan",
+		["Colton - Dark Iron"] = "Colton - Dark Iron",
+		["Natalan - Dark Iron"] = "Natalan - Dark Iron",
+		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
+		["Plane - Illidan"] = "Plane - Illidan",
+		["Comet - Illidan"] = "Comet - Illidan",
+		["Pandatal - Illidan"] = "Pandatal - Illidan",
+		["Evan - Illidan"] = "Evan - Illidan",
+		["Natal - Illidan"] = "Natal - Illidan",
+	},
 	["global"] = {
 		["BlackBook"] = {
 			["alts"] = {
@@ -18,21 +33,6 @@ Postal3DB = {
 				"Venala|Cho'gall|Horde|20|ROGUE", -- [13]
 			},
 		},
-	},
-	["profileKeys"] = {
-		["Venala - Cho'gall"] = "Venala - Cho'gall",
-		["Combustion - Illidan"] = "Combustion - Illidan",
-		["Natal - Illidan"] = "Natal - Illidan",
-		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
-		["Natalan - Illidan"] = "Natalan - Illidan",
-		["Colton - Dark Iron"] = "Colton - Dark Iron",
-		["Natalan - Dark Iron"] = "Natalan - Dark Iron",
-		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
-		["Pandatal - Illidan"] = "Pandatal - Illidan",
-		["Comet - Illidan"] = "Comet - Illidan",
-		["Plane - Illidan"] = "Plane - Illidan",
-		["Evan - Illidan"] = "Evan - Illidan",
-		["Metal - Illidan"] = "Metal - Illidan",
 	},
 	["profiles"] = {
 		["Venala - Cho'gall"] = {
@@ -53,20 +53,11 @@ Postal3DB = {
 				},
 			},
 		},
-		["Natal - Illidan"] = {
+		["Metal - Illidan"] = {
 			["BlackBook"] = {
 				["recent"] = {
 					"Comet|Illidan|Horde", -- [1]
 					"Evan|Illidan|Horde", -- [2]
-					"Plane|Illidan|Horde", -- [3]
-					"Combustion|Illidan|Horde", -- [4]
-					"Harratokk|Illidan|Horde", -- [5]
-					"Pandatal|Illidan|Horde", -- [6]
-					"Improbus|Illidan|Horde", -- [7]
-					"Vasyl|Illidan|Horde", -- [8]
-					"Deadsolitary|Illidan|Horde", -- [9]
-					"Çahayla|Illidan|Horde", -- [10]
-					"Demiwrath|Illidan|Horde", -- [11]
 				},
 			},
 		},
@@ -101,6 +92,37 @@ Postal3DB = {
 				},
 			},
 		},
+		["Plane - Illidan"] = {
+			["BlackBook"] = {
+				["recent"] = {
+					"Comet|Illidan|Horde", -- [1]
+					"Centromere-Dark Iron|Illidan|Horde", -- [2]
+					"Natal|Illidan|Horde", -- [3]
+					"Combustion|Illidan|Horde", -- [4]
+				},
+			},
+		},
+		["Comet - Illidan"] = {
+			["BlackBook"] = {
+				["recent"] = {
+					"Evan|Illidan|Horde", -- [1]
+					"Metal|Illidan|Horde", -- [2]
+					"Princip-Illidan|Illidan|Horde", -- [3]
+					"Olgheals|Illidan|Horde", -- [4]
+					"Azimyth|Illidan|Horde", -- [5]
+					"Twinspirit|Illidan|Horde", -- [6]
+					"Combustion|Illidan|Horde", -- [7]
+					"Azpek|Illidan|Horde", -- [8]
+					"Blutarski-Illidan|Illidan|Horde", -- [9]
+					"Spasweezy|Illidan|Horde", -- [10]
+					"Natal|Illidan|Horde", -- [11]
+					"Evannata|Illidan|Horde", -- [12]
+					"Plane|Illidan|Horde", -- [13]
+					"Centromere-Dark Iron|Illidan|Horde", -- [14]
+					"evan|Illidan|Horde", -- [15]
+				},
+			},
+		},
 		["Pandatal - Illidan"] = {
 			["BlackBook"] = {
 				["recent"] = {
@@ -122,42 +144,12 @@ Postal3DB = {
 				},
 			},
 		},
-		["Comet - Illidan"] = {
-			["BlackBook"] = {
-				["recent"] = {
-					"Metal|Illidan|Horde", -- [1]
-					"Evan|Illidan|Horde", -- [2]
-					"Olgheals|Illidan|Horde", -- [3]
-					"Azimyth|Illidan|Horde", -- [4]
-					"Twinspirit|Illidan|Horde", -- [5]
-					"Combustion|Illidan|Horde", -- [6]
-					"Azpek|Illidan|Horde", -- [7]
-					"Blutarski-Illidan|Illidan|Horde", -- [8]
-					"Spasweezy|Illidan|Horde", -- [9]
-					"Natal|Illidan|Horde", -- [10]
-					"Evannata|Illidan|Horde", -- [11]
-					"Plane|Illidan|Horde", -- [12]
-					"Centromere-Dark Iron|Illidan|Horde", -- [13]
-					"evan|Illidan|Horde", -- [14]
-				},
-			},
-		},
-		["Plane - Illidan"] = {
-			["BlackBook"] = {
-				["recent"] = {
-					"Comet|Illidan|Horde", -- [1]
-					"Centromere-Dark Iron|Illidan|Horde", -- [2]
-					"Natal|Illidan|Horde", -- [3]
-					"Combustion|Illidan|Horde", -- [4]
-				},
-			},
-		},
 		["Evan - Illidan"] = {
 			["BlackBook"] = {
 				["recent"] = {
-					"Metal|Illidan|Horde", -- [1]
-					"Sikonus-Illidan|Illidan|Horde", -- [2]
-					"Comet|Illidan|Horde", -- [3]
+					"Comet|Illidan|Horde", -- [1]
+					"Metal|Illidan|Horde", -- [2]
+					"Sikonus-Illidan|Illidan|Horde", -- [3]
 					"Twinspirit|Illidan|Horde", -- [4]
 					"Plane|Illidan|Horde", -- [5]
 					"Centromere-Dark Iron|Illidan|Horde", -- [6]
@@ -178,11 +170,20 @@ Postal3DB = {
 				},
 			},
 		},
-		["Metal - Illidan"] = {
+		["Natal - Illidan"] = {
 			["BlackBook"] = {
 				["recent"] = {
 					"Comet|Illidan|Horde", -- [1]
 					"Evan|Illidan|Horde", -- [2]
+					"Plane|Illidan|Horde", -- [3]
+					"Combustion|Illidan|Horde", -- [4]
+					"Harratokk|Illidan|Horde", -- [5]
+					"Pandatal|Illidan|Horde", -- [6]
+					"Improbus|Illidan|Horde", -- [7]
+					"Vasyl|Illidan|Horde", -- [8]
+					"Deadsolitary|Illidan|Horde", -- [9]
+					"Çahayla|Illidan|Horde", -- [10]
+					"Demiwrath|Illidan|Horde", -- [11]
 				},
 			},
 		},

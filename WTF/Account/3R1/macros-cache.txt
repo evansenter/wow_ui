@@ -6,7 +6,7 @@ VER 3 000000000000003F "Blackout Kick" "INV_MISC_QUESTIONMARK"
 /use [nochanneling:Fists of Fury]Blackout Kick
 END
 VER 3 000000000000004A "Buy Shit" "INV_Misc_QuestionMark"
-/run BuyMerchantItem(3)
+/run BuyMerchantItem(2)
 END
 VER 3 0000000000000028 "Camera" "Spell_Shadow_EvilEye"
 /console CameraDistanceMaxFactor 9000
@@ -82,8 +82,8 @@ VER 3 0000000000000040 "SCK" "INV_MISC_QUESTIONMARK"
 /use [nochanneling:Fists of Fury]Spinning Crane Kick
 END
 VER 3 0000000000000042 "SEF" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/use [@mouseover,harm,nodead][]Storm,Earth,and Fire
+#showtooltip Storm, Earth, and Fire
+/use [@mouseover,harm,nodead][] Storm, Earth, and Fire
 END
 VER 3 000000000000002C "Target Focus" "Spell_Magic_PolymorphRabbit"
 /tar focus
@@ -94,7 +94,7 @@ VER 3 0000000000000044 "Tier 3" "INV_Misc_QuestionMark"
 END
 VER 3 0000000000000043 "Tier 7" "INV_Misc_QuestionMark"
 #showtooltip
-/use [talent:7/1]Soul Dance;[talent:7/2]Chi Explosion;[talent:7/3]Serenity
+/use [talent:7/1]Hurricane Strike;[talent:7/2]Chi Explosion;[talent:7/3]Serenity
 /use 14
 END
 VER 3 000000000000003E "Tiger Palm" "INV_MISC_QUESTIONMARK"

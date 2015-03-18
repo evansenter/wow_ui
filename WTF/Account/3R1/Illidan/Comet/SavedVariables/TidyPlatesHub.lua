@@ -874,12 +874,7 @@ TidyPlatesHubSettings = {
 		["WidgetAuraTrackDispelFriendly"] = false,
 		["OpacitySpotlightRaidMarked"] = false,
 		["FriendlyAlphaSpotlightMode"] = 1,
-		["ColorFriendlyPlayer"] = {
-			["a"] = 0.999997794628143,
-			["b"] = 0.999997794628143,
-			["g"] = 0,
-			["r"] = 0,
-		},
+		["ScaleIgnoreInactive"] = false,
 		["WidgetsTotemIcon"] = false,
 		["ColorPartyAggroGlow"] = true,
 		["ColorAttackingOtherTank"] = {
@@ -910,7 +905,12 @@ TidyPlatesHubSettings = {
 			["g"] = 0,
 			["r"] = 0.999997794628143,
 		},
-		["ScaleIgnoreInactive"] = false,
+		["ColorFriendlyPlayer"] = {
+			["a"] = 0.999997794628143,
+			["b"] = 0.999997794628143,
+			["g"] = 0,
+			["r"] = 0,
+		},
 		["ThreatGlowEnable"] = true,
 		["WidgetEliteIndicator"] = false,
 		["WidgetsThreatIndicatorMode"] = 1,

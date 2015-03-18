@@ -1,0 +1,46 @@
+subversion:
+	- nbluewiz via svn r13341: # fix possible lua error in mythic blast furnace. # add count for blackhand phase 2 mark of death.
+	- ultrashining via svn r13340: zhTW update
+	- nbluewiz via svn r13339: # Fix lua error when wiped phase 3 in Tectus. # Fix no ship warn if don't show far warning option is disabled. # koKR update.
+	- Omega via svn r13338: I thought I fixed this message, oh well, fixing now
+	- Omega via svn r13337: Well that didn?\226?\128?\153t make it any better. Is there no way to force a dependancy without altering the load order? :\
+	- Omega via svn r13336: Try some blind changes to reduce DBT screwing up.
+	- Omega via svn r13335: flamebender has 7 minute berserk on mythic
+	- Omega via svn r13334: Improve gruul warnings so that non special warnings also show the soak stuff. Added custom yells to blackhand per twitter conversation: https://twitter.com/Mini_Dragon_CN/status/577229097799057408
+	- Omega via svn r13333: Make all hud show times adjustable. I?\226?\128?\153m sure there will be a lot of tweaks needed during testing.
+	- Omega via svn r13332: CN update
+	- Omega via svn r13331: Fix lua error on iron maidens Fix actual cause of tank filter not working still.
+	- Omega via svn r13330: Add some work in progress experimental stuff for mythic thogar
+	- Omega via svn r13329: Fix bug where hudmap ALWAYS deactivated when FreeEncounterMarker was called, even with other active marks out. Now the smart activate/deactivate actually works perfectly.
+	- Omega via svn r13328: Won?\226?\128?\153t be able to test until wed, but this will probably work better.
+	- Omega via svn r13327: add debug to istanking. This is only explanation for fail
+	- Omega via svn r13326: Tweak thogar grenade scanner to match speed of desecrate weapon, which only worked well at 0.02 (also an instant cast SPELL_CAST_SUCCESS spell).
+	- Omega via svn r13325: Tweak thogar countdown a little.
+	- nbluewiz via svn r13324: # target scanner: correct fix for ignore tank.
+	- nbluewiz via svn r13323: # fix Cauterizing Bolt Dispel.
+	- Omega via svn r13322: #Core *includeTank is a pretty useless function, no mod has ever used it and no target scanner I?\226?\128?\153ve ever known of would want to include the tank on purpose. However, ignoreTank, now that is useful. so change to ignoreTank arg to tell target scanner to ignore tank when needed. *This should fix all the false warnings on thogar grenades. It?\226?\128?\153ll just warn unknown when it?\226?\128?\153s on tank instead of false yells/warnings. #Thogar *Add dispel warning for cauterizing bolts that aren?\226?\128?\153t interrupted.
+	- Omega via svn r13321: if target scan fails, at least announce something. target scan fails quite often because quite often tank swaps occur and boss doesn?\226?\128?\153t look at grenade target while affected by taunt.
+	- Omega via svn r13320: Remove first enkindle timer, he uses it about 3 seconds into fight
+	- Omega via svn r13319: reduce spam
+	- Omega via svn r13318: ignore tank, and only scan boss. getting MANY false warnings on tanks
+	- Omega via svn r13317: Fix a couple swapped timers in GUI
+	- nbluewiz via svn r13316: # Add one more Delayed Siege Bomb voice.
+	- nbluewiz via svn r13315: # Fixes. 1. Correct Pin Down CD fix. 2. Small Adjust Superheated Shrapnel. 3. Fix bad sync in Iron Maidens. 4. Fix bad Delayed Siege Bomb close warning. # Change. 1. Small tweak for Delayed Siege Bomb warning.
+	- Omega via svn r13314: Add bomb voice warning to thogar
+	- nbluewiz via svn r13313: # improve delayed siege bomb warning and yell.
+	- nbluewiz via svn r13312: # add proto grenade target scanner for thogar.
+	- nbluewiz via svn r13311: # fix mythic 35 train timer.
+	- Omega via svn r13310: #Thogar Improvements *readd, as a stack warning that warns stacks above or equal to 2 *Improve tank warning so that it warns to taunt at 2 stacks even if you have debuff, if debuff will expire before refresh. instead of making tanks swap at 3 stacks when any good tank knows you swap at 2.
+	- Omega via svn r13309: Revert last for now. same debuff is used by both unavoidable flamethrowers and avoidable fire on ground. No way to tell one from the other unfortunately.
+	- Omega via svn r13308: Add GTFO for Fire left on ground by Obliterator cannons (burning)
+	- nbluewiz via svn r13307: # phase 2 warn fix for iron maidens.
+	- nbluewiz via svn r13306: # pin down countdown fix. # fix voice for savage howl. # boat check fix for iron maidens.
+	- TOM_RUS via svn r13305: ruRU update
+	- nbluewiz via svn r13304: # Blackrock Foundry Fix. 1. Fixed Lumbering Strength warning was shown for non-tank char. 2. Fixed Next Slag Elemental timer was not shown after second spawn. 3. Fixed Blast CD timer was not shown when interval is below 10 sec. 4. Adjusted Pin Down and Tantrum CD little. 5. Fixed boat check. ALTNATE power not working.
+	- ultrashining via svn r13303: zhTW update
+	- nbluewiz via svn r13302: # sharp bark cd fix for rukhmar.
+	- Omega via svn r13301: Kromog Update *Fixed bug where call of mountain count never reset *Improved timer accuracy with mythic to account for fact sometimes boss casts trembling earth first. *In addition, smart auto correcting code for all conditions where one ability delays the other.
+	- nbluewiz via svn r13300: # koKR update.
+	- ultrashining via svn r13299: zhTW update
+	- Omega via svn r13298: improve message so you know who sent it
+	- tandanu via svn r13297: increment version number

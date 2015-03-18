@@ -6,10 +6,10 @@ SpellFlash-Priest: disabled
 SpellFlash: disabled
 TidyPlatesHub: enabled
 TidyPlatesWidgets: enabled
-TidyPlates_Graphite: disabled
-TidyPlates_Grey: disabled
+TidyPlates_Graphite: enabled
+TidyPlates_Grey: enabled
 TidyPlates_Neon: enabled
-TidyPlates_Quatre: disabled
+TidyPlates_Quatre: enabled
 StormEarthAndFire: enabled
 BLTRaidCooldowns: enabled
 ActionBarSaver: enabled

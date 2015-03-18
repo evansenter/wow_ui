@@ -1,0 +1,9 @@
+
+Hansgar_And_Franzok_DB = {
+	["CD_NUMBER"] = false,
+	["STAMPERS_DELAY"] = 5,
+	["FACING_SIDE"] = 1,
+	["SHOW_DANCE"] = true,
+	["FRAME_LOCK"] = true,
+	["AUTO_FACING"] = true,
+}

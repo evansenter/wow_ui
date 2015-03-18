@@ -3,17 +3,17 @@ DataStore_AgendaDB = {
 	["profileKeys"] = {
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Metal - Illidan"] = "Metal - Illidan",
-		["Comet - Illidan"] = "Comet - Illidan",
-		["Combustion - Illidan"] = "Combustion - Illidan",
-		["Evan - Illidan"] = "Evan - Illidan",
-		["Natal - Illidan"] = "Natal - Illidan",
 		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
+		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Natal - Illidan"] = "Natal - Illidan",
+		["Evan - Illidan"] = "Evan - Illidan",
+		["Comet - Illidan"] = "Comet - Illidan",
 	},
 	["global"] = {
 		["Options"] = {
 			["WeeklyResetHour"] = 6,
 			["WeeklyResetDay"] = 2,
-			["NextWeeklyReset"] = "2015-03-10",
+			["NextWeeklyReset"] = "2015-03-24",
 		},
 		["Characters"] = {
 			["Default.Dark Iron.Ereinion"] = {
@@ -25,23 +25,10 @@ DataStore_AgendaDB = {
 						["note"] = "",
 					},
 				},
-				["lastUpdate"] = 1425967274,
+				["lastUpdate"] = 1426618387,
 			},
 			["Default.Illidan.Combustion"] = {
 				["lastUpdate"] = 1424741664,
-			},
-			["Default.Illidan.Comet"] = {
-				["DungeonIDs"] = {
-					["Highmaul Heroic|166407194"] = "35982|1425967221|0|1",
-					["Blackrock Foundry Mythic|180919555"] = "35982|1425967221|0|1",
-					["Highmaul Mythic|181716397"] = "35982|1425967221|0|1",
-					["Blackrock Foundry Heroic|180959267"] = "35982|1425967221|0|1",
-				},
-				["lastUpdate"] = 1425967219,
-				["LFGDungeons"] = {
-					["846.Count"] = 1,
-					["846.Kromog, Legend of the Mountain"] = true,
-				},
 			},
 			["Default.Dark Iron.Colton"] = {
 				["Contacts"] = {
@@ -53,8 +40,8 @@ DataStore_AgendaDB = {
 					},
 					["Purephase"] = {
 						["note"] = "",
-						["level"] = 100,
 						["class"] = "Rogue",
+						["level"] = 100,
 					},
 					["Rfl"] = {
 						["note"] = "",
@@ -65,7 +52,7 @@ DataStore_AgendaDB = {
 					["Hemos"] = {
 						["note"] = "",
 					},
-					["Billbraskie"] = {
+					["Bubblegurl"] = {
 						["note"] = "",
 					},
 					["Faluzure"] = {
@@ -74,17 +61,20 @@ DataStore_AgendaDB = {
 					["Pockee"] = {
 						["note"] = "",
 					},
-					["Bubblegurl"] = {
+					["Billbraskie"] = {
 						["note"] = "",
 					},
 				},
 				["lastUpdate"] = 1424741733,
 			},
-			["Default.Illidan.Metal"] = {
-				["lastUpdate"] = 1425964301,
-			},
 			["Default.Illidan.Natal"] = {
 				["lastUpdate"] = 1424741647,
+			},
+			["Default.Illidan.Metal"] = {
+				["lastUpdate"] = 1426618288,
+			},
+			["Default.Illidan.Comet"] = {
+				["lastUpdate"] = 1426632933,
 			},
 		},
 	},

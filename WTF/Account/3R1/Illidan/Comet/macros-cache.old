@@ -7,7 +7,8 @@ VER 3 0100000000000001 "Detox" "INV_MISC_QUESTIONMARK"
 /use [@mouseover,help,nodead][]Detox
 END
 VER 3 0100000000000015 "Enveloping Mist" "INV_MISC_QUESTIONMARK"
-#showtooltip
+#showtooltip Enveloping Mist
+/use 14
 /use [@mouseover,help,nodead][]Enveloping Mist
 END
 VER 3 0100000000000013 "Life Cocoon" "INV_MISC_QUESTIONMARK"

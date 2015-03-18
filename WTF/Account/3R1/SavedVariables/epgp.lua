@@ -7,459 +7,1813 @@ EPGP_DB = {
 		},
 		["warnings"] = {
 		},
-		["whisper"] = {
-		},
-		["gptooltip"] = {
-		},
-		["announce"] = {
-			["profiles"] = {
-				["Slash Cry"] = {
-					["medium"] = "OFFICER",
-				},
-			},
-		},
 		["log"] = {
 			["profiles"] = {
-				["GLORY"] = {
+				["Mind Games"] = {
 					["snapshot"] = {
+						["time"] = 1426631100,
 						["roster_info"] = {
 							{
-								"Zareda", -- [1]
-								"SHAMAN", -- [2]
+								"Karogra", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [1]
 							{
-								"Anklebiterzz", -- [1]
-								"SHAMAN", -- [2]
+								"Spartacis", -- [1]
+								"DEATHKNIGHT", -- [2]
 								"", -- [3]
 							}, -- [2]
 							{
-								"Adalayde", -- [1]
-								"WARRIOR", -- [2]
+								"Evan", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
 							}, -- [3]
 							{
-								"Cornface", -- [1]
-								"PRIEST", -- [2]
+								"Korrå", -- [1]
+								"SHAMAN", -- [2]
 								"", -- [3]
 							}, -- [4]
 							{
-								"Ceelogreen", -- [1]
-								"WARRIOR", -- [2]
+								"Darkwuke", -- [1]
+								"WARLOCK", -- [2]
 								"", -- [3]
 							}, -- [5]
 							{
-								"Dexbeast", -- [1]
-								"MAGE", -- [2]
+								"Gobofløp", -- [1]
+								"HUNTER", -- [2]
 								"", -- [3]
 							}, -- [6]
 							{
-								"Strahm", -- [1]
-								"PALADIN", -- [2]
+								"Validas", -- [1]
+								"SHAMAN", -- [2]
 								"", -- [3]
 							}, -- [7]
 							{
-								"Bodyroc", -- [1]
-								"ROGUE", -- [2]
+								"Kruces", -- [1]
+								"DEATHKNIGHT", -- [2]
 								"", -- [3]
 							}, -- [8]
 							{
-								"Redeemer", -- [1]
-								"ROGUE", -- [2]
+								"Shadowwuke", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
 							}, -- [9]
 							{
-								"Manswers", -- [1]
-								"WARRIOR", -- [2]
+								"Dehxs", -- [1]
+								"SHAMAN", -- [2]
 								"", -- [3]
 							}, -- [10]
 							{
-								"Clarity", -- [1]
-								"WARLOCK", -- [2]
+								"Blizzmarkie", -- [1]
+								"MAGE", -- [2]
 								"", -- [3]
 							}, -- [11]
 							{
-								"Rass", -- [1]
-								"DRUID", -- [2]
+								"Rendath", -- [1]
+								"DEATHKNIGHT", -- [2]
 								"", -- [3]
 							}, -- [12]
 							{
-								"Midien", -- [1]
-								"DEATHKNIGHT", -- [2]
+								"Løki", -- [1]
+								"MAGE", -- [2]
 								"", -- [3]
 							}, -- [13]
 							{
-								"Rottnbasterd", -- [1]
+								"Sneakichu", -- [1]
 								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [14]
 							{
-								"Migs", -- [1]
-								"ROGUE", -- [2]
+								"Beefrocket", -- [1]
+								"DRUID", -- [2]
 								"", -- [3]
 							}, -- [15]
 							{
-								"Dunfor", -- [1]
-								"WARLOCK", -- [2]
+								"Vampro", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
 							}, -- [16]
 							{
-								"Demicutak", -- [1]
-								"WARRIOR", -- [2]
+								"Clamente", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
 							}, -- [17]
 							{
-								"Imopbizatch", -- [1]
-								"DEATHKNIGHT", -- [2]
+								"Toxxulian", -- [1]
+								"HUNTER", -- [2]
 								"", -- [3]
 							}, -- [18]
 							{
-								"Eekryansucks", -- [1]
-								"PALADIN", -- [2]
+								"Innoruuk", -- [1]
+								"WARRIOR", -- [2]
 								"", -- [3]
 							}, -- [19]
 							{
-								"Tanika", -- [1]
-								"WARLOCK", -- [2]
+								"Deliverancez", -- [1]
+								"WARRIOR", -- [2]
 								"", -- [3]
 							}, -- [20]
 							{
-								"Shadowchiron", -- [1]
-								"PALADIN", -- [2]
+								"Coffmann", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
 							}, -- [21]
 							{
-								"Terrischiavo", -- [1]
+								"Grimdok", -- [1]
 								"DEATHKNIGHT", -- [2]
 								"", -- [3]
 							}, -- [22]
 							{
-								"Sicarii", -- [1]
-								"ROGUE", -- [2]
+								"Feedyourneed", -- [1]
+								"HUNTER", -- [2]
 								"", -- [3]
 							}, -- [23]
 							{
-								"Treekitty", -- [1]
-								"DRUID", -- [2]
+								"Uskel", -- [1]
+								"HUNTER", -- [2]
 								"", -- [3]
 							}, -- [24]
 							{
-								"Owievision", -- [1]
-								"ROGUE", -- [2]
+								"Badboydrood", -- [1]
+								"DRUID", -- [2]
 								"", -- [3]
 							}, -- [25]
 							{
-								"Shadowtuck", -- [1]
-								"MAGE", -- [2]
+								"Grommásh", -- [1]
+								"WARRIOR", -- [2]
 								"", -- [3]
 							}, -- [26]
 							{
-								"Interpöl", -- [1]
-								"HUNTER", -- [2]
+								"Kovenaros", -- [1]
+								"SHAMAN", -- [2]
 								"", -- [3]
 							}, -- [27]
 							{
-								"Scrotuscrabs", -- [1]
-								"DRUID", -- [2]
+								"Amato", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [28]
 							{
-								"Phonsjericho", -- [1]
-								"ROGUE", -- [2]
+								"Allimurderer", -- [1]
+								"HUNTER", -- [2]
 								"", -- [3]
 							}, -- [29]
 							{
-								"Cattiebriez", -- [1]
-								"PRIEST", -- [2]
+								"Beltron", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [30]
 							{
-								"Eekgregsucks", -- [1]
-								"DEATHKNIGHT", -- [2]
+								"Vòrosh", -- [1]
+								"HUNTER", -- [2]
 								"", -- [3]
 							}, -- [31]
 							{
-								"Lirel", -- [1]
-								"PRIEST", -- [2]
+								"Ballnchaìn", -- [1]
+								"DEATHKNIGHT", -- [2]
 								"", -- [3]
 							}, -- [32]
 							{
-								"Eekneilsucks", -- [1]
-								"WARRIOR", -- [2]
+								"Sikopal", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [33]
 							{
-								"Mungdaal", -- [1]
-								"SHAMAN", -- [2]
+								"Pantsbeard", -- [1]
+								"MAGE", -- [2]
 								"", -- [3]
 							}, -- [34]
 							{
-								"Holycowlol", -- [1]
-								"PALADIN", -- [2]
+								"Chargeisfunn", -- [1]
+								"WARRIOR", -- [2]
 								"", -- [3]
 							}, -- [35]
 							{
-								"Hicky", -- [1]
-								"ROGUE", -- [2]
+								"Nuttcancer", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [36]
 							{
-								"Eekshamsucks", -- [1]
-								"HUNTER", -- [2]
+								"Lustea", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
 							}, -- [37]
 							{
-								"Bluesuadegoo", -- [1]
+								"Entombment", -- [1]
 								"MAGE", -- [2]
 								"", -- [3]
 							}, -- [38]
 							{
-								"Kapu", -- [1]
-								"HUNTER", -- [2]
+								"Huhahew", -- [1]
+								"MAGE", -- [2]
 								"", -- [3]
 							}, -- [39]
 							{
-								"Demisniped", -- [1]
-								"HUNTER", -- [2]
+								"Mistibaby", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
 							}, -- [40]
 							{
-								"Rubido", -- [1]
-								"MAGE", -- [2]
+								"Sixbocta", -- [1]
+								"SHAMAN", -- [2]
 								"", -- [3]
 							}, -- [41]
 							{
-								"Joystick", -- [1]
-								"DRUID", -- [2]
+								"Pbronice", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [42]
 							{
-								"Pockieninja", -- [1]
-								"SHAMAN", -- [2]
+								"Skullz", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [43]
 							{
-								"Demishym", -- [1]
-								"PRIEST", -- [2]
+								"Freed", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [44]
 							{
-								"Ickybodclay", -- [1]
-								"PALADIN", -- [2]
+								"Boston", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [45]
 							{
-								"Demiswag", -- [1]
-								"DEATHKNIGHT", -- [2]
+								"Buddurs", -- [1]
+								"WARRIOR", -- [2]
 								"", -- [3]
 							}, -- [46]
 							{
-								"Agriculture", -- [1]
-								"DEATHKNIGHT", -- [2]
+								"Immortalzz", -- [1]
+								"WARRIOR", -- [2]
 								"", -- [3]
 							}, -- [47]
 							{
-								"Slêêp", -- [1]
-								"DEATHKNIGHT", -- [2]
+								"Starstruckqt", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
 							}, -- [48]
 							{
-								"Rowboat", -- [1]
-								"SHAMAN", -- [2]
+								"Bsly", -- [1]
+								"DRUID", -- [2]
 								"", -- [3]
 							}, -- [49]
 							{
-								"Melersica", -- [1]
-								"PRIEST", -- [2]
+								"Wardìck", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [50]
 							{
-								"Charliekelly", -- [1]
-								"ROGUE", -- [2]
+								"Corddell", -- [1]
+								"WARRIOR", -- [2]
 								"", -- [3]
 							}, -- [51]
 							{
-								"Belgianrofl", -- [1]
-								"DEATHKNIGHT", -- [2]
+								"Venøxis", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [52]
 							{
-								"Etherpure", -- [1]
-								"PALADIN", -- [2]
+								"Kovnado", -- [1]
+								"DRUID", -- [2]
 								"", -- [3]
 							}, -- [53]
 							{
-								"Undeadkillax", -- [1]
-								"ROGUE", -- [2]
+								"Àrthàs", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [54]
 							{
-								"Vannian", -- [1]
-								"DEATHKNIGHT", -- [2]
+								"Hellrussian", -- [1]
+								"WARLOCK", -- [2]
 								"", -- [3]
 							}, -- [55]
 							{
-								"Swedishchef", -- [1]
-								"HUNTER", -- [2]
+								"Rayøc", -- [1]
+								"WARLOCK", -- [2]
 								"", -- [3]
 							}, -- [56]
 							{
-								"Omgflagged", -- [1]
-								"HUNTER", -- [2]
+								"Demotrius", -- [1]
+								"WARLOCK", -- [2]
 								"", -- [3]
 							}, -- [57]
 							{
-								"Demisnare", -- [1]
-								"WARLOCK", -- [2]
+								"Fuzzicans", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [58]
 							{
-								"Blindzo", -- [1]
-								"SHAMAN", -- [2]
+								"Leafygreens", -- [1]
+								"DRUID", -- [2]
 								"", -- [3]
 							}, -- [59]
 							{
-								"Chelis", -- [1]
-								"SHAMAN", -- [2]
+								"Bdbypaladin", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [60]
 							{
-								"Darthtrader", -- [1]
-								"WARLOCK", -- [2]
+								"Beemm", -- [1]
+								"HUNTER", -- [2]
 								"", -- [3]
 							}, -- [61]
 							{
-								"Idtrapthat", -- [1]
-								"HUNTER", -- [2]
+								"Anatomi", -- [1]
+								"DEATHKNIGHT", -- [2]
 								"", -- [3]
 							}, -- [62]
 							{
-								"Helloirene", -- [1]
-								"WARRIOR", -- [2]
+								"Celadon", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
 							}, -- [63]
 							{
-								"Crabbattle", -- [1]
+								"Maeulos", -- [1]
 								"WARLOCK", -- [2]
 								"", -- [3]
 							}, -- [64]
 							{
-								"Dëmisë", -- [1]
-								"DEATHKNIGHT", -- [2]
+								"Wheytren", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [65]
 							{
-								"Welshcakes", -- [1]
-								"PALADIN", -- [2]
+								"Sukkondeez", -- [1]
+								"DEATHKNIGHT", -- [2]
 								"", -- [3]
 							}, -- [66]
 							{
-								"Gonkz", -- [1]
-								"DRUID", -- [2]
+								"Admitnone", -- [1]
+								"WARRIOR", -- [2]
 								"", -- [3]
 							}, -- [67]
 							{
-								"Andybotwin", -- [1]
-								"PRIEST", -- [2]
+								"Punísh", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [68]
 							{
-								"Azgru", -- [1]
-								"HUNTER", -- [2]
+								"Galiela", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [69]
 							{
-								"Evocare", -- [1]
-								"WARLOCK", -- [2]
+								"Badboydruid", -- [1]
+								"DRUID", -- [2]
 								"", -- [3]
 							}, -- [70]
 							{
-								"Itbites", -- [1]
-								"ROGUE", -- [2]
+								"Cogash", -- [1]
+								"SHAMAN", -- [2]
 								"", -- [3]
 							}, -- [71]
 							{
-								"Canimee", -- [1]
-								"PALADIN", -- [2]
+								"Olgheals", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
 							}, -- [72]
 							{
-								"Centromere", -- [1]
+								"Kasparov", -- [1]
 								"WARRIOR", -- [2]
 								"", -- [3]
 							}, -- [73]
 							{
-								"Drazzl", -- [1]
-								"ROGUE", -- [2]
+								"Bdbydk", -- [1]
+								"DEATHKNIGHT", -- [2]
 								"", -- [3]
 							}, -- [74]
 							{
-								"Perith", -- [1]
-								"PALADIN", -- [2]
+								"Cùps", -- [1]
+								"HUNTER", -- [2]
 								"", -- [3]
 							}, -- [75]
 							{
-								"Durkasmite", -- [1]
+								"Aurassarr", -- [1]
 								"PRIEST", -- [2]
 								"", -- [3]
 							}, -- [76]
 							{
-								"Monco", -- [1]
-								"DEATHKNIGHT", -- [2]
+								"Judginatör", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [77]
 							{
-								"Hields", -- [1]
-								"SHAMAN", -- [2]
+								"Mts", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [78]
 							{
-								"Egnima", -- [1]
-								"WARLOCK", -- [2]
+								"Freedpriest", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
 							}, -- [79]
 							{
-								"Shadowart", -- [1]
-								"ROGUE", -- [2]
+								"Tygorious", -- [1]
+								"HUNTER", -- [2]
 								"", -- [3]
 							}, -- [80]
 							{
-								"Virginity", -- [1]
-								"PRIEST", -- [2]
+								"Toppies", -- [1]
+								"MAGE", -- [2]
 								"", -- [3]
 							}, -- [81]
 							{
-								"Bigsissy", -- [1]
-								"WARRIOR", -- [2]
+								"Lustya", -- [1]
+								"SHAMAN", -- [2]
 								"", -- [3]
 							}, -- [82]
 							{
-								"Xmrfantastic", -- [1]
-								"DRUID", -- [2]
+								"Somboquon", -- [1]
+								"MONK", -- [2]
 								"", -- [3]
 							}, -- [83]
 							{
-								"Shadowramuh", -- [1]
-								"DEATHKNIGHT", -- [2]
+								"Kby", -- [1]
+								"MONK", -- [2]
 								"", -- [3]
 							}, -- [84]
 							{
-								"Chaosie", -- [1]
-								"DRUID", -- [2]
+								"Ainal", -- [1]
+								"MONK", -- [2]
 								"", -- [3]
 							}, -- [85]
 							{
-								"Hermezkanrad", -- [1]
-								"WARRIOR", -- [2]
+								"Buklau", -- [1]
+								"MONK", -- [2]
 								"", -- [3]
 							}, -- [86]
 							{
-								"Rootslol", -- [1]
-								"DRUID", -- [2]
+								"Lustwar", -- [1]
+								"WARRIOR", -- [2]
 								"", -- [3]
 							}, -- [87]
+							{
+								"Mordacar", -- [1]
+								"WARRIOR", -- [2]
+								"", -- [3]
+							}, -- [88]
+							{
+								"Coffman", -- [1]
+								"PALADIN", -- [2]
+								"", -- [3]
+							}, -- [89]
+							{
+								"Alaw", -- [1]
+								"PRIEST", -- [2]
+								"", -- [3]
+							}, -- [90]
+							{
+								"Wadulay", -- [1]
+								"WARLOCK", -- [2]
+								"", -- [3]
+							}, -- [91]
+							{
+								"Bdbydrood", -- [1]
+								"DRUID", -- [2]
+								"", -- [3]
+							}, -- [92]
+							{
+								"Avius", -- [1]
+								"MAGE", -- [2]
+								"", -- [3]
+							}, -- [93]
+							{
+								"Sikonos", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"", -- [3]
+							}, -- [94]
+							{
+								"Maslowe", -- [1]
+								"PALADIN", -- [2]
+								"", -- [3]
+							}, -- [95]
+							{
+								"Sikonus", -- [1]
+								"WARRIOR", -- [2]
+								"", -- [3]
+							}, -- [96]
+							{
+								"Purrnado", -- [1]
+								"DRUID", -- [2]
+								"", -- [3]
+							}, -- [97]
+							{
+								"Wraeth", -- [1]
+								"PRIEST", -- [2]
+								"", -- [3]
+							}, -- [98]
+							{
+								"Talavi", -- [1]
+								"SHAMAN", -- [2]
+								"", -- [3]
+							}, -- [99]
+							{
+								"Mtnk", -- [1]
+								"WARRIOR", -- [2]
+								"", -- [3]
+							}, -- [100]
+							{
+								"Gïbby", -- [1]
+								"ROGUE", -- [2]
+								"", -- [3]
+							}, -- [101]
+							{
+								"Bdbymonk", -- [1]
+								"MONK", -- [2]
+								"", -- [3]
+							}, -- [102]
+							{
+								"Vampally", -- [1]
+								"PALADIN", -- [2]
+								"", -- [3]
+							}, -- [103]
+							{
+								"Böwflëx", -- [1]
+								"HUNTER", -- [2]
+								"", -- [3]
+							}, -- [104]
+							{
+								"Rayven", -- [1]
+								"DRUID", -- [2]
+								"", -- [3]
+							}, -- [105]
+							{
+								"Thimblelina", -- [1]
+								"WARLOCK", -- [2]
+								"", -- [3]
+							}, -- [106]
+							{
+								"Princip", -- [1]
+								"ROGUE", -- [2]
+								"", -- [3]
+							}, -- [107]
+							{
+								"Culley", -- [1]
+								"WARRIOR", -- [2]
+								"", -- [3]
+							}, -- [108]
+							{
+								"Jdn", -- [1]
+								"MONK", -- [2]
+								"", -- [3]
+							}, -- [109]
+							{
+								"Lokian", -- [1]
+								"WARLOCK", -- [2]
+								"", -- [3]
+							}, -- [110]
+							{
+								"Dahx", -- [1]
+								"WARLOCK", -- [2]
+								"", -- [3]
+							}, -- [111]
+							{
+								"Misdameanor", -- [1]
+								"SHAMAN", -- [2]
+								"", -- [3]
+							}, -- [112]
+							{
+								"Kovenary", -- [1]
+								"DRUID", -- [2]
+								"", -- [3]
+							}, -- [113]
+							{
+								"Innocentz", -- [1]
+								"PALADIN", -- [2]
+								"", -- [3]
+							}, -- [114]
+							{
+								"Gartaum", -- [1]
+								"DRUID", -- [2]
+								"", -- [3]
+							}, -- [115]
+							{
+								"Haseoh", -- [1]
+								"HUNTER", -- [2]
+								"", -- [3]
+							}, -- [116]
+							{
+								"ßabealicious", -- [1]
+								"PALADIN", -- [2]
+								"", -- [3]
+							}, -- [117]
+							{
+								"Hhkb", -- [1]
+								"PRIEST", -- [2]
+								"", -- [3]
+							}, -- [118]
+							{
+								"Karayan", -- [1]
+								"DRUID", -- [2]
+								"", -- [3]
+							}, -- [119]
+							{
+								"Comet", -- [1]
+								"MONK", -- [2]
+								"", -- [3]
+							}, -- [120]
+							{
+								"Kida", -- [1]
+								"WARLOCK", -- [2]
+								"", -- [3]
+							}, -- [121]
+							{
+								"Ying", -- [1]
+								"HUNTER", -- [2]
+								"", -- [3]
+							}, -- [122]
+							{
+								"Mtbottle", -- [1]
+								"MONK", -- [2]
+								"", -- [3]
+							}, -- [123]
+							{
+								"Bearcups", -- [1]
+								"DRUID", -- [2]
+								"", -- [3]
+							}, -- [124]
+							{
+								"Wsinno", -- [1]
+								"MONK", -- [2]
+								"", -- [3]
+							}, -- [125]
+							{
+								"Bromby", -- [1]
+								"ROGUE", -- [2]
+								"", -- [3]
+							}, -- [126]
+							{
+								"Decimeytor", -- [1]
+								"HUNTER", -- [2]
+								"", -- [3]
+							}, -- [127]
+							{
+								"Santhem", -- [1]
+								"MONK", -- [2]
+								"", -- [3]
+							}, -- [128]
+							{
+								"Bzly", -- [1]
+								"PALADIN", -- [2]
+								"", -- [3]
+							}, -- [129]
+							{
+								"Vampwarrior", -- [1]
+								"WARRIOR", -- [2]
+								"", -- [3]
+							}, -- [130]
+							{
+								"Barthylen", -- [1]
+								"PRIEST", -- [2]
+								"", -- [3]
+							}, -- [131]
+							{
+								"Olgarns", -- [1]
+								"MONK", -- [2]
+								"", -- [3]
+							}, -- [132]
+							{
+								"Olgarn", -- [1]
+								"PALADIN", -- [2]
+								"", -- [3]
+							}, -- [133]
+							{
+								"Precisiøn", -- [1]
+								"HUNTER", -- [2]
+								"", -- [3]
+							}, -- [134]
+							{
+								"Syllabearz", -- [1]
+								"DRUID", -- [2]
+								"", -- [3]
+							}, -- [135]
+							{
+								"Ciths", -- [1]
+								"PALADIN", -- [2]
+								"", -- [3]
+							}, -- [136]
+							{
+								"Cüps", -- [1]
+								"SHAMAN", -- [2]
+								"", -- [3]
+							}, -- [137]
+							{
+								"Mtz", -- [1]
+								"HUNTER", -- [2]
+								"", -- [3]
+							}, -- [138]
+							{
+								"Mtqt", -- [1]
+								"DRUID", -- [2]
+								"", -- [3]
+							}, -- [139]
+							{
+								"Svetty", -- [1]
+								"PRIEST", -- [2]
+								"", -- [3]
+							}, -- [140]
+							{
+								"Behringor", -- [1]
+								"DRUID", -- [2]
+								"", -- [3]
+							}, -- [141]
+							{
+								"Iconjurebeer", -- [1]
+								"MAGE", -- [2]
+								"", -- [3]
+							}, -- [142]
+							{
+								"Coffina", -- [1]
+								"WARLOCK", -- [2]
+								"", -- [3]
+							}, -- [143]
+							{
+								"Starrstruck", -- [1]
+								"MAGE", -- [2]
+								"", -- [3]
+							}, -- [144]
+							{
+								"Arvixer", -- [1]
+								"WARLOCK", -- [2]
+								"", -- [3]
+							}, -- [145]
+							{
+								"Killpocalyps", -- [1]
+								"PALADIN", -- [2]
+								"", -- [3]
+							}, -- [146]
+							{
+								"Luclin", -- [1]
+								"MONK", -- [2]
+								"", -- [3]
+							}, -- [147]
+							{
+								"Gohast", -- [1]
+								"ROGUE", -- [2]
+								"", -- [3]
+							}, -- [148]
+							{
+								"Noskulls", -- [1]
+								"WARLOCK", -- [2]
+								"", -- [3]
+							}, -- [149]
+							{
+								"Messyouup", -- [1]
+								"DRUID", -- [2]
+								"", -- [3]
+							}, -- [150]
+							{
+								"Glitzey", -- [1]
+								"PALADIN", -- [2]
+								"", -- [3]
+							}, -- [151]
+							{
+								"Levels", -- [1]
+								"WARRIOR", -- [2]
+								"", -- [3]
+							}, -- [152]
+							{
+								"Kaylenlee", -- [1]
+								"PRIEST", -- [2]
+								"", -- [3]
+							}, -- [153]
+							{
+								"Caeecoff", -- [1]
+								"ROGUE", -- [2]
+								"", -- [3]
+							}, -- [154]
+							{
+								"Saybra", -- [1]
+								"DRUID", -- [2]
+								"", -- [3]
+							}, -- [155]
+							{
+								"Innoz", -- [1]
+								"PRIEST", -- [2]
+								"", -- [3]
+							}, -- [156]
+							{
+								"Jproh", -- [1]
+								"MONK", -- [2]
+								"", -- [3]
+							}, -- [157]
+							{
+								"Kbyz", -- [1]
+								"HUNTER", -- [2]
+								"", -- [3]
+							}, -- [158]
+							{
+								"Goargrim", -- [1]
+								"WARRIOR", -- [2]
+								"", -- [3]
+							}, -- [159]
+							{
+								"Akrite", -- [1]
+								"DRUID", -- [2]
+								"", -- [3]
+							}, -- [160]
+							{
+								"Rockblood", -- [1]
+								"MAGE", -- [2]
+								"", -- [3]
+							}, -- [161]
+							{
+								"Kaseef", -- [1]
+								"PRIEST", -- [2]
+								"", -- [3]
+							}, -- [162]
+							{
+								"Isabewwa", -- [1]
+								"MAGE", -- [2]
+								"", -- [3]
+							}, -- [163]
+							{
+								"Vamppro", -- [1]
+								"MAGE", -- [2]
+								"", -- [3]
+							}, -- [164]
+							{
+								"Deathheros", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"", -- [3]
+							}, -- [165]
+							{
+								"Ðeirdre", -- [1]
+								"DRUID", -- [2]
+								"", -- [3]
+							}, -- [166]
+							{
+								"Validuz", -- [1]
+								"ROGUE", -- [2]
+								"", -- [3]
+							}, -- [167]
+							{
+								"Innocenz", -- [1]
+								"SHAMAN", -- [2]
+								"", -- [3]
+							}, -- [168]
+							{
+								"Noskullz", -- [1]
+								"PALADIN", -- [2]
+								"", -- [3]
+							}, -- [169]
+							{
+								"Vampknght", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"", -- [3]
+							}, -- [170]
+							{
+								"Necrochimp", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"", -- [3]
+							}, -- [171]
+							{
+								"Vikid", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"", -- [3]
+							}, -- [172]
+							{
+								"Femtar", -- [1]
+								"DRUID", -- [2]
+								"", -- [3]
+							}, -- [173]
+							{
+								"Greenpotato", -- [1]
+								"HUNTER", -- [2]
+								"", -- [3]
+							}, -- [174]
+							{
+								"Abrownpwny", -- [1]
+								"WARRIOR", -- [2]
+								"", -- [3]
+							}, -- [175]
+							{
+								"Broosxoxo", -- [1]
+								"MAGE", -- [2]
+								"", -- [3]
+							}, -- [176]
+							{
+								"Gilgamësh", -- [1]
+								"WARRIOR", -- [2]
+								"", -- [3]
+							}, -- [177]
+							{
+								"Icyskulls", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"", -- [3]
+							}, -- [178]
+							{
+								"Bdbyshaman", -- [1]
+								"SHAMAN", -- [2]
+								"", -- [3]
+							}, -- [179]
+							{
+								"Arabsmoney", -- [1]
+								"WARRIOR", -- [2]
+								"", -- [3]
+							}, -- [180]
+							{
+								"Beefpocket", -- [1]
+								"MONK", -- [2]
+								"", -- [3]
+							}, -- [181]
+							{
+								"Prishex", -- [1]
+								"DRUID", -- [2]
+								"", -- [3]
+							}, -- [182]
+							{
+								"Bdbypriest", -- [1]
+								"PRIEST", -- [2]
+								"", -- [3]
+							}, -- [183]
+							{
+								"Arsenal", -- [1]
+								"DRUID", -- [2]
+								"", -- [3]
+							}, -- [184]
+							{
+								"Ashtrea", -- [1]
+								"WARLOCK", -- [2]
+								"", -- [3]
+							}, -- [185]
+							{
+								"Metal", -- [1]
+								"WARRIOR", -- [2]
+								"", -- [3]
+							}, -- [186]
 						},
-						["time"] = 1416306420,
+					},
+					["log"] = {
+						{
+							1424232000, -- [1]
+							"GP", -- [2]
+							"Freed", -- [3]
+							"|cffa335ee|Hitem:113878:0:0:0:0:0:0:0:100:0:5:1:566|h[Barrage Dodger Cloak]|h|r", -- [4]
+							500, -- [5]
+						}, -- [1]
+						{
+							1424232060, -- [1]
+							"GP", -- [2]
+							"Freed", -- [3]
+							"|cffa335ee|Hitem:113881:0:0:0:0:0:0:0:100:0:5:1:566|h[Chestplate of Rolling Fury]|h|r", -- [4]
+							1000, -- [5]
+						}, -- [2]
+						{
+							1424232060, -- [1]
+							"GP", -- [2]
+							"Princip", -- [3]
+							"|cffa335ee|Hitem:113874:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Oregorger's Acid-Etched Gutripper]|h|r", -- [4]
+							700, -- [5]
+						}, -- [3]
+						{
+							1424232060, -- [1]
+							"GP", -- [2]
+							"Princip", -- [3]
+							"|cffa335ee|Hitem:113874:0:0:0:0:0:0:0:100:0:5:1:566|h[Oregorger's Acid-Etched Gutripper]|h|r", -- [4]
+							500, -- [5]
+						}, -- [4]
+						{
+							1424232060, -- [1]
+							"GP", -- [2]
+							"Vikid", -- [3]
+							"|cffa335ee|Hitem:113882:0:0:0:0:0:0:0:100:0:5:1:566|h[Glutton's Kerchief]|h|r", -- [4]
+							500, -- [5]
+						}, -- [5]
+						{
+							1424233200, -- [1]
+							"GP", -- [2]
+							"Innocentz", -- [3]
+							"|cffa335ee|Hitem:113896:0:0:0:0:0:0:0:100:0:5:1:566|h[Fleshmelter Bracers]|h|r", -- [4]
+							500, -- [5]
+						}, -- [6]
+						{
+							1424233200, -- [1]
+							"GP", -- [2]
+							"Sikonos", -- [3]
+							"|cffa335ee|Hitem:113896:0:0:0:0:0:0:0:100:0:5:1:566|h[Fleshmelter Bracers]|h|r", -- [4]
+							500, -- [5]
+						}, -- [7]
+						{
+							1424233260, -- [1]
+							"GP", -- [2]
+							"Freed", -- [3]
+							"|cffa335ee|Hitem:113894:0:0:0:0:0:0:0:100:0:5:1:566|h[Lava-Dipped Greathelm]|h|r", -- [4]
+							1000, -- [5]
+						}, -- [8]
+						{
+							1424233260, -- [1]
+							"GP", -- [2]
+							"Vikid", -- [3]
+							"|cffa335ee|Hitem:113893:0:0:0:0:0:0:0:100:0:5:1:566|h[Blast Furnace Door]|h|r", -- [4]
+							1250, -- [5]
+						}, -- [9]
+						{
+							1424233260, -- [1]
+							"GP", -- [2]
+							"Olgheals", -- [3]
+							"|cffa335ee|Hitem:113887:0:0:0:0:0:0:0:100:0:5:1:566|h[Bracers of Spattered Steel]|h|r", -- [4]
+							500, -- [5]
+						}, -- [10]
+						{
+							1424233380, -- [1]
+							"GP", -- [2]
+							"Olgheals", -- [3]
+							"|cffa335ee|Hitem:119307:0:0:0:0:0:0:0:100:0:5:1:570|h[Leggings of the Iron Conqueror]|h|r", -- [4]
+							1000, -- [5]
+						}, -- [11]
+						{
+							1424233500, -- [1]
+							"GP", -- [2]
+							"Vikid", -- [3]
+							"|cffa335ee|Hitem:119313:0:0:0:0:0:0:0:100:0:5:1:570|h[Leggings of the Iron Vanquisher]|h|r", -- [4]
+							1000, -- [5]
+						}, -- [12]
+						{
+							1424233620, -- [1]
+							"GP", -- [2]
+							"Mtnk", -- [3]
+							"|cffa335ee|Hitem:119320:0:0:0:0:0:0:0:100:0:5:1:570|h[Leggings of the Iron Protector]|h|r", -- [4]
+							1000, -- [5]
+						}, -- [13]
+						{
+							1424234340, -- [1]
+							"GP", -- [2]
+							"Thimblelina", -- [3]
+							"|cffa335ee|Hitem:113949:0:0:0:0:0:0:0:100:0:5:1:566|h[Cannonball Loader's Grips]|h|r", -- [4]
+							750, -- [5]
+						}, -- [14]
+						{
+							1424234340, -- [1]
+							"GP", -- [2]
+							"Freed", -- [3]
+							"|cffa335ee|Hitem:113947:0:0:0:0:0:0:0:100:0:5:1:566|h[Epicenter Loop]|h|r", -- [4]
+							500, -- [5]
+						}, -- [15]
+						{
+							1424234400, -- [1]
+							"GP", -- [2]
+							"Thimblelina", -- [3]
+							"|cffa335ee|Hitem:113941:0:0:0:0:0:0:0:100:0:5:1:566|h[Seeking Ember Girdle]|h|r", -- [4]
+							750, -- [5]
+						}, -- [16]
+						{
+							1424234400, -- [1]
+							"GP", -- [2]
+							"Thimblelina", -- [3]
+							"|cffa335ee|Hitem:113950:0:0:0:0:0:0:0:100:0:5:1:566|h[Ironcrusher's Collar]|h|r", -- [4]
+							750, -- [5]
+						}, -- [17]
+						{
+							1424234580, -- [1]
+							"GP", -- [2]
+							"Cowcups", -- [3]
+							"|cffa335ee|Hitem:113944:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Legguards of the Stampede]|h|r", -- [4]
+							1149, -- [5]
+						}, -- [18]
+						{
+							1424235240, -- [1]
+							"GP", -- [2]
+							"Shayanwe", -- [3]
+							"|cffa335ee|Hitem:113955:0:0:0:0:0:0:0:100:0:5:1:566|h[Grenadier's Belt]|h|r", -- [4]
+							750, -- [5]
+						}, -- [19]
+						{
+							1424235240, -- [1]
+							"GP", -- [2]
+							"Comet", -- [3]
+							"|cffa335ee|Hitem:113962:0:0:0:0:0:0:0:100:0:5:1:566|h[Squire's Electroplated Bracers]|h|r", -- [4]
+							500, -- [5]
+						}, -- [20]
+						{
+							1424235240, -- [1]
+							"GP", -- [2]
+							"Shayanwe", -- [3]
+							"|cffa335ee|Hitem:113960:0:0:0:0:0:0:0:100:0:5:1:566|h[Engine-Stoker's Lantern]|h|r", -- [4]
+							500, -- [5]
+						}, -- [21]
+						{
+							1424235300, -- [1]
+							"GP", -- [2]
+							"Goargrim", -- [3]
+							"|cffa335ee|Hitem:113959:0:0:0:0:0:0:0:100:0:5:1:566|h[Thogar's Serrated Chain]|h|r", -- [4]
+							500, -- [5]
+						}, -- [22]
+						{
+							1424235420, -- [1]
+							"GP", -- [2]
+							"Kovenary", -- [3]
+							"|cffa335ee|Hitem:119314:0:0:0:0:0:0:0:100:0:5:1:570|h[Shoulders of the Iron Vanquisher]|h|r", -- [4]
+							750, -- [5]
+						}, -- [23]
+						{
+							1424235420, -- [1]
+							"GP", -- [2]
+							"Hugs", -- [3]
+							"|cffa335ee|Hitem:119309:0:0:0:0:0:0:0:100:0:5:1:570|h[Shoulders of the Iron Conqueror]|h|r", -- [4]
+							750, -- [5]
+						}, -- [24]
+						{
+							1424235480, -- [1]
+							"GP", -- [2]
+							"Cowcups", -- [3]
+							"|cffa335ee|Hitem:119322:0:0:0:0:0:0:0:100:0:5:1:570|h[Shoulders of the Iron Protector]|h|r", -- [4]
+							750, -- [5]
+						}, -- [25]
+						{
+							1424236140, -- [1]
+							"GP", -- [2]
+							"Vikid", -- [3]
+							"|cffa335ee|Hitem:113906:0:0:0:0:0:0:0:100:0:5:1:566|h[Gauntlets of Dramatic Blows]|h|r", -- [4]
+							750, -- [5]
+						}, -- [26]
+						{
+							1424236140, -- [1]
+							"GP", -- [2]
+							"Lustya", -- [3]
+							"|cffa335ee|Hitem:113897:0:0:0:0:0:0:0:100:0:5:1:566|h[Hans'gar's Forgehammer]|h|r", -- [4]
+							500, -- [5]
+						}, -- [27]
+						{
+							1424236200, -- [1]
+							"GP", -- [2]
+							"Hugs", -- [3]
+							"|cffa335ee|Hitem:113904:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Franzok's Headsmasher]|h|r", -- [4]
+							1723, -- [5]
+						}, -- [28]
+						{
+							1424237100, -- [1]
+							"GP", -- [2]
+							"Lustya", -- [3]
+							"|cffa335ee|Hitem:120077:0:0:0:0:0:0:0:100:0:5:1:566|h[Choker of Bloody Flame]|h|r", -- [4]
+							500, -- [5]
+						}, -- [29]
+						{
+							1424237160, -- [1]
+							"GP", -- [2]
+							"Vikid", -- [3]
+							"|cffa335ee|Hitem:113916:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Charbreath Firecloak]|h|r", -- [4]
+							700, -- [5]
+						}, -- [30]
+						{
+							1424237220, -- [1]
+							"GP", -- [2]
+							"Mtnk", -- [3]
+							"|cffa335ee|Hitem:119318:0:0:0:0:0:0:0:100:0:5:1:570|h[Chest of the Iron Protector]|h|r", -- [4]
+							1000, -- [5]
+						}, -- [31]
+						{
+							1424237340, -- [1]
+							"GP", -- [2]
+							"Vikid", -- [3]
+							"|cffa335ee|Hitem:113913:0:0:0:0:0:0:0:100:0:5:1:566|h[Ka'graz's Burning Blade]|h|r", -- [4]
+							500, -- [5]
+						}, -- [32]
+						{
+							1424237340, -- [1]
+							"GP", -- [2]
+							"Anahkin", -- [3]
+							"|cffa335ee|Hitem:119315:0:0:0:0:0:0:0:100:0:5:1:570|h[Chest of the Iron Vanquisher]|h|r", -- [4]
+							1000, -- [5]
+						}, -- [33]
+						{
+							1424238000, -- [1]
+							"GP", -- [2]
+							"Vikid", -- [3]
+							"|cffa335ee|Hitem:113936:0:0:0:0:0:0:0:100:0:5:1:566|h[Sabatons of Fractal Earth]|h|r", -- [4]
+							750, -- [5]
+						}, -- [34]
+						{
+							1424238060, -- [1]
+							"GP", -- [2]
+							"Princip", -- [3]
+							"|cffa335ee|Hitem:113935:0:0:0:0:0:0:0:100:0:5:1:566|h[Bracers of Shattered Stalactites]|h|r", -- [4]
+							500, -- [5]
+						}, -- [35]
+						{
+							1424238120, -- [1]
+							"GP", -- [2]
+							"Thimblelina", -- [3]
+							"|cffa335ee|Hitem:113934:0:0:0:0:0:0:0:100:0:5:1:566|h[Fang of the Earth]|h|r", -- [4]
+							1500, -- [5]
+						}, -- [36]
+						{
+							1424238180, -- [1]
+							"GP", -- [2]
+							"Shayanwe", -- [3]
+							"|cffa335ee|Hitem:119321:0:0:0:0:0:0:0:100:0:5:1:570|h[Helm of the Iron Protector]|h|r", -- [4]
+							1000, -- [5]
+						}, -- [37]
+						{
+							1424238180, -- [1]
+							"GP", -- [2]
+							"Darkwuke", -- [3]
+							"|cffa335ee|Hitem:119308:0:0:0:0:0:0:0:100:0:5:1:570|h[Helm of the Iron Conqueror]|h|r", -- [4]
+							1000, -- [5]
+						}, -- [38]
+						{
+							1424238180, -- [1]
+							"GP", -- [2]
+							"Freed", -- [3]
+							"|cffa335ee|Hitem:119308:0:0:0:0:0:0:0:100:0:5:1:570|h[Helm of the Iron Conqueror]|h|r", -- [4]
+							1000, -- [5]
+						}, -- [39]
+						{
+							1424238180, -- [1]
+							"GP", -- [2]
+							"Innocentz", -- [3]
+							"|cffa335ee|Hitem:113927:0:0:0:0:0:0:0:100:0:5:1:566|h[Kromog's Brutal Fist]|h|r", -- [4]
+							500, -- [5]
+						}, -- [40]
+						{
+							1424238180, -- [1]
+							"GP", -- [2]
+							"Fuzzicans", -- [3]
+							"|cffa335ee|Hitem:113926:0:0:0:0:0:0:0:100:0:5:1:566|h[Kromog's Protecting Palm]|h|r", -- [4]
+							500, -- [5]
+						}, -- [41]
+						{
+							1424238240, -- [1]
+							"GP", -- [2]
+							"Lustya", -- [3]
+							"|cffa335ee|Hitem:113929:0:0:0:0:0:0:0:100:0:5:1:566|h[Cloak of Delving Secrets]|h|r", -- [4]
+							500, -- [5]
+						}, -- [42]
+						{
+							1424241240, -- [1]
+							"GP", -- [2]
+							"Misdameanor", -- [3]
+							"|cffa335ee|Hitem:113975:0:0:0:0:0:0:0:100:0:5:1:566|h[Uk'urogg's Corrupted Seal]|h|r", -- [4]
+							500, -- [5]
+						}, -- [43]
+						{
+							1424241240, -- [1]
+							"GP", -- [2]
+							"Hugs", -- [3]
+							"|cffa335ee|Hitem:113975:0:0:0:0:0:0:0:100:0:5:1:566|h[Uk'urogg's Corrupted Seal]|h|r", -- [4]
+							500, -- [5]
+						}, -- [44]
+						{
+							1424241240, -- [1]
+							"GP", -- [2]
+							"Buklau", -- [3]
+							"|cffa335ee|Hitem:113965:0:0:0:0:0:0:0:100:0:5:1:566|h[Sorka's Chainfist]|h|r", -- [4]
+							500, -- [5]
+						}, -- [45]
+						{
+							1424241300, -- [1]
+							"GP", -- [2]
+							"Thimblelina", -- [3]
+							"|cffa335ee|Hitem:113967:0:0:0:0:0:0:0:100:0:5:1:566|h[Deckhand's Rope Belt]|h|r", -- [4]
+							750, -- [5]
+						}, -- [46]
+						{
+							1424241300, -- [1]
+							"GP", -- [2]
+							"Mtnk", -- [3]
+							"|cffa335ee|Hitem:113972:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Cloak of Sanguine Terror]|h|r", -- [4]
+							700, -- [5]
+						}, -- [47]
+						{
+							1424241300, -- [1]
+							"GP", -- [2]
+							"Freed", -- [3]
+							"|cffa335ee|Hitem:119306:0:0:0:0:0:0:0:100:0:5:1:570|h[Gauntlets of the Iron Conqueror]|h|r", -- [4]
+							750, -- [5]
+						}, -- [48]
+						{
+							1424241360, -- [1]
+							"GP", -- [2]
+							"Princip", -- [3]
+							"|cffa335ee|Hitem:119311:0:0:0:0:0:0:0:100:0:5:1:570|h[Gauntlets of the Iron Vanquisher]|h|r", -- [4]
+							750, -- [5]
+						}, -- [49]
+						{
+							1424241360, -- [1]
+							"GP", -- [2]
+							"Strpol", -- [3]
+							"|cffa335ee|Hitem:119311:0:0:0:0:0:0:0:100:0:5:1:570|h[Gauntlets of the Iron Vanquisher]|h|r", -- [4]
+							750, -- [5]
+						}, -- [50]
+						{
+							1424407920, -- [1]
+							"GP", -- [2]
+							"Lustya", -- [3]
+							"|cffa335ee|Hitem:113944:0:0:0:0:0:0:0:100:0:6:1:567|h[Legguards of the Stampede]|h|r", -- [4]
+							1414, -- [5]
+						}, -- [51]
+						{
+							1424407920, -- [1]
+							"GP", -- [2]
+							"Cowcups", -- [3]
+							"|cffa335ee|Hitem:113943:0:0:0:0:0:0:0:100:0:6:1:567|h[Bracers of the Wolf's Cunning]|h|r", -- [4]
+							707, -- [5]
+						}, -- [52]
+						{
+							1424408100, -- [1]
+							"GP", -- [2]
+							"Mtnk", -- [3]
+							"|cffa335ee|Hitem:113950:0:0:0:0:0:0:0:100:0:6:2:562:567|h[Ironcrusher's Collar]|h|r", -- [4]
+							1218, -- [5]
+						}, -- [53]
+						{
+							1424408160, -- [1]
+							"GP", -- [2]
+							"Comet", -- [3]
+							"|cffa335ee|Hitem:113952:0:0:0:0:0:0:0:100:0:6:1:567|h[Choker of Bestial Force]|h|r", -- [4]
+							707, -- [5]
+						}, -- [54]
+						{
+							1424408640, -- [1]
+							"GP", -- [2]
+							"Løki", -- [3]
+							"|cffa335ee|Hitem:119342:0:0:0:0:0:0:0:100:0:6:1:567|h[Furnace Stoker's Footwraps]|h|r", -- [4]
+							1061, -- [5]
+						}, -- [55]
+						{
+							1424838780, -- [1]
+							"GP", -- [2]
+							"Fuzzicans", -- [3]
+							"|cffa335ee|Hitem:113896:0:0:0:0:0:0:0:100:0:5:1:566|h[Fleshmelter Bracers]|h|r", -- [4]
+							500, -- [5]
+						}, -- [56]
+						{
+							1424838900, -- [1]
+							"GP", -- [2]
+							"Mtnk", -- [3]
+							"|cffa335ee|Hitem:113886:0:0:0:0:0:0:0:100:0:5:1:566|h[Crescent of Living Magma]|h|r", -- [4]
+							500, -- [5]
+						}, -- [57]
+						{
+							1424838960, -- [1]
+							"GP", -- [2]
+							"Goargrim", -- [3]
+							"|cffa335ee|Hitem:113894:0:0:0:0:0:0:0:100:0:5:3:561:564:566|h[Lava-Dipped Greathelm]|h|r", -- [4]
+							1349, -- [5]
+						}, -- [58]
+						{
+							1424838960, -- [1]
+							"GP", -- [2]
+							"Anahkin", -- [3]
+							"|cffa335ee|Hitem:119313:0:0:0:0:0:0:0:100:0:5:1:570|h[Leggings of the Iron Vanquisher]|h|r", -- [4]
+							1000, -- [5]
+						}, -- [59]
+						{
+							1424839200, -- [1]
+							"GP", -- [2]
+							"Fuzzicans", -- [3]
+							"|cffa335ee|Hitem:119307:0:0:0:0:0:0:0:100:0:5:1:570|h[Leggings of the Iron Conqueror]|h|r", -- [4]
+							1000, -- [5]
+						}, -- [60]
+						{
+							1424839800, -- [1]
+							"GP", -- [2]
+							"Innocentz", -- [3]
+							"|cffa335ee|Hitem:113940:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Seal of the Savage Howl]|h|r", -- [4]
+							700, -- [5]
+						}, -- [61]
+						{
+							1424839860, -- [1]
+							"GP", -- [2]
+							"Buklau", -- [3]
+							"|cffa335ee|Hitem:113939:0:0:0:0:0:0:0:100:0:5:2:41:566|h[Tal'rak, Bloody Skull of the Thunderlords]|h|r", -- [4]
+							500, -- [5]
+						}, -- [62]
+						{
+							1424839920, -- [1]
+							"GP", -- [2]
+							"Freed", -- [3]
+							"|cffa335ee|Hitem:119192:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Ironspike Chew Toy]|h|r", -- [4]
+							1450, -- [5]
+						}, -- [63]
+						{
+							1424839980, -- [1]
+							"GP", -- [2]
+							"Thimblelina", -- [3]
+							"|cffa335ee|Hitem:113948:0:0:0:0:0:0:0:100:0:5:1:566|h[Darmac's Unstable Talisman]|h|r", -- [4]
+							1250, -- [5]
+						}, -- [64]
+						{
+							1424840460, -- [1]
+							"GP", -- [2]
+							"Thimblelina", -- [3]
+							"|cffa335ee|Hitem:113953:0:0:0:0:0:0:0:100:0:5:1:566|h[Thogar's Control Rod]|h|r", -- [4]
+							500, -- [5]
+						}, -- [65]
+						{
+							1424840580, -- [1]
+							"GP", -- [2]
+							"Olgheals", -- [3]
+							"|cffa335ee|Hitem:113960:0:0:0:0:0:0:0:100:0:5:1:566|h[Engine-Stoker's Lantern]|h|r", -- [4]
+							500, -- [5]
+						}, -- [66]
+						{
+							1424840640, -- [1]
+							"GP", -- [2]
+							"Comet", -- [3]
+							"|cffa335ee|Hitem:113963:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Siege Bomber's Band]|h|r", -- [4]
+							700, -- [5]
+						}, -- [67]
+						{
+							1424840640, -- [1]
+							"GP", -- [2]
+							"Princip", -- [3]
+							"|cffa335ee|Hitem:119314:0:0:0:0:0:0:0:100:0:5:1:570|h[Shoulders of the Iron Vanquisher]|h|r", -- [4]
+							750, -- [5]
+						}, -- [68]
+						{
+							1424840700, -- [1]
+							"GP", -- [2]
+							"Comet", -- [3]
+							"|cffa335ee|Hitem:113964:0:0:0:0:0:0:0:100:0:5:1:566|h[Conductor's Multi-Pocket Girdle]|h|r", -- [4]
+							750, -- [5]
+						}, -- [69]
+						{
+							1424840700, -- [1]
+							"GP", -- [2]
+							"Haseoh", -- [3]
+							"|cffa335ee|Hitem:119322:0:0:0:0:0:0:0:100:0:5:1:570|h[Shoulders of the Iron Protector]|h|r", -- [4]
+							750, -- [5]
+						}, -- [70]
+						{
+							1424843100, -- [1]
+							"GP", -- [2]
+							"Haseoh", -- [3]
+							"|cffa335ee|Hitem:113966:0:0:0:0:0:0:0:100:0:5:1:566|h[Gar'an's Brutal Spearlauncher]|h|r", -- [4]
+							1500, -- [5]
+						}, -- [71]
+						{
+							1424843100, -- [1]
+							"GP", -- [2]
+							"Buklau", -- [3]
+							"|cffa335ee|Hitem:113978:0:0:0:0:0:0:0:100:0:5:1:566|h[Sorka's Nightshade Cowl]|h|r", -- [4]
+							1000, -- [5]
+						}, -- [72]
+						{
+							1424843100, -- [1]
+							"GP", -- [2]
+							"Strpol", -- [3]
+							"|cffa335ee|Hitem:113978:0:0:0:0:0:0:0:100:0:5:1:566|h[Sorka's Nightshade Cowl]|h|r", -- [4]
+							1000, -- [5]
+						}, -- [73]
+						{
+							1424843160, -- [1]
+							"GP", -- [2]
+							"Olgheals", -- [3]
+							"|cffa335ee|Hitem:119306:0:0:0:0:0:0:0:100:0:5:1:570|h[Gauntlets of the Iron Conqueror]|h|r", -- [4]
+							750, -- [5]
+						}, -- [74]
+						{
+							1424843160, -- [1]
+							"GP", -- [2]
+							"Goargrim", -- [3]
+							"|cffa335ee|Hitem:113972:0:0:0:0:0:0:0:100:0:5:1:566|h[Cloak of Sanguine Terror]|h|r", -- [4]
+							500, -- [5]
+						}, -- [75]
+						{
+							1424843160, -- [1]
+							"GP", -- [2]
+							"Rrenju", -- [3]
+							"|cffa335ee|Hitem:113967:0:0:0:0:0:0:0:100:0:5:1:566|h[Deckhand's Rope Belt]|h|r", -- [4]
+							750, -- [5]
+						}, -- [76]
+						{
+							1424843160, -- [1]
+							"GP", -- [2]
+							"Buklau", -- [3]
+							"|cffa335ee|Hitem:119319:0:0:0:0:0:0:0:100:0:5:1:570|h[Gauntlets of the Iron Protector]|h|r", -- [4]
+							750, -- [5]
+						}, -- [77]
+						{
+							1424843820, -- [1]
+							"GP", -- [2]
+							"Anahkin", -- [3]
+							"|cffa335ee|Hitem:113904:0:0:0:0:0:0:0:100:0:5:1:566|h[Franzok's Headsmasher]|h|r", -- [4]
+							500, -- [5]
+						}, -- [78]
+						{
+							1424843820, -- [1]
+							"GP", -- [2]
+							"Vikid", -- [3]
+							"|cffa335ee|Hitem:113905:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Tablet of Turnbuckle Teamwork]|h|r", -- [4]
+							1436, -- [5]
+						}, -- [79]
+						{
+							1424845080, -- [1]
+							"GP", -- [2]
+							"Vikid", -- [3]
+							"|cffa335ee|Hitem:113925:0:0:0:0:0:0:0:100:0:5:1:566|h[Flamefury Gauntlets]|h|r", -- [4]
+							750, -- [5]
+						}, -- [80]
+						{
+							1424845140, -- [1]
+							"GP", -- [2]
+							"Princip", -- [3]
+							"|cffa335ee|Hitem:113924:0:0:0:0:0:0:0:100:0:5:1:566|h[Flamebender's Shoulderguards]|h|r", -- [4]
+							750, -- [5]
+						}, -- [81]
+						{
+							1424845140, -- [1]
+							"GP", -- [2]
+							"Vikid", -- [3]
+							"|cffa335ee|Hitem:113921:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Firestorm Legplates]|h|r", -- [4]
+							1200, -- [5]
+						}, -- [82]
+						{
+							1424845140, -- [1]
+							"GP", -- [2]
+							"Sikonos", -- [3]
+							"|cffa335ee|Hitem:113913:0:0:0:0:0:0:0:100:0:5:2:40:566|h[Ka'graz's Burning Blade]|h|r", -- [4]
+							500, -- [5]
+						}, -- [83]
+						{
+							1424845200, -- [1]
+							"GP", -- [2]
+							"Bharay", -- [3]
+							"|cffa335ee|Hitem:119315:0:0:0:0:0:0:0:100:0:5:1:570|h[Chest of the Iron Vanquisher]|h|r", -- [4]
+							1000, -- [5]
+						}, -- [84]
+						{
+							1424845200, -- [1]
+							"GP", -- [2]
+							"Fuzzicans", -- [3]
+							"|cffa335ee|Hitem:119305:0:0:0:0:0:0:0:100:0:5:1:570|h[Chest of the Iron Conqueror]|h|r", -- [4]
+							1000, -- [5]
+						}, -- [85]
+						{
+							1424845200, -- [1]
+							"GP", -- [2]
+							"Goargrim", -- [3]
+							"|cffa335ee|Hitem:119318:0:0:0:0:0:0:0:100:0:5:1:570|h[Chest of the Iron Protector]|h|r", -- [4]
+							1000, -- [5]
+						}, -- [86]
+						{
+							1424845980, -- [1]
+							"GP", -- [2]
+							"Mtnk", -- [3]
+							"|cffa335ee|Hitem:113926:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Kromog's Protecting Palm]|h|r", -- [4]
+							700, -- [5]
+						}, -- [87]
+						{
+							1424846040, -- [1]
+							"GP", -- [2]
+							"Princip", -- [3]
+							"|cffa335ee|Hitem:113931:0:0:0:0:0:0:0:100:0:5:1:566|h[Beating Heart of the Mountain]|h|r", -- [4]
+							1250, -- [5]
+						}, -- [88]
+						{
+							1424846040, -- [1]
+							"GP", -- [2]
+							"Goargrim", -- [3]
+							"|cffa335ee|Hitem:119321:0:0:0:0:0:0:0:100:0:5:1:570|h[Helm of the Iron Protector]|h|r", -- [4]
+							1000, -- [5]
+						}, -- [89]
+						{
+							1424846040, -- [1]
+							"GP", -- [2]
+							"Haseoh", -- [3]
+							"|cffa335ee|Hitem:119321:0:0:0:0:0:0:0:100:0:5:1:570|h[Helm of the Iron Protector]|h|r", -- [4]
+							1000, -- [5]
+						}, -- [90]
+						{
+							1425446040, -- [1]
+							"GP", -- [2]
+							"Princip", -- [3]
+							"|cffa335ee|Hitem:113951:0:0:0:0:0:0:0:100:0:6:1:567|h[Unrendable Wolfhide Robes]|h|r", -- [4]
+							1414, -- [5]
+						}, -- [91]
+						{
+							1425446040, -- [1]
+							"GP", -- [2]
+							"Goargrim", -- [3]
+							"|cffa335ee|Hitem:113950:0:0:0:0:0:0:0:100:0:6:1:567|h[Ironcrusher's Collar]|h|r", -- [4]
+							1061, -- [5]
+						}, -- [92]
+						{
+							1425446100, -- [1]
+							"GP", -- [2]
+							"Cùps", -- [3]
+							"|cffa335ee|Hitem:113944:0:0:0:0:0:0:0:100:0:6:2:565:567|h[Legguards of the Stampede]|h|r", -- [4]
+							1614, -- [5]
+						}, -- [93]
+						{
+							1425446160, -- [1]
+							"GP", -- [2]
+							"Løki", -- [3]
+							"|cffa335ee|Hitem:113948:0:0:0:0:0:0:0:100:0:6:1:567|h[Darmac's Unstable Talisman]|h|r", -- [4]
+							1768, -- [5]
+						}, -- [94]
+						{
+							1425452400, -- [1]
+							"GP", -- [2]
+							"Toppies", -- [3]
+							"|cffa335ee|Hitem:113869:0:0:0:0:0:0:0:100:0:6:2:40:567|h[Inferno-Flame Staff]|h|r", -- [4]
+							2828, -- [5]
+						}, -- [95]
+						{
+							1425452520, -- [1]
+							"GP", -- [2]
+							"Olgheals", -- [3]
+							"|cffa335ee|Hitem:113864:0:0:0:0:0:0:0:100:0:6:2:562:567|h[Cavedweller's Climbers]|h|r", -- [4]
+							1218, -- [5]
+						}, -- [96]
+						{
+							1425452520, -- [1]
+							"GP", -- [2]
+							"Buklau", -- [3]
+							"|cffa335ee|Hitem:113870:0:0:0:0:0:0:0:100:0:6:1:567|h[Vest of Forceful Fury]|h|r", -- [4]
+							1414, -- [5]
+						}, -- [97]
+						{
+							1425452640, -- [1]
+							"GP", -- [2]
+							"Løki", -- [3]
+							"|cffa335ee|Hitem:120078:0:0:0:0:0:0:0:100:0:6:1:567|h[Runescribed Gronncloak]|h|r", -- [4]
+							707, -- [5]
+						}, -- [98]
+						{
+							1425612960, -- [1]
+							"GP", -- [2]
+							"Haseoh", -- [3]
+							"|cffa335ee|Hitem:119339:0:0:0:0:0:0:0:100:0:6:1:567|h[Treads of the Veteran Smith]|h|r", -- [4]
+							1061, -- [5]
+						}, -- [99]
+						{
+							1425969180, -- [1]
+							"GP", -- [2]
+							"Sikonos", -- [3]
+							"|cffa335ee|Hitem:113990:0:0:0:0:0:0:0:100:0:5:3:561:564:566|h[Overdriven Spaulders]|h|r", -- [4]
+							1062, -- [5]
+						}, -- [100]
+						{
+							1425969240, -- [1]
+							"GP", -- [2]
+							"Cùps", -- [3]
+							"|cffa335ee|Hitem:113982:0:0:0:0:0:0:0:100:0:5:1:566|h[Chestguard of the Siegemaker]|h|r", -- [4]
+							1000, -- [5]
+						}, -- [101]
+						{
+							1425969300, -- [1]
+							"GP", -- [2]
+							"Sikonos", -- [3]
+							"|cffa335ee|Hitem:113990:0:0:0:0:0:0:0:100:0:5:3:561:42:566|h[Overdriven Spaulders]|h|r", -- [4]
+							887, -- [5]
+						}, -- [102]
+						{
+							1425969300, -- [1]
+							"GP", -- [2]
+							"Buklau", -- [3]
+							"|cffa335ee|Hitem:113989:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Shattering Smash Leggings]|h|r", -- [4]
+							1149, -- [5]
+						}, -- [103]
+						{
+							1426046100, -- [1]
+							"GP", -- [2]
+							"Innocentz", -- [3]
+							"|cffa335ee|Hitem:113940:0:0:0:0:0:0:0:100:0:6:1:567|h[Seal of the Savage Howl]|h|r", -- [4]
+							707, -- [5]
+						}, -- [104]
+						{
+							1426046340, -- [1]
+							"GP", -- [2]
+							"Olgheals", -- [3]
+							"|cffa335ee|Hitem:113945:0:0:0:0:0:0:0:100:0:6:1:567|h[Flame Infusion Drape]|h|r", -- [4]
+							707, -- [5]
+						}, -- [105]
+						{
+							1426046400, -- [1]
+							"GP", -- [2]
+							"Lustya", -- [3]
+							"|cffa335ee|Hitem:113944:0:0:0:0:0:0:0:100:0:6:2:565:567|h[Legguards of the Stampede]|h|r", -- [4]
+							1614, -- [5]
+						}, -- [106]
+						{
+							1426046400, -- [1]
+							"GP", -- [2]
+							"Innocentz", -- [3]
+							"|cffa335ee|Hitem:113950:0:0:0:0:0:0:0:100:0:6:1:567|h[Ironcrusher's Collar]|h|r", -- [4]
+							1061, -- [5]
+						}, -- [107]
+						{
+							1426142940, -- [1]
+							"GP", -- [2]
+							"Vikid", -- [3]
+							"|cffa335ee|Hitem:113925:0:0:0:0:0:0:0:100:0:6:2:562:567|h[Flamefury Gauntlets]|h|r", -- [4]
+							1218, -- [5]
+						}, -- [108]
+						{
+							1426142940, -- [1]
+							"GP", -- [2]
+							"Fuzzicans", -- [3]
+							"|cffa335ee|Hitem:113925:0:0:0:0:0:0:0:100:0:6:2:562:567|h[Flamefury Gauntlets]|h|r", -- [4]
+							1218, -- [5]
+						}, -- [109]
+						{
+							1426143000, -- [1]
+							"GP", -- [2]
+							"Arsenal", -- [3]
+							"|cffa335ee|Hitem:120077:0:0:0:0:0:0:0:100:0:6:1:567|h[Choker of Bloody Flame]|h|r", -- [4]
+							707, -- [5]
+						}, -- [110]
+						{
+							1426143060, -- [1]
+							"GP", -- [2]
+							"Darkwuke", -- [3]
+							"|cffa335ee|Hitem:119305:0:0:0:0:0:0:0:100:0:6:1:569|h[Chest of the Iron Conqueror]|h|r", -- [4]
+							1414, -- [5]
+						}, -- [111]
+						{
+							1426143420, -- [1]
+							"GP", -- [2]
+							"Kovenary", -- [3]
+							"|cffa335ee|Hitem:119315:0:0:0:0:0:0:0:100:0:6:1:569|h[Chest of the Iron Vanquisher]|h|r", -- [4]
+							1414, -- [5]
+						}, -- [112]
+						{
+							1426143420, -- [1]
+							"GP", -- [2]
+							"Comet", -- [3]
+							"|cffa335ee|Hitem:113917:0:0:0:0:0:0:0:100:0:6:2:565:567|h[Cinderwolf Signet]|h|r", -- [4]
+							907, -- [5]
+						}, -- [113]
+						{
+							1426218120, -- [1]
+							"GP", -- [2]
+							"Cùps", -- [3]
+							"|cffa335ee|Hitem:113863:0:0:0:0:0:0:0:100:0:6:3:565:40:567|h[Gronn-Skin Crown]|h|r", -- [4]
+							1614, -- [5]
+						}, -- [114]
+						{
+							1426218180, -- [1]
+							"GP", -- [2]
+							"Lustya", -- [3]
+							"|cffa335ee|Hitem:120078:0:0:0:0:0:0:0:100:0:6:1:567|h[Runescribed Gronncloak]|h|r", -- [4]
+							707, -- [5]
+						}, -- [115]
+						{
+							1426218240, -- [1]
+							"GP", -- [2]
+							"Dehxs", -- [3]
+							"|cffa335ee|Hitem:113867:0:0:0:0:0:0:0:100:0:6:1:567|h[Spaulders of Reflected Stone]|h|r", -- [4]
+							1061, -- [5]
+						}, -- [116]
+						{
+							1426218360, -- [1]
+							"GP", -- [2]
+							"Løki", -- [3]
+							"|cffa335ee|Hitem:113872:0:0:0:0:0:0:0:100:0:6:2:562:567|h[Gruul's Lip Ring]|h|r", -- [4]
+							812, -- [5]
+						}, -- [117]
+						{
+							1426564920, -- [1]
+							"GP", -- [2]
+							"Thimblelina", -- [3]
+							"|cffa335ee|Hitem:119308:0:0:0:0:0:0:0:100:0:5:1:570|h[Helm of the Iron Conqueror]|h|r", -- [4]
+							1000, -- [5]
+						}, -- [118]
+						{
+							1426564980, -- [1]
+							"GP", -- [2]
+							"Iconjurebeer", -- [3]
+							"|cffa335ee|Hitem:113928:0:0:0:0:0:0:0:100:0:5:1:566|h[Earthripple Shoulderpads]|h|r", -- [4]
+							750, -- [5]
+						}, -- [119]
+						{
+							1426566060, -- [1]
+							"GP", -- [2]
+							"Lustya", -- [3]
+							"|cffa335ee|Hitem:113888:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Slagstomper Treads]|h|r", -- [4]
+							950, -- [5]
+						}, -- [120]
+						{
+							1426566120, -- [1]
+							"GP", -- [2]
+							"Innocentz", -- [3]
+							"|cffa335ee|Hitem:119307:0:0:0:0:0:0:0:100:0:5:1:570|h[Leggings of the Iron Conqueror]|h|r", -- [4]
+							1000, -- [5]
+						}, -- [121]
+						{
+							1426569480, -- [1]
+							"GP", -- [2]
+							"Goargrim", -- [3]
+							"|cffa335ee|Hitem:113983:0:0:0:0:0:0:0:100:0:5:1:566|h[Forgemaster's Insignia]|h|r", -- [4]
+							1250, -- [5]
+						}, -- [122]
+						{
+							1426569540, -- [1]
+							"GP", -- [2]
+							"Lustya", -- [3]
+							"|cffa335ee|Hitem:113984:0:0:0:0:0:0:0:100:0:5:1:566|h[Blackiron Micro Crucible]|h|r", -- [4]
+							1250, -- [5]
+						}, -- [123]
+						{
+							1426569600, -- [1]
+							"GP", -- [2]
+							"Iconjurebeer", -- [3]
+							"|cffa335ee|Hitem:113984:0:0:0:0:0:0:0:100:0:5:1:566|h[Blackiron Micro Crucible]|h|r", -- [4]
+							1250, -- [5]
+						}, -- [124]
 					},
 				},
 				["Slash Cry"] = {
@@ -4433,2166 +5787,465 @@ EPGP_DB = {
 						},
 					},
 				},
-				["Mind Games"] = {
+				["GLORY"] = {
 					["snapshot"] = {
 						["roster_info"] = {
 							{
-								"Karogra", -- [1]
-								"ROGUE", -- [2]
+								"Zareda", -- [1]
+								"SHAMAN", -- [2]
 								"", -- [3]
 							}, -- [1]
 							{
-								"Spartacis", -- [1]
-								"DEATHKNIGHT", -- [2]
+								"Anklebiterzz", -- [1]
+								"SHAMAN", -- [2]
 								"", -- [3]
 							}, -- [2]
 							{
-								"Evan", -- [1]
-								"PRIEST", -- [2]
+								"Adalayde", -- [1]
+								"WARRIOR", -- [2]
 								"", -- [3]
 							}, -- [3]
 							{
-								"Korrå", -- [1]
-								"SHAMAN", -- [2]
+								"Cornface", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
 							}, -- [4]
 							{
-								"Darkwuke", -- [1]
-								"WARLOCK", -- [2]
+								"Ceelogreen", -- [1]
+								"WARRIOR", -- [2]
 								"", -- [3]
 							}, -- [5]
 							{
-								"Gobofløp", -- [1]
-								"HUNTER", -- [2]
+								"Dexbeast", -- [1]
+								"MAGE", -- [2]
 								"", -- [3]
 							}, -- [6]
 							{
-								"Validas", -- [1]
-								"SHAMAN", -- [2]
+								"Strahm", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [7]
 							{
-								"Kruces", -- [1]
-								"DEATHKNIGHT", -- [2]
+								"Bodyroc", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [8]
 							{
-								"Shadowwuke", -- [1]
-								"PRIEST", -- [2]
+								"Redeemer", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [9]
 							{
-								"Dehxs", -- [1]
-								"SHAMAN", -- [2]
+								"Manswers", -- [1]
+								"WARRIOR", -- [2]
 								"", -- [3]
 							}, -- [10]
 							{
-								"Blizzmarkie", -- [1]
-								"MAGE", -- [2]
+								"Clarity", -- [1]
+								"WARLOCK", -- [2]
 								"", -- [3]
 							}, -- [11]
 							{
-								"Rendath", -- [1]
-								"DEATHKNIGHT", -- [2]
+								"Rass", -- [1]
+								"DRUID", -- [2]
 								"", -- [3]
 							}, -- [12]
 							{
-								"Løki", -- [1]
-								"MAGE", -- [2]
+								"Midien", -- [1]
+								"DEATHKNIGHT", -- [2]
 								"", -- [3]
 							}, -- [13]
 							{
-								"Sneakichu", -- [1]
+								"Rottnbasterd", -- [1]
 								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [14]
 							{
-								"Beefrocket", -- [1]
-								"DRUID", -- [2]
+								"Migs", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [15]
 							{
-								"Vampro", -- [1]
-								"PRIEST", -- [2]
+								"Dunfor", -- [1]
+								"WARLOCK", -- [2]
 								"", -- [3]
 							}, -- [16]
 							{
-								"Clamente", -- [1]
-								"PRIEST", -- [2]
+								"Demicutak", -- [1]
+								"WARRIOR", -- [2]
 								"", -- [3]
 							}, -- [17]
 							{
-								"Toxxulian", -- [1]
-								"HUNTER", -- [2]
+								"Imopbizatch", -- [1]
+								"DEATHKNIGHT", -- [2]
 								"", -- [3]
 							}, -- [18]
 							{
-								"Innoruuk", -- [1]
-								"WARRIOR", -- [2]
+								"Eekryansucks", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [19]
 							{
-								"Abrownpwny", -- [1]
-								"WARRIOR", -- [2]
+								"Tanika", -- [1]
+								"WARLOCK", -- [2]
 								"", -- [3]
 							}, -- [20]
 							{
-								"Coffmann", -- [1]
-								"PRIEST", -- [2]
+								"Shadowchiron", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [21]
 							{
-								"Kbyz", -- [1]
-								"HUNTER", -- [2]
+								"Terrischiavo", -- [1]
+								"DEATHKNIGHT", -- [2]
 								"", -- [3]
 							}, -- [22]
 							{
-								"Feedyourneed", -- [1]
-								"HUNTER", -- [2]
+								"Sicarii", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [23]
 							{
-								"Broosxoxo", -- [1]
-								"MAGE", -- [2]
+								"Treekitty", -- [1]
+								"DRUID", -- [2]
 								"", -- [3]
 							}, -- [24]
 							{
-								"Badboydrood", -- [1]
-								"DRUID", -- [2]
+								"Owievision", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [25]
 							{
-								"Grommásh", -- [1]
-								"WARRIOR", -- [2]
+								"Shadowtuck", -- [1]
+								"MAGE", -- [2]
 								"", -- [3]
 							}, -- [26]
 							{
-								"Kovenaros", -- [1]
-								"SHAMAN", -- [2]
+								"Interpöl", -- [1]
+								"HUNTER", -- [2]
 								"", -- [3]
 							}, -- [27]
 							{
-								"Amato", -- [1]
-								"ROGUE", -- [2]
+								"Scrotuscrabs", -- [1]
+								"DRUID", -- [2]
 								"", -- [3]
 							}, -- [28]
 							{
-								"Allimurderer", -- [1]
-								"HUNTER", -- [2]
+								"Phonsjericho", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [29]
 							{
-								"Beltron", -- [1]
-								"PALADIN", -- [2]
+								"Cattiebriez", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
 							}, -- [30]
 							{
-								"Vòrosh", -- [1]
-								"HUNTER", -- [2]
+								"Eekgregsucks", -- [1]
+								"DEATHKNIGHT", -- [2]
 								"", -- [3]
 							}, -- [31]
 							{
-								"Ballnchaìn", -- [1]
-								"DEATHKNIGHT", -- [2]
+								"Lirel", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
 							}, -- [32]
 							{
-								"Sikopal", -- [1]
-								"PALADIN", -- [2]
+								"Eekneilsucks", -- [1]
+								"WARRIOR", -- [2]
 								"", -- [3]
 							}, -- [33]
 							{
-								"Pantsbeard", -- [1]
-								"MAGE", -- [2]
+								"Mungdaal", -- [1]
+								"SHAMAN", -- [2]
 								"", -- [3]
 							}, -- [34]
 							{
-								"Wsinno", -- [1]
-								"MONK", -- [2]
+								"Holycowlol", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [35]
 							{
-								"Nuttcancer", -- [1]
-								"PALADIN", -- [2]
+								"Hicky", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [36]
 							{
-								"Lustea", -- [1]
-								"PRIEST", -- [2]
+								"Eekshamsucks", -- [1]
+								"HUNTER", -- [2]
 								"", -- [3]
 							}, -- [37]
 							{
-								"Entombment", -- [1]
+								"Bluesuadegoo", -- [1]
 								"MAGE", -- [2]
 								"", -- [3]
 							}, -- [38]
 							{
-								"Icyskulls", -- [1]
-								"DEATHKNIGHT", -- [2]
+								"Kapu", -- [1]
+								"HUNTER", -- [2]
 								"", -- [3]
 							}, -- [39]
 							{
-								"Mistibaby", -- [1]
-								"PRIEST", -- [2]
+								"Demisniped", -- [1]
+								"HUNTER", -- [2]
 								"", -- [3]
 							}, -- [40]
 							{
-								"Sixbocta", -- [1]
-								"SHAMAN", -- [2]
+								"Rubido", -- [1]
+								"MAGE", -- [2]
 								"", -- [3]
 							}, -- [41]
 							{
-								"Pbronice", -- [1]
-								"ROGUE", -- [2]
+								"Joystick", -- [1]
+								"DRUID", -- [2]
 								"", -- [3]
 							}, -- [42]
 							{
-								"Kobeky", -- [1]
-								"PRIEST", -- [2]
+								"Pockieninja", -- [1]
+								"SHAMAN", -- [2]
 								"", -- [3]
 							}, -- [43]
 							{
-								"Skullz", -- [1]
-								"ROGUE", -- [2]
+								"Demishym", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
 							}, -- [44]
 							{
-								"Freed", -- [1]
+								"Ickybodclay", -- [1]
 								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [45]
 							{
-								"Boston", -- [1]
-								"ROGUE", -- [2]
+								"Demiswag", -- [1]
+								"DEATHKNIGHT", -- [2]
 								"", -- [3]
 							}, -- [46]
 							{
-								"Buddurs", -- [1]
-								"WARRIOR", -- [2]
+								"Agriculture", -- [1]
+								"DEATHKNIGHT", -- [2]
 								"", -- [3]
 							}, -- [47]
 							{
-								"Immortalzz", -- [1]
-								"WARRIOR", -- [2]
+								"Slêêp", -- [1]
+								"DEATHKNIGHT", -- [2]
 								"", -- [3]
 							}, -- [48]
 							{
-								"Starstruckqt", -- [1]
-								"PRIEST", -- [2]
+								"Rowboat", -- [1]
+								"SHAMAN", -- [2]
 								"", -- [3]
 							}, -- [49]
 							{
-								"Bsly", -- [1]
-								"DRUID", -- [2]
+								"Melersica", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
 							}, -- [50]
 							{
-								"Prishex", -- [1]
-								"DRUID", -- [2]
+								"Charliekelly", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [51]
 							{
-								"Corddell", -- [1]
-								"WARRIOR", -- [2]
+								"Belgianrofl", -- [1]
+								"DEATHKNIGHT", -- [2]
 								"", -- [3]
 							}, -- [52]
 							{
-								"Venøxis", -- [1]
+								"Etherpure", -- [1]
 								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [53]
 							{
-								"Kovnado", -- [1]
-								"DRUID", -- [2]
+								"Undeadkillax", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [54]
 							{
-								"Àrthàs", -- [1]
-								"PALADIN", -- [2]
+								"Vannian", -- [1]
+								"DEATHKNIGHT", -- [2]
 								"", -- [3]
 							}, -- [55]
 							{
-								"Hellrussian", -- [1]
-								"WARLOCK", -- [2]
+								"Swedishchef", -- [1]
+								"HUNTER", -- [2]
 								"", -- [3]
 							}, -- [56]
 							{
-								"Rayøc", -- [1]
-								"WARLOCK", -- [2]
+								"Omgflagged", -- [1]
+								"HUNTER", -- [2]
 								"", -- [3]
 							}, -- [57]
 							{
-								"Demotrius", -- [1]
+								"Demisnare", -- [1]
 								"WARLOCK", -- [2]
 								"", -- [3]
 							}, -- [58]
 							{
-								"Fuzzicans", -- [1]
-								"PALADIN", -- [2]
+								"Blindzo", -- [1]
+								"SHAMAN", -- [2]
 								"", -- [3]
 							}, -- [59]
 							{
-								"Leafygreens", -- [1]
-								"DRUID", -- [2]
+								"Chelis", -- [1]
+								"SHAMAN", -- [2]
 								"", -- [3]
 							}, -- [60]
 							{
-								"Bdbypaladin", -- [1]
-								"PALADIN", -- [2]
+								"Darthtrader", -- [1]
+								"WARLOCK", -- [2]
 								"", -- [3]
 							}, -- [61]
 							{
-								"Beemm", -- [1]
+								"Idtrapthat", -- [1]
 								"HUNTER", -- [2]
 								"", -- [3]
 							}, -- [62]
 							{
-								"Anatomi", -- [1]
-								"DEATHKNIGHT", -- [2]
+								"Helloirene", -- [1]
+								"WARRIOR", -- [2]
 								"", -- [3]
 							}, -- [63]
 							{
-								"Celadon", -- [1]
-								"PRIEST", -- [2]
+								"Crabbattle", -- [1]
+								"WARLOCK", -- [2]
 								"", -- [3]
 							}, -- [64]
 							{
-								"Maeulos", -- [1]
-								"WARLOCK", -- [2]
+								"Dëmisë", -- [1]
+								"DEATHKNIGHT", -- [2]
 								"", -- [3]
 							}, -- [65]
 							{
-								"Wheytren", -- [1]
-								"ROGUE", -- [2]
+								"Welshcakes", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [66]
 							{
-								"Sukkondeez", -- [1]
-								"DEATHKNIGHT", -- [2]
+								"Gonkz", -- [1]
+								"DRUID", -- [2]
 								"", -- [3]
 							}, -- [67]
 							{
-								"Admitnone", -- [1]
-								"WARRIOR", -- [2]
+								"Andybotwin", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
 							}, -- [68]
 							{
-								"Punísh", -- [1]
-								"ROGUE", -- [2]
+								"Azgru", -- [1]
+								"HUNTER", -- [2]
 								"", -- [3]
 							}, -- [69]
 							{
-								"Galiela", -- [1]
-								"PALADIN", -- [2]
+								"Evocare", -- [1]
+								"WARLOCK", -- [2]
 								"", -- [3]
 							}, -- [70]
 							{
-								"Badboydruid", -- [1]
-								"DRUID", -- [2]
+								"Itbites", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [71]
 							{
-								"Cogash", -- [1]
-								"SHAMAN", -- [2]
+								"Canimee", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [72]
 							{
-								"Olgheals", -- [1]
-								"PRIEST", -- [2]
+								"Centromere", -- [1]
+								"WARRIOR", -- [2]
 								"", -- [3]
 							}, -- [73]
 							{
-								"Kasparov", -- [1]
-								"WARRIOR", -- [2]
+								"Drazzl", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [74]
 							{
-								"Bdbydk", -- [1]
-								"DEATHKNIGHT", -- [2]
+								"Perith", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [75]
 							{
-								"Cùps", -- [1]
-								"HUNTER", -- [2]
+								"Durkasmite", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
 							}, -- [76]
 							{
-								"Huhahew", -- [1]
-								"MAGE", -- [2]
+								"Monco", -- [1]
+								"DEATHKNIGHT", -- [2]
 								"", -- [3]
 							}, -- [77]
 							{
-								"Innoz", -- [1]
-								"PRIEST", -- [2]
+								"Hields", -- [1]
+								"SHAMAN", -- [2]
 								"", -- [3]
 							}, -- [78]
 							{
-								"Aurassarr", -- [1]
-								"PRIEST", -- [2]
+								"Egnima", -- [1]
+								"WARLOCK", -- [2]
 								"", -- [3]
 							}, -- [79]
 							{
-								"Judginatör", -- [1]
-								"PALADIN", -- [2]
+								"Shadowart", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [80]
 							{
-								"Mts", -- [1]
-								"PALADIN", -- [2]
+								"Virginity", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
 							}, -- [81]
 							{
-								"Freedpriest", -- [1]
-								"PRIEST", -- [2]
+								"Bigsissy", -- [1]
+								"WARRIOR", -- [2]
 								"", -- [3]
 							}, -- [82]
 							{
-								"Lustya", -- [1]
-								"SHAMAN", -- [2]
+								"Xmrfantastic", -- [1]
+								"DRUID", -- [2]
 								"", -- [3]
 							}, -- [83]
 							{
-								"Toppies", -- [1]
-								"MAGE", -- [2]
+								"Shadowramuh", -- [1]
+								"DEATHKNIGHT", -- [2]
 								"", -- [3]
 							}, -- [84]
 							{
-								"Anahkin", -- [1]
+								"Chaosie", -- [1]
 								"DRUID", -- [2]
 								"", -- [3]
 							}, -- [85]
 							{
-								"Somboquon", -- [1]
-								"MONK", -- [2]
+								"Hermezkanrad", -- [1]
+								"WARRIOR", -- [2]
 								"", -- [3]
 							}, -- [86]
 							{
-								"Lustwar", -- [1]
-								"WARRIOR", -- [2]
+								"Rootslol", -- [1]
+								"DRUID", -- [2]
 								"", -- [3]
 							}, -- [87]
-							{
-								"Ainal", -- [1]
-								"MONK", -- [2]
-								"", -- [3]
-							}, -- [88]
-							{
-								"Coffman", -- [1]
-								"PALADIN", -- [2]
-								"", -- [3]
-							}, -- [89]
-							{
-								"Chargeisfunn", -- [1]
-								"WARRIOR", -- [2]
-								"", -- [3]
-							}, -- [90]
-							{
-								"Mordacar", -- [1]
-								"WARRIOR", -- [2]
-								"", -- [3]
-							}, -- [91]
-							{
-								"Caeecoff", -- [1]
-								"ROGUE", -- [2]
-								"", -- [3]
-							}, -- [92]
-							{
-								"Tygorious", -- [1]
-								"HUNTER", -- [2]
-								"", -- [3]
-							}, -- [93]
-							{
-								"Wadulay", -- [1]
-								"WARLOCK", -- [2]
-								"", -- [3]
-							}, -- [94]
-							{
-								"Bdbydrood", -- [1]
-								"DRUID", -- [2]
-								"", -- [3]
-							}, -- [95]
-							{
-								"Avius", -- [1]
-								"MAGE", -- [2]
-								"", -- [3]
-							}, -- [96]
-							{
-								"Sikonos", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"", -- [3]
-							}, -- [97]
-							{
-								"Maslowe", -- [1]
-								"PALADIN", -- [2]
-								"", -- [3]
-							}, -- [98]
-							{
-								"Deliverancez", -- [1]
-								"WARRIOR", -- [2]
-								"", -- [3]
-							}, -- [99]
-							{
-								"Sikonus", -- [1]
-								"WARRIOR", -- [2]
-								"", -- [3]
-							}, -- [100]
-							{
-								"Wraeth", -- [1]
-								"PRIEST", -- [2]
-								"", -- [3]
-							}, -- [101]
-							{
-								"Santhem", -- [1]
-								"MONK", -- [2]
-								"", -- [3]
-							}, -- [102]
-							{
-								"Coffina", -- [1]
-								"WARLOCK", -- [2]
-								"", -- [3]
-							}, -- [103]
-							{
-								"Gïbby", -- [1]
-								"ROGUE", -- [2]
-								"", -- [3]
-							}, -- [104]
-							{
-								"Talavi", -- [1]
-								"SHAMAN", -- [2]
-								"", -- [3]
-							}, -- [105]
-							{
-								"Princip", -- [1]
-								"ROGUE", -- [2]
-								"", -- [3]
-							}, -- [106]
-							{
-								"Böwflëx", -- [1]
-								"HUNTER", -- [2]
-								"", -- [3]
-							}, -- [107]
-							{
-								"Rayven", -- [1]
-								"DRUID", -- [2]
-								"", -- [3]
-							}, -- [108]
-							{
-								"Vampally", -- [1]
-								"PALADIN", -- [2]
-								"", -- [3]
-							}, -- [109]
-							{
-								"Thimblelina", -- [1]
-								"WARLOCK", -- [2]
-								"", -- [3]
-							}, -- [110]
-							{
-								"Culley", -- [1]
-								"WARRIOR", -- [2]
-								"", -- [3]
-							}, -- [111]
-							{
-								"Jdn", -- [1]
-								"MONK", -- [2]
-								"", -- [3]
-							}, -- [112]
-							{
-								"Bdbymonk", -- [1]
-								"MONK", -- [2]
-								"", -- [3]
-							}, -- [113]
-							{
-								"Dahx", -- [1]
-								"WARLOCK", -- [2]
-								"", -- [3]
-							}, -- [114]
-							{
-								"Mtnk", -- [1]
-								"WARRIOR", -- [2]
-								"", -- [3]
-							}, -- [115]
-							{
-								"Misdameanor", -- [1]
-								"SHAMAN", -- [2]
-								"", -- [3]
-							}, -- [116]
-							{
-								"Kovenary", -- [1]
-								"DRUID", -- [2]
-								"", -- [3]
-							}, -- [117]
-							{
-								"Gartaum", -- [1]
-								"DRUID", -- [2]
-								"", -- [3]
-							}, -- [118]
-							{
-								"Innocentz", -- [1]
-								"PALADIN", -- [2]
-								"", -- [3]
-							}, -- [119]
-							{
-								"ßabealicious", -- [1]
-								"PALADIN", -- [2]
-								"", -- [3]
-							}, -- [120]
-							{
-								"Hhkb", -- [1]
-								"PRIEST", -- [2]
-								"", -- [3]
-							}, -- [121]
-							{
-								"Isabewwa", -- [1]
-								"MAGE", -- [2]
-								"", -- [3]
-							}, -- [122]
-							{
-								"Haseoh", -- [1]
-								"HUNTER", -- [2]
-								"", -- [3]
-							}, -- [123]
-							{
-								"Comet", -- [1]
-								"MONK", -- [2]
-								"", -- [3]
-							}, -- [124]
-							{
-								"Buklau", -- [1]
-								"MONK", -- [2]
-								"", -- [3]
-							}, -- [125]
-							{
-								"Ying", -- [1]
-								"HUNTER", -- [2]
-								"", -- [3]
-							}, -- [126]
-							{
-								"Bearcups", -- [1]
-								"DRUID", -- [2]
-								"", -- [3]
-							}, -- [127]
-							{
-								"Mtqt", -- [1]
-								"DRUID", -- [2]
-								"", -- [3]
-							}, -- [128]
-							{
-								"Bromby", -- [1]
-								"ROGUE", -- [2]
-								"", -- [3]
-							}, -- [129]
-							{
-								"Decimeytor", -- [1]
-								"HUNTER", -- [2]
-								"", -- [3]
-							}, -- [130]
-							{
-								"Bdbypriest", -- [1]
-								"PRIEST", -- [2]
-								"", -- [3]
-							}, -- [131]
-							{
-								"Bzly", -- [1]
-								"PALADIN", -- [2]
-								"", -- [3]
-							}, -- [132]
-							{
-								"Vampwarrior", -- [1]
-								"WARRIOR", -- [2]
-								"", -- [3]
-							}, -- [133]
-							{
-								"Barthylen", -- [1]
-								"PRIEST", -- [2]
-								"", -- [3]
-							}, -- [134]
-							{
-								"Purrnado", -- [1]
-								"DRUID", -- [2]
-								"", -- [3]
-							}, -- [135]
-							{
-								"Olgarns", -- [1]
-								"MONK", -- [2]
-								"", -- [3]
-							}, -- [136]
-							{
-								"Precisiøn", -- [1]
-								"HUNTER", -- [2]
-								"", -- [3]
-							}, -- [137]
-							{
-								"Syllabearz", -- [1]
-								"DRUID", -- [2]
-								"", -- [3]
-							}, -- [138]
-							{
-								"Ciths", -- [1]
-								"PALADIN", -- [2]
-								"", -- [3]
-							}, -- [139]
-							{
-								"Olgarn", -- [1]
-								"PALADIN", -- [2]
-								"", -- [3]
-							}, -- [140]
-							{
-								"Noskulls", -- [1]
-								"WARLOCK", -- [2]
-								"", -- [3]
-							}, -- [141]
-							{
-								"Mtz", -- [1]
-								"HUNTER", -- [2]
-								"", -- [3]
-							}, -- [142]
-							{
-								"Svetty", -- [1]
-								"PRIEST", -- [2]
-								"", -- [3]
-							}, -- [143]
-							{
-								"Behringor", -- [1]
-								"DRUID", -- [2]
-								"", -- [3]
-							}, -- [144]
-							{
-								"Iconjurebeer", -- [1]
-								"MAGE", -- [2]
-								"", -- [3]
-							}, -- [145]
-							{
-								"Mtbottle", -- [1]
-								"MONK", -- [2]
-								"", -- [3]
-							}, -- [146]
-							{
-								"Starrstruck", -- [1]
-								"MAGE", -- [2]
-								"", -- [3]
-							}, -- [147]
-							{
-								"Arvixer", -- [1]
-								"WARLOCK", -- [2]
-								"", -- [3]
-							}, -- [148]
-							{
-								"Killpocalyps", -- [1]
-								"PALADIN", -- [2]
-								"", -- [3]
-							}, -- [149]
-							{
-								"Luclin", -- [1]
-								"MONK", -- [2]
-								"", -- [3]
-							}, -- [150]
-							{
-								"Gohast", -- [1]
-								"ROGUE", -- [2]
-								"", -- [3]
-							}, -- [151]
-							{
-								"Beefpocket", -- [1]
-								"MONK", -- [2]
-								"", -- [3]
-							}, -- [152]
-							{
-								"Messyouup", -- [1]
-								"DRUID", -- [2]
-								"", -- [3]
-							}, -- [153]
-							{
-								"Glitzey", -- [1]
-								"PALADIN", -- [2]
-								"", -- [3]
-							}, -- [154]
-							{
-								"Aubbrie", -- [1]
-								"DRUID", -- [2]
-								"", -- [3]
-							}, -- [155]
-							{
-								"Saybra", -- [1]
-								"DRUID", -- [2]
-								"", -- [3]
-							}, -- [156]
-							{
-								"Uskel", -- [1]
-								"HUNTER", -- [2]
-								"", -- [3]
-							}, -- [157]
-							{
-								"Levels", -- [1]
-								"WARRIOR", -- [2]
-								"", -- [3]
-							}, -- [158]
-							{
-								"Noskullz", -- [1]
-								"PALADIN", -- [2]
-								"", -- [3]
-							}, -- [159]
-							{
-								"Kida", -- [1]
-								"WARLOCK", -- [2]
-								"", -- [3]
-							}, -- [160]
-							{
-								"Kaylenlee", -- [1]
-								"PRIEST", -- [2]
-								"", -- [3]
-							}, -- [161]
-							{
-								"Goargrim", -- [1]
-								"WARRIOR", -- [2]
-								"", -- [3]
-							}, -- [162]
-							{
-								"Lokian", -- [1]
-								"WARLOCK", -- [2]
-								"", -- [3]
-							}, -- [163]
-							{
-								"Rockblood", -- [1]
-								"MAGE", -- [2]
-								"", -- [3]
-							}, -- [164]
-							{
-								"Kaseef", -- [1]
-								"PRIEST", -- [2]
-								"", -- [3]
-							}, -- [165]
-							{
-								"Ðeirdre", -- [1]
-								"DRUID", -- [2]
-								"", -- [3]
-							}, -- [166]
-							{
-								"Vamppro", -- [1]
-								"MAGE", -- [2]
-								"", -- [3]
-							}, -- [167]
-							{
-								"Deathheros", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"", -- [3]
-							}, -- [168]
-							{
-								"Gilgamësh", -- [1]
-								"WARRIOR", -- [2]
-								"", -- [3]
-							}, -- [169]
-							{
-								"Validuz", -- [1]
-								"ROGUE", -- [2]
-								"", -- [3]
-							}, -- [170]
-							{
-								"Innocenz", -- [1]
-								"SHAMAN", -- [2]
-								"", -- [3]
-							}, -- [171]
-							{
-								"Akrite", -- [1]
-								"DRUID", -- [2]
-								"", -- [3]
-							}, -- [172]
-							{
-								"Vampknght", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"", -- [3]
-							}, -- [173]
-							{
-								"Necrochimp", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"", -- [3]
-							}, -- [174]
-							{
-								"Vikid", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"", -- [3]
-							}, -- [175]
-							{
-								"Femtar", -- [1]
-								"DRUID", -- [2]
-								"", -- [3]
-							}, -- [176]
-							{
-								"Greenpotato", -- [1]
-								"HUNTER", -- [2]
-								"", -- [3]
-							}, -- [177]
-							{
-								"Grimdok", -- [1]
-								"DEATHKNIGHT", -- [2]
-								"", -- [3]
-							}, -- [178]
-							{
-								"Kby", -- [1]
-								"MONK", -- [2]
-								"", -- [3]
-							}, -- [179]
-							{
-								"Karayan", -- [1]
-								"DRUID", -- [2]
-								"", -- [3]
-							}, -- [180]
-							{
-								"Bdbyshaman", -- [1]
-								"SHAMAN", -- [2]
-								"", -- [3]
-							}, -- [181]
-							{
-								"Cüps", -- [1]
-								"SHAMAN", -- [2]
-								"", -- [3]
-							}, -- [182]
-							{
-								"Aphexx", -- [1]
-								"SHAMAN", -- [2]
-								"", -- [3]
-							}, -- [183]
-							{
-								"Arabsmoney", -- [1]
-								"WARRIOR", -- [2]
-								"", -- [3]
-							}, -- [184]
-							{
-								"Jproh", -- [1]
-								"MONK", -- [2]
-								"", -- [3]
-							}, -- [185]
-							{
-								"Wardìck", -- [1]
-								"ROGUE", -- [2]
-								"", -- [3]
-							}, -- [186]
-							{
-								"Arsenal", -- [1]
-								"DRUID", -- [2]
-								"", -- [3]
-							}, -- [187]
-							{
-								"Ashtrea", -- [1]
-								"WARLOCK", -- [2]
-								"", -- [3]
-							}, -- [188]
-							{
-								"Metal", -- [1]
-								"WARRIOR", -- [2]
-								"", -- [3]
-							}, -- [189]
 						},
-						["time"] = 1425963660,
-					},
-					["log"] = {
-						{
-							1423798920, -- [1]
-							"GP", -- [2]
-							"Princip", -- [3]
-							"|cffa335ee|Hitem:118114:0:0:0:0:0:0:0:100:0:5:1:566|h[Meaty Dragonspine Trophy]|h|r", -- [4]
-							1575, -- [5]
-						}, -- [1]
-						{
-							1423799040, -- [1]
-							"GP", -- [2]
-							"Immortalzz", -- [3]
-							"|cffa335ee|Hitem:113871:0:0:0:0:0:0:0:100:0:5:1:566|h[Bracers of Martial Perfection]|h|r", -- [4]
-							630, -- [5]
-						}, -- [2]
-						{
-							1423799040, -- [1]
-							"GP", -- [2]
-							"Løki", -- [3]
-							"|cffa335ee|Hitem:113872:0:0:0:0:0:0:0:100:0:5:1:566|h[Gruul's Lip Ring]|h|r", -- [4]
-							630, -- [5]
-						}, -- [3]
-						{
-							1423799040, -- [1]
-							"GP", -- [2]
-							"Misdameanor", -- [3]
-							"|cffa335ee|Hitem:113872:0:0:0:0:0:0:0:100:0:5:1:566|h[Gruul's Lip Ring]|h|r", -- [4]
-							630, -- [5]
-						}, -- [4]
-						{
-							1423799100, -- [1]
-							"GP", -- [2]
-							"Kovenary", -- [3]
-							"|cffa335ee|Hitem:113865:0:0:0:0:0:0:0:100:0:5:1:566|h[Darklight Necklace]|h|r", -- [4]
-							630, -- [5]
-						}, -- [5]
-						{
-							1423799160, -- [1]
-							"GP", -- [2]
-							"Shayanwe", -- [3]
-							"|cffa335ee|Hitem:120078:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Runescribed Gronncloak]|h|r", -- [4]
-							830, -- [5]
-						}, -- [6]
-						{
-							1423799760, -- [1]
-							"GP", -- [2]
-							"Immortalzz", -- [3]
-							"|cffa335ee|Hitem:113881:0:0:0:0:0:0:0:100:0:5:1:566|h[Chestplate of Rolling Fury]|h|r", -- [4]
-							1260, -- [5]
-						}, -- [7]
-						{
-							1423799820, -- [1]
-							"GP", -- [2]
-							"Toxxulian", -- [3]
-							"|cffa335ee|Hitem:113877:0:0:0:0:0:0:0:100:0:5:1:566|h[Unexploded Explosive Shard]|h|r", -- [4]
-							630, -- [5]
-						}, -- [8]
-						{
-							1423799820, -- [1]
-							"GP", -- [2]
-							"Comet", -- [3]
-							"|cffa335ee|Hitem:113883:0:0:0:0:0:0:0:100:0:5:1:566|h[Ravenous Greatcloak]|h|r", -- [4]
-							630, -- [5]
-						}, -- [9]
-						{
-							1423799880, -- [1]
-							"GP", -- [2]
-							"Anahkin", -- [3]
-							"|cffa335ee|Hitem:119448:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Head-Lopper Skullscythe]|h|r", -- [4]
-							830, -- [5]
-						}, -- [10]
-						{
-							1423799940, -- [1]
-							"GP", -- [2]
-							"Olgheals", -- [3]
-							"|cffa335ee|Hitem:113876:0:0:0:0:0:0:0:100:0:5:3:561:564:566|h[Toothbreaker Grips]|h|r", -- [4]
-							1285, -- [5]
-						}, -- [11]
-						{
-							1423800000, -- [1]
-							"GP", -- [2]
-							"Buklau", -- [3]
-							"|cffa335ee|Hitem:113880:0:0:0:0:0:0:0:100:0:5:1:566|h[Acidic Jaws]|h|r", -- [4]
-							1260, -- [5]
-						}, -- [12]
-						{
-							1423803960, -- [1]
-							"GP", -- [2]
-							"Princip", -- [3]
-							"|cffa335ee|Hitem:113895:0:0:0:0:0:0:0:100:0:5:2:43:566|h[Furnace Tender's Treads]|h|r", -- [4]
-							945, -- [5]
-						}, -- [13]
-						{
-							1423803960, -- [1]
-							"GP", -- [2]
-							"Comet", -- [3]
-							"|cffa335ee|Hitem:113895:0:0:0:0:0:0:0:100:0:5:1:566|h[Furnace Tender's Treads]|h|r", -- [4]
-							945, -- [5]
-						}, -- [14]
-						{
-							1423804080, -- [1]
-							"GP", -- [2]
-							"Princip", -- [3]
-							"|cffa335ee|Hitem:113895:0:0:0:0:0:0:0:100:0:5:1:566|h[Furnace Tender's Treads]|h|r", -- [4]
-							945, -- [5]
-						}, -- [15]
-						{
-							1423804200, -- [1]
-							"GP", -- [2]
-							"Goargrim", -- [3]
-							"|cffa335ee|Hitem:119320:0:0:0:0:0:0:0:100:0:5:1:570|h[Leggings of the Iron Protector]|h|r", -- [4]
-							1260, -- [5]
-						}, -- [16]
-						{
-							1423804200, -- [1]
-							"GP", -- [2]
-							"Cowcups", -- [3]
-							"|cffa335ee|Hitem:113891:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Blast-Proof Cowl]|h|r", -- [4]
-							1460, -- [5]
-						}, -- [17]
-						{
-							1423804200, -- [1]
-							"GP", -- [2]
-							"Haseoh", -- [3]
-							"|cffa335ee|Hitem:113885:0:0:0:0:0:0:0:100:0:5:1:566|h[Mouth of The Fury]|h|r", -- [4]
-							1890, -- [5]
-						}, -- [18]
-						{
-							1423804200, -- [1]
-							"GP", -- [2]
-							"Lustya", -- [3]
-							"|cffa335ee|Hitem:113892:0:0:0:0:0:0:0:100:0:5:1:566|h[Engineer's Grounded Gorget]|h|r", -- [4]
-							630, -- [5]
-						}, -- [19]
-						{
-							1423804260, -- [1]
-							"GP", -- [2]
-							"Princip", -- [3]
-							"|cffa335ee|Hitem:119313:0:0:0:0:0:0:0:100:0:5:1:570|h[Leggings of the Iron Vanquisher]|h|r", -- [4]
-							1260, -- [5]
-						}, -- [20]
-						{
-							1423804380, -- [1]
-							"GP", -- [2]
-							"Thimblelina", -- [3]
-							"|cffa335ee|Hitem:119307:0:0:0:0:0:0:0:100:0:5:1:570|h[Leggings of the Iron Conqueror]|h|r", -- [4]
-							1260, -- [5]
-						}, -- [21]
-						{
-							1423804980, -- [1]
-							"GP", -- [2]
-							"Toxxulian", -- [3]
-							"|cffa335ee|Hitem:113944:0:0:0:0:0:0:0:100:0:5:1:566|h[Legguards of the Stampede]|h|r", -- [4]
-							1260, -- [5]
-						}, -- [22]
-						{
-							1423804980, -- [1]
-							"GP", -- [2]
-							"Anahkin", -- [3]
-							"|cffa335ee|Hitem:113949:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Cannonball Loader's Grips]|h|r", -- [4]
-							1145, -- [5]
-						}, -- [23]
-						{
-							1423805160, -- [1]
-							"GP", -- [2]
-							"Fuzzicans", -- [3]
-							"|cffa335ee|Hitem:113940:0:0:0:0:0:0:0:100:0:5:1:566|h[Seal of the Savage Howl]|h|r", -- [4]
-							630, -- [5]
-						}, -- [24]
-						{
-							1423805220, -- [1]
-							"GP", -- [2]
-							"Vikid", -- [3]
-							"|cffa335ee|Hitem:113950:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Ironcrusher's Collar]|h|r", -- [4]
-							1145, -- [5]
-						}, -- [25]
-						{
-							1423805220, -- [1]
-							"GP", -- [2]
-							"Lustya", -- [3]
-							"|cffa335ee|Hitem:113947:0:0:0:0:0:0:0:100:0:5:1:566|h[Epicenter Loop]|h|r", -- [4]
-							630, -- [5]
-						}, -- [26]
-						{
-							1423805220, -- [1]
-							"GP", -- [2]
-							"Darkwuke", -- [3]
-							"|cffa335ee|Hitem:113941:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Seeking Ember Girdle]|h|r", -- [4]
-							1085, -- [5]
-						}, -- [27]
-						{
-							1423805940, -- [1]
-							"GP", -- [2]
-							"Immortalzz", -- [3]
-							"|cffa335ee|Hitem:113963:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Siege Bomber's Band]|h|r", -- [4]
-							724, -- [5]
-						}, -- [28]
-						{
-							1423805940, -- [1]
-							"GP", -- [2]
-							"Comet", -- [3]
-							"|cffa335ee|Hitem:113963:0:0:0:0:0:0:0:100:0:5:1:566|h[Siege Bomber's Band]|h|r", -- [4]
-							630, -- [5]
-						}, -- [29]
-						{
-							1423806000, -- [1]
-							"GP", -- [2]
-							"Buklau", -- [3]
-							"|cffa335ee|Hitem:113964:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Conductor's Multi-Pocket Girdle]|h|r", -- [4]
-							1145, -- [5]
-						}, -- [30]
-						{
-							1423806000, -- [1]
-							"GP", -- [2]
-							"Olgheals", -- [3]
-							"|cffa335ee|Hitem:113956:0:0:0:0:0:0:0:100:0:5:2:41:566|h[Bracers of Enkindled Power]|h|r", -- [4]
-							630, -- [5]
-						}, -- [31]
-						{
-							1423806060, -- [1]
-							"GP", -- [2]
-							"Fuzzicans", -- [3]
-							"|cffa335ee|Hitem:113953:0:0:0:0:0:0:0:100:0:5:3:564:41:566|h[Thogar's Control Rod]|h|r", -- [4]
-							830, -- [5]
-						}, -- [32]
-						{
-							1423806060, -- [1]
-							"GP", -- [2]
-							"Vikid", -- [3]
-							"|cffa335ee|Hitem:113953:0:0:0:0:0:0:0:100:0:5:1:566|h[Thogar's Control Rod]|h|r", -- [4]
-							630, -- [5]
-						}, -- [33]
-						{
-							1423806120, -- [1]
-							"GP", -- [2]
-							"Fuzzicans", -- [3]
-							"|cffa335ee|Hitem:119309:0:0:0:0:0:0:0:100:0:5:1:570|h[Shoulders of the Iron Conqueror]|h|r", -- [4]
-							945, -- [5]
-						}, -- [34]
-						{
-							1423806120, -- [1]
-							"GP", -- [2]
-							"Fuzzicans", -- [3]
-							"|cffa335ee|Hitem:119309:0:0:0:0:0:0:0:100:0:5:1:570|h[Shoulders of the Iron Conqueror]|h|r", -- [4]
-							945, -- [5]
-						}, -- [35]
-						{
-							1423806300, -- [1]
-							"GP", -- [2]
-							"Lustya", -- [3]
-							"|cffa335ee|Hitem:119322:0:0:0:0:0:0:0:100:0:5:1:570|h[Shoulders of the Iron Protector]|h|r", -- [4]
-							945, -- [5]
-						}, -- [36]
-						{
-							1423806840, -- [1]
-							"GP", -- [2]
-							"Vikid", -- [3]
-							"|cffa335ee|Hitem:113910:0:0:0:0:0:0:0:100:0:5:1:566|h[Hardened Greathelm]|h|r", -- [4]
-							1260, -- [5]
-						}, -- [37]
-						{
-							1423806840, -- [1]
-							"GP", -- [2]
-							"Princip", -- [3]
-							"|cffa335ee|Hitem:113897:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Hans'gar's Forgehammer]|h|r", -- [4]
-							830, -- [5]
-						}, -- [38]
-						{
-							1423806900, -- [1]
-							"GP", -- [2]
-							"Tuknor", -- [3]
-							"|cffa335ee|Hitem:113907:0:0:0:0:0:0:0:100:0:5:1:566|h[Girdle of Unconquered Glory]|h|r", -- [4]
-							945, -- [5]
-						}, -- [39]
-						{
-							1423806900, -- [1]
-							"GP", -- [2]
-							"Comet", -- [3]
-							"|cffa335ee|Hitem:113907:0:0:0:0:0:0:0:100:0:5:1:566|h[Girdle of Unconquered Glory]|h|r", -- [4]
-							945, -- [5]
-						}, -- [40]
-						{
-							1423806900, -- [1]
-							"GP", -- [2]
-							"Misdameanor", -- [3]
-							"|cffa335ee|Hitem:113904:0:0:0:0:0:0:0:100:0:5:1:566|h[Franzok's Headsmasher]|h|r", -- [4]
-							1890, -- [5]
-						}, -- [41]
-						{
-							1423806960, -- [1]
-							"GP", -- [2]
-							"Toppies", -- [3]
-							"|cffa335ee|Hitem:119332:0:0:0:0:0:0:0:100:0:5:1:566|h[Bracers of Darkened Skies]|h|r", -- [4]
-							630, -- [5]
-						}, -- [42]
-						{
-							1423809480, -- [1]
-							"GP", -- [2]
-							"Anahkin", -- [3]
-							"|cffa335ee|Hitem:120077:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Choker of Bloody Flame]|h|r", -- [4]
-							724, -- [5]
-						}, -- [43]
-						{
-							1423809480, -- [1]
-							"GP", -- [2]
-							"Comet", -- [3]
-							"|cffa335ee|Hitem:120077:0:0:0:0:0:0:0:100:0:5:1:566|h[Choker of Bloody Flame]|h|r", -- [4]
-							630, -- [5]
-						}, -- [44]
-						{
-							1423809480, -- [1]
-							"GP", -- [2]
-							"Lustya", -- [3]
-							"|cffa335ee|Hitem:113919:0:0:0:0:0:0:0:100:0:5:2:41:566|h[Treads of Rekindled Flames]|h|r", -- [4]
-							945, -- [5]
-						}, -- [45]
-						{
-							1423809540, -- [1]
-							"GP", -- [2]
-							"Princip", -- [3]
-							"|cffa335ee|Hitem:113917:0:0:0:0:0:0:0:100:0:5:2:42:566|h[Cinderwolf Signet]|h|r", -- [4]
-							655, -- [5]
-						}, -- [46]
-						{
-							1423809720, -- [1]
-							"GP", -- [2]
-							"Darkwuke", -- [3]
-							"|cffa335ee|Hitem:119305:0:0:0:0:0:0:0:100:0:5:1:570|h[Chest of the Iron Conqueror]|h|r", -- [4]
-							1260, -- [5]
-						}, -- [47]
-						{
-							1423810080, -- [1]
-							"GP", -- [2]
-							"Princip", -- [3]
-							"|cffa335ee|Hitem:119315:0:0:0:0:0:0:0:100:0:5:1:570|h[Chest of the Iron Vanquisher]|h|r", -- [4]
-							1260, -- [5]
-						}, -- [48]
-						{
-							1423810080, -- [1]
-							"GP", -- [2]
-							"Løki", -- [3]
-							"|cffa335ee|Hitem:113920:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Dagger of Blazing Radiance]|h|r", -- [4]
-							2171, -- [5]
-						}, -- [49]
-						{
-							1423810080, -- [1]
-							"GP", -- [2]
-							"Goargrim", -- [3]
-							"|cffa335ee|Hitem:119318:0:0:0:0:0:0:0:100:0:5:1:570|h[Chest of the Iron Protector]|h|r", -- [4]
-							1260, -- [5]
-						}, -- [50]
-						{
-							1423810080, -- [1]
-							"GP", -- [2]
-							"Kovenary", -- [3]
-							"|cffa335ee|Hitem:119315:0:0:0:0:0:0:0:100:0:5:1:570|h[Chest of the Iron Vanquisher]|h|r", -- [4]
-							1260, -- [5]
-						}, -- [51]
-						{
-							1423810860, -- [1]
-							"GP", -- [2]
-							"Buklau", -- [3]
-							"|cffa335ee|Hitem:113932:0:0:0:0:0:0:0:100:0:5:1:566|h[Talisman of the Fomor]|h|r", -- [4]
-							630, -- [5]
-						}, -- [52]
-						{
-							1423810860, -- [1]
-							"GP", -- [2]
-							"Starrstruck", -- [3]
-							"|cffa335ee|Hitem:113937:0:0:0:0:0:0:0:100:0:5:2:40:566|h[Runefrenzy Greatcloak]|h|r", -- [4]
-							630, -- [5]
-						}, -- [53]
-						{
-							1423810860, -- [1]
-							"GP", -- [2]
-							"Løki", -- [3]
-							"|cffa335ee|Hitem:113937:0:0:0:0:0:0:0:100:0:5:1:566|h[Runefrenzy Greatcloak]|h|r", -- [4]
-							630, -- [5]
-						}, -- [54]
-						{
-							1423810920, -- [1]
-							"GP", -- [2]
-							"Goargrim", -- [3]
-							"|cffa335ee|Hitem:113927:0:0:0:0:0:0:0:100:0:5:1:566|h[Kromog's Brutal Fist]|h|r", -- [4]
-							630, -- [5]
-						}, -- [55]
-						{
-							1423810980, -- [1]
-							"GP", -- [2]
-							"Fuzzicans", -- [3]
-							"|cffa335ee|Hitem:113938:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Stonefist Band]|h|r", -- [4]
-							830, -- [5]
-						}, -- [56]
-						{
-							1423811100, -- [1]
-							"GP", -- [2]
-							"Cowcups", -- [3]
-							"|cffa335ee|Hitem:113931:0:0:0:0:0:0:0:100:0:5:1:566|h[Beating Heart of the Mountain]|h|r", -- [4]
-							1575, -- [5]
-						}, -- [57]
-						{
-							1423811100, -- [1]
-							"GP", -- [2]
-							"Anahkin", -- [3]
-							"|cffa335ee|Hitem:119312:0:0:0:0:0:0:0:100:0:5:1:570|h[Helm of the Iron Vanquisher]|h|r", -- [4]
-							1260, -- [5]
-						}, -- [58]
-						{
-							1423811280, -- [1]
-							"GP", -- [2]
-							"Vikid", -- [3]
-							"|cffa335ee|Hitem:119312:0:0:0:0:0:0:0:100:0:5:1:570|h[Helm of the Iron Vanquisher]|h|r", -- [4]
-							1260, -- [5]
-						}, -- [59]
-						{
-							1423811280, -- [1]
-							"GP", -- [2]
-							"Innocentz", -- [3]
-							"|cffa335ee|Hitem:119308:0:0:0:0:0:0:0:100:0:5:1:570|h[Helm of the Iron Conqueror]|h|r", -- [4]
-							1260, -- [5]
-						}, -- [60]
-						{
-							1423813260, -- [1]
-							"GP", -- [2]
-							"Goargrim", -- [3]
-							"|cffa335ee|Hitem:119319:0:0:0:0:0:0:0:100:0:5:1:570|h[Gauntlets of the Iron Protector]|h|r", -- [4]
-							945, -- [5]
-						}, -- [61]
-						{
-							1423813380, -- [1]
-							"GP", -- [2]
-							"Løki", -- [3]
-							"|cffa335ee|Hitem:113970:0:0:0:0:0:0:0:100:0:5:1:566|h[Turret Mechanic's Legwraps]|h|r", -- [4]
-							1260, -- [5]
-						}, -- [62]
-						{
-							1423813440, -- [1]
-							"GP", -- [2]
-							"Cowcups", -- [3]
-							"|cffa335ee|Hitem:113968:0:0:0:0:0:0:0:100:0:5:1:566|h[Bloodwhirl Bracers]|h|r", -- [4]
-							630, -- [5]
-						}, -- [63]
-						{
-							1423813440, -- [1]
-							"GP", -- [2]
-							"Goargrim", -- [3]
-							"|cffa335ee|Hitem:113977:0:0:0:0:0:0:0:100:0:5:1:566|h[Bloodsoaked Heart Protector]|h|r", -- [4]
-							1260, -- [5]
-						}, -- [64]
-						{
-							1423813440, -- [1]
-							"GP", -- [2]
-							"Toppies", -- [3]
-							"|cffa335ee|Hitem:113975:0:0:0:0:0:0:0:100:0:5:1:566|h[Uk'urogg's Corrupted Seal]|h|r", -- [4]
-							630, -- [5]
-						}, -- [65]
-						{
-							1423813500, -- [1]
-							"GP", -- [2]
-							"Princip", -- [3]
-							"|cffa335ee|Hitem:113974:0:0:0:0:0:0:0:100:0:5:2:42:566|h[Treads of the Dark Hunt]|h|r", -- [4]
-							970, -- [5]
-						}, -- [66]
-						{
-							1423813500, -- [1]
-							"GP", -- [2]
-							"Olgheals", -- [3]
-							"|cffa335ee|Hitem:113967:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Deckhand's Rope Belt]|h|r", -- [4]
-							1085, -- [5]
-						}, -- [67]
-						{
-							1423813740, -- [1]
-							"GP", -- [2]
-							"Innocentz", -- [3]
-							"|cffa335ee|Hitem:119306:0:0:0:0:0:0:0:100:0:5:1:570|h[Gauntlets of the Iron Conqueror]|h|r", -- [4]
-							945, -- [5]
-						}, -- [68]
-						{
-							1423813980, -- [1]
-							"GP", -- [2]
-							"Anahkin", -- [3]
-							"|cffa335ee|Hitem:119311:0:0:0:0:0:0:0:100:0:5:1:570|h[Gauntlets of the Iron Vanquisher]|h|r", -- [4]
-							945, -- [5]
-						}, -- [69]
-						{
-							1424232000, -- [1]
-							"GP", -- [2]
-							"Freed", -- [3]
-							"|cffa335ee|Hitem:113878:0:0:0:0:0:0:0:100:0:5:1:566|h[Barrage Dodger Cloak]|h|r", -- [4]
-							500, -- [5]
-						}, -- [70]
-						{
-							1424232060, -- [1]
-							"GP", -- [2]
-							"Freed", -- [3]
-							"|cffa335ee|Hitem:113881:0:0:0:0:0:0:0:100:0:5:1:566|h[Chestplate of Rolling Fury]|h|r", -- [4]
-							1000, -- [5]
-						}, -- [71]
-						{
-							1424232060, -- [1]
-							"GP", -- [2]
-							"Princip", -- [3]
-							"|cffa335ee|Hitem:113874:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Oregorger's Acid-Etched Gutripper]|h|r", -- [4]
-							700, -- [5]
-						}, -- [72]
-						{
-							1424232060, -- [1]
-							"GP", -- [2]
-							"Princip", -- [3]
-							"|cffa335ee|Hitem:113874:0:0:0:0:0:0:0:100:0:5:1:566|h[Oregorger's Acid-Etched Gutripper]|h|r", -- [4]
-							500, -- [5]
-						}, -- [73]
-						{
-							1424232060, -- [1]
-							"GP", -- [2]
-							"Vikid", -- [3]
-							"|cffa335ee|Hitem:113882:0:0:0:0:0:0:0:100:0:5:1:566|h[Glutton's Kerchief]|h|r", -- [4]
-							500, -- [5]
-						}, -- [74]
-						{
-							1424233200, -- [1]
-							"GP", -- [2]
-							"Innocentz", -- [3]
-							"|cffa335ee|Hitem:113896:0:0:0:0:0:0:0:100:0:5:1:566|h[Fleshmelter Bracers]|h|r", -- [4]
-							500, -- [5]
-						}, -- [75]
-						{
-							1424233200, -- [1]
-							"GP", -- [2]
-							"Sikonos", -- [3]
-							"|cffa335ee|Hitem:113896:0:0:0:0:0:0:0:100:0:5:1:566|h[Fleshmelter Bracers]|h|r", -- [4]
-							500, -- [5]
-						}, -- [76]
-						{
-							1424233260, -- [1]
-							"GP", -- [2]
-							"Freed", -- [3]
-							"|cffa335ee|Hitem:113894:0:0:0:0:0:0:0:100:0:5:1:566|h[Lava-Dipped Greathelm]|h|r", -- [4]
-							1000, -- [5]
-						}, -- [77]
-						{
-							1424233260, -- [1]
-							"GP", -- [2]
-							"Vikid", -- [3]
-							"|cffa335ee|Hitem:113893:0:0:0:0:0:0:0:100:0:5:1:566|h[Blast Furnace Door]|h|r", -- [4]
-							1250, -- [5]
-						}, -- [78]
-						{
-							1424233260, -- [1]
-							"GP", -- [2]
-							"Olgheals", -- [3]
-							"|cffa335ee|Hitem:113887:0:0:0:0:0:0:0:100:0:5:1:566|h[Bracers of Spattered Steel]|h|r", -- [4]
-							500, -- [5]
-						}, -- [79]
-						{
-							1424233380, -- [1]
-							"GP", -- [2]
-							"Olgheals", -- [3]
-							"|cffa335ee|Hitem:119307:0:0:0:0:0:0:0:100:0:5:1:570|h[Leggings of the Iron Conqueror]|h|r", -- [4]
-							1000, -- [5]
-						}, -- [80]
-						{
-							1424233500, -- [1]
-							"GP", -- [2]
-							"Vikid", -- [3]
-							"|cffa335ee|Hitem:119313:0:0:0:0:0:0:0:100:0:5:1:570|h[Leggings of the Iron Vanquisher]|h|r", -- [4]
-							1000, -- [5]
-						}, -- [81]
-						{
-							1424233620, -- [1]
-							"GP", -- [2]
-							"Mtnk", -- [3]
-							"|cffa335ee|Hitem:119320:0:0:0:0:0:0:0:100:0:5:1:570|h[Leggings of the Iron Protector]|h|r", -- [4]
-							1000, -- [5]
-						}, -- [82]
-						{
-							1424234340, -- [1]
-							"GP", -- [2]
-							"Thimblelina", -- [3]
-							"|cffa335ee|Hitem:113949:0:0:0:0:0:0:0:100:0:5:1:566|h[Cannonball Loader's Grips]|h|r", -- [4]
-							750, -- [5]
-						}, -- [83]
-						{
-							1424234340, -- [1]
-							"GP", -- [2]
-							"Freed", -- [3]
-							"|cffa335ee|Hitem:113947:0:0:0:0:0:0:0:100:0:5:1:566|h[Epicenter Loop]|h|r", -- [4]
-							500, -- [5]
-						}, -- [84]
-						{
-							1424234400, -- [1]
-							"GP", -- [2]
-							"Thimblelina", -- [3]
-							"|cffa335ee|Hitem:113941:0:0:0:0:0:0:0:100:0:5:1:566|h[Seeking Ember Girdle]|h|r", -- [4]
-							750, -- [5]
-						}, -- [85]
-						{
-							1424234400, -- [1]
-							"GP", -- [2]
-							"Thimblelina", -- [3]
-							"|cffa335ee|Hitem:113950:0:0:0:0:0:0:0:100:0:5:1:566|h[Ironcrusher's Collar]|h|r", -- [4]
-							750, -- [5]
-						}, -- [86]
-						{
-							1424234580, -- [1]
-							"GP", -- [2]
-							"Cowcups", -- [3]
-							"|cffa335ee|Hitem:113944:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Legguards of the Stampede]|h|r", -- [4]
-							1149, -- [5]
-						}, -- [87]
-						{
-							1424235240, -- [1]
-							"GP", -- [2]
-							"Shayanwe", -- [3]
-							"|cffa335ee|Hitem:113955:0:0:0:0:0:0:0:100:0:5:1:566|h[Grenadier's Belt]|h|r", -- [4]
-							750, -- [5]
-						}, -- [88]
-						{
-							1424235240, -- [1]
-							"GP", -- [2]
-							"Comet", -- [3]
-							"|cffa335ee|Hitem:113962:0:0:0:0:0:0:0:100:0:5:1:566|h[Squire's Electroplated Bracers]|h|r", -- [4]
-							500, -- [5]
-						}, -- [89]
-						{
-							1424235240, -- [1]
-							"GP", -- [2]
-							"Shayanwe", -- [3]
-							"|cffa335ee|Hitem:113960:0:0:0:0:0:0:0:100:0:5:1:566|h[Engine-Stoker's Lantern]|h|r", -- [4]
-							500, -- [5]
-						}, -- [90]
-						{
-							1424235300, -- [1]
-							"GP", -- [2]
-							"Goargrim", -- [3]
-							"|cffa335ee|Hitem:113959:0:0:0:0:0:0:0:100:0:5:1:566|h[Thogar's Serrated Chain]|h|r", -- [4]
-							500, -- [5]
-						}, -- [91]
-						{
-							1424235420, -- [1]
-							"GP", -- [2]
-							"Kovenary", -- [3]
-							"|cffa335ee|Hitem:119314:0:0:0:0:0:0:0:100:0:5:1:570|h[Shoulders of the Iron Vanquisher]|h|r", -- [4]
-							750, -- [5]
-						}, -- [92]
-						{
-							1424235420, -- [1]
-							"GP", -- [2]
-							"Hugs", -- [3]
-							"|cffa335ee|Hitem:119309:0:0:0:0:0:0:0:100:0:5:1:570|h[Shoulders of the Iron Conqueror]|h|r", -- [4]
-							750, -- [5]
-						}, -- [93]
-						{
-							1424235480, -- [1]
-							"GP", -- [2]
-							"Cowcups", -- [3]
-							"|cffa335ee|Hitem:119322:0:0:0:0:0:0:0:100:0:5:1:570|h[Shoulders of the Iron Protector]|h|r", -- [4]
-							750, -- [5]
-						}, -- [94]
-						{
-							1424236140, -- [1]
-							"GP", -- [2]
-							"Vikid", -- [3]
-							"|cffa335ee|Hitem:113906:0:0:0:0:0:0:0:100:0:5:1:566|h[Gauntlets of Dramatic Blows]|h|r", -- [4]
-							750, -- [5]
-						}, -- [95]
-						{
-							1424236140, -- [1]
-							"GP", -- [2]
-							"Lustya", -- [3]
-							"|cffa335ee|Hitem:113897:0:0:0:0:0:0:0:100:0:5:1:566|h[Hans'gar's Forgehammer]|h|r", -- [4]
-							500, -- [5]
-						}, -- [96]
-						{
-							1424236200, -- [1]
-							"GP", -- [2]
-							"Hugs", -- [3]
-							"|cffa335ee|Hitem:113904:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Franzok's Headsmasher]|h|r", -- [4]
-							1723, -- [5]
-						}, -- [97]
-						{
-							1424237100, -- [1]
-							"GP", -- [2]
-							"Lustya", -- [3]
-							"|cffa335ee|Hitem:120077:0:0:0:0:0:0:0:100:0:5:1:566|h[Choker of Bloody Flame]|h|r", -- [4]
-							500, -- [5]
-						}, -- [98]
-						{
-							1424237160, -- [1]
-							"GP", -- [2]
-							"Vikid", -- [3]
-							"|cffa335ee|Hitem:113916:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Charbreath Firecloak]|h|r", -- [4]
-							700, -- [5]
-						}, -- [99]
-						{
-							1424237220, -- [1]
-							"GP", -- [2]
-							"Mtnk", -- [3]
-							"|cffa335ee|Hitem:119318:0:0:0:0:0:0:0:100:0:5:1:570|h[Chest of the Iron Protector]|h|r", -- [4]
-							1000, -- [5]
-						}, -- [100]
-						{
-							1424237340, -- [1]
-							"GP", -- [2]
-							"Vikid", -- [3]
-							"|cffa335ee|Hitem:113913:0:0:0:0:0:0:0:100:0:5:1:566|h[Ka'graz's Burning Blade]|h|r", -- [4]
-							500, -- [5]
-						}, -- [101]
-						{
-							1424237340, -- [1]
-							"GP", -- [2]
-							"Anahkin", -- [3]
-							"|cffa335ee|Hitem:119315:0:0:0:0:0:0:0:100:0:5:1:570|h[Chest of the Iron Vanquisher]|h|r", -- [4]
-							1000, -- [5]
-						}, -- [102]
-						{
-							1424238000, -- [1]
-							"GP", -- [2]
-							"Vikid", -- [3]
-							"|cffa335ee|Hitem:113936:0:0:0:0:0:0:0:100:0:5:1:566|h[Sabatons of Fractal Earth]|h|r", -- [4]
-							750, -- [5]
-						}, -- [103]
-						{
-							1424238060, -- [1]
-							"GP", -- [2]
-							"Princip", -- [3]
-							"|cffa335ee|Hitem:113935:0:0:0:0:0:0:0:100:0:5:1:566|h[Bracers of Shattered Stalactites]|h|r", -- [4]
-							500, -- [5]
-						}, -- [104]
-						{
-							1424238120, -- [1]
-							"GP", -- [2]
-							"Thimblelina", -- [3]
-							"|cffa335ee|Hitem:113934:0:0:0:0:0:0:0:100:0:5:1:566|h[Fang of the Earth]|h|r", -- [4]
-							1500, -- [5]
-						}, -- [105]
-						{
-							1424238180, -- [1]
-							"GP", -- [2]
-							"Shayanwe", -- [3]
-							"|cffa335ee|Hitem:119321:0:0:0:0:0:0:0:100:0:5:1:570|h[Helm of the Iron Protector]|h|r", -- [4]
-							1000, -- [5]
-						}, -- [106]
-						{
-							1424238180, -- [1]
-							"GP", -- [2]
-							"Darkwuke", -- [3]
-							"|cffa335ee|Hitem:119308:0:0:0:0:0:0:0:100:0:5:1:570|h[Helm of the Iron Conqueror]|h|r", -- [4]
-							1000, -- [5]
-						}, -- [107]
-						{
-							1424238180, -- [1]
-							"GP", -- [2]
-							"Freed", -- [3]
-							"|cffa335ee|Hitem:119308:0:0:0:0:0:0:0:100:0:5:1:570|h[Helm of the Iron Conqueror]|h|r", -- [4]
-							1000, -- [5]
-						}, -- [108]
-						{
-							1424238180, -- [1]
-							"GP", -- [2]
-							"Innocentz", -- [3]
-							"|cffa335ee|Hitem:113927:0:0:0:0:0:0:0:100:0:5:1:566|h[Kromog's Brutal Fist]|h|r", -- [4]
-							500, -- [5]
-						}, -- [109]
-						{
-							1424238180, -- [1]
-							"GP", -- [2]
-							"Fuzzicans", -- [3]
-							"|cffa335ee|Hitem:113926:0:0:0:0:0:0:0:100:0:5:1:566|h[Kromog's Protecting Palm]|h|r", -- [4]
-							500, -- [5]
-						}, -- [110]
-						{
-							1424238240, -- [1]
-							"GP", -- [2]
-							"Lustya", -- [3]
-							"|cffa335ee|Hitem:113929:0:0:0:0:0:0:0:100:0:5:1:566|h[Cloak of Delving Secrets]|h|r", -- [4]
-							500, -- [5]
-						}, -- [111]
-						{
-							1424241240, -- [1]
-							"GP", -- [2]
-							"Misdameanor", -- [3]
-							"|cffa335ee|Hitem:113975:0:0:0:0:0:0:0:100:0:5:1:566|h[Uk'urogg's Corrupted Seal]|h|r", -- [4]
-							500, -- [5]
-						}, -- [112]
-						{
-							1424241240, -- [1]
-							"GP", -- [2]
-							"Hugs", -- [3]
-							"|cffa335ee|Hitem:113975:0:0:0:0:0:0:0:100:0:5:1:566|h[Uk'urogg's Corrupted Seal]|h|r", -- [4]
-							500, -- [5]
-						}, -- [113]
-						{
-							1424241240, -- [1]
-							"GP", -- [2]
-							"Buklau", -- [3]
-							"|cffa335ee|Hitem:113965:0:0:0:0:0:0:0:100:0:5:1:566|h[Sorka's Chainfist]|h|r", -- [4]
-							500, -- [5]
-						}, -- [114]
-						{
-							1424241300, -- [1]
-							"GP", -- [2]
-							"Thimblelina", -- [3]
-							"|cffa335ee|Hitem:113967:0:0:0:0:0:0:0:100:0:5:1:566|h[Deckhand's Rope Belt]|h|r", -- [4]
-							750, -- [5]
-						}, -- [115]
-						{
-							1424241300, -- [1]
-							"GP", -- [2]
-							"Mtnk", -- [3]
-							"|cffa335ee|Hitem:113972:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Cloak of Sanguine Terror]|h|r", -- [4]
-							700, -- [5]
-						}, -- [116]
-						{
-							1424241300, -- [1]
-							"GP", -- [2]
-							"Freed", -- [3]
-							"|cffa335ee|Hitem:119306:0:0:0:0:0:0:0:100:0:5:1:570|h[Gauntlets of the Iron Conqueror]|h|r", -- [4]
-							750, -- [5]
-						}, -- [117]
-						{
-							1424241360, -- [1]
-							"GP", -- [2]
-							"Princip", -- [3]
-							"|cffa335ee|Hitem:119311:0:0:0:0:0:0:0:100:0:5:1:570|h[Gauntlets of the Iron Vanquisher]|h|r", -- [4]
-							750, -- [5]
-						}, -- [118]
-						{
-							1424241360, -- [1]
-							"GP", -- [2]
-							"Strpol", -- [3]
-							"|cffa335ee|Hitem:119311:0:0:0:0:0:0:0:100:0:5:1:570|h[Gauntlets of the Iron Vanquisher]|h|r", -- [4]
-							750, -- [5]
-						}, -- [119]
-						{
-							1424407920, -- [1]
-							"GP", -- [2]
-							"Lustya", -- [3]
-							"|cffa335ee|Hitem:113944:0:0:0:0:0:0:0:100:0:6:1:567|h[Legguards of the Stampede]|h|r", -- [4]
-							1414, -- [5]
-						}, -- [120]
-						{
-							1424407920, -- [1]
-							"GP", -- [2]
-							"Cowcups", -- [3]
-							"|cffa335ee|Hitem:113943:0:0:0:0:0:0:0:100:0:6:1:567|h[Bracers of the Wolf's Cunning]|h|r", -- [4]
-							707, -- [5]
-						}, -- [121]
-						{
-							1424408100, -- [1]
-							"GP", -- [2]
-							"Mtnk", -- [3]
-							"|cffa335ee|Hitem:113950:0:0:0:0:0:0:0:100:0:6:2:562:567|h[Ironcrusher's Collar]|h|r", -- [4]
-							1218, -- [5]
-						}, -- [122]
-						{
-							1424408160, -- [1]
-							"GP", -- [2]
-							"Comet", -- [3]
-							"|cffa335ee|Hitem:113952:0:0:0:0:0:0:0:100:0:6:1:567|h[Choker of Bestial Force]|h|r", -- [4]
-							707, -- [5]
-						}, -- [123]
-						{
-							1424408640, -- [1]
-							"GP", -- [2]
-							"Løki", -- [3]
-							"|cffa335ee|Hitem:119342:0:0:0:0:0:0:0:100:0:6:1:567|h[Furnace Stoker's Footwraps]|h|r", -- [4]
-							1061, -- [5]
-						}, -- [124]
-						{
-							1424838780, -- [1]
-							"GP", -- [2]
-							"Fuzzicans", -- [3]
-							"|cffa335ee|Hitem:113896:0:0:0:0:0:0:0:100:0:5:1:566|h[Fleshmelter Bracers]|h|r", -- [4]
-							500, -- [5]
-						}, -- [125]
-						{
-							1424838900, -- [1]
-							"GP", -- [2]
-							"Mtnk", -- [3]
-							"|cffa335ee|Hitem:113886:0:0:0:0:0:0:0:100:0:5:1:566|h[Crescent of Living Magma]|h|r", -- [4]
-							500, -- [5]
-						}, -- [126]
-						{
-							1424838960, -- [1]
-							"GP", -- [2]
-							"Goargrim", -- [3]
-							"|cffa335ee|Hitem:113894:0:0:0:0:0:0:0:100:0:5:3:561:564:566|h[Lava-Dipped Greathelm]|h|r", -- [4]
-							1349, -- [5]
-						}, -- [127]
-						{
-							1424838960, -- [1]
-							"GP", -- [2]
-							"Anahkin", -- [3]
-							"|cffa335ee|Hitem:119313:0:0:0:0:0:0:0:100:0:5:1:570|h[Leggings of the Iron Vanquisher]|h|r", -- [4]
-							1000, -- [5]
-						}, -- [128]
-						{
-							1424839200, -- [1]
-							"GP", -- [2]
-							"Fuzzicans", -- [3]
-							"|cffa335ee|Hitem:119307:0:0:0:0:0:0:0:100:0:5:1:570|h[Leggings of the Iron Conqueror]|h|r", -- [4]
-							1000, -- [5]
-						}, -- [129]
-						{
-							1424839800, -- [1]
-							"GP", -- [2]
-							"Innocentz", -- [3]
-							"|cffa335ee|Hitem:113940:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Seal of the Savage Howl]|h|r", -- [4]
-							700, -- [5]
-						}, -- [130]
-						{
-							1424839860, -- [1]
-							"GP", -- [2]
-							"Buklau", -- [3]
-							"|cffa335ee|Hitem:113939:0:0:0:0:0:0:0:100:0:5:2:41:566|h[Tal'rak, Bloody Skull of the Thunderlords]|h|r", -- [4]
-							500, -- [5]
-						}, -- [131]
-						{
-							1424839920, -- [1]
-							"GP", -- [2]
-							"Freed", -- [3]
-							"|cffa335ee|Hitem:119192:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Ironspike Chew Toy]|h|r", -- [4]
-							1450, -- [5]
-						}, -- [132]
-						{
-							1424839980, -- [1]
-							"GP", -- [2]
-							"Thimblelina", -- [3]
-							"|cffa335ee|Hitem:113948:0:0:0:0:0:0:0:100:0:5:1:566|h[Darmac's Unstable Talisman]|h|r", -- [4]
-							1250, -- [5]
-						}, -- [133]
-						{
-							1424840460, -- [1]
-							"GP", -- [2]
-							"Thimblelina", -- [3]
-							"|cffa335ee|Hitem:113953:0:0:0:0:0:0:0:100:0:5:1:566|h[Thogar's Control Rod]|h|r", -- [4]
-							500, -- [5]
-						}, -- [134]
-						{
-							1424840580, -- [1]
-							"GP", -- [2]
-							"Olgheals", -- [3]
-							"|cffa335ee|Hitem:113960:0:0:0:0:0:0:0:100:0:5:1:566|h[Engine-Stoker's Lantern]|h|r", -- [4]
-							500, -- [5]
-						}, -- [135]
-						{
-							1424840640, -- [1]
-							"GP", -- [2]
-							"Comet", -- [3]
-							"|cffa335ee|Hitem:113963:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Siege Bomber's Band]|h|r", -- [4]
-							700, -- [5]
-						}, -- [136]
-						{
-							1424840640, -- [1]
-							"GP", -- [2]
-							"Princip", -- [3]
-							"|cffa335ee|Hitem:119314:0:0:0:0:0:0:0:100:0:5:1:570|h[Shoulders of the Iron Vanquisher]|h|r", -- [4]
-							750, -- [5]
-						}, -- [137]
-						{
-							1424840700, -- [1]
-							"GP", -- [2]
-							"Comet", -- [3]
-							"|cffa335ee|Hitem:113964:0:0:0:0:0:0:0:100:0:5:1:566|h[Conductor's Multi-Pocket Girdle]|h|r", -- [4]
-							750, -- [5]
-						}, -- [138]
-						{
-							1424840700, -- [1]
-							"GP", -- [2]
-							"Haseoh", -- [3]
-							"|cffa335ee|Hitem:119322:0:0:0:0:0:0:0:100:0:5:1:570|h[Shoulders of the Iron Protector]|h|r", -- [4]
-							750, -- [5]
-						}, -- [139]
-						{
-							1424843100, -- [1]
-							"GP", -- [2]
-							"Haseoh", -- [3]
-							"|cffa335ee|Hitem:113966:0:0:0:0:0:0:0:100:0:5:1:566|h[Gar'an's Brutal Spearlauncher]|h|r", -- [4]
-							1500, -- [5]
-						}, -- [140]
-						{
-							1424843100, -- [1]
-							"GP", -- [2]
-							"Buklau", -- [3]
-							"|cffa335ee|Hitem:113978:0:0:0:0:0:0:0:100:0:5:1:566|h[Sorka's Nightshade Cowl]|h|r", -- [4]
-							1000, -- [5]
-						}, -- [141]
-						{
-							1424843100, -- [1]
-							"GP", -- [2]
-							"Strpol", -- [3]
-							"|cffa335ee|Hitem:113978:0:0:0:0:0:0:0:100:0:5:1:566|h[Sorka's Nightshade Cowl]|h|r", -- [4]
-							1000, -- [5]
-						}, -- [142]
-						{
-							1424843160, -- [1]
-							"GP", -- [2]
-							"Olgheals", -- [3]
-							"|cffa335ee|Hitem:119306:0:0:0:0:0:0:0:100:0:5:1:570|h[Gauntlets of the Iron Conqueror]|h|r", -- [4]
-							750, -- [5]
-						}, -- [143]
-						{
-							1424843160, -- [1]
-							"GP", -- [2]
-							"Goargrim", -- [3]
-							"|cffa335ee|Hitem:113972:0:0:0:0:0:0:0:100:0:5:1:566|h[Cloak of Sanguine Terror]|h|r", -- [4]
-							500, -- [5]
-						}, -- [144]
-						{
-							1424843160, -- [1]
-							"GP", -- [2]
-							"Rrenju", -- [3]
-							"|cffa335ee|Hitem:113967:0:0:0:0:0:0:0:100:0:5:1:566|h[Deckhand's Rope Belt]|h|r", -- [4]
-							750, -- [5]
-						}, -- [145]
-						{
-							1424843160, -- [1]
-							"GP", -- [2]
-							"Buklau", -- [3]
-							"|cffa335ee|Hitem:119319:0:0:0:0:0:0:0:100:0:5:1:570|h[Gauntlets of the Iron Protector]|h|r", -- [4]
-							750, -- [5]
-						}, -- [146]
-						{
-							1424843820, -- [1]
-							"GP", -- [2]
-							"Anahkin", -- [3]
-							"|cffa335ee|Hitem:113904:0:0:0:0:0:0:0:100:0:5:1:566|h[Franzok's Headsmasher]|h|r", -- [4]
-							500, -- [5]
-						}, -- [147]
-						{
-							1424843820, -- [1]
-							"GP", -- [2]
-							"Vikid", -- [3]
-							"|cffa335ee|Hitem:113905:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Tablet of Turnbuckle Teamwork]|h|r", -- [4]
-							1436, -- [5]
-						}, -- [148]
-						{
-							1424845080, -- [1]
-							"GP", -- [2]
-							"Vikid", -- [3]
-							"|cffa335ee|Hitem:113925:0:0:0:0:0:0:0:100:0:5:1:566|h[Flamefury Gauntlets]|h|r", -- [4]
-							750, -- [5]
-						}, -- [149]
-						{
-							1424845140, -- [1]
-							"GP", -- [2]
-							"Princip", -- [3]
-							"|cffa335ee|Hitem:113924:0:0:0:0:0:0:0:100:0:5:1:566|h[Flamebender's Shoulderguards]|h|r", -- [4]
-							750, -- [5]
-						}, -- [150]
-						{
-							1424845140, -- [1]
-							"GP", -- [2]
-							"Vikid", -- [3]
-							"|cffa335ee|Hitem:113921:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Firestorm Legplates]|h|r", -- [4]
-							1200, -- [5]
-						}, -- [151]
-						{
-							1424845140, -- [1]
-							"GP", -- [2]
-							"Sikonos", -- [3]
-							"|cffa335ee|Hitem:113913:0:0:0:0:0:0:0:100:0:5:2:40:566|h[Ka'graz's Burning Blade]|h|r", -- [4]
-							500, -- [5]
-						}, -- [152]
-						{
-							1424845200, -- [1]
-							"GP", -- [2]
-							"Bharay", -- [3]
-							"|cffa335ee|Hitem:119315:0:0:0:0:0:0:0:100:0:5:1:570|h[Chest of the Iron Vanquisher]|h|r", -- [4]
-							1000, -- [5]
-						}, -- [153]
-						{
-							1424845200, -- [1]
-							"GP", -- [2]
-							"Fuzzicans", -- [3]
-							"|cffa335ee|Hitem:119305:0:0:0:0:0:0:0:100:0:5:1:570|h[Chest of the Iron Conqueror]|h|r", -- [4]
-							1000, -- [5]
-						}, -- [154]
-						{
-							1424845200, -- [1]
-							"GP", -- [2]
-							"Goargrim", -- [3]
-							"|cffa335ee|Hitem:119318:0:0:0:0:0:0:0:100:0:5:1:570|h[Chest of the Iron Protector]|h|r", -- [4]
-							1000, -- [5]
-						}, -- [155]
-						{
-							1424845980, -- [1]
-							"GP", -- [2]
-							"Mtnk", -- [3]
-							"|cffa335ee|Hitem:113926:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Kromog's Protecting Palm]|h|r", -- [4]
-							700, -- [5]
-						}, -- [156]
-						{
-							1424846040, -- [1]
-							"GP", -- [2]
-							"Princip", -- [3]
-							"|cffa335ee|Hitem:113931:0:0:0:0:0:0:0:100:0:5:1:566|h[Beating Heart of the Mountain]|h|r", -- [4]
-							1250, -- [5]
-						}, -- [157]
-						{
-							1424846040, -- [1]
-							"GP", -- [2]
-							"Goargrim", -- [3]
-							"|cffa335ee|Hitem:119321:0:0:0:0:0:0:0:100:0:5:1:570|h[Helm of the Iron Protector]|h|r", -- [4]
-							1000, -- [5]
-						}, -- [158]
-						{
-							1424846040, -- [1]
-							"GP", -- [2]
-							"Haseoh", -- [3]
-							"|cffa335ee|Hitem:119321:0:0:0:0:0:0:0:100:0:5:1:570|h[Helm of the Iron Protector]|h|r", -- [4]
-							1000, -- [5]
-						}, -- [159]
-						{
-							1425446040, -- [1]
-							"GP", -- [2]
-							"Princip", -- [3]
-							"|cffa335ee|Hitem:113951:0:0:0:0:0:0:0:100:0:6:1:567|h[Unrendable Wolfhide Robes]|h|r", -- [4]
-							1414, -- [5]
-						}, -- [160]
-						{
-							1425446040, -- [1]
-							"GP", -- [2]
-							"Goargrim", -- [3]
-							"|cffa335ee|Hitem:113950:0:0:0:0:0:0:0:100:0:6:1:567|h[Ironcrusher's Collar]|h|r", -- [4]
-							1061, -- [5]
-						}, -- [161]
-						{
-							1425446100, -- [1]
-							"GP", -- [2]
-							"Cùps", -- [3]
-							"|cffa335ee|Hitem:113944:0:0:0:0:0:0:0:100:0:6:2:565:567|h[Legguards of the Stampede]|h|r", -- [4]
-							1614, -- [5]
-						}, -- [162]
-						{
-							1425446160, -- [1]
-							"GP", -- [2]
-							"Løki", -- [3]
-							"|cffa335ee|Hitem:113948:0:0:0:0:0:0:0:100:0:6:1:567|h[Darmac's Unstable Talisman]|h|r", -- [4]
-							1768, -- [5]
-						}, -- [163]
-						{
-							1425452400, -- [1]
-							"GP", -- [2]
-							"Toppies", -- [3]
-							"|cffa335ee|Hitem:113869:0:0:0:0:0:0:0:100:0:6:2:40:567|h[Inferno-Flame Staff]|h|r", -- [4]
-							2828, -- [5]
-						}, -- [164]
-						{
-							1425452520, -- [1]
-							"GP", -- [2]
-							"Olgheals", -- [3]
-							"|cffa335ee|Hitem:113864:0:0:0:0:0:0:0:100:0:6:2:562:567|h[Cavedweller's Climbers]|h|r", -- [4]
-							1218, -- [5]
-						}, -- [165]
-						{
-							1425452520, -- [1]
-							"GP", -- [2]
-							"Buklau", -- [3]
-							"|cffa335ee|Hitem:113870:0:0:0:0:0:0:0:100:0:6:1:567|h[Vest of Forceful Fury]|h|r", -- [4]
-							1414, -- [5]
-						}, -- [166]
-						{
-							1425452640, -- [1]
-							"GP", -- [2]
-							"Løki", -- [3]
-							"|cffa335ee|Hitem:120078:0:0:0:0:0:0:0:100:0:6:1:567|h[Runescribed Gronncloak]|h|r", -- [4]
-							707, -- [5]
-						}, -- [167]
-						{
-							1425612960, -- [1]
-							"GP", -- [2]
-							"Haseoh", -- [3]
-							"|cffa335ee|Hitem:119339:0:0:0:0:0:0:0:100:0:6:1:567|h[Treads of the Veteran Smith]|h|r", -- [4]
-							1061, -- [5]
-						}, -- [168]
-						{
-							1425969180, -- [1]
-							"GP", -- [2]
-							"Sikonos", -- [3]
-							"|cffa335ee|Hitem:113990:0:0:0:0:0:0:0:100:0:5:3:561:564:566|h[Overdriven Spaulders]|h|r", -- [4]
-							1062, -- [5]
-						}, -- [169]
-						{
-							1425969240, -- [1]
-							"GP", -- [2]
-							"Cùps", -- [3]
-							"|cffa335ee|Hitem:113982:0:0:0:0:0:0:0:100:0:5:1:566|h[Chestguard of the Siegemaker]|h|r", -- [4]
-							1000, -- [5]
-						}, -- [170]
-						{
-							1425969300, -- [1]
-							"GP", -- [2]
-							"Sikonos", -- [3]
-							"|cffa335ee|Hitem:113990:0:0:0:0:0:0:0:100:0:5:3:561:42:566|h[Overdriven Spaulders]|h|r", -- [4]
-							887, -- [5]
-						}, -- [171]
-						{
-							1425969300, -- [1]
-							"GP", -- [2]
-							"Buklau", -- [3]
-							"|cffa335ee|Hitem:113989:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Shattering Smash Leggings]|h|r", -- [4]
-							1149, -- [5]
-						}, -- [172]
+						["time"] = 1416306420,
 					},
 				},
 			},
 		},
+		["announce"] = {
+			["profiles"] = {
+				["Slash Cry"] = {
+					["medium"] = "OFFICER",
+				},
+			},
+		},
+		["gptooltip"] = {
+		},
+		["whisper"] = {
+		},
+	},
+	["global"] = {
+		["last_version"] = "v5.11.6",
+		["last_tier"] = 601,
 	},
 	["profileKeys"] = {
 		["Metal - Illidan"] = "Mind Games",
@@ -6601,21 +6254,16 @@ EPGP_DB = {
 		["Colton - Dark Iron"] = "Rated Baddie Grounds",
 		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
 		["Comet - Illidan"] = "Mind Games",
-		["Plane - Illidan"] = "Slash Cry",
-		["Evan - Illidan"] = "Mind Games",
 		["Natal - Illidan"] = "Slash Cry",
-	},
-	["global"] = {
-		["last_version"] = "v5.11.6",
-		["last_tier"] = 601,
+		["Evan - Illidan"] = "Mind Games",
+		["Plane - Illidan"] = "Slash Cry",
 	},
 	["profiles"] = {
 		["Slash Cry"] = {
-			["outsiders"] = 0,
 			["bonus_loot_log"] = {
 				{
-					["player"] = "Cptnadsack",
 					["timestamp"] = "2014-10-23 19:34:00",
+					["player"] = "Cptnadsack",
 					["coinsLeft"] = "14",
 					["currencyID"] = "0",
 				}, -- [1]
@@ -6623,24 +6271,24 @@ EPGP_DB = {
 					["player"] = "Cptnadsack",
 					["coinsLeft"] = "13",
 					["timestamp"] = "2014-10-23 19:40:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112733:0:0:0:0:0:0:0:90:0:5:2:449:448|h[Wall-Borer Bracers]|h|r",
+					["currencyID"] = "0",
 				}, -- [2]
 				{
-					["timestamp"] = "2014-10-23 19:54:00",
 					["player"] = "Cptnadsack",
+					["timestamp"] = "2014-10-23 19:54:00",
 					["coinsLeft"] = "12",
 					["currencyID"] = "0",
 				}, -- [3]
 				{
-					["player"] = "Cptnadsack",
 					["timestamp"] = "2014-10-23 20:11:00",
+					["player"] = "Cptnadsack",
 					["coinsLeft"] = "11",
 					["currencyID"] = "0",
 				}, -- [4]
 				{
-					["player"] = "Cptnadsack",
 					["timestamp"] = "2014-10-23 20:21:00",
+					["player"] = "Cptnadsack",
 					["coinsLeft"] = "10",
 					["currencyID"] = "0",
 				}, -- [5]
@@ -6648,18 +6296,18 @@ EPGP_DB = {
 					["player"] = "Shamalamadim",
 					["coinsLeft"] = "5",
 					["timestamp"] = "2014-10-23 20:34:00",
-					["reward"] = "|cffa335ee|Hitem:112879:0:0:0:0:0:0:0:90:0:5:1:449|h[Ticking Ebon Detonator]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112879:0:0:0:0:0:0:0:90:0:5:1:449|h[Ticking Ebon Detonator]|h|r",
 				}, -- [6]
 				{
-					["timestamp"] = "2014-10-23 20:34:00",
 					["player"] = "Xcalibre",
+					["timestamp"] = "2014-10-23 20:34:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [7]
 				{
-					["timestamp"] = "2014-10-23 20:37:00",
 					["player"] = "Cptnadsack",
+					["timestamp"] = "2014-10-23 20:37:00",
 					["coinsLeft"] = "9",
 					["currencyID"] = "0",
 				}, -- [8]
@@ -6667,36 +6315,36 @@ EPGP_DB = {
 					["player"] = "Cptnadsack",
 					["coinsLeft"] = "8",
 					["timestamp"] = "2014-10-23 20:49:00",
-					["reward"] = "|cffa335ee|Hitem:112834:0:0:0:0:0:0:0:90:0:5:2:449:448|h[Untarnishable Greatbelt]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112834:0:0:0:0:0:0:0:90:0:5:2:449:448|h[Untarnishable Greatbelt]|h|r",
 				}, -- [9]
 				{
-					["timestamp"] = "2014-10-23 20:49:00",
 					["player"] = "Xcalibre",
+					["timestamp"] = "2014-10-23 20:49:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [10]
 				{
-					["timestamp"] = "2014-10-23 21:06:00",
 					["player"] = "Cptnadsack",
+					["timestamp"] = "2014-10-23 21:06:00",
 					["coinsLeft"] = "7",
 					["currencyID"] = "0",
 				}, -- [11]
 				{
-					["timestamp"] = "2014-10-23 21:07:00",
 					["player"] = "Shamalamadim",
+					["timestamp"] = "2014-10-23 21:07:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [12]
 				{
-					["player"] = "Cptnadsack",
 					["timestamp"] = "2014-10-23 21:21:00",
+					["player"] = "Cptnadsack",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [13]
 				{
-					["player"] = "Shamalamadim",
 					["timestamp"] = "2014-10-23 21:21:00",
+					["player"] = "Shamalamadim",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [14]
@@ -6704,54 +6352,54 @@ EPGP_DB = {
 					["player"] = "Xcalibre",
 					["coinsLeft"] = "1",
 					["timestamp"] = "2014-10-23 21:21:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:99688:0:0:0:0:0:0:0:90:0:0:0|h[Leggings of the Cursed Conqueror]|h|r",
+					["currencyID"] = "0",
 				}, -- [15]
 				{
-					["timestamp"] = "2014-10-28 18:54:00",
 					["player"] = "Natal",
+					["timestamp"] = "2014-10-28 18:54:00",
 					["coinsLeft"] = "11",
 					["currencyID"] = "0",
 				}, -- [16]
 				{
-					["timestamp"] = "2014-10-28 19:02:00",
 					["player"] = "Natal",
+					["timestamp"] = "2014-10-28 19:02:00",
 					["coinsLeft"] = "10",
 					["currencyID"] = "0",
 				}, -- [17]
 				{
-					["timestamp"] = "2014-10-28 19:10:00",
 					["player"] = "Cptnadsack",
+					["timestamp"] = "2014-10-28 19:10:00",
 					["coinsLeft"] = "16",
 					["currencyID"] = "0",
 				}, -- [18]
 				{
-					["timestamp"] = "2014-10-28 19:10:00",
 					["player"] = "Natal",
+					["timestamp"] = "2014-10-28 19:10:00",
 					["coinsLeft"] = "9",
 					["currencyID"] = "0",
 				}, -- [19]
 				{
-					["player"] = "Cptnadsack",
 					["timestamp"] = "2014-10-28 19:16:00",
+					["player"] = "Cptnadsack",
 					["coinsLeft"] = "15",
 					["currencyID"] = "0",
 				}, -- [20]
 				{
-					["player"] = "Natal",
 					["timestamp"] = "2014-10-28 19:16:00",
+					["player"] = "Natal",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [21]
 				{
-					["player"] = "Mythsara",
 					["timestamp"] = "2014-10-28 19:16:00",
+					["player"] = "Mythsara",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [22]
 				{
-					["player"] = "Atmos",
 					["timestamp"] = "2014-10-28 19:16:00",
+					["player"] = "Atmos",
 					["coinsLeft"] = "7",
 					["currencyID"] = "0",
 				}, -- [23]
@@ -6759,24 +6407,24 @@ EPGP_DB = {
 					["player"] = "Djchi",
 					["coinsLeft"] = "9",
 					["timestamp"] = "2014-10-28 19:35:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112721:0:0:0:0:0:0:0:90:0:6:1:450|h[Extinguished Ember of Galakras]|h|r",
+					["currencyID"] = "0",
 				}, -- [24]
 				{
-					["player"] = "Natal",
 					["timestamp"] = "2014-10-28 19:35:00",
+					["player"] = "Natal",
 					["coinsLeft"] = "7",
 					["currencyID"] = "0",
 				}, -- [25]
 				{
-					["player"] = "Cptnadsack",
 					["timestamp"] = "2014-10-28 19:35:00",
+					["player"] = "Cptnadsack",
 					["coinsLeft"] = "14",
 					["currencyID"] = "0",
 				}, -- [26]
 				{
-					["player"] = "Natal",
 					["timestamp"] = "2014-10-28 19:43:00",
+					["player"] = "Natal",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [27]
@@ -6784,18 +6432,18 @@ EPGP_DB = {
 					["player"] = "Cptnadsack",
 					["coinsLeft"] = "13",
 					["timestamp"] = "2014-10-28 19:43:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112741:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Earthbreaker's Steaming Chestplate]|h|r",
+					["currencyID"] = "0",
 				}, -- [28]
 				{
-					["player"] = "Djchi",
 					["timestamp"] = "2014-10-28 19:44:00",
+					["player"] = "Djchi",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [29]
 				{
-					["player"] = "Natal",
 					["timestamp"] = "2014-10-28 19:56:00",
+					["player"] = "Natal",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [30]
@@ -6803,24 +6451,24 @@ EPGP_DB = {
 					["player"] = "Cexcells",
 					["coinsLeft"] = "3",
 					["timestamp"] = "2014-10-28 19:56:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112767:0:0:0:0:0:0:0:90:0:6:1:450|h[Ashflare Pendant]|h|r",
+					["currencyID"] = "0",
 				}, -- [31]
 				{
-					["player"] = "Cptnadsack",
 					["timestamp"] = "2014-10-28 19:56:00",
+					["player"] = "Cptnadsack",
 					["coinsLeft"] = "12",
 					["currencyID"] = "0",
 				}, -- [32]
 				{
-					["player"] = "Djchi",
 					["timestamp"] = "2014-10-28 19:56:00",
+					["player"] = "Djchi",
 					["coinsLeft"] = "7",
 					["currencyID"] = "0",
 				}, -- [33]
 				{
-					["player"] = "Atmos",
 					["timestamp"] = "2014-10-28 19:56:00",
+					["player"] = "Atmos",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [34]
@@ -6828,37 +6476,37 @@ EPGP_DB = {
 					["player"] = "Natal",
 					["coinsLeft"] = "4",
 					["timestamp"] = "2014-10-28 20:04:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:99722:0:0:0:0:0:0:0:90:0:0:0|h[Gauntlets of the Cursed Protector]|h|r",
+					["currencyID"] = "0",
 				}, -- [35]
 				{
 					["player"] = "Cptnadsack",
 					["coinsLeft"] = "11",
 					["timestamp"] = "2014-10-28 20:04:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112785:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Gar'tok, Strength of the Faithful]|h|r",
+					["currencyID"] = "0",
 				}, -- [36]
 				{
-					["player"] = "Atmos",
 					["timestamp"] = "2014-10-28 20:05:00",
+					["player"] = "Atmos",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [37]
 				{
-					["timestamp"] = "2014-10-28 20:15:00",
 					["player"] = "Natal",
+					["timestamp"] = "2014-10-28 20:15:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [38]
 				{
-					["timestamp"] = "2014-10-28 20:15:00",
 					["player"] = "Djchi",
+					["timestamp"] = "2014-10-28 20:15:00",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [39]
 				{
-					["timestamp"] = "2014-10-28 20:15:00",
 					["player"] = "Cptnadsack",
+					["timestamp"] = "2014-10-28 20:15:00",
 					["coinsLeft"] = "10",
 					["currencyID"] = "0",
 				}, -- [40]
@@ -6866,67 +6514,67 @@ EPGP_DB = {
 					["player"] = "Cptnadsack",
 					["coinsLeft"] = "9",
 					["timestamp"] = "2014-10-28 20:24:00",
-					["reward"] = "|cffa335ee|Hitem:112897:0:0:0:0:0:0:0:90:0:6:1:450|h[Siegecrafter's Forge Hammer]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112897:0:0:0:0:0:0:0:90:0:6:1:450|h[Siegecrafter's Forge Hammer]|h|r",
 				}, -- [41]
 				{
 					["player"] = "Natal",
 					["coinsLeft"] = "2",
 					["timestamp"] = "2014-10-28 20:24:00",
-					["reward"] = "|cffa335ee|Hitem:99719:0:0:0:0:0:0:0:90:0:0:0|h[Shoulders of the Cursed Protector]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:99719:0:0:0:0:0:0:0:90:0:0:0|h[Shoulders of the Cursed Protector]|h|r",
 				}, -- [42]
 				{
-					["timestamp"] = "2014-10-28 20:24:00",
 					["player"] = "Atmos",
+					["timestamp"] = "2014-10-28 20:24:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [43]
 				{
-					["timestamp"] = "2014-10-28 20:25:00",
 					["player"] = "Cexcells",
+					["timestamp"] = "2014-10-28 20:25:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [44]
 				{
-					["timestamp"] = "2014-10-28 20:26:00",
 					["player"] = "Djchi",
+					["timestamp"] = "2014-10-28 20:26:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [45]
 				{
-					["timestamp"] = "2014-10-28 20:35:00",
 					["player"] = "Natal",
+					["timestamp"] = "2014-10-28 20:35:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [46]
 				{
-					["timestamp"] = "2014-10-28 20:35:00",
 					["player"] = "Cptnadsack",
+					["timestamp"] = "2014-10-28 20:35:00",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [47]
 				{
-					["timestamp"] = "2014-10-28 20:36:00",
 					["player"] = "Djchi",
+					["timestamp"] = "2014-10-28 20:36:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [48]
 				{
-					["timestamp"] = "2014-10-28 20:43:00",
 					["player"] = "Natal",
+					["timestamp"] = "2014-10-28 20:43:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [49]
 				{
-					["timestamp"] = "2014-10-28 20:43:00",
 					["player"] = "Cptnadsack",
+					["timestamp"] = "2014-10-28 20:43:00",
 					["coinsLeft"] = "7",
 					["currencyID"] = "0",
 				}, -- [50]
 				{
-					["timestamp"] = "2014-10-28 20:44:00",
 					["player"] = "Atmos",
+					["timestamp"] = "2014-10-28 20:44:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [51]
@@ -6934,18 +6582,18 @@ EPGP_DB = {
 					["player"] = "Djchi",
 					["coinsLeft"] = "3",
 					["timestamp"] = "2014-10-28 20:44:00",
-					["reward"] = "|cffa335ee|Hitem:112849:0:0:0:0:0:0:0:90:0:6:1:450|h[Thok's Acid-Grooved Tooth]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112849:0:0:0:0:0:0:0:90:0:6:1:450|h[Thok's Acid-Grooved Tooth]|h|r",
 				}, -- [52]
 				{
-					["timestamp"] = "2014-10-28 20:55:00",
 					["player"] = "Natal",
+					["timestamp"] = "2014-10-28 20:55:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [53]
 				{
-					["timestamp"] = "2014-10-28 20:56:00",
 					["player"] = "Cptnadsack",
+					["timestamp"] = "2014-10-28 20:56:00",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [54]
@@ -6953,19 +6601,19 @@ EPGP_DB = {
 					["player"] = "Atmos",
 					["coinsLeft"] = "2",
 					["timestamp"] = "2014-10-28 20:56:00",
-					["reward"] = "|cffa335ee|Hitem:112917:0:0:0:0:0:0:0:90:0:6:1:450|h[Kil'ruk's Band of Ascendancy]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112917:0:0:0:0:0:0:0:90:0:6:1:450|h[Kil'ruk's Band of Ascendancy]|h|r",
 				}, -- [55]
 				{
 					["player"] = "Cexcells",
 					["coinsLeft"] = "1",
 					["timestamp"] = "2014-10-28 20:56:00",
-					["reward"] = "|cffa335ee|Hitem:112916:0:0:0:0:0:0:0:90:0:6:1:450|h[Iyyokuk's Hereditary Seal]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112916:0:0:0:0:0:0:0:90:0:6:1:450|h[Iyyokuk's Hereditary Seal]|h|r",
 				}, -- [56]
 				{
-					["timestamp"] = "2014-10-28 22:03:00",
 					["player"] = "Atmos",
+					["timestamp"] = "2014-10-28 22:03:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [57]
@@ -6973,18 +6621,18 @@ EPGP_DB = {
 					["player"] = "Cexcells",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2014-10-28 22:04:00",
-					["reward"] = "|cffa335ee|Hitem:112938:0:0:0:0:0:0:0:90:0:6:1:450|h[Black Blood of Y'Shaarj]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112938:0:0:0:0:0:0:0:90:0:6:1:450|h[Black Blood of Y'Shaarj]|h|r",
 				}, -- [58]
 				{
-					["timestamp"] = "2014-10-28 22:04:00",
 					["player"] = "Natal",
+					["timestamp"] = "2014-10-28 22:04:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [59]
 				{
-					["timestamp"] = "2014-10-28 22:04:00",
 					["player"] = "Djchi",
+					["timestamp"] = "2014-10-28 22:04:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [60]
@@ -6992,12 +6640,12 @@ EPGP_DB = {
 					["player"] = "Cptnadsack",
 					["coinsLeft"] = "5",
 					["timestamp"] = "2014-10-28 22:04:00",
-					["reward"] = "|cffa335ee|Hitem:112934:0:0:0:0:0:0:0:90:0:6:1:450|h[Spaulders of the Fallen Warchief]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112934:0:0:0:0:0:0:0:90:0:6:1:450|h[Spaulders of the Fallen Warchief]|h|r",
 				}, -- [61]
 				{
-					["timestamp"] = "2014-10-29 18:52:00",
 					["player"] = "Shamalamadim",
+					["timestamp"] = "2014-10-29 18:52:00",
 					["coinsLeft"] = "18",
 					["currencyID"] = "0",
 				}, -- [62]
@@ -7005,78 +6653,78 @@ EPGP_DB = {
 					["player"] = "Shamalamadim",
 					["coinsLeft"] = "17",
 					["timestamp"] = "2014-10-29 19:02:00",
-					["reward"] = "|cffa335ee|Hitem:112480:0:0:0:0:0:0:0:90:0:6:1:450|h[Grips of Unending Anguish]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112480:0:0:0:0:0:0:0:90:0:6:1:450|h[Grips of Unending Anguish]|h|r",
 				}, -- [63]
 				{
-					["timestamp"] = "2014-10-29 19:04:00",
 					["player"] = "Comet",
+					["timestamp"] = "2014-10-29 19:04:00",
 					["coinsLeft"] = "11",
 					["currencyID"] = "0",
 				}, -- [64]
 				{
-					["timestamp"] = "2014-10-29 19:12:00",
 					["player"] = "Shamalamadim",
+					["timestamp"] = "2014-10-29 19:12:00",
 					["coinsLeft"] = "16",
 					["currencyID"] = "0",
 				}, -- [65]
 				{
-					["timestamp"] = "2014-10-29 19:14:00",
 					["player"] = "Comet",
+					["timestamp"] = "2014-10-29 19:14:00",
 					["coinsLeft"] = "10",
 					["currencyID"] = "0",
 				}, -- [66]
 				{
-					["timestamp"] = "2014-10-29 19:21:00",
 					["player"] = "Shamalamadim",
+					["timestamp"] = "2014-10-29 19:21:00",
 					["coinsLeft"] = "15",
 					["currencyID"] = "0",
 				}, -- [67]
 				{
-					["timestamp"] = "2014-10-29 19:21:00",
 					["player"] = "Comet",
+					["timestamp"] = "2014-10-29 19:21:00",
 					["coinsLeft"] = "9",
 					["currencyID"] = "0",
 				}, -- [68]
 				{
-					["timestamp"] = "2014-10-29 19:38:00",
 					["player"] = "Shamalamadim",
+					["timestamp"] = "2014-10-29 19:38:00",
 					["coinsLeft"] = "14",
 					["currencyID"] = "0",
 				}, -- [69]
 				{
-					["timestamp"] = "2014-10-29 19:39:00",
 					["player"] = "Comet",
+					["timestamp"] = "2014-10-29 19:39:00",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [70]
 				{
-					["timestamp"] = "2014-10-29 20:01:00",
 					["player"] = "Comet",
+					["timestamp"] = "2014-10-29 20:01:00",
 					["coinsLeft"] = "7",
 					["currencyID"] = "0",
 				}, -- [71]
 				{
-					["timestamp"] = "2014-10-29 20:01:00",
 					["player"] = "Shamalamadim",
+					["timestamp"] = "2014-10-29 20:01:00",
 					["coinsLeft"] = "13",
 					["currencyID"] = "0",
 				}, -- [72]
 				{
-					["timestamp"] = "2014-10-29 20:14:00",
 					["player"] = "Shamalamadim",
+					["timestamp"] = "2014-10-29 20:14:00",
 					["coinsLeft"] = "12",
 					["currencyID"] = "0",
 				}, -- [73]
 				{
-					["timestamp"] = "2014-10-29 20:15:00",
 					["player"] = "Comet",
+					["timestamp"] = "2014-10-29 20:15:00",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [74]
 				{
-					["timestamp"] = "2014-10-29 20:25:00",
 					["player"] = "Shamalamadim",
+					["timestamp"] = "2014-10-29 20:25:00",
 					["coinsLeft"] = "11",
 					["currencyID"] = "0",
 				}, -- [75]
@@ -7084,24 +6732,24 @@ EPGP_DB = {
 					["player"] = "Comet",
 					["coinsLeft"] = "5",
 					["timestamp"] = "2014-10-29 20:25:00",
-					["reward"] = "|cffa335ee|Hitem:112778:0:0:0:0:0:0:0:90:0:6:1:450|h[Nazgrim's Burnished Insignia]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112778:0:0:0:0:0:0:0:90:0:6:1:450|h[Nazgrim's Burnished Insignia]|h|r",
 				}, -- [76]
 				{
-					["timestamp"] = "2014-10-29 20:35:00",
 					["player"] = "Shamalamadim",
+					["timestamp"] = "2014-10-29 20:35:00",
 					["coinsLeft"] = "10",
 					["currencyID"] = "0",
 				}, -- [77]
 				{
-					["timestamp"] = "2014-10-29 20:35:00",
 					["player"] = "Comet",
+					["timestamp"] = "2014-10-29 20:35:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [78]
 				{
-					["timestamp"] = "2014-10-29 20:47:00",
 					["player"] = "Shamalamadim",
+					["timestamp"] = "2014-10-29 20:47:00",
 					["coinsLeft"] = "9",
 					["currencyID"] = "0",
 				}, -- [79]
@@ -7109,18 +6757,18 @@ EPGP_DB = {
 					["player"] = "Comet",
 					["coinsLeft"] = "3",
 					["timestamp"] = "2014-10-29 20:47:00",
-					["reward"] = "|cffa335ee|Hitem:112892:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Lever of the Megantholithic Apparatus]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112892:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Lever of the Megantholithic Apparatus]|h|r",
 				}, -- [80]
 				{
-					["player"] = "Shamalamadim",
 					["timestamp"] = "2014-10-29 20:59:00",
+					["player"] = "Shamalamadim",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [81]
 				{
-					["player"] = "Comet",
 					["timestamp"] = "2014-10-29 21:00:00",
+					["player"] = "Comet",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [82]
@@ -7128,54 +6776,54 @@ EPGP_DB = {
 					["player"] = "Shamalamadim",
 					["coinsLeft"] = "7",
 					["timestamp"] = "2014-10-29 21:09:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112851:0:0:0:0:0:0:0:90:0:6:1:450|h[Gleaming Eye of the Devilsaur]|h|r",
+					["currencyID"] = "0",
 				}, -- [83]
 				{
-					["player"] = "Comet",
 					["timestamp"] = "2014-10-29 21:09:00",
+					["player"] = "Comet",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [84]
 				{
-					["player"] = "Shamalamadim",
 					["timestamp"] = "2014-10-29 21:30:00",
+					["player"] = "Shamalamadim",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [85]
 				{
-					["player"] = "Shamalamadim",
 					["timestamp"] = "2014-10-29 22:15:00",
+					["player"] = "Shamalamadim",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [86]
 				{
-					["player"] = "Comet",
 					["timestamp"] = "2014-10-29 22:16:00",
+					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [87]
 				{
-					["player"] = "Cptnadsack",
 					["timestamp"] = "2014-11-04 20:31:00",
+					["player"] = "Cptnadsack",
 					["coinsLeft"] = "13",
 					["currencyID"] = "0",
 				}, -- [88]
 				{
-					["player"] = "Djhots",
 					["timestamp"] = "2014-12-03 22:30:00",
+					["player"] = "Djhots",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [89]
 				{
-					["player"] = "Comet",
 					["timestamp"] = "2014-12-08 19:08:00",
+					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [90]
 				{
-					["player"] = "Azimyth",
 					["timestamp"] = "2014-12-08 20:50:00",
+					["player"] = "Azimyth",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [91]
@@ -7183,12 +6831,12 @@ EPGP_DB = {
 					["player"] = "Djchi",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2014-12-08 20:50:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113607:0:0:0:0:0:0:0:100:0:5:1:566|h[Butcher's Terrible Tenderizer]|h|r",
+					["currencyID"] = "0",
 				}, -- [92]
 				{
-					["player"] = "Comet",
 					["timestamp"] = "2014-12-08 20:50:00",
+					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [93]
@@ -7196,24 +6844,24 @@ EPGP_DB = {
 					["player"] = "Atmos",
 					["coinsLeft"] = "2",
 					["timestamp"] = "2014-12-08 21:23:00",
-					["reward"] = "|cffa335ee|Hitem:113595:0:0:0:0:0:0:0:100:0:5:1:566|h[Treads of Sand and Blood]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113595:0:0:0:0:0:0:0:100:0:5:1:566|h[Treads of Sand and Blood]|h|r",
 				}, -- [94]
 				{
-					["timestamp"] = "2014-12-08 21:23:00",
 					["player"] = "Djhots",
+					["timestamp"] = "2014-12-08 21:23:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [95]
 				{
-					["timestamp"] = "2014-12-08 21:24:00",
 					["player"] = "Metal",
+					["timestamp"] = "2014-12-08 21:24:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [96]
 				{
-					["timestamp"] = "2014-12-08 21:25:00",
 					["player"] = "Mythsara",
+					["timestamp"] = "2014-12-08 21:25:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [97]
@@ -7221,18 +6869,18 @@ EPGP_DB = {
 					["player"] = "Azpek",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2014-12-08 22:58:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113608:0:0:0:0:0:0:0:100:0:5:1:566|h[Hood of Dispassionate Execution]|h|r",
+					["currencyID"] = "0",
 				}, -- [98]
 				{
-					["player"] = "Mythsara",
 					["timestamp"] = "2014-12-08 22:58:00",
+					["player"] = "Mythsara",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [99]
 				{
-					["player"] = "Djhots",
 					["timestamp"] = "2014-12-08 22:58:00",
+					["player"] = "Djhots",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [100]
@@ -7240,12 +6888,12 @@ EPGP_DB = {
 					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2014-12-08 22:58:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113636:0:0:0:0:0:0:0:100:0:5:1:566|h[Belt of Bloody Guts]|h|r",
+					["currencyID"] = "0",
 				}, -- [101]
 				{
-					["player"] = "Cptnadsack",
 					["timestamp"] = "2014-12-08 23:54:00",
+					["player"] = "Cptnadsack",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [102]
@@ -7253,31 +6901,31 @@ EPGP_DB = {
 					["player"] = "Cexcells",
 					["coinsLeft"] = "1",
 					["timestamp"] = "2014-12-08 23:55:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113859:0:0:0:0:0:0:0:100:0:3:0|h[Quiescent Runestone]|h|r",
+					["currencyID"] = "0",
 				}, -- [103]
 				{
 					["player"] = "Darkano",
 					["coinsLeft"] = "18",
 					["timestamp"] = "2014-12-09 19:10:00",
-					["reward"] = "|cffa335ee|Hitem:113604:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Kargath's Last Link]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113604:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Kargath's Last Link]|h|r",
 				}, -- [104]
 				{
-					["timestamp"] = "2014-12-09 19:10:00",
 					["player"] = "Atmos",
+					["timestamp"] = "2014-12-09 19:10:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [105]
 				{
-					["timestamp"] = "2014-12-09 19:10:00",
 					["player"] = "Comet",
+					["timestamp"] = "2014-12-09 19:10:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [106]
 				{
-					["timestamp"] = "2014-12-09 19:11:00",
 					["player"] = "Azimyth",
+					["timestamp"] = "2014-12-09 19:11:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [107]
@@ -7285,12 +6933,12 @@ EPGP_DB = {
 					["player"] = "Djchi",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2014-12-09 19:12:00",
-					["reward"] = "|cffa335ee|Hitem:113598:0:0:0:0:0:0:0:100:0:5:1:566|h[Champion's Medallion]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113598:0:0:0:0:0:0:0:100:0:5:1:566|h[Champion's Medallion]|h|r",
 				}, -- [108]
 				{
-					["timestamp"] = "2014-12-09 21:16:00",
 					["player"] = "Azpek",
+					["timestamp"] = "2014-12-09 21:16:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [109]
@@ -7298,18 +6946,18 @@ EPGP_DB = {
 					["player"] = "Mythsara",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2014-12-09 21:16:00",
-					["reward"] = "|cffa335ee|Hitem:113649:0:0:0:0:0:0:0:100:0:5:1:566|h[Mountainwalker's Boots]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113649:0:0:0:0:0:0:0:100:0:5:1:566|h[Mountainwalker's Boots]|h|r",
 				}, -- [110]
 				{
-					["timestamp"] = "2014-12-09 21:16:00",
 					["player"] = "Djhots",
+					["timestamp"] = "2014-12-09 21:16:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [111]
 				{
-					["timestamp"] = "2014-12-09 21:16:00",
 					["player"] = "Eightyone",
+					["timestamp"] = "2014-12-09 21:16:00",
 					["coinsLeft"] = "7",
 					["currencyID"] = "0",
 				}, -- [112]
@@ -7317,60 +6965,60 @@ EPGP_DB = {
 					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2014-12-09 21:18:00",
-					["reward"] = "|cffa335ee|Hitem:113640:0:0:0:0:0:0:0:100:0:5:1:566|h[Earthwarped Bladestaff]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113640:0:0:0:0:0:0:0:100:0:5:1:566|h[Earthwarped Bladestaff]|h|r",
 				}, -- [113]
 				{
-					["timestamp"] = "2014-12-09 21:40:00",
 					["player"] = "Azpek",
+					["timestamp"] = "2014-12-09 21:40:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [114]
 				{
-					["timestamp"] = "2014-12-09 21:41:00",
 					["player"] = "Mythsara",
+					["timestamp"] = "2014-12-09 21:41:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [115]
 				{
-					["timestamp"] = "2014-12-09 21:41:00",
 					["player"] = "Comet",
+					["timestamp"] = "2014-12-09 21:41:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [116]
 				{
-					["timestamp"] = "2014-12-09 21:41:00",
 					["player"] = "Djhots",
+					["timestamp"] = "2014-12-09 21:41:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [117]
 				{
-					["timestamp"] = "2014-12-09 22:33:00",
 					["player"] = "Azpek",
+					["timestamp"] = "2014-12-09 22:33:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [118]
 				{
-					["timestamp"] = "2014-12-09 22:33:00",
 					["player"] = "Mythsara",
+					["timestamp"] = "2014-12-09 22:33:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [119]
 				{
-					["timestamp"] = "2014-12-10 18:49:00",
 					["player"] = "Metal",
+					["timestamp"] = "2014-12-10 18:49:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [120]
 				{
-					["player"] = "Azpek",
 					["timestamp"] = "2014-12-10 19:53:00",
+					["player"] = "Azpek",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [121]
 				{
-					["player"] = "Livepets",
 					["timestamp"] = "2014-12-10 19:53:00",
+					["player"] = "Livepets",
 					["coinsLeft"] = "17",
 					["currencyID"] = "0",
 				}, -- [122]
@@ -7378,12 +7026,12 @@ EPGP_DB = {
 					["player"] = "Djhots",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2014-12-10 19:53:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113832:0:0:0:0:0:0:0:100:0:5:1:566|h[Treacherous Palms]|h|r",
+					["currencyID"] = "0",
 				}, -- [123]
 				{
-					["player"] = "Mythsara",
 					["timestamp"] = "2014-12-10 19:54:00",
+					["player"] = "Mythsara",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [124]
@@ -7391,37 +7039,37 @@ EPGP_DB = {
 					["player"] = "Eightyone",
 					["coinsLeft"] = "7",
 					["timestamp"] = "2014-12-10 21:40:00",
-					["reward"] = "|cffa335ee|Hitem:113841:0:0:0:0:0:0:0:100:0:5:1:566|h[Ko'ragh's Family Locket]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113841:0:0:0:0:0:0:0:100:0:5:1:566|h[Ko'ragh's Family Locket]|h|r",
 				}, -- [125]
 				{
 					["player"] = "Livepets",
 					["coinsLeft"] = "17",
 					["timestamp"] = "2014-12-10 21:40:00",
-					["reward"] = "|cffa335ee|Hitem:113843:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Spell-Sink Signet]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113843:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Spell-Sink Signet]|h|r",
 				}, -- [126]
 				{
-					["timestamp"] = "2014-12-10 21:43:00",
 					["player"] = "Djhots",
+					["timestamp"] = "2014-12-10 21:43:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [127]
 				{
-					["timestamp"] = "2014-12-11 19:13:00",
 					["player"] = "Cexcells",
+					["timestamp"] = "2014-12-11 19:13:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [128]
 				{
-					["timestamp"] = "2014-12-11 20:25:00",
 					["player"] = "Cexcells",
+					["timestamp"] = "2014-12-11 20:25:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [129]
 				{
-					["player"] = "Mythsara",
 					["timestamp"] = "2014-12-15 21:36:00",
+					["player"] = "Mythsara",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [130]
@@ -7429,55 +7077,55 @@ EPGP_DB = {
 					["player"] = "Atmos",
 					["coinsLeft"] = "2",
 					["timestamp"] = "2014-12-15 21:36:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113593:0:0:0:0:0:0:0:100:0:6:1:567|h[Grips of Vicious Mauling]|h|r",
+					["currencyID"] = "0",
 				}, -- [131]
 				{
 					["player"] = "Cexcells",
 					["coinsLeft"] = "1",
 					["timestamp"] = "2014-12-15 21:37:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113604:0:0:0:0:0:0:0:100:0:6:1:567|h[Kargath's Last Link]|h|r",
+					["currencyID"] = "0",
 				}, -- [132]
 				{
-					["timestamp"] = "2014-12-16 18:38:00",
 					["player"] = "Comet",
+					["timestamp"] = "2014-12-16 18:38:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [133]
 				{
-					["timestamp"] = "2014-12-16 18:57:00",
 					["player"] = "Azimyth",
+					["timestamp"] = "2014-12-16 18:57:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [134]
 				{
-					["timestamp"] = "2014-12-16 18:57:00",
 					["player"] = "Comet",
+					["timestamp"] = "2014-12-16 18:57:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [135]
 				{
-					["timestamp"] = "2014-12-16 18:58:00",
 					["player"] = "Cptnadsack",
+					["timestamp"] = "2014-12-16 18:58:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [136]
 				{
-					["timestamp"] = "2014-12-16 19:13:00",
 					["player"] = "Azimyth",
+					["timestamp"] = "2014-12-16 19:13:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [137]
 				{
-					["timestamp"] = "2014-12-16 19:35:00",
 					["player"] = "Djhots",
+					["timestamp"] = "2014-12-16 19:35:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [138]
 				{
-					["timestamp"] = "2014-12-16 20:18:00",
 					["player"] = "Atmos",
+					["timestamp"] = "2014-12-16 20:18:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [139]
@@ -7485,24 +7133,24 @@ EPGP_DB = {
 					["player"] = "Azimyth",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2014-12-16 20:51:00",
-					["reward"] = "|cffa335ee|Hitem:113843:0:0:0:0:0:0:0:100:0:5:1:566|h[Spell-Sink Signet]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113843:0:0:0:0:0:0:0:100:0:5:1:566|h[Spell-Sink Signet]|h|r",
 				}, -- [140]
 				{
-					["timestamp"] = "2014-12-16 20:52:00",
 					["player"] = "Cexcells",
+					["timestamp"] = "2014-12-16 20:52:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [141]
 				{
-					["player"] = "Comet",
 					["timestamp"] = "2014-12-17 19:11:00",
+					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [142]
 				{
-					["player"] = "Atmos",
 					["timestamp"] = "2014-12-17 19:11:00",
+					["player"] = "Atmos",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [143]
@@ -7510,24 +7158,24 @@ EPGP_DB = {
 					["player"] = "Djhots",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2014-12-17 19:11:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113604:0:0:0:0:0:0:0:100:0:6:1:567|h[Kargath's Last Link]|h|r",
+					["currencyID"] = "0",
 				}, -- [144]
 				{
-					["player"] = "Cptnadsack",
 					["timestamp"] = "2014-12-22 19:01:00",
+					["player"] = "Cptnadsack",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [145]
 				{
-					["player"] = "Cptnadsack",
 					["timestamp"] = "2014-12-22 19:58:00",
+					["player"] = "Cptnadsack",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [146]
 				{
-					["player"] = "Cexcells",
 					["timestamp"] = "2014-12-22 21:00:00",
+					["player"] = "Cexcells",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [147]
@@ -7535,49 +7183,49 @@ EPGP_DB = {
 					["player"] = "Arctype-Nagrand",
 					["coinsLeft"] = "3",
 					["timestamp"] = "2014-12-28 17:34:00",
-					["reward"] = "|cffa335ee|Hitem:113610:0:0:0:0:0:0:0:100:0:3:0|h[Meatmonger's Gory Grips]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113610:0:0:0:0:0:0:0:100:0:3:0|h[Meatmonger's Gory Grips]|h|r",
 				}, -- [148]
 				{
 					["player"] = "Cptnadsack",
 					["coinsLeft"] = "3",
 					["timestamp"] = "2014-12-29 18:51:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113632:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Gauntlets of the Heavy Hand]|h|r",
+					["currencyID"] = "0",
 				}, -- [149]
 				{
-					["player"] = "Comet",
 					["timestamp"] = "2014-12-29 18:51:00",
+					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [150]
 				{
-					["player"] = "Atmos",
 					["timestamp"] = "2014-12-29 18:51:00",
+					["player"] = "Atmos",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [151]
 				{
-					["player"] = "Cptnadsack",
 					["timestamp"] = "2014-12-29 19:04:00",
+					["player"] = "Cptnadsack",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [152]
 				{
-					["player"] = "Djhots",
 					["timestamp"] = "2014-12-29 19:20:00",
+					["player"] = "Djhots",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [153]
 				{
-					["player"] = "Cptnadsack",
 					["timestamp"] = "2014-12-29 19:22:00",
+					["player"] = "Cptnadsack",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [154]
 				{
-					["player"] = "Atmos",
 					["timestamp"] = "2014-12-29 19:37:00",
+					["player"] = "Atmos",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [155]
@@ -7585,18 +7233,18 @@ EPGP_DB = {
 					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2014-12-29 19:37:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113667:0:0:0:0:0:0:0:100:0:5:1:566|h[Phemos' Double Slasher]|h|r",
+					["currencyID"] = "0",
 				}, -- [156]
 				{
-					["player"] = "Cexcells",
 					["timestamp"] = "2014-12-29 20:18:00",
+					["player"] = "Cexcells",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [157]
 				{
-					["player"] = "Cptnadsack",
 					["timestamp"] = "2014-12-29 20:19:00",
+					["player"] = "Cptnadsack",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [158]
@@ -7604,48 +7252,48 @@ EPGP_DB = {
 					["player"] = "Atmos",
 					["coinsLeft"] = "2",
 					["timestamp"] = "2014-12-29 21:06:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113591:0:0:0:0:0:0:0:100:0:6:1:567|h[The Bladefist]|h|r",
+					["currencyID"] = "0",
 				}, -- [159]
 				{
-					["player"] = "Comet",
 					["timestamp"] = "2014-12-29 21:06:00",
+					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [160]
 				{
-					["player"] = "Djhots",
 					["timestamp"] = "2014-12-29 21:07:00",
+					["player"] = "Djhots",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [161]
 				{
-					["timestamp"] = "2014-12-30 18:48:00",
 					["player"] = "Comet",
+					["timestamp"] = "2014-12-30 18:48:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [162]
 				{
-					["timestamp"] = "2014-12-30 18:48:00",
 					["player"] = "Atmos",
+					["timestamp"] = "2014-12-30 18:48:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [163]
 				{
-					["timestamp"] = "2014-12-30 19:18:00",
 					["player"] = "Cexcells",
+					["timestamp"] = "2014-12-30 19:18:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [164]
 				{
-					["timestamp"] = "2014-12-30 19:32:00",
 					["player"] = "Cexcells",
+					["timestamp"] = "2014-12-30 19:32:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [165]
 				{
-					["timestamp"] = "2014-12-30 20:15:00",
 					["player"] = "Cexcells",
+					["timestamp"] = "2014-12-30 20:15:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [166]
@@ -7653,37 +7301,37 @@ EPGP_DB = {
 					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2014-12-30 20:18:00",
-					["reward"] = "|cffa335ee|Hitem:113851:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Reaver's Nose Ring]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113851:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Reaver's Nose Ring]|h|r",
 				}, -- [167]
 				{
 					["player"] = "Djhots",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2014-12-30 21:01:00",
-					["reward"] = "|cffa335ee|Hitem:113598:0:0:0:0:0:0:0:100:0:6:1:567|h[Champion's Medallion]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113598:0:0:0:0:0:0:0:100:0:6:1:567|h[Champion's Medallion]|h|r",
 				}, -- [168]
 				{
-					["timestamp"] = "2014-12-30 21:01:00",
 					["player"] = "Comet",
+					["timestamp"] = "2014-12-30 21:01:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [169]
 				{
-					["timestamp"] = "2014-12-30 21:01:00",
 					["player"] = "Atmos",
+					["timestamp"] = "2014-12-30 21:01:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [170]
 				{
-					["timestamp"] = "2014-12-30 21:37:00",
 					["player"] = "Comet",
+					["timestamp"] = "2014-12-30 21:37:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [171]
 				{
-					["timestamp"] = "2014-12-30 21:37:00",
 					["player"] = "Djhots",
+					["timestamp"] = "2014-12-30 21:37:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [172]
@@ -7691,24 +7339,24 @@ EPGP_DB = {
 					["player"] = "Atmos",
 					["coinsLeft"] = "2",
 					["timestamp"] = "2014-12-30 21:37:00",
-					["reward"] = "|cffa335ee|Hitem:113667:0:0:0:0:0:0:0:100:0:6:1:567|h[Phemos' Double Slasher]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113667:0:0:0:0:0:0:0:100:0:6:1:567|h[Phemos' Double Slasher]|h|r",
 				}, -- [173]
 				{
-					["player"] = "Cptnadsack",
 					["timestamp"] = "2015-01-06 18:42:00",
+					["player"] = "Cptnadsack",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [174]
 				{
-					["player"] = "Azimyth",
 					["timestamp"] = "2015-01-06 18:54:00",
+					["player"] = "Azimyth",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [175]
 				{
-					["player"] = "Cptnadsack",
 					["timestamp"] = "2015-01-06 18:54:00",
+					["player"] = "Cptnadsack",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [176]
@@ -7716,12 +7364,12 @@ EPGP_DB = {
 					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-01-06 18:54:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113634:0:0:0:0:0:0:0:100:0:5:3:564:43:566|h[Bracers of Spare Skin]|h|r",
+					["currencyID"] = "0",
 				}, -- [177]
 				{
-					["player"] = "Azimyth",
 					["timestamp"] = "2015-01-06 19:08:00",
+					["player"] = "Azimyth",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [178]
@@ -7729,30 +7377,30 @@ EPGP_DB = {
 					["player"] = "Cptnadsack",
 					["coinsLeft"] = "3",
 					["timestamp"] = "2015-01-06 19:10:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113659:0:0:0:0:0:0:0:100:0:5:1:566|h[Fleshchewer Greatbelt]|h|r",
+					["currencyID"] = "0",
 				}, -- [179]
 				{
-					["player"] = "Cptnadsack",
 					["timestamp"] = "2015-01-06 19:31:00",
+					["player"] = "Cptnadsack",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [180]
 				{
-					["player"] = "Cptnadsack",
 					["timestamp"] = "2015-01-06 20:03:00",
+					["player"] = "Cptnadsack",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [181]
 				{
-					["timestamp"] = "2015-01-06 21:12:00",
 					["player"] = "Cptnadsack",
+					["timestamp"] = "2015-01-06 21:12:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [182]
 				{
-					["player"] = "Comet",
 					["timestamp"] = "2015-01-06 21:52:00",
+					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [183]
@@ -7760,19 +7408,19 @@ EPGP_DB = {
 					["player"] = "Djhots",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-01-07 18:52:00",
-					["reward"] = "|cffa335ee|Hitem:113832:0:0:0:0:0:0:0:100:0:6:1:567|h[Treacherous Palms]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113832:0:0:0:0:0:0:0:100:0:6:1:567|h[Treacherous Palms]|h|r",
 				}, -- [184]
 				{
 					["player"] = "Cexcells",
 					["coinsLeft"] = "1",
 					["timestamp"] = "2015-01-07 18:52:00",
-					["reward"] = "|cffa335ee|Hitem:113835:0:0:0:0:0:0:0:100:0:6:1:567|h[Shards of Nothing]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113835:0:0:0:0:0:0:0:100:0:6:1:567|h[Shards of Nothing]|h|r",
 				}, -- [185]
 				{
-					["timestamp"] = "2015-01-07 18:52:00",
 					["player"] = "Comet",
+					["timestamp"] = "2015-01-07 18:52:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [186]
@@ -7780,18 +7428,18 @@ EPGP_DB = {
 					["player"] = "Atmos",
 					["coinsLeft"] = "2",
 					["timestamp"] = "2015-01-07 18:52:00",
-					["reward"] = "|cffa335ee|Hitem:113827:0:0:0:0:0:0:0:100:0:6:1:567|h[Belt of Imminent Lies]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113827:0:0:0:0:0:0:0:100:0:6:1:567|h[Belt of Imminent Lies]|h|r",
 				}, -- [187]
 				{
-					["timestamp"] = "2015-01-13 18:41:00",
 					["player"] = "Metal",
+					["timestamp"] = "2015-01-13 18:41:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [188]
 				{
-					["player"] = "Roy",
 					["timestamp"] = "2015-01-13 18:56:00",
+					["player"] = "Roy",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [189]
@@ -7799,12 +7447,12 @@ EPGP_DB = {
 					["player"] = "Azimyth",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-01-13 18:56:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113611:0:0:0:0:0:0:0:100:0:5:1:566|h[Flenser's Hookring]|h|r",
+					["currencyID"] = "0",
 				}, -- [190]
 				{
-					["player"] = "Comet",
 					["timestamp"] = "2015-01-13 18:56:00",
+					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [191]
@@ -7812,36 +7460,36 @@ EPGP_DB = {
 					["player"] = "Cptnadsack",
 					["coinsLeft"] = "3",
 					["timestamp"] = "2015-01-13 18:56:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113633:0:0:0:0:0:0:0:100:0:5:1:566|h[Entrail Squishers]|h|r",
+					["currencyID"] = "0",
 				}, -- [192]
 				{
-					["timestamp"] = "2015-01-13 19:07:00",
 					["player"] = "Azimyth",
+					["timestamp"] = "2015-01-13 19:07:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [193]
 				{
-					["timestamp"] = "2015-01-13 19:08:00",
 					["player"] = "Metal",
+					["timestamp"] = "2015-01-13 19:08:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [194]
 				{
-					["timestamp"] = "2015-01-13 19:08:00",
 					["player"] = "Cptnadsack",
+					["timestamp"] = "2015-01-13 19:08:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [195]
 				{
-					["timestamp"] = "2015-01-13 19:22:00",
 					["player"] = "Metal",
+					["timestamp"] = "2015-01-13 19:22:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [196]
 				{
-					["timestamp"] = "2015-01-13 19:23:00",
 					["player"] = "Roy",
+					["timestamp"] = "2015-01-13 19:23:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [197]
@@ -7849,12 +7497,12 @@ EPGP_DB = {
 					["player"] = "Roy",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-01-13 19:36:00",
-					["reward"] = "|cffa335ee|Hitem:113834:0:0:0:0:0:0:0:100:0:5:1:566|h[Pol's Blinded Eye]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113834:0:0:0:0:0:0:0:100:0:5:1:566|h[Pol's Blinded Eye]|h|r",
 				}, -- [198]
 				{
-					["timestamp"] = "2015-01-13 19:37:00",
 					["player"] = "Azimyth",
+					["timestamp"] = "2015-01-13 19:37:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [199]
@@ -7862,30 +7510,30 @@ EPGP_DB = {
 					["player"] = "Metal",
 					["coinsLeft"] = "3",
 					["timestamp"] = "2015-01-13 19:37:00",
-					["reward"] = "|cffa335ee|Hitem:113831:0:0:0:0:0:0:0:100:0:5:1:566|h[Chestplate of Arcane Volatility]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113831:0:0:0:0:0:0:0:100:0:5:1:566|h[Chestplate of Arcane Volatility]|h|r",
 				}, -- [200]
 				{
-					["timestamp"] = "2015-01-13 19:53:00",
 					["player"] = "Metal",
+					["timestamp"] = "2015-01-13 19:53:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [201]
 				{
-					["player"] = "Cptnadsack",
 					["timestamp"] = "2015-01-13 20:18:00",
+					["player"] = "Cptnadsack",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [202]
 				{
-					["timestamp"] = "2015-01-13 20:49:00",
 					["player"] = "Djhots",
+					["timestamp"] = "2015-01-13 20:49:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [203]
 				{
-					["timestamp"] = "2015-01-13 21:36:00",
 					["player"] = "Comet",
+					["timestamp"] = "2015-01-13 21:36:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [204]
@@ -7893,36 +7541,36 @@ EPGP_DB = {
 					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-01-13 22:37:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113657:0:0:0:0:0:0:0:100:0:6:1:567|h[Cloak of Creeping Necrosis]|h|r",
+					["currencyID"] = "0",
 				}, -- [205]
 				{
-					["player"] = "Djhots",
 					["timestamp"] = "2015-01-13 22:38:00",
+					["player"] = "Djhots",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [206]
 				{
-					["player"] = "Azimyth",
 					["timestamp"] = "2015-01-22 20:40:00",
+					["player"] = "Azimyth",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [207]
 				{
-					["player"] = "Dangerboy",
 					["timestamp"] = "2015-01-22 20:40:00",
+					["player"] = "Dangerboy",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [208]
 				{
-					["player"] = "Comet",
 					["timestamp"] = "2015-01-22 20:40:00",
+					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [209]
 				{
-					["player"] = "Amarä",
 					["timestamp"] = "2015-01-22 20:40:00",
+					["player"] = "Amarä",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [210]
@@ -7930,12 +7578,12 @@ EPGP_DB = {
 					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-01-22 23:14:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113611:0:0:0:0:0:0:0:100:0:5:1:566|h[Flenser's Hookring]|h|r",
+					["currencyID"] = "0",
 				}, -- [211]
 				{
-					["player"] = "Vûlcân",
 					["timestamp"] = "2015-01-23 22:42:00",
+					["player"] = "Vûlcân",
 					["coinsLeft"] = "17",
 					["currencyID"] = "0",
 				}, -- [212]
@@ -7943,36 +7591,36 @@ EPGP_DB = {
 					["player"] = "Metal",
 					["coinsLeft"] = "3",
 					["timestamp"] = "2015-01-23 22:42:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113659:0:0:0:0:0:0:0:100:0:5:1:566|h[Fleshchewer Greatbelt]|h|r",
+					["currencyID"] = "0",
 				}, -- [213]
 				{
-					["timestamp"] = "2015-01-23 23:05:00",
 					["player"] = "Vûlcân",
+					["timestamp"] = "2015-01-23 23:05:00",
 					["coinsLeft"] = "17",
 					["currencyID"] = "0",
 				}, -- [214]
 				{
-					["player"] = "Vûlcân",
 					["timestamp"] = "2015-01-23 23:21:00",
+					["player"] = "Vûlcân",
 					["coinsLeft"] = "17",
 					["currencyID"] = "0",
 				}, -- [215]
 				{
-					["player"] = "Metal",
 					["timestamp"] = "2015-01-23 23:23:00",
+					["player"] = "Metal",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [216]
 				{
-					["timestamp"] = "2015-01-24 16:48:00",
 					["player"] = "Kcazsar-Barthilas",
+					["timestamp"] = "2015-01-24 16:48:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [217]
 				{
-					["timestamp"] = "2015-01-24 17:55:00",
 					["player"] = "Kcazsar-Barthilas",
+					["timestamp"] = "2015-01-24 17:55:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [218]
@@ -7980,24 +7628,24 @@ EPGP_DB = {
 					["player"] = "Metal",
 					["coinsLeft"] = "3",
 					["timestamp"] = "2015-01-24 19:46:00",
-					["reward"] = "|cffa335ee|Hitem:113606:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Butcher's Bloody Cleaver]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113606:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Butcher's Bloody Cleaver]|h|r",
 				}, -- [219]
 				{
-					["player"] = "Xyrmfu-Arthas",
 					["timestamp"] = "2015-01-24 22:16:00",
+					["player"] = "Xyrmfu-Arthas",
 					["coinsLeft"] = "17",
 					["currencyID"] = "0",
 				}, -- [220]
 				{
-					["player"] = "Metal",
 					["timestamp"] = "2015-01-25 17:37:00",
+					["player"] = "Metal",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [221]
 				{
-					["player"] = "Xanvel-Barthilas",
 					["timestamp"] = "2015-01-25 21:32:00",
+					["player"] = "Xanvel-Barthilas",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [222]
@@ -8005,25 +7653,25 @@ EPGP_DB = {
 					["player"] = "Normalninja-Whisperwind",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-01-27 16:08:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113857:0:0:0:0:0:0:0:100:0:3:0|h[Staff of the Grand Imperator]|h|r",
+					["currencyID"] = "0",
 				}, -- [223]
 				{
 					["player"] = "Verku",
 					["coinsLeft"] = "8",
 					["timestamp"] = "2015-01-27 16:09:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113853:0:0:0:0:0:0:0:100:0:3:0|h[Captive Micro-Aberration]|h|r",
+					["currencyID"] = "0",
 				}, -- [224]
 				{
-					["timestamp"] = "2015-01-27 18:52:00",
 					["player"] = "Roy",
+					["timestamp"] = "2015-01-27 18:52:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [225]
 				{
-					["timestamp"] = "2015-01-27 19:02:00",
 					["player"] = "Roy",
+					["timestamp"] = "2015-01-27 19:02:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [226]
@@ -8031,12 +7679,12 @@ EPGP_DB = {
 					["player"] = "Azimyth",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-01-27 19:02:00",
-					["reward"] = "|cffa335ee|Hitem:113612:0:0:0:0:0:0:0:100:0:5:1:566|h[Scales of Doom]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113612:0:0:0:0:0:0:0:100:0:5:1:566|h[Scales of Doom]|h|r",
 				}, -- [227]
 				{
-					["player"] = "Roy",
 					["timestamp"] = "2015-01-27 19:13:00",
+					["player"] = "Roy",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [228]
@@ -8044,24 +7692,24 @@ EPGP_DB = {
 					["player"] = "Metal",
 					["coinsLeft"] = "3",
 					["timestamp"] = "2015-01-27 19:13:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113658:0:0:0:0:0:0:0:100:0:5:1:566|h[Bottle of Infesting Spores]|h|r",
+					["currencyID"] = "0",
 				}, -- [229]
 				{
-					["timestamp"] = "2015-01-27 19:32:00",
 					["player"] = "Roy",
+					["timestamp"] = "2015-01-27 19:32:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [230]
 				{
-					["timestamp"] = "2015-01-27 19:32:00",
 					["player"] = "Metal",
+					["timestamp"] = "2015-01-27 19:32:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [231]
 				{
-					["timestamp"] = "2015-01-27 19:32:00",
 					["player"] = "Shamanomanom",
+					["timestamp"] = "2015-01-27 19:32:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [232]
@@ -8069,33 +7717,33 @@ EPGP_DB = {
 					["player"] = "Cexcells",
 					["coinsLeft"] = "1",
 					["timestamp"] = "2015-01-27 19:33:00",
-					["reward"] = "|cffa335ee|Hitem:113651:0:0:0:0:0:0:0:100:0:5:1:566|h[Signet of Crystalline Barrage]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113651:0:0:0:0:0:0:0:100:0:5:1:566|h[Signet of Crystalline Barrage]|h|r",
 				}, -- [233]
 				{
 					["player"] = "Vûlcân",
 					["coinsLeft"] = "17",
 					["timestamp"] = "2015-01-27 19:45:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113835:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Shards of Nothing]|h|r",
+					["currencyID"] = "0",
 				}, -- [234]
 				{
 					["player"] = "Shamanomanom",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-01-27 19:46:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113827:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Belt of Imminent Lies]|h|r",
+					["currencyID"] = "0",
 				}, -- [235]
 				{
 					["player"] = "Roy",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-01-27 19:46:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113833:0:0:0:0:0:0:0:100:0:5:1:566|h[Odyssian Choker]|h|r",
+					["currencyID"] = "0",
 				}, -- [236]
 				{
-					["player"] = "Roy",
 					["timestamp"] = "2015-01-27 19:59:00",
+					["player"] = "Roy",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [237]
@@ -8103,12 +7751,12 @@ EPGP_DB = {
 					["player"] = "Vûlcân",
 					["coinsLeft"] = "17",
 					["timestamp"] = "2015-01-27 20:00:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113847:0:0:0:0:0:0:0:100:0:5:1:566|h[Cloak of Searing Shadows]|h|r",
+					["currencyID"] = "0",
 				}, -- [238]
 				{
-					["player"] = "Roy",
 					["timestamp"] = "2015-01-27 20:22:00",
+					["player"] = "Roy",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [239]
@@ -8116,50 +7764,50 @@ EPGP_DB = {
 					["player"] = "Shamanomanom",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-01-27 20:22:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113852:0:0:0:0:0:0:0:100:0:5:1:566|h[Force Nova Cloak]|h|r",
+					["currencyID"] = "0",
 				}, -- [240]
 				{
 					["player"] = "Mythsara",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-01-27 20:23:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113851:0:0:0:0:0:0:0:100:0:5:2:40:566|h[Reaver's Nose Ring]|h|r",
+					["currencyID"] = "0",
 				}, -- [241]
 				{
 					["player"] = "Cptnadsack",
 					["coinsLeft"] = "3",
 					["timestamp"] = "2015-01-27 20:23:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113855:0:0:0:0:0:0:0:100:0:5:1:566|h[Uncrushable Shoulderplates]|h|r",
+					["currencyID"] = "0",
 				}, -- [242]
 				{
-					["player"] = "Amarä",
 					["timestamp"] = "2015-01-27 20:23:00",
+					["player"] = "Amarä",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [243]
 				{
-					["timestamp"] = "2015-01-27 21:07:00",
 					["player"] = "Roy",
+					["timestamp"] = "2015-01-27 21:07:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [244]
 				{
-					["timestamp"] = "2015-01-27 21:07:00",
 					["player"] = "Cptnadsack",
+					["timestamp"] = "2015-01-27 21:07:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [245]
 				{
-					["timestamp"] = "2015-01-27 21:07:00",
 					["player"] = "Comet",
+					["timestamp"] = "2015-01-27 21:07:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [246]
 				{
-					["timestamp"] = "2015-01-27 21:09:00",
 					["player"] = "Mythsara",
+					["timestamp"] = "2015-01-27 21:09:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [247]
@@ -8167,12 +7815,12 @@ EPGP_DB = {
 					["player"] = "Roy",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-01-27 21:30:00",
-					["reward"] = "|cffa335ee|Hitem:113828:0:0:0:0:0:0:0:100:0:6:1:567|h[Sea-Cursed Leggings]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113828:0:0:0:0:0:0:0:100:0:6:1:567|h[Sea-Cursed Leggings]|h|r",
 				}, -- [248]
 				{
-					["timestamp"] = "2015-01-27 21:31:00",
 					["player"] = "Amarä",
+					["timestamp"] = "2015-01-27 21:31:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [249]
@@ -8180,24 +7828,24 @@ EPGP_DB = {
 					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-01-27 21:32:00",
-					["reward"] = "|cffa335ee|Hitem:113832:0:0:0:0:0:0:0:100:0:6:1:567|h[Treacherous Palms]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113832:0:0:0:0:0:0:0:100:0:6:1:567|h[Treacherous Palms]|h|r",
 				}, -- [250]
 				{
-					["player"] = "Dangerboy",
 					["timestamp"] = "2015-01-28 20:40:00",
+					["player"] = "Dangerboy",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [251]
 				{
-					["player"] = "Amarä",
 					["timestamp"] = "2015-01-28 20:40:00",
+					["player"] = "Amarä",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [252]
 				{
-					["player"] = "Comet",
 					["timestamp"] = "2015-01-28 20:41:00",
+					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [253]
@@ -8205,18 +7853,18 @@ EPGP_DB = {
 					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-01-29 20:08:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113634:0:0:0:0:0:0:0:100:0:5:1:566|h[Bracers of Spare Skin]|h|r",
+					["currencyID"] = "0",
 				}, -- [254]
 				{
-					["timestamp"] = "2015-02-08 17:26:00",
 					["player"] = "Metal",
+					["timestamp"] = "2015-02-08 17:26:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [255]
 				{
-					["timestamp"] = "2015-02-11 18:40:00",
 					["player"] = "Metal",
+					["timestamp"] = "2015-02-11 18:40:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [256]
@@ -8224,76 +7872,76 @@ EPGP_DB = {
 					["player"] = "Minilavacake",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-02-11 18:40:00",
-					["reward"] = "|cffa335ee|Hitem:113645:0:0:0:0:0:0:0:100:0:5:1:566|h[泰克图斯的脉动之心]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113645:0:0:0:0:0:0:0:100:0:5:1:566|h[泰克图斯的脉动之心]|h|r",
 				}, -- [257]
 				{
 					["player"] = "Metal",
 					["coinsLeft"] = "3",
 					["timestamp"] = "2015-02-21 14:19:00",
-					["reward"] = "|cffa335ee|Hitem:113648:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Legplates of Fractured Crystal]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113648:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Legplates of Fractured Crystal]|h|r",
 				}, -- [258]
 				{
-					["timestamp"] = "2015-02-22 18:56:00",
 					["player"] = "Metal",
+					["timestamp"] = "2015-02-22 18:56:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [259]
 				{
-					["timestamp"] = "2015-02-22 18:57:00",
 					["player"] = "Mikilol-BlackDragonflight",
+					["timestamp"] = "2015-02-22 18:57:00",
 					["coinsLeft"] = "1",
 					["reward"] = "|cffa335ee|Hitem:119306:0:0:0:0:0:0:0:100:0:3:0|h[Gauntlets of the Iron Conqueror]|h|r",
 				}, -- [260]
 			},
+			["outsiders"] = 0,
 			["blizzard_show_offline"] = true,
 		},
 		["Metal - Illidan"] = {
 			["decay_p"] = 25,
 			["min_ep"] = 500,
 			["extras_p"] = 50,
-			["base_gp"] = 100,
 			["outsiders"] = 0,
+			["base_gp"] = 100,
 		},
 		["Mind Games"] = {
-			["outsiders"] = 0,
 			["bonus_loot_log"] = {
 				{
 					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-02-03 19:54:00",
-					["reward"] = "|cffa335ee|Hitem:113870:0:0:0:0:0:0:0:100:0:5:1:566|h[Vest of Forceful Fury]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113870:0:0:0:0:0:0:0:100:0:5:1:566|h[Vest of Forceful Fury]|h|r",
 				}, -- [1]
 				{
 					["player"] = "Rrenju",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-02-03 19:55:00",
-					["reward"] = "|cffa335ee|Hitem:113868:0:0:0:0:0:0:0:100:0:5:3:564:42:566|h[Flare-Eyed Hood]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113868:0:0:0:0:0:0:0:100:0:5:3:564:42:566|h[Flare-Eyed Hood]|h|r",
 				}, -- [2]
 				{
-					["timestamp"] = "2015-02-03 19:55:00",
 					["player"] = "Lustya",
+					["timestamp"] = "2015-02-03 19:55:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [3]
 				{
-					["timestamp"] = "2015-02-03 21:11:00",
 					["player"] = "Rrenju",
+					["timestamp"] = "2015-02-03 21:11:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [4]
 				{
-					["timestamp"] = "2015-02-03 21:11:00",
 					["player"] = "Immortalzz",
+					["timestamp"] = "2015-02-03 21:11:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [5]
 				{
-					["player"] = "Rrenju",
 					["timestamp"] = "2015-02-03 21:32:00",
+					["player"] = "Rrenju",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [6]
@@ -8301,43 +7949,43 @@ EPGP_DB = {
 					["player"] = "Princip",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-02-03 22:08:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113962:0:0:0:0:0:0:0:100:0:5:1:566|h[Squire's Electroplated Bracers]|h|r",
+					["currencyID"] = "0",
 				}, -- [7]
 				{
 					["player"] = "Immortalzz",
 					["coinsLeft"] = "2",
 					["timestamp"] = "2015-02-03 22:08:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113959:0:0:0:0:0:0:0:100:0:5:1:566|h[Thogar's Serrated Chain]|h|r",
+					["currencyID"] = "0",
 				}, -- [8]
 				{
-					["player"] = "Rrenju",
 					["timestamp"] = "2015-02-03 22:08:00",
+					["player"] = "Rrenju",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [9]
 				{
-					["player"] = "Comet",
 					["timestamp"] = "2015-02-03 22:08:00",
+					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [10]
 				{
-					["player"] = "Sikonos",
 					["timestamp"] = "2015-02-03 22:08:00",
+					["player"] = "Sikonos",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [11]
 				{
-					["player"] = "Lustya",
 					["timestamp"] = "2015-02-03 22:08:00",
+					["player"] = "Lustya",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [12]
 				{
-					["timestamp"] = "2015-02-03 22:38:00",
 					["player"] = "Rrenju",
+					["timestamp"] = "2015-02-03 22:38:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [13]
@@ -8345,49 +7993,49 @@ EPGP_DB = {
 					["player"] = "Princip",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-02-03 22:41:00",
-					["reward"] = "|cffa335ee|Hitem:113897:0:0:0:0:0:0:0:100:0:5:2:41:566|h[Hans'gar's Forgehammer]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113897:0:0:0:0:0:0:0:100:0:5:2:41:566|h[Hans'gar's Forgehammer]|h|r",
 				}, -- [14]
 				{
 					["player"] = "Rrenju",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-02-03 23:13:00",
-					["reward"] = "|cffa335ee|Hitem:120077:0:0:0:0:0:0:0:100:0:5:1:566|h[Choker of Bloody Flame]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:120077:0:0:0:0:0:0:0:100:0:5:1:566|h[Choker of Bloody Flame]|h|r",
 				}, -- [15]
 				{
-					["timestamp"] = "2015-02-03 23:13:00",
 					["player"] = "Immortalzz",
+					["timestamp"] = "2015-02-03 23:13:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [16]
 				{
-					["timestamp"] = "2015-02-03 23:13:00",
 					["player"] = "Sikonos",
+					["timestamp"] = "2015-02-03 23:13:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [17]
 				{
-					["timestamp"] = "2015-02-03 23:15:00",
 					["player"] = "Princip",
+					["timestamp"] = "2015-02-03 23:15:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [18]
 				{
-					["timestamp"] = "2015-02-04 00:07:00",
 					["player"] = "Rrenju",
+					["timestamp"] = "2015-02-04 00:07:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [19]
 				{
-					["timestamp"] = "2015-02-04 00:07:00",
 					["player"] = "Lustya",
+					["timestamp"] = "2015-02-04 00:07:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [20]
 				{
-					["timestamp"] = "2015-02-04 00:07:00",
 					["player"] = "Vikid",
+					["timestamp"] = "2015-02-04 00:07:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [21]
@@ -8395,24 +8043,24 @@ EPGP_DB = {
 					["player"] = "Sikonos",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-02-04 00:07:00",
-					["reward"] = "|cffa335ee|Hitem:119312:0:0:0:0:0:0:0:100:0:5:1:570|h[Helm of the Iron Vanquisher]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:119312:0:0:0:0:0:0:0:100:0:5:1:570|h[Helm of the Iron Vanquisher]|h|r",
 				}, -- [22]
 				{
-					["timestamp"] = "2015-02-04 00:07:00",
 					["player"] = "Princip",
+					["timestamp"] = "2015-02-04 00:07:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [23]
 				{
-					["timestamp"] = "2015-02-04 00:08:00",
 					["player"] = "Toppies",
+					["timestamp"] = "2015-02-04 00:08:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [24]
 				{
-					["timestamp"] = "2015-02-04 00:08:00",
 					["player"] = "Comet",
+					["timestamp"] = "2015-02-04 00:08:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [25]
@@ -8420,19 +8068,19 @@ EPGP_DB = {
 					["player"] = "Princip",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-02-04 22:18:00",
-					["reward"] = "|cffa335ee|Hitem:113892:0:0:0:0:0:0:0:100:0:5:1:566|h[Engineer's Grounded Gorget]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113892:0:0:0:0:0:0:0:100:0:5:1:566|h[Engineer's Grounded Gorget]|h|r",
 				}, -- [26]
 				{
 					["player"] = "Toppies",
 					["coinsLeft"] = "2",
 					["timestamp"] = "2015-02-04 22:19:00",
-					["reward"] = "|cffa335ee|Hitem:119313:0:0:0:0:0:0:0:100:0:5:1:570|h[Leggings of the Iron Vanquisher]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:119313:0:0:0:0:0:0:0:100:0:5:1:570|h[Leggings of the Iron Vanquisher]|h|r",
 				}, -- [27]
 				{
-					["timestamp"] = "2015-02-04 22:19:00",
 					["player"] = "Vikid",
+					["timestamp"] = "2015-02-04 22:19:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [28]
@@ -8440,12 +8088,12 @@ EPGP_DB = {
 					["player"] = "Sikonos",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-02-04 22:20:00",
-					["reward"] = "|cffa335ee|Hitem:119313:0:0:0:0:0:0:0:100:0:5:1:570|h[Leggings of the Iron Vanquisher]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:119313:0:0:0:0:0:0:0:100:0:5:1:570|h[Leggings of the Iron Vanquisher]|h|r",
 				}, -- [29]
 				{
-					["timestamp"] = "2015-02-05 14:09:00",
 					["player"] = "Brodo-Hyjal",
+					["timestamp"] = "2015-02-05 14:09:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [30]
@@ -8453,24 +8101,24 @@ EPGP_DB = {
 					["player"] = "Toppies",
 					["coinsLeft"] = "2",
 					["timestamp"] = "2015-02-05 23:00:00",
-					["reward"] = "|cffa335ee|Hitem:113970:0:0:0:0:0:0:0:100:0:5:1:566|h[Turret Mechanic's Legwraps]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113970:0:0:0:0:0:0:0:100:0:5:1:566|h[Turret Mechanic's Legwraps]|h|r",
 				}, -- [31]
 				{
-					["timestamp"] = "2015-02-05 23:00:00",
 					["player"] = "Princip",
+					["timestamp"] = "2015-02-05 23:00:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [32]
 				{
-					["timestamp"] = "2015-02-05 23:00:00",
 					["player"] = "Immortalzz",
+					["timestamp"] = "2015-02-05 23:00:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [33]
 				{
-					["timestamp"] = "2015-02-05 23:00:00",
 					["player"] = "Sikonos",
+					["timestamp"] = "2015-02-05 23:00:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [34]
@@ -8478,33 +8126,33 @@ EPGP_DB = {
 					["player"] = "Vikid",
 					["coinsLeft"] = "5",
 					["timestamp"] = "2015-02-05 23:01:00",
-					["reward"] = "|cffa335ee|Hitem:113972:0:0:0:0:0:0:0:100:0:5:1:566|h[Cloak of Sanguine Terror]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113972:0:0:0:0:0:0:0:100:0:5:1:566|h[Cloak of Sanguine Terror]|h|r",
 				}, -- [35]
 				{
 					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-02-09 20:35:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113636:0:0:0:0:0:0:0:100:0:6:2:43:567|h[Belt of Bloody Guts]|h|r",
+					["currencyID"] = "0",
 				}, -- [36]
 				{
 					["player"] = "Lustya",
 					["coinsLeft"] = "2",
 					["timestamp"] = "2015-02-09 20:35:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113612:0:0:0:0:0:0:0:100:0:6:1:567|h[Scales of Doom]|h|r",
+					["currencyID"] = "0",
 				}, -- [37]
 				{
 					["player"] = "Lustwar",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-02-10 18:04:00",
-					["reward"] = "|cffa335ee|Hitem:119193:0:0:0:0:0:0:0:100:0:3:0|h[Horn of Screaming Spirits]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:119193:0:0:0:0:0:0:0:100:0:3:0|h[Horn of Screaming Spirits]|h|r",
 				}, -- [38]
 				{
-					["timestamp"] = "2015-02-10 18:41:00",
 					["player"] = "Lustwar",
+					["timestamp"] = "2015-02-10 18:41:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [39]
@@ -8514,26 +8162,26 @@ EPGP_DB = {
 					["timestamp"] = "2015-02-11 14:26:00",
 				}, -- [40]
 				{
-					["player"] = "Comet",
 					["timestamp"] = "2015-02-12 19:40:00",
+					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [41]
 				{
-					["timestamp"] = "2015-02-12 21:02:00",
 					["player"] = "Rrenju",
+					["timestamp"] = "2015-02-12 21:02:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [42]
 				{
-					["timestamp"] = "2015-02-12 21:02:00",
 					["player"] = "Vikid",
+					["timestamp"] = "2015-02-12 21:02:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [43]
 				{
-					["timestamp"] = "2015-02-12 21:02:00",
 					["player"] = "Comet",
+					["timestamp"] = "2015-02-12 21:02:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [44]
@@ -8541,12 +8189,12 @@ EPGP_DB = {
 					["player"] = "Immortalzz",
 					["coinsLeft"] = "2",
 					["timestamp"] = "2015-02-12 21:02:00",
-					["reward"] = "|cffa335ee|Hitem:113896:0:0:0:0:0:0:0:100:0:5:1:566|h[Fleshmelter Bracers]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113896:0:0:0:0:0:0:0:100:0:5:1:566|h[Fleshmelter Bracers]|h|r",
 				}, -- [45]
 				{
-					["timestamp"] = "2015-02-12 21:02:00",
 					["player"] = "Princip",
+					["timestamp"] = "2015-02-12 21:02:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [46]
@@ -8554,12 +8202,12 @@ EPGP_DB = {
 					["player"] = "Sikonos",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-02-12 21:04:00",
-					["reward"] = "|cffa335ee|Hitem:113886:0:0:0:0:0:0:0:100:0:5:1:566|h[Crescent of Living Magma]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113886:0:0:0:0:0:0:0:100:0:5:1:566|h[Crescent of Living Magma]|h|r",
 				}, -- [47]
 				{
-					["timestamp"] = "2015-02-12 21:36:00",
 					["player"] = "Immortalzz",
+					["timestamp"] = "2015-02-12 21:36:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [48]
@@ -8567,54 +8215,54 @@ EPGP_DB = {
 					["player"] = "Princip",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-02-12 21:36:00",
-					["reward"] = "|cffa335ee|Hitem:113964:0:0:0:0:0:0:0:100:0:5:1:566|h[Conductor's Multi-Pocket Girdle]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113964:0:0:0:0:0:0:0:100:0:5:1:566|h[Conductor's Multi-Pocket Girdle]|h|r",
 				}, -- [49]
 				{
-					["timestamp"] = "2015-02-12 21:36:00",
 					["player"] = "Rrenju",
+					["timestamp"] = "2015-02-12 21:36:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [50]
 				{
-					["timestamp"] = "2015-02-12 21:36:00",
 					["player"] = "Comet",
+					["timestamp"] = "2015-02-12 21:36:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [51]
 				{
-					["timestamp"] = "2015-02-12 21:38:00",
 					["player"] = "Vikid",
+					["timestamp"] = "2015-02-12 21:38:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [52]
 				{
-					["timestamp"] = "2015-02-12 21:38:00",
 					["player"] = "Lustya",
+					["timestamp"] = "2015-02-12 21:38:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [53]
 				{
-					["timestamp"] = "2015-02-12 21:38:00",
 					["player"] = "Sikonos",
+					["timestamp"] = "2015-02-12 21:38:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [54]
 				{
-					["timestamp"] = "2015-02-12 22:33:00",
 					["player"] = "Immortalzz",
+					["timestamp"] = "2015-02-12 22:33:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [55]
 				{
-					["timestamp"] = "2015-02-12 22:33:00",
 					["player"] = "Lustya",
+					["timestamp"] = "2015-02-12 22:33:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [56]
 				{
-					["timestamp"] = "2015-02-12 22:34:00",
 					["player"] = "Comet",
+					["timestamp"] = "2015-02-12 22:34:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [57]
@@ -8622,12 +8270,12 @@ EPGP_DB = {
 					["player"] = "Rrenju",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-02-12 22:34:00",
-					["reward"] = "|cffa335ee|Hitem:113920:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Dagger of Blazing Radiance]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113920:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Dagger of Blazing Radiance]|h|r",
 				}, -- [58]
 				{
-					["timestamp"] = "2015-02-12 22:34:00",
 					["player"] = "Sikonos",
+					["timestamp"] = "2015-02-12 22:34:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [59]
@@ -8635,24 +8283,24 @@ EPGP_DB = {
 					["player"] = "Vikid",
 					["coinsLeft"] = "5",
 					["timestamp"] = "2015-02-12 22:35:00",
-					["reward"] = "|cffa335ee|Hitem:113923:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Fiery Links of Courage]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113923:0:0:0:0:0:0:0:100:0:5:2:561:566|h[Fiery Links of Courage]|h|r",
 				}, -- [60]
 				{
-					["timestamp"] = "2015-02-12 22:59:00",
 					["player"] = "Vikid",
+					["timestamp"] = "2015-02-12 22:59:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [61]
 				{
-					["timestamp"] = "2015-02-12 23:00:00",
 					["player"] = "Comet",
+					["timestamp"] = "2015-02-12 23:00:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [62]
 				{
-					["player"] = "Princip",
 					["timestamp"] = "2015-02-12 23:40:00",
+					["player"] = "Princip",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [63]
@@ -8660,24 +8308,24 @@ EPGP_DB = {
 					["player"] = "Sikonos",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-02-12 23:41:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:119311:0:0:0:0:0:0:0:100:0:5:1:570|h[Gauntlets of the Iron Vanquisher]|h|r",
+					["currencyID"] = "0",
 				}, -- [64]
 				{
-					["player"] = "Vikid",
 					["timestamp"] = "2015-02-12 23:41:00",
+					["player"] = "Vikid",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [65]
 				{
-					["timestamp"] = "2015-02-17 20:00:00",
 					["player"] = "Toppies",
+					["timestamp"] = "2015-02-17 20:00:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [66]
 				{
-					["timestamp"] = "2015-02-17 20:19:00",
 					["player"] = "Rrenju",
+					["timestamp"] = "2015-02-17 20:19:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [67]
@@ -8685,55 +8333,55 @@ EPGP_DB = {
 					["player"] = "Vikid",
 					["coinsLeft"] = "5",
 					["timestamp"] = "2015-02-17 20:21:00",
-					["reward"] = "|cffa335ee|Hitem:113894:0:0:0:0:0:0:0:100:0:5:1:566|h[Lava-Dipped Greathelm]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113894:0:0:0:0:0:0:0:100:0:5:1:566|h[Lava-Dipped Greathelm]|h|r",
 				}, -- [68]
 				{
 					["player"] = "Rrenju",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-02-17 20:52:00",
-					["reward"] = "|cffa335ee|Hitem:113960:0:0:0:0:0:0:0:100:0:5:1:566|h[Engine-Stoker's Lantern]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113960:0:0:0:0:0:0:0:100:0:5:1:566|h[Engine-Stoker's Lantern]|h|r",
 				}, -- [69]
 				{
-					["timestamp"] = "2015-02-17 20:54:00",
 					["player"] = "Sikonos",
+					["timestamp"] = "2015-02-17 20:54:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [70]
 				{
-					["timestamp"] = "2015-02-17 21:24:00",
 					["player"] = "Rrenju",
+					["timestamp"] = "2015-02-17 21:24:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [71]
 				{
-					["timestamp"] = "2015-02-17 21:24:00",
 					["player"] = "Vikid",
+					["timestamp"] = "2015-02-17 21:24:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [72]
 				{
-					["timestamp"] = "2015-02-17 21:24:00",
 					["player"] = "Princip",
+					["timestamp"] = "2015-02-17 21:24:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [73]
 				{
-					["timestamp"] = "2015-02-17 21:25:00",
 					["player"] = "Sikonos",
+					["timestamp"] = "2015-02-17 21:25:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [74]
 				{
-					["timestamp"] = "2015-02-17 21:39:00",
 					["player"] = "Princip",
+					["timestamp"] = "2015-02-17 21:39:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [75]
 				{
-					["timestamp"] = "2015-02-17 21:39:00",
 					["player"] = "Rrenju",
+					["timestamp"] = "2015-02-17 21:39:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [76]
@@ -8741,18 +8389,18 @@ EPGP_DB = {
 					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-02-17 21:39:00",
-					["reward"] = "|cffa335ee|Hitem:119321:0:0:0:0:0:0:0:100:0:5:1:570|h[Helm of the Iron Protector]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:119321:0:0:0:0:0:0:0:100:0:5:1:570|h[Helm of the Iron Protector]|h|r",
 				}, -- [77]
 				{
-					["timestamp"] = "2015-02-17 22:34:00",
 					["player"] = "Sikonos",
+					["timestamp"] = "2015-02-17 22:34:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [78]
 				{
-					["timestamp"] = "2015-02-19 20:50:00",
 					["player"] = "Lustya",
+					["timestamp"] = "2015-02-19 20:50:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [79]
@@ -8760,18 +8408,18 @@ EPGP_DB = {
 					["player"] = "Toppies",
 					["coinsLeft"] = "2",
 					["timestamp"] = "2015-02-19 20:50:00",
-					["reward"] = "|cffa335ee|Hitem:113942:0:0:0:0:0:0:0:100:0:6:1:567|h[Inferno Breath Sandals]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113942:0:0:0:0:0:0:0:100:0:6:1:567|h[Inferno Breath Sandals]|h|r",
 				}, -- [80]
 				{
-					["timestamp"] = "2015-02-19 20:50:00",
 					["player"] = "Comet",
+					["timestamp"] = "2015-02-19 20:50:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [81]
 				{
-					["player"] = "Lustya",
 					["timestamp"] = "2015-02-23 22:03:00",
+					["player"] = "Lustya",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [82]
@@ -8779,18 +8427,18 @@ EPGP_DB = {
 					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-02-23 22:03:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113980:0:0:0:0:0:0:0:100:0:5:1:566|h[Iron Soldier's Saber]|h|r",
+					["currencyID"] = "0",
 				}, -- [83]
 				{
-					["player"] = "Toppies",
 					["timestamp"] = "2015-02-23 22:03:00",
+					["player"] = "Toppies",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [84]
 				{
-					["player"] = "Sikonos",
 					["timestamp"] = "2015-02-23 22:04:00",
+					["player"] = "Sikonos",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [85]
@@ -8798,42 +8446,42 @@ EPGP_DB = {
 					["player"] = "Rrenju",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-02-24 20:32:00",
-					["reward"] = "|cffa335ee|Hitem:113887:0:0:0:0:0:0:0:100:0:5:1:566|h[Bracers of Spattered Steel]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113887:0:0:0:0:0:0:0:100:0:5:1:566|h[Bracers of Spattered Steel]|h|r",
 				}, -- [86]
 				{
-					["player"] = "Toppies",
 					["timestamp"] = "2015-02-24 20:47:00",
+					["player"] = "Toppies",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [87]
 				{
-					["player"] = "Rrenju",
 					["timestamp"] = "2015-02-24 20:47:00",
+					["player"] = "Rrenju",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [88]
 				{
-					["player"] = "Rrenju",
 					["timestamp"] = "2015-02-24 21:02:00",
+					["player"] = "Rrenju",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [89]
 				{
-					["timestamp"] = "2015-02-24 21:44:00",
 					["player"] = "Sikonos",
+					["timestamp"] = "2015-02-24 21:44:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [90]
 				{
-					["timestamp"] = "2015-02-24 21:45:00",
 					["player"] = "Princip",
+					["timestamp"] = "2015-02-24 21:45:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [91]
 				{
-					["timestamp"] = "2015-02-24 22:19:00",
 					["player"] = "Sikonos",
+					["timestamp"] = "2015-02-24 22:19:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [92]
@@ -8841,18 +8489,18 @@ EPGP_DB = {
 					["player"] = "Princip",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-02-24 22:32:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:119312:0:0:0:0:0:0:0:100:0:5:1:570|h[Helm of the Iron Vanquisher]|h|r",
+					["currencyID"] = "0",
 				}, -- [93]
 				{
-					["player"] = "Comet",
 					["timestamp"] = "2015-02-24 22:32:00",
+					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [94]
 				{
-					["player"] = "Lustya",
 					["timestamp"] = "2015-02-25 19:47:00",
+					["player"] = "Lustya",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [95]
@@ -8860,19 +8508,19 @@ EPGP_DB = {
 					["player"] = "Toppies",
 					["coinsLeft"] = "2",
 					["timestamp"] = "2015-02-25 19:47:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113942:0:0:0:0:0:0:0:100:0:6:1:567|h[Inferno Breath Sandals]|h|r",
+					["currencyID"] = "0",
 				}, -- [96]
 				{
 					["player"] = "Vikid",
 					["coinsLeft"] = "5",
 					["timestamp"] = "2015-02-25 19:48:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113950:0:0:0:0:0:0:0:100:0:6:1:567|h[Ironcrusher's Collar]|h|r",
+					["currencyID"] = "0",
 				}, -- [97]
 				{
-					["timestamp"] = "2015-03-01 21:41:00",
 					["player"] = "Saneca-TheForgottenCoast",
+					["timestamp"] = "2015-03-01 21:41:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [98]
@@ -8880,18 +8528,18 @@ EPGP_DB = {
 					["player"] = "Miroki-AlteracMountains",
 					["coinsLeft"] = "11",
 					["timestamp"] = "2015-03-01 21:41:00",
-					["reward"] = "|cffa335ee|Hitem:113607:0:0:0:0:0:0:0:100:0:5:1:566|h[Butcher's Terrible Tenderizer]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113607:0:0:0:0:0:0:0:100:0:5:1:566|h[Butcher's Terrible Tenderizer]|h|r",
 				}, -- [99]
 				{
-					["timestamp"] = "2015-03-01 21:41:00",
 					["player"] = "Avoryu-Gorgonnash",
+					["timestamp"] = "2015-03-01 21:41:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [100]
 				{
-					["timestamp"] = "2015-03-01 22:22:00",
 					["player"] = "Purrnado",
+					["timestamp"] = "2015-03-01 22:22:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [101]
@@ -8901,8 +8549,8 @@ EPGP_DB = {
 					["timestamp"] = "2015-03-01 22:22:00",
 				}, -- [102]
 				{
-					["timestamp"] = "2015-03-01 22:22:00",
 					["player"] = "Metal",
+					["timestamp"] = "2015-03-01 22:22:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [103]
@@ -8910,25 +8558,25 @@ EPGP_DB = {
 					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-03-02 20:39:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113989:0:0:0:0:0:0:0:100:0:5:1:566|h[Shattering Smash Leggings]|h|r",
+					["currencyID"] = "0",
 				}, -- [104]
 				{
 					["player"] = "Sikonos",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-03-02 20:39:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113983:0:0:0:0:0:0:0:100:0:5:2:41:566|h[Forgemaster's Insignia]|h|r",
+					["currencyID"] = "0",
 				}, -- [105]
 				{
-					["player"] = "Princip",
 					["timestamp"] = "2015-03-02 20:39:00",
+					["player"] = "Princip",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [106]
 				{
-					["player"] = "Toppies",
 					["timestamp"] = "2015-03-02 20:40:00",
+					["player"] = "Toppies",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [107]
@@ -8936,36 +8584,36 @@ EPGP_DB = {
 					["player"] = "Lustya",
 					["coinsLeft"] = "2",
 					["timestamp"] = "2015-03-03 21:11:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:113948:0:0:0:0:0:0:0:100:0:6:1:567|h[Darmac's Unstable Talisman]|h|r",
+					["currencyID"] = "0",
 				}, -- [108]
 				{
-					["player"] = "Toppies",
 					["timestamp"] = "2015-03-03 21:11:00",
+					["player"] = "Toppies",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [109]
 				{
-					["player"] = "Princip",
 					["timestamp"] = "2015-03-03 21:11:00",
+					["player"] = "Princip",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [110]
 				{
-					["timestamp"] = "2015-03-03 22:55:00",
 					["player"] = "Arsenal",
+					["timestamp"] = "2015-03-03 22:55:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [111]
 				{
-					["timestamp"] = "2015-03-03 22:55:00",
 					["player"] = "Princip",
+					["timestamp"] = "2015-03-03 22:55:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [112]
 				{
-					["timestamp"] = "2015-03-03 22:55:00",
 					["player"] = "Toppies",
+					["timestamp"] = "2015-03-03 22:55:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [113]
@@ -8973,12 +8621,12 @@ EPGP_DB = {
 					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-03-03 22:55:00",
-					["reward"] = "|cffa335ee|Hitem:113865:0:0:0:0:0:0:0:100:0:6:1:567|h[Darklight Necklace]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113865:0:0:0:0:0:0:0:100:0:6:1:567|h[Darklight Necklace]|h|r",
 				}, -- [114]
 				{
-					["timestamp"] = "2015-03-03 22:56:00",
 					["player"] = "Lustya",
+					["timestamp"] = "2015-03-03 22:56:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [115]
@@ -8986,72 +8634,223 @@ EPGP_DB = {
 					["player"] = "Sikonos",
 					["coinsLeft"] = "0",
 					["timestamp"] = "2015-03-03 22:57:00",
-					["reward"] = "|cffa335ee|Hitem:113866:0:0:0:0:0:0:0:100:0:6:1:567|h[Phosphorescent Seal]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113866:0:0:0:0:0:0:0:100:0:6:1:567|h[Phosphorescent Seal]|h|r",
 				}, -- [116]
 				{
-					["timestamp"] = "2015-03-03 22:57:00",
 					["player"] = "Vikid",
+					["timestamp"] = "2015-03-03 22:57:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [117]
 				{
-					["player"] = "Purrnado",
 					["timestamp"] = "2015-03-04 00:27:00",
+					["player"] = "Purrnado",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [118]
 				{
-					["player"] = "Ispera-Skullcrusher",
 					["timestamp"] = "2015-03-07 17:00:00",
+					["player"] = "Ispera-Skullcrusher",
 					["coinsLeft"] = "13",
 					["currencyID"] = "0",
 				}, -- [119]
 				{
-					["player"] = "Comet",
 					["timestamp"] = "2015-03-07 17:14:00",
+					["player"] = "Comet",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [120]
 				{
-					["player"] = "Necrochimp",
 					["timestamp"] = "2015-03-08 20:07:00",
+					["player"] = "Necrochimp",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [121]
 				{
-					["player"] = "Princip",
 					["timestamp"] = "2015-03-08 20:33:00",
+					["player"] = "Princip",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [122]
 				{
-					["player"] = "Lustwar",
 					["timestamp"] = "2015-03-09 20:45:00",
+					["player"] = "Lustwar",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [123]
 				{
-					["timestamp"] = "2015-03-09 23:26:00",
 					["player"] = "Comet",
+					["timestamp"] = "2015-03-09 23:26:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [124]
 				{
-					["timestamp"] = "2015-03-09 23:27:00",
 					["player"] = "Lustya",
+					["timestamp"] = "2015-03-09 23:27:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [125]
+				{
+					["player"] = "Arsenal",
+					["coinsLeft"] = "0",
+					["timestamp"] = "2015-03-10 20:53:00",
+					["reward"] = "|cffa335ee|Hitem:113947:0:0:0:0:0:0:0:100:0:6:1:567|h[Epicenter Loop]|h|r",
+					["currencyID"] = "0",
+				}, -- [126]
+				{
+					["player"] = "Vikid",
+					["coinsLeft"] = "5",
+					["timestamp"] = "2015-03-10 20:53:00",
+					["reward"] = "|cffa335ee|Hitem:113952:0:0:0:0:0:0:0:100:0:6:1:567|h[Choker of Bestial Force]|h|r",
+					["currencyID"] = "0",
+				}, -- [127]
+				{
+					["player"] = "Princip",
+					["timestamp"] = "2015-03-11 23:41:00",
+					["coinsLeft"] = "0",
+					["currencyID"] = "0",
+				}, -- [128]
+				{
+					["player"] = "Arsenal",
+					["timestamp"] = "2015-03-11 23:41:00",
+					["coinsLeft"] = "0",
+					["currencyID"] = "0",
+				}, -- [129]
+				{
+					["player"] = "Sikonos",
+					["timestamp"] = "2015-03-11 23:41:00",
+					["coinsLeft"] = "0",
+					["currencyID"] = "0",
+				}, -- [130]
+				{
+					["player"] = "Toppies",
+					["timestamp"] = "2015-03-11 23:42:00",
+					["coinsLeft"] = "2",
+					["currencyID"] = "0",
+				}, -- [131]
+				{
+					["player"] = "Lustya",
+					["timestamp"] = "2015-03-11 23:42:00",
+					["coinsLeft"] = "2",
+					["currencyID"] = "0",
+				}, -- [132]
+				{
+					["player"] = "Vikid",
+					["timestamp"] = "2015-03-11 23:42:00",
+					["coinsLeft"] = "5",
+					["currencyID"] = "0",
+				}, -- [133]
+				{
+					["player"] = "Comet",
+					["timestamp"] = "2015-03-11 23:43:00",
+					["coinsLeft"] = "0",
+					["currencyID"] = "0",
+				}, -- [134]
+				{
+					["player"] = "Princip",
+					["timestamp"] = "2015-03-12 20:38:00",
+					["coinsLeft"] = "0",
+					["currencyID"] = "0",
+				}, -- [135]
+				{
+					["player"] = "Comet",
+					["timestamp"] = "2015-03-12 20:38:00",
+					["coinsLeft"] = "0",
+					["currencyID"] = "0",
+				}, -- [136]
+				{
+					["player"] = "Sikonos",
+					["timestamp"] = "2015-03-12 20:39:00",
+					["coinsLeft"] = "0",
+					["currencyID"] = "0",
+				}, -- [137]
+				{
+					["player"] = "Lustya",
+					["coinsLeft"] = "2",
+					["timestamp"] = "2015-03-12 20:40:00",
+					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113869:0:0:0:0:0:0:0:100:0:6:1:567|h[Inferno-Flame Staff]|h|r",
+				}, -- [138]
+				{
+					["player"] = "Princip",
+					["coinsLeft"] = "0",
+					["timestamp"] = "2015-03-12 22:09:00",
+					["reward"] = "|cffa335ee|Hitem:113877:0:0:0:0:0:0:0:100:0:6:1:567|h[Unexploded Explosive Shard]|h|r",
+					["currencyID"] = "0",
+				}, -- [139]
+				{
+					["timestamp"] = "2015-03-12 22:09:00",
+					["player"] = "Toppies",
+					["coinsLeft"] = "2",
+					["currencyID"] = "0",
+				}, -- [140]
+				{
+					["timestamp"] = "2015-03-14 19:34:00",
+					["player"] = "Metal",
+					["coinsLeft"] = "3",
+					["currencyID"] = "0",
+				}, -- [141]
+				{
+					["timestamp"] = "2015-03-14 19:54:00",
+					["player"] = "Metal",
+					["coinsLeft"] = "3",
+					["currencyID"] = "0",
+				}, -- [142]
+				{
+					["player"] = "Metal",
+					["coinsLeft"] = "3",
+					["timestamp"] = "2015-03-14 20:09:00",
+					["reward"] = "|cffa335ee|Hitem:113910:0:0:0:0:0:0:0:100:0:5:2:564:566|h[Hardened Greathelm]|h|r",
+					["currencyID"] = "0",
+				}, -- [143]
+				{
+					["timestamp"] = "2015-03-16 16:25:00",
+					["player"] = "Áutowpg-Kil'jaeden",
+					["coinsLeft"] = "8",
+					["currencyID"] = "0",
+				}, -- [144]
+				{
+					["timestamp"] = "2015-03-16 16:25:00",
+					["player"] = "Metal",
+					["coinsLeft"] = "3",
+					["currencyID"] = "0",
+				}, -- [145]
+				{
+					["player"] = "Toppies",
+					["coinsLeft"] = "2",
+					["timestamp"] = "2015-03-16 20:59:00",
+					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:113934:0:0:0:0:0:0:0:100:0:5:1:566|h[Fang of the Earth]|h|r",
+				}, -- [146]
+				{
+					["player"] = "Comet",
+					["timestamp"] = "2015-03-16 22:15:00",
+					["coinsLeft"] = "0",
+					["currencyID"] = "0",
+				}, -- [147]
+				{
+					["player"] = "Sikonos",
+					["timestamp"] = "2015-03-16 22:15:00",
+					["coinsLeft"] = "0",
+					["currencyID"] = "0",
+				}, -- [148]
+				{
+					["player"] = "Lustya",
+					["timestamp"] = "2015-03-16 22:15:00",
+					["coinsLeft"] = "2",
+					["currencyID"] = "0",
+				}, -- [149]
 			},
+			["outsiders"] = 0,
 			["blizzard_show_offline"] = false,
 		},
 		["Combustion - Illidan"] = {
 			["decay_p"] = 40,
 			["min_ep"] = 500,
 			["extras_p"] = 50,
-			["outsiders"] = 0,
 			["base_gp"] = 100,
+			["outsiders"] = 0,
 		},
 		["Centromere - Dark Iron"] = {
 			["outsiders"] = 0,
@@ -9072,48 +8871,49 @@ EPGP_DB = {
 			["decay_p"] = 40,
 			["min_ep"] = 500,
 			["extras_p"] = 50,
-			["outsiders"] = 0,
 			["base_gp"] = 100,
+			["outsiders"] = 0,
 		},
 		["Comet - Illidan"] = {
 			["decay_p"] = 40,
 			["min_ep"] = 500,
 			["extras_p"] = 50,
-			["base_gp"] = 100,
 			["outsiders"] = 0,
+			["base_gp"] = 100,
 		},
 		["Plane - Illidan"] = {
 			["decay_p"] = 40,
 			["min_ep"] = 500,
 			["extras_p"] = 50,
-			["outsiders"] = 0,
 			["base_gp"] = 100,
+			["outsiders"] = 0,
 		},
 		["Evan - Illidan"] = {
 			["decay_p"] = 40,
 			["min_ep"] = 500,
 			["extras_p"] = 50,
-			["base_gp"] = 100,
 			["outsiders"] = 0,
+			["base_gp"] = 100,
 		},
 		["GLORY"] = {
+			["outsiders"] = 0,
 			["bonus_loot_log"] = {
 				{
 					["player"] = "Cptnadsack-Illidan",
 					["coinsLeft"] = "5",
 					["timestamp"] = "2014-10-23 19:40:00",
-					["reward"] = "|cffa335ee|Hitem:112928:0:0:0:0:0:0:0:90:0:5:2:449:448|h[Greathelm of the Warchief]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112928:0:0:0:0:0:0:0:90:0:5:2:449:448|h[Greathelm of the Warchief]|h|r",
 				}, -- [1]
 				{
-					["timestamp"] = "2014-10-23 19:41:00",
 					["player"] = "Xcalibre-Illidan",
+					["timestamp"] = "2014-10-23 19:41:00",
 					["coinsLeft"] = "0",
 					["currencyID"] = "0",
 				}, -- [2]
 				{
-					["timestamp"] = "2014-10-23 19:41:00",
 					["player"] = "Shamalamadim-Illidan",
+					["timestamp"] = "2014-10-23 19:41:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [3]
@@ -9121,12 +8921,12 @@ EPGP_DB = {
 					["player"] = "Centromere",
 					["coinsLeft"] = "17",
 					["timestamp"] = "2014-10-24 10:10:00",
-					["reward"] = "|cffa335ee|Hitem:105807:0:0:0:0:0:0:0:90:0:0:0|h[Magdalena's Murderous Crown]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:105807:0:0:0:0:0:0:0:90:0:0:0|h[Magdalena's Murderous Crown]|h|r",
 				}, -- [4]
 				{
-					["player"] = "Pantheris-Tanaris",
 					["timestamp"] = "2014-10-26 15:06:00",
+					["player"] = "Pantheris-Tanaris",
 					["coinsLeft"] = "17",
 					["currencyID"] = "0",
 				}, -- [5]
@@ -9134,66 +8934,66 @@ EPGP_DB = {
 					["player"] = "Centromere",
 					["coinsLeft"] = "18",
 					["timestamp"] = "2014-10-26 15:06:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112482:0:0:0:0:0:0:0:90:0:3:0|h[Poisonbinder Girth]|h|r",
+					["currencyID"] = "0",
 				}, -- [6]
 				{
-					["player"] = "Capzieleron-Tanaris",
 					["timestamp"] = "2014-10-26 15:21:00",
+					["player"] = "Capzieleron-Tanaris",
 					["coinsLeft"] = "16",
 					["currencyID"] = "0",
 				}, -- [7]
 				{
-					["player"] = "Centromere",
 					["timestamp"] = "2014-10-26 15:21:00",
+					["player"] = "Centromere",
 					["coinsLeft"] = "17",
 					["currencyID"] = "0",
 				}, -- [8]
 				{
-					["timestamp"] = "2014-10-26 15:30:00",
 					["player"] = "Pantheris-Tanaris",
+					["timestamp"] = "2014-10-26 15:30:00",
 					["coinsLeft"] = "16",
 					["currencyID"] = "0",
 				}, -- [9]
 				{
-					["timestamp"] = "2014-10-26 15:30:00",
 					["player"] = "Capzieleron-Tanaris",
+					["timestamp"] = "2014-10-26 15:30:00",
 					["coinsLeft"] = "15",
 					["currencyID"] = "0",
 				}, -- [10]
 				{
-					["timestamp"] = "2014-10-26 15:30:00",
 					["player"] = "Centromere",
+					["timestamp"] = "2014-10-26 15:30:00",
 					["coinsLeft"] = "16",
 					["currencyID"] = "0",
 				}, -- [11]
 				{
-					["player"] = "Xiaoapples-Illidan",
 					["timestamp"] = "2014-10-26 17:34:00",
+					["player"] = "Xiaoapples-Illidan",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [12]
 				{
-					["player"] = "Centromere",
 					["timestamp"] = "2014-10-26 17:34:00",
+					["player"] = "Centromere",
 					["coinsLeft"] = "15",
 					["currencyID"] = "0",
 				}, -- [13]
 				{
-					["player"] = "Centromere",
 					["timestamp"] = "2014-10-26 18:03:00",
+					["player"] = "Centromere",
 					["coinsLeft"] = "14",
 					["currencyID"] = "0",
 				}, -- [14]
 				{
-					["player"] = "Centromere",
 					["timestamp"] = "2014-10-26 18:18:00",
+					["player"] = "Centromere",
 					["coinsLeft"] = "13",
 					["currencyID"] = "0",
 				}, -- [15]
 				{
-					["player"] = "Centromere",
 					["timestamp"] = "2014-10-26 18:30:00",
+					["player"] = "Centromere",
 					["coinsLeft"] = "12",
 					["currencyID"] = "0",
 				}, -- [16]
@@ -9201,25 +9001,25 @@ EPGP_DB = {
 					["player"] = "Centromere",
 					["coinsLeft"] = "11",
 					["timestamp"] = "2014-10-26 18:55:00",
-					["reward"] = "|cffa335ee|Hitem:112796:0:0:0:0:0:0:0:90:0:5:1:449|h[Malkorok's Giant Stompers]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112796:0:0:0:0:0:0:0:90:0:5:1:449|h[Malkorok's Giant Stompers]|h|r",
 				}, -- [17]
 				{
 					["player"] = "Centromere",
 					["coinsLeft"] = "10",
 					["timestamp"] = "2014-10-26 19:11:00",
-					["reward"] = "|cffa335ee|Hitem:112828:0:0:0:0:0:0:0:90:0:5:1:449|h[Seal of the Forgotten Kings]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112828:0:0:0:0:0:0:0:90:0:5:1:449|h[Seal of the Forgotten Kings]|h|r",
 				}, -- [18]
 				{
-					["player"] = "Centromere",
 					["timestamp"] = "2014-10-29 12:01:00",
+					["player"] = "Centromere",
 					["coinsLeft"] = "18",
 					["currencyID"] = "0",
 				}, -- [19]
 				{
-					["player"] = "Centromere",
 					["timestamp"] = "2014-10-29 12:13:00",
+					["player"] = "Centromere",
 					["coinsLeft"] = "17",
 					["currencyID"] = "0",
 				}, -- [20]
@@ -9227,24 +9027,24 @@ EPGP_DB = {
 					["player"] = "Centromere",
 					["coinsLeft"] = "16",
 					["timestamp"] = "2014-10-29 12:23:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112949:0:0:0:0:0:0:0:90:0:3:1:448|h[Greatsword of Pride's Fall]|h|r",
+					["currencyID"] = "0",
 				}, -- [21]
 				{
-					["player"] = "Centromere",
 					["timestamp"] = "2014-10-29 12:36:00",
+					["player"] = "Centromere",
 					["coinsLeft"] = "15",
 					["currencyID"] = "0",
 				}, -- [22]
 				{
-					["player"] = "Centromere",
 					["timestamp"] = "2014-10-29 13:23:00",
+					["player"] = "Centromere",
 					["coinsLeft"] = "14",
 					["currencyID"] = "0",
 				}, -- [23]
 				{
-					["player"] = "Centromere",
 					["timestamp"] = "2014-10-29 13:26:00",
+					["player"] = "Centromere",
 					["coinsLeft"] = "13",
 					["currencyID"] = "0",
 				}, -- [24]
@@ -9252,12 +9052,12 @@ EPGP_DB = {
 					["player"] = "Centromere",
 					["coinsLeft"] = "18",
 					["timestamp"] = "2014-10-30 10:49:00",
-					["reward"] = "|cffa335ee|Hitem:112729:0:0:0:0:0:0:0:90:0:3:1:448|h[Juggernaut's Focusing Crystal]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112729:0:0:0:0:0:0:0:90:0:3:1:448|h[Juggernaut's Focusing Crystal]|h|r",
 				}, -- [25]
 				{
-					["timestamp"] = "2014-10-30 11:05:00",
 					["player"] = "Centromere",
+					["timestamp"] = "2014-10-30 11:05:00",
 					["coinsLeft"] = "17",
 					["currencyID"] = "0",
 				}, -- [26]
@@ -9265,12 +9065,12 @@ EPGP_DB = {
 					["player"] = "Centromere",
 					["coinsLeft"] = "16",
 					["timestamp"] = "2014-10-30 11:23:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:99747:0:0:0:0:0:0:0:90:0:0:0|h[Gauntlets of the Cursed Protector]|h|r",
+					["currencyID"] = "0",
 				}, -- [27]
 				{
-					["player"] = "Centromere",
 					["timestamp"] = "2014-11-01 15:16:00",
+					["player"] = "Centromere",
 					["coinsLeft"] = "15",
 					["currencyID"] = "0",
 				}, -- [28]
@@ -9278,36 +9078,36 @@ EPGP_DB = {
 					["player"] = "Centromere",
 					["coinsLeft"] = "14",
 					["timestamp"] = "2014-11-01 15:26:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112921:0:0:0:0:0:0:0:90:0:3:0|h[Kil'ruk's Furious Blade]|h|r",
+					["currencyID"] = "0",
 				}, -- [29]
 				{
-					["player"] = "Centromere",
 					["timestamp"] = "2014-11-01 15:39:00",
+					["player"] = "Centromere",
 					["coinsLeft"] = "13",
 					["currencyID"] = "0",
 				}, -- [30]
 				{
-					["timestamp"] = "2014-11-01 16:09:00",
 					["player"] = "Centromere",
+					["timestamp"] = "2014-11-01 16:09:00",
 					["coinsLeft"] = "12",
 					["currencyID"] = "0",
 				}, -- [31]
 				{
-					["timestamp"] = "2014-11-01 16:28:00",
 					["player"] = "Centromere",
+					["timestamp"] = "2014-11-01 16:28:00",
 					["coinsLeft"] = "11",
 					["currencyID"] = "0",
 				}, -- [32]
 				{
-					["timestamp"] = "2014-11-01 17:12:00",
 					["player"] = "Centromere",
+					["timestamp"] = "2014-11-01 17:12:00",
 					["coinsLeft"] = "10",
 					["currencyID"] = "0",
 				}, -- [33]
 				{
-					["timestamp"] = "2014-11-03 11:56:00",
 					["player"] = "Centromere",
+					["timestamp"] = "2014-11-03 11:56:00",
 					["coinsLeft"] = "9",
 					["currencyID"] = "0",
 				}, -- [34]
@@ -9315,49 +9115,49 @@ EPGP_DB = {
 					["player"] = "Yseronus-Dalaran",
 					["coinsLeft"] = "14",
 					["timestamp"] = "2014-11-03 11:56:00",
-					["reward"] = "|cffa335ee|Hitem:112742:0:0:0:0:0:0:0:90:0:5:1:449|h[Juggernaut's Ignition Keys]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112742:0:0:0:0:0:0:0:90:0:5:1:449|h[Juggernaut's Ignition Keys]|h|r",
 				}, -- [35]
 				{
 					["player"] = "Raìjin-Dalaran",
 					["coinsLeft"] = "15",
 					["timestamp"] = "2014-11-03 11:56:00",
-					["reward"] = "|cffa335ee|Hitem:112739:0:0:0:0:0:0:0:90:0:5:2:449:448|h[Laser Burn Bracers]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112739:0:0:0:0:0:0:0:90:0:5:2:449:448|h[Laser Burn Bracers]|h|r",
 				}, -- [36]
 				{
-					["player"] = "Yseronus-Dalaran",
 					["timestamp"] = "2014-11-03 12:13:00",
+					["player"] = "Yseronus-Dalaran",
 					["coinsLeft"] = "13",
 					["currencyID"] = "0",
 				}, -- [37]
 				{
-					["player"] = "Centromere",
 					["timestamp"] = "2014-11-03 12:14:00",
+					["player"] = "Centromere",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [38]
 				{
-					["player"] = "Raìjin-Dalaran",
 					["timestamp"] = "2014-11-03 12:14:00",
+					["player"] = "Raìjin-Dalaran",
 					["coinsLeft"] = "14",
 					["currencyID"] = "0",
 				}, -- [39]
 				{
-					["timestamp"] = "2014-11-03 14:09:00",
 					["player"] = "Centromere",
+					["timestamp"] = "2014-11-03 14:09:00",
 					["coinsLeft"] = "7",
 					["currencyID"] = "0",
 				}, -- [40]
 				{
-					["timestamp"] = "2014-11-03 14:30:00",
 					["player"] = "Centromere",
+					["timestamp"] = "2014-11-03 14:30:00",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [41]
 				{
-					["timestamp"] = "2014-11-03 14:38:00",
 					["player"] = "Centromere",
+					["timestamp"] = "2014-11-03 14:38:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [42]
@@ -9365,25 +9165,25 @@ EPGP_DB = {
 					["player"] = "Centromere",
 					["coinsLeft"] = "10",
 					["timestamp"] = "2014-11-04 13:34:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:112419:0:0:0:0:0:0:0:90:0:5:1:449|h[Treads of Unchained Hate]|h|r",
+					["currencyID"] = "0",
 				}, -- [43]
 				{
 					["player"] = "Centromere",
 					["coinsLeft"] = "9",
 					["timestamp"] = "2014-11-04 13:42:00",
-					["reward"] = "|cffa335ee|Hitem:112484:0:0:0:0:0:0:0:90:0:5:1:449|h[Sorrowpath Signet]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112484:0:0:0:0:0:0:0:90:0:5:1:449|h[Sorrowpath Signet]|h|r",
 				}, -- [44]
 				{
-					["player"] = "Centromere",
 					["timestamp"] = "2014-11-04 15:34:00",
+					["player"] = "Centromere",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [45]
 				{
-					["timestamp"] = "2014-11-04 15:46:00",
 					["player"] = "Centromere",
+					["timestamp"] = "2014-11-04 15:46:00",
 					["coinsLeft"] = "7",
 					["currencyID"] = "0",
 				}, -- [46]
@@ -9391,12 +9191,12 @@ EPGP_DB = {
 					["player"] = "Piercemd-KulTiras",
 					["coinsLeft"] = "6",
 					["timestamp"] = "2014-11-04 16:04:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:105798:0:0:0:0:0:0:0:90:0:0:0|h[Flame Healer's Shoulderguards]|h|r",
+					["currencyID"] = "0",
 				}, -- [47]
 				{
-					["player"] = "Centromere",
 					["timestamp"] = "2014-11-04 16:04:00",
+					["player"] = "Centromere",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [48]
@@ -9404,84 +9204,84 @@ EPGP_DB = {
 					["player"] = "Piercemd-KulTiras",
 					["coinsLeft"] = "5",
 					["timestamp"] = "2014-11-04 16:07:00",
-					["currencyID"] = "0",
 					["reward"] = "|cffa335ee|Hitem:99171:0:0:0:0:0:0:0:90:0:0:0|h[Legwraps of the Shattered Vale]|h|r",
+					["currencyID"] = "0",
 				}, -- [49]
 				{
-					["timestamp"] = "2014-11-04 16:55:00",
 					["player"] = "Cptnadsack-Illidan",
+					["timestamp"] = "2014-11-04 16:55:00",
 					["coinsLeft"] = "18",
 					["currencyID"] = "0",
 				}, -- [50]
 				{
-					["timestamp"] = "2014-11-04 16:55:00",
 					["player"] = "Centromere",
+					["timestamp"] = "2014-11-04 16:55:00",
 					["coinsLeft"] = "14",
 					["currencyID"] = "0",
 				}, -- [51]
 				{
-					["timestamp"] = "2014-11-04 17:08:00",
 					["player"] = "Centromere",
+					["timestamp"] = "2014-11-04 17:08:00",
 					["coinsLeft"] = "13",
 					["currencyID"] = "0",
 				}, -- [52]
 				{
-					["timestamp"] = "2014-11-04 17:08:00",
 					["player"] = "Cptnadsack-Illidan",
+					["timestamp"] = "2014-11-04 17:08:00",
 					["coinsLeft"] = "17",
 					["currencyID"] = "0",
 				}, -- [53]
 				{
-					["timestamp"] = "2014-11-04 17:17:00",
 					["player"] = "Cptnadsack-Illidan",
+					["timestamp"] = "2014-11-04 17:17:00",
 					["coinsLeft"] = "16",
 					["currencyID"] = "0",
 				}, -- [54]
 				{
-					["timestamp"] = "2014-11-04 17:17:00",
 					["player"] = "Centromere",
+					["timestamp"] = "2014-11-04 17:17:00",
 					["coinsLeft"] = "12",
 					["currencyID"] = "0",
 				}, -- [55]
 				{
-					["timestamp"] = "2014-11-04 17:25:00",
 					["player"] = "Cptnadsack-Illidan",
+					["timestamp"] = "2014-11-04 17:25:00",
 					["coinsLeft"] = "15",
 					["currencyID"] = "0",
 				}, -- [56]
 				{
-					["timestamp"] = "2014-11-04 17:25:00",
 					["player"] = "Azpek-Illidan",
+					["timestamp"] = "2014-11-04 17:25:00",
 					["coinsLeft"] = "18",
 					["currencyID"] = "0",
 				}, -- [57]
 				{
-					["timestamp"] = "2014-11-04 17:25:00",
 					["player"] = "Centromere",
+					["timestamp"] = "2014-11-04 17:25:00",
 					["coinsLeft"] = "11",
 					["currencyID"] = "0",
 				}, -- [58]
 				{
-					["timestamp"] = "2014-11-04 17:26:00",
 					["player"] = "Atmos-Illidan",
+					["timestamp"] = "2014-11-04 17:26:00",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [59]
 				{
-					["timestamp"] = "2014-11-04 17:45:00",
 					["player"] = "Azpek-Illidan",
+					["timestamp"] = "2014-11-04 17:45:00",
 					["coinsLeft"] = "17",
 					["currencyID"] = "0",
 				}, -- [60]
 				{
-					["timestamp"] = "2014-11-04 17:45:00",
 					["player"] = "Cptnadsack-Illidan",
+					["timestamp"] = "2014-11-04 17:45:00",
 					["coinsLeft"] = "14",
 					["currencyID"] = "0",
 				}, -- [61]
 				{
-					["timestamp"] = "2014-11-04 17:45:00",
 					["player"] = "Centromere",
+					["timestamp"] = "2014-11-04 17:45:00",
 					["coinsLeft"] = "10",
 					["currencyID"] = "0",
 				}, -- [62]
@@ -9489,30 +9289,30 @@ EPGP_DB = {
 					["player"] = "Centromere",
 					["coinsLeft"] = "9",
 					["timestamp"] = "2014-11-04 18:47:00",
-					["reward"] = "|cffa335ee|Hitem:112757:0:0:0:0:0:0:0:90:0:6:1:450|h[Wolf-Rider Spurs]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112757:0:0:0:0:0:0:0:90:0:6:1:450|h[Wolf-Rider Spurs]|h|r",
 				}, -- [63]
 				{
-					["timestamp"] = "2014-11-04 18:47:00",
 					["player"] = "Cptnadsack-Illidan",
+					["timestamp"] = "2014-11-04 18:47:00",
 					["coinsLeft"] = "12",
 					["currencyID"] = "0",
 				}, -- [64]
 				{
-					["timestamp"] = "2014-11-04 18:48:00",
 					["player"] = "Atmos-Illidan",
+					["timestamp"] = "2014-11-04 18:48:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [65]
 				{
-					["timestamp"] = "2014-11-04 18:48:00",
 					["player"] = "Cexcells-Illidan",
+					["timestamp"] = "2014-11-04 18:48:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [66]
 				{
-					["timestamp"] = "2014-11-04 18:57:00",
 					["player"] = "Cptnadsack-Illidan",
+					["timestamp"] = "2014-11-04 18:57:00",
 					["coinsLeft"] = "11",
 					["currencyID"] = "0",
 				}, -- [67]
@@ -9520,12 +9320,12 @@ EPGP_DB = {
 					["player"] = "Centromere",
 					["coinsLeft"] = "8",
 					["timestamp"] = "2014-11-04 18:57:00",
-					["reward"] = "|cffa335ee|Hitem:112785:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Gar'tok, Strength of the Faithful]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112785:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Gar'tok, Strength of the Faithful]|h|r",
 				}, -- [68]
 				{
-					["timestamp"] = "2014-11-04 18:58:00",
 					["player"] = "Atmos-Illidan",
+					["timestamp"] = "2014-11-04 18:58:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [69]
@@ -9533,12 +9333,12 @@ EPGP_DB = {
 					["player"] = "Cptnadsack-Illidan",
 					["coinsLeft"] = "10",
 					["timestamp"] = "2014-11-04 19:13:00",
-					["reward"] = "|cffa335ee|Hitem:112803:0:0:0:0:0:0:0:90:0:6:1:450|h[Malkorok's Tainted Dog Tags]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112803:0:0:0:0:0:0:0:90:0:6:1:450|h[Malkorok's Tainted Dog Tags]|h|r",
 				}, -- [70]
 				{
-					["timestamp"] = "2014-11-04 19:14:00",
 					["player"] = "Centromere",
+					["timestamp"] = "2014-11-04 19:14:00",
 					["coinsLeft"] = "7",
 					["currencyID"] = "0",
 				}, -- [71]
@@ -9546,18 +9346,18 @@ EPGP_DB = {
 					["player"] = "Azpek-Illidan",
 					["coinsLeft"] = "16",
 					["timestamp"] = "2014-11-04 19:38:00",
-					["reward"] = "|cffa335ee|Hitem:112895:0:0:0:0:0:0:0:90:0:6:1:450|h[Bracers of Infinite Pipes]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112895:0:0:0:0:0:0:0:90:0:6:1:450|h[Bracers of Infinite Pipes]|h|r",
 				}, -- [72]
 				{
-					["timestamp"] = "2014-11-04 19:38:00",
 					["player"] = "Cexcells-Illidan",
+					["timestamp"] = "2014-11-04 19:38:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [73]
 				{
-					["timestamp"] = "2014-11-04 19:38:00",
 					["player"] = "Centromere",
+					["timestamp"] = "2014-11-04 19:38:00",
 					["coinsLeft"] = "6",
 					["currencyID"] = "0",
 				}, -- [74]
@@ -9565,36 +9365,36 @@ EPGP_DB = {
 					["player"] = "Cptnadsack-Illidan",
 					["coinsLeft"] = "9",
 					["timestamp"] = "2014-11-04 19:38:00",
-					["reward"] = "|cffa335ee|Hitem:112882:0:0:0:0:0:0:0:90:0:6:1:450|h[Calixian Bladebreakers]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112882:0:0:0:0:0:0:0:90:0:6:1:450|h[Calixian Bladebreakers]|h|r",
 				}, -- [75]
 				{
-					["timestamp"] = "2014-11-04 19:38:00",
 					["player"] = "Atmos-Illidan",
+					["timestamp"] = "2014-11-04 19:38:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [76]
 				{
-					["timestamp"] = "2014-11-04 19:50:00",
 					["player"] = "Azpek-Illidan",
+					["timestamp"] = "2014-11-04 19:50:00",
 					["coinsLeft"] = "15",
 					["currencyID"] = "0",
 				}, -- [77]
 				{
-					["timestamp"] = "2014-11-04 19:50:00",
 					["player"] = "Cexcells-Illidan",
+					["timestamp"] = "2014-11-04 19:50:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [78]
 				{
-					["timestamp"] = "2014-11-04 19:50:00",
 					["player"] = "Cptnadsack-Illidan",
+					["timestamp"] = "2014-11-04 19:50:00",
 					["coinsLeft"] = "8",
 					["currencyID"] = "0",
 				}, -- [79]
 				{
-					["timestamp"] = "2014-11-04 19:50:00",
 					["player"] = "Centromere",
+					["timestamp"] = "2014-11-04 19:50:00",
 					["coinsLeft"] = "5",
 					["currencyID"] = "0",
 				}, -- [80]
@@ -9602,18 +9402,18 @@ EPGP_DB = {
 					["player"] = "Azpek-Illidan",
 					["coinsLeft"] = "14",
 					["timestamp"] = "2014-11-04 20:02:00",
-					["reward"] = "|cffa335ee|Hitem:112851:0:0:0:0:0:0:0:90:0:6:1:450|h[Gleaming Eye of the Devilsaur]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112851:0:0:0:0:0:0:0:90:0:6:1:450|h[Gleaming Eye of the Devilsaur]|h|r",
 				}, -- [81]
 				{
-					["timestamp"] = "2014-11-04 20:02:00",
 					["player"] = "Centromere",
+					["timestamp"] = "2014-11-04 20:02:00",
 					["coinsLeft"] = "4",
 					["currencyID"] = "0",
 				}, -- [82]
 				{
-					["timestamp"] = "2014-11-04 20:02:00",
 					["player"] = "Cexcells-Illidan",
+					["timestamp"] = "2014-11-04 20:02:00",
 					["coinsLeft"] = "2",
 					["currencyID"] = "0",
 				}, -- [83]
@@ -9621,19 +9421,19 @@ EPGP_DB = {
 					["player"] = "Cptnadsack-Illidan",
 					["coinsLeft"] = "7",
 					["timestamp"] = "2014-11-04 20:02:00",
-					["reward"] = "|cffa335ee|Hitem:112850:0:0:0:0:0:0:0:90:0:6:1:450|h[Thok's Tail Tip]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112850:0:0:0:0:0:0:0:90:0:6:1:450|h[Thok's Tail Tip]|h|r",
 				}, -- [84]
 				{
 					["player"] = "Atmos-Illidan",
 					["coinsLeft"] = "2",
 					["timestamp"] = "2014-11-04 20:02:00",
-					["reward"] = "|cffa335ee|Hitem:99725:0:0:0:0:0:0:0:90:0:0:0|h[Helm of the Cursed Protector]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:99725:0:0:0:0:0:0:0:90:0:0:0|h[Helm of the Cursed Protector]|h|r",
 				}, -- [85]
 				{
-					["timestamp"] = "2014-11-04 20:18:00",
 					["player"] = "Azpek-Illidan",
+					["timestamp"] = "2014-11-04 20:18:00",
 					["coinsLeft"] = "13",
 					["currencyID"] = "0",
 				}, -- [86]
@@ -9641,29 +9441,28 @@ EPGP_DB = {
 					["player"] = "Cptnadsack-Illidan",
 					["coinsLeft"] = "6",
 					["timestamp"] = "2014-11-04 20:18:00",
-					["reward"] = "|cffa335ee|Hitem:112913:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Skeer's Bloodsoaked Talisman]|h|r",
 					["currencyID"] = "0",
+					["reward"] = "|cffa335ee|Hitem:112913:0:0:0:0:0:0:0:90:0:6:2:450:448|h[Skeer's Bloodsoaked Talisman]|h|r",
 				}, -- [87]
 				{
-					["timestamp"] = "2014-11-04 20:18:00",
 					["player"] = "Centromere",
+					["timestamp"] = "2014-11-04 20:18:00",
 					["coinsLeft"] = "3",
 					["currencyID"] = "0",
 				}, -- [88]
 				{
-					["timestamp"] = "2014-11-04 20:18:00",
 					["player"] = "Cexcells-Illidan",
+					["timestamp"] = "2014-11-04 20:18:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [89]
 				{
-					["timestamp"] = "2014-11-04 20:18:00",
 					["player"] = "Atmos-Illidan",
+					["timestamp"] = "2014-11-04 20:18:00",
 					["coinsLeft"] = "1",
 					["currencyID"] = "0",
 				}, -- [90]
 			},
-			["outsiders"] = 0,
 			["blizzard_show_offline"] = false,
 		},
 	},

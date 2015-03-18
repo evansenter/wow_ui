@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1147, "DBM-BlackrockFoundry", nil, 457)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 13132 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 13333 $"):sub(12, -3))
 mod:SetCreatureID(76906)--81315 Crack-Shot, 81197 Raider, 77487 Grom'kar Firemender, 80791 Grom'kar Man-at-Arms, 81318 Iron Gunnery Sergeant, 77560 Obliterator Cannon, 81612 Deforester
 mod:SetEncounterID(1692)
 mod:SetZone()
@@ -12,19 +12,16 @@ mod:RegisterCombat("combat")
 
 mod:RegisterEventsInCombat(
 	"SPELL_CAST_START 160140 163753 159481",
-	"SPELL_CAST_SUCCESS 155864",
-	"SPELL_AURA_APPLIED 155921 165195",
-	"SPELL_AURA_APPLIED_DOSE 155921",
+	"SPELL_CAST_SUCCESS 155864 159481",
+	"SPELL_AURA_APPLIED 155921 165195 164380 160140",
+	"SPELL_AURA_APPLIED_DOSE 155921 164380",
+	"SPELL_AURA_REFRESH 155921",
 	"UNIT_DIED",
 	"CHAT_MSG_MONSTER_YELL"
 )
 
---TODO, maybe range finder for when Man-at_arms is out (reckless Charge)
---TODO, train timers, as well as what mobs get off with each train.
---TODO, mythic "move out of fire" warnings and maybe cast warnings too
---TODO, add audio countdown for trains when the train timers are proven good and support whole fight.
 --Operator Thogar
-local warnProtoGrenade				= mod:NewSpellAnnounce(155864, 3)
+local warnProtoGrenade				= mod:NewTargetAnnounce(155864, 3)
 local warnEnkindle					= mod:NewStackAnnounce(155921, 2, nil, "Tank")
 local warnTrain						= mod:NewTargetCountAnnounce(176312, 4)
 --Adds
@@ -32,39 +29,48 @@ local warnDelayedSiegeBomb			= mod:NewTargetAnnounce(159481, 3)
 
 --Operator Thogar
 local specWarnProtoGrenade			= mod:NewSpecialWarningMove(165195, nil, nil, nil, nil, nil, 2)
+local specWarnProtoGrenadeNear		= mod:NewSpecialWarningClose(165195)
+local yellProtoGrenade				= mod:NewYell(165195)
 local specWarnEnkindle				= mod:NewSpecialWarningStack(155921, nil, 2)--Maybe need 3 for new cd?
 local specWarnEnkindleOther			= mod:NewSpecialWarningTaunt(155921)
 local specWarnTrain					= mod:NewSpecialWarningDodge(176312, nil, nil, nil, 3)
 local specWarnSplitSoon				= mod:NewSpecialWarning("specWarnSplitSoon")--TODO, maybe include types in the split?
 --Adds
 local specWarnCauterizingBolt		= mod:NewSpecialWarningInterrupt("OptionVersion2", 160140, "-Healer")
+local specWarnCauterizingBoltDispel	= mod:NewSpecialWarningDispel(160140, "MagicDispeller")
 local specWarnIronbellow			= mod:NewSpecialWarningSpell(163753, nil, nil, nil, 2)
-local specWarnDelayedSiegeBomb		= mod:NewSpecialWarningYou(159481)
-local yellDelayedSiegeBomb			= mod:NewYell(159481)
+local specWarnDelayedSiegeBomb		= mod:NewSpecialWarningYou(159481, nil, nil, nil, nil, nil, 2)
+local specWarnDelayedSiegeBombMove	= mod:NewSpecialWarningMove(159481)
+local yellDelayedSiegeBomb			= mod:NewCountYell(159481)
 local specWarnManOArms				= mod:NewSpecialWarningSwitch("ej9549", "-Healer")
---local specWarnObliteration		= mod:NewSpecialWarningMove(156494)--Debuff doesn't show in combat log, and dot persists after moving out of it so warning is pretty useless right now. TODO, see if UNIT_AURA player type check can work.
+local specWarnBurning				= mod:NewSpecialWarningStack(164380, nil, 2)--Mythic
 
 --Operator Thogar
-local timerProtoGrenadeCD			= mod:NewCDTimer(12, 155864)
+local timerProtoGrenadeCD			= mod:NewCDTimer(11, 155864)
 local timerEnkindleCD				= mod:NewCDTimer(12, 155921, nil, "Tank")
 local timerTrainCD					= mod:NewNextCountTimer("d15", 176312)
 --Adds
 --local timerCauterizingBoltCD		= mod:NewNextTimer(30, 160140)
-local timerIronbellowCD				= mod:NewCDTimer(10, 163753)
+local timerIronbellowCD				= mod:NewCDTimer(8.5, 163753)
+local timerDelayedSiegeBomb			= mod:NewNextCountTimer(6, 159481)
 
 local berserkTimer					= mod:NewBerserkTimer(492)
 
-local countdownTrain				= mod:NewCountdown(5, 176312)
+local countdownTrain				= mod:NewCountdown(4.5, 176312)
 
 local voiceTrain					= mod:NewVoice(176312) --see mythicVoice{} otherVoice{} tables for more details
 local voiceProtoGrenade				= mod:NewVoice(165195) --runaway
+local voiceDelayedSiegeBomb			= mod:NewVoice(159481)
 
 mod:AddInfoFrameOption(176312)
 mod:AddSetIconOption("SetIconOnAdds", "ej9549", false, true)
+mod:AddHudMapOption("HudMapForTrain", 176312, false)
+mod:AddDropdownOption("InfoFrameSpeed", {"Immediately", "Delayed"}, "Delayed", "misc")
 
 mod.vb.trainCount = 0
 mod.vb.infoCount = 0
 local GetTime, UnitPosition = GetTime, UnitPosition
+local UnitDebuff = UnitDebuff
 local MovingTrain = GetSpellInfo(176312)
 local Train = GetSpellInfo(174806)
 local Cannon = GetSpellInfo(62357)
@@ -72,6 +78,7 @@ local Reinforcements = EJ_GetSectionInfo(9537)
 local ManOArms = EJ_GetSectionInfo(9549)
 local Deforester = EJ_GetSectionInfo(10329)
 local fakeYellTime = 0
+local bombFrom = nil
 
 --Note, all trains spawn 5 second after yell for that train
 --this means that for 5 second cd trains you may see a yell for NEXT train as previous train is showing up. Do not confuse this!
@@ -98,8 +105,8 @@ local mythicTrains = {
 	[18] = { [1] = ManOArms, [4] = Cannon },--+15 after 17.(04:02)
 	[19] = { [1] = Deforester, [2] = Train, [3] = Train },--+20 after 18.(04:22)
 	[20] = { [2] = Train, [3] = Train },--+20(or +21) after 19.(04:42)
-	[21] = { [2] = ManOArms, [3] = ManOArms },--+15 after 20.(04:57) Split
-	[22] = { [2] = Reinforcements, [4] = Train },--+20 after 21.(05:17)
+	[21] = { [2] = Reinforcements, [3] = ManOArms },--+15 after 20.(04:57) Split
+	[22] = { [1] = Train, [4] = Train },--+20 after 21.(05:17)
 	[23] = { [2] = Train, [3] = Train },--+10 after 22.(05:27)
 	[24] = { ["specialw"] = L.threeTrains, ["speciali"] = L.threeRandom, [1] = Train, [2] = Train, [3] = Train, [4] = Train },--+15 after 23.(05:42)
 	[25] = { ["specialw"] = L.threeTrains, ["speciali"] = L.threeRandom, [1] = Train, [2] = Train, [3] = Train, [4] = Train },--+15 after 24.(05:57)
@@ -109,16 +116,13 @@ local mythicTrains = {
 	[29] = { [1] = Train, [4] = Train },--+20 after 28.(06:47) (1 train is guessed)
 	[30] = { [1] = Reinforcements, [4] = Deforester },--+15 after 29.(07:02)
 	[31] = { [2] = Train },--+10 after 30.(07:12)
-	[32] = { [1] = Train },--+5 after 31.(07:17)
-	[33] = { [3] = Deforester },--+5 after 32.(07:22)
-	[34] = { [2] = Train },--+10 after 33.(07:32)
-	[35] = { [1] = ManOArms },--+10 after 34.(07:42)
-	[36] = { ["specialw"] = L.threeTrains, ["speciali"] = L.threeRandom, [1] = Train, [2] = Train, [3] = Train, [4] = Train },--+10 after 35.(07:52)
-	[37] = { [1] = Train, [2] = Train, [3] = Train, [4] = Train },--+15 after 36.(08:07)--berserk.
+	[32] = { [3] = Deforester },--+5 after 31.(07:17)
+	[33] = { [2] = Train },--+10 after 32.(07:27)
+	[34] = { [1] = ManOArms },--+15 after 33.(07:42)
+	[35] = { ["specialw"] = L.threeTrains, ["speciali"] = L.threeRandom, [1] = Train, [2] = Train, [3] = Train, [4] = Train },--+10 after 34.(07:52)
+	[36] = { [1] = Train, [2] = Train, [3] = Train, [4] = Train },--+15 after 35.(08:07)--berserk.
 }
 
---https://www.youtube.com/watch?v=yUgrmvksk7g
---https://www.youtube.com/watch?v=Gny-suQV8to
 local otherTrains = {
 	[1] = { [4] = Train },--+12 after pull (0:12)
 	[2] = { [2] = Train },--+10 after 1 (0:22)
@@ -143,7 +147,48 @@ local otherTrains = {
 	[21] = { [2] = Train },--+10 after 20 (5:12)
 	[22] = { [2] = Train },--+25 after 21 (5:37)
 	[23] = { [2] = Reinforcements, [3] = ManOArms },--+30 after 22 (6:07) Split
-	[24] = { ["specialw"] = L.oneTrain, ["speciali"] = L.oneRandom, [1] = Train, [2] = Train, [3] = Train, [4] = Train },--+15 after 23? (6:22). Lane 4, but if reinforcements aren't dead from wave 23, lane 2 (because reinforcements cart still blocking lane 4) Not Actually random. But detecting if reinforcement cart still in way impossible :\
+	[24] = { ["specialw"] = L.oneTrain, ["speciali"] = L.oneRandom, [2] = Train, [4] = Train },--+15 after 23? (6:22). Lane 4, but if reinforcements aren't dead from wave 23, lane 2 (because reinforcements cart still blocking lane 4) Not Actually random. But detecting if reinforcement cart still in way impossible :\
+	[25] = { [1] = Train },--+20 after 24 (6:42)
+	[26] = { [1] = Cannon, [4] = Reinforcements },--+10 after 25 (6:52)
+	[27] = { [2] = Train },--+15 after 26 (7:07)
+	[28] = { [3] = Train },--+10 after 27 (7:17)
+	[29] = { [3] = ManOArms },--+20 after 28 (7:37)
+	[30] = { [1] = Train, [4] = Train },--+5 after 29 (7:42) 
+	[31] = { [4] = Train },--+15 after 30 (7:57) (guessed.)--seems berserk. 4 trains in a row (interval 4 sec.)
+	[32] = { [3] = Train },--+4 after 31 (8:01)
+	[33] = { [2] = Train },--+4 after 32 (8:05)
+	[34] = { [1] = Train },--+4 after 33 (8:09)
+	[35] = { [1] = Train, [2] = Train, [3] = Train, [4] = Train },--+? after 34 (8:??)
+}
+
+--Kind of sucks having an entirely new table for 2 changes, but whatever.
+local lfrTrains = {
+	[1] = { [4] = Train },--+12 after pull (0:12)
+	[2] = { [2] = Train },--+10 after 1 (0:22)
+	[3] = { [1] = Reinforcements },--+5 after 2 (0:27)
+	[4] = { [3] = Train },--+15 after 3 (0:42)
+	[5] = { [4] = Cannon },--+5 after 4 (0:47)
+	[6] = { [2] = Train },--+25 after 5 (1:12)
+	[7] = { [3] = ManOArms },--+5 after 6 (1:17)
+	[8] = { [1] = Train },--+25 after 7 (1:42)
+	[9] = { [3] = Reinforcements },--+15 after 8 (1:57) Just one train in LFR
+	[10] = { [1] = Train, [4] = Train },--+40 after 9 (2:37)
+	[11] = { [1] = Cannon },--+10 after 10 (2:47)
+	[12] = { [2] = Train },--+15 after 11 (3:02)
+	[13] = { [4] = Reinforcements },--+10 after 12 (3:12)
+	[14] = { [3] = Train },--+20 after 13 (3:32)
+	[15] = { [2] = Train },--+10 after 14 (3:42)
+	[16] = { [1] = Train },--+10 after 15 (3:52)
+	[17] = { [2] = ManOArms, [4] = Cannon },--+15 after 16 (4:07)
+	[18] = { [1] = Train },--+20 after 17 (4:27)
+	[19] = { [3] = Train },--+5 after 18 (4:32)
+	[20] = { [1] = Cannon, [4] = Cannon },--+30 after 19 (5:02)
+	[21] = { [2] = Train },--+10 after 20 (5:12)
+	[22] = { [2] = Train },--+25 after 21 (5:37)
+	--FIXME
+	[23] = { [2] = Reinforcements, [3] = ManOArms },--+30 after 22 (6:07) Also not a split, but don't know what's changed
+	--FIXME
+	[24] = { ["specialw"] = L.oneTrain, ["speciali"] = L.oneRandom, [2] = Train, [4] = Train },--+15 after 23? (6:22). Lane 4, but if reinforcements aren't dead from wave 23, lane 2 (because reinforcements cart still blocking lane 4) Not Actually random. But detecting if reinforcement cart still in way impossible :\
 	[25] = { [1] = Train },--+20 after 24 (6:42)
 	[26] = { [1] = Cannon, [4] = Reinforcements },--+10 after 25 (6:52)
 	[27] = { [2] = Train },--+15 after 26 (7:07)
@@ -186,28 +231,27 @@ local mythicVoice = {
 	[12] = "E4",
 	[13] = "E1",
 	[14] = "A3",
-	[15] = "A23",--new
+	[15] = "A23",
 	[16] = "F",
 	[17] = "F",
-	[18] = "D1C4",--new
-	[19] = "E1A23",--new
+	[18] = "D1C4",
+	[19] = "E1A23",
 	[20] = "A23",
-	[21] = "D23",
-	[22] = "B2A4",--new
+	[21] = "B2D3",
+	[22] = "A14",
 	[23] = "A23",
 	[24] = "F",
 	[25] = "F",
 	[26] = "B4",
 	[27] = "C1",
-	[28] = "E23",--new
+	[28] = "E23",
 	[29] = "A14",
 	[30] = "B1E4",
 	[31] = "A2",
-	[32] = "A1",
-	[33] = "E3",
-	[34] = "A2",
-	[35] = "D1",
-	[36] = "F",--need to review
+	[32] = "E3",
+	[33] = "A2",
+	[34] = "D1",
+	[35] = "F",
 }
 
 local otherVoice = {
@@ -235,7 +279,44 @@ local otherVoice = {
 	[22] = "A2",
 	[23] = "B2D3",
 	[24] = "AX",
-	[25] = "A1",--Possibly also random?
+	[25] = "A1",
+	[26] = "C1D4",--Don't worry, B14 will be used on mythic i'm sure. sorry about this messup
+	[27] = "A2",
+	[28] = "A3",
+	[29] = "D3",
+	[30] = "A14",
+	[31] = "A4",
+	[32] = "A3",
+	[33] = "A2",
+	[34] = "A1",
+}
+
+local lfrVoice = {
+	[1] = "A4",
+	[2] = "A2",
+	[3] = "B1",
+	[4] = "A3",
+	[5] = "C4",
+	[6] = "A2",
+	[7] = "D3",
+	[8] = "A1",
+	[9] = "B3",
+	[10] = "A14",
+	[11] = "C1",
+	[12] = "A2",
+	[13] = "B4",
+	[14] = "A3",
+	[15] = "A2",
+	[16] = "A1",
+	[17] = "D2C4",
+	[18] = "A1",
+	[19] = "A3",
+	[20] = "C14",
+	[21] = "A2",
+	[22] = "A2",
+	[23] = "B2D3",
+	[24] = "AX",
+	[25] = "A1",
 	[26] = "C1D4",--Don't worry, B14 will be used on mythic i'm sure. sorry about this messup
 	[27] = "A2",
 	[28] = "A3",
@@ -252,7 +333,7 @@ local function showTrainWarning(self)
 	local textTable = {}
 	local usedv = {}
 	local train = self.vb.trainCount
-	local trainTable = self:IsMythic() and mythicTrains or otherTrains
+	local trainTable = self:IsMythic() and mythicTrains or self:IsLFR() and lfrTrains or otherTrains
 	if trainTable[train] then
 		if trainTable[train]["specialw"] then
 			text = text .. trainTable[train]["specialw"]..", "
@@ -297,7 +378,7 @@ local function lanePos()
 end
 
 local function laneCheck(self)
-	local trainTable = self:IsMythic() and mythicTrains or otherTrains
+	local trainTable = self:IsMythic() and mythicTrains or self:IsLFR() and lfrTrains or otherTrains
 	local train = self.vb.trainCount
 	local playerLane = lanePos()
 	if trainTable[train] and trainTable[train][playerLane] then
@@ -325,7 +406,7 @@ end
 local function updateInfoFrame()
 	table.wipe(lines)
 	local train = mod.vb.infoCount
-	local trainTable = mod:IsMythic() and mythicTrains or otherTrains
+	local trainTable = mod:IsMythic() and mythicTrains or mod:IsLFR() and lfrTrains or otherTrains
 	if trainTable[train] then
 		local playerLane = lanePos()
 		for i = 1, 4 do
@@ -343,6 +424,28 @@ local function updateInfoFrame()
 		lines[DBM_CORE_UNKNOWN] = ""
 	end
 	return lines
+end
+
+--Work In Progress
+--Timing may need tweaks. more Moves need adding.
+--Positions based on https://www.youtube.com/watch?v=0QC7BOEv2iE
+local function showHud(self, train, secondMove)
+	if self.Options.HudMapForTrain then
+		if train == 14 then--Move to skull
+			DBMHudMap:RegisterPositionMarker(176312, "TrainHelper", "skull", 517, 3353, 3, 5, 1, 1, 1, 0.5):Pulse(0.5, 0.5)
+		elseif train == 15 or train == 23 then--Move to triangle
+			DBMHudMap:RegisterPositionMarker(176312, "TrainHelper", "triangle", 544, 3316, 3, 5, 1, 1, 1, 0.5):Pulse(0.5, 0.5)
+		elseif train == 18 then--Move to square
+			DBMHudMap:RegisterPositionMarker(176312, "TrainHelper", "square", 590, 3352, 3, 5, 1, 1, 1, 0.5):Pulse(0.5, 0.5)
+		elseif secondMove and secondMove == 1 then----Move to star, also during train count 19, but later
+			DBMHudMap:RegisterPositionMarker(176312, "TrainHelper", "star", 590, 3272, 3, 5, 1, 1, 1, 0.5):Pulse(0.5, 0.5)
+		elseif train == 19 then--Move to diamond
+			DBMHudMap:RegisterPositionMarker(176312, "TrainHelper", "diamond", 566, 3332, 3, 5, 1, 1, 1, 0.5):Pulse(0.5, 0.5)
+			self:Schedule(7, showHud, self, 1)
+		elseif train == 20 then--Move to Moon
+			DBMHudMap:RegisterPositionMarker(176312, "TrainHelper", "moon", 517, 3280, 3, 5, 1, 1, 1, 0.5):Pulse(0.5, 0.5)
+		end
+	end
 end
 
 local function showInfoFrame(self)
@@ -363,19 +466,39 @@ end
 
 function mod:BombTarget(targetname, uId)
 	if not targetname then return end
-	warnDelayedSiegeBomb:Show(targetname)
+	warnDelayedSiegeBomb:CombinedShow(0.5, targetname)
 	if targetname == UnitName("player") then
 		specWarnDelayedSiegeBomb:Show()
-		yellDelayedSiegeBomb:Yell()
+		specWarnDelayedSiegeBombMove:Schedule(5, 1)
+		timerDelayedSiegeBomb:Start(5.5, 1)
+		voiceDelayedSiegeBomb:Play("bombrun")
+	end
+end
+
+function mod:GrenadeTarget(targetname, uId)
+	if not targetname then
+		warnProtoGrenade:Show(DBM_CORE_UNKNOWN)
+		return
+	end
+	if targetname == UnitName("player") then
+		yellProtoGrenade:Yell()
+		if self:AntiSpam(1.5, 5) then
+			specWarnProtoGrenade:Show()
+			voiceProtoGrenade:Play("runaway")
+		end
+	elseif self:CheckNearby(5, targetname) then
+		specWarnProtoGrenadeNear:Show(targetname)
+	else
+		warnProtoGrenade:Show(targetname)
 	end
 end
 
 function mod:OnCombatStart(delay)
 	fakeYellTime = 0
+	bombFrom = nil
 	self.vb.trainCount = 0
 	self.vb.infoCount = 0
 	timerProtoGrenadeCD:Start(6-delay)
-	timerEnkindleCD:Start(15-delay)
 	if not self.Options.ShowedThogarMessage then
 		DBM:AddMsg(L.helperMessage)
 		self.Options.ShowedThogarMessage = true
@@ -400,8 +523,19 @@ end
 function mod:SPELL_CAST_SUCCESS(args)
 	local spellId = args.spellId
 	if spellId == 155864 and self:AntiSpam(2, 4) then
-		warnProtoGrenade:Show()
+		self:BossTargetScanner(76906, "GrenadeTarget", 0.02, 20, true, nil, true)
 		timerProtoGrenadeCD:Start()
+	elseif spellId == 159481 and args:IsPlayer() then
+		bombFrom = args.sourceGUID
+		voiceDelayedSiegeBomb:Play("keepmoving")
+		yellDelayedSiegeBomb:Yell(1)
+		specWarnDelayedSiegeBombMove:Show()
+		timerDelayedSiegeBomb:Start(3, 2)
+		yellDelayedSiegeBomb:Schedule(3, 2)
+		specWarnDelayedSiegeBombMove:Schedule(2.5)
+		timerDelayedSiegeBomb:Schedule(3, 3, 3)
+		yellDelayedSiegeBomb:Schedule(6, 3)
+		specWarnDelayedSiegeBombMove:Schedule(5.5)
 	end
 end
 
@@ -413,7 +547,7 @@ function mod:SPELL_CAST_START(args)
 		if self:AntiSpam(3, 1) then
 			specWarnIronbellow:Show()
 		end
-		timerIronbellowCD:Start(12, args.sourceGUID)
+		timerIronbellowCD:Start(nil, args.sourceGUID)
 	elseif spellId == 159481 then
 		self:BossTargetScanner(args.sourceGUID, "BombTarget", 0.05, 25)
 	end
@@ -429,29 +563,46 @@ function mod:SPELL_AURA_APPLIED(args)
 			if args:IsPlayer() then
 				specWarnEnkindle:Show(amount)
 			else--Taunt as soon as stacks are clear, regardless of stack count.
-				if not UnitDebuff("player", GetSpellInfo(155921)) and not UnitIsDeadOrGhost("player") then
+				local _, _, _, _, _, duration, expires = UnitDebuff("player", args.spellName)
+				local debuffTime = 0
+				if expires then
+					debuffTime = expires - GetTime()
+				end
+				if debuffTime < 12 and not UnitIsDeadOrGhost("player") then--No debuff, or debuff will expire before next cast.
 					specWarnEnkindleOther:Show(args.destName)
 				end
 			end
 		end
-	elseif spellId == 165195 and args:IsPlayer() then
+	elseif spellId == 165195 and args:IsPlayer() and self:AntiSpam(1.5, 5) then
 		specWarnProtoGrenade:Show()
 		voiceProtoGrenade:Play("runaway")
---[[	elseif spellId == 156494 and args:IsPlayer() and self:AntiSpam(3, 2) then
-		specWarnObliteration:Show()--]]
+	--Applied debuffs, not damage. Damage occurs for 15 seconds even when player moves out of it, but player gains stack of debuff every second standing in fire.
+	elseif spellId == 164380 and args:IsPlayer() and self:AntiSpam(2, 3) then
+		local amount = args.amount or 1
+		if amount >= 2 then
+			specWarnBurning:Show(amount)
+		end
+	elseif spellId == 160140 and args:IsDestTypeHostile() then
+		specWarnCauterizingBoltDispel:Show(args.destName)
 	end
 end
 mod.SPELL_AURA_APPLIED_DOSE = mod.SPELL_AURA_APPLIED
+mod.SPELL_AURA_REFRESH = mod.SPELL_AURA_APPLIED
 
 function mod:UNIT_DIED(args)
 	local cid = self:GetCIDFromGUID(args.destGUID)
 	if cid == 80791 then
 		timerIronbellowCD:Cancel(args.destGUID)
+	elseif bombFrom and args.destGUID == bombFrom then
+		yellDelayedSiegeBomb:Cancel()
+		specWarnDelayedSiegeBombMove:Cancel()
+		timerDelayedSiegeBomb:Cancel()
+		timerDelayedSiegeBomb:Unschedule()
 	end
 end
 
 function mod:CHAT_MSG_MONSTER_YELL(msg, npc, _, _, target)
-	local trainLimit = self:IsMythic() and 37 or 35
+	local trainLimit = self:IsMythic() and 36 or 35
 	if target == L.Train and self.vb.trainCount <= trainLimit then
 		local adjusted = (GetTime() - fakeYellTime) < 2-- yell followed by fakeyell within 2 sec. this should realyell of scheduled fakeyell. so do not increase count and only do adjust.
 		self:Unschedule(fakeTrainYell)--Always unschedule
@@ -459,7 +610,7 @@ function mod:CHAT_MSG_MONSTER_YELL(msg, npc, _, _, target)
 			self.vb.trainCount = self.vb.trainCount + 1
 			showTrainWarning(self)
 			if msg == "Fake" then
-				countdownTrain:Start(3.5)
+				countdownTrain:Start(3.0)
 				laneCheck(self)
 			else
 				countdownTrain:Start()
@@ -473,18 +624,50 @@ function mod:CHAT_MSG_MONSTER_YELL(msg, npc, _, _, target)
 			if mythicVoice[count] and not adjusted then
 				voiceTrain:Play("Thogar\\"..mythicVoice[count])
 			end
-			if count == 1 or count == 2 or count == 11 or count == 12 or count == 13 or count == 25 or count == 26 or count == 31 or count == 32 then
+			if count == 1 or count == 2 or count == 11 or count == 12 or count == 13 or count == 25 or count == 26 or count == 31 or count == 34 then
 				expectedTime = 5
-			elseif count == 6 or count == 14 or count == 22 or count == 30 or count == 33 or count == 34 or count == 35 then
+			elseif count == 6 or count == 14 or count == 22 or count == 30 or count == 32 then
 				expectedTime = 10
-			elseif count == 3 or count == 5 or count == 7 or count == 8 or count == 16 or count == 17 or count == 20 or count == 23 or count == 24 or count == 29 then
+				if count == 14 then
+					if msg == "Fake" then
+						self:Schedule(5.5, showHud, count, self)
+					else
+						self:Schedule(7, showHud, count, self)
+					end
+				end
+			elseif count == 3 or count == 5 or count == 7 or count == 8 or count == 16 or count == 17 or count == 20 or count == 23 or count == 24 or count == 29 or count == 33 then
 				expectedTime = 15
 				if count == 20 then
 					specWarnSplitSoon:Cancel()
-					specWarnSplitSoon:Schedule(5)
+					if msg == "Fake" then
+						specWarnSplitSoon:Schedule(3.5)
+						self:Schedule(5.5, showHud, count, self)
+					else
+						specWarnSplitSoon:Schedule(5)
+						self:Schedule(7, showHud, count, self)
+					end	
 				end
 			elseif count == 4 or count == 15 or count == 18 or count == 19  or count == 21 or count == 27 or count == 28 then
 				expectedTime = 20
+				if count == 15 then
+					if msg == "Fake" then
+						self:Schedule(5.5, showHud, count, self)
+					else
+						self:Schedule(7, showHud, count, self)
+					end
+				elseif count == 18 then
+					if msg == "Fake" then
+						self:Schedule(5.5, showHud, count, self)
+					else
+						self:Schedule(7, showHud, count, self)
+					end
+				elseif count == 19 then
+					if msg == "Fake" then
+						self:Schedule(5.5, showHud, count, self)
+					else
+						self:Schedule(7, showHud, count, self)
+					end	
+				end
 			elseif count == 10 then
 				expectedTime = 25
 			elseif count == 9 then
@@ -509,8 +692,9 @@ function mod:CHAT_MSG_MONSTER_YELL(msg, npc, _, _, target)
 				end
 			end
 		else
-			if otherVoice[count] and not adjusted then
-				voiceTrain:Play("Thogar\\"..otherVoice[count])
+			local whatVoice = self:IsLFR() and lfrVoice[count] or otherVoice[count]
+			if whatVoice and not adjusted then
+				voiceTrain:Play("Thogar\\"..whatVoice)
 			end
 			if count == 31 or count == 32 or count == 33 then
 				expectedTime = 4
@@ -520,7 +704,7 @@ function mod:CHAT_MSG_MONSTER_YELL(msg, npc, _, _, target)
 				expectedTime = 10
 			elseif count == 3 or count == 8 or count == 11 or count == 16 or count == 23 or count == 26 or count == 30 then
 				expectedTime = 15
-				if count == 8 then
+				if not self:IsLFR() and count == 8 then
 					specWarnSplitSoon:Cancel()
 					specWarnSplitSoon:Schedule(5)
 				end
@@ -530,7 +714,7 @@ function mod:CHAT_MSG_MONSTER_YELL(msg, npc, _, _, target)
 				expectedTime = 25
 			elseif count == 19 or count == 22 then
 				expectedTime = 30
-				if count == 22 then
+				if not self:IsLFR() and count == 22 then
 					specWarnSplitSoon:Cancel()
 					specWarnSplitSoon:Schedule(20)
 				end
@@ -554,12 +738,16 @@ function mod:CHAT_MSG_MONSTER_YELL(msg, npc, _, _, target)
 				end
 			end
 		end
-		local adjust = 0
-		if msg == "Fake" then
-			if expectedTime and expectedTime == 4 then adjust = 1 end
-			self:Schedule(2.5-adjust, showInfoFrame, self)
+		if self.Options.InfoFrameSpeed == "Delayed" then
+			local adjust = 0
+			if msg == "Fake" then
+				if expectedTime and expectedTime == 4 then adjust = 1 end
+				self:Schedule(2.5-adjust, showInfoFrame, self)
+			else
+				self:Schedule(4-adjust, showInfoFrame, self)
+			end
 		else
-			self:Schedule(4-adjust, showInfoFrame, self)
+			showInfoFrame(self)
 		end
 	end
 end

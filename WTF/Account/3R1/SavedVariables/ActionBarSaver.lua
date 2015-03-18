@@ -18,55 +18,55 @@ ActionBarSaverDB = {
 				[93] = "spell|2457||Battle Stance||",
 				[63] = "spell|18499||Berserker Rage||",
 				[78] = "spell|12323||Piercing Howl||",
-				[39] = "macro|39||Deathnote|Interface\\Icons\\Ability_Hunter_MurderofCrows|/deathnote",
+				[38] = "macro|38||Extra Action|Interface\\Icons\\INV_Misc_Herb_Whispervine|/click ExtraActionButton1",
 				[28] = "macro|28||Combat Log|Interface\\Icons\\PASSIVE_MONK_TEACHINGSOFMONASTERY|/combatlog",
 				[32] = "item|109219||Draenic Strength Potion",
 				[79] = "spell|5246||Intimidating Shout||",
 				[95] = "spell|18499||Berserker Rage||",
-				[33] = "spell|83968||Mass Resurrection|Guild Perk|",
+				[65] = "spell|6603||Auto Attack||",
 				[64] = "spell|103840||Impending Victory||",
 				[80] = "spell|1715||Hamstring||",
-				[49] = "spell|1680||Whirlwind||",
-				[34] = "spell|158752||Leatherworking||",
-				[65] = "spell|6603||Auto Attack||",
-				[81] = "macro|81||Vigilance|Interface\\Icons\\Ability_Warrior_Vigilance|#showtooltip Vigilance/n/cast [@mouseover,help,nodead][] Vigilance",
 				[97] = "spell|23881||Bloodthirst||",
+				[67] = "spell|20572||Blood Fury|Racial|",
+				[33] = "spell|83968||Mass Resurrection|Guild Perk|",
+				[81] = "macro|81||Vigilance|Interface\\Icons\\Ability_Warrior_Vigilance|#showtooltip Vigilance/n/cast [@mouseover,help,nodead][] Vigilance",
+				[49] = "spell|1680||Whirlwind||",
 				[57] = "item|5512||Healthstone",
 				[66] = "macro|66||Tier 6|Interface\\Icons\\Ability_Warrior_BloodBath|#showtooltip/n/cast [talent:6/1] Avatar; [talent:6/2] Bloodbath; [talent:6/3] Bladestorm/n/cast Blood Fury",
 				[82] = "spell|118038||Die by the Sword||",
 				[25] = "macro|25||Ready?|Interface\\Icons\\INV_Gizmo_01|/i Ready check./n/readycheck",
 				[29] = "macro|29||Macro|Interface\\Icons\\Ability_Spy|/mac",
-				[67] = "spell|20572||Blood Fury|Racial|",
+				[34] = "spell|158752||Leatherworking||",
 				[83] = "spell|469||Commanding Shout||",
 				[50] = "macro|50||Heroic Leap|Interface\\Icons\\Ability_HeroicLeap|#showtooltip/n/cast !Heroic Leap",
 				[58] = "item|109223||Healing Tonic",
 				[68] = "macro|68||Recklessness|Interface\\Icons\\warrior_skullbanner|#showtooltip/n/cast Recklessness/n/cast Blood Fury",
 				[84] = "spell|6673||Battle Shout||",
 				[100] = "spell|1680||Whirlwind||",
-				[17] = "spell|6673||Battle Shout||",
 				[69] = "macro|69||Intervene|Interface\\Icons\\Ability_Warrior_VictoryRush|#showtooltip Intervene/n/cast [@mouseover,help,nodead] Intervene",
+				[35] = "spell|158737||Blacksmithing||",
 				[85] = "spell|23881||Bloodthirst||",
 				[51] = "spell|57755||Heroic Throw||",
-				[26] = "macro|26||Pull|Interface\\Icons\\INV_Gizmo_RocketBootExtreme|/i DBM Pull./n/dbm pull 10",
+				[102] = "spell|1715||Hamstring||",
 				[70] = "spell|97462||Rallying Cry||",
 				[86] = "spell|85288||Raging Blow||",
-				[102] = "spell|1715||Hamstring||",
+				[26] = "macro|26||Pull|Interface\\Icons\\INV_Gizmo_RocketBootExtreme|/i DBM Pull./n/dbm pull 10",
 				[30] = "macro|30||Focus|Interface\\Icons\\Ability_Priest_Phantasm|/focus",
 				[71] = "spell|100||Charge||",
-				[73] = "spell|23881||Bloodthirst||",
+				[37] = "macro|37||Target Focus|Interface\\Icons\\Spell_Magic_PolymorphRabbit|/tar focus",
 				[52] = "spell|23920||Spell Reflection||",
 				[60] = "macro|60||HS / GHS|Interface\\ICONS\\INV_MISC_RUNE_01.BLP|#showtooltip/n/use [nomod]Hearthstone;[mod:shift][mod:alt]Garrison Hearthstone",
 				[72] = "spell|355||Taunt||",
 				[88] = "spell|1680||Whirlwind||",
-				[101] = "spell|6552||Pummel||",
 				[98] = "spell|85288||Raging Blow||",
-				[37] = "macro|37||Target Focus|Interface\\Icons\\Spell_Magic_PolymorphRabbit|/tar focus",
+				[101] = "spell|6552||Pummel||",
+				[73] = "spell|23881||Bloodthirst||",
 				[89] = "spell|6552||Pummel||",
-				[35] = "spell|158737||Blacksmithing||",
+				[17] = "spell|6673||Battle Shout||",
 				[61] = "macro|61||Tier 7|Interface\\Icons\\warrior_talent_icon_ravager|#showtooltip Ravager/n/cast Blood Fury/n/cast [talent:7/2] Ravager",
 				[74] = "spell|100130||Wild Strike||",
 				[90] = "spell|1715||Hamstring||",
-				[38] = "macro|38||Extra Action|Interface\\Icons\\INV_Misc_Herb_Whispervine|/click ExtraActionButton1",
+				[39] = "macro|39||Deathnote|Interface\\Icons\\Ability_Hunter_MurderofCrows|/deathnote",
 			},
 			["prot"] = {
 				[106] = "spell|871||Shield Wall||",
@@ -75,64 +75,64 @@ ActionBarSaverDB = {
 				[91] = "spell|1160||Demoralizing Shout||",
 				[107] = "spell|469||Commanding Shout||",
 				[62] = "spell|5308||Execute||",
-				[27] = "macro|27||Camera|Interface\\Icons\\Spell_Shadow_EvilEye|/console CameraDistanceMaxFactor 9000",
+				[2] = "spell|114030||Vigilance||",
 				[92] = "spell|1715||Hamstring||",
 				[108] = "spell|6673||Battle Shout||",
-				[39] = "macro|39||Deathnote|Interface\\Icons\\Ability_Hunter_MurderofCrows|/deathnote",
 				[77] = "spell|6552||Pummel||",
+				[39] = "macro|39||Deathnote|Interface\\Icons\\Ability_Hunter_MurderofCrows|/deathnote",
 				[93] = "macro|93||Vigilance|Interface\\Icons\\Ability_Warrior_Vigilance|#showtooltip Vigilance/n/cast [@mouseover,help,nodead][] Vigilance",
-				[33] = "spell|83958||Mobile Banking|Guild Perk|",
+				[49] = "spell|6343||Thunder Clap||",
 				[63] = "spell|18499||Berserker Rage||",
-				[17] = "spell|6673||Battle Shout||",
+				[66] = "macro|66||Tier 6|Interface\\Icons\\Ability_Warrior_Bladestorm|#showtooltip/n/cast [talent:6/1] Avatar; [talent:6/2] Bloodbath; [talent:6/3] Bladestorm/n/cast Blood Fury",
 				[94] = "spell|871||Shield Wall||",
 				[28] = "macro|28||Combat Log|Interface\\Icons\\PASSIVE_MONK_TEACHINGSOFMONASTERY|/combatlog",
 				[32] = "item|109220||Draenic Armor Potion",
-				[98] = "spell|23922||Shield Slam||",
+				[25] = "macro|25||Ready?|Interface\\Icons\\INV_Gizmo_01|/i Ready check./n/readycheck",
 				[95] = "spell|469||Commanding Shout||",
-				[67] = "spell|112048||Shield Barrier||",
+				[34] = "spell|83968||Mass Resurrection|Guild Perk|",
 				[64] = "spell|103840||Impending Victory||",
 				[80] = "spell|23920||Spell Reflection||",
 				[96] = "spell|6673||Battle Shout||",
-				[73] = "spell|5308||Execute||",
+				[37] = "macro|37||Target Focus|Interface\\Icons\\Spell_Magic_PolymorphRabbit|/tar focus",
 				[65] = "macro|65||Dev. / HS|Interface\\Icons\\Ability_Rogue_Ambush|#showtooltip/n/cast Heroic Strike/n/cast Devastate",
-				[35] = "spell|158752||Leatherworking||",
-				[49] = "spell|6343||Thunder Clap||",
-				[57] = "item|5512||Healthstone",
-				[66] = "macro|66||Tier 6|Interface\\Icons\\Ability_Warrior_Bladestorm|#showtooltip/n/cast [talent:6/1] Avatar; [talent:6/2] Bloodbath; [talent:6/3] Bladestorm/n/cast Blood Fury",
-				[51] = "spell|57755||Heroic Throw||",
-				[25] = "macro|25||Ready?|Interface\\Icons\\INV_Gizmo_01|/i Ready check./n/readycheck",
-				[29] = "macro|29||Macro|Interface\\Icons\\Ability_Spy|/mac",
-				[34] = "spell|83968||Mass Resurrection|Guild Perk|",
-				[83] = "spell|18499||Berserker Rage||",
 				[99] = "spell|6572||Revenge||",
+				[97] = "spell|20243||Devastate||",
+				[57] = "item|5512||Healthstone",
+				[17] = "spell|6673||Battle Shout||",
+				[101] = "spell|6552||Pummel||",
+				[98] = "spell|23922||Shield Slam||",
+				[29] = "macro|29||Macro|Interface\\Icons\\Ability_Spy|/mac",
+				[67] = "spell|112048||Shield Barrier||",
+				[83] = "spell|18499||Berserker Rage||",
+				[50] = "macro|50||Heroic Leap|Interface\\Icons\\Ability_HeroicLeap|#showtooltip/n/cast !Heroic Leap",
 				[58] = "item|109223||Healing Tonic",
 				[68] = "macro|68||Shield Charge|Interface\\Icons\\Ability_Defend|#showtooltip Shield Block/n/cast Shield Block/n/cast Blood Fury",
-				[26] = "macro|26||Pull|Interface\\Icons\\INV_Gizmo_RocketBootExtreme|/i DBM Pull./n/dbm pull 10",
+				[102] = "spell|5246||Intimidating Shout||",
 				[100] = "spell|118000||Dragon Roar||",
-				[71] = "spell|100||Charge||",
+				[36] = "spell|158737||Blacksmithing||",
 				[69] = "macro|69||Intervene|Interface\\Icons\\Ability_Warrior_VictoryRush|#showtooltip Intervene/n/cast [@mouseover,help,nodead] Intervene",
 				[85] = "spell|20243||Devastate||",
-				[101] = "spell|6552||Pummel||",
-				[103] = "spell|1160||Demoralizing Shout||",
+				[51] = "spell|57755||Heroic Throw||",
+				[52] = "spell|23920||Spell Reflection||",
 				[70] = "spell|12975||Last Stand||",
 				[86] = "spell|23922||Shield Slam||",
-				[102] = "spell|5246||Intimidating Shout||",
+				[26] = "macro|26||Pull|Interface\\Icons\\INV_Gizmo_RocketBootExtreme|/i DBM Pull./n/dbm pull 10",
 				[30] = "macro|30||Focus|Interface\\Icons\\Ability_Priest_Phantasm|/focus",
-				[36] = "spell|158737||Blacksmithing||",
+				[71] = "spell|100||Charge||",
 				[87] = "spell|6572||Revenge||",
-				[52] = "spell|23920||Spell Reflection||",
+				[103] = "spell|1160||Demoralizing Shout||",
 				[60] = "macro|60||HS / GHS|Interface\\ICONS\\INV_MISC_RUNE_01.BLP|#showtooltip/n/use [nomod]Hearthstone;[mod:shift][mod:alt]Garrison Hearthstone",
 				[72] = "spell|114192||Mocking Banner||",
 				[88] = "spell|118000||Dragon Roar||",
 				[104] = "spell|1715||Hamstring||",
-				[50] = "macro|50||Heroic Leap|Interface\\Icons\\Ability_HeroicLeap|#showtooltip/n/cast !Heroic Leap",
-				[37] = "macro|37||Target Focus|Interface\\Icons\\Spell_Magic_PolymorphRabbit|/tar focus",
+				[35] = "spell|158752||Leatherworking||",
+				[73] = "spell|5308||Execute||",
 				[89] = "spell|6552||Pummel||",
 				[105] = "macro|105||Vigilance|Interface\\Icons\\Ability_Warrior_Vigilance|#showtooltip Vigilance/n/cast [@mouseover,help,nodead][] Vigilance",
 				[61] = "spell|355||Taunt||",
-				[97] = "spell|20243||Devastate||",
+				[33] = "spell|83958||Mobile Banking|Guild Perk|",
 				[90] = "spell|5246||Intimidating Shout||",
-				[2] = "spell|114030||Vigilance||",
+				[27] = "macro|27||Camera|Interface\\Icons\\Spell_Shadow_EvilEye|/console CameraDistanceMaxFactor 9000",
 			},
 		},
 		["SHAMAN"] = {
@@ -286,80 +286,6 @@ ActionBarSaverDB = {
 			},
 		},
 		["MAGE"] = {
-			["frost"] = {
-				"spell|116||Frostbolt||", -- [1]
-				"spell|44614||Frostfire Bolt||", -- [2]
-				"spell|30455||Ice Lance||", -- [3]
-				"spell|44457||Living Bomb||", -- [4]
-				"macro|5||Counterspell|Interface\\Icons\\Spell_Frost_IceShock|#showtooltip/n/stopcasting/n/cast Counterspell", -- [5]
-				"spell|28272||Polymorph|Pig|", -- [6]
-				"spell|122||Frost Nova||", -- [7]
-				"macro|8||Remove Curse|Interface\\Icons\\Spell_Nature_RemoveCurse|#showtooltip/n/use [@mouseover,help][@target,help] [@player] Remove Curse", -- [8]
-				"macro|9||Spellsteal|Interface\\Icons\\Spell_Arcane_Arcane02|#showtooltip/n/stopcasting/n/cast [@focus,exists][@target] Spellsteal", -- [9]
-				"spell|55342||Mirror Image||", -- [10]
-				"spell|7302||Frost Armor||", -- [11]
-				"spell|1459||Arcane Brilliance||", -- [12]
-				"spell|1459||Arcane Brilliance||", -- [13]
-				"spell|42955||Conjure Refreshment||", -- [14]
-				"spell|43987||Conjure Refreshment Table||", -- [15]
-				nil, -- [16]
-				nil, -- [17]
-				nil, -- [18]
-				nil, -- [19]
-				nil, -- [20]
-				nil, -- [21]
-				nil, -- [22]
-				nil, -- [23]
-				nil, -- [24]
-				"macro|25||Ready?|Interface\\Icons\\INV_Gizmo_01|/readycheck", -- [25]
-				"macro|26||Pull|Interface\\Icons\\INV_Gizmo_RocketBootExtreme|/dbm pull 12", -- [26]
-				"macro|27||Camera|Interface\\Icons\\Spell_Shadow_EvilEye|/console CameraDistanceMaxFactor 9000", -- [27]
-				"macro|28||Combat Log|Interface\\Icons\\PASSIVE_MONK_TEACHINGSOFMONASTERY|/combatlog", -- [28]
-				"macro|29||Macro|Interface\\Icons\\Ability_Spy|/macro", -- [29]
-				"macro|30||Focus|Interface\\Icons\\Ability_Priest_Phantasm|/focus", -- [30]
-				"flyout|11||Portal|", -- [31]
-				"macro|32||Cloak|Interface\\Icons\\INV_CAPE_PANDARIA_DRAGONCASTER_D_02|/use 15", -- [32]
-				"macro|33||Slow Fall|Interface\\Icons\\Spell_Magic_FeatherFall|#showtooltip/n/cast [@mouseover,nodead,help][nodead,help][@player] Slow Fall", -- [33]
-				"spell|83968||Mass Resurrection|Guild Perk|", -- [34]
-				"spell|105206||Alchemy||", -- [35]
-				"spell|110403||Engineering||", -- [36]
-				nil, -- [37]
-				nil, -- [38]
-				"macro|39||Target Focus|Interface\\Icons\\Spell_Magic_PolymorphRabbit|/target focus", -- [39]
-				"macro|40||Extra Action|Interface\\Icons\\INV_Misc_Herb_Whispervine|/click ExtraActionButton1", -- [40]
-				nil, -- [41]
-				nil, -- [42]
-				nil, -- [43]
-				nil, -- [44]
-				nil, -- [45]
-				nil, -- [46]
-				nil, -- [47]
-				nil, -- [48]
-				"spell|1449||Arcane Explosion||", -- [49]
-				"macro|50||Belt|Interface\\Icons\\inv_belt_robe_panprog_b_01|/use 6", -- [50]
-				"macro|51||Tier 1 Talent|Interface\\Icons\\spell_mage_iceflows|#showtooltip/n/use Ice Floes/n/use Blazing Speed", -- [51]
-				"spell|759||Conjure Mana Gem||", -- [52]
-				"item|36799||Mana Gem", -- [53]
-				"macro|54||Ice Ward|Interface\\Icons\\Spell_Frost_FrostWard|#showtooltip/n/cast [@player] Ice Ward", -- [54]
-				"spell|12051||Evocation||", -- [55]
-				"spell|45438||Ice Block||", -- [56]
-				"item|76093||Potion of the Jade Serpent", -- [57]
-				"item|5512||Healthstone", -- [58]
-				"macro|59||MountHelper|Interface\\Icons\\PANDARENRACIAL_BOUNCY|/mount /n/dismount [noflying,nomod][mod:ctrl]", -- [59]
-				"item|6948||Hearthstone", -- [60]
-				"macro|61||Frozen Orb|Interface\\Icons\\spell_frost_frozenorb|#showtooltip Frozen Orb/n/use 10/n/cast Frozen Orb", -- [61]
-				"macro|62||Freeze|Interface\\Icons\\Spell_Frost_SummonWaterElemental_2|#showtooltip/n/cast [nopet][target=pet, dead] Summon Water Elemental; Freeze", -- [62]
-				"spell|110959||Greater Invisibility||", -- [63]
-				"spell|10||Blizzard||", -- [64]
-				"spell|2136||Fire Blast||", -- [65]
-				"spell|44572||Deep Freeze||", -- [66]
-				"spell|115610||Temporal Shield||", -- [67]
-				"macro|68||AT Frost|Interface\\Icons\\spell_mage_altertime|#showtooltip Alter Time/n/stopcasting/n/use Potion of the Jade Serpent/n/cast Berserking/n/use 10/n/cast Icy Veins/n/cast Alter Time/n/cast Frostbolt", -- [68]
-				"spell|120||Cone of Cold||", -- [69]
-				"spell|80353||Time Warp||", -- [70]
-				"macro|71||Blink|Interface\\Icons\\Spell_Arcane_Blink|#showtooltip/n/stopcasting/n/cast Blink", -- [71]
-				"spell|43987||Conjure Refreshment Table||", -- [72]
-			},
 			["fire"] = {
 				"spell|133||Fireball||", -- [1]
 				"spell|11366||Pyroblast||", -- [2]
@@ -429,6 +355,80 @@ ActionBarSaverDB = {
 				"spell|44572||Deep Freeze||", -- [66]
 				"spell|11426||Ice Barrier||", -- [67]
 				"macro|68||AT Fire|Interface\\Icons\\spell_mage_altertime|#showtooltip Alter Time/n/stopcasting/n/use Potion of the Jade Serpent/n/cast Berserking/n/use 10/n/cast Presence of Mind/n/cast Alter Time", -- [68]
+				"spell|120||Cone of Cold||", -- [69]
+				"spell|80353||Time Warp||", -- [70]
+				"macro|71||Blink|Interface\\Icons\\Spell_Arcane_Blink|#showtooltip/n/stopcasting/n/cast Blink", -- [71]
+				"spell|43987||Conjure Refreshment Table||", -- [72]
+			},
+			["frost"] = {
+				"spell|116||Frostbolt||", -- [1]
+				"spell|44614||Frostfire Bolt||", -- [2]
+				"spell|30455||Ice Lance||", -- [3]
+				"spell|44457||Living Bomb||", -- [4]
+				"macro|5||Counterspell|Interface\\Icons\\Spell_Frost_IceShock|#showtooltip/n/stopcasting/n/cast Counterspell", -- [5]
+				"spell|28272||Polymorph|Pig|", -- [6]
+				"spell|122||Frost Nova||", -- [7]
+				"macro|8||Remove Curse|Interface\\Icons\\Spell_Nature_RemoveCurse|#showtooltip/n/use [@mouseover,help][@target,help] [@player] Remove Curse", -- [8]
+				"macro|9||Spellsteal|Interface\\Icons\\Spell_Arcane_Arcane02|#showtooltip/n/stopcasting/n/cast [@focus,exists][@target] Spellsteal", -- [9]
+				"spell|55342||Mirror Image||", -- [10]
+				"spell|7302||Frost Armor||", -- [11]
+				"spell|1459||Arcane Brilliance||", -- [12]
+				"spell|1459||Arcane Brilliance||", -- [13]
+				"spell|42955||Conjure Refreshment||", -- [14]
+				"spell|43987||Conjure Refreshment Table||", -- [15]
+				nil, -- [16]
+				nil, -- [17]
+				nil, -- [18]
+				nil, -- [19]
+				nil, -- [20]
+				nil, -- [21]
+				nil, -- [22]
+				nil, -- [23]
+				nil, -- [24]
+				"macro|25||Ready?|Interface\\Icons\\INV_Gizmo_01|/readycheck", -- [25]
+				"macro|26||Pull|Interface\\Icons\\INV_Gizmo_RocketBootExtreme|/dbm pull 12", -- [26]
+				"macro|27||Camera|Interface\\Icons\\Spell_Shadow_EvilEye|/console CameraDistanceMaxFactor 9000", -- [27]
+				"macro|28||Combat Log|Interface\\Icons\\PASSIVE_MONK_TEACHINGSOFMONASTERY|/combatlog", -- [28]
+				"macro|29||Macro|Interface\\Icons\\Ability_Spy|/macro", -- [29]
+				"macro|30||Focus|Interface\\Icons\\Ability_Priest_Phantasm|/focus", -- [30]
+				"flyout|11||Portal|", -- [31]
+				"macro|32||Cloak|Interface\\Icons\\INV_CAPE_PANDARIA_DRAGONCASTER_D_02|/use 15", -- [32]
+				"macro|33||Slow Fall|Interface\\Icons\\Spell_Magic_FeatherFall|#showtooltip/n/cast [@mouseover,nodead,help][nodead,help][@player] Slow Fall", -- [33]
+				"spell|83968||Mass Resurrection|Guild Perk|", -- [34]
+				"spell|105206||Alchemy||", -- [35]
+				"spell|110403||Engineering||", -- [36]
+				nil, -- [37]
+				nil, -- [38]
+				"macro|39||Target Focus|Interface\\Icons\\Spell_Magic_PolymorphRabbit|/target focus", -- [39]
+				"macro|40||Extra Action|Interface\\Icons\\INV_Misc_Herb_Whispervine|/click ExtraActionButton1", -- [40]
+				nil, -- [41]
+				nil, -- [42]
+				nil, -- [43]
+				nil, -- [44]
+				nil, -- [45]
+				nil, -- [46]
+				nil, -- [47]
+				nil, -- [48]
+				"spell|1449||Arcane Explosion||", -- [49]
+				"macro|50||Belt|Interface\\Icons\\inv_belt_robe_panprog_b_01|/use 6", -- [50]
+				"macro|51||Tier 1 Talent|Interface\\Icons\\spell_mage_iceflows|#showtooltip/n/use Ice Floes/n/use Blazing Speed", -- [51]
+				"spell|759||Conjure Mana Gem||", -- [52]
+				"item|36799||Mana Gem", -- [53]
+				"macro|54||Ice Ward|Interface\\Icons\\Spell_Frost_FrostWard|#showtooltip/n/cast [@player] Ice Ward", -- [54]
+				"spell|12051||Evocation||", -- [55]
+				"spell|45438||Ice Block||", -- [56]
+				"item|76093||Potion of the Jade Serpent", -- [57]
+				"item|5512||Healthstone", -- [58]
+				"macro|59||MountHelper|Interface\\Icons\\PANDARENRACIAL_BOUNCY|/mount /n/dismount [noflying,nomod][mod:ctrl]", -- [59]
+				"item|6948||Hearthstone", -- [60]
+				"macro|61||Frozen Orb|Interface\\Icons\\spell_frost_frozenorb|#showtooltip Frozen Orb/n/use 10/n/cast Frozen Orb", -- [61]
+				"macro|62||Freeze|Interface\\Icons\\Spell_Frost_SummonWaterElemental_2|#showtooltip/n/cast [nopet][target=pet, dead] Summon Water Elemental; Freeze", -- [62]
+				"spell|110959||Greater Invisibility||", -- [63]
+				"spell|10||Blizzard||", -- [64]
+				"spell|2136||Fire Blast||", -- [65]
+				"spell|44572||Deep Freeze||", -- [66]
+				"spell|115610||Temporal Shield||", -- [67]
+				"macro|68||AT Frost|Interface\\Icons\\spell_mage_altertime|#showtooltip Alter Time/n/stopcasting/n/use Potion of the Jade Serpent/n/cast Berserking/n/use 10/n/cast Icy Veins/n/cast Alter Time/n/cast Frostbolt", -- [68]
 				"spell|120||Cone of Cold||", -- [69]
 				"spell|80353||Time Warp||", -- [70]
 				"macro|71||Blink|Interface\\Icons\\Spell_Arcane_Blink|#showtooltip/n/stopcasting/n/cast Blink", -- [71]
@@ -660,77 +660,6 @@ ActionBarSaverDB = {
 				[53] = "macro|53||Mindbender|Interface\\Icons\\Spell_Shadow_SoulLeech_3|#showtooltip Mindbender/n/cast [harm] Mindbender/n/cast [@targettarget] Mindbender/n/use 13/n/use 14",
 				[61] = "spell|32375||Mass Dispel||",
 			},
-			["discdps"] = {
-				"macro|1||Flash Heal|Interface\\Icons\\Spell_Holy_FlashHeal|#showtooltip Flash Heal/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Inner Focus/n/cast Archangel/n/cast Flash Heal/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")", -- [1]
-				"macro|2||HF / Smite|Interface\\Icons\\Ability_Paladin_InfusionofLight|#showtooltip Holy Fire/n/castsequence [harm] reset=10 Holy Fire, Smite, Smite, Smite, Smite, Smite, Smite/n/castsequence [@targettarget] reset=10 Holy Fire, Smite, Smite, Smite, Smite, Smite, Smite", -- [2]
-				"macro|3||Greater Heal|Interface\\Icons\\Spell_Holy_GreaterHeal|#showtooltip Greater Heal/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Inner Focus/n/cast Archangel/n/cast Greater Heal/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")", -- [3]
-				"macro|4||Penance|Interface\\Icons\\Spell_Holy_Penance|#showtooltip Penance/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Penance/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")", -- [4]
-				"macro|5||PWS|Interface\\Icons\\Spell_Holy_PowerWordShield|#showtooltip Power Word: Shield/n/cast Power Word: Shield/n/use 1", -- [5]
-				"spell|139||Renew||", -- [6]
-				"macro|7||Cascade|Interface\\Icons\\ability_priest_cascade|#showtooltip Cascade/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Archangel/n/cast Cascade/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")", -- [7]
-				"spell|586||Fade||", -- [8]
-				"spell|8122||Psychic Scream||", -- [9]
-				"spell|73413||Inner Will||", -- [10]
-				"spell|588||Inner Fire||", -- [11]
-				"spell|21562||Power Word: Fortitude||", -- [12]
-				"macro|13||SWP|Interface\\Icons\\Spell_Shadow_ShadowWordPain|#showtooltip Shadow Word: Pain/n/cast [harm] Shadow Word: Pain/n/cast [@targettarget] Shadow Word: Pain", -- [13]
-				"macro|14||PWS / 4 S / Pen.|Interface\\Icons\\ability_priest_flashoflight|#showtooltip Power Word: Solace/n/castsequence [harm] reset=10 Power Word: Solace, Smite, Smite, Smite, Smite, Smite, Penance/n/castsequence [@targettarget] reset=10 Power Word: Solace, Smite, Smite, Smite, Smite, Smite, Penance", -- [14]
-				"macro|15||SWD|Interface\\Icons\\Spell_Shadow_DemonicFortitude|#showtooltip Shadow Word: Death/n/cast [harm] Shadow Word: Death/n/cast [@targettarget] Shadow Word: Death", -- [15]
-				"macro|16||DPS Penance|Interface\\Icons\\Spell_Holy_Penance|#showtooltip Penance/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast [harm,nodead] Penance/n/cast [@targettarget,nodead] Penance/n/cast Penance/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")", -- [16]
-				"macro|17||PWS|Interface\\Icons\\Spell_Holy_PowerWordShield|#showtooltip Power Word: Shield/n/cast Power Word: Shield/n/use 1", -- [17]
-				"spell|48045||Mind Sear||", -- [18]
-				"macro|19||DPS Cascade|Interface\\Icons\\ability_priest_cascade|#showtooltip Cascade/n/cast [harm] Cascade/n/cast [@targettarget] Cascade", -- [19]
-				"spell|586||Fade||", -- [20]
-				"spell|8122||Psychic Scream||", -- [21]
-				"spell|73413||Inner Will||", -- [22]
-				"spell|588||Inner Fire||", -- [23]
-				"spell|21562||Power Word: Fortitude||", -- [24]
-				"macro|25||Ready Check|Interface\\Icons\\INV_MISC_DMC01|/i Please wait and hit ready when you're good to go./n/raid Please wait and hit ready when you're good to go./n/readycheck", -- [25]
-				"macro|26||Pull!|Interface\\Icons\\Spell_Shadow_UnstableAfllictions|/dbm pull 10", -- [26]
-				"macro|27||Max Camera|Interface\\Icons\\Spell_Arcane_TeleportTolBarad|/console CameraDistanceMaxFactor 100", -- [27]
-				"macro|28||Macros|Interface\\Icons\\INV_Glyph_MajorWarlock|/macro", -- [28]
-				"macro|29||Lei Shen P2|Interface\\Icons\\SPELL_SHADOW_ANTIMAGICSHELL|/raid [P1/2 transition]:/n/raid   E: Tanks/n/raid   S: Nyl, Raid, Hord/n/raid   W: Justin / Jenova/n/raid   N: Evan, Dan, Ian/n/raid [P2/3 transition]:/n/raid   N: Tanks/n/raid   E: Nyl, Jenova, Raid, Hord/n/raid   W: Evan, Justin, Dan, Ian", -- [29]
-				"equipmentset|Holy|", -- [30]
-				"equipmentset|Shadow|", -- [31]
-				"spell|83968||Mass Resurrection|Guild Perk|", -- [32]
-				"spell|1706||Levitate||", -- [33]
-				"spell|110426||Tailoring||", -- [34]
-				"spell|110400||Enchanting||", -- [35]
-				"spell|13262||Disenchant||", -- [36]
-				[54] = "spell|28730||Arcane Torrent|Racial|",
-				[62] = "macro|62||Purify|Interface\\Icons\\Spell_Holy_DispelMagic|#showtooltip Purify/n/cast [target=mouseover,exists] Purify; Purify",
-				[76] = "spell|589||Shadow Word: Pain||",
-				[77] = "spell|32379||Shadow Word: Death||",
-				[55] = "spell|108968||Void Shift||",
-				[63] = "spell|528||Dispel Magic||",
-				[78] = "spell|586||Fade||",
-				[79] = "spell|2061||Flash Heal||",
-				[56] = "item|76093||Potion of the Jade Serpent",
-				[64] = "macro|64||PoH|Interface\\Icons\\Spell_Holy_PrayerOfHealing02|#showtooltip Prayer of Healing/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Inner Focus/n/cast Archangel/n/cast Prayer of Healing/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")",
-				[80] = "spell|139||Renew||",
-				[65] = "spell|19236||Desperate Prayer||",
-				[81] = "spell|8122||Psychic Scream||",
-				[49] = "spell|73325||Leap of Faith||",
-				[57] = "item|76098||Master Mana Potion",
-				[66] = "macro|66||Binding Heal|Interface\\Icons\\Spell_Holy_BlindingHeal|#showtooltip Binding Heal/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Archangel/n/cast Binding Heal/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")",
-				[82] = "spell|17||Power Word: Shield||",
-				[67] = "spell|62618||Power Word: Barrier||",
-				[83] = "spell|588||Inner Fire||",
-				[50] = "spell|2006||Resurrection||",
-				[58] = "item|5512||Healthstone",
-				[68] = "spell|33206||Pain Suppression||",
-				[84] = "spell|21562||Power Word: Fortitude||",
-				[69] = "macro|69||Spirit Shell|Interface\\Icons\\ability_shaman_astralshift|#showtooltip Spirit Shell/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Archangel/n/cast Spirit Shell/n/cast Power Infusion/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")",
-				[51] = "spell|64901||Hymn of Hope||",
-				[59] = "companion|135418|||MOUNT|",
-				[70] = "spell|10060||Power Infusion||",
-				[71] = "macro|71||PoM|Interface\\Icons\\Spell_Holy_PrayerOfMendingtga|#showtooltip Prayer of Mending/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Prayer of Mending/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")",
-				[52] = "spell|10060||Power Infusion||",
-				[60] = "item|6948||Hearthstone",
-				[72] = "spell|6346||Fear Ward||",
-				[53] = "macro|53||DPS SF|Interface\\Icons\\Spell_Shadow_Shadowfiend|#showtooltip Shadowfiend/n/use 13/n/use 14/n/cast [harm] Shadowfiend/n/cast [@targettarget] Shadowfiend",
-				[61] = "spell|32375||Mass Dispel||",
-			},
 			["holy"] = {
 				"spell|2061||Flash Heal||", -- [1]
 				"spell|139||Renew||", -- [2]
@@ -814,6 +743,77 @@ ActionBarSaverDB = {
 				"spell|586||Fade||", -- [80]
 				[84] = "spell|21562||Power Word: Fortitude||",
 			},
+			["discdps"] = {
+				"macro|1||Flash Heal|Interface\\Icons\\Spell_Holy_FlashHeal|#showtooltip Flash Heal/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Inner Focus/n/cast Archangel/n/cast Flash Heal/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")", -- [1]
+				"macro|2||HF / Smite|Interface\\Icons\\Ability_Paladin_InfusionofLight|#showtooltip Holy Fire/n/castsequence [harm] reset=10 Holy Fire, Smite, Smite, Smite, Smite, Smite, Smite/n/castsequence [@targettarget] reset=10 Holy Fire, Smite, Smite, Smite, Smite, Smite, Smite", -- [2]
+				"macro|3||Greater Heal|Interface\\Icons\\Spell_Holy_GreaterHeal|#showtooltip Greater Heal/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Inner Focus/n/cast Archangel/n/cast Greater Heal/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")", -- [3]
+				"macro|4||Penance|Interface\\Icons\\Spell_Holy_Penance|#showtooltip Penance/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Penance/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")", -- [4]
+				"macro|5||PWS|Interface\\Icons\\Spell_Holy_PowerWordShield|#showtooltip Power Word: Shield/n/cast Power Word: Shield/n/use 1", -- [5]
+				"spell|139||Renew||", -- [6]
+				"macro|7||Cascade|Interface\\Icons\\ability_priest_cascade|#showtooltip Cascade/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Archangel/n/cast Cascade/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")", -- [7]
+				"spell|586||Fade||", -- [8]
+				"spell|8122||Psychic Scream||", -- [9]
+				"spell|73413||Inner Will||", -- [10]
+				"spell|588||Inner Fire||", -- [11]
+				"spell|21562||Power Word: Fortitude||", -- [12]
+				"macro|13||SWP|Interface\\Icons\\Spell_Shadow_ShadowWordPain|#showtooltip Shadow Word: Pain/n/cast [harm] Shadow Word: Pain/n/cast [@targettarget] Shadow Word: Pain", -- [13]
+				"macro|14||PWS / 4 S / Pen.|Interface\\Icons\\ability_priest_flashoflight|#showtooltip Power Word: Solace/n/castsequence [harm] reset=10 Power Word: Solace, Smite, Smite, Smite, Smite, Smite, Penance/n/castsequence [@targettarget] reset=10 Power Word: Solace, Smite, Smite, Smite, Smite, Smite, Penance", -- [14]
+				"macro|15||SWD|Interface\\Icons\\Spell_Shadow_DemonicFortitude|#showtooltip Shadow Word: Death/n/cast [harm] Shadow Word: Death/n/cast [@targettarget] Shadow Word: Death", -- [15]
+				"macro|16||DPS Penance|Interface\\Icons\\Spell_Holy_Penance|#showtooltip Penance/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast [harm,nodead] Penance/n/cast [@targettarget,nodead] Penance/n/cast Penance/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")", -- [16]
+				"macro|17||PWS|Interface\\Icons\\Spell_Holy_PowerWordShield|#showtooltip Power Word: Shield/n/cast Power Word: Shield/n/use 1", -- [17]
+				"spell|48045||Mind Sear||", -- [18]
+				"macro|19||DPS Cascade|Interface\\Icons\\ability_priest_cascade|#showtooltip Cascade/n/cast [harm] Cascade/n/cast [@targettarget] Cascade", -- [19]
+				"spell|586||Fade||", -- [20]
+				"spell|8122||Psychic Scream||", -- [21]
+				"spell|73413||Inner Will||", -- [22]
+				"spell|588||Inner Fire||", -- [23]
+				"spell|21562||Power Word: Fortitude||", -- [24]
+				"macro|25||Ready Check|Interface\\Icons\\INV_MISC_DMC01|/i Please wait and hit ready when you're good to go./n/raid Please wait and hit ready when you're good to go./n/readycheck", -- [25]
+				"macro|26||Pull!|Interface\\Icons\\Spell_Shadow_UnstableAfllictions|/dbm pull 10", -- [26]
+				"macro|27||Max Camera|Interface\\Icons\\Spell_Arcane_TeleportTolBarad|/console CameraDistanceMaxFactor 100", -- [27]
+				"macro|28||Macros|Interface\\Icons\\INV_Glyph_MajorWarlock|/macro", -- [28]
+				"macro|29||Lei Shen P2|Interface\\Icons\\SPELL_SHADOW_ANTIMAGICSHELL|/raid [P1/2 transition]:/n/raid   E: Tanks/n/raid   S: Nyl, Raid, Hord/n/raid   W: Justin / Jenova/n/raid   N: Evan, Dan, Ian/n/raid [P2/3 transition]:/n/raid   N: Tanks/n/raid   E: Nyl, Jenova, Raid, Hord/n/raid   W: Evan, Justin, Dan, Ian", -- [29]
+				"equipmentset|Holy|", -- [30]
+				"equipmentset|Shadow|", -- [31]
+				"spell|83968||Mass Resurrection|Guild Perk|", -- [32]
+				"spell|1706||Levitate||", -- [33]
+				"spell|110426||Tailoring||", -- [34]
+				"spell|110400||Enchanting||", -- [35]
+				"spell|13262||Disenchant||", -- [36]
+				[54] = "spell|28730||Arcane Torrent|Racial|",
+				[62] = "macro|62||Purify|Interface\\Icons\\Spell_Holy_DispelMagic|#showtooltip Purify/n/cast [target=mouseover,exists] Purify; Purify",
+				[76] = "spell|589||Shadow Word: Pain||",
+				[77] = "spell|32379||Shadow Word: Death||",
+				[55] = "spell|108968||Void Shift||",
+				[63] = "spell|528||Dispel Magic||",
+				[78] = "spell|586||Fade||",
+				[79] = "spell|2061||Flash Heal||",
+				[56] = "item|76093||Potion of the Jade Serpent",
+				[64] = "macro|64||PoH|Interface\\Icons\\Spell_Holy_PrayerOfHealing02|#showtooltip Prayer of Healing/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Inner Focus/n/cast Archangel/n/cast Prayer of Healing/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")",
+				[80] = "spell|139||Renew||",
+				[65] = "spell|19236||Desperate Prayer||",
+				[81] = "spell|8122||Psychic Scream||",
+				[49] = "spell|73325||Leap of Faith||",
+				[57] = "item|76098||Master Mana Potion",
+				[66] = "macro|66||Binding Heal|Interface\\Icons\\Spell_Holy_BlindingHeal|#showtooltip Binding Heal/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Archangel/n/cast Binding Heal/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")",
+				[82] = "spell|17||Power Word: Shield||",
+				[67] = "spell|62618||Power Word: Barrier||",
+				[83] = "spell|588||Inner Fire||",
+				[50] = "spell|2006||Resurrection||",
+				[58] = "item|5512||Healthstone",
+				[68] = "spell|33206||Pain Suppression||",
+				[84] = "spell|21562||Power Word: Fortitude||",
+				[69] = "macro|69||Spirit Shell|Interface\\Icons\\ability_shaman_astralshift|#showtooltip Spirit Shell/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Archangel/n/cast Spirit Shell/n/cast Power Infusion/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")",
+				[51] = "spell|64901||Hymn of Hope||",
+				[59] = "companion|135418|||MOUNT|",
+				[70] = "spell|10060||Power Infusion||",
+				[71] = "macro|71||PoM|Interface\\Icons\\Spell_Holy_PrayerOfMendingtga|#showtooltip Prayer of Mending/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Prayer of Mending/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")",
+				[52] = "spell|10060||Power Infusion||",
+				[60] = "item|6948||Hearthstone",
+				[72] = "spell|6346||Fear Ward||",
+				[53] = "macro|53||DPS SF|Interface\\Icons\\Spell_Shadow_Shadowfiend|#showtooltip Shadowfiend/n/use 13/n/use 14/n/cast [harm] Shadowfiend/n/cast [@targettarget] Shadowfiend",
+				[61] = "spell|32375||Mass Dispel||",
+			},
 			["holydps"] = {
 				"macro|1||Flash Heal|Interface\\Icons\\Spell_Holy_FlashHeal|#showtooltip Flash Heal/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Inner Focus/n/cast Archangel/n/cast Flash Heal/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")", -- [1]
 				"spell|2050||Heal||", -- [2]
@@ -888,22 +888,17 @@ ActionBarSaverDB = {
 				"macro|71||PoM|Interface\\Icons\\Spell_Holy_PrayerOfMendingtga|#showtooltip Prayer of Mending/n/script UIErrorsFrame:UnregisterEvent(\"UI_ERROR_MESSAGE\")/n/cast Prayer of Mending/n/script UIErrorsFrame:RegisterEvent(\"UI_ERROR_MESSAGE\")", -- [71]
 				"spell|6346||Fear Ward||", -- [72]
 				"spell|589||Shadow Word: Pain||", -- [73]
-				nil, -- [74]
-				nil, -- [75]
-				nil, -- [76]
-				nil, -- [77]
-				"spell|139||Renew||", -- [78]
-				nil, -- [79]
-				"spell|586||Fade||", -- [80]
-				"spell|8122||Psychic Scream||", -- [81]
-				"spell|73413||Inner Will||", -- [82]
-				"spell|588||Inner Fire||", -- [83]
-				"spell|21562||Power Word: Fortitude||", -- [84]
+				[78] = "spell|139||Renew||",
+				[80] = "spell|586||Fade||",
+				[81] = "spell|8122||Psychic Scream||",
+				[82] = "spell|73413||Inner Will||",
+				[83] = "spell|588||Inner Fire||",
+				[84] = "spell|21562||Power Word: Fortitude||",
 			},
 		},
 		["WARLOCK"] = {
 		},
-		["PALADIN"] = {
+		["ROGUE"] = {
 		},
 		["HUNTER"] = {
 		},
@@ -923,108 +918,48 @@ ActionBarSaverDB = {
 				[103] = "spell|5211||Mighty Bash||",
 				[10] = "spell|22812||Barkskin||",
 				[107] = "spell|2782||Remove Corruption||",
-				[66] = "spell|62606||Savage Defense||",
-				[68] = "spell|50334||Berserk||",
-				[72] = "spell|50769||Revive||",
+				[9] = "spell|740||Tranquility||",
+				[61] = "spell|6795||Growl||",
+				[105] = "spell|16914||Hurricane||",
 				[70] = "spell|77761||Stampeding Roar||",
-				[67] = "spell|22812||Barkskin||",
-				[7] = "spell|5185||Healing Touch||",
-				[12] = "spell|1126||Mark of the Wild||",
-				[102] = "spell|102795||Bear Hug||",
-				[100] = "spell|33878||Mangle||",
-				[65] = "spell|779||Swipe||",
 				[98] = "spell|77758||Thrash|Feral, Guardian|",
-				[69] = "spell|22842||Frenzied Regeneration||",
-				[71] = "spell|5487||Bear Form|Shapeshift|",
 				[104] = "spell|339||Entangling Roots||",
+				[12] = "spell|1126||Mark of the Wild||",
+				[71] = "spell|5487||Bear Form|Shapeshift|",
+				[69] = "spell|22842||Frenzied Regeneration||",
+				[65] = "spell|779||Swipe||",
+				[67] = "spell|22812||Barkskin||",
+				[100] = "spell|33878||Mangle||",
+				[102] = "spell|102795||Bear Hug||",
+				[7] = "spell|5185||Healing Touch||",
 				[106] = "spell|61336||Survival Instincts||",
 				[108] = "spell|1126||Mark of the Wild||",
-				[105] = "spell|16914||Hurricane||",
-				[61] = "spell|6795||Growl||",
-				[9] = "spell|740||Tranquility||",
+				[72] = "spell|50769||Revive||",
+				[68] = "spell|50334||Berserk||",
+				[66] = "spell|62606||Savage Defense||",
 			},
 		},
 		["MONK"] = {
-			["wwpvp"] = {
-				[27] = "macro|27||Max Camera|Interface\\Icons\\Spell_Arcane_TeleportTolBarad|/console CameraDistanceMaxFactor 100",
-				[31] = "equipmentset|Tank|",
-				[75] = "spell|107428||Rising Sun Kick||",
-				[91] = "spell|116095||Disable||",
-				[54] = "spell|122783||Diffuse Magic||",
-				[62] = "spell|113656||Fists of Fury||",
-				[76] = "spell|100784||Blackout Kick||",
-				[77] = "macro|77||SHS|Interface\\Icons\\ability_monk_spearhand|#showtooltip Spear Hand Strike/n/cancelaura Spinning Crane Kick/n/cast Spear Hand Strike",
-				[55] = "spell|115176||Zen Meditation||",
-				[63] = "spell|115450||Detox||",
-				[78] = "spell|115078||Paralysis||",
-				[94] = "spell|115203||Fortifying Brew||",
-				[28] = "macro|28||Combat Log|Interface\\Icons\\INV_SCROLL_11|/combatlog",
-				[32] = "spell|83968||Mass Resurrection|Guild Perk|",
-				[79] = "spell|119381||Leg Sweep||",
-				[95] = "spell|115178||Resuscitate||",
-				[56] = "spell|117952||Crackling Jade Lightning||",
-				[64] = "spell|115288||Energizing Brew||",
-				[80] = "spell|117368||Grapple Weapon||",
-				[96] = "spell|126892||Zen Pilgrimage||",
-				[33] = "spell|110420||Jewelcrafting||",
-				[81] = "spell|116095||Disable||",
-				[49] = "spell|101546||Spinning Crane Kick||",
-				[57] = "item|76089||Virmen's Bite",
-				[66] = "spell|116740||Tigereye Brew||",
-				[82] = "spell|115203||Fortifying Brew||",
-				[25] = "macro|25||Ready Check|Interface\\Icons\\INV_MISC_DMC01|/i Please wait and hit ready when you're good to go./n/raid Please wait and hit ready when you're good to go./n/readycheck",
-				[29] = "macro|29||Recruit|Interface\\Icons\\ACHIEVEMENT_GUILDPERK_FASTTRACK_RANK2|/2 {star}GLORY 10m 4/13{star} is recruiting a DPS for ToT HM progression. 3 nights a week (T/W/Th 8-11PM server), pst for additional information! (you need to be 520+ and 1/13 min) - (pref: Hunt / Lock / Rogue)",
-				[34] = "spell|31252||Prospecting||",
-				[83] = "spell|116781||Legacy of the White Tiger||",
-				[50] = "spell|101643||Transcendence||",
-				[58] = "item|5512||Healthstone",
-				[68] = "spell|115080||Touch of Death||",
-				[84] = "spell|115921||Legacy of the Emperor||",
-				[36] = "spell|51005||Milling||",
-				[35] = "spell|110417||Inscription||",
-				[85] = "spell|100780||Jab||",
-				[51] = "spell|119996||Transcendence: Transfer||",
-				[59] = "macro|59||MountHelper|Interface\\Icons\\INV_pandarenserpentpet|/mount /n/dismount [noflying,nomod][mod:ctrl]",
-				[70] = "spell|115098||Chi Wave||",
-				[86] = "spell|100787||Tiger Palm||",
-				[26] = "macro|26||Pull!|Interface\\Icons\\Spell_Shadow_UnstableAfllictions|/dbm pull 10",
-				[30] = "equipmentset|Deeps|",
-				[71] = "spell|121827||Roll||",
-				[87] = "spell|100784||Blackout Kick||",
-				[52] = "spell|137562||Nimble Brew||",
-				[60] = "item|6948||Hearthstone",
-				[72] = "spell|115178||Resuscitate||",
-				[69] = "spell|115072||Expel Harm||",
-				[65] = "spell|122470||Touch of Karma||",
-				[42] = "spell|110500||Symbiosis||",
-				[73] = "spell|100780||Jab||",
-				[89] = "spell|116705||Spear Hand Strike||",
-				[53] = "macro|53||SEF|Interface\\Icons\\spell_sandstorm|#showtooltip Storm, Earth, and Fire/n/cast [@target,harm][] Storm, Earth, and Fire/n/cancelaura [mod:alt] Storm, Earth, and Fire",
-				[61] = "spell|123904||Invoke Xuen, the White Tiger||",
-				[74] = "spell|100787||Tiger Palm||",
-				[39] = "macro|39||Cancel SEF|Interface\\Icons\\spell_sandstorm|#showtooltip Storm, Earth, and Fire/n/cancelaura Storm, Earth, and Fire",
-				[67] = "spell|101545||Flying Serpent Kick||",
-			},
-			["ww"] = {
-				"macro|1||Jab|Interface\\Icons\\INV_Spear_03|#showtooltip Jab/n/use [nochanneling:Fists of Fury]Jab", -- [1]
+			["mw"] = {
+				"macro|1||Jab|Interface\\Icons\\inv_mace_08|#showtooltip Jab/n/use [nochanneling:Fists of Fury]Jab", -- [1]
 				"macro|2||Tiger Palm|Interface\\Icons\\ability_monk_tigerpalm|#showtooltip Tiger Palm/n/use [nochanneling:Fists of Fury]Tiger Palm", -- [2]
 				"macro|3||Blackout Kick|Interface\\Icons\\ability_monk_roundhousekick|#showtooltip Blackout Kick/n/use [nochanneling:Fists of Fury]Blackout Kick", -- [3]
 				"macro|4||RSK|Interface\\Icons\\ability_monk_risingsunkick|#showtooltip Rising Sun Kick/n/use [nochanneling:Fists of Fury]Rising Sun Kick", -- [4]
 				"spell|116705||Spear Hand Strike||", -- [5]
 				"spell|115078||Paralysis||", -- [6]
-				"macro|7||Tier 4|Interface\\Icons\\ability_monk_chargingoxwave|#showtooltip/n/use [talent:4/1,@player]Ring of Peace;[talent:4/2]Charging Ox Wave;[talent:4/3]Leg Sweep", -- [7]
+				"macro|7||Tier 4|Interface\\Icons\\ability_monk_legsweep|#showtooltip/n/use [talent:4/1,@player]Ring of Peace;[talent:4/2]Charging Ox Wave;[talent:4/3]Leg Sweep", -- [7]
 				"spell|116095||Disable||", -- [8]
 				"spell|129597||Arcane Torrent|Racial|", -- [9]
 				"spell|115203||Fortifying Brew||", -- [10]
 				"macro|11||Purge Template|Interface\\Icons\\ability_rogue_imrovedrecuperate|#showtooltip/n/use [@mouseover,help,nodead][]Detox", -- [11]
 				"spell|116781||Legacy of the White Tiger||", -- [12]
-				"macro|13||Jab|Interface\\Icons\\INV_Spear_03|#showtooltip Jab/n/use [nochanneling:Fists of Fury]Jab", -- [13]
+				"macro|13||Jab|Interface\\Icons\\inv_mace_08|#showtooltip Jab/n/use [nochanneling:Fists of Fury]Jab", -- [13]
 				"macro|14||Tiger Palm|Interface\\Icons\\ability_monk_tigerpalm|#showtooltip Tiger Palm/n/use [nochanneling:Fists of Fury]Tiger Palm", -- [14]
 				"macro|15||Blackout Kick|Interface\\Icons\\ability_monk_roundhousekick|#showtooltip Blackout Kick/n/use [nochanneling:Fists of Fury]Blackout Kick", -- [15]
 				"macro|16||RSK|Interface\\Icons\\ability_monk_risingsunkick|#showtooltip Rising Sun Kick/n/use [nochanneling:Fists of Fury]Rising Sun Kick", -- [16]
 				"spell|116705||Spear Hand Strike||", -- [17]
 				"spell|115078||Paralysis||", -- [18]
-				"macro|19||Tier 4|Interface\\Icons\\ability_monk_chargingoxwave|#showtooltip/n/use [talent:4/1,@player]Ring of Peace;[talent:4/2]Charging Ox Wave;[talent:4/3]Leg Sweep", -- [19]
+				"macro|19||Tier 4|Interface\\Icons\\ability_monk_legsweep|#showtooltip/n/use [talent:4/1,@player]Ring of Peace;[talent:4/2]Charging Ox Wave;[talent:4/3]Leg Sweep", -- [19]
 				"macro|20||Surging Mist|Interface\\Icons\\ability_monk_surgingmist|#showtooltip Surging Mist/n/use Thunder Focus Tea/n/use [@mouseover,help,nodead][]Surging Mist", -- [20]
 				"spell|116095||Disable||", -- [21]
 				"spell|115203||Fortifying Brew||", -- [22]
@@ -1036,7 +971,7 @@ ActionBarSaverDB = {
 				"macro|28||Combat Log|Interface\\Icons\\PASSIVE_MONK_TEACHINGSOFMONASTERY|/combatlog", -- [28]
 				"macro|29||Macro|Interface\\Icons\\Ability_Spy|/mac", -- [29]
 				"macro|30||Focus|Interface\\Icons\\Ability_Priest_Phantasm|/focus", -- [30]
-				"spell|161691||Garrison Ability||", -- [31]
+				"spell|161332||Call to Arms||", -- [31]
 				"item|109217||Draenic Agility Potion", -- [32]
 				"macro|33||Transcendence|Interface\\Icons\\Spell_Shaman_SpectralTransformation|#showtooltip/n/use [nomod]Transcendence: Transfer;[mod:shift][mod:alt]Transcendence", -- [33]
 				"spell|83968||Mass Resurrection|Guild Perk|", -- [34]
@@ -1045,10 +980,10 @@ ActionBarSaverDB = {
 				"macro|37||Target Focus|Interface\\Icons\\Spell_Magic_PolymorphRabbit|/tar focus", -- [37]
 				"macro|38||Extra Action|Interface\\Icons\\INV_Misc_Herb_Whispervine|/click ExtraActionButton1", -- [38]
 				"macro|39||Deathnote|Interface\\Icons\\Ability_Hunter_MurderofCrows|/deathnote", -- [39]
-				"macro|40||Cloak|Interface\\ICONS\\INV_Cape_DraenorRaid_D_02_mail_red.blp|/use 15", -- [40]
-				"item|111820||Swapblaster", -- [41]
-				"item|119093||Aviana's Feather", -- [42]
-				"item|118716||Goren Garb", -- [43]
+				"macro|40||Cloak|Interface\\ICONS\\INV_Cape_DraenorDungeon_C_03_mail_blue.blp|/use 15", -- [40]
+				"item|119093||Aviana's Feather", -- [41]
+				"item|118716||Goren Garb", -- [42]
+				nil, -- [43]
 				nil, -- [44]
 				nil, -- [45]
 				nil, -- [46]
@@ -1059,15 +994,113 @@ ActionBarSaverDB = {
 				"macro|51||Tier 3|Interface\\Icons\\ability_monk_chibrew|#showtooltip/n/use [talent:3/1]Power Strikes;[talent:3/2]Ascension;[talent:3/3]Chi Brew", -- [51]
 				"spell|137562||Nimble Brew||", -- [52]
 				"macro|53||Cancel SEF|Interface\\Icons\\spell_sandstorm|#showtooltip Storm, Earth, and Fire/n/cancelaura Storm, Earth, and Fire", -- [53]
-				"macro|54||Tier 5|Interface\\Icons\\spell_monk_diffusemagic|#showtooltip/n/use [talent:5/1]Healing Elixirs;[talent:5/2]Dampen Harm;[talent:5/3]Diffuse Magic", -- [54]
+				"macro|54||Tier 5|Interface\\Icons\\ability_monk_jasmineforcetea|#showtooltip/n/use [talent:5/1]Healing Elixirs;[talent:5/2]Dampen Harm;[talent:5/3]Diffuse Magic", -- [54]
 				"spell|115176||Zen Meditation||", -- [55]
 				"spell|117952||Crackling Jade Lightning||", -- [56]
-				"macro|57||Tier 7|Interface\\Icons\\ability_monk_serenity|#showtooltip/n/use [talent:7/1]Soul Dance;[talent:7/2]Chi Explosion;[talent:7/3]Serenity/n/use 14", -- [57]
+				"macro|57||Tier 7|Interface\\Icons\\ability_monk_hurricanestrike|#showtooltip/n/use [talent:7/1]Hurricane Strike;[talent:7/2]Chi Explosion;[talent:7/3]Serenity/n/use 14", -- [57]
 				"item|109223||Healing Tonic", -- [58]
 				nil, -- [59]
 				"macro|60||HS / GHS|Interface\\ICONS\\INV_MISC_RUNE_01.BLP|#showtooltip/n/use [nomod]Hearthstone;[mod:shift][mod:alt]Garrison Hearthstone", -- [60]
-				"spell|137639||Storm, Earth, and Fire||", -- [61]
-				"spell|115080||Touch of Death||", -- [62]
+				"macro|61||SEF|Interface\\Icons\\spell_sandstorm|#showtooltip Storm, Earth, and Fire/n/use [@mouseover,harm,nodead][] Storm, Earth, and Fire", -- [61]
+				"macro|62||ToD|Interface\\Icons\\ability_monk_touchofdeath|#showtooltip Touch of Death/n/use Fortifying Brew/n/use [@mouseover,harm,nodead][] Touch of Death", -- [62]
+				"spell|113656||Fists of Fury||", -- [63]
+				"spell|115288||Energizing Brew||", -- [64]
+				"spell|122470||Touch of Karma||", -- [65]
+				"macro|66||TEB|Interface\\Icons\\ability_monk_tigereyebrandy|#showtooltip Tigereye Brew/n/use 13/n/use 14/n/cast Tigereye Brew", -- [66]
+				"spell|101545||Flying Serpent Kick||", -- [67]
+				"macro|68||Tier 6|Interface\\Icons\\ability_monk_summontigerstatue|#showtooltip/n/use [talent:6/2,nochanneling:Fists of Fury]Invoke Xuen, the White Tiger;[talent:6/1,nochanneling:Fists of Fury]Rushing Jade Wind", -- [68]
+				"spell|115072||Expel Harm||", -- [69]
+				"macro|70||Tier 2|Interface\\Icons\\ability_monk_chiwave|#showtooltip/n/use [talent:2/1,nochanneling:Fists of Fury]Chi Wave;[talent:2/2,@player,nochanneling:Fists of Fury]Zen Sphere;[talent:2/3,nochanneling:Fists of Fury]Chi Burst", -- [70]
+				"spell|109132||Roll||", -- [71]
+				"spell|115178||Resuscitate||", -- [72]
+				"spell|115693||Jab||", -- [73]
+				"spell|100787||Tiger Palm||", -- [74]
+				"spell|100784||Blackout Kick||", -- [75]
+				"spell|107428||Rising Sun Kick||", -- [76]
+				"spell|116705||Spear Hand Strike||", -- [77]
+				"spell|115078||Paralysis||", -- [78]
+				"macro|79||Tier 4|Interface\\Icons\\ability_monk_legsweep|#showtooltip/n/use [talent:4/1,@player]Ring of Peace;[talent:4/2]Charging Ox Wave;[talent:4/3]Leg Sweep", -- [79]
+				"macro|80||Surging Mist|Interface\\Icons\\ability_monk_surgingmist|#showtooltip Surging Mist/n/use Thunder Focus Tea/n/use [@mouseover,help,nodead][]Surging Mist", -- [80]
+				"spell|116095||Disable||", -- [81]
+				"spell|115203||Fortifying Brew||", -- [82]
+				"macro|83||Purge Template|Interface\\Icons\\ability_rogue_imrovedrecuperate|#showtooltip/n/use [@mouseover,help,nodead][]Detox", -- [83]
+				"spell|116781||Legacy of the White Tiger||", -- [84]
+				"spell|115693||Jab||", -- [85]
+				"spell|100787||Tiger Palm||", -- [86]
+				"spell|100784||Blackout Kick||", -- [87]
+				nil, -- [88]
+				"spell|116705||Spear Hand Strike||", -- [89]
+				nil, -- [90]
+				"spell|116095||Disable||", -- [91]
+				nil, -- [92]
+				nil, -- [93]
+				"spell|115203||Fortifying Brew||", -- [94]
+				"spell|115178||Resuscitate||", -- [95]
+				"spell|126892||Zen Pilgrimage||", -- [96]
+			},
+			["ww"] = {
+				"macro|1||Jab|Interface\\Icons\\INV_Spear_03|#showtooltip Jab/n/use [nochanneling:Fists of Fury]Jab", -- [1]
+				"macro|2||Tiger Palm|Interface\\Icons\\ability_monk_tigerpalm|#showtooltip Tiger Palm/n/use [nochanneling:Fists of Fury]Tiger Palm", -- [2]
+				"macro|3||Blackout Kick|Interface\\Icons\\ability_monk_roundhousekick|#showtooltip Blackout Kick/n/use [nochanneling:Fists of Fury]Blackout Kick", -- [3]
+				"macro|4||RSK|Interface\\Icons\\ability_monk_risingsunkick|#showtooltip Rising Sun Kick/n/use [nochanneling:Fists of Fury]Rising Sun Kick", -- [4]
+				"spell|116705||Spear Hand Strike||", -- [5]
+				"spell|115078||Paralysis||", -- [6]
+				"macro|7||Tier 4|Interface\\Icons\\ability_monk_legsweep|#showtooltip/n/use [talent:4/1,@player]Ring of Peace;[talent:4/2]Charging Ox Wave;[talent:4/3]Leg Sweep", -- [7]
+				"spell|116095||Disable||", -- [8]
+				"spell|129597||Arcane Torrent|Racial|", -- [9]
+				"spell|115203||Fortifying Brew||", -- [10]
+				"macro|11||Purge Template|Interface\\Icons\\ability_rogue_imrovedrecuperate|#showtooltip/n/use [@mouseover,help,nodead][]Detox", -- [11]
+				"spell|116781||Legacy of the White Tiger||", -- [12]
+				"macro|13||Jab|Interface\\Icons\\INV_Spear_03|#showtooltip Jab/n/use [nochanneling:Fists of Fury]Jab", -- [13]
+				"macro|14||Tiger Palm|Interface\\Icons\\ability_monk_tigerpalm|#showtooltip Tiger Palm/n/use [nochanneling:Fists of Fury]Tiger Palm", -- [14]
+				"macro|15||Blackout Kick|Interface\\Icons\\ability_monk_roundhousekick|#showtooltip Blackout Kick/n/use [nochanneling:Fists of Fury]Blackout Kick", -- [15]
+				"macro|16||RSK|Interface\\Icons\\ability_monk_risingsunkick|#showtooltip Rising Sun Kick/n/use [nochanneling:Fists of Fury]Rising Sun Kick", -- [16]
+				"spell|116705||Spear Hand Strike||", -- [17]
+				"spell|115078||Paralysis||", -- [18]
+				"macro|19||Tier 4|Interface\\Icons\\ability_monk_legsweep|#showtooltip/n/use [talent:4/1,@player]Ring of Peace;[talent:4/2]Charging Ox Wave;[talent:4/3]Leg Sweep", -- [19]
+				"macro|20||Surging Mist|Interface\\Icons\\ability_monk_surgingmist|#showtooltip Surging Mist/n/use Thunder Focus Tea/n/use [@mouseover,help,nodead][]Surging Mist", -- [20]
+				"spell|116095||Disable||", -- [21]
+				"spell|115203||Fortifying Brew||", -- [22]
+				"macro|23||Purge Template|Interface\\Icons\\ability_rogue_imrovedrecuperate|#showtooltip/n/use [@mouseover,help,nodead][]Detox", -- [23]
+				"spell|116781||Legacy of the White Tiger||", -- [24]
+				"macro|25||Ready?|Interface\\Icons\\INV_Gizmo_01|/i Ready check./n/readycheck", -- [25]
+				"macro|26||Pull|Interface\\Icons\\INV_Gizmo_RocketBootExtreme|/i DBM Pull./n/dbm pull 10", -- [26]
+				"macro|27||Camera|Interface\\Icons\\Spell_Shadow_EvilEye|/console CameraDistanceMaxFactor 9000", -- [27]
+				"macro|28||Combat Log|Interface\\Icons\\PASSIVE_MONK_TEACHINGSOFMONASTERY|/combatlog", -- [28]
+				"macro|29||Macro|Interface\\Icons\\Ability_Spy|/mac", -- [29]
+				"macro|30||Focus|Interface\\Icons\\Ability_Priest_Phantasm|/focus", -- [30]
+				"spell|161332||Call to Arms||", -- [31]
+				"item|109217||Draenic Agility Potion", -- [32]
+				"macro|33||Transcendence|Interface\\Icons\\Spell_Shaman_SpectralTransformation|#showtooltip/n/use [nomod]Transcendence: Transfer;[mod:shift][mod:alt]Transcendence", -- [33]
+				"spell|83968||Mass Resurrection|Guild Perk|", -- [34]
+				"spell|158750||Jewelcrafting||", -- [35]
+				"spell|158739||Engineering||", -- [36]
+				"macro|37||Target Focus|Interface\\Icons\\Spell_Magic_PolymorphRabbit|/tar focus", -- [37]
+				"macro|38||Extra Action|Interface\\Icons\\INV_Misc_Herb_Whispervine|/click ExtraActionButton1", -- [38]
+				"macro|39||Deathnote|Interface\\Icons\\Ability_Hunter_MurderofCrows|/deathnote", -- [39]
+				"macro|40||Cloak|Interface\\ICONS\\INV_Cape_DraenorRaid_D_02_mail_red.blp|/use 15", -- [40]
+				"item|119093||Aviana's Feather", -- [41]
+				"item|118716||Goren Garb", -- [42]
+				nil, -- [43]
+				nil, -- [44]
+				nil, -- [45]
+				nil, -- [46]
+				nil, -- [47]
+				nil, -- [48]
+				"macro|49||SCK|Interface\\Icons\\ability_monk_cranekick_new|#showtooltip Spinning Crane Kick/n/use [nochanneling:Fists of Fury]Spinning Crane Kick", -- [49]
+				"macro|50||Belt|Interface\\ICONS\\INV_Leather_RaidMonk_O_01Belt.blp|/use 6", -- [50]
+				"macro|51||Tier 3|Interface\\Icons\\ability_monk_chibrew|#showtooltip/n/use [talent:3/1]Power Strikes;[talent:3/2]Ascension;[talent:3/3]Chi Brew", -- [51]
+				"spell|137562||Nimble Brew||", -- [52]
+				"macro|53||Cancel SEF|Interface\\Icons\\spell_sandstorm|#showtooltip Storm, Earth, and Fire/n/cancelaura Storm, Earth, and Fire", -- [53]
+				"macro|54||Tier 5|Interface\\Icons\\ability_monk_jasmineforcetea|#showtooltip/n/use [talent:5/1]Healing Elixirs;[talent:5/2]Dampen Harm;[talent:5/3]Diffuse Magic", -- [54]
+				"spell|115176||Zen Meditation||", -- [55]
+				"spell|117952||Crackling Jade Lightning||", -- [56]
+				"macro|57||Tier 7|Interface\\Icons\\ability_monk_hurricanestrike|#showtooltip/n/use [talent:7/1]Hurricane Strike;[talent:7/2]Chi Explosion;[talent:7/3]Serenity/n/use 14", -- [57]
+				"item|109223||Healing Tonic", -- [58]
+				nil, -- [59]
+				"macro|60||HS / GHS|Interface\\ICONS\\INV_MISC_RUNE_01.BLP|#showtooltip/n/use [nomod]Hearthstone;[mod:shift][mod:alt]Garrison Hearthstone", -- [60]
+				"macro|61||SEF|Interface\\Icons\\spell_sandstorm|#showtooltip Storm, Earth, and Fire/n/use [@mouseover,harm,nodead][] Storm, Earth, and Fire", -- [61]
+				"macro|62||ToD|Interface\\Icons\\ability_monk_touchofdeath|#showtooltip Touch of Death/n/use Fortifying Brew/n/use [@mouseover,harm,nodead][] Touch of Death", -- [62]
 				"spell|113656||Fists of Fury||", -- [63]
 				"spell|115288||Energizing Brew||", -- [64]
 				"spell|122470||Touch of Karma||", -- [65]
@@ -1084,7 +1117,7 @@ ActionBarSaverDB = {
 				"spell|107428||Rising Sun Kick||", -- [76]
 				"spell|116705||Spear Hand Strike||", -- [77]
 				"spell|115078||Paralysis||", -- [78]
-				"macro|79||Tier 4|Interface\\Icons\\ability_monk_chargingoxwave|#showtooltip/n/use [talent:4/1,@player]Ring of Peace;[talent:4/2]Charging Ox Wave;[talent:4/3]Leg Sweep", -- [79]
+				"macro|79||Tier 4|Interface\\Icons\\ability_monk_legsweep|#showtooltip/n/use [talent:4/1,@player]Ring of Peace;[talent:4/2]Charging Ox Wave;[talent:4/3]Leg Sweep", -- [79]
 				"macro|80||Surging Mist|Interface\\Icons\\ability_monk_surgingmist|#showtooltip Surging Mist/n/use Thunder Focus Tea/n/use [@mouseover,help,nodead][]Surging Mist", -- [80]
 				"spell|116095||Disable||", -- [81]
 				"spell|115203||Fortifying Brew||", -- [82]
@@ -1201,106 +1234,68 @@ ActionBarSaverDB = {
 				nil, -- [95]
 				"spell|116781||Legacy of the White Tiger||", -- [96]
 			},
-			["mw"] = {
-				"macro|1||Surging Mist|Interface\\Icons\\ability_monk_surgingmist|#showtooltip Surging Mist/n/use Thunder Focus Tea/n/use [@mouseover,help,nodead][]Surging Mist", -- [1]
-				"macro|2||Renewing Mist|Interface\\Icons\\ability_monk_renewingmists|#showtooltip Renewing Mist/n/use Thunder Focus Tea/n/use [@mouseover,help,nodead][]Renewing Mist", -- [2]
-				"macro|3||Enveloping Mist|Interface\\Icons\\spell_monk_envelopingmist|#showtooltip Enveloping Mist/n/use 14/n/use [@mouseover,help,nodead][]Enveloping Mist", -- [3]
-				"macro|4||Soothing Mist|Interface\\Icons\\ability_monk_soothingmists|#showtooltip/n/use [@mouseover,help,nodead][]Soothing Mist", -- [4]
-				"spell|116705||Spear Hand Strike||", -- [5]
-				"spell|115078||Paralysis||", -- [6]
-				"macro|7||Tier 4|Interface\\Icons\\ability_monk_chargingoxwave|#showtooltip/n/use [talent:4/1,@player]Ring of Peace;[talent:4/2]Charging Ox Wave;[talent:4/3]Leg Sweep", -- [7]
-				"spell|154436||Stance of the Spirited Crane|Mistweaver Stance|", -- [8]
-				"spell|129597||Arcane Torrent|Racial|", -- [9]
-				"spell|115203||Fortifying Brew||", -- [10]
-				"macro|11||Purge Template|Interface\\Icons\\ability_rogue_imrovedrecuperate|#showtooltip/n/use [@mouseover,help,nodead][]Detox", -- [11]
-				"spell|115921||Legacy of the Emperor||", -- [12]
-				"macro|13||Jab|Interface\\Icons\\inv_mace_08|#showtooltip Jab/n/use [nochanneling:Fists of Fury]Jab", -- [13]
-				"macro|14||Tiger Palm|Interface\\Icons\\ability_monk_tigerpalm|#showtooltip Tiger Palm/n/use [nochanneling:Fists of Fury]Tiger Palm", -- [14]
-				"macro|15||Blackout Kick|Interface\\Icons\\ability_monk_roundhousekick|#showtooltip Blackout Kick/n/use [nochanneling:Fists of Fury]Blackout Kick", -- [15]
-				"macro|16||RSK|Interface\\Icons\\ability_monk_risingsunkick|#showtooltip Rising Sun Kick/n/use [nochanneling:Fists of Fury]Rising Sun Kick", -- [16]
-				"spell|116705||Spear Hand Strike||", -- [17]
-				"spell|115078||Paralysis||", -- [18]
-				"macro|19||Tier 4|Interface\\Icons\\ability_monk_chargingoxwave|#showtooltip/n/use [talent:4/1,@player]Ring of Peace;[talent:4/2]Charging Ox Wave;[talent:4/3]Leg Sweep", -- [19]
-				"spell|115070||Stance of the Wise Serpent|Mistweaver Stance|", -- [20]
-				"spell|129597||Arcane Torrent|Racial|", -- [21]
-				"spell|115203||Fortifying Brew||", -- [22]
-				"macro|23||Purge Template|Interface\\Icons\\ability_rogue_imrovedrecuperate|#showtooltip/n/use [@mouseover,help,nodead][]Detox", -- [23]
-				"spell|115921||Legacy of the Emperor||", -- [24]
-				"macro|25||Ready?|Interface\\Icons\\INV_Gizmo_01|/i Ready check./n/readycheck", -- [25]
-				"macro|26||Pull|Interface\\Icons\\INV_Gizmo_RocketBootExtreme|/i DBM Pull./n/dbm pull 10", -- [26]
-				"macro|27||Camera|Interface\\Icons\\Spell_Shadow_EvilEye|/console CameraDistanceMaxFactor 9000", -- [27]
-				"macro|28||Combat Log|Interface\\Icons\\PASSIVE_MONK_TEACHINGSOFMONASTERY|/combatlog", -- [28]
-				"macro|29||Macro|Interface\\Icons\\Ability_Spy|/mac", -- [29]
-				"macro|30||Focus|Interface\\Icons\\Ability_Priest_Phantasm|/focus", -- [30]
-				"spell|161691||Garrison Ability||", -- [31]
-				"item|109222||Draenic Mana Potion", -- [32]
-				"macro|33||Transcendence|Interface\\Icons\\Spell_Shaman_SpectralTransformation|#showtooltip/n/use [nomod]Transcendence: Transfer;[mod:shift][mod:alt]Transcendence", -- [33]
-				"spell|83968||Mass Resurrection|Guild Perk|", -- [34]
-				"spell|158750||Jewelcrafting||", -- [35]
-				"spell|158739||Engineering||", -- [36]
-				"macro|37||Target Focus|Interface\\Icons\\Spell_Magic_PolymorphRabbit|/tar focus", -- [37]
-				"macro|38||Extra Action|Interface\\Icons\\INV_Misc_Herb_Whispervine|/click ExtraActionButton1", -- [38]
-				"equipmentset|DPS Haste|", -- [39]
-				"equipmentset|DPS Multistrike|", -- [40]
-				"macro|41||Deathnote|Interface\\Icons\\Ability_Hunter_MurderofCrows|/deathnote", -- [41]
-				"item|111820||Swapblaster", -- [42]
-				nil, -- [43]
-				nil, -- [44]
-				nil, -- [45]
-				nil, -- [46]
-				nil, -- [47]
-				nil, -- [48]
-				"macro|49||SCK|Interface\\Icons\\ability_monk_rushingjadewind|#showtooltip Spinning Crane Kick/n/use [nochanneling:Fists of Fury]Spinning Crane Kick", -- [49]
-				"macro|50||Belt|Interface\\ICONS\\INV_Leather_RaidMonk_O_01Belt.blp|/use 6", -- [50]
-				"macro|51||Tier 3|Interface\\Icons\\ability_monk_chibrew|#showtooltip/n/use [talent:3/1]Power Strikes;[talent:3/2]Ascension;[talent:3/3]Chi Brew", -- [51]
-				"spell|137562||Nimble Brew||", -- [52]
-				"spell|115313||Summon Jade Serpent Statue||", -- [53]
-				"macro|54||Tier 5|Interface\\Icons\\ability_monk_jasmineforcetea|#showtooltip/n/use [talent:5/1]Healing Elixirs;[talent:5/2]Dampen Harm;[talent:5/3]Diffuse Magic", -- [54]
-				"macro|55||Tier 6|Interface\\Icons\\ability_monk_rushingjadewind|#showtooltip/n/use [talent:6/2,nochanneling:Fists of Fury]Invoke Xuen, the White Tiger;[talent:6/1,nochanneling:Fists of Fury]Rushing Jade Wind", -- [55]
-				"spell|117952||Crackling Jade Lightning||", -- [56]
-				"item|109222||Draenic Mana Potion", -- [57]
-				"item|109223||Healing Tonic", -- [58]
-				nil, -- [59]
-				"macro|60||HS / GHS|Interface\\ICONS\\INV_MISC_RUNE_01.BLP|#showtooltip/n/use [nomod]Hearthstone;[mod:shift][mod:alt]Garrison Hearthstone", -- [60]
-				"macro|61||Detox|Interface\\Icons\\ability_rogue_imrovedrecuperate|#showtooltip/n/use [@mouseover,help,nodead][]Detox", -- [61]
-				"spell|115080||Touch of Death||", -- [62]
-				"spell|115460||Detonate Chi||", -- [63]
-				"macro|64||Uplift|Interface\\Icons\\ability_monk_uplift|#showtooltip Uplift/n/use 14/n/use [@mouseover,help,nodead][]Uplift", -- [64]
-				"macro|65||Surging Mist|Interface\\Icons\\ability_monk_surgingmist|#showtooltip Surging Mist/n/use Thunder Focus Tea/n/use [@mouseover,help,nodead][]Surging Mist", -- [65]
-				"spell|115294||Mana Tea||", -- [66]
-				"spell|115310||Revival||", -- [67]
-				"macro|68||Life Cocoon|Interface\\Icons\\ability_monk_chicocoon|#showtooltip Life Cocoon/n/use 14/n/use [@mouseover,help,nodead][]Life Cocoon", -- [68]
-				"macro|69||EH WA|Interface\\Icons\\ability_monk_expelharm|#showtooltip/n/use [@mouseover,help,nodead][]Expel Harm", -- [69]
-				"macro|70||Tier 2 MW|Interface\\Icons\\Spell_Arcane_ArcaneTorrent|#showtooltip/n/use [talent:2/1,@mouseover,help,nodead]Chi Wave;[talent:2/1]Chi Wave;[talent:2/2,@player,@mouseover,help,nodead]Zen Sphere;[talent:2/3]Chi Burst", -- [70]
-				"spell|109132||Roll||", -- [71]
-				"spell|115178||Resuscitate||", -- [72]
-				"spell|115693||Jab||", -- [73]
-				"spell|100787||Tiger Palm||", -- [74]
-				nil, -- [75]
-				"spell|107428||Rising Sun Kick||", -- [76]
-				"spell|116705||Spear Hand Strike||", -- [77]
-				"spell|115078||Paralysis||", -- [78]
-				"macro|79||Tier 4|Interface\\Icons\\ability_monk_chargingoxwave|#showtooltip/n/use [talent:4/1,@player]Ring of Peace;[talent:4/2]Charging Ox Wave;[talent:4/3]Leg Sweep", -- [79]
-				"macro|80||Surging Mist|Interface\\Icons\\ability_monk_surgingmist|#showtooltip Surging Mist/n/use Thunder Focus Tea/n/use [@mouseover,help,nodead][]Surging Mist", -- [80]
-				nil, -- [81]
-				"spell|115203||Fortifying Brew||", -- [82]
-				"macro|83||Purge Template|Interface\\Icons\\ability_rogue_imrovedrecuperate|#showtooltip/n/use [@mouseover,help,nodead][]Detox", -- [83]
-				nil, -- [84]
-				"spell|115693||Jab||", -- [85]
-				"spell|100787||Tiger Palm||", -- [86]
-				nil, -- [87]
-				nil, -- [88]
-				"spell|116705||Spear Hand Strike||", -- [89]
-				nil, -- [90]
-				nil, -- [91]
-				nil, -- [92]
-				nil, -- [93]
-				"spell|115203||Fortifying Brew||", -- [94]
-				"spell|115178||Resuscitate||", -- [95]
-				"spell|126892||Zen Pilgrimage||", -- [96]
+			["wwpvp"] = {
+				[27] = "macro|27||Max Camera|Interface\\Icons\\Spell_Arcane_TeleportTolBarad|/console CameraDistanceMaxFactor 100",
+				[31] = "equipmentset|Tank|",
+				[75] = "spell|107428||Rising Sun Kick||",
+				[91] = "spell|116095||Disable||",
+				[54] = "spell|122783||Diffuse Magic||",
+				[62] = "spell|113656||Fists of Fury||",
+				[76] = "spell|100784||Blackout Kick||",
+				[77] = "macro|77||SHS|Interface\\Icons\\ability_monk_spearhand|#showtooltip Spear Hand Strike/n/cancelaura Spinning Crane Kick/n/cast Spear Hand Strike",
+				[55] = "spell|115176||Zen Meditation||",
+				[63] = "spell|115450||Detox||",
+				[78] = "spell|115078||Paralysis||",
+				[94] = "spell|115203||Fortifying Brew||",
+				[28] = "macro|28||Combat Log|Interface\\Icons\\INV_SCROLL_11|/combatlog",
+				[32] = "spell|83968||Mass Resurrection|Guild Perk|",
+				[79] = "spell|119381||Leg Sweep||",
+				[95] = "spell|115178||Resuscitate||",
+				[56] = "spell|117952||Crackling Jade Lightning||",
+				[64] = "spell|115288||Energizing Brew||",
+				[80] = "spell|117368||Grapple Weapon||",
+				[96] = "spell|126892||Zen Pilgrimage||",
+				[33] = "spell|110420||Jewelcrafting||",
+				[81] = "spell|116095||Disable||",
+				[49] = "spell|101546||Spinning Crane Kick||",
+				[57] = "item|76089||Virmen's Bite",
+				[66] = "spell|116740||Tigereye Brew||",
+				[82] = "spell|115203||Fortifying Brew||",
+				[25] = "macro|25||Ready Check|Interface\\Icons\\INV_MISC_DMC01|/i Please wait and hit ready when you're good to go./n/raid Please wait and hit ready when you're good to go./n/readycheck",
+				[29] = "macro|29||Recruit|Interface\\Icons\\ACHIEVEMENT_GUILDPERK_FASTTRACK_RANK2|/2 {star}GLORY 10m 4/13{star} is recruiting a DPS for ToT HM progression. 3 nights a week (T/W/Th 8-11PM server), pst for additional information! (you need to be 520+ and 1/13 min) - (pref: Hunt / Lock / Rogue)",
+				[34] = "spell|31252||Prospecting||",
+				[83] = "spell|116781||Legacy of the White Tiger||",
+				[50] = "spell|101643||Transcendence||",
+				[58] = "item|5512||Healthstone",
+				[68] = "spell|115080||Touch of Death||",
+				[84] = "spell|115921||Legacy of the Emperor||",
+				[67] = "spell|101545||Flying Serpent Kick||",
+				[35] = "spell|110417||Inscription||",
+				[85] = "spell|100780||Jab||",
+				[51] = "spell|119996||Transcendence: Transfer||",
+				[59] = "macro|59||MountHelper|Interface\\Icons\\INV_pandarenserpentpet|/mount /n/dismount [noflying,nomod][mod:ctrl]",
+				[70] = "spell|115098||Chi Wave||",
+				[86] = "spell|100787||Tiger Palm||",
+				[26] = "macro|26||Pull!|Interface\\Icons\\Spell_Shadow_UnstableAfllictions|/dbm pull 10",
+				[30] = "equipmentset|Deeps|",
+				[71] = "spell|121827||Roll||",
+				[87] = "spell|100784||Blackout Kick||",
+				[52] = "spell|137562||Nimble Brew||",
+				[60] = "item|6948||Hearthstone",
+				[72] = "spell|115178||Resuscitate||",
+				[39] = "macro|39||Cancel SEF|Interface\\Icons\\spell_sandstorm|#showtooltip Storm, Earth, and Fire/n/cancelaura Storm, Earth, and Fire",
+				[65] = "spell|122470||Touch of Karma||",
+				[42] = "spell|110500||Symbiosis||",
+				[73] = "spell|100780||Jab||",
+				[89] = "spell|116705||Spear Hand Strike||",
+				[53] = "macro|53||SEF|Interface\\Icons\\spell_sandstorm|#showtooltip Storm, Earth, and Fire/n/cast [@target,harm][] Storm, Earth, and Fire/n/cancelaura [mod:alt] Storm, Earth, and Fire",
+				[61] = "spell|123904||Invoke Xuen, the White Tiger||",
+				[74] = "spell|100787||Tiger Palm||",
+				[69] = "spell|115072||Expel Harm||",
+				[36] = "spell|51005||Milling||",
 			},
 		},
-		["ROGUE"] = {
+		["PALADIN"] = {
 		},
 	},
 	["spellSubs"] = {
