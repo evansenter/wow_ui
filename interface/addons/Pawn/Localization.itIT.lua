@@ -269,7 +269,7 @@ Per maggiori informazioni su come personalizzare Pawn, per favore leggere il fil
 		HeroicElite = "^Eroico [E\195\137]lite$",
 		HeroicThunderforged = "^Eroico Tuonoforgiat[oa]$",
 		HeroicWarforged = "^Eroico Guerraforgiat[oa]$",
-		Hp5 = "UNUSED",
+		Hp5 = "^%+?([%d%.,]+) Salute ogni 5 s.$",
 		Hp52 = "UNUSED",
 		Hp53 = "UNUSED",
 		Hp54 = "UNUSED",

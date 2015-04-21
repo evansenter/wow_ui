@@ -1,6 +1,7 @@
 local addonName, vars = ...
 SavedInstances = vars
 local addon = vars
+local addonAbbrev = "SI"
 vars.core = LibStub("AceAddon-3.0"):NewAddon(addonName, "AceEvent-3.0", "AceTimer-3.0")
 local core = vars.core
 local L = vars.L
@@ -13,7 +14,7 @@ local maxdiff = 16 -- max number of instance difficulties
 local maxcol = 4 -- max columns per player+instance
 
 addon.svnrev = {}
-addon.svnrev["SavedInstances.lua"] = tonumber(("$Revision: 427 $"):match("%d+"))
+addon.svnrev["SavedInstances.lua"] = tonumber(("$Revision: 431 $"):match("%d+"))
 
 -- local (optimal) references to provided functions
 local table, math, bit, string, pairs, ipairs, unpack, strsplit, time, type, wipe, tonumber, select, strsub = 
@@ -151,7 +152,10 @@ addon.WorldBosses = {
 	          select(2,EJ_GetCreatureInfo(1,1211)):match("^[^ ]+")}, 
   [1291] = { remove=true }, -- Drov cleanup
 
-  [1262] = { quest=37464,  expansion=5, level=100 }, -- Rukhmar
+  [1262] = { quest=37464, expansion=5, level=100 }, -- Rukhmar
+
+  -- bosses with no EJ entry (eid is a placeholder)
+  [9001] = { quest=38276, name=GARRISON_LOCATION_TOOLTIP.." "..BOSS, expansion=5, level=100 },
 }
 
 local _specialQuests = {
@@ -825,6 +829,114 @@ function addon:CategorySize(category)
 	return i
 end
 
+local _instance_exceptions = { 
+  -- workaround a Blizzard bug:
+  -- since 5.0, some old raid lockout tooltips are missing boss kill info
+  -- currently affects 25+ man BC/Vanilla raids (but not Kara or AQ Ruins, go figure)
+  -- starting in 6.1 we have the kill bitmap but no boss names
+  [48] = { -- Molten Core
+    12118, -- Lucifron
+    11982, -- Magmadar
+    12259, -- Gehennas
+    12057, -- Garr
+    12264, -- Shazzrah
+    12056, -- Baron Geddon
+    12098, -- Sulfuron Harbinger
+    11988, -- Golemagg the Incinerator
+    12018, -- Majordomo Executus
+    11502, -- Ragnaros
+  },
+  [50] = { -- Blackwing Lair
+    12435, -- Razorgore the Untamed
+    13020, -- Vaelastrasz the Corrupt
+    12017, -- Boodlord Lashlayer
+    11983, -- Firemaw
+    14601, -- Ebonroc
+    11981, -- Flamegor
+    14020, -- Chromaggus
+    11583, -- Nefarian
+  },
+  [161] = { -- Ahn'Qiraj Temple
+    15263, -- Prophet Skeram
+    15543, -- Princess Yauj (also Vem and Lord Kri)
+    15516, -- Bodyguard Sartura
+    15510, -- Fankriss the Unyielding
+    15299, -- Viscidus
+    15509, -- Princess Huhuran
+    15276, -- Emperor Vek'lor
+    15517, -- Ouro
+    15727, -- C'Thun
+  },
+  [176] = { -- Magtheridon's Lair
+    17257, -- Magtheridon
+  },
+  [177] = { -- Gruul's Lair
+    18831, -- High King Maulgar
+    19044, -- Gruul
+  },
+  [193] = { -- Tempest Keep
+    19514, -- A'lar
+    19516, -- Void Reaver
+    18805, -- High Astromancer Solarian
+    19622, -- Kael'thas Sunstrider
+  },
+  [194] = { -- Serpentshrine Cavern
+    21216, -- Hydross the Unstable
+    21217, -- The Lurker Below
+    21215, -- Leotheras the Blind
+    21214, -- Fathom-Lord Karathress
+    21213, -- Morogrim Tidewalker
+    21212, -- Lady Vashj
+  },
+  [195] = { -- Hyjal Past
+    17767, -- Rage Winterchill
+    17808, -- Anetheron
+    17888, -- Kaz'rogal
+    17842, -- Azgalor
+    17968, -- Archimonde
+  },
+  [196] = { -- Black Temple
+    22887, -- High Warlord Naj'entus
+    22898, -- Supremus
+    22841, -- Shade of Akama
+    22871, -- Teron Gorefiend
+    22948, -- Gurtogg Bloodboil
+    22856, -- Reliquary of Souls
+    22947, -- Mother Shahraz
+    23426, -- Illidari Council
+    22917, -- Illidan Stormrage
+  },
+  [199] = { -- Sunwell
+    24850, -- Kalecgos
+    24882, -- Brutallus
+    25038, -- Felmyst
+    25166, -- Grand Warlock Alythess
+    25741, -- M'uru
+    25315, -- Kil'jaeden
+  },
+}
+function addon:instanceException(LFDID)
+  if not LFDID then return nil end
+  local exc = _instance_exceptions[LFDID]
+  if exc then -- localize boss names
+    local total = 0
+    for idx, id in ipairs(exc) do
+      if type(id) == "number" then
+        scantt:SetOwner(UIParent,"ANCHOR_NONE")
+        scantt:SetHyperlink(("unit:Creature-0-0-0-0-%d:0000000000"):format(id))  
+	local line = scantt:IsShown() and _G[scantt:GetName().."TextLeft1"]
+	line = line and line:GetText()
+	if line and #line > 0 then
+	  exc[idx] = line
+	end
+      end
+      total = total + 1
+    end
+    exc.total = total
+  end
+  return exc
+end
+
 function addon:instanceBosses(instance,toon,diff)
   local killed,total,base = 0,0,1
   local remap = nil
@@ -834,7 +946,8 @@ function addon:instanceBosses(instance,toon,diff)
     return (save[1] and 1 or 0), 1, 1
   end
   if not inst or not inst.LFDID then return 0,0,1 end
-  total = GetLFGDungeonNumEncounters(inst.LFDID)
+  local exc = addon:instanceException(inst.LFDID)
+  total = (exc and exc.total) or GetLFGDungeonNumEncounters(inst.LFDID)
   local LFR = addon.LFRInstances[inst.LFDID]
   if LFR then
     total = LFR.total or total
@@ -1344,9 +1457,20 @@ function addon:UpdateToonData()
 	     db.Quests[id] = nil
 	  end
 	end
+	addon:UpdateCurrency()
+	local zone = GetRealZoneText()
+	if zone and #zone > 0 then
+	  t.Zone = zone
+	end
+	t.LastSeen = time()
+end
+
+function addon:UpdateCurrency()
+	if addon.logout then return end -- currency is unreliable during logout
+	local t = vars.db.Toons[thisToon]
+	t.Money = GetMoney()
 	t.currency = t.currency or {}
 	for _,idx in pairs(currency) do
-	  if addon.logout then break end -- currency is unreliable during logout
 	  local ci = t.currency[idx] or {}
 	  _, ci.amount, _, ci.earnedThisWeek, ci.weeklyMax, ci.totalMax = GetCurrencyInfo(idx)
           if idx == 396 then -- VP has a weekly max scaled by 100
@@ -1367,14 +1491,6 @@ function addon:UpdateToonData()
           ci.season = addon:GetSeasonCurrency(idx)
 	  t.currency[idx] = ci
 	end
-        if not addon.logout then
-	  t.Money = GetMoney()
-	end
-	local zone = GetRealZoneText()
-	if zone and #zone > 0 then
-	  t.Zone = zone
-	end
-	t.LastSeen = time()
 end
 
 function addon:QuestIsDarkmoonMonthly()
@@ -1796,7 +1912,7 @@ local function ShowIndicatorTooltip(cell, arg, ...)
 	end
 	if info.Link then
 	  scantt:SetOwner(UIParent,"ANCHOR_NONE")
-	  scantt:SetHyperlink(thisinstance[toon][diff].Link)
+	  scantt:SetHyperlink(info.Link)
 	  local name = scantt:GetName()
 	  local gotbossinfo
 	  for i=2,scantt:NumLines() do
@@ -1810,10 +1926,25 @@ local function ShowIndicatorTooltip(cell, arg, ...)
 	      indicatortip:SetCell(indicatortip:AddLine(),1,coloredText(left),"CENTER",3)
 	    end
 	  end
-	  if not gotbossinfo and info.Link:find(":0|h[",1,true) then
+	  if not gotbossinfo then
+	    local exc = addon:instanceException(thisinstance.LFDID)
+            local bits = tonumber(info.Link:match(":(%d+)\124h"))
+	    if exc and bits then
+	      for i=1,exc.total do
+	        local n = indicatortip:AddLine()
+	        indicatortip:SetCell(n, 1, exc[i], "LEFT", 2)
+		local text = "\124cff00ff00"..BOSS_ALIVE.."\124r"
+                if bit.band(bits,1) > 0 then
+                  text = "\124cffff1f1f"..BOSS_DEAD.."\124r"
+                end
+	        indicatortip:SetCell(n, 3, text, "RIGHT", 1)
+                bits = bit.rshift(bits,1)
+              end
+	    else
 	      indicatortip:SetCell(indicatortip:AddLine(),1,WHITEFONT .. 
 	          L["Boss kill information is missing for this lockout.\nThis is a Blizzard bug affecting certain old raids."] .. 
 		  FONTEND,"CENTER",3)
+            end
 	  end
 	end
 	if info.ID < 0 then
@@ -1991,7 +2122,7 @@ function core:OnInitialize()
 	RequestRaidInfo() -- get lockout data
 	RequestLFDPlayerLockInfo()
 	vars.dataobject = vars.LDB and vars.LDB:NewDataObject("SavedInstances", {
-		text = addonName,
+		text = addonAbbrev,
 		type = "launcher",
 		icon = "Interface\\Addons\\SavedInstances\\icon.tga",
 		OnEnter = function(frame)
@@ -2046,6 +2177,7 @@ function core:OnEnable()
 	self:RegisterEvent("CHAT_MSG_SYSTEM", "CheckSystemMessage")
 	self:RegisterEvent("CHAT_MSG_CURRENCY", "CheckSystemMessage")
 	self:RegisterEvent("CHAT_MSG_LOOT", "CheckSystemMessage")
+	self:RegisterEvent("CURRENCY_DISPLAY_UPDATE", function() addon:UpdateCurrency() end)
 	self:RegisterEvent("UNIT_SPELLCAST_SUCCEEDED")
 	self:RegisterEvent("TRADE_SKILL_UPDATE")
 	self:RegisterEvent("PLAYER_ENTERING_WORLD", RequestRaidInfo)
@@ -2385,7 +2517,7 @@ function addon:HistoryUpdate(forcereset, forcemesg)
     addon.histTextthrottle = math.min(oldestrem+1, addon.histTextthrottle or 15)
     addon.resetDetect:SetScript("OnUpdate", addon.histTextUpdate)
   else
-    vars.dataobject.text = addonName
+    vars.dataobject.text = addonAbbrev
     addon.resetDetect:SetScript("OnUpdate", nil)
   end
 end
@@ -2490,7 +2622,7 @@ function core:Refresh(recoverdaily)
            if weeklyreset and (
 	      (einfo.quest and IsQuestFlaggedCompleted(einfo.quest)) or 
 	      (quests and einfo.quest and quests[einfo.quest]) or
-	      wbsave[einfo.name]
+	      wbsave[einfo.savename or einfo.name]
 	      ) then
              local truename = einfo.name
              local instance = vars.db.Instances[truename] 

@@ -57,61 +57,120 @@ module.db.tableRunes = {
 	[175439]=true,	--Str
 }
 
+module.db.buffsList = {"STAMINA","STATS","MASTERY","CRIT","HASTE","MS","VERSA","SPD","AP"}
+module.db.buffsNames = {
+	STAMINA = RAID_BUFF_2 or "Stamina",
+	STATS = RAID_BUFF_1 or "Stats",
+	MASTERY = RAID_BUFF_7 or "Mastery",
+	CRIT = RAID_BUFF_6 or "Crit",
+	HASTE = RAID_BUFF_4 or "Haste",
+	MS = RAID_BUFF_8 or "Ms",
+	VERSA = RAID_BUFF_9 or "Versatility",
+	SPD = RAID_BUFF_5 or "SPD",
+	AP = RAID_BUFF_3 or "AP",
+}
 
-local function GetFlask(arg1,arg2)
-	local f = {[0]={}}
-	local gMax = ExRT.mds.GetRaidDiffMaxGroup()
-	local _time = GetTime()
-	for j=1,40 do
-		local name,_,subgroup = GetRaidRosterInfo(j)
-		if name and subgroup <= gMax then
-			local b = nil
-			for i=1,40 do
-				local expires,_,_,_,spellId = select(7,UnitAura(name, i,"HELPFUL"))
-				if not spellId then
-					break
-				else
-					local flaskType = module.db.tableFlask[spellId]
-					if flaskType then
-						f[flaskType] = f[flaskType] or {}
-						expires = expires or 9999999
-						f[flaskType][ #f[flaskType]+1 ] = {name,expires-_time}
-						if ExRT.mds.table_find(module.db.tableFlask_headers,flaskType) then
-							b = true
-						end
-					end
-				end
-			end
-			if not b then
-				f[0][ #f[0]+1 ] = {name,901}
-			end
-		end
+do
+	local function SpellName(spellID)
+		local name = GetSpellInfo(spellID)
+		return name or "UNK BUFF NAME"
 	end
-	for flaskType,typeData in pairs(f) do
-		table.sort(typeData,function(a,b) return a[2]<b[2] end)
-	end
-
-	local function toChat(h,y)
-		local chat_type = ExRT.mds.chatType(true)
-		if arg1 == 2 then print(h) end
-		if arg1 == 1 then SendChatMessage(h,chat_type) end
-		if arg2 == 1 and y == 0 then SendChatMessage(h,chat_type) end	  
-	end
-	
-	for i=1,#module.db.tableFlask_headers do
-		local k = module.db.tableFlask_headers[i]
-		f[k] = f[k] or {}
-		local h = format("%d (%d): ",k,#f[k])
-		if arg2 == 1 and k == 0 then h = format("%s (%d): ",ExRT.L.raidchecknoflask,#f[k]) end
-		for j=1,#f[k] do
-			h = h .. format("%s%s%s",f[k][j][1] or "?", f[k][j][2] and f[k][j][2] <= 900 and ("("..tostring(math.floor(f[k][j][2]/60))..")") or "" ,j < #f[k] and ", " or "")
-			if #h > 230 then
-				toChat(h,k)
-				h = ""
-			end
-		end
-		toChat(h,k)
-	end
+	module.db.buffsSpells = {
+		STAMINA={
+			SpellName(21562),	-- Power Word: Fortitude
+			SpellName(166928),	-- Blood Pact
+			SpellName(469), 	-- Commanding Shout
+			SpellName(90364),	-- Silithid, Qiraji Fortitude
+			SpellName(50256),	-- Bear, Invigorating Roar
+			SpellName(160014),	-- Goat, Sturdiness
+			SpellName(160199),	-- Hunter, level 100
+		},
+		STATS={
+			SpellName(20217),	-- Blessing of Kings
+			SpellName(1126),	-- Mark of the Wild
+			SpellName(116781),	-- Legacy of the White Tiger
+			SpellName(115921),	-- Legacy of the Emperor
+			SpellName(90363),	-- Shale Spider, Embrace of the Shale Spider
+			SpellName(159988),	-- Dog, Bark of the Wild
+			SpellName(160017),	-- Gorilla, Blessing of Kongs
+			SpellName(160077),	-- Worm, Strength of the Earth
+			SpellName(160206),	-- Hunter, level 100
+		},
+		MASTERY={
+			SpellName(19740),	-- Blessing of Might
+			SpellName(155522),	-- Power of the Grave
+			SpellName(116956),	-- Grace of Air
+			SpellName(24907),	-- Moonkin Aura
+			SpellName(93435),	-- Cat, Roar of Courage
+			SpellName(128997),	-- Spirit Beast, Spirit Beast Blessing
+			SpellName(160073),	-- Tallstrider, Plainswalking
+			SpellName(160039),	-- Hydra, Keen Senses
+			SpellName(160198),	-- Hunter, level 100
+		},
+		CRIT={
+			SpellName(116781),	-- Legacy of the White Tiger
+			SpellName(17007),	-- Leader of the Pack
+			SpellName(1459),	-- Arcane Brilliance
+			SpellName(61316),	-- Dalaran Brilliance
+			SpellName(24604),	-- Wolf, Furious Howl
+			SpellName(90309),	-- Devilsaur, Terrifying Roar
+			SpellName(126373),	-- Quilen, Fearless Roar
+			SpellName(126309),	-- Water Strider, Still Water
+			SpellName(90363),	-- Shale Spider, Embrace of the Shale Spider
+			SpellName(160052),	-- Raptor, Strength of the Pack
+			SpellName(160200),	-- Hunter, level 100
+		},
+		HASTE={
+			SpellName(55610),	-- Unholy Aura
+			SpellName(116956),	-- Grace of Air
+			SpellName(49868),	-- Mind Quickening
+			SpellName(113742),	-- Swiftblade's Cunning
+			SpellName(135678),	-- Sporebat, Energizing Spores
+			SpellName(128432),	-- Hyena, Cackling Howl
+			SpellName(160074),	-- Wasp, Speed of the Swarm
+			SpellName(160203),	-- Hunter, level 100
+		},
+		MS={
+			SpellName(166916),	-- Windflurry
+			SpellName(49868),	-- Mind Quickening
+			SpellName(113742),	-- Swiftblade's Cunning
+			SpellName(109773),	-- Dark Intent
+			SpellName(50519),	-- Bat, Sonic Focus
+			SpellName(159736), 	-- Chimaera, Duality
+			SpellName(57386),	-- Clefthoof, Wild Strength
+			SpellName(58604),	-- Core Hound, Double Bite
+			SpellName(34889),	-- Dragonhawk, Spry Attacks
+			SpellName(24844),	-- Wind Serpent, Breath of the Winds
+			SpellName(172968),	-- Hunter, level 100
+		},
+		VERSA={
+			SpellName(167187),	-- Sanctity Aura
+			SpellName(167188),	-- Inspiring Presence
+			SpellName(55610),	-- Unholy Aura
+			SpellName(1126),	-- Mark of the Wild
+			SpellName(159735),	-- Bird of Prey, Tenacity
+			SpellName(35290),	-- Boar, Indomitable
+			SpellName(57386),	-- Clefthoof, Wild Strength
+			SpellName(160045),	-- Porcupine, Defensive Quills
+			SpellName(50518),	-- Ravager, Chitinous Armor
+			SpellName(160077),	-- Worm, Strength of the Earth
+			SpellName(172967),	-- Hunter, level 100
+		},
+		SPD={
+			SpellName(1459),	-- Arcane Brilliance
+			SpellName(61316),	-- Dalaran Brilliance
+			SpellName(109773),	-- Dark Intent
+			SpellName(126309),	-- Water Strider, Still Water
+			SpellName(90364),	-- Silithid, Qiraji Fortitude
+			SpellName(128433),	-- Serpent, Serpent's Cunning
+			SpellName(160205),	-- Hunter, level 100
+		},
+		AP={
+			SpellName(19506),	-- Trueshot Aura
+			SpellName(6673),	-- Battle Shout
+			SpellName(57330),	-- Horn of Winter
+		},
+	}
 end
 
 local function GetPotion(arg1)
@@ -167,6 +226,7 @@ end
 	
 	1 - to chat
 	2 - ready check
+	3 - ready check (self)
 	nil - self
 ]]
 
@@ -174,6 +234,9 @@ local function PublicResults(msg,chat_type)
 	if msg == "" or not msg then
 		return
 	elseif chat_type then
+		msg = msg:gsub("|c........","")
+		msg = msg:gsub("|r","")
+	
 		chat_type = ExRT.mds.chatType(true)
 		SendChatMessage(msg,chat_type)
 	else
@@ -207,17 +270,36 @@ local function GetRunes(checkType)
 		end
 	end
 	
-	local result = format("%s (%d): ",ExRT.L.RaidCheckNoRunes,#f[0])
-	for i=1,#f[0] do
-		result = result .. f[0][i]
-		if #result > 230 then
+	if not checkType or checkType == 1 then
+		for _,stats in ipairs({0,50}) do
+			local result = format("|cff00ff00%d (%d):|r ",stats,#f[stats])
+			for i=1,#f[stats] do
+				result = result .. f[stats][i]
+				if #result > 230 then
+					PublicResults(result,checkType)
+					result = ""
+				elseif i ~= #f[stats] then
+					result = result .. ", "
+				end
+			end
 			PublicResults(result,checkType)
-			result = ""
-		elseif i ~= #f[0] then
-			result = result .. ", "
 		end
+	elseif checkType == 2 or checkType == 3 then
+		if checkType == 3 then
+			checkType = nil
+		end
+		local result = format("|cff00ff00%s (%d):|r ",ExRT.L.RaidCheckNoRunes,#f[0])
+		for i=1,#f[0] do
+			result = result .. f[0][i]
+			if #result > 230 then
+				PublicResults(result,checkType)
+				result = ""
+			elseif i ~= #f[0] then
+				result = result .. ", "
+			end
+		end
+		PublicResults(result,checkType)
 	end
-	PublicResults(result,checkType)
 end
 
 local function GetFood(checkType)
@@ -261,7 +343,7 @@ local function GetFood(checkType)
 	if not checkType or checkType == 1 then
 		for _,foodType in ipairs(module.db.tableFood_headers) do
 			f[foodType] = f[foodType] or {}
-			local result = format("%d (%d): ",foodType,#f[foodType])
+			local result = format("|cff00ff00%d (%d):|r ",foodType,#f[foodType])
 			for j=1,#f[foodType] do
 				result = result .. f[foodType][j] .. (j < #f[foodType] and ", " or "")
 				if #result > 230 then
@@ -271,7 +353,10 @@ local function GetFood(checkType)
 			end
 			PublicResults(result,checkType)
 		end
-	elseif checkType == 2 then
+	elseif checkType == 2 or checkType == 3 then
+		if checkType == 3 then
+			checkType = nil
+		end
 		local counter,counterResult = 0,0
 		local badStats = {}
 		for statsNum,data in pairs(f) do
@@ -281,7 +366,7 @@ local function GetFood(checkType)
 			end
 		end
 		sort(badStats)
-		local result = format("%s (%d): ",ExRT.L.raidchecknofood,counter)
+		local result = format("|cff00ff00%s (%d):|r ",ExRT.L.raidchecknofood,counter)
 		for i=1,#badStats do
 			local statsNum = badStats[i]
 			for j=1,#f[statsNum] do
@@ -295,12 +380,169 @@ local function GetFood(checkType)
 		end
 		PublicResults(result,checkType)
 	end
+end
+
+local function GetFlask(checkType)
+	local f = {[0]={}}
+	local gMax = ExRT.mds.GetRaidDiffMaxGroup()
+	local _time = GetTime()
+	for j=1,40 do
+		local name,_,subgroup = GetRaidRosterInfo(j)
+		if name and subgroup <= gMax then
+			local isAnyBuff = nil
+			for i=1,40 do
+				local expires,_,_,_,spellId = select(7,UnitAura(name, i,"HELPFUL"))
+				if not spellId then
+					break
+				else
+					local flaskType = module.db.tableFlask[spellId]
+					if flaskType then
+						f[flaskType] = f[flaskType] or {}
+						expires = expires or -1
+						local lost = expires-_time
+						if expires == 0 or lost < 0 then
+							lost = 901
+						end
+						f[flaskType][ #f[flaskType]+1 ] = {name,lost}
+						if ExRT.mds.table_find(module.db.tableFlask_headers,flaskType) then
+							isAnyBuff = true
+						end
+					end
+				end
+			end
+			if not isAnyBuff then
+				f[0][ #f[0]+1 ] = {name,901}
+			end
+		end
+	end
+	for flaskType,typeData in pairs(f) do
+		table.sort(typeData,function(a,b) return a[2]<b[2] end)
+	end
 	
+	local showExpFlasks_seconds = VExRT.RaidCheck.FlaskExp == 1 and 300 or VExRT.RaidCheck.FlaskExp == 2 and 600 or -1
+	
+	if not checkType or checkType == 1 then
+		for i=1,#module.db.tableFlask_headers do
+			local flaskStats = module.db.tableFlask_headers[i]
+			f[ flaskStats ] = f[ flaskStats ] or {}
+			local result = format("|cff00ff00%d (%d):|r ",flaskStats,#f[ flaskStats ])
+			for j=1,#f[ flaskStats ] do
+				result = result .. format("%s%s",f[ flaskStats ][j][1] or "?", j < #f[ flaskStats ] and ", " or "")
+				if #result > 230 then
+					PublicResults(result,checkType)
+					result = ""
+				end
+			end
+			PublicResults(result,checkType)
+		end
+	elseif checkType == 2 or checkType == 3 then
+		if checkType == 3 then
+			checkType = nil
+		end
+		f[0] = f[0] or {}
+		local result = format("|cff00ff00%s (%d):|r ",ExRT.L.raidchecknoflask,#f[0])
+		for j=1,#f[0] do
+			result = result .. format("%s%s",f[0][j][1] or "?",j < #f[0] and ", " or "")
+			if #result > 230 then
+				PublicResults(result,checkType)
+				result = ""
+			end
+		end
+		local strings_list = {}
+		for i=1,#module.db.tableFlask_headers do
+			local flaskStats = module.db.tableFlask_headers[i]
+			if flaskStats ~= 0 then
+				f[ flaskStats ] = f[ flaskStats ] or {}
+				for j=1,#f[ flaskStats ] do
+					if f[ flaskStats ][j][2] <= showExpFlasks_seconds and f[ flaskStats ][j][2] >= 0 then
+						local mins = floor( f[ flaskStats ][j][2] / 60 )
+						strings_list[#strings_list + 1] = format("%s%s",f[ flaskStats ][j][1] or "?", "("..(mins == 0 and "<1" or tostring(mins))..")")
+					end
+				end
+			end
+		end
+		local strings_list_len = #strings_list
+		if strings_list_len > 0 then
+			result = result .. ( #f[0] > 0 and result ~= "" and ", " or "" )
+		end
+		for i=1,strings_list_len do
+			result = result .. strings_list[i] .. (i < strings_list_len and ", " or "")
+			if #result > 230 then
+				PublicResults(result,checkType)
+				result = ""
+			end
+		end
+		PublicResults(result,checkType)
+	end
+end
+
+local function GetRaidBuffs(checkType)
+	local f = {}
+	for i=1,#module.db.buffsList do f[i]={} end
+	local gMax = ExRT.mds.GetRaidDiffMaxGroup()
+	for i=1,40 do
+		local name,_,subgroup,_,_,_,_,online,isDead = GetRaidRosterInfo(i)
+		if name and subgroup <= gMax and online and not isDead then
+			for j=1,#module.db.buffsList do
+				local isAnyBuff = nil
+				local buffTable = module.db.buffsSpells[  module.db.buffsList[j]  ]
+				for k=1,#buffTable do
+					local auraExists = UnitAura(name, buffTable[k])
+					if auraExists then
+						isAnyBuff = true
+						break
+					end
+				end
+				if not isAnyBuff then
+					f[j][ #f[j]+1 ] = name
+				end
+			end
+		end
+	end
+
+	if not checkType or checkType == 1 then
+		for i=1,#f do
+			local result = format("|cff00ff00%s (%d):|r ",module.db.buffsNames[ module.db.buffsList[i] ],#f[i])
+			for j=1,#f[i] do
+				result = result .. format("%s%s",f[i][j] or "?", j < #f[i] and ", " or "")
+				if #result > 230 then
+					PublicResults(result,checkType)
+					result = ""
+				end
+			end
+			PublicResults(result,checkType)
+		end
+	elseif checkType == 2 or checkType == 3 then
+		if checkType == 3 then
+			checkType = nil
+		end
+		local missingCount = 0
+		for i=1,#f do
+			if #f[i] > 0 then
+				missingCount = missingCount + 1
+			end
+		end
+		local result = format("|cff00ff00%s (%d):|r ",ExRT.L.RaidCheckNoBuffs,missingCount)
+		local missingNow = 0
+		for i=1,#f do
+			if #f[i] > 0 then
+				missingNow = missingNow + 1
+				result = result .. module.db.buffsNames[ module.db.buffsList[i] ] .. (missingNow < missingCount and ", " or "")
+				if #result > 230 then
+					PublicResults(result,checkType)
+					result = ""
+				end
+			end
+		end
+		PublicResults(result,checkType)
+	end
 end
 
 
 function module.options:Load()
-	self.food = ExRT.lib.CreateButton(self,230,22,nil,10,-10,ExRT.L.raidcheckfood)       
+	self:CreateTilte()
+
+	self.food = ExRT.lib.CreateButton(self,230,22,nil,10,-30,ExRT.L.raidcheckfood)       
 	self.food:SetScript("OnClick",function()
 		GetFood()
 	end)
@@ -312,14 +554,14 @@ function module.options:Load()
 		GetFood(1)
 	end)
 	self.foodToChat:SetNewPoint("LEFT",self.food,"RIGHT",71,0)
-	self.foodToChat.txt = ExRT.lib.CreateText(self,100,22,nil,546,-10,nil,nil,nil,11,"/rt foodchat")
+	self.foodToChat.txt = ExRT.lib.CreateText(self,100,22,nil,0,0,nil,nil,nil,11,"/rt foodchat")
 	self.foodToChat.txt:SetNewPoint("LEFT",self.foodToChat,"RIGHT",5,0)
 	
-	self.flask = ExRT.lib.CreateButton(self,230,22,nil,10,-35,ExRT.L.raidcheckflask)       
+	self.flask = ExRT.lib.CreateButton(self,230,22,nil,10,-55,ExRT.L.raidcheckflask)       
 	self.flask:SetScript("OnClick",function()
-		GetFlask(2)
+		GetFlask()
 	end)  
-	self.flask.txt = ExRT.lib.CreateText(self,100,22,nil,245,-35,nil,nil,nil,11,"/rt flask")
+	self.flask.txt = ExRT.lib.CreateText(self,100,22,nil,0,0,nil,nil,nil,11,"/rt flask")
 	self.flask.txt:SetNewPoint("LEFT",self.flask,"RIGHT",5,0)
 	
 	self.flaskToChat = ExRT.lib.CreateButton(self,230,22,nil,0,0,ExRT.L.raidcheckflaskchat)       
@@ -327,10 +569,42 @@ function module.options:Load()
 		GetFlask(1)
 	end)
 	self.flaskToChat:SetNewPoint("LEFT",self.flask,"RIGHT",71,0)
-	self.flaskToChat.txt = ExRT.lib.CreateText(self,100,22,nil,546,-35,nil,nil,nil,11,"/rt flaskchat")
+	self.flaskToChat.txt = ExRT.lib.CreateText(self,100,22,nil,0,0,nil,nil,nil,11,"/rt flaskchat")
 	self.flaskToChat.txt:SetNewPoint("LEFT",self.flaskToChat,"RIGHT",5,0)	
 	
-	self.chkSlak = ExRT.lib.CreateCheckBox(self,nil,10,-85,ExRT.L.raidcheckslak)
+	self.runes = ExRT.lib.CreateButton(self,230,22,nil,10,-80,ExRT.L.RaidCheckRunesCheck)       
+	self.runes:SetScript("OnClick",function()
+		GetRunes()
+	end)
+	self.runes.txt = ExRT.lib.CreateText(self,60,22,nil,0,0,nil,nil,nil,11,"/rt check runes")
+	self.runes.txt:SetNewPoint("LEFT",self.runes,"RIGHT",5,0)
+	
+	self.runesToChat = ExRT.lib.CreateButton(self,230,22,nil,0,0,ExRT.L.RaidCheckRunesChat)       
+	self.runesToChat:SetScript("OnClick",function()
+		GetRunes(1)
+	end)
+	self.runesToChat:SetNewPoint("LEFT",self.runes,"RIGHT",71,0)
+	self.runesToChat.txt = ExRT.lib.CreateText(self,100,22,nil,0,0,nil,nil,nil,11,"/rt check runeschat")
+	self.runesToChat.txt:SetNewPoint("LEFT",self.runesToChat,"RIGHT",5,0)
+	
+	
+	self.buffs = ExRT.lib.CreateButton(self,230,22,nil,10,-105,ExRT.L.RaidCheckBuffs)       
+	self.buffs:SetScript("OnClick",function()
+		GetRaidBuffs()
+	end)
+	self.buffs.txt = ExRT.lib.CreateText(self,60,22,nil,0,0,nil,nil,nil,11,"/rt check buffs")
+	self.buffs.txt:SetNewPoint("LEFT",self.buffs,"RIGHT",5,0)
+	
+	self.buffsToChat = ExRT.lib.CreateButton(self,230,22,nil,0,0,ExRT.L.RaidCheckBuffsToChat)       
+	self.buffsToChat:SetScript("OnClick",function()
+		GetRaidBuffs(1)
+	end)
+	self.buffsToChat:SetNewPoint("LEFT",self.buffs,"RIGHT",71,0)
+	self.buffsToChat.txt = ExRT.lib.CreateText(self,100,22,nil,0,0,nil,nil,nil,11,"/rt check buffschat")
+	self.buffsToChat.txt:SetNewPoint("LEFT",self.buffsToChat,"RIGHT",5,0)
+
+	
+	self.chkSlak = ExRT.lib.CreateCheckBox(self,nil,10,-130,ExRT.L.raidcheckslak)
 	self.chkSlak:SetScript("OnClick", function(self,event) 
 		if self:GetChecked() then
 			VExRT.RaidCheck.ReadyCheck = true
@@ -343,7 +617,43 @@ function module.options:Load()
 		end
 	end)
 	
-	self.minFoodLevelText = ExRT.lib.CreateText(self,0,25,nil,15,-163,nil,nil,nil,11,ExRT.L.RaidCheckMinFoodLevel)
+	self.chkOnAttack = ExRT.lib.CreateCheckBox(self,nil,35,-155,ExRT.L.RaidCheckOnAttack,VExRT.RaidCheck.OnAttack)
+	self.chkOnAttack:SetScript("OnClick", function(self,event) 
+		if self:GetChecked() then
+			VExRT.RaidCheck.OnAttack = true
+		else
+			VExRT.RaidCheck.OnAttack = nil
+		end
+	end)
+	
+	self.chkSendSelf = ExRT.lib.CreateCheckBox(self,nil,35,-180,ExRT.L.RaidCheckSendSelf,VExRT.RaidCheck.SendSelf)
+	self.chkSendSelf:SetScript("OnClick", function(self,event) 
+		if self:GetChecked() then
+			VExRT.RaidCheck.SendSelf = true
+		else
+			VExRT.RaidCheck.SendSelf = nil
+		end
+	end)
+	
+	self.chkRunes = ExRT.lib.CreateCheckBox(self,nil,10,-205,ExRT.L.RaidCheckRunesEnable,VExRT.RaidCheck.RunesCheck)
+	self.chkRunes:SetScript("OnClick", function(self,event) 
+		if self:GetChecked() then
+			VExRT.RaidCheck.RunesCheck = true
+		else
+			VExRT.RaidCheck.RunesCheck = nil
+		end
+	end)
+	
+	self.chkBuffs = ExRT.lib.CreateCheckBox(self,nil,10,-230,ExRT.L.RaidCheckBuffsEnable,VExRT.RaidCheck.BuffsCheck)
+	self.chkBuffs:SetScript("OnClick", function(self,event) 
+		if self:GetChecked() then
+			VExRT.RaidCheck.BuffsCheck = true
+		else
+			VExRT.RaidCheck.BuffsCheck = nil
+		end
+	end)
+	
+	self.minFoodLevelText = ExRT.lib.CreateText(self,0,25,nil,15,-258,nil,nil,nil,11,ExRT.L.RaidCheckMinFoodLevel)
 
 	self.minFoodLevelAny = CreateFrame("CheckButton",nil,self,"UIRadioButtonTemplate")  
 	self.minFoodLevelAny:SetPoint("LEFT",self.minFoodLevelText,"RIGHT", 15, 0)
@@ -379,7 +689,44 @@ function module.options:Load()
 	end)
 	self.minFoodLevel125:SetChecked(VExRT.RaidCheck.FoodMinLevel == 125)
 	
-	self.chkPotion = ExRT.lib.CreateCheckBox(self,nil,10,-185,ExRT.L.raidcheckPotionCheck)
+	
+	self.minFlaskExpText = ExRT.lib.CreateText(self,0,25,nil,15,-283,nil,nil,nil,11,ExRT.L.RaidCheckMinFlaskExp)
+	
+	self.minFlaskExpNo = CreateFrame("CheckButton",nil,self,"UIRadioButtonTemplate")  
+	self.minFlaskExpNo:SetPoint("LEFT",self.minFlaskExpText,"RIGHT", 15, 0)
+	self.minFlaskExpNo.text:SetText(ExRT.L.RaidCheckMinFlaskExpNo)
+	self.minFlaskExpNo:SetScript("OnClick", function(self,event) 
+		self:SetChecked(true)
+		module.options.minFlaskExp5min:SetChecked(false)
+		module.options.minFlaskExp10min:SetChecked(false)
+		VExRT.RaidCheck.FlaskExp = 0
+	end)
+	self.minFlaskExpNo:SetChecked(VExRT.RaidCheck.FlaskExp == 0)
+	
+	self.minFlaskExp5min = CreateFrame("CheckButton",nil,self,"UIRadioButtonTemplate")  
+	self.minFlaskExp5min:SetPoint("LEFT",self.minFlaskExpNo,"RIGHT", 75, 0)
+	self.minFlaskExp5min.text:SetText("5 "..ExRT.L.RaidCheckMinFlaskExpMin)
+	self.minFlaskExp5min:SetScript("OnClick", function(self,event) 
+		self:SetChecked(true)
+		module.options.minFlaskExpNo:SetChecked(false)
+		module.options.minFlaskExp10min:SetChecked(false)
+		VExRT.RaidCheck.FlaskExp = 1
+	end)
+	self.minFlaskExp5min:SetChecked(VExRT.RaidCheck.FlaskExp == 1)
+
+	self.minFlaskExp10min = CreateFrame("CheckButton",nil,self,"UIRadioButtonTemplate")  
+	self.minFlaskExp10min:SetPoint("LEFT",self.minFlaskExp5min,"RIGHT", 75, 0)
+	self.minFlaskExp10min.text:SetText("10 "..ExRT.L.RaidCheckMinFlaskExpMin)
+	self.minFlaskExp10min:SetScript("OnClick", function(self,event) 
+		self:SetChecked(true)
+		module.options.minFlaskExpNo:SetChecked(false)
+		module.options.minFlaskExp5min:SetChecked(false)
+		VExRT.RaidCheck.FlaskExp = 2
+	end)
+	self.minFlaskExp10min:SetChecked(VExRT.RaidCheck.FlaskExp == 2)
+
+	
+	self.chkPotion = ExRT.lib.CreateCheckBox(self,nil,10,-305,ExRT.L.raidcheckPotionCheck)
 	self.chkPotion:SetScript("OnClick", function(self,event) 
 		if self:GetChecked() then
 			VExRT.RaidCheck.PotionCheck = true
@@ -396,39 +743,39 @@ function module.options:Load()
 		end
 	end)
 
-	self.potion = ExRT.lib.CreateButton(self,230,22,nil,10,-210,ExRT.L.raidcheckPotionLastPull,not VExRT.RaidCheck.PotionCheck)       
+	self.potion = ExRT.lib.CreateButton(self,230,22,nil,10,-330,ExRT.L.raidcheckPotionLastPull,not VExRT.RaidCheck.PotionCheck)       
 	self.potion:SetScript("OnClick",function()
 		GetPotion(2)
 	end)  
-	self.potion.txt = ExRT.lib.CreateText(self,100,22,nil,245,-115,nil,nil,nil,11,"/rt potion")
+	self.potion.txt = ExRT.lib.CreateText(self,100,22,nil,0,0,nil,nil,nil,11,"/rt potion")
 	self.potion.txt:SetNewPoint("LEFT",self.potion,"RIGHT",5,0)
 	
-	self.potionToChat = ExRT.lib.CreateButton(self,230,22,nil,311,-115,ExRT.L.raidcheckPotionLastPullToChat,not VExRT.RaidCheck.PotionCheck)       
+	self.potionToChat = ExRT.lib.CreateButton(self,230,22,nil,0,0,ExRT.L.raidcheckPotionLastPullToChat,not VExRT.RaidCheck.PotionCheck)       
 	self.potionToChat:SetScript("OnClick",function()
 		GetPotion(1)
 	end)
 	self.potionToChat:SetNewPoint("LEFT",self.potion,"RIGHT",71,0)
-	self.potionToChat.txt = ExRT.lib.CreateText(self,100,22,nil,546,-115,nil,nil,nil,11,"/rt potionchat")
+	self.potionToChat.txt = ExRT.lib.CreateText(self,100,22,nil,0,0,nil,nil,nil,11,"/rt potionchat")
 	self.potionToChat.txt:SetNewPoint("LEFT",self.potionToChat,"RIGHT",5,0)
 	
-	self.hs = ExRT.lib.CreateButton(self,230,22,nil,10,-235,ExRT.L.raidcheckHSLastPull,not VExRT.RaidCheck.PotionCheck)       
+	self.hs = ExRT.lib.CreateButton(self,230,22,nil,10,-355,ExRT.L.raidcheckHSLastPull,not VExRT.RaidCheck.PotionCheck)       
 	self.hs:SetScript("OnClick",function()
 		GetHs(2)
 	end)  
 	
-	self.hsToChat = ExRT.lib.CreateButton(self,230,22,nil,311,-140,ExRT.L.raidcheckHSLastPullToChat,not VExRT.RaidCheck.PotionCheck)       
+	self.hsToChat = ExRT.lib.CreateButton(self,230,22,nil,0,0,ExRT.L.raidcheckHSLastPullToChat,not VExRT.RaidCheck.PotionCheck)       
 	self.hsToChat:SetScript("OnClick",function()
 		GetHs(1)
 	end)  
 	self.hsToChat:SetNewPoint("LEFT",self.hs,"RIGHT",71,0)
 
-	self.optReadyCheckFrameHeader = ExRT.lib.CreateText(self,550,20,nil,20,-260,nil,nil,nil,nil,ExRT.L.raidcheckReadyCheck)
+	self.optReadyCheckFrameHeader = ExRT.lib.CreateText(self,550,20,nil,20,-380,nil,nil,nil,nil,ExRT.L.raidcheckReadyCheck)
 
 	self.optReadyCheckFrame = CreateFrame("Frame",nil,self)
 	self.optReadyCheckFrame:SetSize(603,125)
 	self.optReadyCheckFrame:SetBackdrop({bgFile = "Interface/DialogFrame/UI-DialogBox-Background", edgeFile = "Interface/Tooltips/UI-Tooltip-Border",tile = true, tileSize = 16, edgeSize = 16, insets = { left = 5, right = 5, top = 5, bottom = 5 }})
 	self.optReadyCheckFrame:SetBackdropColor(0,0,0,0.5)
-	self.optReadyCheckFrame:SetPoint("TOP",0,-275)
+	self.optReadyCheckFrame:SetPoint("TOP",0,-395)
 
 	self.chkReadyCheckFrameEnable = ExRT.lib.CreateCheckBox(self.optReadyCheckFrame,nil,15,-10,ExRT.L.senable)
 	self.chkReadyCheckFrameEnable:SetScript("OnClick", function(self,event) 
@@ -472,39 +819,7 @@ function module.options:Load()
 	end) 
 	
 	self.htmlReadyCheck1 = ExRT.lib.CreateText(self.optReadyCheckFrame,583,100,nil,10,-90,nil,"TOP",nil,12,ExRT.L.RaidCheckReadyCheckHelp)
-	
-	self.chkRunes = ExRT.lib.CreateCheckBox(self,nil,10,-135,ExRT.L.RaidCheckRunesEnable,VExRT.RaidCheck.RunesCheck)
-	self.chkRunes:SetScript("OnClick", function(self,event) 
-		if self:GetChecked() then
-			VExRT.RaidCheck.RunesCheck = true
-		else
-			VExRT.RaidCheck.RunesCheck = nil
-		end
-	end)
-	
-	self.runes = ExRT.lib.CreateButton(self,230,22,nil,10,-60,ExRT.L.RaidCheckRunesCheck)       
-	self.runes:SetScript("OnClick",function()
-		GetRunes()
-	end)
-	self.runes.txt = ExRT.lib.CreateText(self,60,22,nil,0,0,nil,nil,nil,11,"/rt check runes")
-	self.runes.txt:SetNewPoint("LEFT",self.runes,"RIGHT",5,0)
-	
-	self.runesToChat = ExRT.lib.CreateButton(self,230,22,nil,0,0,ExRT.L.RaidCheckRunesChat)       
-	self.runesToChat:SetScript("OnClick",function()
-		GetRunes(1)
-	end)
-	self.runesToChat:SetNewPoint("LEFT",self.runes,"RIGHT",71,0)
-	self.runesToChat.txt = ExRT.lib.CreateText(self,100,22,nil,546,-10,nil,nil,nil,11,"/rt check runeschat")
-	self.runesToChat.txt:SetNewPoint("LEFT",self.runesToChat,"RIGHT",5,0)
-	
-	self.chkOnAttack = ExRT.lib.CreateCheckBox(self,nil,35,-110,ExRT.L.RaidCheckOnAttack,VExRT.RaidCheck.OnAttack)
-	self.chkOnAttack:SetScript("OnClick", function(self,event) 
-		if self:GetChecked() then
-			VExRT.RaidCheck.OnAttack = true
-		else
-			VExRT.RaidCheck.OnAttack = nil
-		end
-	end)
+
 
 	self.chkSlak:SetChecked(VExRT.RaidCheck.ReadyCheck)
 	self.chkPotion:SetChecked(VExRT.RaidCheck.PotionCheck)
@@ -584,7 +899,7 @@ function module:slash(arg)
 	if arg == "food" then
 		GetFood()
 	elseif arg == "flask" then
-		GetFlask(2)
+		GetFlask()
 	elseif arg == "foodchat" then
 		GetFood(1)
 	elseif arg == "flaskchat" then
@@ -597,6 +912,10 @@ function module:slash(arg)
 		GetRunes()
 	elseif arg == "check runeschat" then
 		GetRunes(1)
+	elseif arg == "check buffs" then
+		GetRaidBuffs()
+	elseif arg == "check buffschat" then
+		GetRaidBuffs(1)
 	end
 end
 
@@ -678,6 +997,8 @@ end
 function module.main:ADDON_LOADED()
 	VExRT = _G.VExRT
 	VExRT.RaidCheck = VExRT.RaidCheck or {}
+	
+	VExRT.RaidCheck.FlaskExp = VExRT.RaidCheck.FlaskExp or 1
 
 	if VExRT.RaidCheck.ReadyCheckLeft and VExRT.RaidCheck.ReadyCheckTop then
 		module.frame:ClearAllPoints()
@@ -711,10 +1032,14 @@ do
 	function module.main:READY_CHECK(starter,timer,isTest)
 		if not (isTest == "TEST") then isTest = nil end
 		if VExRT.RaidCheck.ReadyCheck and not isTest then
-			GetFood(2)
-			GetFlask(nil,1)
+			local plus = VExRT.RaidCheck.SendSelf and 1 or 0
+			GetFood(2+plus)
+			GetFlask(2+plus)
 			if VExRT.RaidCheck.RunesCheck then
-				GetRunes(2)
+				GetRunes(2+plus)
+			end
+			if VExRT.RaidCheck.BuffsCheck then
+				GetRaidBuffs(2+plus)
 			end
 		end
 		if VExRT.RaidCheck.ReadyCheckFrame then
@@ -788,14 +1113,25 @@ do
 end
 
 local addonMsgFrame = CreateFrame'Frame'
+local addonMsgAttack_AntiSpam = 0
 addonMsgFrame:SetScript("OnEvent",function (self, event, ...)
 	local prefix, message, channel, sender = ...
-	if prefix == "BigWigs" and message and message:find("^T:BWPull") then
+	if message and ((prefix == "BigWigs" and message:find("^T:BWPull")) or (prefix == "D4" and message:find("^PT"))) then
 		if VExRT.RaidCheck.OnAttack then
-			GetFood(2)
-			GetFlask(nil,1)
+			local _time = GetTime()
+			if (_time - addonMsgAttack_AntiSpam) < 2 then
+				return
+			end
+			addonMsgAttack_AntiSpam = _time
+		
+			local plus = VExRT.RaidCheck.SendSelf and 1 or 0
+			GetFood(2+plus)
+			GetFlask(2+plus)
 			if VExRT.RaidCheck.RunesCheck then
-				GetRunes(2)
+				GetRunes(2+plus)
+			end
+			if VExRT.RaidCheck.BuffsCheck then
+				GetRaidBuffs(2+plus)
 			end
 		end
 	end

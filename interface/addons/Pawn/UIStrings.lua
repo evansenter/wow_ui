@@ -83,9 +83,6 @@ PawnStats =
 	{L.PvPPower, "SpellPenetration", L.PvPPowerInfo},
 	{L.PvPResilience, "ResilienceRating", L.PvPResilienceInfo},
 
-	{L.Sockets},
-	{L.MetaSocket, "MetaSocketEffect", L.MetaSocketInfo, true},
-
 	{L.SpecialWeaponStats},
 	{L.WeaponMinDamage, "MinDamage", L.WeaponMinDamageInfo, true},
 	{L.WeaponMaxDamage, "MaxDamage", L.WeaponMaxDamageInfo, true},

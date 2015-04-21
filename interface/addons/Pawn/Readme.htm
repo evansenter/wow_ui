@@ -398,16 +398,6 @@ suggests that you use for a given scale and item level—the items that it
 suggests there are the same ones it uses in its calculations, and they're the 
 same ones that it suggests in the socketing advisor that appears when you 
 shift-right-click an item.</p>
-<p>
-Pawn also supports cogwheels (used in engineering helms) and crystals of fear 
-(used for Sha-Touched weapons) the same way that it supports normal colored 
-gems.</p>
-<p>
-Meta gems are special, since they contain both stats and a secondary effect.&nbsp;  You can assign a
-value to the special effect portion of a meta gem in the Values tab.&nbsp; (If 
-you leave this at zero then, for example, your "crits do 3% more damage" or 
-"crits heal for 3% more" bonus won't be counted for anything, which isn't really 
-fair.)</p>
 <h4>
 Base versus current values</h4>
 <p>
@@ -610,16 +600,9 @@ and Pawn.</p>
 	</ul>
 	</li>
 </ul>
-<h3>Features that I may remove in Pawn 2.0 after Warlords of Draenor launches 
-(and people are mostly at level 100)</h3>
+<h3>Features that I may remove in Pawn 2.0</h3>
 <ul>
-		<li>The legendary gem-related features associated with Wrathion's quests in Mists of 
-		Pandaria, since those quests will neither be relevant nor available to 
-		new players.</li>
-		<li>The "meta socket effect" pseudo-stat.&nbsp; (I'll interpret meta 
-		socket bonus effects as some number of 
-		somewhat-equivalent prismatic sockets instead; maybe 6.)</li>
-	<li>PvP Power and PvP Resilience, since those stats won't be present on 
+		<li>PvP Power and PvP Resilience, since those stats won't be present on 
 	relevant items anymore.&nbsp; (I'll interpret PvP Power as the greater of attack power 
 	or spell power, and stamina respectively.)</li>
 	<li>The concept of the "current" state of an item, versus "base" (I'll just 
@@ -637,6 +620,18 @@ and Pawn.</p>
 		consistent with Diablo III.</li>
 </ul>
 <h2>Updates</h2>
+<h3>Version 1.9.16</h3>
+<ul>
+	<li>The "Special effects were not included in the value" message that you'd 
+	see at the bottoms of tooltips for trinkets and enchanted weapons has been 
+	removed.</li>
+	<li>The (?) icon used to indicate special effects on items has been replaced 
+	with a small orange diamond (like in Diablo III).</li>
+	<li>Support for crystals of fear and sha-touched sockets, cogwheels and 
+	cogwheel sockets, and assigning a fixed value to the effect portion of a 
+	meta gem (2% chance to restore mana, etc.) have all been removed, as those 
+	features are no longer relevant in any current content.</li>
+</ul>
 <h3>Version 1.9.15</h3>
 <ul>
 	<li>Pawn will now work with AtlasLoot again.</li>

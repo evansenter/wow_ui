@@ -7,9 +7,9 @@ DraenorTreasuresDB = {
 		["Colton - Dark Iron"] = "Default",
 		["Ereinion - Dark Iron"] = "Default",
 		["Comet - Illidan"] = "Default",
-		["Combustion - Illidan"] = "Default",
-		["Evan - Illidan"] = "Default",
 		["Centromere - Dark Iron"] = "Default",
+		["Evan - Illidan"] = "Default",
+		["Combustion - Illidan"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

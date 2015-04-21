@@ -840,7 +840,7 @@ do
 
   local function CheckGCD()
     local event;
-    local startTime, duration = GetSpellCooldown(gcdReference);
+    local startTime, duration = GetSpellCooldown(61304);
     if(duration and duration > 0) then
       if not(gcdStart) then
         event = "GCD_START";
@@ -1017,13 +1017,13 @@ do
     end
   end
 
-  function WeakAuras.WatchGCD(id)
+  function WeakAuras.WatchGCD()
     if not(cdReadyFrame) then
       WeakAuras.InitCooldownReady();
     end
     cdReadyFrame:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED");
     cdReadyFrame:RegisterEvent("UNIT_SPELLCAST_SENT");
-    gcdReference = id;
+    gcdReference = true;
   end
 
   function WeakAuras.WatchRuneCooldown(id)
@@ -1243,8 +1243,15 @@ do
     if(auradata.unitName) then
       if(triggernum == 0) then
       if(region.SetDurationInfo) then
+        local resort = region.expirationTime ~= auradata.expirationTime;
         region:SetDurationInfo(auradata.duration, auradata.expirationTime);
+
+        local parent = db.displays[id].parent;
+        if (resort and parent and db.displays[parent] and db.displays[parent].regionType == "dynamicgroup") then
+          regions[parent].region.ControlChildren();
+        end
       end
+
       duration_cache:SetDurationInfo(id, auradata.duration, auradata.expirationTime, nil, nil, GUID);
       if(region.SetName) then
         region:SetName(auradata.unitName);
@@ -1717,7 +1724,11 @@ loadedFrame:SetScript("OnEvent", function(self, event, addon)
   elseif(event == "PLAYER_ENTERING_WORLD") then
     -- Schedule events that need to be handled some time after login
     WeakAuras.myGUID = WeakAuras.myGUID or UnitGUID("player")
-    timer:ScheduleTimer(function() WeakAuras.HandleEvent(frame, "WA_DELAYED_PLAYER_ENTERING_WORLD"); end, 0.5);  -- Data not available
+    timer:ScheduleTimer(function()
+         WeakAuras.HandleEvent(frame, "WA_DELAYED_PLAYER_ENTERING_WORLD");
+         WeakAuras.CheckCooldownReady();
+       end,
+       0.5);  -- Data not available
     timer:ScheduleTimer(function() squelch_actions = false; end, db.login_squelch_time);      -- No sounds while loading
     WeakAuras.CreateTalentCache() -- It seems that GetTalentInfo might give info about whatever class was previously being played, until PLAYER_ENTERING_WORLD
   elseif(event == "PLAYER_REGEN_ENABLED") then
@@ -1946,9 +1957,17 @@ function WeakAuras.SetEventDynamics(id, triggernum, data, ending)
       end
       if(triggernum == 0) then
         if(data.region.SetDurationInfo) then
-          data.region:SetDurationInfo(data.duration, GetTime() + data.duration);
+          local expirationTime = GetTime() + data.duration;
+          local resort = data.region.expirationTime ~= expirationTime;
+          data.region:SetDurationInfo(data.duration, expirationTime);
+
+          local parent = db.displays[id].parent;
+          if (resort and parent and db.displays[parent] and db.displays[parent].regionType == "dynamicgroup") then
+            regions[parent].region.ControlChildren();
+          end
         end
-      duration_cache:SetDurationInfo(id, data.duration, GetTime() + data.duration);
+
+        duration_cache:SetDurationInfo(id, data.duration, GetTime() + data.duration);
       end
     else
       if(data.durationFunc) then
@@ -1969,14 +1988,27 @@ function WeakAuras.SetEventDynamics(id, triggernum, data, ending)
         end
         if(triggernum == 0) then
           if(data.region.SetDurationInfo) then
+            local resort = data.region.expirationTime ~= expirationTime;
             data.region:SetDurationInfo(duration, expirationTime, static, inverse);
+            local parent = db.displays[id].parent;
+            if (resort and parent and db.displays[parent] and db.displays[parent].regionType == "dynamicgroup") then
+              regions[parent].region.ControlChildren();
+            end
           end
+
           duration_cache:SetDurationInfo(id, duration, expirationTime, static, inverse);
         end
       elseif(triggernum == 0) then
         if(data.region.SetDurationInfo) then
+          local resort = data.region.expirationTime ~= math.huge;
           data.region:SetDurationInfo(0, math.huge);
+
+          local parent = db.displays[id].parent;
+          if (resort and parent and db.displays[parent] and db.displays[parent].regionType == "dynamicgroup") then
+            regions[parent].region.ControlChildren();
+          end
         end
+
         duration_cache:SetDurationInfo(id, 0, math.huge);
       end
     end
@@ -2711,8 +2743,14 @@ function WeakAuras.SetAuraVisibility(id, triggernum, data, active, unit, duratio
   if(show) then
   if(triggernum == 0) then
     if(region.SetDurationInfo) then
-    region:SetDurationInfo(duration, expirationTime > 0 and expirationTime or math.huge);
+      region:SetDurationInfo(duration, expirationTime > 0 and expirationTime or math.huge);
     end
+
+    local parent = db.displays[id].parent;
+    if (parent and db.displays[parent] and db.displays[parent].regionType == "dynamicgroup") then
+      regions[parent].region.ControlChildren();
+    end
+
     duration_cache:SetDurationInfo(id, duration, expirationTime, nil, nil, cloneId);
     if(region.SetName) then
     region:SetName(name);
@@ -3882,11 +3920,11 @@ function WeakAuras.SetRegion(data, cloneId)
           end
         end
         function region:Expand()
-          if(region.PreShow) then
-            region:PreShow();
-          end
           if(WeakAuras.IsAnimating(region) == "finish" or (not region:IsVisible() or (cloneId and region.justCreated))) then
             region.justCreated = nil;
+            if(region.PreShow) then
+              region:PreShow();
+            end
             region:Show();
             WeakAuras.PerformActions(data, "start");
             if not(WeakAuras.Animate("display", id, "start", data.animation.start, region, true, startMainAnimation, nil, cloneId)) then

@@ -129,6 +129,48 @@ module.db.socketsBonusIDs = {
 	[572]=true,
 }
 
+module.db.topEnchGems = {
+	[5306]="Ring:Vers",
+	[5324]="Ring:Crit",
+	[5325]="Ring:Haste",
+	[5326]="Ring:Mastery",
+	[5327]="Ring:MS",
+	[5328]="Ring:Vers",
+	
+	[5310]="Cloak:Crit",
+	[5311]="Cloak:Haste",
+	[5312]="Cloak:Mastery",
+	[5313]="Cloak:MS",
+	[5314]="Cloak:Vers",
+	
+	[5317]="Neck:Crit",
+	[5318]="Neck:Haste",
+	[5319]="Neck:Mastery",
+	[5320]="Neck:MS",
+	[5321]="Neck:Vers",
+
+	[5330]="Weapon:Crit",
+	[5334]="Weapon:MS",
+	[5335]="Weapon:Spirit",
+	[5336]="Weapon:Armor",
+	[5337]="Weapon:Haste",
+	[5384]="Weapon:Mastery",
+	[5383]="Gun:Mastery",
+	[5276]="Gun:Crit",
+	[5275]="Gun:MS",
+	[3366]="Weapon:DK",
+	[3367]="Weapon:DK",
+	[3368]="Weapon:DK",
+	[3370]="Weapon:DK",
+
+	[5346]="Gem:Crit",
+	[5347]="Gem:Haste",
+	[5348]="Gem:Mastery",
+	[5349]="Gem:MS",
+	[5350]="Gem:Vers",
+	[5351]="Gem:Stamina",
+}
+
 module.db.perPage = 17
 module.db.page = 1
 
@@ -138,6 +180,7 @@ module.db.filterType = nil
 module.db.colorizeNoEnch = true
 module.db.colorizeLowIlvl = true
 module.db.colorizeNoGems = true
+module.db.colorizeNoTopEnchGems = false
 
 function module.main:ADDON_LOADED()
 	VExRT = _G.VExRT
@@ -243,7 +286,7 @@ function module.options:Load()
 		f(self.checkButton)
 	end
 	
-	self.chkItemsTrackDropDown = ExRT.lib.CreateScrollDropDown(self,"TOPLEFT",50,0,50,250,3)
+	self.chkItemsTrackDropDown = ExRT.lib.CreateScrollDropDown(self,"TOPLEFT",50,0,50,300,5)
 	--self.chkItemsTrackDropDown:SetAlpha(0)
 	self.chkItemsTrackDropDown:Hide()
 	self.chkItemsTrackDropDown.List = {
@@ -259,6 +302,13 @@ function module.options:Load()
 			module.db.colorizeLowIlvl = checked
 			module.options.ReloadPage()
 		end,func = ItemsTrackDropDownClick},
+		{text = ExRT.L.InspectViewerColorizeNoTopEnch,checkable = true,checkState = false, checkFunc = function(self,checked) 
+			module.db.colorizeNoTopEnchGems = checked
+			module.options.ReloadPage()
+		end,func = ItemsTrackDropDownClick},
+		{text = ExRT.L.minimapmenuclose,checkable = false, padding = 16, func = function()
+			ExRT.lib.ScrollDropDown.Close()
+		end},
 	}
 	
 	self.chkItemsTrack = CreateFrame("Frame",nil,self,"ExRTTrackingButtonTemplate")  
@@ -357,14 +407,36 @@ function module.options:Load()
 		end
 	end)
 	
-	self.ScrollBar = ExRT.lib.CreateScrollBar2(self.borderList,18,module.db.perPage*30-5,-1,-3,1,20,"TOPRIGHT")
-	self.ScrollBar:SetScript("OnUpdate",self.ScrollBar.reButtonsState)
+	self.ScrollBar = ExRT.lib.CreateScrollBar(self.borderList,18,module.db.perPage*30-5,-1,-3,1,20,"TOPRIGHT")
+	self.ScrollBar:SetScript("OnUpdate",self.ScrollBar.ReButtonsState)
 	
 	local function IsItemHasNotGem(link)
 		if link then
 			local gem = link:match("item:%d+:%d+:(%d+):")
 			if gem == "0" then
 				return true
+			end
+		end
+	end
+	
+	local function IsTopEnchAndGems(link)
+		if link then
+			local ench,gem = link:match("item:%d+:(%d+):(%d+):")
+			if ench and gem then
+				local isTop = true
+				if ench ~= "0" then
+					ench = tonumber(ench)
+					if not module.db.topEnchGems[ench] then
+						isTop = false
+					end
+				end
+				if gem ~= "0" then
+					gem = tonumber(gem)
+					if not module.db.topEnchGems[gem] then
+						isTop = false
+					end
+				end
+				return isTop
 			end
 		end
 	end
@@ -444,7 +516,8 @@ function module.options:Load()
 									line.items[j].link = item
 									if (enchantID == 0 and (slotID == 2 or slotID == 15 or slotID == 11 or slotID == 12 or slotID == 16 or (module.db.specHasOffhand[spec or 0] and slotID == 17)) and module.db.colorizeNoEnch) or
 										(items_ilvl[slotID] and items_ilvl[slotID] > 0 and items_ilvl[slotID] < 600 and module.db.colorizeLowIlvl) or
-										(module.db.colorizeNoGems and ExRT.mds.IsBonusOnItem(item,module.db.socketsBonusIDs) and IsItemHasNotGem(item))
+										(module.db.colorizeNoGems and ExRT.mds.IsBonusOnItem(item,module.db.socketsBonusIDs) and IsItemHasNotGem(item)) or 
+										(module.db.colorizeNoTopEnchGems and not IsTopEnchAndGems(item))
 										then
 										line.items[j].border:Show()
 									end
@@ -581,20 +654,35 @@ function module.options:Load()
 	end
 	
 	function module.options.RaidIlvl()
-		if not IsInRaid() then
+		local n = GetNumGroupMembers() or 0
+		if GetNumGroupMembers() == 0 then
 			NoIlvl()
 			return
 		end
-		local n = GetNumGroupMembers() or 0
+		local isRaid = IsInRaid()
 		local gMax = ExRT.mds.GetRaidDiffMaxGroup()
 		local ilvl = 0
 		local countPeople = 0
-		for i=1,n do
-			local name,_,subgroup = GetRaidRosterInfo(i)
-			if name and subgroup <= gMax then
-				if module.db.inspectDB[name] and module.db.inspectDB[name].ilvl and module.db.inspectDB[name].ilvl >= 1 then
-					countPeople = countPeople + 1
-					ilvl = ilvl + module.db.inspectDB[name].ilvl
+		if isRaid then
+			for i=1,n do
+				local unit = "party"..i
+				if i==n then unit = "player" end
+				local name = UnitName(unit)
+				if name then
+					if module.db.inspectDB[name] and module.db.inspectDB[name].ilvl and module.db.inspectDB[name].ilvl >= 1 then
+						countPeople = countPeople + 1
+						ilvl = ilvl + module.db.inspectDB[name].ilvl
+					end
+				end
+			end
+		else
+			for i=1,n do
+				local name,_,subgroup = GetRaidRosterInfo(i)
+				if name and subgroup <= gMax then
+					if module.db.inspectDB[name] and module.db.inspectDB[name].ilvl and module.db.inspectDB[name].ilvl >= 1 then
+						countPeople = countPeople + 1
+						ilvl = ilvl + module.db.inspectDB[name].ilvl
+					end
 				end
 			end
 		end
@@ -697,6 +785,30 @@ function module.options:Load()
 		self.lines[i].back:SetGradientAlpha("HORIZONTAL", 0, 0, 0, 1, 0, 0, 0, 0)
 	end
 	self.raidItemLevel = ExRT.lib.CreateText(self,500,20,nil,10,-549,nil,"TOP",nil,12,"",nil,1,1,1,1)
+	
+	local animationTimer = 0
+	self:SetScript("OnUpdate",function (self, elapsed)
+		animationTimer = animationTimer + elapsed
+		local color = animationTimer
+		if color > 1 then
+			color = 2 - color
+		end
+		if color < 0 then
+			color = 0
+		end
+		for i=1,module.db.perPage do
+			for j=1,16 do
+				local frame = self.lines[i].items[j].border
+				if frame:IsVisible() then
+					frame:SetBackdropBorderColor(1,color,color,1)
+					frame:SetBackdropColor(1,color,color,1)
+				end
+			end
+		end
+		if animationTimer > 2 then
+			animationTimer = animationTimer % 2
+		end
+	end)
 	
 	self.moreInfoButton = ExRT.lib.CreateButton(self,200,15,nil,0,0,ExRT.L.InspectViewerMoreInfo)
 	ExRT.lib.SetPoint(self.moreInfoButton,"TOPRIGHT",self.borderList,"BOTTOMRIGHT",0,-1)

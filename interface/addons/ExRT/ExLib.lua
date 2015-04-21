@@ -1,7 +1,6 @@
 -- ExRT.lib.AddShadowComment(self,hide,moduleName,userComment,userFontSize,userOutline)
--- ExRT.lib.CreateSlider(parent,width,height,x,y,minVal,maxVal,text,defVal,relativePoint,isVertical)
--- ExRT.lib.CreateScrollBar(parent,width,height,x,y,minVal,maxVal,relativePoint,isHoriz)
--- ExRT.lib.CreateScrollBar2(parent,width,height,x,y,minVal,maxVal,relativePoint)
+-- ExRT.lib.CreateSlider(parent,width,height,x,y,minVal,maxVal,text,defVal,relativePoint,isVertical,isModern)
+-- ExRT.lib.CreateScrollBar(parent,width,height,x,y,minVal,maxVal,relativePoint)
 -- ExRT.lib.OnEnterTooltip(self,anchorUser)
 -- ExRT.lib.OnLeaveTooltip(self)
 -- ExRT.lib.TooltipShow(self,anchorUser,title,...)
@@ -17,18 +16,18 @@
 -- ExRT.lib.CreateTabFrame(parent,width,height,x,y,tabNum,activeTabNum,...)
 -- ExRT.lib.CreateText(parent,width,height,relativePoint,x,y,hor,ver,font,fontSize,text,tem,colR,colG,colB,shadow,outline,doNotUseTemplate)
 -- ExRT.lib.CreateEditBox(parent,width,height,relativePoint,x,y,tooltip,maxLetters,onlyNum,doNotUseTemplate,defText)
--- ExRT.lib.CreateScrollFrame(parent,width,height,relativePoint,x,y,verticalHeight)
+-- ExRT.lib.CreateScrollFrame(parent,width,height,relativePoint,x,y,verticalHeight,isModern)
 -- ExRT.lib.CreateMultiEditBox(parent,width,height,relativePoint,x,y)
 -- ExRT.lib.CreateSliderBox(parent,width,height,x,y,list,selected)
--- ExRT.lib.CreateButton(parent,width,height,relativePoint,x,y,text,isDisabled,tooltip)
+-- ExRT.lib.CreateButton(parent,width,height,relativePoint,x,y,text,isDisabled,tooltip,template)
 -- ExRT.lib.CreateIcon(parent,size,relativePoint,x,y,textureIcon,isButton)
--- ExRT.lib.CreateCheckBox(parent,relativePoint,x,y,text,checked,tooltip,textLeft)
+-- ExRT.lib.CreateCheckBox(parent,relativePoint,x,y,text,checked,tooltip,textLeft,template)
 -- ExRT.lib.CreateHoverHighlight(parent)
 -- ExRT.lib.CreateBackTextureForDebug(parent)
 -- ExRT.lib.CreateHelpButton(parent,helpPlateArray,isTab)
--- ExRT.lib.CreateScrollList(parent,relativePoint,x,y,width,linesNum)
+-- ExRT.lib.CreateScrollList(parent,relativePoint,x,y,width,linesNum,isModern)
 -- ExRT.lib.CreateScrollCheckList(parent,relativePoint,x,y,width,linesNum)
--- ExRT.lib.CreatePopupFrame(width,height,title)
+-- ExRT.lib.CreatePopupFrame(width,height,title,isModern)
 -- ExRT.lib.CreateOneTab(parent,width,height,relativePoint,x,y,text)
 -- ExRT.lib.CreateColorPickButton(parent,width,height,relativePoint,x,y,cR,cG,cB,cA)
 -- ExRT.lib.CreateScrollTabsFrame(parent,relativePoint,x,y,width,height,noSelfBorder,...)
@@ -39,6 +38,7 @@
 -- ExRT.lib.SetPoint(self,...)
 -- ExRT.lib.CreateGraph(parent,width,height,relativePoint,x,y)
 -- ExRT.lib.CreateMultilineEditBox(parent,width,height,relativePoint,x,y)
+-- ExRT.lib.CreateShadow(parent,size,edgeSize)
 
 local GlobalAddonName, ExRT = ...
 
@@ -84,10 +84,25 @@ function ExRT.lib.AddShadowComment(self,hide,moduleName,userComment,userFontSize
 	end
 end
 
+function ExRT.lib.CreateShadow(parent,size,edgeSize)
+	local self = CreateFrame("Frame",nil,parent)
+	self:SetPoint("LEFT",-size,0)
+	self:SetPoint("RIGHT",size,0)
+	self:SetPoint("TOP",0,size)
+	self:SetPoint("BOTTOM",0,-size)
+	self:SetBackdrop({edgeFile="Interface/AddOns/ExRT/media/shadow.tga",edgeSize=edgeSize or 28,insets={left=size,right=size,top=size,bottom=size}})
+	self:SetBackdropBorderColor(0,0,0,.45)
+
+	return self
+end
+
 do
 	local function SliderOnMouseWheel(self,delta)
 		if tonumber(self:GetValue()) == nil then 
 			return 
+		end
+		if self.isVertical then
+			delta = -delta
 		end
 		self:SetValue(tonumber(self:GetValue())+delta)
 	end
@@ -104,12 +119,14 @@ do
 			self:tooltipShow()
 		end
 	end
-	function ExRT.lib.CreateSlider(parent,width,height,x,y,minVal,maxVal,text,defVal,relativePoint,isVertical)
+	function ExRT.lib.CreateSlider(parent,width,height,x,y,minVal,maxVal,text,defVal,relativePoint,isVertical,isModern)
 		defVal = defVal or maxVal
 	
-		local self = CreateFrame("Slider",nil,parent,"ExRTSliderTemplate")
+		local self = CreateFrame("Slider",nil,parent,isModern and (isVertical and "ExRTSliderModernVerticalTemplate" or "ExRTSliderModernTemplate")or "ExRTSliderTemplate")
 		self:SetWidth(width)
-		self:SetHeight(height)
+		if not isModern then
+			self:SetHeight(height)
+		end
 		self:SetPoint(relativePoint or "TOPLEFT",parent, x, y)
 		self.textLow = self.Low
 		self.textHigh = self.High
@@ -118,6 +135,8 @@ do
 			self.textLow:Hide()
 			self.textHigh:Hide()
 			self.text:Hide()
+			
+			self.isVertical = true
 		end
 		self:SetOrientation(isVertical and "VERTICAL" or "HORIZONTAL")
 		self:SetMinMaxValues(minVal, maxVal)
@@ -125,6 +144,11 @@ do
 		self.textLow:SetText(self.minValue)
 		self.textHigh:SetText(self.maxValue)
 		self.text:SetText(text)
+		if isModern then
+			self.text:SetFont(self.text:GetFont(),10)
+			self.textLow:SetFont(self.textLow:GetFont(),10)
+			self.textHigh:SetFont(self.textHigh:GetFont(),10)
+		end
 		self.tooltipText = defVal
 		self:SetValueStep(1)
 		self:SetValue(defVal)
@@ -137,28 +161,12 @@ do
 		self:SetScript("OnEnter", self.tooltipShow)
 		self:SetScript("OnLeave", self.tooltipHide)
 		
+		self.SetNewPoint = ExRT.lib.SetPoint
+		
 		--sliderFrame:SetObeyStepOnDrag(true)
 	
 		return self
 	end
-end
-
-function ExRT.lib.CreateScrollBar(parent,width,height,x,y,minVal,maxVal,relativePoint,isHoriz)
-	local self = CreateFrame("Slider", nil, parent)
-	self.bg = self:CreateTexture(nil, "BACKGROUND")
-	self.bg:SetAllPoints(true)
-	self.bg:SetTexture(0, 0, 0, 0.5)
-	self.thumb = self:CreateTexture(nil, "OVERLAY")
-	self.thumb:SetTexture("Interface\\Buttons\\UI-ScrollBar-Knob")
-	self.thumb:SetSize(25, 25)
-	self:SetThumbTexture(self.thumb)
-	self:SetOrientation(isHoriz and "HORIZONTAL" or "VERTICAL")
-	self:SetSize(width, height)
-	self:SetPoint(relativePoint or "TOPLEFT", parent, x, y)
-	self:SetMinMaxValues(minVal, maxVal)
-	self:SetValue(minVal)
-
-	return self
 end
 
 do
@@ -166,20 +174,20 @@ do
 		local scrollBar = self:GetParent()
 		local min,max = scrollBar:GetMinMaxValues()
 		local val = scrollBar:GetValue()
-		if (val - 1) < min then
+		if (val - scrollBar.clickRange) < min then
 			scrollBar:SetValue(min)
 		else
-			scrollBar:SetValue(val - 1)
+			scrollBar:SetValue(val - scrollBar.clickRange)
 		end
 	end
 	local function ScrollBarButtonDownClick(self)
 		local scrollBar = self:GetParent()
 		local min,max = scrollBar:GetMinMaxValues()
 		local val = scrollBar:GetValue()
-		if (val + 1) > max then
+		if (val + scrollBar.clickRange) > max then
 			scrollBar:SetValue(max)
 		else
-			scrollBar:SetValue(val + 1)
+			scrollBar:SetValue(val + scrollBar.clickRange)
 		end
 	end
 	local function ScrollBarButtonsState(self,UP,DOWN)
@@ -199,7 +207,7 @@ do
 			self:buttonsState(true,true)
 		end
 	end
-	function ExRT.lib.CreateScrollBar2(parent,width,height,x,y,minVal,maxVal,relativePoint)
+	function ExRT.lib.CreateScrollBar(parent,width,height,x,y,minVal,maxVal,relativePoint,clickRange)
 		local self = CreateFrame("Slider", nil, parent)
 		self.bg = self:CreateTexture(nil, "BACKGROUND")
 		self.bg:SetAllPoints(true)
@@ -224,8 +232,54 @@ do
 		self.buttonDown:SetSize(16,16)
 		self.buttonDown:SetScript("OnClick",ScrollBarButtonDownClick)
 		
+		self.clickRange = clickRange or 1
+		
 		self.buttonsState = ScrollBarButtonsState
-		self.reButtonsState = ScrollBarButtonsReState
+		self.ReButtonsState = ScrollBarButtonsReState
+		
+		return self
+	end
+	
+	function ExRT.lib.CreateScrollBarModern(parent,width,height,x,y,minVal,maxVal,relativePoint,clickRange)
+		local self = CreateFrame("Slider", nil, parent)
+		self.bg = self:CreateTexture(nil, "BACKGROUND")
+		self.bg:SetAllPoints(true)
+		self.bg:SetTexture(0, 0, 0, 0.3)
+		self.thumb = self:CreateTexture(nil, "OVERLAY")
+		self.thumb:SetTexture(0.44,0.45,0.50,.7)
+		self.thumb:SetSize(14,30)
+		self:SetThumbTexture(self.thumb)
+		self:SetOrientation("VERTICAL")
+		self:SetSize(width, height - 32 - 4)
+		self:SetPoint(relativePoint or "TOPLEFT", parent, x, y - 16 - 2)
+		self:SetMinMaxValues(minVal, maxVal)
+		self:SetValue(minVal)
+		
+		self.borderLeft = self:CreateTexture(nil, "BACKGROUND")
+		self.borderLeft:SetPoint("TOPLEFT",-1,2)
+		self.borderLeft:SetSize(1,height - 32)
+		self.borderLeft:SetTexture(0.24,0.25,0.30,1)
+		
+		
+		self.borderRight = self:CreateTexture(nil, "BACKGROUND")
+		self.borderRight:SetPoint("TOPRIGHT",1,2)
+		self.borderRight:SetSize(1,height - 32)
+		self.borderRight:SetTexture(0.24,0.25,0.30,1)
+		
+		self.buttonUP = CreateFrame("Button",nil,self,"ExRTButtonUpModernTemplate")
+		self.buttonUP:SetSize(16,16)
+		self.buttonUP:SetPoint("BOTTOM",self,"TOP",0,2) 
+		self.buttonUP:SetScript("OnClick",ScrollBarButtonUpClick)
+	
+		self.buttonDown = CreateFrame("Button",nil,self,"ExRTButtonDownModernTemplate")
+		self.buttonDown:SetPoint("TOP",self,"BOTTOM",0,-2) 
+		self.buttonDown:SetSize(16,16)
+		self.buttonDown:SetScript("OnClick",ScrollBarButtonDownClick)
+		
+		self.clickRange = clickRange or 1
+		
+		self.buttonsState = ScrollBarButtonsState
+		self.ReButtonsState = ScrollBarButtonsReState
 		
 		return self
 	end
@@ -309,10 +363,26 @@ end
 
 do
 	local additionalTooltips = {}
+	local additionalTooltipBackdrop = {bgFile="Interface/Buttons/WHITE8X8",edgeFile="Interface/Tooltips/UI-Tooltip-Border",tile=false,edgeSize=14,insets={left=2.5,right=2.5,top=2.5,bottom=2.5}}
 	local function CreateAdditionalTooltip()
 		local new = #additionalTooltips + 1
-		additionalTooltips[new] = CreateFrame("GameTooltip", "ExRTlibAdditionalTooltip"..new, nil, "GameTooltipTemplate")
-		additionalTooltips[new]:Hide()
+		local tip = CreateFrame("GameTooltip", "ExRTlibAdditionalTooltip"..new, UIParent, "GameTooltipTemplate")
+		additionalTooltips[new] = tip
+		
+		tip:SetScript("OnLoad",nil)
+		tip:SetScript("OnHide",nil)
+	
+		tip:SetBackdrop(additionalTooltipBackdrop)
+		tip:SetBackdropColor(0,0,0,1)
+		tip:SetBackdropBorderColor(0.3,0.3,0.4,1)
+		
+		tip.gradientTexture = tip:CreateTexture()
+		tip.gradientTexture:SetTexture(1,1,1,1)
+		tip.gradientTexture:SetGradientAlpha("VERTICAL",0,0,0,0,.8,.8,.8,.2)
+		tip.gradientTexture:SetPoint("TOPLEFT",2.5,-2.5)
+		tip.gradientTexture:SetPoint("BOTTOMRIGHT",-2.5,2.5)
+		
+		tip:Hide()
 		
 		return new
 	end
@@ -417,7 +487,7 @@ do
 
 		self:Disable()
 		local offsetX = self.Icon and 8 or 0
-		self:SetDisabledFontObject(GameFontHighlightSmall)
+		--self:SetDisabledFontObject(GameFontHighlightSmall)
 		self.Text:SetPoint("CENTER", self, "CENTER", offsetX, -2)
 		
 		self.LeftDisabled:Show()
@@ -559,6 +629,10 @@ do
 			self:additionalFunc()
 		end
 	end
+	local function TabFrameSelectTab(self,ID)
+		self.selected = ID
+		self:UpdateTabs()
+	end
 	local function TabFrameButtonOnEnter(self)
 		if self.tooltip and self.tooltip ~= "" then
 			ExRT.lib.TooltipShow(self,nil,self:GetText(),{self.tooltip,1,1,1})
@@ -603,7 +677,7 @@ do
 		self.navigation.max = maxButtons
 		self.navigation.dropDown = CreateFrame("Frame", GetNextGlobalName(), nil, "UIDropDownMenuTemplate")
 	end
-	function ExRT.lib.CreateTabFrame(parent,width,height,x,y,tabNum,activeTabNum,...)
+	function ExRT.lib.CreateTabFrameTemplate(parent,width,height,x,y,template,tabNum,activeTabNum,...)
 		local self = CreateFrame("Frame",nil,parent)
 		self:SetSize(width,height)
 		self:SetBackdrop({bgFile = "Interface/DialogFrame/UI-DialogBox-Background", edgeFile = "Interface/Tooltips/UI-Tooltip-Border",tile = true, tileSize = 16, edgeSize = 16, insets = { left = 5, right = 5, top = 5, bottom = 5 }})
@@ -620,7 +694,7 @@ do
 			self.tabs[i]:SetSize(width,height)
 			self.tabs[i]:SetPoint("TOPLEFT", 0,0)
 	
-			self.tabs[i].button = CreateFrame("Button", nil, self, "ExRTTabButtonTemplate")
+			self.tabs[i].button = CreateFrame("Button", nil, self, template or "ExRTTabButtonTemplate")
 			self.tabs[i].button:SetText(select(i, ...))
 			TabFrame_ResizeTab(self.tabs[i].button, 0, nil, nil, self.tabs[i].button:GetFontString():GetStringWidth(), self.tabs[i].button:GetFontString():GetStringWidth())
 			
@@ -654,8 +728,12 @@ do
 		self.tabCount = tabNum
 		self.selected = activeTabNum or 1
 		self.UpdateTabs = TabFrameUpdateTabs
+		self.SelectTab = TabFrameSelectTab
 	
 		return self
+	end
+	function ExRT.lib.CreateTabFrame(parent,width,height,x,y,tabNum,activeTabNum,...)
+		return ExRT.lib.CreateTabFrameTemplate(parent,width,height,x,y,nil,tabNum,activeTabNum,...)
 	end
 end
 
@@ -699,7 +777,14 @@ do
 		self:ClearFocus()
 	end
 	function ExRT.lib.CreateEditBox(parent,width,height,relativePoint,x,y,tooltip,maxLetters,onlyNum,doNotUseTemplate,defText)
-		local self = CreateFrame("EditBox",nil,parent,(not doNotUseTemplate) and "ExRTInputBoxTemplate")
+		local template = "ExRTInputBoxTemplate"
+		if type(doNotUseTemplate) == "string" then
+			template = doNotUseTemplate
+			doNotUseTemplate = nil
+		elseif doNotUseTemplate then
+			template = nil
+		end
+		local self = CreateFrame("EditBox",nil,parent,template)
 		self:SetSize(width,height)
 		self:SetPoint(relativePoint or "TOPLEFT",x,y)
 		if doNotUseTemplate then
@@ -750,16 +835,17 @@ do
 	local function ScrollFrameScrollBarValueChanged(self,value)
 		local parent = self:GetParent()
 		parent:SetVerticalScroll(value) 
-		self:reButtonsState()
+		self:ReButtonsState()
 	end
 	local function ScrollFrameChangeHeight(self,newHeight)
 		self.content:SetHeight(newHeight)
 		self.ScrollBar:SetMinMaxValues(0,max(newHeight-self:GetHeight(),0))
-		self.ScrollBar.reButtonsState(self.ScrollBar)
+		self.ScrollBar:ReButtonsState()
 	end
 	local ScrollFrameBackdrop = {bgFile = "Interface/DialogFrame/UI-DialogBox-Background", edgeFile = "",tile = true, tileSize = 0, edgeSize = 0, insets = { left = 0, right = 0, top = 0, bottom = 0 }}
 	local ScrollFrameBackdropBorder = {bgFile = "Interface/DialogFrame/UI-DialogBox-Background", edgeFile = "Interface/Tooltips/UI-Tooltip-Border",tile = true, tileSize = 16, edgeSize = 16, insets = { left = 5, right = 5, top = 5, bottom = 5 }}
-	function ExRT.lib.CreateScrollFrame(parent,width,height,relativePoint,x,y,verticalHeight)
+	local ScrollFrameBackdropBorderModern = {edgeFile = "Interface/AddOns/ExRT/media/border.tga", edgeSize = 16}
+	function ExRT.lib.CreateScrollFrame(parent,width,height,relativePoint,x,y,verticalHeight,isModern)
 		local self = CreateFrame("ScrollFrame", nil, parent)
 		self:SetSize(width,height)
 		self:SetPoint(relativePoint or "TOPLEFT",x,y)
@@ -771,18 +857,27 @@ do
 		self.backdrop = CreateFrame("Frame", nil, self)
 		self.backdrop:SetPoint("TOPLEFT",self,-5,5)
 		self.backdrop:SetSize(width+10,height+10)
-		self.backdrop:SetBackdrop(ScrollFrameBackdropBorder)
-		self.backdrop:SetBackdropColor(0,0,0,0)
+		if isModern then
+			self.backdrop:SetBackdrop(ScrollFrameBackdropBorderModern)
+			self.backdrop:SetBackdropBorderColor(.24,.25,.30,1)
+		else
+			self.backdrop:SetBackdrop(ScrollFrameBackdropBorder)
+			self.backdrop:SetBackdropColor(0,0,0,0)
+		end
 		
 		self.content = CreateFrame("Frame", nil, self) 
-		self.content:SetSize(width-16, verticalHeight)
+		self.content:SetSize(width-16-(isModern and 4 or 0), verticalHeight)
 		self:SetScrollChild(self.content)
 		
 		self.C = self.content
 		
-		self.ScrollBar = ExRT.lib.CreateScrollBar2(self,16,height,0,0,0,max(verticalHeight-height,0),"TOPRIGHT")
+		if isModern then
+			self.ScrollBar = ExRT.lib.CreateScrollBarModern(self,16,height,0,0,0,max(verticalHeight-height,0),"TOPRIGHT")
+		else
+			self.ScrollBar = ExRT.lib.CreateScrollBar(self,16,height,0,0,0,max(verticalHeight-height,0),"TOPRIGHT")
+		end
 		self.ScrollBar:SetScript("OnValueChanged", ScrollFrameScrollBarValueChanged)
-		self.ScrollBar.reButtonsState(self.ScrollBar)
+		self.ScrollBar:ReButtonsState()
 		
 		self:SetScript("OnMouseWheel", ScrollFrameMouseWheel)
 		
@@ -925,8 +1020,8 @@ do
 	local function ButtonOnEnter(self)
 		ExRT.lib.TooltipShow(self,"ANCHOR_TOP",self.tooltip,{self.tooltipText,1,1,1,true}) 
 	end
-	function ExRT.lib.CreateButton(parent,width,height,relativePoint,x,y,text,isDisabled,tooltip)
-		local self = CreateFrame("Button",nil,parent,"UIPanelButtonTemplate")
+	function ExRT.lib.CreateButton(parent,width,height,relativePoint,x,y,text,isDisabled,tooltip,template)
+		local self = CreateFrame("Button",nil,parent,template or "UIPanelButtonTemplate")
 		self:SetSize(width,height)
 		if x and y then
 			self:SetPoint(relativePoint or "TOPLEFT",x,y) 
@@ -982,8 +1077,8 @@ do
 			self:Off()
 		end
 	end
-	function ExRT.lib.CreateCheckBox(parent,relativePoint,x,y,text,checked,tooltip,textLeft)
-		local self = CreateFrame("CheckButton",nil,parent,"UICheckButtonTemplate")  
+	function ExRT.lib.CreateCheckBox(parent,relativePoint,x,y,text,checked,tooltip,textLeft,template)
+		local self = CreateFrame("CheckButton",nil,parent,template or "UICheckButtonTemplate")  
 		if x and y then
 			self:SetPoint(relativePoint or "TOPLEFT",x,y)
 		end
@@ -1093,10 +1188,12 @@ do
 		HideFunc(self,false)
 	end
 	function ExRT.lib.CreateHelpButton(parent,helpPlateArray,isTab)
-		local self = CreateFrame("Button",nil,parent,"MainHelpPlateButton")	-- После использования кнопки не дает юзать спелл дизенчант. лень искать решение, не юзайте кнопку часто
+		local self = CreateFrame("Button",nil,parent,"MainHelpPlateButton")	-- После использования кнопки не дает юзать спелл дизенчант. лень искать решение, не юзайте кнопку часто [5.4]
 		self:SetPoint("CENTER",parent,"TOPLEFT",0,0) 
 		self:SetScale(0.8)
 		local interfaceStrata = InterfaceOptionsFrame:GetFrameStrata()
+		interfaceStrata = "FULLSCREEN_DIALOG"
+		self:SetFrameStrata(interfaceStrata)
 		if interfaceStrata == "FULLSCREEN" or interfaceStrata == "FULLSCREEN_DIALOG" or interfaceStrata == "TOOLTIP" then
 			self.shitInterface = true
 			self.shitStrata = interfaceStrata
@@ -1141,7 +1238,7 @@ do
 			self.List[i]:Hide()
 		end
 		self.ScrollBar:SetMinMaxValues(1,max(#self.L-self.linesNum+1,1))
-		self.ScrollBar:reButtonsState()
+		self.ScrollBar:ReButtonsState()
 		
 		if self.UpdateAdditional then
 			self.UpdateAdditional(self,val)
@@ -1178,14 +1275,22 @@ do
 			self.mainFrame:HoverListValue(false,self.index)
 		end
 	end
-	function ExRT.lib.CreateScrollList(parent,relativePoint,x,y,width,linesNum)
+	local ScrollListBackdrop = {bgFile = "", edgeFile = "Interface/Tooltips/UI-Tooltip-Border",tile = true, tileSize = 16, edgeSize = 16, insets = { left = 5, right = 5, top = 5, bottom = 5 }}
+	local ScrollListBackdropModern = {edgeFile = "Interface/AddOns/ExRT/media/border.tga", edgeSize = 16}
+	function ExRT.lib.CreateScrollList(parent,relativePoint,x,y,width,linesNum,isModern)
 		local self = CreateFrame("Frame",nil,parent)
 		local height = linesNum * 16 + 8
 		self:SetSize(width,height)
 		self:SetPoint(relativePoint or "TOPLEFT",x,y)
-		self:SetBackdrop({bgFile = "", edgeFile = "Interface/Tooltips/UI-Tooltip-Border",tile = true, tileSize = 16, edgeSize = 16, insets = { left = 5, right = 5, top = 5, bottom = 5 }})
+		if isModern then
+			self:SetBackdrop(ScrollListBackdropModern)
+			self:SetBackdropBorderColor(.24,.25,.30,1)
+			self.ScrollBar = ExRT.lib.CreateScrollBarModern(self,16,height-8,-3,-4,1,10,"TOPRIGHT")
+		else
+			self:SetBackdrop(ScrollListBackdrop)
+			self.ScrollBar = ExRT.lib.CreateScrollBar(self,16,height-8,-3,-4,1,10,"TOPRIGHT")
+		end
 		
-		self.ScrollBar = ExRT.lib.CreateScrollBar2(self,16,height-8,-3,-4,1,10,"TOPRIGHT")
 		self.linesNum = linesNum
 		
 		self.List = {}
@@ -1233,9 +1338,7 @@ do
 end
 
 do
-	local ScrollCheckFrameUpdate = nil
-	local function ScrollCheckListUpdate()
-		local self = ScrollCheckFrameUpdate
+	local function ScrollCheckListUpdate(self)
 		local val = ExRT.mds.Round(self.ScrollBar:GetValue())
 		local j = 0
 		for i=val,#self.L do
@@ -1252,7 +1355,11 @@ do
 			self.List[i]:Hide()
 		end
 		self.ScrollBar:SetMinMaxValues(1,max(#self.L-self.linesNum+1,1))
-		self.ScrollBar:reButtonsState()
+		self.ScrollBar:ReButtonsState()
+	end
+	local function ScrollCheckListScrollBarOnValueChanged(self)
+		local parent = self:GetParent()
+		parent:Update()
 	end
 	local function ScrollCheckListMouseWheel(self, delta)
 		if delta > 0 then
@@ -1288,14 +1395,22 @@ do
 			self.mainFrame:HoverListValue(false,self.index)
 		end
 	end
-	function ExRT.lib.CreateScrollCheckList(parent,relativePoint,x,y,width,linesNum)
+	local ScrollCheckListBackdrop = {bgFile = "", edgeFile = "Interface/Tooltips/UI-Tooltip-Border",tile = true, tileSize = 16, edgeSize = 16, insets = { left = 5, right = 5, top = 5, bottom = 5 }}
+	local ScrollCheckListBackdropModern = {edgeFile = "Interface/AddOns/ExRT/media/border.tga", edgeSize = 16}
+	function ExRT.lib.CreateScrollCheckList(parent,relativePoint,x,y,width,linesNum,isModern)
 		local self = CreateFrame("Frame",nil,parent)
 		local height = linesNum * 16 + 8
 		self:SetSize(width,height)
 		self:SetPoint(relativePoint or "TOPLEFT",x,y)
-		self:SetBackdrop({bgFile = "", edgeFile = "Interface/Tooltips/UI-Tooltip-Border",tile = true, tileSize = 16, edgeSize = 16, insets = { left = 5, right = 5, top = 5, bottom = 5 }})
+		if isModern then
+			self:SetBackdrop(ScrollCheckListBackdropModern)
+			self:SetBackdropBorderColor(.24,.25,.30,1)
+			self.ScrollBar = ExRT.lib.CreateScrollBarModern(self,16,height-8,-3,-4,1,10,"TOPRIGHT")
+		else
+			self:SetBackdrop(ScrollCheckListBackdrop)
+			self.ScrollBar = ExRT.lib.CreateScrollBar(self,16,height-8,-3,-4,1,10,"TOPRIGHT")
+		end
 		
-		self.ScrollBar = ExRT.lib.CreateScrollBar2(self,16,height-8,-3,-4,1,10,"TOPRIGHT")
 		
 		self.linesNum = linesNum
 		
@@ -1312,9 +1427,15 @@ do
 			self.List[i].mainFrame = self
 			self.List[i].id = i
 			
-			self.List[i].chk = CreateFrame("CheckButton",nil,self.List[i],"UICheckButtonTemplate")  
-			self.List[i].chk:SetScale(0.75)
-			self.List[i].chk:SetPoint("TOPLEFT",0,5)
+			if isModern then
+				self.List[i].chk = CreateFrame("CheckButton",nil,self.List[i],"ExRTCheckButtonModernTemplate")  
+				self.List[i].chk:SetSize(14,14)
+				self.List[i].chk:SetPoint("LEFT",4,0)
+			else
+				self.List[i].chk = CreateFrame("CheckButton",nil,self.List[i],"UICheckButtonTemplate")  
+				self.List[i].chk:SetScale(0.75)
+				self.List[i].chk:SetPoint("TOPLEFT",0,5)
+			end
 			self.List[i].chk:SetScript("OnClick", ScrollCheckListListCheckClick)
 			
 			self.List[i].PushedTexture = self.List[i]:CreateTexture()
@@ -1336,15 +1457,12 @@ do
 		
 		self.L = {}
 		self.C = {}
-		function self.Update()
-			ScrollCheckFrameUpdate = self
-			ScrollCheckListUpdate()
-		end
+		self.Update = ScrollCheckListUpdate
 		
 		self:SetScript("OnMouseWheel", ScrollCheckListMouseWheel)
 		
 		self:SetScript("OnShow",self.Update)
-		self.ScrollBar:SetScript("OnValueChanged",self.Update)
+		self.ScrollBar:SetScript("OnValueChanged",ScrollCheckListScrollBarOnValueChanged)
 		
 		return self
 	end
@@ -1372,8 +1490,8 @@ do
 			self:OnShow()
 		end
 	end
-	function ExRT.lib.CreatePopupFrame(width,height,title)
-		local self = CreateFrame("Frame",nil,UIParent,"ExRTDialogTemplate")
+	function ExRT.lib.CreatePopupFrame(width,height,title,isModern)
+		local self = CreateFrame("Frame",nil,UIParent,isModern and "ExRTDialogModernTemplate" or "ExRTDialogTemplate")
 		self:SetSize(width,height)
 		self:SetPoint("CENTER")
 		self:SetFrameStrata("DIALOG")
@@ -1391,9 +1509,15 @@ do
 		self:Hide()
 		self:SetScript("OnShow", PopupFrameOnShow) 
 		
+		if isModern then
+			self.border = ExRT.lib.CreateShadow(self,20)
+		end
+		
 		self.ShowClick = PopupFrameShow
 		
-		self.title:SetTextColor(1,1,1,1)
+		if not isModern then
+			self.title:SetTextColor(1,1,1,1)
+		end
 		if title then
 			self.title:SetText(title)
 		end
@@ -1489,18 +1613,22 @@ end
 
 do
 	local function DropDown_SetWidth(self, width)
-		self.Middle:SetWidth(width)
-		local defaultPadding = 25
-		self:_SetWidth(width + defaultPadding + defaultPadding)
-		self.Text:SetWidth(width - defaultPadding)
+		if self.Middle then
+			self.Middle:SetWidth(width)
+			local defaultPadding = 25
+			self:_SetWidth(width + defaultPadding + defaultPadding)
+			self.Text:SetWidth(width - defaultPadding)
+		else
+			self:_SetWidth(width)
+		end
 		
 		self.noResize = true
 	end
 	local function DropDown_SetText(self, text)
 		self.Text:SetText(text)
 	end
-	function ExRT.lib.CreateDropDown(parent,relativePoint,x,y,width,defText)
-		local self = CreateFrame("Frame", nil, parent, "ExRTDropDownMenuTemplate")
+	function ExRT.lib.CreateDropDown(parent,relativePoint,x,y,width,defText,template)
+		local self = CreateFrame("Frame", nil, parent, template or "ExRTDropDownMenuTemplate")
 		self:SetPoint(relativePoint or "TOPLEFT",x,y)
 
 		self._SetWidth = self.SetWidth		
@@ -1523,8 +1651,8 @@ do
 	local function ScrollDropDownOnHide()
 		ExRT.lib.ScrollDropDown.DropDownList:Hide()
 	end
-	function ExRT.lib.CreateScrollDropDown(parent,relativePoint,x,y,width,dropDownWidth,lines,defText,tooltip)
-		local self = ExRT.lib.CreateDropDown(parent,relativePoint,x,y,width,defText)
+	function ExRT.lib.CreateScrollDropDown(parent,relativePoint,x,y,width,dropDownWidth,lines,defText,tooltip,template)
+		local self = ExRT.lib.CreateDropDown(parent,relativePoint,x,y,width,defText,template)
 		
 		dropDownWidth = dropDownWidth or width
 		
@@ -1534,6 +1662,10 @@ do
 		self.List = {}
 		self.Width = dropDownWidth
 		self.Lines = lines or 10
+		
+		if template == "ExRTDropDownMenuModernTemplate" then
+			self.isModern = true
+		end
 	
 		return self
 	end
@@ -1555,20 +1687,60 @@ end
 
 ExRT.lib.ScrollDropDown = {}
 ExRT.lib.ScrollDropDown.List = {}
-ExRT.lib.ScrollDropDown.DropDownList = CreateFrame("Frame","ExRTDropDownList",UIParent,"ExRTDropDownListTemplate")
-ExRT.lib.ScrollDropDown.DropDownList.Buttons = {}
-ExRT.lib.ScrollDropDown.DropDownList.MaxLines = 0
+local ScrollDropDown_Blizzard,ScrollDropDown_Modern = nil,nil
 
-ExRT.lib.ScrollDropDown.DropDownList.Slider = ExRT.lib.CreateSlider(ExRT.lib.ScrollDropDown.DropDownList,15,170,-15,-11,1,10,"Text",1,"TOPRIGHT",true)
-ExRT.lib.ScrollDropDown.DropDownList.Slider:SetScript("OnValueChanged",function (self,value)
+ScrollDropDown_Modern = CreateFrame("Frame","ExRTDropDownListModern",UIParent,"ExRTDropDownListModernTemplate")
+ScrollDropDown_Modern.border = ExRT.lib.CreateShadow(ScrollDropDown_Modern,20)
+ScrollDropDown_Modern.Buttons = {}
+ScrollDropDown_Modern.MaxLines = 0
+ScrollDropDown_Modern.isModern = true
+do
+	ScrollDropDown_Modern.Animation = ScrollDropDown_Modern:CreateAnimationGroup()
+	ScrollDropDown_Modern.Animation:SetScript("OnFinished", function(self) 
+		ScrollDropDown_Modern.border:SetBackdropBorderColor(0,0,0,.45)
+		self:Play()
+	end)
+	local fade1 = ScrollDropDown_Modern.Animation:CreateAnimation("Alpha")
+	fade1:SetDuration(1)
+	fade1:SetOrder(1)
+	fade1:SetScript("OnUpdate",function (self)
+		local color =  self:GetProgress() / 2
+		ScrollDropDown_Modern.BorderTop:SetTexture(color,color,color,1)
+		ScrollDropDown_Modern.BorderLeft:SetTexture(color,color,color,1)
+		ScrollDropDown_Modern.BorderBottom:SetTexture(color,color,color,1)
+		ScrollDropDown_Modern.BorderRight:SetTexture(color,color,color,1)
+	end)
+	local pause = ScrollDropDown_Modern.Animation:CreateAnimation("Alpha")
+	pause:SetDuration(.5)
+	pause:SetOrder(2)
+	pause:SetScript("OnUpdate",function (self)
+	
+	end)
+	local fade2 = ScrollDropDown_Modern.Animation:CreateAnimation("Alpha")
+	fade2:SetDuration(1)
+	fade2:SetOrder(3)
+	fade2:SetScript("OnUpdate",function (self)
+		local color = (1 - self:GetProgress()) / 2
+		ScrollDropDown_Modern.BorderTop:SetTexture(color,color,color,1)
+		ScrollDropDown_Modern.BorderLeft:SetTexture(color,color,color,1)
+		ScrollDropDown_Modern.BorderBottom:SetTexture(color,color,color,1)
+		ScrollDropDown_Modern.BorderRight:SetTexture(color,color,color,1)
+	end)
+	function ScrollDropDown_Modern:OnShow()
+		self.Animation:Play()
+	end
+end
+
+ScrollDropDown_Modern.Slider = ExRT.lib.CreateSlider(ScrollDropDown_Modern,10,170,-8,-8,1,10,"Text",1,"TOPRIGHT",true,true)
+ScrollDropDown_Modern.Slider:SetScript("OnValueChanged",function (self,value)
 	value = ExRT.mds.Round(value)
 	ExRT.lib.ScrollDropDown.DropDownList.Position = value
 	ExRT.lib.ScrollDropDown.Reload()
 end)
-ExRT.lib.ScrollDropDown.DropDownList.Slider:SetScript("OnEnter",function() UIDropDownMenu_StopCounting(ExRT.lib.ScrollDropDown.DropDownList) end)
-ExRT.lib.ScrollDropDown.DropDownList.Slider:SetScript("OnLeave",function() UIDropDownMenu_StartCounting(ExRT.lib.ScrollDropDown.DropDownList) end)
+ScrollDropDown_Modern.Slider:SetScript("OnEnter",function() UIDropDownMenu_StopCounting(ScrollDropDown_Modern) end)
+ScrollDropDown_Modern.Slider:SetScript("OnLeave",function() UIDropDownMenu_StartCounting(ScrollDropDown_Modern) end)
 
-ExRT.lib.ScrollDropDown.DropDownList:SetScript("OnMouseWheel",function (self,delta)
+ScrollDropDown_Modern:SetScript("OnMouseWheel",function (self,delta)
 	local min,max = self.Slider:GetMinMaxValues()
 	local val = self.Slider:GetValue()
 	if (val - delta) < min then
@@ -1579,6 +1751,33 @@ ExRT.lib.ScrollDropDown.DropDownList:SetScript("OnMouseWheel",function (self,del
 		self.Slider:SetValue(val - delta)
 	end
 end)
+
+ScrollDropDown_Blizzard = CreateFrame("Frame","ExRTDropDownList",UIParent,"ExRTDropDownListTemplate")
+ScrollDropDown_Blizzard.Buttons = {}
+ScrollDropDown_Blizzard.MaxLines = 0
+
+ScrollDropDown_Blizzard.Slider = ExRT.lib.CreateSlider(ScrollDropDown_Blizzard,10,170,-15,-11,1,10,"Text",1,"TOPRIGHT",true)
+ScrollDropDown_Blizzard.Slider:SetScript("OnValueChanged",function (self,value)
+	value = ExRT.mds.Round(value)
+	ExRT.lib.ScrollDropDown.DropDownList.Position = value
+	ExRT.lib.ScrollDropDown.Reload()
+end)
+ScrollDropDown_Blizzard.Slider:SetScript("OnEnter",function() UIDropDownMenu_StopCounting(ScrollDropDown_Blizzard) end)
+ScrollDropDown_Blizzard.Slider:SetScript("OnLeave",function() UIDropDownMenu_StartCounting(ScrollDropDown_Blizzard) end)
+
+ScrollDropDown_Blizzard:SetScript("OnMouseWheel",function (self,delta)
+	local min,max = self.Slider:GetMinMaxValues()
+	local val = self.Slider:GetValue()
+	if (val - delta) < min then
+		self.Slider:SetValue(min)
+	elseif (val - delta) > max then
+		self.Slider:SetValue(max)
+	else
+		self.Slider:SetValue(val - delta)
+	end
+end)
+
+ExRT.lib.ScrollDropDown.DropDownList = ScrollDropDown_Blizzard
 
 do
 	local function CheckButtonClick(self)
@@ -1599,14 +1798,24 @@ do
 			return
 		end
 		ExRT.lib.ScrollDropDown.DropDownList.Buttons[i] = CreateFrame("Button",nil,ExRT.lib.ScrollDropDown.DropDownList,"ExRTDropDownMenuButtonTemplate")
-		ExRT.lib.ScrollDropDown.DropDownList.Buttons[i]:SetPoint("TOPLEFT",18,-16 - (i-1) * 16)
+		if ExRT.lib.ScrollDropDown.DropDownList.isModern then
+			ExRT.lib.ScrollDropDown.DropDownList.Buttons[i]:SetPoint("TOPLEFT",8,-8 - (i-1) * 16)
+		else
+			ExRT.lib.ScrollDropDown.DropDownList.Buttons[i]:SetPoint("TOPLEFT",18,-16 - (i-1) * 16)
+		end
 		
 		ExRT.lib.ScrollDropDown.DropDownList.Buttons[i].NormalText:SetMaxLines(1) 
 		
 		
-		ExRT.lib.ScrollDropDown.DropDownList.Buttons[i].checkButton = CreateFrame("CheckButton",nil,ExRT.lib.ScrollDropDown.DropDownList.Buttons[i],"UICheckButtonTemplate")
-		ExRT.lib.ScrollDropDown.DropDownList.Buttons[i].checkButton:SetPoint("LEFT",-7,0)
-		ExRT.lib.ScrollDropDown.DropDownList.Buttons[i].checkButton:SetScale(.6)
+		if ExRT.lib.ScrollDropDown.DropDownList.isModern then
+			ExRT.lib.ScrollDropDown.DropDownList.Buttons[i].checkButton = CreateFrame("CheckButton",nil,ExRT.lib.ScrollDropDown.DropDownList.Buttons[i],"ExRTCheckButtonModernTemplate")
+			ExRT.lib.ScrollDropDown.DropDownList.Buttons[i].checkButton:SetPoint("LEFT",1,0)
+			ExRT.lib.ScrollDropDown.DropDownList.Buttons[i].checkButton:SetSize(12,12)
+		else
+			ExRT.lib.ScrollDropDown.DropDownList.Buttons[i].checkButton = CreateFrame("CheckButton",nil,ExRT.lib.ScrollDropDown.DropDownList.Buttons[i],"UICheckButtonTemplate")
+			ExRT.lib.ScrollDropDown.DropDownList.Buttons[i].checkButton:SetPoint("LEFT",-7,0)
+			ExRT.lib.ScrollDropDown.DropDownList.Buttons[i].checkButton:SetScale(.6)
+		end
 		ExRT.lib.ScrollDropDown.DropDownList.Buttons[i].checkButton:SetScript("OnClick",CheckButtonClick)
 		ExRT.lib.ScrollDropDown.DropDownList.Buttons[i].checkButton:SetScript("OnEnter",CheckButtonOnEnter)
 		ExRT.lib.ScrollDropDown.DropDownList.Buttons[i].checkButton:SetScript("OnLeave",CheckButtonOnLeave)
@@ -1744,6 +1953,16 @@ function ExRT.lib.ScrollDropDown.OnButtonLeave(self)
 end
 
 function ExRT.lib.ScrollDropDown.ToggleDropDownMenu(self)
+	if self.ToggleUpadte then
+		self:ToggleUpadte()
+	end
+	
+	if self.isModern then
+		ExRT.lib.ScrollDropDown.DropDownList = ScrollDropDown_Modern
+	else
+		ExRT.lib.ScrollDropDown.DropDownList = ScrollDropDown_Blizzard
+	end
+
 	ExRT.lib.ScrollDropDown.List = self.List
 	
 	local count = #ExRT.lib.ScrollDropDown.List
@@ -1753,8 +1972,14 @@ function ExRT.lib.ScrollDropDown.ToggleDropDownMenu(self)
 	ExRT.lib.ScrollDropDown.DropDownList.MaxLines = max(ExRT.lib.ScrollDropDown.DropDownList.MaxLines,self.Lines)
 	
 	local isSliderHidden = max(count-self.Lines+1,1) == 1
-	for i=1,self.Lines do
-		ExRT.lib.ScrollDropDown.DropDownList.Buttons[i]:SetSize(self.Width - 22 + (isSliderHidden and 16 or 0),16)
+	if self.isModern then 
+		for i=1,self.Lines do
+			ExRT.lib.ScrollDropDown.DropDownList.Buttons[i]:SetSize(self.Width - 16 - (isSliderHidden and 0 or 12),16)
+		end
+	else
+		for i=1,self.Lines do
+			ExRT.lib.ScrollDropDown.DropDownList.Buttons[i]:SetSize(self.Width - 22 + (isSliderHidden and 16 or 0),16)
+		end
 	end
 	ExRT.lib.ScrollDropDown.DropDownList.Position = 1
 	ExRT.lib.ScrollDropDown.DropDownList.LinesNow = self.Lines
@@ -1764,9 +1989,14 @@ function ExRT.lib.ScrollDropDown.ToggleDropDownMenu(self)
 	end
 	ExRT.lib.ScrollDropDown.Reload()
 	ExRT.lib.ScrollDropDown.DropDownList:SetPoint("TOPRIGHT",self,"BOTTOMRIGHT",-16,0)
-	ExRT.lib.ScrollDropDown.DropDownList:SetSize(self.Width + 32,32 + 16 * self.Lines)
 	ExRT.lib.ScrollDropDown.DropDownList.Slider:SetMinMaxValues(1,max(count-self.Lines+1,1))
-	ExRT.lib.ScrollDropDown.DropDownList.Slider:SetHeight(self.Lines * 16 + 10)
+	if self.isModern then 
+		ExRT.lib.ScrollDropDown.DropDownList:SetSize(self.Width,16 + 16 * self.Lines)
+		ExRT.lib.ScrollDropDown.DropDownList.Slider:SetHeight(self.Lines * 16)
+	else
+		ExRT.lib.ScrollDropDown.DropDownList:SetSize(self.Width + 32,32 + 16 * self.Lines)
+		ExRT.lib.ScrollDropDown.DropDownList.Slider:SetHeight(self.Lines * 16 + 10)	
+	end
 	if isSliderHidden then
 		ExRT.lib.ScrollDropDown.DropDownList.Slider:Hide()
 	else
@@ -1836,7 +2066,7 @@ do
 			parent.HideByTimer(parent)
 		end
 	end
-	function ExRT.lib.CreateListFrame(parent,width,buttonsNum,buttonPos,relativePoint,x,y,buttonText,listClickFunc)
+	function ExRT.lib.CreateListFrame(parent,width,buttonsNum,buttonPos,relativePoint,x,y,buttonText,listClickFunc,isModern)
 		local self = CreateFrame("Frame",nil,parent,"ExRTTranslucentFrameTemplate")
 		self:SetSize(width,18*buttonsNum+30)
 		self:Hide()
@@ -1845,7 +2075,7 @@ do
  		self.HideByTimer = ListFrameHideByTimer
 		self:SetScript("OnUpdate",ListFrameOnUpdate)
 		
-		self.buttonToggle = CreateFrame("Button",nil,parent,"ExRTUIChatDownButtonTemplate")
+		self.buttonToggle = CreateFrame("Button",nil,parent,isModern and "ExRTUIChatDownButtonModernTemplate" or "ExRTUIChatDownButtonTemplate")
 		if buttonPos == "RIGHT" then
 			self.buttonToggle:SetPoint("TOPRIGHT",parent,relativePoint or "TOPLEFT",x,y)
 			self.buttonToggleText = ExRT.lib.CreateText(self.buttonToggle,0,18,"TOPRIGHT",-24,-3,"RIGHT",nil,nil,12,buttonText,nil,1,1,1,1)
@@ -1892,8 +2122,109 @@ do
 		end
 		return self.graph[i]
 	end
+	local function GraphSetDot(self,i,x,y)
+		if not self.dots[i] then
+			self.dots[i] = self:CreateTexture(nil, "BACKGROUND")
+			self.dots[i]:SetTexture("Interface\\AddOns\\ExRT\\media\\blip")
+			self.dots[i]:SetSize(2,2)
+			self.dots[i]:SetTexture(0.6, 1, 0.6, 1)
+		end
+		self.dots[i]:SetPoint("TOPLEFT", x, y - self.height)
+		self.dots[i]:Show()
+	end
+	
+	local function GraphReload_BuildNodes(self,minX,minY,maxX,maxY,axixXstep,disableDots)
+		local nodeNow,Xnow,Ynow = 0,minX,minY
+		self.tooltipsData = {}
+		for i=1,#self.graph do
+			self.graph[i]:Hide()
+			self.graph[i]:ClearAllPoints()
+		end
+		for i=1,#self.dots do
+			self.dots[i]:Hide()
+		end
+		for i=1,#self.data,self.step do
+			local x = self.data[i][1]
+			local steps = 1
+			for j=1,(self.step-1) do
+				if self.data[i+j] then
+					x=x+self.data[i+j][1]
+					steps = steps + 1
+				end
+			end
+			x = x / steps
+			if x >= minX and x <= maxX then
+				if not self.isDots or disableDots then
+					if x ~= Xnow then
+						nodeNow = nodeNow + 1
+						local node = GraphGetNode(self,nodeNow)
+						node:SetPoint("BOTTOMLEFT",self,"BOTTOMLEFT",(Xnow - minX)/(maxX - minX)*self.width,(Ynow - minY)/(maxY - minY)*self.height)
+						node:SetSize( (x - Xnow)/(maxX - minX)*self.width , 2 )
+						node:Show()
+						
+						Xnow = x
+					end
+				end
+				
+				local y = self.data[i][2]
+				steps = 1
+				for j=1,(self.step-1) do
+					if self.data[i+j] then
+						y=y+self.data[i+j][2]
+						steps = steps + 1
+					end
+				end
+				y = y / steps
+				if not self.isDots or disableDots then
+					if y ~= Ynow then
+						nodeNow = nodeNow + 1
+						local node = GraphGetNode(self,nodeNow)
+						local relativePoint = (Ynow > y) and "TOPLEFT" or "BOTTOMLEFT"
+						local heightFix = (Ynow > y) and 2 or 0
+						node:SetPoint(relativePoint,self,"BOTTOMLEFT",(Xnow - minX)/(maxX - minX)*self.width,(Ynow - minY)/(maxY - minY)*self.height + heightFix)
+						node:SetSize( 2, abs(y - Ynow)/(maxY - minY)*self.height )
+						node:Show()
+						
+						Ynow = y
+					end
+				end
+				if self.isDots and not disableDots then
+					local fX,fY = (Xnow - minX)/(maxX - minX)*self.width,(Ynow - minY)/(maxY - minY)*self.height
+					local tX,tY = (x - minX)/(maxX - minX)*self.width,(y - minY)/(maxY - minY)*self.height
+					local a = (tY - fY) / (tX - fX)
+					nodeNow = nodeNow + 1
+					GraphSetDot(self,nodeNow,fX,fY > self.height and self.height or fY)
+					local lastX,lastY = fX,fY
+					for X=fX,tX,axixXstep do
+						local Y = (X-fX)*a + fY
+						if Y > self.height then	Y = self.height	end
+						if abs(X-lastX) > 1.5 or abs(Y-lastY) > 1.5 then
+							nodeNow = nodeNow + 1
+							GraphSetDot(self,nodeNow,X,Y)
+							lastX = X
+							lastY = Y
+							
+							if nodeNow > 10000 then
+								ExRT.F.dprint("Graph: Error: Too much nodes")
+								return
+							end
+						end
+					end
+					nodeNow = nodeNow + 1
+					GraphSetDot(self,nodeNow,tX,tY > self.height and self.height or tY)
+					
+					Xnow = x
+					Ynow = y
+				end
+				self.tooltipsData[#self.tooltipsData + 1] = {(Xnow - minX)/(maxX - minX)*self.width,Ynow,i,(maxY - Ynow)/(maxY - minY)*self.height,self.data[i][3],self.data[i][4]}
+			end
+		end
+		ExRT.F.dprint("Graph: Nodes count:",nodeNow)
+		return true
+	end
 	local function GraphReload(self)
 		local minX,maxX,minY,maxY = nil
+		local isZoom = self.ZoomMinX and self.ZoomMaxX
 		for i=1,#self.data,self.step do
 			local x = self.data[i][1]
 			local steps = 1
@@ -1920,12 +2251,14 @@ do
 				end
 			end
 			y = y / steps
-			if not minY then
-				minY = y
-				maxY = y
-			else
-				minY = min(minY,y)
-				maxY = max(maxY,y)
+			if not isZoom or (x >= self.ZoomMinX and x <= self.ZoomMaxX) then
+				if not minY then
+					minY = y
+					maxY = y
+				else
+					minY = min(minY,y)
+					maxY = max(maxY,y)
+				end
 			end
 		end
 		
@@ -1939,60 +2272,55 @@ do
 		end
 		if minX == maxX then
 			maxX = minX + 1
-		end		
-		local nodeNow,Xnow,Ynow = 0,minX,minY
-		self.tooltipsData = {}
-		for i=1,#self.graph do
-			self.graph[i]:Hide()
-			self.graph[i]:ClearAllPoints()
 		end
-		for i=1,#self.data,self.step do
-			local x = self.data[i][1]
-			local steps = 1
-			for j=1,(self.step-1) do
-				if self.data[i+j] then
-					x=x+self.data[i+j][1]
-					steps = steps + 1
-				end
-			end
-			x = x / steps
-			if x ~= Xnow then
-				nodeNow = nodeNow + 1
-				local node = GraphGetNode(self,nodeNow)
-				node:SetPoint("BOTTOMLEFT",self,"BOTTOMLEFT",(Xnow - minX)/(maxX - minX)*self.width,(Ynow - minY)/(maxY - minY)*self.height)
-				node:SetSize( (x - Xnow)/(maxX - minX)*self.width , 2 )
-				node:Show()
-				
-				Xnow = x
-			end
-			
-			local y = self.data[i][2]
-			steps = 1
-			for j=1,(self.step-1) do
-				if self.data[i+j] then
-					y=y+self.data[i+j][2]
-					steps = steps + 1
-				end
-			end
-			y = y / steps
-			if y ~= Ynow then
-				nodeNow = nodeNow + 1
-				local node = GraphGetNode(self,nodeNow)
-				local relativePoint = (Ynow > y) and "TOPLEFT" or "BOTTOMLEFT"
-				local heightFix = (Ynow > y) and 2 or 0
-				node:SetPoint(relativePoint,self,"BOTTOMLEFT",(Xnow - minX)/(maxX - minX)*self.width,(Ynow - minY)/(maxY - minY)*self.height + heightFix)
-				node:SetSize( 2, abs(y - Ynow)/(maxY - minY)*self.height )
-				node:Show()
-				
-				Ynow = y
-			end
-			self.tooltipsData[#self.tooltipsData + 1] = {(Xnow - minX)/(maxX - minX)*self.width,Ynow,i,(maxY - Ynow)/(maxY - minY)*self.height,self.data[i][3]}
+		if self.ZoomMinX and self.ZoomMaxX and maxX then
+			minX = max(minX,self.ZoomMinX)
+			maxX = min(maxX,self.ZoomMaxX)
 		end
+		
+		if self.ZoomMaxY and maxY then
+			maxY = self.ZoomMaxY
+		end
+		
+		self.range = {
+			minX = minX,
+			maxX = maxX,
+			minY = minY,
+			maxY = maxY,		
+		}
+		ExRT.F.dprint("Graph: minX,maxX,minY,maxY:",minX,maxX,minY,maxY)
+		
+		if maxY then
+			self.MaxTextY:SetText(ExRT.F.shortNumber(maxY))
+			self.MaxTextYButton:SetWidth(self.MaxTextY:GetStringWidth())
+			self.MaxTextYButton:Show()
+		else
+			self.MaxTextY:SetText("")
+			self.MaxTextYButton:Hide()
+		end
+		
+		local result = GraphReload_BuildNodes(self,minX,minY,maxX,maxY,0.02)
+		if not result then
+			result = GraphReload_BuildNodes(self,minX,minY,maxX,maxY,0.04)			--Lower x step
+		end
+		if not result then
+			result = GraphReload_BuildNodes(self,minX,minY,maxX,maxY,0.08,true)		--Stop using dots
+		end
+		if not result then
+			print("|cffff0000Exorsus Raid Tools:|r Graph probably shows incorrect")
+		end
+		
+		if self.ZoomMinX and self.ZoomMaxX then
+			self.ResetZoom:Show()
+		else
+			self.ResetZoom:Hide()
+		end
+		self.ZoomMaxY = nil
 	end
 	local function GraphOnUpdate(self,elapsed)
-		local x,y = ExRT.mds.GetCursorPos(self)
-		if ExRT.mds.IsInFocus(self,x,y) then
-			local Y,X,_posY,comment = nil
+		local x,y = ExRT.F.GetCursorPos(self)
+		if ExRT.F.IsInFocus(self,x,y) then
+			local Y,X,_posY,comment,template = nil
 			for i=1,#self.tooltipsData do
 				if self.tooltipsData[i][1] > x then
 					break
@@ -2001,13 +2329,32 @@ do
 					X = self.tooltipsData[i][3]
 					_posY = self.tooltipsData[i][4]
 					if self.tooltipsData[i][5] then
-						comment = "|n"..self.tooltipsData[i][5]
+						comment = self.tooltipsData[i][5]
+					end
+					if self.tooltipsData[i][6] then
+						template = self.tooltipsData[i][6]
 					end
 				end
 			end
 			if Y then
-				GameTooltip:SetOwner(self, "ANCHOR_LEFT",x,-_posY)
-				GameTooltip:SetText(ExRT.mds.Round(X).."|n"..ExRT.mds.Round(Y)..(comment or ""))
+				_posY = -_posY
+				if _posY > 0 then
+					_posY = 0
+				end
+				GameTooltip:SetOwner(self, "ANCHOR_LEFT",x,_posY)
+				if not template then
+					GameTooltip:SetText(ExRT.mds.Round(X).."|n"..ExRT.mds.Round(Y)..(comment and ("|n"..comment) or ""))
+				else
+					--[[
+					%x - x coord
+					%y - y coord
+					%c - comment					
+					]]
+					template = template:gsub("%%x",ExRT.mds.Round(X))
+					template = template:gsub("%%y",tostring(ExRT.mds.Round(Y)))
+					template = template:gsub("%%c",comment or "")
+					GameTooltip:SetText(template)
+				end
 				GameTooltip:Show()
 				if self.OnUpdateTooltip then
 					self:OnUpdateTooltip(true,X,Y)
@@ -2019,12 +2366,108 @@ do
 				end
 			end
 		end
+		if self.mouseDowned then
+			local width = x - self.mouseDowned
+			if width > 0 then
+				width = min(width,self:GetWidth()-self.mouseDowned)
+				self.selectingTexture:SetWidth(width)
+				self.selectingTexture:SetPoint("TOPLEFT",self,"TOPLEFT", self.mouseDowned ,0)
+			elseif width < 0 then
+				width = -width
+				width = min(width,self.mouseDowned)
+				self.selectingTexture:SetWidth(width)
+				self.selectingTexture:SetPoint("TOPLEFT",self,"TOPLEFT", self.mouseDowned-width,0)
+			else
+				self.selectingTexture:SetWidth(1)
+			end
+		end
+	end
+	local function GraphOnMouseDown(self)
+		if not self.range or not self.range.maxX then
+			return
+		end
+		self.mouseDowned = ExRT.F.GetCursorPos(self)
+		self.selectingTexture:SetPoint("TOPLEFT",self,"TOPLEFT", self.mouseDowned ,0)
+		self.selectingTexture:SetWidth(1)
+		self.selectingTexture:Show()
+	end
+	local function GraphOnMouseUp(self,isLeave)
+		if isLeave == "LEAVE" then
+			self.selectingTexture:Hide()
+			self.mouseDowned = nil
+			return
+		end
+		if not self.mouseDowned then
+			return
+		end
+		local x = ExRT.F.GetCursorPos(self)
+		if x < self.mouseDowned then
+			x , self.mouseDowned = self.mouseDowned , x
+		end
+		
+		local xLen = self.range.maxX - self.range.minX
+		local width = self:GetWidth()
+		local start = ExRT.F.Round(self.mouseDowned / width * xLen + self.range.minX)
+		local ending = ExRT.F.Round(x / width * xLen + self.range.minX)
+		
+		self.selectingTexture:Hide()
+		self.mouseDowned = nil
+		
+		if self.Zoom then
+			self:Zoom(start,ending)
+		end
+	end
+	local function GraphResetZoom(self)
+		local parent = self:GetParent()
+		parent.ZoomMinX = nil
+		parent.ZoomMaxX = nil
+		parent:Reload()
+	end	
+	local function GraphCreateZoom(self)
+		self.selectingTexture = self:CreateTexture(nil, "BACKGROUND",nil,2)
+		self.selectingTexture:SetTexture(0, 0.65, 0.9, .7)
+		self.selectingTexture:SetHeight(self:GetHeight())
+		self.selectingTexture:Hide()
+		
+		self.ResetZoom = ExRT.lib.CreateButton(self,170,20,"TOPRIGHT",-2,-2,ExRT.L.BossWatcherGraphZoomReset,nil,nil,"ExRTButtonModernTemplate")
+		self.ResetZoom:SetScript("OnClick",GraphResetZoom)
+		self.ResetZoom:Hide()
+		
+		self:SetScript("OnMouseDown",GraphOnMouseDown)
+		self:SetScript("OnMouseUp",GraphOnMouseUp)
 	end
 	local function GraphOnLeave(self)
 		GameTooltip_Hide()
+		GraphOnMouseUp(self,"LEAVE")
+		self:SetScript("OnUpdate",nil)
 	end
-	function ExRT.lib.CreateGraph(parent,width,height,relativePoint,x,y)
-		local self = CreateFrame("Frame",nil,parent)
+	local function GraphOnEnter(self)
+		self:SetScript("OnUpdate",GraphOnUpdate)
+	end
+	local function GraphSetMaxY(self,y)
+		self.ZoomMaxY = nil
+		if y then
+			self.ZoomMaxY = tonumber(y)
+			if self.ZoomMaxY == 0 then
+				self.ZoomMaxY = nil
+			end
+		end
+		self:Reload()
+	end
+	local function GraphTextYButtonOnClick(self)
+		local parent = self:GetParent()
+		ExRT.F.ShowInput("Set Max Y",GraphSetMaxY,parent,true)
+	end
+	local function GraphTextYButtonOnEnter(self)
+		local parent = self:GetParent()
+	  	parent.MaxTextY:SetTextColor(1,.5,.5,1)
+	end
+	local function GraphTextYButtonOnLeave(self)
+	  	local parent = self:GetParent()
+	  	parent.MaxTextY:SetTextColor(1,1,1,1)
+	end
+	function ExRT.lib.CreateGraph(parent,width,height,relativePoint,x,y,enableZoom)
+		local self = CreateFrame(enableZoom and "Button" or "Frame",nil,parent)
 		self:SetPoint(relativePoint or "TOPLEFT",parent, x, y)
 		self:SetSize(width,height)
 		
@@ -2043,11 +2486,29 @@ do
 		self.axisY:SetPoint("BOTTOMLEFT",self,"BOTTOMLEFT",0,0)
 		self.axisY:SetTexture(0.6, 0.6, 1, 1)
 		
+		self.MaxTextY = ExRT.lib.CreateText(self,0,0,nil,0,0,"RIGHT","TOP",nil,10,"",nil,1,1,1)
+		self.MaxTextY:SetNewPoint("TOPRIGHT",self.axisY,"TOPLEFT",-2,-2)
+		
+		self.MaxTextYButton = CreateFrame("Button",nil,self)
+		self.MaxTextYButton:SetPoint("TOPRIGHT",self.axisY,"TOPLEFT",-2,-2)
+		self.MaxTextYButton:SetHeight(10)
+		self.MaxTextYButton:SetScript("OnClick",GraphTextYButtonOnClick)
+		self.MaxTextYButton:SetScript("OnEnter",GraphTextYButtonOnEnter)
+		self.MaxTextYButton:SetScript("OnLeave",GraphTextYButtonOnLeave)
+		self.MaxTextYButton:Hide()
+		
 		self.graph = {}
+		self.dots = {}
+		self.isDots = false
 		self.tooltipsData = {}
 		self.Reload = GraphReload
-		self:SetScript("OnUpdate",GraphOnUpdate)
+		--self:SetScript("OnUpdate",GraphOnUpdate)
+		self:SetScript("OnEnter",GraphOnEnter)
 		self:SetScript("OnLeave",GraphOnLeave)
+		
+		if enableZoom then
+			GraphCreateZoom(self)
+		end
 			
 		return self
 	end
@@ -2074,7 +2535,9 @@ do
 			parent.ScrollBar:SetValue(max)
 		end
 		self.LastHeight = height
-		if self.OnTextChanged then
+		if parent.OnTextChanged then
+			parent.OnTextChanged(self,...)
+		elseif self.OnTextChanged then
 			self:OnTextChanged(...)
 		end
 	end
@@ -2091,8 +2554,8 @@ do
 	local function MultilineEditBoxOnFrameClick(self)
 		self:GetParent().EditBox:SetFocus()
 	end
-	function ExRT.lib.CreateMultilineEditBox(parent,width,height,relativePoint,x,y)
-		local self = ExRT.lib.CreateScrollFrame(parent,width,height,relativePoint,x,y,height)
+	function ExRT.lib.CreateMultilineEditBox(parent,width,height,relativePoint,x,y,isModern)
+		local self = ExRT.lib.CreateScrollFrame(parent,width,height,relativePoint,x,y,height,isModern)
 		self:SetBackdropColor(0,0,0,.8)
 		
 		self.EditBox = ExRT.lib.CreateEditBox(self.C,0,0,nil,0,0,nil,nil,nil,true)

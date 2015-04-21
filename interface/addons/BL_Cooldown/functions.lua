@@ -182,32 +182,28 @@ function BLCD:RearrangeBars(anchor) -- frameicon
 	local frame = anchor:GetParent()
 	local scale = BLCD.db.profile.scale
 	local growth = BLCD.db.profile.growth
+	local barheight = BLCD.db.profile.barheight
 	local currBars = {}
 
 	for bar in pairs(anchor.bars) do
 		if bar:IsVisible() then
 			currBars[#currBars + 1] = bar
 		else
-			--print('hidden', bar:Get("raidcooldowns:caster"), bar:Get("raidcooldowns:spell"))
 			bar:Stop()
 		end
 	end
 
-	if(#currBars > 2)then
-		BLCD:BLHeight(frame, (14*#currBars)*scale);
-	else
-		BLCD:BLHeight(frame, 28*scale);
-	end
+	BLCD:BLHeight(frame, math.max(28,((5 + barheight)*#currBars))*scale);
 
 	table.sort(currBars, barSorter)
 
 	for i, bar in ipairs(currBars) do
-		local spacing = (((-14)*(i-1))-2)
+		local yoffset = (((-5 - barheight)*(i-1)) - 2)
 		bar:ClearAllPoints()
 		if(growth == "right") then
-			BLCD:BLPoint(bar, "TOPLEFT", anchor, "TOPRIGHT", 5, spacing)
+			BLCD:BLPoint(bar, "TOPLEFT", anchor, "TOPRIGHT", 5, yoffset)
 		elseif(growth == "left") then
-			BLCD:BLPoint(bar, "TOPRIGHT", anchor, "TOPLEFT", -5, spacing)
+			BLCD:BLPoint(bar, "TOPRIGHT", anchor, "TOPLEFT", -5, yoffset)
 		end
 	end
 end
@@ -221,49 +217,39 @@ local backdropBorder = {
 
 local function styleBar(bar)
 	local bd = bar.candyBarBackdrop
+	bd:SetBackdrop(backdropBorder)
+	bd:SetBackdropColor(0.06, 0.06, 0.06, 1)
+	bd:SetBackdropBorderColor(0, 0, 0)
 
-	if Elv and false then
-		bd:SetTemplate("Transparent")
-		bd:SetOutside(bar)
-		if not E.PixelMode and bd.iborder then
-			bd.iborder:Show()
-			bd.oborder:Show()
-		end
-	else
-		bd:SetBackdrop(backdropBorder)
-		bd:SetBackdropColor(0.06, 0.06, 0.06, 1)
-		bd:SetBackdropBorderColor(0, 0, 0)
+	bd:ClearAllPoints()
+	bd:SetPoint("TOPLEFT", bar, "TOPLEFT", -1, 1)
+	bd:SetPoint("BOTTOMRIGHT", bar, "BOTTOMRIGHT", 1, -1)
 
-		bd:ClearAllPoints()
-		bd:SetPoint("TOPLEFT", bar, "TOPLEFT", -1, 1)
-		bd:SetPoint("BOTTOMRIGHT", bar, "BOTTOMRIGHT", 1, -1)
+	bar.candyBarLabel:SetTextColor(1,1,1,1)
+	bar.candyBarLabel:SetJustifyH("CENTER")
+	bar.candyBarLabel:SetJustifyV("MIDDLE")
+	bar.candyBarLabel:SetFont("Interface\\AddOns\\BL_Cooldown\\media\\PT_Sans_Narrow.ttf", BLCD.db.profile.barfontsize)
+	bar.candyBarLabel:SetShadowOffset(_fontShadowX, _fontShadowY)
+	bar.candyBarLabel:SetShadowColor(_fontShadowR, _fontShadowG, _fontShadowB, _fontShadowA)
 
-		bar.candyBarLabel:SetTextColor(1,1,1,1)
-		bar.candyBarLabel:SetJustifyH("CENTER")
-		bar.candyBarLabel:SetJustifyV("MIDDLE")
-		bar.candyBarLabel:SetFont("Interface\\AddOns\\BL_Cooldown\\media\\PT_Sans_Narrow.ttf", _fontSize)
-		bar.candyBarLabel:SetShadowOffset(_fontShadowX, _fontShadowY)
-		bar.candyBarLabel:SetShadowColor(_fontShadowR, _fontShadowG, _fontShadowB, _fontShadowA)
-
-		bar.candyBarDuration:SetTextColor(1,1,1,1)
-		bar.candyBarDuration:SetJustifyH("CENTER")
-		bar.candyBarDuration:SetJustifyV("MIDDLE")
-		bar.candyBarDuration:SetFont("Interface\\AddOns\\BL_Cooldown\\media\\PT_Sans_Narrow.ttf", _fontSize)
-		bar.candyBarDuration:SetShadowOffset(_fontShadowX, _fontShadowY)
-		bar.candyBarDuration:SetShadowColor(_fontShadowR, _fontShadowG, _fontShadowB, _fontShadowA)
-	end
+	bar.candyBarDuration:SetTextColor(1,1,1,1)
+	bar.candyBarDuration:SetJustifyH("CENTER")
+	bar.candyBarDuration:SetJustifyV("MIDDLE")
+	bar.candyBarDuration:SetFont("Interface\\AddOns\\BL_Cooldown\\media\\PT_Sans_Narrow.ttf", BLCD.db.profile.barfontsize)
+	bar.candyBarDuration:SetShadowOffset(_fontShadowX, _fontShadowY)
+	bar.candyBarDuration:SetShadowColor(_fontShadowR, _fontShadowG, _fontShadowB, _fontShadowA)
 	bd:Show()
 end
 
 function BLCD:CreateBar(frame,cooldown,caster,frameicon,guid,duration,spell)
-	local bar = CB:New(BLCD:BLTexture(), 100, 9)
+	local bar = CB:New(BLCD:BLTexture(), BLCD.db.profile.barwidth, BLCD.db.profile.barheight)
 	styleBar(bar)
 	frameicon.bars[bar] = true
 	bar:Set("raidcooldowns:module", "raidcooldowns")
 	bar:Set("raidcooldowns:anchor", frameicon)
 	bar:Set("raidcooldowns:key", guid)
 	bar:Set("raidcooldowns:spell", spell)
-	bar:Set("raidcooldowns:caster", caster)
+	bar:Set("raidcooldowns:caster", strsplit(" ", caster)) -- Prevent charges from messing it up later
 	bar:Set("raidcooldowns:cooldown", cooldown)
 	bar:SetParent(frameicon)
 	bar:SetFrameStrata("MEDIUM")
@@ -273,6 +259,7 @@ function BLCD:CreateBar(frame,cooldown,caster,frameicon,guid,duration,spell)
 	else
 		bar:SetColor(.5,.5,.5,1)
 	end
+	bar:SetFill(BLCD.db.profile.barfill)
 	bar:SetDuration(duration)
 	bar:SetScale(BLCD.db.profile.scale)
 	bar:SetClampedToScreen(true)
@@ -290,15 +277,6 @@ function BLCD:CancelBars(spellID)
 			bar:Stop()
 		end
 	end
-end
-
-function BLCD:restyleBar(self)
-	self.candyBarBar:SetPoint("TOPLEFT", self)
-	self.candyBarBar:SetPoint("BOTTOMLEFT", self)
-	self.candyBarIconFrame:Hide()
-	if self.candyBarLabel:GetText() then self.candyBarLabel:Show()
-	else self.candyBarLabel:Hide() end
-	self.candyBarDuration:Hide()
 end
 
 function BLCD:StopPausedBar(cooldown,guid)
@@ -524,18 +502,19 @@ function BLCD:OnEnter(self, cooldown, rosterCD, onCD)
 		GameTooltip:AddLine(' ')
 		for i,v in pairs(rosterCD) do
 		-- guid, name
-			local logic = onCD[i] and onCD[i]['paused']
-			if logic or logic == nil then
-				local unitAlive = not (UnitIsDeadOrGhost(v) or false)
-				local unitOnline = (UnitIsConnected(v) or false)
-				--print(v, tostring(unitAlive), tostring(unitOnline))
-				if unitAlive and unitOnline then
-					GameTooltip:AddLine(v .. ' Ready!', 0, 1, 0)
-				elseif not unitOnline then
-					GameTooltip:AddLine(v .. ' OFFLINE but ready!', 1, 0, 0)
-				else
-					GameTooltip:AddLine(v .. ' DEAD but Ready!', 1, 0, 0)
-				end
+			local logic = (BLCD.db.profile.availablebars and onCD[i] and onCD[i]['paused']) or (not BLCD.db.profile.availablebars and not onCD[i])
+			local unitAlive = not (UnitIsDeadOrGhost(v) or false)
+			local unitOnline = (UnitIsConnected(v) or false)
+			local hasCharges = ""
+			if cooldown['charges'] then
+				hasCharges = BLCD['charges'][cooldown['name']][i] and " (has charges)" or ""
+			end
+			if unitAlive and unitOnline and logic then
+				GameTooltip:AddLine(v .. ' Ready!' .. hasCharges, 0, 1, 0)
+			elseif not unitOnline then
+				GameTooltip:AddLine(v .. ' OFFLINE but ready!', 1, 0, 0)
+			else
+				GameTooltip:AddLine(v .. ' DEAD but Ready!', 1, 0, 0)
 			end
 		end
 	end

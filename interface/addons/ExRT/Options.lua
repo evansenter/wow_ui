@@ -116,13 +116,17 @@ ExRT.MiniMapIcon:SetScript("OnMouseUp", MiniMapIconOnClick)
 
 ExRT.Options.panel.dropdown = CreateFrame("Frame", "ExRTMiniMapMenuFrame", nil, "UIDropDownMenuTemplate")
 
-function ExRT.mds.MinimapMenuAdd(text_, func_)
+function ExRT.mds.MinimapMenuAdd(text_, func_, subMenu)
 	local k = #ExRT.mds.menuTable
 	for i=1,k do
 		if ExRT.mds.menuTable[i].text == text_ then return end
 	end
 	ExRT.mds.menuTable[k+1] = ExRT.mds.menuTable[k]
 	ExRT.mds.menuTable[k] = { text = text_, func = func_, notCheckable = true, keepShownOnClick = true, }
+	if subMenu then
+		ExRT.mds.menuTable[k].hasArrow = true
+		ExRT.mds.menuTable[k].menuList = subMenu
+	end
 end
 
 function ExRT.mds.MinimapMenuRemove(text_)
@@ -288,7 +292,7 @@ ExRT.Options.panel.contactLeft = ExRT.lib.CreateText(ExRT.Options.panel,150,25,n
 ExRT.Options.panel.contactRight = ExRT.lib.CreateText(ExRT.Options.panel,450,25,nil,135,-260,"LEFT","TOP",nil,12,"e-mail: ykiigor@gmail.com",nil,1,1,1,1)
 
 ExRT.Options.panel.thanksLeft = ExRT.lib.CreateText(ExRT.Options.panel,150,25,nil,25,-280,"LEFT","TOP",nil,12,ExRT.L.SetThanks,nil,nil,nil,nil,1)
-ExRT.Options.panel.thanksRight = ExRT.lib.CreateText(ExRT.Options.panel,450,0,nil,135,-280,"LEFT","TOP",nil,12,"Phanx, funkydude, Shurshik, Kemayo, Guillotine, Rabbit, fookah",nil,1,1,1,1)
+ExRT.Options.panel.thanksRight = ExRT.lib.CreateText(ExRT.Options.panel,450,0,nil,135,-280,"LEFT","TOP",nil,12,"Phanx, funkydude, Shurshik, Kemayo, Guillotine, Rabbit, fookah, diesal2010",nil,1,1,1,1)
 
 if ExRT.L.TranslateBy ~= "" then
 	ExRT.Options.panel.translateLeft = ExRT.lib.CreateText(ExRT.Options.panel,150,25,nil,25,-280,"LEFT","TOP",nil,12,ExRT.L.SetTranslate,nil,nil,nil,nil,1)

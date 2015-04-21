@@ -276,11 +276,11 @@ function module.options:Load()
 		self.PullsFrame.txtL[i] = ExRT.lib.CreateText(self.PullsFrame,240,14,nil,15,-16-14*i,nil,nil,nil,11,"",nil,1,1,1)
 	end	
 	
-	self.PullsFrame.ScrollBar = ExRT.lib.CreateScrollBar2(self.PullsFrame,14,214,-6,-28,1,1,"TOPRIGHT")
+	self.PullsFrame.ScrollBar = ExRT.lib.CreateScrollBar(self.PullsFrame,14,214,-6,-28,1,1,"TOPRIGHT")
 	self.PullsFrame.ScrollBar:SetScript("OnValueChanged", function(self,event)
 		event = event - event%1
 		module.options.PullsFrame:SetBoss(event)
-		self:reButtonsState()
+		self:ReButtonsState()
 	end)
 	
 	function self.PullsFrame:SetBoss(scrollVal)
@@ -304,7 +304,7 @@ function module.options:Load()
 			
 			module.options.PullsFrame.title:SetText(module.options.PullsFrame.boss)
 			module.options.PullsFrame:Show()
-			module.options.PullsFrame.ScrollBar:reButtonsState()
+			module.options.PullsFrame.ScrollBar:ReButtonsState()
 			module.options.FBframe:Hide()
 		end		
 	end

@@ -181,9 +181,9 @@ L["Frost Resistance"] = "Resistencia al Frío"
 L["Full Scan"] = "Escaneo Completo"
 L["Ghost Wolf"] = "Lobo Fantasma"
 L["Glow Action"] = "Acción de Destello"
-L["Group aura count description"] = [=[La candidad de %s miembros que deben ser afectados por el aura para que el activador se dispare.
+L["Group aura count description"] = [=[La cantidad de %s miembros que deben ser afectados por el aura para que el activador se dispare.
 Si el número introducido es un entero (p.ej. 5), lo interpretaré como el número absoluto de gente afectada el la banda.
-Si el número introducido es una fracción (1/2), decimal (0.5), o un porcentaje (50%%), lo interpretar;e como el porcentaje de jugadores afectados en la banda.
+Si el número introducido es una fracción (1/2), decimal (0.5), o un porcentaje (50%%), lo interpretaré como el porcentaje de jugadores afectados en la banda.
 
 |cFF4444FFPor ejemplo:|r
 |cFF00CC00> 0|r se activa cuando cualquier persona en la banda %s esté afectada

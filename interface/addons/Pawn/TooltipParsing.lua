@@ -146,7 +146,6 @@ PawnRegexes =
 	{PawnGameConstant(MAJOR_GLYPH)}, -- Major Glyph
 	{PawnGameConstant(MINOR_GLYPH)}, -- Minor Glyph
 	{PawnGameConstant(PRIME_GLYPH)}, -- Prime Glyph
-	{PawnGameConstant(PawnLocal.CogwheelName)}, -- Cogwheel
 	{PawnGameConstant(MOUNT)}, -- Cenarion War Hippogryph
 	{PawnGameConstantIgnoredPlaceholder(ITEM_CLASSES_ALLOWED)}, -- Classes:
 	{PawnGameConstantIgnoredPlaceholder(ITEM_RACES_ALLOWED)}, -- Races:
@@ -243,10 +242,6 @@ PawnRegexes =
 	{PawnGameConstant(EMPTY_SOCKET_PRISMATIC), "PrismaticSocket", 1, PawnMultipleStatsFixed},
 	{PawnGameConstant(EMPTY_SOCKET_NO_COLOR), "PrismaticSocket", 1, PawnMultipleStatsFixed}, -- unused
 	{PawnGameConstant(EMPTY_SOCKET_META), "MetaSocket", 1, PawnMultipleStatsFixed},
-	{PawnGameConstant(EMPTY_SOCKET_COGWHEEL), "CogwheelSocket", 1, PawnMultipleStatsFixed}, -- level 85+ epic Engineering crafted helms (Retinal Armor)
-	{PawnGameConstant(EMPTY_SOCKET_HYDRAULIC), "ShaTouchedSocket", 1, PawnMultipleStatsFixed}, -- Sha-Touched items (Kri'tak)
-	{L.OnlyFitsInMetaGemSlot, "MetaSocketEffect", 1, PawnMultipleStatsFixed}, -- Actual meta gems, not the socket
-	{PawnGameConstant(PawnLocal.CrystalOfFearName)}, -- Actual crystals of fear, not the socket
 
 	-- ========================================
 	-- Rare strings that are ignored (common ones are at the top of the file)
@@ -255,10 +250,6 @@ PawnRegexes =
 	{PawnGameConstantIgnoredPlaceholder(ITEM_MIN_LEVEL)}, -- "Requires Level XX"... but "Requires level XX to YY" we DO care about.
 	{PawnGameConstantIgnoredPlaceholder(ITEM_REQ_SKILL)}, -- "Requires SKILL (XX)"
 	{L.Requires2}, -- unused in English
-	{L.Season}, -- Honor and Conquest gear
-	{L.BladesEdgeMountains}, -- Felsworn Gas Mask
-	{L.ShadowmoonValley}, -- Enchanted Illidari Tabard
-	{L.TempestKeep}, -- Cosmic Infuser
 }
 
 -- These regexes work exactly the same as PawnRegexes, but they're used to parse the right side of tooltips.

@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1122, "DBM-BlackrockFoundry", nil, 457)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 13315 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 13543 $"):sub(12, -3))
 mod:SetCreatureID(76865)--No need to add beasts to this. It's always main boss that's engaged first and dies last.
 mod:SetEncounterID(1694)
 mod:SetZone()
@@ -15,15 +15,15 @@ mod:RegisterEventsInCombat(
 	"SPELL_CAST_SUCCESS 155247 155399 154975",
 	"SPELL_AURA_APPLIED 154960 155458 155459 155460 154981 155030 155236 155462 163247",
 	"SPELL_AURA_APPLIED_DOSE 155030 155236",
-	"SPELL_AURA_REMOVED 154960",
-	"SPELL_PERIODIC_DAMAGE 159044 162277 156824 155657",
-	"SPELL_ABSORBED 159044 162277 156824 155657",
+	"SPELL_AURA_REMOVED 154960 154981",
+	"SPELL_PERIODIC_DAMAGE 159044 162277 156823 156824 155657",
+	"SPELL_ABSORBED 159044 162277 156823 156824 155657",
 	"INSTANCE_ENCOUNTER_ENGAGE_UNIT",
 	"UNIT_DIED",
 	"UNIT_SPELLCAST_SUCCEEDED boss1 boss2 boss3 boss4 boss5"--Because boss numbering tends to get out of wack with things constantly joining/leaving fight. I've only seen boss1 and boss2 but for good measure.
 )
 
---TODO, verify normal again to see if it works similar to LFR. heck, verify all modes to see if the failsafe exists in all modes and can further refine call of pack to lose that 1-2 second variation.
+--TODO, maybe combine the 4 beast ability target warnings into one option
 --Boss basic attacks
 local warnPinDownTargets			= mod:NewTargetAnnounce(154960, 3)
 --Boss gained abilities (beast deaths grant boss new abilities)
@@ -35,6 +35,7 @@ local warnClefthoof					= mod:NewTargetAnnounce(155462, 1)--Grants Epicenter
 --Beast abilities (living beasts)
 local warnSearingFangs				= mod:NewStackAnnounce(155030, 2, nil, "Tank")
 local warnInfernoBreath				= mod:NewTargetAnnounce(154989, 4)
+local warnSuperheatedScrap			= mod:NewTargetAnnounce(155499, 4)
 local warnCrushArmor				= mod:NewStackAnnounce(155236, 2, nil, "Tank")
 local warnStampede					= mod:NewSpellAnnounce(155247, 3)
 
@@ -44,10 +45,12 @@ local specWarnPinDown				= mod:NewSpecialWarningSpell("OptionVersion3", 154960, 
 local yellPinDown					= mod:NewYell(154960)
 --Boss gained abilities (beast deaths grant boss new abilities)
 local specWarnRendandTear			= mod:NewSpecialWarningMove(155385, "Melee", nil, nil, nil, nil, 2)--Always returns to melee (tank)
-local specWarnSuperheatedShrapnel	= mod:NewSpecialWarningSpell(155499, nil, nil, nil, 2)--Still iffy on it
+local specWarnSuperheatedShrapnel	= mod:NewSpecialWarningDodge(155499, nil, nil, nil, 2)
 local specWarnFlameInfusion			= mod:NewSpecialWarningMove(155657)
 local specWarnTantrum				= mod:NewSpecialWarningCount(162275, nil, nil, nil, 2, nil, 2)
 local specWarnEpicenter				= mod:NewSpecialWarningMove(159043)
+local specWarnSuperheatedScrap		= mod:NewSpecialWarningMove(156823)
+local yellSuperheated				= mod:NewYell(156823)
 --Beast abilities (living)
 local specWarnSavageHowl			= mod:NewSpecialWarningTarget(155198, "Tank|Healer")
 local specWarnSavageHowlDispel		= mod:NewSpecialWarningDispel("OptionVersion2", 155198, "RemoveEnrage", nil, nil, nil, nil, 2)
@@ -57,7 +60,7 @@ local specWarnSearingFangsOther		= mod:NewSpecialWarningTaunt(155030)--No eviden
 local specWarnInfernoPyre			= mod:NewSpecialWarningMove(156824)
 local specWarnCrushArmor			= mod:NewSpecialWarningStack(155236, nil, 3)--6-9 second cd, 15 second duration, 3 is smallest safe swap, sometimes 2 when favorable RNG
 local specWarnCrushArmorOther		= mod:NewSpecialWarningTaunt(155236)
-local specWarnInfernoBreath			= mod:NewSpecialWarningSpell(154989, nil, nil, nil, 2, nil, 2)
+local specWarnInfernoBreath			= mod:NewSpecialWarningDodge(154989, nil, nil, nil, 2, nil, 2)
 local yellInfernoBreath				= mod:NewYell(154989)
 
 --Boss basic attacks
@@ -69,7 +72,7 @@ mod:AddTimerLine(SPELL_BUCKET_ABILITIES_UNLOCKED)--Abilities Unlocked
 local timerRendandTearCD			= mod:NewCDTimer(12, 155385)
 local timerSuperheatedShrapnelCD	= mod:NewCDTimer(14.2, 155499)
 local timerTantrumCD				= mod:NewNextCountTimer(29.5, 162275)
-local timerEpicenterCD				= mod:NewCDCountTimer(20, 159043, nil, "Melee")
+local timerEpicenterCD				= mod:NewCDCountTimer(19.5, 159043, nil, "Melee")
 --Beast abilities (living)
 mod:AddTimerLine(BATTLE_PET_DAMAGE_NAME_8)--Beast
 local timerSavageHowlCD				= mod:NewCDTimer("OptionVersion2", 25, 155198, nil, "Healer|Tank|RemoveEnrage")
@@ -87,12 +90,14 @@ local voiceCallthePack				= mod:NewVoice("OptionVersion2", 154975, "Tank") --kil
 local voiceSavageHowl				= mod:NewVoice(155198, "RemoveEnrage") --trannow
 local voicePinDown					= mod:NewVoice(154960, "Ranged") --helpme
 local voiceInfernoBreath			= mod:NewVoice(154989) --breathsoon
+local voiceSuperheatedShrapnel		= mod:NewVoice(155499) --breathsoon
 local voiceRendandTear				= mod:NewVoice(155385, "Melee")  --runaway
 local voiceCrushArmor				= mod:NewVoice(155236) --changemt
 local voiceTantrum					= mod:NewVoice(162275) --aesoon
 
 mod:AddRangeFrameOption("8/7/3", nil, "-Melee")
 mod:AddSetIconOption("SetIconOnSpear", 154960)--Not often I make icon options on by default but this one is universally important. YOu always break players out of spear, in any strat.
+mod:AddSetIconOption("SetIconOnConflag", 154981, false)
 mod:AddHudMapOption("HudMapOnBreath", 154989)
 
 mod.vb.RylakAbilities = false
@@ -132,7 +137,7 @@ local function updateBeastTimers(self, all, spellId, adjust)
 	end
 	if self.vb.RylakAbilities and (self:IsMythic() and spellId == 155459 or all) then--Dreadwing
 		timerSuperheatedShrapnelCD:Cancel()
-		timerSuperheatedShrapnelCD:Start(7.5-dismountAdjust)
+		timerSuperheatedShrapnelCD:Start(7.3-dismountAdjust)
 	end
 	if self.vb.ElekkAbilities and (self:IsMythic() and spellId == 163247 or all) then--Ironcrusher
 		timerTantrumCD:Cancel()
@@ -185,6 +190,18 @@ local function updateBeastTimers(self, all, spellId, adjust)
 		end
 		timerPinDownCD:Start(12)
 		countdownPinDown:Start(12)
+	end
+end
+
+function mod:SuperheatedTarget(targetname, uId)
+	if not targetname then return end
+	warnSuperheatedScrap:Show(targetname)
+	if targetname == UnitName("player") then
+		yellSuperheated:Yell()
+	end
+	if self.Options.HudMapOnBreath then
+		--Static marker, breath doesn't move once a target is picked. it's aimed at static location player WAS
+		DBMHudMap:RegisterStaticMarkerOnPartyMember(154989, "highlight", targetname, 5, 6.5, 1, 0, 0, 0.5):Pulse(0.5, 0.5)
 	end
 end
 
@@ -296,8 +313,13 @@ function mod:SPELL_AURA_APPLIED(args)
 			voicePinDown:Cancel()
 			voicePinDown:Schedule(0.5, "helpme")
 		end
-	elseif spellId == 154981 and self:CheckDispelFilter() then
-		specWarnConflag:CombinedShow(2, args.destName)
+	elseif spellId == 154981 then
+		if self:CheckDispelFilter() then
+			specWarnConflag:CombinedShow(2.3, args.destName)
+		end
+		if self.Options.SetIconOnConflag and not self:IsLFR() then
+			self:SetSortedIcon(2.3, args.destName, 1, 3)
+		end
 	elseif spellId == 155030 then
 		local amount = args.amount or 1
 		if amount % 3 == 0 and amount >= 12 then--Stack assumed, may need revising
@@ -353,6 +375,8 @@ function mod:SPELL_AURA_REMOVED(args)
 local spellId = args.spellId
 	if spellId == 154960 and self.Options.SetIconOnSpear then
 		self:SetIcon(args.destName, 0)
+	elseif spellId == 154981 and self.Options.SetIconOnConflag and not self:IsLFR() then
+		self:SetIcon(args.destName, 0)
 	end
 end
 
@@ -361,8 +385,10 @@ function mod:SPELL_PERIODIC_DAMAGE(_, _, _, _, destGUID, _, _, _, spellId)
 		specWarnEpicenter:Show()
 	elseif spellId == 156824 and destGUID == UnitGUID("player") and self:AntiSpam(2, 3) then
 		specWarnInfernoPyre:Show()
-	elseif spellId == 155657 and destGUID == UnitGUID("player") and self:AntiSpam(2, 3) then
+	elseif spellId == 155657 and destGUID == UnitGUID("player") and self:AntiSpam(2, 4) then
 		specWarnFlameInfusion:Show()
+	elseif spellId == 156823 and destGUID == UnitGUID("player") and self:AntiSpam(2, 5) then
+		specWarnSuperheatedScrap:Show()
 	end
 end
 mod.SPELL_ABSORBED = mod.SPELL_PERIODIC_DAMAGE
@@ -449,10 +475,7 @@ function mod:UNIT_DIED(args)
 		elseif cid == 76874 then
 			timerConflagCD:Cancel()
 			timerInfernoBreathCD:Cancel()
-			if self.Options.HudMapOnBreath then
-				DBMHudMap:Disable()
-			end
-			self:BossTargetScannerAbort(76874, "BreathTarget")
+			self:BossUnitTargetScannerAbort()
 		elseif cid == 76945 then
 			timerStampedeCD:Cancel()
 			timerTantrumCD:Cancel()
@@ -481,7 +504,10 @@ function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, _, _, spellId)
 		voiceTantrum:Play("aesoon")
 	elseif spellId == 155603 then--Face Random Non-Tank (boss version)
 		specWarnSuperheatedShrapnel:Show()
+		voiceSuperheatedShrapnel:Play("breathsoon")
 		timerSuperheatedShrapnelCD:Start()
+		--self:BossTargetScanner(76865, "SuperheatedTarget", 0.05, 40)--Apparently scanning this does work in LFR, but I've never seen him look at a target on mythic
+		self:BossUnitTargetScanner(uId, "SuperheatedTarget")
 	elseif spellId == 155385 or spellId == 155515 then--Both versions of spell(boss and beast), they seem to have same cooldown so combining is fine
 		specWarnRendandTear:Show()
 		timerRendandTearCD:Start()
@@ -495,6 +521,7 @@ function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, _, _, spellId)
 		specWarnInfernoBreath:Show()
 		timerInfernoBreathCD:Start()
 		voiceInfernoBreath:Play("breathsoon")
-		self:BossTargetScanner(76874, "BreathTarget", 0.05, 80, nil, nil, false)
+		--self:BossTargetScanner(76874, "BreathTarget", 0.05, 40)
+		self:BossUnitTargetScanner(uId, "BreathTarget")
 	end
 end

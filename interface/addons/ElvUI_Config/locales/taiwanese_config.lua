@@ -54,9 +54,9 @@ L["TEXT_FORMAT_DESC"] = [=[請填入代碼以變更文字格式。
 'deficit' - 顯示損失數值，若未損失生命/能量值，將不予顯示
 
 名稱格式：
-'name-short' - 名稱上限為 10 個字元
-'name-medium' - 名稱上限為 15 個字元
-'name-long' - 名稱上限為 20 個字元
+'name:short' - 名稱上限為 10 個字元
+'name:medium' - 名稱上限為 15 個字元
+'name:long' - 名稱上限為 20 個字元
 
 若要停用此功能，此欄位請留空。如需更多資訊，請至 http://www.tukui.org]=];
 
@@ -133,11 +133,15 @@ L["Condensed"] = true;
 L["Currency Format"] = '貨幣格式'
 L["Descending"] = "降序"
 L["Direction the bag sorting will use to allocate the items."] = "整理背包物品時，將依此排序方向排放物品."
+L["Display Item Level"] = true;
+L["Displays item level on equippable items."] = true;
 L["Enable/Disable the all-in-one bag."] = "啟用/停用整合背包."
 L["Enable/Disable the Bag-Bar."] = "啟用/停用背包條."
 L["Full"] = true;
 L["Icons and Text"] = '圖示與文字'
 L["Ignore Items"] = "忽略項目"
+L["Item Level Threshold"] = true;
+L["Item Level"] = true;
 L["List of items to ignore when sorting. If you wish to add multiple items you must seperate the word with a comma."] = "忽略清單中的項目，如果你想添加多個項目，你必須用逗號將它們分開."
 L["Money Format"] = true;
 L["Panel Width (Bags)"] = '框架寬度 (背包)'
@@ -155,6 +159,7 @@ L["The direction that the bag frames will grow from the anchor."] = "新增的�
 L["The display format of the currency icons that get displayed below the main bag. (You have to be watching a currency for this to display)"] = '背包主框架下方的兌換通貨圖示顯示格式.需先設定監控特定兌換通貨，才會顯示於背包框架.'
 L["The display format of the money text that is shown at the top of the main bag."] = true;
 L["The frame is not shown unless you mouse over the frame."] = "僅於游標移經快捷列時顯示框架."
+L["The minimum item level required for it to be shown."] = true;
 L["The size of the individual buttons on the bag frame."] = '背包框架單個格子的尺寸.'
 L["The size of the individual buttons on the bank frame."] = '銀行框架單個格子的尺寸.'
 L["The spacing between buttons."] = "兩個按鈕間的距離."
@@ -212,7 +217,11 @@ L["Display LFG Icons in group chat."] = true;
 L["Display the hyperlink tooltip while hovering over a hyperlink."] = "滑鼠懸停在超鏈接上時顯示鏈接提示框."
 L["Enable the use of separate size options for the right chat panel."] = true;
 L["Fade Chat"] = "對話內容漸隱"
+L["Fade Tabs No Backdrop"] = true;
 L["Fade the chat text when there is no activity."] = '未出現新訊息時，隱藏對話框的文字.'
+L["Fade Undocked Tabs"] = true;
+L["Fades the text on chat tabs that are docked in a panel where the backdrop is disabled."] = true;
+L["Fades the text on chat tabs that are not docked at the left or right chat panel."] = true;
 L["Font Outline"] = "字體描邊"
 L["Font"] = "字體"
 L["Hide Both"] = "全部隱藏"
@@ -355,7 +364,10 @@ L["Make the world map smaller."] = true;
 L["Multi-Monitor Support"] = true;
 L["Name Font"] = "名稱字體"
 L["Objective Frame Height"] = true;
+L["Party / Raid"] = true;
+L["Party Only"] = true;
 L["Position of bonus quest reward frame relative to the objective tracker."] = true;
+L["Raid Only"] = true;
 L["Remove Backdrop"] = "移除背景"
 L["Reset all frames to their original positions."] = "重設所有框架至預設位置."
 L["Reset Anchors"] = "重置位置"
@@ -664,9 +676,11 @@ L["Destruction"] = "毀滅"
 L["Detach From Frame"] = true;
 L["Detached Width"] = true;
 L["Direction the health bar moves when gaining/losing health."] = "生命條的增減方向."
-L["Disable Blizzard"] = "停用內建框架"
+L["Disabled Blizzard Frames"] = true;
 L["Disabled"] = "禁用"
-L["Disables the blizzard party/raid frames."] = "停用Blizzard內建的隊伍/團隊框架."
+L["Disables the focus and target of focus unitframes."] = true;
+L["Disables the player and pet unitframes."] = true;
+L["Disables the target and target of target unitframes."] = true;
 L["Disconnected"] = "離線"
 L["Display a spark texture at the end of the castbar statusbar to help show the differance between castbar and backdrop."] = "在施法狀態條的末端顯示一個火花材質來區分施法條和背景條."
 L["Display druid mana bar when in cat or bear form and when mana is not 100%."] = true;
@@ -838,6 +852,7 @@ L["Spark"] = "火花"
 L["Spec Icon"] = "天賦圖示"
 L["Spell not found in list."] = "列表中未發現技能"
 L["Spells"] = "技能"
+L["Stack Threshold"] = true;
 L["Stagger Bar"] = "醉酒列"
 L["Start Near Center"] = "由中心開始"
 L["StatusBar Texture"] = "狀態條材質"
@@ -857,6 +872,7 @@ L["Text yOffset"] = "文字Y軸偏移"
 L["Text"] = "文本"
 L["Textured Icon"] = "圖示紋理"
 L["The alpha to set units that are out of range to."] = "單位框架超出距離的透明度."
+L["The debuff needs to reach this amount of stacks before it is shown. Set to 0 to always show the debuff."] = true;
 L["The following macro must be true in order for the group to be shown, in addition to any filter that may already be set."] = "為了顯示設定過的過濾器下面的巨集必須啟用."
 L["The font that the unitframes will use."] = "單位框架字體."
 L["The initial group will start near the center and grow out."] = "最初的隊伍由中心開始增長."

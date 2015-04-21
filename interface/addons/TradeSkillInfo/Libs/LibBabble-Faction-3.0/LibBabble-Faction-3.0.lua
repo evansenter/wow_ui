@@ -1,6 +1,6 @@
 --[[
 Name: LibBabble-Faction-3.0
-Revision: $Rev: 193 $
+Revision: $Rev: 197 $
 Maintainers: ckknight, nevcairiel, Ackis
 Website: http://www.wowace.com/projects/libbabble-faction-3-0/
 Dependencies: None
@@ -8,7 +8,7 @@ License: MIT
 ]]
 
 local MAJOR_VERSION = "LibBabble-Faction-3.0"
-local MINOR_VERSION = 90000 + tonumber(("$Rev: 193 $"):match("%d+"))
+local MINOR_VERSION = 90000 + tonumber(("$Rev: 197 $"):match("%d+"))
 
 if not LibStub then error(MAJOR_VERSION .. " requires LibStub.") end
 local lib = LibStub("LibBabble-3.0"):New(MAJOR_VERSION, MINOR_VERSION)
@@ -340,13 +340,13 @@ elseif GAME_LOCALE == "deDE" then
 	Undercity = "Unterstadt",
 	["Valiance Expedition"] = "Expedition Valianz",
 	-- Vivianne = "",
-	-- ["Vol'jin's Spear"] = "",
+	["Vol'jin's Spear"] = "Vol'jins Speer", -- Needs review
 	["Warsong Offensive"] = "Kriegshymnenoffensive",
 	["Warsong Outriders"] = "Vorhut des Kriegshymnenklan",
 	["Wildhammer Clan"] = "Wildhammerklan",
 	["Winterfin Retreat"] = "Zuflucht der Winterflossen",
 	["Wintersaber Trainers"] = "Wintersäblerausbilder",
-	-- ["Wrynn's Vanguard"] = "",
+	["Wrynn's Vanguard"] = "Wrynns Vorhut", -- Needs review
 	["Zandalar Tribe"] = "Stamm der Zandalari",
 }
 elseif GAME_LOCALE == "frFR" then
@@ -517,16 +517,16 @@ elseif GAME_LOCALE == "frFR" then
 elseif GAME_LOCALE == "koKR" then
 	lib:SetCurrentTranslations {
 	Acquaintance = "지인",
-	-- ["Aeda Brightdawn"] = "",
+	["Aeda Brightdawn"] = "에이다 브라이트돈", -- Needs review
 	Alliance = "얼라이언스",
 	["Alliance Vanguard"] = "얼라이언스 선봉대",
-	-- ["Arakkoa Outcasts"] = "",
+	["Arakkoa Outcasts"] = "추방된 아라코아", -- Needs review
 	["Argent Crusade"] = "은빛십자군",
 	["Argent Dawn"] = "은빛 여명회",
 	["Ashtongue Deathsworn"] = "잿빛혓바닥 결사단",
 	["Avengers of Hyjal"] = "하이잘의 복수자",
 	["Baradin's Wardens"] = "바라딘 집행단",
-	-- ["Barracks Bodyguards"] = "",
+	["Barracks Bodyguards"] = "병영 경호원", -- Needs review
 	["Best Friend"] = "가장 친한 친구",
 	["Bilgewater Cartel"] = "빌지워터 무역회사",
 	["Bizmo's Brawlpub"] = "비즈모의 싸움굴",
@@ -558,7 +558,7 @@ elseif GAME_LOCALE == "koKR" then
 	Friend = "친구",
 	Friendly = "약간 우호적",
 	["Frostwolf Clan"] = "서리늑대 부족",
-	-- ["Frostwolf Orcs"] = "",
+	["Frostwolf Orcs"] = "서리늑대 오크", -- Needs review
 	Gadgetzan = "가젯잔",
 	["Gelkis Clan Centaur"] = "겔키스 부족 켄타로우스",
 	Gilneas = "길니아스",
@@ -584,8 +584,8 @@ elseif GAME_LOCALE == "koKR" then
 	["Kirin Tor Offensive"] = "키린 토 선봉대",
 	["Knights of the Ebon Blade"] = "칠흑의 기사단",
 	Kurenai = "쿠레나이",
-	-- ["Laughing Skull Orcs"] = "",
-	-- Leorajh = "",
+	["Laughing Skull Orcs"] = "웃는 해골 오크", -- Needs review
+	Leorajh = "레오라즈", -- Needs review
 	["Lower City"] = "고난의 거리",
 	["Magram Clan Centaur"] = "마그람 부족 켄타로우스",
 	["Nat Pagle"] = "내트 페이글",
@@ -624,13 +624,13 @@ elseif GAME_LOCALE == "koKR" then
 	["Silverwing Sentinels"] = "은빛날개 파수대",
 	Sporeggar = "스포어가르",
 	-- ["Steamwheedle Draenor Expedition"] = "",
-	-- ["Steamwheedle Preservation Society"] = "",
+	["Steamwheedle Preservation Society"] = "스팀휘들 유물 복원회", -- Needs review
 	["Stormpike Guard"] = "스톰파이크 경비대",
 	Stormwind = "스톰윈드",
 	Stranger = "이방인",
 	["Sunreaver Onslaught"] = "선리버 돌격대",
 	Syndicate = "비밀결사대",
-	-- ["Talonpriest Ishaal"] = "",
+	["Talonpriest Ishaal"] = "갈퀴사제 이샤알", -- Needs review
 	["The Aldor"] = "알도르 사제회",
 	["The Anglers"] = "강태공 연합",
 	["The Ashen Verdict"] = "잿빛 선고단",
@@ -664,13 +664,13 @@ elseif GAME_LOCALE == "koKR" then
 	["Thunder Bluff"] = "썬더 블러프",
 	["Timbermaw Hold"] = "나무구렁 요새",
 	["Tina Mudclaw"] = "티나 머드클로",
-	-- Tormmok = "",
+	Tormmok = "토르모크", -- Needs review
 	Tranquillien = "트랜퀼리엔",
 	["Tushui Pandaren"] = "투슈이 판다렌",
 	Undercity = "언더시티",
 	["Valiance Expedition"] = "용맹의 원정대",
-	-- Vivianne = "",
-	-- ["Vol'jin's Spear"] = "",
+	Vivianne = "비비안", -- Needs review
+	["Vol'jin's Spear"] = "볼진의 창", -- Needs review
 	["Warsong Offensive"] = "전쟁노래 공격대",
 	["Warsong Outriders"] = "전쟁노래 정찰대",
 	["Wildhammer Clan"] = "와일드해머 부족",
@@ -682,34 +682,34 @@ elseif GAME_LOCALE == "koKR" then
 elseif GAME_LOCALE == "esES" then
 	lib:SetCurrentTranslations {
 	Acquaintance = "Conocido", -- Needs review
-	-- ["Aeda Brightdawn"] = "",
+	["Aeda Brightdawn"] = "Aeda Alba Brillante", -- Needs review
 	Alliance = "Alianza",
 	["Alliance Vanguard"] = "Vanguardia de la Alianza",
-	-- ["Arakkoa Outcasts"] = "",
+	["Arakkoa Outcasts"] = "Arakkoa desterrados", -- Needs review
 	["Argent Crusade"] = "Cruzada Argenta",
 	["Argent Dawn"] = "El Alba Argenta",
 	["Ashtongue Deathsworn"] = "Juramorte Lengua de ceniza",
 	["Avengers of Hyjal"] = "Vengadores de Hyjal",
 	["Baradin's Wardens"] = "Celadores de Baradin",
-	-- ["Barracks Bodyguards"] = "",
+	["Barracks Bodyguards"] = "Guardaespaldas del cuartel", -- Needs review
 	["Best Friend"] = "Mejor amigo", -- Needs review
 	["Bilgewater Cartel"] = "Cártel Pantoque",
-	-- ["Bizmo's Brawlpub"] = "",
+	["Bizmo's Brawlpub"] = "Club de Lucha de Bizmo", -- Needs review
 	["Bloodsail Buccaneers"] = "Bucaneros Velasangre",
 	["Booty Bay"] = "Bahía del Botín",
-	-- ["Brawl'gar Arena"] = "",
+	["Brawl'gar Arena"] = "Arena Liza'gar", -- Needs review
 	["Brood of Nozdormu"] = "Linaje de Nozdormu",
 	Buddy = "Compañero", -- Needs review
 	["Cenarion Circle"] = "Círculo Cenarion",
 	["Cenarion Expedition"] = "Expedición Cenarion",
 	["Chee Chee"] = "Chee Chee", -- Needs review
-	-- ["Council of Exarchs"] = "",
+	["Council of Exarchs"] = "Consejo de Exarcas", -- Needs review
 	["Darkmoon Faire"] = "Feria de la Luna Negra",
 	["Darkspear Trolls"] = "Trols Lanza Negra",
 	Darnassus = "Darnassus",
-	-- ["Defender Illona"] = "",
-	-- ["Delvar Ironfist"] = "",
-	-- ["Dominance Offensive"] = "",
+	["Defender Illona"] = "Defensora Illona", -- Needs review
+	["Delvar Ironfist"] = "Delvar Puño de Hierro", -- Needs review
+	["Dominance Offensive"] = "Ofensiva de Dominancia", -- Needs review
 	["Dragonmaw Clan"] = "Clan Faucedraco",
 	Ella = "Ella", -- Needs review
 	Everlook = "Vista Eterna",
@@ -723,7 +723,7 @@ elseif GAME_LOCALE == "esES" then
 	Friend = "Amigo", -- Needs review
 	Friendly = "Amistoso",
 	["Frostwolf Clan"] = "Clan Lobo Gélido",
-	-- ["Frostwolf Orcs"] = "",
+	["Frostwolf Orcs"] = "Orcos Lobo Gélido", -- Needs review
 	Gadgetzan = "Gadgetzan",
 	["Gelkis Clan Centaur"] = "Centauros del clan Gelkis",
 	Gilneas = "Gilneas",
@@ -746,41 +746,41 @@ elseif GAME_LOCALE == "esES" then
 	["Jogu the Drunk"] = "Jogo el Ebrio", -- Needs review
 	["Keepers of Time"] = "Vigilantes del Tiempo",
 	["Kirin Tor"] = "Kirin Tor",
-	-- ["Kirin Tor Offensive"] = "",
+	["Kirin Tor Offensive"] = "Ofensiva del Kirin Tor", -- Needs review
 	["Knights of the Ebon Blade"] = "Caballeros de la Espada de Ébano",
 	Kurenai = "Kurenai",
-	-- ["Laughing Skull Orcs"] = "",
-	-- Leorajh = "",
+	["Laughing Skull Orcs"] = "Orcos Riecráneos", -- Needs review
+	Leorajh = "Leorajh", -- Needs review
 	["Lower City"] = "Bajo Arrabal",
 	["Magram Clan Centaur"] = "Centauros del clan Magram",
 	["Nat Pagle"] = "Nat Pagle", -- Needs review
 	Netherwing = "Ala Abisal",
 	Neutral = "Neutral",
-	-- Nomi = "",
+	Nomi = "Nomi", -- Needs review
 	["Ogri'la"] = "Ogri'la",
 	["Old Hillpaw"] = "Viejo Zarpa Collado", -- Needs review
-	-- ["Operation: Aardvark"] = "",
-	-- ["Operation: Shieldwall"] = "",
+	["Operation: Aardvark"] = "Operación: Oricteropo", -- Needs review
+	["Operation: Shieldwall"] = "Muro de escudos", -- Needs review
 	["Order of the Cloud Serpent"] = "Orden del dragón nimbo", -- Needs review
 	Orgrimmar = "Orgrimmar",
 	["Pearlfin Jinyu"] = "Jinyu Aleta de Nácar", -- Needs review
 	Ramkahen = "Ramkahen",
-	-- ["Rank 1"] = "",
-	-- ["Rank 2"] = "",
-	-- ["Rank 3"] = "",
-	-- ["Rank 4"] = "",
-	-- ["Rank 5"] = "",
-	-- ["Rank 6"] = "",
-	-- ["Rank 7"] = "",
-	-- ["Rank 8"] = "",
+	["Rank 1"] = "Rango 1", -- Needs review
+	["Rank 2"] = "Rango 2", -- Needs review
+	["Rank 3"] = "Rango 3", -- Needs review
+	["Rank 4"] = "Rango 4", -- Needs review
+	["Rank 5"] = "Rango 5", -- Needs review
+	["Rank 6"] = "Rango 6", -- Needs review
+	["Rank 7"] = "Rango 7", -- Needs review
+	["Rank 8"] = "Rango 8", -- Needs review
 	Ratchet = "Trinquete",
 	Ravenholdt = "Ravenholdt",
 	Revered = "Reverenciado",
 	["Shado-Pan"] = "Shadopan", -- Needs review
-	-- ["Shado-Pan Assault"] = "",
-	-- ["Shadowmoon Exiles"] = "",
+	["Shado-Pan Assault"] = "Asalto del Shadopan", -- Needs review
+	["Shadowmoon Exiles"] = "Exiliados Sombraluna", -- Needs review
 	["Shang Xi's Academy"] = "Academia de Shang Xi", -- Needs review
-	-- ["Sha'tari Defense"] = "",
+	["Sha'tari Defense"] = "Defensa Sha'tari", -- Needs review
 	["Sha'tari Skyguard"] = "Guardia del cielo Sha'tari",
 	["Shattered Sun Offensive"] = "Ofensiva Sol Devastado",
 	["Shen'dralar"] = "Shen'dralar",
@@ -788,14 +788,14 @@ elseif GAME_LOCALE == "esES" then
 	["Silvermoon City"] = "Ciudad de Lunargenta",
 	["Silverwing Sentinels"] = "Centinelas Ala de Plata",
 	Sporeggar = "Esporaggar",
-	-- ["Steamwheedle Draenor Expedition"] = "",
-	-- ["Steamwheedle Preservation Society"] = "",
+	["Steamwheedle Draenor Expedition"] = "Expedición Bonvapor de Draenor", -- Needs review
+	["Steamwheedle Preservation Society"] = "Sociedad Patrimonial Bonvapor", -- Needs review
 	["Stormpike Guard"] = "Guardia Pico Tormenta",
 	Stormwind = "Ventormenta",
 	Stranger = "Extraño", -- Needs review
-	-- ["Sunreaver Onslaught"] = "",
+	["Sunreaver Onslaught"] = "Embate de los Atracasol", -- Needs review
 	Syndicate = "La Hermandad",
-	-- ["Talonpriest Ishaal"] = "",
+	["Talonpriest Ishaal"] = "Sacerdote de la garra Ishaal", -- Needs review
 	["The Aldor"] = "Los Aldor",
 	["The Anglers"] = "Los Pescadores", -- Needs review
 	["The Ashen Verdict"] = "El Veredicto Cinéreo",
@@ -829,19 +829,19 @@ elseif GAME_LOCALE == "esES" then
 	["Thunder Bluff"] = "Cima del Trueno",
 	["Timbermaw Hold"] = "Bastión Fauces de Madera",
 	["Tina Mudclaw"] = "Tina Zarpa Fangosa", -- Needs review
-	-- Tormmok = "",
+	Tormmok = "Tormmok", -- Needs review
 	Tranquillien = "Tranquillien",
 	["Tushui Pandaren"] = "Pandaren Tushui", -- Needs review
 	Undercity = "Entrañas",
 	["Valiance Expedition"] = "Expedición de Denuedo",
-	-- Vivianne = "",
-	-- ["Vol'jin's Spear"] = "",
+	Vivianne = "Vivianne", -- Needs review
+	["Vol'jin's Spear"] = "Lanza de Vol'jin", -- Needs review
 	["Warsong Offensive"] = "Ofensiva Grito de Guerra",
 	["Warsong Outriders"] = "Escoltas Grito de Guerra",
 	["Wildhammer Clan"] = "Clan Martillo Salvaje",
 	["Winterfin Retreat"] = "Retiro Aleta Invernal",
 	["Wintersaber Trainers"] = "Instructores de Sableinvernales",
-	-- ["Wrynn's Vanguard"] = "",
+	["Wrynn's Vanguard"] = "Vanguardia de Wrynn", -- Needs review
 	["Zandalar Tribe"] = "Tribu Zandalar",
 }
 elseif GAME_LOCALE == "esMX" then

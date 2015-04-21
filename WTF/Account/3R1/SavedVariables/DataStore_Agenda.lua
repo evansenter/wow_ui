@@ -3,11 +3,11 @@ DataStore_AgendaDB = {
 	["profileKeys"] = {
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Metal - Illidan"] = "Metal - Illidan",
-		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
 		["Combustion - Illidan"] = "Combustion - Illidan",
-		["Natal - Illidan"] = "Natal - Illidan",
-		["Evan - Illidan"] = "Evan - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
+		["Evan - Illidan"] = "Evan - Illidan",
+		["Natal - Illidan"] = "Natal - Illidan",
+		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
 	},
 	["global"] = {
 		["Options"] = {
@@ -25,10 +25,22 @@ DataStore_AgendaDB = {
 						["note"] = "",
 					},
 				},
-				["lastUpdate"] = 1426618387,
+				["lastUpdate"] = 1426721817,
 			},
 			["Default.Illidan.Combustion"] = {
 				["lastUpdate"] = 1424741664,
+			},
+			["Default.Illidan.Metal"] = {
+				["lastUpdate"] = 1426618288,
+			},
+			["Default.Illidan.Natal"] = {
+				["lastUpdate"] = 1424741647,
+			},
+			["Default.Illidan.Comet"] = {
+				["DungeonIDs"] = {
+					["Blackrock Foundry Mythic|182974408"] = "478243|1426734564|0|1",
+				},
+				["lastUpdate"] = 1426734563,
 			},
 			["Default.Dark Iron.Colton"] = {
 				["Contacts"] = {
@@ -40,8 +52,8 @@ DataStore_AgendaDB = {
 					},
 					["Purephase"] = {
 						["note"] = "",
-						["class"] = "Rogue",
 						["level"] = 100,
+						["class"] = "Rogue",
 					},
 					["Rfl"] = {
 						["note"] = "",
@@ -52,7 +64,7 @@ DataStore_AgendaDB = {
 					["Hemos"] = {
 						["note"] = "",
 					},
-					["Bubblegurl"] = {
+					["Billbraskie"] = {
 						["note"] = "",
 					},
 					["Faluzure"] = {
@@ -61,20 +73,11 @@ DataStore_AgendaDB = {
 					["Pockee"] = {
 						["note"] = "",
 					},
-					["Billbraskie"] = {
+					["Bubblegurl"] = {
 						["note"] = "",
 					},
 				},
 				["lastUpdate"] = 1424741733,
-			},
-			["Default.Illidan.Natal"] = {
-				["lastUpdate"] = 1424741647,
-			},
-			["Default.Illidan.Metal"] = {
-				["lastUpdate"] = 1426618288,
-			},
-			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1426632933,
 			},
 		},
 	},

@@ -1391,8 +1391,68 @@ function Kromog:Load()
 		DisableSync()
 	end)
 	
+	local function SetupsDropDown_Load(_,arg)
+		for i=1,#Kromog.runes do
+			VExRT.Bossmods.Kromog[i] = VExRT.Bossmods.KromogSetups[arg][i]
+		end
+		Kromog:ReRoster()
+		DisableSync()
+		CloseDropDownMenus()
+	end
+	local function SetupsDropDown_Clear(_,arg)
+		for i=1,#Kromog.runes do
+			VExRT.Bossmods.KromogSetups[arg][i] = nil
+		end
+		VExRT.Bossmods.KromogSetups[arg].date = nil
+		CloseDropDownMenus()
+	end
+	local function SetupsDropDown_Save(_,arg)
+		for i=1,#Kromog.runes do
+			VExRT.Bossmods.KromogSetups[arg][i] = VExRT.Bossmods.Kromog[i]
+		end
+		VExRT.Bossmods.KromogSetups[arg].date = time()
+		CloseDropDownMenus()
+	end
+	local function SetupsDropDown_Close()
+		CloseDropDownMenus()
+	end
+	
+	local setupsDropDown = CreateFrame("Frame", "ExRT_Kromog_SetupsDropDown", nil, "UIDropDownMenuTemplate")
+	Kromog.setupFrame.setupsButton = ExRT.lib.CreateButton(Kromog.setupFrame,120,22,nil,0,0,ExRT.L.BossmodsKromogSetups)
+	ExRT.lib.SetPoint(Kromog.setupFrame.setupsButton,"BOTTOMRIGHT",Kromog.setupFrame.byName,"TOPRIGHT",0,0)
+	Kromog.setupFrame.setupsButton:SetScript("OnClick",function (self)
+		VExRT.Bossmods.KromogSetups = VExRT.Bossmods.KromogSetups or {}
+	
+		local dropDown = {
+			{ text = ExRT.L.BossmodsKromogSetups, isTitle = true, notCheckable = true, notClickable = true},
+		}
+		for i=1,5 do
+			VExRT.Bossmods.KromogSetups[i] = VExRT.Bossmods.KromogSetups[i] or {}
+		
+			local subMenu = nil
+			local saveMenu = { text = ExRT.L.BossmodsKromogSetupsSave, func = SetupsDropDown_Save, arg1 = i, notCheckable = true }
+			local loadMenu = { text = ExRT.L.BossmodsKromogSetupsLoad, func = SetupsDropDown_Load, arg1 = i, notCheckable = true }
+			local clearMenu = { text = ExRT.L.BossmodsKromogSetupsClear, func = SetupsDropDown_Clear, arg1 = i, notCheckable = true }
+			
+			local isExists = VExRT.Bossmods.KromogSetups[i].date
+			local dateText = ""
+			if isExists then
+				subMenu = {loadMenu,saveMenu,clearMenu}
+				dateText = ". "..date("%H:%M:%S %d.%m.%Y",isExists)
+			else
+				subMenu = {saveMenu}
+			end
+			
+			dropDown[i+1] = {
+				text = i..dateText, hasArrow = true, menuList = subMenu, notCheckable = true
+			}
+		end
+		dropDown[7] = { text = ExRT.L.BossmodsKromogSetupsClose, func = SetupsDropDown_Close, notCheckable = true }
+		EasyMenu(dropDown, setupsDropDown, "cursor", 10 , -15, "MENU")
+	end)
+		
 	Kromog.setupFrame.sendButton = ExRT.lib.CreateButton(Kromog.setupFrame,120,22,nil,0,0,ExRT.L.BossmodsKromogSend)
-	ExRT.lib.SetPoint(Kromog.setupFrame.sendButton,"BOTTOMRIGHT",Kromog.setupFrame.byName,"TOPRIGHT",0,0)
+	ExRT.lib.SetPoint(Kromog.setupFrame.sendButton,"BOTTOMRIGHT",Kromog.setupFrame.setupsButton,"TOPRIGHT",0,0)
 	Kromog.setupFrame.sendButton:SetScript("OnClick",function (self)
 		local line = ""
 		for i=1,#Kromog.runes do
@@ -1423,6 +1483,17 @@ function Kromog:Load()
 		else
 			VExRT.Bossmods.Kromog.DisableArrow = nil
 			Kromog.setupFrame:RegisterEvent("CHAT_MSG_RAID_BOSS_EMOTE")
+		end
+	end)
+	
+	Kromog.setupFrame.onlyTrustedChk = ExRT.lib.CreateCheckBox(Kromog.setupFrame,nil,0,0,ExRT.L.BossmodsKromogOnlyTrusted,not VExRT.Bossmods.Kromog.UpdatesFromAll,ExRT.L.BossmodsKromogOnlyTrustedTooltip)
+	ExRT.lib.SetPoint(Kromog.setupFrame.onlyTrustedChk,"BOTTOMLEFT",Kromog.setupFrame.disableArrowChk,"TOPLEFT",0,-7)
+	Kromog.setupFrame.onlyTrustedChk:SetScale(0.9)
+	Kromog.setupFrame.onlyTrustedChk:SetScript("OnClick",function (self)
+		if self:GetChecked() then
+			VExRT.Bossmods.Kromog.UpdatesFromAll = nil
+		else
+			VExRT.Bossmods.Kromog.UpdatesFromAll = true
 		end
 	end)
 	
@@ -1498,6 +1569,27 @@ function Kromog:Load()
 		Kromog.setupFrame:RegisterEvent("CHAT_MSG_RAID_BOSS_EMOTE")
 	end
 	Kromog.setupFrame:SetScript("OnEvent",KromogFrameOnEvent)
+	Kromog.setupFrame:SetScript("OnShow",function (self)
+		local isAlpha = false
+		if IsInRaid() then
+			if ExRT.mds.IsPlayerRLorOfficer(UnitName('player')) then
+				isAlpha = false
+			else
+				isAlpha = true
+			end
+		end
+		if isAlpha then
+			self.clearButton:SetAlpha(.2)
+			self.byName:SetAlpha(.2)
+			self.sendButton:SetAlpha(.2)
+			self.setupsButton:SetAlpha(.2)
+		else
+			self.clearButton:SetAlpha(1)
+			self.byName:SetAlpha(1)
+			self.sendButton:SetAlpha(1)
+			self.setupsButton:SetAlpha(1)		
+		end
+	end)
 
 	if not VExRT.Bossmods.Kromog.name or not VExRT.Bossmods.Kromog.time then
 		Kromog.setupFrame.lastUpdate:SetText("")
@@ -1513,6 +1605,10 @@ end
 
 function Kromog:addonMessage(sender, prefix, ...)
 	if prefix == "kromog" then
+		if IsInRaid() and not VExRT.Bossmods.Kromog.UpdatesFromAll and not ExRT.mds.IsPlayerRLorOfficer(sender) then
+			return
+		end
+	
 		local pos1,name1,pos2,name2,pos3,name3 = ...
 		VExRT.Bossmods.Kromog.time = time()
 		VExRT.Bossmods.Kromog.name = sender

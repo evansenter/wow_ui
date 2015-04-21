@@ -10,7 +10,9 @@ module.db.raidIDs = {
 }
 
 function module.options:Load()
-	self.enableChk = ExRT.lib.CreateCheckBox(self,nil,10,-10,ExRT.L.LoggingEnable)
+	self:CreateTilte()
+
+	self.enableChk = ExRT.lib.CreateCheckBox(self,nil,10,-30,ExRT.L.LoggingEnable,VExRT.Logging.enabled)
 	self.enableChk:SetScript("OnClick", function(self,event) 
 		if self:GetChecked() then
 			VExRT.Logging.enabled = true
@@ -20,9 +22,8 @@ function module.options:Load()
 			module:Disable()
 		end
 	end)
-	self.enableChk:SetChecked(VExRT.Logging.enabled)
 		
-	self.shtml1 = ExRT.lib.CreateText(self,585,0,"TOP",0,-45,nil,"TOP",nil,12,"- "..ExRT.L.RaidLootT17Highmaul.."\n- "..ExRT.L.RaidLootT17BF)
+	self.shtml1 = ExRT.lib.CreateText(self,585,0,"TOP",0,-65,nil,"TOP",nil,12,"- "..ExRT.L.RaidLootT17Highmaul.."\n- "..ExRT.L.RaidLootT17BF)
 
 	self.shtml2 = ExRT.lib.CreateText(self,605,0,nil,10,-15,nil,"TOP",nil,12,ExRT.L.LoggingHelp1)
 	ExRT.lib.SetPoint(self.shtml2,"TOP",self.shtml1,"BOTTOM",0,-15)

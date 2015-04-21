@@ -236,6 +236,70 @@
 			</OnShow>
 		</Scripts>
 	</Button>
+	<Button name="ExRTDropDownListModernTemplate" hidden="true" frameStrata="TOOLTIP" enableMouse="true" virtual="true">
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture parentKey="BorderTop">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="-1" y="1"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="TOPRIGHT" x="1" y="0"/>
+					</Anchors>
+					<Color a="1" r="0" g="0" b="0" />
+				</Texture>
+				<Texture parentKey="BorderLeft">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="-1" y="0"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT" x="0" y="0"/>
+					</Anchors>
+					<Color a="1" r="0" g="0" b="0" />
+				</Texture>
+				<Texture parentKey="BorderBottom">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="-1" y="-1"/>
+						<Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" x="1" y="0"/>
+					</Anchors>
+					<Color a="1" r="0" g="0" b="0" />
+				</Texture>
+				<Texture parentKey="BorderRight">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="0" y="0"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="1" y="0"/>
+					</Anchors>
+					<Color a="1" r="0" g="0" b="0" />
+				</Texture>
+				<Texture parentKey="Background">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT"/>
+					</Anchors>
+					<Color a="0.9" r="0" g="0" b="0" />
+       				</Texture>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnClick>
+				self:Hide();
+			</OnClick>
+			<OnEnter>
+				UIDropDownMenu_StopCounting(self, motion);
+			</OnEnter>
+			<OnLeave>
+				UIDropDownMenu_StartCounting(self, motion);
+			</OnLeave>
+			<OnHide>
+				UIDropDownMenu_StopCounting(self, motion);
+			</OnHide>
+			<OnUpdate>
+				GExRT.lib.ScrollDropDown.Update(self, elapsed);
+			</OnUpdate>
+			<OnShow>
+				self:SetFrameLevel(1000);
+				if self.OnShow then
+					self:OnShow();
+				end
+			</OnShow>
+		</Scripts>
+	</Button>
 	<Font name="ExRTDropDownListFont1" virtual="true"></Font>
 	<Font name="ExRTDropDownListFont2" virtual="true"></Font>
 	<Font name="ExRTDropDownListFont3" virtual="true"></Font>
@@ -247,6 +311,79 @@
 	<Font name="ExRTDropDownListFont9" virtual="true"></Font>
 	<Font name="ExRTDropDownListFont10" virtual="true"></Font>
 	
+	<Button name="ExRTButtonTransparentTemplate" virtual="true">
+		<Size x="40" y="18"/>
+		<ButtonText parentKey="Text"/>
+		<NormalFont style="GameFontNormal"/>
+		<HighlightFont style="GameFontHighlight"/>
+		<DisabledFont style="GameFontDisable"/>
+		<HighlightTexture parentKey="HighlightTexture">
+			<Anchors>
+				<Anchor point="TOPLEFT"/>
+				<Anchor point="BOTTOMRIGHT"/>
+			</Anchors>
+			<Color a="0.3" r="1" g="1" b="1" />
+		</HighlightTexture>
+		<PushedTexture parentKey="PushedTexture">
+			<Anchors>
+				<Anchor point="TOPLEFT"/>
+				<Anchor point="BOTTOMRIGHT"/>
+			</Anchors>
+			<Color a="0.3" r="0.9" g="0.8" b="0.1" />
+		</PushedTexture>
+	</Button>
+	<Button name="ExRTButtonModernTemplate" inherits="ExRTButtonTransparentTemplate" virtual="true">
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture parentKey="Texture">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT"/>
+					</Anchors>
+					<Color a="1" r="1" g="1" b="1" />
+					<Gradient orientation="VERTICAL">
+						<MinColor a="1" r="0.05" g="0.06" b="0.09"/>
+						<MaxColor a="1" r="0.20" g="0.21" b="0.25"/>
+					</Gradient>
+       				</Texture>
+				<Texture parentKey="BorderTop">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="-1" y="1"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="TOPRIGHT" x="1" y="0"/>
+					</Anchors>
+					<Color a="1" r="0" g="0" b="0" />
+				</Texture>
+				<Texture parentKey="BorderLeft">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="-1" y="0"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT" x="0" y="0"/>
+					</Anchors>
+					<Color a="1" r="0" g="0" b="0" />
+				</Texture>
+				<Texture parentKey="BorderBottom">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="-1" y="-1"/>
+						<Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" x="1" y="0"/>
+					</Anchors>
+					<Color a="1" r="0" g="0" b="0" />
+				</Texture>
+				<Texture parentKey="BorderRight">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="0" y="0"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="1" y="0"/>
+					</Anchors>
+					<Color a="1" r="0" g="0" b="0" />
+				</Texture>
+			</Layer>
+		</Layers>
+		<DisabledTexture parentKey="DisabledTexture">
+			<Anchors>
+				<Anchor point="TOPLEFT"/>
+				<Anchor point="BOTTOMRIGHT"/>
+			</Anchors>
+			<Color a="0.5" r="0.20" g="0.21" b="0.25" />
+		</DisabledTexture>
+	</Button>
 	<Frame name="ExRTBWInterfaceFrame" toplevel="true" virtual="true" enableMouse="true" frameStrata="HIGH">
 		<Size>
 			<AbsDimension x="858" y="660"/>
@@ -254,69 +391,85 @@
 		<Anchors>
 			<Anchor point="CENTER"/>
 		</Anchors>
-		<Backdrop bgFile="Interface\Addons\ExRT\media\White" edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
-			<BackgroundInsets>
-				<AbsInset left="11" right="11" top="12" bottom="10"/>
-			</BackgroundInsets>
-			<TileSize>
-				<AbsValue val="32"/>
-			</TileSize>
-			<EdgeSize>
-				<AbsValue val="32"/>
-			</EdgeSize>
-			<Color r="0" g="0" b="0" a="0.9"/>
+		<Backdrop bgFile="Interface\Addons\ExRT\media\White">
+			<Color r="0.05" g="0.05" b="0.07" a="0.9"/>
 		</Backdrop>
 		<Layers>
 			<Layer level="ARTWORK">
-				<Texture file="Interface\DialogFrame\UI-DialogBox-Header" parentKey="Header">
-					<Size>
-						<AbsDimension x="300" y="68"/>
-					</Size>
+				<FontString inherits="GameFontNormal" text="" parentKey="HeaderText">
 					<Anchors>
 						<Anchor point="TOP">
 							<Offset>
-								<AbsDimension x="0" y="12"/>
+								<AbsDimension x="0" y="-3"/>
 							</Offset>
 						</Anchor>
 					</Anchors>
-				</Texture>
-				<FontString inherits="GameFontNormal" text="" parentKey="HeaderText">
-					<Anchors>
-						<Anchor point="TOP" relativeKey="$parent.Header">
-							<Offset>
-								<AbsDimension x="0" y="-14"/>
-							</Offset>
-						</Anchor>
-					</Anchors>
+					<Color r="1" g="0.66" b="0" a="1"/>
 				</FontString>
 			</Layer>
 		</Layers>
 		<Frames>
-			<Button inherits="UIPanelButtonTemplate" text="X" parentKey="buttonClose">
+			<Button parentKey="buttonClose">
 				<Size>
-					<AbsDimension x="36" y="22"/>
+					<AbsDimension x="18" y="18"/>
 				</Size>
 				<Anchors>
 					<Anchor point="TOPRIGHT">
 						<Offset>
-							<AbsDimension x="-16" y="-16"/>
+							<AbsDimension x="-1" y="0"/>
 						</Offset>
 					</Anchor>
 				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture file="Interface\AddOns\ExRT\media\DiesalGUIcons16x256x128.tga" parentKey="texture">
+							<Anchors>
+								<Anchor point="TOPLEFT"/>
+								<Anchor point="BOTTOMRIGHT"/>
+							</Anchors>
+							<Color a="0.7" r="1" g="1" b="1" />
+							<TexCoords left="0.5" right="0.5625" top="0.5" bottom="0.625"/>
+						</Texture>
+					</Layer>
+				</Layers>
 				<Scripts>
 					<OnClick>
 						local parent = self:GetParent();
 						parent:Hide();
 					</OnClick>
 				</Scripts>
+				<HighlightTexture file="Interface\AddOns\ExRT\media\DiesalGUIcons16x256x128.tga" parentKey="HighlightTexture">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT"/>
+					</Anchors>
+					<TexCoords left="0.5" right="0.5625" top="0.5" bottom="0.625"/>
+					<Color a="1" r="0.7" g="0" b="0" />
+				</HighlightTexture>
 			</Button>
-			<Button inherits="UIPanelButtonTemplate" text="" parentKey="backToInterface">
+			<Button parentKey="backToInterface">
 				<Size>
-					<AbsDimension x="36" y="22"/>
+					<AbsDimension x="16" y="16"/>
 				</Size>
 				<Anchors>
-					<Anchor point="BOTTOMRIGHT" relativeKey="$parent.buttonClose" relativePoint="BOTTOMLEFT"/>
+					<Anchor point="BOTTOMRIGHT" relativeKey="$parent.buttonClose" relativePoint="BOTTOMLEFT">
+						<Offset>
+							<AbsDimension x="-1" y="1"/>
+						</Offset>
+					</Anchor>
 				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture file="Interface\AddOns\ExRT\media\DiesalGUIcons16x256x128.tga" parentKey="texture">
+							<Anchors>
+								<Anchor point="TOPLEFT"/>
+								<Anchor point="BOTTOMRIGHT"/>
+							</Anchors>
+							<Color a="0.7" r="1" g="1" b="1" />
+							<TexCoords left="0.1875" right="0.25" top="0.5" bottom="0.625"/>
+						</Texture>
+					</Layer>
+				</Layers>
 				<Scripts>
 					<OnClick>
 						GExRT.Options:Open();
@@ -324,15 +477,23 @@
 						parent:Hide();
 					</OnClick>
 				</Scripts>
+				<HighlightTexture file="Interface\AddOns\ExRT\media\DiesalGUIcons16x256x128.tga" parentKey="HighlightTexture">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT"/>
+					</Anchors>
+					<TexCoords left="0.1875" right="0.25" top="0.5" bottom="0.625"/>
+					<Color a="1" r="0.9" g="0.75" b="0" />
+				</HighlightTexture>
 			</Button>
-			<Button inherits="UIPanelButtonTemplate" text="" parentKey="bossButton">
+			<Button inherits="ExRTButtonTransparentTemplate" text="" parentKey="bossButton">
 				<Size>
-					<AbsDimension x="250" y="22"/>
+					<AbsDimension x="250" y="18"/>
 				</Size>
 				<Anchors>
 					<Anchor point="TOPLEFT">
 						<Offset>
-							<AbsDimension x="16" y="-16"/>
+							<AbsDimension x="4" y="-18"/>
 						</Offset>
 					</Anchor>
 				</Anchors>
@@ -451,6 +612,109 @@
 		</HighlightTexture>
 	</Button>
 	
+	<Font name="ExRTFontGrayTemplate" inherits="GameFontHighlightSmall" virtual="true">
+		<Color r="0.63" g="0.68" b="0.69"/>
+	</Font>
+	<Button name="ExRTTabButtonTransparentTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="115" y="24"/>
+		</Size>
+		<Layers>
+			<Layer level="BORDER">
+				<Texture parentKey="LeftDisabled">
+					<Size>
+						<AbsDimension x="20" y="24"/>
+					</Size>
+					<Anchors>
+						<Anchor point="BOTTOMLEFT">
+							<Offset>
+								<AbsDimension x="0" y="-3"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</Texture>
+				<Texture parentKey="MiddleDisabled">
+					<Size>
+						<AbsDimension x="88" y="24"/>
+					</Size>
+					<Anchors>
+						<Anchor point="LEFT" relativeKey="$parent.LeftDisabled" relativePoint="RIGHT"/>
+					</Anchors>
+				</Texture>
+				<Texture parentKey="RightDisabled">
+					<Size>
+						<AbsDimension x="20" y="24"/>
+					</Size>
+					<Anchors>
+						<Anchor point="LEFT" relativeKey="$parent.MiddleDisabled" relativePoint="RIGHT"/>
+					</Anchors>
+				</Texture>
+				<Texture parentKey="Left">
+					<Size>
+						<AbsDimension x="20" y="24"/>
+					</Size>
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+					</Anchors>
+				</Texture>
+				<Texture parentKey="Middle">
+					<Size>
+						<AbsDimension x="88" y="24"/>
+					</Size>
+					<Anchors>
+						<Anchor point="LEFT" relativeKey="$parent.Left" relativePoint="RIGHT"/>
+					</Anchors>
+				</Texture>
+				<Texture parentKey="Right">
+					<Size>
+						<AbsDimension x="20" y="24"/>
+					</Size>
+					<Anchors>
+						<Anchor point="LEFT" relativeKey="$parent.Middle" relativePoint="RIGHT"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnLoad>
+				self:SetFrameLevel(self:GetFrameLevel() + 4);
+				self.deselectedTextY = -3;
+				self.selectedTextY = -2;
+			</OnLoad>
+			<OnShow>
+				self:GetParent().resizeFunc(self, 0);
+				self.HighlightTexture:SetWidth(self:GetTextWidth() + 30);
+			</OnShow>
+		</Scripts>
+		<ButtonText parentKey="Text">
+			<Anchors>
+				<Anchor point="CENTER">
+					<Offset>
+						<AbsDimension x="0" y="-3"/>
+					</Offset>
+				</Anchor>
+			</Anchors>
+		</ButtonText>
+		<NormalFont style="ExRTFontGrayTemplate"/>
+		<HighlightFont style="GameFontHighlightSmall"/>
+		<DisabledFont style="GameFontNormalSmall"/>
+		<HighlightTexture parentKey="HighlightTexture">
+			<Anchors>
+				<Anchor point="TOPLEFT">
+					<Offset>
+						<AbsDimension x="10" y="-4"/>
+					</Offset>
+				</Anchor>
+				<Anchor point="BOTTOMRIGHT">
+					<Offset>
+						<AbsDimension x="-10" y="0"/>
+					</Offset>
+				</Anchor>
+			</Anchors>
+			<Color a="0.3" r="1" g="1" b="1" />
+		</HighlightTexture>
+	</Button>
+	
 	<Frame name="ExRTDialogTemplate" virtual="true">
 		<Layers>
 			<Layer level="OVERLAY">
@@ -558,6 +822,66 @@
 						<Offset x="2" y="1"/>
 					</Anchor>
 				</Anchors>
+			</Button>
+		</Frames>
+	</Frame>
+	
+	<Frame name="ExRTDialogModernTemplate" virtual="true">
+		<Backdrop bgFile="Interface\Addons\ExRT\media\White">
+			<Color r="0.05" g="0.05" b="0.07" a="0.98"/>
+		</Backdrop>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString inherits="GameFontNormal" text="" parentKey="title">
+					<Anchors>
+						<Anchor point="TOP">
+							<Offset>
+								<AbsDimension x="0" y="-3"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<Color r="1" g="0.66" b="0" a="1"/>
+				</FontString>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Button parentKey="Close">
+				<Size>
+					<AbsDimension x="18" y="18"/>
+				</Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset>
+							<AbsDimension x="-1" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Layers>
+					<Layer level="ARTWORK">
+						<Texture file="Interface\AddOns\ExRT\media\DiesalGUIcons16x256x128.tga" parentKey="texture">
+							<Anchors>
+								<Anchor point="TOPLEFT"/>
+								<Anchor point="BOTTOMRIGHT"/>
+							</Anchors>
+							<Color a="0.7" r="1" g="1" b="1" />
+							<TexCoords left="0.5" right="0.5625" top="0.5" bottom="0.625"/>
+						</Texture>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>
+						local parent = self:GetParent();
+						parent:Hide();
+					</OnClick>
+				</Scripts>
+				<HighlightTexture file="Interface\AddOns\ExRT\media\DiesalGUIcons16x256x128.tga" parentKey="HighlightTexture">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT"/>
+					</Anchors>
+					<TexCoords left="0.5" right="0.5625" top="0.5" bottom="0.625"/>
+					<Color a="1" r="0.7" g="0" b="0" />
+				</HighlightTexture>
 			</Button>
 		</Frames>
 	</Frame>
@@ -697,6 +1021,192 @@
 			</OnHide>
 		</Scripts>
 	</Frame>
+	<Frame name="ExRTDropDownMenuModernTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="40" y="20"/>
+		</Size>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString inherits="GameFontHighlightSmall" wordwrap="false" justifyH="RIGHT" justifyV="MIDDLE" parentKey="Text">
+					<Size>
+						<AbsDimension x="0" y="20"/>
+					</Size>
+					<Anchors>
+						<Anchor point="RIGHT">
+							<Offset>
+								<AbsDimension x="-24" y="0"/>
+							</Offset>
+						</Anchor>
+						<Anchor point="LEFT">
+							<Offset>
+								<AbsDimension x="4" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+			<Layer level="BACKGROUND">
+				<Texture parentKey="BorderTop">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="-1" y="1"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="TOPRIGHT" x="1" y="0"/>
+					</Anchors>
+					<Color a="1" r="0.24" g="0.25" b="0.30" />
+				</Texture>
+				<Texture parentKey="BorderLeft">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="-1" y="0"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT" x="0" y="0"/>
+					</Anchors>
+					<Color a="1" r="0.24" g="0.25" b="0.30" />
+				</Texture>
+				<Texture parentKey="BorderBottom">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="-1" y="-1"/>
+						<Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" x="1" y="0"/>
+					</Anchors>
+					<Color a="1" r="0.24" g="0.25" b="0.30" />
+				</Texture>
+				<Texture parentKey="BorderRight">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="0" y="0"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="1" y="0"/>
+					</Anchors>
+					<Color a="1" r="0.24" g="0.25" b="0.30" />
+				</Texture>
+				<Texture parentKey="Background">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT"/>
+					</Anchors>
+					<Color a="0.3" r="0" g="0" b="0" />
+       				</Texture>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Button motionScriptsWhileDisabled="true" parentKey="Button">
+				<Size>
+					<AbsDimension x="16" y="16"/>
+				</Size>
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture parentKey="BorderTop">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="-1" y="1"/>
+								<Anchor point="BOTTOMRIGHT" relativePoint="TOPRIGHT" x="1" y="0"/>
+							</Anchors>
+							<Color a="1" r="0.24" g="0.25" b="0.30" />
+						</Texture>
+						<Texture parentKey="BorderLeft">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="-1" y="0"/>
+								<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT" x="0" y="0"/>
+							</Anchors>
+							<Color a="1" r="0.24" g="0.25" b="0.30" />
+						</Texture>
+						<Texture parentKey="BorderBottom">
+							<Anchors>
+								<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="-1" y="-1"/>
+								<Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" x="1" y="0"/>
+							</Anchors>
+							<Color a="1" r="0.24" g="0.25" b="0.30" />
+						</Texture>
+						<Texture parentKey="BorderRight">
+							<Anchors>
+								<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="0" y="0"/>
+								<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="1" y="0"/>
+							</Anchors>
+							<Color a="1" r="0.24" g="0.25" b="0.30" />
+						</Texture>
+						<Texture parentKey="Background">
+							<Anchors>
+								<Anchor point="TOPLEFT"/>
+								<Anchor point="BOTTOMRIGHT"/>
+							</Anchors>
+							<Color a="0.3" r="0" g="0" b="0" />
+		       				</Texture>
+					</Layer>
+				</Layers>
+				<Anchors>
+					<Anchor point="RIGHT">
+						<Offset>
+							<AbsDimension x="-2" y="0"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnEnter>
+						local parent = self:GetParent();
+						local myscript = parent:GetScript("OnEnter");
+						if(myscript ~= nil) then
+							myscript(parent);
+						end
+					</OnEnter>
+					<OnLeave>
+						local parent = self:GetParent();
+						local myscript = parent:GetScript("OnLeave");
+						if(myscript ~= nil) then
+							myscript(parent);
+						end
+					</OnLeave>
+					<OnClick>
+						ToggleDropDownMenu(nil, nil, self:GetParent());
+						PlaySound("igMainMenuOptionCheckBoxOn");
+					</OnClick>
+				</Scripts>
+				<NormalTexture file="Interface\AddOns\ExRT\media\DiesalGUIcons16x256x128.tga" parentKey="NormalTexture">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="-5" y="2"/>
+							</Offset>
+						</Anchor>
+						<Anchor point="BOTTOMRIGHT">
+							<Offset>
+								<AbsDimension x="5" y="-2"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<TexCoords left="0.25" right="0.3125" top="0.5" bottom="0.625"/>
+					<Color a="0.7" r="1" g="1" b="1" />
+				</NormalTexture>
+				<PushedTexture file="Interface\AddOns\ExRT\media\DiesalGUIcons16x256x128.tga" parentKey="PushedTexture">
+					<Anchors>
+						<Anchor point="TOPLEFT">
+							<Offset>
+								<AbsDimension x="-5" y="1"/>
+							</Offset>
+						</Anchor>
+						<Anchor point="BOTTOMRIGHT">
+							<Offset>
+								<AbsDimension x="5" y="-3"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+					<TexCoords left="0.25" right="0.3125" top="0.5" bottom="0.625"/>
+					<Color a="1" r="1" g="1" b="1" />
+				</PushedTexture>
+				<DisabledTexture file="Interface\ChatFrame\UI-ChatIcon-ScrollDown-Disabled" parentKey="DisabledTexture">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT"/>
+					</Anchors>
+				</DisabledTexture>
+				<HighlightTexture parentKey="HighlightTexture">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT"/>
+					</Anchors>
+					<Color a="0.3" r="1" g="1" b="1" />
+				</HighlightTexture>
+			</Button>
+		</Frames>
+		<Scripts>
+			<OnHide>
+				CloseDropDownMenus();
+			</OnHide>
+		</Scripts>
+	</Frame>
 	
 	<EditBox name="ExRTInputBoxTemplate" enableMouse="true" virtual="true">
 		<Layers>
@@ -749,6 +1259,63 @@
 			<OnEditFocusGained>
 				EditBox_HighlightText(self);
 			</OnEditFocusGained>
+		</Scripts>
+		<FontString inherits="ChatFontNormal"/>
+	</EditBox>
+	
+	<EditBox name="ExRTInputBoxModernTemplate" enableMouse="true" virtual="true">
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture parentKey="BorderTop">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="-1" y="1"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="TOPRIGHT" x="1" y="0"/>
+					</Anchors>
+					<Color a="1" r="0.24" g="0.25" b="0.30" />
+				</Texture>
+				<Texture parentKey="BorderLeft">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="-1" y="0"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT" x="0" y="0"/>
+					</Anchors>
+					<Color a="1" r="0.24" g="0.25" b="0.30" />
+				</Texture>
+				<Texture parentKey="BorderBottom">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="-1" y="-1"/>
+						<Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" x="1" y="0"/>
+					</Anchors>
+					<Color a="1" r="0.24" g="0.25" b="0.30" />
+				</Texture>
+				<Texture parentKey="BorderRight">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="0" y="0"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="1" y="0"/>
+					</Anchors>
+					<Color a="1" r="0.24" g="0.25" b="0.30" />
+				</Texture>
+				<Texture parentKey="Background">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT"/>
+					</Anchors>
+					<Color a="0.3" r="0" g="0" b="0" />
+       				</Texture>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnEscapePressed>
+				EditBox_ClearFocus(self);
+			</OnEscapePressed>
+			<OnEditFocusLost>
+				EditBox_ClearHighlight(self);
+			</OnEditFocusLost>
+			<OnEditFocusGained>
+				EditBox_HighlightText(self);
+			</OnEditFocusGained>
+			<OnShow>
+				self:SetTextInsets(4, 4, 0, 0); 
+			</OnShow>
 		</Scripts>
 		<FontString inherits="ChatFontNormal"/>
 	</EditBox>
@@ -819,6 +1386,198 @@
 			<Size>
 				<AbsDimension x="32" y="32"/>
 			</Size>
+		</ThumbTexture>
+	</Slider>
+	<Slider name="ExRTSliderModernTemplate" orientation="HORIZONTAL" virtual="true" enableMouse="true">
+		<Size>
+			<AbsDimension x="144" y="10"/>
+		</Size>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString inherits="GameFontHighlight" parentKey="Text">
+					<Anchors>
+						<Anchor point="BOTTOM" relativePoint="TOP">
+							<Offset>
+								<AbsDimension x="0" y="1"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString inherits="GameFontHighlightSmall" text="LOW" parentKey="Low">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT">
+							<Offset>
+								<AbsDimension x="0" y="-1"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString inherits="GameFontHighlightSmall" text="HIGH" parentKey="High">
+					<Anchors>
+						<Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT">
+							<Offset>
+								<AbsDimension x="0" y="-1"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+			<Layer level="BACKGROUND">
+				<Texture parentKey="BorderTop">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="-2" y="1"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="TOPRIGHT" x="2" y="0"/>
+					</Anchors>
+					<Color a="1" r="0.24" g="0.25" b="0.30" />
+				</Texture>
+				<Texture parentKey="BorderLeft">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="-2" y="0"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT" x="-1" y="0"/>
+					</Anchors>
+					<Color a="1" r="0.24" g="0.25" b="0.30" />
+				</Texture>
+				<Texture parentKey="BorderBottom">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="-2" y="-1"/>
+						<Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" x="2" y="0"/>
+					</Anchors>
+					<Color a="1" r="0.24" g="0.25" b="0.30" />
+				</Texture>
+				<Texture parentKey="BorderRight">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="1" y="0"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="2" y="0"/>
+					</Anchors>
+					<Color a="1" r="0.24" g="0.25" b="0.30" />
+				</Texture>
+				<Texture parentKey="Background">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT"/>
+					</Anchors>
+					<Color a="0.3" r="0" g="0" b="0" />
+       				</Texture>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnEnter>
+				if ( self:IsEnabled() ) then
+					if ( self.tooltipText ) then
+						GameTooltip:SetOwner(self, self.tooltipOwnerPoint or "ANCHOR_RIGHT");
+						GameTooltip:SetText(self.tooltipText, nil, nil, nil, nil, true);
+					end
+					if ( self.tooltipRequirement ) then
+						GameTooltip:AddLine(self.tooltipRequirement, 1.0, 1.0, 1.0, 1.0);
+						GameTooltip:Show();
+					end
+				end
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+		<ThumbTexture parentKey="Thumb">
+			<Size>
+				<AbsDimension x="16" y="8"/>
+			</Size>
+			<Color a="0.7" r="0.44" g="0.45" b="0.50" />
+		</ThumbTexture>
+	</Slider>
+	<Slider name="ExRTSliderModernVerticalTemplate" orientation="HORIZONTAL" virtual="true" enableMouse="true">
+		<Size>
+			<AbsDimension x="10" y="144"/>
+		</Size>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString inherits="GameFontHighlight" parentKey="Text">
+					<Anchors>
+						<Anchor point="BOTTOM" relativePoint="TOP">
+							<Offset>
+								<AbsDimension x="0" y="1"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString inherits="GameFontHighlightSmall" text="LOW" parentKey="Low">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPRIGHT">
+							<Offset>
+								<AbsDimension x="1" y="-1"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+				<FontString inherits="GameFontHighlightSmall" text="HIGH" parentKey="High">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT">
+							<Offset>
+								<AbsDimension x="1" y="1"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+			<Layer level="BACKGROUND">
+				<Texture parentKey="BorderTop">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="-1" y="2"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="TOPRIGHT" x="1" y="1"/>
+					</Anchors>
+					<Color a="1" r="0.24" g="0.25" b="0.30" />
+				</Texture>
+				<Texture parentKey="BorderLeft">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="-1" y="0"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT" x="0" y="0"/>
+					</Anchors>
+					<Color a="1" r="0.24" g="0.25" b="0.30" />
+				</Texture>
+				<Texture parentKey="BorderBottom">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="-1" y="-2"/>
+						<Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" x="1" y="-1"/>
+					</Anchors>
+					<Color a="1" r="0.24" g="0.25" b="0.30" />
+				</Texture>
+				<Texture parentKey="BorderRight">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="0" y="0"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="1" y="0"/>
+					</Anchors>
+					<Color a="1" r="0.24" g="0.25" b="0.30" />
+				</Texture>
+				<Texture parentKey="Background">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT"/>
+					</Anchors>
+					<Color a="0.3" r="0" g="0" b="0" />
+       				</Texture>
+			</Layer>
+		</Layers>
+		<Scripts>
+			<OnEnter>
+				if ( self:IsEnabled() ) then
+					if ( self.tooltipText ) then
+						GameTooltip:SetOwner(self, self.tooltipOwnerPoint or "ANCHOR_RIGHT");
+						GameTooltip:SetText(self.tooltipText, nil, nil, nil, nil, true);
+					end
+					if ( self.tooltipRequirement ) then
+						GameTooltip:AddLine(self.tooltipRequirement, 1.0, 1.0, 1.0, 1.0);
+						GameTooltip:Show();
+					end
+				end
+			</OnEnter>
+			<OnLeave>
+				GameTooltip:Hide();
+			</OnLeave>
+		</Scripts>
+		<ThumbTexture parentKey="Thumb">
+			<Size>
+				<AbsDimension x="8" y="16"/>
+			</Size>
+			<Color a="0.7" r="0.44" g="0.45" b="0.50" />
 		</ThumbTexture>
 	</Slider>
 	
@@ -897,6 +1656,291 @@
 			</Button>
 		</Frames>
 	</Frame>
+	<CheckButton name="ExRTCheckButtonModernTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="20" y="20"/>
+		</Size>
+		<Layers>
+			<Layer level="ARTWORK">
+				<FontString name="$parentText" inherits="GameFontNormalSmall" justifyV="MIDDLE" parentKey="text">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPRIGHT">
+							<Offset>
+								<AbsDimension x="4" y="0"/>
+							</Offset>
+						</Anchor>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMRIGHT">
+							<Offset>
+								<AbsDimension x="4" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+			<Layer level="BACKGROUND">
+				<Texture parentKey="Texture">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT"/>
+					</Anchors>
+					<Color a="0.3" r="0" g="0" b="0" />
+       				</Texture>
+				<Texture parentKey="BorderTop">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="-1" y="1"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="TOPRIGHT" x="1" y="0"/>
+					</Anchors>
+					<Color a="1" r="0.24" g="0.25" b="0.30" />
+				</Texture>
+				<Texture parentKey="BorderLeft">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="-1" y="0"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT" x="0" y="0"/>
+					</Anchors>
+					<Color a="1" r="0.24" g="0.25" b="0.30" />
+				</Texture>
+				<Texture parentKey="BorderBottom">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="-1" y="-1"/>
+						<Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" x="1" y="0"/>
+					</Anchors>
+					<Color a="1" r="0.24" g="0.25" b="0.30" />
+				</Texture>
+				<Texture parentKey="BorderRight">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="0" y="0"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="1" y="0"/>
+					</Anchors>
+					<Color a="1" r="0.24" g="0.25" b="0.30" />
+				</Texture>
+			</Layer>
+		</Layers>
+		<PushedTexture file="Interface\Buttons\UI-CheckBox-Check" parentKey="PushedTexture" desaturated="TRUE">
+			<Anchors>
+				<Anchor point="TOPLEFT">
+					<Offset>
+						<AbsDimension x="-4" y="4"/>
+					</Offset>
+				</Anchor>
+				<Anchor point="BOTTOMRIGHT">
+					<Offset>
+						<AbsDimension x="4" y="-4"/>
+					</Offset>
+				</Anchor>
+			</Anchors>
+			<Color a="0.5" r="0.8" g="0.8" b="0.8" />
+		</PushedTexture>
+		<HighlightTexture parentKey="HighlightTexture">
+			<Anchors>
+				<Anchor point="TOPLEFT"/>
+				<Anchor point="BOTTOMRIGHT"/>
+			</Anchors>
+			<Color a="0.3" r="1" g="1" b="1" />
+		</HighlightTexture>
+		<DisabledCheckedTexture file="Interface\Buttons\UI-CheckBox-Check-Disabled">
+			<Anchors>
+				<Anchor point="TOPLEFT">
+					<Offset>
+						<AbsDimension x="-4" y="4"/>
+					</Offset>
+				</Anchor>
+				<Anchor point="BOTTOMRIGHT">
+					<Offset>
+						<AbsDimension x="4" y="-4"/>
+					</Offset>
+				</Anchor>
+			</Anchors>
+		</DisabledCheckedTexture>
+		<CheckedTexture file="Interface\Buttons\UI-CheckBox-Check" parentKey="CheckedTexture">
+			<Anchors>
+				<Anchor point="TOPLEFT">
+					<Offset>
+						<AbsDimension x="-4" y="4"/>
+					</Offset>
+				</Anchor>
+				<Anchor point="BOTTOMRIGHT">
+					<Offset>
+						<AbsDimension x="4" y="-4"/>
+					</Offset>
+				</Anchor>
+			</Anchors>
+		</CheckedTexture>
+	</CheckButton>
 
+	<Button name="ExRTButtonDownModernTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="16" y="16"/>
+		</Size>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<Texture parentKey="BorderTop">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="-1" y="1"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="TOPRIGHT" x="1" y="0"/>
+					</Anchors>
+					<Color a="1" r="0.24" g="0.25" b="0.30" />
+				</Texture>
+				<Texture parentKey="BorderLeft">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPLEFT" x="-1" y="0"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMLEFT" x="0" y="0"/>
+					</Anchors>
+					<Color a="1" r="0.24" g="0.25" b="0.30" />
+				</Texture>
+				<Texture parentKey="BorderBottom">
+					<Anchors>
+						<Anchor point="BOTTOMLEFT" relativePoint="BOTTOMLEFT" x="-1" y="-1"/>
+						<Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT" x="1" y="0"/>
+					</Anchors>
+					<Color a="1" r="0.24" g="0.25" b="0.30" />
+				</Texture>
+				<Texture parentKey="BorderRight">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativePoint="TOPRIGHT" x="0" y="0"/>
+						<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT" x="1" y="0"/>
+					</Anchors>
+					<Color a="1" r="0.24" g="0.25" b="0.30" />
+				</Texture>
+				<Texture parentKey="Background">
+					<Anchors>
+						<Anchor point="TOPLEFT"/>
+						<Anchor point="BOTTOMRIGHT"/>
+					</Anchors>
+					<Color a="0.3" r="0" g="0" b="0" />
+       				</Texture>
+			</Layer>
+		</Layers>
+		<NormalTexture file="Interface\AddOns\ExRT\media\DiesalGUIcons16x256x128.tga" parentKey="NormalTexture">
+			<Anchors>
+				<Anchor point="TOPLEFT">
+					<Offset>
+						<AbsDimension x="-5" y="2"/>
+					</Offset>
+				</Anchor>
+				<Anchor point="BOTTOMRIGHT">
+					<Offset>
+						<AbsDimension x="5" y="-2"/>
+					</Offset>
+				</Anchor>
+			</Anchors>
+			<TexCoords left="0.25" right="0.3125" top="0.5" bottom="0.625"/>
+			<Color a="0.7" r="1" g="1" b="1" />
+		</NormalTexture>
+		<PushedTexture file="Interface\AddOns\ExRT\media\DiesalGUIcons16x256x128.tga" parentKey="PushedTexture">
+			<Anchors>
+				<Anchor point="TOPLEFT">
+					<Offset>
+						<AbsDimension x="-5" y="1"/>
+					</Offset>
+				</Anchor>
+				<Anchor point="BOTTOMRIGHT">
+					<Offset>
+						<AbsDimension x="5" y="-3"/>
+					</Offset>
+				</Anchor>
+			</Anchors>
+			<TexCoords left="0.25" right="0.3125" top="0.5" bottom="0.625"/>
+			<Color a="1" r="1" g="1" b="1" />
+		</PushedTexture>
+		<DisabledTexture file="Interface\AddOns\ExRT\media\DiesalGUIcons16x256x128.tga" parentKey="DisabledTexture">
+			<Anchors>
+				<Anchor point="TOPLEFT">
+					<Offset>
+						<AbsDimension x="-5" y="2"/>
+					</Offset>
+				</Anchor>
+				<Anchor point="BOTTOMRIGHT">
+					<Offset>
+						<AbsDimension x="5" y="-2"/>
+					</Offset>
+				</Anchor>
+			</Anchors>
+			<TexCoords left="0.25" right="0.3125" top="0.5" bottom="0.625"/>
+			<Color a="0.7" r="0.3" g="0.3" b="0.3" />
+		</DisabledTexture>
+		<HighlightTexture parentKey="HighlightTexture">
+			<Anchors>
+				<Anchor point="TOPLEFT"/>
+				<Anchor point="BOTTOMRIGHT"/>
+			</Anchors>
+			<Color a="0.3" r="1" g="1" b="1" />
+		</HighlightTexture>
+	</Button>
+	<Button name="ExRTButtonUpModernTemplate" inherits="ExRTButtonDownModernTemplate" virtual="true">
+		<NormalTexture file="Interface\AddOns\ExRT\media\DiesalGUIcons16x256x128.tga" parentKey="NormalTexture">
+			<Anchors>
+				<Anchor point="TOPLEFT">
+					<Offset>
+						<AbsDimension x="-5" y="2"/>
+					</Offset>
+				</Anchor>
+				<Anchor point="BOTTOMRIGHT">
+					<Offset>
+						<AbsDimension x="5" y="-2"/>
+					</Offset>
+				</Anchor>
+			</Anchors>
+			<TexCoords left="0.3125" right="0.375" top="0.5" bottom="0.625"/>
+			<Color a="0.7" r="1" g="1" b="1" />
+		</NormalTexture>
+		<PushedTexture file="Interface\AddOns\ExRT\media\DiesalGUIcons16x256x128.tga" parentKey="PushedTexture">
+			<Anchors>
+				<Anchor point="TOPLEFT">
+					<Offset>
+						<AbsDimension x="-5" y="1"/>
+					</Offset>
+				</Anchor>
+				<Anchor point="BOTTOMRIGHT">
+					<Offset>
+						<AbsDimension x="5" y="-3"/>
+					</Offset>
+				</Anchor>
+			</Anchors>
+			<TexCoords left="0.3125" right="0.375" top="0.5" bottom="0.625"/>
+			<Color a="1" r="1" g="1" b="1" />
+		</PushedTexture>
+		<DisabledTexture file="Interface\AddOns\ExRT\media\DiesalGUIcons16x256x128.tga" parentKey="DisabledTexture">
+			<Anchors>
+				<Anchor point="TOPLEFT">
+					<Offset>
+						<AbsDimension x="-5" y="2"/>
+					</Offset>
+				</Anchor>
+				<Anchor point="BOTTOMRIGHT">
+					<Offset>
+						<AbsDimension x="5" y="-2"/>
+					</Offset>
+				</Anchor>
+			</Anchors>
+			<TexCoords left="0.3125" right="0.375" top="0.5" bottom="0.625"/>
+			<Color a="0.7" r="0.3" g="0.3" b="0.3" />
+		</DisabledTexture>
+	</Button>
+	
+	<Button name="ExRTUIChatDownButtonModernTemplate" inherits="ExRTButtonDownModernTemplate" virtual="true" >
+		<Size>
+			<AbsDimension x="20" y="20"/>
+		</Size>
+		<Scripts>
+			<OnEnter>
+				local parent = self:GetParent();
+				local myscript = parent:GetScript("OnEnter");
+				if(myscript ~= nil) then
+					myscript(parent);
+				end
+			</OnEnter>
+			<OnLeave>
+				local parent = self:GetParent();
+				local myscript = parent:GetScript("OnLeave");
+				if(myscript ~= nil) then
+					myscript(parent);
+				end
+			</OnLeave>
+			<OnClick>
+				ToggleDropDownMenu(nil, nil, self:GetParent());
+				PlaySound("igMainMenuOptionCheckBoxOn");
+			</OnClick>
+		</Scripts>
+	</Button>
 
 </Ui>

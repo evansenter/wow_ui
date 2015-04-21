@@ -3,8 +3,9 @@
 ## Author: ykiigor
 ## Notes: Exorsus Raid Tools
 ## SavedVariables: VExRT
-## Version: 3240
+## Version: 3330
 core.lua
+Functions.lua
 embeds.xml
 Templates.xml
 ExLib.lua
@@ -12,6 +13,7 @@ localization\localization.ru.lua
 localization\localization.en.lua
 localization\localization.cn.lua
 localization\localization.tw.lua
+localization\localization.kr.lua
 localization\localization.lua
 BlizzFix.lua
 Options.lua
@@ -22,7 +24,6 @@ InspectViewer.lua
 Note.lua
 RaidCheck.lua
 InviteTool.lua
-AutoBuy.lua
 MarksBar.lua
 Marks.lua
 Timers.lua
@@ -37,3 +38,5 @@ AutoLogging.lua
 LootLink.lua
 Bindings.lua
 Bindings.xml
+Blank.lua
+Profiles.lua

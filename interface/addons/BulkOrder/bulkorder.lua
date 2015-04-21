@@ -17,6 +17,7 @@ local GOBLINWORKSHOP = 3
 local BARN = 4
 local LUMBERMILL = 5
 local GLADIATORSANCTUM = 6
+local SPIRITLODGE = 7
 
 local BUILDINGS = {
     [8] = WARMILL,
@@ -37,6 +38,9 @@ local BUILDINGS = {
     [159] = GLADIATORSANCTUM,
     [160] = GLADIATORSANCTUM,
     [161] = GLADIATORSANCTUM,
+    [37] = SPIRITLODGE,
+    [38] = SPIRITLODGE,
+    [39] = SPIRITLODGE,
 }
 
 local GARRISON_MAPS = {
@@ -189,6 +193,7 @@ local function RemindWorkOrders ()
         [TRADINGPOST] = g_BulkOrder.RemindTradingPost,
         [GOBLINWORKSHOP] = g_BulkOrder.RemindWorkshop,
         [GLADIATORSANCTUM] = g_BulkOrder.RemindGladiatorSanctum,
+        [SPIRITLODGE] =  g_BulkOrder.RemindSpiritLodge,
     }
     
     -- Some buildings have work orders only at high enough levels...
@@ -326,6 +331,7 @@ f:OnEvent ("SHIPMENT_CRAFTER_INFO", function (success, _, maxShipments, plotID)
     local excluded = (g_BulkOrder.ExcludeTradingPost and BUILDINGS[buildingID]==TRADINGPOST) 
         or (g_BulkOrder.ExcludeWarMill and BUILDINGS[buildingID]==WARMILL)
         or (g_BulkOrder.ExcludeGoblinWorkshop and BUILDINGS[buildingID]==GOBLINWORKSHOP)
+        or (g_BulkOrder.ExcludeBarn and BUILDINGS[buildingID]==BARN)
     
     if (not f.dontStart) and (not excluded) and (f:GetScript ("OnUpdate")==nil) then
         StartAllWorkOrders ()

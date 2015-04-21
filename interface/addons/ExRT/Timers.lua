@@ -8,12 +8,9 @@ local module = ExRT.mod:New("Timers",ExRT.L.timers,nil,true)
 module.db.lasttimertopull = 0
 module.db.timertopull = 0
 module.db.firstmsg = false
-module.db.timeToKill = {}
 module.db.segmentToKill = 1
 module.db.maxSegments = 16	-- 0.5 sec every seg
-for i=1,module.db.maxSegments do
-	module.db.timeToKill[i] = {0,0}
-end
+
 local timeToKillEnabled = nil
 
 local function ToRaid(msg)
@@ -30,17 +27,14 @@ local function CreateTimers(ctime,cname)
 
 	if cname == ExRT.L.timerattack then
 		SendAddonMessage("BigWigs", "T:BWPull "..ctime, chat_type,playerName)
+		local _,_,_,_,_,_,_,mapID = GetInstanceInfo()
+		SendAddonMessage("D4", ("PT\t%d\t%d"):format(ctime,mapID or -1), chat_type,playerName)
 	else
 		SendAddonMessage("BigWigs", "T:BWCustomBar "..ctime.." "..cname, chat_type,playerName)
-	end
-	SendAddonMessage("DXE", "^1^SAlertsRaidBar^N"..ctime.."^S~`"..cname.."^^", chat_type,playerName)
-	local Uname = "U"
-	if cname == ExRT.L.timerattack then Uname = "PT" end
-	if ctime == 0 and cname ~= ExRT.L.timerattack then ctime = 1 end
-	if DBM then
-		DBM:CreatePizzaTimer(ctime, cname, true, nil, true)
-	else
-		SendAddonMessage("D4", ("%s\t%s\t%s"):format(Uname,ctime, cname), chat_type,playerName)
+		if ctime == 0 then
+			ctime = 1
+		end
+		SendAddonMessage("D4", ("U\t%d\t%s"):format(ctime,cname), chat_type,playerName)
 	end
 end
 
@@ -81,7 +75,7 @@ function ExRT.mds:DoPull(inum)
 	end
 end
 
-function module:slash(arg)
+function module:slash(arg,msgDeformatted)
 	if arg == "pull" then
 		if module.db.timertopull > 0 then
 			module.db.timertopull = 0
@@ -121,7 +115,7 @@ function module:slash(arg)
 			end
 		end
 	elseif arg:find("^timer ") then
-		local timerName,timerTime = arg:match("^timer (.-) ([0-9%.]+)")
+		local timerName,timerTime = msgDeformatted:match("^[Tt][Ii][Mm][Ee][Rr] (.-) ([0-9%.]+)")
 		if not timerName or not timerTime then
 			return
 		end
@@ -139,10 +133,12 @@ function module:slash(arg)
 end
 
 function module.options:Load()
-	self.shtml1 = ExRT.lib.CreateText(self,605,200,nil,10,-15,nil,"TOP",nil,13,ExRT.L.timerstxt1)
-	self.shtml2 = ExRT.lib.CreateText(self,505,200,nil,110,-15,nil,"TOP",nil,13,ExRT.L.timerstxt2,nil,1,1,1)
+	self:CreateTilte()
 
-	self.chkEnable = ExRT.lib.CreateCheckBox(self,nil,10,-135,ExRT.L.timerTimerFrame)
+	self.shtml1 = ExRT.lib.CreateText(self,605,200,nil,10,-35,nil,"TOP",nil,13,ExRT.L.timerstxt1)
+	self.shtml2 = ExRT.lib.CreateText(self,505,200,nil,110,-35,nil,"TOP",nil,13,ExRT.L.timerstxt2,nil,1,1,1)
+
+	self.chkEnable = ExRT.lib.CreateCheckBox(self,nil,10,-155,ExRT.L.timerTimerFrame,VExRT.Timers.enabled)
 	self.chkEnable:SetScript("OnClick", function(self,event) 
 		if self:GetChecked() then
 			VExRT.Timers.enabled = true
@@ -160,24 +156,20 @@ function module.options:Load()
 			module.options.chkTimeToKill:SetChecked(nil)
 		end
 	end)
-	self.chkEnable:SetChecked(VExRT.Timers.enabled)
 	
-	self.chkTimeToKill = ExRT.lib.CreateCheckBox(self,nil,10,-160,ExRT.L.TimerTimeToKill,nil,ExRT.L.TimerTimeToKillHelp)
+	self.chkTimeToKill = ExRT.lib.CreateCheckBox(self,nil,10,-180,ExRT.L.TimerTimeToKill,VExRT.Timers.timeToKill,ExRT.L.TimerTimeToKillHelp)
 	self.chkTimeToKill:SetScript("OnClick", function(self,event) 
 		if self:GetChecked() then
 			VExRT.Timers.timeToKill = true
 			timeToKillEnabled = true
-			module:RegisterEvents('PLAYER_TARGET_CHANGED')
 		else
 			VExRT.Timers.timeToKill = nil
 			timeToKillEnabled = nil
-			module:UnregisterEvents('PLAYER_TARGET_CHANGED')
 			module.frame.killTime:SetText("")
 		end
 	end)
-	self.chkTimeToKill:SetChecked(VExRT.Timers.timeToKill)
 	
-	self.ButtonToCenter = ExRT.lib.CreateButton(self,255,22,nil,10,-187,ExRT.L.TimerResetPos,nil,ExRT.L.TimerResetPosTooltip)
+	self.ButtonToCenter = ExRT.lib.CreateButton(self,255,22,nil,10,-207,ExRT.L.TimerResetPos,nil,ExRT.L.TimerResetPosTooltip)
 	self.ButtonToCenter:SetScript("OnClick",function()
 		VExRT.Timers.Left = nil
 		VExRT.Timers.Top = nil
@@ -207,7 +199,6 @@ function module.main:ADDON_LOADED()
 		module:RegisterEvents('PLAYER_REGEN_DISABLED','PLAYER_REGEN_ENABLED')		
 	end
 	if VExRT.Timers.enabled and VExRT.Timers.timeToKill then 
-		module:RegisterEvents('PLAYER_TARGET_CHANGED')
 		timeToKillEnabled = true
 	end
 	module:RegisterTimer()
@@ -223,14 +214,6 @@ end
 
 function module.main:PLAYER_REGEN_ENABLED()
 	module.frame.inCombat = nil
-end
-
-function module.main:PLAYER_TARGET_CHANGED()
-	for i=1,module.db.maxSegments do
-		module.db.timeToKill[i][1] = 0
-		module.db.timeToKill[i][2] = 0
-	end
-	module.frame.killTime:SetText("")
 end
 
 module.frame = CreateFrame("Frame",nil,UIParent)
@@ -262,6 +245,8 @@ module:RegisterHideOnPetBattle(module.frame)
 
 module.frame:SetFrameStrata("HIGH")
 
+module.db.TTK = {}
+
 do
 	local _db = module.db
 	local function NumToTime(num)
@@ -273,6 +258,15 @@ do
 			return format("%d",num)
 		end
 	end
+	
+	local targetsList = {"target","focus","focustarget"}
+	for i=1,4 do targetsList[#targetsList + 1] = "party"..i.."target" end
+	for i=1,40 do targetsList[#targetsList + 1] = "raid"..i.."target" end	
+	for i=1,5 do targetsList[#targetsList + 1] = "boss"..i end
+	
+	local TTK = module.db.TTK
+	local TTKupdateTimer,TTKclearTimer = 0,0
+	
 	function module.frame.OnUpdateFunc(self,elapsed)
 		self.tmr = self.tmr + elapsed
 		if self.tmr > 0.05 and (self.inCombat or self.encounter or self.total < 0) then
@@ -288,43 +282,82 @@ do
 		end
 		
 		if timeToKillEnabled then
-			self.killTmr = self.killTmr + elapsed
-			if self.killTmr > 0.5 then
-				self.killTmr = 0
-				local health = UnitHealth("target")
-				local maxHealth = UnitHealthMax("target")
-				local ctime_ = GetTime()
-				local now
-				local seg
-				if health and maxHealth > 0 then
-					now = health / maxHealth
-					_db.timeToKill[ _db.segmentToKill ][1] = now
-					_db.timeToKill[ _db.segmentToKill ][2] = ctime_
-					_db.segmentToKill = _db.segmentToKill + 1
-					if _db.segmentToKill >= _db.maxSegments then
-						_db.segmentToKill = 1
+			TTKupdateTimer = TTKupdateTimer + elapsed
+			if TTKupdateTimer > 0.5 then
+				TTKclearTimer = TTKclearTimer + TTKupdateTimer
+				TTKupdateTimer = 0
+				local _time = GetTime()
+				for i=1,#targetsList do
+					local unit = targetsList[i]
+					local guid = UnitGUID(unit)
+					if guid then
+						local guidData = TTK[guid]
+						if not guidData then
+							guidData = {
+								pos = 1,
+								update = 0,
+								conf = 0,
+								hp = {},
+								time = {},
+							}
+							TTK[guid] = guidData
+						end
+						local lastUpdate = guidData.update
+						if lastUpdate < _time then
+							local posNow = guidData.pos
+							guidData.hp[ posNow ] = UnitHealth(unit) / UnitHealthMax(unit)
+							guidData.time[ posNow ] = _time
+							guidData.pos = guidData.pos + 1
+							if guidData.pos > 16 then
+								guidData.pos = 1
+							end
+							if (_time - lastUpdate) > 1 then
+								guidData.conf = 0
+							end
+							guidData.conf = guidData.conf + 1
+							if guidData.conf > 16 then
+								guidData.conf = 16
+							end
+							guidData.update = _time
+						end
 					end
-					seg = _db.segmentToKill
-				else
-					return
-				end
-				if seg % 2 == 1 then
-					return
 				end
 				
-				local MAX = _db.timeToKill[seg][1]
-				local MIN_time = _db.timeToKill[seg][2]
-				
-				if MIN_time == 0 or MIN_time == ctime_ or MAX == 0 then
-					self.killTime:SetText(NumToTime(600))
-				else
-					local perSec = (MAX - now) / (ctime_ - MIN_time)
-					if perSec == 0 then
-						self.killTime:SetText(NumToTime(600))
-						return
+				local playerTarget = UnitGUID("target")
+				if playerTarget then
+					local guidData = TTK[playerTarget]
+					if guidData.conf > 15 then
+						local posMax = guidData.pos
+						local posMin = posMax - 1
+						if posMin < 1 then
+							posMin = 16
+						end
+						
+						local perSec = (guidData.hp[posMax] - guidData.hp[posMin]) / (guidData.time[posMin] - guidData.time[posMax])
+						if perSec == 0 then
+							self.killTime:SetText("")
+						else
+							--print( guidData.hp[posMin], perSec )
+							local diff = guidData.hp[posMin] / perSec
+							self.killTime:SetText(NumToTime(diff))
+						end
+					else
+						self.killTime:SetText("")
 					end
-					local diff = now / perSec
-					self.killTime:SetText(NumToTime(diff))
+				else
+					self.killTime:SetText("")
+				end
+				
+				if TTKclearTimer > 180 then
+					local clearData = {}
+					for mobGUID,mobData in pairs(TTK) do
+						if (_time - mobData.update) > 300 then
+							clearData[#clearData + 1] = mobGUID
+						end
+					end
+					for i=1,#clearData do
+						TTK[ clearData[i] ] = nil
+					end
 				end
 			end
 		end

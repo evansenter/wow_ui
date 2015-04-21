@@ -175,15 +175,32 @@ end
 --// Events
 local defaults = {
 	profile = {
-		sortWishlist = false,
 		tooltipItemID = false,
+		
+		noAnim = false,
+		url = "Battle.net",
+		
 		dressupPreview = false,
 		singlePreview = false,
 		previewUIPanel = false,
 		previewFixedSize = false,
-		noAnim = false,
+		
+		sortWishlist = false,
+		loadModulesWishlist = false,
+		
+		tooltip = true,
+		tooltipWidth = 300,
+		tooltipHeight = 300,
+		tooltipMouse = false,
+		tooltipDress = false,
+		tooltipRotate = true,
+		tooltipMog = true,
+		tooltipMod = "None",
+		tooltipCustomModel = false,
+		tooltipRace = 1,
+		tooltipGender = 0,
+		
 		minimap = {},
-		url = "Battle.net",
 		
 		point = "CENTER",
 		gridWidth = 600,
@@ -199,18 +216,6 @@ local defaults = {
 				point = "CENTER",
 			}
 		},
-		
-		tooltip = true,
-		tooltipWidth = 300,
-		tooltipHeight = 300,
-		tooltipMouse = false,
-		tooltipDress = false,
-		tooltipRotate = true,
-		tooltipMog = true,
-		tooltipMod = "None",
-		tooltipCustomModel = false,
-		tooltipRace = 1,
-		tooltipGender = 0,
 	}
 }
 
@@ -229,6 +234,14 @@ function mog.LoadSettings()
 	mog.scroll:update();
 	
 	mog:SetSinglePreview(mog.db.profile.singlePreview);
+end
+
+function mog:LoadBaseModules()
+	for i, module in ipairs(self.baseModules) do
+		if GetAddOnEnableState(myName, module) > 0 and not IsAddOnLoaded(module) then
+			LoadAddOn(module)
+		end
+	end
 end
 
 mog.frame:RegisterEvent("ADDON_LOADED");
@@ -286,6 +299,15 @@ local function sortCharacters(a, b)
 end
 
 function mog:PLAYER_LOGIN()
+	C_Timer.After(1, function()
+		-- this function doesn't yield correct results immediately, so we delay it
+		for slot, v in pairs(mog.mogSlots) do
+			local isTransmogrified, _, _, _, _, visibleItemID = GetTransmogrifySlotInfo(slot);
+			if isTransmogrified then
+				mog:GetItemInfo(visibleItemID);
+			end
+		end
+	end)
 	self.realmCharacters = {};
 	for characterKey in pairs(mog.wishlist.db.sv.profileKeys) do
 		local character, realm = characterKey:match("(.+) %- (.+)");
@@ -294,13 +316,6 @@ function mog:PLAYER_LOGIN()
 		end
 	end
 	sort(self.realmCharacters, sortCharacters);
-	
-	for slot in pairs(mog.mogSlots) do
-		local isTransmogrified, _, _, _, _, visibleItemID = GetTransmogrifySlotInfo(slot);
-		if transmogrified then
-			mog:GetItemInfo(visibleItemID);
-		end
-	end
 	
 	mog:LoadSettings();
 	self.frame:SetScript("OnSizeChanged", function(self, width, height)
@@ -311,28 +326,28 @@ function mog:PLAYER_LOGIN()
 end
 
 function mog:PLAYER_EQUIPMENT_CHANGED(slot, hasItem)
-	local visibleItem;
-	if mog.mogSlots[slot] then
-		local isTransmogrified, _, _, _, _, visibleItemID = GetTransmogrifySlotInfo(slot);
+	local slotName = mog.mogSlots[slot];
+	local itemID, itemAppearanceModID = GetInventoryItemID("player", slot);
+	if slotName then
+		local isTransmogrified, _, _, _, _, visibleItemID, _, visibleItemAppearanceModID = GetTransmogrifySlotInfo(slot);
 		if isTransmogrified then
 			mog:GetItemInfo(visibleItemID);
-			visibleItem = visibleItemID;
+			itemID = visibleItemID;
+			itemAppearanceModID = visibleItemAppearanceModID;
 		end
 	end
 	-- don't do anything if the slot is not visible (necklace, ring, trinket)
 	if mog.db.profile.gridDress == "equipped" then
 		for i, frame in ipairs(mog.models) do
-			local item = frame.data.item;
-			if item then
-				local slotName = mog.mogSlots[slot];
+			if frame.data.item then
 				if hasItem then
 					if (slot ~= INVSLOT_HEAD or ShowingHelm()) and (slot ~= INVSLOT_BACK or ShowingCloak()) then
-						frame:TryOn(visibleItem or GetInventoryItemID("player", slot), slotName);
+						frame:TryOn(itemID, slotName, itemAppearanceModID);
 					end
 				else
 					frame:UndressSlot(slot);
 				end
-				frame:TryOn(item);
+				frame:TryOn(frame.data.item);
 			end
 		end
 	end

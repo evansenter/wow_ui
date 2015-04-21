@@ -54,9 +54,9 @@ Formatos de Salud / Poder:
 'deficit' - muestra el valor de déficit, no muestra nada si no hay déficit
 
 Formatos de Nombre:
-'name-short' - Nombre restringido a 10 caracteres
-'name-medium' - Nombre restringido a 15 caracteres
-'name-long' - Nombre restringido a 20 caracteres
+'name:short' - Nombre restringido a 10 caracteres
+'name:medium' - Nombre restringido a 15 caracteres
+'name:long' - Nombre restringido a 20 caracteres
 
 Para desactivarlo dejar el campo en blanco, si necesitas más información visita http://www.tukui.org]=];
 
@@ -133,11 +133,15 @@ L["Condensed"] = true;
 L["Currency Format"] = "Formato de Moneda"
 L["Descending"] = "Descendente"
 L["Direction the bag sorting will use to allocate the items."] = "Dirección de ordenado que se usará para distribuir los objetos."
+L["Display Item Level"] = true;
+L["Displays item level on equippable items."] = true;
 L["Enable/Disable the all-in-one bag."] = "Habilitar/Deshabilitar la bolsa todo en uno."
 L["Enable/Disable the Bag-Bar."] = "Activa/Desactiva la barra de las bolsas."
 L["Full"] = true;
 L["Icons and Text"] = "Iconos y Texto"
 L["Ignore Items"] = "Ignorar Objetos"
+L["Item Level Threshold"] = true;
+L["Item Level"] = true;
 L["List of items to ignore when sorting. If you wish to add multiple items you must seperate the word with a comma."] = "Lista de objetos a ignorar durante el ordenamiento. Para ignorar múltiples objetos sepáralos con una coma."
 L["Money Format"] = true;
 L["Panel Width (Bags)"] = "Ancho del Panel (Bolsas)"
@@ -155,6 +159,7 @@ L["The direction that the bag frames will grow from the anchor."] = "La direcci�
 L["The display format of the currency icons that get displayed below the main bag. (You have to be watching a currency for this to display)"] = "El formato de moneda que se muestra debajo de la bolsa principal (debes monitorear una divisa para que se muestre)."
 L["The display format of the money text that is shown at the top of the main bag."] = true;
 L["The frame is not shown unless you mouse over the frame."] = "El marco no se muestra a menos que pases el ratón sobre él."
+L["The minimum item level required for it to be shown."] = true;
 L["The size of the individual buttons on the bag frame."] = "El tamaño de los botones individuales en el marco de las bolsas"
 L["The size of the individual buttons on the bank frame."] = "El tamaño de los botones individuales en el marco del banco"
 L["The spacing between buttons."] = "Separación entre los botones."
@@ -212,7 +217,11 @@ L["Display LFG Icons in group chat."] = true;
 L["Display the hyperlink tooltip while hovering over a hyperlink."] = "Muestra la descripción emergente del enlace cuando pasas el cursor sobre él."
 L["Enable the use of separate size options for the right chat panel."] = true;
 L["Fade Chat"] = "Desvanecer Chat"
+L["Fade Tabs No Backdrop"] = true;
 L["Fade the chat text when there is no activity."] = "Desvanecer el texto del chat cuando no hay actividad"
+L["Fade Undocked Tabs"] = true;
+L["Fades the text on chat tabs that are docked in a panel where the backdrop is disabled."] = true;
+L["Fades the text on chat tabs that are not docked at the left or right chat panel."] = true;
 L["Font Outline"] = "Contorno de Fuente"
 L["Font"] = "Fuente"
 L["Hide Both"] = "Ocultar Ambos"
@@ -355,7 +364,10 @@ L["Make the world map smaller."] = true;
 L["Multi-Monitor Support"] = true;
 L["Name Font"] = "Fuente para Nombres"
 L["Objective Frame Height"] = true;
+L["Party / Raid"] = true;
+L["Party Only"] = true;
 L["Position of bonus quest reward frame relative to the objective tracker."] = true;
+L["Raid Only"] = true;
 L["Remove Backdrop"] = "Quitar Fondo"
 L["Reset all frames to their original positions."] = "Coloca todos los marcos en sus posiciones originales"
 L["Reset Anchors"] = "Restaurar Fijadores"
@@ -664,9 +676,11 @@ L["Destruction"] = "Destrucción"
 L["Detach From Frame"] = "Separar Del Marco"
 L["Detached Width"] = "Ancho de Separación"
 L["Direction the health bar moves when gaining/losing health."] = "La dirección de la barra de salud se mueve cuando ganas/pierdes salud."
-L["Disable Blizzard"] = "Desactivar Blizzard"
+L["Disabled Blizzard Frames"] = true;
 L["Disabled"] = "Desactivado"
-L["Disables the blizzard party/raid frames."] = "Desactiva el marco de grupo/banda de Blizzard"
+L["Disables the focus and target of focus unitframes."] = true;
+L["Disables the player and pet unitframes."] = true;
+L["Disables the target and target of target unitframes."] = true;
 L["Disconnected"] = "Desconectado"
 L["Display a spark texture at the end of the castbar statusbar to help show the differance between castbar and backdrop."] = "Muestra una textura al final de la barra de lanzamiento/estado para ayudar a diferenciar entre la barra de lanzamiento y el fondo."
 L["Display druid mana bar when in cat or bear form and when mana is not 100%."] = true;
@@ -838,6 +852,7 @@ L["Spark"] = "Desatar"
 L["Spec Icon"] = "Icono de Especialidad"
 L["Spell not found in list."] = "Hechizo no encontrado en la lista."
 L["Spells"] = "Hechizos"
+L["Stack Threshold"] = true;
 L["Stagger Bar"] = "Barra de Tambaleo"
 L["Start Near Center"] = "Comenzar Cerca del Centro"
 L["StatusBar Texture"] = "Textura de la Barra de Estado"
@@ -857,6 +872,7 @@ L["Text yOffset"] = "Desplazamiento Y del Texto"
 L["Text"] = "Texto"
 L["Textured Icon"] = "Icono Texturizado"
 L["The alpha to set units that are out of range to."] = "Establece la transparencia para las unidades fuera de alcance."
+L["The debuff needs to reach this amount of stacks before it is shown. Set to 0 to always show the debuff."] = true;
 L["The following macro must be true in order for the group to be shown, in addition to any filter that may already be set."] = "La siguiente macro debe ser verdadera para que el grupo se muestre, además de cualquier filtro que ya exista."
 L["The font that the unitframes will use."] = "La fuente que usa el marco de unidad."
 L["The initial group will start near the center and grow out."] = "El grupo inicial comenzará cerca del centro y crecer."

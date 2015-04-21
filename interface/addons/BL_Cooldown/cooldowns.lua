@@ -30,6 +30,7 @@ BLCD.cooldowns = {
 		CD = 120,
 		cast = 12,
 		class = "PALADIN",
+		notspec = 999,
 		index = getIndex(),
 	},
 	[1022] = { -- Hand of Protection
@@ -40,6 +41,7 @@ BLCD.cooldowns = {
 		CD = 300,
 		cast = 10,
 		class = "PALADIN",
+		notspec = 999,
 		index = getIndex(),
 	},
 	[105809] = { -- Holy Avenger
@@ -216,6 +218,7 @@ BLCD.cooldowns = {
 		name = "SHA_SPLITO",
 		CD = 180,
 		cast = 6,
+		charges = 2,
 		class = "SHAMAN",
 		spec = 264,
 		index = getIndex(),
@@ -404,5 +407,13 @@ BLCD.cooldowns = {
 		class = "HUNTER",
 		index = getIndex(),
 	},
+}
+
+BLCD.cooldownReduction = {
+	["PAL_HAOFSA"] = {
+				spellID = 6940,
+				CD = 90,
+				spec = 70,
+			},
 }
 --------------------------------------------------------

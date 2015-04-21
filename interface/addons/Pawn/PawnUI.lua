@@ -1246,30 +1246,6 @@ function PawnUI_CompareItems()
 		PawnUI_AddComparisonStatLineNumbers(PawnLocal.UI.CompareMetaSockets, HasSockets1, HasSockets2)
 	end
 
-	HasSockets1 = Item1.UnenchantedStats.CogwheelSocket or 0
-	HasSockets2 = Item2.UnenchantedStats.CogwheelSocket or 0
-	if not HasSockets1 or HasSockets1 <= 0 then HasSockets1 = nil end
-	if not HasSockets2 or HasSockets2 <= 0 then HasSockets2 = nil end
-	if HasSockets1 or HasSockets2 then
-		if LastFoundHeader then
-			PawnUI_AddComparisonHeaderLine(LastFoundHeader)
-			LastFoundHeader = nil
-		end
-		PawnUI_AddComparisonStatLineNumbers(PawnLocal.UI.CompareCogwheelSockets, HasSockets1, HasSockets2)
-	end
-
-	HasSockets1 = Item1.UnenchantedStats.ShaTouchedSocket or 0
-	HasSockets2 = Item2.UnenchantedStats.ShaTouchedSocket or 0
-	if not HasSockets1 or HasSockets1 <= 0 then HasSockets1 = nil end
-	if not HasSockets2 or HasSockets2 <= 0 then HasSockets2 = nil end
-	if HasSockets1 or HasSockets2 then
-		if LastFoundHeader then
-			PawnUI_AddComparisonHeaderLine(LastFoundHeader)
-			LastFoundHeader = nil
-		end
-		PawnUI_AddComparisonStatLineNumbers(PawnLocal.UI.CompareShaTouchedSockets, HasSockets1, HasSockets2)
-	end
-
 	if not TotalSocketValue1 or TotalSocketValue1 <= 0 then TotalSocketValue1 = nil end
 	if not TotalSocketValue2 or TotalSocketValue2 <= 0 then TotalSocketValue2 = nil end
 	if TotalSocketValue1 or TotalSocketValue2 then
@@ -1304,7 +1280,7 @@ function PawnUI_CompareItems()
 			PawnUI_AddComparisonHeaderLine(LastFoundHeader)
 			LastFoundHeader = nil
 		end
-		PawnUI_AddComparisonStatLineStrings(PawnLocal.UI.CompareSpecialEffects .. " " .. PawnQuestionTexture, Asterisk1, Asterisk2)
+		PawnUI_AddComparisonStatLineStrings(PawnLocal.UI.CompareSpecialEffects .. " " .. PawnDiamondTexture, Asterisk1, Asterisk2)
 	end
 	
 	-- Update the scrolling stat area's height.
@@ -1594,16 +1570,6 @@ function PawnUI_ShowBestGems()
 	if #(PawnScaleBestGems[PawnUICurrentScale].BlueSocket[GemQualityLevel]) > 0 then
 		PawnUI_AddGemHeaderLine(format(PawnLocal.UI.GemsColorHeader, BLUE_GEM))
 		for _, GemData in pairs(PawnScaleBestGems[PawnUICurrentScale].BlueSocket[GemQualityLevel]) do
-			PawnUI_AddGemLine(GemData.Name, GemData.Texture, GemData.ID)
-		end
-		ShownGems = true
-	end
-	
-	-- Only show cogwheels if the player is a high-level engineer.
-	GemQualityLevel = PawnGetGemQualityForItem(PawnCogwheelQualityLevels, PawnUIGemQualityLevel)
-	if PawnPlayerUsesCogwheels() and #(PawnScaleBestGems[PawnUICurrentScale].CogwheelSocket[GemQualityLevel]) > 0 then
-		PawnUI_AddGemHeaderLine(format(PawnLocal.UI.GemsColorHeader, PawnLocal.CogwheelName))
-		for _, GemData in pairs(PawnScaleBestGems[PawnUICurrentScale].CogwheelSocket[GemQualityLevel]) do
 			PawnUI_AddGemLine(GemData.Name, GemData.Texture, GemData.ID)
 		end
 		ShownGems = true
@@ -1951,17 +1917,9 @@ function PawnUI_OnSocketUpdate()
 					BestGems = BestGems .. PawnGetGemListString(PrismaticSockets, UseRed, UseYellow, UseBlue, ScaleName, Item.Level)
 				end
 			end
-			if ItemStats.CogwheelSocket then
-				if BestGems ~= "" then BestGems = BestGems .. ", " end
-				BestGems = BestGems .. format(PawnLocal.GemColorList1, ItemStats.CogwheelSocket, PawnGetBestSingleGemForScale(ScaleName, "CogwheelSocket", Item.Level))
-			end
 			if ItemStats.MetaSocket then
 				if BestGems ~= "" then BestGems = BestGems .. ", " end
 				BestGems = BestGems .. format(PawnLocal.GemColorList1, ItemStats.MetaSocket, META_GEM)
-			end
-			if ItemStats.ShaTouchedSocket then
-				if BestGems ~= "" then BestGems = BestGems .. ", " end
-				BestGems = BestGems .. format(PawnLocal.GemColorList1, ItemStats.ShaTouchedSocket, PawnGetBestSingleGemForScale(ScaleName, "ShaTouchedSocket", Item.Level))
 			end
 			local TooltipText = TextColor .. PawnGetScaleLocalizedName(ScaleName) .. ":  |r" .. BestGems
 			PawnSocketingTooltip:AddLine(TooltipText, 1, 1, 1)

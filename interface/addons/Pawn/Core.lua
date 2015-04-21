@@ -12,9 +12,10 @@
 -- "Constants"
 ------------------------------------------------------------
 
-PawnQuestionTexture = "|TInterface\\AddOns\\Pawn\\Textures\\Question:0|t" -- Texture string that represents a (?).  Don't need to localize this.
-PawnUpgradeTexture = "|TInterface\\AddOns\\Pawn\\Textures\\UpgradeArrow:0|t" -- Texture string that represents an upgrade arrow.  Don't need to localize this.
-PawnNewFeatureTexture = "|TInterface\\OptionsFrame\\UI-OptionsFrame-NewFeatureIcon:0:0:0:-1|t" -- Texture string that represents a new feature (!) icon.  Don't need to localize this.
+PawnQuestionTexture = "|TInterface\\AddOns\\Pawn\\Textures\\Question:0|t" -- Texture string that represents a (?).
+PawnDiamondTexture = "|TInterface\\AddOns\\Pawn\\Textures\\Diamond:0|t" -- Texture string that represents a diamond.
+PawnUpgradeTexture = "|TInterface\\AddOns\\Pawn\\Textures\\UpgradeArrow:0|t" -- Texture string that represents an upgrade arrow.
+PawnNewFeatureTexture = "|TInterface\\OptionsFrame\\UI-OptionsFrame-NewFeatureIcon:0:0:0:-1|t" -- Texture string that represents a new feature (!) icon.
 PawnSingleStatMultiplier = "_SingleMultiplier"
 PawnMultipleStatsFixed = "_MultipleFixed"
 PawnMultipleStatsExtract = "_MultipleExtract"

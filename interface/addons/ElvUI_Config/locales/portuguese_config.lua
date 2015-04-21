@@ -54,9 +54,9 @@ Formatos de Vida / Poder:
 'deficit' - Exibir o valor em falta, nao será exibido nada se não houver nada em falta
 
 Formato de Nomes:
-'name-short' - Nome restringido a 10 caracteres
-'name-medium' - Nome restringido a 15 caracteres
-'name-long' - Nome restringido a 20 caracteres
+'name:short' - Nome restringido a 10 caracteres
+'name:medium' - Nome restringido a 15 caracteres
+'name:long' - Nome restringido a 20 caracteres
 
 Para desactivar deixe o espaço em branco, se precisar de mais informações visite o site http://www.tukui.org]=];
 
@@ -133,11 +133,15 @@ L["Condensed"] = true;
 L["Currency Format"] = "Formato de moeda"
 L["Descending"] = "Descendente"
 L["Direction the bag sorting will use to allocate the items."] = "Direção que o organizador de bolsas irá usar para distribuir os itens."
+L["Display Item Level"] = true;
+L["Displays item level on equippable items."] = true;
 L["Enable/Disable the all-in-one bag."] = "Ativar/Desativar a Bolsa tudo-em-um."
 L["Enable/Disable the Bag-Bar."] = "Ativar/Desativar a Barra das Bolsas."
 L["Full"] = true;
 L["Icons and Text"] = "Texto e Ícones"
 L["Ignore Items"] = "Ignorar Itens"
+L["Item Level Threshold"] = true;
+L["Item Level"] = true;
 L["List of items to ignore when sorting. If you wish to add multiple items you must seperate the word with a comma."] = "Lista de itens a serem ignorados ao organizar. Múltiplos itens deve devem ser separados por vírgulas."
 L["Money Format"] = true;
 L["Panel Width (Bags)"] = "Largura do Painel (Bolsas)"
@@ -155,6 +159,7 @@ L["The direction that the bag frames will grow from the anchor."] = "Direcção 
 L["The display format of the currency icons that get displayed below the main bag. (You have to be watching a currency for this to display)"] = "O formato de exibição dos ícones de moeda exibidos abaixo da bolsa principal. (Para isto ser exibido é necessário que selecione 'Mostrar na Mochila' na moeda desejada na aba Moeda dentro do Quadro do Personagem)."
 L["The display format of the money text that is shown at the top of the main bag."] = true;
 L["The frame is not shown unless you mouse over the frame."] = "A não ser que passe com o rato (mouse) por cima do quadro, este não será mostrado."
+L["The minimum item level required for it to be shown."] = true;
 L["The size of the individual buttons on the bag frame."] = "O tamanho individual de botões dentro do quadro das bolsas."
 L["The size of the individual buttons on the bank frame."] = "O tamanho individual de botões dentro do quadro do banco."
 L["The spacing between buttons."] = "Espaçamento entre botões."
@@ -212,7 +217,11 @@ L["Display LFG Icons in group chat."] = true;
 L["Display the hyperlink tooltip while hovering over a hyperlink."] = "Exibir a tooltip de um hyperlink quando pairar por cima deste."
 L["Enable the use of separate size options for the right chat panel."] = true;
 L["Fade Chat"] = "Desvanecer o bate-papo"
+L["Fade Tabs No Backdrop"] = true;
 L["Fade the chat text when there is no activity."] = "Desvanece o texto do bate-papo quando não há atividade."
+L["Fade Undocked Tabs"] = true;
+L["Fades the text on chat tabs that are docked in a panel where the backdrop is disabled."] = true;
+L["Fades the text on chat tabs that are not docked at the left or right chat panel."] = true;
 L["Font Outline"] = "Contorno da Fonte"
 L["Font"] = "Fonte"
 L["Hide Both"] = "Esconder Ambos"
@@ -355,7 +364,10 @@ L["Make the world map smaller."] = true;
 L["Multi-Monitor Support"] = true;
 L["Name Font"] = "Fonte de Nomes"
 L["Objective Frame Height"] = true;
+L["Party / Raid"] = true;
+L["Party Only"] = true;
 L["Position of bonus quest reward frame relative to the objective tracker."] = true;
+L["Raid Only"] = true;
 L["Remove Backdrop"] = "Remover Fundo"
 L["Reset all frames to their original positions."] = "Restaurar todos os quadros para as posições originais"
 L["Reset Anchors"] = "Restaurar Fixadores"
@@ -664,9 +676,11 @@ L["Destruction"] = "Destruição"
 L["Detach From Frame"] = "Destacar do Quadro"
 L["Detached Width"] = "Largura quando Destacado"
 L["Direction the health bar moves when gaining/losing health."] = "Direção em que a barra da vida se move quando se ganha/perde vida."
-L["Disable Blizzard"] = "Desativar a Blizzard"
+L["Disabled Blizzard Frames"] = true;
 L["Disabled"] = "Desativar"
-L["Disables the blizzard party/raid frames."] = "Desativar os quadros de grupo/raide da Blizzard."
+L["Disables the focus and target of focus unitframes."] = true;
+L["Disables the player and pet unitframes."] = true;
+L["Disables the target and target of target unitframes."] = true;
 L["Disconnected"] = "Desconectado"
 L["Display a spark texture at the end of the castbar statusbar to help show the differance between castbar and backdrop."] = "Exibir uma textura de faísca no fim da Barra de Lançamento para ajudar a diferenciar a barra de lançamento e o fundo."
 L["Display druid mana bar when in cat or bear form and when mana is not 100%."] = true;
@@ -838,6 +852,7 @@ L["Spark"] = "Faísca"
 L["Spec Icon"] = "Ícone de Especialização"
 L["Spell not found in list."] = "Feitiço não encontrado na lista."
 L["Spells"] = "Feitiços"
+L["Stack Threshold"] = true;
 L["Stagger Bar"] = "Barra de Cambaleio"
 L["Start Near Center"] = "Começar perto do Centro"
 L["StatusBar Texture"] = "Textura da barra de estado"
@@ -857,6 +872,7 @@ L["Text yOffset"] = "Distância Y do Texto"
 L["Text"] = "Texto"
 L["Textured Icon"] = "Ícone Texturizado"
 L["The alpha to set units that are out of range to."] = "A trasparência a definir para unidades que estão fora de alcance."
+L["The debuff needs to reach this amount of stacks before it is shown. Set to 0 to always show the debuff."] = true;
 L["The following macro must be true in order for the group to be shown, in addition to any filter that may already be set."] = "A macro seguinte tem de ser verdadeira para que o grupo seja mostrado, em adição a qualquer outro filtro que possa já estar definido."
 L["The font that the unitframes will use."] = "A fonte que os quadros de unidades usarão."
 L["The initial group will start near the center and grow out."] = "O grupo inicial começara perto do centro e crescerá para fora."

@@ -2,6 +2,8 @@ local GlobalAddonName, ExRT = ...
 
 local module = ExRT.mod:New("LootLink",ExRT.L.LootLink,nil,true)
 
+local VExRT = nil
+
 module.db.mobsIDs = {
 	[78714]=true,	--Kargath
 	[77404]=true,	--Butcher
@@ -31,7 +33,9 @@ module.db.mobsIDs = {
 module.db.cache = {}
 
 function module.options:Load()
-	self.enableChk = ExRT.lib.CreateCheckBox(self,nil,10,-10,ExRT.L.LootLinkEnable)
+	self:CreateTilte()
+
+	self.enableChk = ExRT.lib.CreateCheckBox(self,nil,10,-30,ExRT.L.LootLinkEnable,VExRT.LootLink.enabled)
 	self.enableChk:SetScript("OnClick", function(self,event) 
 		if self:GetChecked() then
 			VExRT.LootLink.enabled = true
@@ -41,9 +45,8 @@ function module.options:Load()
 			module:Disable()
 		end
 	end)
-	self.enableChk:SetChecked(VExRT.LootLink.enabled)
 	
-	self.shtml1 = ExRT.lib.CreateText(self,595,0,"TOP",0,-50,nil,"TOP",nil,12,ExRT.L.LootLinkSlashHelp)
+	self.shtml1 = ExRT.lib.CreateText(self,595,0,"TOP",0,-70,nil,"TOP",nil,12,ExRT.L.LootLinkSlashHelp)
 end
 
 
@@ -67,7 +70,8 @@ end
 
 local function LootLink(linkAnyway)
 	local lootMethod = GetLootMethod()
-	if lootMethod == "personalloot" then
+	local _,_,difficulty = GetInstanceInfo()
+	if (lootMethod == "personalloot" or difficulty == 7 or difficulty == 17) and not linkAnyway then
 		return
 	end
 	local count = GetNumLootItems()

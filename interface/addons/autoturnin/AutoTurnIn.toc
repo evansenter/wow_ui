@@ -1,4 +1,4 @@
-## Interface: 60100
+﻿## Interface: 60100
 ## Title: AutoTurnIn
 ## Version: 4.5.N
 ## Author: Alexandr Shubert
@@ -13,7 +13,7 @@
 ## X-Date: 2014-10-16
 ## X-Category: Quest
 ## X-Embeds: Ace3
-## X-Curse-Packaged-Version: 4.6.6
+## X-Curse-Packaged-Version: 4.8
 ## X-Curse-Project-Name: AutoTurnIn
 ## X-Curse-Project-ID: autoturnin
 ## X-Curse-Repository-ID: wow/autoturnin/mainline
@@ -26,6 +26,7 @@ loc\localization_FR.lua
 loc\localization_IT.lua
 
 rewards_const.lua
+IgnoredNPC.lua
 AutoTurnIn.lua
 QuestLevel.lua
 

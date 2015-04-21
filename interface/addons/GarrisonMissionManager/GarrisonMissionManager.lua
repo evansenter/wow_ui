@@ -40,7 +40,7 @@ local wipe = wipe
 -- [AUTOLOCAL END]
 
 local MissionPage = GarrisonMissionFrame.MissionTab.MissionPage
-local MissionPageFollowers = GarrisonMissionFrame.MissionTab.MissionPage.Followers
+local MissionPageFollowers = MissionPage.Followers
 
 -- Config
 local ingored_followers = {}
@@ -88,6 +88,7 @@ local filtered_followers = {}
 local filtered_followers_count
 local filtered_free_followers_count
 local filtered_followers_dirty = true
+local follower_xp_cap = {}
 
 addon_env.event_frame = addon_env.event_frame or CreateFrame("Frame")
 local event_frame = addon_env.event_frame
@@ -96,6 +97,7 @@ local UnregisterEvent = event_frame.UnregisterEvent
 
 -- Pre-declared functions defined below
 local CheckPartyForProfessionFollowers
+local MissionPage_PartyButtonOnClick
 
 local events_for_followers = {
    GARRISON_FOLLOWER_LIST_UPDATE = true,
@@ -457,20 +459,43 @@ local function FindBestFollowersForMission(mission, followers, mode)
                            if c_gr_yield > gr_yield then break end
                         end
 
-                        if mode == 'gold_yield' then
+                        if gold_rewards then
                            if c_gold_yield < gold_yield then found = true break end
                            if c_gold_yield > gold_yield then break end
                         end
 
                         -- Minimize XP bonus if all followers are maxed, because it indicates either overkill or XP-bonus traits better used elsewhere
-                        if slots == followers_maxed then
-                           if cXpBonus > xpBonus then found = true break end
-                           if cXpBonus < xpBonus then break end
+                        -- but only if there are unmaxed followers. Otherwise minimize it after other optimizations.
+                        if not all_followers_maxed then 
+                           if slots == followers_maxed then
+                              if cXpBonus > xpBonus then found = true break end
+                              if cXpBonus < xpBonus then break end
+                           end
+                        end
+
+                        -- Minimize GR/gold multiplier if possible if no corresponding reward is available.
+                        if not gr_rewards then
+                           local c_gr_multiplier = current.materialMultiplier
+                           if c_gr_multiplier > materialMultiplier then found = true break end
+                           if c_gr_multiplier < materialMultiplier then break end
+                        end
+
+                        if not gold_rewards then
+                           local c_gold_multiplier = current.goldMultiplier
+                           if c_gold_multiplier > goldMultiplier then found = true break end
+                           if c_gold_multiplier < goldMultiplier then break end
                         end
 
                         local cBuffCount = current.buffCount
                         if cBuffCount > buffCount then found = true break end
                         if cBuffCount < buffCount then break end
+
+                        if all_followers_maxed then
+                           if slots == followers_maxed then
+                              if cXpBonus > xpBonus then found = true break end
+                              if cXpBonus < xpBonus then break end
+                           end
+                        end
 
                         local cIsEnvMechanicCountered = current.isEnvMechanicCountered
                         if cIsEnvMechanicCountered > isEnvMechanicCountered then found = true break end
@@ -525,7 +550,7 @@ local function FindBestFollowersForMission(mission, followers, mode)
    top.gr_rewards = gr_rewards
    top.gold_rewards = gold_rewards
    -- TODO:
-   -- If we have GR yield list, check it and remove all entries where gr_yield is worse than #1 from regular top list.
+   -- If we have GR/gold yield list, check it and remove all entries where gr_yield is worse than #1 from regular top list.
    -- dump(top[1])
 
    if party_followers_count > 0 then
@@ -568,13 +593,36 @@ local function GetFilteredFollowers()
             filtered_followers_count = filtered_followers_count + 1
             filtered_followers[filtered_followers_count] = follower
 
+            local xp_to_level = follower.levelXP
+
             local status = follower.status
             if status and status ~= GARRISON_FOLLOWER_IN_PARTY then
                follower.is_busy_for_mission = true
             else
-               if follower.levelXP ~= 0 then all_followers_maxed = nil end
+               if xp_to_level ~= 0 then all_followers_maxed = nil end
                filtered_free_followers_count = filtered_free_followers_count + 1
             end
+
+            -- How much extra XP follower can gain before becoming maxed out?
+            local xp_cap
+            if xp_to_level == 0 then
+               -- already maxed
+               xp_cap = 0
+            else
+               local quality = follower.quality
+               local level = follower.level
+
+               if quality == 4 and level == GARRISON_FOLLOWER_MAX_LEVEL - 1 then
+                  xp_cap = xp_to_level
+               elseif quality == 3 and level == GARRISON_FOLLOWER_MAX_LEVEL then
+                  xp_cap = xp_to_level
+               else
+                  -- Treat as uncapped. Not exactly true for lv. 98 and lower epics, but will do.
+                  xp_cap = 999999
+               end
+            end
+            follower_xp_cap[follower.followerID] = xp_cap
+
          until true
       end
       filtered_followers.all_followers_maxed = all_followers_maxed
@@ -730,7 +778,7 @@ local function BestForCurrentSelectedMission()
    end
 
    if mission_page_pending_click then
-      gmm_buttons['MissionPage' .. mission_page_pending_click]:Click()
+      MissionPage_PartyButtonOnClick(gmm_buttons['MissionPage' .. mission_page_pending_click])
       mission_page_pending_click = nil
    end
 end
@@ -766,7 +814,7 @@ CheckPartyForProfessionFollowers = function()
          -- Have follower in possible list
          -- GMM_dumpl("name, texture, shipmentCapacity, shipmentsReady, shipmentsTotal, creationTime, duration, timeleftString, itemName, itemIcon, itemQuality, itemID", C_Garrison.GetLandingPageShipmentInfo(buildingID))
          -- GMM_dumpl("id, name, texPrefix, icon, description, rank, currencyID, currencyQty, goldQty, buildTime, needsPlan, isPrebuilt, possSpecs, upgrades, canUpgrade, isMaxLevel, hasFollowerSlot, knownSpecs, currSpec, specCooldown, isBuilding, startTime, buildDuration, timeLeftStr, canActivate", C_Garrison.GetOwnedBuildingInfo(buildingID))
-         if timeleftString then
+         if shipmentCapacity and shipmentCapacity > 0 then
             local plotID = building.plotID
             local id, name, texPrefix, icon, description, rank, currencyID, currencyQty, goldQty, buildTime, needsPlan, isPrebuilt, possSpecs, upgrades, canUpgrade, isMaxLevel, hasFollowerSlot, knownSpecs, currSpec, specCooldown, isBuilding, startTime, buildDuration, timeLeftStr, canActivate = C_Garrison.GetOwnedBuildingInfo(plotID)
             -- print(nameLanding, hasFollowerSlot, rank, shipmentsReady)
@@ -781,7 +829,7 @@ CheckPartyForProfessionFollowers = function()
                            local party_follower = MissionPageFollowers[party_idx].info
                            if party_follower and possible_follower.followerID == party_follower.followerID then
                               shipment_followers[party_idx .. 'b'] = name
-                              shipment_followers[party_idx .. 'r'] = shipmentsTotal - shipmentsReady
+                              shipment_followers[party_idx .. 'r'] = shipmentsTotal and (shipmentsTotal - shipmentsReady)
                               shipment_followers[party_idx .. 't'] = timeleftString
                            end
                         end
@@ -799,14 +847,18 @@ CheckPartyForProfessionFollowers = function()
       local time_left = shipment_followers[idx .. 't']
       local incomplete_shipments = shipment_followers[idx .. 'r']
       if building_name then
-         warning:SetFormattedText("%s%s %s (%d)", RED_FONT_COLOR_CODE, time_left, building_name, incomplete_shipments)
+         if time_left then
+            warning:SetFormattedText("%s%s %s (%d)", RED_FONT_COLOR_CODE, time_left, building_name, incomplete_shipments)
+         else
+            warning:SetFormattedText("%s%s", YELLOW_FONT_COLOR_CODE, building_name)
+         end
          warning:Show()
       end
    end
 end
 hooksecurefunc("GarrisonMissionPage_UpdateMissionForParty", CheckPartyForProfessionFollowers)
 
-local function MissionPage_PartyButtonOnClick(self)
+--[[ localized above ]] MissionPage_PartyButtonOnClick = function(self)
    if self[1] then
       event_frame:UnregisterEvent("GARRISON_FOLLOWER_LIST_UPDATE")
       for idx = 1, #MissionPageFollowers do
@@ -829,10 +881,12 @@ end
 
 local function MissionList_PartyButtonOnClick(self)
    if addon_env.RegisterManualInterraction then addon_env.RegisterManualInterraction() end
-   -- mission_page_pending_click = 1
+   mission_page_pending_click = 1
    return self:GetParent():Click()
 end
 
+local mission_expiration_format_days  = "%s" .. DAY_ONELETTER_ABBR:gsub(" ", "") .. " %02d:%02d"
+local mission_expiration_format_hours = "%s" ..                                        "%d:%02d"
 -- Add more data to mission list over Blizzard's own
 -- GarrisonMissionList_Update
 local function GarrisonMissionList_Update_More()
@@ -846,6 +900,7 @@ local function GarrisonMissionList_Update_More()
    if self.showInProgress then
       for i = 1, numButtons do
          gmm_buttons['MissionList' .. i]:Hide()
+         gmm_frames['MissioListExpirationText' .. i]:SetText()
          buttons[i]:SetAlpha(1)
       end
       return
@@ -866,6 +921,8 @@ local function GarrisonMissionList_Update_More()
    local filtered_followers, filtered_free_followers_count = GetFilteredFollowers()
    local more_missions_to_cache
    local _, garrison_resources = GetCurrencyInfo(GARRISON_CURRENCY)
+
+   local time = GetTime()
 
    for i = 1, numButtons do
       local button = buttons[i]
@@ -912,6 +969,38 @@ local function GarrisonMissionList_Update_More()
             button:SetAlpha(1)
          end
          gmm_button:Show()
+
+         local expiration_text_set
+         local offerEndTime = mission.offerEndTime
+         -- offerEndTime seems to be present on all missions, though Blizzard UI shows tooltips only on rare
+         if offerEndTime then
+            local xp_only_rewards
+            for _, reward in pairs(mission.rewards) do
+               if reward.followerXP and xp_only_rewards == nil then xp_only_rewards = true end
+               if not reward.followerXP then xp_only_rewards = false break end
+            end
+
+            if not xp_only_rewards then
+               local remaining = offerEndTime - time -- seconds at this line, but will be reduced to minutes/hours/days below
+               local color_code = (remaining < (60 * 60 * 8)) and RED_FONT_COLOR_CODE or ''
+               local seconds = remaining % 60
+               remaining = (remaining - seconds) / 60
+               local minutes = remaining % 60
+               remaining = (remaining - minutes) / 60
+               local hours = remaining % 24
+               local days = (remaining - hours) / 24
+               if days > 0 then
+                  gmm_frames['MissioListExpirationText' .. i]:SetFormattedText(mission_expiration_format_days, color_code, days, hours, minutes)
+               else
+                  gmm_frames['MissioListExpirationText' .. i]:SetFormattedText(mission_expiration_format_hours, color_code, hours, minutes)
+               end
+               expiration_text_set = true
+            end
+         end
+
+         if not expiration_text_set then
+            gmm_frames['MissioListExpirationText' .. i]:SetText()
+         end
       end
    end
 
@@ -923,8 +1012,9 @@ end
 hooksecurefunc("GarrisonMissionList_Update", GarrisonMissionList_Update_More)
 hooksecurefunc(GarrisonMissionFrame.MissionTab.MissionList.listScroll, "update", GarrisonMissionList_Update_More)
 
-addon_env.HideGameTooltip = function() return GameTooltip:Hide() end
+addon_env.HideGameTooltip = GameTooltip_Hide or function() return GameTooltip:Hide() end
 addon_env.OnShowEmulateDisabled = function(self) self:GetScript("OnDisable")(self) end
+addon_env.OnEnterShowGameTooltip = function(self) GameTooltip:SetOwner(self, "ANCHOR_RIGHT") GameTooltip:SetText(self.tooltip, nil, nil, nil, nil, true) end
 
 local function MissionPage_ButtonsInit()
    local prev
@@ -933,12 +1023,12 @@ local function MissionPage_ButtonsInit()
       for idx = 1, 3 do
          local name = 'MissionPage' .. suffix .. idx
          if not gmm_buttons[name] then
-            local set_followers_button = CreateFrame("Button", nil, GarrisonMissionFrame.MissionTab.MissionPage, "UIPanelButtonTemplate")
+            local set_followers_button = CreateFrame("Button", nil, MissionPage, "UIPanelButtonTemplate")
             set_followers_button:SetText(idx)
             set_followers_button:SetWidth(100)
             set_followers_button:SetHeight(50)
             if not prev then
-               set_followers_button:SetPoint("TOPLEFT", GarrisonMissionFrame.MissionTab.MissionPage, "TOPRIGHT", 0, 0)
+               set_followers_button:SetPoint("TOPLEFT", MissionPage, "TOPRIGHT", 0, 0)
             else
                set_followers_button:SetPoint("TOPLEFT", prev, "BOTTOMLEFT", 0, 0)
             end
@@ -961,15 +1051,41 @@ local function MissionPage_ButtonsInit()
    end
    gmm_buttons['MissionPageYield1']:SetPoint("TOPLEFT", gmm_buttons['MissionPage3'], "BOTTOMLEFT", 0, -50)
    gmm_buttons['MissionPageUnavailable1']:SetPoint("TOPLEFT", gmm_buttons['MissionPageYield3'], "BOTTOMLEFT", 0, -50)
+
+   local button = CreateFrame("Button", nil, MissionPage)
+   button:SetNormalTexture("Interface\\Buttons\\UI-LinkProfession-Up")
+   button:SetPushedTexture("Interface\\Buttons\\UI-LinkProfession-Down")
+   button:SetHighlightTexture("Interface\\Buttons\\UI-Common-MouseHilight", "ADD")
+   button:SetHeight(30)
+   button:SetWidth(30)
+   button.tooltip = BROWSER_COPY_LINK .. " (Wowhead)"
+   button:SetPoint("RIGHT", MissionPage.Stage.Title, "LEFT", 0, 0)
+   button:SetScript("OnEnter", addon_env.OnEnterShowGameTooltip)
+   button:SetScript("OnLeave", addon_env.HideGameTooltip)
+   button:SetScript("OnClick", function()
+      local chat_box = ACTIVE_CHAT_EDIT_BOX or LAST_ACTIVE_CHAT_EDIT_BOX
+      if chat_box then
+         local missionInfo = MissionPage.missionInfo
+         local mission_id = missionInfo.missionID
+         if mission_id then
+            local existing_text = chat_box:GetText()
+            local inserted_text = ("http://www.wowhead.com/mission=%s"):format(mission_id)
+            if existing_text:find(inserted_text, 1, true) then return end
+            -- TODO: what really should be cheked is that there's no space before cursor
+            if existing_text ~= "" and not existing_text:find(" $") then inserted_text = " " .. inserted_text end
+            ChatEdit_ActivateChat(chat_box)
+            chat_box:Insert(inserted_text)
+         end
+      end
+   end)
 end
 
 local function MissionList_ButtonsInit()
    local level_anchor = GarrisonMissionFrame.MissionTab.MissionList.listScroll
    local blizzard_buttons = GarrisonMissionFrame.MissionTab.MissionList.listScroll.buttons
    for idx = 1, #blizzard_buttons do
+      local blizzard_button = blizzard_buttons[idx]
       if not gmm_buttons['MissionList' .. idx] then
-         local blizzard_button = blizzard_buttons[idx]
-
          -- move first reward to left a little, rest are anchored to first
          local reward = blizzard_button.Rewards[1]
          for point_idx = 1, reward:GetNumPoints() do
@@ -988,6 +1104,15 @@ local function MissionList_ButtonsInit()
          set_followers_button:SetPoint("LEFT", blizzard_button, "RIGHT", -65, 0)
          set_followers_button:SetScript("OnClick", MissionList_PartyButtonOnClick)
          gmm_buttons['MissionList' .. idx] = set_followers_button
+      end
+
+      if not gmm_frames['MissioListExpirationText' .. idx] then
+         local expiration = blizzard_button:CreateFontString(nil, "OVERLAY", "GameFontNormalSmall")
+         expiration:SetWidth(500)
+         expiration:SetHeight(1)
+         expiration:SetPoint("BOTTOMRIGHT", blizzard_button, "BOTTOMRIGHT", -10, 8)
+         expiration:SetJustifyH("RIGHT")
+         gmm_frames['MissioListExpirationText' .. idx] = expiration
       end
    end
    -- GarrisonMissionFrame.MissionTab.MissionList.listScroll.scrollBar:SetFrameLevel(gmm_buttons['MissionList1']:GetFrameLevel() - 3)

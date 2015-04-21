@@ -1,0 +1,553 @@
+tag v2.3.6
+4bc0ffcbc1797c477791c2674f943b3398183600
+Ethan Centaurai <ethancentaurai@outlook.com>
+2015-03-26 20:26:22 +0000
+
+Tagging as v2.3.6.
+
+
+--------------------
+
+Ethan Centaurai:
+	- Ran the dataminer. (1 new)
+	- Updated miner to use jdk8u40.
+	- Removed some erroneous whitespace.
+	- Ran the dataminer. (31 new)
+	- Ran the dataminer. (31 new, 11 changed, 1 deleted)
+	- Added progress output to the dataminer, mostly for my own convenience.
+	- Updated miner to use jdk8u31.
+	- Bump Interface number to 60100.
+	- Finalise subversion-to-git conversion.
+	- Updated dataminer. GetBuffed's database has been broken and corrupt for months so we use WoWhead's data instead.
+	PRO: Data is more accurate. In theory.
+	CON: Data mining takes much longer.
+	- Whoops, added a missing comma. Closes Ticket 105.
+	- Replace LibBabble-Zone-3.0 with LibBabble-SubZone-3.0. Closes Ticket 104.
+	- TSI's Browser module has a SavedVariables namespace once more. Closes Ticket 102.
+	- Minor Jewelcrafting update.
+	- Fixed incorrect itemID number for Prismatic Focusing Lens.
+	- Manually added recipe info for Prismatic Focusing Lens and Reflecting Prism. Fixes Ticket 101.
+	Related, GetBuffed.com is broken and it doesn't look like it will be fixed any time soon. WTB help making a new datamining script.
+	- Protect against the GetMerchantItemLink() API sometimes returning nil.
+	- Ran the dataminer to pick up changes from recent hotfixes.
+	- Whoops, forgot to disable debug messages.
+	- Updated README.
+	- Ran the dataminer to pick up changes from recent hotfixes.
+	- Added missing phrase to WoWace Localization app. Fixes ticket 99.
+	- Merchant colouring now only requires one single hook instead of 5 hooks and 3 events.
+	- Added options to colour-code recipes sold by merchants, on by default.
+	- Minor event handler tweaks.
+	- Ran the dataminer to pick up changes from recent hotfixes.
+	- Safety checks are now slightly less strict.
+	- One more dataminer run.
+	- Use the IsNPCCrafting() API instead of a nil check.
+	- Ran the dataminer to pick up changes from recent hotfixes.
+	- Ran the dataminer to pick up changes from today's hotfixes.
+	- Break out of a for loop once we've found what we're looking for.
+	- Fixed an error on line 1462.
+	- Removed deprecated code.
+	- Fixed a "string expected, got nil" error when speaking to Ahm in your garrison's enchanting study.
+	- Daily dataminer run.
+	- Added an option to only add extra data to recipe tooltips, off by default. Requested by Maelynn on WoWinterface.
+	- Extra data on recipe tooltips now obeys the Learnable By and Known By visibility settings.
+	- Daily dataminer run.
+	- Ran the dataminer.
+	- Prevent the addon from adding extra tooltip information while in combat.
+	- Fixed an error that occurs when a recipe search returns no results.
+	- Update developer notes to match new data layout.
+	- Ran the dataminer to bring in new WoD recipe data.
+	- Do not include the datamining script in packages.
+	- Ran the dataminer. THIS UPDATE WILL RESET YOUR SAVED VARIABLES.
+	- - Update to jdk8u25. - Update dataminer to pull reagent data from WoWhead instead of GetBuffed. - Deleted unused class files.
+	- Updated early Inscription recipes to use Moonglow Ink instead of Ivory Ink.
+	- Removed deprecated Inscription recipes.
+	- One final debug tweak to protect against false positives.
+	- Improved debug mode and fixed a typo.
+	- Use the AddOns category in the new Key Bindings UI.
+	- Use GetSpellDescription() instead of a tooltip scanner.
+	- Debug Mode should no longer report false positives.
+	- Tweaked debug again and disabled it for non-SVN installs.
+	- Tweak debug output and pick up latest translations. Fixes ticket 94.
+	- Tweaked debug output.
+	- Removed more deprecated recipes from the database.
+	- Browser UI: Print an error instead of permanently locking up the frame.
+	- Blacksmithing: Removed Socket Bracers and Socket Gloves recipes.
+	- This typo fix didn't get sent to the repository somehow.
+	- Applied reesonline's profession data patch. Thank you! Closes ticket 92.
+	- Fixed a typo. Closes ticket 91.
+	- Fixed a capitalisation fail. ("Stack size" -> "Stack Size")
+	- TradeSkillInfoUI is no longer marked as out-of-date.
+	- Bump Interface number to 60000.
+	- Updated Nessa Shadowsong's co-ordinates.
+	- Update to jdk8u20.
+	- Fixed a bug caused by a Blizzard dev's totally amazeballs idea to rename the Enchanting spells in 6.0.
+	- Protect against WoWhead returning zero in skill level data.
+	- Fixed a silly error when opening the TSI UI.
+	- Revert to Build 657. I can't make this work without DDoSing WoWhead.
+	- It is now safe to datamine First Aid again.
+	- GetBuffed is no longer used for datamining. From now on, only WoWhead is parsed for information.
+	- Added progress output to dataminer.
+	- Attempting to protect against more bad data from GetBuffed.
+	- Removed Skillet hooks. They weren't in use and Skillet now has working native support anyway.
+	- Do not datamine First Aid as GetBuffed returns bad data. First Aid will be manually maintained instead.
+	- Translate the dataminer from German to English.
+	- Disable decrepit Enchanting hack, which as been 99% redundant ever since Cataclysm went live.
+	- Fixed a couple of "attempt to perform arithmetic on nil value" errors.
+	- Revert dataminer and database to previous layout. Congratulations code, you have defeated me.
+	- Fixed Jewelcrafting datamining. (Juwelenschleifen -> Juwelierskunst)
+	- Fix some errors caused by previous commit.
+	- Outsource translations to the WoWace Localization webpage.
+	- Run the dataminer.
+	- Do not include data-miner in packages.
+	- Upload working data-miner. A massive thanks to Bodar and nevcairiel for their help!
+	- Upload empty dummy file in preparation for upcoming database changes.
+	- Minor hooking code cleanups.
+	- No longer looks for TradeSkillHD during ADDON_LOADED events.
+	- Removed TradeSkillHD hook as it is no longer needed.
+	- Partial revert of the changes in r635.
+	- Poke the README.
+	- Small cleanups.
+	- QuickSearch: Off by default, and change the default button combo to control+rightclick. I need to re-write this thing so badly...
+	- Removed the :PrintWhereUsed() method because broken.
+	- Add Spirit of War to components list.
+	- Engineering: Fixed recipe data for Fused Wiring, Khorium Power Core, Ghost-Iron Bolts, High-Explosive Gunpowder. Added missing data for Pierre.
+	- Leatherworking: Fixed the item IDs of Tough Scorpid armour patterns.
+	- Core: Update components list.
+	- Core: Remove in-game profession window crawler debug thing.
+	- Cooking: Four Senses Brew and Banana Infused Rum are learned from items.
+	- Cooking: Fix the skill levels of Pandaren "Everyday Cooking" recipes.
+	- Jewelcrafting: Fix the Primal Diamond recipe and add a few missing Serpent's Eye recipes. Thank you for the report, viruscamp!
+	- Cooking: Fix the recipes for Spicy Salmon and Spicy Vegetable Chips (they yield 5 of the item, not 1). Thank you Bodar for the report!
+	- Removed tekKonfig.
+	- Tailoring: Added lots of missing recipes. I forgot to commit these changes earlier. :(
+	- Leatherworking: Whoops, missed one.
+	- Leatherworking: Fix a few typos. (0 -> 600)
+	- Leatherworking: Added lots of missing recipes.
+	- Enchanting: Add missing Pandaren enchanting scrolls.
+	- Jewelcrafting: Fix Nimble Alexandrite and Nimble Wild Jade.
+	- Inscription: Add Glyph of Pillar of Light.
+	- Fixed a dumb typo that caused errors when opening a profession window.
+	- Cooking: Fixed recipe info for Darkbrew Lager, Candied Sweet Potato and Pumpkin Pie.
+	- Blacksmithing: Change some 0s into 600s.
+	- Blacksmithing: Added a few missing recipes and fixed some silly typos. Thank you Bodar for the patch!
+	- Fix a compatibility issue with the latest version of Auctioneer Suite. Thank you for the patch, brykrys!
+	- Disable the data miner.
+	- Fixed an error when using quicksearch in the TSI window.
+	- Engineering: Add Rascal-Bot.
+	- Cooking: Add more Patch 5.4 recipes.
+	- Blacksmithing: Add Patch 5.4 recipe data.
+	- Added the three noodle cart kits to the database.
+	- Add Patch 5.4 Inscription data.
+	- Bump Interface number for Patch 5.4.
+	- Activate in-game dataminer.
+	- More robust safety checks against nil values.
+	- Update readme.
+	- Remove some useless nils.
+	- Fix a couple of leaked globals. Fixes ticket #64.
+	- Remove useless functions.
+	- Remove some unused locals.
+	- Bump Interface number for Patch 5.3.
+	- Remove unused saved variable entry.
+	- Drop Skinner support.
+	- Fix an error reported by Dohram on Curse.
+	- Remove some dead code.
+	- koKR update.
+	- Update koKR translations. Thank you, next96!
+	- Drycode a safety check to prevent "attempt to perform arithmetic on field cost (a nil value)" errors.
+	- Delete ALL the semicolons!
+	- Remove AceEvent-3.0 from TradeSkillInfoUI.
+	- Remove AceConsole-3.0 from TradeSkillInfoUI.
+	- Make TradeSkillInfoUI a module of TradeSkillInfo instead of creating a second namespace.
+	- Engineering: Fix an error with items that required a Copper Modulator to make.
+	- Rename TradeskillIdData.lua to Components.lua. Please reboot the game to avoid errors.
+	- Blacksmithing: Add the twelve remaining Reborn weapon recipes.
+	- Remove local underscore from the top of each file.
+	- Clean up config code and slightly rearrange options window layout.
+	- Add six of the Reborn weapon recipes. The remaining twelve are not in the server cache yet.
+	- Remove unused translations.
+	- Remove LibAbacus-3.0 from the optional dependencies list.
+	- Remove LibAbacus-3.0 and unused "money format" options.
+	- Fix data for Zen Alchemist Stone. Thank you Farli @TheOvercut for the report!
+	- A few small cleanups...
+	- Add the remaining Reborn weapon recipes.
+	- Bring back the dev notes I accidentally deleted in r555, placed into a separate file for safe keeping.
+	- Fix a typo in Enchanted Thorium Bar recipe.
+	- Revert last commit.
+	- First Aid skills are now learned from a trainer with the exception of Strong Anti-Venom, which is a rare drop.
+	- Fix the skill levels of First Aid recipes.
+	- Miners can make Enchanted Thorium Bars now.
+	- Fix the skill levels of Mining recipes.
+	- Fix a few minor typos.
+	- Remove GameTooltip:SetGlyph() hook.
+	- Remove a whole bunch of unused local variables and fix a few misnamed ones.
+	- Fix a few more leaked globals.
+	- Split recipe data into a separate file.
+	- Completely re-write the tooltip handler code to use ONE central hook instead of TEN smaller ones.
+	- Readme update.
+	- Fix a typo in the Ghost Iron Statue training project.
+	- Remove the Reborn weapons for now as they're not in the server cache yet.
+	- Add a few "Reborn" Blacksmithing recipes.
+	- Update .pkgmeta
+	- Fix a couple of leaked globals. Fixes Ticket #62.
+	- Clean up some functions and make them more readable.
+	- Fixed a bug with item tooltips in the crafting window due to Blizzard breaking tradeskill API.
+	- Fix Ticket #61.
+	- Tweak the broker object slightly.
+	- Bump Interface number to 50200.
+	- Add new Blacksmithing "training project" recipes.
+	- Fix a typo in the Primal Diamond recipe.
+	- Fix a typo in the Magnificent Hide recipe.
+	- Add new Leatherworking data for Patch 5.2.
+	- Add new Jewelcrafting data for Patch 5.2.
+	- Add new Engineering data for Patch 5.2.
+	- Add new Alchemy data for Patch 5.2.
+	- Trim excess whitespace from search input. Educated guess at fixing Ticket 60.
+	- Turn the dataminer off as it can return false positives due to caching issues.
+	- Attempting to fix a rare oddity where the "new data found" messages would print even though no new data was actually found.
+	- Added some more missing Vicious PvP gear recipes. Thanks goes to "coani" on Curse for the report.
+	- Tailoring: Fix incorrect Imperial Silk recipe information.
+	- Enchanting: Fix a "compare number with nil" error in Maelstrom Shatter.
+	- Alchemy: Fix Potion of Luck.
+	- Enchanting: Add missing Maelstrom Shatter recipe.
+	- Use CURRENT_TRADESKILL instead of abusing GetTradeSkillLine().
+	- Don't scan Runeforging.
+	- Only print the "new data found" message once per session for each profession.
+	- Reduce the amount of text the dataminer prints if it finds new data.
+	- Add some missing Jewelcrafting data. Thanks goes to "docthis2" on Curse for the report.
+	- Drop oSkin support since it was killed off years ago.
+	- There is only one Exotic Leather recipe.
+	- Add some missing Leatherworking recipes.
+	- Fix a typo.
+	- Possible fix for Abyssal Shatter.
+	- Remove a useless function.
+	- Remove some old, useless code.
+	- Add some missing Inscription data.
+	- Print a message if we find new data in a player's professions. WARNING: VERY SPAMMY.
+	- Use the new and improved AceTimer-3.0 instead of LibShefkiTimer-1.0.
+	- Fix path to tekKonfigAboutPanel.
+	- Change the icon into Spirit Of Harmony instead of Primal Nether.
+	- Update .toc for Patch 5.1.
+	- Ugly half-fix for Forged Documents.
+	- Fix a "compare with nil" error.
+	- It seems .pkgmeta is case-sensitive. Should fix ticket 55.
+	- Embed tekKonfig-AboutPanel.
+	- Remove more remnants of now-defunct profession specializations.
+	- Inscription update. There is only one kind of parchment now and recipes that once produced relics now produce staves.
+	- Prevent a potential for no-lib users.
+	- Fix external repository path of LibShefkiTimer-1.0.
+	- Fix a copy/paste fail and improve the LDB tooltip code.
+	- Move LibDataBroker code into a separate file and make the broker object not suck.
+	- svn:properties cleanup, isle 2.
+	- Replace AceTimer-3.0 with LibShefkiTimer-1.0.
+	- Fix some typos in the README.
+	- Re-write the README as Markdown instead of CurseWiki.
+	- Fix a typo.
+	- Remove showing reagents in trainer tooltips as Blizzard's UI does this by default.
+	- Remove ancient and deprecated GetSellValue() API support.
+	- Remove "Mysteries of the Mists" and fix "Darkmoon Card of the Mists".
+	- Remove a stray comma.
+	- Add missing profession data files to the .toc. Whoops.
+	- File re-arrange.
+	- Remove redundant profession specialization stuff.
+	- Gather up a few more misplaced data strings.
+	- Remove empty table.
+	- Delete a file that is no longer needed.
+	- Merge two files together.
+	- Round up a few stray recipes.
+	- Move tailoring data into it's own file.
+	- Move inscription data into it's own file.
+	- Move smelting data into it's own file.
+	- Move leatherworking data into it's own file.
+	- Move jewelcrafting data into it's own file.
+	- Move engineering data into it's own file.
+	- Move first aid data into it's own file.
+	- Move enchanting data into it's own file.
+	- Move blacksmithing data into it's own file.
+	- Move alchemy data into it's own file.
+	- Move cooking data into it's own file.
+	- Merge the special case data tables together and move the data into it's own file.
+	- Add new files to .toc.
+	- File rearranging.
+	- Test commit to force a new package.
+	- Some small preparations for upcoming database overhaul.
+	- Tweak windwool bandage data.
+	- Upload empty skeleton files to be populated later.
+	- Fix skill levels of the new Inscription inks.
+	- Remove debug print.
+	- Move the config into the main directory and create it on demand.
+	- Remove non-existant files from the .toc.
+	- Move the profession data files into their own directory.
+	- Move the locale files into their own directory for pompy.
+	- Merge the locale files so we have one repository for each translation instead of two.
+	- Fix file load order.
+	- Fix an error caused by the changes in r447.
+	- Remove Earth support as Cosmos UI died years ago.
+	- Remove unused default settings.
+	- Long overdue removal of "Banked" and "Alt Amount" options and functionality.
+	- Update .toc metadata in UI module.
+lepaperwan:
+	- TradeskillInfo: - Updated locale-frFR.lua to include last untranslated strings. (new NPCs yet to be added)
+Ethan Centaurai:
+	- Fix path to CallbackHandler-1.0.
+	- Fix .toc metadata.
+	- Load libraries from the .toc
+	- Updated zhCN localisation, thanks viruscamp!
+	- Apply another patch from viruscamp, updating some Engineering and Cooking recipes.
+	- Apply a patch from CMTitan, fixing a few incorrect data flags.
+	- Update .pkgmeta file.
+	- Comment out deprecated data. Thanks to viruscamp and MrGray for the diff.
+	- Fix an "or" that should be an "and".
+	- Remove a redundant glyph recipe.
+	- Fix an error caused by new profession subheader types.
+	- Whoops, missed a file.
+	- Update to Patch 5.0.4. Thanks to viruscamp on Curse for the files!
+	- Bump version to 2.1.2
+	- Updated Patch 4.0.6 recipes.
+	- Add missing Borean Leather recipe. Also fixes a minor graphical bug in the profession UI.
+	- Fix ticket #44 and proper fix for #42.
+	The problem was caused by an incorrect fix for ticket #42.
+	The new search pattern should identify fields correctly.
+	- Add proper recipe IDs for Origami XXX inscription skills.
+	This fix may be related to ticket #43
+	- * Better fix for ticket #40:   Instead of trying to find an empty space,   push things around in the window. * Move the profit text from a hacked position to a   dedicated location * Make the option Trade Skill->Combine Cost work
+	- Fixed ticket #42 - API GetCombineYield() broken.
+	- Added Cataclysm First Aid skills.
+	- Fixed some missing skills, and add scrolls.
+	- Added the Cataclysm enchanting scrolls
+	- Added the missing Dreamcloth tailoring skills
+	- Modified the code to remove some redundant data lines
+	- Initial pass for Cataclysm tradeskill information.
+	- Added new skills and component information.
+	- Modified some old skills that were updated.
+	- Moved the skill level text down a bit.
+	This makes the area a little too crowded, but at least
+	it is not overlapping text in most cases.
+	- Fix a copy/paste fail.
+	- Possibly corrected the levels of Glyph of Living Bomb and Glyph of Collossus Smash. Heck, even it it's wrong it's better than zero.
+	- Corrected the Elixir of Water Walking.
+	- Corrected the skill levels of Lesser Flask of Resistance and Ethereal Oil.
+	- Update all recipes that use vials to point to the Crystal Vial. Deathwing broke all other vials in his temper tantrum.
+	- The "Skill Level" text no longer covers up the "Required Tools" text if it spreads across two lines (e.g., if you are an engineer).
+	- - Delete embedded texture as it's no longer used.
+	- - Use a different corner grip texture.
+	- - Added two missing Ulduar Blacksmithing recipes. - Fixed reference to Lightning Forest Emerald.
+	- Added in Pilgrim's Bounty recipes. Horde players will see Alliance versions of the reagents until I find a more suitable solution.
+	- Fix a bug in r398. I changed the wrong string. :(
+	- Collapse All button no longer inherits a non-existent template.
+	- Fix a typo in a frame name which was causing FrameXML.log errors.
+	- TradeskillInfo: - remove obsolete inherited font (MasterFont) reference
+	- Fixed a bug causing guild professions to be mistaken as the character's own professions.
+Sayclub:
+	- TradeskillInfo: - koKR update
+Ethan Centaurai:
+	- Auction House click bug now properly fixed. Closes ticket 39.
+	- Fixed a bug causing errors at the Auction House Dressing Room. Drycoded.
+	- Bring back the ScrollTo feature for Dys.
+	- Added the forgotten @ in a directive
+	- Fix a dumb typo causing the options to not load if the LoD section is not embedded inside the main addon.
+	- Turned 15 lines of epic fail into 4 lines of awesome.
+	- Tweaked options creation and loading.
+	- Fix "attempt to index global this" errors.
+	- Bump version to 2.0.0 for the upcoming release
+	- Fixed Profession scanning
+	- Removed specialization scanning. The specializations are
+	  no longer available;
+	- Replaced profession scanning code to use the new Profession API.
+	- Removed left over engineering specialization
+	- Remove crafted ammo and bags
+	- Engineering recipes for ammo are no longer available
+	- Leatherworking recipes for ammo bags and quiver are
+	  no longer available.
+	- Update recipes for patch 4.0.1
+	- Biggest impact was on jewelcrafting and inscription,
+	but there are other professions with monir changes
+	as well.
+	- All enchant scrolls updated to use a single vellum type
+	- .toc update.
+	- Another inscription update. There is only one vellum now instead of six.
+	- Inscription update.
+	- Fixed the UI and config so they work while embedded.
+	- Bump .toc to 40000.
+	- More SVN keyword fixing.
+	- Fix SVN keywords.
+	- Fixed the collapse all button.
+	- Fix the button template.
+	- Whoops.
+	- Replace getglobal() with _G
+	- Replace getglobal with _G
+	- Another bugfix.
+	- Fixed bugs introduced in WoW 4.0.1.
+nowhererx7:
+	- TradeskillInfo: - redo of r364; forgot that Wordpad destroys lua files
+	- TradeskillInfo: - Fixes bug where auction-house coloring incorrectly shows that an alt can learn the recipe
+Ethan Centaurai:
+	- TradeskillInfo: - filthy, dirty hack to allow recipe & item linking from the UI again without bugging out in WoW 3.3.5. If your server is still on 3.3.3, stay with r362 until you get updated.
+	- TradeskillInfo: - further machine localizations for the small, cold gnome. If non-machine humans prefer something different, go nuts.
+playerlin:
+	- TradeskillInfo: - zhTW update, fix some weird translations.
+Ethan Centaurai:
+	- TradeskillInfo: - ruRU update
+	- TradeskillInfo: - 3.3.3 patch changes:   - Updated mats for items that use Runed Orbs to create   - Updated glyphs (Inscription) that now take 1 ink instead of 2   - Added Frosty Flying Carpet   - Added vendor Frozo the Renowned (including machine localizations--some partial--for all except koKR, zhCN & zhTW. If you don't like them, do them yourself)
+s8095324:
+	- TradeskillInfo: - zhTW update
+Ethan Centaurai:
+	- - Ticket #27: Add Refined Deeprock Salt to components list
+	- - Fix wrong name: "Ashen Verdict" to "The Ashen Verdict"
+	- TradeskillInfo: - ruRU update
+	- - Add data for the 3.3 patch:   - Locations for Alchemist Finklestein, Larana Drone   - ICC recipes: 6 blacksmithing, 8 leatherworking, and 4 tailoring   - Add faction Ashen Verdict   - Add location Icecrown Citadel   - Add "Enchant Gloves - Angler" data   - Fix Flying Carpet mats - Fix location of Timothy Jones
+	- - Fix ticket #29: Transmute epic gems require skill 450
+	- - Fix the quick search modifers to be exclusive. For example, when shift is   selected, alt-shift will no longer work. - Tidy up the UI tab of the configuration options.
+	- - Ticket #25: Better layout for ATSW - Make the Skill labels and texts disappear when skill levels are not enabled   for both ATSW and Blizzard frames.
+	- - Bump versio number to v1.6.1
+	- - Fix the clipping of names in the UI so that names no longer   extend beyond the scroll box when window is too narrow.
+	- - TICKET#23: Modify Blizzard TradeSkill window skill level string as per the ticket.
+	- TradeskillInfo: - zhTW update
+	- - TICKET#23: Modify ATSW skill level string as per the ticket.
+	- - Bump version number to v1.6.0
+	- - Add new recipes for Leatherworking, Inscription, and Enchanting:   - Drums of Forgotten Kings   - Drums of the Wild   - Runescroll of Fortitude - Update Modified recipes for Leatherworking:   - Scaled Draeinc Vest   - Thick Draenic Vest   - Wild Draenish Vest   - Felscale Breastplate   - Scaled Draenic Boots   - Golden Dragonstrike Breastplate   - Primalstorm Breastplate   - Living Crystal Breastplate
+	- - FEATURE: Add the option to color alt names by combine difficulty   in the "Usable by" tooltip field. When there are multiple combines   that can use the item, the maximum difficulty color (i.e. the one   closest to brown) is used.   Default value of this option is: ON
+	- - Bump version number to v1.5.4
+	- - Fix ticket #22: "Recipe: Buzzard Bites" was incorrectly marked as "dropped" intead of "quest reward"
+	- - Fix Ticket#21: Some recipes were pointing to incorrect combines.
+	- - Add some missing German translations. Thanks Elandril.
+	- - Add definitons to handle recipes that drop for only one faction (ToC recipes) - Add ToC recipe drops
+	- - Fix learning skill level for a few inscription combines - Fix the problem where a recipe is shown as both "known by" and "will be learnable by" for the same toon when combine has an incorrect skill level.
+	- - Bump version numbers to 1.5.3
+	- - Group the enchanting scrolls together at the bottom of the Enchanting category
+	- - (UI:EXPERIMENTAL) Automatically update client cache when there is missing information that TSI needs to display. - Code tidy up in a few places
+	- - Bump version number to 1.5.2
+	- - Fix Tooltip Market Value setting problem
+	- - (EXPERIMENTAL) Remove redundant information from vars.components array.   Use information from vars.specialcases and vars.combines arrays during   run-time to reduce duplicated information and memory usage.
+	- TradeskillInfo: - ruRU update
+	- - Possible fix for the AceHook error
+	- - Commit the correct files for the "Scroll of Enchant" modifications
+	- - Bump version number to v1.5.1
+	- - Added information for "Scroll of Enchant XXX" - Modified addon to handle the exceptional cases for enchanting scrolls - Tidied up a few comments
+	- TradeskillInfo: - zhTW update
+	- TradeskillInfo: - ruRU update
+	- - Tidy up of the UI layout to get rid of an overlapping item.
+	- - Fix for table.sort weirdness.
+	- - Bump version number to 1.5.0
+	- - Added inital cut for the sort functionality in UI.   Now recipes can be sorted by difficulty, name, or auction and vendor profit.   The feature needs more polish, but it should be functional now.
+	- - Fix ticket #16 in the code that actually executes. :) - Remove some dead code.
+	- - Remove "Saronite Arrow Maker" and "Ultrasafe Bullet Machine". These recipes were removed from the game. - Fix skill required for Saronite Razorheads from 4150 to 415
+	- - Fix ticket #16 ("attempt to compare number with string")   Thanks for the fix, CMTitan
+	- - Fix an error in the ItemID/SpellID tooltip display introduced at last commit.
+	- - Display SpellID in tooltip instead of an ItemID with negative value when the tooltip belongs to a spell - such as an enchanting skill.
+	- - Fix Alchemy and inscription reasearch combines to no longer refer to incorrect filler item - Show the spell icons obtained from the client instead of using a hard-coded icon name
+	- - Bump version number to v1.4.7
+	- - Fix an old bug - using an uninitialized variable. Thanks boucherty, for reporting/solving it.
+	- - Remove price information from components - Use Blizzard API to learn vendor sell price of items - Fix the errors caused by incorrect information in combines
+	- - Update interface version to 30200
+	- - Bump version number to 1.4.6
+	- - Add 3.2.0 skills, recipes and changed components from wowhead.
+	- Remove Glyph of Envenom. It doesn't exist in the game.
+	- - Bumped version numbers to 1.4.5
+	- - Pinched the resize grip image from WowLua (thanks) - Changed the XML to point to local copy of the resize image
+	- - Added diffculty level display support for AdvancedTradeSkillWindow - Fixed a possible problem with hooking TradeSkillHD twice
+	- - Added diffculty level display support for TradeSkillHD
+	- TradeskillInfo: - zhTW update
+	- - Change command line behavior: "/tsi" and "/tsi menu" open main window, "/tsi config" open configuration window. - Rename a function to better match the behavior
+	- - Bump version numbers to 1.4.4
+	- - Pick up the correct version for TradeskillInfoUI
+	- - Tidy up the LDB launcher tooltip - Display the correct version in the tooltip - LDB launcher right click now toggles the configuration screen - Make sure TradeskillInfo configuration pages can be displayed when there are more than one page of addons with configurations.
+	- - Added deDE locale for TradeskillInfoUI. Thanks Elandril.
+	- -Bump version numbers to 1.4.3
+	- - Hook Skillet even if it is loaded after TradeskillInfo - Use correct hooking method for Skillet GetExtraItemDetailText()
+	- - Stop calling GetSellValue() from OnInitialize - it is too early.
+	- - Add missing libraries AceDBOptions-3.0 and AceGUI-3.0 - Remove optional dependency on Titan (Titan is supported through LDB)
+	- - Bump version numbers to 1.4.2
+	- - Add preliminary support for Auctionator and AuctionLite via GetAuctionBuyout() API.
+	- - Change the LDB launcher .text field to .label (ticket #14)
+	- - German Translations by Elandril.
+	- - Fixed the error that shows up when an unhandled parameter is given in command line. Thanks for reporting it, Zidomo.
+	- - Fix problem with r271 - thanks for reporting it, Zidomo
+	- - Modified the market value display do display the sell value for the number of items crafted. - Changed the default values for Banked Amount and Alt Amount tooltip options to false. - Bumped version number to 1.4.1
+	- Modify the components of some recipes according to 3.1.0 changes.
+	- TradeskillInfo: - zhTW update
+	- - Add new recipes for 3.1.0 - Bump version number to 1.4.0
+	- - Removed "Poisons" from the tradeskills list in the UI.
+	- - Replaced hard-coded trade skill names with names returned from the WoW client, with a fallback to the old values.   This should fix TSI not learning player recipes properly with non-english clients problem.
+	- - Fixed the migration code for TooltipKnownBy, etc.
+	- - Changed the default values of "Banked" and "Alt has" to true.
+	- - Added "Banked" and "Alts have" tooltip options/feature back in. There is a working version of CharacterInfoStorage.
+	- - Fixed the error shown when "Minor Inscription Research" or "Northrend Inscription Research" is displayed.
+	- - Forced a profession scan when addon is enabled. SKILL_LINES_CHANGED event doesn't seem to be delivered properly at startup.
+	- - Fixed the locale DB name. Thanks fooxi.
+	- - Allowed disabling of "Known by", "Learnable by", "Will be learnable by" tooltip options for individual professions and recipes
+	- TradeskillInfo: - ruRU update
+	- - Removed the custom configuration window - Added Interface/Addon Options configuration - Removed "Banked" and "Alt has" options. The only supported addon no longer works - Removed a forgotten debug line - Check Auctioneer availability even when Market value is displayed
+	- - Added Auctioneer Market Value information to the tooltip - Added command line and GUI switches to control Market Value tooltip data display - Changed the money formatting to a more compact form
+	- - Stopped displaying the price line "A: ?? - ?? = ??" when auctioneer is not available. - Fixed the error that appears when vendor prices are enaled but auctioneer is not.
+	- - Display Auctioneer "market value" prices to calculate and display profits - Add optional dependency to Auc-Advanced - Use the GetSellValue API when available
+	- - Import tradeskill difficulty coloring information from wowhead - Show difficulty coloring and vendor price information in main window - Stop gathering difficulty coloring information - Erase previously recorded difficulty coloring information
+	- - Add recipe information ("Known by", "learnable by", etc.) to crafted item tooltips as well.
+	- - Fixed a few vendors to show up on the correct faction - Added a few more missing recipes and vendors - Fixed the code to filter out single faction vendors correctly - Removed the vendor "Morgan Day" from Wintergrasp
+	- - Included zhCN locale fixes - thanks Sunteya
+	- - Removed spellid=59926 (convert Borean Leather Scraps to Borean Leather). It is not a trades skill recipe.
+	- - Changed AH recipe coloring order. Now, alts who know the recipe will be ignored if there are alts who can make use of a recipe.
+	- - Fix some Tailoring recipes
+	- - Fix and add some leatherworking recipes
+	- - Fix and add a few Jewelcrafting recipes
+	- - Fix and add a few inscription recipes
+	- - Fix and add a few engineering recipes
+	- - Fix and add a few cooking recipes
+	- - Fix and add a few blacksmithing recipes
+	- - Fix and add a few alchemy recipes
+	- - Fix some enchanting skills
+	- - Modified enchanting recipe mats according to wowwiki patch notes.
+	- - Fix error when skills are compressed in the skills window (k) by pressing the -/+ button (reported by AesirRising)
+	- - Fix locations of Catherine Leland and Kendor Kabonka (reported by vampik)
+	- - Fix skill levels for some enchanting recipes (reported by Veis)
+	- - Add frFR locale to .toc
+	- - Possible fix for TSI forgetting known skills
+	- TradeskillInfo: - ruRU update
+	- - Include arioso27's changes to zhTW locale for new vendors.
+	- - Fix skill level requirements for a few Jewelcrafting, Tailoring and Engineering recipes.
+	- - Add missing green quality gem data for jewelcrafting
+	- - Replace level 60 end-game drop recipes with reputation recipes - Add WotLK recipes and vendors - Add WotLK first aid recipes - Remove Bracers of Deflection from leatherworking (I couldn't find a source for it)
+	- - Fix the reset button to enable Inscription.
+	- - Fix error when all headers in trade skill window are collapsed.
+	- TradeskillInfo: - AddonLoader support (well tested) - Removed two old lines that repeat Blizzard default values, thus are unneeded
+	- TradeskillInfo: - ruRU fix
+	- TradeskillInfo: - update koKR
+	- TradeskillInfo: - added ruRU translation
+	- - Fix some more UI errors (error on button click)
+	- - Fix required skill levels for some Leatherworking recipes
+	- - Include French locale changes from lepaperwan
+	- - Remove vendor (and translations) for Halruun, which was probably a typo for Haalrun
+	- - Fix a few unknown skill levels from WoWDB
+	- - Include WotLK vendor name translations from mika0730
+	- - Include French translations from lepaperwan
+	- update deDE and fix Eternium rod mats
+	- - Apply Gabriel's fix for Skinner.
+	- - Add some recipe sources - Add WotLK smelting skills - Fix a few required skill values
+	- - Fix recent errors on find() - Add tooltip information on items that can be produced by more than one skill
+	- - Remove Debug output
+	- - Fix recent UI errors
+	- - Fix another UI problem (All button stopped working) - Add WotLK cooking skills and recipes
+	- - Fix up a few more self/this problems.
+	- - Fix the error when showing the tooltip at icons of trainer recipes
+	- - Fix an edge case where searches for certain items do not return any results
+	- - Initial work for adding WotLK trade skills
+	- - Add LibAbacus-3.0 library back in to embeds.xml - Include zhTW translation fixes from Arioso27
+	- TradeskillInfo: - update koKR
+	- - Delete TitanTSI.lua/xml. The LDB launcher should show up in Titan.
+	- - Remove a stray Ace2 call
+	- - Remove links menu hook
+	- - Move from Ace2 to Ace3 - Move trade skill names out of Babble-Tradeskill-2.2 into custom locales - Remove unnecessary dependence on Rock - Move strings from TradeSkillInfo.lua into locale-xxXX.lua files - Move strings from TradeskillData-xxXX.lua files into locale-xxXX.lua files - Remove detailed source information that was not being maintained - Include very limited frFR locale
+	- - koKR translations received from mrgyver
+	- TradeskillInfo: - toc fix koKR
+	- TradeskillInfo: - toc fix koKR
+	- - Fix: Do not update known tradeskills of the player when a trade skill link is opened - Include zhTW changes from arioso27
+	- - Do not move windows when UI scale changes - Make the main window resizable
+	- - Do not use ["xxx"] = true in non-base locales
+	- - Remove the primal nether from "Enchant Boots - Surefooted" mats list
+	- - Include changes from coani for TitanTSI - Implement a UIScale option in config panel, UI tab. - TODO: Need two more strings translated to esES, zhCN, and zhTW
+	- - Include other changes from arioso27 - Add some placeholders to TradeskillData-zhCN.lua
+	- -Replace locale-zhTW with arioso27's translation
+	- - Do not include embeds.xml for nolib builds - Fix some locale indexes for zhTW and zhCN
+	- - Use AceLocale instead of duplicated code
+	- - Incorporate moon_wizard's changes - Display the component as a question mark when it is not in local cache - Move TradeskillInfoUI into same package - Bump version to v1.1 - Remove stale URLs - Update interface in .toc - Fix WoW 3.0.2 problems - Reduce the amount of strings that need to be localized. Get them from WoW client instead. - Move all language independent data from TradeSkillData[-xxXX].lua to TradeSkillIdData.lua - Remove the Enchant descriptions, and obtain them from tooltip - Add most inscription recipes and components. TODO: Some components still need price information. - Remove some unused functions. - Fix the external library repository URLs.
+	- Facilitate WowAce-on-CurseForge transition
+	- Importing old repo data under /trunk

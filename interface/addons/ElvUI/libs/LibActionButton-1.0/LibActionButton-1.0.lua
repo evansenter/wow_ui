@@ -1229,7 +1229,7 @@ function UpdateCount(self)
 		end
 	else
 		local charges, maxCharges, chargeStart, chargeDuration = self:GetCharges()
-		if charges and maxCharges and maxCharges > 0 then
+		if charges and maxCharges and maxCharges > 1 then
 			self.Count:SetText(charges)
 		else
 			self.Count:SetText("")
@@ -1243,7 +1243,8 @@ local function SetCooldownHook(cooldown, ...)
 
 	if start ~= 0 or duration ~= 0 then
 		-- update swipe alpha
-		cooldown.__metaLAB.SetSwipeColor(cooldown, cooldown.__SwipeR, cooldown.__SwipeG, cooldown.__SwipeB, cooldown.__SwipeA * effectiveAlpha)
+		-- cooldown.__metaLAB.SetSwipeColor(cooldown, cooldown.__SwipeR, cooldown.__SwipeG, cooldown.__SwipeB, cooldown.__SwipeA * effectiveAlpha) --Original
+		cooldown.__metaLAB.SetSwipeColor(cooldown, cooldown.__SwipeR, cooldown.__SwipeG, cooldown.__SwipeB, cooldown.__SwipeA)
 
 		-- only draw bling and edge if alpha is over 50%
 		cooldown:SetDrawBling(effectiveAlpha > 0.5)
@@ -1272,7 +1273,7 @@ function HookCooldown(button)
 		button.cooldown.__SwipeR, button.cooldown.__SwipeG, button.cooldown.__SwipeB, button.cooldown.__SwipeA = 0, 0, 0, 0.8
 
 		button.cooldown.SetCooldown = SetCooldownHook
-		button.cooldown.SetSwipeColor = SetSwipeColorHook
+		-- button.cooldown.SetSwipeColor = SetSwipeColorHook
 	end
 end
 

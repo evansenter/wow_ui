@@ -579,11 +579,13 @@ local function DisableMarksBar()
 end
 
 function module.options:Load()
-	self.chkEnable = ExRT.lib.CreateCheckBox(self,nil,10,-7,ExRT.L.senable)
+	self:CreateTilte()
+
+	self.chkEnable = ExRT.lib.CreateCheckBox(self,nil,10,-35,ExRT.L.senable,VExRT.MarksBar.enabled,"/rt mb")
 	self.chkEnable.On = EnableMarksBar
 	self.chkEnable.Off = DisableMarksBar
 	
-	self.chkFix = ExRT.lib.CreateCheckBox(self,nil,300,-7,ExRT.L.messagebutfix)
+	self.chkFix = ExRT.lib.CreateCheckBox(self,nil,300,-35,ExRT.L.messagebutfix)
 	self.chkFix:SetScript("OnClick", function(self,event) 
 		if self:GetChecked() then
 			VExRT.MarksBar.Fix = true
@@ -594,7 +596,7 @@ function module.options:Load()
 		end
 	end)
 	
-	self.chkVertical = ExRT.lib.CreateCheckBox(self,nil,10,-110,ExRT.L.MarksBarVertical,VExRT.MarksBar.Vertical)
+	self.chkVertical = ExRT.lib.CreateCheckBox(self,nil,10,-130,ExRT.L.MarksBarVertical,VExRT.MarksBar.Vertical)
 	self.chkVertical:SetScript("OnClick", function(self,event) 
 		if self:GetChecked() then
 			VExRT.MarksBar.Vertical = true
@@ -604,9 +606,9 @@ function module.options:Load()
 		modifymarkbars()
 	end)
 	
-	self.TabViewOptions = ExRT.lib.CreateOneTab(self,605,115,"TOP",0,-115-25)
+	self.TabViewOptions = ExRT.lib.CreateOneTab(self,605,115,"TOP",0,-160)
 	
-	self.html1 = ExRT.lib.CreateText(self,100,18,nil,120,-20,nil,"TOP",nil,11,"/rt mm")
+	self.html1 = ExRT.lib.CreateText(self,100,25,nil,120,-46,nil,"TOP",nil,11,"/rt mm")
 
 	self.chkEnable1 = ExRT.lib.CreateCheckBox(self.TabViewOptions,nil,10,-5,ExRT.L.marksbarshowmarks)
 	self.chkEnable1:SetScript("OnClick", function(self,event) 
@@ -670,7 +672,7 @@ function module.options:Load()
 		modifymarkbars()
 	end)
 	
-	self.SliderScale = ExRT.lib.CreateSlider(self,550,15,0,-50,5,200,ExRT.L.marksbarscale,100,"TOP")
+	self.SliderScale = ExRT.lib.CreateSlider(self,550,15,0,-75,5,200,ExRT.L.marksbarscale,100,"TOP")
 	self.SliderScale:SetScript("OnValueChanged", function(self,event) 
 		event = event - event%1
 		VExRT.MarksBar.Scale = event
@@ -679,7 +681,7 @@ function module.options:Load()
 		self:tooltipReload(self)
 	end)
 	
-	self.SliderAlpha = ExRT.lib.CreateSlider(self,550,15,0,-85,0,100,ExRT.L.marksbaralpha,nil,"TOP")
+	self.SliderAlpha = ExRT.lib.CreateSlider(self,550,15,0,-108,0,100,ExRT.L.marksbaralpha,nil,"TOP")
 	self.SliderAlpha:SetScript("OnValueChanged", function(self,event) 
 		event = event - event%1
 		VExRT.MarksBar.Alpha = event
@@ -689,14 +691,14 @@ function module.options:Load()
 	end)
 	
 	
-	self.htmlTimer = ExRT.lib.CreateText(self,150,18,nil,14,-236-25,nil,"TOP",nil,11,ExRT.L.marksbartmr)
+	self.htmlTimer = ExRT.lib.CreateText(self,150,18,nil,14,-281,nil,"TOP",nil,11,ExRT.L.marksbartmr)
 
-	self.editBoxTimer = ExRT.lib.CreateEditBox(self,120,24,nil,143,-230-25,nil,6,true,nil,"10")
+	self.editBoxTimer = ExRT.lib.CreateEditBox(self,120,24,nil,143,-275,nil,6,true,nil,"10")
 	self.editBoxTimer:SetScript("OnTextChanged",function(self)
 		VExRT.MarksBar.pulltimer = tonumber(self:GetText()) or 10
 	end)  
 	
-	self.chkDisableInRaid = ExRT.lib.CreateCheckBox(self,nil,10,-251-25,ExRT.L.MarksBarDisableInRaid,VExRT.MarksBar.DisableOutsideRaid)
+	self.chkDisableInRaid = ExRT.lib.CreateCheckBox(self,nil,10,-296,ExRT.L.MarksBarDisableInRaid,VExRT.MarksBar.DisableOutsideRaid)
 	self.chkDisableInRaid:SetScript("OnClick", function(self,event) 
 		if self:GetChecked() then
 			VExRT.MarksBar.DisableOutsideRaid = true
@@ -711,7 +713,7 @@ function module.options:Load()
 		end
 	end)
 	
-	self.ButtonToCenter = ExRT.lib.CreateButton(self,255,22,nil,10,-285-25,ExRT.L.MarksBarResetPos,nil,ExRT.L.MarksBarResetPosTooltip)
+	self.ButtonToCenter = ExRT.lib.CreateButton(self,255,22,nil,10,-330,ExRT.L.MarksBarResetPos,nil,ExRT.L.MarksBarResetPosTooltip)
 	self.ButtonToCenter:SetScript("OnClick",function()
 		VExRT.MarksBar.Left = nil
 		VExRT.MarksBar.Top = nil
@@ -720,9 +722,7 @@ function module.options:Load()
 		module.frame:SetPoint("CENTER",UIParent, "CENTER", 0, 0)
 	end) 
 	
-	self.shtml1 = ExRT.lib.CreateText(self,605,200,nil,10,-320-25,nil,"TOP",nil,12,ExRT.L.MarksBarHelp)
-
-	self.chkEnable:SetChecked(VExRT.MarksBar.enabled)
+	self.shtml1 = ExRT.lib.CreateText(self,605,200,nil,10,-365,nil,"TOP",nil,12,ExRT.L.MarksBarHelp)
 
 	self.chkEnable1:SetChecked(VExRT.MarksBar.Show[1])
 	self.chkEnable2:SetChecked(VExRT.MarksBar.Show[2])
@@ -787,7 +787,7 @@ function module.main:GROUP_ROSTER_UPDATE()
 end
 
 function module:slash(arg)
-	if arg == "mm" then
+	if arg == "mm" or arg == "mb" then
 		if not VExRT.MarksBar.enabled then
 			EnableMarksBar()
 		else

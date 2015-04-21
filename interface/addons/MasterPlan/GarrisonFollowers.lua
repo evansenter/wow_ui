@@ -1,6 +1,6 @@
 local _, T = ...
-if T.Mark ~= 23 then return end
-local G, L = T.Garrison, T.L
+if T.Mark ~= 40 then return end
+local G, L, EV = T.Garrison, T.L, T.Evie
 local countFreeFollowers = G.countFreeFollowers
 
 local function hideGameTooltip(self)
@@ -15,24 +15,19 @@ local floatingMechanics = CreateFrame("Frame", nil, mechanicsFrame)
 floatingMechanics:EnableMouse(true)
 local CreateMechanicButton, Mechanic_SetTrait do
 	local function Mechanic_OnEnter(self)
-		local ci, finfo = self.info, G.GetFollowerInfo()
-		GameTooltip:SetOwner(self, "ANCHOR_BOTTOMRIGHT")
+		local ci = self.info
+		GameTooltip:SetOwner(self, "ANCHOR_PRESERVE")
+		GameTooltip:ClearAllPoints()
+		GameTooltip:SetPoint("TOPLEFT", self, "BOTTOMRIGHT")
 		if self.isTrait then
-			G.SetTraitTooltip(GameTooltip, self.id, ci)
+			G.SetTraitTooltip(GameTooltip, self.id, ci, not self.hideInactive)
 		elseif self.isTraitGroup then
-			floatingMechanics:SetOwner(self, ci, finfo)
+			floatingMechanics:SetOwner(self, ci)
 			return
 		elseif self.isDouble then
-			local ico = "|T" .. self.Icon:GetTexture() .. ":0:0:0:0:64:64:4:60:4:60|t "
-			GameTooltip:AddLine(ico .. self.name)
-			for i=1,ci and #ci or 0 do
-				GameTooltip:AddDoubleLine(G.GetFollowerLevelDescription(ci[i], nil, finfo[ci[i]]), G.GetOtherCounterIcons(finfo[ci[i]], self.id), 1,1,1)
-			end
-			if (ci and #ci or 0) == 0 then
-				GameTooltip:AddLine(L"You have no followers with duplicate counter combinations.", 1,1,1, 1)
-			end
+			G.SetDoubleCountersTooltip(GameTooltip, ci)
 		else
-			G.SetThreatTooltip(GameTooltip, self.id, ci)
+			G.SetThreatTooltip(GameTooltip, self.id, ci, nil, true)
 		end
 		GameTooltip:Show()
 		if GameTooltip:GetRight() > GarrisonMissionFrame:GetRight() then
@@ -86,7 +81,7 @@ floatingMechanics:SetFrameStrata("DIALOG")
 floatingMechanics:SetBackdrop({edgeFile="Interface/Tooltips/UI-Tooltip-Border", bgFile="Interface/DialogFrame/UI-DialogBox-Background-Dark", tile=true, edgeSize=16, tileSize=16, insets={left=4,right=4,bottom=4,top=4}})
 floatingMechanics:SetBackdropBorderColor(1, 0.85, 0.6)
 floatingMechanics.buttons = {}
-function floatingMechanics:SetOwner(owner, info, finfo)
+function floatingMechanics:SetOwner(owner, info)
 	self.owner, self.expire = owner
 	self:SetPoint("TOPRIGHT", owner, "BOTTOMRIGHT", 16, -2)
 	self:SetSize(10 + 24 * #info, 34)
@@ -167,38 +162,53 @@ local function syncTotals()
 		i = i + 1
 	end
 
-	local di, doubles, t = G.GetDoubleCounters(finfo), {}, {}
-	for k,v in pairs(di) do
-		if k > 0 and #v > 1 then
-			G.sortByFollowerLevels(v, finfo)
-			for i=1,#v do
-				doubles[#doubles+1] = v[i]
+	local di, doubles, cc = G.GetDoubleCounters(finfo), {}, 0
+	for l=1,2 do
+		for k,v in pairs(di) do
+			if k > 0 and #v > 1 then
+				if l == 1 then
+					G.sortByFollowerLevels(v, finfo)
+					if finfo[v[2]].status ~= GARRISON_FOLLOWER_INACTIVE then
+						cc = cc + countFreeFollowers(v, finfo)
+					end
+				end
+				for i=1,(finfo[v[2]].status == GARRISON_FOLLOWER_INACTIVE) == (l == 2) and #v or 0 do
+					doubles[#doubles+1] = v[i]
+				end
 			end
-			wipe(t)
 		end
 	end
-	local ico, cc = icons[i], countFreeFollowers(doubles, finfo)
+	local ico = icons[i]
 	ico.Icon:SetTexture("Interface\\Icons\\Inv_Misc_Book_11")
 	ico.Count:SetText(cc and cc > 0 and cc or "")
 	ico.info, ico.name, ico.isDouble = doubles, L"Duplicate counters", true
 end
+mechanicsFrame:SetScript("OnShow", syncTotals)
 GarrisonMissionFrame.FollowerTab:HookScript("OnShow", function(self)
 	mechanicsFrame:SetParent(self)
 	mechanicsFrame:ClearAllPoints()
 	mechanicsFrame:SetPoint("LEFT", self.NumFollowers, "RIGHT", 11, 0)
 	mechanicsFrame:Show()
-	syncTotals()
 end)
 GarrisonLandingPage.FollowerTab:HookScript("OnShow", function(self)
 	mechanicsFrame:SetParent(self)
 	mechanicsFrame:ClearAllPoints()
 	mechanicsFrame:SetPoint("LEFT", GarrisonLandingPage.HeaderBar, "LEFT", 200, 0)
 	mechanicsFrame:Show()
-	syncTotals()
 end)
 hooksecurefunc(C_Garrison, "SetFollowerInactive", function()
 	C_Timer.After(0.25, syncTotals)
 	C_Timer.After(1, syncTotals)
+end)
+EV.RegisterEvent("MP_RELEASE_CACHES", function()
+	if not mechanicsFrame:IsVisible() then
+		for i=1,#icons do
+			icons[i].info = nil
+		end
+		for i=1,#floatingMechanics.buttons do
+			floatingMechanics.buttons[i].info = nil
+		end
+	end
 end)
 
 local UpgradesFrame = CreateFrame("FRAME")
@@ -248,7 +258,7 @@ local function UpgradeItem_SetItem(self, id)
 	self:SetAttribute("macrotext", SLASH_STOPSPELLTARGET1 .. "\n" .. SLASH_USE1 .. " item:" .. id)
 	self:Show()
 end
-local function UpgradeItem_OnClick(self)
+local function UpgradeItem_OnClick()
 	C_Garrison.CastSpellOnFollower(GarrisonMissionFrame.FollowerTab.followerID)
 end
 local function CreateFollowerItemHighlight(b)
@@ -315,7 +325,7 @@ function UpgradesFrame:DisplayFor(owner, itemLevel, isWeapon)
 end
 
 
-local function FollowerItem_OnClick(self, button)
+local function FollowerItem_OnClick(self)
 	if InCombatLockdown() then return end
 	if UpgradesFrame:IsShown() and UpgradesFrame.owner == self then
 		UpgradesFrame:Hide()
@@ -338,7 +348,7 @@ local function FollowerItem_OnLeave(self)
 		self.UpgradeIcon:SetAlpha(0.6)
 	end
 end
-hooksecurefunc("GarrisonFollowerPage_SetItem", function(self, itemID, iLevel)
+hooksecurefunc("GarrisonFollowerPage_SetItem", function(self, _itemID, iLevel)
 	if not self.UpgradeIcon then
 		local ico = self:CreateTexture(nil, "ARTWORK")
 		ico:SetSize(28, 28)
@@ -400,6 +410,7 @@ local SpecAffinityFrame = CreateFrame("Frame") do
 	SpecAffinityFrame.Affinity = CreateMechanicButton(SpecAffinityFrame) do
 		SpecAffinityFrame.Affinity:SetSize(38, 38)
 		SpecAffinityFrame.Affinity:SetPoint("RIGHT", -42, 0)
+		SpecAffinityFrame.Affinity.hideInactive = true
 	end
 	function SpecAffinityFrame:ShowFor(owner, fi)
 		self:SetParent(owner)
@@ -429,7 +440,7 @@ GarrisonMissionFrame.FollowerTab.ItemWeapon:HookScript("OnUpdate", function()
 	end
 end)
 GarrisonMissionFrame.FollowerTab.AbilitiesFrame.Counters[1]:SetScript("OnEnter", GarrisonMissionMechanic_OnEnter)
-GarrisonMissionFrame.FollowerTab.AbilitiesFrame.Counters[1]:SetScript("OnLeave", function(self)
+GarrisonMissionFrame.FollowerTab.AbilitiesFrame.Counters[1]:SetScript("OnLeave", function()
 	GarrisonMissionMechanicTooltip:Hide()
 end)
 
@@ -536,7 +547,7 @@ local function FollowerPageAbility_OnEnter(self)
 	self.classSpec, self.otherCounter = ppp.classSpec, ppp.otherCounter
 	return RecruitAbility_OnEnter(self)
 end
-hooksecurefunc("GarrisonFollowerPage_ShowFollower", function(self, fid)
+hooksecurefunc("GarrisonFollowerPage_ShowFollower", function(self)
 	local af = self.AbilitiesFrame.Abilities
 	for i=1,#af do
 		af[i].IconButton:SetScript("OnEnter", FollowerPageAbility_OnEnter)
@@ -550,15 +561,15 @@ end
 
 local function Recruiter_ShowTraitTooltip(self)
 	GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-	G.SetTraitTooltip(GameTooltip, self.value)
+	G.SetTraitTooltip(GameTooltip, self.value, nil, true)
 	GameTooltip:Show()
 end
 local function Recruiter_ShowCounterTooltip(self)
 	GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
-	G.SetThreatTooltip(GameTooltip, self.value)
+	G.SetThreatTooltip(GameTooltip, self.value, nil, nil, true)
 	GameTooltip:Show()
 end
-hooksecurefunc("GarrisonRecruiterFrame_Init", function(self, level)
+hooksecurefunc("GarrisonRecruiterFrame_Init", function(_, level)
 	local lf, bn
 	if level == 2 then
 		lf, bn = DropDownList2, "DropDownList2Button"
@@ -655,14 +666,16 @@ do -- Reroll items
 	local af = GarrisonMissionFrame.FollowerTab.AbilitiesFrame
 	local rb = {T.CreateLazyItemButton(af, 122274), T.CreateLazyItemButton(af, 122273), T.CreateLazyItemButton(af, 122272), (T.CreateLazyItemButton(af, 118354))}
 	local function TargetFollower()
-		GarrisonMissionFrame.FollowerTab.UpgradeClickTarget:Click()
+		if SpellCanTargetGarrisonFollower() then
+			GarrisonMissionFrame.FollowerTab.UpgradeClickTarget:Click()
+		end
 	end
 	for i=1,#rb do rb[i]:SetSize(24, 24) rb[i].real:SetScript("PostClick", TargetFollower) end
-	hooksecurefunc("GarrisonFollowerPage_ShowFollower", function(self, id)
-		local x = -16
+	hooksecurefunc("GarrisonFollowerPage_ShowFollower", function(_, id)
+		local x, ic = -16, type(id) == "string"
 		for i=1,#rb do
 			local b = rb[i]
-			if GetItemCount(b.itemID) > 0 then
+			if ic and GetItemCount(b.itemID) > 0 then
 				b:SetPoint("TOPRIGHT", x, -88)
 				b:Show()
 				x = x - 28
@@ -673,23 +686,3 @@ do -- Reroll items
 	end)
 	af.MPUpgradeItems = rb
 end
-
-
-hooksecurefunc("UIDropDownMenu_StopCounting", function(self)
-	local mf = self and GetMouseFocus()
-	local tt, tf = mf and mf.tooltipTitle, mf and mf.tooltipFunc
-	if mf and (tt or tf) and not mf:IsForbidden() and mf:GetParent() == self then
-		if type(tt) == "function" and mf.tooltipText == nil then
-			mf.tooltipFunc, mf.tooltipText, tf, tt, mf.tooltipTitle = tt, tt, tt
-		end
-		if tf and tt == nil and mf.tooltipText == tf then
-			self.tooltipOwner, self.tooltipOnLeave = mf, securecall(tf, mf, mf.arg1, mf.arg2)
-		end
-	end
-end)
-hooksecurefunc("UIDropDownMenu_StartCounting", function(self)
-	if self and self.tooltipOwner and type(self.tooltipOnLeave) == "function" then
-		securecall(self.tooltipOnLeave, self.tooltipOwner)
-		self.tooltipOnLeave, self.tooltipOwner = nil
-	end
-end)

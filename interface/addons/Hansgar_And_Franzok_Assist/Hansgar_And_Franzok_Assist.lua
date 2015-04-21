@@ -1,3 +1,10 @@
+
+local DF = _G ["DetailsFramework"]
+if (not DF) then
+	print ("|cFFFFAA00Please restart your client to finish update some AddOns.|c")
+	return
+end
+
 local floor = floor
 local min = min
 local UnitExists = UnitExists
@@ -6,14 +13,41 @@ local UnitHealth = UnitHealth
 local GetNumGroupMembers = GetNumGroupMembers
 local abs = abs
 local GetPlayerFacing = GetPlayerFacing
+local db
+local _
 
-local f = CreateFrame ("frame", "Hansgar_And_Franzok_Assist", UIParent)
+--local f = CreateFrame ("frame", "Hansgar_And_Franzok_Assist", UIParent)
+local f = DF:Create1PxPanel (_, 155, 166, "Hans & Franz", "Hansgar_And_Franzok_Assist", nil, "top") --
 f:SetFrameStrata ("DIALOG")
-f.version = "v0.9"
+f.version = "v0.12"
+
+f.Close:SetScript ("OnClick", function (self)
+	if (f.StampersPhase) then
+		return f:StopTracking()
+	end
+	f:EndTrackPlayerPosition()
+end)
+
+f.Lock:SetScript ("OnClick", function (self)
+	if (db.FRAME_LOCK) then
+		f:SetLockState()
+		print ("|cFFFFAA00Hansgar and Franzok Assist|r frame unlocked.")
+		
+		f.unlocked_frame = true
+		f.player_pos_frame:Show()
+		f.player_bar:Show()
+		f.stop_casting_frame:Show()
+	else
+		f:SetLockState()
+		print ("|cFFFFAA00Hansgar and Franzok Assist|r frame locked.")
+		f.unlocked_frame = false
+		f.stop_casting_frame:Hide()
+	end
+end)
 
 local tframe = CreateFrame ("frame", "Hansgar_And_Franzok_Assist_PTrack", UIParent)
 
-f:SetSize (155, 156)
+f:SetSize (155, 159)
 f:SetBackdrop ({bgFile = "Interface\\Tooltips\\UI-Tooltip-Background", tile = true, tileSize = 16, insets = {left = -1, right = -1, top = -1, bottom = -1},
 edgeFile = "Interface\\AddOns\\Hansgar_And_Franzok_Assist\\border_2", edgeSize = 8})
 f:SetPoint ("center", UIParent, "center", 300, 200)
@@ -24,10 +58,10 @@ f:EnableMouse (true)
 f.all_blocks = {}
 f:Hide()
 
-local title = f:CreateFontString (nil, "overlay", "GameFontNormal")
-title:SetText ("Hansgar & Franzok Assist")
-title:SetPoint ("center", f, "center")
-title:SetPoint ("bottom", f, "top", 0, 2)
+--local title = f:CreateFontString (nil, "overlay", "GameFontNormal")
+--title:SetText ("Hansgar & Franzok Assist")
+--title:SetPoint ("center", f, "center")
+--title:SetPoint ("bottom", f, "top", 0, 2)
 
 --
 local frame_event = CreateFrame ("frame", "Hansgar_And_Franzok_AssistEvents", f)
@@ -42,7 +76,7 @@ local player_bar = CreateFrame ("statusbar", "Hansgar_And_Franzok_PlayerAssistBa
 --player_bar:SetPoint ("topright", f, "bottomright", 0, -3)
 
 player_bar:SetPoint ("center", UIParent, "center", 0, 300)
-player_bar:SetSize (280, 22)
+player_bar:SetSize (280, 16)
 
 player_bar:SetMovable (true)
 player_bar:EnableMouse (true)
@@ -120,8 +154,8 @@ local player_pos_frame = CreateFrame ("frame", "Hansgar_And_Franzok_Assist_BarDa
 player_pos_frame:SetPoint ("center", UIParent, "center", 0, -75)
 
 player_pos_frame:SetSize (155, 6)
-player_pos_frame:SetBackdrop ({bgFile = "Interface\\Tooltips\\UI-Tooltip-Background", tile = true, tileSize = 16})
-player_pos_frame:SetBackdropColor (0, 0, 0, 0.4)
+player_pos_frame:SetBackdrop ({bgFile = "Interface\\Tooltips\\UI-Tooltip-Background", tile = true, tileSize = 16, insets = {left = -1, right = -1, top = -1, bottom = -1}})
+player_pos_frame:SetBackdropColor (0, 0, 0, 1)
 player_pos_frame:SetMovable (true)
 player_pos_frame:EnableMouse (true)
 player_pos_frame:SetScript ("OnMouseDown", function (self)
@@ -137,6 +171,7 @@ player_pos_frame:SetScript ("OnMouseUp", function (self)
 	end
 end)
 player_pos_frame:Hide()
+f.player_pos_frame = player_pos_frame
 
 --red
 local t1 = player_pos_frame:CreateTexture (nil, "artwork")
@@ -240,8 +275,6 @@ function f:ShowUsers()
 end
 f:RegisterComm ("HAFR", "CommReceived")
 
-local db
-
 f.block_tracker = {}
 
 frame_event:SetFrameStrata ("FULLSCREEN")
@@ -278,6 +311,9 @@ frame_event:SetScript ("OnEvent", function (self, event, ...)
 		if (db.PLAY_SOUND == nil) then
 			db.PLAY_SOUND = false
 		end
+		if (db.STOP_CAST == nil) then
+			db.STOP_CAST = true
+		end
 		--
 		
 		f:SetLockState (true)
@@ -287,10 +323,17 @@ frame_event:SetScript ("OnEvent", function (self, event, ...)
 		local encounterID, encounterName, difficultyID, raidSize = select (1, ...)
 		
 		if (encounterID == 1693) then
+			if (f.unlocked_frame) then
+				f.unlocked_frame = false
+			end
+		
 			if (event == "ENCOUNTER_START") then
 				f.on_encounter = true
+				f:RegisterEvent ("COMBAT_LOG_EVENT_UNFILTERED")
+				
 			elseif (event == "ENCOUNTER_END") then
 				f.on_encounter = false
+				f:UnregisterEvent ("COMBAT_LOG_EVENT_UNFILTERED")
 			end
 		end
 		
@@ -306,17 +349,13 @@ frame_event:SetScript ("OnEvent", function (self, event, ...)
 		if (encounterID == 1693 and difficultyID == 16) then
 		
 			if (event == "ENCOUNTER_START") then
-			
 				print ("|cFFFFAA00Hansgar and Franzok Assist|r: addon enabled, good look!")
 			
 				if (f.StampersPhase) then
 					f:StopTracking()
 				end
-				f:RegisterEvent ("COMBAT_LOG_EVENT_UNFILTERED")
 				
 			elseif (event == "ENCOUNTER_END") then
-				f:UnregisterEvent ("COMBAT_LOG_EVENT_UNFILTERED")
-				
 				if (f.StampersPhase) then
 					f:StopTracking()
 				end
@@ -344,6 +383,48 @@ function SlashCmdList.Hansgar_And_Franzok_Assist (msg, editbox)
 		else
 			print ("|cFFFFAA00Hansgar and Franzok Assist|r you aren't in a raid group.")
 		end
+	
+	elseif (command == "st") then
+		f.stop_casting_frame:Show()
+		f.stop_casting_frame.alert.animOut:Stop()
+		f.stop_casting_frame.alert.animIn:Play()
+		f:ScheduleTimer ("HideStopSpellAlert", 1.2)
+	
+	elseif (command == "stopcast") then
+		db.STOP_CAST = not db.STOP_CAST
+		
+		if (db.STOP_CAST) then
+			print ("|cFFFFAA00Hansgar and Franzok Assist|r stop cast alert enabled.")
+		else
+			print ("|cFFFFAA00Hansgar and Franzok Assist|r stop cast alert disabled.")
+		end
+	
+	elseif (command == "resetpos") then
+		f:ClearAllPoints()
+		f:SetPoint ("center", UIParent, "center")
+		
+		player_bar:ClearAllPoints()
+		player_bar:SetPoint ("center", UIParent, "center")
+		
+		player_pos_frame:ClearAllPoints()
+		player_pos_frame:SetPoint ("center", UIParent, "center")
+		
+		if (f.StampersPhase) then
+			f:EndTrackPlayerPosition()
+			f:StopTracking()
+		end
+		
+		db.FRAME_LOCK = true
+		f:SetLockState()
+		
+		f.unlocked_frame = true
+		
+		f:StartTracking()
+		f:StartTrackPlayerPosition()
+		
+		print ("|cFFFFAA00Hansgar and Franzok Assist|r: position reseted.")
+		print ("|cFFFFAA00Hansgar and Franzok Assist|r: move between the tracks to show the other frames.")
+		print ("|cFFFFAA00Hansgar and Franzok Assist|r: type '/hansgar lock' to lock the frames.")
 	
 	elseif (command == "delay") then
 		local t = tonumber (rest)
@@ -373,14 +454,27 @@ function SlashCmdList.Hansgar_And_Franzok_Assist (msg, editbox)
 		db.FRAME_LOCK = true
 		f:SetLockState()
 		print ("|cFFFFAA00Hansgar and Franzok Assist|r frame unlocked.")
+		
+		f.unlocked_frame = true
+		player_pos_frame:Show()
+		player_bar:Show()
+		f.stop_casting_frame:Show()
 
 	elseif (command == "lock") then
 		f:SetLockState()
 		
 		if (db.FRAME_LOCK) then
 			print ("|cFFFFAA00Hansgar and Franzok Assist|r frame locked.")
+			f.unlocked_frame = false
+			f.stop_casting_frame:Hide()
 		else
 			print ("|cFFFFAA00Hansgar and Franzok Assist|r frame unlocked.")
+			
+			f.unlocked_frame = true
+			player_pos_frame:Show()
+			player_bar:Show()
+			f.stop_casting_frame:Show()
+			
 		end
 	
 	elseif (command == "facing") then
@@ -428,7 +522,17 @@ function SlashCmdList.Hansgar_And_Franzok_Assist (msg, editbox)
 		f:RefreshCooldownSettings()
 		
 	else
+	
+		if (f.StampersPhase) then
+			f:EndTrackPlayerPosition()
+			return f:StopTracking()
+		end
+		
+		f:StartTracking()
+		f:StartTrackPlayerPosition()
+	
 		print ("|cFFFFAA00Hansgar and Franzok Assist|r |cFF00FF00" .. f.version .. "|r Commands:")
+		print ("|cFFFFFF00/hansgar resetpos|r: reset the position of all frames.")
 		print ("|cFFFFFF00/hansgar lock|r: toggle lock and unlock on the frame.")
 		print ("|cFFFFFF00/hansgar test show hide|r: active the addon on test mode or hide it.")
 		print ("|cFFFFFF00/hansgar delay <time>|r: time in seconds until the percentage goes from 0 to 100.")
@@ -437,13 +541,239 @@ function SlashCmdList.Hansgar_And_Franzok_Assist (msg, editbox)
 		print ("|cFFFFFF00/hansgar facing|r: |cFF00FF001|r = south |cFF00FF002|r = north, use to set the dance bar when auto facing is disabled.")
 		print ("|cFFFFFF00/hansgar users|r: show who is using the addon in the raid.")
 		print ("|cFFFFFF00/hansgar cooldown|r: show the countdown text for each stamper go back up to the ceiling.")
+		print ("|cFFFFFF00/hansgar stopcast|r: show the alert to stop casting for Disrupting Roar.")
 	end
 end
 
 --
---f:RegisterEvent ("COMBAT_LOG_EVENT_UNFILTERED")
 
-f:SetScript ("OnEvent", function (self, event, time, token, _, who_serial, who_name, who_flags, _, target_serial, target_name, target_flags, _, spellid, spellname, spellschool, buff_type, ...)
+local options_panel = {
+	{
+		type = "range",
+		get = function() return db.STAMPERS_DELAY end,
+		set = function (self, fixedparam, value) db.STAMPERS_DELAY = value end,
+		min = 4,
+		max = 8,
+		step = 1,
+		desc = "Time in seconds to move out from a heating up stamper.",
+		name = "Stampers Delay",
+	},
+	{
+		type = "toggle",
+		get = function() return db.FRAME_LOCK end,
+		set = function (self, fixedparam, value) 
+			db.FRAME_LOCK = not value;
+			if (db.FRAME_LOCK) then
+				f:SetLockState()
+				print ("|cFFFFAA00Hansgar and Franzok Assist|r frame unlocked.")
+				
+				f.unlocked_frame = true
+				f.player_pos_frame:Show()
+				f.player_bar:Show()
+				f.stop_casting_frame:Show()
+			else
+				f:SetLockState()
+				print ("|cFFFFAA00Hansgar and Franzok Assist|r frame locked.")
+				f.unlocked_frame = false
+				f.stop_casting_frame:Hide()
+			end			
+		end,
+		desc = "Lock or unlock the frames.",
+		name = "Frame Locked"
+	},
+	{
+		type = "toggle",
+		get = function() return db.SHOW_DANCE end,
+		set = function (self, fixedparam, value) 
+			db.SHOW_DANCE = not db.SHOW_DANCE
+			if (db.SHOW_DANCE) then
+				if (f.on_encounter) then
+					f:StartTrackPlayerPosition()
+				end
+			else
+				f:EndTrackPlayerPosition()
+			end		
+		end,
+		desc = "Enable or disable the dance bar.",
+		name = "Dance Bar"
+	},
+	{
+		type = "toggle",
+		get = function() return db.CD_NUMBER end,
+		set = function (self, fixedparam, value) 
+			db.CD_NUMBER = not db.CD_NUMBER
+			f:RefreshCooldownSettings()
+		end,
+		desc = "When enabled, shows the number countdown on each block.",
+		name = "Show Cooldown Number"
+	},
+	{
+		type = "toggle",
+		get = function() return db.STOP_CAST end,
+		set = function (self, fixedparam, value) 
+			db.STOP_CAST = not db.STOP_CAST
+		end,
+		desc = "When enabled, shows an alert for Disrupting Roar.",
+		name = "Stop Cast Alert"
+	},
+	{
+		type = "execute",
+		func = function() 
+			if (f.StampersPhase) then
+				f:EndTrackPlayerPosition()
+				return f:StopTracking()
+			end
+			f:StartTracking()
+			f:StartTrackPlayerPosition()
+		end,
+		desc = "Test the addon, run over the tracks in the room.",
+		name = "Start Test Mode"
+	},
+	{
+		type = "execute",
+		func = function() 
+			f:ClearAllPoints()
+			f:SetPoint ("center", UIParent, "center")
+			
+			player_bar:ClearAllPoints()
+			player_bar:SetPoint ("center", UIParent, "center")
+			
+			player_pos_frame:ClearAllPoints()
+			player_pos_frame:SetPoint ("center", UIParent, "center")
+			
+			if (f.StampersPhase) then
+				f:EndTrackPlayerPosition()
+				f:StopTracking()
+			end
+			
+			db.FRAME_LOCK = true
+			f:SetLockState()
+			
+			f.unlocked_frame = true
+			
+			f:StartTracking()
+			f:StartTrackPlayerPosition()
+			
+			print ("|cFFFFAA00Hansgar and Franzok Assist|r: position reseted and frames are unlocked.")
+			print ("|cFFFFAA00Hansgar and Franzok Assist|r: move between the tracks to show the other frames.")
+		end,
+		desc = "Reset the position of all frames and start the test mode.",
+		name = "Reset Position"
+	},
+	{
+		type = "execute",
+		func = function() 
+			if (f.users_schedule) then
+				print ("|cFFFFAA00Hansgar and Franzok Assist|r please wait 5 seconds...")
+			elseif (IsInRaid()) then
+				f.users = {}
+				f:SendCommMessage ("HAFR", "US", "RAID")
+				f.users_schedule = f:ScheduleTimer ("ShowUsers", 5)
+				print ("|cFFFFAA00Hansgar and Franzok Assist|r please wait 5 seconds...")
+			else
+				print ("|cFFFFAA00Hansgar and Franzok Assist|r you aren't in a raid group.")
+			end
+		end,
+		desc = "Show raid members which are also using this addon.",
+		name = "Version Check"
+	},
+	{
+		type = "execute",
+		func = function() 
+			f.feedback_func()
+		end,
+		desc = "Send a feedback for us on our Curse page or MMO-Champion forum Thread.",
+		name = "Send Feedback"
+	},
+}
+
+local build_options_panel = function()
+	local options_frame = DF:CreateOptionsFrame ("HansgarFranzokAssistOptions", "Hans & Franz Assist", 1)
+	options_frame:SetHeight (180)
+	DF:BuildMenu (options_frame, options_panel, 15, -60, 180)
+	options_frame:SetBackdropColor (0, 0, 0, .9)
+end
+
+f.OpenOptionsPanel = function()
+	if (not HansgarFranzokAssistOptions) then
+		build_options_panel()
+	end
+	HansgarFranzokAssistOptions:Show()
+end
+
+-- /run Hansgar_And_Franzok_Assist.OpenOptionsPanel()
+local options = DF:CreateOptionsButton (f, f.OpenOptionsPanel, "Hansgar_And_Franzok_Assist_OPButton")
+options:SetPoint ("right", f.Lock, "left", 1, 0)
+f.Options = options
+
+--
+local feedback_func = function()
+	local feedback1 = {icon = [[Interface\AddOns\Hansgar_And_Franzok_Assist\libs\DF\feedback_sites]], coords = DF.www_icons.mmoc, desc = "Post on our thread on MMO-Champion Forum.", link = [[http://www.mmo-champion.com/threads/1725970-Hans-gar-and-Franzok-Assist-(addon)]]}
+	local feedback2 = {icon = [[Interface\AddOns\Hansgar_And_Franzok_Assist\libs\DF\feedback_sites]], coords = DF.www_icons.curse, desc = "Leave a comment on our page at Curse.com.", link = [[http://www.curse.com/addons/wow/hansgar_and_franzok_assist]]}
+	
+	local same1 = {name = "Details! Damage Meter", desc = "A Damage Meter with a lot of tools for raiders and leaders.", link = [[http://www.curse.com/addons/wow/details]], icon = [[Interface\AddOns\Hansgar_And_Franzok_Assist\libs\DF\all_addons]], coords = {0, 128/512, 0, 64/512}}
+	local same2 = {name = "Gold Token Price", desc = "Adds the slash command '/gold'. This command tells you the current price of WoW Token.", link = [[http://www.curse.com/addons/wow/gold-token-price]], icon = [[Interface\AddOns\Hansgar_And_Franzok_Assist\libs\DF\all_addons]], coords = {128/512, 256/512, 0, 64/512}}
+	local same3 = {name = "Salvage Yard Seller", desc = "Sells stuff gathered from salvage crates respecting item level limit.", link = [[http://www.curse.com/addons/wow/salvage-yard-seller]], icon = [[Interface\AddOns\Hansgar_And_Franzok_Assist\libs\DF\all_addons]], coords = {384/512, 512/512, 64/512, 128/512}}
+	local same4 = {name = "AddOns CPU Usage", desc = "Measure the CPU usage by addons. Important to get rid of FPS drops during boss encounters.", link = [[http://www.curse.com/addons/wow/addons-cpu-usage]], icon = [[Interface\AddOns\Hansgar_And_Franzok_Assist\libs\DF\all_addons]], coords = {384/512, 512/512, 0, 64/512}}
+	local same5 = {name = "Keep World Map Zoom", desc = "Because it's a pain having to re-zoom the world map after close and reopening in a short period of time.", link = [[http://www.curse.com/addons/wow/world-map-zoom]], icon = [[Interface\AddOns\Hansgar_And_Franzok_Assist\libs\DF\all_addons]], coords = {0/512, 128/512, 64/512, 128/512}}
+	local same6 = {name = "PvPScan", desc = "Show a unit frame with enemy players near you.", link = [[http://www.wowace.com/addons/pvpscan/]], icon = [[Interface\AddOns\Hansgar_And_Franzok_Assist\libs\DF\all_addons]], coords = {128/512, 256/512, 64/512, 128/512}}
+	local same7 = {name = "HotCorners", desc = "Show a hotcorner when poiting the mouse on the absolute top left of your screen (similar of those on Windows 8).", link = [[http://www.curse.com/addons/wow/hotcorners]], icon = [[Interface\AddOns\Hansgar_And_Franzok_Assist\libs\DF\all_addons]], coords = {256/512, 384/512, 64/512, 128/512}}
+	
+	DF:ShowFeedbackPanel ("Hans & Franz Assist", f.version, {feedback2, feedback1}, {same1, same2, same3, same4, same5, same6, same7})
+end
+f.feedback_func = feedback_func
+local feedback_button = DF:CreateFeedbackButton (f, feedback_func, "Hansgar_And_Franzok_AssistFBButton")
+feedback_button:SetPoint ("right", f.Options, "left", 0, -1)
+--
+
+local stop_casting_frame = CreateFrame ("frame", "Hansgar_And_Franzok_AssistStopCasting", UIParent)
+stop_casting_frame:SetSize (200, 30)
+stop_casting_frame:SetPoint ("center", UIParent, "center", 0, 75)
+stop_casting_frame:SetFrameStrata ("FULLSCREEN")
+f.stop_casting_frame = stop_casting_frame
+stop_casting_frame:Hide()
+
+stop_casting_frame:SetMovable (false)
+stop_casting_frame:EnableMouse (false)
+
+stop_casting_frame:SetScript ("OnMouseDown", function (self)
+	if (not self.isMoving) then
+		self:StartMoving()
+		self.isMoving = true
+	end
+end)
+stop_casting_frame:SetScript ("OnMouseUp", function (self)
+	if (self.isMoving) then
+		self:StopMovingOrSizing()
+		self.isMoving = false
+	end
+end)
+
+local alert = CreateFrame ("frame", "Hansgar_And_Franzok_AssistStopCastingAlert", stop_casting_frame, "ActionBarButtonSpellActivationAlert")
+alert:SetPoint ("topleft", stop_casting_frame, "topleft", -10, 2)
+alert:SetPoint ("bottomright", stop_casting_frame, "bottomright", 10, -2)
+stop_casting_frame.alert = alert
+
+local text = stop_casting_frame:CreateFontString (nil, "overlay", "GameFontNormal")
+text:SetText ("STOP CASTING!")
+text:SetPoint ("center", stop_casting_frame, "center")
+
+stop_casting_frame:SetBackdrop ({bgFile = "Interface\\Tooltips\\UI-Tooltip-Background", tile = true, tileSize = 16})
+stop_casting_frame:SetBackdropColor (0, 0, 0, 0.3)
+
+function f:HideStopSpellAlert2()
+	stop_casting_frame.alert.animOut:Stop()
+	stop_casting_frame:Hide()
+end
+function f:HideStopSpellAlert()
+	stop_casting_frame.alert.animIn:Stop()
+	stop_casting_frame.alert.animOut:Play()
+	f:ScheduleTimer ("HideStopSpellAlert2", 0.3)
+end
+
+--3/22 13:44:48.995  SPELL_INTERRUPT,Vehicle-0-3132-1205-24243-76974-00000EF077,"Franzok",0x10a48,0x0,Player-00-063,"Grubdruid",0x514,0x0,160838,"Disrupting Roar",0x1,5185,"Healing Touch",8
+
+f:SetScript ("OnEvent", function (self, event, time, token, _, who_serial, who_name, who_flags, _, target_serial, target_name, target_flags, _, spellid, spellname, spellschool, buff_type, buff_name)
 
 	if (token == "SPELL_AURA_APPLIED" and spellid == 162124 and not f.StampersPhase) then
 		f:StartTracking()
@@ -455,9 +785,28 @@ f:SetScript ("OnEvent", function (self, event, time, token, _, who_serial, who_n
 			f:StartTrackPlayerPosition()
 		end
 		
+	elseif (token == "SPELL_CAST_START" and spellid == 160838 and db.STOP_CAST) then --Disrupting Roar
+		f.stop_casting_frame:Show()
+		f.stop_casting_frame.alert.animOut:Stop()
+		f.stop_casting_frame.alert.animIn:Play()
+		f:ScheduleTimer ("HideStopSpellAlert", 1.2)
+		
 	end
+	
+	if (token == "SPELL_INTERRUPT" and spellid == 160838 and db.STOP_CAST) then
+		local link = GetSpellLink (buff_type)
+		print ("Stop Cast Fail:", target_name, link)
+	end
+	
+	--if (spellid == 160838) then
+	--	print ("event:", token, 160838, db.STOP_CAST)
+	--end
 
 end)
+--	/run Hansgar_And_Franzok_AssistStopCastingAlert.animIn:Play()
+
+--Hansgar_And_Franzok_AssistStopCasting:Show(); Hansgar_And_Franzok_Assist:ScheduleTimer ("HideStopSpellAlert", 1)
+--Hansgar_And_Franzok_Assist:RegisterEvent ("COMBAT_LOG_EVENT_UNFILTERED")
 
 local frame_tracker = CreateFrame ("frame", "Hansgar_And_Franzok_AssistTracker", UIParent)
 local on_update_tracker = function (self, elapsed)
@@ -498,8 +847,14 @@ local on_update_tracker = function (self, elapsed)
 		f.player_loc_box:Show()
 
 	else
-		f.player_loc_box:Hide()
-		f.player_bar:Hide()
+		if (f.unlocked_frame) then
+			f.player_loc_box:Show()
+			f.player_bar:Show()
+			f.player_bar:SetValue (100)
+		else
+			f.player_loc_box:Hide()
+			f.player_bar:Hide()
+		end
 	end
 end
 
@@ -635,6 +990,8 @@ function f:SetLockState (just_refresh)
 		f:EnableMouse (false)
 		player_bar:EnableMouse (false)
 		player_pos_frame:EnableMouse (false)
+		stop_casting_frame:SetMovable (false)
+		stop_casting_frame:EnableMouse (false)
 		
 		for _, block in ipairs (f.all_blocks) do
 			block:EnableMouse (false)
@@ -644,11 +1001,14 @@ function f:SetLockState (just_refresh)
 			f:EndTrackPlayerPosition()
 			f:StopTracking()
 		end
+
 	else
 		--unlocked
 		f:EnableMouse (true)
 		player_bar:EnableMouse (true)
 		player_pos_frame:EnableMouse (true)
+		stop_casting_frame:SetMovable (true)
+		stop_casting_frame:EnableMouse (true)
 		
 		for _, block in ipairs (f.all_blocks) do
 			block:EnableMouse (true)
@@ -658,6 +1018,7 @@ function f:SetLockState (just_refresh)
 			f:StartTracking()
 			f:StartTrackPlayerPosition()
 		end
+		
 	end
 	
 	if (not db.FRAME_LOCK) then
@@ -777,10 +1138,6 @@ local green_alpha_enabled = 0.9
 
 -- true north -> south
 -- false south -> north
-function f:ChangePlayerTrackerFace()
-	
-end
-
 local track_function = function (self, elapsed)
 
 	local x, _ = GetPlayerMapPosition ("player")
@@ -854,7 +1211,11 @@ local track_function = function (self, elapsed)
 		--div:SetPoint ("left", player_pos_frame, "left", self.width_pixel * at, 0)
 
 	else
-		player_pos_frame:Hide()
+		if (f.unlocked_frame) then
+			player_pos_frame:Show()
+		else
+			player_pos_frame:Hide()
+		end
 	end
 end
 

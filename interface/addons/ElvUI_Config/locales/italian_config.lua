@@ -54,9 +54,9 @@ Health / Power Formats:
 'deficit' - display the deficit value, will display nothing if there is no deficit
 
 Name Formats:
-'name-short' - Name restricted to 10 characters
-'name-medium' - Name restricted to 15 characters
-'name-long' - Name restricted to 20 characters
+'name:short' - Name restricted to 10 characters
+'name:medium' - Name restricted to 15 characters
+'name:long' - Name restricted to 20 characters
 
 To disable leave the field blank, if you need more information visit http://www.tukui.org]=];
 
@@ -131,11 +131,15 @@ L["Condensed"] = true;
 L["Currency Format"] = true;
 L["Descending"] = true;
 L["Direction the bag sorting will use to allocate the items."] = true;
+L["Display Item Level"] = true;
+L["Displays item level on equippable items."] = true;
 L["Enable/Disable the all-in-one bag."] = true;
 L["Enable/Disable the Bag-Bar."] = true;
 L["Full"] = true;
 L["Icons and Text"] = true;
 L["Ignore Items"] = true;
+L["Item Level Threshold"] = true;
+L["Item Level"] = true;
 L["List of items to ignore when sorting. If you wish to add multiple items you must seperate the word with a comma."] = true;
 L["Money Format"] = true;
 L["Panel Width (Bags)"] = true;
@@ -153,6 +157,7 @@ L["The direction that the bag frames will grow from the anchor."] = true;
 L["The display format of the currency icons that get displayed below the main bag. (You have to be watching a currency for this to display)"] = true;
 L["The display format of the money text that is shown at the top of the main bag."] = true;
 L["The frame is not shown unless you mouse over the frame."] = true;
+L["The minimum item level required for it to be shown."] = true;
 L["The size of the individual buttons on the bag frame."] = true;
 L["The size of the individual buttons on the bank frame."] = true;
 L["The spacing between buttons."] = true;
@@ -210,7 +215,11 @@ L["Display LFG Icons in group chat."] = true;
 L["Display the hyperlink tooltip while hovering over a hyperlink."] = true;
 L["Enable the use of separate size options for the right chat panel."] = true;
 L["Fade Chat"] = true;
+L["Fade Tabs No Backdrop"] = true;
 L["Fade the chat text when there is no activity."] = true;
+L["Fade Undocked Tabs"] = true;
+L["Fades the text on chat tabs that are docked in a panel where the backdrop is disabled."] = true;
+L["Fades the text on chat tabs that are not docked at the left or right chat panel."] = true;
 L["Font Outline"] = true; --Also used in UnitFrames section
 L["Font"] = true;
 L["Hide Both"] = true;
@@ -344,7 +353,10 @@ L["Make the world map smaller."] = true;
 L["Multi-Monitor Support"] = true;
 L["Name Font"] = true;
 L["Objective Frame Height"] = true;
+L["Party / Raid"] = true;
+L["Party Only"] = true;
 L["Position of bonus quest reward frame relative to the objective tracker."] = true;
+L["Raid Only"] = true;
 L["Remove Backdrop"] = true;
 L["Reset all frames to their original positions."] = true;
 L["Reset Anchors"] = true;
@@ -653,9 +665,11 @@ L["Destruction"] = true;
 L["Detach From Frame"] = true;
 L["Detached Width"] = true;
 L["Direction the health bar moves when gaining/losing health."] = true;
-L["Disable Blizzard"] = true;
+L["Disabled Blizzard Frames"] = true;
 L["Disabled"] = true;
-L["Disables the blizzard party/raid frames."] = true;
+L["Disables the focus and target of focus unitframes."] = true;
+L["Disables the player and pet unitframes."] = true;
+L["Disables the target and target of target unitframes."] = true;
 L["Disconnected"] = true;
 L["Display a spark texture at the end of the castbar statusbar to help show the differance between castbar and backdrop."] = true;
 L["Display druid mana bar when in cat or bear form and when mana is not 100%."] = true;
@@ -827,6 +841,7 @@ L["Spark"] = true;
 L["Spec Icon"] = true;
 L["Spell not found in list."] = true;
 L["Spells"] = true;
+L["Stack Threshold"] = true;
 L["Stagger Bar"] = true;
 L["Start Near Center"] = true;
 L["StatusBar Texture"] = true;
@@ -846,6 +861,7 @@ L["Text yOffset"] = true
 L["Text"] = true;
 L["Textured Icon"] = true;
 L["The alpha to set units that are out of range to."] = true;
+L["The debuff needs to reach this amount of stacks before it is shown. Set to 0 to always show the debuff."] = true;
 L["The following macro must be true in order for the group to be shown, in addition to any filter that may already be set."] = true;
 L["The font that the unitframes will use."] = true;
 L["The initial group will start near the center and grow out."] = true;

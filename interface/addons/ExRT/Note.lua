@@ -100,6 +100,7 @@ function module.options:Load()
 
 	local BlackNoteNow = nil
 	local NoteIsSelfNow = nil
+	self.IsMainNoteNow = true
 
 	self.NotesList = ExRT.lib.CreateScrollList(self,nil,5,-125,160,21)
 	self.NotesList.selected = 1
@@ -124,6 +125,7 @@ function module.options:Load()
 		
 		BlackNoteNow = nil
 		NoteIsSelfNow = nil
+		module.options.IsMainNoteNow = nil
 		
 		if index > 2 then
 			module.options.DraftName:Enable()
@@ -136,6 +138,8 @@ function module.options:Load()
 		if index == 1 then
 			module.options.NoteEditBox.EditBox:SetText(VExRT.Note.Text1 or "")
 			module.options.DraftName:SetText( ExRT.L.messageTab1 )
+			
+			module.options.IsMainNoteNow = true
 		elseif index == 2 then
 			module.options.NoteEditBox.EditBox:SetText(VExRT.Note.SelfText or "")
 			module.options.DraftName:SetText( ExRT.L.NoteSelf )
@@ -453,18 +457,16 @@ function module.options:Load()
 		self.lastUpdate:SetText( ExRT.L.NoteLastUpdate..": "..VExRT.Note.LastUpdateName.." ("..date("%H:%M:%S %d.%m.%Y",VExRT.Note.LastUpdateTime)..")" )
 	end
 
-	self.chkEnable = ExRT.lib.CreateCheckBox(self,nil,10,-490,ExRT.L.senable)
+	self.chkEnable = ExRT.lib.CreateCheckBox(self,nil,10,-490,ExRT.L.senable,VExRT.Note.enabled,'/rt note')
 	self.chkEnable:SetScript("OnClick", function(self,event) 
 		if self:GetChecked() then
-			VExRT.Note.enabled = true
-			module.frame:Show()
+			module:Enable()
 		else
-			VExRT.Note.enabled = nil
-			module.frame:Hide()
+			module:Disable()
 		end
 	end)  
 	
-	self.chkFix = ExRT.lib.CreateCheckBox(self,nil,161,-490,ExRT.L.messagebutfix,nil,ExRT.L.messagebutfixtooltip)  
+	self.chkFix = ExRT.lib.CreateCheckBox(self,nil,161,-490,ExRT.L.messagebutfix,VExRT.Note.Fix,ExRT.L.messagebutfixtooltip)  
 	self.chkFix:SetScript("OnClick", function(self,event) 
 		if self:GetChecked() then
 			VExRT.Note.Fix = true
@@ -481,17 +483,6 @@ function module.options:Load()
 		end
 	end) 
 
-	self.chkOutline = ExRT.lib.CreateCheckBox(self,nil,311,-490,ExRT.L.messageOutline)  
-	self.chkOutline:SetScript("OnClick", function(self,event) 
-		if self:GetChecked() then
-			VExRT.Note.Outline = true
-			module.frame.text:SetFont(ExRT.mds.defFont, 12,"OUTLINE")
-		else
-			VExRT.Note.Outline = nil
-			module.frame.text:SetFont(ExRT.mds.defFont, 12)
-		end
-	end) 
-	
 	self.chkOnlyPromoted = ExRT.lib.CreateCheckBox(self,nil,585,-463,ExRT.L.NoteOnlyPromoted,VExRT.Note.OnlyPromoted,ExRT.L.NoteOnlyPromotedTooltip,true)
 	self.chkOnlyPromoted:SetScript("OnClick", function(self,event) 
 		if self:GetChecked() then
@@ -502,7 +493,7 @@ function module.options:Load()
 	end)  
 	
 	 
-	self.slideralpha = ExRT.lib.CreateSlider(self,180,15,20,-538,0,100,ExRT.L.messagebutalpha)
+	self.slideralpha = ExRT.lib.CreateSlider(self,180,15,20,-538,0,100,ExRT.L.messagebutalpha,VExRT.Note.Alpha or 100)
 	self.slideralpha:SetScript("OnValueChanged", function(self,event) 
 		event = event - event%1
 		VExRT.Note.Alpha = event
@@ -511,7 +502,7 @@ function module.options:Load()
 		self:tooltipReload(self)
 	end)
 	
-	self.sliderscale = ExRT.lib.CreateSlider(self,180,15,220,-538,5,200,ExRT.L.messagebutscale,100)
+	self.sliderscale = ExRT.lib.CreateSlider(self,180,15,220,-538,5,200,ExRT.L.messagebutscale,VExRT.Note.Scale or 100)
 	self.sliderscale:SetScript("OnValueChanged", function(self,event) 
 		event = event - event%1
 		VExRT.Note.Scale = event
@@ -520,7 +511,7 @@ function module.options:Load()
 		self:tooltipReload(self)
 	end)
 
-	self.slideralphaback = ExRT.lib.CreateSlider(self,180,15,420,-538,0,100,ExRT.L.messageBackAlpha)
+	self.slideralphaback = ExRT.lib.CreateSlider(self,180,15,420,-538,0,100,ExRT.L.messageBackAlpha,VExRT.Note.ScaleBack or 100)
 	self.slideralphaback:SetScript("OnValueChanged", function(self,event) 
 		event = event - event%1
 		VExRT.Note.ScaleBack = event
@@ -537,24 +528,103 @@ function module.options:Load()
 		module.frame:ClearAllPoints()
 		module.frame:SetPoint("CENTER",UIParent, "CENTER", 0, 0)
 	end) 
+	
+	self.ButtonSecondPage = ExRT.lib.CreateButton(self,150,24,nil,300,-494,ExRT.L.NoteFontOptions)
+	self.ButtonSecondPage:SetScript("OnClick",function()
+		for i=1,#module.options.OPTIONS1 do
+			module.options.OPTIONS1[i]:Hide()
+		end
+		for i=1,#module.options.OPTIONS2 do
+			module.options.OPTIONS2[i]:Show()
+		end
+	end) 
+	
+	self.ButtonFirstPage = ExRT.lib.CreateButton(self,600,24,"TOP",0,-530,ExRT.L.NoteFontOptionsBack)
+	self.ButtonFirstPage:SetScript("OnClick",function()
+		for i=1,#module.options.OPTIONS1 do
+			module.options.OPTIONS1[i]:Show()
+		end
+		for i=1,#module.options.OPTIONS2 do
+			module.options.OPTIONS2[i]:Hide()
+		end
+	end)
+	
+	self.chkOutline = ExRT.lib.CreateCheckBox(self,nil,430,-495,ExRT.L.messageOutline,VExRT.Note.Outline)  
+	self.chkOutline:SetScript("OnClick", function(self,event) 
+		if self:GetChecked() then
+			VExRT.Note.Outline = true
+		else
+			VExRT.Note.Outline = nil
+		end
+		module.frame:UpdateFont()
+	end) 
+	
+	self.sliderFontSize = ExRT.lib.CreateSlider(self,180,15,20,-500,6,72,ExRT.L.NoteFontSize,VExRT.Note.FontSize or 12)
+	self.sliderFontSize:SetScript("OnValueChanged", function(self,event) 
+		event = event - event%1
+		VExRT.Note.FontSize = event
+		module.frame:UpdateFont()
+		self.tooltipText = event
+		self:tooltipReload(self)
+	end)
+	
+	local function DropDownFont_Click(_,arg)
+		VExRT.Note.FontName = arg
+		local FontNameForDropDown = arg:match("\\([^\\]*)$")
+		module.options.dropDownFont:SetText(FontNameForDropDown or arg)
+		ExRT.lib.ScrollDropDown.Close()
+		module.frame:UpdateFont()
+	end
 
-
-	self.chkEnable:SetChecked(VExRT.Note.enabled)
+	self.dropDownFont = ExRT.lib.CreateScrollDropDown(self,nil,200,-495,175,350,10)
+	for i=1,#ExRT.mds.fontList do
+		self.dropDownFont.List[i] = {}
+		local info = self.dropDownFont.List[i]
+		info.text = ExRT.mds.fontList[i]
+		info.arg1 = ExRT.mds.fontList[i]
+		info.arg2 = i
+		info.func = DropDownFont_Click
+		info.font = ExRT.mds.fontList[i]
+		info.justifyH = "CENTER" 
+	end
+	if LibStub then
+		local media = LibStub("LibSharedMedia-3.0")
+		if media then
+			local fontList = media:HashTable("font")
+			if fontList then
+				local count = #self.dropDownFont.List
+				for key,font in pairs(fontList) do
+					count = count + 1
+					self.dropDownFont.List[count] = {}
+					local info = self.dropDownFont.List[count]
+					
+					info.text = font
+					info.arg1 = font
+					info.arg2 = count
+					info.func = DropDownFont_Click
+					info.font = font
+					info.justifyH = "CENTER" 
+				end
+			end
+		end
+	end
+	do
+		local arg = VExRT.Note.FontName or ExRT.mds.defFont
+		local FontNameForDropDown = arg:match("\\([^\\]*)$")
+		self.dropDownFont:SetText(FontNameForDropDown or arg)
+	end
+	
+	
+	self.OPTIONS1 = {self.chkEnable,self.chkFix,self.chkOnlyPromoted,self.slideralpha,self.sliderscale,self.slideralphaback,self.ButtonToCenter,self.ButtonSecondPage}
+	self.OPTIONS2 = {self.chkOutline,self.ButtonFirstPage,self.dropDownFont,self.sliderFontSize}
+	for i=1,#self.OPTIONS2 do
+		self.OPTIONS2[i]:Hide()
+	end
+	
 
 	if VExRT.Note.Text1 then 
 		self.NoteEditBox.EditBox:SetText(VExRT.Note.Text1) 
 	end
-	if VExRT.Note.Alpha then 
-		self.slideralpha:SetValue(VExRT.Note.Alpha)
-	end
-	if VExRT.Note.Scale then 
-		self.sliderscale:SetValue(VExRT.Note.Scale) 
-	end
-	if VExRT.Note.ScaleBack then 
-		self.slideralphaback:SetValue(VExRT.Note.ScaleBack) 
-	end
-	self.chkFix:SetChecked(VExRT.Note.Fix)
-	self.chkOutline:SetChecked(VExRT.Note.Outline)
 
 	module:RegisterEvents("GROUP_ROSTER_UPDATE")
 	module.main:GROUP_ROSTER_UPDATE()
@@ -577,7 +647,7 @@ module.frame:SetScript("OnDragStop", function(self)
 	VExRT.Note.Left = self:GetLeft()
 	VExRT.Note.Top = self:GetTop()
 end)
-module.frame:SetFrameStrata("TOOLTIP")
+module.frame:SetFrameStrata("HIGH")
 module.frame:SetResizable(true)
 module.frame:SetMinResize(30, 30)
 module.frame:SetScript("OnSizeChanged", function (self, width, height)
@@ -587,6 +657,13 @@ module.frame:SetScript("OnSizeChanged", function (self, width, height)
 	module.frame:UpdateText()
 end)
 module.frame:Hide() 
+
+function module.frame:UpdateFont()
+	local font = VExRT and VExRT.Note and VExRT.Note.FontName or ExRT.mds.defFont
+	local size = VExRT and VExRT.Note and VExRT.Note.FontSize or 12
+	local outline = VExRT and VExRT.Note and VExRT.Note.Outline and "OUTLINE"
+	self.text:SetFont(font,size,outline)
+end
 
 function module.frame:UpdateText()
 	local selfText = VExRT.Note.SelfText or ""
@@ -668,7 +745,9 @@ function module:addonMessage(sender, prefix, ...)
 		VExRT.Note.Text1 = module.db.lasttext
 		module.frame:UpdateText()
 		if module.options.NoteEditBox then
-			module.options.NoteEditBox.EditBox:SetText(VExRT.Note.Text1)
+			if module.options.IsMainNoteNow then
+				module.options.NoteEditBox.EditBox:SetText(VExRT.Note.Text1)
+			end
 			
 			module.options.lastUpdate:SetText( ExRT.L.NoteLastUpdate..": "..VExRT.Note.LastUpdateName.." ("..date("%H:%M:%S %d.%m.%Y",VExRT.Note.LastUpdateTime)..")" )
 		end
@@ -686,6 +765,8 @@ function module.main:ADDON_LOADED()
 		module.frame:ClearAllPoints()
 		module.frame:SetPoint("TOPLEFT",UIParent,"BOTTOMLEFT",VExRT.Note.Left,VExRT.Note.Top)
 	end
+	
+	VExRT.Note.FontSize = VExRT.Note.FontSize or 12
 
 	if VExRT.Note.Width then 
 		module.frame:SetWidth(VExRT.Note.Width) 
@@ -695,7 +776,7 @@ function module.main:ADDON_LOADED()
 	end
 
 	if VExRT.Note.enabled then 
-		module.frame:Show() 
+		module:Enable()
 	end
 
 	if VExRT.Note.Text1 then 
@@ -737,6 +818,26 @@ function module.main:ADDON_LOADED()
 	end
 	
 	module:RegisterAddonMessage()
+	module:RegisterSlash()
+	
+	module.frame:UpdateFont()
+end
+
+
+function module:Enable()
+	VExRT.Note.enabled = true
+	module.frame:Show() 
+	if module.options.chkEnable then
+		module.options.chkEnable:SetChecked(true)
+	end
+end
+
+function module:Disable()
+	VExRT.Note.enabled = nil
+	module.frame:Hide() 
+	if module.options.chkEnable then
+		module.options.chkEnable:SetChecked(false)
+	end
 end
 
 function module.main:GROUP_ROSTER_UPDATE()
@@ -771,3 +872,16 @@ function module.main:GROUP_ROSTER_UPDATE()
 		end
 	end
 end 
+
+
+function module:slash(arg)
+	if arg == "note" then
+		if VExRT.Note.enabled then 
+			module:Disable()
+		else
+			module:Enable()
+		end
+	elseif arg == "editnote" or arg == "edit note" then
+		ExRT.Options:Open(module.options)
+	end
+end

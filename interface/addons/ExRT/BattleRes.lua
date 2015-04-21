@@ -7,7 +7,9 @@ local GetSpellCharges, GetTime, floor = GetSpellCharges, GetTime, floor
 local module = ExRT.mod:New("BattleRes",ExRT.L.BattleRes,nil,true)
 
 function module.options:Load()
-	self.enableChk = ExRT.lib.CreateCheckBox(self,nil,10,-10,ExRT.L.senable)
+	self:CreateTilte()
+
+	self.enableChk = ExRT.lib.CreateCheckBox(self,nil,10,-30,ExRT.L.senable,VExRT.BattleRes.enabled)
 	self.enableChk:SetScript("OnClick", function(self,event) 
 		if self:GetChecked() then
 			VExRT.BattleRes.enabled = true
@@ -17,9 +19,8 @@ function module.options:Load()
 			module:Disable()
 		end
 	end)
-	self.enableChk:SetChecked(VExRT.BattleRes.enabled)
 	
-	self.fixChk = ExRT.lib.CreateCheckBox(self,nil,10,-35,ExRT.L.BattleResFix,VExRT.BattleRes.fix)
+	self.fixChk = ExRT.lib.CreateCheckBox(self,nil,10,-55,ExRT.L.BattleResFix,VExRT.BattleRes.fix)
 	self.fixChk:SetScript("OnClick", function(self,event) 
 		if self:GetChecked() then
 			VExRT.BattleRes.fix = true
@@ -32,7 +33,7 @@ function module.options:Load()
 		end
 	end)
 	
-	self.SliderScale = ExRT.lib.CreateSlider(self,550,15,0,-90,5,200,ExRT.L.BattleResScale,100,"TOP")
+	self.SliderScale = ExRT.lib.CreateSlider(self,550,15,0,-110,5,200,ExRT.L.BattleResScale,100,"TOP")
 	self.SliderScale:SetScript("OnValueChanged", function(self,event) 
 		event = event - event%1
 		VExRT.BattleRes.Scale = event
@@ -41,7 +42,7 @@ function module.options:Load()
 		self:tooltipReload(self)
 	end)
 	
-	self.SliderAlpha = ExRT.lib.CreateSlider(self,550,15,0,-125,0,100,ExRT.L.BattleResAlpha,nil,"TOP")
+	self.SliderAlpha = ExRT.lib.CreateSlider(self,550,15,0,-145,0,100,ExRT.L.BattleResAlpha,nil,"TOP")
 	self.SliderAlpha:SetScript("OnValueChanged", function(self,event) 
 		event = event - event%1
 		VExRT.BattleRes.Alpha = event
@@ -53,9 +54,9 @@ function module.options:Load()
 	if VExRT.BattleRes.Alpha then self.SliderAlpha:SetValue(VExRT.BattleRes.Alpha) end
 	if VExRT.BattleRes.Scale then self.SliderScale:SetValue(VExRT.BattleRes.Scale) end
 	
-	self.shtml1 = ExRT.lib.CreateText(self,595,0,"TOP",0,-175,nil,"TOP",nil,12,ExRT.L.BattleResHelp)
+	self.shtml1 = ExRT.lib.CreateText(self,595,0,"TOP",0,-195,nil,"TOP",nil,12,ExRT.L.BattleResHelp)
 	
-	self.hideTimerChk = ExRT.lib.CreateCheckBox(self,nil,10,-200,ExRT.L.BattleResHideTime,VExRT.BattleRes.HideTimer,ExRT.L.BattleResHideTimeTooltip)
+	self.hideTimerChk = ExRT.lib.CreateCheckBox(self,nil,10,-220,ExRT.L.BattleResHideTime,VExRT.BattleRes.HideTimer,ExRT.L.BattleResHideTimeTooltip)
 	self.hideTimerChk:SetScript("OnClick", function(self,event) 
 		if self:GetChecked() then
 			VExRT.BattleRes.HideTimer = true

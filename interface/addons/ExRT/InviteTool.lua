@@ -14,7 +14,20 @@ module.db.reInvite = {}
 module.db.reInviteR = nil
 module.db.reInviteFrame = nil
 
+module.db.demotedPlayers = {}
+
 module.db.sessionInRaid = nil
+
+hooksecurefunc("DemoteAssistant", function (unit)
+	if not unit then
+		return
+	end
+	local name = UnitName(unit)
+	if name then
+		name = ExRT.mds.delUnitNameServer(name)
+		module.db.demotedPlayers[ name ] = true
+	end
+end)
 
 local _InviteUnit = InviteUnit
 local function InviteUnit(name)
@@ -171,7 +184,9 @@ local function createMastelootersArray()
 end
 
 function module.options:Load()
-	self.dropDown = ExRT.lib.CreateDropDown(self,"TOPLEFT",-3,-10,200)
+	self:CreateTilte()
+
+	self.dropDown = ExRT.lib.CreateDropDown(self,"TOPLEFT",-3,-30,200)
 	UIDropDownMenu_Initialize(self.dropDown, function(self, level, menuList)
 		ExRT.mds.FixDropDown(200)
 		local info = UIDropDownMenu_CreateInfo()
@@ -193,26 +208,26 @@ function module.options:Load()
 		CloseDropDownMenus()
 	end
 	
-	self.butInv = ExRT.lib.CreateButton(self,200,22,nil,235,-12,ExRT.L.inviteinv)
+	self.butInv = ExRT.lib.CreateButton(self,200,22,nil,235,-32,ExRT.L.inviteinv)
 	self.butInv:SetScript("OnClick",function()
 		InviteBut()
 	end)  
 	
-	self.butInv.txt = ExRT.lib.CreateText(self,100,22,nil,445,-12,nil,nil,nil,11,"/rt inv")
+	self.butInv.txt = ExRT.lib.CreateText(self,100,22,nil,445,-32,nil,nil,nil,11,"/rt inv")
 	
-	self.butDisband = ExRT.lib.CreateButton(self,422,22,nil,13,-40,ExRT.L.invitedis)
+	self.butDisband = ExRT.lib.CreateButton(self,422,22,nil,13,-60,ExRT.L.invitedis)
 	self.butDisband:SetScript("OnClick",function()
 		DisbandBut()
 	end)  
-	self.butDisband.txt = ExRT.lib.CreateText(self,100,22,nil,445,-40,nil,nil,nil,11,"/rt dis")
+	self.butDisband.txt = ExRT.lib.CreateText(self,100,22,nil,445,-60,nil,nil,nil,11,"/rt dis")
 	
-	self.butReinvite = ExRT.lib.CreateButton(self,422,22,nil,13,-65,ExRT.L.inviteReInv)
+	self.butReinvite = ExRT.lib.CreateButton(self,422,22,nil,13,-85,ExRT.L.inviteReInv)
 	self.butReinvite:SetScript("OnClick",function()
 		ReinviteBut()
 	end) 
-	self.butReinvite.txt = ExRT.lib.CreateText(self,100,22,nil,445,-65,nil,nil,nil,11,"/rt reinv")
+	self.butReinvite.txt = ExRT.lib.CreateText(self,100,22,nil,445,-85,nil,nil,nil,11,"/rt reinv")
 
-	self.chkOnlyGuild = ExRT.lib.CreateCheckBox(self,nil,310,-100,ExRT.L.inviteguildonly)
+	self.chkOnlyGuild = ExRT.lib.CreateCheckBox(self,nil,310,-120,ExRT.L.inviteguildonly)
 	self.chkOnlyGuild:SetScript("OnClick", function(self,event) 
 		if self:GetChecked() then
 			VExRT.InviteTool.OnlyGuild = true
@@ -221,7 +236,7 @@ function module.options:Load()
 		end
 	end)
 	
-	self.chkInvByChat = ExRT.lib.CreateCheckBox(self,nil,10,-100,ExRT.L.invitewords)
+	self.chkInvByChat = ExRT.lib.CreateCheckBox(self,nil,10,-120,ExRT.L.invitewords)
 	self.chkInvByChat:SetScript("OnClick", function(self,event) 
 		if self:GetChecked() then
 			VExRT.InviteTool.InvByChat = true
@@ -232,13 +247,13 @@ function module.options:Load()
 		end
 	end)
 	
-	self.wordsInput = ExRT.lib.CreateEditBox(self,590,24,"TOP",3,-125,ExRT.L.invitewordstooltip,nil,nil,nil,VExRT.InviteTool.Words)
+	self.wordsInput = ExRT.lib.CreateEditBox(self,590,24,"TOP",3,-145,ExRT.L.invitewordstooltip,nil,nil,nil,VExRT.InviteTool.Words)
 	self.wordsInput:SetScript("OnTextChanged",function(self)
 		VExRT.InviteTool.Words = self:GetText()
 		createInvWordsArray()
 	end) 	
 	
-	self.chkAutoInvAccept = ExRT.lib.CreateCheckBox(self,nil,10,-160,ExRT.L.inviteaccept)
+	self.chkAutoInvAccept = ExRT.lib.CreateCheckBox(self,nil,10,-180,ExRT.L.inviteaccept)
 	self.chkAutoInvAccept:SetScript("OnClick", function(self,event) 
 		if self:GetChecked() then
 			VExRT.InviteTool.AutoInvAccept = true
@@ -249,7 +264,7 @@ function module.options:Load()
 		end
 	end)
 	
-	self.chkAutoPromote = ExRT.lib.CreateCheckBox(self,nil,10,-200,ExRT.L.inviteAutoPromote,VExRT.InviteTool.AutoPromote)
+	self.chkAutoPromote = ExRT.lib.CreateCheckBox(self,nil,10,-220,ExRT.L.inviteAutoPromote,VExRT.InviteTool.AutoPromote)
 	self.chkAutoPromote:SetScript("OnClick", function(self,event) 
 		if self:GetChecked() then
 			VExRT.InviteTool.AutoPromote = true
@@ -258,7 +273,7 @@ function module.options:Load()
 		end
 	end)
 	
-	self.dropDownAutoPromote = ExRT.lib.CreateDropDown(self,"TOPLEFT",338,-201,237)
+	self.dropDownAutoPromote = ExRT.lib.CreateDropDown(self,"TOPLEFT",338,-221,237)
 	UIDropDownMenu_Initialize(self.dropDownAutoPromote, function(self, level, menuList)
 		ExRT.mds.FixDropDown(237)
 		local info = UIDropDownMenu_CreateInfo()
@@ -282,18 +297,18 @@ function module.options:Load()
 		CloseDropDownMenus()
 	end
 	
-	self.autoPromoteInput = ExRT.lib.CreateEditBox(self,590,24,"TOP",3,-230,ExRT.L.inviteAutoPromoteTooltip,nil,nil,nil,VExRT.InviteTool.PromoteNames)
+	self.autoPromoteInput = ExRT.lib.CreateEditBox(self,590,24,"TOP",3,-250,ExRT.L.inviteAutoPromoteTooltip,nil,nil,nil,VExRT.InviteTool.PromoteNames)
 	self.autoPromoteInput:SetScript("OnTextChanged",function(self)
 		VExRT.InviteTool.PromoteNames = self:GetText()
 		createPromoteArray()
 	end) 
 	
-	self.butRaidDemote = ExRT.lib.CreateButton(self,422,22,nil,13,-255,ExRT.L.inviteRaidDemote)
+	self.butRaidDemote = ExRT.lib.CreateButton(self,422,22,nil,13,-275,ExRT.L.inviteRaidDemote)
 	self.butRaidDemote:SetScript("OnClick",function()
 		demoteRaid()
 	end)
 	
-	self.chkRaidDiff = ExRT.lib.CreateCheckBox(self,nil,10,-290,ExRT.L.InviteRaidDiffCheck,VExRT.InviteTool.AutoRaidDiff)
+	self.chkRaidDiff = ExRT.lib.CreateCheckBox(self,nil,10,-310,ExRT.L.InviteRaidDiffCheck,VExRT.InviteTool.AutoRaidDiff)
 	self.chkRaidDiff:SetScript("OnClick", function(self,event) 
 		if self:GetChecked() then
 			VExRT.InviteTool.AutoRaidDiff = true
@@ -307,7 +322,7 @@ function module.options:Load()
 		{15,PLAYER_DIFFICULTY2},
 		{16,PLAYER_DIFFICULTY6},
 	}
-	self.dropDownRaidDiff = ExRT.lib.CreateDropDown(self,"TOPLEFT",180,-315,220)
+	self.dropDownRaidDiff = ExRT.lib.CreateDropDown(self,"TOPLEFT",180,-335,220)
 	UIDropDownMenu_Initialize(self.dropDownRaidDiff, function(self, level, menuList)
 		ExRT.mds.FixDropDown(220)
 		local info = UIDropDownMenu_CreateInfo()
@@ -345,7 +360,7 @@ function module.options:Load()
 		{"personalloot",LOOT_PERSONAL_LOOT},
 		{"roundrobin",LOOT_ROUND_ROBIN},
 	}
-	self.dropDownLootMethod = ExRT.lib.CreateDropDown(self,"TOPLEFT",180,-340,220)
+	self.dropDownLootMethod = ExRT.lib.CreateDropDown(self,"TOPLEFT",180,-360,220)
 	UIDropDownMenu_Initialize(self.dropDownLootMethod, function(self, level, menuList)
 		ExRT.mds.FixDropDown(220)
 		local info = UIDropDownMenu_CreateInfo()
@@ -375,7 +390,7 @@ function module.options:Load()
 	ExRT.lib.SetPoint(self.dropDownLootMethodText,"TOPLEFT",self.dropDownLootMethod,-150,-12)
 	
 	
-	self.masterlotersInput = ExRT.lib.CreateEditBox(self,405,24,"TOPLEFT",204,-367,ExRT.L.InviteMasterlootersTooltip,nil,nil,nil,VExRT.InviteTool.MasterLooters)
+	self.masterlotersInput = ExRT.lib.CreateEditBox(self,405,24,"TOPLEFT",204,-387,ExRT.L.InviteMasterlootersTooltip,nil,nil,nil,VExRT.InviteTool.MasterLooters)
 	self.masterlotersInput:SetScript("OnTextChanged",function(self)
 		VExRT.InviteTool.MasterLooters = self:GetText()
 		createMastelootersArray()
@@ -389,7 +404,7 @@ function module.options:Load()
 		{3,"|c"..select(4,GetItemQualityColor(3))..ITEM_QUALITY3_DESC},
 		{4,"|c"..select(4,GetItemQualityColor(4))..ITEM_QUALITY4_DESC},
 	}
-	self.dropDownLootThreshold = ExRT.lib.CreateDropDown(self,"TOPLEFT",180,-390,220)
+	self.dropDownLootThreshold = ExRT.lib.CreateDropDown(self,"TOPLEFT",180,-410,220)
 	UIDropDownMenu_Initialize(self.dropDownLootThreshold, function(self, level, menuList)
 		ExRT.mds.FixDropDown(220)
 		local info = UIDropDownMenu_CreateInfo()
@@ -422,10 +437,10 @@ function module.options:Load()
 	
 	self.HelpPlate = {
 		FramePos = { x = 0, y = 0 },FrameSize = { width = 623, height = 568 },
-		[1] = { ButtonPos = { x = 50,	y = -30 },  	HighLightBox = { x = 10, y = -8, width = 605, height = 85 },		ToolTipDir = "RIGHT",	ToolTipText = ExRT.L.inviteHelpRaid },
-		[2] = { ButtonPos = { x = 50,  y = -110 }, 	HighLightBox = { x = 10, y = -100, width = 605, height = 55 },		ToolTipDir = "RIGHT",	ToolTipText = ExRT.L.inviteHelpAutoInv },
-		[3] = { ButtonPos = { x = 50,  y = -154 }, 	HighLightBox = { x = 10, y = -160, width = 605, height = 30 },		ToolTipDir = "RIGHT",	ToolTipText = ExRT.L.inviteHelpAutoAccept },
-		[4] = { ButtonPos = { x = 50,  y = -218},  	HighLightBox = { x = 10, y = -198, width = 605, height = 85 },		ToolTipDir = "RIGHT",	ToolTipText = ExRT.L.inviteHelpAutoPromote },
+		[1] = { ButtonPos = { x = 50,	y = -50 },  	HighLightBox = { x = 10, y = -28, width = 605, height = 85 },		ToolTipDir = "RIGHT",	ToolTipText = ExRT.L.inviteHelpRaid },
+		[2] = { ButtonPos = { x = 50,  y = -130 }, 	HighLightBox = { x = 10, y = -120, width = 605, height = 55 },		ToolTipDir = "RIGHT",	ToolTipText = ExRT.L.inviteHelpAutoInv },
+		[3] = { ButtonPos = { x = 50,  y = -174 }, 	HighLightBox = { x = 10, y = -180, width = 605, height = 30 },		ToolTipDir = "RIGHT",	ToolTipText = ExRT.L.inviteHelpAutoAccept },
+		[4] = { ButtonPos = { x = 50,  y = -238},  	HighLightBox = { x = 10, y = -218, width = 605, height = 85 },		ToolTipDir = "RIGHT",	ToolTipText = ExRT.L.inviteHelpAutoPromote },
 	}
 	self.HELPButton = ExRT.lib.CreateHelpButton(self,self.HelpPlate)
 
@@ -474,7 +489,9 @@ do
 			scheduledPromotes = ExRT.mds.ScheduleTimer(function ()
 				scheduledPromotes = nil
 				for name,v in pairs(promotes) do
-					PromoteToAssistant(name)
+					if not module.db.demotedPlayers[ ExRT.mds.delUnitNameServer(name) ] then
+						PromoteToAssistant(name)
+					end
 					promotes[name] = nil
 				end
 			end, 2)

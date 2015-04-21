@@ -1,4 +1,4 @@
-local E, L, V, P, G = unpack(select(2, ...)); --Inport: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
+﻿local E, L, V, P, G = unpack(select(2, ...)); --Inport: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local B = E:NewModule('Bags', 'AceHook-3.0', 'AceEvent-3.0', 'AceTimer-3.0');
 local Search = LibStub('LibItemSearch-1.2')
 
@@ -170,6 +170,22 @@ function B:SetGuildBankSearch(query)
 	end
 end
 
+function B:UpdateItemLevelDisplay()
+	for _, bagFrame in pairs(self.BagFrames) do
+		for _, bagID in ipairs(bagFrame.BagIDs) do
+			for slotID = 1, GetContainerNumSlots(bagID) do
+				local slot = bagFrame.Bags[bagID][slotID]
+				if slot and slot.itemLevel then
+					slot.itemLevel:FontTemplate(E.LSM:Fetch("font", E.db.bags.itemLevelFont), E.db.bags.itemLevelFontSize, E.db.bags.itemLevelFontOutline)
+				end
+			end
+		end
+		if bagFrame.UpdateAllSlots then
+			bagFrame:UpdateAllSlots()
+		end
+	end
+end
+
 function B:UpdateSlot(bagID, slotID)
 	if (self.Bags[bagID] and self.Bags[bagID].numSlots ~= GetContainerNumSlots(bagID)) or not self.Bags[bagID] or not self.Bags[bagID][slotID] then
 		return;
@@ -195,11 +211,12 @@ function B:UpdateSlot(bagID, slotID)
 		SetItemButtonTextureVertexColor(slot, 1, 1, 1);
 	end
 
+	slot.itemLevel:SetText("")
 	if B.ProfessionColors[bagType] then
 		slot:SetBackdropBorderColor(unpack(B.ProfessionColors[bagType]))
 	elseif (clink) then
-		local iType;
-		slot.name, _, slot.rarity, _, _, iType = GetItemInfo(clink);
+		local iLvl, itemEquipLoc
+		slot.name, _, slot.rarity, iLvl, _, _, _, _, itemEquipLoc = GetItemInfo(clink);
 
 		local isQuestItem, questId, isActiveQuest = GetContainerItemQuestInfo(bagID, slotID);
 		local r, g, b
@@ -209,8 +226,14 @@ function B:UpdateSlot(bagID, slotID)
 			slot.shadow:SetBackdropBorderColor(r, g, b)
 		end
 
+		--Item Level
+		if (iLvl and iLvl >= E.db.bags.itemLevelThreshold) and (itemEquipLoc ~= nil and itemEquipLoc ~= "" and itemEquipLoc ~= "INVTYPE_BAG" and itemEquipLoc ~= "INVTYPE_QUIVER" and itemEquipLoc ~= "INVTYPE_TABARD") and (slot.rarity and slot.rarity > 1) and B.db.itemLevel then
+			slot.itemLevel:SetText(iLvl)
+			slot.itemLevel:SetTextColor(r, g, b)
+		end
+
 		-- color slot according to item quality
-		if questId and not isActive then
+		if questId and not isActiveQuest then
 			slot:SetBackdropBorderColor(1.0, 0.3, 0.3);
 			if(slot.questIcon) then
 				slot.questIcon:Show();
@@ -314,7 +337,6 @@ end
 function B:REAGENTBANK_PURCHASED()
 	ElvUIReagentBankFrame.cover:Hide()
 end
-
 
 function B:Layout(isBank)
 	if E.private.bags.enable ~= true then return; end
@@ -427,8 +449,8 @@ function B:Layout(isBank)
 					f.Bags[bagID][slotID].Count:ClearAllPoints();
 					f.Bags[bagID][slotID].Count:Point('BOTTOMRIGHT', 0, 2);
 
-					if(f.Bags[bagID][slotID].questIcon) then
-						f.Bags[bagID][slotID].questIcon = _G[f.Bags[bagID][slotID]:GetName()..'IconQuestTexture'];
+					if not(f.Bags[bagID][slotID].questIcon) then
+						f.Bags[bagID][slotID].questIcon = _G[f.Bags[bagID][slotID]:GetName()..'IconQuestTexture'] or _G[f.Bags[bagID][slotID]:GetName()].IconQuestTexture
 						f.Bags[bagID][slotID].questIcon:SetTexture(TEXTURE_ITEM_QUEST_BANG);
 						f.Bags[bagID][slotID].questIcon:SetInside(f.Bags[bagID][slotID]);
 						f.Bags[bagID][slotID].questIcon:SetTexCoord(unpack(E.TexCoords));
@@ -443,6 +465,10 @@ function B:Layout(isBank)
 					E:RegisterCooldown(f.Bags[bagID][slotID].cooldown)
 					f.Bags[bagID][slotID].bagID = bagID
 					f.Bags[bagID][slotID].slotID = slotID
+
+					f.Bags[bagID][slotID].itemLevel = f.Bags[bagID][slotID]:CreateFontString(nil, 'OVERLAY')
+					f.Bags[bagID][slotID].itemLevel:SetPoint("BOTTOMRIGHT", 0, 2)
+					f.Bags[bagID][slotID].itemLevel:FontTemplate(E.LSM:Fetch("font", E.db.bags.itemLevelFont), E.db.bags.itemLevelFontSize, E.db.bags.itemLevelFontOutline)
 
 					if(f.Bags[bagID][slotID].BattlepayItemTexture) then
 						f.Bags[bagID][slotID].BattlepayItemTexture:Hide()
@@ -579,8 +605,7 @@ function B:UpdateReagentSlot(slotID)
 	if B.ProfessionColors[bagType] then
 		slot:SetBackdropBorderColor(unpack(B.ProfessionColors[bagType]))
 	elseif (clink) then
-		local iType;
-		slot.name, _, slot.rarity, _, _, iType = GetItemInfo(clink);
+		slot.name, _, slot.rarity = GetItemInfo(clink);
 
 		local isQuestItem, questId, isActiveQuest = GetContainerItemQuestInfo(bagID, slotID);
 		local r, g, b
@@ -1155,7 +1180,18 @@ function B:ContructContainerFrame(name, isBank)
 			f.currencyButton[i]:Hide();
 		end
 
-		f:SetScript('OnHide', CloseBackpack)
+		f:SetScript('OnHide', function()
+			CloseBackpack()
+			for i = 1, NUM_BAG_FRAMES do
+				CloseBag(i)
+			end
+
+			if ElvUIBags and ElvUIBags.buttons then
+				for _, bagButton in pairs(ElvUIBags.buttons) do
+					bagButton:SetChecked(false)
+				end
+			end
+		end)
 	end
 
 	tinsert(UISpecialFrames, f:GetName()) --Keep an eye on this for taints..

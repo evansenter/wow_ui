@@ -32,6 +32,7 @@ local AddonDB_Defaults = {
 				numFollowersAtiLevel615 = 0,
 				numFollowersAtiLevel630 = 0,
 				numFollowersAtiLevel645 = 0,
+				numFollowersAtiLevel660 = 0,
 				numRareFollowers = 0,
 				numEpicFollowers = 0,
 				Buildings = {},				-- List of buildings
@@ -184,6 +185,20 @@ local function CheckUncollectedResources()
 	end
 end
 
+local function ClearActiveMissionsInfo()
+	-- active missions info is saved separately, and not cleaned automatically during the scan.
+	-- so clean it at login ..
+	
+	for key, character in pairs(addon.db.global.Characters) do			-- loop through all characters
+		for missionID, _ in pairs(character.ActiveMissionsInfo) do		-- loop through all mission info
+			
+			if not character.ActiveMissions[missionID] then					-- if the mission is no longer active ..
+				character.ActiveMissionsInfo[missionID] = nil				-- .. then delete its info
+			end
+		end
+	end
+end
+
 -- *** Scanning functions ***
 local function ScanBuildings()
 	local plots = C_Garrison.GetPlots()
@@ -224,7 +239,7 @@ local function ScanFollowers()
 	if not followersList then return end
 
 	local followers = addon.ThisCharacter.Followers
-	wipe(followers)
+	--wipe(followers) no need to wipe, followers don't get 'uncollected', and they are in a hash table, not an array
 	
 	-- = C_Garrison.GetFollowerNameByID(id)
 	
@@ -239,6 +254,7 @@ local function ScanFollowers()
 	local num615 = 0	-- number of followers at iLevel 615+
 	local num630 = 0	-- number of followers at iLevel 630+
 	local num645 = 0	-- number of followers at iLevel 645+
+	local num660 = 0	-- number of followers at iLevel 660+
 	local numRare = 0	-- number of rare followers (blue)
 	local numEpic = 0	-- number of epic followers (violet)
 	
@@ -312,6 +328,7 @@ local function ScanFollowers()
 			if iLevel >= 615 then num615 = num615 + 1	end
 			if iLevel >= 630 then num630 = num630 + 1	end
 			if iLevel >= 645 then num645 = num645 + 1	end
+			if iLevel >= 660 then num660 = num660 + 1	end
 			if rarity == 3 then numRare = numRare + 1 end
 			if rarity == 4 then numEpic = numEpic + 1	end
 			
@@ -349,6 +366,7 @@ local function ScanFollowers()
 	c.numFollowersAtiLevel615 = num615
 	c.numFollowersAtiLevel630 = num630
 	c.numFollowersAtiLevel645 = num645
+	c.numFollowersAtiLevel660 = num660
 	c.numRareFollowers = numRare
 	c.numEpicFollowers = numEpic
 	c.Abilities = abilities
@@ -492,6 +510,16 @@ local function OnGarrisonMissionListUpdate()
 	ScanActiveMissions()
 end
 
+local function OnGarrisonMissionNPCOpened()
+	ScanAvailableMissions()
+	ScanActiveMissions()
+end
+
+local function OnGarrisonMissionNPCClosed()
+	ScanAvailableMissions()
+	ScanActiveMissions()
+end
+
 local function OnGarrisonMissionStarted(event, missionID)
 	-- ScanAvailableMissions() not needed, done by the list update
 	-- only re-scan in progress
@@ -572,6 +600,10 @@ local function _GetNumFollowersAtiLevel645(character)
 	return character.numFollowersAtiLevel645 or 0
 end
 
+local function _GetNumFollowersAtiLevel660(character)
+	return character.numFollowersAtiLevel660 or 0
+end
+
 local function _GetNumRareFollowers(character)
 	return character.numRareFollowers or 0
 end
@@ -642,6 +674,27 @@ local function _GetNumActiveMissions(character)
 	return count
 end
 
+local function _GetNumCompletedMissions(character)
+	local count = 0
+	
+	for id, v in pairs(character.ActiveMissions) do
+		local _, _, _, _, _, _, _, remainingTime = _GetActiveMissionInfo(character, id)
+		if remainingTime and remainingTime == 0 then
+			count = count + 1
+		end
+	end
+	
+	return count
+end
+
+local function _GetMissionTableLastVisit(character)
+	return character.lastUpdate or 0
+end
+
+local function _GetLastResourceCollectionTime(character)
+	return character.lastResourceCollection or 0
+end
+
 local PublicMethods = {
 	GetFollowers = _GetFollowers,
 	GetFollowerInfo = _GetFollowerInfo,
@@ -653,6 +706,7 @@ local PublicMethods = {
 	GetNumFollowersAtiLevel615 = _GetNumFollowersAtiLevel615,
 	GetNumFollowersAtiLevel630 = _GetNumFollowersAtiLevel630,
 	GetNumFollowersAtiLevel645 = _GetNumFollowersAtiLevel645,
+	GetNumFollowersAtiLevel660 = _GetNumFollowersAtiLevel660,
 	GetNumRareFollowers = _GetNumRareFollowers,
 	GetNumEpicFollowers = _GetNumEpicFollowers,
 	GetBuildingInfo = _GetBuildingInfo,
@@ -663,6 +717,9 @@ local PublicMethods = {
 	GetActiveMissions = _GetActiveMissions,
 	GetActiveMissionInfo = _GetActiveMissionInfo,
 	GetNumActiveMissions = _GetNumActiveMissions,
+	GetNumCompletedMissions = _GetNumCompletedMissions,
+	GetMissionTableLastVisit = _GetMissionTableLastVisit,
+	GetLastResourceCollectionTime = _GetLastResourceCollectionTime,
 }
 
 function addon:OnInitialize()
@@ -678,6 +735,7 @@ function addon:OnInitialize()
 	DataStore:SetCharacterBasedMethod("GetNumFollowersAtiLevel615")
 	DataStore:SetCharacterBasedMethod("GetNumFollowersAtiLevel630")
 	DataStore:SetCharacterBasedMethod("GetNumFollowersAtiLevel645")
+	DataStore:SetCharacterBasedMethod("GetNumFollowersAtiLevel660")
 	DataStore:SetCharacterBasedMethod("GetNumRareFollowers")
 	DataStore:SetCharacterBasedMethod("GetNumEpicFollowers")
 	DataStore:SetCharacterBasedMethod("GetBuildingInfo")
@@ -688,6 +746,9 @@ function addon:OnInitialize()
 	DataStore:SetCharacterBasedMethod("GetActiveMissions")
 	DataStore:SetCharacterBasedMethod("GetActiveMissionInfo")
 	DataStore:SetCharacterBasedMethod("GetNumActiveMissions")
+	DataStore:SetCharacterBasedMethod("GetNumCompletedMissions")
+	DataStore:SetCharacterBasedMethod("GetMissionTableLastVisit")
+	DataStore:SetCharacterBasedMethod("GetLastResourceCollectionTime")
 end
 
 function addon:OnEnable()
@@ -712,6 +773,8 @@ function addon:OnEnable()
 			addon:RegisterEvent("GARRISON_MISSION_LIST_UPDATE", OnGarrisonMissionListUpdate)
 		end, 3)	
 	
+	addon:RegisterEvent("GARRISON_MISSION_NPC_OPENED", OnGarrisonMissionNPCOpened)
+	addon:RegisterEvent("GARRISON_MISSION_NPC_CLOSED", OnGarrisonMissionNPCClosed)
 	addon:RegisterEvent("GARRISON_MISSION_STARTED", OnGarrisonMissionStarted)
 	addon:RegisterEvent("GARRISON_MISSION_FINISHED", OnGarrisonMissionFinished)
 	
@@ -719,6 +782,8 @@ function addon:OnEnable()
 	if GetOption("ReportUncollected") then
 		CheckUncollectedResources()
 	end
+	
+	ClearActiveMissionsInfo()
 end
 
 function addon:OnDisable()

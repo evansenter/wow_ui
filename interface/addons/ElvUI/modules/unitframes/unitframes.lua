@@ -44,17 +44,19 @@ UF['classMaxResourceBar'] = {
 }
 
 UF['mapIDs'] = {
-	[727] = 10, --Silvershard mines
-	[489] = 10, -- WSG
-	[628] = 40, -- Isle of Conquest
+	[30] = 40, -- Alterac Valley
+	[489] = 10, -- Warsong Gulch
+	[529] = 15, -- Arathi Basin
+	[566] = 15, -- Eye of the Storm
 	[607] = 15, -- Strand of the Ancients
+	[628] = 40, -- Isle of Conquest
 	[726] = 10, -- Twin Peaks
-	[30] = 40, -- AV
-	[529] = 15, -- AB
+	[727] = 10, -- Silvershard mines
+	[761] = 10, -- The Battle for Gilneas
+	[968] = 10, -- Rated Eye of the Storm
 	[998] = 10, -- Temple of Kotmogu
 	[1105] = 15, -- Deepwind Gourge
-	[761] = 10, -- Gilneas
-	[566] = 15, -- EOTS
+	[1280] = 40, -- Southshore vs. Tarren Mill
 }
 
 UF['headerGroupBy'] = {
@@ -484,6 +486,7 @@ function UF.groupPrototype:Configure_Groups()
 	local width, height, newCols, newRows = 0, 0, 0, 0
 	local direction = db.growthDirection
 	local xMult, yMult = DIRECTION_TO_HORIZONTAL_SPACING_MULTIPLIER[direction], DIRECTION_TO_VERTICAL_SPACING_MULTIPLIER[direction]
+	local SPACING = E.Spacing
 
 
 	local numGroups = self.numGroups
@@ -496,12 +499,12 @@ function UF.groupPrototype:Configure_Groups()
 		if group then
 			UF:ConvertGroupDB(group)
 			if point == "LEFT" or point == "RIGHT" then
-				group:SetAttribute("xOffset", db.horizontalSpacing * DIRECTION_TO_HORIZONTAL_SPACING_MULTIPLIER[direction])
+				group:SetAttribute("xOffset", (db.horizontalSpacing + SPACING) * DIRECTION_TO_HORIZONTAL_SPACING_MULTIPLIER[direction])
 				group:SetAttribute("yOffset", 0)
 				group:SetAttribute("columnSpacing", db.verticalSpacing)
 			else
 				group:SetAttribute("xOffset", 0)
-				group:SetAttribute("yOffset", db.verticalSpacing * DIRECTION_TO_VERTICAL_SPACING_MULTIPLIER[direction])
+				group:SetAttribute("yOffset", (db.verticalSpacing + SPACING) * DIRECTION_TO_VERTICAL_SPACING_MULTIPLIER[direction])
 				group:SetAttribute("columnSpacing", db.horizontalSpacing)
 			end
 
@@ -551,14 +554,14 @@ function UF.groupPrototype:Configure_Groups()
 				if group then
 					group:SetPoint(point, self, point, 0, height * yMult)
 				end
-				height = height + (db.height + db.verticalSpacing)
+				height = height + (db.height + db.verticalSpacing + SPACING)
 
 				newRows = newRows + 1
 			else
 				if group then
 					group:SetPoint(point, self, point, width * xMult, 0)
 				end
-				width = width + (db.width + db.horizontalSpacing)
+				width = width + (db.width + db.horizontalSpacing + SPACING)
 
 				newCols = newCols + 1
 			end
@@ -566,22 +569,22 @@ function UF.groupPrototype:Configure_Groups()
 			if DIRECTION_TO_POINT[direction] == "LEFT" or DIRECTION_TO_POINT[direction] == "RIGHT" then
 				if newRows == 1 then
 					if group then
-						group:SetPoint(point, self, point, width * xMult, 0)
+						group:SetPoint(point, self, point, (width + (SPACING * 5)) * xMult, 0)
 					end
-					width = width + ((db.width + db.horizontalSpacing) * 5)
+					width = width + ((db.width + db.horizontalSpacing + SPACING) * 5)
 					newCols = newCols + 1
 				elseif group then
-					group:SetPoint(point, self, point, (((db.width + db.horizontalSpacing) * 5) * ((i-1) % db.groupsPerRowCol)) * xMult, ((db.height + db.verticalSpacing) * (newRows - 1)) * yMult)
+					group:SetPoint(point, self, point, (((db.width + db.horizontalSpacing + SPACING) * 5) * ((i-1) % db.groupsPerRowCol)) * xMult, ((db.height + db.verticalSpacing + SPACING) * (newRows - 1)) * yMult)
 				end
 			else
 				if newCols == 1 then
 					if group then
-						group:SetPoint(point, self, point, 0, height * yMult)
+						group:SetPoint(point, self, point, 0, (height + (SPACING*5)) * yMult)
 					end
-					height = height + ((db.height + db.verticalSpacing) * 5)
+					height = height + ((db.height + db.verticalSpacing + SPACING) * 5)
 					newRows = newRows + 1
 				elseif group then
-					group:SetPoint(point, self, point, ((db.width + db.horizontalSpacing) * (newCols - 1)) * xMult, (((db.height + db.verticalSpacing) * 5) * ((i-1) % db.groupsPerRowCol)) * yMult)
+					group:SetPoint(point, self, point, ((db.width + db.horizontalSpacing + SPACING) * (newCols - 1)) * xMult, (((db.height + db.verticalSpacing + SPACING) * 5) * ((i-1) % db.groupsPerRowCol)) * yMult)
 				end
 			end
 		end
@@ -728,15 +731,15 @@ function UF:CreateAndUpdateHeaderGroup(group, groupFilter, template, headerUpdat
 		local inInstance, instanceType = IsInInstance()
 		if(inInstance and (instanceType == 'raid' or instanceType == 'pvp')) then
 			local _, _, _, _, maxPlayers, _, _, mapID, maxPlayersInstance = GetInstanceInfo()
-			--[[if(maxPlayersInstance and maxPlayersInstance > 0) then
+			--[[if maxPlayersInstance > 0 then
 				maxPlayers = maxPlayersInstance
 			end]]
 
-			if mapID and UF.mapIDs[mapID] then
+			if UF.mapIDs[mapID] then
 				maxPlayers = UF.mapIDs[mapID]
 			end
 
-			if(maxPlayers > 0) then
+			if maxPlayers > 0 then
 				numGroups = E:Round(maxPlayers/5)
 				E:Print("Forcing maxGroups to: "..numGroups.." because maxPlayers is: "..maxPlayers)
 			end
@@ -921,7 +924,7 @@ function UF:UpdateAllHeaders(event)
 		end
 	end
 
-	if E.private.unitframe.disableBlizzard then
+	if E.private["unitframe"]["disabledBlizzardFrames"].party then
 		ElvUF:DisableBlizzard('party')
 	end
 end
@@ -936,12 +939,17 @@ function HideRaid()
 end
 
 function UF:DisableBlizzard(event)
-	hooksecurefunc("CompactRaidFrameManager_UpdateShown", HideRaid)
-	CompactRaidFrameManager:HookScript('OnShow', HideRaid)
-	CompactRaidFrameContainer:UnregisterAllEvents()
+	if (not E.private["unitframe"]["disabledBlizzardFrames"].raid) and (not E.private["unitframe"]["disabledBlizzardFrames"].party) then return; end
+	if not CompactRaidFrameManager_UpdateShown then
+		E:StaticPopup_Show("WARNING_BLIZZARD_ADDONS")
+	else
+		hooksecurefunc("CompactRaidFrameManager_UpdateShown", HideRaid)
+		CompactRaidFrameManager:HookScript('OnShow', HideRaid)
+		CompactRaidFrameContainer:UnregisterAllEvents()
 
-	HideRaid()
-	hooksecurefunc("CompactUnitFrame_RegisterEvents", CompactUnitFrame_UnregisterEvents)
+		HideRaid()
+		hooksecurefunc("CompactUnitFrame_RegisterEvents", CompactUnitFrame_UnregisterEvents)
+	end
 end
 
 local hiddenParent = CreateFrame("Frame")
@@ -987,7 +995,7 @@ end
 function ElvUF:DisableBlizzard(unit)
 	if(not unit) or InCombatLockdown() then return end
 
-	if(unit == 'player') then
+	if(unit == 'player') and E.private["unitframe"]["disabledBlizzardFrames"].player then
 		HandleFrame(PlayerFrame)
 
 		-- For the damn vehicle support:
@@ -1001,26 +1009,26 @@ function ElvUF:DisableBlizzard(unit)
 		PlayerFrame:SetUserPlaced(true)
 		PlayerFrame:SetDontSavePosition(true)
 		RuneFrame:SetParent(PlayerFrame)
-	elseif(unit == 'pet') then
+	elseif(unit == 'pet') and E.private["unitframe"]["disabledBlizzardFrames"].player then
 		HandleFrame(PetFrame)
-	elseif(unit == 'target') then
+	elseif(unit == 'target') and E.private["unitframe"]["disabledBlizzardFrames"].target then
 		HandleFrame(TargetFrame)
 		HandleFrame(ComboFrame)
-	elseif(unit == 'focus') then
+	elseif(unit == 'focus') and E.private["unitframe"]["disabledBlizzardFrames"].focus then
 		HandleFrame(FocusFrame)
-		HandleFrame(TargetofFocusFrame)
-	elseif(unit == 'targettarget') then
+		HandleFrame(FocusFrameToT)
+	elseif(unit == 'targettarget') and E.private["unitframe"]["disabledBlizzardFrames"].target then
 		HandleFrame(TargetFrameToT)
-	elseif(unit:match'(boss)%d?$' == 'boss') then
+	elseif(unit:match'(boss)%d?$' == 'boss') and E.private["unitframe"]["disabledBlizzardFrames"].boss then
 		local id = unit:match'boss(%d)'
 		if(id) then
 			HandleFrame('Boss' .. id .. 'TargetFrame')
 		else
-			for i=1, 4 do
+			for i=1, MAX_BOSS_FRAMES do
 				HandleFrame(('Boss%dTargetFrame'):format(i))
 			end
 		end
-	elseif(unit:match'(party)%d?$' == 'party') then
+	elseif(unit:match'(party)%d?$' == 'party') and E.private["unitframe"]["disabledBlizzardFrames"].party then
 		local id = unit:match'party(%d)'
 		if(id) then
 			HandleFrame('PartyMemberFrame' .. id)
@@ -1029,7 +1037,7 @@ function ElvUF:DisableBlizzard(unit)
 				HandleFrame(('PartyMemberFrame%d'):format(i))
 			end
 		end
-	elseif(unit:match'(arena)%d?$' == 'arena') then
+	elseif(unit:match'(arena)%d?$' == 'arena') and E.private["unitframe"]["disabledBlizzardFrames"].arena then
 		local id = unit:match'arena(%d)'
 
 		if(id) then
@@ -1103,39 +1111,58 @@ function UF:Initialize()
 	self:RegisterEvent('PLAYER_ENTERING_WORLD')
 	self:RegisterEvent('ZONE_CHANGED_NEW_AREA')
 
-	if E.private["unitframe"].disableBlizzard then
-		self:DisableBlizzard()
-		self:SecureHook('UnitFrameThreatIndicator_Initialize')
-		--InterfaceOptionsFrameCategoriesButton9:SetScale(0.0001)
+	--InterfaceOptionsFrameCategoriesButton9:SetScale(0.0001)
+	if E.private["unitframe"]["disabledBlizzardFrames"].arena and E.private["unitframe"]["disabledBlizzardFrames"].focus and E.private["unitframe"]["disabledBlizzardFrames"].party then
 		InterfaceOptionsFrameCategoriesButton10:SetScale(0.0001)
-		InterfaceOptionsFrameCategoriesButton11:SetScale(0.0001)
+	end
+
+	if E.private["unitframe"]["disabledBlizzardFrames"].player then
 		InterfaceOptionsStatusTextPanelPlayer:SetScale(0.0001)
-		InterfaceOptionsStatusTextPanelTarget:SetScale(0.0001)
-		InterfaceOptionsStatusTextPanelParty:SetScale(0.0001)
-		InterfaceOptionsStatusTextPanelPet:SetScale(0.0001)
 		InterfaceOptionsStatusTextPanelPlayer:SetAlpha(0)
-		InterfaceOptionsStatusTextPanelTarget:SetAlpha(0)
-		InterfaceOptionsStatusTextPanelParty:SetAlpha(0)
+		InterfaceOptionsStatusTextPanelPet:SetScale(0.0001)
 		InterfaceOptionsStatusTextPanelPet:SetAlpha(0)
+	end
+
+	if E.private["unitframe"]["disabledBlizzardFrames"].target then
+		InterfaceOptionsStatusTextPanelTarget:SetScale(0.0001)
+		InterfaceOptionsStatusTextPanelTarget:SetAlpha(0)
 		InterfaceOptionsCombatPanelEnemyCastBarsOnPortrait:SetAlpha(0)
 		InterfaceOptionsCombatPanelEnemyCastBarsOnPortrait:EnableMouse(false)
-		InterfaceOptionsCombatPanelTargetOfTarget:SetScale(0.0001)
-		InterfaceOptionsCombatPanelTargetOfTarget:SetAlpha(0)
 		InterfaceOptionsCombatPanelEnemyCastBarsOnNameplates:ClearAllPoints()
 		InterfaceOptionsCombatPanelEnemyCastBarsOnNameplates:SetPoint(InterfaceOptionsCombatPanelEnemyCastBarsOnPortrait:GetPoint())
+		InterfaceOptionsCombatPanelTargetOfTarget:SetScale(0.0001)
+		InterfaceOptionsCombatPanelTargetOfTarget:SetAlpha(0)
 		InterfaceOptionsDisplayPanelShowAggroPercentage:SetScale(0.0001)
 		InterfaceOptionsDisplayPanelShowAggroPercentage:SetAlpha(0)
+	end
 
-		if not IsAddOnLoaded('Blizzard_ArenaUI') then
-			self:RegisterEvent('ADDON_LOADED')
-		else
-			ElvUF:DisableBlizzard('arena')
-		end
+	if E.private["unitframe"]["disabledBlizzardFrames"].party then
+		InterfaceOptionsStatusTextPanelParty:SetScale(0.0001)
+		InterfaceOptionsStatusTextPanelParty:SetAlpha(0)
+	end
+
+	if E.private["unitframe"]["disabledBlizzardFrames"].party and E.private["unitframe"]["disabledBlizzardFrames"].raid then
+		self:DisableBlizzard()
+		InterfaceOptionsFrameCategoriesButton11:SetScale(0.0001)
 
 		self:RegisterEvent('GROUP_ROSTER_UPDATE', 'DisableBlizzard')
 		UIParent:UnregisterEvent('GROUP_ROSTER_UPDATE') --This may fuck shit up.. we'll see...
 	else
 		CompactUnitFrameProfiles:RegisterEvent('VARIABLES_LOADED')
+	end
+	
+	if (not E.private["unitframe"]["disabledBlizzardFrames"].party) and (not E.private["unitframe"]["disabledBlizzardFrames"].raid) then
+		E.RaidUtility.Initialize = E.noop
+	end
+
+	if E.private["unitframe"]["disabledBlizzardFrames"].arena then
+		self:SecureHook('UnitFrameThreatIndicator_Initialize')
+		
+		if not IsAddOnLoaded('Blizzard_ArenaUI') then
+			self:RegisterEvent('ADDON_LOADED')
+		else
+			ElvUF:DisableBlizzard('arena')
+		end
 	end
 
 	local ORD = ns.oUF_RaidDebuffs or oUF_RaidDebuffs

@@ -7,12 +7,16 @@ local pi = math.pi
 local cos = math.cos
 local sin = math.sin
 local rad = math.rad
+local tconcat = table.concat
 local GameTooltip = GameTooltip
 local CreateFrame = CreateFrame
 local GetPlayerMapPosition = GetPlayerMapPosition
 local SetMapToCurrentZone = SetMapToCurrentZone
 local type = type
 local print = print
+local tonumber = tonumber
+local RegisterAddonMessagePrefix = RegisterAddonMessagePrefix
+local SendAddonMessage = SendAddonMessage
 local UIParent = UIParent
 local IsInInstance = IsInInstance
 local GetRealZoneText = GetRealZoneText
@@ -90,10 +94,6 @@ local mapData = {2599.9990234375, 1733.3330078125}
 --	{ ["spawnTime"] = , 	["departureTime"] = , 	["lane"] = , 	["type"] = , 	["length"] = , 	["stays"] = , 	["leftToRight"] = },
 local trainDataPerDifficulty = {}
 
--- 14: Normal
-trainDataPerDifficulty[14] = {
-}
-
 -- 15: Heroic
 trainDataPerDifficulty[15] = {
 	{ ["spawnTime"] = 18, 	["departureTime"] = 21, 	["lane"] = 4, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true },
@@ -133,7 +133,8 @@ trainDataPerDifficulty[15] = {
 	{ ["spawnTime"] = 457, 	["departureTime"] = 469, 	["lane"] = 2, 	["type"] = 4, 	["length"] = 50, 	["stays"] = false, 	["leftToRight"] = true},
 	{ ["spawnTime"] = 457, 	["departureTime"] = 469, 	["lane"] = 3, 	["type"] = 4, 	["length"] = 50, 	["stays"] = false, 	["leftToRight"] = false},
 }
-trainDataPerDifficulty[14] = trainDataPerDifficulty[15] -- TODO normal may be the same as heroic
+-- 14: Normal
+trainDataPerDifficulty[14] = trainDataPerDifficulty[15] -- normal is the same as heroic
 
 -- 16: Mythic
 trainDataPerDifficulty[16] = {
@@ -211,8 +212,42 @@ trainDataPerDifficulty[16] = {
 
 -- 17: LFR
 trainDataPerDifficulty[17] = {
+	{ ["spawnTime"] = 18, 	["departureTime"] = 21, 	["lane"] = 4, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true },
+	{ ["spawnTime"] = 27, 	["departureTime"] = 31, 	["lane"] = 2, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false },
+	{ ["spawnTime"] = 32, 	["departureTime"] = 60, 	["lane"] = 1, 	["type"] = 2, 	["length"] = 75, 	["stays"] =  true, 	["leftToRight"] = false }, --departs when all adds are dead
+	{ ["spawnTime"] = 48, 	["departureTime"] = 50, 	["lane"] = 3, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true },
+	{ ["spawnTime"] = 52, 	["departureTime"] = 101, 	["lane"] = 4, 	["type"] = 3, 	["length"] = 100, 	["stays"] =  true, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 78, 	["departureTime"] = 81, 	["lane"] = 2, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 82, 	["departureTime"] = 93, 	["lane"] = 3, 	["type"] = 4, 	["length"] = 50, 	["stays"] = false, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 107, 	["departureTime"] = 110, 	["lane"] = 1, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 123, 	["departureTime"] = 155, 	["lane"] = 3, 	["type"] = 2, 	["length"] = 75, 	["stays"] =  true, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 163, 	["departureTime"] = 166, 	["lane"] = 1, 	["type"] = 1, 	["length"] = 100 , 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 163, 	["departureTime"] = 166, 	["lane"] = 4, 	["type"] = 1, 	["length"] = 100 , 	["stays"] = false, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 172, 	["departureTime"] = 220, 	["lane"] = 1, 	["type"] = 3, 	["length"] = 100, 	["stays"] =  true, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 187, 	["departureTime"] = 190, 	["lane"] = 2, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 198, 	["departureTime"] = 221, 	["lane"] = 4, 	["type"] = 2, 	["length"] = 100, 	["stays"] =  true, 	["leftToRight"] = true}, --departs when all adds are dead
+	{ ["spawnTime"] = 218, 	["departureTime"] = 222, 	["lane"] = 3, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 227, 	["departureTime"] = 231, 	["lane"] = 2, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 238, 	["departureTime"] = 241 , 	["lane"] = 1, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 252, 	["departureTime"] = 264, 	["lane"] = 2, 	["type"] = 4, 	["length"] = 50, 	["stays"] =  true, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 252, 	["departureTime"] = 298, 	["lane"] = 4, 	["type"] = 3, 	["length"] = 100, 	["stays"] =  true, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 273, 	["departureTime"] = 276, 	["lane"] = 1, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 279, 	["departureTime"] = 282, 	["lane"] = 3, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 308, 	["departureTime"] = 356, 	["lane"] = 1, 	["type"] = 3, 	["length"] = 100, 	["stays"] =  true, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 308, 	["departureTime"] = 356, 	["lane"] = 4, 	["type"] = 3, 	["length"] = 100, 	["stays"] =  true, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 318, 	["departureTime"] = 320, 	["lane"] = 2, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 343, 	["departureTime"] = 346, 	["lane"] = 2, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 373, 	["departureTime"] = 404, 	["lane"] = 2, 	["type"] = 2, 	["length"] = 75, 	["stays"] =  true, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 373, 	["departureTime"] = 384, 	["lane"] = 3, 	["type"] = 4, 	["length"] = 50, 	["stays"] =  true, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 388, 	["departureTime"] = 391, 	["lane"] = 4, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 408, 	["departureTime"] = 411, 	["lane"] = 1, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = false},
+	{ ["spawnTime"] = 418, 	["departureTime"] = 446, 	["lane"] = 1, 	["type"] = 3, 	["length"] = 100, 	["stays"] = true, 	["leftToRight"] = true},  -- does it depart? softenrage?
+	{ ["spawnTime"] = 418, 	["departureTime"] = 448, 	["lane"] = 4, 	["type"] = 2, 	["length"] = 75, 	["stays"] = true, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 433, 	["departureTime"] = 436, 	["lane"] = 2, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 444, 	["departureTime"] = 447, 	["lane"] = 3, 	["type"] = 1, 	["length"] = 100, 	["stays"] = false, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 457, 	["departureTime"] = 469, 	["lane"] = 2, 	["type"] = 4, 	["length"] = 50, 	["stays"] = false, 	["leftToRight"] = true},
+	{ ["spawnTime"] = 457, 	["departureTime"] = 469, 	["lane"] = 3, 	["type"] = 4, 	["length"] = 50, 	["stays"] = false, 	["leftToRight"] = false},
 }
-trainDataPerDifficulty[17] = trainDataPerDifficulty[15] -- TODO lfr may be the same as heroic
 
 local texTrainLength={
 	["l50"] = "Interface\\AddOns\\ThogarAssist\\Textures\\train_left_50.tga",
@@ -974,20 +1009,27 @@ end
 
 local function sendIconConfig()
 	if UnitIsGroupLeader("player") or UnitIsRaidOfficer("player") then
-		local text = addon:Serialize(ThogarAssist:GetLaneIcons(true))
-		addon:SendCommMessage("TA_Icons", text, "RAID")
+		local text = tconcat(ThogarAssist:GetLaneIcons(true))
+		SendAddonMessage("TA_Icons", text, "RAID")
 		print("|cffaa00ffThogar Assist:|r "..L["Config sent to raid"].." - "..L["Lane 1: %s, Lane 2: %s, Lane 3: %s, Lane 4: %s"]:format(raidIconsForChat[ThogarAssist:GetLaneIcon(1, true)], raidIconsForChat[ThogarAssist:GetLaneIcon(2, true)], raidIconsForChat[ThogarAssist:GetLaneIcon(3, true)], raidIconsForChat[ThogarAssist:GetLaneIcon(4, true)]))
 	else
 		print("|cffaa00ffThogar Assist:|r "..L["Sending raid icons requires leader or assist."])
 	end
 end
 
-local function recieveIconConfig(prefix, msg, chan, sender)
+function addon:CHAT_MSG_ADDON(event, prefix, msg, chan, sender)
 	if prefix ~= "TA_Icons" then return end
-	if sender == UnitName("player") then return end
+	if sender and Ambiguate(sender, "short") == UnitName("player") then return end
 
-	success, t = addon:Deserialize(msg)
-	if success then
+	local t = {}
+	for c in msg:gmatch("%d") do
+		c = tonumber(c)
+		if c and c >= 1 and c <= 8 then
+			table.insert(t,c)
+		end
+	end
+
+	if #t == 4 then
 		local popup_text = "Thogar Assist: "..L["Use icon config of %s"]:format(sender).."?\n"..L["Lane 1: %s, Lane 2: %s, Lane 3: %s, Lane 4: %s"]:format(raidIconsForChat[t[1]],raidIconsForChat[t[2]], raidIconsForChat[t[3]], raidIconsForChat[t[4]])
 		StaticPopupDialogs["TA_NewIconConfig"] = { text=popup_text, button1= YES, button2= NO, OnAccept = function(self) ThogarAssist:SetLaneIcons(t) end, timeout = 0, hideOnEscape = 1}
         StaticPopup_Show("TA_NewIconConfig")
@@ -1284,19 +1326,14 @@ local function OnEvent(self, event, ...)
 			self:UnregisterEvent("ADDON_LOADED")
 			LibStub("AceTimer-3.0"):Embed(addon)
 			LibStub("AceEvent-3.0"):Embed(addon)
-			LibStub("AceSerializer-3.0"):Embed(addon)
-			LibStub("AceComm-3.0"):Embed(addon)
-			addon:RegisterComm("TA_Icons", recieveIconConfig)
 			self.db = LibStub("AceDB-3.0"):New("ThogarAssistDB", defaults, true)
 			LibStub("AceConfig-3.0"):RegisterOptionsTable("Thogar Assist", options)
 			LibStub("AceConfigDialog-3.0"):AddToBlizOptions("Thogar Assist", "Thogar Assist")
 			addon.callbacks = LibStub("CallbackHandler-1.0"):New(addon)
-			SlashCmdList.ThogarAssist = slashCommand
-			SLASH_ThogarAssist1 = "/thogar"
-			SLASH_ThogarAssist2 = "/thogarassist"
-			SLASH_ThogarAssist3 = "/ta"
 			addon:RegisterEvent("ENCOUNTER_START")
 			addon:RegisterEvent("ENCOUNTER_END")
+			addon:RegisterEvent("CHAT_MSG_ADDON")
+			RegisterAddonMessagePrefix("TA_Icons")
 			media:Register("sound", "Double Ring", "Interface\\AddOns\\ThogarAssist\\Sounds\\double_ring.mp3")
 		end
 	end
@@ -1408,3 +1445,8 @@ function ThogarAssist:SetLaneIcons(t)
 	end
 end
 
+-- Load on Demand Stuff
+-- Add our new handlers
+SLASH_ThogarAssist1 = "/thogar"
+SLASH_ThogarAssist2 = "/thogarassist"
+SlashCmdList.ThogarAssist = slashCommand

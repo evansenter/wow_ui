@@ -679,16 +679,18 @@ local function _GetProfession1(character)
 	local profession = _GetProfession(character, character.Prof1)
 	if profession then
 		local rank, maxRank, spellID = _GetProfessionInfo(profession)
-		return rank, maxRank, spellID, character.Prof1
+		return rank or 0, maxRank or 0, spellID, character.Prof1
 	end
+	return 0, 0, nil, nil
 end
 
 local function _GetProfession2(character)
 	local profession = _GetProfession(character, character.Prof2)
 	if profession then
 		local rank, maxRank, spellID = _GetProfessionInfo(profession)
-		return rank, maxRank, spellID, character.Prof2
+		return rank or 0, maxRank or 0, spellID, character.Prof2
 	end
+	return 0, 0, nil, nil
 end
 
 local function _GetFirstAidRank(character)

@@ -392,6 +392,12 @@ local function ScanBag(bagID)
 	else						-- Bags 1 through 11
 		bag.icon = GetInventoryItemTexture("player", ContainerIDToInventoryID(bagID))
 		bag.link = GetInventoryItemLink("player", ContainerIDToInventoryID(bagID))
+		if bag.link then
+			local _, _, rarity = GetItemInfo(bag.link)
+			if rarity then	-- in case rarity was known from a previous scan, and GetItemInfo returns nil for some reason .. don't overwrite
+				bag.rarity = rarity
+			end
+		end
 	end
 	ScanContainer(bagID, BAGS)
 	ScanBagSlotsInfo()
@@ -589,6 +595,23 @@ local function _GetContainerSize(character, containerID)
 	return character.Containers[containerID].size
 end
 
+local rarityColors = {
+	[2] = "|cFF1EFF00",
+	[3] = "|cFF0070DD",
+	[4] = "|cFFA335EE"
+}
+
+local function _GetColoredContainerSize(character, containerID)
+	local bag = _GetContainer(character, containerID)
+	local size = _GetContainerSize(character, containerID)
+	
+	if bag.rarity and rarityColors[bag.rarity] then
+		return format("%s%s", rarityColors[bag.rarity], size)
+	end
+	
+	return format("%s%s", "|cFFFFFFFF", size)
+end
+
 local function _GetSlotInfo(bag, slotID)
 	assert(type(bag) == "table")		-- this is the pointer to a bag table, obtained through addon:GetContainer()
 	assert(type(slotID) == "number")
@@ -778,6 +801,7 @@ local PublicMethods = {
 	GetContainers = _GetContainers,
 	GetContainerInfo = _GetContainerInfo,
 	GetContainerSize = _GetContainerSize,
+	GetColoredContainerSize = _GetColoredContainerSize,
 	GetSlotInfo = _GetSlotInfo,
 	GetContainerCooldownInfo = _GetContainerCooldownInfo,
 	GetContainerItemCount = _GetContainerItemCount,
@@ -884,6 +908,7 @@ function addon:OnInitialize()
 	DataStore:SetCharacterBasedMethod("GetContainers")
 	DataStore:SetCharacterBasedMethod("GetContainerInfo")
 	DataStore:SetCharacterBasedMethod("GetContainerSize")
+	DataStore:SetCharacterBasedMethod("GetColoredContainerSize")
 	DataStore:SetCharacterBasedMethod("GetContainerItemCount")
 	DataStore:SetCharacterBasedMethod("GetNumBagSlots")
 	DataStore:SetCharacterBasedMethod("GetNumFreeBagSlots")

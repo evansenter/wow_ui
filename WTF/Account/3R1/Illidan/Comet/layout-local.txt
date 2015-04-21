@@ -24,7 +24,7 @@ Frame: DBMMinimapButton
 FrameLevel: 3
 Anchor: TOPRIGHT
 X: -164
-Y: -64
+Y: -62
 W: 32
 H: 32
 Frame: ScriptErrorsFrame
@@ -48,6 +48,13 @@ X: 1
 Y: 84
 W: 155
 H: 156
+Frame: Hansgar_And_Franzok_PlayerAssistBar
+FrameLevel: 1
+Anchor: TOP
+X: -9
+Y: -290
+W: 280
+H: 22
 Frame: PawnUIFrame
 FrameLevel: 19
 Anchor: CENTER

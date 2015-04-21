@@ -1,0 +1,17 @@
+tag v6.1.0-3
+8cc5e226310fba9443691286308c2f2b54e65121
+elvador <>
+2015-03-21 20:14:24 +0100
+
+Tagging as v6.1.0-3
+
+
+--------------------
+
+elvador:
+	- Nothing
+	- Fix LFR Split 1
+	- Update pkgmeta and embeds.xml to reflect lib changes
+	- Remove slash handler nilling - BigWigs does that now. Remove unneeded AceSerializer and AceComm.
+Elvador:
+	- Add load on demand for big wigs users

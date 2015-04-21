@@ -89,9 +89,16 @@ module.db.spellsCoins = {
 	[132185] = true,	-- T14x3x4
 }
 module.db.endCoinTimer = nil
-module.db.bonusLootChat = LOOT_ITEM_BONUS_ROLL
-module.db.bonusLootChatSelf = LOOT_ITEM_BONUS_ROLL_SELF
+module.db.bonusLootChat = nil
+module.db.bonusLootChatSelf = nil
 module.db.classNames = {"WARRIOR","PALADIN","HUNTER","ROGUE","PRIEST","DEATHKNIGHT","SHAMAN","MAGE","WARLOCK","MONK","DRUID"}
+
+local function deformat(str)
+	str = str:gsub("%.","%%.")
+	str = str:gsub("%%s","(.+)")
+	
+	return str
+end
 
 function module.main:ADDON_LOADED()
 	VExRT = _G.VExRT
@@ -100,21 +107,8 @@ function module.main:ADDON_LOADED()
 	
 	module:RegisterEvents('ENCOUNTER_END','ENCOUNTER_START')
 	
-	module.db.bonusLootChat = string.match(module.db.bonusLootChat,"([^:]+:)")
-	if ExRT.locale:find("^zh") then
-		module.db.bonusLootChat = string.gsub(module.db.bonusLootChat,'%%s','')
-	else
-		module.db.bonusLootChat = string.gsub(module.db.bonusLootChat,'%%s ','')
-	end
-	
-	if not module.db.bonusLootChat then
-		module.db.bonusLootChat = LOOT_ITEM_BONUS_ROLL
-	end
-	
-	module.db.bonusLootChatSelf = string.match(module.db.bonusLootChatSelf,"([^:]+:)")
-	if not module.db.bonusLootChatSelf then
-		module.db.bonusLootChatSelf = LOOT_ITEM_BONUS_ROLL_SELF
-	end
+	module.db.bonusLootChat = deformat(LOOT_ITEM_BONUS_ROLL)
+	module.db.bonusLootChatSelf = deformat(LOOT_ITEM_BONUS_ROLL_SELF)
 end
 
 do
@@ -136,10 +130,10 @@ end
 function module.main:CHAT_MSG_LOOT(msg, ...)
 	if msg:find(module.db.bonusLootChatSelf) then
 		local unitName = UnitName("player")
-		local itemID = string.match(msg,"|Hitem:(%d+)")
+		local itemID = msg:match("|Hitem:(%d+)")
 		local class = select(3,UnitClass("player"))
 		local affixes = ""
-		local affixesFind = string.match(msg,"item:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+(:[^|]+)|")
+		local affixesFind = msg:match("item:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+(:[^|]+)|")
 		if affixesFind then
 			affixes = affixesFind
 		end
@@ -147,15 +141,15 @@ function module.main:CHAT_MSG_LOOT(msg, ...)
 			VExRT.Coins.list[#VExRT.Coins.list + 1] = "!"..ExRT.mds.tohex(class or 0,1)..itemID..unitName..time()..affixes
 		end	
 	elseif msg:find(module.db.bonusLootChat) then
-		local unitName = string.match(msg,"^([^ ]+) ")
-		local itemID = string.match(msg,"|Hitem:(%d+)")
+		local unitName = msg:match(module.db.bonusLootChat)
+		local itemID = msg:match("|Hitem:(%d+)")
 		local class
 		if unitName and itemID then
 			if UnitName(unitName) then
 				class = select(3,UnitClass(unitName))
 			end
 			local affixes = ""
-			local affixesFind = string.match(msg,"item:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+(:[^|]+)|")
+			local affixesFind = msg:match("item:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+(:[^|]+)|")
 			if affixesFind then
 				affixes = affixesFind
 			end
@@ -239,7 +233,7 @@ function module.options:Load()
 				local classColor = ExRT.mds.classColor( module.db.classNames[ tonumber(unitClass,16) ] or "?")
 				historyBoxUpdateTable [#historyBoxUpdateTable + 1] = date("%d/%m/%y %H:%M:%S ",timestamp).."|c"..classColor..unitName.."|r: "..(spellName or "???")
 			else
-				unitClass,itemID,unitName,timestamp,affixes = string.match(VExRT.Coins.list[i],"^!(.)(%d+)([^0-9]+)(%d+)(:?.*)")
+				local unitClass,itemID,unitName,timestamp,affixes = string.match(VExRT.Coins.list[i],"^!(.)(%d+)([^0-9]+)(%d+)(:?.*)")
 				if itemID and unitClass and unitName and timestamp then
 					itemID = tonumber(itemID)
 					local itemName,_,itemQuality,_,itemReqLevel,_,_,_,_,itemTexture = GetItemInfo(itemID)
@@ -290,7 +284,7 @@ function module.options:Load()
 		end
 	end
 	
-	self.ScrollBar = ExRT.lib.CreateScrollBar2(self,16,530,600,-30,1,1,"TOPLEFT")
+	self.ScrollBar = ExRT.lib.CreateScrollBar(self,16,530,600,-30,1,1,"TOPLEFT")
 	self.ScrollBar:SetScript("OnValueChanged",function (self,val)
 		val = ExRT.mds.Round(val)
 		historyBoxUpdate(val)

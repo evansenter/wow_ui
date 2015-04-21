@@ -11,6 +11,7 @@ _G[addonName] = LibStub("AceAddon-3.0"):NewAddon(addonName, "AceConsole-3.0", "A
 local addon = _G[addonName]
 
 local THIS_ACCOUNT = "Default"
+local MAX_LOGOUT_TIMESTAMP = 5000000000	-- 5 billion, current values are at ~1.4 billion, in seconds, that leaves us 110+ years, I think we're covered..
 
 local AddonDB_Defaults = {
 	global = {
@@ -109,7 +110,7 @@ local function OnPlayerAlive()
 	character.class, character.englishClass = UnitClass("player")
 	character.gender = UnitSex("player")
 	character.faction = UnitFactionGroup("player")
-	character.lastLogoutTimestamp = 0
+	character.lastLogoutTimestamp = MAX_LOGOUT_TIMESTAMP
 	character.lastUpdate = time()
 	
 	OnPlayerMoney()
@@ -237,15 +238,22 @@ local function _GetRestXPRate(character)
 		-- divide rest xp by this value	20400 / 204 = 100	==> rest xp rate
 	
 	local rate = 0
+	local multiplier = 1.5
+	
+	if character.englishRace == "Pandaren" then
+		multiplier = 3
+	end
+	
 	if character.RestXP then
-		rate = (character.RestXP / ((character.XPMax / 100) * 1.5))
+		rate = (character.RestXP / ((character.XPMax / 100) * multiplier))
 	end
 	
 	-- get the known rate of rest xp (the one saved at last logout) + the rate represented by the elapsed time since last logout
 	-- (elapsed time / 3600) * 0.625 * (2/3)  simplifies to elapsed time / 8640
 	-- 0.625 comes from 8 hours rested = 5% of a level, *2/3 because 100% rested = 150% of xp (1.5 level)
 
-	if character.lastLogoutTimestamp ~= 0 then		-- time since last logout, 0 for current char, <> for all others
+	-- time since last logout, MAX_LOGOUT_TIMESTAMP for current char, <> for all others
+	if character.lastLogoutTimestamp ~= MAX_LOGOUT_TIMESTAMP then	
 		if character.isResting then
 			rate = rate + ((time() - character.lastLogoutTimestamp) / 8640)
 		else

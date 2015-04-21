@@ -945,8 +945,9 @@ local function GetOptionsTable_CustomText(updateFunc, groupName, numUnits, order
 			if not E.db.unitframe.units[groupName].customTexts then
 				E.db.unitframe.units[groupName].customTexts = {};
 			end
-
-			if E.db.unitframe.units[groupName].customTexts[textName] or (_G[groupName] and _G[groupName][textName] or _G[groupName.."Group1UnitButton1"] and _G[groupName.."Group1UnitButton1"][textName]) then
+			
+			local frameName = "ElvUF_"..E:StringTitle(groupName)
+			if E.db.unitframe.units[groupName].customTexts[textName] or (_G[frameName] and _G[frameName][textName] or _G[frameName.."Group1UnitButton1"] and _G[frameName.."Group1UnitButton1"][textName]) then
 				E:Print(L["The name you have selected is already in use by another element."])
 				return;
 			end
@@ -1197,7 +1198,7 @@ local function GetOptionsTable_Power(hasDetatchOption, updateFunc, groupName, nu
 				type = 'range',
 				name = L["Height"],
 				order = 2,
-				min = 3, max = 50, step = 1,
+				min = 1, max = 50, step = 1,
 			},
 			offset = {
 				type = 'range',
@@ -1457,20 +1458,60 @@ E.Options.args.unitframe = {
 			disabled = function() return not E.private.unitframe.enable end,
 			set = function(info, value) E.db.unitframe[ info[#info] ] = value; UF:Update_AllFrames() end,
 			args = {
-				generalGroup = {
+				disabledBlizzardFrames = {
 					order = 1,
+					type = "group",
+					guiInline = true,
+					name = L["Disabled Blizzard Frames"],
+					get = function(info) return E.private.unitframe.disabledBlizzardFrames[ info[#info] ] end,
+					set = function(info, value) E.private["unitframe"].disabledBlizzardFrames[ info[#info] ] = value; E:StaticPopup_Show("PRIVATE_RL") end,
+					args = {
+						player = {
+							order = 1,
+							type = 'toggle',
+							name = L["Player Frame"],
+							desc = L["Disables the player and pet unitframes."],
+						},
+						target = {
+							order = 2,
+							type = 'toggle',
+							name = L["Target Frame"],
+							desc = L["Disables the target and target of target unitframes."],
+						},
+						focus = {
+							order = 3,
+							type = 'toggle',
+							name = L["Focus Frame"],
+							desc = L["Disables the focus and target of focus unitframes."],
+						},
+						boss = {
+							order = 4,
+							type = 'toggle',
+							name = L["Boss Frames"],
+						},
+						arena = {
+							order = 5,
+							type = 'toggle',
+							name = L["Arena Frames"],
+						},
+						party = {
+							order = 6,
+							type = 'toggle',
+							name = L["Party Frames"],
+						},
+						raid = {
+							order = 7,
+							type = 'toggle',
+							name = L["Raid Frames"],
+						},
+					},
+				},
+				generalGroup = {
+					order = 2,
 					type = 'group',
 					guiInline = true,
 					name = L["General"],
 					args = {
-						disableBlizzard = {
-							order = 1,
-							name = L["Disable Blizzard"],
-							desc = L["Disables the blizzard party/raid frames."],
-							type = 'toggle',
-							get = function(info) return E.private.unitframe[ info[#info] ] end,
-							set = function(info, value) E.private["unitframe"][ info[#info] ] = value; E:StaticPopup_Show("PRIVATE_RL") end
-						},
 						OORAlpha = {
 							order = 2,
 							name = L["OOR Alpha"],
@@ -1500,7 +1541,7 @@ E.Options.args.unitframe = {
 					},
 				},
 				barGroup = {
-					order = 2,
+					order = 3,
 					type = 'group',
 					guiInline = true,
 					name = L["Bars"],
@@ -1523,7 +1564,7 @@ E.Options.args.unitframe = {
 					},
 				},
 				fontGroup = {
-					order = 3,
+					order = 4,
 					type = 'group',
 					guiInline = true,
 					name = L["Fonts"],
@@ -1561,7 +1602,7 @@ E.Options.args.unitframe = {
 					},
 				},
 				allColorsGroup = {
-					order = 4,
+					order = 5,
 					type = 'group',
 					guiInline = true,
 					name = L["Colors"],
@@ -1750,7 +1791,7 @@ E.Options.args.unitframe = {
 							},
 						},
 						castBars = {
-							order = 9,
+							order = 10,
 							type = 'group',
 							guiInline = true,
 							name = L["Castbar"],
@@ -1795,7 +1836,7 @@ E.Options.args.unitframe = {
 							},
 						},
 						auraBars = {
-							order = 9,
+							order = 11,
 							type = 'group',
 							guiInline = true,
 							name = L["Aura Bars"],
@@ -1878,7 +1919,7 @@ E.Options.args.unitframe = {
 							},
 						},
 						healPrediction = {
-							order = 10,
+							order = 12,
 							name = L["Heal Prediction"],
 							type = 'group',
 							get = function(info)
@@ -2744,6 +2785,7 @@ E.Options.args.unitframe.args.pet = {
 		name = GetOptionsTable_Name(UF.CreateAndUpdateUF, 'pet'),
 		buffs = GetOptionsTable_Auras(true, 'buffs', false, UF.CreateAndUpdateUF, 'pet'),
 		debuffs = GetOptionsTable_Auras(true, 'debuffs', false, UF.CreateAndUpdateUF, 'pet'),
+		castbar = GetOptionsTable_Castbar(false, UF.CreateAndUpdateUF, 'pet'),
 	},
 }
 

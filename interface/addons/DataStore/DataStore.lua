@@ -35,7 +35,7 @@ local currentCharacterKey
 local currentGuildKey
 
 -- Message types
-local MSG_ANNOUNCELOGIN				= 1	-- broacast at login
+local MSG_ANNOUNCELOGIN				= 1	-- broadcast at login
 local MSG_LOGINREPLY					= 2	-- reply to MSG_ANNOUNCELOGIN
 
 local AddonDB_Defaults = {
@@ -174,6 +174,10 @@ local function OnPlayerGuildUpdate()
 		
 		if currentGuildName and not realmName then	-- ONLY save the guild key if the realm is nil (= current realm)
 			local guildKey = GetKey(currentGuildName)
+			if not Guilds[guildKey] then
+				Guilds[guildKey] = {}
+			end
+
 			Guilds[guildKey].faction = UnitFactionGroup("player")
 			
 			-- the first time a valid value is found, broadcast to guild, it must happen here for a standard login, but won't work here after a reloadui since this event is not triggered

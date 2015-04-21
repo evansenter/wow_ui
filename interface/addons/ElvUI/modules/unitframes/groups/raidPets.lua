@@ -40,11 +40,10 @@ end
 --I don't know if this function is needed or not? But the error I pm'ed you about was because of the missing OnEvent so I just added it.
 function UF:RaidPetsSmartVisibility(event)
 	if not self.db or (self.db and not self.db.enable) or (UF.db and not UF.db.smartRaidFilter) or self.isForced then return; end
-	local inInstance, instanceType = IsInInstance()
-	local _, _, _, _, maxPlayers, _, _ = GetInstanceInfo()
 	if event == "PLAYER_REGEN_ENABLED" then self:UnregisterEvent("PLAYER_REGEN_ENABLED") end
 
 	if not InCombatLockdown() then
+		local inInstance, instanceType = IsInInstance()
 		if inInstance and instanceType == "raid" then
 			UnregisterStateDriver(self, "visibility")
 			self:Show()
@@ -67,7 +66,7 @@ function UF:Update_RaidpetHeader(header, db)
 		headerHolder:ClearAllPoints()
 		headerHolder:Point("BOTTOMLEFT", E.UIParent, "BOTTOMLEFT", 4, 574)
 
-		E:CreateMover(headerHolder, headerHolder:GetName()..'Mover', L["Raid Pet Frames"], nil, nil, nil, 'ALL,RAID10,RAID25,RAID40')
+		E:CreateMover(headerHolder, headerHolder:GetName()..'Mover', L["Raid Pet Frames"], nil, nil, nil, 'ALL,RAID')
 		headerHolder.positioned = true;
 
 		headerHolder:RegisterEvent("PLAYER_ENTERING_WORLD")

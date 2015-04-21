@@ -6,15 +6,17 @@ ExRT.L = setmetatable({}, {__index=function (t, k)
 	return localization[k] or k
 end})
 
---deDE
---enGB
---enUS
---esES
---esMX
---frFR
---itIT
---koKR
---ptBR
---ruRU
---zhCN
---zhTW
+--[[
+deDE
+enGB
+enUS
+esES
+esMX
+frFR
+itIT
+koKR
+ptBR
+ruRU
+zhCN
+zhTW
+]]

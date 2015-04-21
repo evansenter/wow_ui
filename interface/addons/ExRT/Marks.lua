@@ -1,8 +1,11 @@
 local GlobalAddonName, ExRT = ...
 
+local UnitName, GetRaidTargetIndex, SetRaidTargetIcon = UnitName, GetRaidTargetIndex, SetRaidTargetIcon
+
 local VExRT = nil
 
 local module = ExRT.mod:New("Marks",ExRT.L.Marks,nil,true)
+
 
 function module.main:ADDON_LOADED()
 	VExRT = _G.VExRT
@@ -54,6 +57,8 @@ end
 
 
 function module.options:Load()
+	self:CreateTilte()
+
 	local function MarksEditBoxTextChanged(self,isUser)
 		if not isUser then
 			return
@@ -68,7 +73,7 @@ function module.options:Load()
 
 	self.namesEditBox = {}
 	for i=1,8 do
-		self.namesEditBox[i] = ExRT.lib.CreateEditBox(self,550,24,nil,45,-45-(i-1)*24,nil,nil,nil,true,VExRT.Marks.list[i])
+		self.namesEditBox[i] = ExRT.lib.CreateEditBox(self,550,24,nil,45,-65-(i-1)*24,nil,nil,nil,true,VExRT.Marks.list[i])
 		self.namesEditBox[i]._i = i
 		self.namesEditBox[i]:SetScript("OnTextChanged",MarksEditBoxTextChanged)
 		
@@ -76,7 +81,7 @@ function module.options:Load()
 		ExRT.lib.SetPoint(self.namesEditBox[i].icon,"RIGHT",self.namesEditBox[i],"LEFT",-5,0)
 	end
 
-	self.showButton = ExRT.lib.CreateButton(self,550,22,"TOP",0,-15,ExRT.L.senable,nil,ExRT.L.MarksTooltip)
+	self.showButton = ExRT.lib.CreateButton(self,550,22,"TOP",0,-35,ExRT.L.senable,nil,ExRT.L.MarksTooltip)
 	self.showButton:SetScript("OnClick",function (self)
 		if not module.Enabled then
 			self:SetText(ExRT.L.MarksDisable)
@@ -97,7 +102,7 @@ function module.options:Load()
 		end
 	end)
 	
-	self.showButton = ExRT.lib.CreateButton(self,550,22,"TOP",0,-250,ExRT.L.MarksClear)
+	self.showButton = ExRT.lib.CreateButton(self,550,22,"TOP",0,-270,ExRT.L.MarksClear)
 	self.showButton:SetScript("OnClick",function ()
 		module:ClearNames()
 		for i=1,8 do

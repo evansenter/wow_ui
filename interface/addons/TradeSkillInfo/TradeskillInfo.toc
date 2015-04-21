@@ -6,15 +6,15 @@
 ## Notes-esES: Informarcion Completa de las Habilidades de Comercio
 ## Notes-koKR: 전문기술 정보의 모든 것!
 ## Author: Ethan Centaurai
-## Version: v2.3.5
-## OptionalDeps: LibStub, CallbackHandler-1.0, Ace3, LibBabble-Zone-3.0, LibBabble-Faction-3.0, Auc-Advanced
+## Version: v2.3.6
+## OptionalDeps: LibStub, CallbackHandler-1.0, Ace3, LibBabble-SubZone-3.0, LibBabble-Faction-3.0, Auc-Advanced
 ## SavedVariables: TradeSkillInfoDB
 ## LoadManagers: AddonLoader
 ## X-LoadOn-Always: delayed
 ## X-Credits: Dys, wmrojer, Evenue, Fieroivan, Viruscamp, CMTitan
 ## X-Icon: Interface\Icons\INV_Elemental_SpiritOfHarmony_2
 ## X-Category: Professions
-## X-Curse-Packaged-Version: v2.3.5
+## X-Curse-Packaged-Version: v2.3.6
 ## X-Curse-Project-Name: TradeSkillInfo
 ## X-Curse-Project-ID: tradeskill-info
 ## X-Curse-Repository-ID: wow/tradeskill-info/mainline
@@ -33,7 +33,7 @@ Libs\AceConsole-3.0\AceConsole-3.0.lua
 Libs\AceConfig-3.0\AceConfig-3.0.xml
 Libs\AceTimer-3.0\AceTimer-3.0.lua
 Libs\LibBabble-Faction-3.0\lib.xml
-Libs\LibBabble-Zone-3.0\lib.xml
+Libs\LibBabble-SubZone-3.0\lib.xml
 Libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
 #@end-no-lib-strip@
 

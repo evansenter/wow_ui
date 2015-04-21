@@ -424,9 +424,6 @@ function arrowFrame:LoadPosition(...)
 	frame:SetPoint(...)
 end
 
-AF = frame
-AF.P = AF.GetPoint
-
 --- Other func
 
 local buffFilter = {"HARMFUL","HELPFUL"}
@@ -486,7 +483,7 @@ end
 
 function module:slash(arg)
 	if arg:find("^arrow ") then
-		local x,y = arg:match("([0-9%.]+) ([0-9%.]+)")
+		local x,y = arg:match("([0-9%.]+),? ([0-9%.]+)")
 		if not x or not y then
 			return
 		end
@@ -509,9 +506,12 @@ function module:slash(arg)
 			print('Unit doesnt exist')
 			return
 		end
-		local x,y = mapPositionToCoords(GetPlayerMapPosition(unit))
-		local xP,yP = mapPositionToCoords(GetPlayerMapPosition("player"))
-		if (x == 0 and y == 0) or (xP == 0 or yP == 0) then
+		--local x,y = mapPositionToCoords(GetPlayerMapPosition(unit))
+		--local xP,yP = mapPositionToCoords(GetPlayerMapPosition("player"))
+		local y,x = UnitPosition(unit)
+		local yP,xP = UnitPosition("player")
+		--if (x == 0 and y == 0) or (xP == 0 or yP == 0) then
+		if not x or not xP then
 			print('Map error')
 			return
 		end
@@ -554,10 +554,12 @@ end
 
 
 function module.options:Load()
-	self.shtml1 = ExRT.lib.CreateText(self,605,200,nil,10,-15,nil,"TOP",nil,13,ExRT.L.ArrowTextLeft)
-	self.shtml2 = ExRT.lib.CreateText(self,505,200,nil,170,-15,nil,"TOP",nil,13,ExRT.L.ArrowTextRight,nil,1,1,1)
+	self:CreateTilte()
+
+	self.shtml1 = ExRT.lib.CreateText(self,605,200,nil,10,-35,nil,"TOP",nil,13,ExRT.L.ArrowTextLeft)
+	self.shtml2 = ExRT.lib.CreateText(self,505,200,nil,170,-35,nil,"TOP",nil,13,ExRT.L.ArrowTextRight,nil,1,1,1)
 	
-	self.ButtonSetPos = ExRT.lib.CreateButton(self,255,22,nil,10,-160,ExRT.L.ArrowSetPoint)
+	self.ButtonSetPos = ExRT.lib.CreateButton(self,255,22,nil,10,-180,ExRT.L.ArrowSetPoint)
 	self.ButtonSetPos:SetScript("OnClick",function()
 		if frame:IsShown() then
 			frame:Hide()
@@ -567,7 +569,7 @@ function module.options:Load()
 		end
 	end) 
 	
-	self.ButtonToCenter = ExRT.lib.CreateButton(self,255,22,nil,10,-185,ExRT.L.ArrowResetPos)
+	self.ButtonToCenter = ExRT.lib.CreateButton(self,255,22,nil,10,-205,ExRT.L.ArrowResetPos)
 	self.ButtonToCenter:SetScript("OnClick",function()
 		VExRT.Arrow.PointX = nil
 		VExRT.Arrow.PointY = nil
@@ -579,7 +581,7 @@ function module.options:Load()
 	end) 
 	
 	
-	self.chkFix = ExRT.lib.CreateCheckBox(self,nil,10,-210,ExRT.L.ArrowFixate,VExRT.Arrow.Fix)
+	self.chkFix = ExRT.lib.CreateCheckBox(self,nil,10,-230,ExRT.L.ArrowFixate,VExRT.Arrow.Fix)
 	self.chkFix:SetScript("OnClick", function(self,event) 
 		if self:GetChecked() then
 			VExRT.Arrow.Fix = true
@@ -590,7 +592,7 @@ function module.options:Load()
 		end
 	end)
 	
-	self.SliderScale = ExRT.lib.CreateSlider(self,550,15,0,-250,5,200,ExRT.L.ArrowScale,VExRT.Arrow.Scale or 100,"TOP")
+	self.SliderScale = ExRT.lib.CreateSlider(self,550,15,0,-270,5,200,ExRT.L.ArrowScale,VExRT.Arrow.Scale or 100,"TOP")
 	self.SliderScale:SetScript("OnValueChanged", function(self,event) 
 		event = event - event%1
 		VExRT.Arrow.Scale = event
@@ -600,7 +602,7 @@ function module.options:Load()
 	end)
 	
 	
-	self.SliderAlpha = ExRT.lib.CreateSlider(self,550,15,0,-285,0,100,ExRT.L.ArrowAlpha,VExRT.Arrow.Alpha or 100,"TOP")
+	self.SliderAlpha = ExRT.lib.CreateSlider(self,550,15,0,-305,0,100,ExRT.L.ArrowAlpha,VExRT.Arrow.Alpha or 100,"TOP")
 	self.SliderAlpha:SetScript("OnValueChanged", function(self,event) 
 		event = event - event%1
 		VExRT.Arrow.Alpha = event

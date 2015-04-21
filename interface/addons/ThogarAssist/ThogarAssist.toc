@@ -5,7 +5,10 @@
 ## Author: Elvador
 ## SavedVariables: ThogarAssistDB
 ## OptionalDeps: Ace3
-## X-Curse-Packaged-Version: v6.1.0-1
+## LoadManagers: BigWigs
+## X-BigWigs-LoadOn-Slash: /thogar, /thogarassist
+## X-BigWigs-LoadOn-ZoneId: 988
+## X-Curse-Packaged-Version: v6.1.0-3
 ## X-Curse-Project-Name: Thogar Assist
 ## X-Curse-Project-ID: thogar-assist
 ## X-Curse-Repository-ID: wow/thogar-assist/mainline

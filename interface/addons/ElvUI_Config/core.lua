@@ -87,8 +87,9 @@ E.Options.args.general = {
 					values = {
 						['NONE'] = NONE,
 						['SAY'] = SAY,
-						['PARTY'] = PARTY,
-						['RAID'] = RAID,
+						['PARTY'] = L["Party Only"],
+						['RAID'] = L["Party / Raid"],
+						['RAID_ONLY'] = L["Raid Only"],
 					},
 				},
 				autoRepair = {
@@ -671,6 +672,48 @@ E.Options.args.general = {
 									type = 'range',
 									name = L["Scale"],
 									min = 0.5, max = 2, step = 0.05,
+								},
+								position = {
+									order = 2,
+									type = 'select',
+									name = L["Position"],
+									values = {
+										["LEFT"] = L["Left"],
+										["RIGHT"] = L["Right"],
+										["TOP"] = L["Top"],
+										["BOTTOM"] = L["Bottom"],
+										["TOPLEFT"] = L["Top Left"],
+										["TOPRIGHT"] = L["Top Right"],
+										["BOTTOMLEFT"] = L["Bottom Left"],
+										["BOTTOMRIGHT"] = L["Bottom Right"],
+									},
+								},
+								xOffset = {
+									order = 3,
+									type = 'range',
+									name = L["xOffset"],
+									min = -50, max = 50, step = 1,
+								},
+								yOffset = {
+									order = 4,
+									type = 'range',
+									name = L["yOffset"],
+									min = -50, max = 50, step = 1,
+								},
+							},
+						},
+						vehicleLeave = {
+							order = 5,
+							type = 'group',
+							name = LEAVE_VEHICLE,
+							get = function(info) return E.db.general.minimap.icons.vehicleLeave[ info[#info] ] end,
+							set = function(info, value) E.db.general.minimap.icons.vehicleLeave[ info[#info] ] = value; E:GetModule('ActionBars'):UpdateVehicleLeave() end,
+							args = {
+								size = {
+									order = 1,
+									type = 'range',
+									name = L["Size"],
+									min = 10, max = 40, step = 1,
 								},
 								position = {
 									order = 2,

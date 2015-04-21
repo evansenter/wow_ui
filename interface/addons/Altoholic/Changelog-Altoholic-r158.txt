@@ -1,0 +1,59 @@
+------------------------------------------------------------------------
+r158 | thaoky | 2015-04-11 17:35:51 +0000 (Sat, 11 Apr 2015) | 1 line
+Changed paths:
+   M /trunk/Core.lua
+   M /trunk/Frames/TabOptions.lua
+   M /trunk/Frames/TabOptions.xml
+   M /trunk/Locales/repoenUS.lua
+   M /trunk/Modules/Altoholic_Search/Search.lua
+   M /trunk/Modules/Altoholic_Summary/AccountSummary.lua
+   M /trunk/Tooltip.lua
+   M /trunk/changelog.txt
+
+6.1.004 Commit
+------------------------------------------------------------------------
+r157 | thaoky | 2015-04-07 17:16:23 +0000 (Tue, 07 Apr 2015) | 1 line
+Changed paths:
+   M /trunk/Core.lua
+   M /trunk/Modules/Altoholic_Grids/Grid_Dungeons.lua
+   M /trunk/Modules/Altoholic_Summary/AccountSummary.lua
+   M /trunk/changelog.txt
+
+6.1.003 Commit
+------------------------------------------------------------------------
+r156 | thaoky | 2015-04-06 15:50:21 +0000 (Mon, 06 Apr 2015) | 1 line
+Changed paths:
+   M /trunk/Altoholic.lua
+   M /trunk/Altoholic.xml
+   M /trunk/AltoholicTemplates.xml
+   M /trunk/Comm.lua
+   M /trunk/Core.lua
+   M /trunk/Events.lua
+   M /trunk/Modules/Altoholic_Characters/TabCharacters.lua
+   M /trunk/Modules/Altoholic_Grids/Grids.xml
+   M /trunk/Modules/Altoholic_Summary/AccountSummary.lua
+   M /trunk/Modules/Altoholic_Summary/AccountSummary.xml
+   D /trunk/Modules/Altoholic_Summary/Activity.lua
+   D /trunk/Modules/Altoholic_Summary/Activity.xml
+   M /trunk/Modules/Altoholic_Summary/Altoholic_Summary.toc
+   D /trunk/Modules/Altoholic_Summary/BagUsage.lua
+   D /trunk/Modules/Altoholic_Summary/BagUsage.xml
+   M /trunk/Modules/Altoholic_Summary/Characters.lua
+   D /trunk/Modules/Altoholic_Summary/Currencies.lua
+   D /trunk/Modules/Altoholic_Summary/Currencies.xml
+   D /trunk/Modules/Altoholic_Summary/GarrisonFollowers.lua
+   D /trunk/Modules/Altoholic_Summary/GarrisonFollowers.xml
+   D /trunk/Modules/Altoholic_Summary/Skills.lua
+   D /trunk/Modules/Altoholic_Summary/Skills.xml
+   M /trunk/Modules/Altoholic_Summary/TabSummary.lua
+   M /trunk/Modules/Altoholic_Summary/TabSummary.xml
+   M /trunk/changelog.txt
+
+6.1.002 Commit
+------------------------------------------------------------------------
+r155 | thaoky | 2015-02-25 19:27:38 +0000 (Wed, 25 Feb 2015) | 1 line
+Changed paths:
+   M /trunk/Modules/Altoholic_Characters/Frames/Garrisons.lua
+
+Fixed a Lua error in the garrison missions' frame.
+------------------------------------------------------------------------

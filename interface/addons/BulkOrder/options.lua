@@ -68,7 +68,7 @@ function BulkOrder_CreateOptions ()
     else
         g_BulkOrder = g_BulkOrder or {}
         
-        for _,v in ipairs({string.split (' ', 'ExcludeTradingPost ExcludeWarMill ExcludeGoblinWorkshop RemindProfBuildings RemindWarMill RemindLumberMill RemindTradingPost RemindBarn RemindGoblinWorkshop RemindGladiatorSanctum RemindMine RemindHerbGarden RemindGathering')}) do
+        for _,v in ipairs({string.split (' ', 'ExcludeTradingPost ExcludeWarMill ExcludeGoblinWorkshop ExcludeBarn RemindProfBuildings RemindWarMill RemindLumberMill RemindTradingPost RemindBarn RemindGoblinWorkshop RemindGladiatorSanctum RemindSpiritLodge RemindMine RemindHerbGarden RemindGathering')}) do
             if g_BulkOrder[v]==nil then 
                 g_BulkOrder[v] = true 
             end
@@ -119,19 +119,24 @@ function BulkOrder_CreateOptions ()
     Options.TitleExclude = TitleExclude
     
     local dy = 2
-    Options.chkTradingPost = Options:CreateCheckBox (TitleExclude, 0, -5, 'Trading Post')
-        :Bind ('ExcludeTradingPost', false, true)
-        :SetTooltip ('Exclude Trading Post', 'If this option is checked, BulkOrder will NOT automatically start work orders in the Trading Post.')
-    
-    Options.chkWarMill = Options:CreateCheckBox (Options.chkTradingPost, 0, dy, 'Dwarven Bunker/ War Mill')
+
+    Options.chkWarMill = Options:CreateCheckBox (TitleExclude, 0, -5, 'Dwarven Bunker/ War Mill')
         :Bind ('ExcludeWarMill', false, true)
         :SetTooltip ('Exclude Dwarven Bunker/ War Mill', 'If this option is checked, BulkOrder will NOT automatically start work orders in the Dwarven Bunker/ War Mill.')
     
-    Options.chkGoblinWorkshop = Options:CreateCheckBox (Options.chkWarMill, 0, dy, 'Gnomish Gearworks/ Goblin Workshop')
+    Options.chkTradingPost = Options:CreateCheckBox (Options.chkWarMill, 0, dy, 'Trading Post')
+        :Bind ('ExcludeTradingPost', false, true)
+        :SetTooltip ('Exclude Trading Post', 'If this option is checked, BulkOrder will NOT automatically start work orders in the Trading Post.')
+    
+    Options.chkGoblinWorkshop = Options:CreateCheckBox (TitleExclude, 250, -5, 'Gnomish Gearworks/ Goblin Workshop')
         :Bind ('ExcludeGoblinWorkshop', false, true)
         :SetTooltip ('Exclude Gnomish Gearworks/ Goblin Workshop', 'If this option is checked, BulkOrder will NOT automatically start work orders in the Gnomish Gearworks/ Goblin Workshop.')
     
-    Options.chkEverything = Options:CreateCheckBox (Options.chkGoblinWorkshop, 0, dy, 'EVERYTHING!')
+    Options.chkBarn = Options:CreateCheckBox (Options.chkGoblinWorkshop, 0, dy, 'Barn')
+        :Bind ('ExcludeBarn', false, true)
+        :SetTooltip ('Exclude Barn', 'If this option is checked, BulkOrder will NOT automatically start work orders in the Barn.')
+    
+    Options.chkEverything = Options:CreateCheckBox (Options.chkTradingPost, 0, dy, 'EVERYTHING!')
         :Bind ('ExcludeEverything', false, true)
         :SetTooltip ('Exclude Everything!', 'If this option is checked, BulkOrder will NOT automatically start work orders in any buildings, ever.\nYou will have to manually press the Start All Work Orders button like some sort of cave man.')
     
@@ -149,7 +154,7 @@ function BulkOrder_CreateOptions ()
     TitleReminder:SetText ('Remind me about:')
     Options.TitleReminder = TitleReminder
     
-    dy = -3
+    --dy = -3
     
     Options.chkRemindProfBuildings = Options:CreateCheckBox (TitleReminder, 0, dy, 'Profession Buildings')
         :Bind ('RemindProfBuildings', false, true)
@@ -179,7 +184,11 @@ function BulkOrder_CreateOptions ()
         :Bind ('RemindWorkshop', false, true)
         :SetTooltip ('Gnomish Gearworks/ Goblin Workshop', 'If this option is checked, BulkOrder will remind you to start work orders in your Gnomish Gearworks/ Goblin Workshop.')
     
-    Options.chkRemindMine = Options:CreateCheckBox (Options.chkRemindGoblinWorkshop, 0, dy, 'Mine')
+    Options.chkRemindSpiritLodge = Options:CreateCheckBox (Options.chkRemindGoblinWorkshop, 0, dy, 'Mage Tower/ Spirit Lodge')
+        :Bind ('RemindSpiritLodge', false, true)
+        :SetTooltip ('Mage Tower/ Spirit Lodge', 'If this option is checked, BulkOrder will remind you to start work orders in your Mage Tower/ Spirit Lodge.')
+    
+    Options.chkRemindMine = Options:CreateCheckBox (Options.chkRemindSpiritLodge, 0, dy, 'Mine')
         :Bind ('RemindMine', false, true)
         :SetTooltip ('Mine', 'If this option is checked, BulkOrder will remind you to start work orders in your mine.')
     
@@ -187,7 +196,8 @@ function BulkOrder_CreateOptions ()
         :Bind ('RemindHerbGarden', false, true)
         :SetTooltip ('Herb Garden', 'If this option is checked, BulkOrder will remind you to start work orders in your herb garden.')
     
-    Options.chkRemindGathering = Options:CreateCheckBox (Options.chkRemindHerbGarden, 0, dy, 'Gathering')
+    
+    Options.chkRemindGathering = Options:CreateCheckBox (Options.chkRemindGladiatorSanctum, 0, dy, 'Gathering')
         :Bind ('RemindGathering', false, true)
         :SetTooltip ('Gathering', 'If this option is checked, BulkOrder will remind you every day to do your mining/ herbing.')
     

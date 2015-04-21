@@ -894,31 +894,6 @@ local PawnGemData85Epic =
 
 
 --========================================
--- Level 85 rare-quality cogwheels
---========================================
-local PawnCogwheelData85Rare =
-{
-
-
-------------------------------------------------------------
--- Cogwheels
-------------------------------------------------------------
-
-{ 59477, false, false, false, "DodgeRating", 42 }, -- Subtle Cogwheel
-{ 59478, false, false, false, "CritRating", 42 }, -- Smooth Cogwheel
-{ 59479, false, false, false, "HasteRating", 42 }, -- Quick Cogwheel
-{ 59480, false, false, false, "MasteryRating", 42 }, -- Fractured Cogwheel
-{ 59489, false, false, false, "HasteRating", 42 }, -- Precise Cogwheel
-{ 59491, false, false, false, "ParryRating", 42 }, -- Flashing Cogwheel
-{ 59493, false, false, false, "CritRating", 42 }, -- Rigid Cogwheel
-{ 59496, false, false, false, "Spirit", 42 }, -- Sparkling Cogwheel
-{ 68660, false, false, false, "ResilienceRating", 42 }, -- Mystic Cogwheel
-
-
-}
-
-
---========================================
 -- Level 85 crafted meta gems
 --========================================
 local PawnMetaGemData85Rare =
@@ -1172,49 +1147,6 @@ local PawnGemData90Rare =
 
 
 --========================================
--- Level 90 rare-quality cogwheels
---========================================
-local PawnCogwheelData90Rare =
-{
-
-
-------------------------------------------------------------
--- Cogwheels
-------------------------------------------------------------
-
-{ 77540, false, false, false, "DodgeRating", 38 }, -- Subtle Tinker's Gear
-{ 77541, false, false, false, "CritRating", 38 }, -- Smooth Tinker's Gear
-{ 77542, false, false, false, "HasteRating", 38 }, -- Quick Tinker's Gear
-{ 77543, false, false, false, "ExpertiseRating", 38 }, -- Precise Tinker's Gear
-{ 77544, false, false, false, "ParryRating", 38 }, -- Flashing Tinker's Gear
-{ 77545, false, false, false, "HitRating", 38 }, -- Rigid Tinker's Gear
-{ 77546, false, false, false, "Spirit", 38 }, -- Sparkling Tinker's Gear
-{ 77547, false, false, false, "MasteryRating", 38 }, -- Fractured Tinker's Gear
-
-
-}
-
-
---========================================
--- Level 90 legendary-quality crystals of fear
---========================================
-local PawnCrystalOfFearData90Legendary =
-{
-
-
-------------------------------------------------------------
--- Crystals of Fear (5.0)
-------------------------------------------------------------
-
-{ 89873, false, false, false, "Agility", 31 }, -- Crystallized Dread
-{ 89881, false, false, false, "Strength", 31 }, -- Crystallized Terror
-{ 89882, false, false, false, "Intellect", 31 }, -- Crystallized Horror
-
-
-}
-
-
---========================================
 -- Level 90 crafted meta gems
 --========================================
 local PawnMetaGemData90Rare =
@@ -1294,7 +1226,7 @@ local PawnGemData100Rare =
 
 PawnGemQualityLevels =
 {
-	{ 685, PawnGemData100Rare }, -- Warlords of Draenor Mythic Highmaul / Heroic Blackrock Foundry
+	{ 680, PawnGemData100Rare }, -- Warlords of Draenor Mythic Highmaul / Heroic Blackrock Foundry
 	{ 600, PawnGemData100Uncommon }, -- Actual gem requirement
 	{ 463, PawnGemData90Rare }, -- Mists of Pandaria heroics
 	{ 417, PawnGemData90Uncommon }, -- Actual gem requirement
@@ -1315,16 +1247,4 @@ PawnMetaGemQualityLevels =
 	{ 333, PawnMetaGemData85Rare }, -- Helm of the Skyborne
 	{ 200, PawnMetaGemData80Rare }, -- Helmet of the Shrine
 	{ 0, PawnMetaGemData70Rare }, -- Exorcist's
-}
-
-PawnCogwheelQualityLevels =
-{
-	{ 417, PawnCogwheelData90Rare }, -- Actual gem requirement; Ghost Iron Dragonling is 450
-	{ 0, PawnCogwheelData85Rare }, -- Bio-Optic Killshades
-}
-
--- *** Remove this in Warlords of Draenor
-PawnCrystalOfFearQualityLevels =
-{
-	{ 0, PawnCrystalOfFearData90Legendary }, -- Kri'tak
 }
