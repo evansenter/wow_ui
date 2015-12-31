@@ -33,8 +33,12 @@ local AddonDB_Defaults = {
 				numFollowersAtiLevel630 = 0,
 				numFollowersAtiLevel645 = 0,
 				numFollowersAtiLevel660 = 0,
-				numRareFollowers = 0,
-				numEpicFollowers = 0,
+				numFollowersAtiLevel675 = 0,
+ 				numRareFollowers = 0,
+ 				numEpicFollowers = 0,
+				avgWeaponiLevel = 0,
+				avgArmoriLevel = 0,
+				
 				Buildings = {},				-- List of buildings
 				Followers = {},				-- List of followers
 				AvailableMissions = {},		-- List of available missions
@@ -235,7 +239,7 @@ local function ScanBuildings()
 end
 	
 local function ScanFollowers()
-	local followersList = C_Garrison.GetFollowers()
+	local followersList = C_Garrison.GetFollowers(1)
 	if not followersList then return end
 
 	local followers = addon.ThisCharacter.Followers
@@ -249,14 +253,17 @@ local function ScanFollowers()
 	local id			-- follower id
 	local rarity, level, iLevel, ability1, ability2, ability3, ability4, trait1, trait2, trait3, trait4
 	
-	local numFollowers = 0	-- number of followers
-	local num100 = 0	-- number of followers at level 100
-	local num615 = 0	-- number of followers at iLevel 615+
-	local num630 = 0	-- number of followers at iLevel 630+
-	local num645 = 0	-- number of followers at iLevel 645+
-	local num660 = 0	-- number of followers at iLevel 660+
-	local numRare = 0	-- number of rare followers (blue)
-	local numEpic = 0	-- number of epic followers (violet)
+	local numFollowers = 0		-- number of followers
+	local num100 = 0				-- number of followers at level 100
+	local num615 = 0				-- number of followers at iLevel 615+
+	local num630 = 0				-- number of followers at iLevel 630+
+	local num645 = 0				-- number of followers at iLevel 645+
+	local num660 = 0				-- number of followers at iLevel 660+
+	local num675 = 0				-- number of followers at iLevel 675
+	local numRare = 0				-- number of rare followers (blue)
+	local numEpic = 0				-- number of epic followers (violet)
+	local weaponiLvl = 0			-- used to compute average weapon iLevel
+	local armoriLvl = 0			-- used to compute average armor iLevel
 	
 	local abilities = {}
 	local traits = {}
@@ -309,6 +316,7 @@ local function ScanFollowers()
 			id, rarity, level, iLevel, ability1, ability2, ability3, ability4, trait1, trait2, trait3, trait4 = link:match("garrfollower:(%d+):(%d+):(%d+):(%d+):(%d+):(%d+):(%d+):(%d+):(%d+):(%d+):(%d+):(%d+)")
 			id = tonumber(id)
 			
+			local weaponItemID, weaponItemLevel, armorItemID, armorItemLevel = C_Garrison.GetFollowerItems(follower.followerID)
 			local info = {}
 			
 			info.xp = follower.xp
@@ -324,11 +332,17 @@ local function ScanFollowers()
 			level = tonumber(level)
 			iLevel = tonumber(iLevel)
 			
-			if level == 100 then num100 = num100 + 1 end
+			if level == 100 then 
+				num100 = num100 + 1 
+				weaponiLvl = weaponiLvl + weaponItemLevel
+				armoriLvl = armoriLvl + armorItemLevel
+			end
+			
 			if iLevel >= 615 then num615 = num615 + 1	end
 			if iLevel >= 630 then num630 = num630 + 1	end
 			if iLevel >= 645 then num645 = num645 + 1	end
 			if iLevel >= 660 then num660 = num660 + 1	end
+			if iLevel >= 675 then num675 = num675 + 1	end
 			if rarity == 3 then numRare = numRare + 1 end
 			if rarity == 4 then numEpic = numEpic + 1	end
 			
@@ -367,6 +381,9 @@ local function ScanFollowers()
 	c.numFollowersAtiLevel630 = num630
 	c.numFollowersAtiLevel645 = num645
 	c.numFollowersAtiLevel660 = num660
+	c.numFollowersAtiLevel675 = num675
+	c.avgWeaponiLevel = weaponiLvl / num100
+	c.avgArmoriLevel = armoriLvl / num100
 	c.numRareFollowers = numRare
 	c.numEpicFollowers = numEpic
 	c.Abilities = abilities
@@ -533,7 +550,7 @@ end
 local function OnAddonLoaded(event, addonName)
 	if addonName == "Blizzard_GarrisonUI" then
 		ScanBuildings()
-		ScanFollowers()
+		-- ScanFollowers()	-- Seems this scan can cause the values to be zeroed out.
 	end
 end
 
@@ -604,12 +621,24 @@ local function _GetNumFollowersAtiLevel660(character)
 	return character.numFollowersAtiLevel660 or 0
 end
 
+local function _GetNumFollowersAtiLevel675(character)
+	return character.numFollowersAtiLevel675 or 0
+end
+
 local function _GetNumRareFollowers(character)
 	return character.numRareFollowers or 0
 end
 
 local function _GetNumEpicFollowers(character)
 	return character.numEpicFollowers or 0
+end
+
+local function _GetAvgWeaponiLevel(character)
+	return character.avgWeaponiLevel or 0
+end
+
+local function _GetAvgArmoriLevel(character)
+	return character.avgArmoriLevel or 0
 end
 
 local function _GetBuildingInfo(character, name)
@@ -707,8 +736,11 @@ local PublicMethods = {
 	GetNumFollowersAtiLevel630 = _GetNumFollowersAtiLevel630,
 	GetNumFollowersAtiLevel645 = _GetNumFollowersAtiLevel645,
 	GetNumFollowersAtiLevel660 = _GetNumFollowersAtiLevel660,
-	GetNumRareFollowers = _GetNumRareFollowers,
-	GetNumEpicFollowers = _GetNumEpicFollowers,
+	GetNumFollowersAtiLevel675 = _GetNumFollowersAtiLevel675,
+ 	GetNumRareFollowers = _GetNumRareFollowers,
+ 	GetNumEpicFollowers = _GetNumEpicFollowers,
+	GetAvgWeaponiLevel = _GetAvgWeaponiLevel,
+	GetAvgArmoriLevel = _GetAvgArmoriLevel,
 	GetBuildingInfo = _GetBuildingInfo,
 	GetUncollectedResources = _GetUncollectedResources,
 	GetAvailableMissions = _GetAvailableMissions,
@@ -736,8 +768,11 @@ function addon:OnInitialize()
 	DataStore:SetCharacterBasedMethod("GetNumFollowersAtiLevel630")
 	DataStore:SetCharacterBasedMethod("GetNumFollowersAtiLevel645")
 	DataStore:SetCharacterBasedMethod("GetNumFollowersAtiLevel660")
-	DataStore:SetCharacterBasedMethod("GetNumRareFollowers")
-	DataStore:SetCharacterBasedMethod("GetNumEpicFollowers")
+	DataStore:SetCharacterBasedMethod("GetNumFollowersAtiLevel675")
+ 	DataStore:SetCharacterBasedMethod("GetNumRareFollowers")
+ 	DataStore:SetCharacterBasedMethod("GetNumEpicFollowers")
+	DataStore:SetCharacterBasedMethod("GetAvgWeaponiLevel")
+	DataStore:SetCharacterBasedMethod("GetAvgArmoriLevel")
 	DataStore:SetCharacterBasedMethod("GetBuildingInfo")
 	DataStore:SetCharacterBasedMethod("GetUncollectedResources")
 	DataStore:SetCharacterBasedMethod("GetAvailableMissions")

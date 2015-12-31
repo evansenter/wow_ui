@@ -1,0 +1,22 @@
+------------------------------------------------------------------------
+r41 | thaoky | 2015-09-12 17:04:10 +0000 (Sat, 12 Sep 2015) | 1 line
+Changed paths:
+   M /trunk/DataStore_Achievements.lua
+
+Fixed Lua error at logon
+------------------------------------------------------------------------
+r40 | thaoky | 2015-08-17 16:18:04 +0000 (Mon, 17 Aug 2015) | 2 lines
+Changed paths:
+   M /trunk/DataStore_Achievements.lua
+   M /trunk/DataStore_Achievements.toc
+
+TOC Update
+Fixed an issue where an earned achievement was not immediately saved to the DB, and was only read at next login.
+------------------------------------------------------------------------
+r39 | thaoky | 2015-02-25 18:22:05 +0000 (Wed, 25 Feb 2015) | 1 line
+Changed paths:
+   M /trunk/.pkgmeta
+   M /trunk/DataStore_Achievements.toc
+
+6.1.001 Commit
+------------------------------------------------------------------------

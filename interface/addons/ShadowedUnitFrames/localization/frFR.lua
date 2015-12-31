@@ -446,6 +446,7 @@ L["If the unit has a damage absorption shield on them, it will show the absolute
 L["If the unit has heals incoming, it will show the absolute incoming heal value, otherwise it will show the units name."] = "Si l'unité a des soins entrants, ceci affichera la valeur absolue des soins entrants. Le nom de l'unité sera affiché dans le cas contraire."
 L["If the unit is a player then class is returned, if it's a NPC then the creature type."] = "Si l'unité est un joueur, sa classe est renvoyée. S'il s'agit d'un PNJ, son type de créature est renvoyé."
 L["If the unit is a player then race is returned, if it's a NPC then the creature type."] = "Si l'unité est un joueur, sa race est renvoyée. S'il s'agit d'un PNJ, son type de créature est renvoyé."
+L["If you don't, you will be unable to use any combo point features (Chi, Holy Power, Combo Points, Aura Points, etc) until you do so."] = "Sinon, vous ne pourrez pas utiliser les fonctions des points de combo (Chi, Puissance sacrée, Points de combo, Points d'aura, etc) jusqu'à ce que vous le fassiez." -- Needs review
 L["Import"] = "Importer"
 L["Import unit frame positions"] = "Importer les positions des cadres d'unité"
 L["Import visibility settings"] = "Importer les paramètres de visibilité"
@@ -926,6 +927,7 @@ L["You have entered combat, unit frames have been locked. Once you leave combat 
 L["You have to set the events to fire, you can only enter letters and underscores, \"FOO_BAR\" for example is valid, \"APPLE_5_ORANGE\" is not because it contains a number."] = "Vous devez définir les événements à déclencher en utilisant uniquement des lettres et des tirets bas. Par exemple, \"FOO_BAR\" est valide, tandis que \"APPLE_5_ORANGE\" ne l'est pas car il contient un nombre."
 L["You must enter a number that is 0 or higher, negative numbers are not allowed."] = "Vous devez entrer un nombre supérieur à 0 : les nombres négatifs ne sont pas autorisés."
 L["You must enter a tag name."] = "Vous devez entrer un nom de tag."
+L["You must restart Shadowed Unit Frames."] = "Vous devez redémarrer Shadowed Unit Frames." -- Needs review
 L["You must wrap your code in a function."] = "Vous devez placer votre code dans une fonction."
 L["Your active layout is the profile used for import backup, this cannot be overwritten by an import. Change your profiles to something else and try again."] = "Votre disposition active est le profil utilisé pour la sauvegarde d'importation, ceci ne peut pas être écrasé par un import. Changez vos profils vers quelque chose d'autre et essayez à nouveau."
 L["Your aura color"] = "Couleur de votre aura" -- Needs review

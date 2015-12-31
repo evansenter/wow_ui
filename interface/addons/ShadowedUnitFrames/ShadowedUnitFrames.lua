@@ -5,7 +5,7 @@
 ShadowUF = select(2, ...)
 
 local L = ShadowUF.L
-ShadowUF.dbRevision = 53
+ShadowUF.dbRevision = 55
 ShadowUF.playerUnit = "player"
 ShadowUF.enabledUnits = {}
 ShadowUF.modules = {}
@@ -121,7 +121,6 @@ function ShadowUF:CheckUpgrade()
 	if( revision <= 47 ) then
 		local config = self.db.profile.units
 		config.player.comboPoints = config.target.comboPoints
-		config.target.comboPoints = nil
 	end
 
 	if( revision <= 46 ) then
@@ -299,6 +298,7 @@ function ShadowUF:LoadUnitDefaults()
 	self.defaults.profile.units.target.enabled = true
 	self.defaults.profile.units.target.indicators.lfdRole = {enabled = false, size = 0, x = 0, y = 0}
 	self.defaults.profile.units.target.indicators.questBoss = {enabled = true, size = 0, x = 0, y = 0}
+	self.defaults.profile.units.target.comboPoints = {enabled = false, isBar = true}
 	-- TARGETTARGET/TARGETTARGETTARGET
 	self.defaults.profile.units.targettarget.enabled = true
 	self.defaults.profile.units.targettargettarget.enabled = true
@@ -455,6 +455,47 @@ function ShadowUF:LoadUnitDefaults()
 			["124081"] = [[{r=0.51372549019608, group="Monk", indicator="br", g=1, player=true, duration=true, b=0.90588235294118, alpha=1, priority=100, icon=false, iconTexture="Interface\\Icons\\ability_monk_forcesphere"}]],
 			["21562"] = [[{r=1, group="Priest", indicator="", g=1, alpha=1, missing=true, priority=0, b=1, iconTexture="Interface\\Icons\\Spell_Holy_WordFortitude"}]],
 			["115921"] = [[{r=0.30980392156863, group="Monk", indicator="", g=0.69411764705882, selfColor={alpha=1, b=0.36078431372549, g=0.71764705882353, r=0.29803921568627, }, missing=true, alpha=1, duration=true, priority=0, b=0.019607843137255, iconTexture="Interface\\Icons\\ability_monk_legacyoftheemperor"}]],
+			["189895"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\INV_Enchant_VoidSphere\";}",
+			["189627"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\achievement_zone_cataclysmgreen\";}",
+			["181306"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\Ability_Mage_LivingBomb\";}",
+			["181753"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\ability_felarakkoa_feldetonation_green\";}",
+			["188929"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\Ability_Hunter_MarkedForDeath\";}",
+			["189032"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\ability_malkorok_blightofyshaarj_green\";}",
+			["182826"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\Spell_Fire_FelFlameRing\";}",
+			["181515"] = "{b=0;g=0;priority=1;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\Spell_Shadow_SeedOfDestruction\";}",
+			["179219"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\ability_felarakkoa_feldetonation_red\";}",
+			["179864"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\Spell_Arcane_PrismaticCloak\";}",
+			["184124"] = "{b=0;g=0;priority=1;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\Spell_Shadow_AntiMagicShell\";}",
+			["184450"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\ability_bossfelorcs_necromancer_purple\";}",
+			["186134"] = "{icon=true;b=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"tr\";g=0;iconTexture=\"Interface\\\\Icons\\\\spell_fel_elementaldevastation\";}",
+			["185066"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\ability_bossfelorcs_necromancer_red\";}",
+			["183817"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\Ability_Warlock_EverlastingAffliction\";}",
+			["179978"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\ability_bossgorefiend_touchofdoom\";}",
+			["182280"] = "{icon=true;b=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";g=0;iconTexture=\"Interface\\\\Icons\\\\Ability_Hunter_MarkedForDeath\";}",
+			["189031"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\ability_malkorok_blightofyshaarj_yellow\";}",
+			["186500"] = "{b=0;g=0;priority=1;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"INTERFACE\\\\ICONS\\\\inv_misc_steelweaponchain\";}",
+			["188666"] = "{b=0;g=0;priority=1;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"INTERFACE\\\\ICONS\\\\ability_warlock_soulsiphon\";}",
+			["186333"] = "{b=0;g=0;priority=1;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\Spell_Shadow_DevouringPlague\";}",
+			["186135"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"tr\";icon=true;iconTexture=\"Interface\\\\Icons\\\\Spell_Shadow_AntiShadow\";}",
+			["181275"] = "{icon=true;b=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";g=0;iconTexture=\"Interface\\\\Icons\\\\spell_warlock_summonterrorguard\";}",
+			["181957"] = "{b=0;g=0;priority=2;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\Spell_Frost_ArcticWinds\";}",
+			["189030"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\ability_malkorok_blightofyshaarj_red\";}",
+			["182178"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\ability_arakkoa_spinning_blade\";}",
+			["189777"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"INTERFACE\\\\ICONS\\\\inv_misc_steelweaponchain\";}",
+			["186407"] = "{r=0;indicator=\"c\";b=0;group=\"Hellfire Citadel\";priority=2;g=0;iconTexture=\"Interface\\\\Icons\\\\spell_fel_incinerate\";}",
+			["180166"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"tr\";icon=true;iconTexture=\"Interface\\\\Icons\\\\Spell_Shadow_ChillTouch\";}",
+			["180079"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\inv_blacksmithdye_black\";}",
+			["184449"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\ability_bossfelorcs_necromancer_purple\";}",
+			["185510"] = "{r=0;icon=true;indicator=\"tr\";b=0;group=\"Hellfire Citadel\";priority=1;g=0;iconTexture=\"INTERFACE\\\\ICONS\\\\inv_misc_steelweaponchain\";}",
+			["185065"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\ability_bossfelorcs_necromancer_orange\";}",
+			["182769"] = "{r=0;icon=true;indicator=\"tr\";b=0;group=\"Hellfire Citadel\";priority=0;g=0;iconTexture=\"Interface\\\\Icons\\\\ability_fixated_state_purple\";}",
+			["181508"] = "{b=0;group=\"Hellfire Citadel\";indicator=\"c\";g=0;alpha=1;r=0;priority=1;icon=true;iconTexture=\"Interface\\\\Icons\\\\Spell_Shadow_SeedOfDestruction\";}",
+			["181099"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\Spell_Shadow_AuraOfDarkness\";}",
+			["181307"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\Spell_Shadow_Requiem\";}",
+			["183865"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\ability_warlock_shadowfurytga\";}",
+			["186961"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\ability_warlock_moltencoregreen\";}",
+			["182200"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\ability_arakkoa_spinning_blade\";}",
+			["181597"] = "{b=0;g=0;priority=0;r=0;group=\"Hellfire Citadel\";indicator=\"c\";icon=true;iconTexture=\"Interface\\\\Icons\\\\ability_bossmannoroth_mannorothsgaze\";}",
 		}
 	}
 

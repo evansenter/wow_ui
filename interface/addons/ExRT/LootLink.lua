@@ -1,6 +1,7 @@
 local GlobalAddonName, ExRT = ...
 
 local module = ExRT.mod:New("LootLink",ExRT.L.LootLink,nil,true)
+local ELib,L = ExRT.lib,ExRT.L
 
 local VExRT = nil
 
@@ -29,14 +30,30 @@ module.db.mobsIDs = {
 	[77692]=true,	--Kromog
 	[77325]=true,	--Blackhand
 	
+	[243290]=true,	--Hellfire Assault
+	[90284]=true,	--Iron Reaver
+	[90199]=true,	--Gorefiend
+	[92144]=true,	--Hellfire High Council, Darkwhisper
+	[92142]=true,	--Hellfire High Council, Jubei'thos
+	[92146]=true,	--Hellfire High Council, Bloodboil
+	[90435]=true,	--Kormrok
+	[90378]=true,	--Kilrogg Deadeye
+	[90316]=true,	--Shadow-Lord Iskar
+	[89890]=true,	--Fel Lord Zakuun
+	[93068]=true,	--Xhul'horac
+	[92330]=true,	--Socrethar the Eternal
+	[243567]=true,	--Socrethar the Eternal
+	[90269]=true,	--Tyrant Velhari
+	[91349]=true,	--Mannoroth
+	[91331]=true,	--Archimonde
 }
+
 module.db.cache = {}
 
 function module.options:Load()
 	self:CreateTilte()
 
-	self.enableChk = ExRT.lib.CreateCheckBox(self,nil,10,-30,ExRT.L.LootLinkEnable,VExRT.LootLink.enabled)
-	self.enableChk:SetScript("OnClick", function(self,event) 
+	self.enableChk = ELib:Check(self,L.LootLinkEnable,VExRT.LootLink.enabled):Point(5,-30):OnClick(function(self) 
 		if self:GetChecked() then
 			VExRT.LootLink.enabled = true
 			module:Enable()
@@ -46,7 +63,7 @@ function module.options:Load()
 		end
 	end)
 	
-	self.shtml1 = ExRT.lib.CreateText(self,595,0,"TOP",0,-70,nil,"TOP",nil,12,ExRT.L.LootLinkSlashHelp)
+	self.shtml1 = ELib:Text(self,L.LootLinkSlashHelp,12):Size(650,0):Point("TOP",0,-70):Top()
 end
 
 
@@ -77,11 +94,11 @@ local function LootLink(linkAnyway)
 	local count = GetNumLootItems()
 	local cache = {}
 	local numLink = 0
-	local chat_type, playerName = ExRT.mds.chatType()
+	local chat_type, playerName = ExRT.F.chatType()
 	for i=1,count do
 		local sourceGUID = GetLootSourceInfo(i)
 		if sourceGUID and (not module.db.cache[sourceGUID] or linkAnyway) then
-			local mobID = ExRT.mds.GUIDtoID(sourceGUID)
+			local mobID = ExRT.F.GUIDtoID(sourceGUID)
 			if (module.db.mobsIDs[mobID] or linkAnyway) then
 				local itemLink =  GetLootSlotLink(i)
 				if itemLink then

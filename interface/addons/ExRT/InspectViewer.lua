@@ -2,20 +2,23 @@ local GlobalAddonName, ExRT = ...
 
 local VExRT = nil
 
-local parentModule = _G.GExRT.A.ExCD2
+local parentModule = ExRT.A.Inspect
 if not parentModule then
 	return
 end
 local module = ExRT.mod:New("InspectViewer",ExRT.L.InspectViewer,nil,true)
+local ELib,L = ExRT.lib,ExRT.L
+
 module.db.inspectDB = parentModule.db.inspectDB
+module.db.inspectDBAch = parentModule.db.inspectDBAch
 module.db.inspectQuery = parentModule.db.inspectQuery
-module.db.specIcons = parentModule.db.specIcons
+module.db.specIcons = ExRT.A.ExCD2 and ExRT.A.ExCD2.db.specIcons
 module.db.itemsSlotTable = parentModule.db.itemsSlotTable
 module.db.classIDs = {WARRIOR=1,PALADIN=2,HUNTER=3,ROGUE=4,PRIEST=5,DEATHKNIGHT=6,SHAMAN=7,MAGE=8,WARLOCK=9,MONK=10,DRUID=11}
 module.db.glyphsIDs = {9,11,13,10,8,12}
 
 module.db.statsList = {'intellect','agility','strength','spirit','haste','mastery','crit','spellpower','multistrike','versatility','armor','leech','avoidance','speed'}
-module.db.statsListName = {ExRT.L.InspectViewerInt,ExRT.L.InspectViewerAgi,ExRT.L.InspectViewerStr,ExRT.L.InspectViewerSpirit,ExRT.L.InspectViewerHaste,ExRT.L.InspectViewerMastery,ExRT.L.InspectViewerCrit,ExRT.L.InspectViewerSpd, ExRT.L.InspectViewerMS, ExRT.L.InspectViewerVer, ExRT.L.InspectViewerBonusArmor, ExRT.L.InspectViewerLeech, ExRT.L.InspectViewerAvoidance, ExRT.L.InspectViewerSpeed}
+module.db.statsListName = {L.InspectViewerInt,L.InspectViewerAgi,L.InspectViewerStr,L.InspectViewerSpirit,L.InspectViewerHaste,L.InspectViewerMastery,L.InspectViewerCrit,L.InspectViewerSpd, L.InspectViewerMS, L.InspectViewerVer, L.InspectViewerBonusArmor, L.InspectViewerLeech, L.InspectViewerAvoidance, L.InspectViewerSpeed}
 
 module.db.baseStats = { --By class IDs
 	agility = {889,455,1284,1284,1067,1071,1284,889,985,1284,1284},
@@ -163,15 +166,92 @@ module.db.topEnchGems = {
 	[3368]="Weapon:DK",
 	[3370]="Weapon:DK",
 
-	[5346]="Gem:Crit",
-	[5347]="Gem:Haste",
-	[5348]="Gem:Mastery",
-	[5349]="Gem:MS",
-	[5350]="Gem:Vers",
-	[5351]="Gem:Stamina",
+	--[5346]="Gem:Crit",
+	--[5347]="Gem:Haste",
+	--[5348]="Gem:Mastery",
+	--[5349]="Gem:MS",
+	--[5350]="Gem:Vers",
+	--[5351]="Gem:Stamina",
+	
+	[5413]="Gem:Crit",
+	[5414]="Gem:Haste",
+	[5415]="Gem:Mastery",
+	[5416]="Gem:MS",
+	[5417]="Gem:Vers",
+	[5418]="Gem:Stamina",
 }
 
-module.db.perPage = 17
+module.db.achievementsList = {
+	{	--HFC
+		L.RaidLootT18HC..":"..L.sencounterWODMythic,		
+		10027,10032,10033,10034,10035,10253,10037,10040,10041,10038,10039,10042,10043,	
+	},{
+		L.RaidLootT18HC,
+		10023,10024,10025,10020,10019,10044,
+	},{	--BRF
+		L.RaidLootT17BF..":"..L.sencounterWODMythic,		
+		8966,8967,8970,8968,8932,8971,8956,8969,8972,8973,
+	},{
+		L.RaidLootT17BF,
+		8989,8990,8991,8992,9444,
+	},{	--H
+		L.RaidLootT17Highmaul..":"..L.sencounterWODMythic,		
+		8949,8960,8962,8961,8963,8964,8965,
+	},{
+		L.RaidLootT17Highmaul,
+		8986,8987,8988,9441,
+	},{	--Old curves
+		EXPANSION_NAME4,
+		6954,7485,8246,7486,8248,7487,8249,8238,8260,8398,8400,8399,8401
+	},
+}
+module.db.achievementsList_statistic = {
+	{	--HFC
+		{10201,10202,10203,10204},{10205,10206,10207,10208},{10209,10210,10211,10212},{10213,10214,10215,10216},{10217,10218,10219,10220},{10221,10222,10223,10224},{10225,10226,10227,10228},
+		{10229,10230,10231,10232},{10241,10242,10243,10244},{10233,10234,10235,10236},{10237,10238,10239,10240},{10245,10246,10247,10248},{10249,10250,10251,10252},
+	},{
+		{-10201,-10202,-10203,-10205,-10206,-10207,-10209,-10210,-10211},{-10213,-10214,-10215,-10217,-10218,-10219,-10221,-10222,-10223},
+		{-10225,-10226,-10227,-10229,-10230,-10231,-10241,-10242,-10243},{-10233,-10234,-10235,-10237,-10238,-10239,-10245,-10246,-10247},{-10249,-10250,-10251},{-10251,-10252},
+	},{	--BRF
+		{9316,9317,9318,9319},{9320,9321,9322,9323},{9343,9349,9351,9353},{9324,9327,9328,9329},{9330,9331,9332,9333},
+		{9354,9355,9356,9357},{9334,9336,9337,9338},{9339,9340,9341,9342},{9358,9359,9360,9361},{9362,9363,9364,9365},
+	},{
+		{-9316,-9317,-9318,-9320,-9321,-9322,-9343,-9349,-9351},{-9324,-9327,-9328,-9330,-9331,-9332,-9354,-9355,-9356},{-9334,-9336,-9337,-9339,-9340,-9341,-9358,-9359,-9360},{-9362,-9363,-9364},{-9364,-9365},
+	},{	--H
+		{9280,9282,9284,9285},{9286,9287,9288,9289},{9295,9297,9298,9300},{9290,9292,9293,9294},{9301,9302,9303,9304},{9306,9308,9310,9311},{9312,9313,9314,9315},
+	},{
+		{-9280,-9282,-9284,-9286,-9287,-9288,-9295,-9297,-9298},{-9290,-9292,-9293,-9301,-9302,-9303,-9306,-9308,-9310},{-9312,-9313,-9314},{-9314,-9315},
+	},{	--Old curves
+		{6799,7926},{6800,7927},{6811,7963},{6812,7964},{6819,7971},{6820,7972},{8199,8200},{8202,8201},{8203,8256},{8635},{8637},{8636},{8638},
+	},
+}
+
+do
+	local array = parentModule.db.acivementsIDs
+	for i=1,#module.db.achievementsList do
+		local from = module.db.achievementsList[i]
+		for j=2,#from do
+			array[#array + 1] = from[j]
+		end
+		
+		local from = module.db.achievementsList_statistic[i]
+		for j=1,#from do
+			if from[j] then
+				for k=1,#from[j] do
+					local id = from[j][k]
+					if id > 0 then
+						array[#array + 1] = -id
+					elseif id < 0 then
+						from[j][k] = -id
+					end
+				end
+			end
+		end
+	end
+	--ELib:Frame(UIParent):SetScript('OnUpdate',function()local q=GetMouseFocus()if not q or not q.id then DInfo'nil' return end DInfo(q.id)end)
+end
+
+module.db.perPage = 18
 module.db.page = 1
 
 module.db.filter = nil
@@ -181,17 +261,17 @@ module.db.colorizeNoEnch = true
 module.db.colorizeLowIlvl = true
 module.db.colorizeNoGems = true
 module.db.colorizeNoTopEnchGems = false
+module.db.colorizeLowIlvl685 = false
 
 function module.main:ADDON_LOADED()
 	VExRT = _G.VExRT
 	VExRT.InspectViewer = VExRT.InspectViewer or {}
-	if VExRT.InspectViewer.enabled and (not VExRT.ExCD2 or not VExRT.ExCD2.enabled) then
-		module:Enable()
-	end
+	--if VExRT.InspectViewer.enabled and (not VExRT.ExCD2 or not VExRT.ExCD2.enabled) then module:Enable() end
+	
+	module:RegisterSlash()
 end
 
 function module.main:INSPECT_READY()
-	--module.options.showPage()
 	module.options.UpdatePage_InspectEvent()
 end
 
@@ -209,76 +289,50 @@ function module:Disable()
 end
 
 function module.options:Load()
-	self.chkEnable = ExRT.lib.CreateCheckBox(self,nil,580,-5,ExRT.L.senable,nil,nil,true)
-	self.chkEnable:SetScript("OnClick", function(self,event) 
-		if self:GetChecked() then
-			module:Enable()
-			VExRT.InspectViewer.enabled = true
-		else
-			module:Disable()
-			VExRT.InspectViewer.enabled = nil
-		end
-	end)
-	self.chkEnable:SetScript("OnUpdate", function (self)
-		local x, y = GetCursorPosition()
-		local s = self:GetEffectiveScale()
-		x, y = x/s, y/s
-		local t,l,b,r = self:GetTop(),self:GetLeft(),self:GetBottom(),self:GetRight()
-		if x >= l and x <= r and y <= t and y >= b then
-			self.tooltip = true
-			ExRT.lib.TooltipShow(self,"ANCHOR_RIGHT",ExRT.L.InspectViewerEnabledTooltip)
-		elseif self.tooltip then
-			self.tooltip = nil
-			GameTooltip_Hide()
-		end
-	end)
-	local function chkEnableShow(self)
-		if VExRT and VExRT.ExCD2 and VExRT.ExCD2.enabled then
-			self:SetChecked(true)
-			self:SetEnabled(false)
-		else
-			self:SetChecked(VExRT.InspectViewer.enabled)
-			self:SetEnabled(true)
-		end
-	end
-	self.chkEnable:SetScript("OnShow",chkEnableShow)
-	chkEnableShow(self.chkEnable)
-	
+	self:CreateTilte()
+
 	local function reloadChks(self)
 		local clickID = self.id
 		self:SetChecked(true)
+		module.options.achievementsDropDown:Hide()
+		module.options.filterDropDown:Show()
+		module.options.chkAchivs.text:Show()
 		if clickID == 1 then
 			module.options.chkTalents:SetChecked(false)
 			module.options.chkInfo:SetChecked(false)
+			module.options.chkAchivs:SetChecked(false)
 		elseif clickID == 2 then
 			module.options.chkItems:SetChecked(false)
-			module.options.chkInfo:SetChecked(false)	
+			module.options.chkInfo:SetChecked(false)
+			module.options.chkAchivs:SetChecked(false)
 		elseif clickID == 3 then
 			module.options.chkItems:SetChecked(false)
-			module.options.chkTalents:SetChecked(false)	
+			module.options.chkTalents:SetChecked(false)
+			module.options.chkAchivs:SetChecked(false)
+		elseif clickID == 4 then
+			module.options.chkItems:SetChecked(false)
+			module.options.chkTalents:SetChecked(false)
+			module.options.chkInfo:SetChecked(false)
+
+			module.options.achievementsDropDown:Show()
+			module.options.filterDropDown:Hide()
+			module.options.chkAchivs.text:Hide()
 		end
 		module.db.page = clickID
 		module.options.showPage()
 	end
 	
-	self.chkItems = CreateFrame("CheckButton",nil,self,"UIRadioButtonTemplate")  
-	self.chkItems:SetPoint("TOPLEFT", 10, -11)
-	self.chkItems.text:SetText(ExRT.L.InspectViewerItems)
-	self.chkItems:SetScript("OnClick", reloadChks)
+	self.chkItems = ELib:Radio(self,L.InspectViewerItems,true):Point(10,-28):OnClick(reloadChks)
 	self.chkItems.id = 1
-	self.chkItems:SetChecked(true)
 	
-	self.chkTalents = CreateFrame("CheckButton",nil,self,"UIRadioButtonTemplate")  
-	self.chkTalents:SetPoint("TOPLEFT", 135, -11)
-	self.chkTalents.text:SetText(ExRT.L.InspectViewerTalents)
-	self.chkTalents:SetScript("OnClick", reloadChks)
+	self.chkTalents = ELib:Radio(self,L.InspectViewerTalents):Point(135,-28):OnClick(reloadChks)
 	self.chkTalents.id = 2
 
-	self.chkInfo = CreateFrame("CheckButton",nil,self,"UIRadioButtonTemplate")  
-	self.chkInfo:SetPoint("TOPLEFT", 260, -11)
-	self.chkInfo.text:SetText(ExRT.L.InspectViewerInfo)
-	self.chkInfo:SetScript("OnClick", reloadChks)
+	self.chkInfo = ELib:Radio(self,L.InspectViewerInfo):Point(260,-28):OnClick(reloadChks)
 	self.chkInfo.id = 3
+
+	self.chkAchivs = ELib:Radio(self,ACHIEVEMENTS):Point(385,-28):OnClick(reloadChks)
+	self.chkAchivs.id = 4
 	
 	local function ItemsTrackDropDownClick(self)
 		local f = self.checkButton:GetScript("OnClick")
@@ -286,43 +340,49 @@ function module.options:Load()
 		f(self.checkButton)
 	end
 	
-	self.chkItemsTrackDropDown = ExRT.lib.CreateScrollDropDown(self,"TOPLEFT",50,0,50,300,5)
-	--self.chkItemsTrackDropDown:SetAlpha(0)
+	self.chkItemsTrackDropDown = ELib:DropDown(self,300,6):Point(50,0):Size(50)
 	self.chkItemsTrackDropDown:Hide()
 	self.chkItemsTrackDropDown.List = {
-		{text = ExRT.L.InspectViewerColorizeNoEnch,checkable = true,checkState = module.db.colorizeNoEnch, checkFunc = function(self,checked) 
+		{text = L.InspectViewerColorizeNoEnch,checkable = true,checkState = module.db.colorizeNoEnch, checkFunc = function(self,checked) 
 			module.db.colorizeNoEnch = checked
 			module.options.ReloadPage()
 		end,func = ItemsTrackDropDownClick},
-		{text = ExRT.L.InspectViewerColorizeNoGems,checkable = true,checkState = true, checkFunc = function(self,checked) 
+		{text = L.InspectViewerColorizeNoGems,checkable = true,checkState = true, checkFunc = function(self,checked) 
 			module.db.colorizeNoGems = checked
 			module.options.ReloadPage()
 		end,func = ItemsTrackDropDownClick},
-		{text = ExRT.L.InspectViewerColorizeLowIlvl,checkable = true,checkState = true, checkFunc = function(self,checked) 
+		{text = format(L.InspectViewerColorizeLowIlvl,630),checkable = true,checkState = true, checkFunc = function(self,checked) 
 			module.db.colorizeLowIlvl = checked
 			module.options.ReloadPage()
 		end,func = ItemsTrackDropDownClick},
-		{text = ExRT.L.InspectViewerColorizeNoTopEnch,checkable = true,checkState = false, checkFunc = function(self,checked) 
+		{text = L.InspectViewerColorizeNoTopEnch,checkable = true,checkState = false, checkFunc = function(self,checked) 
 			module.db.colorizeNoTopEnchGems = checked
 			module.options.ReloadPage()
 		end,func = ItemsTrackDropDownClick},
-		{text = ExRT.L.minimapmenuclose,checkable = false, padding = 16, func = function()
-			ExRT.lib.ScrollDropDown.Close()
+		{text = format(L.InspectViewerColorizeLowIlvl,685),checkable = true,checkState = false, checkFunc = function(self,checked) 
+			module.db.colorizeLowIlvl685 = checked
+			module.options.ReloadPage()
+		end,func = ItemsTrackDropDownClick},
+		{text = L.minimapmenuclose,checkable = false, padding = 16, func = function()
+			ELib:DropDownClose()
 		end},
 	}
 	
-	self.chkItemsTrack = CreateFrame("Frame",nil,self,"ExRTTrackingButtonTemplate")  
-	self.chkItemsTrack:SetPoint("TOPLEFT", 130, -9)
+	self.chkItemsTrack = CreateFrame("Frame",nil,self,"ExRTTrackingButtonModernTemplate")  
+	self.chkItemsTrack:SetPoint("TOPLEFT", 130, -28)
 	self.chkItemsTrack:SetScale(.8)
 	self.chkItemsTrack.Button:SetScript("OnClick",function (this)
-		if ExRT.lib.ScrollDropDown.DropDownList:IsShown() then
-			ExRT.lib.ScrollDropDown.Close()
+		if ExRT.lib.ScrollDropDown.DropDownList[1]:IsShown() then
+			ELib:DropDownClose()
 		else
 			ExRT.lib.ScrollDropDown.ToggleDropDownMenu(module.options.chkItemsTrackDropDown)
 		end
 	end)
+	self.chkItemsTrackDropDown:ClearAllPoints()
+	self.chkItemsTrackDropDown:SetPoint("CENTER",self.chkItemsTrack,0,0)
+	self.chkItemsTrackDropDown.toggleX = -32
 	
-	self:SetScript("OnHide",function() ExRT.lib.ScrollDropDown.Close() end)
+	self:SetScript("OnHide",function() ELib:DropDownClose() end)
 	
 	local dropDownTable = {
 		[1] = {
@@ -330,74 +390,119 @@ function module.options:Load()
 		},
 		[2] = {
 			{"CLOTH","LEATHER","MAIL","PLATE"},
-			{ExRT.L.InspectViewerTypeCloth,ExRT.L.InspectViewerTypeLeather,ExRT.L.InspectViewerTypeMail,ExRT.L.InspectViewerTypePlate},
+			{L.InspectViewerTypeCloth,L.InspectViewerTypeLeather,L.InspectViewerTypeMail,L.InspectViewerTypePlate},
+		},
+		[3] = {
+			{"TANK","HEAL","MELEE-RANGE","MELEE","RANGE"},
+			{TANK,HEALER,DAMAGER,MELEE,RANGED},
+		},
+		[4] = {
+			{"PALADIN_PRIEST_WARLOCK","ROGUE_DEATHKNIGHT_MAGE_DRUID","WARRIOR_HUNTER_SHAMAN_MONK"},
 		},
 	}
 	
-	self.filterDropDown = ExRT.lib.CreateDropDown(self,"TOPLEFT",380,-6,100,ExRT.L.InspectViewerFilter)
-	UIDropDownMenu_Initialize(self.filterDropDown, function(self, level, menuList)
-		--ExRT.mds.FixDropDown(100)
-		level = level or 1
-		if (level == 1) then
-			local info = UIDropDownMenu_CreateInfo()
-			info.hasArrow = true
-			info.notCheckable = true
-			info.text = ExRT.L.InspectViewerClass
-			info.value = {["Level1_Key"] = 1}
-			UIDropDownMenu_AddButton(info, level)
-			
-			local info = UIDropDownMenu_CreateInfo()
-			info.hasArrow = true
-			info.notCheckable = true
-			info.text = ExRT.L.InspectViewerType
-			info.value = {["Level1_Key"] = 2}
-			UIDropDownMenu_AddButton(info, level)
-			
-			local info = UIDropDownMenu_CreateInfo()
-			info.hasArrow = false
-			info.notCheckable = true
-			info.text = ExRT.L.InspectViewerClear
-			info.func = function (self)
-				module.db.filter = nil
-				module.db.filterType = nil
-				module.options.ScrollBar:SetValue(1)
-				module.options.ReloadPage()
-				CloseDropDownMenus()
-				module.options.filterDropDown:SetText(ExRT.L.InspectViewerFilter)
+	self.filterDropDown = ELib:DropDown(self,250,6):Point(504,-25):Size(150):SetText(L.InspectViewerFilter)
+	
+	local EQUIPMENT_SETS_Fixed = EQUIPMENT_SETS or "EQUIPMENT SETS"
+	if EQUIPMENT_SETS_Fixed:find(":") then
+		EQUIPMENT_SETS_Fixed = EQUIPMENT_SETS_Fixed:gsub(":.+$","")
+	else
+		EQUIPMENT_SETS_Fixed = EQUIPMENT_SETS_Fixed:gsub("%%s","")
+	end
+	
+	self.filterDropDown.List = {
+		{text = L.InspectViewerClass, subMenu = {}},
+		{text = L.InspectViewerType, subMenu = {}},
+		{text = ROLE, subMenu = {}},
+		{text = EQUIPMENT_SETS_Fixed, subMenu = {}},
+		{text = L.InspectViewerHideInRaid,checkable = true, checkState = VExRT.InspectViewer.HideNotInRaid, checkFunc = function(self,checked) 
+			VExRT.InspectViewer.HideNotInRaid = checked
+			module.options.ScrollBar:SetValue(1)
+			module.options.ReloadPage()
+			ELib:DropDownClose()
+		end, func = ItemsTrackDropDownClick},
+		{text = L.InspectViewerClear,func = function (self)
+			module.db.filter = nil
+			module.db.filterType = nil
+			module.options.ScrollBar:SetValue(1)
+			module.options.ReloadPage()
+			ELib:DropDownClose()
+			module.options.filterDropDown:SetText(L.InspectViewerFilter)
+		end},
+	}
+	for i=1,#dropDownTable[1][1] do
+		self.filterDropDown.List[1].subMenu[i] = {text = L.classLocalizate[ dropDownTable[1][1][i] ],func = function (self,arg1)
+			module.db.filter = arg1
+			module.db.filterType = 1
+			module.options.ScrollBar:SetValue(1)
+			module.options.ReloadPage()
+			ELib:DropDownClose()
+			module.options.filterDropDown:SetText(L.InspectViewerFilterShort.. L.classLocalizate[ arg1 ] )
+		end, arg1 = dropDownTable[1][1][i]}
+	end
+	for i=1,#dropDownTable[2][1] do
+		self.filterDropDown.List[2].subMenu[i] = {text = dropDownTable[2][2][i],func = function (self,arg1,arg2)
+			module.db.filter = arg1
+			module.db.filterType = 2
+			module.options.ScrollBar:SetValue(1)
+			module.options.ReloadPage()
+			ELib:DropDownClose()
+			module.options.filterDropDown:SetText(L.InspectViewerFilterShort.. arg2 )
+		end, arg1 = dropDownTable[2][1][i], arg2 = dropDownTable[2][2][i]}
+	end
+	for i=1,#dropDownTable[3][1] do
+		self.filterDropDown.List[3].subMenu[i] = {text = dropDownTable[3][2][i],func = function (self,arg1,arg2)
+			module.db.filter = arg1
+			module.db.filterType = 3
+			module.options.ScrollBar:SetValue(1)
+			module.options.ReloadPage()
+			ELib:DropDownClose()
+			module.options.filterDropDown:SetText(L.InspectViewerFilterShort.. arg2 )
+		end, arg1 = dropDownTable[3][1][i], arg2 = dropDownTable[3][2][i]}
+	end
+	for i=1,#dropDownTable[4][1] do
+		local text = ""
+		for className,_ in pairs(module.db.classIDs) do
+			if dropDownTable[4][1][i]:find(className) then
+				text = text..(text ~= "" and ", " or "")..L.classLocalizate[ className ]
 			end
-			UIDropDownMenu_AddButton(info, level)
 		end
-		
-		if (level == 2) then
-			local Level1_Key = UIDROPDOWNMENU_MENU_VALUE["Level1_Key"]
-			local subarray = dropDownTable[Level1_Key]
-			for i=1,#subarray[1] do
-				local info = UIDropDownMenu_CreateInfo()
-				info.hasArrow = false
-				info.notCheckable = true
-				info.text = Level1_Key == 1 and ExRT.L.classLocalizate[ subarray[1][i] ] or subarray[2][i]
-				info.func = function (self,arg1,arg2)
-					module.db.filter = dropDownTable[arg2][1][arg1]
-					module.db.filterType = arg2
-					module.options.ScrollBar:SetValue(1)
-					module.options.ReloadPage()
-					CloseDropDownMenus()
-					module.options.filterDropDown:SetText(ExRT.L.InspectViewerFilterShort..(arg2 == 1 and ExRT.L.classLocalizate[ dropDownTable[arg2][1][arg1] ] or dropDownTable[arg2][2][arg1] ))
-				end
-				info.arg1 = i
-				info.arg2 = Level1_Key
-				UIDropDownMenu_AddButton(info, level)
-			end 
-		end
-
-	end)
+		self.filterDropDown.List[4].subMenu[i] = {text = text,func = function (self,arg1)
+			module.db.filter = arg1
+			module.db.filterType = 4
+			module.options.ScrollBar:SetValue(1)
+			module.options.ReloadPage()
+			ELib:DropDownClose()
+			module.options.filterDropDown:SetText(L.InspectViewerFilterShort.. text )
+		end, arg1 = dropDownTable[4][1][i]}
+	end
+	
+	module.db.achievementList = 2
+	self.achievementsDropDown = ELib:DropDown(self,330,#module.db.achievementsList + 2):Point(405,-25):Size(249):SetText(ACHIEVEMENT_FILTER_TITLE)
+	self.achievementsDropDown:Hide()
+	self.achievementsDropDown.List = {}
+	for i=1,#module.db.achievementsList do
+		self.achievementsDropDown.List[i] = {text = module.db.achievementsList[i][1],func = function (self)
+			module.db.achievementList = i
+			module.options.ScrollBar:SetValue(1)
+			module.options.ReloadPage()
+			ELib:DropDownClose()
+		end}
+	end
+	self.achievementsDropDown.List[ #self.achievementsDropDown.List + 1 ] = {text = ENABLE,checkable = true, checkState = VExRT.InspectViewer.EnableA4ivs, checkFunc = function(self,checked) 
+		VExRT.InspectViewer.EnableA4ivs = checked
+	end, func = ItemsTrackDropDownClick}
+	self.achievementsDropDown.List[ #self.achievementsDropDown.List + 1 ] = {text = L.minimapmenuclose,checkable = false,func = function()
+		ELib:DropDownClose()
+	end}
+	
 		
 	self.borderList = CreateFrame("Frame",nil,self)
-	self.borderList:SetSize(610,module.db.perPage*30+2)
-	self.borderList:SetPoint("TOP", 0, -35)
-	self.borderList:SetBackdrop({bgFile = "Interface/Tooltips/UI-Tooltip-Background",edgeFile = ExRT.mds.defBorder,tile = false,edgeSize = 8})
+	self.borderList:SetSize(650,module.db.perPage*30+2)
+	self.borderList:SetPoint("TOP", 0, -50)
+	self.borderList:SetBackdrop({bgFile = "Interface/Tooltips/UI-Tooltip-Background",edgeFile = ExRT.F.defBorder,tile = false,edgeSize = 8})
 	self.borderList:SetBackdropColor(0,0,0,0.3)
-	self.borderList:SetBackdropBorderColor(0.6,0.6,0.6,0.9)
+	self.borderList:SetBackdropBorderColor(.24,.25,.30,1)
 	
 	self.borderList:SetScript("OnMouseWheel",function (self,delta)
 		if delta > 0 then
@@ -407,8 +512,7 @@ function module.options:Load()
 		end
 	end)
 	
-	self.ScrollBar = ExRT.lib.CreateScrollBar(self.borderList,18,module.db.perPage*30-5,-1,-3,1,20,"TOPRIGHT")
-	self.ScrollBar:SetScript("OnUpdate",self.ScrollBar.ReButtonsState)
+	self.ScrollBar = ELib:ScrollBar(self.borderList):Size(16,module.db.perPage*30-7):Point("TOPRIGHT",-4,-4):Range(1,20)
 	
 	local function IsItemHasNotGem(link)
 		if link then
@@ -453,16 +557,25 @@ function module.options:Load()
 		end
 		table.sort(nowDB,function(a,b) return a[1] < b[1] end)
 
-		local scrollNow = ExRT.mds.Round(module.options.ScrollBar:GetValue())
+		local scrollNow = ExRT.F.Round(module.options.ScrollBar:GetValue())
 		local counter = 0
 		for i=scrollNow,#nowDB do
-			if not module.db.filter or (nowDB[i][2] and ((module.db.filterType == 1 and module.db.filter == nowDB[i][2].class) or (module.db.filterType == 2 and module.db.filter == module.db.armorType[ nowDB[i][2].class or "?" ]))) then
+			local data = nowDB[i][2]
+			local isInRaid = (not VExRT.InspectViewer.HideNotInRaid) or (VExRT.InspectViewer.HideNotInRaid and data and UnitName( nowDB[i][1] ))
+			if (not module.db.filter or (data and (
+			  (module.db.filterType == 1 and module.db.filter == data.class) or 
+			  (module.db.filterType == 2 and module.db.filter == module.db.armorType[ data.class or "?" ]) or 
+			  (module.db.filterType == 3 and module.db.roleBySpec[ data.spec or 0 ] and module.db.filter:find( module.db.roleBySpec[ data.spec or 0 ] )) or
+			  (module.db.filterType == 4 and module.db.filter:find( data.class ))
+			))) and isInRaid then
 				counter = counter + 1
 				
+				local name = nowDB[i][1]
 				local line = module.options.lines[counter]
-				line.name:SetText(nowDB[i][1])
-				if nowDB[i][2] then
-					local class = nowDB[i][2].class
+				line.name:SetText(name)
+				line.unit = name
+				if data then
+					local class = data.class
 					local classIconCoords = CLASS_ICON_TCOORDS[class]
 					if classIconCoords then
 						line.class.texture:SetTexture("Interface\\GLUES\\CHARACTERCREATE\\UI-CHARACTERCREATE-CLASSES")
@@ -471,10 +584,10 @@ function module.options:Load()
 						line.class.texture:SetTexture("Interface\\Icons\\INV_MISC_QUESTIONMARK")
 					end
 					
-					local spec = nowDB[i][2].spec
+					local spec = data.spec
 					local specIcon = module.db.specIcons[spec]
-					if not specIcon and VExRT and VExRT.ExCD2 and VExRT.ExCD2.gnGUIDs and VExRT.ExCD2.gnGUIDs[ nowDB[i][1] ] then
-						spec = VExRT.ExCD2.gnGUIDs[ nowDB[i][1] ]
+					if not specIcon and VExRT and VExRT.ExCD2 and VExRT.ExCD2.gnGUIDs and VExRT.ExCD2.gnGUIDs[ name ] then
+						spec = VExRT.ExCD2.gnGUIDs[ name ]
 						specIcon = module.db.specIcons[spec]
 					end
 					
@@ -486,7 +599,7 @@ function module.options:Load()
 						line.spec.id = nil
 					end
 					
-					line.ilvl:SetText(format("%.2f",nowDB[i][2].ilvl or 0))
+					line.ilvl:SetText(format("%.2f",data.ilvl or 0))
 					
 					line.linkSpecID = spec
 					line.linkClassID = module.db.classIDs[class or "?"]
@@ -500,8 +613,8 @@ function module.options:Load()
 						line.otherInfo:Hide()
 						line.otherInfoTooltipFrame:Hide()
 					
-						local items = nowDB[i][2].items
-						local items_ilvl = nowDB[i][2].items_ilvl
+						local items = data.items
+						local items_ilvl = data.items_ilvl
 						if items then
 							for j=1,#module.db.itemsSlotTable do
 								local slotID = module.db.itemsSlotTable[j]
@@ -515,9 +628,10 @@ function module.options:Load()
 									line.items[j].texture:SetTexture(itemTexture)
 									line.items[j].link = item
 									if (enchantID == 0 and (slotID == 2 or slotID == 15 or slotID == 11 or slotID == 12 or slotID == 16 or (module.db.specHasOffhand[spec or 0] and slotID == 17)) and module.db.colorizeNoEnch) or
-										(items_ilvl[slotID] and items_ilvl[slotID] > 0 and items_ilvl[slotID] < 600 and module.db.colorizeLowIlvl) or
-										(module.db.colorizeNoGems and ExRT.mds.IsBonusOnItem(item,module.db.socketsBonusIDs) and IsItemHasNotGem(item)) or 
-										(module.db.colorizeNoTopEnchGems and not IsTopEnchAndGems(item))
+										(items_ilvl[slotID] and items_ilvl[slotID] > 0 and items_ilvl[slotID] < 630 and module.db.colorizeLowIlvl) or
+										(module.db.colorizeNoGems and ExRT.F.IsBonusOnItem(item,module.db.socketsBonusIDs) and IsItemHasNotGem(item)) or 
+										(module.db.colorizeNoTopEnchGems and not IsTopEnchAndGems(item)) or
+										(items_ilvl[slotID] and items_ilvl[slotID] > 0 and items_ilvl[slotID] < 685 and module.db.colorizeLowIlvl685)
 										then
 										line.items[j].border:Show()
 									end
@@ -542,12 +656,12 @@ function module.options:Load()
 						line.otherInfoTooltipFrame:Hide()
 					
 						for j=1,7 do
-							local t = nowDB[i][2][j]
+							local t = data[j]
 							if t and t ~= 0 then
 								t = (j-1)*3+t
-								local spellTexture = select(3,GetTalentInfoByID( nowDB[i][2].talentsIDs[j] ))
+								local spellTexture = select(3,GetTalentInfoByID( data.talentsIDs[j] ))
 								line.items[j].texture:SetTexture(spellTexture)
-								line.items[j].link = GetTalentLink( nowDB[i][2].talentsIDs[j] )
+								line.items[j].link = GetTalentLink( data.talentsIDs[j] )
 								line.items[j].sid = nil
 								line.items[j]:Show()
 							else
@@ -556,7 +670,7 @@ function module.options:Load()
 						end
 						line.items[8]:Hide()
 						for j=9,14 do
-							local t = nowDB[i][2][module.db.glyphsIDs[j-8]]
+							local t = data[module.db.glyphsIDs[j-8]]
 							if t then
 								local spellTexture = GetSpellTexture(t)
 								line.items[j].texture:SetTexture(spellTexture)
@@ -573,17 +687,17 @@ function module.options:Load()
 							line.items[j].border:Hide()
 						end
 						line.time:Show()
-						line.time:SetText(date("%H:%M:%S",nowDB[i][2].time))
+						line.time:SetText(date("%H:%M:%S",data.time))
 						
 						local result = ""
 						for k,statName in ipairs(module.db.statsList) do
-							local statValue = nowDB[i][2][statName]
+							local statValue = data[statName]
 							if statValue and statValue > 50 then
 								if module.db.baseStats[statName] then
 									local classCount = module.db.classIDs[class]
 									if classCount then
 										statValue = statValue + module.db.baseStats[statName][classCount]
-										local raceCount = ExRT.mds.table_find(module.db.raceList,nowDB[i][2].race)
+										local raceCount = ExRT.F.table_find(module.db.raceList,data.race)
 										if raceCount then
 											statValue = statValue + module.db.raceStatsDiffs[statName][raceCount]
 										end
@@ -594,14 +708,14 @@ function module.options:Load()
 								end
 								if k <= 3 then
 									statValue = statValue * 1.05
-								elseif k <= 7 and nowDB[i][2].amplify and nowDB[i][2].amplify ~= 0 then
-									statValue = statValue * (1 + nowDB[i][2].amplify/100)
+								elseif k <= 7 and data.amplify and data.amplify ~= 0 then
+									statValue = statValue * (1 + data.amplify/100)
 								end
 								result = result .. module.db.statsListName[k] .. ": " ..floor(statValue)..", "
 							end
 						end
-						if nowDB[i][2].radiness and nowDB[i][2].radiness ~= 0 then
-							result = result..ExRT.L.InspectViewerRadiness..": "..format("%.2f%%",(nowDB[i][2].radiness or 0) * 100)
+						if data.radiness and data.radiness ~= 0 then
+							result = result..L.InspectViewerRadiness..": "..format("%.2f%%",(data.radiness or 0) * 100)
 						else
 							if string.len(result) > 0 then
 								result = string.sub(result,1,-3)
@@ -610,10 +724,70 @@ function module.options:Load()
 						line.otherInfo:SetText(result)
 						line.otherInfo:Show()
 						line.otherInfoTooltipFrame:Show()
+					elseif module.db.page == 4 then
+						for j=1,16 do
+							line.items[j]:Show()
+							line.items[j].border:Hide()
+						end
+						line.time:Hide()
+						line.otherInfo:Hide()
+						line.otherInfoTooltipFrame:Hide()
+						
+						local a4ivsData = module.db.inspectDBAch[name]
+						if a4ivsData then
+							for j=1,16 do
+								local id = module.db.achievementsList[ module.db.achievementList ][j + 1]
+								if id then
+									local _,acivName,_,_,_,_,_,_,_,texture = GetAchievementInfo(id)
+									local link,completed
+									if a4ivsData[id] then
+										local c_count = GetAchievementNumCriteria(id)
+										local criteria = (2 ^ c_count) - 1
+										link = format("|cffffff00|Hachievement:%d:%s:1:%s:%d:%d:%d:%d\124h[%s]|h|r",id,a4ivsData.guid,a4ivsData[id],criteria,criteria,criteria,criteria,acivName)
+										completed = true
+									else
+										link = format("|cffffff00|Hachievement:%d:%s:0:0:0:-1:0:0:0:0\124h[%s]|h|r",id,a4ivsData.guid,acivName)
+									end
+									
+									local statisticList = module.db.achievementsList_statistic[ module.db.achievementList ][j]
+									if statisticList then
+										local additional = {}
+										for k=1,#statisticList do
+											local statisticID = statisticList[k]
+											if statisticID ~= 0 then
+												local _,statisticName = GetAchievementInfo(statisticID)
+												additional[#additional + 1] = (statisticName or "?")..": |cffffffff"..( a4ivsData[ statisticID ] or 0 ).."|r"
+											else
+												additional[#additional + 1] = " "
+											end
+										end
+										line.items[j].additional = additional
+									else
+										line.items[j].additional = nil
+									end
+									
+									line.items[j].texture:SetTexture(texture)
+									line.items[j].link = link
+									if not completed then
+										line.items[j].border:Show()
+									end
+									
+									line.items[j]:Show()		
+								else
+									line.items[j]:Hide()
+								end
+							end
+						else
+							for j=1,16 do
+								line.items[j]:Hide()
+							end
+							line.otherInfo:SetText(L.BossWatcherDamageSwitchTabInfoNoInfo)
+							line.otherInfo:Show()
+						end
 					end
 					
-					local cR,cG,cB = ExRT.mds.classColorNum(class)
-					if nowDB[i][1] and UnitName(nowDB[i][1]) then
+					local cR,cG,cB = ExRT.F.classColorNum(class)
+					if name and UnitName(name) then
 						line.back:SetGradientAlpha("HORIZONTAL", cR,cG,cB, 0.5, cR,cG,cB, 0)
 					else
 						line.back:SetGradientAlpha("HORIZONTAL", cR,cG,cB, 0, cR,cG,cB, 0.5)
@@ -623,7 +797,7 @@ function module.options:Load()
 						line.items[j]:Hide()
 					end
 					line.time:Show()
-					line.time:SetText(ExRT.L.InspectViewerNoData)
+					line.time:SetText(L.InspectViewerNoData)
 					
 					line.otherInfo:Hide()
 					line.otherInfoTooltipFrame:Hide()
@@ -635,6 +809,12 @@ function module.options:Load()
 					line.ilvl:SetText("")
 					
 					line.back:SetGradientAlpha("HORIZONTAL", 0, 0, 0, 0.5, 0, 0, 0, 0)
+				end
+				
+				if not parentModule.db.inspectQuery[ name ] and module.db.page < 3 then
+					line.updateButton:Show()
+				else
+					line.updateButton:Hide()
 				end
 				
 				line:Show()
@@ -660,10 +840,10 @@ function module.options:Load()
 			return
 		end
 		local isRaid = IsInRaid()
-		local gMax = ExRT.mds.GetRaidDiffMaxGroup()
+		local gMax = ExRT.F.GetRaidDiffMaxGroup()
 		local ilvl = 0
 		local countPeople = 0
-		if isRaid then
+		if not isRaid then
 			for i=1,n do
 				local unit = "party"..i
 				if i==n then unit = "player" end
@@ -691,7 +871,7 @@ function module.options:Load()
 			return
 		end
 		ilvl = ilvl / countPeople
-		self.raidItemLevel:SetText(ExRT.L.InspectViewerRaidIlvl..": "..format("%.02f",ilvl).." ("..format(ExRT.L.InspectViewerRaidIlvlData,countPeople)..")")
+		self.raidItemLevel:SetText(L.InspectViewerRaidIlvl..": "..format("%.02f",ilvl).." ("..format(L.InspectViewerRaidIlvlData,countPeople)..")")
 	end
 	
 	local function otherInfoHover(self)
@@ -709,82 +889,116 @@ function module.options:Load()
 	local function Lines_SpecIcon_OnEnter(self)
 		if self.id then
 			local _,name,descr = GetSpecializationInfoByID(self.id)
-			ExRT.lib.TooltipShow(self,"ANCHOR_LEFT",name,{descr,1,1,1,true})
+			ELib.Tooltip.Show(self,"ANCHOR_LEFT",name,{descr,1,1,1,true})
 		end
 	end
 	local function Lines_ItemIcon_OnEnter(self)
 		if self.link then
 			local classID = self:GetParent().linkClassID
 			local specID = self:GetParent().linkSpecID
-			GameTooltip:SetOwner(self, "ANCHOR_LEFT")
-			GameTooltip:SetHyperlink(self.link,classID,specID)
-			GameTooltip:Show()
+			ELib.Tooltip.Link(self,self.link,classID,specID)
+			if module.db.page == 4 and self.additional then
+				ELib.Tooltip:Add(nil,self.additional,false,true)
+			end
 		end
+	end
+	local function Lines_ItemIcon_OnLeave(self)
+		ELib.Tooltip:Hide()
+		ELib.Tooltip:HideAdd()
 	end
 	local function Lines_ItemIcon_OnClick(self)
 		if self.link then
 			if module.db.page == 1 then
-				ExRT.mds.LinkItem(nil, self.link)
+				ExRT.F.LinkItem(nil, self.link)
 			elseif module.db.page == 2 then
 				if self.sid then
-					ExRT.mds.LinkSpell(self.sid)
+					ExRT.F.LinkSpell(self.sid)
 				else
-					ExRT.mds.LinkSpell(nil,self.link)
+					ExRT.F.LinkSpell(nil,self.link)
+				end
+			elseif module.db.page == 4 then
+				if ChatEdit_GetActiveWindow() then
+					ChatEdit_InsertLink(self.link)
+				else
+					ChatFrame_OpenChat(self.link)
 				end
 			end
 		end
 	end
-	
+	local function Lines_UpdateButton_OnEnter(self)
+		self.texture:SetVertexColor(0.9,0.75,0,1)
+	end	
+	local function Lines_UpdateButton_OnLeave(self)
+		self.texture:SetVertexColor(1,1,1,0.7)
+	end
+	local function Lines_UpdateButton_OnClick(self)
+		local unit = self:GetParent().unit
+		if unit then
+			parentModule:AddToQueue(unit)
+			module.options:showPage()
+		end
+	end	
+		
 	local IconBackDrop = {bgFile = "Interface/Tooltips/UI-Tooltip-Background", edgeFile = "Interface/Tooltips/UI-Tooltip-Border", tile = true, tileSize = 16, edgeSize = 16, insets = { left = 4, right = 4, top = 4, bottom = 4 }}
 	
 	self.lines = {}
 	for i=1,module.db.perPage do
-		self.lines[i] = CreateFrame("Frame",nil,self.borderList)
-		self.lines[i]:SetSize(592,30)
-		self.lines[i]:SetPoint("TOPLEFT",0,-(i-1)*30-1)
+		local line = CreateFrame("Frame",nil,self.borderList)
+		self.lines[i] = line
+		line:SetSize(625,30)
+		line:SetPoint("TOPLEFT",0,-(i-1)*30-1)
 		
-		self.lines[i].name = ExRT.lib.CreateText(self.lines[i],94,30,nil,5,0,"LEFT",nil,nil,11,"Name",nil,1,1,1,1)
+		line.name = ELib:Text(line,"Name",11):Color():Point(5,0):Size(94,30):Shadow()
 		
-		self.lines[i].class = ExRT.lib.CreateIcon(self.lines[i],24,nil,100,-3)
+		line.class = ELib:Icon(line,nil,24):Point(100,-3)
 		
-		self.lines[i].spec = ExRT.lib.CreateIcon(self.lines[i],24,nil,130,-3)
-		self.lines[i].spec:SetScript("OnEnter",Lines_SpecIcon_OnEnter)
-		self.lines[i].spec:SetScript("OnLeave",GameTooltip_Hide)
+		line.spec = ELib:Icon(line,nil,24):Point(130,-3)
+		line.spec:SetScript("OnEnter",Lines_SpecIcon_OnEnter)
+		line.spec:SetScript("OnLeave",GameTooltip_Hide)
 		
-		self.lines[i].ilvl = ExRT.lib.CreateText(self.lines[i],50,30,nil,160,0,"LEFT",nil,nil,11,"630.52",nil,1,1,1,1)
+		line.ilvl = ELib:Text(line,"630.52",11):Color():Point(160,0):Size(50,30):Shadow()
 		
-		self.lines[i].items = {}
+		line.items = {}
 		for j=1,16 do
-			self.lines[i].items[j] = ExRT.lib.CreateIcon(self.lines[i],22,nil,210+(24*(j-1)),-4,nil,true)
-			self.lines[i].items[j]:SetScript("OnEnter",Lines_ItemIcon_OnEnter)
-			self.lines[i].items[j]:SetScript("OnLeave",GameTooltip_Hide)
-			self.lines[i].items[j]:SetScript("OnClick",Lines_ItemIcon_OnClick)
+			local item = ELib:Icon(line,nil,22,true):Point(210+(24*(j-1)),-4)
+			line.items[j] = item
+			item:SetScript("OnEnter",Lines_ItemIcon_OnEnter)
+			item:SetScript("OnLeave",Lines_ItemIcon_OnLeave)
+			item:SetScript("OnClick",Lines_ItemIcon_OnClick)
 			
-			self.lines[i].items[j].border = CreateFrame("Frame",nil,self.lines[i].items[j])
-			self.lines[i].items[j].border:SetPoint("CENTER",0,0)
-			self.lines[i].items[j].border:SetSize(22+8,22+8)
-			self.lines[i].items[j].border:SetBackdrop(IconBackDrop)
-			self.lines[i].items[j].border:SetBackdropColor(1,0,0,.4)
-			self.lines[i].items[j].border:SetBackdropBorderColor(1,0,0,1)
+			item.border = CreateFrame("Frame",nil,item)
+			item.border:SetPoint("CENTER",0,0)
+			item.border:SetSize(22+8,22+8)
+			item.border:SetBackdrop(IconBackDrop)
+			item.border:SetBackdropColor(1,0,0,.4)
+			item.border:SetBackdropBorderColor(1,0,0,1)
 			
-			self.lines[i].items[j].border:Hide()
+			item.border:Hide()
 		end
 		
-		self.lines[i].time = ExRT.lib.CreateText(self.lines[i],80,30,nil,205,0,"CENTER",nil,nil,11,date("%H:%M:%S",time()),nil,1,1,1,1)
-		self.lines[i].otherInfo = ExRT.lib.CreateText(self.lines[i],305,30,nil,285,0,"LEFT",nil,nil,10,"",nil,1,1,1,1)
+		line.updateButton = ELib:Icon(line,[[Interface\AddOns\ExRT\media\DiesalGUIcons16x256x128]],18,true):Point(210+(24*16)+4,-8)
+		line.updateButton.texture:SetTexCoord(0.125,0.1875,0.5,0.625)
+		line.updateButton.texture:SetVertexColor(1,1,1,0.7)
+		line.updateButton:SetScript("OnEnter",Lines_UpdateButton_OnEnter)
+		line.updateButton:SetScript("OnLeave",Lines_UpdateButton_OnLeave)
+		line.updateButton:SetScript("OnClick",Lines_UpdateButton_OnClick)
+		line.updateButton:Hide()
 		
-		self.lines[i].otherInfoTooltipFrame = CreateFrame("Frame",nil,self.lines[i])
-		self.lines[i].otherInfoTooltipFrame:SetAllPoints(self.lines[i].otherInfo)
-		self.lines[i].otherInfoTooltipFrame:SetScript("OnEnter",otherInfoHover)
-		self.lines[i].otherInfoTooltipFrame:SetScript("OnLeave",GameTooltip_Hide)
+		line.time = ELib:Text(line,date("%H:%M:%S",time()),11):Color():Point(205,0):Size(80,30):Shadow():Center()
+		line.otherInfo = ELib:Text(line,"",10):Color():Point(285,0):Size(335,30):Shadow()
 		
-		self.lines[i].back = self.lines[i]:CreateTexture(nil, "BACKGROUND")
-		self.lines[i].back:SetPoint("TOPLEFT",2,-1)
-		self.lines[i].back:SetPoint("BOTTOMRIGHT",0,0)
-		self.lines[i].back:SetTexture( 1, 1, 1, 1)
-		self.lines[i].back:SetGradientAlpha("HORIZONTAL", 0, 0, 0, 1, 0, 0, 0, 0)
+		line.otherInfoTooltipFrame = CreateFrame("Frame",nil,line)
+		line.otherInfoTooltipFrame:SetAllPoints(line.otherInfo)
+		line.otherInfoTooltipFrame:SetScript("OnEnter",otherInfoHover)
+		line.otherInfoTooltipFrame:SetScript("OnLeave",GameTooltip_Hide)
+		
+		line.back = line:CreateTexture(nil, "BACKGROUND")
+		line.back:SetPoint("TOPLEFT",2,-1)
+		line.back:SetPoint("BOTTOMRIGHT",0,0)
+		line.back:SetTexture( 1, 1, 1, 1)
+		line.back:SetGradientAlpha("HORIZONTAL", 0, 0, 0, 1, 0, 0, 0, 0)
 	end
-	self.raidItemLevel = ExRT.lib.CreateText(self,500,20,nil,10,-549,nil,"TOP",nil,12,"",nil,1,1,1,1)
+	self.raidItemLevel = ELib:Text(self,"",12):Size(500,20):Point("TOPLEFT",self.borderList,"BOTTOMLEFT",3,-2):Shadow():Color()
 	
 	local animationTimer = 0
 	self:SetScript("OnUpdate",function (self, elapsed)
@@ -810,17 +1024,15 @@ function module.options:Load()
 		end
 	end)
 	
-	self.moreInfoButton = ExRT.lib.CreateButton(self,200,15,nil,0,0,ExRT.L.InspectViewerMoreInfo)
-	ExRT.lib.SetPoint(self.moreInfoButton,"TOPRIGHT",self.borderList,"BOTTOMRIGHT",0,-1)
-	self.moreInfoButton:SetScript("OnClick",function() module.options.moreInfoWindow:Show() end)
+	self.moreInfoButton = ELib:Button(self,L.InspectViewerMoreInfo):Size(150,20):Point("TOPRIGHT",self.borderList,"BOTTOMRIGHT",0,-1):OnClick(function() module.options.moreInfoWindow:Show() end)
 	
-	self.moreInfoWindow = ExRT.lib.CreatePopupFrame(250,170,ExRT.L.InspectViewerMoreInfo)
+	self.moreInfoWindow = ELib:Popup(L.InspectViewerMoreInfo):Size(250,170)
 	self.moreInfoWindow:SetScript("OnShow",function (self)
 		local armorCloth,armorLeather,armorMail,armorPlate = 0,0,0,0
 		local roleTank,roleMDD,roleRDD,roleHealer = 0,0,0,0
 	
 		local n = GetNumGroupMembers() or 0
-		local gMax = ExRT.mds.GetRaidDiffMaxGroup()
+		local gMax = ExRT.F.GetRaidDiffMaxGroup()
 		local ilvl = 0
 		local countPeople = 0
 		for i=1,n do
@@ -856,20 +1068,25 @@ function module.options:Load()
 		end
 	
 		self.textData:SetText(
-			ExRT.L.InspectViewerMoreInfoRaidSetup..format(" ("..ExRT.L.InspectViewerRaidIlvlData.."):",countPeople).."\n"..
-			ExRT.L.InspectViewerType..":\n"..
-			"   "..ExRT.L.InspectViewerTypeCloth..": "..armorCloth.."\n"..
-			"   "..ExRT.L.InspectViewerTypeLeather..": "..armorLeather.."\n"..
-			"   "..ExRT.L.InspectViewerTypeMail..": "..armorMail.."\n"..
-			"   "..ExRT.L.InspectViewerTypePlate..": "..armorPlate.."\n"..
-			ExRT.L.InspectViewerMoreInfoRole..":\n"..
-			"   "..ExRT.L.InspectViewerMoreInfoRoleTank..": "..roleTank.."\n"..
-			"   "..ExRT.L.InspectViewerMoreInfoRoleMDD..": "..roleMDD.."\n"..
-			"   "..ExRT.L.InspectViewerMoreInfoRoleRDD..": "..roleRDD.."\n"..
-			"   "..ExRT.L.InspectViewerMoreInfoRoleHealer..": "..roleHealer
+			L.InspectViewerMoreInfoRaidSetup..format(" ("..L.InspectViewerRaidIlvlData.."):",countPeople).."\n"..
+			L.InspectViewerType..":\n"..
+			"   "..L.InspectViewerTypeCloth..": "..armorCloth.."\n"..
+			"   "..L.InspectViewerTypeLeather..": "..armorLeather.."\n"..
+			"   "..L.InspectViewerTypeMail..": "..armorMail.."\n"..
+			"   "..L.InspectViewerTypePlate..": "..armorPlate.."\n"..
+			L.InspectViewerMoreInfoRole..":\n"..
+			"   "..L.InspectViewerMoreInfoRoleTank..": "..roleTank.."\n"..
+			"   "..L.InspectViewerMoreInfoRoleMDD..": "..roleMDD.."\n"..
+			"   "..L.InspectViewerMoreInfoRoleRDD..": "..roleRDD.."\n"..
+			"   "..L.InspectViewerMoreInfoRoleHealer..": "..roleHealer
 		)
 	end)
-	self.moreInfoWindow.textData = ExRT.lib.CreateText(self.moreInfoWindow,225,180,"TOP",0,-32,"LEFT","TOP",nil,11,"",nil,1,1,1)
+	self.moreInfoWindow.textData  = ELib:Text(self.moreInfoWindow,"",11):Size(225,180):Point("TOP",0,-32):Top():Color()
+	
+	self.buttonForce = ELib:Button(self,L.InspectViewerForce):Size(90,20):Point("RIGHT",self.moreInfoButton,"LEFT",-5,0):OnClick(function(self) 
+		parentModule:Force() 
+		self:SetEnabled(false)
+	end)
 	
 	function module.options.showPage()
 		local count = 0
@@ -881,17 +1098,26 @@ function module.options:Load()
 				count = count + 1
 			end
 		end
-		self.ScrollBar:SetMinMaxValues(1,max(count-module.db.perPage+1,1))
+		self.ScrollBar:SetMinMaxValues(1,max(count-module.db.perPage+1,1)):UpdateButtons()
 		module.options.ReloadPage()
 		
 		module.options.RaidIlvl()
 	end
 	function self.UpdatePage_InspectEvent()
-		module.options.showPage()
-		ExRT.mds.ScheduleTimer(module.options.showPage, 4)
+		if not module.options:IsShown() then
+			return
+		end
+		module.options:showPage()
+		ExRT.F.ScheduleTimer(module.options.showPage, 4)
 	end
 	
 	self.borderList:SetScript("OnShow",module.options.showPage)
 	module:RegisterEvents("INSPECT_READY")
-	module.options.showPage()
+	module.options:showPage()
+end
+
+function module:slash(arg)
+	if arg == "raid" then
+		ExRT.Options:Open(module.options)
+	end
 end

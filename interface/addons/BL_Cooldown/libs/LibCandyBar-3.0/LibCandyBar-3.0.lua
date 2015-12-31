@@ -20,7 +20,7 @@ local CreateFrame, error, setmetatable, UIParent = CreateFrame, error, setmetata
 if not LibStub then error("LibCandyBar-3.0 requires LibStub.") end
 local cbh = LibStub:GetLibrary("CallbackHandler-1.0")
 if not cbh then error("LibCandyBar-3.0 requires CallbackHandler-1.0") end
-local lib, old = LibStub:NewLibrary("LibCandyBar-3.0", 89) -- Bump minor on changes
+local lib, old = LibStub:NewLibrary("LibCandyBar-3.0", 90) -- Bump minor on changes
 if not lib then return end
 lib.callbacks = lib.callbacks or cbh:New(lib)
 local cb = lib.callbacks
@@ -187,6 +187,26 @@ function barPrototype:Get(key) return self.data and self.data[key] end
 -- @param b Blue component (0-1)
 -- @param a Alpha (0-1)
 function barPrototype:SetColor(...) self.candyBarBar:SetStatusBarColor(...) end
+--- Sets the color of the bar label and bar duration text.
+-- @paramsig r, g, b, a
+-- @param r Red component (0-1)
+-- @param g Green component (0-1)
+-- @param b Blue component (0-1)
+-- @param a Alpha (0-1)
+function barPrototype:SetTextColor(...)
+	self.candyBarLabel:SetTextColor(...)
+	self.candyBarDuration:SetTextColor(...)
+end
+--- Sets the shadow color of the bar label and bar duration text.
+-- @paramsig r, g, b, a
+-- @param r Red component (0-1)
+-- @param g Green component (0-1)
+-- @param b Blue component (0-1)
+-- @param a Alpha (0-1)
+function barPrototype:SetShadowColor(...)
+	self.candyBarLabel:SetShadowColor(...)
+	self.candyBarDuration:SetShadowColor(...)
+end
 --- Sets the texture of the bar.
 -- This should only be needed on running bars that get changed on the fly.
 -- @param texture Path to the bar texture.
@@ -356,6 +376,7 @@ function lib:New(texture, width, height)
 	bar:SetScale(1)
 	bar:SetAlpha(1)
 	bar:SetClampedToScreen(false)
+	bar:EnableMouse(false)
 
 	bar.candyBarLabel:SetTextColor(1,1,1,1)
 	bar.candyBarLabel:SetJustifyH("CENTER")

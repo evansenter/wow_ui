@@ -5,6 +5,8 @@ local IsEncounterInProgress, GetTime = IsEncounterInProgress, GetTime
 local VExRT = nil
 
 local module = ExRT.mod:New("RaidCheck",ExRT.L.raidcheck,nil,true)
+local ELib,L = ExRT.lib,ExRT.L
+
 module.db.isEncounter = nil
 module.db.tableFood = {
 --Stamina,	Spirit,		Int,		Agi,		Str 		Crit		Haste		Mastery		MS		Versatility	Armor
@@ -15,6 +17,8 @@ module.db.tableFood = {
 [160883]=100,									[175218]=100,	[175219]=100,	[175220]=100,	[175222]=100,	[175223]=100,
 [165802]=100,
 [180747]=125,									[180745]=125,	[180748]=125,	[180750]=125,	[180749]=125,	[180746]=125,
+
+[188534]=125, --new food
 }
 module.db.StaminaFood = {[160600]=true,[175784]=true,[160883]=true,[165802]=true,[180747]=true}
 
@@ -119,6 +123,7 @@ do
 			SpellName(90363),	-- Shale Spider, Embrace of the Shale Spider
 			SpellName(160052),	-- Raptor, Strength of the Pack
 			SpellName(160200),	-- Hunter, level 100
+			SpellName(128997),	-- Spirit Beast Blessing
 		},
 		HASTE={
 			SpellName(55610),	-- Unholy Aura
@@ -173,15 +178,17 @@ do
 	}
 end
 
+local IsSendFoodByMe,IsSendFlaskByMe,IsSendRunesByMe,IsSendBuffsByMe = nil
+
 local function GetPotion(arg1)
-	local h = ExRT.L.raidcheckPotion
+	local h = L.raidcheckPotion
 	local t = {}
 	for key,val in pairs(module.db.potionList) do
 		t[#t+1] = {key,val}
 	end
 
 	local function toChat(h)
-		local chat_type = ExRT.mds.chatType(true)
+		local chat_type = ExRT.F.chatType(true)
 		if arg1 == 2 then print(h) end
 		if arg1 == 1 then SendChatMessage(h,chat_type) end  
 	end
@@ -198,14 +205,14 @@ local function GetPotion(arg1)
 end
 
 local function GetHs(arg1)
-	local h = ExRT.L.raidcheckHS
+	local h = L.raidcheckHS
 	local t = {}
 	for key,val in pairs(module.db.hsList) do
 		t[#t+1] = {key,val}
 	end
 
 	local function toChat(h)
-		local chat_type = ExRT.mds.chatType(true)
+		local chat_type = ExRT.F.chatType(true)
 		if arg1 == 2 then print(h) end
 		if arg1 == 1 then SendChatMessage(h,chat_type) end
 	end
@@ -237,7 +244,7 @@ local function PublicResults(msg,chat_type)
 		msg = msg:gsub("|c........","")
 		msg = msg:gsub("|r","")
 	
-		chat_type = ExRT.mds.chatType(true)
+		chat_type = ExRT.F.chatType(true)
 		SendChatMessage(msg,chat_type)
 	else
 		print(msg)
@@ -247,7 +254,7 @@ end
 
 local function GetRunes(checkType)
 	local f = {[0]={},[50]={}}
-	local gMax = ExRT.mds.GetRaidDiffMaxGroup()
+	local gMax = ExRT.F.GetRaidDiffMaxGroup()
 	for j=1,40 do
 		local name,_,subgroup = GetRaidRosterInfo(j)
 		if name and subgroup <= gMax then
@@ -288,7 +295,7 @@ local function GetRunes(checkType)
 		if checkType == 3 then
 			checkType = nil
 		end
-		local result = format("|cff00ff00%s (%d):|r ",ExRT.L.RaidCheckNoRunes,#f[0])
+		local result = format("|cff00ff00%s (%d):|r ",L.RaidCheckNoRunes,#f[0])
 		for i=1,#f[0] do
 			result = result .. f[0][i]
 			if #result > 230 then
@@ -304,7 +311,7 @@ end
 
 local function GetFood(checkType)
 	local f = {[0]={}}
-	local gMax = ExRT.mds.GetRaidDiffMaxGroup()
+	local gMax = ExRT.F.GetRaidDiffMaxGroup()
 	for j=1,40 do
 		local name,_,subgroup = GetRaidRosterInfo(j)
 		if name and subgroup <= gMax then
@@ -325,10 +332,11 @@ local function GetFood(checkType)
 							stats = ceil( stats / 1.5 )
 						end
 						stats = stats or foodType
+						if spellId == 188534 then stats = 125 end
 					
 						f[stats] = f[stats] or {}
 						f[stats][ #f[stats]+1 ] = name
-						if ExRT.mds.table_find(module.db.tableFood_headers,stats) then
+						if ExRT.F.table_find(module.db.tableFood_headers,stats) then
 							isAnyBuff = true
 						end
 					end
@@ -366,7 +374,7 @@ local function GetFood(checkType)
 			end
 		end
 		sort(badStats)
-		local result = format("|cff00ff00%s (%d):|r ",ExRT.L.raidchecknofood,counter)
+		local result = format("|cff00ff00%s (%d):|r ",L.raidchecknofood,counter)
 		for i=1,#badStats do
 			local statsNum = badStats[i]
 			for j=1,#f[statsNum] do
@@ -384,7 +392,7 @@ end
 
 local function GetFlask(checkType)
 	local f = {[0]={}}
-	local gMax = ExRT.mds.GetRaidDiffMaxGroup()
+	local gMax = ExRT.F.GetRaidDiffMaxGroup()
 	local _time = GetTime()
 	for j=1,40 do
 		local name,_,subgroup = GetRaidRosterInfo(j)
@@ -404,7 +412,7 @@ local function GetFlask(checkType)
 							lost = 901
 						end
 						f[flaskType][ #f[flaskType]+1 ] = {name,lost}
-						if ExRT.mds.table_find(module.db.tableFlask_headers,flaskType) then
+						if ExRT.F.table_find(module.db.tableFlask_headers,flaskType) then
 							isAnyBuff = true
 						end
 					end
@@ -440,7 +448,7 @@ local function GetFlask(checkType)
 			checkType = nil
 		end
 		f[0] = f[0] or {}
-		local result = format("|cff00ff00%s (%d):|r ",ExRT.L.raidchecknoflask,#f[0])
+		local result = format("|cff00ff00%s (%d):|r ",L.raidchecknoflask,#f[0])
 		for j=1,#f[0] do
 			result = result .. format("%s%s",f[0][j][1] or "?",j < #f[0] and ", " or "")
 			if #result > 230 then
@@ -479,18 +487,19 @@ end
 local function GetRaidBuffs(checkType)
 	local f = {}
 	for i=1,#module.db.buffsList do f[i]={} end
-	local gMax = ExRT.mds.GetRaidDiffMaxGroup()
+	local gMax = ExRT.F.GetRaidDiffMaxGroup()
 	for i=1,40 do
 		local name,_,subgroup,_,_,_,_,online,isDead = GetRaidRosterInfo(i)
 		if name and subgroup <= gMax and online and not isDead then
 			for j=1,#module.db.buffsList do
 				local isAnyBuff = nil
-				local buffTable = module.db.buffsSpells[  module.db.buffsList[j]  ]
-				for k=1,#buffTable do
-					local auraExists = UnitAura(name, buffTable[k])
-					if auraExists then
-						isAnyBuff = true
-						break
+				for k,buffName in pairs(module.db.buffsSpells[ module.db.buffsList[j] ]) do
+					if buffName then
+						local auraExists = UnitAura(name, buffName)
+						if auraExists then
+							isAnyBuff = true
+							break
+						end
 					end
 				end
 				if not isAnyBuff then
@@ -522,7 +531,7 @@ local function GetRaidBuffs(checkType)
 				missingCount = missingCount + 1
 			end
 		end
-		local result = format("|cff00ff00%s (%d):|r ",ExRT.L.RaidCheckNoBuffs,missingCount)
+		local result = format("|cff00ff00%s (%d):|r ",L.RaidCheckNoBuffs,missingCount)
 		local missingNow = 0
 		for i=1,#f do
 			if #f[i] > 0 then
@@ -542,70 +551,31 @@ end
 function module.options:Load()
 	self:CreateTilte()
 
-	self.food = ExRT.lib.CreateButton(self,230,22,nil,10,-30,ExRT.L.raidcheckfood)       
-	self.food:SetScript("OnClick",function()
-		GetFood()
-	end)
-	self.food.txt = ExRT.lib.CreateText(self,100,22,nil,0,0,nil,nil,nil,11,"/rt food")
-	self.food.txt:SetNewPoint("LEFT",self.food,"RIGHT",5,0)
+	self.food = ELib:Button(self,L.raidcheckfood):Size(230,20):Point(5,-30):OnClick(function() GetFood() end)
+	self.food.txt = ELib:Text(self,"/rt food",11):Size(100,20):Point("LEFT",self.food,"RIGHT",5,0)
 	
-	self.foodToChat = ExRT.lib.CreateButton(self,230,22,nil,0,0,ExRT.L.raidcheckfoodchat)       
-	self.foodToChat:SetScript("OnClick",function()
-		GetFood(1)
-	end)
-	self.foodToChat:SetNewPoint("LEFT",self.food,"RIGHT",71,0)
-	self.foodToChat.txt = ExRT.lib.CreateText(self,100,22,nil,0,0,nil,nil,nil,11,"/rt foodchat")
-	self.foodToChat.txt:SetNewPoint("LEFT",self.foodToChat,"RIGHT",5,0)
-	
-	self.flask = ExRT.lib.CreateButton(self,230,22,nil,10,-55,ExRT.L.raidcheckflask)       
-	self.flask:SetScript("OnClick",function()
-		GetFlask()
-	end)  
-	self.flask.txt = ExRT.lib.CreateText(self,100,22,nil,0,0,nil,nil,nil,11,"/rt flask")
-	self.flask.txt:SetNewPoint("LEFT",self.flask,"RIGHT",5,0)
-	
-	self.flaskToChat = ExRT.lib.CreateButton(self,230,22,nil,0,0,ExRT.L.raidcheckflaskchat)       
-	self.flaskToChat:SetScript("OnClick",function()
-		GetFlask(1)
-	end)
-	self.flaskToChat:SetNewPoint("LEFT",self.flask,"RIGHT",71,0)
-	self.flaskToChat.txt = ExRT.lib.CreateText(self,100,22,nil,0,0,nil,nil,nil,11,"/rt flaskchat")
-	self.flaskToChat.txt:SetNewPoint("LEFT",self.flaskToChat,"RIGHT",5,0)	
-	
-	self.runes = ExRT.lib.CreateButton(self,230,22,nil,10,-80,ExRT.L.RaidCheckRunesCheck)       
-	self.runes:SetScript("OnClick",function()
-		GetRunes()
-	end)
-	self.runes.txt = ExRT.lib.CreateText(self,60,22,nil,0,0,nil,nil,nil,11,"/rt check runes")
-	self.runes.txt:SetNewPoint("LEFT",self.runes,"RIGHT",5,0)
-	
-	self.runesToChat = ExRT.lib.CreateButton(self,230,22,nil,0,0,ExRT.L.RaidCheckRunesChat)       
-	self.runesToChat:SetScript("OnClick",function()
-		GetRunes(1)
-	end)
-	self.runesToChat:SetNewPoint("LEFT",self.runes,"RIGHT",71,0)
-	self.runesToChat.txt = ExRT.lib.CreateText(self,100,22,nil,0,0,nil,nil,nil,11,"/rt check runeschat")
-	self.runesToChat.txt:SetNewPoint("LEFT",self.runesToChat,"RIGHT",5,0)
-	
-	
-	self.buffs = ExRT.lib.CreateButton(self,230,22,nil,10,-105,ExRT.L.RaidCheckBuffs)       
-	self.buffs:SetScript("OnClick",function()
-		GetRaidBuffs()
-	end)
-	self.buffs.txt = ExRT.lib.CreateText(self,60,22,nil,0,0,nil,nil,nil,11,"/rt check buffs")
-	self.buffs.txt:SetNewPoint("LEFT",self.buffs,"RIGHT",5,0)
-	
-	self.buffsToChat = ExRT.lib.CreateButton(self,230,22,nil,0,0,ExRT.L.RaidCheckBuffsToChat)       
-	self.buffsToChat:SetScript("OnClick",function()
-		GetRaidBuffs(1)
-	end)
-	self.buffsToChat:SetNewPoint("LEFT",self.buffs,"RIGHT",71,0)
-	self.buffsToChat.txt = ExRT.lib.CreateText(self,100,22,nil,0,0,nil,nil,nil,11,"/rt check buffschat")
-	self.buffsToChat.txt:SetNewPoint("LEFT",self.buffsToChat,"RIGHT",5,0)
+	self.foodToChat = ELib:Button(self,L.raidcheckfoodchat):Size(230,20):Point("LEFT",self.food,"RIGHT",71,0):OnClick(function() GetFood(1) end)
+	self.foodToChat.txt = ELib:Text(self,"/rt foodchat",11):Size(100,20):Point("LEFT",self.foodToChat,"RIGHT",5,0)
 
+	self.flask = ELib:Button(self,L.raidcheckflask):Size(230,20):Point(5,-55):OnClick(function() GetFlask() end)
+	self.flask.txt = ELib:Text(self,"/rt flask",11):Size(100,20):Point("LEFT",self.flask,"RIGHT",5,0)
 	
-	self.chkSlak = ExRT.lib.CreateCheckBox(self,nil,10,-130,ExRT.L.raidcheckslak)
-	self.chkSlak:SetScript("OnClick", function(self,event) 
+	self.flaskToChat = ELib:Button(self,L.raidcheckflaskchat):Size(230,20):Point("LEFT",self.flask,"RIGHT",71,0):OnClick(function() GetFlask(1) end)
+	self.flaskToChat.txt = ELib:Text(self,"/rt flaskchat",11):Size(100,20):Point("LEFT",self.flaskToChat,"RIGHT",5,0)
+	
+	self.runes = ELib:Button(self,L.RaidCheckRunesCheck):Size(230,20):Point(5,-80):OnClick(function() GetRunes() end)
+	self.runes.txt = ELib:Text(self,"/rt check runes",11):Size(60,22):Point("LEFT",self.runes,"RIGHT",5,0)
+	
+	self.runesToChat = ELib:Button(self,L.RaidCheckRunesChat):Size(230,20):Point("LEFT",self.runes,"RIGHT",71,0):OnClick(function() GetRunes(1) end)
+	self.runesToChat.txt = ELib:Text(self,"/rt check runeschat",11):Size(100,22):Point("LEFT",self.runesToChat,"RIGHT",5,0)
+	
+	self.buffs = ELib:Button(self,L.RaidCheckBuffs):Size(230,20):Point(5,-105):OnClick(function() GetRaidBuffs() end)
+	self.buffs.txt = ELib:Text(self,"/rt check buffs",11):Size(60,22):Point("LEFT",self.buffs,"RIGHT",5,0)
+	
+	self.buffsToChat = ELib:Button(self,L.RaidCheckBuffsToChat):Size(230,20):Point("LEFT",self.buffs,"RIGHT",71,0):OnClick(function() GetRaidBuffs(1) end)
+	self.buffsToChat.txt = ELib:Text(self,"/rt check buffschat",11):Size(100,22):Point("LEFT",self.buffsToChat,"RIGHT",5,0)
+
+	self.chkSlak = ELib:Check(self,L.raidcheckslak,VExRT.RaidCheck.ReadyCheck):Point(7,-130):OnClick(function(self) 
 		if self:GetChecked() then
 			VExRT.RaidCheck.ReadyCheck = true
 			module:RegisterEvents('READY_CHECK')
@@ -617,8 +587,7 @@ function module.options:Load()
 		end
 	end)
 	
-	self.chkOnAttack = ExRT.lib.CreateCheckBox(self,nil,35,-155,ExRT.L.RaidCheckOnAttack,VExRT.RaidCheck.OnAttack)
-	self.chkOnAttack:SetScript("OnClick", function(self,event) 
+	self.chkOnAttack = ELib:Check(self,L.RaidCheckOnAttack,VExRT.RaidCheck.OnAttack):Point("TOPLEFT",self.chkSlak,"TOPLEFT",25,-25):OnClick(function(self) 
 		if self:GetChecked() then
 			VExRT.RaidCheck.OnAttack = true
 		else
@@ -626,8 +595,7 @@ function module.options:Load()
 		end
 	end)
 	
-	self.chkSendSelf = ExRT.lib.CreateCheckBox(self,nil,35,-180,ExRT.L.RaidCheckSendSelf,VExRT.RaidCheck.SendSelf)
-	self.chkSendSelf:SetScript("OnClick", function(self,event) 
+	self.chkSendSelf = ELib:Check(self,L.RaidCheckSendSelf,VExRT.RaidCheck.SendSelf):Point("TOPLEFT",self.chkOnAttack,"TOPLEFT",0,-25):OnClick(function(self) 
 		if self:GetChecked() then
 			VExRT.RaidCheck.SendSelf = true
 		else
@@ -635,8 +603,15 @@ function module.options:Load()
 		end
 	end)
 	
-	self.chkRunes = ExRT.lib.CreateCheckBox(self,nil,10,-205,ExRT.L.RaidCheckRunesEnable,VExRT.RaidCheck.RunesCheck)
-	self.chkRunes:SetScript("OnClick", function(self,event) 
+	self.disableLFR = ELib:Check(self,L.RaidCheckDisableInLFR,VExRT.RaidCheck.disableLFR):Point("TOPLEFT",self.chkSendSelf,"TOPLEFT",0,-25):OnClick(function(self) 
+		if self:GetChecked() then
+			VExRT.RaidCheck.disableLFR = true
+		else
+			VExRT.RaidCheck.disableLFR = nil
+		end
+	end)
+	
+	self.chkRunes = ELib:Check(self,L.RaidCheckRunesEnable,VExRT.RaidCheck.RunesCheck):Point(7,-230):OnClick(function(self) 
 		if self:GetChecked() then
 			VExRT.RaidCheck.RunesCheck = true
 		else
@@ -644,8 +619,7 @@ function module.options:Load()
 		end
 	end)
 	
-	self.chkBuffs = ExRT.lib.CreateCheckBox(self,nil,10,-230,ExRT.L.RaidCheckBuffsEnable,VExRT.RaidCheck.BuffsCheck)
-	self.chkBuffs:SetScript("OnClick", function(self,event) 
+	self.chkBuffs = ELib:Check(self,L.RaidCheckBuffsEnable,VExRT.RaidCheck.BuffsCheck):Point(7,-255):OnClick(function(self) 
 		if self:GetChecked() then
 			VExRT.RaidCheck.BuffsCheck = true
 		else
@@ -653,81 +627,56 @@ function module.options:Load()
 		end
 	end)
 	
-	self.minFoodLevelText = ExRT.lib.CreateText(self,0,25,nil,15,-258,nil,nil,nil,11,ExRT.L.RaidCheckMinFoodLevel)
+	self.minFoodLevelText = ELib:Text(self,L.RaidCheckMinFoodLevel,11):Point("TOPLEFT",self.chkBuffs,"TOPLEFT",3,-23):Size(0,25)
 
-	self.minFoodLevelAny = CreateFrame("CheckButton",nil,self,"UIRadioButtonTemplate")  
-	self.minFoodLevelAny:SetPoint("LEFT",self.minFoodLevelText,"RIGHT", 15, 0)
-	self.minFoodLevelAny.text:SetText(ExRT.L.RaidCheckMinFoodLevelAny)
-	self.minFoodLevelAny:SetScript("OnClick", function(self,event) 
+	self.minFoodLevelAny = ELib:Radio(self,L.RaidCheckMinFoodLevelAny,not VExRT.RaidCheck.FoodMinLevel):Point("LEFT",self.minFoodLevelText,"RIGHT", 15, 0):OnClick(function(self) 
 		self:SetChecked(true)
 		module.options.minFoodLevel100:SetChecked(false)
 		module.options.minFoodLevel125:SetChecked(false)
 		VExRT.RaidCheck.FoodMinLevel = nil
 	end)
-	self.minFoodLevelAny:SetChecked(not VExRT.RaidCheck.FoodMinLevel)
 
 	
-	self.minFoodLevel100 = CreateFrame("CheckButton",nil,self,"UIRadioButtonTemplate")  
-	self.minFoodLevel100:SetPoint("LEFT",self.minFoodLevelAny,"RIGHT", 75, 0)
-	self.minFoodLevel100.text:SetText("100")
-	self.minFoodLevel100:SetScript("OnClick", function(self,event) 
+	self.minFoodLevel100 = ELib:Radio(self,"100",VExRT.RaidCheck.FoodMinLevel == 100):Point("LEFT",self.minFoodLevelAny,"RIGHT", 75, 0):OnClick(function(self) 
 		self:SetChecked(true)
 		module.options.minFoodLevelAny:SetChecked(false)
 		module.options.minFoodLevel125:SetChecked(false)
 		VExRT.RaidCheck.FoodMinLevel = 100
 	end)
-	self.minFoodLevel100:SetChecked(VExRT.RaidCheck.FoodMinLevel == 100)
 	
-	self.minFoodLevel125 = CreateFrame("CheckButton",nil,self,"UIRadioButtonTemplate")  
-	self.minFoodLevel125:SetPoint("LEFT",self.minFoodLevel100,"RIGHT", 75, 0)
-	self.minFoodLevel125.text:SetText("125")
-	self.minFoodLevel125:SetScript("OnClick", function(self,event) 
+	self.minFoodLevel125 = ELib:Radio(self,"125",VExRT.RaidCheck.FoodMinLevel == 125):Point("LEFT",self.minFoodLevel100,"RIGHT", 75, 0):OnClick(function(self) 
 		self:SetChecked(true)
 		module.options.minFoodLevelAny:SetChecked(false)
 		module.options.minFoodLevel100:SetChecked(false)
 		VExRT.RaidCheck.FoodMinLevel = 125
 	end)
-	self.minFoodLevel125:SetChecked(VExRT.RaidCheck.FoodMinLevel == 125)
 	
 	
-	self.minFlaskExpText = ExRT.lib.CreateText(self,0,25,nil,15,-283,nil,nil,nil,11,ExRT.L.RaidCheckMinFlaskExp)
+	self.minFlaskExpText = ELib:Text(self,L.RaidCheckMinFlaskExp,11):Point("TOPLEFT",self.minFoodLevelText,"TOPLEFT",0,-22):Size(0,25)
 	
-	self.minFlaskExpNo = CreateFrame("CheckButton",nil,self,"UIRadioButtonTemplate")  
-	self.minFlaskExpNo:SetPoint("LEFT",self.minFlaskExpText,"RIGHT", 15, 0)
-	self.minFlaskExpNo.text:SetText(ExRT.L.RaidCheckMinFlaskExpNo)
-	self.minFlaskExpNo:SetScript("OnClick", function(self,event) 
+	self.minFlaskExpNo = ELib:Radio(self,L.RaidCheckMinFlaskExpNo,VExRT.RaidCheck.FlaskExp == 0):Point("LEFT",self.minFlaskExpText,"RIGHT", 15, 0):OnClick(function(self) 
 		self:SetChecked(true)
 		module.options.minFlaskExp5min:SetChecked(false)
 		module.options.minFlaskExp10min:SetChecked(false)
 		VExRT.RaidCheck.FlaskExp = 0
 	end)
-	self.minFlaskExpNo:SetChecked(VExRT.RaidCheck.FlaskExp == 0)
 	
-	self.minFlaskExp5min = CreateFrame("CheckButton",nil,self,"UIRadioButtonTemplate")  
-	self.minFlaskExp5min:SetPoint("LEFT",self.minFlaskExpNo,"RIGHT", 75, 0)
-	self.minFlaskExp5min.text:SetText("5 "..ExRT.L.RaidCheckMinFlaskExpMin)
-	self.minFlaskExp5min:SetScript("OnClick", function(self,event) 
+	self.minFlaskExp5min = ELib:Radio(self,"5 "..L.RaidCheckMinFlaskExpMin,VExRT.RaidCheck.FlaskExp == 1):Point("LEFT",self.minFlaskExpNo,"RIGHT", 75, 0):OnClick(function(self) 
 		self:SetChecked(true)
 		module.options.minFlaskExpNo:SetChecked(false)
 		module.options.minFlaskExp10min:SetChecked(false)
 		VExRT.RaidCheck.FlaskExp = 1
 	end)
-	self.minFlaskExp5min:SetChecked(VExRT.RaidCheck.FlaskExp == 1)
 
-	self.minFlaskExp10min = CreateFrame("CheckButton",nil,self,"UIRadioButtonTemplate")  
-	self.minFlaskExp10min:SetPoint("LEFT",self.minFlaskExp5min,"RIGHT", 75, 0)
-	self.minFlaskExp10min.text:SetText("10 "..ExRT.L.RaidCheckMinFlaskExpMin)
-	self.minFlaskExp10min:SetScript("OnClick", function(self,event) 
+	self.minFlaskExp10min = ELib:Radio(self,"10 "..L.RaidCheckMinFlaskExpMin,VExRT.RaidCheck.FlaskExp == 2):Point("LEFT",self.minFlaskExp5min,"RIGHT", 75, 0):OnClick(function(self) 
 		self:SetChecked(true)
 		module.options.minFlaskExpNo:SetChecked(false)
 		module.options.minFlaskExp5min:SetChecked(false)
 		VExRT.RaidCheck.FlaskExp = 2
 	end)
-	self.minFlaskExp10min:SetChecked(VExRT.RaidCheck.FlaskExp == 2)
 
 	
-	self.chkPotion = ExRT.lib.CreateCheckBox(self,nil,10,-305,ExRT.L.raidcheckPotionCheck)
-	self.chkPotion:SetScript("OnClick", function(self,event) 
+	self.chkPotion = ELib:Check(self,L.raidcheckPotionCheck,VExRT.RaidCheck.PotionCheck):Point(7,-325):OnClick(function(self) 
 		if self:GetChecked() then
 			VExRT.RaidCheck.PotionCheck = true
 			module.options.potionToChat:Enable()
@@ -743,42 +692,26 @@ function module.options:Load()
 		end
 	end)
 
-	self.potion = ExRT.lib.CreateButton(self,230,22,nil,10,-330,ExRT.L.raidcheckPotionLastPull,not VExRT.RaidCheck.PotionCheck)       
-	self.potion:SetScript("OnClick",function()
-		GetPotion(2)
-	end)  
-	self.potion.txt = ExRT.lib.CreateText(self,100,22,nil,0,0,nil,nil,nil,11,"/rt potion")
-	self.potion.txt:SetNewPoint("LEFT",self.potion,"RIGHT",5,0)
-	
-	self.potionToChat = ExRT.lib.CreateButton(self,230,22,nil,0,0,ExRT.L.raidcheckPotionLastPullToChat,not VExRT.RaidCheck.PotionCheck)       
-	self.potionToChat:SetScript("OnClick",function()
-		GetPotion(1)
-	end)
-	self.potionToChat:SetNewPoint("LEFT",self.potion,"RIGHT",71,0)
-	self.potionToChat.txt = ExRT.lib.CreateText(self,100,22,nil,0,0,nil,nil,nil,11,"/rt potionchat")
-	self.potionToChat.txt:SetNewPoint("LEFT",self.potionToChat,"RIGHT",5,0)
-	
-	self.hs = ExRT.lib.CreateButton(self,230,22,nil,10,-355,ExRT.L.raidcheckHSLastPull,not VExRT.RaidCheck.PotionCheck)       
-	self.hs:SetScript("OnClick",function()
-		GetHs(2)
-	end)  
-	
-	self.hsToChat = ExRT.lib.CreateButton(self,230,22,nil,0,0,ExRT.L.raidcheckHSLastPullToChat,not VExRT.RaidCheck.PotionCheck)       
-	self.hsToChat:SetScript("OnClick",function()
-		GetHs(1)
-	end)  
-	self.hsToChat:SetNewPoint("LEFT",self.hs,"RIGHT",71,0)
+	self.potion = ELib:Button(self,L.raidcheckPotionLastPull):Size(230,20):Point("TOPLEFT",self.chkPotion,"TOPLEFT",-2,-30):OnClick(function() GetPotion(2) end):Run(function(s,a) if a then s:Disable() end end,not VExRT.RaidCheck.PotionCheck)
+	self.potion.txt = ELib:Text(self,"/rt potion",11):Size(100,20):Point("LEFT",self.potion,"RIGHT",5,0)
 
-	self.optReadyCheckFrameHeader = ExRT.lib.CreateText(self,550,20,nil,20,-380,nil,nil,nil,nil,ExRT.L.raidcheckReadyCheck)
+	self.potionToChat = ELib:Button(self,L.raidcheckPotionLastPullToChat):Size(230,20):Point("LEFT",self.potion,"RIGHT",71,0):OnClick(function() GetPotion(1) end):Run(function(s,a) if a then s:Disable() end end,not VExRT.RaidCheck.PotionCheck)
+	self.potionToChat.txt = ELib:Text(self,"/rt potionchat",11):Size(100,20):Point("LEFT",self.potionToChat,"RIGHT",5,0)
 
+	self.hs = ELib:Button(self,L.raidcheckHSLastPull):Size(230,20):Point("TOPLEFT",self.potion,"TOPLEFT",0,-25):OnClick(function() GetHs(2) end):Run(function(s,a) if a then s:Disable() end end,not VExRT.RaidCheck.PotionCheck)
+	
+	self.hsToChat = ELib:Button(self,L.raidcheckHSLastPullToChat):Size(230,20):Point("LEFT",self.hs,"RIGHT",71,0):OnClick(function() GetHs(1) end):Run(function(s,a) if a then s:Disable() end end,not VExRT.RaidCheck.PotionCheck)
+	
 	self.optReadyCheckFrame = CreateFrame("Frame",nil,self)
-	self.optReadyCheckFrame:SetSize(603,125)
-	self.optReadyCheckFrame:SetBackdrop({bgFile = "Interface/DialogFrame/UI-DialogBox-Background", edgeFile = "Interface/Tooltips/UI-Tooltip-Border",tile = true, tileSize = 16, edgeSize = 16, insets = { left = 5, right = 5, top = 5, bottom = 5 }})
-	self.optReadyCheckFrame:SetBackdropColor(0,0,0,0.5)
-	self.optReadyCheckFrame:SetPoint("TOP",0,-395)
+	self.optReadyCheckFrame:SetSize(650,125)
+	self.optReadyCheckFrame:SetBackdrop({bgFile = "Interface/Tooltips/UI-Tooltip-Background",edgeFile = ExRT.F.defBorder,tile = false,edgeSize = 8})
+	self.optReadyCheckFrame:SetBackdropColor(0,0,0,0.3)
+	self.optReadyCheckFrame:SetBackdropBorderColor(.24,.25,.30,1)
+	self.optReadyCheckFrame:SetPoint("TOP",0,-425)
 
-	self.chkReadyCheckFrameEnable = ExRT.lib.CreateCheckBox(self.optReadyCheckFrame,nil,15,-10,ExRT.L.senable)
-	self.chkReadyCheckFrameEnable:SetScript("OnClick", function(self,event) 
+	self.optReadyCheckFrameHeader = ELib:Text(self.optReadyCheckFrame,L.raidcheckReadyCheck):Size(550,20):Point("BOTTOMLEFT",self.optReadyCheckFrame,"TOPLEFT",10,1):Bottom()
+
+	self.chkReadyCheckFrameEnable = ELib:Check(self.optReadyCheckFrame,L.senable,VExRT.RaidCheck.ReadyCheckFrame):Point(15,-10):OnClick(function(self) 
 		if self:GetChecked() then
 			module:RegisterEvents('READY_CHECK','READY_CHECK_FINISHED','READY_CHECK_CONFIRM')
 			VExRT.RaidCheck.ReadyCheckFrame = true
@@ -791,48 +724,38 @@ function module.options:Load()
 		end
 	end)
 
-	self.chkReadyCheckFrameSliderScale = ExRT.lib.CreateSlider(self.optReadyCheckFrame,250,15,25,-50,5,200,ExRT.L.raidcheckReadyCheckScale,100)
-	self.chkReadyCheckFrameSliderScale:SetScript("OnValueChanged", function(self,event) 
+	self.chkReadyCheckFrameSliderScale = ELib:Slider(self.optReadyCheckFrame,L.raidcheckReadyCheckScale):Size(250):Point(25,-50):Range(5,200):SetTo(VExRT.RaidCheck.ReadyCheckFrameScale or 100):OnChange(function(self,event) 
 		event = event - event%1
 		VExRT.RaidCheck.ReadyCheckFrameScale = event
-		ExRT.mds.SetScaleFix(module.frame,event/100)
+		ExRT.F.SetScaleFix(module.frame,event/100)
 		self.tooltipText = event
 		self:tooltipReload(self)
 	end)
 
-	self.chkReadyCheckFrameButTest = ExRT.lib.CreateButton(self.optReadyCheckFrame,280,22,nil,310,-10,ExRT.L.raidcheckReadyCheckTest)
-	self.chkReadyCheckFrameButTest:SetScript("OnClick", function(self) 
+	self.chkReadyCheckFrameButTest = ELib:Button(self.optReadyCheckFrame,L.raidcheckReadyCheckTest):Size(280,22):Point(310,-10):OnClick(function(self) 
 		module.main:READY_CHECK("raid1",35,"TEST")
 		for i=2,25 do
 			local y = math.random(1,30000)
 			local r = math.random(1,2)
-			ExRT.mds.ScheduleTimer(function() module.main:READY_CHECK_CONFIRM("raid"..i,r==1,"TEST") end, y/1000)
+			ExRT.F.ScheduleTimer(function() module.main:READY_CHECK_CONFIRM("raid"..i,r==1,"TEST") end, y/1000)
 		end
 	end)
 
-	self.chkReadyCheckFrameHtmlTimer = ExRT.lib.CreateText(self.optReadyCheckFrame,200,24,nil,310,-50,nil,nil,nil,11,ExRT.L.raidcheckReadyCheckTimerTooltip)
+	self.chkReadyCheckFrameHtmlTimer = ELib:Text(self.optReadyCheckFrame,L.raidcheckReadyCheckTimerTooltip,11):Size(200,24):Point(310,-50)
 
-	self.chkReadyCheckFrameEditBoxTimer = ExRT.lib.CreateEditBox(self.optReadyCheckFrame,50,24,nil,515,-50,nil,6,true,nil,"4")
-	self.chkReadyCheckFrameEditBoxTimer:SetScript("OnTextChanged",function(self)
+	self.chkReadyCheckFrameEditBoxTimer = ELib:Edit(self.optReadyCheckFrame,6,true):Size(50,20):Point(515,-50):Text(VExRT.RaidCheck.ReadyCheckFrameTimerFade or "4"):OnChange(function(self)
 		VExRT.RaidCheck.ReadyCheckFrameTimerFade = tonumber(self:GetText()) or 4
 		if VExRT.RaidCheck.ReadyCheckFrameTimerFade < 2.5 then VExRT.RaidCheck.ReadyCheckFrameTimerFade = 2.5 end
 	end) 
 	
-	self.htmlReadyCheck1 = ExRT.lib.CreateText(self.optReadyCheckFrame,583,100,nil,10,-90,nil,"TOP",nil,12,ExRT.L.RaidCheckReadyCheckHelp)
-
-
-	self.chkSlak:SetChecked(VExRT.RaidCheck.ReadyCheck)
-	self.chkPotion:SetChecked(VExRT.RaidCheck.PotionCheck)
-	self.chkReadyCheckFrameEnable:SetChecked(VExRT.RaidCheck.ReadyCheckFrame)
-	self.chkReadyCheckFrameSliderScale:SetValue(VExRT.RaidCheck.ReadyCheckFrameScale or 100)
-	self.chkReadyCheckFrameEditBoxTimer:SetText(VExRT.RaidCheck.ReadyCheckFrameTimerFade or 4)
+	self.htmlReadyCheck1 = ELib:Text(self.optReadyCheckFrame,L.RaidCheckReadyCheckHelp,12):Size(583,100):Point(10,-90):Top()
 
 	self:SetScript("OnShow",nil)
 end
 
 local function CheckPotionsOnPull()
 	table.wipe(module.db.potionList)
-	local gMax = ExRT.mds.GetRaidDiffMaxGroup()
+	local gMax = ExRT.F.GetRaidDiffMaxGroup()
 	for j=1,40 do
 		local name,_,subgroup = GetRaidRosterInfo(j)
 		if name and subgroup <= gMax then
@@ -858,10 +781,10 @@ function module:timer(elapsed)
 		if not module.db.isEncounter and IsEncounterInProgress() then
 			module.db.isEncounter = true
 
-			ExRT.mds.ScheduleTimer(CheckPotionsOnPull,1.5)
+			ExRT.F.ScheduleTimer(CheckPotionsOnPull,1.5)
 			
 			table.wipe(module.db.hsList)
-			local gMax = ExRT.mds.GetRaidDiffMaxGroup()
+			local gMax = ExRT.F.GetRaidDiffMaxGroup()
 			for j=1,40 do
 				local name,_,subgroup = GetRaidRosterInfo(j)
 				if name and subgroup <= gMax then
@@ -889,9 +812,9 @@ function module:timer(elapsed)
 		local h = ""
 		local ctime_ = module.db.RaidCheckReadyCheckTime - GetTime()
 		if ctime_ > 0 then 
-			h = format(" (%d %s)",ctime_+1,ExRT.L.raidcheckReadyCheckSec) 
+			h = format(" (%d %s)",ctime_+1,L.raidcheckReadyCheckSec) 
 		end
-		module.frame.headText:SetText(ExRT.L.raidcheckReadyCheck..h)
+		module.frame.headText:SetText(L.raidcheckReadyCheck..h)
 	end
 end
 
@@ -919,7 +842,7 @@ function module:slash(arg)
 	end
 end
 
-module.frame = CreateFrame("FRAME",nil,UIParent,"ExRTDialogTemplate")
+module.frame = CreateFrame("FRAME",nil,UIParent,"ExRTDialogModernTemplate")
 module.frame:SetSize(140*2+20,18*13+40)
 module.frame:SetPoint("CENTER",UIParent,"CENTER",0,0)
 module.frame:SetFrameStrata("TOOLTIP")
@@ -935,7 +858,9 @@ module.frame:SetScript("OnDragStop", function(self)
 	VExRT.RaidCheck.ReadyCheckTop = self:GetTop()
 end)
 module.frame:Hide()
-module.frame.headText = ExRT.lib.CreateText(module.frame,290,18,nil,15,-7,nil,nil,ExRT.mds.defFont,14,ExRT.L.raidcheckReadyCheck,nil,1,1,1,1)
+--module.frame.headText = ExRT.lib.CreateText(module.frame,290,18,nil,15,-7,nil,nil,ExRT.F.defFont,14,L.raidcheckReadyCheck,nil,1,1,1,1)
+module.frame.border = ExRT.lib.CreateShadow(module.frame,20)
+module.frame.headText = module.frame.title
 
 module.frame.anim = module.frame:CreateAnimationGroup()
 module.frame.timer = module.frame.anim:CreateAnimation()
@@ -953,21 +878,21 @@ end)
 
 module.frame.u = {}
 for i=1,40 do
-	module.frame.u[i] = CreateFrame("FRAME",nil,module.frame)
-	module.frame.u[i]:SetPoint("TOPLEFT", ((i-1)%2)*140+10, -floor((i-1)/2)*18-30)
-	module.frame.u[i]:SetSize(140,18)
+	local line = CreateFrame("FRAME",nil,module.frame)
+	module.frame.u[i] = line
+	line:SetPoint("TOPLEFT", ((i-1)%2)*140+10, -floor((i-1)/2)*18-25)
+	line:SetSize(140,18)
 
-	module.frame.u[i].t = ExRT.lib.CreateText(module.frame.u[i],120,18,nil,20,0,nil,nil,ExRT.mds.defFont,12,"raid"..i,nil,1,1,1,1)
-
-	module.frame.u[i].icon = ExRT.lib.CreateIcon(module.frame.u[i],18,nil,0,0,"Interface\\RaidFrame\\ReadyCheck-Waiting",nil)
+	line.t = ELib:Text(line,"raid"..i):Size(120,18):Point(20,0):Font(ExRT.F.defFont,12):Color():Shadow()
+	line.icon = ELib:Icon(line,"Interface\\RaidFrame\\ReadyCheck-Waiting",18):Point(0,0)
 end
 
 local function RaidCheckReadyCheckReset(starter,isTest)
 	table.wipe(module.db.RaidCheckReadyCheckTable)
 	local j = 0
-	local gMax = ExRT.mds.GetRaidDiffMaxGroup()
+	local gMax = ExRT.F.GetRaidDiffMaxGroup()
 	module.db.RaidCheckReadyPPLNum = 0
-	module.frame:SetHeight(18*ceil(gMax*5/2)+40)
+	module.frame:SetHeight(18*ceil(gMax*5/2)+30)
 	for i=1,40 do
 		local name,_,subgroup = GetRaidRosterInfo(i)
 		if isTest then
@@ -983,7 +908,7 @@ local function RaidCheckReadyCheckReset(starter,isTest)
 			module.frame.u[j]:Show()
 
 			module.db.RaidCheckReadyPPLNum = module.db.RaidCheckReadyPPLNum + 1
-			module.db.RaidCheckReadyCheckTable[ExRT.mds.delUnitNameServer(name)] = j
+			module.db.RaidCheckReadyCheckTable[ExRT.F.delUnitNameServer(name)] = j
 		end
 	end
 	for i=(j+1),40 do
@@ -1023,6 +948,61 @@ function module.main:ADDON_LOADED()
 	
 	module:RegisterSlash()
 	module:RegisterTimer()
+	module:RegisterAddonMessage()
+end
+
+local function SendDataToChat()
+	if IsSendFoodByMe then
+		GetFood(2)
+	end
+	if IsSendFlaskByMe then
+		GetFlask(2)
+	end
+	if IsSendRunesByMe then
+		GetRunes(2)
+	end
+	if IsSendBuffsByMe then
+		GetRaidBuffs(2)
+	end
+	IsSendFoodByMe = nil
+	IsSendFlaskByMe = nil
+	IsSendRunesByMe = nil
+	IsSendBuffsByMe = nil
+end
+
+local function PrepareDataToChat(toSelf)
+	if toSelf then
+		GetFood(3)
+		GetFlask(3)
+		if VExRT.RaidCheck.RunesCheck then
+			GetRunes(3)
+		end
+		if VExRT.RaidCheck.BuffsCheck then
+			GetRaidBuffs(3)
+		end
+	else
+		if VExRT.RaidCheck.disableLFR then
+			local _,_,difficulty = GetInstanceInfo()
+			if difficulty == 7 or difficulty == 17 then
+				return
+			end
+		end
+		IsSendFoodByMe = true
+		ExRT.F.ScheduleTimer(ExRT.F.SendExMsg, 0.1, "raidcheck","FOOD")
+		IsSendFlaskByMe = true
+		ExRT.F.ScheduleTimer(ExRT.F.SendExMsg, 0.1, "raidcheck","FLASK")
+		IsSendRunesByMe = nil
+		if VExRT.RaidCheck.RunesCheck then
+			IsSendRunesByMe = true
+			ExRT.F.ScheduleTimer(ExRT.F.SendExMsg, 0.1, "raidcheck","RUNES")
+		end
+		IsSendBuffsByMe = nil
+		if VExRT.RaidCheck.BuffsCheck then
+			IsSendBuffsByMe = true
+			ExRT.F.ScheduleTimer(ExRT.F.SendExMsg, 0.1, "raidcheck","BUFFS")
+		end
+		ExRT.F.ScheduleTimer(SendDataToChat, 1)
+	end
 end
 
 do
@@ -1032,6 +1012,7 @@ do
 	function module.main:READY_CHECK(starter,timer,isTest)
 		if not (isTest == "TEST") then isTest = nil end
 		if VExRT.RaidCheck.ReadyCheck and not isTest then
+			--[[
 			local plus = VExRT.RaidCheck.SendSelf and 1 or 0
 			GetFood(2+plus)
 			GetFlask(2+plus)
@@ -1041,14 +1022,16 @@ do
 			if VExRT.RaidCheck.BuffsCheck then
 				GetRaidBuffs(2+plus)
 			end
+			]]
+			PrepareDataToChat(VExRT.RaidCheck.SendSelf)
 		end
 		if VExRT.RaidCheck.ReadyCheckFrame then
 			module.db.RaidCheckReadyCheckHide = nil
 			module.db.RaidCheckReadyCheckTime = GetTime() + (timer or 35)
-			ExRT.mds.CancelTimer(module.db.RaidCheckReadyCheckHideSchedule)
-			module.db.RaidCheckReadyCheckHideSchedule = ExRT.mds.ScheduleTimer(ScheduledReadyCheckFinish, timer or 35)
+			ExRT.F.CancelTimer(module.db.RaidCheckReadyCheckHideSchedule)
+			module.db.RaidCheckReadyCheckHideSchedule = ExRT.F.ScheduleTimer(ScheduledReadyCheckFinish, timer or 35)
 			RaidCheckReadyCheckReset(starter,isTest)
-			module.main:READY_CHECK_CONFIRM(ExRT.mds.delUnitNameServer(starter),true,isTest)
+			module.main:READY_CHECK_CONFIRM(ExRT.F.delUnitNameServer(starter),true,isTest)
 		end
 	end
 end
@@ -1112,6 +1095,28 @@ do
 	end
 end
 
+function module:addonMessage(sender, prefix, ...)
+	if prefix == "raidcheck" then
+		if sender then
+			if ExRT.F.IsPlayerRLorOfficer(ExRT.SDB.charName) == 2 then
+				return
+			end
+			if sender < ExRT.SDB.charName or ExRT.F.IsPlayerRLorOfficer(sender) == 2 then
+				local type = ...
+				if type == "FOOD" then
+					IsSendFoodByMe = nil
+				elseif type == "FLASK" then
+					IsSendFlaskByMe = nil
+				elseif type == "RUNES" then
+					IsSendRunesByMe = nil
+				elseif type == "BUFFS" then
+					IsSendBuffsByMe = nil
+				end
+			end
+		end
+	end
+end
+
 local addonMsgFrame = CreateFrame'Frame'
 local addonMsgAttack_AntiSpam = 0
 addonMsgFrame:SetScript("OnEvent",function (self, event, ...)
@@ -1124,15 +1129,7 @@ addonMsgFrame:SetScript("OnEvent",function (self, event, ...)
 			end
 			addonMsgAttack_AntiSpam = _time
 		
-			local plus = VExRT.RaidCheck.SendSelf and 1 or 0
-			GetFood(2+plus)
-			GetFlask(2+plus)
-			if VExRT.RaidCheck.RunesCheck then
-				GetRunes(2+plus)
-			end
-			if VExRT.RaidCheck.BuffsCheck then
-				GetRaidBuffs(2+plus)
-			end
+			PrepareDataToChat(VExRT.RaidCheck.SendSelf)
 		end
 	end
 end)

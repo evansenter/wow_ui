@@ -9,11 +9,12 @@ local Config = LibStub("AceConfig-3.0")
 
 local db
 
-addon.svnrev["config.lua"] = tonumber(("$Revision: 390 $"):match("%d+"))
+addon.svnrev["config.lua"] = tonumber(("$Revision: 473 $"):match("%d+"))
 
 addon.diff_strings = {
 	D1 = DUNGEON_DIFFICULTY1, -- 5 man
 	D2 = DUNGEON_DIFFICULTY2, -- 5 man (Heroic)
+	D3 = DUNGEON_DIFFICULTY1.." ("..GetDifficultyInfo(23)..")", -- 5 man (Mythic)
 	R0 = EXPANSION_NAME0 .. " " .. LFG_TYPE_RAID,
 	R1 = RAID_DIFFICULTY1, -- "10 man"
 	R2 = RAID_DIFFICULTY2, -- "25 man"
@@ -47,7 +48,11 @@ function addon:idtext(instance,diff,info)
   elseif info.ID < 0 then 
     return "" -- ticket 144: could be RAID_FINDER or FLEX_RAID, but this is already shown in the instance name so it's redundant anyhow
   elseif not instance.Raid then
-    return _G["DUNGEON_DIFFICULTY"..diff]
+    if diff == 23 then
+      return addon.diff_strings["D3"]
+    else
+      return addon.diff_strings["D"..diff]
+    end
   elseif instance.Expansion == 0 then -- classic Raid
     return addon.diff_strings.R0
   elseif instance.Raid and diff >= 3 and diff <= 7 then -- pre-WoD raids
@@ -177,6 +182,12 @@ function module:BuildOptions()
 			type = "execute",
 			func = function() module:ShowConfig() end,
 		},
+		time = { 
+			name = L["Dump time debugging information"],
+			guiHidden = true,
+			type = "execute",
+			func = function() addon:timedebug() end,
+		},
 		show = { 
 			name = L["Show/Hide the SavedInstances tooltip"],
 			guiHidden = true,
@@ -193,6 +204,9 @@ function module:BuildOptions()
 			set = function(info, value)
 					addon.debug(info[#info].." set to: "..tostring(value))
 					db.Tooltip[info[#info]] = value
+					wipe(addon.scaleCache)
+					wipe(addon.oi_cache)
+					addon.oc_cache = nil
 			end,
 			args = {
 				ver = {
@@ -328,19 +342,25 @@ function module:BuildOptions()
 					desc = L["List raid categories before dungeon categories"],
 					order = 17,
 				},
+				FitToScreen = {
+					type = "toggle",
+					name = L["Fit to screen"],
+					desc = L["Automatically shrink the tooltip to fit on the screen"],
+					order = 4.81,
+				},
 			        Scale = {
 					type = "range",
 					name = L["Tooltip Scale"],
-					order = 17.5,
+					order = 4.82,
 					min = 0.1,
 					max = 5,
-					bigStep = 0.1,
+					bigStep = 0.05,
 				},
 			        RowHighlight = {
 					type = "range",
 					name = L["Row Highlight"],
 					desc = L["Opacity of the tooltip row highlighting"],
-					order = 18,
+					order = 4.83,
 					min = 0,
 					max = 0.5,
 					bigStep = 0.1,

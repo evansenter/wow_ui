@@ -1,6 +1,23 @@
 local E, L, DF = unpack(select(2, ...))
 local B = E:GetModule('Blizzard');
 
+--Cache global variables
+--Lua functions
+local _G = _G
+local pairs = pairs
+--WoW API / Variables
+local AlertFrame_FixAnchors = AlertFrame_FixAnchors
+local MAX_ACHIEVEMENT_ALERTS = MAX_ACHIEVEMENT_ALERTS
+
+--Global variables that we don't cache, list them here for mikk's FindGlobals script
+-- GLOBALS: AlertFrame, AlertFrameMover, MissingLootFrame, GroupLootContainer
+-- GLOBALS: LOOT_WON_ALERT_FRAMES, LOOT_UPGRADE_ALERT_FRAMES, MONEY_WON_ALERT_FRAMES
+-- GLOBALS: AchievementAlertFrame1, CriteriaAlertFrame1, ChallengeModeAlertFrame1
+-- GLOBALS: DungeonCompletionAlertFrame1, StorePurchaseAlertFrame, ScenarioAlertFrame1
+-- GLOBALS: GuildChallengeAlertFrame, DigsiteCompleteToastFrame, GarrisonBuildingAlertFrame
+-- GLOBALS: GarrisonMissionAlertFrame, GarrisonFollowerAlertFrame, GarrisonShipFollowerAlertFrame
+-- GLOBALS: GarrisonShipMissionAlertFrame, UIPARENT_MANAGED_FRAME_POSITIONS
+
 local AlertFrameHolder = CreateFrame("Frame", "AlertFrameHolder", E.UIParent)
 AlertFrameHolder:SetWidth(180)
 AlertFrameHolder:SetHeight(20)
@@ -213,6 +230,22 @@ function B:AlertFrame_SetGarrisonFollowerAlertFrameAnchors(alertAnchor)
     end
 end
 
+function B:AlertFrame_SetGarrisonShipFollowerAlertFrameAnchors(alertAnchor)
+    if ( GarrisonShipFollowerAlertFrame and GarrisonShipFollowerAlertFrame:IsShown() ) then
+		GarrisonShipFollowerAlertFrame:ClearAllPoints()
+        GarrisonShipFollowerAlertFrame:SetPoint(POSITION, alertAnchor, ANCHOR_POINT, 0, YOFFSET);
+        alertAnchor = GarrisonShipFollowerAlertFrame;
+    end
+end
+
+function B:AlertFrame_SetGarrisonShipMissionAlertFrameAnchors(alertAnchor)
+    if ( GarrisonShipMissionAlertFrame and GarrisonShipMissionAlertFrame:IsShown() ) then
+		GarrisonShipMissionAlertFrame:ClearAllPoints()
+        GarrisonShipMissionAlertFrame:SetPoint(POSITION, alertAnchor, ANCHOR_POINT, 0, YOFFSET);
+        alertAnchor = GarrisonShipMissionAlertFrame;
+    end
+end
+
 function B:AlertMovers()
 	UIPARENT_MANAGED_FRAME_POSITIONS["GroupLootContainer"] = nil
 	E:CreateMover(AlertFrameHolder, "AlertFrameMover", L["Loot / Alert Frames"], nil, nil, E.PostAlertMove)
@@ -233,4 +266,6 @@ function B:AlertMovers()
 	self:SecureHook('AlertFrame_SetGarrisonBuildingAlertFrameAnchors')
 	self:SecureHook('AlertFrame_SetGarrisonMissionAlertFrameAnchors')
 	self:SecureHook('AlertFrame_SetGarrisonFollowerAlertFrameAnchors')
+	self:SecureHook('AlertFrame_SetGarrisonShipMissionAlertFrameAnchors')
+	self:SecureHook('AlertFrame_SetGarrisonShipFollowerAlertFrameAnchors')
 end

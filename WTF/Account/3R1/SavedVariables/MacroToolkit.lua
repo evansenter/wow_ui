@@ -34,7 +34,6 @@ MacroToolkitDB = {
 		["profile"] = {
 			["y"] = 320.999847412109,
 			["x"] = 331.399230957031,
-			["override"] = true,
 			["fonts"] = {
 				["edfont"] = "ABF",
 				["edsize"] = 12,
@@ -44,6 +43,7 @@ MacroToolkitDB = {
 				["misize"] = 12,
 				["errfont"] = "ABF",
 			},
+			["override"] = true,
 		},
 	},
 }

@@ -1,0 +1,4 @@
+subversion:
+	- Omega via svn r14724: Some more antispam protections
+	- Omega via svn r14723: Fix a bug on xhul where it warned to swap BEFORE boss was actually phasing.
+	- tandanu via svn r14722: increment alpha version

@@ -30,6 +30,7 @@ That said, some things to consider when looking at the numbers:
 * A lot of addons share libraries of code. The "blame" for who owns that code isn't as clear cut. If you run many addons that share libraries, treat them all as one huge mass for overall troubleshooting purposes. If you disable one addon and a seemingly unrelated addon has suddenly taken up the former addon's share of work, it's likely the two were sharing a library and the first one may be blameless.
 * Remember to turn off CPU monitoring when you're done testing!
 
+2.0.8 6/22/15 toc update for 6.2 patch
 2.0.7 2/24/15 toc update for 6.1 patch
 2.0.6 11/05/14 fix for load-on-demand addons not showing up and lua error when turning off real-time updates
 2.0.5 10/11/14 total mb/cpu usage summary added

@@ -1,6 +1,6 @@
 --[[
 Name: LibBabble-Inventory-3.0
-Revision: $Rev: 185 $
+Revision: $Rev: 189 $
 Maintainers: ckknight, nevcairiel, Ackis
 Website: http://www.wowace.com/projects/libbabble-inventory-3-0/
 Dependencies: None
@@ -8,7 +8,7 @@ License: MIT
 ]]
 
 local MAJOR_VERSION = "LibBabble-Inventory-3.0"
-local MINOR_VERSION = 90000 + tonumber(("$Rev: 185 $"):match("%d+"))
+local MINOR_VERSION = 90000 + tonumber(("$Rev: 189 $"):match("%d+"))
 
 if not LibStub then error(MAJOR_VERSION .. " requires LibStub.") end
 local lib = LibStub("LibBabble-3.0"):New(MAJOR_VERSION, MINOR_VERSION)
@@ -283,7 +283,7 @@ elseif GAME_LOCALE == "deDE" then
 	["Inscription Bag"] = "Schreibertasche",
 	["Item Enchantment"] = "Gegenstandsverzauberung",
 	["Item Enhancement"] = "Gegenstandsverbesserung",
-	Jewelcrafting = "Juwelenschleifen",
+	Jewelcrafting = "Juwelierskunst", -- Needs review
 	Junk = "Plunder",
 	Key = "Schlüssel",
 	Leather = "Leder",
@@ -1490,7 +1490,7 @@ elseif GAME_LOCALE == "ruRU" then
 	Enchant = "Чары",
 	Enchanting = "Наложение чар",
 	["Enchanting Bag"] = "Сумка зачаровывателя",
-	Engineering = "Механика",
+	Engineering = "Инженерное дело",
 	["Engineering Bag"] = "Сумка инженера",
 	Explosives = "Взрывчатка",
 	Feet = "Ступни",

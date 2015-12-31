@@ -69,16 +69,38 @@ local function modify(parent, region, data)
     region:SetHeight(data.height);
 
     -- Adjust model
+    local register = false;
     if tonumber(data.model_path) then
         model:SetDisplayInfo(tonumber(data.model_path))
     else
         if (data.modelIsUnit) then
             model:SetUnit(data.model_path)
+            register = true;
         else
             pcall(function() model:SetModel(data.model_path) end);
         end
     end
     model:SetPosition(data.model_z, data.model_x, data.model_y);
+
+    if (register) then
+        model:RegisterEvent("UNIT_MODEL_CHANGED");
+        if (data.model_path == "target") then
+          model:RegisterEvent("PLAYER_TARGET_CHANGED");
+        elseif (data.model_path == "focus") then
+          model:RegisterEvent("PLAYER_FOCUS_CHANGED");
+        end
+        model:SetScript("OnEvent", function(self, event, unitId)
+          if (event ~= "UNIT_MODEL_CHANGED" or UnitIsUnit(unitId, data.model_path)) then
+            model:SetUnit(data.model_path);
+          end
+        end
+        );
+    else
+       model:UnregisterEvent("UNIT_MODEL_CHANGED");
+       model:UnregisterEvent("PLAYER_TARGET_CHANGED");
+       model:UnregisterEvent("PLAYER_FOCUS_CHANGED");
+       model:SetScript("OnEvent", nil);
+    end
 
     -- Update border
     if data.border then
@@ -166,19 +188,23 @@ WeakAuras.RegisterRegionType("model", create, modify, default);
 
 -- Work around for movies and world map hiding all models
 do
+  local function preShowModels()
+    for id, isLoaded in pairs(WeakAuras.loaded) do
+      if (isLoaded) then
+        local data = WeakAuras.regions[id];
+        if (data.regionType == "model") then
+          data.region:PreShow();
+        end
+      end
+    end
+  end
+
   local movieWatchFrame;
   movieWatchFrame = CreateFrame("frame");
   movieWatchFrame:RegisterEvent("PLAY_MOVIE");
-  movieWatchFrame:RegisterEvent("WORLD_MAP_UPDATE");
-  movieWatchFrame:SetScript("OnEvent", function()
-    for id, isLoaded in pairs(WeakAuras.loaded) do
-       if (isLoaded) then
-         local data = WeakAuras.regions[id];
-         if (data.regionType == "model") then
-           data.region:PreShow();
-         end
-       end
-    end
-  end);
+
+  movieWatchFrame:SetScript("OnEvent", preShowModels);
   WeakAuras.frames["Movie Watch Frame"] = movieWatchFrame;
+
+  hooksecurefunc(WorldMapFrame, "Hide", preShowModels);
 end

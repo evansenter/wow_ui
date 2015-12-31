@@ -66,8 +66,58 @@ E.Options.args.bags = {
 					name = L["Sort Inverted"],
 					desc = L["Direction the bag sorting will use to allocate the items."],
 				},
-				itemLevelGroup = {
+				countGroup = {
 					order = 5,
+					type = "group",
+					name = L["Item Count Font"],
+					args = {
+						countFont = {
+							order = 1,
+							type = "select",
+							dialogControl = 'LSM30_Font',
+							name = L["Font"],
+							values = AceGUIWidgetLSMlists.font,
+							set = function(info, value) E.db.bags.countFont = value; B:UpdateCountDisplay() end,
+						},
+						countFontColor = {
+							order = 2,
+							type = 'color',
+							name = L["Color"],
+							get = function(info)
+								local t = E.db.bags[ info[#info] ]
+								local d = P.bags[info[#info]]
+								return t.r, t.g, t.b, t.a, d.r, d.g, d.b
+							end,
+							set = function(info, r, g, b)
+								E.db.bags[ info[#info] ] = {}
+								local t = E.db.bags[ info[#info] ]
+								t.r, t.g, t.b = r, g, b
+								B:UpdateCountDisplay()
+							end,
+						},
+						countFontSize = {
+							order = 3,
+							type = "range",
+							name = L["Font Size"],
+							min = 4, max = 22, step = 1,
+							set = function(info, value) E.db.bags.countFontSize = value; B:UpdateCountDisplay() end,
+						},
+						countFontOutline = {
+							order = 4,
+							type = "select",
+							name = L["Font Outline"],
+							set = function(info, value) E.db.bags.countFontOutline = value; B:UpdateCountDisplay() end,
+							values = {
+								['NONE'] = L["None"],
+								['OUTLINE'] = 'OUTLINE',
+								['MONOCHROMEOUTLINE'] = 'MONOCROMEOUTLINE',
+								['THICKOUTLINE'] = 'THICKOUTLINE',
+							},
+						},
+					},
+				},
+				itemLevelGroup = {
+					order = 6,
 					type = "group",
 					name = L["Item Level"],
 					args = {
@@ -105,7 +155,7 @@ E.Options.args.bags = {
 							order = 5,
 							type = "range",
 							name = L["Font Size"],
-							min = 6, max = 22, step = 1,
+							min = 4, max = 22, step = 1,
 							disabled = function() return not E.db.bags.itemLevel end,
 							set = function(info, value) E.db.bags.itemLevelFontSize = value; B:UpdateItemLevelDisplay() end,
 						},
@@ -187,28 +237,28 @@ E.Options.args.bags = {
 					order = 6,
 					type = 'range',
 					name = L["X Offset Bags"],
-					min = -1000, max = 1000, step = 1,
+					min = -5000, max = 5000, step = 1,
 					set = function(info, value) E.db.bags[ info[#info] ] = value; B:PositionBagFrames(); end,
 				},
 				yOffset = {
 					order = 7,
 					type = 'range',
 					name = L["Y Offset Bags"],
-					min = -1000, max = 1000, step = 1,
+					min = -3000, max = 3000, step = 1,
 					set = function(info, value) E.db.bags[ info[#info] ] = value; B:PositionBagFrames(); end,
 				},
 				xOffsetBank = {
 					order = 8,
 					type = 'range',
 					name = L["X Offset Bank"],
-					min = -1000, max = 1000, step = 1,
+					min = -5000, max = 5000, step = 1,
 					set = function(info, value) E.db.bags[ info[#info] ] = value; B:PositionBagFrames(); end,
 				},
 				yOffsetBank = {
 					order = 9,
 					type = 'range',
 					name = L["Y Offset Bank"],
-					min = -1000, max = 1000, step = 1,
+					min = -3000, max = 3000, step = 1,
 					set = function(info, value) E.db.bags[ info[#info] ] = value; B:PositionBagFrames(); end,
 				},
 			},

@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod("HighmaulTrash", "DBM-Highmaul")
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 13156 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 14508 $"):sub(12, -3))
 --mod:SetModelID(47785)
 mod:SetZone()
 
@@ -12,9 +12,9 @@ mod:RegisterEvents(
 )
 
 --Maybe add auto range finder for moveaway warnings, and REMOVED event to close it after
-local warnRuneofDestruction			= mod:NewTargetAnnounce("OptionVersion2", 175636, 3, nil, false)
-local warnRadiatingPoison			= mod:NewTargetAnnounce("OptionVersion2", 172066, 3, nil, false)
-local warnArcaneVol					= mod:NewTargetAnnounce("OptionVersion2", 166200, 3, nil, false)
+local warnRuneofDestruction			= mod:NewTargetAnnounce(175636, 3, nil, false, 2)
+local warnRadiatingPoison			= mod:NewTargetAnnounce(172066, 3, nil, false, 2)
+local warnArcaneVol					= mod:NewTargetAnnounce(166200, 3, nil, false, 2)
 
 local specWarnRuneofDisintegration	= mod:NewSpecialWarningMove(175654)
 local specWarnRuneofDestruction		= mod:NewSpecialWarningMoveAway(175636)
@@ -26,7 +26,6 @@ local yellArcaneVol					= mod:NewYell(166200)
 local specWarnWildFlames			= mod:NewSpecialWarningMove(173827)
 
 mod:RemoveOption("HealthFrame")
-mod:RemoveOption("SpeedKillTimer")
 mod:AddRangeFrameOption(8, 166200)
 
 local debuff = GetSpellInfo(166200)

@@ -3,7 +3,7 @@
 		GExRT.Options:Open()
 	</Binding>
 	<Binding name="EXRT_FIGHTLOG_OPEN">
-		GExRT.mds.FightLog_Open()
+		GExRT.F.FightLog_Open()
 	</Binding>
 	<Binding name="CLICK EXRTWM1:LeftButton" />
 	<Binding name="CLICK EXRTWM2:LeftButton" />

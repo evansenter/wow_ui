@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1207, "DBM-Party-WoD", 5, 556)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12458 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 14508 $"):sub(12, -3))
 mod:SetCreatureID(83894, 83892, 83893)--Dulhu 83894, Gola 83892, Telu
 mod:SetEncounterID(1757)
 mod:SetBossHPInfoToHighest()
@@ -22,11 +22,11 @@ mod:SetBossHealthInfo(83894, 83892, 83893)
 
 --Timers are too difficult to do, rapidTides messes up any chance of ever having decent timers.
 local warnRevitalizingWaters		= mod:NewSpellAnnounce(168082, 4)
-local warnBriarskin					= mod:NewTargetAnnounce("OptionVersion2", 168041, 3, nil, "MagicDispeller")
+local warnBriarskin					= mod:NewTargetAnnounce(168041, 3, nil, "MagicDispeller", 2)
 local warnRapidTides				= mod:NewTargetAnnounce(168105, 4)
 local warnGraspingVine				= mod:NewTargetAnnounce(168375, 2)
-local warnSlash						= mod:NewSpellAnnounce("OptionVersion3", 168383, 3)
-local warnNoxious					= mod:NewSpellAnnounce("OptionVersion2", 175997, 3)
+local warnSlash						= mod:NewSpellAnnounce(168383, 3, nil, nil, 3)
+local warnNoxious					= mod:NewSpellAnnounce(175997, 3, nil, nil, 2)
 local warnShapersFortitude			= mod:NewTargetAnnounce(168520, 3)
 
 local specWarnRevitalizingWaters	= mod:NewSpecialWarningInterrupt(168082, "-Healer")
@@ -34,10 +34,10 @@ local specWarnBriarskin				= mod:NewSpecialWarningInterrupt(168041, false)--if y
 local specWarnBriarskinDispel		= mod:NewSpecialWarningDispel(168041, false)--Not as important as rapid Tides and to assume you have at least two dispellers is big assumption
 local specWarnRapidTidesDispel		= mod:NewSpecialWarningDispel(168105, "MagicDispeller", nil, nil, 3)
 local specWarnSlash					= mod:NewSpecialWarningSpell(168383)
-local specWarnNoxious				= mod:NewSpecialWarningRun("OptionVersion2", 175997)
+local specWarnNoxious				= mod:NewSpecialWarningRun(175997, nil, nil, 2, 4)
 local specWarnBramble				= mod:NewSpecialWarningMove(167977)
 
-local timerShapersFortitude			= mod:NewTargetTimer("OptionVersion2", 15, 168520, nil, false)
+local timerShapersFortitude			= mod:NewTargetTimer(15, 168520, nil, false, 2)
 local timerNoxiousCD				= mod:NewCDTimer(16, 175997, nil, "Melee")
 local timerGraspingVineCD			= mod:NewNextTimer(31.5, 168375)
 

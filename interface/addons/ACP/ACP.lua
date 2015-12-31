@@ -325,7 +325,7 @@ function ACP:GetAddonStatus(addon)
 
     if reason == "DISABLED" then color, note = "9d9d9d", getreason(reason) -- Grey
     elseif reason == "NOT_DEMAND_LOADED" then color, note = "0070dd", getreason(reason) -- Blue
-    elseif reason then color, note = "ff8000", getreason(reason) -- Orange
+    elseif reason and not loaded then color, note = "ff8000", getreason(reason) -- Orange
     elseif loadable and isondemand and not loaded and enabled then color, note = "1eff00", L["Loadable OnDemand"] -- Green
     elseif loaded and not enabled then color, note = "a335ee", L["Disabled on reloadUI"] -- Purple
     elseif reason == "MISSING" then color, note = "ff0000", getreason(reason)
@@ -488,10 +488,10 @@ function ACP:OnLoad(this)
     self.L = L
     self.frame = _G[ACP_FRAME_NAME]
 
-    self.frame:SetMovable()
+    self.frame:SetMovable(true)
 
     -- Make sure we are properly scaled.
-    self.frame:SetScale(UIParent:GetEffectiveScale());
+    self.frame:SetScale(UIParent:GetEffectiveScale() * 0.75);
 
     for i=1,ACP_MAXADDONS do
         local button = _G[ACP_FRAME_NAME .. "Entry" .. i .. "LoadNow"]
@@ -1533,7 +1533,7 @@ function ACP:SortDropDown_OnClick(sorter)
 end
 
 function ACP:DisableAllAddons()
-    DisableAllAddOns()
+    DisableAllAddOns(UnitName("player"))
     EnableAddOn(ACP_ADDON_NAME, UnitName("player"))
 
     for k in pairs(savedVar.ProtectedAddons) do
@@ -1747,9 +1747,9 @@ function ACP:AddonList_OnShow_Fast(this)
                 local enabled = GetAddOnEnableState(UnitName("player"), name) > 0;
                 local loaded = IsAddOnLoaded(name)
                 local ondemand = IsAddOnLoadOnDemand(name)
-                if (loadable) then
+                if enabled and (loadable or loaded) then
                     titleText:SetTextColor(1, 0.78, 0)
-                elseif (enabled and reason ~= "DEP_DISABLED") then
+                elseif (enabled and reason ~= "DEP_DISABLED" and reason ~= "DEMAND_LOADED") then
                     titleText:SetTextColor(1, 0.1, 0.1)
                 else
                     titleText:SetTextColor(0.5, 0.5, 0.5)
@@ -1835,7 +1835,7 @@ function ACP:AddonList_OnShow_Fast(this)
                     status:SetText("")
                 end
 
-                if (not loaded and enabled and ondemand) then
+                if (not loaded and enabled and ondemand and reason ~= "DEP_DISABLED") then
                     loadnow:Show()
                 else
                     loadnow:Hide()
@@ -2015,6 +2015,8 @@ function ACP:ShowTooltip(this, index)
         index = ACP_BLIZZARD_ADDONS[(index - GetNumAddOns())]
     end
 
+    if not index then return end
+
     local name, title, notes, loadable, reason, security, newVersion  = GetAddOnInfo(index)
     local author = GetAddOnMetadata(name, "Author")
     local version = ParseVersion(GetAddOnMetadata(name, "Version"))
@@ -2043,9 +2045,9 @@ function ACP:ShowTooltip(this, index)
         GameTooltip:AddLine(L["No information available."], 1, 1, 1)
     end
 
-    if reason then
-        GameTooltip:AddLine(CLR:Label(L["Status"]) .. ": " .. CLR:AddonStatus(self:GetAddonStatus(index)), 1, 1, 1, 1)
-    end
+--    if reason then
+--        GameTooltip:AddLine(CLR:Label(L["Status"]) .. ": " .. CLR:AddonStatus(self:GetAddonStatus(index)), 1, 1, 1, 1)
+--    end
 
     local depLine
     local dep = deps[1]

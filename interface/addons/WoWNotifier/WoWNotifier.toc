@@ -1,4 +1,4 @@
-## Interface: 60100
+## Interface: 60200
 ## Title: WoWNotifier
 ## Notes: Notifies you when your LFG/LFR pops to your phone.
 ## Version: 1.5

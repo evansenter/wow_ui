@@ -581,7 +581,7 @@ For more information on this setting, see the readme file.]=],
 end
 
 local Locale = GetLocale()
-if Locale ~= "deDE" and Locale ~= "esES" and Locale ~= "esMX" and Locale ~= "frFR" and Locale ~= "itIT" and Locale ~= "ptBR" and Locale ~= "ruRU" and Locale ~= "zhCN" and Locale ~= "zhTW" then
+if Locale ~= "deDE" and Locale ~= "esES" and Locale ~= "esMX" and Locale ~= "frFR" and Locale ~= "itIT" and Locale ~= "koKR" and Locale ~= "ptBR" and Locale ~= "ruRU" and Locale ~= "zhCN" and Locale ~= "zhTW" then
 	PawnUseThisLocalization()
 end
 

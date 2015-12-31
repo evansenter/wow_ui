@@ -16,13 +16,8 @@ DataStore_AuctionsDB = {
 				["lastVisitDate"] = "2015/03/18 19:36",
 			},
 			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1426717387,
-				["Auctions"] = {
-					"1|114050|1||80740500|84990000|3", -- [1]
-					"1|114050|1||80740500|84990000|3", -- [2]
-					"1|111452|13||227240|239200|3", -- [3]
-				},
-				["lastVisitDate"] = "2015/03/18 18:22",
+				["lastUpdate"] = 1451461397,
+				["lastVisitDate"] = "2015/12/29 23:43",
 			},
 			["Default.Illidan.Metal"] = {
 				["lastUpdate"] = 1426539671,

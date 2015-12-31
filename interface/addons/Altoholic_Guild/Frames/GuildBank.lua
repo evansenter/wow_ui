@@ -44,7 +44,15 @@ local function UpdateBankTabButtons()
 		if tabName then
 			button.Icon:SetWidth(30)
 			button.Icon:SetHeight(30)
-			button.Icon:SetTexture(DataStore:GetGuildBankTabIcon(currentGuildKey, i))
+			
+			local icon = DataStore:GetGuildBankTabIcon(currentGuildKey, i)
+			local iconNumber = tonumber(icon)
+			
+			if iconNumber then
+				button.Icon:SetToFileData(iconNumber)
+			else
+				button.Icon:SetTexture(icon)
+			end
 			button:Show()
 		else
 			button:Hide()
@@ -422,8 +430,8 @@ function ns:OnLoad()
 	-- if the player is not in a guild, set the drop down to the first available guild on this realm, if any.
 	if not currentGuild then
 		-- if the guild that will be displayed is not the one the current player is in, then disable the button
-		parent.Bank.UpdateIcon:Disable()
-		parent.Bank.UpdateIcon.Icon:SetDesaturated(true)
+		menuIcons.UpdateIcon:Disable()
+		menuIcons.UpdateIcon.Icon:SetDesaturated(true)
 	
 		for guildName, guild in pairs(DataStore:GetGuilds(currentRealm, THIS_ACCOUNT)) do
 			local money = DataStore:GetGuildBankMoney(guild)

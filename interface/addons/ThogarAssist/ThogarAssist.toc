@@ -1,4 +1,4 @@
-## Interface: 60100
+## Interface: 60200
 ## Title: Thogar Assist
 ## Notes: Displays incoming trains in the Thogar encounter
 ## DefaultState: enabled
@@ -8,7 +8,7 @@
 ## LoadManagers: BigWigs
 ## X-BigWigs-LoadOn-Slash: /thogar, /thogarassist
 ## X-BigWigs-LoadOn-ZoneId: 988
-## X-Curse-Packaged-Version: v6.1.0-3
+## X-Curse-Packaged-Version: v6.2.0-1
 ## X-Curse-Project-Name: Thogar Assist
 ## X-Curse-Project-ID: thogar-assist
 ## X-Curse-Repository-ID: wow/thogar-assist/mainline

@@ -227,6 +227,45 @@ GTFO.SpellID["176640"] = {
 	sound = 3;
 };
 
+GTFO.SpellID["189463"] = {
+	--desc = "Explosive Spear";
+	sound = 3;
+};
+
+GTFO.SpellID["180846"] = {
+	--desc = "Cannon Shot";
+	sound = 3;
+};
+
+GTFO.SpellID["180285"] = {
+	--desc = "Bombardment";
+	sound = 3;
+};
+
+GTFO.SpellID["180380"] = {
+	--desc = "Razor Net!";
+	sound = 3;
+	applicationOnly = true;
+};
+
+GTFO.SpellID["187664"] = {
+	--desc = "Fel Breath (Supreme Lord Kazzak)";
+	sound = 3;
+	tankSound = 0;
+};
+
+GTFO.SpellID["187632"] = {
+	--desc = "Explosive Doom (Supreme Lord Kazzak)";
+	sound = 4;
+	ignoreSelfInflicted = true;
+};
+
+GTFO.SpellID["172992"] = {
+	--desc = "Rigged Rifle Shot";
+	sound = 3;
+	alwaysAlert = true;
+};
+
 --TODO: Colossal Slam (Drov the Ruiner) - non-tank fail for front-cone damage
 --TODO: Rumbling Goren (Drov the Ruiner) - non-tank fail?
 --TODO: Savage Vines (Tarlna the Ageless) - explosion fail if not targetted
@@ -649,17 +688,12 @@ GTFO.SpellID["155900"] = {
 GTFO.SpellID["156446"] = {
 	--desc = "Blast Wave (Slag Behemoth)";
 	sound = 3;
+	tankSound = 0;
 };
 
 GTFO.SpellID["156349"] = {
 	--desc = "Volcanic Bomb (Slag Behemoth)";
 	sound = 3;
-};
-
-GTFO.SpellID["155187"] = {
-	--desc = "Bomb (Foreman Feldspar)";
-	sound = 3;
-	ignoreSelfInflicted = true;
 };
 
 GTFO.SpellID["162672"] = {
@@ -739,10 +773,20 @@ GTFO.SpellID["156554"] = {
 
 -- The Blast Furnace
 -- TODO: Electrocution - when not primary target
--- TODO: Bomb - when not primary target
--- TODO: Drop Lit Bomb 
 -- TODO: Slag Bomb - Avoidable?
 -- TODO: Volatile Fire - Avoidable?
+
+GTFO.SpellID["155187"] = {
+	--desc = "Bomb (Foreman Feldspar)";
+	sound = 3;
+	ignoreSelfInflicted = true;
+};
+
+GTFO.SpellID["177756"] = {
+	--desc = "Deafening Roar (Bellows Operator)";
+	sound = 3;
+	tankSound = 0;
+};
 
 GTFO.SpellID["157055"] = {
 	--desc = "Thundering Blows (Kromog)";
@@ -877,6 +921,11 @@ GTFO.SpellID["162514"] = {
 	sound = 3;
 };
 
+GTFO.SpellID["162578"] = {
+	--desc = "Flame Gout (Kargath Bladefist)";
+	sound = 3;
+};
+
 -- The Butcher
 -- TODO: Gushing Wounds (The Butcher) -- Definite Fail at 5 stacks (heroic), fail at 4, fail at 6+ on LFR?
 -- TODO: Paleobomb (The Butcher, Heroic) -- Avoidable?
@@ -1008,4 +1057,155 @@ GTFO.SpellID["174437"] = {
 GTFO.SpellID["135891"] = {
 	--desc = "Uninvited (Boom Room Bouncer)";
 	sound = 3;
+};
+
+-- ********************
+-- * Hellfire Citadel *
+-- ********************
+
+GTFO.SpellID["178162"] = {
+	--desc = "Flameorb (Felfire Flamebelcher)";
+	sound = 3;
+};
+
+GTFO.SpellID["186750"] = {
+	--desc = "Boom";
+	sound = 3;
+};
+
+GTFO.SpellID["184393"] = {
+	--desc = "Shockwave (Siegemaster Mar'tak)";
+	sound = 3;
+};
+
+GTFO.SpellID["181363"] = {
+	--desc = "Capsule Impact";
+	sound = 3;
+};
+
+GTFO.SpellID["185284"] = {
+	--desc = "Barrage (Iron Reaver)";
+	sound = 3;
+};
+
+GTFO.SpellID["185242"] = {
+	--desc = "Blitz (Iron Reaver)";
+	sound = 3;
+	applicationOnly = true;
+};
+
+GTFO.SpellID["182005"] = {
+	--desc = "Firebomb (Iron Reaver)";
+	sound = 3;
+};
+
+GTFO.SpellID["182362"] = {
+	--desc = "Falling Slam (Iron Reaver)";
+	sound = 3;
+	test = true;
+};
+
+GTFO.SpellID["188367"] = {
+	--desc = "Slag Trap (Keen-Eyed Gronnstalker)";
+	sound = 3;
+};
+
+GTFO.SpellID["188081"] = {
+	--desc = "Crush (Grasping Hand)";
+	sound = 3;
+	applicationOnly = true;
+};
+
+GTFO.SpellID["184815"] = {
+	--desc = "Agitate (Runic Pool)";
+	sound = 3;
+};
+
+GTFO.SpellID["181324"] = {
+	--desc = "Explosive Burst (Kormrok)";
+	sound = 3;
+	negatingDebuffSpellID = 181306; -- Explosive Burst
+	negatingIgnoreTime = 12;
+	tankSound = 0;
+};
+
+GTFO.SpellID["183226"] = {
+	--desc = "Fel Blaze (Blademaster Jubei'thos)";
+	sound = 3;
+};
+
+GTFO.SpellID["184681"] = {
+	--desc = "Wailing Horror (Hellfire Council)";
+	sound = 3;
+};
+
+GTFO.SpellID["182525"] = {
+	--desc = "Bursting Ulcer (Gorefiend)";
+	sound = 3;
+};
+
+GTFO.SpellID["189546"] = {
+	--desc = "Soul Eruption (Sargerei Soul Cleaver)";
+	sound = 3;
+};
+
+GTFO.SpellID["188939"] = {
+	--desc = "Volatile Voidstep (Xhul'horac)";
+	sound = 3;
+	test = true;
+};
+
+GTFO.SpellID["180146"] = {
+	--desc = "Hunger For Life (Gorefiend)";
+	sound = 3;
+};
+
+GTFO.SpellID["180146"] = {
+	--desc = "Hellfire Blast (Eredar Faithbreaker)";
+	sound = 3;
+	minimumStacks = 2;
+};
+
+GTFO.SpellID["183090"] = {
+	--desc = "Searing Blaze (Vindicator Bramu/Tyrant Velhari)";
+	sound = 3;
+};
+
+GTFO.SpellID["181295"] = {
+	--desc = "Digest (Gorefiend)";
+	sound = 3;
+	damageMinimum = 1;
+};
+
+GTFO.SpellID["180017"] = {
+	--desc = "Crushing Darkness (Gorefiend)";
+	sound = 3;
+};
+
+GTFO.SpellID["181180"] = {
+	--desc = "Inferno (Mannoroth)";
+	sound = 3;
+};
+
+GTFO.SpellID["181498"] = {
+	--desc = "Wake of Destruction (Fel Lord Zakuun)";
+	sound = 3;
+	affirmingDebuffSpellID = 182008; -- Latent Energy
+};
+
+GTFO.SpellID["189596"] = {
+	--desc = "Protocol: Crowd Control (Construct Peacekeeper)";
+	sound = 3;
+};
+
+GTFO.SpellID["188500"] = {
+	--desc = "Soul Dispersion (Socrethar)";
+	sound = 3;
+	vehicle = true;
+};
+
+GTFO.SpellID["182900"] = {
+	--desc = "Virulent Haunt (Socrethar)";
+	sound = 3;
+	applicationOnly = true;
 };

@@ -58,7 +58,7 @@ DataStore_TalentsDB = {
 			},
 			["Default.Illidan.Evan"] = {
 				["ActiveTalents"] = 2,
-				["lastUpdate"] = 1426721817,
+				["lastUpdate"] = 1451460785,
 				["Class"] = "PRIEST",
 				["GlyphList"] = {
 					11, -- [1]
@@ -160,7 +160,7 @@ DataStore_TalentsDB = {
 			},
 			["Default.Illidan.Metal"] = {
 				["ActiveTalents"] = 1,
-				["lastUpdate"] = 1426618288,
+				["lastUpdate"] = 1451460434,
 				["GlyphList"] = {
 					11, -- [1]
 					7962, -- [2]
@@ -278,7 +278,7 @@ DataStore_TalentsDB = {
 			},
 			["Default.Illidan.Comet"] = {
 				["ActiveTalents"] = 1,
-				["lastUpdate"] = 1426734563,
+				["lastUpdate"] = 1451461381,
 				["Class"] = "MONK",
 				["GlyphList"] = {
 					11, -- [1]
@@ -694,7 +694,7 @@ DataStore_TalentsRefDB = {
 		},
 		["WARRIOR"] = {
 			["Locale"] = "enUS",
-			["Version"] = 19702,
+			["Version"] = 20779,
 		},
 		["WARLOCK"] = {
 			["Locale"] = "enUS",
@@ -710,11 +710,11 @@ DataStore_TalentsRefDB = {
 		},
 		["MONK"] = {
 			["Locale"] = "enUS",
-			["Version"] = 19702,
+			["Version"] = 20779,
 		},
 		["PRIEST"] = {
 			["Locale"] = "enUS",
-			["Version"] = 19702,
+			["Version"] = 20779,
 		},
 	},
 }

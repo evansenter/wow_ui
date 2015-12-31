@@ -1,5 +1,9 @@
 
 TradeSkillInfoDB = {
+	["namespaces"] = {
+		["Browser"] = {
+		},
+	},
 	["profiles"] = {
 		["Default"] = {
 		},
@@ -72,6 +76,12 @@ TradeSkillInfoDB = {
 					["B"] = 700,
 				},
 			},
+			["Natal"] = {
+				["skills"] = {
+					["Y"] = 440,
+					["E"] = 400,
+				},
+			},
 			["Combustion"] = {
 				["skills"] = {
 					["E"] = 600,
@@ -82,10 +92,10 @@ TradeSkillInfoDB = {
 			},
 			["Evan"] = {
 				["skills"] = {
-					["X"] = 52,
-					["T"] = 700,
-					["W"] = 16,
 					["D"] = 700,
+					["X"] = 52,
+					["W"] = 16,
+					["T"] = 700,
 				},
 				["knownRecipes"] = {
 					[104409] = 1,
@@ -689,12 +699,6 @@ TradeSkillInfoDB = {
 					[44500] = 1,
 					[158887] = 3,
 					[182123] = 1,
-				},
-			},
-			["Natal"] = {
-				["skills"] = {
-					["Y"] = 440,
-					["E"] = 400,
 				},
 			},
 			["Comet"] = {

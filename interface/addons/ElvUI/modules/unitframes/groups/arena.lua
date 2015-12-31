@@ -1,16 +1,33 @@
 local E, L, V, P, G = unpack(select(2, ...)); --Inport: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local UF = E:GetModule('UnitFrames');
 
+--Cache global variables
+--Lua functions
+local _G = _G
+local pairs, unpack = pairs, unpack
+local tinsert = table.insert
+local format = format
+--WoW API / Variables
+local CreateFrame = CreateFrame
+local IsInInstance = IsInInstance
+local UnitExists = UnitExists
+local GetArenaOpponentSpec = GetArenaOpponentSpec
+local GetSpecializationInfoByID = GetSpecializationInfoByID
+local LOCALIZED_CLASS_NAMES_MALE = LOCALIZED_CLASS_NAMES_MALE
+local RAID_CLASS_COLORS = RAID_CLASS_COLORS
+local CUSTOM_CLASS_COLORS = CUSTOM_CLASS_COLORS
+
+--Global variables that we don't cache, list them here for mikk's FindGlobals script
+-- GLOBALS: UIParent, ArenaHeaderMover
+
 local _, ns = ...
 local ElvUF = ns.oUF
 assert(ElvUF, "ElvUI was unable to locate oUF.")
 
 local ArenaHeader = CreateFrame('Frame', 'ArenaHeader', UIParent)
 
-
 function UF:UpdatePrep(event, unit, status)
 	if (event == "ARENA_OPPONENT_UPDATE" or event == "UNIT_NAME_UPDATE") and unit ~= self.unit then return end
-
 
 	local _, instanceType = IsInInstance();
 	if not UF.db.units.arena.enable or instanceType ~= "arena" or (UnitExists(self.unit) and status ~= "unseen") then
@@ -26,7 +43,7 @@ function UF:UpdatePrep(event, unit, status)
 	end
 
 	if class and spec then
-		local color = RAID_CLASS_COLORS[class]
+		local color = CUSTOM_CLASS_COLORS and CUSTOM_CLASS_COLORS[class] or RAID_CLASS_COLORS[class]
 		self.SpecClass:SetText(spec.."  -  "..LOCALIZED_CLASS_NAMES_MALE[class])
 		self.Health:SetStatusBarColor(color.r, color.g, color.b)
 		self.Icon:SetTexture(texture or [[INTERFACE\ICONS\INV_MISC_QUESTIONMARK]])
@@ -41,7 +58,10 @@ function UF:Construct_ArenaFrames(frame)
 	frame.Name = self:Construct_NameText(frame)
 
 	if(not frame.isChild) then
-		frame.Power = self:Construct_PowerBar(frame, true, true, 'LEFT', false)
+		frame.Power = self:Construct_PowerBar(frame, true, true, 'LEFT')
+		
+		frame.Portrait3D = self:Construct_Portrait(frame, 'model')
+		frame.Portrait2D = self:Construct_Portrait(frame, 'texture')
 
 		frame.Buffs = self:Construct_Buffs(frame)
 
@@ -60,6 +80,8 @@ function UF:Construct_ArenaFrames(frame)
 		frame:RegisterEvent('PLAYER_TARGET_CHANGED', UF.UpdateTargetGlow)
 		frame:RegisterEvent('PLAYER_ENTERING_WORLD', UF.UpdateTargetGlow)
 		frame:RegisterEvent('GROUP_ROSTER_UPDATE', UF.UpdateTargetGlow)
+		
+		frame.customTexts = {}
 	end
 
 	if not frame.PrepFrame and not frame.isChild then
@@ -102,6 +124,13 @@ end
 
 function UF:Update_ArenaFrames(frame, db)
 	frame.db = db
+	
+	if frame.Portrait then
+		frame.Portrait:Hide()
+		frame.Portrait:ClearAllPoints()
+		frame.Portrait.backdrop:Hide()
+	end
+	frame.Portrait = db.portrait.style == '2D' and frame.Portrait2D or frame.Portrait3D
 	local BORDER = E.Border;
 	local SPACING = E.Spacing;
 	local INDEX = frame.index
@@ -116,6 +145,9 @@ function UF:Update_ArenaFrames(frame, db)
 	local POWERBAR_OFFSET = db.power.offset
 	local POWERBAR_HEIGHT = db.power.height
 	local POWERBAR_WIDTH = db.width - (BORDER*2)
+	local USE_PORTRAIT = db.portrait.enable
+	local USE_PORTRAIT_OVERLAY = db.portrait.overlay and USE_PORTRAIT
+	local PORTRAIT_WIDTH = db.portrait.width
 
 	local unit = self.unit
 
@@ -130,6 +162,14 @@ function UF:Update_ArenaFrames(frame, db)
 
 		if USE_MINI_POWERBAR then
 			POWERBAR_WIDTH = POWERBAR_WIDTH / 2
+		end
+		
+		if USE_PORTRAIT_OVERLAY or not USE_PORTRAIT then
+			PORTRAIT_WIDTH = 0
+		end
+		
+		if not USE_POWERBAR_OFFSET then
+			POWERBAR_OFFSET = 0
 		end
 	end
 
@@ -166,12 +206,7 @@ function UF:Update_ArenaFrames(frame, db)
 					health.colorHealth = true
 				end
 			else
-				health.colorClass = true
-				health.colorReaction = true
-			end
-
-			if self.db['colors'].forcehealthreaction == true then
-				health.colorClass = false
+				health.colorClass = (not self.db['colors'].forcehealthreaction)
 				health.colorReaction = true
 			end
 		end
@@ -191,8 +226,15 @@ function UF:Update_ArenaFrames(frame, db)
 		end
 
 		health.bg:ClearAllPoints()
-		health.bg:SetParent(health)
-		health.bg:SetAllPoints()
+		if not USE_PORTRAIT_OVERLAY then
+			health:Point("TOPRIGHT", -(PORTRAIT_WIDTH + PVPINFO_WIDTH + BORDER), -BORDER)
+			health.bg:SetParent(health)
+			health.bg:SetAllPoints()
+		else
+			health.bg:Point('BOTTOMLEFT', health:GetStatusBarTexture(), 'BOTTOMRIGHT')
+			health.bg:Point('TOPRIGHT', health)
+			health.bg:SetParent(frame.Portrait.overlay)
+		end
 	end
 
 	--Name
@@ -247,11 +289,60 @@ function UF:Update_ArenaFrames(frame, db)
 				power:SetFrameLevel(frame:GetFrameLevel() + 3)
 			else
 				power:Point("TOPLEFT", frame.Health.backdrop, "BOTTOMLEFT", BORDER, -(E.PixelMode and 0 or (BORDER + SPACING)))
-				power:Point("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -(BORDER + PVPINFO_WIDTH), BORDER)
+				power:Point("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -(BORDER + PVPINFO_WIDTH + PORTRAIT_WIDTH), BORDER)
 			end
 		elseif frame:IsElementEnabled('Power') then
 			frame:DisableElement('Power')
 			power:Hide()
+		end
+	end
+	
+	--Portrait
+	do
+		local portrait = frame.Portrait
+	
+		--Set Points
+		if USE_PORTRAIT then
+			if not frame:IsElementEnabled('Portrait') then
+				frame:EnableElement('Portrait')
+			end
+	
+			portrait:ClearAllPoints()
+	
+			if USE_PORTRAIT_OVERLAY then
+				if db.portrait.style == '3D' then
+					portrait:SetFrameLevel(frame.Health:GetFrameLevel() + 1)
+				end
+				portrait:SetAllPoints(frame.Health)
+				portrait:SetAlpha(0.3)
+				portrait:Show()
+				portrait.backdrop:Hide()
+			else
+				portrait:SetAlpha(1)
+				portrait:Show()
+				portrait.backdrop:Show()
+				portrait.backdrop:ClearAllPoints()
+				portrait.backdrop:SetPoint("TOPRIGHT", frame, "TOPRIGHT", -PVPINFO_WIDTH, 0)
+	
+				if db.portrait.style == '3D' then
+					portrait:SetFrameLevel(frame:GetFrameLevel() + 5)
+				end
+	
+				if USE_MINI_POWERBAR or USE_POWERBAR_OFFSET or not USE_POWERBAR or USE_INSET_POWERBAR then
+					portrait.backdrop:Point("BOTTOMLEFT", frame.Health.backdrop, "BOTTOMRIGHT", E.PixelMode and -1 or SPACING, 0)
+				else
+					portrait.backdrop:Point("BOTTOMLEFT", frame.Power.backdrop, "BOTTOMRIGHT", E.PixelMode and -1 or SPACING, 0)
+				end
+	
+				portrait:Point('BOTTOMLEFT', portrait.backdrop, 'BOTTOMLEFT', BORDER, BORDER)
+				portrait:Point('TOPRIGHT', portrait.backdrop, 'TOPRIGHT', -BORDER, -BORDER)
+			end
+		else
+			if frame:IsElementEnabled('Portrait') then
+				frame:DisableElement('Portrait')
+				portrait:Hide()
+				portrait.backdrop:Hide()
+			end
 		end
 	end
 
@@ -325,6 +416,12 @@ function UF:Update_ArenaFrames(frame, db)
 		buffs["growth-x"] = db.buffs.anchorPoint == 'LEFT' and 'LEFT' or  db.buffs.anchorPoint == 'RIGHT' and 'RIGHT' or (db.buffs.anchorPoint:find('LEFT') and 'RIGHT' or 'LEFT')
 		buffs.initialAnchor = E.InversePoints[db.buffs.anchorPoint]
 
+		buffs.attachTo = attachTo
+		buffs.point = E.InversePoints[db.buffs.anchorPoint]
+		buffs.anchorPoint = db.buffs.anchorPoint
+		buffs.xOffset = x + db.buffs.xOffset
+		buffs.yOffset = y + db.buffs.yOffset + (E.PixelMode and (db.buffs.anchorPoint:find('TOP') and -1 or 1) or 0)
+
 		if db.buffs.enable then
 			buffs:Show()
 			UF:UpdateAuraIconSettings(buffs)
@@ -361,11 +458,43 @@ function UF:Update_ArenaFrames(frame, db)
 		debuffs["growth-x"] = db.debuffs.anchorPoint == 'LEFT' and 'LEFT' or  db.debuffs.anchorPoint == 'RIGHT' and 'RIGHT' or (db.debuffs.anchorPoint:find('LEFT') and 'RIGHT' or 'LEFT')
 		debuffs.initialAnchor = E.InversePoints[db.debuffs.anchorPoint]
 
+		debuffs.attachTo = attachTo
+		debuffs.point = E.InversePoints[db.debuffs.anchorPoint]
+		debuffs.anchorPoint = db.debuffs.anchorPoint
+		debuffs.xOffset = x + db.debuffs.xOffset
+		debuffs.yOffset = y + db.debuffs.yOffset
+
 		if db.debuffs.enable then
 			debuffs:Show()
 			UF:UpdateAuraIconSettings(debuffs)
 		else
 			debuffs:Hide()
+		end
+	end
+
+	--Smart Aura Position
+	do
+		local position = db.smartAuraPosition
+
+		if position == "BUFFS_ON_DEBUFFS" then
+			if db.debuffs.attachTo == "BUFFS" then
+				E:Print(format(L["This setting caused a conflicting anchor point, where '%s' would be attached to itself. Please check your anchor points. Setting '%s' to be attached to '%s'."], L["Buffs"], L["Debuffs"], L["Frame"]))
+				db.debuffs.attachTo = "FRAME"
+				frame.Debuffs.attachTo = frame
+			end
+			frame.Buffs.PostUpdate = nil
+			frame.Debuffs.PostUpdate = UF.UpdateBuffsHeaderPosition
+		elseif position == "DEBUFFS_ON_BUFFS" then
+			if db.buffs.attachTo == "DEBUFFS" then
+				E:Print(format(L["This setting caused a conflicting anchor point, where '%s' would be attached to itself. Please check your anchor points. Setting '%s' to be attached to '%s'."], L["Debuffs"], L["Buffs"], L["Frame"]))
+				db.buffs.attachTo = "FRAME"
+				frame.Buffs.attachTo = frame
+			end
+			frame.Buffs.PostUpdate = UF.UpdateDebuffsHeaderPosition
+			frame.Debuffs.PostUpdate = nil
+		else
+			frame.Buffs.PostUpdate = nil
+			frame.Debuffs.PostUpdate = nil
 		end
 	end
 
@@ -427,9 +556,9 @@ function UF:Update_ArenaFrames(frame, db)
 		local specIcon = frame.PVPSpecIcon
 		specIcon.bg:Point("TOPRIGHT", frame, "TOPRIGHT")
 		if USE_MINI_POWERBAR or USE_POWERBAR_OFFSET or USE_INSET_POWERBAR then
-			specIcon.bg:SetPoint("BOTTOMLEFT", frame.Health.backdrop, "BOTTOMRIGHT", E.PixelMode and -1 or SPACING, 0)
+			specIcon.bg:SetPoint("BOTTOMLEFT", frame.Health.backdrop, "BOTTOMRIGHT", (E.PixelMode and -1 or SPACING) + PORTRAIT_WIDTH, 0)
 		else
-			specIcon.bg:SetPoint("BOTTOMLEFT", frame.Power.backdrop, "BOTTOMRIGHT", E.PixelMode and -1 or SPACING, 0)
+			specIcon.bg:SetPoint("BOTTOMLEFT", frame.Power.backdrop, "BOTTOMRIGHT", (E.PixelMode and -1 or SPACING) + PORTRAIT_WIDTH, 0)
 		end
 
 		if db.pvpSpecIcon and not frame:IsElementEnabled('PVPSpecIcon') then
@@ -463,6 +592,16 @@ function UF:Update_ArenaFrames(frame, db)
 			if not frame:IsElementEnabled('HealPrediction') then
 				frame:EnableElement('HealPrediction')
 			end
+			
+			if not USE_PORTRAIT_OVERLAY then
+				healPrediction.myBar:SetParent(frame)
+				healPrediction.otherBar:SetParent(frame)
+				healPrediction.absorbBar:SetParent(frame)
+			else
+				healPrediction.myBar:SetParent(frame.Portrait.overlay)
+				healPrediction.otherBar:SetParent(frame.Portrait.overlay)
+				healPrediction.absorbBar:SetParent(frame.Portrait.overlay)
+			end
 
 			healPrediction.myBar:SetStatusBarColor(c.personal.r, c.personal.g, c.personal.b, c.personal.a)
 			healPrediction.otherBar:SetStatusBarColor(c.others.r, c.others.g, c.others.b, c.others.a)
@@ -473,12 +612,19 @@ function UF:Update_ArenaFrames(frame, db)
 			end
 		end
 	end
+	
+	for objectName, object in pairs(frame.customTexts) do
+		if (not db.customTexts) or (db.customTexts and not db.customTexts[objectName]) then
+			object:Hide()
+			frame.customTexts[objectName] = nil
+		end
+	end
 
 	if db.customTexts then
 		local customFont = UF.LSM:Fetch("font", UF.db.font)
 		for objectName, _ in pairs(db.customTexts) do
-			if not frame[objectName] then
-				frame[objectName] = frame.RaisedElementParent:CreateFontString(nil, 'OVERLAY')
+			if not frame.customTexts[objectName] then
+				frame.customTexts[objectName] = frame.RaisedElementParent:CreateFontString(nil, 'OVERLAY')
 			end
 
 			local objectDB = db.customTexts[objectName]
@@ -487,33 +633,46 @@ function UF:Update_ArenaFrames(frame, db)
 				customFont = UF.LSM:Fetch("font", objectDB.font)
 			end
 
-			frame[objectName]:FontTemplate(customFont, objectDB.size or UF.db.fontSize, objectDB.fontOutline or UF.db.fontOutline)
-			frame:Tag(frame[objectName], objectDB.text_format or '')
-			frame[objectName]:SetJustifyH(objectDB.justifyH or 'CENTER')
-			frame[objectName]:ClearAllPoints()
-			frame[objectName]:SetPoint(objectDB.justifyH or 'CENTER', frame, objectDB.justifyH or 'CENTER', objectDB.xOffset, objectDB.yOffset)
+			frame.customTexts[objectName]:FontTemplate(customFont, objectDB.size or UF.db.fontSize, objectDB.fontOutline or UF.db.fontOutline)
+			frame:Tag(frame.customTexts[objectName], objectDB.text_format or '')
+			frame.customTexts[objectName]:SetJustifyH(objectDB.justifyH or 'CENTER')
+			frame.customTexts[objectName]:ClearAllPoints()
+			frame.customTexts[objectName]:SetPoint(objectDB.justifyH or 'CENTER', frame, objectDB.justifyH or 'CENTER', objectDB.xOffset, objectDB.yOffset)
 		end
 	end
 
 	frame:ClearAllPoints()
 	if INDEX == 1 then
 		if db.growthDirection == 'UP' then
-			frame:Point('BOTTOMRIGHT', ArenaHeaderMover, 'BOTTOMRIGHT') --Set to default position
-		else
-			frame:Point('TOPRIGHT', ArenaHeaderMover, 'TOPRIGHT') --Set to default position
+			frame:SetPoint('BOTTOMRIGHT', ArenaHeaderMover, 'BOTTOMRIGHT')
+		elseif db.growthDirection == 'RIGHT' then
+			frame:SetPoint('LEFT', ArenaHeaderMover, 'LEFT')
+		elseif db.growthDirection == 'LEFT' then
+			frame:SetPoint('RIGHT', ArenaHeaderMover, 'RIGHT')
+		else --Down
+			frame:SetPoint('TOPRIGHT', ArenaHeaderMover, 'TOPRIGHT')
 		end
 	else
 		if db.growthDirection == 'UP' then
-			frame:Point('BOTTOMRIGHT', _G['ElvUF_Arena'..INDEX-1], 'TOPRIGHT', 0, 12 + db.castbar.height)
-		else
-			frame:Point('TOPRIGHT', _G['ElvUF_Arena'..INDEX-1], 'BOTTOMRIGHT', 0, -(12 + db.castbar.height))
+			frame:SetPoint('BOTTOMRIGHT', _G['ElvUF_Arena'..INDEX-1], 'TOPRIGHT', 0, db.spacing)
+		elseif db.growthDirection == 'RIGHT' then
+			frame:SetPoint('LEFT', _G['ElvUF_Arena'..INDEX-1], 'RIGHT', db.spacing, 0)
+		elseif db.growthDirection == 'LEFT' then
+			frame:SetPoint('RIGHT', _G['ElvUF_Arena'..INDEX-1], 'LEFT', -db.spacing, 0)
+		else --Down
+			frame:SetPoint('TOPRIGHT', _G['ElvUF_Arena'..INDEX-1], 'BOTTOMRIGHT', 0, -db.spacing)
 		end
 	end
+	
+	if db.growthDirection == 'UP' or db.growthDirection == 'DOWN' then
+		ArenaHeader:SetWidth(UNIT_WIDTH)
+		ArenaHeader:SetHeight(UNIT_HEIGHT + ((UNIT_HEIGHT + db.spacing) * 4))
+	elseif db.growthDirection == 'LEFT' or db.growthDirection == 'RIGHT' then
+		ArenaHeader:SetWidth(UNIT_WIDTH + ((UNIT_WIDTH + db.spacing) * 4))
+		ArenaHeader:SetHeight(UNIT_HEIGHT)
+	end
 
-	ArenaHeader:Width(UNIT_WIDTH)
-	ArenaHeader:Height(UNIT_HEIGHT + (UNIT_HEIGHT + 12 + db.castbar.height) * 4)
-
-	UF:ToggleTransparentStatusBar(UF.db.colors.transparentHealth, frame.Health, frame.Health.bg, true)
+	UF:ToggleTransparentStatusBar(UF.db.colors.transparentHealth, frame.Health, frame.Health.bg, (USE_PORTRAIT and USE_PORTRAIT_OVERLAY) ~= true)
 	UF:ToggleTransparentStatusBar(UF.db.colors.transparentPower, frame.Power, frame.Power.bg)
 
 	frame:UpdateAllElements()

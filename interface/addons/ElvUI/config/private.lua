@@ -10,8 +10,9 @@ V['general'] = {
 	["dmgfont"] = "ElvUI Combat",
 	["namefont"] = "ElvUI Font",
 	['chatBubbles'] = 'backdrop',
+	['chatBubbleFont'] = "ElvUI Font",
+	['chatBubbleFontSize'] = 14,
 	['pixelPerfect'] = true,
-	['lfrEnhancement'] = true,
 	['replaceBlizzFonts'] = true,
 	['smallerWorldMap'] = true,
 	['minimap'] = {
@@ -33,6 +34,12 @@ V["nameplate"] = {
 V['auras'] = {
 	['enable'] = true,
 	['disableBlizzard'] = true,
+	
+	["masque"] = {
+		["buffs"] = false,
+		["debuffs"] = false,
+		["consolidatedBuffs"] = false,
+	},
 }
 
 V['chat'] = {
@@ -124,6 +131,13 @@ V['unitframe'] = {
 
 V["actionbar"] = {
 	["enable"] = true,
+	["hideCooldownBling"] = false,
+
+	["masque"] = {
+		["actionbars"] = false,
+		["petBar"] = false,
+		["stanceBar"] = false,
+	},
 }
 
 V["cooldown"] = {

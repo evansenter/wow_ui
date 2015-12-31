@@ -1,9 +1,35 @@
 local E, L, V, P, G = unpack(select(2, ...)); --Inport: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local UF = E:GetModule('UnitFrames');
 
+--Cache global variables
+--Lua functions
+local unpack, select, assert, pairs = unpack, select, assert, pairs
+local tinsert = tinsert
 local random, floor, ceil = math.random, math.floor, math.ceil
 local format = string.format
-
+--WoW API / Variables
+local CreateFrame = CreateFrame
+local UnitIsUnit = UnitIsUnit
+local UnitReaction = UnitReaction
+local UnitIsPlayer = UnitIsPlayer
+local UnitClass = UnitClass
+local UnitAlternatePowerInfo = UnitAlternatePowerInfo
+local UnitHasVehicleUI = UnitHasVehicleUI
+local UnitHasVehicleUI = UnitHasVehicleUI
+local UnitPower = UnitPower
+local GetComboPoints = GetComboPoints
+local GetSpellInfo = GetSpellInfo
+local GetNumBattlefieldScores = GetNumBattlefieldScores
+local GetBattlefieldScore = GetBattlefieldScore
+local IsInInstance = IsInInstance
+local GetUnitName = GetUnitName
+local GetBattlefieldScore = GetBattlefieldScore
+local UnitGroupRolesAssigned = UnitGroupRolesAssigned
+local UnitIsConnected = UnitIsConnected
+local RAID_CLASS_COLORS = RAID_CLASS_COLORS
+local CUSTOM_CLASS_COLORS = CUSTOM_CLASS_COLORS
+local FACTION_BAR_COLORS = FACTION_BAR_COLORS
+local MAX_COMBO_POINTS = MAX_COMBO_POINTS
 
 local LSM = LibStub("LibSharedMedia-3.0");
 function UF:Construct_TargetGlow(frame)
@@ -125,9 +151,18 @@ function UF:Construct_DebuffHighlight(frame)
 	dbh:SetBlendMode("ADD")
 	frame.DebuffHighlightFilter = true
 	frame.DebuffHighlightAlpha = 0.45
+	frame.DebuffHighlightFilterTable = E.global.unitframe.DebuffHighlightColors
 
+	frame:CreateShadow('Default')
+	local x = frame.shadow
+	frame.shadow = nil
+	x:Hide();
+
+	frame.DBHGlow = x
+	
 	if frame.Health then
 		dbh:SetParent(frame.Health)
+		frame.DBHGlow:SetParent(frame.Health)
 	end
 
 	return dbh
@@ -179,13 +214,16 @@ end
 function UF:Construct_RaidRoleFrames(frame)
 	local anchor = CreateFrame('Frame', nil, frame)
 	frame.Leader = anchor:CreateTexture(nil, 'OVERLAY')
+	frame.Assistant = anchor:CreateTexture(nil, 'OVERLAY')
 	frame.MasterLooter = anchor:CreateTexture(nil, 'OVERLAY')
 
 	anchor:Size(24, 12)
 	frame.Leader:Size(12)
+	frame.Assistant:Size(12)
 	frame.MasterLooter:Size(11)
 
 	frame.Leader.PostUpdate = UF.RaidRoleUpdate
+	frame.Assistant.PostUpdate = UF.RaidRoleUpdate
 	frame.MasterLooter.PostUpdate = UF.RaidRoleUpdate
 
 	return anchor
@@ -220,7 +258,7 @@ function UF:UpdateTargetGlow(event)
 		if UnitIsPlayer(unit) then
 			local _, class = UnitClass(unit)
 			if class then
-				local color = RAID_CLASS_COLORS[class]
+				local color = CUSTOM_CLASS_COLORS and CUSTOM_CLASS_COLORS[class] or RAID_CLASS_COLORS[class]
 				self.TargetGlow:SetBackdropBorderColor(color.r, color.g, color.b)
 			else
 				self.TargetGlow:SetBackdropBorderColor(1, 1, 1)
@@ -254,9 +292,9 @@ function UF:AltPowerBarPostUpdate(min, cur, max)
 		local type = select(10, UnitAlternatePowerInfo(unit))
 
 		if perc > 0 then
-			self.text:SetText(type..": "..format("%d%%", perc))
+			self.text:SetFormattedText("%s: %d%%", type, perc)
 		else
-			self.text:SetText(type..": 0%")
+			self.text:SetFormattedText("%s: 0%%", type)
 		end
 	elseif unit and unit:find("boss%d") and self.text then
 		self.text:SetTextColor(self:GetStatusBarColor())
@@ -266,7 +304,7 @@ function UF:AltPowerBarPostUpdate(min, cur, max)
 			self.text:Point("RIGHT", parent.Power.value.value, "LEFT", 2, E.mult)
 		end
 		if perc > 0 then
-			self.text:SetText("|cffD7BEA5[|r"..format("%d%%", perc).."|cffD7BEA5]|r")
+			self.text:SetFormattedText("|cffD7BEA5[|r%d%%|cffD7BEA5]|r", perc)
 		else
 			self.text:SetText(nil)
 		end
@@ -356,25 +394,26 @@ local textCounterOffsets = {
 
 function UF:UpdateAuraWatchFromHeader(group, petOverride)
 	assert(self[group], "Invalid group specified.")
-	for i=1, self[group]:GetNumChildren() do
-		local frame = select(i, self[group]:GetChildren())
+	local group = self[group]
+	for i=1, group:GetNumChildren() do
+		local frame = select(i, group:GetChildren())
 		if frame and frame.Health then
-			UF:UpdateAuraWatch(frame, petOverride)
+			UF:UpdateAuraWatch(frame, petOverride, group.db)
 		elseif frame then
 			for n = 1, frame:GetNumChildren() do
 				local child = select(n, frame:GetChildren())
 				if child and child.Health then
-					UF:UpdateAuraWatch(child, petOverride)
+					UF:UpdateAuraWatch(child, petOverride, group.db)
 				end
 			end
 		end
 	end
 end
 
-function UF:UpdateAuraWatch(frame, petOverride)
+function UF:UpdateAuraWatch(frame, petOverride, db)
 	local buffs = {};
 	local auras = frame.AuraWatch;
-	local db = frame.db.buffIndicator;
+	local db = db and db.buffIndicator or frame.db.buffIndicator
 
 	if not db.enable then
 		auras:Hide()
@@ -390,7 +429,7 @@ function UF:UpdateAuraWatch(frame, petOverride)
 			tinsert(buffs, value);
 		end
 	else
-		local buffWatch = E.global['unitframe'].buffwatch[E.myclass] or {}
+		local buffWatch = not db.profileSpecific and (E.global['unitframe'].buffwatch[E.myclass] or {}) or (E.db['unitframe']['filters'].buffwatch or {})
 		for _, value in pairs(buffWatch) do
 			if value.style == 'text' then value.style = 'NONE' end --depreciated
 			tinsert(buffs, value);
@@ -612,7 +651,7 @@ function UF:UpdateRoleIcon()
 		end
 	end
 
-	if role ~= 'NONE' and (self.isForced or UnitIsConnected(self.unit)) then
+	if (self.isForced or UnitIsConnected(self.unit)) and ((role == "DAMAGER" and db.damager) or (role == "HEALER" and db.healer) or (role == "TANK" and db.tank)) then
 		lfdrole:SetTexture(roleIconTextures[role])
 		lfdrole:Show()
 	else
@@ -623,16 +662,19 @@ end
 function UF:RaidRoleUpdate()
 	local anchor = self:GetParent()
 	local leader = anchor:GetParent().Leader
+	local assistant = anchor:GetParent().Assistant
 	local masterLooter = anchor:GetParent().MasterLooter
 
-	if not leader or not masterLooter then return; end
+	if not leader or not masterLooter or not assistant then return; end
 
 	local unit = anchor:GetParent().unit
 	local db = anchor:GetParent().db
 	local isLeader = leader:IsShown()
 	local isMasterLooter = masterLooter:IsShown()
+	local isAssist = assistant:IsShown()
 
 	leader:ClearAllPoints()
+	assistant:ClearAllPoints()
 	masterLooter:ClearAllPoints()
 
 	if db and db.raidRoleIcons then
@@ -641,6 +683,12 @@ function UF:RaidRoleUpdate()
 			masterLooter:Point('RIGHT', anchor, 'RIGHT')
 		elseif isLeader and db.raidRoleIcons.position == 'TOPRIGHT' then
 			leader:Point('RIGHT', anchor, 'RIGHT')
+			masterLooter:Point('LEFT', anchor, 'LEFT')
+		elseif isAssist and db.raidRoleIcons.position == 'TOPLEFT' then
+			assistant:Point('LEFT', anchor, 'LEFT')
+			masterLooter:Point('RIGHT', anchor, 'RIGHT')
+		elseif isAssist and db.raidRoleIcons.position == 'TOPRIGHT' then
+			assistant:Point('RIGHT', anchor, 'RIGHT')
 			masterLooter:Point('LEFT', anchor, 'LEFT')
 		elseif isMasterLooter and db.raidRoleIcons.position == 'TOPLEFT' then
 			masterLooter:Point('LEFT', anchor, 'LEFT')

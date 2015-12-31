@@ -1,15 +1,27 @@
 local MAJOR, MINOR = "LibElvUIPlugin-1.0", 13
 local lib, oldminor = LibStub:NewLibrary(MAJOR, MINOR)
-
-
 if not lib then return end
+
+--Cache global variables
+--Lua functions
+local pairs, tonumber = pairs, tonumber
+local format, strsplit = format, strsplit
+--WoW API / Variables
+local CreateFrame = CreateFrame
+local IsInInstance, IsInGroup, IsInRaid = IsInInstance, IsInGroup, IsInRaid
+local GetAddOnMetadata = GetAddOnMetadata
+local IsAddOnLoaded = IsAddOnLoaded
+local RegisterAddonMessagePrefix = RegisterAddonMessagePrefix
+local SendAddonMessage = SendAddonMessage
+local LE_PARTY_CATEGORY_HOME = LE_PARTY_CATEGORY_HOME
+local LE_PARTY_CATEGORY_INSTANCE = LE_PARTY_CATEGORY_INSTANCE
+
+--Global variables that we don't cache, list them here for the mikk's Find Globals script
+-- GLOBALS: ElvUI
 
 lib.plugins = {}
 lib.index = 0
 lib.prefix = "ElvUIPluginVC"
---
--- GLOBALS:
---
 
 -- MULTI Language Support (Default Language: English)
 local MSG_OUTDATED = "Your version of %s is out of date (latest is version %s). You can download the latest version from http://www.tukui.org"
@@ -18,6 +30,7 @@ local HDR_INFORMATION = "LibElvUIPlugin-1.0.%d - Plugins Loaded  (Green means yo
 local INFO_BY = "by"
 local INFO_VERSION = "Version:"
 local INFO_NEW = "Newest:"
+local LIBRARY = "Library"
 
 if GetLocale() == "deDE" then -- German Translation
 	MSG_OUTDATED = "Deine Version von %s ist veraltet (akutelle Version ist %s). Du kannst die aktuelle Version von http://www.tukui.org herunterrladen."
@@ -26,6 +39,7 @@ if GetLocale() == "deDE" then -- German Translation
 	INFO_BY = "von"
 	INFO_VERSION = "Version:"
 	INFO_NEW = "Neuste:"
+	LIBRARY = "Bibliothek"
 end
 
 if GetLocale() == "ruRU" then -- Russian Translations
@@ -35,6 +49,7 @@ if GetLocale() == "ruRU" then -- Russian Translations
 	INFO_BY = "от"
 	INFO_VERSION = "Версия:"
 	INFO_NEW = "Последняя:"
+	LIBRARY = "Библиотека"
 end
 
 --
@@ -50,10 +65,11 @@ end
 --   Registers a module with the given name and option callback, pulls version info from metadata
 --
 
-function lib:RegisterPlugin(name,callback)
+function lib:RegisterPlugin(name,callback, isLib)
     local plugin = {}
 	plugin.name = name
 	plugin.version = name == MAJOR and MINOR or GetAddOnMetadata(name, "Version")
+	if isLib then plugin.isLib = true; plugin.version = 1 end
 	plugin.callback = callback
 	lib.plugins[name] = plugin
 	local loaded = IsAddOnLoaded("ElvUI_Config")
@@ -115,7 +131,7 @@ function lib:GetPluginOptions()
 end
 
 function lib:GenerateVersionCheckMessage()
-	list = ""
+	local list = ""
 	for _, plugin in pairs(lib.plugins) do
 		if plugin.name ~= MAJOR then
 			list = list..plugin.name.."="..plugin.version..";"
@@ -170,7 +186,7 @@ function lib:GeneratePluginList()
 			if author then
 			  list = list .. " ".. INFO_BY .." " .. author
 			end
-			list = list .. color .. " - " .. INFO_VERSION .." " .. plugin.version
+			list = list .. color ..(plugin.isLib and " "..LIBRARY or " - " .. INFO_VERSION .." " .. plugin.version)
 			if plugin.old then
 			  list = list .. INFO_NEW .. plugin.newversion .. ")"
 			end

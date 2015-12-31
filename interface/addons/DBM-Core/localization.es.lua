@@ -35,9 +35,9 @@ DBM_CORE_COMBAT_STATE_RECOVERED		= "%s empezó %s atrás. Recalibrando temporiza
 DBM_CORE_TRANSCRIPTOR_LOG_START		= "Comenzando transcripción."
 DBM_CORE_TRANSCRIPTOR_LOG_END		= "Terminando transcripción."
 
-DBM_CORE_TIMER_FORMAT_SECS			= "%d |4segundo:segundos;"
+DBM_CORE_TIMER_FORMAT_SECS			= "%.2f |4segundo:segundos;"
 DBM_CORE_TIMER_FORMAT_MINS			= "%d |4minuto:minutos;"
-DBM_CORE_TIMER_FORMAT				= "%d |4minuto:minutos; y %d |4segundo:segundos;"
+DBM_CORE_TIMER_FORMAT				= "%d |4minuto:minutos; y %.2f |4segundo:segundos;"
 
 DBM_CORE_MIN						= "min"
 DBM_CORE_MIN_FMT					= "%d min"
@@ -141,7 +141,7 @@ DBM_CORE_RIGHT						= "Derecha"
 DBM_CORE_BACK						= "Detrás"--BACK
 DBM_CORE_FRONT						= "Delante"
 
-DBM_CORE_BREAK_START				= "¡El descanso empieza ahora -- tienes %s minuto(s)!"
+DBM_CORE_BREAK_START				= "¡El descanso empieza ahora -- tienes %s!"
 DBM_CORE_BREAK_MIN					= "¡El descanso acaba en %s minuto(s)!"
 DBM_CORE_BREAK_SEC					= "¡El descanso acaba en %s segundos!"
 DBM_CORE_TIMER_BREAK				= "¡Descanso!"
@@ -192,6 +192,7 @@ DBM_CORE_AUTO_SPEC_WARN_TEXTS.dispel		= "%s en >%%s< - ¡dispelea ahora!"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.interrupt	= "%s - ¡interrumpe >%%s<!"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.interruptcount	= "%s - ¡interrumpe >%%s<! (%%d)"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.you			= "¡%s en ti!"
+DBM_CORE_AUTO_SPEC_WARN_TEXTS.youcount		= "¡%s (%%s) en ti!"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.target		= "%s en >%%s<"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.close		= "%s en >%%s< cerca tuyo"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.move		= "%s - ¡muévete!"
@@ -213,6 +214,7 @@ DBM_CORE_AUTO_SPEC_WARN_OPTIONS.prewarn 	= "Mostrar pre-aviso %s segundos antes 
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.dispel 		= "Mostrar aviso especial para limpiar/robar $spell:%s"
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.interrupt	= "Mostrar aviso especial para interrumpir $spell:%s"
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.you 		= "Mostrar aviso especial cuando te afecte $spell:%s"
+DBM_CORE_AUTO_SPEC_WARN_OPTIONS.youcount	= DBM_CORE_AUTO_SPEC_WARN_OPTIONS.you--Temp, translate correctly (with count)
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.target 		= "Mostrar aviso especial cuando a alguien le afecte $spell:%s"
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.close 		= "Mostrar aviso especial cuando a alguien cerca tuyo le afecte $spell:%s"
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.move 		= "Mostrar aviso especial para salir de $spell:%s"
@@ -223,8 +225,8 @@ DBM_CORE_AUTO_SPEC_WARN_OPTIONS.reflect 	= "Mostrar aviso especial para parar de
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.count 		= "Mostrar aviso especial para $spell:%s"
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.stack 		= "Mostrar aviso especial cuando tienes >=%d acumulaciones de $spell:%s"
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.switch		= "Mostrar aviso especial para cambiar objetivos con $spell:%s"
-DBM_CORE_AUTO_SPEC_WARN_OPTIONS.switchcount = DBM_CORE_AUTO_SPEC_WARN_OPTIONS.switch
-DBM_CORE_AUTO_SPEC_WARN_OPTIONS.interruptcount	= DBM_CORE_AUTO_SPEC_WARN_OPTIONS.interrupt
+DBM_CORE_AUTO_SPEC_WARN_OPTIONS.switchcount = DBM_CORE_AUTO_SPEC_WARN_OPTIONS.switch--Temp, translate correctly (with count)
+DBM_CORE_AUTO_SPEC_WARN_OPTIONS.interruptcount	= DBM_CORE_AUTO_SPEC_WARN_OPTIONS.interrupt--Temp, translate correctly (with count)
 
 -- Auto-generated Timer Localizations
 DBM_CORE_AUTO_TIMER_TEXTS.target		= "%s: >%%s<"
@@ -235,7 +237,7 @@ DBM_CORE_AUTO_TIMER_TEXTS.cd			= "%s CD"
 DBM_CORE_AUTO_TIMER_TEXTS.cdcount		= "%s CD (%%d)"
 DBM_CORE_AUTO_TIMER_TEXTS.cdsource	= "%s CD: >%%s<"
 DBM_CORE_AUTO_TIMER_TEXTS.next		= "Siguiente %s"
-DBM_CORE_AUTO_TIMER_TEXTS.nextcount	= "Siguiente %s (%%d)"
+DBM_CORE_AUTO_TIMER_TEXTS.nextcount	= "Siguiente %s (%%s)"
 DBM_CORE_AUTO_TIMER_TEXTS.nextsource	= "Siguiente %s: >%%s<"
 DBM_CORE_AUTO_TIMER_TEXTS.achievement	= "%s"
 
@@ -258,7 +260,7 @@ DBM_CORE_AUTO_SOUND_OPTION_TEXT			= "Reproducir sonido \"huye pequeña\" en $spe
 DBM_CORE_AUTO_COUNTDOWN_OPTION_TEXT		= "Reproducir sonido de cuenta atrás para $spell:%s"
 DBM_CORE_AUTO_COUNTDOWN_OPTION_TEXT2		= "Reproducir sonido de cuenta atrás para cuando $spell:%s se disipa"
 DBM_CORE_AUTO_COUNTOUT_OPTION_TEXT		= "Reproducir sonido de la duración de $spell:%s"
-DBM_CORE_AUTO_YELL_OPTION_TEXT			= "Gritar cuando tengas $spell:%s"
+DBM_CORE_AUTO_YELL_OPTION_TEXT.yell		= "Gritar cuando tengas $spell:%s"
 DBM_CORE_AUTO_YELL_ANNOUNCE_TEXT.yell	= "¡%s en " .. UnitName("player") .. "!"
 DBM_CORE_AUTO_RANGE_OPTION_TEXT			= "Mostrar radar de rango (%s) para $spell:%s"--string used for range so we can use things like "5/2" as a value for that field
 DBM_CORE_AUTO_RANGE_OPTION_TEXT_SHORT	= "Mostrar radar de rango (%s)"--For when a range frame is just used for more than one thing
@@ -283,7 +285,6 @@ DBM_ARROW_ERROR_USAGE	= {
 }
 
 DBM_SPEED_KILL_TIMER_TEXT	= "Superar récord"
-DBM_SPEED_KILL_TIMER_OPTION	= "Mostrar tiempo para superar tu muerte más rápida"
 DBM_SPEED_CLEAR_TIMER_TEXT	= "Tu mejro récord"
 
 

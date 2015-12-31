@@ -1,7 +1,7 @@
 local mod		= DBM:NewMod("z761", "DBM-PvP", 2)
 local L			= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 41 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 48 $"):sub(12, -3))
 mod:SetZone(DBM_DISABLE_ZONE_DETECTION)
 
 mod:RegisterEvents(
@@ -29,7 +29,6 @@ mod:AddBoolOption("ShowGilneasBasesToWin", false, nil, function()
 end)
 
 mod:RemoveOption("HealthFrame")
-mod:RemoveOption("SpeedKillTimer")
 	
 local ResPerSec = {
 	[0] = 0.01,

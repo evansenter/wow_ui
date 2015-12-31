@@ -25,6 +25,7 @@ local function LoadSkin()
 		"ReadyCheckFrame",
 		"StackSplitFrame",
 		"QueueStatusFrame",
+		"LFDReadyCheckPopup",
 	}
 
 	QueueStatusFrame:StripTextures()
@@ -186,6 +187,8 @@ local function LoadSkin()
 			S:HandleButton(ElvuiButtons)
 		end
 	end
+	S:HandleButton(LFDReadyCheckPopup.YesButton)
+	S:HandleButton(LFDReadyCheckPopup.NoButton)
 
 	-- if a button position is not really where we want, we move it here
 	VideoOptionsFrameCancel:ClearAllPoints()
@@ -649,6 +652,9 @@ local function LoadSkin()
         "AudioOptionsVoicePanelTalking",
         "AudioOptionsVoicePanelBinding",
         "AudioOptionsVoicePanelListening",
+		"Display_",
+		"Graphics_",
+		"RaidGraphics_",
     }
     for i = 1, getn(frames) do
         local SkinFrames = _G[frames[i]]
@@ -721,6 +727,7 @@ local function LoadSkin()
         "DisplayPanelCinematicSubtitles",
         "DisplayPanelRotateMinimap",
         "DisplayPanelShowAccountAchievments",
+		"DisplayPanelAJAlerts",
         --Objectives
         "ObjectivesPanelAutoQuestTracking",
         "ObjectivesPanelMapFade",
@@ -733,6 +740,7 @@ local function LoadSkin()
         "SocialPanelGuildMemberAlert",
         "SocialPanelChatMouseScroll",
 		"SocialPanelEnableTwitter",
+		"SocialPanelWholeChatWindowClickable",
         -- Action bars
         "ActionBarsPanelLockActionBars",
         "ActionBarsPanelSecureAbilityToggle",
@@ -804,6 +812,7 @@ local function LoadSkin()
         "MousePanelInvertMouse",
         "MousePanelClickToMove",
         "MousePanelWoWMouse",
+		"MousePanelEnableMouseSpeed",
         -- Help
         "HelpPanelShowTutorials",
         "HelpPanelEnhancedTooltips",
@@ -835,6 +844,7 @@ local function LoadSkin()
 		--Watev
 		"NamesPanelUnitNameplatesNameplateClassColors",
     }
+
     for i = 1, getn(interfacecheckbox) do
         local icheckbox = _G["InterfaceOptions"..interfacecheckbox[i]]
         if icheckbox then
@@ -875,7 +885,9 @@ local function LoadSkin()
         "CameraPanelStyleDropDown",
         -- Mouse
         "MousePanelClickMoveStyleDropDown",
+		-- Language
         "LanguagesPanelLocaleDropDown",
+		"LanguagesPanelAudioLocaleDropDown",
         -- Status Text
         "StatusTextPanelDisplayDropDown",
 
@@ -985,7 +997,6 @@ local function LoadSkin()
 		"Advanced_ResampleQualityDropDown",
 		"Advanced_MultisampleAlphaTest",
 		"Advanced_PostProcessAntiAliasingDropDown",
-		"Advanced_ResampleQualityDropDown",
 		"Advanced_MultisampleAntiAliasingDropDown",
 
         -- Audio
@@ -1159,8 +1170,46 @@ local function LoadSkin()
 
 	for i=1, MAX_ADDONS_DISPLAYED do
 		S:HandleCheckBox(_G["AddonListEntry"..i.."Enabled"])
+		S:HandleButton(_G["AddonListEntry"..i].LoadAddonButton)
 	end
+	
+	--What's New
+	SplashFrame:CreateBackdrop("Transparent")
+	S:HandleButton(SplashFrame.BottomCloseButton)
+	S:HandleCloseButton(SplashFrame.TopCloseButton)
 
+	--NavBar Buttons (Used in WorldMapFrame, EncounterJournal and HelpFrame)
+	local function SkinNavBarButtons(self)
+		if (self:GetParent():GetName() == "EncounterJournal" and not E.private.skins.blizzard.encounterjournal) or (self:GetParent():GetName() == "WorldMapFrame" and not E.private.skins.blizzard.worldmap) or (self:GetParent():GetName() == "HelpFrameKnowledgebase" and not E.private.skins.blizzard.help) then
+			return
+		end
+		local navButton = self.navList[#self.navList]
+		if navButton and not navButton.isSkinned then
+			S:HandleButton(navButton, true)
+			if navButton.MenuArrowButton then
+				S:HandleNextPrevButton(navButton.MenuArrowButton, true)
+			end
+			navButton.isSkinned = true
+		end
+	end
+	hooksecurefunc("NavBar_AddButton", SkinNavBarButtons)
+
+	--Mirror Timers (Underwater Breath etc.), credit to Azilroka
+	for i = 1, MIRRORTIMER_NUMTIMERS do
+		local mirrorTimer = _G['MirrorTimer'..i]
+		local statusBar = _G['MirrorTimer'..i..'StatusBar']
+		local text = _G['MirrorTimer'..i.."Text"]
+
+		mirrorTimer:StripTextures()
+		mirrorTimer:Size(222, 18)
+		statusBar:SetStatusBarTexture(E["media"].normTex)
+		statusBar:CreateBackdrop()
+		statusBar:Size(222, 18)
+		text:ClearAllPoints()
+		text:SetPoint('CENTER', statusBar, 'CENTER', 0, 0)
+
+		E:CreateMover(mirrorTimer, "MirrorTimer"..i.."Mover", L["MirrorTimer"]..i, nil, nil, nil, "ALL,SOLO")
+	end
 end
 
 S:RegisterSkin('ElvUI', LoadSkin)

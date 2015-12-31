@@ -1,5 +1,5 @@
 --[[
-Copyright (c) 2010-2014, Hendrik "nevcairiel" Leppkes <h.leppkes@gmail.com>
+Copyright (c) 2010-2015, Hendrik "nevcairiel" Leppkes <h.leppkes@gmail.com>
 
 All rights reserved.
 
@@ -28,8 +28,8 @@ NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ]]
-local MAJOR_VERSION = "LibActionButton-1.0"
-local MINOR_VERSION = 59
+local MAJOR_VERSION = "LibActionButton-1.0-ElvUI"
+local MINOR_VERSION = 1
 
 if not LibStub then error(MAJOR_VERSION .. " requires LibStub.") end
 local lib, oldversion = LibStub:NewLibrary(MAJOR_VERSION, MINOR_VERSION)
@@ -69,8 +69,8 @@ lib.activeButtons = lib.activeButtons or {}
 lib.actionButtons = lib.actionButtons or {}
 lib.nonActionButtons = lib.nonActionButtons or {}
 
-lib.unusedOverlayGlows = lib.unusedOverlayGlows or {}
-lib.numOverlays = lib.numOverlays or 0
+lib.ChargeCooldowns = lib.ChargeCooldowns or {}
+lib.NumChargeCooldowns = lib.NumChargeCooldowns or 0
 
 lib.ACTION_HIGHLIGHT_MARKS = lib.ACTION_HIGHLIGHT_MARKS or setmetatable({}, { __index = ACTION_HIGHLIGHT_MARKS })
 
@@ -113,7 +113,7 @@ local Update, UpdateButtonState, UpdateUsable, UpdateCount, UpdateCooldown, Upda
 local StartFlash, StopFlash, UpdateFlash, UpdateHotkeys, UpdateRangeTimer, UpdateOverlayGlow
 local UpdateFlyout, ShowGrid, HideGrid, UpdateGrid, SetupSecureSnippets, WrapOnClick
 local ShowOverlayGlow, HideOverlayGlow
-local HookCooldown
+local EndChargeCooldown
 
 local InitializeEventHandler, OnEvent, ForAllButtons, OnUpdate
 
@@ -196,9 +196,6 @@ function lib:CreateButton(id, name, header, config)
 
 	-- adjust count/stack size
 	button.Count:SetFont(button.Count:GetFont(), 16, "OUTLINE")
-
-	-- hook Cooldown stuff for alpha fix in 6.0
-	HookCooldown(button)
 
 	-- Store the button in the registry, needed for event and OnUpdate handling
 	if not next(ButtonRegistry) then
@@ -1074,6 +1071,10 @@ function Update(self)
 		end
 		self.cooldown:Hide()
 		self:SetChecked(false)
+
+		if self.chargeCooldown then
+			EndChargeCooldown(self.chargeCooldown)
+		end
 	end
 
 	-- Add a green border if button is an equipped item
@@ -1237,74 +1238,77 @@ function UpdateCount(self)
 	end
 end
 
-local function SetCooldownHook(cooldown, ...)
-	local effectiveAlpha = cooldown:GetEffectiveAlpha()
-	local start, duration = ...
+function EndChargeCooldown(self)
+	self:Hide()
+	self:SetParent(UIParent)
+	self.parent.chargeCooldown = nil
+	self.parent = nil
+	tinsert(lib.ChargeCooldowns, self)
+end
 
-	if start ~= 0 or duration ~= 0 then
-		-- update swipe alpha
-		-- cooldown.__metaLAB.SetSwipeColor(cooldown, cooldown.__SwipeR, cooldown.__SwipeG, cooldown.__SwipeB, cooldown.__SwipeA * effectiveAlpha) --Original
-		cooldown.__metaLAB.SetSwipeColor(cooldown, cooldown.__SwipeR, cooldown.__SwipeG, cooldown.__SwipeB, cooldown.__SwipeA)
-
-		-- only draw bling and edge if alpha is over 50%
-		cooldown:SetDrawBling(effectiveAlpha > 0.5)
-		if effectiveAlpha < 0.5 then
-			cooldown:SetDrawEdge(false)
-		end
-
-		-- ensure the swipe isn't drawn on fully faded bars
-		if effectiveAlpha <= 0.0 then
+local function StartChargeCooldown(parent, chargeStart, chargeDuration)
+	if not parent.chargeCooldown then
+		local cooldown = tremove(lib.ChargeCooldowns)
+		if not cooldown then
+			lib.NumChargeCooldowns = lib.NumChargeCooldowns + 1
+			cooldown = CreateFrame("Cooldown", "LAB10ChargeCooldown"..lib.NumChargeCooldowns, parent, "CooldownFrameTemplate");
+			cooldown:SetScript("OnCooldownDone", EndChargeCooldown)
+			cooldown:SetHideCountdownNumbers(true)
+			cooldown:SetDrawEdge(true)
 			cooldown:SetDrawSwipe(false)
 		end
+		cooldown:SetParent(parent)
+		cooldown:SetAllPoints(parent)
+		cooldown:SetFrameStrata("TOOLTIP")
+		cooldown:Show()
+		parent.chargeCooldown = cooldown
+		cooldown.parent = parent
 	end
-
-	return cooldown.__metaLAB.SetCooldown(cooldown, ...)
-end
-
-local function SetSwipeColorHook(cooldown, r, g, b, a)
-	local effectiveAlpha = cooldown:GetEffectiveAlpha()
-	cooldown.__SwipeR, cooldown.__SwipeG, cooldown.__SwipeB, cooldown.__SwipeA = r, g, b, (a or 1)
-	return cooldown.__metaLAB.SetSwipeColor(cooldown, r, g, b, a * effectiveAlpha)
-end
-
-function HookCooldown(button)
-	if not button.cooldown.__metaLAB then
-		button.cooldown.__metaLAB = getmetatable(button.cooldown).__index
-		button.cooldown.__SwipeR, button.cooldown.__SwipeG, button.cooldown.__SwipeB, button.cooldown.__SwipeA = 0, 0, 0, 0.8
-
-		button.cooldown.SetCooldown = SetCooldownHook
-		-- button.cooldown.SetSwipeColor = SetSwipeColorHook
+	parent.chargeCooldown:SetDrawBling(parent.chargeCooldown:GetEffectiveAlpha() > 0.5)
+	parent.chargeCooldown:SetCooldown(chargeStart, chargeDuration)
+	if not chargeStart or chargeStart == 0 then
+		EndChargeCooldown(parent.chargeCooldown)
 	end
 end
 
-function OnCooldownDone(self)
+local function OnCooldownDone(self)
 	self:SetScript("OnCooldownDone", nil)
 	UpdateCooldown(self:GetParent())
 end
 
 function UpdateCooldown(self)
 	local locStart, locDuration = self:GetLossOfControlCooldown()
-	local start, duration, enable, charges, maxCharges = self:GetCooldown()
+	local start, duration, enable = self:GetCooldown()
+	local charges, maxCharges, chargeStart, chargeDuration = self:GetCharges()
+
+	self.cooldown:SetDrawBling(self.cooldown:GetEffectiveAlpha() > 0.5)
 
 	if (locStart + locDuration) > (start + duration) then
 		if self.cooldown.currentCooldownType ~= COOLDOWN_TYPE_LOSS_OF_CONTROL then
 			self.cooldown:SetEdgeTexture("Interface\\Cooldown\\edge-LoC")
+			self.cooldown:SetSwipeColor(0.17, 0, 0)
 			self.cooldown:SetHideCountdownNumbers(true)
 			self.cooldown.currentCooldownType = COOLDOWN_TYPE_LOSS_OF_CONTROL
-			self.cooldown:SetSwipeColor(0.17, 0, 0, 0.8)
 		end
-		CooldownFrame_SetTimer(self.cooldown, locStart, locDuration, 1, nil, nil, true)
+		CooldownFrame_SetTimer(self.cooldown, locStart, locDuration, 1, true)
 	else
 		if self.cooldown.currentCooldownType ~= COOLDOWN_TYPE_NORMAL then
 			self.cooldown:SetEdgeTexture("Interface\\Cooldown\\edge")
+			self.cooldown:SetSwipeColor(0, 0, 0)
 			self.cooldown:SetHideCountdownNumbers(false)
 			self.cooldown.currentCooldownType = COOLDOWN_TYPE_NORMAL
-			self.cooldown:SetSwipeColor(0, 0, 0, 0.8)
 		end
 		if locStart > 0 then
 			self.cooldown:SetScript("OnCooldownDone", OnCooldownDone)
 		end
-		CooldownFrame_SetTimer(self.cooldown, start, duration, enable, charges, maxCharges)
+
+		if charges and maxCharges and maxCharges > 0 and charges > 0 and charges < maxCharges then
+			StartChargeCooldown(self, chargeStart, chargeDuration)
+		elseif self.chargeCooldown then
+			EndChargeCooldown(self.chargeCooldown)
+		end
+
+		CooldownFrame_SetTimer(self.cooldown, start, duration, enable)
 	end
 end
 
@@ -1453,15 +1457,6 @@ end
 
 function UpdateRangeTimer()
 	rangeTimer = -1
-end
-
-local function GetSpellIdByName(spellName)
-	if not spellName then return end
-	local spellLink = GetSpellLink(spellName)
-	if spellLink then
-		return tonumber(spellLink:match("spell:(%d+)"))
-	end
-	return nil
 end
 
 -----------------------------------------------------------

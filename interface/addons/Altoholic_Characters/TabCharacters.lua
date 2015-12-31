@@ -5,8 +5,6 @@ local colors = addon.Colors
 local L = LibStub("AceLocale-3.0"):GetLocale(addonName)
 local LCI = LibStub("LibCraftInfo-1.0")
 
-local THIS_ACCOUNT = "Default"
-
 local parentName = "AltoholicTabCharacters"
 local parent
 
@@ -15,8 +13,6 @@ local currentView = 0		-- current view in the characters category
 local currentProfession
 
 local currentAlt = UnitName("player")
-local currentRealm = GetRealmName()
-local currentAccount = THIS_ACCOUNT
 
 -- ** Icons Menus **
 local VIEW_BAGS = 1
@@ -32,17 +28,6 @@ local VIEW_SPELLS = 10
 local VIEW_KNOWN_GLYPHS = 11
 local VIEW_PROFESSION = 12
 local VIEW_GARRISONS = 13
-
-local ICON_CHARACTERS_ALLIANCE = "Interface\\Icons\\Achievement_Character_Gnome_Female"
-local ICON_CHARACTERS_HORDE = "Interface\\Icons\\Achievement_Character_Orc_Male"
--- mini easter egg icons, if you read the code using these, please don't spoil it :)
-local ICON_CHARACTERS_MIDSUMMER = "Interface\\Icons\\INV_Misc_Toy_07"
-local ICON_CHARACTERS_HALLOWSEND_ALLIANCE = "Interface\\Icons\\INV_Mask_06"
-local ICON_CHARACTERS_HALLOWSEND_HORDE = "Interface\\Icons\\INV_Mask_03"
-local ICON_CHARACTERS_DOTD_ALLIANCE = "Interface\\Icons\\INV_Misc_Bone_HumanSkull_02"
-local ICON_CHARACTERS_DOTD_HORDE = "Interface\\Icons\\INV_Misc_Bone_OrcSkull_01"
-local ICON_CHARACTERS_WINTERVEIL_ALLIANCE = "Interface\\Icons\\Achievement_WorldEvent_LittleHelper"
-local ICON_CHARACTERS_WINTERVEIL_HORDE = "Interface\\Icons\\Achievement_WorldEvent_XmasOgre"
 
 -- Second mini easter egg, the bag icon changes depending on the amount of chars at level max (on the current realm), or based on the time of the year
 local BAG_ICONS = {
@@ -135,76 +120,6 @@ function ns:MenuItem_OnClick(frame, button)
 	menuIcons.GarrisonIcon:Show()
 end
 
--- ** realm selection **
-local function OnRealmChange(self, account, realm)
-	local oldAccount = currentAccount
-	local oldRealm = currentRealm
-
-	currentAccount = account
-	currentRealm = realm
-	
-	UIDropDownMenu_ClearAll(parent.SelectRealm);
-	UIDropDownMenu_SetSelectedValue(parent.SelectRealm, account .."|".. realm)
-	UIDropDownMenu_SetText(parent.SelectRealm, colors.green .. account .. ": " .. colors.white.. realm)
-	
-	if oldRealm and oldAccount then	-- clear the "select char" drop down if realm or account has changed
-		if (oldRealm ~= realm) or (oldAccount ~= account) then
-			parent.Status:SetText("")
-			currentAlt = nil
-			currentProfession = nil
-			
-			HideAll()
-		end
-	end
-end
-
-function ns:DropDownRealm_Initialize()
-	if not currentAccount or not currentRealm then return end
-	
-	-- this account first ..
-	DDM_AddTitle(colors.gold..L["This account"])
-	for realm in pairs(DataStore:GetRealms()) do
-		local info = UIDropDownMenu_CreateInfo()
-
-		info.text = colors.white..realm
-		info.value = format("%s|%s", THIS_ACCOUNT, realm)
-		info.checked = nil
-		info.func = OnRealmChange
-		info.arg1 = THIS_ACCOUNT
-		info.arg2 = realm
-		UIDropDownMenu_AddButton(info, 1)
-	end
-
-	-- .. then all other accounts
-	local accounts = DataStore:GetAccounts()
-	local count = 0
-	for account in pairs(accounts) do
-		if account ~= THIS_ACCOUNT then
-			count = count + 1
-		end
-	end
-	
-	if count > 0 then
-		DDM_AddTitle(" ")
-		DDM_AddTitle(colors.gold..OTHER)
-		for account in pairs(accounts) do
-			if account ~= THIS_ACCOUNT then
-				for realm in pairs(DataStore:GetRealms(account)) do
-					local info = UIDropDownMenu_CreateInfo()
-
-					info.text = format("%s: %s", colors.green..account, colors.white..realm)
-					info.value = format("%s|%s", account, realm)
-					info.checked = nil
-					info.func = OnRealmChange
-					info.arg1 = account
-					info.arg2 = realm
-					UIDropDownMenu_AddButton(info, 1)
-				end
-			end
-		end
-	end
-end
-
 function ns:ViewCharInfo(index)
 	index = index or self.value
 	
@@ -266,25 +181,33 @@ function ns:ShowCharInfo(view)
 end
 
 function ns:SetMode(mode)
-	local Columns = addon.Tabs.Columns
-	Columns:Init()
-	
 	if not mode then return end		-- called without parameter for professions
 
+	local showButtons = false
+	
 	if mode == VIEW_MAILS then
-		Columns:Add(MAIL_SUBJECT_LABEL, 220, function(self) addon.Mail:Sort(self, "name") end)
-		Columns:Add(FROM, 140, function(self) addon.Mail:Sort(self, "from") end)
-		Columns:Add(L["Expiry:"], 200, function(self) addon.Mail:Sort(self, "expiry") end)
-
+		parent.SortButtons:SetButton(1, MAIL_SUBJECT_LABEL, 220, function(self) addon.Mail:Sort(self, "name") end)
+		parent.SortButtons:SetButton(2, FROM, 140, function(self) addon.Mail:Sort(self, "from") end)
+		parent.SortButtons:SetButton(3, L["Expiry:"], 200, function(self) addon.Mail:Sort(self, "expiry") end)
+		showButtons = true
+		
 	elseif mode == VIEW_AUCTIONS then
-		Columns:Add(HELPFRAME_ITEM_TITLE, 220, function(self) addon.AuctionHouse:Sort(self, "name", "Auctions") end)
-		Columns:Add(HIGH_BIDDER, 160, function(self) addon.AuctionHouse:Sort(self, "highBidder", "Auctions") end)
-		Columns:Add(CURRENT_BID, 170, function(self) addon.AuctionHouse:Sort(self, "buyoutPrice", "Auctions") end)
+		parent.SortButtons:SetButton(1, HELPFRAME_ITEM_TITLE, 220, function(self) addon.AuctionHouse:Sort(self, "name", "Auctions") end)
+		parent.SortButtons:SetButton(2, HIGH_BIDDER, 160, function(self) addon.AuctionHouse:Sort(self, "highBidder", "Auctions") end)
+		parent.SortButtons:SetButton(3, CURRENT_BID, 170, function(self) addon.AuctionHouse:Sort(self, "buyoutPrice", "Auctions") end)
+		showButtons = true
 	
 	elseif mode == VIEW_BIDS then
-		Columns:Add(HELPFRAME_ITEM_TITLE, 220, function(self) addon.AuctionHouse:Sort(self, "name", "Bids") end)
-		Columns:Add(NAME, 160, function(self) addon.AuctionHouse:Sort(self, "owner", "Bids") end)
-		Columns:Add(CURRENT_BID, 170, function(self) addon.AuctionHouse:Sort(self, "buyoutPrice", "Bids") end)
+		parent.SortButtons:SetButton(1, HELPFRAME_ITEM_TITLE, 220, function(self) addon.AuctionHouse:Sort(self, "name", "Bids") end)
+		parent.SortButtons:SetButton(2, NAME, 160, function(self) addon.AuctionHouse:Sort(self, "owner", "Bids") end)
+		parent.SortButtons:SetButton(3, CURRENT_BID, 170, function(self) addon.AuctionHouse:Sort(self, "buyoutPrice", "Bids") end)
+		showButtons = true
+	end
+	
+	if showButtons then
+		parent.SortButtons:ShowChildFrames()
+	else
+		parent.SortButtons:HideChildFrames()
 	end
 end
 
@@ -299,32 +222,33 @@ end
 
 -- ** DB / Get **
 function ns:GetAccount()
-	return currentAccount
+	local account, realm = parent.SelectRealm:GetCurrentRealm()
+	return account
 end
 
 function ns:GetRealm()
-	return currentRealm, currentAccount
+	local account, realm = parent.SelectRealm:GetCurrentRealm()
+	return realm, account
 end
 
+
 function ns:GetAlt()
-	return currentAlt, currentRealm, currentAccount
+	local account, realm = parent.SelectRealm:GetCurrentRealm()
+	return currentAlt, realm, account
 end
 
 function ns:GetAltKey()
-	if currentAlt and currentRealm and currentAccount then
-		return format("%s.%s.%s", currentAccount, currentRealm, currentAlt)
+	local account, realm = parent.SelectRealm:GetCurrentRealm()
+	
+	if currentAlt and realm and account then
+		return format("%s.%s.%s", account, realm, currentAlt)
 	end
 end
 
 -- ** DB / Set **
 function ns:SetAlt(alt, realm, account)
 	currentAlt = alt
-	currentRealm = (realm) and realm				-- only set the value if not nil
-	currentAccount = (account) and account		-- only set the value if not nil
-	
-	-- set drop down menu
-	ns:DropDownRealm_Initialize()
-	UIDropDownMenu_SetSelectedValue(parent.SelectRealm, account .."|".. realm)
+	parent.SelectRealm:SetCurrentRealm(realm, account)
 end
 
 function ns:SetAltKey(key)
@@ -506,9 +430,11 @@ end
 
 -- ** Menu Icons **
 local function CharactersIcon_Initialize(self, level)
+	local account, realm = parent.SelectRealm:GetCurrentRealm()
+	
 	DDM_AddTitle(L["Characters"])
 	local nameList = {}		-- we want to list characters alphabetically
-	for _, character in pairs(DataStore:GetCharacters(currentRealm, currentAccount)) do
+	for _, character in pairs(DataStore:GetCharacters(realm, account)) do
 		table.insert(nameList, character)	-- we can add the key instead of just the name, since they will all be like account.realm.name, where account & realm are identical
 	end
 	table.sort(nameList)
@@ -694,7 +620,7 @@ local function ProfessionsIcon_Initialize(self, level)
 		-- Profession 1
 		local rank, professionName, _
 		rank, _, _, professionName = DataStore:GetProfession1(currentCharacterKey)
-		if last and rank then
+		if last and rank and professionName then
 			DDM_Add(format("%s %s(%s)", professionName, colors.green, rank ), professionName, OnProfessionChange, nil, (professionName == (currentProfession or "")))
 		elseif professionName then
 			DDM_Add(colors.grey..professionName, nil, nil)
@@ -702,7 +628,7 @@ local function ProfessionsIcon_Initialize(self, level)
 		
 		-- Profession 2
 		rank, _, _, professionName = DataStore:GetProfession2(currentCharacterKey)
-		if last and rank then
+		if last and rank and professionName then
 			DDM_Add(format("%s %s(%s)", professionName, colors.green, rank ), professionName, OnProfessionChange, nil, (professionName == (currentProfession or "")))
 		elseif professionName then
 			DDM_Add(colors.grey..professionName, nil, nil)
@@ -857,14 +783,22 @@ local menuIconCallbacks = {
 }
 
 function ns:Icon_OnEnter(frame)
+	-- local currentMenuID = frame:GetID()
+	
+	-- local menu = frame:GetParent():GetParent().ContextualMenu
+	
+	-- menu:Initialize(menuIconCallbacks[currentMenuID], "LIST")
+	-- menu:Close()
+	-- menu:Toggle(frame, 0, 0)
+
+
+
 	local currentMenuID = frame:GetID()
 	
 	addon:DDM_Initialize(parent.ContextualMenu, menuIconCallbacks[currentMenuID])
 	
-	-- hide all
 	CloseDropDownMenus()
 
-	-- show current
 	ToggleDropDownMenu(1, nil, parent.ContextualMenu, AltoholicTabCharacters_MenuIcons, (currentMenuID-1)*42, -5)
 end
 
@@ -874,13 +808,18 @@ function ns:OnLoad()
 	-- Left Menu
 	parent.Text1:SetText(L["Realm"])
 	
+	parent.SelectRealm:RegisterClassEvent("RealmChanged", function() 
+			parent.Status:SetText("")
+			currentAlt = nil
+			currentProfession = nil
+			HideAll()
+		end)
+	
 	-- Menu Icons
 	-- mini easter egg, change the character icon depending on the time of year :)
 	-- if you find this code, please don't spoil it :)
 
-	local faction = UnitFactionGroup("player")
 	local day = (tonumber(date("%m")) * 100) + tonumber(date("%d"))	-- ex: dec 15 = 1215, for easy tests below
-	local charIcon = (faction == "Alliance") and ICON_CHARACTERS_ALLIANCE or ICON_CHARACTERS_HORDE
 	local bagIcon = ICON_VIEW_BAGS
 
 	-- bag icon gets better with more chars at lv max
@@ -896,19 +835,12 @@ function ns:OnLoad()
 		bagIcon = BAG_ICONS[numLvMax]
 	end
 	
-	if (day >= 1215) or (day <= 102) then				-- winter veil
-		charIcon = (faction == "Alliance") and ICON_CHARACTERS_WINTERVEIL_ALLIANCE or ICON_CHARACTERS_WINTERVEIL_HORDE
-	elseif (day >= 621) and (day <= 704) then			-- midsummer
-		charIcon = ICON_CHARACTERS_MIDSUMMER
-	elseif (day >= 1018) and (day <= 1031) then		-- hallow's end
-		charIcon = (faction == "Alliance") and ICON_CHARACTERS_HALLOWSEND_ALLIANCE or ICON_CHARACTERS_HALLOWSEND_HORDE
+	if (day >= 1018) and (day <= 1031) then		-- hallow's end
 		bagIcon = ICON_BAGS_HALLOWSEND
-	elseif (day >= 1101) and (day <= 1102) then		-- day of the dead
-		charIcon = (faction == "Alliance") and ICON_CHARACTERS_DOTD_ALLIANCE or ICON_CHARACTERS_DOTD_HORDE
 	end
 	
 	local menuIcons = parent.MenuIcons
-	menuIcons.CharactersIcon.Icon:SetTexture(charIcon)
+	menuIcons.CharactersIcon.Icon:SetTexture(addon:GetCharacterIcon())
 	menuIcons.BagsIcon.Icon:SetTexture(bagIcon)
 	
 	-- ** Characters / Equipment / Reputations / Currencies **

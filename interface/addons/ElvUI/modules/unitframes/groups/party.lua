@@ -1,10 +1,25 @@
 local E, L, V, P, G = unpack(select(2, ...)); --Inport: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local UF = E:GetModule('UnitFrames');
 
+--Cache global variables
+--Lua functions
+local _G = _G
+local pairs = pairs
+local tinsert = table.insert
+--WoW API / Variables
+local CreateFrame = CreateFrame
+local InCombatLockdown = InCombatLockdown
+local UnregisterStateDriver = UnregisterStateDriver
+local RegisterStateDriver = RegisterStateDriver
+local IsInInstance = IsInInstance
+
+--Global variables that we don't cache, list them here for mikk's FindGlobals script
+-- GLOBALS: UnitFrame_OnEnter, UnitFrame_OnLeave
+
 local _, ns = ...
 local ElvUF = ns.oUF
 assert(ElvUF, "ElvUI was unable to locate oUF.")
-local tinsert = table.insert
+
 function UF:Construct_PartyFrames(unitGroup)
 	self:SetScript('OnEnter', UnitFrame_OnEnter)
 	self:SetScript('OnLeave', UnitFrame_OnLeave)
@@ -22,13 +37,17 @@ function UF:Construct_PartyFrames(unitGroup)
 
 		self.Health = UF:Construct_HealthBar(self, true, true, 'RIGHT')
 
-		self.Power = UF:Construct_PowerBar(self, true, true, 'LEFT', false)
+		self.Power = UF:Construct_PowerBar(self, true, true, 'LEFT')
 		self.Power.frequentUpdates = false;
+		
+		self.Portrait3D = UF:Construct_Portrait(self, 'model')
+		self.Portrait2D = UF:Construct_Portrait(self, 'texture')
 
 		self.Name = UF:Construct_NameText(self)
 		self.Buffs = UF:Construct_Buffs(self)
 		self.Debuffs = UF:Construct_Debuffs(self)
 		self.AuraWatch = UF:Construct_AuraWatch(self)
+		self.RaidDebuffs = UF:Construct_RaidDebuffs(self)
 		self.DebuffHighlight = UF:Construct_DebuffHighlight(self)
 		self.ResurrectIcon = UF:Construct_ResurectionIcon(self)
 		self.LFDRole = UF:Construct_RoleIcon(self)
@@ -43,7 +62,7 @@ function UF:Construct_PartyFrames(unitGroup)
 		self.ReadyCheck = UF:Construct_ReadyCheckIcon(self)
 		self.HealPrediction = UF:Construct_HealComm(self)
 		self.GPS = UF:Construct_GPS(self)
-
+		self.customTexts = {}
 		self.Sparkle = CreateFrame("Frame", nil, self)
 		self.Sparkle:SetAllPoints(self.Health)
 	end
@@ -78,7 +97,10 @@ function UF:Update_PartyHeader(header, db)
 end
 
 function UF:PartySmartVisibility(event)
-	if not self.db or (self.db and not self.db.enable) or (UF.db and not UF.db.smartRaidFilter) or self.isForced then return; end
+	if not self.db or (self.db and not self.db.enable) or (UF.db and not UF.db.smartRaidFilter) or self.isForced then
+		self.blockVisibilityChanges = false
+		return
+	end
 	local inInstance, instanceType = IsInInstance()
 	if event == "PLAYER_REGEN_ENABLED" then self:UnregisterEvent("PLAYER_REGEN_ENABLED") end
 
@@ -86,8 +108,10 @@ function UF:PartySmartVisibility(event)
 		if inInstance and (instanceType == "raid" or instanceType == "pvp") then
 			UnregisterStateDriver(self, "visibility")
 			self:Hide()
+			self.blockVisibilityChanges = true
 		elseif self.db.visibility then
 			RegisterStateDriver(self, "visibility", self.db.visibility)
+			self.blockVisibilityChanges = false
 		end
 	else
 		self:RegisterEvent("PLAYER_REGEN_ENABLED")
@@ -96,6 +120,12 @@ end
 
 function UF:Update_PartyFrames(frame, db)
 	frame.db = db
+	if frame.Portrait then
+		frame.Portrait:Hide()
+		frame.Portrait:ClearAllPoints()
+		frame.Portrait.backdrop:Hide()
+	end
+	frame.Portrait = db.portrait.style == '2D' and frame.Portrait2D or frame.Portrait3D
 	local SPACING = E.Spacing;
 	local BORDER = E.Border;
 	local UNIT_WIDTH = db.width
@@ -108,6 +138,9 @@ function UF:Update_PartyFrames(frame, db)
 	local POWERBAR_OFFSET = db.power.offset
 	local POWERBAR_HEIGHT = db.power.height
 	local POWERBAR_WIDTH = db.width - (BORDER*2)
+	local USE_PORTRAIT = db.portrait.enable
+	local USE_PORTRAIT_OVERLAY = db.portrait.overlay and USE_PORTRAIT
+	local PORTRAIT_WIDTH = db.portrait.width
 
 	frame.db = db
 	frame.colors = ElvUF.colors
@@ -120,6 +153,14 @@ function UF:Update_PartyFrames(frame, db)
 
 		if USE_MINI_POWERBAR then
 			POWERBAR_WIDTH = POWERBAR_WIDTH / 2
+		end
+		
+		if USE_PORTRAIT_OVERLAY or not USE_PORTRAIT then
+			PORTRAIT_WIDTH = 0
+		end
+		
+		if not USE_POWERBAR_OFFSET then
+			POWERBAR_OFFSET = 0
 		end
 	end
 
@@ -176,12 +217,7 @@ function UF:Update_PartyFrames(frame, db)
 						health.colorHealth = true
 					end
 				else
-					health.colorClass = true
-					health.colorReaction = true
-				end
-
-				if self.db['colors'].forcehealthreaction == true then
-					health.colorClass = false
+					health.colorClass = (not self.db['colors'].forcehealthreaction)
 					health.colorReaction = true
 				end
 			end
@@ -235,7 +271,7 @@ function UF:Update_PartyFrames(frame, db)
 						health.colorHealth = true
 					end
 				else
-					health.colorClass = true
+					health.colorClass = (not self.db['colors'].forcehealthreaction)
 					health.colorReaction = true
 				end
 			end
@@ -251,6 +287,17 @@ function UF:Update_PartyFrames(frame, db)
 				health:Point("BOTTOMLEFT", frame, "BOTTOMLEFT", BORDER, BORDER)
 			else
 				health:Point("BOTTOMLEFT", frame, "BOTTOMLEFT", BORDER, (USE_POWERBAR and ((BORDER + SPACING)*2) or BORDER) + POWERBAR_HEIGHT)
+			end
+			
+			health.bg:ClearAllPoints()
+			if not USE_PORTRAIT_OVERLAY then
+				health:Point("TOPLEFT", PORTRAIT_WIDTH+BORDER+POWERBAR_OFFSET, -BORDER)
+				health.bg:SetParent(health)
+				health.bg:SetAllPoints()
+			else
+				health.bg:Point('BOTTOMLEFT', health:GetStatusBarTexture(), 'BOTTOMRIGHT')
+				health.bg:Point('TOPRIGHT', health)
+				health.bg:SetParent(frame.Portrait.overlay)
 			end
 
 			health:SetOrientation(db.health.orientation)
@@ -288,14 +335,14 @@ function UF:Update_PartyFrames(frame, db)
 				--Position
 				power:ClearAllPoints()
 				if USE_POWERBAR_OFFSET then
-					power:Point("TOPLEFT", frame.Health, "TOPLEFT", -POWERBAR_OFFSET, -POWERBAR_OFFSET)
+					power:Point("TOPLEFT", frame.Health, "TOPLEFT", -(POWERBAR_OFFSET + PORTRAIT_WIDTH), -POWERBAR_OFFSET)
 					power:Point("BOTTOMRIGHT", frame.Health, "BOTTOMRIGHT", -POWERBAR_OFFSET, -POWERBAR_OFFSET)
 					power:SetFrameStrata("LOW")
 					power:SetFrameLevel(2)
 				elseif USE_MINI_POWERBAR then
 					power:Width(POWERBAR_WIDTH - BORDER*2)
 					power:Height(POWERBAR_HEIGHT)
-					power:Point("LEFT", frame, "BOTTOMLEFT", (BORDER*2 + 4), BORDER + (POWERBAR_HEIGHT/2))
+					power:Point("LEFT", frame, "BOTTOMLEFT", (BORDER*2 + 4) + PORTRAIT_WIDTH, BORDER + (POWERBAR_HEIGHT/2))
 					power:SetFrameStrata("MEDIUM")
 					power:SetFrameLevel(frame:GetFrameLevel() + 3)
 				elseif USE_INSET_POWERBAR then
@@ -311,6 +358,55 @@ function UF:Update_PartyFrames(frame, db)
 			else
 				frame:DisableElement('Power')
 				power:Hide()
+			end
+		end
+		
+		--Portrait
+		do
+			local portrait = frame.Portrait
+
+			--Set Points
+			if USE_PORTRAIT then
+				if not frame:IsElementEnabled('Portrait') then
+					frame:EnableElement('Portrait')
+				end
+
+				portrait:ClearAllPoints()
+
+				if USE_PORTRAIT_OVERLAY then
+					if db.portrait.style == '3D' then
+						portrait:SetFrameLevel(frame.Health:GetFrameLevel() + 1)
+					end
+					portrait:SetAllPoints(frame.Health)
+					portrait:SetAlpha(0.3)
+					portrait:Show()
+					portrait.backdrop:Hide()
+				else
+					portrait:SetAlpha(1)
+					portrait:Show()
+					portrait.backdrop:Show()
+					if db.portrait.style == '3D' then
+						portrait:SetFrameLevel(frame:GetFrameLevel() + 5)
+					end
+					
+					portrait.backdrop:ClearAllPoints()
+					portrait.backdrop:SetPoint("TOPLEFT", frame, "TOPLEFT", POWERBAR_OFFSET, 0)
+
+					if USE_MINI_POWERBAR or USE_POWERBAR_OFFSET or not USE_POWERBAR or USE_INSET_POWERBAR then
+						portrait.backdrop:Point("BOTTOMRIGHT", frame.Health.backdrop, "BOTTOMLEFT", E.PixelMode and 1 or -SPACING, 0)
+					else
+						portrait.backdrop:Point("BOTTOMRIGHT", frame.Power.backdrop, "BOTTOMLEFT", E.PixelMode and 1 or -SPACING, 0)
+					end
+
+					portrait:Point('BOTTOMLEFT', portrait.backdrop, 'BOTTOMLEFT', BORDER, BORDER)
+					portrait:Point('TOPRIGHT', portrait.backdrop, 'TOPRIGHT', -BORDER, -BORDER)
+				end
+			else
+				if frame:IsElementEnabled('Portrait') then
+					frame:DisableElement('Portrait')
+					portrait:Hide()
+					portrait.backdrop:Hide()
+				end
 			end
 		end
 
@@ -338,8 +434,8 @@ function UF:Update_PartyFrames(frame, db)
 					end
 
 					if USE_PORTRAIT and not USE_PORTRAIT_OVERLAY then
-						threat.glow:Point("TOPRIGHT", frame.Portrait.backdrop, "TOPRIGHT", SHADOW_SPACING, -SHADOW_SPACING)
-						threat.glow:Point("BOTTOMRIGHT", frame.Portrait.backdrop, "BOTTOMRIGHT", SHADOW_SPACING, -SHADOW_SPACING)
+						threat.glow:Point("TOPLEFT", frame.Portrait.backdrop, "TOPLEFT", -SHADOW_SPACING, SHADOW_SPACING)
+						threat.glow:Point("BOTTOMLEFT", frame.Portrait.backdrop, "BOTTOMLEFT", -SHADOW_SPACING, SHADOW_SPACING)
 					end
 				elseif db.threatStyle == "ICONTOPLEFT" or db.threatStyle == "ICONTOPRIGHT" or db.threatStyle == "ICONBOTTOMLEFT" or db.threatStyle == "ICONBOTTOMRIGHT" or db.threatStyle == "ICONTOP" or db.threatStyle == "ICONBOTTOM" or db.threatStyle == "ICONLEFT" or db.threatStyle == "ICONRIGHT" then
 					threat:SetFrameStrata('HIGH')
@@ -462,6 +558,33 @@ function UF:Update_PartyFrames(frame, db)
 				debuffs:Hide()
 			end
 		end
+		
+		--RaidDebuffs
+		do
+			local rdebuffs = frame.RaidDebuffs
+			local stackColor = db.rdebuffs.stack.color
+			local durationColor = db.rdebuffs.duration.color
+			if db.rdebuffs.enable then
+				local rdebuffsFont = UF.LSM:Fetch("font", db.rdebuffs.font)
+				frame:EnableElement('RaidDebuffs')
+
+				rdebuffs:Size(db.rdebuffs.size)
+				rdebuffs:Point('BOTTOM', frame, 'BOTTOM', db.rdebuffs.xOffset, db.rdebuffs.yOffset)
+				
+				rdebuffs.count:FontTemplate(rdebuffsFont, db.rdebuffs.fontSize, db.rdebuffs.fontOutline)
+				rdebuffs.count:ClearAllPoints()
+				rdebuffs.count:Point(db.rdebuffs.stack.position, db.rdebuffs.stack.xOffset, db.rdebuffs.stack.yOffset)
+				rdebuffs.count:SetTextColor(stackColor.r, stackColor.g, stackColor.b)
+				
+				rdebuffs.time:FontTemplate(rdebuffsFont, db.rdebuffs.fontSize, db.rdebuffs.fontOutline)
+				rdebuffs.time:ClearAllPoints()
+				rdebuffs.time:Point(db.rdebuffs.duration.position, db.rdebuffs.duration.xOffset, db.rdebuffs.duration.yOffset)
+				rdebuffs.time:SetTextColor(durationColor.r, durationColor.g, durationColor.b)
+			else
+				frame:DisableElement('RaidDebuffs')
+				rdebuffs:Hide()
+			end
+		end
 
 		--Raid Icon
 		do
@@ -483,8 +606,15 @@ function UF:Update_PartyFrames(frame, db)
 		--Debuff Highlight
 		do
 			local dbh = frame.DebuffHighlight
-			if E.db.unitframe.debuffHighlighting then
+			if E.db.unitframe.debuffHighlighting ~= 'NONE' then
 				frame:EnableElement('DebuffHighlight')
+				frame.DebuffHighlightFilterTable = E.global.unitframe.DebuffHighlightColors
+				if E.db.unitframe.debuffHighlighting == 'GLOW' then
+					frame.DebuffHighlightBackdrop = true
+					frame.DBHGlow:SetAllPoints(frame.Threat.glow)
+				else
+					frame.DebuffHighlightBackdrop = false
+				end		
 			else
 				frame:DisableElement('DebuffHighlight')
 			end
@@ -513,6 +643,16 @@ function UF:Update_PartyFrames(frame, db)
 			if db.healPrediction then
 				if not frame:IsElementEnabled('HealPrediction') then
 					frame:EnableElement('HealPrediction')
+				end
+				
+				if not USE_PORTRAIT_OVERLAY then
+					healPrediction.myBar:SetParent(frame)
+					healPrediction.otherBar:SetParent(frame)
+					healPrediction.absorbBar:SetParent(frame)
+				else
+					healPrediction.myBar:SetParent(frame.Portrait.overlay)
+					healPrediction.otherBar:SetParent(frame.Portrait.overlay)
+					healPrediction.absorbBar:SetParent(frame.Portrait.overlay)
 				end
 
 				healPrediction.myBar:SetOrientation(db.health.orientation)
@@ -560,7 +700,7 @@ function UF:Update_PartyFrames(frame, db)
 
 				raidRoleFrameAnchor:ClearAllPoints()
 				if db.raidRoleIcons.position == 'TOPLEFT' then
-					raidRoleFrameAnchor:Point('LEFT', frame, 'TOPLEFT', 2, 0)
+					raidRoleFrameAnchor:Point('LEFT', frame.Health, 'TOPLEFT', 2, 0)
 				else
 					raidRoleFrameAnchor:Point('RIGHT', frame, 'TOPRIGHT', -2, 0)
 				end
@@ -573,12 +713,19 @@ function UF:Update_PartyFrames(frame, db)
 
 		UF:UpdateAuraWatch(frame)
 		frame:EnableElement('ReadyCheck')
+		
+		for objectName, object in pairs(frame.customTexts) do
+			if (not db.customTexts) or (db.customTexts and not db.customTexts[objectName]) then
+				object:Hide()
+				frame.customTexts[objectName] = nil
+			end
+		end
 
 		if db.customTexts then
 			local customFont = UF.LSM:Fetch("font", UF.db.font)
 			for objectName, _ in pairs(db.customTexts) do
-				if not frame[objectName] then
-					frame[objectName] = frame.RaisedElementParent:CreateFontString(nil, 'OVERLAY')
+				if not frame.customTexts[objectName] then
+					frame.customTexts[objectName] = frame.RaisedElementParent:CreateFontString(nil, 'OVERLAY')
 				end
 
 				local objectDB = db.customTexts[objectName]
@@ -587,11 +734,11 @@ function UF:Update_PartyFrames(frame, db)
 					customFont = UF.LSM:Fetch("font", objectDB.font)
 				end
 
-				frame[objectName]:FontTemplate(customFont, objectDB.size or UF.db.fontSize, objectDB.fontOutline or UF.db.fontOutline)
-				frame:Tag(frame[objectName], objectDB.text_format or '')
-				frame[objectName]:SetJustifyH(objectDB.justifyH or 'CENTER')
-				frame[objectName]:ClearAllPoints()
-				frame[objectName]:SetPoint(objectDB.justifyH or 'CENTER', frame, objectDB.justifyH or 'CENTER', objectDB.xOffset, objectDB.yOffset)
+				frame.customTexts[objectName]:FontTemplate(customFont, objectDB.size or UF.db.fontSize, objectDB.fontOutline or UF.db.fontOutline)
+				frame:Tag(frame.customTexts[objectName], objectDB.text_format or '')
+				frame.customTexts[objectName]:SetJustifyH(objectDB.justifyH or 'CENTER')
+				frame.customTexts[objectName]:ClearAllPoints()
+				frame.customTexts[objectName]:SetPoint(objectDB.justifyH or 'CENTER', frame, objectDB.justifyH or 'CENTER', objectDB.xOffset, objectDB.yOffset)
 			end
 		end
 	end
@@ -612,7 +759,12 @@ function UF:Update_PartyFrames(frame, db)
 		end
 	end
 
-	UF:ToggleTransparentStatusBar(UF.db.colors.transparentHealth, frame.Health, frame.Health.bg, true)
+	if UF.db.colors.transparentHealth then
+		UF:ToggleTransparentStatusBar(true, frame.Health, frame.Health.bg)
+	else
+		UF:ToggleTransparentStatusBar(false, frame.Health, frame.Health.bg, (USE_PORTRAIT and USE_PORTRAIT_OVERLAY) ~= true)
+	end
+
 	if frame.Power then
 		UF:ToggleTransparentStatusBar(UF.db.colors.transparentPower, frame.Power, frame.Power.bg)
 	end

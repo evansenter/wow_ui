@@ -5,6 +5,8 @@ local math_ceil, IsEncounterInProgress, abs, UnitHealth, UnitHealthMax, GetTime,
 local VExRT = nil
 
 local module = ExRT.mod:New("Timers",ExRT.L.timers,nil,true)
+local ELib,L = ExRT.lib,ExRT.L
+
 module.db.lasttimertopull = 0
 module.db.timertopull = 0
 module.db.firstmsg = false
@@ -23,9 +25,9 @@ local function ToRaid(msg)
 end
 
 local function CreateTimers(ctime,cname)
-	local chat_type,playerName = ExRT.mds.chatType()
+	local chat_type,playerName = ExRT.F.chatType()
 
-	if cname == ExRT.L.timerattack then
+	if cname == L.timerattack then
 		SendAddonMessage("BigWigs", "T:BWPull "..ctime, chat_type,playerName)
 		local _,_,_,_,_,_,_,mapID = GetInstanceInfo()
 		SendAddonMessage("D4", ("PT\t%d\t%d"):format(ctime,mapID or -1), chat_type,playerName)
@@ -42,7 +44,7 @@ function module:timer(elapsed)
 	if module.db.timertopull > 0 then
 		if math_ceil(module.db.timertopull) < math_ceil(module.db.lasttimertopull) then
 			if module.db.firstmsg == true or math_ceil(module.db.timertopull) % 5 == 0 or math_ceil(module.db.timertopull) == 7 or math_ceil(module.db.timertopull) < 5 then
-				ToRaid(ExRT.L.timerattackt.." "..math_ceil(module.db.timertopull).." "..ExRT.L.timersec)
+				ToRaid(L.timerattackt.." "..math_ceil(module.db.timertopull).." "..L.timersec)
 				module.db.firstmsg = false
 			end
 			module.db.lasttimertopull = module.db.timertopull
@@ -50,28 +52,38 @@ function module:timer(elapsed)
 		module.db.timertopull = module.db.timertopull - elapsed
 		if module.db.timertopull < 0 then
 			module.db.timertopull = 0
-			ToRaid(">>> "..ExRT.L.timerattack.." <<<")
+			ToRaid(">>> "..L.timerattack.." <<<")
 		end
 	end
-	if VExRT.Timers.enabled and not module.frame.encounter and IsEncounterInProgress() then
-		module.frame.encounter = true
-		module.frame.total = 0
-	elseif VExRT.Timers.enabled and module.frame.encounter and not IsEncounterInProgress() then
-		module.frame.encounter = nil
+	if VExRT.Timers.enabled then
+		if not module.frame.encounter and IsEncounterInProgress() then
+			module.frame.encounter = true
+			module.frame.total = 0
+			
+			if VExRT.Timers.OnlyInCombat then
+				module.frame:Show()
+			end
+		elseif module.frame.encounter and not IsEncounterInProgress() then
+			module.frame.encounter = nil
+			
+			if VExRT.Timers.OnlyInCombat and not module.frame.inCombat then
+				module.frame:Hide()
+			end
+		end
 	end
 end
 
-function ExRT.mds:DoPull(inum)
+function ExRT.F:DoPull(inum)
 	if module.db.timertopull > 0 then
 		module.db.timertopull = 0
-		ToRaid(">>> "..ExRT.L.timerattackcancel.." <<<")
-		CreateTimers(0,ExRT.L.timerattack)
+		ToRaid(">>> "..L.timerattackcancel.." <<<")
+		CreateTimers(0,L.timerattack)
 	else
 		inum = tonumber(inum) or 10
 		module.db.firstmsg = true
 		module.db.lasttimertopull = inum + 1
 		module.db.timertopull = inum
-		CreateTimers(inum,ExRT.L.timerattack)
+		CreateTimers(inum,L.timerattack)
 	end
 end
 
@@ -79,19 +91,19 @@ function module:slash(arg,msgDeformatted)
 	if arg == "pull" then
 		if module.db.timertopull > 0 then
 			module.db.timertopull = 0
-			ToRaid(">>> "..ExRT.L.timerattackcancel.." <<<")
-			CreateTimers(0,ExRT.L.timerattack)
+			ToRaid(">>> "..L.timerattackcancel.." <<<")
+			CreateTimers(0,L.timerattack)
 		else
 			module.db.firstmsg = true
 			module.db.lasttimertopull = 11
 			module.db.timertopull = 10
-			CreateTimers(10,ExRT.L.timerattack)
+			CreateTimers(10,L.timerattack)
 		end
 	elseif arg:find("^pull ") then
 		if module.db.timertopull > 0 then
 			module.db.timertopull = 0
-			ToRaid(">>> "..ExRT.L.timerattackcancel.." <<<")
-			CreateTimers(0,ExRT.L.timerattack)
+			ToRaid(">>> "..L.timerattackcancel.." <<<")
+			CreateTimers(0,L.timerattack)
 		else
 			local id = arg:match("%d+")
 			if id then
@@ -99,7 +111,7 @@ function module:slash(arg,msgDeformatted)
 				module.db.firstmsg = true
 				module.db.lasttimertopull = id + 1
 				module.db.timertopull = id
-				CreateTimers(id,ExRT.L.timerattack)
+				CreateTimers(id,L.timerattack)
 			end
 		end
 	elseif arg:find("^afk ") then
@@ -107,11 +119,11 @@ function module:slash(arg,msgDeformatted)
 		if id then
 			id = tonumber(id)
 			if id > 0 then
-				CreateTimers(id*60,ExRT.L.timerafk)
-				ToRaid(ExRT.L.timerafk.." "..math.ceil(id).." "..ExRT.L.timermin)
+				CreateTimers(id*60,L.timerafk)
+				ToRaid(L.timerafk.." "..math.ceil(id).." "..L.timermin)
 			else
-				CreateTimers(0,ExRT.L.timerafk)
-				ToRaid(ExRT.L.timerafkcancel)
+				CreateTimers(0,L.timerafk)
+				ToRaid(L.timerafkcancel)
 			end
 		end
 	elseif arg:find("^timer ") then
@@ -135,11 +147,10 @@ end
 function module.options:Load()
 	self:CreateTilte()
 
-	self.shtml1 = ExRT.lib.CreateText(self,605,200,nil,10,-35,nil,"TOP",nil,13,ExRT.L.timerstxt1)
-	self.shtml2 = ExRT.lib.CreateText(self,505,200,nil,110,-35,nil,"TOP",nil,13,ExRT.L.timerstxt2,nil,1,1,1)
-
-	self.chkEnable = ExRT.lib.CreateCheckBox(self,nil,10,-155,ExRT.L.timerTimerFrame,VExRT.Timers.enabled)
-	self.chkEnable:SetScript("OnClick", function(self,event) 
+	self.shtml1 = ELib:Text(self,L.timerstxt1,13):Size(650,200):Point(5,-30):Top()
+	self.shtml2 = ELib:Text(self,L.timerstxt2,13):Size(550,200):Point(105,-30):Top():Color()
+	
+	self.chkEnable = ELib:Check(self,L.timerTimerFrame,VExRT.Timers.enabled):Point(5,-155):OnClick(function(self) 
 		if self:GetChecked() then
 			VExRT.Timers.enabled = true
 			module.frame:Show()
@@ -157,8 +168,33 @@ function module.options:Load()
 		end
 	end)
 	
-	self.chkTimeToKill = ExRT.lib.CreateCheckBox(self,nil,10,-180,ExRT.L.TimerTimeToKill,VExRT.Timers.timeToKill,ExRT.L.TimerTimeToKillHelp)
-	self.chkTimeToKill:SetScript("OnClick", function(self,event) 
+	self.chkOnlyInCombat = ELib:Check(self,L.TimerOnlyInCombat,VExRT.Timers.OnlyInCombat):Point(30,-180):OnClick(function(self) 
+		if self:GetChecked() then
+			VExRT.Timers.OnlyInCombat = true
+			if not (module.frame.inCombat or module.frame.encounter) then
+				module.frame:Hide()
+			end
+		else
+			VExRT.Timers.OnlyInCombat = nil
+			if VExRT.Timers.enabled then
+				module.frame:Show()
+			end
+		end
+	end)
+	
+	self.chkFixate = ELib:Check(self,L.cd2fix,VExRT.Timers.Lock):Point(5,-205):OnClick(function(self) 
+		if self:GetChecked() then
+			VExRT.Timers.Lock = true
+			module.frame:SetMovable(false)
+			module.frame:EnableMouse(false)
+		else
+			VExRT.Timers.Lock = nil
+			module.frame:SetMovable(true)
+			module.frame:EnableMouse(true)
+		end
+	end)
+	
+	self.chkTimeToKill = ELib:Check(self,L.TimerTimeToKill,VExRT.Timers.timeToKill):Point(5,-230):Tooltip(L.TimerTimeToKillHelp):OnClick(function(self) 
 		if self:GetChecked() then
 			VExRT.Timers.timeToKill = true
 			timeToKillEnabled = true
@@ -169,8 +205,7 @@ function module.options:Load()
 		end
 	end)
 	
-	self.ButtonToCenter = ExRT.lib.CreateButton(self,255,22,nil,10,-207,ExRT.L.TimerResetPos,nil,ExRT.L.TimerResetPosTooltip)
-	self.ButtonToCenter:SetScript("OnClick",function()
+	self.ButtonToCenter = ELib:Button(self,L.TimerResetPos):Size(255,20):Point(5,-255):Tooltip(L.TimerResetPosTooltip):OnClick(function()
 		VExRT.Timers.Left = nil
 		VExRT.Timers.Top = nil
 
@@ -193,13 +228,19 @@ function module.main:ADDON_LOADED()
 		module.frame:SetPoint("TOPLEFT",UIParent,"BOTTOMLEFT",VExRT.Timers.Left,VExRT.Timers.Top) 
 	end
 
-	if VExRT.Timers.enabled then 
-		module.frame:Show() 
+	if VExRT.Timers.enabled then
+		if not VExRT.Timers.OnlyInCombat then
+			module.frame:Show()
+		end
 		module.frame:SetScript("OnUpdate", module.frame.OnUpdateFunc)
 		module:RegisterEvents('PLAYER_REGEN_DISABLED','PLAYER_REGEN_ENABLED')		
 	end
 	if VExRT.Timers.enabled and VExRT.Timers.timeToKill then 
 		timeToKillEnabled = true
+	end
+	if VExRT.Timers.Lock then
+		module.frame:SetMovable(false)
+		module.frame:EnableMouse(false)
 	end
 	module:RegisterTimer()
 	module:RegisterSlash()
@@ -210,17 +251,25 @@ function module.main:PLAYER_REGEN_DISABLED()
 		module.frame.total = 0 
 	end
 	module.frame.inCombat = true
+	
+	if VExRT.Timers.OnlyInCombat then
+		module.frame:Show()
+	end
 end
 
 function module.main:PLAYER_REGEN_ENABLED()
 	module.frame.inCombat = nil
+	
+	if VExRT.Timers.OnlyInCombat and not module.frame.encounter then
+		module.frame:Hide()
+	end
 end
 
 module.frame = CreateFrame("Frame",nil,UIParent)
 module.frame:Hide()
 module.frame:SetSize(77,27)
 module.frame:SetPoint("CENTER", 0, 0)
-module.frame:SetBackdrop({bgFile = "Interface/Tooltips/UI-Tooltip-Background",edgeFile = ExRT.mds.defBorder,tile = false,edgeSize = 4})
+module.frame:SetBackdrop({bgFile = "Interface/Tooltips/UI-Tooltip-Background",edgeFile = ExRT.F.defBorder,tile = false,edgeSize = 4})
 module.frame:SetBackdropBorderColor(0.1,0.1,0.1,0.7)
 module.frame:SetBackdropColor(0,0,0,0.7)
 module.frame:EnableMouse(true)
@@ -237,10 +286,8 @@ end)
 module.frame.total = 0
 module.frame.tmr = 0
 module.frame.killTmr = 0
-module.frame.txt = ExRT.lib.CreateText(module.frame,77,27,"LEFT",11,0,"LEFT",nil,ExRT.mds.defFont,16,"00:00.0",nil,1,1,1,1,"OUTLINE")
-module.frame.killTime = ExRT.lib.CreateText(module.frame,77,27,"TOP",0,0,"CENTER","TOP",ExRT.mds.defFont,14,"",nil,1,1,1,1,"OUTLINE")
-module.frame.killTime:ClearAllPoints()
-module.frame.killTime:SetPoint("TOP",module.frame,"BOTTOM",0,0)
+module.frame.txt = ELib:Text(module.frame,"00:00.0"):Size(77,27):Point("LEFT",11,0):Left():Font(ExRT.F.defFont,16):Color():Shadow():Outline()
+module.frame.killTime = ELib:Text(module.frame,""):Size(77,27):Point("TOP",module.frame,"BOTTOM",0,0):Top():Center():Font(ExRT.F.defFont,14):Color():Shadow():Outline()
 module:RegisterHideOnPetBattle(module.frame)
 
 module.frame:SetFrameStrata("HIGH")
@@ -305,7 +352,9 @@ do
 						local lastUpdate = guidData.update
 						if lastUpdate < _time then
 							local posNow = guidData.pos
-							guidData.hp[ posNow ] = UnitHealth(unit) / UnitHealthMax(unit)
+							local maxHP = UnitHealthMax(unit)
+							maxHP = maxHP == 0 and 1 or maxHP
+							guidData.hp[ posNow ] = UnitHealth(unit) / maxHP
 							guidData.time[ posNow ] = _time
 							guidData.pos = guidData.pos + 1
 							if guidData.pos > 16 then

@@ -4,7 +4,7 @@
 local mod		= DBM:NewMod("z1105", "DBM-PvP", 2)
 local L			= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 41 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 48 $"):sub(12, -3))
 mod:SetZone(DBM_DISABLE_ZONE_DETECTION)
 
 mod:RegisterEvents(
@@ -18,7 +18,6 @@ local bgzone = false
 local GetMapLandmarkInfo, GetNumMapLandmarks = GetMapLandmarkInfo, GetNumMapLandmarks
 
 mod:RemoveOption("HealthFrame")
-mod:RemoveOption("SpeedKillTimer")
 
 local ResPerSec = {
 	[0] = 1e-300,

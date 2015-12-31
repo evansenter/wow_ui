@@ -195,6 +195,10 @@ local factions = {
 	{ id = 1682, name = GetFactionInfoByID(1682) },		-- Wrynn's Vanguard
 	{ id = 1708, name = GetFactionInfoByID(1708) },		-- Laughing Skull Orcs
 	{ id = 1681, name = GetFactionInfoByID(1681) },		-- Vol'jin's Spear
+	{ id = 1847, name = GetFactionInfoByID(1847) },		-- Hand of the Prophet
+	{ id = 1848, name = GetFactionInfoByID(1848) },		-- Vol'jin's Headhunters
+	{ id = 1849, name = GetFactionInfoByID(1849) },		-- Order of the Awakened
+	{ id = 1850, name = GetFactionInfoByID(1850) },		-- The Saberstalkers
 }
 
 local FactionUIDsRev = {}

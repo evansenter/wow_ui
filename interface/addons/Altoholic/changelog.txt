@@ -7,7 +7,51 @@ IMPORTANT NOTE: As with every new expansion, many things have changed in the API
 This means cleaning the following files in \WTF\Account\<your_account>\SavedVariables : Altoholic.lua & All DataStore*.lua
 
 There WILL be bugs if you use your old files without cleaning them first. 
-Some fixes to work around API changes are too time consuming, so cleaning is required. A meager price to pay once per expansion.
+Some fixes to work around API changes are too time consuming, so cleaning is required. A meagre price to pay once per expansion.
+
+6.2.007 (12/09/2015)
+
+- Added Garona & Harrison Jones to the list of followers not recruited at the inn.
+- Fixed guild bank tab icons displayed as a red square instead of the tab's icon.
+- DataStore_Achievements: Fixed a Lua error at logon.
+
+6.2.006 (17/08/2015)
+
+Imported all changes made in the unofficial releases made during my absence.
+Many thanks to those who took it upon themselves to provide fixes for all those issues.
+To prevent confusing users, I will resume the version number based on Zwixx numbering, so if you used a version up to 6.2.005, you have to upgrade to this version.
+Some fixes made by me before the release I was supposed to make after 6.2 are also included, so make sure to upgrade.
+
+- DataStore_Reputations: added 6.2 factions. (Thanks Zwixx)
+- DataStore_Inventory: added LFR loots. (Thanks Zwixx)
+- DataStore_Garrisons: Fixed a Lua error when scanning followers. (Thanks Zwixx)
+- Fixed tooltip related issues. (Thanks Zwixx)
+
+- DataStore_Achievements: Fixed an issue where an earned achievement was not immediately saved to the DB, and was only read at next login.
+- Fixed a silly bug that prevented you from searching professions.
+- Account Summary -> Clicking on the level of any character toggles the display of decimals. This option is remembered across sessions.
+- Account Summary -> Clicking on the AiL of any character toggles the display of decimals. This option is remembered across sessions.
+- Created some extra templates to simplify the code (more on the way.. this happens bit by bit)
+
+6.1.006 (08/05/2015)
+
+- Updated list of archaeology projects with WoD projects. I apparently messed up and lost the file that contained the update in 6.1.001, it's now ok.
+- Moved several UI templates to their own folder.
+- Completely rewrote the Blizzard's DropDownMenu widget to use my own version. 
+I was tired of some of the constraints of their implementation, and of the loss of time it caused me every time I wanted to use one.
+So I invested some time in making it my way.
+- Account Summary -> The amount of uncollected garrison resources now appears in yellow when resources exceed 300, and in red when they exceed 450.
+- Account Summary -> Added icons with drop-down menus to filter your list of alts by faction, level, profession and class.
+- Account Summary -> Fixed the expand/collapse button that did not work any more after the complete rewrite of the pane.
+- Achievements lists updated ! (Thanks Bluemage29 for your help !!)
+- Fixed a Lua error when viewing the Guild tab with an character not in a guild.
+
+6.1.005 (20/04/2015)
+
+- The garrison mission tooltip now shows a red exclamation mark '!' when no missions are active.
+- In the account summary, the last column used to sort the view is now remembered, and is restored when you log in again.
+- Character's tab: fixed a lua error when mousing over the professions' icon of a character that does not have 2 professions.
+- Account Summary: modified the garrison followers pane to show followers at iLvl 675 and a column for their weapon/armor iLvl.
 
 6.1.004 (11/04/2015)
 

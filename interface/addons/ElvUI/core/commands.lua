@@ -1,8 +1,31 @@
 local E, L, V, P, G = unpack(select(2, ...)); --Inport: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 
-local format = string.format
-local lower = string.lower
-local split = string.split
+--Cache global variables
+--Lua functions
+local _G = _G
+local tonumber, type, pairs, select = tonumber, type, pairs, select
+local format, lower, split = string.format, string.lower, string.split
+--WoW API / Variables
+local InCombatLockdown = InCombatLockdown
+local UIFrameFadeOut, UIFrameFadeIn = UIFrameFadeOut, UIFrameFadeIn
+local EnableAddOn, DisableAllAddOns = EnableAddOn, DisableAllAddOns
+local SetCVar = SetCVar
+local ReloadUI = ReloadUI
+local GuildControlGetNumRanks = GuildControlGetNumRanks
+local GuildControlGetRankName = GuildControlGetRankName
+local GetNumGuildMembers, GetGuildRosterInfo = GetNumGuildMembers, GetGuildRosterInfo
+local GetGuildRosterLastOnline = GetGuildRosterLastOnline
+local GuildUninvite = GuildUninvite
+local SendChatMessage = SendChatMessage
+local debugprofilestart, debugprofilestop = debugprofilestart, debugprofilestop
+local UpdateAddOnCPUUsage, GetAddOnCPUUsage = UpdateAddOnCPUUsage, GetAddOnCPUUsage
+local ResetCPUUsage = ResetCPUUsage
+local GetAddOnInfo = GetAddOnInfo
+local ERR_NOT_IN_COMBAT = ERR_NOT_IN_COMBAT
+
+--Global variables that we don't cache, list them here for the mikk's Find Globals script
+-- GLOBALS: FarmMode, Minimap, FarmModeMap, EGrid, MacroEditBox, HelloKittyLeft
+
 
 function FarmMode()
 	if InCombatLockdown() then E:Print(ERR_NOT_IN_COMBAT); return; end
@@ -146,23 +169,67 @@ function E:GetCPUImpact()
 	end
 end
 
-function E:HelloKittyToggle()
-	if(HelloKittyLeft and HelloKittyLeft:IsShown()) then
-		self:RestoreHelloKitty()
-	else
-		self:StaticPopup_Show("HELLO_KITTY")
+local BLIZZARD_ADDONS = {
+    "Blizzard_AchievementUI",
+    "Blizzard_ArchaeologyUI",
+    "Blizzard_ArenaUI",
+    "Blizzard_AuctionUI",
+    "Blizzard_AuthChallengeUI",
+    "Blizzard_BarbershopUI",
+    "Blizzard_BattlefieldMinimap",
+    "Blizzard_BindingUI",
+    "Blizzard_BlackMarketUI",
+    "Blizzard_Calendar",
+    "Blizzard_ChallengesUI",
+    "Blizzard_ClientSavedVariables",
+    "Blizzard_CombatLog",
+    "Blizzard_CombatText",
+    "Blizzard_CompactRaidFrames",
+    "Blizzard_CUFProfiles",
+    "Blizzard_DebugTools",
+    "Blizzard_EncounterJournal",
+    "Blizzard_GarrisonUI",
+    "Blizzard_GlyphUI",
+    "Blizzard_GMChatUI",
+    "Blizzard_GMSurveyUI",
+    "Blizzard_GuildBankUI",
+    "Blizzard_GuildControlUI",
+    "Blizzard_GuildUI",
+    "Blizzard_InspectUI",
+    "Blizzard_ItemAlterationUI",
+    "Blizzard_ItemSocketingUI",
+    "Blizzard_ItemUpgradeUI",
+    "Blizzard_LookingForGuildUI",
+    "Blizzard_MacroUI",
+    "Blizzard_MovePad",
+    "Blizzard_ObjectiveTracker",
+    "Blizzard_PetBattleUI",
+    "Blizzard_PetJournal",
+    "Blizzard_PVPUI",
+    "Blizzard_QuestChoice",
+    "Blizzard_RaidUI",
+    "Blizzard_StoreUI",
+    "Blizzard_TalentUI",
+    "Blizzard_TimeManager",
+    "Blizzard_TokenUI",
+    "Blizzard_TradeSkillUI",
+    "Blizzard_TrainerUI",
+    "Blizzard_VoidStorageUI",
+}
+function E:EnableBlizzardAddOns()
+	for _, addon in pairs(BLIZZARD_ADDONS) do
+		local reason = select(5, GetAddOnInfo(addon))
+		if reason == "DISABLED" then
+			EnableAddOn(addon)
+			E:Print("The following addon was re-enabled: "..addon)
+		end
 	end
-end
-
-function E:HarlemShakeToggle()
-	self:StaticPopup_Show("HARLEM_SHAKE");
 end
 
 function E:LoadCommands()
 	self:RegisterChatCommand("in", "DelayScriptCall")
 	self:RegisterChatCommand("ec", "ToggleConfig")
 	self:RegisterChatCommand("elvui", "ToggleConfig")
-
 	self:RegisterChatCommand('cpuimpact', 'GetCPUImpact')
 	self:RegisterChatCommand('cpuusage', 'GetTopCPUFunc')
 	self:RegisterChatCommand('bgstats', 'BGStats')
@@ -175,6 +242,7 @@ function E:LoadCommands()
 	self:RegisterChatCommand("resetui", "ResetUI")
 	self:RegisterChatCommand('farmmode', 'FarmMode')
 	self:RegisterChatCommand('cleanguild', 'MassGuildKick')
+	self:RegisterChatCommand('enableblizzard', 'EnableBlizzardAddOns')
 	if E.ActionBars then
 		self:RegisterChatCommand('kb', E.ActionBars.ActivateBindMode)
 	end

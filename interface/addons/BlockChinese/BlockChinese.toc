@@ -1,9 +1,9 @@
-## Interface: 60100
-## Version: 1.0
+## Interface: 60200
+## Version: 1.2
 ## Title: BlockChinese
 ## Notes: Blocks Chinese Chat
 ## Author: Ketho @ EU-Boulderfist
-## X-Curse-Packaged-Version: v1.1a
+## X-Curse-Packaged-Version: v1.2
 ## X-Curse-Project-Name: BlockChinese
 ## X-Curse-Project-ID: blockchinese
 ## X-Curse-Repository-ID: wow/blockchinese/mainline

@@ -1,7 +1,7 @@
 local mod		= DBM:NewMod("z628", "DBM-PvP", 2)
 local L			= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 27 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 48 $"):sub(12, -3))
 mod:SetZone(DBM_DISABLE_ZONE_DETECTION)
 
 mod:RegisterEvents(
@@ -9,7 +9,6 @@ mod:RegisterEvents(
 )
 
 mod:RemoveOption("HealthFrame")
-mod:RemoveOption("SpeedKillTimer")
 
 local warnSiegeEngine 		= mod:NewAnnounce("WarnSiegeEngine", 3)
 local warnSiegeEngineSoon 	= mod:NewAnnounce("WarnSiegeEngineSoon", 2) 

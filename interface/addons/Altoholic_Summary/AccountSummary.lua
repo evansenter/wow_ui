@@ -37,10 +37,6 @@ local VIEW_GARRISONS = 13
 local ICON_FACTION_HORDE = "Interface\\Icons\\INV_BannerPVP_01"
 local ICON_FACTION_ALLIANCE = "Interface\\Icons\\INV_BannerPVP_02"
 
-local DDM_Add = addon.Helpers.DDM_AddWithArgs
-local DDM_AddTitle = addon.Helpers.DDM_AddTitle
-local DDM_AddCloseMenu = addon.Helpers.DDM_AddCloseMenu
-
 addon.Summary = {}
 
 local ns = addon.Summary		-- ns = namespace
@@ -193,58 +189,133 @@ end
 
 local Characters = addon.Characters
 
-local function GetFactionTotals(f, line)
-	local _, realm, account = Characters:GetInfo(line)
-	
-	local level = 0
-	local money = 0
-	local played = 0
-	
-	for _, character in pairs(DataStore:GetCharacters(realm, account)) do
-		if DataStore:GetCharacterFaction(character) == f then
-			level = level + DataStore:GetCharacterLevel(character)
-			money = money + DataStore:GetMoney(character)
-			played = played + DataStore:GetPlayTime(character)
-		end
-	end
-	
-	return level, money, played
+local function SortView(columnName)
+	addon:SetOption("UI.Tabs.Summary.CurrentColumn", columnName)
+	addon.Summary:Update()
 end
 
-local function ShowTotals(frame)
-	local line = frame:GetParent():GetID()
-	local tt = AltoTooltip
+local function GetColorFromAIL(level)
+	if (level < 600) then return colors.grey end
+	if (level <= 615) then return colors.green end
+	if (level <= 630) then return colors.rare end
+	return colors.epic
+end
+
+
+-- ** Right-Click Menu **
+local function ViewAltInfo(self, characterInfoLine)
+	addon.Tabs:OnClick("Characters")
+	addon.Tabs.Characters:SetAlt(Characters:GetInfo(characterInfoLine))
+	addon.Tabs.Characters:ViewCharInfo(self.value)
+end
+
+local function DeleteAlt_MsgBox_Handler(self, button, characterInfoLine)
+	if not button then return end
 	
-	tt:ClearLines()
-	tt:SetOwner(frame, "ANCHOR_TOP")
-	tt:AddLine(L["Totals"])
+	local name, realm, account = Characters:GetInfo(characterInfoLine)
 	
-	local aLevels, aMoney, aPlayed = GetFactionTotals("Alliance", line)
-	local hLevels, hMoney, hPlayed = GetFactionTotals("Horde", line)
+	DataStore:DeleteCharacter(name, realm, account)
 	
-	tt:AddLine(" ",1,1,1)
-	tt:AddDoubleLine(colors.white..L["Levels"] , format("%s|r (%s %s|r, %s %s|r)", 
-		Characters:GetField(line, "level"),
-		addon:TextureToFontstring(ICON_FACTION_ALLIANCE, 18, 18), colors.white..aLevels,
-		addon:TextureToFontstring(ICON_FACTION_HORDE, 18, 18), colors.white..hLevels))
+	-- rebuild the main character table, and all the menus
+	Characters:InvalidateView()
+	addon.Summary:Update()
+		
+	addon:Print(format( L["Character %s successfully deleted"], name))
+end
+
+local function DeleteAlt(self, characterInfoLine)
+	local name, realm, account = Characters:GetInfo(characterInfoLine)
 	
-	tt:AddLine(" ",1,1,1)
-	tt:AddDoubleLine(colors.white..MONEY, format("%s|r (%s %s|r, %s %s|r)", 
-		addon:GetMoneyString(Characters:GetField(line, "money"), colors.white, true),
-		addon:TextureToFontstring(ICON_FACTION_ALLIANCE, 18, 18), 
-		addon:GetMoneyString(aMoney, colors.white, true),
-		addon:TextureToFontstring(ICON_FACTION_HORDE, 18, 18), 
-		addon:GetMoneyString(hMoney, colors.white, true)))
+	if (account == THIS_ACCOUNT) and	(realm == GetRealmName()) and (name == UnitName("player")) then
+		addon:Print(L["Cannot delete current character"])
+		return
+	end
+
+	addon:SetMsgBoxHandler(DeleteAlt_MsgBox_Handler, characterInfoLine)
 	
-	tt:AddLine(" ",1,1,1)
-	tt:AddDoubleLine(colors.white..PLAYED , format("%s|r (%s %s|r, %s %s|r)",
-		Characters:GetField(line, "played"),
-		addon:TextureToFontstring(ICON_FACTION_ALLIANCE, 18, 18),
-		addon:GetTimeString(aPlayed),
-		addon:TextureToFontstring(ICON_FACTION_HORDE, 18, 18), 
-		addon:GetTimeString(hPlayed)))
+	AltoMsgBox_Text:SetText(L["Delete this Alt"] .. "?\n" .. name)
+	AltoMsgBox:Show()
+end
+
+local function UpdateRealm(self, characterInfoLine)
+	local _, realm, account = Characters:GetInfo(characterInfoLine)
 	
-	tt:Show()
+	AltoAccountSharing_AccNameEditBox:SetText(account)
+	AltoAccountSharing_UseTarget:SetChecked(nil)
+	AltoAccountSharing_UseName:SetChecked(1)
+	
+	local _, updatedWith = addon:GetLastAccountSharingInfo(realm, account)
+	AltoAccountSharing_AccTargetEditBox:SetText(updatedWith)
+	
+	addon.Tabs.Summary:AccountSharingButton_OnClick()
+end
+
+local function DeleteRealm_MsgBox_Handler(self, button, characterInfoLine)
+	if not button then return end
+
+	local _, realm, account = Characters:GetInfo(characterInfoLine)
+	DataStore:DeleteRealm(realm, account)
+
+	-- if the realm being deleted was the current ..
+	local tc = addon.Tabs.Characters
+	if tc and tc:GetRealm() == realm and tc:GetAccount() == account then
+		
+		-- reset to this player
+		local player = UnitName("player")
+		local realmName = GetRealmName()
+		addon.Tabs.Characters:SetAlt(player, realmName, THIS_ACCOUNT)
+		addon.Containers:UpdateCache()
+		tc:ViewCharInfo(VIEW_BAGS)
+	end
+	
+	-- rebuild the main character table, and all the menus
+	Characters:InvalidateView()
+	addon.Summary:Update()
+		
+	addon:Print(format( L["Realm %s successfully deleted"], realm))
+end
+
+local function DeleteRealm(self, characterInfoLine)
+	local _, realm, account = Characters:GetInfo(characterInfoLine)
+		
+	if (account == THIS_ACCOUNT) and	(realm == GetRealmName()) then
+		addon:Print(L["Cannot delete current realm"])
+		return
+	end
+
+	addon:SetMsgBoxHandler(DeleteRealm_MsgBox_Handler, characterInfoLine)
+	AltoMsgBox_Text:SetText(L["Delete this Realm"] .. "?\n" .. realm)
+	AltoMsgBox:Show()
+end
+
+local function NameRightClickMenu_Initialize(frame)
+	local characterInfoLine = ns.CharInfoLine
+	if not characterInfoLine then return end
+
+	local lineType = Characters:GetLineType(characterInfoLine)
+	if not lineType then return end
+
+	if lineType == INFO_REALM_LINE then
+		local _, realm, account = Characters:GetInfo(characterInfoLine)
+		local _, updatedWith = addon:GetLastAccountSharingInfo(realm, account)
+		
+		if updatedWith then
+			frame:AddButtonWithArgs(format("Update from %s", colors.green..updatedWith), nil, UpdateRealm, characterInfoLine)
+		end
+		frame:AddButtonWithArgs(L["Delete this Realm"], nil, DeleteRealm, characterInfoLine)
+		return
+	end
+
+	frame:AddTitle(DataStore:GetColoredCharacterName(Characters:Get(characterInfoLine).key))
+	frame:AddTitle()
+	frame:AddButtonWithArgs(L["View bags"], VIEW_BAGS, ViewAltInfo, characterInfoLine)
+	frame:AddButtonWithArgs(L["View mailbox"], VIEW_MAILS, ViewAltInfo, characterInfoLine)
+	frame:AddButtonWithArgs(L["View quest log"], VIEW_QUESTS, ViewAltInfo, characterInfoLine)
+	frame:AddButtonWithArgs(L["View auctions"], VIEW_AUCTIONS, ViewAltInfo, characterInfoLine)
+	frame:AddButtonWithArgs(L["View bids"], VIEW_BIDS, ViewAltInfo, characterInfoLine)
+	frame:AddButtonWithArgs(COMPANIONS, VIEW_COMPANIONS, ViewAltInfo, characterInfoLine)
+	frame:AddButtonWithArgs(L["Delete this Alt"], nil, DeleteAlt, characterInfoLine)
+	frame:AddCloseMenu()
 end
 
 local function Name_OnClick(frame, button)
@@ -258,7 +329,15 @@ local function Name_OnClick(frame, button)
 	
 	if button == "RightButton" then
 		ns.CharInfoLine = line	-- line containing info about the alt on which action should be taken (delete, ..)
-		ToggleDropDownMenu(1, nil, AltoholicFrameSummaryRightClickMenu, "AltoholicFrameSummaryScrollFrame", 130, 330-(line*22))
+		
+		local scrollFrame = frame:GetParent():GetParent().ScrollFrame
+		local menu = scrollFrame:GetParent():GetParent().ContextualMenu
+		local offset = scrollFrame:GetOffset()
+		
+		menu:Initialize(NameRightClickMenu_Initialize, "LIST")
+		menu:Close()
+		menu:Toggle(frame, frame:GetWidth() - 20, 10)
+			
 		return
 	elseif button == "LeftButton" and lineType == INFO_CHARACTER_LINE then
 		addon.Tabs:OnClick("Characters")
@@ -271,10 +350,6 @@ local function Name_OnClick(frame, button)
 	end
 end
 
-local function SortView(frame, func, columnName)
-	addon:SetOption("UI.Tabs.Summary.CurrentColumn", columnName)
-	addon.Characters:Sort(frame, func)
-end
 
 -- *** Specific sort functions ***
 local function GetCharacterLevel(self, character)
@@ -282,6 +357,37 @@ local function GetCharacterLevel(self, character)
 	local rate = DataStore:GetXPRate(character) or 0
 
 	return level + (rate / 100)
+end
+
+local function GetRarityLevel(self, character)
+	local numEpic = DataStore:GetNumEpicFollowers(character) or 0
+	local numRare = DataStore:GetNumRareFollowers(character) or 0
+	
+	return numEpic + (numRare / 100)
+end
+
+local function GetFollowersLevel615To630(self, character)
+	local num615 = DataStore:GetNumFollowersAtiLevel615(character) or 0
+	local num630 = DataStore:GetNumFollowersAtiLevel630(character) or 0
+	
+	return num630 + (num615 / 100)
+end
+
+local function GetFollowersLevel645To660(self, character)
+	local num645 = DataStore:GetNumFollowersAtiLevel645(character) or 0
+	local num660 = DataStore:GetNumFollowersAtiLevel660(character) or 0
+	
+	return num660 + (num645 / 100)
+end
+
+local function GetFollowersItemLevel(self, character)
+	local avgWeapon = DataStore:GetAvgWeaponiLevel(character) or 0
+	local avgArmor = DataStore:GetAvgArmoriLevel(character) or 0
+	
+	avgWeapon = math.floor(avgWeapon*10)	-- 615.17 becomes 6151
+	avgArmor = math.floor(avgArmor*10)
+	
+	return avgWeapon + (avgArmor / 10000)
 end
 
 
@@ -296,7 +402,8 @@ columns["Name"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetCharacterName, "Name") end,
+	HeaderOnClick = function() SortView("Name") end,
+	HeaderSort = DataStore.GetCharacterName,
 	
 	-- Content
 	Width = 150,
@@ -373,14 +480,15 @@ columns["Level"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, GetCharacterLevel, "Level") end,
+	HeaderOnClick = function() SortView("Level") end,
+	HeaderSort = GetCharacterLevel,
 	
 	-- Content
 	Width = 50,
 	JustifyH = "CENTER",
 	GetText = function(character) 
 		local level = DataStore:GetCharacterLevel(character)
-		if level ~= MAX_PLAYER_LEVEL then
+		if level ~= MAX_PLAYER_LEVEL and addon:GetOption("UI.Tabs.Summary.ShowLevelDecimals") then
 			local rate = DataStore:GetXPRate(character)
 			level = format("%.1f", level + (rate/100))		-- show level as 98.4 if not level cap
 		end
@@ -407,7 +515,10 @@ columns["Level"] = {
 				colors.green, DataStore:GetXPRate(character), colors.white),1,1,1)
 			tt:Show()
 		end,
-	OnClick = EmptyFunc,
+	OnClick = function(frame, button)
+			addon:ToggleOption(nil, "UI.Tabs.Summary.ShowLevelDecimals")
+			addon.Summary:Update()
+		end,
 	GetTotal = function(line) return Characters:GetField(line, "level") end,
 }
 
@@ -418,7 +529,8 @@ columns["RestXP"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetRestXPRate, "RestXP") end,
+	HeaderOnClick = function() SortView("RestXP") end,
+	HeaderSort = DataStore.GetRestXPRate,
 	
 	-- Content
 	Width = 65,
@@ -444,7 +556,7 @@ columns["RestXP"] = {
 			tt:SetOwner(frame, "ANCHOR_RIGHT")
 			tt:AddLine(DataStore:GetColoredCharacterName(character),1,1,1)
 			tt:AddLine(" ",1,1,1)
-			tt:AddLine(format("%s: %s", L["Rest XP"], colors.green..restXP),1,1,1)
+			tt:AddLine(format("%s: %s%s", L["Rest XP"], colors.green, restXP),1,1,1)
 			tt:Show()
 		-- - Improve "rested xp"
 			-- - tooltip : Fully rested in 4 days 12 hours (18 days if not left in an inn) on 29.05.09 4:00 pm
@@ -460,7 +572,8 @@ columns["Money"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetMoney, "Money") end,
+	HeaderOnClick = function() SortView("Money") end,
+	HeaderSort = DataStore.GetMoney,
 	
 	-- Content
 	Width = 110,
@@ -471,8 +584,6 @@ columns["Money"] = {
 	OnEnter = EmptyFunc,
 	OnClick = EmptyFunc,
 	GetTotal = function(line) return addon:GetMoneyString(Characters:GetField(line, "money"), colors.white) end,
-	
-	
 }
 
 columns["Played"] = {
@@ -482,7 +593,8 @@ columns["Played"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetPlayTime, "Played") end,
+	HeaderOnClick = function() SortView("Played") end,
+	HeaderSort = DataStore.GetPlayTime,
 	
 	-- Content
 	Width = 100,
@@ -498,18 +610,23 @@ columns["Played"] = {
 columns["AiL"] = {
 	-- Header
 	HeaderWidth = 55,
-	Header = "AiL",
+	Header = ITEM_LEVEL_ABBR,
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetAverageItemLevel, "AiL") end,
+	HeaderOnClick = function() SortView("AiL") end,
+	HeaderSort = DataStore.GetAverageItemLevel,
 	
 	-- Content
 	Width = 60,
 	JustifyH = "CENTER",
 	GetText = function(character) 
 		local AiL = DataStore:GetAverageItemLevel(character) or 0
-		return format("%s%.1f", colors.yellow, AiL)
+		if addon:GetOption("UI.Tabs.Summary.ShowILevelDecimals") then
+			return format("%s%.1f", colors.yellow, AiL)
+		else
+			return format("%s%d", colors.yellow, AiL)
+		end
 	end,
 	OnEnter = function(frame)
 			local character = frame:GetParent().character
@@ -529,7 +646,10 @@ columns["AiL"] = {
 			addon:AiLTooltip()
 			tt:Show()
 		end,
-	OnClick = EmptyFunc,
+	OnClick = function(frame, button)
+			addon:ToggleOption(nil, "UI.Tabs.Summary.ShowILevelDecimals")
+			addon.Summary:Update()
+		end,
 	GetTotal = function(line) return colors.white..format("%.1f", Characters:GetField(line, "realmAiL")) end,
 }
 
@@ -540,7 +660,8 @@ columns["LastOnline"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetLastLogout, "LastOnline") end,
+	HeaderOnClick = function() SortView("LastOnline") end,
+	HeaderSort = DataStore.GetLastLogout,
 	
 	-- Content
 	Width = 60,
@@ -593,7 +714,8 @@ columns["BagSlots"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetNumBagSlots, "BagSlots") end,
+	HeaderOnClick = function() SortView("BagSlots") end,
+	HeaderSort = DataStore.GetNumBagSlots,
 	
 	-- Content
 	Width = 100,
@@ -644,7 +766,8 @@ columns["FreeBagSlots"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetNumFreeBagSlots, "FreeBagSlots") end,
+	HeaderOnClick = function() SortView("FreeBagSlots") end,
+	HeaderSort = DataStore.GetNumFreeBagSlots,
 	
 	-- Content
 	Width = 70,
@@ -688,7 +811,8 @@ columns["BankSlots"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetNumBankSlots, "BankSlots") end,
+	HeaderOnClick = function() SortView("BankSlots") end,
+	HeaderSort = DataStore.GetNumBankSlots,
 	
 	-- Content
 	Width = 160,
@@ -752,7 +876,8 @@ columns["FreeBankSlots"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetNumFreeBankSlots, "FreeBankSlots") end,
+	HeaderOnClick = function() SortView("FreeBankSlots") end,
+	HeaderSort = DataStore.GetNumFreeBankSlots,
 	
 	-- Content
 	Width = 70,
@@ -797,8 +922,9 @@ columns["FreeReagentBankSlots"] = {	-- TO DO
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
 	HeaderOnClick = function(frame) 
-		-- SortView(frame, DataStore.xxx, "FreeReagentBankSlots") 
+		-- SortView("FreeReagentBankSlots") 
 	end,
+	--HeaderSort = DataStore.xxx,
 	
 	-- Content
 	Width = 50,
@@ -825,7 +951,8 @@ columns["Prof1"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetProfession1, "Prof1") end,
+	HeaderOnClick = function() SortView("Prof1") end,
+	HeaderSort = DataStore.GetProfession1,
 	
 	-- Content
 	Width = 70,
@@ -857,7 +984,8 @@ columns["Prof2"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetProfession2, "Prof2") end,
+	HeaderOnClick = function() SortView("Prof2") end,
+	HeaderSort = DataStore.GetProfession2,
 	
 	-- Content
 	Width = 70,
@@ -889,7 +1017,8 @@ columns["ProfCooking"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetCookingRank, "ProfCooking") end,
+	HeaderOnClick = function() SortView("ProfCooking") end,
+	HeaderSort = DataStore.GetCookingRank,
 	
 	-- Content
 	Width = 60,
@@ -914,7 +1043,8 @@ columns["ProfFirstAid"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetFirstAidRank, "ProfFirstAid") end,
+	HeaderOnClick = function() SortView("ProfFirstAid") end,
+	HeaderSort = DataStore.GetFirstAidRank,
 	
 	-- Content
 	Width = 60,
@@ -939,7 +1069,8 @@ columns["ProfFishing"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetFishingRank, "ProfFishing") end,
+	HeaderOnClick = function() SortView("ProfFishing") end,
+	HeaderSort = DataStore.GetFishingRank,
 	
 	-- Content
 	Width = 60,
@@ -962,7 +1093,8 @@ columns["ProfArchaeology"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetArchaeologyRank, "ProfArchaeology") end,
+	HeaderOnClick = function() SortView("ProfArchaeology") end,
+	HeaderSort = DataStore.GetArchaeologyRank,
 	
 	-- Content
 	Width = 60,
@@ -986,7 +1118,8 @@ columns["Mails"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetNumMails, "Mails") end,
+	HeaderOnClick = function() SortView("Mails") end,
+	HeaderSort = DataStore.GetNumMails,
 	
 	-- Content
 	Width = 60,
@@ -1098,7 +1231,8 @@ columns["LastMailCheck"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetMailboxLastVisit, "LastMailCheck") end,
+	HeaderOnClick = function() SortView("LastMailCheck") end,
+	HeaderSort = DataStore.GetMailboxLastVisit,
 	
 	-- Content
 	Width = 70,
@@ -1134,7 +1268,8 @@ columns["Auctions"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetNumAuctions, "Auctions") end,
+	HeaderOnClick = function() SortView("Auctions") end,
+	HeaderSort = DataStore.GetNumAuctions,
 	
 	-- Content
 	Width = 70,
@@ -1166,7 +1301,8 @@ columns["Bids"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetNumBids, "Bids") end,
+	HeaderOnClick = function() SortView("Bids") end,
+	HeaderSort = DataStore.GetNumBids,
 	
 	-- Content
 	Width = 60,
@@ -1199,7 +1335,8 @@ columns["AHLastVisit"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetAuctionHouseLastVisit, "AHLastVisit") end,
+	HeaderOnClick = function() SortView("AHLastVisit") end,
+	HeaderSort = DataStore.GetAuctionHouseLastVisit,
 	
 	-- Content
 	Width = 70,
@@ -1235,12 +1372,14 @@ columns["MissionTableLastVisit"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetMissionTableLastVisit, "MissionTableLastVisit") end,
+	HeaderOnClick = function() SortView("MissionTableLastVisit") end,
+	HeaderSort = DataStore.GetMissionTableLastVisit,
 	
 	-- Content
 	Width = 65,
 	JustifyH = "RIGHT",
 	GetText = function(character)
+		local numAvail = DataStore:GetNumAvailableMissions(character) or 0
 			local numActive = DataStore:GetNumActiveMissions(character) or 0
 			local numCompleted = DataStore:GetNumCompletedMissions(character) or 0
 			local text = ""
@@ -1251,6 +1390,8 @@ columns["MissionTableLastVisit"] = {
 				else
 					text = format(" %s*", colors.green)
 				end
+			elseif numActive == 0 and numAvail ~= 0 then
+				text = format(" %s!", colors.red)	-- red '!' no mission is active !
 			end
 	
 			return format("%s%s%s", colors.white, addon:FormatDelay(DataStore:GetMissionTableLastVisit(character)), text)
@@ -1272,15 +1413,20 @@ columns["MissionTableLastVisit"] = {
 			tt:AddLine(format("%s: %s", L["Visited"], SecondsToTime(time() - lastVisit)),1,1,1)
 			tt:AddLine(" ",1,1,1)
 			
-			local num = DataStore:GetNumAvailableMissions(character)
-			tt:AddLine(format("Available Missions: %s%d", colors.green, num),1,1,1)
+			local numAvail = DataStore:GetNumAvailableMissions(character) or 0
+			local numActive = DataStore:GetNumActiveMissions(character) or 0
+			local numCompleted = DataStore:GetNumCompletedMissions(character) or 0
+			local color = colors.green
 			
-			num = DataStore:GetNumActiveMissions(character)
-			tt:AddLine(format("In Progress: %s%d", colors.green, num),1,1,1)
+			tt:AddLine(format("Available Missions: %s%d", color, numAvail),1,1,1)
 			
-			num = DataStore:GetNumCompletedMissions(character)
-			local color = (num > 0) and colors.gold or colors.white
-			tt:AddLine(format("%sCompleted Missions: %s%d", color, colors.green, num),1,1,1)
+			if numActive == 0 and numAvail ~= 0 then
+				color = colors.red
+			end
+			tt:AddLine(format("In Progress: %s%d", color, numActive),1,1,1)
+			
+			color = (numCompleted > 0) and colors.gold or colors.white
+			tt:AddLine(format("%sCompleted Missions: %s%d", color, colors.green, numCompleted),1,1,1)
 			
 			tt:Show()
 		end,
@@ -1306,7 +1452,8 @@ columns["CurrencyGarrison"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetGarrisonResources, "CurrencyGarrison") end,
+	HeaderOnClick = function() SortView("CurrencyGarrison") end,
+	HeaderSort = DataStore.GetGarrisonResources,
 	
 	-- Content
 	Width = 80,
@@ -1315,18 +1462,19 @@ columns["CurrencyGarrison"] = {
 			local uncollected = DataStore:GetUncollectedResources(character) or 0
 			local amount = DataStore:GetCurrencyTotals(character, CURRENCY_ID_GARRISON) or 0
 			local color = (amount == 0) and colors.grey or colors.white
+			local colorUncollected
+			
+			if uncollected <= 300 then
+				colorUncollected = colors.green
+			elseif uncollected < 450 then
+				colorUncollected = colors.yellow
+			else
+				colorUncollected = colors.red
+			end
 
-			return format("%s%s/%s+%s", color, amount, colors.green, uncollected)
+			return format("%s%s/%s+%s", color, amount, colorUncollected , uncollected)
 		end,
 	OnEnter = function(frame)
-			-- to do: 
-			--   - resources
-			--   - uncollected
-			--   - last collection time
-			--   - you will be at 500 in x days
-			--   if res + uncollected > 10k then warning
-			
-	
 			local character = frame:GetParent().character
 			if not character or not DataStore:GetModuleLastUpdateByKey("DataStore_Garrisons", character) then
 				return
@@ -1367,7 +1515,8 @@ columns["CurrencyApexis"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetApexisCrystals, "CurrencyApexis") end,
+	HeaderOnClick = function() SortView("CurrencyApexis") end,
+	HeaderSort = DataStore.GetApexisCrystals,
 	
 	-- Content
 	Width = 100,
@@ -1390,7 +1539,8 @@ columns["CurrencySOTF"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetSealsOfFate, "CurrencySOTF") end,
+	HeaderOnClick = function() SortView("CurrencySOTF") end,
+	HeaderSort = DataStore.GetSealsOfFate,
 	
 	-- Content
 	Width = 60,
@@ -1413,7 +1563,8 @@ columns["CurrencyHonor"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetHonorPoints, "CurrencyHonor") end,
+	HeaderOnClick = function() SortView("CurrencyHonor") end,
+	HeaderSort = DataStore.GetHonorPoints,
 	
 	-- Content
 	Width = 80,
@@ -1436,7 +1587,8 @@ columns["CurrencyConquest"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetConquestPoints, "CurrencyConquest") end,
+	HeaderOnClick = function() SortView("CurrencyConquest") end,
+	HeaderSort = DataStore.GetConquestPoints,
 	
 	-- Content
 	Width = 80,
@@ -1513,7 +1665,8 @@ columns["FollowersLV100"] = {
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetNumFollowersAtLevel100, "FollowersLV100") end,
+	HeaderOnClick = function() SortView("FollowersLV100") end,
+	HeaderSort = DataStore.GetNumFollowersAtLevel100,
 	
 	-- Content
 	Width = 70,
@@ -1530,69 +1683,28 @@ columns["FollowersLV100"] = {
 	GetTotal = EmptyFunc,
 }
 
-columns["FollowersRare"] = {
-	-- Header
-	HeaderWidth = 55,
-	Header = "Rare",
-	GetHeaderTooltip = EmptyFunc,
-	HeaderOnEnter = EmptyFunc,
-	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetNumRareFollowers, "FollowersRare") end,
-	
-	-- Content
-	Width = 55,
-	JustifyH = "CENTER",
-	GetText = function(character)
-			local amount = DataStore:GetNumRareFollowers(character) or 0
-			local color = (amount == 0) and colors.grey or colors.rare
-			
-			return format("%s%s", color, amount)
-		end,
-	OnEnter = EmptyFunc,
-	OnClick = EmptyFunc,
-	GetTotal = EmptyFunc,
-}
-
 columns["FollowersEpic"] = {
 	-- Header
 	HeaderWidth = 55,
-	Header = "Epic",
+	-- Header = "Epic",
+	Header = RARITY,
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetNumEpicFollowers, "FollowersEpic") end,
+	HeaderOnClick = function() SortView("FollowersEpic") end,
+	HeaderSort = GetRarityLevel,
 	
 	-- Content
 	Width = 55,
 	JustifyH = "CENTER",
 	GetText = function(character)
-			local amount = DataStore:GetNumEpicFollowers(character) or 0
-			local color = (amount == 0) and colors.grey or colors.epic
+			local numRare = DataStore:GetNumRareFollowers(character) or 0
+			local colorRare = (numRare == 0) and colors.grey or colors.rare
 			
-			return format("%s%s", color, amount)
-		end,
-	OnEnter = EmptyFunc,
-	OnClick = EmptyFunc,
-	GetTotal = EmptyFunc,
-}
-
-columns["FollowersLV615"] = {
-	-- Header
-	HeaderWidth = 55,
-	Header = "> 615",
-	GetHeaderTooltip = EmptyFunc,
-	HeaderOnEnter = EmptyFunc,
-	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetNumFollowersAtiLevel615, "FollowersLV615") end,
-	
-	-- Content
-	Width = 55,
-	JustifyH = "CENTER",
-	GetText = function(character)
-			local amount = DataStore:GetNumFollowersAtiLevel615(character) or 0
-			local color = (amount == 0) and colors.grey or colors.uncommon
+			local numEpic = DataStore:GetNumEpicFollowers(character) or 0
+			local colorEpic = (numEpic == 0) and colors.grey or colors.epic
 			
-			return format("%s%s", color, amount)
+			return format("%s%s%s/%s%s", colorRare, numRare, colors.white, colorEpic, numEpic)
 		end,
 	OnEnter = EmptyFunc,
 	OnClick = EmptyFunc,
@@ -1601,44 +1713,24 @@ columns["FollowersLV615"] = {
 
 columns["FollowersLV630"] = {
 	-- Header
-	HeaderWidth = 55,
-	Header = "> 630",
+	HeaderWidth = 70,
+	Header = "615/630",
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetNumFollowersAtiLevel630, "FollowersLV630") end,
+	HeaderOnClick = function() SortView("FollowersLV630") end,
+	HeaderSort = GetFollowersLevel615To630,
 	
 	-- Content
-	Width = 55,
+	Width = 70,
 	JustifyH = "CENTER",
 	GetText = function(character)
-			local amount = DataStore:GetNumFollowersAtiLevel630(character) or 0
-			local color = (amount == 0) and colors.grey or colors.rare
+			local num615 = DataStore:GetNumFollowersAtiLevel615(character) or 0
+			local color615 = (num615 == 0) and colors.grey or colors.green
+			local num630 = DataStore:GetNumFollowersAtiLevel630(character) or 0
+			local color630 = (num630 == 0) and colors.grey or colors.rare
 			
-			return format("%s%s", color, amount)
-		end,
-	OnEnter = EmptyFunc,
-	OnClick = EmptyFunc,
-	GetTotal = EmptyFunc,
-}
-
-columns["FollowersLV645"] = {
-	-- Header
-	HeaderWidth = 55,
-	Header = "> 645",
-	GetHeaderTooltip = EmptyFunc,
-	HeaderOnEnter = EmptyFunc,
-	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetNumFollowersAtiLevel645, "FollowersLV645") end,
-	
-	-- Content
-	Width = 55,
-	JustifyH = "CENTER",
-	GetText = function(character)
-			local amount = DataStore:GetNumFollowersAtiLevel645(character) or 0
-			local color = (amount == 0) and colors.grey or colors.epic
-			
-			return format("%s%s", color, amount)
+			return format("%s%s%s/%s%s", color615, num615, colors.white, color630, num630)
 		end,
 	OnEnter = EmptyFunc,
 	OnClick = EmptyFunc,
@@ -1647,18 +1739,45 @@ columns["FollowersLV645"] = {
 
 columns["FollowersLV660"] = {
 	-- Header
-	HeaderWidth = 55,
-	Header = "> 660",
+	HeaderWidth = 70,
+	Header = "645/660",
 	GetHeaderTooltip = EmptyFunc,
 	HeaderOnEnter = EmptyFunc,
 	HeaderOnLeave = EmptyFunc,
-	HeaderOnClick = function(frame) SortView(frame, DataStore.GetNumFollowersAtiLevel660, "FollowersLV660") end,
+	HeaderOnClick = function() SortView("FollowersLV660") end,
+	HeaderSort = GetFollowersLevel645To660,
 	
 	-- Content
-	Width = 55,
+	Width = 70,
 	JustifyH = "CENTER",
 	GetText = function(character)
-			local amount = DataStore:GetNumFollowersAtiLevel660(character) or 0
+			local num645 = DataStore:GetNumFollowersAtiLevel645(character) or 0
+			local color645 = (num645 == 0) and colors.grey or colors.epic
+			local num660 = DataStore:GetNumFollowersAtiLevel660(character) or 0
+			local color660 = (num660 == 0) and colors.grey or colors.epic
+			
+			return format("%s%s%s/%s%s", color645, num645, colors.white, color660, num660)
+		end,
+	OnEnter = EmptyFunc,
+	OnClick = EmptyFunc,
+	GetTotal = EmptyFunc,
+}
+
+columns["FollowersLV675"] = {
+	-- Header
+	HeaderWidth = 50,
+	Header = "675",
+	GetHeaderTooltip = EmptyFunc,
+	HeaderOnEnter = EmptyFunc,
+	HeaderOnLeave = EmptyFunc,
+	HeaderOnClick = function() SortView("FollowersLV675") end,
+	HeaderSort = DataStore.GetNumFollowersAtiLevel675,
+	
+	-- Content
+	Width = 50,
+	JustifyH = "CENTER",
+	GetText = function(character)
+			local amount = DataStore:GetNumFollowersAtiLevel675(character) or 0
 			local color = (amount == 0) and colors.grey or colors.epic
 			
 			return format("%s%s", color, amount)
@@ -1668,46 +1787,51 @@ columns["FollowersLV660"] = {
 	GetTotal = EmptyFunc,
 }
 
-local function SetButtonData(frame, character, columnName)
-	local obj = columns[columnName]
+columns["FollowersItems"] = {
+	-- Header
+	HeaderWidth = 75,
+	Header = ITEM_LEVEL_ABBR,
+	GetHeaderTooltip = EmptyFunc,
+	HeaderOnEnter = EmptyFunc,
+	HeaderOnLeave = EmptyFunc,
+	HeaderOnClick = function() SortView("FollowersItems") end,
+	HeaderSort = GetFollowersItemLevel,
 	
-	-- Set basic properties
-	frame:SetWidth(obj.Width)
-	frame.Text:SetWidth(obj.Width)
-	frame.Text:SetJustifyH(obj.JustifyH)
-	frame.Text:SetText(obj.GetText(character))
-	frame:Show()
-
-	-- Set Scripts
-	frame:SetScript("OnEnter", obj.OnEnter)
-	frame:SetScript("OnClick", obj.OnClick)
-end
-
-local function SetTotalButtonData(frame, line, columnName)
-	local obj = columns[columnName]
-	
-	-- Set basic properties
-	frame:SetWidth(obj.Width)
-	frame.Text:SetWidth(obj.Width)
-	
-	if obj.TotalJustifyH then
-		frame.Text:SetJustifyH(obj.TotalJustifyH)
-	else
-		frame.Text:SetJustifyH(obj.JustifyH)
-	end
-	
-
-	if obj.GetTotal ~= EmptyFunc then
-		frame.Text:SetText(obj.GetTotal(line))
-		frame:Show()
-	else
-		frame:Hide()
-	end
-
-	-- Set Scripts
-	frame:SetScript("OnEnter", EmptyFunc)
-	frame:SetScript("OnClick", EmptyFunc)
-end
+	-- Content
+	Width = 75,
+	JustifyH = "CENTER",
+	GetText = function(character)
+			local avgWeapon = DataStore:GetAvgWeaponiLevel(character) or 0
+			local colorW = GetColorFromAIL(avgWeapon)
+			
+			local avgArmor = DataStore:GetAvgArmoriLevel(character) or 0
+			local colorA = GetColorFromAIL(avgArmor)
+			
+			return format("%s%.1f%s/%s%.1f", colorW, avgWeapon, colors.white, colorA, avgArmor)
+		end,
+	OnEnter = function(frame)
+			local character = frame:GetParent().character
+			if not character or not DataStore:GetModuleLastUpdateByKey("DataStore_Garrisons", character) then
+				return
+			end
+			
+			local avgWeapon = DataStore:GetAvgWeaponiLevel(character) or 0
+			local colorW = GetColorFromAIL(avgWeapon)
+			local avgArmor = DataStore:GetAvgArmoriLevel(character) or 0
+			local colorA = GetColorFromAIL(avgArmor)
+			
+			local tt = AltoTooltip
+			tt:ClearLines()
+			tt:SetOwner(frame, "ANCHOR_RIGHT")
+			tt:AddLine(DataStore:GetColoredCharacterName(character),1,1,1)
+			tt:AddLine(" ",1,1,1)
+			tt:AddLine(format("%s: %s%.1f", WEAPON, colorW, avgWeapon),1,1,1)
+			tt:AddLine(format("%s: %s%.1f", ARMOR, colorA, avgArmor),1,1,1)
+			tt:Show()
+		end,
+	OnClick = EmptyFunc,
+	GetTotal = EmptyFunc,
+}
 
 local modes = {
 	[MODE_SUMMARY] = { "Name", "Level", "RestXP", "Money", "Played", "AiL", "LastOnline" },
@@ -1715,144 +1839,68 @@ local modes = {
 	[MODE_SKILLS] = { "Name", "Level", "Prof1", "Prof2", "ProfCooking", "ProfFirstAid", "ProfFishing", "ProfArchaeology" },
 	[MODE_ACTIVITY] = { "Name", "Level", "Mails", "LastMailCheck", "Auctions", "Bids", "AHLastVisit", "MissionTableLastVisit" },
 	[MODE_CURRENCIES] = { "Name", "Level", "CurrencyGarrison", "CurrencyApexis", "CurrencySOTF", "CurrencyHonor", "CurrencyConquest" },
-	[MODE_FOLLOWERS] = { "Name", "Level", "FollowersLV100", "FollowersRare", "FollowersEpic", "FollowersLV615", "FollowersLV630", "FollowersLV645", "FollowersLV660" },
+	[MODE_FOLLOWERS] = { "Name", "Level", "FollowersLV100", "FollowersEpic", "FollowersLV630", "FollowersLV660", "FollowersLV675", "FollowersItems" },
 }
-
-local function ViewAltInfo(self, characterInfoLine)
-	addon.Tabs:OnClick("Characters")
-	addon.Tabs.Characters:SetAlt(Characters:GetInfo(characterInfoLine))
-	addon.Tabs.Characters:ViewCharInfo(self.value)
-end
-
-local function DeleteAlt_MsgBox_Handler(self, button, characterInfoLine)
-	if not button then return end
-	
-	local name, realm, account = Characters:GetInfo(characterInfoLine)
-	
-	DataStore:DeleteCharacter(name, realm, account)
-	
-	-- rebuild the main character table, and all the menus
-	Characters:InvalidateView()
-	addon.Summary:Update()
-		
-	addon:Print(format( L["Character %s successfully deleted"], name))
-end
-
-local function DeleteAlt(self, characterInfoLine)
-	local name, realm, account = Characters:GetInfo(characterInfoLine)
-	
-	if (account == THIS_ACCOUNT) and	(realm == GetRealmName()) and (name == UnitName("player")) then
-		addon:Print(L["Cannot delete current character"])
-		return
-	end
-
-	addon:SetMsgBoxHandler(DeleteAlt_MsgBox_Handler, characterInfoLine)
-	
-	AltoMsgBox_Text:SetText(L["Delete this Alt"] .. "?\n" .. name)
-	AltoMsgBox:Show()
-end
-
-local function UpdateRealm(self, characterInfoLine)
-	local _, realm, account = Characters:GetInfo(characterInfoLine)
-	
-	AltoAccountSharing_AccNameEditBox:SetText(account)
-	AltoAccountSharing_UseTarget:SetChecked(nil)
-	AltoAccountSharing_UseName:SetChecked(1)
-	
-	local _, updatedWith = addon:GetLastAccountSharingInfo(realm, account)
-	AltoAccountSharing_AccTargetEditBox:SetText(updatedWith)
-	
-	addon.Tabs.Summary:AccountSharingButton_OnClick()
-end
-
-local function DeleteRealm_MsgBox_Handler(self, button, characterInfoLine)
-	if not button then return end
-
-	local _, realm, account = Characters:GetInfo(characterInfoLine)
-	DataStore:DeleteRealm(realm, account)
-
-	-- if the realm being deleted was the current ..
-	local tc = addon.Tabs.Characters
-	if tc:GetRealm() == realm and tc:GetAccount() == account then
-		
-		-- reset to this player
-		local player = UnitName("player")
-		local realmName = GetRealmName()
-		addon.Tabs.Characters:SetAlt(player, realmName, THIS_ACCOUNT)
-		addon.Containers:UpdateCache()
-		tc:ViewCharInfo(VIEW_BAGS)
-	end
-	
-	-- rebuild the main character table, and all the menus
-	Characters:InvalidateView()
-	addon.Summary:Update()
-		
-	addon:Print(format( L["Realm %s successfully deleted"], realm))
-end
-
-local function DeleteRealm(self, characterInfoLine)
-	local _, realm, account = Characters:GetInfo(characterInfoLine)
-		
-	if (account == THIS_ACCOUNT) and	(realm == GetRealmName()) then
-		addon:Print(L["Cannot delete current realm"])
-		return
-	end
-
-	addon:SetMsgBoxHandler(DeleteRealm_MsgBox_Handler, characterInfoLine)
-	AltoMsgBox_Text:SetText(L["Delete this Realm"] .. "?\n" .. realm)
-	AltoMsgBox:Show()
-end
 
 function ns:SetMode(mode)
 	addon:SetOption("UI.Tabs.Summary.CurrentMode", mode)
 	
-	AltoholicTabSummaryStatus:SetText("")
-	AltoholicTabSummaryToggleView:Show()
-	AltoholicTabSummary_SelectLocation:Show()
-	AltoholicTabSummary_RequestSharing:Show()
-	AltoholicTabSummary_Options:Show()
-	AltoholicTabSummary_OptionsDataStore:Show()
+	local parent = AltoholicTabSummary
 	
 	-- add the appropriate columns for this mode
-	local Columns = addon.Tabs.Columns
-	Columns:Init()
-
 	for i = 1, #modes[mode] do
 		local columnName = modes[mode][i]
 		local column = columns[columnName]
 		
-		Columns:Add(column.Header, column.HeaderWidth, column.HeaderOnClick)
+		parent.SortButtons:SetButton(i, column.Header, column.HeaderWidth, column.HeaderOnClick)
 	end
 end
 
 function ns:Update()
-	local numRows = 14
-	
 	local frame = AltoholicFrameSummary
-	local offset = addon.ScrollFrames:GetOffset(frame.ScrollFrame)
+	local scrollFrame = frame.ScrollFrame
+	local numRows = scrollFrame.numRows
+	local offset = scrollFrame:GetOffset()
 
 	local isRealmShown
 	local numVisibleRows = 0
 	local numDisplayedRows = 0
 
-	local currentMode = addon:GetOption("UI.Tabs.Summary.CurrentMode")
+	local sortOrder = addon:GetOption("UI.Tabs.Summary.SortAscending")
+	local currentColumn = addon:GetOption("UI.Tabs.Summary.CurrentColumn")
+	local currentModeIndex = addon:GetOption("UI.Tabs.Summary.CurrentMode")
+	local currentMode = modes[currentModeIndex]
+	
+	-- rebuild and get the view, then sort it
+	Characters:InvalidateView()
+	local view = Characters:GetView()
+	if columns[currentColumn] then	-- an old column name might still be in the DB.
+		Characters:Sort(sortOrder, columns[currentColumn].HeaderSort)
+	end
+
+	-- attempt to restore the arrow to the right sort button
+	local container = AltoholicTabSummary.SortButtons
+	for i = 0, #currentMode do
+		if currentMode[i] == currentColumn then
+			container["Sort"..i].Arrow:Draw(sortOrder)
+		end
+	end
+	
 	local rowIndex = 1
 	local item
 	
-	local view = Characters:GetView()
-	
 	for _, line in pairs(view) do
-		local rowFrame = frame["Entry"..rowIndex]
-	
+		local rowFrame = scrollFrame:GetRow(rowIndex)
 		local lineType = Characters:GetLineType(line)
 		
 		if (offset > 0) or (numDisplayedRows >= numRows) then		-- if the line will not be visible
 			if lineType == INFO_REALM_LINE then								-- then keep track of counters
-				if Characters:GetField(line, "isCollapsed") == false then
+				if not Characters:IsRealmCollapsed(line) then
 					isRealmShown = true
 				else
 					isRealmShown = false
 				end
+				
 				numVisibleRows = numVisibleRows + 1
 				offset = offset - 1		-- no further control, nevermind if it goes negative
 			elseif isRealmShown then
@@ -1863,75 +1911,23 @@ function ns:Update()
 			if lineType == INFO_REALM_LINE then
 				local _, realm, account = Characters:GetInfo(line)
 				
-				if Characters:GetField(line, "isCollapsed") == false then
-					rowFrame.Collapse:SetNormalTexture("Interface\\Buttons\\UI-MinusButton-Up")
+				if not Characters:IsRealmCollapsed(line) then
 					isRealmShown = true
 				else
-					rowFrame.Collapse:SetNormalTexture("Interface\\Buttons\\UI-PlusButton-Up")
 					isRealmShown = false
 				end
-				rowFrame.Collapse:Show()
-				
-				item = rowFrame.Item1
-				item:SetWidth(300)
-				item:SetPoint("TOPLEFT", 25, 0)
-				item.Text:SetWidth(300)
-				item.Text:SetJustifyH("LEFT")
-				
-				if account == THIS_ACCOUNT then	-- saved as default, display as localized.
-					item.Text:SetText(format("%s (%s".. L["Account"]..": %s%s|r)", realm, colors.white, colors.green, L["Default"]))
-				else
-					local last = addon:GetLastAccountSharingInfo(realm, account)
-					item.Text:SetText(format("%s (%s".. L["Account"]..": %s%s %s%s|r)", realm, colors.white, colors.green, account, colors.yellow, last or ""))
-				end
-				
-				item:SetScript("OnEnter", EmptyFunc)
-				item:SetScript("OnClick", Name_OnClick)
-				
-				for i = 2, 10 do
-					rowFrame["Item"..i]:Hide()
-				end
-	
-				rowFrame.character = nil
-				rowFrame:SetID(line)
-				rowFrame:Show()
+				rowFrame:DrawRealmLine(line, realm, account, Name_OnClick)
+			
 				rowIndex = rowIndex + 1
 				numVisibleRows = numVisibleRows + 1
 				numDisplayedRows = numDisplayedRows + 1
 			elseif isRealmShown then
 				if (lineType == INFO_CHARACTER_LINE) then
-					local character = DataStore:GetCharacter( Characters:GetInfo(line) )
-					
-					rowFrame.character = character
-					rowFrame.Collapse:Hide()
-					rowFrame.Item1:SetPoint("TOPLEFT", 10, 0)
-
-					-- fill the visible cells for this mode
-					for i = 1, #modes[currentMode] do
-						SetButtonData(rowFrame["Item"..i], character, modes[currentMode][i])
-					end
-					
+					rowFrame:DrawCharacterLine(line, columns, currentMode)
 				elseif (lineType == INFO_TOTAL_LINE) then
-					rowFrame.character = nil
-					rowFrame.Collapse:Hide()
-					
-					-- fill the visible cells for this mode
-					for i = 1, #modes[currentMode] do
-						SetTotalButtonData(rowFrame["Item"..i], line, modes[currentMode][i])
-					end
-					
-					item = rowFrame.Item1
-					item:SetPoint("TOPLEFT", 10, 0)
-					item:SetScript("OnEnter", ShowTotals)
+					rowFrame:DrawTotalLine(line, columns, currentMode)
 				end
-					
-				-- hide the extra cells
-				for i = #modes[currentMode]+1, 10 do
-					rowFrame["Item"..i]:Hide()
-				end
-				
-				rowFrame:SetID(line)
-				rowFrame:Show()
+
 				rowIndex = rowIndex + 1
 				numVisibleRows = numVisibleRows + 1
 				numDisplayedRows = numDisplayedRows + 1
@@ -1940,14 +1936,14 @@ function ns:Update()
 	end
 	
 	while rowIndex <= numRows do
-		local rowFrame = frame["Entry"..rowIndex]
+		local rowFrame = scrollFrame:GetRow(rowIndex) 
 		
 		rowFrame:SetID(0)
 		rowFrame:Hide()
 		rowIndex = rowIndex + 1
 	end
-	
-	addon.ScrollFrames:Update(frame.ScrollFrame, numVisibleRows, numRows, 18)
+
+	scrollFrame:Update(numVisibleRows)
 end
 
 function addon:AiLTooltip()
@@ -2001,34 +1997,4 @@ function addon:AiLTooltip()
 	tt:AddDoubleLine(colors.yellow .. "510", format("%s%s: %s", colors.white, GetMapNameByID(953), "10"))
 	tt:AddDoubleLine(colors.yellow .. "520", format("%s%s: %s", colors.white, GetMapNameByID(953), PLAYER_DIFFICULTY4))
 	tt:AddDoubleLine(colors.yellow .. "530", format("%s%s: %s", colors.white, GetMapNameByID(953), "25"))
-end
-
-function ns:RightClickMenu_OnLoad(self)
-	local characterInfoLine = ns.CharInfoLine
-	if not characterInfoLine then return end
-
-	local lineType = Characters:GetLineType(characterInfoLine)
-	if not lineType then return end
-
-	if lineType == INFO_REALM_LINE then
-		local _, realm, account = Characters:GetInfo(characterInfoLine)
-		local _, updatedWith = addon:GetLastAccountSharingInfo(realm, account)
-		
-		if updatedWith then
-			DDM_Add(format("Update from %s", colors.green..updatedWith), nil, UpdateRealm, characterInfoLine)
-		end
-		DDM_Add(L["Delete this Realm"], nil, DeleteRealm, characterInfoLine)
-		return
-	end
-
-	DDM_AddTitle(DataStore:GetColoredCharacterName(Characters:Get(characterInfoLine).key))
-	DDM_AddTitle(" ")
-	DDM_Add(L["View bags"], VIEW_BAGS, ViewAltInfo, characterInfoLine)
-	DDM_Add(L["View mailbox"], VIEW_MAILS, ViewAltInfo, characterInfoLine)
-	DDM_Add(L["View quest log"], VIEW_QUESTS, ViewAltInfo, characterInfoLine)
-	DDM_Add(L["View auctions"], VIEW_AUCTIONS, ViewAltInfo, characterInfoLine)
-	DDM_Add(L["View bids"], VIEW_BIDS, ViewAltInfo, characterInfoLine)
-	DDM_Add(COMPANIONS, VIEW_COMPANIONS, ViewAltInfo, characterInfoLine)
-	DDM_Add(L["Delete this Alt"], nil, DeleteAlt, characterInfoLine)
-	DDM_AddCloseMenu()
 end

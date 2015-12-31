@@ -119,7 +119,7 @@
 		</Layers>
 	</Frame>
 	
-	<Font name="ExRTFontNormal" font="Fonts\FRIZQT___CYR.TTF" virtual="true">
+	<Font name="ExRTFontNormal" inherits="GameFontNormal" virtual="true">
 		<Shadow>
 			<Offset>
 				<AbsDimension x="1" y="-1"/>
@@ -148,6 +148,18 @@
 					</Size>
 					<Anchors>
 						<Anchor point="LEFT">
+							<Offset x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+				</Texture>
+			</Layer>
+			<Layer level="ARTWORK">
+				<Texture file="Interface\ChatFrame\ChatFrameExpandArrow" hidden="true" parentKey="Arrow">
+					<Size>
+						<AbsDimension x="16" y="16"/>
+					</Size>
+					<Anchors>
+						<Anchor point="RIGHT">
 							<Offset x="0" y="0"/>
 						</Anchor>
 					</Anchors>
@@ -623,7 +635,7 @@
 			<Layer level="BORDER">
 				<Texture parentKey="LeftDisabled">
 					<Size>
-						<AbsDimension x="20" y="24"/>
+						<AbsDimension x="12" y="24"/>
 					</Size>
 					<Anchors>
 						<Anchor point="BOTTOMLEFT">
@@ -643,7 +655,7 @@
 				</Texture>
 				<Texture parentKey="RightDisabled">
 					<Size>
-						<AbsDimension x="20" y="24"/>
+						<AbsDimension x="12" y="24"/>
 					</Size>
 					<Anchors>
 						<Anchor point="LEFT" relativeKey="$parent.MiddleDisabled" relativePoint="RIGHT"/>
@@ -651,7 +663,7 @@
 				</Texture>
 				<Texture parentKey="Left">
 					<Size>
-						<AbsDimension x="20" y="24"/>
+						<AbsDimension x="12" y="24"/>
 					</Size>
 					<Anchors>
 						<Anchor point="TOPLEFT"/>
@@ -667,7 +679,7 @@
 				</Texture>
 				<Texture parentKey="Right">
 					<Size>
-						<AbsDimension x="20" y="24"/>
+						<AbsDimension x="12" y="24"/>
 					</Size>
 					<Anchors>
 						<Anchor point="LEFT" relativeKey="$parent.Middle" relativePoint="RIGHT"/>
@@ -702,12 +714,12 @@
 			<Anchors>
 				<Anchor point="TOPLEFT">
 					<Offset>
-						<AbsDimension x="10" y="-4"/>
+						<AbsDimension x="0" y="-4"/>
 					</Offset>
 				</Anchor>
 				<Anchor point="BOTTOMRIGHT">
 					<Offset>
-						<AbsDimension x="-10" y="0"/>
+						<AbsDimension x="-0" y="0"/>
 					</Offset>
 				</Anchor>
 			</Anchors>
@@ -1656,6 +1668,73 @@
 			</Button>
 		</Frames>
 	</Frame>
+	<Frame name="ExRTTrackingButtonModernTemplate" virtual="true">
+		<Size x="32" y="32"/>
+		<Layers>
+			<Layer level="ARTWORK">
+				<Texture parentKey="Icon" file="Interface\Minimap\Tracking\None">
+					<Size x="20" y="20"/>
+					<Anchors>
+						<Anchor point="TOPLEFT" x="6" y="-6"/>
+					</Anchors>
+				</Texture>
+			</Layer>
+			<Layer level="OVERLAY">
+				<Texture parentKey="IconOverlay" hidden="true">
+					<Anchors>
+						<Anchor point="TOPLEFT" relativeKey="$parent.Icon"/>
+						<Anchor point="BOTTOMRIGHT" relativeKey="$parent.Icon"/>
+					</Anchors>
+					<Color r="0.0" g="0.0" b="0.0" a="0.5"/>
+				</Texture>
+			</Layer>
+		</Layers>
+		<Frames>
+			<Button parentKey="Button">
+				<Size x="32" y="32"/>
+				<Anchors>
+					<Anchor point="TOPLEFT"/>
+				</Anchors>
+				<Layers>
+					<Layer level="BORDER">
+						<Texture parentKey="Border" file="Interface\Addons\ExRT\media\radioModern">
+							<Size x="32" y="32"/>
+							<Anchors>
+								<Anchor point="TOPLEFT"/>
+							</Anchors>
+							<TexCoords left="0" right="0.25" top="0" bottom="1"/>
+						</Texture>
+					</Layer>
+					<Layer level="OVERLAY">
+						<Texture parentKey="Shine" file="Interface\ComboFrame\ComboPoint" alphaMode="ADD" hidden="true">
+							<Size x="27" y="27"/>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset x="2" y="-2"/>
+								</Anchor>
+							</Anchors>
+							<TexCoords left="0.5625" right="1" top="0" bottom="1"/>
+						</Texture>
+					</Layer>
+				</Layers>
+				<Scripts>
+					<OnClick>
+					</OnClick>
+					<OnMouseDown>
+						local parent = self:GetParent();
+						parent.Icon:SetPoint("TOPLEFT", parent, "TOPLEFT", 8, -8);
+						parent.IconOverlay:Show();
+					</OnMouseDown>
+					<OnMouseUp>
+						local parent = self:GetParent();
+						parent.Icon:SetPoint("TOPLEFT", parent, "TOPLEFT", 6, -6);
+						parent.IconOverlay:Hide();
+					</OnMouseUp>
+				</Scripts>
+				<HighlightTexture alphaMode="ADD" file="Interface\Minimap\UI-Minimap-ZoomButton-Highlight"/>
+			</Button>
+		</Frames>
+	</Frame>
 	<CheckButton name="ExRTCheckButtonModernTemplate" virtual="true">
 		<Size>
 			<AbsDimension x="20" y="20"/>
@@ -1943,4 +2022,31 @@
 		</Scripts>
 	</Button>
 
+	<CheckButton name="ExRTRadioButtonModernTemplate" virtual="true">
+		<Size>
+			<AbsDimension x="16" y="16"/>
+		</Size>
+		<Layers>
+			<Layer level="BACKGROUND">
+				<FontString name="$parentText" inherits="GameFontNormalSmall" parentKey="text">
+					<Anchors>
+						<Anchor point="LEFT" relativePoint="RIGHT">
+							<Offset>
+								<AbsDimension x="5" y="0"/>
+							</Offset>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<NormalTexture file="Interface\Addons\ExRT\media\radioModern">
+			<TexCoords left="0" right="0.25" top="0" bottom="1"/>
+		</NormalTexture>
+		<HighlightTexture file="Interface\Addons\ExRT\media\radioModern" alphaMode="ADD">
+			<TexCoords left="0.5" right="0.75" top="0" bottom="1"/>
+		</HighlightTexture>
+		<CheckedTexture file="Interface\Addons\ExRT\media\radioModern">
+			<TexCoords left="0.25" right="0.5" top="0" bottom="1"/>
+		</CheckedTexture>
+	</CheckButton>
 </Ui>

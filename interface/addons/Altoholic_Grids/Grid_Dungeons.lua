@@ -256,6 +256,7 @@ local OPTION_RAIDS = "UI.Tabs.Grids.Dungeons.CurrentRaids"
 
 local currentDDMText
 local currentTexture
+local dropDownFrame
 
 local function BuildView()
 	view = view or {}
@@ -271,26 +272,24 @@ local function BuildView()
 	isViewValid = true
 end
 
-local DDM_AddCloseMenu = addon.Helpers.DDM_AddCloseMenu
-
 local function OnRaidListChange(self, xpackIndex, raidListIndex)
-	CloseDropDownMenus()
+	dropDownFrame:Close()
 
 	addon:SetOption(OPTION_XPACK, xpackIndex)
 	addon:SetOption(OPTION_RAIDS, raidListIndex)
 		
 	local raidList = Dungeons[xpackIndex][raidListIndex]
 	currentDDMText = raidList.name
-	addon.Tabs.Grids:SetViewDDMText(currentDDMText)
+	AltoholicTabGrids:SetViewDDMText(currentDDMText)
 	
 	isViewValid = nil
-	addon.Tabs.Grids:Update()
+	AltoholicTabGrids:Update()
 end
 
-local function DropDown_Initialize(self, level)
+local function DropDown_Initialize(frame, level)
 	if not level then return end
 
-	local info = UIDropDownMenu_CreateInfo()
+	local info = frame:CreateInfo()
 	
 	local currentXPack = addon:GetOption(OPTION_XPACK)
 	local currentRaids = addon:GetOption(OPTION_RAIDS)
@@ -301,18 +300,20 @@ local function DropDown_Initialize(self, level)
 			info.hasArrow = 1
 			info.checked = (currentXPack == xpackIndex)
 			info.value = xpackIndex
-			UIDropDownMenu_AddButton(info, level)
+			frame:AddButtonInfo(info, level)
 		end
-		DDM_AddCloseMenu()
+		frame:AddCloseMenu()
 	
 	elseif level == 2 then
-		for raidListIndex, raidList in ipairs(Dungeons[UIDROPDOWNMENU_MENU_VALUE]) do
+		local menuValue = frame:GetCurrentOpenMenuValue()
+		
+		for raidListIndex, raidList in ipairs(Dungeons[menuValue]) do
 			info.text = raidList.name
 			info.func = OnRaidListChange
-			info.checked = ((currentXPack == UIDROPDOWNMENU_MENU_VALUE) and (currentRaids == raidListIndex))
-			info.arg1 = UIDROPDOWNMENU_MENU_VALUE
+			info.checked = ((currentXPack == menuValue) and (currentRaids == raidListIndex))
+			info.arg1 = menuValue
 			info.arg2 = raidListIndex
-			UIDropDownMenu_AddButton(info, level)
+			frame:AddButtonInfo(info, level)
 		end
 	end
 end
@@ -326,7 +327,7 @@ local callbacks = {
 			local currentXPack = addon:GetOption(OPTION_XPACK)
 			local currentRaids = addon:GetOption(OPTION_RAIDS)
 			
-			addon.Tabs.Grids:SetStatus(format("%s / %s", Dungeons[currentXPack].name, Dungeons[currentXPack][currentRaids].name))
+			AltoholicTabGrids:SetStatus(format("%s / %s", Dungeons[currentXPack].name, Dungeons[currentXPack][currentRaids].name))
 		end,
 	GetSize = function() return #view end,
 	RowSetup = function(self, rowFrame, dataRowID)
@@ -408,6 +409,7 @@ local callbacks = {
 			AltoTooltip:Hide() 
 		end,
 	InitViewDDM = function(frame, title) 
+			dropDownFrame = frame
 			frame:Show()
 			title:Show()
 
@@ -416,11 +418,11 @@ local callbacks = {
 			
 			currentDDMText = Dungeons[currentXPack][currentRaids].name
 			
-			UIDropDownMenu_SetWidth(frame, 100) 
-			UIDropDownMenu_SetButtonWidth(frame, 20)
-			UIDropDownMenu_SetText(frame, currentDDMText)
-			addon:DDM_Initialize(frame, DropDown_Initialize)
+			frame:SetMenuWidth(100) 
+			frame:SetButtonWidth(20)
+			frame:SetText(currentDDMText)
+			frame:Initialize(DropDown_Initialize, "MENU_NO_BORDERS")
 		end,
 }
 
-addon.Tabs.Grids:RegisterGrid(6, callbacks)
+AltoholicTabGrids:RegisterGrid(6, callbacks)

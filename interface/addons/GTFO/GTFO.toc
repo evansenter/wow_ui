@@ -1,11 +1,11 @@
-## Interface: 60100
+## Interface: 60200
 ## Title: GTFO
 ## Notes: GTFO, you're dying!
 ## Author: Zensunim of Dragonblight
-## Version: 4.36
+## Version: 4.37.6
 ## DefaultState: Enabled
 ## SavedVariables: GTFOData
-## X-Curse-Packaged-Version: 4.36
+## X-Curse-Packaged-Version: 4.37.6
 ## X-Curse-Project-Name: GTFO
 ## X-Curse-Project-ID: gtfo
 ## X-Curse-Repository-ID: wow/gtfo/mainline

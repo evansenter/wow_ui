@@ -2,6 +2,7 @@ function WoWNotifier_OnUpdate(self, elapsed)
 	if IsAFKChecking then
 		if IsChatAFK() then
 			self.TimeSinceLastUpdate = self.TimeSinceLastUpdate + elapsed;
+			--1200
 			if (self.TimeSinceLastUpdate > 1200.0) then
 				if (self.HasAFKNotified ~= true) then
 				tempf = CreateFrame("Frame", nil, UIParent);
@@ -20,8 +21,14 @@ function WoWNotifier_OnUpdate(self, elapsed)
 				tempf:Show();
 				
 					print("WoWNotifier detected you AFK for 20 minutes. Sending notification...")
-					TakeScreenshot();
+					Screenshot();
 					self.HasAFKNotified = true;
+					if (IsgxRestarting) then
+						print("Start GX");
+						ConsoleExec("/script SetCVar(\"gxWindow\", 1 - GetCVar(\"gxWindow\"));")
+						--ConsoleExec("gxRestart");
+						print("End GX");
+					end	
 				end
 			end
 		else
@@ -52,28 +59,31 @@ function WoWNotifier_OnEvent(self, event, arg1, ...)
 	if event == "LFG_PROPOSAL_SHOW" then
 		proposalExists, id, typeID, subtypeID, name, texture, role, hasResponded, nonsenseValue, completedEncounters, numMembers, isLeader, isSomethingElse, totalEncounters = GetLFGProposal();
 		if proposalExists and IsNotifying then
-		tempf = CreateFrame("Frame", nil, UIParent);
-				tempf:SetFrameStrata("HIGH");
-				tempf:SetWidth(20)
-				tempf:SetHeight(20)							
-				local t = tempf:CreateTexture(nil, "ARTWORK");
-				t:SetTexture([[Interface\BUTTONS\WHITE8X8]])
-				t:SetAllPoints(tempf);					
-				tempf.texture = t;
-									
-				-- LFR/LFD is RED									
-				t:SetVertexColor(1, 0, 0);
-							
-				tempf:SetPoint("TOPLEFT", 0,0);
-				tempf:Show();
-				
+			if (IsgxRestarting) then
+				print("Start GX");
+				ConsoleExec("gxRestart");				
+				print("End GX");
+			end	
+			tempf = CreateFrame("Frame", nil, UIParent);
+			tempf:SetFrameStrata("HIGH");
+			tempf:SetWidth(20)
+			tempf:SetHeight(20)							
+			local t = tempf:CreateTexture(nil, "ARTWORK");
+			t:SetTexture([[Interface\BUTTONS\WHITE8X8]])
+			t:SetAllPoints(tempf);					
+			tempf.texture = t;
+								
+			-- LFR/LFD is RED									
+			t:SetVertexColor(1, 0, 0);
+						
+			tempf:SetPoint("TOPLEFT", 0,0);
+			tempf:Show();
+			
 				
 			
 			print("WoWNotifier detected a LFG/LFR/Scenario pop. Sending notification...")
-			TakeScreenshot();		
-			if (IsgxRestarting) then
-				ConsoleExec("gxRestart");
-			end			
+			Screenshot();		
+					
 		end
 	end
 	
@@ -82,7 +92,7 @@ function WoWNotifier_OnEvent(self, event, arg1, ...)
 	-- TODO: Update to World PvP Queue
 	if event == "BATTLEFIELD_MGR_ENTRY_INVITE" then				
 		if IsPVPNotifying then
-		tempf = CreateFrame("Frame", nil, UIParent);
+			tempf = CreateFrame("Frame", nil, UIParent);
 				tempf:SetFrameStrata("HIGH");
 				tempf:SetWidth(20)
 				tempf:SetHeight(20)							
@@ -96,7 +106,7 @@ function WoWNotifier_OnEvent(self, event, arg1, ...)
 				tempf:SetPoint("TOPLEFT", 0,0);
 				tempf:Show();				
 			print("WoWNotifier detected a group invite. Sending notification...")
-			TakeScreenshot();		
+			Screenshot();		
 			if (IsgxRestarting) then
 				ConsoleExec("gxRestart");
 			end	
@@ -126,7 +136,7 @@ function WoWNotifier_OnEvent(self, event, arg1, ...)
 				tempf:Show();
 				
 				print("WoWNotifier detected a Premade invite. Sending notification...")
-				TakeScreenshot();	
+				Screenshot();	
 				if (IsgxRestarting) then
 					ConsoleExec("gxRestart");
 				end	
@@ -152,7 +162,7 @@ function WoWNotifier_OnEvent(self, event, arg1, ...)
 				tempf:Show();
 		
 			print("WoWNotifier detected a Ready Check. Sending notification...")
-			TakeScreenshot();	
+			Screenshot();	
 			if (IsgxRestarting) then
 				ConsoleExec("gxRestart");
 			end	
@@ -169,8 +179,12 @@ function WoWNotifier_OnEvent(self, event, arg1, ...)
 		end
 	end]]--
 	
+	if event == "SCREENSHOT_FAILED" then
+		print("Screenshot FAILED");
+	end
 	
 	if event == "SCREENSHOT_SUCCEEDED" then
+	print("Screenshot SUCCESS");
 		if (tempf) then
 			tempf:Hide();
 			tempf = nil;
@@ -194,7 +208,7 @@ function WoWNotifier_OnEvent(self, event, arg1, ...)
 				tempf:SetPoint("TOPLEFT", 0,0);
 				tempf:Show();				
 			print("WoWNotifier detected a group invite. Sending notification...")
-			TakeScreenshot();		
+			Screenshot();		
 			if (IsgxRestarting) then
 				ConsoleExec("gxRestart");
 			end	
@@ -223,7 +237,7 @@ function WoWNotifier_OnEvent(self, event, arg1, ...)
 				tempf:SetPoint("TOPLEFT", 0,0);
 				tempf:Show();
 			print("WoWNotifier detected that a garrison mission finished. Sending notification...")
-			TakeScreenshot();
+			Screenshot();
 
 			if (IsgxRestarting) then
 				ConsoleExec("gxRestart");
@@ -251,7 +265,7 @@ function WoWNotifier_OnEvent(self, event, arg1, ...)
 				tempf:SetPoint("TOPLEFT", 0,0);
 				tempf:Show();
 					print("WoWNotifier detected a PvP pop. Sending notification...")
-					TakeScreenshot();		
+					Screenshot();		
 					if (IsgxRestarting) then
 						ConsoleExec("gxRestart");					
 					end
@@ -279,7 +293,7 @@ function WoWNotifier_OnEvent(self, event, arg1, ...)
 				
 				
 			print("WoWNotifier detected a pet battle pop. Sending notification...");					
-			TakeScreenshot();				
+			Screenshot();				
 			if (IsgxRestarting) then
 				ConsoleExec("gxRestart");
 			end
@@ -462,9 +476,7 @@ SlashCmdList["WOWNOTIFIER"] = function(msg)
 	end
 	
 	if msg == 'qr' then
-		--TODO: QR Code Generation
-
-		return;
+		--TODO: QR Code Generation			
 	end
 	
 	

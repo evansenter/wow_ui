@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod("Brawlers", "DBM-Brawlers")
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 12605 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 14489 $"):sub(12, -3))
 --mod:SetCreatureID(60491)
 --mod:SetModelID(41448)
 mod:SetZone(DBM_DISABLE_ZONE_DETECTION)
@@ -25,7 +25,6 @@ local berserkTimer			= mod:NewBerserkTimer(120)--all fights have a 2 min enrage 
 mod:AddBoolOption("SpectatorMode", true)
 mod:AddBoolOption("SpeakOutQueue", true)
 mod:RemoveOption("HealthFrame")
-mod:RemoveOption("SpeedKillTimer")
 
 local playerIsFighting = false
 local currentFighter = nil
@@ -112,6 +111,7 @@ function mod:CHAT_MSG_MONSTER_YELL(msg, npc, _, _, target)
 		end
 	end
 	--Only boss with a custom berserk timer. His is 1 minute, but starts at different yell than 2 min berserk, so it's not actually 60 sec shorter but more like 50-55 sec shorter
+	--Need the yells for meatball too i guess? he has a 1 minute berserk as well?
 	if msg == L.Proboskus or msg:find(L.Proboskus) or msg == L.Proboskus2 or msg:find(L.Proboskus2) then
 		self:Schedule(2, function()
 			berserkTimer:Cancel()

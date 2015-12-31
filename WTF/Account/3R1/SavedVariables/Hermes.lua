@@ -144,13 +144,13 @@ HermesDB2 = {
 			[172106] = {
 				["duration"] = "6",
 			},
-			[102351] = {
-				["duration"] = "30",
+			[64382] = {
+				["duration"] = "10",
 			},
 			[853] = {
 				["duration"] = "6",
 			},
-			[64382] = {
+			[62618] = {
 				["duration"] = "10",
 			},
 			[159916] = {
@@ -162,8 +162,8 @@ HermesDB2 = {
 			[124974] = {
 				["duration"] = "30",
 			},
-			[62618] = {
-				["duration"] = "10",
+			[102351] = {
+				["duration"] = "30",
 			},
 			[98008] = {
 				["duration"] = "6",
@@ -201,6 +201,163 @@ HermesDB2 = {
 			[51052] = {
 				["duration"] = "10",
 			},
+		},
+		["clientTime"] = 1986.226,
+		["durations"] = {
+			[31224] = 90,
+			[5394] = 30,
+			[853] = 60,
+			[159916] = 120,
+			[33891] = 180,
+			[20066] = 15,
+			[20707] = 900,
+			[57934] = 30,
+			[5211] = 60,
+			[47528] = 10,
+			[20594] = 120,
+			[49576] = 35,
+			[59752] = 120,
+			[20608] = 1800,
+			[116849] = 120,
+			[57994] = 6,
+			[6552] = 10,
+			[29893] = 300,
+			[46584] = 180,
+			[871] = 300,
+			[80353] = 300,
+			[633] = 600,
+			[1022] = 300,
+			[61336] = 180,
+			[115310] = 180,
+			[62618] = 180,
+			[6940] = 120,
+			[61999] = 600,
+			[642] = 300,
+			[115176] = 180,
+			[31850] = 180,
+			[698] = 120,
+			[2094] = 180,
+			[45438] = 300,
+			[498] = 60,
+			[98008] = 180,
+			[114018] = 300,
+			[102342] = 120,
+			[76577] = 180,
+			[48792] = 180,
+			[47788] = 180,
+			[108280] = 180,
+			[96231] = 10,
+			[34477] = 30,
+			[20484] = 600,
+			[12975] = 180,
+			[86659] = 180,
+			[97462] = 180,
+			[102351] = 30,
+			[740] = 480,
+			[31687] = 180,
+			[106898] = 120,
+			[64843] = 180,
+			[109964] = 60,
+			[1044] = 25,
+			[33206] = 180,
+			[124974] = 90,
+			[22842] = 180,
+			[31821] = 180,
+			[108281] = 120,
+			[1766] = 10,
+			[73325] = 90,
+			[22812] = 60,
+			[2139] = 24,
+			[1038] = 120,
+			[172106] = 180,
+			[64382] = 300,
+			[108920] = 30,
+			[15286] = 180,
+			[102060] = 40,
+			[114028] = 60,
+			[48707] = 45,
+			[42650] = 600,
+			[49222] = 60,
+			[55233] = 60,
+			[51052] = 120,
+			[47476] = 120,
+		},
+		["classes"] = {
+			["DEATHKNIGHT"] = {
+				["talents"] = {
+				},
+				["schema"] = 60000,
+				["revision"] = 1,
+			},
+			["WARRIOR"] = {
+				["talents"] = {
+				},
+				["schema"] = 60000,
+				["revision"] = 1,
+			},
+			["ROGUE"] = {
+				["talents"] = {
+				},
+				["schema"] = 60000,
+				["revision"] = 1,
+			},
+			["MAGE"] = {
+				["talents"] = {
+				},
+				["schema"] = 60000,
+				["revision"] = 1,
+			},
+			["PRIEST"] = {
+				["talents"] = {
+				},
+				["schema"] = 60000,
+				["revision"] = 1,
+			},
+			["WARLOCK"] = {
+				["talents"] = {
+				},
+				["schema"] = 60000,
+				["revision"] = 1,
+			},
+			["PALADIN"] = {
+				["talents"] = {
+				},
+				["schema"] = 60000,
+				["revision"] = 1,
+			},
+			["SHAMAN"] = {
+				["talents"] = {
+				},
+				["schema"] = 60000,
+				["revision"] = 1,
+			},
+			["DRUID"] = {
+				["talents"] = {
+				},
+				["schema"] = 60000,
+				["revision"] = 1,
+			},
+			["MONK"] = {
+				["talents"] = {
+				},
+				["schema"] = 60000,
+				["revision"] = 1,
+			},
+			["HUNTER"] = {
+				["talents"] = {
+				},
+				["schema"] = 60000,
+				["revision"] = 1,
+			},
+		},
+		["races"] = {
+			["Troll"] = "Troll",
+			["Tauren"] = "Tauren",
+			["BloodElf"] = "Blood Elf",
+			["Scourge"] = "Undead",
+			["Orc"] = "Orc",
+			["Pandaren"] = "Pandaren",
+			["Goblin"] = "Goblin",
 		},
 		["requirements"] = {
 			[31224] = {
@@ -608,198 +765,7 @@ HermesDB2 = {
 				}, -- [1]
 			},
 		},
-		["durations"] = {
-			[31224] = 90,
-			[5394] = 30,
-			[853] = 60,
-			[159916] = 120,
-			[33891] = 180,
-			[20066] = 15,
-			[20707] = 900,
-			[57934] = 30,
-			[5211] = 60,
-			[47528] = 10,
-			[20594] = 120,
-			[49576] = 35,
-			[59752] = 120,
-			[20608] = 1800,
-			[116849] = 120,
-			[57994] = 6,
-			[6552] = 10,
-			[29893] = 300,
-			[46584] = 180,
-			[871] = 300,
-			[80353] = 300,
-			[633] = 600,
-			[1022] = 300,
-			[61336] = 180,
-			[115310] = 180,
-			[62618] = 180,
-			[6940] = 120,
-			[61999] = 600,
-			[642] = 300,
-			[115176] = 180,
-			[31850] = 180,
-			[698] = 120,
-			[2094] = 180,
-			[45438] = 300,
-			[498] = 60,
-			[98008] = 180,
-			[114018] = 300,
-			[102342] = 120,
-			[76577] = 180,
-			[48792] = 180,
-			[47788] = 180,
-			[108280] = 180,
-			[96231] = 10,
-			[34477] = 30,
-			[20484] = 600,
-			[12975] = 180,
-			[86659] = 180,
-			[97462] = 180,
-			[102351] = 30,
-			[740] = 480,
-			[31687] = 180,
-			[106898] = 120,
-			[64843] = 180,
-			[109964] = 60,
-			[1044] = 25,
-			[33206] = 180,
-			[124974] = 90,
-			[22842] = 180,
-			[31821] = 180,
-			[108281] = 120,
-			[1766] = 10,
-			[73325] = 90,
-			[22812] = 60,
-			[2139] = 24,
-			[1038] = 120,
-			[172106] = 180,
-			[64382] = 300,
-			[108920] = 30,
-			[15286] = 180,
-			[102060] = 40,
-			[114028] = 60,
-			[48707] = 45,
-			[42650] = 600,
-			[49222] = 60,
-			[55233] = 60,
-			[51052] = 120,
-			[47476] = 120,
-		},
-		["classes"] = {
-			["DEATHKNIGHT"] = {
-				["talents"] = {
-				},
-				["schema"] = 60000,
-				["revision"] = 1,
-			},
-			["WARRIOR"] = {
-				["talents"] = {
-				},
-				["schema"] = 60000,
-				["revision"] = 1,
-			},
-			["ROGUE"] = {
-				["talents"] = {
-				},
-				["schema"] = 60000,
-				["revision"] = 1,
-			},
-			["MAGE"] = {
-				["talents"] = {
-				},
-				["schema"] = 60000,
-				["revision"] = 1,
-			},
-			["PRIEST"] = {
-				["talents"] = {
-				},
-				["schema"] = 60000,
-				["revision"] = 1,
-			},
-			["WARLOCK"] = {
-				["talents"] = {
-				},
-				["schema"] = 60000,
-				["revision"] = 1,
-			},
-			["PALADIN"] = {
-				["talents"] = {
-				},
-				["schema"] = 60000,
-				["revision"] = 1,
-			},
-			["SHAMAN"] = {
-				["talents"] = {
-				},
-				["schema"] = 60000,
-				["revision"] = 1,
-			},
-			["DRUID"] = {
-				["talents"] = {
-				},
-				["schema"] = 60000,
-				["revision"] = 1,
-			},
-			["MONK"] = {
-				["talents"] = {
-				},
-				["schema"] = 60000,
-				["revision"] = 1,
-			},
-			["HUNTER"] = {
-				["talents"] = {
-				},
-				["schema"] = 60000,
-				["revision"] = 1,
-			},
-		},
-		["races"] = {
-			["Troll"] = "Troll",
-			["Tauren"] = "Tauren",
-			["BloodElf"] = "Blood Elf",
-			["Scourge"] = "Undead",
-			["Orc"] = "Orc",
-			["Pandaren"] = "Pandaren",
-			["Goblin"] = "Goblin",
-		},
-		["cooldowns"] = {
-			["Player-57-080BD5B7"] = {
-			},
-			["Player-57-052FF66E"] = {
-			},
-			["Player-57-082A80B5"] = {
-			},
-			["Player-57-081DD205"] = {
-			},
-			["Player-57-076E82C8"] = {
-			},
-			["Player-57-076C258B"] = {
-			},
-			["Player-57-05D7BD71"] = {
-			},
-			["Player-57-052237F6"] = {
-			},
-			["Player-57-083698AF"] = {
-			},
-			["Player-57-08200EAF"] = {
-			},
-			["Player-57-07F97A37"] = {
-			},
-			["Player-57-07F8BD34"] = {
-			},
-			["Player-57-0813F6FC"] = {
-			},
-			["Player-57-0796E63A"] = {
-			},
-			["Player-57-082B1D55"] = {
-			},
-			["Player-57-02A83201"] = {
-			},
-		},
-		["clientTime"] = 23807.932,
-		["serverTime"] = 1426733822,
+		["serverTime"] = 1451461042,
 	},
 	["profiles"] = {
 		["Colton - Dark Iron"] = {
@@ -855,14 +821,14 @@ HermesDB2 = {
 							},
 							["includeAll"] = true,
 							["filterdead"] = false,
-							["filter25man"] = true,
+							["abilities"] = {
+							},
 							["filterconnection"] = true,
 							["filterplayertype"] = "disabled",
 							["playerfilters"] = {
 							},
-							["abilities"] = {
-							},
 							["name"] = "Default",
+							["filter25man"] = true,
 						}, -- [1]
 					},
 				},
@@ -1473,7 +1439,8 @@ HermesDB2 = {
 							["filterrange"] = true,
 							["filter10man"] = true,
 							["filterself"] = false,
-							["filter25man"] = true,
+							["abilities"] = {
+							},
 							["profiles"] = {
 								["GridButtons"] = {
 									["merged"] = false,
@@ -1502,11 +1469,10 @@ HermesDB2 = {
 									},
 								},
 							},
-							["name"] = "Default",
+							["filter25man"] = true,
 							["playerfilters"] = {
 							},
-							["abilities"] = {
-							},
+							["name"] = "Default",
 							["filterplayertype"] = "disabled",
 							["filterconnection"] = true,
 							["filterdead"] = false,
@@ -2122,7 +2088,7 @@ HermesDB2 = {
 							["filterrange"] = true,
 							["filter10man"] = true,
 							["filterself"] = false,
-							["name"] = "Default",
+							["filter25man"] = true,
 							["profiles"] = {
 								["GridButtons"] = {
 									["merged"] = false,
@@ -2151,11 +2117,11 @@ HermesDB2 = {
 									},
 								},
 							},
-							["abilities"] = {
-							},
+							["name"] = "Default",
 							["playerfilters"] = {
 							},
-							["filter25man"] = true,
+							["abilities"] = {
+							},
 							["filterplayertype"] = "disabled",
 							["filterconnection"] = true,
 							["filterdead"] = false,
@@ -3366,20 +3332,20 @@ HermesDB2 = {
 									},
 									["scale"] = 1,
 									["alpha"] = 1,
-									["showTimestamp"] = true,
+									["h"] = 100,
 									["bgColor"] = {
 										["a"] = 0.75,
 										["b"] = 0,
 										["g"] = 0,
 										["r"] = 0,
 									},
-									["font"] = "Friz Quadrata TT",
+									["showTimestamp"] = true,
 									["showSlider"] = true,
 									["w"] = 400,
 									["locked"] = false,
 									["y"] = 650,
 									["x"] = 760.000122070313,
-									["h"] = 100,
+									["font"] = "Friz Quadrata TT",
 								},
 								["GridButtons"] = {
 									["scale"] = 1,
@@ -3553,7 +3519,7 @@ HermesDB2 = {
 										["g"] = 0,
 										["r"] = 0,
 									},
-									["barCCC"] = true,
+									["barFont"] = "Friz Quadrata TT",
 									["osFGColor"] = {
 										["a"] = 1,
 										["b"] = 0,
@@ -3569,7 +3535,7 @@ HermesDB2 = {
 									["locked"] = false,
 									["osEnabled"] = false,
 									["barLocation"] = "BOTTOM",
-									["barCCCFont"] = true,
+									["barCCC"] = true,
 									["barColorUFont"] = {
 										["a"] = 0.3,
 										["b"] = 1,
@@ -3601,7 +3567,7 @@ HermesDB2 = {
 										["g"] = 0.94,
 										["r"] = 0.94,
 									},
-									["npThickFont"] = false,
+									["npUseIcon"] = true,
 									["barColorA"] = {
 										["a"] = 1,
 										["b"] = 0.94,
@@ -3609,7 +3575,12 @@ HermesDB2 = {
 										["r"] = 0.94,
 									},
 									["barPadding"] = 10,
-									["npUseIcon"] = true,
+									["barColorCFont"] = {
+										["a"] = 1,
+										["b"] = 1,
+										["g"] = 1,
+										["r"] = 1,
+									},
 									["npUseNameplate"] = true,
 									["npFontColor"] = {
 										["a"] = 0.76,
@@ -3637,18 +3608,13 @@ HermesDB2 = {
 									["npCCBar"] = false,
 									["barBGCCU"] = false,
 									["merged"] = false,
-									["barColorCFont"] = {
-										["a"] = 1,
-										["b"] = 1,
-										["g"] = 1,
-										["r"] = 1,
-									},
+									["npThickFont"] = false,
 									["npOutlineFont"] = true,
 									["barBGCCC"] = true,
 									["barCCAFont"] = false,
 									["growUp"] = false,
 									["barTextRatio"] = 65,
-									["barFont"] = "Friz Quadrata TT",
+									["barCCCFont"] = true,
 									["barCCA"] = true,
 									["barFontSize"] = 12,
 									["barBGColorC"] = {
@@ -3692,11 +3658,6 @@ HermesDB2 = {
 							},
 							["includeAll"] = true,
 							["filterdead"] = true,
-							["filter25man"] = true,
-							["filterconnection"] = true,
-							["filterplayertype"] = "disabled",
-							["playerfilters"] = {
-							},
 							["abilities"] = {
 								{
 									["id"] = 51052,
@@ -3815,7 +3776,12 @@ HermesDB2 = {
 									["enabled"] = false,
 								}, -- [29]
 							},
+							["filterconnection"] = true,
+							["filterplayertype"] = "disabled",
+							["playerfilters"] = {
+							},
 							["name"] = "Default",
+							["filter25man"] = true,
 						}, -- [1]
 					},
 				},
@@ -3844,7 +3810,8 @@ HermesDB2 = {
 							["filterrange"] = true,
 							["filter10man"] = true,
 							["filterself"] = false,
-							["filter25man"] = true,
+							["abilities"] = {
+							},
 							["profiles"] = {
 								["GridButtons"] = {
 									["merged"] = false,
@@ -3873,11 +3840,10 @@ HermesDB2 = {
 									},
 								},
 							},
-							["name"] = "Default",
+							["filter25man"] = true,
 							["playerfilters"] = {
 							},
-							["abilities"] = {
-							},
+							["name"] = "Default",
 							["filterplayertype"] = "disabled",
 							["filterconnection"] = true,
 							["filterdead"] = false,
@@ -4525,14 +4491,14 @@ HermesDB2 = {
 							},
 							["includeAll"] = true,
 							["filterdead"] = false,
-							["name"] = "Default",
+							["filter25man"] = true,
 							["filterconnection"] = true,
 							["filterplayertype"] = "disabled",
 							["playerfilters"] = {
 							},
-							["filter25man"] = true,
 							["abilities"] = {
 							},
+							["name"] = "Default",
 						}, -- [1]
 					},
 				},
@@ -5174,14 +5140,14 @@ HermesDB2 = {
 							},
 							["includeAll"] = true,
 							["filterdead"] = false,
-							["abilities"] = {
-							},
+							["name"] = "Default",
 							["filterconnection"] = true,
 							["filterplayertype"] = "disabled",
 							["playerfilters"] = {
 							},
-							["name"] = "Default",
 							["filter25man"] = true,
+							["abilities"] = {
+							},
 						}, -- [1]
 					},
 				},

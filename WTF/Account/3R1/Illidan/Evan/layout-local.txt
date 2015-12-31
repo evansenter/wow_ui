@@ -13,13 +13,6 @@ X: 0
 Y: 0
 W: 365
 H: 240
-Frame: AskMrRobot_Dialog
-FrameLevel: 18
-Anchor: RIGHT
-X: -116
-Y: 120
-W: 615
-H: 550
 Frame: frmBulkOrderReminderPoint
 FrameLevel: 1
 Anchor: CENTER

@@ -7,9 +7,8 @@ local mod		= DBM:NewMod("z726", "DBM-PvP", 2)
 local L			= mod:GetLocalizedStrings()
 
 mod:RemoveOption("HealthFrame")
-mod:RemoveOption("SpeedKillTimer")
 
-mod:SetRevision(("$Revision: 37 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 48 $"):sub(12, -3))
 mod:SetZone(DBM_DISABLE_ZONE_DETECTION)
 
 mod:RegisterEvents(

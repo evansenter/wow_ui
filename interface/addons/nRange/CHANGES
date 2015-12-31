@@ -1,3 +1,18 @@
+12/19/2015
+    Removed Astrolabe, fixes nrange breaking in arena.
+
+07/12/2015
+    Changed UnitBuff to use GetSpellInfo to fix not showing if not in english.
+
+07/07/2015
+    Disabled nRange_Communication, can be enabled using slash commands
+    If you have the transcendence buff during a reload, nrange should display after reloading the ui
+    Changed out of range from english to ERR_OUT_OF_RANGE
+    Use meters instead of yards if your locales not set to enUS
+    Now puts an icon on the minimap of your portal location
+    Enhanced slash command to accept multiple arguments
+    Started process of allowing addon communication to be enabled by slash commands
+
 10/21/2013
 	Added nRange_Clear to GetDistance for monks when they go further than 100 yards.
 

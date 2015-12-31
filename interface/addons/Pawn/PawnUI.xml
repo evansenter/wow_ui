@@ -238,7 +238,7 @@
 	</Button>
 	
 	<!-- Pawn's item scanning tooltip -->
-	<GameTooltip name="PawnPrivateTooltip" inherits="GameTooltipTemplate">
+	<GameTooltip name="PawnPrivateTooltip1" inherits="GameTooltipTemplate">
 		<Scripts>
 			<OnLoad>self:SetOwner(UIParent, "ANCHOR_NONE")</OnLoad>
 		</Scripts>

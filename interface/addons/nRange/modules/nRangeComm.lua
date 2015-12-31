@@ -1,4 +1,4 @@
-if (nRange_Communication == false) then return; end
+if nRange_Communication == false then return; end
 local _, class = UnitClass("player");
 if (class == "MONK" or class == "WARLOCK") then
 --[[

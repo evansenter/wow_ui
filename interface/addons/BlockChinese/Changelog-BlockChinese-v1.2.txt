@@ -1,0 +1,13 @@
+tag v1.2
+8c60379ecb9f5113675b03f1490498de8005754e
+Ketho <sghs17@outlook.com>
+2015-09-04 19:05:40 +0200
+
+Tagging as v1.2
+
+
+--------------------
+
+Ketho:
+	- Bumped TOC to 60200
+	- Update for WoD

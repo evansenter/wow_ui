@@ -21,6 +21,7 @@ L["Action Usable"] = "Acción Utilizable"
 L["Affected"] = "Afectado"
 L["Air"] = "Aire"
 L["Alive"] = "Vivo"
+-- L["Alliance"] = ""
 L["All Triggers"] = "Todos los Disparadores"
 L["Alternate Power"] = "Energía Alternativa"
 L["Always active trigger"] = "Siempre activar disparador" -- Needs review
@@ -54,6 +55,8 @@ L["BG>Raid>Party>Say"] = "CdB>Raid>Grupo>Decir"
 L["BG-System Alliance"] = "Campo de Batalla - Alianza"
 L["BG-System Horde"] = "Campo de Batalla - Horda"
 L["BG-System Neutral"] = "Campo de Batalla - Neutral"
+L["BigWigs Addon"] = "Addon de BigWigs" -- Needs review
+L["BigWigs Timer"] = "Temporizador de BigWigs" -- Needs review
 L["Blizzard Combat Text"] = "Texto de Combate de Blizzard"
 L["Block"] = "Bloqueo"
 L["Blocked"] = "Bloqueado"
@@ -111,6 +114,8 @@ L["Damager"] = "Dañador" -- Needs review
 L["Damage Shield"] = "Escudo Dañino"
 L["Damage Shield Missed"] = "Escudo Dañino Fallido"
 L["Damage Split"] = "Daño Repartido"
+L["DBM Announce"] = "Anuncio de DBM" -- Needs review
+L["DBM Timer"] = "Temporizador de DBM" -- Needs review
 L["Death Knight"] = "Caballero de la Muerte"
 L["Death Knight Rune"] = "Caballero de la Muerte - Runa"
 L["Death Rune"] = "Runa Profana"
@@ -138,6 +143,29 @@ L["Eclipse Direction"] = "Dirección del Eclipse"
 L["Eclipse Power"] = "Poder de Eclipse"
 L["Eclipse Type"] = "Tipo de Eclipse"
 L["Emote"] = "Emocion"
+L["Encounter ID"] = "ID de Encuentro" -- Needs review
+L["EncounterID List"] = [=[IDs para el tier actual:
+
+Ogrópolis:
+Kargath: 1721
+El Carnicero: 1706
+Tectus: 1722
+Frondaespora: 1720
+Gemelos ogrones: 1719
+Koragh: 1723
+Imperador Mar'gok: 1705
+
+Fundición Roca Negra:
+Gruul: 1691
+Tragamenas: 1696
+Señor de las bestias Darmac: 1694
+Dominallamas Ka'graz: 1693
+Hans'gar y Franzok: 1693
+Operador Thogar: 1692
+El Horno de Fundición: 1690
+Kromog: 1713
+Doncellas de Hierro: 1695
+Puño Negro: 1704]=] -- Needs review
 L["Energize"] = "Vigorizar"
 L["Energy"] = "Energía"
 L["Enrage"] = "Enfurecido"
@@ -157,6 +185,8 @@ L["Falling"] = "Caer"
 L["Fatigue"] = "Fatiga"
 L["Fire"] = "Fuego"
 L["First Tree"] = "Primer Árbol"
+L[ [=[Fishing Lure / Weapon Enchant (Old)
+]=] ] = "Hechizo de Arma" -- Needs review
 L["Flash"] = "Destello"
 L["Flex Raid"] = "Banda Flexible" -- Needs review
 L["Flip"] = "Voltear"
@@ -189,6 +219,7 @@ L["Hide"] = "Ocultar"
 L["High Damage"] = "Alto Daño" -- Needs review
 L["Higher Than Tank"] = "Mayor Que el Tanque"
 L["Holy Power"] = "Poder Sagrado"
+-- L["Horde"] = ""
 L["Hostile"] = "Hostil"
 L["Hostility"] = "Holstilidad"
 L["Humanoid"] = "Humanoide"
@@ -210,6 +241,7 @@ L["Interruptible"] = "Interrumpible"
 L["In Vehicle"] = "Conduciendo"
 L["Inverse"] = "Inverso"
 L["Is Exactly"] = "Es Exactamente"
+L["Is Moving"] = "se está moviendo" -- Needs review
 L["Item"] = "Objeto"
 L["Item Count"] = "Contar los Objetos"
 L["Item Equipped"] = "Objeto Equipado"
@@ -243,6 +275,7 @@ L["Mounted"] = "Montado"
 L["Multi-target"] = "Objetivo Múltiple"
 L["Music"] = "Música"
 L["Name"] = "Nombre"
+-- L["Neutral"] = ""
 L["Never"] = "Nunca"
 L["Next"] = "Siguiente"
 L["No Children:"] = "Sin dependientes"
@@ -274,6 +307,7 @@ L["Player"] = "Jugador"
 L["Player Character"] = "Personaje Jugador"
 L["Player Class"] = "Clase del Jugador"
 L["Player Dungeon Role"] = "Rol en Mazmorra del Jugador"
+-- L["Player Faction"] = ""
 L["Player Level"] = "Nivel del Personaje"
 L["Player Name"] = "Nombre del Jugador"
 L["Player Race"] = "Raza del Jugador" -- Needs review
@@ -350,6 +384,7 @@ L["Spark Texture"] = "Textura de Chispa" -- Needs review
 L["Specific Unit"] = "Unidad Específica"
 L["Spell"] = "Hechizo"
 L["Spell (Building)"] = "Hechizo (en curso)"
+-- L["Spell/Encounter ID"] = ""
 L["Spell Name"] = "Nombre del Hechizo"
 L["Spin"] = "Girar"
 L["Spiral"] = "Espiral"
@@ -408,11 +443,11 @@ L["WeakAuras .toc Notes"] = "Potente y completa aplicación que te permitirá mo
 L["WeakAurasTutorials"] = "WeakAuras - Tutoriales"
 L["WeakAurasTutorials .toc Notes"] = "Introducción y tutoriales avanzados para WeakAruras"
 L["Weapon"] = "Arma"
-L["Weapon Enchant"] = "Hechizo de Arma"
 L["Whisper"] = "Susurro"
 L["Wobble"] = "Temblar"
 L["Yell"] = "Grito"
 L["Zone"] = "Zona"
+L["Zone ID"] = "ID de Zona" -- Needs review
 
 
 

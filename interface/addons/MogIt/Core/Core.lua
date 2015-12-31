@@ -6,7 +6,8 @@ local ItemInfo = LibStub("LibItemInfo-1.0");
 
 LibStub("Libra"):Embed(mog);
 
-local character = DataStore_Containers and DataStore:GetCharacter();
+local DataStore_Character = DataStore_Containers and DataStore:GetCharacter();
+local BrotherBags_Player;
 
 mog.frame = CreateFrame("Frame","MogItFrame",UIParent,"ButtonFrameTemplate");
 mog.list = {};
@@ -108,7 +109,7 @@ function mog:BuildList(top,module)
 	if (module and mog.active and mog.active.name ~= module) then return end;
 	mog.list = mog.active and mog.active.BuildList and mog.active:BuildList() or {};
 	mog:SortList(nil,true);
-	mog.scroll:update(top and 1);
+	mog:UpdateScroll(top and 1);
 	mog.filt.models:SetText(#mog.list);
 end
 --//
@@ -167,8 +168,25 @@ ItemInfo.RegisterCallback(mog, "OnItemInfoReceivedBatch", "ItemInfoReceived");
 --//
 
 function mog:HasItem(itemID)
-	itemID = self:ToNumberItem(itemID)
-	return GetItemCount(itemID, true) > 0 or (character and select(3, DataStore:GetContainerItemCount(character, itemID)) > 0)
+	itemID = self:ToNumberItem(itemID);
+	-- GetItemCount does not take void storage into account...
+	if GetItemCount(itemID, true) > 0 then
+		return true;
+	end
+	-- ...try third party data for that
+	if DataStore_Character then
+		local _, _, count = DataStore:GetContainerItemCount(DataStore_Character, itemID);
+		if count > 0 then
+			return true;
+		end
+	end
+	if BrotherBags_Player and BrotherBags_Player.vault then
+		for _, item in pairs(BrotherBags_Player.vault) do
+			if tonumber(item) == itemID then
+				return true;
+			end
+		end
+	end
 end
 
 
@@ -176,6 +194,7 @@ end
 local defaults = {
 	profile = {
 		tooltipItemID = false,
+		tooltipAlwaysShowOwned = true,
 		
 		noAnim = false,
 		url = "Battle.net",
@@ -184,6 +203,7 @@ local defaults = {
 		singlePreview = false,
 		previewUIPanel = false,
 		previewFixedSize = false,
+		previewConfirmClose = true,
 		
 		sortWishlist = false,
 		loadModulesWishlist = false,
@@ -231,7 +251,7 @@ function mog.LoadSettings()
 	mog.tooltip:SetSize(mog.db.profile.tooltipWidth, mog.db.profile.tooltipHeight);
 	mog.tooltip.rotate:SetShown(mog.db.profile.tooltipRotate);
 	
-	mog.scroll:update();
+	mog:UpdateScroll();
 	
 	mog:SetSinglePreview(mog.db.profile.singlePreview);
 end
@@ -299,6 +319,8 @@ local function sortCharacters(a, b)
 end
 
 function mog:PLAYER_LOGIN()
+	BrotherBags_Player = BrotherBags and BrotherBags[GetRealmName()][UnitName("player")];
+	
 	C_Timer.After(1, function()
 		-- this function doesn't yield correct results immediately, so we delay it
 		for slot, v in pairs(mog.mogSlots) do
@@ -395,19 +417,18 @@ function mog:GetData(data, id, key)
 end
 
 mog.itemStringShort = "item:%d:0";
-mog.itemStringLong = "item:%d:0:0:0:0:0:0:0:0:0:0:%d:%d";
+mog.itemStringLong = "item:%d:0:0:0:0:0:0:0:0:0:0:0:1:%d";
 
 function mog:ToStringItem(id, bonus)
 	-- itemID, enchantID, instanceDifficulty, numBonusIDs, bonusID1
-	if bonus then
-		return format(mog.itemStringLong, id, bonus and 1, bonus);
+	if bonus and bonus ~= 0 then
+		return format(mog.itemStringLong, id, bonus);
 	else
 		return format(mog.itemStringShort, id);
 	end
 end
 
 local bonusDiffs = {
-	[0] = true,
 	-- MoP
 	[451] = true, -- Raid Finder
 	[449] = true, -- Heroic (Raid)
@@ -419,32 +440,42 @@ local bonusDiffs = {
 	[521] = true, -- dungeon-level-up-4
 	[522] = true, -- dungeon-normal
 	[524] = true, -- dungeon-heroic
-	[525] = true, -- trade-skill
-	[526] = true, -- trade-skill
-	[527] = true, -- trade-skill
-	[558] = true, -- trade-skill
-	[559] = true, -- trade-skill
+	[525] = true, -- trade-skill (tier 1)
+	[526] = true, -- trade-skill (armor tier 2)
+	[527] = true, -- trade-skill (armor tier 3)
+	[558] = true, -- trade-skill (weapon tier 2)
+	[559] = true, -- trade-skill (weapon tier 3)
 	[566] = true, -- raid-heroic
 	[567] = true, -- raid-mythic
+	[593] = true, -- trade-skill (armor tier 4)
+	[594] = true, -- trade-skill (weapon tier 4)
+	[615] = true, -- timewalker
+	[617] = true, -- trade-skill (armor tier 5)
+	[618] = true, -- trade-skill (armor tier 6)
+	[619] = true, -- trade-skill (weapon tier 5)
+	[620] = true, -- trade-skill (weapon tier 6)
+	[642] = true, -- dungeon-mythic
+	[648] = true, -- baleful (675)
+	[651] = true, -- baleful empowered (695)
 };
 
-mog.itemStringPattern = "item:(%d+):%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:(%d+):([%d:]+)";
+mog.itemStringPattern = "item:(%d+):%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:([%d:]+)";
 
 function mog:ToNumberItem(item)
 	if type(item) == "string" then
-		local id, numBonusIDs, bonus = item:match(mog.itemStringPattern);
-		if numBonusIDs then
-			numBonusIDs = tonumber(numBonusIDs);
-			if numBonusIDs == 1 and not bonusDiffs[tonumber(bonus)] then
-				bonus = nil;
-			elseif numBonusIDs > 1 then
+		local id, bonus = item:match(mog.itemStringPattern);
+		-- bonus ID can also be warforged, socketed, etc
+		-- if there is more than one bonus ID, need to check all
+		if bonus then
+			if not tonumber(bonus) then
 				for bonusID in gmatch(bonus, "%d+") do
-					bonusID = tonumber(bonusID);
-					if bonusDiffs[bonusID] then
+					if bonusDiffs[tonumber(bonusID)] then
 						bonus = bonusID;
 						break;
 					end
 				end
+			elseif not bonusDiffs[tonumber(bonus)] then
+				bonus = nil;
 			end
 		end
 		id = id or item:match("item:(%d+)");

@@ -4,7 +4,7 @@ if (not DF) then
 	print ("|cFFFFAA00Please restart your client to finish update some AddOns.|c")
 	return
 end
-
+ 
 local floor = floor
 local min = min
 local UnitExists = UnitExists
@@ -17,9 +17,9 @@ local db
 local _
 
 --local f = CreateFrame ("frame", "Hansgar_And_Franzok_Assist", UIParent)
-local f = DF:Create1PxPanel (_, 155, 166, "Hans & Franz", "Hansgar_And_Franzok_Assist", nil, "top") --
+local f = DF:Create1PxPanel (_, 155, 166, "Hans & Franz", "Hansgar_And_Franzok_Assist", nil, "top", true)
 f:SetFrameStrata ("DIALOG")
-f.version = "v0.12"
+f.version = "v0.16a"
 
 f.Close:SetScript ("OnClick", function (self)
 	if (f.StampersPhase) then
@@ -148,14 +148,20 @@ player_bar:SetStatusBarTexture (player_bar.texture)
 --
 
 local player_pos_frame = CreateFrame ("frame", "Hansgar_And_Franzok_Assist_BarDance", UIParent)
---player_pos_frame:SetPoint ("topleft", player_bar, "bottomleft", 0, -3)
---player_pos_frame:SetPoint ("topright", player_bar, "bottomright", 0, -3)
+local player_pos_frame2 = CreateFrame ("frame", "Hansgar_And_Franzok_Assist_BarDance2", UIParent)
 
 player_pos_frame:SetPoint ("center", UIParent, "center", 0, -75)
+player_pos_frame2:SetPoint ("bottomleft", player_pos_frame, "bottomleft")
 
+player_pos_frame2:SetSize (6, 155)
 player_pos_frame:SetSize (155, 6)
-player_pos_frame:SetBackdrop ({bgFile = "Interface\\Tooltips\\UI-Tooltip-Background", tile = true, tileSize = 16, insets = {left = -1, right = -1, top = -1, bottom = -1}})
+
+local player_pos_frame_backdrop = {bgFile = "Interface\\Tooltips\\UI-Tooltip-Background", tile = true, tileSize = 16, insets = {left = -1, right = -1, top = -1, bottom = -1}}
+player_pos_frame:SetBackdrop (player_pos_frame_backdrop)
+player_pos_frame2:SetBackdrop (player_pos_frame_backdrop)
 player_pos_frame:SetBackdropColor (0, 0, 0, 1)
+player_pos_frame2:SetBackdropColor (0, 0, 0, 1)
+player_pos_frame2:Hide()
 player_pos_frame:SetMovable (true)
 player_pos_frame:EnableMouse (true)
 player_pos_frame:SetScript ("OnMouseDown", function (self)
@@ -178,36 +184,64 @@ local t1 = player_pos_frame:CreateTexture (nil, "artwork")
 t1:SetPoint ("left", player_pos_frame, "left")
 t1:SetSize (player_pos_frame:GetWidth()*0.30, 6)
 t1:SetTexture (1, 1, 1)
---t1:SetTexCoord (260/512, 430/512, 29/256, 82/256)
 t1:SetVertexColor (1, 0.2, 0.2, 0.4)
-
 --green
 local t2 = player_pos_frame:CreateTexture (nil, "artwork")
 t2:SetPoint ("left", t1, "right")
 t2:SetSize (player_pos_frame:GetWidth()*0.15, 6)
 t2:SetTexture (0.2, 1, 0.2, 0.4)
-
 --red
 local middle = player_pos_frame:CreateTexture (nil, "artwork")
 middle:SetPoint ("left", t2, "right")
 middle:SetSize (player_pos_frame:GetWidth()*0.10, 6)
 middle:SetTexture (1, 1, 1)
---middle:SetTexCoord (260/512, 430/512, 29/256, 82/256)
 middle:SetVertexColor (1, 0.2, 0.2, 0.4)
-
 --green
 local t3 = player_pos_frame:CreateTexture (nil, "artwork")
 t3:SetPoint ("left", middle, "right")
 t3:SetSize (player_pos_frame:GetWidth()*0.15, 6)
 t3:SetTexture (0.2, 1, 0.2, 0.4)
-
 --red
 local t4 = player_pos_frame:CreateTexture (nil, "artwork")
 t4:SetPoint ("left", t3, "right")
 t4:SetSize (player_pos_frame:GetWidth()*0.30, 6)
 t4:SetTexture (1, 1, 1)
---t4:SetTexCoord (260/512, 430/512, 29/256, 82/256)
 t4:SetVertexColor (1, 0.2, 0.2, 0.4)
+
+--red
+local t1_2 = player_pos_frame:CreateTexture (nil, "artwork")
+t1_2:SetPoint ("bottomleft", player_pos_frame, "bottomleft")
+t1_2:SetSize (6, player_pos_frame:GetWidth()*0.30)
+t1_2:SetTexture (1, 1, 1)
+t1_2:SetVertexColor (1, 0.2, 0.2, 0.4)
+--green
+local t2_2 = player_pos_frame:CreateTexture (nil, "artwork")
+t2_2:SetPoint ("bottom", t1_2, "top")
+t2_2:SetSize (6, player_pos_frame:GetWidth()*0.15)
+t2_2:SetTexture (0.2, 1, 0.2, 0.4)
+--red
+local middle_2 = player_pos_frame:CreateTexture (nil, "artwork")
+middle_2:SetPoint ("bottom", t2_2, "top")
+middle_2:SetSize (6, player_pos_frame:GetWidth()*0.10)
+middle_2:SetTexture (1, 1, 1)
+middle_2:SetVertexColor (1, 0.2, 0.2, 0.4)
+--green
+local t3_2 = player_pos_frame:CreateTexture (nil, "artwork")
+t3_2:SetPoint ("bottom", middle_2, "top")
+t3_2:SetSize (6, player_pos_frame:GetWidth()*0.15)
+t3_2:SetTexture (0.2, 1, 0.2, 0.4)
+--red
+local t4_2 = player_pos_frame:CreateTexture (nil, "artwork")
+t4_2:SetPoint ("bottom", t3_2, "top")
+t4_2:SetSize (6, player_pos_frame:GetWidth()*0.30)
+t4_2:SetTexture (1, 1, 1)
+t4_2:SetVertexColor (1, 0.2, 0.2, 0.4)
+
+t1_2:Hide()
+t2_2:Hide()
+t3_2:Hide()
+t4_2:Hide()
+middle_2:Hide()
 
 local div = player_pos_frame:CreateTexture (nil, "overlay")
 div:SetPoint ("left", player_pos_frame, "left", 0, 0)
@@ -248,6 +282,9 @@ function f:ShowUsers()
 		users_frame.title:SetPoint ("center", users_frame, "center")
 		users_frame.title:SetPoint ("bottom", users_frame, "top", 0, 2)
 		
+		local close = CreateFrame ("button", "Hansgar_And_Franzok_Assist_UsersPanel_CloseButton", users_frame, "UIPanelCloseButton")
+		close:SetPoint ("topright", users_frame, "topright")
+		users_frame.close_button = close
 	end
 	
 	local s = ""
@@ -282,7 +319,7 @@ frame_event:SetFrameStrata ("FULLSCREEN")
 frame_event:SetScript ("OnEvent", function (self, event, ...)
 
 	if (event == "ADDON_LOADED" and select (1, ...) == "Hansgar_And_Franzok_Assist") then
-
+--/dump Hansgar_And_Franzok_DB.STAMPERS_DELAY
 		db = Hansgar_And_Franzok_DB
 		if (not db) then
 			db = {}
@@ -313,6 +350,12 @@ frame_event:SetScript ("OnEvent", function (self, event, ...)
 		end
 		if (db.STOP_CAST == nil) then
 			db.STOP_CAST = true
+		end
+		if (db.NO_VERTICAL == nil) then
+			db.NO_VERTICAL = false
+		end
+		if (db.DANCE_SIZE == nil) then
+			db.DANCE_SIZE = 6
 		end
 		--
 		
@@ -505,6 +548,18 @@ function SlashCmdList.Hansgar_And_Franzok_Assist (msg, editbox)
 			tframe.facing = db.FACING_SIDE == 1
 		end
 	
+	elseif (command == "dancesize") then
+		local t = tonumber (rest)
+		if (t) then
+			db.DANCE_SIZE = t
+			f:SetDanceBarSize()
+			print ("|cFFFFAA00Hansgar and Franzok Assist|r dance bar size set to: ", t)
+		else
+			print ("|cFFFFAA00Hansgar and Franzok Assist|r invalid size, usage: /hansgar dancesize <width>.", t)
+		end
+		
+		f:SetDanceBarSize()
+	
 	elseif (command == "dance") then
 		db.SHOW_DANCE = not db.SHOW_DANCE
 		if (db.SHOW_DANCE) then
@@ -537,8 +592,6 @@ function SlashCmdList.Hansgar_And_Franzok_Assist (msg, editbox)
 		print ("|cFFFFFF00/hansgar test show hide|r: active the addon on test mode or hide it.")
 		print ("|cFFFFFF00/hansgar delay <time>|r: time in seconds until the percentage goes from 0 to 100.")
 		print ("|cFFFFFF00/hansgar dance|r: toggle dance bar (used to dodge regular stampers and searing plates).")
-		print ("|cFFFFFF00/hansgar autofacing|r: toggle if the dance bar auto switch left and right when looking to north or south.")
-		print ("|cFFFFFF00/hansgar facing|r: |cFF00FF001|r = south |cFF00FF002|r = north, use to set the dance bar when auto facing is disabled.")
 		print ("|cFFFFFF00/hansgar users|r: show who is using the addon in the raid.")
 		print ("|cFFFFFF00/hansgar cooldown|r: show the countdown text for each stamper go back up to the ceiling.")
 		print ("|cFFFFFF00/hansgar stopcast|r: show the alert to stop casting for Disrupting Roar.")
@@ -557,6 +610,16 @@ local options_panel = {
 		step = 1,
 		desc = "Time in seconds to move out from a heating up stamper.",
 		name = "Stampers Delay",
+	},
+	{
+		type = "range",
+		get = function() return db.DANCE_SIZE end,
+		set = function (self, fixedparam, value) f:SetDanceBarSize (value) end,
+		min = 3,
+		max = 25,
+		step = 1,
+		desc = "Set the dance bar size, the higher is the value, more thicker will be the bar.",
+		name = "Dance Bar Size",
 	},
 	{
 		type = "toggle",
@@ -596,6 +659,15 @@ local options_panel = {
 		end,
 		desc = "Enable or disable the dance bar.",
 		name = "Dance Bar"
+	},
+	{
+		type = "toggle",
+		get = function() return db.NO_VERTICAL end,
+		set = function (self, fixedparam, value) 
+			db.NO_VERTICAL = not db.NO_VERTICAL
+		end,
+		desc = "When enabled, dance bar won't switch to vertical position when facing west and east.",
+		name = "No Vertical Dance bar"
 	},
 	{
 		type = "toggle",
@@ -689,8 +761,8 @@ local options_panel = {
 
 local build_options_panel = function()
 	local options_frame = DF:CreateOptionsFrame ("HansgarFranzokAssistOptions", "Hans & Franz Assist", 1)
-	options_frame:SetHeight (180)
-	DF:BuildMenu (options_frame, options_panel, 15, -60, 180)
+	options_frame:SetHeight (220)
+	DF:BuildMenu (options_frame, options_panel, 15, -60, 220)
 	options_frame:SetBackdropColor (0, 0, 0, .9)
 end
 
@@ -979,6 +1051,28 @@ function f:RefreshCooldownSettings()
 	end
 end
 
+function f:SetDanceBarSize (size)
+	if (not size) then
+		size = db.DANCE_SIZE
+	end
+	db.DANCE_SIZE = size
+	
+	t1:SetSize (player_pos_frame:GetWidth()*0.30, size)
+	t2:SetSize (player_pos_frame:GetWidth()*0.15, size)
+	middle:SetSize (player_pos_frame:GetWidth()*0.10, size)
+	t3:SetSize (player_pos_frame:GetWidth()*0.15, size)
+	t4:SetSize (player_pos_frame:GetWidth()*0.30, size)	
+	
+	t1_2:SetSize (size, player_pos_frame:GetWidth()*0.30)
+	t2_2:SetSize (size, player_pos_frame:GetWidth()*0.15)
+	middle_2:SetSize (size, player_pos_frame:GetWidth()*0.10)
+	t3_2:SetSize (size, player_pos_frame:GetWidth()*0.15)
+	t4_2:SetSize (size, player_pos_frame:GetWidth()*0.30)
+	
+	player_pos_frame2:SetSize (size, 155)
+	player_pos_frame:SetSize (155, size)
+end
+
 function f:SetLockState (just_refresh)
 
 	if (not just_refresh) then
@@ -1093,6 +1187,7 @@ function f:CreateWindow()
 	
 	f.frames_built = true
 	
+	f:SetDanceBarSize()
 end
 
 local safe_track = {
@@ -1136,23 +1231,82 @@ local red_alpha_enabled = 0.5
 local green_alpha_disabled = 0.05
 local green_alpha_enabled = 0.9
 
--- true north -> south
--- false south -> north
+function f:ChangeDanceBar (facing)
+	
+	if (facing == 1 or facing == 2) then --> north or south
+		t1_2:Hide()
+		t2_2:Hide()
+		t3_2:Hide()
+		t4_2:Hide()
+		middle_2:Hide()
+		t1:Show()
+		t2:Show()
+		t3:Show()
+		t4:Show()
+		middle:Show()
+		
+		player_pos_frame2:Hide()
+		player_pos_frame:SetBackdropColor (0, 0, 0, 1)
+		
+	elseif (facing == 3 or facing == 4) then --> west or east
+		t1_2:Show()
+		t2_2:Show()
+		t3_2:Show()
+		t4_2:Show()
+		middle_2:Show()
+		t1:Hide()
+		t2:Hide()
+		t3:Hide()
+		t4:Hide()
+		middle:Hide()
+		
+		player_pos_frame:SetBackdropColor (0, 0, 0, 0)
+		player_pos_frame2:Show()
+		
+	end
+	
+end
+
 local track_function = function (self, elapsed)
 
 	local x, _ = GetPlayerMapPosition ("player")
 	local block
 	
 	if (db.AUTO_FACING and x) then
+	
 		local facing = GetPlayerFacing()
+		local current = self.facing
 		
-		if (self.facing and (facing > 5.3 or facing < 1.053)) then --north -> south -- ~30º tolerance
-			self.facing = false
-			--print ("changing face to south")
-		elseif (not self.facing and (facing > 2.3 and facing < 4.3)) then --south -> north -- ~30º tolerance
-			self.facing = true
-			--print ("changing face to north")
+		if (db.NO_VERTICAL) then
+			-- get 2 direction in radians
+			if (current ~= 1 and (facing > 5.3 or facing < 1.053)) then --north -> south -- ~30º tolerance
+				--print ("south")
+				self.facing = 1
+			elseif (current ~= 2 and (facing > 2.3 and facing < 4.3)) then
+				--print ("north")
+				self.facing = 2
+			end
+		else
+			-- get 4 directions in radians
+			if (facing < 0.7 or facing > 5.6) then --north
+				--print ("north")
+				self.facing = 1
+			elseif (facing >= 0.7 and facing < 2.45) then --west
+				--print ("west")
+				self.facing = 3
+			elseif (facing > 2.45 and facing < 3.85) then --south
+				--print ("south")
+				self.facing = 2
+			elseif (facing >= 3.85 and facing <= 5.6) then --east
+				--print ("east")
+				self.facing = 4
+			end
 		end
+		
+		if (current ~= self.facing) then
+			f:ChangeDanceBar (self.facing)
+		end
+		
 	end
 
 	if (x) then
@@ -1170,39 +1324,66 @@ local track_function = function (self, elapsed)
 		player_pos_frame:Show()
 		block = safe_track [block]
 		
+		if (self.facing == 3 or self.facing == 4) then --> west
+			player_pos_frame2:Show()
+		end
+		
 		if (x >= block.left.x2 and x <= block.left.x1) then
-			if (self.facing) then
+			if (self.facing == 2) then --> south
 				t2:SetTexture (0.1, 1, 0.1, green_alpha_enabled)
 				t3:SetTexture (0.2, 1, 0.2, green_alpha_disabled)
-			else
+			elseif (self.facing == 1) then --> north
 				t3:SetTexture (0.2, 232/255, 1, green_alpha_enabled)
 				t2:SetTexture (0.2, 232/255, 1, green_alpha_disabled)
+			elseif (self.facing == 3) then --> west
+				t2_2:SetTexture (0.1, 1, 0.1, green_alpha_enabled)
+				t3_2:SetTexture (0.2, 1, 0.2, green_alpha_disabled)
+			elseif (self.facing == 4) then --> east
+				t3_2:SetTexture (0.2, 232/255, 1, green_alpha_enabled)
+				t2_2:SetTexture (0.2, 232/255, 1, green_alpha_disabled)
 			end
 			
 			t1:SetVertexColor (1, 0.2, 0.2, red_alpha_disabled) --red
 			t4:SetVertexColor (1, 0.2, 0.2, red_alpha_disabled) --red 
 			middle:SetVertexColor (1, 0.2, 0.2, red_alpha_disabled) --red
+			t1_2:SetVertexColor (1, 0.2, 0.2, red_alpha_disabled) --red
+			t4_2:SetVertexColor (1, 0.2, 0.2, red_alpha_disabled) --red 
+			middle_2:SetVertexColor (1, 0.2, 0.2, red_alpha_disabled) --red
 			
 		elseif (x <= block.right.x2 and x >= block.right.x1) then
-			if (self.facing) then
+			if (self.facing == 2) then --> south
 				t3:SetTexture (0.1, 1, 0.1, green_alpha_enabled)
 				t2:SetTexture (0.2, 1, 0.2, green_alpha_disabled)
-			else
+			elseif (self.facing == 1) then --> north
 				t2:SetTexture (0.2, 232/255, 1, green_alpha_enabled)
 				t3:SetTexture (0.2, 232/255, 1, green_alpha_disabled)
+			elseif (self.facing == 3) then --> west
+				t3_2:SetTexture (0.1, 1, 0.1, green_alpha_enabled)
+				t2_2:SetTexture (0.2, 1, 0.2, green_alpha_disabled)
+			elseif (self.facing == 4) then --> east
+				t2_2:SetTexture (0.2, 232/255, 1, green_alpha_enabled)
+				t3_2:SetTexture (0.2, 232/255, 1, green_alpha_disabled)
 			end
 			
 			t1:SetVertexColor (1, 0.2, 0.2, red_alpha_disabled) --red
 			t4:SetVertexColor (1, 0.2, 0.2, red_alpha_disabled) --red 
 			middle:SetVertexColor (1, 0.2, 0.2, red_alpha_disabled) --red
+			t1_2:SetVertexColor (1, 0.2, 0.2, red_alpha_disabled) --red
+			t4_2:SetVertexColor (1, 0.2, 0.2, red_alpha_disabled) --red 
+			middle_2:SetVertexColor (1, 0.2, 0.2, red_alpha_disabled) --red
 			
 		else
 			t1:SetVertexColor (1, 0.2, 0.2, red_alpha_enabled) --red
 			t4:SetVertexColor (1, 0.2, 0.2, red_alpha_enabled) --red 
 			middle:SetVertexColor (1, 0.2, 0.2, red_alpha_enabled) --red
+			t1_2:SetVertexColor (1, 0.2, 0.2, red_alpha_enabled) --red
+			t4_2:SetVertexColor (1, 0.2, 0.2, red_alpha_enabled) --red 
+			middle_2:SetVertexColor (1, 0.2, 0.2, red_alpha_enabled) --red
 			
 			t2:SetTexture (0.2, 1, 0.2, green_alpha_disabled)
 			t3:SetTexture (0.2, 1, 0.2, green_alpha_disabled)
+			t2_2:SetTexture (0.2, 1, 0.2, green_alpha_disabled)
+			t3_2:SetTexture (0.2, 1, 0.2, green_alpha_disabled)
 			
 		end
 		
@@ -1215,6 +1396,7 @@ local track_function = function (self, elapsed)
 			player_pos_frame:Show()
 		else
 			player_pos_frame:Hide()
+			player_pos_frame2:Hide()
 		end
 	end
 end
@@ -1228,6 +1410,7 @@ function f:StartTrackPlayerPosition()
 end
 function f:EndTrackPlayerPosition()
 	player_pos_frame:Hide()
+	player_pos_frame2:Hide()
 	tframe:SetScript ("OnUpdate", nil)
 end
 

@@ -1,46 +1,31 @@
---	0:01 14.04.2015
+--	23:18 03.11.2015
 
 --[[
-Fight log: graphs received some visual improve
-Fight log: new option: Improved mode - New segments automatically begins every second & after fight you can select any time frame on timeline for analytics [You need enable this option before use "full power" of module]
-Fight log: new better design
-Fight log: damage & healing tabs: tooltip shows top 5 targets (sources)
-Fight log: healing tab: lines show absorption
-Fight log: graphs: added hps tab
-Fight log: graphs: added absorbs amount tab
-Minor & major fixes
 
-TODO
-+ Fight log: 
-	+ Damage targets List on tooltip
-	+ Healing targets List
-	+ Multiple segments with Shift
-	+ New type of healing - absorbs
-	+ Fix filter by name
-	+ Fix timeline segments after selection new fight
-	+ Graph: absorbs graph
-	Tooltips top5: length of name
-	
-+ Lib: Stylize additional tooltips
-+ Lib: additional tooltips: uiparent
+TODO:
 
-- CheckBox (rounded): Modern Template
+3555:
+Bossmods: Added button for second gorefiend bossmod (with click to target); added macro for it "/rt gorefiend2"
+Raid Inspect: New filter: Hide players who are not in the raid
+Raid Inspect: New filter: By sets
+Minor fixes
+
 ]]
-
 local GlobalAddonName, ExRT = ...
 
-ExRT.V = 3330
+ExRT.V = 3555
 ExRT.T = "R"
 ExRT.BETA = false
 
 ExRT.OnUpdate = {}		--> таймеры, OnUpdate функции
 ExRT.Slash = {}			--> функции вызова из коммандной строки
 ExRT.OnAddonMessage = {}	--> внутренние сообщения аддона
-ExRT.Eggs = {}			--> скрытые функции
 ExRT.MiniMapMenu = {}		--> изменение меню кнопки на миникарте
 ExRT.Modules = {}		--> список всех модулей
 ExRT.ModulesLoaded = {}		--> список загруженных модулей [для Dev & Advanced]
+ExRT.ModulesOptions = {}
 ExRT.CLEU = {}			--> лист CLEU функций, для обработки
+ExRT.Debug = {}
 
 ExRT.A = {}			--> ссылки на все модули
 
@@ -52,10 +37,15 @@ ExRT.msg_prefix = {
 ExRT.L = {}			--> локализация
 ExRT.locale = GetLocale()
 
-ExRT.clientUIinterface = select(4,GetBuildInfo())
 
-ExRT.ModulesOptions = {}
-
+---------------> Version <---------------
+do
+	local version, buildVersion, buildDate, uiVersion = GetBuildInfo()
+	
+	ExRT.clientUIinterface = uiVersion
+	local expansion,majorPatch,minorPatch = (version or "1.0.0"):match("^(%d+)%.(%d+)%.(%d+)")
+	ExRT.clientVersion = (expansion or 0) * 10000 + (majorPatch or 0) * 100 + (minorPatch or 0)
+end
 ---------------> Modules <---------------
 ExRT.mod = {}
 ExRT.mod.__index = ExRT.mod
@@ -65,28 +55,25 @@ do
 		if not InCombatLockdown() or this.enableLoadInCombat then
 			this:Load()
 			this:SetScript("OnShow",nil)
-			ExRT.mds.dprint(this.moduleName.."'s options loaded")
+			ExRT.F.dprint(this.moduleName.."'s options loaded")
 			this.isLoaded = true
 		else
 			print(ExRT.L.SetErrorInCombat)
 		end
 	end
 	local function mod_Options_CreateTitle(self)
-		self.title = ExRT.lib.CreateText(self,605,200,nil,10,-15,nil,"TOP",nil,16,self.name)
+		self.title = ExRT.lib:Text(self,self.name,16):Size(605,200):Point(5,-5):Top()
 	end
 	function ExRT.mod:New(moduleName,localizatedName,disableOptions,enableLoadInCombat)
 		local self = {}
 		setmetatable(self, ExRT.mod)
 		
 		if not disableOptions then
-			self.options = CreateFrame("Frame", "GExRT"..moduleName.."Options", ExRT.Options.panel)
-			self.options.name = localizatedName or moduleName
-			self.options.parent = ExRT.Options.panel.name
-			if not ExRT.BannedModules[moduleName] then
-				InterfaceOptions_AddCategory(self.options)
-			end
+			self.options = ExRT.Options:Add(moduleName,localizatedName)
+
 			self.options:Hide()
 			self.options.moduleName = moduleName
+			self.options.name = localizatedName or moduleName
 			self.options:SetScript("OnShow",mod_LoadOptions)
 			
 			self.options.CreateTilte = mod_Options_CreateTitle
@@ -98,15 +85,18 @@ do
 			if not ExRT.BannedModules[moduleName] then
 				ExRT.ModulesOptions[#ExRT.ModulesOptions + 1] = self.options
 			end
+			
 		end
 		
 		self.main = CreateFrame("Frame", nil)
 		self.main.events = {}
 		self.main:SetScript("OnEvent",ExRT.mod.Event)
 		
-		if ExRT.T == "D" then
+		if ExRT.T == "D" or ExRT.T == "DU" then
 			self.main.eventsCounter = {}
 			self.main:HookScript("OnEvent",ExRT.mod.HookEvent)
+			
+			self.main.name = moduleName
 		end
 		
 		self.db = {}
@@ -115,7 +105,7 @@ do
 		table.insert(ExRT.Modules,self)
 		ExRT.A[moduleName] = self
 		
-		ExRT.mds.dprint("New module: "..moduleName)
+		ExRT.F.dprint("New module: "..moduleName)
 		
 		return self
 	end
@@ -124,50 +114,102 @@ end
 function ExRT.mod:Event(event,...)
 	self[event](self,...)
 end
+if ExRT.T == "DU" then
+	local ExRTDebug = ExRT.Debug
+	local debugprofilestop = debugprofilestop
+	function ExRT.mod:Event(event,...)
+		local dt = debugprofilestop()
+		self[event](self,...)
+		ExRTDebug[#ExRTDebug+1] = {debugprofilestop() - dt,self.name,event}
+	end
+end
 
 function ExRT.mod:HookEvent(event)
 	self.eventsCounter[event] = self.eventsCounter[event] and self.eventsCounter[event] + 1 or 1
 end
 
-function ExRT.mod:RegisterEvents(...)
-	for i=1,select("#", ...) do
-		local event = select(i,...)
-		if event ~= "COMBAT_LOG_EVENT_UNFILTERED" then
-			self.main:RegisterEvent(event)
-		else
-			ExRT.CLEU[ self.name ] = self.main.COMBAT_LOG_EVENT_UNFILTERED
+do
+	local CLEU_mirror = {}
+	local function RestructCLEU()
+		local module_Encounter = nil	--Fix Encounter module. Unregister CLEU during CLEU cicle cause error. Add this module to last pos in ExRT.CLEU
+		for moduleName,func in pairs(CLEU_mirror) do
+			if type(func)=="function" then
+				if moduleName ~= "Encounter" then
+					ExRT.CLEU[#ExRT.CLEU + 1] = func
+				else
+					module_Encounter = func
+				end
+			end
 		end
-		self.main.events[event] = true
-		ExRT.mds.dprint(self.name,'RegisterEvent',event)
+		if module_Encounter then
+			ExRT.CLEU[#ExRT.CLEU + 1] = module_Encounter
+		end
 	end
-end
-
-function ExRT.mod:UnregisterEvents(...)
-	for i=1,select("#", ...) do
-		local event = select(i,...)
-		if event ~= "COMBAT_LOG_EVENT_UNFILTERED" then
-			self.main:UnregisterEvent(event)
-		else
-			ExRT.CLEU[ self.name ] = nil
+	
+	function ExRT.mod:RegisterEvents(...)
+		for i=1,select("#", ...) do
+			local event = select(i,...)
+			if event ~= "COMBAT_LOG_EVENT_UNFILTERED" then
+				self.main:RegisterEvent(event)
+			else
+				wipe(ExRT.CLEU)
+				CLEU_mirror[ self.name ] = self.main.COMBAT_LOG_EVENT_UNFILTERED
+				RestructCLEU()
+			end
+			self.main.events[event] = true
+			ExRT.F.dprint(self.name,'RegisterEvent',event)
 		end
-		self.main.events[event] = nil
-		ExRT.mds.dprint(self.name,'UnregisterEvent',event)
+	end
+	
+	function ExRT.mod:UnregisterEvents(...)
+		for i=1,select("#", ...) do
+			local event = select(i,...)
+			if event ~= "COMBAT_LOG_EVENT_UNFILTERED" then
+				self.main:UnregisterEvent(event)
+			else
+				wipe(ExRT.CLEU)
+				CLEU_mirror[ self.name ] = nil
+				RestructCLEU()
+			end
+			self.main.events[event] = nil
+			ExRT.F.dprint(self.name,'UnregisterEvent',event)
+		end
 	end
 end
 
 function ExRT.mod:RegisterUnitEvent(...)
 	self.main:RegisterUnitEvent(...)
-	local event = select(1,...)
+	local event = ...
 	self.main.events[event] = true
-	ExRT.mds.dprint(self.name,'RegisterUnitEvent',event)
+	ExRT.F.dprint(self.name,'RegisterUnitEvent',event)
 end
 
-function ExRT.mod:RegisterTimer()
-	ExRT.OnUpdate[self.name] = self
-end
-
-function ExRT.mod:UnregisterTimer()
-	ExRT.OnUpdate[self.name] = nil
+do
+	local Timers_modulesNames = {}
+	function ExRT.mod:RegisterTimer()
+		local pos = nil
+		for i=1,#Timers_modulesNames do
+			if Timers_modulesNames[i] == self.name then
+				pos = i
+				break
+			end
+		end
+		if not pos then
+			pos = #ExRT.OnUpdate + 1
+			Timers_modulesNames[pos] = self.name
+		end
+		ExRT.OnUpdate[ pos ] = self
+	end
+	
+	function ExRT.mod:UnregisterTimer()
+		for i=1,#Timers_modulesNames do
+			if Timers_modulesNames[i] == self.name then
+				tremove(Timers_modulesNames,i)
+				tremove(ExRT.OnUpdate,i)
+				break
+			end
+		end
+	end
 end
 
 function ExRT.mod:RegisterSlash()
@@ -254,6 +296,7 @@ local C_Timer_NewTimer, C_Timer_NewTicker = C_Timer.NewTimer, C_Timer.NewTicker
 if ExRT.T == "D" then
 	pcall = function(func,...)
 		func(...)
+		return true
 	end
 end
 
@@ -262,8 +305,8 @@ ExRT.NULLfunc = function() end
 
 ---------------> Mods <---------------
 
-ExRT.mds = {}
-ExRT.F = ExRT.mds
+ExRT.F = {}
+ExRT.mds = ExRT.F
 
 -- Moved to Functions.lua
 
@@ -271,7 +314,7 @@ do
 	local function TimerFunc(self)
 		self.func(unpack(self.args))
 	end
-	function ExRT.mds.ScheduleTimer(func, delay, ...)
+	function ExRT.F.ScheduleTimer(func, delay, ...)
 		local self = nil
 		if delay > 0 then
 			self = C_Timer_NewTimer(delay,TimerFunc)
@@ -283,27 +326,28 @@ do
 		
 		return self
 	end
-	function ExRT.mds.CancelTimer(self)
+	function ExRT.F.CancelTimer(self)
 		if self then
 			self:Cancel()
 		end
 	end
-	function ExRT.mds.ScheduleETimer(self, func, delay, ...)
-		ExRT.mds.CancelTimer(self)
-		return ExRT.mds.ScheduleTimer(func, delay, ...)
+	function ExRT.F.ScheduleETimer(self, func, delay, ...)
+		ExRT.F.CancelTimer(self)
+		return ExRT.F.ScheduleTimer(func, delay, ...)
 	end
 	
-	ExRT.mds.NewTimer = ExRT.mds.ScheduleTimer
+	ExRT.F.NewTimer = ExRT.F.ScheduleTimer
+	ExRT.F.Timer = ExRT.F.ScheduleTimer
 end
 
 ExRT.BannedModules = {}
 
 ---------------> Data <---------------
 
-ExRT.mds.defFont = "Interface\\AddOns\\ExRT\\media\\skurri.ttf"
-ExRT.mds.barImg = "Interface\\AddOns\\ExRT\\media\\bar17.tga"
-ExRT.mds.defBorder = "Interface\\AddOns\\ExRT\\media\\border.tga"
-ExRT.mds.textureList = {
+ExRT.F.defFont = "Interface\\AddOns\\ExRT\\media\\skurri.ttf"
+ExRT.F.barImg = "Interface\\AddOns\\ExRT\\media\\bar17.tga"
+ExRT.F.defBorder = "Interface\\AddOns\\ExRT\\media\\border.tga"
+ExRT.F.textureList = {
 	"Interface\\AddOns\\ExRT\\media\\bar1.tga",
 	"Interface\\AddOns\\ExRT\\media\\bar2.tga",
 	"Interface\\AddOns\\ExRT\\media\\bar3.tga",
@@ -344,7 +388,7 @@ ExRT.mds.textureList = {
 	[[Interface\PaperDollInfoFrame\UI-Character-Skills-Bar]],
 	[[Interface\RaidFrame\Raid-Bar-Hp-Fill]],
 }
-ExRT.mds.fontList = {
+ExRT.F.fontList = {
 	"Interface\\AddOns\\ExRT\\media\\skurri.ttf",
 	"Fonts\\ARIALN.TTF",
 	"Fonts\\FRIZQT__.TTF",
@@ -365,9 +409,9 @@ ExRT.mds.fontList = {
 }
 
 if ExRT.locale and ExRT.locale:find("^zh") then		--China & Taiwan fix
-	ExRT.mds.defFont = "Fonts\\ARHei.ttf"
+	ExRT.F.defFont = "Fonts\\ARHei.ttf"
 elseif ExRT.locale == "koKR" then			--Korea fix
-	ExRT.mds.defFont = "Fonts\\2002.ttf"
+	ExRT.F.defFont = "Fonts\\2002.ttf"
 end
 
 ----------> Version Checker <----------
@@ -389,11 +433,11 @@ SlashCmdList["exrtSlash"] = function (arg)
 			ExRT.MiniMapIcon:Hide()
 		end
 	elseif argL == "getver" then
-		ExRT.mds.SendExMsg("needversion","")
-		isVersionCheckCallback = ExRT.mds.ScheduleETimer(isVersionCheckCallback, DisableVersionCheckCallback, 1.5)
+		ExRT.F.SendExMsg("needversion","")
+		isVersionCheckCallback = ExRT.F.ScheduleETimer(isVersionCheckCallback, DisableVersionCheckCallback, 1.5)
 	elseif argL == "getverg" then
-		ExRT.mds.SendExMsg("needversiong","","GUILD")
-		isVersionCheckCallback = ExRT.mds.ScheduleETimer(isVersionCheckCallback, DisableVersionCheckCallback, 1.5)
+		ExRT.F.SendExMsg("needversiong","","GUILD")
+		isVersionCheckCallback = ExRT.F.ScheduleETimer(isVersionCheckCallback, DisableVersionCheckCallback, 1.5)
 	elseif argL == "set" then
 		ExRT.Options:Open()
 	elseif argL == "quit" then
@@ -427,8 +471,8 @@ ExRT.frame = CreateFrame("Frame")
 ExRT.frame:SetScript("OnEvent",function (self, event, ...)
 	if event == "CHAT_MSG_ADDON" then
 		local prefix, message, channel, sender = ...
-		if prefix and ExRT.msg_prefix[prefix] and (channel=="RAID" or channel=="GUILD" or channel=="INSTANCE_CHAT" or channel=="PARTY" or (channel=="WHISPER" and (ExRT.mds.UnitInGuild(sender) or sender == ExRT.SDB.charName)) or (message and (message:find("^version") or message:find("^needversion")))) then
-			ExRT.mds.GetExMsg(sender, strsplit("\t", message))
+		if prefix and ExRT.msg_prefix[prefix] and (channel=="RAID" or channel=="GUILD" or channel=="INSTANCE_CHAT" or channel=="PARTY" or (channel=="WHISPER" and (ExRT.F.UnitInGuild(sender) or sender == ExRT.SDB.charName)) or (message and (message:find("^version") or message:find("^needversion")))) then
+			ExRT.F.GetExMsg(sender, strsplit("\t", message))
 		end
 	elseif event == "ADDON_LOADED" then
 		local addonName = ...
@@ -456,7 +500,7 @@ ExRT.frame:SetScript("OnEvent",function (self, event, ...)
 		VExRT.Addon.Version = tonumber(VExRT.Addon.Version or "0")
 		VExRT.Addon.PreVersion = VExRT.Addon.Version
 		
-		if not ExRT.mds.FUNC_FILE_LOADED then
+		if not ExRT.F.FUNC_FILE_LOADED then
 			print("|cffff0000Exorsus Raid Tools:|r after updating may work incorrectly, please restart your game client")
 		end
 		
@@ -464,18 +508,21 @@ ExRT.frame:SetScript("OnEvent",function (self, event, ...)
 			ExRT.A.Profiles:ReselectProfileOnLoad()
 		end
 		
-		ExRT.mds.dprint("ADDON_LOADED event")
-		ExRT.mds.dprint("MODULES FIND",#ExRT.Modules)
+		ExRT.F.dprint("ADDON_LOADED event")
+		ExRT.F.dprint("MODULES FIND",#ExRT.Modules)
 		for i=1,#ExRT.Modules do
-			pcall(ExRT.Modules[i].main.ADDON_LOADED,self) 	-- BE CARE ABOUT IT
+			local isSuccessful = pcall(ExRT.Modules[i].main.ADDON_LOADED,self) 	-- BE CARE ABOUT IT
+			if not isSuccessful then
+				ExRT.F.dprint("|cffff0000Error loading",ExRT.Modules[i].name)
+			end
 			ExRT.ModulesLoaded[i] = true
 			
-			ExRT.mds.dprint("ADDON_LOADED",i,ExRT.Modules[i].name)
+			ExRT.F.dprint("ADDON_LOADED",i,ExRT.Modules[i].name)
 		end
 
 		VExRT.Addon.Version = ExRT.V
 		
-		ExRT.mds.ScheduleTimer(function()
+		ExRT.F.ScheduleTimer(function()
 			ExRT.frame:SetScript("OnUpdate", ExRT.frame.OnUpdate)
 			ExRT.CLEUframe:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 		end,1)
@@ -489,8 +536,11 @@ ExRT.CLEUframe = CreateFrame("Frame")
 do
 	local CLEU = ExRT.CLEU
 	ExRT.CLEUframe:SetScript("OnEvent",function (self, event, ...)
-		for _,func in pairs(CLEU) do
-			func(self,...)
+		for i=1,#CLEU do
+			local func = CLEU[i]
+			if func then
+				func(self,...)
+			end
 		end
 	end)
 	
@@ -514,19 +564,53 @@ do
 				isEncounter = nil
 			end
 			
+			--[[
 			for _,mod in pairs(ExRT_OnUpdate) do
 				--pcall(mod.timer,self,self.tmr)	-- BE CARE ABOUT IT
 				mod:timer(frameElapsed)
+			end
+			]]
+			for i=1,#ExRT_OnUpdate do
+				local mod = ExRT_OnUpdate[i]
+				if mod then
+					mod:timer(frameElapsed)
+				end
 			end
 			frameElapsed = 0
 		end
 	end
 	
-	function ExRT.mds.RaidInCombat()
+	if ExRT.T == "DU" then
+		local ExRTDebug = ExRT.Debug
+		local debugprofilestop = debugprofilestop
+		function ExRT.frame:OnUpdate(elapsed)
+			frameElapsed = frameElapsed + elapsed
+			if frameElapsed > reloadTimer then
+				if not isEncounter and IsEncounterInProgress() then
+					isEncounter = true
+					encounterTime = GetTime()
+				elseif isEncounter and not IsEncounterInProgress() then
+					isEncounter = nil
+				end
+				
+				for i=1,#ExRT_OnUpdate do
+					local mod = ExRT_OnUpdate[i]
+					if mod then
+						local dt = debugprofilestop()
+						mod:timer(frameElapsed)
+						ExRTDebug[#ExRTDebug+1] = {debugprofilestop() - dt,mod.name,"Timer"}
+					end
+				end
+				frameElapsed = 0
+			end
+		end
+	end
+	
+	function ExRT.F.RaidInCombat()
 		return isEncounter
 	end
 	
-	function ExRT.mds.GetEncounterTime()
+	function ExRT.F.GetEncounterTime()
 		if isEncounter then
 			return GetTime() - encounterTime
 		end
@@ -535,7 +619,7 @@ end
 
 -- Заметка: сообщение в приват на другой сервер почему-то игнорируется
 
-function ExRT.mds.SendExMsg(prefix, msg, tochat, touser, addonPrefix)
+function ExRT.F.SendExMsg(prefix, msg, tochat, touser, addonPrefix)
 	addonPrefix = addonPrefix or "EXRTADD"
 	msg = msg or ""
 	if tochat and not touser then
@@ -543,16 +627,16 @@ function ExRT.mds.SendExMsg(prefix, msg, tochat, touser, addonPrefix)
 	elseif tochat and touser then
 		SendAddonMessage(addonPrefix, prefix .. "\t" .. msg, tochat,touser)
 	else
-		local chat_type, playerName = ExRT.mds.chatType()
+		local chat_type, playerName = ExRT.F.chatType()
 		SendAddonMessage(addonPrefix, prefix .. "\t" .. msg, chat_type, playerName)
 	end
 end
 
-function ExRT.mds.GetExMsg(sender, prefix, ...)
+function ExRT.F.GetExMsg(sender, prefix, ...)
 	if prefix == "needversion" then
-		ExRT.mds.SendExMsg("version2", ExRT.V)
+		ExRT.F.SendExMsg("version2", ExRT.V)
 	elseif prefix == "needversiong" then
-		ExRT.mds.SendExMsg("version2", ExRT.V, "WHISPER", sender)
+		ExRT.F.SendExMsg("version2", ExRT.V, "WHISPER", sender)
 	elseif prefix == "version" then
 		local msgver = ...
 		print(sender..": "..msgver)

@@ -1,6 +1,18 @@
 local E, L, V, P, G = unpack(select(2, ...)); --Inport: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local UF = E:GetModule('UnitFrames');
 
+--Cache global variables
+--Lua functions
+local _G = _G
+local pairs = pairs
+local tinsert = table.insert
+local format = format
+--WoW API / Variables
+local MAX_BOSS_FRAMES = MAX_BOSS_FRAMES
+
+--Global variables that we don't cache, list them here for mikk's FindGlobals script
+-- GLOBALS: BossHeaderMover
+
 local _, ns = ...
 local ElvUF = ns.oUF
 assert(ElvUF, "ElvUI was unable to locate oUF.")
@@ -9,7 +21,7 @@ local BossHeader = CreateFrame('Frame', 'BossHeader', UIParent)
 function UF:Construct_BossFrames(frame)
 	frame.Health = self:Construct_HealthBar(frame, true, true, 'RIGHT')
 
-	frame.Power = self:Construct_PowerBar(frame, true, true, 'LEFT', false)
+	frame.Power = self:Construct_PowerBar(frame, true, true, 'LEFT')
 
 	frame.Name = self:Construct_NameText(frame)
 
@@ -31,7 +43,7 @@ function UF:Construct_BossFrames(frame)
 	frame.AltPowerBar = self:Construct_AltPowerBar(frame)
 	frame.Range = UF:Construct_Range(frame)
 	frame:SetAttribute("type2", "focus")
-
+	frame.customTexts = {}
 	BossHeader:Point('BOTTOMRIGHT', E.UIParent, 'RIGHT', -105, -165)
 	E:CreateMover(BossHeader, BossHeader:GetName()..'Mover', L["Boss Frames"], nil, nil, nil, 'ALL,PARTY,RAID')
 end
@@ -82,6 +94,10 @@ function UF:Update_BossFrames(frame, db)
 		if USE_MINI_POWERBAR then
 			POWERBAR_WIDTH = POWERBAR_WIDTH / 2
 		end
+		
+		if not USE_POWERBAR_OFFSET then
+			POWERBAR_OFFSET = 0
+		end
 	end
 
 	--Health
@@ -107,11 +123,7 @@ function UF:Update_BossFrames(frame, db)
 				health.colorHealth = true
 			end
 		else
-			health.colorClass = true
-			health.colorReaction = true
-		end
-		if self.db['colors'].forcehealthreaction == true then
-			health.colorClass = false
+			health.colorClass = (not self.db['colors'].forcehealthreaction)
 			health.colorReaction = true
 		end
 
@@ -234,7 +246,7 @@ function UF:Update_BossFrames(frame, db)
 					portrait:SetFrameLevel(frame:GetFrameLevel() + 5)
 				end
 
-				if USE_MINI_POWERBAR or USE_POWERBAR_OFFSET or not USE_POWERBAR then
+				if USE_MINI_POWERBAR or USE_POWERBAR_OFFSET or USE_INSET_POWERBAR or not USE_POWERBAR then
 					portrait.backdrop:Point("BOTTOMLEFT", frame.Health.backdrop, "BOTTOMRIGHT", E.PixelMode and -1 or SPACING, 0)
 				else
 					portrait.backdrop:Point("BOTTOMLEFT", frame.Power.backdrop, "BOTTOMRIGHT", E.PixelMode and -1 or SPACING, 0)
@@ -322,6 +334,12 @@ function UF:Update_BossFrames(frame, db)
 		buffs["growth-x"] = db.buffs.anchorPoint == 'LEFT' and 'LEFT' or  db.buffs.anchorPoint == 'RIGHT' and 'RIGHT' or (db.buffs.anchorPoint:find('LEFT') and 'RIGHT' or 'LEFT')
 		buffs.initialAnchor = E.InversePoints[db.buffs.anchorPoint]
 
+		buffs.attachTo = attachTo
+		buffs.point = E.InversePoints[db.buffs.anchorPoint]
+		buffs.anchorPoint = db.buffs.anchorPoint
+		buffs.xOffset = x + db.buffs.xOffset
+		buffs.yOffset = y + db.buffs.yOffset + (E.PixelMode and (db.buffs.anchorPoint:find('TOP') and -1 or 1) or 0)
+
 		if db.buffs.enable then
 			buffs:Show()
 			UF:UpdateAuraIconSettings(buffs)
@@ -358,11 +376,43 @@ function UF:Update_BossFrames(frame, db)
 		debuffs["growth-x"] = db.debuffs.anchorPoint == 'LEFT' and 'LEFT' or  db.debuffs.anchorPoint == 'RIGHT' and 'RIGHT' or (db.debuffs.anchorPoint:find('LEFT') and 'RIGHT' or 'LEFT')
 		debuffs.initialAnchor = E.InversePoints[db.debuffs.anchorPoint]
 
+		debuffs.attachTo = attachTo
+		debuffs.point = E.InversePoints[db.debuffs.anchorPoint]
+		debuffs.anchorPoint = db.debuffs.anchorPoint
+		debuffs.xOffset = x + db.debuffs.xOffset
+		debuffs.yOffset = y + db.debuffs.yOffset
+
 		if db.debuffs.enable then
 			debuffs:Show()
 			UF:UpdateAuraIconSettings(debuffs)
 		else
 			debuffs:Hide()
+		end
+	end
+
+	--Smart Aura Position
+	do
+		local position = db.smartAuraPosition
+
+		if position == "BUFFS_ON_DEBUFFS" then
+			if db.debuffs.attachTo == "BUFFS" then
+				E:Print(format(L["This setting caused a conflicting anchor point, where '%s' would be attached to itself. Please check your anchor points. Setting '%s' to be attached to '%s'."], L["Buffs"], L["Debuffs"], L["Frame"]))
+				db.debuffs.attachTo = "FRAME"
+				frame.Debuffs.attachTo = frame
+			end
+			frame.Buffs.PostUpdate = nil
+			frame.Debuffs.PostUpdate = UF.UpdateBuffsHeaderPosition
+		elseif position == "DEBUFFS_ON_BUFFS" then
+			if db.buffs.attachTo == "DEBUFFS" then
+				E:Print(format(L["This setting caused a conflicting anchor point, where '%s' would be attached to itself. Please check your anchor points. Setting '%s' to be attached to '%s'."], L["Debuffs"], L["Buffs"], L["Frame"]))
+				db.buffs.attachTo = "FRAME"
+				frame.Buffs.attachTo = frame
+			end
+			frame.Buffs.PostUpdate = UF.UpdateDebuffsHeaderPosition
+			frame.Debuffs.PostUpdate = nil
+		else
+			frame.Buffs.PostUpdate = nil
+			frame.Debuffs.PostUpdate = nil
 		end
 	end
 
@@ -459,9 +509,15 @@ function UF:Update_BossFrames(frame, db)
 	--Debuff Highlight
 	do
 		local dbh = frame.DebuffHighlight
-		if E.db.unitframe.debuffHighlighting then
+		if E.db.unitframe.debuffHighlighting ~= 'NONE' then
 			if not frame:IsElementEnabled('DebuffHighlight') then
 				frame:EnableElement('DebuffHighlight')
+				frame.DebuffHighlightFilterTable = E.global.unitframe.DebuffHighlightColors
+				if E.db.unitframe.debuffHighlighting == 'GLOW' then
+					frame.DebuffHighlightBackdrop = true
+				else
+					frame.DebuffHighlightBackdrop = false
+				end						
 			end
 		else
 			if frame:IsElementEnabled('DebuffHighlight') then
@@ -469,12 +525,19 @@ function UF:Update_BossFrames(frame, db)
 			end
 		end
 	end
+	
+	for objectName, object in pairs(frame.customTexts) do
+		if (not db.customTexts) or (db.customTexts and not db.customTexts[objectName]) then
+			object:Hide()
+			frame.customTexts[objectName] = nil
+		end
+	end
 
 	if db.customTexts then
 		local customFont = UF.LSM:Fetch("font", UF.db.font)
 		for objectName, _ in pairs(db.customTexts) do
-			if not frame[objectName] then
-				frame[objectName] = frame.RaisedElementParent:CreateFontString(nil, 'OVERLAY')
+			if not frame.customTexts[objectName] then
+				frame.customTexts[objectName] = frame.RaisedElementParent:CreateFontString(nil, 'OVERLAY')
 			end
 
 			local objectDB = db.customTexts[objectName]
@@ -483,11 +546,11 @@ function UF:Update_BossFrames(frame, db)
 				customFont = UF.LSM:Fetch("font", objectDB.font)
 			end
 
-			frame[objectName]:FontTemplate(customFont, objectDB.size or UF.db.fontSize, objectDB.fontOutline or UF.db.fontOutline)
-			frame:Tag(frame[objectName], objectDB.text_format or '')
-			frame[objectName]:SetJustifyH(objectDB.justifyH or 'CENTER')
-			frame[objectName]:ClearAllPoints()
-			frame[objectName]:SetPoint(objectDB.justifyH or 'CENTER', frame, objectDB.justifyH or 'CENTER', objectDB.xOffset, objectDB.yOffset)
+			frame.customTexts[objectName]:FontTemplate(customFont, objectDB.size or UF.db.fontSize, objectDB.fontOutline or UF.db.fontOutline)
+			frame:Tag(frame.customTexts[objectName], objectDB.text_format or '')
+			frame.customTexts[objectName]:SetJustifyH(objectDB.justifyH or 'CENTER')
+			frame.customTexts[objectName]:ClearAllPoints()
+			frame.customTexts[objectName]:SetPoint(objectDB.justifyH or 'CENTER', frame, objectDB.justifyH or 'CENTER', objectDB.xOffset, objectDB.yOffset)
 		end
 	end
 
@@ -510,21 +573,33 @@ function UF:Update_BossFrames(frame, db)
 	frame:ClearAllPoints()
 	if INDEX == 1 then
 		if db.growthDirection == 'UP' then
-			frame:Point('BOTTOMRIGHT', BossHeaderMover, 'BOTTOMRIGHT') --Set to default position
-		else
-			frame:Point('TOPRIGHT', BossHeaderMover, 'TOPRIGHT') --Set to default position
+			frame:SetPoint('BOTTOMRIGHT', BossHeaderMover, 'BOTTOMRIGHT')
+		elseif db.growthDirection == 'RIGHT' then
+			frame:SetPoint('LEFT', BossHeaderMover, 'LEFT')
+		elseif db.growthDirection == 'LEFT' then
+			frame:SetPoint('RIGHT', BossHeaderMover, 'RIGHT')
+		else --Down
+			frame:SetPoint('TOPRIGHT', BossHeaderMover, 'TOPRIGHT')
 		end
 	else
 		if db.growthDirection == 'UP' then
-			frame:Point('BOTTOMRIGHT', _G['ElvUF_Boss'..INDEX-1], 'TOPRIGHT', 0, 12 + db.castbar.height)
-		else
-			frame:Point('TOPRIGHT', _G['ElvUF_Boss'..INDEX-1], 'BOTTOMRIGHT', 0, -(12 + db.castbar.height))
+			frame:SetPoint('BOTTOMRIGHT', _G['ElvUF_Boss'..INDEX-1], 'TOPRIGHT', 0, db.spacing)
+		elseif db.growthDirection == 'RIGHT' then
+			frame:SetPoint('LEFT', _G['ElvUF_Boss'..INDEX-1], 'RIGHT', db.spacing, 0)
+		elseif db.growthDirection == 'LEFT' then
+			frame:SetPoint('RIGHT', _G['ElvUF_Boss'..INDEX-1], 'LEFT', -db.spacing, 0)
+		else --Down
+			frame:SetPoint('TOPRIGHT', _G['ElvUF_Boss'..INDEX-1], 'BOTTOMRIGHT', 0, -db.spacing)
 		end
 	end
-
-	BossHeader:Width(UNIT_WIDTH)
-	BossHeader:Height(UNIT_HEIGHT + (UNIT_HEIGHT + 12 + db.castbar.height) * 3)
-
+	
+	if db.growthDirection == 'UP' or db.growthDirection == 'DOWN' then
+		BossHeader:SetWidth(UNIT_WIDTH)
+		BossHeader:SetHeight(UNIT_HEIGHT + ((UNIT_HEIGHT + db.spacing) * (MAX_BOSS_FRAMES -1)))
+	elseif db.growthDirection == 'LEFT' or db.growthDirection == 'RIGHT' then
+		BossHeader:SetWidth(UNIT_WIDTH + ((UNIT_WIDTH + db.spacing) * (MAX_BOSS_FRAMES -1)))
+		BossHeader:SetHeight(UNIT_HEIGHT)
+	end
 
 	if UF.db.colors.transparentHealth then
 		UF:ToggleTransparentStatusBar(true, frame.Health, frame.Health.bg)

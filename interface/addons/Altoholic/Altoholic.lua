@@ -264,28 +264,30 @@ local function MerchantFrame_UpdateMerchantInfoHook()
 	
 			if link then		-- if there's a valid item link in this slot ..
 				local itemID = addon:GetIDFromLink(link)
-				local _, _, _, _, _, itemType, itemSubType = GetItemInfo(itemID)
-				
-				local r, g, b = 1, 1, 1
-				
-				-- also applies to garrison blueprints
-				if IsBOPItemKnown(itemID) then		-- recipe is bop and already known, useless to alts : red.
-					r, g, b = 1, 0, 0
-				elseif itemType == L["ITEM_TYPE_RECIPE"] and itemSubType ~= L["ITEM_SUBTYPE_BOOK"] then		-- is it a recipe ?
-					local _, couldLearn, willLearn = addon:GetRecipeOwners(itemSubType, link, addon:GetRecipeLevel(link))
-					if #couldLearn == 0 and #willLearn == 0 then		-- nobody could learn the recipe, neither now nor later : red
+				if itemID and itemID ~= 0 then		-- if there's a valid item link 
+					local _, _, _, _, _, itemType, itemSubType = GetItemInfo(itemID)
+					
+					local r, g, b = 1, 1, 1
+					
+					-- also applies to garrison blueprints
+					if IsBOPItemKnown(itemID) then		-- recipe is bop and already known, useless to alts : red.
 						r, g, b = 1, 0, 0
-					elseif #couldLearn > 0 then							-- at least 1 could learn it : green (priority over "will learn")
-						r, g, b = 0, 1, 0
-					elseif #willLearn > 0 then								-- nobody could learn it now, but some could later : yellow
-						r, g, b = 1, 1, 0
+					elseif itemType == L["ITEM_TYPE_RECIPE"] and itemSubType ~= L["ITEM_SUBTYPE_BOOK"] then		-- is it a recipe ?
+						local _, couldLearn, willLearn = addon:GetRecipeOwners(itemSubType, link, addon:GetRecipeLevel(link))
+						if #couldLearn == 0 and #willLearn == 0 then		-- nobody could learn the recipe, neither now nor later : red
+							r, g, b = 1, 0, 0
+						elseif #couldLearn > 0 then							-- at least 1 could learn it : green (priority over "will learn")
+							r, g, b = 0, 1, 0
+						elseif #willLearn > 0 then								-- nobody could learn it now, but some could later : yellow
+							r, g, b = 1, 1, 0
+						end
 					end
-				end
-				
-				local button = _G["MerchantItem" .. i .. "ItemButton"]
-				if button then
-					SetItemButtonTextureVertexColor(button, r, g, b)
-					SetItemButtonNormalTextureVertexColor(button, r, g, b)
+					
+					local button = _G["MerchantItem" .. i .. "ItemButton"]
+					if button then
+						SetItemButtonTextureVertexColor(button, r, g, b)
+						SetItemButtonNormalTextureVertexColor(button, r, g, b)
+					end
 				end
 			end
 		end
@@ -321,8 +323,9 @@ function addon:OnEnable()
 
 	InitLocalization()
 	addon:SetupOptions()
+	-- Only needed in debug
+	-- addon.Profiler:Init()
 	addon.Tasks:Init()
-	addon.Profiler:Init()
 	addon.Events:Init()
 	addon:InitTooltip()
 
@@ -379,7 +382,9 @@ function addon:OnShow()
 	
 	if not addon.Tabs.current then
 		addon.Tabs:OnClick("Summary")
-		addon.Tabs.Summary:MenuItem_OnClick(addon:GetOption("UI.Tabs.Summary.CurrentMode"))
+		-- addon.Tabs.Summary:MenuItem_OnClick(addon:GetOption("UI.Tabs.Summary.CurrentMode"))
+		local mode = addon:GetOption("UI.Tabs.Summary.CurrentMode")
+		AltoholicTabSummary["MenuItem"..mode]:Item_OnClick()
 	end
 end
 
@@ -398,12 +403,14 @@ function Altoholic:ScrollFrameUpdate(desc)
 		_G[ entry..i ]:Hide()
 	end
 	
-	local offset = addon.ScrollFrames:GetOffset( _G[ frame.."ScrollFrame" ] )
+	local scrollFrame = _G[ frame.."ScrollFrame" ]
+	local offset = scrollFrame:GetOffset()
+
 	-- call the update handler
 	desc:Update(offset, entry, desc)
 	
 	local last = (desc:GetSize() < desc.NumLines) and desc.NumLines or desc:GetSize()
-	addon.ScrollFrames:Update( _G[ frame.."ScrollFrame" ], last, desc.NumLines, desc.LineHeight);
+	scrollFrame:Update(last, desc.NumLines, desc.LineHeight);
 end
 
 function addon:Item_OnEnter(frame)
@@ -501,7 +508,10 @@ end
 
 function addon:GetIDFromLink(link)
 	if link then
-		return tonumber(link:match("item:(%d+)"))
+		local linktype, id = string.match(link, "|H([^:]+):(%d+)")
+		if id then
+			return tonumber(id);
+		end
 	end
 end
 
@@ -674,38 +684,6 @@ function addon:ShowWidgetTooltip(frame)
 	AltoTooltip:Show(); 
 end
 
-function addon:DrawCharacterTooltip(self, character)
-	local name = DS:GetColoredCharacterName(character)
-	if not name then return end
-
-	AltoTooltip:SetOwner(self, "ANCHOR_LEFT");
-	AltoTooltip:ClearLines();
-	AltoTooltip:AddDoubleLine(name, DS:GetColoredCharacterFaction(character))
-
-	AltoTooltip:AddLine(format("%s %s |r%s %s", L["Level"], 
-		colors.green..DS:GetCharacterLevel(character), DS:GetCharacterRace(character),	DS:GetCharacterClass(character)),1,1,1)
-
-	local zone, subZone = DS:GetLocation(character)
-	AltoTooltip:AddLine(format("%s: %s |r(%s|r)", L["Zone"], colors.gold..zone, colors.gold..subZone),1,1,1)
-	
-	local restXP = DS:GetRestXP(character)
-	if restXP and restXP > 0 then
-		AltoTooltip:AddLine(format("%s: %s", L["Rest XP"], colors.green..restXP),1,1,1)
-	end
-	
-	AltoTooltip:AddLine("Average iLevel: " .. colors.green .. format("%.1f", DS:GetAverageItemLevel(character)),1,1,1);	
-
-	if IsAddOnLoaded("DataStore_Achievements") then
-		local numAchievements = DS:GetNumCompletedAchievements(character) or 0
-		if numAchievements > 0 then
-			AltoTooltip:AddLine(ACHIEVEMENTS_COMPLETED ..": " .. colors.green .. DS:GetNumCompletedAchievements(character) .. "/"..DS:GetNumAchievements(character))
-			AltoTooltip:AddLine(ACHIEVEMENT_TITLE ..": " .. colors.green .. DS:GetNumAchievementPoints(character))
-		end
-	end
-	
-	AltoTooltip:Show();
-end
-
 function addon:DrawFollowerTooltip(frame)
 	local character = frame.key
 	if not character then return end
@@ -761,6 +739,35 @@ function addon:DDM_Initialize(frame, func)
 	frame.initialize = func
 end
 
+local ICON_CHARACTERS_ALLIANCE = "Interface\\Icons\\Achievement_Character_Gnome_Female"
+local ICON_CHARACTERS_HORDE = "Interface\\Icons\\Achievement_Character_Orc_Male"
+-- mini easter egg icons, if you read the code using these, please don't spoil it :)
+local ICON_CHARACTERS_MIDSUMMER = "Interface\\Icons\\INV_Misc_Toy_07"
+local ICON_CHARACTERS_HALLOWSEND_ALLIANCE = "Interface\\Icons\\INV_Mask_06"
+local ICON_CHARACTERS_HALLOWSEND_HORDE = "Interface\\Icons\\INV_Mask_03"
+local ICON_CHARACTERS_DOTD_ALLIANCE = "Interface\\Icons\\INV_Misc_Bone_HumanSkull_02"
+local ICON_CHARACTERS_DOTD_HORDE = "Interface\\Icons\\INV_Misc_Bone_OrcSkull_01"
+local ICON_CHARACTERS_WINTERVEIL_ALLIANCE = "Interface\\Icons\\Achievement_WorldEvent_LittleHelper"
+local ICON_CHARACTERS_WINTERVEIL_HORDE = "Interface\\Icons\\Achievement_WorldEvent_XmasOgre"
+
+function addon:GetCharacterIcon()
+	local faction = UnitFactionGroup("player")
+	local day = (tonumber(date("%m")) * 100) + tonumber(date("%d"))	-- ex: dec 15 = 1215, for easy tests below
+	local icon = (faction == "Alliance") and ICON_CHARACTERS_ALLIANCE or ICON_CHARACTERS_HORDE
+	
+	if (day >= 1215) or (day <= 102) then				-- winter veil
+		icon = (faction == "Alliance") and ICON_CHARACTERS_WINTERVEIL_ALLIANCE or ICON_CHARACTERS_WINTERVEIL_HORDE
+	elseif (day >= 621) and (day <= 704) then			-- midsummer
+		icon = ICON_CHARACTERS_MIDSUMMER
+	elseif (day >= 1018) and (day <= 1031) then		-- hallow's end
+		icon = (faction == "Alliance") and ICON_CHARACTERS_HALLOWSEND_ALLIANCE or ICON_CHARACTERS_HALLOWSEND_HORDE
+	elseif (day >= 1101) and (day <= 1102) then		-- day of the dead
+		icon = (faction == "Alliance") and ICON_CHARACTERS_DOTD_ALLIANCE or ICON_CHARACTERS_DOTD_HORDE
+	end
+	
+	return icon
+end
+
 
 -- ** Calendar stuff **
 local calendarFirstWeekday = 1
@@ -794,14 +801,14 @@ end
 
 
 -- ** Equipment ** 
--- 02/09/2012 : Global to the addon, should be loaded in the core, ideally code should be in its own file. This will happen later.
+-- 02/09/2012 : Global to the add-on, should be loaded in the core, ideally code should be in its own file. This will happen later.
 
 addon.Equipment = {}
 
 local ns = addon.Equipment		-- ns = namespace
 
 -- These two tables are necessary to find equivalences between INVTYPEs returned by GetItemInfo and the actual equipment slots.
--- For instance, the "ranged" slot can contain bows/guns/wans/relics/thrown weapons.
+-- For instance, the "ranged" slot can contain bows/guns/wands/relics/thrown weapons.
 local inventoryTypes = {
 	["INVTYPE_HEAD"] = 1,		-- 1 means first entry in the EquipmentSlots table (just below this one)
 	["INVTYPE_SHOULDER"] = 2,

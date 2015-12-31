@@ -1,7 +1,7 @@
 
 MogItDB = {
 	["global"] = {
-		["version"] = "3.4.0",
+		["version"] = "3.5.6",
 	},
 	["profileKeys"] = {
 		["Metal - Illidan"] = "Comet - Illidan",
@@ -26,18 +26,14 @@ MogItDB = {
 					["x"] = 0,
 				}, -- [1]
 			},
-			["gridHeight"] = 399.999969482422,
 			["gridWidth"] = 599.999938964844,
+			["gridHeight"] = 399.999969482422,
 			["minimap"] = {
 				["minimapPos"] = 221.510638623936,
 				["hide"] = true,
 			},
 		},
 		["Comet - Illidan"] = {
-			["minimap"] = {
-				["minimapPos"] = 173.480150276523,
-				["hide"] = true,
-			},
 			["tooltipDress"] = true,
 			["previewProps"] = {
 				{
@@ -50,6 +46,10 @@ MogItDB = {
 			["gridHeight"] = 399.999877929688,
 			["y"] = 0,
 			["x"] = 0,
+			["minimap"] = {
+				["minimapPos"] = 173.480150276523,
+				["hide"] = true,
+			},
 			["gridWidth"] = 599.999938964844,
 		},
 	},
@@ -65,6 +65,9 @@ MogItWishlist = {
 		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
 		["Evan - Illidan"] = "Evan - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
+	},
+	["global"] = {
+		["version"] = 60200,
 	},
 	["profiles"] = {
 		["Metal - Illidan"] = {

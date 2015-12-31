@@ -1,8 +1,8 @@
-## Interface: 60100
+## Interface: 60200
 ## Title: Hansgar And Franzok Assist
 ## Notes: Helps with Smart Stampers on Mythic during this encounter.
 ## SavedVariables: Hansgar_And_Franzok_DB
-## X-Curse-Packaged-Version: r11
+## X-Curse-Packaged-Version: r28
 ## X-Curse-Project-Name: Hansgar And Franzok Assist
 ## X-Curse-Project-ID: hansgar_and_franzok_assist
 ## X-Curse-Repository-ID: wow/hansgar_and_franzok_assist/mainline

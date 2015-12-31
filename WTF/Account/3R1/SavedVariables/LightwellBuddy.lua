@@ -3,19 +3,75 @@ CHTLWBDB = {
 	["profileKeys"] = {
 		["Venala - Cho'gall"] = "Default",
 		["Combustion - Illidan"] = "Default",
-		["Centromere - Dark Iron"] = "Default",
+		["Metal - Illidan"] = "Default",
 		["Natal - Illidan"] = "Default",
 		["Plane - Illidan"] = "Default",
 		["Colton - Dark Iron"] = "Default",
 		["Natalan - Dark Iron"] = "Default",
 		["Ereinion - Dark Iron"] = "Default",
-		["Natalan - Illidan"] = "Default",
-		["Comet - Illidan"] = "Default",
 		["Pandatal - Illidan"] = "Default",
+		["Comet - Illidan"] = "Default",
+		["Natalan - Illidan"] = "Default",
 		["Evan - Illidan"] = "Default",
-		["Metal - Illidan"] = "Default",
+		["Centromere - Dark Iron"] = "Default",
 	},
 	["profiles"] = {
+		["Evan - Illidan"] = {
+			["multiconsumptionPhrases"] = {
+				"%u, server lag has caused an extra lightwell charge to be wasted. To prevent this from happening, please do not double-click the lightwell.", -- [1]
+			},
+			["usePhrases"] = {
+				"Thank you for using my Lightwell, %u. (%c of %m Charges Left)", -- [1]
+				"%u has used the lightwell! (%c of %m Charges Left)", -- [2]
+			},
+			["disappearPhrases"] = {
+				"Lightwell has disappeared early! Most likely due to me running out of range or getting hit for more than 30%!", -- [1]
+			},
+			["idlePhrases"] = {
+				"Lightwell:~~So lonely, oh so lonely~~ (%i seconds idle, %c charges remaining)", -- [1]
+			},
+			["summonPhrases"] = {
+				"Please use my Lightwell! (%m Charges)", -- [1]
+				"Lightwell Summoned! (%m Charges)", -- [2]
+			},
+			["emptyPhrases"] = {
+				"Lightwell empty, thank you!", -- [1]
+			},
+			["wastePhrases"] = {
+				"Thank you for using my Lightwell, %u, but please try to make sure you need it. (%c of %m Charges Left)", -- [1]
+			},
+			["expirePhrases"] = {
+				"Lightwell expired! (%c Charges Wasted)", -- [1]
+			},
+		},
+		["Illidan"] = {
+			["multiconsumptionPhrases"] = {
+				"%u, server lag has caused an extra lightwell charge to be wasted. To prevent this from happening, please do not double-click the lightwell.", -- [1]
+			},
+			["usePhrases"] = {
+				"Thank you for using my Lightwell, %u. (%c of %m Charges Left)", -- [1]
+				"%u has used the lightwell! (%c of %m Charges Left)", -- [2]
+			},
+			["disappearPhrases"] = {
+				"Lightwell has disappeared early! Most likely due to me running out of range or getting hit for more than 30%!", -- [1]
+			},
+			["idlePhrases"] = {
+				"Lightwell:~~So lonely, oh so lonely~~ (%i seconds idle, %c charges remaining)", -- [1]
+			},
+			["summonPhrases"] = {
+				"Please use my Lightwell! (%m Charges)", -- [1]
+				"Lightwell Summoned! (%m Charges)", -- [2]
+			},
+			["emptyPhrases"] = {
+				"Lightwell empty, thank you!", -- [1]
+			},
+			["wastePhrases"] = {
+				"Thank you for using my Lightwell, %u, but please try to make sure you need it. (%c of %m Charges Left)", -- [1]
+			},
+			["expirePhrases"] = {
+				"Lightwell expired! (%c Charges Wasted)", -- [1]
+			},
+		},
 		["Default"] = {
 			["disappearPhrases"] = {
 				"Lightwell has disappeared early! Most likely due to me running out of range or getting hit for more than 30%!", -- [1]
@@ -65,7 +121,13 @@ CHTLWBDB = {
 			["counterBorder"] = "None",
 			["counterLockPosition"] = true,
 			["msgOnLastUse"] = false,
-			["counterBorderSize"] = 1,
+			["emptyPhrases"] = {
+				"Lightwell empty!", -- [1]
+				["used"] = {
+					1, -- [1]
+				},
+				["messageLastTimeSent"] = 1372134718,
+			},
 			["useChannel"] = "WHISPER",
 			["idlePhrases"] = {
 				"Lightwell:~~So lonely, oh so lonely~~ (%i seconds idle, %c charges remaining)", -- [1]
@@ -75,71 +137,9 @@ CHTLWBDB = {
 				["messageLastTimeSent"] = 1372192068,
 			},
 			["counterFont"] = "ABF",
-			["emptyPhrases"] = {
-				"Lightwell empty!", -- [1]
-				["used"] = {
-					1, -- [1]
-				},
-				["messageLastTimeSent"] = 1372134718,
-			},
+			["counterBorderSize"] = 1,
 			["talkToStrangers"] = false,
 			["messagingEnabled"] = false,
-		},
-		["Illidan"] = {
-			["multiconsumptionPhrases"] = {
-				"%u, server lag has caused an extra lightwell charge to be wasted. To prevent this from happening, please do not double-click the lightwell.", -- [1]
-			},
-			["usePhrases"] = {
-				"Thank you for using my Lightwell, %u. (%c of %m Charges Left)", -- [1]
-				"%u has used the lightwell! (%c of %m Charges Left)", -- [2]
-			},
-			["disappearPhrases"] = {
-				"Lightwell has disappeared early! Most likely due to me running out of range or getting hit for more than 30%!", -- [1]
-			},
-			["wastePhrases"] = {
-				"Thank you for using my Lightwell, %u, but please try to make sure you need it. (%c of %m Charges Left)", -- [1]
-			},
-			["emptyPhrases"] = {
-				"Lightwell empty, thank you!", -- [1]
-			},
-			["summonPhrases"] = {
-				"Please use my Lightwell! (%m Charges)", -- [1]
-				"Lightwell Summoned! (%m Charges)", -- [2]
-			},
-			["idlePhrases"] = {
-				"Lightwell:~~So lonely, oh so lonely~~ (%i seconds idle, %c charges remaining)", -- [1]
-			},
-			["expirePhrases"] = {
-				"Lightwell expired! (%c Charges Wasted)", -- [1]
-			},
-		},
-		["Evan - Illidan"] = {
-			["multiconsumptionPhrases"] = {
-				"%u, server lag has caused an extra lightwell charge to be wasted. To prevent this from happening, please do not double-click the lightwell.", -- [1]
-			},
-			["usePhrases"] = {
-				"Thank you for using my Lightwell, %u. (%c of %m Charges Left)", -- [1]
-				"%u has used the lightwell! (%c of %m Charges Left)", -- [2]
-			},
-			["disappearPhrases"] = {
-				"Lightwell has disappeared early! Most likely due to me running out of range or getting hit for more than 30%!", -- [1]
-			},
-			["wastePhrases"] = {
-				"Thank you for using my Lightwell, %u, but please try to make sure you need it. (%c of %m Charges Left)", -- [1]
-			},
-			["emptyPhrases"] = {
-				"Lightwell empty, thank you!", -- [1]
-			},
-			["summonPhrases"] = {
-				"Please use my Lightwell! (%m Charges)", -- [1]
-				"Lightwell Summoned! (%m Charges)", -- [2]
-			},
-			["idlePhrases"] = {
-				"Lightwell:~~So lonely, oh so lonely~~ (%i seconds idle, %c charges remaining)", -- [1]
-			},
-			["expirePhrases"] = {
-				"Lightwell expired! (%c Charges Wasted)", -- [1]
-			},
 		},
 		["PRIEST"] = {
 			["multiconsumptionPhrases"] = {
@@ -152,18 +152,18 @@ CHTLWBDB = {
 			["disappearPhrases"] = {
 				"Lightwell has disappeared early! Most likely due to me running out of range or getting hit for more than 30%!", -- [1]
 			},
-			["wastePhrases"] = {
-				"Thank you for using my Lightwell, %u, but please try to make sure you need it. (%c of %m Charges Left)", -- [1]
-			},
-			["emptyPhrases"] = {
-				"Lightwell empty, thank you!", -- [1]
+			["idlePhrases"] = {
+				"Lightwell:~~So lonely, oh so lonely~~ (%i seconds idle, %c charges remaining)", -- [1]
 			},
 			["summonPhrases"] = {
 				"Please use my Lightwell! (%m Charges)", -- [1]
 				"Lightwell Summoned! (%m Charges)", -- [2]
 			},
-			["idlePhrases"] = {
-				"Lightwell:~~So lonely, oh so lonely~~ (%i seconds idle, %c charges remaining)", -- [1]
+			["emptyPhrases"] = {
+				"Lightwell empty, thank you!", -- [1]
+			},
+			["wastePhrases"] = {
+				"Thank you for using my Lightwell, %u, but please try to make sure you need it. (%c of %m Charges Left)", -- [1]
 			},
 			["expirePhrases"] = {
 				"Lightwell expired! (%c Charges Wasted)", -- [1]

@@ -1,0 +1,12 @@
+tag v2.3.8
+b603d103e3e3e9eb86e9fba31db4624161903f13
+Ethan Centaurai <ethancentaurai@outlook.com>
+2015-08-09 00:32:31 +0100
+
+Tagging as v2.3.8.
+
+
+--------------------
+
+Ethan Centaurai:
+	- Prevented an error that occurred when using your hearthstone with the tradeskill window open.

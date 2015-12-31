@@ -12,8 +12,8 @@ BINDING_NAME_AngryAssign_LOCK = "Toggle Lock"
 BINDING_NAME_AngryAssign_DISPLAY = "Toggle Display"
 BINDING_NAME_AngryAssign_OUTPUT = "Output Assignment to Chat"
 
-local AngryAssign_Version = 'v1.6.0'
-local AngryAssign_Timestamp = '20150310061316'
+local AngryAssign_Version = 'v1.6.1'
+local AngryAssign_Timestamp = '20150717175821'
 
 local protocolVersion = 1
 local comPrefix = "AnAss"..protocolVersion
@@ -633,7 +633,7 @@ function AngryAssign:CreateWindow()
 	AngryAssign.window = window
 
 	AngryAssign_Window = window.frame
-	window.frame:SetMinResize(660, 400)
+	window.frame:SetMinResize(700, 400)
 	window.frame:SetFrameStrata("HIGH")
 	window.frame:SetFrameLevel(1)
 	tinsert(UISpecialFrames, "AngryAssign_Window")
@@ -700,7 +700,7 @@ function AngryAssign:CreateWindow()
 	button_output:SetWidth(80)
 	button_output:SetHeight(22)
 	button_output:ClearAllPoints()
-	button_output:SetPoint("BOTTOMLEFT", button_restore.frame, "BOTTOMRIGHT", 5, 0)
+	button_output:SetPoint("BOTTOMLEFT", button_restore.frame, "BOTTOMRIGHT", 6, 0)
 	button_output:SetCallback("OnClick", AngryAssign_OutputDisplayed)
 	tree:AddChild(button_output)
 	window.button_output = button_output

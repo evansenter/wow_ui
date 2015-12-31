@@ -1,12 +1,13 @@
 --[[
+
 	This file is part of 'Masque: Caith', an add-on for World of Warcraft. For license information,
 	please see the included License.txt file.
 
-	* File.....: Caith.lua
-	* Revision.: 93
-	* Author...: StormFX
+	* File...: Caith.lua
+	* Date...: 2015-10-19T22:37:00Z
+	* Hash...: 13f5181
+	* Author.: StormFX
 
-	Caith Skin
 ]]
 
 local MSQ = LibStub("Masque", true)
@@ -15,9 +16,9 @@ if not MSQ then return end
 -- Caith
 MSQ:AddSkin("Caith", {
 	Author = "StormFX",
-	Version = "6.1.0",
+	Version = "6.2.1",
 	Shape = "Square",
-	Masque_Version = 60100,
+	Masque_Version = 60200,
 	Backdrop = {
 		Width = 42,
 		Height = 42,
@@ -34,6 +35,10 @@ MSQ:AddSkin("Caith", {
 		Texture = [[Interface\AddOns\Masque_Caith\Textures\Overlay]],
 	},
 	Cooldown = {
+		Width = 36,
+		Height = 36,
+	},
+	ChargeCooldown = {
 		Width = 36,
 		Height = 36,
 	},

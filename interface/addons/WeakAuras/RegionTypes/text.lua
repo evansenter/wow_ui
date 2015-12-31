@@ -33,6 +33,8 @@ end
 local function modify(parent, region, data)
     local text = region.text;
 
+    region.useAuto = WeakAuras.CanHaveAuto(data);
+
     if(data.frameStrata == 1) then
         region:SetFrameStrata(region:GetParent():GetFrameStrata());
     else
@@ -42,9 +44,12 @@ local function modify(parent, region, data)
     local fontPath = SharedMedia:Fetch("font", data.font);
     text:SetFont(fontPath, data.fontSize <= 35 and data.fontSize or 35, data.outline and "OUTLINE" or nil);
     text:SetTextHeight(data.fontSize);
+    if not text:GetFont() then -- Font invalid, set the font but keep the setting
+        text:SetFont("Fonts\\FRIZQT__.TTF", data.fontSize <= 35 and data.fontSize or 35, data.outline and "OUTLINE" or nil);
+    end
     if text:GetFont() then
         text:SetText(data.displayText);
-    else end
+    end
     text.displayText = data.displayText;
     text:SetJustifyH(data.justify);
 
@@ -62,12 +67,10 @@ local function modify(parent, region, data)
 
     local function UpdateText()
         local textStr = data.displayText;
-        for symbol, v in pairs(WeakAuras.dynamic_texts) do
-            textStr = textStr:gsub(symbol, region.values[v.value] or "?");
-        end
+        textStr = WeakAuras.ReplacePlaceHolders(textStr, region.values);
 
         if(textStr ~= text.displayText) then
-            text:SetText(textStr);
+            if text:GetFont() then text:SetText(textStr); end
         end
         if(#textStr ~= #text.displayText) then
             data.width = text:GetWidth();
@@ -127,12 +130,14 @@ local function modify(parent, region, data)
 
     local function UpdateTime()
         local remaining = region.expirationTime - GetTime();
-        local progress = remaining / region.duration;
-
-        if(data.inverse) then
-            progress = 1 - progress;
+        local progress
+        if region.duration > 0 then
+            progress = remaining / region.duration;
+            if(data.inverse) then
+                progress = 1 - progress;
+            end
+            progress = progress > 0.0001 and progress or 0.0001;
         end
-        progress = progress > 0.0001 and progress or 0.0001;
 
         local remainingStr = "";
         if(remaining == math.huge) then
@@ -215,7 +220,8 @@ local function modify(parent, region, data)
 
     function region:SetIcon(path)
         local icon = (
-            WeakAuras.CanHaveAuto(data)
+            region.useAuto
+            and path
             and path ~= ""
             and path
             or data.displayIcon
@@ -226,7 +232,7 @@ local function modify(parent, region, data)
     end
 
     function region:SetName(name)
-        region.values.name = WeakAuras.CanHaveAuto(data) and name or data.id;
+        region.values.name = name or data.id;
         UpdateText();
     end
 

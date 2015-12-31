@@ -102,9 +102,7 @@ L.ShowLoadMessage 			= "Visualizza i messaggi di caricamento dei moduli in chat"
 L.ShowPizzaMessage 			= "Visualizza i messaggi inviati a tutti in chat"
 L.CombatMessages			= "Messaggi di Combattimento - Opzioni"
 L.ShowEngageMessage 		= "Visualizza in chat il messaggio di Ingaggio"
-L.ShowKillMessage 			= "Visualizza in chat il messaggio di uccisione"
-L.ShowWipeMessage 			= "Visualizza in chat il messaggio di sconfitta"
-L.ShowRecoveryMessage 		= "Visualizza in chat il messaggio di recupero di un timer"
+L.ShowDefeatMessage 		= "Visualizza in chat il messaggio di uccisione"
 L.WhisperMessages			= "Sussurri - Opzioni"
 L.AutoRespond 				= "Rispondi automaticamente ai sussurri mentre stai combattendo"
 L.EnableStatus 				= "Rispondi ai sussurri con lo stato del combattimento"
@@ -134,7 +132,6 @@ L.ClickThrough				= "Disabilita i click sulle barre"
 -- Tab: Spec Warn Frame
 L.Panel_SpecWarnFrame		= "Messaggi Speciali"
 L.Area_SpecWarn				= "Messaggi Speciali - Opzioni"
-L.SpecWarn_Enabled			= "Visualizza Messaggi Speciali per le abilita' dei Boss"
 L.SpecWarn_FlashFrame		= "Fai Lampeggiare lo schermo per i Messaggi Speciali"
 L.SpecWarn_Font				= "Carattere usato per i Messaggi Speciali"
 L.SpecWarn_DemoButton		= "Esempio"
@@ -163,7 +160,6 @@ L.BigBrotherAnnounceToRaid		= "Annuncia i risultati di Big Brother all'incursion
 
 L.Area_SpamFilter_Outgoing		= "Filtri Globali - Opzioni"
 L.SpamBlockNoShowAnnounce		= "Non visualizzare annunci o suoni"
-L.SpamBlockNoSendWhisper		= "Non mandare sussurri ad altri giocatori"
 L.SpamBlockNoSetIcon			= "Non impostare icone sui giocatori"
 
 

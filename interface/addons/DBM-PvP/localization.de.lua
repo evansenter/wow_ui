@@ -23,6 +23,8 @@ L:SetOptionLocalization({
 })
 
 L:SetMiscLocalization({
+	BgStart60 	= "Die Schlacht beginnt in 1 Minute.",
+	BgStart30 	= "Die Schlacht beginnt in 30 Sekunden. Macht Euch bereit!",
 	ArenaInvite	= "Arena-Einladung"
 })
 
@@ -44,7 +46,8 @@ L:SetOptionLocalization({
 })
 
 L:SetMiscLocalization({
-	Start15 = "Noch fünfzehn Sekunden bis der Arenakampf beginnt!"
+	Start15	= "Noch fünfzehn Sekunden bis der Arenakampf beginnt!",
+	highmaulArena = "Der Kampf um die Vorherrschaft beginnt in 30 Sekunden!"
 })
 
 ----------------------
@@ -147,8 +150,6 @@ L:SetOptionLocalization({
 })
 
 L:SetMiscLocalization({
-	BgStart60 			= "Die Schlacht beginnt in 1 Minute.",
-	BgStart30 			= "Die Schlacht beginnt in 30 Sekunden. Macht Euch bereit!",
 	InfoErrorText		= "Die Zielauswahlfunktion für den Flaggenträger wird bei Kampfende wiederhergestellt.",
 	ExprFlagPickUp		= "(.+) hat die Flagge der (%w+) aufgenommen!", -- code is aware of the switched match groups for deDE
 	ExprFlagCaptured	= "(.+) hat die Flagge der (%w+) errungen!",
@@ -214,8 +215,6 @@ L:SetOptionLocalization({
 })
 
 L:SetMiscLocalization({
-	BgStart60 			= "Die Schlacht beginnt in 1 Minute.",
-	BgStart30 			= "Die Schlacht beginnt in 30 Sekunden. Macht Euch bereit!",
 	InfoErrorText		= "Die Zielauswahlfunktion für den Flaggenträger wird bei Kampfende wiederhergestellt.",
 	ExprFlagPickUp		= "(.+) hat die Flagge der (%w+) aufgenommen!", -- code is aware of the switched match groups for deDE
 	ExprFlagCaptured	= "(.+) hat die Flagge der (%w+) errungen!",

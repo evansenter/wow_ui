@@ -16,11 +16,13 @@
 				self:RegisterEvent("PLAYER_FLAGS_CHANGED");
 				self:RegisterEvent("SCREENSHOT_SUCCEEDED");
 				self:RegisterEvent("BATTLEFIELD_MGR_ENTRY_INVITE");
+				self:RegisterEvent("SCREENSHOT_FAILED");
 				print("WoWNotifier has registered.");				
 				print("WoWNotifier: Use /wn help or /wownotifier help to get a list of commands!");	
 				self.TimeSinceLastUpdate = 0;
 				self.HasAFKNotified = false;
 				self.tempf = nil;
+				self.IsGXing = false;
 			</OnLoad>
 			<OnEvent function="WoWNotifier_OnEvent">				
 			</OnEvent>

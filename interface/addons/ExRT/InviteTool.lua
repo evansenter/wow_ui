@@ -1,10 +1,12 @@
 local GlobalAddonName, ExRT = ...
 
-local UnitInGuild, IsInRaid = ExRT.mds.UnitInGuild, IsInRaid
+local UnitInGuild, IsInRaid = ExRT.F.UnitInGuild, IsInRaid
 
 local VExRT = nil
 
 local module = ExRT.mod:New("InviteTool",ExRT.L.invite,nil,true)
+local ELib,L = ExRT.lib,ExRT.L
+
 module.db.converttoraid = false
 module.db.massinv = false
 module.db.invWordsArray = {}
@@ -24,7 +26,7 @@ hooksecurefunc("DemoteAssistant", function (unit)
 	end
 	local name = UnitName(unit)
 	if name then
-		name = ExRT.mds.delUnitNameServer(name)
+		name = ExRT.F.delUnitNameServer(name)
 		module.db.demotedPlayers[ name ] = true
 	end
 end)
@@ -32,7 +34,7 @@ end)
 local _InviteUnit = InviteUnit
 local function InviteUnit(name)
 	if name and name:len() >= 45 then
-		local shortName = ExRT.mds.delUnitNameServer(name)
+		local shortName = ExRT.F.delUnitNameServer(name)
 		_InviteUnit(shortName)
 	else
 		_InviteUnit(name)
@@ -41,7 +43,7 @@ end
 
 local function CheckUnitInRaid(name,shortName)
 	if not shortName then
-		shortName = ExRT.mds.delUnitNameServer(name)
+		shortName = ExRT.F.delUnitNameServer(name)
 	end
 	if UnitName(name) or UnitName(shortName) then
 		return true
@@ -56,7 +58,7 @@ local function InviteBut()
 	module.db.converttoraid = true
 	for i=1,gplayers do
 		local name,_,rankIndex,level,_,_,_,_,online,_,_,_,_,isMobile = GetGuildRosterInfo(i)
-		local sName = ExRT.mds.delUnitNameServer(name)
+		local sName = ExRT.F.delUnitNameServer(name)
 		if name and rankIndex < VExRT.InviteTool.Rank and online and level == 100 and not isMobile and not CheckUnitInRaid(name,sName) and sName ~= module.db.playerFullName then
 			if inRaid then
 				InviteUnit(name)
@@ -186,58 +188,41 @@ end
 function module.options:Load()
 	self:CreateTilte()
 
-	self.dropDown = ExRT.lib.CreateDropDown(self,"TOPLEFT",-3,-30,200)
-	UIDropDownMenu_Initialize(self.dropDown, function(self, level, menuList)
-		ExRT.mds.FixDropDown(200)
-		local info = UIDropDownMenu_CreateInfo()
-		if IsInGuild() then
-			local granks = GuildControlGetNumRanks()
-			for i=granks,1,-1 do
-				local grankname = GuildControlGetRankName(i) or ""
-				info.text, info.checked = grankname, VExRT.InviteTool.Rank == i
-				info.menuList, info.hasArrow, info.arg1, info.minWidth = i, false, i, 200
-				info.func = self.SetValue
-				UIDropDownMenu_AddButton(info)
-			end
-		end
-	end)
+	self.dropDown = ELib:DropDown(self,205,10):Point(5,-30):Size(220)
 	
 	function self.dropDown:SetValue(newValue)
 		VExRT.InviteTool.Rank = newValue
-		module.options.dropDown:SetText( ExRT.L.inviterank.." " .. GuildControlGetRankName(newValue) or "")
-		CloseDropDownMenus()
+		module.options.dropDown:SetText( L.inviterank.." " .. GuildControlGetRankName(newValue) or "")
+		ELib:DropDownClose()
+		for i=1,#module.options.dropDown.List do
+			module.options.dropDown.List[i].checkState = VExRT.InviteTool.Rank == module.options.dropDown.List[i].arg1
+		end
+	end
+
+	if IsInGuild() then
+		local granks = GuildControlGetNumRanks()
+		for i=granks,1,-1 do
+			self.dropDown.List[#self.dropDown.List + 1] = {
+				text = GuildControlGetRankName(i) or "",
+				checkState = VExRT.InviteTool.Rank == i,
+				radio = true,
+				func = self.dropDown.SetValue,
+				arg1 = i,
+			}
+		end
+		self.dropDown.Lines = #self.dropDown.List
 	end
 	
-	self.butInv = ExRT.lib.CreateButton(self,200,22,nil,235,-32,ExRT.L.inviteinv)
-	self.butInv:SetScript("OnClick",function()
-		InviteBut()
-	end)  
+	self.butInv = ELib:Button(self,L.inviteinv):Size(200,20):Point(235,-30):OnClick(function() InviteBut() end)
+	self.butInv.txt = ELib:Text(self,"/rt inv",11):Size(100,20):Point("LEFT",self.butInv,"RIGHT",5,0)
 	
-	self.butInv.txt = ExRT.lib.CreateText(self,100,22,nil,445,-32,nil,nil,nil,11,"/rt inv")
-	
-	self.butDisband = ExRT.lib.CreateButton(self,422,22,nil,13,-60,ExRT.L.invitedis)
-	self.butDisband:SetScript("OnClick",function()
-		DisbandBut()
-	end)  
-	self.butDisband.txt = ExRT.lib.CreateText(self,100,22,nil,445,-60,nil,nil,nil,11,"/rt dis")
-	
-	self.butReinvite = ExRT.lib.CreateButton(self,422,22,nil,13,-85,ExRT.L.inviteReInv)
-	self.butReinvite:SetScript("OnClick",function()
-		ReinviteBut()
-	end) 
-	self.butReinvite.txt = ExRT.lib.CreateText(self,100,22,nil,445,-85,nil,nil,nil,11,"/rt reinv")
+	self.butDisband = ELib:Button(self,L.invitedis):Size(430,20):Point(5,-55):OnClick(function() DisbandBut() end)
+	self.butDisband.txt = ELib:Text(self,"/rt dis",11):Size(100,20):Point("LEFT",self.butDisband,"RIGHT",5,0)
 
-	self.chkOnlyGuild = ExRT.lib.CreateCheckBox(self,nil,310,-120,ExRT.L.inviteguildonly)
-	self.chkOnlyGuild:SetScript("OnClick", function(self,event) 
-		if self:GetChecked() then
-			VExRT.InviteTool.OnlyGuild = true
-		else
-			VExRT.InviteTool.OnlyGuild = nil
-		end
-	end)
-	
-	self.chkInvByChat = ExRT.lib.CreateCheckBox(self,nil,10,-120,ExRT.L.invitewords)
-	self.chkInvByChat:SetScript("OnClick", function(self,event) 
+	self.butReinvite = ELib:Button(self,L.inviteReInv):Size(430,20):Point(5,-80):OnClick(function() ReinviteBut() end)
+	self.butReinvite.txt = ELib:Text(self,"/rt reinv",11):Size(100,20):Point("LEFT",self.butReinvite,"RIGHT",5,0)
+
+	self.chkInvByChat = ELib:Check(self,L.invitewords,VExRT.InviteTool.InvByChat):Point(5,-115):OnClick(function(self) 
 		if self:GetChecked() then
 			VExRT.InviteTool.InvByChat = true
 			module:RegisterEvents('CHAT_MSG_WHISPER','CHAT_MSG_BN_WHISPER')
@@ -246,15 +231,21 @@ function module.options:Load()
 			module:UnregisterEvents('CHAT_MSG_WHISPER','CHAT_MSG_BN_WHISPER')
 		end
 	end)
+
+	self.chkOnlyGuild = ELib:Check(self,L.inviteguildonly,VExRT.InviteTool.OnlyGuild):Point(5,-140):OnClick(function(self) 
+		if self:GetChecked() then
+			VExRT.InviteTool.OnlyGuild = true
+		else
+			VExRT.InviteTool.OnlyGuild = nil
+		end
+	end)
 	
-	self.wordsInput = ExRT.lib.CreateEditBox(self,590,24,"TOP",3,-145,ExRT.L.invitewordstooltip,nil,nil,nil,VExRT.InviteTool.Words)
-	self.wordsInput:SetScript("OnTextChanged",function(self)
+	self.wordsInput = ELib:Edit(self):Size(650,20):Point(5,-165):Tooltip(L.invitewordstooltip):Text(VExRT.InviteTool.Words):OnChange(function(self)
 		VExRT.InviteTool.Words = self:GetText()
 		createInvWordsArray()
 	end) 	
 	
-	self.chkAutoInvAccept = ExRT.lib.CreateCheckBox(self,nil,10,-180,ExRT.L.inviteaccept)
-	self.chkAutoInvAccept:SetScript("OnClick", function(self,event) 
+	self.chkAutoInvAccept = ELib:Check(self,L.inviteaccept,VExRT.InviteTool.AutoInvAccept):Point(5,-200):OnClick(function(self) 
 		if self:GetChecked() then
 			VExRT.InviteTool.AutoInvAccept = true
 			module:RegisterEvents('PARTY_INVITE_REQUEST')
@@ -264,8 +255,7 @@ function module.options:Load()
 		end
 	end)
 	
-	self.chkAutoPromote = ExRT.lib.CreateCheckBox(self,nil,10,-220,ExRT.L.inviteAutoPromote,VExRT.InviteTool.AutoPromote)
-	self.chkAutoPromote:SetScript("OnClick", function(self,event) 
+	self.chkAutoPromote = ELib:Check(self,L.inviteAutoPromote,VExRT.InviteTool.AutoPromote):Point(5,-235):OnClick(function(self) 
 		if self:GetChecked() then
 			VExRT.InviteTool.AutoPromote = true
 		else
@@ -273,43 +263,46 @@ function module.options:Load()
 		end
 	end)
 	
-	self.dropDownAutoPromote = ExRT.lib.CreateDropDown(self,"TOPLEFT",338,-221,237)
-	UIDropDownMenu_Initialize(self.dropDownAutoPromote, function(self, level, menuList)
-		ExRT.mds.FixDropDown(237)
-		local info = UIDropDownMenu_CreateInfo()
-		if IsInGuild() then
-			local granks = GuildControlGetNumRanks()
-			for i=granks,1,-1 do
-				local grankname = GuildControlGetRankName(i) or ""
-				info.text, info.checked = grankname, VExRT.InviteTool.PromoteRank == i
-				info.menuList, info.hasArrow, info.arg1, info.minWidth = i, false, i, 237
-				info.func = self.SetValue
-				UIDropDownMenu_AddButton(info)
-			end
-		end
-		info.text, info.checked,info.menuList, info.hasArrow, info.arg1, info.minWidth, info.func = ExRT.L.inviteAutoPromoteDontUseGuild,VExRT.InviteTool.PromoteRank == 0,0,false,0,237,self.SetValue
-		UIDropDownMenu_AddButton(info)
-	end)
-	
+	self.dropDownAutoPromote = ELib:DropDown(self,205,10):Point(5,-260):Size(430)
 	function self.dropDownAutoPromote:SetValue(newValue)
 		VExRT.InviteTool.PromoteRank = newValue
-		module.options.dropDownAutoPromote:SetText( ExRT.L.inviterank.." " .. (newValue == 0 and ExRT.L.inviteAutoPromoteDontUseGuild or GuildControlGetRankName(newValue) or ""))
-		CloseDropDownMenus()
+		module.options.dropDownAutoPromote:SetText( L.inviterank.." " .. (newValue == 0 and L.inviteAutoPromoteDontUseGuild or GuildControlGetRankName(newValue) or ""))
+		ELib:DropDownClose()
+		for i=1,#module.options.dropDownAutoPromote.List do
+			module.options.dropDownAutoPromote.List[i].checkState = VExRT.InviteTool.PromoteRank == module.options.dropDownAutoPromote.List[i].arg1
+		end
 	end
+	if IsInGuild() then
+		local granks = GuildControlGetNumRanks()
+		for i=granks,1,-1 do
+			self.dropDownAutoPromote.List[#self.dropDownAutoPromote.List + 1] = {
+				text = GuildControlGetRankName(i) or "",
+				checkState = VExRT.InviteTool.PromoteRank == i,
+				radio = true,
+				func = self.dropDownAutoPromote.SetValue,
+				arg1 = i,
+			}
+		end
+	end
+	self.dropDownAutoPromote.List[#self.dropDownAutoPromote.List + 1] = {
+		text = L.inviteAutoPromoteDontUseGuild,
+		checkState = VExRT.InviteTool.PromoteRank == 0,
+		radio = true,
+		func = self.dropDownAutoPromote.SetValue,
+		arg1 = 0,
+	}
+	self.dropDownAutoPromote.Lines = #self.dropDownAutoPromote.List	
+
 	
-	self.autoPromoteInput = ExRT.lib.CreateEditBox(self,590,24,"TOP",3,-250,ExRT.L.inviteAutoPromoteTooltip,nil,nil,nil,VExRT.InviteTool.PromoteNames)
-	self.autoPromoteInput:SetScript("OnTextChanged",function(self)
+	self.autoPromoteInput = ELib:Edit(self):Size(650,20):Point(5,-285):Tooltip(L.inviteAutoPromoteTooltip):Text(VExRT.InviteTool.PromoteNames):OnChange(function(self)
 		VExRT.InviteTool.PromoteNames = self:GetText()
 		createPromoteArray()
 	end) 
 	
-	self.butRaidDemote = ExRT.lib.CreateButton(self,422,22,nil,13,-275,ExRT.L.inviteRaidDemote)
-	self.butRaidDemote:SetScript("OnClick",function()
-		demoteRaid()
-	end)
+	self.butRaidDemote = ELib:Button(self,L.inviteRaidDemote):Size(430,20):Point(5,-310):OnClick(function() demoteRaid() end)
+
 	
-	self.chkRaidDiff = ExRT.lib.CreateCheckBox(self,nil,10,-310,ExRT.L.InviteRaidDiffCheck,VExRT.InviteTool.AutoRaidDiff)
-	self.chkRaidDiff:SetScript("OnClick", function(self,event) 
+	self.chkRaidDiff = ELib:Check(self,L.InviteRaidDiffCheck,VExRT.InviteTool.AutoRaidDiff):Point(5,-345):OnClick(function(self) 
 		if self:GetChecked() then
 			VExRT.InviteTool.AutoRaidDiff = true
 		else
@@ -322,22 +315,25 @@ function module.options:Load()
 		{15,PLAYER_DIFFICULTY2},
 		{16,PLAYER_DIFFICULTY6},
 	}
-	self.dropDownRaidDiff = ExRT.lib.CreateDropDown(self,"TOPLEFT",180,-335,220)
-	UIDropDownMenu_Initialize(self.dropDownRaidDiff, function(self, level, menuList)
-		ExRT.mds.FixDropDown(220)
-		local info = UIDropDownMenu_CreateInfo()
-		for i=1,#RaidDiffsDropDown do
-			info.text, info.checked = RaidDiffsDropDown[i][2], VExRT.InviteTool.RaidDiff == RaidDiffsDropDown[i][1]
-			info.menuList, info.hasArrow, info.arg1, info.minWidth = i, false, i, 220
-			info.func = self.SetValue
-			UIDropDownMenu_AddButton(info)
-		end
-	end)
+	self.dropDownRaidDiff = ELib:DropDown(self,235,10):Point(185,-370):Size(250)
 	function self.dropDownRaidDiff:SetValue(newValue)
 		VExRT.InviteTool.RaidDiff = RaidDiffsDropDown[newValue][1]
 		module.options.dropDownRaidDiff:SetText( RaidDiffsDropDown[newValue][2] )
-		CloseDropDownMenus()
+		ELib:DropDownClose()
+		for i=1,#module.options.dropDownRaidDiff.List do
+			module.options.dropDownRaidDiff.List[i].checkState = VExRT.InviteTool.RaidDiff == RaidDiffsDropDown[ module.options.dropDownRaidDiff.List[i].arg1 ][1]
+		end
 	end
+	for i=1,#RaidDiffsDropDown do
+		self.dropDownRaidDiff.List[i] = {
+			text = RaidDiffsDropDown[i][2],
+			checkState = VExRT.InviteTool.RaidDiff == RaidDiffsDropDown[i][1],
+			radio = true,
+			arg1 = i,
+			func = self.dropDownRaidDiff.SetValue,
+		}
+	end
+	self.dropDownRaidDiff.Lines = #self.dropDownRaidDiff.List
 	do
 		local diffName = ""
 		for i=1,#RaidDiffsDropDown do
@@ -348,9 +344,8 @@ function module.options:Load()
 		end
 		self.dropDownRaidDiff:SetText( diffName or "" )
 	end
-	self.dropDownRaidDiffText = ExRT.lib.CreateText(self,150,0,nil,0,0,"LEFT","TOP",nil,11,ExRT.L.InviteRaidDiff)
-	ExRT.lib.SetPoint(self.dropDownRaidDiffText,"TOPLEFT",self.dropDownRaidDiff,-150,-12)
 	
+	self.dropDownRaidDiffText = ELib:Text(self,L.InviteRaidDiff,11):Size(150,20):Point("TOPLEFT",self.dropDownRaidDiff,-180,0)
 	
 	local LootMethodDropDown = {
 		{"freeforall",LOOT_FREE_FOR_ALL},
@@ -360,22 +355,25 @@ function module.options:Load()
 		{"personalloot",LOOT_PERSONAL_LOOT},
 		{"roundrobin",LOOT_ROUND_ROBIN},
 	}
-	self.dropDownLootMethod = ExRT.lib.CreateDropDown(self,"TOPLEFT",180,-360,220)
-	UIDropDownMenu_Initialize(self.dropDownLootMethod, function(self, level, menuList)
-		ExRT.mds.FixDropDown(220)
-		local info = UIDropDownMenu_CreateInfo()
-		for i=1,#LootMethodDropDown do
-			info.text, info.checked = LootMethodDropDown[i][2], VExRT.InviteTool.LootMethod == LootMethodDropDown[i][1]
-			info.menuList, info.hasArrow, info.arg1, info.minWidth = i, false, i, 220
-			info.func = self.SetValue
-			UIDropDownMenu_AddButton(info)
-		end
-	end)
+	self.dropDownLootMethod = ELib:DropDown(self,235,10):Point(185,-395):Size(250)
 	function self.dropDownLootMethod:SetValue(newValue)
 		VExRT.InviteTool.LootMethod = LootMethodDropDown[newValue][1]
 		module.options.dropDownLootMethod:SetText( LootMethodDropDown[newValue][2] )
-		CloseDropDownMenus()
+		ELib:DropDownClose()
+		for i=1,#module.options.dropDownLootMethod.List do
+			module.options.dropDownLootMethod.List[i].checkState = VExRT.InviteTool.LootMethod == LootMethodDropDown[ module.options.dropDownLootMethod.List[i].arg1 ][1]
+		end
 	end
+	for i=1,#LootMethodDropDown do
+		self.dropDownLootMethod.List[i] = {
+			text = LootMethodDropDown[i][2],
+			checkState = VExRT.InviteTool.LootMethod == LootMethodDropDown[i][1],
+			radio = true,
+			arg1 = i,
+			func = self.dropDownLootMethod.SetValue,
+		}
+	end
+	self.dropDownLootMethod.Lines = #self.dropDownLootMethod.List
 	do
 		local methodName = ""
 		for i=1,#LootMethodDropDown do
@@ -386,17 +384,14 @@ function module.options:Load()
 		end
 		self.dropDownLootMethod:SetText( methodName or "" )
 	end
-	self.dropDownLootMethodText = ExRT.lib.CreateText(self,150,0,nil,0,0,"LEFT","TOP",nil,11,LOOT_METHOD..":")
-	ExRT.lib.SetPoint(self.dropDownLootMethodText,"TOPLEFT",self.dropDownLootMethod,-150,-12)
+	self.dropDownLootMethodText = ELib:Text(self,LOOT_METHOD..":",11):Size(150,20):Point("TOPLEFT",self.dropDownLootMethod,-180,0)
 	
 	
-	self.masterlotersInput = ExRT.lib.CreateEditBox(self,405,24,"TOPLEFT",204,-387,ExRT.L.InviteMasterlootersTooltip,nil,nil,nil,VExRT.InviteTool.MasterLooters)
-	self.masterlotersInput:SetScript("OnTextChanged",function(self)
+	self.masterlotersInput = ELib:Edit(self):Size(250,20):Point(185,-420):Tooltip(L.InviteMasterlootersTooltip):Text(VExRT.InviteTool.MasterLooters):OnChange(function(self)
 		VExRT.InviteTool.MasterLooters = self:GetText()
 		createMastelootersArray()
 	end) 
-	self.masterlotersInputText = ExRT.lib.CreateText(self,180,0,nil,0,0,"LEFT","TOP",nil,11,ExRT.L.InviteMasterlooters)
-	ExRT.lib.SetPoint(self.masterlotersInputText,"TOPLEFT",self.masterlotersInput,-175,-10)
+	self.masterlotersInputText = ELib:Text(self,L.InviteMasterlooters,11):Size(180,20):Point("TOPLEFT",self.masterlotersInput,-180,0)
 	
 	
 	local LootThresholdDropDown = {
@@ -404,22 +399,26 @@ function module.options:Load()
 		{3,"|c"..select(4,GetItemQualityColor(3))..ITEM_QUALITY3_DESC},
 		{4,"|c"..select(4,GetItemQualityColor(4))..ITEM_QUALITY4_DESC},
 	}
-	self.dropDownLootThreshold = ExRT.lib.CreateDropDown(self,"TOPLEFT",180,-410,220)
-	UIDropDownMenu_Initialize(self.dropDownLootThreshold, function(self, level, menuList)
-		ExRT.mds.FixDropDown(220)
-		local info = UIDropDownMenu_CreateInfo()
-		for i=1,#LootThresholdDropDown do
-			info.text, info.checked = LootThresholdDropDown[i][2], VExRT.InviteTool.LootThreshold == LootThresholdDropDown[i][1]
-			info.menuList, info.hasArrow, info.arg1, info.minWidth = i, false, i, 220
-			info.func = self.SetValue
-			UIDropDownMenu_AddButton(info)
-		end
-	end)
+	self.dropDownLootThreshold = ELib:DropDown(self,235,10):Point(185,-445):Size(250)
 	function self.dropDownLootThreshold:SetValue(newValue)
 		VExRT.InviteTool.LootThreshold = LootThresholdDropDown[newValue][1]
 		module.options.dropDownLootThreshold:SetText( LootThresholdDropDown[newValue][2] )
-		CloseDropDownMenus()
+		ELib:DropDownClose()
+		for i=1,#module.options.dropDownLootThreshold.List do
+			module.options.dropDownLootThreshold.List[i].checkState = VExRT.InviteTool.LootThreshold == LootThresholdDropDown[ module.options.dropDownLootThreshold.List[i].arg1 ][1]
+		end
+
 	end
+	for i=1,#LootThresholdDropDown do
+		self.dropDownLootThreshold.List[i] = {
+			text = LootThresholdDropDown[i][2],
+			checkState = VExRT.InviteTool.LootThreshold == LootThresholdDropDown[i][1],
+			radio = true,
+			arg1 = i,
+			func = self.dropDownLootThreshold.SetValue,
+		}
+	end
+	self.dropDownLootThreshold.Lines = #self.dropDownLootThreshold.List
 	do
 		local diffName = ""
 		for i=1,#LootThresholdDropDown do
@@ -430,26 +429,21 @@ function module.options:Load()
 		end
 		self.dropDownLootThreshold:SetText( diffName or "" )
 	end
-	self.dropDownLootThresholdText = ExRT.lib.CreateText(self,150,0,nil,0,0,"LEFT","TOP",nil,11,LOOT_THRESHOLD..":")
-	ExRT.lib.SetPoint(self.dropDownLootThresholdText,"TOPLEFT",self.dropDownLootThreshold,-150,-12)
-
+	self.dropDownLootThresholdText = ELib:Text(self,LOOT_THRESHOLD..":",11):Size(150,20):Point("TOPLEFT",self.dropDownLootThreshold,-180,0)
 
 	
 	self.HelpPlate = {
-		FramePos = { x = 0, y = 0 },FrameSize = { width = 623, height = 568 },
-		[1] = { ButtonPos = { x = 50,	y = -50 },  	HighLightBox = { x = 10, y = -28, width = 605, height = 85 },		ToolTipDir = "RIGHT",	ToolTipText = ExRT.L.inviteHelpRaid },
-		[2] = { ButtonPos = { x = 50,  y = -130 }, 	HighLightBox = { x = 10, y = -120, width = 605, height = 55 },		ToolTipDir = "RIGHT",	ToolTipText = ExRT.L.inviteHelpAutoInv },
-		[3] = { ButtonPos = { x = 50,  y = -174 }, 	HighLightBox = { x = 10, y = -180, width = 605, height = 30 },		ToolTipDir = "RIGHT",	ToolTipText = ExRT.L.inviteHelpAutoAccept },
-		[4] = { ButtonPos = { x = 50,  y = -238},  	HighLightBox = { x = 10, y = -218, width = 605, height = 85 },		ToolTipDir = "RIGHT",	ToolTipText = ExRT.L.inviteHelpAutoPromote },
+		FramePos = { x = 0, y = 0 },FrameSize = { width = 660, height = 615 },
+		[1] = { ButtonPos = { x = 50,	y = -42 },  	HighLightBox = { x = 0, y = -25, width = 660, height = 80 },		ToolTipDir = "RIGHT",	ToolTipText = L.inviteHelpRaid },
+		[2] = { ButtonPos = { x = 50,  y = -128 }, 	HighLightBox = { x = 0, y = -110, width = 660, height = 80 },		ToolTipDir = "RIGHT",	ToolTipText = L.inviteHelpAutoInv },
+		[3] = { ButtonPos = { x = 50,  y = -187 }, 	HighLightBox = { x = 0, y = -195, width = 660, height = 30 },		ToolTipDir = "RIGHT",	ToolTipText = L.inviteHelpAutoAccept },
+		[4] = { ButtonPos = { x = 50,  y = -255},  	HighLightBox = { x = 0, y = -230, width = 660, height = 105 },		ToolTipDir = "RIGHT",	ToolTipText = L.inviteHelpAutoPromote },
 	}
 	self.HELPButton = ExRT.lib.CreateHelpButton(self,self.HelpPlate)
+	self.HELPButton:SetPoint("CENTER",self,"TOPLEFT",0,15)
 
-	self.dropDown:SetText( ExRT.L.inviterank.." " .. GuildControlGetRankName(VExRT.InviteTool.Rank) or "")
-	self.dropDownAutoPromote:SetText( ExRT.L.inviterank.." " .. (VExRT.InviteTool.PromoteRank == 0 and ExRT.L.inviteAutoPromoteDontUseGuild or GuildControlGetRankName(VExRT.InviteTool.PromoteRank) or ""))
-
-	if VExRT.InviteTool.OnlyGuild then self.chkOnlyGuild:SetChecked(VExRT.InviteTool.OnlyGuild) end
-	if VExRT.InviteTool.InvByChat then self.chkInvByChat:SetChecked(VExRT.InviteTool.InvByChat) end
-	if VExRT.InviteTool.AutoInvAccept then self.chkAutoInvAccept:SetChecked(VExRT.InviteTool.AutoInvAccept) end
+	self.dropDown:SetText( L.inviterank.." " .. GuildControlGetRankName(VExRT.InviteTool.Rank) or "")
+	self.dropDownAutoPromote:SetText( L.inviterank.." " .. (VExRT.InviteTool.PromoteRank == 0 and L.inviteAutoPromoteDontUseGuild or GuildControlGetRankName(VExRT.InviteTool.PromoteRank) or ""))
 end
 
 
@@ -463,7 +457,7 @@ do
 		for j=1,GetNumGuildMembers() do
 			local guild_name,_,rankIndex = GetGuildRosterInfo(j)
 			if guild_name then
-				guildmembers[ExRT.mds.delUnitNameServer(guild_name)] = rankIndex
+				guildmembers[ExRT.F.delUnitNameServer(guild_name)] = rankIndex
 			end
 		end		
 	end
@@ -472,7 +466,7 @@ do
 		for i = 1, GetNumGroupMembers() do
 			local name, rank = GetRaidRosterInfo(i)
 			if name and rank == 0 then
-				local sName = ExRT.mds.delUnitNameServer(name)
+				local sName = ExRT.F.delUnitNameServer(name)
 				if module.db.promoteWordsArray[sName] then
 					promotes[name] = true
 				elseif IsInGuild() and UnitInGuild(sName) then
@@ -486,10 +480,10 @@ do
 			end
 		end
 		if not scheduledPromotes then
-			scheduledPromotes = ExRT.mds.ScheduleTimer(function ()
+			scheduledPromotes = ExRT.F.ScheduleTimer(function ()
 				scheduledPromotes = nil
 				for name,v in pairs(promotes) do
-					if not module.db.demotedPlayers[ ExRT.mds.delUnitNameServer(name) ] then
+					if not module.db.demotedPlayers[ ExRT.F.delUnitNameServer(name) ] then
 						PromoteToAssistant(name)
 					end
 					promotes[name] = nil
@@ -527,7 +521,7 @@ function module.main:ADDON_LOADED()
 	
 	module:RegisterSlash()
 	
-	module.db.playerFullName = ExRT.mds.UnitCombatlogname("player")
+	module.db.playerFullName = ExRT.F.UnitCombatlogname("player")
 end
 
 function module.main:CHAT_MSG_WHISPER(msg, user)
@@ -584,7 +578,7 @@ local function AutoRaidSetup()
 				SetRaidDifficultyID(VExRT.InviteTool.RaidDiff)
 				SetLootMethod(VExRT.InviteTool.LootMethod,UnitName("player"),nil)
 				--SetLootThreshold(VExRT.InviteTool.LootThreshold)	--http://us.battle.net/wow/en/forum/topic/14610481537
-				ExRT.mds.ScheduleTimer(SetLootThreshold, 2, VExRT.InviteTool.LootThreshold)
+				ExRT.F.ScheduleTimer(SetLootThreshold, 2, VExRT.InviteTool.LootThreshold)
 			end
 		elseif not inRaid and module.db.sessionInRaid then
 			module.db.sessionInRaid = nil
@@ -630,7 +624,7 @@ function module.main:GROUP_ROSTER_UPDATE()
 	
 	if VExRT.InviteTool.AutoRaidDiff then
 		if not scheludedRaidUpdate then
-			scheludedRaidUpdate = ExRT.mds.ScheduleTimer(AutoRaidSetup, .5)
+			scheludedRaidUpdate = ExRT.F.ScheduleTimer(AutoRaidSetup, .5)
 		end
 	end
 end
@@ -638,12 +632,12 @@ end
 do
 	local function IsFriend(name)
 		for i=1,GetNumFriends() do if(GetFriendInfo(i)==name) then return true end end
-		if(IsInGuild()) then for i=1, GetNumGuildMembers() do if(ExRT.mds.delUnitNameServer(GetGuildRosterInfo(i) or "?")==name) then return true end end end
+		if(IsInGuild()) then for i=1, GetNumGuildMembers() do if(ExRT.F.delUnitNameServer(GetGuildRosterInfo(i) or "?")==name) then return true end end end
 		local b,a=BNGetNumFriends() for i=1,a do local bName=select(5,BNGetFriendInfo(i)) if bName==name then return true end end
 	end
 	function module.main:PARTY_INVITE_REQUEST(nameinv)
 		-- PhoenixStyle
-		nameinv = nameinv and ExRT.mds.delUnitNameServer(nameinv)
+		nameinv = nameinv and ExRT.F.delUnitNameServer(nameinv)
 		if nameinv and (IsFriend(nameinv)) then
 			AcceptGroup()
 			for i = 1, 4 do

@@ -67,7 +67,7 @@ DataStore_PetsDB = {
 				},
 			},
 			["Default.Illidan.Evan"] = {
-				["lastUpdate"] = 1426721817,
+				["lastUpdate"] = 1451460786,
 				["CRITTER"] = {
 					89670, -- [1]
 					78683, -- [2]
@@ -94,7 +94,7 @@ DataStore_PetsDB = {
 				},
 			},
 			["Default.Illidan.Metal"] = {
-				["lastUpdate"] = 1426618289,
+				["lastUpdate"] = 1451460434,
 				["CRITTER"] = {
 					69452, -- [1]
 					173542, -- [2]
@@ -123,7 +123,7 @@ DataStore_PetsDB = {
 				},
 			},
 			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1426734563,
+				["lastUpdate"] = 1451461381,
 				["CRITTER"] = {
 					69452, -- [1]
 					89039, -- [2]

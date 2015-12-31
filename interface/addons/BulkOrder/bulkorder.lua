@@ -18,6 +18,7 @@ local BARN = 4
 local LUMBERMILL = 5
 local GLADIATORSANCTUM = 6
 local SPIRITLODGE = 7
+local SHIPYARD = 8
 
 local BUILDINGS = {
     [8] = WARMILL,
@@ -41,6 +42,9 @@ local BUILDINGS = {
     [37] = SPIRITLODGE,
     [38] = SPIRITLODGE,
     [39] = SPIRITLODGE,
+    [205] = SHIPYARD,
+    [206] = SHIPYARD,
+    [207] = SHIPYARD,
 }
 
 local GARRISON_MAPS = {
@@ -332,6 +336,7 @@ f:OnEvent ("SHIPMENT_CRAFTER_INFO", function (success, _, maxShipments, plotID)
         or (g_BulkOrder.ExcludeWarMill and BUILDINGS[buildingID]==WARMILL)
         or (g_BulkOrder.ExcludeGoblinWorkshop and BUILDINGS[buildingID]==GOBLINWORKSHOP)
         or (g_BulkOrder.ExcludeBarn and BUILDINGS[buildingID]==BARN)
+        or (g_BulkOrder.ExcludeShipyard and BUILDINGS[buildingID]==SHIPYARD)
     
     if (not f.dontStart) and (not excluded) and (f:GetScript ("OnUpdate")==nil) then
         StartAllWorkOrders ()

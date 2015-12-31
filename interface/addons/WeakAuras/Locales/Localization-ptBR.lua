@@ -21,6 +21,7 @@ L["Action Usable"] = "Ação Usável"
 L["Affected"] = "Afetado"
 L["Air"] = "Ar"
 L["Alive"] = "Vivo"
+-- L["Alliance"] = ""
 L["All Triggers"] = "Todos os Gatilhos"
 L["Alternate Power"] = "Alternar Poder"
 -- L["Always active trigger"] = ""
@@ -54,6 +55,8 @@ L["BG>Raid>Party>Say"] = "CB>Raid>Grupo>Fala"
 L["BG-System Alliance"] = "CB-Sistema da Aliança"
 L["BG-System Horde"] = "CB-Sistema da Horda"
 L["BG-System Neutral"] = "CB-Sistema Neutro"
+-- L["BigWigs Addon"] = ""
+-- L["BigWigs Timer"] = ""
 L["Blizzard Combat Text"] = "Texto de Combate da Blizzard"
 L["Block"] = "Bloquear"
 L["Blocked"] = "Bloqueado"
@@ -111,6 +114,8 @@ L["Damager"] = "Causador de dano"
 L["Damage Shield"] = "Escudo de Dano"
 L["Damage Shield Missed"] = "Escudo de dano falho"
 L["Damage Split"] = "Dano dividido"
+-- L["DBM Announce"] = ""
+-- L["DBM Timer"] = ""
 L["Death Knight"] = "Cavaleiro da Morte"
 L["Death Knight Rune"] = "Runa de Cavaleiro da Morte"
 -- L["Death Rune"] = ""
@@ -138,6 +143,29 @@ L["Death Knight Rune"] = "Runa de Cavaleiro da Morte"
 -- L["Eclipse Power"] = ""
 -- L["Eclipse Type"] = ""
 -- L["Emote"] = ""
+-- L["Encounter ID"] = ""
+L["EncounterID List"] = [=[IDs para os chefes atuais:
+
+Malho Imponente:
+Karrath: 1721
+O Açougueiro: 1706
+Tectus: 1722
+Frondísporo: 1720
+Ogrons Gêmeos: 1719
+Koragh: 1723
+Mar'gok: 1705
+
+Fundição da Rocha Negra:
+Gruul: 1691
+Comeferro: 1696
+Darmac:1694
+Dobraflamas Ka'graz: 1689
+Hans'gar e Franzok: 1693
+Thogar: 1692
+A Fornalha Explosiva : 1690
+Kromog: 1713
+As Damas de Ferro: 1695
+Mão Negra: 1704]=] -- Needs review
 -- L["Energize"] = ""
 -- L["Energy"] = ""
 -- L["Enrage"] = ""
@@ -157,6 +185,8 @@ L["Falling"] = "Caindo" -- Needs review
 L["Fatigue"] = "Fadiga" -- Needs review
 -- L["Fire"] = ""
 -- L["First Tree"] = ""
+L[ [=[Fishing Lure / Weapon Enchant (Old)
+]=] ] = "Encantamento de arma" -- Needs review
 -- L["Flash"] = ""
 -- L["Flex Raid"] = ""
 -- L["Flip"] = ""
@@ -189,6 +219,7 @@ L["Fatigue"] = "Fadiga" -- Needs review
 -- L["High Damage"] = ""
 -- L["Higher Than Tank"] = ""
 -- L["Holy Power"] = ""
+-- L["Horde"] = ""
 -- L["Hostile"] = ""
 -- L["Hostility"] = ""
 -- L["Humanoid"] = ""
@@ -210,6 +241,7 @@ L["Fatigue"] = "Fadiga" -- Needs review
 -- L["In Vehicle"] = ""
 -- L["Inverse"] = ""
 -- L["Is Exactly"] = ""
+-- L["Is Moving"] = ""
 L["Item"] = "Item" -- Needs review
 L["Item Count"] = "Contagem de Item" -- Needs review
 L["Item Equipped"] = "Item Equipado" -- Needs review
@@ -243,6 +275,7 @@ L["Mounted"] = "Montado"
 L["Multi-target"] = "Multi-alvo"
 L["Music"] = "Música"
 L["Name"] = "Nome"
+-- L["Neutral"] = ""
 L["Never"] = "Nunca"
 L["Next"] = "Próximo"
 -- L["No Children:"] = ""
@@ -274,6 +307,7 @@ L["Player"] = "Jogador"
 L["Player Character"] = "Personagem do jogador"
 L["Player Class"] = "Classe do jogador"
 L["Player Dungeon Role"] = "Função do jogador na masmorra"
+-- L["Player Faction"] = ""
 L["Player Level"] = "Nível do jogador"
 L["Player Name"] = "Nome do jogador"
 -- L["Player Race"] = ""
@@ -350,6 +384,7 @@ L["Spacing"] = "Espaçamento"
 L["Specific Unit"] = "Unidade específica"
 L["Spell"] = "Feitiço"
 L["Spell (Building)"] = "Feitiço (Construção)"
+-- L["Spell/Encounter ID"] = ""
 L["Spell Name"] = "Nome do feitiço"
 L["Spin"] = "Girar"
 L["Spiral"] = "Espiral"
@@ -408,11 +443,11 @@ L["WeakAuras .toc Notes"] = "WeakAuras .toc Notas"
 -- L["WeakAurasTutorials"] = ""
 -- L["WeakAurasTutorials .toc Notes"] = ""
 L["Weapon"] = "Arma"
-L["Weapon Enchant"] = "Encantamento de arma"
 L["Whisper"] = "Sussurro"
 L["Wobble"] = "Oscilar"
 L["Yell"] = "Gritar"
 L["Zone"] = "Zona"
+-- L["Zone ID"] = ""
 
 
 

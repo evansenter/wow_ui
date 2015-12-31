@@ -3,6 +3,8 @@ local GlobalAddonName, ExRT = ...
 local GetItemInfo = GetItemInfo
 
 local module = ExRT.mod:New("RaidLoot",ExRT.L.sooitems)
+local ELib,L = ExRT.lib,ExRT.L
+
 module.db.base = {}
 --[[
 Items:
@@ -14,8 +16,8 @@ b = disable bonuses (any value)
 c = classID for colorize
 ]]
 module.db.base[1] = {
-name = ExRT.L.sooitemst15,
-bosses = {[1] = ExRT.L.sooitemstotboss1, [2] = ExRT.L.sooitemstotboss2, [3] = ExRT.L.sooitemstotboss3, [4] = ExRT.L.sooitemstotboss4, [5] = ExRT.L.sooitemstotboss5, [6] = ExRT.L.sooitemstotboss6, [7] = ExRT.L.sooitemstotboss7, [8] = ExRT.L.sooitemstotboss8, [9] = ExRT.L.sooitemstotboss9, [10] = ExRT.L.sooitemstotboss10, [11] = ExRT.L.sooitemstotboss11, [12] = ExRT.L.sooitemstotboss12, [13] = ExRT.L.sooitemstotboss13, [14] = ExRT.L.sooitemstrash, [15] = ExRT.L.sooitemssets},
+name = L.sooitemst15,
+bosses = {[1] = L.sooitemstotboss1, [2] = L.sooitemstotboss2, [3] = L.sooitemstotboss3, [4] = L.sooitemstotboss4, [5] = L.sooitemstotboss5, [6] = L.sooitemstotboss6, [7] = L.sooitemstotboss7, [8] = L.sooitemstotboss8, [9] = L.sooitemstotboss9, [10] = L.sooitemstotboss10, [11] = L.sooitemstotboss11, [12] = L.sooitemstotboss12, [13] = L.sooitemstotboss13, [14] = L.sooitemstrash, [15] = L.sooitemssets},
 items_string = [[
 [1] = {{96756,d1=95640,d2=94730,d3=96012,d4=96384,d5=96756},{96748,d1=95632,d2=94722,d3=96004,d4=96376,d5=96748},{96742,d1=95626,d2=94724,d3=95998,d4=96370,d5=96742},{96744,d1=95628,d2=94725,d3=96000,d4=96372,d5=96744},{96752,d1=95636,d2=94733,d3=96008,d4=96380,d5=96752},{96755,d1=95639,d2=94735,d3=96011,d4=96383,d5=96755},{96746,d1=95630,d2=94723,d3=96002,d4=96374,d5=96746},{96760,d1=95644,d2=94734,d3=96016,d4=96388,d5=96760},{96753,d1=95637,d2=94731,d3=96009,d4=96381,d5=96753},{96758,d1=95642,d2=94732,d3=96014,d4=96386,d5=96758},{96747,d1=95631,d2=94727,d3=96003,d4=96375,d5=96747},{96750,d1=95634,d2=94737,d3=96006,d4=96378,d5=96750},{96745,d1=95629,d2=94726,d3=96001,d4=96373,d5=96745},{96743,d1=95627,d2=94728,d3=95999,d4=96371,d5=96743},{96751,d1=95635,d2=94739,d3=96007,d4=96379,d5=96751},{96759,d1=95643,d2=94736,d3=96015,d4=96387,d5=96759},{96740,d1=95624,d2=95510,d3=95996,d4=96368,d5=96740},{96749,d1=95633,d2=94729,d3=96005,d4=96377,d5=96749},{96754,d1=95638,d2=94738,d3=96010,d4=96382,d5=96754},{96741,d1=95625,d2=94512,d3=95997,d4=96369,d5=96741},},
 [2] = {{96773,d1=95657,d2=94749,d3=96029,d4=96401,d5=96773},{96763,d1=95647,d2=94740,d3=96019,d4=96391,d5=96763},{96776,d1=95660,d2=94755,d3=96032,d4=96404,d5=96776},{96768,d1=95652,d2=94744,d3=96024,d4=96396,d5=96768},{96771,d1=95655,d2=94752,d3=96027,d4=96399,d5=96771},{96762,d1=95646,d2=94746,d3=96018,d4=96390,d5=96762},{96774,d1=95658,d2=94754,d3=96030,d4=96402,d5=96774},{96778,d1=95662,d2=94753,d3=96034,d4=96406,d5=96778},{96761,d1=95645,d2=94748,d3=96017,d4=96389,d5=96761},{96769,d1=95653,d2=94745,d3=96025,d4=96397,d5=96769},{96765,d1=95649,d2=94741,d3=96021,d4=96393,d5=96765},{96766,d1=95650,d2=94742,d3=96022,d4=96394,d5=96766},{96780,d1=95664,d2=94751,d3=96036,d4=96408,d5=96780},{96764,d1=95648,d2=94743,d3=96020,d4=96392,d5=96764},{96772,d1=95656,d2=94750,d3=96028,d4=96400,d5=96772},{96777,d1=95661,d2=94756,d3=96033,d4=96405,d5=96777},{96779,d1=95663,d2=94975,d3=96035,d4=96407,d5=96779},{96767,d1=95651,d2=94747,d3=96023,d4=96395,d5=96767},{96775,d1=95659,d2=95514,d3=96031,d4=96403,d5=96775},{96770,d1=95654,d2=94526,d3=96026,d4=96398,d5=96770},{96757,d1=95641,d2=94514,d3=96013,d4=96385,d5=96757},},
@@ -53,8 +55,8 @@ instanceType = "RAID",
 }
 
 module.db.base[2] = {
-name = ExRT.L.sooitemst16,
-bosses = {[1] = ExRT.L.sooitemssooboss1, [2] = ExRT.L.sooitemssooboss2, [3] = ExRT.L.sooitemssooboss3, [4] = ExRT.L.sooitemssooboss4, [5] = ExRT.L.sooitemssooboss5, [6] = ExRT.L.sooitemssooboss6, [7] = ExRT.L.sooitemssooboss7, [8] = ExRT.L.sooitemssooboss8, [9] = ExRT.L.sooitemssooboss9, [10] = ExRT.L.sooitemssooboss10, [11] = ExRT.L.sooitemssooboss11, [12] = ExRT.L.sooitemssooboss12, [13] = ExRT.L.sooitemssooboss13, [14] = ExRT.L.sooitemssooboss14, [15] = ExRT.L.sooitemstrash, [16] = ExRT.L.sooitemssets},
+name = L.sooitemst16,
+bosses = {[1] = L.sooitemssooboss1, [2] = L.sooitemssooboss2, [3] = L.sooitemssooboss3, [4] = L.sooitemssooboss4, [5] = L.sooitemssooboss5, [6] = L.sooitemssooboss6, [7] = L.sooitemssooboss7, [8] = L.sooitemssooboss8, [9] = L.sooitemssooboss9, [10] = L.sooitemssooboss10, [11] = L.sooitemssooboss11, [12] = L.sooitemssooboss12, [13] = L.sooitemssooboss13, [14] = L.sooitemssooboss14, [15] = L.sooitemstrash, [16] = L.sooitemssets},
 items_string = [[
 [1] = {{105408,d1=104910,d2=104661,d3=103726,d4=105159,d5=104412,d6=105408},{105417,d1=104919,d2=104670,d3=103727,d4=105168,d5=104421,d6=105417},{105420,d1=104922,d2=104673,d3=103751,d4=105171,d5=104424,d6=105420},{105409,d1=104911,d2=104662,d3=103728,d4=105160,d5=104413,d6=105409},{105407,d1=104909,d2=104660,d3=103749,d4=105158,d5=104411,d6=105407},{105416,d1=104918,d2=104669,d3=103747,d4=105167,d5=104420,d6=105416},{105419,d1=104921,d2=104672,d3=103755,d4=105170,d5=104423,d6=105419},{105421,d1=104923,d2=104674,d3=103769,d4=105172,d5=104425,d6=105421},{105412,d1=104914,d2=104665,d3=103736,d4=105163,d5=104416,d6=105412},{105411,d1=104913,d2=104664,d3=103738,d4=105162,d5=104415,d6=105411},{105415,d1=104917,d2=104668,d3=103741,d4=105166,d5=104419,d6=105415},{105425,d1=104927,d2=104678,d3=103757,d4=105176,d5=104429,d6=105425},{105418,d1=104920,d2=104671,d3=103752,d4=105169,d5=104422,d6=105418},{105413,d1=104915,d2=104666,d3=103733,d4=105164,d5=104417,d6=105413},{105426,d1=104928,d2=104679,d3=103763,d4=105177,d5=104430,d6=105426},{105427,d1=104929,d2=104680,d3=103966,d4=105178,d5=104431,d6=105427},{105414,d1=104916,d2=104667,d3=103744,d4=105165,d5=104418,d6=105414},{105428,d1=104930,d2=104681,d3=103766,d4=105179,d5=104432,d6=105428},{105410,d1=104912,d2=104663,d3=103730,d4=105161,d5=104414,d6=105410},{105424,d1=104926,d2=104677,d3=103760,d4=105175,d5=104428,d6=105424},{105423,d1=104925,d2=104676,d3=103771,d4=105174,d5=104427,d6=105423},{105422,d1=104924,d2=104675,d3=102293,d4=105173,d5=104426,d6=105422},},
 [2] = {{105430,d1=104932,d2=104683,d3=103775,d4=105181,d5=104434,d6=105430},{105429,d1=104931,d2=104682,d3=103776,d4=105180,d5=104433,d6=105429},{105444,d1=104946,d2=104697,d3=103801,d4=105195,d5=104448,d6=105444},{105449,d1=104951,d2=104702,d3=103820,d4=105200,d5=104453,d6=105449},{105434,d1=104936,d2=104687,d3=103783,d4=105185,d5=104438,d6=105434},{105445,d1=104947,d2=104698,d3=103924,d4=105196,d5=104449,d6=105445},{105441,d1=104943,d2=104694,d3=103807,d4=105192,d5=104445,d6=105441},{105447,d1=104949,d2=104700,d3=103815,d4=105198,d5=104451,d6=105447},{105437,d1=104939,d2=104690,d3=103799,d4=105188,d5=104441,d6=105437},{105440,d1=104942,d2=104693,d3=103802,d4=105191,d5=104444,d6=105440},{105442,d1=104944,d2=104695,d3=103809,d4=105193,d5=104446,d6=105442},{105432,d1=104934,d2=104685,d3=103780,d4=105183,d5=104436,d6=105432},{105448,d1=104950,d2=104701,d3=103817,d4=105199,d5=104452,d6=105448},{105435,d1=104937,d2=104688,d3=103790,d4=105186,d5=104439,d6=105435},{105433,d1=104935,d2=104686,d3=103787,d4=105184,d5=104437,d6=105433},{105446,d1=104948,d2=104699,d3=103812,d4=105197,d5=104450,d6=105446},{105439,d1=104941,d2=104692,d3=103804,d4=105190,d5=104443,d6=105439},{105431,d1=104933,d2=104684,d3=103777,d4=105182,d5=104435,d6=105431},{105443,d1=104945,d2=104696,d3=103822,d4=105194,d5=104447,d6=105443},{105436,d1=104938,d2=104689,d3=103793,d4=105187,d5=104440,d6=105436},{105438,d1=104940,d2=104691,d3=102296,d4=105189,d5=104442,d6=105438},},
@@ -91,7 +93,7 @@ instanceType = "RAID",
 
 module.db.base[3] = {
 name = TRADE_SKILLS or "Prof",
-bosses = {[1] = ExRT.L.RaidLootWODCraftBlacksmithing, [2] = ExRT.L.RaidLootWODCraftEngineering, [3] = ExRT.L.RaidLootWODCraftLeatherworking, [4] = ExRT.L.RaidLootWODCraftTailoring, [5] = ExRT.L.RaidLootWODCraftJewelcrafting, [6] = ExRT.L.RaidLootWODCraftInscription, },
+bosses = {[1] = L.RaidLootWODCraftBlacksmithing, [2] = L.RaidLootWODCraftEngineering, [3] = L.RaidLootWODCraftLeatherworking, [4] = L.RaidLootWODCraftTailoring, [5] = L.RaidLootWODCraftJewelcrafting, [6] = L.RaidLootWODCraftInscription, },
 items_string = [[
 [1] = {114230,114231,114232,114233,114234,114235,114236,114237,{120261,a=2},{116647,a=2},{116644,a=2},{116646,a=2},{120259,a=2},{116454,a=2},{116453,a=2}},
 [2] = {109174,109173,109171,109172,{109168,a=2}},
@@ -101,19 +103,21 @@ items_string = [[
 [6] = {112320,112317,112318,112319,{113270,a=2},{113131,a=2},{111526,a=2},{113134,a=2}},
 ]],
 baseIlvl = 640,
-diffTable = {0,15,30,45},
-affixTable = {{525},{526},{527},{593}},
-diffTypeTable = {0,0,0,0,},
+diffTable = {0,15,30,45,60,75},
+affixTable = {{525},{526},{527},{593},{617},{618}},
+diffTypeTable = {0,0,0,0,0,0},
 baseIlvl2 = 630,
-diffTable2 = {0,15,30,45},
-affixTable2 = {{525},{558},{559},{594}},
-diffTypeTable2 = {0,0,0,0,},
+diffTable2 = {0,15,30,45,60,75},
+affixTable2 = {{525},{558},{559},{594},{619},{620}},
+diffTypeTable2 = {0,0,0,0,0,0},
+upgradeTable = ExRT.clientVersion > 60202 and {529,530,531} or nil,
+upgradeDiffTable = ExRT.clientVersion > 60202 and {0,5,10} or nil,
 instanceType = "SOLO",
 }
 
 module.db.base[4] = {
-name = ExRT.L.RaidLootT17Highmaul,
-bosses = {[1] = ExRT.L.RaidLootHighmaulBoss1, [2] = ExRT.L.RaidLootHighmaulBoss2, [3] = ExRT.L.RaidLootHighmaulBoss3, [4] = ExRT.L.RaidLootHighmaulBoss4, [5] = ExRT.L.RaidLootHighmaulBoss5, [6] = ExRT.L.RaidLootHighmaulBoss6, [7] = ExRT.L.RaidLootHighmaulBoss7, [8] = ExRT.L.sooitemstrash},
+name = L.RaidLootT17Highmaul,
+bosses = {[1] = L.RaidLootHighmaulBoss1, [2] = L.RaidLootHighmaulBoss2, [3] = L.RaidLootHighmaulBoss3, [4] = L.RaidLootHighmaulBoss4, [5] = L.RaidLootHighmaulBoss5, [6] = L.RaidLootHighmaulBoss6, [7] = L.RaidLootHighmaulBoss7, [8] = L.sooitemstrash},
 items_string = [[
 [1] = {113591,113592,113600,113596,113598,113605,113601,113593,113602,113595,113599,113604,0,{116360,a=2},{116236,a=2},{116298,a=2},{116030,a=2},{116205,a=2},{116003,a=2},{116282,a=2},{116289,a=2},},
 [2] = {113607,113606,113608,113609,113637,113634,113632,113610,113636,113633,113611,113638,113612,0,{116361,a=2},{116297,a=2},{116209,a=2},{115998,a=2},{116026,a=2},{116230,a=2},{116281,a=2},{116290,a=2},},
@@ -134,11 +138,12 @@ affixTable2 = {{},{560},},
 diffTypeTable2 = {17,17},
 bonusEnabled = true,
 instanceType = "RAID",
+models = {54764, 53855, 54793, 58539, 54385, 54825, 54329},
 }
 
 module.db.base[5] = {
-name = ExRT.L.RaidLootT17BF,
-bosses = {[1] = ExRT.L.RaidLootBFBoss1, [2] = ExRT.L.RaidLootBFBoss2, [3] = ExRT.L.RaidLootBFBoss3, [4] = ExRT.L.RaidLootBFBoss4, [5] = ExRT.L.RaidLootBFBoss5, [6] = ExRT.L.RaidLootBFBoss6, [7] = ExRT.L.RaidLootBFBoss7, [8] = ExRT.L.RaidLootBFBoss8, [9] = ExRT.L.RaidLootBFBoss9, [10] = ExRT.L.RaidLootBFBoss10, [11] = ExRT.L.sooitemstrash, [12] = ExRT.L.sooitemssets,},
+name = L.RaidLootT17BF,
+bosses = {[1] = L.RaidLootBFBoss1, [2] = L.RaidLootBFBoss2, [3] = L.RaidLootBFBoss3, [4] = L.RaidLootBFBoss4, [5] = L.RaidLootBFBoss5, [6] = L.RaidLootBFBoss6, [7] = L.RaidLootBFBoss7, [8] = L.RaidLootBFBoss8, [9] = L.RaidLootBFBoss9, [10] = L.RaidLootBFBoss10, [11] = L.sooitemstrash, [12] = L.sooitemssets,},
 items_string = [[
 [1] = {113869,113862,113868,113863,113865,113872,113867,113873,120078,113870,113871,113864,113866,118114,0,{116229,a=2},{116307,a=2},{116045,a=2},{116242,a=2},{116216,a=2},{116039,a=2},{116009,a=2},{116018,a=2},{116299,a=2},},
 [2] = {119448,113874,113879,113880,113882,113884,113878,113883,113881,113876,113875,113877,119194,0,{116381,a=2},{116380,a=2},{116257,a=2},{116310,a=2},{116308,a=2},{116046,a=2},{116007,a=2},{116033,a=2},{116215,a=2},{116240,a=2},{116021,a=2},},
@@ -166,6 +171,96 @@ affixTable3 = {{},{570},{569},},
 diffTypeTable3 = {14,15,16,},
 bonusEnabled = true,
 instanceType = "RAID",
+setBonuses = [[
+WARRIOR = { {165345,165337,165338},{165336,165349,165351} },
+PALADIN = { {165438,165446,165440},{167697,167740,165439} },
+HUNTER = { {165517,165519,165544},{165518,165525,165545} },
+ROGUE = { {165516,165480,165482},{166886,165478,165514} },
+PRIEST = { {165614,165621,165628},{167694,167684,165629} },
+DEATHKNIGHT = { {167192,165547,165575},{165571,165568,165574} },
+SHAMAN = { {165577,165605,165576},{165580,165610,167702} },
+MAGE = { {165475,165458,165469},{165476,165459,165470} },
+WARLOCK = { {165448,165450,165455},{165449,165451,165452} },
+MONK = { {165353,165403,165404},{165352,165402,167718} },
+DRUID = { {165433,165431,165410,165437},{166677,165432,165423,167714} },
+]],
+models = {55050, 54317, 53499, 53471, 53576, 53519, 53456, 56214, 53876, 53791},
+}
+
+module.db.base[6] = {
+name = L.RaidLootT18HC,
+bosses = {[1] = L.RaidLootT18HCBoss1, [2] = L.RaidLootT18HCBoss2, [3] = L.RaidLootT18HCBoss3, [4] = L.RaidLootT18HCBoss4, [5] = L.RaidLootT18HCBoss5, [6] = L.RaidLootT18HCBoss6, [7] = L.RaidLootT18HCBoss7, [8] = L.RaidLootT18HCBoss8, [9] = L.RaidLootT18HCBoss9, [10] = L.RaidLootT18HCBoss10, [11] = L.RaidLootT18HCBoss11, [12] = L.RaidLootT18HCBoss12, [13] = L.RaidLootT18HCBoss13, [14] = L.RaidLootT18HCBoss13trink, [15] = L.sooitemstrash, [16] = L.sooitemssets,},
+items_string = [[
+[1] = {124365,124370,124356,124216,124207,124270,124132,124136,124168,124278,124183,124324,124289,124335,124298,124320,124201,124190,124231,0,{128092,a=2},{128098,a=2},{128081,a=2},{128110,a=2},{128111,a=2},{128028,a=2},{128030,a=2},{128029,a=2},{128073,a=2},{128071,a=2},{128031,a=2},{128050,a=2},{128142,a=2},},
+[2] = {124373,124354,124213,124174,124145,124315,124351,124253,124309,124264,124285,124148,124249,124196,124223,124227,0,{128094,a=2},{128118,a=2},{128060,a=2},{128053,a=2},{128105,a=2},{128102,a=2},{128076,a=2},{128067,a=2},{128058,a=2},{128033,a=2},{128075,a=2},{128168,a=2},{128141,a=2},},
+[3] = {{127956,a=6,t=1},{127959,a=6,t=1},{127966,a=6,t=1},124377,124358,124363,124211,124217,124341,124304,124139,124243,124151,124180,124187,124239,124235,0,{128134,a=7},{128128,a=7},{128130,a=7},{128132,a=7},{128107,a=7},{128103,a=7},{128104,a=7},{128057,a=7},{128059,a=7},{128056,a=7},{128064,a=7},{128117,a=7},{128143,a=7},},
+[4] = {124388,124385,124383,124258,124220,124271,124142,124133,124312,124184,124347,124336,124163,124299,124193,124228,124224,0,{128097,a=2},{128100,a=2},{128191,a=2},{128095,a=2},{128184,a=2},{128065,a=2},{128061,a=2},{128077,a=2},{128068,a=2},{128089,a=2},{128062,a=2},{128040,a=2},{128114,a=2},{128115,a=2},{128140,a=2},},
+[5] = {{124379,a=3},{124364,a=3},{124366,a=3},{124330,a=3},{124208,a=3},{124305,a=3},{124137,a=3},{124169,a=3},{124281,a=3},{124279,a=3},{124325,a=3},{124152,a=3},{124321,a=3},{124250,a=3},{124197,a=3},{124232,a=3},{124240,a=3},0,{128192,a=2},{128093,a=2},{128074,a=2},{128109,a=2},{128049,a=2},{128078,a=2},{128087,a=2},{128042,a=2},{128047,a=2},{128070,a=2},{128167,a=2},{128116,a=2},{128113,a=2},{128147,a=2},{128144,a=2},},
+[6] = {{127955,a=6,t=1},{127960,a=6,t=1},{127965,a=6,t=1},{124380,a=3},{124359,a=3},{124205,a=3},{124157,a=3},{124391,a=3},{124342,a=3},{124140,a=3},{124146,a=3},{124244,a=3},{124290,a=3},{124348,a=3},{124188,a=3},{124236,a=3},0,{128101,a=7},{128196,a=7},{128200,a=7},{128079,a=7},{128106,a=7},{128072,a=7},{128069,a=7},{128135,a=7},{128129,a=7},{128131,a=7},{128133,a=7},{128148,a=7},},
+[7] = {{124387,a=3},{124390,a=3},{124294,a=3},{124259,a=3},{124218,a=3},{124175,a=3},{124134,a=3},{124316,a=3},{124170,a=3},{124282,a=3},{124352,a=3},{124275,a=3},{124286,a=3},{124198,a=3},{124202,a=3},{124194,a=3},{124241,a=3},{124229,a=3},0,{128096,a=2},{128041,a=2},{128186,a=2},{128082,a=2},{128086,a=2},{128083,a=2},{128055,a=2},{128063,a=2},{128180,a=2},{128296,a=2},{128179,a=2},{128146,a=2},},
+[8] = {{127954,a=6,t=1},{127958,a=6,t=1},{127964,a=6,t=1},{124386,a=3},{124384,a=3},{124362,a=3},{124357,a=3},{124331,a=3},{124221,a=3},{124141,a=3},{124143,a=3},{124245,a=3},{124313,a=3},{124185,a=3},{124191,a=3},{124233,a=3},{124225,a=3},0,{128197,a=2},{128195,a=2},{128119,a=2},{128036,a=2},{128182,a=2},{128051,a=2},{128046,a=2},{128190,a=2},{128085,a=2},{128084,a=2},{128035,a=2},{128088,a=2},{128145,a=2},},
+[9] = {{124360,a=4},{124368,a=4},{124369,a=4},{124209,a=4},{124214,a=4},{124138,a=4},{124283,a=4},{124280,a=4},{124310,a=4},{124181,a=4},{124265,a=4},{124337,a=4},{124149,a=4},{124203,a=4},{124237,a=4},0,{128202,a=2},{128043,a=2},{128183,a=2},{128185,a=2},{128189,a=2},{128174,a=2},{128175,a=2},{128038,a=2},{128300,a=2},{128299,a=2},{128066,a=2},{128178,a=2},},
+[10] = {{127957,a=6,t=1},{127961,a=6,t=1},{127967,a=6,t=1},{124381,a=4},{124374,a=4},{124371,a=4},{124158,a=4},{124260,a=4},{124295,a=4},{124212,a=4},{124147,a=4},{124353,a=4},{124199,a=4},{124189,a=4},{124234,a=4},0,{128187,a=2},{128176,a=2},{128298,a=2},{128295,a=2},{128091,a=2},{128032,a=7},{128052,a=7},{128054,a=7},{128080,a=7},},
+[11] = {{124375,a=4},{124376,a=4},{124355,a=4},{124219,a=4},{124306,a=4},{124186,a=4},{124326,a=4},{124153,a=4},{124300,a=4},{124251,a=4},{124287,a=4},{124192,a=4},{124195,a=4},{124226,a=4},{124242,a=4},0,{128099,a=7},{128181,a=7},{128108,a=7},{128045,a=7},{128188,a=7},{128090,a=7},{128139,a=7},{128136,a=7},{128137,a=7},{128138,a=7},{128149,a=7},},
+[12] = {{127953,a=6,t=1},{127962,a=6,t=1},{127963,a=6,t=1},{124378,a=4},{124367,a=4},{124361,a=4},{124206,a=4},{124215,a=4},{124135,a=4},{124314,a=4},{124349,a=4},{124266,a=4},{124164,a=4},{124204,a=4},{124238,a=4},{124230,a=4},0,{128198,a=7},{128193,a=7},{128194,a=7},{128112,a=7},{128034,a=7},{128123,a=7},{128120,a=7},{128121,a=7},{128122,a=7},{128177,a=7},{128037,a=7},{128170,a=7},{128297,a=7},},
+[13] = {{127969,a=8,t=1},{127968,a=8,t=1},{127970,a=8,t=1},{124389,a=5},{124382,a=5},{124372,a=5},{124159,a=5},{124210,a=5},{124222,a=5},{124343,a=5},{124176,a=5},{124144,a=5},{124291,a=5},{124254,a=5},{124200,a=5},{124276,a=5},{124322,a=5},0,{128199,a=7},{128201,a=7},{128044,a=7},{128127,a=7},{128124,a=7},{128125,a=7},{128126,a=7},{128048,a=7},{128039,a=7},{128171,a=7},{128152,a=7},{128154,a=7},{128151,a=7},{128150,a=7},{128153,a=7},},
+[14] = {{124520,a=5,c="ROGUE2"},{124521,a=5,c="SHAMAN2"},{124522,a=5,c="WARLOCK2"},{124518,a=5,c="PALADIN2"},{124513,a=5,c="DEATHKNIGHT2"},{124519,a=5,c="PRIEST2"},{124517,a=5,c="MONK2"},{124514,a=5,c="DRUID2"},{124515,a=5,c="HUNTER2"},{124516,a=5,c="MAGE2"},{124523,a=5,c="WARRIOR2"},},
+[15] = {{124323,a=3},{124150,a=3},{124252,a=3},{124288,a=3},{124350,a=3},{124182,a=3},{124277,a=3},{124311,a=3}},
+[16] = {{124334,a=3,c=1},{124319,a=3,c=1},{124329,a=3,c=1},{124340,a=3,c=1},{124346,a=3,c=1},{124333,a=3,c=2},{124318,a=3,c=2},{124328,a=3,c=2},{124339,a=3,c=2},{124345,a=3,c=2},{124296,a=3,c=3},{124284,a=3,c=3},{124292,a=3,c=3},{124301,a=3,c=3},{124307,a=3,c=3},{124263,a=3,c=4},{124248,a=3,c=4},{124257,a=3,c=4},{124269,a=3,c=4},{124274,a=3,c=4},{124161,a=3,c=5},{124155,a=3,c=5},{124166,a=3,c=5},{124172,a=3,c=5},{124178,a=3,c=5},{124332,a=3,c=6},{124317,a=3,c=6},{124327,a=3,c=6},{124338,a=3,c=6},{124344,a=3,c=6},{124297,a=3,c=7},{124293,a=3,c=7},{124302,a=3,c=7},{124303,a=3,c=7},{124308,a=3,c=7},{124160,a=3,c=8},{124154,a=3,c=8},{124165,a=3,c=8},{124171,a=3,c=8},{124177,a=3,c=8},{124162,a=3,c=9},{124156,a=3,c=9},{124167,a=3,c=9},{124173,a=3,c=9},{124179,a=3,c=9},{124262,a=3,c=10},{124256,a=3,c=10},{124247,a=3,c=10},{124268,a=3,c=10},{124273,a=3,c=10},{124261,a=3,c=11},{124246,a=3,c=11},{124255,a=3,c=11},{124267,a=3,c=11},{124272,a=3,c=11},},
+]],
+baseIlvl = 690,
+diffTable = {0,6,15,15+6,30,30+6,},
+affixTable = {{},{560},{566},{566,560},{567},{567,560},},
+diffTypeTable = {14,14,15,15,16,16},
+baseIlvl2 = 675,
+diffTable2 = {0,6,},
+affixTable2 = {{},{560},},
+diffTypeTable2 = {17,17},
+baseIlvl3 = 695,
+baseIlvl4 = 700,
+baseIlvl5 = 705,
+baseIlvl6 = 695,
+diffTable6 = {0,15,30,},
+affixTable6 = {{},{570},{569},},
+diffTypeTable6 = {14,15,16,},
+baseIlvl7 = 685,
+diffTable7 = {0,6,},
+affixTable7 = {{},{560},},
+diffTypeTable7 = {17,17},
+baseIlvl8 = 705,
+diffTable8 = {0,15,30,},
+affixTable8 = {{},{570},{569},},
+diffTypeTable8 = {14,15,16,},
+upgradeTable = ExRT.clientVersion > 60202 and {529,530,531} or nil,
+upgradeDiffTable = ExRT.clientVersion > 60202 and {0,5,10} or nil,
+bonusEnabled = true,
+instanceType = "RAID",
+setBonuses = [[
+WARRIOR = { {185800,185798,185796},{185804,185799,185797} },
+PALADIN = { {185545,185675,185581},{185571,185677,185648} },
+HUNTER = { {188200,188190,188198},{188201,188191,188199} },
+ROGUE = { {186182,186285,186278},{186277,186288,186279} },
+PRIEST = { {186477,186298,186980},{186492,186378,186981} },
+DEATHKNIGHT = { {187872,187868,187865},{187873,187870,187866} },
+SHAMAN = { {185880,185871,185873},{185881,185872,185874} },
+MAGE = { {186165,186167,185969},{186166,186168,185971} },
+WARLOCK = { {185882,185884,185965},{185883,185964,185967} },
+MONK = { {185398,185542,185126},{185399,185543,185258} },
+DRUID = { {185805,185813,185294,187875},{185811,185814,185397,187877} },
+
+WARRIOR2 = { {184925,184926,"Shield Block now also reduces magic damage taken by 9%. Shield Barrier now also increases your Armor by 9%|nShield Charge now increases Shield Slam, Revenge, and Heroic Strike damage by an additional 16%"},{} }, --sid of prot bonus 184927
+PALADIN2 = { {184909,184910,184911},{} },
+HUNTER2 = { {184900,184901,184902},{} },
+ROGUE2 = { {184916,184917,184918},{} },
+PRIEST2 = { {184912,184914,184915},{} },
+DEATHKNIGHT2 = { {184897,184898,184983},{} },
+SHAMAN2 = { {184919,184920,184921},{} },
+MAGE2 = { {184903,184904,184905},{} },
+WARLOCK2 = { {184922,184923,184924},{} },
+MONK2 = { {184906,184907,184908},{} },
+DRUID2 = { {184876,184877,184878,184879},{} },
+]],
+models = {63068, 61921, 61990, 62826, 62425, 61913, 61932, 61925, 61830, 63415, 62479, 62410, 62423, 62423},
 }
 
 
@@ -181,6 +276,8 @@ module.db.bonuses = {
 module.db.bonuses_active = {}
 
 function module.options:Load()
+	self:CreateTilte()
+
 	local itemsWidth = 270
 	local ReloadLootList,SelectInstance,SelectBoss,SelectItem = nil
 	local InstanceNow,BossNow,ItemsDataNow,ScrollNow,ItemNow = #module.db.base,nil,{},1,nil
@@ -189,6 +286,9 @@ function module.options:Load()
 	for i=1,#module.db.base do
 		loadstring("GExRT.A.RaidLoot.db.base["..i.."].items = {"..module.db.base[i].items_string.."}")()
 		module.db.base[i].items_string = nil
+		if module.db.base[i].setBonuses then
+			loadstring("GExRT.A.RaidLoot.db.base["..i.."].setBonuses = {"..module.db.base[i].setBonuses.."}")()
+		end
 	end
 	
 	local function LoadItemsInfo(tab)
@@ -212,32 +312,36 @@ function module.options:Load()
 		Loaded[tab] = true
 	end
 	
-	self.instanceButton = ExRT.lib.CreateScrollDropDownButton(self,"TOPLEFT",155,-5,300,22,300,#module.db.base,ExRT.L.RaidLootSelect)
-	self.instanceButton_Text = ExRT.lib.CreateText(self,150,22,"TOPLEFT",0,-5,"RIGHT","MIDDLE",nil,12,"Рейд / подземелье:",nil,1,1,1,1)
+	self.instanceButton = ELib:DropDownButton(self,L.RaidLootSelect,300,#module.db.base):Size(300,20):Point(155,-40)
+	self.instanceButton.isModern = true
+	self.instanceButton_Text = ELib:Text(self,L.RaidLootTitleRaid,12):Size(150,20):Point(0,-40):Right():Color():Shadow()
 
-	self.bossButton = ExRT.lib.CreateScrollDropDownButton(self,"TOPLEFT",155,-30,300,22,300,12,ExRT.L.RaidLootSelect)
-	self.bossButton_Text = ExRT.lib.CreateText(self,150,22,"TOPLEFT",0,-30,"RIGHT","MIDDLE",nil,12,"Босс:",nil,1,1,1,1)
+	self.bossButton = ELib:DropDownButton(self,L.RaidLootSelect,300,12):Size(300,20):Point(155,-65)
+	self.bossButton.isModern = true
+	self.bossButton_Text = ELib:Text(self,L.RaidLootTitleBoss,12):Size(150,20):Point(0,-65):Right():Color():Shadow()
 
-	self.tab = ExRT.lib.CreateOneTab(self,615,510,"TOP",0,-55)
-	self.tab:SetBackdrop({bgFile = "Interface\\AddOns\\ExRT\\media\\White", edgeFile = "Interface/Tooltips/UI-Tooltip-Border",tile = true, tileSize = 16, edgeSize = 16, insets = { left = 5, right = 5, top = 5, bottom = 5 }})
-	self.tab:SetBackdropColor(0.05, 0.05, 0.05, 0.9)
+	self.tab = ELib:OneTab(self):Size(655,524):Point("TOP",0,-92)
 	
 	self.itemIcon = self.tab:CreateTexture(nil, "OVERLAY",nil,7)
 	self.itemIcon:SetTexture("Interface\\Icons\\INV_MISC_QUESTIONMARK")
 	self.itemIcon:SetSize(48,48)
 	self.itemIcon:SetPoint("TOPLEFT", itemsWidth + 40,-10)
 	
-	local function OnClickItem(self)
-		ExRT.mds.LinkItem(nil,self.link) 
+	local function OnClickItem(self,button)
+		if button == "LeftButton" then
+			ExRT.F.LinkItem(nil,self.link) 
+		else
+			ExRT.F.ShowInput(self.link,ExRT.NULLfunc,nil,false,self.url)
+		end
 	end
 	local function OnEnterItem(self)
 		self:RegisterEvent('MODIFIER_STATE_CHANGED')
 		if IsShiftKeyDown() then	-- Item compare fix; одинаковые итемы с разными аффиксами не перехешируются из-за чего идет сравнение первого сравненного вплоть до сравнения нового итема
-			ExRT.lib.OnEnterHyperLinkTooltip(self,"item:71037")	--Фиксим невидимым сравнением с серым кольцом (обязательно должен быть итем, которые сравнивается с 2 слотами: кольцо, тринкет)
+			ELib.Tooltip.Link(self,"item:71037")	--Фиксим невидимым сравнением с серым кольцом (обязательно должен быть итем, которые сравнивается с 2 слотами: кольцо, тринкет)
 			GameTooltip_Hide()
 			GameTooltip.needsReset = true
 		end
-		ExRT.lib.OnEnterHyperLinkTooltip(self,self.link)
+		ELib.Tooltip.Link(self,self.link,0,-1)
 	end
 	local function OnLeaveItem(self)
 		self:UnregisterEvent('MODIFIER_STATE_CHANGED')
@@ -245,7 +349,7 @@ function module.options:Load()
 	end
 	local function OnEventItem(self, event, key, state)
 		if self:IsMouseOver() then
-			ExRT.lib.OnEnterHyperLinkTooltip(self,"item:71037")	-- Item compare fix
+			ELib.Tooltip.Link(self,"item:71037")	-- Item compare fix
 			GameTooltip_Hide()
 			GameTooltip.needsReset = true
 			
@@ -261,9 +365,9 @@ function module.options:Load()
 			self.Item[i][j] = button
 			button:SetSize(40,20)
 			button:SetPoint("TOPLEFT", itemsWidth + 35 + (j-1) * 40, -65-(i-1)*20)
-			button:RegisterForClicks("LeftButtonDown")
+			button:RegisterForClicks("LeftButtonDown","RightButtonDown")
 			
-			button.text = ExRT.lib.CreateText(button,40,20,nil,0,0,nil,"TOP",ExRT.mds.defFont,20,tostring(500+(i-1)*13+(j-1)*4),nil,1,1,1,1)
+			button.text = ELib:Text(button,500+(i-1)*13+(j-1)*4):Size(40,20):Point(0,0):Top():Font(ExRT.F.defFont,20):Color():Shadow()
 			
 			button:SetScript("OnClick", OnClickItem)
 			button:SetScript("OnEnter", OnEnterItem)
@@ -292,14 +396,32 @@ function module.options:Load()
 		for i=1,#module.db.bonuses_pos do
 			local bonus = module.db.bonuses_pos[i]
 			local bonusName = module.db.bonuses[ bonus ]
-			self.bonusCheck[count] = ExRT.lib.CreateCheckBox(self.tab,"TOPLEFT",itemsWidth + 25,posY,bonusName)
+			self.bonusCheck[count] = ELib:Check(self.tab,bonusName):Point("TOPLEFT",itemsWidth + 35,posY):OnClick(ChkOnClick)
 			self.bonusCheck[count]._i = bonus
-			self.bonusCheck[count]:SetScript("OnClick",ChkOnClick)
 			self.bonusCheck[count]:Hide()
 			count = count + 1
 			posY = posY - 25
 		end
 	end
+	
+	local PI2 = PI * 2
+
+	local model = CreateFrame("PlayerModel", nil, self.tab)
+	model:SetSize(280,220)
+	model:SetPoint("BOTTOMRIGHT", -2, 2)
+	model:Hide()
+	model.fac = 0
+	model:SetScript("OnUpdate",function (self,elapsed)
+		self.fac = self.fac + 0.5
+		if self.fac >= 360 then
+			self.fac = 0
+		end
+		self:SetFacing(PI2 / 360 * self.fac)
+		
+	end)
+	model:SetScript("OnShow",function (self)
+		self.fac = 0
+	end)
 
 	local ZeroUpgrades = {0}
 	function SelectItem(itemNum)
@@ -326,12 +448,12 @@ function module.options:Load()
 		local baseIlvl = module.db.base[InstanceNow].baseIlvl
 		local diffTypeTable = module.db.base[InstanceNow].diffTypeTable
 		if itemData and itemData.a then
-			diffTable = module.db.base[InstanceNow]["diffTable"..itemData.a]
-			affixTable = module.db.base[InstanceNow]["affixTable"..itemData.a]
+			diffTable = module.db.base[InstanceNow]["diffTable"..itemData.a] or diffTable
+			affixTable = module.db.base[InstanceNow]["affixTable"..itemData.a] or affixTable
 			if module.db.base[InstanceNow]["baseIlvl"..itemData.a] then
 				baseIlvl = module.db.base[InstanceNow]["baseIlvl"..itemData.a]
 			end
-			diffTypeTable = module.db.base[InstanceNow]["diffTypeTable"..itemData.a]
+			diffTypeTable = module.db.base[InstanceNow]["diffTypeTable"..itemData.a] or diffTypeTable
 		end
 		local bonusEnabled = module.db.base[InstanceNow].bonusEnabled
 		if bonusEnabled and (not itemData or (not itemData.b and not itemData.t)) then
@@ -360,23 +482,31 @@ function module.options:Load()
 				for j=1,#itemUpgrade do
 					local itemLevel = baseIlvl + diffTable[i] + itemUpgradeDiff[j]
 					local affixesString = ""
+					local urlAffixesString = (#affixTable[i] > 0 or #module.db.bonuses_active > 0) and "&bonus=" or ""
 					local itemColor_fix = itemColor
 					do
 						affixesString = tostring(#affixTable[i]+#module.db.bonuses_active)
 						for k=1,#affixTable[i] do
 							affixesString = affixesString..":"..tostring(affixTable[i][k])
-							if affixTable[i][k] == 558 or affixTable[i][k] == 559 or affixTable[i][k] == 593 or affixTable[i][k] == 594 then
+							urlAffixesString = urlAffixesString ..":"..tostring(affixTable[i][k])
+							if affixTable[i][k] == 558 or affixTable[i][k] == 559 or affixTable[i][k] == 593 or affixTable[i][k] == 594 or affixTable[i][k] == 619 or affixTable[i][k] == 620 then
 								itemColor_fix = select(4,GetItemQualityColor(4))
 							end
 						end
 						for k=1,#module.db.bonuses_active do
 							affixesString = affixesString..":"..tostring(module.db.bonuses_active[k])
+							urlAffixesString = urlAffixesString ..":"..tostring(module.db.bonuses_active[k])
 						end
+						urlAffixesString = urlAffixesString:gsub("=:","=")
 					end
 					
-					local link = format("|c%s|Hitem:%d:0:0:0:0:0:0:0:%d:%d:%d:%s|h%%s|h|r",itemColor_fix,itemIDnow,itemReqLevel or UnitLevel("player"),itemUpgrade[j],diffTypeTable[i],affixesString)
+					local upgradeStr2 = itemUpgrade[j] ~= 0 and ":"..itemUpgrade[j] or ""
+					local upgradeStr1 = itemUpgrade[j] ~= 0 and 4 or 0
+					local link = format("|c%s|Hitem:%d:0:0:0:0:0:0:0:%d:0:%d:%d:%s%s|h%%s|h|r",itemColor_fix,itemIDnow,itemReqLevel or UnitLevel("player"),upgradeStr1,diffTypeTable[i],affixesString,upgradeStr2)
+					
 					self.Item[i][j].text:SetText(format(link,tostring(itemLevel)))
 					self.Item[i][j].link = format(link,"["..(itemName or "?").."]")
+					self.Item[i][j].url = "https://wowhead.com/item="..itemIDnow..urlAffixesString
 					self.Item[i][j]:Show()
 				end
 			end
@@ -388,22 +518,71 @@ function module.options:Load()
 		end
 		SelectItem(self._i)
 	end	
+	
+	local scantip = CreateFrame("GameTooltip", "ExRTRaidLootScanningTooltip", nil, "GameTooltipTemplate")
+	scantip:SetOwner(UIParent, "ANCHOR_NONE")
 	local function OnEnterItemInList(self)
-		ExRT.lib.OnEnterHyperLinkTooltip(self,self.link)
+		ELib.Tooltip.Link(self,self.link)
+		
+		local setBonuses = module.db.base[InstanceNow].setBonuses
+		if self.class and setBonuses and setBonuses[self.class] then
+			setBonuses = setBonuses[self.class]
+			for i=1,2 do
+				local lines = {}
+				for j=1,#setBonuses[i] do
+					if type(setBonuses[i][j]) == "number" then
+						scantip:SetHyperlink("spell:"..setBonuses[i][j])
+						local tooltipLine = _G["ExRTRaidLootScanningTooltipTextLeft3"]
+						if tooltipLine then
+							local text = tooltipLine:GetText()
+							if text and text ~= "" then
+								lines[#lines+1] = text
+								setBonuses[i][j] = text
+							elseif text == "" then
+								tooltipLine = _G["ExRTRaidLootScanningTooltipTextLeft2"]
+								text = tooltipLine and tooltipLine:GetText() or ""
+								if text and text ~= "" then
+									lines[#lines+1] = text
+									setBonuses[i][j] = text
+								end
+							end
+						end
+					else
+						lines[#lines+1] = setBonuses[i][j]
+					end
+				end
+				if #lines > 0 then
+					for j=2,#lines,2 do
+						lines[j] = "|cffffffff"..lines[j].."|r"
+					end
+					if not self.class:find("%d$") then
+						tinsert(lines,1,(i*2)..":")
+					else
+						tinsert(lines,1,self.text:GetText() or " ")
+					end
+
+					ELib.Tooltip:Add(nil,lines,true)
+				end
+			end
+		end
+	end
+	local function OnLeaveItemInList(self)
+		GameTooltip_Hide()
+		ELib.Tooltip:HideAdd()
 	end
 	self.items = {}
-	for i=1,25 do
+	for i=1,26 do
 		self.items[i] = CreateFrame("Button", nil,self.tab)
 		self.items[i]:SetSize(itemsWidth,20)
-		self.items[i]:SetPoint("TOPLEFT", 5,-4-20*(i-1))
+		self.items[i]:SetPoint("TOPLEFT", 2,-2-20*(i-1))
 		
 		self.items[i].HighlightTexture = self.items[i]:CreateTexture(nil, "BACKGROUND")
 		self.items[i].HighlightTexture:SetTexture("Interface\\QuestFrame\\UI-QuestLogTitleHighlight")
 		self.items[i].HighlightTexture:SetPoint("TOPLEFT",20,0)
 		self.items[i].HighlightTexture:SetPoint("BOTTOMRIGHT",0,0)
 		self.items[i]:SetHighlightTexture(self.items[i].HighlightTexture,"ADD")
-			
-		self.items[i].text = ExRT.lib.CreateText(self.items[i],itemsWidth-16-22,20,nil,22,0,nil,"MIDDLE",ExRT.mds.defFont,12,"Item "..i,nil,1,1,1,1)
+		
+		self.items[i].text = ELib:Text(self.items[i],"Item "..i):Size(itemsWidth-16-22,20):Point(22,0):Font(ExRT.F.defFont,12):Color():Shadow()
 
 		self.items[i].icon = self.items[i]:CreateTexture(nil, "BACKGROUND")
 		self.items[i].icon:SetTexture("Interface\\Icons\\INV_MISC_QUESTIONMARK")
@@ -417,44 +596,69 @@ function module.options:Load()
 
 		self.items[i]:SetScript("OnClick", OnClickItemInList)
 		self.items[i]:SetScript("OnEnter", OnEnterItemInList)
-		self.items[i]:SetScript("OnLeave", GameTooltip_Hide)
+		self.items[i]:SetScript("OnLeave", OnLeaveItemInList)
 	end
-	self.ScrollBar = ExRT.lib.CreateScrollBar(self.tab,16,20*#self.items,itemsWidth+5,-4,1,2)
-	self.ScrollBar:SetScript("OnUpdate",self.ScrollBar.ReButtonsState)
-	self.ScrollBar:SetScript("OnValueChanged",function (self,value)
+	self.ScrollBar = ELib:ScrollBar(self.tab):Size(16,20*#self.items - 3):Point(itemsWidth+4,-4):Range(1,2):OnChange(function (self,value)
 		if self.FIX then
 			return
 		end
-		ScrollNow = ExRT.mds.Round(value)
+		ScrollNow = ExRT.F.Round(value)
 		GameTooltip_Hide()
+		ELib.Tooltip:HideAdd()
 		ReloadLootList()
 	end)
-	--self.ScrollBar:Hide()
+	
+	local bossesList_hoverFunc = function(_,modelID)
+		if modelID then
+			model:SetDisplayInfo(modelID) 
+			model:Show() 
+		else
+			model:Hide()
+		end
+	end
+	local bossesList_leaveFunc = function()
+		model:Hide() 
+		if model.ID then
+			model:SetDisplayInfo(model.ID) 
+			model:Show()
+		end
+	end
 	
 	local NULLTable = ExRT.NULL
 	function SelectBoss(_,bossNum)
-		ExRT.lib.ScrollDropDown.Close()
+		ELib:DropDownClose()
 		self.bossButton:SetText(module.db.base[InstanceNow].bosses[bossNum])
 		BossNow = bossNum
 		ItemsDataNow = module.db.base[InstanceNow].items[BossNow] or NULLTable
 		self.ScrollBar.FIX = true
-		self.ScrollBar:SetMinMaxValues(1,max(#ItemsDataNow - #self.items + 1,1))
-		self.ScrollBar:SetValue(1)
+		self.ScrollBar:Range(1,max(#ItemsDataNow - #self.items + 1,1)):SetValue(1)
 		self.ScrollBar.FIX = nil
 		ScrollNow = 1
 		ReloadLootList()
+		if module.db.base[InstanceNow].models and module.db.base[InstanceNow].models[BossNow] then
+			model.ID = module.db.base[InstanceNow].models[BossNow]
+			model:SetDisplayInfo(model.ID) 
+			model:Show()
+		else
+			model.ID = nil
+			model:Hide()
+		end
 	end
 	function SelectInstance(_,instanceNum)
-		ExRT.lib.ScrollDropDown.Close()
+		ELib:DropDownClose()
 		self.instanceButton:SetText(module.db.base[instanceNum].name)
-		self.bossButton:SetText(ExRT.L.RaidLootSelect)
+		self.bossButton:SetText(L.RaidLootSelect)
 		ItemsDataNow = NULLTable
 		ReloadLootList()
 		wipe(self.bossButton.List)
 		InstanceNow = instanceNum
 		for i=1,#module.db.base[instanceNum].bosses do
-			self.bossButton.List[i] = {text = module.db.base[instanceNum].bosses[i], arg1 = i, func = SelectBoss}
+			self.bossButton.List[i] = {text = module.db.base[instanceNum].bosses[i], arg1 = i, func = SelectBoss, hoverFunc = bossesList_hoverFunc, leaveFunc = bossesList_leaveFunc}
+			if module.db.base[instanceNum].models then
+				self.bossButton.List[i].hoverArg = module.db.base[instanceNum].models[i]
+			end
 		end
+		self.bossButton.Lines = #self.bossButton.List
 		LoadItemsInfo(instanceNum)
 	end
 	
@@ -484,10 +688,12 @@ function module.options:Load()
 				self.items[i]._i = j
 				self.items[i].isLine = nil
 				if itemData and itemData.c then
-					local cR,cG,CB = ExRT.mds.classColorNum(module.db.classNames[itemData.c])
+					local cR,cG,CB = ExRT.F.classColorNum(module.db.classNames[itemData.c] or "")
 					self.items[i].classColor:SetGradientAlpha("HORIZONTAL", cR,cG,CB, 0, cR,cG,CB, 0.5)
+					self.items[i].class = module.db.classNames[itemData.c] or itemData.c
 				else
 					self.items[i].classColor:SetGradientAlpha("HORIZONTAL", 0,0,0,0, 0,0,0,0)
+					self.items[i].class = nil
 				end
 				if itemID == 0 then
 					self.items[i].text:SetText("")
@@ -522,9 +728,9 @@ function module.options:Load()
 	module:RegisterEvents("GET_ITEM_INFO_RECEIVED")
 	
 	local instanceTypes = {
-		RAID = {L = ExRT.L.RaidLootTypeRaid, color = "ffc745fa"},
-		PARTY = {L = ExRT.L.RaidLootTypeParty, color = "ff0091f2"},
-		SOLO = {L = ExRT.L.RaidLootTypeSolo, color = "ff14b200"},
+		RAID = {L = L.RaidLootTypeRaid, color = "ffc745fa"},
+		PARTY = {L = L.RaidLootTypeParty, color = "ff0091f2"},
+		SOLO = {L = L.RaidLootTypeSolo, color = "ff14b200"},
 	}
 	for i=1,#module.db.base do
 		local instanceType = module.db.base[i].instanceType or "RAID"
@@ -550,6 +756,6 @@ do
 		if scheduled then
 			return
 		end
-		scheduled = ExRT.mds.ScheduleTimer(Update, 0.1)
+		scheduled = ExRT.F.ScheduleTimer(Update, 0.1)
 	end
 end

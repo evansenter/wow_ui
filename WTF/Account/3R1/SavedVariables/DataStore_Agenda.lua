@@ -13,7 +13,7 @@ DataStore_AgendaDB = {
 		["Options"] = {
 			["WeeklyResetHour"] = 6,
 			["WeeklyResetDay"] = 2,
-			["NextWeeklyReset"] = "2015-03-24",
+			["NextWeeklyReset"] = "2016-01-05",
 		},
 		["Characters"] = {
 			["Default.Dark Iron.Ereinion"] = {
@@ -25,22 +25,19 @@ DataStore_AgendaDB = {
 						["note"] = "",
 					},
 				},
-				["lastUpdate"] = 1426721817,
+				["lastUpdate"] = 1451460785,
 			},
 			["Default.Illidan.Combustion"] = {
 				["lastUpdate"] = 1424741664,
 			},
 			["Default.Illidan.Metal"] = {
-				["lastUpdate"] = 1426618288,
+				["lastUpdate"] = 1451460434,
 			},
 			["Default.Illidan.Natal"] = {
 				["lastUpdate"] = 1424741647,
 			},
 			["Default.Illidan.Comet"] = {
-				["DungeonIDs"] = {
-					["Blackrock Foundry Mythic|182974408"] = "478243|1426734564|0|1",
-				},
-				["lastUpdate"] = 1426734563,
+				["lastUpdate"] = 1451461381,
 			},
 			["Default.Dark Iron.Colton"] = {
 				["Contacts"] = {

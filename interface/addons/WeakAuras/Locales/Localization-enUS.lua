@@ -17,6 +17,7 @@ L["Action Usable"] = "Action Usable"
 L["Affected"] = "Affected"
 L["Air"] = "Air"
 L["Alive"] = "Alive"
+L["Alliance"] = "Alliance"
 L["All Triggers"] = "All Triggers"
 L["Alternate Power"] = "Alternate Power"
 L["Always active trigger"] = "Always active trigger"
@@ -50,6 +51,8 @@ L["BG>Raid>Party>Say"] = "BG>Raid>Party>Say"
 L["BG-System Alliance"] = "BG-System Alliance"
 L["BG-System Horde"] = "BG-System Horde"
 L["BG-System Neutral"] = "BG-System Neutral"
+L["BigWigs Addon"] = "BigWigs Addon"
+L["BigWigs Timer"] = "BigWigs Timer"
 L["Blizzard Combat Text"] = "Blizzard Combat Text"
 L["Block"] = "Block"
 L["Blocked"] = "Blocked"
@@ -107,6 +110,8 @@ L["Damager"] = "Damager"
 L["Damage Shield"] = "Damage Shield"
 L["Damage Shield Missed"] = "Damage Shield Missed"
 L["Damage Split"] = "Damage Split"
+L["DBM Announce"] = "DBM Announce"
+L["DBM Timer"] = "DBM Timer"
 L["Death Knight"] = "Death Knight"
 L["Death Knight Rune"] = "Death Knight Rune"
 L["Death Rune"] = "Death Rune"
@@ -134,6 +139,45 @@ L["Eclipse Direction"] = "Eclipse Direction"
 L["Eclipse Power"] = "Eclipse Power"
 L["Eclipse Type"] = "Eclipse Type"
 L["Emote"] = "Emote"
+L["Encounter ID"] = "Encounter ID"
+L["EncounterID List"] = [=[IDs for the current Tier:
+
+Hellfire Citadel:
+
+  Hellfire Assault: 1778
+  Iron Reaver: 1785
+  Kormrok: 1787
+  Hellfire High Council: 1798
+  Kilrogg Deadeye: 1786
+  Gorefiend: 1783
+  Shadow-Lord Iskar: 1788
+  Xhul'horac: 1800
+  Fel Lord Zakuun: 1777 
+  Socrethar the Eternal: 1794
+  Tyrant Velhari: 1784
+  Mannoroth: 1795
+  Archimonde: 1799
+
+Highmaul:
+ Kargath: 1721
+ The Butcher: 1706
+ Tectus: 1722
+ Brackenspore: 1720
+ Twin Ogron: 1719
+ Koragh: 1723
+ Imperator Mar'gok: 1705
+
+Blackrock Foundry:
+ Gruul: 1691
+ Oregorger: 1696
+ Beastlord Darmac:1694
+ Flamebender Ka'graz: 1689
+ Hans'gar and Franzok: 1693
+ Operator Thogar: 1692
+ The Blast Furnace: 1690
+ Kromog: 1713
+ The Iron Maidens: 1695
+ Blackhand: 1704]=]
 L["Energize"] = "Energize"
 L["Energy"] = "Energy"
 L["Enrage"] = "Enrage"
@@ -153,6 +197,9 @@ L["Falling"] = "Falling"
 L["Fatigue"] = "Fatigue"
 L["Fire"] = "Fire"
 L["First Tree"] = "First Tree"
+L[ [=[Fishing Lure / Weapon Enchant (Old)
+]=] ] = [=[Fishing Lure / Weapon Enchant (Old)
+]=]
 L["Flash"] = "Flash"
 L["Flex Raid"] = "Flex Raid"
 L["Flip"] = "Flip"
@@ -185,6 +232,7 @@ L["Hide"] = "Hide"
 L["High Damage"] = "High Damage"
 L["Higher Than Tank"] = "Higher Than Tank"
 L["Holy Power"] = "Holy Power"
+L["Horde"] = "Horde"
 L["Hostile"] = "Hostile"
 L["Hostility"] = "Hostility"
 L["Humanoid"] = "Humanoid"
@@ -206,6 +254,7 @@ L["Interruptible"] = "Interruptible"
 L["In Vehicle"] = "In Vehicle"
 L["Inverse"] = "Inverse"
 L["Is Exactly"] = "Is Exactly"
+L["Is Moving"] = "Is Moving"
 L["Item"] = "Item"
 L["Item Count"] = "Item Count"
 L["Item Equipped"] = "Item Equipped"
@@ -239,6 +288,7 @@ L["Mounted"] = "Mounted"
 L["Multi-target"] = "Multi-target"
 L["Music"] = "Music"
 L["Name"] = "Name"
+L["Neutral"] = "Neutral"
 L["Never"] = "Never"
 L["Next"] = "Next"
 L["No Children:"] = "No Children:"
@@ -270,6 +320,7 @@ L["Player"] = "Player"
 L["Player Character"] = "Player Character"
 L["Player Class"] = "Player Class"
 L["Player Dungeon Role"] = "Player Dungeon Role"
+L["Player Faction"] = "Player Faction"
 L["Player Level"] = "Player Level"
 L["Player Name"] = "Player Name"
 L["Player Race"] = "Player Race"
@@ -366,6 +417,7 @@ L["Spark Texture"] = "Spark Texture"
 L["Specific Unit"] = "Specific Unit"
 L["Spell"] = "Spell"
 L["Spell (Building)"] = "Spell (Building)"
+L["Spell/Encounter ID"] = "Spell/Encounter ID"
 L["Spell Name"] = "Spell Name"
 L["Spin"] = "Spin"
 L["Spiral"] = "Spiral"
@@ -424,11 +476,11 @@ L["WeakAuras .toc Notes"] = "A powerful, comprehensive utilty for displaying gra
 L["WeakAurasTutorials"] = "WeakAuras - Tutorials"
 L["WeakAurasTutorials .toc Notes"] = "Indroction and advanced tutorials for WeakAuras."
 L["Weapon"] = "Weapon"
-L["Weapon Enchant"] = "Weapon Enchant"
 L["Whisper"] = "Whisper"
 L["Wobble"] = "Wobble"
 L["Yell"] = "Yell"
 L["Zone"] = "Zone"
+L["Zone ID"] = "Zone ID"
 
 
 
@@ -436,9 +488,6 @@ L["Zone"] = "Zone"
 
 -- Make missing translations available
 setmetatable(WeakAuras.L, {__index = function(self, key)
-	self[key] = (key or "")
-	
-	
-	
+	self[key] = (key or "")	
 	return key
 end})

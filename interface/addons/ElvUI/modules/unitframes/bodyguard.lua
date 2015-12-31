@@ -6,6 +6,20 @@ local _, ns = ...
 local ElvUF = ns.oUF
 assert(ElvUF, "ElvUI was unable to locate oUF.")
 
+--Cache global variables
+local unpack = unpack
+--WoW API / Variables
+local CreateFrame = CreateFrame
+local SetMapToCurrentZone = SetMapToCurrentZone
+local GetCurrentMapContinent = GetCurrentMapContinent
+local GetCurrentMapAreaID = GetCurrentMapAreaID
+local InCombatLockdown = InCombatLockdown
+local UnitExists = UnitExists
+local UnitName = UnitName
+
+--Global variables that we don't cache, list them here for mikk's FindGlobals script
+-- GLOBALS: ElvUF_Player
+
 local CONTINENT_DRAENOR = 7
 local BODYGUARD_BANNED_ZONES = {
     [978] = true,  -- Ashran
@@ -70,7 +84,7 @@ end
 local isCreated = false
 function BG:CreateFrame()
 	if(isCreated) then return end
-	local frame = CreateFrame("Button", "ElvUF_BodyGuard", E.UIParent, "SecureActionButtonTemplate")
+	local frame = CreateFrame("Button", "ElvUF_BodyGuard", ElvUF_Player, "SecureActionButtonTemplate")
 	frame:SetScript("OnEvent", OnEvent)
 	frame:RegisterEvent("PLAYER_TARGET_CHANGED")
 
@@ -114,7 +128,11 @@ end
 
 function BG:UpdateSettings()
 	if(UF.db.units.bodyguard.enable) then
-		self.frame:SetParent(E.UIParent)
+		if E.db.unitframe.units.player.enable and ElvUF_Player then
+			self.frame:SetParent(ElvUF_Player)
+		elseif not E.db.unitframe.units.player.enable then
+			self.frame:SetParent(E.UIParent)
+		end
 	else
 		self.frame:SetParent(E.HiddenFrame)
 	end

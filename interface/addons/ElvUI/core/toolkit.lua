@@ -1,16 +1,28 @@
 local E, L, V, P, G = unpack(select(2, ...)); --Inport: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local LSM = LibStub("LibSharedMedia-3.0")
 
+--Cache global variables
+--Lua functions
+local _G = _G
+local unpack, type, select, getmetatable = unpack, type, select, getmetatable
 local floor = math.floor
-local backdropr, backdropg, backdropb, backdropa, borderr, borderg, borderb = 0, 0, 0, 1, 0, 0, 0
+--WoW API / Variables
+local CreateFrame = CreateFrame
+local RAID_CLASS_COLORS = RAID_CLASS_COLORS
+local CUSTOM_CLASS_COLORS = CUSTOM_CLASS_COLORS
 
 --Preload shit..
 E.mult = 1;
+local backdropr, backdropg, backdropb, backdropa, borderr, borderg, borderb = 0, 0, 0, 1, 0, 0, 0
 
 local function GetTemplate(t)
 	backdropa = 1
 	if t == "ClassColor" then
-		borderr, borderg, borderb = RAID_CLASS_COLORS[E.myclass].r, RAID_CLASS_COLORS[E.myclass].g, RAID_CLASS_COLORS[E.myclass].b
+		if CUSTOM_CLASS_COLORS then
+			borderr, borderg, borderb = CUSTOM_CLASS_COLORS[E.myclass].r, CUSTOM_CLASS_COLORS[E.myclass].g, CUSTOM_CLASS_COLORS[E.myclass].b
+		else
+			borderr, borderg, borderb = RAID_CLASS_COLORS[E.myclass].r, RAID_CLASS_COLORS[E.myclass].g, RAID_CLASS_COLORS[E.myclass].b
+		end
 		if t ~= "Transparent" then
 			backdropr, backdropg, backdropb = unpack(E["media"].backdropcolor)
 		else
@@ -152,8 +164,6 @@ local function SetTemplate(f, t, glossTex, ignoreUpdates)
 	if not ignoreUpdates then
 		E["frames"][f] = true
 	end
-
-	frame = nil;
 end
 
 local function CreateBackdrop(f, t, tex)
@@ -235,7 +245,7 @@ local function FontTemplate(fs, font, fontSize, fontStyle)
 	end
 
 	fs:SetFont(font, fontSize, fontStyle)
-	if fontStyle then
+	if fontStyle and (fontStyle ~= "NONE") then
 		fs:SetShadowColor(0, 0, 0, 0.2)
 	else
 		fs:SetShadowColor(0, 0, 0, 1)
@@ -247,7 +257,7 @@ end
 
 local function StyleButton(button, noHover, noPushed, noChecked)
 	if button.SetHighlightTexture and not button.hover and not noHover then
-		local hover = button:CreateTexture("frame", nil, self)
+		local hover = button:CreateTexture()
 		hover:SetTexture(1, 1, 1, 0.3)
 		hover:SetInside()
 		button.hover = hover
@@ -255,7 +265,7 @@ local function StyleButton(button, noHover, noPushed, noChecked)
 	end
 
 	if button.SetPushedTexture and not button.pushed and not noPushed then
-		local pushed = button:CreateTexture("frame", nil, self)
+		local pushed = button:CreateTexture()
 		pushed:SetTexture(0.9, 0.8, 0.1, 0.3)
 		pushed:SetInside()
 		button.pushed = pushed
@@ -263,7 +273,7 @@ local function StyleButton(button, noHover, noPushed, noChecked)
 	end
 
 	if button.SetCheckedTexture and not button.checked and not noChecked then
-		local checked = button:CreateTexture("frame", nil, self)
+		local checked = button:CreateTexture()
 		checked:SetTexture(1, 1, 1)
 		checked:SetInside()
 		checked:SetAlpha(0.3)
@@ -305,7 +315,7 @@ addapi(object:CreateFontString())
 
 object = EnumerateFrames()
 while object do
-	if not handled[object:GetObjectType()] then
+	if not object:IsForbidden() and not handled[object:GetObjectType()] then
 		addapi(object)
 		handled[object:GetObjectType()] = true
 	end

@@ -75,6 +75,13 @@ function mog.createOptions()
 				width = "full",
 				arg = "tooltipItemID",
 			},
+			tooltipAlwaysShowOwned = {
+				type = "toggle",
+				order = 2.5,
+				name = L["Always indicate owned item in tooltip"],
+				width = "full",
+				arg = "tooltipAlwaysShowOwned",
+			},
 			catalogue = {
 				type = "group",
 				order = 3,
@@ -162,6 +169,16 @@ function mog.createOptions()
 						arg = "previewFixedSize",
 						disabled = function()
 							return not (mog.db.profile.singlePreview and mog.db.profile.previewUIPanel);
+						end,
+					},
+					previewConfirmClose = {
+						type = "toggle",
+						order = 5,
+						name = L["Confirm closing multi previews"],
+						width = "full",
+						arg = "previewConfirmClose",
+						disabled = function()
+							return mog.db.profile.singlePreview;
 						end,
 					},
 				},

@@ -38,22 +38,26 @@ DataStore_CurrenciesDB = {
 				"Miscellaneous|", -- [24]
 				"Champion's Seal|Interface\\Icons\\Ability_Paladin_ArtofWar", -- [25]
 				"Epicurean's Award|Interface\\Icons\\INV_Misc_Ribbon_01", -- [26]
+				"Oil|Interface\\Icons\\garrison_oil", -- [27]
+				"Seal of Inevitable Fate|Interface\\Icons\\achievement_battleground_templeofkotmogu_02_green", -- [28]
 			},
 			["CurrencyTextRev"] = {
 				["Mark of the World Tree"] = 21,
 				["Elder Charm of Good Fortune"] = 5,
-				["Illustrious Jewelcrafter's Token"] = 7,
 				["Garrison Resources"] = 17,
+				["Illustrious Jewelcrafter's Token"] = 7,
+				["Oil"] = 27,
+				["Lesser Charm of Good Fortune"] = 10,
 				["Valor Points"] = 13,
 				["Warforged Seal"] = 14,
 				["Mists of Pandaria"] = 20,
-				["Tol Barad Commendation"] = 23,
+				["Seal of Tempered Fate"] = 18,
 				["Player vs. Player"] = 1,
 				["Mote of Darkness"] = 22,
 				["Unused"] = 4,
-				["Seal of Tempered Fate"] = 18,
 				["Ironpaw Token"] = 8,
 				["Conquest Points"] = 2,
+				["Miscellaneous"] = 24,
 				["Epicurean's Award"] = 26,
 				["Honor Points"] = 3,
 				["Timeless Coin"] = 12,
@@ -61,11 +65,11 @@ DataStore_CurrenciesDB = {
 				["Essence of Corrupted Deathwing"] = 6,
 				["Apexis Crystal"] = 16,
 				["Justice Points"] = 9,
-				["Miscellaneous"] = 24,
 				["Mogu Rune of Fate"] = 11,
 				["Dungeon and Raid"] = 19,
+				["Tol Barad Commendation"] = 23,
 				["Champion's Seal"] = 25,
-				["Lesser Charm of Good Fortune"] = 10,
+				["Seal of Inevitable Fate"] = 28,
 			},
 		},
 		["Characters"] = {
@@ -91,27 +95,25 @@ DataStore_CurrenciesDB = {
 			["Default.Illidan.Evan"] = {
 				["Currencies"] = {
 					31, -- [1]
-					113696, -- [2]
-					282914, -- [3]
-					1316, -- [4]
-					39, -- [5]
-					18, -- [6]
-					26, -- [7]
-					3, -- [8]
-					4, -- [9]
-					24582, -- [10]
-					41, -- [11]
-					404, -- [12]
-					1688600, -- [13]
-					28, -- [14]
-					9, -- [15]
-					2442, -- [16]
-					12, -- [17]
-					144, -- [18]
-					3370, -- [19]
-					22, -- [20]
-					172, -- [21]
-					1582, -- [22]
+					127008, -- [2]
+					218402, -- [3]
+					312, -- [4]
+					1572, -- [5]
+					3, -- [6]
+					4, -- [7]
+					24582, -- [8]
+					41, -- [9]
+					404, -- [10]
+					1688600, -- [11]
+					28, -- [12]
+					9, -- [13]
+					2442, -- [14]
+					12, -- [15]
+					144, -- [16]
+					3370, -- [17]
+					22, -- [18]
+					172, -- [19]
+					1582, -- [20]
 				},
 				["Archeology"] = {
 					0, -- [1]
@@ -130,15 +132,15 @@ DataStore_CurrenciesDB = {
 					0, -- [14]
 					0, -- [15]
 				},
-				["lastUpdate"] = 1426721817,
+				["lastUpdate"] = 1451461031,
 				["CurrencyInfo"] = {
 					[395] = "0-0-0-0",
 					[396] = "0-0-10-3000",
-					[390] = "0-0-16700-0",
-					[823] = "888-0-0-60000",
-					[392] = "192-0-0-40",
-					[994] = "10-0-0-10",
-					[824] = "2210-0-0-10000",
+					[390] = "0-0-10700-0",
+					[823] = "992-0-0-0",
+					[392] = "192-0-0-4000",
+					[994] = "12-0-0-20",
+					[824] = "1706-0-0-10000",
 				},
 			},
 			["Default.Illidan.Combustion"] = {
@@ -170,11 +172,11 @@ DataStore_CurrenciesDB = {
 			["Default.Illidan.Metal"] = {
 				["Currencies"] = {
 					31, -- [1]
-					519328, -- [2]
-					1179426, -- [3]
-					932, -- [4]
-					39, -- [5]
-					18, -- [6]
+					541856, -- [2]
+					1168290, -- [3]
+					3254, -- [4]
+					312, -- [5]
+					932, -- [6]
 					3, -- [7]
 					4, -- [8]
 					8838, -- [9]
@@ -200,15 +202,15 @@ DataStore_CurrenciesDB = {
 					0, -- [14]
 					0, -- [15]
 				},
-				["lastUpdate"] = 1426618347,
+				["lastUpdate"] = 1451460752,
 				["CurrencyInfo"] = {
 					[395] = "0-0-0-0",
 					[396] = "0-0-0-0",
-					[390] = "0-0-16700-0",
-					[823] = "4057-0-0-60000",
-					[392] = "69-0-0-40",
-					[824] = "9214-0-0-10000",
-					[994] = "7-0-0-10",
+					[390] = "0-0-10700-0",
+					[823] = "4233-0-0-0",
+					[392] = "69-0-0-4000",
+					[824] = "9127-0-0-10000",
+					[994] = "7-0-0-20",
 				},
 			},
 			["Default.Illidan.Natal"] = {
@@ -241,22 +243,22 @@ DataStore_CurrenciesDB = {
 			["Default.Illidan.Comet"] = {
 				["Currencies"] = {
 					31, -- [1]
-					115360, -- [2]
-					1244322, -- [3]
-					420, -- [4]
-					3, -- [5]
-					142084, -- [6]
-					7046, -- [7]
-					9, -- [8]
-					10, -- [9]
-					140, -- [10]
-					142, -- [11]
-					144, -- [12]
-					18, -- [13]
-					33044, -- [14]
-					22, -- [15]
-					2352536, -- [16]
-					26, -- [17]
+					269088, -- [2]
+					1115170, -- [3]
+					10294, -- [4]
+					312, -- [5]
+					420, -- [6]
+					3, -- [7]
+					4, -- [8]
+					149126, -- [9]
+					9, -- [10]
+					10, -- [11]
+					140, -- [12]
+					142, -- [13]
+					144, -- [14]
+					33044, -- [15]
+					22, -- [16]
+					2352536, -- [17]
 					28, -- [18]
 				},
 				["Archeology"] = {
@@ -276,15 +278,15 @@ DataStore_CurrenciesDB = {
 					40, -- [14]
 					35, -- [15]
 				},
-				["lastUpdate"] = 1426734576,
+				["lastUpdate"] = 1451461381,
 				["CurrencyInfo"] = {
 					[395] = "0-0-0-0",
 					[396] = "0-0-10-3000",
-					[390] = "1110-0-14340-0",
-					[823] = "901-0-0-60000",
-					[392] = "55-0-0-40",
-					[994] = "3-0-0-10",
-					[824] = "9721-0-0-10000",
+					[390] = "0-0-10700-0",
+					[823] = "2102-0-0-0",
+					[392] = "1165-0-0-4000",
+					[994] = "3-0-0-20",
+					[824] = "8712-0-0-10000",
 				},
 			},
 			["Default.Dark Iron.Colton"] = {

@@ -1,0 +1,13 @@
+------------------------------------------------------------------------
+r30 | thaoky | 2015-08-17 16:19:42 +0000 (Mon, 17 Aug 2015) | 1 line
+Changed paths:
+   M /trunk/DataStore_Currencies.toc
+
+TOC Update
+------------------------------------------------------------------------
+r29 | thaoky | 2015-04-06 15:43:49 +0000 (Mon, 06 Apr 2015) | 1 line
+Changed paths:
+   M /trunk/DataStore_Currencies.lua
+
+Updated specific scanning of some currencies
+------------------------------------------------------------------------

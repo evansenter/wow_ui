@@ -1,4 +1,4 @@
-## Interface: 60100
+## Interface: 60200
 ## Title: TradeSkillInfo UI
 ## Notes: Complete tradeskill information browser module.
 ## Notes-zhCN: 商业技能资料库设置窗口
@@ -6,12 +6,12 @@
 ## Notes-esES: UI con Info Completa de las Habilidades de Comercio
 ## Notes-koKR: 전문기술 정보 UI
 ## Author: Ethan Centaurai
-## Version: v2.3.6
+## Version: v2.3.8
 ## Dependencies: TradeskillInfo
 ## LoadOnDemand: 1
 ## X-Icon: Interface\Icons\INV_Elemental_SpiritOfHarmony_2
 ## X-Category: Professions
-## X-Curse-Packaged-Version: v2.3.6
+## X-Curse-Packaged-Version: v2.3.8
 ## X-Curse-Project-Name: TradeSkillInfo
 ## X-Curse-Project-ID: tradeskill-info
 ## X-Curse-Repository-ID: wow/tradeskill-info/mainline

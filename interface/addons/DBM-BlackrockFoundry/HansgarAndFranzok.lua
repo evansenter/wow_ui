@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1155, "DBM-BlackrockFoundry", nil, 457)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 13589 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 14569 $"):sub(12, -3))
 mod:SetCreatureID(76974, 76973)
 mod:SetEncounterID(1693)
 mod:SetZone()
@@ -11,8 +11,6 @@ mod:RegisterCombat("combat")
 
 mod:RegisterEventsInCombat(
 	"SPELL_CAST_START 160838 160845 160847 160848 153470",
-	"SPELL_AURA_APPLIED 157139 162124",
-	"SPELL_AURA_APPLIED_DOSE 157139",
 	"UNIT_SPELLCAST_SUCCEEDED boss1 boss2",
 	"UNIT_TARGETABLE_CHANGED"
 )
@@ -20,32 +18,31 @@ mod:RegisterEventsInCombat(
 --TODO, find target scanning for skullcracker. Also, find out how it behaves when it's more than 1 target (just recast?)
 --TODO, collect more data to figure out how roar starts/resumes on jump down. One pull/kill is not a sufficient sampling.
 local warnSkullcracker					= mod:NewSpellAnnounce(153470, 3, nil, false)--This seems pretty worthless.
-local warnShatteredVertebrae			= mod:NewStackAnnounce("OptionVersion2", 157139, 2, nil, false)--Possibly useless or changed. Needs further logs.
 local warnJumpSlam						= mod:NewTargetCountAnnounce("ej9854", 3)--Find pretty icon
 
 local specWarnJumpSlam					= mod:NewSpecialWarningYou("ej9854")
 local specWarnJumpSlamNear				= mod:NewSpecialWarningClose("ej9854")
 local yellJumpSlam						= mod:NewYell("ej9854")
-local specWarnDisruptingRoar			= mod:NewSpecialWarningCast("OptionVersion2", 160838, "SpellCaster", nil, nil, nil, nil, 2)
+local specWarnDisruptingRoar			= mod:NewSpecialWarningCast(160838, "SpellCaster", nil, 2, nil, 2)
 --Move specWarnCripplingSupplex to a health check, warn when near 85, 55, or 25%
-local specWarnCripplingSupplex			= mod:NewSpecialWarningPreWarn("OptionVersion2", 156938, "Tank|Healer", 3, nil, nil, 3)--pop a cooldown.
+local specWarnCripplingSupplex			= mod:NewSpecialWarningPreWarn(156938, "Tank|Healer", 3, nil, 3, 3)--pop a cooldown.
 local specWarnSearingPlates				= mod:NewSpecialWarningSpell(161570, nil, nil, nil, 2)
 local specWarnStampers					= mod:NewSpecialWarningSpell(174825, nil, nil, nil, 2)
-local specWarnSearingPlatesEnd			= mod:NewSpecialWarningEnd(161570, nil, nil, nil, nil, nil, 2)
-local specWarnStampersEnd				= mod:NewSpecialWarningEnd(174825, nil, nil, nil, nil, nil, 2)
+local specWarnSearingPlatesEnd			= mod:NewSpecialWarningEnd(161570, nil, nil, nil, nil, 2)
+local specWarnStampersEnd				= mod:NewSpecialWarningEnd(174825, nil, nil, nil, nil, 2)
 
 local timerDisruptingRoar				= mod:NewCastTimer(2.5, 160838, nil, "SpellCaster")
 local timerDisruptingRoarCD				= mod:NewCDTimer(45, 160838, nil, "SpellCaster")
-local timerSkullcrackerCD				= mod:NewCDTimer(22, 153470, nil, "Healer")
-local timerCripplingSupplex				= mod:NewCastTimer(9.5, 156938, nil, "Tank|Healer")
+local timerSkullcrackerCD				= mod:NewCDTimer(22, 153470, nil, "Healer", nil, 5)
+local timerCripplingSupplex				= mod:NewCastTimer(9.5, 156938, nil, "Tank|Healer", nil, 5)
 local timerJumpSlamCD					= mod:NewNextTimer(34, "ej9854")
 mod:AddTimerLine(ENCOUNTER_JOURNAL_SECTION_FLAG12)
-local timerSmartStamperCD				= mod:NewNextTimer(12, 162124)--Activation
+local timerSmartStamperCD				= mod:NewNextTimer(12, 162124, nil, nil, nil, 6)--Activation
 
 --local berserkTimer						= mod:NewBerserkTimer(360)
 
 local countSmartStampers				= mod:NewCountdown(12, 160582)
-local countCripplingSupplex				= mod:NewCountdown("OptionVersion2", "Alt9.5", 156938, "Tank|Healer")
+local countCripplingSupplex				= mod:NewCountdown("Alt9.5", 156938, "Tank|Healer", 2)
 
 local voiceEnvironmentalThreats			= mod:NewVoice("ej10089")
 local voiceDisruptingRoar				= mod:NewVoice(160838, "SpellCaster")
@@ -109,18 +106,6 @@ function mod:SPELL_CAST_START(args)
 	end
 end
 
-function mod:SPELL_AURA_APPLIED(args)
-	local spellId = args.spellId
-	if spellId == 157139 then
-		local uId = DBM:GetRaidUnitId(args.destName)
-		if self:IsTanking(uId, "boss1") or self:IsTanking(uId, "boss2") then--Assume this can hit non tanks at landing site too, filter them
-			local amount = args.amount or 1
-			warnShatteredVertebrae:Show(args.destName, amount)
-		end
-	end
-end
-mod.SPELL_AURA_APPLIED_DOSE = mod.SPELL_AURA_APPLIED
-
 function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, _, _, spellId)
 	if (spellId == 156220 or spellId == 156883) and self.vb.bossUp == "NoBody" then--Tactical Retreat (156883 has lots of invalid casts, so self.vb.bossUp to filter)
 		self.vb.phase = self.vb.phase + 1
@@ -146,11 +131,6 @@ function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, _, _, spellId)
 			specWarnSearingPlates:Show()
 			voiceEnvironmentalThreats:Play("watchstep")	
 		end
-	--"<944.72 23:32:59> [UNIT_SPELLCAST_SUCCEEDED] Hans'gar [[boss1:Crippling Suplex::0:156546]]", -- [5133]--Pre cast, Stuns main tank
-	--"<948.55 23:33:03> [UNIT_SPELLCAST_SUCCEEDED] Hans'gar [[boss1:Crippling Suplex::0:156609]]", -- [5752]--Secondary target (off tank) no stun
-	--"<951.15 23:33:06> [CLEU] SPELL_CAST_START#Vehicle-0-3783-1205-31925-76974-0000518B7D#Franzok##nil#156938#Crippling Suplex#nil#nil", -- [6168]--cast bar for damage
-	--"<954.06 23:33:08> [CLEU] SPELL_CAST_SUCCESS#Vehicle-0-3783-1205-31925-76974-0000518B7D#Franzok#Player-76-0580DD5F#playerName#156938#Crippling Suplex#nil#nil", -- [6639]--SMASH (5.5 seconds after stun, VERY tight to cover attack with 6 second cd)
-	--http://blue.mmo-champion.com/topic/360651-blackrock-foundry-clarification-known-issues/
 	elseif spellId == 156546 or spellId == 156542 then
 		specWarnCripplingSupplex:Schedule(6)--warn 3 seconds before, stun removed in 6.1
 		timerCripplingSupplex:Start()

@@ -363,6 +363,7 @@ local BB = LibStub("LibBabble-Boss-3.0"):GetUnstrictLookupTable()
 local DataSources = {
 	"InstanceLoot",
 	"InstanceLootHeroic",
+	"InstanceLootLFR",
 	"CurrencyItems",
 }
 

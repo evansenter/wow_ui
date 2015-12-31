@@ -4,8 +4,8 @@
 
 LootMaster          = LibStub("AceAddon-3.0"):NewAddon("EPGPLootMaster", "AceConsole-3.0", "AceComm-3.0", "AceEvent-3.0", "AceTimer-3.0", "AceHook-3.0")
 
-local version 	    = "0.6.64"
-local dVersion 	    = "2014-12-17T09:53:18Z"
+local version 	    = "6.69"
+local dVersion 	    = "2015-07-08T07:42:10Z"
 local iVersion	    = 4
 local iVersionML	  = 12
 local _G            = _G
@@ -235,6 +235,11 @@ function LootMaster.UnAmbiguate(name)
 	end
 
 	return res
+end
+
+-- Just a quick hack for the missing GetNumLootSlots function
+function LootMaster.GetNumLootSlots()
+    return GetNumLootItems() + 50
 end
 
 -- Just a local cache of the Ambiguate function

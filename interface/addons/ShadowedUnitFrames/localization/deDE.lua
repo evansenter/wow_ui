@@ -265,6 +265,7 @@ L["Flips coloring so the bar color is shown as the background color and the back
 L["Focus"] = "Fokus"
 L["Focus Target"] = "Fokus Ziel"
 L["Font"] = "Schrift"
+L["Food"] = "Essen" -- Needs review
 L["Forces a static color to be used for the background of all bars"] = "Erzwingt die Verwendung einer festgesetzten Farbe für die Hintergründe aller Leisten."
 L["For target/focus"] = "Für Ziel/Fokus"
 L["Frame"] = "Fenster"

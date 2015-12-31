@@ -2,25 +2,23 @@
 VExRT = {
 	["Timers"] = {
 	},
+	["ProfileKeys"] = {
+		["Comet-Illidan"] = "default",
+	},
 	["Arrow"] = {
 	},
 	["Encounter"] = {
+		["names"] = {
+			[1713] = "Kromog, Legend of the Mountain",
+			[1689] = "Flamebender Ka'graz",
+			[1693] = "Hans'gar & Franzok",
+			[1704] = "Blackhand",
+			[1694] = "Beastlord Darmac",
+			[1691] = "Gruul",
+			[1690] = "Blast Furnace",
+		},
 		["list"] = {
 			["Evan"] = {
-			},
-			["Metal"] = {
-				"69BE1426377890085015Ninjáman-Ragnaros", -- [1]
-				"69BE1426379138011019Danedrad-Hyjal", -- [2]
-				"69BE142637944912C119Annúnor-Zul'jin", -- [3]
-				"69EE1426380435208117Evasion-SteamwheedleCartel", -- [4]
-				"69DE1426381470133117Evasion-SteamwheedleCartel", -- [5]
-				"699E142638240119F017Solitice-Zul'jin", -- [6]
-				"699E14263829800E5017Azäzel-Zul'jin", -- [7]
-				"699E1426383852196018Lengzhai-BlackDragonflight", -- [8]
-				"699E142638444919A018Annúnor-Zul'jin", -- [9]
-				"699E1426540220139020Döctà", -- [10]
-				"699E1426540746159120", -- [11]
-				"6B1E142654180007B020Doublestufed-Gorefiend", -- [12]
 			},
 			["Comet"] = {
 				"6A8E1426373886111015Slimshamie-Zul'jin", -- [1]
@@ -54,15 +52,20 @@ VExRT = {
 				"69DF1426730240066020Haseoh", -- [29]
 				"69DF142673048912F120Fuzzicans", -- [30]
 			},
-		},
-		["names"] = {
-			[1713] = "Kromog, Legend of the Mountain",
-			[1689] = "Flamebender Ka'graz",
-			[1693] = "Hans'gar & Franzok",
-			[1704] = "Blackhand",
-			[1694] = "Beastlord Darmac",
-			[1691] = "Gruul",
-			[1690] = "Blast Furnace",
+			["Metal"] = {
+				"69BE1426377890085015Ninjáman-Ragnaros", -- [1]
+				"69BE1426379138011019Danedrad-Hyjal", -- [2]
+				"69BE142637944912C119Annúnor-Zul'jin", -- [3]
+				"69EE1426380435208117Evasion-SteamwheedleCartel", -- [4]
+				"69DE1426381470133117Evasion-SteamwheedleCartel", -- [5]
+				"699E142638240119F017Solitice-Zul'jin", -- [6]
+				"699E14263829800E5017Azäzel-Zul'jin", -- [7]
+				"699E1426383852196018Lengzhai-BlackDragonflight", -- [8]
+				"699E142638444919A018Annúnor-Zul'jin", -- [9]
+				"699E1426540220139020Döctà", -- [10]
+				"699E1426540746159120", -- [11]
+				"6B1E142654180007B020Doublestufed-Gorefiend", -- [12]
+			},
 		},
 	},
 	["Marks"] = {
@@ -166,13 +169,14 @@ VExRT = {
 		["default_userDuration"] = {
 		},
 		["gnGUIDs"] = {
+			["Comet"] = 269,
 		},
 		["NoRaid"] = true,
 		["CDECol"] = {
 		},
 		["default_userCD"] = {
 		},
-		["userDB"] = {
+		["Save"] = {
 		},
 		["colSet"] = {
 			{
@@ -181,12 +185,13 @@ VExRT = {
 				["iconGray"] = true,
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
+				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [1]
 			{
 				["enabled"] = true,
@@ -194,12 +199,13 @@ VExRT = {
 				["iconGray"] = true,
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
+				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [2]
 			{
 				["enabled"] = true,
@@ -207,118 +213,131 @@ VExRT = {
 				["iconGray"] = true,
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
+				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [3]
 			{
 				["frameGeneral"] = true,
 				["iconGray"] = true,
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
+				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [4]
 			{
 				["frameGeneral"] = true,
 				["iconGray"] = true,
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
+				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [5]
 			{
 				["frameGeneral"] = true,
 				["iconGray"] = true,
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
+				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [6]
 			{
 				["frameGeneral"] = true,
 				["iconGray"] = true,
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
+				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [7]
 			{
 				["frameGeneral"] = true,
 				["iconGray"] = true,
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
+				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [8]
 			{
 				["frameGeneral"] = true,
 				["iconGray"] = true,
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
+				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [9]
 			{
 				["frameGeneral"] = true,
 				["iconGray"] = true,
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
+				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [10]
 			{
 				["frameGeneral"] = true,
 				["iconGray"] = true,
 				["textGeneral"] = true,
 				["methodsGeneral"] = true,
+				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [11]
 		},
 		["Priority"] = {
 		},
 		["CDE"] = {
 		},
-		["Save"] = {
+		["userDB"] = {
 		},
 	},
 	["Bossmods"] = {
+		["Kormrok"] = {
+		},
+		["Mannoroth"] = {
+		},
 		["Kromog"] = {
 			nil, -- [1]
 			nil, -- [2]
@@ -344,29 +363,57 @@ VExRT = {
 			"Futìlíty", -- [22]
 			"Haseoh", -- [23]
 			"Chokune", -- [24]
+			["time"] = 1426739223,
 			["name"] = "Lustya-Illidan",
 			["sync"] = true,
-			["time"] = 1426739223,
 		},
 	},
 	["RaidCheck"] = {
 		["ReadyCheckFrameTimerFade"] = 4,
+		["FlaskExp"] = 1,
 	},
 	["Addon"] = {
-		["Version"] = 3240,
+		["Version"] = 3485,
 		["PreVersion"] = 3240,
-		["IconMiniMapLeft"] = -80,
-		["Timer"] = 0.1,
 		["IconMiniMapTop"] = -27.1371399120863,
+		["Timer"] = 0.1,
+		["IconMiniMapLeft"] = -80,
+	},
+	["Profiles"] = {
 	},
 	["BossWatcher"] = {
 		["fightsNum"] = 2,
 		["autoSegments"] = {
 		},
 	},
+	["Profile"] = "default",
 	["LootLink"] = {
 	},
-	["InspectViewer"] = {
+	["BattleRes"] = {
+	},
+	["Note"] = {
+		["BlackNames"] = {
+		},
+		["FontSize"] = 12,
+		["Black"] = {
+			"", -- [1]
+			"", -- [2]
+			"", -- [3]
+		},
+		["Height"] = 100.000061035156,
+		["Strata"] = "HIGH",
+		["Width"] = 199.999938964844,
+	},
+	["Logging"] = {
+	},
+	["MarksBar"] = {
+		["Show"] = {
+			true, -- [1]
+			true, -- [2]
+			true, -- [3]
+			true, -- [4]
+		},
+		["pulltimer"] = 10,
 	},
 	["InviteTool"] = {
 		["Words"] = "инв inv byd штм 123",
@@ -380,28 +427,6 @@ VExRT = {
 		["OnlyGuild"] = true,
 		["Rank"] = 1,
 	},
-	["Logging"] = {
-	},
-	["MarksBar"] = {
-		["Show"] = {
-			true, -- [1]
-			true, -- [2]
-			true, -- [3]
-			true, -- [4]
-		},
-		["pulltimer"] = 10,
-	},
-	["Note"] = {
-		["Height"] = 100.000061035156,
-		["BlackNames"] = {
-		},
-		["Black"] = {
-			"", -- [1]
-			"", -- [2]
-			"", -- [3]
-		},
-		["Width"] = 199.999938964844,
-	},
-	["BattleRes"] = {
+	["InspectViewer"] = {
 	},
 }

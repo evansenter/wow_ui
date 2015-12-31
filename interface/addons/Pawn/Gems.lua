@@ -1213,6 +1213,24 @@ local PawnGemData100Rare =
 
 
 --========================================
+-- Level 100 crafted epic prismatic gems
+--========================================
+local PawnGemData100Epic =
+{
+
+
+{ 127760, true, true, true, "CritRating", 75 }, -- Immaculate Critical Strike Taladite
+{ 127761, true, true, true, "HasteRating", 75 }, -- Immaculate Haste Taladite
+{ 127762, true, true, true, "MasteryRating", 75 }, -- Immaculate Mastery Taladite
+{ 127763, true, true, true, "Multistrike", 75 }, -- Immaculate Multistrike Taladite
+{ 127764, true, true, true, "Versatility", 75 }, -- Immaculate Versatility Taladite
+{ 127765, true, true, true, "Stamina", 75 }, -- Immaculate Stamina Taladite
+
+
+}
+
+
+--========================================
 
 -- The master list of all tables of Pawn gem data
 
@@ -1226,7 +1244,8 @@ local PawnGemData100Rare =
 
 PawnGemQualityLevels =
 {
-	{ 680, PawnGemData100Rare }, -- Warlords of Draenor Mythic Highmaul / Heroic Blackrock Foundry
+	{ 695, PawnGemData100Epic }, -- Warlords of Draenor Mythic Blackrock Foundry / Heroic Hellfire Citadel
+	{ 680, PawnGemData100Rare }, -- Warlords of Draenor Mythic Highmaul / Heroic Blackrock Foundry / Raid Finder Hellfire Citadel end bosses
 	{ 600, PawnGemData100Uncommon }, -- Actual gem requirement
 	{ 463, PawnGemData90Rare }, -- Mists of Pandaria heroics
 	{ 417, PawnGemData90Uncommon }, -- Actual gem requirement

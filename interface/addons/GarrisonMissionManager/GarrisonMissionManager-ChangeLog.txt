@@ -1,9 +1,45 @@
-Garrison Mission Manager, v29
+Garrison Mission Manager, v39
 
 * http://www.curse.com/addons/wow/garrison-mission-manager
 * http://www.wowinterface.com/downloads/info23375-GarrisonMissionManager.html
 
 == Change log ==
+2015-11-13 v39
+ * Show fleet summary in chat on accessing ship building NPC. [[http://legacy.curseforge.com/media/images/86/641/GMM_FleetSummary.png|(screenshot)]]
+
+2015-07-15 v38
+ * Treat blockade ship mission status as non-XP reward too, allowing full epic teams to be deployed even if you still have ships to level up.
+ * Expose /run GMM_Click("StartShipyardMission").
+
+2015-07-15 v37
+ * Follower upgrade items' buttons/summary. [[http://www.curseforge.com/media/images/84/465/GMM_FollowerUpgrades1.png|(screenshot)]]
+
+2015-07-08 v36
+ * Treat legendary ship mission status as non-XP reward, allowing full epic teams to be deployed even if you still have ships to level up.
+ * Extend currency multiplier handling to Oil and Apexis. In case they ever appear on same mission priority is Apexis > Oil > GR.
+
+2015-06-30 v35
+ * Show item level and quality on mission rewards.
+ * Show expiration timer on all rare missions, including XP ones (previously was: on all non-XP missions) - their huge boost for leveling is worth watching.
+
+2015-06-28 v34
+ * Best team buttons on naval map for each mission.
+
+2015-06-26 v33
+ * Add team buttons to ship mission pages.
+
+2015-06-24 v32
+ * TOC update for 6.2.
+ * Fix v6.2 compatibility problem that could affect users with some other addon pre-filling party before GMM's analysis.
+
+2015-06-23 v31
+ * v6.2 compatibility. Runs on both 6.2 and pre-6.2, so you can safely upgrade before maintenance.
+
+2015-05-15 v30
+ * Don't show "level 100" indicator in mission list on missions that require ilevel. Instead just show mission ilevel in same big font and with slightly brighter color to make the easier to see at a glance.
+ * Always show ilevel under follower portrait regardless if mission requires it or not to make it easier to see training of followers you're about to send on mission.
+ * Color maxed follower ilevel (675) in green to make it easier to see who you still need to upgrade.
+
 2015-03-26 v29
  * Mission list now shows expiration time on all non-XP missions in lower left corner of each button.
  * Warning for follower that have matching building slot under party portrait on mission page now warns in yellow for buildings without active work orders too.

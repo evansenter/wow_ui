@@ -16,12 +16,12 @@ DataStore_MailsDB = {
 				["lastVisitDate"] = "2015/03/18 19:36",
 			},
 			["Default.Illidan.Metal"] = {
-				["lastUpdate"] = 1426544343,
-				["lastVisitDate"] = "2015/03/16 18:19",
+				["lastUpdate"] = 1451460563,
+				["lastVisitDate"] = "2015/12/29 23:29",
 			},
 			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1426732051,
-				["lastVisitDate"] = "2015/03/18 22:27",
+				["lastUpdate"] = 1438637110,
+				["lastVisitDate"] = "2015/08/03 17:25",
 			},
 		},
 	},

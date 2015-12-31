@@ -1949,7 +1949,7 @@ function LootMasterML:GiveLootToCandidate( link, candidate, lootType, gp )
     end
 
 	-- Look for the lootslotID
-	for sID = 1, GetNumLootItems() do
+	for sID = 1, LootMaster.GetNumLootSlots() do
 		local sLink = GetLootSlotLink(sID);
 		if sLink ~= nil then
 			local sItemID = self:LootLinkToIdent(sLink)
@@ -2194,7 +2194,7 @@ function LootMasterML:LOOT_OPENED(event, autoloot)
 
     if tostring(autoloot) ~= '1' then return end
 
-    local numLootSlots = GetNumLootItems()
+    local numLootSlots = LootMaster.GetNumLootSlots()
     for slot=1, numLootSlots do
         local slotLink = GetLootSlotLink(slot)
         if slotLink ~= nil then
@@ -2245,7 +2245,7 @@ function LootMasterML:OPEN_MASTER_LOOT_LIST()
 
     -- Traverse all lootslots and see how many of this item we have in total.
     local totalQuantity = 0
-    local numLootSlots = GetNumLootItems();
+    local numLootSlots = LootMaster.GetNumLootSlots();
     for slot=1, numLootSlots do
         local slotLink = GetLootSlotLink(slot);
         local slotItemID = self:LootLinkToIdent(slotLink)

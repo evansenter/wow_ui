@@ -120,6 +120,26 @@ local support = {
 
 -- this content will be subject to frequent changes, do not bother translating it !!
 local whatsnew = {
+	{	name = "6.1.006 Changes",
+		bulletedList = {
+			"Updated list of archaeology projects with WoD projects. I apparently messed up and lost the file that contained the update in 6.1.001, it's now ok.",
+			"Moved several UI templates to their own folder.",
+			"Completely rewrote the Blizzard's DropDownMenu widget to use my own version.",
+			"Account Summary -> The amount of uncollected garrison resources now appears in yellow when resources exceed 300, and in red when they exceed 450.",
+			"Account Summary -> Added icons with drop-down menus to filter your list of alts by faction, level, profession and class.",
+			"Account Summary -> Fixed the expand/collapse button that did not work anymore after the complete rewrite of the pane.",
+			"Achievements lists updated ! (Thanks Bluemage29 for your help !!)",
+			"Fixed a Lua error when viewing the Guild tab with an character not in a guild.",
+		},
+	},
+	{	name = "6.1.005 Changes",
+		bulletedList = {
+			"The garrison mission tooltip now shows a red exclamation mark '!' when no missions are active.",
+			"In the account summary, the last column used to sort the view is now remembered, and is restored when you log in again.",
+			"Character's tab: fixed a lua error when mousing over the professions' icon of a character that does not have 2 professions.",
+			"Account Summary: modified the garrison followers pane to show followers at iLvl 675 and a column for their weapon/armor iLvl.",
+		},
+	},
 	{	name = "6.1.004 Changes",
 		bulletedList = {
 			"Fixed sorting the account summary by 'Last Online' where the order was sometimes incorrect.",
@@ -157,67 +177,6 @@ local whatsnew = {
 			"Cleaned up the .pkgmeta of DataStore modules, my sources tell me this should prevent some problems with the Curse Client :) (Thanks Myrroddin !)",
 			"Removed 'already known/could be learned by' information from tooltips for companions, as they have been account-wide for a while.",
 			"More code cleanup.",
-		},
-	},
-	{	name = "6.0.004 Changes",
-		bulletedList = {
-			"A massive code cleanup was performed in the XML frames",
-			"Many options were not saved correctly, this has been fixed, as a result, these options have been reset (tooltip options, etc..).",
-			"This options bug had, among others, impact on the account sharing feature that couldn't be launched anymore, Thanks Elfana for helping me on this !",
-			"DataStore_Garrisons: Fixed scanning collection of garrison cache resources. It could occasionally be wrongly reset when getting resources from other sources.",
-			"DataStore_Garrisons: Followers are now stored based on their id's, instead of their names. You will have to check your missions' table again with your alts to update follower information.",
-			"DataStore_Garrisons: added a slider to configure when the reporting for uncollected resources should happen (350 -> 475).",
-			"Grids -> Garrison Followers: added a drop down list to filter followers on whether they are collected, not collected, and if they were recruited at the inn or not.",
-			"Garrison blueprints now appear in red if already known, I applied the same rule as for BOP recipes from Garrison trainers, thus any BOP item with 'Already known' will appear red in a merchant frame.",
-			"DataStore_Agenda: fixed another Lua error at logon introduced with previous fix. (Thanks again SpareSimian!)",
-			"DataStore_Mails: added an option to report mails about to expire to the chat frame, in addition to the already existing dialog box. This will allow you to see on which alt the mail can be found. Please keep me informed if you detect real bugs thanks to this.",
-		},
-	},
-	{	name = "6.0.003 Changes",
-		bulletedList = {
-			"DataStore_Garrisons: fixed a bug where saved buildings are deleted from the DB.",
-			"Added tracking of uncollected garrison resources. They can be seen in the currency pane of the account summary.",
-			"Added a warning when uncollected garrison resources are >400 on a given alt. There is an option to disable this warning if you want to.",
-			"Added Garrison-related achievements, now listed in a proper way in the achievements' tab.",
-			"Recipes bought at garrison trainers now appear in red if they are BOP and already known.",
-			"Removed mounts from the addon, as they have been account-wide for a while now. The icon is still there as a placeholder in the grids tab though.",
-			"DataStore_Pets: removed all mount-related functions and data tables.",
-			"DataStore_Mails: fixed a bug where the addon kept complaining about old mails about to expire. This one is long overdue, thanks to Wispor and Elfana for helping me on this one !",
-			"Fixed 'Player not found' message. (Bug 779 / Thanks Phinar !)",
-			"DataStore_Achievements: fixed an error caused by achievements with invalid id (as returned by the game's API). (Bug 792 / Thanks SpareSimian)",
-			"DataStore_Agenda: fixed a Lua error at logon. (Bug 792 also / Thanks SpareSimian)",
-		},
-	},
-	{	name = "6.0.002 Changes",
-		bulletedList = {
-			"New DataStore module : DataStore_Garrisons ! You have to visit the missions table to scan followers.",
-			"Grids tab: added a pane for Garrison followers.",
-			"Grids tab: added a pane for Garrison buildings.",
-			"DataStore_Containers: now scanning the reagent bank at logon.",
-			"Account Summary : updated the currency pane to remove valor and justice tokens, and replace them with garrison resources, apexis crystals, and seals of tempered fate.",
-			"Account Summary : added a pane for Garrison followers.",
-			"Fixed a Lua error when talking to an enchanting follower in the garrison.",
-			"Fixed professions not being scanned entirely since 6.0 (Thanks Myrrodin & CKaotic), I did revert the part about followers though, to use IsNPCCrafting() instead.",
-			"A lot of minor fixes.",
-		},
-	},
-	{	name = "6.0.001 Changes",
-		bulletedList = {
-			"Added a pane in the Grids tab to track LFR lockouts across alts.",
-			"Added support for the new void storage tab + reagent bank.",
-			"Updated achievement lists.",
-			"Updated tradeskills data (Grids tab)",
-			"Fixed WoD related issues.",
-			"DataStore_Reputations: fixed WoD compatibility.",
-			"DataStore_Reputations: LibBabble-Factions is back.",
-			"DataStore_Talents: talents & glyph scanning is temporarily fully disabled. UI is still missing too, sorry about that.",
-			"DataStore_Quests: fixed WoD compatibility.",
-			"DataStore_Containers: Added support for the new void storage tab.",
-			"DataStore_Containers: Added support for the new reagent bank.",
-			"LibCraftInfo: updated for WoD.",
-			"LibCraftLevels: updated for WoD.",
-			"LibCraftReagent: updated for WoD.",
-			"Currencies pane: removed unrequired tooltip.",
 		},
 	},
 	{	name = "Earlier changes",
@@ -339,7 +298,6 @@ function addon:SetupOptions()
 		L["There is a risk of disconnection if the queried item\nis a loot from a high level dungeon.\n\n"],
 		L["|cFF00FF00Disable|r to avoid this risk"])	
 	
-	f.SortDescending.Text:SetText(L["Sort loots in descending order"])
 	f.IncludeNoMinLevel.Text:SetText(L["Include items without level requirement"])
 	f.IncludeMailboxItems.Text:SetText(L["Include mailboxes"])
 	f.IncludeGuildBankItems.Text:SetText(L["Include guild bank(s)"])
@@ -475,7 +433,6 @@ function addon:RestoreOptionsToUI()
 	f = AltoholicSearchOptions
 	
 	f.ItemInfoAutoQuery:SetChecked(O["UI.Tabs.Search.ItemInfoAutoQuery"])
-	f.SortDescending:SetChecked(O["UI.Tabs.Search.SortDescending"])
 	f.IncludeNoMinLevel:SetChecked(O["UI.Tabs.Search.IncludeNoMinLevel"])
 	f.IncludeMailboxItems:SetChecked(O["UI.Tabs.Search.IncludeMailboxItems"])
 	f.IncludeGuildBankItems:SetChecked(O["UI.Tabs.Search.IncludeGuildBankItems"])

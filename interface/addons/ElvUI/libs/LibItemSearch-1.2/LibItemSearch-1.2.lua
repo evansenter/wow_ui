@@ -4,7 +4,8 @@
 --]]
 
 local Search = LibStub('CustomSearch-1.0')
-local Lib = LibStub:NewLibrary('LibItemSearch-1.2', 7)
+local Unfit = LibStub('Unfit-1.0')
+local Lib = LibStub:NewLibrary('LibItemSearch-1.2-ElvUI', 1)
 if Lib then
 	Lib.Filters = {}
 else
@@ -118,6 +119,24 @@ Lib.Filters.quality = {
 }
 
 
+--[[ Usable ]]--
+
+Lib.Filters.usable = {
+	tags = {},
+
+	canSearch = function(self, operator, search)
+		return not operator and search == 'usable'
+	end,
+
+	match = function(self, link)
+		if not Unfit:IsItemUnusable(link) then
+			local lvl = select(5, GetItemInfo(link))
+			return lvl and (lvl ~= 0 and lvl <= UnitLevel('player'))
+		end
+	end	
+}
+
+
 --[[ Tooltip Searches ]]--
 
 local scanner = LibItemSearchTooltipScanner or CreateFrame('GameTooltip', 'LibItemSearchTooltipScanner', UIParent, 'GameTooltipTemplate')
@@ -183,7 +202,7 @@ Lib.Filters.tipPhrases = {
 		['boe'] = ITEM_BIND_ON_EQUIP,
 		['bou'] = ITEM_BIND_ON_USE,
 		['boa'] = ITEM_BIND_TO_BNETACCOUNT,
-		[BATTLE_PET_SOURCE_2:lower()] = ITEM_BIND_QUEST,
+		[select(10, GetAuctionItemClasses())] = ITEM_BIND_QUEST,
 		[QUESTS_LABEL:lower()] = ITEM_BIND_QUEST,
 		[TOY:lower()] = TOY,
 		[MINIMAP_TRACKING_VENDOR_REAGENT:lower()] = PROFESSIONS_USED_IN_COOKING,

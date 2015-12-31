@@ -150,35 +150,18 @@ local function _GetCharacterClass(character)
 	return character.class or "", character.englishClass or ""
 end
 
--- local ClassColors = {
-	-- ["MAGE"] = "|cFF69CCF0",
-	-- ["WARRIOR"] = "|cFFC79C6E",
-	-- ["HUNTER"] = "|cFFABD473",
-	-- ["ROGUE"] = "|cFFFFF569",
-	-- ["WARLOCK"] = "|cFF9482CA", 
-	-- ["DRUID"] = "|cFFFF7D0A", 
-	-- ["SHAMAN"] = "|cFF2459FF",
-	-- ["PALADIN"] = "|cFFF58CBA", 
-	-- ["PRIEST"] = "|cFFFFFFFF",
-	-- ["DEATHKNIGHT"] = "|cFFC41F3B",
-	-- ["MONK"] = "|cFF00FF96",
--- }
-
 local function _GetColoredCharacterName(character)
 	return format("|c%s%s", RAID_CLASS_COLORS[character.englishClass].colorStr, character.name)
-	-- return ClassColors[character.englishClass] .. character.name
 end
 	
 local function _GetCharacterClassColor(character)
 	-- return just the color of this character's class (based on the character key)
 	return format("|c%s", RAID_CLASS_COLORS[character.englishClass].colorStr)
-	-- return ClassColors[character.englishClass]
 end
 
 local function _GetClassColor(class)
 	-- return just the color of for any english class 	
 	return format("|c%s", RAID_CLASS_COLORS[class].colorStr) or "|cFFFFFFFF"
-	-- return ClassColors[class] or "|cFFFFFFFF"
 end
 
 local function _GetCharacterFaction(character)

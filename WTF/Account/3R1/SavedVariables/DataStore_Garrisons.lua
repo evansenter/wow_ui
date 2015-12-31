@@ -12,337 +12,58 @@ DataStore_GarrisonsDB = {
 	["global"] = {
 		["Characters"] = {
 			["Default.Illidan.Evan"] = {
-				["numRareFollowers"] = 1,
-				["lastUpdate"] = 1426721817,
-				["numFollowersAtiLevel645"] = 3,
-				["numFollowersAtiLevel630"] = 6,
+				["numRareFollowers"] = 2,
+				["avgArmoriLevel"] = 622.777777777778,
+				["lastUpdate"] = 1451461033,
+				["numFollowersAtiLevel645"] = 7,
+				["numFollowersAtiLevel630"] = 9,
 				["ActiveMissionsInfo"] = {
-					[484] = {
+					[244] = {
 						["successChance"] = 100,
-						["startTime"] = 1426387546,
-					},
-					[361] = {
-						["successChance"] = 100,
-						["startTime"] = 1425498754,
-					},
-					[247] = {
-						["successChance"] = 83,
-						["startTime"] = 1426619145,
-					},
-					[125] = {
-						["successChance"] = 100,
-						["startTime"] = 1426267686,
-					},
-					[373] = {
-						["successChance"] = 100,
-						["startTime"] = 1426267648,
-					},
-					[385] = {
-						["successChance"] = 100,
-						["startTime"] = 1426619134,
-					},
-					[262] = {
-						["successChance"] = 63,
-						["startTime"] = 1426536381,
-					},
-					[266] = {
-						["successChance"] = 100,
-						["startTime"] = 1425967315,
-					},
-					[397] = {
-						["successChance"] = 75,
-						["startTime"] = 1426619131,
-					},
-					[274] = {
-						["successChance"] = 62,
-						["startTime"] = 1425313715,
-					},
-					[405] = {
-						["successChance"] = 100,
-						["startTime"] = 1425854317,
-					},
-					[144] = {
-						["successChance"] = 75,
-						["startTime"] = 1425447974,
-					},
-					[148] = {
-						["successChance"] = 100,
-						["startTime"] = 1424903536,
-					},
-					[302] = {
-						["successChance"] = 86,
-						["startTime"] = 1426565311,
-					},
-					[172] = {
-						["successChance"] = 78,
-						["startTime"] = 1425257807,
-					},
-					[174] = {
-						["successChance"] = 78,
-						["startTime"] = 1425854353,
-					},
-					[176] = {
-						["successChance"] = 100,
-						["startTime"] = 1426544471,
-					},
-					[358] = {
-						["successChance"] = 100,
-						["startTime"] = 1426387533,
-					},
-					[493] = {
-						["successChance"] = 100,
-						["startTime"] = 1426721593,
-					},
-					[186] = {
-						["successChance"] = 78,
-						["startTime"] = 1426536377,
-					},
-					[374] = {
-						["successChance"] = 97,
-						["startTime"] = 1425916929,
-					},
-					[190] = {
-						["successChance"] = 100,
-						["startTime"] = 1426049198,
-					},
-					[192] = {
-						["successChance"] = 59,
-						["startTime"] = 1426217286,
-					},
-					[194] = {
-						["successChance"] = 53,
-						["startTime"] = 1426100501,
-					},
-					[271] = {
-						["successChance"] = 87,
-						["startTime"] = 1426619123,
-					},
-					[204] = {
-						["successChance"] = 100,
-						["startTime"] = 1425879113,
-					},
-					[210] = {
-						["successChance"] = 100,
-						["startTime"] = 1425916933,
-					},
-					[212] = {
-						["successChance"] = 90,
-						["startTime"] = 1426217289,
-					},
-					[224] = {
-						["successChance"] = 66,
-						["startTime"] = 1426565309,
-					},
-					[228] = {
-						["successChance"] = 64,
-						["startTime"] = 1426267650,
-					},
-					[230] = {
-						["successChance"] = 92,
-						["startTime"] = 1426619126,
-					},
-					[367] = {
-						["successChance"] = 100,
-						["startTime"] = 1426217281,
-					},
-					[498] = {
-						["successChance"] = 100,
-						["startTime"] = 1425879109,
-					},
-					[264] = {
-						["successChance"] = 100,
-						["startTime"] = 1426544468,
-					},
-					[272] = {
-						["successChance"] = 91,
-						["startTime"] = 1426536372,
-					},
-					[276] = {
-						["successChance"] = 95,
-						["startTime"] = 1426565305,
-					},
-					[407] = {
-						["successChance"] = 100,
-						["startTime"] = 1426536365,
-					},
-					[292] = {
-						["successChance"] = 100,
-						["startTime"] = 1426217265,
-					},
-					[427] = {
-						["successChance"] = 95,
-						["startTime"] = 1426049219,
-					},
-					[133] = {
-						["successChance"] = 68,
-						["startTime"] = 1426565299,
-					},
-					[130] = {
-						["successChance"] = 100,
-						["startTime"] = 1426267684,
-					},
-					[147] = {
-						["successChance"] = 100,
-						["startTime"] = 1426387555,
-					},
-					[473] = {
-						["successChance"] = 100,
-						["startTime"] = 1426536393,
-					},
-					[494] = {
-						["successChance"] = 100,
-						["startTime"] = 1425257796,
-					},
-					[248] = {
-						["successChance"] = 95,
-						["startTime"] = 1426267681,
-					},
-					[371] = {
-						["successChance"] = 100,
-						["startTime"] = 1426536375,
-					},
-					[87] = {
-						["successChance"] = 75,
-						["startTime"] = 1425424882,
-					},
-					[175] = {
-						["successChance"] = 100,
-						["startTime"] = 1426544475,
-					},
-					[177] = {
-						["successChance"] = 100,
-						["startTime"] = 1425967330,
-					},
-					[179] = {
-						["successChance"] = 100,
-						["startTime"] = 1425967328,
-					},
-					[181] = {
-						["successChance"] = 100,
-						["startTime"] = 1426536399,
-					},
-					[364] = {
-						["successChance"] = 100,
-						["startTime"] = 1425257773,
-					},
-					[184] = {
-						["successChance"] = 100,
-						["startTime"] = 1426387539,
-					},
-					[499] = {
-						["successChance"] = 100,
-						["startTime"] = 1426536490,
-					},
-					[376] = {
-						["successChance"] = 94,
-						["startTime"] = 1426387553,
-					},
-					[300] = {
-						["successChance"] = 83,
-						["startTime"] = 1424903543,
-					},
-					[193] = {
-						["successChance"] = 100,
-						["startTime"] = 1425313687,
-					},
-					[189] = {
-						["successChance"] = 59,
-						["startTime"] = 1426387536,
-					},
-					[366] = {
-						["successChance"] = 88,
-						["startTime"] = 1426049240,
-					},
-					[215] = {
-						["successChance"] = 100,
-						["startTime"] = 1426565316,
-					},
-					[273] = {
-						["successChance"] = 100,
-						["startTime"] = 1425257783,
-					},
-					[297] = {
-						["successChance"] = 100,
-						["startTime"] = 1426267643,
-					},
-					[108] = {
-						["successChance"] = 100,
-						["startTime"] = 1425425075,
-					},
-					[107] = {
-						["successChance"] = 100,
-						["startTime"] = 1425879117,
-					},
-					[293] = {
-						["successChance"] = 40,
-						["startTime"] = 1426536479,
-					},
-					[211] = {
-						["successChance"] = 100,
-						["startTime"] = 1426387541,
-					},
-					[213] = {
-						["successChance"] = 100,
-						["startTime"] = 1425257786,
-					},
-					[301] = {
-						["successChance"] = 100,
-						["startTime"] = 1425854325,
+						["startTime"] = 1451461027,
 					},
 					[109] = {
 						["successChance"] = 100,
-						["startTime"] = 1425425073,
+						["startTime"] = 1451461020,
 					},
-					[309] = {
-						["successChance"] = 56,
-						["startTime"] = 1426387559,
+					[428] = {
+						["successChance"] = 98,
+						["startTime"] = 1451460951,
 					},
-					[313] = {
-						["successChance"] = 76,
-						["startTime"] = 1426100482,
-					},
-					[112] = {
+					[475] = {
 						["successChance"] = 100,
-						["startTime"] = 1425879115,
+						["startTime"] = 1451461017,
 					},
-					[113] = {
+					[168] = {
 						["successChance"] = 100,
-						["startTime"] = 1426049247,
+						["startTime"] = 1451461026,
 					},
-					[114] = {
+					[215] = {
 						["successChance"] = 100,
-						["startTime"] = 1425967322,
+						["startTime"] = 1451461031,
 					},
-					[483] = {
+					[403] = {
 						["successChance"] = 100,
-						["startTime"] = 1426721591,
+						["startTime"] = 1451461022,
 					},
-					[151] = {
-						["successChance"] = 53,
-						["startTime"] = 1425424884,
+					[315] = {
+						["successChance"] = 90,
+						["startTime"] = 1451461009,
 					},
-					[117] = {
-						["successChance"] = 87,
-						["startTime"] = 1425916897,
-					},
-					[138] = {
-						["successChance"] = 75,
-						["startTime"] = 1426100498,
-					},
-					[119] = {
-						["successChance"] = 81,
-						["startTime"] = 1425854348,
-					},
-					[126] = {
+					[247] = {
 						["successChance"] = 100,
-						["startTime"] = 1425313729,
+						["startTime"] = 1451461018,
 					},
-					[251] = {
-						["successChance"] = 83,
-						["startTime"] = 1426619143,
+					[111] = {
+						["successChance"] = 100,
+						["startTime"] = 1451461024,
+					},
+					[157] = {
+						["successChance"] = 100,
+						["startTime"] = 1451461029,
 					},
 				},
-				["numFollowersAtiLevel615"] = 9,
+				["numFollowersAtiLevel615"] = 13,
 				["AbilityCounters"] = {
 					3, -- [1]
 					6, -- [2]
@@ -357,187 +78,195 @@ DataStore_GarrisonsDB = {
 				},
 				["Followers"] = {
 					[324] = {
-						["link"] = "|cffa335ee|Hgarrfollower:324:4:100:630:127:128:0:0:221:46:76:0|h[Ariia]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:324:4:100:630:127:128:0:0:221:46:76:0|h[Ariia]|h|r",
 					},
 					[89] = {
-						["link"] = "|cff1eff00|Hgarrfollower:89:2:97:600:122:0:0:0:221:0:0:0|h[Myra Hackenslash]|h|r",
-						["xp"] = 241,
-						["levelXP"] = 4000,
+						["levelXP"] = 6000,
+						["xp"] = 249,
+						["link"] = "|cff1eff00|Hgarrfollower:89:2:99:600:122:0:0:0:221:0:0:0|h[Myra Hackenslash]|h|r",
 					},
 					[178] = {
-						["link"] = "|cffa335ee|Hgarrfollower:178:4:100:600:130:127:0:0:69:8:9:0|h[Leeroy Jenkins]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:178:4:100:600:130:127:0:0:69:8:9:0|h[Leeroy Jenkins]|h|r",
 					},
 					[182] = {
-						["link"] = "|cffa335ee|Hgarrfollower:182:4:100:600:105:164:0:0:54:79:75:0|h[Mulverick]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:182:4:100:600:105:164:0:0:54:79:75:0|h[Mulverick]|h|r",
 					},
 					[159] = {
-						["isInactive"] = true,
+						["levelXP"] = 0,
 						["link"] = "|cffa335ee|Hgarrfollower:159:4:100:600:157:154:0:0:60:73:49:0|h[Kaz the Shrieker]|h|r",
 						["xp"] = 0,
-						["levelXP"] = 0,
+						["isInactive"] = true,
 					},
 					[34] = {
-						["link"] = "|cffa335ee|Hgarrfollower:34:4:100:615:100:6:0:0:77:71:43:0|h[Olin Umberhide]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:34:4:100:615:100:6:0:0:77:71:43:0|h[Olin Umberhide]|h|r",
 					},
 					[183] = {
-						["link"] = "|cffa335ee|Hgarrfollower:183:4:100:630:167:166:0:0:62:37:221:0|h[Gronnstalker Rokash]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:183:4:100:675:167:166:0:0:62:37:221:0|h[Gronnstalker Rokash]|h|r",
 					},
 					[342] = {
+						["levelXP"] = 0,
+						["xp"] = 0,
 						["link"] = "|cffa335ee|Hgarrfollower:342:4:100:600:11:148:0:0:221:4:36:0|h[\"Doc\" Schweitzer]|h|r",
-						["xp"] = 0,
-						["levelXP"] = 0,
-					},
-					[298] = {
-						["link"] = "|cffa335ee|Hgarrfollower:298:4:100:600:171:170:0:0:79:69:80:0|h[Singe Starkblast]|h|r",
-						["xp"] = 0,
-						["levelXP"] = 0,
-					},
-					[265] = {
-						["link"] = "|cffa335ee|Hgarrfollower:265:4:100:615:136:134:0:0:80:73:44:0|h[Su'tila]|h|r",
-						["xp"] = 0,
-						["levelXP"] = 0,
-					},
-					[180] = {
-						["link"] = "|cffa335ee|Hgarrfollower:180:4:100:600:103:101:0:0:53:9:79:0|h[Shadow Hunter Rala]|h|r",
-						["xp"] = 0,
-						["levelXP"] = 0,
-					},
-					[374] = {
-						["link"] = "|cffa335ee|Hgarrfollower:374:4:100:600:160:104:0:0:221:42:49:0|h[Zelaztro]|h|r",
-						["xp"] = 0,
-						["levelXP"] = 0,
-					},
-					[177] = {
-						["link"] = "|cffa335ee|Hgarrfollower:177:4:100:675:124:130:0:0:75:80:71:0|h[Croman]|h|r",
-						["xp"] = 0,
-						["levelXP"] = 0,
 					},
 					[453] = {
+						["levelXP"] = 0,
+						["xp"] = 0,
 						["link"] = "|cffa335ee|Hgarrfollower:453:4:100:600:166:167:0:0:62:74:80:0|h[Dark Ranger Velonara]|h|r",
-						["xp"] = 0,
-						["levelXP"] = 0,
 					},
-					[254] = {
-						["link"] = "|cff1eff00|Hgarrfollower:254:2:100:600:138:0:0:0:80:0:0:0|h[Zen'taki]|h|r",
-						["xp"] = 50555,
-						["levelXP"] = 60000,
-					},
-					[375] = {
-						["link"] = "|cffa335ee|Hgarrfollower:375:4:100:600:159:160:0:0:221:71:49:0|h[Temanu]|h|r",
-						["xp"] = 0,
+					[265] = {
 						["levelXP"] = 0,
-					},
-					[211] = {
-						["link"] = "|cffa335ee|Hgarrfollower:211:4:100:600:164:165:0:0:9:49:79:0|h[Penny Clobberbottom]|h|r",
 						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:265:4:100:615:136:134:0:0:80:73:44:0|h[Su'tila]|h|r",
+					},
+					[180] = {
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:180:4:100:600:103:101:0:0:53:9:79:0|h[Shadow Hunter Rala]|h|r",
+					},
+					[374] = {
+						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:374:4:100:645:160:104:0:0:221:42:49:0|h[Zelaztro]|h|r",
+					},
+					[177] = {
+						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:177:4:100:675:124:130:0:0:75:80:71:0|h[Croman]|h|r",
 					},
 					[153] = {
-						["link"] = "|cffa335ee|Hgarrfollower:153:4:100:630:159:161:0:0:60:74:42:0|h[Ka'la]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:153:4:100:630:159:161:0:0:60:74:42:0|h[Ka'la]|h|r",
+					},
+					[254] = {
+						["levelXP"] = 120000,
+						["xp"] = 21083,
+						["link"] = "|cff0070dd|Hgarrfollower:254:3:100:600:138:0:0:0:80:8:0:0|h[Zen'taki]|h|r",
+					},
+					[375] = {
+						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:375:4:100:600:159:160:0:0:221:71:49:0|h[Temanu]|h|r",
+					},
+					[211] = {
+						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:211:4:100:600:164:165:0:0:9:49:79:0|h[Penny Clobberbottom]|h|r",
+					},
+					[298] = {
+						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:298:4:100:675:171:170:0:0:79:69:80:0|h[Singe Starkblast]|h|r",
 					},
 					[157] = {
-						["isInactive"] = true,
+						["levelXP"] = 0,
 						["link"] = "|cffa335ee|Hgarrfollower:157:4:100:600:102:122:0:0:52:44:37:0|h[Lantresor of the Blade]|h|r",
 						["xp"] = 0,
-						["levelXP"] = 0,
+						["isInactive"] = true,
 					},
 					[192] = {
-						["link"] = "|cffa335ee|Hgarrfollower:192:4:100:600:160:105:0:0:57:221:38:0|h[Kimzee Pinchwhistle]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:192:4:100:600:160:105:0:0:57:221:38:0|h[Kimzee Pinchwhistle]|h|r",
 					},
 					[437] = {
-						["link"] = "|cffa335ee|Hgarrfollower:437:4:100:675:142:140:0:0:41:74:49:0|h[Lin Tenderpaw]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:437:4:100:675:142:140:0:0:41:74:49:0|h[Lin Tenderpaw]|h|r",
 					},
 					[268] = {
-						["link"] = "|cff0070dd|Hgarrfollower:268:3:100:615:134:0:0:0:79:38:0:0|h[Kuma Thunderhide]|h|r",
-						["xp"] = 4648,
 						["levelXP"] = 120000,
+						["xp"] = 57703,
+						["link"] = "|cff0070dd|Hgarrfollower:268:3:100:615:134:0:0:0:79:38:0:0|h[Kuma Thunderhide]|h|r",
 					},
 					[204] = {
-						["link"] = "|cffa335ee|Hgarrfollower:204:4:100:600:116:114:0:0:58:75:70:0|h[Benjamin Gibb]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:204:4:100:600:116:114:0:0:58:75:70:0|h[Benjamin Gibb]|h|r",
 					},
 					[208] = {
-						["link"] = "|cffa335ee|Hgarrfollower:208:4:100:600:102:120:0:0:56:9:221:0|h[Ahm]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:208:4:100:600:102:120:0:0:56:9:221:0|h[Ahm]|h|r",
 					},
 					[292] = {
-						["link"] = "|cffa335ee|Hgarrfollower:292:4:100:600:171:170:0:0:80:37:49:0|h[Kral'girz]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:292:4:100:615:171:170:0:0:80:37:49:0|h[Kral'girz]|h|r",
 					},
 					[216] = {
-						["link"] = "|cffa335ee|Hgarrfollower:216:4:100:675:5:173:0:0:231:76:45:0|h[Vivianne]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:216:4:100:675:5:173:0:0:231:76:45:0|h[Vivianne]|h|r",
 					},
 					[463] = {
-						["isInactive"] = true,
+						["levelXP"] = 0,
 						["link"] = "|cffa335ee|Hgarrfollower:463:4:100:600:148:10:0:0:45:75:71:0|h[Ulna Thresher]|h|r",
 						["xp"] = 0,
-						["levelXP"] = 0,
+						["isInactive"] = true,
 					},
 					[325] = {
-						["link"] = "|cffa335ee|Hgarrfollower:325:4:100:600:125:127:0:0:80:70:48:0|h[Lusio]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:325:4:100:675:125:127:0:0:80:70:48:0|h[Lusio]|h|r",
 					},
 				},
 				["AvailableMissions"] = {
-					[166] = {
-						["durationSeconds"] = 5400,
+					[201] = {
+						["durationSeconds"] = 6750,
 						["type"] = "Combat",
-						["cost"] = 10,
-						["level"] = 98,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 0,
-					},
-					[170] = {
-						["durationSeconds"] = 7200,
-						["type"] = "Combat",
-						["cost"] = 10,
-						["level"] = 99,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 0,
-					},
-					[159] = {
-						["durationSeconds"] = 5400,
-						["type"] = "Combat",
-						["cost"] = 10,
+						["cost"] = 20,
 						["level"] = 96,
 						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
 						["iLevel"] = 0,
 					},
-					[272] = {
+					[402] = {
+						["durationSeconds"] = 21600,
+						["type"] = "Combat",
+						["cost"] = 10,
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 645,
+					},
+					[503] = {
+						["durationSeconds"] = 21600,
+						["type"] = "Combat",
+						["cost"] = 60,
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 675,
+					},
+					[271] = {
 						["durationSeconds"] = 21600,
 						["type"] = "Patrol",
-						["cost"] = 10,
+						["cost"] = 15,
 						["level"] = 100,
 						["typeAtlas"] = "GarrMission_MissionIcon-Patrol",
 						["iLevel"] = 0,
 					},
-					[179] = {
-						["durationSeconds"] = 3600,
+					[159] = {
+						["durationSeconds"] = 5400,
 						["type"] = "Combat",
 						["cost"] = 10,
 						["level"] = 96,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 0,
+					},
+					[373] = {
+						["durationSeconds"] = 36000,
+						["type"] = "Combat",
+						["cost"] = 20,
+						["level"] = 95,
 						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
 						["iLevel"] = 0,
 					},
@@ -549,21 +278,13 @@ DataStore_GarrisonsDB = {
 						["typeAtlas"] = "GarrMission_MissionIcon-Patrol",
 						["iLevel"] = 0,
 					},
-					[253] = {
-						["durationSeconds"] = 28800,
+					[397] = {
+						["durationSeconds"] = 36000,
 						["type"] = "Combat",
-						["cost"] = 20,
+						["cost"] = 60,
 						["level"] = 100,
 						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 615,
-					},
-					[115] = {
-						["durationSeconds"] = 21600,
-						["type"] = "Combat",
-						["cost"] = 10,
-						["level"] = 100,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 0,
+						["iLevel"] = 675,
 					},
 					[274] = {
 						["durationSeconds"] = 28800,
@@ -573,67 +294,19 @@ DataStore_GarrisonsDB = {
 						["typeAtlas"] = "GarrMission_MissionIcon-Patrol",
 						["iLevel"] = 0,
 					},
-					[127] = {
-						["durationSeconds"] = 14400,
-						["type"] = "Combat",
-						["cost"] = 15,
-						["level"] = 100,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 0,
-					},
-					[130] = {
-						["durationSeconds"] = 14400,
-						["type"] = "Combat",
-						["cost"] = 15,
-						["level"] = 100,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 0,
-					},
-					[165] = {
-						["durationSeconds"] = 7200,
-						["type"] = "Combat",
-						["cost"] = 10,
-						["level"] = 98,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 0,
-					},
-					[392] = {
+					[484] = {
 						["durationSeconds"] = 21600,
-						["type"] = "Combat",
-						["cost"] = 30,
-						["level"] = 100,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 615,
-					},
-					[396] = {
-						["durationSeconds"] = 28800,
-						["type"] = "Combat",
-						["cost"] = 60,
-						["level"] = 100,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 675,
-					},
-					[374] = {
-						["durationSeconds"] = 36000,
-						["type"] = "Combat",
+						["type"] = "Enchanting",
 						["cost"] = 20,
-						["level"] = 96,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Enchanting",
 						["iLevel"] = 0,
 					},
-					[292] = {
-						["durationSeconds"] = 28800,
+					[192] = {
+						["durationSeconds"] = 3600,
 						["type"] = "Combat",
-						["cost"] = 30,
-						["level"] = 100,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 630,
-					},
-					[201] = {
-						["durationSeconds"] = 6750,
-						["type"] = "Combat",
-						["cost"] = 20,
-						["level"] = 96,
+						["cost"] = 0,
+						["level"] = 97,
 						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
 						["iLevel"] = 0,
 					},
@@ -645,12 +318,44 @@ DataStore_GarrisonsDB = {
 						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
 						["iLevel"] = 630,
 					},
-					[232] = {
-						["durationSeconds"] = 3600,
-						["type"] = "Patrol",
-						["cost"] = 10,
-						["level"] = 96,
-						["typeAtlas"] = "GarrMission_MissionIcon-Patrol",
+					[493] = {
+						["durationSeconds"] = 14400,
+						["type"] = "Tailoring",
+						["cost"] = 20,
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Tailoring",
+						["iLevel"] = 0,
+					},
+					[676] = {
+						["durationSeconds"] = 28800,
+						["type"] = "Combat",
+						["cost"] = 40,
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 660,
+					},
+					[108] = {
+						["durationSeconds"] = 28800,
+						["type"] = "Combat",
+						["cost"] = 15,
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 0,
+					},
+					[187] = {
+						["durationSeconds"] = 2700,
+						["type"] = "Combat",
+						["cost"] = 0,
+						["level"] = 92,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 0,
+					},
+					[118] = {
+						["durationSeconds"] = 28800,
+						["type"] = "Combat",
+						["cost"] = 15,
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
 						["iLevel"] = 0,
 					},
 				},
@@ -660,7 +365,7 @@ DataStore_GarrisonsDB = {
 					[54] = 1,
 					[62] = 2,
 					[76] = 2,
-					[8] = 1,
+					[8] = 2,
 					[77] = 1,
 					[79] = 5,
 					[48] = 1,
@@ -678,85 +383,20 @@ DataStore_GarrisonsDB = {
 					[44] = 2,
 					[52] = 1,
 					[60] = 2,
-					[36] = 1,
-					[4] = 1,
+					[43] = 1,
+					[37] = 3,
+					[38] = 2,
 					[9] = 4,
-					[221] = 8,
 					[73] = 2,
 					[45] = 2,
 					[53] = 1,
-					[37] = 3,
+					[221] = 8,
 					[74] = 3,
-					[38] = 2,
-					[43] = 1,
+					[4] = 1,
+					[36] = 1,
 				},
-				["lastResourceCollection"] = 1426565378,
+				["lastResourceCollection"] = 1451460858,
 				["numFollowers"] = 28,
-				["Abilities"] = {
-					[122] = 2,
-					[148] = 2,
-					[5] = 1,
-					[6] = 1,
-					[124] = 1,
-					[10] = 1,
-					[125] = 1,
-					[154] = 1,
-					[157] = 1,
-					[127] = 3,
-					[159] = 2,
-					[128] = 1,
-					[160] = 3,
-					[161] = 1,
-					[130] = 2,
-					[114] = 1,
-					[164] = 2,
-					[165] = 1,
-					[134] = 2,
-					[166] = 2,
-					[100] = 1,
-					[116] = 1,
-					[136] = 1,
-					[11] = 1,
-					[101] = 1,
-					[138] = 1,
-					[170] = 2,
-					[102] = 2,
-					[171] = 2,
-					[140] = 1,
-					[103] = 1,
-					[173] = 1,
-					[142] = 1,
-					[104] = 1,
-					[120] = 1,
-					[105] = 2,
-					[167] = 2,
-				},
-				["ActiveMissions"] = {
-					[493] = {
-						["durationSeconds"] = 14400,
-						["type"] = "Tailoring",
-						["cost"] = 20,
-						["followers"] = {
-							437, -- [1]
-							374, -- [2]
-						},
-						["level"] = 100,
-						["typeAtlas"] = "GarrMission_MissionIcon-Tailoring",
-						["iLevel"] = 0,
-					},
-					[483] = {
-						["durationSeconds"] = 14400,
-						["type"] = "Enchanting",
-						["cost"] = 20,
-						["followers"] = {
-							216, -- [1]
-							265, -- [2]
-						},
-						["level"] = 100,
-						["typeAtlas"] = "GarrMission_MissionIcon-Enchanting",
-						["iLevel"] = 0,
-					},
-				},
 				["Buildings"] = {
 					["TownHall"] = {
 						["id"] = 0,
@@ -799,438 +439,234 @@ DataStore_GarrisonsDB = {
 						["rank"] = 3,
 					},
 				},
+				["numFollowersAtiLevel660"] = 6,
+				["Abilities"] = {
+					[122] = 2,
+					[148] = 2,
+					[5] = 1,
+					[6] = 1,
+					[124] = 1,
+					[10] = 1,
+					[125] = 1,
+					[154] = 1,
+					[157] = 1,
+					[127] = 3,
+					[159] = 2,
+					[128] = 1,
+					[160] = 3,
+					[161] = 1,
+					[130] = 2,
+					[114] = 1,
+					[164] = 2,
+					[165] = 1,
+					[134] = 2,
+					[166] = 2,
+					[100] = 1,
+					[116] = 1,
+					[136] = 1,
+					[11] = 1,
+					[101] = 1,
+					[138] = 1,
+					[170] = 2,
+					[102] = 2,
+					[171] = 2,
+					[140] = 1,
+					[103] = 1,
+					[173] = 1,
+					[142] = 1,
+					[104] = 1,
+					[120] = 1,
+					[105] = 2,
+					[167] = 2,
+				},
+				["numFollowersAtiLevel675"] = 6,
+				["ActiveMissions"] = {
+					[168] = {
+						["durationSeconds"] = 7200,
+						["type"] = "Combat",
+						["cost"] = 10,
+						["iLevel"] = 0,
+						["followers"] = {
+							211, -- [1]
+						},
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["level"] = 99,
+					},
+					[244] = {
+						["durationSeconds"] = 3600,
+						["type"] = "Patrol",
+						["cost"] = 10,
+						["iLevel"] = 0,
+						["followers"] = {
+							453, -- [1]
+							208, -- [2]
+						},
+						["typeAtlas"] = "GarrMission_MissionIcon-Patrol",
+						["level"] = 98,
+					},
+					[428] = {
+						["durationSeconds"] = 28800,
+						["type"] = "Combat",
+						["cost"] = 100,
+						["iLevel"] = 660,
+						["followers"] = {
+							177, -- [1]
+							298, -- [2]
+							437, -- [3]
+						},
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["level"] = 100,
+					},
+					[215] = {
+						["durationSeconds"] = 21600,
+						["type"] = "Exploration",
+						["cost"] = 10,
+						["iLevel"] = 0,
+						["followers"] = {
+							180, -- [1]
+						},
+						["typeAtlas"] = "GarrMission_MissionIcon-Exploration",
+						["level"] = 90,
+					},
+					[475] = {
+						["durationSeconds"] = 14400,
+						["type"] = "Exploration",
+						["cost"] = 15,
+						["iLevel"] = 0,
+						["followers"] = {
+							324, -- [1]
+							375, -- [2]
+						},
+						["typeAtlas"] = "GarrMission_MissionIcon-Exploration",
+						["level"] = 96,
+					},
+					[157] = {
+						["durationSeconds"] = 1800,
+						["type"] = "Combat",
+						["cost"] = 10,
+						["iLevel"] = 0,
+						["followers"] = {
+							178, -- [1]
+						},
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["level"] = 95,
+					},
+					[109] = {
+						["durationSeconds"] = 36000,
+						["type"] = "Combat",
+						["cost"] = 15,
+						["iLevel"] = 0,
+						["followers"] = {
+							153, -- [1]
+							268, -- [2]
+							342, -- [3]
+						},
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["level"] = 100,
+					},
+					[315] = {
+						["durationSeconds"] = 28800,
+						["type"] = "Combat",
+						["cost"] = 100,
+						["iLevel"] = 645,
+						["followers"] = {
+							183, -- [1]
+							325, -- [2]
+							216, -- [3]
+						},
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["level"] = 100,
+					},
+					[247] = {
+						["durationSeconds"] = 28800,
+						["type"] = "Combat",
+						["cost"] = 20,
+						["iLevel"] = 615,
+						["followers"] = {
+							374, -- [1]
+							34, -- [2]
+							265, -- [3]
+						},
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["level"] = 100,
+					},
+					[111] = {
+						["durationSeconds"] = 28800,
+						["type"] = "Combat",
+						["cost"] = 15,
+						["iLevel"] = 0,
+						["followers"] = {
+							192, -- [1]
+							254, -- [2]
+							182, -- [3]
+						},
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["level"] = 100,
+					},
+					[403] = {
+						["durationSeconds"] = 86000,
+						["type"] = "Combat",
+						["cost"] = 50,
+						["iLevel"] = 0,
+						["followers"] = {
+							292, -- [1]
+							204, -- [2]
+							89, -- [3]
+						},
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["level"] = 100,
+					},
+				},
+				["avgWeaponiLevel"] = 622.777777777778,
 				["numEpicFollowers"] = 25,
 				["numFollowersAtLevel100"] = 27,
 			},
 			["Default.Illidan.Metal"] = {
-				["numRareFollowers"] = 3,
-				["lastUpdate"] = 1426618347,
-				["numFollowersAtiLevel645"] = 7,
-				["numFollowersAtiLevel630"] = 12,
+				["numRareFollowers"] = 2,
+				["avgArmoriLevel"] = 635.64,
+				["lastUpdate"] = 1451460540,
+				["numFollowersAtiLevel645"] = 9,
+				["numFollowersAtiLevel630"] = 14,
 				["ActiveMissionsInfo"] = {
-					[245] = {
-						["successChance"] = 91,
-						["startTime"] = 1426375838,
-					},
-					[492] = {
-						["successChance"] = 100,
-						["startTime"] = 1426375849,
-					},
-					[125] = {
-						["successChance"] = 68,
-						["startTime"] = 1426565232,
-					},
-					[500] = {
-						["successChance"] = 100,
-						["startTime"] = 1425576860,
-					},
-					[377] = {
-						["successChance"] = 100,
-						["startTime"] = 1425770885,
-					},
-					[255] = {
-						["successChance"] = 100,
-						["startTime"] = 1426375824,
-					},
-					[258] = {
-						["successChance"] = 100,
-						["startTime"] = 1426536163,
-					},
-					[266] = {
-						["successChance"] = 87,
-						["startTime"] = 1426200121,
-					},
-					[138] = {
-						["successChance"] = 73,
-						["startTime"] = 1426049064,
-					},
-					[413] = {
-						["successChance"] = 100,
-						["startTime"] = 1426049045,
-					},
-					[146] = {
-						["successChance"] = 100,
-						["startTime"] = 1426267543,
-					},
-					[148] = {
-						["successChance"] = 64,
-						["startTime"] = 1426544302,
-					},
-					[150] = {
-						["successChance"] = 51,
-						["startTime"] = 1426565220,
-					},
-					[306] = {
-						["successChance"] = 90,
-						["startTime"] = 1426544330,
-					},
-					[310] = {
-						["successChance"] = 76,
-						["startTime"] = 1426267555,
-					},
-					[160] = {
-						["successChance"] = 100,
-						["startTime"] = 1426099842,
-					},
-					[330] = {
-						["successChance"] = 100,
-						["startTime"] = 1425248838,
-					},
-					[172] = {
-						["successChance"] = 100,
-						["startTime"] = 1426536175,
-					},
-					[174] = {
+					[410] = {
 						["successChance"] = 78,
-						["startTime"] = 1425868566,
+						["startTime"] = 1451460530,
 					},
-					[176] = {
-						["successChance"] = 100,
-						["startTime"] = 1426536173,
-					},
-					[481] = {
-						["successChance"] = 100,
-						["startTime"] = 1425854206,
-					},
-					[184] = {
-						["successChance"] = 78,
-						["startTime"] = 1426544327,
-					},
-					[186] = {
-						["successChance"] = 78,
-						["startTime"] = 1425263492,
-					},
-					[374] = {
-						["successChance"] = 91,
-						["startTime"] = 1425854199,
-					},
-					[190] = {
-						["successChance"] = 59,
-						["startTime"] = 1425868605,
-					},
-					[192] = {
-						["successChance"] = 59,
-						["startTime"] = 1426536179,
-					},
-					[194] = {
-						["successChance"] = 53,
-						["startTime"] = 1426267568,
-					},
-					[263] = {
-						["successChance"] = 100,
-						["startTime"] = 1425964333,
-					},
-					[394] = {
-						["successChance"] = 78,
-						["startTime"] = 1426375853,
-					},
-					[271] = {
-						["successChance"] = 87,
-						["startTime"] = 1426536152,
-					},
-					[275] = {
-						["successChance"] = 83,
-						["startTime"] = 1426267537,
-					},
-					[206] = {
-						["successChance"] = 100,
-						["startTime"] = 1426536157,
-					},
-					[212] = {
-						["successChance"] = 100,
-						["startTime"] = 1425248875,
-					},
-					[303] = {
-						["successChance"] = 100,
-						["startTime"] = 1425916805,
-					},
-					[307] = {
-						["successChance"] = 100,
-						["startTime"] = 1425964320,
-					},
-					[311] = {
-						["successChance"] = 90,
-						["startTime"] = 1426099900,
-					},
-					[224] = {
-						["successChance"] = 85,
-						["startTime"] = 1425499276,
-					},
-					[228] = {
-						["successChance"] = 64,
-						["startTime"] = 1425854192,
-					},
-					[331] = {
-						["successChance"] = 100,
-						["startTime"] = 1425771361,
-					},
-					[335] = {
-						["successChance"] = 100,
-						["startTime"] = 1426049052,
-					},
-					[298] = {
-						["successChance"] = 100,
-						["startTime"] = 1426618344,
-					},
-					[361] = {
-						["successChance"] = 100,
-						["startTime"] = 1426375856,
-					},
-					[482] = {
-						["successChance"] = 100,
-						["startTime"] = 1426375846,
-					},
-					[359] = {
-						["successChance"] = 100,
-						["startTime"] = 1425770859,
-					},
-					[274] = {
-						["successChance"] = 100,
-						["startTime"] = 1426536149,
-					},
-					[367] = {
-						["successChance"] = 88,
-						["startTime"] = 1426375844,
-					},
-					[371] = {
-						["successChance"] = 100,
-						["startTime"] = 1425916790,
-					},
-					[375] = {
-						["successChance"] = 100,
-						["startTime"] = 1426200109,
-					},
-					[154] = {
-						["successChance"] = 100,
-						["startTime"] = 1425964354,
-					},
-					[129] = {
-						["successChance"] = 100,
-						["startTime"] = 1426267561,
-					},
-					[260] = {
-						["successChance"] = 59,
-						["startTime"] = 1426536171,
-					},
-					[391] = {
-						["successChance"] = 96,
-						["startTime"] = 1425576852,
-					},
-					[268] = {
+					[322] = {
 						["successChance"] = 81,
-						["startTime"] = 1426267545,
-					},
-					[399] = {
-						["successChance"] = 85,
-						["startTime"] = 1426565202,
-					},
-					[276] = {
-						["successChance"] = 95,
-						["startTime"] = 1426200107,
-					},
-					[385] = {
-						["successChance"] = 100,
-						["startTime"] = 1425854220,
-					},
-					[139] = {
-						["successChance"] = 73,
-						["startTime"] = 1426099846,
-					},
-					[503] = {
-						["successChance"] = 63,
-						["startTime"] = 1426565205,
-					},
-					[147] = {
-						["successChance"] = 64,
-						["startTime"] = 1425870155,
-					},
-					[187] = {
-						["successChance"] = 68,
-						["startTime"] = 1425854231,
-					},
-					[321] = {
-						["successChance"] = 100,
-						["startTime"] = 1426049042,
-					},
-					[304] = {
-						["successChance"] = 66,
-						["startTime"] = 1426536169,
-					},
-					[308] = {
-						["successChance"] = 83,
-						["startTime"] = 1426565228,
-					},
-					[312] = {
-						["successChance"] = 93,
-						["startTime"] = 1426200114,
-					},
-					[376] = {
-						["successChance"] = 100,
-						["startTime"] = 1425964351,
-					},
-					[447] = {
-						["successChance"] = 79,
-						["startTime"] = 1426536140,
-					},
-					[191] = {
-						["successChance"] = 100,
-						["startTime"] = 1425964323,
-					},
-					[193] = {
-						["successChance"] = 100,
-						["startTime"] = 1426375858,
-					},
-					[332] = {
-						["successChance"] = 100,
-						["startTime"] = 1426200124,
-					},
-					[336] = {
-						["successChance"] = 100,
-						["startTime"] = 1425263489,
-					},
-					[392] = {
-						["successChance"] = 100,
-						["startTime"] = 1425854213,
-					},
-					[87] = {
-						["successChance"] = 100,
-						["startTime"] = 1426200111,
-					},
-					[175] = {
-						["successChance"] = 81,
-						["startTime"] = 1426544332,
-					},
-					[177] = {
-						["successChance"] = 100,
-						["startTime"] = 1425916811,
-					},
-					[179] = {
-						["successChance"] = 100,
-						["startTime"] = 1426200127,
-					},
-					[181] = {
-						["successChance"] = 100,
-						["startTime"] = 1425879032,
-					},
-					[491] = {
-						["successChance"] = 100,
-						["startTime"] = 1425854208,
-					},
-					[201] = {
-						["successChance"] = 100,
-						["startTime"] = 1425770887,
-					},
-					[372] = {
-						["successChance"] = 93,
-						["startTime"] = 1426618347,
-					},
-					[189] = {
-						["successChance"] = 59,
-						["startTime"] = 1426375861,
-					},
-					[380] = {
-						["successChance"] = 100,
-						["startTime"] = 1425359120,
+						["startTime"] = 1451460500,
 					},
 					[384] = {
 						["successChance"] = 100,
-						["startTime"] = 1425916803,
-					},
-					[261] = {
-						["successChance"] = 81,
-						["startTime"] = 1426565230,
-					},
-					[265] = {
-						["successChance"] = 91,
-						["startTime"] = 1426099906,
-					},
-					[396] = {
-						["successChance"] = 53,
-						["startTime"] = 1425964329,
-					},
-					[273] = {
-						["successChance"] = 91,
-						["startTime"] = 1426565210,
-					},
-					[373] = {
-						["successChance"] = 100,
-						["startTime"] = 1426267541,
-					},
-					[130] = {
-						["successChance"] = 100,
-						["startTime"] = 1425854222,
-					},
-					[412] = {
-						["successChance"] = 100,
-						["startTime"] = 1425424656,
-					},
-					[133] = {
-						["successChance"] = 81,
-						["startTime"] = 1425771365,
-					},
-					[211] = {
-						["successChance"] = 96,
-						["startTime"] = 1425868602,
-					},
-					[498] = {
-						["successChance"] = 100,
-						["startTime"] = 1425248867,
-					},
-					[269] = {
-						["successChance"] = 86,
-						["startTime"] = 1426200116,
-					},
-					[305] = {
-						["successChance"] = 100,
-						["startTime"] = 1425854218,
-					},
-					[309] = {
-						["successChance"] = 86,
-						["startTime"] = 1425879026,
-					},
-					[221] = {
-						["successChance"] = 62,
-						["startTime"] = 1425770890,
-					},
-					[223] = {
-						["successChance"] = 100,
-						["startTime"] = 1425868483,
-					},
-					[448] = {
-						["successChance"] = 87,
-						["startTime"] = 1425359102,
-					},
-					[499] = {
-						["successChance"] = 100,
-						["startTime"] = 1426565236,
-					},
-					[115] = {
-						["successChance"] = 100,
-						["startTime"] = 1426565225,
-					},
-					[264] = {
-						["successChance"] = 87,
-						["startTime"] = 1426099904,
-					},
-					[381] = {
-						["successChance"] = 75,
-						["startTime"] = 1426267552,
-					},
-					[496] = {
-						["successChance"] = 82,
-						["startTime"] = 1426099849,
-					},
-					[188] = {
-						["successChance"] = 100,
-						["startTime"] = 1426267570,
-					},
-					[120] = {
-						["successChance"] = 100,
-						["startTime"] = 1424903422,
+						["startTime"] = 1451460525,
 					},
 					[127] = {
+						["successChance"] = 69,
+						["startTime"] = 1451460538,
+					},
+					[449] = {
+						["successChance"] = 99,
+						["startTime"] = 1451460495,
+					},
+					[330] = {
 						["successChance"] = 100,
-						["startTime"] = 1425447716,
+						["startTime"] = 1451460519,
+					},
+					[675] = {
+						["successChance"] = 32,
+						["startTime"] = 1451460523,
+					},
+					[677] = {
+						["successChance"] = 72,
+						["startTime"] = 1451460521,
+					},
+					[210] = {
+						["successChance"] = 97,
+						["startTime"] = 1451460534,
+					},
+					[500] = {
+						["successChance"] = 100,
+						["startTime"] = 1451460529,
 					},
 				},
 				["Buildings"] = {
@@ -1288,14 +724,14 @@ DataStore_GarrisonsDB = {
 					6, -- [6]
 					5, -- [7]
 					8, -- [8]
-					7, -- [9]
+					8, -- [9]
 					7, -- [10]
 				},
 				["Followers"] = {
 					[440] = {
-						["link"] = "|cff0070dd|Hgarrfollower:440:3:100:630:141:0:0:0:80:44:0:0|h[Xen Barleystrike]|h|r",
-						["xp"] = 114083,
-						["levelXP"] = 120000,
+						["link"] = "|cffa335ee|Hgarrfollower:440:4:100:630:141:144:0:0:80:44:49:0|h[Xen Barleystrike]|h|r",
+						["xp"] = 0,
+						["levelXP"] = 0,
 					},
 					[170] = {
 						["link"] = "|cffa335ee|Hgarrfollower:170:4:100:600:160:105:0:0:62:42:74:0|h[Goldmane the Skinner]|h|r",
@@ -1344,9 +780,9 @@ DataStore_GarrisonsDB = {
 						["levelXP"] = 0,
 					},
 					[424] = {
-						["link"] = "|cff0070dd|Hgarrfollower:424:3:95:600:6:0:0:0:221:72:0:0|h[Rizza Brassrokkit]|h|r",
-						["xp"] = 554,
-						["levelXP"] = 3000,
+						["link"] = "|cff0070dd|Hgarrfollower:424:3:98:600:6:0:0:0:221:72:0:0|h[Rizza Brassrokkit]|h|r",
+						["xp"] = 2298,
+						["levelXP"] = 5400,
 					},
 					[157] = {
 						["link"] = "|cffa335ee|Hgarrfollower:157:4:100:615:102:121:0:0:236:44:232:0|h[Lantresor of the Blade]|h|r",
@@ -1364,7 +800,7 @@ DataStore_GarrisonsDB = {
 						["levelXP"] = 0,
 					},
 					[259] = {
-						["link"] = "|cffa335ee|Hgarrfollower:259:4:100:637:132:108:0:0:79:46:44:0|h[Zen'tenbi]|h|r",
+						["link"] = "|cffa335ee|Hgarrfollower:259:4:100:675:132:108:0:0:79:46:44:0|h[Zen'tenbi]|h|r",
 						["xp"] = 0,
 						["levelXP"] = 0,
 					},
@@ -1384,12 +820,12 @@ DataStore_GarrisonsDB = {
 						["levelXP"] = 0,
 					},
 					[204] = {
-						["link"] = "|cffa335ee|Hgarrfollower:204:4:100:600:116:118:0:0:58:75:43:0|h[Benjamin Gibb]|h|r",
+						["link"] = "|cffa335ee|Hgarrfollower:204:4:100:675:116:118:0:0:58:75:43:0|h[Benjamin Gibb]|h|r",
 						["xp"] = 0,
 						["levelXP"] = 0,
 					},
 					[381] = {
-						["link"] = "|cffa335ee|Hgarrfollower:381:4:100:645:106:155:0:0:221:69:7:0|h[Shappa]|h|r",
+						["link"] = "|cffa335ee|Hgarrfollower:381:4:100:670:106:155:0:0:221:69:7:0|h[Shappa]|h|r",
 						["xp"] = 0,
 						["levelXP"] = 0,
 					},
@@ -1419,34 +855,74 @@ DataStore_GarrisonsDB = {
 						["levelXP"] = 0,
 					},
 					[340] = {
-						["link"] = "|cff0070dd|Hgarrfollower:340:3:100:615:130:0:0:0:80:74:0:0|h[Hannya]|h|r",
-						["xp"] = 45600,
+						["link"] = "|cff0070dd|Hgarrfollower:340:3:100:637:130:0:0:0:80:74:0:0|h[Hannya]|h|r",
+						["xp"] = 110298,
 						["levelXP"] = 120000,
 					},
 				},
 				["AvailableMissions"] = {
-					[228] = {
-						["durationSeconds"] = 2700,
-						["type"] = "Patrol",
-						["cost"] = 10,
-						["level"] = 91,
-						["typeAtlas"] = "GarrMission_MissionIcon-Patrol",
-						["iLevel"] = 0,
-					},
-					[221] = {
-						["durationSeconds"] = 2700,
-						["type"] = "Patrol",
-						["cost"] = 10,
-						["level"] = 91,
-						["typeAtlas"] = "GarrMission_MissionIcon-Patrol",
-						["iLevel"] = 0,
-					},
-					[168] = {
+					[170] = {
 						["durationSeconds"] = 7200,
 						["type"] = "Combat",
 						["cost"] = 10,
 						["level"] = 99,
 						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 0,
+					},
+					[174] = {
+						["durationSeconds"] = 3600,
+						["type"] = "Combat",
+						["cost"] = 10,
+						["level"] = 91,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 0,
+					},
+					[178] = {
+						["durationSeconds"] = 2700,
+						["type"] = "Combat",
+						["cost"] = 10,
+						["level"] = 95,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 0,
+					},
+					[395] = {
+						["durationSeconds"] = 28800,
+						["type"] = "Combat",
+						["cost"] = 40,
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 660,
+					},
+					[159] = {
+						["durationSeconds"] = 5400,
+						["type"] = "Combat",
+						["cost"] = 10,
+						["level"] = 96,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 0,
+					},
+					[272] = {
+						["durationSeconds"] = 21600,
+						["type"] = "Patrol",
+						["cost"] = 10,
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Patrol",
+						["iLevel"] = 0,
+					},
+					[373] = {
+						["durationSeconds"] = 36000,
+						["type"] = "Combat",
+						["cost"] = 20,
+						["level"] = 95,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 0,
+					},
+					[245] = {
+						["durationSeconds"] = 3600,
+						["type"] = "Patrol",
+						["cost"] = 10,
+						["level"] = 99,
+						["typeAtlas"] = "GarrMission_MissionIcon-Patrol",
 						["iLevel"] = 0,
 					},
 					[274] = {
@@ -1457,91 +933,67 @@ DataStore_GarrisonsDB = {
 						["typeAtlas"] = "GarrMission_MissionIcon-Patrol",
 						["iLevel"] = 0,
 					},
-					[163] = {
-						["durationSeconds"] = 2700,
-						["type"] = "Combat",
-						["cost"] = 10,
-						["level"] = 97,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+					[492] = {
+						["durationSeconds"] = 21600,
+						["type"] = "Leatherworking",
+						["cost"] = 20,
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Leatherworking",
 						["iLevel"] = 0,
 					},
-					[146] = {
-						["durationSeconds"] = 3600,
+					[130] = {
+						["durationSeconds"] = 14400,
 						["type"] = "Combat",
-						["cost"] = 10,
-						["level"] = 91,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 0,
-					},
-					[129] = {
-						["durationSeconds"] = 28800,
-						["type"] = "Combat",
-						["cost"] = 10,
+						["cost"] = 15,
 						["level"] = 100,
 						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
 						["iLevel"] = 0,
 					},
-					[166] = {
-						["durationSeconds"] = 5400,
+					[268] = {
+						["durationSeconds"] = 14400,
 						["type"] = "Combat",
-						["cost"] = 10,
-						["level"] = 98,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 0,
-					},
-					[255] = {
-						["durationSeconds"] = 28800,
-						["type"] = "Combat",
-						["cost"] = 15,
+						["cost"] = 0,
 						["level"] = 100,
 						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
 						["iLevel"] = 615,
 					},
-					[300] = {
+					[396] = {
 						["durationSeconds"] = 28800,
 						["type"] = "Combat",
-						["cost"] = 20,
+						["cost"] = 60,
 						["level"] = 100,
 						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 0,
+						["iLevel"] = 675,
 					},
-					[151] = {
-						["durationSeconds"] = 1800,
-						["type"] = "Combat",
-						["cost"] = 10,
-						["level"] = 93,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 0,
-					},
-					[144] = {
+					[243] = {
 						["durationSeconds"] = 3600,
-						["type"] = "Combat",
+						["type"] = "Patrol",
 						["cost"] = 10,
-						["level"] = 91,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["level"] = 97,
+						["typeAtlas"] = "GarrMission_MissionIcon-Patrol",
 						["iLevel"] = 0,
 					},
-					[182] = {
+					[482] = {
+						["durationSeconds"] = 21600,
+						["type"] = "Blacksmithing",
+						["cost"] = 20,
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Blacksmithing",
+						["iLevel"] = 0,
+					},
+					[161] = {
 						["durationSeconds"] = 5400,
 						["type"] = "Combat",
 						["cost"] = 10,
-						["level"] = 99,
+						["level"] = 96,
 						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
 						["iLevel"] = 0,
 					},
-					[114] = {
-						["durationSeconds"] = 21600,
+					[301] = {
+						["durationSeconds"] = 28800,
 						["type"] = "Combat",
-						["cost"] = 15,
+						["cost"] = 30,
 						["level"] = 100,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 0,
-					},
-					[145] = {
-						["durationSeconds"] = 3600,
-						["type"] = "Combat",
-						["cost"] = 10,
-						["level"] = 91,
 						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
 						["iLevel"] = 0,
 					},
@@ -1559,7 +1011,7 @@ DataStore_GarrisonsDB = {
 					[48] = 2,
 					[80] = 6,
 					[41] = 1,
-					[49] = 3,
+					[49] = 4,
 					[57] = 1,
 					[42] = 3,
 					[58] = 1,
@@ -1582,8 +1034,10 @@ DataStore_GarrisonsDB = {
 					[221] = 5,
 					[43] = 2,
 				},
-				["lastResourceCollection"] = 1426563728,
+				["lastResourceCollection"] = 1451460585,
 				["numFollowers"] = 26,
+				["numFollowersAtiLevel615"] = 21,
+				["numFollowersAtiLevel660"] = 8,
 				["Abilities"] = {
 					[106] = 2,
 					[122] = 1,
@@ -1611,657 +1065,200 @@ DataStore_GarrisonsDB = {
 					[172] = 1,
 					[103] = 1,
 					[173] = 1,
-					[141] = 1,
+					[116] = 1,
+					[104] = 2,
 					[143] = 1,
 					[108] = 1,
-					[116] = 1,
+					[144] = 1,
 					[176] = 1,
 					[105] = 3,
 					[121] = 1,
 					[118] = 2,
 					[178] = 1,
-					[104] = 2,
+					[141] = 1,
 				},
+				["numFollowersAtiLevel675"] = 7,
 				["ActiveMissions"] = {
-					[372] = {
+					[500] = {
 						["durationSeconds"] = 36000,
 						["type"] = "Combat",
-						["cost"] = 20,
-						["level"] = 94,
+						["cost"] = 25,
+						["level"] = 100,
 						["followers"] = {
-							155, -- [1]
-							157, -- [2]
-							424, -- [3]
+							340, -- [1]
+							410, -- [2]
+							439, -- [3]
 						},
 						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
 						["iLevel"] = 0,
 					},
-					[298] = {
-						["durationSeconds"] = 21600,
+					[322] = {
+						["durationSeconds"] = 28800,
 						["type"] = "Combat",
-						["cost"] = 20,
+						["cost"] = 100,
+						["level"] = 100,
+						["followers"] = {
+							216, -- [1]
+							259, -- [2]
+							219, -- [3]
+						},
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 645,
+					},
+					[384] = {
+						["durationSeconds"] = 28800,
+						["type"] = "Combat",
+						["cost"] = 30,
 						["level"] = 100,
 						["followers"] = {
 							440, -- [1]
-							340, -- [2]
-							243, -- [3]
+							402, -- [2]
+							182, -- [3]
 						},
 						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
 						["iLevel"] = 615,
 					},
+					[127] = {
+						["durationSeconds"] = 14400,
+						["type"] = "Combat",
+						["cost"] = 15,
+						["level"] = 100,
+						["followers"] = {
+							157, -- [1]
+							34, -- [2]
+						},
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 0,
+					},
+					[449] = {
+						["durationSeconds"] = 28800,
+						["type"] = "Combat",
+						["cost"] = 100,
+						["level"] = 100,
+						["followers"] = {
+							192, -- [1]
+							155, -- [2]
+							381, -- [3]
+						},
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 660,
+					},
+					[330] = {
+						["durationSeconds"] = 21600,
+						["type"] = "Exploration",
+						["cost"] = 10,
+						["level"] = 90,
+						["followers"] = {
+							424, -- [1]
+						},
+						["typeAtlas"] = "GarrMission_MissionIcon-Exploration",
+						["iLevel"] = 0,
+					},
+					[675] = {
+						["durationSeconds"] = 28800,
+						["type"] = "Combat",
+						["cost"] = 40,
+						["level"] = 100,
+						["followers"] = {
+							104, -- [1]
+							240, -- [2]
+						},
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 660,
+					},
+					[677] = {
+						["durationSeconds"] = 36000,
+						["type"] = "Combat",
+						["cost"] = 60,
+						["level"] = 100,
+						["followers"] = {
+							345, -- [1]
+							204, -- [2]
+						},
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 675,
+					},
+					[210] = {
+						["durationSeconds"] = 5400,
+						["type"] = "Combat",
+						["cost"] = 15,
+						["level"] = 95,
+						["followers"] = {
+							288, -- [1]
+							243, -- [2]
+							170, -- [3]
+						},
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 0,
+					},
+					[410] = {
+						["durationSeconds"] = 86000,
+						["type"] = "Combat",
+						["cost"] = 75,
+						["level"] = 100,
+						["followers"] = {
+							153, -- [1]
+							370, -- [2]
+							375, -- [3]
+						},
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 0,
+					},
 				},
-				["numFollowersAtiLevel615"] = 20,
-				["numEpicFollowers"] = 23,
+				["avgWeaponiLevel"] = 636.6,
+				["numEpicFollowers"] = 24,
 				["numFollowersAtLevel100"] = 25,
 			},
 			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1426738972,
+				["numRareFollowers"] = 1,
+				["avgArmoriLevel"] = 645.309523809524,
+				["lastUpdate"] = 1451461382,
 				["numFollowersAtiLevel645"] = 28,
 				["numFollowersAtiLevel630"] = 32,
 				["ActiveMissionsInfo"] = {
-					[500] = {
-						["successChance"] = 100,
-						["startTime"] = 1425267175,
-					},
-					[261] = {
-						["successChance"] = 54,
-						["startTime"] = 1425263743,
-					},
-					[139] = {
-						["successChance"] = 73,
-						["startTime"] = 1425447446,
-					},
-					[147] = {
-						["successChance"] = 62,
-						["startTime"] = 1426137256,
-					},
-					[309] = {
-						["successChance"] = 100,
-						["startTime"] = 1426367411,
-					},
-					[325] = {
-						["successChance"] = 100,
-						["startTime"] = 1426034281,
-					},
-					[179] = {
-						["successChance"] = 100,
-						["startTime"] = 1426717185,
-					},
-					[187] = {
-						["successChance"] = 68,
-						["startTime"] = 1426367406,
-					},
-					[211] = {
-						["successChance"] = 100,
-						["startTime"] = 1425534235,
-					},
-					[453] = {
-						["successChance"] = 100,
-						["startTime"] = 1426026066,
-					},
 					[485] = {
-						["successChance"] = 100,
-						["startTime"] = 1425328528,
-					},
-					[262] = {
-						["successChance"] = 27,
-						["startTime"] = 1426374245,
-					},
-					[278] = {
-						["successChance"] = 37,
-						["startTime"] = 1426610359,
-					},
-					[374] = {
-						["successChance"] = 100,
-						["startTime"] = 1426367404,
-					},
-					[486] = {
-						["successChance"] = 100,
-						["startTime"] = 1426625194,
-					},
-					[126] = {
-						["successChance"] = 100,
-						["startTime"] = 1426267270,
-					},
-					[263] = {
-						["successChance"] = 100,
-						["startTime"] = 1426367420,
-					},
-					[279] = {
-						["successChance"] = 37,
-						["startTime"] = 1426099528,
-					},
-					[148] = {
-						["successChance"] = 64,
-						["startTime"] = 1425257961,
-					},
-					[311] = {
-						["successChance"] = 100,
-						["startTime"] = 1426610350,
-					},
-					[172] = {
-						["successChance"] = 100,
-						["startTime"] = 1426610361,
-					},
-					[180] = {
-						["successChance"] = 68,
-						["startTime"] = 1425946458,
-					},
-					[375] = {
-						["successChance"] = 100,
-						["startTime"] = 1425424146,
-					},
-					[391] = {
-						["successChance"] = 96,
-						["startTime"] = 1425534226,
-					},
-					[220] = {
-						["successChance"] = 37,
-						["startTime"] = 1426542392,
-					},
-					[244] = {
-						["successChance"] = 91,
-						["startTime"] = 1425878956,
-					},
-					[503] = {
-						["successChance"] = 68,
-						["startTime"] = 1426731706,
-					},
-					[280] = {
-						["successChance"] = 100,
-						["startTime"] = 1426216873,
-					},
-					[312] = {
-						["successChance"] = 100,
-						["startTime"] = 1426267264,
-					},
-					[376] = {
-						["successChance"] = 93,
-						["startTime"] = 1425851846,
-					},
-					[392] = {
-						["successChance"] = 100,
-						["startTime"] = 1425916653,
-					},
-					[408] = {
-						["successChance"] = 100,
-						["startTime"] = 1425447486,
-					},
-					[488] = {
-						["successChance"] = 100,
-						["startTime"] = 1426625193,
-					},
-					[265] = {
-						["successChance"] = 75,
-						["startTime"] = 1426542389,
-					},
-					[281] = {
-						["successChance"] = 93,
-						["startTime"] = 1425429917,
-					},
-					[181] = {
-						["successChance"] = 100,
-						["startTime"] = 1426537018,
-					},
-					[189] = {
-						["successChance"] = 59,
-						["startTime"] = 1426550518,
-					},
-					[409] = {
-						["successChance"] = 100,
-						["startTime"] = 1426048813,
-					},
-					[213] = {
-						["successChance"] = 86,
-						["startTime"] = 1425870231,
-					},
-					[221] = {
-						["successChance"] = 62,
-						["startTime"] = 1424903323,
-					},
-					[245] = {
-						["successChance"] = 83,
-						["startTime"] = 1426037960,
-					},
-					[266] = {
-						["successChance"] = 100,
-						["startTime"] = 1426267266,
-					},
-					[282] = {
-						["successChance"] = 89,
-						["startTime"] = 1426375729,
-					},
-					[298] = {
-						["successChance"] = 100,
-						["startTime"] = 1426037718,
-					},
-					[87] = {
-						["successChance"] = 82,
-						["startTime"] = 1426618232,
-					},
-					[115] = {
-						["successChance"] = 100,
-						["startTime"] = 1425851844,
-					},
-					[119] = {
-						["successChance"] = 100,
-						["startTime"] = 1426542383,
-					},
-					[127] = {
-						["successChance"] = 37,
-						["startTime"] = 1426731777,
-					},
-					[267] = {
-						["successChance"] = 100,
-						["startTime"] = 1425351009,
-					},
-					[283] = {
-						["successChance"] = 100,
-						["startTime"] = 1425916658,
-					},
-					[150] = {
-						["successChance"] = 53,
-						["startTime"] = 1426196071,
-					},
-					[331] = {
-						["successChance"] = 81,
-						["startTime"] = 1425761305,
-					},
-					[174] = {
-						["successChance"] = 78,
-						["startTime"] = 1426374242,
-					},
-					[379] = {
-						["successChance"] = 50,
-						["startTime"] = 1425351001,
-					},
-					[395] = {
-						["successChance"] = 82,
-						["startTime"] = 1425946442,
-					},
-					[230] = {
-						["successChance"] = 85,
-						["startTime"] = 1425314360,
-					},
-					[268] = {
-						["successChance"] = 95,
-						["startTime"] = 1425961972,
-					},
-					[300] = {
-						["successChance"] = 100,
-						["startTime"] = 1426099534,
-					},
-					[332] = {
-						["successChance"] = 100,
-						["startTime"] = 1425253557,
-					},
-					[380] = {
-						["successChance"] = 100,
-						["startTime"] = 1425878976,
-					},
-					[396] = {
 						["successChance"] = 67,
-						["startTime"] = 1426565086,
-					},
-					[444] = {
-						["successChance"] = 89,
-						["startTime"] = 1425761300,
-					},
-					[269] = {
-						["successChance"] = 100,
-						["startTime"] = 1426610353,
-					},
-					[285] = {
-						["successChance"] = 100,
-						["startTime"] = 1426717183,
-					},
-					[151] = {
-						["successChance"] = 53,
-						["startTime"] = 1425770509,
-					},
-					[159] = {
-						["successChance"] = 59,
-						["startTime"] = 1425946460,
-					},
-					[175] = {
-						["successChance"] = 68,
-						["startTime"] = 1426717187,
-					},
-					[365] = {
-						["successChance"] = 100,
-						["startTime"] = 1426196075,
-					},
-					[191] = {
-						["successChance"] = 100,
-						["startTime"] = 1426385567,
-					},
-					[397] = {
-						["successChance"] = 67,
-						["startTime"] = 1425961978,
-					},
-					[207] = {
-						["successChance"] = 64,
-						["startTime"] = 1425253523,
-					},
-					[223] = {
-						["successChance"] = 84,
-						["startTime"] = 1425573521,
-					},
-					[255] = {
-						["successChance"] = 87,
-						["startTime"] = 1426731771,
-					},
-					[286] = {
-						["successChance"] = 100,
-						["startTime"] = 1425447474,
-					},
-					[302] = {
-						["successChance"] = 100,
-						["startTime"] = 1426372792,
-					},
-					[366] = {
-						["successChance"] = 100,
-						["startTime"] = 1426717166,
-					},
-					[398] = {
-						["successChance"] = 100,
-						["startTime"] = 1424912744,
-					},
-					[116] = {
-						["successChance"] = 100,
-						["startTime"] = 1426196068,
-					},
-					[120] = {
-						["successChance"] = 100,
-						["startTime"] = 1426196078,
-					},
-					[128] = {
-						["successChance"] = 100,
-						["startTime"] = 1425497812,
-					},
-					[271] = {
-						["successChance"] = 87,
-						["startTime"] = 1425573514,
-					},
-					[287] = {
-						["successChance"] = 100,
-						["startTime"] = 1426137247,
-					},
-					[303] = {
-						["successChance"] = 73,
-						["startTime"] = 1425351005,
-					},
-					[160] = {
-						["successChance"] = 91,
-						["startTime"] = 1426216870,
-					},
-					[335] = {
-						["successChance"] = 100,
-						["startTime"] = 1426367409,
-					},
-					[176] = {
-						["successChance"] = 100,
-						["startTime"] = 1426542384,
-					},
-					[184] = {
-						["successChance"] = 100,
-						["startTime"] = 1426048822,
-					},
-					[192] = {
-						["successChance"] = 59,
-						["startTime"] = 1426731715,
-					},
-					[399] = {
-						["successChance"] = 57,
-						["startTime"] = 1426385570,
-					},
-					[224] = {
-						["successChance"] = 100,
-						["startTime"] = 1425761273,
-					},
-					[232] = {
-						["successChance"] = 78,
-						["startTime"] = 1425946429,
-					},
-					[272] = {
-						["successChance"] = 100,
-						["startTime"] = 1426717161,
-					},
-					[288] = {
-						["successChance"] = 86,
-						["startTime"] = 1426734576,
-					},
-					[304] = {
-						["successChance"] = 90,
-						["startTime"] = 1426731777,
-					},
-					[384] = {
-						["successChance"] = 100,
-						["startTime"] = 1426137235,
-					},
-					[496] = {
-						["successChance"] = 71,
-						["startTime"] = 1425263680,
-					},
-					[257] = {
-						["successChance"] = 91,
-						["startTime"] = 1426267258,
-					},
-					[273] = {
-						["successChance"] = 100,
-						["startTime"] = 1426267255,
-					},
-					[289] = {
-						["successChance"] = 100,
-						["startTime"] = 1425314450,
-					},
-					[153] = {
-						["successChance"] = 100,
-						["startTime"] = 1424903317,
-					},
-					[161] = {
-						["successChance"] = 45,
-						["startTime"] = 1425429410,
-					},
-					[337] = {
-						["successChance"] = 100,
-						["startTime"] = 1425761295,
-					},
-					[177] = {
-						["successChance"] = 100,
-						["startTime"] = 1426196080,
-					},
-					[193] = {
-						["successChance"] = 56,
-						["startTime"] = 1426565074,
-					},
-					[201] = {
-						["successChance"] = 100,
-						["startTime"] = 1426216878,
-					},
-					[217] = {
-						["successChance"] = 37,
-						["startTime"] = 1426374247,
-					},
-					[258] = {
-						["successChance"] = 100,
-						["startTime"] = 1426099545,
-					},
-					[274] = {
-						["successChance"] = 100,
-						["startTime"] = 1426374237,
-					},
-					[306] = {
-						["successChance"] = 100,
-						["startTime"] = 1426717181,
-					},
-					[144] = {
-						["successChance"] = 75,
-						["startTime"] = 1424928698,
-					},
-					[132] = {
-						["successChance"] = 75,
-						["startTime"] = 1425946436,
-					},
-					[299] = {
-						["successChance"] = 100,
-						["startTime"] = 1426550525,
-					},
-					[402] = {
-						["successChance"] = 95,
-						["startTime"] = 1426625191,
-					},
-					[367] = {
-						["successChance"] = 100,
-						["startTime"] = 1426099542,
-					},
-					[243] = {
-						["successChance"] = 85,
-						["startTime"] = 1425965135,
-					},
-					[154] = {
-						["successChance"] = 91,
-						["startTime"] = 1426199353,
-					},
-					[117] = {
-						["successChance"] = 91,
-						["startTime"] = 1425962020,
-					},
-					[377] = {
-						["successChance"] = 100,
-						["startTime"] = 1425447441,
-					},
-					[498] = {
-						["successChance"] = 100,
-						["startTime"] = 1425351007,
-					},
-					[259] = {
-						["successChance"] = 90,
-						["startTime"] = 1425253567,
-					},
-					[275] = {
-						["successChance"] = 95,
-						["startTime"] = 1426216865,
-					},
-					[146] = {
-						["successChance"] = 73,
-						["startTime"] = 1425497772,
-					},
-					[307] = {
-						["successChance"] = 100,
-						["startTime"] = 1426717178,
-					},
-					[130] = {
-						["successChance"] = 100,
-						["startTime"] = 1426610356,
-					},
-					[133] = {
-						["successChance"] = 87,
-						["startTime"] = 1425851855,
-					},
-					[166] = {
-						["successChance"] = 53,
-						["startTime"] = 1425967242,
-					},
-					[186] = {
-						["successChance"] = 78,
-						["startTime"] = 1426034285,
-					},
-					[194] = {
-						["successChance"] = 70,
-						["startTime"] = 1426178527,
-					},
-					[202] = {
-						["successChance"] = 100,
-						["startTime"] = 1425946453,
-					},
-					[210] = {
-						["successChance"] = 100,
-						["startTime"] = 1426717171,
-					},
-					[218] = {
-						["successChance"] = 100,
-						["startTime"] = 1426565076,
-					},
-					[125] = {
-						["successChance"] = 50,
-						["startTime"] = 1425946424,
-					},
-					[190] = {
-						["successChance"] = 100,
-						["startTime"] = 1425576657,
-					},
-					[242] = {
-						["successChance"] = 75,
-						["startTime"] = 1425761311,
-					},
-					[305] = {
-						["successChance"] = 100,
-						["startTime"] = 1425314448,
-					},
-					[260] = {
-						["successChance"] = 81,
-						["startTime"] = 1426731773,
-					},
-					[276] = {
-						["successChance"] = 83,
-						["startTime"] = 1426610345,
-					},
-					[445] = {
-						["successChance"] = 85,
-						["startTime"] = 1425916618,
-					},
-					[308] = {
-						["successChance"] = 80,
-						["startTime"] = 1426535895,
-					},
-					[373] = {
-						["successChance"] = 100,
-						["startTime"] = 1426617611,
-					},
-					[188] = {
-						["successChance"] = 100,
-						["startTime"] = 1426731717,
-					},
-					[138] = {
-						["successChance"] = 100,
-						["startTime"] = 1426625198,
-					},
-					[372] = {
-						["successChance"] = 100,
-						["startTime"] = 1425851848,
-					},
-					[131] = {
-						["successChance"] = 100,
-						["startTime"] = 1426565089,
-					},
-					[155] = {
-						["successChance"] = 100,
-						["startTime"] = 1425868335,
+						["startTime"] = 1451459397,
 					},
 					[487] = {
 						["successChance"] = 100,
-						["startTime"] = 1425851862,
+						["startTime"] = 1451459395,
 					},
-					[381] = {
+					[132] = {
+						["successChance"] = 100,
+						["startTime"] = 1451459386,
+					},
+					[186] = {
+						["successChance"] = 78,
+						["startTime"] = 1451459389,
+					},
+					[326] = {
+						["successChance"] = 100,
+						["startTime"] = 1451459361,
+					},
+					[397] = {
 						["successChance"] = 57,
-						["startTime"] = 1426137245,
+						["startTime"] = 1451459472,
 					},
-					[200] = {
-						["successChance"] = 100,
-						["startTime"] = 1426137266,
+					[286] = {
+						["successChance"] = 69,
+						["startTime"] = 1451459410,
 					},
-					[301] = {
+					[189] = {
 						["successChance"] = 100,
-						["startTime"] = 1426216867,
+						["startTime"] = 1451459391,
 					},
-					[277] = {
+					[453] = {
 						["successChance"] = 100,
-						["startTime"] = 1426542386,
+						["startTime"] = 1451459353,
 					},
-					[361] = {
+					[288] = {
 						["successChance"] = 100,
-						["startTime"] = 1425851859,
+						["startTime"] = 1451459407,
+					},
+					[337] = {
+						["successChance"] = 100,
+						["startTime"] = 1451459381,
 					},
 				},
 				["Buildings"] = {
@@ -2324,350 +1321,246 @@ DataStore_GarrisonsDB = {
 				},
 				["Followers"] = {
 					[290] = {
-						["link"] = "|cffa335ee|Hgarrfollower:290:4:100:675:172:173:0:0:221:38:72:0|h[Magister Tuan]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:290:4:100:675:172:173:0:0:221:38:72:0|h[Magister Tuan]|h|r",
 					},
 					[211] = {
-						["link"] = "|cffa335ee|Hgarrfollower:211:4:100:660:164:103:0:0:4:74:232:0|h[Penny Clobberbottom]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:211:4:100:660:164:103:0:0:4:74:232:0|h[Penny Clobberbottom]|h|r",
 					},
 					[180] = {
-						["isInactive"] = true,
+						["levelXP"] = 60000,
 						["link"] = "|cff1eff00|Hgarrfollower:180:2:100:600:103:0:0:0:53:0:0:0|h[Shadow Hunter Rala]|h|r",
 						["xp"] = 16457,
-						["levelXP"] = 60000,
+						["isInactive"] = true,
 					},
 					[212] = {
-						["link"] = "|cffa335ee|Hgarrfollower:212:4:100:630:104:159:0:0:29:38:77:0|h[Spirit of Bony Xuk]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:212:4:100:630:104:159:0:0:29:38:77:0|h[Spirit of Bony Xuk]|h|r",
 					},
 					[182] = {
-						["isInactive"] = true,
+						["levelXP"] = 0,
 						["link"] = "|cffa335ee|Hgarrfollower:182:4:100:619:105:103:0:0:236:76:4:0|h[Mulverick]|h|r",
 						["xp"] = 0,
-						["levelXP"] = 0,
+						["isInactive"] = true,
 					},
 					[108] = {
-						["link"] = "|cff1eff00|Hgarrfollower:108:2:91:600:148:0:0:0:77:0:0:0|h[Vyse Jin'kala]|h|r",
-						["xp"] = 59,
-						["levelXP"] = 800,
+						["levelXP"] = 1600,
+						["xp"] = 1151,
+						["link"] = "|cff1eff00|Hgarrfollower:108:2:93:600:148:0:0:0:77:0:0:0|h[Vyse Jin'kala]|h|r",
 					},
 					[183] = {
-						["isInactive"] = true,
+						["levelXP"] = 0,
 						["link"] = "|cffa335ee|Hgarrfollower:183:4:100:654:167:103:0:0:7:8:39:0|h[Gronnstalker Rokash]|h|r",
 						["xp"] = 0,
-						["levelXP"] = 0,
+						["isInactive"] = true,
 					},
 					[426] = {
-						["link"] = "|cff1eff00|Hgarrfollower:426:2:100:645:6:0:0:0:221:0:0:0|h[Brakk Shattershield]|h|r",
-						["xp"] = 26559,
-						["levelXP"] = 60000,
+						["levelXP"] = 120000,
+						["xp"] = 72559,
+						["link"] = "|cff0070dd|Hgarrfollower:426:3:100:645:6:0:0:0:221:48:0:0|h[Brakk Shattershield]|h|r",
 					},
 					[216] = {
-						["link"] = "|cffa335ee|Hgarrfollower:216:4:100:654:5:170:0:0:231:77:80:0|h[Vivianne]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:216:4:100:654:5:170:0:0:231:77:80:0|h[Vivianne]|h|r",
 					},
 					[154] = {
-						["isInactive"] = true,
+						["levelXP"] = 0,
 						["link"] = "|cffa335ee|Hgarrfollower:154:4:100:637:171:172:0:0:9:72:75:0|h[Magister Krelas]|h|r",
 						["xp"] = 0,
-						["levelXP"] = 0,
+						["isInactive"] = true,
 					},
 					[249] = {
-						["link"] = "|cffa335ee|Hgarrfollower:249:4:100:675:137:134:0:0:79:38:41:0|h[Matoclaw]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:249:4:100:675:137:134:0:0:79:38:41:0|h[Matoclaw]|h|r",
 					},
 					[155] = {
-						["isInactive"] = true,
+						["levelXP"] = 0,
 						["link"] = "|cffa335ee|Hgarrfollower:155:4:100:654:6:122:0:0:41:49:9:0|h[Morketh Bladehowl]|h|r",
 						["xp"] = 0,
-						["levelXP"] = 0,
+						["isInactive"] = true,
 					},
 					[219] = {
-						["isInactive"] = true,
+						["levelXP"] = 0,
 						["link"] = "|cffa335ee|Hgarrfollower:219:4:100:655:106:154:0:0:231:43:77:0|h[Leorajh]|h|r",
 						["xp"] = 0,
-						["levelXP"] = 0,
+						["isInactive"] = true,
 					},
 					[157] = {
-						["link"] = "|cffa335ee|Hgarrfollower:157:4:100:655:102:100:0:0:52:80:79:0|h[Lantresor of the Blade]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:157:4:100:655:102:100:0:0:52:80:79:0|h[Lantresor of the Blade]|h|r",
 					},
 					[189] = {
-						["isInactive"] = true,
+						["levelXP"] = 0,
 						["link"] = "|cffa335ee|Hgarrfollower:189:4:100:654:120:6:0:0:201:71:73:0|h[Blook]|h|r",
 						["xp"] = 0,
-						["levelXP"] = 0,
+						["isInactive"] = true,
 					},
 					[159] = {
-						["isInactive"] = true,
+						["levelXP"] = 0,
 						["link"] = "|cffa335ee|Hgarrfollower:159:4:100:607:157:155:0:0:52:44:39:0|h[Kaz the Shrieker]|h|r",
 						["xp"] = 0,
-						["levelXP"] = 0,
+						["isInactive"] = true,
 					},
 					[192] = {
-						["link"] = "|cffa335ee|Hgarrfollower:192:4:100:630:160:162:0:0:57:73:44:0|h[Kimzee Pinchwhistle]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:192:4:100:630:160:162:0:0:57:73:44:0|h[Kimzee Pinchwhistle]|h|r",
 					},
 					[193] = {
-						["isInactive"] = true,
+						["levelXP"] = 0,
 						["link"] = "|cffa335ee|Hgarrfollower:193:4:100:654:100:120:0:0:231:4:7:0|h[Tormmok]|h|r",
 						["xp"] = 0,
-						["levelXP"] = 0,
+						["isInactive"] = true,
 					},
 					[448] = {
-						["link"] = "|cffa335ee|Hgarrfollower:448:4:100:654:140:147:0:0:80:69:70:0|h[Ken-Ken]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:448:4:100:675:140:147:0:0:80:69:70:0|h[Ken-Ken]|h|r",
 					},
 					[195] = {
-						["isInactive"] = true,
+						["levelXP"] = 0,
 						["link"] = "|cffa335ee|Hgarrfollower:195:4:100:654:160:105:0:0:72:71:49:0|h[Alexi Barov]|h|r",
 						["xp"] = 0,
-						["levelXP"] = 0,
+						["isInactive"] = true,
 					},
 					[327] = {
-						["link"] = "|cffa335ee|Hgarrfollower:327:4:100:662:126:127:0:0:79:76:221:0|h[Auriel Brightsong]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:327:4:100:662:126:127:0:0:79:76:221:0|h[Auriel Brightsong]|h|r",
 					},
 					[266] = {
-						["link"] = "|cffa335ee|Hgarrfollower:266:4:100:675:137:135:0:0:236:232:74:0|h[Iye]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:266:4:100:675:137:135:0:0:236:232:74:0|h[Iye]|h|r",
 					},
 					[332] = {
-						["link"] = "|cffa335ee|Hgarrfollower:332:4:100:675:123:127:0:0:76:75:70:0|h[Naana]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:332:4:100:675:123:127:0:0:76:75:70:0|h[Naana]|h|r",
 					},
 					[455] = {
-						["isInactive"] = true,
+						["levelXP"] = 0,
 						["link"] = "|cffa335ee|Hgarrfollower:455:4:100:675:172:171:0:0:72:40:76:0|h[Millhouse Manastorm]|h|r",
 						["xp"] = 0,
-						["levelXP"] = 0,
+						["isInactive"] = true,
 					},
 					[398] = {
-						["link"] = "|cffa335ee|Hgarrfollower:398:4:100:675:180:179:0:0:221:8:48:0|h[Kerraelon Sunhunger]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:398:4:100:675:180:179:0:0:221:8:48:0|h[Kerraelon Sunhunger]|h|r",
 					},
 					[233] = {
-						["link"] = "|cffa335ee|Hgarrfollower:233:4:100:675:119:116:0:0:221:74:70:0|h[Tigar Frosthoof]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:233:4:100:675:119:116:0:0:221:74:70:0|h[Tigar Frosthoof]|h|r",
 					},
 					[463] = {
-						["link"] = "|cffa335ee|Hgarrfollower:463:4:100:645:148:150:0:0:7:70:256:0|h[Ulna Thresher]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:463:4:100:645:148:150:0:0:7:70:256:0|h[Ulna Thresher]|h|r",
 					},
 					[390] = {
-						["link"] = "|cffa335ee|Hgarrfollower:390:4:100:675:155:106:0:0:221:39:40:0|h[Rakkaha]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:390:4:100:675:155:106:0:0:221:39:40:0|h[Rakkaha]|h|r",
 					},
 					[204] = {
-						["isInactive"] = true,
+						["levelXP"] = 0,
 						["link"] = "|cffa335ee|Hgarrfollower:204:4:100:606:114:115:0:0:74:8:76:0|h[Benjamin Gibb]|h|r",
 						["xp"] = 0,
-						["levelXP"] = 0,
+						["isInactive"] = true,
 					},
 					[172] = {
-						["link"] = "|cffa335ee|Hgarrfollower:172:4:100:615:125:127:0:0:221:72:37:0|h[Soulare of Andorhal]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:172:4:100:615:125:127:0:0:221:72:37:0|h[Soulare of Andorhal]|h|r",
 					},
 					[341] = {
-						["isInactive"] = true,
+						["levelXP"] = 0,
 						["link"] = "|cffa335ee|Hgarrfollower:341:4:100:600:148:151:0:0:40:49:76:0|h[Robin Fredericksen]|h|r",
 						["xp"] = 0,
-						["levelXP"] = 0,
+						["isInactive"] = true,
 					},
 					[170] = {
-						["isInactive"] = true,
+						["levelXP"] = 60000,
 						["link"] = "|cff1eff00|Hgarrfollower:170:2:100:600:160:0:0:0:62:0:0:0|h[Goldmane the Skinner]|h|r",
 						["xp"] = 14246,
-						["levelXP"] = 60000,
+						["isInactive"] = true,
 					},
 					[153] = {
-						["isInactive"] = true,
+						["levelXP"] = 60000,
 						["link"] = "|cff1eff00|Hgarrfollower:153:2:100:600:159:0:0:0:60:0:0:0|h[Ka'la]|h|r",
 						["xp"] = 1632,
-						["levelXP"] = 60000,
+						["isInactive"] = true,
 					},
 					[411] = {
-						["link"] = "|cffa335ee|Hgarrfollower:411:4:100:675:181:175:0:0:221:80:38:0|h[Mau'iti]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:411:4:100:675:181:175:0:0:221:80:38:0|h[Mau'iti]|h|r",
 					},
 					[104] = {
-						["link"] = "|cffa335ee|Hgarrfollower:104:4:100:660:176:179:0:0:80:74:77:0|h[Vera Voidheart]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:104:4:100:660:176:179:0:0:80:74:77:0|h[Vera Voidheart]|h|r",
 					},
 					[34] = {
-						["link"] = "|cffa335ee|Hgarrfollower:34:4:100:630:100:121:0:0:59:39:7:0|h[Olin Umberhide]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:34:4:100:630:100:121:0:0:59:39:7:0|h[Olin Umberhide]|h|r",
 					},
 					[347] = {
-						["link"] = "|cffa335ee|Hgarrfollower:347:4:100:654:11:150:0:0:221:43:74:0|h[Phaedra Heartbinder]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:347:4:100:654:11:150:0:0:221:43:74:0|h[Phaedra Heartbinder]|h|r",
 					},
 					[176] = {
-						["link"] = "|cffa335ee|Hgarrfollower:176:4:100:600:140:144:0:0:75:49:221:0|h[Bruto]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:176:4:100:600:140:144:0:0:75:49:221:0|h[Bruto]|h|r",
 					},
 					[208] = {
-						["isInactive"] = true,
+						["levelXP"] = 0,
 						["link"] = "|cffa335ee|Hgarrfollower:208:4:100:607:102:120:0:0:56:7:76:0|h[Ahm]|h|r",
 						["xp"] = 0,
-						["levelXP"] = 0,
+						["isInactive"] = true,
 					},
 					[177] = {
-						["isInactive"] = true,
+						["levelXP"] = 0,
 						["link"] = "|cffa335ee|Hgarrfollower:177:4:100:654:124:130:0:0:72:70:41:0|h[Croman]|h|r",
 						["xp"] = 0,
-						["levelXP"] = 0,
+						["isInactive"] = true,
 					},
 					[209] = {
-						["link"] = "|cffa335ee|Hgarrfollower:209:4:100:654:114:117:0:0:236:9:71:0|h[Abu'gar]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:209:4:100:654:114:117:0:0:236:9:71:0|h[Abu'gar]|h|r",
 					},
 					[178] = {
-						["isInactive"] = true,
+						["levelXP"] = 0,
 						["link"] = "|cffa335ee|Hgarrfollower:178:4:100:654:130:131:0:0:44:38:43:0|h[Leeroy Jenkins]|h|r",
 						["xp"] = 0,
-						["levelXP"] = 0,
+						["isInactive"] = true,
 					},
 					[292] = {
-						["link"] = "|cffa335ee|Hgarrfollower:292:4:100:654:170:173:0:0:221:4:45:0|h[Kral'girz]|h|r",
-						["xp"] = 0,
 						["levelXP"] = 0,
+						["xp"] = 0,
+						["link"] = "|cffa335ee|Hgarrfollower:292:4:100:654:170:173:0:0:221:4:45:0|h[Kral'girz]|h|r",
 					},
 				},
 				["AvailableMissions"] = {
-					[116] = {
-						["durationSeconds"] = 28800,
-						["type"] = "Combat",
-						["cost"] = 20,
-						["level"] = 100,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 0,
-					},
-					[87] = {
-						["durationSeconds"] = 1800,
-						["type"] = "Patrol",
-						["cost"] = 5,
-						["level"] = 90,
-						["typeAtlas"] = "GarrMission_MissionIcon-Patrol",
-						["iLevel"] = 0,
-					},
-					[159] = {
-						["durationSeconds"] = 5400,
-						["type"] = "Combat",
-						["cost"] = 10,
-						["level"] = 96,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 0,
-					},
-					[163] = {
+					[224] = {
 						["durationSeconds"] = 2700,
-						["type"] = "Combat",
-						["cost"] = 10,
-						["level"] = 97,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 0,
-					},
-					[272] = {
-						["durationSeconds"] = 21600,
 						["type"] = "Patrol",
 						["cost"] = 10,
-						["level"] = 100,
+						["level"] = 93,
 						["typeAtlas"] = "GarrMission_MissionIcon-Patrol",
-						["iLevel"] = 0,
-					},
-					[144] = {
-						["durationSeconds"] = 3600,
-						["type"] = "Combat",
-						["cost"] = 10,
-						["level"] = 91,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 0,
-					},
-					[381] = {
-						["durationSeconds"] = 36000,
-						["type"] = "Combat",
-						["cost"] = 60,
-						["level"] = 100,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 675,
-					},
-					[245] = {
-						["durationSeconds"] = 3600,
-						["type"] = "Patrol",
-						["cost"] = 10,
-						["level"] = 99,
-						["typeAtlas"] = "GarrMission_MissionIcon-Patrol",
-						["iLevel"] = 0,
-					},
-					[160] = {
-						["durationSeconds"] = 2700,
-						["type"] = "Combat",
-						["cost"] = 10,
-						["level"] = 96,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 0,
-					},
-					[274] = {
-						["durationSeconds"] = 28800,
-						["type"] = "Patrol",
-						["cost"] = 10,
-						["level"] = 100,
-						["typeAtlas"] = "GarrMission_MissionIcon-Patrol",
-						["iLevel"] = 0,
-					},
-					[145] = {
-						["durationSeconds"] = 3600,
-						["type"] = "Combat",
-						["cost"] = 10,
-						["level"] = 91,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 0,
-					},
-					[215] = {
-						["durationSeconds"] = 21600,
-						["type"] = "Exploration",
-						["cost"] = 10,
-						["level"] = 90,
-						["typeAtlas"] = "GarrMission_MissionIcon-Exploration",
-						["iLevel"] = 0,
-					},
-					[157] = {
-						["durationSeconds"] = 1800,
-						["type"] = "Combat",
-						["cost"] = 10,
-						["level"] = 95,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 0,
-					},
-					[146] = {
-						["durationSeconds"] = 3600,
-						["type"] = "Combat",
-						["cost"] = 10,
-						["level"] = 91,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
 						["iLevel"] = 0,
 					},
 					[118] = {
@@ -2678,21 +1571,149 @@ DataStore_GarrisonsDB = {
 						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
 						["iLevel"] = 0,
 					},
-					[139] = {
+					[495] = {
+						["durationSeconds"] = 28800,
+						["type"] = "Combat",
+						["cost"] = 40,
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 660,
+					},
+					[680] = {
+						["durationSeconds"] = 43200,
+						["type"] = "Combat",
+						["cost"] = 100,
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 675,
+					},
+					[151] = {
 						["durationSeconds"] = 1800,
 						["type"] = "Combat",
 						["cost"] = 10,
-						["level"] = 90,
+						["level"] = 93,
 						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
 						["iLevel"] = 0,
 					},
-					[367] = {
+					[159] = {
+						["durationSeconds"] = 5400,
+						["type"] = "Combat",
+						["cost"] = 10,
+						["level"] = 96,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 0,
+					},
+					[198] = {
+						["durationSeconds"] = 5400,
+						["type"] = "Combat",
+						["cost"] = 20,
+						["level"] = 93,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 0,
+					},
+					[373] = {
 						["durationSeconds"] = 36000,
 						["type"] = "Combat",
 						["cost"] = 20,
-						["level"] = 91,
+						["level"] = 95,
 						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
 						["iLevel"] = 0,
+					},
+					[257] = {
+						["durationSeconds"] = 28800,
+						["type"] = "Combat",
+						["cost"] = 15,
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 615,
+					},
+					[245] = {
+						["durationSeconds"] = 3600,
+						["type"] = "Patrol",
+						["cost"] = 10,
+						["level"] = 99,
+						["typeAtlas"] = "GarrMission_MissionIcon-Patrol",
+						["iLevel"] = 0,
+					},
+					[156] = {
+						["durationSeconds"] = 3600,
+						["type"] = "Combat",
+						["cost"] = 10,
+						["level"] = 95,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 0,
+					},
+					[258] = {
+						["durationSeconds"] = 28800,
+						["type"] = "Combat",
+						["cost"] = 20,
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 615,
+					},
+					[168] = {
+						["durationSeconds"] = 7200,
+						["type"] = "Combat",
+						["cost"] = 10,
+						["level"] = 99,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 0,
+					},
+					[445] = {
+						["durationSeconds"] = 28800,
+						["type"] = "Combat",
+						["cost"] = 40,
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 660,
+					},
+					[276] = {
+						["durationSeconds"] = 36000,
+						["type"] = "Patrol",
+						["cost"] = 25,
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Patrol",
+						["iLevel"] = 0,
+					},
+					[170] = {
+						["durationSeconds"] = 7200,
+						["type"] = "Combat",
+						["cost"] = 10,
+						["level"] = 99,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 0,
+					},
+					[150] = {
+						["durationSeconds"] = 3600,
+						["type"] = "Combat",
+						["cost"] = 10,
+						["level"] = 93,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 0,
+					},
+					[300] = {
+						["durationSeconds"] = 28800,
+						["type"] = "Combat",
+						["cost"] = 20,
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 0,
+					},
+					[273] = {
+						["durationSeconds"] = 28800,
+						["type"] = "Patrol",
+						["cost"] = 20,
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Patrol",
+						["iLevel"] = 0,
+					},
+					[379] = {
+						["durationSeconds"] = 28800,
+						["type"] = "Combat",
+						["cost"] = 60,
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 675,
 					},
 				},
 				["Traits"] = {
@@ -2703,7 +1724,7 @@ DataStore_GarrisonsDB = {
 					[8] = 3,
 					[77] = 5,
 					[79] = 3,
-					[48] = 1,
+					[48] = 2,
 					[56] = 1,
 					[80] = 5,
 					[41] = 3,
@@ -2711,33 +1732,157 @@ DataStore_GarrisonsDB = {
 					[57] = 1,
 					[256] = 1,
 					[29] = 1,
-					[37] = 1,
+					[39] = 4,
 					[9] = 3,
 					[43] = 3,
-					[75] = 3,
+					[221] = 11,
 					[232] = 2,
 					[70] = 5,
-					[69] = 1,
-					[221] = 11,
-					[59] = 1,
+					[40] = 3,
+					[62] = 1,
+					[236] = 3,
 					[71] = 3,
 					[44] = 3,
 					[52] = 2,
 					[60] = 1,
 					[72] = 6,
-					[62] = 1,
 					[201] = 1,
-					[231] = 3,
 					[73] = 2,
+					[231] = 3,
+					[37] = 1,
 					[45] = 1,
 					[53] = 1,
-					[40] = 3,
+					[59] = 1,
 					[74] = 6,
-					[39] = 4,
-					[236] = 3,
+					[69] = 1,
+					[75] = 3,
 				},
-				["lastResourceCollection"] = 1426731876,
+				["lastResourceCollection"] = 1451459512,
 				["numFollowers"] = 43,
+				["ActiveMissions"] = {
+					[485] = {
+						["durationSeconds"] = 14400,
+						["type"] = "Engineering",
+						["cost"] = 20,
+						["followers"] = {
+							266, -- [1]
+							108, -- [2]
+						},
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Engineering",
+						["iLevel"] = 0,
+					},
+					[337] = {
+						["durationSeconds"] = 57600,
+						["type"] = "Training",
+						["cost"] = 25,
+						["followers"] = {
+							426, -- [1]
+						},
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Training",
+						["iLevel"] = 0,
+					},
+					[132] = {
+						["durationSeconds"] = 21600,
+						["type"] = "Combat",
+						["cost"] = 0,
+						["followers"] = {
+							249, -- [1]
+							172, -- [2]
+						},
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 0,
+					},
+					[326] = {
+						["durationSeconds"] = 28800,
+						["type"] = "Combat",
+						["cost"] = 100,
+						["followers"] = {
+							157, -- [1]
+							233, -- [2]
+							390, -- [3]
+						},
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 645,
+					},
+					[288] = {
+						["durationSeconds"] = 21600,
+						["type"] = "Treasure",
+						["cost"] = 25,
+						["followers"] = {
+							292, -- [1]
+							463, -- [2]
+							212, -- [3]
+						},
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Trading",
+						["iLevel"] = 0,
+					},
+					[286] = {
+						["durationSeconds"] = 21600,
+						["type"] = "Treasure",
+						["cost"] = 20,
+						["followers"] = {
+							216, -- [1]
+							209, -- [2]
+						},
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Trading",
+						["iLevel"] = 0,
+					},
+					[189] = {
+						["durationSeconds"] = 2700,
+						["type"] = "Combat",
+						["cost"] = 0,
+						["followers"] = {
+							104, -- [1]
+						},
+						["level"] = 94,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 0,
+					},
+					[453] = {
+						["durationSeconds"] = 28800,
+						["type"] = "Combat",
+						["cost"] = 100,
+						["followers"] = {
+							211, -- [1]
+							398, -- [2]
+							332, -- [3]
+						},
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 660,
+					},
+					[487] = {
+						["durationSeconds"] = 14400,
+						["type"] = "Jewelcrafting",
+						["cost"] = 20,
+						["followers"] = {
+							290, -- [1]
+							347, -- [2]
+						},
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Jewelcrafting",
+						["iLevel"] = 0,
+					},
+					[397] = {
+						["durationSeconds"] = 36000,
+						["type"] = "Combat",
+						["cost"] = 60,
+						["followers"] = {
+							448, -- [1]
+							411, -- [2]
+						},
+						["level"] = 100,
+						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
+						["iLevel"] = 675,
+					},
+				},
+				["numFollowersAtiLevel660"] = 13,
 				["Abilities"] = {
 					[106] = 2,
 					[122] = 1,
@@ -2763,14 +1908,14 @@ DataStore_GarrisonsDB = {
 					[164] = 1,
 					[115] = 1,
 					[134] = 1,
-					[175] = 1,
-					[100] = 3,
 					[167] = 1,
-					[181] = 1,
+					[100] = 3,
+					[116] = 1,
+					[135] = 1,
 					[11] = 1,
 					[137] = 2,
 					[117] = 1,
-					[173] = 2,
+					[179] = 2,
 					[170] = 2,
 					[102] = 2,
 					[171] = 2,
@@ -2778,134 +1923,21 @@ DataStore_GarrisonsDB = {
 					[172] = 3,
 					[103] = 4,
 					[119] = 1,
-					[150] = 2,
 					[147] = 1,
-					[104] = 1,
 					[120] = 3,
+					[104] = 1,
+					[175] = 1,
 					[144] = 1,
 					[176] = 1,
 					[105] = 2,
 					[121] = 1,
-					[179] = 2,
-					[135] = 1,
-					[116] = 1,
+					[173] = 2,
+					[150] = 2,
+					[181] = 1,
 				},
-				["ActiveMissions"] = {
-					[260] = {
-						["durationSeconds"] = 14400,
-						["type"] = "Combat",
-						["cost"] = 15,
-						["followers"] = {
-							211, -- [1]
-							463, -- [2]
-						},
-						["level"] = 100,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 615,
-					},
-					[306] = {
-						["durationSeconds"] = 28800,
-						["type"] = "Combat",
-						["cost"] = 30,
-						["followers"] = {
-							216, -- [1]
-							104, -- [2]
-							212, -- [3]
-						},
-						["level"] = 100,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 630,
-					},
-					[127] = {
-						["durationSeconds"] = 14400,
-						["type"] = "Combat",
-						["cost"] = 15,
-						["followers"] = {
-							390, -- [1]
-							172, -- [2]
-						},
-						["level"] = 100,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 0,
-					},
-					[255] = {
-						["durationSeconds"] = 28800,
-						["type"] = "Combat",
-						["cost"] = 15,
-						["followers"] = {
-							209, -- [1]
-							411, -- [2]
-							426, -- [3]
-						},
-						["level"] = 100,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 615,
-					},
-					[285] = {
-						["durationSeconds"] = 21600,
-						["type"] = "Treasure",
-						["cost"] = 10,
-						["followers"] = {
-							249, -- [1]
-							448, -- [2]
-						},
-						["level"] = 100,
-						["typeAtlas"] = "GarrMission_MissionIcon-Trading",
-						["iLevel"] = 0,
-					},
-					[366] = {
-						["durationSeconds"] = 36000,
-						["type"] = "Combat",
-						["cost"] = 20,
-						["followers"] = {
-							157, -- [1]
-							266, -- [2]
-							108, -- [3]
-						},
-						["level"] = 90,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 0,
-					},
-					[503] = {
-						["durationSeconds"] = 21600,
-						["type"] = "Combat",
-						["cost"] = 60,
-						["followers"] = {
-							290, -- [1]
-							332, -- [2]
-						},
-						["level"] = 100,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 675,
-					},
-					[288] = {
-						["durationSeconds"] = 21600,
-						["type"] = "Treasure",
-						["cost"] = 25,
-						["followers"] = {
-							327, -- [1]
-							292, -- [2]
-							176, -- [3]
-						},
-						["level"] = 100,
-						["typeAtlas"] = "GarrMission_MissionIcon-Trading",
-						["iLevel"] = 0,
-					},
-					[304] = {
-						["durationSeconds"] = 28800,
-						["type"] = "Combat",
-						["cost"] = 40,
-						["followers"] = {
-							233, -- [1]
-							398, -- [2]
-							347, -- [3]
-						},
-						["level"] = 100,
-						["typeAtlas"] = "GarrMission_MissionIcon-Combat",
-						["iLevel"] = 630,
-					},
-				},
+				["numFollowersAtiLevel675"] = 10,
 				["numFollowersAtiLevel615"] = 34,
+				["avgWeaponiLevel"] = 645.642857142857,
 				["numEpicFollowers"] = 38,
 				["numFollowersAtLevel100"] = 42,
 			},
@@ -2933,6 +1965,7 @@ DataStore_GarrisonsDB = {
 				["John Greer"] = 410,
 				["Noel Harrison"] = 288,
 				["Professor Felblast"] = 460,
+				["Oronok Torn-heart"] = 468,
 				["Goldmane the Skinner"] = 170,
 				["Soulbinder Tuulani"] = 205,
 				["Abu'gar"] = 209,
@@ -2953,56 +1986,60 @@ DataStore_GarrisonsDB = {
 				["Temanu"] = 375,
 				["Yu'un Tigersbite"] = 439,
 				["Kimzee Pinchwhistle"] = 192,
-				["Lantresor of the Blade"] = 157,
 				["Garona Halforcen"] = 466,
-				["Rizza Brassrokkit"] = 424,
-				["Dagg"] = 32,
-				["Brakk Shattershield"] = 426,
-				["Vivianne"] = 216,
+				["Soulare of Andorhal"] = 172,
+				["Lantresor of the Blade"] = 157,
+				["Ariok"] = 474,
 				["Bruto"] = 176,
 				["Naana"] = 332,
-				["Tormmok"] = 193,
-				["Phaedra Heartbinder"] = 347,
-				["Mau'iti"] = 411,
+				["Rizza Brassrokkit"] = 424,
+				["Dagg"] = 32,
 				["Xen Barleystrike"] = 440,
+				["Vivianne"] = 216,
+				["Kral'girz"] = 292,
+				["Phaedra Heartbinder"] = 347,
+				["Tormmok"] = 193,
+				["Fen Tao"] = 467,
+				["Nerwalla Malword"] = 240,
+				["Ken-Ken"] = 448,
 				["Benjamin Gibb"] = 204,
 				["Weaponsmith Na'Shra"] = 179,
 				["Croman"] = 177,
 				["Robin Fredericksen"] = 341,
 				["Choluna"] = 217,
-				["Kral'girz"] = 292,
-				["Zelaztro"] = 374,
-				["Nerwalla Malword"] = 240,
-				["Leeroy Jenkins"] = 178,
-				["Gronnstalker Rokash"] = 183,
-				["Ken-Ken"] = 448,
-				["Spirit of Bony Xuk"] = 212,
 				["Kil'weh"] = 402,
 				["Harrison Jones"] = 465,
 				["Zen'taki"] = 254,
-				["Skalliz Skullslice"] = 370,
+				["Leeroy Jenkins"] = 178,
+				["Gronnstalker Rokash"] = 183,
+				["Ariia"] = 324,
+				["Spirit of Bony Xuk"] = 212,
 				["Magister Krelas"] = 154,
 				["Iye"] = 266,
-				["Dawnseeker Rukaryx"] = 462,
-				["Leorajh"] = 219,
 				["Talon Guard Kurekk"] = 224,
 				["Morketh Bladehowl"] = 155,
-				["Lin Tenderpaw"] = 437,
 				["Meatball"] = 203,
+				["Lin Tenderpaw"] = 437,
+				["Dawnseeker Rukaryx"] = 462,
+				["Leorajh"] = 219,
+				["Skalliz Skullslice"] = 370,
+				["Mau'iti"] = 411,
+				["Ahm"] = 208,
+				["Kuma Thunderhide"] = 268,
 				["Blook"] = 189,
 				["Mulverick"] = 182,
-				["Ahm"] = 208,
+				["Zelaztro"] = 374,
 				["Karg Bloodfury"] = 459,
-				["Ariia"] = 324,
+				["Brakk Shattershield"] = 426,
 				["Shappa"] = 381,
 				["Arienne Black"] = 345,
-				["Kuma Thunderhide"] = 268,
+				["Zen'tenbi"] = 259,
 				["Penny Clobberbottom"] = 211,
 				["Image of Archmage Vargoth"] = 190,
-				["Fen Tao"] = 467,
-				["Zen'tenbi"] = 259,
+				["Pallas"] = 580,
+				["Solar Priest Vayx"] = 582,
 				["Vera Voidheart"] = 104,
-				["Soulare of Andorhal"] = 172,
+				["Dowser Goodwell"] = 581,
 				["Auriel Brightsong"] = 327,
 			},
 		},

@@ -68,7 +68,7 @@ function BulkOrder_CreateOptions ()
     else
         g_BulkOrder = g_BulkOrder or {}
         
-        for _,v in ipairs({string.split (' ', 'ExcludeTradingPost ExcludeWarMill ExcludeGoblinWorkshop ExcludeBarn RemindProfBuildings RemindWarMill RemindLumberMill RemindTradingPost RemindBarn RemindGoblinWorkshop RemindGladiatorSanctum RemindSpiritLodge RemindMine RemindHerbGarden RemindGathering')}) do
+        for _,v in ipairs({string.split (' ', 'ExcludeTradingPost ExcludeWarMill ExcludeGoblinWorkshop ExcludeBarn ExcludeShipyard RemindProfBuildings RemindWarMill RemindLumberMill RemindTradingPost RemindBarn RemindGoblinWorkshop RemindGladiatorSanctum RemindSpiritLodge RemindMine RemindHerbGarden RemindGathering')}) do
             if g_BulkOrder[v]==nil then 
                 g_BulkOrder[v] = true 
             end
@@ -128,6 +128,10 @@ function BulkOrder_CreateOptions ()
         :Bind ('ExcludeTradingPost', false, true)
         :SetTooltip ('Exclude Trading Post', 'If this option is checked, BulkOrder will NOT automatically start work orders in the Trading Post.')
     
+    Options.chkShipyard = Options:CreateCheckBox (Options.chkTradingPost, 0, dy, 'Shipyard')
+        :Bind ('ExcludeShipyard', false, true)
+        :SetTooltip ('Exclude Shipyard', 'If this option is checked, BulkOrder will NOT automatically start work orders in the Shipyard.')
+    
     Options.chkGoblinWorkshop = Options:CreateCheckBox (TitleExclude, 250, -5, 'Gnomish Gearworks/ Goblin Workshop')
         :Bind ('ExcludeGoblinWorkshop', false, true)
         :SetTooltip ('Exclude Gnomish Gearworks/ Goblin Workshop', 'If this option is checked, BulkOrder will NOT automatically start work orders in the Gnomish Gearworks/ Goblin Workshop.')
@@ -136,14 +140,14 @@ function BulkOrder_CreateOptions ()
         :Bind ('ExcludeBarn', false, true)
         :SetTooltip ('Exclude Barn', 'If this option is checked, BulkOrder will NOT automatically start work orders in the Barn.')
     
-    Options.chkEverything = Options:CreateCheckBox (Options.chkTradingPost, 0, dy, 'EVERYTHING!')
+    Options.chkEverything = Options:CreateCheckBox (Options.chkBarn, 0, dy, 'EVERYTHING!')
         :Bind ('ExcludeEverything', false, true)
         :SetTooltip ('Exclude Everything!', 'If this option is checked, BulkOrder will NOT automatically start work orders in any buildings, ever.\nYou will have to manually press the Start All Work Orders button like some sort of cave man.')
     
     
     -- Reminder
     local moretext = Options:CreateFontString (nil, "ARTWORK", "GameFontHighlight")
-    moretext:SetPoint ("TOPLEFT", Options.chkEverything, "BOTTOMLEFT", 0, -20)
+    moretext:SetPoint ("TOPLEFT", Options.chkShipyard, "BOTTOMLEFT", 0, -20)
     moretext:SetText ('The first time you enter your garrison after logging in, BulkOrder will remind you if you have buildings that have no work orders queued.')
     moretext:SetWidth (500)
     moretext:SetJustifyH ("LEFT")

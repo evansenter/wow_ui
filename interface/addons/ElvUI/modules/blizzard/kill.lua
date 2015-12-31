@@ -1,6 +1,10 @@
 local E, L, DF = unpack(select(2, ...))
 local B = E:GetModule('Blizzard');
 
+--No point caching anything here, but list them here for mikk's FindGlobals script
+-- GLOBALS: HelpOpenTicketButtonTutorial, TalentMicroButtonAlert, HelpPlate
+-- GLOBALS: HelpPlateTooltip, EJMicroButtonAlert
+
 --[[local removeMenuOptions = {
 	["SET_FOCUS"] = true,
 	["CLEAR_FOCUS"] = true,
@@ -36,6 +40,7 @@ function B:KillBlizzard()
 	TalentMicroButtonAlert:Kill()
 	HelpPlate:Kill()
 	HelpPlateTooltip:Kill()
+	EJMicroButtonAlert:Kill()
 	--CompanionsMicroButtonAlert:Kill()
 	--DropDownList1:HookScript('OnShow', DisableStupidFuckingButtons)
 end
