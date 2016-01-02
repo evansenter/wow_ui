@@ -43,12 +43,12 @@ SkadaForTanks: enabled
 SkadaHealing: disabled
 SkadaPower: disabled
 SkadaThreat: disabled
-TidyPlates: enabled
-TidyPlatesHub: enabled
-TidyPlatesWidgets: enabled
+TidyPlates: disabled
+TidyPlatesHub: disabled
+TidyPlatesWidgets: disabled
 TidyPlates_Graphite: disabled
 TidyPlates_Grey: disabled
-TidyPlates_Neon: enabled
+TidyPlates_Neon: disabled
 TidyPlates_Quatre: disabled
 TradeForwarder: enabled
 WeakAuras: enabled

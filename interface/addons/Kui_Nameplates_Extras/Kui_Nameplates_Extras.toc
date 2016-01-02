@@ -1,0 +1,14 @@
+## Interface: 60200
+## Author: Kesava
+## Title: Kui |cff9966ffNameplates|r Extras
+## Version: 2
+## Notes: Extra modules & options for Kui Nameplates.
+## Dependencies: Kui_Nameplates
+## X-Curse-Packaged-Version: 2
+## X-Curse-Project-Name: KuiNameplates Extras
+## X-Curse-Project-ID: kuinameplates-extras
+## X-Curse-Repository-ID: wow/kuinameplates-extras/mainline
+
+main.lua
+modules\leftie.lua
+modules\health.lua

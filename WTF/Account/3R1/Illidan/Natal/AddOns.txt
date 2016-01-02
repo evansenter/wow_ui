@@ -47,9 +47,9 @@ WoWDBProfiler: disabled
 TidyPlates_Graphite: disabled
 TidyPlates_Grey: disabled
 TidyPlates_Quatre: disabled
-TidyPlatesWidgets: enabled
-TidyPlatesHub: enabled
-TidyPlates: enabled
+TidyPlatesWidgets: disabled
+TidyPlatesHub: disabled
+TidyPlates: disabled
 WeakAuras: enabled
 WeakAurasModelPaths: disabled
 WeakAurasOptions: enabled
@@ -62,3 +62,4 @@ HeadCount2: enabled
 CT_RaidTracker: enabled
 MizusRaidTracker: enabled
 DBM-Profiles: disabled
+TidyPlates_Neon: disabled

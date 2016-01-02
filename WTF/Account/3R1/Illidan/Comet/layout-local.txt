@@ -1,10 +1,10 @@
 Version: 1
 Frame: ColorPickerFrame
-FrameLevel: 18
+FrameLevel: 36
 Anchor: CENTER
 X: 0
 Y: 0
-W: 365
+W: 345
 H: 240
 Frame: FloatingGarrisonFollowerTooltip
 FrameLevel: 1
@@ -48,3 +48,10 @@ X: 0
 Y: 0
 W: 800
 H: 525
+Frame: StormEarthAndFireAnchor
+FrameLevel: 0
+Anchor: CENTER
+X: -49
+Y: 72
+W: 6
+H: 6

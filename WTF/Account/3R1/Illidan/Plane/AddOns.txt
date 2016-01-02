@@ -24,12 +24,13 @@ TidyPlates_Grey: disabled
 TidyPlates_Quatre: disabled
 TipTac: enabled
 TipTacOptions: enabled
-TidyPlatesWidgets: enabled
-TidyPlatesHub: enabled
-TidyPlates: enabled
+TidyPlatesWidgets: disabled
+TidyPlatesHub: disabled
+TidyPlates: disabled
 WeakAuras: enabled
 WeakAurasModelPaths: disabled
 WeakAurasOptions: enabled
 WeakAurasTutorials: disabled
 blockchinese: enabled
 DBM-Profiles: disabled
+TidyPlates_Neon: disabled

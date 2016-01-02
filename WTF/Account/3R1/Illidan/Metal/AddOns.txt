@@ -1,1 +1,9 @@
 DBM-Profiles: disabled
+TidyPlates: disabled
+TidyPlatesHub: disabled
+TidyPlatesWidgets: disabled
+TidyPlates_Graphite: disabled
+TidyPlates_Grey: disabled
+TidyPlates_Neon: disabled
+TidyPlates_Quatre: disabled
+TipTac: enabled
