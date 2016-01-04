@@ -1,6 +1,6 @@
 ﻿-- Pawn by Vger-Azjol-Nerub
 -- www.vgermods.com
--- © 2006-2015 Green Eclipse.  This mod is released under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 license.
+-- © 2006-2016 Green Eclipse.  This mod is released under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 license.
 -- See Readme.htm for more information.
 --
 -- User interface code
@@ -1220,7 +1220,7 @@ function PawnUI_CompareItems()
 		PawnUI_AddComparisonStatLineNumbers(PawnLocal.UI.CompareColoredSockets, HasSockets1, HasSockets2)
 	end
 
-	local _, UseRed, UseYellow, UseBlue, TotalSocketValue1 = PawnGetItemValue(ItemStats1, Item1.Level, ItemSocketBonusStats1, PawnUICurrentScale,false, true)
+	local _, UseRed, UseYellow, UseBlue, TotalSocketValue1 = PawnGetItemValue(ItemStats1, Item1.Level, ItemSocketBonusStats1, PawnUICurrentScale, false, true)
 	local ProperlySocket1 = HasSockets1 and not UseRed and not UseYellow and not UseBlue and ItemSocketBonusStats1 ~= nil
 	local _, UseRed, UseYellow, UseBlue, TotalSocketValue2 = PawnGetItemValue(ItemStats2, Item2.Level, ItemSocketBonusStats2, PawnUICurrentScale, false, true)
 	local ProperlySocket2 = HasSockets2 and not UseRed and not UseYellow and not UseBlue and ItemSocketBonusStats2 ~= nil
@@ -1260,6 +1260,8 @@ function PawnUI_CompareItems()
 	LastFoundHeader = PawnLocal.UI.CompareOtherHeader
 	
 	-- Add item level information if the user normally has item levels visible.
+	-- Note that for upgradeable items, this won't be the upgradeable level of the item—the GetItemInfo API doesn't return the
+	-- correct item level for upgraded items.  We don't use the item level for anything important, so that'll just be a known limitation for now.
 	local Level1, Level2 = Item1.Level, Item2.Level
 	if not Level1 or Level1 <= 1 then Level1 = nil end
 	if not Level2 or Level2 <= 1 then Level2 = nil end

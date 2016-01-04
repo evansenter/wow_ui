@@ -152,7 +152,7 @@ Quartz3DB = {
 		["Venala - Cho'gall"] = "Default",
 		["Combustion - Illidan"] = "Pandatal - Illidan",
 		["Metal - Illidan"] = "Pandatal - Illidan",
-		["Centromere - Dark Iron"] = "Pandatal - Illidan",
+		["Pandatal - Illidan"] = "Pandatal - Illidan",
 		["Plane - Illidan"] = "Pandatal - Illidan",
 		["Colton - Dark Iron"] = "Default",
 		["Natalan - Dark Iron"] = "Default",
@@ -161,7 +161,7 @@ Quartz3DB = {
 		["Comet - Illidan"] = "Pandatal - Illidan",
 		["Natal - Illidan"] = "Pandatal - Illidan",
 		["Evan - Illidan"] = "Pandatal - Illidan",
-		["Pandatal - Illidan"] = "Pandatal - Illidan",
+		["Centromere - Dark Iron"] = "Pandatal - Illidan",
 	},
 	["profiles"] = {
 		["Illidan"] = {

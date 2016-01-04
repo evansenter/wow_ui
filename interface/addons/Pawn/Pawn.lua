@@ -1,6 +1,6 @@
 ﻿-- Pawn by Vger-Azjol-Nerub
 -- www.vgermods.com
--- © 2006-2015 Green Eclipse.  This mod is released under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 license.
+-- © 2006-2016 Green Eclipse.  This mod is released under the Creative Commons Attribution-NonCommercial-NoDerivs 3.0 license.
 -- See Readme.htm for more information.
 
 -- 
@@ -8,7 +8,7 @@
 ------------------------------------------------------------
 
 
-PawnVersion = 1.920
+PawnVersion = 1.921
 
 -- Pawn requires this version of VgerCore:
 local PawnVgerCoreVersionRequired = 1.09
@@ -130,10 +130,8 @@ function PawnOnEvent(Event, arg1, arg2, ...)
 	elseif Event == "ITEM_LOCKED" then
 		PawnOnItemLocked(arg1, arg2)
 	elseif Event == "ADDON_LOADED" then
-		--if arg1 == "Pawn" then VgerCore.Message("Pawn initialization: ADDON_LOADED") end
 		PawnOnAddonLoaded(arg1)
 	elseif Event == "PLAYER_LOGIN" then
-		--VgerCore.Message("Pawn initialization: PLAYER_LOGIN")
 		PawnInitialize()
 	elseif Event == "PLAYER_LOGOUT" then
 		PawnOnLogout()
@@ -166,7 +164,7 @@ function PawnInitialize()
 	end
 	if not CurrentLocaleIsSupported then
 		-- No need to translate this string...
-		local WrongLocaleMessage = "Sorry, this version of Pawn is for English, French, German, Italian, Portuguese, Russian, Spanish, Simplified Chinese, and Traditional Chinese only."
+		local WrongLocaleMessage = "Sorry, this version of Pawn is for English, French, German, Italian, Korean, Portuguese, Russian, Spanish, Simplified Chinese, and Traditional Chinese only."
 		VgerCore.Message(VgerCore.Color.Salmon .. WrongLocaleMessage)
 		message(WrongLocaleMessage)
 	end
@@ -177,7 +175,6 @@ function PawnInitialize()
 	
 	-- Set any unset options to their default values.  If the user is a new Pawn user, all options
 	-- will be set to default values.  If upgrading, only missing options will be set to default values.
-	--VgerCore.Message("Pawn initialization: PawnInitializeOptions from PawnInitialize")
 	PawnInitializeOptions()
 
 	-- Check for and set default keybindings.
@@ -221,7 +218,7 @@ function PawnInitialize()
 	hooksecurefunc(GameTooltip, "SetMissingLootItem", function(self, ...) PawnUpdateTooltip("GameTooltip", "SetMissingLootItem", ...) end)
 	hooksecurefunc(GameTooltip, "SetQuestItem",
 		function(self, ...)
-			-- BUG IN 6.2: This item will come through with an item ID of 0 and we'll fail to get stats from it normally.
+			-- BUG IN WoW 6.2: This item will come through with an item ID of 0 and we'll fail to get stats from it normally.
 			-- Special thanks to Phanx for suggesting this workaround!
 			local ItemLink = GetQuestItemLink(...)
 			if ItemLink then
@@ -232,7 +229,7 @@ function PawnInitialize()
 		end)
 	hooksecurefunc(GameTooltip, "SetQuestLogItem",
 		function(self, ...)
-			-- BUG IN 6.2: This item will come through with an item ID of 0 and we'll fail to get stats from it normally.
+			-- BUG IN WoW 6.2: This item will come through with an item ID of 0 and we'll fail to get stats from it normally.
 			-- Special thanks to Phanx for suggesting this workaround!
 			local ItemLink = GetQuestLogItemLink(...)
 			if ItemLink then
@@ -244,7 +241,12 @@ function PawnInitialize()
 	hooksecurefunc(GameTooltip, "SetSendMailItem", function(self, ...) PawnUpdateTooltip("GameTooltip", "SetSendMailItem", ...) end)
 	hooksecurefunc(GameTooltip, "SetSocketGem", function(self, ...) PawnUpdateTooltip("GameTooltip", "SetSocketGem", ...) end)
 	hooksecurefunc(GameTooltip, "SetTradePlayerItem", function(self, ...) PawnUpdateTooltip("GameTooltip", "SetTradePlayerItem", ...) end)
-	hooksecurefunc(GameTooltip, "SetTradeSkillItem", function(self, ...) PawnUpdateTooltip("GameTooltip", "SetTradeSkillItem", ...) end)
+	hooksecurefunc(GameTooltip, "SetTradeSkillItem",
+		function(self, Index, ReagentIndex)
+			if ReagentIndex then return end -- Don't show annotations on tooltips for reagents, only the target craftable item.
+			local ItemLink = GetTradeSkillItemLink(Index)
+			if ItemLink then PawnUpdateTooltip("GameTooltip", "SetHyperlink", ItemLink) end
+		end)
 	hooksecurefunc(GameTooltip, "SetTradeTargetItem", function(self, ...) PawnUpdateTooltip("GameTooltip", "SetTradeTargetItem", ...) end)
 	hooksecurefunc(GameTooltip, "SetVoidItem", function(self, ...) PawnUpdateTooltip("GameTooltip", "SetVoidItem", ...) end)
 	hooksecurefunc(GameTooltip, "SetVoidDepositItem", function(self, ...) PawnUpdateTooltip("GameTooltip", "SetVoidDepositItem", ...) end)
@@ -362,7 +364,6 @@ function PawnInitialize()
 	end
 
 	-- We're now effectively initialized.  Just the last steps of scale initialization remain.
-	--VgerCore.Message("Pawn initialization: PawnIsInitialized = true")
 	PawnIsInitialized = true
 
 	-- If any of our dependencies have already loaded, pretend that they just loaded now.
@@ -535,8 +536,9 @@ function PawnInitializeOptions()
 		-- When upgrading to 1.9, enable the "ignore sockets on low-level items" option.
 		PawnCommon.IgnoreGemsWhileLeveling = true
 	end
-	if (not PawnCommon.LastVersion) or (PawnCommon.LastVersion < 1.917) then
-		-- When upgrading to 1.9.17, invalidate all best item data, since WoW 6.2 changed item link formats.
+	if (not PawnCommon.LastVersion) or (PawnCommon.LastVersion < 1.921) then
+		-- When upgrading to 1.9.21, invalidate all best item data, because Pawn started assuming upgraded items
+		-- would be upgraded 2/2 for purposes of the base value.
 		PawnInvalidateBestItems()
 	end
 	PawnCommon.LastVersion = PawnVersion
@@ -961,7 +963,7 @@ function PawnGetItemData(ItemLink)
 	if not Item then
 		Item = PawnGetEmptyCachedItem(ItemLink, ItemName, ItemNumLines)
 		Item.Rarity = ItemRarity
-		Item.Level = ItemLevel
+		Item.Level = ItemLevel -- Doesn't take into effect upgrades or heirloom scaling
 		Item.ID = ItemID
 		if InvType ~= "" then Item.InvType = InvType end
 		Item.Texture = ItemTexture
@@ -996,6 +998,8 @@ function PawnGetItemData(ItemLink)
 		-- Then, the unenchanted stats.  But, we only need to do this if the item is enchanted or socketed.  PawnUnenchantItemLink
 		-- will return nil if the item isn't enchanted, so we can skip that process.
 		local UnenchantedItemLink = PawnUnenchantItemLink(ItemLink)
+		-- As of WoW 6.2,3, Item.Level is incorrect for upgraded items because GetItemInfo returns the wrong value.  PawnUnenchantItemLink could
+		-- be enhanced here to get a number to add (+10) for upgradeable items if we decide we need that info.
 		if UnenchantedItemLink then
 			PawnDebugMessage(" ")
 			PawnDebugMessage(PawnLocal.UnenchantedStatsHeader)
@@ -2342,16 +2346,64 @@ function PawnGetItemIDFromLink(ItemLink)
 	if Pos then return tonumber(ItemID) else return nil end
 end
 
+-- If the upgrade level passed in is upgradeable with valor, return the new upgrade level, otherwise return nil. 
+local function PawnDoValorUpgrade(UpgradeLevel)
+	if UpgradeLevel1 == "529" or UpgradeLevel1 == "530" then
+		-- Note: This only covers Warlords of Draenor upgradeable items, not legacy items, but realistically you're probably
+		-- not ever going to want to upgrade those.  (If it ever becomes useful, it sounds like LibItemUpgradeInfo handles all of the edge cases.)
+		return "531"
+	else
+		return nil
+	end
+end
+
 -- Returns a new item link that represents an unenchanted version of the original item link, or
 -- nil if unsuccessful or the item is not enchanted.
 -- (But if EvenIfNotEnchanted is true, the item link will be processed even if the item wasn't enchanted.)
 function PawnUnenchantItemLink(ItemLink, EvenIfNotEnchanted)
 	local TrimmedItemLink = PawnStripLeftOfItemLink(ItemLink)
-	local Pos, _, ItemID, EnchantID, GemID1, GemID2, GemID3, GemID4, SuffixID, MoreInfo, ViewAtLevel, SpecializationID, UpgradeLevel, Difficulty, NumBonusIDs, BonusID1, BonusID2, BonusID3, BonusID4 = strfind(TrimmedItemLink, "^item:(%-?%d+):?(%d*):?(%d*):?(%d*):?(%d*):?(%d*):?(%-?%d*):?(%-?%d*):?(%d*):?(%d*):?(%d*):?(%d*):?(%d*):?(%d*):?(%d*):?(%d*):?(%d*)")
-
-	-- TODO: *** After the last bonus ID (not necessarily 4) is another parameter indicating the level that the item was acquired, for timewarped items.  That should be preserved.
+	local Pos, _, ItemID, EnchantID, GemID1, GemID2, GemID3, GemID4, SuffixID, MoreInfo, ViewAtLevel, SpecializationID, UpgradeLevel1, Difficulty, NumBonusIDs, BonusID1, BonusID2, BonusID3, BonusID4, BonusID5 = strfind(TrimmedItemLink, "^item:(%-?%d+):?(%d*):?(%d*):?(%d*):?(%d*):?(%d*):?(%-?%d*):?(%-?%d*):?(%d*):?(%d*):?(%d*):?(%d*):?(%d*):?(%d*):?(%d*):?(%d*):?(%d*):?(%d*)")
+	-- Note: After the specified number of bonus IDs would be UpgradeLevel2, which could be the level at which the item was acquired for timewarped items, or
+	-- the Valor upgrade level.
 
 	if Pos then
+	
+		-- If this is an upgradeable item that isn't fully upgraded, for purposes of calculation we always assume a fully-upgraded item is the "base."
+		-- The upgrade value will always come after the list of bonus IDs, as UpgradeLevel2.
+		NumBonusIDs = tonumber(NumBonusIDs) or 0
+		local WasUpgraded
+		if NumBonusIDs == 0 then
+			if BonusID1 == "529" or BonusID1 == "530" then
+				BonusID1 = "531"
+				WasUpgraded = true
+			end
+		elseif NumBonusIDs == 1 then
+			if BonusID2 == "529" or BonusID2 == "530" then
+				BonusID2 = "531"
+				WasUpgraded = true
+			end
+		elseif NumBonusIDs == 2 then
+			if BonusID3 == "529" or BonusID3 == "530" then
+				BonusID3 = "531"
+				WasUpgraded = true
+			end
+		elseif NumBonusIDs == 3 then
+			if BonusID4 == "529" or BonusID4 == "530" then
+				BonusID4 = "531"
+				WasUpgraded = true
+			end
+		elseif NumBonusIDs == 4 then
+			if BonusID5 == "529" or BonusID5 == "530" then
+				BonusID5 = "531"
+				WasUpgraded = true
+			end
+		else
+			VgerCore.Fail("Pawn didn't expect to find an item with " .. tostring(NumBonusIDs) .. " bonus IDs.  Some of them were ignored.")
+		end
+		-- FUTURE: This function is currently the only place that could correctly calculate the number to add to the GetItemInfo function's returned
+		-- item level to make it correct—when the bonus ID is 529/530/531, this function could return 0/5/10 and then PawnGetItemData could add that
+		-- when setting Item.Level.
+		
 		if
 			EvenIfNotEnchanted or
 			EnchantID ~= "0" or EnchantID == "" or EnchantID == nil or
@@ -2359,22 +2411,21 @@ function PawnUnenchantItemLink(ItemLink, EvenIfNotEnchanted)
 			GemID2 ~= "0" or GemID2 == "" or GemID2 == nil or
 			GemID3 ~= "0" or GemID3 == "" or GemID3 == nil or
 			GemID4 ~= "0" or GemID4 == "" or GemID4 == nil or
-			UpgradeLevel ~= "0" or UpgradeLevel == "" or UpgradeLevel == nil or
-			Difficulty ~= "0" or Difficulty == "" or Difficulty == nil or
-			NumBonusIDs ~= "0" or NumBonusIDs == "" or NumBonusIDs == nil
+			WasUpgraded
 		then
 			-- This item is enchanted.  Return a new link.
-			-- REVIEW: Not sure what to do about Difficulty and the BonusIDs here...
 			if SuffixID == nil or SuffixID == "" then SuffixID = "0" end
 			if MoreInfo == nil or MoreInfo == "" then MoreInfo = "0" end
 			if SpecializationID == nil or SpecializationID == "" then SpecializationID = "0" end
-			if UpgradeLevel == nil or UpgradeLevel == "" then UpgradeLevel = "0" end
+			if UpgradeLevel1 == nil or UpgradeLevel1 == "" then UpgradeLevel1 = "0" end
+			if Difficulty == nil or Difficulty == "" then Difficulty = "0" end
 			if NumBonusIDs == nil or NumBonusIDs == "" then NumBonusIDs = "0" end
 			if BonusID1 == nil or BonusID1 == "" then BonusID1 = "0" end
 			if BonusID2 == nil or BonusID2 == "" then BonusID2 = "0" end
 			if BonusID3 == nil or BonusID3 == "" then BonusID3 = "0" end
 			if BonusID4 == nil or BonusID4 == "" then BonusID4 = "0" end
-			return "item:" .. ItemID .. ":0:0:0:0:0:" .. SuffixID .. ":" .. MoreInfo .. ":" .. 0 .. ":" .. SpecializationID .. ":" .. UpgradeLevel .. ":" .. Difficulty .. ":" .. NumBonusIDs .. ":" .. BonusID1 .. ":" .. BonusID2 .. ":" .. BonusID3 .. ":" .. BonusID4
+			if BonusID5 == nil or BonusID5 == "" then BonusID5 = "0" end
+			return "item:" .. ItemID .. ":0:0:0:0:0:" .. SuffixID .. ":" .. MoreInfo .. ":" .. 0 .. ":" .. SpecializationID .. ":" .. UpgradeLevel1 .. ":" .. Difficulty .. ":" .. NumBonusIDs .. ":" .. BonusID1 .. ":" .. BonusID2 .. ":" .. BonusID3 .. ":" .. BonusID4 .. ":" .. BonusID5
 		else
 			-- This item is not enchanted.  Return nil.
 			return nil

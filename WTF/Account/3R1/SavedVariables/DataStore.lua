@@ -4,10 +4,10 @@ DataStoreDB = {
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Metal - Illidan"] = "Metal - Illidan",
 		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
-		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Comet - Illidan"] = "Comet - Illidan",
 		["Natal - Illidan"] = "Natal - Illidan",
 		["Evan - Illidan"] = "Evan - Illidan",
-		["Comet - Illidan"] = "Comet - Illidan",
+		["Combustion - Illidan"] = "Combustion - Illidan",
 	},
 	["global"] = {
 		["Guilds"] = {
@@ -34,21 +34,21 @@ DataStoreDB = {
 				["faction"] = "Horde",
 				["guildName"] = "Slash Cry",
 			},
-			["Default.Dark Iron.Colton"] = {
-				["guildName"] = "Rated Baddie Grounds",
-				["faction"] = "Horde",
-			},
 			["Default.Illidan.Natal"] = {
 				["guildName"] = "Slash Cry",
 				["faction"] = "Horde",
 			},
-			["Default.Illidan.Metal"] = {
-				["guildName"] = "Mind Games",
+			["Default.Dark Iron.Colton"] = {
+				["guildName"] = "Rated Baddie Grounds",
 				["faction"] = "Horde",
 			},
 			["Default.Illidan.Comet"] = {
 				["faction"] = "Horde",
 				["guildName"] = "Mind Games",
+			},
+			["Default.Illidan.Metal"] = {
+				["guildName"] = "Mind Games",
+				["faction"] = "Horde",
 			},
 		},
 	},

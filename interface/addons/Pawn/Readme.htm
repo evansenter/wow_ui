@@ -547,15 +547,10 @@ and Pawn.</p>
 <h2>Known issues</h2>
 <h3>Top issues in the latest version</h3>
 <ul>
-	<li>Draenor PvP gear screws up with upgrade calculations because its ilvl 
-	changes, and Pawn remembers its value based on whether you were in a PvP 
-	zone or not at the last time it was calculated.&nbsp; I need to figure out a 
-	solution for this.&nbsp; (Probably for now I'll have to always value the 
-	item at its PvE value.)<br />(Primal Combatant, Primal Gladiator)<ul>
-		<li>The same problem reportedly occurs in challenge mode dungeons, since 
-		they also scale gear.</li>
-	</ul>
-	</li>
+	<li>Pawn does not calculate the proper values for gear when you're in 
+	challenge mode or timewalking dungeons.&nbsp; (The same is true for PvP 
+	gear, but I don't intend to do anything extra to solve that problem since 
+	PvP gear is going away in Legion.)</li>
 	<li>If you purchase a second Khadgar ring, Pawn will probably think that 
 	your two rings are your best and second-best items for each of your specs, 
 	but they're Unique-Equipped so you can't use both.&nbsp; (I should maintain 
@@ -569,11 +564,6 @@ and Pawn.</p>
 	you're ready to turn in the quest.)</li>
 	<li>The Quest Upgrade Advisor is not currently compatible with some quest 
 	log addons, such as QuestGuru.</li>
-	<li>Some people in rare situations get an error about the per-character 
-	options being missing when they log in.&nbsp; I don't know what's causing this yet, so if you 
-	run into it, any details that come to mind would be helpful.&nbsp; (You can 
-	reach me through my Facebook or Curse pages.)&nbsp; A few people have 
-	reported that deleting this file worked around the problem:<br />World of Warcraft\WTF\Account\<i>(account)</i>\<i>(realm)</i>\<i>(character)</i>\SavedVariables\Pawn.lua<br />Don't worry; this will not delete any of your scales.</li>
 	<li>Gladiator warriors would like for some way to add a haste softcap, as 
 	it's important that they have 9% haste so they can get 2 shield slams 
 	between shield charges.&nbsp; Right now, Pawn doesn't have a good way to 
@@ -600,11 +590,9 @@ and Pawn.</p>
 	</ul>
 	</li>
 </ul>
-<h3>Features that I may remove in Pawn 2.0</h3>
+<h3>Features that I may remove in Pawn 2.0 and Legion</h3>
 <ul>
-		<li>PvP Power and PvP Resilience, since those stats won't be present on 
-	relevant items anymore.&nbsp; (I'll interpret PvP Power as the greater of attack power 
-	or spell power, and stamina respectively.)</li>
+		<li>All support for PvP Power and PvP Resilience.</li>
 	<li>The concept of the "current" state of an item, versus "base" (I'll just 
 	use base values for everything).&nbsp; BUT right now it isn't hurting 
 	anything being there, and some people like that feature.&nbsp; (I'd rather 
@@ -617,6 +605,19 @@ and Pawn.</p>
 		enchantments aren't applicable if item current values are disabled.</li>
 </ul>
 <h2>Updates</h2>
+<h3>Version 1.9.21</h3>
+<ul>
+	<li>For items upgradeable with Valor, Pawn will now use the fully-upgraded 
+	version of the item when calculating the base value of an item.&nbsp; (The 
+	current value of the item, which is not shown on tooltips by default, will 
+	still use the current upgrade level.)&nbsp; This means that when comparing 
+	(for example) a level 630 item that isn't upgradeable to a level 650 item 
+	that is, the upgrade % shown will be about 1.5x what it was previously.&nbsp; 
+	Upgrade percentages between two upgradeable (or two non-upgradeable) items 
+	will remain roughly the same as before.</li>
+	<li>Fixed a problem where tooltips for craftable items did not get Pawn 
+	annotations (values and upgrade %).</li>
+</ul>
 <h3>Version 1.9.20</h3>
 <ul>
 	<li>Works around a WoW bug where quest reward items were not getting Pawn 
@@ -811,7 +812,7 @@ and Pawn.</p>
 	information about older versions of Pawn, and a list of some of the features 
 I'm considering for future versions.</p>
 <h2>The fine print</h2>
-<p>© 2006-2015 Green Eclipse.&nbsp; This mod is released under the Creative Commons
+<p>© 2006-2016 Green Eclipse.&nbsp; This mod is released under the Creative Commons
 <a href="http://creativecommons.org/licenses/by-nc-nd/3.0/" target="_blank">
 Attribution-NonCommercial-NoDerivs 3.0</a> license.&nbsp; In short, this means 
 that you can use it, copy it, and share it, but you can't sell it or distribute 

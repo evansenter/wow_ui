@@ -4,10 +4,10 @@ DataStore_PetsDB = {
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Metal - Illidan"] = "Metal - Illidan",
 		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
-		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Comet - Illidan"] = "Comet - Illidan",
 		["Natal - Illidan"] = "Natal - Illidan",
 		["Evan - Illidan"] = "Evan - Illidan",
-		["Comet - Illidan"] = "Comet - Illidan",
+		["Combustion - Illidan"] = "Combustion - Illidan",
 	},
 	["global"] = {
 		["Reference"] = {
@@ -67,7 +67,7 @@ DataStore_PetsDB = {
 				},
 			},
 			["Default.Illidan.Evan"] = {
-				["lastUpdate"] = 1451714406,
+				["lastUpdate"] = 1451884866,
 				["CRITTER"] = {
 					89670, -- [1]
 					78683, -- [2]
@@ -93,6 +93,18 @@ DataStore_PetsDB = {
 					55068, -- [3]
 				},
 			},
+			["Default.Illidan.Natal"] = {
+				["lastUpdate"] = 1424741647,
+				["CRITTER"] = {
+					148049, -- [1]
+					69452, -- [2]
+					67416, -- [3]
+					142028, -- [4]
+					55068, -- [5]
+					67417, -- [6]
+					62491, -- [7]
+				},
+			},
 			["Default.Dark Iron.Colton"] = {
 				["lastUpdate"] = 1424741751,
 				["CRITTER"] = {
@@ -110,37 +122,8 @@ DataStore_PetsDB = {
 					26529, -- [12]
 				},
 			},
-			["Default.Illidan.Natal"] = {
-				["lastUpdate"] = 1424741647,
-				["CRITTER"] = {
-					148049, -- [1]
-					69452, -- [2]
-					67416, -- [3]
-					142028, -- [4]
-					55068, -- [5]
-					67417, -- [6]
-					62491, -- [7]
-				},
-			},
-			["Default.Illidan.Metal"] = {
-				["lastUpdate"] = 1451718835,
-				["CRITTER"] = {
-					69452, -- [1]
-					173542, -- [2]
-					170273, -- [3]
-					170270, -- [4]
-					155838, -- [5]
-					148061, -- [6]
-					168668, -- [7]
-					55068, -- [8]
-					10678, -- [9]
-					42609, -- [10]
-					164212, -- [11]
-					62510, -- [12]
-				},
-			},
 			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1451719678,
+				["lastUpdate"] = 1451892445,
 				["CRITTER"] = {
 					69452, -- [1]
 					89039, -- [2]
@@ -157,6 +140,23 @@ DataStore_PetsDB = {
 					170292, -- [13]
 					170282, -- [14]
 					164212, -- [15]
+				},
+			},
+			["Default.Illidan.Metal"] = {
+				["lastUpdate"] = 1451885211,
+				["CRITTER"] = {
+					69452, -- [1]
+					173542, -- [2]
+					170273, -- [3]
+					170270, -- [4]
+					155838, -- [5]
+					148061, -- [6]
+					168668, -- [7]
+					55068, -- [8]
+					10678, -- [9]
+					42609, -- [10]
+					164212, -- [11]
+					62510, -- [12]
 				},
 			},
 		},

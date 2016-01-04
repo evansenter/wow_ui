@@ -336,7 +336,7 @@ Bartender4DB = {
 						},
 					},
 				},
-				["Default"] = {
+				["Ereinion - Dark Iron"] = {
 					["actionbars"] = {
 						{
 							["padding"] = 6,
@@ -351,7 +351,7 @@ Bartender4DB = {
 							["enabled"] = false,
 							["version"] = 3,
 							["position"] = {
-								["y"] = -189.500061035156,
+								["y"] = -227.499984741211,
 								["x"] = -231.500091552734,
 								["point"] = "CENTER",
 							},
@@ -380,7 +380,7 @@ Bartender4DB = {
 							["padding"] = 6,
 							["version"] = 3,
 							["position"] = {
-								["y"] = 102,
+								["y"] = 83,
 								["x"] = 3,
 								["point"] = "BOTTOM",
 							},
@@ -389,7 +389,7 @@ Bartender4DB = {
 							["padding"] = 6,
 							["version"] = 3,
 							["position"] = {
-								["y"] = 102,
+								["y"] = 83,
 								["x"] = -510,
 								["point"] = "BOTTOM",
 							},
@@ -398,8 +398,9 @@ Bartender4DB = {
 						}, -- [7]
 						{
 						}, -- [8]
-						[10] = {
-						},
+						nil, -- [9]
+						{
+						}, -- [10]
 					},
 				},
 				["Evan - Illidan"] = {
@@ -647,8 +648,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
+							["fadeoutdelay"] = 0,
 							["fadeoutalpha"] = 0.25,
-							["version"] = 3,
 							["position"] = {
 								["scale"] = 0.899999976158142,
 								["x"] = -39.1502451380075,
@@ -656,23 +657,23 @@ Bartender4DB = {
 								["y"] = 160.92234312369,
 							},
 							["fadeout"] = true,
-							["padding"] = 5,
 							["rows"] = 12,
-							["fadeoutdelay"] = 0,
+							["padding"] = 5,
+							["version"] = 3,
 						}, -- [3]
 						{
-							["fadeout"] = true,
 							["version"] = 3,
-							["buttons"] = 4,
-							["fadeoutalpha"] = 0.25,
-							["padding"] = 4,
-							["rows"] = 12,
+							["fadeout"] = true,
 							["position"] = {
 								["scale"] = 0.899999976158142,
 								["x"] = -38.7002451499284,
 								["point"] = "TOPRIGHT",
 								["y"] = -294.581414366265,
 							},
+							["fadeoutalpha"] = 0.25,
+							["rows"] = 12,
+							["padding"] = 4,
+							["buttons"] = 4,
 						}, -- [4]
 						{
 							["padding"] = 5,
@@ -702,7 +703,7 @@ Bartender4DB = {
 						},
 					},
 				},
-				["Ereinion - Dark Iron"] = {
+				["Default"] = {
 					["actionbars"] = {
 						{
 							["padding"] = 6,
@@ -717,7 +718,7 @@ Bartender4DB = {
 							["enabled"] = false,
 							["version"] = 3,
 							["position"] = {
-								["y"] = -227.499984741211,
+								["y"] = -189.500061035156,
 								["x"] = -231.500091552734,
 								["point"] = "CENTER",
 							},
@@ -746,7 +747,7 @@ Bartender4DB = {
 							["padding"] = 6,
 							["version"] = 3,
 							["position"] = {
-								["y"] = 83,
+								["y"] = 102,
 								["x"] = 3,
 								["point"] = "BOTTOM",
 							},
@@ -755,7 +756,7 @@ Bartender4DB = {
 							["padding"] = 6,
 							["version"] = 3,
 							["position"] = {
-								["y"] = 83,
+								["y"] = 102,
 								["x"] = -510,
 								["point"] = "BOTTOM",
 							},
@@ -764,9 +765,8 @@ Bartender4DB = {
 						}, -- [7]
 						{
 						}, -- [8]
-						nil, -- [9]
-						{
-						}, -- [10]
+						[10] = {
+						},
 					},
 				},
 			},
@@ -815,7 +815,7 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
-				["Default"] = {
+				["Ereinion - Dark Iron"] = {
 					["version"] = 3,
 					["position"] = {
 						["y"] = 223,
@@ -855,7 +855,7 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
-				["Ereinion - Dark Iron"] = {
+				["Default"] = {
 					["version"] = 3,
 					["position"] = {
 						["y"] = 223,
@@ -912,13 +912,13 @@ Bartender4DB = {
 						["y"] = 41.75,
 					},
 				},
-				["Default"] = {
+				["Ereinion - Dark Iron"] = {
 					["version"] = 3,
 					["position"] = {
-						["scale"] = 1,
+						["y"] = 41.75,
 						["x"] = 37.5,
 						["point"] = "BOTTOM",
-						["y"] = 41.75,
+						["scale"] = 1,
 					},
 				},
 				["Evan - Illidan"] = {
@@ -959,13 +959,13 @@ Bartender4DB = {
 						["y"] = 42.3997532248468,
 					},
 				},
-				["Ereinion - Dark Iron"] = {
+				["Default"] = {
 					["version"] = 3,
 					["position"] = {
-						["y"] = 41.75,
+						["scale"] = 1,
 						["x"] = 37.5,
 						["point"] = "BOTTOM",
-						["scale"] = 1,
+						["y"] = 41.75,
 					},
 				},
 			},
@@ -1040,7 +1040,7 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
-				["Default"] = {
+				["Ereinion - Dark Iron"] = {
 					["enabled"] = true,
 					["version"] = 3,
 					["position"] = {
@@ -1085,7 +1085,7 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
-				["Ereinion - Dark Iron"] = {
+				["Default"] = {
 					["enabled"] = true,
 					["version"] = 3,
 					["position"] = {
@@ -1138,12 +1138,11 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
-				["Default"] = {
-					["onebag"] = true,
+				["Ereinion - Dark Iron"] = {
 					["version"] = 3,
 					["position"] = {
-						["y"] = 41.75,
-						["x"] = 463.5,
+						["y"] = 38.5,
+						["x"] = 345,
 						["point"] = "BOTTOM",
 					},
 				},
@@ -1182,11 +1181,12 @@ Bartender4DB = {
 						["point"] = "CENTER",
 					},
 				},
-				["Ereinion - Dark Iron"] = {
+				["Default"] = {
+					["onebag"] = true,
 					["version"] = 3,
 					["position"] = {
-						["y"] = 38.5,
-						["x"] = 345,
+						["y"] = 41.75,
+						["x"] = 463.5,
 						["point"] = "BOTTOM",
 					},
 				},
@@ -1234,7 +1234,7 @@ Bartender4DB = {
 						["point"] = "CENTER",
 					},
 				},
-				["Default"] = {
+				["Ereinion - Dark Iron"] = {
 					["version"] = 3,
 					["position"] = {
 						["y"] = 47.4999389648438,
@@ -1274,7 +1274,7 @@ Bartender4DB = {
 						["point"] = "CENTER",
 					},
 				},
-				["Ereinion - Dark Iron"] = {
+				["Default"] = {
 					["version"] = 3,
 					["position"] = {
 						["y"] = 47.4999389648438,
@@ -1330,13 +1330,12 @@ Bartender4DB = {
 						["y"] = 116,
 					},
 				},
-				["Default"] = {
+				["Ereinion - Dark Iron"] = {
 					["version"] = 3,
 					["position"] = {
-						["scale"] = 1,
-						["x"] = -460,
-						["point"] = "BOTTOM",
-						["y"] = 135,
+						["y"] = -15.0000381469727,
+						["x"] = -82.4999694824219,
+						["point"] = "CENTER",
 					},
 				},
 				["Evan - Illidan"] = {
@@ -1380,12 +1379,13 @@ Bartender4DB = {
 						["point"] = "CENTER",
 					},
 				},
-				["Ereinion - Dark Iron"] = {
+				["Default"] = {
 					["version"] = 3,
 					["position"] = {
-						["y"] = -15.0000381469727,
-						["x"] = -82.4999694824219,
-						["point"] = "CENTER",
+						["scale"] = 1,
+						["x"] = -460,
+						["point"] = "BOTTOM",
+						["y"] = 135,
 					},
 				},
 			},
@@ -1432,11 +1432,11 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
-				["Default"] = {
+				["Ereinion - Dark Iron"] = {
 					["version"] = 3,
 					["position"] = {
-						["y"] = 135,
-						["x"] = -120,
+						["y"] = 116,
+						["x"] = -460,
 						["point"] = "BOTTOM",
 					},
 				},
@@ -1473,11 +1473,11 @@ Bartender4DB = {
 						["point"] = "CENTER",
 					},
 				},
-				["Ereinion - Dark Iron"] = {
+				["Default"] = {
 					["version"] = 3,
 					["position"] = {
-						["y"] = 116,
-						["x"] = -460,
+						["y"] = 135,
+						["x"] = -120,
 						["point"] = "BOTTOM",
 					},
 				},
@@ -1534,7 +1534,7 @@ Bartender4DB = {
 			["blizzardVehicle"] = true,
 			["outofrange"] = "hotkey",
 		},
-		["Default"] = {
+		["Ereinion - Dark Iron"] = {
 			["focuscastmodifier"] = false,
 			["blizzardVehicle"] = true,
 			["outofrange"] = "hotkey",
@@ -1563,7 +1563,7 @@ Bartender4DB = {
 			["buttonlock"] = true,
 			["outofrange"] = "hotkey",
 		},
-		["Ereinion - Dark Iron"] = {
+		["Default"] = {
 			["focuscastmodifier"] = false,
 			["blizzardVehicle"] = true,
 			["outofrange"] = "hotkey",

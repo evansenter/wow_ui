@@ -55,17 +55,3 @@ X: 6
 Y: -7
 W: 114
 H: 24
-Frame: AmrUiFrame1
-FrameLevel: 1
-Anchor: CENTER
-X: 0
-Y: 0
-W: 1000
-H: 700
-Frame: DBM_GUI_OptionsFrame
-FrameLevel: 5
-Anchor: CENTER
-X: 0
-Y: 0
-W: 800
-H: 510

@@ -3,8 +3,8 @@ ReckonersProMendingDB = {
 	["profileKeys"] = {
 		["Venala - Cho'gall"] = "Default",
 		["Combustion - Illidan"] = "Default",
-		["Centromere - Dark Iron"] = "Default",
 		["Pandatal - Illidan"] = "Default",
+		["Centromere - Dark Iron"] = "Default",
 		["Plane - Illidan"] = "Default",
 		["Colton - Dark Iron"] = "Default",
 		["Natalan - Dark Iron"] = "Default",
@@ -17,20 +17,16 @@ ReckonersProMendingDB = {
 	},
 	["profiles"] = {
 		["Default"] = {
-			["x"] = -534,
+			["font"] = "ABF",
 			["bartexture"] = "ElvUI Norm",
 			["y"] = -575,
-			["font"] = "ABF",
+			["x"] = -534,
 			["chargetexture"] = "ElvUI Norm",
 		},
 		["Evan - Illidan"] = {
 			["chargeheight"] = 6,
 			["barheight"] = 18,
-			["chargecolorfg"] = {
-				nil, -- [1]
-				1, -- [2]
-				1, -- [3]
-			},
+			["bartexture"] = "BantoBar",
 			["barwidth"] = 133,
 			["chargecolorbg"] = {
 				0, -- [1]
@@ -51,7 +47,11 @@ ReckonersProMendingDB = {
 			},
 			["chargetexture"] = "Armory",
 			["font"] = "ABF",
-			["bartexture"] = "BantoBar",
+			["chargecolorfg"] = {
+				nil, -- [1]
+				1, -- [2]
+				1, -- [3]
+			},
 			["x"] = -362,
 			["y"] = -575,
 			["baricon"] = false,

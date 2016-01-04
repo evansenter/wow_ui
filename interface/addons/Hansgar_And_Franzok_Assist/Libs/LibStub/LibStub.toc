@@ -9,7 +9,7 @@
 ## X-Curse-Project-Name: LibStub
 ## X-Curse-Project-ID: libstub
 ## X-Curse-Repository-ID: wow/libstub/mainline
-## X-Curse-Packaged-Version: r28
+## X-Curse-Packaged-Version: r29
 ## X-Curse-Project-Name: Hansgar And Franzok Assist
 ## X-Curse-Project-ID: hansgar_and_franzok_assist
 ## X-Curse-Repository-ID: wow/hansgar_and_franzok_assist/mainline

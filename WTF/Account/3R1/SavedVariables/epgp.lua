@@ -11,7 +11,7 @@ EPGP_DB = {
 			["profiles"] = {
 				["Mind Games"] = {
 					["snapshot"] = {
-						["time"] = 1451726880,
+						["time"] = 1451901180,
 						["roster_info"] = {
 							{
 								"Galebubbles-Illidan", -- [1]

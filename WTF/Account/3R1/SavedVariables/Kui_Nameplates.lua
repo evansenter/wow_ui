@@ -6,6 +6,18 @@ KuiNameplatesGDB = {
 		["Castbar"] = {
 		},
 		["NameOnly"] = {
+			["profiles"] = {
+				["Comet - Illidan"] = {
+					["colours"] = {
+						["friendly"] = {
+							nil, -- [1]
+							nil, -- [2]
+							nil, -- [3]
+							1, -- [4]
+						},
+					},
+				},
+			},
 		},
 		["ClassColours"] = {
 		},
@@ -50,6 +62,7 @@ KuiNameplatesGDB = {
 			["general"] = {
 				["combataction_friendly"] = 2,
 				["bartexture"] = "BantoBar",
+				["targetarrows"] = true,
 			},
 			["hp"] = {
 				["reactioncolours"] = {
@@ -60,9 +73,6 @@ KuiNameplatesGDB = {
 						1, -- [4]
 					},
 				},
-			},
-			["fade"] = {
-				["fadedalpha"] = 0.75,
 			},
 		},
 		["Metal - Illidan"] = {

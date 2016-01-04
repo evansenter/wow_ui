@@ -19,7 +19,7 @@ local _
 --local f = CreateFrame ("frame", "Hansgar_And_Franzok_Assist", UIParent)
 local f = DF:Create1PxPanel (_, 155, 166, "Hans & Franz", "Hansgar_And_Franzok_Assist", nil, "top", true)
 f:SetFrameStrata ("DIALOG")
-f.version = "v0.16a"
+f.version = "v0.16b"
 
 f.Close:SetScript ("OnClick", function (self)
 	if (f.StampersPhase) then
