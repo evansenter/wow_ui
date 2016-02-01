@@ -3156,7 +3156,7 @@ function MovAny:MoverOnMouseWheel(mover, arg1)
 	self.Alpha:Apply(mover.tagged.MAE, mover.tagged)
 	local label = _G[ mover:GetName().."BackdropInfoLabel"]
 	label:Show()
-	label:SetText(MANumFor(alpha* 100).."%")
+	label:SetText(MANumFor(alpha * 100).."%")
 	if mover == self.currentMover then
 		_G["MANudgerInfoLabel"]:Show()
 		_G["MANudgerInfoLabel"]:SetText("Alpha:"..MANumFor(alpha * 100).."%")

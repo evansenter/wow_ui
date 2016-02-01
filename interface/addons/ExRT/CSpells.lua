@@ -1,5 +1,7 @@
 local GlobalAddonName, ExRT = ...
 
+if ExRT.is7 then return end --This module removed in 7.0
+
 local module = ExRT.mod:New("CSpells",ExRT.L.scspells)
 local ELib,L = ExRT.lib,ExRT.L
 module.db.spells = {}

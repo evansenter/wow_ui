@@ -137,7 +137,7 @@ function M:CreateRollFrame()
 	frame:Hide()
 
 	local button = CreateFrame("Button", nil, frame)
-	button:Point("RIGHT", frame, 'LEFT', E.PixelMode and 0 or -3, 0)
+	button:Point("RIGHT", frame, 'LEFT', -(E.Spacing*3), 0)
 	button:Size(FRAME_HEIGHT - (E.Border * 2))
 	button:CreateBackdrop('Default')
 	button:SetScript("OnEnter", SetItemTip)
@@ -253,7 +253,7 @@ function M:START_LOOT_ROLL(event, rollID, time)
 	f.status:SetMinMaxValues(0, time)
 	f.status:SetValue(time)
 
-	f:SetPoint("CENTER", WorldFrame, "CENTER")
+	f:Point("CENTER", WorldFrame, "CENTER")
 	f:Show()
 	AlertFrame_FixAnchors()
 

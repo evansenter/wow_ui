@@ -8,7 +8,7 @@
 ------------------------------------------------------------
 
 
-PawnVersion = 1.921
+PawnVersion = 1.922
 
 -- Pawn requires this version of VgerCore:
 local PawnVgerCoreVersionRequired = 1.09
@@ -536,9 +536,9 @@ function PawnInitializeOptions()
 		-- When upgrading to 1.9, enable the "ignore sockets on low-level items" option.
 		PawnCommon.IgnoreGemsWhileLeveling = true
 	end
-	if (not PawnCommon.LastVersion) or (PawnCommon.LastVersion < 1.921) then
-		-- When upgrading to 1.9.21, invalidate all best item data, because Pawn started assuming upgraded items
-		-- would be upgraded 2/2 for purposes of the base value.
+	if (not PawnCommon.LastVersion) or (PawnCommon.LastVersion < 1.922) then
+		-- When upgrading to 1.9.22, invalidate all best item data, because Pawn started assuming items
+		-- would be upgraded 2/2 and Empowered Baleful for purposes of the base value.
 		PawnInvalidateBestItems()
 	end
 	PawnCommon.LastVersion = PawnVersion
@@ -2368,41 +2368,73 @@ function PawnUnenchantItemLink(ItemLink, EvenIfNotEnchanted)
 
 	if Pos then
 	
-		-- If this is an upgradeable item that isn't fully upgraded, for purposes of calculation we always assume a fully-upgraded item is the "base."
+		-- If this is a valor-upgradeable item that isn't fully upgraded, for purposes of calculation we always assume a fully-upgraded item is the "base."
 		-- The upgrade value will always come after the list of bonus IDs, as UpgradeLevel2.
 		NumBonusIDs = tonumber(NumBonusIDs) or 0
 		local WasUpgraded
-		if NumBonusIDs == 0 then
-			if BonusID1 == "529" or BonusID1 == "530" then
-				BonusID1 = "531"
-				WasUpgraded = true
+		
+		if not PawnCommon.IgnoreItemUpgrades then
+			if NumBonusIDs == 0 then
+				if BonusID1 == "529" or BonusID1 == "530" then
+					BonusID1 = "531"
+					WasUpgraded = true
+				end
+			elseif NumBonusIDs == 1 then
+				if BonusID2 == "529" or BonusID2 == "530" then
+					BonusID2 = "531"
+					WasUpgraded = true
+				end
+			elseif NumBonusIDs == 2 then
+				if BonusID3 == "529" or BonusID3 == "530" then
+					BonusID3 = "531"
+					WasUpgraded = true
+				end
+			elseif NumBonusIDs == 3 then
+				if BonusID4 == "529" or BonusID4 == "530" then
+					BonusID4 = "531"
+					WasUpgraded = true
+				end
+			elseif NumBonusIDs == 4 then
+				if BonusID5 == "529" or BonusID5 == "530" then
+					BonusID5 = "531"
+					WasUpgraded = true
+				end
+			else
+				VgerCore.Fail("Pawn didn't expect to find an item with " .. tostring(NumBonusIDs) .. " bonus IDs.  Some of them were ignored.")
 			end
-		elseif NumBonusIDs == 1 then
-			if BonusID2 == "529" or BonusID2 == "530" then
-				BonusID2 = "531"
-				WasUpgraded = true
-			end
-		elseif NumBonusIDs == 2 then
-			if BonusID3 == "529" or BonusID3 == "530" then
-				BonusID3 = "531"
-				WasUpgraded = true
-			end
-		elseif NumBonusIDs == 3 then
-			if BonusID4 == "529" or BonusID4 == "530" then
-				BonusID4 = "531"
-				WasUpgraded = true
-			end
-		elseif NumBonusIDs == 4 then
-			if BonusID5 == "529" or BonusID5 == "530" then
-				BonusID5 = "531"
-				WasUpgraded = true
-			end
-		else
-			VgerCore.Fail("Pawn didn't expect to find an item with " .. tostring(NumBonusIDs) .. " bonus IDs.  Some of them were ignored.")
-		end
-		-- FUTURE: This function is currently the only place that could correctly calculate the number to add to the GetItemInfo function's returned
-		-- item level to make it correct—when the bonus ID is 529/530/531, this function could return 0/5/10 and then PawnGetItemData could add that
-		-- when setting Item.Level.
+			-- FUTURE: This function is currently the only place that could correctly calculate the number to add to the GetItemInfo function's returned
+			-- item level to make it correct—when the bonus ID is 529/530/531, this function could return 0/5/10 and then PawnGetItemData could add that
+			-- when setting Item.Level.
+			
+			-- If this is a Baleful item that isn't fully empowered, empower it too.
+			if NumBonusIDs >= 3 then
+				local BalefulID1 = tonumber(BonusID2)
+				local BalefulID2 = tonumber(BonusID3)
+				if BalefulID2 < BalefulID1 then
+					-- Sometimes the bonus IDs are specified in reverse order.  To simplify the comparisons, sort them here.
+					local BalefulIDTemp = BalefulID1
+					BalefulID1 = BalefulID2
+					BalefulID2 = BalefulIDTemp
+				end
+			
+				if
+					(BalefulID1 == 647 and BalefulID2 == 652) or -- ilvl 650
+					(BalefulID1 == 647 and BalefulID2 == 653) or -- ilvl 650
+					(BalefulID1 == 652 and BalefulID2 == 761) or -- ilvl 660
+					(BalefulID1 == 652 and BalefulID2 == 762) or -- ilvl 665
+					(BalefulID1 == 652 and BalefulID2 == 763) or -- ilvl 670
+					(BalefulID1 == 651 and BalefulID2 == 652) or -- ilvl 675
+					(BalefulID1 == 652 and BalefulID2 == 764) or -- ilvl 680
+					(BalefulID1 == 651 and BalefulID2 == 653) or -- ilvl 685
+					(BalefulID1 == 652 and BalefulID2 == 765) or -- ilvl 685
+					(BalefulID1 == 652 and BalefulID2 == 766) -- ilvl 690
+				then
+					BonusID2 = "652"
+					BonusID3 = "648"
+					WasUpgraded = true 
+				end
+			end -- NumBonusIDs >= 3
+		end -- not PawnCommon.IgnoreItemUpgrades
 		
 		if
 			EvenIfNotEnchanted or

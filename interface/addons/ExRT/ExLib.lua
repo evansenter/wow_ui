@@ -15,8 +15,6 @@ ExRT.lib.CreateScrollCheckList(parent,relativePoint,x,y,width,linesNum,isModern)
 
 version 2.0
 
-local ELib = ExRT.lib
-
 All functions:
 	:Point(...)		-> SetPoint(...)
 	:Size(...)		-> SetSize(...)
@@ -117,6 +115,33 @@ _G.ELib = ELib
 ExRT.lib = ELib
 
 ELib.V = libVersion
+
+
+-- SetTexture doesnt work for numbers vaules, use SetColorTexture instead. Check builds when it will be fixed or rewrite addon
+---- Quick alpha build fix
+local CreateFrame = CreateFrame
+if ExRT.is7 then
+	local _CreateFrame = CreateFrame
+	local function SetTexture(self,arg1,arg2,...)
+		if arg2 and type(arg2)=='number' and arg2 <= 1 then	--GetSpellTexture now return spellid (number) with more than 1 arg
+			return self:SetColorTexture(arg1,arg2,...)
+		else
+			return self:_SetTexture(arg1,arg2,...)
+		end
+	end
+	local function CreateTexture(self,...)
+		local ret1,ret2,ret3,ret4,ret5 = self:_CreateTexture(...)
+		ret1._SetTexture = ret1.SetTexture
+		ret1.SetTexture = SetTexture
+		return ret1,ret2,ret3,ret4,ret5
+	end
+	function CreateFrame(...)
+		local ret1,ret2,ret3,ret4,ret5 = _CreateFrame(...)
+		ret1._CreateTexture = ret1.CreateTexture
+		ret1.CreateTexture = CreateTexture 
+		return ret1,ret2,ret3,ret4,ret5
+	end
+end
 
 local GetNextGlobalName
 do
@@ -366,6 +391,35 @@ do
 			scrollBar:SetValue(val + clickRange)
 		end
 	end
+	local function ScrollBarButtonUpMouseHoldDown(self)
+		local counter = 0
+		self.ticker = C_Timer.NewTicker(.03,function()
+			counter = counter + 1
+			if counter > 10 then
+				ScrollBarButtonUpClick(self)
+			end
+		end)
+	end
+	local function ScrollBarButtonUpMouseHoldUp(self)
+ 		if self.ticker then
+ 			self.ticker:Cancel()
+ 		end
+	end
+	local function ScrollBarButtonDownMouseHoldDown(self)
+		local counter = 0
+		self.ticker = C_Timer.NewTicker(.03,function()
+			counter = counter + 1
+			if counter > 10 then
+				ScrollBarButtonDownClick(self)
+			end
+		end)
+	end
+	local function ScrollBarButtonDownMouseHoldUp(self)
+ 		if self.ticker then
+ 			self.ticker:Cancel()
+ 		end
+	end
+	
 	local function Widget_Size(self, width, height)
 		self:SetSize(width, height)
 		self.thumb:SetWidth(width - 2)
@@ -476,11 +530,15 @@ do
 		self.buttonUP:SetSize(16,16)
 		self.buttonUP:SetPoint("TOP",0,0) 
 		self.buttonUP:SetScript("OnClick",ScrollBarButtonUpClick)
+		self.buttonUP:SetScript("OnMouseDown",ScrollBarButtonUpMouseHoldDown)
+		self.buttonUP:SetScript("OnMouseUp",ScrollBarButtonUpMouseHoldUp)
 	
 		self.buttonDown = CreateFrame("Button",nil,self,isOld and "UIPanelScrollDownButtonTemplate" or "ExRTButtonDownModernTemplate")
 		self.buttonDown:SetPoint("BOTTOM",0,0) 
 		self.buttonDown:SetSize(16,16)
 		self.buttonDown:SetScript("OnClick",ScrollBarButtonDownClick)
+		self.buttonDown:SetScript("OnMouseDown",ScrollBarButtonDownMouseHoldDown)
+		self.buttonDown:SetScript("OnMouseUp",ScrollBarButtonDownMouseHoldUp)
 		
 		self.clickRange = 1
 		self.isOld = isOld
@@ -2121,7 +2179,7 @@ for i=1,2 do
 			self:GetParent().border:SetBackdropBorderColor(0,0,0,.45)
 			self:Play()
 		end)
-		local fade1 = ScrollDropDown_Modern[i].Animation:CreateAnimation("Alpha")
+		local fade1 = ScrollDropDown_Modern[i].Animation:CreateAnimation()
 		fade1:SetDuration(1)
 		fade1:SetOrder(1)
 		fade1.parent = ScrollDropDown_Modern[i]
@@ -2132,13 +2190,13 @@ for i=1,2 do
 			self.parent.BorderBottom:SetTexture(color,color,color,1)
 			self.parent.BorderRight:SetTexture(color,color,color,1)
 		end)
-		local pause = ScrollDropDown_Modern[i].Animation:CreateAnimation("Alpha")
+		local pause = ScrollDropDown_Modern[i].Animation:CreateAnimation()
 		pause:SetDuration(.5)
 		pause:SetOrder(2)
 		pause:SetScript("OnUpdate",function (self)
 		
 		end)
-		local fade2 = ScrollDropDown_Modern[i].Animation:CreateAnimation("Alpha")
+		local fade2 = ScrollDropDown_Modern[i].Animation:CreateAnimation()
 		fade2:SetDuration(1)
 		fade2:SetOrder(3)
 		fade2.parent = ScrollDropDown_Modern[i]

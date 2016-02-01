@@ -1,6 +1,6 @@
 local GlobalAddonName, ExRT = ...
 
-if ExRT.locale ~= "ruRU" then	
+if ExRT.locale ~= "ruRU" and not ExRT.alwaysRU then	
 	return
 end
 
@@ -907,6 +907,7 @@ L.InspectViewerMoreInfoRoleHealer = "Хилеры"
 L.InspectViewerColorizeNoTopEnch = "Выделять предметы без топовых чантов и камней"
 L.InspectViewerForce = "Ускорить"
 L.InspectViewerHideInRaid = "Скрыть тех кто не в рейде"
+L.InspectViewerColorizeNoValorUpgrade = "Выделять предметы без макс. уровневых улучшений"
 
 L.CoinsSpoilsOfPandariaWinTrigger = "Система перезагружается. Не выключать питание, иначе возможен взрыв."
 L.CoinsEmpty = "Здесь пока пусто"
@@ -999,6 +1000,7 @@ L.classLocalizate = {
 	["WARLOCK"] = "Чернокнижник",
 	["MONK"] = "Монах",
 	["DRUID"] = "Друид",
+	["DEMONHUNTER"] = "Охотник на демонов",
 	["PET"] = "Питомцы",
 	["NO"] = "Особые",
 	["ALL"] = "Все классы",

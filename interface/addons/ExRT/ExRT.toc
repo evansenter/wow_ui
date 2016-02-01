@@ -3,7 +3,7 @@
 ## Author: ykiigor
 ## Notes: Exorsus Raid Tools
 ## SavedVariables: VExRT
-## Version: 3555
+## Version: 3570
 core.lua
 Functions.lua
 embeds.xml
@@ -11,6 +11,7 @@ Templates.xml
 ExLib.lua
 localization\localization.ru.lua
 localization\localization.en.lua
+localization\localization.de.lua
 localization\localization.cn.lua
 localization\localization.tw.lua
 localization\localization.kr.lua

@@ -63,7 +63,15 @@ function module.options:Load()
 		end
 	end)
 	
-	self.shtml1 = ELib:Text(self,L.LootLinkSlashHelp,12):Size(650,0):Point("TOP",0,-70):Top()
+	self.ilvlChk = ELib:Check(self,SHOW_ITEM_LEVEL,VExRT.LootLink.ilvl):Point(5,-55):OnClick(function(self) 
+		if self:GetChecked() then
+			VExRT.LootLink.ilvl = true
+		else
+			VExRT.LootLink.ilvl = nil
+		end
+	end)
+	
+	self.shtml1 = ELib:Text(self,L.LootLinkSlashHelp,12):Size(650,0):Point("TOP",0,-95):Top()
 end
 
 
@@ -87,9 +95,13 @@ end
 
 local function LootLink(linkAnyway)
 	local lootMethod = GetLootMethod()
-	local _,_,difficulty = GetInstanceInfo()
+	local _,zoneType,difficulty,_,_,_,_,mapID = GetInstanceInfo()
 	if (lootMethod == "personalloot" or difficulty == 7 or difficulty == 17) and not linkAnyway then
 		return
+	end
+	local isFutureRaid = zoneType == 'raid' and (mapID or 0) > 1450
+	if linkAnyway then
+		isFutureRaid = false
 	end
 	local count = GetNumLootItems()
 	local cache = {}
@@ -99,11 +111,14 @@ local function LootLink(linkAnyway)
 		local sourceGUID = GetLootSourceInfo(i)
 		if sourceGUID and (not module.db.cache[sourceGUID] or linkAnyway) then
 			local mobID = ExRT.F.GUIDtoID(sourceGUID)
-			if (module.db.mobsIDs[mobID] or linkAnyway) then
+			if (module.db.mobsIDs[mobID] or linkAnyway or isFutureRaid) then
 				local itemLink =  GetLootSlotLink(i)
-				if itemLink then
+				local _,_,_,quality = GetLootSlotInfo(i)
+				if itemLink and (not isFutureRaid or (quality and quality >= 4)) then
 					numLink = numLink + 1
-					SendChatMessage(numLink..": "..itemLink,chat_type,nil,playerName)
+					local _, _, _, iLevel = GetItemInfo(itemLink)
+					iLevel = VExRT.LootLink.ilvl and iLevel or nil 
+					SendChatMessage(numLink..": "..itemLink..(iLevel and (" ("..iLevel..")") or ""),chat_type,nil,playerName)
 				end
 			end
  			cache[sourceGUID] = true

@@ -26,15 +26,15 @@ L["Angle"] = "Winkel"
 L["Animate"] = "Animieren"
 L["Animated Expand and Collapse"] = "Erweitern und Verbergen animieren"
 L["Animation relative duration description"] = [=[Die Dauer der Animation relativ zur Dauer der Anzeige als Bruchteil (1/2), als Prozent (50%) oder als Dezimal (0.5).
-|cFFFF0000Notiz:|r Falls die Anzeige keine Dauer besitzt (zb. Aura ohne Dauer) wird diese Animation nicht ausgeführt.
+|cFFFF0000Notiz:|r Falls die Anzeige keine Dauer besitzt (zb. Aura ohne Dauer), wird diese Animation nicht ausgeführt.
 
 |cFF4444FFFBeispiel:|r
 Falls die Dauer der Animation auf |cFF00CC0010%|r gesetzt wurde und die Dauer der Anzeige 20 Sekunden beträgt (zb. Debuff), dann wird diese Animation über eine Dauer von 2 Sekunden abgespielt.
-Falls die Dauer der Animation auf |cFF00CC0010%|r gesetzt wurde und für die Anzeige keine Dauer bekannt ist (Meistens kann diese auch manuell festgelegt werden) wird diese Animation nicht abgespielt.]=] -- Needs review
+Falls die Dauer der Animation auf |cFF00CC0010%|r gesetzt wurde und für die Anzeige keine Dauer bekannt ist (Meistens kann diese auch manuell festgelegt werden), wird diese Animation nicht abgespielt.]=]
 L["Animations"] = "Animationen"
-L["Animation Sequence"] = "Animations-Sequenz"
+L["Animation Sequence"] = "Animationssequenz"
 L["Aquatic"] = "Wasser"
-L["Aura (Paladin)"] = "Paladin Aura"
+L["Aura (Paladin)"] = "Paladinaura"
 L["Aura(s)"] = "Auren"
 L["Auto"] = "Auto"
 L["Auto-cloning enabled"] = "Auto-Klonen aktiviert"
@@ -48,7 +48,7 @@ L["Background Offset"] = "Hintergrundversatz"
 L["Background Texture"] = "Hintergrundtextur"
 L["Bar Alpha"] = "Balkentransparenz"
 L["Bar Color"] = "Balkenfarbe"
-L["Bar Color Settings"] = "Leistenfarben-Einstellungen" -- Needs review
+L["Bar Color Settings"] = "Balkenfarbeneinstellungen"
 L["Bar in Front"] = "Balken im Vordergrund"
 L["Bar Texture"] = "Balkentextur"
 L["Battle"] = "Angriff"
@@ -64,7 +64,7 @@ L["Border Settings"] = "Rahmeneinstellungen"
 L["Border Size"] = "Rahmengröße"
 L["Border Style"] = "Rahmenstil"
 L["Bottom Text"] = "Text unten"
-L["Button Glow"] = "Aktionsleisten Glanz"
+L["Button Glow"] = "Schaltflächenleuchten"
 L["Can be a name or a UID (e.g., party1). Only works on friendly players in your group."] = "Kann ein Name oder eine UID (zb. party1) sein. Funktioniert nur für freundliche Spieler innerhalb deiner Gruppe."
 L["Cancel"] = "Abbrechen"
 L["Cat"] = "Katze"
@@ -75,12 +75,12 @@ L["Choose"] = "Auswählen"
 L["Choose Trigger"] = "Auslöser Auswählen"
 L["Choose whether the displayed icon is automatic or defined manually"] = "Symbol automatisch oder manuell auswählen"
 L["Clone option enabled dialog"] = [=[
-Eine Option die |cFFFF0000Auto-Klonen|r verwendet wurde aktiviert.
+Eine Option, die |cFFFF0000Auto-Klonen|r verwendet, wurde aktiviert.
 
-|cFFFF0000Auto-Klonen|r dupliziert automatisch eine Anzeige um mehrere passende Quellen (zb. Auren) darzustellen.
+|cFFFF0000Auto-Klonen|r dupliziert automatisch eine Anzeige, um mehrere passende Quellen (z.B. Auren) darzustellen.
 Solange die Anzeige sich nicht in einer |cFF22AA22Dynamischen Gruppe|r befindet, werden alle Klone nur hintereinander angeordnet.
 
-Soll die Anzeige in einer neuen |cFF22AA22Dynamischen Gruppe|r plaziert werden?]=]
+Soll die Anzeige in einer neuen |cFF22AA22Dynamischen Gruppe|r platziert werden?]=]
 L["Close"] = "Schließen"
 L["Collapse"] = "Minimieren"
 L["Collapse all loaded displays"] = "Alle geladenen Anzeigen minimieren"
@@ -89,7 +89,7 @@ L["Color"] = "Farbe"
 L["Compress"] = "Stauchen"
 L["Concentration"] = "Konzentration"
 L["Constant Factor"] = "Konstanter Faktor"
-L["Control-click to select multiple displays"] = "|cFF8080FF(CTRL-Klick)|r Mehrere Anzeigen auswählen"
+L["Control-click to select multiple displays"] = "|cFF8080FF(Strg-Klick)|r, um mehrere Anzeigen auszuwählen"
 L["Controls the positioning and configuration of multiple displays at the same time"] = "Eine Gruppe, die die Position und Konfiguration ihrer Kinder kontrolliert"
 L["Convert to..."] = "Umwandeln zu..."
 L["Cooldown"] = "Abklingzeit"
@@ -130,7 +130,7 @@ L["Defensive"] = "Defensive"
 L["Delete"] = "Löschen"
 L["Delete all"] = "Alle löschen"
 L["Delete children and group"] = "Lösche Gruppe und ihre Kinder"
-L["Deletes this display - |cFF8080FFShift|r must be held down while clicking"] = "|cFF8080FF(SHIFT-Klick)|r Lösche Anzeige"
+L["Deletes this display - |cFF8080FFShift|r must be held down while clicking"] = "|cFF8080FF(Shift-Klick)|r, um diese Anzeige zu löschen"
 L["Delete Trigger"] = "Auslöser löschen"
 L["Desaturate"] = "Entsättigen"
 L["Devotion"] = "Hingabe"
@@ -138,9 +138,9 @@ L["Disabled"] = "Deaktiviert"
 L["Discrete Rotation"] = "Rotation um x90°"
 L["Display"] = "Anzeige"
 L["Display Icon"] = "Anzeigesymbol"
-L["Display Text"] = "Anzeige-Text"
+L["Display Text"] = "Anzeigetext"
 L["Distribute Horizontally"] = "Horizontal verteilen"
-L["Distribute Vertically"] = "Vertikal verteilen" -- Needs review
+L["Distribute Vertically"] = "Vertikal verteilen"
 L["Do not copy any settings"] = "Keine Einstellungen kopieren"
 L["Do not group this display"] = "Anzeige nicht gruppieren"
 L["Duplicate"] = "Duplizieren"
@@ -153,8 +153,8 @@ L["Dynamic text tooltip"] = [=[Es werden einige spezielle Codes für dynamischen
 |cFFFF0000%t|r - Gesamt - Die maximale Dauer der Anzeige
 |cFFFF0000%n|r - Name - Der (dynamische) Name der Anzeige (zb. Auraname) oder die ID der Anzeige
 |cFFFF0000%i|r - Symbol - Das (dynamische) Symbol der Anzeige
-|cFFFF0000%s|r - Stacks - Die Anzahl der Stacks
-|cFFFF0000%c|r - Custom - Verwendet den String-Rückgabewert der benutzerdefinierten Lua-Funktion]=]
+|cFFFF0000%s|r - Stapel - Die Anzahl der Stapel
+|cFFFF0000%c|r - Benutzerdefiniert - Verwendet den String-Rückgabewert der benutzerdefinierten Lua-Funktion]=]
 L["Enabled"] = "Aktivieren"
 L["Enter an aura name, partial aura name, or spell id"] = "Auraname, Teilname oder Zauber-ID"
 L["Event Type"] = "Ereignistyp"
@@ -173,7 +173,7 @@ L["Flight(Non-Feral)"] = "Flug"
 L["Font"] = "Schriftart"
 L["Font Flags"] = "Schrifteinstellungen"
 L["Font Size"] = "Schriftgröße"
-L["Font Type"] = "Schrifttyp"
+L["Font Type"] = "Schriftart"
 L["Foreground Color"] = "Vordergrundfarbe"
 L["Foreground Texture"] = "Vordergrundtextur"
 L["Form (Druid)"] = "Form (Druide)"
@@ -195,17 +195,18 @@ Falls die Zahl als Dezimalzahl (z.B. 0.5), Bruch (z.B. 1/2) oder Prozentsatz (z.
 |cFF00CC00> 0|r Löst aus, wenn irgendjemand in der %s betroffen ist.
 |cFF00CC00= 100%%|r Löst aus, wenn alle in der %s betroffen sind.
 |cFF00CC00!= 2|r Löst aus, wenn weniger oder mehr als 2 Spieler in der %s betroffen sind.
-|cFF00CC00<= 0.8|r Löst aus, wenn weniger als 80%% in der %s betroffen sind (4 von 5 Gruppenmitgliedern, 8 von 10 oder 20 von 25 Raidmitgliedern).
+|cFF00CC00<= 0.8|r Löst aus, wenn weniger als 80%% in der %s betroffen sind (4 von 5 Gruppenmitgliedern, 8 von 10 oder 20 von 25 Schlachtzugsmitgliedern).
 |cFF00CC00> 1/2|r Löst aus, wenn mehr als die Hälfte der %s betroffen sind.
-|cFF00CC00>= 0|r Löst immer aus.]=] -- Needs review
+|cFF00CC00>= 0|r Löst immer aus.]=]
 L["Group Member Count"] = "Gruppengröße"
 L["Group (verb)"] = "Gruppe"
 L["Height"] = "Höhe"
 L["Hide this group's children"] = "Kinder dieser Gruppe verbergen"
 L["Hide When Not In Group"] = "Ausblenden, wenn ich gruppenlos bin"
 L["Horizontal Align"] = "Horizontale Ausrichtung"
+L["Icon Color"] = "Symbol Farbe" -- Needs review
 L["Icon Info"] = "Symbolinfo"
-L["Icon Inset"] = "Gegenstandseinsatz" -- Needs review
+L["Icon Inset"] = "Symbol Innenabstand" -- Needs review
 L["Ignored"] = "Ignoriert"
 L["Ignore GCD"] = "Globale Abklingzeit ignorieren"
 L["%i Matches"] = "%i Treffer"
@@ -233,10 +234,10 @@ L["Multiple Displays"] = "Mehrere Anzeigen"
 L["Multiple Triggers"] = "Mehrere Auslöser"
 L["Multiselect ignored tooltip"] = [=[
 |cFFFF0000Ignoriert|r - |cFF777777Einfach|r - |cFF777777Mehrfach|r
-Diese Option wird nicht verwendet um zu prüfen wann die Anzeige geladen wird.]=]
+Diese Option wird nicht verwendet, um zu prüfen, wann die Anzeige geladen wird.]=]
 L["Multiselect multiple tooltip"] = [=[
 |cFFFF0000Ignoriert|r - |cFF777777Einfach|r - |cFF777777Mehrfach|r
-Beliebige Anzahl an Werten zum vergleichen können ausgewählt werden.]=]
+Beliebige Anzahl an Werten zum Vergleichen können ausgewählt werden.]=]
 L["Multiselect single tooltip"] = [=[
 |cFFFF0000Ignoriert|r - |cFF777777Einfach|r - |cFF777777Mehrfach|r
 Nur ein Wert kann ausgewählt werden.]=]
@@ -262,11 +263,12 @@ L["Orientation"] = "Orientierung"
 L["Other"] = "Sonstige"
 L["Outline"] = "Umriss"
 L["Own Only"] = "Nur eigene"
-L["Player Character"] = "Spieler Charakter (PC)"
+L["Player Character"] = "Spieler-Charakter (PC)"
 L["Play Sound"] = "Sound abspielen"
+L["Portrait Zoom"] = "Portraitzoom"
 L["Presence (DK)"] = "Präsenz (Todesritter)"
 L["Presence (Rogue)"] = "Präsenz (Schurke)"
-L["Prevents duration information from decreasing when an aura refreshes. May cause problems if used with multiple auras with different durations."] = "Verhindert, dass sich die Anzeige der Aurendauer beim Erneuern verringert. Kann zu Problemen bei mehreren Auren führen!" -- Needs review
+L["Prevents duration information from decreasing when an aura refreshes. May cause problems if used with multiple auras with different durations."] = "Verhindert, dass sich die Anzeige der Aurendauer beim Erneuern verringert. Kann zu Problemen bei mehreren Auren mit unterschiedlichen Dauern führen!"
 L["Primary"] = "Erste"
 L["Progress Bar"] = "Fortschrittsbalken"
 L["Progress Texture"] = "Fortschrittstextur"
@@ -276,35 +278,36 @@ L["Re-center X"] = "Zentrum (X)"
 L["Re-center Y"] = "Zentrum (Y)"
 L["Remaining Time Precision"] = "Genauigkeit der verbleibenden Zeit"
 L["Remove this display from its group"] = "Anzeige aus Gruppe entfernen"
-L["Rename"] = "Umbenennen" -- Needs review
-L["Requesting display information"] = "Fordere Anzeigeinformationen von %s an" -- Needs review
+L["Rename"] = "Umbenennen"
+L["Requesting display information"] = "Fordere Anzeigeinformationen von %s an"
 L["Required For Activation"] = "Vorrausgesetzt für Aktivierung"
 L["Retribution"] = "Vergeltung"
-L["Right-click for more options"] = "|cFF8080FF(Right-Klick)|r Mehr Optionen"
+L["Right-click for more options"] = "|cFF8080FF(Rechtsklick)|r für mehr Optionen"
 L["Right Text"] = "Text rechts"
 L["Rotate"] = "Rotieren"
 L["Rotate In"] = "Nach innen rotieren"
 L["Rotate Out"] = "Nach außen rotieren"
 L["Rotate Text"] = "Text rotieren"
 L["Rotation"] = "Rotation"
+-- L["Rotation Mode"] = ""
 L["Same"] = "Gleich"
 L["Search"] = "Suchen"
 L["Secondary"] = "Zweite"
-L["Select the auras you always want to be listed first"] = "Wähle die Auren aus, die immer an oberster Stelle angezeigt werden sollen" -- Needs review
+L["Select the auras you always want to be listed first"] = "Wähle die Auren aus, die immer an oberster Stelle angezeigt werden sollen"
 L["Send To"] = "Senden an"
 L["Set tooltip description"] = "Tooltipbeschreibung festlegen"
 L["Shadow Dance"] = "Schattentanz"
 L["Shadowform"] = "Schattenform"
 L["Shadow Resistance"] = "Schattenresistenz"
-L["Shift-click to create chat link"] = "|cFF8080FF(Shift-Klick)|r Chatlink erstellen"
+L["Shift-click to create chat link"] = "|cFF8080FF(Shift-Klick)|r, um einen Chatlink zu erstellen"
 L["Show all matches (Auto-clone)"] = "Alle Treffer anzeigen (Auto-Klonen)"
 L["Show players that are |cFFFF0000not affected"] = "Zeige Spieler die |cFFFF0000nicht|r betroffen sind"
-L["Shows a 3D model from the game files"] = "Zeigt ein 3D Modell"
+L["Shows a 3D model from the game files"] = "Zeigt ein 3D-Modell aus den Spieldateien"
 L["Shows a custom texture"] = "Zeigt eine benutzerdefinierte Textur"
 L["Shows a progress bar with name, timer, and icon"] = "Zeigt einen Fortschrittsbalken mit Name, Zeitanzeige und Symbol"
 L["Shows a spell icon with an optional a cooldown overlay"] = "Zeigt ein (Zauber-) Symbol mit optionalem Abklingzeit-Overlay"
 L["Shows a texture that changes based on duration"] = "Zeigt eine Textur, die sich über die Zeit verändert"
-L["Shows one or more lines of text, which can include dynamic information such as progress or stacks"] = "Zeigt ein oder mehrere Zeilen Text an, der dynamische Informationen anzeigen kann, z.B. Fortschritt oder Stacks"
+L["Shows one or more lines of text, which can include dynamic information such as progress or stacks"] = "Zeigt ein oder mehrere Zeilen Text an, der dynamische Informationen anzeigen kann, z.B. Fortschritt oder Stapel"
 L["Shows the remaining or expended time for an aura or timed event"] = "Zeigt die verbleibende oder verstrichene Zeit einer Aura oder eines zeitlichen Ereignisses"
 L["Show this group's children"] = "Kinder der Gruppe anzeigen"
 L["Size"] = "Größe"
@@ -317,7 +320,7 @@ L["Sound Channel"] = "Soundkanal"
 L["Sound File Path"] = "Sounddatei"
 L["Space"] = "Abstand"
 L["Space Horizontally"] = "Horizontaler Abstand"
-L["Space Vertically"] = "Verticaler Abstand"
+L["Space Vertically"] = "Vertikaler Abstand"
 L["Spell ID"] = "Zauber-ID"
 L["Spell ID dialog"] = [=[
 Es wurde eine Aura/Zauber/ect. über |cFFFF0000Spell-ID|r definiert.
@@ -326,10 +329,10 @@ Es wurde eine Aura/Zauber/ect. über |cFFFF0000Spell-ID|r definiert.
 Wird allerdings |cFFFF0000Alle Auren scannen (CPU-Intensiv)|r aktiviert kann |cFF8800FFWeakAuras|r explizit nach bestimmten |cFFFF0000Spell-IDs|r suchen.
 
 Soll |cFFFF0000Alle Auren scannen (CPU-Intensiv)|r aktiviert werden um diese |cFFFF0000Spell-ID|r zu finden?]=]
-L["Stack Count"] = "Stackanzahl"
-L["Stack Count Position"] = "Stackposition"
-L["Stack Info"] = "Stackinfo"
-L["Stacks Settings"] = "Stacks Einstellungen"
+L["Stack Count"] = "Stapelanzahl"
+L["Stack Count Position"] = "Stapelanzahlposition"
+L["Stack Info"] = "Stapelinfo"
+L["Stacks Settings"] = "Stapeleinstellungen"
 L["Stagger"] = "Taumeln"
 L["Stance (Warrior)"] = "Haltung (Krieger)"
 L["Start"] = "Start"
@@ -340,21 +343,21 @@ L["Temporary Group"] = "Temporäre Gruppe"
 L["Text"] = "Text"
 L["Text Color"] = "Textfarbe"
 L["Text Position"] = "Textposition"
-L["Text Settings"] = "Text Einstellungen"
+L["Text Settings"] = "Texteinstellungen"
 L["Texture"] = "Textur"
-L["Texture Info"] = "Textur-Info"
-L["The children of this group have different display types, so their display options cannot be set as a group."] = "Anzeigeoptionen für diese Gruppe können nicht dargestellt werden, weil die Kinder dieser Gruppe verschiedene Anzeigetypen haben." -- Needs review
+L["Texture Info"] = "Texturinfo"
+L["The children of this group have different display types, so their display options cannot be set as a group."] = "Anzeigeoptionen können nicht für die Gruppe gesetzt werden, weil die Kinder dieser Gruppe verschiedene Anzeigetypen haben."
 L["The duration of the animation in seconds."] = "Die Dauer der Animation in Sekunden."
 L["The type of trigger"] = "Auslösertyp"
-L["This condition will not be tested"] = "Diese Bedingung wird nicht getestet" -- Needs review
+L["This condition will not be tested"] = "Diese Bedingung wird nicht geprüft"
 L["This display is currently loaded"] = "Diese Anzeige ist zur Zeit geladen"
 L["This display is not currently loaded"] = "Diese Anzeige ist zur Zeit nicht geladen"
-L["This display will only show when |cFF00FF00%s"] = "Diese Anzeige wird nur angezeigt, wenn |cFF00FF00%s" -- Needs review
-L["This display will only show when |cFFFF0000 Not %s"] = "Diese Anzeige wird nur angezeigt, wenn |cFF00FF00 nicht %s" -- Needs review
+L["This display will only show when |cFF00FF00%s"] = "Diese Anzeige wird nur angezeigt, wenn |cFF00FF00%s"
+L["This display will only show when |cFFFF0000 Not %s"] = "Diese Anzeige wird nur angezeigt, wenn |cFF00FF00 nicht %s"
 L["This region of type \"%s\" has no configuration options."] = "Diese Region vom Typ \"%s\" besitzt keine Einstellungsmöglichkeiten."
 L["Time in"] = "Zeit in"
 L["Timer"] = "Zeitgeber"
-L["Timer Settings"] = "Timer Einstellungen"
+L["Timer Settings"] = "Timereinstellungen"
 L["Toggle the visibility of all loaded displays"] = "Sichtbarkeit aller geladener Anzeigen umschalten"
 L["Toggle the visibility of all non-loaded displays"] = "Sichtbarkeit aller nicht geladener Anzeigen umschalten"
 L["Toggle the visibility of this display"] = "Sichtbarkeit aller Anzeigen umschalten"
@@ -363,7 +366,7 @@ L["Tooltip"] = "Tooltip"
 L["Tooltip on Mouseover"] = "Tooltip bei Mausberührung"
 L["Top Text"] = "Text oben"
 L["to screen's"] = "an Bildschirm"
-L["Total Time Precision"] = "Gesamtzeit Genauigkeit"
+L["Total Time Precision"] = "Genauigkeit der Gesamtzeit"
 L["Tracking"] = "Aufspüren"
 L["Travel"] = "Reise"
 L["Trigger"] = "Auslöser"
@@ -374,10 +377,10 @@ L["Ungroup"] = "Nicht gruppiert"
 L["Unholy"] = "Unheilig"
 L["Unit Exists"] = "Einheit existiert"
 L["Unlike the start or finish animations, the main animation will loop over and over until the display is hidden."] = "Anders als die Start- und Endanimation wird die Hauptanimation immer wieder wiederholt, bis die Anzeige in den Endstatus versetzt wird."
-L["Unstealthed"] = "Enttarnt" -- Needs review
+L["Unstealthed"] = "Unverstohlen"
 L["Update Custom Text On..."] = "Aktualisiere benutzerdefinierten Text bei..."
 L["Use Full Scan (High CPU)"] = "Alle Auren scannen (CPU-Intensiv)"
-L["Use tooltip \"size\" instead of stacks"] = "Benutzte Tooltipgröße anstatt Stacks"
+L["Use tooltip \"size\" instead of stacks"] = "Tooltipgröße anstatt Stapel verwenden"
 L["Vertical Align"] = "Vertikale Ausrichtung"
 L["View"] = "Anzeigen"
 L["Width"] = "Breite"

@@ -448,6 +448,12 @@ raccourcis:\
 Si coch\195\169e, Pawn propose toujours les gemmes appropri\195\169es pour les \195\169l\195\169ments de bas niveau, mais elles seront ignor\195\169s dans les calculs et ils n'apparaisseront donc pas aussi souvent comme des mises \195\160 jour.\
 \
 Si non coch\195\169, Pawn calculera les valeurs pour les \195\169l\195\169ments comme s'ils \195\169taient g\195\169mm\195\169s de la mani\195\168re qui maximise la valeur de l'\195\169l\195\169ment, quel que soit le niveau.",
+		OptionsIgnoreItemUpgradesCheck = "Ignore valor and baleful upgrades",
+		OptionsIgnoreItemUpgradesCheckTooltip = [=[Enable this option to have Pawn ignore the potential for Valor upgrades and Empowered Baleful items when calculating item values.
+
+If checked, Pawn will treat upgradeable items as they are and will not assume that you would use Valor and Empowered Apexis Fragments to improve the item when determining whether an item is better than what you currently have.
+
+If unchecked, Pawn will treat those items assuming that you would maximize their potential with Valor and Empowered Apexis Fragments.  This could cause a level 650 baleful item to appear as a significant upgrade over a level 670 item from Blackrock Foundry, since the baleful item could potentially be improved to level 705 through valor and Apexis.]=],
 		OptionsInventoryIcon = "Affiche une ic\195\180ne d'inventaire",
 		OptionsInventoryIconTooltip = "Cette option permet d'afficher l'ic\195\180ne d'inventaire \195\160 cot\195\169 de la fen\195\170tre de lien de l item",
 		OptionsItemIDs = "Affiche les ID des items", -- Needs review

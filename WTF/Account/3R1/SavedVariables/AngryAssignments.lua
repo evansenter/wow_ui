@@ -78,12 +78,12 @@ AngryAssign_Pages = {
 		["UpdateId"] = 2444088531,
 		["Contents"] = "Throughput CDs will be called for.\n\n1 - Revival\n2 - Healing Tide\n3 - Tranq\n\nDefensive CDs will be called for\n\n1 - Devo\n2 - Barrier\n3 - Rally\n4 - Amps",
 	},
-	[223793571] = {
-		["Updated"] = 1420677848,
-		["Name"] = "Twins 5 heal",
-		["Id"] = 223793571,
-		["UpdateId"] = 191581569,
-		["Contents"] = "Whirlwind (emp):\n1) (emp) Dj(Tranq) + Hockey + Cexcells\n2) (emp) Twin(Hymn) + Lan(Barrier) + Cexcells + Azpek\n\nShout:\n2) Devo\n4) Devo\n\nRubble:\n2)  Scar  + Tokman + Hemo + Gandalf\n3)  Dj tranq + Bluto (Smoke) + \n4)  Twin + Lanfear + Cexcells + Hockey\n5)  Scar + Tokman + Hemo + Gandalf\n\nQuake\n2) Twin + Captain + NVs \n3) Akroma + HS + personals",
+	[836809314] = {
+		["Updated"] = 1418272376,
+		["Name"] = "Add Space",
+		["Id"] = 836809314,
+		["UpdateId"] = 3815448723,
+		["Contents"] = "Advertising Space for Sale, Contact Kemsa\n\nBy Reading this you just proved it works!",
 	},
 	[704661539] = {
 		["Updated"] = 1422500486,
@@ -106,12 +106,12 @@ AngryAssign_Pages = {
 		["UpdateId"] = 2467529262,
 		["Contents"] = "p2 Cd Rotation:\nBlast#:\n4:tranq\n6:rev\n8:hymn\n10; devo\n12: devo",
 	},
-	[45058146] = {
-		["Updated"] = 1419905154,
-		["Name"] = "Slangin' Gurt",
-		["Id"] = 45058146,
-		["UpdateId"] = 2133170203,
-		["Contents"] = "Spas's Slangin' Gurt'\n\nIf its good and creamy, it's spasweezy\n\n~This message has been approved by Spas~",
+	[774473661] = {
+		["Updated"] = 1422416935,
+		["Name"] = "bracken new",
+		["Id"] = 774473661,
+		["UpdateId"] = 416964799,
+		["Contents"] = "Infesting Spores Order:\n1) Akroma + Devo + Smoke + Gandalf\n2) Draxi + Devo + Zaebies + Ekylpto\n3) Revival + Akroma + Hemol + \n4) Hymn + Barrier + Cexcells + Draxi\n5)Akroma + Devo + Smoke +  Gandalf\n6) Draxi + Devo + Zaebies + Ekylpto\n7) Revival + Akroma + Hemol +\n8) Hymn + Barrier + Cexcells + Draxi\n\nRoar Order:\nBrun - Crime\n\nLoh Order:\nAmara - Akroma - Draxxi",
 	},
 	[1529603911] = {
 		["Updated"] = 1425948720,
@@ -176,19 +176,19 @@ AngryAssign_Pages = {
 		["UpdateId"] = 729592596,
 		["Contents"] = "Acid Torrent Healing Rotation\n1:Hymn/Toppies\n2:Vampally/Goargrim\n3:Freed/Mtnk\n4:Tranq/Loki\n\nTransition\nRev/Personals/Tonics",
 	},
-	[774473661] = {
-		["Updated"] = 1422416935,
-		["Name"] = "bracken new",
-		["Id"] = 774473661,
-		["UpdateId"] = 416964799,
-		["Contents"] = "Infesting Spores Order:\n1) Akroma + Devo + Smoke + Gandalf\n2) Draxi + Devo + Zaebies + Ekylpto\n3) Revival + Akroma + Hemol + \n4) Hymn + Barrier + Cexcells + Draxi\n5)Akroma + Devo + Smoke +  Gandalf\n6) Draxi + Devo + Zaebies + Ekylpto\n7) Revival + Akroma + Hemol +\n8) Hymn + Barrier + Cexcells + Draxi\n\nRoar Order:\nBrun - Crime\n\nLoh Order:\nAmara - Akroma - Draxxi",
+	[45058146] = {
+		["Updated"] = 1419905154,
+		["Name"] = "Slangin' Gurt",
+		["Id"] = 45058146,
+		["UpdateId"] = 2133170203,
+		["Contents"] = "Spas's Slangin' Gurt'\n\nIf its good and creamy, it's spasweezy\n\n~This message has been approved by Spas~",
 	},
-	[836809314] = {
-		["Updated"] = 1418272376,
-		["Name"] = "Add Space",
-		["Id"] = 836809314,
-		["UpdateId"] = 3815448723,
-		["Contents"] = "Advertising Space for Sale, Contact Kemsa\n\nBy Reading this you just proved it works!",
+	[223793571] = {
+		["Updated"] = 1420677848,
+		["Name"] = "Twins 5 heal",
+		["Id"] = 223793571,
+		["UpdateId"] = 191581569,
+		["Contents"] = "Whirlwind (emp):\n1) (emp) Dj(Tranq) + Hockey + Cexcells\n2) (emp) Twin(Hymn) + Lan(Barrier) + Cexcells + Azpek\n\nShout:\n2) Devo\n4) Devo\n\nRubble:\n2)  Scar  + Tokman + Hemo + Gandalf\n3)  Dj tranq + Bluto (Smoke) + \n4)  Twin + Lanfear + Cexcells + Hockey\n5)  Scar + Tokman + Hemo + Gandalf\n\nQuake\n2) Twin + Captain + NVs \n3) Akroma + HS + personals",
 	},
 	[1652459692] = {
 		["Updated"] = 1426733278,
@@ -214,6 +214,21 @@ AngryAssign_Pages = {
 	},
 }
 AngryAssign_State = {
+	["window"] = {
+		["height"] = 499.999969482422,
+		["top"] = 850,
+		["left"] = 610,
+		["width"] = 700,
+	},
+	["display"] = {
+		["y"] = -1,
+		["x"] = 49.0002288818359,
+		["point"] = "TOPLEFT",
+		["scale"] = 1,
+		["hidden"] = false,
+	},
+	["directionUp"] = false,
+	["locked"] = true,
 	["tree"] = {
 		["groups"] = {
 			["664173253"] = true,
@@ -224,21 +239,6 @@ AngryAssign_State = {
 		["treewidth"] = 175,
 		["fullwidth"] = 665.999938964844,
 	},
-	["display"] = {
-		["y"] = -1,
-		["x"] = 49.0002288818359,
-		["point"] = "TOPLEFT",
-		["scale"] = 1,
-		["hidden"] = false,
-	},
-	["window"] = {
-		["height"] = 499.999969482422,
-		["top"] = 850,
-		["left"] = 610,
-		["width"] = 700,
-	},
-	["locked"] = true,
-	["directionUp"] = false,
 }
 AngryAssign_Config = {
 	["backdropColor"] = "0000003e",

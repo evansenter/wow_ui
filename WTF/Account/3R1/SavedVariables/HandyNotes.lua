@@ -6,10 +6,11 @@ HandyNotesDB = {
 		["Natal - Illidan"] = "Natal - Illidan",
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
+		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Evan - Illidan"] = "Evan - Illidan",
-		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
+		["Pandatal - Illidan"] = "Pandatal - Illidan",
 	},
 	["profiles"] = {
 		["Metal - Illidan"] = {
@@ -22,6 +23,8 @@ HandyNotesDB = {
 		},
 		["Ereinion - Dark Iron"] = {
 		},
+		["Centromere - Dark Iron"] = {
+		},
 		["Comet - Illidan"] = {
 			["icon_alpha_minimap"] = 0.75,
 			["icon_alpha"] = 0.75,
@@ -30,7 +33,7 @@ HandyNotesDB = {
 		},
 		["Evan - Illidan"] = {
 		},
-		["Centromere - Dark Iron"] = {
+		["Pandatal - Illidan"] = {
 		},
 	},
 }
@@ -41,10 +44,11 @@ HandyNotes_HandyNotesDB = {
 		["Natal - Illidan"] = "Natal - Illidan",
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
+		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Evan - Illidan"] = "Evan - Illidan",
-		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
+		["Pandatal - Illidan"] = "Pandatal - Illidan",
 	},
 	["profiles"] = {
 		["Metal - Illidan"] = {
@@ -57,13 +61,15 @@ HandyNotes_HandyNotesDB = {
 		},
 		["Ereinion - Dark Iron"] = {
 		},
+		["Centromere - Dark Iron"] = {
+		},
 		["Comet - Illidan"] = {
 		},
 		["Combustion - Illidan"] = {
 		},
 		["Evan - Illidan"] = {
 		},
-		["Centromere - Dark Iron"] = {
+		["Pandatal - Illidan"] = {
 		},
 	},
 }

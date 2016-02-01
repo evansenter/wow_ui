@@ -64,6 +64,7 @@ local CONTAINER_SCALE = CONTAINER_SCALE
 local CONTAINER_OFFSET_X, CONTAINER_OFFSET_Y = CONTAINER_OFFSET_X, CONTAINER_OFFSET_Y
 local CONTAINER_WIDTH = CONTAINER_WIDTH
 local CONTAINER_SPACING, VISIBLE_CONTAINER_SPACING = CONTAINER_SPACING, VISIBLE_CONTAINER_SPACING
+local LE_ITEM_QUALITY_POOR = LE_ITEM_QUALITY_POOR
 
 --Global variables that we don't cache, list them here for mikk's FindGlobals script
 -- GLOBALS: GameTooltip, BankFrame, ElvUIReagentBankFrameItem1, GuildBankFrame, ElvUIBags
@@ -273,6 +274,16 @@ function B:UpdateCountDisplay()
 	end
 end
 
+function B:UpdateAllBagSlots()
+	if E.private.bags.enable ~= true then return; end
+
+	for _, bagFrame in pairs(self.BagFrames) do
+		if bagFrame.UpdateAllSlots then
+			bagFrame:UpdateAllSlots()
+		end
+	end
+end
+
 function B:UpdateSlot(bagID, slotID)
 	if (self.Bags[bagID] and self.Bags[bagID].numSlots ~= GetContainerNumSlots(bagID)) or not self.Bags[bagID] or not self.Bags[bagID][slotID] then
 		return;
@@ -280,22 +291,32 @@ function B:UpdateSlot(bagID, slotID)
 
 	local slot, _ = self.Bags[bagID][slotID], nil;
 	local bagType = self.Bags[bagID].type;
-	local texture, count, locked, _, readable = GetContainerItemInfo(bagID, slotID);
+	
+	slot.name, slot.rarity = nil, nil;
+	local texture, count, locked, readable, noValue
+	texture, count, locked, slot.rarity, readable, _, _, _, noValue = GetContainerItemInfo(bagID, slotID);
+
 	local clink = GetContainerItemLink(bagID, slotID);
 
 	slot:Show();
 	if(slot.questIcon) then
 		slot.questIcon:Hide();
 	end
-
-	slot.name, slot.rarity = nil, nil;
+	
+	if (slot.JunkIcon) then
+		if (slot.rarity) and (slot.rarity == LE_ITEM_QUALITY_POOR and not noValue) and E.db.bags.junkIcon then
+			slot.JunkIcon:Show();
+		else
+			slot.JunkIcon:Hide()
+		end
+	end
 
 	slot.itemLevel:SetText("")
 	if B.ProfessionColors[bagType] then
 		slot:SetBackdropBorderColor(unpack(B.ProfessionColors[bagType]))
 	elseif (clink) then
 		local iLvl, itemEquipLoc
-		slot.name, _, slot.rarity, iLvl, _, _, _, _, itemEquipLoc = GetItemInfo(clink);
+		slot.name, _, _, iLvl, _, _, _, _, itemEquipLoc = GetItemInfo(clink);
 
 		local isQuestItem, questId, isActiveQuest = GetContainerItemQuestInfo(bagID, slotID);
 		local r, g, b
@@ -349,6 +370,7 @@ function B:UpdateSlot(bagID, slotID)
 		slot.cooldown:Hide()
 		slot.hasItem = nil;
 	end
+
 	slot.readable = readable;
 
 	SetItemButtonTexture(slot, texture);
@@ -438,8 +460,8 @@ function B:Layout(isBank)
 
 	if not f then return; end
 	local buttonSize = isBank and self.db.bankSize or self.db.bagSize;
-	local buttonSpacing = E.PixelMode and 2 or 4;
-	local containerWidth = (self.db.alignToChat == true and ((not isBank and E.db.chat.separateSizes and E.db.chat.panelWidthRight or E.db.chat.panelWidth) or E.db.chat.panelWidth) - (E.PixelMode and 6 or 10)) or (isBank and self.db.bankWidth) or self.db.bagWidth
+	local buttonSpacing = E.Border*2;
+	local containerWidth = (self.db.alignToChat == true and ((not isBank and E.db.chat.separateSizes and E.db.chat.panelWidthRight or E.db.chat.panelWidth) or E.db.chat.panelWidth) - (E.Border*14-E.Spacing*4)) or (isBank and self.db.bankWidth) or self.db.bagWidth
 	local numContainerColumns = floor(containerWidth / (buttonSize + buttonSpacing));
 	local holderWidth = ((buttonSize + buttonSpacing) * numContainerColumns) - buttonSpacing;
 	local numContainerRows = 0;
@@ -500,9 +522,9 @@ function B:Layout(isBank)
 			f.ContainerHolder[i]:Size(buttonSize)
 			f.ContainerHolder[i]:ClearAllPoints()
 			if (isBank and i == 2) or (not isBank and i == 1) then
-				f.ContainerHolder[i]:SetPoint('BOTTOMLEFT', f.ContainerHolder, 'BOTTOMLEFT', buttonSpacing, buttonSpacing)
+				f.ContainerHolder[i]:Point('BOTTOMLEFT', f.ContainerHolder, 'BOTTOMLEFT', buttonSpacing, buttonSpacing)
 			else
-				f.ContainerHolder[i]:SetPoint('LEFT', lastContainerButton, 'RIGHT', buttonSpacing, 0)
+				f.ContainerHolder[i]:Point('LEFT', lastContainerButton, 'RIGHT', buttonSpacing, 0)
 			end
 
 			lastContainerButton = f.ContainerHolder[i];
@@ -554,6 +576,15 @@ function B:Layout(isBank)
 						f.Bags[bagID][slotID].questIcon:Hide();
 					end
 
+					--.JunkIcon only exists for items created through ContainerFrameItemButtonTemplate
+					if not f.Bags[bagID][slotID].JunkIcon then
+						local JunkIcon = f.Bags[bagID][slotID]:CreateTexture(nil, "OVERLAY")
+						JunkIcon:SetAtlas("bags-junkcoin")
+						JunkIcon:Point("TOPLEFT", 1, 0)
+						JunkIcon:Hide()
+						f.Bags[bagID][slotID].JunkIcon = JunkIcon
+					end
+
 					f.Bags[bagID][slotID].iconTexture = _G[f.Bags[bagID][slotID]:GetName()..'IconTexture'];
 					f.Bags[bagID][slotID].iconTexture:SetInside(f.Bags[bagID][slotID]);
 					f.Bags[bagID][slotID].iconTexture:SetTexCoord(unpack(E.TexCoords));
@@ -564,7 +595,7 @@ function B:Layout(isBank)
 					f.Bags[bagID][slotID].slotID = slotID
 
 					f.Bags[bagID][slotID].itemLevel = f.Bags[bagID][slotID]:CreateFontString(nil, 'OVERLAY')
-					f.Bags[bagID][slotID].itemLevel:SetPoint("BOTTOMRIGHT", 0, 2)
+					f.Bags[bagID][slotID].itemLevel:Point("BOTTOMRIGHT", 0, 2)
 					f.Bags[bagID][slotID].itemLevel:FontTemplate(E.LSM:Fetch("font", E.db.bags.itemLevelFont), E.db.bags.itemLevelFontSize, E.db.bags.itemLevelFontOutline)
 
 					if(f.Bags[bagID][slotID].BattlepayItemTexture) then
@@ -576,6 +607,10 @@ function B:Layout(isBank)
 
 				f.Bags[bagID][slotID]:SetID(slotID);
 				f.Bags[bagID][slotID]:Size(buttonSize);
+
+				if f.Bags[bagID][slotID].JunkIcon then
+					f.Bags[bagID][slotID].JunkIcon:Size(buttonSize/2)
+				end
 
 				f:UpdateSlot(bagID, slotID);
 
@@ -793,7 +828,7 @@ function B:UpdateTokens()
 			button.icon:SetTexture(icon);
 
 			if self.db.currencyFormat == 'ICON_TEXT' then
-				button.text:SetText(name..': '..count);
+				button.text:SetText(E:AbbreviateString(name)..': '..count);
 			elseif self.db.currencyFormat == 'ICON' then
 				button.text:SetText(count);
 			end
@@ -929,7 +964,7 @@ end
 function B:ContructContainerFrame(name, isBank)
 	local f = CreateFrame('Button', name, E.UIParent);
 	f:SetTemplate('Transparent');
-	f:SetFrameStrata('DIALOG');
+	f:SetFrameStrata('HIGH');
 	f.UpdateSlot = B.UpdateSlot;
 	f.UpdateAllSlots = B.UpdateAllSlots;
 	f.UpdateBagSlots = B.UpdateBagSlots;
@@ -993,21 +1028,19 @@ function B:ContructContainerFrame(name, isBank)
 		f.reagentFrame.cover = CreateFrame("Button", nil, f.reagentFrame)
 		f.reagentFrame.cover:SetAllPoints(f.reagentFrame)
 		f.reagentFrame.cover:SetTemplate("Default", true)
-		f.reagentFrame.cover:SetFrameStrata("FULLSCREEN_DIALOG")
+		f.reagentFrame.cover:SetFrameLevel(f.reagentFrame:GetFrameLevel() + 10)
 
 		f.reagentFrame.cover.purchaseButton = CreateFrame("Button", nil, f.reagentFrame.cover)
 		f.reagentFrame.cover.purchaseButton:Height(20)
 		f.reagentFrame.cover.purchaseButton:Width(150)
 		f.reagentFrame.cover.purchaseButton:Point('CENTER', f.reagentFrame.cover, 'CENTER')
+		E:GetModule("Skins"):HandleButton(f.reagentFrame.cover.purchaseButton)
 		f.reagentFrame.cover.purchaseButton:SetFrameLevel(f.reagentFrame.cover.purchaseButton:GetFrameLevel() + 2)
-		f.reagentFrame.cover.purchaseButton:SetTemplate('Default', true)
 		f.reagentFrame.cover.purchaseButton.text = f.reagentFrame.cover.purchaseButton:CreateFontString(nil, 'OVERLAY')
 		f.reagentFrame.cover.purchaseButton.text:FontTemplate()
-		f.reagentFrame.cover.purchaseButton.text:SetPoint('CENTER')
+		f.reagentFrame.cover.purchaseButton.text:Point('CENTER')
 		f.reagentFrame.cover.purchaseButton.text:SetJustifyH('CENTER')
 		f.reagentFrame.cover.purchaseButton.text:SetText(L["Purchase"])
-		f.reagentFrame.cover.purchaseButton:SetScript("OnEnter", self.Tooltip_Show)
-		f.reagentFrame.cover.purchaseButton:SetScript("OnLeave", self.Tooltip_Hide)
 		f.reagentFrame.cover.purchaseButton:SetScript("OnClick", function()
 			PlaySound("igMainMenuOption");
 			StaticPopup_Show("CONFIRM_BUY_REAGENTBANK_TAB");
@@ -1015,7 +1048,7 @@ function B:ContructContainerFrame(name, isBank)
 
 		f.reagentFrame.cover.purchaseText = f.reagentFrame.cover:CreateFontString(nil, 'OVERLAY')
 		f.reagentFrame.cover.purchaseText:FontTemplate()
-		f.reagentFrame.cover.purchaseText:SetPoint("BOTTOM", f.reagentFrame.cover.purchaseButton, "TOP", 0, 10)
+		f.reagentFrame.cover.purchaseText:Point("BOTTOM", f.reagentFrame.cover.purchaseButton, "TOP", 0, 10)
 		f.reagentFrame.cover.purchaseText:SetText(REAGENTBANK_PURCHASE_TEXT)
 
 		--Bag Text
@@ -1028,7 +1061,7 @@ function B:ContructContainerFrame(name, isBank)
 		f.reagentToggle = CreateFrame("Button", name..'ReagentButton', f);
 		f.reagentToggle:SetSize(16 + E.Border, 16 + E.Border)
 		f.reagentToggle:SetTemplate()
-		f.reagentToggle:SetPoint("RIGHT", f.bagText, "LEFT", -5, E.Border * 2)
+		f.reagentToggle:Point("RIGHT", f.bagText, "LEFT", -5, E.Border * 2)
 		f.reagentToggle:SetNormalTexture("Interface\\ICONS\\INV_Enchant_DustArcane")
 		f.reagentToggle:GetNormalTexture():SetTexCoord(unpack(E.TexCoords))
 		f.reagentToggle:GetNormalTexture():SetInside()
@@ -1064,7 +1097,7 @@ function B:ContructContainerFrame(name, isBank)
 		f.sortButton = CreateFrame("Button", name..'SortButton', f);
 		f.sortButton:SetSize(16 + E.Border, 16 + E.Border)
 		f.sortButton:SetTemplate()
-		f.sortButton:SetPoint("RIGHT", f.reagentToggle, "LEFT", -5, 0)
+		f.sortButton:Point("RIGHT", f.reagentToggle, "LEFT", -5, 0)
 		f.sortButton:SetNormalTexture("Interface\\ICONS\\INV_Pet_Broom")
 		f.sortButton:GetNormalTexture():SetTexCoord(unpack(E.TexCoords))
 		f.sortButton:GetNormalTexture():SetInside()
@@ -1085,7 +1118,7 @@ function B:ContructContainerFrame(name, isBank)
 		f.depositButton = CreateFrame("Button", name..'DepositButton', f.reagentFrame);
 		f.depositButton:SetSize(16 + E.Border, 16 + E.Border)
 		f.depositButton:SetTemplate()
-		f.depositButton:SetPoint("RIGHT", f.sortButton, "LEFT", -5, 0)
+		f.depositButton:Point("RIGHT", f.sortButton, "LEFT", -5, 0)
 		f.depositButton:SetNormalTexture("Interface\\ICONS\\misc_arrowdown")
 		f.depositButton:GetNormalTexture():SetTexCoord(unpack(E.TexCoords))
 		f.depositButton:GetNormalTexture():SetInside()
@@ -1106,7 +1139,7 @@ function B:ContructContainerFrame(name, isBank)
 		f.bagsButton = CreateFrame("Button", name..'BagsButton', f.holderFrame);
 		f.bagsButton:SetSize(16 + E.Border, 16 + E.Border)
 		f.bagsButton:SetTemplate()
-		f.bagsButton:SetPoint("RIGHT", f.sortButton, "LEFT", -5, 0)
+		f.bagsButton:Point("RIGHT", f.sortButton, "LEFT", -5, 0)
 		f.bagsButton:SetNormalTexture("Interface\\Buttons\\Button-Backpack-Up")
 		f.bagsButton:GetNormalTexture():SetTexCoord(unpack(E.TexCoords))
 		f.bagsButton:GetNormalTexture():SetInside()
@@ -1130,7 +1163,7 @@ function B:ContructContainerFrame(name, isBank)
 		f.purchaseBagButton = CreateFrame('Button', nil, f.holderFrame)
 		f.purchaseBagButton:SetSize(16 + E.Border, 16 + E.Border)
 		f.purchaseBagButton:SetTemplate()
-		f.purchaseBagButton:SetPoint("RIGHT", f.bagsButton, "LEFT", -5, 0)
+		f.purchaseBagButton:Point("RIGHT", f.bagsButton, "LEFT", -5, 0)
 		f.purchaseBagButton:SetNormalTexture("Interface\\ICONS\\INV_Misc_Coin_01")
 		f.purchaseBagButton:GetNormalTexture():SetTexCoord(unpack(E.TexCoords))
 		f.purchaseBagButton:GetNormalTexture():SetInside()
@@ -1157,7 +1190,7 @@ function B:ContructContainerFrame(name, isBank)
 		f.editBox = CreateFrame('EditBox', name..'EditBox', f);
 		f.editBox:SetFrameLevel(f.editBox:GetFrameLevel() + 2);
 		f.editBox:CreateBackdrop('Default');
-		f.editBox.backdrop:SetPoint("TOPLEFT", f.editBox, "TOPLEFT", -20, 2)
+		f.editBox.backdrop:Point("TOPLEFT", f.editBox, "TOPLEFT", -20, 2)
 		f.editBox:Height(15);
 		f.editBox:Point('BOTTOMLEFT', f.holderFrame, 'TOPLEFT', (E.Border * 2) + 18, E.Border * 2 + 2);
 		f.editBox:Point('RIGHT', f.purchaseBagButton, 'LEFT', -5, 0);
@@ -1173,7 +1206,7 @@ function B:ContructContainerFrame(name, isBank)
 
 		f.editBox.searchIcon = f.editBox:CreateTexture(nil, 'OVERLAY')
 		f.editBox.searchIcon:SetTexture("Interface\\Common\\UI-Searchbox-Icon")
-		f.editBox.searchIcon:SetPoint("LEFT", f.editBox.backdrop, "LEFT", E.Border + 1, -1)
+		f.editBox.searchIcon:Point("LEFT", f.editBox.backdrop, "LEFT", E.Border + 1, -1)
 		f.editBox.searchIcon:SetSize(15, 15)
 
 	else
@@ -1188,7 +1221,7 @@ function B:ContructContainerFrame(name, isBank)
 		f.sortButton = CreateFrame("Button", name..'SortButton', f);
 		f.sortButton:SetSize(16 + E.Border, 16 + E.Border)
 		f.sortButton:SetTemplate()
-		f.sortButton:SetPoint("RIGHT", f.goldText, "LEFT", -5, E.Border * 2)
+		f.sortButton:Point("RIGHT", f.goldText, "LEFT", -5, E.Border * 2)
 		f.sortButton:SetNormalTexture("Interface\\ICONS\\INV_Pet_Broom")
 		f.sortButton:GetNormalTexture():SetTexCoord(unpack(E.TexCoords))
 		f.sortButton:GetNormalTexture():SetInside()
@@ -1204,7 +1237,7 @@ function B:ContructContainerFrame(name, isBank)
 		f.bagsButton = CreateFrame("Button", name..'BagsButton', f);
 		f.bagsButton:SetSize(16 + E.Border, 16 + E.Border)
 		f.bagsButton:SetTemplate()
-		f.bagsButton:SetPoint("RIGHT", f.sortButton, "LEFT", -5, 0)
+		f.bagsButton:Point("RIGHT", f.sortButton, "LEFT", -5, 0)
 		f.bagsButton:SetNormalTexture("Interface\\Buttons\\Button-Backpack-Up")
 		f.bagsButton:GetNormalTexture():SetTexCoord(unpack(E.TexCoords))
 		f.bagsButton:GetNormalTexture():SetInside()
@@ -1221,7 +1254,7 @@ function B:ContructContainerFrame(name, isBank)
 		f.vendorGraysButton = CreateFrame('Button', nil, f.holderFrame)
 		f.vendorGraysButton:SetSize(16 + E.Border, 16 + E.Border)
 		f.vendorGraysButton:SetTemplate()
-		f.vendorGraysButton:SetPoint("RIGHT", f.bagsButton, "LEFT", -5, 0)
+		f.vendorGraysButton:Point("RIGHT", f.bagsButton, "LEFT", -5, 0)
 		f.vendorGraysButton:SetNormalTexture("Interface\\ICONS\\INV_Misc_Coin_01")
 		f.vendorGraysButton:GetNormalTexture():SetTexCoord(unpack(E.TexCoords))
 		f.vendorGraysButton:GetNormalTexture():SetInside()
@@ -1238,7 +1271,7 @@ function B:ContructContainerFrame(name, isBank)
 		f.editBox = CreateFrame('EditBox', name..'EditBox', f);
 		f.editBox:SetFrameLevel(f.editBox:GetFrameLevel() + 2);
 		f.editBox:CreateBackdrop('Default');
-		f.editBox.backdrop:SetPoint("TOPLEFT", f.editBox, "TOPLEFT", -20, 2)
+		f.editBox.backdrop:Point("TOPLEFT", f.editBox, "TOPLEFT", -20, 2)
 		f.editBox:Height(15);
 		f.editBox:Point('BOTTOMLEFT', f.holderFrame, 'TOPLEFT', (E.Border * 2) + 18, E.Border * 2 + 2);
 		f.editBox:Point('RIGHT', f.vendorGraysButton, 'LEFT', -5, 0);
@@ -1254,7 +1287,7 @@ function B:ContructContainerFrame(name, isBank)
 
 		f.editBox.searchIcon = f.editBox:CreateTexture(nil, 'OVERLAY')
 		f.editBox.searchIcon:SetTexture("Interface\\Common\\UI-Searchbox-Icon")
-		f.editBox.searchIcon:SetPoint("LEFT", f.editBox.backdrop, "LEFT", E.Border + 1, -1)
+		f.editBox.searchIcon:Point("LEFT", f.editBox.backdrop, "LEFT", E.Border + 1, -1)
 		f.editBox.searchIcon:SetSize(15, 15)
 
 
@@ -1450,10 +1483,8 @@ function B:Initialize()
 
 	BankFrame:SetScale(0.00001)
 	BankFrame:SetAlpha(0)
-	BankFrame:SetPoint("TOPLEFT")
+	BankFrame:Point("TOPLEFT")
 	BankFrame:SetScript("OnShow", nil)
-
-	StackSplitFrame:SetFrameStrata('DIALOG')
 end
 
 function B:UpdateContainerFrameAnchors()
@@ -1510,21 +1541,21 @@ function B:UpdateContainerFrameAnchors()
 		frame:SetScale(1);
 		if ( index == 1 ) then
 			-- First bag
-			frame:SetPoint("BOTTOMRIGHT", RightChatToggleButton, "TOPRIGHT", 2, 2);
+			frame:Point("BOTTOMRIGHT", RightChatToggleButton, "TOPRIGHT", 2, 2);
 			bagsPerColumn = bagsPerColumn + 1
 		elseif ( freeScreenHeight < frame:GetHeight() ) then
 			-- Start a new column
 			column = column + 1;
 			freeScreenHeight = screenHeight - yOffset;
 			if column > 1 then
-				frame:SetPoint("BOTTOMRIGHT", ContainerFrame1.bags[(index - bagsPerColumn) - 1], "BOTTOMLEFT", -CONTAINER_SPACING, 0 );
+				frame:Point("BOTTOMRIGHT", ContainerFrame1.bags[(index - bagsPerColumn) - 1], "BOTTOMLEFT", -CONTAINER_SPACING, 0 );
 			else
-				frame:SetPoint("BOTTOMRIGHT", ContainerFrame1.bags[index - bagsPerColumn], "BOTTOMLEFT", -CONTAINER_SPACING, 0 );
+				frame:Point("BOTTOMRIGHT", ContainerFrame1.bags[index - bagsPerColumn], "BOTTOMLEFT", -CONTAINER_SPACING, 0 );
 			end
 			bagsPerColumn = 0
 		else
 			-- Anchor to the previous bag
-			frame:SetPoint("BOTTOMRIGHT", ContainerFrame1.bags[index - 1], "TOPRIGHT", 0, CONTAINER_SPACING);
+			frame:Point("BOTTOMRIGHT", ContainerFrame1.bags[index - 1], "TOPRIGHT", 0, CONTAINER_SPACING);
 			bagsPerColumn = bagsPerColumn + 1
 		end
 		freeScreenHeight = freeScreenHeight - frame:GetHeight() - VISIBLE_CONTAINER_SPACING;

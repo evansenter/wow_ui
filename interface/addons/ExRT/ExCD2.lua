@@ -12,6 +12,34 @@ local VExRT, VExRT_CDE = nil
 local module = ExRT.mod:New("ExCD2",ExRT.L.cd2)
 local ELib,L = ExRT.lib,ExRT.L
 
+-- SetTexture doesnt work for numbers vaules, use SetColorTexture instead. Check builds when it will be fixed or rewrite addon
+---- Quick alpha build fix
+local CreateFrame = CreateFrame
+if ExRT.is7 then
+	local _CreateFrame = CreateFrame
+	local function SetTexture(self,arg1,arg2,...)
+		if arg2 and type(arg2)=='number' and arg2 <= 1 then	--GetSpellTexture now return spellid (number) with more than 1 arg
+			return self:SetColorTexture(arg1,arg2,...)
+		else
+			return self:_SetTexture(arg1,arg2,...)
+		end
+	end
+	local function CreateTexture(self,...)
+		local ret1,ret2,ret3,ret4,ret5 = self:_CreateTexture(...)
+		ret1._SetTexture = ret1.SetTexture
+		ret1.SetTexture = SetTexture
+		return ret1,ret2,ret3,ret4,ret5
+	end
+	function CreateFrame(...)
+		local ret1,ret2,ret3,ret4,ret5 = _CreateFrame(...)
+		ret1._CreateTexture = ret1.CreateTexture
+		ret1.CreateTexture = CreateTexture 
+		return ret1,ret2,ret3,ret4,ret5
+	end
+end
+
+local is6 = not ExRT.is7
+
 module._C = {}
 module.db.spellDB = {
 {31821,	"PALADIN",	nil,			{31821,	180,	6},	nil,			nil,			},	--Аура благочестия
@@ -55,6 +83,34 @@ module.db.spellDB = {
 --{id,	class,		all specs,		spec1,			spec2={spellid,cd,duration},spec3,spec4		},	--name
 }
 
+if ExRT.is7 then
+module.db.spellDB = {
+{161642,"NO",		{161642,0,	0},	nil,			nil,			nil,			},	--Resurrecting [Raid Combat Res]
+{20484,	"DRUID",	{20484,	600,	0},	nil,			nil,			nil,			},	--Возрождение
+{20707,	"WARLOCK",	{20707,	600,	0},	nil,			nil,			nil,			},	--Камень души
+{61999,	"DEATHKNIGHT",	{61999,	600,	0},	nil,			nil,			nil,			},	--Воскрешение союзника
+{20608,	"SHAMAN",	{21169,	1800,	0},	nil,			nil,			nil,			},	--Реинкарнация
+{6940,	"PALADIN",	{6940,	240,	12},	nil,			nil,			nil,			},	--Длань жертвенности
+{633,	"PALADIN",	{633,	600,	0},	nil,			nil,			nil,			},	--Возложение рук
+{97462,	"WARRIOR",	nil,			{97462,	180,	10},	{97462,	180,	10},	nil,			},	--Ободряющий клич
+{114030,"WARRIOR",	{114030,120,	12},	nil,			nil,			nil,			},	--Бдительность
+{62618,	"PRIEST",	nil,			{62618,	180,	10},	nil,			nil,			},	--Слово силы: Барьер
+{64843,	"PRIEST",	nil,			nil,			{64843,	180,	8},	nil,			},	--Божественный гимн
+{15286,	"PRIEST",	nil,			nil,			nil,			{15286,	180,	15},	},	--Объятия вампира
+{47788,	"PRIEST",	nil,			nil,			{47788,	240,	10},	nil,			},	--Оберегающий дух
+{33206,	"PRIEST",	nil,			{33206,	300,	8},	nil,			nil,			},	--Подавление боли
+{51052,	"DEATHKNIGHT",	{51052,	120,	5},	nil,			nil,			nil,			},	--Зона антимагии
+{108199,"DEATHKNIGHT",	nil,			{108199,180,	0},	nil,			nil,			},	--Хватка Кровожада
+{98008,	"SHAMAN",	nil,			nil,			nil,			{98008,	180,	6},	},	--Тотем духовной связи
+{108280,"SHAMAN",	nil,			nil,			nil,			{108280,180,	10},	},	--Тотем целительного прилива
+{108281,"SHAMAN",	{108281,120,	10},	nil,			nil,			nil,			},	--Наставления предков
+{740,	"DRUID",	nil,			nil,			nil,			nil,{740,180,	8},	},	--Спокойствие
+{102342,"DRUID",	nil,			nil,			nil,			nil,{102342,90,	12},	},	--Железная кора
+{115310,"MONK",		nil,			nil,			nil,			{115310,180,	0},	},	--Восстановление сил
+{116849,"MONK",		nil,			nil,			nil,			{116849,180,	12},	},	--Исцеляющий кокон
+}
+end
+
 module.db.Cmirror = module._C
 module.db.dbCountDef = #module.db.spellDB
 module.db.findspecspells = {
@@ -93,8 +149,10 @@ module.db.findspecspells = {
 	[117418] = 269,[152174] = 269,[116740] = 269,
 	[115151] = 270,[115175] = 270,[116670] = 270,
 }
-module.db.classNames = {"WARRIOR","PALADIN","HUNTER","ROGUE","PRIEST","DEATHKNIGHT","SHAMAN","MAGE","WARLOCK","MONK","DRUID"}
-module.db.specByClass = {
+module.db.classNames = is6 and {"WARRIOR","PALADIN","HUNTER","ROGUE","PRIEST","DEATHKNIGHT","SHAMAN","MAGE","WARLOCK","MONK","DRUID"} or
+	{"WARRIOR","PALADIN","HUNTER","ROGUE","PRIEST","DEATHKNIGHT","SHAMAN","MAGE","WARLOCK","MONK","DRUID","DEMONHUNTER"}
+
+module.db.specByClass = is6 and {
 	["HUNTER"] = {0,253,254,255,},
 	["WARRIOR"] = {0,71,72,73,},
 	["PALADIN"] = {0,65,66,70,},
@@ -106,7 +164,21 @@ module.db.specByClass = {
 	["ROGUE"] = {0,259,260,261,},
 	["DRUID"] = {0,102,103,104,105,},
 	["DEATHKNIGHT"] = {0,250,251,252,},
+} or {
+	["WARRIOR"] = {0,71,72,73,},
+	["PALADIN"] = {0,65,66,70,},
+	["HUNTER"] = {0,253,254,255,},
+	["ROGUE"] = {0,259,260,261,},
+	["PRIEST"] = {0,256,257,258,},
+	["DEATHKNIGHT"] = {0,250,251,252,},
+	["SHAMAN"] = {0,262,263,264,},
+	["MAGE"] = {0,62,63,64,},
+	["WARLOCK"] = {0,265,266,267,},
+	["MONK"] = {0,268,269,270,},
+	["DRUID"] = {0,102,103,104,105,},
+	["DEMONHUNTER"] = {0,577,581},
 }
+
 module.db.specIcons = {
 	[62] = "Interface\\Icons\\Spell_Holy_MagicalSentry",
 	[63] = "Interface\\Icons\\Spell_Fire_FireBolt02",
@@ -142,6 +214,8 @@ module.db.specIcons = {
 	[268] = "Interface\\Icons\\spell_monk_brewmaster_spec",
 	[269] = "Interface\\Icons\\spell_monk_windwalker_spec",
 	[270] = "Interface\\Icons\\spell_monk_mistweaver_spec",
+	[577] = GetSpellTexture(185164),	--NYI
+	[581] = GetSpellTexture(203747),	--NYI	
 }
 module.db.specInDBase = {
 	[253] = 4,	[254] = 5,	[255] = 6,
@@ -155,6 +229,7 @@ module.db.specInDBase = {
 	[102] = 4,	[103] = 5,	[104] = 6,	[105] = 7,
 	[268] = 4,	[269] = 5,	[270] = 6,
 	[262] = 4,	[263] = 5,	[264] = 6,
+	[577] = 4,	[581] = 5,
 	[0] = 3,
 }
 
@@ -194,6 +269,8 @@ do
 		[268] = "MONKTANK",
 		[269] = "MONKDPS",
 		[270] = "MONKHEAL",
+		[577] = "DEMONHUNTERDPS",
+		[581] = "DEMONHUNTERTANK",
 		[0] = "NO",
 	}
 	module.db.specInLocalizate = setmetatable({},{__index = function (t,k)
@@ -1002,6 +1079,8 @@ module.db.itemsToSpells = {	-- Тринкеты вида [item ID] = spellID
 	[110007] = 165532,
 	[124224] = 184270,	--Mirror of the Blademaster
 	[124232] = 183929,	--Intuition's Gift
+	[133598] = 201414,
+	[133585] = 201371,
 }
 do
 	for itemID,spellID in pairs(module.db.itemsToSpells) do
@@ -3230,7 +3309,7 @@ do
 	local session_PetOwner = _db.session_PetOwner
 	local CDList = _db.cdsNav
 	
-	function module.main:COMBAT_LOG_EVENT_UNFILTERED(_,event,_,sourceGUID,sourceName,sourceFlags,_,destGUID,destName,destFlags,_,spellID,_,_,_,_,_,_,_,_,critical,_,_,_,multistrike)
+	function module.main:COMBAT_LOG_EVENT_UNFILTERED(_,_,event,_,sourceGUID,sourceName,sourceFlags,_,destGUID,destName,destFlags,_,spellID,_,_,_,_,_,_,_,_,critical,_,_,_,multistrike)
 		--dtime()
 		local func = eventsView[event]
 		if func then
@@ -7308,6 +7387,9 @@ module.db.allClassSpells = {
 	{102793,3,	{102793,60,	10},	nil,			nil,			nil,			nil,			},	--Ursol's Vortex
 	{102401,3,	{102401,15,	0},	nil,			nil,			nil,			nil,			},	--Wild Charge
 },
+["DEMONHUNTER"] = {
+
+},
 ["PET"] = {
 	{90355,	3,	"HUNTER"},
 	{160011,3,	"HUNTER"},
@@ -7375,6 +7457,8 @@ module.db.allClassSpells = {
 	{176460,3,	{176460,120,	20},	},	--Kyb
 	{183929,3,	{183929,90,	15},	},	--Intuition's Gift
 	{184270,3,	{184270,60,	20},	},	--Mirror of the Blademaster
+	{201414,3,	{201414,60,	0},	},	--Purified Shard of the Third Moon
+	{201371,3,	{201371,60,	0},	},	--Judgment of the Naaru
 },
 }
 ]]
@@ -7472,7 +7556,6 @@ local function InspectNext()
 end
 
 local function InspectQueue()
-	--if RaidInCombat() then return end
 	local n = GetNumGroupMembers() or 0
 	local timeAdded = GetTime()
 	for j=1,n do
@@ -7844,6 +7927,124 @@ do
 			end
 		end
 	end
+	
+	if ExRT.is7 then
+		function moduleInspect.main:INSPECT_READY(arg)
+			if not moduleInspect.db.inspectCleared then
+				ExRT.F.dprint('INSPECT_READY',arg)
+				local time_ = GetTime()
+				if arg and lastInspectTime[arg] and (time_ - lastInspectTime[arg]) < 0.2 then
+					return
+				end
+				if arg then
+					lastInspectTime[arg] = time_
+				end
+				local _,_,_,race,_,name,realm = GetPlayerInfoByGUID(arg)
+				if name then
+					if realm and realm ~= "" then name = name.."-"..realm end
+					local inspectedName = name
+					if UnitName("target") == DelUnitNameServer(name) then 
+						inspectedName = "target"
+					elseif not UnitName(name) then
+						return
+					end
+					moduleInspect:ResetTimer()
+					local _,class,classID = UnitClass(inspectedName)
+					
+					for i,slotID in ipairs(moduleInspect.db.itemsSlotTable) do
+						local link = GetInventoryItemLink(inspectedName, slotID)
+					end
+					ScheduleTimer(InspectItems, inspectForce and 0.8 or 1.5, name, inspectedName, moduleInspect.db.inspectID)
+		
+					if moduleInspect.db.inspectDB[name] and moduleInspect.db.inspectItemsOnly[name] then
+						moduleInspect.db.inspectItemsOnly[name] = nil
+						return
+					end
+					moduleInspect.db.inspectItemsOnly[name] = nil
+					
+					if moduleInspect.db.inspectDB[name] then
+						wipe(moduleInspect.db.inspectDB[name])
+					else
+						moduleInspect.db.inspectDB[name] = {}
+					end
+					local data = moduleInspect.db.inspectDB[name]
+					
+					data.spec = round( GetInspectSpecialization(inspectedName) )
+					if data.spec < 1000 then
+						VExRT.ExCD2.gnGUIDs[name] = data.spec
+					end
+					data.class = class
+					data.level = UnitLevel(inspectedName)
+					data.race = race
+					data.time = time()
+					data.GUID = UnitGUID(inspectedName)
+					for i=1,6 do
+						data[i] = 0
+					end
+					data.talentsIDs = {}
+					for i=0,20 do
+						local t_id,_,_,t = GetTalentInfo((i-i%3)/3+1,i%3+1,nil,true,inspectedName)
+						if t then
+							data[(i-i%3)/3+1] = i%3+1
+							data.talentsIDs[(i-i%3)/3+1] = t_id
+						end
+						
+						--------> ExCD2
+						local talentID = module.db.spell_talentsList[class] and module.db.spell_talentsList[class][i+1]
+						if talentID then
+							if type(talentID) == "table" then
+								for j,sID in ipairs(talentID) do
+									if t then
+										module.db.session_gGUIDs[name] = sID
+									else
+										module.db.session_gGUIDs[name] = -sID
+									end
+								end
+							else
+								if t then
+									module.db.session_gGUIDs[name] = talentID
+								else
+									module.db.session_gGUIDs[name] = -talentID
+								end
+							end
+						end
+						--------> /ExCD2
+					end
+					for i=1,7 do
+						local t_id,_,_,t = GetInspectPvpTalent(i)
+						if t then
+							data[7+i] = 0
+							data.talentsIDs[7+i] = t_id
+						end
+						
+						--------> ExCD2
+						local talentID = module.db.spell_talentsList[class] and module.db.spell_talentsList[class][i+1]
+						if talentID then
+							if type(talentID) == "table" then
+								for j,sID in ipairs(talentID) do
+									if t then
+										module.db.session_gGUIDs[name] = sID
+									else
+										module.db.session_gGUIDs[name] = -sID
+									end
+								end
+							else
+								if t then
+									module.db.session_gGUIDs[name] = talentID
+								else
+									module.db.session_gGUIDs[name] = -talentID
+								end
+							end
+						end
+						--------> /ExCD2
+					end
+					InspectItems(name, inspectedName, moduleInspect.db.inspectID)
+					
+					UpdateAllData() 	--------> ExCD2
+				end
+			end
+		end
+	end
 end
 
 do
@@ -7915,6 +8116,8 @@ end
 ------------- Legendary ring --------------
 -------------                --------------
 -------------------------------------------
+
+if not ExRT.isLegionContent then
 
 local module_legendary = ExRT.mod:New("LegendaryRing",ExRT.L.LegendaryRing,nil,true)
 
@@ -8018,4 +8221,6 @@ function module_legendary.main:COMBAT_LOG_EVENT_UNFILTERED(_,event,_,sourceGUID,
 		end
 		module_legendary_ring(sourceName,module_legendary.db.types[spellID])
 	end
+end
+
 end

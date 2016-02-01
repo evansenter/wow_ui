@@ -144,7 +144,7 @@ function UF:Update_Raid40Frames(frame, db)
 	frame.Portrait = db.portrait.style == '2D' and frame.Portrait2D or frame.Portrait3D
 	local BORDER = E.Border;
 	local SPACING = E.Spacing;
-	local SHADOW_SPACING = E.PixelMode and 3 or 4
+	local SHADOW_SPACING = (BORDER*3 - SPACING*2)
 	local UNIT_WIDTH = db.width
 	local UNIT_HEIGHT = db.height
 
@@ -305,7 +305,7 @@ function UF:Update_Raid40Frames(frame, db)
 				power:SetFrameStrata("MEDIUM")
 				power:SetFrameLevel(frame:GetFrameLevel() + 3)
 			else
-				power:Point("TOPLEFT", frame.Health.backdrop, "BOTTOMLEFT", BORDER, -(E.PixelMode and 0 or (BORDER + SPACING)))
+				power:Point("TOPLEFT", frame.Health.backdrop, "BOTTOMLEFT", BORDER, -(BORDER*3))
 				power:Point("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -(BORDER), BORDER)
 			end
 		else
@@ -343,12 +343,12 @@ function UF:Update_Raid40Frames(frame, db)
 				end
 				
 				portrait.backdrop:ClearAllPoints()
-				portrait.backdrop:SetPoint("TOPLEFT", frame, "TOPLEFT", POWERBAR_OFFSET, 0)
+				portrait.backdrop:Point("TOPLEFT", frame, "TOPLEFT", POWERBAR_OFFSET, 0)
 	
 				if USE_MINI_POWERBAR or USE_POWERBAR_OFFSET or not USE_POWERBAR or USE_INSET_POWERBAR then
-					portrait.backdrop:Point("BOTTOMRIGHT", frame.Health.backdrop, "BOTTOMLEFT", E.PixelMode and 1 or -SPACING, 0)
+					portrait.backdrop:Point("BOTTOMRIGHT", frame.Health.backdrop, "BOTTOMLEFT", BORDER - SPACING*3, 0)
 				else
-					portrait.backdrop:Point("BOTTOMRIGHT", frame.Power.backdrop, "BOTTOMLEFT", E.PixelMode and 1 or -SPACING, 0)
+					portrait.backdrop:Point("BOTTOMRIGHT", frame.Power.backdrop, "BOTTOMLEFT", BORDER - SPACING*3, 0)
 				end
 	
 				portrait:Point('BOTTOMLEFT', portrait.backdrop, 'BOTTOMLEFT', BORDER, BORDER)
@@ -381,7 +381,7 @@ function UF:Update_Raid40Frames(frame, db)
 				threat.glow:Point("BOTTOMLEFT", frame.Power.backdrop, "BOTTOMLEFT", -SHADOW_SPACING, -SHADOW_SPACING)
 				threat.glow:Point("BOTTOMRIGHT", frame.Power.backdrop, "BOTTOMRIGHT", SHADOW_SPACING, -SHADOW_SPACING)
 
-				if USE_MINI_POWERBAR or USE_POWERBAR_OFFSET or USE_INSET_POWERBAR then
+				if (not USE_POWERBAR) or USE_MINI_POWERBAR or USE_POWERBAR_OFFSET or USE_INSET_POWERBAR then
 					threat.glow:Point("BOTTOMLEFT", frame.Health.backdrop, "BOTTOMLEFT", -SHADOW_SPACING, -SHADOW_SPACING)
 					threat.glow:Point("BOTTOMRIGHT", frame.Health.backdrop, "BOTTOMRIGHT", SHADOW_SPACING, -SHADOW_SPACING)
 				end
@@ -396,7 +396,7 @@ function UF:Update_Raid40Frames(frame, db)
 				point = point:gsub("ICON", "")
 
 				threat.texIcon:ClearAllPoints()
-				threat.texIcon:SetPoint(point, frame.Health, point)
+				threat.texIcon:Point(point, frame.Health, point)
 			end
 		elseif frame:IsElementEnabled('Threat') then
 			frame:DisableElement('Threat')
@@ -445,9 +445,9 @@ function UF:Update_Raid40Frames(frame, db)
 		local rows = db.buffs.numrows
 
 		if USE_POWERBAR_OFFSET then
-			buffs:SetWidth(UNIT_WIDTH - POWERBAR_OFFSET)
+			buffs:Width(UNIT_WIDTH - POWERBAR_OFFSET)
 		else
-			buffs:SetWidth(UNIT_WIDTH)
+			buffs:Width(UNIT_WIDTH)
 		end
 
 		buffs.forceShow = frame.forceShowAuras
@@ -455,13 +455,13 @@ function UF:Update_Raid40Frames(frame, db)
 		buffs.size = db.buffs.sizeOverride ~= 0 and db.buffs.sizeOverride or ((((buffs:GetWidth() - (buffs.spacing*(buffs.num/rows - 1))) / buffs.num)) * rows)
 
 		if db.buffs.sizeOverride and db.buffs.sizeOverride > 0 then
-			buffs:SetWidth(db.buffs.perrow * db.buffs.sizeOverride)
+			buffs:Width(db.buffs.perrow * db.buffs.sizeOverride)
 		end
 
 		local x, y = E:GetXYOffset(db.buffs.anchorPoint)
 		local attachTo = self:GetAuraAnchorFrame(frame, db.buffs.attachTo)
 
-		buffs:Point(E.InversePoints[db.buffs.anchorPoint], attachTo, db.buffs.anchorPoint, x + db.buffs.xOffset, y + db.buffs.yOffset + (E.PixelMode and (db.buffs.anchorPoint:find('TOP') and -1 or 1) or 0))
+		buffs:Point(E.InversePoints[db.buffs.anchorPoint], attachTo, db.buffs.anchorPoint, x + db.buffs.xOffset, y + db.buffs.yOffset)
 		buffs:Height(buffs.size * rows)
 		buffs["growth-y"] = db.buffs.anchorPoint:find('TOP') and 'UP' or 'DOWN'
 		buffs["growth-x"] = db.buffs.anchorPoint == 'LEFT' and 'LEFT' or  db.buffs.anchorPoint == 'RIGHT' and 'RIGHT' or (db.buffs.anchorPoint:find('LEFT') and 'RIGHT' or 'LEFT')
@@ -481,9 +481,9 @@ function UF:Update_Raid40Frames(frame, db)
 		local rows = db.debuffs.numrows
 
 		if USE_POWERBAR_OFFSET then
-			debuffs:SetWidth(UNIT_WIDTH - POWERBAR_OFFSET)
+			debuffs:Width(UNIT_WIDTH - POWERBAR_OFFSET)
 		else
-			debuffs:SetWidth(UNIT_WIDTH)
+			debuffs:Width(UNIT_WIDTH)
 		end
 
 		debuffs.forceShow = frame.forceShowAuras
@@ -491,7 +491,7 @@ function UF:Update_Raid40Frames(frame, db)
 		debuffs.size = db.debuffs.sizeOverride ~= 0 and db.debuffs.sizeOverride or ((((debuffs:GetWidth() - (debuffs.spacing*(debuffs.num/rows - 1))) / debuffs.num)) * rows)
 
 		if db.debuffs.sizeOverride and db.debuffs.sizeOverride > 0 then
-			debuffs:SetWidth(db.debuffs.perrow * db.debuffs.sizeOverride)
+			debuffs:Width(db.debuffs.perrow * db.debuffs.sizeOverride)
 		end
 
 		local x, y = E:GetXYOffset(db.debuffs.anchorPoint)
@@ -520,6 +520,7 @@ function UF:Update_Raid40Frames(frame, db)
 			local rdebuffsFont = UF.LSM:Fetch("font", db.rdebuffs.font)
 			frame:EnableElement('RaidDebuffs')
 
+			rdebuffs.forceShow = frame.forceShowAuras
 			rdebuffs:Size(db.rdebuffs.size)
 			rdebuffs:Point('BOTTOM', frame, 'BOTTOM', db.rdebuffs.xOffset, db.rdebuffs.yOffset)
 			
@@ -633,7 +634,7 @@ function UF:Update_Raid40Frames(frame, db)
 			GPS.onMouseOver = db.GPSArrow.onMouseOver
 			GPS.outOfRange = db.GPSArrow.outOfRange
 
-			GPS:SetPoint("CENTER", frame, "CENTER", db.GPSArrow.xOffset, db.GPSArrow.yOffset)
+			GPS:Point("CENTER", frame, "CENTER", db.GPSArrow.xOffset, db.GPSArrow.yOffset)
 		else
 			if frame:IsElementEnabled('GPS') then
 				frame:DisableElement('GPS')
@@ -707,7 +708,7 @@ function UF:Update_Raid40Frames(frame, db)
 			frame:Tag(frame.customTexts[objectName], objectDB.text_format or '')
 			frame.customTexts[objectName]:SetJustifyH(objectDB.justifyH or 'CENTER')
 			frame.customTexts[objectName]:ClearAllPoints()
-			frame.customTexts[objectName]:SetPoint(objectDB.justifyH or 'CENTER', frame, objectDB.justifyH or 'CENTER', objectDB.xOffset, objectDB.yOffset)
+			frame.customTexts[objectName]:Point(objectDB.justifyH or 'CENTER', frame, objectDB.justifyH or 'CENTER', objectDB.xOffset, objectDB.yOffset)
 		end
 	end
 

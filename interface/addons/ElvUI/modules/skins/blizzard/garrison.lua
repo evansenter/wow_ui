@@ -1,6 +1,12 @@
 local E, L, V, P, G = unpack(select(2, ...)); --Inport: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local S = E:GetModule('Skins')
 
+--Cache global variables
+--Lua functions
+local unpack = unpack
+--WoW API / Variables
+local CreateFrame = CreateFrame
+
 local function LoadSkin()
 	if E.private.skins.blizzard.enable ~= true or E.private.skins.blizzard.garrison ~= true then return end
 
@@ -135,7 +141,7 @@ local function LoadSkin()
 	end
 
 	GarrisonMissionFrameTab1:ClearAllPoints()
-	GarrisonMissionFrameTab1:SetPoint("BOTTOMLEFT", 11, -40)
+	GarrisonMissionFrameTab1:Point("BOTTOMLEFT", 11, -40)
 
 	-- Follower list
 	local FollowerList = GarrisonMissionFrame.FollowerList
@@ -197,7 +203,7 @@ local function LoadSkin()
 	S:HandleTab(GarrisonLandingPageTab2)
 	S:HandleTab(GarrisonLandingPageTab3)
 	GarrisonLandingPageTab1:ClearAllPoints()
-	GarrisonLandingPageTab1:SetPoint("TOPLEFT", GarrisonLandingPage, "BOTTOMLEFT", 70, 2)
+	GarrisonLandingPageTab1:Point("TOPLEFT", GarrisonLandingPage, "BOTTOMLEFT", 70, 2)
 
 	-- Landing page: Report
 	local Report = GarrisonLandingPage.Report

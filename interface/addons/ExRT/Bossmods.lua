@@ -2,10 +2,8 @@ local GlobalAddonName, ExRT = ...
 
 local UnitAura, UnitIsDeadOrGhost, UnitIsConnected, UnitPower, UnitGUID, UnitName, UnitPosition, UnitInRange, UnitIsUnit, UnitClass = UnitAura, UnitIsDeadOrGhost, UnitIsConnected, UnitPower, UnitGUID, UnitName, UnitPosition, UnitInRange, UnitIsUnit, UnitClass
 local GetTime, tonumber, tostring, sort, wipe, PI, pairs, type = GetTime, tonumber, tostring, table.sort, table.wipe, PI, pairs, type
-local cos, sin, sqrt, acos, abs, floor, min, max, GGetPlayerMapPosition, GetPlayerFacing, GetNumGroupMembers = math.cos, math.sin, math.sqrt, acos, math.abs, math.floor, math.min, math.max, GetPlayerMapPosition, GetPlayerFacing, GetNumGroupMembers
-local atan = atan
+local cos, sin, sqrt, acos, abs, floor, min, max, atan, GGetPlayerMapPosition, GetPlayerFacing, GetNumGroupMembers = math.cos, math.sin, math.sqrt, acos, math.abs, math.floor, math.min, math.max, atan, GetPlayerMapPosition, GetPlayerFacing, GetNumGroupMembers
 local ClassColorNum, SetMapToCurrentZone, GetCurrentMapAreaID, GetCurrentMapDungeonLevel, GetRaidRosterInfo, GetMobID, RAID_CLASS_COLORS, table_len, GetUnitTypeByGUID, delUnitNameServer = ExRT.F.classColorNum, SetMapToCurrentZone, GetCurrentMapAreaID, GetCurrentMapDungeonLevel, GetRaidRosterInfo, ExRT.F.GUIDtoID, RAID_CLASS_COLORS, ExRT.F.table_len, ExRT.F.GetUnitTypeByGUID, ExRT.F.delUnitNameServer
-local YES, NO = YES, NO --prevent rangom changes
 
 local VExRT = nil
 
@@ -2161,7 +2159,7 @@ function Iskar:Load()
 	
 	local function OnAuraEvent(self,_,unit)
 		local name = self.unitID
-		if not name or UnitName(name) ~= UnitName(unit or "?") then
+		if not name or not UnitIsUnit(name,unit or "?") then
 			return
 		end
 		local isRadiance,_,_,radianceCount = UnitAura(name,debuffName_radiance,nil,"HARMFUL")
@@ -2586,7 +2584,7 @@ function Iskar:Load()
 			local name,_,subgroup,_,_,class,_,_,_,_,_,role = GetRaidRosterInfo(i)
 			if name and subgroup <= gMax then
 				roster[subgroup] = roster[subgroup] or {}
-				roster[subgroup][ #roster[subgroup] + 1 ] = {name,class,role}
+				roster[subgroup][ #roster[subgroup] + 1 ] = {name,class,role,'raid'..i}
 			end
 		end
 		for i=1,gMax do
@@ -2600,7 +2598,7 @@ function Iskar:Load()
 					if name then
 						unitFrame.unitID = name[1]
 						unitFrame:UnregisterAllEvents()
-						unitFrame:RegisterEvent("UNIT_AURA")
+						--unitFrame:RegisterUnitEvent("UNIT_AURA",name[4])
 						local cR,cG,cB = ExRT.F.classColorNum(name[2])
 						if VExRT.Bossmods.IskarDisableClassColors then
 							cR,cG,cB = .1,.1,.1
@@ -2691,6 +2689,8 @@ function Iskar:Load()
 	local IsFelBombCasting = nil
 	local function IsFelBombCasting_Reset() IsFelBombCasting = nil end
 	
+	local updateSch = nil
+	
 	frame:SetScript("OnEvent",function(self,event,...)
 		if event == "COMBAT_LOG_EVENT_UNFILTERED" then
 			local _,cleu_event,_,_,_,_,_,destGUID,_,_,_,spellID = ...
@@ -2733,6 +2733,13 @@ function Iskar:Load()
 				elseif spellID == 181824 then
 					IsPhantasmalCorruption = true
 					UpdateFrames()
+				elseif spellID == 185239 or spellID == 181957 or spellID == 181824 or spellID == 185510 or spellID == 179219 or spellID == 181753 or spellID == 179202 then	--NEW
+					if not updateSch then
+						updateSch = C_Timer.NewTimer(0.05,function()
+							updateSch = nil
+							UpdateFrames()
+						end)
+					end
 				end
 			elseif cleu_event == "SPELL_AURA_REMOVED" then
 				if spellID == 181753 then
@@ -2744,6 +2751,21 @@ function Iskar:Load()
 					end
 				elseif spellID == 181824 then
 					IsPhantasmalCorruption = nil
+					UpdateFrames()
+				elseif spellID == 185239 or spellID == 181957 or spellID == 181824 or spellID == 185510 or spellID == 179219 or spellID == 181753 or spellID == 179202 then	--NEW
+					if not updateSch then
+						updateSch = C_Timer.NewTimer(0.05,function()
+							updateSch = nil
+							UpdateFrames()
+						end)
+					end
+				end
+			elseif cleu_event == "SPELL_AURA_APPLIED_DOSE" then
+				if spellID == 185239 then	--NEW
+					UpdateFrames()
+				end
+			elseif cleu_event == "SPELL_AURA_REMOVED_DOSE" then
+				if spellID == 185239 then	--NEW
 					UpdateFrames()
 				end
 			elseif cleu_event == "UNIT_DIED" then
@@ -6075,7 +6097,7 @@ local function GetSpellText(spellID)
 		if not name then
 			return ""
 		end
-		return "|T"..abilityIcon..":0|t"..name
+		return "|T"..(abilityIcon or "")..":0|t"..name
 	end
 	local spellName,_,spellTexture = GetSpellInfo(spellID)
 	if not spellName then

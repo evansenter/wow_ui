@@ -2,15 +2,18 @@
 DeathNoteDB = {
 	["profileKeys"] = {
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
+		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Metal - Illidan"] = "Metal - Illidan",
-		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
+		["Evan - Illidan"] = "Evan - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Natal - Illidan"] = "Natal - Illidan",
-		["Evan - Illidan"] = "Evan - Illidan",
-		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Pandatal - Illidan"] = "Pandatal - Illidan",
+		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
 	},
 	["profiles"] = {
 		["Colton - Dark Iron"] = {
+		},
+		["Combustion - Illidan"] = {
 		},
 		["Metal - Illidan"] = {
 			["display_filters"] = {
@@ -20,14 +23,14 @@ DeathNoteDB = {
 			},
 			["display"] = {
 				["y"] = 91.5,
-				["h"] = 681,
 				["x"] = -128.000244140625,
+				["h"] = 681,
 				["namelist_width"] = 245.000289916992,
 				["w"] = 775.999877929688,
 				["namelist"] = 2,
 			},
 		},
-		["Ereinion - Dark Iron"] = {
+		["Evan - Illidan"] = {
 		},
 		["Comet - Illidan"] = {
 			["display_filters"] = {
@@ -39,26 +42,26 @@ DeathNoteDB = {
 			},
 			["display"] = {
 				["w"] = 1013.00042724609,
-				["y"] = -30.0003356933594,
-				["h"] = 621.999938964844,
+				["y"] = 77.9998168945313,
 				["namelist"] = 2,
-				["x"] = 59.5002746582031,
+				["h"] = 621.999938964844,
+				["x"] = -81.4995422363281,
 			},
 			["max_deaths"] = 75,
 		},
 		["Natal - Illidan"] = {
 			["display_filters"] = {
-				["buff_gains"] = false,
 				["buff_fades"] = false,
+				["buff_gains"] = false,
 			},
 			["display"] = {
 				["namelist"] = 2,
 			},
 			["keep_data"] = false,
 		},
-		["Evan - Illidan"] = {
+		["Pandatal - Illidan"] = {
 		},
-		["Combustion - Illidan"] = {
+		["Ereinion - Dark Iron"] = {
 		},
 	},
 }

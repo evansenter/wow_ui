@@ -1,21 +1,27 @@
---	23:18 03.11.2015
+--	0:30 29.01.2016
 
 --[[
 
-TODO:
+Added German Localization [thanks Gyffes]
+Bossmods: Iskar: try to reduce lag for some players
+InspectViewer: added option for marking items without max valor upgrades [thanks Cubetrace]
+Note: quick way to auto note per boss. Add "{e:EncounterID}" or "{e:EncounterName}" (without quotes) at start of note, that will be shared with raid at start of the fight. (ex. "{e:Archimonde}Run around and cry"). Commands "{ep:EncounterID}" and "{ep:EncounterName}" for personal note.
+Loot to chat: added option "Show ilvl"
+Raid cooldowns: added new heirlooms trinkets
 
-3555:
-Bossmods: Added button for second gorefiend bossmod (with click to target); added macro for it "/rt gorefiend2"
-Raid Inspect: New filter: Hide players who are not in the raid
-Raid Inspect: New filter: By sets
-Minor fixes
+Legion Alpha: this version works on both clients: live 6.2.3+ and legion alpha 7.0
+Legion Alpha: modules Classes and Raid loot will be removed
+
+TODO:
+Legion Alpha: Add 1 parameter for UnitAura in BossWatcher.lua (15 - nameplateShowAll)
+
 
 ]]
 local GlobalAddonName, ExRT = ...
 
-ExRT.V = 3555
+ExRT.V = 3570
 ExRT.T = "R"
-ExRT.BETA = false
+ExRT.is7 = false		--> Legion (7.x) Client
 
 ExRT.OnUpdate = {}		--> таймеры, OnUpdate функции
 ExRT.Slash = {}			--> функции вызова из коммандной строки
@@ -24,7 +30,6 @@ ExRT.MiniMapMenu = {}		--> изменение меню кнопки на мин�
 ExRT.Modules = {}		--> список всех модулей
 ExRT.ModulesLoaded = {}		--> список загруженных модулей [для Dev & Advanced]
 ExRT.ModulesOptions = {}
-ExRT.CLEU = {}			--> лист CLEU функций, для обработки
 ExRT.Debug = {}
 
 ExRT.A = {}			--> ссылки на все модули
@@ -46,6 +51,40 @@ do
 	local expansion,majorPatch,minorPatch = (version or "1.0.0"):match("^(%d+)%.(%d+)%.(%d+)")
 	ExRT.clientVersion = (expansion or 0) * 10000 + (majorPatch or 0) * 100 + (minorPatch or 0)
 end
+if ExRT.clientVersion >= 70000 then
+	ExRT.is7 = true
+	--ExRT.alwaysRU = true	--Only for beta !!!
+	if UnitLevel'player' > 100 then
+		ExRT.isLegionContent = true
+	end
+end
+-------------> smart DB <-------------
+ExRT.SDB = {}
+
+do
+	local realmKey = GetRealmName() or ""
+	local charName = UnitName'player' or ""
+	realmKey = realmKey:gsub(" ","")
+	ExRT.SDB.realmKey = realmKey
+	ExRT.SDB.charKey = charName .. "-" .. realmKey
+	ExRT.SDB.charName = charName
+end
+
+-------------> upvalues <-------------
+local pcall, unpack, pairs = pcall, unpack, pairs
+local GetTime, IsEncounterInProgress = GetTime, IsEncounterInProgress
+local SendAddonMessage, strsplit = SendAddonMessage, strsplit
+local C_Timer_NewTicker = C_Timer.NewTicker
+
+if ExRT.T == "D" then
+	pcall = function(func,...)
+		func(...)
+		return true
+	end
+end
+
+ExRT.NULL = {}
+ExRT.NULLfunc = function() end
 ---------------> Modules <---------------
 ExRT.mod = {}
 ExRT.mod.__index = ExRT.mod
@@ -92,6 +131,8 @@ do
 		self.main.events = {}
 		self.main:SetScript("OnEvent",ExRT.mod.Event)
 		
+		self.main.ADDON_LOADED = ExRT.NULLfunc	--Prevent error for modules without it, not really needed
+		
 		if ExRT.T == "D" or ExRT.T == "DU" then
 			self.main.eventsCounter = {}
 			self.main:HookScript("OnEvent",ExRT.mod.HookEvent)
@@ -128,52 +169,35 @@ function ExRT.mod:HookEvent(event)
 	self.eventsCounter[event] = self.eventsCounter[event] and self.eventsCounter[event] + 1 or 1
 end
 
-do
-	local CLEU_mirror = {}
-	local function RestructCLEU()
-		local module_Encounter = nil	--Fix Encounter module. Unregister CLEU during CLEU cicle cause error. Add this module to last pos in ExRT.CLEU
-		for moduleName,func in pairs(CLEU_mirror) do
-			if type(func)=="function" then
-				if moduleName ~= "Encounter" then
-					ExRT.CLEU[#ExRT.CLEU + 1] = func
-				else
-					module_Encounter = func
-				end
-			end
-		end
-		if module_Encounter then
-			ExRT.CLEU[#ExRT.CLEU + 1] = module_Encounter
-		end
-	end
 	
-	function ExRT.mod:RegisterEvents(...)
-		for i=1,select("#", ...) do
-			local event = select(i,...)
-			if event ~= "COMBAT_LOG_EVENT_UNFILTERED" then
-				self.main:RegisterEvent(event)
-			else
-				wipe(ExRT.CLEU)
-				CLEU_mirror[ self.name ] = self.main.COMBAT_LOG_EVENT_UNFILTERED
-				RestructCLEU()
-			end
-			self.main.events[event] = true
-			ExRT.F.dprint(self.name,'RegisterEvent',event)
+function ExRT.mod:RegisterEvents(...)
+	for i=1,select("#", ...) do
+		local event = select(i,...)
+		if event ~= "COMBAT_LOG_EVENT_UNFILTERED" then
+			self.main:RegisterEvent(event)
+		else
+			if not self.CLEU then self.CLEU = CreateFrame("Frame") end
+			self.CLEU:SetScript("OnEvent",self.main.COMBAT_LOG_EVENT_UNFILTERED)
+			self.CLEU:RegisterEvent('COMBAT_LOG_EVENT_UNFILTERED')
 		end
+		self.main.events[event] = true
+		ExRT.F.dprint(self.name,'RegisterEvent',event)
 	end
-	
-	function ExRT.mod:UnregisterEvents(...)
-		for i=1,select("#", ...) do
-			local event = select(i,...)
-			if event ~= "COMBAT_LOG_EVENT_UNFILTERED" then
-				self.main:UnregisterEvent(event)
-			else
-				wipe(ExRT.CLEU)
-				CLEU_mirror[ self.name ] = nil
-				RestructCLEU()
+end
+
+function ExRT.mod:UnregisterEvents(...)
+	for i=1,select("#", ...) do
+		local event = select(i,...)
+		if event ~= "COMBAT_LOG_EVENT_UNFILTERED" then
+			self.main:UnregisterEvent(event)
+		else
+			if self.CLEU then
+				self.CLEU:SetScript("OnEvent",nil)
+				self.CLEU:UnregisterAllEvents()
 			end
-			self.main.events[event] = nil
-			ExRT.F.dprint(self.name,'UnregisterEvent',event)
 		end
+		self.main.events[event] = nil
+		ExRT.F.dprint(self.name,'UnregisterEvent',event)
 	end
 end
 
@@ -273,36 +297,6 @@ do
 	end
 end
 
--------------> smart DB <-------------
-
-ExRT.SDB = {}
-
-do
-	local realmKey = GetRealmName() or ""
-	local charName = UnitName'player' or ""
-	realmKey = realmKey:gsub(" ","")
-	ExRT.SDB.realmKey = realmKey
-	ExRT.SDB.charKey = charName .. "-" .. realmKey
-	ExRT.SDB.charName = charName
-end
-
--------------> upvalues <-------------
-
-local pcall, unpack, pairs = pcall, unpack, pairs
-local GetTime, IsEncounterInProgress = GetTime, IsEncounterInProgress
-local SendAddonMessage, strsplit = SendAddonMessage, strsplit
-local C_Timer_NewTimer, C_Timer_NewTicker = C_Timer.NewTimer, C_Timer.NewTicker
-
-if ExRT.T == "D" then
-	pcall = function(func,...)
-		func(...)
-		return true
-	end
-end
-
-ExRT.NULL = {}
-ExRT.NULLfunc = function() end
-
 ---------------> Mods <---------------
 
 ExRT.F = {}
@@ -317,7 +311,8 @@ do
 	function ExRT.F.ScheduleTimer(func, delay, ...)
 		local self = nil
 		if delay > 0 then
-			self = C_Timer_NewTimer(delay,TimerFunc)
+			self = C_Timer_NewTicker(delay,TimerFunc,1)
+			-- Avoid C_Timer.NewTimer here cuz it runs ticker with 1 iteration anyway
 		else
 			self = C_Timer_NewTicker(-delay,TimerFunc)
 		end
@@ -443,8 +438,10 @@ SlashCmdList["exrtSlash"] = function (arg)
 	elseif argL == "quit" then
 		for mod,data in pairs(ExRT.A) do
 			data.main:UnregisterAllEvents()
+			if data.CLEU then
+				data.CLEU:UnregisterAllEvents()
+			end
 		end
-		ExRT.CLEUframe:UnregisterAllEvents()
 		ExRT.frame:UnregisterAllEvents()
 		ExRT.frame:SetScript("OnUpdate",nil)
 		print("ExRT Disabled")
@@ -524,31 +521,12 @@ ExRT.frame:SetScript("OnEvent",function (self, event, ...)
 		
 		ExRT.F.ScheduleTimer(function()
 			ExRT.frame:SetScript("OnUpdate", ExRT.frame.OnUpdate)
-			ExRT.CLEUframe:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
 		end,1)
 		self:UnregisterEvent("ADDON_LOADED")
 
 		return true	
 	end
 end)
-
-ExRT.CLEUframe = CreateFrame("Frame")
-do
-	local CLEU = ExRT.CLEU
-	ExRT.CLEUframe:SetScript("OnEvent",function (self, event, ...)
-		for i=1,#CLEU do
-			local func = CLEU[i]
-			if func then
-				func(self,...)
-			end
-		end
-	end)
-	
-	if ExRT.T == "D" then
-		ExRT.CLEUframe.eventsCounter = 0
-		ExRT.CLEUframe:HookScript("OnEvent",function(self) self.eventsCounter = self.eventsCounter + 1 end)
-	end
-end
 
 do
 	local encounterTime,isEncounter = 0,nil
@@ -564,12 +542,6 @@ do
 				isEncounter = nil
 			end
 			
-			--[[
-			for _,mod in pairs(ExRT_OnUpdate) do
-				--pcall(mod.timer,self,self.tmr)	-- BE CARE ABOUT IT
-				mod:timer(frameElapsed)
-			end
-			]]
 			for i=1,#ExRT_OnUpdate do
 				local mod = ExRT_OnUpdate[i]
 				if mod then

@@ -1,6 +1,13 @@
 local E, L, V, P, G = unpack(select(2, ...)); --Inport: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local S = E:GetModule('Skins')
 
+--Cache global variables
+--Lua functions
+local unpack, select = unpack, select
+--WoW API / Variables
+local GetAuctionSellItemInfo = GetAuctionSellItemInfo
+local BAG_ITEM_QUALITY_COLORS = BAG_ITEM_QUALITY_COLORS
+
 local function LoadSkin()
 	if E.private.skins.blizzard.enable ~= true or E.private.skins.blizzard.auctionhouse ~= true then return end
 	S:HandleCloseButton(AuctionFrameCloseButton)
@@ -47,7 +54,7 @@ local function LoadSkin()
 	AuctionProgressBarIcon:SetParent(backdrop)
 
 	AuctionProgressBarText:ClearAllPoints()
-	AuctionProgressBarText:SetPoint("CENTER")
+	AuctionProgressBarText:Point("CENTER")
 
 	AuctionProgressBar:StripTextures()
 	AuctionProgressBar:CreateBackdrop("Default")
@@ -58,9 +65,9 @@ local function LoadSkin()
 	S:HandleNextPrevButton(BrowsePrevPageButton)
 
 	BrowseNextPageButton:ClearAllPoints()
-	BrowseNextPageButton:SetPoint("TOPRIGHT", AuctionFrameBrowse, "TOPRIGHT", 70, -60)
+	BrowseNextPageButton:Point("TOPRIGHT", AuctionFrameBrowse, "TOPRIGHT", 70, -60)
 	BrowsePrevPageButton:ClearAllPoints()
-	BrowsePrevPageButton:SetPoint("TOPLEFT", AuctionFrameBrowse, "TOPLEFT", 658, -60)
+	BrowsePrevPageButton:Point("TOPLEFT", AuctionFrameBrowse, "TOPLEFT", 658, -60)
 
 	S:HandleCheckBox(ExactMatchCheckButton)
 	local buttons = {
@@ -200,7 +207,7 @@ local function LoadSkin()
 			_G["BrowseButton"..i.."Highlight"] = button:GetHighlightTexture()
 			button:GetHighlightTexture():ClearAllPoints()
 			button:GetHighlightTexture():Point("TOPLEFT", icon, "TOPRIGHT", 2, 0)
-			button:GetHighlightTexture():SetPoint("BOTTOMRIGHT", button, "BOTTOMRIGHT", -2, 5)
+			button:GetHighlightTexture():Point("BOTTOMRIGHT", button, "BOTTOMRIGHT", -2, 5)
 			button:GetPushedTexture():SetAllPoints(button:GetHighlightTexture())
 		end
 	end
@@ -228,7 +235,7 @@ local function LoadSkin()
 		_G["AuctionsButton"..i.."Highlight"] = button:GetHighlightTexture()
 		button:GetHighlightTexture():ClearAllPoints()
 		button:GetHighlightTexture():Point("TOPLEFT", icon, "TOPRIGHT", 2, 0)
-		button:GetHighlightTexture():SetPoint("BOTTOMRIGHT", button, "BOTTOMRIGHT", -2, 5)
+		button:GetHighlightTexture():Point("BOTTOMRIGHT", button, "BOTTOMRIGHT", -2, 5)
 		button:GetPushedTexture():SetAllPoints(button:GetHighlightTexture())
 	end
 
@@ -255,7 +262,7 @@ local function LoadSkin()
 		_G["BidButton"..i.."Highlight"] = button:GetHighlightTexture()
 		button:GetHighlightTexture():ClearAllPoints()
 		button:GetHighlightTexture():Point("TOPLEFT", icon, "TOPRIGHT", 2, 0)
-		button:GetHighlightTexture():SetPoint("BOTTOMRIGHT", button, "BOTTOMRIGHT", -2, 5)
+		button:GetHighlightTexture():Point("BOTTOMRIGHT", button, "BOTTOMRIGHT", -2, 5)
 		button:GetPushedTexture():SetAllPoints(button:GetHighlightTexture())
 	end
 

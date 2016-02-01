@@ -454,6 +454,12 @@ Pawn會與你身上的裝備比較]=],
 若選擇忽略，Pawn 仍會顯示寶石建議，但插槽將不列入物品的分數計算，因此有插槽的物品出現時，不再比一般物品容易出現升級建議。
 
 若不選取此項目，Pawn 會一律將插槽並列入物品計分(視為插入最佳寶石)]=],
+		OptionsIgnoreItemUpgradesCheck = "Ignore valor and baleful upgrades",
+		OptionsIgnoreItemUpgradesCheckTooltip = [=[Enable this option to have Pawn ignore the potential for Valor upgrades and Empowered Baleful items when calculating item values.
+
+If checked, Pawn will treat upgradeable items as they are and will not assume that you would use Valor and Empowered Apexis Fragments to improve the item when determining whether an item is better than what you currently have.
+
+If unchecked, Pawn will treat those items assuming that you would maximize their potential with Valor and Empowered Apexis Fragments.  This could cause a level 650 baleful item to appear as a significant upgrade over a level 670 item from Blackrock Foundry, since the baleful item could potentially be improved to level 705 through valor and Apexis.]=],
 		OptionsInventoryIcon = "顯示物品圖標",
 		OptionsInventoryIconTooltip = "開啟此選項以在物品連結視窗旁顯示物品圖標",
 		OptionsItemIDs = "顯示物品ID",

@@ -446,6 +446,12 @@ Pawn поставляется со шкалами с сайта Wowhead для �
 Если опция выбрана, Pawn будет по прежнему подбирать камни для низко-уровневых вещей, но сокеты будут игнорироваться при подсчете значений и вещи с сокетами не будут отображаться как улучшения.
 
 Если опция не выбрана, Pawn будет подсчитывать значения для вещей как будто в вещах стоят соответствующие ювелирные камни независимо от уровня персонажа.]=],
+		OptionsIgnoreItemUpgradesCheck = "Ignore valor and baleful upgrades",
+		OptionsIgnoreItemUpgradesCheckTooltip = [=[Enable this option to have Pawn ignore the potential for Valor upgrades and Empowered Baleful items when calculating item values.
+
+If checked, Pawn will treat upgradeable items as they are and will not assume that you would use Valor and Empowered Apexis Fragments to improve the item when determining whether an item is better than what you currently have.
+
+If unchecked, Pawn will treat those items assuming that you would maximize their potential with Valor and Empowered Apexis Fragments.  This could cause a level 650 baleful item to appear as a significant upgrade over a level 670 item from Blackrock Foundry, since the baleful item could potentially be improved to level 705 through valor and Apexis.]=],
 		OptionsInventoryIcon = "Отображать иконку вещи",
 		OptionsInventoryIconTooltip = "Включите опцию для отображения иконки вещи.",
 		OptionsItemIDs = "Отображать ID вещи",

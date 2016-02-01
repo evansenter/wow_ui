@@ -31,6 +31,8 @@ local VExRT = nil
 local module = ExRT.mod:New("BossWatcher",ExRT.L.BossWatcher)
 local ELib,L = ExRT.lib,ExRT.L
 
+local is6 = not ExRT.is7
+
 module.db.data = {
 	{
 		guids = {},
@@ -204,7 +206,7 @@ module.db.segmentsLNames = {
 module.db.registerOtherEvents = {}
 
 module.db.raidTargets = {0x1,0x2,0x4,0x8,0x10,0x20,0x40,0x80}
-module.db.energyLocale = {
+module.db.energyLocale = is6 and {
 	[0] = "|cff69ccf0"..L.BossWatcherEnergyType0,
 	[1] = "|cffedc294"..L.BossWatcherEnergyType1,
 	[2] = "|cffd1fa99"..L.BossWatcherEnergyType2,
@@ -220,6 +222,24 @@ module.db.energyLocale = {
 	[13] = "|cffd9d9d9"..L.BossWatcherEnergyType13,
 	[14] = "|cffeb4561"..L.BossWatcherEnergyType14,
 	[15] = "|cff9482c9"..L.BossWatcherEnergyType15,
+} or {
+	[0] = "|cff69ccf0"..L.BossWatcherEnergyType0,
+	[1] = "|cffedc294"..L.BossWatcherEnergyType1,
+	[2] = "|cffd1fa99"..L.BossWatcherEnergyType2,
+	[3] = "|cffffff8f"..L.BossWatcherEnergyType3,
+	[4] = "|cfffff569"..(COMBO_POINTS or "Combo Points"),
+	[5] = "|cffeb4561"..L.BossWatcherEnergyType5,
+	[6] = "|cffeb4561"..L.BossWatcherEnergyType6,
+	[7] = "|cff9482c9"..L.BossWatcherEnergyType7,
+	[8] = "|cff"..format("%02x%02x%02x",113,0,197)..POWER_TYPE_LUNAR_POWER,
+	[9] = "|cffffb3e0"..L.BossWatcherEnergyType9,
+	[10] = "|cffffffff"..L.BossWatcherEnergyType10,
+	[11] = "|cff"..format("%02x%02x%02x",0,143,255)..POWER_TYPE_MAELSTROM,
+	[12] = "|cff4DbB98"..L.BossWatcherEnergyType12,
+	[13] = "|cff"..format("%02x%02x%02x",51,0,102)..POWER_TYPE_INSANITY,
+	[16] = "|cff"..format("%02x%02x%02x",0,255,255)..POWER_TYPE_ARCANE_CHARGES,
+	[17] = "|cff"..format("%02x%02x%02x",209,76,223)..POWER_TYPE_FURY_DEMONHUNTER,
+	[18] = "Pain",
 }
 
 module.db.schoolsDefault = {0x1,0x2,0x4,0x8,0x10,0x20,0x40}
@@ -622,24 +642,7 @@ Death type:
 2: heal
 3: death
 ]]
-local deathMaxEvents = 40
-
-local function addDeath_CopyTable(dataTable,copyTable)
-	dataTable[1] = copyTable.t
-	dataTable[2] = copyTable.s
-	dataTable[3] = copyTable.ti
-	dataTable[4] = copyTable.sp
-	dataTable[5] = copyTable.a
-	dataTable[6] = copyTable.o
-	dataTable[7] = copyTable.sc
-	dataTable[8] = copyTable.b
-	dataTable[9] = copyTable.ab
-	dataTable[10] = copyTable.c
-	dataTable[11] = copyTable.m
-	dataTable[12] = copyTable.h
-	dataTable[13] = copyTable.hm
-	dataTable[14] = copyTable.ia
-end
+local deathMaxEvents = 50
 
 local function addDeathFix(destGUID,timestamp)
 	local destData = deathLog[destGUID]
@@ -654,17 +657,48 @@ local function addDeathFix(destGUID,timestamp)
 	local destTable = {
 		{3,destGUID,timestamp},
 	}
+	local destTableLen = 1
 	fightData.deathLog[#fightData.deathLog + 1] = destTable
 	for i=destData.c,1,-1 do
-		local num = #destTable + 1
-		destTable[num] = {}
-		addDeath_CopyTable(destTable[num],destData[i])
+		destTableLen = destTableLen + 1
+		local copyTable = destData[i]
+		destTable[destTableLen] = {
+			copyTable.t,
+			copyTable.s,
+			copyTable.ti,
+			copyTable.sp,
+			copyTable.a,
+			copyTable.o,
+			copyTable.sc,
+			copyTable.b,
+			copyTable.ab,
+			copyTable.c,
+			copyTable.m,
+			copyTable.h,
+			copyTable.hm,
+			copyTable.ia,
+		}
 		wipe(destData[i])
 	end
 	for i=deathMaxEvents,destData.c+1,-1 do
-		local num = #destTable + 1
-		destTable[num] = {}
-		addDeath_CopyTable(destTable[num],destData[i])
+		destTableLen = destTableLen + 1
+		local copyTable = destData[i]
+		destTable[destTableLen] = {
+			copyTable.t,
+			copyTable.s,
+			copyTable.ti,
+			copyTable.sp,
+			copyTable.a,
+			copyTable.o,
+			copyTable.sc,
+			copyTable.b,
+			copyTable.ab,
+			copyTable.c,
+			copyTable.m,
+			copyTable.h,
+			copyTable.hm,
+			copyTable.ia,
+		}
 		wipe(destData[i])
 	end
 	destData.c = 0
@@ -881,6 +915,27 @@ local function AddMiss(_,timestamp,sourceGUID,sourceName,sourceFlags,_,destGUID,
 		addDamage(nil,timestamp,sourceGUID,sourceName,sourceFlags,nil,destGUID,destName,destFlags,nil,spellID,nil,nil,0,0,school,nil,nil,nil,nil,nil,nil,isOffHand,multistrike)
 		local spellTable = fightData.damage[destGUID][sourceGUID][spellID]
 		spellTable.miss = spellTable.miss + 1	
+	end
+end
+if ExRT.is7 then
+	function AddMiss(_,timestamp,sourceGUID,sourceName,sourceFlags,_,destGUID,destName,destFlags,_,spellID,_,school,missType,isOffHand,amountMissed)
+		if missType == "ABSORB" then
+			addDamage(nil,timestamp,sourceGUID,sourceName,sourceFlags,nil,destGUID,destName,destFlags,nil,spellID,nil,nil,0,0,school,nil,nil,amountMissed,nil,nil,nil,isOffHand)
+		elseif missType == "BLOCK" then
+			addDamage(nil,timestamp,sourceGUID,sourceName,sourceFlags,nil,destGUID,destName,destFlags,nil,spellID,nil,nil,0,0,school,nil,amountMissed,nil,nil,nil,nil,isOffHand)
+		elseif missType == "PARRY" then
+			addDamage(nil,timestamp,sourceGUID,sourceName,sourceFlags,nil,destGUID,destName,destFlags,nil,spellID,nil,nil,0,0,school,nil,nil,nil,nil,nil,nil,isOffHand)
+			local spellTable = fightData.damage[destGUID][sourceGUID][spellID]
+			spellTable.parry = spellTable.parry + 1
+		elseif missType == "DODGE" then
+			addDamage(nil,timestamp,sourceGUID,sourceName,sourceFlags,nil,destGUID,destName,destFlags,nil,spellID,nil,nil,0,0,school,nil,nil,nil,nil,nil,nil,isOffHand)
+			local spellTable = fightData.damage[destGUID][sourceGUID][spellID]
+			spellTable.dodge = spellTable.dodge + 1
+		else
+			addDamage(nil,timestamp,sourceGUID,sourceName,sourceFlags,nil,destGUID,destName,destFlags,nil,spellID,nil,nil,0,0,school,nil,nil,nil,nil,nil,nil,isOffHand)
+			local spellTable = fightData.damage[destGUID][sourceGUID][spellID]
+			spellTable.miss = spellTable.miss + 1	
+		end
 	end
 end
 
@@ -2872,6 +2927,11 @@ end
 function module.main:SWING_MISSED(timestamp,sourceGUID,sourceName,sourceFlags,_,destGUID,destName,destFlags,_,missType,isOffHand,multistrike,amountMissed)
 	AddMiss(nil,timestamp,sourceGUID,sourceName,sourceFlags,nil,destGUID,destName,destFlags,nil,6603,nil,0x1,missType,isOffHand,multistrike,amountMissed)
 end
+if ExRT.is7 then
+	function module.main:SWING_MISSED(timestamp,sourceGUID,sourceName,sourceFlags,_,destGUID,destName,destFlags,_,missType,isOffHand,amountMissed)
+		AddMiss(nil,timestamp,sourceGUID,sourceName,sourceFlags,nil,destGUID,destName,destFlags,nil,6603,nil,0x1,missType,isOffHand,amountMissed)
+	end
+end
 
 function module.main:SPELL_SUMMON(timestamp,sourceGUID,sourceName,sourceFlags,sourceFlags2,destGUID,destName,destFlags,destFlags2,spellID)
 	if not fightData.summons then
@@ -2937,13 +2997,18 @@ local CLEUEvents = {
 	DAMAGE_SPLIT = addDamage,
 	SPELL_AURA_BROKEN = module.main.SPELL_AURA_BROKEN,
 	SPELL_AURA_BROKEN_SPELL = module.main.SPELL_AURA_BROKEN,
+	-- DAMAGE_SHIELD
+	-- DAMAGE_SHIELD_MISSED
+	-- UNIT_DISSIPATES
+	-- SPELL_BUILDING_DAMAGE
+	-- SPELL_BUILDING_HEAL
 }
 
-local function CLEUafterTimeFix(self,timestamp,event,hideCaster,sourceGUID,sourceName,sourceFlags,sourceFlags2,destGUID,destName,destFlags,destFlags2,spellID,...)
+local function CLEUafterTimeFix(self,_,timestamp,event,hideCaster,sourceGUID,sourceName,sourceFlags,sourceFlags2,destGUID,destName,destFlags,destFlags2,...)
 	--dtime()
 	local eventFunc = CLEUEvents[event]
 	if eventFunc then
-		eventFunc(self,timestamp,sourceGUID,sourceName,sourceFlags,sourceFlags2,destGUID,destName,destFlags,destFlags2,spellID,...)
+		eventFunc(self,timestamp,sourceGUID,sourceName,sourceFlags,sourceFlags2,destGUID,destName,destFlags,destFlags2,...)
 	end
 	
 	if not guidData[sourceGUID] then guidData[sourceGUID] = sourceName or "nil" end
@@ -2954,13 +3019,13 @@ local function CLEUafterTimeFix(self,timestamp,event,hideCaster,sourceGUID,sourc
 	--dtime(ExRT.Debug,'BW',event)
 end
 
-function module.main:COMBAT_LOG_EVENT_UNFILTERED(timestamp,event,hideCaster,sourceGUID,sourceName,sourceFlags,sourceFlags2,destGUID,destName,destFlags,destFlags2,spellID,...)
+function module.main:COMBAT_LOG_EVENT_UNFILTERED(_,timestamp,...)
 	if not module.db.timeFix then
 		module.db.timeFix = {GetTime(),timestamp}
-		module.main.COMBAT_LOG_EVENT_UNFILTERED = CLEUafterTimeFix
-		CLEUafterTimeFix(self,timestamp,event,hideCaster,sourceGUID,sourceName,sourceFlags,sourceFlags2,destGUID,destName,destFlags,destFlags2,spellID,...)
-		module:RegisterEvents('COMBAT_LOG_EVENT_UNFILTERED')
 	end
+	module.main.COMBAT_LOG_EVENT_UNFILTERED = CLEUafterTimeFix
+	CLEUafterTimeFix(self,nil,timestamp,...)
+	module:RegisterEvents('COMBAT_LOG_EVENT_UNFILTERED')
 end
 
 function UpdateCLEUfunctionsByEncounter(encounterID)
@@ -6220,6 +6285,20 @@ function BWInterfaceFrameLoad()
 			SpellsTab_ReloadSpells()		
 			return
 		end
+		if text:find("^target~") or text:find("^~") then
+			local targetsStr = text:match("^target~(.+)")
+			if not targetsStr then
+				targetsStr = text:match("^~(.+)")
+			end
+			if targetsStr then
+				local targets = {strsplit(";",targetsStr)}
+				for i=1,#targets do
+					SpellsTab_Variables.FilterByTarget[ targets[i] ] = -1
+				end
+			end
+			SpellsTab_ReloadSpells()		
+			return
+		end
 		local spells = {strsplit(";",text)}
 		for i=1,#spells do
 			if tonumber(spells[i]) then
@@ -6229,7 +6308,7 @@ function BWInterfaceFrameLoad()
 		end
 		SpellsTab_ReloadSpells()
 	end
-	tab.filterEditBox = ELib:Edit(tab):Size(639,16):Point(213,-73):Tooltip(L.BossWatcherSpellsFilterTooltip..'|n'..L.BossWatcherBySpell..': "|cffffffff774;Multi-shot;105809|r" '..OR_CAPS:lower()..' "|cffffffffFlash Heal|r"|n'..L.BossWatcherByTarget..': "|cfffffffftarget=Ragnaros;The Lich King;Lei Shen|r" '..OR_CAPS:lower()..' "|cffffffff=Garrosh|r"'):OnChange(function (self)
+	tab.filterEditBox = ELib:Edit(tab):Size(639,16):Point(213,-73):Tooltip(L.BossWatcherSpellsFilterTooltip..'|n'..L.BossWatcherBySpell..': "|cffffffff774;Multi-shot;105809|r" '..OR_CAPS:lower()..' "|cffffffffFlash Heal|r"|n'..L.BossWatcherByTarget..': "|cfffffffftarget=Ragnaros;The Lich King;Lei Shen|r" '..OR_CAPS:lower()..' "|cffffffff=Garrosh|r" '..OR_CAPS:lower()..' "|cffffffff~illi|r"'):OnChange(function (self)
 		local text = self:GetText()
 		if text == "" then
 			ExRT.F.CancelTimer(SpellsTab_UpdateFilterHeader)
@@ -6278,6 +6357,18 @@ function BWInterfaceFrameLoad()
 				ELib.Tooltip:Add(nil,{format("%s%d:%06.3f (%.3f %s)",isNegative and "-" or "",(isNegative or diff) / 60,(isNegative or diff) % 60,diff,SECONDS)},false,true)
 			end
 		end
+	end
+	
+	local function SpellsTab_FindInWord(haystack,needle)
+		if not haystack or not needle then
+			return
+		end
+		needle = needle:lower()
+		haystack = haystack:lower()
+		if haystack:find(needle) then
+			return true
+		end
+		return false
 	end
 	
 	function tab.playersList:SetListValue(index)
@@ -6347,8 +6438,8 @@ function BWInterfaceFrameLoad()
 					end
 				elseif isTargetsFilterEnabled then
 					isMustBeAdded = false
-					for filterSource,_ in pairs(SpellsTab_Variables.FilterByTarget) do
-						if GetGUID( data[4] ) == filterSource then
+					for filterSource,filterType in pairs(SpellsTab_Variables.FilterByTarget) do
+						if (filterType == -1 and SpellsTab_FindInWord( GetGUID( data[4] ),filterSource )) or (GetGUID( data[4] ) == filterSource) then
 							isMustBeAdded = true
 							break
 						end

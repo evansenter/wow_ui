@@ -47,7 +47,7 @@ L["Display Options 2/4 Text"] = [=[|cFFFFFFFFFortschrittsbalken-|r und |cFFFFFFF
 
 Diese Einstellung ist nur verfügbar, wenn die Anzeige einen Auslöser basierend auf einer Aura, einem Gegenstand, oder einem Zauber besitzt.]=]
 L["Display Options: 4/4"] = "Anzeige-Einstellungen: 4/4"
-L["Display Options 4/4 Text"] = "Zu guter Letzt, ein neuer Anzeigentyp, |cFFFFFFFFModell|r, erlaubt es dir, jedes beliebige 3D Modell aus den Spieldateien zu nutzen."
+L["Display Options 4/4 Text"] = "Zu guter Letzt, ein neuer Anzeigentyp, |cFFFFFFFFModell|r, erlaubt es dir, jedes beliebige 3D-Modell aus den Spieldateien zu nutzen."
 L["Dynamic Group Options: 2/4"] = "Dynamische Gruppen Einstellungen: 2/4"
 L["Dynamic Group Options 2/4 Text"] = [=[Die größte Verbesserung der |cFFFFFFFFDynamischen Gruppen|r ist eine neue Auswahlmöglichkeit für die Wachstumseinstellung.
 
@@ -62,7 +62,7 @@ L["Dynamic Group Options 4/4 Text"] = [=[Dynamische Gruppen können ihre Element
 Anzeigen, die keine Verbleibende Zeit besitzen, werden je nach Auswahl von \"Aufsteigend\" oder \"Absteigend\" entsprechend oben oder unten plaziert.]=]
 L["Finished"] = "Abgeschlossen"
 L["Full-scan Auras: 2/10"] = "Komplett gescannte Auren: 2/10"
-L["Full-scan Auras 2/10 Text"] = "Aktiviere zunächst die Kompletter Scan Einstellung."
+L["Full-scan Auras 2/10 Text"] = "Aktiviere zunächst die Option \"Kompletter Scan\"."
 L["Full-scan Auras: 3/10"] = "Komplett gescannte Auren: 3/10"
 L["Full-scan Auras 3/10 Text"] = [=[|cFFFF0000Auto-Klonen|r kann nun über die \"%s\"-Einstellung aktiviert werden.
 
@@ -72,8 +72,8 @@ L["Full-scan Auras 4/10 Text"] = [=[Ein Popup sollte aufgetaucht sein, das dich 
 
 Drücke \"Ja\"um |cFF8800FFWeakAuras|r zu erlauben deine Anzeige automatisch in eine Dynamische Gruppe zu verschieben.]=]
 L["Full-scan Auras: 5/10"] = "Komplett gescannte Auren: 5/10"
-L["Full-scan Auras 5/10 Text"] = "Deaktiviere die Kompletter Scan Einstellung um andere Einheiten Einstellungen zu reaktivieren."
-L["Group Auras 6/10"] = "Gruppen Auren: 6/10"
+L["Full-scan Auras 5/10 Text"] = "Deaktiviere die Option \"Kompletter Scan\", um andere Einheitenoptionen zu reaktivieren."
+L["Group Auras 6/10"] = "Gruppenauren: 6/10"
 L["Group Auras 6/10 Text"] = "Wähle jetzt \"Gruppe\" für die Einheiten-Einstellung."
 L["Group Auras: 7/10"] = "Gruppen Auren: 7/10"
 L["Group Auras 7/10 Text"] = [=[|cFFFF0000Auto-Klonen|r wird wieder über die \"%s\" Einstellung aktiviert.
@@ -89,7 +89,7 @@ Auslöser für Mehrfachziel-Auren unterscheiden sich dadurch von normalen Aura-A
 
 Deshalb sind Mehrfachziel-Auren eine gute Wahl zur Verfolgung von DoTs auf mehreren Gegnern.]=]
 L["Multi-target Auras: 9/10"] = "Mehrfachziel-Auren: 9/10"
-L["Multi-target Auras 9/10 Text"] = "Wähle zum Abschluss \"Mehrfachziel\" für die Einheiten Einstellung."
+L["Multi-target Auras 9/10 Text"] = "Wähle zum Abschluss \"Mehrfachziel\" für die Einheitenoption."
 L["New in 1.4:"] = "Neu in 1.4:"
 L["New in 1.4 Desc:"] = "Neu in 1.4"
 L["New in 1.4 Desc Text"] = "Wirf einen Blick auf die neuen Features in WeakAuras 1.4"
@@ -100,7 +100,7 @@ Hoffentlich hat diese Einführung dich wenigstens über die wichtigsten neuen Fu
 Wir danken dir vielmals für die Nutzung von |cFF8800FFWeakAuras|r!]=]
 L["New in 1.4 Text1"] = [=[Version 1.4 von |cFF8800FFWeakAuras|r führt mehrere neue mächtige Funktionen ein.
 
-Diese Einführung bietet einen Überblick der wichtigsten neuen Funktionen und deren Nutzung.]=] -- Needs review
+Diese Einführung bietet einen Überblick der wichtigsten neuen Funktionen und deren Nutzung.]=]
 L["New in 1.4 Text2"] = "Lege zunächst eine neue Anzeige zu Demonstrationszwecken an."
 L["Previous"] = "Zurück"
 L["Trigger Options: 1/4"] = "Auslöser Einstellungen: 1/4"

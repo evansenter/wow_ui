@@ -221,10 +221,10 @@ function module.options:Load()
 			button2 = L.NoText,
 			OnAccept = function()
 				table.wipe(VExRT.Coins.list)
-				if module.options.ScrollBar:GetValue() == 1 then
+				if module.options.textList.ScrollBar:GetValue() == 1 then
 					historyBoxUpdate(1)
 				else
-					module.options.ScrollBar:SetValue(1)
+					module.options.textList.ScrollBar:SetValue(1)
 				end
 			end,
 			timeout = 0,

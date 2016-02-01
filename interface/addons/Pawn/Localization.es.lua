@@ -447,6 +447,12 @@ Atajos:
 Si está seleccionado, el asistente de ranuras de Pawn sugerira gemas apropriadas para objetos de bajo nivel, pero algunas ranuras serán ignoradas en los calculos y los objetos con incrustaciones no se mostrarán como mejoras con tanta frecuancia. 
 
 Si está deseleccionado, Pawn calculará valores para objetos como si tuvieran las incrustaciones que maximizan el valor del objeto, independientemente del nivel del objeto.]=],
+		OptionsIgnoreItemUpgradesCheck = "Ignore valor and baleful upgrades",
+		OptionsIgnoreItemUpgradesCheckTooltip = [=[Enable this option to have Pawn ignore the potential for Valor upgrades and Empowered Baleful items when calculating item values.
+
+If checked, Pawn will treat upgradeable items as they are and will not assume that you would use Valor and Empowered Apexis Fragments to improve the item when determining whether an item is better than what you currently have.
+
+If unchecked, Pawn will treat those items assuming that you would maximize their potential with Valor and Empowered Apexis Fragments.  This could cause a level 650 baleful item to appear as a significant upgrade over a level 670 item from Blackrock Foundry, since the baleful item could potentially be improved to level 705 through valor and Apexis.]=],
 		OptionsInventoryIcon = "Mostrar iconos de inventario",
 		OptionsInventoryIconTooltip = "Habilita ésta opción para mostrar el incono de los objetos enlazados en el chat.",
 		OptionsItemIDs = "Mostrar IDs de objetos",

@@ -436,6 +436,12 @@ Pawn은 각 직업과 특성 별로 미리 만들어진 능력치 크기를 가�
 체크하면, Pawn 보석장착 조언가는 저레벨 아이템에 적당한 보석을 추천하지만 보석 홈은 계산에서 제외되며 보석이 장착된 아이템은 종종 업그레이드로 보여지지 않습니다.
 
 체크하지 않으면, 아이템 레벨에 상관없이 보석 홈에 최상의 보석을 장착한 것으로 가정하고 값을 계산하게 됩니다.]=],
+		OptionsIgnoreItemUpgradesCheck = "Ignore valor and baleful upgrades",
+		OptionsIgnoreItemUpgradesCheckTooltip = [=[Enable this option to have Pawn ignore the potential for Valor upgrades and Empowered Baleful items when calculating item values.
+
+If checked, Pawn will treat upgradeable items as they are and will not assume that you would use Valor and Empowered Apexis Fragments to improve the item when determining whether an item is better than what you currently have.
+
+If unchecked, Pawn will treat those items assuming that you would maximize their potential with Valor and Empowered Apexis Fragments.  This could cause a level 650 baleful item to appear as a significant upgrade over a level 670 item from Blackrock Foundry, since the baleful item could potentially be improved to level 705 through valor and Apexis.]=],
 		OptionsInventoryIcon = "인벤토리 아이콘 표시",
 		OptionsInventoryIconTooltip = "이 옵션을 켜면 아이템 링크 창 옆에 인벤토리 아이콘을 표시합니다.",
 		OptionsItemIDs = "아이템 ID 표시",

@@ -528,6 +528,22 @@ function ExRT.F.IsBonusOnItem(link,bonus)
 		end
 	end
 end
+if ExRT.is7 then
+	function ExRT.F.IsBonusOnItem(link,bonus)
+		if link then 
+			local bonuses = link:match("item:%d+:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:([0-9:]*)")
+			if bonuses then
+				local isTable = type(bonus) == "table"
+				for bonusID in string.gmatch(bonuses, "%d+") do
+					bonusID = tonumber(bonusID or 0)
+					if (isTable and bonus[bonusID]) or (not isTable and bonusID == bonus) then
+						return true
+					end
+				end
+			end
+		end
+	end
+end
 
 function ExRT.F.IsPlayerRLorOfficer(unitName)
 	local shortName = ExRT.F.delUnitNameServer(unitName)

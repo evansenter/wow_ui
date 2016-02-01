@@ -11,17 +11,17 @@ L["="] = "= (Gleich)"
 L[">"] = "> (Größer)"
 L[">="] = ">= (Größergleich)"
 L["!="] = "!= (Ungleich)"
-L["10 Man Raid"] = "10er-Schlachtzug"
-L["25 Man Raid"] = "25er-Schlachtzug"
-L["40 Man Raid"] = "40er-Schlachtzug" -- Needs review
-L["5 Man Dungeon"] = "5er Gruppe"
+L["10 Man Raid"] = "10-Mann-Schlachtzug"
+L["25 Man Raid"] = "25-Mann-Schlachtzug"
+L["40 Man Raid"] = "40-Mann-Schlachtzug"
+L["5 Man Dungeon"] = "5-Mann-Dungeon"
 L["Absorb"] = "Absorbieren"
 L["Absorbed"] = "Absorbiert"
 L["Action Usable"] = "Aktion nutzbar"
 L["Affected"] = "Betroffen"
 L["Air"] = "Luft"
 L["Alive"] = "Am Leben"
-L["Alliance"] = "Allianz" -- Needs review
+L["Alliance"] = "Allianz"
 L["All Triggers"] = "Alle Auslöser (UND)"
 L["Alternate Power"] = "Alternative Energie"
 L["Always active trigger"] = "Immer aktiver Auslöser"
@@ -35,12 +35,12 @@ L["At Least One Enemy"] = "Zumindest ein Feind"
 L["Attackable"] = "Angreifbar"
 L["Aura"] = "Aura (Buff/Debuff)"
 L["Aura:"] = "Aura:"
-L["Aura Applied"] = "Aura angewandt (AURA_APPLIED)" -- Needs review
-L["Aura Applied Dose"] = "Aura angewandt, Stack erhöht (AURA_APPLIED_DOSE)" -- Needs review
+L["Aura Applied"] = "Aura angewandt (AURA_APPLIED)"
+L["Aura Applied Dose"] = "Aura angewandt, Stapel erhöht (AURA_APPLIED_DOSE)"
 L["Aura Broken"] = "Aura gebrochen, Nahkampf (AURA_BROKEN)"
 L["Aura Broken Spell"] = "Aura gebrochen, Zauber (AURA_BROKEN_SPELL)"
-L["Aura Name"] = "Auraname oder ID"
-L["Aura Name or ID"] = "Auraname oder ID"
+L["Aura Name"] = "Auraname oder -ID"
+L["Aura Name or ID"] = "Auraname oder -ID"
 L["Aura Refresh"] = "Aura erneuert (AURA_REFRESH)"
 L["Aura Removed"] = "Aura entfernt (AURA_REMOVED)"
 L["Aura Removed Dose"] = "Aura entfernt, Stack verringert (AURA_REMOVED_DOSE)"
@@ -92,8 +92,8 @@ L["Chi Power"] = "Chi"
 L["Circle"] = "Kreis"
 L["Circular"] = "Kreisförmig"
 L["Class"] = "Klasse"
-L["Click to close configuration"] = "|cFF8080FF(Klick)|r Config-GUI schließen"
-L["Click to open configuration"] = "|cFF8080FF(Klick)|r Config-GUI öffnen"
+L["Click to close configuration"] = "|cFF8080FF(Klick)|r, um die Konfiguration zu schließen"
+L["Click to open configuration"] = "|cFF8080FF(Klick)|r, um die Konfiguration zu öffnen"
 L["Combat Log"] = "Kampflog"
 L["Combo Points"] = "Kombopunkte"
 L["Conditions"] = "Bedingungen"
@@ -120,12 +120,13 @@ L["Death Knight"] = "Todesritter"
 L["Death Knight Rune"] = "Todesritter-Rune"
 L["Death Rune"] = "Todesrune"
 L["Debuff"] = "Debuff"
-L["Defensive"] = "Defensiv" -- Needs review
+L["Defensive"] = "Defensiv"
 L["Deflect"] = "Umlenken"
 L["Demonic Fury"] = "Dämonischer Furor"
 L["Descending"] = "Absteigend"
 L["Destination Name"] = "Zielname"
 L["Destination Unit"] = "Zieleinheit"
+L["Dialog"] = "Dialog"
 L["Disease"] = "Krankheit"
 L["Dispel"] = "Bannen (DISPEL)"
 L["Dispel Failed"] = "Bannen fehlgeschlagen (DISPEL_FAILED)"
@@ -133,7 +134,7 @@ L["Dodge"] = "Ausweichen (DODGE)"
 L["Done"] = "Fertiggestellt"
 L["Down"] = "Runter"
 L["Drain"] = "Saugen (DRAIN)"
-L["Drowning"] = "Ertrinken (DROWNING)" -- Needs review
+L["Drowning"] = "Ertrinken (DROWNING)"
 L["Druid"] = "Druide"
 L["Dungeon Difficulty"] = "Instanzschwierigkeit"
 L["Durability Damage"] = "Haltbarkeitsschaden (DURABILITY_DAMAGE)"
@@ -146,7 +147,7 @@ L["Emote"] = "Emote"
 L["Encounter ID"] = "Boss-ID"
 L["EncounterID List"] = [=[Aktuelle Raid Tier IDs:
 
-Hellfire Citadel:
+Höllenfeuerzitadelle:
   Höllenfeuerangriff: 1778
   Eiserner Häscher: 1785
   Kormrok: 1787
@@ -190,25 +191,26 @@ L["Evade"] = "Entkommen (EVADE)"
 L["Event"] = "Ereignis"
 L["Event(s)"] = "Ereignis(se)"
 L["Every Frame"] = "Bei jedem OnUpdate"
-L["Extra Amount"] = "Extra Betrag"
-L["Extra Attacks"] = "Extra Angriffe (EXTRA_ATTACKS)"
-L["Extra Spell Name"] = "Extra Zaubername"
+L["Extra Amount"] = "Extrabetrag"
+L["Extra Attacks"] = "Extraangriffe (EXTRA_ATTACKS)"
+L["Extra Spell Name"] = "Extra-Zaubername"
 L["Fade In"] = "Einblenden"
 L["Fade Out"] = "Ausblenden"
-L["Fail Alert"] = "Warnung für Fehlschlag" -- Needs review
+L["Fail Alert"] = "Warnung für Fehlschlag"
 L["Falling"] = "Fallen (FALLING)"
 L["Fatigue"] = "Erschöpfung (FATIGUE)"
 L["Fire"] = "Feuer"
 L["First Tree"] = "Erster Talentbaum"
 L[ [=[Fishing Lure / Weapon Enchant (Old)
-]=] ] = "Waffenverzauberung" -- Needs review
+]=] ] = [=[Angelköder / Waffenverzauberung (Alt)
+]=]
 L["Flash"] = "Aufblitzen"
-L["Flex Raid"] = "Flexibler Schlachtzug" -- Needs review
+L["Flex Raid"] = "Flexibler Schlachtzug"
 L["Flip"] = "Umdrehen"
 L["Focus"] = "Fokus"
 L["Form"] = "Form"
 L["Friendly"] = "Freundlich"
-L["Friendly Fire"] = "Eigenbeschuss" -- Needs review
+L["Friendly Fire"] = "Eigenbeschuss"
 L["From"] = "Von"
 L["Frost Rune #1"] = "Frostrune #1"
 L["Frost Rune #2"] = "Frostrune #2"
@@ -221,7 +223,7 @@ L["Gradient Pulse"] = "Gradient Pulse"
 L["Group"] = "Gruppe"
 L["Group %s"] = "Gruppe %s"
 L["Grow"] = "Wachsen"
-L["GTFO Alert"] = "GTFO Warnung" -- Needs review
+L["GTFO Alert"] = "GTFO-Warnung"
 L["Guild"] = "Gilde"
 L["Happiness"] = "Zufriedenheit"
 L["HasPet"] = "Begleiter aktiv"
@@ -231,16 +233,16 @@ L["Health"] = "Lebenspunkte"
 L["Health (%)"] = "Lebenspunkte (%)"
 L["Heroic"] = "Heroisch"
 L["Hide"] = "Verbergen"
-L["High Damage"] = "Hoher Schaden" -- Needs review
+L["High Damage"] = "Hoher Schaden"
 L["Higher Than Tank"] = "Höher als der Tank"
 L["Holy Power"] = "Heilige Kraft"
--- L["Horde"] = ""
+L["Horde"] = "Horde"
 L["Hostile"] = "Feindlich"
-L["Hostility"] = "Feindseligkeit" -- Needs review
+L["Hostility"] = "Gesinnung"
 L["Humanoid"] = "Humanoid"
 L["Hunter"] = "Jäger"
 L["Icon"] = "Symbol"
-L["Ignore Rune CD"] = "Runen CD ignorieren"
+L["Ignore Rune CD"] = "Runen-CD ignorieren"
 L["Immune"] = "Immun (IMMUNE)"
 L["Include Bank"] = "Bank einbeziehen"
 L["Include Charges"] = "Aufladungen einbeziehen"
@@ -256,7 +258,7 @@ L["Interruptible"] = "Unterbrechbar"
 L["In Vehicle"] = "Im Fahrzeug"
 L["Inverse"] = "Invertieren"
 L["Is Exactly"] = "Strikter Vergleich"
-L["Is Moving"] = "Bewegt sich" -- Needs review
+L["Is Moving"] = "Bewegt sich"
 L["Item"] = "Gegenstand"
 L["Item Count"] = "Gegenstandsanzahl"
 L["Item Equipped"] = "Gegenstand angelegt"
@@ -265,7 +267,7 @@ L["Leech"] = "Saugen (LEECH)"
 L["Left"] = "Links"
 L["Left to Right"] = "Links -> Rechts"
 L["Level"] = "Stufe"
-L["Low Damage"] = "Niedriger Schaden" -- Needs review
+L["Low Damage"] = "Niedriger Schaden"
 L["Lower Than Tank"] = "Niedriger als der Tank"
 L["Lunar"] = "Lunar"
 L["Lunar Power"] = "Lunarenergie"
@@ -282,21 +284,21 @@ L["Miss"] = "Verfehlen"
 L["Missed"] = "Verfehlt (MISSED)"
 L["Missing"] = "Fehlend"
 L["Miss Type"] = "Verfehlengrund"
-L["Monochrome"] = "Einfarbig" -- Needs review
-L["Monochrome Outline"] = "Graustufenkontur" -- Needs review
+L["Monochrome"] = "Einfarbig"
+L["Monochrome Outline"] = "Graustufenkontur"
 L["Monochrome Thick Outline"] = "Einfarbige dicke Kontur"
 L["Monster Yell"] = "NPC-Schrei"
 L["Mounted"] = "Reiten"
 L["Multi-target"] = "Mehrfachziel"
 L["Music"] = "Musik"
 L["Name"] = "Name"
-L["Neutral"] = "Neutral" -- Needs review
+L["Neutral"] = "Neutral"
 L["Never"] = "Nie"
 L["Next"] = "Weiter"
 L["No Children:"] = "Keine Kinder:"
 L["No Instance"] = "Keine Instanz"
 L["None"] = "Keine(r)"
-L["Non-player Character"] = "Nicht-Spieler Charakter (NPC)"
+L["Non-player Character"] = "Nicht-Spieler-Charakter (NPC)"
 L["Normal"] = "Normal"
 L["Not On Threat Table"] = "Nicht auf der Bedrohungsliste"
 L["Number"] = "Nummer"
@@ -313,34 +315,34 @@ L["Paladin"] = "Paladin"
 L["Parry"] = "Parieren"
 L["Party"] = "Gruppe"
 L["Party Kill"] = "Gruppen Tod (PARTY_KILL)"
-L["Passive"] = "Passiv" -- Needs review
+L["Passive"] = "Passiv"
 L["Paused"] = "Pausiert"
 L["Periodic Spell"] = "Periodischer Zauber (PERIODIC_SPELL)"
 L["Pet"] = "Begleiter"
-L["Pet Behavior"] = "Begleiter-Verhalten"
+L["Pet Behavior"] = "Begleiterverhalten"
 L["Player"] = "Spieler (Selbst)"
 L["Player Character"] = "Spieler-Charakter (PC)"
 L["Player Class"] = "Spielerklasse"
-L["Player Dungeon Role"] = "Spieler Gruppenrolle"
-L["Player Faction"] = "Spieler-Fraktion OR Spielerfraktion" -- Needs review
+L["Player Dungeon Role"] = "Spielergruppenrolle"
+L["Player Faction"] = "Spielerfraktion"
 L["Player Level"] = "Spielerstufe"
 L["Player Name"] = "Spielername"
-L["Player Race"] = "Spieler-Rasse"
+L["Player Race"] = "Spielervolk"
 L["Player(s) Affected"] = "Beeinträchtigte Spieler"
 L["Player(s) Not Affected"] = "Nicht betroffene Spieler"
 L["Poison"] = "Gift"
-L["Power"] = "Energie"
-L["Power (%)"] = "Energie (%)"
-L["Power Type"] = "Energietyp"
+L["Power"] = "Ressource"
+L["Power (%)"] = "Ressource (%)"
+L["Power Type"] = "Ressourcentyp"
 L["Preset"] = "Standard"
 L["Priest"] = "Priester"
 L["Progress"] = "Fortschritt"
 L["Pulse"] = "Pulsieren"
 L["PvP Flagged"] = "PvP aktiv"
-L["Radius"] = "Raduis"
+L["Radius"] = "Radius"
 L["Rage"] = "Wut"
-L["Raid"] = "Raid"
-L["Raid Warning"] = "Raidwarnung"
+L["Raid"] = "Schlachtzug"
+L["Raid Warning"] = "Schlachtzugswarnung"
 L["Range"] = "Reichweite"
 L["Ranged"] = "Distanz"
 L["Realm"] = "Realm"
@@ -352,28 +354,32 @@ L["Remaining Time"] = "Verbleibende Zeit"
 L["Requested display does not exist"] = "Angeforderte Anzeige existiert nicht"
 L["Requested display not authorized"] = "Angeforderte Anzeige ist nicht autorisiert"
 L["Require Valid Target"] = "Erfordert gültiges Ziel"
-L["Resist"] = "Widerstehen" -- Needs review
-L["Resisted"] = "Widerstanden (RESISTED)" -- Needs review
-L["Resolve collisions dialog"] = [=[Ein externes Addon definiert |cFF8800FFWeakAuras|r-Anzeigen, die den selben Namen besitzen wie bereits existierende Anzeigen.
+L["Resist"] = "Widerstehen"
+L["Resisted"] = "Widerstanden (RESISTED)"
+L["Resolve collisions dialog"] = [=[
+Ein aktiviertes externes Addon definiert |cFF8800FFWeakAuras|r-Anzeigen, die den selben Namen besitzen wie bereits existierende Anzeigen.
 
 |cFF8800FFWeakAuras|r-Anzeigen müssen umbenannt werden, um Platz für die externen Anzeigen zu machen.
 
-Gelöst: |cFFFF0000]=] -- Needs review
-L["Resolve collisions dialog singular"] = [=[Ein externes Addon definiert eine |cFF8800FFWeakAuras|r-Anzeige, die den selben Namen besitzt wie eine bereits existierende Anzeige.
+Gelöst: |cFFFF0000]=]
+L["Resolve collisions dialog singular"] = [=[
+Ein aktiviertes externes Addon definiert eine |cFF8800FFWeakAuras|r-Anzeige, die den selben Namen besitzt wie eine bereits existierende Anzeige.
 
 |cFF8800FFWeakAuras|r-Anzeige muss umbenannt werden, um Platz für die externe Anzeige zu machen.
 
-Gelöst: |cFFFF0000]=] -- Needs review
-L["Resolve collisions dialog startup"] = [=[Ein externes Addon definiert |cFF8800FFWeakAuras|r-Anzeigen, die den selben Namen besitzen wie bereits existierende Anzeigen.
+Gelöst: |cFFFF0000]=]
+L["Resolve collisions dialog startup"] = [=[
+Ein installiertes externes Addon definiert |cFF8800FFWeakAuras|r-Anzeigen, die den selben Namen besitzen wie bereits existierende Anzeigen.
 
 |cFF8800FFWeakAuras|r-Anzeigen müssen umbenannt werden um Platz für die externen Anzeigen zu machen.
 
-Gelöst: |cFFFF0000]=] -- Needs review
-L["Resolve collisions dialog startup singular"] = [=[Ein externes Addon definiert eine |cFF8800FFWeakAuras|r-Anzeige, die den selben Namen besitzt wie bereits existierende Anzeigen.
+Gelöst: |cFFFF0000]=]
+L["Resolve collisions dialog startup singular"] = [=[
+Ein installiertes externes Addon definiert eine |cFF8800FFWeakAuras|r-Anzeige, die den selben Namen besitzt wie eine bereits existierende Anzeige.
 
 |cFF8800FFWeakAuras|r-Anzeige muss umbenannt werden, um Platz für die externe Anzeige zu machen.
 
-Gelöst: |cFFFF0000]=] -- Needs review
+Gelöst: |cFFFF0000]=]
 L["Resting"] = "Erholen"
 L["Resurrect"] = "Wiederbeleben"
 L["Right"] = "Rechts"
@@ -390,8 +396,8 @@ L["Shadow Orbs"] = "Schattenkugeln"
 L["Shake"] = "Beben"
 L["Shaman"] = "Schamane"
 L["Shards"] = "Splitter"
-L["Shift-Click to pause"] = "|cFF8080FF(Shift-Klick)|r Pause"
-L["Shift-Click to resume"] = "|cFF8080FF(Shift-Klick)|r Fortsetzen" -- Needs review
+L["Shift-Click to pause"] = "|cFF8080FF(Shift-Klick)|r, um zu pausieren"
+L["Shift-Click to resume"] = "|cFF8080FF(Shift-Klick)|r, um fortzusetzen"
 L["Show"] = "Zeigen"
 L["Shrink"] = "Schrumpfen"
 L["Slide from Bottom"] = "Von unten eingleiten"
@@ -410,17 +416,17 @@ L["Source Name"] = "Quellname"
 L["Source Unit"] = "Quelleinheit"
 L["Spacing"] = "Abstand"
 L["Spark"] = "Funken"
-L["Spark Settings"] = "Funken Einstellungen"
-L["Spark Texture"] = "Funkentextur" -- Needs review
+L["Spark Settings"] = "Funkeneinstellungen"
+L["Spark Texture"] = "Funkentextur"
 L["Specific Unit"] = "Konkrete Einheit"
 L["Spell"] = "Zauber"
 L["Spell (Building)"] = "Zauber, Gebäude (SPELL_BUILDING)"
-L["Spell/Encounter ID"] = "Zauber-/Begegnungs-ID" -- Needs review
+L["Spell/Encounter ID"] = "Zauber-/Begegnungs-ID"
 L["Spell Name"] = "Zaubername"
 L["Spin"] = "Drehen"
 L["Spiral"] = "Winden"
 L["Spiral In And Out"] = "Ein- und Auswinden"
-L["Stacks"] = "Stacks"
+L["Stacks"] = "Stapel"
 L["Stance/Form/Aura"] = "Haltung/Form/Aura"
 L["Status"] = "Status"
 L["Stolen"] = "Gestohlen (STOLEN)"
@@ -433,7 +439,7 @@ L["Tank"] = "Tank"
 L["Tanking And Highest"] = "Höchster und Aggro"
 L["Tanking But Not Highest"] = "Aggro aber nicht höchster"
 L["Target"] = "Ziel"
-L["Texture Info"] = "Texturinfo" -- Needs review
+L["Texture Info"] = "Texturinfo"
 L["Thick Outline"] = "Dicke Kontur"
 L["Third Tree"] = "Dritter Talentbaum"
 L["Threat Situation"] = "Bedrohungssituation"
@@ -450,7 +456,7 @@ L["Totem Name"] = "Totemname"
 L["Totem Type"] = "Totemtyp"
 L["Transmission error"] = "Übertragungsfehler"
 L["Trigger:"] = "Auslöser:"
-L["Trigger Update"] = "Auslöser Aktualisierung"
+L["Trigger Update"] = "Auslöseraktualisierung"
 L["Undefined"] = "Undefiniert"
 L["Unholy Rune #1"] = "Unheilig Rune #1"
 L["Unholy Rune #2"] = "Unheilig Rune #2"
@@ -466,13 +472,13 @@ L["Warlock"] = "Hexenmeister"
 L["Warrior"] = "Krieger"
 L["Water"] = "Wasser"
 L["WeakAuras"] = "WeakAuras"
-L["WeakAurasModelPaths"] = "WeakAuras - 3D Modell Pfade"
-L["WeakAurasModelPaths .toc Notes"] = "Stellt eine Liste der meisten 3D Modelle für WA Displays zur Verfügung."
-L["WeakAurasOptions"] = "WeakAuras Optionen"
+L["WeakAurasModelPaths"] = "WeakAuras - 3D-Modell-Pfade"
+L["WeakAurasModelPaths .toc Notes"] = "Stellt eine Liste der meisten 3D-Modelle für WA-Anzeigen zur Verfügung."
+L["WeakAurasOptions"] = "WeakAuras - Optionen"
 L["WeakAurasOptions .toc Notes"] = "Optionen für WeakAuras"
-L["WeakAuras .toc Notes"] = "Ein leistungsfähiges, umfassendes Addon zur grafischen Darstellung von Informationen über Auren, Abklingzeiten, Timern und vielem mehr." -- Needs review
-L["WeakAurasTutorials"] = "WeakAuras - Anleitungen" -- Needs review
-L["WeakAurasTutorials .toc Notes"] = "Einführung und erweiterte Tutorials für WeakAuraus." -- Needs review
+L["WeakAuras .toc Notes"] = "Ein leistungsfähiges, umfassendes Addon zur grafischen Darstellung von Informationen über Auren, Abklingzeiten, Timern und vielem mehr."
+L["WeakAurasTutorials"] = "WeakAuras - Anleitungen"
+L["WeakAurasTutorials .toc Notes"] = "Einführung und erweiterte Anleitungen für WeakAuraus."
 L["Weapon"] = "Waffen"
 L["Whisper"] = "Flüstern"
 L["Wobble"] = "Wackeln"

@@ -443,6 +443,12 @@ Pawn插件默认已经参考Wowhead给所有职业的专精建立了标准评分
 如果启用，插件还是推荐在装备上插上适当过渡的宝石，但是插件不会再计算它的属性评分。
 
 如果不启用，插件会计算这个插孔能插最有价值宝石的属性评分并推荐给你。]=],
+		OptionsIgnoreItemUpgradesCheck = "Ignore valor and baleful upgrades",
+		OptionsIgnoreItemUpgradesCheckTooltip = [=[Enable this option to have Pawn ignore the potential for Valor upgrades and Empowered Baleful items when calculating item values.
+
+If checked, Pawn will treat upgradeable items as they are and will not assume that you would use Valor and Empowered Apexis Fragments to improve the item when determining whether an item is better than what you currently have.
+
+If unchecked, Pawn will treat those items assuming that you would maximize their potential with Valor and Empowered Apexis Fragments.  This could cause a level 650 baleful item to appear as a significant upgrade over a level 670 item from Blackrock Foundry, since the baleful item could potentially be improved to level 705 through valor and Apexis.]=],
 		OptionsInventoryIcon = "显示物品图标",
 		OptionsInventoryIconTooltip = "在你点击聊天窗口的物品显示其信息的时候，在信息旁边显示该物品的图标。",
 		OptionsItemIDs = "显示物品ID",

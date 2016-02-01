@@ -1,5 +1,7 @@
 local GlobalAddonName, ExRT = ...
 
+if ExRT.is7 then return end --This module removed in 7.0
+
 local GetItemInfo = GetItemInfo
 
 local module = ExRT.mod:New("RaidLoot",ExRT.L.sooitems)

@@ -572,7 +572,7 @@ do
 	end
 end
 
-function module.main:COMBAT_LOG_EVENT_UNFILTERED(_,event,_,_,_,_,_,destGUID,destName,destFlags)
+function module.main:COMBAT_LOG_EVENT_UNFILTERED(_,_,event,_,_,_,_,_,destGUID,destName,destFlags)
 	if event == "UNIT_DIED" and destName and GetUnitInfoByUnitFlag(destFlags,1) == 1024 then
 		if UnitIsFeignDeath(destName) then
 			return

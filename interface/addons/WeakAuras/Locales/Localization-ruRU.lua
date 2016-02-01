@@ -126,6 +126,7 @@ L["Demonic Fury"] = "Демоническая ярость" -- Needs review
 L["Descending"] = "По убыванию"
 L["Destination Name"] = "Имя Цели"
 L["Destination Unit"] = "Цель Приемник"
+-- L["Dialog"] = ""
 L["Disease"] = "Болезнь"
 L["Dispel"] = "Рассеять"
 L["Dispel Failed"] = "Рассеивание безуспешно"

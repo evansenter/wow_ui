@@ -15,7 +15,7 @@ function module.main:ADDON_LOADED()
 	end
 end
 
-function module.main:COMBAT_LOG_EVENT_UNFILTERED(_,event,_,sourceGUID,sourceName,_,_,destGUID,destName)
+function module.main:COMBAT_LOG_EVENT_UNFILTERED(_,_,event,_,sourceGUID,sourceName,_,_,destGUID,destName)
 	if event == "SPELL_SUMMON" or event == "SPELL_CREATE" then
 		module.db.petsDB[destGUID] = {sourceGUID,sourceName,destName}
 	end

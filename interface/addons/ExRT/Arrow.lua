@@ -9,8 +9,8 @@ local ELib,L = ExRT.lib,ExRT.L
 Blizzard map rules:
 - coords decreases from left to right
 - coords decreases from top to bottom
-- GetCurrentMapZone returns coords of Top,Right,Bottom,Left
-- GetCurrentMapDungeonLevel returns coords of Bottom,Left,Top,Right
+- GetCurrentMapZone returns coords of Right,Top,Left,Bottom
+- GetCurrentMapDungeonLevel returns coords of Left,Bottom,Right,Top
 ]]
 
 ----------------------------
@@ -70,7 +70,12 @@ local arrow = frame:CreateTexture(nil, "OVERLAY")
 arrow:SetTexture(textureArrow)
 arrow:SetAllPoints(frame)
 
-local txtrng = frame:CreateFontString(nil,"OVERLAY")
+local txtrng
+if ExRT.is7 then
+	txtrng = frame:CreateFontString(nil,"OVERLAY","GameFontNormal")
+else
+	txtrng = frame:CreateFontString(nil,"OVERLAY")
+end
 txtrng:SetSize(44,18)
 txtrng:SetPoint("BOTTOMRIGHT",10,5)
 txtrng:SetFont("Interface\\AddOns\\ExRT\\media\\ariblk.ttf", 14, "OUTLINE")
@@ -363,8 +368,10 @@ end
 ----------------------
 local function show(runAway, x, y, distance, time, world, hide)
 	local player
-	SetMapToCurrentZone()--Set map to current zone before checking other stuff
-	module:UpdateMapSizes()--Force a mapsize update after SetMapToCurrentZone to ensure our information is current
+	if not world then	--Update Map Only if local coords
+		SetMapToCurrentZone()--Set map to current zone before checking other stuff
+		module:UpdateMapSizes()--Force a mapsize update after SetMapToCurrentZone to ensure our information is current
+	end
 	if type(x) == "string" then
 		player, hideDistance, hideTime = x, y, distance
 	end

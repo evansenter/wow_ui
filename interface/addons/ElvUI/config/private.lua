@@ -14,7 +14,6 @@ V['general'] = {
 	['chatBubbleFontSize'] = 14,
 	['pixelPerfect'] = true,
 	['replaceBlizzFonts'] = true,
-	['smallerWorldMap'] = true,
 	['minimap'] = {
 		['enable'] = true,
 		['hideGarrison'] = true,
@@ -109,6 +108,8 @@ V['skins'] = {
 		['petbattleui'] = true,
 		['losscontrol'] = true,
 		['itemUpgrade'] = true,
+		["addonManager"] = true,
+		["mirrorTimers"] = true,
 	},
 }
 

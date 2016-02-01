@@ -307,6 +307,7 @@ OptionsFrame.image:SetBackdrop({bgFile = "Interface\\AddOns\\ExRT\\media\\Option
 OptionsFrame.image:SetPoint("TOPLEFT",-45,25)	
 OptionsFrame.image:SetFrameLevel(5)
 
+
 OptionsFrame.chkIconMiniMap = ELib:Check(OptionsFrame,L.setminimap1):Point(25,-140):OnClick(function(self) 
 	if self:GetChecked() then
 		VExRT.Addon.IconMiniMapHide = true
@@ -348,7 +349,7 @@ OptionsFrame.eventsCountTextFrame:SetScript("OnShow",function()
 			end
 		end
 	end
-	tmp["COMBAT_LOG_EVENT_UNFILTERED"] = ExRT.CLEUframe.eventsCounter or 0
+	tmp["COMBAT_LOG_EVENT_UNFILTERED"] = -1
 	local tmp2 = {}
 	local total = 0
 	for event,count in pairs(tmp) do

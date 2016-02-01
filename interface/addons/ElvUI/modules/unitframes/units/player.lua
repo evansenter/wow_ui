@@ -104,7 +104,7 @@ function UF:UpdatePlayerFrameAnchors(frame, isShown)
 	local POWERBAR_HEIGHT = db.power.height
 	local SPACING = E.Spacing;
 	local BORDER = E.Border;
-	local SHADOW_SPACING = E.PixelMode and 3 or 4
+	local SHADOW_SPACING = (BORDER*3 - SPACING*2)
 	local USE_STAGGER = stagger and stagger:IsShown();
 	local STAGGER_WIDTH = USE_STAGGER and (db.stagger.width + (BORDER*2)) or 0;
 
@@ -128,9 +128,9 @@ function UF:UpdatePlayerFrameAnchors(frame, isShown)
 
 	if USE_STAGGER then
 		if not USE_MINI_POWERBAR and not USE_INSET_POWERBAR and not POWERBAR_DETACHED then
-			stagger:Point('BOTTOMLEFT', power, 'BOTTOMRIGHT', BORDER*2 + (E.PixelMode and -1 or SPACING), 0)
+			stagger:Point('BOTTOMLEFT', power, 'BOTTOMRIGHT', BORDER*2 + (-BORDER + SPACING*3), 0)
 		else
-			stagger:Point('BOTTOMLEFT', health, 'BOTTOMRIGHT', BORDER*2 + (E.PixelMode and -1 or SPACING), 0)
+			stagger:Point('BOTTOMLEFT', health, 'BOTTOMRIGHT', BORDER*2 + (-BORDER + SPACING*3), 0)
 		end
 		stagger:Point('TOPRIGHT', health, 'TOPRIGHT', STAGGER_WIDTH, 0)
 
@@ -180,13 +180,13 @@ function UF:UpdatePlayerFrameAnchors(frame, isShown)
 			if USE_MINI_CLASSBAR and USE_CLASSBAR then
 				portrait.backdrop:Point("TOPLEFT", frame, "TOPLEFT", 0, -CLASSBAR_HEIGHT_SPACING)
 			else
-				portrait.backdrop:SetPoint("TOPLEFT", frame, "TOPLEFT")
+				portrait.backdrop:Point("TOPLEFT", frame, "TOPLEFT")
 			end
 
 			if USE_MINI_POWERBAR or USE_POWERBAR_OFFSET or USE_INSET_POWERBAR or not USE_POWERBAR or USE_INSET_POWERBAR or POWERBAR_DETACHED then
-				portrait.backdrop:Point("BOTTOMRIGHT", frame.Health.backdrop, "BOTTOMLEFT", E.PixelMode and 1 or -SPACING, 0)
+				portrait.backdrop:Point("BOTTOMRIGHT", frame.Health.backdrop, "BOTTOMLEFT", BORDER - SPACING*3, 0)
 			else
-				portrait.backdrop:Point("BOTTOMRIGHT", frame.Power.backdrop, "BOTTOMLEFT", E.PixelMode and 1 or -SPACING, 0)
+				portrait.backdrop:Point("BOTTOMRIGHT", frame.Power.backdrop, "BOTTOMLEFT", BORDER - SPACING*3, 0)
 			end
 		end
 	else
@@ -221,9 +221,9 @@ function UF:UpdatePlayerFrameAnchors(frame, isShown)
 			portrait.backdrop:Point("TOPLEFT", frame, "TOPLEFT")
 
 			if USE_MINI_POWERBAR or USE_POWERBAR_OFFSET or not USE_POWERBAR or USE_INSET_POWERBAR or POWERBAR_DETACHED then
-				portrait.backdrop:Point("BOTTOMRIGHT", frame.Health.backdrop, "BOTTOMLEFT", E.PixelMode and 1 or -SPACING, 0)
+				portrait.backdrop:Point("BOTTOMRIGHT", frame.Health.backdrop, "BOTTOMLEFT", BORDER - SPACING*3, 0)
 			else
-				portrait.backdrop:Point("BOTTOMRIGHT", frame.Power.backdrop, "BOTTOMLEFT", E.PixelMode and 1 or -SPACING, 0)
+				portrait.backdrop:Point("BOTTOMRIGHT", frame.Power.backdrop, "BOTTOMLEFT", BORDER - SPACING*3, 0)
 			end
 		end
 	end
@@ -241,7 +241,7 @@ function UF:Update_PlayerFrame(frame, db)
 	frame:RegisterForClicks(self.db.targetOnMouseDown and 'AnyDown' or 'AnyUp')
 	local BORDER = E.Border
 	local SPACING = E.Spacing
-	local SHADOW_SPACING = E.PixelMode and 3 or 4
+	local SHADOW_SPACING = (BORDER*3 - SPACING*2)
 	local UNIT_WIDTH = db.width
 	local UNIT_HEIGHT = db.height
 
@@ -342,7 +342,7 @@ function UF:Update_PlayerFrame(frame, db)
 				point = point:gsub("ICON", "")
 
 				threat.texIcon:ClearAllPoints()
-				threat.texIcon:SetPoint(point, frame.Health, point)
+				threat.texIcon:Point(point, frame.Health, point)
 			end
 		elseif frame:IsElementEnabled('Threat') then
 			frame:DisableElement('Threat')
@@ -506,7 +506,7 @@ function UF:Update_PlayerFrame(frame, db)
 					E:CreateMover(power, 'PlayerPowerBarMover', L["Player Powerbar"], nil, nil, nil, 'ALL,SOLO')
 				else
 					power:ClearAllPoints()
-					power:SetPoint("BOTTOMLEFT", power.mover, "BOTTOMLEFT")
+					power:Point("BOTTOMLEFT", power.mover, "BOTTOMLEFT")
 					power.mover:SetScale(1)
 					power.mover:SetAlpha(1)
 				end
@@ -531,7 +531,7 @@ function UF:Update_PlayerFrame(frame, db)
 				power:SetFrameStrata("MEDIUM")
 				power:SetFrameLevel(frame:GetFrameLevel() + 3)
 			else
-				power:Point("TOPLEFT", frame.Health.backdrop, "BOTTOMLEFT", BORDER, -(E.PixelMode and 0 or (BORDER + SPACING)))
+				power:Point("TOPLEFT", frame.Health.backdrop, "BOTTOMLEFT", BORDER, -(SPACING*3))
 				power:Point("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -BORDER, BORDER)
 			end
 			
@@ -543,8 +543,10 @@ function UF:Update_PlayerFrame(frame, db)
 			end
 			
 			if POWERBAR_DETACHED and db.power.parent == "UIPARENT" then
+				E.FrameLocks[power] = true
 				power:SetParent(E.UIParent)
 			else
+				E.FrameLocks[power] = nil
 				power:SetParent(frame)
 			end
 
@@ -593,13 +595,13 @@ function UF:Update_PlayerFrame(frame, db)
 				if USE_MINI_CLASSBAR and USE_CLASSBAR and not db.classbar.detachFromFrame then
 					portrait.backdrop:Point("TOPLEFT", frame, "TOPLEFT", 0, -((CLASSBAR_HEIGHT/2)))
 				else
-					portrait.backdrop:SetPoint("TOPLEFT", frame, "TOPLEFT")
+					portrait.backdrop:Point("TOPLEFT", frame, "TOPLEFT")
 				end
 
 				if USE_MINI_POWERBAR or USE_POWERBAR_OFFSET or not USE_POWERBAR or USE_INSET_POWERBAR or POWERBAR_DETACHED then
-					portrait.backdrop:Point("BOTTOMRIGHT", frame.Health.backdrop, "BOTTOMLEFT", E.PixelMode and 1 or -SPACING, 0)
+					portrait.backdrop:Point("BOTTOMRIGHT", frame.Health.backdrop, "BOTTOMLEFT", BORDER - SPACING*3, 0)
 				else
-					portrait.backdrop:Point("BOTTOMRIGHT", frame.Power.backdrop, "BOTTOMLEFT", E.PixelMode and 1 or -SPACING, 0)
+					portrait.backdrop:Point("BOTTOMRIGHT", frame.Power.backdrop, "BOTTOMLEFT", BORDER - SPACING*3, 0)
 				end
 
 				portrait:Point('BOTTOMLEFT', portrait.backdrop, 'BOTTOMLEFT', BORDER, BORDER)
@@ -637,9 +639,9 @@ function UF:Update_PlayerFrame(frame, db)
 		local rows = db.buffs.numrows
 
 		if USE_POWERBAR_OFFSET then
-			buffs:SetWidth(UNIT_WIDTH - POWERBAR_OFFSET)
+			buffs:Width(UNIT_WIDTH - POWERBAR_OFFSET)
 		else
-			buffs:SetWidth(UNIT_WIDTH)
+			buffs:Width(UNIT_WIDTH)
 		end
 
 		buffs.forceShow = frame.forceShowAuras
@@ -647,13 +649,13 @@ function UF:Update_PlayerFrame(frame, db)
 		buffs.size = db.buffs.sizeOverride ~= 0 and db.buffs.sizeOverride or ((((buffs:GetWidth() - (buffs.spacing*(buffs.num/rows - 1))) / buffs.num)) * rows)
 
 		if db.buffs.sizeOverride and db.buffs.sizeOverride > 0 then
-			buffs:SetWidth(db.buffs.perrow * db.buffs.sizeOverride)
+			buffs:Width(db.buffs.perrow * db.buffs.sizeOverride)
 		end
 
 		local x, y = E:GetXYOffset(db.buffs.anchorPoint)
 		local attachTo = self:GetAuraAnchorFrame(frame, db.buffs.attachTo)
 
-		buffs:Point(E.InversePoints[db.buffs.anchorPoint], attachTo, db.buffs.anchorPoint, x + db.buffs.xOffset, y + db.buffs.yOffset + (E.PixelMode and (db.buffs.anchorPoint:find('TOP') and -1 or 1) or 0))
+		buffs:Point(E.InversePoints[db.buffs.anchorPoint], attachTo, db.buffs.anchorPoint, x + db.buffs.xOffset, y + db.buffs.yOffset)
 		buffs:Height(buffs.size * rows)
 		buffs["growth-y"] = db.buffs.anchorPoint:find('TOP') and 'UP' or 'DOWN'
 		buffs["growth-x"] = db.buffs.anchorPoint == 'LEFT' and 'LEFT' or  db.buffs.anchorPoint == 'RIGHT' and 'RIGHT' or (db.buffs.anchorPoint:find('LEFT') and 'RIGHT' or 'LEFT')
@@ -663,7 +665,7 @@ function UF:Update_PlayerFrame(frame, db)
 		buffs.point = E.InversePoints[db.buffs.anchorPoint]
 		buffs.anchorPoint = db.buffs.anchorPoint
 		buffs.xOffset = x + db.buffs.xOffset
-		buffs.yOffset = y + db.buffs.yOffset + (E.PixelMode and (db.buffs.anchorPoint:find('TOP') and -1 or 1) or 0)
+		buffs.yOffset = y + db.buffs.yOffset
 
 		if db.buffs.enable then
 			buffs:Show()
@@ -679,9 +681,9 @@ function UF:Update_PlayerFrame(frame, db)
 		local rows = db.debuffs.numrows
 
 		if USE_POWERBAR_OFFSET then
-			debuffs:SetWidth(UNIT_WIDTH - POWERBAR_OFFSET)
+			debuffs:Width(UNIT_WIDTH - POWERBAR_OFFSET)
 		else
-			debuffs:SetWidth(UNIT_WIDTH)
+			debuffs:Width(UNIT_WIDTH)
 		end
 
 		debuffs.forceShow = frame.forceShowAuras
@@ -689,7 +691,7 @@ function UF:Update_PlayerFrame(frame, db)
 		debuffs.size = db.debuffs.sizeOverride ~= 0 and db.debuffs.sizeOverride or ((((debuffs:GetWidth() - (debuffs.spacing*(debuffs.num/rows - 1))) / debuffs.num)) * rows)
 
 		if db.debuffs.sizeOverride and db.debuffs.sizeOverride > 0 then
-			debuffs:SetWidth(db.debuffs.perrow * db.debuffs.sizeOverride)
+			debuffs:Width(db.debuffs.perrow * db.debuffs.sizeOverride)
 		end
 
 		local x, y = E:GetXYOffset(db.debuffs.anchorPoint)
@@ -744,10 +746,10 @@ function UF:Update_PlayerFrame(frame, db)
 	--Castbar
 	do
 		local castbar = frame.Castbar
-		castbar:Width(db.castbar.width - (BORDER * 2))
+		castbar:Width(db.castbar.width - (SPACING * 4))
 		castbar:Height(db.castbar.height)
 		castbar.Holder:Width(db.castbar.width)
-		castbar.Holder:Height(db.castbar.height + (E.PixelMode and 2 or (BORDER * 2)))
+		castbar.Holder:Height(db.castbar.height + (E.Border + E.Spacing*4))
 		castbar.Holder:GetScript('OnSizeChanged')(castbar.Holder)
 
 		--Latency
@@ -765,7 +767,7 @@ function UF:Update_PlayerFrame(frame, db)
 			castbar.Icon.bg:Width(db.castbar.height + (E.Border * 2))
 			castbar.Icon.bg:Height(db.castbar.height + (E.Border * 2))
 
-			castbar:Width(db.castbar.width - castbar.Icon.bg:GetWidth() - (E.PixelMode and 1 or 5))
+			castbar:Width(db.castbar.width - castbar.Icon.bg:GetWidth() - (E.Border + E.Spacing*3))
 			castbar.Icon.bg:Show()
 		else
 			castbar.ButtonIcon.bg:Hide()
@@ -789,6 +791,9 @@ function UF:Update_PlayerFrame(frame, db)
 	do
 		local bars = frame[frame.ClassBar]
 		if bars then
+			--Store original parent reference needed in classbars.lua
+			bars.origParent = frame
+			
 			if bars.UpdateAllRuneTypes then
 				bars.UpdateAllRuneTypes(frame)
 			end
@@ -806,7 +811,7 @@ function UF:Update_PlayerFrame(frame, db)
 				if E.myclass == 'DRUID' then
 					CLASSBAR_WIDTH = CLASSBAR_WIDTH * 2/3
 				else
-					CLASSBAR_WIDTH = CLASSBAR_WIDTH * (MAX_CLASS_BAR - 1) / MAX_CLASS_BAR
+					CLASSBAR_WIDTH = CLASSBAR_WIDTH * (MAX_CLASS_BAR - BORDER) / MAX_CLASS_BAR
 				end
 				bars:SetFrameStrata("MEDIUM")
 
@@ -816,7 +821,7 @@ function UF:Update_PlayerFrame(frame, db)
 				end
 			elseif not db.classbar.detachFromFrame then
 				bars:ClearAllPoints()
-				bars:Point("BOTTOMLEFT", frame.Health.backdrop, "TOPLEFT", BORDER, (E.PixelMode and 0 or (BORDER + SPACING)))
+				bars:Point("BOTTOMLEFT", frame.Health.backdrop, "TOPLEFT", BORDER, SPACING*3)
 				bars:SetFrameStrata("LOW")
 
 				if bars.mover then
@@ -828,13 +833,13 @@ function UF:Update_PlayerFrame(frame, db)
 
 				if not bars.mover then
 					bars:Width(CLASSBAR_WIDTH)
-					bars:Height(CLASSBAR_HEIGHT - (E.PixelMode and 1 or 4))
+					bars:Height(CLASSBAR_HEIGHT - (BORDER + SPACING*2))
 					bars:ClearAllPoints()
 					bars:Point("BOTTOM", E.UIParent, "BOTTOM", 0, 150)
 					E:CreateMover(bars, 'ClassBarMover', L["Classbar"], nil, nil, nil, 'ALL,SOLO')
 				else
 					bars:ClearAllPoints()
-					bars:SetPoint("BOTTOMLEFT", bars.mover, "BOTTOMLEFT")
+					bars:Point("BOTTOMLEFT", bars.mover, "BOTTOMLEFT")
 					bars.mover:SetScale(1)
 					bars.mover:SetAlpha(1)
 				end
@@ -843,7 +848,7 @@ function UF:Update_PlayerFrame(frame, db)
 			end
 
 			bars:Width(CLASSBAR_WIDTH)
-			bars:Height(CLASSBAR_HEIGHT - (E.PixelMode and 1 or 4))
+			bars:Height(CLASSBAR_HEIGHT - (BORDER + SPACING*2))
 
 			if E.myclass ~= 'MONK' and E.myclass ~= 'WARLOCK' and E.myclass ~= 'DRUID' then
 				for i = 1, MAX_CLASS_BAR do
@@ -853,22 +858,26 @@ function UF:Update_PlayerFrame(frame, db)
 						c = E.db.general.bordercolor
 						bars[i].backdrop:SetBackdropBorderColor(c.r, c.g, c.b)
 					end
-					bars[i]:SetHeight(bars:GetHeight())
+					bars[i]:Height(bars:GetHeight())
 					if db.classbar.fill == "spaced" then
-						bars[i]:SetWidth(E:Scale(bars:GetWidth() - ((SPACING+(BORDER*2)+2)*(MAX_CLASS_BAR - 1)))/MAX_CLASS_BAR)
-					else
-						bars[i]:SetWidth(E:Scale(bars:GetWidth() - (MAX_CLASS_BAR - 1))/MAX_CLASS_BAR)
+						bars[i]:Width((bars:GetWidth() - ((SPACING+(BORDER*2)+BORDER)*(MAX_CLASS_BAR - 1)))/MAX_CLASS_BAR)
+					elseif i ~= MAX_CLASS_BAR then
+						bars[i]:Width((CLASSBAR_WIDTH - (MAX_CLASS_BAR*(BORDER-SPACING))+(BORDER-SPACING)) / MAX_CLASS_BAR)
 					end
 
 					bars[i]:GetStatusBarTexture():SetHorizTile(false)
 					bars[i]:ClearAllPoints()
 					if i == 1 then
-						bars[i]:SetPoint("LEFT", bars)
+						bars[i]:Point("LEFT", bars)                   
 					else
 						if db.classbar.fill == "spaced" then
 							bars[i]:Point("LEFT", bars[i-1], "RIGHT", SPACING+(BORDER*2)+2, 0)
-						else
-							bars[i]:Point("LEFT", bars[i-1], "RIGHT", 1, 0)
+                        else
+							bars[i]:Point("LEFT", bars[i-1], "RIGHT", BORDER-SPACING, 0)
+						end
+
+						if i == MAX_CLASS_BAR then
+                            bars[i]:Point("RIGHT", bars)
 						end
 					end
 
@@ -898,8 +907,8 @@ function UF:Update_PlayerFrame(frame, db)
 				bars.SolarBar:SetMinMaxValues(0, 0)
 				bars.LunarBar:SetStatusBarColor(unpack(ElvUF.colors.EclipseBar[1]))
 				bars.SolarBar:SetStatusBarColor(unpack(ElvUF.colors.EclipseBar[2]))
-				bars.LunarBar:Size(CLASSBAR_WIDTH, CLASSBAR_HEIGHT - (E.PixelMode and 1 or 4))
-				bars.SolarBar:Size(CLASSBAR_WIDTH, CLASSBAR_HEIGHT - (E.PixelMode and 1 or 4))
+				bars.LunarBar:Size(CLASSBAR_WIDTH, CLASSBAR_HEIGHT - (BORDER + SPACING*2))
+				bars.SolarBar:Size(CLASSBAR_WIDTH, CLASSBAR_HEIGHT - (BORDER + SPACING*2))
 			end
 
 			if E.myclass ~= 'DRUID' then
@@ -908,6 +917,14 @@ function UF:Update_PlayerFrame(frame, db)
 				else
 					bars.backdrop:Hide()
 				end
+			end
+			
+			if db.classbar.detachFromFrame and db.classbar.parent == "UIPARENT" then
+				E.FrameLocks[bars] = true
+				bars:SetParent(E.UIParent)
+			else
+				E.FrameLocks[bars] = nil
+				bars:SetParent(frame)
 			end
 
 			if USE_CLASSBAR and not frame:IsElementEnabled(frame.ClassBar) then
@@ -1044,18 +1061,17 @@ function UF:Update_PlayerFrame(frame, db)
 			end
 
 			local yOffset = 0;
-			if E.PixelMode then
-				if db.aurabar.anchorPoint == 'BELOW' then
-					yOffset = 1;
-				else
-					yOffset = -1;
-				end
-			end
+            if db.aurabar.anchorPoint == 'BELOW' then
+                yOffset = BORDER - SPACING*2;
+            else
+                yOffset = -BORDER + SPACING*2;
+            end
+
 
 			auraBars.auraBarHeight = db.aurabar.height
 			auraBars:ClearAllPoints()
-			auraBars:SetPoint(anchorPoint..'LEFT', attachTo, anchorTo..'LEFT', (attachTo == frame and anchorTo == 'BOTTOM') and POWERBAR_OFFSET or 0, E.PixelMode and anchorPoint ==  -1 or yOffset)
-			auraBars:SetPoint(anchorPoint..'RIGHT', attachTo, anchorTo..'RIGHT', attachTo == frame and POWERBAR_OFFSET * (anchorTo == 'BOTTOM' and 0 or -1) or 0, E.PixelMode and -1 or yOffset)
+			auraBars:Point(anchorPoint..'LEFT', attachTo, anchorTo..'LEFT', (attachTo == frame and anchorTo == 'BOTTOM') and POWERBAR_OFFSET or 0, yOffset)
+			auraBars:Point(anchorPoint..'RIGHT', attachTo, anchorTo..'RIGHT', attachTo == frame and POWERBAR_OFFSET * (anchorTo == 'BOTTOM' and 0 or -1) or 0, yOffset)
 			auraBars.buffColor = {buffColor.r, buffColor.g, buffColor.b}
 			if UF.db.colors.auraBarByType then
 				auraBars.debuffColor = nil;
@@ -1115,7 +1131,7 @@ function UF:Update_PlayerFrame(frame, db)
 			frame:Tag(frame.customTexts[objectName], objectDB.text_format or '')
 			frame.customTexts[objectName]:SetJustifyH(objectDB.justifyH or 'CENTER')
 			frame.customTexts[objectName]:ClearAllPoints()
-			frame.customTexts[objectName]:SetPoint(objectDB.justifyH or 'CENTER', frame, objectDB.justifyH or 'CENTER', objectDB.xOffset, objectDB.yOffset)
+			frame.customTexts[objectName]:Point(objectDB.justifyH or 'CENTER', frame, objectDB.justifyH or 'CENTER', objectDB.xOffset, objectDB.yOffset)
 		end
 	end
 

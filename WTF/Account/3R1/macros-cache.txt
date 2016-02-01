@@ -23,7 +23,7 @@ END
 VER 3 0000000000000047 "Deathnote" "Ability_Hunter_MurderofCrows"
 /deathnote
 END
-VER 3 0000000000000041 "EH WA" "INV_MISC_QUESTIONMARK"
+VER 3 0000000000000041 "EH MW" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /use [@mouseover,help,nodead][]Expel Harm
 END
@@ -96,6 +96,10 @@ VER 3 0000000000000043 "Tier 7" "INV_Misc_QuestionMark"
 #showtooltip
 /use [talent:7/1]Hurricane Strike;[talent:7/2]Chi Explosion;[talent:7/3]Serenity
 /use 14
+END
+VER 3 000000000000004B "Tier 7 MW" "INV_Misc_QuestionMark"
+#showtooltip
+/use [talent:7/1]Breath of the Serpent;[talent:7/2]Chi Explosion;[talent:7/3]Pool of Mists
 END
 VER 3 000000000000003E "Tiger Palm" "INV_MISC_QUESTIONMARK"
 #showtooltip Tiger Palm

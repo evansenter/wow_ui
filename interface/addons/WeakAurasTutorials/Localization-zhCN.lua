@@ -64,10 +64,10 @@ L["Group Auras: 7/10"] = "群组光环：7/10" -- Needs review
 L["Group Auras 7/10 Text"] = [=[再说一次，|cFFFF0000自动克隆|r能够使用 \"%s\"选项了。
 每一个受到特定光环影响的团队成员都会创建一个新的显示项目，]=] -- Needs review
 L["Group Auras: 8/10"] = "群组光环：8/10" -- Needs review
--- L["Group Auras 8/10 Text"] = ""
+L["Group Auras 8/10 Text"] = "为一个开启了|cFFFF0000自动复制|r的群组启用 %s 选项将使您的群组中的每个成员形成一个新的不受特定的光环影响的显示." -- Needs review
 L["Home"] = "首页" -- Needs review
 L["Multi-target Auras: 10/10"] = "多目标光环：10/10" -- Needs review
--- L["Multi-target Auras 10/10 Text"] = ""
+L["Multi-target Auras 10/10 Text"] = "多目标光环已默认|cFFFF0000自动复制|r." -- Needs review
 L["Multi-target Auras: 9/10"] = "多目标光环9/10" -- Needs review
 L["Multi-target Auras 9/10 Text"] = "最后，为单位选项选择\\\"多个目标\\\"" -- Needs review
 L["New in 1.4:"] = "1.4版的新功能：" -- Needs review
@@ -79,13 +79,13 @@ L["New in 1.4 Text1"] = [=[1.4 版的|cFF8800FFWeakAuras|r提供了一下强大�
 L["New in 1.4 Text2"] = "首先，为了演示，我们创建了一个新的元素。" -- Needs review
 L["Previous"] = "前一个" -- Needs review
 L["Trigger Options: 1/4"] = "触发器选项：1/4" -- Needs review
--- L["Trigger Options 1/4 Text"] = ""
+L["Trigger Options 1/4 Text"] = "除了 \\“多目标\\” 单位选项中还有另一个新的设置:特定单位." -- Needs review
 L["Trigger Options: 2/4"] = "触发器选项：2/4" -- Needs review
--- L["Trigger Options 2/4 Text"] = ""
+L["Trigger Options 2/4 Text"] = "在这个地方,您可以指定你团队中的任意玩家或一个自定义单位ID.单位ID例如\\\"boss1\\\" \\\"boss2\\\".等对团队副本尤其有用." -- Needs review
 L["Trigger Options: 3/4"] = "触发器选项：3/4" -- Needs review
--- L["Trigger Options 3/4 Text"] = ""
+L["Trigger Options 3/4 Text"] = "|cFF8800FFWeakAuras 1.4|r 也加入了一些新的触发器类型." -- Needs review
 L["Trigger Options: 4/4"] = "触发器选项：4/4" -- Needs review
--- L["Trigger Options 4/4 Text"] = ""
+L["Trigger Options 4/4 Text"] = " |cFFFFFFFF单位特性|r 触发器允许您测试一个单位的名称,职业,敌对关系以及它是否是一个玩家或非玩家角色." -- Needs review
 L["WeakAuras Tutorials"] = "WeakAuras 教程" -- Needs review
 L["Welcome"] = "欢迎" -- Needs review
 L["Welcome Text"] = [=[欢迎来到 |cFF8800FFWeakAuras|r 初学者教程.

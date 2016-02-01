@@ -6,10 +6,11 @@ ErrorFilterDB = {
 		["Centromere - Dark Iron"] = "Default",
 		["Colton - Dark Iron"] = "Default",
 		["Ereinion - Dark Iron"] = "Default",
+		["Combustion - Illidan"] = "Default",
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Natal - Illidan"] = "Default",
 		["Evan - Illidan"] = "Default",
-		["Combustion - Illidan"] = "Default",
+		["Pandatal - Illidan"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

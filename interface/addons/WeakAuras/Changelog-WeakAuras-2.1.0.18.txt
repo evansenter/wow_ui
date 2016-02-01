@@ -1,0 +1,52 @@
+tag 2.1.0.18
+77940c056f4026d9c761831f93a67023e59bb0d3
+Benjamin Staneck <staneck@gmail.com>
+2016-01-20 00:51:36 +0100
+
+
+
+--------------------
+
+Infus:
+	- Add more functions and objects to the blacklist
+	A few obvious ones, there are probably more.
+Benjamin Staneck:
+	- fix untranslated option
+Infus:
+	- Add some more trade functions to the blocked list
+	Might be the fix for
+	Ticket: 459
+	
+	Or it might be a different isssue.
+	- Text: Fix text sizes over 35 for initial aura
+	I have no idea why moving SetTextHeight fixes that ticket,
+	but it does.
+	
+	Ticket-number: 456
+	- DBM Timer: Fix spellId condition
+	Ticket-Nr: 457
+	- Fix encounter id check
+	We need to start the search on the next character
+Benjamin Staneck:
+	- fix a typo
+Infus:
+	- WeakAuras: Fix bars not being hidden after cinematic
+	Ticket-Nr: 230
+	- BigWigs Timer Trigger: Replace matching existing timers
+	On getting a StartBar message, search for a bar that has the
+	same addon, spellId and text and replace that.
+	It seems that's what should happen on a second StartBar message,
+	though I'm a bit unsure on whether that's correct.
+	
+	Ticket-Nr: 449
+	- BigWigs Timer: Fix addon being intially nil
+	Ticket-Nr: 446
+	- Support multiple values in the encounter load condition
+	Ticket-number: 447
+	- Fix models not working in dynamic groups
+	Ticket-Nr: 444
+	- Add Potrait Zoom option to region type "Model"
+	- Fix realm being unknown on log on.
+Faithmelter:
+	- Dialog as a Sound Channel
+	Not sure if this has been left out for a good reason or not?, but I updated Types.lua to include the "Dialog" sound channel as a selection during WeakAura creation.

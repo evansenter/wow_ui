@@ -6,24 +6,28 @@ EPGPLootMaster = {
 		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
+		["Plane - Illidan"] = "Plane - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Natal - Illidan"] = "Natal - Illidan",
 		["Evan - Illidan"] = "Evan - Illidan",
-		["Plane - Illidan"] = "Plane - Illidan",
+		["Pandatal - Illidan"] = "Pandatal - Illidan",
 	},
 	["profiles"] = {
+		["Natal - Illidan"] = {
+		},
 		["Metal - Illidan"] = {
-		},
-		["Comet - Illidan"] = {
-			["hideMLOnCombat"] = false,
-		},
-		["Combustion - Illidan"] = {
-		},
-		["Centromere - Dark Iron"] = {
 		},
 		["Evan - Illidan"] = {
 		},
-		["Natal - Illidan"] = {
+		["Comet - Illidan"] = {
+			["auto_announce_threshold"] = 0,
+			["hideMLOnCombat"] = false,
+		},
+		["Centromere - Dark Iron"] = {
+		},
+		["Pandatal - Illidan"] = {
+		},
+		["Combustion - Illidan"] = {
 		},
 	},
 }

@@ -14,7 +14,7 @@ module.db.inspectDBAch = parentModule.db.inspectDBAch
 module.db.inspectQuery = parentModule.db.inspectQuery
 module.db.specIcons = ExRT.A.ExCD2 and ExRT.A.ExCD2.db.specIcons
 module.db.itemsSlotTable = parentModule.db.itemsSlotTable
-module.db.classIDs = {WARRIOR=1,PALADIN=2,HUNTER=3,ROGUE=4,PRIEST=5,DEATHKNIGHT=6,SHAMAN=7,MAGE=8,WARLOCK=9,MONK=10,DRUID=11}
+module.db.classIDs = {WARRIOR=1,PALADIN=2,HUNTER=3,ROGUE=4,PRIEST=5,DEATHKNIGHT=6,SHAMAN=7,MAGE=8,WARLOCK=9,MONK=10,DRUID=11,DEMONHUNTER=12}
 module.db.glyphsIDs = {9,11,13,10,8,12}
 
 module.db.statsList = {'intellect','agility','strength','spirit','haste','mastery','crit','spellpower','multistrike','versatility','armor','leech','avoidance','speed'}
@@ -72,7 +72,7 @@ module.db.statsMultiplayBySpec = {
 }
 
 module.db.armorType = {
-	WARRIOR="PLATE",PALADIN="PLATE",HUNTER="MAIL",ROGUE="LEATHER",PRIEST="CLOTH",DEATHKNIGHT="PLATE",SHAMAN="MAIL",MAGE="CLOTH",WARLOCK="CLOTH",MONK="LEATHER",DRUID="LEATHER"
+	WARRIOR="PLATE",PALADIN="PLATE",HUNTER="MAIL",ROGUE="LEATHER",PRIEST="CLOTH",DEATHKNIGHT="PLATE",SHAMAN="MAIL",MAGE="CLOTH",WARLOCK="CLOTH",MONK="LEATHER",DRUID="LEATHER",DEMONHUNTER="LEATHER"
 }
 
 module.db.roleBySpec = {
@@ -110,6 +110,8 @@ module.db.roleBySpec = {
 	[268] = 'TANK',
 	[269] = 'MELEE',
 	[270] = 'HEAL',
+	[577] = 'MELEE',
+	[581] = 'TANK',
 }
 
 module.db.specHasOffhand = {
@@ -262,6 +264,7 @@ module.db.colorizeLowIlvl = true
 module.db.colorizeNoGems = true
 module.db.colorizeNoTopEnchGems = false
 module.db.colorizeLowIlvl685 = false
+module.db.colorizeNoValorUpgrade = false
 
 function module.main:ADDON_LOADED()
 	VExRT = _G.VExRT
@@ -340,27 +343,31 @@ function module.options:Load()
 		f(self.checkButton)
 	end
 	
-	self.chkItemsTrackDropDown = ELib:DropDown(self,300,6):Point(50,0):Size(50)
+	self.chkItemsTrackDropDown = ELib:DropDown(self,300,7):Point(50,0):Size(50)
 	self.chkItemsTrackDropDown:Hide()
 	self.chkItemsTrackDropDown.List = {
 		{text = L.InspectViewerColorizeNoEnch,checkable = true,checkState = module.db.colorizeNoEnch, checkFunc = function(self,checked) 
 			module.db.colorizeNoEnch = checked
 			module.options.ReloadPage()
 		end,func = ItemsTrackDropDownClick},
-		{text = L.InspectViewerColorizeNoGems,checkable = true,checkState = true, checkFunc = function(self,checked) 
+		{text = L.InspectViewerColorizeNoGems,checkable = true,checkState = module.db.colorizeNoGems, checkFunc = function(self,checked) 
 			module.db.colorizeNoGems = checked
 			module.options.ReloadPage()
 		end,func = ItemsTrackDropDownClick},
-		{text = format(L.InspectViewerColorizeLowIlvl,630),checkable = true,checkState = true, checkFunc = function(self,checked) 
+		{text = format(L.InspectViewerColorizeLowIlvl,630),checkable = true,checkState = module.db.colorizeLowIlvl, checkFunc = function(self,checked) 
 			module.db.colorizeLowIlvl = checked
 			module.options.ReloadPage()
 		end,func = ItemsTrackDropDownClick},
-		{text = L.InspectViewerColorizeNoTopEnch,checkable = true,checkState = false, checkFunc = function(self,checked) 
+		{text = L.InspectViewerColorizeNoTopEnch,checkable = true,checkState = module.db.colorizeNoTopEnchGems, checkFunc = function(self,checked) 
 			module.db.colorizeNoTopEnchGems = checked
 			module.options.ReloadPage()
 		end,func = ItemsTrackDropDownClick},
-		{text = format(L.InspectViewerColorizeLowIlvl,685),checkable = true,checkState = false, checkFunc = function(self,checked) 
+		{text = format(L.InspectViewerColorizeLowIlvl,685),checkable = true,checkState = module.db.colorizeLowIlvl685, checkFunc = function(self,checked) 
 			module.db.colorizeLowIlvl685 = checked
+			module.options.ReloadPage()
+		end,func = ItemsTrackDropDownClick},
+		{text = L.InspectViewerColorizeNoValorUpgrade,checkable = true,checkState = module.db.colorizeNoValorUpgrade, checkFunc = function(self,checked)
+			module.db.colorizeNoValorUpgrade = checked
 			module.options.ReloadPage()
 		end,func = ItemsTrackDropDownClick},
 		{text = L.minimapmenuclose,checkable = false, padding = 16, func = function()
@@ -516,7 +523,7 @@ function module.options:Load()
 	
 	local function IsItemHasNotGem(link)
 		if link then
-			local gem = link:match("item:%d+:%d+:(%d+):")
+			local gem = link:match("item:%d+:[0-9%-]*:([0-9%-]*):")
 			if gem == "0" then
 				return true
 			end
@@ -525,7 +532,7 @@ function module.options:Load()
 	
 	local function IsTopEnchAndGems(link)
 		if link then
-			local ench,gem = link:match("item:%d+:(%d+):(%d+):")
+			local ench,gem = link:match("item:%d+:([0-9%-]*):([0-9%-]*):")
 			if ench and gem then
 				local isTop = true
 				if ench ~= "0" then
@@ -542,6 +549,22 @@ function module.options:Load()
 				end
 				return isTop
 			end
+		end
+	end
+	
+	local function IsValorUpgraded(link)
+		if link then
+			local isUpgraded = true
+			local upgradeType,linkRest = link:match("item:%d+:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:([0-9%-]*):[0-9%-]*:([%d:]+)")
+			if upgradeType and linkRest then --linkRest contains (a variable amount of) bonus IDs and the upgrade ID at the end
+				if upgradeType == "4" then -- this item can be upgraded with valor points
+					local upgradeID = linkRest:match(":(%d+)$")
+					if upgradeID ~= "531" then -- 529 is 0/2, 530 is 1/2, 531 is 2/2
+						isUpgraded = false
+					end
+				end
+			end
+			return isUpgraded
 		end
 	end
 
@@ -631,6 +654,7 @@ function module.options:Load()
 										(items_ilvl[slotID] and items_ilvl[slotID] > 0 and items_ilvl[slotID] < 630 and module.db.colorizeLowIlvl) or
 										(module.db.colorizeNoGems and ExRT.F.IsBonusOnItem(item,module.db.socketsBonusIDs) and IsItemHasNotGem(item)) or 
 										(module.db.colorizeNoTopEnchGems and not IsTopEnchAndGems(item)) or
+										(module.db.colorizeNoValorUpgrade and not IsValorUpgraded(item)) or
 										(items_ilvl[slotID] and items_ilvl[slotID] > 0 and items_ilvl[slotID] < 685 and module.db.colorizeLowIlvl685)
 										then
 										line.items[j].border:Show()

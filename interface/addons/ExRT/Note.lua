@@ -39,13 +39,12 @@ module.db.otherIconsList = {
 	{"{tank}","|TInterface\\LFGFrame\\UI-LFG-ICON-PORTRAITROLES:16:16:0:0:64:64:0:19:22:41|t","Interface\\LFGFrame\\UI-LFG-ICON-ROLES",0,0.26171875,0.26171875,0.5234375},
 	{"{healer}","|TInterface\\LFGFrame\\UI-LFG-ICON-PORTRAITROLES:16:16:0:0:64:64:20:39:1:20|t","Interface\\LFGFrame\\UI-LFG-ICON-ROLES",0.26171875,0.5234375,0,0.26171875},
 	{"{dps}","|TInterface\\LFGFrame\\UI-LFG-ICON-PORTRAITROLES:16:16:0:0:64:64:20:39:22:41|t","Interface\\LFGFrame\\UI-LFG-ICON-ROLES",0.26171875,0.5234375,0.26171875,0.5234375},
-	--[[
-	{"{T}","|TInterface\\LFGFrame\\UI-LFG-ICON-ROLES:16:16:0:0:256:256:0:67:67:134|t","Interface\\LFGFrame\\UI-LFG-ICON-ROLES",0,0.26171875,0.26171875,0.5234375},
-	{"{H}","|TInterface\\LFGFrame\\UI-LFG-ICON-ROLES:16:16:0:0:256:256:67:134:0:67|t","Interface\\LFGFrame\\UI-LFG-ICON-ROLES",0.26171875,0.5234375,0,0.26171875},
-	{"{D}","|TInterface\\LFGFrame\\UI-LFG-ICON-ROLES:16:16:0:0:256:256:67:134:67:134|t","Interface\\LFGFrame\\UI-LFG-ICON-ROLES",0.26171875,0.5234375,0.26171875,0.5234375},
-	]]
-
 }
+
+if ExRT.is7 then
+	tinsert(module.db.otherIconsList,12,{"{"..L.classLocalizate["DEMONHUNTER"] .."}","|TInterface\\GLUES\\CHARACTERCREATE\\UI-CHARACTERCREATE-CLASSES:16:16:0:0:256:256:190:253:128:192|t","Interface\\GLUES\\CHARACTERCREATE\\UI-CHARACTERCREATE-CLASSES",0.7421875,0.98828125,0.5,0.75})
+end
+
 module.db.iconsLocalizatedNames = {
 	L.raidtargeticon1,L.raidtargeticon2,L.raidtargeticon3,L.raidtargeticon4,L.raidtargeticon5,L.raidtargeticon6,L.raidtargeticon7,L.raidtargeticon8
 }
@@ -96,6 +95,7 @@ local function txtWithIcons(t)
 	return t
 end
 
+local IsUpdateNoteByEncounterFromMe = nil
 
 function module.options:Load()
 	self:CreateTilte()
@@ -722,7 +722,10 @@ function module.frame:UpdateFont()
 	local font = VExRT and VExRT.Note and VExRT.Note.FontName or ExRT.F.defFont
 	local size = VExRT and VExRT.Note and VExRT.Note.FontSize or 12
 	local outline = VExRT and VExRT.Note and VExRT.Note.Outline and "OUTLINE"
-	self.text:SetFont(font,size,outline)
+	isValidFont = self.text:SetFont(font,size,outline)
+	if not isValidFont then 
+		self.text:SetFont(GameFontNormal:GetFont(),size,outline)
+	end
 end
 
 function module.frame:UpdateText()
@@ -764,8 +767,8 @@ module.frame.buttonResize:SetScript("OnMouseUp", function(self)
 end)
 
 
-function module.frame:Save()
-	VExRT.Note.Text1 = module.options.NoteEditBox.EditBox:GetText()
+function module.frame:Save(blackNoteID)
+	VExRT.Note.Text1 = (blackNoteID and VExRT.Note.Black[blackNoteID] or module.options.NoteEditBox.EditBox:GetText())
 	if #VExRT.Note.Text1 == 0 then
 		VExRT.Note.Text1 = " "
 	end
@@ -791,6 +794,18 @@ function module.frame:Clear()
 	module.options.NoteEditBox.EditBox:SetText("") 
 end 
 
+local function GetPlayerRankInRaid(unit)
+	local rank = tonumber( ExRT.F.IsPlayerRLorOfficer(unit) )
+	return rank or 0
+end
+local function SendNoteByEncounter(blackNoteID)
+	if not IsUpdateNoteByEncounterFromMe then
+		return
+	end
+	IsUpdateNoteByEncounterFromMe = nil
+	module.frame:Save(blackNoteID)
+end
+
 function module:addonMessage(sender, prefix, ...)
 	if prefix == "multiline" then
 		if VExRT.Note.OnlyPromoted and IsInRaid() and not ExRT.F.IsPlayerRLorOfficer(sender) then
@@ -815,6 +830,18 @@ function module:addonMessage(sender, prefix, ...)
 			end
 			
 			module.options.lastUpdate:SetText( L.NoteLastUpdate..": "..VExRT.Note.LastUpdateName.." ("..date("%H:%M:%S %d.%m.%Y",VExRT.Note.LastUpdateTime)..")" )
+		end
+	elseif prefix == "multiline_req" then
+		if sender and IsUpdateNoteByEncounterFromMe then
+			if ExRT.F.IsPlayerRLorOfficer(ExRT.SDB.charName) == 2 then
+				return
+			end
+			if ExRT.F.IsPlayerRLorOfficer(sender) == 2 or GetPlayerRankInRaid(sender) > GetPlayerRankInRaid(ExRT.SDB.charName) or sender < ExRT.SDB.charName then
+				local type = ...
+				if type == "ENCOUNTER" then
+					IsUpdateNoteByEncounterFromMe = nil
+				end
+			end
 		end
 	end 
 end 
@@ -897,6 +924,7 @@ function module:Enable()
 	if module.options.chkEnable then
 		module.options.chkEnable:SetChecked(true)
 	end
+	module:RegisterEvents("ENCOUNTER_START")
 	if VExRT.Note.HideOutsideRaid then
 		module:RegisterEvents("GROUP_ROSTER_UPDATE")
 	end
@@ -914,7 +942,7 @@ function module:Disable()
 	if module.options.chkEnable then
 		module.options.chkEnable:SetChecked(false)
 	end
-	module:UnregisterEvents('PLAYER_REGEN_DISABLED','PLAYER_REGEN_ENABLED','ZONE_CHANGED_NEW_AREA')
+	module:UnregisterEvents('PLAYER_REGEN_DISABLED','PLAYER_REGEN_ENABLED','ZONE_CHANGED_NEW_AREA',"ENCOUNTER_START")
 	module:Visibility()
 end
 
@@ -1002,6 +1030,38 @@ end
 
 function module.main:ZONE_CHANGED_NEW_AREA()
 	C_Timer.After(5, module.Visibility)
+end
+
+do
+	local encountersUsed = {}
+	function module.main:ENCOUNTER_START(encounterID,encounterName)
+		if encountersUsed[encounterID] then
+			return
+		end
+		encountersUsed[encounterID] = true
+		local limit = #VExRT.Note.Black
+		for i=1,limit do
+			local text = VExRT.Note.Black[i]
+			if text:find("^{[eEеЕ][pPрР]:"..encounterID.."}") or (encounterName and (text:lower()):find("^{[eе][pр]:"..(encounterName:lower()).."}")) then
+				VExRT.Note.SelfText = VExRT.Note.Black[i]
+				module.frame:UpdateText()
+				break
+			end
+		end
+		for i=1,limit do
+			local text = VExRT.Note.Black[i]
+			if text:find("^{[eEеЕ]:"..encounterID.."}") or (encounterName and (text:lower()):find("^{[eе]:"..(encounterName:lower()).."}")) then
+				ExRT.F.Timer(SendNoteByEncounter, 1, i)
+				break
+			end
+			if i == limit then
+				IsUpdateNoteByEncounterFromMe = nil
+				return
+			end
+		end
+		IsUpdateNoteByEncounterFromMe = true
+		ExRT.F.Timer(ExRT.F.SendExMsg, 0.3, "multiline_req","ENCOUNTER")
+	end
 end
 
 function module:slash(arg)

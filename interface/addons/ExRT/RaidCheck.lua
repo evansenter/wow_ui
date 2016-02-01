@@ -260,7 +260,7 @@ local function GetRunes(checkType)
 		if name and subgroup <= gMax then
 			local isAnyBuff = nil
 			for i=1,40 do
-				local spellId = select(11,UnitAura(name, i,"HELPFUL"))
+				local _,_,_,_,_,_,_,_,_,_,spellId = UnitAura(name, i,"HELPFUL")
 				if not spellId then
 					break
 				else
@@ -317,7 +317,12 @@ local function GetFood(checkType)
 		if name and subgroup <= gMax then
 			local isAnyBuff = nil
 			for i=1,40 do
-				local spellId,_,_,_,stats = select(11,UnitAura(name, i,"HELPFUL"))
+				local _,spellId,stats
+				if ExRT.is7 then
+					_,_,_,_,_,_,_,_,_,_,spellId,_,_,_,_,stats = UnitAura(name, i,"HELPFUL")
+				else
+					_,_,_,_,_,_,_,_,_,_,spellId,_,_,_,stats = UnitAura(name, i,"HELPFUL")
+				end
 				if not spellId then
 					break
 				else
@@ -399,7 +404,7 @@ local function GetFlask(checkType)
 		if name and subgroup <= gMax then
 			local isAnyBuff = nil
 			for i=1,40 do
-				local expires,_,_,_,spellId = select(7,UnitAura(name, i,"HELPFUL"))
+				local _,_,_,_,_,_,expires,_,_,_,spellId = UnitAura(name, i,"HELPFUL")
 				if not spellId then
 					break
 				else
@@ -1084,7 +1089,7 @@ end
 
 do
 	local _db = module.db
-	function module.main:COMBAT_LOG_EVENT_UNFILTERED(_,event,_,_,sourceName,_,_,_,_,_,_,spellId)
+	function module.main:COMBAT_LOG_EVENT_UNFILTERED(_,_,event,_,_,sourceName,_,_,_,_,_,_,spellId)
 		if event == "SPELL_CAST_SUCCESS" and sourceName then
 			if _db.hsSpells[spellId] then
 				_db.hsList[sourceName] = _db.hsList[sourceName] and _db.hsList[sourceName] + 1 or 1

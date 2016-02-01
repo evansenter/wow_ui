@@ -14,33 +14,34 @@ MacroToolkitDB = {
 			},
 		},
 	},
-	["global"] = {
-		["backups"] = {
-		},
-		["ebackups"] = {
-		},
-	},
 	["profileKeys"] = {
+		["Metal - Illidan"] = "profile",
+		["Plane - Illidan"] = "profile",
+		["Natal - Illidan"] = "profile",
 		["Colton - Dark Iron"] = "profile",
 		["Ereinion - Dark Iron"] = "profile",
-		["Metal - Illidan"] = "profile",
-		["Evan - Illidan"] = "profile",
-		["Combustion - Illidan"] = "profile",
 		["Comet - Illidan"] = "profile",
-		["Natal - Illidan"] = "profile",
-		["Plane - Illidan"] = "profile",
+		["Combustion - Illidan"] = "profile",
+		["Evan - Illidan"] = "profile",
+		["Pandatal - Illidan"] = "profile",
+	},
+	["global"] = {
+		["ebackups"] = {
+		},
+		["backups"] = {
+		},
 	},
 	["profiles"] = {
 		["profile"] = {
-			["y"] = 370.999908447266,
-			["x"] = 384.399230957031,
+			["y"] = 486.99951171875,
+			["x"] = 1045.39929199219,
 			["fonts"] = {
 				["edfont"] = "ABF",
 				["edsize"] = 12,
 				["mfont"] = "ABF",
 				["mifont"] = "ABF",
-				["misize"] = 12,
 				["errsize"] = 12,
+				["misize"] = 12,
 				["errfont"] = "ABF",
 			},
 			["override"] = true,

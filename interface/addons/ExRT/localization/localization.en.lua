@@ -907,6 +907,7 @@ L.InspectViewerMoreInfoRoleHealer = "Healers"
 PH.InspectViewerColorizeNoTopEnch = "Mark out items if gems & enchants aren't best"
 L.InspectViewerForce = "Force"
 PH.InspectViewerHideInRaid = "Hide players who are not in the raid"
+L.InspectViewerColorizeNoValorUpgrade = "Mark out items with missing valor upgrade"
 
 L.CoinsSpoilsOfPandariaWinTrigger = "System resetting. Don't turn the power off, or the whole thing will probably explode."
 PH.CoinsEmpty = "Empty yet"
@@ -932,7 +933,7 @@ L.ChatwindowSend = "Send"
 PH.ChatwindowHelp = ""
 
 PH.ArrowTextLeft = "/rt arrow X Y\n/rt range NAME\n/rt arrowbuff BUFF\n\n/rt arrowplayer NAME\n/rt arrowmark N\n\n/rt arrowthis\n/rt arrowhide\n\n|cFFFFFFFF* Arrow to track players only works only for group or raid members|r"
-PH.ArrowTextRight = "- arrow to coordinate X Y (от 0 до 100)\n- show the distance between self and player NAME\n- arrow to the player with the aura BUFF\n*(works with buff name or spell ID)\n- arrow to the player with the name NAME\n- arrow to the player with mark, where N - number of mark\n(1 - {1}, 2 - {2}, 3 - {3}, 4 - {4}, 5 - {5} ,6 - {6}, 7 - {7}, 8 - {8})\n- arrow to current postition of the player\n- hide arrow"
+PH.ArrowTextRight = "- arrow to coordinate X Y (0-100)\n- show the distance between self and player NAME\n- arrow to the player with the aura BUFF\n*(works with buff name or spell ID)\n- arrow to the player with the name NAME\n- arrow to the player with mark, where N - number of mark\n(1 - {1}, 2 - {2}, 3 - {3}, 4 - {4}, 5 - {5} ,6 - {6}, 7 - {7}, 8 - {8})\n- arrow to current postition of the player\n- hide arrow"
 L.ArrowSetPoint = "Set Position"
 L.ArrowResetPos = "Reset Position"
 L.ArrowFixate = "Fixate (disable moving)"
@@ -999,6 +1000,7 @@ L.classLocalizate = {
 	["WARLOCK"] = "Warlock",
 	["MONK"] = "Monk",
 	["DRUID"] = "Druid",
+	["DEMONHUNTER"] = "Demon Hunter",
 	["PET"] = "Pets",
 	["NO"] = "Special",
 	["ALL"] = "All classes",
@@ -1039,6 +1041,8 @@ L.specLocalizate = {
 	["MONKTANK"] = "Brewmaster",
 	["MONKDPS"] = "Windwalker",
 	["MONKHEAL"] = "Mistweaver",
+	["DEMONHUNTERDPS"] = "Havoc",
+	["DEMONHUNTERTANK"] = "Vengeance",
 	["NO"] = "All specializations",
 }
 

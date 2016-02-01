@@ -31,7 +31,6 @@ VER 3 0100000000000016 "Soothing Mist" "INV_MISC_QUESTIONMARK"
 END
 VER 3 010000000000000F "Surging Mist" "INV_MISC_QUESTIONMARK"
 #showtooltip Surging Mist
-/use Thunder Focus Tea
 /use [@mouseover,help,nodead][]Surging Mist
 END
 VER 3 0100000000000006 "TEB" "INV_MISC_QUESTIONMARK"
@@ -63,7 +62,7 @@ END
 VER 3 010000000000000E "ToD" "INV_MISC_QUESTIONMARK"
 #showtooltip Touch of Death
 /use Fortifying Brew
-/use Touch of Death
+/use [@mouseover,harm,nodead][] Touch of Death
 END
 VER 3 010000000000000D "ToK" "INV_MISC_QUESTIONMARK"
 #showtooltip Touch of Karma
@@ -76,6 +75,5 @@ VER 3 0100000000000007 "Transcendence" "INV_MISC_QUESTIONMARK"
 END
 VER 3 010000000000000C "Uplift" "INV_MISC_QUESTIONMARK"
 #showtooltip Uplift
-/use 14
 /use [@mouseover,help,nodead][]Uplift
 END

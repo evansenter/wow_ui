@@ -74,6 +74,7 @@ P['general'] = {
 				['position'] = "BOTTOMLEFT",
 				['xOffset'] = 2,
 				['yOffset'] = 2,
+				["hide"] = false,
 			},
 		}
 	},
@@ -128,6 +129,7 @@ P['bags'] = {
 	['currencyFormat'] = 'ICON_TEXT',
 	['moneyFormat'] = 'SMART',
 	['moneyCoins'] = true,
+	["junkIcon"] = false,
 	['ignoreItems'] = '',
 	['itemLevel'] = true,
 	['itemLevelThreshold'] = 1,
@@ -619,6 +621,7 @@ P['unitframe'] = {
 				['detachFromFrame'] = false,
 				['detachedWidth'] = 250,
 				['autoHide'] = false,
+				["parent"] = "FRAME",
 			},
 			['aurabar'] = {
 				['enable'] = true,
