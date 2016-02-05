@@ -7,11 +7,11 @@ Y: 177
 W: 128
 H: 64
 Frame: ColorPickerFrame
-FrameLevel: 5
+FrameLevel: 25
 Anchor: LEFT
 X: 374
 Y: 150
-W: 365
+W: 405
 H: 240
 Frame: frmBulkOrderReminderPoint
 FrameLevel: 1

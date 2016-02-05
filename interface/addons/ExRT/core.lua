@@ -1,6 +1,10 @@
---	0:30 29.01.2016
+--	17:07 03.02.2016
 
 --[[
+
+Legendary Ring: fixed major bug
+Bossmods: Gorefiend: added numbers for timers
+Minor Fixes
 
 Added German Localization [thanks Gyffes]
 Bossmods: Iskar: try to reduce lag for some players
@@ -14,12 +18,13 @@ Legion Alpha: modules Classes and Raid loot will be removed
 
 TODO:
 Legion Alpha: Add 1 parameter for UnitAura in BossWatcher.lua (15 - nameplateShowAll)
-
+GetPlayerMapAreaID ???
+Fix DE font
 
 ]]
 local GlobalAddonName, ExRT = ...
 
-ExRT.V = 3570
+ExRT.V = 3575
 ExRT.T = "R"
 ExRT.is7 = false		--> Legion (7.x) Client
 

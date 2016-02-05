@@ -1041,6 +1041,8 @@ L.specLocalizate = {
 	["MONKTANK"] = "Хмелевар",
 	["MONKDPS"] = "Танцующий с ветром",
 	["MONKHEAL"] = "Ткач туманов",
+	["DEMONHUNTERDPS"] = "Сокрушение",
+	["DEMONHUNTERTANK"] = "Месть",
 	["NO"] = "Все специализации",
 }
 

@@ -61,20 +61,21 @@ end
 local function GetCurrentMapAreaID_Fix()
 	if VExRT.Logging.enabled then
 		if VExRT.Logging.disableLFR then
-			local _,zoneType,difficulty = GetInstanceInfo()
+			local _,zoneType,difficulty, _, _, _, _, mapID = GetInstanceInfo()
 			if difficulty == 7 or difficulty == 17 then
 				return 0
 			else
 				local zoneID = GetCurrentMapAreaID()
-				if zoneID and zoneID > 1026 and zoneType == 'raid' then
+				if ((zoneID and zoneID > 1026) or (tonumber(mapID) and mapID >= 1520)) and zoneType == 'raid' then
 					zoneID = -999
 				end
 				return zoneID
 			end
 		else
+			local _, _, _, _, _, _, _, mapID = GetInstanceInfo()
 			local zoneID = GetCurrentMapAreaID()
 			local _,zoneType = GetInstanceInfo()
-			if zoneID and zoneID > 1026 and zoneType == 'raid' then
+			if ((zoneID and zoneID > 1026) or (tonumber(mapID) and mapID >= 1520)) and zoneType == 'raid' then
 				zoneID = -999
 			end
 			return zoneID

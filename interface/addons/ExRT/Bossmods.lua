@@ -5196,10 +5196,25 @@ function Gorefiend:Load()
 				self.cd:SetCooldown(cd,36)
 				self.cd_settedToZero = true
 			end
+			self.CD_TIMER = cd + 36
 			self:Show()
 		else
 			self:Hide()
+			self.CD_TIMER = nil
 		end
+	end
+	
+	local function UpdateTimerText(self)
+		if self.CD_TIMER then
+			local curr = GetTime()
+			if self.CD_TIMER - curr > 0 then
+				self.cdText:SetFormattedText("%d",self.CD_TIMER - curr)
+			else
+				self.cdText:SetText("")
+			end
+		else
+			self.cdText:SetText("")
+		end 
 	end
 	
 	local function AddFrame(i)
@@ -5333,6 +5348,16 @@ function Gorefiend:Load()
 			frame.cd = CreateFrame("Cooldown", nil, frame, "CooldownFrameTemplate")
 			frame.cd:SetDrawEdge(false)
 			frame.cd:SetAllPoints(frame.cdIcon)
+			frame.cd:SetHideCountdownNumbers(true)
+			
+			frame.cdText = frame.cd:CreateFontString(nil,"ARTWORK")
+			frame.cdText:SetPoint("CENTER", frame.cd, 0, 0)
+			frame.cdText:SetFont(ExRT.F.defFont, 14, "OUTLINE")
+			--frame.cdText:SetShadowOffset(1,-1)
+			frame.cdText:SetJustifyH("CENTER")
+			frame.cdText:SetJustifyH("MIDDLE")
+			
+			frame:SetScript("OnUpdate",UpdateTimerText)
 			
 			frame.UpdateFrame = UpdateFrame
 		end
@@ -5663,6 +5688,7 @@ function Gorefiend2:Load()
 			self.cd:Show()
 			self.cd:SetCooldown(soul_data.time,36)
 			self:SetAlpha(1)
+			self.CD_TIMER = soul_data.time + 36
 			if not self.OnUpdateSetted then
 				self:SetScript("OnUpdate",OnUpdateFrame)
 				self.OnUpdateSetted = true
@@ -5674,6 +5700,7 @@ function Gorefiend2:Load()
 			self.cd:SetCooldown(GetTime(),0)
 			self:SetAlpha(.1)
 			self.backtimer:Hide()
+			self.CD_TIMER = nil
 			if self.OnUpdateSetted then
 				self:SetScript("OnUpdate",nil)
 				self.hp:SetVertexColor(1,.5,.5,1)
@@ -5681,6 +5708,20 @@ function Gorefiend2:Load()
 			end
 		end
 		self:Show()
+	end
+	
+	local function UpdateTimerText(self)
+		local paernt = self:GetParent()
+		if paernt.CD_TIMER then
+			local curr = GetTime()
+			if paernt.CD_TIMER - curr > 0 then
+				paernt.cdText:SetFormattedText("%d",paernt.CD_TIMER - curr)
+			else
+				paernt.cdText:SetText("")
+			end
+		else
+			paernt.cdText:SetText("")
+		end 
 	end
 	
 	local frame = CreateFrame('Frame',nil,UIParent)
@@ -5804,6 +5845,17 @@ function Gorefiend2:Load()
 			frame.cd = CreateFrame("Cooldown", nil, frame, "CooldownFrameTemplate")
 			frame.cd:SetDrawEdge(false)
 			frame.cd:SetAllPoints(frame.cdIcon)
+			frame.cd:SetHideCountdownNumbers(true)
+			
+			frame.cdText = frame.cd:CreateFontString(nil,"ARTWORK")
+			frame.cdText:SetPoint("CENTER", frame.cd, 0, 0)
+			frame.cdText:SetFont(ExRT.F.defFont, 14, "OUTLINE")
+			--frame.cdText:SetShadowOffset(1,-1)
+			frame.cdText:SetJustifyH("CENTER")
+			frame.cdText:SetJustifyH("MIDDLE")
+			
+			frame.timerUpdater = CreateFrame('Frame',nil,frame)
+			frame.timerUpdater:SetScript("OnUpdate",UpdateTimerText)
 			
 			frame.UpdateFrame = UpdateFrame
 			--frame.Update = UpdateFrame

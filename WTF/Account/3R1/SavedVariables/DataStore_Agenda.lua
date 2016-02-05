@@ -2,19 +2,19 @@
 DataStore_AgendaDB = {
 	["profileKeys"] = {
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
-		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Metal - Illidan"] = "Metal - Illidan",
-		["Evan - Illidan"] = "Evan - Illidan",
+		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
+		["Pandatal - Illidan"] = "Pandatal - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Natal - Illidan"] = "Natal - Illidan",
-		["Pandatal - Illidan"] = "Pandatal - Illidan",
-		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
+		["Evan - Illidan"] = "Evan - Illidan",
+		["Combustion - Illidan"] = "Combustion - Illidan",
 	},
 	["global"] = {
 		["Options"] = {
 			["WeeklyResetHour"] = 6,
 			["WeeklyResetDay"] = 2,
-			["NextWeeklyReset"] = "2016-02-02",
+			["NextWeeklyReset"] = "2016-02-09",
 		},
 		["Characters"] = {
 			["Default.Dark Iron.Ereinion"] = {
@@ -26,7 +26,31 @@ DataStore_AgendaDB = {
 						["note"] = "",
 					},
 				},
-				["lastUpdate"] = 1454019744,
+				["lastUpdate"] = 1454625156,
+			},
+			["Default.Illidan.Pandatal"] = {
+				["lastUpdate"] = 1454628907,
+			},
+			["Default.Illidan.Combustion"] = {
+				["lastUpdate"] = 1424741664,
+			},
+			["Default.Illidan.Comet"] = {
+				["lastUpdate"] = 1454635207,
+				["DungeonIDs"] = {
+					["Hellfire Citadel Heroic|133465560"] = "398418|1454635209|0|1",
+				},
+				["LFGDungeons"] = {
+					["985.Fel Lord Zakuun"] = true,
+					["985.Count"] = 1,
+					["982.Count"] = 1,
+					["982.Hellfire Assault"] = true,
+				},
+			},
+			["Default.Illidan.Natal"] = {
+				["lastUpdate"] = 1424741647,
+			},
+			["Default.Illidan.Metal"] = {
+				["lastUpdate"] = 1454625055,
 			},
 			["Default.Dark Iron.Colton"] = {
 				["Contacts"] = {
@@ -38,8 +62,8 @@ DataStore_AgendaDB = {
 					},
 					["Purephase"] = {
 						["note"] = "",
-						["level"] = 100,
 						["class"] = "Rogue",
+						["level"] = 100,
 					},
 					["Rfl"] = {
 						["note"] = "",
@@ -50,7 +74,7 @@ DataStore_AgendaDB = {
 					["Hemos"] = {
 						["note"] = "",
 					},
-					["Billbraskie"] = {
+					["Bubblegurl"] = {
 						["note"] = "",
 					},
 					["Faluzure"] = {
@@ -59,29 +83,11 @@ DataStore_AgendaDB = {
 					["Pockee"] = {
 						["note"] = "",
 					},
-					["Bubblegurl"] = {
+					["Billbraskie"] = {
 						["note"] = "",
 					},
 				},
 				["lastUpdate"] = 1424741733,
-			},
-			["Default.Illidan.Pandatal"] = {
-				["lastUpdate"] = 1454296192,
-			},
-			["Default.Illidan.Metal"] = {
-				["lastUpdate"] = 1454298746,
-			},
-			["Default.Illidan.Natal"] = {
-				["lastUpdate"] = 1424741647,
-			},
-			["Default.Illidan.Comet"] = {
-				["DungeonIDs"] = {
-					["Hellfire Citadel Normal|224123763"] = "65719|1454363099|0|1",
-				},
-				["lastUpdate"] = 1454363095,
-			},
-			["Default.Illidan.Combustion"] = {
-				["lastUpdate"] = 1424741664,
 			},
 		},
 	},

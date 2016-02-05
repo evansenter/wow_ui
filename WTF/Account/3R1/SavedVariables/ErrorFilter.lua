@@ -6,19 +6,21 @@ ErrorFilterDB = {
 		["Centromere - Dark Iron"] = "Default",
 		["Colton - Dark Iron"] = "Default",
 		["Ereinion - Dark Iron"] = "Default",
-		["Combustion - Illidan"] = "Default",
+		["Pandatal - Illidan"] = "Comet - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Natal - Illidan"] = "Default",
 		["Evan - Illidan"] = "Default",
-		["Pandatal - Illidan"] = "Default",
+		["Combustion - Illidan"] = "Default",
 	},
 	["profiles"] = {
-		["Default"] = {
-			["mode"] = 3,
-		},
 		["Comet - Illidan"] = {
 			["throttle"] = false,
 			["mode"] = 3,
+		},
+		["Default"] = {
+			["mode"] = 3,
+		},
+		["Pandatal - Illidan"] = {
 		},
 	},
 }

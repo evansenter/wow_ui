@@ -7978,12 +7978,22 @@ do
 					data.race = race
 					data.time = time()
 					data.GUID = UnitGUID(inspectedName)
+					
+					local specIndex = 1
+					for i=1,GetNumSpecializationsForClassID(classID) do
+						if GetSpecializationInfoForClassID(classID,i) == data.spec then
+							specIndex = i
+							break
+						end
+					end
+					
+					
 					for i=1,6 do
 						data[i] = 0
 					end
 					data.talentsIDs = {}
 					for i=0,20 do
-						local t_id,_,_,t = GetTalentInfo((i-i%3)/3+1,i%3+1,nil,true,inspectedName)
+						local t_id,_,_,t = GetTalentInfo((i-i%3)/3+1,i%3+1,specIndex,true,inspectedName)
 						if t then
 							data[(i-i%3)/3+1] = i%3+1
 							data.talentsIDs[(i-i%3)/3+1] = t_id
@@ -8214,7 +8224,7 @@ module_legendary.db.types = {
 	[187613] = TANK,
 	[187612] = HEALER,
 } 
-function module_legendary.main:COMBAT_LOG_EVENT_UNFILTERED(_,event,_,sourceGUID,sourceName,_,_,_,_,_,_,spellID)
+function module_legendary.main:COMBAT_LOG_EVENT_UNFILTERED(_,_,event,_,sourceGUID,sourceName,_,_,_,_,_,_,spellID)
 	if event == "SPELL_CAST_SUCCESS" and (spellID == 187614 or spellID == 187615 or spellID == 187611 or spellID == 187613 or spellID == 187612) then
 		if not sourceName or not UnitName(sourceName) then
 			return

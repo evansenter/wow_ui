@@ -15,7 +15,7 @@ AutoTurnInCharacterDB = {
 	},
 	["enabled"] = true,
 	["todarkmoon"] = true,
-	["debug"] = false,
+	["autoequip"] = false,
 	["trivial"] = false,
 	["armor"] = {
 		["Leather"] = true,
@@ -24,13 +24,13 @@ AutoTurnInCharacterDB = {
 	["darkmoonautostart"] = true,
 	["darkmoonteleport"] = true,
 	["togglekey"] = 4,
-	["autoequip"] = false,
+	["debug"] = false,
 	["tournament"] = 2,
 	["version"] = "4.5.N",
 	["stat"] = {
 		["ITEM_MOD_AGILITY_SHORT"] = true,
 	},
-	["lootreward"] = 3,
+	["lootreward"] = 1,
 	["all"] = 1,
 	["questshare"] = true,
 	["secondary"] = {

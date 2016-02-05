@@ -295,24 +295,18 @@ module.frame:SetFrameStrata("HIGH")
 module.db.TTK = {}
 
 do
-	local _db = module.db
-	local function NumToTime(num)
-		if num >= 600 or num < 0 then
-			return ""
-		elseif num >= 60 then
-			return format("%d:%02d",floor(num/60),num % 60)
+	local function UpdateKillText(time)
+		if not time or time < 0 or time > 600 then
+			module.frame.killTime:SetText("")
+		elseif time >= 60 then
+			module.frame.killTime:SetFormattedText("%d:%02d",floor(time/60),time % 60)
 		else
-			return format("%d",num)
+			module.frame.killTime:SetFormattedText("%d",time)
 		end
 	end
 	
-	local targetsList = {"target","focus","focustarget"}
-	for i=1,4 do targetsList[#targetsList + 1] = "party"..i.."target" end
-	for i=1,40 do targetsList[#targetsList + 1] = "raid"..i.."target" end	
-	for i=1,5 do targetsList[#targetsList + 1] = "boss"..i end
-	
-	local TTK = module.db.TTK
-	local TTKupdateTimer,TTKclearTimer = 0,0
+	local hpSnapshots,timeSnapshots,iSnapshot,guidSnapshot = {},{},0
+	local tmr = 0
 	
 	function module.frame.OnUpdateFunc(self,elapsed)
 		self.tmr = self.tmr + elapsed
@@ -329,86 +323,41 @@ do
 		end
 		
 		if timeToKillEnabled then
-			TTKupdateTimer = TTKupdateTimer + elapsed
-			if TTKupdateTimer > 0.5 then
-				TTKclearTimer = TTKclearTimer + TTKupdateTimer
-				TTKupdateTimer = 0
-				local _time = GetTime()
-				for i=1,#targetsList do
-					local unit = targetsList[i]
-					local guid = UnitGUID(unit)
-					if guid then
-						local guidData = TTK[guid]
-						if not guidData then
-							guidData = {
-								pos = 1,
-								update = 0,
-								conf = 0,
-								hp = {},
-								time = {},
-							}
-							TTK[guid] = guidData
-						end
-						local lastUpdate = guidData.update
-						if lastUpdate < _time then
-							local posNow = guidData.pos
-							local maxHP = UnitHealthMax(unit)
-							maxHP = maxHP == 0 and 1 or maxHP
-							guidData.hp[ posNow ] = UnitHealth(unit) / maxHP
-							guidData.time[ posNow ] = _time
-							guidData.pos = guidData.pos + 1
-							if guidData.pos > 16 then
-								guidData.pos = 1
-							end
-							if (_time - lastUpdate) > 1 then
-								guidData.conf = 0
-							end
-							guidData.conf = guidData.conf + 1
-							if guidData.conf > 16 then
-								guidData.conf = 16
-							end
-							guidData.update = _time
-						end
-					end
+			tmr = tmr + elapsed
+			if tmr > 0.5 then
+				tmr = 0
+				iSnapshot = iSnapshot + 1
+				if iSnapshot > 16 then
+					iSnapshot = 1
 				end
-				
-				local playerTarget = UnitGUID("target")
-				if playerTarget then
-					local guidData = TTK[playerTarget]
-					if guidData.conf > 15 then
-						local posMax = guidData.pos
-						local posMin = posMax - 1
-						if posMin < 1 then
-							posMin = 16
-						end
+				local currHp,maxHP = UnitHealth('target'),UnitHealthMax('target')
+				local targetGUID = UnitGUID('target')
+				if guidSnapshot ~= targetGUID then
+					wipe(hpSnapshots)
+					iSnapshot = 1
+					guidSnapshot = targetGUID
+				end
+				hpSnapshots[ iSnapshot ] = maxHP > 0 and currHp/maxHP or 0
+				timeSnapshots[ iSnapshot ] = GetTime()
+				if iSnapshot % 2 == 0 then
+					local prevSnapshot = iSnapshot + 2
+					if prevSnapshot > 16 then
+						prevSnapshot = 1
+					end
+					local nowHP,prevHP = hpSnapshots[ iSnapshot ],hpSnapshots[ prevSnapshot ]
+					if nowHP and nowHP > 0 and prevHP and prevHP > 0 then
+						local diff = prevHP - nowHP
+						local time = timeSnapshots[ iSnapshot ] - timeSnapshots[ prevSnapshot ]
+						local dps = diff / time
 						
-						local perSec = (guidData.hp[posMax] - guidData.hp[posMin]) / (guidData.time[posMin] - guidData.time[posMax])
-						if perSec == 0 then
-							self.killTime:SetText("")
-						else
-							--print( guidData.hp[posMin], perSec )
-							local diff = guidData.hp[posMin] / perSec
-							self.killTime:SetText(NumToTime(diff))
-						end
+						local timeToKill = nowHP / dps
+						UpdateKillText(timeToKill)
 					else
-						self.killTime:SetText("")
-					end
-				else
-					self.killTime:SetText("")
-				end
-				
-				if TTKclearTimer > 180 then
-					local clearData = {}
-					for mobGUID,mobData in pairs(TTK) do
-						if (_time - mobData.update) > 300 then
-							clearData[#clearData + 1] = mobGUID
-						end
-					end
-					for i=1,#clearData do
-						TTK[ clearData[i] ] = nil
+						UpdateKillText()
 					end
 				end
 			end
 		end
+		
 	end
 end

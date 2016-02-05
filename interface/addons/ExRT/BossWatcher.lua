@@ -1149,7 +1149,7 @@ local function addHeal_TyrantVelhari(_,timestamp,sourceGUID,sourceName,sourceFla
 		destTable[spellID] = spellTable
 		spellsSchool[spellID] = school
 	end
-	if absorbed > 0 and destGUID and not encounterSpecial[destGUID] then
+	if absorbed > 0 and destGUID and (not encounterSpecial[destGUID] or (type(encounterSpecial[destGUID])=='number' and absorbed ~= encounterSpecial[destGUID])) then
 		amount = amount + absorbed
 		overhealing = overhealing + absorbed
 		absorbed = 0
@@ -1857,7 +1857,10 @@ local function removeAura_TyrantVelhari(_,timestamp,sourceGUID,sourceName,source
 	end
 	
 	if spellID == 185237 or spellID == 185238 or spellID == 180164 or spellID == 180166 then
-		encounterSpecial[destGUID or "nil"] = nil
+		encounterSpecial[destGUID or "nil"] = amount and floor(amount)
+		C_Timer.NewTicker(0.03,function()
+			encounterSpecial[destGUID or "nil"] = nil
+		end,1)
 	end
 	
 
@@ -2660,8 +2663,8 @@ end
 function module.main:ENCOUNTER_START(encounterID,encounterName)
 	SetMapToCurrentZone()
 	local zoneID = GetCurrentMapAreaID()
-	local _,zoneType = GetInstanceInfo()
-	if zoneID and zoneID > 1026 and zoneType == 'raid' then
+	local _, zoneType, _, _, _, _, _, mapID = GetInstanceInfo()
+	if ((zoneID and zoneID > 1026) or (tonumber(mapID) and mapID >= 1520)) and zoneType == 'raid' then
 		zoneID = -999
 	end
 	if module.db.raidIDs[zoneID] then
@@ -2671,8 +2674,8 @@ end
 function module.main:PLAYER_REGEN_DISABLED()
 	SetMapToCurrentZone()
 	local zoneID = GetCurrentMapAreaID()
-	local _,zoneType = GetInstanceInfo()
-	if zoneID and zoneID > 1026 and zoneType == 'raid' then
+	local _, zoneType, _, _, _, _, _, mapID = GetInstanceInfo()
+	if ((zoneID and zoneID > 1026) or (tonumber(mapID) and mapID >= 1520)) and zoneType == 'raid' then
 		zoneID = -999
 	end
 	if not module.db.raidIDs[zoneID] then

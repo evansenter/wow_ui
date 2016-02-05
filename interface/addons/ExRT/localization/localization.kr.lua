@@ -907,6 +907,7 @@ L.InspectViewerMoreInfoRoleHealer = "힐러"
 PH.InspectViewerColorizeNoTopEnch = "보석 & 마법부여가 최상급이 아닌 아이템 표시하기"
 L.InspectViewerForce = "강제"
 PH.InspectViewerHideInRaid = "공격대에 없는 플레이어 숨기기"
+L.InspectViewerColorizeNoValorUpgrade = "용맹 점수 강화를 하지 않은 아이템 표시하기"
 
 L.CoinsSpoilsOfPandariaWinTrigger = "시스템 초기화 중. 끄지 마세요, 모든 내용이 지워질 수 있습니다."
 PH.CoinsEmpty = "아직 비어있음"
@@ -999,6 +1000,7 @@ L.classLocalizate = {
 	["WARLOCK"] = "흑마법사",
 	["MONK"] = "수도사",
 	["DRUID"] = "드루이드",
+	["DEMONHUNTER"] = "악마사냥꾼",
 	["PET"] = "소환수",
 	["NO"] = "Special",
 	["ALL"] = "모든 직업",
@@ -1039,6 +1041,8 @@ L.specLocalizate = {
 	["MONKTANK"] = "양조",
 	["MONKDPS"] = "풍운",
 	["MONKHEAL"] = "운무",
+	["DEMONHUNTERDPS"] = "파멸",
+	["DEMONHUNTERTANK"] = "복수",
 	["NO"] = "모든 전문화",
 }
 

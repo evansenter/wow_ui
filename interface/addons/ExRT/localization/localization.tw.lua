@@ -1000,6 +1000,7 @@ L.classLocalizate = {
 	["WARLOCK"] = GetClassInfoByID(9),				
 	["MONK"] = GetClassInfoByID(10),				
 	["DRUID"] = GetClassInfoByID(11),				
+	["DEMONHUNTER"] = GetClassInfoByID(12),
 	["PET"] = "寵物",				
 	["NO"] = "特殊",				
 	["ALL"] = "所有職業",				
@@ -1040,6 +1041,8 @@ L.specLocalizate = {
 	["MONKTANK"] = select(2, GetSpecializationInfoByID(268)),				
 	["MONKDPS"] = select(2, GetSpecializationInfoByID(269)),				
 	["MONKHEAL"] = select(2, GetSpecializationInfoByID(270)),				
+	["DEMONHUNTERDPS"] = select(2, GetSpecializationInfoByID(577)),
+	["DEMONHUNTERTANK"] = select(2, GetSpecializationInfoByID(581)),
 	["NO"] = "全專精",				
 }					
 					

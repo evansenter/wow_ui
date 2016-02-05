@@ -1000,6 +1000,7 @@ L.classLocalizate = {
 	["WARLOCK"] = "Hexenmeister",
 	["MONK"] = "Mönch",
 	["DRUID"] = "Druide",
+	["DEMONHUNTER"] = GetClassInfoByID(12),
 	["PET"] = "Pets",
 	["NO"] = "Special",
 	["ALL"] = "alle Klassen",
@@ -1040,6 +1041,8 @@ L.specLocalizate = {
 	["MONKTANK"] = "Braumeister",
 	["MONKDPS"] = "Windläufer",
 	["MONKHEAL"] = "Nebelwirker",
+	["DEMONHUNTERDPS"] = select(2, GetSpecializationInfoByID(577)),
+	["DEMONHUNTERTANK"] = select(2, GetSpecializationInfoByID(581)),
 	["NO"] = "Alle Spezifikationen",
 }
 

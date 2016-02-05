@@ -25,12 +25,7 @@ KuiNameplatesGDB = {
 		},
 		["CastWarnings"] = {
 		},
-		["ExtrasCore"] = {
-			["profiles"] = {
-				["Comet - Illidan"] = {
-					["health"] = true,
-				},
-			},
+		["Auras"] = {
 		},
 		["TankMode"] = {
 			["profiles"] = {
@@ -43,20 +38,25 @@ KuiNameplatesGDB = {
 		},
 		["ComboPoints"] = {
 		},
-		["Auras"] = {
+		["ExtrasCore"] = {
+			["profiles"] = {
+				["Comet - Illidan"] = {
+					["health"] = true,
+				},
+			},
 		},
 	},
 	["profileKeys"] = {
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Evan - Illidan"] = "Comet - Illidan",
-		["Pandatal - Illidan"] = "Pandatal - Illidan",
+		["Pandatal - Illidan"] = "Comet - Illidan",
 		["Metal - Illidan"] = "Comet - Illidan",
 	},
 	["profiles"] = {
 		["Comet - Illidan"] = {
 			["fonts"] = {
 				["options"] = {
-					["fontscale"] = 1.25,
+					["fontscale"] = 1.2,
 					["font"] = "ABF",
 				},
 			},
