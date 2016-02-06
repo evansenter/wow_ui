@@ -59,7 +59,7 @@ DataStore_TalentsDB = {
 			},
 			["Default.Illidan.Evan"] = {
 				["ActiveTalents"] = 1,
-				["lastUpdate"] = 1454625157,
+				["lastUpdate"] = 1454777600,
 				["GlyphList"] = {
 					11, -- [1]
 					11418, -- [2]
@@ -122,7 +122,7 @@ DataStore_TalentsDB = {
 			},
 			["Default.Illidan.Pandatal"] = {
 				["ActiveTalents"] = 1,
-				["lastUpdate"] = 1454628906,
+				["lastUpdate"] = 1454778284,
 				["Class"] = "PALADIN",
 				["GlyphList"] = {
 					11, -- [1]
@@ -216,8 +216,8 @@ DataStore_TalentsDB = {
 				["Class"] = "MAGE",
 			},
 			["Default.Illidan.Comet"] = {
-				["ActiveTalents"] = 1,
-				["lastUpdate"] = 1454635208,
+				["ActiveTalents"] = 2,
+				["lastUpdate"] = 1454776459,
 				["GlyphList"] = {
 					11, -- [1]
 					16250, -- [2]
@@ -330,7 +330,7 @@ DataStore_TalentsDB = {
 			},
 			["Default.Illidan.Metal"] = {
 				["ActiveTalents"] = 1,
-				["lastUpdate"] = 1454625055,
+				["lastUpdate"] = 1454776977,
 				["Class"] = "WARRIOR",
 				["GlyphList"] = {
 					11, -- [1]

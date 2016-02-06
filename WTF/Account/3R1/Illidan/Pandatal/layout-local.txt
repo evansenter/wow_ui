@@ -11,7 +11,7 @@ FrameLevel: 25
 Anchor: LEFT
 X: 374
 Y: 150
-W: 405
+W: 365
 H: 240
 Frame: frmBulkOrderReminderPoint
 FrameLevel: 1
@@ -23,8 +23,8 @@ H: 1
 Frame: DBMMinimapButton
 FrameLevel: 3
 Anchor: TOPRIGHT
-X: -164
-Y: -138
+X: -170
+Y: -89
 W: 32
 H: 32
 Frame: RaidUtility_ShowButton

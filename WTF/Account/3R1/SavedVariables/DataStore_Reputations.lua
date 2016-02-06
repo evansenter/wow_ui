@@ -69,7 +69,7 @@ DataStore_ReputationsDB = {
 				},
 			},
 			["Default.Illidan.Evan"] = {
-				["lastUpdate"] = 1454625156,
+				["lastUpdate"] = 1454777600,
 				["Factions"] = {
 					[121] = 34,
 					[122] = 8375,
@@ -139,11 +139,11 @@ DataStore_ReputationsDB = {
 					[83] = 42130,
 					[94] = 42999,
 				},
-				["guildRep"] = 24125,
+				["guildRep"] = 24250,
 				["guildName"] = "Mind Games",
 			},
 			["Default.Illidan.Pandatal"] = {
-				["lastUpdate"] = 1454628907,
+				["lastUpdate"] = 1454778284,
 				["Factions"] = {
 					[113] = 3100,
 					[7] = 3100,
@@ -214,7 +214,7 @@ DataStore_ReputationsDB = {
 				["guildName"] = "Slash Cry",
 			},
 			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1454635207,
+				["lastUpdate"] = 1454776459,
 				["Factions"] = {
 					[106] = 42999,
 					[122] = 15845,
@@ -306,7 +306,7 @@ DataStore_ReputationsDB = {
 				},
 			},
 			["Default.Illidan.Metal"] = {
-				["lastUpdate"] = 1454625055,
+				["lastUpdate"] = 1454776977,
 				["guildName"] = "Mind Games",
 				["guildRep"] = 24125,
 				["Factions"] = {

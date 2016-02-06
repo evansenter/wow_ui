@@ -21,11 +21,11 @@ DeathNoteDB = {
 			},
 			["display"] = {
 				["y"] = 91.5,
-				["x"] = -128.000244140625,
 				["namelist"] = 2,
+				["h"] = 681,
 				["namelist_width"] = 245.000289916992,
 				["w"] = 775.999877929688,
-				["h"] = 681,
+				["x"] = -128.000244140625,
 			},
 		},
 		["Ereinion - Dark Iron"] = {
@@ -35,19 +35,19 @@ DeathNoteDB = {
 		["Comet - Illidan"] = {
 			["display_filters"] = {
 				["hide_misses"] = true,
-				["debuff_gains"] = false,
-				["buff_gains"] = false,
 				["debuff_fades"] = false,
 				["buff_fades"] = false,
+				["debuff_gains"] = false,
+				["buff_gains"] = false,
 			},
+			["max_deaths"] = 75,
 			["display"] = {
-				["w"] = 1013.00042724609,
 				["y"] = 77.9998168945313,
 				["x"] = -81.4995422363281,
 				["h"] = 621.999938964844,
+				["w"] = 1013.00042724609,
 				["namelist"] = 2,
 			},
-			["max_deaths"] = 75,
 		},
 		["Natal - Illidan"] = {
 			["display_filters"] = {

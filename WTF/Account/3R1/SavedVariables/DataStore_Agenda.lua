@@ -26,22 +26,24 @@ DataStore_AgendaDB = {
 						["note"] = "",
 					},
 				},
-				["lastUpdate"] = 1454625156,
+				["lastUpdate"] = 1454777600,
 			},
 			["Default.Illidan.Pandatal"] = {
-				["lastUpdate"] = 1454628907,
+				["lastUpdate"] = 1454778284,
 			},
 			["Default.Illidan.Combustion"] = {
 				["lastUpdate"] = 1424741664,
 			},
 			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1454635207,
 				["DungeonIDs"] = {
-					["Hellfire Citadel Heroic|133465560"] = "398418|1454635209|0|1",
+					["Hellfire Citadel Heroic|133465560"] = "257173|1454776461|0|1",
 				},
+				["lastUpdate"] = 1454776458,
 				["LFGDungeons"] = {
-					["985.Fel Lord Zakuun"] = true,
+					["986.Count"] = 1,
 					["985.Count"] = 1,
+					["985.Fel Lord Zakuun"] = true,
+					["986.Archimonde"] = true,
 					["982.Count"] = 1,
 					["982.Hellfire Assault"] = true,
 				},
@@ -50,7 +52,7 @@ DataStore_AgendaDB = {
 				["lastUpdate"] = 1424741647,
 			},
 			["Default.Illidan.Metal"] = {
-				["lastUpdate"] = 1454625055,
+				["lastUpdate"] = 1454776977,
 			},
 			["Default.Dark Iron.Colton"] = {
 				["Contacts"] = {

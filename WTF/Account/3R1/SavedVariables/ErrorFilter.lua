@@ -1,7 +1,7 @@
 
 ErrorFilterDB = {
 	["profileKeys"] = {
-		["Metal - Illidan"] = "Default",
+		["Metal - Illidan"] = "Comet - Illidan",
 		["Plane - Illidan"] = "Default",
 		["Centromere - Dark Iron"] = "Default",
 		["Colton - Dark Iron"] = "Default",
@@ -9,7 +9,7 @@ ErrorFilterDB = {
 		["Pandatal - Illidan"] = "Comet - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Natal - Illidan"] = "Default",
-		["Evan - Illidan"] = "Default",
+		["Evan - Illidan"] = "Comet - Illidan",
 		["Combustion - Illidan"] = "Default",
 	},
 	["profiles"] = {

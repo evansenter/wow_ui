@@ -5,7 +5,9 @@ FX_Saved = {
 	["Timers"] = {
 	},
 	["Healthstone"] = {
+		["Evan"] = 0,
 		["Pandatal"] = 0,
+		["Metal"] = 0,
 	},
 	["Exceptions"] = {
 		["Hellfire Channeler"] = 0,
@@ -17,7 +19,7 @@ FX_Saved = {
 		["Fathom-Guard Tidalvess"] = 1,
 		["Fathom-Guard Sharkkis"] = 1,
 	},
-	["Update"] = 13718.57,
+	["Update"] = 85776.009,
 	["Profiles"] = {
 		["Active"] = 1,
 		["Characters"] = {
@@ -94,8 +96,8 @@ FX_Saved = {
 				},
 				["SummonDetails"] = true,
 				["FWOptions"] = {
-					["y"] = 504.320117835996,
-					["x"] = 934.399919590949,
+					["y"] = 488.320044879911,
+					["x"] = 769.919937610626,
 					["lock"] = false,
 					["scale"] = 1,
 					["alpha"] = 1,
@@ -617,16 +619,13 @@ FX_Saved = {
 					">> %s is fading in %s <<", -- [1]
 					[0] = 1,
 				},
-				["Output"] = {
-					"MyProChannel", -- [1]
-					[0] = true,
-				},
-				["TalentOffsetX"] = 0,
 				["HealthstoneMinColor"] = {
 					0.93, -- [1]
 					1, -- [2]
 					0, -- [3]
 				},
+				["TalentOffsetX"] = 0,
+				["SummonHeight"] = 12,
 				["HealthstoneExpand"] = false,
 				["TimerResistsColor"] = {
 					1, -- [1]
@@ -713,7 +712,10 @@ FX_Saved = {
 					0.21, -- [2]
 					0.93, -- [3]
 				},
-				["SummonHeight"] = 12,
+				["Output"] = {
+					"MyProChannel", -- [1]
+					[0] = true,
+				},
 				["SoulstoneReadySound"] = {
 					"Sound\\Spells\\SimonGame_Visual_GameTick.wav", -- [1]
 					1, -- [2]
@@ -1123,10 +1125,22 @@ FX_Saved = {
 		},
 	},
 	["RaidStatus"] = {
+		["Evan"] = {
+			-2, -- [1]
+			85232.94, -- [2]
+			"PRIEST", -- [3]
+			"v1.980.8", -- [4]
+		},
 		["Pandatal"] = {
 			0, -- [1]
-			13718.57, -- [2]
+			85776.009, -- [2]
 			"PALADIN", -- [3]
+			"v1.980.8", -- [4]
+		},
+		["Metal"] = {
+			-2, -- [1]
+			84737.072, -- [2]
+			"WARRIOR", -- [3]
 			"v1.980.8", -- [4]
 		},
 	},

@@ -42,23 +42,23 @@ DataStore_InventoryDB = {
 					"|cffffffff|Hitem:116286:5294:0:0:0:0:0:0:100:257:0:4:1:560|h[]|h|r", -- [2]
 					"|cffa335ee|Hitem:113609:0:0:0:0:0:0:0:100:257:0:3:0|h[Slaughterhouse Spaulders]|h|r", -- [3]
 					"|cffffffff|Hitem:53:0:0:0:0:0:0:0:100:257:0:0:0|h[]|h|r", -- [4]
-					"|cffa335ee|Hitem:116000:0:5343:0:0:0:0:0:100:257:0:4:1:563|h[Mountainslide Robes]|h|r", -- [5]
+					"|cffffffff|Hitem:116000:0:5343:0:0:0:0:0:100:257:0:4:1:563|h[]|h|r", -- [5]
 					"|cffffffff|Hitem:113967:0:0:0:0:0:0:0:100:257:0:3:0|h[]|h|r", -- [6]
 					"|cffffffff|Hitem:109807:0:0:0:0:0:0:0:100:257:4:2:1:524:529|h[]|h|r", -- [7]
 					"|cffa335ee|Hitem:113840:0:0:0:0:0:0:0:100:257:0:3:0|h[Destablized Sandals]|h|r", -- [8]
 					"|cffa335ee|Hitem:115999:0:5343:0:0:0:0:0:100:257:0:4:1:563|h[Rotmonger Bracers]|h|r", -- [9]
-					"|cffa335ee|Hitem:113610:0:0:0:0:0:0:0:100:257:0:3:0|h[Meatmonger's Gory Grips]|h|r", -- [10]
+					"|cffffffff|Hitem:113610:0:0:0:0:0:0:0:100:257:0:3:0|h[]|h|r", -- [10]
 					"|cffffffff|Hitem:118304:0:0:0:0:0:0:0:100:257:0:11:0|h[]|h|r", -- [11]
 					"|cffa335ee|Hitem:115798:0:0:0:0:0:0:0:100:257:4:13:4:618:540:385:540:529|h[Whispering Taladite Ring of the Diviner]|h|r", -- [12]
 					"|cffa335ee|Hitem:113889:0:0:0:0:0:0:0:100:257:0:3:0|h[Elementalist's Shielding Talisman]|h|r", -- [13]
-					"|cffa335ee|Hitem:112317:0:0:0:0:0:0:0:100:257:4:13:2:529:618:529|h[Winged Hourglass]|h|r", -- [14]
+					"|cffffffff|Hitem:112317:0:0:0:0:0:0:0:100:257:4:13:2:529:618:529|h[]|h|r", -- [14]
 					"|cffffffff|Hitem:114819:5302:0:0:0:0:0:0:100:257:4:13:3:618:537:52:529|h[]|h|r", -- [15]
 					"|cffffffff|Hitem:119181:0:0:0:0:0:0:0:100:257:4:2:1:524:529|h[]|h|r", -- [16]
 					"|cffffffff|Hitem:118849:0:0:0:0:0:0:0:100:257:0:0:0|h[]|h|r", -- [17]
 				},
 				["averageItemLvl"] = 663.5625,
 				["overallAIL"] = 666.066650390625,
-				["lastUpdate"] = 1454625156,
+				["lastUpdate"] = 1454777600,
 			},
 			["Default.Illidan.Pandatal"] = {
 				["Inventory"] = {
@@ -82,7 +82,7 @@ DataStore_InventoryDB = {
 				},
 				["averageItemLvl"] = 640,
 				["overallAIL"] = 640,
-				["lastUpdate"] = 1454628907,
+				["lastUpdate"] = 1454778284,
 			},
 			["Default.Illidan.Combustion"] = {
 				["Inventory"] = {
@@ -109,26 +109,26 @@ DataStore_InventoryDB = {
 			},
 			["Default.Illidan.Comet"] = {
 				["Inventory"] = {
-					"|cffa335ee|Hitem:115556:0:0:0:0:0:0:0:100:270:0:5:1:566|h[Helm of the Somber Gaze]|h|r", -- [1]
-					"|cffa335ee|Hitem:128108:5320:0:0:0:0:0:0:100:270:4:4:0:529|h[Willbreaker Brooch]|h|r", -- [2]
-					"|cffa335ee|Hitem:113924:0:0:0:0:0:0:0:100:270:0:6:1:567|h[Flamebender's Shoulderguards]|h|r", -- [3]
+					"|cffffffff|Hitem:115556:0:0:0:0:0:0:0:100:269:0:5:1:566|h[]|h|r", -- [1]
+					"|cffffffff|Hitem:113865:5320:0:0:0:0:0:0:100:269:0:6:1:567|h[]|h|r", -- [2]
+					"|cffffffff|Hitem:128121:0:0:0:0:0:0:0:100:269:4:4:1:560:529|h[]|h|r", -- [3]
 					nil, -- [4]
-					"|cffa335ee|Hitem:115558:0:0:0:0:0:0:0:100:270:0:5:2:40:566|h[Vest of the Somber Gaze]|h|r", -- [5]
-					"|cffa335ee|Hitem:124276:0:0:0:0:0:0:0:100:270:4:5:1:566:531|h[Waistwrap of Banishment]|h|r", -- [6]
-					"|cffa335ee|Hitem:115557:0:0:0:0:0:0:0:100:270:0:5:1:566|h[Legwraps of the Somber Gaze]|h|r", -- [7]
-					"|cffa335ee|Hitem:124249:0:0:0:0:0:0:0:100:270:4:3:0:529|h[Spiked Irontoe Slippers]|h|r", -- [8]
-					"|cffa335ee|Hitem:116181:0:0:0:0:0:0:0:100:270:4:13:3:146:535:618:529|h[Supple Bracers of the Deft]|h|r", -- [9]
-					"|cffa335ee|Hitem:115555:0:0:0:0:0:0:0:100:270:0:5:2:43:566|h[Handwraps of the Somber Gaze]|h|r", -- [10]
-					"|cffff8000|Hitem:124638:5327:0:0:0:0:0:0:100:270:0:14:2:621:650|h[Etheralus, the Eternal Reward]|h|r", -- [11]
-					"|cffa335ee|Hitem:124193:5327:0:0:0:0:0:0:100:270:4:3:0:529|h[Shimmering Voidstone Band]|h|r", -- [12]
-					"|cffa335ee|Hitem:113889:0:0:0:0:0:0:0:100:270:0:5:1:566|h[Elementalist's Shielding Talisman]|h|r", -- [13]
-					"|cffa335ee|Hitem:128024:0:0:0:0:0:0:0:100:270:4:1:0:531|h[Stone of the Elements]|h|r", -- [14]
-					"|cffa335ee|Hitem:128103:5313:0:0:0:0:0:0:100:270:4:4:1:41:529|h[Sigil-Stitched Drape]|h|r", -- [15]
-					"|cffa335ee|Hitem:113134:5335:0:0:0:0:0:0:100:270:4:13:3:66:530:620:529|h[Crystalfire Spellstaff of the Savage]|h|r", -- [16]
+					"|cffffffff|Hitem:115558:0:0:0:0:0:0:0:100:269:0:5:2:40:566|h[]|h|r", -- [5]
+					"|cffffffff|Hitem:124276:0:0:0:0:0:0:0:100:269:4:5:1:566:531|h[]|h|r", -- [6]
+					"|cffffffff|Hitem:115557:0:0:0:0:0:0:0:100:269:0:5:1:566|h[]|h|r", -- [7]
+					"|cffffffff|Hitem:128054:0:0:0:0:0:0:0:100:269:4:4:0:529|h[]|h|r", -- [8]
+					"|cffffffff|Hitem:116181:0:0:0:0:0:0:0:100:269:4:13:3:146:535:618:529|h[]|h|r", -- [9]
+					"|cffffffff|Hitem:115555:0:0:0:0:0:0:0:100:269:0:5:2:43:566|h[]|h|r", -- [10]
+					"|cffffffff|Hitem:124636:5327:0:0:0:0:0:0:100:269:0:11:2:650:624|h[]|h|r", -- [11]
+					"|cffffffff|Hitem:113917:5327:5349:0:0:0:0:0:100:269:0:6:2:565:567|h[]|h|r", -- [12]
+					"|cffffffff|Hitem:112318:0:0:0:0:0:0:0:100:269:4:13:2:529:618:529|h[]|h|r", -- [13]
+					"|cffffffff|Hitem:128024:0:0:0:0:0:0:0:100:269:4:1:0:531|h[]|h|r", -- [14]
+					"|cffffffff|Hitem:113971:5313:0:0:0:0:0:0:100:269:0:6:1:567|h[]|h|r", -- [15]
+					"|cffffffff|Hitem:113939:5337:0:0:0:0:0:0:100:269:0:6:1:567|h[]|h|r", -- [16]
 				},
-				["averageItemLvl"] = 699,
+				["averageItemLvl"] = 703,
 				["overallAIL"] = 710.333312988281,
-				["lastUpdate"] = 1454635207,
+				["lastUpdate"] = 1454776459,
 			},
 			["Default.Illidan.Natal"] = {
 				["Inventory"] = {
@@ -173,8 +173,8 @@ DataStore_InventoryDB = {
 					"|cffffffff|Hitem:113606:5330:0:0:0:0:0:0:100:72:0:5:2:561:566|h[]|h|r", -- [17]
 				},
 				["averageItemLvl"] = 690.1875,
-				["overallAIL"] = 690.5,
-				["lastUpdate"] = 1454625055,
+				["overallAIL"] = 690.875,
+				["lastUpdate"] = 1454776978,
 			},
 			["Default.Dark Iron.Colton"] = {
 				["Inventory"] = {
@@ -298,7 +298,7 @@ DataStore_InventoryDB = {
 						["averageItemLvl"] = 640,
 					},
 					["Comet"] = {
-						["averageItemLvl"] = 697,
+						["averageItemLvl"] = 703,
 					},
 					["Incantatem"] = {
 						["averageItemLvl"] = 718,

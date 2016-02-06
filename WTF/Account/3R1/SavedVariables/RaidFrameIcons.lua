@@ -3,7 +3,7 @@ RaidFrameIconsDB = {
 	["profileKeys"] = {
 		["Venala - Cho'gall"] = "Venala - Cho'gall",
 		["Combustion - Illidan"] = "Pandatal - Illidan",
-		["Metal - Illidan"] = "Pandatal - Illidan",
+		["Metal - Illidan"] = "Comet - Illidan",
 		["Natal - Illidan"] = "Pandatal - Illidan",
 		["Natalan - Illidan"] = "Natalan - Illidan",
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
@@ -12,7 +12,7 @@ RaidFrameIconsDB = {
 		["Plane - Illidan"] = "Pandatal - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Pandatal - Illidan"] = "Comet - Illidan",
-		["Evan - Illidan"] = "Pandatal - Illidan",
+		["Evan - Illidan"] = "Comet - Illidan",
 		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
 	},
 	["profiles"] = {

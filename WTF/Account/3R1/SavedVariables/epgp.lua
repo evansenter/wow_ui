@@ -16,7 +16,6 @@ EPGP_DB = {
 			["profiles"] = {
 				["Mind Games"] = {
 					["snapshot"] = {
-						["time"] = 1454642460,
 						["roster_info"] = {
 							{
 								"Galebubbles-Illidan", -- [1]
@@ -169,8 +168,8 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [30]
 							{
-								"Shockheart-Illidan", -- [1]
-								"SHAMAN", -- [2]
+								"Halnadi-Illidan", -- [1]
+								"DRUID", -- [2]
 								"", -- [3]
 							}, -- [31]
 							{
@@ -204,8 +203,8 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [37]
 							{
-								"Faestana-Illidan", -- [1]
-								"PALADIN", -- [2]
+								"Zakje-Illidan", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [38]
 							{
@@ -319,8 +318,8 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [60]
 							{
-								"Badboydruid-Illidan", -- [1]
-								"DRUID", -- [2]
+								"Bopttousai-Illidan", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [61]
 							{
@@ -469,7 +468,7 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [90]
 							{
-								"Iconjurebeer-Illidan", -- [1]
+								"Notgale-Illidan", -- [1]
 								"MAGE", -- [2]
 								"", -- [3]
 							}, -- [91]
@@ -749,8 +748,8 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [146]
 							{
-								"Zamb-Illidan", -- [1]
-								"WARLOCK", -- [2]
+								"Løurinzø-Illidan", -- [1]
+								"MAGE", -- [2]
 								"", -- [3]
 							}, -- [147]
 							{
@@ -824,18 +823,18 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [161]
 							{
-								"Soza-Illidan", -- [1]
-								"PALADIN", -- [2]
-								"", -- [3]
-							}, -- [162]
-							{
 								"Greshka-Illidan", -- [1]
 								"HUNTER", -- [2]
 								"", -- [3]
-							}, -- [163]
+							}, -- [162]
 							{
 								"Llewnir-Illidan", -- [1]
 								"MAGE", -- [2]
+								"", -- [3]
+							}, -- [163]
+							{
+								"Soza-Illidan", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [164]
 							{
@@ -844,18 +843,18 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [165]
 							{
-								"Talavi-Illidan", -- [1]
+								"Cogash-Illidan", -- [1]
 								"SHAMAN", -- [2]
 								"", -- [3]
 							}, -- [166]
 							{
-								"Cogash-Illidan", -- [1]
+								"Talavi-Illidan", -- [1]
 								"SHAMAN", -- [2]
 								"", -- [3]
 							}, -- [167]
 							{
-								"Capewoman-Illidan", -- [1]
-								"MAGE", -- [2]
+								"Bulsyv-Illidan", -- [1]
+								"WARRIOR", -- [2]
 								"", -- [3]
 							}, -- [168]
 							{
@@ -864,23 +863,23 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [169]
 							{
-								"Kaseef-Illidan", -- [1]
-								"PRIEST", -- [2]
-								"", -- [3]
-							}, -- [170]
-							{
 								"Brewmebro-Illidan", -- [1]
 								"MONK", -- [2]
 								"", -- [3]
-							}, -- [171]
+							}, -- [170]
 							{
-								"Barthylen-Illidan", -- [1]
-								"PRIEST", -- [2]
+								"Vazoline-Illidan", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
-							}, -- [172]
+							}, -- [171]
 							{
 								"Dahx-Illidan", -- [1]
 								"WARLOCK", -- [2]
+								"", -- [3]
+							}, -- [172]
+							{
+								"Barthylen-Illidan", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
 							}, -- [173]
 							{
@@ -889,8 +888,8 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [174]
 							{
-								"Coachmcguirk-Illidan", -- [1]
-								"MAGE", -- [2]
+								"Innocentz-Illidan", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [175]
 							{
@@ -899,28 +898,28 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [176]
 							{
-								"Meiyin-Illidan", -- [1]
-								"MONK", -- [2]
-								"", -- [3]
-							}, -- [177]
-							{
 								"Leafygreens-Illidan", -- [1]
 								"DRUID", -- [2]
 								"", -- [3]
-							}, -- [178]
+							}, -- [177]
 							{
 								"Illidanorken-Illidan", -- [1]
 								"WARRIOR", -- [2]
 								"", -- [3]
-							}, -- [179]
+							}, -- [178]
 							{
-								"Innocentz-Illidan", -- [1]
-								"PALADIN", -- [2]
+								"Meiyin-Illidan", -- [1]
+								"MONK", -- [2]
 								"", -- [3]
-							}, -- [180]
+							}, -- [179]
 							{
 								"Triggerdruid-Illidan", -- [1]
 								"DRUID", -- [2]
+								"", -- [3]
+							}, -- [180]
+							{
+								"Distora-Illidan", -- [1]
+								"WARLOCK", -- [2]
 								"", -- [3]
 							}, -- [181]
 							{
@@ -929,33 +928,33 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [182]
 							{
-								"Wsinno-Illidan", -- [1]
-								"MONK", -- [2]
-								"", -- [3]
-							}, -- [183]
-							{
 								"Kaalan-Illidan", -- [1]
 								"PALADIN", -- [2]
 								"", -- [3]
-							}, -- [184]
+							}, -- [183]
 							{
-								"Vixeax-Illidan", -- [1]
-								"ROGUE", -- [2]
+								"Starrstruck-Illidan", -- [1]
+								"MAGE", -- [2]
 								"", -- [3]
-							}, -- [185]
+							}, -- [184]
 							{
 								"Deathíon-Illidan", -- [1]
 								"DEATHKNIGHT", -- [2]
 								"", -- [3]
-							}, -- [186]
+							}, -- [185]
 							{
 								"Renjimon-Illidan", -- [1]
 								"MAGE", -- [2]
 								"", -- [3]
-							}, -- [187]
+							}, -- [186]
 							{
 								"Llewon-Illidan", -- [1]
 								"SHAMAN", -- [2]
+								"", -- [3]
+							}, -- [187]
+							{
+								"Vixeax-Illidan", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [188]
 							{
@@ -969,63 +968,63 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [190]
 							{
-								"Llewkar-Illidan", -- [1]
-								"WARLOCK", -- [2]
-								"", -- [3]
-							}, -- [191]
-							{
 								"Louranzo-Illidan", -- [1]
 								"DEATHKNIGHT", -- [2]
 								"", -- [3]
-							}, -- [192]
+							}, -- [191]
 							{
 								"Syrinxia-Illidan", -- [1]
 								"ROGUE", -- [2]
 								"", -- [3]
-							}, -- [193]
+							}, -- [192]
 							{
-								"Hunger-Illidan", -- [1]
-								"PRIEST", -- [2]
+								"Llewkar-Illidan", -- [1]
+								"WARLOCK", -- [2]
 								"", -- [3]
-							}, -- [194]
+							}, -- [193]
 							{
 								"Galeshape-Illidan", -- [1]
 								"DRUID", -- [2]
 								"", -- [3]
-							}, -- [195]
+							}, -- [194]
 							{
-								"Distora-Illidan", -- [1]
-								"WARLOCK", -- [2]
+								"Hunger-Illidan", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
-							}, -- [196]
+							}, -- [195]
 							{
 								"Galesniper-Illidan", -- [1]
 								"HUNTER", -- [2]
 								"", -- [3]
-							}, -- [197]
+							}, -- [196]
 							{
 								"Threaly-Illidan", -- [1]
 								"WARLOCK", -- [2]
 								"", -- [3]
-							}, -- [198]
+							}, -- [197]
 							{
-								"Aavannth-Illidan", -- [1]
-								"WARLOCK", -- [2]
+								"Coachmcguirk-Illidan", -- [1]
+								"MAGE", -- [2]
 								"", -- [3]
-							}, -- [199]
+							}, -- [198]
 							{
 								"Bsly-Illidan", -- [1]
 								"DRUID", -- [2]
 								"", -- [3]
-							}, -- [200]
+							}, -- [199]
 							{
-								"ßabealicious-Illidan", -- [1]
-								"PALADIN", -- [2]
+								"Aavannth-Illidan", -- [1]
+								"WARLOCK", -- [2]
 								"", -- [3]
-							}, -- [201]
+							}, -- [200]
 							{
 								"Trepidace-Illidan", -- [1]
 								"HUNTER", -- [2]
+								"", -- [3]
+							}, -- [201]
+							{
+								"ßabealicious-Illidan", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [202]
 							{
@@ -1034,53 +1033,53 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [203]
 							{
-								"Starrstruck-Illidan", -- [1]
-								"MAGE", -- [2]
-								"", -- [3]
-							}, -- [204]
-							{
 								"Vòrosh-Illidan", -- [1]
 								"HUNTER", -- [2]
 								"", -- [3]
-							}, -- [205]
+							}, -- [204]
 							{
 								"Aurassarr-Illidan", -- [1]
 								"PRIEST", -- [2]
 								"", -- [3]
-							}, -- [206]
+							}, -- [205]
 							{
 								"Ganova-Illidan", -- [1]
 								"PALADIN", -- [2]
 								"", -- [3]
-							}, -- [207]
+							}, -- [206]
 							{
-								"Whiteglint-Illidan", -- [1]
+								"Wsinno-Illidan", -- [1]
 								"MONK", -- [2]
 								"", -- [3]
-							}, -- [208]
+							}, -- [207]
 							{
 								"Mtqt-Illidan", -- [1]
 								"DRUID", -- [2]
 								"", -- [3]
-							}, -- [209]
+							}, -- [208]
 							{
-								"Voidblood-Illidan", -- [1]
-								"PRIEST", -- [2]
+								"Whiteglint-Illidan", -- [1]
+								"MONK", -- [2]
 								"", -- [3]
-							}, -- [210]
+							}, -- [209]
 							{
 								"Mandosz-Illidan", -- [1]
 								"HUNTER", -- [2]
 								"", -- [3]
-							}, -- [211]
+							}, -- [210]
 							{
-								"Vampwarrior-Illidan", -- [1]
-								"WARRIOR", -- [2]
+								"Voidblood-Illidan", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
-							}, -- [212]
+							}, -- [211]
 							{
 								"Stavvyb-Illidan", -- [1]
 								"MAGE", -- [2]
+								"", -- [3]
+							}, -- [212]
+							{
+								"Vampwarrior-Illidan", -- [1]
+								"WARRIOR", -- [2]
 								"", -- [3]
 							}, -- [213]
 							{
@@ -1089,13 +1088,13 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [214]
 							{
-								"Comet-Illidan", -- [1]
-								"MONK", -- [2]
+								"Leilzorblade-Illidan", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [215]
 							{
-								"Leilzorblade-Illidan", -- [1]
-								"ROGUE", -- [2]
+								"Sheepíe-Illidan", -- [1]
+								"MAGE", -- [2]
 								"", -- [3]
 							}, -- [216]
 							{
@@ -1109,57 +1108,57 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [218]
 							{
-								"Zakje-Illidan", -- [1]
-								"ROGUE", -- [2]
+								"Kerokero-Illidan", -- [1]
+								"DEATHKNIGHT", -- [2]
 								"", -- [3]
 							}, -- [219]
-							{
-								"Sheepíe-Illidan", -- [1]
-								"MAGE", -- [2]
-								"", -- [3]
-							}, -- [220]
 							{
 								"Toxxulian-Illidan", -- [1]
 								"HUNTER", -- [2]
 								"", -- [3]
-							}, -- [221]
+							}, -- [220]
 							{
-								"Ristora-Illidan", -- [1]
-								"ROGUE", -- [2]
+								"Iconjurebeer-Illidan", -- [1]
+								"MAGE", -- [2]
 								"", -- [3]
-							}, -- [222]
+							}, -- [221]
 							{
 								"Vâil-Illidan", -- [1]
 								"DRUID", -- [2]
 								"", -- [3]
-							}, -- [223]
+							}, -- [222]
 							{
 								"Brewski-Illidan", -- [1]
 								"MONK", -- [2]
 								"", -- [3]
-							}, -- [224]
+							}, -- [223]
 							{
 								"Hunteríno-Illidan", -- [1]
 								"HUNTER", -- [2]
 								"", -- [3]
+							}, -- [224]
+							{
+								"Ristora-Illidan", -- [1]
+								"ROGUE", -- [2]
+								"", -- [3]
 							}, -- [225]
 							{
-								"Kerokero-Illidan", -- [1]
-								"DEATHKNIGHT", -- [2]
+								"Kiaera-Illidan", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [226]
-							{
-								"Purrnado-Illidan", -- [1]
-								"DRUID", -- [2]
-								"", -- [3]
-							}, -- [227]
 							{
 								"Levels-Illidan", -- [1]
 								"WARRIOR", -- [2]
 								"", -- [3]
+							}, -- [227]
+							{
+								"Purrnado-Illidan", -- [1]
+								"DRUID", -- [2]
+								"", -- [3]
 							}, -- [228]
 							{
-								"Itripgoats-Illidan", -- [1]
+								"Coffina-Illidan", -- [1]
 								"WARLOCK", -- [2]
 								"", -- [3]
 							}, -- [229]
@@ -1169,8 +1168,8 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [230]
 							{
-								"Alou-Illidan", -- [1]
-								"PRIEST", -- [2]
+								"Aleenaa-Illidan", -- [1]
+								"DRUID", -- [2]
 								"", -- [3]
 							}, -- [231]
 							{
@@ -1179,118 +1178,118 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [232]
 							{
-								"Phoeníxtears-Illidan", -- [1]
-								"SHAMAN", -- [2]
-								"", -- [3]
-							}, -- [233]
-							{
 								"Andërs-Illidan", -- [1]
 								"PRIEST", -- [2]
 								"", -- [3]
-							}, -- [234]
+							}, -- [233]
 							{
-								"Pandemic-Illidan", -- [1]
-								"WARLOCK", -- [2]
+								"Phoeníxtears-Illidan", -- [1]
+								"SHAMAN", -- [2]
 								"", -- [3]
-							}, -- [235]
+							}, -- [234]
 							{
 								"Aefriday-Illidan", -- [1]
 								"DRUID", -- [2]
 								"", -- [3]
+							}, -- [235]
+							{
+								"Pandemic-Illidan", -- [1]
+								"WARLOCK", -- [2]
+								"", -- [3]
 							}, -- [236]
-							{
-								"Maslowe-Illidan", -- [1]
-								"PALADIN", -- [2]
-								"", -- [3]
-							}, -- [237]
-							{
-								"Mordacar-Illidan", -- [1]
-								"WARRIOR", -- [2]
-								"", -- [3]
-							}, -- [238]
-							{
-								"Olex-Illidan", -- [1]
-								"SHAMAN", -- [2]
-								"", -- [3]
-							}, -- [239]
-							{
-								"Panaxx-Illidan", -- [1]
-								"HUNTER", -- [2]
-								"", -- [3]
-							}, -- [240]
-							{
-								"Vampally-Illidan", -- [1]
-								"PALADIN", -- [2]
-								"", -- [3]
-							}, -- [241]
 							{
 								"Svndeadlysin-Illidan", -- [1]
 								"PALADIN", -- [2]
 								"", -- [3]
-							}, -- [242]
+							}, -- [237]
+							{
+								"Olex-Illidan", -- [1]
+								"SHAMAN", -- [2]
+								"", -- [3]
+							}, -- [238]
+							{
+								"Panaxx-Illidan", -- [1]
+								"HUNTER", -- [2]
+								"", -- [3]
+							}, -- [239]
+							{
+								"Kaseef-Illidan", -- [1]
+								"PRIEST", -- [2]
+								"", -- [3]
+							}, -- [240]
+							{
+								"Mordacar-Illidan", -- [1]
+								"WARRIOR", -- [2]
+								"", -- [3]
+							}, -- [241]
 							{
 								"Mtnk-Illidan", -- [1]
 								"WARRIOR", -- [2]
 								"", -- [3]
-							}, -- [243]
+							}, -- [242]
 							{
-								"Løurenzø-Illidan", -- [1]
-								"PRIEST", -- [2]
+								"Maslowe-Illidan", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
-							}, -- [244]
+							}, -- [243]
 							{
 								"Kui-Illidan", -- [1]
 								"DRUID", -- [2]
 								"", -- [3]
-							}, -- [245]
+							}, -- [244]
 							{
 								"Muggui-Illidan", -- [1]
 								"SHAMAN", -- [2]
 								"", -- [3]
-							}, -- [246]
+							}, -- [245]
 							{
 								"Evan-Illidan", -- [1]
 								"PRIEST", -- [2]
 								"", -- [3]
-							}, -- [247]
+							}, -- [246]
 							{
 								"Bromby-Illidan", -- [1]
 								"ROGUE", -- [2]
 								"", -- [3]
-							}, -- [248]
+							}, -- [247]
 							{
 								"Luclin-Illidan", -- [1]
 								"MONK", -- [2]
 								"", -- [3]
-							}, -- [249]
+							}, -- [248]
 							{
 								"Behringor-Illidan", -- [1]
 								"DRUID", -- [2]
 								"", -- [3]
-							}, -- [250]
+							}, -- [249]
 							{
 								"Bdbyshaman-Illidan", -- [1]
 								"SHAMAN", -- [2]
 								"", -- [3]
-							}, -- [251]
+							}, -- [250]
 							{
-								"Llewvin-Illidan", -- [1]
-								"ROGUE", -- [2]
+								"Løurenzø-Illidan", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
-							}, -- [252]
+							}, -- [251]
 							{
 								"Icyskulls-Illidan", -- [1]
 								"DEATHKNIGHT", -- [2]
 								"", -- [3]
-							}, -- [253]
+							}, -- [252]
 							{
 								"Dehxs-Illidan", -- [1]
 								"SHAMAN", -- [2]
 								"", -- [3]
-							}, -- [254]
+							}, -- [253]
 							{
 								"Syntaxx-Illidan", -- [1]
 								"MAGE", -- [2]
+								"", -- [3]
+							}, -- [254]
+							{
+								"Llewvin-Illidan", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
 							}, -- [255]
 							{
@@ -1309,23 +1308,23 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [258]
 							{
-								"Kiaera-Illidan", -- [1]
-								"ROGUE", -- [2]
-								"", -- [3]
-							}, -- [259]
-							{
 								"Quyncy-Illidan", -- [1]
 								"DRUID", -- [2]
 								"", -- [3]
-							}, -- [260]
+							}, -- [259]
 							{
 								"Shotfired-Illidan", -- [1]
 								"HUNTER", -- [2]
 								"", -- [3]
-							}, -- [261]
+							}, -- [260]
 							{
 								"Bokunocat-Illidan", -- [1]
 								"DRUID", -- [2]
+								"", -- [3]
+							}, -- [261]
+							{
+								"Zamb-Illidan", -- [1]
+								"WARLOCK", -- [2]
 								"", -- [3]
 							}, -- [262]
 							{
@@ -1334,28 +1333,28 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [263]
 							{
-								"Innocenz-Illidan", -- [1]
-								"SHAMAN", -- [2]
-								"", -- [3]
-							}, -- [264]
-							{
 								"Renjï-Illidan", -- [1]
 								"PRIEST", -- [2]
 								"", -- [3]
-							}, -- [265]
+							}, -- [264]
 							{
 								"Thalanor-Illidan", -- [1]
 								"DEATHKNIGHT", -- [2]
 								"", -- [3]
-							}, -- [266]
+							}, -- [265]
 							{
 								"Misdameanor-Illidan", -- [1]
 								"SHAMAN", -- [2]
 								"", -- [3]
-							}, -- [267]
+							}, -- [266]
 							{
 								"Wardìck-Illidan", -- [1]
 								"ROGUE", -- [2]
+								"", -- [3]
+							}, -- [267]
+							{
+								"Innocenz-Illidan", -- [1]
+								"SHAMAN", -- [2]
 								"", -- [3]
 							}, -- [268]
 							{
@@ -1364,13 +1363,13 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [269]
 							{
-								"Bulsyv-Illidan", -- [1]
-								"WARRIOR", -- [2]
+								"Bukadin-Illidan", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
 							}, -- [270]
 							{
-								"Bukadin-Illidan", -- [1]
-								"PALADIN", -- [2]
+								"Capewoman-Illidan", -- [1]
+								"MAGE", -- [2]
 								"", -- [3]
 							}, -- [271]
 							{
@@ -1379,43 +1378,43 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [272]
 							{
-								"Greenpotato-Illidan", -- [1]
+								"Decimeytor-Illidan", -- [1]
 								"HUNTER", -- [2]
 								"", -- [3]
 							}, -- [273]
 							{
-								"Decimeytor-Illidan", -- [1]
-								"HUNTER", -- [2]
-								"", -- [3]
-							}, -- [274]
-							{
 								"Caliipso-Illidan", -- [1]
 								"MAGE", -- [2]
 								"", -- [3]
-							}, -- [275]
+							}, -- [274]
 							{
-								"Galestealth-Illidan", -- [1]
-								"ROGUE", -- [2]
+								"Greenpotato-Illidan", -- [1]
+								"HUNTER", -- [2]
 								"", -- [3]
-							}, -- [276]
+							}, -- [275]
 							{
 								"Kuzio-Illidan", -- [1]
 								"HUNTER", -- [2]
 								"", -- [3]
-							}, -- [277]
+							}, -- [276]
 							{
-								"Halnadi-Illidan", -- [1]
-								"DRUID", -- [2]
+								"Galestealth-Illidan", -- [1]
+								"ROGUE", -- [2]
 								"", -- [3]
-							}, -- [278]
+							}, -- [277]
 							{
 								"Svetty-Illidan", -- [1]
 								"PRIEST", -- [2]
 								"", -- [3]
-							}, -- [279]
+							}, -- [278]
 							{
 								"Cùps-Illidan", -- [1]
 								"HUNTER", -- [2]
+								"", -- [3]
+							}, -- [279]
+							{
+								"Buboski-Illidan", -- [1]
+								"SHAMAN", -- [2]
 								"", -- [3]
 							}, -- [280]
 							{
@@ -1424,38 +1423,38 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [281]
 							{
-								"Aurastrásza-Illidan", -- [1]
-								"WARRIOR", -- [2]
-								"", -- [3]
-							}, -- [282]
-							{
 								"Digbicked-Illidan", -- [1]
 								"HUNTER", -- [2]
 								"", -- [3]
-							}, -- [283]
+							}, -- [282]
 							{
 								"Bolaskiqt-Illidan", -- [1]
 								"PALADIN", -- [2]
 								"", -- [3]
-							}, -- [284]
+							}, -- [283]
 							{
-								"Løurinzø-Illidan", -- [1]
-								"MAGE", -- [2]
+								"Vampally-Illidan", -- [1]
+								"PALADIN", -- [2]
 								"", -- [3]
-							}, -- [285]
+							}, -- [284]
 							{
 								"Bzly-Illidan", -- [1]
 								"PALADIN", -- [2]
 								"", -- [3]
-							}, -- [286]
+							}, -- [285]
 							{
 								"Elderberryz-Illidan", -- [1]
 								"MAGE", -- [2]
 								"", -- [3]
-							}, -- [287]
+							}, -- [286]
 							{
 								"Drunkenlaser-Illidan", -- [1]
 								"DRUID", -- [2]
+								"", -- [3]
+							}, -- [287]
+							{
+								"Kida-Illidan", -- [1]
+								"WARLOCK", -- [2]
 								"", -- [3]
 							}, -- [288]
 							{
@@ -1464,33 +1463,33 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [289]
 							{
-								"Kida-Illidan", -- [1]
+								"Itripgoats-Illidan", -- [1]
 								"WARLOCK", -- [2]
 								"", -- [3]
 							}, -- [290]
 							{
-								"Coffina-Illidan", -- [1]
-								"WARLOCK", -- [2]
-								"", -- [3]
-							}, -- [291]
-							{
 								"Prinzip-Illidan", -- [1]
 								"PALADIN", -- [2]
 								"", -- [3]
-							}, -- [292]
+							}, -- [291]
 							{
 								"Caeecoff-Illidan", -- [1]
 								"ROGUE", -- [2]
 								"", -- [3]
-							}, -- [293]
+							}, -- [292]
 							{
 								"Ashakka-Illidan", -- [1]
 								"WARLOCK", -- [2]
 								"", -- [3]
-							}, -- [294]
+							}, -- [293]
 							{
 								"Metal-Illidan", -- [1]
 								"WARRIOR", -- [2]
+								"", -- [3]
+							}, -- [294]
+							{
+								"Thimblelina-Illidan", -- [1]
+								"WARLOCK", -- [2]
 								"", -- [3]
 							}, -- [295]
 							{
@@ -1499,18 +1498,18 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [296]
 							{
-								"Buboski-Illidan", -- [1]
-								"SHAMAN", -- [2]
-								"", -- [3]
-							}, -- [297]
-							{
 								"Galerage-Illidan", -- [1]
 								"WARRIOR", -- [2]
 								"", -- [3]
-							}, -- [298]
+							}, -- [297]
 							{
 								"Chilaskii-Illidan", -- [1]
 								"MONK", -- [2]
+								"", -- [3]
+							}, -- [298]
+							{
+								"Elevenzero-Illidan", -- [1]
+								"DRUID", -- [2]
 								"", -- [3]
 							}, -- [299]
 							{
@@ -1519,198 +1518,198 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [300]
 							{
-								"Thimblelina-Illidan", -- [1]
-								"WARLOCK", -- [2]
-								"", -- [3]
-							}, -- [301]
-							{
 								"Jdn-Illidan", -- [1]
 								"MONK", -- [2]
 								"", -- [3]
-							}, -- [302]
+							}, -- [301]
 							{
 								"Bokunotamer-Illidan", -- [1]
 								"HUNTER", -- [2]
 								"", -- [3]
+							}, -- [302]
+							{
+								"Faestana-Illidan", -- [1]
+								"PALADIN", -- [2]
+								"", -- [3]
 							}, -- [303]
-							{
-								"Notgale-Illidan", -- [1]
-								"MAGE", -- [2]
-								"", -- [3]
-							}, -- [304]
-							{
-								"Elevenzero-Illidan", -- [1]
-								"DRUID", -- [2]
-								"", -- [3]
-							}, -- [305]
 							{
 								"Drkreiger-Illidan", -- [1]
 								"PRIEST", -- [2]
 								"", -- [3]
-							}, -- [306]
+							}, -- [304]
+							{
+								"Fourtwenyblz-Illidan", -- [1]
+								"MAGE", -- [2]
+								"", -- [3]
+							}, -- [305]
 							{
 								"Lokian-Illidan", -- [1]
 								"WARLOCK", -- [2]
 								"", -- [3]
-							}, -- [307]
+							}, -- [306]
 							{
 								"Goobtrain-Illidan", -- [1]
 								"WARRIOR", -- [2]
 								"", -- [3]
-							}, -- [308]
+							}, -- [307]
 							{
 								"Griffondore-Illidan", -- [1]
 								"PALADIN", -- [2]
 								"", -- [3]
-							}, -- [309]
+							}, -- [308]
 							{
 								"Noskullz-Illidan", -- [1]
 								"PALADIN", -- [2]
 								"", -- [3]
-							}, -- [310]
+							}, -- [309]
 							{
 								"Lichlily-Illidan", -- [1]
 								"DEATHKNIGHT", -- [2]
 								"", -- [3]
-							}, -- [311]
+							}, -- [310]
 							{
 								"Cüps-Illidan", -- [1]
 								"SHAMAN", -- [2]
 								"", -- [3]
-							}, -- [312]
+							}, -- [311]
 							{
 								"Elementia-Illidan", -- [1]
 								"SHAMAN", -- [2]
 								"", -- [3]
-							}, -- [313]
-							{
-								"Unseely-Illidan", -- [1]
-								"PRIEST", -- [2]
-								"", -- [3]
-							}, -- [314]
+							}, -- [312]
 							{
 								"Bearcups-Illidan", -- [1]
 								"DRUID", -- [2]
 								"", -- [3]
-							}, -- [315]
+							}, -- [313]
 							{
-								"Bopttousai-Illidan", -- [1]
-								"PALADIN", -- [2]
+								"Aurastrásza-Illidan", -- [1]
+								"WARRIOR", -- [2]
 								"", -- [3]
-							}, -- [316]
+							}, -- [314]
+							{
+								"Alou-Illidan", -- [1]
+								"PRIEST", -- [2]
+								"", -- [3]
+							}, -- [315]
 							{
 								"Princhi-Illidan", -- [1]
 								"MONK", -- [2]
 								"", -- [3]
-							}, -- [317]
+							}, -- [316]
 							{
-								"Aleenaa-Illidan", -- [1]
-								"DRUID", -- [2]
+								"Unseely-Illidan", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
-							}, -- [318]
+							}, -- [317]
 							{
 								"Undìes-Illidan", -- [1]
 								"WARLOCK", -- [2]
 								"", -- [3]
-							}, -- [319]
+							}, -- [318]
 							{
 								"Soulcore-Illidan", -- [1]
 								"WARLOCK", -- [2]
 								"", -- [3]
-							}, -- [320]
-							{
-								"Unchillbros-Illidan", -- [1]
-								"WARRIOR", -- [2]
-								"", -- [3]
-							}, -- [321]
-							{
-								"Coffmann-Illidan", -- [1]
-								"PRIEST", -- [2]
-								"", -- [3]
-							}, -- [322]
+							}, -- [319]
 							{
 								"Ainal-Illidan", -- [1]
 								"MONK", -- [2]
 								"", -- [3]
-							}, -- [323]
+							}, -- [320]
 							{
-								"Ifarmmounts-Illidan", -- [1]
-								"DEATHKNIGHT", -- [2]
+								"Coffmann-Illidan", -- [1]
+								"PRIEST", -- [2]
 								"", -- [3]
-							}, -- [324]
-							{
-								"Matrix-Illidan", -- [1]
-								"PALADIN", -- [2]
-								"", -- [3]
-							}, -- [325]
+							}, -- [321]
 							{
 								"Validas-Illidan", -- [1]
 								"SHAMAN", -- [2]
 								"", -- [3]
-							}, -- [326]
+							}, -- [322]
+							{
+								"Ifarmmounts-Illidan", -- [1]
+								"DEATHKNIGHT", -- [2]
+								"", -- [3]
+							}, -- [323]
+							{
+								"Matrix-Illidan", -- [1]
+								"PALADIN", -- [2]
+								"", -- [3]
+							}, -- [324]
+							{
+								"Badboydruid-Illidan", -- [1]
+								"DRUID", -- [2]
+								"", -- [3]
+							}, -- [325]
 							{
 								"Beltron-Illidan", -- [1]
 								"PALADIN", -- [2]
 								"", -- [3]
-							}, -- [327]
+							}, -- [326]
 							{
 								"Toppies-Illidan", -- [1]
 								"MAGE", -- [2]
 								"", -- [3]
-							}, -- [328]
+							}, -- [327]
 							{
 								"Darkwuke-Illidan", -- [1]
 								"WARLOCK", -- [2]
 								"", -- [3]
-							}, -- [329]
+							}, -- [328]
 							{
 								"Darkâ-Illidan", -- [1]
 								"DRUID", -- [2]
 								"", -- [3]
-							}, -- [330]
+							}, -- [329]
 							{
 								"Sikopal-Illidan", -- [1]
 								"PALADIN", -- [2]
 								"", -- [3]
-							}, -- [331]
-							{
-								"Vazoline-Illidan", -- [1]
-								"PALADIN", -- [2]
-								"", -- [3]
-							}, -- [332]
+							}, -- [330]
 							{
 								"Hòla-Illidan", -- [1]
 								"MAGE", -- [2]
 								"", -- [3]
-							}, -- [333]
+							}, -- [331]
 							{
 								"Epicurrus-Illidan", -- [1]
 								"PRIEST", -- [2]
 								"", -- [3]
-							}, -- [334]
+							}, -- [332]
+							{
+								"Unchillbros-Illidan", -- [1]
+								"WARRIOR", -- [2]
+								"", -- [3]
+							}, -- [333]
 							{
 								"Tyrannous-Illidan", -- [1]
 								"WARRIOR", -- [2]
 								"", -- [3]
-							}, -- [335]
+							}, -- [334]
 							{
 								"Toxxulìan-Illidan", -- [1]
 								"MAGE", -- [2]
 								"", -- [3]
-							}, -- [336]
+							}, -- [335]
 							{
 								"Santhem-Illidan", -- [1]
 								"MONK", -- [2]
 								"", -- [3]
-							}, -- [337]
+							}, -- [336]
 							{
 								"Caelym-Illidan", -- [1]
 								"SHAMAN", -- [2]
 								"", -- [3]
-							}, -- [338]
+							}, -- [337]
 							{
 								"Blackbynes-Illidan", -- [1]
 								"WARLOCK", -- [2]
+								"", -- [3]
+							}, -- [338]
+							{
+								"Comet-Illidan", -- [1]
+								"MONK", -- [2]
 								"", -- [3]
 							}, -- [339]
 							{
@@ -1724,56 +1723,52 @@ EPGP_DB = {
 								"", -- [3]
 							}, -- [341]
 							{
-								"Fourtwenyblz-Illidan", -- [1]
-								"MAGE", -- [2]
-								"", -- [3]
-							}, -- [342]
-							{
 								"Galechaos-Illidan", -- [1]
 								"WARLOCK", -- [2]
 								"", -- [3]
-							}, -- [343]
+							}, -- [342]
 							{
 								"Målphas-Illidan", -- [1]
 								"WARLOCK", -- [2]
 								"", -- [3]
-							}, -- [344]
+							}, -- [343]
 							{
 								"Bloodfire-Illidan", -- [1]
 								"ROGUE", -- [2]
 								"", -- [3]
-							}, -- [345]
+							}, -- [344]
 							{
 								"Løki-Illidan", -- [1]
 								"MAGE", -- [2]
 								"", -- [3]
-							}, -- [346]
+							}, -- [345]
 							{
 								"Buklau-Illidan", -- [1]
 								"MONK", -- [2]
 								"", -- [3]
-							}, -- [347]
+							}, -- [346]
 							{
 								"Berserk-Illidan", -- [1]
 								"WARRIOR", -- [2]
 								"", -- [3]
-							}, -- [348]
+							}, -- [347]
 							{
 								"Sodalitas-Illidan", -- [1]
 								"MAGE", -- [2]
 								"", -- [3]
-							}, -- [349]
+							}, -- [348]
 							{
 								"Llewo-Illidan", -- [1]
 								"PALADIN", -- [2]
 								"", -- [3]
-							}, -- [350]
+							}, -- [349]
 							{
 								"Teutoburg-Illidan", -- [1]
 								"DRUID", -- [2]
 								"", -- [3]
-							}, -- [351]
+							}, -- [350]
 						},
+						["time"] = 1454785200,
 					},
 				},
 				["Slash Cry"] = {
@@ -8890,8 +8885,8 @@ EPGP_DB = {
 				}, -- [161]
 				{
 					["player"] = "Comet",
-					["coinsLeft"] = "8",
 					["timestamp"] = "2016-02-04 17:56:00",
+					["coinsLeft"] = "8",
 					["currencyID"] = "1129",
 				}, -- [162]
 			},

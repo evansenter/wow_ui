@@ -9,7 +9,7 @@ MogItDB = {
 		["Pandatal - Illidan"] = "Comet - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Combustion - Illidan"] = "Default",
-		["Evan - Illidan"] = "Default",
+		["Evan - Illidan"] = "Comet - Illidan",
 		["Centromere - Dark Iron"] = "Default",
 	},
 	["global"] = {
@@ -21,9 +21,9 @@ MogItDB = {
 			["previewProps"] = {
 				{
 					["y"] = 0,
-					["x"] = 0,
-					["w"] = 334.999877929688,
 					["h"] = 384.999877929688,
+					["w"] = 334.999877929688,
+					["x"] = 0,
 				}, -- [1]
 			},
 			["gridHeight"] = 399.999877929688,
@@ -85,7 +85,7 @@ MogItWishlist = {
 		["Pandatal - Illidan"] = "Pandatal - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
-		["Evan - Illidan"] = "Evan - Illidan",
+		["Evan - Illidan"] = "Comet - Illidan",
 		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
 	},
 	["profiles"] = {

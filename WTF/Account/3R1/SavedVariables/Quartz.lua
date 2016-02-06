@@ -193,7 +193,7 @@ Quartz3DB = {
 	["profileKeys"] = {
 		["Venala - Cho'gall"] = "Default",
 		["Combustion - Illidan"] = "Pandatal - Illidan",
-		["Metal - Illidan"] = "Pandatal - Illidan",
+		["Metal - Illidan"] = "Comet - Illidan",
 		["Pandatal - Illidan"] = "Comet - Illidan",
 		["Plane - Illidan"] = "Pandatal - Illidan",
 		["Colton - Dark Iron"] = "Default",
@@ -202,7 +202,7 @@ Quartz3DB = {
 		["Natalan - Illidan"] = "Pandatal - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Natal - Illidan"] = "Pandatal - Illidan",
-		["Evan - Illidan"] = "Pandatal - Illidan",
+		["Evan - Illidan"] = "Comet - Illidan",
 		["Centromere - Dark Iron"] = "Pandatal - Illidan",
 	},
 	["profiles"] = {

@@ -36,7 +36,7 @@ DataStore_CraftsDB = {
 				["Prof1"] = "Tailoring",
 			},
 			["Default.Illidan.Evan"] = {
-				["lastUpdate"] = 1454625156,
+				["lastUpdate"] = 1454777600,
 				["Prof2"] = "Enchanting",
 				["Professions"] = {
 					["Tailoring"] = {
@@ -732,7 +732,7 @@ DataStore_CraftsDB = {
 				["Prof1"] = "Tailoring",
 			},
 			["Default.Illidan.Pandatal"] = {
-				["lastUpdate"] = 1454628906,
+				["lastUpdate"] = 1454778284,
 			},
 			["Default.Illidan.Combustion"] = {
 				["lastUpdate"] = 1424741664,
@@ -762,7 +762,7 @@ DataStore_CraftsDB = {
 				["Prof1"] = "Alchemy",
 			},
 			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1454635207,
+				["lastUpdate"] = 1454776818,
 				["Prof2"] = "Jewelcrafting",
 				["Professions"] = {
 					["Cooking"] = {
@@ -770,12 +770,15 @@ DataStore_CraftsDB = {
 						["MaxRank"] = 700,
 						["Rank"] = 1,
 					},
+					["Fishing"] = {
+						["MaxRank"] = 700,
+						["Rank"] = 700,
+					},
 					["Engineering"] = {
 						["FullLink"] = "|cffffd000|Htrade:Player-57-05DF4D8D:158739:202|h[Engineering]|h|r",
 						["NumCrafts"] = 225,
 						["Cooldowns"] = {
-							"Gearspring Parts|10800|1454659200", -- [1]
-							"Secrets of Draenor Engineering|10800|1454659200", -- [2]
+							"Gearspring Parts|10800|1454832000", -- [1]
 						},
 						["Crafts"] = {
 							"Draenor Engineering", -- [1]
@@ -1024,10 +1027,6 @@ DataStore_CraftsDB = {
 						["MaxRank"] = 700,
 						["Rank"] = 700,
 					},
-					["Fishing"] = {
-						["MaxRank"] = 700,
-						["Rank"] = 700,
-					},
 					["First Aid"] = {
 						["FullLink"] = "|cffffd000|Htrade:Player-57-05DF4D8D:158741:129|h[First Aid]|h|r",
 						["MaxRank"] = 700,
@@ -1036,6 +1035,9 @@ DataStore_CraftsDB = {
 					["Jewelcrafting"] = {
 						["FullLink"] = "|cffffd000|Htrade:Player-57-05DF4D8D:158750:755|h[Jewelcrafting]|h|r",
 						["NumCrafts"] = 401,
+						["Cooldowns"] = {
+							"Taladite Crystal|10800|1454832000", -- [1]
+						},
 						["MaxRank"] = 700,
 						["Crafts"] = {
 							"Draenor Designs", -- [1]
@@ -1499,7 +1501,7 @@ DataStore_CraftsDB = {
 					},
 					["Blacksmithing"] = {
 						["FullLink"] = "|cffffd000|Htrade:Player-57-080DF31D:158737:164|h[Blacksmithing]|h|r",
-						["NumCrafts"] = 16,
+						["NumCrafts"] = 32,
 						["MaxRank"] = 700,
 						["Crafts"] = {
 							"Draenor Plans", -- [1]
@@ -1508,26 +1510,44 @@ DataStore_CraftsDB = {
 							704360, -- [4]
 							"Item Enhancers", -- [5]
 							686832, -- [6]
-							693420, -- [7]
-							"Armor", -- [8]
-							686809, -- [9]
-							686805, -- [10]
-							686764, -- [11]
-							686768, -- [12]
-							686772, -- [13]
-							"Antique Plans", -- [14]
-							"Materials", -- [15]
-							587684, -- [16]
-							573020, -- [17]
-							"Weapon Mods", -- [18]
-							10640, -- [19]
-							12460, -- [20]
-							"Chest", -- [21]
-							49040, -- [22]
-							"Bracers", -- [23]
-							10652, -- [24]
-							"Belts", -- [25]
-							571852, -- [26]
+							686840, -- [7]
+							686796, -- [8]
+							693420, -- [9]
+							"Armor", -- [10]
+							686821, -- [11]
+							686825, -- [12]
+							686817, -- [13]
+							686813, -- [14]
+							686809, -- [15]
+							686805, -- [16]
+							686801, -- [17]
+							686829, -- [18]
+							686764, -- [19]
+							686768, -- [20]
+							686772, -- [21]
+							"Weapons and Shields", -- [22]
+							712980, -- [23]
+							712972, -- [24]
+							686784, -- [25]
+							686776, -- [26]
+							686788, -- [27]
+							686780, -- [28]
+							686792, -- [29]
+							"Other", -- [30]
+							708676, -- [31]
+							"Antique Plans", -- [32]
+							"Materials", -- [33]
+							587684, -- [34]
+							573020, -- [35]
+							"Weapon Mods", -- [36]
+							10640, -- [37]
+							12460, -- [38]
+							"Chest", -- [39]
+							49040, -- [40]
+							"Bracers", -- [41]
+							10652, -- [42]
+							"Belts", -- [43]
+							571852, -- [44]
 						},
 						["Rank"] = 700,
 					},
@@ -1538,6 +1558,9 @@ DataStore_CraftsDB = {
 					["Leatherworking"] = {
 						["FullLink"] = "|cffffd000|Htrade:Player-57-080DF31D:158752:165|h[Leatherworking]|h|r",
 						["NumCrafts"] = 28,
+						["Cooldowns"] = {
+							"Burnished Leather|10800|1454832000", -- [1]
+						},
 						["MaxRank"] = 700,
 						["Crafts"] = {
 							"Draenor Patterns", -- [1]
@@ -1614,7 +1637,7 @@ DataStore_CraftsDB = {
 					},
 				},
 				["Prof2"] = "Leatherworking",
-				["lastUpdate"] = 1454625055,
+				["lastUpdate"] = 1454777529,
 				["Prof1"] = "Blacksmithing",
 			},
 			["Default.Dark Iron.Colton"] = {

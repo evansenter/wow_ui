@@ -12,16 +12,13 @@ DataStore_AuctionsDB = {
 	},
 	["global"] = {
 		["Characters"] = {
+			["Default.Illidan.Comet"] = {
+				["lastUpdate"] = 1454776911,
+				["lastVisitDate"] = "2016/02/06 08:41",
+			},
 			["Default.Illidan.Evan"] = {
 				["lastUpdate"] = 1451692246,
 				["lastVisitDate"] = "2016/01/01 15:50",
-			},
-			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1454634098,
-				["Auctions"] = {
-					"1|67136|1||19940500|20990000|3", -- [1]
-				},
-				["lastVisitDate"] = "2016/02/04 17:01",
 			},
 			["Default.Illidan.Metal"] = {
 				["lastUpdate"] = 1451715340,

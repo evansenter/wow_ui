@@ -1003,6 +1003,48 @@ WeakAurasSaved = {
 			["backgroundOffset"] = 2,
 			["height"] = 32,
 			["anchorPoint"] = "CENTER",
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\Spell_Frost_FrostBolt02",
+			["xOffset"] = -120,
+			["fontSize"] = 16,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["numTriggers"] = 1,
+			["mirror"] = false,
+			["stickyDuration"] = false,
+			["regionType"] = "icon",
+			["selfPoint"] = "CENTER",
+			["blendMode"] = "BLEND",
+			["customTextUpdate"] = "update",
+			["frameStrata"] = 3,
+			["id"] = "Frostbolt No Stack",
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["additional_triggers"] = {
+			},
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Combustion Usable",
+					["glow_action"] = "show",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["alpha"] = 1,
+			["width"] = 32,
+			["yOffset"] = -90,
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -1045,50 +1087,8 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\Spell_Frost_FrostBolt02",
-			["xOffset"] = -120,
-			["fontSize"] = 16,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["parent"] = "Frostbolt Stacks 1.0",
-			["numTriggers"] = 1,
-			["mirror"] = false,
-			["yOffset"] = -90,
-			["regionType"] = "icon",
-			["customTextUpdate"] = "update",
-			["blendMode"] = "BLEND",
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_frame"] = "WeakAuras:Combustion Usable",
-					["glow_action"] = "show",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["frameStrata"] = 3,
-			["id"] = "Frostbolt No Stack",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["additional_triggers"] = {
-			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["alpha"] = 1,
-			["width"] = 32,
-			["selfPoint"] = "CENTER",
-			["stickyDuration"] = false,
 			["inverse"] = false,
-			["crop_y"] = 0.41,
+			["parent"] = "Frostbolt Stacks 1.0",
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOM",
@@ -2651,21 +2651,66 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["customTextUpdate"] = "update",
+			["yOffset"] = 0,
 			["backgroundOffset"] = 2,
 			["height"] = 32,
-			["selfPoint"] = "CENTER",
-			["crop_y"] = 0.41,
+			["customTextUpdate"] = "update",
+			["load"] = {
+				["talent"] = {
+					["single"] = 21,
+					["multi"] = {
+						[9] = true,
+					},
+				},
+				["spec"] = {
+					["single"] = 3,
+					["multi"] = {
+						true, -- [1]
+						[3] = true,
+					},
+				},
+				["use_class"] = true,
+				["use_talent"] = true,
+				["difficulty"] = {
+					["multi"] = {
+					},
+				},
+				["role"] = {
+					["multi"] = {
+					},
+				},
+				["use_spec"] = true,
+				["faction"] = {
+					["multi"] = {
+					},
+				},
+				["class"] = {
+					["single"] = "WARRIOR",
+					["multi"] = {
+					},
+				},
+				["use_combat"] = true,
+				["race"] = {
+					["multi"] = {
+					},
+				},
+				["size"] = {
+					["multi"] = {
+					},
+				},
+			},
 			["displayIcon"] = "Interface\\Icons\\Ability_Warrior_ShieldGuard",
-			["anchorPoint"] = "CENTER",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["selfPoint"] = "CENTER",
+			["fontSize"] = 14,
 			["displayStacks"] = " %s",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
 			["parent"] = "Shield Charge 2.0",
 			["numTriggers"] = 4,
 			["mirror"] = false,
-			["xOffset"] = 0,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["regionType"] = "icon",
+			["stickyDuration"] = false,
+			["blendMode"] = "BLEND",
 			["actions"] = {
 				["start"] = {
 					["do_glow"] = true,
@@ -2676,13 +2721,6 @@ WeakAurasSaved = {
 				},
 				["finish"] = {
 				},
-			},
-			["blendMode"] = "BLEND",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
 			},
 			["alpha"] = 1,
 			["additional_triggers"] = {
@@ -2749,56 +2787,18 @@ WeakAurasSaved = {
 			["auto"] = true,
 			["compress"] = false,
 			["id"] = "Shield Charge Usable w/ Enough Rage",
-			["yOffset"] = 0,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
 			["frameStrata"] = 1,
 			["width"] = 32,
-			["stickyDuration"] = false,
-			["load"] = {
-				["talent"] = {
-					["single"] = 21,
-					["multi"] = {
-						[9] = true,
-					},
-				},
-				["spec"] = {
-					["single"] = 3,
-					["multi"] = {
-						true, -- [1]
-						[3] = true,
-					},
-				},
-				["use_class"] = true,
-				["use_talent"] = true,
-				["difficulty"] = {
-					["multi"] = {
-					},
-				},
-				["role"] = {
-					["multi"] = {
-					},
-				},
-				["use_spec"] = true,
-				["faction"] = {
-					["multi"] = {
-					},
-				},
-				["class"] = {
-					["single"] = "WARRIOR",
-					["multi"] = {
-					},
-				},
-				["use_combat"] = true,
-				["race"] = {
-					["multi"] = {
-					},
-				},
-				["size"] = {
-					["multi"] = {
-					},
-				},
-			},
+			["crop_y"] = 0.41,
+			["xOffset"] = 0,
 			["inverse"] = false,
-			["fontSize"] = 14,
+			["anchorPoint"] = "CENTER",
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -3191,12 +3191,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
+			["anchorPoint"] = "CENTER",
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -3204,7 +3199,21 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["height"] = 32,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\ability_shaman_healingtide",
 			["icon"] = true,
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["inverse"] = false,
+			["mirror"] = false,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -3248,7 +3257,33 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\ability_shaman_healingtide",
+			["regionType"] = "icon",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["blendMode"] = "BLEND",
+			["untrigger"] = {
+				["totemType"] = 3,
+				["spellName"] = 5394,
+			},
+			["frameStrata"] = 1,
+			["additional_triggers"] = {
+			},
+			["customTextUpdate"] = "update",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["id"] = "Healing Tide Totem Up",
+			["desaturateForeground"] = false,
+			["alpha"] = 1,
+			["width"] = 32,
+			["xOffset"] = 0,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["numTriggers"] = 1,
 			["animation"] = {
 				["start"] = {
 					["duration_type"] = "seconds",
@@ -3263,41 +3298,6 @@ WeakAurasSaved = {
 					["type"] = "none",
 				},
 			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["crop_y"] = 0.41,
-			["inverse"] = false,
-			["mirror"] = false,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["regionType"] = "icon",
-			["untrigger"] = {
-				["totemType"] = 3,
-				["spellName"] = 5394,
-			},
-			["blendMode"] = "BLEND",
-			["desaturateForeground"] = false,
-			["frameStrata"] = 1,
-			["additional_triggers"] = {
-			},
-			["customTextUpdate"] = "update",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["id"] = "Healing Tide Totem Up",
-			["anchorPoint"] = "CENTER",
-			["alpha"] = 1,
-			["width"] = 32,
-			["xOffset"] = 0,
-			["fontSize"] = 13,
-			["numTriggers"] = 1,
-			["stickyDuration"] = false,
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -4125,6 +4125,39 @@ WeakAurasSaved = {
 			["backgroundOffset"] = 2,
 			["height"] = 32,
 			["customTextUpdate"] = "update",
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["fontSize"] = 13,
+			["numTriggers"] = 1,
+			["mirror"] = false,
+			["xOffset"] = 0,
+			["regionType"] = "icon",
+			["selfPoint"] = "CENTER",
+			["blendMode"] = "BLEND",
+			["yOffset"] = 0,
+			["alpha"] = 1,
+			["additional_triggers"] = {
+			},
+			["icon"] = true,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Savage Defense Unusable",
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -4167,48 +4200,15 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["numTriggers"] = 1,
-			["mirror"] = false,
+			["frameStrata"] = 1,
+			["width"] = 32,
 			["backgroundColor"] = {
 				0.5, -- [1]
 				0.5, -- [2]
 				0.5, -- [3]
 				0.5, -- [4]
 			},
-			["regionType"] = "icon",
-			["crop_y"] = 0.41,
-			["blendMode"] = "BLEND",
-			["yOffset"] = 0,
-			["alpha"] = 1,
-			["additional_triggers"] = {
-			},
-			["icon"] = true,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Savage Defense Unusable",
-			["fontSize"] = 13,
-			["frameStrata"] = 1,
-			["width"] = 32,
-			["selfPoint"] = "CENTER",
-			["xOffset"] = 0,
+			["stickyDuration"] = false,
 			["inverse"] = false,
 			["parent"] = "Savage Defense",
 			["orientation"] = "VERTICAL",
@@ -4488,7 +4488,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["progressPrecision"] = 0,
 			["font"] = "ABF",
-			["height"] = 14.0000114440918,
+			["height"] = 0.999999701976776,
 			["load"] = {
 				["talent"] = {
 					["multi"] = {
@@ -4541,7 +4541,7 @@ WeakAurasSaved = {
 			["id"] = "Evangelism Stacks",
 			["icon"] = true,
 			["frameStrata"] = 3,
-			["width"] = 5.99992799758911,
+			["width"] = 0.999999701976776,
 			["untrigger"] = {
 			},
 			["numTriggers"] = 1,
@@ -4889,37 +4889,23 @@ WeakAurasSaved = {
 			},
 			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["foregroundTexture"] = "Textures\\SpellActivationOverlays\\GenericArc_01",
-			["backgroundColor"] = {
-				0.12156862745098, -- [1]
-				1, -- [2]
-				0.474509803921569, -- [3]
-				0.5, -- [4]
-			},
+			["rotation"] = 0,
 			["mirror"] = false,
-			["yOffset"] = 0,
-			["regionType"] = "progresstexture",
 			["crop_y"] = 0.75,
-			["blendMode"] = "BLEND",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["type"] = "preset",
-					["duration_type"] = "seconds",
-					["preset"] = "alphaPulse",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
+			["regionType"] = "progresstexture",
 			["foregroundColor"] = {
 				0.12156862745098, -- [1]
 				1, -- [2]
 				0.474509803921569, -- [3]
 				1, -- [4]
+			},
+			["blendMode"] = "BLEND",
+			["stickyDuration"] = false,
+			["backgroundColor"] = {
+				0.12156862745098, -- [1]
+				1, -- [2]
+				0.474509803921569, -- [3]
+				0.5, -- [4]
 			},
 			["numTriggers"] = 2,
 			["texture"] = "Textures\\SpellActivationOverlays\\GenericArc_01",
@@ -4957,10 +4943,24 @@ WeakAurasSaved = {
 			["desaturateForeground"] = false,
 			["fontSize"] = 12,
 			["inverse"] = false,
-			["stickyDuration"] = false,
+			["yOffset"] = 0,
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.7,
-			["rotation"] = 0,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["type"] = "preset",
+					["duration_type"] = "seconds",
+					["preset"] = "alphaPulse",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
 			["backgroundOffset"] = 2,
 		},
 		["Bloodbath Usable without Rage"] = {
@@ -5497,21 +5497,15 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["icon"] = true,
-			["backgroundOffset"] = 2,
-			["height"] = 32,
-			["stickyDuration"] = false,
-			["crop_y"] = 0.41,
 			["backgroundColor"] = {
 				0.5, -- [1]
 				0.5, -- [2]
 				0.5, -- [3]
 				0.5, -- [4]
 			},
+			["backgroundOffset"] = 2,
+			["height"] = 32,
 			["disjunctive"] = false,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
 			["load"] = {
 				["talent"] = {
 					["single"] = 4,
@@ -5553,15 +5547,20 @@ WeakAurasSaved = {
 					},
 				},
 			},
+			["xOffset"] = 0,
+			["yOffset"] = 0,
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["desaturateForeground"] = false,
 			["numTriggers"] = 3,
 			["mirror"] = false,
-			["desaturateForeground"] = false,
-			["regionType"] = "icon",
-			["anchorPoint"] = "CENTER",
-			["blendMode"] = "BLEND",
 			["parent"] = "Thunder Focus Tea 1.0",
+			["regionType"] = "icon",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["blendMode"] = "BLEND",
+			["icon"] = true,
 			["alpha"] = 1,
-			["init_completed"] = 1,
 			["additional_triggers"] = {
 				{
 					["trigger"] = {
@@ -5609,13 +5608,13 @@ WeakAurasSaved = {
 			["auto"] = true,
 			["compress"] = false,
 			["id"] = "Thunder Focus Tea Unusable",
-			["selfPoint"] = "CENTER",
+			["stickyDuration"] = false,
 			["frameStrata"] = 1,
 			["width"] = 32,
-			["fontSize"] = 13,
-			["yOffset"] = 0,
+			["selfPoint"] = "CENTER",
+			["anchorPoint"] = "CENTER",
 			["inverse"] = false,
-			["xOffset"] = 0,
+			["crop_y"] = 0.41,
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -6614,21 +6613,14 @@ WeakAurasSaved = {
 			["stickyDuration"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["color"] = {
-				1, -- [1]
-				0.96078431372549, -- [2]
-				0.411764705882353, -- [3]
-				0.800000011920929, -- [4]
-			},
+			["user_y"] = 0,
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["height"] = 20.0000076293945,
-			["user_y"] = 0,
-			["crop_y"] = 0.41,
+			["height"] = 0.999999701976776,
 			["anchorPoint"] = "CENTER",
 			["load"] = {
 				["talent"] = {
@@ -6668,7 +6660,23 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["fontSize"] = 20,
+			["desaturateForeground"] = false,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+					["preset"] = "alphaPulse",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["displayStacks"] = "%c",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
 			["customTextUpdate"] = "update",
@@ -6687,11 +6695,15 @@ WeakAurasSaved = {
 				},
 			},
 			["regionType"] = "text",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["blendMode"] = "BLEND",
 			["icon"] = true,
+			["blendMode"] = "BLEND",
+			["color"] = {
+				1, -- [1]
+				0.96078431372549, -- [2]
+				0.411764705882353, -- [3]
+				0.800000011920929, -- [4]
+			},
 			["frameStrata"] = 4,
-			["init_completed"] = 1,
 			["additional_triggers"] = {
 			},
 			["auto"] = true,
@@ -6700,29 +6712,15 @@ WeakAurasSaved = {
 			["justify"] = "LEFT",
 			["compress"] = false,
 			["id"] = "Stagger Medium Text Only",
+			["fontSize"] = 20,
+			["alpha"] = 1,
+			["width"] = 0.999999701976776,
 			["untrigger"] = {
 				["spellName"] = 121253,
 			},
-			["alpha"] = 1,
-			["width"] = 9.99996948242188,
 			["desaturate"] = false,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-					["preset"] = "alphaPulse",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
 			["numTriggers"] = 1,
-			["desaturateForeground"] = false,
+			["crop_y"] = 0.41,
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOM",
@@ -6914,7 +6912,7 @@ WeakAurasSaved = {
 			},
 			["stickyDuration"] = false,
 			["font"] = "ABF",
-			["height"] = 20.0000076293945,
+			["height"] = 19.8399925231934,
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -6983,7 +6981,7 @@ WeakAurasSaved = {
 				},
 			},
 			["frameStrata"] = 4,
-			["width"] = 22.0000953674316,
+			["width"] = 10.8801136016846,
 			["inverse"] = false,
 			["animation"] = {
 				["start"] = {
@@ -7025,7 +7023,6 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.749166548252106, -- [4]
 			},
-			["init_completed"] = 1,
 			["actions"] = {
 				["start"] = {
 				},
@@ -7905,10 +7902,21 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["anchorPoint"] = "CENTER",
+			["icon"] = true,
 			["backgroundOffset"] = 2,
 			["height"] = 32,
+			["anchorPoint"] = "CENTER",
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
 			["selfPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " %s",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["numTriggers"] = 1,
+			["mirror"] = false,
+			["fontSize"] = 16,
+			["regionType"] = "icon",
 			["load"] = {
 				["talent"] = {
 					["single"] = 17,
@@ -7952,24 +7960,13 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["parent"] = "Primal Elementalist Resto Timers 1.0",
-			["fontSize"] = 16,
-			["displayStacks"] = " %s",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["numTriggers"] = 1,
-			["mirror"] = false,
-			["crop_y"] = 0.41,
-			["regionType"] = "icon",
+			["blendMode"] = "BLEND",
 			["backgroundColor"] = {
 				0.5, -- [1]
 				0.5, -- [2]
 				0.5, -- [3]
 				0.5, -- [4]
 			},
-			["blendMode"] = "BLEND",
-			["customTextUpdate"] = "update",
 			["alpha"] = 1,
 			["id"] = "Fire Elemental Totem Resto Up",
 			["yOffset"] = 0,
@@ -7979,13 +7976,13 @@ WeakAurasSaved = {
 			["compress"] = false,
 			["additional_triggers"] = {
 			},
-			["icon"] = true,
+			["customTextUpdate"] = "update",
 			["frameStrata"] = 1,
 			["width"] = 32,
 			["desaturateForeground"] = false,
 			["xOffset"] = 0,
 			["inverse"] = false,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["parent"] = "Primal Elementalist Resto Timers 1.0",
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\Spell_Fire_Elemental_Totem",
 			["stacksPoint"] = "BOTTOM",
@@ -8069,10 +8066,28 @@ WeakAurasSaved = {
 			["stickyDuration"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["icon"] = true,
+			["parent"] = "Fire Totem 1.0",
 			["backgroundOffset"] = 2,
 			["height"] = 32,
+			["icon"] = true,
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\Spell_Fire_Volcano",
 			["anchorPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = "%s",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["selfPoint"] = "CENTER",
+			["numTriggers"] = 1,
+			["mirror"] = false,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["regionType"] = "icon",
+			["desaturateForeground"] = false,
+			["blendMode"] = "BLEND",
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -8116,24 +8131,6 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\Spell_Fire_Volcano",
-			["desaturate"] = false,
-			["fontSize"] = 16,
-			["displayStacks"] = "%s",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["numTriggers"] = 1,
-			["mirror"] = false,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["regionType"] = "icon",
-			["desaturateForeground"] = false,
-			["blendMode"] = "BLEND",
-			["customTextUpdate"] = "update",
 			["alpha"] = 1,
 			["additional_triggers"] = {
 			},
@@ -8143,13 +8140,13 @@ WeakAurasSaved = {
 			["auto"] = false,
 			["compress"] = false,
 			["id"] = "Magma Totem Up",
-			["parent"] = "Fire Totem 1.0",
+			["customTextUpdate"] = "update",
 			["frameStrata"] = 1,
 			["width"] = 32,
-			["crop_y"] = 0.41,
+			["fontSize"] = 16,
 			["xOffset"] = 0,
 			["inverse"] = false,
-			["selfPoint"] = "CENTER",
+			["desaturate"] = false,
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOM",
@@ -8219,6 +8216,54 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
+			["parent"] = "Chi Brew 1.0 MW",
+			["backgroundOffset"] = 2,
+			["height"] = 32,
+			["selfPoint"] = "CENTER",
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
+			["xOffset"] = 0,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["numTriggers"] = 1,
+			["mirror"] = false,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["regionType"] = "icon",
+			["anchorPoint"] = "CENTER",
+			["blendMode"] = "BLEND",
+			["customTextUpdate"] = "update",
+			["alpha"] = 1,
+			["additional_triggers"] = {
+			},
+			["icon"] = true,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Chi Brew Unusable MW",
+			["stickyDuration"] = false,
+			["frameStrata"] = 1,
+			["width"] = 32,
+			["fontSize"] = 13,
+			["yOffset"] = 0,
+			["inverse"] = false,
 			["load"] = {
 				["talent"] = {
 					["single"] = 9,
@@ -8260,54 +8305,6 @@ WeakAurasSaved = {
 					["multi"] = {
 					},
 				},
-			},
-			["backgroundOffset"] = 2,
-			["height"] = 32,
-			["selfPoint"] = "CENTER",
-			["crop_y"] = 0.41,
-			["crop_x"] = 0.41,
-			["xOffset"] = 0,
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["numTriggers"] = 1,
-			["mirror"] = false,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["regionType"] = "icon",
-			["customTextUpdate"] = "update",
-			["blendMode"] = "BLEND",
-			["stickyDuration"] = false,
-			["alpha"] = 1,
-			["additional_triggers"] = {
-			},
-			["icon"] = true,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Chi Brew Unusable MW",
-			["parent"] = "Chi Brew 1.0 MW",
-			["frameStrata"] = 1,
-			["width"] = 32,
-			["anchorPoint"] = "CENTER",
-			["yOffset"] = 0,
-			["inverse"] = false,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
 			},
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\ability_monk_chibrew",
@@ -8665,9 +8662,9 @@ WeakAurasSaved = {
 			["yOffset"] = 0,
 			["regionType"] = "texture",
 			["blendMode"] = "BLEND",
-			["xOffset"] = 250,
 			["parent"] = "Tiger Power MW",
-			["init_completed"] = 1,
+			["untrigger"] = {
+			},
 			["actions"] = {
 				["start"] = {
 				},
@@ -8782,8 +8779,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["untrigger"] = {
-			},
+			["xOffset"] = 250,
 		},
 		["Ignite Big DoT Size"] = {
 			["user_y"] = 0,
@@ -10534,7 +10530,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["progressPrecision"] = 0,
 			["font"] = "ABF",
-			["height"] = 14.0000114440918,
+			["height"] = 14.0799970626831,
 			["load"] = {
 				["talent"] = {
 					["multi"] = {
@@ -10587,7 +10583,7 @@ WeakAurasSaved = {
 			["id"] = "Archangel %",
 			["stickyDuration"] = false,
 			["frameStrata"] = 3,
-			["width"] = 27.0000133514404,
+			["width"] = 19.8399486541748,
 			["animation"] = {
 				["start"] = {
 					["duration_type"] = "seconds",
@@ -11793,10 +11789,71 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["fontSize"] = 13,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["backgroundOffset"] = 2,
 			["height"] = 32,
 			["selfPoint"] = "CENTER",
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
+			["anchorPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["parent"] = "Shield Block 2.0",
+			["numTriggers"] = 2,
+			["mirror"] = false,
+			["customTextUpdate"] = "update",
+			["regionType"] = "icon",
+			["xOffset"] = 0,
+			["blendMode"] = "BLEND",
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["alpha"] = 1,
+			["id"] = "Shield Block Unusable",
+			["icon"] = true,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["use_form"] = true,
+						["unevent"] = "auto",
+						["form"] = 2,
+						["event"] = "Stance/Form/Aura",
+						["subeventPrefix"] = "SPELL",
+						["unit"] = "player",
+						["type"] = "status",
+						["use_unit"] = true,
+						["subeventSuffix"] = "_CAST_START",
+						["custom_hide"] = "timed",
+					},
+					["untrigger"] = {
+						["form"] = 2,
+					},
+				}, -- [1]
+			},
+			["yOffset"] = 0,
+			["frameStrata"] = 1,
+			["width"] = 32,
+			["stickyDuration"] = false,
+			["fontSize"] = 13,
+			["inverse"] = false,
 			["load"] = {
 				["talent"] = {
 					["single"] = 21,
@@ -11841,67 +11898,6 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["crop_y"] = 0.41,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["parent"] = "Shield Block 2.0",
-			["numTriggers"] = 2,
-			["mirror"] = false,
-			["stickyDuration"] = false,
-			["regionType"] = "icon",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["blendMode"] = "BLEND",
-			["yOffset"] = 0,
-			["alpha"] = 1,
-			["id"] = "Shield Block Unusable",
-			["icon"] = true,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["use_form"] = true,
-						["unevent"] = "auto",
-						["form"] = 2,
-						["event"] = "Stance/Form/Aura",
-						["subeventPrefix"] = "SPELL",
-						["unit"] = "player",
-						["type"] = "status",
-						["use_unit"] = true,
-						["subeventSuffix"] = "_CAST_START",
-						["custom_hide"] = "timed",
-					},
-					["untrigger"] = {
-						["form"] = 2,
-					},
-				}, -- [1]
-			},
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["frameStrata"] = 1,
-			["width"] = 32,
-			["xOffset"] = 0,
-			["customTextUpdate"] = "update",
-			["inverse"] = false,
-			["anchorPoint"] = "CENTER",
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\ability_defend",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -13771,7 +13767,6 @@ WeakAurasSaved = {
 				0.5, -- [3]
 				0.5, -- [4]
 			},
-			["init_completed"] = 1,
 			["crop_y"] = 0.41,
 			["id"] = "Expel Harm Unusable MW",
 			["stacksContainment"] = "INSIDE",
@@ -15285,7 +15280,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["progressPrecision"] = 0,
 			["font"] = "ABF",
-			["height"] = 14.0000114440918,
+			["height"] = 14.0799970626831,
 			["load"] = {
 				["talent"] = {
 					["multi"] = {
@@ -15338,7 +15333,7 @@ WeakAurasSaved = {
 			["id"] = "Archangel % Shadow",
 			["icon"] = true,
 			["frameStrata"] = 2,
-			["width"] = 27.0000133514404,
+			["width"] = 19.8399486541748,
 			["untrigger"] = {
 			},
 			["numTriggers"] = 1,
@@ -17660,10 +17655,62 @@ WeakAurasSaved = {
 			["stickyDuration"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["icon"] = true,
+			["parent"] = "Fire Totem 1.0",
 			["backgroundOffset"] = 2,
 			["height"] = 32,
+			["icon"] = true,
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\Spell_Fire_Volcano",
 			["anchorPoint"] = "CENTER",
+			["fontSize"] = 16,
+			["displayStacks"] = "1",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["desaturateForeground"] = false,
+			["numTriggers"] = 2,
+			["mirror"] = false,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["regionType"] = "icon",
+			["customTextUpdate"] = "update",
+			["blendMode"] = "BLEND",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["alpha"] = 1,
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "status",
+						["subeventSuffix"] = "_CAST_START",
+						["debuffType"] = "HELPFUL",
+						["event"] = "Cooldown Progress (Spell)",
+						["subeventPrefix"] = "SPELL",
+						["unevent"] = "auto",
+						["use_spellName"] = true,
+						["unit"] = "player",
+						["names"] = {
+						},
+						["showOn"] = "showOnReady",
+						["use_unit"] = true,
+						["spellName"] = 2894,
+						["custom_hide"] = "timed",
+					},
+					["untrigger"] = {
+						["spellName"] = 2894,
+					},
+				}, -- [1]
+			},
+			["yOffset"] = 0,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["id"] = "Magma Totem Up with FE",
+			["selfPoint"] = "CENTER",
+			["frameStrata"] = 1,
+			["width"] = 32,
 			["load"] = {
 				["talent"] = {
 					["single"] = 16,
@@ -17706,66 +17753,14 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\Spell_Fire_Volcano",
-			["desaturate"] = false,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = "1",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["desaturateForeground"] = false,
-			["numTriggers"] = 2,
-			["mirror"] = false,
 			["backgroundColor"] = {
 				0.5, -- [1]
 				0.5, -- [2]
 				0.5, -- [3]
 				0.5, -- [4]
 			},
-			["regionType"] = "icon",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["blendMode"] = "BLEND",
-			["selfPoint"] = "CENTER",
-			["alpha"] = 1,
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "status",
-						["subeventSuffix"] = "_CAST_START",
-						["debuffType"] = "HELPFUL",
-						["event"] = "Cooldown Progress (Spell)",
-						["subeventPrefix"] = "SPELL",
-						["unevent"] = "auto",
-						["use_spellName"] = true,
-						["unit"] = "player",
-						["names"] = {
-						},
-						["showOn"] = "showOnReady",
-						["use_unit"] = true,
-						["spellName"] = 2894,
-						["custom_hide"] = "timed",
-					},
-					["untrigger"] = {
-						["spellName"] = 2894,
-					},
-				}, -- [1]
-			},
-			["yOffset"] = 0,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["id"] = "Magma Totem Up with FE",
-			["parent"] = "Fire Totem 1.0",
-			["frameStrata"] = 1,
-			["width"] = 32,
-			["customTextUpdate"] = "update",
-			["crop_y"] = 0.41,
 			["inverse"] = false,
-			["fontSize"] = 16,
+			["desaturate"] = false,
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOM",
@@ -18469,7 +18464,7 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["anchorPoint"] = "CENTER",
+			["selfPoint"] = "CENTER",
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -18477,7 +18472,20 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["height"] = 32,
+			["anchorPoint"] = "CENTER",
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\spell_mage_nethertempest",
 			["icon"] = true,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["inverse"] = false,
+			["mirror"] = false,
+			["xOffset"] = 0,
+			["regionType"] = "icon",
+			["customTextUpdate"] = "update",
+			["blendMode"] = "BLEND",
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -18520,19 +18528,6 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\spell_mage_nethertempest",
-			["parent"] = "Nether Tempest 1.0",
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["inverse"] = false,
-			["mirror"] = false,
-			["xOffset"] = 0,
-			["regionType"] = "icon",
-			["customTextUpdate"] = "update",
-			["blendMode"] = "BLEND",
-			["desaturateForeground"] = false,
 			["alpha"] = 1,
 			["additional_triggers"] = {
 			},
@@ -18542,10 +18537,10 @@ WeakAurasSaved = {
 			["auto"] = false,
 			["compress"] = false,
 			["id"] = "Nether Tempest Unusable",
-			["selfPoint"] = "CENTER",
+			["desaturateForeground"] = false,
 			["frameStrata"] = 3,
 			["width"] = 32,
-			["crop_y"] = 0.41,
+			["fontSize"] = 13,
 			["backgroundColor"] = {
 				0.5, -- [1]
 				0.5, -- [2]
@@ -18553,7 +18548,7 @@ WeakAurasSaved = {
 				0.5, -- [4]
 			},
 			["numTriggers"] = 1,
-			["stickyDuration"] = false,
+			["parent"] = "Nether Tempest 1.0",
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -19039,6 +19034,34 @@ WeakAurasSaved = {
 			["backgroundOffset"] = 2,
 			["height"] = 32,
 			["icon"] = true,
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
+			["customTextUpdate"] = "update",
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["numTriggers"] = 1,
+			["mirror"] = false,
+			["stickyDuration"] = false,
+			["regionType"] = "icon",
+			["xOffset"] = 0,
+			["blendMode"] = "BLEND",
+			["yOffset"] = 0,
+			["alpha"] = 1,
+			["additional_triggers"] = {
+			},
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Searing Flames Not Up",
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -19081,38 +19104,10 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["customTextUpdate"] = "update",
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["selfPoint"] = "CENTER",
-			["numTriggers"] = 1,
-			["mirror"] = false,
-			["desaturateForeground"] = false,
-			["regionType"] = "icon",
-			["crop_y"] = 0.41,
-			["blendMode"] = "BLEND",
-			["yOffset"] = 0,
-			["alpha"] = 1,
-			["additional_triggers"] = {
-			},
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Searing Flames Not Up",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["frameStrata"] = 1,
 			["width"] = 32,
-			["xOffset"] = 0,
-			["stickyDuration"] = false,
+			["desaturateForeground"] = false,
+			["selfPoint"] = "CENTER",
 			["inverse"] = false,
 			["parent"] = "Searing Flames 1.0",
 			["orientation"] = "VERTICAL",
@@ -19552,7 +19547,6 @@ WeakAurasSaved = {
 			["fontSize"] = 24,
 			["displayStacks"] = " ",
 			["regionType"] = "icon",
-			["init_completed"] = 1,
 			["actions"] = {
 				["start"] = {
 					["do_glow"] = false,
@@ -19660,7 +19654,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["customTextUpdate"] = "update",
+			["yOffset"] = 0,
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -19668,29 +19662,7 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["height"] = 32,
-			["icon"] = true,
-			["crop_y"] = 0.41,
-			["displayIcon"] = "Interface\\Icons\\Spell_Nature_FaerieFire",
-			["parent"] = "Faerie Swarm",
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = true,
-					["glow_frame"] = "WeakAuras:Faerie Swarm Usable",
-					["do_message"] = false,
-					["glow_action"] = "show",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["inverse"] = false,
-			["mirror"] = false,
-			["xOffset"] = 0,
-			["regionType"] = "icon",
+			["customTextUpdate"] = "update",
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -19733,6 +19705,17 @@ WeakAurasSaved = {
 					},
 				},
 			},
+			["displayIcon"] = "Interface\\Icons\\Spell_Nature_FaerieFire",
+			["icon"] = true,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["inverse"] = false,
+			["mirror"] = false,
+			["xOffset"] = 0,
+			["regionType"] = "icon",
+			["fontSize"] = 13,
 			["blendMode"] = "BLEND",
 			["selfPoint"] = "CENTER",
 			["alpha"] = 1,
@@ -19762,13 +19745,24 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["yOffset"] = 0,
+			["crop_y"] = 0.41,
 			["frameStrata"] = 4,
 			["width"] = 32,
 			["desaturateForeground"] = false,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = true,
+					["glow_frame"] = "WeakAuras:Faerie Swarm Usable",
+					["do_message"] = false,
+					["glow_action"] = "show",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["numTriggers"] = 2,
-			["stickyDuration"] = false,
+			["parent"] = "Faerie Swarm",
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -21099,7 +21093,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["progressPrecision"] = 0,
 			["font"] = "ABF",
-			["height"] = 14.0000114440918,
+			["height"] = 14.0799751281738,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -21169,7 +21163,7 @@ WeakAurasSaved = {
 				},
 			},
 			["frameStrata"] = 3,
-			["width"] = 15.0000228881836,
+			["width"] = 8.9600076675415,
 			["additional_triggers"] = {
 			},
 			["inverse"] = false,
@@ -21270,7 +21264,6 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "aurabar",
 			["stacks"] = true,
-			["init_completed"] = 1,
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
 			["stacksFont"] = "ABF",
@@ -21670,7 +21663,7 @@ WeakAurasSaved = {
 			["stickyDuration"] = false,
 			["progressPrecision"] = 0,
 			["font"] = "ABF",
-			["height"] = 20.0000076293945,
+			["height"] = 19.8399925231934,
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -21734,7 +21727,7 @@ WeakAurasSaved = {
 				},
 			},
 			["frameStrata"] = 3,
-			["width"] = 36.9999847412109,
+			["width"] = 26.8800220489502,
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
@@ -22058,15 +22051,6 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["yOffset"] = 0,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["height"] = 32,
-			["customTextUpdate"] = "update",
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -22109,19 +22093,33 @@ WeakAurasSaved = {
 					},
 				},
 			},
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["height"] = 32,
+			["yOffset"] = 0,
+			["crop_y"] = 0.41,
 			["displayIcon"] = "Interface\\Icons\\Ability_Racial_Cannibalize",
-			["stickyDuration"] = false,
-			["fontSize"] = 13,
+			["customTextUpdate"] = "update",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["displayStacks"] = " ",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["desaturateForeground"] = false,
 			["inverse"] = false,
 			["mirror"] = false,
 			["xOffset"] = 0,
 			["regionType"] = "icon",
-			["selfPoint"] = "CENTER",
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["blendMode"] = "BLEND",
-			["crop_y"] = 0.41,
+			["selfPoint"] = "CENTER",
 			["frameStrata"] = 1,
 			["id"] = "Savage Defense Usable No Rage",
 			["icon"] = true,
@@ -22155,12 +22153,7 @@ WeakAurasSaved = {
 			},
 			["alpha"] = 1,
 			["width"] = 32,
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["fontSize"] = 13,
 			["backgroundColor"] = {
 				0.5, -- [1]
 				0.5, -- [2]
@@ -22168,7 +22161,7 @@ WeakAurasSaved = {
 				0.5, -- [4]
 			},
 			["numTriggers"] = 2,
-			["desaturateForeground"] = false,
+			["stickyDuration"] = false,
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -22863,18 +22856,28 @@ WeakAurasSaved = {
 				},
 			},
 			["crop_x"] = 0.41,
-			["parent"] = "Primal Elementalist Timers Enhance 1.0",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["crop_y"] = 0.41,
+			["fontSize"] = 13,
 			["displayStacks"] = " ",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["xOffset"] = 0,
+			["stickyDuration"] = false,
 			["numTriggers"] = 2,
 			["mirror"] = false,
-			["fontSize"] = 13,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = true,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Just EET Available Enhance",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["regionType"] = "icon",
 			["desaturateForeground"] = false,
 			["blendMode"] = "BLEND",
-			["anchorPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["alpha"] = 1,
 			["id"] = "Just EET Available Enhance",
 			["icon"] = true,
@@ -22904,23 +22907,13 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["crop_y"] = 0.41,
+			["anchorPoint"] = "CENTER",
 			["frameStrata"] = 1,
 			["width"] = 32,
 			["yOffset"] = 0,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = true,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Just EET Available Enhance",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
+			["xOffset"] = 0,
 			["inverse"] = false,
-			["stickyDuration"] = false,
+			["parent"] = "Primal Elementalist Timers Enhance 1.0",
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\Spell_Fire_Elemental_Totem",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -22968,7 +22961,7 @@ WeakAurasSaved = {
 			},
 			["stickyDuration"] = false,
 			["font"] = "ABF",
-			["height"] = 20.0000076293945,
+			["height"] = 0.999999701976776,
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -23045,7 +23038,7 @@ WeakAurasSaved = {
 				},
 			},
 			["frameStrata"] = 4,
-			["width"] = 7.00007343292236,
+			["width"] = 0.999999701976776,
 			["inverse"] = false,
 			["yOffset"] = -90,
 			["numTriggers"] = 1,
@@ -23096,7 +23089,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["progressPrecision"] = 0,
 			["font"] = "ABF",
-			["height"] = 14.0000114440918,
+			["height"] = 14.0799970626831,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -23144,7 +23137,6 @@ WeakAurasSaved = {
 			["fontSize"] = 14,
 			["displayStacks"] = "%p",
 			["regionType"] = "text",
-			["init_completed"] = 1,
 			["stickyDuration"] = false,
 			["actions"] = {
 				["start"] = {
@@ -23188,7 +23180,7 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["frameStrata"] = 3,
-			["width"] = 16.0000343322754,
+			["width"] = 8.9600076675415,
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
@@ -23631,7 +23623,7 @@ WeakAurasSaved = {
 			["stickyDuration"] = false,
 			["progressPrecision"] = 0,
 			["font"] = "ABF",
-			["height"] = 14.0000114440918,
+			["height"] = 14.0799751281738,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -23688,7 +23680,7 @@ WeakAurasSaved = {
 			["untrigger"] = {
 			},
 			["frameStrata"] = 2,
-			["width"] = 15.0000228881836,
+			["width"] = 8.9600076675415,
 			["parent"] = "Raging Blow 1.0",
 			["inverse"] = false,
 			["numTriggers"] = 1,
@@ -23786,10 +23778,23 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["icon"] = true,
+			["customTextUpdate"] = "update",
 			["backgroundOffset"] = 2,
 			["height"] = 32,
+			["icon"] = true,
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
 			["anchorPoint"] = "CENTER",
+			["fontSize"] = 16,
+			["displayStacks"] = " %s",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["numTriggers"] = 1,
+			["mirror"] = false,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["regionType"] = "icon",
+			["selfPoint"] = "CENTER",
+			["blendMode"] = "BLEND",
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -23834,18 +23839,15 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["parent"] = "Primal Elementalist Timers Enhance 1.0",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " %s",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["numTriggers"] = 1,
-			["mirror"] = false,
-			["desaturateForeground"] = false,
-			["regionType"] = "icon",
-			["selfPoint"] = "CENTER",
-			["blendMode"] = "BLEND",
+			["alpha"] = 1,
+			["additional_triggers"] = {
+			},
+			["yOffset"] = 0,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["id"] = "Fire Elemental Totem Enhance Up",
 			["actions"] = {
 				["start"] = {
 					["do_glow"] = false,
@@ -23857,22 +23859,12 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
-			["alpha"] = 1,
-			["additional_triggers"] = {
-			},
-			["yOffset"] = 0,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["id"] = "Fire Elemental Totem Enhance Up",
-			["customTextUpdate"] = "update",
 			["frameStrata"] = 1,
 			["width"] = 32,
-			["crop_y"] = 0.41,
+			["desaturateForeground"] = false,
 			["xOffset"] = 0,
 			["inverse"] = false,
-			["fontSize"] = 16,
+			["parent"] = "Primal Elementalist Timers Enhance 1.0",
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\Spell_Fire_Elemental_Totem",
 			["stacksPoint"] = "BOTTOM",
@@ -24583,7 +24575,6 @@ WeakAurasSaved = {
 			["blendMode"] = "BLEND",
 			["anchorPoint"] = "CENTER",
 			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["init_completed"] = 1,
 			["customTextUpdate"] = "update",
 			["additional_triggers"] = {
 				{
@@ -24928,7 +24919,7 @@ WeakAurasSaved = {
 			["stickyDuration"] = false,
 			["progressPrecision"] = 0,
 			["font"] = "ABF",
-			["height"] = 14.0000114440918,
+			["height"] = 14.0799970626831,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -24977,7 +24968,6 @@ WeakAurasSaved = {
 			["fontSize"] = 14,
 			["displayStacks"] = "%p",
 			["regionType"] = "text",
-			["init_completed"] = 1,
 			["xOffset"] = -1,
 			["desaturate"] = false,
 			["stacksContainment"] = "INSIDE",
@@ -25011,7 +25001,7 @@ WeakAurasSaved = {
 			},
 			["yOffset"] = -28,
 			["frameStrata"] = 3,
-			["width"] = 16.0000343322754,
+			["width"] = 8.9600076675415,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -25577,6 +25567,17 @@ WeakAurasSaved = {
 			["backgroundOffset"] = 2,
 			["height"] = 32,
 			["icon"] = true,
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\Spell_Fire_SearingTotem",
+			["anchorPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " %s",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["fontSize"] = 16,
+			["numTriggers"] = 2,
+			["mirror"] = false,
+			["xOffset"] = 0,
+			["regionType"] = "icon",
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -25620,19 +25621,8 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\Spell_Fire_SearingTotem",
-			["anchorPoint"] = "CENTER",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " %s",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["numTriggers"] = 2,
-			["mirror"] = false,
-			["crop_y"] = 0.41,
-			["regionType"] = "icon",
-			["desaturateForeground"] = false,
 			["blendMode"] = "BLEND",
-			["customTextUpdate"] = "update",
+			["desaturateForeground"] = false,
 			["alpha"] = 1,
 			["additional_triggers"] = {
 				{
@@ -25663,7 +25653,7 @@ WeakAurasSaved = {
 			["auto"] = false,
 			["compress"] = false,
 			["id"] = "Searing Totem Up without FE",
-			["fontSize"] = 16,
+			["customTextUpdate"] = "update",
 			["frameStrata"] = 1,
 			["width"] = 32,
 			["backgroundColor"] = {
@@ -25672,7 +25662,7 @@ WeakAurasSaved = {
 				0.5, -- [3]
 				0.5, -- [4]
 			},
-			["xOffset"] = 0,
+			["stickyDuration"] = false,
 			["inverse"] = false,
 			["parent"] = "Fire Totem 1.0",
 			["orientation"] = "VERTICAL",
@@ -26596,27 +26586,10 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["anchorPoint"] = "CENTER",
+			["icon"] = true,
 			["backgroundOffset"] = 2,
 			["height"] = 32,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = true,
-					["glow_frame"] = "WeakAuras:Thrash Usable",
-					["do_message"] = false,
-					["glow_action"] = "show",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["crop_y"] = 0.41,
-			["displayIcon"] = "Interface\\Icons\\Spell_Nature_FaerieFire",
-			["parent"] = "Thrash",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["anchorPoint"] = "CENTER",
 			["load"] = {
 				["talent"] = {
 					["single"] = 15,
@@ -26658,18 +26631,35 @@ WeakAurasSaved = {
 					},
 				},
 			},
+			["displayIcon"] = "Interface\\Icons\\Spell_Nature_FaerieFire",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = true,
+					["glow_frame"] = "WeakAuras:Thrash Usable",
+					["do_message"] = false,
+					["glow_action"] = "show",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
 			["numTriggers"] = 2,
 			["mirror"] = false,
-			["xOffset"] = 0,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["regionType"] = "icon",
+			["selfPoint"] = "CENTER",
+			["blendMode"] = "BLEND",
 			["backgroundColor"] = {
 				0.5, -- [1]
 				0.5, -- [2]
 				0.5, -- [3]
 				0.5, -- [4]
 			},
-			["blendMode"] = "BLEND",
-			["customTextUpdate"] = "update",
 			["alpha"] = 1,
 			["id"] = "Thrash Usable",
 			["yOffset"] = 0,
@@ -26699,13 +26689,13 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["icon"] = true,
+			["customTextUpdate"] = "update",
 			["frameStrata"] = 4,
 			["width"] = 32,
-			["selfPoint"] = "CENTER",
-			["stickyDuration"] = false,
+			["xOffset"] = 0,
+			["crop_y"] = 0.41,
 			["inverse"] = false,
-			["fontSize"] = 13,
+			["parent"] = "Thrash",
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -27570,15 +27560,26 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
+			["customTextUpdate"] = "update",
+			["backgroundOffset"] = 2,
+			["height"] = 32,
 			["backgroundColor"] = {
 				0.5, -- [1]
 				0.5, -- [2]
 				0.5, -- [3]
 				0.5, -- [4]
 			},
-			["backgroundOffset"] = 2,
-			["height"] = 32,
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\Spell_Fire_Elemental_Totem",
 			["icon"] = true,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["numTriggers"] = 2,
+			["mirror"] = false,
+			["fontSize"] = 13,
+			["regionType"] = "icon",
 			["load"] = {
 				["talent"] = {
 					["single"] = 17,
@@ -27622,19 +27623,8 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\Spell_Fire_Elemental_Totem",
-			["parent"] = "Primal Elementalist Timers Enhance 1.0",
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["numTriggers"] = 2,
-			["mirror"] = false,
-			["crop_y"] = 0.41,
-			["regionType"] = "icon",
-			["selfPoint"] = "CENTER",
 			["blendMode"] = "BLEND",
-			["yOffset"] = 0,
+			["selfPoint"] = "CENTER",
 			["alpha"] = 1,
 			["id"] = "Just FET Available Enhance",
 			["anchorPoint"] = "CENTER",
@@ -27664,13 +27654,13 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["customTextUpdate"] = "update",
+			["yOffset"] = 0,
 			["frameStrata"] = 1,
 			["width"] = 32,
 			["desaturateForeground"] = false,
 			["xOffset"] = 0,
 			["inverse"] = false,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["parent"] = "Primal Elementalist Timers Enhance 1.0",
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -27890,7 +27880,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["fontSize"] = 16,
+			["icon"] = true,
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -27912,6 +27902,42 @@ WeakAurasSaved = {
 					["type"] = "none",
 				},
 			},
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\Spell_Nature_EarthElemental_Totem",
+			["anchorPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " %s",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["xOffset"] = 0,
+			["inverse"] = false,
+			["mirror"] = false,
+			["desaturateForeground"] = false,
+			["regionType"] = "icon",
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["blendMode"] = "BLEND",
+			["customTextUpdate"] = "update",
+			["frameStrata"] = 1,
+			["additional_triggers"] = {
+			},
+			["yOffset"] = 0,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["id"] = "Earth Elemental Totem Resto Up",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["alpha"] = 1,
+			["width"] = 32,
 			["load"] = {
 				["talent"] = {
 					["single"] = 17,
@@ -27955,43 +27981,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\Spell_Nature_EarthElemental_Totem",
-			["anchorPoint"] = "CENTER",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " %s",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["xOffset"] = 0,
-			["inverse"] = false,
-			["mirror"] = false,
-			["desaturateForeground"] = false,
-			["regionType"] = "icon",
-			["customTextUpdate"] = "update",
-			["blendMode"] = "BLEND",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["frameStrata"] = 1,
-			["additional_triggers"] = {
-			},
-			["yOffset"] = 0,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["id"] = "Earth Elemental Totem Resto Up",
-			["icon"] = true,
-			["alpha"] = 1,
-			["width"] = 32,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["crop_y"] = 0.41,
+			["fontSize"] = 16,
 			["numTriggers"] = 1,
 			["stickyDuration"] = false,
 			["orientation"] = "VERTICAL",
@@ -29783,10 +29773,58 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["anchorPoint"] = "CENTER",
-			["backgroundOffset"] = 2,
-			["height"] = 20.0000076293945,
 			["user_y"] = 0,
+			["backgroundOffset"] = 2,
+			["height"] = 0.999999701976776,
+			["color"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.75, -- [4]
+			},
+			["crop_y"] = 0.41,
+			["customTextUpdate"] = "update",
+			["selfPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = "%c",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_action"] = "show",
+					["do_custom"] = false,
+					["glow_frame"] = "WeakAuras:Stagger Medium",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["numTriggers"] = 1,
+			["mirror"] = false,
+			["stickyDuration"] = false,
+			["regionType"] = "text",
+			["desaturateForeground"] = false,
+			["blendMode"] = "BLEND",
+			["fontSize"] = 20,
+			["alpha"] = 1,
+			["id"] = "Stagger Medium Text Only Background",
+			["justify"] = "LEFT",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["additional_triggers"] = {
+			},
+			["anchorPoint"] = "CENTER",
+			["frameStrata"] = 3,
+			["width"] = 0.999999701976776,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
 			["load"] = {
 				["talent"] = {
 					["multi"] = {
@@ -29825,57 +29863,8 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["color"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0.75, -- [4]
-			},
-			["selfPoint"] = "CENTER",
-			["fontSize"] = 20,
-			["displayStacks"] = "%c",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["crop_y"] = 0.41,
-			["numTriggers"] = 1,
-			["mirror"] = false,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["regionType"] = "text",
-			["stickyDuration"] = false,
-			["blendMode"] = "BLEND",
-			["desaturateForeground"] = false,
-			["alpha"] = 1,
-			["init_completed"] = 1,
-			["id"] = "Stagger Medium Text Only Background",
-			["justify"] = "LEFT",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["additional_triggers"] = {
-			},
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["frameStrata"] = 3,
-			["width"] = 9.99996948242188,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_action"] = "show",
-					["do_custom"] = false,
-					["glow_frame"] = "WeakAuras:Stagger Medium",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["yOffset"] = -59,
 			["inverse"] = false,
-			["customTextUpdate"] = "update",
+			["yOffset"] = -59,
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOM",
@@ -30149,7 +30138,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["progressPrecision"] = 0,
 			["font"] = "ABF",
-			["height"] = 14.0000114440918,
+			["height"] = 14.0799751281738,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -30207,7 +30196,7 @@ WeakAurasSaved = {
 			},
 			["yOffset"] = -118,
 			["frameStrata"] = 3,
-			["width"] = 16.0000343322754,
+			["width"] = 8.9600076675415,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -30639,7 +30628,6 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "aurabar",
 			["stacks"] = false,
-			["init_completed"] = 1,
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
 			["stacksFont"] = "ABF",
@@ -31162,7 +31150,7 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["xOffset"] = 0,
+			["desaturateForeground"] = false,
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -31170,9 +31158,17 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["height"] = 32,
-			["desaturateForeground"] = false,
-			["crop_y"] = 0.41,
-			["displayIcon"] = "Interface\\Icons\\Spell_Fire_FlameShock",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["load"] = {
 				["talent"] = {
 					["single"] = 13,
@@ -31214,19 +31210,20 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayIcon"] = "Interface\\Icons\\Spell_Fire_FlameShock",
+			["crop_y"] = 0.41,
+			["fontSize"] = 13,
 			["displayStacks"] = " ",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["customTextUpdate"] = "update",
+			["yOffset"] = 0,
 			["inverse"] = false,
 			["mirror"] = false,
-			["icon"] = true,
+			["selfPoint"] = "CENTER",
 			["regionType"] = "icon",
-			["fontSize"] = 13,
+			["parent"] = "Rising Sun Kick 2.0 MW",
 			["blendMode"] = "BLEND",
-			["stickyDuration"] = false,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["alpha"] = 1,
-			["init_completed"] = 1,
 			["id"] = "Rising Sun Kick Not Usable MW",
 			["anchorPoint"] = "CENTER",
 			["stacksContainment"] = "INSIDE",
@@ -31252,23 +31249,13 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["parent"] = "Rising Sun Kick 2.0 MW",
+			["xOffset"] = 0,
 			["frameStrata"] = 3,
 			["width"] = 32,
-			["selfPoint"] = "CENTER",
-			["yOffset"] = 0,
+			["stickyDuration"] = false,
+			["icon"] = true,
 			["numTriggers"] = 2,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
+			["customTextUpdate"] = "update",
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -31775,10 +31762,10 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["stickyDuration"] = false,
+			["selfPoint"] = "CENTER",
 			["backgroundOffset"] = 2,
 			["height"] = 32,
-			["desaturateForeground"] = false,
+			["stickyDuration"] = false,
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -31822,18 +31809,23 @@ WeakAurasSaved = {
 				},
 			},
 			["crop_x"] = 0.41,
-			["xOffset"] = 0,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["desaturateForeground"] = false,
+			["fontSize"] = 16,
 			["displayStacks"] = " %s",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["fontSize"] = 16,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
 			["numTriggers"] = 1,
 			["mirror"] = false,
 			["anchorPoint"] = "CENTER",
 			["regionType"] = "icon",
-			["customTextUpdate"] = "update",
+			["icon"] = true,
 			["blendMode"] = "BLEND",
-			["parent"] = "Searing Flames 1.0",
+			["customTextUpdate"] = "update",
 			["alpha"] = 1,
 			["id"] = "Searing Flames Stacks",
 			["crop_y"] = 0.41,
@@ -31843,18 +31835,13 @@ WeakAurasSaved = {
 			["compress"] = false,
 			["additional_triggers"] = {
 			},
-			["selfPoint"] = "CENTER",
+			["parent"] = "Searing Flames 1.0",
 			["frameStrata"] = 1,
 			["width"] = 32,
-			["icon"] = true,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["yOffset"] = 0,
 			["inverse"] = false,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
+			["xOffset"] = 0,
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\Spell_Fire_SearingTotem",
 			["stacksPoint"] = "BOTTOM",
@@ -31952,7 +31939,6 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "aurabar",
 			["stacks"] = false,
-			["init_completed"] = 1,
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
 			["stacksFont"] = "ABF",
@@ -33248,6 +33234,14 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
+			["stickyDuration"] = false,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["height"] = 32,
 			["actions"] = {
 				["start"] = {
 					["do_glow"] = false,
@@ -33259,14 +33253,6 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["height"] = 32,
-			["xOffset"] = -20,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -33311,22 +33297,29 @@ WeakAurasSaved = {
 				},
 			},
 			["displayIcon"] = "Interface\\Icons\\spell_warrior_wildstrike",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["fontSize"] = 14,
+			["xOffset"] = -20,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["displayStacks"] = " %s",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["untrigger"] = {
+				["spellName"] = 23881,
+			},
 			["inverse"] = false,
 			["mirror"] = false,
 			["anchorPoint"] = "CENTER",
 			["regionType"] = "icon",
-			["icon"] = true,
+			["customTextUpdate"] = "update",
 			["blendMode"] = "BLEND",
+			["icon"] = true,
+			["frameStrata"] = 1,
+			["additional_triggers"] = {
+			},
+			["crop_y"] = 0.41,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["id"] = "Wild Strike Usable from Procs",
 			["animation"] = {
 				["start"] = {
 					["duration_type"] = "seconds",
@@ -33341,19 +33334,9 @@ WeakAurasSaved = {
 					["type"] = "none",
 				},
 			},
-			["frameStrata"] = 1,
-			["additional_triggers"] = {
-			},
-			["crop_y"] = 0.41,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["id"] = "Wild Strike Usable from Procs",
-			["stickyDuration"] = false,
 			["alpha"] = 1,
 			["width"] = 32,
-			["customTextUpdate"] = "update",
+			["fontSize"] = 14,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -33361,8 +33344,11 @@ WeakAurasSaved = {
 				0.75, -- [4]
 			},
 			["numTriggers"] = 1,
-			["untrigger"] = {
-				["spellName"] = 23881,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
 			},
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
@@ -34447,10 +34433,21 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["icon"] = true,
+			["customTextUpdate"] = "update",
 			["backgroundOffset"] = 2,
 			["height"] = 32,
+			["icon"] = true,
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\Spell_Frost_FrostBolt02",
 			["anchorPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["selfPoint"] = "CENTER",
+			["numTriggers"] = 1,
+			["mirror"] = false,
+			["stickyDuration"] = false,
+			["regionType"] = "icon",
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -34493,29 +34490,8 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\Spell_Frost_FrostBolt02",
-			["parent"] = "Frostbolt Stacks 1.0",
-			["fontSize"] = 16,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["xOffset"] = -119.999938964844,
-			["numTriggers"] = 1,
-			["mirror"] = false,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["regionType"] = "icon",
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = true,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Frostbolt Full Stacks",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
 			["blendMode"] = "BLEND",
-			["yOffset"] = -90.0000305175781,
+			["fontSize"] = 16,
 			["frameStrata"] = 4,
 			["id"] = "Frostbolt Full Stacks",
 			["backgroundColor"] = {
@@ -34530,13 +34506,23 @@ WeakAurasSaved = {
 			["compress"] = false,
 			["additional_triggers"] = {
 			},
-			["customTextUpdate"] = "update",
+			["yOffset"] = -90.0000305175781,
 			["alpha"] = 1,
 			["width"] = 32,
-			["crop_y"] = 0.41,
-			["stickyDuration"] = false,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = true,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Frostbolt Full Stacks",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["xOffset"] = -119.999938964844,
 			["inverse"] = false,
-			["selfPoint"] = "CENTER",
+			["parent"] = "Frostbolt Stacks 1.0",
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOM",
@@ -34684,11 +34670,19 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
 			},
 			["textColor"] = {
 				1, -- [1]
@@ -34697,16 +34691,11 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["height"] = 32,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
 			},
 			["load"] = {
 				["talent"] = {
@@ -34750,16 +34739,26 @@ WeakAurasSaved = {
 				},
 			},
 			["displayIcon"] = "Interface\\Icons\\Spell_Fire_SealOfFire",
-			["foregroundColor"] = {
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				1, -- [4]
+				0.75, -- [4]
 			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["customTextUpdate"] = "update",
 			["inverse"] = false,
 			["mirror"] = false,
 			["untrigger"] = {
@@ -34767,9 +34766,9 @@ WeakAurasSaved = {
 				["spellName"] = 44457,
 			},
 			["regionType"] = "icon",
-			["parent"] = "Combustion 1.0",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["blendMode"] = "BLEND",
-			["stickyDuration"] = false,
+			["parent"] = "Combustion 1.0",
 			["frameStrata"] = 1,
 			["id"] = "Combustion Empty",
 			["crop_y"] = 0.41,
@@ -34779,30 +34778,17 @@ WeakAurasSaved = {
 			["compress"] = false,
 			["additional_triggers"] = {
 			},
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
+			["stickyDuration"] = false,
 			["alpha"] = 1,
 			["width"] = 32,
 			["icon"] = true,
-			["fontSize"] = 13,
+			["customTextUpdate"] = "update",
 			["numTriggers"] = 1,
-			["color"] = {
+			["foregroundColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				0.75, -- [4]
+				1, -- [4]
 			},
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
@@ -34873,7 +34859,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["desaturateForeground"] = false,
+			["selfPoint"] = "CENTER",
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -34881,7 +34867,7 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["height"] = 32,
-			["xOffset"] = 0,
+			["desaturateForeground"] = false,
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -34925,16 +34911,13 @@ WeakAurasSaved = {
 				},
 			},
 			["displayIcon"] = "Interface\\Icons\\Spell_Fire_SearingTotem",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["fontSize"] = 16,
+			["xOffset"] = 0,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["displayStacks"] = " %s",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["untrigger"] = {
+				["spellName"] = 73680,
+			},
 			["inverse"] = false,
 			["mirror"] = false,
 			["color"] = {
@@ -34944,9 +34927,9 @@ WeakAurasSaved = {
 				0.75, -- [4]
 			},
 			["regionType"] = "icon",
-			["icon"] = true,
+			["customTextUpdate"] = "update",
 			["blendMode"] = "BLEND",
-			["stickyDuration"] = false,
+			["icon"] = true,
 			["frameStrata"] = 1,
 			["additional_triggers"] = {
 			},
@@ -34956,14 +34939,17 @@ WeakAurasSaved = {
 			["auto"] = false,
 			["compress"] = false,
 			["id"] = "Searing Flames Full",
-			["selfPoint"] = "CENTER",
+			["stickyDuration"] = false,
 			["alpha"] = 1,
 			["width"] = 32,
-			["customTextUpdate"] = "update",
+			["fontSize"] = 16,
 			["anchorPoint"] = "CENTER",
 			["numTriggers"] = 1,
-			["untrigger"] = {
-				["spellName"] = 73680,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
 			},
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
@@ -36048,7 +36034,6 @@ WeakAurasSaved = {
 			["regionType"] = "texture",
 			["blendMode"] = "BLEND",
 			["yOffset"] = 0,
-			["init_completed"] = 1,
 			["actions"] = {
 				["start"] = {
 				},
@@ -36254,31 +36239,23 @@ WeakAurasSaved = {
 				},
 			},
 			["displayIcon"] = "Interface\\Icons\\ability_monk_guard",
-			["anchorPoint"] = "CENTER",
+			["crop_y"] = 0.41,
 			["fontSize"] = 13,
 			["displayStacks"] = "%c",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["yOffset"] = 0,
+			["parent"] = "Magic Guard 1.0",
 			["inverse"] = false,
 			["mirror"] = false,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
+			["stickyDuration"] = false,
 			["regionType"] = "icon",
-			["icon"] = true,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
 			["blendMode"] = "BLEND",
-			["sameTexture"] = true,
+			["icon"] = true,
 			["frameStrata"] = 1,
 			["additional_triggers"] = {
 				{
@@ -36319,18 +36296,26 @@ WeakAurasSaved = {
 			["auto"] = true,
 			["compress"] = false,
 			["id"] = "Magic Guard Usable",
-			["crop_y"] = 0.41,
+			["sameTexture"] = true,
 			["alpha"] = 1,
 			["width"] = 32,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
 			},
-			["stickyDuration"] = false,
+			["yOffset"] = 0,
 			["numTriggers"] = 3,
-			["parent"] = "Magic Guard 1.0",
+			["anchorPoint"] = "CENTER",
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -37430,7 +37415,7 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["crop_y"] = 0.41,
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -37438,12 +37423,7 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["height"] = 32,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
+			["stickyDuration"] = false,
 			["load"] = {
 				["talent"] = {
 					["single"] = 4,
@@ -37485,26 +37465,40 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["parent"] = "Thunder Focus Tea 1.0",
-			["crop_y"] = 0.41,
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
 			["foregroundColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+					["glow_action"] = "show",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["xOffset"] = 0,
 			["inverse"] = false,
 			["mirror"] = false,
-			["xOffset"] = 0,
-			["regionType"] = "icon",
 			["desaturateForeground"] = false,
+			["regionType"] = "icon",
+			["icon"] = true,
 			["blendMode"] = "BLEND",
-			["yOffset"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
 			["frameStrata"] = 1,
-			["init_completed"] = 1,
 			["id"] = "Thunder Focus Tea Unusable with Buff Up",
 			["customTextUpdate"] = "update",
 			["stacksContainment"] = "INSIDE",
@@ -37534,23 +37528,13 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["icon"] = true,
+			["parent"] = "Thunder Focus Tea 1.0",
 			["alpha"] = 1,
 			["width"] = 32,
+			["yOffset"] = 0,
 			["selfPoint"] = "CENTER",
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-					["glow_action"] = "show",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
 			["numTriggers"] = 2,
-			["stickyDuration"] = false,
+			["fontSize"] = 13,
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -39059,7 +39043,6 @@ WeakAurasSaved = {
 				0, -- [3]
 				0.75, -- [4]
 			},
-			["init_completed"] = 1,
 			["actions"] = {
 				["start"] = {
 				},
@@ -39602,7 +39585,7 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["crop_y"] = 0.41,
+			["parent"] = "Execute 1.0",
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -39655,30 +39638,17 @@ WeakAurasSaved = {
 			},
 			["crop_x"] = 0.41,
 			["icon"] = true,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["fontSize"] = 13,
 			["displayStacks"] = " ",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["yOffset"] = 0,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
 			["inverse"] = false,
 			["mirror"] = false,
-			["fontSize"] = 13,
-			["regionType"] = "icon",
-			["stickyDuration"] = false,
-			["blendMode"] = "BLEND",
-			["customTextUpdate"] = "update",
-			["frameStrata"] = 1,
-			["id"] = "Execute Unusable",
-			["anchorPoint"] = "CENTER",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["additional_triggers"] = {
-			},
-			["parent"] = "Execute 1.0",
-			["alpha"] = 1,
-			["width"] = 32,
-			["selfPoint"] = "CENTER",
 			["actions"] = {
 				["start"] = {
 					["do_glow"] = false,
@@ -39690,13 +39660,26 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
-			["numTriggers"] = 1,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
+			["regionType"] = "icon",
+			["stickyDuration"] = false,
+			["blendMode"] = "BLEND",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["frameStrata"] = 1,
+			["id"] = "Execute Unusable",
+			["anchorPoint"] = "CENTER",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["additional_triggers"] = {
 			},
+			["customTextUpdate"] = "update",
+			["alpha"] = 1,
+			["width"] = 32,
+			["selfPoint"] = "CENTER",
+			["yOffset"] = 0,
+			["numTriggers"] = 1,
+			["crop_y"] = 0.41,
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\INV_Sword_48",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -39789,20 +39772,33 @@ WeakAurasSaved = {
 			},
 			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["foregroundTexture"] = "Textures\\SpellActivationOverlays\\GenericArc_01",
-			["discrete_rotation"] = 0,
+			["crop_y"] = 0.75,
 			["mirror"] = true,
+			["stickyDuration"] = false,
+			["regionType"] = "progresstexture",
+			["discrete_rotation"] = 0,
+			["blendMode"] = "BLEND",
 			["backgroundColor"] = {
 				0.12156862745098, -- [1]
 				1, -- [2]
 				0.474509803921569, -- [3]
 				0.500001192092896, -- [4]
 			},
-			["regionType"] = "progresstexture",
-			["xOffset"] = 250,
-			["blendMode"] = "BLEND",
-			["crop_y"] = 0.75,
-			["stickyDuration"] = false,
-			["init_completed"] = 1,
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "preset",
+					["preset"] = "alphaPulse",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
 			["inverse"] = false,
 			["texture"] = "Textures\\SpellActivationOverlays\\GenericArc_01",
 			["color"] = {
@@ -39841,28 +39837,14 @@ WeakAurasSaved = {
 				["custom"] = "function()\n    return true\nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
 			},
 			["numTriggers"] = 2,
+			["xOffset"] = 250,
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.7,
 			["foregroundColor"] = {
 				0.12156862745098, -- [1]
 				1, -- [2]
 				0.474509803921569, -- [3]
 				1, -- [4]
-			},
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.7,
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["type"] = "preset",
-					["preset"] = "alphaPulse",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
 			},
 			["backgroundOffset"] = 2,
 		},
@@ -40170,15 +40152,75 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["fontSize"] = 13,
-			["backgroundOffset"] = 2,
-			["height"] = 32,
 			["backgroundColor"] = {
 				0.5, -- [1]
 				0.5, -- [2]
 				0.5, -- [3]
 				0.5, -- [4]
 			},
+			["backgroundOffset"] = 2,
+			["height"] = 32,
+			["customTextUpdate"] = "update",
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\monk_ability_summonoxstatue",
+			["anchorPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["untrigger"] = {
+				["custom"] = "function()\n    if (GetTotemInfo(1)) then\n        return true\n    end\n    return false\n    \nend\n\n\n",
+				["spellName"] = 116847,
+			},
+			["inverse"] = false,
+			["mirror"] = false,
+			["stickyDuration"] = false,
+			["regionType"] = "icon",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Rushing Jade Wind Usable BM",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["blendMode"] = "BLEND",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["frameStrata"] = 1,
+			["additional_triggers"] = {
+			},
+			["icon"] = true,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Black Ox Statue Down",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["alpha"] = 1,
+			["width"] = 32,
+			["parent"] = "Black Ox Statue 1.0",
+			["fontSize"] = 13,
+			["numTriggers"] = 1,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -40222,67 +40264,6 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\monk_ability_summonoxstatue",
-			["customTextUpdate"] = "update",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["untrigger"] = {
-				["custom"] = "function()\n    if (GetTotemInfo(1)) then\n        return true\n    end\n    return false\n    \nend\n\n\n",
-				["spellName"] = 116847,
-			},
-			["inverse"] = false,
-			["mirror"] = false,
-			["parent"] = "Black Ox Statue 1.0",
-			["regionType"] = "icon",
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Rushing Jade Wind Usable BM",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["blendMode"] = "BLEND",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["frameStrata"] = 1,
-			["init_completed"] = 1,
-			["additional_triggers"] = {
-			},
-			["icon"] = true,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Black Ox Statue Down",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["alpha"] = 1,
-			["width"] = 32,
-			["stickyDuration"] = false,
-			["anchorPoint"] = "CENTER",
-			["numTriggers"] = 1,
-			["crop_y"] = 0.41,
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -41152,7 +41133,6 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "aurabar",
 			["stacks"] = false,
-			["init_completed"] = 1,
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
 			["stacksFont"] = "ABF",
@@ -41439,6 +41419,33 @@ WeakAurasSaved = {
 			["backgroundOffset"] = 2,
 			["height"] = 32,
 			["xOffset"] = 0,
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
+			["icon"] = true,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["parent"] = "Shuffle 1.0",
+			["numTriggers"] = 1,
+			["mirror"] = false,
+			["stickyDuration"] = false,
+			["regionType"] = "icon",
+			["yOffset"] = 0,
+			["blendMode"] = "BLEND",
+			["fontSize"] = 13,
+			["alpha"] = 1,
+			["id"] = "Shuffle Not Up",
+			["customTextUpdate"] = "update",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["additional_triggers"] = {
+			},
+			["selfPoint"] = "CENTER",
+			["frameStrata"] = 1,
+			["width"] = 32,
+			["anchorPoint"] = "CENTER",
 			["load"] = {
 				["talent"] = {
 					["multi"] = {
@@ -41478,41 +41485,13 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
+			["inverse"] = false,
 			["backgroundColor"] = {
 				0.5, -- [1]
 				0.5, -- [2]
 				0.5, -- [3]
 				0.5, -- [4]
 			},
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["parent"] = "Shuffle 1.0",
-			["numTriggers"] = 1,
-			["mirror"] = false,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["regionType"] = "icon",
-			["anchorPoint"] = "CENTER",
-			["blendMode"] = "BLEND",
-			["selfPoint"] = "CENTER",
-			["alpha"] = 1,
-			["init_completed"] = 1,
-			["id"] = "Shuffle Not Up",
-			["customTextUpdate"] = "update",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["additional_triggers"] = {
-			},
-			["yOffset"] = 0,
-			["frameStrata"] = 1,
-			["width"] = 32,
-			["stickyDuration"] = false,
-			["crop_y"] = 0.41,
-			["inverse"] = false,
-			["icon"] = true,
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\ability_monk_shuffle",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -42034,7 +42013,6 @@ WeakAurasSaved = {
 			["blendMode"] = "BLEND",
 			["desaturateForeground"] = false,
 			["customTextUpdate"] = "update",
-			["init_completed"] = 1,
 			["fontSize"] = 13,
 			["additional_triggers"] = {
 				{
@@ -42651,15 +42629,6 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["yOffset"] = 0,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["height"] = 32,
-			["icon"] = true,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -42702,24 +42671,28 @@ WeakAurasSaved = {
 					},
 				},
 			},
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["height"] = 32,
+			["yOffset"] = 0,
+			["crop_y"] = 0.41,
 			["displayIcon"] = "Interface\\Icons\\spell_mage_frostbomb",
-			["parent"] = "Frost Bomb 2.0",
-			["fontSize"] = 13,
+			["icon"] = true,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["displayStacks"] = " ",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
+			["stickyDuration"] = false,
 			["inverse"] = false,
 			["mirror"] = false,
 			["xOffset"] = 0,
 			["regionType"] = "icon",
-			["selfPoint"] = "CENTER",
+			["fontSize"] = 13,
 			["blendMode"] = "BLEND",
-			["crop_y"] = 0.41,
+			["selfPoint"] = "CENTER",
 			["frameStrata"] = 4,
 			["id"] = "Frost Bomb Usable",
 			["anchorPoint"] = "CENTER",
@@ -42733,9 +42706,14 @@ WeakAurasSaved = {
 			["alpha"] = 1,
 			["width"] = 32,
 			["desaturateForeground"] = false,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
 			["numTriggers"] = 1,
-			["stickyDuration"] = false,
+			["parent"] = "Frost Bomb 2.0",
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -42787,7 +42765,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["icon"] = true,
+			["yOffset"] = 0,
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -42795,7 +42773,58 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["height"] = 32,
+			["icon"] = true,
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
 			["anchorPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["inverse"] = false,
+			["mirror"] = false,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["regionType"] = "icon",
+			["xOffset"] = 0,
+			["blendMode"] = "BLEND",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Stormlash Totem Usable",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["frameStrata"] = 1,
+			["additional_triggers"] = {
+			},
+			["fontSize"] = 13,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["id"] = "Stormlash Totem Up",
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -42839,68 +42868,17 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["stickyDuration"] = false,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["customTextUpdate"] = "update",
-			["inverse"] = false,
-			["mirror"] = false,
+			["alpha"] = 1,
+			["width"] = 32,
 			["backgroundColor"] = {
 				0.5, -- [1]
 				0.5, -- [2]
 				0.5, -- [3]
 				0.5, -- [4]
 			},
-			["regionType"] = "icon",
-			["crop_y"] = 0.41,
-			["blendMode"] = "BLEND",
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Stormlash Totem Usable",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["frameStrata"] = 1,
-			["additional_triggers"] = {
-			},
-			["fontSize"] = 13,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["id"] = "Stormlash Totem Up",
-			["yOffset"] = 0,
-			["alpha"] = 1,
-			["width"] = 32,
-			["xOffset"] = 0,
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
+			["customTextUpdate"] = "update",
 			["numTriggers"] = 1,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
+			["stickyDuration"] = false,
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\ability_shaman_tranquilmindtotem",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -43717,7 +43695,6 @@ WeakAurasSaved = {
 			["regionType"] = "aurabar",
 			["stacks"] = false,
 			["blendMode"] = "BLEND",
-			["init_completed"] = 1,
 			["texture"] = "Flat",
 			["textFont"] = "ABF",
 			["zoom"] = 0,
@@ -47060,10 +47037,50 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["parent"] = "Healing Stream Totem 1.0",
+			["desaturateForeground"] = false,
 			["backgroundOffset"] = 2,
 			["height"] = 32,
+			["parent"] = "Healing Stream Totem 1.0",
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
 			["icon"] = true,
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["numTriggers"] = 1,
+			["mirror"] = false,
+			["xOffset"] = 0,
+			["regionType"] = "icon",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = true,
+					["glow_frame"] = "WeakAuras:Stormlash Totem Usable",
+					["glow_action"] = "show",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["blendMode"] = "BLEND",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["alpha"] = 1,
+			["id"] = "Mana Tide Totem Up",
+			["customTextUpdate"] = "update",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["additional_triggers"] = {
+			},
+			["anchorPoint"] = "CENTER",
+			["frameStrata"] = 4,
+			["width"] = 32,
+			["untrigger"] = {
+				["spellName"] = 5394,
+				["totemType"] = 3,
+			},
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -47107,48 +47124,8 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["selfPoint"] = "CENTER",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["numTriggers"] = 1,
-			["mirror"] = false,
-			["fontSize"] = 13,
-			["regionType"] = "icon",
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = true,
-					["glow_frame"] = "WeakAuras:Stormlash Totem Usable",
-					["glow_action"] = "show",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["blendMode"] = "BLEND",
-			["anchorPoint"] = "CENTER",
-			["alpha"] = 1,
-			["id"] = "Mana Tide Totem Up",
-			["customTextUpdate"] = "update",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["additional_triggers"] = {
-			},
-			["desaturateForeground"] = false,
-			["frameStrata"] = 4,
-			["width"] = 32,
-			["untrigger"] = {
-				["spellName"] = 5394,
-				["totemType"] = 3,
-			},
-			["xOffset"] = 0,
 			["inverse"] = false,
-			["crop_y"] = 0.41,
+			["selfPoint"] = "CENTER",
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\Spell_Frost_SummonWaterElemental",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -47729,7 +47706,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["progressPrecision"] = 0,
 			["font"] = "ABF",
-			["height"] = 14.0000114440918,
+			["height"] = 14.0799751281738,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -47787,7 +47764,7 @@ WeakAurasSaved = {
 			},
 			["yOffset"] = -119,
 			["frameStrata"] = 2,
-			["width"] = 16.0000343322754,
+			["width"] = 8.9600076675415,
 			["xOffset"] = 0,
 			["numTriggers"] = 1,
 			["inverse"] = false,
@@ -48313,10 +48290,58 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["anchorPoint"] = "CENTER",
+			["desaturateForeground"] = false,
 			["backgroundOffset"] = 2,
 			["height"] = 32,
+			["anchorPoint"] = "CENTER",
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
 			["icon"] = true,
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["selfPoint"] = "CENTER",
+			["numTriggers"] = 2,
+			["mirror"] = false,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["regionType"] = "icon",
+			["xOffset"] = 0,
+			["blendMode"] = "BLEND",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["alpha"] = 1,
+			["id"] = "Healing Stream Totem Unusable",
+			["customTextUpdate"] = "update",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "status",
+						["unevent"] = "auto",
+						["use_inverse"] = true,
+						["event"] = "Totem",
+						["subeventPrefix"] = "SPELL",
+						["unit"] = "player",
+						["subeventSuffix"] = "_CAST_START",
+						["totemType"] = 3,
+						["use_totemType"] = true,
+						["use_unit"] = true,
+					},
+					["untrigger"] = {
+						["totemType"] = 3,
+					},
+				}, -- [1]
+			},
+			["yOffset"] = 0,
+			["frameStrata"] = 1,
+			["width"] = 32,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -48360,57 +48385,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["parent"] = "Healing Stream Totem 1.0",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
 			["stickyDuration"] = false,
-			["numTriggers"] = 2,
-			["mirror"] = false,
-			["fontSize"] = 13,
-			["regionType"] = "icon",
-			["xOffset"] = 0,
-			["blendMode"] = "BLEND",
-			["yOffset"] = 0,
-			["alpha"] = 1,
-			["id"] = "Healing Stream Totem Unusable",
-			["customTextUpdate"] = "update",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "status",
-						["unevent"] = "auto",
-						["use_inverse"] = true,
-						["event"] = "Totem",
-						["subeventPrefix"] = "SPELL",
-						["unit"] = "player",
-						["subeventSuffix"] = "_CAST_START",
-						["totemType"] = 3,
-						["use_totemType"] = true,
-						["use_unit"] = true,
-					},
-					["untrigger"] = {
-						["totemType"] = 3,
-					},
-				}, -- [1]
-			},
-			["desaturateForeground"] = false,
-			["frameStrata"] = 1,
-			["width"] = 32,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["crop_y"] = 0.41,
 			["inverse"] = false,
-			["selfPoint"] = "CENTER",
+			["parent"] = "Healing Stream Totem 1.0",
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\INV_Spear_04",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -49000,24 +48977,10 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["xOffset"] = 0,
 			["backgroundOffset"] = 2,
 			["height"] = 32,
 			["yOffset"] = 0,
-			["crop_y"] = 0.41,
-			["crop_x"] = 0.41,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["fontSize"] = 14,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["numTriggers"] = 2,
-			["mirror"] = false,
 			["load"] = {
 				["talent"] = {
 					["single"] = 21,
@@ -49062,10 +49025,24 @@ WeakAurasSaved = {
 					},
 				},
 			},
+			["crop_x"] = 0.41,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["fontSize"] = 14,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["numTriggers"] = 2,
+			["mirror"] = false,
+			["customTextUpdate"] = "update",
 			["regionType"] = "icon",
-			["anchorPoint"] = "CENTER",
+			["crop_y"] = 0.41,
 			["blendMode"] = "BLEND",
-			["desaturateForeground"] = false,
+			["anchorPoint"] = "CENTER",
 			["alpha"] = 1,
 			["additional_triggers"] = {
 				{
@@ -49092,11 +49069,11 @@ WeakAurasSaved = {
 			["auto"] = true,
 			["compress"] = false,
 			["id"] = "Shield Charge Unusable",
-			["xOffset"] = 0,
+			["desaturateForeground"] = false,
 			["frameStrata"] = 1,
 			["width"] = 32,
 			["parent"] = "Shield Charge 2.0",
-			["customTextUpdate"] = "update",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["inverse"] = false,
 			["selfPoint"] = "CENTER",
 			["orientation"] = "VERTICAL",
@@ -49977,6 +49954,14 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
+			["selfPoint"] = "CENTER",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["height"] = 32,
 			["actions"] = {
 				["start"] = {
 					["do_glow"] = false,
@@ -49988,14 +49973,6 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["height"] = 32,
-			["stickyDuration"] = false,
 			["load"] = {
 				["talent"] = {
 					["single"] = 14,
@@ -50038,18 +50015,18 @@ WeakAurasSaved = {
 				},
 			},
 			["displayIcon"] = "Interface\\Icons\\Ability_Mage_LivingBomb",
-			["desaturateForeground"] = false,
-			["fontSize"] = 13,
+			["stickyDuration"] = false,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["displayStacks"] = " ",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["xOffset"] = 0,
 			["inverse"] = false,
 			["mirror"] = false,
 			["yOffset"] = 0,
 			["regionType"] = "icon",
-			["icon"] = true,
+			["customTextUpdate"] = "update",
 			["blendMode"] = "BLEND",
-			["parent"] = "Living Bomb 1.0",
+			["icon"] = true,
 			["frameStrata"] = 3,
 			["id"] = "Living Bomb Unusable",
 			["crop_y"] = 0.41,
@@ -50059,13 +50036,13 @@ WeakAurasSaved = {
 			["compress"] = false,
 			["additional_triggers"] = {
 			},
-			["selfPoint"] = "CENTER",
+			["parent"] = "Living Bomb 1.0",
 			["alpha"] = 1,
 			["width"] = 32,
-			["customTextUpdate"] = "update",
+			["fontSize"] = 13,
 			["anchorPoint"] = "CENTER",
 			["numTriggers"] = 1,
-			["xOffset"] = 0,
+			["desaturateForeground"] = false,
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -50658,7 +50635,6 @@ WeakAurasSaved = {
 			["regionType"] = "aurabar",
 			["stacks"] = false,
 			["blendMode"] = "BLEND",
-			["init_completed"] = 1,
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
 			["zoom"] = 0,
@@ -51148,7 +51124,7 @@ WeakAurasSaved = {
 			},
 			["stickyDuration"] = false,
 			["font"] = "ABF",
-			["height"] = 14.0000114440918,
+			["height"] = 14.0799751281738,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -51210,7 +51186,7 @@ WeakAurasSaved = {
 				0.491101145744324, -- [4]
 			},
 			["frameStrata"] = 3,
-			["width"] = 15.0000228881836,
+			["width"] = 8.9600944519043,
 			["inverse"] = false,
 			["untrigger"] = {
 			},
@@ -52268,7 +52244,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["desaturateForeground"] = false,
+			["selfPoint"] = "CENTER",
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -52276,7 +52252,60 @@ WeakAurasSaved = {
 				0.75, -- [4]
 			},
 			["height"] = 32,
+			["desaturateForeground"] = false,
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\spell_warrior_wildstrike",
 			["yOffset"] = 0,
+			["fontSize"] = 14,
+			["displayStacks"] = " %s",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["xOffset"] = 0,
+			["inverse"] = false,
+			["mirror"] = false,
+			["icon"] = true,
+			["regionType"] = "icon",
+			["stickyDuration"] = false,
+			["blendMode"] = "BLEND",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["frameStrata"] = 1,
+			["id"] = "Raging Blow Usable 2 Stacks",
+			["anchorPoint"] = "CENTER",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "status",
+						["unevent"] = "auto",
+						["power_operator"] = ">=",
+						["use_power"] = true,
+						["event"] = "Power",
+						["subeventPrefix"] = "SPELL",
+						["power"] = "10",
+						["unit"] = "player",
+						["use_unit"] = true,
+						["subeventSuffix"] = "_CAST_START",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+			},
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["alpha"] = 1,
+			["width"] = 32,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -52320,61 +52349,8 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\spell_warrior_wildstrike",
-			["sameTexture"] = true,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " %s",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["fontSize"] = 14,
-			["inverse"] = false,
-			["mirror"] = false,
-			["icon"] = true,
-			["regionType"] = "icon",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["blendMode"] = "BLEND",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["frameStrata"] = 1,
-			["id"] = "Raging Blow Usable 2 Stacks",
-			["anchorPoint"] = "CENTER",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "status",
-						["unevent"] = "auto",
-						["power_operator"] = ">=",
-						["use_power"] = true,
-						["event"] = "Power",
-						["subeventPrefix"] = "SPELL",
-						["power"] = "10",
-						["unit"] = "player",
-						["use_unit"] = true,
-						["subeventSuffix"] = "_CAST_START",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-			},
-			["selfPoint"] = "CENTER",
-			["alpha"] = 1,
-			["width"] = 32,
-			["stickyDuration"] = false,
-			["xOffset"] = 0,
 			["numTriggers"] = 2,
-			["crop_y"] = 0.41,
+			["sameTexture"] = true,
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -52424,7 +52400,20 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -52492,11 +52481,16 @@ WeakAurasSaved = {
 			},
 			["inverse"] = false,
 			["mirror"] = false,
-			["icon"] = true,
+			["stickyDuration"] = false,
 			["regionType"] = "icon",
-			["customTextUpdate"] = "update",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
 			["blendMode"] = "BLEND",
-			["xOffset"] = 0,
+			["customTextUpdate"] = "update",
 			["frameStrata"] = 1,
 			["id"] = "Healing Stream Totem Up",
 			["crop_y"] = 0.41,
@@ -52506,29 +52500,11 @@ WeakAurasSaved = {
 			["compress"] = false,
 			["additional_triggers"] = {
 			},
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
+			["xOffset"] = 0,
 			["alpha"] = 1,
 			["width"] = 32,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["stickyDuration"] = false,
+			["icon"] = true,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["numTriggers"] = 1,
 			["backgroundColor"] = {
 				0.5, -- [1]
@@ -52611,7 +52587,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["desaturateForeground"] = false,
+			["selfPoint"] = "CENTER",
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -52619,7 +52595,60 @@ WeakAurasSaved = {
 				0.75, -- [4]
 			},
 			["height"] = 32,
+			["desaturateForeground"] = false,
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\spell_warrior_wildstrike",
 			["yOffset"] = 0,
+			["fontSize"] = 14,
+			["displayStacks"] = " %s",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["xOffset"] = 0,
+			["inverse"] = false,
+			["mirror"] = false,
+			["icon"] = true,
+			["regionType"] = "icon",
+			["stickyDuration"] = false,
+			["blendMode"] = "BLEND",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["frameStrata"] = 1,
+			["id"] = "Raging Blow Usable 1 Stack",
+			["anchorPoint"] = "CENTER",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "status",
+						["unevent"] = "auto",
+						["power_operator"] = ">=",
+						["use_power"] = true,
+						["event"] = "Power",
+						["subeventPrefix"] = "SPELL",
+						["power"] = "10",
+						["unit"] = "player",
+						["use_unit"] = true,
+						["subeventSuffix"] = "_CAST_START",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+			},
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["alpha"] = 1,
+			["width"] = 32,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -52663,61 +52692,8 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\spell_warrior_wildstrike",
-			["sameTexture"] = true,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " %s",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["fontSize"] = 14,
-			["inverse"] = false,
-			["mirror"] = false,
-			["icon"] = true,
-			["regionType"] = "icon",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["blendMode"] = "BLEND",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["frameStrata"] = 1,
-			["id"] = "Raging Blow Usable 1 Stack",
-			["anchorPoint"] = "CENTER",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "status",
-						["unevent"] = "auto",
-						["power_operator"] = ">=",
-						["use_power"] = true,
-						["event"] = "Power",
-						["subeventPrefix"] = "SPELL",
-						["power"] = "10",
-						["unit"] = "player",
-						["use_unit"] = true,
-						["subeventSuffix"] = "_CAST_START",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-			},
-			["selfPoint"] = "CENTER",
-			["alpha"] = 1,
-			["width"] = 32,
-			["stickyDuration"] = false,
-			["xOffset"] = 0,
 			["numTriggers"] = 2,
-			["crop_y"] = 0.41,
+			["sameTexture"] = true,
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -54077,18 +54053,18 @@ WeakAurasSaved = {
 				["use_remaining"] = false,
 				["debuffType"] = "HELPFUL",
 				["subeventSuffix"] = "_CAST_START",
-				["names"] = {
-				},
+				["unit"] = "player",
 				["remaining_operator"] = "<=",
 				["event"] = "Cooldown Progress (Spell)",
-				["use_unit"] = true,
+				["subeventPrefix"] = "SPELL",
 				["type"] = "status",
 				["remaining"] = "12",
 				["use_spellName"] = true,
 				["unevent"] = "auto",
 				["showOn"] = "showOnReady",
-				["subeventPrefix"] = "SPELL",
-				["unit"] = "player",
+				["use_unit"] = true,
+				["names"] = {
+				},
 				["spellName"] = 81700,
 			},
 			["desaturate"] = true,
@@ -54666,52 +54642,10 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["anchorPoint"] = "CENTER",
+			["icon"] = true,
 			["backgroundOffset"] = 2,
 			["height"] = 32,
-			["selfPoint"] = "CENTER",
-			["crop_y"] = 0.41,
-			["displayIcon"] = "Interface\\Icons\\Spell_Nature_EarthElemental_Totem",
-			["parent"] = "Primal Elementalist Timers Enhance 1.0",
-			["fontSize"] = 16,
-			["displayStacks"] = " %s",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["numTriggers"] = 1,
-			["mirror"] = false,
-			["xOffset"] = 0,
-			["regionType"] = "icon",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["blendMode"] = "BLEND",
-			["customTextUpdate"] = "update",
-			["alpha"] = 1,
-			["additional_triggers"] = {
-			},
-			["yOffset"] = 0,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["id"] = "Earth Elemental Totem Enhance Up",
-			["icon"] = true,
-			["frameStrata"] = 1,
-			["width"] = 32,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_frame"] = "WeakAuras:Searing Flames Full",
-					["glow_action"] = "show",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
+			["anchorPoint"] = "CENTER",
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -54756,8 +54690,50 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["inverse"] = false,
+			["displayIcon"] = "Interface\\Icons\\Spell_Nature_EarthElemental_Totem",
+			["selfPoint"] = "CENTER",
 			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " %s",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["numTriggers"] = 1,
+			["mirror"] = false,
+			["fontSize"] = 16,
+			["regionType"] = "icon",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Searing Flames Full",
+					["glow_action"] = "show",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["blendMode"] = "BLEND",
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["alpha"] = 1,
+			["additional_triggers"] = {
+			},
+			["yOffset"] = 0,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["id"] = "Earth Elemental Totem Enhance Up",
+			["customTextUpdate"] = "update",
+			["frameStrata"] = 1,
+			["width"] = 32,
+			["crop_y"] = 0.41,
+			["xOffset"] = 0,
+			["inverse"] = false,
+			["parent"] = "Primal Elementalist Timers Enhance 1.0",
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOM",
@@ -55029,23 +55005,23 @@ WeakAurasSaved = {
 				},
 			},
 			["displayIcon"] = "Interface\\Icons\\Spell_Fire_Elemental_Totem",
-			["customTextUpdate"] = "update",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["crop_y"] = 0.41,
+			["fontSize"] = 13,
 			["displayStacks"] = " ",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["fontSize"] = 13,
+			["stickyDuration"] = false,
 			["inverse"] = false,
 			["mirror"] = false,
 			["xOffset"] = 0,
 			["regionType"] = "icon",
-			["selfPoint"] = "CENTER",
-			["blendMode"] = "BLEND",
-			["color"] = {
+			["foregroundColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				0.75, -- [4]
+				1, -- [4]
 			},
+			["blendMode"] = "BLEND",
+			["selfPoint"] = "CENTER",
 			["frameStrata"] = 1,
 			["additional_triggers"] = {
 				{
@@ -55075,15 +55051,15 @@ WeakAurasSaved = {
 			["auto"] = false,
 			["compress"] = false,
 			["id"] = "No Fire Totem Up with FET Available",
-			["crop_y"] = 0.41,
-			["alpha"] = 1,
-			["width"] = 32,
-			["foregroundColor"] = {
+			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				1, -- [4]
+				0.75, -- [4]
 			},
+			["alpha"] = 1,
+			["width"] = 32,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["actions"] = {
 				["start"] = {
 					["do_glow"] = false,
@@ -55096,7 +55072,7 @@ WeakAurasSaved = {
 				},
 			},
 			["numTriggers"] = 2,
-			["stickyDuration"] = false,
+			["customTextUpdate"] = "update",
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -55681,7 +55657,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["progressPrecision"] = 0,
 			["font"] = "ABF",
-			["height"] = 14.0000114440918,
+			["height"] = 14.0799751281738,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -55739,7 +55715,7 @@ WeakAurasSaved = {
 			},
 			["justify"] = "LEFT",
 			["frameStrata"] = 2,
-			["width"] = 26.9999446868897,
+			["width"] = 19.8400363922119,
 			["actions"] = {
 				["start"] = {
 				},
@@ -57287,7 +57263,6 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "aurabar",
 			["stacks"] = true,
-			["init_completed"] = 1,
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
 			["stacksFont"] = "ABF",
@@ -57489,7 +57464,6 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "aurabar",
 			["stacks"] = false,
-			["init_completed"] = 1,
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
 			["stacksFont"] = "ABF",
@@ -58213,55 +58187,15 @@ WeakAurasSaved = {
 			["stickyDuration"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["color"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0.75, -- [4]
-			},
+			["user_y"] = 0,
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["height"] = 20.0000076293945,
-			["user_y"] = 0,
-			["crop_y"] = 0.41,
+			["height"] = 0.999999701976776,
 			["anchorPoint"] = "CENTER",
-			["desaturateForeground"] = false,
-			["fontSize"] = 20,
-			["displayStacks"] = "%c",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["desaturate"] = false,
-			["inverse"] = false,
-			["mirror"] = false,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_frame"] = "WeakAuras:Stagger Medium",
-					["do_custom"] = false,
-					["glow_action"] = "show",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["regionType"] = "text",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["blendMode"] = "BLEND",
-			["icon"] = true,
-			["frameStrata"] = 3,
-			["init_completed"] = 1,
-			["additional_triggers"] = {
-			},
-			["auto"] = true,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["justify"] = "LEFT",
-			["compress"] = false,
-			["id"] = "Stagger Light Text Only Background",
 			["load"] = {
 				["talent"] = {
 					["multi"] = {
@@ -58300,11 +58234,52 @@ WeakAurasSaved = {
 					},
 				},
 			},
+			["customTextUpdate"] = "update",
+			["desaturateForeground"] = false,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = "%c",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["desaturate"] = false,
+			["inverse"] = false,
+			["mirror"] = false,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Stagger Medium",
+					["do_custom"] = false,
+					["glow_action"] = "show",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["regionType"] = "text",
+			["crop_y"] = 0.41,
+			["blendMode"] = "BLEND",
+			["color"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.75, -- [4]
+			},
+			["frameStrata"] = 3,
+			["additional_triggers"] = {
+			},
+			["auto"] = true,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["justify"] = "LEFT",
+			["compress"] = false,
+			["id"] = "Stagger Light Text Only Background",
+			["fontSize"] = 20,
 			["alpha"] = 1,
-			["width"] = 29.999979019165,
+			["width"] = 0.999999701976776,
+			["icon"] = true,
 			["untrigger"] = {
 				["spellName"] = 121253,
 			},
+			["numTriggers"] = 1,
 			["animation"] = {
 				["start"] = {
 					["duration_type"] = "seconds",
@@ -58319,8 +58294,6 @@ WeakAurasSaved = {
 					["type"] = "none",
 				},
 			},
-			["numTriggers"] = 1,
-			["customTextUpdate"] = "update",
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOM",
@@ -59817,7 +59790,6 @@ WeakAurasSaved = {
 			["regionType"] = "aurabar",
 			["stacks"] = false,
 			["blendMode"] = "BLEND",
-			["init_completed"] = 1,
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
 			["zoom"] = 0,
@@ -60067,10 +60039,10 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["icon"] = true,
 			["backgroundOffset"] = 2,
 			["height"] = 32,
-			["icon"] = true,
+			["customTextUpdate"] = "update",
 			["load"] = {
 				["talent"] = {
 					["single"] = 9,
@@ -60115,18 +60087,18 @@ WeakAurasSaved = {
 				},
 			},
 			["crop_x"] = 0.41,
-			["customTextUpdate"] = "update",
-			["fontSize"] = 14,
+			["xOffset"] = 0,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["displayStacks"] = " ",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["xOffset"] = 0,
+			["selfPoint"] = "CENTER",
 			["numTriggers"] = 1,
 			["mirror"] = false,
-			["anchorPoint"] = "CENTER",
+			["desaturateForeground"] = false,
 			["regionType"] = "icon",
-			["yOffset"] = 0,
-			["blendMode"] = "BLEND",
 			["stickyDuration"] = false,
+			["blendMode"] = "BLEND",
+			["yOffset"] = 0,
 			["alpha"] = 1,
 			["id"] = "Chi Brew Unusable",
 			["crop_y"] = 0.41,
@@ -60150,9 +60122,9 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
-			["desaturateForeground"] = false,
+			["anchorPoint"] = "CENTER",
 			["inverse"] = false,
-			["selfPoint"] = "CENTER",
+			["fontSize"] = 14,
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\ability_monk_chibrew",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -60353,7 +60325,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["progressPrecision"] = 0,
 			["font"] = "ABF",
-			["height"] = 14.0000114440918,
+			["height"] = 14.0799751281738,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -60417,7 +60389,7 @@ WeakAurasSaved = {
 				},
 			},
 			["frameStrata"] = 3,
-			["width"] = 26.9999446868897,
+			["width"] = 19.8400363922119,
 			["stickyDuration"] = false,
 			["inverse"] = false,
 			["numTriggers"] = 1,
@@ -61107,7 +61079,6 @@ WeakAurasSaved = {
 			["regionType"] = "aurabar",
 			["stacks"] = false,
 			["blendMode"] = "BLEND",
-			["init_completed"] = 1,
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
 			["stacksFont"] = "ABF",
@@ -61531,7 +61502,7 @@ WeakAurasSaved = {
 			},
 			["stickyDuration"] = false,
 			["font"] = "ABF",
-			["height"] = 14.0000114440918,
+			["height"] = 14.0799751281738,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -61588,7 +61559,7 @@ WeakAurasSaved = {
 			},
 			["id"] = "TEB Stack Count Below",
 			["frameStrata"] = 4,
-			["width"] = 15.0000228881836,
+			["width"] = 8.9600944519043,
 			["numTriggers"] = 1,
 			["untrigger"] = {
 			},
@@ -62315,7 +62286,7 @@ WeakAurasSaved = {
 			["stickyDuration"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["crop_y"] = 0.41,
+			["desaturate"] = false,
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -62381,10 +62352,15 @@ WeakAurasSaved = {
 			},
 			["crop_x"] = 0.41,
 			["customTextUpdate"] = "update",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["fontSize"] = 13,
 			["displayStacks"] = " ",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["anchorPoint"] = "CENTER",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
 			["inverse"] = false,
 			["mirror"] = false,
 			["actions"] = {
@@ -62399,9 +62375,9 @@ WeakAurasSaved = {
 				},
 			},
 			["regionType"] = "icon",
-			["desaturateForeground"] = false,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["blendMode"] = "BLEND",
-			["parent"] = "Execute 1.0",
+			["desaturateForeground"] = false,
 			["frameStrata"] = 1,
 			["additional_triggers"] = {
 			},
@@ -62411,20 +62387,15 @@ WeakAurasSaved = {
 			["auto"] = false,
 			["compress"] = false,
 			["id"] = "Execute Usable",
-			["desaturate"] = false,
+			["parent"] = "Execute 1.0",
 			["alpha"] = 1,
 			["width"] = 31.9999332427979,
 			["untrigger"] = {
 				["spellName"] = 5308,
 			},
-			["fontSize"] = 13,
+			["anchorPoint"] = "CENTER",
 			["numTriggers"] = 1,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
+			["crop_y"] = 0.41,
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\INV_Sword_48",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -62610,7 +62581,7 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["fontSize"] = 13,
+			["customTextUpdate"] = "update",
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -62619,32 +62590,6 @@ WeakAurasSaved = {
 			},
 			["height"] = 32,
 			["icon"] = true,
-			["crop_y"] = 0.41,
-			["crop_x"] = 0.41,
-			["anchorPoint"] = "CENTER",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["inverse"] = false,
-			["mirror"] = false,
-			["xOffset"] = 0,
-			["regionType"] = "icon",
-			["desaturateForeground"] = false,
-			["blendMode"] = "BLEND",
-			["selfPoint"] = "CENTER",
-			["frameStrata"] = 3,
-			["id"] = "Faerie Swarm Empty",
-			["yOffset"] = 0,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["additional_triggers"] = {
-			},
-			["customTextUpdate"] = "update",
-			["alpha"] = 1,
-			["width"] = 32,
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -62687,6 +62632,14 @@ WeakAurasSaved = {
 					},
 				},
 			},
+			["crop_x"] = 0.41,
+			["anchorPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["inverse"] = false,
+			["mirror"] = false,
 			["actions"] = {
 				["start"] = {
 					["do_glow"] = false,
@@ -62698,6 +62651,24 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
+			["regionType"] = "icon",
+			["desaturateForeground"] = false,
+			["blendMode"] = "BLEND",
+			["crop_y"] = 0.41,
+			["frameStrata"] = 3,
+			["id"] = "Faerie Swarm Empty",
+			["yOffset"] = 0,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["additional_triggers"] = {
+			},
+			["selfPoint"] = "CENTER",
+			["alpha"] = 1,
+			["width"] = 32,
+			["xOffset"] = 0,
+			["fontSize"] = 13,
 			["numTriggers"] = 1,
 			["parent"] = "Faerie Swarm",
 			["orientation"] = "VERTICAL",
@@ -64168,7 +64139,7 @@ WeakAurasSaved = {
 			["stickyDuration"] = false,
 			["progressPrecision"] = 0,
 			["font"] = "ABF",
-			["height"] = 14.0000114440918,
+			["height"] = 14.0799970626831,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -64217,7 +64188,6 @@ WeakAurasSaved = {
 			["fontSize"] = 14,
 			["displayStacks"] = "%p",
 			["regionType"] = "text",
-			["init_completed"] = 1,
 			["parent"] = "Renewing Mist 1.0",
 			["untrigger"] = {
 			},
@@ -64259,7 +64229,7 @@ WeakAurasSaved = {
 			},
 			["desaturate"] = false,
 			["frameStrata"] = 2,
-			["width"] = 16.0000343322754,
+			["width"] = 8.9600076675415,
 			["auto"] = true,
 			["inverse"] = false,
 			["numTriggers"] = 2,
@@ -64438,7 +64408,20 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -64463,16 +64446,16 @@ WeakAurasSaved = {
 			},
 			["inverse"] = false,
 			["mirror"] = false,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
+			["icon"] = true,
 			["regionType"] = "icon",
-			["customTextUpdate"] = "update",
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
 			["blendMode"] = "BLEND",
-			["stickyDuration"] = false,
+			["customTextUpdate"] = "update",
 			["frameStrata"] = 1,
 			["additional_triggers"] = {
 			},
@@ -64524,29 +64507,16 @@ WeakAurasSaved = {
 			["auto"] = true,
 			["compress"] = false,
 			["id"] = "Heroic Strike Unusable",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
+			["stickyDuration"] = false,
 			["alpha"] = 1,
 			["width"] = 32,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
 			},
-			["icon"] = true,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["numTriggers"] = 1,
 			["desaturateForeground"] = false,
 			["orientation"] = "VERTICAL",
@@ -65680,6 +65650,8 @@ WeakAurasSaved = {
 				},
 				["class"] = {
 					["single"] = "PRIEST",
+					["multi"] = {
+					},
 				},
 				["size"] = {
 					["multi"] = {
@@ -66083,15 +66055,60 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
+			["customTextUpdate"] = "update",
+			["backgroundOffset"] = 2,
+			["height"] = 0.999999701976776,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_action"] = "show",
+					["do_custom"] = false,
+					["glow_frame"] = "WeakAuras:Stagger Medium",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["crop_y"] = 0.41,
+			["anchorPoint"] = "CENTER",
+			["untrigger"] = {
+				["spellName"] = 121253,
+			},
+			["fontSize"] = 20,
+			["displayStacks"] = "%c",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["numTriggers"] = 1,
+			["mirror"] = false,
+			["selfPoint"] = "CENTER",
+			["regionType"] = "text",
+			["stickyDuration"] = false,
+			["blendMode"] = "BLEND",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["alpha"] = 1,
+			["id"] = "Stagger Light Text Only",
+			["justify"] = "LEFT",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["additional_triggers"] = {
+			},
 			["color"] = {
 				0, -- [1]
 				1, -- [2]
 				0.588235294117647, -- [3]
 				0.800000011920929, -- [4]
 			},
-			["backgroundOffset"] = 2,
-			["height"] = 20.0000076293945,
-			["customTextUpdate"] = "update",
+			["frameStrata"] = 4,
+			["width"] = 0.999999701976776,
+			["icon"] = true,
 			["load"] = {
 				["talent"] = {
 					["multi"] = {
@@ -66130,54 +66147,8 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_action"] = "show",
-					["do_custom"] = false,
-					["glow_frame"] = "WeakAuras:Stagger Medium",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["untrigger"] = {
-				["spellName"] = 121253,
-			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = "%c",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["crop_y"] = 0.41,
-			["numTriggers"] = 1,
-			["mirror"] = false,
-			["fontSize"] = 20,
-			["regionType"] = "text",
-			["selfPoint"] = "CENTER",
-			["blendMode"] = "BLEND",
-			["stickyDuration"] = false,
-			["alpha"] = 1,
-			["init_completed"] = 1,
-			["id"] = "Stagger Light Text Only",
-			["justify"] = "LEFT",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["additional_triggers"] = {
-			},
-			["icon"] = true,
-			["frameStrata"] = 4,
-			["width"] = 29.999979019165,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["outline"] = false,
 			["inverse"] = false,
-			["anchorPoint"] = "CENTER",
+			["outline"] = false,
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOM",
@@ -66263,7 +66234,6 @@ WeakAurasSaved = {
 			["regionType"] = "aurabar",
 			["stacks"] = false,
 			["blendMode"] = "BLEND",
-			["init_completed"] = 1,
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
 			["zoom"] = 0,
@@ -67388,7 +67358,6 @@ WeakAurasSaved = {
 			["yOffset"] = -59,
 			["regionType"] = "text",
 			["customTextUpdate"] = "update",
-			["init_completed"] = 1,
 			["actions"] = {
 				["start"] = {
 				},
@@ -67438,12 +67407,12 @@ WeakAurasSaved = {
 				},
 			},
 			["frameStrata"] = 2,
-			["width"] = 1.00001049041748,
+			["width"] = 0.999999701976776,
 			["id"] = "Target of Enemy Background Monk",
 			["font"] = "ABF",
 			["numTriggers"] = 1,
 			["xOffset"] = -104,
-			["height"] = 1.00001049041748,
+			["height"] = 0.999999701976776,
 			["color"] = {
 				0, -- [1]
 				0, -- [2]
@@ -67777,7 +67746,6 @@ WeakAurasSaved = {
 			["blendMode"] = "BLEND",
 			["fontSize"] = 13,
 			["icon"] = true,
-			["init_completed"] = 1,
 			["load"] = {
 				["talent"] = {
 					["single"] = 4,
@@ -68816,14 +68784,9 @@ WeakAurasSaved = {
 			["yOffset"] = 0,
 			["regionType"] = "texture",
 			["blendMode"] = "BLEND",
-			["color"] = {
-				1, -- [1]
-				0, -- [2]
-				0, -- [3]
-				1, -- [4]
-			},
 			["parent"] = "Tiger Power MW",
-			["init_completed"] = 1,
+			["untrigger"] = {
+			},
 			["actions"] = {
 				["start"] = {
 				},
@@ -68938,7 +68901,11 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["untrigger"] = {
+			["color"] = {
+				1, -- [1]
+				0, -- [2]
+				0, -- [3]
+				1, -- [4]
 			},
 		},
 		["Brain Freeze Timer"] = {
@@ -69222,6 +69189,17 @@ WeakAurasSaved = {
 			},
 			["height"] = 32,
 			["yOffset"] = 0,
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\ability_monk_guard",
+			["xOffset"] = 0,
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["customTextUpdate"] = "update",
+			["inverse"] = false,
+			["mirror"] = false,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["regionType"] = "icon",
 			["load"] = {
 				["talent"] = {
 					["single"] = 9,
@@ -69265,21 +69243,19 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\ability_monk_guard",
-			["stickyDuration"] = false,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["customTextUpdate"] = "update",
-			["inverse"] = false,
-			["mirror"] = false,
-			["crop_y"] = 0.41,
-			["regionType"] = "icon",
-			["selfPoint"] = "CENTER",
 			["blendMode"] = "BLEND",
-			["parent"] = "Charged Guard 3.0",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = true,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Charged Guard Usable with Enough Chi",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["frameStrata"] = 1,
-			["init_completed"] = 1,
 			["id"] = "Charged Guard Usable with Enough Chi",
 			["icon"] = true,
 			["stacksContainment"] = "INSIDE",
@@ -69304,23 +69280,13 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = true,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Charged Guard Usable with Enough Chi",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
+			["parent"] = "Charged Guard 3.0",
 			["alpha"] = 1,
 			["width"] = 32,
+			["selfPoint"] = "CENTER",
 			["anchorPoint"] = "CENTER",
-			["fontSize"] = 13,
 			["numTriggers"] = 2,
-			["xOffset"] = 0,
+			["stickyDuration"] = false,
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -70011,7 +69977,6 @@ WeakAurasSaved = {
 			["blendMode"] = "BLEND",
 			["fontSize"] = 13,
 			["customTextUpdate"] = "update",
-			["init_completed"] = 1,
 			["icon"] = true,
 			["additional_triggers"] = {
 				{
@@ -71240,15 +71205,60 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["customTextUpdate"] = "update",
-			["backgroundOffset"] = 2,
-			["height"] = 20.0000076293945,
 			["backgroundColor"] = {
 				0.5, -- [1]
 				0.5, -- [2]
 				0.5, -- [3]
 				0.5, -- [4]
 			},
+			["backgroundOffset"] = 2,
+			["height"] = 0.999999701976776,
+			["yOffset"] = -59,
+			["crop_y"] = 0.41,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_action"] = "show",
+					["do_custom"] = false,
+					["glow_frame"] = "WeakAuras:Stagger Medium",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["desaturateForeground"] = false,
+			["fontSize"] = 20,
+			["displayStacks"] = "%c",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["selfPoint"] = "CENTER",
+			["numTriggers"] = 1,
+			["mirror"] = false,
+			["user_y"] = 0,
+			["regionType"] = "text",
+			["anchorPoint"] = "CENTER",
+			["blendMode"] = "BLEND",
+			["customTextUpdate"] = "update",
+			["alpha"] = 1,
+			["id"] = "Stagger Heavy Text Only Background",
+			["justify"] = "LEFT",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["additional_triggers"] = {
+			},
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["frameStrata"] = 3,
+			["width"] = 0.999999701976776,
+			["stickyDuration"] = false,
+			["color"] = {
+				0, -- [1]
+				0, -- [2]
+				0, -- [3]
+				0.75, -- [4]
+			},
+			["inverse"] = false,
 			["load"] = {
 				["talent"] = {
 					["multi"] = {
@@ -71285,52 +71295,6 @@ WeakAurasSaved = {
 				["size"] = {
 					["multi"] = {
 					},
-				},
-			},
-			["yOffset"] = -59,
-			["crop_y"] = 0.41,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = "%c",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["selfPoint"] = "CENTER",
-			["numTriggers"] = 1,
-			["mirror"] = false,
-			["user_y"] = 0,
-			["regionType"] = "text",
-			["fontSize"] = 20,
-			["blendMode"] = "BLEND",
-			["anchorPoint"] = "CENTER",
-			["alpha"] = 1,
-			["init_completed"] = 1,
-			["id"] = "Stagger Heavy Text Only Background",
-			["justify"] = "LEFT",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["additional_triggers"] = {
-			},
-			["stickyDuration"] = false,
-			["frameStrata"] = 3,
-			["width"] = 9.99996948242188,
-			["color"] = {
-				0, -- [1]
-				0, -- [2]
-				0, -- [3]
-				0.75, -- [4]
-			},
-			["desaturateForeground"] = false,
-			["inverse"] = false,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_action"] = "show",
-					["do_custom"] = false,
-					["glow_frame"] = "WeakAuras:Stagger Medium",
-				},
-				["init"] = {
-				},
-				["finish"] = {
 				},
 			},
 			["orientation"] = "VERTICAL",
@@ -72689,15 +72653,14 @@ WeakAurasSaved = {
 			},
 			["fontSize"] = 12,
 			["foregroundTexture"] = "Textures\\SpellActivationOverlays\\Monk_TigerPalm",
-			["stickyDuration"] = false,
-			["mirror"] = true,
-			["xOffset"] = 250,
-			["regionType"] = "progresstexture",
-			["anchorPoint"] = "CENTER",
-			["blendMode"] = "BLEND",
 			["crop_y"] = 0.85,
+			["mirror"] = true,
 			["selfPoint"] = "CENTER",
-			["init_completed"] = 1,
+			["regionType"] = "progresstexture",
+			["stickyDuration"] = false,
+			["blendMode"] = "BLEND",
+			["xOffset"] = 250,
+			["rotation"] = 0,
 			["numTriggers"] = 1,
 			["texture"] = "Textures\\SpellActivationOverlays\\GenericArc_01",
 			["untrigger"] = {
@@ -72714,6 +72677,9 @@ WeakAurasSaved = {
 			["parent"] = "Tiger Power",
 			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["inverse"] = false,
+			["anchorPoint"] = "CENTER",
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.95,
 			["actions"] = {
 				["start"] = {
 				},
@@ -72722,9 +72688,6 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.95,
-			["rotation"] = 0,
 			["backgroundOffset"] = 2,
 		},
 		["Dragon Roar 1.0"] = {
@@ -72921,7 +72884,6 @@ WeakAurasSaved = {
 			["fontSize"] = 12,
 			["displayStacks"] = "%s",
 			["regionType"] = "icon",
-			["init_completed"] = 1,
 			["parent"] = "Black Ox Statue 1.0",
 			["selfPoint"] = "CENTER",
 			["stacksContainment"] = "INSIDE",
@@ -73002,74 +72964,20 @@ WeakAurasSaved = {
 			["stickyDuration"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["desaturateForeground"] = false,
+			["customTextUpdate"] = "update",
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["height"] = 20.0000076293945,
-			["customTextUpdate"] = "update",
-			["crop_y"] = 0.41,
+			["height"] = 0.999999701976776,
 			["color"] = {
 				0.764705882352941, -- [1]
 				0.12156862745098, -- [2]
 				0.231372549019608, -- [3]
 				0.800000011920929, -- [4]
 			},
-			["untrigger"] = {
-				["spellName"] = 121253,
-			},
-			["fontSize"] = 20,
-			["displayStacks"] = "%c",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_frame"] = "WeakAuras:Stagger Medium",
-					["do_custom"] = false,
-					["glow_action"] = "show",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["inverse"] = false,
-			["mirror"] = false,
-			["user_y"] = 0,
-			["regionType"] = "text",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-					["preset"] = "alphaPulse",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["blendMode"] = "BLEND",
-			["icon"] = true,
-			["frameStrata"] = 4,
-			["init_completed"] = 1,
-			["additional_triggers"] = {
-			},
-			["auto"] = true,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["justify"] = "LEFT",
-			["compress"] = false,
-			["id"] = "Stagger Heavy Text Only",
-			["desaturate"] = false,
-			["alpha"] = 1,
-			["width"] = 9.99996948242188,
 			["load"] = {
 				["talent"] = {
 					["multi"] = {
@@ -73108,9 +73016,62 @@ WeakAurasSaved = {
 					},
 				},
 			},
+			["untrigger"] = {
+				["spellName"] = 121253,
+			},
 			["anchorPoint"] = "CENTER",
-			["numTriggers"] = 1,
+			["fontSize"] = 20,
+			["displayStacks"] = "%c",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
 			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["inverse"] = false,
+			["mirror"] = false,
+			["crop_y"] = 0.41,
+			["regionType"] = "text",
+			["desaturate"] = false,
+			["blendMode"] = "BLEND",
+			["icon"] = true,
+			["frameStrata"] = 4,
+			["additional_triggers"] = {
+			},
+			["auto"] = true,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["justify"] = "LEFT",
+			["compress"] = false,
+			["id"] = "Stagger Heavy Text Only",
+			["desaturateForeground"] = false,
+			["alpha"] = 1,
+			["width"] = 0.999999701976776,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+					["preset"] = "alphaPulse",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["user_y"] = 0,
+			["numTriggers"] = 1,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Stagger Medium",
+					["do_custom"] = false,
+					["glow_action"] = "show",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOM",
@@ -73566,49 +73527,6 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
-			["crop_y"] = 0.41,
-			["crop_x"] = 0.41,
-			["yOffset"] = 0,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["fontSize"] = 13,
-			["inverse"] = false,
-			["mirror"] = false,
-			["stickyDuration"] = false,
-			["regionType"] = "icon",
-			["customTextUpdate"] = "update",
-			["blendMode"] = "BLEND",
-			["selfPoint"] = "CENTER",
-			["frameStrata"] = 1,
-			["init_completed"] = 1,
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "status",
-						["unevent"] = "auto",
-						["power_operator"] = "<",
-						["use_power"] = true,
-						["event"] = "Chi Power",
-						["subeventPrefix"] = "SPELL",
-						["subeventSuffix"] = "_CAST_START",
-						["use_unit"] = true,
-						["unit"] = "player",
-						["power"] = "2",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-			},
-			["icon"] = true,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Charged Guard Usable",
-			["xOffset"] = 0,
-			["alpha"] = 1,
-			["width"] = 32,
 			["load"] = {
 				["talent"] = {
 					["single"] = 9,
@@ -73652,9 +73570,51 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["anchorPoint"] = "CENTER",
-			["numTriggers"] = 2,
+			["crop_x"] = 0.41,
 			["parent"] = "Charged Guard 3.0",
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["anchorPoint"] = "CENTER",
+			["inverse"] = false,
+			["mirror"] = false,
+			["crop_y"] = 0.41,
+			["regionType"] = "icon",
+			["customTextUpdate"] = "update",
+			["blendMode"] = "BLEND",
+			["xOffset"] = 0,
+			["frameStrata"] = 1,
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "status",
+						["unevent"] = "auto",
+						["power_operator"] = "<",
+						["use_power"] = true,
+						["event"] = "Chi Power",
+						["subeventPrefix"] = "SPELL",
+						["subeventSuffix"] = "_CAST_START",
+						["use_unit"] = true,
+						["unit"] = "player",
+						["power"] = "2",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+			},
+			["icon"] = true,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Charged Guard Usable",
+			["selfPoint"] = "CENTER",
+			["alpha"] = 1,
+			["width"] = 32,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["stickyDuration"] = false,
+			["numTriggers"] = 2,
+			["yOffset"] = 0,
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\ability_monk_guard",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -74105,6 +74065,42 @@ WeakAurasSaved = {
 			},
 			["height"] = 32,
 			["anchorPoint"] = "CENTER",
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
+			["icon"] = true,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " %s",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["inverse"] = false,
+			["mirror"] = false,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["regionType"] = "icon",
+			["desaturateForeground"] = false,
+			["blendMode"] = "BLEND",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["frameStrata"] = 1,
+			["id"] = "Fire Elemental Totem Up",
+			["yOffset"] = 0,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["additional_triggers"] = {
+			},
+			["customTextUpdate"] = "update",
+			["alpha"] = 1,
+			["width"] = 32,
 			["load"] = {
 				["talent"] = {
 					["single"] = 4,
@@ -74146,45 +74142,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["icon"] = true,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " %s",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
 			["xOffset"] = 0,
-			["inverse"] = false,
-			["mirror"] = false,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["regionType"] = "icon",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["blendMode"] = "BLEND",
-			["fontSize"] = 16,
-			["frameStrata"] = 1,
-			["id"] = "Fire Elemental Totem Up",
-			["yOffset"] = 0,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["additional_triggers"] = {
-			},
-			["customTextUpdate"] = "update",
-			["alpha"] = 1,
-			["width"] = 32,
-			["desaturateForeground"] = false,
-			["crop_y"] = 0.41,
 			["numTriggers"] = 1,
-			["stickyDuration"] = false,
+			["fontSize"] = 16,
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\Spell_Fire_Elemental_Totem",
 			["stacksPoint"] = "BOTTOM",
@@ -74380,7 +74340,71 @@ WeakAurasSaved = {
 			["rotation"] = 0,
 			["font"] = "ABF",
 			["height"] = 32,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["crop_y"] = 0.41,
+			["backgroundOffset"] = 2,
 			["icon"] = true,
+			["fontSize"] = 13,
+			["displayStacks"] = "%c",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["anchorPoint"] = "CENTER",
+			["customTextUpdate"] = "update",
+			["mirror"] = false,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
+			["regionType"] = "icon",
+			["numTriggers"] = 1,
+			["blendMode"] = "BLEND",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = true,
+					["glow_frame"] = "WeakAuras:Keg Smash Usable",
+					["do_custom"] = false,
+					["glow_action"] = "show",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["untrigger"] = {
+				["spellName"] = 121253,
+			},
+			["alpha"] = 1,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Keg Smash Usable",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["frameStrata"] = 1,
+			["width"] = 32,
+			["stickyDuration"] = false,
+			["parent"] = "Keg Smash 1.0",
+			["inverse"] = false,
 			["load"] = {
 				["talent"] = {
 					["multi"] = {
@@ -74420,71 +74444,6 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["backgroundOffset"] = 2,
-			["anchorPoint"] = "CENTER",
-			["fontSize"] = 13,
-			["displayStacks"] = "%c",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["customTextUpdate"] = "update",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["mirror"] = false,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = true,
-					["glow_frame"] = "WeakAuras:Keg Smash Usable",
-					["do_custom"] = false,
-					["glow_action"] = "show",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["regionType"] = "icon",
-			["numTriggers"] = 1,
-			["blendMode"] = "BLEND",
-			["untrigger"] = {
-				["spellName"] = 121253,
-			},
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["init_completed"] = 1,
-			["alpha"] = 1,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Keg Smash Usable",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["frameStrata"] = 1,
-			["width"] = 32,
-			["stickyDuration"] = false,
-			["parent"] = "Keg Smash 1.0",
-			["inverse"] = false,
-			["crop_y"] = 0.41,
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -74561,6 +74520,14 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
+			["selfPoint"] = "CENTER",
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["height"] = 32,
 			["actions"] = {
 				["start"] = {
 					["do_glow"] = false,
@@ -74572,14 +74539,32 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["height"] = 32,
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\spell_mage_frostbomb",
 			["anchorPoint"] = "CENTER",
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["parent"] = "Frost Bomb 2.0",
+			["inverse"] = false,
+			["mirror"] = false,
+			["xOffset"] = 0,
+			["regionType"] = "icon",
+			["customTextUpdate"] = "update",
+			["blendMode"] = "BLEND",
+			["desaturateForeground"] = false,
+			["frameStrata"] = 3,
+			["id"] = "Frost Bomb Unusable",
+			["yOffset"] = 0,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["additional_triggers"] = {
+			},
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["alpha"] = 1,
+			["width"] = 32,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -74622,35 +74607,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\spell_mage_frostbomb",
-			["icon"] = true,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
 			["stickyDuration"] = false,
-			["inverse"] = false,
-			["mirror"] = false,
-			["xOffset"] = 0,
-			["regionType"] = "icon",
-			["customTextUpdate"] = "update",
-			["blendMode"] = "BLEND",
-			["desaturateForeground"] = false,
-			["frameStrata"] = 3,
-			["id"] = "Frost Bomb Unusable",
-			["yOffset"] = 0,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["additional_triggers"] = {
-			},
-			["selfPoint"] = "CENTER",
-			["alpha"] = 1,
-			["width"] = 32,
-			["fontSize"] = 13,
-			["crop_y"] = 0.41,
 			["numTriggers"] = 1,
-			["parent"] = "Frost Bomb 2.0",
+			["icon"] = true,
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -74954,7 +74913,7 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["anchorPoint"] = "CENTER",
+			["yOffset"] = 0,
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -74962,12 +74921,25 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["height"] = 32,
+			["anchorPoint"] = "CENTER",
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\ability_monk_guard",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				0.75, -- [4]
 			},
+			["fontSize"] = 13,
+			["displayStacks"] = "%c",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["desaturateForeground"] = false,
+			["inverse"] = false,
+			["mirror"] = false,
+			["icon"] = true,
+			["regionType"] = "icon",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["blendMode"] = "BLEND",
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -75010,37 +74982,6 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\ability_monk_guard",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = "%c",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["inverse"] = false,
-			["mirror"] = false,
-			["icon"] = true,
-			["regionType"] = "icon",
-			["stickyDuration"] = false,
-			["blendMode"] = "BLEND",
-			["xOffset"] = 0,
 			["frameStrata"] = 1,
 			["additional_triggers"] = {
 				{
@@ -75065,13 +75006,31 @@ WeakAurasSaved = {
 			["auto"] = true,
 			["compress"] = false,
 			["id"] = "Magic Guard Unusable",
-			["yOffset"] = 0,
+			["xOffset"] = 0,
 			["alpha"] = 1,
 			["width"] = 32,
-			["crop_y"] = 0.41,
-			["fontSize"] = 13,
+			["stickyDuration"] = false,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
 			["numTriggers"] = 2,
-			["desaturateForeground"] = false,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -75237,10 +75196,10 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["customTextUpdate"] = "update",
+			["yOffset"] = 0,
 			["backgroundOffset"] = 2,
 			["height"] = 32,
-			["icon"] = true,
+			["customTextUpdate"] = "update",
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -75285,11 +75244,11 @@ WeakAurasSaved = {
 				},
 			},
 			["crop_x"] = 0.41,
-			["parent"] = "Wild Strike 1.0",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["icon"] = true,
+			["fontSize"] = 14,
 			["displayStacks"] = " ",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["fontSize"] = 14,
+			["selfPoint"] = "CENTER",
 			["numTriggers"] = 2,
 			["mirror"] = false,
 			["actions"] = {
@@ -75304,14 +75263,14 @@ WeakAurasSaved = {
 				},
 			},
 			["regionType"] = "icon",
+			["xOffset"] = -20,
+			["blendMode"] = "BLEND",
 			["backgroundColor"] = {
 				0.5, -- [1]
 				0.5, -- [2]
 				0.5, -- [3]
 				0.5, -- [4]
 			},
-			["blendMode"] = "BLEND",
-			["anchorPoint"] = "CENTER",
 			["alpha"] = 1,
 			["id"] = "Wild Strike Usable from Rage",
 			["crop_y"] = 0.41,
@@ -75339,13 +75298,13 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["yOffset"] = 0,
+			["anchorPoint"] = "CENTER",
 			["frameStrata"] = 1,
 			["width"] = 31.9999332427979,
-			["xOffset"] = -20,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["stickyDuration"] = false,
 			["inverse"] = false,
-			["selfPoint"] = "CENTER",
+			["parent"] = "Wild Strike 1.0",
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\spell_warrior_wildstrike",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -75955,7 +75914,6 @@ WeakAurasSaved = {
 			["blendMode"] = "BLEND",
 			["anchorPoint"] = "CENTER",
 			["fontSize"] = 13,
-			["init_completed"] = 1,
 			["customTextUpdate"] = "update",
 			["additional_triggers"] = {
 			},
@@ -76477,7 +76435,6 @@ WeakAurasSaved = {
 			["blendMode"] = "BLEND",
 			["untrigger"] = {
 			},
-			["init_completed"] = 1,
 			["actions"] = {
 				["start"] = {
 				},
@@ -77161,15 +77118,6 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["selfPoint"] = "CENTER",
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["height"] = 32,
-			["anchorPoint"] = "CENTER",
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -77212,19 +77160,33 @@ WeakAurasSaved = {
 					},
 				},
 			},
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["height"] = 32,
+			["selfPoint"] = "CENTER",
+			["crop_y"] = 0.41,
 			["crop_x"] = 0.41,
-			["icon"] = true,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["anchorPoint"] = "CENTER",
+			["fontSize"] = 13,
 			["displayStacks"] = " ",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
+			["parent"] = "Frost Bomb 2.0",
 			["inverse"] = false,
 			["mirror"] = false,
-			["customTextUpdate"] = "update",
+			["xOffset"] = 0,
 			["regionType"] = "icon",
 			["desaturateForeground"] = false,
 			["blendMode"] = "BLEND",
-			["crop_y"] = 0.41,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
 			["frameStrata"] = 3,
 			["id"] = "Frost Bomb Empty",
 			["yOffset"] = 0,
@@ -77234,18 +77196,13 @@ WeakAurasSaved = {
 			["compress"] = false,
 			["additional_triggers"] = {
 			},
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["alpha"] = 1,
 			["width"] = 32,
-			["fontSize"] = 13,
-			["xOffset"] = 0,
+			["customTextUpdate"] = "update",
+			["stickyDuration"] = false,
 			["numTriggers"] = 1,
-			["parent"] = "Frost Bomb 2.0",
+			["icon"] = true,
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\spell_mage_frostbomb",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -77309,67 +77266,6 @@ WeakAurasSaved = {
 			["customTextUpdate"] = "update",
 			["crop_y"] = 0.41,
 			["crop_x"] = 0.41,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["numTriggers"] = 2,
-			["mirror"] = false,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["regionType"] = "icon",
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["blendMode"] = "BLEND",
-			["parent"] = "Fire Totem 1.0",
-			["alpha"] = 1,
-			["id"] = "No Fire Totem Up with FET Unavailable",
-			["icon"] = true,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "status",
-						["subeventSuffix"] = "_CAST_START",
-						["event"] = "Cooldown Progress (Spell)",
-						["subeventPrefix"] = "SPELL",
-						["debuffType"] = "HELPFUL",
-						["use_spellName"] = true,
-						["names"] = {
-						},
-						["unit"] = "player",
-						["showOn"] = "showOnCooldown",
-						["unevent"] = "auto",
-						["use_unit"] = true,
-						["spellName"] = 2894,
-					},
-					["untrigger"] = {
-						["spellName"] = 2894,
-					},
-				}, -- [1]
-			},
 			["load"] = {
 				["talent"] = {
 					["single"] = 4,
@@ -77411,14 +77307,75 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["frameStrata"] = 1,
-			["width"] = 32,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["numTriggers"] = 2,
+			["mirror"] = false,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["regionType"] = "icon",
 			["untrigger"] = {
 				["spellName"] = 73680,
 			},
+			["blendMode"] = "BLEND",
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["alpha"] = 1,
+			["id"] = "No Fire Totem Up with FET Unavailable",
+			["icon"] = true,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "status",
+						["subeventSuffix"] = "_CAST_START",
+						["event"] = "Cooldown Progress (Spell)",
+						["subeventPrefix"] = "SPELL",
+						["debuffType"] = "HELPFUL",
+						["use_spellName"] = true,
+						["names"] = {
+						},
+						["unit"] = "player",
+						["showOn"] = "showOnCooldown",
+						["unevent"] = "auto",
+						["use_unit"] = true,
+						["spellName"] = 2894,
+					},
+					["untrigger"] = {
+						["spellName"] = 2894,
+					},
+				}, -- [1]
+			},
+			["parent"] = "Fire Totem 1.0",
+			["frameStrata"] = 1,
+			["width"] = 32,
+			["fontSize"] = 13,
 			["selfPoint"] = "CENTER",
 			["inverse"] = false,
-			["stickyDuration"] = false,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\Spell_Fire_SearingTotem",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -77857,6 +77814,22 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
+			["yOffset"] = 0,
+			["backgroundOffset"] = 2,
+			["height"] = 32,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = true,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Shield Block Usable with Rage",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\Ability_Defend",
 			["load"] = {
 				["talent"] = {
 					["single"] = 21,
@@ -77901,33 +77874,17 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["backgroundOffset"] = 2,
-			["height"] = 32,
-			["yOffset"] = 0,
-			["crop_y"] = 0.41,
-			["displayIcon"] = "Interface\\Icons\\Ability_Defend",
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = true,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Shield Block Usable with Rage",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
 			["fontSize"] = 13,
 			["displayStacks"] = " %s",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["customTextUpdate"] = "update",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["numTriggers"] = 4,
 			["mirror"] = false,
-			["stickyDuration"] = false,
+			["parent"] = "Shield Block 2.0",
 			["regionType"] = "icon",
-			["xOffset"] = 0,
+			["desaturateForeground"] = false,
 			["blendMode"] = "BLEND",
-			["anchorPoint"] = "CENTER",
+			["xOffset"] = 0,
 			["alpha"] = 1,
 			["id"] = "Shield Block Usable with Rage",
 			["icon"] = true,
@@ -77994,11 +77951,11 @@ WeakAurasSaved = {
 					},
 				}, -- [3]
 			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["anchorPoint"] = "CENTER",
 			["frameStrata"] = 1,
 			["width"] = 32,
-			["desaturateForeground"] = false,
-			["parent"] = "Shield Block 2.0",
+			["stickyDuration"] = false,
+			["customTextUpdate"] = "update",
 			["inverse"] = false,
 			["selfPoint"] = "CENTER",
 			["orientation"] = "VERTICAL",
@@ -78371,12 +78328,7 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
+			["anchorPoint"] = "CENTER",
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -78384,7 +78336,38 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["height"] = 32,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\Spell_Fire_Incinerate",
 			["icon"] = true,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["selfPoint"] = "CENTER",
+			["inverse"] = false,
+			["mirror"] = false,
+			["fontSize"] = 16,
+			["regionType"] = "icon",
+			["stickyDuration"] = false,
+			["blendMode"] = "BLEND",
+			["xOffset"] = -120,
+			["frameStrata"] = 4,
+			["id"] = "Ignite No DoT",
+			["customTextUpdate"] = "update",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["additional_triggers"] = {
+			},
+			["yOffset"] = -90,
+			["alpha"] = 1,
+			["width"] = 32,
 			["load"] = {
 				["talent"] = {
 					["single"] = 4,
@@ -78426,40 +78409,14 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\Spell_Fire_Incinerate",
+			["desaturateForeground"] = false,
+			["numTriggers"] = 1,
 			["backgroundColor"] = {
 				0.5, -- [1]
 				0.5, -- [2]
 				0.5, -- [3]
 				0.5, -- [4]
 			},
-			["fontSize"] = 16,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["selfPoint"] = "CENTER",
-			["inverse"] = false,
-			["mirror"] = false,
-			["desaturateForeground"] = false,
-			["regionType"] = "icon",
-			["xOffset"] = -120,
-			["blendMode"] = "BLEND",
-			["yOffset"] = -90,
-			["frameStrata"] = 4,
-			["id"] = "Ignite No DoT",
-			["customTextUpdate"] = "update",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["additional_triggers"] = {
-			},
-			["anchorPoint"] = "CENTER",
-			["alpha"] = 1,
-			["width"] = 32,
-			["stickyDuration"] = false,
-			["crop_y"] = 0.41,
-			["numTriggers"] = 1,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOM",
@@ -78751,7 +78708,6 @@ WeakAurasSaved = {
 			["blendMode"] = "BLEND",
 			["crop_y"] = 0.41,
 			["icon"] = true,
-			["init_completed"] = 1,
 			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["id"] = "Chi Wave MW Usable",
 			["stacksContainment"] = "INSIDE",
@@ -80105,11 +80061,19 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
 			},
 			["textColor"] = {
 				1, -- [1]
@@ -80118,16 +80082,11 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["height"] = 32,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
 			},
 			["load"] = {
 				["use_never"] = true,
@@ -80172,16 +80131,26 @@ WeakAurasSaved = {
 				},
 			},
 			["displayIcon"] = "Interface\\Icons\\Spell_Frost_FrostBolt02",
-			["foregroundColor"] = {
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				1, -- [4]
+				0.75, -- [4]
 			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["customTextUpdate"] = "update",
 			["inverse"] = false,
 			["mirror"] = false,
 			["untrigger"] = {
@@ -80189,9 +80158,9 @@ WeakAurasSaved = {
 				["spellName"] = 44457,
 			},
 			["regionType"] = "icon",
-			["parent"] = "Frostbolt Stacks 1.0",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["blendMode"] = "BLEND",
-			["stickyDuration"] = false,
+			["parent"] = "Frostbolt Stacks 1.0",
 			["frameStrata"] = 3,
 			["id"] = "Frostbolt Empty",
 			["crop_y"] = 0.41,
@@ -80201,30 +80170,17 @@ WeakAurasSaved = {
 			["compress"] = false,
 			["additional_triggers"] = {
 			},
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
+			["stickyDuration"] = false,
 			["alpha"] = 1,
 			["width"] = 32,
 			["icon"] = true,
-			["fontSize"] = 13,
+			["customTextUpdate"] = "update",
 			["numTriggers"] = 1,
-			["color"] = {
+			["foregroundColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				0.75, -- [4]
+				1, -- [4]
 			},
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
@@ -80675,7 +80631,6 @@ WeakAurasSaved = {
 			["yOffset"] = -58,
 			["anchorPoint"] = "CENTER",
 			["customTextUpdate"] = "update",
-			["init_completed"] = 1,
 			["actions"] = {
 				["start"] = {
 				},
@@ -80711,12 +80666,12 @@ WeakAurasSaved = {
 			},
 			["parent"] = "Melee Pertinent Stats",
 			["frameStrata"] = 1,
-			["width"] = 1.00001049041748,
+			["width"] = 0.999999701976776,
 			["id"] = "Target of Enemy Monk",
 			["font"] = "ABF",
 			["numTriggers"] = 1,
 			["xOffset"] = -105,
-			["height"] = 1.00001049041748,
+			["height"] = 0.999999701976776,
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
@@ -81630,7 +81585,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["progressPrecision"] = 0,
 			["font"] = "ABF",
-			["height"] = 14.0000114440918,
+			["height"] = 0.999999701976776,
 			["load"] = {
 				["talent"] = {
 					["multi"] = {
@@ -81688,7 +81643,7 @@ WeakAurasSaved = {
 				0.793660312891007, -- [4]
 			},
 			["frameStrata"] = 2,
-			["width"] = 5.99992799758911,
+			["width"] = 0.999999701976776,
 			["animation"] = {
 				["start"] = {
 					["duration_type"] = "seconds",
@@ -82462,6 +82417,62 @@ WeakAurasSaved = {
 			["backgroundOffset"] = 2,
 			["height"] = 32,
 			["icon"] = true,
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\Spell_Fire_Elemental_Totem",
+			["selfPoint"] = "CENTER",
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["numTriggers"] = 2,
+			["mirror"] = false,
+			["xOffset"] = 0,
+			["regionType"] = "icon",
+			["desaturateForeground"] = false,
+			["blendMode"] = "BLEND",
+			["yOffset"] = 0,
+			["alpha"] = 1,
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "status",
+						["subeventSuffix"] = "_CAST_START",
+						["event"] = "Cooldown Progress (Spell)",
+						["subeventPrefix"] = "SPELL",
+						["spellName"] = 2894,
+						["use_spellName"] = true,
+						["unevent"] = "auto",
+						["use_unit"] = true,
+						["showOn"] = "showOnReady",
+						["names"] = {
+						},
+						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
+					},
+					["untrigger"] = {
+						["spellName"] = 2894,
+					},
+				}, -- [1]
+			},
+			["anchorPoint"] = "CENTER",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["id"] = "Just FET Available Resto",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = true,
+					["glow_frame"] = "WeakAuras:Just FET Available Resto",
+					["glow_action"] = "show",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["frameStrata"] = 1,
+			["width"] = 32,
 			["load"] = {
 				["talent"] = {
 					["single"] = 17,
@@ -82505,63 +82516,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\Spell_Fire_Elemental_Totem",
-			["selfPoint"] = "CENTER",
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
 			["stickyDuration"] = false,
-			["numTriggers"] = 2,
-			["mirror"] = false,
-			["xOffset"] = 0,
-			["regionType"] = "icon",
-			["yOffset"] = 0,
-			["blendMode"] = "BLEND",
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = true,
-					["glow_frame"] = "WeakAuras:Just FET Available Resto",
-					["glow_action"] = "show",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["alpha"] = 1,
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "status",
-						["subeventSuffix"] = "_CAST_START",
-						["event"] = "Cooldown Progress (Spell)",
-						["subeventPrefix"] = "SPELL",
-						["spellName"] = 2894,
-						["use_spellName"] = true,
-						["unevent"] = "auto",
-						["use_unit"] = true,
-						["showOn"] = "showOnReady",
-						["names"] = {
-						},
-						["unit"] = "player",
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-						["spellName"] = 2894,
-					},
-				}, -- [1]
-			},
-			["anchorPoint"] = "CENTER",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["id"] = "Just FET Available Resto",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["frameStrata"] = 1,
-			["width"] = 32,
-			["desaturateForeground"] = false,
-			["crop_y"] = 0.41,
 			["inverse"] = false,
 			["parent"] = "Primal Elementalist Resto Timers 1.0",
 			["orientation"] = "VERTICAL",
@@ -82655,7 +82610,6 @@ WeakAurasSaved = {
 			["blendMode"] = "BLEND",
 			["frameStrata"] = 1,
 			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["init_completed"] = 1,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -82855,8 +82809,12 @@ WeakAurasSaved = {
 			},
 			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["foregroundTexture"] = "Textures\\SpellActivationOverlays\\GenericArc_01",
-			["rotation"] = 0,
+			["stickyDuration"] = false,
 			["mirror"] = false,
+			["crop_y"] = 0.75,
+			["regionType"] = "progresstexture",
+			["rotation"] = 0,
+			["blendMode"] = "BLEND",
 			["actions"] = {
 				["start"] = {
 				},
@@ -82865,17 +82823,7 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
-			["regionType"] = "progresstexture",
-			["foregroundColor"] = {
-				0.12156862745098, -- [1]
-				1, -- [2]
-				0.474509803921569, -- [3]
-				1, -- [4]
-			},
-			["blendMode"] = "BLEND",
-			["stickyDuration"] = false,
-			["crop_y"] = 0.75,
-			["init_completed"] = 1,
+			["selfPoint"] = "CENTER",
 			["numTriggers"] = 2,
 			["texture"] = "Textures\\SpellActivationOverlays\\GenericArc_01",
 			["yOffset"] = 0,
@@ -82912,10 +82860,15 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["inverse"] = false,
-			["desaturateForeground"] = false,
+			["foregroundColor"] = {
+				0.12156862745098, -- [1]
+				1, -- [2]
+				0.474509803921569, -- [3]
+				1, -- [4]
+			},
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.7,
-			["selfPoint"] = "CENTER",
+			["desaturateForeground"] = false,
 			["backgroundOffset"] = 2,
 		},
 		["Charged Guard Timer"] = {
@@ -84712,7 +84665,7 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["fontSize"] = 13,
+			["anchorPoint"] = "CENTER",
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -84720,7 +84673,48 @@ WeakAurasSaved = {
 				0.75, -- [4]
 			},
 			["height"] = 32,
-			["anchorPoint"] = "CENTER",
+			["yOffset"] = 0,
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
+			["parent"] = "Black Ox Statue 1.0",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["numTriggers"] = 1,
+			["mirror"] = false,
+			["stickyDuration"] = false,
+			["regionType"] = "icon",
+			["customTextUpdate"] = "update",
+			["blendMode"] = "BLEND",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Rushing Jade Wind Usable BM",
+					["glow_action"] = "show",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["alpha"] = 1,
+			["id"] = "Black Ox Statue Up",
+			["icon"] = true,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["additional_triggers"] = {
+			},
+			["xOffset"] = 0,
+			["frameStrata"] = 1,
+			["width"] = 32,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -84764,51 +84758,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["yOffset"] = 0,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["numTriggers"] = 1,
-			["mirror"] = false,
-			["stickyDuration"] = false,
-			["regionType"] = "icon",
-			["customTextUpdate"] = "update",
-			["blendMode"] = "BLEND",
-			["xOffset"] = 0,
-			["alpha"] = 1,
-			["init_completed"] = 1,
-			["id"] = "Black Ox Statue Up",
-			["icon"] = true,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["additional_triggers"] = {
-			},
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_frame"] = "WeakAuras:Rushing Jade Wind Usable BM",
-					["glow_action"] = "show",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["frameStrata"] = 1,
-			["width"] = 32,
-			["crop_y"] = 0.41,
-			["selfPoint"] = "CENTER",
+			["fontSize"] = 13,
 			["inverse"] = false,
-			["parent"] = "Black Ox Statue 1.0",
+			["selfPoint"] = "CENTER",
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\monk_ability_summonoxstatue",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -85137,7 +85089,6 @@ WeakAurasSaved = {
 			["regionType"] = "texture",
 			["stacks"] = true,
 			["blendMode"] = "BLEND",
-			["init_completed"] = 1,
 			["texture"] = "Textures\\SpellActivationOverlays\\White_Tiger",
 			["textFont"] = "Friz Quadrata TT",
 			["borderOffset"] = 5,
@@ -85378,10 +85329,16 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["anchorPoint"] = "CENTER",
+			["xOffset"] = -120,
 			["backgroundOffset"] = 2,
 			["height"] = 32,
+			["anchorPoint"] = "CENTER",
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\Spell_Frost_FrostBolt02",
 			["icon"] = true,
+			["fontSize"] = 16,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -85424,21 +85381,15 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\Spell_Frost_FrostBolt02",
-			["crop_y"] = 0.41,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["fontSize"] = 16,
 			["numTriggers"] = 1,
 			["mirror"] = false,
 			["stickyDuration"] = false,
 			["regionType"] = "icon",
+			["desaturateForeground"] = false,
+			["blendMode"] = "BLEND",
 			["untrigger"] = {
 				["spellName"] = 11129,
 			},
-			["blendMode"] = "BLEND",
-			["customTextUpdate"] = "update",
 			["frameStrata"] = 4,
 			["id"] = "Frostbolt Stacking",
 			["actions"] = {
@@ -85458,10 +85409,10 @@ WeakAurasSaved = {
 			["compress"] = false,
 			["additional_triggers"] = {
 			},
-			["xOffset"] = -120,
+			["customTextUpdate"] = "update",
 			["alpha"] = 1,
 			["width"] = 32,
-			["desaturateForeground"] = false,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["selfPoint"] = "CENTER",
 			["inverse"] = false,
 			["parent"] = "Frostbolt Stacks 1.0",
@@ -85718,7 +85669,6 @@ WeakAurasSaved = {
 			["blendMode"] = "BLEND",
 			["fontSize"] = 13,
 			["icon"] = true,
-			["init_completed"] = 1,
 			["load"] = {
 				["talent"] = {
 					["single"] = 4,
@@ -86499,7 +86449,7 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["customTextUpdate"] = "update",
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -86508,6 +86458,34 @@ WeakAurasSaved = {
 			},
 			["height"] = 32,
 			["icon"] = true,
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
+			["anchorPoint"] = "CENTER",
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["inverse"] = false,
+			["mirror"] = false,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["regionType"] = "icon",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+					["glow_action"] = "show",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["blendMode"] = "BLEND",
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -86550,29 +86528,6 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["anchorPoint"] = "CENTER",
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["inverse"] = false,
-			["mirror"] = false,
-			["xOffset"] = 0,
-			["regionType"] = "icon",
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-					["glow_action"] = "show",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["blendMode"] = "BLEND",
-			["selfPoint"] = "CENTER",
 			["alpha"] = 1,
 			["additional_triggers"] = {
 			},
@@ -86582,16 +86537,11 @@ WeakAurasSaved = {
 			["auto"] = false,
 			["compress"] = false,
 			["id"] = "Nether Tempest Empty",
-			["customTextUpdate"] = "update",
+			["selfPoint"] = "CENTER",
 			["frameStrata"] = 3,
 			["width"] = 32,
-			["crop_y"] = 0.41,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
+			["xOffset"] = 0,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["numTriggers"] = 1,
 			["parent"] = "Nether Tempest 1.0",
 			["orientation"] = "VERTICAL",
@@ -86683,7 +86633,16 @@ WeakAurasSaved = {
 			},
 			["backgroundOffset"] = 2,
 			["height"] = 32,
+			["selfPoint"] = "CENTER",
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
 			["yOffset"] = 0,
+			["fontSize"] = 14,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["inverse"] = false,
+			["mirror"] = false,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -86728,24 +86687,10 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["selfPoint"] = "CENTER",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["inverse"] = false,
-			["mirror"] = false,
-			["fontSize"] = 14,
 			["regionType"] = "icon",
-			["anchorPoint"] = "CENTER",
-			["blendMode"] = "BLEND",
 			["icon"] = true,
+			["blendMode"] = "BLEND",
+			["anchorPoint"] = "CENTER",
 			["frameStrata"] = 1,
 			["additional_triggers"] = {
 				{
@@ -86783,10 +86728,15 @@ WeakAurasSaved = {
 			["customTextUpdate"] = "update",
 			["alpha"] = 1,
 			["width"] = 32,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["desaturateForeground"] = false,
-			["crop_y"] = 0.41,
 			["numTriggers"] = 2,
-			["stickyDuration"] = false,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\spell_brew_dark",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -86878,7 +86828,6 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "aurabar",
 			["stacks"] = false,
-			["init_completed"] = 1,
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
 			["borderOffset"] = 5,
@@ -87369,7 +87318,6 @@ WeakAurasSaved = {
 			["blendMode"] = "BLEND",
 			["crop_y"] = 0.41,
 			["icon"] = true,
-			["init_completed"] = 1,
 			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["id"] = "Renewing Mist Usable",
 			["stacksContainment"] = "INSIDE",
@@ -87812,6 +87760,8 @@ WeakAurasSaved = {
 				},
 				["class"] = {
 					["single"] = "MONK",
+					["multi"] = {
+					},
 				},
 				["difficulty"] = {
 					["multi"] = {
@@ -88022,7 +87972,6 @@ WeakAurasSaved = {
 			["regionType"] = "aurabar",
 			["stacks"] = false,
 			["blendMode"] = "BLEND",
-			["init_completed"] = 1,
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
 			["zoom"] = 0,
@@ -88235,7 +88184,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["progressPrecision"] = 0,
 			["font"] = "ABF",
-			["height"] = 14.0000114440918,
+			["height"] = 14.0799751281738,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -88283,7 +88232,6 @@ WeakAurasSaved = {
 			["fontSize"] = 14,
 			["displayStacks"] = "%p",
 			["regionType"] = "text",
-			["init_completed"] = 1,
 			["parent"] = "Charged Guard 3.0",
 			["untrigger"] = {
 			},
@@ -88306,7 +88254,7 @@ WeakAurasSaved = {
 				0.5, -- [4]
 			},
 			["frameStrata"] = 2,
-			["width"] = 16.0000343322754,
+			["width"] = 8.9600076675415,
 			["stickyDuration"] = false,
 			["inverse"] = false,
 			["numTriggers"] = 1,
@@ -88946,7 +88894,6 @@ WeakAurasSaved = {
 			["displayStacks"] = "%c",
 			["regionType"] = "icon",
 			["selfPoint"] = "CENTER",
-			["init_completed"] = 1,
 			["stickyDuration"] = false,
 			["actions"] = {
 				["start"] = {
@@ -90163,7 +90110,6 @@ WeakAurasSaved = {
 				["init"] = {
 				},
 			},
-			["init_completed"] = 1,
 			["load"] = {
 				["talent"] = {
 					["single"] = 4,
@@ -90540,7 +90486,6 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "aurabar",
 			["stacks"] = true,
-			["init_completed"] = 1,
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
 			["stacksFont"] = "ABF",
@@ -91051,7 +90996,7 @@ WeakAurasSaved = {
 			},
 			["stickyDuration"] = false,
 			["font"] = "ABF",
-			["height"] = 20.0000076293945,
+			["height"] = 19.8399925231934,
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -91128,7 +91073,7 @@ WeakAurasSaved = {
 				},
 			},
 			["frameStrata"] = 3,
-			["width"] = 22.0000953674316,
+			["width"] = 10.8801136016846,
 			["inverse"] = false,
 			["yOffset"] = -91,
 			["numTriggers"] = 1,
@@ -92371,7 +92316,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["selfPoint"] = "CENTER",
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -92380,6 +92325,34 @@ WeakAurasSaved = {
 			},
 			["height"] = 32,
 			["anchorPoint"] = "CENTER",
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
+			["icon"] = true,
+			["fontSize"] = 16,
+			["displayStacks"] = " %s",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = true,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Searing Totem Up with FE",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["inverse"] = false,
+			["mirror"] = false,
+			["customTextUpdate"] = "update",
+			["regionType"] = "icon",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["blendMode"] = "BLEND",
 			["load"] = {
 				["talent"] = {
 					["single"] = 16,
@@ -92422,34 +92395,6 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["icon"] = true,
-			["fontSize"] = 16,
-			["displayStacks"] = " %s",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = true,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Searing Totem Up with FE",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["inverse"] = false,
-			["mirror"] = false,
-			["xOffset"] = 0,
-			["regionType"] = "icon",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["blendMode"] = "BLEND",
-			["desaturateForeground"] = false,
 			["frameStrata"] = 1,
 			["id"] = "Searing Totem Up with FE",
 			["yOffset"] = 0,
@@ -92480,11 +92425,11 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["selfPoint"] = "CENTER",
+			["desaturateForeground"] = false,
 			["alpha"] = 1,
 			["width"] = 32,
-			["crop_y"] = 0.41,
-			["customTextUpdate"] = "update",
+			["xOffset"] = 0,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["numTriggers"] = 2,
 			["stickyDuration"] = false,
 			["orientation"] = "VERTICAL",
@@ -92813,29 +92758,10 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["icon"] = true,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["backgroundOffset"] = 2,
 			["height"] = 32,
-			["anchorPoint"] = "CENTER",
-			["crop_y"] = 0.41,
-			["crop_x"] = 0.41,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-					["glow_action"] = "show",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
-			["numTriggers"] = 1,
-			["mirror"] = false,
+			["icon"] = true,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -92878,8 +92804,17 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["regionType"] = "icon",
+			["crop_x"] = 0.41,
+			["anchorPoint"] = "CENTER",
 			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["parent"] = "Thrash",
+			["numTriggers"] = 1,
+			["mirror"] = false,
+			["xOffset"] = 0,
+			["regionType"] = "icon",
+			["crop_y"] = 0.41,
 			["blendMode"] = "BLEND",
 			["backgroundColor"] = {
 				0.5, -- [1]
@@ -92900,9 +92835,19 @@ WeakAurasSaved = {
 			["frameStrata"] = 3,
 			["width"] = 32,
 			["selfPoint"] = "CENTER",
-			["xOffset"] = 0,
+			["stickyDuration"] = false,
 			["inverse"] = false,
-			["parent"] = "Thrash",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+					["glow_action"] = "show",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "INTERFACE\\ICONS\\spell_druid_thrash",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -93182,6 +93127,37 @@ WeakAurasSaved = {
 			},
 			["height"] = 32,
 			["icon"] = true,
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\spell_mage_nethertempest",
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["fontSize"] = 13,
+			["inverse"] = false,
+			["mirror"] = false,
+			["desaturateForeground"] = false,
+			["regionType"] = "icon",
+			["xOffset"] = 0,
+			["blendMode"] = "BLEND",
+			["yOffset"] = 0,
+			["alpha"] = 1,
+			["id"] = "Nether Tempest Usable",
+			["anchorPoint"] = "CENTER",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["additional_triggers"] = {
+			},
+			["selfPoint"] = "CENTER",
+			["frameStrata"] = 4,
+			["width"] = 32,
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -93224,38 +93200,7 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\spell_mage_nethertempest",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
 			["stickyDuration"] = false,
-			["inverse"] = false,
-			["mirror"] = false,
-			["desaturateForeground"] = false,
-			["regionType"] = "icon",
-			["yOffset"] = 0,
-			["blendMode"] = "BLEND",
-			["selfPoint"] = "CENTER",
-			["alpha"] = 1,
-			["id"] = "Nether Tempest Usable",
-			["anchorPoint"] = "CENTER",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["additional_triggers"] = {
-			},
-			["fontSize"] = 13,
-			["frameStrata"] = 4,
-			["width"] = 32,
-			["xOffset"] = 0,
-			["crop_y"] = 0.41,
 			["numTriggers"] = 1,
 			["parent"] = "Nether Tempest 1.0",
 			["orientation"] = "VERTICAL",
@@ -93718,6 +93663,78 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
+			["yOffset"] = 0,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["height"] = 32,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\Spell_Fire_ElementalDevastation",
+			["icon"] = true,
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["selfPoint"] = "CENTER",
+			["inverse"] = false,
+			["mirror"] = false,
+			["stickyDuration"] = false,
+			["regionType"] = "icon",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["blendMode"] = "BLEND",
+			["xOffset"] = 0,
+			["frameStrata"] = 1,
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "aura",
+						["subeventSuffix"] = "_CAST_START",
+						["ownOnly"] = true,
+						["event"] = "Health",
+						["subeventPrefix"] = "SPELL",
+						["inverse"] = true,
+						["spellIds"] = {
+						},
+						["names"] = {
+							"Ascendance", -- [1]
+						},
+						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+			},
+			["customTextUpdate"] = "update",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["id"] = "Ascendance Unusable",
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["alpha"] = 1,
+			["width"] = 32,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["desaturateForeground"] = false,
+			["numTriggers"] = 2,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -93761,78 +93778,6 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["height"] = 32,
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["crop_y"] = 0.41,
-			["displayIcon"] = "Interface\\Icons\\Spell_Fire_ElementalDevastation",
-			["icon"] = true,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["desaturateForeground"] = false,
-			["inverse"] = false,
-			["mirror"] = false,
-			["stickyDuration"] = false,
-			["regionType"] = "icon",
-			["xOffset"] = 0,
-			["blendMode"] = "BLEND",
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["frameStrata"] = 1,
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "aura",
-						["subeventSuffix"] = "_CAST_START",
-						["ownOnly"] = true,
-						["event"] = "Health",
-						["subeventPrefix"] = "SPELL",
-						["inverse"] = true,
-						["spellIds"] = {
-						},
-						["names"] = {
-							"Ascendance", -- [1]
-						},
-						["unit"] = "player",
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-			},
-			["customTextUpdate"] = "update",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["id"] = "Ascendance Unusable",
-			["yOffset"] = 0,
-			["alpha"] = 1,
-			["width"] = 32,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["fontSize"] = 13,
-			["numTriggers"] = 2,
-			["selfPoint"] = "CENTER",
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -93926,7 +93871,6 @@ WeakAurasSaved = {
 			["regionType"] = "aurabar",
 			["stacks"] = false,
 			["blendMode"] = "BLEND",
-			["init_completed"] = 1,
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
 			["zoom"] = 0,
@@ -95160,16 +95104,10 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["fontSize"] = 14,
+			["xOffset"] = 0,
 			["backgroundOffset"] = 2,
 			["height"] = 32,
-			["xOffset"] = 0,
-			["crop_y"] = 0.41,
-			["crop_x"] = 0.41,
 			["stickyDuration"] = false,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
 			["load"] = {
 				["talent"] = {
 					["single"] = 9,
@@ -95213,13 +95151,19 @@ WeakAurasSaved = {
 					},
 				},
 			},
+			["crop_x"] = 0.41,
+			["selfPoint"] = "CENTER",
+			["fontSize"] = 14,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["crop_y"] = 0.41,
 			["numTriggers"] = 2,
 			["mirror"] = false,
-			["parent"] = "Chi Brew 1.0",
+			["desaturateForeground"] = false,
 			["regionType"] = "icon",
-			["anchorPoint"] = "CENTER",
-			["blendMode"] = "BLEND",
 			["icon"] = true,
+			["blendMode"] = "BLEND",
+			["anchorPoint"] = "CENTER",
 			["alpha"] = 1,
 			["id"] = "Chi Brew Usable",
 			["customTextUpdate"] = "update",
@@ -95254,9 +95198,9 @@ WeakAurasSaved = {
 			["frameStrata"] = 1,
 			["width"] = 32,
 			["yOffset"] = 0,
-			["desaturateForeground"] = false,
+			["parent"] = "Chi Brew 1.0",
 			["inverse"] = false,
-			["selfPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\ability_monk_chibrew",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -95357,10 +95301,8 @@ WeakAurasSaved = {
 			},
 			["fontSize"] = 12,
 			["foregroundTexture"] = "Textures\\SpellActivationOverlays\\GenericArc_01",
-			["yOffset"] = 0,
+			["discrete_rotation"] = 0,
 			["mirror"] = true,
-			["anchorPoint"] = "CENTER",
-			["regionType"] = "progresstexture",
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
@@ -95376,9 +95318,16 @@ WeakAurasSaved = {
 					["duration_type"] = "seconds",
 				},
 			},
-			["blendMode"] = "BLEND",
-			["crop_y"] = 0.75,
+			["regionType"] = "progresstexture",
 			["stickyDuration"] = false,
+			["blendMode"] = "BLEND",
+			["backgroundColor"] = {
+				0.12156862745098, -- [1]
+				1, -- [2]
+				0.474509803921569, -- [3]
+				0.5, -- [4]
+			},
+			["yOffset"] = 0,
 			["inverse"] = false,
 			["texture"] = "Textures\\SpellActivationOverlays\\GenericArc_01",
 			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
@@ -95415,15 +95364,10 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["numTriggers"] = 2,
-			["backgroundColor"] = {
-				0.12156862745098, -- [1]
-				1, -- [2]
-				0.474509803921569, -- [3]
-				0.5, -- [4]
-			},
+			["anchorPoint"] = "CENTER",
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.7,
-			["discrete_rotation"] = 0,
+			["crop_y"] = 0.75,
 			["backgroundOffset"] = 2,
 		},
 		["Prayer of Mending Unusable"] = {
@@ -96041,7 +95985,7 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["anchorPoint"] = "CENTER",
+			["yOffset"] = 0,
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -96049,7 +95993,43 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["height"] = 32,
+			["anchorPoint"] = "CENTER",
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
 			["customTextUpdate"] = "update",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["inverse"] = false,
+			["mirror"] = false,
+			["xOffset"] = 0,
+			["regionType"] = "icon",
+			["fontSize"] = 13,
+			["blendMode"] = "BLEND",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["frameStrata"] = 1,
+			["additional_triggers"] = {
+			},
+			["icon"] = true,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Ice Floes Unusable",
+			["selfPoint"] = "CENTER",
+			["alpha"] = 1,
+			["width"] = 32,
 			["load"] = {
 				["talent"] = {
 					["single"] = 3,
@@ -96092,50 +96072,14 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["parent"] = "Ice Floes 1.0",
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
 			["backgroundColor"] = {
 				0.5, -- [1]
 				0.5, -- [2]
 				0.5, -- [3]
 				0.5, -- [4]
 			},
-			["inverse"] = false,
-			["mirror"] = false,
-			["crop_y"] = 0.41,
-			["regionType"] = "icon",
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["blendMode"] = "BLEND",
-			["selfPoint"] = "CENTER",
-			["frameStrata"] = 1,
-			["additional_triggers"] = {
-			},
-			["icon"] = true,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Ice Floes Unusable",
-			["yOffset"] = 0,
-			["alpha"] = 1,
-			["width"] = 32,
-			["xOffset"] = 0,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["numTriggers"] = 1,
-			["stickyDuration"] = false,
+			["parent"] = "Ice Floes 1.0",
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\spell_mage_iceflows",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -96669,31 +96613,10 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["stickyDuration"] = false,
+			["desaturateForeground"] = false,
 			["backgroundOffset"] = 2,
 			["height"] = 32,
-			["desaturateForeground"] = false,
-			["crop_y"] = 0.41,
-			["crop_x"] = 0.41,
 			["selfPoint"] = "CENTER",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = true,
-					["glow_frame"] = "WeakAuras:Surging Mist Usable MW",
-					["glow_action"] = "show",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["numTriggers"] = 2,
-			["mirror"] = false,
-			["yOffset"] = 0,
-			["regionType"] = "icon",
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -96736,10 +96659,20 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["blendMode"] = "BLEND",
+			["crop_x"] = 0.41,
+			["xOffset"] = 0,
 			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["icon"] = true,
+			["numTriggers"] = 2,
+			["mirror"] = false,
+			["parent"] = "Surging Mist 1.0 MW",
+			["regionType"] = "icon",
+			["crop_y"] = 0.41,
+			["blendMode"] = "BLEND",
+			["stickyDuration"] = false,
 			["alpha"] = 1,
-			["init_completed"] = 1,
 			["id"] = "Surging Mist Usable MW",
 			["customTextUpdate"] = "update",
 			["stacksContainment"] = "INSIDE",
@@ -96765,13 +96698,23 @@ WeakAurasSaved = {
 					},
 				}, -- [1]
 			},
-			["anchorPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["frameStrata"] = 1,
 			["width"] = 32,
-			["parent"] = "Surging Mist 1.0 MW",
-			["icon"] = true,
+			["anchorPoint"] = "CENTER",
+			["yOffset"] = 0,
 			["inverse"] = false,
-			["xOffset"] = 0,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = true,
+					["glow_frame"] = "WeakAuras:Surging Mist Usable MW",
+					["glow_action"] = "show",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\ability_monk_surgingmist",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -96946,7 +96889,71 @@ WeakAurasSaved = {
 			["rotation"] = 0,
 			["font"] = "ABF",
 			["height"] = 32,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["crop_y"] = 0.41,
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["stickyDuration"] = false,
+			["fontSize"] = 13,
+			["displayStacks"] = "%c",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["animation"] = {
+				["start"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["main"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+				["finish"] = {
+					["type"] = "none",
+					["duration_type"] = "seconds",
+				},
+			},
+			["icon"] = true,
+			["mirror"] = false,
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["regionType"] = "icon",
+			["inverse"] = false,
+			["blendMode"] = "BLEND",
+			["yOffset"] = 0,
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["frameStrata"] = 1,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Keg Smash Unusable",
+			["xOffset"] = 0,
+			["alpha"] = 1,
+			["width"] = 32,
+			["sameTexture"] = true,
 			["load"] = {
 				["talent"] = {
 					["multi"] = {
@@ -96986,71 +96993,6 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["animation"] = {
-				["start"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["main"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-				["finish"] = {
-					["type"] = "none",
-					["duration_type"] = "seconds",
-				},
-			},
-			["fontSize"] = 13,
-			["displayStacks"] = "%c",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["icon"] = true,
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["mirror"] = false,
-			["yOffset"] = 0,
-			["regionType"] = "icon",
-			["inverse"] = false,
-			["blendMode"] = "BLEND",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["init_completed"] = 1,
-			["frameStrata"] = 1,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Keg Smash Unusable",
-			["xOffset"] = 0,
-			["alpha"] = 1,
-			["width"] = 32,
-			["sameTexture"] = true,
-			["crop_y"] = 0.41,
 			["numTriggers"] = 1,
 			["desaturateForeground"] = false,
 			["orientation"] = "VERTICAL",
@@ -97576,12 +97518,12 @@ WeakAurasSaved = {
 				},
 			},
 			["frameStrata"] = 1,
-			["width"] = 7.0000057220459,
+			["width"] = 0.999999701976776,
 			["id"] = "Maelstrom Stacks",
 			["font"] = "ABF",
 			["numTriggers"] = 1,
 			["xOffset"] = -105,
-			["height"] = 20.0000076293945,
+			["height"] = 0.999999701976776,
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
@@ -98198,7 +98140,7 @@ WeakAurasSaved = {
 			["additional_triggers"] = {
 			},
 			["frameStrata"] = 2,
-			["width"] = 9.99996948242188,
+			["width"] = 0.999999701976776,
 			["progressPrecision"] = 0,
 			["font"] = "ABF",
 			["numTriggers"] = 1,
@@ -98230,7 +98172,7 @@ WeakAurasSaved = {
 					["duration_type"] = "seconds",
 				},
 			},
-			["height"] = 20.0000076293945,
+			["height"] = 0.999999701976776,
 			["untrigger"] = {
 			},
 			["load"] = {
@@ -98345,6 +98287,19 @@ WeakAurasSaved = {
 			["backgroundOffset"] = 2,
 			["height"] = 32,
 			["yOffset"] = 0,
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
+			["xOffset"] = 0,
+			["fontSize"] = 13,
+			["displayStacks"] = " %s",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["numTriggers"] = 4,
+			["mirror"] = false,
+			["anchorPoint"] = "CENTER",
+			["regionType"] = "icon",
+			["stickyDuration"] = false,
+			["blendMode"] = "BLEND",
 			["load"] = {
 				["talent"] = {
 					["single"] = 21,
@@ -98389,29 +98344,6 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["xOffset"] = 0,
-			["fontSize"] = 13,
-			["displayStacks"] = " %s",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["desaturateForeground"] = false,
-			["numTriggers"] = 4,
-			["mirror"] = false,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_frame"] = "WeakAuras:Chi Brew Usable",
-					["glow_action"] = "hide",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["regionType"] = "icon",
-			["stickyDuration"] = false,
-			["blendMode"] = "BLEND",
-			["selfPoint"] = "CENTER",
 			["alpha"] = 1,
 			["additional_triggers"] = {
 				{
@@ -98473,11 +98405,21 @@ WeakAurasSaved = {
 			["auto"] = true,
 			["compress"] = false,
 			["id"] = "Shield Block Usable",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["selfPoint"] = "CENTER",
 			["frameStrata"] = 1,
 			["width"] = 32,
-			["crop_y"] = 0.41,
-			["anchorPoint"] = "CENTER",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_frame"] = "WeakAuras:Chi Brew Usable",
+					["glow_action"] = "hide",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["desaturateForeground"] = false,
 			["inverse"] = false,
 			["customTextUpdate"] = "update",
 			["orientation"] = "VERTICAL",
@@ -98584,18 +98526,18 @@ WeakAurasSaved = {
 				["type"] = "aura",
 				["spellId"] = "116740",
 				["unevent"] = "auto",
-				["use_unit"] = true,
-				["unit"] = "player",
-				["event"] = "Cooldown Progress (Spell)",
 				["names"] = {
 				},
+				["subeventPrefix"] = "SPELL",
+				["event"] = "Cooldown Progress (Spell)",
+				["use_unit"] = true,
 				["use_spellName"] = true,
 				["use_spellId"] = true,
 				["spellIds"] = {
 				},
 				["debuffType"] = "HELPFUL",
 				["subeventSuffix"] = "_CAST_START",
-				["subeventPrefix"] = "SPELL",
+				["unit"] = "player",
 				["spellName"] = 122470,
 				["custom_hide"] = "timed",
 			},
@@ -99393,7 +99335,6 @@ WeakAurasSaved = {
 			["blendMode"] = "BLEND",
 			["crop_y"] = 0.41,
 			["icon"] = true,
-			["init_completed"] = 1,
 			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["additional_triggers"] = {
 			},
@@ -100144,10 +100085,38 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["anchorPoint"] = "CENTER",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
 			["backgroundOffset"] = 2,
 			["height"] = 32,
+			["anchorPoint"] = "CENTER",
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\Spell_Fire_FlameShock",
 			["icon"] = true,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["numTriggers"] = 1,
+			["mirror"] = false,
+			["desaturateForeground"] = false,
+			["regionType"] = "icon",
+			["selfPoint"] = "CENTER",
+			["blendMode"] = "BLEND",
 			["load"] = {
 				["talent"] = {
 					["single"] = 13,
@@ -100189,19 +100158,6 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\Spell_Fire_FlameShock",
-			["stickyDuration"] = false,
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["numTriggers"] = 1,
-			["mirror"] = false,
-			["desaturateForeground"] = false,
-			["regionType"] = "icon",
-			["selfPoint"] = "CENTER",
-			["blendMode"] = "BLEND",
-			["customTextUpdate"] = "update",
 			["frameStrata"] = 3,
 			["id"] = "Flame Shock Empty",
 			["yOffset"] = 0,
@@ -100211,28 +100167,13 @@ WeakAurasSaved = {
 			["compress"] = false,
 			["additional_triggers"] = {
 			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
+			["customTextUpdate"] = "update",
 			["alpha"] = 1,
 			["width"] = 32,
-			["crop_y"] = 0.41,
+			["fontSize"] = 13,
 			["xOffset"] = 0,
 			["inverse"] = false,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
+			["stickyDuration"] = false,
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -100285,7 +100226,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["progressPrecision"] = 0,
 			["font"] = "ABF",
-			["height"] = 14.0000114440918,
+			["height"] = 14.0799751281738,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -100333,7 +100274,6 @@ WeakAurasSaved = {
 			["fontSize"] = 14,
 			["displayStacks"] = "%p",
 			["regionType"] = "text",
-			["init_completed"] = 1,
 			["parent"] = "Charged Guard 3.0",
 			["untrigger"] = {
 			},
@@ -100365,7 +100305,7 @@ WeakAurasSaved = {
 				},
 			},
 			["frameStrata"] = 3,
-			["width"] = 16.0000343322754,
+			["width"] = 8.9600076675415,
 			["xOffset"] = -1,
 			["numTriggers"] = 1,
 			["inverse"] = false,
@@ -101295,11 +101235,11 @@ WeakAurasSaved = {
 				},
 			},
 			["crop_x"] = 0.41,
-			["parent"] = "Savage Defense",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["crop_y"] = 0.41,
+			["fontSize"] = 13,
 			["displayStacks"] = " ",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["fontSize"] = 13,
+			["stickyDuration"] = false,
 			["numTriggers"] = 2,
 			["mirror"] = false,
 			["actions"] = {
@@ -101314,9 +101254,9 @@ WeakAurasSaved = {
 				},
 			},
 			["regionType"] = "icon",
-			["desaturateForeground"] = false,
+			["selfPoint"] = "CENTER",
 			["blendMode"] = "BLEND",
-			["yOffset"] = 0,
+			["desaturateForeground"] = false,
 			["alpha"] = 1,
 			["additional_triggers"] = {
 				{
@@ -101342,13 +101282,13 @@ WeakAurasSaved = {
 			["auto"] = true,
 			["compress"] = false,
 			["id"] = "Savage Defense Usable",
-			["crop_y"] = 0.41,
+			["yOffset"] = 0,
 			["frameStrata"] = 1,
 			["width"] = 32,
-			["selfPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["xOffset"] = 0,
 			["inverse"] = false,
-			["stickyDuration"] = false,
+			["parent"] = "Savage Defense",
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\Ability_Racial_Cannibalize",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -101874,7 +101814,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["yOffset"] = 0,
+			["anchorPoint"] = "CENTER",
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -101882,7 +101822,38 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["height"] = 32,
+			["yOffset"] = 0,
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\Ability_Mage_LivingBomb",
 			["icon"] = true,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["selfPoint"] = "CENTER",
+			["inverse"] = false,
+			["mirror"] = false,
+			["fontSize"] = 13,
+			["regionType"] = "icon",
+			["stickyDuration"] = false,
+			["blendMode"] = "BLEND",
+			["xOffset"] = 0,
+			["frameStrata"] = 4,
+			["additional_triggers"] = {
+			},
+			["customTextUpdate"] = "update",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Living Bomb Usable",
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["alpha"] = 1,
+			["width"] = 32,
 			["load"] = {
 				["talent"] = {
 					["single"] = 14,
@@ -101924,14 +101895,6 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\Ability_Mage_LivingBomb",
-			["parent"] = "Living Bomb 1.0",
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["selfPoint"] = "CENTER",
-			["inverse"] = false,
-			["mirror"] = false,
 			["actions"] = {
 				["start"] = {
 					["do_glow"] = true,
@@ -101943,31 +101906,8 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
-			["regionType"] = "icon",
-			["xOffset"] = 0,
-			["blendMode"] = "BLEND",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["frameStrata"] = 4,
-			["additional_triggers"] = {
-			},
-			["customTextUpdate"] = "update",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Living Bomb Usable",
-			["anchorPoint"] = "CENTER",
-			["alpha"] = 1,
-			["width"] = 32,
-			["stickyDuration"] = false,
-			["crop_y"] = 0.41,
 			["numTriggers"] = 1,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["parent"] = "Living Bomb 1.0",
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -102054,7 +101994,6 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "aurabar",
 			["stacks"] = false,
-			["init_completed"] = 1,
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
 			["borderOffset"] = 5,
@@ -102868,7 +102807,7 @@ WeakAurasSaved = {
 			["stickyDuration"] = false,
 			["progressPrecision"] = 0,
 			["font"] = "ABF",
-			["height"] = 14.0000114440918,
+			["height"] = 14.0799970626831,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -102916,7 +102855,6 @@ WeakAurasSaved = {
 			["fontSize"] = 14,
 			["displayStacks"] = "%p",
 			["regionType"] = "text",
-			["init_completed"] = 1,
 			["color"] = {
 				0, -- [1]
 				0, -- [2]
@@ -102969,7 +102907,7 @@ WeakAurasSaved = {
 			},
 			["yOffset"] = -29,
 			["frameStrata"] = 2,
-			["width"] = 16.0000343322754,
+			["width"] = 8.9600076675415,
 			["xOffset"] = 0,
 			["inverse"] = false,
 			["numTriggers"] = 2,
@@ -103578,7 +103516,7 @@ WeakAurasSaved = {
 			["stickyDuration"] = false,
 			["progressPrecision"] = 0,
 			["font"] = "ABF",
-			["height"] = 20.0000076293945,
+			["height"] = 19.8399925231934,
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -103635,7 +103573,7 @@ WeakAurasSaved = {
 			},
 			["yOffset"] = -91,
 			["frameStrata"] = 2,
-			["width"] = 36.9999847412109,
+			["width"] = 26.8800220489502,
 			["color"] = {
 				0, -- [1]
 				0, -- [2]
@@ -105155,10 +105093,6 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["backgroundOffset"] = 2,
-			["height"] = 32,
-			["selfPoint"] = "CENTER",
 			["load"] = {
 				["talent"] = {
 					["single"] = 13,
@@ -105200,24 +105134,28 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\Spell_Fire_FlameShock",
+			["backgroundOffset"] = 2,
+			["height"] = 32,
 			["xOffset"] = 0,
-			["fontSize"] = 13,
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\Spell_Fire_FlameShock",
+			["anchorPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["displayStacks"] = " ",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["anchorPoint"] = "CENTER",
+			["stickyDuration"] = false,
 			["numTriggers"] = 1,
 			["mirror"] = false,
-			["parent"] = "Rising Sun Kick 2.0",
+			["icon"] = true,
 			["regionType"] = "icon",
-			["customTextUpdate"] = "update",
-			["blendMode"] = "BLEND",
 			["backgroundColor"] = {
 				0.5, -- [1]
 				0.5, -- [2]
 				0.5, -- [3]
 				0.5, -- [4]
 			},
+			["blendMode"] = "BLEND",
+			["customTextUpdate"] = "update",
 			["alpha"] = 1,
 			["id"] = "Rising Sun Kick Not Usable",
 			["yOffset"] = 0,
@@ -105227,7 +105165,7 @@ WeakAurasSaved = {
 			["compress"] = false,
 			["additional_triggers"] = {
 			},
-			["crop_y"] = 0.41,
+			["selfPoint"] = "CENTER",
 			["frameStrata"] = 3,
 			["width"] = 32,
 			["actions"] = {
@@ -105241,9 +105179,9 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
-			["icon"] = true,
+			["parent"] = "Rising Sun Kick 2.0",
 			["inverse"] = false,
-			["stickyDuration"] = false,
+			["fontSize"] = 13,
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -105890,7 +105828,6 @@ WeakAurasSaved = {
 			["blendMode"] = "BLEND",
 			["crop_y"] = 0.41,
 			["icon"] = true,
-			["init_completed"] = 1,
 			["yOffset"] = 0,
 			["id"] = "Chi Burst Usable",
 			["stacksContainment"] = "INSIDE",
@@ -106573,7 +106510,18 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["height"] = 32,
+			["yOffset"] = 0,
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
 			["customTextUpdate"] = "update",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["selfPoint"] = "CENTER",
+			["inverse"] = false,
+			["mirror"] = false,
+			["stickyDuration"] = false,
+			["regionType"] = "icon",
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -106618,33 +106566,8 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["yOffset"] = 0,
-			["fontSize"] = 14,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["icon"] = true,
-			["inverse"] = false,
-			["mirror"] = false,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = true,
-					["custom"] = "WeakAuras.ScanEvents(\"TEB_OPTIMAL\")",
-					["glow_frame"] = "WeakAuras:TEB Usable from Procs",
-					["do_custom"] = true,
-					["glow_action"] = "show",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-					["do_custom"] = true,
-					["custom"] = "WeakAuras.ScanEvents(\"TEB_NOT_OPTIMAL\")",
-				},
-			},
-			["regionType"] = "icon",
-			["parent"] = "TEB 3.0",
 			["blendMode"] = "BLEND",
-			["crop_y"] = 0.41,
+			["fontSize"] = 14,
 			["frameStrata"] = 1,
 			["additional_triggers"] = {
 				{
@@ -106724,10 +106647,24 @@ WeakAurasSaved = {
 			["xOffset"] = 0,
 			["alpha"] = 1,
 			["width"] = 31.9999332427979,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["stickyDuration"] = false,
+			["parent"] = "TEB 3.0",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = true,
+					["custom"] = "WeakAuras.ScanEvents(\"TEB_OPTIMAL\")",
+					["glow_frame"] = "WeakAuras:TEB Usable from Procs",
+					["do_custom"] = true,
+					["glow_action"] = "show",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+					["do_custom"] = true,
+					["custom"] = "WeakAuras.ScanEvents(\"TEB_NOT_OPTIMAL\")",
+				},
+			},
 			["numTriggers"] = 4,
-			["selfPoint"] = "CENTER",
+			["icon"] = true,
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\spell_brew_dark",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -107224,7 +107161,6 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.75, -- [4]
 			},
-			["init_completed"] = 1,
 			["icon"] = true,
 			["id"] = "Rushing Jade Wind Usable MW DPS",
 			["stacksContainment"] = "INSIDE",
@@ -107557,7 +107493,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["yOffset"] = 0,
+			["anchorPoint"] = "CENTER",
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -107565,7 +107501,33 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["height"] = 32,
+			["yOffset"] = 0,
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\Spell_Arcane_Arcane03",
 			["icon"] = true,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["selfPoint"] = "CENTER",
+			["inverse"] = false,
+			["mirror"] = false,
+			["fontSize"] = 13,
+			["regionType"] = "icon",
+			["stickyDuration"] = false,
+			["blendMode"] = "BLEND",
+			["xOffset"] = 0,
+			["frameStrata"] = 1,
+			["id"] = "Invoker's Energy Usable",
+			["customTextUpdate"] = "update",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["additional_triggers"] = {
+			},
+			["desaturateForeground"] = false,
+			["alpha"] = 1,
+			["width"] = 32,
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -107609,40 +107571,14 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\Spell_Arcane_Arcane03",
-			["parent"] = "Invoker's Energy 1.0",
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["selfPoint"] = "CENTER",
-			["inverse"] = false,
-			["mirror"] = false,
 			["backgroundColor"] = {
 				0.5, -- [1]
 				0.5, -- [2]
 				0.5, -- [3]
 				0.5, -- [4]
 			},
-			["regionType"] = "icon",
-			["xOffset"] = 0,
-			["blendMode"] = "BLEND",
-			["desaturateForeground"] = false,
-			["frameStrata"] = 1,
-			["id"] = "Invoker's Energy Usable",
-			["customTextUpdate"] = "update",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["additional_triggers"] = {
-			},
-			["anchorPoint"] = "CENTER",
-			["alpha"] = 1,
-			["width"] = 32,
-			["stickyDuration"] = false,
-			["crop_y"] = 0.41,
 			["numTriggers"] = 1,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["parent"] = "Invoker's Energy 1.0",
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -108701,29 +108637,29 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["xOffset"] = 0,
+			["selfPoint"] = "CENTER",
 			["backgroundOffset"] = 2,
 			["height"] = 32,
-			["stickyDuration"] = false,
+			["xOffset"] = 0,
 			["crop_y"] = 0.41,
 			["displayIcon"] = "Interface\\Icons\\Ability_Rogue_Ambush",
-			["yOffset"] = 0,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["stickyDuration"] = false,
+			["fontSize"] = 18,
 			["displayStacks"] = " %s",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
 			["desaturateForeground"] = false,
 			["numTriggers"] = 1,
 			["mirror"] = false,
-			["icon"] = true,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["regionType"] = "icon",
+			["customTextUpdate"] = "update",
+			["blendMode"] = "BLEND",
 			["backgroundColor"] = {
 				0.5, -- [1]
 				0.5, -- [2]
 				0.5, -- [3]
 				0.5, -- [4]
 			},
-			["blendMode"] = "BLEND",
-			["parent"] = "Heroic Strike 1.0",
 			["alpha"] = 1,
 			["id"] = "Heroic Strike Stacking",
 			["load"] = {
@@ -108775,13 +108711,13 @@ WeakAurasSaved = {
 			["compress"] = false,
 			["additional_triggers"] = {
 			},
-			["selfPoint"] = "CENTER",
+			["parent"] = "Heroic Strike 1.0",
 			["frameStrata"] = 1,
 			["width"] = 32,
-			["customTextUpdate"] = "update",
+			["icon"] = true,
 			["anchorPoint"] = "CENTER",
 			["inverse"] = false,
-			["fontSize"] = 18,
+			["yOffset"] = 0,
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOM",
@@ -109331,10 +109267,70 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["anchorPoint"] = "CENTER",
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
 			["backgroundOffset"] = 2,
 			["height"] = 32,
+			["anchorPoint"] = "CENTER",
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
 			["icon"] = true,
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["selfPoint"] = "CENTER",
+			["numTriggers"] = 2,
+			["mirror"] = false,
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = true,
+					["glow_frame"] = "WeakAuras:Ascendance Usable",
+					["glow_action"] = "show",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["regionType"] = "icon",
+			["xOffset"] = 0,
+			["blendMode"] = "BLEND",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["alpha"] = 1,
+			["id"] = "Ascendance Usable",
+			["customTextUpdate"] = "update",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "aura",
+						["subeventSuffix"] = "_CAST_START",
+						["ownOnly"] = true,
+						["event"] = "Health",
+						["subeventPrefix"] = "SPELL",
+						["inverse"] = true,
+						["spellIds"] = {
+						},
+						["names"] = {
+							"Ascendance", -- [1]
+						},
+						["unit"] = "player",
+						["debuffType"] = "HELPFUL",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+			},
+			["yOffset"] = 0,
+			["frameStrata"] = 1,
+			["width"] = 32,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -109378,69 +109374,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["parent"] = "Ascendance 1.0",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
 			["stickyDuration"] = false,
-			["numTriggers"] = 2,
-			["mirror"] = false,
-			["fontSize"] = 13,
-			["regionType"] = "icon",
-			["xOffset"] = 0,
-			["blendMode"] = "BLEND",
-			["yOffset"] = 0,
-			["alpha"] = 1,
-			["id"] = "Ascendance Usable",
-			["customTextUpdate"] = "update",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "aura",
-						["subeventSuffix"] = "_CAST_START",
-						["ownOnly"] = true,
-						["event"] = "Health",
-						["subeventPrefix"] = "SPELL",
-						["inverse"] = true,
-						["spellIds"] = {
-						},
-						["names"] = {
-							"Ascendance", -- [1]
-						},
-						["unit"] = "player",
-						["debuffType"] = "HELPFUL",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-			},
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["frameStrata"] = 1,
-			["width"] = 32,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = true,
-					["glow_frame"] = "WeakAuras:Ascendance Usable",
-					["glow_action"] = "show",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["crop_y"] = 0.41,
 			["inverse"] = false,
-			["selfPoint"] = "CENTER",
+			["parent"] = "Ascendance 1.0",
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\Spell_Fire_ElementalDevastation",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -110468,6 +110404,47 @@ WeakAurasSaved = {
 			},
 			["height"] = 32,
 			["anchorPoint"] = "CENTER",
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
+			["icon"] = true,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = "%s",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["xOffset"] = 0,
+			["inverse"] = false,
+			["mirror"] = false,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["regionType"] = "icon",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Searing Flames Full",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["blendMode"] = "BLEND",
+			["customTextUpdate"] = "update",
+			["frameStrata"] = 1,
+			["id"] = "Searing Totem Up",
+			["yOffset"] = 0,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["additional_triggers"] = {
+			},
+			["selfPoint"] = "CENTER",
+			["alpha"] = 1,
+			["width"] = 32,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -110511,50 +110488,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["icon"] = true,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = "%s",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
 			["stickyDuration"] = false,
-			["inverse"] = false,
-			["mirror"] = false,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["regionType"] = "icon",
-			["customTextUpdate"] = "update",
-			["blendMode"] = "BLEND",
-			["fontSize"] = 16,
-			["frameStrata"] = 1,
-			["id"] = "Searing Totem Up",
-			["yOffset"] = 0,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["additional_triggers"] = {
-			},
-			["selfPoint"] = "CENTER",
-			["alpha"] = 1,
-			["width"] = 32,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Searing Flames Full",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["crop_y"] = 0.41,
 			["numTriggers"] = 1,
-			["xOffset"] = 0,
+			["fontSize"] = 16,
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\Spell_Fire_SearingTotem",
 			["stacksPoint"] = "BOTTOM",
@@ -110635,7 +110571,6 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "aurabar",
 			["stacks"] = false,
-			["init_completed"] = 1,
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
 			["borderOffset"] = 5,
@@ -111552,7 +111487,6 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "aurabar",
 			["stacks"] = false,
-			["init_completed"] = 1,
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
 			["borderOffset"] = 4,
@@ -112442,6 +112376,15 @@ WeakAurasSaved = {
 					["type"] = "none",
 				},
 			},
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
+			["icon"] = true,
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["inverse"] = false,
+			["mirror"] = false,
 			["load"] = {
 				["talent"] = {
 					["single"] = 17,
@@ -112485,16 +112428,12 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["icon"] = true,
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["crop_y"] = 0.41,
-			["inverse"] = false,
-			["mirror"] = false,
-			["desaturateForeground"] = false,
 			["regionType"] = "icon",
+			["untrigger"] = {
+				["totemType"] = 2,
+				["spellName"] = 2062,
+			},
+			["blendMode"] = "BLEND",
 			["actions"] = {
 				["start"] = {
 					["do_glow"] = true,
@@ -112506,8 +112445,6 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
-			["blendMode"] = "BLEND",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["frameStrata"] = 1,
 			["id"] = "Just EET Available Resto",
 			["anchorPoint"] = "CENTER",
@@ -112540,13 +112477,10 @@ WeakAurasSaved = {
 			["customTextUpdate"] = "update",
 			["alpha"] = 1,
 			["width"] = 32,
-			["untrigger"] = {
-				["totemType"] = 2,
-				["spellName"] = 2062,
-			},
+			["desaturateForeground"] = false,
 			["xOffset"] = 0,
 			["numTriggers"] = 2,
-			["stickyDuration"] = false,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\Spell_Fire_Elemental_Totem",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -113308,7 +113242,6 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "aurabar",
 			["stacks"] = false,
-			["init_completed"] = 1,
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
 			["stacksFont"] = "ABF",
@@ -113838,7 +113771,6 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "aurabar",
 			["stacks"] = false,
-			["init_completed"] = 1,
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
 			["stacksFont"] = "ABF",
@@ -114128,15 +114060,6 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["yOffset"] = 0,
-			["textColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
-			["height"] = 32,
-			["anchorPoint"] = "CENTER",
 			["load"] = {
 				["talent"] = {
 					["single"] = 3,
@@ -114179,19 +114102,33 @@ WeakAurasSaved = {
 					},
 				},
 			},
+			["textColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
+			["height"] = 32,
+			["anchorPoint"] = "CENTER",
+			["crop_y"] = 0.41,
 			["crop_x"] = 0.41,
 			["customTextUpdate"] = "update",
 			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["displayStacks"] = " ",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["stickyDuration"] = false,
+			["fontSize"] = 13,
 			["inverse"] = false,
 			["mirror"] = false,
-			["xOffset"] = 0,
+			["desaturateForeground"] = false,
 			["regionType"] = "icon",
-			["selfPoint"] = "CENTER",
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
 			["blendMode"] = "BLEND",
-			["crop_y"] = 0.41,
+			["selfPoint"] = "CENTER",
 			["frameStrata"] = 1,
 			["id"] = "Ice Floes Usable",
 			["icon"] = true,
@@ -114201,16 +114138,11 @@ WeakAurasSaved = {
 			["compress"] = false,
 			["additional_triggers"] = {
 			},
-			["fontSize"] = 13,
+			["yOffset"] = 0,
 			["alpha"] = 1,
 			["width"] = 32,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["desaturateForeground"] = false,
+			["xOffset"] = 0,
+			["stickyDuration"] = false,
 			["numTriggers"] = 1,
 			["parent"] = "Ice Floes 1.0",
 			["orientation"] = "VERTICAL",
@@ -114947,7 +114879,6 @@ WeakAurasSaved = {
 			["blendMode"] = "BLEND",
 			["crop_y"] = 0.41,
 			["icon"] = true,
-			["init_completed"] = 1,
 			["yOffset"] = 0,
 			["id"] = "Expel Harm Usable",
 			["stacksContainment"] = "INSIDE",
@@ -116289,7 +116220,12 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["anchorPoint"] = "CENTER",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -116297,7 +116233,61 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["height"] = 32,
+			["anchorPoint"] = "CENTER",
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
 			["icon"] = true,
+			["fontSize"] = 16,
+			["displayStacks"] = "2",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Searing Flames Full",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["inverse"] = false,
+			["mirror"] = false,
+			["xOffset"] = 0,
+			["regionType"] = "icon",
+			["selfPoint"] = "CENTER",
+			["blendMode"] = "BLEND",
+			["desaturateForeground"] = false,
+			["frameStrata"] = 1,
+			["id"] = "Magma Totem Up without FE",
+			["yOffset"] = 0,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "status",
+						["subeventSuffix"] = "_CAST_START",
+						["debuffType"] = "HELPFUL",
+						["event"] = "Cooldown Progress (Spell)",
+						["subeventPrefix"] = "SPELL",
+						["unevent"] = "auto",
+						["use_spellName"] = true,
+						["unit"] = "player",
+						["names"] = {
+						},
+						["showOn"] = "showOnCooldown",
+						["use_unit"] = true,
+						["spellName"] = 2894,
+						["custom_hide"] = "timed",
+					},
+					["untrigger"] = {
+						["spellName"] = 2894,
+					},
+				}, -- [1]
+			},
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -116341,71 +116331,12 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["stickyDuration"] = false,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = "2",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["fontSize"] = 16,
-			["inverse"] = false,
-			["mirror"] = false,
-			["xOffset"] = 0,
-			["regionType"] = "icon",
-			["crop_y"] = 0.41,
-			["blendMode"] = "BLEND",
-			["desaturateForeground"] = false,
-			["frameStrata"] = 1,
-			["id"] = "Magma Totem Up without FE",
-			["yOffset"] = 0,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "status",
-						["subeventSuffix"] = "_CAST_START",
-						["debuffType"] = "HELPFUL",
-						["event"] = "Cooldown Progress (Spell)",
-						["subeventPrefix"] = "SPELL",
-						["unevent"] = "auto",
-						["use_spellName"] = true,
-						["unit"] = "player",
-						["names"] = {
-						},
-						["showOn"] = "showOnCooldown",
-						["use_unit"] = true,
-						["spellName"] = 2894,
-						["custom_hide"] = "timed",
-					},
-					["untrigger"] = {
-						["spellName"] = 2894,
-					},
-				}, -- [1]
-			},
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
 			["alpha"] = 1,
 			["width"] = 32,
-			["selfPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["sameTexture"] = true,
 			["numTriggers"] = 2,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Searing Flames Full",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
+			["stickyDuration"] = false,
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\Spell_Fire_Volcano",
 			["stacksPoint"] = "BOTTOM",
@@ -116498,18 +116429,8 @@ WeakAurasSaved = {
 			},
 			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["foregroundTexture"] = "Textures\\SpellActivationOverlays\\Monk_TigerPalm",
-			["crop_y"] = 0.85,
-			["mirror"] = false,
-			["foregroundColor"] = {
-				0.12156862745098, -- [1]
-				1, -- [2]
-				0.474509803921569, -- [3]
-				0.75, -- [4]
-			},
-			["regionType"] = "progresstexture",
-			["xOffset"] = -250,
-			["blendMode"] = "BLEND",
 			["stickyDuration"] = false,
+			["mirror"] = false,
 			["animation"] = {
 				["start"] = {
 					["type"] = "none",
@@ -116525,7 +116446,16 @@ WeakAurasSaved = {
 					["duration_type"] = "seconds",
 				},
 			},
-			["init_completed"] = 1,
+			["regionType"] = "progresstexture",
+			["crop_y"] = 0.85,
+			["blendMode"] = "BLEND",
+			["foregroundColor"] = {
+				0.12156862745098, -- [1]
+				1, -- [2]
+				0.474509803921569, -- [3]
+				0.75, -- [4]
+			},
+			["discrete_rotation"] = 0,
 			["inverse"] = false,
 			["texture"] = "Textures\\SpellActivationOverlays\\GenericArc_01",
 			["color"] = {
@@ -116547,15 +116477,15 @@ WeakAurasSaved = {
 				["custom"] = "function()\n    return true\nend\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
 			},
 			["numTriggers"] = 1,
+			["xOffset"] = -250,
+			["orientation"] = "VERTICAL",
+			["crop_x"] = 0.95,
 			["backgroundColor"] = {
 				0.12156862745098, -- [1]
 				1, -- [2]
 				0.474509803921569, -- [3]
 				0.400000035762787, -- [4]
 			},
-			["orientation"] = "VERTICAL",
-			["crop_x"] = 0.95,
-			["discrete_rotation"] = 0,
 			["backgroundOffset"] = 2,
 		},
 		["Healing Stream Totem Up Timer"] = {
@@ -118202,9 +118132,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["untrigger"] = {
-				["spellName"] = 78,
-			},
+			["crop_y"] = 0.41,
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -118213,52 +118141,6 @@ WeakAurasSaved = {
 			},
 			["height"] = 32,
 			["icon"] = true,
-			["crop_y"] = 0.41,
-			["displayIcon"] = "Interface\\Icons\\Ability_Rogue_Ambush",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["inverse"] = false,
-			["mirror"] = false,
-			["xOffset"] = 0,
-			["regionType"] = "icon",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["blendMode"] = "BLEND",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["frameStrata"] = 1,
-			["additional_triggers"] = {
-			},
-			["customTextUpdate"] = "update",
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = false,
-			["compress"] = false,
-			["id"] = "Heroic Strike Usable With Unyielding Strikes",
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -118302,17 +118184,65 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["alpha"] = 1,
-			["width"] = 32,
+			["displayIcon"] = "Interface\\Icons\\Ability_Rogue_Ambush",
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["stickyDuration"] = false,
+			["inverse"] = false,
+			["mirror"] = false,
+			["desaturateForeground"] = false,
+			["regionType"] = "icon",
 			["foregroundColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				1, -- [4]
 			},
-			["desaturateForeground"] = false,
+			["blendMode"] = "BLEND",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["frameStrata"] = 1,
+			["additional_triggers"] = {
+			},
+			["customTextUpdate"] = "update",
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = false,
+			["compress"] = false,
+			["id"] = "Heroic Strike Usable With Unyielding Strikes",
+			["untrigger"] = {
+				["spellName"] = 78,
+			},
+			["alpha"] = 1,
+			["width"] = 32,
+			["xOffset"] = 0,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+			},
 			["numTriggers"] = 1,
-			["stickyDuration"] = false,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -118503,10 +118433,10 @@ WeakAurasSaved = {
 				},
 				["spellName"] = 100130,
 				["debuffType"] = "HELPFUL",
-				["custom_type"] = "event",
+				["unevent"] = "auto",
 				["type"] = "custom",
 				["custom"] = "function(event)\n    if event == \"TEB_NOT_OPTIMAL\" or event == \"PLAYER_REGEN_DISABLED\" then \n        return true \n    else \n        return false \n    end\nend",
-				["power"] = "90",
+				["subeventSuffix"] = "_CAST_START",
 				["power_operator"] = "<",
 				["use_spellId"] = true,
 				["event"] = "Chat Message",
@@ -118515,9 +118445,9 @@ WeakAurasSaved = {
 				},
 				["use_spellName"] = true,
 				["events"] = "PLAYER_REGEN_DISABLED,TEB_OPTIMAL,TEB_NOT_OPTIMAL",
-				["subeventSuffix"] = "_CAST_START",
+				["power"] = "90",
 				["inverse"] = true,
-				["unevent"] = "auto",
+				["custom_type"] = "event",
 				["custom_hide"] = "custom",
 				["fullscan"] = true,
 			},
@@ -119469,7 +119399,30 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["height"] = 32,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\ability_monk_chibrew",
 			["icon"] = true,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["xOffset"] = 0,
+			["inverse"] = false,
+			["mirror"] = false,
+			["stickyDuration"] = false,
+			["regionType"] = "icon",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
+			["blendMode"] = "BLEND",
 			["load"] = {
 				["talent"] = {
 					["single"] = 9,
@@ -119513,29 +119466,6 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["displayIcon"] = "Interface\\Icons\\ability_monk_chibrew",
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
-			["fontSize"] = 14,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["inverse"] = false,
-			["mirror"] = false,
-			["xOffset"] = 0,
-			["regionType"] = "icon",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
-			},
-			["blendMode"] = "BLEND",
-			["crop_y"] = 0.41,
 			["frameStrata"] = 1,
 			["additional_triggers"] = {
 				{
@@ -119583,7 +119513,7 @@ WeakAurasSaved = {
 					["type"] = "none",
 				},
 			},
-			["stickyDuration"] = false,
+			["fontSize"] = 14,
 			["numTriggers"] = 2,
 			["desaturateForeground"] = false,
 			["orientation"] = "VERTICAL",
@@ -119654,15 +119584,10 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["stickyDuration"] = false,
+			["desaturateForeground"] = false,
 			["backgroundOffset"] = 2,
 			["height"] = 32,
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
+			["stickyDuration"] = false,
 			["load"] = {
 				["talent"] = {
 					["single"] = 14,
@@ -119705,18 +119630,28 @@ WeakAurasSaved = {
 				},
 			},
 			["crop_x"] = 0.41,
-			["xOffset"] = 0,
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
+			["fontSize"] = 13,
 			["displayStacks"] = " ",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["yOffset"] = 0,
+			["foregroundColor"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				1, -- [4]
+			},
 			["numTriggers"] = 1,
 			["mirror"] = false,
-			["fontSize"] = 13,
+			["customTextUpdate"] = "update",
 			["regionType"] = "icon",
 			["icon"] = true,
 			["blendMode"] = "BLEND",
-			["selfPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["alpha"] = 1,
 			["additional_triggers"] = {
 			},
@@ -119726,7 +119661,7 @@ WeakAurasSaved = {
 			["auto"] = false,
 			["compress"] = false,
 			["id"] = "Living Bomb Empty",
-			["desaturateForeground"] = false,
+			["selfPoint"] = "CENTER",
 			["frameStrata"] = 3,
 			["width"] = 32,
 			["color"] = {
@@ -119735,14 +119670,9 @@ WeakAurasSaved = {
 				1, -- [3]
 				0.75, -- [4]
 			},
-			["customTextUpdate"] = "update",
+			["yOffset"] = 0,
 			["inverse"] = false,
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["xOffset"] = 0,
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\Ability_Mage_LivingBomb",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -120345,12 +120275,12 @@ WeakAurasSaved = {
 				0.75, -- [4]
 			},
 			["frameStrata"] = 2,
-			["width"] = 7.0000057220459,
+			["width"] = 0.999999701976776,
 			["id"] = "Maelstrom Stacks Background",
 			["font"] = "ABF",
 			["numTriggers"] = 1,
 			["xOffset"] = -104,
-			["height"] = 20.0000076293945,
+			["height"] = 0.999999701976776,
 			["selfPoint"] = "RIGHT",
 			["load"] = {
 				["use_never"] = false,
@@ -120527,7 +120457,6 @@ WeakAurasSaved = {
 			["blendMode"] = "BLEND",
 			["icon"] = true,
 			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["init_completed"] = 1,
 			["crop_y"] = 0.41,
 			["additional_triggers"] = {
 			},
@@ -120954,7 +120883,6 @@ WeakAurasSaved = {
 			["blendMode"] = "BLEND",
 			["alpha"] = 1,
 			["customTextUpdate"] = "update",
-			["init_completed"] = 1,
 			["disjunctive"] = false,
 			["icon"] = true,
 			["stacksContainment"] = "INSIDE",
@@ -121010,7 +120938,7 @@ WeakAurasSaved = {
 			},
 			["stickyDuration"] = false,
 			["font"] = "ABF",
-			["height"] = 20.0000076293945,
+			["height"] = 0.999999701976776,
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -121074,7 +121002,7 @@ WeakAurasSaved = {
 				},
 			},
 			["frameStrata"] = 3,
-			["width"] = 7.00007343292236,
+			["width"] = 0.999999701976776,
 			["inverse"] = false,
 			["untrigger"] = {
 			},
@@ -121396,10 +121324,10 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["customTextUpdate"] = "update",
+			["parent"] = "Wild Strike 1.0",
 			["backgroundOffset"] = 2,
 			["height"] = 32,
-			["icon"] = true,
+			["customTextUpdate"] = "update",
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -121444,11 +121372,11 @@ WeakAurasSaved = {
 				},
 			},
 			["crop_x"] = 0.41,
-			["selfPoint"] = "CENTER",
-			["fontSize"] = 14,
+			["icon"] = true,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["displayStacks"] = " ",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["stickyDuration"] = false,
 			["numTriggers"] = 3,
 			["mirror"] = false,
 			["actions"] = {
@@ -121463,18 +121391,13 @@ WeakAurasSaved = {
 				},
 			},
 			["regionType"] = "icon",
+			["yOffset"] = 0,
+			["blendMode"] = "BLEND",
 			["backgroundColor"] = {
 				0.5, -- [1]
 				0.5, -- [2]
 				0.5, -- [3]
 				0.5, -- [4]
-			},
-			["blendMode"] = "BLEND",
-			["color"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				0.75, -- [4]
 			},
 			["alpha"] = 1,
 			["id"] = "Wild Strike Usable Low Rage No Procs",
@@ -121517,10 +121440,15 @@ WeakAurasSaved = {
 					},
 				}, -- [2]
 			},
-			["parent"] = "Wild Strike 1.0",
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
+			},
 			["frameStrata"] = 1,
 			["width"] = 32,
-			["yOffset"] = 0,
+			["fontSize"] = 14,
 			["foregroundColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -121528,7 +121456,7 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["inverse"] = false,
-			["stickyDuration"] = false,
+			["selfPoint"] = "CENTER",
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\spell_warrior_wildstrike",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -122203,7 +122131,6 @@ WeakAurasSaved = {
 			["regionType"] = "aurabar",
 			["stacks"] = false,
 			["blendMode"] = "BLEND",
-			["init_completed"] = 1,
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
 			["stacksFont"] = "ABF",
@@ -122608,7 +122535,12 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["crop_y"] = 0.41,
+			["backgroundColor"] = {
+				0.5, -- [1]
+				0.5, -- [2]
+				0.5, -- [3]
+				0.5, -- [4]
+			},
 			["backgroundOffset"] = 2,
 			["height"] = 32,
 			["actions"] = {
@@ -122668,17 +122600,17 @@ WeakAurasSaved = {
 			},
 			["crop_x"] = 0.41,
 			["selfPoint"] = "CENTER",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["fontSize"] = 14,
 			["displayStacks"] = " %s",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
 			["customTextUpdate"] = "update",
 			["numTriggers"] = 4,
 			["mirror"] = false,
-			["parent"] = "Shield Charge 2.0",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["regionType"] = "icon",
-			["anchorPoint"] = "CENTER",
+			["stickyDuration"] = false,
 			["blendMode"] = "BLEND",
-			["xOffset"] = 0,
+			["anchorPoint"] = "CENTER",
 			["alpha"] = 1,
 			["id"] = "Shield Charge Usable",
 			["icon"] = true,
@@ -122739,18 +122671,13 @@ WeakAurasSaved = {
 					},
 				}, -- [3]
 			},
-			["backgroundColor"] = {
-				0.5, -- [1]
-				0.5, -- [2]
-				0.5, -- [3]
-				0.5, -- [4]
-			},
+			["xOffset"] = 0,
 			["frameStrata"] = 1,
 			["width"] = 32,
-			["stickyDuration"] = false,
+			["parent"] = "Shield Charge 2.0",
 			["yOffset"] = 0,
 			["inverse"] = false,
-			["fontSize"] = 14,
+			["crop_y"] = 0.41,
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\Ability_Warrior_ShieldGuard",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -123405,7 +123332,6 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "aurabar",
 			["stacks"] = false,
-			["init_completed"] = 1,
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
 			["borderOffset"] = 4,
@@ -123813,7 +123739,6 @@ WeakAurasSaved = {
 			["blendMode"] = "BLEND",
 			["anchorPoint"] = "CENTER",
 			["yOffset"] = 0,
-			["init_completed"] = 1,
 			["customTextUpdate"] = "update",
 			["additional_triggers"] = {
 			},
@@ -124297,7 +124222,6 @@ WeakAurasSaved = {
 			["blendMode"] = "BLEND",
 			["frameStrata"] = 1,
 			["customTextUpdate"] = "update",
-			["init_completed"] = 1,
 			["icon"] = true,
 			["anchorPoint"] = "CENTER",
 			["stacksContainment"] = "INSIDE",
@@ -125325,9 +125249,12 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["parent"] = "Chi Brew 1.0 MW",
+			["fontSize"] = 14,
 			["backgroundOffset"] = 2,
 			["height"] = 32,
+			["parent"] = "Chi Brew 1.0 MW",
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
 			["actions"] = {
 				["start"] = {
 					["do_glow"] = false,
@@ -125339,6 +125266,45 @@ WeakAurasSaved = {
 				["finish"] = {
 				},
 			},
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["yOffset"] = 0,
+			["numTriggers"] = 2,
+			["mirror"] = false,
+			["anchorPoint"] = "CENTER",
+			["regionType"] = "icon",
+			["customTextUpdate"] = "update",
+			["blendMode"] = "BLEND",
+			["xOffset"] = 0,
+			["alpha"] = 1,
+			["additional_triggers"] = {
+				{
+					["trigger"] = {
+						["type"] = "status",
+						["unevent"] = "auto",
+						["power_operator"] = ">",
+						["use_power"] = true,
+						["event"] = "Chi Power",
+						["subeventPrefix"] = "SPELL",
+						["subeventSuffix"] = "_CAST_START",
+						["use_unit"] = true,
+						["unit"] = "player",
+						["power"] = "2",
+					},
+					["untrigger"] = {
+					},
+				}, -- [1]
+			},
+			["icon"] = true,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Chi Brew Usable MW",
+			["stickyDuration"] = false,
+			["frameStrata"] = 1,
+			["width"] = 32,
 			["load"] = {
 				["talent"] = {
 					["single"] = 9,
@@ -125381,51 +125347,9 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["selfPoint"] = "CENTER",
-			["fontSize"] = 14,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
 			["desaturateForeground"] = false,
-			["numTriggers"] = 2,
-			["mirror"] = false,
-			["anchorPoint"] = "CENTER",
-			["regionType"] = "icon",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["blendMode"] = "BLEND",
-			["xOffset"] = 0,
-			["alpha"] = 1,
-			["additional_triggers"] = {
-				{
-					["trigger"] = {
-						["type"] = "status",
-						["unevent"] = "auto",
-						["power_operator"] = ">",
-						["use_power"] = true,
-						["event"] = "Chi Power",
-						["subeventPrefix"] = "SPELL",
-						["subeventSuffix"] = "_CAST_START",
-						["use_unit"] = true,
-						["unit"] = "player",
-						["power"] = "2",
-					},
-					["untrigger"] = {
-					},
-				}, -- [1]
-			},
-			["icon"] = true,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Chi Brew Usable MW",
-			["stickyDuration"] = false,
-			["frameStrata"] = 1,
-			["width"] = 32,
-			["customTextUpdate"] = "update",
-			["crop_y"] = 0.41,
 			["inverse"] = false,
-			["yOffset"] = 0,
+			["selfPoint"] = "CENTER",
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\ability_monk_chibrew",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -125823,7 +125747,6 @@ WeakAurasSaved = {
 			["blendMode"] = "BLEND",
 			["icon"] = true,
 			["fontSize"] = 13,
-			["init_completed"] = 1,
 			["crop_y"] = 0.41,
 			["additional_triggers"] = {
 				{
@@ -125939,7 +125862,7 @@ WeakAurasSaved = {
 			["additional_triggers"] = {
 			},
 			["frameStrata"] = 1,
-			["width"] = 9.99996948242188,
+			["width"] = 0.999999701976776,
 			["progressPrecision"] = 0,
 			["font"] = "ABF",
 			["numTriggers"] = 1,
@@ -125971,7 +125894,7 @@ WeakAurasSaved = {
 					["duration_type"] = "seconds",
 				},
 			},
-			["height"] = 20.0000076293945,
+			["height"] = 0.999999701976776,
 			["untrigger"] = {
 			},
 			["load"] = {
@@ -126672,7 +126595,6 @@ WeakAurasSaved = {
 			["blendMode"] = "BLEND",
 			["crop_y"] = 0.41,
 			["icon"] = true,
-			["init_completed"] = 1,
 			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["additional_triggers"] = {
 			},
@@ -127458,7 +127380,6 @@ WeakAurasSaved = {
 				0.5, -- [4]
 			},
 			["customTextUpdate"] = "update",
-			["init_completed"] = 1,
 			["fontSize"] = 13,
 			["id"] = "Zen Meditation Usable",
 			["stacksContainment"] = "INSIDE",
@@ -127702,6 +127623,42 @@ WeakAurasSaved = {
 			},
 			["height"] = 32,
 			["xOffset"] = 0,
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
+			["parent"] = "Charged Guard 3.0",
+			["fontSize"] = 13,
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["anchorPoint"] = "CENTER",
+			["inverse"] = false,
+			["mirror"] = false,
+			["stickyDuration"] = false,
+			["regionType"] = "icon",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["blendMode"] = "BLEND",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["frameStrata"] = 1,
+			["additional_triggers"] = {
+			},
+			["icon"] = true,
+			["stacksContainment"] = "INSIDE",
+			["zoom"] = 0,
+			["auto"] = true,
+			["compress"] = false,
+			["id"] = "Charged Guard Unusable",
+			["customTextUpdate"] = "update",
+			["alpha"] = 1,
+			["width"] = 32,
 			["load"] = {
 				["talent"] = {
 					["single"] = 9,
@@ -127745,51 +127702,14 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["selfPoint"] = "CENTER",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
 			["backgroundColor"] = {
 				0.5, -- [1]
 				0.5, -- [2]
 				0.5, -- [3]
 				0.5, -- [4]
 			},
-			["inverse"] = false,
-			["mirror"] = false,
-			["fontSize"] = 13,
-			["regionType"] = "icon",
-			["stickyDuration"] = false,
-			["blendMode"] = "BLEND",
-			["customTextUpdate"] = "update",
-			["frameStrata"] = 1,
-			["init_completed"] = 1,
-			["additional_triggers"] = {
-			},
-			["icon"] = true,
-			["stacksContainment"] = "INSIDE",
-			["zoom"] = 0,
-			["auto"] = true,
-			["compress"] = false,
-			["id"] = "Charged Guard Unusable",
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
-			["alpha"] = 1,
-			["width"] = 32,
-			["crop_y"] = 0.41,
-			["anchorPoint"] = "CENTER",
 			["numTriggers"] = 1,
-			["parent"] = "Charged Guard 3.0",
+			["selfPoint"] = "CENTER",
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\ability_monk_guard",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -128421,12 +128341,7 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["foregroundColor"] = {
-				1, -- [1]
-				1, -- [2]
-				1, -- [3]
-				1, -- [4]
-			},
+			["fontSize"] = 13,
 			["textColor"] = {
 				1, -- [1]
 				1, -- [2]
@@ -128434,16 +128349,11 @@ WeakAurasSaved = {
 				1, -- [4]
 			},
 			["height"] = 32,
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = true,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Crane's Zeal Buff Missing MW",
-				},
-				["finish"] = {
-				},
-				["init"] = {
-				},
+			["color"] = {
+				1, -- [1]
+				1, -- [2]
+				1, -- [3]
+				0.75, -- [4]
 			},
 			["load"] = {
 				["talent"] = {
@@ -128487,38 +128397,26 @@ WeakAurasSaved = {
 				},
 			},
 			["crop_x"] = 0.41,
-			["color"] = {
+			["untrigger"] = {
+				["spellName"] = 116680,
+			},
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " ",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["icon"] = true,
+			["inverse"] = false,
+			["mirror"] = false,
+			["desaturateForeground"] = false,
+			["regionType"] = "icon",
+			["xOffset"] = 0,
+			["blendMode"] = "BLEND",
+			["foregroundColor"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
-				0.75, -- [4]
+				1, -- [4]
 			},
-			["fontSize"] = 13,
-			["displayStacks"] = " ",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["customTextUpdate"] = "update",
-			["inverse"] = false,
-			["mirror"] = false,
-			["stickyDuration"] = false,
-			["regionType"] = "icon",
-			["animation"] = {
-				["start"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["main"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-				["finish"] = {
-					["duration_type"] = "seconds",
-					["type"] = "none",
-				},
-			},
-			["blendMode"] = "BLEND",
-			["xOffset"] = 0,
 			["frameStrata"] = 1,
-			["init_completed"] = 1,
 			["additional_triggers"] = {
 				{
 					["trigger"] = {
@@ -128544,15 +128442,36 @@ WeakAurasSaved = {
 			["auto"] = true,
 			["compress"] = false,
 			["id"] = "Crane's Zeal Buff Missing MW",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = true,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Crane's Zeal Buff Missing MW",
+				},
+				["finish"] = {
+				},
+				["init"] = {
+				},
+			},
 			["alpha"] = 1,
 			["width"] = 32,
-			["desaturateForeground"] = false,
-			["icon"] = true,
-			["numTriggers"] = 2,
-			["untrigger"] = {
-				["spellName"] = 116680,
+			["animation"] = {
+				["start"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["main"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
+				["finish"] = {
+					["duration_type"] = "seconds",
+					["type"] = "none",
+				},
 			},
+			["stickyDuration"] = false,
+			["numTriggers"] = 2,
+			["customTextUpdate"] = "update",
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\ability_mount_cranemountpurple",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -129237,7 +129156,6 @@ WeakAurasSaved = {
 			},
 			["regionType"] = "aurabar",
 			["stacks"] = false,
-			["init_completed"] = 1,
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
 			["stacksFont"] = "ABF",
@@ -130734,10 +130652,29 @@ WeakAurasSaved = {
 			["desaturate"] = true,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["fontSize"] = 14,
+			["yOffset"] = 0,
 			["backgroundOffset"] = 2,
 			["height"] = 32,
 			["desaturateForeground"] = false,
+			["crop_y"] = 0.41,
+			["crop_x"] = 0.41,
+			["selfPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["displayStacks"] = " %s",
+			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
+			["actions"] = {
+				["start"] = {
+					["do_glow"] = false,
+					["glow_action"] = "show",
+					["glow_frame"] = "WeakAuras:Keg Smash Icon",
+				},
+				["init"] = {
+				},
+				["finish"] = {
+				},
+			},
+			["numTriggers"] = 1,
+			["mirror"] = false,
 			["load"] = {
 				["use_never"] = false,
 				["talent"] = {
@@ -130781,19 +130718,10 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["crop_x"] = 0.41,
-			["selfPoint"] = "CENTER",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
-			["displayStacks"] = " %s",
-			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["crop_y"] = 0.41,
-			["numTriggers"] = 1,
-			["mirror"] = false,
-			["icon"] = true,
 			["regionType"] = "icon",
-			["stickyDuration"] = false,
+			["parent"] = "Raging Blow 1.0",
 			["blendMode"] = "BLEND",
-			["xOffset"] = 0,
+			["stickyDuration"] = false,
 			["alpha"] = 1,
 			["id"] = "Raging Blow Unusable",
 			["anchorPoint"] = "CENTER",
@@ -130803,21 +130731,11 @@ WeakAurasSaved = {
 			["compress"] = false,
 			["additional_triggers"] = {
 			},
-			["yOffset"] = 0,
+			["xOffset"] = 0,
 			["frameStrata"] = 1,
 			["width"] = 32,
-			["parent"] = "Raging Blow 1.0",
-			["actions"] = {
-				["start"] = {
-					["do_glow"] = false,
-					["glow_action"] = "show",
-					["glow_frame"] = "WeakAuras:Keg Smash Icon",
-				},
-				["init"] = {
-				},
-				["finish"] = {
-				},
-			},
+			["icon"] = true,
+			["fontSize"] = 14,
 			["inverse"] = false,
 			["customTextUpdate"] = "update",
 			["orientation"] = "VERTICAL",
@@ -130895,6 +130813,12 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
+			["desaturateForeground"] = false,
+			["backgroundOffset"] = 2,
+			["height"] = 32,
+			["stickyDuration"] = false,
+			["crop_y"] = 0.41,
+			["displayIcon"] = "Interface\\Icons\\ability_monk_chibrew",
 			["load"] = {
 				["talent"] = {
 					["single"] = 9,
@@ -130937,23 +130861,17 @@ WeakAurasSaved = {
 					},
 				},
 			},
-			["backgroundOffset"] = 2,
-			["height"] = 32,
-			["desaturateForeground"] = false,
-			["crop_y"] = 0.41,
-			["displayIcon"] = "Interface\\Icons\\ability_monk_chibrew",
-			["stickyDuration"] = false,
 			["fontSize"] = 14,
 			["displayStacks"] = " ",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["customTextUpdate"] = "update",
+			["yOffset"] = 0,
 			["numTriggers"] = 2,
 			["mirror"] = false,
-			["selfPoint"] = "CENTER",
+			["anchorPoint"] = "CENTER",
 			["regionType"] = "icon",
-			["xOffset"] = 0,
+			["parent"] = "Chi Brew 1.0 MW",
 			["blendMode"] = "BLEND",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["xOffset"] = 0,
 			["alpha"] = 1,
 			["id"] = "Chi Brew Usable with Less Than 2 Chi MW",
 			["icon"] = true,
@@ -130992,10 +130910,10 @@ WeakAurasSaved = {
 			},
 			["frameStrata"] = 1,
 			["width"] = 32,
-			["parent"] = "Chi Brew 1.0 MW",
-			["anchorPoint"] = "CENTER",
+			["selfPoint"] = "CENTER",
+			["customTextUpdate"] = "update",
 			["inverse"] = false,
-			["yOffset"] = 0,
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["orientation"] = "VERTICAL",
 			["crop_x"] = 0.41,
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -131701,10 +131619,6 @@ WeakAurasSaved = {
 			["desaturate"] = false,
 			["rotation"] = 0,
 			["font"] = "ABF",
-			["customTextUpdate"] = "update",
-			["backgroundOffset"] = 2,
-			["height"] = 32,
-			["icon"] = true,
 			["load"] = {
 				["use_never"] = true,
 				["talent"] = {
@@ -131748,12 +131662,16 @@ WeakAurasSaved = {
 					},
 				},
 			},
+			["backgroundOffset"] = 2,
+			["height"] = 32,
+			["customTextUpdate"] = "update",
+			["crop_y"] = 0.41,
 			["crop_x"] = 0.41,
-			["parent"] = "Raging Blow 1.0",
-			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
+			["icon"] = true,
+			["fontSize"] = 14,
 			["displayStacks"] = " %s",
 			["foregroundTexture"] = "Interface/Icons/achievement_brewery_2",
-			["fontSize"] = 14,
+			["stickyDuration"] = false,
 			["numTriggers"] = 2,
 			["mirror"] = false,
 			["actions"] = {
@@ -131768,14 +131686,14 @@ WeakAurasSaved = {
 				},
 			},
 			["regionType"] = "icon",
+			["selfPoint"] = "CENTER",
+			["blendMode"] = "BLEND",
 			["color"] = {
 				1, -- [1]
 				1, -- [2]
 				1, -- [3]
 				0.75, -- [4]
 			},
-			["blendMode"] = "BLEND",
-			["crop_y"] = 0.41,
 			["alpha"] = 1,
 			["additional_triggers"] = {
 				{
@@ -131804,10 +131722,10 @@ WeakAurasSaved = {
 			["yOffset"] = 0,
 			["frameStrata"] = 1,
 			["width"] = 32,
-			["selfPoint"] = "CENTER",
+			["backgroundTexture"] = "Textures\\SpellActivationOverlays\\Eclipse_Sun",
 			["desaturateForeground"] = false,
 			["inverse"] = false,
-			["stickyDuration"] = false,
+			["parent"] = "Raging Blow 1.0",
 			["orientation"] = "VERTICAL",
 			["displayIcon"] = "Interface\\Icons\\spell_warrior_wildstrike",
 			["stacksPoint"] = "BOTTOMRIGHT",
@@ -131957,7 +131875,6 @@ WeakAurasSaved = {
 				0.5, -- [3]
 				0.5, -- [4]
 			},
-			["init_completed"] = 1,
 			["icon"] = true,
 			["id"] = "Zen Meditation Unusable",
 			["stacksContainment"] = "INSIDE",
@@ -133768,7 +133685,6 @@ WeakAurasSaved = {
 			["blendMode"] = "BLEND",
 			["anchorPoint"] = "CENTER",
 			["yOffset"] = 0,
-			["init_completed"] = 1,
 			["customTextUpdate"] = "update",
 			["id"] = "Rushing Jade Wind Usable BM",
 			["stacksContainment"] = "INSIDE",
@@ -134103,7 +134019,6 @@ WeakAurasSaved = {
 			["regionType"] = "aurabar",
 			["stacks"] = false,
 			["blendMode"] = "BLEND",
-			["init_completed"] = 1,
 			["texture"] = "BantoBar",
 			["textFont"] = "ABF",
 			["zoom"] = 0,

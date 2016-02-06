@@ -14,8 +14,8 @@ EPGPLootMaster = {
 	},
 	["profiles"] = {
 		["Comet - Illidan"] = {
-			["hideMLOnCombat"] = false,
 			["auto_announce_threshold"] = 0,
+			["hideMLOnCombat"] = false,
 		},
 		["Metal - Illidan"] = {
 		},

@@ -16,14 +16,7 @@ H: 1
 Frame: DBMMinimapButton
 FrameLevel: 3
 Anchor: TOPRIGHT
-X: -160
-Y: -60
+X: -172
+Y: -70
 W: 32
 H: 32
-Frame: DBM_GUI_OptionsFrame
-FrameLevel: 5
-Anchor: TOPLEFT
-X: 151
-Y: -170
-W: 800
-H: 510

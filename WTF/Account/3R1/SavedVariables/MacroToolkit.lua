@@ -21,14 +21,14 @@ MacroToolkitDB = {
 		},
 	},
 	["profileKeys"] = {
-		["Metal - Illidan"] = "profile",
+		["Metal - Illidan"] = "Comet - Illidan",
 		["Plane - Illidan"] = "profile",
 		["Natal - Illidan"] = "profile",
 		["Colton - Dark Iron"] = "profile",
 		["Ereinion - Dark Iron"] = "profile",
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Pandatal - Illidan"] = "Comet - Illidan",
-		["Evan - Illidan"] = "profile",
+		["Evan - Illidan"] = "Comet - Illidan",
 		["Combustion - Illidan"] = "profile",
 	},
 	["profiles"] = {
@@ -51,6 +51,7 @@ MacroToolkitDB = {
 		["profile"] = {
 			["y"] = 486.99951171875,
 			["x"] = 1045.39929199219,
+			["override"] = true,
 			["fonts"] = {
 				["edfont"] = "ABF",
 				["edsize"] = 12,
@@ -60,7 +61,6 @@ MacroToolkitDB = {
 				["errsize"] = 12,
 				["errfont"] = "ABF",
 			},
-			["override"] = true,
 		},
 	},
 }
