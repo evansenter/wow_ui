@@ -534,7 +534,7 @@ local function buildBlacklist(...)
 		elseif entry ~= "" then
 			if find(entry, "%[") and find(entry, "%]") then
 				--For some reason the entry was not treated as a valid item. Extract the item name.
-				entry = string.match(entry, "%[(.*)%]")
+				entry = match(entry, "%[(.*)%]")
 			end
 			blackListQueries[#blackListQueries+1] = entry
 		end
@@ -558,13 +558,13 @@ function B.Sort(bags, sorter, invertDirection)
 		if link and blackList[GetItemInfo(link)] then
 			blackListedSlots[bagSlot] = true
 		end
-		
+
 		if not blackListedSlots[bagSlot] then
 			for key,itemsearchquery in pairs(blackListQueries) do
-				if Search:Matches(link,itemsearchquery) then					
+				if Search:Matches(link,itemsearchquery) then
 					blackListedSlots[bagSlot] = true
 				end
-			end	
+			end
 		end
 
 		if not blackListedSlots[bagSlot] then

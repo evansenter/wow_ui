@@ -411,6 +411,10 @@ L["When you go AFK display the AFK screen."] = true;
 L["World Map Coordinates"] = true;
 
 --Media
+L["Applies the font and font size settings throughout the entire user interface. Note: Some font size settings will be skipped due to them having a smaller font size by default."] = true;
+L["Applies the primary texture to all statusbars."] = true;
+L["Apply Font To All"] = true;
+L["Apply Texture To All"] = true;
 L["Backdrop color of transparent frames"] = "透明框架的背景颜色"
 L["Backdrop Color"] = "背景颜色"
 L["Backdrop Faded Color"] = "背景透明色"
@@ -916,7 +920,6 @@ L["Select an additional filter to use. If the selected filter is a whitelist and
 L["Select Filter"] = "选择过滤器"
 L["Select Spell"] = "选择技能"
 L["Select the display method of the portrait."] = "选择头像的显示方式"
-L["Set space between each aura icon."] = true;
 L["Set the filter type, blacklisted filters hide any aura on the like and show all else, whitelisted filters show any aura on the filter and hide all else."] = "设定过滤器类型, '黑名单'会隐藏名单里面的光环, '白名单'则显示名单里的光环"
 L["Set the font size for unitframes."] = "设置单位框架字体尺寸."
 L["Set the order that the group will sort."] = "设置组排序的顺序."
@@ -928,6 +931,7 @@ L["Shadow Orbs"] = "暗影宝珠"
 L["Show a incomming heal prediction bar on the unitframe. Also display a slightly different colored bar for incoming overheals."] = "在单位框架中显示即将回复的的预测治疗量，过量治疗则以不同颜色显示。"
 L["Show Aura From Other Players"] = "显示其他玩家的光环"
 L["Show Auras"] = "显示光环"
+L["Show Dispellable Debuffs"] = true;
 L["Show For DPS"] = true;
 L["Show For Healers"] = true;
 L["Show For Tanks"] = true;

@@ -116,7 +116,7 @@ P['general'] = {
 
 --Bags
 P['bags'] = {
-    ['sortInverted'] = true,
+	['sortInverted'] = true,
 	['xOffset'] = 0,
 	['yOffset'] = 0,
 	['xOffsetBank'] = 0,
@@ -1678,6 +1678,7 @@ P['unitframe'] = {
 			},
 			['rdebuffs'] = {
 				['enable'] = false,
+				["showDispellableDebuff"] = true,
 				['fontSize'] = 10,
 				["font"] = "ElvUI Font",
 				["fontOutline"] = "OUTLINE",
@@ -1856,6 +1857,7 @@ P['unitframe'] = {
 			},
 			['rdebuffs'] = {
 				['enable'] = true,
+				["showDispellableDebuff"] = true,
 				['fontSize'] = 10,
 				["font"] = "ElvUI Font",
 				["fontOutline"] = "OUTLINE",
@@ -2000,6 +2002,7 @@ P['unitframe'] = {
 			},
 			['rdebuffs'] = {
 				['enable'] = false,
+				["showDispellableDebuff"] = true,
 				['fontSize'] = 10,
 				["font"] = "ElvUI Font",
 				["fontOutline"] = "OUTLINE",
@@ -2146,6 +2149,7 @@ P['unitframe'] = {
 			},
 			['rdebuffs'] = {
 				['enable'] = true,
+				["showDispellableDebuff"] = true,
 				['fontSize'] = 10,
 				["font"] = "ElvUI Font",
 				["fontOutline"] = "OUTLINE",
@@ -2237,6 +2241,7 @@ P['unitframe'] = {
 			},
 			['rdebuffs'] = {
 				['enable'] = true,
+				["showDispellableDebuff"] = true,
 				['fontSize'] = 10,
 				["font"] = "ElvUI Font",
 				["fontOutline"] = "OUTLINE",
@@ -2324,6 +2329,7 @@ P['unitframe'] = {
 			},
 			['rdebuffs'] = {
 				['enable'] = true,
+				["showDispellableDebuff"] = true,
 				['fontSize'] = 10,
 				["font"] = "ElvUI Font",
 				["fontOutline"] = "OUTLINE",

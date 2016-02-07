@@ -411,6 +411,10 @@ L["When you go AFK display the AFK screen."] = true;
 L["World Map Coordinates"] = true;
 
 --Media
+L["Applies the font and font size settings throughout the entire user interface. Note: Some font size settings will be skipped due to them having a smaller font size by default."] = true;
+L["Applies the primary texture to all statusbars."] = true;
+L["Apply Font To All"] = true;
+L["Apply Texture To All"] = true;
 L["Backdrop color of transparent frames"] = "Color de fondo de los marcos transparentes."
 L["Backdrop Color"] = "Color de Fondo"
 L["Backdrop Faded Color"] = "Color Atenuado de Fondo"
@@ -916,7 +920,6 @@ L["Select an additional filter to use. If the selected filter is a whitelist and
 L["Select Filter"] = "Seleccionar Filtro"
 L["Select Spell"] = "Seleccionar Hechizo"
 L["Select the display method of the portrait."] = "Selecciona el método de despliegue del retrato."
-L["Set space between each aura icon."] = true;
 L["Set the filter type, blacklisted filters hide any aura on the like and show all else, whitelisted filters show any aura on the filter and hide all else."] = "Establece el tipo de filtro, los filtros de lista negra ocultan cualquier aura en la lista y muestra el resto, la  lista blanca muestra los auras de la lista y oculta el resto."
 L["Set the font size for unitframes."] = "Establece el tamaño de la fuente para los marcos de unidad."
 L["Set the order that the group will sort."] = "Establece el orden en que el grupo será organizado."
@@ -928,6 +931,7 @@ L["Shadow Orbs"] = "Esferas Sombrías"
 L["Show a incomming heal prediction bar on the unitframe. Also display a slightly different colored bar for incoming overheals."] = "Muestra una barra de predicción de sanación en el marco de unidad. También muestra una barra ligeramente coloreada para sobresanaciones recibidas."
 L["Show Aura From Other Players"] = "Mostrar Auras de Otros Jugadores"
 L["Show Auras"] = "Mostrar Auras"
+L["Show Dispellable Debuffs"] = true;
 L["Show For DPS"] = true;
 L["Show For Healers"] = true;
 L["Show For Tanks"] = true;

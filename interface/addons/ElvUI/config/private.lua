@@ -33,7 +33,7 @@ V["nameplate"] = {
 V['auras'] = {
 	['enable'] = true,
 	['disableBlizzard'] = true,
-	
+
 	["masque"] = {
 		["buffs"] = false,
 		["debuffs"] = false,
@@ -110,6 +110,7 @@ V['skins'] = {
 		['itemUpgrade'] = true,
 		["addonManager"] = true,
 		["mirrorTimers"] = true,
+		["objectiveTracker"] = true,
 	},
 }
 

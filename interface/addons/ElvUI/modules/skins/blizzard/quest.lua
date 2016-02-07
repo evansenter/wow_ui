@@ -20,16 +20,8 @@ end
 
 local function LoadSkin()
 	if E.private.skins.blizzard.enable ~= true or E.private.skins.blizzard.quest ~= true then return end
-	ObjectiveTrackerBlocksFrame.QuestHeader.Background:Kill()
-
-	--[[ObjectiveTrackerFrame.HeaderMenu.MinimizeButton:SetAlpha(0)
-	local b = CreateFrame("Button", nil, ObjectiveTrackerFrame.QuestHeader)
-	b:Point("TOPLEFT",ObjectiveTrackerFrame.QuestHeader, "TOPLEFT")
-	b:Point("BOTTOMRIGHT", ObjectiveTrackerFrame.HeaderMenu.MinimizeButton, "BOTTOMRIGHT")
-	b:SetScript("OnClick", ObjectiveTrackerFrame.HeaderMenu.MinimizeButton:GetScript("OnClick"))]]
 	S:HandleScrollBar(QuestProgressScrollFrameScrollBar)
 	S:HandleScrollBar(QuestRewardScrollFrameScrollBar)
-	ObjectiveTrackerBlocksFrame.QuestHeader.Text:FontTemplate()
 
 
 	S:HandleScrollBar(QuestDetailScrollFrameScrollBar)
@@ -99,21 +91,21 @@ local function LoadSkin()
 
 			questItem.Name:SetTextColor(1, 1, 1)
 		end
-    end)
+	end)
 
-    hooksecurefunc("QuestInfo_GetRewardButton", function(rewardsFrame, index)
-    	local rewardButton = rewardsFrame.RewardButtons[index];
-    	if(not rewardButton.skinned) then
-    		rewardButton.NameFrame:Hide()
-    		rewardButton.Icon:SetTexCoord(unpack(E.TexCoords))
-    		rewardButton:CreateBackdrop("Default")
-    		rewardButton.backdrop:SetOutside(rewardButton.Icon)
-    		rewardButton.Icon:SetDrawLayer("OVERLAY")
-    		rewardButton.Count:SetDrawLayer("OVERLAY")
+	hooksecurefunc("QuestInfo_GetRewardButton", function(rewardsFrame, index)
+		local rewardButton = rewardsFrame.RewardButtons[index];
+		if(not rewardButton.skinned) then
+			rewardButton.NameFrame:Hide()
+			rewardButton.Icon:SetTexCoord(unpack(E.TexCoords))
+			rewardButton:CreateBackdrop("Default")
+			rewardButton.backdrop:SetOutside(rewardButton.Icon)
+			rewardButton.Icon:SetDrawLayer("OVERLAY")
+			rewardButton.Count:SetDrawLayer("OVERLAY")
 
 			rewardButton.skinned = true
-    	end
-    end)
+		end
+	end)
 
 
 	--Quest Frame
