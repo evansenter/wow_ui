@@ -2,20 +2,19 @@
 DataStore_TalentsDB = {
 	["profileKeys"] = {
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
+		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Metal - Illidan"] = "Metal - Illidan",
-		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
-		["Pandatal - Illidan"] = "Pandatal - Illidan",
+		["Evan - Illidan"] = "Evan - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Natal - Illidan"] = "Natal - Illidan",
-		["Evan - Illidan"] = "Evan - Illidan",
-		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Pandatal - Illidan"] = "Pandatal - Illidan",
+		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
 	},
 	["global"] = {
 		["Characters"] = {
 			["Default.Dark Iron.Ereinion"] = {
 				["ActiveTalents"] = 1,
 				["lastUpdate"] = 1424741767,
-				["Class"] = "WARLOCK",
 				["GlyphList"] = {
 					11, -- [1]
 					4378, -- [2]
@@ -56,10 +55,12 @@ DataStore_TalentsDB = {
 					4516, -- [37]
 					4404, -- [38]
 				},
+				["Class"] = "WARLOCK",
 			},
 			["Default.Illidan.Evan"] = {
 				["ActiveTalents"] = 1,
 				["lastUpdate"] = 1454777600,
+				["Class"] = "PRIEST",
 				["GlyphList"] = {
 					11, -- [1]
 					11418, -- [2]
@@ -118,12 +119,57 @@ DataStore_TalentsDB = {
 					16844, -- [55]
 					16796, -- [56]
 				},
-				["Class"] = "PRIEST",
+			},
+			["Default.Dark Iron.Colton"] = {
+				["ActiveTalents"] = 1,
+				["lastUpdate"] = 1424741732,
+				["GlyphList"] = {
+					11, -- [1]
+					8202, -- [2]
+					8426, -- [3]
+					12298, -- [4]
+					12314, -- [5]
+					8330, -- [6]
+					12346, -- [7]
+					8314, -- [8]
+					8410, -- [9]
+					8250, -- [10]
+					8394, -- [11]
+					8442, -- [12]
+					8922, -- [13]
+					8346, -- [14]
+					8490, -- [15]
+					8906, -- [16]
+					8522, -- [17]
+					17746, -- [18]
+					8258, -- [19]
+					17794, -- [20]
+					17762, -- [21]
+					17778, -- [22]
+					8498, -- [23]
+					17826, -- [24]
+					17042, -- [25]
+					17842, -- [26]
+					17858, -- [27]
+					17010, -- [28]
+					13, -- [29]
+					19276, -- [30]
+					8940, -- [31]
+					8892, -- [32]
+					8300, -- [33]
+					8236, -- [34]
+					8364, -- [35]
+					8860, -- [36]
+					12380, -- [37]
+					8468, -- [38]
+					8868, -- [39]
+					17188, -- [40]
+				},
+				["Class"] = "DEATHKNIGHT",
 			},
 			["Default.Illidan.Pandatal"] = {
 				["ActiveTalents"] = 1,
 				["lastUpdate"] = 1454778284,
-				["Class"] = "PALADIN",
 				["GlyphList"] = {
 					11, -- [1]
 					3018, -- [2]
@@ -175,99 +221,65 @@ DataStore_TalentsDB = {
 					7252, -- [48]
 					7268, -- [49]
 				},
+				["Class"] = "PALADIN",
 			},
-			["Default.Illidan.Combustion"] = {
-				["ActiveTalents"] = 2,
-				["lastUpdate"] = 1424741664,
+			["Default.Illidan.Metal"] = {
+				["ActiveTalents"] = 1,
+				["lastUpdate"] = 1454776977,
 				["GlyphList"] = {
 					11, -- [1]
-					5018, -- [2]
-					10426, -- [3]
-					5034, -- [4]
-					5066, -- [5]
-					5178, -- [6]
-					13946, -- [7]
-					11210, -- [8]
-					5098, -- [9]
-					9466, -- [10]
-					5146, -- [11]
-					5290, -- [12]
-					14858, -- [13]
-					5274, -- [14]
-					5210, -- [15]
-					9786, -- [16]
-					11162, -- [17]
-					5306, -- [18]
-					5162, -- [19]
-					11146, -- [20]
-					18130, -- [21]
-					18146, -- [22]
-					13, -- [23]
-					7228, -- [24]
-					17308, -- [25]
-					7180, -- [26]
-					5260, -- [27]
-					17292, -- [28]
-					11180, -- [29]
-					5132, -- [30]
-					14780, -- [31]
-					17276, -- [32]
+					7962, -- [2]
+					7914, -- [3]
+					14906, -- [4]
+					18906, -- [5]
+					12218, -- [6]
+					7994, -- [7]
+					7866, -- [8]
+					17178, -- [9]
+					7946, -- [10]
+					18938, -- [11]
+					7882, -- [12]
+					7770, -- [13]
+					7834, -- [14]
+					8154, -- [15]
+					14922, -- [16]
+					8122, -- [17]
+					7930, -- [18]
+					8042, -- [19]
+					12282, -- [20]
+					12266, -- [21]
+					8090, -- [22]
+					7802, -- [23]
+					12234, -- [24]
+					8138, -- [25]
+					12202, -- [26]
+					18914, -- [27]
+					19010, -- [28]
+					18946, -- [29]
+					18962, -- [30]
+					18978, -- [31]
+					18994, -- [32]
+					13, -- [33]
+					16332, -- [34]
+					7852, -- [35]
+					15868, -- [36]
+					15852, -- [37]
+					7788, -- [38]
+					12252, -- [39]
+					7740, -- [40]
+					17596, -- [41]
+					13628, -- [42]
+					17612, -- [43]
+					7748, -- [44]
+					7812, -- [45]
+					17572, -- [46]
+					17620, -- [47]
 				},
-				["Class"] = "MAGE",
-			},
-			["Default.Illidan.Comet"] = {
-				["ActiveTalents"] = 2,
-				["lastUpdate"] = 1454776459,
-				["GlyphList"] = {
-					11, -- [1]
-					16250, -- [2]
-					16506, -- [3]
-					19354, -- [4]
-					18170, -- [5]
-					16570, -- [6]
-					18186, -- [7]
-					19402, -- [8]
-					18202, -- [9]
-					16490, -- [10]
-					16410, -- [11]
-					18266, -- [12]
-					15978, -- [13]
-					18218, -- [14]
-					16346, -- [15]
-					16426, -- [16]
-					16314, -- [17]
-					16522, -- [18]
-					16650, -- [19]
-					15962, -- [20]
-					18234, -- [21]
-					16218, -- [22]
-					18282, -- [23]
-					16026, -- [24]
-					16554, -- [25]
-					16234, -- [26]
-					16618, -- [27]
-					16186, -- [28]
-					18250, -- [29]
-					18298, -- [30]
-					15994, -- [31]
-					13, -- [32]
-					16892, -- [33]
-					16732, -- [34]
-					16668, -- [35]
-					16284, -- [36]
-					16636, -- [37]
-					16540, -- [38]
-					16460, -- [39]
-					16476, -- [40]
-					16716, -- [41]
-					16684, -- [42]
-				},
-				["Class"] = "MONK",
+				["Class"] = "WARRIOR",
 			},
 			["Default.Illidan.Natal"] = {
 				["ActiveTalents"] = 1,
 				["lastUpdate"] = 1424741647,
-				["Class"] = "SHAMAN",
 				["GlyphList"] = {
 					11, -- [1]
 					3418, -- [2]
@@ -327,106 +339,94 @@ DataStore_TalentsDB = {
 					17476, -- [56]
 					9796, -- [57]
 				},
+				["Class"] = "SHAMAN",
 			},
-			["Default.Illidan.Metal"] = {
-				["ActiveTalents"] = 1,
-				["lastUpdate"] = 1454776977,
-				["Class"] = "WARRIOR",
+			["Default.Illidan.Comet"] = {
+				["ActiveTalents"] = 2,
+				["lastUpdate"] = 1454810097,
+				["Class"] = "MONK",
 				["GlyphList"] = {
 					11, -- [1]
-					7962, -- [2]
-					7914, -- [3]
-					14906, -- [4]
-					18906, -- [5]
-					12218, -- [6]
-					7994, -- [7]
-					7866, -- [8]
-					17178, -- [9]
-					7946, -- [10]
-					18938, -- [11]
-					7882, -- [12]
-					7770, -- [13]
-					7834, -- [14]
-					8154, -- [15]
-					14922, -- [16]
-					8122, -- [17]
-					7930, -- [18]
-					8042, -- [19]
-					12282, -- [20]
-					12266, -- [21]
-					8090, -- [22]
-					7802, -- [23]
-					12234, -- [24]
-					8138, -- [25]
-					12202, -- [26]
-					18914, -- [27]
-					19010, -- [28]
-					18946, -- [29]
-					18962, -- [30]
-					18978, -- [31]
-					18994, -- [32]
-					13, -- [33]
-					16332, -- [34]
-					7852, -- [35]
-					15868, -- [36]
-					15852, -- [37]
-					7788, -- [38]
-					12252, -- [39]
-					7740, -- [40]
-					17596, -- [41]
-					13628, -- [42]
-					17612, -- [43]
-					7748, -- [44]
-					7812, -- [45]
-					17572, -- [46]
-					17620, -- [47]
+					16250, -- [2]
+					16506, -- [3]
+					19354, -- [4]
+					18170, -- [5]
+					16570, -- [6]
+					18186, -- [7]
+					19402, -- [8]
+					18202, -- [9]
+					16490, -- [10]
+					16410, -- [11]
+					18266, -- [12]
+					15978, -- [13]
+					18218, -- [14]
+					16346, -- [15]
+					16426, -- [16]
+					16314, -- [17]
+					16522, -- [18]
+					16650, -- [19]
+					15962, -- [20]
+					18234, -- [21]
+					16218, -- [22]
+					18282, -- [23]
+					16026, -- [24]
+					16554, -- [25]
+					16234, -- [26]
+					16618, -- [27]
+					16186, -- [28]
+					18250, -- [29]
+					18298, -- [30]
+					15994, -- [31]
+					13, -- [32]
+					16892, -- [33]
+					16732, -- [34]
+					16668, -- [35]
+					16284, -- [36]
+					16636, -- [37]
+					16540, -- [38]
+					16460, -- [39]
+					16476, -- [40]
+					16716, -- [41]
+					16684, -- [42]
 				},
 			},
-			["Default.Dark Iron.Colton"] = {
-				["ActiveTalents"] = 1,
-				["lastUpdate"] = 1424741732,
-				["Class"] = "DEATHKNIGHT",
+			["Default.Illidan.Combustion"] = {
+				["ActiveTalents"] = 2,
+				["lastUpdate"] = 1424741664,
+				["Class"] = "MAGE",
 				["GlyphList"] = {
 					11, -- [1]
-					8202, -- [2]
-					8426, -- [3]
-					12298, -- [4]
-					12314, -- [5]
-					8330, -- [6]
-					12346, -- [7]
-					8314, -- [8]
-					8410, -- [9]
-					8250, -- [10]
-					8394, -- [11]
-					8442, -- [12]
-					8922, -- [13]
-					8346, -- [14]
-					8490, -- [15]
-					8906, -- [16]
-					8522, -- [17]
-					17746, -- [18]
-					8258, -- [19]
-					17794, -- [20]
-					17762, -- [21]
-					17778, -- [22]
-					8498, -- [23]
-					17826, -- [24]
-					17042, -- [25]
-					17842, -- [26]
-					17858, -- [27]
-					17010, -- [28]
-					13, -- [29]
-					19276, -- [30]
-					8940, -- [31]
-					8892, -- [32]
-					8300, -- [33]
-					8236, -- [34]
-					8364, -- [35]
-					8860, -- [36]
-					12380, -- [37]
-					8468, -- [38]
-					8868, -- [39]
-					17188, -- [40]
+					5018, -- [2]
+					10426, -- [3]
+					5034, -- [4]
+					5066, -- [5]
+					5178, -- [6]
+					13946, -- [7]
+					11210, -- [8]
+					5098, -- [9]
+					9466, -- [10]
+					5146, -- [11]
+					5290, -- [12]
+					14858, -- [13]
+					5274, -- [14]
+					5210, -- [15]
+					9786, -- [16]
+					11162, -- [17]
+					5306, -- [18]
+					5162, -- [19]
+					11146, -- [20]
+					18130, -- [21]
+					18146, -- [22]
+					13, -- [23]
+					7228, -- [24]
+					17308, -- [25]
+					7180, -- [26]
+					5260, -- [27]
+					17292, -- [28]
+					11180, -- [29]
+					5132, -- [30]
+					14780, -- [31]
+					17276, -- [32]
 				},
 			},
 		},
@@ -655,128 +655,128 @@ DataStore_TalentsDB = {
 				[490] = "Bloody Healing",
 				[491] = "Enraged Speed",
 				[214] = "Spirit Walk",
-				[456] = "Seal of Blood",
+				[1171] = "Spiritwalker's Aegis",
 				[492] = "Hindering Strikes",
-				[259] = "Mass Dispel",
+				[292] = "Falling Meteor",
 				[1083] = "Pillar of Light",
-				[190] = "Luminous Charger",
-				[561] = "Immediate Truth",
-				[1058] = "Gateway Attunement",
-				[1068] = "Hand of Sacrifice",
+				[1028] = "Rising Tiger Kick",
+				[271] = "Prayer of Mending",
+				[462] = "Reflective Shield",
+				[278] = "Felguard",
 				[1201] = "Frostbrand Weapon",
-				[289] = "Soulstone",
+				[191] = "Focused Shield",
 				[1202] = "Mind Harvest",
 				[183] = "Double Jeopardy",
 				[215] = "Capacitor Totem",
 				[986] = "Focused Wrath",
 				[1204] = "Army of the Dead",
 				[198] = "Divinity",
+				[192] = "Burden of Guilt",
 				[987] = "Falling Avenger",
-				[494] = "Bloodthirst",
 				[507] = "Resonating Power",
 				[1040] = "Paralysis",
 				[1207] = "Purify Spirit",
 				[988] = "Righteous Retreat",
 				[1208] = "Cleanse",
-				[989] = "Bladed Judgment",
-				[1209] = "Detoxing",
 				[495] = "Rude Interruption",
-				[1211] = "Purification",
-				[184] = "Devotion Aura",
+				[1209] = "Detoxing",
+				[989] = "Bladed Judgment",
 				[216] = "Purge",
+				[184] = "Devotion Aura",
+				[1211] = "Purification",
 				[990] = "Crow Feast",
 				[1212] = "Flying Fists",
 				[735] = "Thunder",
-				[189] = "Consecration",
+				[754] = "Totemic Vigor",
 				[991] = "Burning Anger",
-				[1203] = "Merciful Wrath",
+				[254] = "Fear Ward",
 				[736] = "Feral Spirit",
-				[1009] = "Mass Exorcism",
-				[194] = "Final Wrath",
+				[505] = "Sweeping Strikes",
+				[769] = "Dark Simulacrum",
 				[559] = "Denounce",
 				[737] = "Riptide",
 				[524] = "Icy Touch",
 				[497] = "Blitz",
-				[275] = "Verdant Spheres",
+				[266] = "Renew",
 				[185] = "Holy Wrath",
 				[217] = "Fire Elemental Totem",
-				[496] = "Gag Order",
+				[1187] = "Shattering Throw",
 				[611] = "Remove Curse",
 				[481] = "Enslave Demon",
-				[286] = "Shadow Bolt",
+				[263] = "Power Word: Shield",
 				[276] = "Nightmares",
 				[612] = "Thunderstorm",
-				[280] = "Health Funnel",
+				[519] = "Death Grip",
 				[272] = "Hand of Gul'dan",
 				[996] = "Battle Healer",
-				[1180] = "Strengthened Resolve",
-				[1006] = "Vampiric Embrace",
-				[997] = "Rapid Rolling",
+				[771] = "Death Coil",
+				[252] = "Purify",
 				[499] = "Die by the Sword",
+				[997] = "Rapid Rolling",
 				[277] = "Fear",
 				[186] = "Divine Protection",
 				[218] = "Fire Nova",
 				[998] = "Guard",
-				[508] = "Victory Rush",
+				[515] = "Icebound Fortitude",
 				[279] = "Demon Training",
 				[871] = "Counterspell",
 				[999] = "Zen Meditation",
-				[529] = "Foul Menagerie",
-				[773] = "Tranquil Grip",
-				[261] = "Holy Fire",
-				[1038] = "Touch of Karma",
-				[522] = "Horn of Winter",
-				[518] = "Death's Embrace",
-				[514] = "Geist",
+				[525] = "Enduring Infection",
+				[527] = "Mind Freeze",
+				[516] = "Chains of Ice",
+				[264] = "Spirit of Redemption",
+				[1017] = "Flying Serpent Kick",
+				[557] = "Outbreak",
+				[274] = "Siphon Life",
 				[1001] = "Surging Mist",
-				[502] = "Shield Slam",
+				[1003] = "Mind Flay",
 				[187] = "Templar's Verdict",
 				[219] = "Flame Shock",
 				[251] = "Circle of Healing",
-				[1044] = "Water Roll",
-				[556] = "Unholy Command",
 				[558] = "Corpse Explosion",
-				[1003] = "Mind Flay",
-				[274] = "Siphon Life",
-				[557] = "Outbreak",
-				[1017] = "Flying Serpent Kick",
-				[264] = "Spirit of Redemption",
-				[516] = "Chains of Ice",
-				[527] = "Mind Freeze",
-				[525] = "Enduring Infection",
+				[556] = "Unholy Command",
+				[1044] = "Water Roll",
+				[502] = "Shield Slam",
+				[514] = "Geist",
+				[518] = "Death's Embrace",
+				[522] = "Horn of Winter",
+				[1038] = "Touch of Karma",
+				[261] = "Holy Fire",
+				[773] = "Tranquil Grip",
+				[529] = "Foul Menagerie",
 				[1005] = "Shadow Word: Death",
-				[515] = "Icebound Fortitude",
+				[508] = "Victory Rush",
 				[188] = "Avenging Wrath",
 				[220] = "Wind Shear",
-				[252] = "Purify",
-				[771] = "Death Coil",
+				[1006] = "Vampiric Embrace",
+				[1180] = "Strengthened Resolve",
 				[751] = "Deluge",
-				[519] = "Death Grip",
+				[280] = "Health Funnel",
 				[1007] = "Heavens",
-				[263] = "Power Word: Shield",
+				[286] = "Shadow Bolt",
 				[752] = "Shamanistic Rage",
-				[1187] = "Shattering Throw",
-				[266] = "Renew",
+				[496] = "Gag Order",
+				[275] = "Verdant Spheres",
 				[313] = "Arcane Explosion",
 				[753] = "Hex",
-				[769] = "Dark Simulacrum",
-				[505] = "Sweeping Strikes",
-				[254] = "Fear Ward",
-				[754] = "Totemic Vigor",
+				[194] = "Final Wrath",
+				[1009] = "Mass Exorcism",
+				[1203] = "Merciful Wrath",
+				[189] = "Consecration",
 				[221] = "Frost Shock",
 				[253] = "Fade",
 				[314] = "Blink",
 				[755] = "Drain Life",
-				[192] = "Burden of Guilt",
+				[494] = "Bloodthirst",
 				[1011] = "Transcendence",
-				[191] = "Focused Shield",
-				[278] = "Felguard",
-				[462] = "Reflective Shield",
-				[271] = "Prayer of Mending",
-				[1028] = "Rising Tiger Kick",
+				[289] = "Soulstone",
+				[1068] = "Hand of Sacrifice",
+				[1058] = "Gateway Attunement",
+				[561] = "Immediate Truth",
+				[190] = "Luminous Charger",
 				[757] = "Ember Tap",
-				[292] = "Falling Meteor",
-				[1171] = "Spiritwalker's Aegis",
+				[259] = "Mass Dispel",
+				[456] = "Seal of Blood",
 			},
 		},
 	},
@@ -784,13 +784,13 @@ DataStore_TalentsDB = {
 DataStore_TalentsRefDB = {
 	["profileKeys"] = {
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
+		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Metal - Illidan"] = "Metal - Illidan",
-		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
-		["Pandatal - Illidan"] = "Pandatal - Illidan",
+		["Evan - Illidan"] = "Evan - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Natal - Illidan"] = "Natal - Illidan",
-		["Evan - Illidan"] = "Evan - Illidan",
-		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Pandatal - Illidan"] = "Pandatal - Illidan",
+		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
 	},
 	["global"] = {
 		["DEATHKNIGHT"] = {

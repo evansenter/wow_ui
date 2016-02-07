@@ -2,46 +2,45 @@
 DataStore_CraftsDB = {
 	["profileKeys"] = {
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
+		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Metal - Illidan"] = "Metal - Illidan",
-		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
-		["Pandatal - Illidan"] = "Pandatal - Illidan",
+		["Evan - Illidan"] = "Evan - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Natal - Illidan"] = "Natal - Illidan",
-		["Evan - Illidan"] = "Evan - Illidan",
-		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Pandatal - Illidan"] = "Pandatal - Illidan",
+		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
 	},
 	["global"] = {
 		["Characters"] = {
 			["Default.Dark Iron.Ereinion"] = {
+				["lastUpdate"] = 1424741767,
+				["Prof2"] = "Engineering",
 				["Professions"] = {
 					["Fishing"] = {
 						["MaxRank"] = 375,
 						["Rank"] = 375,
 					},
-					["Engineering"] = {
+					["Tailoring"] = {
 						["MaxRank"] = 450,
-						["Rank"] = 365,
+						["Rank"] = 438,
 					},
 					["First Aid"] = {
 						["MaxRank"] = 450,
 						["Rank"] = 440,
 					},
-					["Tailoring"] = {
+					["Engineering"] = {
 						["MaxRank"] = 450,
-						["Rank"] = 438,
+						["Rank"] = 365,
 					},
 				},
-				["Prof2"] = "Engineering",
-				["lastUpdate"] = 1424741767,
 				["Prof1"] = "Tailoring",
 			},
 			["Default.Illidan.Evan"] = {
-				["lastUpdate"] = 1454777600,
-				["Prof2"] = "Enchanting",
 				["Professions"] = {
 					["Tailoring"] = {
 						["FullLink"] = "|cffffd000|Htrade:Player-57-0583ABC7:158758:197|h[Tailoring]|h|r",
 						["NumCrafts"] = 350,
+						["MaxRank"] = 700,
 						["Crafts"] = {
 							"Draenor Patterns", -- [1]
 							"Reagents and Research", -- [2]
@@ -416,7 +415,6 @@ DataStore_CraftsDB = {
 							223592, -- [371]
 							125840, -- [372]
 						},
-						["MaxRank"] = 700,
 						["Rank"] = 700,
 					},
 					["Archaeology"] = {
@@ -435,7 +433,6 @@ DataStore_CraftsDB = {
 					["First Aid"] = {
 						["FullLink"] = "|cffffd000|Htrade:Player-57-0583ABC7:158741:129|h[First Aid]|h|r",
 						["NumCrafts"] = 6,
-						["MaxRank"] = 700,
 						["Crafts"] = {
 							"Cures of Draenor", -- [1]
 							690162, -- [2]
@@ -447,12 +444,12 @@ DataStore_CraftsDB = {
 							410796, -- [8]
 							13100, -- [9]
 						},
+						["MaxRank"] = 700,
 						["Rank"] = 700,
 					},
 					["Enchanting"] = {
 						["FullLink"] = "|cffffd000|Htrade:Player-57-0583ABC7:158716:333|h[Enchanting]|h|r",
 						["NumCrafts"] = 250,
-						["MaxRank"] = 700,
 						["Crafts"] = {
 							"Draenor Enchanting", -- [1]
 							"Reagents and Research", -- [2]
@@ -726,53 +723,221 @@ DataStore_CraftsDB = {
 							59228, -- [270]
 							57172, -- [271]
 						},
+						["MaxRank"] = 700,
 						["Rank"] = 700,
 					},
 				},
+				["Prof2"] = "Enchanting",
+				["lastUpdate"] = 1454777600,
 				["Prof1"] = "Tailoring",
+			},
+			["Default.Dark Iron.Colton"] = {
+				["lastUpdate"] = 1424741732,
+				["Prof2"] = "Mining",
+				["Professions"] = {
+					["Cooking"] = {
+						["MaxRank"] = 525,
+						["Rank"] = 525,
+					},
+					["Blacksmithing"] = {
+						["MaxRank"] = 525,
+						["Rank"] = 525,
+					},
+					["Archaeology"] = {
+						["MaxRank"] = 75,
+						["Rank"] = 1,
+					},
+					["Fishing"] = {
+						["MaxRank"] = 225,
+						["Rank"] = 185,
+					},
+					["Mining"] = {
+						["MaxRank"] = 525,
+						["Rank"] = 525,
+					},
+					["First Aid"] = {
+						["MaxRank"] = 525,
+						["Rank"] = 525,
+					},
+				},
+				["Prof1"] = "Blacksmithing",
 			},
 			["Default.Illidan.Pandatal"] = {
 				["lastUpdate"] = 1454778284,
 			},
-			["Default.Illidan.Combustion"] = {
-				["lastUpdate"] = 1424741664,
-				["Prof2"] = "Engineering",
+			["Default.Illidan.Metal"] = {
+				["lastUpdate"] = 1454777529,
+				["Prof2"] = "Leatherworking",
 				["Professions"] = {
 					["Cooking"] = {
-						["MaxRank"] = 225,
-						["Rank"] = 210,
+						["FullLink"] = "|cffffd000|Htrade:Player-57-080DF31D:158765:185|h[Cooking]|h|r",
+						["MaxRank"] = 700,
+						["Rank"] = 109,
 					},
+					["Blacksmithing"] = {
+						["FullLink"] = "|cffffd000|Htrade:Player-57-080DF31D:158737:164|h[Blacksmithing]|h|r",
+						["NumCrafts"] = 32,
+						["Crafts"] = {
+							"Draenor Plans", -- [1]
+							"Reagents and Research", -- [2]
+							686762, -- [3]
+							704360, -- [4]
+							"Item Enhancers", -- [5]
+							686832, -- [6]
+							686840, -- [7]
+							686796, -- [8]
+							693420, -- [9]
+							"Armor", -- [10]
+							686821, -- [11]
+							686825, -- [12]
+							686817, -- [13]
+							686813, -- [14]
+							686809, -- [15]
+							686805, -- [16]
+							686801, -- [17]
+							686829, -- [18]
+							686764, -- [19]
+							686768, -- [20]
+							686772, -- [21]
+							"Weapons and Shields", -- [22]
+							712980, -- [23]
+							712972, -- [24]
+							686784, -- [25]
+							686776, -- [26]
+							686788, -- [27]
+							686780, -- [28]
+							686792, -- [29]
+							"Other", -- [30]
+							708676, -- [31]
+							"Antique Plans", -- [32]
+							"Materials", -- [33]
+							587684, -- [34]
+							573020, -- [35]
+							"Weapon Mods", -- [36]
+							10640, -- [37]
+							12460, -- [38]
+							"Chest", -- [39]
+							49040, -- [40]
+							"Bracers", -- [41]
+							10652, -- [42]
+							"Belts", -- [43]
+							571852, -- [44]
+						},
+						["MaxRank"] = 700,
+						["Rank"] = 700,
+					},
+					["Fishing"] = {
+						["MaxRank"] = 700,
+						["Rank"] = 17,
+					},
+					["Leatherworking"] = {
+						["FullLink"] = "|cffffd000|Htrade:Player-57-080DF31D:158752:165|h[Leatherworking]|h|r",
+						["NumCrafts"] = 28,
+						["Cooldowns"] = {
+							"Burnished Leather|10800|1454832000", -- [1]
+						},
+						["Crafts"] = {
+							"Draenor Patterns", -- [1]
+							"Reagents and Research", -- [2]
+							685566, -- [3]
+							704356, -- [4]
+							728484, -- [5]
+							"Armor Enhancers", -- [6]
+							685144, -- [7]
+							685064, -- [8]
+							"Leather Armor", -- [9]
+							685105, -- [10]
+							685040, -- [11]
+							685044, -- [12]
+							685048, -- [13]
+							"Mail Armor", -- [14]
+							685052, -- [15]
+							685056, -- [16]
+							685060, -- [17]
+							"Antique Patterns", -- [18]
+							"Research", -- [19]
+							560160, -- [20]
+							560164, -- [21]
+							"Materials", -- [22]
+							587692, -- [23]
+							571904, -- [24]
+							11524, -- [25]
+							"Embossments", -- [26]
+							498244, -- [27]
+							498252, -- [28]
+							498236, -- [29]
+							"Armor Kits", -- [30]
+							8608, -- [31]
+							"Drums", -- [32]
+							586452, -- [33]
+							"Chest", -- [34]
+							28504, -- [35]
+							"Bracers", -- [36]
+							36236, -- [37]
+							"Belts", -- [38]
+							571864, -- [39]
+							"Boots", -- [40]
+							179812, -- [41]
+							8596, -- [42]
+							"Cloaks", -- [43]
+							36232, -- [44]
+						},
+						["MaxRank"] = 700,
+						["Rank"] = 700,
+					},
+					["First Aid"] = {
+						["FullLink"] = "|cffffd000|Htrade:Player-57-080DF31D:158741:129|h[First Aid]|h|r",
+						["NumCrafts"] = 13,
+						["Crafts"] = {
+							"Cures of Draenor", -- [1]
+							690163, -- [2]
+							690170, -- [3]
+							690165, -- [4]
+							690156, -- [5]
+							"Old Remedies", -- [6]
+							"Bandages", -- [7]
+							410796, -- [8]
+							43360, -- [9]
+							31716, -- [10]
+							31712, -- [11]
+							13112, -- [12]
+							13108, -- [13]
+							13104, -- [14]
+							13100, -- [15]
+							"Antidotes", -- [16]
+							31736, -- [17]
+						},
+						["MaxRank"] = 700,
+						["Rank"] = 700,
+					},
+				},
+				["Prof1"] = "Blacksmithing",
+			},
+			["Default.Illidan.Natal"] = {
+				["lastUpdate"] = 1424741647,
+				["Prof2"] = "Engineering",
+				["Professions"] = {
 					["Engineering"] = {
-						["MaxRank"] = 600,
-						["Rank"] = 600,
+						["MaxRank"] = 450,
+						["Rank"] = 400,
 					},
-					["Alchemy"] = {
-						["MaxRank"] = 600,
-						["Rank"] = 600,
+					["Mining"] = {
+						["MaxRank"] = 450,
+						["Rank"] = 440,
 					},
 					["First Aid"] = {
 						["MaxRank"] = 450,
 						["Rank"] = 450,
 					},
-					["Fishing"] = {
-						["MaxRank"] = 225,
-						["Rank"] = 177,
-					},
 				},
-				["Prof1"] = "Alchemy",
+				["Prof1"] = "Mining",
 			},
 			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1454776818,
-				["Prof2"] = "Jewelcrafting",
 				["Professions"] = {
 					["Cooking"] = {
 						["FullLink"] = "|cffffd000|Htrade:Player-57-05DF4D8D:158765:185|h[Cooking]|h|r",
 						["MaxRank"] = 700,
 						["Rank"] = 1,
-					},
-					["Fishing"] = {
-						["MaxRank"] = 700,
-						["Rank"] = 700,
 					},
 					["Engineering"] = {
 						["FullLink"] = "|cffffd000|Htrade:Player-57-05DF4D8D:158739:202|h[Engineering]|h|r",
@@ -780,6 +945,7 @@ DataStore_CraftsDB = {
 						["Cooldowns"] = {
 							"Gearspring Parts|10800|1454832000", -- [1]
 						},
+						["MaxRank"] = 700,
 						["Crafts"] = {
 							"Draenor Engineering", -- [1]
 							"Reagents and Research", -- [2]
@@ -1024,21 +1190,15 @@ DataStore_CraftsDB = {
 							176628, -- [241]
 							176620, -- [242]
 						},
-						["MaxRank"] = 700,
-						["Rank"] = 700,
-					},
-					["First Aid"] = {
-						["FullLink"] = "|cffffd000|Htrade:Player-57-05DF4D8D:158741:129|h[First Aid]|h|r",
-						["MaxRank"] = 700,
 						["Rank"] = 700,
 					},
 					["Jewelcrafting"] = {
 						["FullLink"] = "|cffffd000|Htrade:Player-57-05DF4D8D:158750:755|h[Jewelcrafting]|h|r",
 						["NumCrafts"] = 401,
 						["Cooldowns"] = {
-							"Taladite Crystal|10800|1454832000", -- [1]
+							"Taladite Crystal|36630.3671875|1454806246", -- [1]
+							"Secrets of Draenor Jewelcrafting|36632.35546875|1454806246", -- [2]
 						},
-						["MaxRank"] = 700,
 						["Crafts"] = {
 							"Draenor Designs", -- [1]
 							"Reagents and Research", -- [2]
@@ -1468,208 +1628,49 @@ DataStore_CraftsDB = {
 							131204, -- [426]
 							129036, -- [427]
 						},
+						["MaxRank"] = 700,
+						["Rank"] = 700,
+					},
+					["First Aid"] = {
+						["FullLink"] = "|cffffd000|Htrade:Player-57-05DF4D8D:158741:129|h[First Aid]|h|r",
+						["MaxRank"] = 700,
+						["Rank"] = 700,
+					},
+					["Fishing"] = {
+						["MaxRank"] = 700,
 						["Rank"] = 700,
 					},
 				},
+				["Prof2"] = "Jewelcrafting",
+				["lastUpdate"] = 1454810097,
 				["Prof1"] = "Engineering",
 			},
-			["Default.Illidan.Natal"] = {
+			["Default.Illidan.Combustion"] = {
 				["Professions"] = {
-					["Engineering"] = {
-						["MaxRank"] = 450,
-						["Rank"] = 400,
+					["Cooking"] = {
+						["MaxRank"] = 225,
+						["Rank"] = 210,
 					},
-					["Mining"] = {
-						["MaxRank"] = 450,
-						["Rank"] = 440,
+					["Engineering"] = {
+						["MaxRank"] = 600,
+						["Rank"] = 600,
+					},
+					["Fishing"] = {
+						["MaxRank"] = 225,
+						["Rank"] = 177,
 					},
 					["First Aid"] = {
 						["MaxRank"] = 450,
 						["Rank"] = 450,
 					},
+					["Alchemy"] = {
+						["MaxRank"] = 600,
+						["Rank"] = 600,
+					},
 				},
 				["Prof2"] = "Engineering",
-				["lastUpdate"] = 1424741647,
-				["Prof1"] = "Mining",
-			},
-			["Default.Illidan.Metal"] = {
-				["Professions"] = {
-					["Cooking"] = {
-						["FullLink"] = "|cffffd000|Htrade:Player-57-080DF31D:158765:185|h[Cooking]|h|r",
-						["MaxRank"] = 700,
-						["Rank"] = 109,
-					},
-					["Blacksmithing"] = {
-						["FullLink"] = "|cffffd000|Htrade:Player-57-080DF31D:158737:164|h[Blacksmithing]|h|r",
-						["NumCrafts"] = 32,
-						["MaxRank"] = 700,
-						["Crafts"] = {
-							"Draenor Plans", -- [1]
-							"Reagents and Research", -- [2]
-							686762, -- [3]
-							704360, -- [4]
-							"Item Enhancers", -- [5]
-							686832, -- [6]
-							686840, -- [7]
-							686796, -- [8]
-							693420, -- [9]
-							"Armor", -- [10]
-							686821, -- [11]
-							686825, -- [12]
-							686817, -- [13]
-							686813, -- [14]
-							686809, -- [15]
-							686805, -- [16]
-							686801, -- [17]
-							686829, -- [18]
-							686764, -- [19]
-							686768, -- [20]
-							686772, -- [21]
-							"Weapons and Shields", -- [22]
-							712980, -- [23]
-							712972, -- [24]
-							686784, -- [25]
-							686776, -- [26]
-							686788, -- [27]
-							686780, -- [28]
-							686792, -- [29]
-							"Other", -- [30]
-							708676, -- [31]
-							"Antique Plans", -- [32]
-							"Materials", -- [33]
-							587684, -- [34]
-							573020, -- [35]
-							"Weapon Mods", -- [36]
-							10640, -- [37]
-							12460, -- [38]
-							"Chest", -- [39]
-							49040, -- [40]
-							"Bracers", -- [41]
-							10652, -- [42]
-							"Belts", -- [43]
-							571852, -- [44]
-						},
-						["Rank"] = 700,
-					},
-					["Fishing"] = {
-						["MaxRank"] = 700,
-						["Rank"] = 17,
-					},
-					["Leatherworking"] = {
-						["FullLink"] = "|cffffd000|Htrade:Player-57-080DF31D:158752:165|h[Leatherworking]|h|r",
-						["NumCrafts"] = 28,
-						["Cooldowns"] = {
-							"Burnished Leather|10800|1454832000", -- [1]
-						},
-						["MaxRank"] = 700,
-						["Crafts"] = {
-							"Draenor Patterns", -- [1]
-							"Reagents and Research", -- [2]
-							685566, -- [3]
-							704356, -- [4]
-							728484, -- [5]
-							"Armor Enhancers", -- [6]
-							685144, -- [7]
-							685064, -- [8]
-							"Leather Armor", -- [9]
-							685105, -- [10]
-							685040, -- [11]
-							685044, -- [12]
-							685048, -- [13]
-							"Mail Armor", -- [14]
-							685052, -- [15]
-							685056, -- [16]
-							685060, -- [17]
-							"Antique Patterns", -- [18]
-							"Research", -- [19]
-							560160, -- [20]
-							560164, -- [21]
-							"Materials", -- [22]
-							587692, -- [23]
-							571904, -- [24]
-							11524, -- [25]
-							"Embossments", -- [26]
-							498244, -- [27]
-							498252, -- [28]
-							498236, -- [29]
-							"Armor Kits", -- [30]
-							8608, -- [31]
-							"Drums", -- [32]
-							586452, -- [33]
-							"Chest", -- [34]
-							28504, -- [35]
-							"Bracers", -- [36]
-							36236, -- [37]
-							"Belts", -- [38]
-							571864, -- [39]
-							"Boots", -- [40]
-							179812, -- [41]
-							8596, -- [42]
-							"Cloaks", -- [43]
-							36232, -- [44]
-						},
-						["Rank"] = 700,
-					},
-					["First Aid"] = {
-						["FullLink"] = "|cffffd000|Htrade:Player-57-080DF31D:158741:129|h[First Aid]|h|r",
-						["NumCrafts"] = 13,
-						["MaxRank"] = 700,
-						["Crafts"] = {
-							"Cures of Draenor", -- [1]
-							690163, -- [2]
-							690170, -- [3]
-							690165, -- [4]
-							690156, -- [5]
-							"Old Remedies", -- [6]
-							"Bandages", -- [7]
-							410796, -- [8]
-							43360, -- [9]
-							31716, -- [10]
-							31712, -- [11]
-							13112, -- [12]
-							13108, -- [13]
-							13104, -- [14]
-							13100, -- [15]
-							"Antidotes", -- [16]
-							31736, -- [17]
-						},
-						["Rank"] = 700,
-					},
-				},
-				["Prof2"] = "Leatherworking",
-				["lastUpdate"] = 1454777529,
-				["Prof1"] = "Blacksmithing",
-			},
-			["Default.Dark Iron.Colton"] = {
-				["Professions"] = {
-					["Cooking"] = {
-						["MaxRank"] = 525,
-						["Rank"] = 525,
-					},
-					["Blacksmithing"] = {
-						["MaxRank"] = 525,
-						["Rank"] = 525,
-					},
-					["Archaeology"] = {
-						["MaxRank"] = 75,
-						["Rank"] = 1,
-					},
-					["Fishing"] = {
-						["MaxRank"] = 225,
-						["Rank"] = 185,
-					},
-					["Mining"] = {
-						["MaxRank"] = 525,
-						["Rank"] = 525,
-					},
-					["First Aid"] = {
-						["MaxRank"] = 525,
-						["Rank"] = 525,
-					},
-				},
-				["Prof2"] = "Mining",
-				["lastUpdate"] = 1424741732,
-				["Prof1"] = "Blacksmithing",
+				["lastUpdate"] = 1424741664,
+				["Prof1"] = "Alchemy",
 			},
 		},
 	},

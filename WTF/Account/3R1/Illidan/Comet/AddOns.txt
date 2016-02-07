@@ -13,7 +13,7 @@ TidyPlates_Quatre: disabled
 StormEarthAndFire: enabled
 BLTRaidCooldowns: enabled
 ActionBarSaver: enabled
-Auctionator: enabled
+Auctionator: disabled
 BlockChinese: enabled
 Forte_Core: disabled
 Forte_Casting: disabled

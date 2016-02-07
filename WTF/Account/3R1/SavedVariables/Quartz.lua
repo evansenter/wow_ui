@@ -32,16 +32,18 @@ Quartz3DB = {
 				["Comet - Illidan"] = {
 					["x"] = 860.000049483199,
 				},
-				["Pandatal - Illidan"] = {
-					["x"] = 860.000049483199,
-				},
 				["Evan - Illidan"] = {
 					["x"] = 860.000061035156,
+				},
+				["Pandatal - Illidan"] = {
+					["x"] = 860.000049483199,
 				},
 				["PRIEST"] = {
 					["x"] = 860.000061035156,
 				},
 			},
+		},
+		["EnemyCasts"] = {
 		},
 		["Player"] = {
 			["profiles"] = {
@@ -62,6 +64,9 @@ Quartz3DB = {
 					["x"] = 417,
 					["texture"] = "BantoBar",
 				},
+				["Evan - Illidan"] = {
+					["x"] = 835.000061035156,
+				},
 				["Pandatal - Illidan"] = {
 					["y"] = 188,
 					["x"] = 417,
@@ -69,15 +74,10 @@ Quartz3DB = {
 					["w"] = 311,
 					["texture"] = "BantoBar",
 				},
-				["Evan - Illidan"] = {
-					["x"] = 835.000061035156,
-				},
 				["PRIEST"] = {
 					["x"] = 835.000061035156,
 				},
 			},
-		},
-		["EnemyCasts"] = {
 		},
 		["GCD"] = {
 			["profiles"] = {
@@ -117,23 +117,24 @@ Quartz3DB = {
 					["h"] = 20,
 					["showfriendly"] = false,
 					["showtarget"] = false,
-					["y"] = 415,
-					["font"] = "ABF",
+					["y"] = 625,
+					["x"] = 860,
 					["texture"] = "BantoBar",
-					["x"] = 857.000183105469,
+					["font"] = "ABF",
+					["alpha"] = 0.75,
+				},
+				["Evan - Illidan"] = {
+					["x"] = 860.000061035156,
 				},
 				["Pandatal - Illidan"] = {
 					["y"] = 415,
 					["h"] = 20,
-					["texture"] = "BantoBar",
-					["x"] = 857.000183105469,
+					["noInterruptChangeColor"] = true,
+					["font"] = "ABF",
 					["showfriendly"] = false,
 					["showtarget"] = false,
-					["font"] = "ABF",
-					["noInterruptChangeColor"] = true,
-				},
-				["Evan - Illidan"] = {
-					["x"] = 860.000061035156,
+					["x"] = 857.000183105469,
+					["texture"] = "BantoBar",
 				},
 				["PRIEST"] = {
 					["x"] = 860.000061035156,
@@ -148,44 +149,45 @@ Quartz3DB = {
 				["Default"] = {
 					["y"] = 458,
 					["noInterruptShield"] = false,
-					["iconposition"] = "left",
-					["font"] = "ABF",
+					["texture"] = "ElvUI Norm",
+					["x"] = 857,
 					["h"] = 20,
 					["noInterruptChangeBorder"] = false,
-					["x"] = 857,
-					["texture"] = "ElvUI Norm",
+					["font"] = "ABF",
+					["iconposition"] = "left",
 				},
 				["Comet - Illidan"] = {
 					["noInterruptChangeColor"] = true,
 					["h"] = 20,
-					["y"] = 445,
-					["font"] = "ABF",
+					["y"] = 659.000183105469,
+					["x"] = 859.999938964844,
 					["iconposition"] = "left",
 					["texture"] = "BantoBar",
-					["x"] = 857,
+					["font"] = "ABF",
 					["noInterruptChangeBorder"] = false,
+					["alpha"] = 0.75,
+				},
+				["Evan - Illidan"] = {
+					["x"] = 860.000061035156,
 				},
 				["Pandatal - Illidan"] = {
 					["y"] = 445,
 					["h"] = 20,
-					["iconposition"] = "left",
-					["x"] = 857,
+					["noInterruptChangeColor"] = true,
+					["font"] = "ABF",
 					["texture"] = "BantoBar",
 					["noInterruptChangeBorder"] = false,
-					["font"] = "ABF",
-					["noInterruptChangeColor"] = true,
-				},
-				["Evan - Illidan"] = {
-					["x"] = 860.000061035156,
+					["x"] = 857,
+					["iconposition"] = "left",
 				},
 				["PRIEST"] = {
 					["x"] = 860.000061035156,
 				},
 			},
 		},
-		["Mirror"] = {
-		},
 		["Range"] = {
+		},
+		["Mirror"] = {
 		},
 		["Latency"] = {
 		},
@@ -193,17 +195,17 @@ Quartz3DB = {
 	["profileKeys"] = {
 		["Venala - Cho'gall"] = "Default",
 		["Combustion - Illidan"] = "Pandatal - Illidan",
-		["Metal - Illidan"] = "Comet - Illidan",
+		["Centromere - Dark Iron"] = "Pandatal - Illidan",
 		["Pandatal - Illidan"] = "Comet - Illidan",
 		["Plane - Illidan"] = "Pandatal - Illidan",
 		["Colton - Dark Iron"] = "Default",
 		["Natalan - Dark Iron"] = "Default",
 		["Ereinion - Dark Iron"] = "Default",
-		["Natalan - Illidan"] = "Pandatal - Illidan",
-		["Comet - Illidan"] = "Comet - Illidan",
 		["Natal - Illidan"] = "Pandatal - Illidan",
+		["Comet - Illidan"] = "Comet - Illidan",
+		["Natalan - Illidan"] = "Pandatal - Illidan",
 		["Evan - Illidan"] = "Comet - Illidan",
-		["Centromere - Dark Iron"] = "Pandatal - Illidan",
+		["Metal - Illidan"] = "Comet - Illidan",
 	},
 	["profiles"] = {
 		["Illidan"] = {
@@ -245,12 +247,16 @@ Quartz3DB = {
 				["Mirror"] = false,
 				["Latency"] = false,
 			},
+			["backgroundalpha"] = 0.75,
+			["borderalpha"] = 0.75,
 			["castingcolor"] = {
 				nil, -- [1]
 				0.850980392156863, -- [2]
 				0.101960784313725, -- [3]
 				1, -- [4]
 			},
+		},
+		["Evan - Illidan"] = {
 		},
 		["Pandatal - Illidan"] = {
 			["channelingcolor"] = {
@@ -282,8 +288,6 @@ Quartz3DB = {
 				0.588235294117647, -- [3]
 				1, -- [4]
 			},
-		},
-		["Evan - Illidan"] = {
 		},
 		["PRIEST"] = {
 		},
