@@ -10,14 +10,10 @@
 local function PawnUseThisLocalization()
 PawnLocal =
 {
-	AsteriskTooltipLine = "|TInterface\\AddOns\\Pawn\\Textures\\Question:0|t Effets sp\195\169ciaux non inclus dans la valeur.", -- Needs review
 	AverageItemLevelIgnoringRarityTooltipLine = "Niveau moyen de l'item", -- Needs review
 	BackupCommand = "Sauvegarde", -- Needs review
 	BaseValueWord = "base",
-	CogwheelName = "Roue dent\195\169e", -- Needs review
 	CopyScaleEnterName = "Entrez un nom pour votre nouvelle echelle, une copie de %s:",
-	CorrectGemsValueCalculationMessage = "   -- Des gemmes correctes seraient mieux: %g", -- Needs review
-	CrystalOfFearName = "Cristal de peur", -- Needs review
 	DebugOffCommand = "debug off",
 	DebugOnCommand = "debug on",
 	DecimalSeparator = ",", -- Needs review
@@ -30,9 +26,8 @@ PawnLocal =
 	FailedToGetItemLinkMessage = "   Echec \195\160 la reception du lien de l'item de la part de l'infobulle. Ceci peut etre du a un conflit de mod.",
 	FailedToGetUnenchantedItemMessage = "   Echec \195\160 la reception des valeurs de base de l'item. Ceci peut etre du a un conflit de mod.",
 	FoundStatMessage = "   %d %s",
-	GemColorList1 = "%d %s",
-	GemColorList2 = "%d %s ou %s", -- Needs review
-	GemColorList3 = "%d d une quelconque couleur", -- Needs review
+	GemList2 = "%s ou %s",
+	GemListMany = "%d possibilit\195\169s (clic le bouton Pawn pour avoir des d\195\169tails)",
 	GenericGemLink = "|Hitem:%d|h[Gemme %d]|h", -- Needs review
 	GenericGemName = "(Gemme %d)", -- Needs review
 	HiddenScalesHeader = "Autre Echelles", -- Needs review
@@ -59,11 +54,13 @@ PawnLocal =
 	TooltipBestAnnotation = "%s  |cff8ec3e6(meilleur)|r", -- Needs review
 	TooltipBestAnnotationSimple = "%s  votre meilleur", -- Needs review
 	TooltipBigUpgradeAnnotation = "%s  |TInterface\\AddOns\\Pawn\\Textures\\UpgradeArrow:0|t|cff00ff00 upgrade%s|r",
+	TooltipDowngradeAnnotation = "%s  |TInterface\\AddOns\\Pawn\\Textures\\UpgradeArrow:0|t|cff00ff00+%.0f%% am\195\169lioration%s|r", -- Needs review
 	TooltipSecondBestAnnotation = "%s  |cff8ec3e6(second meilleur)|r", -- Needs review
 	TooltipSecondBestAnnotationSimple = "%s  votre second meilleur", -- Needs review
 	TooltipUpgradeAnnotation = "%s  |TInterface\\AddOns\\Pawn\\Textures\\UpgradeArrow:0|t|cff00ff00+%.0f%% am\195\169lioration%s|r", -- Needs review
 	TooltipUpgradeFor1H = "pour ensemble 1 main", -- Needs review
 	TooltipUpgradeFor2H = "pour 2 mains", -- Needs review
+	TooltipUpgradeNeedsEnhancementsAnnotation = "%s  |TInterface\\AddOns\\Pawn\\Textures\\UpgradeArrow:0|t|cff00ff00+%.0f%% am\195\169lioration%s|r", -- Needs review
 	TooltipVersusLine = "%s|n  vs. |c%s%s|r",
 	TotalValueMessage = "   ---- Total: %g",
 	UnenchantedStatsHeader = "(valeur de base)", -- Needs review
@@ -82,12 +79,9 @@ Pour plus d'information sur la Personnalisation de Pawn, regarder le fichier d'a
 	VisibleScalesHeader = "%s d \195\169chelles", -- Needs review
 	Stats = {
 		AgilityInfo = "La statistique principale, Agilit\195\169e", -- Needs review
-		Ap = "Puissance d'attaque",
-		ApInfo = "Puissance d'attaque. Absent sur la plupart des items directement. n'inclus pas la puissance d'attaque que vous recevez de la force ou de l'agilit\195\169",
 		ArmorInfo = "Armure, quelle que soit le type d'item. Ne distingue pas entre l'armure de base et le bonus d'armure car les items avec bonus d'amure sont obsoletes.",
 		ArmorTypes = "Types d'armure", -- Needs review
 		AvoidanceInfo = "\195\137vitement. R\195\169duit vos d\195\169g\195\162ts pris lors d'une attaque de zone.", -- Needs review
-		BonusArmorInfo = "Armure bonus. N'inclus pas la valeur d'armure de base sur toutes les armures. Ce nombre devrait toujours \195\170tre au moins aussi haut que la valeur d'Armure", -- Needs review
 		Cloth = "Tissu", -- Needs review
 		ClothInfo = "Points a etre assign\195\169 si l'item est en tissu",
 		Crit = "Crit", -- Needs review
@@ -103,20 +97,10 @@ Pour plus d'information sur la Personnalisation de Pawn, regarder le fichier d'a
 		Mail = "maille", -- Needs review
 		MailInfo = "points \195\160 etre assign\195\169 si l item est en maille", -- Needs review
 		MasteryInfo = "Ma\195\174trise. am\195\169liore le bonus unique de la sp\195\169cialistation de votre classe", -- Needs review
-		MetaSocket = "M\195\169ta ch\195\162sse", -- Needs review
-		MetaSocketInfo = "Une m\195\169ta-ch\195\162sse, que ce soit vide ou plein. ajoute des points en plus aux casques qui ont une m\195\169ta-ch\195\162sse pour compenser l'effet sp\195\169cial de la m\195\169ta gemme.",
 		MinorStats = "Stats mineur", -- Needs review
 		MovementSpeedInfo = "Vitesse de d\195\169placement. Fait que le personnage court plus vite",
-		MultistrikeInfo = "Frappe Multiple. Augmente les chances que vos attaques et soins touchent votre cible 2 fois de plus \195\160 puissance r\195\169duite.",
 		Plate = "plaque", -- Needs review
 		PlateInfo = "points a etre ajout\195\169 si l'item est en plaque",
-		PrimaryStats = "Stats primaires",
-		PvPPower = "Puissance JcJ", -- Needs review
-		PvPPowerInfo = "Puissance JcJ. Fait que vos capacit\195\169s effectuent plus de d\195\169gats aux autres joueurs (mais pas aux cr\195\169atures), et que vos sorts de soins soient plus puissant dans certaines situations JcJ.", -- Needs review
-		PvPResilience = "R\195\169silience JcJ", -- Needs review
-		PvPResilienceInfo = "R\195\169silience JcJ. R\195\169duit les d\195\169gats que vous recevez des attaques des autres joueurs. Effectif seulement contre d'autres joueurs", -- Needs review
-		PvPStats = "Stats JcJ", -- Needs review
-		SecondaryStats = "Secondaire", -- Needs review
 		Shield = "Bouclier", -- Needs review
 		ShieldInfo = "points a ajouter si l item est un bouclier", -- Needs review
 		Sockets = "ch\195\162sse", -- Needs review
@@ -126,9 +110,6 @@ Pour plus d'information sur la Personnalisation de Pawn, regarder le fichier d'a
 		SpeedBaselineIs = "|cffffffffVitesse de r\195\169f\195\169rence|r est:", -- Needs review
 		SpeedInfo = "Vitesse d'arme, en secondes par mouvement. (si vous pr\195\169f\195\169rez des armes rapide, ce nombre devrait etre negatif. Voir aussi: \"vitesse de r\195\169f\195\169rence\" dans la section \"stats sp\195\169cifiques aux armes\"", -- Needs review
 		SpeedIs = "1 seconde |cffffffffde vitesse de mouvement|r vaut:", -- Needs review
-		SpellPower = "Puissance des sorts",
-		SpellPowerInfo = "Puissance des sorts: pr\195\169sent sur les armes des jeuteurs de sort mais pas sur la pluspart des armures. n'inclut pas la puissance de sort recue de l'intelligence",
-		SpiritInfo = "La statistique principale, Esprit", -- Needs review
 		StaminaInfo = "La statistique principale, Endurance", -- Needs review
 		StrengthInfo = "La statistique principale, Force", -- Needs review
 		VersatilityInfo = "Polyvalence. Augmente les d\195\169g\195\162ts occasionn\195\169s pour les personnages d\195\169g\195\162ts, augmente les soins pour les personnages soigneur, et r\195\169duit les d\195\169g\195\162ts subis pour les personnages tank.", -- Needs review
@@ -218,6 +199,8 @@ Pour plus d'information sur la Personnalisation de Pawn, regarder le fichier d'a
 		WeaponTypeStaffInfo = "Points \195\160 etre assign\195\169s si l'item est un b\195\162ton",
 		WeaponTypeWand = "Baguette", -- Needs review
 		WeaponTypeWandInfo = "Points \195\160 etre assign\195\169s si l'item est une baguette",
+		WeaponTypeWarglaive = "Glaive de guerre",
+		WeaponTypeWarglaiveInfo = "points devant etre assign\195\169 si la pi\195\168ce est un Glaive de guerre",
 	},
 	TooltipParsing = {
 		Agility = "^%+?([-%d%.,]+) Agilit\195\169$",
@@ -228,13 +211,11 @@ Pour plus d'information sur la Personnalisation de Pawn, regarder le fichier d'a
 		Avoidance = "^%+([%d%. ,]+) \195\137vitement$",
 		Axe = "^Hache$",
 		BagSlots = "^Sac %d+ .+$",
-		BladesEdgeMountains = "^Les Tranchantes$",
-		BonusArmor = "^%+([%d%. ,]+) Armure bonus$",
 		Bow = "^Arc$", -- Needs review
 		ChanceOnHit = "Chances quand vous touchez",
 		Charges = "^.+ Charges?$",
 		Cloth = "^Tissu$",
-		CooldownRemaining = "^Temps de recharge",
+		CooldownRemaining = "^Temps de recharge restant:",
 		Crit = "^%+?([%d%. ,]+) Score de crit%.?$",
 		Crit2 = "^%+?([%d%. ,]+) au score de critique$",
 		Crossbow = "^Arbal\195\168te$",
@@ -262,6 +243,7 @@ Pour plus d'information sur la Personnalisation de Pawn, regarder le fichier d'a
 		Gun = "^Arme \195\160 feu$",
 		Haste = "^%+?(%-?%d+) H\195\162te$", -- Needs review
 		Haste2 = "^%+?([%d%. ,]+) \195\160 la h\195\162te",
+		HaventCollectedAppearance = "^Vous n'avez pas r\195\169cup\195\169r\195\169 cette apparence$",
 		HeirloomLevelRange = "^Requier un niveau de %d+ \195\160 (%d+)", -- Needs review
 		HeirloomXpBoost = "^\195\137quip\195\169\194\160: L?'?[Ee]xp\195\169rience gagn\195\169e", -- Needs review
 		HeirloomXpBoost2 = "^UNUSED$",
@@ -283,10 +265,10 @@ Pour plus d'information sur la Personnalisation de Pawn, regarder le fichier d'a
 		Mastery2 = "^%+?([%d%. ,]+) \195\160 la ma\195\174trise$",
 		MetaGemRequirements = "|cff%x%x%x%x%x%xN\195\169cessite",
 		MovementSpeed = "^%+([%d%. ,]+) Vitesse$",
+		MultiStatHeading = "^Stats Multiple$",
 		MultiStatSeparator1 = "et",
 		Multistrike = "^%+([%d%. ,]+) Frappe multiple$",
 		NormalizationEnchant = "^Enchant\195\169\194\160: (.*)$", -- Needs review
-		OnlyFitsInMetaGemSlot = "^\"Ne peut \195\170tre serti que dans une ch\195\162sse de m\195\169ta-gemme.%.\"$",
 		Parry = "^%+?([%d%. ,]+) Parade$",
 		Parry2 = "^%+?([%d%. ,]+) \195\160 la parade$",
 		Pattern = "Patron\194\160:",
@@ -303,8 +285,6 @@ Pour plus d'information sur la Personnalisation de Pawn, regarder le fichier d'a
 		Scope = "^Lunette %(%+([%d%. ,]+) points de d\195\169g\195\162ts%)$",
 		ScopeCrit = "^Lunette %(%+([%d%. ,]+) au score de critique%)$",
 		ScopeRangedCrit = "^%+?([%d%. ,]+) au score de critique \195\160 distance$",
-		Season = "^Saison", -- Needs review
-		ShadowmoonValley = "^Vall\195\169e d\226\128\153Ombrelune$", -- Needs review
 		Shield = "^Bouclier$",
 		SocketBonusPrefix = "Bonus de sertissage\194\160:",
 		Speed = "^Vitesse ([%d%. ,]+)$",
@@ -315,17 +295,19 @@ Pour plus d'information sur la Personnalisation de Pawn, regarder le fichier d'a
 		Stamina = "^%+?([-%d%. ,]+) Endurance$",
 		Strength = "^%+?([-%d%. ,]+) Force$",
 		Sword = "^Ep\195\169e$",
-		TempestKeep = "^Donjon de la Temp\195\170te$", -- Needs review
 		TemporaryBuffMinutes = "^.+%(%d+ min%)$", -- Needs review
 		TemporaryBuffSeconds = "^.+%(%d+ sec%)$", -- Needs review
 		Thunderforged = "^Foudroyant$", -- Needs review
 		Timeless = "^du Temps fig\195\169$\
 ", -- Needs review
+		Titanforged = "^forg\195\169es par les titans$\
+",
 		UpgradeLevel = "^Niveau d\226\128\153am\195\169lioration\194\160:",
 		Use = "Utiliser\194\160:", -- Needs review
 		Versatility = "^%+([%d%. ,]+) Polyvalence$",
 		Wand = "^Baguette$",
 		Warforged = "^De guerre$", -- Needs review
+		Warglaives = "^Glaives de guerre$", -- Needs review
 		WeaponDamage = "^D\195\169g\195\162ts\194\160: ([%d%. ,]+) %- ([%d%. ,]+)$",
 		WeaponDamageArcane = "^%+?([%d%. ,]+) %- ([%d%. ,]+) points de d\195\169g\195\162ts %(Arcanes%)$",
 		WeaponDamageArcaneExact = "^%+?([%d%. ,]+) points de d\195\169g\195\162ts %(Arcanes%)$",
@@ -354,14 +336,11 @@ Pour plus d'information sur la Personnalisation de Pawn, regarder le fichier d'a
 Les poids de stat Wowhead sont utilis\195\169s avec permission\226\128\148S'il vous pla\195\174t dirigez les retours sur les valeurs d'echelle par d\195\169faut \195\160 Wowhead.", -- Needs review
 		CompareClearItems = "Effacer", -- Needs review
 		CompareClearItemsTooltip = "Retirer la comparaison des deux items", -- Needs review
-		CompareCogwheelSockets = "Ch\195\162sse de Roue dent\195\169e", -- Needs review
 		CompareColoredSockets = "Ch\195\162sse color\195\169e", -- Needs review
 		CompareEquipped = "Equipp\195\169", -- Needs review
 		CompareGemTotalValue = "Valeur de la gemme", -- Needs review
 		CompareHeader = "Compare les items en utilisant %s", -- Needs review
-		CompareMetaSockets = "M\195\169ta ch\195\162sse", -- Needs review
 		CompareOtherHeader = "Autre", -- Needs review
-		CompareShaTouchedSockets = "Touch\195\169 par les sha", -- Needs review
 		CompareSlotEmpty = "(pas d'item)",
 		CompareSocketBonus = "Bonus de sertissage", -- Needs review
 		CompareSocketsHeader = "Ch\195\162sse", -- Needs review
@@ -370,7 +349,6 @@ Les poids de stat Wowhead sont utilis\195\169s avec permission\226\128\148S'il v
 		CompareSwapTooltip = "Interverti l'item de gauche avec celui de droite", -- Needs review
 		CompareTab = "Comparer",
 		CompareVersus = "\226\128\148contre.\226\128\148", -- Needs review
-		CompareWelcomeLeft = "En premier, selectionnez une \195\169chelle de la liste sur la gauche", -- Needs review
 		CompareWelcomeRight = "puis glissez un item dans cette boite.\
 \
 vous pouvez le comparer par rapport a vos items existant en utilsant l'icone du coin en bas \195\160 gauche.",
@@ -448,12 +426,11 @@ raccourcis:\
 Si coch\195\169e, Pawn propose toujours les gemmes appropri\195\169es pour les \195\169l\195\169ments de bas niveau, mais elles seront ignor\195\169s dans les calculs et ils n'apparaisseront donc pas aussi souvent comme des mises \195\160 jour.\
 \
 Si non coch\195\169, Pawn calculera les valeurs pour les \195\169l\195\169ments comme s'ils \195\169taient g\195\169mm\195\169s de la mani\195\168re qui maximise la valeur de l'\195\169l\195\169ment, quel que soit le niveau.",
-		OptionsIgnoreItemUpgradesCheck = "Ignore valor and baleful upgrades",
-		OptionsIgnoreItemUpgradesCheckTooltip = [=[Enable this option to have Pawn ignore the potential for Valor upgrades and Empowered Baleful items when calculating item values.
-
-If checked, Pawn will treat upgradeable items as they are and will not assume that you would use Valor and Empowered Apexis Fragments to improve the item when determining whether an item is better than what you currently have.
-
-If unchecked, Pawn will treat those items assuming that you would maximize their potential with Valor and Empowered Apexis Fragments.  This could cause a level 650 baleful item to appear as a significant upgrade over a level 670 item from Blackrock Foundry, since the baleful item could potentially be improved to level 705 through valor and Apexis.]=],
+		OptionsIgnoreItemUpgradesCheck = "ignore les am\195\169liorations de Vaillance et Torve",
+		OptionsIgnoreItemUpgradesCheckTooltip = "valide cette option pour que Pawn ignore le montant des am\195\169liorations de Vaillance et Torve quand il calcule les valeurs des pi\195\168ces\
+si valid\195\169, Pawn traitera les pi\195\168ces pouvant \195\170tre am\195\169lior\195\169 tels qu'ils sont et ne consid\195\169rera pas que vous pouvez utiliser des Fragments Apexis de Vaillance ou Torve afin d'am\195\169liorer la pi\195\168ce au moment de d\195\169terminer si une pi\195\168ce est meilleur que celle en votre possession.\
+si non-valid\195\169, Pawn traitera ces pi\195\168ces en assumant que vous les am\195\169liorerez au maximum avec des Fragments Apexis de Vaillance ou Torve. Cela pourrait faire qu'un \195\169quipement Torve de niveau 650 apparaisse comme une am\195\169lioration significative par rapport \195\160 un niveau 670 de la Fonderie de Blackrock, comme la pi\195\168ce Torve pourrait \195\170tre am\195\169lior\195\169 au niveau 705 grave aux Vaillances et Apexis\
+",
 		OptionsInventoryIcon = "Affiche une ic\195\180ne d'inventaire",
 		OptionsInventoryIconTooltip = "Cette option permet d'afficher l'ic\195\180ne d'inventaire \195\160 cot\195\169 de la fen\195\170tre de lien de l item",
 		OptionsItemIDs = "Affiche les ID des items", -- Needs review
@@ -473,6 +450,8 @@ Utilisez cette fonctionnalit\195\169 si vous trouvez que Pawn effectue de mauvai
 		OptionsSocketingAdvisorTooltip = "Quand vous ajoutez des gemmes \195\160 un item, Pawn affichera les gemmes que vous pouvez ajouter \195\160 l'item qui maximiseront sa puissance. (Pour voir la liste compl\195\168te des suggestions de gemmes de chaque couleur, voir l'onglet gemmes, ou vous pouvez aussi personnaliser la qualit\195\169 des gemmes \195\160 utiliser.)",
 		OptionsTab = "Options", -- Needs review
 		OptionsTooltipHeader = "Options des tooltips",
+		OptionsTooltipSpecIcon = "Affiche l'icone des spec",
+		OptionsTooltipSpecIconTooltip = "Valide cette option pour afficher l'icone des specs \195\160 cot\195\169 des noms d'\195\169chelle sur l'infobulle.",
 		OptionsTooltipUpgradesOnly = "Affiche seulement les am\195\169liorations", -- Needs review
 		OptionsTooltipUpgradesOnlyTooltip = "Ceci est l'option la plus simple. Affiche seulement le pourcentage d'am\195\169lioration pour les items qui sont une am\195\169lioration de votre tenue actuelle, et indique quels items sont les meilleurs items que vous poss\195\169dez pour chaque \195\169chelle (formule). N'affiche rien pour les items plus faible.\
 \
@@ -498,7 +477,19 @@ Fire:  156.7|r",
 si valid\195\169, vous pourriez \195\170tre en train d utiliser une arme \195\160 deux mains et voir clairement les armes les armes \195\160 une main inf\195\169rieurs comme une am\195\169lioration si elles sont meilleur que le meilleur pr\195\169c\195\169dent (ou second meilleur) arme \195\160 une main que vous aviez, parce que Pawn surveille les am\195\169liorations s\195\169par\195\169ment pour les ensembles \195\160 deux armes.\
 \
 si non valid\195\169, \195\169quip\195\169 une arme \195\160 deux mains empechera Pawn d afficher vos am\195\169liorations pour les items tenu \195\160 une main et vice-versa.", -- Needs review
+		OptionsUpgradeTrackingHeader = "comparaison d'am\195\169lioration:",
+		OptionsUpgradeTrackingOff = "compar\195\169 \195\160 l'\195\169quipement \195\169quip\195\169 (recommand\195\169)",
+		OptionsUpgradeTrackingOffTooltip = "Pawn vous affichera vos pi\195\168ces qui sont des am\195\169liorations en comparaison des pi\195\168ces actuellement \195\169quip\195\169s",
+		OptionsUpgradeTrackingOn = "Recherche pour chaque \195\169chelle (avanc\195\169)",
+		OptionsUpgradeTrackingOnTooltip = "(Pour les  utilisateurs avanc\195\169) Pawn essayera de recherch\195\169 les meilleurs pi\195\168ces dont vous etes \195\169quipp\195\169, independamment de chaque niveau que vous avez valid\195\169, et vous affichera les pi\195\168ces qui vous sont des am\195\169liorations compar\195\169 \195\160 celle ci.",
 		OptionsWelcome = "Configurez Pawn de la fa\195\167on vous aimez. Les changements prendront effets imm\195\169diatement.", -- Needs review
+		ScaleAutoOff = "Manuel",
+		ScaleAutoOff2 = "me laisser g\195\169rer les niveaux",
+		ScaleAutoOffTooltip = "Pawn vous laissera choisir manuellement  quelle \195\169chelle utiliser pour ses calculs, vous permettant de valider plus d'une \195\169chelle \195\160 la fois, d'ajouter des \195\169chelles personnelles, et plus.",
+		ScaleAutoOn = "automatique",
+		ScaleAutoOn2 = "affiche moi mes specs actuelles",
+		ScaleAutoOnTooltip = "Pawn vous affichera automatiquement votre sp\195\169cialisation actuelle dans l'infobulle des pi\195\168ces, et l'utilisera afin de faire des recommandation et suggestions d'am\195\169liorations.",
+		ScaleAutoWelcome = "Pawn affichera des suggestions pour votre sp\195\169cialisation actuelle",
 		ScaleChangeColor = "Change la couleur",
 		ScaleChangeColorTooltip = "Change la couleur avec laquelle apparait le nom et la valeur dans le tooltip d'un item",
 		ScaleCopy = "Copier",
@@ -519,6 +510,7 @@ Cette commande ne peut etre d\195\169faite!",
 		ScaleRename = "Renommer",
 		ScaleRenameTooltip = "Renomme cette \195\169chelle",
 		ScaleSelectorHeader = "S\195\169lectionne une \195\169chelle:",
+		ScaleSelectorShowingSuggestionsFor = "affiche des sugestions pour",
 		ScaleSelectorShowScale = "Affiche l'echelle dans le tooltip",
 		ScaleSelectorShowScaleTooltip = "Quand cette option est valid\195\169e, les valeurs pour cette \195\169chelle apparaitront dans le tooltip de ce personnage. Chaque \195\169chelles peut apparaitre sur votre personnage, plusieurs personnages, ou aucuns personnages.",
 		ScaleShareHeader = "Partager votre \195\169chelle (formule)", -- Needs review
@@ -547,42 +539,8 @@ Cette commande ne peut etre d\195\169faite!",
 		ValuesWelcomeReadOnly = "L'echelle que vous avez s\195\169lectionn\195\169 ne peut etre modifi\195\169e. Si vous voulez changer ces valeurs, allez dans l'onglet Echelle et faites une copie de cette \195\169chelle ou commencez une nouvelle.",
 	},
 	Wowhead = {
-		DeathKnightBloodTank = "DK: sang",
-		DeathKnightFrostDps = "DK: givre",
-		DeathKnightUnholyDps = "DK: impie", -- Needs review
-		DruidBalance = "Druide: equilibre",
-		DruidFeralDps = "Druide: feral",
-		DruidFeralTank = "Druide: ours",
-		DruidRestoration = "Druide: restauration",
-		HunterBeastMastery = "Chasseur: b\195\170te",
-		HunterMarksman = "Chasseur: pr\195\169cision",
-		HunterSurvival = "Chasseur: survie",
-		MageArcane = "Mage: arcanes",
-		MageFire = "Mage: feu",
-		MageFrost = "Mage: givre",
-		MonkBrewmaster = "Moine: Ma\195\174tre brasseur",
-		MonkMistweaver = "Moine: Tisse-brume",
-		MonkWindwalker = "Moine: Marche-vent",
-		PaladinHoly = "Paladin: sacr\195\169",
-		PaladinRetribution = "Paladin: vindicte",
-		PaladinTank = "Paladin: tank",
-		PriestDiscipline = "Pr\195\170tre: discipline",
-		PriestHoly = "Pr\195\170tre: sacr\195\169",
-		PriestShadow = "Pr\195\170tre: ombre",
 		Provider = "echelles Wowhead ", -- Needs review
 		ProviderStarter = "Echelle de d\195\169marrage", -- Needs review
-		RogueAssassination = "Voleur: assassinat",
-		RogueCombat = "Voleur: combat",
-		RogueSubtlety = "Voleur: finesse",
-		ShamanElemental = "Chaman: el\195\169mentaire",
-		ShamanEnhancement = "Chaman: am\195\169lioration",
-		ShamanRestoration = "Chaman: restauration",
-		WarlockAffliction = "D\195\169moniste: affliction",
-		WarlockDemonology = "D\195\169moniste: d\195\169monologie",
-		WarlockDestruction = "D\195\169moniste: destruction",
-		WarriorArms = "Guerrier: armes",
-		WarriorFury = "Guerrier: fureur",
-		WarriorTank = "Guerrier: tank",
 	},
 }
 end

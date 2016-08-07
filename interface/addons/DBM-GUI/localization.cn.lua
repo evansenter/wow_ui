@@ -2,7 +2,7 @@
 -- yleaf(yaroot@gmail.com)
 -- sunlcy@NGA
 -- Mini Dragon(projecteurs@gmail.com)
--- Last update: Nov 24 2015, 03:07 UTC@14665
+-- Last update: Jul 21 2015, 10:10 UTC@15067
 
 if GetLocale() ~= "zhCN" then return end
 if not DBM_GUI_Translations then DBM_GUI_Translations = {} end
@@ -62,7 +62,6 @@ L.Statistic_BestKill		= "最好成绩:"
 
 -- Tab: General Options
 L.General 					= "DBM核心综合设置"
-L.EnableDBM 				= "启用DBM"
 L.EnableMiniMapIcon			= "显示小地图按钮"
 L.UseSoundChannel			= "设置DBM使用的声道"
 L.UseMasterChannel			= "主声道"
@@ -182,6 +181,7 @@ L.BarFlash					= "快走完时闪动"
 L.BarSort					= "按剩余时间排序"
 L.BarColorByType			= "按类着色"
 L.BarInlineIcons			= "显示条内图标"
+L.ShortTimerText			= "使用更短的计时条文字 (当可行时)"
 
 -- Tab: Spec Warn Frame
 L.Panel_SpecWarnFrame		= "特殊警报"
@@ -324,10 +324,6 @@ L.SKT_Enabled				= "总是显示最速胜利计时条(覆盖单独BOSS设置)"
 L.CRT_Enabled				= "显示下一次可战复CD"
 L.ShowRespawn				= "Boss战斗未完成时显示Boss刷新计时条"
 L.ShowQueuePop				= "显示随机小队/团队查找器确认计时条"
-L.ChallengeTimerOptions		= "设置挑战模式最佳记录计时条"
-L.ChallengeTimerPersonal	= "个人"
-L.ChallengeTimerGuild		= "公会"
-L.ChallengeTimerRealm		= "服务器"
 --
 L.Area_AutoLogging			= "自动日志记录选项"
 L.AutologBosses				= "自动采用官方格式记录日志。 (使用 /dbm pull 可提前记录并使得记录更准确，如提前偷药水或是召唤大军。)"

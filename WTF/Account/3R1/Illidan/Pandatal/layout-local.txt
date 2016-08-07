@@ -24,7 +24,7 @@ Frame: DBMMinimapButton
 FrameLevel: 3
 Anchor: TOPRIGHT
 X: -170
-Y: -89
+Y: -90
 W: 32
 H: 32
 Frame: RaidUtility_ShowButton

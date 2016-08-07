@@ -59,8 +59,7 @@ DataStore_TalentsDB = {
 			},
 			["Default.Illidan.Evan"] = {
 				["ActiveTalents"] = 1,
-				["lastUpdate"] = 1454777600,
-				["Class"] = "PRIEST",
+				["lastUpdate"] = 1470538979,
 				["GlyphList"] = {
 					11, -- [1]
 					11418, -- [2]
@@ -119,6 +118,11 @@ DataStore_TalentsDB = {
 					16844, -- [55]
 					16796, -- [56]
 				},
+				["Class"] = "PRIEST",
+				["Specializations"] = {
+					11222, -- [1]
+					14966, -- [2]
+				},
 			},
 			["Default.Dark Iron.Colton"] = {
 				["ActiveTalents"] = 1,
@@ -169,7 +173,7 @@ DataStore_TalentsDB = {
 			},
 			["Default.Illidan.Pandatal"] = {
 				["ActiveTalents"] = 1,
-				["lastUpdate"] = 1454778284,
+				["lastUpdate"] = 1461733291,
 				["GlyphList"] = {
 					11, -- [1]
 					3018, -- [2]
@@ -225,7 +229,8 @@ DataStore_TalentsDB = {
 			},
 			["Default.Illidan.Metal"] = {
 				["ActiveTalents"] = 1,
-				["lastUpdate"] = 1454776977,
+				["lastUpdate"] = 1470154484,
+				["Class"] = "WARRIOR",
 				["GlyphList"] = {
 					11, -- [1]
 					7962, -- [2]
@@ -275,7 +280,9 @@ DataStore_TalentsDB = {
 					17572, -- [46]
 					17620, -- [47]
 				},
-				["Class"] = "WARRIOR",
+				["Specializations"] = {
+					[2] = 5461,
+				},
 			},
 			["Default.Illidan.Natal"] = {
 				["ActiveTalents"] = 1,
@@ -342,9 +349,13 @@ DataStore_TalentsDB = {
 				["Class"] = "SHAMAN",
 			},
 			["Default.Illidan.Comet"] = {
-				["ActiveTalents"] = 2,
-				["lastUpdate"] = 1454810097,
+				["ActiveTalents"] = 1,
+				["lastUpdate"] = 1470549252,
 				["Class"] = "MONK",
+				["Specializations"] = {
+					[3] = 11739,
+					[2] = 10713,
+				},
 				["GlyphList"] = {
 					11, -- [1]
 					16250, -- [2]
@@ -799,7 +810,37 @@ DataStore_TalentsRefDB = {
 		},
 		["WARRIOR"] = {
 			["Locale"] = "enUS",
-			["Version"] = 20886,
+			["Specializations"] = {
+				[2] = {
+					["id"] = 72,
+					["talents"] = {
+						22632, -- [1]
+						22633, -- [2]
+						22491, -- [3]
+						22374, -- [4]
+						22372, -- [5]
+						22409, -- [6]
+						22379, -- [7]
+						22381, -- [8]
+						19138, -- [9]
+						22635, -- [10]
+						22627, -- [11]
+						22382, -- [12]
+						22384, -- [13]
+						22391, -- [14]
+						19140, -- [15]
+						22395, -- [16]
+						22544, -- [17]
+						22400, -- [18]
+						22405, -- [19]
+						22402, -- [20]
+						16037, -- [21]
+					},
+					["icon"] = "Interface\\Icons\\Ability_Warrior_InnerRage",
+					["name"] = "Fury",
+				},
+			},
+			["Version"] = 22293,
 		},
 		["WARLOCK"] = {
 			["Locale"] = "enUS",
@@ -815,15 +856,131 @@ DataStore_TalentsRefDB = {
 		},
 		["PALADIN"] = {
 			["Locale"] = "enUS",
-			["Version"] = 20886,
+			["Version"] = 21463,
 		},
 		["MONK"] = {
 			["Locale"] = "enUS",
-			["Version"] = 20886,
+			["Specializations"] = {
+				[3] = {
+					["id"] = 269,
+					["talents"] = {
+						19823, -- [1]
+						22091, -- [2]
+						20185, -- [3]
+						19304, -- [4]
+						19818, -- [5]
+						19302, -- [6]
+						22099, -- [7]
+						19771, -- [8]
+						19992, -- [9]
+						19993, -- [10]
+						22100, -- [11]
+						19995, -- [12]
+						20174, -- [13]
+						20173, -- [14]
+						20175, -- [15]
+						19819, -- [16]
+						20184, -- [17]
+						22103, -- [18]
+						22107, -- [19]
+						22105, -- [20]
+						21191, -- [21]
+					},
+					["icon"] = "Interface\\Icons\\spell_monk_windwalker_spec",
+					["name"] = "Windwalker",
+				},
+				[2] = {
+					["id"] = 270,
+					["talents"] = {
+						19823, -- [1]
+						19820, -- [2]
+						22213, -- [3]
+						19304, -- [4]
+						19818, -- [5]
+						19302, -- [6]
+						22168, -- [7]
+						22167, -- [8]
+						22166, -- [9]
+						19993, -- [10]
+						22219, -- [11]
+						19995, -- [12]
+						20174, -- [13]
+						20173, -- [14]
+						20175, -- [15]
+						22093, -- [16]
+						22217, -- [17]
+						22214, -- [18]
+						22218, -- [19]
+						22169, -- [20]
+						22170, -- [21]
+					},
+					["icon"] = "Interface\\Icons\\spell_monk_mistweaver_spec",
+					["name"] = "Mistweaver",
+				},
+			},
+			["Version"] = 22345,
 		},
 		["PRIEST"] = {
 			["Locale"] = "enUS",
-			["Version"] = 20886,
+			["Specializations"] = {
+				{
+					["id"] = 256,
+					["talents"] = {
+						22328, -- [1]
+						19753, -- [2]
+						22329, -- [3]
+						22315, -- [4]
+						22316, -- [5]
+						19758, -- [6]
+						22440, -- [7]
+						22094, -- [8]
+						19755, -- [9]
+						19759, -- [10]
+						19769, -- [11]
+						19761, -- [12]
+						22330, -- [13]
+						19765, -- [14]
+						19766, -- [15]
+						22161, -- [16]
+						19760, -- [17]
+						19763, -- [18]
+						21183, -- [19]
+						21184, -- [20]
+						21185, -- [21]
+					},
+					["icon"] = "Interface\\Icons\\Spell_Holy_PowerWordShield",
+					["name"] = "Discipline",
+				}, -- [1]
+				{
+					["id"] = 257,
+					["talents"] = {
+						19752, -- [1]
+						22136, -- [2]
+						19754, -- [3]
+						22315, -- [4]
+						22326, -- [5]
+						21976, -- [6]
+						22440, -- [7]
+						22095, -- [8]
+						22562, -- [9]
+						21750, -- [10]
+						21977, -- [11]
+						21752, -- [12]
+						19764, -- [13]
+						22327, -- [14]
+						21754, -- [15]
+						19767, -- [16]
+						19760, -- [17]
+						19763, -- [18]
+						21636, -- [19]
+						21644, -- [20]
+						21638, -- [21]
+					},
+					["icon"] = "Interface\\Icons\\Spell_Holy_GuardianSpirit",
+					["name"] = "Holy",
+				}, -- [2]
+			},
+			["Version"] = 22345,
 		},
 	},
 }

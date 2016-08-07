@@ -278,38 +278,43 @@ end
 
 function MT:RefreshPlayerSpellIconInfo()
 	MT.MACRO_ICON_FILENAMES = {}
-	MT.MACRO_ICON_FILENAMES[1] = "INV_MISC_QUESTIONMARK"
-	local index = 2
-	local numFlyouts = 0
+	local index = 1;
+	local numFlyouts = 0;
 
 	for i = 1, GetNumSpellTabs() do
 		local tab, tabTex, offset, numSpells, _ = GetSpellTabInfo(i)
 		offset = offset + 1
 		local tabEnd = offset + numSpells
 		for j = offset, tabEnd - 1 do
+			--to get spell info by slot, you have to pass in a pet argument
 			local spellType, ID = GetSpellBookItemInfo(j, "player")
-			if spellType ~= "FUTURESPELL" then
-				local spellTexture = string.upper(GetSpellBookItemTexture(j, "player"))
-				local spellName = GetSpellInfo(ID)
-				if not string.match(spellTexture, "INTERFACE\\BUTTONS\\") then
-					MT.MACRO_ICON_FILENAMES[index] = string.gsub(spellTexture, "INTERFACE\\ICONS\\", "")
-					index = index + 1
+			if (spellType ~= "FUTURESPELL") then
+				local spellTexture = strupper(GetSpellBookItemTextureFileName(j, "player"))
+				if ( not string.match( spellTexture, "INTERFACE\\BUTTONS\\") ) then
+					MT.MACRO_ICON_FILENAMES[index] = gsub( spellTexture, "INTERFACE\\ICONS\\", "")
+					index = index + 1;
 				end
 			end
-			if spellType == "FLYOUT" then
-				local _, _, numSlots, isKnown = GetFlyoutInfo(ID)
-				if isKnown and (numSlots > 0) then
+			if (spellType == "FLYOUT") then
+				local _, _, numSlots, isKnown = GetFlyoutInfo(ID);
+				if (isKnown and numSlots > 0) then
 					for k = 1, numSlots do 
 						local spellID, overrideSpellID, isKnown = GetFlyoutSlotInfo(ID, k)
-						if isKnown then
-							MT.MACRO_ICON_FILENAMES[index] = string.gsub(string.upper(GetSpellTexture(spellID)), "INTERFACE\\ICONS\\", "")
-							index = index + 1
+						if (isKnown) then
+							local spellTexture = GetSpellTextureFileName(spellID)
+							if spellTexture then
+								MT.MACRO_ICON_FILENAMES[index] = gsub( strupper(spellTexture), "INTERFACE\\ICONS\\", "")
+								index = index + 1
+							end
 						end
 					end
 				end
 			end
 		end
 	end
+	
+	GetLooseMacroIcons(MT.MACRO_ICON_FILENAMES)
+	GetLooseMacroItemIcons(MT.MACRO_ICON_FILENAMES)
 	GetMacroIcons(MT.MACRO_ICON_FILENAMES)
 	GetMacroItemIcons(MT.MACRO_ICON_FILENAMES)
 end
@@ -330,12 +335,12 @@ end
 function MT:GetBlizzSpellorMacroIconInfo(index)
 	if not index then return end
 	local info = MT.MACRO_ICON_FILENAMES[index]
-	local texturename
-	if type(info) == "number" then
-		MacroToolkitFrame.nulltexture:SetToFileData(info)
-		texturename = getFilenameFromPath(MacroToolkitFrame.nulltexture:GetTexture())
-	else texturename = info end
-	return texturename
+	local infonum = tonumber(info)
+	if infonum ~= nil then
+		return infonum
+	else
+		return info
+	end
 end
 
 function MT:PopupOkayUpdate()
@@ -349,7 +354,12 @@ end
 function MT:SelectTexture(selectedIcon)
 	mtpf.selectedIcon = selectedIcon
 	mtpf.selectedIconTexture = nil
-	MacroToolkitSelMacroButtonIcon:SetTexture(format("INTERFACE\\ICONS\\%s", MT:GetSpellorMacroIconInfo(mtpf.selectedIcon)))
+	local texture = MT:GetSpellorMacroIconInfo(mtpf.selectedIcon)
+	if type(texture) == "number" then
+		MacroToolkitSelMacroButtonIcon:SetTexture(texture)
+	else
+		MacroToolkitSelMacroButtonIcon:SetTexture(format("INTERFACE\\ICONS\\%s", texture))
+	end
 	MT:PopupOkayUpdate()
 	local mode = mtpf.mode
 	mtpf.mode = nil
@@ -382,7 +392,11 @@ function MT:PopupUpdate(this)
 		index = (macroPopupOffset * _G.NUM_ICONS_PER_ROW) + i
 		texture = MT:GetSpellorMacroIconInfo(index)
 		if index <= numMacroIcons and texture then
-			macroPopupIcon:SetTexture(format("INTERFACE\\ICONS\\%s", texture))
+			if type(texture == "number") then
+				macroPopupIcon:SetTexture(texture)
+			else
+				macroPopupIcon:SetTexture(format("INTERFACE\\ICONS\\%s", texture))
+			end
 			macroPopupButton:Show()
 		else
 			macroPopupIcon:SetTexture("")

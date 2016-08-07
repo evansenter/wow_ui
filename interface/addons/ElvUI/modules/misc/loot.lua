@@ -36,6 +36,15 @@ local LOOT = LOOT
 --Global variables that we don't cache, list them here for mikk's FindGlobals script
 -- GLOBALS: GameTooltip, LootFrame, LootSlot, GroupLootDropDown, UISpecialFrames
 
+local coinTextureIDs = {
+	[133784] = true,
+	[133785] = true,
+	[133786] = true,
+	[133787] = true,
+	[133788] = true,
+	[133789] = true,
+}
+
 --Credit Haste
 local lootFrame, lootFrameHolder
 local iconSize = 30;
@@ -218,19 +227,21 @@ function M:LOOT_OPENED(event, autoloot)
 		lootFrame:Point("TOPLEFT", UIParent, "BOTTOMLEFT", x - 40, y + 20)
 		lootFrame:GetCenter()
 		lootFrame:Raise()
+		E:DisableMover("LootFrameMover")
 	else
 		lootFrame:ClearAllPoints()
 		lootFrame:Point("TOPLEFT", lootFrameHolder, "TOPLEFT")
+		E:EnableMover("LootFrameMover")
 	end
 
 	local m, w, t = 0, 0, lootFrame.title:GetStringWidth()
 	if(items > 0) then
 		for i=1, items do
 			local slot = lootFrame.slots[i] or createSlot(i)
-			local texture, item, quantity, quality, locked, isQuestItem, questId, isActive = GetLootSlotInfo(i)
+			local textureID, item, quantity, quality, locked, isQuestItem, questId, isActive = GetLootSlotInfo(i)
 			local color = ITEM_QUALITY_COLORS[quality]
 
-			if texture and texture:find('INV_Misc_Coin') then
+			if coinTextureIDs[textureID] then
 				item = item:gsub("\n", ", ")
 			end
 
@@ -253,7 +264,7 @@ function M:LOOT_OPENED(event, autoloot)
 			if color then
 				slot.name:SetTextColor(color.r, color.g, color.b)
 			end
-			slot.icon:SetTexture(texture)
+			slot.icon:SetTexture(textureID)
 
 			if quality then
 				m = max(m, quality)
@@ -335,7 +346,10 @@ function M:LoadLoot()
 	self:RegisterEvent("UPDATE_MASTER_LOOT_LIST")
 
 	E:CreateMover(lootFrameHolder, "LootFrameMover", L["Loot Frame"])
-
+	if(GetCVar("lootUnderMouse") == "1") then
+		E:DisableMover("LootFrameMover")
+	end
+	
 	-- Fuzz
 	LootFrame:UnregisterAllEvents()
 	tinsert(UISpecialFrames, 'ElvLootFrame')

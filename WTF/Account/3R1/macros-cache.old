@@ -1,6 +1,10 @@
 VER 3 0000000000000031 "Belt" "INV_MISC_QUESTIONMARK"
 /use 6
 END
+VER 3 000000000000004C "BH" "INV_Misc_QuestionMark"
+#showtooltip
+/use [target=mouseover,help,nodead][]Binding Heal
+END
 VER 3 000000000000003F "Blackout Kick" "INV_MISC_QUESTIONMARK"
 #showtooltip Blackout Kick
 /use [nochanneling:Fists of Fury]Blackout Kick
@@ -16,6 +20,10 @@ VER 3 0000000000000048 "Cancel HoP" "Spell_Holy_SealOfProtection"
 END
 VER 3 0000000000000030 "Cloak" "INV_MISC_QUESTIONMARK"
 /use 15
+END
+VER 3 000000000000004E "CoH" "INV_Misc_QuestionMark"
+#showtooltip
+/use [target=mouseover,help,nodead][]Circle of Healing
 END
 VER 3 0000000000000029 "Combat Log" "PASSIVE_MONK_TEACHINGSOFMONASTERY"
 /combatlog
@@ -33,10 +41,18 @@ END
 VER 3 000000000000002B "Focus" "Ability_Priest_Phantasm"
 /focus
 END
+VER 3 000000000000004D "GS" "INV_Misc_QuestionMark"
+#showtooltip
+/use [target=mouseover,help,nodead][]Guardian Spirit
+END
 VER 3 0000000000000049 "Guard" "INV_Misc_QuestionMark"
 #showtooltip Guard
 /use 13
 /cast Guard
+END
+VER 3 0000000000000050 "HF" "INV_Misc_QuestionMark"
+#showtooltip
+/use [harm][@targettarget,harm][]Holy Fire
 END
 VER 3 0000000000000034 "HS / GHS" "INV_Misc_QuestionMark"
 #showtooltip
@@ -50,16 +66,16 @@ VER 3 0000000000000045 "Keg Smash" "INV_Misc_QuestionMark"
 #showtooltip Keg Smash
 /use Keg Smash
 END
-VER 3 0000000000000032 "Levitate" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/use [@mouseover,nodead,help][nodead,help][@player]Levitate
-END
 VER 3 0000000000000038 "Logs" "INV_Inscription_MajorGlyph01"
 /ra http://www.worldoflogs.com/guilds/290422/
 /ra http://www.warcraftlogs.com/guilds/usercalendar/8101
 END
 VER 3 000000000000002A "Macro" "Ability_Spy"
 /mac
+END
+VER 3 000000000000004F "PoM" "INV_Misc_QuestionMark"
+#showtooltip
+/use [target=mouseover,help,nodead][]Prayer of Mending
 END
 VER 3 0000000000000027 "Pull" "INV_Gizmo_RocketBootExtreme"
 /i DBM Pull.
@@ -99,7 +115,7 @@ VER 3 0000000000000043 "Tier 7" "INV_Misc_QuestionMark"
 END
 VER 3 000000000000004B "Tier 7 MW" "INV_Misc_QuestionMark"
 #showtooltip
-/use [@mouseover,help,nodead][]Chi Explosion
+/use [talent:7/1]Breath of the Serpent;[talent:7/2]Chi Explosion;[talent:7/3]Pool of Mists
 END
 VER 3 000000000000003E "Tiger Palm" "INV_MISC_QUESTIONMARK"
 #showtooltip Tiger Palm

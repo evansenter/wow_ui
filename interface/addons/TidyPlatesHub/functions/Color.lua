@@ -31,11 +31,9 @@ local GetAggroCondition = TidyPlatesWidgets.GetThreatCondition
 local IsFriend = TidyPlatesUtility.IsFriend
 local IsHealer = TidyPlatesUtility.IsHealer
 local IsGuildmate = TidyPlatesUtility.IsGuildmate
-local IsTankedByAnotherTank = HubData.Functions.IsTankedByAnotherTank
-local IsTankingAuraActive = HubData.Functions.IsTankingAuraActive
+local IsTankedByAnotherTank = TidyPlatesWidgets.IsTankedByAnotherTank
+local IsTankingAuraActive = TidyPlatesWidgets.IsPlayerTank
 local InCombatLockdown = InCombatLockdown
-local GetFriendlyClass = HubData.Functions.GetFriendlyClass
-local GetEnemyClass = HubData.Functions.GetEnemyClass
 local StyleDelegate = TidyPlatesHubFunctions.SetStyleNamed
 local AddHubFunction = TidyPlatesHubHelpers.AddHubFunction
 
@@ -58,35 +56,12 @@ end
 HubData.Functions.ColorFunctionByHealth = ColorFunctionByHealth
 
 --"By Class"
-local function ColorFunctionByClassEnemy(unit)
-	local class
-
-	if unit.type == "PLAYER" then
-		-- Determine Unit Class
-		if unit.reaction ~= "FRIENDLY" then class = unit.class or GetEnemyClass(unit.name) end
-
-		-- Return Color
-		if class and RaidClassColors[class] then
-			return RaidClassColors[class] end
+local function ColorFunctionByClass(unit)
+	local classColor = RaidClassColors[unit.class]
+	
+	if classColor then
+		return classColor
 	end
-
-	-- For unit types with no Class info available, the function returns nil (meaning, default reaction color)
-end
-
-local function ColorFunctionByClassFriendly(unit)
-	local class
-
-	if unit.type == "PLAYER" then
-		-- Determine Unit Class
-		if unit.reaction == "FRIENDLY" then class = GetFriendlyClass(unit.name)	end
-
-		-- Return Color
-		if class and RaidClassColors[class] then
-			return RaidClassColors[class]
-		end
-	end
-
-	-- For unit types with no Class info available, the function returns nil (meaning, default reaction color)
 end
 
 local function ColorFunctionBlack()
@@ -115,6 +90,8 @@ local function ColorFunctionByReaction(unit)
 end
 
 local function ColorFunctionDamage(unit)
+
+	--if IsTankedByAnotherTank(unit) then return LocalVars.ColorAttackingOtherTank end
 
 	if unit.threatValue > 1 then return LocalVars.ColorThreatWarning				-- When player is unit's target		-- Warning
 	elseif unit.threatValue == 1 then return LocalVars.ColorThreatTransition											-- Transition
@@ -153,19 +130,24 @@ Threat Value
 
 
 local function ColorFunctionByThreat(unit)
-	if InCombatLockdown() and unit.reaction ~= "FRIENDLY" and unit.type == "NPC" then
+
+	local classColor = RaidClassColors[unit.class]
+
+	if classColor then
+		return classColor
+	elseif InCombatLockdown() and unit.reaction ~= "FRIENDLY" and unit.type == "NPC" then
 
 		if unit.reaction == "NEUTRAL" and unit.threatValue < 2 then return ReactionColors[unit.reaction][unit.type] end
 
-		if (LocalVars.ThreatWarningMode == "Tank") or (LocalVars.ThreatWarningMode == "Auto" and TidyPlatesWidgets.IsTankingAuraActive) then
+		if (LocalVars.ThreatWarningMode == "Tank") or (LocalVars.ThreatWarningMode == "Auto" and IsTankingAuraActive()) then
 			return ColorFunctionTankSwapColors(unit)
 		--elseif LocalVars.ThreatWarningMode == "Tank" then
 		--	return ColorFunctionRawTank(unit)
 		else return ColorFunctionDamage(unit) end
 
 	else
-		return RaidClassColors[unit.class or ""] or ReactionColors[unit.reaction][unit.type]
-		--return ReactionColors[unit.reaction][unit.type]
+		return ReactionColors[unit.reaction][unit.type]
+		
 	end
 
 end
@@ -188,7 +170,7 @@ TidyPlatesHubDefaults.EnemyBarColorMode = "ByThreat"			-- Sets the default funct
 
 AddHubFunction(EnemyBarFunctions, TidyPlatesHubMenus.EnemyBarModes, ColorFunctionByThreat, "By Threat", "ByThreat")
 AddHubFunction(EnemyBarFunctions, TidyPlatesHubMenus.EnemyBarModes, ColorFunctionByReaction, "By Reaction", "ByReaction")
-AddHubFunction(EnemyBarFunctions, TidyPlatesHubMenus.EnemyBarModes, ColorFunctionByClassEnemy, "By Class", "ByClass")
+AddHubFunction(EnemyBarFunctions, TidyPlatesHubMenus.EnemyBarModes, ColorFunctionByClass, "By Class", "ByClass")
 AddHubFunction(EnemyBarFunctions, TidyPlatesHubMenus.EnemyBarModes, ColorFunctionByHealth, "By Health", "ByHealth")
 
 
@@ -196,7 +178,7 @@ local FriendlyBarFunctions = {}
 TidyPlatesHubDefaults.FriendlyBarColorMode = "ByReaction"			-- Sets the default function
 
 AddHubFunction(FriendlyBarFunctions, TidyPlatesHubMenus.FriendlyBarModes, ColorFunctionByReaction, "By Reaction", "ByReaction")
-AddHubFunction(FriendlyBarFunctions, TidyPlatesHubMenus.FriendlyBarModes, ColorFunctionByClassFriendly, "By Class", "ByClass")
+AddHubFunction(FriendlyBarFunctions, TidyPlatesHubMenus.FriendlyBarModes, ColorFunctionByClass, "By Class", "ByClass")
 AddHubFunction(FriendlyBarFunctions, TidyPlatesHubMenus.FriendlyBarModes, ColorFunctionByHealth, "By Health", "ByHealth")
 
 
@@ -209,7 +191,7 @@ local function HealthColorDelegate(unit)
 	-- Group Member Aggro Coloring
 	if unit.reaction == "FRIENDLY"  then
 		if LocalVars.ColorShowPartyAggro and LocalVars.ColorPartyAggroBar then
-			if GetAggroCondition(unit.rawName) then color = LocalVars.ColorPartyAggro end
+			--if GetAggroCondition(unit.rawName) then color = LocalVars.ColorPartyAggro end
 		end
 	-- Tapped Color Priority
 	elseif unit.reaction == "TAPPED" then
@@ -312,7 +294,7 @@ local function WarningBorderFunctionByThreat(unit)
 	if InCombatLockdown() and unit.reaction ~= "FRIENDLY" and unit.type == "NPC" then
 		if unit.reaction == "NEUTRAL" and unit.threatValue < 2 then return end
 
-		if (LocalVars.ThreatWarningMode == "Auto" and TidyPlatesWidgets.IsTankingAuraActive)
+		if (LocalVars.ThreatWarningMode == "Auto" and IsTankingAuraActive())
 			or LocalVars.ThreatWarningMode == "Tank" then
 				if IsTankedByAnotherTank(unit) then return
 				elseif unit.threatValue == 2 then return LocalVars.ColorThreatTransition
@@ -396,6 +378,7 @@ local function NameColorBySignificance(unit)
 end
 
 local function NameColorByClass(unit)
+	--[[
 	local class, color
 
 	if unit.type == "PLAYER" then
@@ -408,6 +391,14 @@ local function NameColorByClass(unit)
 			return RaidClassColors[class] end
 	end
 
+--]]
+
+	local class = unit.class
+
+	if class then
+		return RaidClassColors[unit.class]
+	end
+
 	-- For unit types with no Class info available, return reaction color
 	return NameReactionColors[unit.reaction][unit.type]
 end
@@ -417,13 +408,7 @@ local function NameColorByFriendlyClass(unit)
 	local class, color
 
 	if unit.type == "PLAYER" and unit.reaction == "FRIENDLY" then
-		-- Determine Unit Class
-		class = GetFriendlyClass(unit.name)
-		--print(unit.name, class)
-
-		-- Return color
-		if class and RaidClassColors[class] then
-			return RaidClassColors[class] end
+		return RaidClassColors[unit.class]
 	end
 
 	-- For unit types with no Class info available, return reaction color
@@ -436,11 +421,7 @@ local function NameColorByEnemyClass(unit)
 	local class, color
 
 	if unit.type == "PLAYER" and unit.reaction == "HOSTILE" then
-		class = unit.class or GetEnemyClass(unit.name)
-
-		-- Return color
-		if class and RaidClassColors[class] then
-			return RaidClassColors[class] end
+		return RaidClassColors[unit.class]
 	end
 
 	-- For unit types with no Class info available, return reaction color
@@ -448,11 +429,7 @@ local function NameColorByEnemyClass(unit)
 end
 
 local function NameColorByClass(unit)
-	if unit.reaction == "HOSTILE" then
-		return NameColorByEnemyClass(unit)
-	else
-		return NameColorByFriendlyClass(unit)
-	end
+	return RaidClassColors[unit.class]
 end
 
 local function NameColorByThreat(unit)

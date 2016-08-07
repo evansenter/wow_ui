@@ -9,7 +9,7 @@ local Config = LibStub("AceConfig-3.0")
 
 local db
 
-addon.svnrev["config.lua"] = tonumber(("$Revision: 473 $"):match("%d+"))
+addon.svnrev["config.lua"] = tonumber(("$Revision: 500 $"):match("%d+"))
 
 addon.diff_strings = {
 	D1 = DUNGEON_DIFFICULTY1, -- 5 man
@@ -134,30 +134,6 @@ local function IndicatorOptions()
 	return args
 end
 
-local function GroupListGUI(order, name, list)
-	local total = TableLen(list)
-	local group = {
-		type = "group",
-		inline = true,
-		name = name,
-		order = order,
-		args = {
-			item1 = {
-				type = "description",
-				name = L["List is empty"],
-			},
-		},
-	}
-	for i = 1, total do
-		group.args["item" .. i] = {
-			type = "description",
-			name = list[i],
-			order = i,
-		}
-	end
-	return group
-end
-
 -- options table below
 function module:BuildOptions() 
   local valueslist = { ["always"] = GREEN_FONT_COLOR_CODE..L["Always show"]..FONTEND,
@@ -168,6 +144,16 @@ function module:BuildOptions()
 	type = "group",
 	name = "SavedInstances",
 	handler = SavedInstances,
+	get = function(info)
+		return db.Tooltip[info[#info]]
+	end,
+	set = function(info, value)
+		addon.debug(info[#info].." set to: "..tostring(value))
+		db.Tooltip[info[#info]] = value
+		wipe(addon.scaleCache)
+		wipe(addon.oi_cache)
+		addon.oc_cache = nil
+	end,
 	args = {
 		debug = { 
 			name = "debug",
@@ -198,26 +184,11 @@ function module:BuildOptions()
 			order = 1,
 			type = "group",
 			name = L["General settings"],
-			get = function(info)
-					return db.Tooltip[info[#info]]
-			end,
-			set = function(info, value)
-					addon.debug(info[#info].." set to: "..tostring(value))
-					db.Tooltip[info[#info]] = value
-					wipe(addon.scaleCache)
-					wipe(addon.oi_cache)
-					addon.oc_cache = nil
-			end,
 			args = {
 				ver = {
 					order = 0.5,
 					type = "description",
 					name = function() return "Version: SavedInstances "..addon.version end,
-				},
-				intro = {
-					order = 1,
-					type = "description",
-					name = L["Track the instance IDs saved against your characters"],
 				},
 				GeneralHeader = {
 					order = 2, 
@@ -263,37 +234,6 @@ function module:BuildOptions()
 					order = 4.8,
 				},
 
-				CharactersHeader = {
-					order = 4.9, 
-					type = "header",
-					name = L["Characters"],
-				},
-				ShowServer = {
-					type = "toggle",
-					name = L["Show server name"],
-					order = 5,
-				},
-				ServerSort = {
-					type = "toggle",
-					name = L["Sort by server"],
-					order = 6,
-				},
-				ServerOnly = {
-					type = "toggle",
-					name = L["Show only current server"],
-					order = 6.25,
-				},
-				SelfAlways = {
-					type = "toggle",
-					name = L["Show self always"],
-					order = 6.5,
-				},
-				SelfFirst = {
-					type = "toggle",
-					name = L["Show self first"],
-					order = 7,
-				},
-				
 				CategoriesHeader = {
 					order = 11, 
 					type = "header",
@@ -411,131 +351,55 @@ function module:BuildOptions()
 				MiscHeader = {
 					order = 30, 
 					type = "header",
-					name = L["Miscellaneous"],
+					name = L["Miscellaneous Tracking"],
 				},
 				TrackDailyQuests = {
 					type = "toggle",
 					order = 33,
-					name = L["Track Daily Quests"],
+					name = L["Daily Quests"],
 				},
 				TrackWeeklyQuests = {
 					type = "toggle",
 					order = 33.5,
-					name = L["Track Weekly Quests"],
-				},
-				RemindCharms = {
-					type = "toggle",
-					order = 33.6,
-					width = "double",
-					name = L["Remind about weekly charm quest"],
+					name = L["Weekly Quests"],
 				},
 				TrackSkills = {
 					type = "toggle",
 					order = 33.75,
-					width = "double",
-					name = L["Track trade skill cooldowns"],
+					name = L["Trade skills"],
 				},
 				TrackFarm = {
 					type = "toggle",
 					order = 33.80,
-					width = "double",
-					name = L["Track farm crops"],
+					name = L["Farm crops"],
 				},
 				TrackBonus = {
 					type = "toggle",
 					order = 33.85,
-					width = "double",
-					name = L["Track bonus loot rolls"],
+					name = L["Bonus rolls"],
 				},
 				AugmentBonus = {
 					type = "toggle",
 					order = 33.95,
-					width = "double",
-					name = L["Augment bonus loot frame"],
+					name = L["Bonus loot frame"],
 				},
 				TrackLFG = {
 					type = "toggle",
 					order = 34,
-					width = "double",
-					name = L["Track LFG dungeon cooldown"],
+					name = L["LFG cooldown"],
 					desc = L["Show cooldown for characters to use LFG dungeon system"],
 				},
 				TrackDeserter = {
 					type = "toggle",
 					order = 35,
-					width = "double",
-					name = L["Track Battleground Deserter cooldown"],
+					name = L["Battleground Deserter"],
 					desc = L["Show cooldown for characters to use battleground system"],
 				},
-				CurrencyHeader = {
-					order = 50, 
-					type = "header",
-					name = CURRENCY,
-				},
-				CurrencyMax = {
+				TrackPlayed = {
 					type = "toggle",
-					order = 50.2,
-					name = L["Show currency max"]
+					order = 36,
+					name = L["Time /played"],
 				},
-				CurrencyEarned = {
-					type = "toggle",
-					order = 50.4,
-					name = L["Show currency earned"]
-				},
-				CurrencyValueColor = {
-					type = "toggle",
-					order = 50.5,
-					name = L["Color currency by cap"]
-				},
-				ToonHeader = {
-					order = 31, 
-					type = "header",
-					name = L["Characters"],
-					hidden = true,
-				},
-				ColumnStyle = {
-					order = 32,
-					type = "select",
-					width = "double",
-					style = "radio",
-					hidden = true,
-					disabled = true,
-					name = L["Character column style"],
-					values = {
-						["ALTERNATING"] = L["Alternating columns are colored differently"],
-						["CLASS"] = L["Columns are colored according to the characters class"],
-						["NORMAL"] = L["Columns are the same color as the whole tooltip"],
-					},
-				},
-				AltColumnColor = { 
-					order = 33,
-					type = "color",
-					width = "half",
-					hasAlpha = true,
-					name = COLOR,
-					hidden = true,
---					hidden = function()
---						return not (db.Tooltip.ColumnStyle == "ALTERNATING")
---					end,
-					disabled = true,
---					disabled = function()
---						return not (db.Tooltip.ColumnStyle == "ALTERNATING")
---					end,
-					get = function(info)
-						local r = db.Tooltip[info[#info]][1]
-						local g = db.Tooltip[info[#info]][2]
-						local b = db.Tooltip[info[#info]][3]
-						local a = db.Tooltip[info[#info]][4]
-						return r, g, b, a
-					end,
-					set = function(info, r, g, b, a)
-						db.Tooltip[info[#info]][1] = r
-						db.Tooltip[info[#info]][2] = g
-						db.Tooltip[info[#info]][3] = b
-						db.Tooltip[info[#info]][4] = a
-					end,
-				},
-
 				BindHeader = {
 					order = -0.6, 
 					type = "header",
@@ -561,8 +425,50 @@ function module:BuildOptions()
     				},
 			},
 		},
-		Indicators = {
+		Currency = {
 			order = 2,
+			type = "group",
+			name = L["Currency settings"],
+			get = function(info)
+					return db.Tooltip[info[#info]]
+			end,
+			set = function(info, value)
+					addon.debug(info[#info].." set to: "..tostring(value))
+					db.Tooltip[info[#info]] = value
+					wipe(addon.scaleCache)
+					wipe(addon.oi_cache)
+					addon.oc_cache = nil
+			end,
+			args = {
+				CurrencyValueColor = {
+					type = "toggle",
+					order = 10,
+					name = L["Color currency by cap"]
+				},
+				NumberFormat = {
+					type = "toggle",
+					order = 20,
+					name = L["Format large numbers"]
+				},
+				CurrencyMax = {
+					type = "toggle",
+					order = 30,
+					name = L["Show currency max"]
+				},
+				CurrencyEarned = {
+					type = "toggle",
+					order = 40,
+					name = L["Show currency earned"]
+				},
+				CurrencyHeader = {
+					order = 50, 
+					type = "header",
+					name = CURRENCY,
+				},
+			},
+		},
+		Indicators = {
+			order = 3,
 			type = "group",
 			name = L["Indicators"],
 			get = function(info)
@@ -581,7 +487,7 @@ function module:BuildOptions()
 		Instances = {
 			order = 4,
 			type = "group",
-			name = L["Instance options"],
+			name = L["Instances"],
 			childGroups = "select",
 			width = "double",
 			args = (function()
@@ -594,7 +500,8 @@ function module:BuildOptions()
 				childGroups = "tree",
 				args = (function()
 				  local iret = {}
-				  for j, inst in ipairs(addon:OrderedInstances(cat)) do
+				  local insts = addon:OrderedInstances(cat)
+				  for j, inst in ipairs(insts) do
 					iret[inst] = {
 					  order = j,
 					  name = inst,
@@ -606,10 +513,29 @@ function module:BuildOptions()
 				    			return (val and valueslist[val] and val) or "saved"
 				  		end,
 				  		set = function(info, value)
-				   		 	db.Instances[inst].Show = value
+				   	 		db.Instances[inst].Show = value
 				  		end,
 				        }
 				  end 
+				  iret[ALL] = {
+				  	order = 0,
+					name = L["Set All"],
+				  	type = "select",
+				  	values = valueslist,
+					get = function(info) return "" end,
+				  	set = function(info, value)
+				  		for j, inst in ipairs(insts) do
+				   	 		db.Instances[inst].Show = value
+						end
+				  	end,
+				  }
+				  iret.spacer = { 
+				  	order = 0.5,
+					name = "",
+					type = "description",
+					width = "full",
+					cmdHidden = true,
+				  }
 				  return iret
                                  end)(),
 				} 
@@ -618,9 +544,62 @@ function module:BuildOptions()
 			end)(),
 		},
 		Characters = {
-			order = 4,
-			type = "group",
-			name = L["Characters"],
+	  	  order = 5,
+		  type = "group",
+		  name = L["Characters"],
+		  args = {
+		    Sorting = {
+		  	name = L["Sorting"],
+		  	type = "group",
+		        guiInline = true,
+			order = 1,
+			args = {
+				SelfAlways = {
+					type = "toggle",
+					name = L["Show self always"],
+					order = 2,
+				},
+				SelfFirst = {
+					type = "toggle",
+					name = L["Show self first"],
+					order = 3,
+				},
+				ShowServer = {
+					type = "toggle",
+					name = L["Show server name"],
+					order = 5,
+				},
+				ServerSort = {
+					type = "toggle",
+					name = L["Sort by server"],
+					order = 6,
+				},
+				ServerOnly = {
+					type = "toggle",
+					name = L["Show only current server"],
+					order = 7,
+				},
+				ConnectedRealms = {
+					type = "select",
+					name = L["Connected Realms"],
+					order = 10,
+					disabled = function()
+					  return not (db.Tooltip.ServerSort or db.Tooltip.ServerOnly)
+					end,
+					values = {
+					        ["ignore"] = L["Ignore"],
+					        ["group"] = L["Group"],
+					        ["interleave"] = L["Interleave"],
+					},
+				},
+				
+			}
+		    },
+		    Manage = {
+		  	name = L["Manage"],
+		  	type = "group",
+		        guiInline = true,
+			order = 2,
 			childGroups = "select",
 			width = "double",
 			args = (function ()
@@ -628,7 +607,7 @@ function module:BuildOptions()
 			  for toon, _ in pairs(db.Toons) do
 			    local tn, ts = toon:match('^(.*) [-] (.*)$')
 			    toons[ts] = toons[ts] or {}
-			    toons[ts][tn] = toon
+			    table.insert(toons[ts],tn)
 			  end
 			  local ret = {}
 			  ret.reset = {
@@ -648,27 +627,147 @@ function module:BuildOptions()
 			        core:Refresh(true)
 			    end
 			  }
-			  local scnt = 0;
+			  local deltoon = function(info)
+			    local toon, tinfo = unpack(info.arg)
+			    if not toon then return end
+			    local dialog = StaticPopup_Show("SAVEDINSTANCES_DELETE_CHARACTER", toon, tinfo, toon)
+			  end
+			  local toonfncache = {}
+			  local toonget = function(field, default)
+			    local key = field.."_get"
+			    local fn = toonfncache[key] or function(info)
+			      return tostring(info.arg[field] or default)
+			    end
+			    toonfncache[key] = fn
+			    return fn
+			  end
+			  local toonset = function(field, isnum)
+			    local key = field.."_set"
+			    local fn = toonfncache[key] or function(info, value)
+			      if isnum then
+			        value = tonumber(value)
+			      end
+			      info.arg[field] = value
+			    end
+			    toonfncache[key] = fn
+			    return fn
+			  end
+			  local orderval = function(info, value)
+			    if value:find("^%s*[0-9]?[0-9]?[0-9]%s*$") then
+			      return true
+			    else
+			      local err = L["Order must be a number in [0 - 999]"]
+			      addon.chatMsg(err)
+			      return err
+			    end
+			  end
+			  -- label line
+			  ret.newline1 = {
+			    order = 0.40,
+			    cmdHidden = true,
+			    name = "",
+			    type = "description",
+			    width = "full",
+			  }
+			  ret.cname = {
+			    order = 0.41,
+			    cmdHidden = true,
+			    name = " ",
+			    type = "description",
+			    width = "half",
+			  }
+			  ret.cshow = {
+			    order = 0.42,
+			    cmdHidden = true,
+			    fontSize = "medium",
+			    name = "  "..L["Show When"],
+			    type = "description",
+			    width = "normal",
+			  }
+			  ret.csort = {
+			    order = 0.43,
+			    cmdHidden = true,
+			    fontSize = "medium",
+			    name = "  "..L["Sort Order"],
+			    type = "description",
+			    width = "half",
+			  }
+
 			  for server, stoons in pairs(toons) do
-			    scnt = scnt + 1;
 			    ret[server] = {
-			      order = (server == GetRealmName() and 0.5 or scnt),
+			      order = (server == GetRealmName() and 0.5 or 100),
 			      type = "group",
 			      name = server,
-		  	      childGroups = "tree",
+		              guiInline = false,
+		  	      --childGroups = "tree",
 			      args = (function()
 				local tret = {}
-			        for tn, toon in pairs(stoons) do
-				  tret[toon] = {
-			            name = tn,
+				table.sort(stoons)
+			        for ord, tn in pairs(stoons) do
+				  local toon = tn.." - "..server
+				  local t = vars.db.Toons[toon]
+				  local tinfo = ""
+				  if t and t.Level and t.LClass then
+				    tinfo = tinfo.."\n"..LEVEL.." "..t.Level.." "..t.LClass
+				  end
+				  if t and t.LastSeen then
+				    tinfo = tinfo.."\n"..L["Last updated"]..": "..date("%c",t.LastSeen)
+				  end
+				  tret[tn.."_desc"] = {
+				    order = function(info) return t.Order*1000 + ord*10 + 0 end,
+			            name = addon.ColoredToon(toon),
+				    desc = tn, -- unfortunately does nothing in dialog
+				    descStyle = "tooltip",
+				    type = "description",
+				    width = "half",
+				    cmdHidden = true,
+				  }
+				  tret[tn] = {
+				    order = function(info) return t.Order*1000 + ord*10 + 1 end,
+			            name = "",
 				    type = "select",
+				    width = "normal",
 				    values = valueslist,
-				    get = function(info)
-				      return db.Toons[toon].Show or "saved"
-				    end,
-				    set = function(info, value)
-				      db.Toons[toon].Show = value
-				    end,
+				    arg = t,
+				    get = toonget("Show", "saved"),
+				    set = toonset("Show"),
+				  }
+				  tret[tn.."_order"] = {
+				    order = function(info) return t.Order*1000 + ord*10 + 4 end,
+			            name = "",
+				    type = "input",
+				    width = "half",
+				    desc = L["Sort Order"],
+				    --descStyle = "tooltip",
+				    arg = t,
+				    get = toonget("Order", 50),
+				    set = toonset("Order", true),
+				    validate = orderval,
+				    --pattern = "^%s*[0-9]?[0-9]?[0-9]%s*$",
+				    --usage = L["Order must be a number in [0 - 999]"],
+				  }
+				  tret[tn.."_sp1"] = {
+				    order = function(info) return t.Order*1000 + ord*10 + 6 end,
+			            name = " ",
+				    type = "description",
+				    width = "half",
+				    cmdHidden = true,
+				  }
+				  tret[tn.."_delete"] = {
+				    order = function(info) return t.Order*1000 + ord*10 + 7 end,
+			            name = DELETE,
+				    desc = DELETE.." "..toon..tinfo,
+				    type = "execute",
+				    width = "half",
+				    arg = { toon, tinfo },
+				    func = deltoon,
+				  }
+				  tret[tn.."_nl"] = {
+				    order = function(info) return t.Order*1000 + ord*10 + 9 end,
+			            name = "",
+				    type = "description",
+				    width = "full",
+				    cmdHidden = true,
 				  }
 				end
 				return tret
@@ -677,55 +776,9 @@ function module:BuildOptions()
 			  end
 			  return ret
 			end)()
+		      },
+	           },
 		},
-		--[[
-		Lockouts = {
-			order = 5,
-			type = "group",
-			childGroups = "tab",
-			name = L["Lockouts"],
-			disabled = function()
-				return module.selectedLockout == nil
-			end,
-			args = {
-				SelectedToon = {
-					order = 1,
-					type = "select",
-					width = "double",
-					name = L["Selected lockout"],
-					disabled = function()
-						return TableLen(db.Lockouts) == 0
-					end,
-					get = function(info)
-						return module.selectedLockout
-					end,
-					set = function(info, value)
-						module.selectedLockout = value
-					end,
-					values = function()
-						local table = { }
-						for lockout, l in pairs(db.Lockouts) do
-							table[lockout] = lockout .. " " .. l.Name
-						end
-						return table
-					end,
-				},
-				LockoutNote = {
-					order = 2,
-					type = "input",
-					width = "double",
-					name = L["Note"],
-					get = function()
-						if not module.selectedLockout then return end
-						return db.Lockouts[module.selectedLockout].Note
-					end,
-					set = function(info, value)
-						db.Lockouts[module.selectedLockout].Note = value
-					end,
-				},
-			},
-		},
-		--]]
 	},
 }
   core.Options = core.Options or {} -- allow option table rebuild
@@ -735,7 +788,7 @@ function module:BuildOptions()
   for i, curr in ipairs(addon.currency) do
     local name,_,tex = GetCurrencyInfo(curr)
     tex = "\124T"..tex..":0\124t "
-    core.Options.args.General.args["Currency"..curr] = { 
+    core.Options.args.Currency.args["Currency"..curr] = { 
 	type = "toggle",
 	order = 50+i,
 	name = tex..name,
@@ -791,6 +844,8 @@ function module:SetupOptions()
                        db.MinimapIcon = module:table_clone(vars.defaultDB.MinimapIcon) 
                        module:ReopenConfigDisplay(fgen)
                     end
+	local fcur = ACD:AddToBlizOptions(namespace, CURRENCY, namespace, "Currency")
+        fcur.default = fgen.default
 	local find = ACD:AddToBlizOptions(namespace, L["Indicators"], namespace, "Indicators")
         find.default = function() 
                        addon.debug("RESET: Indicators")
@@ -805,7 +860,6 @@ function module:SetupOptions()
                        end
                        module:ReopenConfigDisplay(finst)
                     end
-	--ACD:AddToBlizOptions(namespace, L["Lockouts"], namespace, "Lockouts")
 	local ftoon = ACD:AddToBlizOptions(namespace, L["Characters"], namespace, "Characters")
 	lastoptiongroup = ftoon
 	module.ftoon = ftoon

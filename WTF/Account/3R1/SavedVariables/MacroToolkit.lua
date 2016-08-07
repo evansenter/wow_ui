@@ -10,8 +10,16 @@ MacroToolkitDB = {
 			},
 		},
 		["Evan - Illidan"] = {
+			["extended"] = {
+				["122"] = {
+					["name"] = "DPS Penance",
+					["icon"] = "237545",
+					["body"] = "#showtooltip\n/use [harm][@targettarget,harm][]Penance\n",
+				},
+			},
 			["backups"] = {
 			},
+			["wodupgrade"] = true,
 		},
 	},
 	["profileKeys"] = {
@@ -33,8 +41,12 @@ MacroToolkitDB = {
 	},
 	["profiles"] = {
 		["Comet - Illidan"] = {
-			["y"] = 486.99951171875,
-			["x"] = 1045.39929199219,
+			["y"] = 419.067169189453,
+			["x"] = 730.933654785156,
+			["height"] = 425,
+			["override"] = true,
+			["noskin"] = true,
+			["visconditions"] = true,
 			["fonts"] = {
 				["edfont"] = "ABF",
 				["edsize"] = 12,
@@ -44,7 +56,7 @@ MacroToolkitDB = {
 				["errsize"] = 12,
 				["errfont"] = "ABF",
 			},
-			["override"] = true,
+			["scale"] = 1,
 		},
 		["Pandatal - Illidan"] = {
 		},

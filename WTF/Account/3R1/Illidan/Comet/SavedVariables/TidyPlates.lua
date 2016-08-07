@@ -7,6 +7,7 @@ TidyPlatesOptions = {
 	["CompatibilityMode"] = false,
 	["PrimaryTheme"] = "Neon",
 	["SecondaryProfile"] = "Damage",
+	["DisableCastBars"] = false,
 	["DisableSoftTransitions"] = false,
 	["SecondaryTheme"] = "Neon",
 	["WelcomeShown"] = true,

@@ -8,6 +8,6 @@ L["AUTO_UPDATE_LABEL"] = "Verlauf autom. aktualisieren"
 L["AUTO_UPDATE_TITLE"] = "Questverlauf autom. aktualisieren"
 L["TRACK_TURNINS_DISABLED"] = "Der Questverlauf wird den aktuellen Status beibehalten, entweder leer oder veraltet."
 L["TRACK_TURNINS_ENABLED"] = "Abgegebene Quests werden im Verlauf gespeichert, um sicherzustellen, dass dieser ständig gültig bleibt."
-L["TRACK_TURNINS_LABEL"] = " Track Quest Turn-ins" -- Needs review
+L["TRACK_TURNINS_LABEL"] = "Quest-Abgaben verfolgen"
 L["TRACK_TURNINS_TITLE"] = "Quest-Abgaben verfolgen"
 

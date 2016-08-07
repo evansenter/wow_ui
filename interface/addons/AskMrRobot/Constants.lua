@@ -2,11 +2,11 @@ local Amr = LibStub("AceAddon-3.0"):GetAddon("AskMrRobot")
 local L = LibStub("AceLocale-3.0"):GetLocale("AskMrRobot", true)
 
 -- min import version that we will read from the website
-Amr.MIN_IMPORT_VERSION = 21
+Amr.MIN_IMPORT_VERSION = 36
 
 -- min addon version that we will support for inter-addon communication for e.g. the team optimizer
---  last update to version 24 when item link format changed
-Amr.MIN_ADDON_VERSION = 24
+--  last update to version 36 for Legion pre-patch
+Amr.MIN_ADDON_VERSION = 36
 
 -- import some constants from the serializer for convenience
 Amr.ChatPrefix = Amr.Serializer.ChatPrefix
@@ -23,6 +23,9 @@ Amr.ParseItemLink = Amr.Serializer.ParseItemLink
 Amr.IsSupportedInstanceId = Amr.Serializer.IsSupportedInstanceId
 Amr.IsSupportedInstance = Amr.Serializer.IsSupportedInstance
 Amr.SetTokenIds = Amr.Serializer.SetTokenIds
+Amr.GetItemTooltip = Amr.Serializer.GetItemTooltip
+Amr.GetItemLevel = Amr.Serializer.GetItemLevel
+Amr.GetItemUniqueId = Amr.Serializer.GetItemUniqueId
 
 -- map of slot ID to display text
 Amr.SlotDisplayText = {
@@ -67,39 +70,39 @@ Amr.SpecIcons = {
     [1] = "spell_deathknight_bloodpresence", -- DeathKnightBlood
     [2] = "spell_deathknight_frostpresence", -- DeathKnightFrost
     [3] = "spell_deathknight_unholypresence", -- DeathKnightUnholy
-    [4] = "spell_nature_starfall", -- DruidBalance
-    [5] = "ability_druid_catform", -- DruidFeral
-    [6] = "ability_racial_bearform", -- DruidGuardian
-    [7] = "spell_nature_healingtouch", -- DruidRestoration
-    [8] = "ability_hunter_bestialdiscipline", -- HunterBeastMastery
-    [9] = "ability_hunter_focusedaim", -- HunterMarksmanship
-    [10] = "ability_hunter_camouflage", -- HunterSurvival
-    [11] = "spell_holy_magicalsentry", -- MageArcane
-    [12] = "spell_fire_firebolt02", -- MageFire
-    [13] = "spell_frost_frostbolt02", -- MageFrost
-    [14] = "spell_monk_brewmaster_spec", -- MonkBrewmaster
-    [15] = "spell_monk_mistweaver_spec", -- MonkMistweaver
-    [16] = "spell_monk_windwalker_spec", -- MonkWindwalker
-    [17] = "spell_holy_holybolt", -- PaladinHoly
-    [18] = "ability_paladin_shieldofthetemplar", -- PaladinProtection
-    [19] = "spell_holy_auraoflight", -- PaladinRetribution
-    [20] = "spell_holy_powerwordshield", -- PriestDiscipline
-    [21] = "spell_holy_guardianspirit", -- PriestHoly
-    [22] = "spell_shadow_shadowwordpain", -- PriestShadow
-    [23] = "ability_rogue_eviscerate", -- RogueAssassination
-    [24] = "ability_backstab", -- RogueCombat
-    [25] = "ability_stealth", -- RogueSubtlety
-    [26] = "spell_nature_lightning", -- ShamanElemental
-    [27] = "spell_nature_lightningshield", -- ShamanEnhancement
-    [28] = "spell_nature_magicimmunity", -- ShamanRestoration
-    [29] = "spell_shadow_deathcoil", -- WarlockAffliction
-    [30] = "spell_shadow_metamorphosis", -- WarlockDemonology
-    [31] = "spell_shadow_rainoffire", -- WarlockDestruction
-    [32] = "ability_warrior_savageblow", -- WarriorArms
-    [33] = "ability_warrior_innerrage", -- WarriorFury
-    [34] = "ability_warrior_defensivestance", -- WarriorProtection
-	[38] = "ability_warrior_defensivestance", -- WarriorProtection, used for special subspec handling
-	[39] = "spell_warrior_gladiatorstance" -- WarriorProtectionGlad, used for special subspec handling
+	[4] = "ability_demonhunter_specdps", -- DemonHunterHavoc
+	[5] = "ability_demonhunter_spectank", -- DemonHunterVengeance
+    [6] = "spell_nature_starfall", -- DruidBalance
+    [7] = "ability_druid_catform", -- DruidFeral
+    [8] = "ability_racial_bearform", -- DruidGuardian
+    [9] = "spell_nature_healingtouch", -- DruidRestoration
+    [10] = "ability_hunter_bestialdiscipline", -- HunterBeastMastery
+    [11] = "ability_hunter_focusedaim", -- HunterMarksmanship
+    [12] = "ability_hunter_camouflage", -- HunterSurvival
+    [13] = "spell_holy_magicalsentry", -- MageArcane
+    [14] = "spell_fire_firebolt02", -- MageFire
+    [15] = "spell_frost_frostbolt02", -- MageFrost
+    [16] = "spell_monk_brewmaster_spec", -- MonkBrewmaster
+    [17] = "spell_monk_mistweaver_spec", -- MonkMistweaver
+    [18] = "spell_monk_windwalker_spec", -- MonkWindwalker
+    [19] = "spell_holy_holybolt", -- PaladinHoly
+    [20] = "ability_paladin_shieldofthetemplar", -- PaladinProtection
+    [21] = "spell_holy_auraoflight", -- PaladinRetribution
+    [22] = "spell_holy_powerwordshield", -- PriestDiscipline
+    [23] = "spell_holy_guardianspirit", -- PriestHoly
+    [24] = "spell_shadow_shadowwordpain", -- PriestShadow
+    [25] = "ability_rogue_eviscerate", -- RogueAssassination
+    [26] = "inv_sword_30", -- RogueOutlaw
+    [27] = "ability_stealth", -- RogueSubtlety
+    [28] = "spell_nature_lightning", -- ShamanElemental
+    [29] = "spell_nature_lightningshield", -- ShamanEnhancement
+    [30] = "spell_nature_magicimmunity", -- ShamanRestoration
+    [31] = "spell_shadow_deathcoil", -- WarlockAffliction
+    [32] = "spell_shadow_metamorphosis", -- WarlockDemonology
+    [33] = "spell_shadow_rainoffire", -- WarlockDestruction
+    [34] = "ability_warrior_savageblow", -- WarriorArms
+    [35] = "ability_warrior_innerrage", -- WarriorFury
+    [36] = "ability_warrior_defensivestance", -- WarriorProtection
 }
 
 -- instance IDs ordered in preferred display order
@@ -148,8 +151,19 @@ function Amr.CreateItemLink(itemObj)
     
     table.insert(parts, 0) -- some unique id, doesn't seem to matter
     table.insert(parts, UnitLevel("player"))
-	table.insert(parts, 0) -- unknown
-    table.insert(parts, 0) -- unknown
+	
+	local specId = GetSpecializationInfo(GetSpecialization())
+	table.insert(parts,  specId)
+
+	-- this indicates what kind of modifier appears after the bonus IDs
+	if itemObj.upgradeId and itemObj.upgradeId ~= 0 then
+		table.insert(parts, 4)
+	elseif itemObj.level and itemObj.level ~= 0 then
+		table.insert(parts, 512)
+	else
+		table.insert(parts, 0)
+	end
+
     table.insert(parts, 0) -- difficulty id, doesn't matter
     
     if itemObj.bonusIds then
@@ -161,31 +175,23 @@ function Amr.CreateItemLink(itemObj)
 		table.insert(parts, 0) -- no bonus ids
     end
 	
-	-- upgrade id is tacked onto the end now it seems
-	if (not itemObj.bonusIds or #itemObj.bonusIds == 0) and itemObj.upgradeId and itemObj.upgradeId ~= 0 then
+	-- upgrade id or level comes after bonuses
+	if itemObj.upgradeId and itemObj.upgradeId ~= 0 then
 		table.insert(parts, itemObj.upgradeId)
+	elseif itemObj.level and itemObj.level ~= 0 then
+		table.insert(parts, itemObj.level)
+	else
+		table.insert(parts, 0)
 	end
+	
+	-- technically relic stuff comes after this... but we ignore it for now, too much of a pain
+	table.insert(parts, 0)
+	table.insert(parts, 0)
+	table.insert(parts, 0)
     
     return table.concat(parts, ":")
 end
 
--- a unique ID useful for determining if a player has an item equipped or not
-function Amr.GetItemUniqueId(item, noUpgrade)
-    if item == nil then return "" end
-    local ret = item.id .. ""
-    if item.bonusIds then
-        for i = 1, #item.bonusIds do
-            ret = ret .. "b" .. item.bonusIds[i]
-        end
-    end
-    if item.suffixId ~= 0 then
-        ret = ret .. "s" .. item.suffixId
-    end
-    if not noUpgrade and item.upgradeId ~= 0 then
-        ret = ret .. "u" .. item.upgradeId
-    end
-    return ret
-end
 
 -- the server event for getting item info does not specify which item it just fetched... have to track manually
 local _pendingItemIds = {}

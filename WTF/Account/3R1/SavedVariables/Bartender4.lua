@@ -358,8 +358,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
+							["fadeoutdelay"] = 0,
 							["fadeoutalpha"] = 0.25,
-							["version"] = 3,
 							["position"] = {
 								["scale"] = 0.899999976158142,
 								["x"] = -39.1502451380075,
@@ -369,7 +369,7 @@ Bartender4DB = {
 							["padding"] = 5,
 							["rows"] = 12,
 							["fadeout"] = true,
-							["fadeoutdelay"] = 0,
+							["version"] = 3,
 						}, -- [3]
 						{
 							["buttons"] = 4,
@@ -598,6 +598,7 @@ Bartender4DB = {
 							["fadeout"] = true,
 							["buttons"] = 10,
 							["version"] = 3,
+							["fadeoutdelay"] = 0,
 							["fadeoutalpha"] = 0.25,
 							["position"] = {
 								["y"] = 155.300007457201,
@@ -1077,6 +1078,8 @@ Bartender4DB = {
 					},
 				},
 			},
+		},
+		["APBar"] = {
 		},
 		["BlizzardArt"] = {
 			["profiles"] = {

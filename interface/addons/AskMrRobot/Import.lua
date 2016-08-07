@@ -202,6 +202,7 @@ function Amr:ImportCharacter(data, isTest)
     local prevEnchantId = 0
     local prevUpgradeId = 0
     local prevBonusId = 0
+	local prevLevel = 0
     local digits = {
         ["-"] = true,
         ["0"] = true,
@@ -215,7 +216,7 @@ function Amr:ImportCharacter(data, isTest)
         ["8"] = true,
         ["9"] = true,
     }
-    for i = 16, #parts do
+    for i = 18, #parts do
         local itemString = parts[i]
         if itemString ~= "" and itemString ~= "_" then
             local tokens = {}
@@ -240,6 +241,9 @@ function Amr:ImportCharacter(data, isTest)
                     elseif prop == "u" then
                         val = val + prevUpgradeId
                         prevUpgradeId = val
+					elseif prop == "v" then
+						val = val + prevLevel
+						prevLevel = val
                     elseif prop == "b" then
                         val = val + prevBonusId
                         prevBonusId = val
@@ -272,6 +276,7 @@ function Amr:ImportCharacter(data, isTest)
             obj.id = tokens["i"]
             obj.suffixId = tokens["f"] or 0
             obj.upgradeId = tokens["u"] or 0
+			obj.level = tokens["v"] or 0
             obj.enchantId = tokens["e"] or 0
             
             obj.gemIds = {}
@@ -336,7 +341,7 @@ function Amr:ImportCharacter(data, isTest)
             	end            	
             end            
 
-            gemInfo[gemObj.enchantId] = gemObj
+            gemInfo[gemObj.id] = gemObj
             
         elseif infoParts[1] == "e" then
         

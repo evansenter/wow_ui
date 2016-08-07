@@ -1,6 +1,6 @@
 --[[
 Name: LibBabble-Faction-3.0
-Revision: $Rev: 203 $
+Revision: $Rev: 207 $
 Maintainers: ckknight, nevcairiel, Ackis
 Website: http://www.wowace.com/projects/libbabble-faction-3-0/
 Dependencies: None
@@ -8,7 +8,7 @@ License: MIT
 ]]
 
 local MAJOR_VERSION = "LibBabble-Faction-3.0"
-local MINOR_VERSION = 90000 + tonumber(("$Rev: 203 $"):match("%d+"))
+local MINOR_VERSION = 90000 + tonumber(("$Rev: 207 $"):match("%d+"))
 
 if not LibStub then error(MAJOR_VERSION .. " requires LibStub.") end
 local lib = LibStub("LibBabble-3.0"):New(MAJOR_VERSION, MINOR_VERSION)
@@ -191,16 +191,16 @@ if GAME_LOCALE == "enUS" then
 elseif GAME_LOCALE == "deDE" then
 	lib:SetCurrentTranslations {
 	Acquaintance = "Bekannter",
-	["Aeda Brightdawn"] = "Aeda Morgenglanz", -- Needs review
+	["Aeda Brightdawn"] = "Aeda Morgenglanz",
 	Alliance = "Allianz",
 	["Alliance Vanguard"] = "Vorposten der Allianz",
-	["Arakkoa Outcasts"] = "Ausgestoßene Arakkoa", -- Needs review
+	["Arakkoa Outcasts"] = "Ausgestoßene Arakkoa",
 	["Argent Crusade"] = "Argentumkreuzzug",
 	["Argent Dawn"] = "Argentumdämmerung",
 	["Ashtongue Deathsworn"] = "Die Todeshörigen",
 	["Avengers of Hyjal"] = "Rächer des Hyjal",
 	["Baradin's Wardens"] = "Wächter von Baradin",
-	["Barracks Bodyguards"] = "Kasernenleibwächter", -- Needs review
+	["Barracks Bodyguards"] = "Kasernenleibwächter",
 	["Best Friend"] = "Bester Freund",
 	["Bilgewater Cartel"] = "Bilgewasserkartell",
 	["Bizmo's Brawlpub"] = "Bizmos Boxbar",
@@ -212,12 +212,12 @@ elseif GAME_LOCALE == "deDE" then
 	["Cenarion Circle"] = "Zirkel des Cenarius",
 	["Cenarion Expedition"] = "Expedition des Cenarius",
 	["Chee Chee"] = "Chi-Chi",
-	["Council of Exarchs"] = "Exarchenrat", -- Needs review
+	["Council of Exarchs"] = "Exarchenrat",
 	["Darkmoon Faire"] = "Dunkelmond-Jahrmarkt",
 	["Darkspear Trolls"] = "Dunkelspeertrolle",
 	Darnassus = "Darnassus",
-	["Defender Illona"] = "Beschützerin Illona", -- Needs review
-	["Delvar Ironfist"] = "Delvar Eisenfaust", -- Needs review
+	["Defender Illona"] = "Beschützerin Illona",
+	["Delvar Ironfist"] = "Delvar Eisenfaust",
 	["Dominance Offensive"] = "Herrschaftsoffensive",
 	["Dragonmaw Clan"] = "Drachenmalklan",
 	Ella = "Ella",
@@ -232,7 +232,7 @@ elseif GAME_LOCALE == "deDE" then
 	Friend = "Freund",
 	Friendly = "Freundlich",
 	["Frostwolf Clan"] = "Frostwolfklan",
-	["Frostwolf Orcs"] = "Frostwolforcs", -- Needs review
+	["Frostwolf Orcs"] = "Frostwolforcs",
 	Gadgetzan = "Gadgetzan",
 	["Gelkis Clan Centaur"] = "Gelkisklan",
 	Gilneas = "Gilneas",
@@ -243,7 +243,7 @@ elseif GAME_LOCALE == "deDE" then
 	["Good Friend"] = "Guter Freund",
 	["Guardians of Hyjal"] = "Wächter des Hyjal",
 	Guild = "Gilde",
-	["Hand of the Prophet"] = "Hand des Propheten", -- Needs review
+	["Hand of the Prophet"] = "Hand des Propheten",
 	["Haohan Mudclaw"] = "Haohan Lehmkrall",
 	["Hellscream's Reach"] = "Höllschreis Hand",
 	Honored = "Wohlwollend",
@@ -259,8 +259,8 @@ elseif GAME_LOCALE == "deDE" then
 	["Kirin Tor Offensive"] = "Offensive der Kirin Tor",
 	["Knights of the Ebon Blade"] = "Ritter der Schwarzen Klinge",
 	Kurenai = "Kurenai",
-	["Laughing Skull Orcs"] = "Orcs des Lachenden Schädels", -- Needs review
-	Leorajh = "Leorajh", -- Needs review
+	["Laughing Skull Orcs"] = "Orcs des Lachenden Schädels",
+	Leorajh = "Leorajh",
 	["Lower City"] = "Unteres Viertel",
 	["Magram Clan Centaur"] = "Magramklan",
 	["Nat Pagle"] = "Nat Pagle",
@@ -271,7 +271,7 @@ elseif GAME_LOCALE == "deDE" then
 	["Old Hillpaw"] = "Der alte Hügelpranke",
 	-- ["Operation: Aardvark"] = "",
 	["Operation: Shieldwall"] = "Operation Schildwall",
-	["Order of the Awakened"] = "Orden der Erwachten", -- Needs review
+	["Order of the Awakened"] = "Orden der Erwachten",
 	["Order of the Cloud Serpent"] = "Der Orden der Wolkenschlange",
 	Orgrimmar = "Orgrimmar",
 	["Pearlfin Jinyu"] = "Jinyu der Perlflossen",
@@ -291,7 +291,7 @@ elseif GAME_LOCALE == "deDE" then
 	["Shado-Pan Assault"] = "Shado-Pan-Vorstoß",
 	-- ["Shadowmoon Exiles"] = "",
 	["Shang Xi's Academy"] = "Akademie des Shang Xi",
-	["Sha'tari Defense"] = "Sha'tarverteidigung", -- Needs review
+	["Sha'tari Defense"] = "Sha'tarverteidigung",
 	["Sha'tari Skyguard"] = "Himmelswache der Sha'tari",
 	["Shattered Sun Offensive"] = "Offensive der Zerschmetterten Sonne",
 	["Shen'dralar"] = "Shen'dralar",
@@ -299,14 +299,14 @@ elseif GAME_LOCALE == "deDE" then
 	["Silvermoon City"] = "Silbermond",
 	["Silverwing Sentinels"] = "Silberschwingen",
 	Sporeggar = "Sporeggar",
-	["Steamwheedle Draenor Expedition"] = "Draenorexpedition des Dampfdruckkartells", -- Needs review
-	["Steamwheedle Preservation Society"] = "Werterhaltungsgesellschaft des Dampfdruckkartells", -- Needs review
+	["Steamwheedle Draenor Expedition"] = "Draenorexpedition des Dampfdruckkartells",
+	["Steamwheedle Preservation Society"] = "Werterhaltungsgesellschaft des Dampfdruckkartells",
 	["Stormpike Guard"] = "Sturmlanzengarde",
 	Stormwind = "Sturmwind",
 	Stranger = "Fremder",
 	["Sunreaver Onslaught"] = "Sonnenhäscheransturm",
 	Syndicate = "Syndikat",
-	["Talonpriest Ishaal"] = "Krallenpriester Ishaal", -- Needs review
+	["Talonpriest Ishaal"] = "Krallenpriester Ishaal",
 	["The Aldor"] = "Die Aldor",
 	["The Anglers"] = "Die Angler",
 	["The Ashen Verdict"] = "Das Äscherne Verdikt",
@@ -325,7 +325,7 @@ elseif GAME_LOCALE == "deDE" then
 	["The Mag'har"] = "Die Mag'har",
 	["The Oracles"] = "Die Orakel",
 	Therazane = "Therazane",
-	["The Saberstalkers"] = "Die Säbelzahnpirscher", -- Needs review
+	["The Saberstalkers"] = "Die Säbelzahnpirscher",
 	["The Scale of the Sands"] = "Die Wächter der Sande",
 	["The Scryers"] = "Die Seher",
 	["The Sha'tar"] = "Die Sha'tar",
@@ -341,13 +341,13 @@ elseif GAME_LOCALE == "deDE" then
 	["Thunder Bluff"] = "Donnerfels",
 	["Timbermaw Hold"] = "Holzschlundfeste",
 	["Tina Mudclaw"] = "Tina Lehmkrall",
-	Tormmok = "Tormmok", -- Needs review
+	Tormmok = "Tormmok",
 	Tranquillien = "Tristessa",
 	["Tushui Pandaren"] = "Die Tushui",
 	Undercity = "Unterstadt",
 	["Valiance Expedition"] = "Expedition Valianz",
-	Vivianne = "Vivianne", -- Needs review
-	["Vol'jin's Headhunters"] = "Vol'jins Kopfjäger", -- Needs review
+	Vivianne = "Vivianne",
+	["Vol'jin's Headhunters"] = "Vol'jins Kopfjäger",
 	["Vol'jin's Spear"] = "Vol'jins Speer",
 	["Warsong Offensive"] = "Kriegshymnenoffensive",
 	["Warsong Outriders"] = "Vorhut des Kriegshymnenklan",
@@ -529,16 +529,16 @@ elseif GAME_LOCALE == "frFR" then
 elseif GAME_LOCALE == "koKR" then
 	lib:SetCurrentTranslations {
 	Acquaintance = "지인",
-	["Aeda Brightdawn"] = "에이다 브라이트돈", -- Needs review
+	["Aeda Brightdawn"] = "에이다 브라이트돈",
 	Alliance = "얼라이언스",
 	["Alliance Vanguard"] = "얼라이언스 선봉대",
-	["Arakkoa Outcasts"] = "추방된 아라코아", -- Needs review
+	["Arakkoa Outcasts"] = "추방된 아라코아",
 	["Argent Crusade"] = "은빛십자군",
 	["Argent Dawn"] = "은빛 여명회",
 	["Ashtongue Deathsworn"] = "잿빛혓바닥 결사단",
 	["Avengers of Hyjal"] = "하이잘의 복수자",
 	["Baradin's Wardens"] = "바라딘 집행단",
-	["Barracks Bodyguards"] = "병영 경호원", -- Needs review
+	["Barracks Bodyguards"] = "병영 경호원",
 	["Best Friend"] = "가장 친한 친구",
 	["Bilgewater Cartel"] = "빌지워터 무역회사",
 	["Bizmo's Brawlpub"] = "비즈모의 싸움굴",
@@ -550,12 +550,12 @@ elseif GAME_LOCALE == "koKR" then
 	["Cenarion Circle"] = "세나리온 의회",
 	["Cenarion Expedition"] = "세나리온 원정대",
 	["Chee Chee"] = "치 치",
-	["Council of Exarchs"] = "총독의 의회", -- Needs review
+	["Council of Exarchs"] = "총독의 의회",
 	["Darkmoon Faire"] = "다크문 유랑단",
 	["Darkspear Trolls"] = "검은창 트롤",
 	Darnassus = "다르나서스",
-	-- ["Defender Illona"] = "",
-	-- ["Delvar Ironfist"] = "",
+	["Defender Illona"] = "수호병 일로나",
+	["Delvar Ironfist"] = "델바 아이언피스트",
 	["Dominance Offensive"] = "지배령 선봉대",
 	["Dragonmaw Clan"] = "용아귀 부족",
 	Ella = "엘라",
@@ -570,7 +570,7 @@ elseif GAME_LOCALE == "koKR" then
 	Friend = "친구",
 	Friendly = "약간 우호적",
 	["Frostwolf Clan"] = "서리늑대 부족",
-	["Frostwolf Orcs"] = "서리늑대 오크", -- Needs review
+	["Frostwolf Orcs"] = "서리늑대 오크",
 	Gadgetzan = "가젯잔",
 	["Gelkis Clan Centaur"] = "겔키스 부족 켄타로우스",
 	Gilneas = "길니아스",
@@ -581,7 +581,7 @@ elseif GAME_LOCALE == "koKR" then
 	["Good Friend"] = "좋은 친구",
 	["Guardians of Hyjal"] = "하이잘의 수호자",
 	Guild = "길드",
-	-- ["Hand of the Prophet"] = "",
+	["Hand of the Prophet"] = "예언자의 손",
 	["Haohan Mudclaw"] = "하오한 머드클로",
 	["Hellscream's Reach"] = "헬스크림 세력단",
 	Honored = "우호적",
@@ -597,8 +597,8 @@ elseif GAME_LOCALE == "koKR" then
 	["Kirin Tor Offensive"] = "키린 토 선봉대",
 	["Knights of the Ebon Blade"] = "칠흑의 기사단",
 	Kurenai = "쿠레나이",
-	["Laughing Skull Orcs"] = "웃는 해골 오크", -- Needs review
-	Leorajh = "레오라즈", -- Needs review
+	["Laughing Skull Orcs"] = "웃는 해골 오크",
+	Leorajh = "레오라즈",
 	["Lower City"] = "고난의 거리",
 	["Magram Clan Centaur"] = "마그람 부족 켄타로우스",
 	["Nat Pagle"] = "내트 페이글",
@@ -609,27 +609,27 @@ elseif GAME_LOCALE == "koKR" then
 	["Old Hillpaw"] = "늙은 힐포우",
 	-- ["Operation: Aardvark"] = "",
 	["Operation: Shieldwall"] = "철벽방패 작전대",
-	-- ["Order of the Awakened"] = "",
+	["Order of the Awakened"] = "깨어난 자들의 의회",
 	["Order of the Cloud Serpent"] = "운룡단",
 	Orgrimmar = "오그리마",
 	["Pearlfin Jinyu"] = "진주지느러미 진위",
 	Ramkahen = "람카헨",
 	["Rank 1"] = "1 레벨",
-	["Rank 2"] = "2 레벨", -- Needs review
-	["Rank 3"] = "3 레벨", -- Needs review
-	["Rank 4"] = "4 레벨", -- Needs review
-	["Rank 5"] = "5 레벨", -- Needs review
-	["Rank 6"] = "6 레벨", -- Needs review
-	["Rank 7"] = "7 레벨", -- Needs review
-	["Rank 8"] = "8 레벨", -- Needs review
+	["Rank 2"] = "2 레벨",
+	["Rank 3"] = "3 레벨",
+	["Rank 4"] = "4 레벨",
+	["Rank 5"] = "5 레벨",
+	["Rank 6"] = "6 레벨",
+	["Rank 7"] = "7 레벨",
+	["Rank 8"] = "8 레벨",
 	Ratchet = "톱니항",
 	Ravenholdt = "라벤홀트",
 	Revered = "매우 우호적",
 	["Shado-Pan"] = "음영파",
 	["Shado-Pan Assault"] = "음영파 강습단",
-	["Shadowmoon Exiles"] = "어둠달 유배자", -- Needs review
+	["Shadowmoon Exiles"] = "어둠달 유배자",
 	["Shang Xi's Academy"] = "샹 시 도장",
-	-- ["Sha'tari Defense"] = "",
+	["Sha'tari Defense"] = "샤타리 수호대",
 	["Sha'tari Skyguard"] = "샤타리 하늘경비대",
 	["Shattered Sun Offensive"] = "무너진 태양 공격대",
 	["Shen'dralar"] = "센드렐라",
@@ -637,14 +637,14 @@ elseif GAME_LOCALE == "koKR" then
 	["Silvermoon City"] = "실버문",
 	["Silverwing Sentinels"] = "은빛날개 파수대",
 	Sporeggar = "스포어가르",
-	-- ["Steamwheedle Draenor Expedition"] = "",
-	["Steamwheedle Preservation Society"] = "스팀휘들 유물 복원회", -- Needs review
+	["Steamwheedle Draenor Expedition"] = "스팀휘들 유물 복원회",
+	["Steamwheedle Preservation Society"] = "스팀휘들 유물 복원회",
 	["Stormpike Guard"] = "스톰파이크 경비대",
 	Stormwind = "스톰윈드",
 	Stranger = "이방인",
 	["Sunreaver Onslaught"] = "선리버 돌격대",
 	Syndicate = "비밀결사대",
-	["Talonpriest Ishaal"] = "갈퀴사제 이샤알", -- Needs review
+	["Talonpriest Ishaal"] = "갈퀴사제 이샤알",
 	["The Aldor"] = "알도르 사제회",
 	["The Anglers"] = "강태공 연합",
 	["The Ashen Verdict"] = "잿빛 선고단",
@@ -663,7 +663,7 @@ elseif GAME_LOCALE == "koKR" then
 	["The Mag'har"] = "마그하르",
 	["The Oracles"] = "점쟁이 조합",
 	Therazane = "테라제인",
-	-- ["The Saberstalkers"] = "",
+	["The Saberstalkers"] = "서슬추적자",
 	["The Scale of the Sands"] = "시간의 중재자",
 	["The Scryers"] = "점술가 길드",
 	["The Sha'tar"] = "샤타르",
@@ -679,20 +679,20 @@ elseif GAME_LOCALE == "koKR" then
 	["Thunder Bluff"] = "썬더 블러프",
 	["Timbermaw Hold"] = "나무구렁 요새",
 	["Tina Mudclaw"] = "티나 머드클로",
-	Tormmok = "토르모크", -- Needs review
+	Tormmok = "토르모크",
 	Tranquillien = "트랜퀼리엔",
 	["Tushui Pandaren"] = "투슈이 판다렌",
 	Undercity = "언더시티",
 	["Valiance Expedition"] = "용맹의 원정대",
-	Vivianne = "비비안", -- Needs review
-	-- ["Vol'jin's Headhunters"] = "",
-	["Vol'jin's Spear"] = "볼진의 창", -- Needs review
+	Vivianne = "비비안",
+	["Vol'jin's Headhunters"] = "볼진의 인간사냥꾼",
+	["Vol'jin's Spear"] = "볼진의 창",
 	["Warsong Offensive"] = "전쟁노래 공격대",
 	["Warsong Outriders"] = "전쟁노래 정찰대",
 	["Wildhammer Clan"] = "와일드해머 부족",
 	["Winterfin Retreat"] = "겨울지느러미 은신처",
 	["Wintersaber Trainers"] = "눈호랑이 조련사",
-	["Wrynn's Vanguard"] = "린의 선봉대", -- Needs review
+	["Wrynn's Vanguard"] = "린의 선봉대",
 	["Zandalar Tribe"] = "잔달라 부족",
 }
 elseif GAME_LOCALE == "esES" then
@@ -1257,7 +1257,7 @@ elseif GAME_LOCALE == "itIT" then
 	["Good Friend"] = "Amico Intimo",
 	["Guardians of Hyjal"] = "Guardiani di Hyjal",
 	Guild = "Gilda",
-	-- ["Hand of the Prophet"] = "",
+	["Hand of the Prophet"] = "Mano del Profeta",
 	["Haohan Mudclaw"] = "Haoran Palmo Florido",
 	["Hellscream's Reach"] = "Avanguardia di Malogrido",
 	Honored = "Onorato",
@@ -1285,7 +1285,7 @@ elseif GAME_LOCALE == "itIT" then
 	["Old Hillpaw"] = "Vecchio Zampa Brulla",
 	["Operation: Aardvark"] = "Operazione: Aardvark",
 	["Operation: Shieldwall"] = "Operazione Baluardo",
-	-- ["Order of the Awakened"] = "",
+	["Order of the Awakened"] = "Ordine dei Risvegliati",
 	["Order of the Cloud Serpent"] = "Ordine della Serpe delle Nubi",
 	Orgrimmar = "Orgrimmar",
 	["Pearlfin Jinyu"] = "Jinyu Pinnavitrea",
@@ -1339,7 +1339,7 @@ elseif GAME_LOCALE == "itIT" then
 	["The Mag'har"] = "Mag'har",
 	["The Oracles"] = "Tribù degli Oracoli",
 	Therazane = "Therazane",
-	-- ["The Saberstalkers"] = "",
+	["The Saberstalkers"] = "Bracconieri Selvaggi",
 	["The Scale of the Sands"] = "Scale delle Sabbie",
 	["The Scryers"] = "Veggenti",
 	["The Sha'tar"] = "Sha'tar",
@@ -1361,7 +1361,7 @@ elseif GAME_LOCALE == "itIT" then
 	Undercity = "Sepulcra",
 	["Valiance Expedition"] = "Spedizione degli Arditi",
 	Vivianne = "Vivianne",
-	-- ["Vol'jin's Headhunters"] = "",
+	["Vol'jin's Headhunters"] = "Cacciatori di Teste di Vol'jin",
 	["Vol'jin's Spear"] = "Lancia di Vol'jin",
 	["Warsong Offensive"] = "Offensiva dei Cantaguerra",
 	["Warsong Outriders"] = "Predoni Cantaguerra",

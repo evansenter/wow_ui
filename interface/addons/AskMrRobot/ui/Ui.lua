@@ -87,24 +87,24 @@ end
 -- helper to create a solid texture from a color with R,G,B properties
 function Amr.CreateTexture(parent, color, alpha, layer)
 	local t = parent:CreateTexture(nil, layer or "ARTWORK")
-	t:SetTexture(color.R, color.G, color.B, alpha or 1)
+	t:SetColorTexture(color.R, color.G, color.B, alpha or 1)
 	return t
 end
 
 -- helper to create a cheater shadow without having to create custom images
 function Amr.DropShadow(frame)
 	local shadow = frame:CreateTexture(nil, "BACKGROUND")
-	shadow:SetTexture(0, 0, 0, 0.4)
+	shadow:SetColorTexture(0, 0, 0, 0.4)
 	shadow:SetPoint("TOPLEFT", frame, "TOPLEFT", 2, -2)
 	shadow:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", 1, -1)
 	
 	shadow = frame:CreateTexture(nil, "BACKGROUND")
-	shadow:SetTexture(0, 0, 0, 0.3)
+	shadow:SetColorTexture(0, 0, 0, 0.3)
 	shadow:SetPoint("TOPLEFT", frame, "TOPLEFT", 2, -2)
 	shadow:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", 2, -2)
 	
 	shadow = frame:CreateTexture(nil, "BACKGROUND")
-	shadow:SetTexture(0, 0, 0, 0.1)
+	shadow:SetColorTexture(0, 0, 0, 0.1)
 	shadow:SetPoint("TOPLEFT", frame, "TOPLEFT", 2, -2)
 	shadow:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", 3, -3)
 end

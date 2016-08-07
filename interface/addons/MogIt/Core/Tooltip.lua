@@ -53,17 +53,6 @@ mog.tooltip.model.ResetModel = function(self)
 	local db = mog.db.profile
 	if db.tooltipCustomModel then
 		self:SetCustomRace(db.tooltipRace, db.tooltipGender);
-		-- hack for hidden helm and cloak showing on models
-		local showingHelm, showingCloak = ShowingHelm(), ShowingCloak();
-		local helm, cloak = GetInventoryItemID("player", INVSLOT_HEAD), GetInventoryItemID("player", INVSLOT_BACK);
-		if not showingHelm and helm then
-			self:TryOn(helm);
-			self:UndressSlot(INVSLOT_HEAD);
-		end
-		if not showingCloak and cloak then
-			self:TryOn(cloak);
-			self:UndressSlot(INVSLOT_BACK);
-		end
 		self:RefreshCamera();
 	else
 		self:Dress();
@@ -75,18 +64,12 @@ end
 mog.tooltip.model:SetScript("OnShow",mog.tooltip.model.ResetModel);
 
 
-local function GetItemTransmogrifyInfo()
-	return true, true, true
-end
-
-
 function mog.tooltip:ShowItem(itemLink)
 	if not itemLink then return end
-	local itemID = tonumber(itemLink:match("item:(%d+)"));
-	if itemID == 0 then return end
+	local itemID, _, _, slot = GetItemInfoInstant(itemLink);
+	if not itemID then return end
 	local self = GameTooltip;
 	
-	local slot = select(9,GetItemInfo(itemLink));
 	local db = mog.db.profile;
 	local tooltip = mog.tooltip;
 	if db.tooltip and (not tooltip.mod[db.tooltipMod] or tooltip.mod[db.tooltipMod]()) then
@@ -97,13 +80,14 @@ function mog.tooltip:ShowItem(itemLink)
 				if token then
 					for item, classBit in pairs(token) do
 						if bit.band(class, classBit) > 0 then
-							itemLink = item;
+							itemLink = "item:"..item;
+							itemID = item;
 							break;
 						end
 					end
 				end
-				local slot = select(9,GetItemInfo(itemLink));
-				if (not db.tooltipMog or select(3, GetItemTransmogrifyInfo(itemLink))) and tooltip.slots[slot] and IsDressableItem(itemLink) then
+				local slot = select(4, GetItemInfoInstant(itemLink));
+				if (not db.tooltipMog or select(3, C_Transmog.GetItemInfo(itemID))) and tooltip.slots[slot] and IsDressableItem(itemLink) then
 					tooltip.model:SetFacing(tooltip.slots[slot]-(db.tooltipRotate and 0.5 or 0));
 					tooltip:Show();
 					tooltip.owner = self;
@@ -125,20 +109,59 @@ function mog.tooltip:ShowItem(itemLink)
 		end
 	end
 	
-	local addOwnedItem = mog.db.profile.tooltipAlwaysShowOwned and mog.slotsType[slot] and mog:HasItem(itemID);
-	if addOwnedItem then
-		GameTooltip:AddLine(" ");
-		GameTooltip:AddLine(L["You have this item."], 1, 1, 1);
-		GameTooltip:AddTexture([[Interface\RaidFrame\ReadyCheck-Ready]]);
+	local addOwnedItem = mog.db.profile.tooltipAlwaysShowOwned and mog.slotsType[slot];
+	if mog.db.profile.tooltipAlwaysShowOwned and mog.slotsType[slot] then
+		local addedCharacters = {}
+		local hasItem, characters = mog:HasItem(itemID, true);
+		addOwnedItem = hasItem;
+		if hasItem then
+			self:AddLine(" ");
+			self:AddLine("|TInterface\\RaidFrame\\ReadyCheck-Ready:0|t "..L["You have this item."], 1, 1, 1);
+			if mog.db.profile.tooltipOwnedDetail and characters then
+				for i, character in ipairs(characters) do
+					self:AddLine("|T:0|t "..character);
+					addedCharacters[character] = true;
+				end
+			end
+		end
 	end
 	
 	-- add wishlist info about this item
-	if not self[mog] and mog.wishlist:IsItemInWishlist(itemID) then
-		if not addOwnedItem then
-			self:AddLine(" ");
+	if not self[mog] then
+		local addedCharacters = {}
+		local found, characters = mog.wishlist:IsItemInWishlist(itemID);
+		if found then
+			if not addOwnedItem then
+				self:AddLine(" ");
+			end
+			self:AddLine("|TInterface\\PetBattles\\PetJournal:0:0:0:0:512:1024:62:78:26:42:255:255:255|t "..L["This item is on your wishlist."], 1, 1, 1);
+			if mog.db.profile.tooltipWishlistDetail and characters then
+				for i, character in ipairs(characters) do
+					self:AddLine("|T:0|t "..character);
+					addedCharacters[character] = true;
+				end
+			end
 		end
-		self:AddLine(L["This item is on your wishlist."], 1, 1, 0);
-		self:AddTexture("Interface\\TargetingFrame\\UI-RaidTargetingIcon_1");
+		local itemIDs = mog:GetData("display", mog:GetData("item", mog:NormaliseItemString(itemLink), "display"), "items");
+		if itemIDs then
+			for i, item in ipairs(itemIDs) do
+				local foundAlternate, profiles = mog.wishlist:IsItemInWishlist(item);
+				if foundAlternate then
+					if not found then
+						self:AddLine(" ");
+						self:AddLine("|TInterface\\PetBattles\\PetJournal:0:0:0:0:512:1024:62:78:26:42:255:255:255|t "..L["This item is on your wishlist."], 1, 1, 1);
+					end
+					found = true;
+					if mog.db.profile.tooltipWishlistDetail and profiles then
+						for i, character in ipairs(profiles) do
+							if not addedCharacters[character] then
+								self:AddLine("|T:0|t "..character.." (*)");
+							end
+						end
+					end
+				end
+			end
+		end
 	end
 end
 
@@ -166,19 +189,36 @@ mog.tooltip.repos:SetScript("OnUpdate",function(self)
 	if x and y then
 		mog.tooltip:ClearAllPoints();
 		local mogpoint,ownerpoint;
-		if y/GetScreenHeight() > 0.5 then
-			mogpoint = "TOP";
-			ownerpoint = "BOTTOM";
+		if mog.db.profile.tooltipAnchor == "vertical" then
+			if y/GetScreenHeight() > 0.5 then
+				mogpoint = "TOP";
+				ownerpoint = "BOTTOM";
+			else
+				mogpoint = "BOTTOM";
+				ownerpoint = "TOP";
+			end
+			if x/GetScreenWidth() > 0.5 then
+				mogpoint = mogpoint.."LEFT";
+				ownerpoint = ownerpoint.."LEFT";
+			else
+				mogpoint = mogpoint.."RIGHT";
+				ownerpoint = ownerpoint.."RIGHT";
+			end
 		else
-			mogpoint = "BOTTOM";
-			ownerpoint = "TOP";
-		end
-		if x/GetScreenWidth() > 0.5 then
-			mogpoint = mogpoint.."LEFT";
-			ownerpoint = ownerpoint.."LEFT";
-		else
-			mogpoint = mogpoint.."RIGHT";
-			ownerpoint = ownerpoint.."RIGHT";
+			if x/GetScreenWidth() > 0.5 then
+				mogpoint = "RIGHT";
+				ownerpoint = "LEFT";
+			else
+				mogpoint = "LEFT";
+				ownerpoint = "RIGHT";
+			end
+			if y/GetScreenHeight() > 0.5 then
+				mogpoint = "TOP"..mogpoint;
+				ownerpoint = "TOP"..ownerpoint;
+			else
+				mogpoint = "BOTTOM"..mogpoint;
+				ownerpoint = "BOTTOM"..ownerpoint;
+			end
 		end
 		mog.tooltip:SetPoint(mogpoint,mog.tooltip.owner,ownerpoint);
 		self:Hide();
@@ -202,12 +242,13 @@ hooksecurefunc(GameTooltip, "SetQuestLogItem", function(self, itemType, index)
 	GameTooltip:Show();
 end);
 
-hooksecurefunc(GameTooltip, "SetTradeSkillItem", function(self, skillIndex, reagentIndex)
-	if reagentIndex then
-		mog.tooltip:ShowItem(GetTradeSkillReagentItemLink(skillIndex, reagentIndex));
-	else
-		mog.tooltip:ShowItem(GetTradeSkillItemLink(skillIndex));
-	end
+hooksecurefunc(GameTooltip, "SetRecipeResultItem", function(self, recipeID)
+	mog.tooltip:ShowItem(C_TradeSkillUI.GetRecipeItemLink(recipeID));
+	GameTooltip:Show();
+end);
+
+hooksecurefunc(GameTooltip, "SetRecipeReagentItem", function(self, recipeID, reagentIndex)
+	mog.tooltip:ShowItem(C_TradeSkillUI.GetRecipeReagentItemLink(recipeID, reagentIndex));
 	GameTooltip:Show();
 end);
 --//
@@ -229,6 +270,8 @@ mog.tooltip.slots = {
 	INVTYPE_CLOAK = 3.4,
 	INVTYPE_CHEST = 0,
 	INVTYPE_ROBE = 0,
+	INVTYPE_SHIRT = 0,
+	INVTYPE_TABARD = 0,
 	INVTYPE_WRIST = 0,
 	INVTYPE_2HWEAPON = 1.6,
 	INVTYPE_WEAPON = 1.6,

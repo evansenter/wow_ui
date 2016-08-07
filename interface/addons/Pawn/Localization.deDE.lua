@@ -10,14 +10,10 @@
 local function PawnUseThisLocalization()
 PawnLocal =
 {
-	AsteriskTooltipLine = "|TInterface\\AddOns\\Pawn\\Textures\\Question:0|t Pawn hat für einige Attribute keine Wertung vergeben.",
 	AverageItemLevelIgnoringRarityTooltipLine = "Durchschnittliches Itemlevel",
 	BackupCommand = "Backup",
 	BaseValueWord = "Basis",
-	CogwheelName = "Zahnrad",
 	CopyScaleEnterName = "Gib einen Wertungsnamen für die Kopie von %s ein:",
-	CorrectGemsValueCalculationMessage = "  -- Wert der passenden Edelsteine: %g",
-	CrystalOfFearName = "Kristallisierter Horror",
 	DebugOffCommand = "Debug-Modus aus",
 	DebugOnCommand = "Debug-Modus an",
 	DecimalSeparator = ",", -- Needs review
@@ -30,9 +26,8 @@ PawnLocal =
 	FailedToGetItemLinkMessage = "   Konnte keine Gegenstandsinformationen aus dem Tooltip beziehen.  Dies kann an einem Mod-Konflikt liegen.",
 	FailedToGetUnenchantedItemMessage = "   Konnte keine Unverzaubert-Werte beziehen.  Dies kann an einem Mod-Konflikt liegen.",
 	FoundStatMessage = "   %d %s",
-	GemColorList1 = "%d %s",
-	GemColorList2 = "%d %s oder %s",
-	GemColorList3 = "%d in beliebiger Farbe",
+	GemList2 = "%s or %s", -- Requires localization
+	GemListMany = "%d possibilities (click the Pawn button for details)", -- Requires localization
 	GenericGemLink = "|Hitem:%d|h[Edelstein %d]|h",
 	GenericGemName = "(Edelstein %d)",
 	HiddenScalesHeader = "Andere Wertungen",
@@ -59,11 +54,13 @@ PawnLocal =
 	TooltipBestAnnotation = "%s  |cff8ec3e6(bester)|r",
 	TooltipBestAnnotationSimple = "%s  (bester)",
 	TooltipBigUpgradeAnnotation = "%s  |TInterface\\AddOns\\Pawn\\Textures\\UpgradeArrow:0|t|cff00ff00 Verbesserung%s|r",
+	TooltipDowngradeAnnotation = "%s  |TInterface\\AddOns\\Pawn\\Textures\\UpgradeArrow:0|t|cff00ff00+%.0f%% Verbesserung%s|r", -- Needs review
 	TooltipSecondBestAnnotation = "%s  |cff8ec3e6(zweitbester)|r",
 	TooltipSecondBestAnnotationSimple = "%s  (zweitbester)",
 	TooltipUpgradeAnnotation = "%s  |TInterface\\AddOns\\Pawn\\Textures\\UpgradeArrow:0|t|cff00ff00+%.0f%% Verbesserung%s|r",
 	TooltipUpgradeFor1H = " für 1Hand",
 	TooltipUpgradeFor2H = " für 2Hand",
+	TooltipUpgradeNeedsEnhancementsAnnotation = "%s  |TInterface\\AddOns\\Pawn\\Textures\\UpgradeArrow:0|t|cff00ff00+%.0f%% Verbesserung%s|r", -- Needs review
 	TooltipVersusLine = "%s|n  vs. |c%s%s|r",
 	TotalValueMessage = "   ---- Gesamt: %g",
 	UnenchantedStatsHeader = "(Unverzaubert)",
@@ -81,12 +78,9 @@ Weitere Informationen zur Anpassung von Pawn findet ihr in der Hilfedatei (Readm
 	VisibleScalesHeader = "%s's Wertungen",
 	Stats = {
 		AgilityInfo = "Primäre Wertung: Beweglichkeit.", -- Needs review
-		Ap = "Angriffskraft",
-		ApInfo = "Angriffskraft.  Auf den meisten Gegenständen nicht enthalten. Beinhaltet nicht die aus Stärke und Beweglichkeit erhaltene Angriffskraft.",
 		ArmorInfo = "Rüstung unabhängig vom Gegenstandstyp.  Berücksichtigt keine Bonusrüstung, da Gegenstände mit Bonusrüstung obsolet sind.", -- Needs review
 		ArmorTypes = "Waffenarten",
 		AvoidanceInfo = "Zahigkelt.  Reduziert den Schaden nehmen Sie aus des Wirkungsbereichs Angriffe.", -- Needs review
-		BonusArmorInfo = "Bonus armor.  Does not include the base armor value on all armor.  This number should always be at least as high as the value for Armor.", -- Requires localization
 		Cloth = "Stoff",
 		ClothInfo = "Für einen Stoffrüstungsgegenstand zugeteilte Punkte.",
 		Crit = "Krit",
@@ -102,20 +96,10 @@ Weitere Informationen zur Anpassung von Pawn findet ihr in der Hilfedatei (Readm
 		Mail = "Kette",
 		MailInfo = "Für einen Kettenrüstungsgegenstand zugeteilte Punkte.",
 		MasteryInfo = "Meisterschaftswertung.  Verbessert den Meisterschaftsbonus des primären Talentbaums.",
-		MetaSocket = "Meta-Sockel",
-		MetaSocketInfo = "Ein Metasockel, weder leer noch voll. Addiert Extrapunkte für Helme die einen Meta-Sockel besitzen um die speziellen Effekte von Meta-Edelsteinen zu kompensieren.",
 		MinorStats = "Kleinere", -- Needs review
 		MovementSpeedInfo = "Bewegungsgeschwindigkeit. Bewirkt, dass euer Charakter schneller ausgeführt.", -- Needs review
-		MultistrikeInfo = "Bereitschaft. Erhöht die Chance, dass Ihre Angriffe und Heilzauber Ihr Ziel extra zweimal bei reduzierter Wirksamkeit getroffen werden.", -- Needs review
 		Plate = "Platte",
 		PlateInfo = "Für einen Plattenrüstungsgegenstand zugeteilte Punkte.",
-		PrimaryStats = "Basiswerte",
-		PvPPower = "PvP-Macht",
-		PvPPowerInfo = "PvP Macht. Erhöht die Fähigkeit um bei anderen Spielern (keine NPCs) in bestimmten PvP Situationen mehr Schaden oder Heilung zu verursachen.",
-		PvPResilience = "PvP-Abhärtung",
-		PvPResilienceInfo = "Abhärtungswertung. Reduziert den Schaden durch andere Spieler. Nur wirksam gegen andere Spieler.",
-		PvPStats = "PvP Wertungen",
-		SecondaryStats = "Sekundäre", -- Needs review
 		Shield = "Schild",
 		ShieldInfo = "Für einen Schild zugeteilte Punkte.",
 		Sockets = "Sockel",
@@ -125,9 +109,6 @@ Weitere Informationen zur Anpassung von Pawn findet ihr in der Hilfedatei (Readm
 		SpeedBaselineIs = "|cffffffffTempogrundwert|r is:",
 		SpeedInfo = "Waffenschaden pro Sekunde.  (Wenn du schnelle Waffen bevorzugst, dann sollte diese Nummer negativ sein. Siehe auch \"Tempogrundwert\" im Bereich \"Spezielle Waffenwertungen\".)",
 		SpeedIs = "1 Sekunde |cffffffffWaffentempo|r entspricht:",
-		SpellPower = "Zaubermacht",
-		SpellPowerInfo = "Zaubermacht. Auf Caster-Waffen enthalten, jedoch nicht auf den meisten Rüstungen. Beinhaltet nicht die aus Intelligenz erhaltene Zaubermacht.", -- Needs review
-		SpiritInfo = "Primäre Wertung: Willenskraft.", -- Needs review
 		StaminaInfo = "Primäre Wertung: Ausdauer.", -- Needs review
 		StrengthInfo = "Primäre Wertung: Stärke.", -- Needs review
 		VersatilityInfo = "Verstarkung. Erhöht den Schaden von Schaden-Zeichen behandelt, erhöht Heilung um Heilung Zeichen und verringert den erlittenen für Tank-Zeichen.", -- Needs review
@@ -217,6 +198,8 @@ Weitere Informationen zur Anpassung von Pawn findet ihr in der Hilfedatei (Readm
 		WeaponTypeStaffInfo = "Für einen Stab zugeteilte Punkte.",
 		WeaponTypeWand = "Zauberstab",
 		WeaponTypeWandInfo = "Für einen Zauberstab zugeteilte Punkte.",
+		WeaponTypeWarglaive = "Kriegsgleve", -- Needs review
+		WeaponTypeWarglaiveInfo = "Points to be assigned if the item is a warglaive.", -- Requires localization
 	},
 	TooltipParsing = {
 		Agility = "^%+?([-%d%.,]+) Beweglichkeit$",
@@ -227,8 +210,6 @@ Weitere Informationen zur Anpassung von Pawn findet ihr in der Hilfedatei (Readm
 		Avoidance = "^%+([%d%.,]+) Vermeidung$", -- Needs review
 		Axe = "^Axt$",
 		BagSlots = "^%d+ Platz .+$",
-		BladesEdgeMountains = "^Schergrat$",
-		BonusArmor = "^%+([%d%.,]+) Bonusrüstung$", -- Needs review
 		Bow = "^Bogen$",
 		ChanceOnHit = "Trefferchance:",
 		Charges = "^.+ Ladungen?$",
@@ -261,6 +242,7 @@ Weitere Informationen zur Anpassung von Pawn findet ihr in der Hilfedatei (Readm
 		Gun = "^Schusswaffe$",
 		Haste = "^%+?([%d%.,]+) Tempo$",
 		Haste2 = "^UNUSED$",
+		HaventCollectedAppearance = "^You haven't collected this appearance$", -- Requires localization
 		HeirloomLevelRange = "^Benötigt Stufe %d bis ([%d%.,]+)",
 		HeirloomXpBoost = "^Anlegen: Erhaltene Erfahrung",
 		HeirloomXpBoost2 = "^UNUSED$",
@@ -282,10 +264,10 @@ Weitere Informationen zur Anpassung von Pawn findet ihr in der Hilfedatei (Readm
 		Mastery2 = "^UNUSED$",
 		MetaGemRequirements = "|cff%x%x%x%x%x%xBenötigt",
 		MovementSpeed = "^%+([%d%.,]+) Bewegungsgeschwindigkeit$", -- Needs review
+		MultiStatHeading = "^Multiple Stats$", -- Requires localization
 		MultiStatSeparator1 = "und",
 		Multistrike = "^%+([%d%.,]+) Mehrfachschlag$", -- Needs review
 		NormalizationEnchant = "^Verzaubert: (.*)$",
-		OnlyFitsInMetaGemSlot = "\"Metaedelsteine können nur in Sockel der Kategorie Meta eingesetzt werden.%.\"$",
 		Parry = "^%+?([%d%.,]+) Parieren$",
 		Parry2 = "^UNUSED$",
 		Pattern = "Muster:",
@@ -302,8 +284,6 @@ Weitere Informationen zur Anpassung von Pawn findet ihr in der Hilfedatei (Readm
 		Scope = "^Zielfernrohr %(%+([%d%.,]+) Schaden%)$",
 		ScopeCrit = "^Zielfernrohr %(%+([%d%.,]+) kritischer Trefferwert%)$",
 		ScopeRangedCrit = "^%+?([%d%.,]+) kritische Ferntrefferwertung$",
-		Season = "^Saison",
-		ShadowmoonValley = "^Schattenmondtal$",
 		Shield = "^Schild$",
 		SocketBonusPrefix = "Sockelbonus:",
 		Speed = "^Tempo ([%d%.,]+)$",
@@ -314,16 +294,17 @@ Weitere Informationen zur Anpassung von Pawn findet ihr in der Hilfedatei (Readm
 		Stamina = "^%+?([-%d%.,]+) Ausdauer$",
 		Strength = "^%+?([-%d%.,]+) Stärke$",
 		Sword = "^Schwert$",
-		TempestKeep = "^Festung der Stürme$",
 		TemporaryBuffMinutes = "^.+%(%d+ Min%)$",
 		TemporaryBuffSeconds = "^.+%(%d+ Sek%)$",
 		Thunderforged = "^Donnergeschmiedet$",
 		Timeless = "^Zeitlos$",
+		Titanforged = "^Titanforged$", -- Requires localization
 		UpgradeLevel = "^Upgrade Level:",
 		Use = "Benutzen:",
 		Versatility = "^%+([%d%.,]+) Vielseitigkeit$", -- Needs review
 		Wand = "^Zauberstab$",
 		Warforged = "^Kriegsgeschmiedet$",
+		Warglaives = "^Kriegsgleven$", -- Needs review
 		WeaponDamage = "^([%d%.,]+) %- ([%d%.,]+) Schaden$",
 		WeaponDamageArcane = "^%+?([%d%.,]+) %- ([%d%.,]+) Arkanschaden$",
 		WeaponDamageArcaneExact = "^%+?([%d%.,]+) Arkanschaden$",
@@ -352,14 +333,11 @@ Weitere Informationen zur Anpassung von Pawn findet ihr in der Hilfedatei (Readm
 Wowhead Bewertungsgewichtungen mit Erlaubnis benutzt.  Sende Feedback zu den Profilwerten bitte direkt an Wowhead.]=],
 		CompareClearItems = "Zurücksetzen",
 		CompareClearItemsTooltip = "Setzt beide Gegenstandsfelder zurück.",
-		CompareCogwheelSockets = "Zahnradsockel",
 		CompareColoredSockets = "Farbiger Sockel",
 		CompareEquipped = "Angelegt",
 		CompareGemTotalValue = "Wertung der Edelsteine",
 		CompareHeader = "Vergleiche Gegenstände (Profil %s)",
-		CompareMetaSockets = "Meta-Sockel",
 		CompareOtherHeader = "Anderes",
-		CompareShaTouchedSockets = "Sha-berührt",
 		CompareSlotEmpty = "(kein Gegenstand)",
 		CompareSocketBonus = "Sockelbonus",
 		CompareSocketsHeader = "Sockel",
@@ -368,7 +346,6 @@ Wowhead Bewertungsgewichtungen mit Erlaubnis benutzt.  Sende Feedback zu den Pro
 		CompareSwapTooltip = "Tauscht die Position der beiden zu vergleichenden Gegenstände.",
 		CompareTab = "Vergleichen",
 		CompareVersus = "—vs.—",
-		CompareWelcomeLeft = "Wähle zuerst eine Skalierung aus der Liste auf der linken Seite.",
 		CompareWelcomeRight = [=[Lass dann einen Gegenstand in diese Box fallen.
 
 Du kannst ihn mit existierenden Gegenständen vergleichen, wenn du die Icons in der unteren linken Ecke benutzt.]=],
@@ -442,12 +419,12 @@ Shortcuts:
 If checked, Pawn's socketing advisor will still suggest appropriate gems for low-level items, but sockets will be ignored in calculations and socketed items will not show up as upgrades as often.
 
 If unchecked, Pawn will calculate values for items as if they were socketed in the way that maximizes the item's value, regardless of the item's level.]=], -- Requires localization
-		OptionsIgnoreItemUpgradesCheck = "Ignore valor and baleful upgrades",
+		OptionsIgnoreItemUpgradesCheck = "Ignore valor and baleful upgrades", -- Requires localization
 		OptionsIgnoreItemUpgradesCheckTooltip = [=[Enable this option to have Pawn ignore the potential for Valor upgrades and Empowered Baleful items when calculating item values.
 
 If checked, Pawn will treat upgradeable items as they are and will not assume that you would use Valor and Empowered Apexis Fragments to improve the item when determining whether an item is better than what you currently have.
 
-If unchecked, Pawn will treat those items assuming that you would maximize their potential with Valor and Empowered Apexis Fragments.  This could cause a level 650 baleful item to appear as a significant upgrade over a level 670 item from Blackrock Foundry, since the baleful item could potentially be improved to level 705 through valor and Apexis.]=],
+If unchecked, Pawn will treat those items assuming that you would maximize their potential with Valor and Empowered Apexis Fragments.  This could cause a level 650 baleful item to appear as a significant upgrade over a level 670 item from Blackrock Foundry, since the baleful item could potentially be improved to level 705 through valor and Apexis.]=], -- Requires localization
 		OptionsInventoryIcon = "Inventar-Icons anzeigen",
 		OptionsInventoryIconTooltip = "Aktiviere diese Option um Inventar-Icons neben Gegenstandsfenstern anzuzeigen.",
 		OptionsItemIDs = "Gegenstands-ID anzeigen",
@@ -467,6 +444,8 @@ Benutze dieses Feature wenn du denkst, dass Pawn schlechte Verbesserungsvorschl�
 		OptionsSocketingAdvisorTooltip = "Wenn du einem Gegenstand Edelsteine zufügst, dann wird Pawn ein Popup anzeigen, dass dir geeignete Edelsteine zur Verbesserung vorschlägt.  (Um eine komplette Liste der Edelsteinvorschläge zu sehen, benutze den Edelsteine Tab um die Qualität anzupassen.)",
 		OptionsTab = "Optionen",
 		OptionsTooltipHeader = "Tooltip Optionen",
+		OptionsTooltipSpecIcon = "Show spec icons", -- Requires localization
+		OptionsTooltipSpecIconTooltip = "Enable this option to show spec icons next to scale names on tooltips.", -- Requires localization
 		OptionsTooltipUpgradesOnly = "Zeige nur Verbesserung",
 		OptionsTooltipUpgradesOnlyTooltip = [=[Das ist die einfachste Option.  Zeige nur Pawn Werte und prozentuale Upgrades für Gegenstände die eine Verbesserung für dein aktuelles Set wären. Zeige keine Pawn Werte für geringerwertige Gegenstände.
 
@@ -493,7 +472,21 @@ Feuer:  156.7|r]=],
 Wenn man eine Zweihand-Waffe trägt, wird weiterhin eine Verbesserung für Einhandwaffen gezeigt, wenn die Waffe besser als die vorherige Einhandwaffe ist. Verbesserungen werden in Pawn separat für Waffenarten verwaltet. Ein Vergleich zwischen Zweihand und Einhand Waffen findet nicht statt.
 
 Deaktiviere die Option, wenn nur Verbesserungen für die aktuell getragene Waffenart gezeigt werden soll.]=],
+		OptionsUpgradeTrackingHeader = "Upgrade comparisons:", -- Requires localization
+		OptionsUpgradeTrackingOff = "Versus equipped gear (recommended)", -- Requires localization
+		OptionsUpgradeTrackingOffTooltip = "Pawn will show you items that are an upgrade compared to the items that you currently have equipped.", -- Requires localization
+		OptionsUpgradeTrackingOn = "Track for each scale (advanced)", -- Requires localization
+		OptionsUpgradeTrackingOnTooltip = "(For advanced users.)  Pawn will try to track the best items that you've equipped, independently for each scale that you have enabled, and show you items that are an upgrade compared to those.", -- Requires localization
 		OptionsWelcome = "Konfiguriere Pawn wie du es möchtest. Änderungen werden unmittelbar übernommen.",
+		ScaleAutoOff = "Manual", -- Requires localization
+		ScaleAutoOff2 = "Let me manage scales.", -- Requires localization
+		ScaleAutoOffTooltip = "Pawn will let you manually choose which scales to use for its calculations, allowing you to enable more than one scale at a time, add custom scales, and more.", -- Requires localization
+		ScaleAutoOn = "Automatic", -- Requires localization
+		ScaleAutoOn2 = "Just show my current spec.", -- Requires localization
+		ScaleAutoOnTooltip = "Pawn will automatically show your current specialization in item tooltips, and use that to make recommendations and suggest upgrades.", -- Requires localization
+		ScaleAutoWelcome = [=[Pawn will show suggestions for your current specialization.
+
+If you'd rather manage things on your own, just click Manual below.]=], -- Requires localization
 		ScaleChangeColor = "Farbe ändern",
 		ScaleChangeColorTooltip = "Ändert die Schriftfarbe der Wertungsinformationen im Gegenstandstooltip.",
 		ScaleCopy = "Kopieren",
@@ -514,6 +507,7 @@ Dieser Vorgang kann nicht rückgängig gemacht werden!]=],
 		ScaleRename = "Umbenennen",
 		ScaleRenameTooltip = "Bewertungsprofil umbenennen.",
 		ScaleSelectorHeader = "Wähle ein Profil:",
+		ScaleSelectorShowingSuggestionsFor = "Showing suggestions for", -- Requires localization
 		ScaleSelectorShowScale = "Dieses Bewertungsprofil im Gegenstandstooltip anzeigen.",
 		ScaleSelectorShowScaleTooltip = [=[Aktiviere diese Option um dieses Profil im Gegenstandstooltip anzuzeigen. Jedes Bewertungsprofil kann für einen deiner Charakter, mehrere Charaktere oder gar keinen Charakter angezeigt werden. 
 
@@ -546,42 +540,8 @@ Für weitere Informationen hierzu siehe readme.htm.]=],
 		ValuesWelcomeReadOnly = "Das ausgewählte Bewertungsprofil ist nicht editierbar. Erstelle im Reiter \"Bewertungsprofile\" ein neues Profil oder erstelle eine Kopie des gewählten Profils.",
 	},
 	Wowhead = {
-		DeathKnightBloodTank = "Todesritter: Blut",
-		DeathKnightFrostDps = "Todesritter: Frost",
-		DeathKnightUnholyDps = "Todesritter: Unheilig",
-		DruidBalance = "Druide: Gleichgewicht",
-		DruidFeralDps = "Druide: Wildheit",
-		DruidFeralTank = "Druide: Wächter",
-		DruidRestoration = "Druide: Wiederherstellung",
-		HunterBeastMastery = "Jäger: Tierherrschaft",
-		HunterMarksman = "Jäger: Treffsicherheit",
-		HunterSurvival = "Jäger: Überleben",
-		MageArcane = "Magier: Arkan",
-		MageFire = "Magier: Feuer",
-		MageFrost = "Magier: Frost",
-		MonkBrewmaster = "Mönch: Braumeister",
-		MonkMistweaver = "Mönch: Nebelwirker",
-		MonkWindwalker = "Mönch: Windläufer",
-		PaladinHoly = "Paladin: Heilig",
-		PaladinRetribution = "Paladin: Vergeltung",
-		PaladinTank = "Paladin: Schutz",
-		PriestDiscipline = "Priester: Disziplin",
-		PriestHoly = "Priester: Heilig",
-		PriestShadow = "Priester: Schatten",
 		Provider = "Wowhead Wertungen",
 		ProviderStarter = "Starter", -- Needs review
-		RogueAssassination = "Schurke: Meucheln",
-		RogueCombat = "Schurke: Kampf",
-		RogueSubtlety = "Schurke: Täuschung",
-		ShamanElemental = "Schamane: Elementar",
-		ShamanEnhancement = "Schamane: Verstärkung",
-		ShamanRestoration = "Schamane: Wiederherstellung",
-		WarlockAffliction = "Hexenmeister: Gebrechen",
-		WarlockDemonology = "Hexenmeister: Dämonologie",
-		WarlockDestruction = "Hexenmeister: Zerstörung",
-		WarriorArms = "Krieger: Waffen",
-		WarriorFury = "Krieger: Furor",
-		WarriorTank = "Krieger: Schutz",
 	},
 }
 end

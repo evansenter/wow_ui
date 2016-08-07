@@ -10,17 +10,22 @@
 --]]
 local comboWidgetPath = "Interface\\Addons\\TidyPlatesWidgets\\ComboWidget\\"
 local artpath = "Interface\\Addons\\TidyPlatesWidgets\\ComboWidget\\"
-local artfile = artpath.."PointArt.tga"
+local artfile = artpath.."PointArtLegion.tga"
 local grid = .0625
 local monkOffset = 10
 
 local WidgetList = {}
 
-local Anticipation =  GetSpellInfo(115190)
+local function GetDruidPoints()
+	local points = GetComboPoints("player", "target")
+
+	return points
+end
 
 local function GetRoguePoints()
 	local points = GetComboPoints("player", "target")
 
+--[[
 	if points and points > 0 then
 
 		-- Anticipation
@@ -32,6 +37,7 @@ local function GetRoguePoints()
 			end
 		end
 	end
+	--]]
 
 	return points
 end
@@ -62,8 +68,10 @@ end
 local GetPoints
 local PlayerClass = select(2,UnitClassBase("player"))
 
-if PlayerClass == "ROGUE" or PlayerClass == "DRUID" then
+if PlayerClass == "ROGUE" then
 	GetPoints = GetRoguePoints
+elseif PlayerClass == "DRUID" then
+	GetPoints = GetDruidPoints
 elseif PlayerClass == "MONK" then
 	GetPoints = GetMonkPoints
 elseif PlayerClass == "PALADIN" then
@@ -121,6 +129,8 @@ end
 local WatcherFrame = CreateFrame("Frame", nil, WorldFrame )
 local isEnabled = false
 WatcherFrame:RegisterEvent("UNIT_COMBO_POINTS")
+WatcherFrame:RegisterEvent("UNIT_POWER")
+WatcherFrame:RegisterEvent("UNIT_DISPLAYPOWER")
 WatcherFrame:RegisterEvent("UNIT_AURA")
 WatcherFrame:RegisterEvent("UNIT_FLAGS")
 
@@ -139,8 +149,8 @@ local function EnableWatcherFrame(arg)
 end
 
 -- Widget Creation
-local function CreateWidgetFrame(parent)
-
+local function CreateWidgetFrame(extended)
+	local parent = extended.widgetFrame
 	-- Required Widget Code
 	local frame = CreateFrame("Frame", nil, parent)
 	frame:Hide()

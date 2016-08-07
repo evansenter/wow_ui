@@ -51,8 +51,9 @@ local function initializeDb()
 	local defaults = {
 		char = {
 			FirstUse = true,           -- true if this is first time use, gets cleared after seeing the export help splash window
-			SubSpecs = {},             -- last seen subspecs for this character, used to deal with some ambiguous specs
-			Equipped = {},             -- for each spec group (1 or 2), slot id to item link
+			Talents = {},              -- for each spec, selected talents
+			Artifacts = {},            -- for each spec, artifact info
+			Equipped = {},             -- for each spec, slot id to item link
 			BagItems = {},             -- list of item links for bag
 			BankItems = {},            -- list of item links for bank
 			VoidItems = {},            -- list of item links for void storage
@@ -125,7 +126,7 @@ local function initializeDb()
 		end
 	end
 	
-	Amr.db = LibStub("AceDB-3.0"):New("AskMrRobotDb2", defaults)
+	Amr.db = LibStub("AceDB-3.0"):New("AskMrRobotDb3", defaults)
 	
 	Amr.db.RegisterCallback(Amr, "OnProfileChanged", "RefreshConfig")
 	Amr.db.RegisterCallback(Amr, "OnProfileCopied", "RefreshConfig")
@@ -175,6 +176,7 @@ end
 
 function Amr:OnEnable()
     
+	--[[
 	-- listen for changes to the snapshot enable state, and always make sure it is enabled if using the core AskMrRobot addon
 	self:RegisterMessage("AMR_SNAPSHOT_STATE_CHANGED", function(eventName, isEnabled)
 		if not isEnabled then
@@ -183,6 +185,7 @@ function Amr:OnEnable()
 		end	
 	end)
 	self.Serializer:EnableSnapshots()
+	]]
 	
 	-- update based on current configuration whenever enabled
 	self:RefreshConfig()
@@ -496,27 +499,6 @@ function Amr:GetUnitId(unitRealm, unitName)
 end
 
 
--- scanning tooltip b/c for some odd reason the api has no way to get basic item properties...
--- so you have to generate a fake item tooltip and search for pre-defined strings in the display text
-local _scanTt
-function Amr:GetScanningTooltip()
-	if not _scanTt then
-		_scanTt = CreateFrame("GameTooltip", "AmrUiScanTooltip", nil, "GameTooltipTemplate")
-		_scanTt:SetOwner(UIParent, "ANCHOR_NONE")
-	end
-	return _scanTt
-end
-
-local function scanTooltipHelper(txt, ...)
-	for i = 1, select("#", ...) do
-        local region = select(i, ...)
-        if region and region:GetObjectType() == "FontString" then
-            local text = region:GetText() -- string or nil
-			print(text)
-        end
-    end
-end
-
 -- search the tooltip for txt, returns true if it is encountered on any line
 function Amr:IsTextInTooltip(tt, txt)
 	local regions = { tt:GetRegions() }
@@ -532,13 +514,7 @@ end
 
 -- helper to determine if we can equip an item (it is already soulbound or account bound)
 function Amr:CanEquip(bagId, slotId)
-	local tt = self:GetScanningTooltip()
-	tt:ClearLines()
-	if bagId then
-		tt:SetBagItem(bagId, slotId)
-	else
-		tt:SetInventoryItem("player", slotId)
-	end
+	local tt = Amr.GetItemTooltip(bagId, slotId)
 	if self:IsTextInTooltip(tt, ITEM_SOULBOUND) then return true end
 	if self:IsTextInTooltip(tt, ITEM_BNETACCOUNTBOUND) then return true end
 	if self:IsTextInTooltip(tt, ITEM_ACCOUNTBOUND) then return true end
@@ -546,13 +522,7 @@ end
 
 -- helper to determine if an item has a unique constraint
 function Amr:IsUnique(bagId, slotId)
-	local tt = self:GetScanningTooltip()
-	tt:ClearLines()
-	if bagId then
-		tt:SetBagItem(bagId, slotId)
-	else
-		tt:SetInventoryItem("player", slotId)
-	end
+	local tt = Amr.GetItemTooltip(bagId, slotId)
 	if self:IsTextInTooltip(tt, ITEM_UNIQUE_EQUIPPABLE)	then return true end
 	if self:IsTextInTooltip(tt, ITEM_UNIQUE) then return true end
 	return false
@@ -567,7 +537,7 @@ function Amr:SendAmrCommMessage(message, channel)
 	local v = GetAddOnMetadata(Amr.ADDON_NAME, "Version")
 	message = v .. "\r" .. message
 	
-	Amr:SendCommMessage(Amr.ChatPrefix, message, channel or "RAID")
+	Amr:SendCommMessage(Amr.ChatPrefix, message, channel or (IsInGroup(LE_PARTY_CATEGORY_INSTANCE) and "INSTANCE_CHAT" or "RAID"))
 end
 
 function Amr:OnCommReceived(prefix, message, distribution, sender)

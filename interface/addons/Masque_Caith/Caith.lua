@@ -4,8 +4,8 @@
 	please see the included License.txt file.
 
 	* File...: Caith.lua
-	* Date...: 2015-10-19T22:37:00Z
-	* Hash...: 13f5181
+	* Date...: 2016-07-26T00:07:00Z
+	* Hash...: 9ca03cb
 	* Author.: StormFX
 
 ]]
@@ -16,7 +16,7 @@ if not MSQ then return end
 -- Caith
 MSQ:AddSkin("Caith", {
 	Author = "StormFX",
-	Version = "6.2.1",
+	Version = "7.0.0",
 	Shape = "Square",
 	Masque_Version = 60200,
 	Backdrop = {
@@ -97,20 +97,21 @@ MSQ:AddSkin("Caith", {
 	Count = {
 		Width = 42,
 		Height = 10,
-		OffsetY = 2,
+		OffsetX = -3,
+		OffsetY = 6,
 	},
 	HotKey = {
 		Width = 42,
 		Height = 10,
-		OffsetX = -6,
-		OffsetY = -3,
+		OffsetX = -8,
+		OffsetY = -5,
 	},
 	Duration = {
 		Width = 42,
 		Height = 10,
 		OffsetY = -3,
 	},
-	AutoCast = {
+	Shine = {
 		Width = 32,
 		Height = 32,
 		OffsetX = 1,
@@ -118,7 +119,7 @@ MSQ:AddSkin("Caith", {
 	},
 }, true)
 
--- No Shadow
+-- Caith: No Shadow
 MSQ:AddSkin("Caith: No Shadow", {
 	Template = "Caith",
 	Normal = {

@@ -6,12 +6,18 @@ local _frameShop
 local _panelContent
 local _cboPlayers
 local _selectedPlayer
+
 local _specs = {
 	[1] = true,
-	[2] = true
+	[2] = true,
+	[3] = true,
+	[4] = true,
 }
+
 local _chk1
 local _chk2
+local _chk3
+local _chk4
 local _isAhOpen = false
 
 local function onShopFrameClose(widget)
@@ -20,6 +26,8 @@ local function onShopFrameClose(widget)
 	_cboPlayers = nil
 	_chk1 = nil
 	_chk2 = nil
+	_chk3 = nil
+	_chk4 = nil
 	_panelContent = nil
 end
 
@@ -93,6 +101,18 @@ function Amr:ShowShopWindow()
 		_chk2:SetUserData("spec", 2)
 		_chk2:SetCallback("OnClick", onSpecClick)
 		_frameShop:AddChild(_chk2)
+		
+		_chk3 = AceGUI:Create("AmrUiCheckBox")
+		_chk3:SetPoint("LEFT", _chk2.frame, "RIGHT", 30, 0)
+		_chk3:SetUserData("spec", 3)
+		_chk3:SetCallback("OnClick", onSpecClick)
+		_frameShop:AddChild(_chk3)
+		
+		_chk4 = AceGUI:Create("AmrUiCheckBox")
+		_chk4:SetPoint("LEFT", _chk3.frame, "RIGHT", 30, 0)
+		_chk4:SetUserData("spec", 4)
+		_chk4:SetCallback("OnClick", onSpecClick)
+		_frameShop:AddChild(_chk4)
 		
 		_panelContent = AceGUI:Create("AmrUiPanel")
 		_panelContent:SetLayout("None")
@@ -199,14 +219,17 @@ function Amr:RefreshShoppingUi()
 
 	_chk1:SetVisible(false)
 	_chk2:SetVisible(false)
+	_chk3:SetVisible(false)
+	_chk4:SetVisible(false)
 	
 	_chk1:SetChecked(false)
 	_chk2:SetChecked(false)
+	_chk3:SetChecked(false)
+	_chk4:SetChecked(false)
 	
 	-- clear out any previous data
 	_panelContent:ReleaseChildren()
 	
-	-- render required gems for the selected player
 	local data = Amr.db.global.Shopping[_selectedPlayer]
 	if not data then		
 		_panelContent:SetLayout("None")
@@ -220,22 +243,32 @@ function Amr:RefreshShoppingUi()
 	else
 		-- set labels on checkboxes
 		if data.specs[1] and data.specs[1] ~= 0 then
-			local id, name = GetSpecializationInfoByID(Amr.GetGameSpecId(data.specs[1]))
-			_chk1:SetText(name .. " " .. L.ShopSpecLabel)
+			_chk1:SetText(L.SpecsShort[data.specs[1]])
 			_chk1:SetVisible(true)
 			_chk1:SetChecked(_specs[1])
 		end
 		
 		if data.specs[2] and data.specs[2] ~= 0 then
-			local id, name = GetSpecializationInfoByID(Amr.GetGameSpecId(data.specs[2]))
-			_chk2:SetText(name .. " " .. L.ShopSpecLabel)
+			_chk2:SetText(L.SpecsShort[data.specs[2]])
 			_chk2:SetVisible(true)
 			_chk2:SetChecked(_specs[2])
 		end
 		
+		if data.specs[3] and data.specs[3] ~= 0 then
+			_chk3:SetText(L.SpecsShort[data.specs[3]])
+			_chk3:SetVisible(true)
+			_chk3:SetChecked(_specs[3])
+		end
+		
+		if data.specs[4] and data.spes[4] ~= 0 then
+			_chk4:SetText(L.SpecsShort[data.specs[4]])
+			_chk4:SetVisible(true)
+			_chk4:SetChecked(_specs[4])
+		end
+		
 		local spec = 0
-		if not _specs[1] and not _specs[2] then
-			-- both unchecked, show nothing
+		if not _specs[1] and not _specs[2] and not _specs[3] and not _specs[4] then
+			-- all unchecked, show nothing
 		else
 			-- both is 0, otherwise the one that is selected
 			if not _specs[1] or not _specs[2] then
@@ -320,22 +353,31 @@ end
 -- look at both gear sets and find stuff that a player needs to acquire to gem/enchant their gear
 function Amr:UpdateShoppingData(player)
 
-	-- 0 is combination of both specs, 1 is primary, 2 is secondary
+	-- TODO: re-enable shopping list when Legion comes out
+	do return end
+	
+	-- 0 is combination of all specs
 	local required = {
 		gems = {
 			[0] = {},
 			[1] = {},
-			[2] = {}
+			[2] = {},
+			[3] = {},
+			[4] = {}
 		},
 		enchants = {
 			[0] = {},
 			[1] = {},
-			[2] = {}
+			[2] = {},
+			[3] = {},
+			[4] = {}
 		},
 		materials = {
 			[0] = {},
 			[1] = {},
-			[2] = {}
+			[2] = {},
+			[3] = {},
+			[4] = {}
 		},
 		specs = player.Specs
 	}
@@ -369,53 +411,56 @@ function Amr:UpdateShoppingData(player)
 	end
 	
 	-- now subtract stuff the player already has, and generate a list of materials as well
-	for spec = 0, 2 do
-		-- now check if the player has any of the gems or enchants in their inventory, and subtract those
-		for itemId, count in pairs(required.gems[spec]) do
-			required.gems[spec][itemId] = math.max(count - getOwnedCount(itemId), 0)
-			
-			if required.gems[spec][itemId] == 0 then
-				required.gems[spec][itemId] = nil
-			end
-		end
-		
-		for itemId, count in pairs(required.enchants[spec]) do
-			-- look in both spec extra info cache
-			local e = enchantItemIdToId[itemId]		
-			local enchInfo = nil
-			if Amr.db.char.ExtraEnchantData[1] then
-				enchInfo = Amr.db.char.ExtraEnchantData[1][e]
-			end
-			if not enchInfo then
-				if Amr.db.char.ExtraEnchantData[2] then
-					enchInfo = Amr.db.char.ExtraEnchantData[2][e]
+	for spec = 0, 4 do
+		local specId = spec == 0 and 1 or GetSpecializationInfo(spec)
+		if specId then
+			-- now check if the player has any of the gems or enchants in their inventory, and subtract those
+			for itemId, count in pairs(required.gems[spec]) do
+				required.gems[spec][itemId] = math.max(count - getOwnedCount(itemId), 0)
+				
+				if required.gems[spec][itemId] == 0 then
+					required.gems[spec][itemId] = nil
 				end
 			end
 			
-			if enchInfo then
-				required.enchants[spec][itemId] = math.max(count - getOwnedCount(itemId), 0)
-
-				if required.enchants[spec][itemId] == 0 then
-					required.enchants[spec][itemId] = nil
-				else
-					-- count up required materials
-					if enchInfo.materials then
-						local c = required.enchants[spec][itemId]
-						for k, v in pairs(enchInfo.materials) do
-							local prev = required.materials[spec][k]
-							required.materials[spec][k] = prev and prev + (v * c) or (v * c)
-						end
+			for itemId, count in pairs(required.enchants[spec]) do
+				-- look in both spec extra info cache
+				local e = enchantItemIdToId[itemId]		
+				local enchInfo = nil
+				if Amr.db.char.ExtraEnchantData[1] then
+					enchInfo = Amr.db.char.ExtraEnchantData[1][e]
+				end
+				if not enchInfo then
+					if Amr.db.char.ExtraEnchantData[2] then
+						enchInfo = Amr.db.char.ExtraEnchantData[2][e]
 					end
-				end			
-			end	
-		end
-		
-		-- check if player has any of the materials already
-		for itemId, count in pairs(required.materials[spec]) do
-			required.materials[spec][itemId] = math.max(count - getOwnedCount(itemId), 0)
+				end
+				
+				if enchInfo then
+					required.enchants[spec][itemId] = math.max(count - getOwnedCount(itemId), 0)
+
+					if required.enchants[spec][itemId] == 0 then
+						required.enchants[spec][itemId] = nil
+					else
+						-- count up required materials
+						if enchInfo.materials then
+							local c = required.enchants[spec][itemId]
+							for k, v in pairs(enchInfo.materials) do
+								local prev = required.materials[spec][k]
+								required.materials[spec][k] = prev and prev + (v * c) or (v * c)
+							end
+						end
+					end			
+				end	
+			end
 			
-			if required.materials[spec][itemId] == 0 then
-				required.materials[spec][itemId] = nil
+			-- check if player has any of the materials already
+			for itemId, count in pairs(required.materials[spec]) do
+				required.materials[spec][itemId] = math.max(count - getOwnedCount(itemId), 0)
+				
+				if required.materials[spec][itemId] == 0 then
+					required.materials[spec][itemId] = nil
+				end
 			end
 		end
 	end
@@ -423,6 +468,8 @@ function Amr:UpdateShoppingData(player)
 	Amr.db.global.Shopping[player.Name .. "-" .. player.Realm] = required
 end
 
+-- TODO: re-enable shopping list with Legion
+--[[
 Amr:AddEventHandler("AUCTION_HOUSE_SHOW", function() 
 	_isAhOpen = true
 	if Amr.db.profile.options.shopAh then
@@ -436,3 +483,4 @@ Amr:AddEventHandler("AUCTION_HOUSE_CLOSED", function()
 		Amr:HideShopWindow()
 	end
 end)
+]]

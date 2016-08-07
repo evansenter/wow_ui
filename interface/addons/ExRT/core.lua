@@ -1,30 +1,36 @@
---	17:07 03.02.2016
+--	12:56 03.08.2016
 
 --[[
+3725
+* Raid cooldowns: updates due to last class balance changes (http://us.battle.net/forums/en/wow/topic/20747796942#post-3)
+* Minor fixes
 
-Legendary Ring: fixed major bug
-Bossmods: Gorefiend: added numbers for timers
-Minor Fixes
 
-Added German Localization [thanks Gyffes]
-Bossmods: Iskar: try to reduce lag for some players
-InspectViewer: added option for marking items without max valor upgrades [thanks Cubetrace]
-Note: quick way to auto note per boss. Add "{e:EncounterID}" or "{e:EncounterName}" (without quotes) at start of note, that will be shared with raid at start of the fight. (ex. "{e:Archimonde}Run around and cry"). Commands "{ep:EncounterID}" and "{ep:EncounterName}" for personal note.
-Loot to chat: added option "Show ilvl"
-Raid cooldowns: added new heirlooms trinkets
+3720
+* Raid cooldowns: added support for aftifacts (both players [viewer & caster] must have ExRT for this functionality) & legendary items
+* Statistics bosses: added 5ppl mythic and 40ppl to diff list
+* Raid Inspect: removed 20y restrictions for inspecting (still in testing)
+* Raid Inspect: added visual aftifact inspecting
+http://i.imgur.com/xrz5JqB.png
+* Note: added keybind to toggle on/off
+* Minor fixes
 
-Legion Alpha: this version works on both clients: live 6.2.3+ and legion alpha 7.0
-Legion Alpha: modules Classes and Raid loot will be removed
+3705
+* Fixed blinking textures for archimonde radar
+* Fixed health value for souls on gorefiend
+* Fixed health value for infernals on archimonde
+* Raid Cooldowns: "fast setup" lists updated for 7.0 spells
+* Bonus loot: fixed recording
+* Raid check: fixed food report
+* Inspeci Viewer: fixed a lot bugs
 
-TODO:
-Legion Alpha: Add 1 parameter for UnitAura in BossWatcher.lua (15 - nameplateShowAll)
-GetPlayerMapAreaID ???
-Fix DE font
+3700
+7.0 Legion Update
 
 ]]
 local GlobalAddonName, ExRT = ...
 
-ExRT.V = 3575
+ExRT.V = 3725
 ExRT.T = "R"
 ExRT.is7 = false		--> Legion (7.x) Client
 
@@ -46,7 +52,6 @@ ExRT.msg_prefix = {
 
 ExRT.L = {}			--> локализация
 ExRT.locale = GetLocale()
-
 
 ---------------> Version <---------------
 do
@@ -73,8 +78,10 @@ do
 	ExRT.SDB.realmKey = realmKey
 	ExRT.SDB.charKey = charName .. "-" .. realmKey
 	ExRT.SDB.charName = charName
+	ExRT.SDB.charLevel = UnitLevel'player'
 end
-
+-------------> global DB <------------
+ExRT.GDB = {}
 -------------> upvalues <-------------
 local pcall, unpack, pairs = pcall, unpack, pairs
 local GetTime, IsEncounterInProgress = GetTime, IsEncounterInProgress
@@ -98,7 +105,9 @@ do
 	local function mod_LoadOptions(this)
 		if not InCombatLockdown() or this.enableLoadInCombat then
 			this:Load()
-			this:SetScript("OnShow",nil)
+			if not this.OnShow_disableNil then
+				this:SetScript("OnShow",nil)
+			end
 			ExRT.F.dprint(this.moduleName.."'s options loaded")
 			this.isLoaded = true
 		else
@@ -106,7 +115,7 @@ do
 		end
 	end
 	local function mod_Options_CreateTitle(self)
-		self.title = ExRT.lib:Text(self,self.name,16):Size(605,200):Point(5,-5):Top()
+		self.title = ExRT.lib:Text(self,self.name,16):Point(5,-5):Top()
 	end
 	function ExRT.mod:New(moduleName,localizatedName,disableOptions,enableLoadInCombat)
 		local self = {}
@@ -605,6 +614,10 @@ function ExRT.F.SendExMsg(prefix, msg, tochat, touser, addonPrefix)
 		SendAddonMessage(addonPrefix, prefix .. "\t" .. msg, tochat,touser)
 	else
 		local chat_type, playerName = ExRT.F.chatType()
+		if chat_type == "WHISPER" and playerName == ExRT.SDB.charName then
+			ExRT.F.GetExMsg(ExRT.SDB.charName, prefix, strsplit("\t", msg))
+			return
+		end
 		SendAddonMessage(addonPrefix, prefix .. "\t" .. msg, chat_type, playerName)
 	end
 end

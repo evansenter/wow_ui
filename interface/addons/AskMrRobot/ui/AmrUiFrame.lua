@@ -95,11 +95,11 @@ local methods = {
 	
 	-- color is an object with R, G, B
 	["SetBackgroundColor"] = function(self, color)
-		self.bg:SetTexture(color.R, color.G, color.B, 1)
+		self.bg:SetColorTexture(color.R, color.G, color.B, 1)
 	end,
 	
 	["SetBorderColor"] = function(self, color)
-		self.border:SetTexture(color.R, color.G, color.B, 1)
+		self.border:SetColorTexture(color.R, color.G, color.B, 1)
 	end,
 	
 	["Raise"] = function(self)

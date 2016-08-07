@@ -14,7 +14,7 @@ local GetShapeshiftForm = GetShapeshiftForm
 local GetNumShapeshiftForms = GetNumShapeshiftForms
 local GetShapeshiftFormCooldown = GetShapeshiftFormCooldown
 local GetShapeshiftFormInfo = GetShapeshiftFormInfo
-local CooldownFrame_SetTimer = CooldownFrame_SetTimer
+local CooldownFrame_Set = CooldownFrame_Set
 local InCombatLockdown = InCombatLockdown
 local RegisterStateDriver = RegisterStateDriver
 local UnregisterStateDriver = UnregisterStateDriver
@@ -37,7 +37,7 @@ function AB:UPDATE_SHAPESHIFT_COOLDOWN()
 		if i <= numForms then
 			cooldown = _G["ElvUI_StanceBarButton"..i.."Cooldown"];
 			start, duration, enable = GetShapeshiftFormCooldown(i);
-			CooldownFrame_SetTimer(cooldown, start, duration, enable);
+			CooldownFrame_Set(cooldown, start, duration, enable);
 			cooldown:SetDrawBling(cooldown:GetEffectiveAlpha() > 0.5) --Cooldown Bling Fix
 		end
 	end
@@ -78,10 +78,10 @@ function AB:StyleShapeShift(event)
 				if isActive then
 					StanceBarFrame.lastSelected = button:GetID();
 					if numForms == 1 then
-						button.checked:SetTexture(1, 1, 1, 0.5)
+						button.checked:SetColorTexture(1, 1, 1, 0.5)
 						button:SetChecked(true);
 					else
-						button.checked:SetTexture(1, 1, 1, 0.5)
+						button.checked:SetColorTexture(1, 1, 1, 0.5)
 						button:SetChecked(self.db.stanceBar.style ~= 'darkenInactive');
 					end
 				else
@@ -91,9 +91,9 @@ function AB:StyleShapeShift(event)
 						button:SetChecked(self.db.stanceBar.style == 'darkenInactive');
 						button.checked:SetAlpha(1)
 						if self.db.stanceBar.style == 'darkenInactive' then
-							button.checked:SetTexture(0, 0, 0, 0.5)
+							button.checked:SetColorTexture(0, 0, 0, 0.5)
 						else
-							button.checked:SetTexture(1, 1, 1, 0.5)
+							button.checked:SetColorTexture(1, 1, 1, 0.5)
 						end
 					end
 				end
@@ -153,9 +153,11 @@ function AB:PositionAndSizeBarShapeShift()
 	if self.db['stanceBar'].enabled then
 		bar:SetScale(1);
 		bar:SetAlpha(bar.db.alpha);
+		E:EnableMover(bar.mover:GetName())
 	else
-		bar:SetScale(0.000001);
+		bar:SetScale(0.0001);
 		bar:SetAlpha(0);
+		E:DisableMover(bar.mover:GetName())
 	end
 
 	if self.db['stanceBar'].backdrop == true then
@@ -176,6 +178,12 @@ function AB:PositionAndSizeBarShapeShift()
 	else
 		horizontalGrowth = "LEFT";
 	end
+	
+	if(self.db['stanceBar'].inheritGlobalFade) then
+		bar:SetParent(self.fadeParent)
+	else
+		bar:SetParent(E.UIParent)
+	end	
 
 	local button, lastButton, lastColumnButton;
 	for i=1, NUM_STANCE_SLOTS do
@@ -188,26 +196,8 @@ function AB:PositionAndSizeBarShapeShift()
 
 		if self.db['stanceBar'].mouseover == true then
 			bar:SetAlpha(0);
-			if not self.hooks[bar] then
-				self:HookScript(bar, 'OnEnter', 'Bar_OnEnter');
-				self:HookScript(bar, 'OnLeave', 'Bar_OnLeave');
-			end
-
-			if not self.hooks[button] then
-				self:HookScript(button, 'OnEnter', 'Button_OnEnter');
-				self:HookScript(button, 'OnLeave', 'Button_OnLeave');
-			end
 		else
 			bar:SetAlpha(bar.db.alpha);
-			if self.hooks[bar] then
-				self:Unhook(bar, 'OnEnter');
-				self:Unhook(bar, 'OnLeave');
-			end
-
-			if self.hooks[button] then
-				self:Unhook(button, 'OnEnter');
-				self:Unhook(button, 'OnLeave');
-			end
 		end
 
 		if i == 1 then
@@ -247,7 +237,7 @@ function AB:PositionAndSizeBarShapeShift()
 		end
 
 		if i > numButtons then
-			button:SetScale(0.000001);
+			button:SetScale(0.0001);
 			button:SetAlpha(0);
 		else
 			button:SetScale(1);
@@ -277,6 +267,8 @@ function AB:AdjustMaxStanceButtons(event)
 			if MasqueGroup and E.private.actionbar.masque.stanceBar then
 				MasqueGroup:AddButton(bar.buttons[i])
 			end
+			self:HookScript(bar.buttons[i], 'OnEnter', 'Button_OnEnter');
+			self:HookScript(bar.buttons[i], 'OnLeave', 'Button_OnLeave');			
 			initialCreate = true;
 		end
 
@@ -330,6 +322,10 @@ function AB:CreateBarShapeShift()
 			self:Show();
 		end
 	]]);
+
+	self:HookScript(bar, 'OnEnter', 'Bar_OnEnter');
+	self:HookScript(bar, 'OnLeave', 'Bar_OnLeave');
+
 
 	self:RegisterEvent('UPDATE_SHAPESHIFT_FORMS', 'AdjustMaxStanceButtons');
 	self:RegisterEvent('UPDATE_SHAPESHIFT_COOLDOWN');

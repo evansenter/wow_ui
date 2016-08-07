@@ -10,9 +10,7 @@ SkadaPerCharDB = {
 			["interrupts"] = 0,
 			["mobdone"] = 0,
 			["overhealing"] = 148520,
-			["power"] = {
-				[12] = 18,
-			},
+			["mobtaken"] = 6106119,
 			["damage"] = 6106119,
 			["players"] = {
 				{
@@ -423,7 +421,9 @@ SkadaPerCharDB = {
 					["done"] = 0,
 				},
 			},
-			["shielding"] = 0,
+			["power"] = {
+				[12] = 18,
+			},
 			["alertCount"] = 0,
 			["healing"] = 0,
 			["healingRequired"] = 0,
@@ -432,7 +432,7 @@ SkadaPerCharDB = {
 			["starttime"] = 1394153835,
 			["name"] = "Raider's Training Dummy",
 			["mobname"] = "Raider's Training Dummy",
-			["mobtaken"] = 6106119,
+			["shielding"] = 0,
 			["mobhdone"] = 0,
 			["last_action"] = 1394153835,
 			["endtime"] = 1394153878,
@@ -446,10 +446,7 @@ SkadaPerCharDB = {
 			["interrupts"] = 0,
 			["mobdone"] = 0,
 			["overhealing"] = 2453231,
-			["power"] = {
-				[12] = 116,
-				[3] = 176,
-			},
+			["mobtaken"] = 43825947,
 			["damage"] = 43825947,
 			["players"] = {
 				{
@@ -1119,7 +1116,7 @@ SkadaPerCharDB = {
 					["htaken"] = 0,
 					["done"] = 0,
 				},
-				["Cannibláze"] = {
+				["Xuen"] = {
 					["players"] = {
 					},
 					["hdone"] = 0,
@@ -1129,10 +1126,10 @@ SkadaPerCharDB = {
 					["htakenspell"] = {
 						["Halo"] = {
 							["min"] = 0,
-							["crits"] = 1,
+							["crits"] = 0,
 							["max"] = 0,
 							["healing"] = 0,
-							["overhealing"] = 320179,
+							["overhealing"] = 101196,
 							["hits"] = 1,
 						},
 					},
@@ -1284,7 +1281,7 @@ SkadaPerCharDB = {
 					["htaken"] = 0,
 					["done"] = 0,
 				},
-				["Wolf"] = {
+				["Cannibláze"] = {
 					["players"] = {
 					},
 					["hdone"] = 0,
@@ -1294,11 +1291,11 @@ SkadaPerCharDB = {
 					["htakenspell"] = {
 						["Halo"] = {
 							["min"] = 0,
-							["crits"] = 2,
+							["crits"] = 1,
 							["max"] = 0,
 							["healing"] = 0,
-							["overhealing"] = 768352,
-							["hits"] = 2,
+							["overhealing"] = 320179,
+							["hits"] = 1,
 						},
 					},
 					["htaken"] = 0,
@@ -1704,7 +1701,7 @@ SkadaPerCharDB = {
 					["htaken"] = 0,
 					["done"] = 0,
 				},
-				["Xuen"] = {
+				["Wolf"] = {
 					["players"] = {
 					},
 					["hdone"] = 0,
@@ -1714,11 +1711,11 @@ SkadaPerCharDB = {
 					["htakenspell"] = {
 						["Halo"] = {
 							["min"] = 0,
-							["crits"] = 0,
+							["crits"] = 2,
 							["max"] = 0,
 							["healing"] = 0,
-							["overhealing"] = 101196,
-							["hits"] = 1,
+							["overhealing"] = 768352,
+							["hits"] = 2,
 						},
 					},
 					["htaken"] = 0,
@@ -1793,7 +1790,10 @@ SkadaPerCharDB = {
 					["done"] = 0,
 				},
 			},
-			["shielding"] = 0,
+			["power"] = {
+				[12] = 116,
+				[3] = 176,
+			},
 			["alertCount"] = 0,
 			["healing"] = 0,
 			["healingRequired"] = 0,
@@ -1802,7 +1802,7 @@ SkadaPerCharDB = {
 			["starttime"] = 1394153582,
 			["name"] = "Raider's Training Dummy",
 			["mobname"] = "Raider's Training Dummy",
-			["mobtaken"] = 43825947,
+			["shielding"] = 0,
 			["mobhdone"] = 42652,
 			["last_action"] = 1394153582,
 			["endtime"] = 1394153743,
@@ -1816,10 +1816,7 @@ SkadaPerCharDB = {
 			["interrupts"] = 0,
 			["mobdone"] = 0,
 			["overhealing"] = 974981,
-			["power"] = {
-				[12] = 72,
-				[3] = 120,
-			},
+			["mobtaken"] = 25489479,
 			["damage"] = 25489479,
 			["players"] = {
 				{
@@ -2526,6 +2523,42 @@ SkadaPerCharDB = {
 					["htaken"] = 0,
 					["done"] = 0,
 				},
+				["Alinastard"] = {
+					["players"] = {
+					},
+					["hdone"] = 0,
+					["hdonespell"] = {
+						["Renew"] = {
+							["min"] = 0,
+							["crits"] = 0,
+							["max"] = 0,
+							["healing"] = 0,
+							["overhealing"] = 14793,
+							["hits"] = 1,
+						},
+						["Cleave"] = {
+							["min"] = 0,
+							["crits"] = 0,
+							["max"] = 0,
+							["healing"] = 0,
+							["overhealing"] = 29586,
+							["hits"] = 2,
+						},
+					},
+					["taken"] = 0,
+					["htakenspell"] = {
+						["Renew"] = {
+							["min"] = 0,
+							["crits"] = 0,
+							["max"] = 0,
+							["healing"] = 0,
+							["overhealing"] = 14793,
+							["hits"] = 1,
+						},
+					},
+					["htaken"] = 0,
+					["done"] = 0,
+				},
 				["Kyruze"] = {
 					["players"] = {
 					},
@@ -2579,44 +2612,11 @@ SkadaPerCharDB = {
 					["htaken"] = 0,
 					["done"] = 0,
 				},
-				["Alinastard"] = {
-					["players"] = {
-					},
-					["hdone"] = 0,
-					["hdonespell"] = {
-						["Renew"] = {
-							["min"] = 0,
-							["crits"] = 0,
-							["max"] = 0,
-							["healing"] = 0,
-							["overhealing"] = 14793,
-							["hits"] = 1,
-						},
-						["Cleave"] = {
-							["min"] = 0,
-							["crits"] = 0,
-							["max"] = 0,
-							["healing"] = 0,
-							["overhealing"] = 29586,
-							["hits"] = 2,
-						},
-					},
-					["taken"] = 0,
-					["htakenspell"] = {
-						["Renew"] = {
-							["min"] = 0,
-							["crits"] = 0,
-							["max"] = 0,
-							["healing"] = 0,
-							["overhealing"] = 14793,
-							["hits"] = 1,
-						},
-					},
-					["htaken"] = 0,
-					["done"] = 0,
-				},
 			},
-			["shielding"] = 0,
+			["power"] = {
+				[12] = 72,
+				[3] = 120,
+			},
 			["alertCount"] = 0,
 			["healing"] = 0,
 			["healingRequired"] = 0,
@@ -2625,7 +2625,7 @@ SkadaPerCharDB = {
 			["starttime"] = 1394153412,
 			["name"] = "Raider's Training Dummy",
 			["mobname"] = "Raider's Training Dummy",
-			["mobtaken"] = 25489479,
+			["shielding"] = 0,
 			["mobhdone"] = 5642,
 			["last_action"] = 1394153412,
 			["endtime"] = 1394153513,
@@ -2763,9 +2763,17 @@ SkadaPerCharDB = {
 					["time"] = 63,
 					["interrupts"] = 0,
 					["overhealing"] = 516949,
+					["power"] = {
+						[12] = {
+							["amount"] = 44,
+							["spells"] = {
+								[108557] = 40,
+								[115399] = 4,
+							},
+						},
+					},
 					["deathlog"] = {
 					},
-					["shielding"] = 0,
 					["damage"] = 13813970,
 					["damagespells"] = {
 						["Flurry of Xuen"] = {
@@ -2982,15 +2990,7 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["power"] = {
-						[12] = {
-							["amount"] = 44,
-							["spells"] = {
-								[108557] = 40,
-								[115399] = 4,
-							},
-						},
-					},
+					["shielding"] = 0,
 					["id"] = "0x0400000005DF4D8D",
 					["first"] = 1394090627,
 					["healing"] = 0,
@@ -3765,9 +3765,17 @@ SkadaPerCharDB = {
 					["time"] = 29,
 					["interrupts"] = 0,
 					["overhealing"] = 382505,
+					["power"] = {
+						[12] = {
+							["amount"] = 20,
+							["spells"] = {
+								[108557] = 16,
+								[115399] = 4,
+							},
+						},
+					},
 					["deathlog"] = {
 					},
-					["shielding"] = 0,
 					["damage"] = 9385122,
 					["damagespells"] = {
 						["Flurry of Xuen"] = {
@@ -3963,15 +3971,7 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["power"] = {
-						[12] = {
-							["amount"] = 20,
-							["spells"] = {
-								[108557] = 16,
-								[115399] = 4,
-							},
-						},
-					},
+					["shielding"] = 0,
 					["id"] = "0x0400000005DF4D8D",
 					["first"] = 1394090569,
 					["healing"] = 0,
@@ -4487,9 +4487,23 @@ SkadaPerCharDB = {
 					["time"] = 370,
 					["interrupts"] = 0,
 					["overhealing"] = 4098216,
+					["power"] = {
+						[12] = {
+							["amount"] = 274,
+							["spells"] = {
+								[108557] = 256,
+								[115399] = 18,
+							},
+						},
+						[3] = {
+							["amount"] = 478,
+							["spells"] = {
+								[115288] = 478,
+							},
+						},
+					},
 					["deathlog"] = {
 					},
-					["shielding"] = 0,
 					["damage"] = 95710685,
 					["damagespells"] = {
 						["Flurry of Xuen"] = {
@@ -4748,21 +4762,7 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["power"] = {
-						[12] = {
-							["amount"] = 274,
-							["spells"] = {
-								[108557] = 256,
-								[115399] = 18,
-							},
-						},
-						[3] = {
-							["amount"] = 478,
-							["spells"] = {
-								[115288] = 478,
-							},
-						},
-					},
+					["shielding"] = 0,
 					["id"] = "0x0400000005DF4D8D",
 					["first"] = 1394089943,
 					["healing"] = 27481,
@@ -4802,7 +4802,8 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["overhealing"] = 0,
 					["interrupts"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["first"] = 1394090071,
 					["healingRequiredSources"] = {
 						["0x0400000005DF4D8D"] = {
@@ -4825,8 +4826,7 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["power"] = {
-					},
+					["shielding"] = 0,
 					["id"] = "0x0400000003AE5B9C",
 					["maxhp"] = 0,
 					["healingRequired"] = 27481,
@@ -4837,7 +4837,7 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Villetta",
 					["alertCount"] = 0,
-					["deathlog"] = {
+					["power"] = {
 					},
 					["healing"] = 0,
 					["alert"] = {
@@ -6804,10 +6804,7 @@ SkadaPerCharDB = {
 			["interrupts"] = 0,
 			["mobdone"] = 0,
 			["overhealing"] = 1462057,
-			["power"] = {
-				[12] = 114,
-				[3] = 58,
-			},
+			["mobtaken"] = 43142388,
 			["damage"] = 43142388,
 			["players"] = {
 				{
@@ -6951,22 +6948,9 @@ SkadaPerCharDB = {
 							["absorbed"] = 0,
 						},
 					},
-					["power"] = {
-						[12] = {
-							["spells"] = {
-								[115399] = 10,
-								[108557] = 104,
-							},
-							["amount"] = 114,
-						},
-						[3] = {
-							["spells"] = {
-								[115288] = 58,
-							},
-							["amount"] = 58,
-						},
+					["deathlog"] = {
 					},
-					["first"] = 1394069409,
+					["maxhp"] = 227340,
 					["damage"] = 43142388,
 					["damagespells"] = {
 						["Flurry of Xuen"] = {
@@ -7225,9 +7209,23 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["shielding"] = 0,
+					["power"] = {
+						[12] = {
+							["spells"] = {
+								[115399] = 10,
+								[108557] = 104,
+							},
+							["amount"] = 114,
+						},
+						[3] = {
+							["spells"] = {
+								[115288] = 58,
+							},
+							["amount"] = 58,
+						},
+					},
 					["id"] = "0x0400000005DF4D8D",
-					["healing"] = 53891,
+					["first"] = 1394069409,
 					["dispells"] = 0,
 					["damagetakenspells"] = {
 					},
@@ -7249,9 +7247,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Pandatal",
 					["alertCount"] = 0,
-					["maxhp"] = 227340,
-					["deathlog"] = {
-					},
+					["healing"] = 53891,
+					["shielding"] = 0,
 					["alert"] = {
 					},
 					["multistrikes"] = 0,
@@ -7270,7 +7267,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 0,
 					["interrupts"] = 0,
-					["deathlog"] = {
+					["power"] = {
 					},
 					["healing"] = 0,
 					["healingRequiredSources"] = {
@@ -7294,7 +7291,8 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["id"] = "0xF140DF603401B907",
 					["first"] = 1394069484,
 					["healingRequired"] = 53891,
@@ -7305,8 +7303,7 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Water Elemental",
 					["alertCount"] = 0,
-					["power"] = {
-					},
+					["shielding"] = 0,
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -7694,7 +7691,10 @@ SkadaPerCharDB = {
 					["done"] = 0,
 				},
 			},
-			["shielding"] = 0,
+			["power"] = {
+				[12] = 114,
+				[3] = 58,
+			},
 			["alertCount"] = 0,
 			["healing"] = 53891,
 			["healingRequired"] = 53891,
@@ -7703,7 +7703,7 @@ SkadaPerCharDB = {
 			["starttime"] = 1394069409,
 			["name"] = "Raider's Training Dummy",
 			["mobname"] = "Raider's Training Dummy",
-			["mobtaken"] = 43142388,
+			["shielding"] = 0,
 			["mobhdone"] = 76872,
 			["last_action"] = 1394069409,
 			["endtime"] = 1394069590,
@@ -7717,10 +7717,7 @@ SkadaPerCharDB = {
 			["interrupts"] = 0,
 			["mobdone"] = 0,
 			["overhealing"] = 2096345,
-			["power"] = {
-				[12] = 170,
-				[3] = 300,
-			},
+			["mobtaken"] = 53989962,
 			["damage"] = 53989962,
 			["players"] = {
 				{
@@ -7856,22 +7853,9 @@ SkadaPerCharDB = {
 							["absorbed"] = 0,
 						},
 					},
-					["power"] = {
-						[12] = {
-							["spells"] = {
-								[108557] = 158,
-								[115399] = 12,
-							},
-							["amount"] = 170,
-						},
-						[3] = {
-							["spells"] = {
-								[115288] = 300,
-							},
-							["amount"] = 300,
-						},
+					["deathlog"] = {
 					},
-					["first"] = 1394069068,
+					["maxhp"] = 227340,
 					["damage"] = 53989962,
 					["damagespells"] = {
 						["Flurry of Xuen"] = {
@@ -8130,9 +8114,23 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["shielding"] = 0,
+					["power"] = {
+						[12] = {
+							["spells"] = {
+								[108557] = 158,
+								[115399] = 12,
+							},
+							["amount"] = 170,
+						},
+						[3] = {
+							["spells"] = {
+								[115288] = 300,
+							},
+							["amount"] = 300,
+						},
+					},
 					["id"] = "0x0400000005DF4D8D",
-					["healing"] = 0,
+					["first"] = 1394069068,
 					["dispells"] = 0,
 					["damagetakenspells"] = {
 					},
@@ -8146,9 +8144,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Pandatal",
 					["alertCount"] = 0,
-					["maxhp"] = 227340,
-					["deathlog"] = {
-					},
+					["healing"] = 0,
+					["shielding"] = 0,
 					["alert"] = {
 					},
 					["multistrikes"] = 0,
@@ -8522,7 +8519,10 @@ SkadaPerCharDB = {
 					["done"] = 0,
 				},
 			},
-			["shielding"] = 0,
+			["power"] = {
+				[12] = 170,
+				[3] = 300,
+			},
 			["alertCount"] = 0,
 			["healing"] = 0,
 			["healingRequired"] = 0,
@@ -8531,7 +8531,7 @@ SkadaPerCharDB = {
 			["starttime"] = 1394069068,
 			["name"] = "Raider's Training Dummy",
 			["mobname"] = "Raider's Training Dummy",
-			["mobtaken"] = 53989962,
+			["shielding"] = 0,
 			["mobhdone"] = 0,
 			["last_action"] = 1394069068,
 			["endtime"] = 1394069303,
@@ -8545,9 +8545,7 @@ SkadaPerCharDB = {
 			["interrupts"] = 0,
 			["mobdone"] = 0,
 			["overhealing"] = 0,
-			["power"] = {
-				[12] = 22,
-			},
+			["mobtaken"] = 6575762,
 			["damage"] = 6575762,
 			["players"] = {
 				{
@@ -8657,7 +8655,14 @@ SkadaPerCharDB = {
 					["healingspells"] = {
 					},
 					["dispells"] = 0,
-					["deathlog"] = {
+					["power"] = {
+						[12] = {
+							["spells"] = {
+								[108557] = 20,
+								[115399] = 2,
+							},
+							["amount"] = 22,
+						},
 					},
 					["damage"] = 6575762,
 					["damagespells"] = {
@@ -8833,7 +8838,8 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["id"] = "0x0400000005DF4D8D",
 					["first"] = 1394066674,
 					["alertDamage"] = 0,
@@ -8845,15 +8851,7 @@ SkadaPerCharDB = {
 					["name"] = "Pandatal",
 					["alertCount"] = 0,
 					["maxhp"] = 227340,
-					["power"] = {
-						[12] = {
-							["spells"] = {
-								[108557] = 20,
-								[115399] = 2,
-							},
-							["amount"] = 22,
-						},
-					},
+					["shielding"] = 0,
 					["alert"] = {
 					},
 					["multistrikes"] = 0,
@@ -9031,7 +9029,9 @@ SkadaPerCharDB = {
 					},
 				},
 			},
-			["shielding"] = 0,
+			["power"] = {
+				[12] = 22,
+			},
 			["alertCount"] = 0,
 			["healing"] = 0,
 			["healingRequired"] = 0,
@@ -9040,7 +9040,7 @@ SkadaPerCharDB = {
 			["starttime"] = 1394066674,
 			["name"] = "Raider's Training Dummy",
 			["mobname"] = "Raider's Training Dummy",
-			["mobtaken"] = 6575762,
+			["shielding"] = 0,
 			["mobhdone"] = 19578,
 			["last_action"] = 1394066674,
 			["endtime"] = 1394066714,
@@ -9179,9 +9179,23 @@ SkadaPerCharDB = {
 					["time"] = 206,
 					["interrupts"] = 0,
 					["overhealing"] = 419920,
+					["power"] = {
+						[12] = {
+							["amount"] = 72,
+							["spells"] = {
+								[108557] = 62,
+								[115399] = 10,
+							},
+						},
+						[3] = {
+							["amount"] = 60,
+							["spells"] = {
+								[115288] = 60,
+							},
+						},
+					},
 					["deathlog"] = {
 					},
-					["shielding"] = 0,
 					["damage"] = 23160127,
 					["damagespells"] = {
 						["Flurry of Xuen"] = {
@@ -9377,21 +9391,7 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["power"] = {
-						[12] = {
-							["amount"] = 72,
-							["spells"] = {
-								[108557] = 62,
-								[115399] = 10,
-							},
-						},
-						[3] = {
-							["amount"] = 60,
-							["spells"] = {
-								[115288] = 60,
-							},
-						},
-					},
+					["shielding"] = 0,
 					["id"] = "0x0400000005DF4D8D",
 					["first"] = 1394066168,
 					["healing"] = 0,
@@ -9871,9 +9871,17 @@ SkadaPerCharDB = {
 					["time"] = 97,
 					["interrupts"] = 0,
 					["overhealing"] = 405870,
+					["power"] = {
+						[12] = {
+							["amount"] = 42,
+							["spells"] = {
+								[108557] = 38,
+								[115399] = 4,
+							},
+						},
+					},
 					["deathlog"] = {
 					},
-					["shielding"] = 0,
 					["damage"] = 14549802,
 					["damagespells"] = {
 						["Flurry of Xuen"] = {
@@ -10069,15 +10077,7 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["power"] = {
-						[12] = {
-							["amount"] = 42,
-							["spells"] = {
-								[108557] = 38,
-								[115399] = 4,
-							},
-						},
-					},
+					["shielding"] = 0,
 					["id"] = "0x0400000005DF4D8D",
 					["first"] = 1394066012,
 					["healing"] = 0,
@@ -10521,9 +10521,17 @@ SkadaPerCharDB = {
 					["time"] = 70,
 					["interrupts"] = 0,
 					["overhealing"] = 112447,
+					["power"] = {
+						[12] = {
+							["amount"] = 46,
+							["spells"] = {
+								[108557] = 42,
+								[115399] = 4,
+							},
+						},
+					},
 					["deathlog"] = {
 					},
-					["shielding"] = 0,
 					["damage"] = 13771048,
 					["damagespells"] = {
 						["Flurry of Xuen"] = {
@@ -10719,15 +10727,7 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["power"] = {
-						[12] = {
-							["amount"] = 46,
-							["spells"] = {
-								[108557] = 42,
-								[115399] = 4,
-							},
-						},
-					},
+					["shielding"] = 0,
 					["id"] = "0x0400000005DF4D8D",
 					["first"] = 1394065925,
 					["healing"] = 132292,
@@ -10771,7 +10771,7 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["overhealing"] = 0,
 					["interrupts"] = 0,
-					["deathlog"] = {
+					["power"] = {
 					},
 					["healing"] = 0,
 					["healingRequiredSources"] = {
@@ -10795,7 +10795,8 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["id"] = "0x04000000063B7F3F",
 					["first"] = 1394065965,
 					["healingRequired"] = 80877,
@@ -10806,8 +10807,7 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Madàrà",
 					["alertCount"] = 0,
-					["power"] = {
-					},
+					["shielding"] = 0,
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -10827,7 +10827,7 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["overhealing"] = 0,
 					["interrupts"] = 0,
-					["deathlog"] = {
+					["power"] = {
 					},
 					["healing"] = 0,
 					["healingRequiredSources"] = {
@@ -10851,7 +10851,8 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["id"] = "0x04000000071CADFE",
 					["first"] = 1394065970,
 					["healingRequired"] = 51415,
@@ -10862,8 +10863,7 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Supermanloly",
 					["alertCount"] = 0,
-					["power"] = {
-					},
+					["shielding"] = 0,
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -11134,10 +11134,7 @@ SkadaPerCharDB = {
 			["interrupts"] = 0,
 			["mobdone"] = 0,
 			["overhealing"] = 1202722,
-			["power"] = {
-				[12] = 90,
-				[3] = 60,
-			},
+			["mobtaken"] = 27247636,
 			["damage"] = 27247636,
 			["players"] = {
 				{
@@ -11266,22 +11263,9 @@ SkadaPerCharDB = {
 							["absorbed"] = 0,
 						},
 					},
-					["power"] = {
-						[12] = {
-							["spells"] = {
-								[108557] = 82,
-								[115399] = 8,
-							},
-							["amount"] = 90,
-						},
-						[3] = {
-							["spells"] = {
-								[115288] = 60,
-							},
-							["amount"] = 60,
-						},
+					["deathlog"] = {
 					},
-					["first"] = 1394065689,
+					["maxhp"] = 665173,
 					["damage"] = 27247636,
 					["damagespells"] = {
 						["Flurry of Xuen"] = {
@@ -11477,9 +11461,23 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["shielding"] = 0,
+					["power"] = {
+						[12] = {
+							["spells"] = {
+								[108557] = 82,
+								[115399] = 8,
+							},
+							["amount"] = 90,
+						},
+						[3] = {
+							["spells"] = {
+								[115288] = 60,
+							},
+							["amount"] = 60,
+						},
+					},
 					["id"] = "0x0400000005DF4D8D",
-					["healing"] = 0,
+					["first"] = 1394065689,
 					["dispells"] = 0,
 					["damagetakenspells"] = {
 					},
@@ -11497,9 +11495,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Pandatal",
 					["alertCount"] = 0,
-					["maxhp"] = 665173,
-					["deathlog"] = {
-					},
+					["healing"] = 0,
+					["shielding"] = 0,
 					["alert"] = {
 					},
 					["multistrikes"] = 0,
@@ -11789,7 +11786,10 @@ SkadaPerCharDB = {
 					["done"] = 0,
 				},
 			},
-			["shielding"] = 0,
+			["power"] = {
+				[12] = 90,
+				[3] = 60,
+			},
 			["alertCount"] = 0,
 			["healing"] = 0,
 			["healingRequired"] = 0,
@@ -11798,7 +11798,7 @@ SkadaPerCharDB = {
 			["starttime"] = 1394065689,
 			["name"] = "Raider's Training Dummy",
 			["mobname"] = "Raider's Training Dummy",
-			["mobtaken"] = 27247636,
+			["shielding"] = 0,
 			["mobhdone"] = 25764,
 			["last_action"] = 1394065689,
 			["endtime"] = 1394065821,
@@ -11812,9 +11812,7 @@ SkadaPerCharDB = {
 			["interrupts"] = 0,
 			["mobdone"] = 0,
 			["overhealing"] = 0,
-			["power"] = {
-				[12] = 16,
-			},
+			["mobtaken"] = 5386023,
 			["damage"] = 5386023,
 			["players"] = {
 				{
@@ -11895,15 +11893,9 @@ SkadaPerCharDB = {
 					["interrupts"] = 0,
 					["healingspells"] = {
 					},
-					["power"] = {
-						[12] = {
-							["spells"] = {
-								[108557] = 16,
-							},
-							["amount"] = 16,
-						},
+					["deathlog"] = {
 					},
-					["first"] = 1394065569,
+					["maxhp"] = 665173,
 					["damage"] = 5386023,
 					["damagespells"] = {
 						["Flurry of Xuen"] = {
@@ -12036,9 +12028,16 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["shielding"] = 0,
+					["power"] = {
+						[12] = {
+							["spells"] = {
+								[108557] = 16,
+							},
+							["amount"] = 16,
+						},
+					},
 					["id"] = "0x0400000005DF4D8D",
-					["healing"] = 0,
+					["first"] = 1394065569,
 					["dispells"] = 0,
 					["damagetakenspells"] = {
 					},
@@ -12047,9 +12046,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Pandatal",
 					["alertCount"] = 0,
-					["maxhp"] = 665173,
-					["deathlog"] = {
-					},
+					["healing"] = 0,
+					["shielding"] = 0,
 					["alert"] = {
 					},
 					["multistrikes"] = 0,
@@ -12131,7 +12129,9 @@ SkadaPerCharDB = {
 					["done"] = 0,
 				},
 			},
-			["shielding"] = 0,
+			["power"] = {
+				[12] = 16,
+			},
 			["alertCount"] = 0,
 			["healing"] = 0,
 			["healingRequired"] = 0,
@@ -12140,7 +12140,7 @@ SkadaPerCharDB = {
 			["starttime"] = 1394065567,
 			["name"] = "Raider's Training Dummy",
 			["mobname"] = "Raider's Training Dummy",
-			["mobtaken"] = 5386023,
+			["shielding"] = 0,
 			["mobhdone"] = 0,
 			["last_action"] = 1394065567,
 			["endtime"] = 1394065602,
@@ -12154,9 +12154,7 @@ SkadaPerCharDB = {
 			["interrupts"] = 0,
 			["mobdone"] = 0,
 			["overhealing"] = 0,
-			["power"] = {
-				[12] = 24,
-			},
+			["mobtaken"] = 4333091,
 			["damage"] = 4333091,
 			["players"] = {
 				{
@@ -12237,16 +12235,9 @@ SkadaPerCharDB = {
 					["interrupts"] = 0,
 					["healingspells"] = {
 					},
-					["power"] = {
-						[12] = {
-							["spells"] = {
-								[108557] = 20,
-								[115399] = 4,
-							},
-							["amount"] = 24,
-						},
+					["deathlog"] = {
 					},
-					["first"] = 1394065447,
+					["maxhp"] = 665173,
 					["damage"] = 4333091,
 					["damagespells"] = {
 						["Flurry of Xuen"] = {
@@ -12400,9 +12391,17 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["shielding"] = 0,
+					["power"] = {
+						[12] = {
+							["spells"] = {
+								[108557] = 20,
+								[115399] = 4,
+							},
+							["amount"] = 24,
+						},
+					},
 					["id"] = "0x0400000005DF4D8D",
-					["healing"] = 0,
+					["first"] = 1394065447,
 					["dispells"] = 0,
 					["damagetakenspells"] = {
 					},
@@ -12411,9 +12410,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Pandatal",
 					["alertCount"] = 0,
-					["maxhp"] = 665173,
-					["deathlog"] = {
-					},
+					["healing"] = 0,
+					["shielding"] = 0,
 					["alert"] = {
 					},
 					["multistrikes"] = 0,
@@ -12723,7 +12721,9 @@ SkadaPerCharDB = {
 					["done"] = 0,
 				},
 			},
-			["shielding"] = 0,
+			["power"] = {
+				[12] = 24,
+			},
 			["alertCount"] = 0,
 			["healing"] = 0,
 			["healingRequired"] = 0,
@@ -12732,7 +12732,7 @@ SkadaPerCharDB = {
 			["starttime"] = 1394065446,
 			["name"] = "Raider's Training Dummy",
 			["mobname"] = "Raider's Training Dummy",
-			["mobtaken"] = 4333091,
+			["shielding"] = 0,
 			["mobhdone"] = 8547,
 			["last_action"] = 1394065446,
 			["endtime"] = 1394065482,
@@ -12746,9 +12746,7 @@ SkadaPerCharDB = {
 			["interrupts"] = 0,
 			["mobdone"] = 0,
 			["overhealing"] = 0,
-			["power"] = {
-				[12] = 2,
-			},
+			["mobtaken"] = 936134,
 			["damage"] = 936134,
 			["players"] = {
 				{
@@ -12794,15 +12792,9 @@ SkadaPerCharDB = {
 					["interrupts"] = 0,
 					["healingspells"] = {
 					},
-					["power"] = {
-						[12] = {
-							["spells"] = {
-								[108557] = 2,
-							},
-							["amount"] = 2,
-						},
+					["deathlog"] = {
 					},
-					["first"] = 1394065432,
+					["maxhp"] = 665173,
 					["damage"] = 936134,
 					["damagespells"] = {
 						["Flurry of Xuen"] = {
@@ -12935,9 +12927,16 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["shielding"] = 0,
+					["power"] = {
+						[12] = {
+							["spells"] = {
+								[108557] = 2,
+							},
+							["amount"] = 2,
+						},
+					},
 					["id"] = "0x0400000005DF4D8D",
-					["healing"] = 0,
+					["first"] = 1394065432,
 					["dispells"] = 0,
 					["damagetakenspells"] = {
 					},
@@ -12946,9 +12945,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Pandatal",
 					["alertCount"] = 0,
-					["maxhp"] = 665173,
-					["deathlog"] = {
-					},
+					["healing"] = 0,
+					["shielding"] = 0,
 					["alert"] = {
 					},
 					["multistrikes"] = 0,
@@ -13134,7 +13132,9 @@ SkadaPerCharDB = {
 					["done"] = 0,
 				},
 			},
-			["shielding"] = 0,
+			["power"] = {
+				[12] = 2,
+			},
 			["alertCount"] = 0,
 			["healing"] = 0,
 			["healingRequired"] = 0,
@@ -13143,7 +13143,7 @@ SkadaPerCharDB = {
 			["starttime"] = 1394065432,
 			["name"] = "Raider's Training Dummy",
 			["mobname"] = "Raider's Training Dummy",
-			["mobtaken"] = 936134,
+			["shielding"] = 0,
 			["mobhdone"] = 15070,
 			["last_action"] = 1394065432,
 			["endtime"] = 1394065443,
@@ -13274,9 +13274,16 @@ SkadaPerCharDB = {
 					["time"] = 192,
 					["interrupts"] = 0,
 					["overhealing"] = 403375,
-					["shielding"] = 0,
-					["deathlog"] = {
+					["power"] = {
+						[12] = {
+							["amount"] = 42,
+							["spells"] = {
+								[108557] = 38,
+								[115399] = 4,
+							},
+						},
 					},
+					["shielding"] = 0,
 					["damage"] = 17420048,
 					["damagespells"] = {
 						["Flurry of Xuen"] = {
@@ -13472,14 +13479,7 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["power"] = {
-						[12] = {
-							["amount"] = 42,
-							["spells"] = {
-								[108557] = 38,
-								[115399] = 4,
-							},
-						},
+					["deathlog"] = {
 					},
 					["id"] = "0x0400000005DF4D8D",
 					["maxhp"] = 665173,
@@ -14062,9 +14062,15 @@ SkadaPerCharDB = {
 					["time"] = 41,
 					["interrupts"] = 0,
 					["overhealing"] = 0,
-					["shielding"] = 0,
-					["deathlog"] = {
+					["power"] = {
+						[12] = {
+							["amount"] = 20,
+							["spells"] = {
+								[108557] = 20,
+							},
+						},
 					},
+					["shielding"] = 0,
 					["damage"] = 4568278,
 					["damagespells"] = {
 						["Flurry of Xuen"] = {
@@ -14218,13 +14224,7 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["power"] = {
-						[12] = {
-							["amount"] = 20,
-							["spells"] = {
-								[108557] = 20,
-							},
-						},
+					["deathlog"] = {
 					},
 					["id"] = "0x0400000005DF4D8D",
 					["maxhp"] = 665173,
@@ -14355,9 +14355,16 @@ SkadaPerCharDB = {
 					["time"] = 25,
 					["interrupts"] = 0,
 					["overhealing"] = 0,
-					["shielding"] = 0,
-					["deathlog"] = {
+					["power"] = {
+						[12] = {
+							["amount"] = 16,
+							["spells"] = {
+								[115399] = 4,
+								[108557] = 12,
+							},
+						},
 					},
+					["shielding"] = 0,
 					["damage"] = 3123434,
 					["damagespells"] = {
 						["Flurry of Xuen"] = {
@@ -14490,14 +14497,7 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["power"] = {
-						[12] = {
-							["amount"] = 16,
-							["spells"] = {
-								[115399] = 4,
-								[108557] = 12,
-							},
-						},
+					["deathlog"] = {
 					},
 					["id"] = "0x0400000005DF4D8D",
 					["maxhp"] = 665173,
@@ -14737,9 +14737,16 @@ SkadaPerCharDB = {
 					["time"] = 172,
 					["interrupts"] = 0,
 					["overhealing"] = 0,
-					["shielding"] = 0,
-					["deathlog"] = {
+					["power"] = {
+						[12] = {
+							["amount"] = 14,
+							["spells"] = {
+								[108557] = 8,
+								[115399] = 6,
+							},
+						},
 					},
+					["shielding"] = 0,
 					["damage"] = 11592798,
 					["damagespells"] = {
 						["Flurry of Xuen"] = {
@@ -14914,14 +14921,7 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["power"] = {
-						[12] = {
-							["amount"] = 14,
-							["spells"] = {
-								[108557] = 8,
-								[115399] = 6,
-							},
-						},
+					["deathlog"] = {
 					},
 					["id"] = "0x0400000005DF4D8D",
 					["maxhp"] = 665173,
@@ -15443,10 +15443,7 @@ SkadaPerCharDB = {
 			["interrupts"] = 0,
 			["mobdone"] = 0,
 			["overhealing"] = 13421855,
-			["power"] = {
-				[12] = 774,
-				[3] = 1317,
-			},
+			["mobtaken"] = 267298905,
 			["damage"] = 267298905,
 			["players"] = {
 				{
@@ -15590,22 +15587,8 @@ SkadaPerCharDB = {
 							["absorbed"] = 0,
 						},
 					},
-					["power"] = {
-						[12] = {
-							["spells"] = {
-								[108557] = 726,
-								[115399] = 48,
-							},
-							["amount"] = 774,
-						},
-						[3] = {
-							["spells"] = {
-								[115288] = 1317,
-							},
-							["amount"] = 1317,
-						},
-					},
-					["maxhp"] = 227340,
+					["shielding"] = 0,
+					["first"] = 1394053708,
 					["damage"] = 267298905,
 					["damagespells"] = {
 						["Flurry of Xuen"] = {
@@ -15885,10 +15868,23 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["deathlog"] = {
+					["power"] = {
+						[12] = {
+							["spells"] = {
+								[108557] = 726,
+								[115399] = 48,
+							},
+							["amount"] = 774,
+						},
+						[3] = {
+							["spells"] = {
+								[115288] = 1317,
+							},
+							["amount"] = 1317,
+						},
 					},
 					["id"] = "0x0400000005DF4D8D",
-					["healing"] = 87791,
+					["maxhp"] = 227340,
 					["dispells"] = 0,
 					["damagetakenspells"] = {
 					},
@@ -15914,8 +15910,9 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Pandatal",
 					["alertCount"] = 0,
-					["first"] = 1394053708,
-					["shielding"] = 0,
+					["healing"] = 87791,
+					["deathlog"] = {
+					},
 					["alert"] = {
 					},
 					["multistrikes"] = 0,
@@ -15934,7 +15931,7 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 0,
 					["interrupts"] = 0,
-					["deathlog"] = {
+					["power"] = {
 					},
 					["healing"] = 0,
 					["healingRequiredSources"] = {
@@ -15958,7 +15955,8 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["id"] = "0x0400000006837F30",
 					["first"] = 1394053768,
 					["healingRequired"] = 6745,
@@ -15969,8 +15967,7 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Larazz",
 					["alertCount"] = 0,
-					["power"] = {
-					},
+					["shielding"] = 0,
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -15990,7 +15987,7 @@ SkadaPerCharDB = {
 					["ccbreaks"] = 0,
 					["time"] = 1,
 					["interrupts"] = 0,
-					["deathlog"] = {
+					["power"] = {
 					},
 					["healing"] = 0,
 					["healingRequiredSources"] = {
@@ -16014,7 +16011,8 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["id"] = "0x04000000070BC18F",
 					["first"] = 1394054631,
 					["healingRequired"] = 81046,
@@ -16025,8 +16023,7 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Kotorii",
 					["alertCount"] = 0,
-					["power"] = {
-					},
+					["shielding"] = 0,
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -18074,7 +18071,10 @@ SkadaPerCharDB = {
 					},
 				},
 			},
-			["shielding"] = 0,
+			["power"] = {
+				[12] = 774,
+				[3] = 1317,
+			},
 			["alertCount"] = 0,
 			["healing"] = 87791,
 			["healingRequired"] = 87791,
@@ -18083,7 +18083,7 @@ SkadaPerCharDB = {
 			["starttime"] = 1394053704,
 			["name"] = "Raider's Training Dummy",
 			["mobname"] = "Raider's Training Dummy",
-			["mobtaken"] = 267298905,
+			["shielding"] = 0,
 			["mobhdone"] = 553212,
 			["last_action"] = 1394053704,
 			["endtime"] = 1394054761,
@@ -18193,17 +18193,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 24,
 					["interrupts"] = 0,
-					["power"] = {
-						[2] = {
-							["spells"] = {
-								[82728] = 90,
-								[82726] = 93,
-								[118974] = 18,
-								[91954] = 42,
-							},
-							["amount"] = 243,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393913319,
 					["healingRequiredSources"] = {
 						["0x0280000002E3A105"] = {
@@ -18469,7 +18459,16 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 60000,
-					["deathlog"] = {
+					["power"] = {
+						[2] = {
+							["spells"] = {
+								[82728] = 90,
+								[82726] = 93,
+								[118974] = 18,
+								[91954] = 42,
+							},
+							["amount"] = 243,
+						},
 					},
 					["id"] = "0x0280000003D8811C",
 					["healing"] = 33568,
@@ -18479,8 +18478,8 @@ SkadaPerCharDB = {
 							["min"] = 30000,
 							["name"] = "Blackout Brew",
 							["count"] = 2,
+							["max"] = 30000,
 							["id"] = 106851,
-							["totalhits"] = 2,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -18488,7 +18487,7 @@ SkadaPerCharDB = {
 									["amount"] = 2,
 								},
 							},
-							["max"] = 30000,
+							["totalhits"] = 2,
 							["damage"] = 60000,
 						},
 					},
@@ -18502,7 +18501,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Disclosure",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -18622,14 +18622,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 24,
 					["interrupts"] = 0,
-					["power"] = {
-						[12] = {
-							["spells"] = {
-								[108557] = 16,
-							},
-							["amount"] = 16,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393913319,
 					["healingRequiredSources"] = {
 						["0x0400000005DF4D8D"] = {
@@ -18890,7 +18883,13 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 155136,
-					["deathlog"] = {
+					["power"] = {
+						[12] = {
+							["spells"] = {
+								[108557] = 16,
+							},
+							["amount"] = 16,
+						},
 					},
 					["id"] = "0x0400000005DF4D8D",
 					["healing"] = 60503,
@@ -18900,8 +18899,8 @@ SkadaPerCharDB = {
 							["min"] = 30000,
 							["name"] = "Blackout Brew",
 							["count"] = 2,
+							["max"] = 30000,
 							["id"] = 106851,
-							["totalhits"] = 1,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -18909,15 +18908,15 @@ SkadaPerCharDB = {
 									["amount"] = 2,
 								},
 							},
-							["max"] = 30000,
+							["totalhits"] = 1,
 							["damage"] = 30000,
 						},
 						["Attack"] = {
 							["min"] = 60503,
 							["name"] = "Attack",
 							["count"] = 8,
+							["max"] = 64633,
 							["id"] = 6603,
-							["totalhits"] = 2,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -18925,7 +18924,7 @@ SkadaPerCharDB = {
 									["amount"] = 8,
 								},
 							},
-							["max"] = 64633,
+							["totalhits"] = 2,
 							["damage"] = 125136,
 						},
 					},
@@ -18939,7 +18938,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Pandatal",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 227340,
 					["alert"] = {
 					},
@@ -18960,7 +18960,8 @@ SkadaPerCharDB = {
 					["healingspells"] = {
 					},
 					["dispells"] = 0,
-					["shielding"] = 0,
+					["power"] = {
+					},
 					["damage"] = 13913,
 					["damagespells"] = {
 						["Attack"] = {
@@ -18988,8 +18989,7 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["deathlog"] = {
-					},
+					["shielding"] = 0,
 					["id"] = "Venomous Snake",
 					["maxhp"] = 0,
 					["first"] = 1393913319,
@@ -19001,7 +19001,7 @@ SkadaPerCharDB = {
 					["name"] = "Venomous Snake",
 					["alertCount"] = 0,
 					["healing"] = 0,
-					["power"] = {
+					["deathlog"] = {
 					},
 					["alert"] = {
 					},
@@ -19028,15 +19028,15 @@ SkadaPerCharDB = {
 					["healingspells"] = {
 					},
 					["dispells"] = 0,
-					["shielding"] = 0,
+					["power"] = {
+					},
 					["damage"] = 0,
 					["damagespells"] = {
 					},
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["deathlog"] = {
-					},
+					["shielding"] = 0,
 					["id"] = "0xF1304DD10001E1CD",
 					["maxhp"] = 0,
 					["first"] = 1393913320,
@@ -19048,7 +19048,7 @@ SkadaPerCharDB = {
 					["name"] = "Viper",
 					["alertCount"] = 0,
 					["healing"] = 0,
-					["power"] = {
+					["deathlog"] = {
 					},
 					["alert"] = {
 					},
@@ -19189,8 +19189,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 23,
 					["interrupts"] = 0,
-					["power"] = {
-					},
+					["shielding"] = 0,
 					["first"] = 1393913320,
 					["healingRequiredSources"] = {
 						["0x0280000002E3A105"] = {
@@ -19213,7 +19212,7 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 60000,
-					["deathlog"] = {
+					["power"] = {
 					},
 					["id"] = "0x0280000002E3A105",
 					["healing"] = 267347,
@@ -19223,8 +19222,8 @@ SkadaPerCharDB = {
 							["min"] = 30000,
 							["name"] = "Blackout Brew",
 							["count"] = 2,
+							["max"] = 30000,
 							["id"] = 106851,
-							["totalhits"] = 2,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -19232,7 +19231,7 @@ SkadaPerCharDB = {
 									["amount"] = 2,
 								},
 							},
-							["max"] = 30000,
+							["totalhits"] = 2,
 							["damage"] = 60000,
 						},
 					},
@@ -19276,7 +19275,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Herfinator",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -19297,7 +19297,8 @@ SkadaPerCharDB = {
 					["healingspells"] = {
 					},
 					["dispells"] = 0,
-					["shielding"] = 0,
+					["power"] = {
+					},
 					["damage"] = 13703,
 					["damagespells"] = {
 						["Attack"] = {
@@ -19346,8 +19347,7 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["deathlog"] = {
-					},
+					["shielding"] = 0,
 					["id"] = "Viper",
 					["maxhp"] = 0,
 					["first"] = 1393913321,
@@ -19359,7 +19359,7 @@ SkadaPerCharDB = {
 					["name"] = "Viper",
 					["alertCount"] = 0,
 					["healing"] = 0,
-					["power"] = {
+					["deathlog"] = {
 					},
 					["alert"] = {
 					},
@@ -19464,15 +19464,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 23,
 					["interrupts"] = 0,
-					["power"] = {
-						[3] = {
-							["spells"] = {
-								[98440] = 50,
-								[5171] = 24,
-							},
-							["amount"] = 74,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393913321,
 					["healingRequiredSources"] = {
 						["0x0280000002E3A105"] = {
@@ -19521,26 +19513,26 @@ SkadaPerCharDB = {
 							["EVADE"] = 0,
 							["max"] = 0,
 						},
-						["Deadly Poison"] = {
+						["Touch of the Grave"] = {
 							["DODGE"] = 0,
 							["REFLECT"] = 0,
 							["crushing"] = 0,
 							["IMMUNE"] = 0,
 							["glancing"] = 0,
-							["totalhits"] = 8,
+							["totalhits"] = 1,
 							["MISS"] = 0,
-							["damage"] = 150881,
+							["damage"] = 15392,
 							["DEFLECT"] = 0,
-							["id"] = 113780,
+							["id"] = 127802,
 							["ABSORB"] = 0,
-							["min"] = 8773,
+							["min"] = 15392,
 							["PARRY"] = 0,
-							["critical"] = 2,
-							["hit"] = 6,
+							["critical"] = 0,
+							["hit"] = 1,
 							["BLOCK"] = 0,
 							["RESIST"] = 0,
 							["EVADE"] = 0,
-							["max"] = 43819,
+							["max"] = 15392,
 						},
 						["Rupture"] = {
 							["DODGE"] = 0,
@@ -19563,26 +19555,26 @@ SkadaPerCharDB = {
 							["EVADE"] = 0,
 							["max"] = 17858,
 						},
-						["Backstab"] = {
+						["Deadly Poison"] = {
 							["DODGE"] = 0,
 							["REFLECT"] = 0,
 							["crushing"] = 0,
 							["IMMUNE"] = 0,
 							["glancing"] = 0,
-							["totalhits"] = 2,
+							["totalhits"] = 8,
 							["MISS"] = 0,
-							["damage"] = 246923,
+							["damage"] = 150881,
 							["DEFLECT"] = 0,
-							["id"] = 53,
+							["id"] = 113780,
 							["ABSORB"] = 0,
-							["min"] = 104090,
+							["min"] = 8773,
 							["PARRY"] = 0,
 							["critical"] = 2,
-							["hit"] = 0,
+							["hit"] = 6,
 							["BLOCK"] = 0,
 							["RESIST"] = 0,
 							["EVADE"] = 0,
-							["max"] = 142833,
+							["max"] = 43819,
 						},
 						["Shadow Blade"] = {
 							["DODGE"] = 0,
@@ -19647,32 +19639,39 @@ SkadaPerCharDB = {
 							["EVADE"] = 0,
 							["max"] = 90864,
 						},
-						["Touch of the Grave"] = {
+						["Backstab"] = {
 							["DODGE"] = 0,
 							["REFLECT"] = 0,
 							["crushing"] = 0,
 							["IMMUNE"] = 0,
 							["glancing"] = 0,
-							["totalhits"] = 1,
+							["totalhits"] = 2,
 							["MISS"] = 0,
-							["damage"] = 15392,
+							["damage"] = 246923,
 							["DEFLECT"] = 0,
-							["id"] = 127802,
+							["id"] = 53,
 							["ABSORB"] = 0,
-							["min"] = 15392,
+							["min"] = 104090,
 							["PARRY"] = 0,
-							["critical"] = 0,
-							["hit"] = 1,
+							["critical"] = 2,
+							["hit"] = 0,
 							["BLOCK"] = 0,
 							["RESIST"] = 0,
 							["EVADE"] = 0,
-							["max"] = 15392,
+							["max"] = 142833,
 						},
 					},
 					["deaths"] = {
 					},
 					["damagetaken"] = 119448,
-					["deathlog"] = {
+					["power"] = {
+						[3] = {
+							["spells"] = {
+								[98440] = 50,
+								[5171] = 24,
+							},
+							["amount"] = 74,
+						},
 					},
 					["id"] = "0x05800000086A8FAD",
 					["healing"] = 0,
@@ -19682,8 +19681,8 @@ SkadaPerCharDB = {
 							["min"] = 30000,
 							["name"] = "Blackout Brew",
 							["count"] = 2,
+							["max"] = 30000,
 							["id"] = 106851,
-							["totalhits"] = 2,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -19691,15 +19690,15 @@ SkadaPerCharDB = {
 									["amount"] = 2,
 								},
 							},
-							["max"] = 30000,
+							["totalhits"] = 2,
 							["damage"] = 60000,
 						},
 						["Brew Bolt"] = {
 							["min"] = 20325,
 							["name"] = "Brew Bolt",
 							["count"] = 2,
+							["max"] = 39123,
 							["id"] = 116155,
-							["totalhits"] = 2,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -19707,7 +19706,7 @@ SkadaPerCharDB = {
 									["amount"] = 2,
 								},
 							},
-							["max"] = 39123,
+							["totalhits"] = 2,
 							["damage"] = 59448,
 						},
 					},
@@ -19721,7 +19720,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Tayclay",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -19790,9 +19790,9 @@ SkadaPerCharDB = {
 							["absorbed"] = 0,
 						},
 					},
-					["power"] = {
+					["deathlog"] = {
 					},
-					["first"] = 1393913324,
+					["maxhp"] = 0,
 					["damage"] = 3642378,
 					["damagespells"] = {
 						["Chaos Bolt"] = {
@@ -19862,9 +19862,10 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["shielding"] = 0,
+					["power"] = {
+					},
 					["id"] = "0x0280000006546784",
-					["healing"] = 0,
+					["first"] = 1393913324,
 					["dispells"] = 0,
 					["damagetakenspells"] = {
 						["Blackout Brew"] = {
@@ -19891,9 +19892,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Whispër",
 					["alertCount"] = 0,
-					["maxhp"] = 0,
-					["deathlog"] = {
-					},
+					["healing"] = 0,
+					["shielding"] = 0,
 					["alert"] = {
 					},
 					["multistrikes"] = 0,
@@ -19996,11 +19996,7 @@ SkadaPerCharDB = {
 			["interrupts"] = 1,
 			["mobdone"] = 283040,
 			["overhealing"] = 159624,
-			["power"] = {
-				[3] = 50,
-				[2] = 9,
-				[12] = 9,
-			},
+			["mobtaken"] = 10139746,
 			["damage"] = 10139746,
 			["players"] = {
 				{
@@ -20166,15 +20162,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 15,
 					["interrupts"] = 1,
-					["power"] = {
-						[12] = {
-							["spells"] = {
-								[129881] = 1,
-								[108557] = 8,
-							},
-							["amount"] = 9,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393913295,
 					["healingRequiredSources"] = {
 						["0x0280000002E3A105"] = {
@@ -20538,7 +20526,14 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 98494,
-					["deathlog"] = {
+					["power"] = {
+						[12] = {
+							["spells"] = {
+								[129881] = 1,
+								[108557] = 8,
+							},
+							["amount"] = 9,
+						},
 					},
 					["id"] = "0x0400000005DF4D8D",
 					["healing"] = 0,
@@ -20548,8 +20543,8 @@ SkadaPerCharDB = {
 							["min"] = 48027,
 							["name"] = "Attack",
 							["count"] = 8,
+							["totalhits"] = 1,
 							["id"] = 6603,
-							["max"] = 48027,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -20557,15 +20552,15 @@ SkadaPerCharDB = {
 									["amount"] = 8,
 								},
 							},
-							["totalhits"] = 1,
+							["max"] = 48027,
 							["damage"] = 48027,
 						},
 						["Brew Bolt"] = {
 							["min"] = 50467,
 							["name"] = "Brew Bolt",
 							["count"] = 1,
+							["max"] = 50467,
 							["id"] = 115650,
-							["totalhits"] = 1,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -20573,7 +20568,7 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 50467,
+							["totalhits"] = 1,
 							["damage"] = 50467,
 						},
 					},
@@ -20582,7 +20577,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Pandatal",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 227340,
 					["alert"] = {
 					},
@@ -20659,14 +20655,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 14,
 					["interrupts"] = 0,
-					["power"] = {
-						[3] = {
-							["spells"] = {
-								[98440] = 50,
-							},
-							["amount"] = 50,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393913296,
 					["healingRequiredSources"] = {
 						["0x05800000086A8FAD"] = {
@@ -20796,7 +20785,13 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 184546,
-					["deathlog"] = {
+					["power"] = {
+						[3] = {
+							["spells"] = {
+								[98440] = 50,
+							},
+							["amount"] = 50,
+						},
 					},
 					["id"] = "0x05800000086A8FAD",
 					["healing"] = 18497,
@@ -20806,8 +20801,8 @@ SkadaPerCharDB = {
 							["min"] = 43129,
 							["name"] = "Attack",
 							["count"] = 3,
+							["max"] = 47245,
 							["id"] = 6603,
-							["totalhits"] = 3,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -20815,15 +20810,15 @@ SkadaPerCharDB = {
 									["amount"] = 3,
 								},
 							},
-							["max"] = 47245,
+							["totalhits"] = 3,
 							["damage"] = 133547,
 						},
 						["Brew Bolt"] = {
 							["min"] = 50999,
 							["name"] = "Brew Bolt",
 							["count"] = 1,
+							["max"] = 50999,
 							["id"] = 115650,
-							["totalhits"] = 1,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -20831,7 +20826,7 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 50999,
+							["totalhits"] = 1,
 							["damage"] = 50999,
 						},
 					},
@@ -20845,7 +20840,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Tayclay",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -20921,9 +20917,9 @@ SkadaPerCharDB = {
 							["absorbed"] = 0,
 						},
 					},
-					["power"] = {
+					["deathlog"] = {
 					},
-					["first"] = 1393913296,
+					["maxhp"] = 0,
 					["damage"] = 1344307,
 					["damagespells"] = {
 						["Incinerate"] = {
@@ -20993,9 +20989,10 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["shielding"] = 0,
+					["power"] = {
+					},
 					["id"] = "0x0280000006546784",
-					["healing"] = 0,
+					["first"] = 1393913296,
 					["dispells"] = 0,
 					["damagetakenspells"] = {
 					},
@@ -21009,9 +21006,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Whispër",
 					["alertCount"] = 0,
-					["maxhp"] = 0,
-					["deathlog"] = {
-					},
+					["healing"] = 0,
+					["shielding"] = 0,
 					["alert"] = {
 					},
 					["multistrikes"] = 0,
@@ -21087,15 +21083,9 @@ SkadaPerCharDB = {
 					["interrupts"] = 0,
 					["healingspells"] = {
 					},
-					["power"] = {
-						[2] = {
-							["spells"] = {
-								[118974] = 9,
-							},
-							["amount"] = 9,
-						},
+					["deathlog"] = {
 					},
-					["first"] = 1393913296,
+					["maxhp"] = 0,
 					["damage"] = 1759054,
 					["damagespells"] = {
 						["Explosive Shot"] = {
@@ -21270,9 +21260,16 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["shielding"] = 0,
+					["power"] = {
+						[2] = {
+							["spells"] = {
+								[118974] = 9,
+							},
+							["amount"] = 9,
+						},
+					},
 					["id"] = "0x0280000003D8811C",
-					["healing"] = 0,
+					["first"] = 1393913296,
 					["dispells"] = 0,
 					["damagetakenspells"] = {
 					},
@@ -21281,9 +21278,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Disclosure",
 					["alertCount"] = 0,
-					["maxhp"] = 0,
-					["deathlog"] = {
-					},
+					["healing"] = 0,
+					["shielding"] = 0,
 					["alert"] = {
 					},
 					["multistrikes"] = 0,
@@ -21389,18 +21385,19 @@ SkadaPerCharDB = {
 							["absorbed"] = 0,
 						},
 					},
-					["power"] = {
+					["deathlog"] = {
 					},
-					["first"] = 1393913297,
+					["maxhp"] = 0,
 					["damage"] = 0,
 					["damagespells"] = {
 					},
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["shielding"] = 0,
+					["power"] = {
+					},
 					["id"] = "0x0280000002E3A105",
-					["healing"] = 322149,
+					["first"] = 1393913297,
 					["dispells"] = 0,
 					["damagetakenspells"] = {
 					},
@@ -21419,9 +21416,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Herfinator",
 					["alertCount"] = 0,
-					["maxhp"] = 0,
-					["deathlog"] = {
-					},
+					["healing"] = 322149,
+					["shielding"] = 0,
 					["alert"] = {
 					},
 					["multistrikes"] = 0,
@@ -21462,7 +21458,11 @@ SkadaPerCharDB = {
 					["done"] = 283040,
 				},
 			},
-			["shielding"] = 0,
+			["power"] = {
+				[3] = 50,
+				[2] = 9,
+				[12] = 9,
+			},
 			["alertCount"] = 0,
 			["healing"] = 340646,
 			["healingRequired"] = 322149,
@@ -21471,7 +21471,7 @@ SkadaPerCharDB = {
 			["starttime"] = 1393913295,
 			["name"] = "Sudsy Brew Alemental",
 			["mobname"] = "Sudsy Brew Alemental",
-			["mobtaken"] = 10139746,
+			["shielding"] = 0,
 			["mobhdone"] = 0,
 			["last_action"] = 1393913295,
 			["endtime"] = 1393913311,
@@ -21485,11 +21485,7 @@ SkadaPerCharDB = {
 			["interrupts"] = 0,
 			["mobdone"] = 180146,
 			["overhealing"] = 1097304,
-			["power"] = {
-				[3] = 81,
-				[2] = 139,
-				[12] = 6,
-			},
+			["mobtaken"] = 11360538,
 			["damage"] = 11360538,
 			["players"] = {
 				{
@@ -21619,16 +21615,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 24,
 					["interrupts"] = 0,
-					["power"] = {
-						[12] = {
-							["spells"] = {
-								[108557] = 2,
-								[129881] = 3,
-								[121283] = 1,
-							},
-							["amount"] = 6,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393913257,
 					["healingRequiredSources"] = {
 						["0x0400000005DF4D8D"] = {
@@ -21963,7 +21950,15 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 80047,
-					["deathlog"] = {
+					["power"] = {
+						[12] = {
+							["spells"] = {
+								[121283] = 1,
+								[108557] = 2,
+								[129881] = 3,
+							},
+							["amount"] = 6,
+						},
 					},
 					["id"] = "0x0400000005DF4D8D",
 					["healing"] = 20162,
@@ -21973,8 +21968,8 @@ SkadaPerCharDB = {
 							["min"] = 19960,
 							["name"] = "Attack",
 							["count"] = 2,
+							["totalhits"] = 1,
 							["id"] = 6603,
-							["max"] = 19960,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -21982,15 +21977,15 @@ SkadaPerCharDB = {
 									["amount"] = 2,
 								},
 							},
-							["totalhits"] = 1,
+							["max"] = 19960,
 							["damage"] = 19960,
 						},
 						["Brew Bolt"] = {
 							["min"] = 19932,
 							["name"] = "Brew Bolt",
 							["count"] = 3,
+							["max"] = 20162,
 							["id"] = 116155,
-							["totalhits"] = 3,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -21998,7 +21993,7 @@ SkadaPerCharDB = {
 									["amount"] = 3,
 								},
 							},
-							["max"] = 20162,
+							["totalhits"] = 3,
 							["damage"] = 60087,
 						},
 					},
@@ -22012,7 +22007,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Pandatal",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 227340,
 					["alert"] = {
 					},
@@ -22153,8 +22149,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 25,
 					["interrupts"] = 0,
-					["power"] = {
-					},
+					["shielding"] = 0,
 					["first"] = 1393913257,
 					["healingRequiredSources"] = {
 						["0x0280000002E3A105"] = {
@@ -22163,6 +22158,11 @@ SkadaPerCharDB = {
 							["id"] = "0x0280000002E3A105",
 							["class"] = "DRUID",
 							["spells"] = {
+								[48438] = {
+									["id"] = 48438,
+									["name"] = "Wild Growth",
+									["amount"] = 2479,
+								},
 								[81269] = {
 									["id"] = 81269,
 									["name"] = "Efflorescence",
@@ -22173,11 +22173,6 @@ SkadaPerCharDB = {
 									["name"] = "Ysera's Gift",
 									["amount"] = 32927,
 								},
-								[48438] = {
-									["id"] = 48438,
-									["name"] = "Wild Growth",
-									["amount"] = 2479,
-								},
 							},
 						},
 					},
@@ -22187,7 +22182,7 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 60115,
-					["deathlog"] = {
+					["power"] = {
 					},
 					["id"] = "0x0280000002E3A105",
 					["healing"] = 141238,
@@ -22197,8 +22192,8 @@ SkadaPerCharDB = {
 							["min"] = 19786,
 							["name"] = "Brew Bolt",
 							["count"] = 3,
+							["max"] = 20244,
 							["id"] = 116155,
-							["totalhits"] = 3,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -22206,7 +22201,7 @@ SkadaPerCharDB = {
 									["amount"] = 3,
 								},
 							},
-							["max"] = 20244,
+							["totalhits"] = 3,
 							["damage"] = 60115,
 						},
 					},
@@ -22240,7 +22235,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Herfinator",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -22268,9 +22264,9 @@ SkadaPerCharDB = {
 					["interrupts"] = 0,
 					["healingspells"] = {
 					},
-					["power"] = {
+					["deathlog"] = {
 					},
-					["first"] = 1393913258,
+					["maxhp"] = 0,
 					["damage"] = 498367,
 					["damagespells"] = {
 						["Rain of Fire"] = {
@@ -22298,9 +22294,10 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["shielding"] = 0,
+					["power"] = {
+					},
 					["id"] = "0x0280000006546784",
-					["healing"] = 0,
+					["first"] = 1393913258,
 					["dispells"] = 0,
 					["damagetakenspells"] = {
 					},
@@ -22309,9 +22306,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Whispër",
 					["alertCount"] = 0,
-					["maxhp"] = 0,
-					["deathlog"] = {
-					},
+					["healing"] = 0,
+					["shielding"] = 0,
 					["alert"] = {
 					},
 					["multistrikes"] = 0,
@@ -22408,15 +22404,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 20,
 					["interrupts"] = 0,
-					["power"] = {
-						[3] = {
-							["spells"] = {
-								[5171] = 56,
-								[98440] = 25,
-							},
-							["amount"] = 81,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393913261,
 					["healingRequiredSources"] = {
 						["0x05800000086A8FAD"] = {
@@ -22583,7 +22571,14 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 39984,
-					["deathlog"] = {
+					["power"] = {
+						[3] = {
+							["spells"] = {
+								[5171] = 56,
+								[98440] = 25,
+							},
+							["amount"] = 81,
+						},
 					},
 					["id"] = "0x05800000086A8FAD",
 					["healing"] = 18746,
@@ -22593,8 +22588,8 @@ SkadaPerCharDB = {
 							["min"] = 19736,
 							["name"] = "Brew Bolt",
 							["count"] = 2,
+							["max"] = 20248,
 							["id"] = 116155,
-							["totalhits"] = 2,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -22602,7 +22597,7 @@ SkadaPerCharDB = {
 									["amount"] = 2,
 								},
 							},
-							["max"] = 20248,
+							["totalhits"] = 2,
 							["damage"] = 39984,
 						},
 					},
@@ -22616,7 +22611,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Tayclay",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -22693,17 +22689,9 @@ SkadaPerCharDB = {
 					["interrupts"] = 0,
 					["healingspells"] = {
 					},
-					["power"] = {
-						[2] = {
-							["spells"] = {
-								[82728] = 65,
-								[82726] = 65,
-								[118974] = 9,
-							},
-							["amount"] = 139,
-						},
+					["deathlog"] = {
 					},
-					["first"] = 1393913262,
+					["maxhp"] = 0,
 					["damage"] = 2037269,
 					["damagespells"] = {
 						["Explosive Shot"] = {
@@ -22878,9 +22866,18 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["shielding"] = 0,
+					["power"] = {
+						[2] = {
+							["spells"] = {
+								[82728] = 65,
+								[82726] = 65,
+								[118974] = 9,
+							},
+							["amount"] = 139,
+						},
+					},
 					["id"] = "0x0280000003D8811C",
-					["healing"] = 0,
+					["first"] = 1393913262,
 					["dispells"] = 0,
 					["damagetakenspells"] = {
 					},
@@ -22889,9 +22886,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Disclosure",
 					["alertCount"] = 0,
-					["maxhp"] = 0,
-					["deathlog"] = {
-					},
+					["healing"] = 0,
+					["shielding"] = 0,
 					["alert"] = {
 					},
 					["multistrikes"] = 0,
@@ -22953,7 +22949,11 @@ SkadaPerCharDB = {
 					["done"] = 180146,
 				},
 			},
-			["shielding"] = 0,
+			["power"] = {
+				[3] = 81,
+				[2] = 139,
+				[12] = 6,
+			},
 			["alertCount"] = 0,
 			["healing"] = 180146,
 			["healingRequired"] = 81123,
@@ -22962,7 +22962,7 @@ SkadaPerCharDB = {
 			["starttime"] = 1393913257,
 			["name"] = "Yeasty Brew Alemental",
 			["mobname"] = "Yeasty Brew Alemental",
-			["mobtaken"] = 11360538,
+			["shielding"] = 0,
 			["mobhdone"] = 472733,
 			["last_action"] = 1393913257,
 			["endtime"] = 1393913282,
@@ -22976,11 +22976,7 @@ SkadaPerCharDB = {
 			["interrupts"] = 1,
 			["mobdone"] = 419245,
 			["overhealing"] = 423938,
-			["power"] = {
-				[3] = 122,
-				[2] = 26,
-				[12] = 12,
-			},
+			["mobtaken"] = 6619540,
 			["damage"] = 6619540,
 			["players"] = {
 				{
@@ -23118,8 +23114,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 17,
 					["interrupts"] = 0,
-					["power"] = {
-					},
+					["shielding"] = 0,
 					["first"] = 1393913227,
 					["healingRequiredSources"] = {
 						["0x0280000002E3A105"] = {
@@ -23147,7 +23142,7 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 30000,
-					["deathlog"] = {
+					["power"] = {
 					},
 					["id"] = "0x0280000002E3A105",
 					["healing"] = 323715,
@@ -23157,8 +23152,8 @@ SkadaPerCharDB = {
 							["min"] = 30000,
 							["name"] = "Blackout Brew",
 							["count"] = 1,
+							["max"] = 30000,
 							["id"] = 106851,
-							["totalhits"] = 1,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -23166,7 +23161,7 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 30000,
+							["totalhits"] = 1,
 							["damage"] = 30000,
 						},
 					},
@@ -23200,7 +23195,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Herfinator",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -23320,14 +23316,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 17,
 					["interrupts"] = 1,
-					["power"] = {
-						[12] = {
-							["spells"] = {
-								[108557] = 12,
-							},
-							["amount"] = 12,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393913227,
 					["healingRequiredSources"] = {
 						["0x0280000002E3A105"] = {
@@ -23341,25 +23330,25 @@ SkadaPerCharDB = {
 									["name"] = "Rejuvenation",
 									["amount"] = 34099,
 								},
+								[18562] = {
+									["id"] = 18562,
+									["name"] = "Swiftmend",
+									["amount"] = 19084,
+								},
 								[145110] = {
 									["id"] = 145110,
 									["name"] = "Ysera's Gift",
 									["amount"] = 26221,
-								},
-								[33763] = {
-									["id"] = 33763,
-									["name"] = "Lifebloom",
-									["amount"] = 73745,
 								},
 								[48438] = {
 									["id"] = 48438,
 									["name"] = "Wild Growth",
 									["amount"] = 26319,
 								},
-								[18562] = {
-									["id"] = 18562,
-									["name"] = "Swiftmend",
-									["amount"] = 19084,
+								[33763] = {
+									["id"] = 33763,
+									["name"] = "Lifebloom",
+									["amount"] = 73745,
 								},
 							},
 						},
@@ -23622,7 +23611,13 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 179468,
-					["deathlog"] = {
+					["power"] = {
+						[12] = {
+							["spells"] = {
+								[108557] = 12,
+							},
+							["amount"] = 12,
+						},
 					},
 					["id"] = "0x0400000005DF4D8D",
 					["healing"] = 0,
@@ -23632,8 +23627,8 @@ SkadaPerCharDB = {
 							["min"] = 30000,
 							["name"] = "Blackout Brew",
 							["count"] = 1,
+							["max"] = 30000,
 							["id"] = 106851,
-							["totalhits"] = 1,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -23641,15 +23636,15 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 30000,
+							["totalhits"] = 1,
 							["damage"] = 30000,
 						},
 						["Attack"] = {
 							["min"] = 68922,
 							["name"] = "Attack",
 							["count"] = 4,
+							["max"] = 80546,
 							["id"] = 6603,
-							["totalhits"] = 2,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -23657,7 +23652,7 @@ SkadaPerCharDB = {
 									["amount"] = 4,
 								},
 							},
-							["max"] = 80546,
+							["totalhits"] = 2,
 							["damage"] = 149468,
 						},
 					},
@@ -23666,7 +23661,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Pandatal",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 227340,
 					["alert"] = {
 					},
@@ -23750,15 +23746,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 17,
 					["interrupts"] = 0,
-					["power"] = {
-						[3] = {
-							["spells"] = {
-								[5171] = 72,
-								[98440] = 50,
-							},
-							["amount"] = 122,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393913227,
 					["healingRequiredSources"] = {
 						["0x0280000002E3A105"] = {
@@ -23928,7 +23916,14 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 30000,
-					["deathlog"] = {
+					["power"] = {
+						[3] = {
+							["spells"] = {
+								[5171] = 72,
+								[98440] = 50,
+							},
+							["amount"] = 122,
+						},
 					},
 					["id"] = "0x05800000086A8FAD",
 					["healing"] = 0,
@@ -23938,8 +23933,8 @@ SkadaPerCharDB = {
 							["min"] = 30000,
 							["name"] = "Blackout Brew",
 							["count"] = 1,
+							["max"] = 30000,
 							["id"] = 106851,
-							["totalhits"] = 1,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -23947,7 +23942,7 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 30000,
+							["totalhits"] = 1,
 							["damage"] = 30000,
 						},
 					},
@@ -23961,7 +23956,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Tayclay",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -24031,8 +24027,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 15,
 					["interrupts"] = 0,
-					["power"] = {
-					},
+					["shielding"] = 0,
 					["first"] = 1393913227,
 					["healingRequiredSources"] = {
 						["0x0280000006546784"] = {
@@ -24152,7 +24147,7 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 27000,
-					["deathlog"] = {
+					["power"] = {
 					},
 					["id"] = "0x0280000006546784",
 					["healing"] = 5653,
@@ -24162,8 +24157,8 @@ SkadaPerCharDB = {
 							["min"] = 27000,
 							["name"] = "Blackout Brew",
 							["count"] = 1,
+							["max"] = 27000,
 							["id"] = 106851,
-							["totalhits"] = 1,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -24171,7 +24166,7 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 27000,
+							["totalhits"] = 1,
 							["damage"] = 27000,
 						},
 					},
@@ -24185,7 +24180,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Whispër",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -24269,15 +24265,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 15,
 					["interrupts"] = 0,
-					["power"] = {
-						[2] = {
-							["spells"] = {
-								[118974] = 12,
-								[91954] = 14,
-							},
-							["amount"] = 26,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393913228,
 					["healingRequiredSources"] = {
 						["0x0280000003D8811C"] = {
@@ -24512,7 +24500,14 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 152777,
-					["deathlog"] = {
+					["power"] = {
+						[2] = {
+							["spells"] = {
+								[118974] = 12,
+								[91954] = 14,
+							},
+							["amount"] = 26,
+						},
 					},
 					["id"] = "0x0280000003D8811C",
 					["healing"] = 152308,
@@ -24522,8 +24517,8 @@ SkadaPerCharDB = {
 							["min"] = 30000,
 							["name"] = "Blackout Brew",
 							["count"] = 1,
+							["max"] = 30000,
 							["id"] = 106851,
-							["totalhits"] = 1,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -24531,15 +24526,15 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 30000,
+							["totalhits"] = 1,
 							["damage"] = 30000,
 						},
 						["Attack"] = {
 							["min"] = 55078,
 							["name"] = "Attack",
 							["count"] = 2,
+							["max"] = 67699,
 							["id"] = 6603,
-							["totalhits"] = 2,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -24547,7 +24542,7 @@ SkadaPerCharDB = {
 									["amount"] = 2,
 								},
 							},
-							["max"] = 67699,
+							["totalhits"] = 2,
 							["damage"] = 122777,
 						},
 					},
@@ -24566,7 +24561,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Disclosure",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -24613,7 +24609,11 @@ SkadaPerCharDB = {
 					["done"] = 419245,
 				},
 			},
-			["shielding"] = 0,
+			["power"] = {
+				[3] = 122,
+				[2] = 26,
+				[12] = 12,
+			},
 			["alertCount"] = 0,
 			["healing"] = 481676,
 			["healingRequired"] = 293715,
@@ -24622,7 +24622,7 @@ SkadaPerCharDB = {
 			["starttime"] = 1393913227,
 			["name"] = "Stout Brew Alemental",
 			["mobname"] = "Stout Brew Alemental",
-			["mobtaken"] = 6619540,
+			["shielding"] = 0,
 			["mobhdone"] = 0,
 			["last_action"] = 1393913227,
 			["endtime"] = 1393913244,
@@ -24636,11 +24636,7 @@ SkadaPerCharDB = {
 			["interrupts"] = 0,
 			["mobdone"] = 194687,
 			["overhealing"] = 409003,
-			["power"] = {
-				[3] = 57,
-				[2] = 6,
-				[12] = 8,
-			},
+			["mobtaken"] = 5006346,
 			["damage"] = 5006346,
 			["players"] = {
 				{
@@ -24728,16 +24724,9 @@ SkadaPerCharDB = {
 					["interrupts"] = 0,
 					["healingspells"] = {
 					},
-					["power"] = {
-						[3] = {
-							["spells"] = {
-								[98440] = 25,
-								[5171] = 32,
-							},
-							["amount"] = 57,
-						},
+					["deathlog"] = {
 					},
-					["first"] = 1393913198,
+					["maxhp"] = 0,
 					["damage"] = 355713,
 					["damagespells"] = {
 						["Mind-numbing Poison"] = {
@@ -24827,9 +24816,17 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["shielding"] = 0,
+					["power"] = {
+						[3] = {
+							["spells"] = {
+								[98440] = 25,
+								[5171] = 32,
+							},
+							["amount"] = 57,
+						},
+					},
 					["id"] = "0x05800000086A8FAD",
-					["healing"] = 0,
+					["first"] = 1393913198,
 					["dispells"] = 0,
 					["damagetakenspells"] = {
 					},
@@ -24838,9 +24835,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Tayclay",
 					["alertCount"] = 0,
-					["maxhp"] = 0,
-					["deathlog"] = {
-					},
+					["healing"] = 0,
+					["shielding"] = 0,
 					["alert"] = {
 					},
 					["multistrikes"] = 0,
@@ -24952,14 +24948,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 17,
 					["interrupts"] = 0,
-					["power"] = {
-						[12] = {
-							["spells"] = {
-								[108557] = 8,
-							},
-							["amount"] = 8,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393913199,
 					["healingRequiredSources"] = {
 						["0x0280000002E3A105"] = {
@@ -25286,7 +25275,13 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 145706,
-					["deathlog"] = {
+					["power"] = {
+						[12] = {
+							["spells"] = {
+								[108557] = 8,
+							},
+							["amount"] = 8,
+						},
 					},
 					["id"] = "0x0400000005DF4D8D",
 					["healing"] = 0,
@@ -25296,8 +25291,8 @@ SkadaPerCharDB = {
 							["min"] = 46673,
 							["name"] = "Attack",
 							["count"] = 5,
+							["max"] = 49540,
 							["id"] = 6603,
-							["totalhits"] = 3,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -25305,7 +25300,7 @@ SkadaPerCharDB = {
 									["amount"] = 5,
 								},
 							},
-							["max"] = 49540,
+							["totalhits"] = 3,
 							["damage"] = 145706,
 						},
 					},
@@ -25314,7 +25309,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Pandatal",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 227340,
 					["alert"] = {
 					},
@@ -25440,18 +25436,19 @@ SkadaPerCharDB = {
 							["absorbed"] = 0,
 						},
 					},
-					["power"] = {
+					["deathlog"] = {
 					},
-					["first"] = 1393913199,
+					["maxhp"] = 0,
 					["damage"] = 0,
 					["damagespells"] = {
 					},
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["shielding"] = 0,
+					["power"] = {
+					},
 					["id"] = "0x0280000002E3A105",
-					["healing"] = 145706,
+					["first"] = 1393913199,
 					["dispells"] = 0,
 					["damagetakenspells"] = {
 					},
@@ -25485,9 +25482,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Herfinator",
 					["alertCount"] = 0,
-					["maxhp"] = 0,
-					["deathlog"] = {
-					},
+					["healing"] = 145706,
+					["shielding"] = 0,
 					["alert"] = {
 					},
 					["multistrikes"] = 0,
@@ -25563,14 +25559,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 13,
 					["interrupts"] = 0,
-					["power"] = {
-						[2] = {
-							["spells"] = {
-								[118974] = 6,
-							},
-							["amount"] = 6,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393913202,
 					["healingRequiredSources"] = {
 						["0x0280000003D8811C"] = {
@@ -25782,7 +25771,13 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 48981,
-					["deathlog"] = {
+					["power"] = {
+						[2] = {
+							["spells"] = {
+								[118974] = 6,
+							},
+							["amount"] = 6,
+						},
 					},
 					["id"] = "0x0280000003D8811C",
 					["healing"] = 48981,
@@ -25792,8 +25787,8 @@ SkadaPerCharDB = {
 							["min"] = 48981,
 							["name"] = "Brew Bolt",
 							["count"] = 1,
+							["max"] = 48981,
 							["id"] = 115650,
-							["totalhits"] = 1,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -25801,7 +25796,7 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 48981,
+							["totalhits"] = 1,
 							["damage"] = 48981,
 						},
 					},
@@ -25815,7 +25810,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Disclosure",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -25878,9 +25874,9 @@ SkadaPerCharDB = {
 					["interrupts"] = 0,
 					["healingspells"] = {
 					},
-					["power"] = {
+					["deathlog"] = {
 					},
-					["first"] = 1393913205,
+					["maxhp"] = 0,
 					["damage"] = 694492,
 					["damagespells"] = {
 						["Rain of Fire"] = {
@@ -25950,9 +25946,10 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["shielding"] = 0,
+					["power"] = {
+					},
 					["id"] = "0x0280000006546784",
-					["healing"] = 0,
+					["first"] = 1393913205,
 					["dispells"] = 0,
 					["damagetakenspells"] = {
 					},
@@ -25961,9 +25958,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Whispër",
 					["alertCount"] = 0,
-					["maxhp"] = 0,
-					["deathlog"] = {
-					},
+					["healing"] = 0,
+					["shielding"] = 0,
 					["alert"] = {
 					},
 					["multistrikes"] = 0,
@@ -26004,7 +26000,11 @@ SkadaPerCharDB = {
 					["done"] = 194687,
 				},
 			},
-			["shielding"] = 0,
+			["power"] = {
+				[3] = 57,
+				[2] = 6,
+				[12] = 8,
+			},
 			["alertCount"] = 0,
 			["healing"] = 194687,
 			["healingRequired"] = 145706,
@@ -26013,7 +26013,7 @@ SkadaPerCharDB = {
 			["starttime"] = 1393913198,
 			["name"] = "Sudsy Brew Alemental",
 			["mobname"] = "Sudsy Brew Alemental",
-			["mobtaken"] = 5006346,
+			["shielding"] = 0,
 			["mobhdone"] = 0,
 			["last_action"] = 1393913198,
 			["endtime"] = 1393913217,
@@ -26027,10 +26027,7 @@ SkadaPerCharDB = {
 			["interrupts"] = 0,
 			["mobdone"] = 219557,
 			["overhealing"] = 269860,
-			["power"] = {
-				[12] = 5,
-				[2] = 9,
-			},
+			["mobtaken"] = 5394758,
 			["damage"] = 5394758,
 			["players"] = {
 				{
@@ -26054,18 +26051,19 @@ SkadaPerCharDB = {
 					["interrupts"] = 0,
 					["healingspells"] = {
 					},
-					["power"] = {
+					["deathlog"] = {
 					},
-					["first"] = 1393913170,
+					["maxhp"] = 0,
 					["damage"] = 0,
 					["damagespells"] = {
 					},
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["shielding"] = 0,
+					["power"] = {
+					},
 					["id"] = "0x05800000086A8FAD",
-					["healing"] = 0,
+					["first"] = 1393913170,
 					["dispells"] = 0,
 					["damagetakenspells"] = {
 					},
@@ -26074,9 +26072,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Tayclay",
 					["alertCount"] = 0,
-					["maxhp"] = 0,
-					["deathlog"] = {
-					},
+					["healing"] = 0,
+					["shielding"] = 0,
 					["alert"] = {
 					},
 					["multistrikes"] = 0,
@@ -26156,8 +26153,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 13,
 					["interrupts"] = 0,
-					["power"] = {
-					},
+					["shielding"] = 0,
 					["first"] = 1393913170,
 					["healingRequiredSources"] = {
 						["0x0280000002E3A105"] = {
@@ -26180,7 +26176,7 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 20174,
-					["deathlog"] = {
+					["power"] = {
 					},
 					["id"] = "0x0280000002E3A105",
 					["healing"] = 161412,
@@ -26190,8 +26186,8 @@ SkadaPerCharDB = {
 							["min"] = 20174,
 							["name"] = "Brew Bolt",
 							["count"] = 1,
+							["max"] = 20174,
 							["id"] = 116155,
-							["totalhits"] = 1,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -26199,7 +26195,7 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 20174,
+							["totalhits"] = 1,
 							["damage"] = 20174,
 						},
 					},
@@ -26223,7 +26219,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Herfinator",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -26288,10 +26285,24 @@ SkadaPerCharDB = {
 							["uptime"] = 2,
 							["auratype"] = "BUFF",
 						},
+						["Pandatal: Blackout Kick"] = {
+							["name"] = "Pandatal: Blackout Kick",
+							["active"] = 0,
+							["id"] = 128531,
+							["uptime"] = 3,
+							["auratype"] = "DEBUFF",
+						},
 						["Rising Sun Kick"] = {
 							["name"] = "Rising Sun Kick",
 							["active"] = 0,
 							["id"] = 130320,
+							["uptime"] = 7,
+							["auratype"] = "DEBUFF",
+						},
+						["Pandatal: Mortal Wounds"] = {
+							["name"] = "Pandatal: Mortal Wounds",
+							["active"] = 0,
+							["id"] = 115804,
 							["uptime"] = 7,
 							["auratype"] = "DEBUFF",
 						},
@@ -26302,35 +26313,13 @@ SkadaPerCharDB = {
 							["uptime"] = 1,
 							["auratype"] = "BUFF",
 						},
-						["Pandatal: Mortal Wounds"] = {
-							["name"] = "Pandatal: Mortal Wounds",
-							["active"] = 0,
-							["id"] = 115804,
-							["uptime"] = 7,
-							["auratype"] = "DEBUFF",
-						},
-						["Pandatal: Blackout Kick"] = {
-							["name"] = "Pandatal: Blackout Kick",
-							["active"] = 0,
-							["id"] = 128531,
-							["uptime"] = 3,
-							["auratype"] = "DEBUFF",
-						},
 					},
 					["overhealing"] = 0,
 					["healingspells"] = {
 					},
 					["time"] = 13,
 					["interrupts"] = 0,
-					["power"] = {
-						[12] = {
-							["spells"] = {
-								[129881] = 1,
-								[108557] = 4,
-							},
-							["amount"] = 5,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393913170,
 					["healingRequiredSources"] = {
 						["0x0280000002E3A105"] = {
@@ -26636,7 +26625,14 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 141238,
-					["deathlog"] = {
+					["power"] = {
+						[12] = {
+							["spells"] = {
+								[129881] = 1,
+								[108557] = 4,
+							},
+							["amount"] = 5,
+						},
 					},
 					["id"] = "0x0400000005DF4D8D",
 					["healing"] = 0,
@@ -26646,8 +26642,8 @@ SkadaPerCharDB = {
 							["min"] = 19808,
 							["name"] = "Brew Bolt",
 							["count"] = 7,
+							["max"] = 20328,
 							["id"] = 116155,
-							["totalhits"] = 7,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -26655,7 +26651,7 @@ SkadaPerCharDB = {
 									["amount"] = 7,
 								},
 							},
-							["max"] = 20328,
+							["totalhits"] = 7,
 							["damage"] = 141238,
 						},
 					},
@@ -26664,7 +26660,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Pandatal",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 227340,
 					["alert"] = {
 					},
@@ -26747,8 +26744,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 12,
 					["interrupts"] = 0,
-					["power"] = {
-					},
+					["shielding"] = 0,
 					["first"] = 1393913170,
 					["healingRequiredSources"] = {
 						["0x0280000006546784"] = {
@@ -26860,7 +26856,7 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 18445,
-					["deathlog"] = {
+					["power"] = {
 					},
 					["id"] = "0x0280000006546784",
 					["healing"] = 18445,
@@ -26870,8 +26866,8 @@ SkadaPerCharDB = {
 							["min"] = 18445,
 							["name"] = "Brew Bolt",
 							["count"] = 1,
+							["max"] = 18445,
 							["id"] = 116155,
-							["totalhits"] = 1,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -26879,7 +26875,7 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 18445,
+							["totalhits"] = 1,
 							["damage"] = 18445,
 						},
 					},
@@ -26893,7 +26889,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Whispër",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -26991,14 +26988,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 11,
 					["interrupts"] = 0,
-					["power"] = {
-						[2] = {
-							["spells"] = {
-								[118974] = 9,
-							},
-							["amount"] = 9,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393913170,
 					["healingRequiredSources"] = {
 						["0x0280000003D8811C"] = {
@@ -27189,7 +27179,13 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 39700,
-					["deathlog"] = {
+					["power"] = {
+						[2] = {
+							["spells"] = {
+								[118974] = 9,
+							},
+							["amount"] = 9,
+						},
 					},
 					["id"] = "0x0280000003D8811C",
 					["healing"] = 65238,
@@ -27199,8 +27195,8 @@ SkadaPerCharDB = {
 							["min"] = 19824,
 							["name"] = "Brew Bolt",
 							["count"] = 2,
+							["max"] = 19876,
 							["id"] = 116155,
-							["totalhits"] = 2,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -27208,7 +27204,7 @@ SkadaPerCharDB = {
 									["amount"] = 2,
 								},
 							},
-							["max"] = 19876,
+							["totalhits"] = 2,
 							["damage"] = 39700,
 						},
 					},
@@ -27227,7 +27223,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Disclosure",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -27285,7 +27282,10 @@ SkadaPerCharDB = {
 					["done"] = 219557,
 				},
 			},
-			["shielding"] = 0,
+			["power"] = {
+				[12] = 5,
+				[2] = 9,
+			},
 			["alertCount"] = 0,
 			["healing"] = 245095,
 			["healingRequired"] = 141238,
@@ -27294,7 +27294,7 @@ SkadaPerCharDB = {
 			["starttime"] = 1393913169,
 			["name"] = "Yeasty Brew Alemental",
 			["mobname"] = "Yeasty Brew Alemental",
-			["mobtaken"] = 5394758,
+			["shielding"] = 0,
 			["mobhdone"] = 35454,
 			["last_action"] = 1393913169,
 			["endtime"] = 1393913183,
@@ -27484,15 +27484,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 99,
 					["interrupts"] = 0,
-					["power"] = {
-						[12] = {
-							["spells"] = {
-								[129881] = 9,
-								[108557] = 20,
-							},
-							["amount"] = 29,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393913064,
 					["healingRequiredSources"] = {
 						["0x0400000005DF4D8D"] = {
@@ -27810,7 +27802,14 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 771088,
-					["deathlog"] = {
+					["power"] = {
+						[12] = {
+							["spells"] = {
+								[129881] = 9,
+								[108557] = 20,
+							},
+							["amount"] = 29,
+						},
 					},
 					["id"] = "0x0400000005DF4D8D",
 					["healing"] = 146334,
@@ -27820,8 +27819,8 @@ SkadaPerCharDB = {
 							["min"] = 36432,
 							["name"] = "Furlwind",
 							["count"] = 1,
+							["max"] = 36432,
 							["id"] = 112993,
-							["totalhits"] = 1,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -27829,15 +27828,15 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 36432,
+							["totalhits"] = 1,
 							["damage"] = 36432,
 						},
 						["Attack"] = {
 							["min"] = 1317,
 							["name"] = "Attack",
 							["count"] = 59,
+							["max"] = 73924,
 							["id"] = 6603,
-							["totalhits"] = 46,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -27845,15 +27844,15 @@ SkadaPerCharDB = {
 									["amount"] = 59,
 								},
 							},
-							["max"] = 73924,
+							["totalhits"] = 46,
 							["damage"] = 464656,
 						},
 						["Blackout Brew"] = {
 							["min"] = 30000,
 							["name"] = "Blackout Brew",
 							["count"] = 1,
+							["max"] = 30000,
 							["id"] = 106851,
-							["totalhits"] = 1,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -27861,15 +27860,15 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 30000,
+							["totalhits"] = 1,
 							["damage"] = 30000,
 						},
 						["Explosive Brew"] = {
 							["min"] = 60000,
 							["name"] = "Explosive Brew",
 							["count"] = 4,
+							["max"] = 60000,
 							["id"] = 114291,
-							["totalhits"] = 4,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -27877,7 +27876,7 @@ SkadaPerCharDB = {
 									["amount"] = 4,
 								},
 							},
-							["max"] = 60000,
+							["totalhits"] = 4,
 							["damage"] = 240000,
 						},
 					},
@@ -27906,7 +27905,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Pandatal",
 					["alertCount"] = 1,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 227340,
 					["alert"] = {
 						["High"] = {
@@ -27978,11 +27978,11 @@ SkadaPerCharDB = {
 							["uptime"] = 7,
 							["auratype"] = "BUFF",
 						},
-						["Rejuvenation"] = {
-							["name"] = "Rejuvenation",
-							["active"] = 1,
-							["id"] = 774,
-							["uptime"] = 56,
+						["Innervate"] = {
+							["name"] = "Innervate",
+							["active"] = 0,
+							["id"] = 29166,
+							["uptime"] = 10,
 							["auratype"] = "BUFF",
 						},
 						["Displacer Beast"] = {
@@ -27992,18 +27992,18 @@ SkadaPerCharDB = {
 							["uptime"] = 8,
 							["auratype"] = "BUFF",
 						},
+						["Rejuvenation"] = {
+							["name"] = "Rejuvenation",
+							["active"] = 1,
+							["id"] = 774,
+							["uptime"] = 56,
+							["auratype"] = "BUFF",
+						},
 						["Efflorescence"] = {
 							["name"] = "Efflorescence",
 							["active"] = 0,
 							["id"] = 81262,
 							["uptime"] = 15,
-							["auratype"] = "BUFF",
-						},
-						["Innervate"] = {
-							["name"] = "Innervate",
-							["active"] = 0,
-							["id"] = 29166,
-							["uptime"] = 10,
 							["auratype"] = "BUFF",
 						},
 						["Regrowth"] = {
@@ -28110,14 +28110,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 99,
 					["interrupts"] = 0,
-					["power"] = {
-						[0] = {
-							["spells"] = {
-								[29166] = 24000,
-							},
-							["amount"] = 24000,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393913064,
 					["healingRequiredSources"] = {
 						["0x0400000005DF4D8D"] = {
@@ -28139,6 +28132,11 @@ SkadaPerCharDB = {
 							["id"] = "0x0280000002E3A105",
 							["class"] = "DRUID",
 							["spells"] = {
+								[48438] = {
+									["id"] = 48438,
+									["name"] = "Wild Growth",
+									["amount"] = 6927,
+								},
 								[774] = {
 									["id"] = 774,
 									["name"] = "Rejuvenation",
@@ -28149,11 +28147,6 @@ SkadaPerCharDB = {
 									["name"] = "Ysera's Gift",
 									["amount"] = 97549,
 								},
-								[48438] = {
-									["id"] = 48438,
-									["name"] = "Wild Growth",
-									["amount"] = 6927,
-								},
 							},
 						},
 					},
@@ -28163,7 +28156,13 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 198316,
-					["deathlog"] = {
+					["power"] = {
+						[0] = {
+							["spells"] = {
+								[29166] = 24000,
+							},
+							["amount"] = 24000,
+						},
 					},
 					["id"] = "0x0280000002E3A105",
 					["healing"] = 1367499,
@@ -28173,8 +28172,8 @@ SkadaPerCharDB = {
 							["min"] = 30000,
 							["name"] = "Blackout Brew",
 							["count"] = 1,
+							["max"] = 30000,
 							["id"] = 106851,
-							["totalhits"] = 1,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -28182,15 +28181,15 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 30000,
+							["totalhits"] = 1,
 							["damage"] = 30000,
 						},
 						["Explosive Brew"] = {
 							["min"] = 60000,
 							["name"] = "Explosive Brew",
 							["count"] = 2,
+							["max"] = 60000,
 							["id"] = 114291,
-							["totalhits"] = 2,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -28198,15 +28197,15 @@ SkadaPerCharDB = {
 									["amount"] = 2,
 								},
 							},
-							["max"] = 60000,
+							["totalhits"] = 2,
 							["damage"] = 120000,
 						},
 						["Attack"] = {
 							["min"] = 1443,
 							["name"] = "Attack",
 							["count"] = 27,
+							["max"] = 3086,
 							["id"] = 6603,
-							["totalhits"] = 26,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -28214,7 +28213,7 @@ SkadaPerCharDB = {
 									["amount"] = 27,
 								},
 							},
-							["max"] = 3086,
+							["totalhits"] = 26,
 							["damage"] = 48316,
 						},
 					},
@@ -28248,7 +28247,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Herfinator",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -28370,15 +28370,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 96,
 					["interrupts"] = 0,
-					["power"] = {
-						[3] = {
-							["spells"] = {
-								[5171] = 139,
-								[98440] = 125,
-							},
-							["amount"] = 264,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393913064,
 					["healingRequiredSources"] = {
 						["0x05800000086A8FAD"] = {
@@ -28400,25 +28392,25 @@ SkadaPerCharDB = {
 							["id"] = "0x0280000002E3A105",
 							["class"] = "DRUID",
 							["spells"] = {
-								[48438] = {
-									["id"] = 48438,
-									["name"] = "Wild Growth",
-									["amount"] = 39242,
+								[774] = {
+									["id"] = 774,
+									["name"] = "Rejuvenation",
+									["amount"] = 136018,
 								},
 								[145110] = {
 									["id"] = 145110,
 									["name"] = "Ysera's Gift",
 									["amount"] = 65854,
 								},
+								[48438] = {
+									["id"] = 48438,
+									["name"] = "Wild Growth",
+									["amount"] = 39242,
+								},
 								[81269] = {
 									["id"] = 81269,
 									["name"] = "Efflorescence",
 									["amount"] = 85033,
-								},
-								[774] = {
-									["id"] = 774,
-									["name"] = "Rejuvenation",
-									["amount"] = 136018,
 								},
 							},
 						},
@@ -28637,7 +28629,14 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 379548,
-					["deathlog"] = {
+					["power"] = {
+						[3] = {
+							["spells"] = {
+								[5171] = 139,
+								[98440] = 125,
+							},
+							["amount"] = 264,
+						},
 					},
 					["id"] = "0x05800000086A8FAD",
 					["healing"] = 38401,
@@ -28647,8 +28646,8 @@ SkadaPerCharDB = {
 							["min"] = 35789,
 							["name"] = "Furlwind",
 							["count"] = 1,
+							["max"] = 35789,
 							["id"] = 112993,
-							["totalhits"] = 1,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -28656,15 +28655,15 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 35789,
+							["totalhits"] = 1,
 							["damage"] = 35789,
 						},
 						["Attack"] = {
 							["min"] = 1577,
 							["name"] = "Attack",
 							["count"] = 9,
+							["max"] = 83953,
 							["id"] = 6603,
-							["totalhits"] = 9,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -28682,15 +28681,15 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 83953,
+							["totalhits"] = 9,
 							["damage"] = 118759,
 						},
 						["Blackout Brew"] = {
 							["min"] = 15000,
 							["name"] = "Blackout Brew",
 							["count"] = 1,
+							["max"] = 15000,
 							["id"] = 106851,
-							["totalhits"] = 1,
 							["buffs"] = {
 								[1966] = {
 									["id"] = 1966,
@@ -28703,15 +28702,15 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 15000,
+							["totalhits"] = 1,
 							["damage"] = 15000,
 						},
 						["Explosive Brew"] = {
 							["min"] = 30000,
 							["name"] = "Explosive Brew",
 							["count"] = 4,
+							["max"] = 60000,
 							["id"] = 114291,
-							["totalhits"] = 4,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -28729,7 +28728,7 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 60000,
+							["totalhits"] = 4,
 							["damage"] = 210000,
 						},
 					},
@@ -28743,7 +28742,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Tayclay",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -28853,16 +28853,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 96,
 					["interrupts"] = 0,
-					["power"] = {
-						[2] = {
-							["spells"] = {
-								[118974] = 27,
-								[82726] = 95,
-								[91954] = 70,
-							},
-							["amount"] = 192,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393913067,
 					["healingRequiredSources"] = {
 						["0x0400000005DF4D8D"] = {
@@ -29092,7 +29083,15 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 71939,
-					["deathlog"] = {
+					["power"] = {
+						[2] = {
+							["spells"] = {
+								[118974] = 27,
+								[82726] = 95,
+								[91954] = 70,
+							},
+							["amount"] = 192,
+						},
 					},
 					["id"] = "0x0280000003D8811C",
 					["healing"] = 0,
@@ -29102,8 +29101,8 @@ SkadaPerCharDB = {
 							["min"] = 30000,
 							["name"] = "Blackout Brew",
 							["count"] = 1,
+							["max"] = 30000,
 							["id"] = 106851,
-							["totalhits"] = 1,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -29111,15 +29110,15 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 30000,
+							["totalhits"] = 1,
 							["damage"] = 30000,
 						},
 						["Attack"] = {
 							["min"] = 1288,
 							["name"] = "Attack",
 							["count"] = 15,
+							["max"] = 12687,
 							["id"] = 6603,
-							["totalhits"] = 14,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -29127,7 +29126,7 @@ SkadaPerCharDB = {
 									["amount"] = 15,
 								},
 							},
-							["max"] = 12687,
+							["totalhits"] = 14,
 							["damage"] = 41939,
 						},
 					},
@@ -29136,7 +29135,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Disclosure",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -29271,8 +29271,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 90,
 					["interrupts"] = 0,
-					["power"] = {
-					},
+					["shielding"] = 53464.1015625,
 					["first"] = 1393913071,
 					["healingRequiredSources"] = {
 						["0x0280000006546784"] = {
@@ -29446,7 +29445,7 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 279110,
-					["deathlog"] = {
+					["power"] = {
 					},
 					["id"] = "0x0280000006546784",
 					["healing"] = 184227.1015625,
@@ -29456,8 +29455,8 @@ SkadaPerCharDB = {
 							["min"] = 68443,
 							["name"] = "Brew Bolt",
 							["count"] = 1,
+							["max"] = 68443,
 							["id"] = 115652,
-							["totalhits"] = 1,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -29465,15 +29464,15 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 68443,
+							["totalhits"] = 1,
 							["damage"] = 68443,
 						},
 						["Explosive Brew"] = {
 							["min"] = 54000,
 							["name"] = "Explosive Brew",
 							["count"] = 3,
+							["max"] = 54000,
 							["id"] = 114291,
-							["totalhits"] = 3,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -29481,7 +29480,7 @@ SkadaPerCharDB = {
 									["amount"] = 3,
 								},
 							},
-							["max"] = 54000,
+							["totalhits"] = 3,
 							["damage"] = 162000,
 						},
 						["Furlwind"] = {
@@ -29501,8 +29500,8 @@ SkadaPerCharDB = {
 							["min"] = 27000,
 							["name"] = "Blackout Brew",
 							["count"] = 1,
+							["max"] = 27000,
 							["id"] = 106851,
-							["totalhits"] = 1,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -29510,15 +29509,15 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 27000,
+							["totalhits"] = 1,
 							["damage"] = 27000,
 						},
 						["Attack"] = {
 							["min"] = 1287,
 							["name"] = "Attack",
 							["count"] = 13,
+							["max"] = 3096,
 							["id"] = 6603,
-							["totalhits"] = 13,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -29526,7 +29525,7 @@ SkadaPerCharDB = {
 									["amount"] = 13,
 								},
 							},
-							["max"] = 3096,
+							["totalhits"] = 13,
 							["damage"] = 21667,
 						},
 					},
@@ -29540,7 +29539,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Whispër",
 					["alertCount"] = 0,
-					["shielding"] = 53464.1015625,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -29753,11 +29753,7 @@ SkadaPerCharDB = {
 			["interrupts"] = 0,
 			["mobdone"] = 2010724,
 			["overhealing"] = 1614496,
-			["power"] = {
-				[3] = 334,
-				[2] = 281,
-				[12] = 29,
-			},
+			["mobtaken"] = 45198871,
 			["damage"] = 45198871,
 			["players"] = {
 				{
@@ -29882,15 +29878,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 70,
 					["interrupts"] = 0,
-					["power"] = {
-						[3] = {
-							["spells"] = {
-								[5171] = 184,
-								[98440] = 150,
-							},
-							["amount"] = 334,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393912986,
 					["healingRequiredSources"] = {
 						["0x05800000086A8FAD"] = {
@@ -30186,7 +30174,14 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 350406,
-					["deathlog"] = {
+					["power"] = {
+						[3] = {
+							["spells"] = {
+								[5171] = 184,
+								[98440] = 150,
+							},
+							["amount"] = 334,
+						},
 					},
 					["id"] = "0x05800000086A8FAD",
 					["healing"] = 63896,
@@ -30196,8 +30191,8 @@ SkadaPerCharDB = {
 							["min"] = 6886,
 							["name"] = "Attack",
 							["count"] = 15,
+							["max"] = 10160,
 							["id"] = 6603,
-							["totalhits"] = 12,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -30205,15 +30200,15 @@ SkadaPerCharDB = {
 									["amount"] = 15,
 								},
 							},
-							["max"] = 10160,
+							["totalhits"] = 12,
 							["damage"] = 95406,
 						},
 						["Brew Explosion"] = {
 							["min"] = 55000,
 							["name"] = "Brew Explosion",
 							["count"] = 3,
+							["max"] = 100000,
 							["id"] = 106648,
-							["totalhits"] = 3,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -30231,7 +30226,7 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 100000,
+							["totalhits"] = 3,
 							["damage"] = 255000,
 						},
 					},
@@ -30245,7 +30240,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Tayclay",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -30435,16 +30431,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 71,
 					["interrupts"] = 0,
-					["power"] = {
-						[12] = {
-							["spells"] = {
-								[115072] = 2,
-								[129881] = 7,
-								[108557] = 20,
-							},
-							["amount"] = 29,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393912986,
 					["healingRequiredSources"] = {
 						["0x0400000005DF4D8D"] = {
@@ -30476,25 +30463,25 @@ SkadaPerCharDB = {
 									["name"] = "Rejuvenation",
 									["amount"] = 271241,
 								},
+								[145110] = {
+									["id"] = 145110,
+									["name"] = "Ysera's Gift",
+									["amount"] = 32927,
+								},
 								[18562] = {
 									["id"] = 18562,
 									["name"] = "Swiftmend",
 									["amount"] = 79152,
-								},
-								[33763] = {
-									["id"] = 33763,
-									["name"] = "Lifebloom",
-									["amount"] = 262039,
 								},
 								[48438] = {
 									["id"] = 48438,
 									["name"] = "Wild Growth",
 									["amount"] = 53922,
 								},
-								[145110] = {
-									["id"] = 145110,
-									["name"] = "Ysera's Gift",
-									["amount"] = 32927,
+								[33763] = {
+									["id"] = 33763,
+									["name"] = "Lifebloom",
+									["amount"] = 262039,
 								},
 							},
 						},
@@ -30904,7 +30891,15 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 971000,
-					["deathlog"] = {
+					["power"] = {
+						[12] = {
+							["spells"] = {
+								[115072] = 2,
+								[129881] = 7,
+								[108557] = 20,
+							},
+							["amount"] = 29,
+						},
 					},
 					["id"] = "0x0400000005DF4D8D",
 					["healing"] = 304859,
@@ -30914,8 +30909,8 @@ SkadaPerCharDB = {
 							["min"] = 75855,
 							["name"] = "Uppercut",
 							["count"] = 1,
+							["max"] = 75855,
 							["id"] = 80182,
-							["totalhits"] = 1,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -30923,15 +30918,15 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 75855,
+							["totalhits"] = 1,
 							["damage"] = 75855,
 						},
 						["Attack"] = {
 							["min"] = 6612,
 							["name"] = "Attack",
 							["count"] = 76,
+							["totalhits"] = 59,
 							["id"] = 6603,
-							["max"] = 119725,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -30939,7 +30934,7 @@ SkadaPerCharDB = {
 									["amount"] = 76,
 								},
 							},
-							["totalhits"] = 59,
+							["max"] = 119725,
 							["damage"] = 895145,
 						},
 					},
@@ -30958,7 +30953,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Pandatal",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 227340,
 					["alert"] = {
 					},
@@ -31073,16 +31069,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 69,
 					["interrupts"] = 0,
-					["power"] = {
-						[2] = {
-							["spells"] = {
-								[118974] = 33,
-								[82726] = 192,
-								[91954] = 56,
-							},
-							["amount"] = 281,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393912987,
 					["healingRequiredSources"] = {
 						["0x0400000005DF4D8D"] = {
@@ -31363,7 +31350,15 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 507232,
-					["deathlog"] = {
+					["power"] = {
+						[2] = {
+							["spells"] = {
+								[118974] = 33,
+								[82726] = 192,
+								[91954] = 56,
+							},
+							["amount"] = 281,
+						},
 					},
 					["id"] = "0x0280000003D8811C",
 					["healing"] = 0,
@@ -31373,8 +31368,8 @@ SkadaPerCharDB = {
 							["min"] = 68688,
 							["name"] = "Uppercut",
 							["count"] = 1,
+							["max"] = 68688,
 							["id"] = 80182,
-							["totalhits"] = 1,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -31382,15 +31377,15 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 68688,
+							["totalhits"] = 1,
 							["damage"] = 68688,
 						},
 						["Attack"] = {
 							["min"] = 7255,
 							["name"] = "Attack",
 							["count"] = 5,
+							["max"] = 206521,
 							["id"] = 6603,
-							["totalhits"] = 5,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -31398,7 +31393,7 @@ SkadaPerCharDB = {
 									["amount"] = 5,
 								},
 							},
-							["max"] = 206521,
+							["totalhits"] = 5,
 							["damage"] = 438544,
 						},
 					},
@@ -31407,7 +31402,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Disclosure",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -31534,8 +31530,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 66,
 					["interrupts"] = 0,
-					["power"] = {
-					},
+					["shielding"] = 0,
 					["first"] = 1393912990,
 					["healingRequiredSources"] = {
 						["0x0280000006546784"] = {
@@ -31676,7 +31671,7 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 73509,
-					["deathlog"] = {
+					["power"] = {
 					},
 					["id"] = "0x0280000006546784",
 					["healing"] = 45224,
@@ -31686,8 +31681,8 @@ SkadaPerCharDB = {
 							["min"] = 7295,
 							["name"] = "Attack",
 							["count"] = 8,
+							["max"] = 14936,
 							["id"] = 6603,
-							["totalhits"] = 8,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -31695,7 +31690,7 @@ SkadaPerCharDB = {
 									["amount"] = 8,
 								},
 							},
-							["max"] = 14936,
+							["totalhits"] = 8,
 							["damage"] = 73509,
 						},
 					},
@@ -31709,7 +31704,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Whispër",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -31877,8 +31873,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 66,
 					["interrupts"] = 0,
-					["power"] = {
-					},
+					["shielding"] = 0,
 					["first"] = 1393912991,
 					["healingRequiredSources"] = {
 						["0x0280000002E3A105"] = {
@@ -31901,7 +31896,7 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 108577,
-					["deathlog"] = {
+					["power"] = {
 					},
 					["id"] = "0x0280000002E3A105",
 					["healing"] = 1408836,
@@ -31911,8 +31906,8 @@ SkadaPerCharDB = {
 							["min"] = 8577,
 							["name"] = "Attack",
 							["count"] = 1,
+							["max"] = 8577,
 							["id"] = 6603,
-							["totalhits"] = 1,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -31920,15 +31915,15 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 8577,
+							["totalhits"] = 1,
 							["damage"] = 8577,
 						},
 						["Brew Explosion"] = {
 							["min"] = 100000,
 							["name"] = "Brew Explosion",
 							["count"] = 1,
+							["max"] = 100000,
 							["id"] = 106648,
-							["totalhits"] = 1,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -31936,7 +31931,7 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 100000,
+							["totalhits"] = 1,
 							["damage"] = 100000,
 						},
 					},
@@ -31970,7 +31965,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Herfinator",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -32103,7 +32099,11 @@ SkadaPerCharDB = {
 					["done"] = 355000,
 				},
 			},
-			["shielding"] = 0,
+			["power"] = {
+				[3] = 334,
+				[2] = 281,
+				[12] = 29,
+			},
 			["alertCount"] = 0,
 			["healing"] = 1822815,
 			["healingRequired"] = 1413885,
@@ -32112,7 +32112,7 @@ SkadaPerCharDB = {
 			["starttime"] = 1393912985,
 			["name"] = "Drunken Hozen Brawler",
 			["mobname"] = "Drunken Hozen Brawler",
-			["mobtaken"] = 45198871,
+			["shielding"] = 0,
 			["mobhdone"] = 0,
 			["last_action"] = 1393912985,
 			["endtime"] = 1393913057,
@@ -32126,12 +32126,7 @@ SkadaPerCharDB = {
 			["interrupts"] = 0,
 			["mobdone"] = 552071,
 			["overhealing"] = 462392,
-			["power"] = {
-				[3] = 146,
-				[2] = 86,
-				[12] = 10,
-				[0] = 24000,
-			},
+			["mobtaken"] = 7003499,
 			["damage"] = 7003499,
 			["players"] = {
 				{
@@ -32220,15 +32215,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 22,
 					["interrupts"] = 0,
-					["power"] = {
-						[3] = {
-							["spells"] = {
-								[5171] = 96,
-								[98440] = 50,
-							},
-							["amount"] = 146,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393912948,
 					["healingRequiredSources"] = {
 						["0x0280000002E3A105"] = {
@@ -32402,7 +32389,14 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["deathlog"] = {
+					["power"] = {
+						[3] = {
+							["spells"] = {
+								[5171] = 96,
+								[98440] = 50,
+							},
+							["amount"] = 146,
+						},
 					},
 					["id"] = "0x05800000086A8FAD",
 					["healing"] = 0,
@@ -32419,7 +32413,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Tayclay",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -32579,15 +32574,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 23,
 					["interrupts"] = 0,
-					["power"] = {
-						[12] = {
-							["spells"] = {
-								[108557] = 8,
-								[115072] = 2,
-							},
-							["amount"] = 10,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393912948,
 					["healingRequiredSources"] = {
 						["0x0400000005DF4D8D"] = {
@@ -32968,7 +32955,14 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 552071,
-					["deathlog"] = {
+					["power"] = {
+						[12] = {
+							["spells"] = {
+								[108557] = 8,
+								[115072] = 2,
+							},
+							["amount"] = 10,
+						},
 					},
 					["id"] = "0x0400000005DF4D8D",
 					["healing"] = 415324,
@@ -32978,8 +32972,8 @@ SkadaPerCharDB = {
 							["min"] = 30000,
 							["name"] = "Fire Strike",
 							["count"] = 1,
+							["max"] = 30000,
 							["id"] = 107176,
-							["totalhits"] = 1,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -32987,15 +32981,15 @@ SkadaPerCharDB = {
 									["amount"] = 1,
 								},
 							},
-							["max"] = 30000,
+							["totalhits"] = 1,
 							["damage"] = 30000,
 						},
 						["Attack"] = {
 							["min"] = 40421,
 							["name"] = "Attack",
 							["count"] = 14,
+							["max"] = 91998,
 							["id"] = 6603,
-							["totalhits"] = 10,
 							["buffs"] = {
 								[0] = {
 									["id"] = 0,
@@ -33003,7 +32997,7 @@ SkadaPerCharDB = {
 									["amount"] = 14,
 								},
 							},
-							["max"] = 91998,
+							["totalhits"] = 10,
 							["damage"] = 522071,
 						},
 					},
@@ -33017,7 +33011,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Pandatal",
 					["alertCount"] = 1,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 227340,
 					["alert"] = {
 						["High"] = {
@@ -33116,9 +33111,9 @@ SkadaPerCharDB = {
 							["absorbed"] = 0,
 						},
 					},
-					["power"] = {
+					["deathlog"] = {
 					},
-					["first"] = 1393912949,
+					["maxhp"] = 0,
 					["damage"] = 1247830,
 					["damagespells"] = {
 						["Incinerate"] = {
@@ -33209,9 +33204,10 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["shielding"] = 0,
+					["power"] = {
+					},
 					["id"] = "0x0280000006546784",
-					["healing"] = 0,
+					["first"] = 1393912949,
 					["dispells"] = 0,
 					["damagetakenspells"] = {
 						["Attack"] = {
@@ -33238,9 +33234,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Whispër",
 					["alertCount"] = 0,
-					["maxhp"] = 0,
-					["deathlog"] = {
-					},
+					["healing"] = 0,
+					["shielding"] = 0,
 					["alert"] = {
 					},
 					["multistrikes"] = 0,
@@ -33319,15 +33314,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 21,
 					["interrupts"] = 0,
-					["power"] = {
-						[2] = {
-							["spells"] = {
-								[118974] = 6,
-								[82726] = 80,
-							},
-							["amount"] = 86,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393912950,
 					["healingRequiredSources"] = {
 						["0x0280000002E3A105"] = {
@@ -33502,7 +33489,14 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["deathlog"] = {
+					["power"] = {
+						[2] = {
+							["spells"] = {
+								[118974] = 6,
+								[82726] = 80,
+							},
+							["amount"] = 86,
+						},
 					},
 					["id"] = "0x0280000003D8811C",
 					["healing"] = 0,
@@ -33514,7 +33508,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Disclosure",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -33655,14 +33650,7 @@ SkadaPerCharDB = {
 					},
 					["time"] = 21,
 					["interrupts"] = 0,
-					["power"] = {
-						[0] = {
-							["spells"] = {
-								[29166] = 24000,
-							},
-							["amount"] = 24000,
-						},
-					},
+					["shielding"] = 0,
 					["first"] = 1393912950,
 					["healingRequiredSources"] = {
 						["0x0280000002E3A105"] = {
@@ -33690,7 +33678,13 @@ SkadaPerCharDB = {
 					["deaths"] = {
 					},
 					["damagetaken"] = 0,
-					["deathlog"] = {
+					["power"] = {
+						[0] = {
+							["spells"] = {
+								[29166] = 24000,
+							},
+							["amount"] = 24000,
+						},
 					},
 					["id"] = "0x0280000002E3A105",
 					["healing"] = 533817,
@@ -33727,7 +33721,8 @@ SkadaPerCharDB = {
 					},
 					["name"] = "Herfinator",
 					["alertCount"] = 0,
-					["shielding"] = 0,
+					["deathlog"] = {
+					},
 					["maxhp"] = 0,
 					["alert"] = {
 					},
@@ -33818,7 +33813,12 @@ SkadaPerCharDB = {
 					["done"] = 0,
 				},
 			},
-			["shielding"] = 0,
+			["power"] = {
+				[3] = 146,
+				[2] = 86,
+				[12] = 10,
+				[0] = 24000,
+			},
 			["alertCount"] = 1,
 			["healing"] = 949141,
 			["healingRequired"] = 502567,
@@ -33827,7 +33827,7 @@ SkadaPerCharDB = {
 			["starttime"] = 1393912948,
 			["name"] = "Sodden Hozen Brawler",
 			["mobname"] = "Sodden Hozen Brawler",
-			["mobtaken"] = 7003499,
+			["shielding"] = 0,
 			["mobhdone"] = 0,
 			["last_action"] = 1393912948,
 			["endtime"] = 1393912971,
@@ -33979,107 +33979,107 @@ SkadaPerCharDB = {
 					{
 						["ts"] = 1393913341.565,
 						["amount"] = -30000,
+						["hp"] = 549058,
 						["spellid"] = 106851,
 						["srcname"] = "Yan-Zhu the Uncasked",
-						["hp"] = 549058,
 					}, -- [1]
 					{
 						["ts"] = 1393913343.649,
 						["amount"] = 5904,
+						["hp"] = 554962,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 554962,
 					}, -- [2]
 					{
 						["ts"] = 1393913344.575,
 						["amount"] = 5720,
+						["hp"] = 560682,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 560682,
 					}, -- [3]
 					{
 						["ts"] = 1393913345.317,
 						["amount"] = -20325,
+						["hp"] = 540357,
 						["spellid"] = 116155,
 						["srcname"] = "Yeasty Brew Alemental",
-						["hp"] = 540357,
 					}, -- [4]
 					{
 						["ts"] = 1393913345.495,
 						["amount"] = 5535,
+						["hp"] = 545892,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 545892,
 					}, -- [5]
 					{
 						["ts"] = 1393913333.425,
 						["amount"] = 8584,
+						["hp"] = 560457,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 560457,
 					}, -- [6]
 					{
 						["ts"] = 1393913334.351,
 						["amount"] = 8297,
+						["hp"] = 568754,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 568754,
 					}, -- [7]
 					{
 						["ts"] = 1393913335.282,
 						["amount"] = 4005,
+						["hp"] = 572759,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 572759,
 					}, -- [8]
 					{
 						["ts"] = 1393913336.19,
 						["amount"] = 3862,
+						["hp"] = 576621,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 576621,
 					}, -- [9]
 					{
 						["ts"] = 1393913337.09,
 						["amount"] = 2437,
+						["hp"] = 579058,
 						["spellid"] = 81269,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 579058,
 					}, -- [10]
 					{
 						["ts"] = 1393913337.124,
 						["amount"] = 0,
+						["hp"] = 579058,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 579058,
 					}, -- [11]
 					{
 						["ts"] = 1393913337.488,
 						["amount"] = 0,
+						["hp"] = 579058,
 						["spellid"] = 127802,
 						["srcname"] = "Tayclay-Deathwing",
-						["hp"] = 579058,
 					}, -- [12]
 					{
 						["ts"] = 1393913338.046,
 						["amount"] = 0,
+						["hp"] = 579058,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 579058,
 					}, -- [13]
 					{
 						["ts"] = 1393913339.117,
 						["amount"] = 0,
+						["hp"] = 579058,
 						["spellid"] = 81269,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 579058,
 					}, -- [14]
 					{
 						["ts"] = 1393913341.104,
 						["amount"] = 0,
+						["hp"] = 579058,
 						["spellid"] = 81269,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 579058,
 					}, -- [15]
 					["pos"] = 6,
 				},
@@ -34445,8 +34445,8 @@ SkadaPerCharDB = {
 						["min"] = 55000,
 						["name"] = "Brew Explosion",
 						["count"] = 3,
+						["max"] = 100000,
 						["id"] = 106648,
-						["totalhits"] = 3,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -34464,15 +34464,15 @@ SkadaPerCharDB = {
 								["amount"] = 1,
 							},
 						},
-						["max"] = 100000,
+						["totalhits"] = 3,
 						["damage"] = 255000,
 					},
 					["Explosive Brew"] = {
 						["min"] = 30000,
 						["name"] = "Explosive Brew",
 						["count"] = 4,
+						["max"] = 60000,
 						["id"] = 114291,
-						["totalhits"] = 4,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -34490,15 +34490,15 @@ SkadaPerCharDB = {
 								["amount"] = 1,
 							},
 						},
-						["max"] = 60000,
+						["totalhits"] = 4,
 						["damage"] = 210000,
 					},
 					["Furlwind"] = {
 						["min"] = 35789,
 						["name"] = "Furlwind",
 						["count"] = 1,
+						["max"] = 35789,
 						["id"] = 112993,
-						["totalhits"] = 1,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -34506,15 +34506,15 @@ SkadaPerCharDB = {
 								["amount"] = 1,
 							},
 						},
-						["max"] = 35789,
+						["totalhits"] = 1,
 						["damage"] = 35789,
 					},
 					["Brew Bolt"] = {
 						["min"] = 19736,
 						["name"] = "Brew Bolt",
 						["count"] = 5,
+						["max"] = 50999,
 						["id"] = 116155,
-						["totalhits"] = 5,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -34522,15 +34522,15 @@ SkadaPerCharDB = {
 								["amount"] = 5,
 							},
 						},
-						["max"] = 50999,
+						["totalhits"] = 5,
 						["damage"] = 150431,
 					},
 					["Blackout Brew"] = {
 						["min"] = 15000,
 						["name"] = "Blackout Brew",
 						["count"] = 4,
+						["max"] = 30000,
 						["id"] = 106851,
-						["totalhits"] = 4,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -34548,15 +34548,15 @@ SkadaPerCharDB = {
 								["amount"] = 1,
 							},
 						},
-						["max"] = 30000,
+						["totalhits"] = 4,
 						["damage"] = 105000,
 					},
 					["Attack"] = {
 						["min"] = 1577,
 						["name"] = "Attack",
 						["count"] = 27,
+						["max"] = 83953,
 						["id"] = 6603,
-						["totalhits"] = 24,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -34574,7 +34574,7 @@ SkadaPerCharDB = {
 								["amount"] = 1,
 							},
 						},
-						["max"] = 83953,
+						["totalhits"] = 24,
 						["damage"] = 347712,
 					},
 				},
@@ -35606,107 +35606,107 @@ SkadaPerCharDB = {
 					{
 						["ts"] = 1394153693.52,
 						["amount"] = 0,
+						["srcname"] = "Pandatal",
 						["hp"] = 665173,
 						["spellid"] = 132463,
-						["srcname"] = "Pandatal",
 					}, -- [1]
 					{
 						["ts"] = 1394153694.264,
 						["amount"] = 0,
+						["hp"] = 665173,
 						["spellid"] = 132463,
 						["srcname"] = "Pandatal",
-						["hp"] = 665173,
 					}, -- [2]
 					{
 						["ts"] = 1394153708.297,
 						["amount"] = 0,
+						["hp"] = 665173,
 						["spellid"] = 132463,
 						["srcname"] = "Pandatal",
-						["hp"] = 665173,
 					}, -- [3]
 					{
 						["ts"] = 1394153708.929,
 						["amount"] = 0,
+						["hp"] = 665173,
 						["spellid"] = 132463,
 						["srcname"] = "Pandatal",
-						["hp"] = 665173,
 					}, -- [4]
 					{
 						["ts"] = 1394153709.447,
 						["amount"] = 0,
+						["hp"] = 665173,
 						["spellid"] = 132463,
 						["srcname"] = "Pandatal",
-						["hp"] = 665173,
 					}, -- [5]
 					{
 						["ts"] = 1394153709.932,
 						["amount"] = 0,
+						["hp"] = 665173,
 						["spellid"] = 132463,
 						["srcname"] = "Pandatal",
-						["hp"] = 665173,
 					}, -- [6]
 					{
 						["ts"] = 1394153726.549,
 						["amount"] = 0,
+						["hp"] = 665173,
 						["spellid"] = 132463,
 						["srcname"] = "Pandatal",
-						["hp"] = 665173,
 					}, -- [7]
 					{
 						["ts"] = 1394153727.159,
 						["amount"] = 0,
+						["hp"] = 665173,
 						["spellid"] = 132463,
 						["srcname"] = "Pandatal",
-						["hp"] = 665173,
 					}, -- [8]
 					{
 						["ts"] = 1394153727.768,
 						["amount"] = 0,
+						["hp"] = 665173,
 						["spellid"] = 132463,
 						["srcname"] = "Pandatal",
-						["hp"] = 665173,
 					}, -- [9]
 					{
 						["ts"] = 1394153728.314,
 						["amount"] = 0,
+						["hp"] = 665173,
 						["spellid"] = 132463,
 						["srcname"] = "Pandatal",
-						["hp"] = 665173,
 					}, -- [10]
 					{
 						["ts"] = 1394153837.451,
 						["amount"] = 0,
+						["hp"] = 665173,
 						["spellid"] = 132463,
 						["srcname"] = "Pandatal",
-						["hp"] = 665173,
 					}, -- [11]
 					{
 						["ts"] = 1394153838.091,
 						["amount"] = 0,
+						["hp"] = 665173,
 						["spellid"] = 132463,
 						["srcname"] = "Pandatal",
-						["hp"] = 665173,
 					}, -- [12]
 					{
 						["ts"] = 1394153838.821,
 						["amount"] = 0,
+						["hp"] = 665173,
 						["spellid"] = 132463,
 						["srcname"] = "Pandatal",
-						["hp"] = 665173,
 					}, -- [13]
 					{
 						["ts"] = 1394153839.921,
 						["amount"] = 0,
+						["hp"] = 665173,
 						["spellid"] = 132463,
 						["srcname"] = "Pandatal",
-						["hp"] = 665173,
 					}, -- [14]
 					{
 						["ts"] = 1394153692.924,
 						["amount"] = 0,
+						["hp"] = 665173,
 						["spellid"] = 132463,
 						["srcname"] = "Pandatal",
-						["hp"] = 665173,
 					}, -- [15]
 					["pos"] = 15,
 				},
@@ -35718,8 +35718,8 @@ SkadaPerCharDB = {
 						["min"] = 100000,
 						["name"] = "Spicy Explosion",
 						["count"] = 1,
+						["max"] = 100000,
 						["id"] = 107205,
-						["totalhits"] = 1,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -35727,15 +35727,15 @@ SkadaPerCharDB = {
 								["amount"] = 1,
 							},
 						},
-						["max"] = 100000,
+						["totalhits"] = 1,
 						["damage"] = 100000,
 					},
 					["Brew Bolt"] = {
 						["min"] = 19808,
 						["name"] = "Brew Bolt",
 						["count"] = 11,
+						["max"] = 50467,
 						["id"] = 115650,
-						["totalhits"] = 11,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -35743,15 +35743,15 @@ SkadaPerCharDB = {
 								["amount"] = 11,
 							},
 						},
-						["max"] = 50467,
+						["totalhits"] = 11,
 						["damage"] = 251792,
 					},
 					["Uppercut"] = {
 						["min"] = 75855,
 						["name"] = "Uppercut",
 						["count"] = 1,
+						["max"] = 75855,
 						["id"] = 80182,
-						["totalhits"] = 1,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -35759,15 +35759,15 @@ SkadaPerCharDB = {
 								["amount"] = 1,
 							},
 						},
-						["max"] = 75855,
+						["totalhits"] = 1,
 						["damage"] = 75855,
 					},
 					["Explosive Brew"] = {
 						["min"] = 60000,
 						["name"] = "Explosive Brew",
 						["count"] = 4,
+						["max"] = 60000,
 						["id"] = 114291,
-						["totalhits"] = 4,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -35775,15 +35775,15 @@ SkadaPerCharDB = {
 								["amount"] = 4,
 							},
 						},
-						["max"] = 60000,
+						["totalhits"] = 4,
 						["damage"] = 240000,
 					},
 					["Blackout Brew"] = {
 						["min"] = 30000,
 						["name"] = "Blackout Brew",
 						["count"] = 4,
+						["max"] = 30000,
 						["id"] = 106851,
-						["totalhits"] = 3,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -35791,15 +35791,15 @@ SkadaPerCharDB = {
 								["amount"] = 4,
 							},
 						},
-						["max"] = 30000,
+						["totalhits"] = 3,
 						["damage"] = 90000,
 					},
 					["Fire Strike"] = {
 						["min"] = 30000,
 						["name"] = "Fire Strike",
 						["count"] = 1,
+						["max"] = 30000,
 						["id"] = 107176,
-						["totalhits"] = 1,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -35807,15 +35807,15 @@ SkadaPerCharDB = {
 								["amount"] = 1,
 							},
 						},
-						["max"] = 30000,
+						["totalhits"] = 1,
 						["damage"] = 30000,
 					},
 					["Furlwind"] = {
 						["min"] = 36432,
 						["name"] = "Furlwind",
 						["count"] = 1,
+						["max"] = 36432,
 						["id"] = 112993,
-						["totalhits"] = 1,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -35823,15 +35823,15 @@ SkadaPerCharDB = {
 								["amount"] = 1,
 							},
 						},
-						["max"] = 36432,
+						["totalhits"] = 1,
 						["damage"] = 36432,
 					},
 					["Attack"] = {
 						["min"] = 1317,
 						["name"] = "Attack",
 						["count"] = 177,
+						["max"] = 119725,
 						["id"] = 6603,
-						["totalhits"] = 124,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -35839,7 +35839,7 @@ SkadaPerCharDB = {
 								["amount"] = 177,
 							},
 						},
-						["max"] = 119725,
+						["totalhits"] = 124,
 						["damage"] = 2370169,
 					},
 				},
@@ -36063,107 +36063,107 @@ SkadaPerCharDB = {
 					{
 						["ts"] = 1393913306.157,
 						["amount"] = 0,
+						["hp"] = 893761,
 						["spellid"] = 63106,
 						["srcname"] = "Whispër-Velen",
-						["hp"] = 893761,
 					}, -- [1]
 					{
 						["ts"] = 1393913331.601,
 						["amount"] = 0,
+						["hp"] = 893761,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 893761,
 					}, -- [2]
 					{
 						["ts"] = 1393913332.506,
 						["amount"] = 0,
+						["hp"] = 893761,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 893761,
 					}, -- [3]
 					{
 						["ts"] = 1393913333.425,
 						["amount"] = 0,
+						["hp"] = 893761,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 893761,
 					}, -- [4]
 					{
 						["ts"] = 1393913334.351,
 						["amount"] = 0,
+						["hp"] = 893761,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 893761,
 					}, -- [5]
 					{
 						["ts"] = 1393913335.282,
 						["amount"] = 0,
+						["hp"] = 893761,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 893761,
 					}, -- [6]
 					{
 						["ts"] = 1393913336.202,
 						["amount"] = 0,
+						["hp"] = 893761,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 893761,
 					}, -- [7]
 					{
 						["ts"] = 1393913337.124,
 						["amount"] = 0,
+						["hp"] = 893761,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 893761,
 					}, -- [8]
 					{
 						["ts"] = 1393913338.046,
 						["amount"] = 0,
+						["hp"] = 893761,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 893761,
 					}, -- [9]
 					{
 						["ts"] = 1393913341.922,
 						["amount"] = 0,
+						["hp"] = 893761,
 						["spellid"] = 63106,
 						["srcname"] = "Whispër-Velen",
-						["hp"] = 893761,
 					}, -- [10]
 					{
 						["ts"] = 1393913343.649,
 						["amount"] = 0,
+						["hp"] = 893761,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 893761,
 					}, -- [11]
 					{
 						["ts"] = 1393913344.575,
 						["amount"] = 0,
+						["hp"] = 893761,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 893761,
 					}, -- [12]
 					{
 						["ts"] = 1393913345.495,
 						["amount"] = 0,
+						["hp"] = 893761,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 893761,
 					}, -- [13]
 					{
 						["ts"] = 1393913283.788,
 						["amount"] = 0,
+						["hp"] = 893761,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 893761,
 					}, -- [14]
 					{
 						["ts"] = 1393913303.338,
 						["amount"] = 0,
+						["hp"] = 893761,
 						["spellid"] = 63106,
 						["srcname"] = "Whispër-Velen",
-						["hp"] = 893761,
 					}, -- [15]
 					["pos"] = 14,
 				},
@@ -36349,8 +36349,8 @@ SkadaPerCharDB = {
 						["min"] = 18445,
 						["name"] = "Brew Bolt",
 						["count"] = 2,
+						["max"] = 68443,
 						["id"] = 116155,
-						["totalhits"] = 2,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -36358,15 +36358,15 @@ SkadaPerCharDB = {
 								["amount"] = 2,
 							},
 						},
-						["max"] = 68443,
+						["totalhits"] = 2,
 						["damage"] = 86888,
 					},
 					["Explosive Brew"] = {
 						["min"] = 54000,
 						["name"] = "Explosive Brew",
 						["count"] = 3,
+						["max"] = 54000,
 						["id"] = 114291,
-						["totalhits"] = 3,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -36374,7 +36374,7 @@ SkadaPerCharDB = {
 								["amount"] = 3,
 							},
 						},
-						["max"] = 54000,
+						["totalhits"] = 3,
 						["damage"] = 162000,
 					},
 					["Furlwind"] = {
@@ -36394,8 +36394,8 @@ SkadaPerCharDB = {
 						["min"] = 27000,
 						["name"] = "Blackout Brew",
 						["count"] = 4,
+						["max"] = 27000,
 						["id"] = 106851,
-						["totalhits"] = 2,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -36403,15 +36403,15 @@ SkadaPerCharDB = {
 								["amount"] = 4,
 							},
 						},
-						["max"] = 27000,
+						["totalhits"] = 2,
 						["damage"] = 54000,
 					},
 					["Attack"] = {
 						["min"] = 1287,
 						["name"] = "Attack",
 						["count"] = 22,
+						["totalhits"] = 21,
 						["id"] = 6603,
-						["max"] = 14936,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -36419,7 +36419,7 @@ SkadaPerCharDB = {
 								["amount"] = 22,
 							},
 						},
-						["totalhits"] = 21,
+						["max"] = 14936,
 						["damage"] = 95176,
 					},
 				},
@@ -36603,107 +36603,107 @@ SkadaPerCharDB = {
 					{
 						["ts"] = 1393913332.506,
 						["amount"] = 0,
+						["hp"] = 569801,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 569801,
 					}, -- [1]
 					{
 						["ts"] = 1393913332.728,
 						["amount"] = -30000,
+						["hp"] = 539801,
 						["spellid"] = 106851,
 						["srcname"] = "Yan-Zhu the Uncasked",
-						["hp"] = 539801,
 					}, -- [2]
 					{
 						["ts"] = 1393913333.438,
 						["amount"] = 4721,
+						["hp"] = 544522,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 544522,
 					}, -- [3]
 					{
 						["ts"] = 1393913334.351,
 						["amount"] = 9127,
+						["hp"] = 553649,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 553649,
 					}, -- [4]
 					{
 						["ts"] = 1393913335.078,
 						["amount"] = 16152,
+						["hp"] = 569801,
 						["spellid"] = 149254,
 						["srcname"] = "Disclosure-BurningBlade",
-						["hp"] = 569801,
 					}, -- [5]
 					{
 						["ts"] = 1393913335.282,
 						["amount"] = 0,
+						["hp"] = 569801,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 569801,
 					}, -- [6]
 					{
 						["ts"] = 1393913336.19,
 						["amount"] = 0,
+						["hp"] = 569801,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 569801,
 					}, -- [7]
 					{
 						["ts"] = 1393913337.124,
 						["amount"] = 0,
+						["hp"] = 569801,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 569801,
 					}, -- [8]
 					{
 						["ts"] = 1393913338.046,
 						["amount"] = 0,
+						["hp"] = 569801,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 569801,
 					}, -- [9]
 					{
 						["ts"] = 1393913343.649,
 						["amount"] = 0,
+						["hp"] = 569801,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 569801,
 					}, -- [10]
 					{
 						["ts"] = 1393913343.885,
 						["amount"] = -30000,
+						["hp"] = 539801,
 						["spellid"] = 106851,
 						["srcname"] = "Yan-Zhu the Uncasked",
-						["hp"] = 539801,
 					}, -- [11]
 					{
 						["ts"] = 1393913344.575,
 						["amount"] = 12584,
+						["hp"] = 552385,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 552385,
 					}, -- [12]
 					{
 						["ts"] = 1393913345.152,
 						["amount"] = 17416,
+						["hp"] = 569801,
 						["spellid"] = 149254,
 						["srcname"] = "Disclosure-BurningBlade",
-						["hp"] = 569801,
 					}, -- [13]
 					{
 						["ts"] = 1393913345.495,
 						["amount"] = 0,
+						["hp"] = 569801,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 569801,
 					}, -- [14]
 					{
 						["ts"] = 1393913331.601,
 						["amount"] = 0,
+						["hp"] = 569801,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 569801,
 					}, -- [15]
 					["pos"] = 15,
 				},
@@ -37085,8 +37085,8 @@ SkadaPerCharDB = {
 						["min"] = 68688,
 						["name"] = "Uppercut",
 						["count"] = 1,
+						["max"] = 68688,
 						["id"] = 80182,
-						["totalhits"] = 1,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -37094,15 +37094,15 @@ SkadaPerCharDB = {
 								["amount"] = 1,
 							},
 						},
-						["max"] = 68688,
+						["totalhits"] = 1,
 						["damage"] = 68688,
 					},
 					["Brew Bolt"] = {
 						["min"] = 19824,
 						["name"] = "Brew Bolt",
 						["count"] = 3,
+						["max"] = 48981,
 						["id"] = 115650,
-						["totalhits"] = 3,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -37110,15 +37110,15 @@ SkadaPerCharDB = {
 								["amount"] = 3,
 							},
 						},
-						["max"] = 48981,
+						["totalhits"] = 3,
 						["damage"] = 88681,
 					},
 					["Blackout Brew"] = {
 						["min"] = 30000,
 						["name"] = "Blackout Brew",
 						["count"] = 4,
+						["max"] = 30000,
 						["id"] = 106851,
-						["totalhits"] = 4,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -37126,15 +37126,15 @@ SkadaPerCharDB = {
 								["amount"] = 4,
 							},
 						},
-						["max"] = 30000,
+						["totalhits"] = 4,
 						["damage"] = 120000,
 					},
 					["Attack"] = {
 						["min"] = 1288,
 						["name"] = "Attack",
 						["count"] = 22,
+						["max"] = 206521,
 						["id"] = 6603,
-						["totalhits"] = 21,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -37142,7 +37142,7 @@ SkadaPerCharDB = {
 								["amount"] = 22,
 							},
 						},
-						["max"] = 206521,
+						["totalhits"] = 21,
 						["damage"] = 603260,
 					},
 				},
@@ -37205,18 +37205,18 @@ SkadaPerCharDB = {
 						["uptime"] = 3813,
 						["auratype"] = "BUFF",
 					},
+					["Rejuvenation"] = {
+						["name"] = "Rejuvenation",
+						["active"] = 3,
+						["id"] = 774,
+						["uptime"] = 3859,
+						["auratype"] = "BUFF",
+					},
 					["Innervate"] = {
 						["name"] = "Innervate",
 						["active"] = 0,
 						["id"] = 29166,
 						["uptime"] = 20,
-						["auratype"] = "BUFF",
-					},
-					["Efflorescence"] = {
-						["name"] = "Efflorescence",
-						["active"] = 5,
-						["id"] = 81262,
-						["uptime"] = 3887,
 						["auratype"] = "BUFF",
 					},
 					["Displacer Beast"] = {
@@ -37226,11 +37226,11 @@ SkadaPerCharDB = {
 						["uptime"] = 8,
 						["auratype"] = "BUFF",
 					},
-					["Rejuvenation"] = {
-						["name"] = "Rejuvenation",
-						["active"] = 3,
-						["id"] = 774,
-						["uptime"] = 3859,
+					["Efflorescence"] = {
+						["name"] = "Efflorescence",
+						["active"] = 5,
+						["id"] = 81262,
+						["uptime"] = 3887,
 						["auratype"] = "BUFF",
 					},
 					["Cat Form"] = {
@@ -37353,107 +37353,107 @@ SkadaPerCharDB = {
 					{
 						["ts"] = 1393913331.377,
 						["amount"] = 0,
+						["hp"] = 520580,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 520580,
 					}, -- [1]
 					{
 						["ts"] = 1393913332.301,
 						["amount"] = 0,
+						["hp"] = 520580,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 520580,
 					}, -- [2]
 					{
 						["ts"] = 1393913333.221,
 						["amount"] = 0,
+						["hp"] = 520580,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 520580,
 					}, -- [3]
 					{
 						["ts"] = 1393913333.29,
 						["amount"] = -30000,
+						["hp"] = 490580,
 						["spellid"] = 106851,
 						["srcname"] = "Yan-Zhu the Uncasked",
-						["hp"] = 490580,
 					}, -- [4]
 					{
 						["ts"] = 1393913333.776,
 						["amount"] = 30000,
+						["hp"] = 520580,
 						["spellid"] = 145109,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 520580,
 					}, -- [5]
 					{
 						["ts"] = 1393913334.143,
 						["amount"] = 0,
+						["hp"] = 520580,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 520580,
 					}, -- [6]
 					{
 						["ts"] = 1393913335.057,
 						["amount"] = 0,
+						["hp"] = 520580,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 520580,
 					}, -- [7]
 					{
 						["ts"] = 1393913335.983,
 						["amount"] = 0,
+						["hp"] = 520580,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 520580,
 					}, -- [8]
 					{
 						["ts"] = 1393913336.907,
 						["amount"] = 0,
+						["hp"] = 520580,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 520580,
 					}, -- [9]
 					{
 						["ts"] = 1393913337.825,
 						["amount"] = 0,
+						["hp"] = 520580,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 520580,
 					}, -- [10]
 					{
 						["ts"] = 1393913343.512,
 						["amount"] = 0,
+						["hp"] = 520580,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 520580,
 					}, -- [11]
 					{
 						["ts"] = 1393913343.726,
 						["amount"] = -30000,
+						["hp"] = 490580,
 						["spellid"] = 106851,
 						["srcname"] = "Yan-Zhu the Uncasked",
-						["hp"] = 490580,
 					}, -- [12]
 					{
 						["ts"] = 1393913343.79,
 						["amount"] = 30000,
+						["hp"] = 520580,
 						["spellid"] = 145109,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 520580,
 					}, -- [13]
 					{
 						["ts"] = 1393913344.438,
 						["amount"] = 0,
+						["hp"] = 520580,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 520580,
 					}, -- [14]
 					{
 						["ts"] = 1393913345.365,
 						["amount"] = 0,
+						["hp"] = 520580,
 						["spellid"] = 48438,
 						["srcname"] = "Herfinator-BurningBlade",
-						["hp"] = 520580,
 					}, -- [15]
 					["pos"] = 1,
 				},
@@ -37522,8 +37522,8 @@ SkadaPerCharDB = {
 						["min"] = 100000,
 						["name"] = "Brew Explosion",
 						["count"] = 1,
+						["max"] = 100000,
 						["id"] = 106648,
-						["totalhits"] = 1,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -37531,15 +37531,15 @@ SkadaPerCharDB = {
 								["amount"] = 1,
 							},
 						},
-						["max"] = 100000,
+						["totalhits"] = 1,
 						["damage"] = 100000,
 					},
 					["Explosive Brew"] = {
 						["min"] = 60000,
 						["name"] = "Explosive Brew",
 						["count"] = 2,
+						["max"] = 60000,
 						["id"] = 114291,
-						["totalhits"] = 2,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -37547,15 +37547,15 @@ SkadaPerCharDB = {
 								["amount"] = 2,
 							},
 						},
-						["max"] = 60000,
+						["totalhits"] = 2,
 						["damage"] = 120000,
 					},
 					["Blackout Brew"] = {
 						["min"] = 30000,
 						["name"] = "Blackout Brew",
 						["count"] = 4,
+						["max"] = 30000,
 						["id"] = 106851,
-						["totalhits"] = 4,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -37563,15 +37563,15 @@ SkadaPerCharDB = {
 								["amount"] = 4,
 							},
 						},
-						["max"] = 30000,
+						["totalhits"] = 4,
 						["damage"] = 120000,
 					},
 					["Brew Bolt"] = {
 						["min"] = 19786,
 						["name"] = "Brew Bolt",
 						["count"] = 4,
+						["max"] = 20244,
 						["id"] = 116155,
-						["totalhits"] = 4,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -37579,15 +37579,15 @@ SkadaPerCharDB = {
 								["amount"] = 4,
 							},
 						},
-						["max"] = 20244,
+						["totalhits"] = 4,
 						["damage"] = 80289,
 					},
 					["Attack"] = {
 						["min"] = 1443,
 						["name"] = "Attack",
 						["count"] = 28,
+						["max"] = 8577,
 						["id"] = 6603,
-						["totalhits"] = 27,
 						["buffs"] = {
 							[0] = {
 								["id"] = 0,
@@ -37595,7 +37595,7 @@ SkadaPerCharDB = {
 								["amount"] = 28,
 							},
 						},
-						["max"] = 8577,
+						["totalhits"] = 27,
 						["damage"] = 56893,
 					},
 				},
@@ -37842,8 +37842,7 @@ SkadaPerCharDB = {
 				["time"] = 0,
 				["interrupts"] = 0,
 				["alertDamage"] = 0,
-				["power"] = {
-				},
+				["shielding"] = 0,
 				["healingRequiredSources"] = {
 					["0x0400000005DF4D8D"] = {
 						["name"] = "Pandatal",
@@ -37865,7 +37864,7 @@ SkadaPerCharDB = {
 				["deaths"] = {
 				},
 				["damagetaken"] = 0,
-				["deathlog"] = {
+				["power"] = {
 				},
 				["id"] = "0x0400000006837F30",
 				["maxhp"] = 0,
@@ -37877,7 +37876,8 @@ SkadaPerCharDB = {
 				},
 				["name"] = "Larazz",
 				["alertCount"] = 0,
-				["shielding"] = 0,
+				["deathlog"] = {
+				},
 				["overhealing"] = 0,
 				["alert"] = {
 				},
@@ -37896,8 +37896,7 @@ SkadaPerCharDB = {
 				["time"] = 1,
 				["interrupts"] = 0,
 				["alertDamage"] = 0,
-				["power"] = {
-				},
+				["shielding"] = 0,
 				["healingRequiredSources"] = {
 					["0x0400000005DF4D8D"] = {
 						["name"] = "Pandatal",
@@ -37919,7 +37918,7 @@ SkadaPerCharDB = {
 				["deaths"] = {
 				},
 				["damagetaken"] = 0,
-				["deathlog"] = {
+				["power"] = {
 				},
 				["id"] = "0x04000000070BC18F",
 				["maxhp"] = 0,
@@ -37931,7 +37930,8 @@ SkadaPerCharDB = {
 				},
 				["name"] = "Kotorii",
 				["alertCount"] = 0,
-				["shielding"] = 0,
+				["deathlog"] = {
+				},
 				["overhealing"] = 0,
 				["alert"] = {
 				},
@@ -38058,7 +38058,8 @@ SkadaPerCharDB = {
 				["time"] = 0,
 				["interrupts"] = 0,
 				["alertDamage"] = 0,
-				["shielding"] = 0,
+				["power"] = {
+				},
 				["healingRequiredSources"] = {
 					["0x0400000005DF4D8D"] = {
 						["name"] = "Pandatal",
@@ -38080,8 +38081,7 @@ SkadaPerCharDB = {
 				["deaths"] = {
 				},
 				["damagetaken"] = 0,
-				["deathlog"] = {
-				},
+				["shielding"] = 0,
 				["id"] = "0xF140DF603401B907",
 				["maxhp"] = 0,
 				["healingRequired"] = 53891,
@@ -38092,7 +38092,7 @@ SkadaPerCharDB = {
 				},
 				["name"] = "Water Elemental",
 				["alertCount"] = 0,
-				["power"] = {
+				["deathlog"] = {
 				},
 				["overhealing"] = 0,
 				["alert"] = {

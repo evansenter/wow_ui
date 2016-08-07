@@ -1,14 +1,14 @@
-VER 3 0100000000000004 "Cancel SEF" "INV_MISC_QUESTIONMARK"
-#showtooltip Storm, Earth, and Fire
-/cancelaura Storm, Earth, and Fire
-END
 VER 3 0100000000000001 "Detox" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /use [@mouseover,help,nodead][]Detox
 END
+VER 3 010000000000000F "Effuse" "INV_MISC_QUESTIONMARK"
+#showtooltip Effuse
+/use [@mouseover,help,nodead][]Effuse
+END
 VER 3 0100000000000015 "Enveloping Mist" "INV_MISC_QUESTIONMARK"
 #showtooltip Enveloping Mist
-/use 14
+/use 13
 /use [@mouseover,help,nodead][]Enveloping Mist
 END
 VER 3 0100000000000013 "Life Cocoon" "INV_MISC_QUESTIONMARK"
@@ -20,59 +20,47 @@ VER 3 0100000000000014 "Renewing Mist" "INV_MISC_QUESTIONMARK"
 /use Thunder Focus Tea
 /use [@mouseover,help,nodead][]Renewing Mist
 END
-VER 3 0100000000000008 "RoP" "INV_MISC_QUESTIONMARK"
+VER 3 010000000000001A "SCK" "INV_Misc_QuestionMark"
 #showtooltip
-/use [@player]Ring of Peace
+/use [nochanneling]Spinning Crane Kick
 END
-VER 3 0100000000000016 "Soothing Mist" "INV_MISC_QUESTIONMARK"
+VER 3 0100000000000017 "Tier 1 MW" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/use [@mouseover,help,nodead][]Soothing Mist
+/use [talent:1/1]Chi Burst;[talent:1/2,@mouseover,help,nodead]Zen Pulse;[talent:1/2]Zen Pulse;[talent:1/3,@mouseover,help,nodead]Mistwalk;[talent:1/3]Mistwalk
 END
-VER 3 010000000000000F "Surging Mist" "INV_MISC_QUESTIONMARK"
-#showtooltip Surging Mist
-/use [@mouseover,help,nodead][]Surging Mist
-END
-VER 3 0100000000000006 "TEB" "INV_MISC_QUESTIONMARK"
-#showtooltip Tigereye Brew
-/use 13
-/use 14
-/cast Tigereye Brew
-END
-VER 3 0100000000000011 "Tier 2" "INV_MISC_QUESTIONMARK"
+VER 3 010000000000001F "Tier 1 WW" "INV_Misc_QuestionMark"
 #showtooltip
-/use [talent:2/1,nochanneling:Fists of Fury]Chi Wave;[talent:2/2,@player,nochanneling:Fists of Fury]Zen Sphere;[talent:2/3,nochanneling:Fists of Fury]Chi Burst
+/use [talent:1/1,nochanneling]Chi Burst;[talent:1/2,nochanneling];Eye of the Tiger[talent:1/3,nochanneling]Chi Wave
 END
-VER 3 0100000000000017 "Tier 2 MW" "INV_MISC_QUESTIONMARK"
+VER 3 0100000000000011 "Tier 2 MW" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/use [talent:2/1,@mouseover,help,nodead]Chi Wave;[talent:2/1]Chi Wave;[talent:2/2,@player,@mouseover,help,nodead]Zen Sphere;[talent:2/3]Chi Burst
+/use [talent:2/1,nochanneling]Chi Wave;[talent:2/2,@player,nochanneling]Zen Sphere;[talent:2/3,nochanneling]Chi Burst
 END
-VER 3 0100000000000012 "Tier 4" "INV_MISC_QUESTIONMARK"
+VER 3 010000000000001C "Tier 5" "INV_Misc_QuestionMark"
 #showtooltip
-/use [talent:4/1,@player]Ring of Peace;[talent:4/2]Charging Ox Wave;[talent:4/3]Leg Sweep
+/use [talent:5/1]Healing Elixir;[talent:5/2]Diffuse Magic;[talent:5/3]Dampen Harm
 END
-VER 3 0100000000000010 "Tier 5" "INV_MISC_QUESTIONMARK"
+VER 3 010000000000001D "Tier 6 MW" "INV_Misc_QuestionMark"
 #showtooltip
-/use [talent:5/1]Healing Elixirs;[talent:5/2]Dampen Harm;[talent:5/3]Diffuse Magic
+/use [talent:6/1]Refreshing Jade Wind;[talent:6/2]Invoke Chi-Ji, the Red Crane;[talent:6/3]Summon Jade Serpent Statue
 END
-VER 3 0100000000000005 "Tier 6" "INV_MISC_QUESTIONMARK"
+VER 3 010000000000001B "Tiger's Lust" "INV_Misc_QuestionMark"
 #showtooltip
-/use [talent:6/2,nochanneling:Fists of Fury]Invoke Xuen, the White Tiger;[talent:6/1,nochanneling:Fists of Fury]Rushing Jade Wind
+/use [@mouseover,help,nodead][@player][]Tiger's Lust
 END
 VER 3 010000000000000E "ToD" "INV_MISC_QUESTIONMARK"
-#showtooltip Touch of Death
-/use Fortifying Brew
+#showtooltip
 /use [@mouseover,harm,nodead][] Touch of Death
-END
-VER 3 010000000000000D "ToK" "INV_MISC_QUESTIONMARK"
-#showtooltip Touch of Karma
-/use Fortifying Brew
-/use Touch of Karma
 END
 VER 3 0100000000000007 "Transcendence" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /use [nomod]Transcendence: Transfer;[mod:shift][mod:alt]Transcendence
 END
-VER 3 010000000000000C "Uplift" "INV_MISC_QUESTIONMARK"
-#showtooltip Uplift
-/use [@mouseover,help,nodead][]Uplift
+VER 3 0100000000000018 "Vivify" "INV_Misc_QuestionMark"
+#showtooltip
+/use [@mouseover,help,nodead][]Vivify
+END
+VER 3 010000000000001E "WDP" "INV_Misc_QuestionMark"
+#showtooltip
+/use [nochanneling]Whirling Dragon Punch
 END

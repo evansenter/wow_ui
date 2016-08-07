@@ -78,7 +78,7 @@ local methods = {
 	end,
 	
 	["SetBackgroundColor"] = function(self, color, alpha)
-		self.bg:SetTexture(color.R, color.G, color.B, alpha)
+		self.bg:SetColorTexture(color.R, color.G, color.B, alpha)
 	end,
 	
 	["SetBackgroundImage"] = function(self, image)
@@ -87,7 +87,7 @@ local methods = {
 	end,
 	
 	["SetHoverBackgroundColor"] = function(self, color, alpha)
-		self.hover:SetTexture(color.R, color.G, color.B, alpha)
+		self.hover:SetColorTexture(color.R, color.G, color.B, alpha)
 	end,
 	
 	["SetHoverBackgroundImage"] = function(self, image)

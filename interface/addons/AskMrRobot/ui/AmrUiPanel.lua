@@ -34,7 +34,7 @@ local methods = {
 	end,
 
 	["SetBackgroundColor"] = function(self, color, a)
-		self.bg:SetTexture(color.R, color.G, color.B, a or 1)
+		self.bg:SetColorTexture(color.R, color.G, color.B, a or 1)
 	end,
 	
 	-- set a transparent bg to make this panel invisible

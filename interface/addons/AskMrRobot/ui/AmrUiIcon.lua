@@ -55,7 +55,7 @@ local methods = {
 
 	["SetIcon"] = function(self, icon)
 		if not icon then
-			self.icon:SetTexture(0, 0, 0, 0)
+			self.icon:SetColorTexture(0, 0, 0, 0)
 		else
 			self.icon:SetTexture(icon)
 		end
@@ -66,11 +66,11 @@ local methods = {
 	end,
 	
 	["SetIconBorderColor"] = function(self, color, a)
-		self.bg:SetTexture(color.R, color.G, color.B, a or 1)
+		self.bg:SetColorTexture(color.R, color.G, color.B, a or 1)
 	end,
 	
 	["HideIconBorder"] = function(self)
-		self.bg:SetTexture(0, 0, 0, 0)
+		self.bg:SetColorTexture(0, 0, 0, 0)
 	end,
 	
 	["SetStrata"] = function(self, strata)
@@ -108,25 +108,25 @@ local function Constructor()
 	icon:SetTexCoord(0.05, 0.95, 0.05, 0.95)
 	
 	local borderTop = frame:CreateTexture(nil, "ARTWORK", nil, 2)
-	borderTop:SetTexture(0, 0, 0, 1)
+	borderTop:SetColorTexture(0, 0, 0, 1)
 	borderTop:SetHeight(1)
 	borderTop:SetPoint("TOPLEFT", icon, "TOPLEFT")
 	borderTop:SetPoint("TOPRIGHT", icon, "TOPRIGHT")
 	
 	local borderRight = frame:CreateTexture(nil, "ARTWORK", nil, 2)
-	borderRight:SetTexture(0, 0, 0, 1)
+	borderRight:SetColorTexture(0, 0, 0, 1)
 	borderRight:SetWidth(1)
 	borderRight:SetPoint("TOPRIGHT", icon, "TOPRIGHT")
 	borderRight:SetPoint("BOTTOMRIGHT", icon, "BOTTOMRIGHT")
 	
 	local borderBottom = frame:CreateTexture(nil, "ARTWORK", nil, 2)
-	borderBottom:SetTexture(0, 0, 0, 1)
+	borderBottom:SetColorTexture(0, 0, 0, 1)
 	borderBottom:SetHeight(1)
 	borderBottom:SetPoint("BOTTOMLEFT", icon, "BOTTOMLEFT")
 	borderBottom:SetPoint("BOTTOMRIGHT", icon, "BOTTOMRIGHT")
 	
 	local borderLeft = frame:CreateTexture(nil, "ARTWORK", nil, 2)
-	borderLeft:SetTexture(0, 0, 0, 1)
+	borderLeft:SetColorTexture(0, 0, 0, 1)
 	borderLeft:SetWidth(1)
 	borderLeft:SetPoint("TOPLEFT", icon, "TOPLEFT")
 	borderLeft:SetPoint("BOTTOMLEFT", icon, "BOTTOMLEFT")

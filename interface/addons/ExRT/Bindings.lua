@@ -16,3 +16,4 @@ for i=1,8 do
 	make("EXRTWM"..i, "/clearworldmarker "..i.."\n/worldmarker "..i, _G["WORLD_MARKER"..i])
 end
 make("EXRTCWM", "/clearworldmarker 0", REMOVE_WORLD_MARKERS)
+make("EXRTTOGGLENOTE", "/exrt note", ExRT.L.message)

@@ -186,11 +186,11 @@ local function Constructor()
 	frame:SetScrollChild(editbox)
 	
 	local border = frame:CreateTexture(nil, "BACKGROUND")
-	border:SetTexture(Amr.Colors.BorderGray.R, Amr.Colors.BorderGray.G, Amr.Colors.BorderGray.B, 1)
+	border:SetColorTexture(Amr.Colors.BorderGray.R, Amr.Colors.BorderGray.G, Amr.Colors.BorderGray.B, 1)
 	border:SetAllPoints(true)
 	
 	local bg = frame:CreateTexture(nil, "BORDER")
-	bg:SetTexture(Amr.Colors.BgInput.R, Amr.Colors.BgInput.G, Amr.Colors.BgInput.B, 1)
+	bg:SetColorTexture(Amr.Colors.BgInput.R, Amr.Colors.BgInput.G, Amr.Colors.BgInput.B, 1)
 	bg:SetPoint("TOPLEFT", frame, "TOPLEFT", 1, -1)
 	bg:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -1, 1)
 	

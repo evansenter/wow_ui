@@ -1,4 +1,4 @@
-local Type, Version = "WeakAurasDisplayButton", 21
+local Type, Version = "WeakAurasDisplayButton", 25
 local AceGUI = LibStub and LibStub("AceGUI-3.0", true)
 if not AceGUI or (AceGUI:GetWidgetVersion(Type) or 0) >= Version then return end
 
@@ -224,6 +224,12 @@ local methods = {
         function self.callbacks.OnDeleteAllClick()
             if (WeakAuras.IsImporting()) then return end;
             if(data.controlledChildren) then
+
+                local region = WeakAuras.regions[data.id];
+                if (region.ControlChildren) then
+                  region:Pause();
+                end
+
                 local toDelete = {};
                 for index, id in pairs(data.controlledChildren) do
                     toDelete[index] = WeakAuras.GetData(id);
@@ -335,6 +341,8 @@ local methods = {
         end
 
         function self.callbacks.OnViewClick()
+            WeakAuras.PauseAllDynamicGroups();
+
             if(self.view.func() == 2) then
                 for index, childId in ipairs(data.controlledChildren) do
                     WeakAuras.GetDisplayButton(childId):PriorityHide(2);
@@ -344,6 +352,8 @@ local methods = {
                     WeakAuras.GetDisplayButton(childId):PriorityShow(2);
                 end
             end
+
+            WeakAuras.ResumeAllDynamicGroups();
         end
 
         function self.callbacks.ViewTest()
@@ -425,7 +435,7 @@ local methods = {
         end
 
         function self.frame.terribleCodeOrganizationHackTable.OnHide()
-            WeakAuras.HideAllClones(data.id);
+            WeakAuras.CollapseAllClones(data.id);
         end
 
         self:SetTitle(data.id);
@@ -553,7 +563,7 @@ local methods = {
                 namestable[1] = L["No Children"];
             end
         else
-            for triggernum = 0, 9 do
+            for triggernum = 0, data.numTriggers or 9 do
                 local trigger;
                 if(triggernum == 0) then
                     trigger = data.trigger;
@@ -576,7 +586,7 @@ local methods = {
                                         end
                                     end
                                 end
-                                local icon = WeakAurasOptionsSaved.iconCache[name] or "Interface\\Icons\\INV_Misc_QuestionMark";
+                                local icon = WeakAuras.GetIconFromSpellCache(name) or "Interface\\Icons\\INV_Misc_QuestionMark";
                                 tinsert(namestable, {left, name, icon});
                             end
                         end
@@ -679,7 +689,7 @@ local methods = {
         self.frame.description = {...};
     end,
     ["SetIcon"] = function(self, icon)
-        if(type(icon) == "string") then
+        if(type(icon) == "string" or type(icon) == "number") then
             self.icon:SetTexture(icon);
             self.icon:Show();
             if(self.iconRegion and self.iconRegion.Hide) then
@@ -1009,7 +1019,7 @@ local function Constructor()
     loaded:SetPoint("BOTTOM", button, "BOTTOM");
     loaded:SetPoint("LEFT", icon, "RIGHT", 0, 0);
     loaded:SetNormalTexture("Interface\\BUTTONS\\UI-GuildButton-OfficerNote-Up.blp");
-    loaded:SetDisabledTexture("Interface\\BUTTONS\\UI-GuildButton-OfficerNote-Down.blp");
+    loaded:SetDisabledTexture("Interface\\BUTTONS\\UI-GuildButton-OfficerNote-Disabled.blp");
     --loaded:SetHighlightTexture("Interface\\BUTTONS\\UI-Panel-MinimizeButton-Highlight.blp");
     loaded.title = L["Loaded"];
     loaded.desc = L["This display is currently loaded"];

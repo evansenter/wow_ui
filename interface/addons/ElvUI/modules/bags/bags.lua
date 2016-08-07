@@ -5,7 +5,7 @@ local Search = LibStub('LibItemSearch-1.2-ElvUI')
 --Cache global variables
 --Lua functions
 local _G = _G
-local type, ipairs, pairs, unpack, select, assert = type, ipairs, pairs, unpack, select, assert
+local type, ipairs, pairs, unpack, select, assert, pcall, tonumber = type, ipairs, pairs, unpack, select, assert, pcall, tonumber
 local tinsert = table.insert
 local floor, abs, ceil = math.floor, math.abs, math.ceil
 local len, sub, find, format, gsub = string.len, string.sub, string.find, string.format, string.gsub
@@ -32,7 +32,7 @@ local GetContainerItemCooldown = GetContainerItemCooldown
 local SetItemButtonCount = SetItemButtonCount
 local SetItemButtonTexture = SetItemButtonTexture
 local SetItemButtonTextureVertexColor = SetItemButtonTextureVertexColor
-local CooldownFrame_SetTimer = CooldownFrame_SetTimer
+local CooldownFrame_Set = CooldownFrame_Set
 local BankFrameItemButton_Update = BankFrameItemButton_Update
 local BankFrameItemButton_UpdateLocked = BankFrameItemButton_UpdateLocked
 local UpdateSlot = UpdateSlot
@@ -52,6 +52,7 @@ local StaticPopup_Show = StaticPopup_Show
 local SortReagentBankBags = SortReagentBankBags
 local DepositReagentBank = DepositReagentBank
 local C_NewItemsIsNewItem = C_NewItems.IsNewItem
+local C_Timer_After = C_Timer.After
 local SEARCH = SEARCH
 local REAGENTBANK_CONTAINER = REAGENTBANK_CONTAINER
 local NUM_CONTAINER_FRAMES = NUM_CONTAINER_FRAMES
@@ -84,6 +85,38 @@ B.ProfessionColors = {
 	[0x0400] = {105/255, 79/255,  7/255}, -- Mining
 	[0x010000] = {222/255, 13/255,  65/255} -- Cooking
 }
+
+local itemLevelCache = {}
+local itemLevelPattern = ITEM_LEVEL:gsub("%%d", "(%%d+)")
+local tooltip = CreateFrame("GameTooltip", "ElvUI_ItemScanningTooltip", UIParent, "GameTooltipTemplate")
+tooltip:SetOwner(UIParent, "ANCHOR_NONE")
+
+--Scan tooltip for item level information and cache the value
+local function GetItemLevel(itemLink)
+	if not itemLink or not GetItemInfo(itemLink) then
+		return
+	end
+
+	tooltip:ClearLines()
+	tooltip:SetHyperlink(itemLink)
+
+	if not itemLevelCache[itemLink] then
+		local itemLevel
+		for i = 2, 6 do
+			local text = _G["ElvUI_ItemScanningTooltipTextLeft"..i]:GetText()
+			if text then
+				itemLevel = tonumber(text:match(itemLevelPattern))
+
+				if itemLevel then
+					itemLevelCache[itemLink] = itemLevel
+					break
+				end
+			end
+		end
+	end
+
+	return itemLevelCache[itemLink]
+end
 
 function B:GetContainerFrame(arg)
 	if type(arg) == 'boolean' and arg == true then
@@ -128,6 +161,13 @@ end
 
 function B:SearchReset()
 	SEARCH_STRING = ""
+end
+
+function B:IsSearching()
+	if SEARCH_STRING ~= "" and SEARCH_STRING ~= SEARCH then
+		return true
+	end
+	return false
 end
 
 function B:UpdateSearch()
@@ -184,7 +224,8 @@ function B:SetSearch(query)
 			for slotID = 1, GetContainerNumSlots(bagID) do
 				local _, _, _, _, _, _, link = GetContainerItemInfo(bagID, slotID);
 				local button = bagFrame.Bags[bagID][slotID];
-				if ( empty or Search:Matches(link, query) ) then
+				local success, result = pcall(Search.Matches, Search, link, query)
+				if ( empty or (success and result) ) then
 					SetItemButtonDesaturated(button);
 					button:SetAlpha(1);
 				else
@@ -199,7 +240,8 @@ function B:SetSearch(query)
 		for slotID=1, 98 do
 			local _, _, _, _, _, _, link = GetContainerItemInfo(REAGENTBANK_CONTAINER, slotID);
 			local button = _G["ElvUIReagentBankFrameItem"..slotID]
-			if ( empty or Search:Matches(link, query) ) then
+			local success, result = pcall(Search.Matches, Search, link, query)
+			if ( empty or (success and result) ) then
 				SetItemButtonDesaturated(button);
 				button:SetAlpha(1);
 			else
@@ -225,7 +267,8 @@ function B:SetGuildBankSearch(query)
 				if col == 0 then col = 1 end
 				if btn == 0 then btn = 14 end
 				local button = _G["GuildBankColumn"..col.."Button"..btn]
-				if (empty or Search:Matches(link, query) ) then
+				local success, result = pcall(Search.Matches, Search, link, query)
+				if (empty or (success and result) ) then
 					SetItemButtonDesaturated(button);
 					button:SetAlpha(1);
 				else
@@ -270,6 +313,15 @@ function B:UpdateCountDisplay()
 		end
 		if bagFrame.UpdateAllSlots then
 			bagFrame:UpdateAllSlots()
+		end
+	end
+end
+
+function B:UpdateBagTypes(isBank)
+	local f = self:GetContainerFrame(isBank);
+	for _, bagID in ipairs(f.BagIDs) do
+		if f.Bags[bagID] then
+			f.Bags[bagID].type = select(2, GetContainerNumFreeSlots(bagID));
 		end
 	end
 end
@@ -326,10 +378,17 @@ function B:UpdateSlot(bagID, slotID)
 			slot.shadow:SetBackdropBorderColor(r, g, b)
 		end
 
+		if B.db.useTooltipScanning then
+			--GetItemLevel will return cached item level
+			iLvl = GetItemLevel(clink)
+		end
+
 		--Item Level
-		if (iLvl and iLvl >= E.db.bags.itemLevelThreshold) and (itemEquipLoc ~= nil and itemEquipLoc ~= "" and itemEquipLoc ~= "INVTYPE_BAG" and itemEquipLoc ~= "INVTYPE_QUIVER" and itemEquipLoc ~= "INVTYPE_TABARD") and (slot.rarity and slot.rarity > 1) and B.db.itemLevel then
-			slot.itemLevel:SetText(iLvl)
-			slot.itemLevel:SetTextColor(r, g, b)
+		if iLvl and B.db.itemLevel and (itemEquipLoc ~= nil and itemEquipLoc ~= "" and itemEquipLoc ~= "INVTYPE_BAG" and itemEquipLoc ~= "INVTYPE_QUIVER" and itemEquipLoc ~= "INVTYPE_TABARD") and (slot.rarity and slot.rarity > 1) then
+			if (iLvl >= E.db.bags.itemLevelThreshold) then
+				slot.itemLevel:SetText(iLvl)
+				slot.itemLevel:SetTextColor(r, g, b)
+			end
 		end
 
 		-- color slot according to item quality
@@ -359,7 +418,7 @@ function B:UpdateSlot(bagID, slotID)
 
 	if (texture) then
 		local start, duration, enable = GetContainerItemCooldown(bagID, slotID)
-		CooldownFrame_SetTimer(slot.cooldown, start, duration, enable)
+		CooldownFrame_Set(slot.cooldown, start, duration, enable)
 		if ( duration > 0 and enable == 0 ) then
 			SetItemButtonTextureVertexColor(slot, 0.4, 0.4, 0.4);
 		else
@@ -376,6 +435,10 @@ function B:UpdateSlot(bagID, slotID)
 	SetItemButtonTexture(slot, texture);
 	SetItemButtonCount(slot, count);
 	SetItemButtonDesaturated(slot, locked, 0.5, 0.5, 0.5);
+
+	if GameTooltip:GetOwner() == slot and not slot.hasItem then
+		B:Tooltip_Hide()
+	end
 end
 
 function B:UpdateBagSlots(bagID)
@@ -402,7 +465,7 @@ function B:UpdateCooldowns()
 	for _, bagID in ipairs(self.BagIDs) do
 		for slotID = 1, GetContainerNumSlots(bagID) do
 			local start, duration, enable = GetContainerItemCooldown(bagID, slotID)
-			CooldownFrame_SetTimer(self.Bags[bagID][slotID].cooldown, start, duration, enable)
+			CooldownFrame_Set(self.Bags[bagID][slotID].cooldown, start, duration, enable)
 			if ( duration > 0 and enable == 0 ) then
 				SetItemButtonTextureVertexColor(self.Bags[bagID][slotID], 0.4, 0.4, 0.4);
 			else
@@ -729,7 +792,7 @@ function B:UpdateReagentSlot(slotID)
 	slot.name, slot.rarity = nil, nil;
 
 	local start, duration, enable = GetContainerItemCooldown(bagID, slotID)
-	CooldownFrame_SetTimer(slot.Cooldown, start, duration, enable)
+	CooldownFrame_Set(slot.Cooldown, start, duration, enable)
 	if ( duration > 0 and enable == 0 ) then
 		SetItemButtonTextureVertexColor(slot, 0.4, 0.4, 0.4);
 	else
@@ -804,6 +867,11 @@ function B:OnEvent(event, ...)
 		end
 
 		self:UpdateBagSlots(...);
+
+		--Refresh search in case we moved items around
+		if B:IsSearching() then
+			B:SetSearch(SEARCH_STRING);
+		end
 	elseif event == 'BAG_UPDATE_COOLDOWN' then
 		self:UpdateCooldowns();
 	elseif event == 'PLAYERBANKSLOTS_CHANGED' then
@@ -828,6 +896,8 @@ function B:UpdateTokens()
 			button.icon:SetTexture(icon);
 
 			if self.db.currencyFormat == 'ICON_TEXT' then
+				button.text:SetText(name..': '..count);
+			elseif self.db.currencyFormat == "ICON_TEXT_ABBR" then
 				button.text:SetText(E:AbbreviateString(name)..': '..count);
 			elseif self.db.currencyFormat == 'ICON' then
 				button.text:SetText(count);
@@ -1439,6 +1509,11 @@ function B:GUILDBANKFRAME_OPENED()
 	self:UnregisterEvent("GUILDBANKFRAME_OPENED")
 end
 
+function B:PLAYER_ENTERING_WORLD()
+	self:UpdateGoldText()
+	C_Timer_After(2, function() B:UpdateBagTypes() end) --Update bag types for bagslot coloring
+end
+
 function B:Initialize()
 	self:LoadBagBar();
 
@@ -1469,8 +1544,8 @@ function B:Initialize()
 
 	self:DisableBlizzard();
 	self:RegisterEvent("GUILDBANKBAGSLOTS_CHANGED")
+	self:RegisterEvent("PLAYER_ENTERING_WORLD")
 	self:RegisterEvent("PLAYER_MONEY", "UpdateGoldText")
-	self:RegisterEvent("PLAYER_ENTERING_WORLD", "UpdateGoldText")
 	self:RegisterEvent("PLAYER_TRADE_MONEY", "UpdateGoldText")
 	self:RegisterEvent("TRADE_MONEY_CHANGED", "UpdateGoldText")
 	self:RegisterEvent("BANKFRAME_OPENED", "OpenBank")
@@ -1478,10 +1553,13 @@ function B:Initialize()
 	self:RegisterEvent("PLAYERBANKBAGSLOTS_CHANGED")
 	self:RegisterEvent("GUILDBANKFRAME_OPENED")
 
-	BankFrame:SetScale(0.00001)
+	BankFrame:SetScale(0.0001)
 	BankFrame:SetAlpha(0)
 	BankFrame:Point("TOPLEFT")
 	BankFrame:SetScript("OnShow", nil)
+
+	--Disable "Loot to left most bag", as the interface option has been removed
+	SetInsertItemsLeftToRight(false)
 end
 
 function B:UpdateContainerFrameAnchors()

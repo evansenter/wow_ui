@@ -1,0 +1,19 @@
+tag v2.3.11
+eda66c19c731d90abb10e35f10e2dca4e2a8cacc
+Ethan Centaurai <ethancentaurai@outlook.com>
+2016-07-31 10:07:50 +0100
+
+Tagging as v2.3.11.
+
+
+--------------------
+
+Ethan Centaurai:
+	- Removed dataminer from pkgmeta as it hasn't been in this repo for over a year.
+	- Tweak the pkgmeta.
+	- Added option to hide the new minimap button.
+	- Added a minimap button by user request.
+	- Moved LibDataBroker-1.0 support code into the main file.
+	- Ran the dataminer. (3 new, 0 changed, 0 deleted)
+	- Hopefully fixed remaining start-up errors for Herbalists.
+	- Fixed a start-up error for Herbalists and Skinners.

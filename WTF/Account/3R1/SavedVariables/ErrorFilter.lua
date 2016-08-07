@@ -14,8 +14,8 @@ ErrorFilterDB = {
 	},
 	["profiles"] = {
 		["Comet - Illidan"] = {
-			["throttle"] = false,
 			["mode"] = 3,
+			["throttle"] = false,
 		},
 		["Default"] = {
 			["mode"] = 3,

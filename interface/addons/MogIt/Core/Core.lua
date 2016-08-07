@@ -6,7 +6,7 @@ local ItemInfo = LibStub("LibItemInfo-1.0");
 
 LibStub("Libra"):Embed(mog);
 
-local DataStore_Character = DataStore_Containers and DataStore:GetCharacter();
+local DataStore_Character;
 local BrotherBags_Player;
 
 mog.frame = CreateFrame("Frame","MogItFrame",UIParent,"ButtonFrameTemplate");
@@ -167,14 +167,98 @@ end
 ItemInfo.RegisterCallback(mog, "OnItemInfoReceivedBatch", "ItemInfoReceived");
 --//
 
-function mog:HasItem(itemID)
+local itemSourceID = {}
+
+local model = CreateFrame("DressUpModel")
+model:SetAutoDress(false)
+
+local tryOnSlots = {
+	MainHandSlot = "MAINHANDSLOT",
+	SecondaryHandSlot = "SECONDARYHANDSLOT",
+}
+
+local function isItemCollected(item)
+	-- local _, _, canBeSource = C_Transmog.GetItemInfo(GetItemInfoInstant(itemLink))
+	local itemID, _, _, slot = GetItemInfoInstant(item)
+	if slot == "INVTYPE_BODY" or slot == "INVTYPE_TABARD" then
+		return C_TransmogCollection.PlayerHasTransmog(itemID)
+	end
+	if type(item) == "number" then
+		item = "item:"..item
+	end
+	local sourceID = itemSourceID[item]
+	if sourceID then
+		local categoryID, appearanceID, canEnchant, icon, isCollected = C_TransmogCollection.GetAppearanceSourceInfo(sourceID)
+		return isCollected
+	end
+	model:SetUnit("player")
+	model:Undress()
+	model:TryOn(item, tryOnSlots[slot])
+	for i = 1, 17 do
+		sourceID = model:GetSlotTransmogSources(i)
+		if sourceID ~= 0 then
+			local categoryID, appearanceID, canEnchant, icon, isCollected = C_TransmogCollection.GetAppearanceSourceInfo(sourceID)
+			itemSourceID[item] = sourceID
+			return isCollected
+		end
+	end
+end
+
+local characters;
+local addedCharacters = {};
+
+function mog:HasItem(itemID, includeAlternate, isAlternate)
+	local found = false;
+	found = isItemCollected(itemID);
+	if not mog.db.profile.ownedSearchBags then
+		return found;
+	end
+	if not isAlternate then
+		characters = {};
+	end
 	itemID = self:ToNumberItem(itemID);
+	if includeAlternate and not isAlternate then
+		addedCharacters = {};
+		local found = mog:HasItem(itemID);
+		local itemIDs = mog:GetData("display", mog:GetData("item", mog:ToStringItem(itemID), "display"), "items");
+		if itemIDs then
+			local baseItem = mog:ToStringItem(itemID);
+			for i, alternateItem in ipairs(itemIDs) do
+				if alternateItem ~= baseItem and mog:HasItem(alternateItem, false, true) then
+					found = true;
+				end
+			end
+		end
+		return found, characters;
+	end
+	if self.db.profile.ownedCheckAlts then
+		if DataStore then
+			for account in pairs(DataStore:GetAccounts()) do
+				for realm in pairs(DataStore:GetRealms(account)) do
+					for k, character in pairs(DataStore:GetCharacters(realm, account)) do
+						if not isAlternate or not addedCharacters[character] then
+							local inventoryCount = DataStore:GetInventoryItemCount(character, itemID);
+							local bagCount, bankCount, voidCount = DataStore:GetContainerItemCount(character, itemID);
+							local mailCount = DataStore:GetMailItemCount(character, itemID);
+							if ((inventoryCount or 0) + (bagCount or 0) + (bankCount or 0) + (voidCount or 0) + (mailCount or 0)) > 0 then
+								found = true;
+								local accountKey, realmKey, charKey = strsplit(".", character);
+								tinsert(characters, Ambiguate(charKey.."-"..realmKey:gsub(" ", "")..(isAlternate and " (*)" or ""), "none"));
+								addedCharacters[character] = true;
+							end
+						end
+					end
+				end
+			end
+			return found, characters;
+		end
+	end
 	-- GetItemCount does not take void storage into account...
 	if GetItemCount(itemID, true) > 0 then
 		return true;
 	end
 	-- ...try third party data for that
-	if DataStore_Character then
+	if DataStore_Containers then
 		local _, _, count = DataStore:GetContainerItemCount(DataStore_Character, itemID);
 		if count > 0 then
 			return true;
@@ -195,6 +279,12 @@ local defaults = {
 	profile = {
 		tooltipItemID = false,
 		tooltipAlwaysShowOwned = true,
+		ownedSearchBags = false,
+		ownedCheckAlts = true,
+		tooltipOwnedDetail = true,
+		wishlistCheckAlts = true,
+		tooltipWishlistDetail = true,
+		loadModulesDefault = false,
 		
 		noAnim = false,
 		url = "Battle.net",
@@ -219,6 +309,7 @@ local defaults = {
 		tooltipCustomModel = false,
 		tooltipRace = 1,
 		tooltipGender = 0,
+		tooltipAnchor = "vertical",
 		
 		minimap = {},
 		
@@ -293,51 +384,54 @@ function mog:ADDON_LOADED(addon)
 				module:MogItLoaded()
 			end
 		end
+
+		if mog.db.profile.loadModulesDefault then
+			mog:LoadBaseModules()
+		end
 	elseif mog.modules[addon] then
 		mog.modules[addon].loaded = true;
 		if mog.menu.active == mog.menu.modules then
 			mog.menu:Rebuild(1)
 		end
+	elseif addon == "Blizzard_Collections" then
+		for i, model in ipairs(WardrobeCollectionFrame.ModelsFrame.Models) do
+			model:SetScript("OnMouseDown", function(self, button)
+				if IsControlKeyDown() and button == "RightButton" then
+					local link
+					local sources = WardrobeCollectionFrame_GetSortedAppearanceSources(self.visualInfo.visualID)
+					local offset = WardrobeCollectionFrame.tooltipIndexOffset
+					if offset then
+						if offset < 0 then
+							offset = #sources + offset
+						end
+						local index = mod(offset, #sources) + 1
+						link = select(6, C_TransmogCollection.GetAppearanceSourceInfo(sources[index].sourceID))
+					end
+					mog:AddToPreview(link)
+					return
+				end
+				WardrobeCollectionFrameModel_OnMouseDown(self, button)
+			end)
+		end
 	end
 end
 
-local function sortCharacters(a, b)
-	local characterA, realmA = a:match("(.+) %- (.+)");
-	local characterB, realmB = b:match("(.+) %- (.+)");
-	if realmA ~= realmB then
-		-- your own realm gets sorted before others
-		if realmA == myRealm then
-			return true;
-		end
-		if realmB == myRealm then
-			return false;
-		end
-		return realmA < realmB;
-	else
-		return characterA < characterB;
-	end
-end
+C_TransmogCollection.SetShowMissingSourceInItemTooltips(true)
 
 function mog:PLAYER_LOGIN()
+	DataStore_Character = DataStore and DataStore:GetCharacter();
 	BrotherBags_Player = BrotherBags and BrotherBags[GetRealmName()][UnitName("player")];
 	
 	C_Timer.After(1, function()
 		-- this function doesn't yield correct results immediately, so we delay it
 		for slot, v in pairs(mog.mogSlots) do
-			local isTransmogrified, _, _, _, _, visibleItemID = GetTransmogrifySlotInfo(slot);
+			local isTransmogrified, _, _, _, _, _, _, visibleItemID = C_Transmog.GetSlotInfo(slot, LE_TRANSMOG_TYPE_APPEARANCE);
 			if isTransmogrified then
-				mog:GetItemInfo(visibleItemID);
+				-- we need an item ID here if we still need to cache these at all
+				-- mog:GetItemInfo(visibleItemID);
 			end
 		end
 	end)
-	self.realmCharacters = {};
-	for characterKey in pairs(mog.wishlist.db.sv.profileKeys) do
-		local character, realm = characterKey:match("(.+) %- (.+)");
-		if self:IsConnectedRealm(realm, true) then
-			table.insert(self.realmCharacters, characterKey);
-		end
-	end
-	sort(self.realmCharacters, sortCharacters);
 	
 	mog:LoadSettings();
 	self.frame:SetScript("OnSizeChanged", function(self, width, height)
@@ -349,12 +443,14 @@ end
 
 function mog:PLAYER_EQUIPMENT_CHANGED(slot, hasItem)
 	local slotName = mog.mogSlots[slot];
-	local itemID, itemAppearanceModID = GetInventoryItemID("player", slot);
+	local item = GetInventoryItemLink("player", slot);
 	if slotName then
-		local isTransmogrified, _, _, _, _, visibleItemID, _, visibleItemAppearanceModID = GetTransmogrifySlotInfo(slot);
+		local baseSourceID, baseVisualID, appliedSourceID, appliedVisualID = C_Transmog.GetSlotVisualInfo(slot, LE_TRANSMOG_TYPE_APPEARANCE);
+		local isTransmogrified, _, _, _, _, _, isHideVisual, texture = C_Transmog.GetSlotInfo(slot, LE_TRANSMOG_TYPE_APPEARANCE);
 		if isTransmogrified then
-			mog:GetItemInfo(visibleItemID);
-			itemID = visibleItemID;
+			-- we need an item ID here if we still need to cache these at all
+			-- mog:GetItemInfo(visibleItemID);
+			item = appliedSourceID;
 			itemAppearanceModID = visibleItemAppearanceModID;
 		end
 	end
@@ -363,9 +459,7 @@ function mog:PLAYER_EQUIPMENT_CHANGED(slot, hasItem)
 		for i, frame in ipairs(mog.models) do
 			if frame.data.item then
 				if hasItem then
-					if (slot ~= INVSLOT_HEAD or ShowingHelm()) and (slot ~= INVSLOT_BACK or ShowingCloak()) then
-						frame:TryOn(itemID, slotName, itemAppearanceModID);
-					end
+					frame:TryOn(item, slotName, itemAppearanceModID);
 				else
 					frame:UndressSlot(slot);
 				end
@@ -457,9 +551,11 @@ local bonusDiffs = {
 	[642] = true, -- dungeon-mythic
 	[648] = true, -- baleful (675)
 	[651] = true, -- baleful empowered (695)
+	[1798] = true, -- ???
+	[1799] = true, -- ???
 };
 
-mog.itemStringPattern = "item:(%d+):%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:%d+:([%d:]+)";
+mog.itemStringPattern = "item:(%d+):%d*:%d*:%d*:%d*:%d*:%d*:%d*:%d*:%d*:%d*:%d*:%d*:([%d:]+)";
 
 function mog:ToNumberItem(item)
 	if type(item) == "string" then
@@ -537,6 +633,8 @@ mog.mogSlots = {
 	[INVSLOT_SHOULDER] = "ShoulderSlot",
 	[INVSLOT_BACK] = "BackSlot",
 	[INVSLOT_CHEST] = "ChestSlot",
+	[INVSLOT_BODY] = "ShirtSlot",
+	[INVSLOT_TABARD] = "TabardSlot",
 	[INVSLOT_WRIST] = "WristSlot",
 	[INVSLOT_HAND] = "HandsSlot",
 	[INVSLOT_WAIST] = "WaistSlot",

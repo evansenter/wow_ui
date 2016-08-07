@@ -12,36 +12,42 @@ local floor = floor
 local format, find, split, match, strrep, len, sub, gsub = string.format, string.find, string.split, string.match, strrep, string.len, string.sub, string.gsub
 --WoW API / Variables
 local CreateFrame = CreateFrame
-local GetCVar, SetCVar, GetCVarBool = GetCVar, SetCVar, GetCVarBool
-local IsAddOnLoaded = IsAddOnLoaded
-local PlayMusic, StopMusic = PlayMusic, StopMusic
-local GetSpellInfo = GetSpellInfo
-local IsInInstance, IsInGroup, IsInRaid = IsInInstance, IsInGroup, IsInRaid
-local RequestBattlefieldScoreData = RequestBattlefieldScoreData
-local GetSpecialization, GetActiveSpecGroup = GetSpecialization, GetActiveSpecGroup
-local GetCombatRatingBonus = GetCombatRatingBonus
-local GetDodgeChance, GetParryChance = GetDodgeChance, GetParryChance
-local UnitLevel, UnitStat, UnitAttackPower = UnitLevel, UnitStat, UnitAttackPower
-local SendAddonMessage = SendAddonMessage
-local InCombatLockdown = InCombatLockdown
+local C_Timer_After = C_Timer.After
+local C_PetBattles_IsInBattle = C_PetBattles.IsInBattle
 local DoEmote = DoEmote
-local SendChatMessage = SendChatMessage
+local GetBonusBarOffset = GetBonusBarOffset
+local GetCombatRatingBonus = GetCombatRatingBonus
+local GetCVar, SetCVar, GetCVarBool = GetCVar, SetCVar, GetCVarBool
+local GetDodgeChance, GetParryChance = GetDodgeChance, GetParryChance
 local GetFunctionCPUUsage = GetFunctionCPUUsage
 local GetMapNameByID = GetMapNameByID
-local GetBonusBarOffset = GetBonusBarOffset
-local RAID_CLASS_COLORS = RAID_CLASS_COLORS
-local CUSTOM_CLASS_COLORS = CUSTOM_CLASS_COLORS
+local GetSpecialization, GetActiveSpecGroup = GetSpecialization, GetActiveSpecGroup
+local GetSpecializationRole = GetSpecializationRole
+local GetSpellInfo = GetSpellInfo
+local InCombatLockdown = InCombatLockdown
+local IsAddOnLoaded = IsAddOnLoaded
+local IsInInstance, IsInGroup, IsInRaid = IsInInstance, IsInGroup, IsInRaid
+local PlayMusic, StopMusic = PlayMusic, StopMusic
+local RequestBattlefieldScoreData = RequestBattlefieldScoreData
+local SendAddonMessage = SendAddonMessage
+local SendChatMessage = SendChatMessage
+local UnitGroupRolesAssigned = UnitGroupRolesAssigned
+local UnitHasVehicleUI = UnitHasVehicleUI
+local UnitLevel, UnitStat, UnitAttackPower = UnitLevel, UnitStat, UnitAttackPower
 local COMBAT_RATING_RESILIENCE_PLAYER_DAMAGE_TAKEN = COMBAT_RATING_RESILIENCE_PLAYER_DAMAGE_TAKEN
+local CUSTOM_CLASS_COLORS = CUSTOM_CLASS_COLORS
+local ERR_NOT_IN_COMBAT = ERR_NOT_IN_COMBAT
 local LE_PARTY_CATEGORY_HOME = LE_PARTY_CATEGORY_HOME
 local LE_PARTY_CATEGORY_INSTANCE = LE_PARTY_CATEGORY_INSTANCE
-local ERR_NOT_IN_COMBAT = ERR_NOT_IN_COMBAT
 local NUM_PET_ACTION_SLOTS = NUM_PET_ACTION_SLOTS
+local RAID_CLASS_COLORS = RAID_CLASS_COLORS
 
 --Global variables that we don't cache, list them here for the mikk's Find Globals script
 -- GLOBALS: LibStub, UIParent, MAX_PLAYER_LEVEL, ScriptErrorsFrame_OnError
 -- GLOBALS: ElvUIPlayerBuffs, ElvUIPlayerDebuffs, LeftChatPanel, RightChatPanel
--- GLOBALS: ElvUI_StaticPopup1, ElvUI_StaticPopup1Button1, LeftChatToggleButton, RightChatToggleButton
+-- GLOBALS: ElvUI_StaticPopup1, ElvUI_StaticPopup1Button1, OrderHallCommandBar
 -- GLOBALS: ElvUI_StanceBar, ObjectiveTrackerFrame, GameTooltip, Minimap
+
 
 --Constants
 E.myclass = select(2, UnitClass("player"));
@@ -53,9 +59,9 @@ E.myguid = UnitGUID('player');
 E.version = GetAddOnMetadata("ElvUI", "Version");
 E.myrealm = GetRealmName();
 E.wowbuild = select(2, GetBuildInfo()); E.wowbuild = tonumber(E.wowbuild);
-E.resolution = GetCVar("gxResolution")
-E.screenheight = tonumber(match(E.resolution, "%d+x(%d+)"))
-E.screenwidth = tonumber(match(E.resolution, "(%d+)x+%d"))
+--Currently in Legion logging in while in Windowed mode will cause the game to use "Custom" resolution and GetCurrentResolution() returns 0. We use GetCVar("gxWindowedResolution") as fail safe
+E.resolution = ({GetScreenResolutions()})[GetCurrentResolution()] or GetCVar("gxWindowedResolution")
+E.screenwidth, E.screenheight = DecodeResolution(E.resolution)
 E.isMacClient = IsMacClient()
 E.LSM = LSM
 
@@ -70,6 +76,7 @@ E['RegisteredInitialModules'] = {}
 E['valueColorUpdateFuncs'] = {};
 E.TexCoords = {.08, .92, .08, .92}
 E.FrameLocks = {}
+E.VehicleLocks = {}
 E.CreditsList = {};
 E.PixelMode = false;
 
@@ -160,12 +167,16 @@ E.ClassRole = {
 		[2] = "Caster",
 		[3] = "Melee",
 	},
+	DEMONHUNTER = {
+		[1] = "Melee",
+		[2] = "Tank"	
+	},
 }
 
 E.noop = function() end;
 
 function E:Print(...)
-	print(self["media"].hexvaluecolor..'ElvUI:|r', ...)
+	print(self["media"].hexvaluecolor..self.UIName..':|r', ...)
 end
 
 --Workaround for people wanting to use white and it reverting to their class color.
@@ -175,6 +186,16 @@ E.PriestColors = {
 	b = 0.99,
 	colorStr = 'fcfcfc'
 }
+
+function E:GetPlayerRole()
+	local assignedRole = UnitGroupRolesAssigned("player");
+	if ( assignedRole == "NONE" ) then
+		local spec = GetSpecialization();
+		return GetSpecializationRole(spec);
+	end
+
+	return assignedRole;
+end
 
 --Basically check if another class border is being used on a class that doesn't match. And then return true if a match is found.
 function E:CheckClassColor(r, g, b)
@@ -192,7 +213,7 @@ function E:CheckClassColor(r, g, b)
 	return matchFound
 end
 
-function E:GetColorTable(data)
+function E:GetColorTable(data)	
 	if not data.r or not data.g or not data.b then
 		error("Could not unpack color values.")
 	end
@@ -231,6 +252,7 @@ function E:UpdateMedia()
 	elseif E.PixelMode then
 		border = {r = 0, g = 0, b = 0}
 	end
+
 	self["media"].bordercolor = {border.r, border.g, border.b}
 
 	--Backdrop Color
@@ -248,6 +270,7 @@ function E:UpdateMedia()
 		self.db['general'].valuecolor.g = value.g
 		self.db['general'].valuecolor.b = value.b
 	end
+
 	self["media"].hexvaluecolor = self:RGBToHex(value.r, value.g, value.b)
 	self["media"].rgbvaluecolor = {value.r, value.g, value.b}
 
@@ -262,6 +285,37 @@ function E:UpdateMedia()
 
 	self:ValueFuncCall()
 	self:UpdateBlizzardFonts()
+end
+
+E.LockedCVars = {}
+function E:PLAYER_REGEN_ENABLED(event)
+	if(self.CVarUpdate) then
+		for cvarName, value in pairs(self.LockedCVars) do
+			if(GetCVar(cvarName) ~= value) then
+				SetCVar(cvarName, value)
+			end			
+		end
+		self.CVarUpdate = nil
+	end
+end
+
+local function CVAR_UPDATE(cvarName, value)
+	if(E.LockedCVars[cvarName] and E.LockedCVars[cvarName] ~= value) then
+		if(InCombatLockdown()) then
+			E.CVarUpdate = true
+			return
+		end
+		
+		SetCVar(cvarName, E.LockedCVars[cvarName])
+	end
+end
+
+hooksecurefunc("SetCVar", CVAR_UPDATE)
+function E:LockCVar(cvarName, value)
+	if(GetCVar(cvarName) ~= value) then
+		SetCVar(cvarName, value)
+	end
+	self.LockedCVars[cvarName] = value
 end
 
 --Update font/texture paths when they are registered by the addon providing them
@@ -279,7 +333,6 @@ local MasqueGroupToTableElement = {
 	["Stance Bar"] = {"actionbar", "stanceBar"},
 	["Buffs"] = {"auras", "buffs"},
 	["Debuffs"] = {"auras", "debuffs"},
-	["Consolidated Buffs"] = {"auras", "consolidatedBuffs"},
 }
 
 local function MasqueCallback(Addon, Group, SkinID, Gloss, Backdrop, Colors, Disabled)
@@ -442,8 +495,9 @@ end
 --This frame everything in ElvUI should be anchored to for Eyefinity support.
 E.UIParent = CreateFrame('Frame', 'ElvUIParent', UIParent);
 E.UIParent:SetFrameLevel(UIParent:GetFrameLevel());
-E.UIParent:SetPoint('CENTER', UIParent, 'CENTER');
+E.UIParent:SetPoint('BOTTOM', UIParent, 'BOTTOM');
 E.UIParent:SetSize(UIParent:GetSize());
+E.UIParent.origHeight = E.UIParent:GetHeight()
 E['snapBars'][#E['snapBars'] + 1] = E.UIParent
 
 E.HiddenFrame = CreateFrame('Frame')
@@ -551,16 +605,16 @@ function E:CheckIncompatible()
 		E:IncompatibleAddOn('Chatter', 'Chat')
 	end
 
-	if IsAddOnLoaded('TidyPlates') and E.private.nameplate.enable then
-		E:IncompatibleAddOn('TidyPlates', 'NamePlate')
+	if IsAddOnLoaded('TidyPlates') and E.private.nameplates.enable then
+		E:IncompatibleAddOn('TidyPlates', 'NamePlates')
 	end
 
-	if IsAddOnLoaded('Aloft') and E.private.nameplate.enable then
-		E:IncompatibleAddOn('Aloft', 'NamePlate')
+	if IsAddOnLoaded('Aloft') and E.private.nameplates.enable then
+		E:IncompatibleAddOn('Aloft', 'NamePlates')
 	end
 
-	if IsAddOnLoaded('Healers-Have-To-Die') and E.private.nameplate.enable then
-		E:IncompatibleAddOn('Healers-Have-To-Die', 'NamePlate')
+	if IsAddOnLoaded('Healers-Have-To-Die') and E.private.nameplates.enable then
+		E:IncompatibleAddOn('Healers-Have-To-Die', 'NamePlates')
 	end
 end
 
@@ -818,13 +872,15 @@ end
 local myName = E.myname.."-"..E.myrealm;
 myName = myName:gsub("%s+", "")
 local frames = {}
+
 local function SendRecieve(self, event, prefix, message, channel, sender)
+
 	if event == "CHAT_MSG_ADDON" then
 		if(sender == myName) then return end
 
 		if prefix == "ELVUI_VERSIONCHK" and not E.recievedOutOfDateMessage then
 			if(tonumber(message) ~= nil and tonumber(message) > tonumber(E.version)) then
-				E:Print(L["ElvUI is out of date. You can download the newest version from www.tukui.org. Get premium membership and have ElvUI automatically updated with the Tukui Client!"])
+				E:Print(L["ElvUI is out of date. You can download the newest version from www.tukui.org. Get premium membership and have ElvUI automatically updated with the Tukui Client!"]:gsub("ElvUI", E.UIName))
 
 				if((tonumber(message) - tonumber(E.version)) >= 0.05) then
 					E:StaticPopup_Show("ELVUI_UPDATE_AVAILABLE")
@@ -847,6 +903,11 @@ f:RegisterEvent("CHAT_MSG_ADDON")
 f:SetScript('OnEvent', SendRecieve)
 
 function E:UpdateAll(ignoreInstall)
+	if not self.initialized then
+		C_Timer_After(1, function() E:UpdateAll(ignoreInstall) end)
+		return
+	end
+
 	self.private = self.charSettings.profile
 	self.db = self.data.profile;
 	self.global = self.data.global;
@@ -895,14 +956,17 @@ function E:UpdateAll(ignoreInstall)
 	DT:LoadDataTexts()
 
 	local NP = self:GetModule('NamePlates')
-	NP.db = self.db.nameplate
-	NP:UpdateAllPlates()
+	NP.db = self.db.nameplates
+	NP:ConfigureAll()
 
-	local M = self:GetModule("Misc")
-	M:UpdateExpRepDimensions()
-	M:EnableDisable_ExperienceBar()
-	M:EnableDisable_ReputationBar()
-
+	local DataBars = self:GetModule("DataBars")
+	DataBars.db = E.db.databars
+	DataBars:UpdateDataBarDimensions()
+	DataBars:EnableDisable_ExperienceBar()
+	DataBars:EnableDisable_ReputationBar()
+	DataBars:EnableDisable_ArtifactBar()
+	DataBars:EnableDisable_HonorBar()
+	
 	local T = self:GetModule('Threat')
 	T.db = self.db.general.threat
 	T:UpdatePosition()
@@ -955,12 +1019,127 @@ end
 
 function E:AddNonPetBattleFrames(event)
 	if InCombatLockdown() then return end
-	for object, _ in pairs(E.FrameLocks) do
+	for object, data in pairs(E.FrameLocks) do
 		local obj = _G[object] or object
-		obj:SetParent(UIParent)
+		local parent, strata
+		if type(data) == "table" then
+			parent, strata = data.parent, data.strata
+		elseif data == true then
+			parent = UIParent
+		end
+		obj:SetParent(parent)
+		if strata then
+			obj:SetFrameStrata(strata)
+		end
 	end
 
 	self:UnregisterEvent("PLAYER_REGEN_DISABLED")
+end
+
+function E:RegisterPetBattleHideFrames(object, originalParent, originalStrata)
+	if not object or not originalParent then
+		E:Print("Error. Usage: RegisterPetBattleHideFrames(object, originalParent, originalStrata)")
+		return
+	end
+
+	local object = _G[object] or object
+	--If already doing pokemon
+	if C_PetBattles_IsInBattle() then
+		object:SetParent(E.HiddenFrame)
+	end
+	E.FrameLocks[object] = {
+		["parent"] = originalParent,
+		["strata"] = originalStrata or nil,
+	}
+end
+
+function E:UnregisterPetBattleHideFrames(object)
+	if not object then
+		E:Print("Error. Usage: UnregisterPetBattleHideFrames(object)")
+		return
+	end
+
+	local object = _G[object] or object
+	--Check if object was registered to begin with
+	if not E.FrameLocks[object] then
+		return
+	end
+
+	--Change parent of object back to original parent
+	local originalParent = E.FrameLocks[object].parent
+	if originalParent then
+		object:SetParent(originalParent)
+	end
+
+	--Change strata of object back to original
+	local originalStrata = E.FrameLocks[object].strata
+	if originalStrata then
+		object:SetFrameStrata(originalStrata)
+	end
+
+	--Remove object from table
+	E.FrameLocks[object] = nil
+end
+
+function E:EnterVehicleHideFrames(event, unit)
+	if unit ~= "player" then return; end
+	
+	for object in pairs(E.VehicleLocks) do
+		object:SetParent(E.HiddenFrame)
+	end
+end
+
+function E:ExitVehicleShowFrames(event, unit)
+	if unit ~= "player" then return; end
+	
+	for object, originalParent in pairs(E.VehicleLocks) do
+		object:SetParent(originalParent)
+	end
+end
+
+function E:RegisterObjectForVehicleLock(object, originalParent)
+	if not object or not originalParent then
+		E:Print("Error. Usage: RegisterObjectForVehicleLock(object, originalParent)")
+		return
+	end
+
+	local object = _G[object] or object
+	--Entering/Exiting vehicles will often happen in combat.
+	--For this reason we cannot allow protected objects.
+	if object.IsProtected and object:IsProtected() then
+		E:Print("Error. Object is protected and cannot be changed in combat.")
+		return
+	end
+
+	--Check if we are already in a vehicles
+	if UnitHasVehicleUI("player") then
+		object:SetParent(E.HiddenFrame)
+	end
+
+	--Add object to table
+	E.VehicleLocks[object] = originalParent
+end
+
+function E:UnregisterObjectForVehicleLock(object)
+	if not object then
+		E:Print("Error. Usage: UnregisterObjectForVehicleLock(object)")
+		return
+	end
+
+	local object = _G[object] or object
+	--Check if object was registered to begin with
+	if not E.VehicleLocks[object] then
+		return
+	end
+
+	--Change parent of object back to original parent
+	local originalParent = E.VehicleLocks[object]
+	if originalParent then
+		object:SetParent(originalParent)
+	end
+
+	--Remove object from table
+	E.VehicleLocks[object] = nil
 end
 
 function E:ResetAllUI()
@@ -1031,56 +1210,6 @@ end
 
 --DATABASE CONVERSIONS
 function E:DBConversions()
-	--Add missing Stack Threshold
-	if E.global.unitframe['aurafilters']['RaidDebuffs'].spells then
-		local matchFound
-		for k, v in pairs(E.global.unitframe['aurafilters']['RaidDebuffs'].spells) do
-			if type(v) == 'table' then
-				matchFound = false
-				for k_,v_ in pairs(v) do
-					if k_ == 'stackThreshold' then
-						matchFound = true
-					end
-				end
-			end
-
-			if not matchFound then
-				E.global.unitframe['aurafilters']['RaidDebuffs']['spells'][k].stackThreshold = 0
-			end
-		end
-	end
-
-	--Convert spellIDs saved as strings to numbers
-	if E.global.unitframe['aurafilters']['Whitelist (Strict)'].spells then
-		for k, v in pairs(E.global.unitframe['aurafilters']['Whitelist (Strict)'].spells) do
-			if type(v) == 'table' then
-				for k_,v_ in pairs(v) do
-					if k_ == 'spellID' and type(v_) == "string" and tonumber(v_) then
-						E.global.unitframe['aurafilters']['Whitelist (Strict)']['spells'][k].spellID = tonumber(v_)
-					end
-				end
-			end
-		end
-	end
-
-	if E.db.general.experience.width > 100 and E.db.general.experience.height > 100 then
-		E.db.general.experience.width = P.general.experience.width
-		E.db.general.experience.height = P.general.experience.height
-		E:Print("Experience bar appears to be an odd shape. Resetting to default size.")
-	end
-
-	if E.db.general.reputation.width > 100 and E.db.general.reputation.height > 100 then
-		E.db.general.reputation.width = P.general.reputation.width
-		E.db.general.reputation.height = P.general.reputation.height
-		E:Print("Reputation bar appears to be an odd shape. Resetting to default size.")
-	end
-
-	--Turns out that a chat height lower than 58 will cause the following error: Message: ..\FrameXML\FloatingChatFrame.lua line 1147: attempt to perform arithmetic on a nil value
-	--This only happens if the datatext panel for the respective chat panel is enabled, leaving no room for the chat frame.
-	--Minimum height has been increased to 60, convert any setting lower than this to the new minimum height.
-	if E.db.chat.panelHeight < 60 then E.db.chat.panelHeight = 60 end
-	if E.db.chat.panelHeightRight < 60 then E.db.chat.panelHeightRight = 60 end
-
 	--Boss Frame auras have been changed to support friendly/enemy filters in case there is an encounter with a friendly boss
 	--Try to convert any filter settings the user had to the new format
 	if not E.db.bossAuraFiltersConverted then
@@ -1088,7 +1217,6 @@ function E:DBConversions()
 		local tempDebuffs = E.db.unitframe.units.boss.debuffs
 		local filterSettings = {
 			"playerOnly",
-			"noConsolidated",
 			"useBlacklist",
 			"useWhitelist",
 			"noDuration",
@@ -1168,6 +1296,120 @@ function E:DBConversions()
 			E.global.unitframe.buffwatch[class][id] = nil
 		end
 	end
+	
+	--Move spells from the "Whitelist (Strict)" filter to the "Whitelist" filter
+	if E.global.unitframe['aurafilters']['Whitelist (Strict)'] and E.global.unitframe['aurafilters']['Whitelist (Strict)'].spells then
+		for spell, spellInfo in pairs(E.global.unitframe['aurafilters']['Whitelist (Strict)'].spells) do
+			if type(spellInfo) == 'table' then
+				local enabledValue = spellInfo.enable
+				--We don't care about old defaults, as the only default entries in the Whitelist (Strict) filter were from an MoP raid instance. No need to copy that information over.
+
+				if spellInfo.spellID then --Spell the user added himself, all needed info is available and should be copied over
+					local spellID = tonumber(spellInfo.spellID)
+					E.global.unitframe['aurafilters']['Whitelist']['spells'][spellID] = {['enable'] = enabledValue}
+				end
+			end
+			--Remove old entry
+			E.global.unitframe['aurafilters']['Whitelist (Strict)']["spells"][spell] = nil
+		end
+		--Finally remove old table
+		E.global.unitframe['aurafilters']['Whitelist (Strict)'] = nil
+	end
+
+	--Move spells from the "Blacklist (Strict)" filter to the "Blacklist" filter
+	--This one is easier, as all spells have been stored with spellID as key
+	if E.global.unitframe.InvalidSpells then
+		for spellID, enabledValue in pairs(E.global.unitframe.InvalidSpells) do
+			--Copy over information
+			E.global.unitframe['aurafilters']['Blacklist']['spells'][spellID] = {['enable'] = enabledValue}
+			--Remove old entry
+			E.global.unitframe.InvalidSpells[spellID] = nil
+		end
+		--Finally remove old table
+		E.global.unitframe.InvalidSpells = nil
+	end
+	
+	--Because default filters now store spells with spellID as key, any default spells the user has changed will show up as a duplicate entry but with spellName as key.
+	--We will copy over the information and remove old default entries stored with spell name as key.
+	local filters = {
+		"CCDebuffs",
+		"TurtleBuffs",
+		"PlayerBuffs",
+		"Blacklist",
+		"Whitelist",
+		"RaidDebuffs",
+	}
+	for _, filterName in pairs(filters) do
+		for spellID, spellInfo in pairs(G.unitframe["aurafilters"][filterName].spells) do --Use spellIDs from current default table
+			local spellName = GetSpellInfo(spellID) --Get spell name and try to match it to existing entry in table
+
+			if spellName and E.global.unitframe["aurafilters"][filterName]["spells"][spellName] then --Match found
+				local spell = E.global.unitframe["aurafilters"][filterName]["spells"][spellName]
+				local enabledValue = spell.enable
+				local priority = spell.priority
+				local stackThreshold = spell.stackThreshold
+				
+				--Fallback to default values if value is nil
+				if enabledValue == nil then enabledValue = (spellInfo.enable or true) end
+				if priority == nil then priority = (spellInfo.priority or 0) end
+				if stackThreshold == nil then stackThreshold = (spellInfo.stackThreshold or 0) end
+
+				--Copy over information from old entry to new entry stored with spellID as key
+				E.global.unitframe["aurafilters"][filterName]["spells"][spellID] = {["enabled"] = enabledValue, ["priority"] = priority, ["stackThreshold"] = stackThreshold}
+				--Remove old entry
+				E.global.unitframe["aurafilters"][filterName]["spells"][spellName] = nil
+			end
+		end
+	end
+
+	--Add missing .point, .xOffset and .yOffset values to Buff Indicators that are missing them for whatever reason
+	for class in pairs(E.global.unitframe.buffwatch) do
+		for _, values in pairs(E.global.unitframe.buffwatch[class]) do
+			if not values.point then values.point = "TOPLEFT" end
+			if not values.xOffset then values.xOffset = 0 end
+			if not values.yOffset then values.yOffset = 0 end
+		end
+	end
+	
+	--Convert actionbar button spacing to backdrop spacing, so users don't get any unwanted changes
+	if not E.db.actionbar.backdropSpacingConverted then
+		for i = 1, 10 do
+			if E.db.actionbar["bar"..i] then
+				E.db.actionbar["bar"..i].backdropSpacing = E.db.actionbar["bar"..i].buttonspacing
+			end
+		end
+		E.db.actionbar.barPet.backdropSpacing = E.db.actionbar.barPet.buttonspacing
+		E.db.actionbar.stanceBar.backdropSpacing = E.db.actionbar.stanceBar.buttonspacing
+		
+		E.db.actionbar.backdropSpacingConverted = true
+	end
+	
+	--Convert E.db.actionbar.showGrid to E.db.actionbar["barX"].showGrid
+	if E.db.actionbar.showGrid ~= nil then
+		local gridEnabled = E.db.actionbar.showGrid
+		for i = 1, 10 do
+			if E.db.actionbar["bar"..i] then
+				E.db.actionbar["bar"..i].showGrid = gridEnabled
+			end
+		end
+		E.db.actionbar.showGrid = nil
+	end
+	
+	--Convert old WorldMapCoordinates from boolean to new table format
+	if type(E.global.general.WorldMapCoordinates) == "boolean" then
+		local enabledState = E.global.general.WorldMapCoordinates
+		
+		--Remove boolean value
+		E.global.general.WorldMapCoordinates = nil
+		
+		--Add old enabled state
+		E.global.general.WorldMapCoordinates.enable = enabledState
+	end
+	
+	--Remove old nameplate settings, no need for them to take up space
+	if E.db.nameplate then
+		E.db.nameplate = nil
+	end
 end
 
 local CPU_USAGE = {}
@@ -1221,8 +1463,8 @@ function E:Initialize()
 	self.data.RegisterCallback(self, "OnProfileChanged", "UpdateAll")
 	self.data.RegisterCallback(self, "OnProfileCopied", "UpdateAll")
 	self.data.RegisterCallback(self, "OnProfileReset", "OnProfileReset")
-	LibStub('LibDualSpec-1.0'):EnhanceDatabase(self.data, "ElvUI")
 	self.charSettings = LibStub("AceDB-3.0"):New("ElvPrivateDB", self.privateVars);
+	LibStub('LibDualSpec-1.0'):EnhanceDatabase(self.data, "ElvUI")
 	self.private = self.charSettings.profile
 	self.db = self.data.profile;
 	self.global = self.data.global;
@@ -1261,7 +1503,9 @@ function E:Initialize()
 	self:RegisterEvent('PLAYER_ENTERING_WORLD')
 	self:RegisterEvent("PET_BATTLE_CLOSE", 'AddNonPetBattleFrames')
 	self:RegisterEvent('PET_BATTLE_OPENING_START', "RemoveNonPetBattleFrames")
-
+	self:RegisterEvent("UNIT_ENTERED_VEHICLE", "EnterVehicleHideFrames")
+	self:RegisterEvent("UNIT_EXITED_VEHICLE", "ExitVehicleShowFrames")
+	self:RegisterEvent("PLAYER_REGEN_ENABLED")
 	if self.myclass == "DRUID" then
 		self:RegisterEvent("SPELLS_CHANGED")
 	end
@@ -1277,6 +1521,29 @@ function E:Initialize()
 	collectgarbage("collect");
 
 	if self.db.general.loginmessage then
-		print(select(2, E:GetModule('Chat'):FindURL("CHAT_MSG_DUMMY", format(L["LOGIN_MSG"], self["media"].hexvaluecolor, self["media"].hexvaluecolor, self.version)))..'.')
+		print(select(2, E:GetModule('Chat'):FindURL("CHAT_MSG_DUMMY", format(L["LOGIN_MSG"]:gsub("ElvUI", E.UIName), self["media"].hexvaluecolor, self["media"].hexvaluecolor, self.version)))..'.')
+	end
+
+	--Resize ElvUIParent when entering/leaving Class Hall (stupid Class Hall Command Bar)
+	local function HookForResize()
+		OrderHallCommandBar:HookScript("OnShow", function()
+			local height = E.UIParent.origHeight - OrderHallCommandBar:GetHeight()
+			E.UIParent:SetHeight(height)
+		end)
+		OrderHallCommandBar:HookScript("OnHide", function()
+			E.UIParent:SetHeight(E.UIParent.origHeight)
+		end)
+	end
+
+	if OrderHallCommandBar then
+		HookForResize()
+	else
+		local f = CreateFrame("Frame")
+		f:RegisterEvent("ADDON_LOADED")
+		f:SetScript("OnEvent", function(self, event, addon)
+			if addon == "Blizzard_OrderHallUI" then
+				HookForResize()
+			end
+		end)
 	end
 end

@@ -11,7 +11,7 @@ local MODE_ACTIVITY = 4
 local MODE_CURRENCIES = 5
 local MODE_FOLLOWERS = 6
 
-local SKILL_CAP = 700
+local SKILL_CAP = 800
 local CURRENCY_ID_CONQUEST = 390
 local CURRENCY_ID_HONOR = 392
 local CURRENCY_ID_JUSTICE = 395
@@ -27,12 +27,13 @@ local THIS_ACCOUNT = "Default"
 
 local VIEW_BAGS = 1
 local VIEW_QUESTS = 2
-local VIEW_AUCTIONS = 5
-local VIEW_BIDS = 6
-local VIEW_MAILS = 7
-local VIEW_MOUNTS = 8
-local VIEW_COMPANIONS = 9
-local VIEW_GARRISONS = 13
+local VIEW_AUCTIONS = 4
+local VIEW_BIDS = 5
+local VIEW_MAILS = 6
+local VIEW_COMPANIONS = 7
+local VIEW_SPELLS = 8
+local VIEW_PROFESSION = 9
+local VIEW_GARRISONS = 10
 
 local ICON_FACTION_HORDE = "Interface\\Icons\\INV_BannerPVP_01"
 local ICON_FACTION_ALLIANCE = "Interface\\Icons\\INV_BannerPVP_02"
@@ -888,6 +889,10 @@ columns["FreeBankSlots"] = {
 			end
 			
 			local numSlots = DataStore:GetNumBankSlots(character)
+			if numSlots == 0 then		-- Bank not visited yet
+				return 0			
+			end
+			
 			local numFree = DataStore:GetNumFreeBankSlots(character)
 			local color = ((numFree / numSlots) <= 0.1) and colors.red or colors.green
 			

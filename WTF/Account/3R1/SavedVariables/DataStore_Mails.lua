@@ -12,169 +12,33 @@ DataStore_MailsDB = {
 	},
 	["global"] = {
 		["Characters"] = {
-			["Default.Illidan.Evan"] = {
-				["lastUpdate"] = 1454806569,
-				["Mails"] = {
-					{
-						["sender"] = "Comet",
-						["count"] = 1,
-						["link"] = "|cffa335ee|Hitem:67136:0:0:0:0:0:0:0:100:269:0:0:0|h[Gilnean Ring of Ruination]|h|r",
-						["icon"] = "Interface\\ICONS\\inv_misc_emeraldstonering.blp",
-						["lastCheck"] = 1454693260,
-						["daysLeft"] = 30,
-					}, -- [1]
-					{
-						["sender"] = "Comet",
-						["count"] = 200,
-						["link"] = "|cffffffff|Hitem:111557:0:0:0:0:0:0:0:100:269:0:0:0|h[Sumptuous Fur]|h|r",
-						["lastCheck"] = 1454806566,
-						["icon"] = "Interface\\ICONS\\INV_misc_nativebeastfur.blp",
-						["daysLeft"] = 30,
-					}, -- [2]
-					{
-						["sender"] = "Comet",
-						["count"] = 200,
-						["link"] = "|cffffffff|Hitem:111557:0:0:0:0:0:0:0:100:269:0:0:0|h[Sumptuous Fur]|h|r",
-						["lastCheck"] = 1454806566,
-						["icon"] = "Interface\\ICONS\\INV_misc_nativebeastfur.blp",
-						["daysLeft"] = 30,
-					}, -- [3]
-					{
-						["sender"] = "Comet",
-						["count"] = 200,
-						["link"] = "|cffffffff|Hitem:111557:0:0:0:0:0:0:0:100:269:0:0:0|h[Sumptuous Fur]|h|r",
-						["lastCheck"] = 1454806566,
-						["icon"] = "Interface\\ICONS\\INV_misc_nativebeastfur.blp",
-						["daysLeft"] = 30,
-					}, -- [4]
-					{
-						["sender"] = "Comet",
-						["count"] = 200,
-						["link"] = "|cffffffff|Hitem:111557:0:0:0:0:0:0:0:100:269:0:0:0|h[Sumptuous Fur]|h|r",
-						["lastCheck"] = 1454806566,
-						["icon"] = "Interface\\ICONS\\INV_misc_nativebeastfur.blp",
-						["daysLeft"] = 30,
-					}, -- [5]
-					{
-						["sender"] = "Comet",
-						["count"] = 200,
-						["link"] = "|cffffffff|Hitem:111557:0:0:0:0:0:0:0:100:269:0:0:0|h[Sumptuous Fur]|h|r",
-						["lastCheck"] = 1454806566,
-						["icon"] = "Interface\\ICONS\\INV_misc_nativebeastfur.blp",
-						["daysLeft"] = 30,
-					}, -- [6]
-					{
-						["sender"] = "Comet",
-						["count"] = 200,
-						["link"] = "|cffffffff|Hitem:109693:0:0:0:0:0:0:0:100:269:0:0:0|h[Draenic Dust]|h|r",
-						["lastCheck"] = 1454806566,
-						["icon"] = "interface\\ICONS\\INV_Enchanting_WOD_dust3.blp",
-						["daysLeft"] = 30,
-					}, -- [7]
-					{
-						["sender"] = "Comet",
-						["count"] = 200,
-						["link"] = "|cffffffff|Hitem:111557:0:0:0:0:0:0:0:100:269:0:0:0|h[Sumptuous Fur]|h|r",
-						["lastCheck"] = 1454806566,
-						["icon"] = "Interface\\ICONS\\INV_misc_nativebeastfur.blp",
-						["daysLeft"] = 30,
-					}, -- [8]
-					{
-						["sender"] = "Comet",
-						["count"] = 200,
-						["link"] = "|cffffffff|Hitem:111557:0:0:0:0:0:0:0:100:269:0:0:0|h[Sumptuous Fur]|h|r",
-						["lastCheck"] = 1454806566,
-						["icon"] = "Interface\\ICONS\\INV_misc_nativebeastfur.blp",
-						["daysLeft"] = 30,
-					}, -- [9]
-					{
-						["sender"] = "Comet",
-						["count"] = 200,
-						["link"] = "|cffffffff|Hitem:111557:0:0:0:0:0:0:0:100:269:0:0:0|h[Sumptuous Fur]|h|r",
-						["lastCheck"] = 1454806566,
-						["icon"] = "Interface\\ICONS\\INV_misc_nativebeastfur.blp",
-						["daysLeft"] = 30,
-					}, -- [10]
-					{
-						["sender"] = "Comet",
-						["count"] = 200,
-						["link"] = "|cffffffff|Hitem:109693:0:0:0:0:0:0:0:100:269:0:0:0|h[Draenic Dust]|h|r",
-						["lastCheck"] = 1454806566,
-						["icon"] = "interface\\ICONS\\INV_Enchanting_WOD_dust3.blp",
-						["daysLeft"] = 30,
-					}, -- [11]
-					{
-						["sender"] = "Comet",
-						["count"] = 200,
-						["link"] = "|cffffffff|Hitem:111557:0:0:0:0:0:0:0:100:269:0:0:0|h[Sumptuous Fur]|h|r",
-						["lastCheck"] = 1454806566,
-						["icon"] = "Interface\\ICONS\\INV_misc_nativebeastfur.blp",
-						["daysLeft"] = 30,
-					}, -- [12]
-					{
-						["sender"] = "Comet",
-						["count"] = 200,
-						["link"] = "|cffffffff|Hitem:111557:0:0:0:0:0:0:0:100:269:0:0:0|h[Sumptuous Fur]|h|r",
-						["lastCheck"] = 1454806566,
-						["icon"] = "Interface\\ICONS\\INV_misc_nativebeastfur.blp",
-						["daysLeft"] = 30,
-					}, -- [13]
-					{
-						["sender"] = "Comet",
-						["count"] = 100,
-						["link"] = "|cffffffff|Hitem:109693:0:0:0:0:0:0:0:100:269:0:0:0|h[Draenic Dust]|h|r",
-						["lastCheck"] = 1454806569,
-						["icon"] = "interface\\ICONS\\INV_Enchanting_WOD_dust3.blp",
-						["daysLeft"] = 30,
-					}, -- [14]
-				},
-				["lastVisitDate"] = "2016/01/24 21:16",
+			["Default.Illidan.Comet"] = {
+				["lastUpdate"] = 1470549576,
+				["lastVisitDate"] = "2016/08/06 22:59",
 			},
-			["Default.Illidan.Pandatal"] = {
-				["lastUpdate"] = 1454625565,
-				["lastVisitDate"] = "2016/02/04 14:39",
+			["Default.Illidan.Evan"] = {
+				["lastUpdate"] = 1470539005,
+				["lastVisitDate"] = "2016/08/06 20:03",
 			},
 			["Default.Illidan.Metal"] = {
-				["lastUpdate"] = 1454806558,
+				["lastUpdate"] = 1470154897,
 				["Mails"] = {
 					{
-						["sender"] = "Comet",
-						["count"] = 200,
-						["link"] = "|cffffffff|Hitem:109119:0:0:0:0:0:0:0:100:269:0:0:0|h[True Iron Ore]|h|r",
-						["lastCheck"] = 1454806558,
-						["icon"] = "Interface\\ICONS\\INV_Ore_TrueIronOre.blp",
-						["daysLeft"] = 30,
+						["lastCheck"] = 1470154897,
+						["sender"] = "Usuri Brightcoin",
+						["subject"] = "Currency Conversion: Honor",
+						["returned"] = false,
+						["money"] = 0,
+						["text"] = "Dear Sir or Madam,\r\n\r\nEnclosed you will find an amount of coin corresponding to the current fair market value of your Honor Points:\r\n\r\n - Honor Point @ 35 Silver Each\r\n\r\nYours Faithfully,\r\nUsuri Brightcoin\r\nDalaran Currency Exchange",
+						["icon"] = 134327,
+						["daysLeft"] = 21.4047222137451,
 					}, -- [1]
-					{
-						["sender"] = "Comet",
-						["count"] = 200,
-						["link"] = "|cffffffff|Hitem:109119:0:0:0:0:0:0:0:100:269:0:0:0|h[True Iron Ore]|h|r",
-						["lastCheck"] = 1454806558,
-						["icon"] = "Interface\\ICONS\\INV_Ore_TrueIronOre.blp",
-						["daysLeft"] = 30,
-					}, -- [2]
-					{
-						["sender"] = "Comet",
-						["count"] = 200,
-						["link"] = "|cffffffff|Hitem:109119:0:0:0:0:0:0:0:100:269:0:0:0|h[True Iron Ore]|h|r",
-						["lastCheck"] = 1454806558,
-						["icon"] = "Interface\\ICONS\\INV_Ore_TrueIronOre.blp",
-						["daysLeft"] = 30,
-					}, -- [3]
-					{
-						["sender"] = "Comet",
-						["count"] = 200,
-						["link"] = "|cffffffff|Hitem:109119:0:0:0:0:0:0:0:100:269:0:0:0|h[True Iron Ore]|h|r",
-						["lastCheck"] = 1454806558,
-						["icon"] = "Interface\\ICONS\\INV_Ore_TrueIronOre.blp",
-						["daysLeft"] = 30,
-					}, -- [4]
 				},
-				["lastVisitDate"] = "2016/01/31 18:48",
+				["lastVisitDate"] = "2016/08/02 09:21",
 			},
-			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1454806572,
-				["lastVisitDate"] = "2016/02/06 16:56",
+			["Default.Illidan.Pandatal"] = {
+				["lastUpdate"] = 1461733334,
+				["lastVisitDate"] = "2016/04/26 22:02",
 			},
 		},
 	},

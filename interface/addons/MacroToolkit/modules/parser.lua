@@ -411,37 +411,47 @@ function MT:ShortenMacro(macrotext)
 		if l ~= "" then
 			l = string.gsub(l, "%s+", " ")
 			l = string.gsub(l, "%s-([%]=,;])", "%1")
-			l = string.gsub(l, "([%[%]=,;])%s+", "%1")
+			--l = string.gsub(l, "([%[%]=,;])%s+", "%1") -- ticket 124
+			l = string.gsub(l, "([%[%]=;])%s+", "%1")
+			l = string.gsub(l, "%[(%w),%s+(%w)%]", "%1%2")
 			l = string.gsub(l, "%s-/%s+", "/")
 			l = string.gsub(l, "%s-;$", "")
 			l = string.gsub(l, "target=", "@")
 			l = string.gsub(l, "modifier%s-", "mod")
 			l = string.gsub(l, "mod%s-:%s+", "mod:")
 			l = string.gsub(l, "group%s-:%s+", "group:")
+			--ticket 124
+			local s, e = string.find(l, "%[.-%]")
+			while s do
+				local s1 = string.sub(l, s, e)
+				s1 = string.gsub(s1, "%s+", "")
+				l = format("%s%s%s", string.sub(l, 1, s - 1), s1, string.sub(l, e + 1))
+				s, e = string.find(l, "%[.-%]", e + 1)
+			end
 			--ticket 52
 			local s, e = string.find(l, "%[.-help.-exists.-%]")
 			while s do
 				local s1, e1 = string.find(l, ",%s-exists", s)
-				l = format("%s%s", string.sub(l, 1, s1 - 1), string.sub(l, e1 + 1))
+				l = format("%s%s", string.sub(l, 1, s1), string.sub(l, e1 + 1))
 				s, e = string.find(l, "%[.-help.-exists.-%]")
 			end
 			s, e = string.find(l, "%[.-,-exists.-help.-%]")
 			while s do
 				local s1, e1 = string.find(l, ",-%s-exists,+", s)
-				l = format("%s%s", string.sub(l, 1, s1 - 1), string.sub(l, e1 + 1))
+				l = format("%s%s", string.sub(l, 1, s1), string.sub(l, e1 + 1))
 				s, e = string.find(l, "%[.-,-exists.-help.-%]")
 			end
 			s, e = string.find(l, "%[.-harm.-exists.-%]")
 			while s do
 				local s1, e1 = string.find(l, ",%s-exists", s)
-				l = format("%s%s", string.sub(l, 1, s1 - 1), string.sub(l, e1 + 1))
+				l = format("%s%s", string.sub(l, 1, s1), string.sub(l, e1 + 1))
 				s, e = string.find(l, "%[.-harm.-exists.-%]")
 			end
 			s, e = string.find(l, "%[.-,-exists.-harm.-%]")
 			while s do
 				local s1, e1 = string.find(l, ",-%s-exists,+", s)
 				if s1 then -- ticket 68
-					l = format("%s%s", string.sub(l, 1, s1 - 1), string.sub(l, e1 + 1))
+					l = format("%s%s", string.sub(l, 1, s1), string.sub(l, e1 + 1))
 					s, e = string.find(l, "%[.-,-exists.-harm.-%]")
 				else break end
 			end

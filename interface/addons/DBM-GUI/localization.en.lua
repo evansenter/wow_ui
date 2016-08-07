@@ -52,10 +52,10 @@ L.Statistic_Kills			= "Victories:"
 L.Statistic_Wipes			= "Wipes:"
 L.Statistic_Incompletes		= "Incompletes:"--For scenarios, TODO, figure out a clean way to replace any Statistic_Wipes with Statistic_Incompletes for scenario mods
 L.Statistic_BestKill		= "Best Victory:"
+L.Statistic_BestRank		= "Best Rank:"--Maybe not get used, not sure yet, localize anyways
 
 -- Tab: General Core Options
 L.General 					= "General DBM Core Options"
-L.EnableDBM 				= "Enable DBM"
 L.EnableMiniMapIcon			= "Show minimap button"
 L.UseSoundChannel			= "Set audio channel used by DBM to play alert sounds"
 L.UseMasterChannel			= "Master audio channel."
@@ -174,6 +174,7 @@ L.BarFlash					= "Flash bar about to expire"
 L.BarSort					= "Sort by remaining time"
 L.BarColorByType			= "Color by type"
 L.BarInlineIcons			= "Show inline icons"
+L.ShortTimerText			= "Use short timer text (when available)"
 
 -- Tab: Spec Warn Frame
 L.Panel_SpecWarnFrame		= "Special Warnings"
@@ -280,7 +281,7 @@ L.DontShowPT				= "Do not show Pull/Break Timer bar"
 L.DontShowPTText			= "Do not show announce text for Pull/Break Timer"
 L.DontPlayPTCountdown		= "Do not play Pull/Break/Combat/Custom Timer countdown audio"
 L.DontShowPTCountdownText	= "Do not show Pull/Break/Combat/Custom Timer countdown text"
-L.PT_Threshold				= "Do not show Pull/Break/Combat/Custom Timer countdown text above: %d"
+L.PT_Threshold				= "Do not show Break/Combat/Custom Timer countdown text above: %d"
 
 L.Panel_HideBlizzard		= "Blizzard Disable & Hide"
 L.Area_HideBlizzard			= "Blizzard Disable & Hide Options"
@@ -317,15 +318,11 @@ L.SKT_Enabled				= "Show record victory timer for current fight if available"
 L.CRT_Enabled				= "Show timer for next combat ressurection charge"
 L.ShowRespawn				= "Show boss respawn timer after a wipe"
 L.ShowQueuePop				= "Show time remaining to accept a queue pop (LFG,BG,etc)"
-L.ChallengeTimerOptions		= "Set option for challenge mode best clear timer"
-L.ChallengeTimerPersonal	= "Personal"
-L.ChallengeTimerGuild		= GUILD
-L.ChallengeTimerRealm		= "Realm"
 --
 L.Area_AutoLogging			= "Auto Logging Options"
 L.AutologBosses				= "Automatically record boss encounters using blizzard combat log (Use /dbm pull before bosses to start logging early for pre pots and other events.)"
 L.AdvancedAutologBosses		= "Automatically record boss encounters with Transcriptor"
-L.LogOnlyRaidBosses			= "Only record raid boss encounters (exclude Raid Finder/party/scenario)"
+L.LogOnlyRaidBosses			= "Only record raid boss encounters from current expansion (exclude Raid Finder/party/scenario/old content)"
 --
 L.Area_3rdParty				= "3rd Party Addon Options"
 L.ShowBBOnCombatStart		= "Perform Big Brother buff check on combat start"

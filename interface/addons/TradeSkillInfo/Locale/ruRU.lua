@@ -55,6 +55,7 @@ L["Gathered"] = "Собирается"
 L["Gnomish Engineer"] = "Гномское инженерное дело"
 L["Goblin Engineer"] = "Гоблинское инженерное дело"
 L["Herbalism"] = "Травничество"
+-- L["Hide Minimap Button"] = ""
 L["HIGH"] = true
 L["Horde"] = "Орда"
 L["Horde Quest"] = "Задание Орды"

@@ -20,8 +20,8 @@ EPGPLootMaster = {
 		["Evan - Illidan"] = {
 		},
 		["Comet - Illidan"] = {
-			["hideMLOnCombat"] = false,
 			["auto_announce_threshold"] = 0,
+			["hideMLOnCombat"] = false,
 		},
 		["Centromere - Dark Iron"] = {
 		},

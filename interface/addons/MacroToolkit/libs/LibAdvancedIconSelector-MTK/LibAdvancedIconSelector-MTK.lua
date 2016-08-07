@@ -902,7 +902,7 @@ function IconSelectorFrame:private_UpdateIcons()
 
 				if button.texture then
 					if type(button.texture) == "number" then
-						button.icon:SetToFileData(button.texture)
+						button.icon:SetTexture(button.texture)
 					else
 						--button:SetNormalTexture("Interface\\Icons\\" .. button.texture)
 						button.icon:SetTexture("Interface\\Icons\\" .. button.texture)

@@ -79,15 +79,15 @@
 					<Anchor point="TOPLEFT" relativeTo="$Parent" relativePoint="BOTTOMLEFT"/>
 				</Anchors>
 				
-				<Backdrop bgFile="Interface\AddOns\Details\images\background" edgeFile="Interface\AddOns\Details\images\border_3" tile="true">
+				<Backdrop bgFile="Interface\FrameGeneral\UI-Background-Marble" edgeFile="Interface\Buttons\WHITE8X8" tile="true">
 					<EdgeSize>
-						<AbsValue val="16"/>
+						<AbsValue val="1"/>
 					</EdgeSize>
 					<TileSize>
 						<AbsValue val="256"/>
 					</TileSize>
 					<BackgroundInsets>
-						<AbsInset left="4" right="4" top="4" bottom="5"/>
+						<AbsInset left="0" right="0" top="0" bottom="0"/>
 					</BackgroundInsets>
 				</Backdrop>
 				
@@ -96,7 +96,8 @@
 						DetailsFrameworkDropDownOptionsFrameOnHide (self);
 					</OnHide>
 					<OnLoad>
-						self:SetBackdropColor (0, 0, 0, 0.95);
+						self:SetBackdropColor (0, 0, 0, 0.92);
+						self:SetBackdropBorderColor (0, 0, 0, 1);
 					</OnLoad>
 				</Scripts>
 				
@@ -109,7 +110,7 @@
 				</Anchors>
 				
 				<ScrollChild>
-					<Frame name="$Parent_ScrollChild" frameStrata="DIALOG" parentKey="scrollchild">
+					<Frame name="$Parent_ScrollChild" frameStrata="FULLSCREEN" parentKey="scrollchild">
 					
 						<Size x="150" y="150"/>
 						
@@ -160,19 +161,19 @@
 			</OnLoad>
 		
 			<OnShow>
-				DetailsFrameworkDropDownOnShow (self);
+				<!--DetailsFrameworkDropDownOnShow (self);-->
 			</OnShow>
 			
 			<OnHide>
-				DetailsFrameworkDropDownOnHide (self);
+				<!--DetailsFrameworkDropDownOnHide (self);-->
 			</OnHide>
 		
 			<OnEnter>
-				DetailsFrameworkDropDownOnEnter (self);
+				<!--DetailsFrameworkDropDownOnEnter (self);-->
 			</OnEnter>
 			
 			<OnLeave>
-				DetailsFrameworkDropDownOnLeave (self);
+				<!--DetailsFrameworkDropDownOnLeave (self);-->
 			</OnLeave>
 		
 			<OnSizeChanged>

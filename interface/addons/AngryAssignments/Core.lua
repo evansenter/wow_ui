@@ -12,8 +12,8 @@ BINDING_NAME_AngryAssign_LOCK = "Toggle Lock"
 BINDING_NAME_AngryAssign_DISPLAY = "Toggle Display"
 BINDING_NAME_AngryAssign_OUTPUT = "Output Assignment to Chat"
 
-local AngryAssign_Version = 'v1.6.1'
-local AngryAssign_Timestamp = '20150717175821'
+local AngryAssign_Version = 'v1.7.1'
+local AngryAssign_Timestamp = '20160721125800'
 
 local protocolVersion = 1
 local comPrefix = "AnAss"..protocolVersion
@@ -1391,7 +1391,7 @@ function AngryAssign:UpdateBackdrop()
 	end
 	if min ~= nil and max ~= nil and self:GetConfig('backdropShow') then
 		self.backdrop:SetHeight( max - min + last_height + 8 )
-		self.backdrop:SetTexture( HexToRGB(self:GetConfig('backdropColor')) )
+		self.backdrop:SetColorTexture( HexToRGB(self:GetConfig('backdropColor')) )
 		self.backdrop:Show()
 	else
 		self.backdrop:Hide()
@@ -1416,7 +1416,8 @@ function AngryAssign:DisplayUpdateNotification()
 		-- Flashing in
 		local fade1 = updateFlasher:CreateAnimation("Alpha")
 		fade1:SetDuration(0.5)
-		fade1:SetChange(1)
+		fade1:SetFromAlpha(0)
+		fade1:SetToAlpha(1)
 		fade1:SetOrder(1)
 
 		-- Holding it visible for 1 second
@@ -1425,7 +1426,8 @@ function AngryAssign:DisplayUpdateNotification()
 		-- Flashing out
 		local fade2 = updateFlasher:CreateAnimation("Alpha")
 		fade2:SetDuration(0.5)
-		fade2:SetChange(-1)
+		fade2:SetFromAlpha(1)
+		fade2:SetToAlpha(0)
 		fade2:SetOrder(3)
 	end
 	if updateFlasher2 == nil then
@@ -1434,7 +1436,8 @@ function AngryAssign:DisplayUpdateNotification()
 		-- Flashing in
 		local fade1 = updateFlasher2:CreateAnimation("Alpha")
 		fade1:SetDuration(0.5)
-		fade1:SetChange(1)
+		fade1:SetFromAlpha(0)
+		fade1:SetToAlpha(1)
 		fade1:SetOrder(1)
 
 		-- Holding it visible for 1 second
@@ -1443,7 +1446,8 @@ function AngryAssign:DisplayUpdateNotification()
 		-- Flashing out
 		local fade2 = updateFlasher2:CreateAnimation("Alpha")
 		fade2:SetDuration(0.5)
-		fade2:SetChange(-1)
+		fade2:SetFromAlpha(1)
+		fade2:SetToAlpha(0)
 		fade2:SetOrder(3)
 	end
 

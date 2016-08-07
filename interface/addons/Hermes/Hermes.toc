@@ -1,4 +1,4 @@
-## Interface: 60200
+## Interface: 70000
 ## Title: Hermes [|cffeda55fCore|r]
 ## Author: Virtual (Virtual#1157 @ US-Alleria)
 ## Notes: The core Hermes engine used for monitoring raid cooldowns.

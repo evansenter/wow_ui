@@ -16,6 +16,33 @@ TradeskillInfo.vars.difficultyLevel = { ["trivial"] = 1, ["easy"] = 2, ["medium"
 TradeskillInfo.vars.diffcolors = { "|cff777777", "|cff33bb33", "|cffffff00", "|cffff7733", "|cffffffff" } -- trivial, easy, medium, optimal, header
 
 
+local LDB = LibStub("LibDataBroker-1.1", true)
+local DBI = LibStub("LibDBIcon-1.0", true)
+local object
+
+if LDB then
+	object = LDB:NewDataObject("TradeSkillInfo")
+
+	object.type = "launcher"
+	object.text = "TradeSkillInfo"
+	object.icon = "Interface\\Icons\\INV_Elemental_SpiritOfHarmony_2"
+
+	object.OnClick = function(_, button)
+		if button == "LeftButton" then
+			TradeskillInfo:UI_Toggle()
+		elseif button == "RightButton" then
+			TradeskillInfo:ConfigToggle()
+		end
+	end
+
+	object.OnTooltipShow = function(tooltip)
+		tooltip:AddLine("TradeSkillInfo")
+		tooltip:AddLine(L["Left Click"] .. ": " .. L["Open main window"] .. ".", 0, 1, 0)
+		tooltip:AddLine(L["Right Click"] .. ": " .. L["Open configuration window"] .. ".", 0, 1, 0)
+	end
+end
+
+
 local function getIdFromLink(link)
 	if not link then return end
 
@@ -73,6 +100,13 @@ local function getItemLink(id, combineName)
 end
 
 
+local GetTradeSkillLine = C_TradeSkillUI.GetTradeSkillLine
+local IsTradeSkillReady = C_TradeSkillUI.IsTradeSkillReady
+local IsTradeSkillLinked = C_TradeSkillUI.IsTradeSkillLinked
+local IsTradeSkillGuild = C_TradeSkillUI.IsTradeSkillGuild
+local IsNPCCrafting = C_TradeSkillUI.IsNPCCrafting
+
+
 function TradeskillInfo:OnInitialize()
 	self.db = LibStub("AceDB-3.0"):New("TradeSkillInfoDB", {
 		profile = {
@@ -120,6 +154,9 @@ function TradeskillInfo:OnInitialize()
 			SavePosition = true,
 			FrameStrata = 1,
 			UIScale = 1,
+
+			-- minimap options
+			hide = false,
 		},
 		realm = {
 			["*"] = { -- stores all known characters
@@ -138,7 +175,7 @@ function TradeskillInfo:OnEnable()
 
 	self:PopulateProfessionNames()
 
-	self:HookTradeSkillUI()
+--	self:HookTradeSkillUI()
 	self:SecureHook("ContainerFrameItemButton_OnModifiedClick")
 	self:SecureHook("BankFrameItemButtonGeneric_OnModifiedClick")
 	self:SecureHook("MerchantItemButton_OnModifiedClick")
@@ -146,7 +183,7 @@ function TradeskillInfo:OnEnable()
 	self:HookAuctionUI()
 
 	self:RegisterEvent("TRADE_SKILL_SHOW", "OnTradeShow")
-	self:RegisterEvent("SKILL_LINES_CHANGED", "OnSkillUpdate")
+	self:RegisterEvent("CHAT_MSG_SKILL", "OnSkillUpdate")
 	self:RegisterEvent("ADDON_LOADED", "OnAddonLoaded")
 
 	-- merchant colouring
@@ -157,7 +194,7 @@ function TradeskillInfo:OnEnable()
 		"SetExistingSocketGem", "SetSocketGem", "SetSpellByID",
 		"SetHyperlink", "SetAction", "SetQuestLogSpecialItem",
 		"SetBagItem", "SetGuildBankItem", "SetInventoryItem",
-		"SetTradePlayerItem", "SetTradeSkillItem",
+		"SetTradePlayerItem", -- "SetTradeSkillItem",
 		"SetLootItem", "SetLootRollItem",
 		"SetMerchantItem", "SetBuybackItem",
 		"SetSendMailItem", "SetInboxItem",
@@ -171,19 +208,18 @@ function TradeskillInfo:OnEnable()
 	self.OptionsPanel = LibStub("AceConfigDialog-3.0"):AddToBlizOptions("TradeSkillInfo", "TradeSkillInfo")
 
 	self:ScheduleTimer("OnSkillUpdate", 1)
+
+	if DBI then
+		DBI:Register("TradeSkillInfo", object, self.db.profile)
+	end
 end
 
 
-local runeforging = GetSpellInfo(53428)
 function TradeskillInfo:OnTradeShow()
 	if IsTradeSkillReady() then
-		if not IsTradeSkillLinked() and not IsTradeSkillGuild() and not IsNPCCrafting() and GetTradeSkillLine() ~= "UNKNOWN" and CURRENT_TRADESKILL ~= runeforging then
---			self:Print("Scanning "..CURRENT_TRADESKILL.."...")
+		if not IsTradeSkillLinked() and not IsTradeSkillGuild() and not IsNPCCrafting() and GetTradeSkillLine() ~= "UNKNOWN" then
 			self:ScheduleTimer("UpdateKnownRecipes", 1)
 		end
-	else
---		self:Print("Waiting for tradeskill data to be cached...")
-		self:ScheduleTimer("OnTradeShow", 1)
 	end
 end
 
@@ -192,7 +228,7 @@ function TradeskillInfo:OnSkillUpdate()
 		self.UpdateInProgress = true
 
 		self:UpdateSkills()
-		self:OnTradeShow()
+		self:UpdateKnownRecipes()
 
 		self.UpdateInProgress = false
 	end
@@ -202,7 +238,7 @@ function TradeskillInfo:OnAddonLoaded(_, addon)
 	if addon == "Blizzard_AuctionUI" then
 		self:HookAuctionUI()
 	elseif addon == "Blizzard_TradeSkillUI" or addon == "AdvancedTradeSkillWindow" then
-		self:HookTradeSkillUI()
+--		self:HookTradeSkillUI()
 	end
 end
 
@@ -288,8 +324,8 @@ function TradeskillInfo:HookTradeSkillUI()
 		self:SecureHook("TradeSkillFrame_SetSelection")
 
 		-- add our text fields
-		local fsSkillText = TradeSkillDetailScrollChildFrame:CreateFontString("TradeskillInfoSkillText", "BACKGROUND", "GameFontHighlightSmall")
-		local fsProfitText = TradeSkillDetailScrollChildFrame:CreateFontString("TradeskillInfoProfitText", "BACKGROUND", "GameFontHighlightSmall")
+		local fsSkillText = TradeSkillFrame.DetailsFrame:CreateFontString("TradeskillInfoSkillText", "BACKGROUND", "GameFontHighlightSmall")
+		local fsProfitText = TradeSkillFrame.DetailsFrame:CreateFontString("TradeskillInfoProfitText", "BACKGROUND", "GameFontHighlightSmall")
 
 		fsSkillText:SetPoint("TOPLEFT", 5, -52)
 		fsProfitText:SetPoint("TOPLEFT", fsSkillText, "TOPRIGHT")
@@ -318,17 +354,46 @@ end
 
 function TradeskillInfo:UpdateSkills()
 	local prof1, prof2, _, _, cook, firstAid = GetProfessions()
-	local professions = {prof1, prof2, cook, firstAid}
 	local userData = self.db.realm[self.vars.playername]
-	for _,idx in ipairs(professions) do
-		local name, _, rank = GetProfessionInfo(idx)
-		if self.vars.skillnames[name] then
-			userData.skills[self.vars.skillnames[name]] = rank
-		end
+	local name, rank
+
+	if prof1 then
+		name, _, rank = GetProfessionInfo(prof1)
+		userData.skills[self.vars.skillnames[name]] = rank
+	end
+
+	if prof2 then
+		name, _, rank = GetProfessionInfo(prof2)
+		userData.skills[self.vars.skillnames[name]] = rank
+	end
+
+	if cook then
+		name, _, rank = GetProfessionInfo(cook)
+		userData.skills[self.vars.skillnames[name]] = rank
+	end
+
+	if firstAid then
+		name, _, rank = GetProfessionInfo(firstAid)
+		userData.skills[self.vars.skillnames[name]] = rank
 	end
 end
 
 function TradeskillInfo:UpdateKnownTradeRecipes(startLine, endLine)
+	local recipes = C_TradeSkillUI.GetAllRecipeIDs()
+	if not recipes or #recipes == 0 then return end
+
+	for _, recipeID in pairs(recipes) do
+		local info = C_TradeSkillUI.GetRecipeInfo(recipeID)
+
+		if info.learned then
+--			for key, value in pairs(info) do
+--				self:Print(key, value)
+--			end
+
+			self.db.realm[self.vars.playername].knownRecipes[recipeID] = self.vars.difficultyLevel[info.difficulty]
+		end
+	end
+--[[
 	local numSkills = GetNumTradeSkills()
 
 	if not startLine then
@@ -355,6 +420,7 @@ function TradeskillInfo:UpdateKnownTradeRecipes(startLine, endLine)
 			end
 		end
 	end
+]]
 
 --	self:Print("Scan complete.")
 end
@@ -1743,6 +1809,8 @@ local defaultNames = {
 	[2550] = L["Cooking"],
 	[3273] = L["First Aid"],
 	[2575] = L["Mining"],
+	[8613] = L["Skinning"],
+	[170691] = L["Herbalism"],
 	[45357] = L["Inscription"],
 	[20219] = L["Gnomish Engineer"],
 	[20222] = L["Goblin Engineer"],
@@ -1755,31 +1823,31 @@ local defaultNames = {
 }
 
 function TradeskillInfo:PopulateProfessionNames()
-	if not ( self.vars.tradeskills and
-	         self.vars.skillnames) or
-	   not ( self.vars.specializations and
-	         self.vars.specializationnames)
-	then
-		self.vars.tradeskills = {}
-		self.vars.skillnames = {}
-		for l, v in pairs(self.vars.tradeskillspells) do
-			local name = GetSpellInfo(v)
-			if not name then
-				name = defaultNames[v]
-			end
-			self.vars.tradeskills[l] = name
-			self.vars.skillnames[name] = l
+	self.vars.tradeskills = {}
+	self.vars.skillnames = {}
+
+	for l, v in pairs(self.vars.tradeskillspells) do
+		local name = GetSpellInfo(v)
+
+		if not name then
+			name = defaultNames[v]
 		end
 
-		self.vars.specializations = {}
-		self.vars.specializationnames = {}
-		for l, v in pairs(self.vars.specializationspells) do
-			local name = GetSpellInfo(v)
-			if not name then
-				name = defaultNames[v]
-			end
-			self.vars.specializations[l] = name
-			self.vars.specializationnames[name] = l
+		self.vars.tradeskills[l] = name
+		self.vars.skillnames[name] = l
+	end
+
+	self.vars.specializations = {}
+	self.vars.specializationnames = {}
+
+	for l, v in pairs(self.vars.specializationspells) do
+		local name = GetSpellInfo(v)
+
+		if not name then
+			name = defaultNames[v]
 		end
+
+		self.vars.specializations[l] = name
+		self.vars.specializationnames[name] = l
 	end
 end

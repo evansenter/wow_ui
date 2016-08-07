@@ -205,12 +205,14 @@ local MovAny = {
 		FocusFrameSpellBar,
 		MirrorTimer1,
 		MiniMapInstanceDifficulty,
-		EclipseBarFrame,
-		PaladinPowerBar,
-		ShardBarFrame,
-		PriestBarFrame,
-		MonkHarmonyBar,
 		VoidStorageFrame,
+		ComboPointPlayerFrame,
+		RuneFrame,
+		MageArcaneChargesFrame,
+		PaladinPowerBarFrame,
+		WarlockPowerFrame,
+		MonkHarmonyBarFrame,
+		MonkStaggerBar,
 	},
 	lTranslate = {
 		minimap = "MinimapCluster",
@@ -604,7 +606,7 @@ local MovAny = {
 						ArenaPrepFrames.hidWatchedQuests = false
 					end
 				end
-			elseif ArenaPrepFrames.hidWatchedQuests then	
+			elseif ArenaPrepFrames.hidWatchedQuests then
 				WatchFrame_AddObjectiveHandler(WatchFrame_DisplayTrackedQuests)
 				ArenaPrepFrames.hidWatchedQuests = false
 			end
@@ -657,6 +659,9 @@ end
 
 if CompactRaidFrameManager_Expand then
 	hooksecurefunc("CompactRaidFrameManager_Expand", function(self)
+		if InCombatLockdown() then
+			return
+		end
 		if MovAny:IsModified(self) then
 			MovAny:UnlockPoint(self)
 			local point, relativeTo, relativePoint, xOfs, yOfs = self:GetPoint(1)
@@ -669,6 +674,9 @@ end
 
 if CompactRaidFrameManager_Collapse then
 	hooksecurefunc("CompactRaidFrameManager_Collapse", function(self)
+		if InCombatLockdown() then
+			return
+		end
 		if MovAny:IsModified(self) then
 			MovAny:UnlockPoint(self)
 			local point, relativeTo, relativePoint, xOfs, yOfs = self:GetPoint(1)
@@ -1026,8 +1034,7 @@ function MovAny:Boot()
 		self:hBlizzard_TalentUI()
 	end
 end
-	
-	
+
 function MovAny:OnPlayerLogout()
 	if not MAOptions then
 		return
@@ -1056,7 +1063,7 @@ function MovAny:VerifyData()
 			end
 		end
 		MoveAnything_CharacterSettings = nil
-		
+
 		MADB.characters = { }
 		if MoveAnything_UseCharacterSettings then
 			for i, _ in pairs(MADB.profiles) do
@@ -1284,7 +1291,7 @@ function MovAny:SyncFrames(dontReset)
 			if not ret or self.syncError then
 				skippedFrames[fn] = e
 			end
-			
+
 			self.curSync = nil
 			self.syncError = nil
 		end
@@ -1371,6 +1378,9 @@ function MovAny:GetUserData(fn, noSymLink, create)
 end
 
 function MovAny.hShow(f, ...)
+	if not f then
+		return
+	end
 	if f.MAHidden then
 		if MovAny:IsProtected(f) and InCombatLockdown() then
 			local e = API:GetElement(f:GetName())
@@ -1389,6 +1399,9 @@ end
 hider:Hide()]]
 
 function MovAny:LockVisibility(f, dontHide)
+	if not f then
+		return
+	end
 	if f.MAHidden then
 		return
 	end
@@ -1406,6 +1419,9 @@ function MovAny:LockVisibility(f, dontHide)
 end
 
 function MovAny:UnlockVisibility(f)
+	if not f then
+		return
+	end
 	if not f.MAHidden then
 		return
 	end
@@ -1420,6 +1436,9 @@ function MovAny:UnlockVisibility(f)
 end
 
 function MovAny.hSetPoint(f, ...)
+	if not f then
+		return
+	end
 	--[[if MovAny.lForceProtected[f:GetName()] then 
 		print(f:GetName())
 		return
@@ -1459,6 +1478,9 @@ function MovAny.hSetPoint(f, ...)
 end
 
 function MovAny:LockPoint(f, opt)
+	if not f then
+		return
+	end
 	if not f.MAPoint then
 		if f:GetName() and (MovAny.lForcedLock[f:GetName()] or (opt and opt.forcedLock))  then
 			if not f.MASetPoint then
@@ -1483,6 +1505,9 @@ function MovAny:UnlockPoint(f)
 end
 
 function MovAny:LockParent(f)
+	if not f then
+		return
+	end
 	if not f.MAParented and not f.MAParentHook then
 		hooksecurefunc(f, "SetParent", MovAny.hSetParent)
 		f.MAParentHook = true
@@ -1498,6 +1523,9 @@ function MovAny:UnlockParent(f)
 end
 
 function MovAny.hSetParent(f, ...)
+	if not f then
+		return
+	end
 	if f.MAParented then
 		if InCombatLockdown() and MovAny:IsProtected(f) then
 			MovAny.pendingFrames[f:GetName()] = API:GetElement(f:GetName())
@@ -1575,6 +1603,9 @@ function MovAny:UnlockScale(f)
 end]]
 
 function MovAny.hSetScale(f)
+	if not f then
+		return
+	end
 	if f.MAScaled then
 		local fn = f:GetName()
 		if string.match(fn, "^ContainerFrame[1-9][0-9]*$") then
@@ -1609,6 +1640,9 @@ function MovAny.hSetScale(f)
 end
 
 function MovAny:LockScale(f)
+	if not f then
+		return
+	end
 	if f.SetScale and not f.MAScaled then
 		local meta = getmetatable(f).__index
 		if not meta.MAScaleHook then
@@ -1622,22 +1656,34 @@ function MovAny:LockScale(f)
 end
 
 function MovAny:UnlockScale(f)
+	if not f then
+		return
+	end
 	f.MAScaled = nil
 end
 
 function MovAny:Rescale(f, scale)
+	if not f then
+		return
+	end
 	MovAny:UnlockScale(f)
 	f:SetScale(scale)
 	MovAny:LockScale(f)
 end
 
 function MovAny.hSyncIfScaled(self, f)
+	if not f then
+		return
+	end
 	if f.MAScaled and f:GetName() ~= nil then
 		API:SyncElement(f:GetName())
 	end
 end
 
 function MovAny:LockWH(f)
+	if not f then
+		return
+	end
 	if f.SetScale and not f.MAScaled then
 		if not f.MAScaleHook then
 			if f.SetWidth then
@@ -1689,7 +1735,7 @@ function MovAny:HookFrame(e, f, dontUnanchor, runBeforeInteract)
 		f.orgScale = f:GetScale()
 		f.scale = f:GetScale()
 	end
-	if f.SetMovable and not e.noMove then
+	if f.SetMovable and e and not e.noMove then
 		if f:IsUserPlaced() then
 			f.MAWasUserPlaced = true
 		end
@@ -1703,7 +1749,7 @@ function MovAny:HookFrame(e, f, dontUnanchor, runBeforeInteract)
 		f:SetUserPlaced(true)
 	end
 	f.MAE = e
-	if not opt.orgPos and not e.noMove then
+	if not opt.orgPos and e and not e.noMove then
 		self.Position:StoreOrgPoints(f, opt)
 	end
 	if not f.MAHooked then
@@ -1712,7 +1758,7 @@ function MovAny:HookFrame(e, f, dontUnanchor, runBeforeInteract)
 		end
 		f.MAHooked = true
 	end
-	if not dontUnanchor and not e.noUnanchorRelatives and not e.noMove then
+	if not dontUnanchor and e and not e.noUnanchorRelatives and not e.noMove then
 		self:UnanchorRelatives(e, f, opt)
 	end
 	if self.DetachFromParent[fn] and not self.NoReparent[fn] and not f.MAOrgParent then
@@ -1936,7 +1982,9 @@ function MovAny:ToggleHide(fn)
 	if f and fn ~= f:GetName() then
 		fn = f:GetName()
 	end
-	if not f or (f.MAE and f.MAE.userData and not f.MAE.userData.hidden) then
+	self:AttachMover(fn)
+	local opt = self:GetUserData(fn, nil, true)
+	if not f or not opt.hidden then
 		ret = self:HideFrame(fn)
 	else
 		ret = self:ShowFrame(fn)
@@ -1971,7 +2019,7 @@ function MovAny:SafeMoveFrameAtCursor()
 			end
 		end
 		local transName = self:Translate(obj:GetName(), 1)
-		
+
 		if transName ~= obj:GetName() then
 			self:ToggleMove(transName)
 			break
@@ -2077,7 +2125,7 @@ function MovAny:HideFrameAtCursor()
 			self:ToggleHide(obj:GetName())
 		end
 	end
-	
+
 	self:UpdateGUIIfShown(true)
 end
 
@@ -2571,7 +2619,8 @@ function MovAny:HideFrame(f, readOnly)
 	if not fn then
 		fn = f:GetName()
 	end
-	if fn == "PaladinPowerBar" then
+	API:AddElementIfNew(fn)
+	if fn == "PaladinPowerBarFrame" then
 		f:UnregisterAllEvents()
 	elseif fn == "CompactRaidFrameManager" then
 		f:UnregisterAllEvents()
@@ -2676,8 +2725,9 @@ function MovAny:ShowFrame(f, readOnly, dontHook)
 	if not fn then
 		fn = f:GetName()
 	end
-	if fn == "PaladinPowerBar" then
-		PaladinPowerBar_OnLoad(f)
+	API:AddElementIfNew(fn)
+	if fn == "PaladinPowerBarFrame" then
+		PaladinPowerBar.OnLoad(f)
 	elseif fn == "CompactRaidFrameManager" then
 		f:RegisterEvent("DISPLAY_SIZE_CHANGED")
 		f:RegisterEvent("UI_SCALE_CHANGED")
@@ -2703,10 +2753,10 @@ function MovAny:ShowFrame(f, readOnly, dontHook)
 		end
 	end]]
 	local e = API:GetElement(fn)
-	local opt
-	if e and e.userData then
+	local opt = self:GetUserData(fn, nil, true)
+	--[[if e and e.userData then
 		opt = e.userData
-	end
+	end]]
 	if not readOnly and opt then
 		opt.hidden = nil
 		opt.unit = nil
@@ -3882,12 +3932,12 @@ function MovAny:SyncUIPanel(mn, f)
 					y  = -12
 				end
 				f:SetPoint("TOPLEFT", mn, "TOPLEFT", x, y)
-				
+
 				if not f.MAOrgScale then
 					f.MAOrgScale = f:GetScale()
 				end
 				f:SetScale(mover:GetScale())
-				
+
 				if not f.MAOrgAlpha then
 					f.MAOrgAlpha = f:GetAlpha()
 				end
@@ -3994,10 +4044,6 @@ function MovAny:GrabContainerFrame(container, movableBag)
 	end
 end
 
-local function Checkr(frame, ...)
-	maPrint("Test", ...)
-end
-
 function MovAny:UnanchorRelatives(e, f, opt)
 	if f.GetName and f:GetName() ~= nil and e.noUnanchorRelatives then
 		return
@@ -4022,13 +4068,13 @@ function MovAny:UnanchorRelatives(e, f, opt)
 			end
 		end
 	end
-	local num = p:GetNumChildren()
+	--local num = p:GetNumChildren()
 	--assert((num < 8000), "Too much childrens stuck in owerflow")
 	if p.GetChildren then
 		local children = {p:GetChildren()}
 		if children ~= nil then
 			for i, v in ipairs(children) do
-				if not v:IsForbidden() then
+				if not v:IsForbidden() and not v:IsProtected() then
 					self:_AddDependents(relatives, v)
 				end
 			end
@@ -4329,7 +4375,7 @@ function MovAny:hUpdateContainerFrameAnchors()
 			bag = MovAny:GetBagInContainerFrame(frame)
 			if not bag or (bag and not MovAny:IsModified(bag, "pos") and not MovAny:GetMoverByFrame(bag)) then
 				frameHeight = frame:GetHeight() --* containerScale
-				
+
 				if yRemaining < frameHeight + VISIBLE_CONTAINER_SPACING then
 					column = column + 1
 					yRemaining = yAvail
@@ -4424,7 +4470,7 @@ SlashCmdList["MAIMPORT"] = function(msg)
 		maPrint(MOVANY.DISABLED_DURING_COMBAT)
 		return
 	end
-	
+
 	if MADB.profiles[msg] == nil then
 		maPrint(string.format(MOVANY.PROFILE_UNKNOWN, msg))
 		return
@@ -5398,6 +5444,21 @@ function MovAny_OnEvent(self, event, arg1)
 				if MovAny:IsModified(PlayerPowerBarAltCounterBar) then
 					MovAny:ResetFrame(PlayerPowerBarAltCounterBar)
 				end
+				for k, v in pairs(MADB.profiles) do
+					if v.frames["PaladinPowerBar"] then
+						v.frames["PaladinPowerBar"] = nil
+					end
+					for i = 1, 10 do
+						if v.frames["LootWonAlertMover"..i] then
+							v.frames["LootWonAlertMover"..i] = nil
+						end
+					end
+					for i = 1, 5 do
+						if v.frames["MoneyWonAlertMover"..i] then
+							v.frames["MoneyWonAlertMover"..i] = nil
+						end
+					end
+				end
 			end
 		elseif arg1 == "Blizzard_TalentUI" and MovAny.hBlizzard_TalentUI then
 			MovAny:hBlizzard_TalentUI()
@@ -5505,7 +5566,7 @@ function MovAny_OnEvent(self, event, arg1)
 						end
 						if ArenaPrepFrame5:IsShown() then
 							return true
-						end					
+						end
 					end
 					return false
 				end
@@ -5564,7 +5625,7 @@ function MovAny_OnEvent(self, event, arg1)
 						end
 						if ArenaEnemyFrame5:IsShown() then
 							return true
-						end					
+						end
 					end
 					return false
 				end
@@ -6045,7 +6106,7 @@ function MovAny:CreateVM(name)
 	if data.OnMAPostAttach then
 		vm.OnMAPostAttach = data.OnMAPostAttach
 	end
-	
+
 	if data.OnMAPostHook then
 		vm.OnMAPostHook = data.OnMAPostHook
 	end
@@ -6076,7 +6137,7 @@ function MovAny:CreateVM(name)
 	if data.OnMAPositionReset then
 		vm.OnMAPositionReset = data.OnMAPositionReset
 	end
-	
+
 	if vm.OnMAHook and not data.OnMAHook then
 		data.OnMAHook = vm.OnMAHook
 	end

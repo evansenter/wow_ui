@@ -55,6 +55,7 @@ L["Gathered"] = "Récolté"
 L["Gnomish Engineer"] = "Ingénieur gnome"
 L["Goblin Engineer"] = "Ingénieur gobelin"
 L["Herbalism"] = "Herboristerie"
+-- L["Hide Minimap Button"] = ""
 L["HIGH"] = "HAUT"
 L["Horde"] = true
 L["Horde Quest"] = "Quête de la Horde"

@@ -14,105 +14,39 @@ module.db.inspectDBAch = parentModule.db.inspectDBAch
 module.db.inspectQuery = parentModule.db.inspectQuery
 module.db.specIcons = ExRT.A.ExCD2 and ExRT.A.ExCD2.db.specIcons
 module.db.itemsSlotTable = parentModule.db.itemsSlotTable
-module.db.classIDs = {WARRIOR=1,PALADIN=2,HUNTER=3,ROGUE=4,PRIEST=5,DEATHKNIGHT=6,SHAMAN=7,MAGE=8,WARLOCK=9,MONK=10,DRUID=11,DEMONHUNTER=12}
-module.db.glyphsIDs = {9,11,13,10,8,12}
+module.db.classIDs = ExRT.GDB.ClassID
+module.db.glyphsIDs = {8,9,10,11,12,13}
+
+module.db.artifactDB = parentModule.db.artifactDB
 
 module.db.statsList = {'intellect','agility','strength','spirit','haste','mastery','crit','spellpower','multistrike','versatility','armor','leech','avoidance','speed'}
 module.db.statsListName = {L.InspectViewerInt,L.InspectViewerAgi,L.InspectViewerStr,L.InspectViewerSpirit,L.InspectViewerHaste,L.InspectViewerMastery,L.InspectViewerCrit,L.InspectViewerSpd, L.InspectViewerMS, L.InspectViewerVer, L.InspectViewerBonusArmor, L.InspectViewerLeech, L.InspectViewerAvoidance, L.InspectViewerSpeed}
 
-module.db.baseStats = { --By class IDs
-	agility = {889,455,1284,1284,1067,1071,1284,889,985,1284,1284},
-	strength = {1455,1455,886,1206,843,1455,626,647,551,626,626},
-	spirit = {679,782,711,533,782,640,782,1155,1155,782,782},
-	intellect = {711,1042,854,711,1042,569,1042,1042,1042,1042,1042},
+module.db.baseStats = ExRT.isLegionContent and {	--By class IDs
+	strength =  {	10232,	10232,	6231,	8481,	5929,	10232,	4042,	4550,	3875,	4402,	4042,	8481,	},
+	agility =   {	6252,	3200,	9030,	9030,	7504,	7532,	9030,	6252,	6927,	9030,	9030,	9030,	},
+	intellect = {	5000,	7328,	6006,	5000,	7328,	4002,	7328,	7328,	7328,	7328,	7328,	5000,	},
+	spirit =    {	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	0,	},
+		--	WARRIOR,PALADIN,HUNTER,	ROGUE,	PRIEST,	DK,	SHAMAN,	MAGE,	WARLOCK,MONK,	DRUID,	DH,
+} or { --By class IDs
+	agility = {889,455,1284,1284,1067,1071,1284,889,985,1284,1284,0},
+	strength = {1455,1455,886,1206,843,1455,626,647,551,626,626,0},
+	spirit = {679,782,711,533,782,640,782,1155,1155,782,782,0},
+	intellect = {711,1042,854,711,1042,569,1042,1042,1042,1042,1042,0},
 }
 module.db.raceList = {'Human','Dwarf','Night Elf','Orc','Tauren','Undead','Gnome','Troll','Blood Elf','Draenei','Goblin','Worgen','Pandaren'}
 module.db.raceStatsDiffs = {
-	agility={0,-4,4,-3,-4,-2,2,2,2,-3,2,2,-2},
-	strength={0,5,-4,3,5,-1,-5,1,-3,1,-3,3,0},
-	intellect={0,-1,0,-3,-4,-2,3,-4,3,0,3,-4,-1},
-	spirit={0,-1,0,2,2,5,0,1,-2,2,-2,-1,2},
+	strength =  {	0,	5,	-4,	3,	5,	-1,	-5,	1,	-3,	1,	-3,	3,	0,	},
+	agility =   {	0,	-4,	4,	-3,	-4,	-2,	2,	2,	2,	-3,	2,	2,	-2,	},
+	intellect = {	0,	-1,	0,	-3,	-4,	-2,	3,	-4,	3,	0,	3,	-4,	-1,	},
+	spirit =    {	0,	-1,	0,	2,	2,	5,	0,	1,	-2,	2,	-2,	-1,	2,	},
+		--	Human,	Dwarf,	NElf,	Orc,	Tauren,	Undead,	Gnome,	Troll,	BElf,	Draenei,Goblin,	Worgen,	Pandaren
 }
 
-module.db.statsMultiplayBySpec = {
-	[62] = 'mastery',
-	[63] = 'crit',
-	[64] = 'multistrike',
-	[65] = 'crit',
-	[66] = 'haste',
-	[70] = 'mastery',
-	[71] = 'mastery',
-	[72] = 'crit',
-	[73] = 'mastery',
-	[102] = 'mastery',
-	[103] = 'crit',
-	[104] = 'mastery',
-	[105] = 'haste',
-	[250] = 'multistrike',
-	[251] = 'haste',
-	[252] = 'multistrike',
-	[253] = 'mastery',
-	[254] = 'crit',
-	[255] = 'multistrike',
-	[256] = 'crit',
-	[257] = 'multistrike',
-	[258] = 'haste',
-	[259] = 'mastery',
-	[260] = 'haste',
-	[261] = 'multistrike',
-	[262] = 'multistrike',
-	[263] = 'haste',
-	[264] = 'mastery',
-	[265] = 'haste',
-	[266] = 'mastery',
-	[267] = 'crit',
-	[268] = 'crit',
-	[269] = 'multistrike',
-	[270] = 'multistrike',
-}
+module.db.statsMultiplayBySpec = {}
 
-module.db.armorType = {
-	WARRIOR="PLATE",PALADIN="PLATE",HUNTER="MAIL",ROGUE="LEATHER",PRIEST="CLOTH",DEATHKNIGHT="PLATE",SHAMAN="MAIL",MAGE="CLOTH",WARLOCK="CLOTH",MONK="LEATHER",DRUID="LEATHER",DEMONHUNTER="LEATHER"
-}
-
-module.db.roleBySpec = {
-	[62] = 'RANGE',
-	[63] = 'RANGE',
-	[64] = 'RANGE',
-	[65] = 'HEAL',
-	[66] = 'TANK',
-	[70] = 'MELEE',
-	[71] = 'MELEE',
-	[72] = 'MELEE',
-	[73] = 'TANK',
-	[102] = 'RANGE',
-	[103] = 'MELEE',
-	[104] = 'TANK',
-	[105] = 'HEAL',
-	[250] = 'TANK',
-	[251] = 'MELEE',
-	[252] = 'MELEE',
-	[253] = 'RANGE',
-	[254] = 'RANGE',
-	[255] = 'RANGE',
-	[256] = 'HEAL',
-	[257] = 'HEAL',
-	[258] = 'RANGE',
-	[259] = 'MELEE',
-	[260] = 'MELEE',
-	[261] = 'MELEE',
-	[262] = 'RANGE',
-	[263] = 'MELEE',
-	[264] = 'HEAL',
-	[265] = 'RANGE',
-	[266] = 'RANGE',
-	[267] = 'RANGE',
-	[268] = 'TANK',
-	[269] = 'MELEE',
-	[270] = 'HEAL',
-	[577] = 'MELEE',
-	[581] = 'TANK',
-}
+module.db.armorType = ExRT.GDB.ClassArmorType
+module.db.roleBySpec = ExRT.GDB.ClassSpecializationRole
 
 module.db.specHasOffhand = {
 	[71]=true,
@@ -125,6 +59,8 @@ module.db.specHasOffhand = {
 	[263]=true,
 	[268]=true,
 	[269]=true,
+	[577]=true,
+	[581]=true,
 }
 
 module.db.socketsBonusIDs = {
@@ -132,9 +68,44 @@ module.db.socketsBonusIDs = {
 	[564]=true,
 	[565]=true,
 	[572]=true,
+	[1808]=true,
 }
 
-module.db.topEnchGems = {
+module.db.topEnchGems = ExRT.isLegionContent and {
+	[5427]="Ring:Crit:200",
+	[5428]="Ring:Haste:200",
+	[5429]="Ring:Mastery:200",
+	[5430]="Ring:Vers:200",
+	
+	[5434]="Cloak:Str:200",
+	[5435]="Cloak:Agi:200",
+	[5436]="Cloak:Int:200",
+
+	[5467]="Cloak:Str:200",
+	[5468]="Cloak:Agi:200",
+	[5469]="Cloak:Int:200",
+
+	[5437]="Neck:",
+	[5438]="Neck:",
+	[5439]="Neck:",
+	[5889]="Neck:",
+	[5890]="Neck:",
+	[5891]="Neck:",
+	
+	[5463]="Gem:Crit:250",
+	[5464]="Gem:Haste:250",
+	[5465]="Gem:Mastery:250",
+	[5466]="Gem:Vers:250",
+	
+	[130219]="Gem:Crit:250",
+	[130220]="Gem:Haste:250",
+	[130222]="Gem:Mastery:250",
+	[130221]="Gem:Vers:250",
+	
+	[130246]="Gem:Str:200",
+	[130247]="Gem:Agi:200",
+	[130248]="Gem:Int:200",
+} or {
 	[5306]="Ring:Vers",
 	[5324]="Ring:Crit",
 	[5325]="Ring:Haste",
@@ -181,10 +152,29 @@ module.db.topEnchGems = {
 	[5416]="Gem:MS",
 	[5417]="Gem:Vers",
 	[5418]="Gem:Stamina",
+	
+	[127760]="Gem:Crit",
+	[127761]="Gem:Haste",
+	[127762]="Gem:Mastery",
+	[127763]="Gem:MS",
+	[127764]="Gem:Vers",
+	[127765]="Gem:Stamina",
 }
 
 module.db.achievementsList = {
-	{	--HFC
+	{	--Nightmare
+		L.S_ZoneT19Nightmare,
+		10818,10819,10820,10821,10822,10823,10824,10825,10826,10827,
+	
+	},{	--Legion 5ppl
+		EXPANSION_NAME6..": "..DUNGEONS,
+		11164,10800,10806,10816,10785,10782,10789,10809,10797,10813,10803,11183,11184,11185,11162,
+	
+	},{	--Legion Questing & Artifact
+		EXPANSION_NAME6..": "..QUESTS_LABEL,
+		10617,11124,10877,10852,10746,
+	
+	},{	--HFC
 		L.RaidLootT18HC..":"..L.sencounterWODMythic,		
 		10027,10032,10033,10034,10035,10253,10037,10040,10041,10038,10039,10042,10043,	
 	},{
@@ -208,7 +198,16 @@ module.db.achievementsList = {
 	},
 }
 module.db.achievementsList_statistic = {
-	{	--HFC
+	{	--Nightmare
+		0,0,0,{10911,10912,10913,10914},{10920,10921,10922,10923},{10924,10925,10926,10927},{10915,10916,10917,10918},{10928,10929,10930,10931},{10932,10933,10934,10935},{10936,10937,10938,10939},
+	},{	--Legion 5ppl
+		{10981,10982},{10890,10891,10892,10893,10894,10895},{10899,10900,10901},{10910},{10881,10882,10883},{10878,10879,10880},{10887,10888,10889},{10902,10903,10904},
+		{10884,10885,10886},{10907},{10896,10897,10898},nil,nil,nil,nil,
+	
+	},{	--Legion Questing & Artifact
+		nil,nil,nil,nil,nil,
+	
+	},{	--HFC
 		{10201,10202,10203,10204},{10205,10206,10207,10208},{10209,10210,10211,10212},{10213,10214,10215,10216},{10217,10218,10219,10220},{10221,10222,10223,10224},{10225,10226,10227,10228},
 		{10229,10230,10231,10232},{10241,10242,10243,10244},{10233,10234,10235,10236},{10237,10238,10239,10240},{10245,10246,10247,10248},{10249,10250,10251,10252},
 	},{
@@ -232,13 +231,14 @@ do
 	local array = parentModule.db.acivementsIDs
 	for i=1,#module.db.achievementsList do
 		local from = module.db.achievementsList[i]
-		for j=2,#from do
+		local size = #from
+		for j=2,size do
 			array[#array + 1] = from[j]
 		end
 		
 		local from = module.db.achievementsList_statistic[i]
-		for j=1,#from do
-			if from[j] then
+		for j=1,size-1 do
+			if from[j] and from[j]~=0 then
 				for k=1,#from[j] do
 					local id = from[j][k]
 					if id > 0 then
@@ -271,6 +271,15 @@ function module.main:ADDON_LOADED()
 	VExRT.InspectViewer = VExRT.InspectViewer or {}
 	--if VExRT.InspectViewer.enabled and (not VExRT.ExCD2 or not VExRT.ExCD2.enabled) then module:Enable() end
 	
+	if VExRT.Addon.Version < 3580 then
+		VExRT.InspectViewer.ColorizeNoEnch = true
+		VExRT.InspectViewer.ColorizeLowIlvl = true
+		VExRT.InspectViewer.ColorizeNoGems = true
+		VExRT.InspectViewer.ColorizeNoTopEnchGems = false
+		VExRT.InspectViewer.ColorizeLowIlvl685 = false
+		VExRT.InspectViewer.ColorizeNoValorUpgrade = false
+	end
+	
 	module:RegisterSlash()
 end
 
@@ -293,30 +302,24 @@ end
 
 function module.options:Load()
 	self:CreateTilte()
+	
+	local UpdatePerksTab
 
 	local function reloadChks(self)
 		local clickID = self.id
-		self:SetChecked(true)
 		module.options.achievementsDropDown:Hide()
 		module.options.filterDropDown:Show()
 		module.options.chkAchivs.text:Show()
-		if clickID == 1 then
-			module.options.chkTalents:SetChecked(false)
-			module.options.chkInfo:SetChecked(false)
-			module.options.chkAchivs:SetChecked(false)
-		elseif clickID == 2 then
-			module.options.chkItems:SetChecked(false)
-			module.options.chkInfo:SetChecked(false)
-			module.options.chkAchivs:SetChecked(false)
-		elseif clickID == 3 then
-			module.options.chkItems:SetChecked(false)
-			module.options.chkTalents:SetChecked(false)
-			module.options.chkAchivs:SetChecked(false)
-		elseif clickID == 4 then
-			module.options.chkItems:SetChecked(false)
-			module.options.chkTalents:SetChecked(false)
-			module.options.chkInfo:SetChecked(false)
-
+		
+		module.options.chkItems:SetChecked(false)
+		module.options.chkTalents:SetChecked(false)
+		module.options.chkInfo:SetChecked(false)
+		module.options.chkAchivs:SetChecked(false)
+		module.options.chkArtifact:SetChecked(false)
+		
+		self:SetChecked(true)
+		
+		if clickID == 4 then
 			module.options.achievementsDropDown:Show()
 			module.options.filterDropDown:Hide()
 			module.options.chkAchivs.text:Hide()
@@ -337,37 +340,53 @@ function module.options:Load()
 	self.chkAchivs = ELib:Radio(self,ACHIEVEMENTS):Point(385,-28):OnClick(reloadChks)
 	self.chkAchivs.id = 4
 	
+	self.chkArtifact = ELib:Radio(self,ARTIFACT_POWER):Point(385,-28+25):OnClick(reloadChks)
+	self.chkArtifact.id = 5
+	
 	local function ItemsTrackDropDownClick(self)
 		local f = self.checkButton:GetScript("OnClick")
 		self.checkButton:SetChecked(not self.checkButton:GetChecked())
 		f(self.checkButton)
 	end
 	
+	module.db.colorizeNoEnch = VExRT.InspectViewer.ColorizeNoEnch
+	module.db.colorizeLowIlvl = VExRT.InspectViewer.ColorizeLowIlvl
+	module.db.colorizeNoGems = VExRT.InspectViewer.ColorizeNoGems
+	module.db.colorizeNoTopEnchGems = VExRT.InspectViewer.ColorizeNoTopEnchGems
+	module.db.colorizeLowIlvl685 = VExRT.InspectViewer.ColorizeLowIlvl685
+	module.db.colorizeNoValorUpgrade = VExRT.InspectViewer.ColorizeNoValorUpgrade
+	
 	self.chkItemsTrackDropDown = ELib:DropDown(self,300,7):Point(50,0):Size(50)
 	self.chkItemsTrackDropDown:Hide()
 	self.chkItemsTrackDropDown.List = {
 		{text = L.InspectViewerColorizeNoEnch,checkable = true,checkState = module.db.colorizeNoEnch, checkFunc = function(self,checked) 
 			module.db.colorizeNoEnch = checked
+			VExRT.InspectViewer.ColorizeNoEnch = checked
 			module.options.ReloadPage()
 		end,func = ItemsTrackDropDownClick},
 		{text = L.InspectViewerColorizeNoGems,checkable = true,checkState = module.db.colorizeNoGems, checkFunc = function(self,checked) 
 			module.db.colorizeNoGems = checked
+			VExRT.InspectViewer.ColorizeNoGems = checked
 			module.options.ReloadPage()
 		end,func = ItemsTrackDropDownClick},
 		{text = format(L.InspectViewerColorizeLowIlvl,630),checkable = true,checkState = module.db.colorizeLowIlvl, checkFunc = function(self,checked) 
 			module.db.colorizeLowIlvl = checked
+			VExRT.InspectViewer.ColorizeLowIlvl = checked
 			module.options.ReloadPage()
 		end,func = ItemsTrackDropDownClick},
 		{text = L.InspectViewerColorizeNoTopEnch,checkable = true,checkState = module.db.colorizeNoTopEnchGems, checkFunc = function(self,checked) 
 			module.db.colorizeNoTopEnchGems = checked
+			VExRT.InspectViewer.ColorizeNoTopEnchGems = checked
 			module.options.ReloadPage()
 		end,func = ItemsTrackDropDownClick},
 		{text = format(L.InspectViewerColorizeLowIlvl,685),checkable = true,checkState = module.db.colorizeLowIlvl685, checkFunc = function(self,checked) 
 			module.db.colorizeLowIlvl685 = checked
+			VExRT.InspectViewer.ColorizeLowIlvl685 = checked
 			module.options.ReloadPage()
 		end,func = ItemsTrackDropDownClick},
 		{text = L.InspectViewerColorizeNoValorUpgrade,checkable = true,checkState = module.db.colorizeNoValorUpgrade, checkFunc = function(self,checked)
 			module.db.colorizeNoValorUpgrade = checked
+			VExRT.InspectViewer.ColorizeNoValorUpgrade = checked
 			module.options.ReloadPage()
 		end,func = ItemsTrackDropDownClick},
 		{text = L.minimapmenuclose,checkable = false, padding = 16, func = function()
@@ -375,7 +394,7 @@ function module.options:Load()
 		end},
 	}
 	
-	self.chkItemsTrack = CreateFrame("Frame",nil,self,"ExRTTrackingButtonModernTemplate")  
+	self.chkItemsTrack = ELib:Template("ExRTTrackingButtonModernTemplate",self)  
 	self.chkItemsTrack:SetPoint("TOPLEFT", 130, -28)
 	self.chkItemsTrack:SetScale(.8)
 	self.chkItemsTrack.Button:SetScript("OnClick",function (this)
@@ -393,7 +412,7 @@ function module.options:Load()
 	
 	local dropDownTable = {
 		[1] = {
-			{"WARRIOR","PALADIN","HUNTER","ROGUE","PRIEST","DEATHKNIGHT","SHAMAN","MAGE","WARLOCK","MONK","DRUID"},
+			ExRT.GDB.ClassList,
 		},
 		[2] = {
 			{"CLOTH","LEATHER","MAIL","PLATE"},
@@ -404,7 +423,7 @@ function module.options:Load()
 			{TANK,HEALER,DAMAGER,MELEE,RANGED},
 		},
 		[4] = {
-			{"PALADIN_PRIEST_WARLOCK","ROGUE_DEATHKNIGHT_MAGE_DRUID","WARRIOR_HUNTER_SHAMAN_MONK"},
+			{"PALADIN_PRIEST_WARLOCK_DEMONHUNTER","ROGUE_DEATHKNIGHT_MAGE_DRUID","WARRIOR_HUNTER_SHAMAN_MONK"},
 		},
 	}
 	
@@ -505,11 +524,9 @@ function module.options:Load()
 	
 		
 	self.borderList = CreateFrame("Frame",nil,self)
-	self.borderList:SetSize(650,module.db.perPage*30+2)
+	self.borderList:SetSize(648,module.db.perPage*30)
 	self.borderList:SetPoint("TOP", 0, -50)
-	self.borderList:SetBackdrop({bgFile = "Interface/Tooltips/UI-Tooltip-Background",edgeFile = ExRT.F.defBorder,tile = false,edgeSize = 8})
-	self.borderList:SetBackdropColor(0,0,0,0.3)
-	self.borderList:SetBackdropBorderColor(.24,.25,.30,1)
+	ELib:Border(self.borderList,2,.24,.25,.30,1)
 	
 	self.borderList:SetScript("OnMouseWheel",function (self,delta)
 		if delta > 0 then
@@ -519,12 +536,12 @@ function module.options:Load()
 		end
 	end)
 	
-	self.ScrollBar = ELib:ScrollBar(self.borderList):Size(16,module.db.perPage*30-7):Point("TOPRIGHT",-4,-4):Range(1,20)
+	self.ScrollBar = ELib:ScrollBar(self.borderList):Size(16,0):Point("TOPRIGHT",-3,-3):Point("BOTTOMRIGHT",-3,3):Range(1,20)
 	
 	local function IsItemHasNotGem(link)
 		if link then
 			local gem = link:match("item:%d+:[0-9%-]*:([0-9%-]*):")
-			if gem == "0" then
+			if gem == "0" or gem == "" then
 				return true
 			end
 		end
@@ -535,13 +552,13 @@ function module.options:Load()
 			local ench,gem = link:match("item:%d+:([0-9%-]*):([0-9%-]*):")
 			if ench and gem then
 				local isTop = true
-				if ench ~= "0" then
+				if ench ~= "0" and ench ~= "" then
 					ench = tonumber(ench)
 					if not module.db.topEnchGems[ench] then
 						isTop = false
 					end
 				end
-				if gem ~= "0" then
+				if gem ~= "0" and gem ~= "" then
 					gem = tonumber(gem)
 					if not module.db.topEnchGems[gem] then
 						isTop = false
@@ -555,18 +572,20 @@ function module.options:Load()
 	local function IsValorUpgraded(link)
 		if link then
 			local isUpgraded = true
-			local upgradeType,linkRest = link:match("item:%d+:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:([0-9%-]*):[0-9%-]*:([%d:]+)")
-			if upgradeType and linkRest then --linkRest contains (a variable amount of) bonus IDs and the upgrade ID at the end
-				if upgradeType == "4" then -- this item can be upgraded with valor points
-					local upgradeID = linkRest:match(":(%d+)$")
-					if upgradeID ~= "531" then -- 529 is 0/2, 530 is 1/2, 531 is 2/2
-						isUpgraded = false
-					end
+			
+			local _,itemID,enchant,gem1,gem2,gem3,gem4,suffixID,uniqueID,level,specializationID,upgradeType,instanceDifficultyID,numBonusIDs,restLink = strsplit(":",link,15)
+			
+			if upgradeType == "4" and restLink then
+				local upgradeID = select((tonumber(numBonusIDs or "0") or 0) + 1,strsplit(":",restLink))
+				if upgradeID ~= "531" then -- 529 is 0/2, 530 is 1/2, 531 is 2/2
+					isUpgraded = false
 				end
 			end
 			return isUpgraded
 		end
 	end
+	
+	local RefreshArtifactCache = {}
 
 	function module.options.ReloadPage()
 		local nowDB = {}
@@ -621,11 +640,22 @@ function module.options:Load()
 						line.spec.texture:SetTexture("Interface\\Icons\\INV_MISC_QUESTIONMARK")
 						line.spec.id = nil
 					end
-					
+
 					line.ilvl:SetText(format("%.2f",data.ilvl or 0))
 					
 					line.linkSpecID = spec
 					line.linkClassID = module.db.classIDs[class or "?"]
+					
+					line.refreshArtifact:Hide()
+					line.updateAP:Hide()
+					
+					line.apinfo:SetText("")
+					for _,item in pairs(line.items) do
+						item:Hide()
+						item.text:SetText("")
+						item.border:Hide()
+					end
+					line.perksData = nil
 					
 					if module.db.page == 1 then
 						for j=1,16 do
@@ -650,7 +680,7 @@ function module.options:Load()
 									local _,_,_,_,_,_,_,_,_,itemTexture = GetItemInfo(item)
 									line.items[j].texture:SetTexture(itemTexture)
 									line.items[j].link = item
-									if (enchantID == 0 and (slotID == 2 or slotID == 15 or slotID == 11 or slotID == 12 or slotID == 16 or (module.db.specHasOffhand[spec or 0] and slotID == 17)) and module.db.colorizeNoEnch) or
+									if (enchantID == 0 and (slotID == 2 or slotID == 15 or slotID == 11 or slotID == 12 or (not ExRT.isLegionContent and (slotID == 16 or (module.db.specHasOffhand[spec or 0] and slotID == 17)))) and module.db.colorizeNoEnch) or
 										(items_ilvl[slotID] and items_ilvl[slotID] > 0 and items_ilvl[slotID] < 630 and module.db.colorizeLowIlvl) or
 										(module.db.colorizeNoGems and ExRT.F.IsBonusOnItem(item,module.db.socketsBonusIDs) and IsItemHasNotGem(item)) or 
 										(module.db.colorizeNoTopEnchGems and not IsTopEnchAndGems(item)) or
@@ -683,7 +713,7 @@ function module.options:Load()
 							local t = data[j]
 							if t and t ~= 0 then
 								t = (j-1)*3+t
-								local spellTexture = select(3,GetTalentInfoByID( data.talentsIDs[j] ))
+								local _,_,spellTexture = GetTalentInfoByID( data.talentsIDs[j] )
 								line.items[j].texture:SetTexture(spellTexture)
 								line.items[j].link = GetTalentLink( data.talentsIDs[j] )
 								line.items[j].sid = nil
@@ -696,27 +726,23 @@ function module.options:Load()
 						for j=9,14 do
 							local t = data[module.db.glyphsIDs[j-8]]
 							if t then
-								local spellTexture = GetSpellTexture(t)
+								local _,_,spellTexture = GetPvpTalentInfoByID( data.talentsIDs[ j - 1 ] )
 								line.items[j].texture:SetTexture(spellTexture)
-								line.items[j].link = "|cffffffff|Hspell:"..t.."|h[name]|h|r"
-								line.items[j].sid = t
+								line.items[j].link = GetPvpTalentLink( data.talentsIDs[ j - 1 ] )
+								line.items[j].sid = nil
 								line.items[j]:Show()
 							else
 								line.items[j]:Hide()
 							end
 						end
 					elseif module.db.page == 3 then
-						for j=1,16 do
-							line.items[j]:Hide()
-							line.items[j].border:Hide()
-						end
 						line.time:Show()
 						line.time:SetText(date("%H:%M:%S",data.time))
 						
 						local result = ""
 						for k,statName in ipairs(module.db.statsList) do
 							local statValue = data[statName]
-							if statValue and statValue > 50 then
+							if statValue and statValue > 200 then
 								if module.db.baseStats[statName] then
 									local classCount = module.db.classIDs[class]
 									if classCount then
@@ -727,24 +753,15 @@ function module.options:Load()
 										end
 									end
 								end
-								if spec and module.db.statsMultiplayBySpec[spec] == statName then
-									statValue = statValue * 1.05
-								end
 								if k <= 3 then
 									statValue = statValue * 1.05
-								elseif k <= 7 and data.amplify and data.amplify ~= 0 then
-									statValue = statValue * (1 + data.amplify/100)
 								end
 								result = result .. module.db.statsListName[k] .. ": " ..floor(statValue)..", "
 							end
+
 						end
-						if data.radiness and data.radiness ~= 0 then
-							result = result..L.InspectViewerRadiness..": "..format("%.2f%%",(data.radiness or 0) * 100)
-						else
-							if string.len(result) > 0 then
-								result = string.sub(result,1,-3)
-							end
-						end
+						result = result:gsub(", $","")
+						
 						line.otherInfo:SetText(result)
 						line.otherInfo:Show()
 						line.otherInfoTooltipFrame:Show()
@@ -774,7 +791,7 @@ function module.options:Load()
 									end
 									
 									local statisticList = module.db.achievementsList_statistic[ module.db.achievementList ][j]
-									if statisticList then
+									if statisticList and statisticList ~= 0 then
 										local additional = {}
 										for k=1,#statisticList do
 											local statisticID = statisticList[k]
@@ -808,6 +825,74 @@ function module.options:Load()
 							line.otherInfo:SetText(L.BossWatcherDamageSwitchTabInfoNoInfo)
 							line.otherInfo:Show()
 						end
+					elseif module.db.page == 5 then
+						line.time:Hide()
+						line.otherInfo:Hide()
+						line.otherInfoTooltipFrame:Hide()
+						
+						local db
+						for long_name,DB in pairs(module.db.artifactDB) do
+							if ExRT.F.delUnitNameServer(long_name) == name then
+								db = DB
+								break
+							end						
+						end
+						
+						line.class.texture:SetTexture("")
+						line.spec.texture:SetTexture("")
+						line.ilvl:SetText("")
+					
+						if not db then
+							if not RefreshArtifactCache[ name ] then
+								line.refreshArtifact:Show()
+							else
+								local isAddonOn = false
+								for long_name,_ in pairs(parentModule.db.artifactNoResDB) do
+									if ExRT.F.delUnitNameServer(long_name) == ExRT.F.delUnitNameServer(name) then
+										isAddonOn = true
+										break
+									end						
+								end
+							
+								if isAddonOn then
+									line.otherInfo:SetText(L.BossWatcherDamageSwitchTabInfoNoInfo)
+								else
+									line.otherInfo:SetText(L.InspectViewerNoExRTAddon)
+								end
+								line.otherInfo:Show()
+								line.updateAP:Show()
+							end
+						else
+							local dateStr = date("%d/%m/%Y",db.time)
+							if dateStr == date("%d/%m/%Y") then
+								dateStr = date("%H:%M:%S",db.time)
+							end
+						
+							line.apinfo:SetText("Level: "..db.Level.."|nKnowlege: "..db.KnowledgeLevel.."|n"..dateStr)
+							line.updateAP:Show()
+							
+							line.perksData = db
+						
+							local it = 0
+							for j=1,#db do
+								local spellID = C_ArtifactUI.GetPowerInfo(db[j][1])
+								
+								local spellTexture = GetSpellTexture(spellID)
+								
+								local icon = line.items[it]
+								if not icon then
+									break
+								end
+								
+								icon.texture:SetTexture(spellTexture)
+								icon.link = "spell:"..spellID
+								icon.sid = nil
+								icon.text:SetText(db[j][2].."/"..db[j][3])
+								icon:Show()
+								
+								it = it + 1
+							end
+						end
 					end
 					
 					local cR,cG,cB = ExRT.F.classColorNum(class)
@@ -817,7 +902,7 @@ function module.options:Load()
 						line.back:SetGradientAlpha("HORIZONTAL", cR,cG,cB, 0, cR,cG,cB, 0.5)
 					end
 				else
-					for j=1,16 do
+					for j=0,18 do
 						line.items[j]:Hide()
 					end
 					line.time:Show()
@@ -871,8 +956,11 @@ function module.options:Load()
 			for i=1,n do
 				local unit = "party"..i
 				if i==n then unit = "player" end
-				local name = UnitName(unit)
+				local name,realm = UnitName(unit)
 				if name then
+					if realm and realm ~= "" then
+						name = name .."-"..realm
+					end
 					if module.db.inspectDB[name] and module.db.inspectDB[name].ilvl and module.db.inspectDB[name].ilvl >= 1 then
 						countPeople = countPeople + 1
 						ilvl = ilvl + module.db.inspectDB[name].ilvl
@@ -962,15 +1050,37 @@ function module.options:Load()
 			module.options:showPage()
 		end
 	end	
+	
+	local function Lines_RefreshArtifactButton_OnClick(self)
+		local unit = self:GetParent().unit
+		if unit then
+			parentModule:ArtifactAddToQueue(unit)
+			self:Hide()
+			C_Timer.NewTimer(1.5,function()
+				module.options:showPage()
+			end)
+			RefreshArtifactCache[ unit ] = true
+		end
+	end	
 		
 	local IconBackDrop = {bgFile = "Interface/Tooltips/UI-Tooltip-Background", edgeFile = "Interface/Tooltips/UI-Tooltip-Border", tile = true, tileSize = 16, edgeSize = 16, insets = { left = 4, right = 4, top = 4, bottom = 4 }}
+	
+	local function Line_OnEnter(self)
+		if not self.perksData then
+			return
+		end
+		UpdatePerksTab(self.perksData,self)
+	end
+	local function Line_OnLeave()
+		self.PerksTab:Hide()
+	end
 	
 	self.lines = {}
 	for i=1,module.db.perPage do
 		local line = CreateFrame("Frame",nil,self.borderList)
 		self.lines[i] = line
 		line:SetSize(625,30)
-		line:SetPoint("TOPLEFT",0,-(i-1)*30-1)
+		line:SetPoint("TOPLEFT",0,-(i-1)*30)
 		
 		line.name = ELib:Text(line,"Name",11):Color():Point(5,0):Size(94,30):Shadow()
 		
@@ -980,24 +1090,43 @@ function module.options:Load()
 		line.spec:SetScript("OnEnter",Lines_SpecIcon_OnEnter)
 		line.spec:SetScript("OnLeave",GameTooltip_Hide)
 		
+		line.apinfo = ELib:Text(line,"",9):Color():Point("LEFT",100,0):Shadow()
+		
 		line.ilvl = ELib:Text(line,"630.52",11):Color():Point(160,0):Size(50,30):Shadow()
 		
 		line.items = {}
-		for j=1,16 do
-			local item = ELib:Icon(line,nil,22,true):Point(210+(24*(j-1)),-4)
+		for j=0,18 do
+			local item = ELib:Icon(line,nil,21,true):Point("LEFT",210+(24*(j-1)),0)
 			line.items[j] = item
 			item:SetScript("OnEnter",Lines_ItemIcon_OnEnter)
 			item:SetScript("OnLeave",Lines_ItemIcon_OnLeave)
 			item:SetScript("OnClick",Lines_ItemIcon_OnClick)
 			
+			item.text = ELib:Text(item,"",8):Color():Point("BOTTOMRIGHT",2,0):Outline()
+			
+			--[[
 			item.border = CreateFrame("Frame",nil,item)
 			item.border:SetPoint("CENTER",0,0)
 			item.border:SetSize(22+8,22+8)
 			item.border:SetBackdrop(IconBackDrop)
 			item.border:SetBackdropColor(1,0,0,.4)
 			item.border:SetBackdropBorderColor(1,0,0,1)
+			]]
+			
+			item.texture:SetTexCoord(.1,.9,.1,.9)
+
+			item.border = CreateFrame("Frame",nil,item)
+			item.border:SetPoint("TOPLEFT")
+			item.border:SetPoint("BOTTOMRIGHT")			
+			
+			ELib:Border(item.border,1,.12,.13,.15,1)
+			
+			item.border.background = item.border:CreateTexture(nil,"OVERLAY")
+			item.border.background:SetPoint("TOPLEFT")
+			item.border.background:SetPoint("BOTTOMRIGHT")
 			
 			item.border:Hide()
+			item:Hide()
 		end
 		
 		line.updateButton = ELib:Icon(line,[[Interface\AddOns\ExRT\media\DiesalGUIcons16x256x128]],18,true):Point(210+(24*16)+4,-8)
@@ -1008,6 +1137,14 @@ function module.options:Load()
 		line.updateButton:SetScript("OnClick",Lines_UpdateButton_OnClick)
 		line.updateButton:Hide()
 		
+		line.updateAP = ELib:Icon(line,[[Interface\AddOns\ExRT\media\DiesalGUIcons16x256x128]],18,true):Point("RIGHT",line.items[0],"LEFT",-2,0)
+		line.updateAP.texture:SetTexCoord(0.125,0.1875,0.5,0.625)
+		line.updateAP.texture:SetVertexColor(1,1,1,0.7)
+		line.updateAP:SetScript("OnEnter",Lines_UpdateButton_OnEnter)
+		line.updateAP:SetScript("OnLeave",Lines_UpdateButton_OnLeave)
+		line.updateAP:SetScript("OnClick",Lines_RefreshArtifactButton_OnClick)
+		line.updateAP:Hide()
+		
 		line.time = ELib:Text(line,date("%H:%M:%S",time()),11):Color():Point(205,0):Size(80,30):Shadow():Center()
 		line.otherInfo = ELib:Text(line,"",10):Color():Point(285,0):Size(335,30):Shadow()
 		
@@ -1016,11 +1153,17 @@ function module.options:Load()
 		line.otherInfoTooltipFrame:SetScript("OnEnter",otherInfoHover)
 		line.otherInfoTooltipFrame:SetScript("OnLeave",GameTooltip_Hide)
 		
-		line.back = line:CreateTexture(nil, "BACKGROUND")
-		line.back:SetPoint("TOPLEFT",2,-1)
+		line.back = line:CreateTexture(nil, "BACKGROUND", nil, -3)
+		line.back:SetPoint("TOPLEFT",0,0)
 		line.back:SetPoint("BOTTOMRIGHT",0,0)
-		line.back:SetTexture( 1, 1, 1, 1)
+		line.back:SetColorTexture(1, 1, 1, 1)
 		line.back:SetGradientAlpha("HORIZONTAL", 0, 0, 0, 1, 0, 0, 0, 0)
+		
+		line.refreshArtifact = ELib:Button(line,REFRESH):Point("LEFT",220,0):Size(100,20):OnClick(Lines_RefreshArtifactButton_OnClick)
+		line.refreshArtifact:Hide()
+		
+		line:SetScript("OnEnter",Line_OnEnter)
+		line:SetScript("OnLeave",Line_OnLeave)
 	end
 	self.raidItemLevel = ELib:Text(self,"",12):Size(500,20):Point("TOPLEFT",self.borderList,"BOTTOMLEFT",3,-2):Shadow():Color()
 	
@@ -1034,12 +1177,19 @@ function module.options:Load()
 		if color < 0 then
 			color = 0
 		end
+		local colorR = color / 1.5
 		for i=1,module.db.perPage do
 			for j=1,16 do
 				local frame = self.lines[i].items[j].border
 				if frame:IsVisible() then
-					frame:SetBackdropBorderColor(1,color,color,1)
-					frame:SetBackdropColor(1,color,color,1)
+					--frame:SetBackdropBorderColor(1,color,color,1)
+					--frame:SetBackdropColor(1,color,color,1)
+					frame.background:SetColorTexture(1,color,color,.4)
+					
+					frame.border_top:SetColorTexture(.7,colorR,colorR,1)
+					frame.border_bottom:SetColorTexture(.7,colorR,colorR,1)
+					frame.border_left:SetColorTexture(.7,colorR,colorR,1)
+					frame.border_right:SetColorTexture(.7,colorR,colorR,1)
 				end
 			end
 		end
@@ -1048,7 +1198,611 @@ function module.options:Load()
 		end
 	end)
 	
-	self.moreInfoButton = ELib:Button(self,L.InspectViewerMoreInfo):Size(150,20):Point("TOPRIGHT",self.borderList,"BOTTOMRIGHT",0,-1):OnClick(function() module.options.moreInfoWindow:Show() end)
+	
+	local PerksTabData = {
+		[120978] = {
+			back = "Artifacts-Paladin-BG",
+			uiCam = 62,
+			mAppID = 10,
+			mDes = 0.5,
+			cR = 1,
+			cG = 0.82352948188782,
+			cB = 0.25098040699959,
+		},
+		[128866] = {
+			back = "Artifacts-Paladin-BG",
+			uiCam = 756,
+			mAppID = 9,
+			mDes = 0.5,
+			aID = 128867,
+			aUiCam = 755,
+			cR = 1,
+			cG = 0.82352948188782,
+			cB = 0.25098040699959,
+		},
+		[128823] = {
+			back = "Artifacts-Paladin-BG",
+			uiCam = 198,
+			mAppID = 9,
+			mDes = 0.5,
+			aUiCam = 199,
+			cR = 1,
+			cG = 0.82352948188782,
+			cB = 0.25098040699959,
+		},
+		[128910] = {
+			back = "Artifacts-Warrior-BG",
+			uiCam = 641,
+			mAppID = 9,
+			mDes = 0.5,
+			cR = 0.65882354974747,
+			cG = 0,
+			cB = 0,
+		},	
+		[128908] = {
+			back = "Artifacts-Warrior-BG",
+			uiCam = 639,
+			mAppID = 9,
+			mDes = 0.39999997615814,
+			aID = 134553,
+			aUiCam = 640,
+			cR = 0.65882354974747,
+			cG = 0,
+			cB = 0,
+		},
+		[128289] = {
+			back = "Artifacts-Warrior-BG",
+			uiCam = 183,
+			mAppID = 12,
+			mDes = 0.39999997615814,
+			aID = 128288,
+			aUiCam = 71,
+			cR = 0.65882354974747,
+			cG = 0,
+			cB = 0,
+		},
+		[128861] = {
+			back = "Artifacts-Hunter-BG",
+			uiCam = 754,
+			mAppID = 9,
+			mDes = 0.5,
+			cR = 0.99215692281723,
+			cG = 0.81960791349411,
+			cB = 0.0039215688593686,
+		},
+		[128826] = {
+			back = "Artifacts-Hunter-BG",
+			uiCam = 719,
+			mAppID = 9,
+			mDes = 0.5,
+			cR = 0.96862751245499,
+			cG = 0.97254908084869,
+			cB = 0.41568630933762,
+		},
+		[128808] = {
+			back = "Artifacts-Hunter-BG",
+			uiCam = 197,
+			mAppID = 9,
+			mDes = 0.5,
+			cR = 0.21960785984993,
+			cG = 0.81960791349411,
+			cB = 0.49411767721176,
+		},
+		[128870] = {
+			back = "Artifacts-Rogue-BG",
+			uiCam = 391,
+			mAppID = 10,
+			mDes = 0.5,
+			aID = 128869,
+			aUiCam = 392,
+			cR = 0.85098046064377,
+			cG = 0.50980395078659,
+			cB = 0.38823533058167,
+		},
+		[128872] = {
+			back = "Artifacts-Rogue-BG",
+			uiCam = 757,
+			mAppID = 9,
+			mDes = 0.5,
+			aID = 134552,
+			aUiCam = 758,
+			cR = 0.90588241815567,
+			cG = 0.74509805440903,
+			cB = 0,
+		},
+		[128476] = {
+			back = "Artifacts-Rogue-BG",
+			uiCam = 168,
+			mAppID = 9,
+			mDes = 0.5,
+			aID = 128479,
+			aUiCam = 169,
+			cR = 0.92549026012421,
+			cG = 0.49803924560547,
+			cB = 0.35294118523598,
+		},
+		[128827] = {
+			back = "Artifacts-PriestShadow-BG",
+			uiCam = 570,
+			mAppID = 9,
+			mDes = 0.5,
+			aID = 133958,
+			aUiCam = 952,
+			cR = 0.54901963472366,
+			cG = 0.32941177487373,
+			cB = 0.6235294342041,
+		},
+		[128825] = {
+			back = "Artifacts-Priest-BG",
+			uiCam = 194,
+			mAppID = 9,
+			mDes = 0.5,
+			cR = 0.41960787773132,
+			cG = 1,
+			cB = 0.9764706492424,
+		},
+		[128868] = {
+			back = "Artifacts-Priest-BG",
+			uiCam = 705,
+			mAppID = 9,
+			mDes = 0.5,
+			cR = 0.37647062540054,
+			cG = 0.93725496530533,
+			cB = 1,
+		},
+		[128402] = {
+			back = "Artifacts-DeathKnightFrost-BG",
+			uiCam = 163,
+			mAppID = 9,
+			mDes = 0.39999997615814,
+			cR = 0.91372555494308,
+			cG = 0.19215688109398,
+			cB = 0.20000001788139,
+		},
+		[128292] = {
+			back = "Artifacts-DeathKnightFrost-BG",
+			uiCam = 166,
+			mAppID = 9,
+			mDes = 0.30000001192093,
+			aID = 128293,
+			aUiCam = 167,
+			cR = 0.54509806632996,
+			cG = 0.65490198135376,
+			cB = 0.88235300779343,
+		},
+		[128403] = {
+			back = "Artifacts-DeathKnightFrost-BG",
+			uiCam = 162,
+			mAppID = 9,
+			mDes = 0.5,
+			cR = 0.25098040699959,
+			cG = 1,
+			cB = 0.42745101451874,
+		},
+		[128911] = {
+			back = "Artifacts-Shaman-BG",
+			uiCam = 195,
+			mAppID = 9,
+			mDes = 0.5,
+			aID = 128934,
+			aUiCam = 958,
+			cR = 0.015686275437474,
+			cG = 0.62745100259781,
+			cB = 0.54901963472366,
+		},
+		[128819] = {
+			back = "Artifacts-Shaman-BG",
+			uiCam = 189,
+			mAppID = 9,
+			mDes = 0.5,
+			aID = 128873,
+			cR = 0.29411765933037,
+			cG = 0.83921575546265,
+			cB = 0.98431378602982,
+		},
+		[128935] = {
+			back = "Artifacts-Shaman-BG",
+			uiCam = 191,
+			mAppID = 9,
+			mDes = 0.5,
+			aID = 128936,
+			aUiCam = 192,
+			cR = 0.29411765933037,
+			cG = 0.81960791349411,
+			cB = 0.96470594406128,
+		},
+		[128862] = {
+			back = "Artifacts-MageArcane-BG",
+			uiCam = 344,
+			mAppID = 9,
+			mDes = 0.5,
+			cR = 0.37647062540054,
+			cG = 0.78823536634445,
+			cB = 0.93725496530533,
+		},
+		[127857] = {
+			back = "Artifacts-MageArcane-BG",
+			uiCam = 178,
+			mAppID = 9,
+			mDes = 0.5,
+			cR = 0.37647062540054,
+			cG = 0.78823536634445,
+			cB = 0.93725496530533,
+		},
+		[128820] = {
+			back = "Artifacts-MageArcane-BG",
+			uiCam = 190,
+			mAppID = 9,
+			mDes = 0.5,
+			aID = 133959,
+			aUiCam = 935,
+			cR = 0.93725496530533,
+			cG = 0.74509805440903,
+			cB = 0.37647062540054,
+		},
+		[128941] = {
+			back = "Artifacts-Warlock-BG",
+			uiCam = 357,
+			mAppID = 9,
+			mDes = 0.5,
+			cR = 0.56470590829849,
+			cG = 0.3098039329052,
+			cB = 0.60784316062927,
+		},
+		[128943] = {
+			back = "Artifacts-Warlock-BG",
+			uiCam = 760,
+			mAppID = 10,
+			mDes = 0.5,
+			gAnim = true,
+			aID = 137246,
+			aUiCam = 922,
+			cR = 0.33333334326744,
+			cG = 0.035294119268656,
+			cB = 0.4627451300621,
+		},
+		[128942] = {
+			back = "Artifacts-Warlock-BG",
+			uiCam = 646,
+			mAppID = 9,
+			mDes = 0.60000002384186,
+			cR = 0.60392159223557,
+			cG = 0.28627452254295,
+			cB = 0.61176472902298,
+		},
+		[128937] = {
+			back = "Artifacts-Monk-BG",
+			uiCam = 196,
+			mAppID = 9,
+			mDes = 0.5,
+			cR = 0.29803922772408,
+			cG = 0.95686280727386,
+			cB = 0.80000007152557,
+		},
+		[128938] = {
+			back = "Artifacts-Monk-BG",
+			uiCam = 710,
+			mAppID = 9,
+			mDes = 0.30000001192093,
+			cR = 0.2549019753933,
+			cG = 0.98823535442352,
+			cB = 0.92549026012421,
+		},
+		[128940] = {
+			back = "Artifacts-Monk-BG",
+			uiCam = 629,
+			mAppID = 9,
+			mDes = 0.5,
+			aID = 133948,
+			aUiCam = 630,
+			cR = 0.23529413342476,
+			cG = 1,
+			cB = 0.74901962280273,
+		},
+		[128858] = {
+			back = "Artifacts-Druid-BG",
+			uiCam = 631,
+			mAppID = 9,
+			mDes = 0.5,
+			cR = 0.66666668653488,
+			cG = 0.8705883026123,
+			cB = 0.40392160415649,
+		},	
+		[128860] = {
+			back = "Artifacts-Druid-BG",
+			uiCam = 636,
+			mAppID = 9,
+			mDes = 0.5,
+			aID = 128859,
+			aUiCam = 637,
+			cR = 0.66666668653488,
+			cG = 0.8705883026123,
+			cB = 0.40392160415649,
+		},
+		[128821] = {
+			back = "Artifacts-Druid-BG",
+			uiCam = 188,
+			mAppID = 9,
+			mDes = 0.5,
+			aID = 128822,
+			aUiCam = 638,
+			cR = 0.66666668653488,
+			cG = 0.8705883026123,
+			cB = 0.40392160415649,
+		},
+		[128306] = {
+			back = "Artifacts-Druid-BG",
+			uiCam = 61,
+			mAppID = 9,
+			mDes = 0.5,
+			cR = 0.66666668653488,
+			cG = 0.8705883026123,
+			cB = 0.40392160415649,
+		},
+		[128832] = {
+			back = "Artifacts-DemonHunter-BG",
+			uiCam = 753,
+			mAppID = 9,
+			mDes = 0.5,
+			aID = 128831,
+			aUiCam = 759,
+			cR = 0.96470594406128,
+			cG = 0,
+			cB = 1,
+		},
+		[127829] = {
+			back = "Artifacts-DemonHunter-BG",
+			uiCam = 72,
+			mAppID = 10,
+			mDes = 0.5,
+			aID = 127830,
+			aUiCam = 161,
+			cR = 0.96470594406128,
+			cG = 0,
+			cB = 1,
+		},
+	}
+	
+	local PerksTab = CreateFrame("Frame",nil,UIParent)
+	self.PerksTab = PerksTab
+	PerksTab:SetSize(500,500*0.854)
+	PerksTab:SetPoint("CENTER")
+	PerksTab:SetFrameStrata("TOOLTIP")
+	PerksTab:SetClampedToScreen(true)
+	PerksTab:Hide()
+	
+	PerksTab.BackgroundBack = PerksTab:CreateTexture(nil,"BACKGROUND",nil,-5)
+	PerksTab.BackgroundBack:SetAllPoints()
+	
+	PerksTab.BackgroundShadow = PerksTab:CreateTexture(nil,"BACKGROUND",nil,-4)
+	PerksTab.BackgroundShadow:SetAllPoints()
+	PerksTab.BackgroundShadow:SetAtlas("Artifacts-BG-Shadow")
+	
+	PerksTab.HeaderBackground = PerksTab:CreateTexture(nil,"OVERLAY",nil,-6)
+	PerksTab.HeaderBackground:SetAllPoints()
+	PerksTab.HeaderBackground:SetAtlas("Artifacts-HeaderBG")
+	
+	PerksTab.Model = CreateFrame("PlayerModel",nil,PerksTab)
+	PerksTab.Model:SetAllPoints()
+	PerksTab.Model:SetAlpha(.5)
+	
+	PerksTab.AltModel = CreateFrame("PlayerModel",nil,PerksTab)
+	PerksTab.AltModel:SetAllPoints()
+	PerksTab.AltModel:SetAlpha(.5)
+	
+	local function ArtifactsModelTemplate_OnModelLoaded(self)
+		local CUSTOM_ANIMATION_SEQUENCE = 213
+		local animationSequence = self:HasAnimation(CUSTOM_ANIMATION_SEQUENCE) and CUSTOM_ANIMATION_SEQUENCE or 0
+	
+		if self.uiCameraID then
+			Model_ApplyUICamera(self, self.uiCameraID)
+		end
+		self:SetLight(true, false, 0, 0, 0, .7, 1.0, 1.0, 1.0)
+					
+		self:SetDesaturation(self.desaturation or .5)
+	
+		self:SetAnimation(animationSequence, 0)
+	end
+	
+	PerksTab.Model:SetScript("OnModelLoaded",ArtifactsModelTemplate_OnModelLoaded)
+	PerksTab.AltModel:SetScript("OnModelLoaded",ArtifactsModelTemplate_OnModelLoaded)
+	
+	PerksTab.powerIDToPowerButton = {}
+	PerksTab.DependencyLines = {}
+	
+	LoadAddOn("Blizzard_ArtifactUI")
+	
+	local function GetOrCreatePowerButton(powerIndex)
+		local button = PerksTab.PowerButtons and PerksTab.PowerButtons[powerIndex]
+		if button then
+			return button
+		end
+		return CreateFrame("BUTTON", nil, PerksTab, "ArtifactPowerButtonTemplate")
+	end
+	
+	local function GetOrCreateDependencyLine(lineIndex)
+		local lineContainer = PerksTab.DependencyLines and PerksTab.DependencyLines[lineIndex]
+		if lineContainer then
+			lineContainer:Show()
+			return lineContainer
+		end
+	
+		lineContainer = CreateFrame("FRAME", nil, PerksTab, "ArtifactDependencyLineTemplate")
+	
+		return lineContainer
+	end
+	
+	local ARTIFACT_TRAIT_SCALE = 0.8
+	
+	local function SetupButton(self, powerID, anchorRegion, currRank, totalRanks)
+		local spellID, cost, currentRank, maxRank, bonusRanks, x, y, prereqsMet, isStart, isGoldMedal, isFinal = C_ArtifactUI.GetPowerInfo(powerID)
+		self:ClearAllPoints()
+		self:SetPoint("CENTER", anchorRegion, "TOPLEFT", x * anchorRegion:GetWidth() / ARTIFACT_TRAIT_SCALE, -y * anchorRegion:GetHeight() / ARTIFACT_TRAIT_SCALE)
+		
+		self:SetScale(ARTIFACT_TRAIT_SCALE)
+	
+		local name, _, texture = GetSpellInfo(spellID)
+		self.Icon:SetTexture(texture)
+		self.IconDesaturated:SetTexture(texture)
+	
+		local totalPurchasedRanks = currRank
+	
+		self.powerID = powerID
+		self.spellID = spellID
+		self.currentRank = currRank
+		self.bonusRanks = 0
+		self.maxRank = totalRanks
+		self.isStart = isStart
+		self.isGoldMedal = isGoldMedal
+		self.isFinal = isFinal
+	
+		self.isCompletelyPurchased = currRank == totalRanks or self.isStart
+		self.hasSpentAny = currRank > 0
+		self.isMaxRank = currRank == totalRanks
+		self.prereqsMet = prereqsMet
+		self.cost = cost
+	
+		self:UpdatePowerType()
+	
+		if currRank > 0 then
+			self:SetStyle(ARTIFACT_POWER_STYLE_PURCHASED_READ_ONLY)
+		else
+			self:SetStyle(ARTIFACT_POWER_STYLE_UNPURCHASED_READ_ONLY)
+		end
+	
+		self.FirstPointWaitingAnimation:Stop()
+	end
+	
+	local function PlayLineFadeAnim(lineContainer, lineAnimType)
+		lineContainer.FadeAnim:Finish()
+	
+		lineContainer.FadeAnim.Background:SetFromAlpha(lineContainer.Background:GetAlpha())
+		lineContainer.FadeAnim.Fill:SetFromAlpha(lineContainer.Fill:GetAlpha())
+		lineContainer.FadeAnim.FillScroll1:SetFromAlpha(lineContainer.FillScroll1:GetAlpha())
+		lineContainer.FadeAnim.FillScroll2:SetFromAlpha(lineContainer.FillScroll2:GetAlpha())
+	
+		lineContainer.ScrollAnim:Play()
+	
+		lineContainer.FadeAnim.Background:SetToAlpha(0.0)
+		lineContainer.FadeAnim.Fill:SetToAlpha(1.0)
+		lineContainer.FadeAnim.FillScroll1:SetToAlpha(1.0)
+		lineContainer.FadeAnim.FillScroll2:SetToAlpha(1.0)
+			
+		lineContainer.animType = lineAnimType
+		lineContainer.FadeAnim:Play()
+	end
+	
+	function UpdatePerksTab(artifactData,lineParent)
+		local itemID = artifactData.itemID
+		if not itemID then
+			return
+		end
+		local data = PerksTabData[itemID]
+		if not data then
+			return
+		end
+		
+		PerksTab.BackgroundBack:SetAtlas(data.back)
+	
+		PerksTab.Model.uiCameraID = data.uiCam
+		PerksTab.Model.desaturation = data.mDes
+		if data.iAppID then
+			PerksTab.Model:SetItemAppearance(data.iAppID)
+		else
+			PerksTab.Model:SetItem(itemID, data.mAppID)
+		end
+	
+		PerksTab.Model:SetModelDrawLayer(data.aTop and "BORDER" or "ARTWORK")
+		PerksTab.AltModel:SetModelDrawLayer(data.aTop and "ARTWORK" or "BORDER")
+	
+		PerksTab.Model:SetSuppressGlobalAnimationTrack(data.gAnim)
+		PerksTab.AltModel:SetSuppressGlobalAnimationTrack(data.gAnim)
+		
+		if data.aID and data.aUiCam then
+			PerksTab.AltModel.uiCameraID = data.aUiCam
+			PerksTab.AltModel.desaturation = data.mDes
+			if data.aIAppID then
+				PerksTab.AltModel:SetItemAppearance(data.aIAppID)
+			else
+				PerksTab.AltModel:SetItem(data.aID, data.mAppID)
+			end
+	
+			PerksTab.AltModel:Show()
+		else
+			PerksTab.AltModel:Hide()
+		end
+		
+		PerksTab:ClearAllPoints()
+		PerksTab:SetPoint("TOPLEFT",lineParent,"BOTTOMLEFT")
+		PerksTab:Show()
+		
+		local powers,powersToData = {},{}
+		for i=1,#artifactData do
+			local powerID = artifactData[i][1]
+			powers[#powers+1] = powerID
+			powersToData[ powerID ] = artifactData[i]
+		end
+		
+		for powerID,button in ipairs(PerksTab.powerIDToPowerButton) do
+			button:Hide()
+		end
+		for i, powerID in ipairs(powers) do
+			local powerButton = PerksTab.powerIDToPowerButton[powerID]
+	
+			if not powerButton then
+				powerButton = GetOrCreatePowerButton(i)
+				PerksTab.powerIDToPowerButton[powerID] = powerButton
+	
+				powerButton:ClearOldData()
+			end
+	
+			SetupButton(powerButton, powerID, PerksTab.BackgroundBack, powersToData[powerID][2], powersToData[powerID][3])
+			powerButton.links = {}
+			powerButton.owner = PerksTab
+			powerButton:Show()
+		end
+		local numUsedLines = 0
+		for i, fromPowerID in ipairs(powers) do
+			local fromButton = PerksTab.powerIDToPowerButton[fromPowerID]
+			if fromButton:IsShown() then
+				local fromLinks = C_ArtifactUI.GetPowerLinks(fromPowerID)
+				if fromLinks then
+					for j, toPowerID in ipairs(fromLinks) do
+						if not fromButton.links[toPowerID] then
+							local toButton = PerksTab.powerIDToPowerButton[toPowerID]
+							if toButton and not toButton.links[fromPowerID] then
+								numUsedLines = numUsedLines + 1
+								local lineContainer = GetOrCreateDependencyLine(numUsedLines)
+	
+								lineContainer.Fill:SetStartPoint("CENTER", fromButton)
+								lineContainer.Fill:SetEndPoint("CENTER", toButton)
+								
+								lineContainer.Fill:SetVertexColor(data.cR, data.cG, data.cB)
+								lineContainer.FillScroll1:SetVertexColor(data.cR, data.cG, data.cB)
+								lineContainer.FillScroll2:SetVertexColor(data.cR, data.cG, data.cB)
+	
+								lineContainer.FillScroll1:Show()
+								lineContainer.FillScroll1:SetStartPoint("CENTER", fromButton)
+								lineContainer.FillScroll1:SetEndPoint("CENTER", toButton)
+	
+								lineContainer.FillScroll2:Show()
+								lineContainer.FillScroll2:SetStartPoint("CENTER", fromButton)
+								lineContainer.FillScroll2:SetEndPoint("CENTER", toButton)
+					
+								PlayLineFadeAnim(lineContainer, 1)
+								
+								fromButton.links[toPowerID] = lineContainer
+								toButton.links[fromPowerID] = lineContainer
+							end
+						end
+					end
+				end
+			end
+		end		
+	end
+
+	
+	self.moreInfoButton = ELib:Button(self,L.InspectViewerMoreInfo):Size(150,20):Point("TOPRIGHT",self.borderList,"BOTTOMRIGHT",2,-4):OnClick(function() module.options.moreInfoWindow:Show() end)
 	
 	self.moreInfoWindow = ELib:Popup(L.InspectViewerMoreInfo):Size(250,170)
 	self.moreInfoWindow:SetScript("OnShow",function (self)
@@ -1135,9 +1889,55 @@ function module.options:Load()
 		ExRT.F.ScheduleTimer(module.options.showPage, 4)
 	end
 	
-	self.borderList:SetScript("OnShow",module.options.showPage)
+	self.OnShow_disableNil = true
+	self:SetScript("OnShow",module.options.showPage)
 	module:RegisterEvents("INSPECT_READY")
-	module.options:showPage()
+	self:showPage()
+end
+
+function ExRT.F:RaidItemLevel()
+	local n = GetNumGroupMembers() or 0
+	if GetNumGroupMembers() == 0 then
+		local name = UnitName('player')
+		if module.db.inspectDB[name] and module.db.inspectDB[name].ilvl and module.db.inspectDB[name].ilvl >= 1 then
+			return module.db.inspectDB[name].ilvl
+		end
+		return 0
+	end
+	local isRaid = IsInRaid()
+	local gMax = ExRT.F.GetRaidDiffMaxGroup()
+	local ilvl = 0
+	local countPeople = 0
+	if not isRaid then
+		for i=1,n do
+			local unit = "party"..i
+			if i==n then unit = "player" end
+			local name,realm = UnitName(unit)
+			if name and realm and realm ~= "" then
+				name = name.."-"..realm
+			end
+			if name then
+				if module.db.inspectDB[name] and module.db.inspectDB[name].ilvl and module.db.inspectDB[name].ilvl >= 1 then
+					countPeople = countPeople + 1
+					ilvl = ilvl + module.db.inspectDB[name].ilvl
+				end
+			end
+		end
+	else
+		for i=1,n do
+			local name,_,subgroup = GetRaidRosterInfo(i)
+			if name and subgroup <= gMax then
+				if module.db.inspectDB[name] and module.db.inspectDB[name].ilvl and module.db.inspectDB[name].ilvl >= 1 then
+					countPeople = countPeople + 1
+					ilvl = ilvl + module.db.inspectDB[name].ilvl
+				end
+			end
+		end
+	end
+	if countPeople == 0 then
+		return 0
+	end
+	return ilvl / countPeople
 end
 
 function module:slash(arg)
@@ -1145,3 +1945,4 @@ function module:slash(arg)
 		ExRT.Options:Open(module.options)
 	end
 end
+

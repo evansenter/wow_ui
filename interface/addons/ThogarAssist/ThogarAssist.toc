@@ -1,4 +1,4 @@
-## Interface: 60200
+## Interface: 70000
 ## Title: Thogar Assist
 ## Notes: Displays incoming trains in the Thogar encounter
 ## DefaultState: enabled

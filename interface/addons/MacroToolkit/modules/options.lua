@@ -756,10 +756,10 @@ local interfacePanel = {
 						function(info, value)
 							MT.db.profile.scale = value
 							MacroToolkitFrame:SetScale(value)
-							MacroToolkitRestoreFrame:SetScale(value)
-							MacroToolkitPopup:SetScale(value)
-							MacroToolkitScriptFrame:SetScale(value)
-							MacroToolkitBuilderFrame:SetScale(value)
+							if MacroToolkitRestoreFrame then MacroToolkitRestoreFrame:SetScale(value) end
+							if MacroTtoolkitPopup then MacroToolkitPopup:SetScale(value) end
+							if MacroToolkitScriptFrame then MacroToolkitScriptFrame:SetScale(value) end
+							if MacroTookitBuilderFrame then MacroToolkitBuilderFrame:SetScale(value) end
 							MacroToolkitFrame:SetSize(638, MT.db.profile.height)
 						end,
 				},

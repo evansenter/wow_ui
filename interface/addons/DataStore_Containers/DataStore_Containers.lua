@@ -135,17 +135,8 @@ end
 
 -- *** Utility functions ***
 local function GetThisGuild()
-	local guild = GetGuildInfo("player")
-	if guild then 
-		local key = format("%s.%s.%s", THIS_ACCOUNT, GetRealmName(), guild)
-		return addon.db.global.Guilds[key]
-	end
-
-	-- tentative fix, to review after 6.1
-	-- local guildKey = DataStore:GetGuild()
-	-- if guildKey then
-		-- return addon.db.global.Guilds[guildKey]
-	-- end
+	local key = DataStore:GetThisGuildKey()
+	return key and addon.db.global.Guilds[key] 
 end
 
 local function GetBankTimestamps(guild)
@@ -167,7 +158,7 @@ local function GetBankTimestamps(guild)
 end
 
 local function SaveBankTimestamps(sender, timestamps)
-	if strlen(timestamps) == 0 then return end	-- sender has no tabs
+	if not timestamps or strlen(timestamps) == 0 then return end	-- sender has no tabs
 	
 	guildMembers[sender] = guildMembers[sender] or {}
 	wipe(guildMembers[sender])

@@ -7,7 +7,7 @@ L.MainFrame = "Deadly Boss Mods"
 
 L.TranslationByPrefix		= "Перевод на русский язык - "
 L.TranslationBy 			= "Swix, TOM_RUS"
-L.Website					= "Посетите наши новые форумы обсуждения и поддержки на |cFF73C2FBwww.deadlybossmods.com|r (организовано Elitist Jerks!)"
+L.Website					= "Посетите наши новые форумы обсуждения и поддержки на |cFF73C2FBwww.deadlybossmods.com|r"
 L.WebsiteButton				= "Форумы"
 
 L.OTabBosses				= "Боссы"
@@ -56,7 +56,6 @@ L.Statistic_BestKill		= "Лучший бой:"
 
 -- Tab: General Core Options
 L.General 					= "Общие параметры DBM"
-L.EnableDBM 				= "Включить DBM"
 L.EnableMiniMapIcon			= "Отображать кнопку на мини-карте"
 L.UseSoundChannel			= "Выбор аудио канала для предупреждений DBM"
 L.UseMasterChannel			= "Основной аудио канал"

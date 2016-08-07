@@ -3,6 +3,68 @@
 * Reseting bags while the bag is not opened won't reset it's scale to default.
 
 
+**16.0.4**
+* Fixed Frames:
+	* Extra Action Bar
+
+**16.0.3**
+* Auto-removed some potentionally broken frames.
+* Fixed Frames:
+	* Player Buffs Default
+	* Player Buffs From Right to Left
+* Removed Frames:
+	* Loot Won Alert Frame 1-10
+	* Money Won Frame 1-5
+
+**16.0.2**
+* Added Frames:
+	* Combo Point Frame
+	* Mage Arcane Charges Power Frame
+* Fixed Frames:
+	* TargetFrame
+	* Paladin Power Frame
+	* Monk Chi Frame
+	* Stance Buttons
+	* Stance Buttons - Vertical
+* Removed Frames:
+	* Target Combo Points
+
+**16.0.1**
+* Fixed Frames:
+	* Player Buffs Default
+	* Player Buffs From Right to Left
+	* Player Debuffs Default
+	* Player Debuffs From Right to Left
+* Removed Frames:
+	* Consolidated Buffs
+	* Player Buffs - Consolidated Buffs Tooltip
+
+**16.0.0**
+* Updated for 7.0.3.
+* Every frame can be hidden without creating the mover anchor.
+
+**15.3.6**
+* Legion preparation fixes.
+
+**15.3.5**
+* Should no longer unanchor protected frames.
+* Some other smaller fixes.
+
+**15.3.4**
+* Some minor fixes.
+* Fixed Frames:
+	* Money Won Frame3-5
+
+**15.3.3**
+* Fixed some issues with reseting frames.
+* General code cleanup.
+* Added Frames:
+	* Loot Won Alert Frame1-10
+	* Money Won Frame1-5
+
+**15.3.2**
+* Fixed two taint errors.
+
 **15.3.1**
 * Reverted the latest hasty changes releated the target buffs and debuffs.
 

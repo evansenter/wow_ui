@@ -135,16 +135,21 @@ function MT:eventHandler(this, event, arg1, ...)
 					activeMacroFrameText = MacroToolkitText
 				end
 				if activeMacroFrameText then
-					local link = GetTradeSkillListLink()
+					--local link = GetTradeSkillListLink()
+					local link = C_TradeSkillUI.GetTradeSkillListLink()
 					local text = format("%s%s", activeMacroFrameText:GetText(), link)
 					if 255 >= strlenutf8(text) then activeMacroFrameText:Insert(link) end
 				elseif activeEditBox then
-					local link = GetTradeSkillListLink()
+					--local link = GetTradeSkillListLink()
+					-- ticket 134 - fix by picro
+					local link = C_TradeSkillUI.GetTradeSkillListLink()
 					if not ChatEdit_InsertLink(link) then assert(activeEditBox:GetName(), "Failed to add tradeskill link") end
-				else ToggleDropDownMenu(1, nil, TradeSkillLinkDropDown, "TradeSkillLinkFrame", 25, 25) end
+				--else ToggleDropDownMenu(1, nil, TradeSkillLinkDropDown, "TradeSkillLinkFrame", 25, 25) end
+				else ToggleDropDownMenu(1, nil, TradeSkillFrame.LinkToDropDown, TradeSkillFrame.LinkToButton, 25, 25) end
 				PlaySound("igMainMenuOptionCheckBoxOn")
 			end
-			TradeSkillLinkButton:SetScript("OnClick", btsui_onclick)
+			--TradeSkillLinkButton:SetScript("OnClick", btsui_onclick)
+			TradeSkillFrame.LinkToButton:SetScript("OnClick", btsui_onclick)
 		end
 	elseif event == "PLAYER_LOGIN" then
 		MT:BuildCommandList()
@@ -329,7 +334,8 @@ function MT:DoMTMacroCommand(command, parameters)
 		SetRaidTarget(t, m)
 	elseif command == "mtfm" then
 		if parameters then
-			if SecureCmdOptionParse(parameters) then C_MountJournal.Summon(0) end
+			-- ticket 132 solution provided by Merlin_vr1
+			if SecureCmdOptionParse(parameters) then C_MountJournal.SummonByID(0) end
 		else C_MountJournal.Summon(0) end
 	elseif command == "mtev" then VehicleExit()
 	elseif command == "mtmc" then

@@ -10,14 +10,10 @@
 local function PawnUseThisLocalization()
 PawnLocal =
 {
-	AsteriskTooltipLine = "|TInterface\\AddOns\\Pawn\\Textures\\Question:0|t Efeitos especiais não incluído no valor.", -- Needs review
 	AverageItemLevelIgnoringRarityTooltipLine = "Nível de item médio", -- Needs review
 	BackupCommand = "backup", -- Needs review
 	BaseValueWord = "base", -- Needs review
-	CogwheelName = "Engrenagem", -- Needs review
 	CopyScaleEnterName = "Digite o nome para sua nova esclaa, uma copia de %s:", -- Needs review
-	CorrectGemsValueCalculationMessage = "   -- Gemas corretas valeriam: %g", -- Needs review
-	CrystalOfFearName = "Cristal do Medo", -- Needs review
 	DebugOffCommand = "debug off", -- Needs review
 	DebugOnCommand = "debug on", -- Needs review
 	DecimalSeparator = ",", -- Needs review
@@ -30,9 +26,8 @@ PawnLocal =
 	FailedToGetItemLinkMessage = "   Erro ao pegar o link do tooltip.  Isso pode ser devido conflito de mods.", -- Needs review
 	FailedToGetUnenchantedItemMessage = "   Erro ao pegar valores base de items.  Isso pode ser devido conflito de mods.", -- Needs review
 	FoundStatMessage = "   %d %s", -- Needs review
-	GemColorList1 = "%d %s", -- Needs review
-	GemColorList2 = "%d %s ou %s", -- Needs review
-	GemColorList3 = "%d de qualquer cor", -- Needs review
+	GemList2 = "%s or %s",
+	GemListMany = "%d possibilities (click the Pawn button for details)", -- Requires localization
 	GenericGemLink = "|Hitem:%d|h[Gema %d]|h", -- Needs review
 	GenericGemName = "(Gema %d)", -- Needs review
 	HiddenScalesHeader = "Outras escalas", -- Needs review
@@ -59,11 +54,13 @@ PawnLocal =
 	TooltipBestAnnotation = "%s  |cff8ec3e6(melhor)|r", -- Needs review
 	TooltipBestAnnotationSimple = "%s  seu melhor", -- Needs review
 	TooltipBigUpgradeAnnotation = "%s  |TInterface\\AddOns\\Pawn\\Textures\\UpgradeArrow:0|t|cff00ff00 upgrade%s|r", -- Needs review
+	TooltipDowngradeAnnotation = "%s  |TInterface\\AddOns\\Pawn\\Textures\\UpgradeArrow:0|t|cff00ff00-%.0f%% downgrade%s|r", -- Requires localization
 	TooltipSecondBestAnnotation = "%s  |cff8ec3e6(segundo melhor)|r", -- Needs review
 	TooltipSecondBestAnnotationSimple = "%s  seu segundo melhor", -- Needs review
 	TooltipUpgradeAnnotation = "%s  |TInterface\\AddOns\\Pawn\\Textures\\UpgradeArrow:0|t|cff00ff00+%.0f%% upgrade%s|r", -- Needs review
 	TooltipUpgradeFor1H = "para sets 1 Mão", -- Needs review
 	TooltipUpgradeFor2H = "para 2 Mãos", -- Needs review
+	TooltipUpgradeNeedsEnhancementsAnnotation = "%s  |TInterface\\AddOns\\Pawn\\Textures\\UpgradeArrow:0|t|cff00ff00+%.0f%% upgrade potential%s|r", -- Requires localization
 	TooltipVersusLine = "%s|n  vs. |c%s%s|r", -- Needs review
 	TotalValueMessage = "   ---- Total: %g", -- Needs review
 	UnenchantedStatsHeader = "(Valor base)", -- Needs review
@@ -82,12 +79,9 @@ Para mais informações em personalizar o Pawn, favor veja o arquivo de ajuda (R
 	VisibleScalesHeader = "%s's scales", -- Needs review
 	Stats = {
 		AgilityInfo = "O atributo primário, Agilidade.", -- Needs review
-		Ap = "Poder de ataque", -- Needs review
-		ApInfo = "Attack power.  Não está presente nos itens diretamente.  Não inclui poder de ataque que você recebe de Força ou Agilidade.", -- Needs review
 		ArmorInfo = "Armadura, não importa que tipo de item.  Não distingue entre armadura base ou bonus de armadura desde que items com bonus de armadura são obsoletos.", -- Needs review
 		ArmorTypes = "Tipos de armaduras", -- Needs review
 		AvoidanceInfo = "Avoidance.  Reduces the damage you take from area-of-effect attacks.", -- Requires localization
-		BonusArmorInfo = "Bonus armor.  Does not include the base armor value on all armor.  This number should always be at least as high as the value for Armor.", -- Requires localization
 		Cloth = "Tecido", -- Needs review
 		ClothInfo = "Pontos para distribuir se o item é tecido.", -- Needs review
 		Crit = "Crítico", -- Needs review
@@ -103,20 +97,10 @@ Para mais informações em personalizar o Pawn, favor veja o arquivo de ajuda (R
 		Mail = "Atributos - Variáveis utilizadas pelas listas de atributos mestres na aba de Valores.", -- Needs review
 		MailInfo = "Pontos para distribuir se o item for malha.", -- Needs review
 		MasteryInfo = "Maestria.  Melhora o bônus único da especialização da sua classe", -- Needs review
-		MetaSocket = "Engase metagema", -- Needs review
-		MetaSocketInfo = "Um engaste metagema, vazio ou preenchido. Coloque pontos extras para capacetes que que tem engaste metagema para compensar efeitos especiais nas gemas metagemas,", -- Needs review
 		MinorStats = "Minor stats", -- Requires localization
 		MovementSpeedInfo = "Movement speed.  Causes your character to run faster.", -- Requires localization
-		MultistrikeInfo = "Multistrike.  Increases the chance that your attacks and healing spells will hit your target two extra times at reduced potency.", -- Requires localization
 		Plate = "Placa", -- Needs review
 		PlateInfo = "Pontos para distribuir se o item for placa.", -- Needs review
-		PrimaryStats = "Status primários", -- Needs review
-		PvPPower = "Poder JxJ", -- Needs review
-		PvPPowerInfo = "Poder JxJ. Faz com que suas habilidades causem mais dano para outros jogadores (mas não para criaturas), e suas habilidades de cura curem outros jogadores para mais em algumas situações JxJ.", -- Needs review
-		PvPResilience = "Resiliência JxJ", -- Needs review
-		PvPResilienceInfo = "Resiliência JxJ.  Reduz o dano que você recebe de ataques de outros jogadores.  Somente efetivo em partidas contra outros jogadores.", -- Needs review
-		PvPStats = "Status JxJ", -- Needs review
-		SecondaryStats = "Secondary stats", -- Requires localization
 		Shield = "Escudo", -- Needs review
 		ShieldInfo = "Pontos para distribuir se o item for um escudo.", -- Needs review
 		Sockets = "Engastes", -- Needs review
@@ -126,9 +110,6 @@ Para mais informações em personalizar o Pawn, favor veja o arquivo de ajuda (R
 		SpeedBaselineIs = "|cffffffffVelocidade base|r é:", -- Needs review
 		SpeedInfo = "Velocidade da arma, em golpes por segundo.  (Se você prefere armas mais rápidas, este número deve ser negativo.  Veja também: \"velocidade base\" na seção \"Status especiais de armas\")", -- Needs review
 		SpeedIs = "1 segundo |cffffffffvelocidade do golpe|r vale:", -- Needs review
-		SpellPower = "Poder mágico", -- Needs review
-		SpellPowerInfo = "Poder mágico.  Presente em armas de feitiço e em algumas armaduras.  Não inclui o poder mágico que você adquire com Intelecto.", -- Needs review
-		SpiritInfo = "Atributo primário, Espírito.", -- Needs review
 		StaminaInfo = "Atributo primário, Vigor.", -- Needs review
 		StrengthInfo = "Atributo primário, Força.", -- Needs review
 		VersatilityInfo = "Versatility.  Increases damage dealt for damage characters, increases healing done by healing characters, and reduces damage taken for tank characters.", -- Requires localization
@@ -218,6 +199,8 @@ Para mais informações em personalizar o Pawn, favor veja o arquivo de ajuda (R
 		WeaponTypeStaffInfo = "Pontos para distribuir se o item for um cajado.", -- Needs review
 		WeaponTypeWand = "Varinha", -- Needs review
 		WeaponTypeWandInfo = "Pontos para distribuir se o item for uma varinha.", -- Needs review
+		WeaponTypeWarglaive = "Glaive de Guerra", -- Needs review
+		WeaponTypeWarglaiveInfo = "Points to be assigned if the item is a warglaive.", -- Requires localization
 	},
 	TooltipParsing = {
 		Agility = "^%+?([-%d%.,]+) d?e? ?Agilidade$", -- Needs review
@@ -228,8 +211,6 @@ Para mais informações em personalizar o Pawn, favor veja o arquivo de ajuda (R
 		Avoidance = "^%+([%d%.,]+) Evasiva$", -- Needs review
 		Axe = "^Machado$", -- Needs review
 		BagSlots = "^%d+ Compartimento .+$", -- Needs review
-		BladesEdgeMountains = "^Montanhas da Lâmina Afiada$", -- Needs review
-		BonusArmor = "^%+([%d%.,]+) Bônus de Armadura$", -- Needs review
 		Bow = "^Arco$", -- Needs review
 		ChanceOnHit = "Chance ao acertar:", -- Needs review
 		Charges = "^.+ Cargas?$", -- Needs review
@@ -257,11 +238,12 @@ Para mais informações em personalizar o Pawn, favor veja o arquivo de ajuda (R
 		EnchantmentTitaniumWeaponChain = "^Corrente de Arma de Titânico$", -- Needs review
 		Equip = "Equipar:", -- Needs review
 		FistWeapon = "^Arma de Punho$", -- Needs review
-		Flexible = "^Flexible$", -- Requires localization
+		Flexible = "^Flexivel$",
 		Formula = "Fórmula:", -- Needs review
 		Gun = "^Arma$", -- Needs review
 		Haste = "^%+?([%d%.,]+) Aceleração$", -- Needs review
 		Haste2 = "^%+?([%d%.,]+) de Aceleração$", -- Needs review
+		HaventCollectedAppearance = "^You haven't collected this appearance$", -- Requires localization
 		HeirloomLevelRange = "^Requer nível %d+ to (%d+)", -- Needs review
 		HeirloomXpBoost = "^Equipar: Experiência obtida", -- Needs review
 		HeirloomXpBoost2 = "^UNUSED$", -- Needs review
@@ -283,10 +265,10 @@ Para mais informações em personalizar o Pawn, favor veja o arquivo de ajuda (R
 		Mastery2 = "^%+?([%d%.,]+) de Maestria$", -- Needs review
 		MetaGemRequirements = "|cff%x%x%x%x%x%xRequer", -- Needs review
 		MovementSpeed = "^%+([%d%.,]+) Velocidade$", -- Needs review
+		MultiStatHeading = "^Multiple Stats$", -- Requires localization
 		MultiStatSeparator1 = "e", -- Needs review
 		Multistrike = "^%+([%d%.,]+) Golpes Múltiplos$", -- Needs review
 		NormalizationEnchant = "^Encantado: (.*)$", -- Needs review
-		OnlyFitsInMetaGemSlot = "^\"Encaixa%-se apenas em um engaste metagema%.\"$", -- Needs review
 		Parry = "^%+?([%d%.,]+) Aparo$", -- Needs review
 		Parry2 = "^%+?([%d%.,]+) de Aparo$", -- Needs review
 		Pattern = "Molde:", -- Needs review
@@ -303,8 +285,6 @@ Para mais informações em personalizar o Pawn, favor veja o arquivo de ajuda (R
 		Scope = "^Mira %(%+([%d%.,]+) de Dano%)$", -- Needs review
 		ScopeCrit = "^Mira %(%+([%d%.,]+) Acerto Crítico%)$", -- Needs review
 		ScopeRangedCrit = "^%+?([%d%.,]+) Acerto Crítico de Longo Alcance$", -- Needs review
-		Season = "^Série ", -- Needs review
-		ShadowmoonValley = "^Vale da Lua Negra$", -- Needs review
 		Shield = "^Escudo$", -- Needs review
 		SocketBonusPrefix = "Bônus de engaste: ", -- Needs review
 		Speed = "^Velocidade ([%d%.,]+)$", -- Needs review
@@ -315,16 +295,17 @@ Para mais informações em personalizar o Pawn, favor veja o arquivo de ajuda (R
 		Stamina = "^%+?([-%d%.,]+) d?e? ?Vigor$", -- Needs review
 		Strength = "^%+?([-%d%.,]+) d?e? ?Força$", -- Needs review
 		Sword = "^Espada$", -- Needs review
-		TempestKeep = "^Bastilha da Tormenta$", -- Needs review
 		TemporaryBuffMinutes = "^.+%(%d+ min%)$", -- Needs review
 		TemporaryBuffSeconds = "^.+%(%d+ s%)$", -- Needs review
 		Thunderforged = "^Forjado pelo Trovão$", -- Needs review
-		Timeless = "^Timeless$", -- Requires localization
+		Timeless = "^Perene$",
+		Titanforged = "^Titanforged$", -- Requires localization
 		UpgradeLevel = "^Nível de aprimoramento:", -- Needs review
 		Use = "Usar:", -- Needs review
 		Versatility = "^%+([%d%.,]+) Versatilidade$", -- Needs review
 		Wand = "^Varinha$", -- Needs review
 		Warforged = "^Forjado para a Guerra$", -- Needs review
+		Warglaives = "^Glaives de Guerra$", -- Needs review
 		WeaponDamage = "^([%d%.,]+) %- ([%d%.,]+) d?e? ?Dano$", -- Needs review
 		WeaponDamageArcane = "^%+?([%d%.,]+) %- ([%d%.,]+) de [dD]ano Arcano$", -- Needs review
 		WeaponDamageArcaneExact = "^%+?([%d%.,]+) de [dD]ano Arcano$",
@@ -353,14 +334,11 @@ Para mais informações em personalizar o Pawn, favor veja o arquivo de ajuda (R
 Escalas/Ponderação do Wowhead usados com permissão—Favor direcionar feedback nos valores padrões do Wowhead.]=], -- Needs review
 		CompareClearItems = "Limpar", -- Needs review
 		CompareClearItemsTooltip = "Remover ambos itens da comparação.", -- Needs review
-		CompareCogwheelSockets = "Engastes de engrenagem", -- Needs review
 		CompareColoredSockets = "Engastes coloridos", -- Needs review
 		CompareEquipped = "Equipado", -- Needs review
 		CompareGemTotalValue = "Valor das gemas", -- Needs review
 		CompareHeader = "Comparar itens usando %s", -- Needs review
-		CompareMetaSockets = "Engastes metagema", -- Needs review
 		CompareOtherHeader = "Outro", -- Needs review
-		CompareShaTouchedSockets = "Tocado Pelo Sha", -- Needs review
 		CompareSlotEmpty = "(sem item)", -- Needs review
 		CompareSocketBonus = "Bonus de engaste", -- Needs review
 		CompareSocketsHeader = "Engastes", -- Needs review
@@ -369,7 +347,6 @@ Escalas/Ponderação do Wowhead usados com permissão—Favor direcionar feedbac
 		CompareSwapTooltip = "Troca o item da esquerda pelo da direita.", -- Needs review
 		CompareTab = "Comparar", -- Needs review
 		CompareVersus = "—vs.—", -- Needs review
-		CompareWelcomeLeft = "Primeiro, pegue uma escala da lista na esquerda.", -- Needs review
 		CompareWelcomeRight = [=[Então, solte um item nessa caixa.
 
 Você pode comparar ele versus seus itens atuais usando os ícones no canto inferior-esquerdo.]=], -- Needs review
@@ -446,12 +423,12 @@ Atalhos:
 If checked, Pawn's socketing advisor will still suggest appropriate gems for low-level items, but sockets will be ignored in calculations and socketed items will not show up as upgrades as often.
 
 If unchecked, Pawn will calculate values for items as if they were socketed in the way that maximizes the item's value, regardless of the item's level.]=], -- Requires localization
-		OptionsIgnoreItemUpgradesCheck = "Ignore valor and baleful upgrades",
+		OptionsIgnoreItemUpgradesCheck = "Ignore valor and baleful upgrades", -- Requires localization
 		OptionsIgnoreItemUpgradesCheckTooltip = [=[Enable this option to have Pawn ignore the potential for Valor upgrades and Empowered Baleful items when calculating item values.
 
 If checked, Pawn will treat upgradeable items as they are and will not assume that you would use Valor and Empowered Apexis Fragments to improve the item when determining whether an item is better than what you currently have.
 
-If unchecked, Pawn will treat those items assuming that you would maximize their potential with Valor and Empowered Apexis Fragments.  This could cause a level 650 baleful item to appear as a significant upgrade over a level 670 item from Blackrock Foundry, since the baleful item could potentially be improved to level 705 through valor and Apexis.]=],
+If unchecked, Pawn will treat those items assuming that you would maximize their potential with Valor and Empowered Apexis Fragments.  This could cause a level 650 baleful item to appear as a significant upgrade over a level 670 item from Blackrock Foundry, since the baleful item could potentially be improved to level 705 through valor and Apexis.]=], -- Requires localization
 		OptionsInventoryIcon = "Mostrar ícones de inventário", -- Needs review
 		OptionsInventoryIconTooltip = "Habilite esta opção para mostrar ícones de inventário próximo ao link de janela de item.", -- Needs review
 		OptionsItemIDs = "Mostrar ID de items", -- Needs review
@@ -471,6 +448,8 @@ Use esta característica se você achar que o Pawn está fazendo sugestões de u
 		OptionsSocketingAdvisorTooltip = "Quando adicionar gemas em um item, Pawn vai mostrar uma popup sugerindo gemas que você pode engastar em um item que irá melhora-lo.  (Para ser a lista completa de sugestões para cada cor, veja a aba Gemas, onde você também pode alterar a qualidade das gemas que ira utilizar.)", -- Needs review
 		OptionsTab = "Opções", -- Needs review
 		OptionsTooltipHeader = "Opções de tooltip", -- Needs review
+		OptionsTooltipSpecIcon = "Show spec icons", -- Requires localization
+		OptionsTooltipSpecIconTooltip = "Enable this option to show spec icons next to scale names on tooltips.", -- Requires localization
 		OptionsTooltipUpgradesOnly = "Somente mostrar upgrades", -- Needs review
 		OptionsTooltipUpgradesOnlyTooltip = [=[Esta é a opção mais simples.  Somente mostra porcentagem de upgrade de um item para seu equipamento, e indica quais items são melhores para sua própria escala.  Não mostra nada sobre items fracos.
 
@@ -496,7 +475,21 @@ Fire:  156.7|r]=], -- Needs review
 Se marcado, você pode estar usando uma arma de duas mãos e claramente ver armas de uma mão como upgrades se eles são melhores (ou segundo melhores) da sua arma de uma mão anterior, porque Pawn monitora upgrades separadamente para sets de duas armas.
 
 Se desmarcado, equpar uma arma de duas mãos vai prevenir que Pawn mostra upgrades para armas de uma mão e vice-versa.]=], -- Needs review
+		OptionsUpgradeTrackingHeader = "Upgrade comparisons:", -- Requires localization
+		OptionsUpgradeTrackingOff = "Versus equipped gear (recommended)", -- Requires localization
+		OptionsUpgradeTrackingOffTooltip = "Pawn will show you items that are an upgrade compared to the items that you currently have equipped.", -- Requires localization
+		OptionsUpgradeTrackingOn = "Track for each scale (advanced)", -- Requires localization
+		OptionsUpgradeTrackingOnTooltip = "(For advanced users.)  Pawn will try to track the best items that you've equipped, independently for each scale that you have enabled, and show you items that are an upgrade compared to those.", -- Requires localization
 		OptionsWelcome = "Configure Pawn do jeito que deseja.  Mudanças terão efeito imediatamente.", -- Needs review
+		ScaleAutoOff = "Manual", -- Requires localization
+		ScaleAutoOff2 = "Let me manage scales.", -- Requires localization
+		ScaleAutoOffTooltip = "Pawn will let you manually choose which scales to use for its calculations, allowing you to enable more than one scale at a time, add custom scales, and more.", -- Requires localization
+		ScaleAutoOn = "Automatic", -- Requires localization
+		ScaleAutoOn2 = "Just show my current spec.", -- Requires localization
+		ScaleAutoOnTooltip = "Pawn will automatically show your current specialization in item tooltips, and use that to make recommendations and suggest upgrades.", -- Requires localization
+		ScaleAutoWelcome = [=[Pawn will show suggestions for your current specialization.
+
+If you'd rather manage things on your own, just click Manual below.]=], -- Requires localization
 		ScaleChangeColor = "Mudar cor", -- Needs review
 		ScaleChangeColorTooltip = "Mudar a cor de nome e valores da escala que aparecem nos tooltips.", -- Needs review
 		ScaleCopy = "Copiar", -- Needs review
@@ -517,6 +510,7 @@ Este comando não pode ser desfeito]=], -- Needs review
 		ScaleRename = "Renomear", -- Needs review
 		ScaleRenameTooltip = "Renomeia esta escala.", -- Needs review
 		ScaleSelectorHeader = "Selecione uma escala:", -- Needs review
+		ScaleSelectorShowingSuggestionsFor = "Showing suggestions for", -- Requires localization
 		ScaleSelectorShowScale = "Mostrar escala nos tooltips", -- Needs review
 		ScaleSelectorShowScaleTooltip = [=[Quando esta opção esta marcada, valores para cada escala vão ser mostrados no tooltips de items para este personagem.  Cada esclaa pode mostrar até uma para cada um do seu personagem, multiplos personagens, ou nenhum personagem,
 
@@ -549,42 +543,8 @@ Para mais informação nesta opção, veja o arquivo leia-me.]=], -- Needs revie
 		ValuesWelcomeReadOnly = "A escala que você selecionou não pode ser mudada.  Se você quer mudar os valores, vá para a aba Escala e crie uma cópia desta escala ou comece uma nova.", -- Needs review
 	},
 	Wowhead = {
-		DeathKnightBloodTank = "Cavaleiro da Morte: sangue", -- Needs review
-		DeathKnightFrostDps = "Cavaleiro da Morte: gelo", -- Needs review
-		DeathKnightUnholyDps = "Cavaleiro da Morte: profano", -- Needs review
-		DruidBalance = "Druida: equilíbrio", -- Needs review
-		DruidFeralDps = "Druida: feral", -- Needs review
-		DruidFeralTank = "Druida: guardião", -- Needs review
-		DruidRestoration = "Druida: restauração", -- Needs review
-		HunterBeastMastery = "Caçador: domínio das feras", -- Needs review
-		HunterMarksman = "Caçador: precisão", -- Needs review
-		HunterSurvival = "Caçador: sobrevivência", -- Needs review
-		MageArcane = "Mago: arcano", -- Needs review
-		MageFire = "Mago: fogo", -- Needs review
-		MageFrost = "Mago: gelo", -- Needs review
-		MonkBrewmaster = "Monge: mestre cervejeiro", -- Needs review
-		MonkMistweaver = "Monge: tecelão da névoa", -- Needs review
-		MonkWindwalker = "Monge: andarilho do vento", -- Needs review
-		PaladinHoly = "Paladino: sagrado", -- Needs review
-		PaladinRetribution = "Paladino: retribuição", -- Needs review
-		PaladinTank = "Paladino: tanker", -- Needs review
-		PriestDiscipline = "Sacerdote: disciplina", -- Needs review
-		PriestHoly = "Sacerdote: sagrado", -- Needs review
-		PriestShadow = "Sacerdote: sombra", -- Needs review
 		Provider = "Escalas do Wowhead", -- Needs review
 		ProviderStarter = "Starter scales", -- Requires localization
-		RogueAssassination = "Ladino: assassinato", -- Needs review
-		RogueCombat = "Ladino: combate", -- Needs review
-		RogueSubtlety = "Ladino: subterfúgio", -- Needs review
-		ShamanElemental = "Xamã: elemental", -- Needs review
-		ShamanEnhancement = "Xamã: aperfeiçoamento", -- Needs review
-		ShamanRestoration = "Xamã: restauração", -- Needs review
-		WarlockAffliction = "Bruxo: suplício", -- Needs review
-		WarlockDemonology = "Bruxo: demonologia", -- Needs review
-		WarlockDestruction = "Bruxo: destruição", -- Needs review
-		WarriorArms = "Guerreiro: armas", -- Needs review
-		WarriorFury = "Guerreiro: fúria", -- Needs review
-		WarriorTank = "Guerreiro: tanker", -- Needs review
 	},
 }
 end

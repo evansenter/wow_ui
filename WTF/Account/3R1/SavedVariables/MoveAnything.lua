@@ -2,9 +2,6 @@
 MADB = {
 	["noMMMW"] = false,
 	["characters"] = {
-		["Illidan Comet"] = {
-			["profile"] = "Comet",
-		},
 	},
 	["alwaysShowNudger"] = false,
 	["tooltips"] = true,
@@ -14,14 +11,9 @@ MADB = {
 			["frames"] = {
 			},
 		},
-		["Comet"] = {
-			["name"] = "Comet",
-			["frames"] = {
-			},
-		},
 	},
-	["frameListRows"] = 18,
-	["noBags"] = false,
-	["playSound"] = false,
 	["closeGUIOnEscape"] = false,
+	["playSound"] = false,
+	["noBags"] = false,
+	["frameListRows"] = 18,
 }

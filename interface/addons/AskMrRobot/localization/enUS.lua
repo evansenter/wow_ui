@@ -21,6 +21,45 @@ if L then
 General
 ------------------------------------------------------------------------]]
 
+L.SpecsShort = {
+	[1] = "Blood", -- DeathKnightBlood
+    [2] = "Frost", -- DeathKnightFrost
+    [3] = "Unholy", -- DeathKnightUnholy
+	[4] = "Havoc", -- DemonHunterHavoc
+	[5] = "Vengeance", -- DemonHunterVengeance
+    [6] = "Moon", -- DruidBalance
+    [7] = "Feral", -- DruidFeral
+    [8] = "Bear", -- DruidGuardian
+    [9] = "Resto", -- DruidRestoration
+    [10] = "BM", -- HunterBeastMastery
+    [11] = "Marks", -- HunterMarksmanship
+    [12] = "Survival", -- HunterSurvival
+    [13] = "Arcane", -- MageArcane
+    [14] = "Fire", -- MageFire
+    [15] = "Frost", -- MageFrost
+    [16] = "Brew", -- MonkBrewmaster
+    [17] = "Mist", -- MonkMistweaver
+    [18] = "Wind", -- MonkWindwalker
+    [19] = "Holy", -- PaladinHoly
+    [20] = "Prot", -- PaladinProtection
+    [21] = "Ret", -- PaladinRetribution
+    [22] = "Disc", -- PriestDiscipline
+    [23] = "Holy", -- PriestHoly
+    [24] = "Shadow", -- PriestShadow
+    [25] = "Assn", -- RogueAssassination
+    [26] = "Outlaw", -- RogueOutlaw
+    [27] = "Sub", -- RogueSubtlety
+    [28] = "Elem", -- ShamanElemental
+    [29] = "Enh", -- ShamanEnhancement
+    [30] = "Resto", -- ShamanRestoration
+    [31] = "Aff", -- WarlockAffliction
+    [32] = "Demo", -- WarlockDemonology
+    [33] = "Destro", -- WarlockDestruction
+    [34] = "Arms", -- WarriorArms
+    [35] = "Fury", -- WarriorFury
+    [36] = "Prot", -- WarriorProtection
+}
+
 -- stat strings for e.g. displaying gem/enchant abbreviations, make as short as possible without being confusing/ambiguous
 L.StatsShort = {
     ["Strength"] = "Str",
@@ -80,7 +119,8 @@ L.WeaponTypes = {
 	Wand     = "Wand",
 	Bow      = "Bow",
 	Gun      = "Gun",
-	Crossbow = "Crossbow"
+	Crossbow = "Crossbow",
+	Warglaive= "Warglaive"
 }
 
 L.ArmorTypes = {
@@ -129,15 +169,15 @@ Export Tab
 ------------------------------------------------------------------------]]
 L.ExportTitle = "Export Instructions"
 L.ExportHelp1 = "1. Copy the text below by pressing Ctrl+C (or Cmd+C on a Mac)"
-L.ExportHelp2 = "2. Go to http://www.askmrrobot.com/wow/player and load your character"
-L.ExportHelp3 = "3. Press the green IMPORT (from addon) link just above your character name"
-L.ExportHelp4 = "4. Paste into the textbox on the website and press Import!"
+L.ExportHelp2 = "2. Go to http://beta.askmrrobot.com/wow/simulator/run and open the character picker"
+L.ExportHelp3 = "3. Paste into the textbox under the ADDON section"
 
 L.ExportSplashTitle = "Getting Started"
 L.ExportSplashSubtitle = "This is your first time using the new version of the addon. Do the following things to initialize your item database:"
 L.ExportSplash1 = "1. Activate each of your specs once and equip your latest gear for each spec"
-L.ExportSplash2 = "2. Open your bank and leave it open for at least two seconds"
-L.ExportSplash3 = "3. If you have gear in void storage, open it and leave it open for at least two seconds"
+L.ExportSplash2 = "2. Equip and open your artifact weapon for each spec"
+L.ExportSplash3 = "3. Open your bank and leave it open for at least two seconds"
+L.ExportSplash4 = "4. If you have gear in void storage, open it and leave it open for at least two seconds"
 L.ExportSplashClose = "Continue"
 
 
@@ -145,13 +185,10 @@ L.ExportSplashClose = "Continue"
 Gear Tab
 ------------------------------------------------------------------------]]
 L.GearImportNote = "Click Import to paste data from the website."
-L.GearTabPrimary = "Primary Spec"
-L.GearTabSecondary = "Secondary Spec"
 L.GearBlank = "You have not loaded any gear for this spec yet."
 L.GearBlank2 = "Go to askmrrobot.com to optimize your gear, then use the Import button to the left."
 L.GearButtonEquip = function(spec)
-	-- spec 1 is primary, 2 is secondary
-	return string.format("Activate %s Spec and Equip Gear", spec == 1 and "Primary" or "Secondary")
+	return string.format("Activate %s Spec and Equip Gear", spec)
 end
 L.GearButtonShop = "Show Shopping List"
 
@@ -176,10 +213,8 @@ Or, you can right click the minimap icon to switch spec and equip gear.
 OR! You can use slash commands:]]
 
 L.GearTipCommands = 
-[[/amr equip [1 or 2]
-1 = primary
-2 = secondary
-no arg = toggle]]
+[[/amr equip [1-4]
+no arg = cycle]]
 -- note to translators: the slash commands are literal and should stay as english
 
 

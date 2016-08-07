@@ -34,11 +34,10 @@ local AddonDB_Defaults = {
 				Professions = {
 					['*'] = {
 						FullLink = nil,		-- Tradeskill link
-						NumCrafts = 0,			-- total number of crafts for this tradeskill
 						Rank = 0,
 						MaxRank = 0,
 						Icon = nil,
-						Crafts = { ['*'] = nil },
+						Crafts = {},
 						Cooldowns = { ['*'] = nil },		-- list of active cooldowns
 					}
 				},
@@ -111,11 +110,8 @@ local function GetProfessionID(profession)
 end
 
 local function GetThisGuild()
-	local guild = GetGuildInfo("player")
-	if guild then 
-		local key = format("%s.%s.%s", THIS_ACCOUNT, GetRealmName(), guild)
-		return addon.db.global.Guilds[key]
-	end
+	local key = DataStore:GetThisGuildKey()
+	return key and addon.db.global.Guilds[key] 
 end
 
 local function GetVersion()
@@ -155,111 +151,9 @@ end
 
 -- *** Scanning functions ***
 
-local selectedTradeSkillIndex
-local subClasses, subClassID
-local invSlots, invSlotID
-local haveMats, hasSkillUp
-
-local function SaveActiveFilters()
-	selectedTradeSkillIndex = GetTradeSkillSelectionIndex()
-	
-	subClasses = { GetTradeSkillSubClasses() }
-	invSlots = { GetTradeSkillInvSlots() }
-
-	subClassID = TradeSkillFrame.filterTbl.subClassValue
-	invSlotID = TradeSkillFrame.filterTbl.slotValue
-	haveMats = TradeSkillFrame.filterTbl.hasMaterials
-	hasSkillUp = TradeSkillFrame.filterTbl.hasSkillUp
-	
-	TradeSkillSetFilter(-1, -1)
-	TradeSkillOnlyShowMakeable(false)
-	TradeSkillOnlyShowSkillUps(false)
-end
-
-local function RestoreActiveFilters()
-	if (subClassID > 0) then
-		TradeSkillSetFilter(subClassID, 0, subClasses[subClassID], "")
-	elseif (invSlotID > 0) then
-		TradeSkillSetFilter(0, invSlotID, "", invSlots[invSlotID])
-	end
-
-	TradeSkillOnlyShowMakeable(haveMats)
-	TradeSkillOnlyShowSkillUps(hasSkillUp)
-	TradeSkillUpdateFilterBar()
-	
-	SelectTradeSkill(selectedTradeSkillIndex)
-	
-	wipe(subClasses)
-	wipe(invSlots)
-	
-	subClasses = nil
-	invSlots = nil
-	subClassID = nil
-	invSlotID = nil
-	haveMats = nil
-	hasSkillUp = nil
-	selectedTradeSkillIndex = nil
-end
-
-local headersState = {}
-
-local function SaveHeaders()
-	local headerCount = 0		-- use a counter to avoid being bound to header names, which might not be unique.
-	
-	for i = GetNumTradeSkills(), 1, -1 do		-- 1st pass, expand all categories
-		local _, skillType, _, isExpanded  = GetTradeSkillInfo(i)
-		 if (skillType == "header") then
-			headerCount = headerCount + 1
-			if not isExpanded then
-				ExpandTradeSkillSubClass(i)
-				headersState[headerCount] = true
-			end
-		end
-	end
-end
-
-local function RestoreHeaders()
-	local headerCount = 0
-	for i = GetNumTradeSkills(), 1, -1 do
-		local _, skillType  = GetTradeSkillInfo(i)
-		if (skillType == "header") then
-			headerCount = headerCount + 1
-			if headersState[headerCount] then
-				CollapseTradeSkillSubClass(i)
-			end
-		end
-	end
-	wipe(headersState)
-end
-
---[[
-How trade skills are scanned:
-=============================
-
-The addon registers TRADE_SKILL_SHOW, triggered when the trade skill pane is shown.
-In TRADE_SKILL_SHOW:
-- TRADE_SKILL_UPDATE is registered
-- TRADE_SKILL_CLOSE is registered
-- the updater frame is shown => enabling its "OnUpdate"
-
-After 0.5s in the OnUpdate, trade skills are scanned.
-
-In TRADE_SKILL_CLOSE
-- TRADE_SKILL_UPDATE is registered
-- the updater frame is hidden => disabling its "OnUpdate"
-
-The technique was borrowed from ARL, and adjusted here, as it was not working 100% as I wanted (some scans were missed).
-
-As of August 3rd 2014, it seems to work fine now.. 
-
---]]
-
-local updater = CreateFrame("Frame", nil, UIParent)
-updater:Hide()
-
 local function ScanCooldowns()
 	-- Updated by RGriedel
-	local tradeskillName = GetTradeSkillLine()
+	local tradeskillName = C_TradeSkillUI.GetTradeSkillLine()
 	local char = addon.ThisCharacter
 	local profession = char.Professions[tradeskillName]
 
@@ -338,72 +232,50 @@ local SkillTypeToColor = {
 }
 
 local function ScanRecipes()
-	--[[ To do: 
-		This function is called after TRADE_SKILL_SHOW. 
-		Very often, it exits because the first line is not a header (which is what we want, since it indicates data is not entirely available)
-		
-		I have identified two situations:
-		1) Right after login, the very first time a profession is opened, the series of events will be 
-			TRADE_SKILL_UPDATE multiple times
-			TRADE_SKILL_SHOW once
-			TRADE_SKILL_UPDATE multiple times
-			
-			Ideally, scan should only happen after the last TRADE_SKILL_UPDATE
-		
-		2) A few seconds after 1), or assuming data is properly cached:
-			TRADE_SKILL_UPDATE multiple times
-			TRADE_SKILL_SHOW once
-			
-			scan should happen right after TRADE_SKILL_SHOW
-			
-		Todo: implement a timer to trigger the scan at the right time
-	--]]
-
-
-	local tradeskillName = GetTradeSkillLine()
+	local _, tradeskillName = C_TradeSkillUI.GetTradeSkillLine()
 	if not tradeskillName or tradeskillName == "UNKNOWN" then return end	-- may happen after a patch, or under extreme lag, so do not save anything to the db !
 
-	local numTradeSkills = GetNumTradeSkills()
-	if not numTradeSkills or numTradeSkills == 0 then return end
-		
-	local skillName, skillType = GetTradeSkillInfo(1)	-- test the first line
-	if skillType ~= "header" and skillType ~= "subheader" then return end				-- skip scan if first line is not a header.
-	
 	local char = addon.ThisCharacter
 	local profession = char.Professions[tradeskillName]
 	local crafts = profession.Crafts
 	wipe(crafts)
-
-	profession.FullLink = select(2, GetSpellLink(tradeskillName))
-
-	local NumCrafts = 0
-	local color, link
-
-	for i = 1, numTradeSkills do
-		skillName, skillType = GetTradeSkillInfo(i)
+	
+	local recipes = C_TradeSkillUI.GetAllRecipeIDs()
+	if not recipes or (#recipes == 0) then return end
+	
+	local categoryCount = 0
+	local categoryID = -1
+	
+	for i, recipeID in pairs(recipes) do
+		local info = C_TradeSkillUI.GetRecipeInfo(recipeID)
+		if info.learned then
+			
+			-- save the category
+			if categoryID ~= info.categoryID then	-- if it's not the same id as the previous recipe ..
+				categoryID = info.categoryID			-- .. set the id ..
 		
-		if skillType == "header" or skillType == "subheader" then
-			crafts[i] = skillName or ""
-		else
-			link = GetTradeSkillRecipeLink(i)
-			local craftInfo = tonumber(link:match("enchant:(%d+)"))		-- this actually extracts the spellID
-			crafts[i] = SkillTypeToColor[skillType] + LShift(craftInfo, 2)
-			NumCrafts = NumCrafts + 1
+				local category = C_TradeSkillUI.GetCategoryInfo(categoryID)
+				
+				-- code is working, but don't save parent at the moment
+				-- if category.parentCategoryID then
+					-- local parentCategory = C_TradeSkillUI.GetCategoryInfo(category.parentCategoryID)
+					-- table.insert(crafts, format("%s|%s", parentCategory.numIndents, parentCategory.name))
+				-- end
+				
+				table.insert(crafts, format("%s|%s", category.numIndents, category.name))
+			end
+		
+			-- save the recipe
+			table.insert(crafts, SkillTypeToColor[info.difficulty] + LShift(recipeID, 2))
 		end
 	end
-	
-	profession.NumCrafts = NumCrafts
 	
 	addon:SendMessage("DATASTORE_RECIPES_SCANNED", char, tradeskillName)
 end
 
 local function ScanTradeSkills()
-	SaveActiveFilters()
-	SaveHeaders()
 	ScanRecipes()
-	ScanCooldowns()
-	RestoreHeaders()
-	RestoreActiveFilters()
+	-- ScanCooldowns()
 	
 	addon.ThisCharacter.lastUpdate = time()
 end
@@ -446,8 +318,6 @@ local function OnPlayerAlive()
 end
 
 local function OnTradeSkillClose()
-	updater:Hide()
-	
 	addon:UnregisterEvent("TRADE_SKILL_CLOSE")
 	addon:UnregisterEvent("TRADE_SKILL_UPDATE")
 	addon.isOpen = nil
@@ -464,14 +334,11 @@ local function OnTradeSkillUpdate()
 end
 
 local function OnTradeSkillShow()
-	if IsTradeSkillLinked() or IsTradeSkillGuild() or IsNPCCrafting() then return end
+	if C_TradeSkillUI.IsTradeSkillLinked() or C_TradeSkillUI.IsTradeSkillGuild() or C_TradeSkillUI.IsNPCCrafting() then return end
 	
 	addon:RegisterEvent("TRADE_SKILL_CLOSE", OnTradeSkillClose)
 	-- we are not interested in this event if the TS pane is not shown.
 	addon:RegisterEvent("TRADE_SKILL_UPDATE", OnTradeSkillUpdate)	
-	
-	-- Show the updater to trigger its OnUpdate
-	updater:Show()							
 	addon.isOpen = true
 end
 
@@ -482,23 +349,6 @@ end
 local function OnArtifactComplete()
 	ScanArcheologyItems()
 end
-
-local lastUpdate = 0
-
-updater:SetScript("OnUpdate", function(self, elapsed)
-	lastUpdate = lastUpdate + elapsed
-
-	if lastUpdate >= 0.5 then
-		local profession = GetTradeSkillLine()
-
-		if profession ~= "UNKNOWN" then	
-			ScanTradeSkills()
-		end
-		self:Hide()
-		lastUpdate = 0
-	end
-end)
-
 
 -- this turns
 --	"Your skill in %s has increased to %d."
@@ -520,7 +370,7 @@ skillUpMsg = gsub(skillUpMsg, arg2pattern, "(%%d+)")
 local function OnChatMsgSkill(self, msg)
 	if msg and addon.isOpen then	-- point gained while ts window is open ? rescan
 		local skill = msg:match(skillUpMsg)
-		if skill and skill == GetTradeSkillLine() then	-- if we gained a skill point in the currently opened profession pane, rescan
+		if skill and skill == C_TradeSkillUI.GetTradeSkillLine() then	-- if we gained a skill point in the currently opened profession pane, rescan
 			ScanTradeSkills()
 		end
 	end
@@ -547,6 +397,10 @@ local function OnChatMsgSystem(self, msg)
 			-- ScanProfessionLinks()	
 		end
 	end
+end
+
+local function OnDataSourceChanged(self)
+	ScanTradeSkills()
 end
 
 
@@ -591,7 +445,8 @@ end
 local function _GetCraftLineInfo(profession, index)
 	local craft = profession.Crafts[index]
 	if type(craft) == "string" then	-- headers are stored as strings
-		return true, nil, craft
+		local indent, header = strsplit("|", craft)
+		return true, nil, header, indent
 	end
 	
 	local color = bAnd(craft, 3)	-- first 2 bits = color
@@ -787,6 +642,7 @@ function addon:OnEnable()
 	addon:RegisterEvent("TRADE_SKILL_SHOW", OnTradeSkillShow)
 	addon:RegisterEvent("CHAT_MSG_SKILL", OnChatMsgSkill)
 	addon:RegisterEvent("CHAT_MSG_SYSTEM", OnChatMsgSystem)
+	addon:RegisterEvent("TRADE_SKILL_DATA_SOURCE_CHANGED", OnDataSourceChanged)
 		
 	local _, _, arch = GetProfessions()
 
@@ -806,6 +662,7 @@ function addon:OnDisable()
 	addon:UnregisterEvent("TRADE_SKILL_SHOW")
 	addon:UnregisterEvent("CHAT_MSG_SKILL")
 	addon:UnregisterEvent("CHAT_MSG_SYSTEM")
+	addon:UnregisterEvent("TRADE_SKILL_DATA_SOURCE_CHANGED")
 end
 
 function addon:IsTradeSkillWindowOpen()
@@ -814,6 +671,7 @@ function addon:IsTradeSkillWindowOpen()
 end
 
 -- *** Hooks ***
-hooksecurefunc("DoTradeSkill", function(index, repeatCount, ...)
-	updateCooldowns = true
-end)
+-- Disabled 7.0
+-- hooksecurefunc("DoTradeSkill", function(index, repeatCount, ...)
+	-- updateCooldowns = true
+-- end)

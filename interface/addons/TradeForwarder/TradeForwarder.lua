@@ -2,7 +2,7 @@
 local L = TFW_LOCALE
 L["LFG Channel"] = "Trade"
 L["UPDATE"] = "|cffffff00%s has a new version (v%d, yours is v%d) of Warbaby's Trade Forwarder. Get it from http://wow.curse.com/downloads/wow-addons/details/tradeforwarder.aspx|r"
-L["BIG_UPDATE"] = "Trade Forwarder: This addon was broken in 6.0.2 by Blizzard's change. Since the addon depends on other players to also have the most recent version, please encourage others to update! Get it from http://wow.curse.com/downloads/wow-addons/details/tradeforwarder.aspx|r"
+L["BIG_UPDATE"] = "Trade Forwarder legion update"
 L["SHOW"] = "|cff00ff00Showing Trade Forwarder Messages|r"
 L["NOTSHOW"] = "|cffffff00Hiding Trade Forwarder Messages|r"
 L["OWNER_IGNORE"] = "NOTICE: Current forwarder %s is ignored. You will not receive TFW messages for a while."
@@ -46,7 +46,7 @@ if LFW_LOCALE or U1_FRAME_NAME then
 end
 
 local LFW_DEBUG_ENABLE = false;
-TFW_VERSION = 2222;
+TFW_VERSION = 2225;
 local LFW_CHANNEL_JOIN_DELAY=0;  --delayed join, for keep the ordinary channel indexes.
 local LFW_SENT_CACHE_MAX = 3;  --max forwarded msg, before they are shown.
 local LFW_MSG_IDX_MAX = 999;  --try to change forwarder after sending LFW_MSG_IDX_MAX messages.

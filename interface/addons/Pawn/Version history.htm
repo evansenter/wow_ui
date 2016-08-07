@@ -157,6 +157,287 @@ about it.</p>
 </ul>
 <h2>Release history</h2>
 <p>For recent version history, see the <a href="Readme.htm">Pawn readme</a>.</p>
+<h3>Version 1.9.31</h3>
+<ul>
+	<li>Partial gem support has been restored on the Legion beta.&nbsp; The new 
+	Legion gems will be used in all calculations regardless of the level of the 
+	item.&nbsp; It'll probably stay this way until close to the Legion release 
+	date.</li>
+</ul>
+<h3>Version 1.9.30</h3>
+<ul>
+	<li>Due to a problem with Pawn's gem calculations interacting poorly with 
+	the quest turn-in window (yes, you read that right) on the Legion beta, gem 
+	calculations on the Legion beta are temporarily disabled.<ul>
+		<li>This doesn't affect characters on the live servers.</li>
+		<li>This will cause items with sockets on the Legion beta to be valued 
+		the same as the same item without sockets.</li>
+	</ul>
+	</li>
+</ul>
+<h3>Version 1.9.29</h3>
+<ul>
+	<li>Fixed the "Change color" button on the Scales tab on the Legion beta.&nbsp; 
+	(Thanks Eduard from Curse! :)</li>
+</ul>
+<h3>Version 1.9.28</h3>
+<ul>
+	<li>Added support for the new Legion gems.&nbsp; (But you can't see them on 
+	the live realms.)</li>
+	<li>Warglaives will no longer show up as usable for any class except demon 
+	hunter.</li>
+	<li>More minor tweaks to the basic starting scale for demon hunters.</li>
+</ul>
+<h3>Version 1.9.27</h3>
+<ul>
+	<li>A few quick tweaks to make Pawn work better on the Legion beta realms.<ul>
+		<li>There's plenty of stuff yet to do, like removing obsolete stats, and 
+		adding support for artifact weapons—that will come soon.</li>
+	</ul>
+	</li>
+	<li>Added a basic starting scale for demon hunters.</li>
+</ul>
+<h3>Version 1.9.26</h3>
+<ul>
+	<li>Updated Spanish and Simplified Chinese translations.</li>
+</ul>
+<h3>Version 1.9.25</h3>
+<ul>
+	<li>Added support for a few Baleful items that weren't being recognized 
+	previously.&nbsp; (If you're really curious, bonus ID 653.)</li>
+</ul>
+<h3>Version 1.9.24</h3>
+<ul>
+	<li>Items in the Heirloom collection window will now get Pawn annotations on 
+	their tooltips.</li>
+	<li>Fixed a bug introduced in 1.9.23 where, when hovering over the Pawn 
+	button on your character sheet while the "show scale values and upgrade %" 
+	option was chosen, the total values for all equipped items were not being 
+	displayed properly.</li>
+</ul>
+<h3>Version 1.9.23</h3>
+<ul>
+	<li>When Pawn shows you an upgrade percentage for an item that requires 
+	Valor and/or an Empowered Apexis Fragment to achieve, it will now show up as 
+	"+X% upgrade potential" instead of merely "+X% upgrade".&nbsp; Hopefully 
+	this will make it a bit clearer how an ilvl 650 baleful item can be a 
+	significant upgrade over an ilvl 670 raid item.<ul>
+		<li>This change will only affect English at first, until translations 
+		are available.</li>
+	</ul>
+	</li>
+</ul>
+<h3>Version 1.9.22</h3>
+<ul>
+	<li>For Baleful items, Pawn will now use the Empowered version of the item 
+	(the one that you get with an Empowered Apexis Fragment that's level 695 
+	before valor upgrades) when calculating the base value of an item.</li>
+	<li>Added an option to make Pawn no longer assume that you'll use Valor and 
+	Empowered Apexis Fragments to upgrade your gear when comparing different 
+	items.</li>
+</ul>
+<h3>Version 1.9.21</h3>
+<ul>
+	<li>For items upgradeable with Valor, Pawn will now use the fully-upgraded 
+	version of the item when calculating the base value of an item.&nbsp; (The 
+	current value of the item, which is not shown on tooltips by default, will 
+	still use the current upgrade level.)&nbsp; This means that when comparing 
+	(for example) a level 630 item that isn't upgradeable to a level 650 item 
+	that is, the upgrade % shown will be about 1.5x what it was previously.&nbsp; 
+	Upgrade percentages between two upgradeable (or two non-upgradeable) items 
+	will remain roughly the same as before.</li>
+	<li>Fixed a problem where tooltips for craftable items did not get Pawn 
+	annotations (values and upgrade %).</li>
+</ul>
+<h3>Version 1.9.20</h3>
+<ul>
+	<li>Works around a WoW bug where quest reward items were not getting Pawn 
+	information on their tooltips most of the time.&nbsp; (Special thanks to 
+	Phanx for helping to track down more patch 6.2 compatibility problems!)</li>
+</ul>
+<h3>Version 1.9.19</h3>
+<ul>
+	<li>Pawn now includes data for the Immaculate Taladite epic gems, and will 
+	suggest them for items level 695 and up (Mythic Blackrock Foundry / Heroic 
+	Hellfire Citadel).</li>
+	<li>Pawn now knows about Khadgar's legendary rings.</li>
+	<li>Preparation for translation into Korean.</li>
+</ul>
+<h3>Version 1.9.18</h3>
+<ul>
+	<li>Various diagnostic changes to help me identify the compatibility 
+	problems with patch 6.2, and some attempted fixes.</li>
+</ul>
+<h3>Version 1.9.17</h3>
+<ul>
+	<li>A few updates to make Pawn work better on WoW patch 6.2.</li>
+</ul>
+<h3>Version 1.9.16</h3>
+<ul>
+	<li>The "Special effects were not included in the value" message that you'd 
+	see at the bottoms of tooltips for trinkets and enchanted weapons has been 
+	removed.</li>
+	<li>The (?) icon used to indicate special effects on items has been replaced 
+	with a small orange diamond (like in Diablo III).</li>
+	<li>Support for crystals of fear and sha-touched sockets, cogwheels and 
+	cogwheel sockets, and assigning a fixed value to the effect portion of a 
+	meta gem (2% chance to restore mana, etc.) have all been removed, as those 
+	features are no longer relevant in any current content.</li>
+</ul>
+<h3>Version 1.9.15</h3>
+<ul>
+	<li>Pawn will now work with AtlasLoot again.</li>
+	<li>Included some improvements to the Portuguese translation.</li>
+</ul>
+<h3>Version 1.9.14</h3>
+<ul>
+	<li>Fixed a bug where sometimes Pawn would save over custom key bindings set 
+	up by certain addons, such as ElvUI.</li>
+	<li>Included updates and improvements to the Italian translation.</li>
+</ul>
+<h3>Version 1.9.13</h3>
+<ul>
+	<li>Included a variety of updates and improvements to the French 
+	translation.</li>
+</ul>
+<h3>Version 1.9.12</h3>
+<ul>
+	<li>Included the correct version of the French translation (with the changes 
+	from 1.9.10, which were accidentally reverted in the 1.9.11 release).</li>
+</ul>
+<h3>Version 1.9.11</h3>
+<ul>
+	<li>Significant changes to the built-in Wowhead scales.&nbsp; (Note that 
+	this iteration doesn't include spell power, attack power, or weapon DPS.&nbsp; 
+	This is the design of the Wowhead scales, not a problem with Pawn.)</li>
+	<li>Lots of further improvements to the Spanish translation.</li>
+</ul>
+<h3>Version 1.9.10</h3>
+<ul>
+	<li>Fixed a problem where weapon speed was not read properly in Spanish.</li>
+	<li>Made a few changes to try to make the French version of Pawn understand 
+	large numbers (1,000 or greater) better.</li>
+</ul>
+<h3>Version 1.9.9</h3>
+<ul>
+	<li>Given their exorbitant cost, Pawn will no longer suggest Greater 
+	Taladite gems on gear lower than item level 685 (mythic Highmaul).</li>
+	<li>Fixed the problem where some new Draenor wands caused an error to appear 
+	in the chat log and did not have their DPS calculated correctly.</li>
+	<li>Attempted to fix a problem in Spanish where numbers greater than 1,000 
+	were not read properly.</li>
+</ul>
+<h3>Version 1.9.8</h3>
+<ul>
+	<li>New scales from Wowhead have been integrated into Pawn, and the starter 
+	scales that Pawn previously included have been removed.</li>
+	<li>Includes a new Spanish translation, which is still a work-in-progress.</li>
+	<li>Fixed a bug where the socketing advisor would always unhelpfully suggest 
+	that you put a gem "of any color" into a prismatic socket.</li>
+	<li>Fixed a bug where It was difficult or impossible to change the color of 
+	a scale, depending on where the Pawn window is situated.&nbsp; (It was 
+	difficult if the scale list happened to be behind the color window.)</li>
+	<li>Fixed a bug where if you opened your chest of Garrison Resources and the last item you won 
+	(it showed up in a "you won!" popup) was an upgrade, the Garrison Resources 
+	would also show up as an upgrade.&nbsp; (Hey, maybe you got some Complicated 
+	Wood instead of Simple Wood.)</li>
+	<li>Removed the code that dealt with Wrathion's Breath of the Black Prince 
+	item, which added sockets to certain weapons, but is no longer obtainable by 
+	new players and not relevant to current content.</li>
+</ul>
+<h3>Version 1.9.7</h3>
+<ul>
+	<li>Strength, Agility, Intellect, and Stamina can't be marked as "unusable" 
+	in custom scales.&nbsp; (Since multiple primary stats are on most armor 
+	pieces now, marking those as unusable leads to some confusing and unexpected 
+	results.)</li>
+	<li>Made a couple small improvements to the French, German, and Traditional 
+	Chinese translations.</li>
+</ul>
+<h3>Version 1.9.6</h3>
+<ul>
+	<li>Pawn will now no longer suggest gems for items below level 630 (level 
+	100 heroic dungeon).&nbsp; (This change is particularly noticeable for 
+	helms, which had high-value meta sockets at level 90, but not at level 100.)</li>
+	<li>Improved the German and Simplified Chinese translations.</li>
+</ul>
+<h3>Version 1.9.5</h3>
+<ul>
+	<li>Additional changes to try to prevent the "UseSpecialQuestItem" error 
+	from occurring when clicking items in the objectives list.</li>
+	<li>More improvements to the Simplified Chinese and Traditional Chinese 
+	translations.</li>
+</ul>
+<h3>Version 1.9.4</h3>
+<ul>
+	<li>Dodge and Parry on low-level items will now be treated as if they were 
+	Bonus Armor, at a 2:1 ratio.&nbsp; (40 Parry on an item will be treated as 
+	20 Bonus Armor.)</li>
+	<li>Pawn will now once again work with AtlasLoot even when the "Use 
+	GameTooltip" AtlasLoot setting is off.&nbsp; (Release versions only, not the 
+	latest AtlasLoot beta.)</li>
+	<li>The warrior tank starter scale now properly has a value for bonus armor.</li>
+	<li>Included lots of improvements to the Traditional Chinese translation.</li>
+</ul>
+<h3>Version 1.9.3</h3>
+<ul>
+	<li>Changed the way that Pawn uses item tooltips, in the hopes that it will 
+	prevent issues where the game blocks certain buttons and actions due to 
+	"taint."</li>
+	<li>Fixed a bug where a few settings wouldn't be saved when logging out, 
+	including Pawn's list of your best items used for determining upgrades.</li>
+	<li>Included new French translations.</li>
+</ul>
+<h3>Version 1.9.2</h3>
+<ul>
+	<li>Continued changes to the starter scales and translations.</li>
+</ul>
+<h3>Version 1.9.1</h3>
+<ul>
+	<li>Bonus armor is now listed as a separate stat from base armor and can be 
+	given a value independently.</li>
+	<li>Significantly increased the value of armor and bonus armor in the tank starter 
+	scales.</li>
+	<li>Fixed a harmless error where a message about #(Item1.UnknownLines) could appear 
+	in the chat log when using the Compare tab.</li>
+	<li>Fixed a harmless error where a message about being unable to parse the 
+	item link could appear in the chat log when hovering over a caged battle 
+	pet.</li>
+</ul>
+<h3>Version 1.9</h3>
+<ul>
+	<li>Updated for WoW 6.0 and Warlords of Draenor.&nbsp; Many features have 
+	changed in some way as a result of item changes in patch 6.0.</li>
+	<li>I updated the visuals for the Pawn UI to be a little more warlordy.</li>
+	<li>A new set of starter scales have been added for all classes and specs.&nbsp; 
+	You can use these scales as you would the old Wowhead scales, and you can 
+	also customize them to your heart's content.</li>
+	<li>The Wowhead scales have been disabled since they haven't been updated 
+	for patch 6.0 and would do more harm than good.</li>
+	<li>The values of Pawn's default scale have changed to be a more appropriate 
+	starting point for WoW 6.0.</li>
+	<li>New stats are recognized and can be assigned values on the Values tab: 
+	Bonus Armor, Multistrike, Versatility, Movement Speed, Leech, Avoidance, Indestructible.</li>
+	<li>Obsolete stats (hit, etc.) are removed from your scales upon logging in, 
+	and have been removed from the UI.</li>
+	<li>All of the new Taladite gems in Warlords of Draenor are now in Pawn's 
+	database.</li>
+	<li>The changes to stats on pre-Draenor gems in Pawn's database have been 
+	taken into account for purposes of gem recommendations.&nbsp; (I anticipate 
+	that I'll need to do another update of gem stats before the expansion hits.)</li>
+	<li>A new option has been added, on by default: "Ignore sockets on low-level 
+	items."&nbsp; When this option is enabled, Pawn will ignore sockets when 
+	calculating values of low-level items (currently, any item below level 463), 
+	so they won't have inflated values when Pawn determines upgrades.</li>
+	<li>Pawn's calculations for item values no longer take reforging potential 
+	into account since that feature is gone from the game.</li>
+	<li>All code for Pawn's Reforge Advisor feature has been removed.</li>
+	<li>Changed the way that information about your best items for purposes of 
+	determining upgrades is stored and processed.&nbsp; (I now use item links 
+	instead of item IDs, since in Warlords of Draenor, a mythic version of one 
+	item and the raid finder version of the same item might have the same ID but 
+	a different bonus suffix.)</li>
+</ul>
 <h3>Version 1.8.11</h3>
 <ul>
 	<li>Made a tweak to make Pawn's Quest Advisor work better with ElvUI.</li>

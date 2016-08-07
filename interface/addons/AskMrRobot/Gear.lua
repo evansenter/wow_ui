@@ -14,7 +14,7 @@ local function countItemDifferences(item1, item2)
 		return 1000
     end
     
-    -- different upgrade levels of the same item (only for older gear, player has control over upgrade level)
+    -- different upgrade levels of the same item
     if item1.upgradeId ~= item2.upgradeId then
         return 100
     end
@@ -138,7 +138,7 @@ local function renderGear(spec, container)
 		icon:SetHeight(48)
 		
 		local iconSpec
-		if player.SubSpecs[spec] then
+		if player.SubSpecs and player.SubSpecs[spec] then
 			iconSpec = player.SubSpecs[spec]
 		else
 			iconSpec = player.Specs[spec]
@@ -149,7 +149,7 @@ local function renderGear(spec, container)
 		panelGear:AddChild(icon)
 		
 		local btnEquip = AceGUI:Create("AmrUiButton")
-		btnEquip:SetText(L.GearButtonEquip(spec))
+		btnEquip:SetText(L.GearButtonEquip(L.SpecsShort[player.Specs[spec]]))
 		btnEquip:SetBackgroundColor(Amr.Colors.Green)
 		btnEquip:SetFont(Amr.CreateFont("Regular", 14, Amr.Colors.White))
 		btnEquip:SetWidth(300)
@@ -160,17 +160,6 @@ local function renderGear(spec, container)
 			Amr:EquipGearSet(spec)			
 		end)
 		panelGear:AddChild(btnEquip)
-		
-		--[[local btnShop = AceGUI:Create("AmrUiButton")
-		btnShop:SetText(L.GearButtonShop)
-		btnShop:SetBackgroundColor(Amr.Colors.Blue)
-		btnShop:SetFont(Amr.CreateFont("Regular", 14, Amr.Colors.White))
-		btnShop:SetWidth(300)
-		btnShop:SetHeight(26)
-		btnShop:SetPoint("LEFT", btnEquip.frame, "RIGHT", 75, 0)
-		btnShop:SetPoint("RIGHT", panelMods.content, "RIGHT", -20, 0)
-		btnShop:SetCallback("OnClick", function(widget) Amr:ShowShopWindow() end)
-		panelMods:AddChild(btnShop)]]
 		
 		-- each physical item can only be used once, this tracks ones we have already used
 		local usedItems = {}
@@ -371,30 +360,25 @@ function Amr:RenderTabGear(container)
 	lbl2:SetPoint("TOP", lbl.frame, "BOTTOM", 10, -5)
 	container:AddChild(lbl2)
 	
-	--[[
-	local btnClean = AceGUI:Create("AmrUiButton")
-	btnClean:SetText(L.GearButtonCleanText)
-	btnClean:SetBackgroundColor(Amr.Colors.Orange)
-	btnClean:SetFont(Amr.CreateFont("Bold", 16, Amr.Colors.White))
-	btnClean:SetWidth(120)
-	btnClean:SetHeight(26)
-	btnClean:SetPoint("BOTTOMLEFT", container.content, "BOTTOMLEFT", 0, 5)
-	btnClean:SetCallback("OnClick", function(widget) Amr:CleanBags() end)
-	container:AddChild(btnClean)	
-	]]
-	
 	local t =  AceGUI:Create("AmrUiTabGroup")
 	t:SetLayout("None")
-	t:SetTabs({
-		{text=L.GearTabPrimary, value="1", style="bold"}, 
-		{text=L.GearTabSecondary, value="2", style="bold"}
-	})
+	
+	local tabz = {}
+	for pos = 1, 4 do
+        local specId = GetSpecializationInfo(pos)
+        if specId then
+            table.insert(tabz, { text = L.SpecsShort[Amr.SpecIds[specId]], value = pos .. "", style = "bold" })
+        end
+	end
+	
+	t:SetTabs(tabz)
 	t:SetCallback("OnGroupSelected", onGearTabSelected)
 	t:SetPoint("TOPLEFT", container.content, "TOPLEFT", 144, -30)
 	t:SetPoint("BOTTOMRIGHT", container.content, "BOTTOMRIGHT")
 	container:AddChild(t)	
 	_gearTabs = t;
 	
+	--[[
 	local btnShop = AceGUI:Create("AmrUiButton")
 	btnShop:SetText(L.GearButtonShop)
 	btnShop:SetBackgroundColor(Amr.Colors.Blue)
@@ -404,10 +388,10 @@ function Amr:RenderTabGear(container)
 	btnShop:SetPoint("TOPRIGHT", container.content, "TOPRIGHT", -20, -25)
 	btnShop:SetCallback("OnClick", function(widget) Amr:ShowShopWindow() end)
 	container:AddChild(btnShop)
-	
+	]]
 	
 	if not _activeTab then
-		_activeTab = tostring(GetActiveSpecGroup())
+		_activeTab = tostring(GetSpecialization())
 	end
 	
 	t:SelectTab(_activeTab)
@@ -624,8 +608,20 @@ local function onItemUnlocked(bagId, slotId)
 			if IsInventoryItemLocked(_pendingEquip.slot) then return end
 		end
 		
-		-- move on to the next item, this item is done
-		_pendingEquip.doneSlots[_pendingEquip.destSlot] = true
+		-- move on to the next item, this item is done or could not be swapped
+		
+		local item = _pendingEquip.itemsToEquip[_pendingEquip.destSlot]
+		local itemLink = GetInventoryItemLink("player", _pendingEquip.destSlot)
+		if itemLink then
+			local invItem = Amr.ParseItemLink(itemLink)
+			if invItem ~= nil then	
+				local diff = countItemDifferences(item, invItem)
+				if diff == 0 then
+					_pendingEquip.doneSlots[_pendingEquip.destSlot] = true
+				end
+			end
+		end
+		
 		_pendingEquip.itemsToEquip[_pendingEquip.destSlot] = nil
 		_pendingEquip.destSlot = nil
 		_pendingEquip.bag = nil
@@ -707,8 +703,9 @@ local function startEquipGearSet(spec)
 end
 
 local function onActiveTalentGroupChanged()
+
 	local auto = Amr.db.profile.options.autoGear
-	local currentSpec = GetActiveSpecGroup()
+	local currentSpec = GetSpecialization()
 	
 	if currentSpec == _waitingForSpec or auto then
 		-- spec is what we want, now equip the gear
@@ -718,21 +715,19 @@ local function onActiveTalentGroupChanged()
 	_waitingForSpec = 0
 end
 
--- activate the specified spec and then equip the saved gear set for either primary (1) or secondary (2) spec
+-- activate the specified spec and then equip the saved gear set
 function Amr:EquipGearSet(spec)
 	
-	-- if no argument, then toggle spec
+	-- if no argument, then cycle spec
 	if not spec then
-		spec = GetActiveSpecGroup() == 1 and 2 or 1
+		spec = GetSpecialization() + 1
 	end
-	
+
 	-- allow some flexibility in the arguments
-	if spec == "primary" or spec == "Primary" then spec = 1 end
-	if spec == "secondary" or spec == "Secondary" then spec = 2 end
-	if spec == "1" or spec == "2" then spec = tonumber(spec) end
-	
-	-- only spec 1 or 2 are valid
-	if spec ~= 1 and spec ~= 2 then return end
+	if spec == "1" or spec == "2" or spec == "3" or spec == "4" then spec = tonumber(spec) end
+
+	local specId = GetSpecializationInfo(spec)
+	if not specId then spec = 1 end
 	
 	if UnitAffectingCombat("player") then
 		Amr:Print(L.GearEquipErrorCombat)
@@ -741,9 +736,9 @@ function Amr:EquipGearSet(spec)
 	
 	_waitingForSpec = spec
 	
-	local currentSpec = GetActiveSpecGroup()
+	local currentSpec = GetSpecialization()
 	if currentSpec ~= spec then
-		SetActiveSpecGroup(spec)
+		SetSpecialization(spec)
 	else
 		onActiveTalentGroupChanged()
 	end
@@ -754,9 +749,17 @@ function Amr:CleanBags()
 	-- TODO: implement
 end
 
-function Amr:InitializeGear()
-	Amr:AddEventHandler("ACTIVE_TALENT_GROUP_CHANGED", onActiveTalentGroupChanged)
+--[[
+local function testfunc(message)
+	print(strsub(message, 13))
+end
+]]
 
+function Amr:InitializeGear()
+	Amr:AddEventHandler("PLAYER_SPECIALIZATION_CHANGED", onActiveTalentGroupChanged)
+
+	--Amr:AddEventHandler("CHAT_MSG_CHANNEL", testfunc)
+	
 	Amr:AddEventHandler("UNIT_INVENTORY_CHANGED", function(unitID)
 		if unitID and unitID ~= "player" then return end
 		Amr:RefreshGearTab()

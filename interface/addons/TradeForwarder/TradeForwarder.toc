@@ -1,4 +1,4 @@
-﻿## Interface: 60200
+## Interface: 70000
 ## LoadOnDemand: 0
 ## Title: Trade Forwarder
 ## Title-zhCN: |cff880303[网易有爱]|r 交易频道转发

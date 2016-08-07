@@ -190,15 +190,18 @@ local function ScanQuests()
 					end
 				end
 			end
-
-			if GetQuestLogRewardSpell() then		-- apparently, there is only one spell as reward
-				local _, _, isTradeskillSpell, isSpellLearned = GetQuestLogRewardSpell()
-				if isTradeskillSpell or isSpellLearned then
-					local link = GetQuestLogSpellLink()
-					if link then
-						local id = tonumber(link:match("spell:(%d+)"))
-						if id then
-							table.insert(RewardsCache, REWARD_TYPE_SPELL .. "|"..id)
+			
+			num = GetNumQuestLogRewardSpells()
+			if num > 0 then
+				for i = 1, num do
+					local _, _, isTradeskillSpell, isSpellLearned = GetQuestLogRewardSpell(i)
+					if isTradeskillSpell or isSpellLearned then
+						local link = GetQuestLogSpellLink(i)
+						if link then
+							local id = tonumber(link:match("spell:(%d+)"))
+							if id then
+								table.insert(RewardsCache, REWARD_TYPE_SPELL .. "|"..id)
+							end
 						end
 					end
 				end
@@ -214,6 +217,8 @@ local function ScanQuests()
 	SelectQuestLogEntry(currentSelection)		-- restore the selection to match the cursor, must be properly set if a user abandons a quest
 
 	addon.ThisCharacter.lastUpdate = time()
+	
+	addon:SendMessage("DATASTORE_QUESTLOG_SCANNED", char)
 end
 
 local queryVerbose
@@ -276,6 +281,8 @@ end
 
 local function _GetQuestLogInfo(character, index)
 	local quest = character.Quests[index]
+	if not quest then return end
+	
 	local link = character.QuestLinks[index]
 	local isHeader, groupSize, money, isComplete = strsplit("|", quest)
 

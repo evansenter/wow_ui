@@ -237,7 +237,7 @@ local function Constructor()
 	
 	local line = border:CreateTexture(nil, "ARTWORK")
 	line:Hide()
-	line:SetTexture(1, 1, 1, 1)
+	line:SetColorTexture(1, 1, 1, 1)
 	line:SetHeight(4)
 
 	local content = CreateFrame("Frame", nil, border)

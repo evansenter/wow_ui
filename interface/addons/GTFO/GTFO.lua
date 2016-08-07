@@ -876,6 +876,41 @@ Change Log:
 		- Updated Russian localization - Thanks user_kh
 		- Updated Simplified Chinese localization - Thanks Wowuicn, lsjyzjl, and Mini_Dragon
 		- Updated Spanish localization - Thanks Pablous
+	v4.37.7
+		- Added WoD spells for Hellfire Citadel
+		- Added WoD spells for Draenor (world)		
+	v4.38
+		- Fixed UI bug with some configuration options saving when hitting cancel
+		- Added support for Legion
+		- Added Legion spells for Mardum
+		- Added Legion spells for Vault of the Wardens
+		- Added Legion spells for The Broken Shore
+		- Added Legion spells for The Violet Hold
+		- Added Legion spells for Darkheart Thicket
+		- Added Legion spells for Vault of the Wardens
+		- Added Legion spells for Eye of Azshara
+		- Added Legion spells for Neltharion's Lair
+	v4.38.1
+		- Added Wrath spells for Dalaran
+		- Added Legion spells for Dalaran
+		- Added Legion spells for The Broken Shore
+		- Added Legion spells for The Broken Isles (world)
+		- Added Legion spells for The Nexus
+		- Fixed Legion spells for Eye of Azshara
+		- Added Legion spells for Neltharion's Lair
+	v4.38.2
+		- Added WoD spells for Draenor (world)		
+		- Added Pandaria spells for Brawler's Guild
+		- Fixed and added Legion spells for The Broken Isles (world)
+		- Fixed Legion spells for Vault of the Wardens
+		- Added Legion spells for Mardum
+		- Added Legion spells for Darkheart Thicket
+		- Added Legion spells for Halls of Valor
+		- Added Legion spells for The Violet Hold
+		- Added Legion spells for The Emerald Dream
+		- Added Legion spells for the Demon Invasion (Legion Event)
+	v4.38.3
+		- Updated for patch 7.0.3
 		
 		
 ]]--
@@ -894,8 +929,8 @@ GTFO = {
 		IgnoreOptions = { };
 		TrivialDamagePercent = 2; -- Minimum % of HP lost required for an alert to be trivial
 	};
-	Version = "4.37.6"; -- Version number (text format)
-	VersionNumber = 43706; -- Numeric version number for checking out-of-date clients
+	Version = "4.38.3"; -- Version number (text format)
+	VersionNumber = 43803; -- Numeric version number for checking out-of-date clients
 	DataLogging = nil; -- Indicate whether or not the addon needs to run the datalogging function (for hooking)
 	DataCode = "4"; -- Saved Variable versioning, change this value to force a reset to default
 	CanTank = nil; -- The active character is capable of tanking
@@ -942,6 +977,7 @@ GTFO = {
 		{ Code = "Music", Name = _G.MUSIC_VOLUME, CVar = "Sound_EnableMusic" },
 		{ Code = "Dialog", Name = _G.DIALOG_VOLUME },
 	};
+	Scans = { };
 };
 
 GTFOData = {};
@@ -1234,8 +1270,10 @@ function GTFO_OnEvent(self, event, ...)
 			if (GTFO.Settings.ScanMode and not GTFO.IgnoreScan[SpellID]) then
 				if (vehicle) then
 					GTFO_ScanPrint("V: "..SpellType.." - "..SpellID.." - "..GetSpellLink(SpellID).." - "..SpellSourceName.." ("..GTFO_GetMobId(sourceGUID)..") >"..tostring(destName));
+					GTFO_SpellScan(SpellID, SpellSourceName);
 				elseif (SpellType~="SPELL_ENERGIZE" or (SpellType=="SPELL_ENERGIZE" and sourceGUID ~= UnitGUID("player"))) then
 					GTFO_ScanPrint(SpellType.." - "..SpellID.." - "..GetSpellLink(SpellID).." - "..SpellSourceName.." ("..GTFO_GetMobId(sourceGUID)..") >"..tostring(destName).." for "..tostring(misc4));
+					GTFO_SpellScan(SpellID, SpellSourceName, tostring(misc4));
 				end
 			end
 			if (GTFO.SpellID[SpellID]) then
@@ -1491,7 +1529,8 @@ function GTFO_OnEvent(self, event, ...)
 		return;
 	end
 	if (event == "ACTIVE_TALENT_GROUP_CHANGED" or event == "PLAYER_TALENT_UPDATE") then
-		--GTFO_DebugPrint("Spec changed, check caster mode -- "..event);
+		--GTFO_DebugPrint("Spec changed, check tank/caster mode -- "..event);
+		GTFO.TankMode = GTFO_CheckTankMode();
 		GTFO.CasterMode = GTFO_CheckCasterMode();
 		return;
 	end
@@ -1561,6 +1600,10 @@ function GTFO_Command(arg1)
 		GTFO_Command_Test(4);
 	elseif (Command == "NOVERSION") then
 		GTFO_Command_VersionReminder();
+	elseif (Command == "DATA") then
+		GTFO_Command_Data();
+	elseif (Command == "CLEAR") then
+		GTFO_Command_ClearData();
 	elseif (Command == "HELP" or Command == "") then
 		GTFO_Command_Help();
 	else
@@ -1852,6 +1895,8 @@ function GTFO_RenderOptions()
 	GTFOSpellTooltip:ClearLines();
 
 	-- Confirmation buttons Logic
+	GTFO.Settings.OriginalVolume = GTFO.Settings.Volume;
+	GTFO.Settings.OriginalTrivialDamagePercent = GTFO.Settings.TrivialDamagePercent;
 
 	ConfigurationPanel.okay = 
 		function (self)
@@ -1880,8 +1925,8 @@ function GTFO_RenderOptions()
 		end
 	ConfigurationPanel.cancel = 
 		function (self)
-			VolumeSlider:SetValue(GTFO.Settings.Volume);
-			TrivialDamageSlider:SetValue(GTFO.Settings.TrivialDamagePercent);
+			VolumeSlider:SetValue(GTFO.Settings.OriginalVolume);
+			TrivialDamageSlider:SetValue(GTFO.Settings.OriginalTrivialDamagePercent);
 			--UIDropDownMenu_Initialize(GTFO_SoundChannelDropdown, GTFO_SoundChannelDropdownInitialize);
 			--UIDropDownMenu_SetSelectedValue(GTFO_SoundChannelDropdown, GTFO.Settings.SoundChannel);
 			GTFO_SaveSettings();
@@ -2162,7 +2207,8 @@ function GTFO_Option_SetVolume()
 	if (not GTFO.UIRendered) then
 		return;
 	end
-	GTFO.Settings.Volume = getglobal("GTFO_VolumeSlider"):GetValue() * 1;
+	GTFO.Settings.Volume = math.floor(getglobal("GTFO_VolumeSlider"):GetValue());
+	getglobal("GTFO_VolumeSlider"):SetValue(GTFO.Settings.Volume);
 	GTFO_GetSounds();
 	GTFO_Option_SetVolumeText(GTFO.Settings.Volume)
 end
@@ -2249,10 +2295,10 @@ function GTFO_CheckTankMode()
 					--GTFO_DebugPrint("Defensive stance found - tank mode activated");
 					return true;
 				end
-			elseif (class == "MONK") then
+			elseif (class == "MONK" or class == "DEMONHUNTER") then
 				local spec = GetSpecialization();
-				if (spec and GetSpecializationRole(spec) == "TANK" and stance == 1) then
-					--GTFO_DebugPrint("Ox stance found - tank mode activated");
+				if (spec and GetSpecializationRole(spec) == "TANK") then
+					--GTFO_DebugPrint("Tank spec found - tank mode activated");
 					return true;
 				end
 			else
@@ -2316,7 +2362,7 @@ function GTFO_IsTank(target)
 			if (GTFO_HasBuff(target, 48263)) then
 				return true;
 			end
-		elseif (class == "WARRIOR" or class == "MONK") then
+		elseif (class == "WARRIOR" or class == "MONK" or class == "DEMONHUNTER") then
 			-- No definitive way to determine...take a guess.
 			if (UnitGroupRolesAssigned(target) == "TANK" or GetPartyAssignment("MAINTANK", target)) then
 				return true;
@@ -2328,7 +2374,7 @@ end
 
 function GTFO_CanTankCheck(target)
 	local _, class = UnitClass(target);
-	if (class == "PALADIN" or class == "DRUID" or class == "DEATHKNIGHT" or class == "WARRIOR" or class == "MONK") then
+	if (class == "PALADIN" or class == "DRUID" or class == "DEATHKNIGHT" or class == "WARRIOR" or class == "MONK" or class == "DEMONHUNTER") then
 		----GTFO_DebugPrint("Possible tank detected for "..target);
 		return true;
 	else
@@ -2415,6 +2461,9 @@ function GTFO_SaveSettings()
 			GTFOData.IgnoreOptions[key] = GTFO.Settings.IgnoreOptions[key];
 		end
 	end
+
+	GTFO.Settings.OriginalVolume = GTFO.Settings.Volume;
+	GTFO.Settings.OriginalTrivialDamagePercent = GTFO.Settings.TrivialDamagePercent;
 	
 
 	if (GTFO.UIRendered) then
@@ -2675,4 +2724,71 @@ end
 
 function GTFO_GetRealmName()
 	return gsub(GetRealmName(), "%s", "");
+end
+
+function GTFO_SpellScan(spellId, spellOrigin, spellDamage)
+	if (GTFO.Settings.ScanMode) then
+		local damage = tonumber(spellDamage) or 0;
+		if not (GTFO.Scans[spellId] or GTFO.SpellID[spellId] or GTFO.FFSpellID[spellId] or GTFO.IgnoreScan[spellId]) then
+			GTFO.Scans[spellId] = {
+				TimeAdded = GetTime();
+				Times = 1;
+				SpellID = spellId;
+				SpellName = tostring(select(1, GetSpellInfo(spellId)));
+				SpellDescription = GetSpellDescription(spellId) or "";
+				SpellOrigin = tostring(spellOrigin);
+				IsDebuff = (spellDamage == "DEBUFF");
+				Damage = damage;
+			};
+		elseif (GTFO.Scans[spellId]) then
+			GTFO.Scans[spellId].Times = GTFO.Scans[spellId].Times + 1;
+			GTFO.Scans[spellId].Damage = GTFO.Scans[spellId].Damage + damage;
+		end
+		
+	end
+end
+
+function GTFO_Command_Data()
+	if (next(GTFO.Scans) == nil) then
+		GTFO_ErrorPrint("No scan data available.");
+		return;
+	end
+	if (not PratCCFrame) then
+		GTFO_ErrorPrint("Prat Addon is required to use this feature.");
+		return;
+	end
+
+	local dataOutput = "";
+	local scans = { };
+	for key, data in pairs(GTFO.Scans) do
+    table.insert(scans, data);
+  end
+  table.sort(scans, (function(a, b) return tonumber(a.TimeAdded) < tonumber(b.TimeAdded) end));
+  
+	for _, data in pairs(scans) do
+		dataOutput = dataOutput.."-- |cff00ff00"..tostring(data.SpellName).." ("..data.Times;
+		if (data.Damage > 0) then
+			dataOutput = dataOutput..", "..data.Damage
+		end
+		dataOutput = dataOutput..")|r\n";
+		dataOutput = dataOutput.."-- |cff00aa00"..tostring(data.SpellDescription).."|r\n";
+		dataOutput = dataOutput.."GTFO.SpellID[\""..data.SpellID.."\"] = {\n";
+		dataOutput = dataOutput.."  --desc = \""..tostring(data.SpellName).." ("..tostring(data.SpellOrigin)..")\";\n";
+		if (data.IsDebuff) then
+			dataOutput = dataOutput.."  applicationOnly = true;\n";
+		end
+		dataOutput = dataOutput.."  sound = 1;\n";
+		dataOutput = dataOutput.."};\n";
+		dataOutput = dataOutput.."\n";
+	end
+
+	local display = "|cffffffff"..dataOutput.."|r"
+	PratCCText:SetText("GTFO Spells");
+	PratCCFrameScrollText:SetText(display);
+	PratCCFrame:Show()
+end
+
+function GTFO_Command_ClearData()
+	GTFO.Scans = { };
+	return;
 end

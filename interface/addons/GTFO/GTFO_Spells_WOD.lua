@@ -255,7 +255,7 @@ GTFO.SpellID["188520"] = {
 	--desc = "Fel Sludge";
 	soundFunction = function() 
 		local stacks = GTFO_DebuffStackCount("player", 188520) or 0;
-		if (stacks >= 8) then
+		if (stacks < 2 or stacks >= 8) then -- < 2 covers fel sludge in Legion where it doesn't actually stack
 			return 1;
 		else
 			return 2;
@@ -1356,3 +1356,7 @@ GTFO.SpellID["186510"] = {
 	sound = 1;
 };
 
+GTFO.SpellID["189550"] = {
+	--desc = "Rain of Fire (Azgalor)";
+	sound = 1;
+};

@@ -53,6 +53,10 @@ local function renderSplash(container)
 	lbl = createLabel(panel, L.ExportSplash3, 650)
 	lbl:SetFont(Amr.CreateFont("Regular", 14, Amr.Colors.Text))
 	lbl:SetPoint("TOPLEFT", lbl2.frame, "BOTTOMLEFT", 0, -15)
+
+	lbl2 = createLabel(panel, L.ExportSplash4, 650)
+	lbl2:SetFont(Amr.CreateFont("Regular", 14, Amr.Colors.Text))
+	lbl2:SetPoint("TOPLEFT", lbl.frame, "BOTTOMLEFT", 0, -15)
 	
 	local btn = AceGUI:Create("AmrUiButton")
 	btn:SetText(L.ExportSplashClose)
@@ -81,13 +85,10 @@ function Amr:RenderTabExport(container)
 	lbl2 = createLabel(container, L.ExportHelp3)
 	lbl2:SetPoint("TOPLEFT", lbl.frame, "BOTTOMLEFT", 0, -10)
 	
-	lbl = createLabel(container, L.ExportHelp4)
-	lbl:SetPoint("TOPLEFT", lbl2.frame, "BOTTOMLEFT", 0, -10)
-	
 	_txt = AceGUI:Create("AmrUiTextarea")
 	_txt:SetWidth(800)
 	_txt:SetHeight(300)
-	_txt:SetPoint("TOP", lbl.frame, "BOTTOM", 0, -20)
+	_txt:SetPoint("TOP", lbl2.frame, "BOTTOM", 0, -20)
 	_txt:SetFont(Amr.CreateFont("Regular", 12, Amr.Colors.Text))
 	_txt:SetCallback("OnTextChanged", onTextChanged)
 	container:AddChild(_txt)
@@ -151,11 +152,10 @@ end
 
 -- get the player's current gear and save it, also returns the data from GetPlayerData for efficiency
 local function getEquipped()
-	local data = Amr.Serializer:GetPlayerData(Amr.db.char.SubSpecs)
-	local spec = GetActiveSpecGroup()
+	local data = Amr.Serializer:GetPlayerData()
+	local spec = GetSpecialization()
 	
 	Amr.db.char.Equipped[spec] = data.Equipped[spec]
-	Amr.db.char.SubSpecs[spec] = data.SubSpecs[spec]
 	
 	return data
 end
@@ -241,6 +241,63 @@ local function getReputations()
     return reps
 end
 
+local function scanTalents()	
+	local specPos = GetSpecialization()	
+	if not specPos or specPos < 1 or specPos > 4 then return end
+	
+	local talentInfo = {}
+    local maxTiers = 7
+    for tier = 1, maxTiers do
+        for col = 1, 3 do
+            local id, name, _, _, _, spellId, _, t, c, selected = GetTalentInfoBySpecialization(specPos, tier, col)
+            if selected then
+                talentInfo[tier] = col
+            end
+        end
+    end
+    
+    local str = ""
+    for i = 1, maxTiers do
+    	if talentInfo[i] then
+    		str = str .. talentInfo[i]
+    	else
+    		str = str .. '0'
+    	end
+    end
+	
+	Amr.db.char.Talents[specPos] = str
+end
+
+local function scanArtifact()
+	-- TODO: when they put in a real API for this, switch to that instead of using UI methods directly
+	local powers = C_ArtifactUI.GetPowers()
+	if not powers then return end
+	
+	local powerRanks = {}
+	for k,v in pairs(powers) do
+		local spellId, cost, rank, maxRank, relicRank = C_ArtifactUI.GetPowerInfo(v)
+		if rank - relicRank > 0 then
+			powerRanks[v] = rank - relicRank
+		end
+	end
+	
+	local relicInfo = {}
+	for i = 1,3 do
+		local _, _, _, link = C_ArtifactUI.GetRelicInfo(i);
+		table.insert(relicInfo, link or "")
+	end
+	
+	-- make sure that the artifact UI didn't get closed while we were reading it, GetPowers seems to return nil unless it is open
+	powers = C_ArtifactUI.GetPowers()
+	if not powers then return end
+	
+	local spec = GetSpecialization()
+	Amr.db.char.Artifacts[spec] = {
+		Powers = powerRanks,
+		Relics = relicInfo
+	}
+end
+
 -- Returns a data object containing all information about the current player needed for an export:
 -- gear, spec, reputations, bag, bank, and void storage items.
 function Amr:ExportCharacter()
@@ -248,7 +305,11 @@ function Amr:ExportCharacter()
 	local data = getEquipped()
 	scanBags()
 	
-	-- get extra data that is not necessary for the base serializer, but that we add here for completeness
+	-- scan current spec's talents just before exporting
+	scanTalents()
+	
+	data.Talents = Amr.db.char.Talents
+	data.Artifacts = Amr.db.char.Artifacts
 	data.Equipped = Amr.db.char.Equipped
 	data.Reputations = getReputations()
 	data.BagItems = Amr.db.char.BagItems
@@ -272,3 +333,6 @@ Amr:AddEventHandler("VOID_STORAGE_OPEN", scanVoid)
 Amr:AddEventHandler("VOID_STORAGE_CONTENTS_UPDATE", scanVoid)
 Amr:AddEventHandler("VOID_STORAGE_DEPOSIT_UPDATE", scanVoid)
 Amr:AddEventHandler("VOID_STORAGE_UPDATE", scanVoid)
+
+Amr:AddEventHandler("PLAYER_TALENT_UPDATE", scanTalents)
+Amr:AddEventHandler("ARTIFACT_UPDATE", scanArtifact)

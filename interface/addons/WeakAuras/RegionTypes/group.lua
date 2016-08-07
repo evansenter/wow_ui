@@ -1,4 +1,3 @@
--- Import SM for statusbar-textures, font-styles and border-types
 local SharedMedia = LibStub("LibSharedMedia-3.0");
 
 -- GLOBALS: WeakAuras
@@ -107,14 +106,7 @@ local function modify(parent, region, data)
         for i=1,#data.controlledChildren do
             local childRegion = WeakAuras.regions[data.controlledChildren[i]] and WeakAuras.regions[data.controlledChildren[i]].region
             if(childRegion) then
-                if frameLevel >= 100 then
-                    frameLevel = 100
-                else
-                    frameLevel = frameLevel + 1
-                end
-                -- Try to fix #358 with info from http://wow.curseforge.com/addons/droodfocus/tickets/14
-                -- by setting SetFrameLevel() twice.
-                childRegion:SetFrameLevel(frameLevel)
+                frameLevel = frameLevel + 1
                 childRegion:SetFrameLevel(frameLevel)
             end
         end
@@ -126,13 +118,13 @@ local function modify(parent, region, data)
         -- Apply border settings
         if data.border then
             -- Initial visibility (of child that originated UpdateBorder(...))
-            local childVisible = childRegion and childRegion:IsVisible() or false;
+            local childVisible = childRegion and childRegion.toShow or false;
 
             -- Scan children for visibility
             if not childVisible then
                 for index, childId in ipairs(data.controlledChildren) do
                     local childRegion = WeakAuras.regions[childId] and WeakAuras.regions[childId].region;
-                    if childRegion and childRegion:IsVisible() then
+                    if childRegion and childRegion.toShow then
                         childVisible = true;
                         break;
                     end

@@ -55,6 +55,7 @@ if not L then return end
 -- L["Gnomish Engineer"] = ""
 -- L["Goblin Engineer"] = ""
 -- L["Herbalism"] = ""
+-- L["Hide Minimap Button"] = ""
 -- L["HIGH"] = ""
 -- L["Horde"] = ""
 -- L["Horde Quest"] = ""

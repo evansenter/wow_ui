@@ -1,4 +1,4 @@
-## Interface: 60200
+## Interface: 70000
 ## X-Min-Interface: 50000
 ## Title: EPGP LootMaster - |cFFFF8080Core|r
 ## Author: Bushmaster-Darksorrow-EU

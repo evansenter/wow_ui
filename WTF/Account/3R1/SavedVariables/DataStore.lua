@@ -55,5 +55,8 @@ DataStoreDB = {
 				["faction"] = "Horde",
 			},
 		},
+		["ShortToLongRealmNames"] = {
+			["Illidan"] = "Illidan",
+		},
 	},
 }

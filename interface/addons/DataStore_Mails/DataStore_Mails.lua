@@ -100,21 +100,6 @@ local function GuildWhisper(player, messageType, ...)
 	end
 end
 
-local function HasHeirloomAttachment()
-	local link, rarity, _
-
-	for i = 1, ATTACHMENTS_MAX_SEND do	-- loop through all attachments
-		link = GetSendMailItemLink(i)
-		if link then
-			_, _, rarity = GetItemInfo(link)
-			
-			if rarity == 7 then			-- is this an heirloom ?
-				return true					-- .. yes, return true !
-			end
-		end
-	end
-end
-
 local function SendGuildMail(recipient, subject, body, index)
 	local player = DataStore:GetNameOfMain(recipient)
 	if not player then return end
@@ -160,16 +145,17 @@ local function SaveAttachments(character, index, sender, days, wasReturned)
 	
 	for attachmentIndex = 1, ATTACHMENTS_MAX_SEND do		-- mandatory, loop through all 12 slots, since attachments could be anywhere (ex: slot 4,5,8)
 		if isSentMail then
-			item, icon, count = GetSendMailItem(attachmentIndex)
+			item, itemID, icon, count = GetSendMailItem(attachmentIndex)
 			link = GetSendMailItemLink(attachmentIndex)
 		else
-			item, icon, count = GetInboxItem(index, attachmentIndex)
+			item, itemID, icon, count = GetInboxItem(index, attachmentIndex)
 			link = GetInboxItemLink(index, attachmentIndex)
 		end
 		
 		if item then
 			table.insert(character.Mails, {
 				["icon"] = icon,
+				["itemID"] = itemID,
 				["count"] = count,
 				["sender"] = sender,
 				["link"] = link,
@@ -190,8 +176,6 @@ local function ScanMailbox()
 	if numItems == 0 then
 		return
 	end
-	
-	
 	
 	for i = 1, numItems do
 		local _, stationaryIcon, mailSender, mailSubject, mailMoney, _, days, numAttachments, _, wasReturned = GetInboxHeaderInfo(i);
@@ -276,16 +260,24 @@ end
 local function _GetMailItemCount(character, searchedID)
 	local count = 0
 	for _, v in pairs (character.Mails) do
-		local link = v.link
-		if link and (GetIDFromLink(link) == searchedID) then
+		if v.itemID and (v.itemID == searchedID) then	-- added in 7.0
 			count = count + (v.count or 1)
+		else															-- .. remove link comparison soon
+			local link = v.link
+			if link and (GetIDFromLink(link) == searchedID) then
+				count = count + (v.count or 1)
+			end
 		end
 	end
 	
 	for _, v in pairs (character.MailCache) do
-		local link = v.link
-		if link and (GetIDFromLink(link) == searchedID) then
+		if v.itemID and (v.itemID == searchedID) then	-- added in 7.0
 			count = count + (v.count or 1)
+		else															-- .. remove link comparison soon
+			local link = v.link
+			if link and (GetIDFromLink(link) == searchedID) then
+				count = count + (v.count or 1)
+			end
 		end
 	end
 	return count
@@ -557,9 +549,6 @@ hooksecurefunc("SendMail", function(recipient, subject, body, ...)
 			for characterName, characterKey in pairs(DataStore:GetCharacters(realm)) do
 				if strlower(characterName) == strlower(recipientName) then		-- right alt ? proceed
 					SendOwnMail(characterKey, subject, body)
-					if not HasHeirloomAttachment() then
-						DataStore:SetConnectedRealms(realm, GetRealmName())
-					end
 					isRecipientAnAlt = true
 					break
 				end

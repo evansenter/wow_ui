@@ -50,8 +50,8 @@ local methods = {
 	
 	-- color is an object with R, G, B
 	["SetBackgroundColor"] = function(self, color)
-		self.texNormal:SetTexture(color.R, color.G, color.B, 1)
-		self.texPush:SetTexture(color.R, color.G, color.B, 1)
+		self.texNormal:SetColorTexture(color.R, color.G, color.B, 1)
+		self.texPush:SetColorTexture(color.R, color.G, color.B, 1)
 	end,
 
 	["SetDisabled"] = function(self, disabled)
@@ -100,7 +100,7 @@ local function Constructor()
 	
 	-- not perfect, but more or less achieves the effect of lightening the bg color slightly on hover
 	local texHigh = frame:CreateTexture(nil, "BORDER")
-	texHigh:SetTexture(1, 1, 1, 0.1)
+	texHigh:SetColorTexture(1, 1, 1, 0.1)
 	texHigh:SetAllPoints(true)
 	frame:SetHighlightTexture(texHigh)
 

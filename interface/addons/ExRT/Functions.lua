@@ -2,15 +2,17 @@ local GlobalAddonName, ExRT = ...
 
 ExRT.F.FUNC_FILE_LOADED = true
 
-local UnitName, GetTime = UnitName, GetTime
+local UnitName, GetTime, GetCursorPosition = UnitName, GetTime, GetCursorPosition
 local select, floor, tonumber, tostring, string_sub, string_find, string_len, bit_band, type, unpack, pairs, format, strsplit = select, floor, tonumber, tostring, string.sub, string.find, string.len, bit.band, type, unpack, pairs, format, strsplit
+local string_gsub, string_match = string.gsub, string.match
 local RAID_CLASS_COLORS, COMBATLOG_OBJECT_TYPE_MASK, COMBATLOG_OBJECT_CONTROL_MASK, COMBATLOG_OBJECT_REACTION_MASK, COMBATLOG_OBJECT_AFFILIATION_MASK, COMBATLOG_OBJECT_SPECIAL_MASK = RAID_CLASS_COLORS, COMBATLOG_OBJECT_TYPE_MASK, COMBATLOG_OBJECT_CONTROL_MASK, COMBATLOG_OBJECT_REACTION_MASK, COMBATLOG_OBJECT_AFFILIATION_MASK, COMBATLOG_OBJECT_SPECIAL_MASK
 
 do
 	local antiSpamArr = {}
 	function ExRT.F.AntiSpam(numantispam,addtime)
-		if not antiSpamArr[numantispam] or antiSpamArr[numantispam] < GetTime() then
-			antiSpamArr[numantispam] = GetTime() + addtime
+		local t = GetTime()
+		if not antiSpamArr[numantispam] or antiSpamArr[numantispam] < t then
+			antiSpamArr[numantispam] = t + addtime
 			return true
 		else
 			return false
@@ -54,14 +56,14 @@ end
 
 function ExRT.F.clearTextTag(text,SpellLinksEnabled)
 	if text then
-		text = string.gsub(text,"|c........","")
-		text = string.gsub(text,"|r","")
-		text = string.gsub(text,"|T.-:0|t ","")
-		text = string.gsub(text,"|HExRT:.-|h(.-)|h","%1")
+		text = string_gsub(text,"|c........","")
+		text = string_gsub(text,"|r","")
+		text = string_gsub(text,"|T.-:0|t ","")
+		text = string_gsub(text,"|HExRT:.-|h(.-)|h","%1")
 		if SpellLinksEnabled then
-			text = string.gsub(text,"|H(spell:.-)|h(.-)|h","|cff71d5ff|H%1|h[%2]|h|r")
+			text = string_gsub(text,"|H(spell:.-)|h(.-)|h","|cff71d5ff|H%1|h[%2]|h|r")
 		else
-			text = string.gsub(text,"|H(spell:.-)|h(.-)|h","%2")
+			text = string_gsub(text,"|H(spell:.-)|h(.-)|h","%2")
 		end
 		return text
 	end
@@ -191,11 +193,11 @@ end
 
 function ExRT.F:LockMove(isLocked,touchTexture,dontTouchMouse)
 	if isLocked then
-		if touchTexture then touchTexture:SetTexture(0,0,0,0.3) end
+		if touchTexture then touchTexture:SetColorTexture(0,0,0,0.3) end
 		self:SetMovable(true)
 		if not dontTouchMouse then self:EnableMouse(true) end
 	else
-		if touchTexture then touchTexture:SetTexture(0,0,0,0) end
+		if touchTexture then touchTexture:SetColorTexture(0,0,0,0) end
 		self:SetMovable(false)
 		if not dontTouchMouse then self:EnableMouse(false) end
 	end
@@ -241,10 +243,7 @@ function ExRT.F.NumberInRange(i,mi,mx,incMi,incMx)
 end
 
 function ExRT.F.delUnitNameServer(unitName)
-	local dashPos = string_find(unitName,"%-") 
-	if dashPos then 
-		unitName = string_sub(unitName,1,dashPos-1) 
-	end
+	unitName = strsplit("-",unitName)
 	return unitName
 end
 
@@ -269,7 +268,7 @@ do
 	}
 	function ExRT.F.GetUnitTypeByGUID(guid)
 		if guid then
-			local _type = guid:match("^([A-z]+)%-")
+			local _type = string_match(guid,"^([A-z]+)%-")
 			if _type then
 				return old_types[_type]
 			end
@@ -404,12 +403,8 @@ function ExRT.F.classIconInText(class,size)
 end
 
 function ExRT.F.GUIDtoID(guid)
-	if not guid then 
-		return 0 
-	else
-		local id = guid:match("[^%-]+%-%d+%-%d+%-%d+%-%d+%-(%d+)%-%w+")
-		return tonumber(id or 0)
-	end
+	local type,_,serverID,instanceID,zoneUID,id,spawnID = strsplit("-", guid or "")
+	return tonumber(id or 0)
 end
 
 function ExRT.F.table_copy(table1,table2)
@@ -417,6 +412,18 @@ function ExRT.F.table_copy(table1,table2)
 	for key,val in pairs(table1) do
 		table2[key] = val
 	end
+end
+
+function ExRT.F.table_copy2(table1)
+	local table2 = {}
+	for key,val in pairs(table1) do
+		if type(val) == 'table' then
+			table2[key] = ExRT.F.table_copy2(val)
+		else
+			table2[key] = val
+		end
+	end
+	return table2
 end
 
 function ExRT.F.table_wipe(arr)
@@ -516,11 +523,13 @@ end
 
 function ExRT.F.IsBonusOnItem(link,bonus)
 	if link then 
-		local bonuses = link:match("item:%d+:[0-9%-]+:[0-9%-]+:[0-9%-]+:[0-9%-]+:[0-9%-]+:[0-9%-]+:[0-9%-]+:[0-9%-]+:[0-9%-]+:[0-9%-]+:[0-9%-]+:[0-9%-]+:([0-9:]+)")
-		if bonuses then
+		local _,itemID,enchant,gem1,gem2,gem3,gem4,suffixID,uniqueID,level,specializationID,upgradeType,instanceDifficultyID,numBonusIDs,restLink = strsplit(":",link,15)
+		if restLink then
+			local bonuses = {strsplit(":",strsplit("|h",restLink),nil)}
+			numBonusIDs = tonumber(numBonusIDs) or 0
 			local isTable = type(bonus) == "table"
-			for bonusID in string.gmatch(bonuses, "%d+") do
-				bonusID = tonumber(bonusID or 0)
+			for i = 1, numBonusIDs do
+				local bonusID = tonumber(bonuses[i]) or -999
 				if (isTable and bonus[bonusID]) or (not isTable and bonusID == bonus) then
 					return true
 				end
@@ -528,22 +537,24 @@ function ExRT.F.IsBonusOnItem(link,bonus)
 		end
 	end
 end
-if ExRT.is7 then
-	function ExRT.F.IsBonusOnItem(link,bonus)
-		if link then 
-			local bonuses = link:match("item:%d+:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:[0-9%-]*:([0-9:]*)")
-			if bonuses then
-				local isTable = type(bonus) == "table"
-				for bonusID in string.gmatch(bonuses, "%d+") do
-					bonusID = tonumber(bonusID or 0)
-					if (isTable and bonus[bonusID]) or (not isTable and bonusID == bonus) then
-						return true
-					end
-				end
+
+function ExRT.F.GetItemBonuses(link)
+	if link then 
+		local _,itemID,enchant,gem1,gem2,gem3,gem4,suffixID,uniqueID,level,specializationID,upgradeType,instanceDifficultyID,numBonusIDs,restLink = strsplit(":",link,15)
+		numBonusIDs = tonumber(numBonusIDs or "?") or 0
+		local bonusStr = ""
+		for i=1,numBonusIDs do
+			local bonus = select(i,strsplit(":",restLink))
+			if bonus then
+				bonusStr = bonusStr .. bonus .. ":"
 			end
 		end
+		bonusStr = strtrim(bonusStr,":")
+		return bonusStr,numBonusIDs
 	end
+	return "",0
 end
+--/dump GExRT.F.GetItemBonuses(select(2,GameTooltip:GetItem()))
 
 function ExRT.F.IsPlayerRLorOfficer(unitName)
 	local shortName = ExRT.F.delUnitNameServer(unitName)
@@ -584,6 +595,15 @@ function ExRT.F._unp(str)
 		d = d + strbyte(str, 1)
 	end
 	return d * 1000 + c
+end
+
+function ExRT.F.CreateAddonMsg(...)
+	local result = ""
+	for i=1,select('#',...) do
+		local a = select(i,...)
+		result = result..(result ~= "" and "\t" or "")..tostring(a)
+	end
+	return result
 end
 
 do
@@ -748,7 +768,8 @@ do
 	local activeName = ""
 	local UpdateLines = nil
 	local function CreateChatWindow()
-		chatWindow = CreateFrame("Frame","ExRTToChatWindow",UIParent,"ExRTDialogModernTemplate")
+		chatWindow = ELib:Template("ExRTDialogModernTemplate",UIParent)
+		_G["ExRTToChatWindow"] = chatWindow
 		chatWindow:SetSize(400,300)
 		chatWindow:SetPoint("CENTER")
 		chatWindow:SetFrameStrata("DIALOG")
@@ -931,7 +952,6 @@ do
 end
 
 ---------------> Chat links hook <---------------
-
 do
 	local chatLinkFormat = "|HExRT:%s:0|h|cffffff00[ExRT: %s]|r|h"
 	local funcTable = {}
@@ -960,5 +980,162 @@ do
 		return chatLinkFormat:format(funcName,stringName)
 	end
 end
+---------------> Export Window <---------------
+do
+	local exportWindow
+	function ExRT.F:Export(stringData)
+		if not exportWindow then
+			exportWindow = ELib:Popup(ExRT.L.Export):Size(650,615)
+			exportWindow.Edit = ELib:MultiEdit(exportWindow):Point("TOP",0,-20):Size(640,575)
+			exportWindow.TextInfo = ELib:Text(exportWindow,ExRT.L.ExportInfo,11):Color():Point("BOTTOM",0,3):Size(640,15):Bottom():Left()
+			exportWindow:SetScript("OnHide",function(self)
+				self.Edit:SetText("")
+			end)
+		end
+		exportWindow.Edit:SetText(stringData)
+		exportWindow:NewPoint("CENTER",UIParent,0,0)
+		exportWindow:Show()
+		exportWindow.Edit.EditBox:HighlightText()
+		exportWindow.Edit.EditBox:SetFocus()
+	end
 
--------------------------
+end
+-------------------> Data <--------------------
+
+ExRT.GDB.ClassSpecializationIcons = {
+	[62] = "Interface\\Icons\\Spell_Holy_MagicalSentry",
+	[63] = "Interface\\Icons\\Spell_Fire_FireBolt02",
+	[64] = "Interface\\Icons\\Spell_Frost_FrostBolt02",
+	[65] = "Interface\\Icons\\Spell_Holy_HolyBolt",
+	[66] = "Interface\\Icons\\Ability_Paladin_ShieldoftheTemplar",
+	[70] = "Interface\\Icons\\Spell_Holy_AuraOfLight",
+	[71] = "Interface\\Icons\\Ability_Warrior_SavageBlow",
+	[72] = "Interface\\Icons\\Ability_Warrior_InnerRage",
+	[73] = "Interface\\Icons\\Ability_Warrior_DefensiveStance",
+	[102] = "Interface\\Icons\\Spell_Nature_StarFall",
+	[103] = "Interface\\Icons\\Ability_Druid_CatForm",
+	[104] = "Interface\\Icons\\Ability_Racial_BearForm",
+	[105] = "Interface\\Icons\\Spell_Nature_HealingTouch",
+	[250] = "Interface\\Icons\\Spell_Deathknight_BloodPresence",
+	[251] = "Interface\\Icons\\Spell_Deathknight_FrostPresence",
+	[252] = "Interface\\Icons\\Spell_Deathknight_UnholyPresence",
+	[253] = "INTERFACE\\ICONS\\ability_hunter_bestialdiscipline",
+	[254] = "Interface\\Icons\\Ability_Hunter_FocusedAim",
+	[255] = "INTERFACE\\ICONS\\ability_hunter_camouflage",
+	[256] = "Interface\\Icons\\Spell_Holy_PowerWordShield",
+	[257] = "Interface\\Icons\\Spell_Holy_GuardianSpirit",
+	[258] = "Interface\\Icons\\Spell_Shadow_ShadowWordPain",
+	[259] = "Interface\\Icons\\Ability_Rogue_DeadlyBrew",
+	[260] = "Interface\\Icons\\INV_Sword_30",
+	[261] = "Interface\\Icons\\Ability_Stealth",
+	[262] = "Interface\\Icons\\Spell_Nature_Lightning",
+	[263] = "Interface\\Icons\\Spell_Shaman_ImprovedStormstrike",
+	[264] = "Interface\\Icons\\Spell_Nature_MagicImmunity",
+	[265] = "Interface\\Icons\\Spell_Shadow_DeathCoil",
+	[266] = "Interface\\Icons\\Spell_Shadow_Metamorphosis",
+	[267] = "Interface\\Icons\\Spell_Shadow_RainOfFire",
+	[268] = "Interface\\Icons\\spell_monk_brewmaster_spec",
+	[269] = "Interface\\Icons\\spell_monk_windwalker_spec",
+	[270] = "Interface\\Icons\\spell_monk_mistweaver_spec",
+	[577] = "Interface\\Icons\\ability_demonhunter_specdps",
+	[581] = "Interface\\Icons\\ability_demonhunter_spectank",
+}
+
+ExRT.GDB.ClassList = {
+	"WARRIOR",
+	"PALADIN",
+	"HUNTER",
+	"ROGUE",
+	"PRIEST",
+	"DEATHKNIGHT",
+	"SHAMAN",
+	"MAGE",
+	"WARLOCK",
+	"MONK",
+	"DRUID",
+	"DEMONHUNTER",
+}
+
+ExRT.GDB.ClassSpecializationList = {
+	["WARRIOR"] = {71, 72, 73},
+	["PALADIN"] = {65, 66, 70},
+	["HUNTER"] = {253, 254, 255},
+	["ROGUE"] = {259, 260, 261},
+	["PRIEST"] = {256, 257, 258},
+	["DEATHKNIGHT"] = {250, 251, 252},
+	["SHAMAN"] = {262, 263, 264},
+	["MAGE"] = {62, 63, 64},
+	["WARLOCK"] = {265, 266, 267},
+	["MONK"] = {268, 269, 270},
+	["DRUID"] = {102, 103, 104, 105},
+	["DEMONHUNTER"] = {577, 581},
+}
+
+ExRT.GDB.ClassArmorType = {
+	WARRIOR="PLATE",
+	PALADIN="PLATE",
+	HUNTER="MAIL",
+	ROGUE="LEATHER",
+	PRIEST="CLOTH",
+	DEATHKNIGHT="PLATE",
+	SHAMAN="MAIL",
+	MAGE="CLOTH",
+	WARLOCK="CLOTH",
+	MONK="LEATHER",
+	DRUID="LEATHER",
+	DEMONHUNTER="LEATHER",
+}
+
+ExRT.GDB.ClassSpecializationRole = {
+	[62] = 'RANGE',
+	[63] = 'RANGE',
+	[64] = 'RANGE',
+	[65] = 'HEAL',
+	[66] = 'TANK',
+	[70] = 'MELEE',
+	[71] = 'MELEE',
+	[72] = 'MELEE',
+	[73] = 'TANK',
+	[102] = 'RANGE',
+	[103] = 'MELEE',
+	[104] = 'TANK',
+	[105] = 'HEAL',
+	[250] = 'TANK',
+	[251] = 'MELEE',
+	[252] = 'MELEE',
+	[253] = 'RANGE',
+	[254] = 'RANGE',
+	[255] = 'RANGE',
+	[256] = 'HEAL',
+	[257] = 'HEAL',
+	[258] = 'RANGE',
+	[259] = 'MELEE',
+	[260] = 'MELEE',
+	[261] = 'MELEE',
+	[262] = 'RANGE',
+	[263] = 'MELEE',
+	[264] = 'HEAL',
+	[265] = 'RANGE',
+	[266] = 'RANGE',
+	[267] = 'RANGE',
+	[268] = 'TANK',
+	[269] = 'MELEE',
+	[270] = 'HEAL',
+	[577] = 'MELEE',
+	[581] = 'TANK',
+}
+
+ExRT.GDB.ClassID = {
+	WARRIOR=1,
+	PALADIN=2,
+	HUNTER=3,
+	ROGUE=4,
+	PRIEST=5,
+	DEATHKNIGHT=6,
+	SHAMAN=7,
+	MAGE=8,
+	WARLOCK=9,
+	MONK=10,
+	DRUID=11,
+	DEMONHUNTER=12,
+}

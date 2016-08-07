@@ -26,26 +26,17 @@ L = PawnLocal.Stats
 -- If only a name is present, the row becomes an uneditable header in the UI and is otherwise ignored.
 PawnStats =
 {
-	{L.PrimaryStats},
+	{STAT_CATEGORY_ATTRIBUTES},
 	{SPELL_STAT1_NAME, "Strength", L.StrengthInfo, true},
 	{SPELL_STAT2_NAME, "Agility", L.AgilityInfo, true},
 	{SPELL_STAT4_NAME, "Intellect", L.IntellectInfo, true},
 	{SPELL_STAT3_NAME, "Stamina", L.StaminaInfo, true},
-
-	{L.WeaponStats},
-	{STAT_DPS_SHORT, "Dps", L.DpsInfo, true},
-	{WEAPON_SPEED, "Speed", L.SpeedInfo, true, L.SpeedIs},
-	{L.SpellPower, "SpellPower", L.SpellPowerInfo},
-
-	{L.SecondaryStats},
-	{SPELL_STAT5_NAME, "Spirit", L.SpiritInfo},
-	{L.Ap, "Ap", L.ApInfo},
 	{ARMOR, "Armor", L.ArmorInfo},
-	{BONUS_ARMOR, "BonusArmor", L.BonusArmorInfo},
+
+	{STAT_CATEGORY_ENHANCEMENTS},
 	{L.Crit, "CritRating", L.CritInfo},
 	{STAT_HASTE, "HasteRating", L.HasteInfo},
 	{STAT_MASTERY, "MasteryRating", L.MasteryInfo},
-	{STAT_MULTISTRIKE, "Multistrike", L.MultistrikeInfo},
 	{STAT_VERSATILITY, "Versatility", L.VersatilityInfo},
 
 	{L.MinorStats},
@@ -53,6 +44,10 @@ PawnStats =
 	{STAT_AVOIDANCE, "Avoidance", L.AvoidanceInfo},
 	{STAT_LIFESTEAL, "Leech", L.LeechInfo},
 	{STAT_STURDINESS, "Indestructible", L.IndestructibleInfo, false, L.IndestructibleIs},
+
+	{L.WeaponStats},
+	{STAT_DPS_SHORT, "Dps", L.DpsInfo, true},
+	{WEAPON_SPEED, "Speed", L.SpeedInfo, true, L.SpeedIs},
 
 	{L.ArmorTypes},
 	{L.Cloth, "IsCloth", L.ClothInfo},
@@ -76,12 +71,9 @@ PawnStats =
 	{L.WeaponType1HSword, "IsSword", L.WeaponType1HSwordInfo},
 	{L.WeaponType2HSword, "Is2HSword", L.WeaponType2HSwordInfo},
 	{L.WeaponTypeWand, "IsWand", L.WeaponTypeWandInfo},
+	{L.WeaponTypeWarglaive, "IsWarglaive", L.WeaponTypeWarglaiveInfo},
 	{L.WeaponTypeOffHand, "IsOffHand", L.WeaponTypeOffHandInfo},
 	{L.WeaponTypeFrill, "IsFrill", L.WeaponTypeFrillInfo},
-
-	{L.PvPStats},
-	{L.PvPPower, "SpellPenetration", L.PvPPowerInfo},
-	{L.PvPResilience, "ResilienceRating", L.PvPResilienceInfo},
 
 	{L.SpecialWeaponStats},
 	{L.WeaponMinDamage, "MinDamage", L.WeaponMinDamageInfo, true},
@@ -143,6 +135,7 @@ PawnUIHeaders = -- (%s is the name of the current scale)
 PawnUIFrame_ScaleSelector_Header_Text = L.ScaleSelectorHeader
 PawnUIFrame_ShowScaleCheck_Label_Text = L.ScaleSelectorShowScale
 PawnUIFrame_ShowScaleCheck_Tooltip = L.ScaleSelectorShowScaleTooltip
+PawnUIFrame_ScaleSelector_ShowingSuggestionsFor_Text = L.ScaleSelectorShowingSuggestionsFor
 
 -- Configuration UI, Scale tab
 PawnUIFrame_ScalesTab_Text = L.ScaleTab
@@ -161,9 +154,9 @@ PawnUIFrame_ScaleTypeLabel_ReadOnlyScaleText = L.ScaleTypeReadOnly
 PawnUIFrame_ScaleSettingsShareHeader_Text = L.ScaleShareHeader
 
 PawnUIFrame_ImportScaleButton_Text = L.ScaleImport
-PawnUIFrame_ImportScaleButton_Label_Text = L.ScaleImportTooltip
+PawnUIFrame_ImportScaleButton_Tooltip = L.ScaleImportTooltip
 PawnUIFrame_ExportScaleButton_Text = L.ScaleExport
-PawnUIFrame_ExportScaleButton_Label_Text = L.ScaleExportTooltip
+PawnUIFrame_ExportScaleButton_Tooltip = L.ScaleExportTooltip
 
 PawnUIFrame_ScaleSettingsNewHeader_Text = L.ScaleNewHeader
 
@@ -174,7 +167,16 @@ PawnUIFrame_NewScaleButton_Label_Text = L.ScaleEmptyTooltip
 PawnUIFrame_NewScaleFromDefaultsButton_Text = L.ScaleDefaults
 PawnUIFrame_NewScaleFromDefaultsButton_Label_Text = L.ScaleDefaultsTooltip
 
--- Configuration UI, Values tab (previously the Scales tab)
+PawnUIFrame_AutoSelectScalesWelcome_Text = L.ScaleAutoWelcome
+
+PawnUIFrame_AutoSelectScalesOnButton_Text = L.ScaleAutoOn
+PawnUIFrame_AutoSelectScalesOnButton_Subtext = L.ScaleAutoOn2
+PawnUIFrame_AutoSelectScalesOnButton_Tooltip = L.ScaleAutoOnTooltip
+PawnUIFrame_AutoSelectScalesOffButton_Text = L.ScaleAutoOff
+PawnUIFrame_AutoSelectScalesOffButton_Subtext = L.ScaleAutoOff2
+PawnUIFrame_AutoSelectScalesOffButton_Tooltip = L.ScaleAutoOffTooltip
+
+-- Configuration UI, Values tab
 PawnUIFrame_ValuesTab_Text = L.ValuesTab
 
 PawnUIFrame_ValuesWelcomeLabel_NormalText = L.ValuesWelcome
@@ -201,7 +203,6 @@ PawnUIFrame_CompareTab_Text = L.CompareTab
 PawnUIFrame_VersusHeader_Text = L.CompareVersus -- Short for "versus."  Appears between the names of the two items.
 PawnUIFrame_VersusHeader_NoItem = L.CompareSlotEmpty -- Text displayed next to empty item slots.
 
-PawnUIFrame_CompareMissingItemInfo_TextLeft = L.CompareWelcomeLeft
 PawnUIFrame_CompareMissingItemInfo_TextRight = L.CompareWelcomeRight
 
 PawnUIFrame_ClearItemsButton_Label = L.CompareClearItems
@@ -232,6 +233,8 @@ PawnUIFrame_EnchantedValuesCheck_Text = L.OptionsCurrentValue
 PawnUIFrame_EnchantedValuesCheck_Tooltip = L.OptionsCurrentValueTooltip
 PawnUIFrame_ShowIconsCheck_Text = L.OptionsInventoryIcon
 PawnUIFrame_ShowIconsCheck_Tooltip = L.OptionsInventoryIconTooltip
+PawnUIFrame_ShowSpecIconsCheck_Text = L.OptionsTooltipSpecIcon
+PawnUIFrame_ShowSpecIconsCheck_Tooltip = L.OptionsTooltipSpecIconTooltip
 PawnUIFrame_ShowExtraSpaceCheck_Text = L.OptionsBlankLine
 PawnUIFrame_ShowExtraSpaceCheck_Tooltip = L.OptionsBlankLineTooltip
 PawnUIFrame_AlignRightCheck_Text = L.OptionsAlignRight
@@ -245,6 +248,11 @@ PawnUIFrame_TooltipUpgradeOnUpgradesOnlyRadio_Text = L.OptionsTooltipUpgradesOnl
 PawnUIFrame_TooltipUpgradeOnUpgradesOnlyRadio_Tooltip = L.OptionsTooltipUpgradesOnlyTooltip
 PawnUIFrame_TooltipUpgradeOffRadio_Text = L.OptionsTooltipValuesOnly
 PawnUIFrame_TooltipUpgradeOffRadio_Tooltip = L.OptionsTooltipValuesOnlyTooltip
+PawnUIFrame_UpgradeTrackingHeaderLabel_Text = L.OptionsUpgradeTrackingHeader
+PawnUIFrame_UpgradeTrackingOffRadio_Text = L.OptionsUpgradeTrackingOff
+PawnUIFrame_UpgradeTrackingOffRadio_Tooltip = L.OptionsUpgradeTrackingOffTooltip
+PawnUIFrame_UpgradeTrackingOnRadio_Text = L.OptionsUpgradeTrackingOn
+PawnUIFrame_UpgradeTrackingOnRadio_Tooltip = L.OptionsUpgradeTrackingOnTooltip
 
 PawnUIFrame_AdvisorOptionsHeaderLabel_Text = L.OptionsAdvisorHeader
 PawnUIFrame_ShowLootUpgradeAdvisorCheck_Text = L.OptionsLootAdvisor

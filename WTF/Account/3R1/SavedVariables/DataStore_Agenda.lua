@@ -14,7 +14,7 @@ DataStore_AgendaDB = {
 		["Options"] = {
 			["WeeklyResetHour"] = 6,
 			["WeeklyResetDay"] = 2,
-			["NextWeeklyReset"] = "2016-02-09",
+			["NextWeeklyReset"] = "2016-08-09",
 		},
 		["Characters"] = {
 			["Default.Dark Iron.Ereinion"] = {
@@ -26,7 +26,7 @@ DataStore_AgendaDB = {
 						["note"] = "",
 					},
 				},
-				["lastUpdate"] = 1454777600,
+				["lastUpdate"] = 1470538980,
 			},
 			["Default.Dark Iron.Colton"] = {
 				["Contacts"] = {
@@ -66,27 +66,20 @@ DataStore_AgendaDB = {
 				["lastUpdate"] = 1424741733,
 			},
 			["Default.Illidan.Pandatal"] = {
-				["lastUpdate"] = 1454778284,
+				["lastUpdate"] = 1461733291,
 			},
 			["Default.Illidan.Metal"] = {
-				["lastUpdate"] = 1454776977,
+				["lastUpdate"] = 1470154484,
 			},
 			["Default.Illidan.Natal"] = {
 				["lastUpdate"] = 1424741647,
 			},
 			["Default.Illidan.Comet"] = {
 				["DungeonIDs"] = {
-					["Hellfire Citadel Heroic|133465560"] = "223534|1454810100|0|1",
+					["Upper Blackrock Spire Mythic|236437483"] = "206814|1470547985|0|0",
+					["Hellfire Citadel Heroic|251527740"] = "206814|1470547985|0|1",
 				},
-				["lastUpdate"] = 1454810097,
-				["LFGDungeons"] = {
-					["986.Count"] = 1,
-					["985.Count"] = 1,
-					["985.Fel Lord Zakuun"] = true,
-					["986.Archimonde"] = true,
-					["982.Count"] = 1,
-					["982.Hellfire Assault"] = true,
-				},
+				["lastUpdate"] = 1470547983,
 			},
 			["Default.Illidan.Combustion"] = {
 				["lastUpdate"] = 1424741664,

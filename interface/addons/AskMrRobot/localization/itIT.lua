@@ -21,6 +21,45 @@ if L then
 General
 ------------------------------------------------------------------------]]
 
+L.SpecsShort = {
+	[1] = "Blood", -- DeathKnightBlood
+    [2] = "Frost", -- DeathKnightFrost
+    [3] = "Unholy", -- DeathKnightUnholy
+	[4] = "Havoc", -- DemonHunterHavoc
+	[5] = "Vengeance", -- DemonHunterVengeance
+    [6] = "Moon", -- DruidBalance
+    [7] = "Feral", -- DruidFeral
+    [8] = "Bear", -- DruidGuardian
+    [9] = "Resto", -- DruidRestoration
+    [10] = "BM", -- HunterBeastMastery
+    [11] = "Marks", -- HunterMarksmanship
+    [12] = "Survival", -- HunterSurvival
+    [13] = "Arcane", -- MageArcane
+    [14] = "Fire", -- MageFire
+    [15] = "Frost", -- MageFrost
+    [16] = "Brew", -- MonkBrewmaster
+    [17] = "Mist", -- MonkMistweaver
+    [18] = "Wind", -- MonkWindwalker
+    [19] = "Holy", -- PaladinHoly
+    [20] = "Prot", -- PaladinProtection
+    [21] = "Ret", -- PaladinRetribution
+    [22] = "Disc", -- PriestDiscipline
+    [23] = "Holy", -- PriestHoly
+    [24] = "Shadow", -- PriestShadow
+    [25] = "Assn", -- RogueAssassination
+    [26] = "Outlaw", -- RogueOutlaw
+    [27] = "Sub", -- RogueSubtlety
+    [28] = "Elem", -- ShamanElemental
+    [29] = "Enh", -- ShamanEnhancement
+    [30] = "Resto", -- ShamanRestoration
+    [31] = "Aff", -- WarlockAffliction
+    [32] = "Demo", -- WarlockDemonology
+    [33] = "Destro", -- WarlockDestruction
+    [34] = "Arms", -- WarriorArms
+    [35] = "Fury", -- WarriorFury
+    [36] = "Prot", -- WarriorProtection
+}
+
 -- stat strings for e.g. displaying gem/enchant abbreviations, make as short as possible without being confusing/ambiguous
 L.StatsShort = {
     ["Strength"] = "For",
@@ -145,13 +184,10 @@ L.ExportSplashClose = "Continua"
 Gear Tab
 ------------------------------------------------------------------------]]
 L.GearImportNote = "Clicca Importa per importare i dati dal sito."
-L.GearTabPrimary = "Spec Primaria"
-L.GearTabSecondary = "Spec Secondaria"
 L.GearBlank = "Non hai caricato nessun equipaggiamento per questa specializzazione."
 L.GearBlank2 = "Vai su askmrrobot.com per ottimizzare l'equipaggiamento, quindi usa il pulsante Importa sulla sinistra."
 L.GearButtonEquip = function(spec)
-	-- spec 1 is primary, 2 is secondary
-	return string.format("Attiva %s Spec ed Equip", spec == 1 and "Primaria" or "Secondaria")
+	return string.format("Attiva %s Spec ed Equip", spec)
 end
 L.GearButtonShop = "Show Shopping List"
 
@@ -176,10 +212,8 @@ Oppure, puoi cliccare con il tasto destro sul pulsante sulla minimappa per cambi
 Oppure! Puoi usare i seguenti comandi:]]
 
 L.GearTipCommands = 
-[[/amr equip [1 or 2]
-1 = primary
-2 = secondary
-no arg = toggle]]
+[[/amr equip [1-4]
+no arg = cycle]]
 -- note to translators: the slash commands are literal and should stay as english
 
 

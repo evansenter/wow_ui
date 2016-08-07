@@ -16,5 +16,5 @@ L["EQUIP_REQ_TEXT"] = "Benachrichtigung, wenn jemand die Ausrüstung eines meine
 L["EQUIP_REQ_TITLE"] = "Benachrichtigung bei Ausrüstungsanfrage"
 L["Heroic"] = "Heroisch"
 L["%s is inspecting %s"] = " %s besichtigt %s"
-L["Trash Mobs"] = "\"Trash\"-Mobs"
+L["Trash Mobs"] = "Trash-Mobs"
 

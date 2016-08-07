@@ -1,24 +1,92 @@
 
 VExRT = {
 	["Timers"] = {
+		["specTimes"] = {
+			[62] = 10,
+			[63] = 10,
+			[250] = 10,
+			[251] = 10,
+			[64] = 10,
+			[253] = 10,
+			[65] = 10,
+			[255] = 10,
+			[66] = 10,
+			[257] = 10,
+			[258] = 10,
+			[259] = 10,
+			[260] = 10,
+			[261] = 25,
+			[262] = 16,
+			[263] = 10,
+			[264] = 10,
+			[265] = 22,
+			[266] = 10,
+			[267] = 10,
+			[268] = 10,
+			[269] = 10,
+			[270] = 10,
+			[70] = 10,
+			[102] = 10,
+			[71] = 10,
+			[103] = 10,
+			[72] = 10,
+			[104] = 10,
+			[73] = 10,
+			[581] = 10,
+			[105] = 10,
+			[577] = 10,
+			[256] = 10,
+			[254] = 10,
+			[252] = 10,
+		},
+		["Strata"] = "HIGH",
 	},
 	["ProfileKeys"] = {
 		["Comet-Illidan"] = "default",
+		["Evan-Illidan"] = "default",
+		["Metal-Illidan"] = "default",
 	},
 	["Arrow"] = {
 	},
 	["Encounter"] = {
 		["names"] = {
-			[1713] = "Kromog, Legend of the Mountain",
-			[1689] = "Flamebender Ka'graz",
-			[1693] = "Hans'gar & Franzok",
 			[1704] = "Blackhand",
-			[1694] = "Beastlord Darmac",
-			[1691] = "Gruul",
+			[1677] = "Sadana Bloodfury",
+			[1679] = "Bonemaw",
+			[1750] = "Oshir",
+			[1713] = "Kromog, Legend of the Mountain",
+			[1652] = "Roltall",
+			[1653] = "Slave Watcher Crushto",
+			[1654] = "Gug'rokk",
+			[1748] = "Grimrail Enforcers",
+			[1749] = "Fleshrender Nok'gar",
+			[1688] = "Nhallish",
+			[1689] = "Flamebender Ka'graz",
 			[1690] = "Blast Furnace",
+			[1691] = "Gruul",
+			[1754] = "Skulloc, Son of Gruul",
+			[1693] = "Hans'gar & Franzok",
+			[1694] = "Beastlord Darmac",
+			[1682] = "Ner'zhul",
+			[1655] = "Magmolatus",
 		},
 		["list"] = {
 			["Evan"] = {
+				"^1677^2^1469914689^22^1^5^696.70^", -- [1]
+				"^1688^2^1469914784^28^1^5^696.70^", -- [2]
+				"^1679^2^1469914975^27^1^5^696.70^", -- [3]
+				"^1682^2^1469915076^29^1^5^696.70^", -- [4]
+				"^1749^23^1469915735^33^1^5^713.05^", -- [5]
+				"^1748^23^1469916132^83^1^5^710.52^Nazàrken-Thrall", -- [6]
+				"^1750^23^1469916496^66^1^5^713.05^", -- [7]
+				"^1754^23^1469916620^37^1^5^713.05^", -- [8]
+				"^1653^23^1469920775^77^1^5^706.72^Skraîder-Quel'Thalas", -- [9]
+				"^1655^23^1469921208^78^0^5^709.45^Skraîder-Quel'Thalas", -- [10]
+				"^1655^23^1469921404^100^0^5^709.45^Inaruz-Quel'Thalas", -- [11]
+				"^1653^23^1469922920^49^1^5^714.97^", -- [12]
+				"^1655^23^1469923226^75^1^5^711.39^", -- [13]
+				"^1652^23^1469923485^28^1^5^711.59^", -- [14]
+				"^1654^23^1469923756^39^1^5^711.59^", -- [15]
 			},
 			["Comet"] = {
 				"6A8E1426373886111015Slimshamie-Zul'jin", -- [1]
@@ -51,6 +119,10 @@ VExRT = {
 				"69DF14267298930EA020Løki", -- [28]
 				"69DF1426730240066020Haseoh", -- [29]
 				"69DF142673048912F120Fuzzicans", -- [30]
+				"^1749^23^1469932981^102^1^5^703.80^Helios-ShatteredHalls", -- [31]
+				"^1748^23^1469933857^175^1^5^703.93^Zaraeni-Mal'Ganis", -- [32]
+				"^1750^23^1469934397^81^1^5^704.06^", -- [33]
+				"^1754^23^1469934557^146^1^5^704.06^Tweedler-BleedingHollow", -- [34]
 			},
 			["Metal"] = {
 				"69BE1426377890085015Ninjáman-Ragnaros", -- [1]
@@ -169,7 +241,40 @@ VExRT = {
 		["default_userDuration"] = {
 		},
 		["gnGUIDs"] = {
-			["Comet"] = 269,
+			["Helios-ShatteredHalls"] = 66,
+			["Evan"] = 257,
+			["Skraîder-Quel'Thalas"] = 254,
+			["Hagbard-Thrall"] = 73,
+			["Ostorymar-Quel'Thalas"] = 104,
+			["Entheogenic-Staghelm"] = 262,
+			["Arzuran-Deathwing"] = 254,
+			["Inaruz-Quel'Thalas"] = 260,
+			["Veggieburger-BoreanTundra"] = 102,
+			["Silvenesa"] = 66,
+			["Tweedler-BleedingHollow"] = 102,
+			["Gilgamêsh-Azralon"] = 105,
+			["Töshirö-Azralon"] = 263,
+			["Navlaw-Thrall"] = 253,
+			["Xinesbrasilx-Azralon"] = 269,
+			["Comet"] = 270,
+			["Ewronimus-Quel'Thalas"] = 70,
+			["Madlut-Barthilas"] = 258,
+			["Andjos-Azralon"] = 254,
+			["Dìngy-Barthilas"] = 63,
+			["Sarsio-Stormreaver"] = 255,
+			["Samashock-Area52"] = 262,
+			["Muffy-Barthilas"] = 250,
+			["Metal"] = 72,
+			["Xalli"] = 65,
+			["Vazkala-Azralon"] = 104,
+			["Skamos-Mal'Ganis"] = 260,
+			["Kobeef-Antonidas"] = 253,
+			["Zaraeni-Mal'Ganis"] = 255,
+			["Mattcoss-Area52"] = 254,
+			["Healinspree"] = 258,
+			["Lollie-Barthilas"] = 66,
+			["Nazàrken-Thrall"] = 63,
+			["Scrutinizer-Azralon"] = 66,
 		},
 		["NoRaid"] = true,
 		["CDECol"] = {
@@ -334,10 +439,11 @@ VExRT = {
 		},
 	},
 	["Bossmods"] = {
-		["Kormrok"] = {
-		},
 		["Mannoroth"] = {
 		},
+		["Kormrok"] = {
+		},
+		["ModuleViewed3580"] = true,
 		["Kromog"] = {
 			nil, -- [1]
 			nil, -- [2]
@@ -363,57 +469,51 @@ VExRT = {
 			"Futìlíty", -- [22]
 			"Haseoh", -- [23]
 			"Chokune", -- [24]
-			["time"] = 1426739223,
 			["name"] = "Lustya-Illidan",
 			["sync"] = true,
+			["time"] = 1426739223,
 		},
+	},
+	["LegendaryRing"] = {
 	},
 	["RaidCheck"] = {
 		["ReadyCheckFrameTimerFade"] = 4,
 		["FlaskExp"] = 1,
 	},
+	["BattleRes"] = {
+	},
 	["Addon"] = {
-		["Version"] = 3485,
-		["PreVersion"] = 3240,
-		["IconMiniMapTop"] = -27.1371399120863,
+		["Version"] = 3725,
+		["IconMiniMapTop"] = 1.85814645560772,
+		["IconMiniMapHide"] = true,
 		["Timer"] = 0.1,
 		["IconMiniMapLeft"] = -80,
+		["PreVersion"] = 3725,
 	},
 	["Profiles"] = {
 	},
-	["BossWatcher"] = {
-		["fightsNum"] = 2,
-		["autoSegments"] = {
-		},
-	},
-	["Profile"] = "default",
-	["LootLink"] = {
-	},
-	["BattleRes"] = {
-	},
-	["Note"] = {
-		["BlackNames"] = {
-		},
-		["FontSize"] = 12,
-		["Black"] = {
-			"", -- [1]
-			"", -- [2]
-			"", -- [3]
-		},
-		["Height"] = 100.000061035156,
-		["Strata"] = "HIGH",
-		["Width"] = 199.999938964844,
-	},
-	["Logging"] = {
-	},
 	["MarksBar"] = {
+		["pulltimer"] = 10,
+		["Strata"] = "HIGH",
 		["Show"] = {
 			true, -- [1]
 			true, -- [2]
 			true, -- [3]
 			true, -- [4]
 		},
-		["pulltimer"] = 10,
+	},
+	["BossWatcher"] = {
+		["optionsDamageGraph"] = true,
+		["fightsNum"] = 2,
+		["autoSegments"] = {
+		},
+		["optionsPositionsDist"] = true,
+		["optionsHealingGraph"] = true,
+		["trackingDamageSpells"] = {
+		},
+	},
+	["Profile"] = "default",
+	["LootLink"] = {
 	},
 	["InviteTool"] = {
 		["Words"] = "инв inv byd штм 123",
@@ -427,6 +527,40 @@ VExRT = {
 		["OnlyGuild"] = true,
 		["Rank"] = 1,
 	},
+	["Note"] = {
+		["BlackNames"] = {
+		},
+		["FontSize"] = 12,
+		["Black"] = {
+			"", -- [1]
+			"", -- [2]
+			"", -- [3]
+		},
+		["Height"] = 100.000038146973,
+		["AutoLoad"] = {
+		},
+		["Strata"] = "HIGH",
+		["Width"] = 199.999938964844,
+	},
+	["Logging"] = {
+	},
+	["InspectArtifact"] = {
+		["players"] = {
+		},
+	},
 	["InspectViewer"] = {
+		["ColorizeLowIlvl685"] = false,
+		["ColorizeNoEnch"] = true,
+		["ColorizeNoGems"] = true,
+		["ColorizeLowIlvl"] = true,
+		["ColorizeNoTopEnchGems"] = false,
+		["ColorizeNoValorUpgrade"] = false,
+	},
+	["Attendance"] = {
+		["enabled"] = 2,
+		["data"] = {
+		},
+		["alts"] = {
+		},
 	},
 }

@@ -1,8 +1,9 @@
 
 nRange_Data = {
-	["y"] = 12.0003957748413,
-	["x"] = -364.999816894531,
+	["y"] = 0,
+	["x"] = 0,
 	["active"] = false,
-	["Anchor"] = "BOTTOM",
+	["Anchor"] = "CENTER",
 	["showicon"] = true,
+	["communication"] = false,
 }

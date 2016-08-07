@@ -24,6 +24,7 @@ local function buttonOnClick(frame, ...)
 		frame.obj.list:Hide()
 	else
 		frame.obj.list:Show()
+		frame.obj.list:SetFrameLevel(100)
 		frame.obj:RenderItems()
 	end
 end
@@ -136,7 +137,7 @@ local methods = {
 		
 		-- not perfect, but more or less achieves the effect of lightening the bg color slightly on hover
 		local texHigh = item:CreateTexture(nil, "BORDER")
-		texHigh:SetTexture(1, 1, 1, 0.1)
+		texHigh:SetColorTexture(1, 1, 1, 0.1)
 		texHigh:SetAllPoints(true)
 		item:SetHighlightTexture(texHigh)
 		
@@ -232,6 +233,7 @@ local function Constructor()
 	arrow:SetPoint("RIGHT", frame, "RIGHT", -4, 0)
 
 	local list = CreateFrame("Frame", nil, frame)
+	list:SetFrameStrata("TOOLTIP")
 	list:SetPoint("TOPLEFT", frame, "BOTTOMLEFT", 0, 1)
 	list:Hide()
 	

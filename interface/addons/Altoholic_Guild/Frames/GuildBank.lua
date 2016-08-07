@@ -48,11 +48,7 @@ local function UpdateBankTabButtons()
 			local icon = DataStore:GetGuildBankTabIcon(currentGuildKey, i)
 			local iconNumber = tonumber(icon)
 			
-			if iconNumber then
-				button.Icon:SetToFileData(iconNumber)
-			else
-				button.Icon:SetTexture(icon)
-			end
+			button.Icon:SetTexture(iconNumber or icon)
 			button:Show()
 		else
 			button:Hide()
@@ -444,7 +440,7 @@ function ns:OnLoad()
 	
 	-- if the current guild or at least a guild on this realm was found..set the right values
 	if currentGuild then
-		currentGuildKey = format("%s.%s.%s", THIS_ACCOUNT, currentRealm, currentGuild)
+		currentGuildKey = DataStore:GetThisGuildKey()
 
 		-- pick the first available tab
 		for i = 1, MAX_BANK_TABS do 

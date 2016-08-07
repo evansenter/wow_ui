@@ -16,10 +16,9 @@ local GetPlayerFacing = GetPlayerFacing
 local db
 local _
 
---local f = CreateFrame ("frame", "Hansgar_And_Franzok_Assist", UIParent)
-local f = DF:Create1PxPanel (_, 155, 166, "Hans & Franz", "Hansgar_And_Franzok_Assist", nil, "top", true)
-f:SetFrameStrata ("DIALOG")
-f.version = "v0.16c"
+local f = DF:Create1PxPanel (_, 155, 166, "Hans & Franz Assist", "Hansgar_And_Franzok_Assist", nil, "top", true)
+f:SetFrameStrata ("LOW")
+f.version = "v0.18a"
 
 f.Close:SetScript ("OnClick", function (self)
 	if (f.StampersPhase) then
@@ -58,11 +57,6 @@ f:EnableMouse (true)
 f.all_blocks = {}
 f:Hide()
 
---local title = f:CreateFontString (nil, "overlay", "GameFontNormal")
---title:SetText ("Hansgar & Franzok Assist")
---title:SetPoint ("center", f, "center")
---title:SetPoint ("bottom", f, "top", 0, 2)
-
 --
 local frame_event = CreateFrame ("frame", "Hansgar_And_Franzok_AssistEvents", f)
 frame_event:RegisterEvent ("ENCOUNTER_START")
@@ -71,9 +65,6 @@ frame_event:RegisterEvent ("ADDON_LOADED")
 
 --
 local player_bar = CreateFrame ("statusbar", "Hansgar_And_Franzok_PlayerAssistBar", UIParent)
-
---player_bar:SetPoint ("topleft", f, "bottomleft", 0, -3)
---player_bar:SetPoint ("topright", f, "bottomright", 0, -3)
 
 player_bar:SetPoint ("center", UIParent, "center", 0, 300)
 player_bar:SetSize (280, 16)
@@ -257,7 +248,7 @@ AceComm:Embed (f)
 
 function f:CommReceived (_, data, _, source)
 	if (data == "US") then
-		f:SendCommMessage ("HAFR", UnitName ("player") .. " " .. f.version, "RAID")
+		f:SendCommMessage ("HAFR", (UnitName ("player") or "") .. " " .. f.version, "RAID")
 	elseif (f.users) then
 		f.users [data] = true
 	end
@@ -319,7 +310,7 @@ frame_event:SetFrameStrata ("FULLSCREEN")
 frame_event:SetScript ("OnEvent", function (self, event, ...)
 
 	if (event == "ADDON_LOADED" and select (1, ...) == "Hansgar_And_Franzok_Assist") then
---/dump Hansgar_And_Franzok_DB.STAMPERS_DELAY
+
 		db = Hansgar_And_Franzok_DB
 		if (not db) then
 			db = {}
@@ -355,7 +346,7 @@ frame_event:SetScript ("OnEvent", function (self, event, ...)
 			db.NO_VERTICAL = false
 		end
 		if (db.DANCE_SIZE == nil) then
-			db.DANCE_SIZE = 6
+			db.DANCE_SIZE = 8
 		end
 		--
 		
@@ -392,7 +383,7 @@ frame_event:SetScript ("OnEvent", function (self, event, ...)
 		if (encounterID == 1693 and difficultyID == 16) then
 		
 			if (event == "ENCOUNTER_START") then
-				print ("|cFFFFAA00Hansgar and Franzok Assist|r: addon enabled, good look!")
+				--print ("|cFFFFAA00Hansgar and Franzok Assist|r: addon enabled, good look!")
 			
 				if (f.StampersPhase) then
 					f:StopTracking()
@@ -831,7 +822,7 @@ text:SetText ("STOP CASTING!")
 text:SetPoint ("center", stop_casting_frame, "center")
 
 stop_casting_frame:SetBackdrop ({bgFile = "Interface\\Tooltips\\UI-Tooltip-Background", tile = true, tileSize = 16})
-stop_casting_frame:SetBackdropColor (0, 0, 0, 0.3)
+stop_casting_frame:SetBackdropColor (0, 0, 0, 0.5)
 
 function f:HideStopSpellAlert2()
 	stop_casting_frame.alert.animOut:Stop()
@@ -843,36 +834,32 @@ function f:HideStopSpellAlert()
 	f:ScheduleTimer ("HideStopSpellAlert2", 0.3)
 end
 
---3/22 13:44:48.995  SPELL_INTERRUPT,Vehicle-0-3132-1205-24243-76974-00000EF077,"Franzok",0x10a48,0x0,Player-00-063,"Grubdruid",0x514,0x0,160838,"Disrupting Roar",0x1,5185,"Healing Touch",8
-
 f:SetScript ("OnEvent", function (self, event, time, token, _, who_serial, who_name, who_flags, _, target_serial, target_name, target_flags, _, spellid, spellname, spellschool, buff_type, buff_name)
 
-	if (token == "SPELL_AURA_APPLIED" and spellid == 162124 and not f.StampersPhase) then
-		f:StartTracking()
-		f:EndTrackPlayerPosition()
-		
-	elseif (token == "SPELL_AURA_REMOVED" and spellid == 162124 and f.StampersPhase) then
-		f:StopTracking()
-		if (db.SHOW_DANCE) then
-			f:StartTrackPlayerPosition()
+	if (spellid) then
+		if (token == "SPELL_AURA_APPLIED" and spellid == 162124 and not f.StampersPhase) then
+			f:StartTracking()
+			f:EndTrackPlayerPosition()
+			
+		elseif (token == "SPELL_AURA_REMOVED" and spellid == 162124 and f.StampersPhase) then
+			f:StopTracking()
+			if (db.SHOW_DANCE) then
+				f:StartTrackPlayerPosition()
+			end
+			
+		elseif (token == "SPELL_CAST_START" and spellid == 160838 and db.STOP_CAST) then --Disrupting Roar
+			f.stop_casting_frame:Show()
+			f.stop_casting_frame.alert.animOut:Stop()
+			f.stop_casting_frame.alert.animIn:Play()
+			f:ScheduleTimer ("HideStopSpellAlert", 1.2)
+			
 		end
 		
-	elseif (token == "SPELL_CAST_START" and spellid == 160838 and db.STOP_CAST) then --Disrupting Roar
-		f.stop_casting_frame:Show()
-		f.stop_casting_frame.alert.animOut:Stop()
-		f.stop_casting_frame.alert.animIn:Play()
-		f:ScheduleTimer ("HideStopSpellAlert", 1.2)
-		
+		if (token == "SPELL_INTERRUPT" and spellid == 160838 and db.STOP_CAST) then
+			local link = GetSpellLink (buff_type)
+			print ("Stop Cast Fail:", target_name, link)
+		end
 	end
-	
-	if (token == "SPELL_INTERRUPT" and spellid == 160838 and db.STOP_CAST) then
-		local link = GetSpellLink (buff_type)
-		print ("Stop Cast Fail:", target_name, link)
-	end
-	
-	--if (spellid == 160838) then
-	--	print ("event:", token, 160838, db.STOP_CAST)
-	--end
 
 end)
 --	/run Hansgar_And_Franzok_AssistStopCastingAlert.animIn:Play()
@@ -931,8 +918,7 @@ local on_update_tracker = function (self, elapsed)
 end
 
 function f:StartTracking()
-
-	print ("|cFFFFAA00Hansgar and Franzok Assist|r: Smart Stampers phase started.")
+--	print ("|cFFFFAA00Hansgar and Franzok Assist|r: Smart Stampers phase started.")
 
 	f.StampersPhase = true
 
@@ -955,7 +941,7 @@ function f:StartTracking()
 end
 
 function f:StopTracking()
-	print ("|cFFFFAA00Hansgar and Franzok Assist|r: Smart Stampers phase ended.")
+--	print ("|cFFFFAA00Hansgar and Franzok Assist|r: Smart Stampers phase ended.")
 
 	f.StampersPhase = false
 	frame_tracker:SetScript ("OnUpdate", nil)
@@ -1052,6 +1038,9 @@ function f:RefreshCooldownSettings()
 end
 
 function f:SetDanceBarSize (size)
+	if (not db.DANCE_SIZE) then
+		db.DANCE_SIZE = 8
+	end
 	if (not size) then
 		size = db.DANCE_SIZE
 	end
@@ -1167,8 +1156,8 @@ function f:CreateWindow()
 		
 		local stamper_icon = block:CreateTexture (nil, "overlay")
 		stamper_icon:SetTexture ([[Interface\ICONS\Warrior_talent_icon_LambsToTheSlaughter]])
-		stamper_icon:SetTexCoord (4/64, 60/64, 4/64, 60/64)
-		stamper_icon:SetSize (24, 24)
+		stamper_icon:SetTexCoord (5/64, 59/64, 5/64, 59/64)
+		stamper_icon:SetSize (23, 23)
 		stamper_icon:SetPoint ("center", block, "center")
 		stamper_icon:Hide()
 		block.stamper_icon = stamper_icon
@@ -1416,13 +1405,13 @@ end
 
 local locs = {
 	--block 1:
-	{x1 = 0.51103663444519, y1 = 0.79726493358612, x2 = 0.50061076879501, y2 = 0.8241291642189},
+	{x1 = 0.51103663544519, y1 = 0.79726493458612, x2 = 0.50061076879501, y2 = 0.8241291642189},
 	--block 2:
 	{x1 = 0.49670505523682, y1 = 0.79692482948303, x2 = 0.48469054698944, y2 = 0.82489335536957},	
 	--block 3:
 	{x1 = 0.48130965232849, y1 = 0.79742962121964, x2 = 0.46962946653366, y2 = 0.82453238964081},
 	--block 4:
-	{x1 = 0.46575212478638, y1 = 0.79766929149628, x2 = 0.45400339365005, y2 = 0.82176661491394},	
+	{x1 = 0.46575214478638, y1 = 0.79766989149628, x2 = 0.45400339365005, y2 = 0.82176661491394},	
 	--block 5:
 	{x1 = 0.45073217153549, y1 = 0.79751670360565, x2 = 0.43945103883743, y2 = 0.82504689693451},	
 

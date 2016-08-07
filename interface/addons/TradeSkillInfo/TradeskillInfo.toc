@@ -1,4 +1,4 @@
-## Interface: 60200
+## Interface: 70000
 ## Title: TradeSkillInfo
 ## Notes: Complete tradeskill information.
 ## Notes-zhTW: 完整的商業技能百科
@@ -6,7 +6,7 @@
 ## Notes-esES: Informarcion Completa de las Habilidades de Comercio
 ## Notes-koKR: 전문기술 정보의 모든 것!
 ## Author: Ethan Centaurai
-## Version: v2.3.8
+## Version: v2.3.11
 ## OptionalDeps: LibStub, CallbackHandler-1.0, Ace3, LibBabble-SubZone-3.0, LibBabble-Faction-3.0, Auc-Advanced
 ## SavedVariables: TradeSkillInfoDB
 ## LoadManagers: AddonLoader
@@ -14,7 +14,7 @@
 ## X-Credits: Dys, wmrojer, Evenue, Fieroivan, Viruscamp, CMTitan
 ## X-Icon: Interface\Icons\INV_Elemental_SpiritOfHarmony_2
 ## X-Category: Professions
-## X-Curse-Packaged-Version: v2.3.8
+## X-Curse-Packaged-Version: v2.3.11
 ## X-Curse-Project-Name: TradeSkillInfo
 ## X-Curse-Project-ID: tradeskill-info
 ## X-Curse-Repository-ID: wow/tradeskill-info/mainline
@@ -35,6 +35,7 @@ Libs\AceTimer-3.0\AceTimer-3.0.lua
 Libs\LibBabble-Faction-3.0\lib.xml
 Libs\LibBabble-SubZone-3.0\lib.xml
 Libs\LibDataBroker-1.1\LibDataBroker-1.1.lua
+Libs\LibDBIcon-1.0\LibDBIcon-1.0.lua
 #@end-no-lib-strip@
 
 Locale\enUS.lua
@@ -50,7 +51,6 @@ Locale\zhCN.lua
 Locale\zhTW.lua
 
 TradeskillInfo.lua
-DataBroker.lua
 
 Data.lua
 TradeskillData.lua

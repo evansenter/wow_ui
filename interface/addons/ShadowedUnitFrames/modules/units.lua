@@ -59,7 +59,7 @@ local function ReregisterUnitEvents(self)
 end
 
 -- Register an event that should always call the frame
-local function RegisterNormalEvent(self, event, handler, func)
+local function RegisterNormalEvent(self, event, handler, func, unitOverride)
 	-- Make sure the handler/func exists
 	if( not handler[func] ) then
 		error(string.format("Invalid handler/function passed for %s on event %s, the function %s does not exist.", self:GetName() or tostring(self), tostring(event), tostring(func)), 3)
@@ -67,7 +67,11 @@ local function RegisterNormalEvent(self, event, handler, func)
 	end
 
 	if( unitEvents[event] and not ShadowUF.fakeUnits[self.unitRealType] ) then
-		self:BlizzRegisterUnitEvent(event, self.unitOwner, self.vehicleUnit)
+		self:BlizzRegisterUnitEvent(event, unitOverride or self.unitOwner, self.vehicleUnit)
+		if unitOverride then
+			self.unitEventOverrides = self.unitEventOverrides or {}
+			self.unitEventOverrides[event] = unitOverride
+		end
 	else
 		self:RegisterEvent(event)
 	end
@@ -200,7 +204,7 @@ end
 
 -- Event handling
 local function OnEvent(self, event, unit, ...)
-	if( not unitEvents[event] or self.unit == unit ) then
+	if( not unitEvents[event] or self.unit == unit or (self.unitEventOverrides and self.unitEventOverrides[event] == unit)) then
 		for handler, func in pairs(self.registeredEvents[event]) do
 			handler[func](handler, self, event, unit, ...)
 		end
@@ -889,7 +893,7 @@ function Units:SetHeaderAttributes(frame, type)
 		frame:SetAttribute("roleFilter", config.roleFilter)
 
 		if( config.groupBy == "CLASS" ) then
-			frame:SetAttribute("groupingOrder", "DEATHKNIGHT,DRUID,HUNTER,MAGE,PALADIN,PRIEST,ROGUE,SHAMAN,WARLOCK,WARRIOR,MONK")
+			frame:SetAttribute("groupingOrder", "DEATHKNIGHT,DEMONHUNTER,DRUID,HUNTER,MAGE,PALADIN,PRIEST,ROGUE,SHAMAN,WARLOCK,WARRIOR,MONK")
 			frame:SetAttribute("groupBy", "CLASS")
 		elseif( config.groupBy == "ASSIGNEDROLE" ) then
 			frame:SetAttribute("groupingOrder", "TANK,HEALER,DAMAGER,NONE")
@@ -1016,7 +1020,6 @@ function Units:LoadSplitGroupHeader(type)
 				frame:SetAttribute("initial-unitWatch", true)
 				frame:SetAttribute("showRaid", true)
 				frame:SetAttribute("groupFilter", id)
-				frame:UnregisterEvent("UNIT_NAME_UPDATE")
 				frame:SetAttribute("initialConfigFunction", secureInitializeUnit)
 				frame.initialConfigFunction = initializeUnit
 				frame.isHeaderFrame = true
@@ -1096,7 +1099,6 @@ function Units:LoadGroupHeader(type)
 	headerFrame.isHeaderFrame = true
 	headerFrame.unitType = type
 	headerFrame.unitMappedType = type
-	headerFrame:UnregisterEvent("UNIT_NAME_UPDATE")
 
 	-- For securely managely the display
 	local config = ShadowUF.db.profile.units[type]
@@ -1486,11 +1488,10 @@ end
 -- Handle figuring out what auras players can cure
 local curableSpells = {
 	["DRUID"] = {[88423] = {"Magic", "Curse", "Poison"}, [2782] = {"Curse", "Poison"}},
-	["MAGE"] = {[475] = {"Curse"}},
 	["PRIEST"] = {[527] = {"Magic", "Disease"}, [32375] = {"Magic"}},
-	["PALADIN"] = {[4987] = {"Poison", "Disease"}, [53551] = {"Magic"}},
+	["PALADIN"] = {[4987] = {"Poison", "Disease", "Magic"}, [213644] = {"Poison", "Disease"}},
 	["SHAMAN"] = {[77130] = {"Curse", "Magic"}, [51886] = {"Curse"}},
-	["MONK"] = {[115450] = {"Poison", "Disease"}, [115451] = {"Magic"}}
+	["MONK"] = {[115450] = {"Poison", "Disease", "Magic"}, [218164] = {"Poison", "Disease"}},
 }
 
 curableSpells = curableSpells[select(2, UnitClass("player"))]

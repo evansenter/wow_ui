@@ -76,12 +76,12 @@ function AB:UpdateMicroButtonsParent(parent)
 end
 
 local __buttons = {}
---if(C_StorePublic.IsEnabled()) then
+-- if(C_StorePublic.IsEnabled()) then
 	__buttons[10] = "StoreMicroButton"
 	for i=10, #MICRO_BUTTONS do
 		__buttons[i + 1] = MICRO_BUTTONS[i]
 	end
---end
+-- end
 
 function AB:UpdateMicroPositionDimensions()
 	if not ElvUI_MicroBar then return; end
@@ -119,8 +119,10 @@ function AB:UpdateMicroPositionDimensions()
 
 	if self.db.microbar.enabled then
 		ElvUI_MicroBar:Show()
+		if ElvUI_MicroBar.mover then E:EnableMover(ElvUI_MicroBar.mover:GetName()) end
 	else
 		ElvUI_MicroBar:Hide()
+		if ElvUI_MicroBar.mover then E:DisableMover(ElvUI_MicroBar.mover:GetName()) end
 	end
 end
 
@@ -133,6 +135,7 @@ end
 function AB:SetupMicroBar()
 	local microBar = CreateFrame('Frame', 'ElvUI_MicroBar', E.UIParent)
 	microBar:Point('TOPLEFT', E.UIParent, 'TOPLEFT', 4, -48)
+
 	E.FrameLocks["ElvUI_MicroBar"] = true;
 	for i=1, #MICRO_BUTTONS do
 		self:HandleMicroButton(_G[MICRO_BUTTONS[i]])
@@ -149,6 +152,6 @@ function AB:SetupMicroBar()
 	self:MainMenuMicroButton_SetNormal()
 	self:UpdateMicroPositionDimensions()
 	MainMenuBarPerformanceBar:Kill()
-
+	CollectionsMicroButtonAlert:Kill()
 	E:CreateMover(microBar, 'MicrobarMover', L["Micro Bar"], nil, nil, nil, 'ALL,ACTIONBARS');
 end

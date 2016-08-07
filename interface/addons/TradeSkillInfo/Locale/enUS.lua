@@ -62,6 +62,7 @@ L["Gathered"] = true
 L["Gnomish Engineer"] = true
 L["Goblin Engineer"] = true
 L["Herbalism"] = true
+L["Hide Minimap Button"] = true
 L["HIGH"] = true
 L["Horde"] = true
 L["Horde Quest"] = true

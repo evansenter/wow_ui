@@ -54,7 +54,7 @@ function AB:UpdatePet(event, unit)
 		button.tooltipSubtext = subtext;
 
 		if isActive and name ~= "PET_ACTION_FOLLOW" then
-			--button:GetCheckedTexture():SetTexture(1, 1, 1)
+			--button:GetCheckedTexture():SetColorTexture(1, 1, 1)
 			button:SetChecked(true);
 
 			if IsPetAttackAction(i) then
@@ -127,13 +127,15 @@ function AB:PositionAndSizeBarPet()
 
 	bar:Width(spacing + ((size * (buttonsPerRow * widthMult)) + ((spacing * (buttonsPerRow - 1)) * widthMult) + (spacing * widthMult)));
 	bar:Height(spacing + ((size * (numColumns * heightMult)) + ((spacing * (numColumns - 1)) * heightMult) + (spacing * heightMult)));
-	bar.mouseover = self.db['barPet'].mouseover
+	
 	if self.db['barPet'].enabled then
 		bar:SetScale(1);
 		bar:SetAlpha(bar.db.alpha);
+		E:EnableMover(bar.mover:GetName())
 	else
-		bar:SetScale(0.000001);
+		bar:SetScale(0.0001);
 		bar:SetAlpha(0);
+		E:DisableMover(bar.mover:GetName())
 	end
 
 	if self.db['barPet'].backdrop == true then
@@ -154,7 +156,19 @@ function AB:PositionAndSizeBarPet()
 	else
 		horizontalGrowth = "LEFT";
 	end
-
+	
+	bar.mouseover = self.db['barPet'].mouseover
+	if(bar.mouseover) then
+		bar:SetAlpha(0);
+	else
+		bar:SetAlpha(bar.db.alpha);
+	end	
+	
+	if(self.db['barPet'].inheritGlobalFade) then
+		bar:SetParent(self.fadeParent)
+	else
+		bar:SetParent(E.UIParent)
+	end	
 	local button, lastButton, lastColumnButton, autoCast;
 	for i=1, NUM_PET_ACTION_SLOTS do
 		button = _G["PetActionButton"..i];
@@ -168,30 +182,6 @@ function AB:PositionAndSizeBarPet()
 		autoCast:SetOutside(button, autoCastSize, autoCastSize)
 
 		button:SetAttribute("showgrid", 1);
-
-		if self.db['barPet'].mouseover == true then
-			bar:SetAlpha(0);
-			if not self.hooks[bar] then
-				self:HookScript(bar, 'OnEnter', 'Bar_OnEnter');
-				self:HookScript(bar, 'OnLeave', 'Bar_OnLeave');
-			end
-
-			if not self.hooks[button] then
-				self:HookScript(button, 'OnEnter', 'Button_OnEnter');
-				self:HookScript(button, 'OnLeave', 'Button_OnLeave');
-			end
-		else
-			bar:SetAlpha(bar.db.alpha);
-			if self.hooks[bar] then
-				self:Unhook(bar, 'OnEnter');
-				self:Unhook(bar, 'OnLeave');
-			end
-
-			if self.hooks[button] then
-				self:Unhook(button, 'OnEnter');
-				self:Unhook(button, 'OnLeave');
-			end
-		end
 
 		if i == 1 then
 			local x, y;
@@ -230,7 +220,7 @@ function AB:PositionAndSizeBarPet()
 		end
 
 		if i > numButtons then
-			button:SetScale(0.000001);
+			button:SetScale(0.0001);
 			button:SetAlpha(0);
 		else
 			button:SetScale(1);
@@ -287,7 +277,13 @@ function AB:CreateBarPet()
 
 	PetActionBarFrame.showgrid = 1;
 	PetActionBar_ShowGrid();
-
+	self:HookScript(bar, 'OnEnter', 'Bar_OnEnter');
+	self:HookScript(bar, 'OnLeave', 'Bar_OnLeave');
+	for i=1, NUM_PET_ACTION_SLOTS do
+		self:HookScript(_G["PetActionButton"..i], 'OnEnter', 'Button_OnEnter');
+		self:HookScript(_G["PetActionButton"..i], 'OnLeave', 'Button_OnLeave');
+	end	
+	
 	self:RegisterEvent('SPELLS_CHANGED', 'UpdatePet')
 	self:RegisterEvent('PLAYER_CONTROL_GAINED', 'UpdatePet');
 	self:RegisterEvent('PLAYER_ENTERING_WORLD', 'UpdatePet');

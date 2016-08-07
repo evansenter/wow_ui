@@ -64,7 +64,6 @@ PawnNormalizationRegexes =
 {
 	{"^\|c........(.+)$", "%1"}, -- "|cFF 0FF 0Heroic" --> "Heroic"
 	{"^([%w%s%.]+) %+(%d+)$", "+%2 %1"}, -- "Stamina +5" --> "+5 Stamina"
-	{"^(.-)|r.*", "%1"}, -- For removing meta gem requirements
 	{L.NormalizationEnchant, "%1"}, -- "Enchanted: +50 Strength" --> "+50 Strength" (ENCHANTED_TOOLTIP_LINE)
 }
 
@@ -84,6 +83,7 @@ PawnRegexes =
 	-- ========================================
 	-- Common strings that are ignored (rare ones are at the bottom of the file)
 	-- ========================================
+	{L.HaventCollectedAppearance}, -- You haven't collected this appearance.
 	{PawnGameConstant(ITEM_QUALITY0_DESC)}, -- Poor
 	{PawnGameConstant(ITEM_QUALITY1_DESC)}, -- Common
 	{PawnGameConstant(ITEM_QUALITY2_DESC)}, -- Uncommon
@@ -99,6 +99,7 @@ PawnRegexes =
 	{L.Thunderforged}, -- one version of Shoulders of the Crackling Protector (http://ptr.wowhead.com/item=96329)
 	{L.HeroicThunderforged}, -- one version of Shoulders of the Crackling Protector (http://ptr.wowhead.com/item=97073)
 	{L.Timeless}, -- level 535 version of Ordon Legend-Keeper Spaulders (http://ptr.wowhead.com/item=101925)
+	{L.Titanforged}, -- Legion items upgraded 15 item levels or more
 	{L.Warforged}, -- level 559 Black Blood of Y'Shaarj (http://www.wowhead.com/item=105399)
 	{L.HeroicWarforged}, -- level 572 Black Blood of Y'Shaarj (http://www.wowhead.com/item=105648)
 	{"^" .. ITEM_LEVEL}, -- Item Level 200
@@ -117,6 +118,8 @@ PawnRegexes =
 	{"^" .. PawnGameConstantUnwrapped(ITEM_UNIQUE_EQUIPPABLE)}, -- Unique-Equipped; leave off the $ for Unique-Equipped: Curios of the Shado-Pan Assault (1)
 	{"^" .. PawnGameConstantUnwrapped(ITEM_BIND_QUEST)}, -- Leave off the $ for MonkeyQuest mod compatibility
 	{PawnGameConstant(ITEM_STARTS_QUEST)}, -- This Item Begins a Quest
+	{L.MultiStatHeading}, -- Multiple stats (Zen Wild Jade)
+	{PawnGameConstant(PROFESSIONS_USED_IN_COOKING)}, -- Crafting Reagent
 	{PawnGameConstant(ITEM_CONJURED)}, -- Conjured Item
 	{PawnGameConstant(ITEM_PROSPECTABLE)}, -- Prospectable
 	{PawnGameConstant(ITEM_MILLABLE)}, -- Millable
@@ -154,7 +157,6 @@ PawnRegexes =
 	{L.CooldownRemaining},
 	{"<.+>"}, -- Made by, Right-click to read, etc. (No ^$; can be prefixed by a color)
 	{PawnGameConstantIgnoredPlaceholder(ITEM_WRITTEN_BY)}, -- Written by
-	{L.MetaGemRequirements}, -- Meta gem requirements
 	{L.BagSlots}, -- Bags of all kinds
 	{L.TemporaryBuffSeconds}, -- Temporary item buff
 	{L.TemporaryBuffMinutes}, -- Temporary item buff
@@ -190,19 +192,18 @@ PawnRegexes =
 	{L.WeaponDamageEnchantment, "MinDamage", 1, PawnMultipleStatsExtract, "MaxDamage", 1, PawnMultipleStatsExtract}, -- Weapon enchantments
 	{L.WeaponDamageEquip, "MinDamage", 1, PawnMultipleStatsExtract, "MaxDamage", 1, PawnMultipleStatsExtract}, -- Braided Eternium Chain (it's an item, not an enchantment)
 	{L.Scope, "MinDamage", 1, PawnMultipleStatsExtract, "MaxDamage", 1, PawnMultipleStatsExtract}, -- Ranged weapon scopes
-	{L.AllStats, "Strength", 1, PawnMultipleStatsExtract, "Agility", 1, PawnMultipleStatsExtract, "Stamina", 1, PawnMultipleStatsExtract, "Intellect", 1, PawnMultipleStatsExtract, "Spirit", 1, PawnMultipleStatsExtract}, -- Enchanted Pearl, Enchanted Tear, chest enchantments
+	{L.AllStats, "Strength", 1, PawnMultipleStatsExtract, "Agility", 1, PawnMultipleStatsExtract, "Stamina", 1, PawnMultipleStatsExtract, "Intellect", 1, PawnMultipleStatsExtract}, -- Enchanted Pearl, Enchanted Tear, chest enchantments
 	{L.Strength, "Strength"},
 	{L.Agility, "Agility"},
 	{L.Stamina, "Stamina"},
 	{L.Intellect, "Intellect"}, -- negative Intellect: Kreeg's Mug
-	{L.Spirit, "Spirit"},
-	{L.EnchantmentTitaniumWeaponChain, "HasteRating", 28, PawnMultipleStatsFixed}, -- Weapon enchantment; also reduces disarm duration -- *** Needs update in WoW 6.0
+	{L.EnchantmentTitaniumWeaponChain, "HasteRating", 28, PawnMultipleStatsFixed}, -- Weapon enchantment; also reduces disarm duration (may be obsolete?)
 	{L.EnchantmentPyriumWeaponChain, "HasteRating", 8, PawnMultipleStatsFixed}, -- Weapon enchantment; also reduces disarm duration
 	{L.EnchantmentLivingSteelWeaponChain, "CritRating", 13, PawnMultipleStatsFixed}, -- Weapon enchantment; also reduces disarm duration
-	{L.Dodge, "BonusArmor", 0.5, PawnSingleStatMultiplier}, -- Uppercase: Subtle Alicite, Arctic Ring of Eluding, Cata head enchantment for tanks
-	{L.Dodge2, "BonusArmor", 0.5, PawnSingleStatMultiplier}, -- unused in English
-	{L.Parry, "BonusArmor", 0.5, PawnSingleStatMultiplier},
-	{L.Parry2, "BonusArmor", 0.5, PawnSingleStatMultiplier}, -- unused in English
+	{L.Dodge, "Stamina", 0.75, PawnSingleStatMultiplier}, -- Uppercase: Subtle Alicite, Arctic Ring of Eluding, Cata head enchantment for tanks
+	{L.Dodge2, "Stamina", 0.75, PawnSingleStatMultiplier}, -- unused in English
+	{L.Parry, "Stamina", 0.75, PawnSingleStatMultiplier},
+	{L.Parry2, "Stamina", 0.75, PawnSingleStatMultiplier}, -- unused in English
 	{L.Dps}, -- Ignore this; DPS is calculated manually
 	{L.DpsAdd, "Dps"},
 	{L.EnchantmentFieryWeapon, "Dps", 4, PawnMultipleStatsFixed}, -- weapon enchantment
@@ -210,21 +211,20 @@ PawnRegexes =
 	{L.Crit2, "CritRating"}, -- unused in English
 	{L.ScopeCrit, "CritRating"},
 	{L.ScopeRangedCrit, "CritRating"}, -- Heartseeker Scope
-	{L.Resilience, "ResilienceRating"}, -- Mystic Dawnstone
-	{L.Resilience2, "ResilienceRating"}, -- unused in English
-	{L.PvPPower, "SpellPenetration"}, -- Stormy Chalcedony
+	{L.Resilience, "Stamina"}, -- Mystic Dawnstone
+	{L.Resilience2, "Stamina"}, -- unused in English
+	{L.PvPPower, "Stamina"}, -- Stormy Chalcedony
 	{L.EnchantmentCounterweight, "HasteRating"},
 	{L.Haste, "HasteRating"}, -- Leggings of the Betrayed
 	{L.Haste2, "HasteRating"}, -- unused in English
 	{L.Mastery, "MasteryRating"}, -- Zen Dream Emerald
 	{L.Mastery2, "MasteryRating"}, -- unused in English
-	{L.Multistrike, "Multistrike"}, -- http://wod.wowhead.com/item=100945
 	{L.Versatility, "Versatility"}, -- http://wod.wowhead.com/item=100945
 	{L.Leech, "Leech"}, -- http://wod.wowhead.com/item=100945
 	{L.Avoidance, "Avoidance"}, -- http://wod.wowhead.com/item=100945
 	{PawnGameConstant(STAT_STURDINESS), "Indestructible", 1, PawnMultipleStatsFixed}, -- http://wod.wowhead.com/item=100945
 	{L.MovementSpeed, "MovementSpeed"}, -- http://wod.wowhead.com/item=100945
-	{L.Ap, "Ap"},
+	{L.Ap, "Ap"}, -- http://legion.wowhead.com/item=50035/black-bruise
 	{L.Hp5, "Stamina", 3, PawnSingleStatMultiplier}, -- (counting 1 HP5 = 3 Stamina)
 	{L.Hp52, "Stamina", 3, PawnSingleStatMultiplier}, -- Demon's Blood (counting 1 HP5 = 3 Stamina)
 	{L.Hp53, "Stamina", 3, PawnSingleStatMultiplier}, -- Aquamarine Signet of Regeneration
@@ -234,14 +234,8 @@ PawnRegexes =
 	{L.Armor, "Armor"}, -- normal armor and cloak armor enchantments
 	{L.Armor2, "Armor"}, -- unused in English
 	{L.EnchantmentArmorKit, "Armor"}, -- armor kits
-	{L.BonusArmor, "BonusArmor"}, -- Chef's Hat: http://wod.wowhead.com/item=46349#links
-	{L.SpellPower, "SpellPower"}, -- enchantments and weapons
-	{PawnGameConstant(EMPTY_SOCKET_RED), "RedSocket", 1, PawnMultipleStatsFixed},
-	{PawnGameConstant(EMPTY_SOCKET_YELLOW), "YellowSocket", 1, PawnMultipleStatsFixed},
-	{PawnGameConstant(EMPTY_SOCKET_BLUE), "BlueSocket", 1, PawnMultipleStatsFixed},
+	{L.SpellPower, "SpellPower"}, -- enchantments *** removed in 7.0?
 	{PawnGameConstant(EMPTY_SOCKET_PRISMATIC), "PrismaticSocket", 1, PawnMultipleStatsFixed},
-	{PawnGameConstant(EMPTY_SOCKET_NO_COLOR), "PrismaticSocket", 1, PawnMultipleStatsFixed}, -- unused
-	{PawnGameConstant(EMPTY_SOCKET_META), "MetaSocket", 1, PawnMultipleStatsFixed},
 
 	-- ========================================
 	-- Rare strings that are ignored (common ones are at the top of the file)
@@ -269,6 +263,7 @@ PawnRightHandRegexes =
 	{L.Polearm, "IsPolearm", 1, PawnMultipleStatsFixed},
 	{L.Staff, "IsStaff", 1, PawnMultipleStatsFixed},
 	{L.Sword, "IsSword", 1, PawnMultipleStatsFixed},
+	{L.Warglaives, "IsWarglaive", 1, PawnMultipleStatsFixed},
 	{L.Wand, "IsWand", 1, PawnMultipleStatsFixed},
 	{L.Cloth, "IsCloth", 1, PawnMultipleStatsFixed},
 	{L.Leather, "IsLeather", 1, PawnMultipleStatsFixed},

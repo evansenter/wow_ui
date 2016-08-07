@@ -205,7 +205,7 @@ end
 
 -- *** Scanning functions ***
 local function ScanBuildings()
-	local plots = C_Garrison.GetPlots()
+	local plots = C_Garrison.GetPlots(LE_FOLLOWER_TYPE_GARRISON_6_0)
 
 	-- to avoid deleting previously saved data when the game is not ready to deliver information
 	-- exit if no data is available
@@ -215,7 +215,7 @@ local function ScanBuildings()
 	wipe(buildings)
 	
 	-- Scan Town Hall
-	local level = C_Garrison.GetGarrisonInfo()
+	local level = C_Garrison.GetGarrisonInfo(LE_FOLLOWER_TYPE_GARRISON_6_0)
 	
 	buildings[BUILDING_TOWN_HALL] = { id = 0, rank = level }
 	
@@ -239,7 +239,7 @@ local function ScanBuildings()
 end
 	
 local function ScanFollowers()
-	local followersList = C_Garrison.GetFollowers(1)
+	local followersList = C_Garrison.GetFollowers(LE_FOLLOWER_TYPE_GARRISON_6_0)
 	if not followersList then return end
 
 	local followers = addon.ThisCharacter.Followers
@@ -254,6 +254,7 @@ local function ScanFollowers()
 	local rarity, level, iLevel, ability1, ability2, ability3, ability4, trait1, trait2, trait3, trait4
 	
 	local numFollowers = 0		-- number of followers
+	local numActive = 0			-- number of active followers
 	local num100 = 0				-- number of followers at level 100
 	local num615 = 0				-- number of followers at iLevel 615+
 	local num630 = 0				-- number of followers at iLevel 630+
@@ -334,8 +335,12 @@ local function ScanFollowers()
 			
 			if level == 100 then 
 				num100 = num100 + 1 
-				weaponiLvl = weaponiLvl + weaponItemLevel
-				armoriLvl = armoriLvl + armorItemLevel
+				
+				if not isInactive then
+					numActive = numActive + 1
+					weaponiLvl = weaponiLvl + weaponItemLevel
+					armoriLvl = armoriLvl + armorItemLevel
+				end
 			end
 			
 			if iLevel >= 615 then num615 = num615 + 1	end
@@ -382,8 +387,8 @@ local function ScanFollowers()
 	c.numFollowersAtiLevel645 = num645
 	c.numFollowersAtiLevel660 = num660
 	c.numFollowersAtiLevel675 = num675
-	c.avgWeaponiLevel = weaponiLvl / num100
-	c.avgArmoriLevel = armoriLvl / num100
+	c.avgWeaponiLevel = weaponiLvl / numActive
+	c.avgArmoriLevel = armoriLvl / numActive
 	c.numRareFollowers = numRare
 	c.numEpicFollowers = numEpic
 	c.Abilities = abilities
@@ -400,8 +405,8 @@ local function ScanResourceCollectionTime()
 end
 
 local function ScanAvailableMissions()
-	local missionsList = C_Garrison.GetAvailableMissions()
-	if not missionsList then return end
+	local missionsList = {}
+	C_Garrison.GetAvailableMissions(missionsList, LE_FOLLOWER_TYPE_GARRISON_6_0)
 	
 	local missions = addon.ThisCharacter.AvailableMissions
 	wipe(missions)
@@ -431,8 +436,8 @@ local function ScanAvailableMissions()
 end
 
 local function ScanActiveMissions()
-	local missionsList = C_Garrison.GetInProgressMissions()
-	if not missionsList then return end
+	local missionsList = {}
+	C_Garrison.GetInProgressMissions(missionsList, LE_FOLLOWER_TYPE_GARRISON_6_0)
 	
 	local missions = addon.ThisCharacter.ActiveMissions
 	wipe(missions)

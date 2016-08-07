@@ -1,16 +1,20 @@
 -- Lua APIs
 local tinsert, tconcat, tremove, wipe = table.insert, table.concat, table.remove, wipe
-local fmt, tostring, string_char = string.format, tostring, string.char
+local fmt, tostring, string_char, strtrim, strsub = string.format, tostring, string.char, strtrim, strsub
 local select, pairs, next, type, unpack = select, pairs, next, type, unpack
 local loadstring, assert, error = loadstring, assert, error
 local setmetatable, getmetatable, rawset, rawget = setmetatable, getmetatable, rawset, rawget
 local bit_band, bit_lshift, bit_rshift = bit.band, bit.lshift, bit.rshift
-local coroutine = coroutine
+local coroutine, rad, sqrt, atan2, floor, cos, sin = coroutine, rad, sqrt, atan2, floor, cos, sin
 local _G = _G
 
 -- WoW APIs
-local GetSpellInfo = GetSpellInfo
-local GetItemInfo = GetItemInfo
+local InCombatLockdown, IsShiftKeyDown, IsMouseButtonDown, SetCursor, GetMouseFocus, MouseIsOver, ResetCursor
+    = InCombatLockdown, IsShiftKeyDown, IsMouseButtonDown, SetCursor, GetMouseFocus, MouseIsOver, ResetCursor
+local GetSpellInfo, GetItemInfo, IsSpellKnown, GetItemIcon, UnitName
+    = GetSpellInfo, GetItemInfo, IsSpellKnown, GetItemIcon, UnitName
+local GetScreenWidth, GetScreenHeight, GetBuildInfo, GetLocale, GetTime, PlaySoundFile, PlaySoundKitID, CreateFrame, GetAddOnInfo, PlaySound, IsAddOnLoaded, LoadAddOn
+    = GetScreenWidth, GetScreenHeight, GetBuildInfo, GetLocale, GetTime, PlaySoundFile, PlaySoundKitID, CreateFrame, GetAddOnInfo, PlaySound, IsAddOnLoaded, LoadAddOn
 
 local LDB = LibStub:GetLibrary("LibDataBroker-1.1")
 local AceGUI = LibStub("AceGUI-3.0")
@@ -25,8 +29,8 @@ local L = WeakAuras.L
 local ADDON_NAME = "WeakAurasOptions";
 
 -- GLOBALS: WeakAuras WeakAurasSaved WeakAurasOptionsSaved WeakAuras_DropDownMenu AceGUIWidgetLSMlists
--- GLOBALS: GameTooltip UIParent FONT_COLOR_CODE_CLOSE RED_FONT_COLOR_CODE
--- GLOBALS: STATICPOPUP_NUMDIALOGS StaticPopupDialogs StaticPopup_Show GameTooltip_Hide
+-- GLOBALS: GameTooltip GameTooltip_Hide UIParent FONT_COLOR_CODE_CLOSE RED_FONT_COLOR_CODE
+-- GLOBALS: STATICPOPUP_NUMDIALOGS StaticPopupDialogs StaticPopup_Show GetAddOnEnableState
 
 local font_close,yellow_font,red_font = FONT_COLOR_CODE_CLOSE,YELLOW_FONT_COLOR_CODE,RED_FONT_COLOR_CODE
 local ValidateNumeric = function(info,val)
@@ -39,8 +43,7 @@ end
 local dynFrame = WeakAuras.dynFrame;
 WeakAuras.transmitCache = {};
 
-local iconCache = {};
-local idCache = {};
+local spellCache = {};
 local talentCache = {};
 
 local regionOptions = WeakAuras.regionOptions;
@@ -48,6 +51,7 @@ local displayButtons = {};
 WeakAuras.displayButtons = displayButtons;
 local optionReloads = {};
 local optionTriggerChoices = {};
+WeakAuras.optionTriggerChoices = optionTriggerChoices;
 WeakAuras.thumbnails = {};
 local thumbnails = WeakAuras.thumbnails;
 local displayOptions = {};
@@ -292,7 +296,6 @@ local aura_types = WeakAuras.aura_types;
 local orientation_types = WeakAuras.orientation_types;
 local spec_types = WeakAuras.spec_types;
 local totem_types = WeakAuras.totem_types;
-local texture_types = WeakAuras.texture_types;
 local operator_types = WeakAuras.operator_types;
 local string_operator_types = WeakAuras.string_operator_types;
 local weapon_types = WeakAuras.weapon_types;
@@ -400,15 +403,17 @@ function WeakAuras.CreateIconCache(callback)
     local id = 0;
     local misses = 0;
 
-    while (misses < 200) do
+    while (misses < 400) do
       id = id + 1;
       local name, _, icon = GetSpellInfo(id);
-      if(name) then
-        iconCache[name] = icon;
-        if not(idCache[name]) then
-          idCache[name] = {}
+
+      if(icon == 136243) then -- 136243 is the a gear icon, we can ignore those spells
+        misses = 0;
+      elseif(name and name ~= "") then
+        if (not spellCache[name]) then
+          spellCache[name] = {};
         end
-        idCache[name][id] = true;
+        spellCache[name][id] = icon;
         misses = 0;
       else
         misses = misses + 1;
@@ -423,12 +428,32 @@ function WeakAuras.CreateIconCache(callback)
   dynFrame:AddAction(callback, co);
 end
 
+local bestIcon = {};
+function WeakAuras.GetIconFromSpellCache(name)
+  if (bestIcon[name]) then
+    return bestIcon[name];
+  end
+
+  local icons = spellCache[name];
+  local bestMatch = nil;
+  if (icons) then
+    for spellId, icon in pairs(icons) do
+      if (not bestMatch) then
+        bestMatch = spellId;
+      elseif(IsSpellKnown(spellId)) then
+        bestMatch = spellId;
+      end
+    end
+  end
+  return bestMatch and icons[bestMatch];
+end
+
 function WeakAuras.ConstructOptions(prototype, data, startorder, subPrefix, subSuffix, triggernum, triggertype, unevent)
   local trigger, untrigger;
-  if(triggertype == "load") then
-    trigger = data.load;
-  elseif(data.controlledChildren) then
+  if(data.controlledChildren) then
     trigger, untrigger = {}, {};
+  elseif(triggertype == "load") then
+    trigger = data.load;
   else
     if(triggernum == 0) then
       data.untrigger = data.untrigger or {};
@@ -463,6 +488,15 @@ function WeakAuras.ConstructOptions(prototype, data, startorder, subPrefix, subS
       local realname = name;
       if(triggertype == "untrigger") then
         name = "untrigger_"..name;
+      end
+      if (arg.type ~= "toggle" and arg.type ~= "tristate") then
+        -- Ensure new line for non-toggle options
+        options["spacer_"..name] = {
+          type = "description",
+          name = "",
+          order = order,
+        }
+        order = order + 1;
       end
       if(arg.type == "tristate") then
         options["use_"..name] = {
@@ -711,19 +745,20 @@ function WeakAuras.ConstructOptions(prototype, data, startorder, subPrefix, subS
           image = function()
             if(trigger["use_"..realname] and trigger[realname]) then
               if(arg.type == "aura") then
-                return iconCache[trigger[realname]] or "", 18, 18;
+                local icon = WeakAuras.GetIconFromSpellCache(trigger[realname]);
+                return icon and tostring(icon) or "", 18, 18;
               elseif(arg.type == "spell") then
                 local _, _, icon = GetSpellInfo(trigger[realname]);
-                return icon or "", 18, 18;
+                return icon and tostring(icon) or "", 18, 18;
               elseif(arg.type == "item") then
                 local _, _, _, _, _, _, _, _, _, icon = GetItemInfo(trigger[realname]);
-                return icon or "", 18, 18;
+                return icon and tostring(icon) or "", 18, 18;
               end
             else
               return "", 18, 18;
             end
           end,
-          disabled = function() return not ((arg.type == "aura" and trigger[realname] and iconCache[trigger[realname]]) or (arg.type == "spell" and trigger[realname] and GetSpellInfo(trigger[realname])) or (arg.type == "item" and trigger[realname] and GetItemIcon(trigger[realname]))) end
+          disabled = function() return not ((arg.type == "aura" and trigger[realname] and WeakAuras.GetIconFromSpellCache(trigger[realname])) or (arg.type == "spell" and trigger[realname] and GetSpellInfo(trigger[realname])) or (arg.type == "item" and trigger[realname] and GetItemIcon(trigger[realname]))) end
         };
         order = order + 1;
         options[name] = {
@@ -945,8 +980,10 @@ function WeakAuras.ConstructOptions(prototype, data, startorder, subPrefix, subS
               return trigger[realname].multi[v];
             end
           end,
-          set = function(info, v)
-            if(trigger[realname].multi[v]) then
+          set = function(info, v, calledFromSetAll)
+            if (calledFromSetAll) then
+              trigger[realname].multi[v] = calledFromSetAll;
+            elseif(trigger[realname].multi[v]) then
               trigger[realname].multi[v] = nil;
             else
               trigger[realname].multi[v] = true;
@@ -1054,18 +1091,23 @@ loadedFrame:SetScript("OnEvent", function(self, event, addon)
 
       odb = WeakAurasOptionsSaved;
 
-      odb.iconCache = odb.iconCache or {};
-      iconCache = odb.iconCache;
-      odb.idCache = odb.idCache or {};
-      idCache = odb.idCache;
-      odb.talentCache = odb.talentCache or {};
+      -- Remove icon and id cache (replaced with spellCache)
+      if (odb.iconCache) then
+        odb.iconCache = nil;
+      end
+      if (odb.idCache) then
+        odb.idCache = nil;
+      end
+      odb.spellCache = odb.spellCache or {};
+      spellCache = odb.spellCache;
 
       local _, build = GetBuildInfo();
       local locale = GetLocale();
       local version = WeakAuras.versionString
 
       local num = 0;
-      for i,v in pairs(odb.iconCache) do
+
+      for i,v in pairs(odb.spellCache) do
         num = num + 1;
       end
 
@@ -1079,8 +1121,17 @@ loadedFrame:SetScript("OnEvent", function(self, event, addon)
 
       -- Updates the icon cache with whatever icons WeakAuras core has actually used.
       -- This helps keep name<->icon matches relevant.
-      for name, icon in pairs(db.tempIconCache) do
-        iconCache[name] = icon;
+      for name, icons in pairs(db.dynamicIconCache) do
+        if (db.dynamicIconCache[name]) then
+          for spellId, icon in pairs(db.dynamicIconCache[name]) do
+            if (not spellCache[name]) then
+              spellCache[name] = {};
+            end
+            if (not spellCache[name][spellId]) then
+              spellCache[name][spellId] = icon;
+            end
+          end
+        end
       end
 
     --Saves the talent names and icons for the current class
@@ -1120,7 +1171,7 @@ function WeakAuras.DeleteOption(data)
     end
   end
 
-  WeakAuras.HideAllClones(id);
+  WeakAuras.CollapseAllClones(id);
 
   WeakAuras.Delete(data);
   frame:ClearPicks();
@@ -1207,19 +1258,15 @@ function WeakAuras.ShowOptions(msg)
       end
     end
   end
+
+  if (frame.window == "codereview") then
+    frame.codereview:Close();
+  end
 end
 
 function WeakAuras.HideOptions()
   -- dynFrame:SetScript("OnUpdate", nil);
   WeakAuras.UnlockUpdateInfo();
-
-  for id, data in pairs(db.displays) do
-    local region = WeakAuras.regions[id] and WeakAuras.regions[id].region;
-    if(region) then
-      region:SetScript("OnShow", nil);
-      region:SetScript("OnHide", nil);
-    end
-  end
 
   if(frame) then
     frame:Hide();
@@ -1230,9 +1277,14 @@ function WeakAuras.HideOptions()
     tutFrame:Hide();
   end
 
+  WeakAuras.PauseAllDynamicGroups();
+
   for id, data in pairs(WeakAuras.regions) do
     data.region:Collapse();
   end
+
+  WeakAuras.ResumeAllDynamicGroups();
+
   WeakAuras.ReloadAll();
   WeakAuras.Resume();
 end
@@ -1257,19 +1309,16 @@ function WeakAuras.DoConfigUpdate()
           region:SetDurationInfo(12, rem);
         end
       end
-      WeakAuras.duration_cache:SetDurationInfo(id, 12, rem, nil, nil, cloneNum);
     elseif(type(WeakAuras.CanHaveDuration(data)) == "table") then
       local demoValues = WeakAuras.CanHaveDuration(data);
       local current, maximum = demoValues.current or 10, demoValues.maximum or 100;
       if(region.SetDurationInfo) then
         region:SetDurationInfo(current, maximum, true);
       end
-      WeakAuras.duration_cache:SetDurationInfo(id, current, maximum, nil, nil, cloneNum);
     else
       if(region.SetDurationInfo) then
         region:SetDurationInfo(0, math.huge);
       end
-      WeakAuras.duration_cache:SetDurationInfo(id, 0, math.huge, nil, nil, cloneNum);
     end
   end
 
@@ -1305,6 +1354,7 @@ function WeakAuras.UnlockUpdateInfo()
 end
 
 function WeakAuras.SetIconNames(data)
+  if (not thumbnails[data.id]) then return end;
   WeakAuras.SetIconName(data, WeakAuras.regions[data.id].region);
   WeakAuras.SetIconName(data, thumbnails[data.id].region);
   if(WeakAuras.clones[data.id]) then
@@ -1316,17 +1366,6 @@ end
 
 function WeakAuras.SetIconName(data, region)
   local name, icon = WeakAuras.GetNameAndIcon(data);
-  if(data.trigger.type == "aura" and not (data.trigger.inverse or WeakAuras.CanGroupShowWithZero(data))
-     and data.trigger.names) then
-    -- Try to get an icon from the icon cache
-    for index, checkname in pairs(data.trigger.names) do
-      if(iconCache[checkname]) then
-        name, icon = checkname, iconCache[checkname];
-        break;
-      end
-    end
-  end
-
   WeakAuras.transmitCache[data.id] = icon;
 
   if(region.SetIcon) then
@@ -1558,6 +1597,7 @@ end
 local function getAll(data, info, ...)
   local combinedValues = {};
   local first = true;
+  local debug = false;
   for index, childId in ipairs(data.controlledChildren) do
     local childData = WeakAuras.GetData(childId);
     if(childData) then
@@ -1603,11 +1643,12 @@ local function getAll(data, info, ...)
       end
     end
   end
-
   return unpack(combinedValues);
 end
 
 local function setAll(data, info, ...)
+  WeakAuras.pauseOptionsProcessing(true);
+  local before = getAll(data, info, ...)
   for index, childId in ipairs(data.controlledChildren) do
     local childData = WeakAuras.GetData(childId);
     if(childData) then
@@ -1621,12 +1662,15 @@ local function setAll(data, info, ...)
       end
       for i=#childOptionTable,0,-1 do
         if(childOptionTable[i].set) then
-          childOptionTable[i].set(info, ...);
+          childOptionTable[i].set(info, ..., not before);
           break;
         end
       end
     end
   end
+  WeakAuras.pauseOptionsProcessing(false);
+  WeakAuras.ScanForLoads();
+  WeakAuras.SortDisplayButtons();
 end
 
 local function hiddenAll(data, info)
@@ -1699,9 +1743,65 @@ local function disabledAll(data, info)
 end
 
 local function replaceNameDescFuncs(intable, data)
+
+  local function compareTables(tableA, tableB)
+    if(#tableA == #tableB) then
+      for j=1,#tableA do
+        if(type(tableA[j]) == "number" and type(tableB[j]) == "number") then
+          if((math.floor(tableA[j] * 100) / 100) ~= (math.floor(tableB[j] * 100) / 100)) then
+            return false;
+          end
+        else
+          if(tableA[j] ~= tableB[j]) then
+            return false;
+          end
+        end
+      end
+    else
+      return false;
+    end
+    return true;
+  end
+
+  local function combineKeys(info)
+    local combinedKeys = nil;
+    for index, childId in ipairs(data.controlledChildren) do
+      local childData = WeakAuras.GetData(childId);
+      if(childData) then
+        WeakAuras.EnsureOptions(childId);
+        local childOptions = displayOptions[childId];
+        local childOption = childOptions;
+        local childOptionTable = {[0] = childOption};
+        for i=1,#info do
+          childOption = childOption.args[info[i]];
+          childOptionTable[i] = childOption;
+        end
+        for i=#childOptionTable,0,-1 do
+          if(childOptionTable[i].values) then
+            local values;
+            if (type(childOptionTable[i].values) == "function") then
+              values = childOptionTable[i].values(info); -- TODO need to pass in info?
+            elseif (type(childOptionTable[i].values) == "table") then
+              values = childOptionTable[i].values;
+            end
+            if (values) then
+              combinedKeys = combinedKeys or {};
+              for k, v in pairs(values) do
+                combinedKeys[k] = v;
+              end
+            end
+          end
+        end
+      end
+    end
+    return combinedKeys;
+  end
+
   local function sameAll(info)
     local combinedValues = {};
     local first = true;
+    local combinedKeys = combineKeys(info);
+
     for index, childId in ipairs(data.controlledChildren) do
       local childData = WeakAuras.GetData(childId);
       if(childData) then
@@ -1715,34 +1815,29 @@ local function replaceNameDescFuncs(intable, data)
         end
         for i=#childOptionTable,0,-1 do
           if(childOptionTable[i].get) then
-            local values = {childOptionTable[i].get(info)};
-            if(first) then
-              combinedValues = values;
-              first = false;
-            else
-              local same = true;
-              if(#combinedValues == #values) then
-                for j=1,#combinedValues do
-                  if(type(combinedValues[j]) == "number" and type(values[j]) == "number") then
-                    if((math.floor(combinedValues[j] * 100) / 100) ~= (math.floor(values[j] * 100) / 100)) then
-                      same = false;
-                      break;
-                    end
-                  else
-                    if(combinedValues[j] ~= values[j]) then
-                      same = false;
-                      break;
-                    end
+            if (combinedKeys) then
+              for key, _ in pairs(combinedKeys) do
+                local values = {childOptionTable[i].get(info, key)};
+                if (combinedValues[key] == nil) then
+                  combinedValues[key] = values;
+                else
+                  if (not compareTables(combinedValues[key], values)) then
+                    return nil;
                   end
                 end
-              else
-                same = false;
               end
-              if not(same) then
-                return nil;
+            else
+              local values = {childOptionTable[i].get(info)};
+              if(first) then
+                combinedValues = values;
+                first = false;
+              else
+                if (not compareTables(combinedValues, values)) then
+                  return nil;
+                end
               end
             end
-            break;
+            break; -- Found get function
           end
         end
       end
@@ -1840,6 +1935,11 @@ local function replaceNameDescFuncs(intable, data)
           if(sameAll(info)) then
             return descAll(info);
           else
+            local combinedKeys = nil;
+            if (intable.type == "multiselect") then
+              combinedKeys = combineKeys(info)
+            end
+
             local values = {};
             for index, childId in ipairs(data.controlledChildren) do
               local childData = WeakAuras.GetData(childId);
@@ -1880,6 +1980,18 @@ local function replaceNameDescFuncs(intable, data)
                       local key = childOptionTable[i].get(info);
                       local display = key and selectValues[key] or L["None"];
                       tinsert(values, "|cFFE0E000"..childId..": |r"..display);
+                    elseif(intable.type == "multiselect") then
+                      local selectedValues = nil;
+                      for k, v in pairs(combinedKeys) do
+                        if (childOptionTable[i].get(info, k)) then
+                          if (not selectedValues) then
+                            selectedValues = tostring(v);
+                          else
+                            selectedValues = selectedValues .. ", " .. tostring(v);
+                          end
+                        end
+                      end
+                      tinsert(values, "|cFFE0E000"..childId..": |r"..selectedValues);
                     else
                       local display = childOptionTable[i].get(info) or L["None"];
                       if(type(display) == "number") then
@@ -1961,7 +2073,7 @@ function WeakAuras.AddOption(id, data)
     regionOption = {
       unsupported = {
         type = "description",
-        name = L["This region of type \"%s\" has no configuration options."]:format(data.regionType)
+        name = L["This region of type \"%s\" is not supported."]:format(data.regionType)
       }
     };
   end
@@ -2049,7 +2161,9 @@ function WeakAuras.AddOption(id, data)
           data.actions[field] = data.actions[field] or {};
           data.actions[field][value] = v;
           if(value == "sound" or value == "sound_path") then
-            PlaySoundFile(v, data.actions.start.sound_channel);
+            PlaySoundFile(v, data.actions.start.sound_channel or "Master");
+          elseif(value == "sound_kit_id") then
+            PlaySoundKitID(v, data.actions.start.sound_channel or "Master");
           end
           WeakAuras.Add(data);
         end,
@@ -2184,7 +2298,7 @@ function WeakAuras.AddOption(id, data)
             order = 8.5,
             values = WeakAuras.sound_channel_types,
             disabled = function() return not data.actions.start.do_sound end,
-            get = function() return data.actions.start.sound_channel or "SFX" end
+            get = function() return data.actions.start.sound_channel or "Master" end
           },
           start_sound_path = {
             type = "input",
@@ -2192,6 +2306,14 @@ function WeakAuras.AddOption(id, data)
             order = 9,
             width = "double",
             hidden = function() return data.actions.start.sound ~= " custom" end,
+            disabled = function() return not data.actions.start.do_sound end
+          },
+          start_sound_kit_id = {
+            type = "input",
+            name = L["Sound Kit ID"],
+            order = 9,
+            width = "double",
+            hidden = function() return data.actions.start.sound ~= " KitID" end,
             disabled = function() return not data.actions.start.do_sound end
           },
           start_do_glow = {
@@ -2359,6 +2481,14 @@ function WeakAuras.AddOption(id, data)
             order = 29,
             width = "double",
             hidden = function() return data.actions.finish.sound ~= " custom" end,
+            disabled = function() return not data.actions.finish.do_sound end
+          },
+          finish_sound_kit_id = {
+            type = "input",
+            name = L["Sound Kit ID"],
+            order = 29,
+            width = "double",
+            hidden = function() return data.actions.finish.sound ~= " KitID" end,
             disabled = function() return not data.actions.finish.do_sound end
           },
           finish_do_glow = {
@@ -3862,7 +3992,7 @@ function WeakAuras.ReloadTriggerOptions(data)
   end
 
   local function getAuraMatchesLabel(name)
-    local ids = idCache[name]
+    local ids = spellCache[name]
     if(ids) then
       local descText = "";
       local numMatches = 0;
@@ -3887,7 +4017,7 @@ function WeakAuras.ReloadTriggerOptions(data)
   end
 
   local function getAuraMatchesList(name)
-    local ids = idCache[name]
+    local ids = spellCache[name]
     if(ids) then
       local descText = "";
       for id, _ in pairs(ids) do
@@ -3924,7 +4054,7 @@ function WeakAuras.ReloadTriggerOptions(data)
           WeakAuras.ShowCloneDialog(data);
           WeakAuras.UpdateCloneConfig(data);
         else
-          WeakAuras.HideAllClones(data.id);
+          WeakAuras.CollapseAllClones(data.id);
         end
         WeakAuras.Add(data);
       end,
@@ -3959,7 +4089,20 @@ function WeakAuras.ReloadTriggerOptions(data)
       width = "double",
       order = 12,
       disabled = function() return not trigger.use_name end,
-      hidden = function() return not (trigger.type == "aura" and trigger.fullscan); end
+      hidden = function() return not (trigger.type == "aura" and trigger.fullscan); end,
+      set = function(info, v)
+        if (tonumber(v)) then
+          trigger.spellId = tonumber(v);
+          trigger.name = nil;
+        else
+          trigger.spellId = nil;
+          trigger.name = v;
+        end
+        WeakAuras.Add(data);
+        WeakAuras.SetThumbnail(data);
+        WeakAuras.SetIconNames(data);
+        WeakAuras.UpdateDisplayButton(data);
+      end,
     },
     use_tooltip = {
       type = "toggle",
@@ -4052,9 +4195,12 @@ function WeakAuras.ReloadTriggerOptions(data)
       type = "execute",
       name = "",
       width = "half",
-      image = function() return trigger.name and iconCache[trigger.name] or "", 18, 18 end,
+      image = function()
+        if (not trigger.name) then return "" end;
+        local icon =  WeakAuras.GetIconFromSpellCache(trigger.name);
+        return icon and tostring(icon) or "", 18, 18 end,
       order = 11,
-      disabled = function() return not trigger.name and iconCache[trigger.name] end,
+      disabled = function() return not trigger.name and WeakAuras.GetIconFromSpellCache(trigger.name) end,
       hidden = function() return not (trigger.type == "aura" and not trigger.fullscan and trigger.unit == "multi"); end
     },
     multiname = {
@@ -4082,9 +4228,12 @@ function WeakAuras.ReloadTriggerOptions(data)
       name = function() return getAuraMatchesLabel(trigger.names[1]) end,
       desc = function() return getAuraMatchesList(trigger.names[1]) end,
       width = "half",
-      image = function() return iconCache[trigger.names[1]] or "", 18, 18 end,
+      image = function()
+        local icon = WeakAuras.GetIconFromSpellCache(trigger.names[1]);
+        return icon and tostring(icon) or "", 18, 18
+      end,
       order = 11,
-      disabled = function() return not iconCache[trigger.names[1]] end,
+      disabled = function() return not WeakAuras.GetIconFromSpellCache(trigger.names[1]) end,
       hidden = function() return not (trigger.type == "aura" and not trigger.fullscan and trigger.unit ~= "multi"); end
     },
     name1 = {
@@ -4125,9 +4274,12 @@ function WeakAuras.ReloadTriggerOptions(data)
       name = function() return getAuraMatchesLabel(trigger.names[2]) end,
       desc = function() return getAuraMatchesList(trigger.names[2]) end,
       width = "half",
-      image = function() return iconCache[trigger.names[2]] or "", 18, 18 end,
+      image = function()
+        local icon = WeakAuras.GetIconFromSpellCache(trigger.names[2]);
+        return icon and tostring(icon) or "", 18, 18
+      end,
       order = 14,
-      disabled = function() return not iconCache[trigger.names[2]] end,
+      disabled = function() return not WeakAuras.GetIconFromSpellCache(trigger.names[2]) end,
       hidden = function() return not (trigger.type == "aura" and trigger.names[1] and not trigger.fullscan and trigger.unit ~= "multi"); end,
     },
     name2 = {
@@ -4167,9 +4319,12 @@ function WeakAuras.ReloadTriggerOptions(data)
       name = function() return getAuraMatchesLabel(trigger.names[3]) end,
       desc = function() return getAuraMatchesList(trigger.names[3]) end,
       width = "half",
-      image = function() return iconCache[trigger.names[3]] or "", 18, 18 end,
+      image = function()
+        local icon = WeakAuras.GetIconFromSpellCache(trigger.names[3]);
+        return icon and tostring(icon) or "", 18, 18
+      end,
       order = 17,
-      disabled = function() return not iconCache[trigger.names[3]] end,
+      disabled = function() return not WeakAuras.GetIconFromSpellCache(trigger.names[3]) end,
       hidden = function() return not (trigger.type == "aura" and trigger.names[2] and not trigger.fullscan and trigger.unit ~= "multi"); end,
     },
     name3 = {
@@ -4209,9 +4364,12 @@ function WeakAuras.ReloadTriggerOptions(data)
       name = function() return getAuraMatchesLabel(trigger.names[4]) end,
       desc = function() return getAuraMatchesList(trigger.names[4]) end,
       width = "half",
-      image = function() return iconCache[trigger.names[4]] or "", 18, 18 end,
+      image = function()
+        local icon = WeakAuras.GetIconFromSpellCache(trigger.names[4]);
+        return icon and tostring(icon) or "", 18, 18
+      end,
       order = 20,
-      disabled = function() return not iconCache[trigger.names[4]] end,
+      disabled = function() return not WeakAuras.GetIconFromSpellCache(trigger.names[4]) end,
       hidden = function() return not (trigger.type == "aura" and trigger.names[3] and not trigger.fullscan and trigger.unit ~= "multi"); end,
     },
     name4 = {
@@ -4244,7 +4402,7 @@ function WeakAuras.ReloadTriggerOptions(data)
       width = "half",
       image = function() return "", 0, 0 end,
       order = 22,
-      disabled = function() return not iconCache[trigger.names[5]] end,
+      disabled = function() return not WeakAuras.GetIconFromSpellCache(trigger.names[5]) end,
       hidden = function() return not (trigger.type == "aura" and trigger.names[4] and not trigger.fullscan and trigger.unit ~= "multi"); end,
     },
     name5icon = {
@@ -4252,7 +4410,10 @@ function WeakAuras.ReloadTriggerOptions(data)
       name = function() return getAuraMatchesLabel(trigger.names[5]) end,
       desc = function() return getAuraMatchesList(trigger.names[5]) end,
       width = "half",
-      image = function() return iconCache[trigger.names[5]] or "", 18, 18 end,
+      image = function()
+        local icon = WeakAuras.GetIconFromSpellCache(trigger.names[5]);
+        return icon and tostring(icon) or "", 18, 18
+      end,
       order = 23,
       hidden = function() return not (trigger.type == "aura" and trigger.names[4] and not trigger.fullscan and trigger.unit ~= "multi"); end,
     },
@@ -4293,9 +4454,12 @@ function WeakAuras.ReloadTriggerOptions(data)
       name = function() return getAuraMatchesLabel(trigger.names[6]) end,
       desc = function() return getAuraMatchesList(trigger.names[6]) end,
       width = "half",
-      image = function() return iconCache[trigger.names[6]] or "", 18, 18 end,
+      image = function()
+        local icon = WeakAuras.GetIconFromSpellCache(trigger.names[6]);
+        return icon and tostring(icon) or "", 18, 18
+      end,
       order = 26,
-      disabled = function() return not iconCache[trigger.names[6]] end,
+      disabled = function() return not WeakAuras.GetIconFromSpellCache(trigger.names[6]) end,
       hidden = function() return not (trigger.type == "aura" and trigger.names[5] and not trigger.fullscan and trigger.unit ~= "multi"); end,
     },
     name6 = {
@@ -4335,9 +4499,12 @@ function WeakAuras.ReloadTriggerOptions(data)
       name = function() return getAuraMatchesLabel(trigger.names[7]) end,
       desc = function() return getAuraMatchesList(trigger.names[7]) end,
       width = "half",
-      image = function() return iconCache[trigger.names[7]] or "", 18, 18 end,
+      image = function()
+        local icon = WeakAuras.GetIconFromSpellCache(trigger.names[7]);
+        return icon and tostring(icon) or "", 18, 18
+      end,
       order = 29,
-      disabled = function() return not iconCache[trigger.names[7]] end,
+      disabled = function() return not WeakAuras.GetIconFromSpellCache(trigger.names[7]) end,
       hidden = function() return not (trigger.type == "aura" and trigger.names[6] and not trigger.fullscan and trigger.unit ~= "multi"); end,
     },
     name7 = {
@@ -4377,9 +4544,12 @@ function WeakAuras.ReloadTriggerOptions(data)
       name = function() return getAuraMatchesLabel(trigger.names[8]) end,
       desc = function() return getAuraMatchesList(trigger.names[8]) end,
       width = "half",
-      image = function() return iconCache[trigger.names[8]] or "", 18, 18 end,
+      image = function()
+        local icon = WeakAuras.GetIconFromSpellCache(trigger.names[8]);
+        return icon and tostring(icon) or "", 18, 18
+      end,
       order = 32,
-      disabled = function() return not iconCache[trigger.names[8]] end,
+      disabled = function() return not WeakAuras.GetIconFromSpellCache(trigger.names[8]) end,
       hidden = function() return not (trigger.type == "aura" and trigger.names[7] and not trigger.fullscan and trigger.unit ~= "multi"); end,
     },
     name8 = {
@@ -4419,9 +4589,12 @@ function WeakAuras.ReloadTriggerOptions(data)
       name = function() return getAuraMatchesLabel(trigger.names[9]) end,
       desc = function() return getAuraMatchesList(trigger.names[9]) end,
       width = "half",
-      image = function() return iconCache[trigger.names[9]] or "", 18, 18 end,
+      image = function()
+        local icon = WeakAuras.GetIconFromSpellCache(trigger.names[9]);
+        return icon and tostring(icon) or "", 18, 18
+      end,
       order = 35,
-      disabled = function() return not iconCache[trigger.names[9]] end,
+      disabled = function() return not WeakAuras.GetIconFromSpellCache(trigger.names[9]) end,
       hidden = function() return not (trigger.type == "aura" and trigger.names[8] and not trigger.fullscan and trigger.unit ~= "multi"); end,
     },
     name9 = {
@@ -4470,11 +4643,12 @@ function WeakAuras.ReloadTriggerOptions(data)
       hidden = function() return not (trigger.type == "aura"); end,
       set = function(info, v)
         trigger.unit = v;
+        trigger.use_specific_unit = (v == "member");
         if(v == "multi") then
           WeakAuras.ShowCloneDialog(data);
           WeakAuras.UpdateCloneConfig(data);
         else
-          WeakAuras.HideAllClones(data.id);
+          WeakAuras.CollapseAllClones(data.id);
         end
         WeakAuras.Add(data);
       end,
@@ -4551,7 +4725,7 @@ function WeakAuras.ReloadTriggerOptions(data)
           WeakAuras.ShowCloneDialog(data);
           WeakAuras.UpdateCloneConfig(data);
         else
-          WeakAuras.HideAllClones(data.id);
+          WeakAuras.CollapseAllClones(data.id);
         end
         WeakAuras.Add(data);
       end,
@@ -4716,6 +4890,38 @@ function WeakAuras.ReloadTriggerOptions(data)
     }
   };
 
+  local function deleteTrigger()
+    if(data.controlledChildren) then
+      for index, childId in pairs(data.controlledChildren) do
+        local childData = WeakAuras.GetData(childId);
+        if(childData) then
+          if (optionTriggerChoices[childId] == 0) then
+            childData.trigger = childData.additional_triggers[1].trigger;
+            childData.untrigger = childData.additional_triggers[1].untrigger;
+            tremove(childData.additional_triggers, 1);
+          else
+            tremove(childData.additional_triggers, optionTriggerChoices[childId]);
+            optionTriggerChoices[childId] = optionTriggerChoices[childId] - 1;
+          end
+          childData.numTriggers = 1 + (childData.additional_triggers and #childData.additional_triggers or 0)
+          WeakAuras.ReloadTriggerOptions(childData);
+        end
+      end
+    else
+      if (optionTriggerChoices[id] == 0) then
+        data.trigger = data.additional_triggers[1].trigger;
+        data.untrigger = data.additional_triggers[1].untrigger;
+        tremove(data.additional_triggers, 1);
+      else
+        tremove(data.additional_triggers, optionTriggerChoices[id]);
+        optionTriggerChoices[id] = optionTriggerChoices[id] - 1;
+      end
+      data.numTriggers = 1 + (data.additional_triggers and #data.additional_triggers or 0)
+    end
+    WeakAuras.Add(data);
+    WeakAuras.ReloadTriggerOptions(data);
+  end
+
   local trigger_options = {
     disjunctive = {
       type = "select",
@@ -4724,42 +4930,89 @@ function WeakAuras.ReloadTriggerOptions(data)
       order = 0,
       hidden = function() return not (data.additional_triggers and #data.additional_triggers > 0) end,
       values = WeakAuras.trigger_require_types,
-      get = function() return data.disjunctive and "any" or "all" end,
-      set = function(info, v) data.disjunctive = (v == "any") end
+      get = function() return data.disjunctive or "all" end,
+      set = function(info, v) data.disjunctive = v end
     },
-    addTrigger = {
-      type = "execute",
-      name = L["Add Trigger"],
-      order = 0.5,
-      func = function()
-        if(data.controlledChildren) then
-          for index, childId in pairs(data.controlledChildren) do
-            local childData = WeakAuras.GetData(childId);
-            if(childData) then
-              childData.additional_triggers = childData.additional_triggers or {};
-              tinsert(childData.additional_triggers, {trigger = {}, untrigger = {}});
-        childData.numTriggers = 1 + (childData.additional_triggers and #childData.additional_triggers or 0)
-              optionTriggerChoices[childId] = #childData.additional_triggers;
-              WeakAuras.ReloadTriggerOptions(childData);
-            end
-          end
-        else
-          data.additional_triggers = data.additional_triggers or {};
-          tinsert(data.additional_triggers, {trigger = {}, untrigger = {}});
-      data.numTriggers = 1 + (data.additional_triggers and #data.additional_triggers or 0)
-          optionTriggerChoices[id] = #data.additional_triggers;
-        end
-        WeakAuras.ReloadTriggerOptions(data);
+    custom_trigger_combination = {
+      type = "input",
+      name = L["Custom"],
+      order = 0.1,
+      multiline = true,
+      width = "normal",
+      hidden = function() return not (data.disjunctive == "custom") end,
+      get = function() return data.customTriggerLogic end,
+      set = function(info, v)
+      data.customTriggerLogic = v;
+        WeakAuras.Add(data);
       end
+    },
+    custom_trigger_combination_expand = {
+      type = "execute",
+      order = 0.15,
+      name = L["Expand Text Editor"],
+      func = function()
+        WeakAuras.TextEditor(data, {"customTriggerLogic"})
+      end,
+      hidden = function() return not (data.disjunctive == "custom") end,
+    },
+    custom_trigger_combination_error = {
+      type = "description",
+      name = function()
+        if not(data.customTriggerLogic) then
+          return "";
+        end
+        local _, errorString = loadstring("return "..data.customTriggerLogic);
+        return errorString and "|cFFFF0000"..errorString or "";
+      end,
+      width = "double",
+      order = 0.2,
+      hidden = function()
+        if not(data.disjunctive == "custom" and data.customTriggerLogic) then
+          return true;
+        else
+          local loadedFunction, errorString = loadstring("return "..data.customTriggerLogic);
+          if(errorString and not loadedFunction) then
+            return false;
+          else
+            return true;
+          end
+        end
+      end
+    },
+    activeTriggerMode = {
+      type = "select",
+      name = L["Dynamic information"],
+      width = "double",
+      order = 0.3,
+      values = function()
+        local vals = {};
+        vals[WeakAuras.trigger_modes.first_active] = L["Dynamic information from first Active Trigger"];
+        local numTriggers = data.additional_triggers and #data.additional_triggers or 0;
+        for i=0,numTriggers do
+          vals[i] = L["Dynamic information from Trigger %i"]:format(i + 1);
+        end
+        return vals;
+      end,
+      get = function()
+        return data.activeTriggerMode or WeakAuras.trigger_modes.first_active;
+      end,
+      set = function(info, v)
+        data.activeTriggerMode = v;
+        WeakAuras.Add(data);
+        WeakAuras.SetThumbnail(data);
+        WeakAuras.SetIconNames(data);
+        WeakAuras.UpdateDisplayButton(data);
+      end,
+      hidden = function() return data.numTriggers <= 1 end
     },
     chooseTrigger = {
       type = "select",
       name = L["Choose Trigger"],
-      order = 1,
+      order = 0.5,
       values = function()
         local ret = {[0] = L["Trigger %d"]:format(1)};
         if(data.controlledChildren) then
-          for index=1,(data.numTriggers or 9) do
+          for index=1,(data.numTriggers and data.numTriggers + 1 or 9) do
             local all, none, any = true, true, false;
             for _, childId in pairs(data.controlledChildren) do
               local childData = WeakAuras.GetData(childId);
@@ -4791,8 +5044,34 @@ function WeakAuras.ReloadTriggerOptions(data)
       set = function(info, v)
         if(v == 0 or (data.additional_triggers and data.additional_triggers[v])) then
           optionTriggerChoices[id] = v;
+
           WeakAuras.ReloadTriggerOptions(data);
         end
+      end
+    },
+    addTrigger = {
+      type = "execute",
+      name = L["Add Trigger"],
+      order = 1,
+      func = function()
+        if(data.controlledChildren) then
+          for index, childId in pairs(data.controlledChildren) do
+            local childData = WeakAuras.GetData(childId);
+            if(childData) then
+              childData.additional_triggers = childData.additional_triggers or {};
+              tinsert(childData.additional_triggers, {trigger = {}, untrigger = {}});
+              childData.numTriggers = 1 + (childData.additional_triggers and #childData.additional_triggers or 0)
+              optionTriggerChoices[childId] = #childData.additional_triggers;
+              WeakAuras.ReloadTriggerOptions(childData);
+            end
+          end
+        else
+          data.additional_triggers = data.additional_triggers or {};
+          tinsert(data.additional_triggers, {trigger = {}, untrigger = {}});
+          data.numTriggers = 1 + (data.additional_triggers and #data.additional_triggers or 0)
+          optionTriggerChoices[id] = #data.additional_triggers;
+        end
+        WeakAuras.ReloadTriggerOptions(data);
       end
     },
     triggerHeader = {
@@ -4810,31 +5089,42 @@ function WeakAuras.ReloadTriggerOptions(data)
       end,
       order = 2
     },
-    deleteTrigger = {
+    applyTemplate = {
+      type = "execute",
+      name = L["Apply Template"],
+      order = 2.5,
+      func = function()
+        WeakAuras.OpenTriggerTemplate(data);
+      end,
+      hidden = function()
+        return GetAddOnEnableState(UnitName("player"), "WeakAurasTemplates") == 0
+      end
+    },
+    deleteTriggerHalf = {
+      type = "execute",
+      name = L["Delete Trigger"],
+      order = 3,
+      func = deleteTrigger,
+      hidden = function()
+        return data.numTriggers == 1 or GetAddOnEnableState(UnitName("player"), "WeakAurasTemplates") == 0
+      end
+    },
+    deleteTriggerSpace = {
+      type = "execute",
+      name = "",
+      order = 3.1,
+      image = function() return "", 0, 0 end,
+      hidden = function()
+        return data.numTriggers ~= 1 or GetAddOnEnableState(UnitName("player"), "WeakAurasTemplates") == 0
+      end,
+    },
+    deleteTriggerFull = {
       type = "execute",
       name = L["Delete Trigger"],
       order = 3,
       width = "double",
-      func = function()
-        if(data.controlledChildren) then
-          for index, childId in pairs(data.controlledChildren) do
-            local childData = WeakAuras.GetData(childId);
-            if(childData) then
-              tremove(childData.additional_triggers, optionTriggerChoices[childId]);
-        childData.numTriggers = 1 + (childData.additional_triggers and #childData.additional_triggers or 0)
-              optionTriggerChoices[childId] = optionTriggerChoices[childId] - 1;
-              WeakAuras.ReloadTriggerOptions(childData);
-            end
-          end
-        else
-          tremove(data.additional_triggers, optionTriggerChoices[id]);
-      data.numTriggers = 1 + (data.additional_triggers and #data.additional_triggers + 0)
-          optionTriggerChoices[id] = optionTriggerChoices[id] - 1;
-        end
-        WeakAuras.Add(data);
-        WeakAuras.ReloadTriggerOptions(data);
-      end,
-      hidden = function() return optionTriggerChoices[id] == 0; end
+      func = deleteTrigger,
+      hidden = function() return data.numTriggers == 1 or GetAddOnEnableState(UnitName("player"), "WeakAurasTemplates") ~= 0 end
     },
     typedesc = {
       type = "toggle",
@@ -4880,9 +5170,15 @@ function WeakAuras.ReloadTriggerOptions(data)
       order = 7,
       width = "double",
       values = function()
-        if(trigger.type == "event") then
+        local type;
+        if (data.controlledChildren) then
+          type = getAll(data, {"trigger", "type"});
+        else
+          type = trigger.type;
+        end
+        if(type == "event") then
           return event_types;
-        elseif(trigger.type == "status") then
+        elseif(type == "status") then
           return status_types;
         end
       end,
@@ -4915,7 +5211,10 @@ function WeakAuras.ReloadTriggerOptions(data)
       name = L["Check On..."],
       order = 8,
       values = check_types,
-      hidden = function() return not (trigger.type == "custom" and trigger.custom_type == "status" and trigger.check ~= "update") end,
+      hidden = function() return not (trigger.type == "custom"
+          and (trigger.custom_type == "status" or trigger.custom_type == "stateupdate")
+          and trigger.check ~= "update")
+      end,
       get = function() return trigger.check end,
       set = function(info, v)
         trigger.check = v;
@@ -4931,7 +5230,10 @@ function WeakAuras.ReloadTriggerOptions(data)
       order = 8,
       width = "double",
       values = check_types,
-      hidden = function() return not (trigger.type == "custom" and trigger.custom_type == "status" and trigger.check == "update") end,
+      hidden = function() return not (trigger.type == "custom"
+          and (trigger.custom_type == "status" or trigger.custom_type == "stateupdate")
+          and trigger.check == "update")
+      end,
       get = function() return trigger.check end,
       set = function(info, v)
         trigger.check = v;
@@ -4946,7 +5248,9 @@ function WeakAuras.ReloadTriggerOptions(data)
       name = L["Event(s)"],
       desc = L["Custom trigger status tooltip"],
       order = 9,
-      hidden = function() return not (trigger.type == "custom" and trigger.custom_type == "status" and trigger.check ~= "update") end,
+      hidden = function() return not (trigger.type == "custom"
+        and (trigger.custom_type == "status" or trigger.custom_type == "stateupdate")
+        and trigger.check ~= "update") end,
       get = function() return trigger.events end,
       set = function(info, v)
         trigger.events = v;
@@ -5064,7 +5368,8 @@ function WeakAuras.ReloadTriggerOptions(data)
       order = 14,
       multiline = true,
       width = "normal",
-      hidden = function() return not (trigger.type == "custom" and (trigger.custom_type == "status" or trigger.custom_hide == "custom")) end,
+      hidden = function() return not (trigger.type == "custom"
+        and (trigger.custom_type == "status" or (trigger.custom_type == "event" and trigger.custom_hide == "custom"))) end,
       get = function() return untrigger and untrigger.custom end,
       set = function(info, v)
         if(untrigger) then
@@ -5083,7 +5388,8 @@ function WeakAuras.ReloadTriggerOptions(data)
       func = function()
         WeakAuras.TextEditor(data, appendToUntriggerPath("custom"))
       end,
-      hidden = function() return not (trigger.type == "custom" and (trigger.custom_type == "status" or trigger.custom_hide == "custom")) end,
+      hidden = function() return not (trigger.type == "custom"
+        and (trigger.custom_type == "status" or (trigger.custom_type == "event" and trigger.custom_hide == "custom"))) end,
     },
     custom_untrigger_error = {
       type = "description",
@@ -5097,7 +5403,7 @@ function WeakAuras.ReloadTriggerOptions(data)
       width = "double",
       order = 15,
       hidden = function()
-        if not(trigger.type == "custom" and (trigger.custom_type == "status" or trigger.custom_hide == "custom") and untrigger and untrigger.custom) then
+        if not(trigger.type == "custom" and (trigger.custom_type == "status" or (trigger.custom_type == "event" and trigger.custom_hide == "custom")) and untrigger and untrigger.custom) then
           return true;
         else
           local loadedFunction, errorString = loadstring("return "..(untrigger and untrigger.custom or ""));
@@ -5115,7 +5421,9 @@ function WeakAuras.ReloadTriggerOptions(data)
       order = 16,
       multiline = true,
       width = "normal",
-      hidden = function() return not (trigger.type == "custom" and (trigger.custom_type == "status" or trigger.custom_hide ~= "timed")) end,
+      hidden = function() return not (trigger.type == "custom"
+        and (trigger.custom_type == "status" or (trigger.custom_type == "event" and trigger.custom_hide ~= "timed")))
+      end,
       get = function() return trigger.customDuration end,
       set = function(info, v)
         trigger.customDuration = v;
@@ -5132,12 +5440,16 @@ function WeakAuras.ReloadTriggerOptions(data)
       func = function()
         WeakAuras.TextEditor(data, appendToTriggerPath("customDuration"))
       end,
-      hidden = function() return not (trigger.type == "custom" and (trigger.custom_type == "status" or trigger.custom_hide ~= "timed")) end,
+      hidden = function() return not (trigger.type == "custom"
+          and (trigger.custom_type == "status" or (trigger.custom_type == "event" and trigger.custom_hide ~= "timed")))
+      end,
     },
     custom_duration_error = {
       type = "description",
       name = function()
-        if not(trigger.type == "custom" and (trigger.custom_type == "status" or trigger.custom_hide ~= "timed") and trigger.customDuration and trigger.customDuration ~= "") then
+        if not(trigger.type == "custom"
+            and (trigger.custom_type == "status" or (trigger.custom_type == "event" and trigger.custom_hide ~= "timed"))
+            and trigger.customDuration and trigger.customDuration ~= "") then
           return "";
         end
         local _, errorString = loadstring("return "..(trigger.customDuration or ""));
@@ -5146,7 +5458,9 @@ function WeakAuras.ReloadTriggerOptions(data)
       width = "double",
       order = 17,
       hidden = function()
-        if not(trigger.type == "custom" and (trigger.custom_hide ~= "timed") and trigger.customDuration and trigger.customDuration ~= "") then
+        if not(trigger.type == "custom"
+            and (trigger.custom_type == "status" or (trigger.custom_type == "event" and trigger.custom_hide ~= "timed"))
+            and trigger.customDuration and trigger.customDuration ~= "") then
           return true;
         else
           local loadedFunction, errorString = loadstring("return "..(trigger.customDuration or ""));
@@ -5164,7 +5478,7 @@ function WeakAuras.ReloadTriggerOptions(data)
       order = 18,
       multiline = true,
       width = "normal",
-      hidden = function() return not (trigger.type == "custom") end,
+      hidden = function() return not (trigger.type == "custom" and trigger.custom_type ~= "stateupdate") end,
       get = function() return trigger.customName end,
       set = function(info, v)
         trigger.customName = v;
@@ -5181,7 +5495,7 @@ function WeakAuras.ReloadTriggerOptions(data)
       func = function()
         WeakAuras.TextEditor(data, appendToTriggerPath("customName"))
       end,
-      hidden = function() return not (trigger.type == "custom") end,
+      hidden = function() return not (trigger.type == "custom" and trigger.custom_type ~= "stateupdate") end,
     },
     custom_name_error = {
       type = "description",
@@ -5195,7 +5509,7 @@ function WeakAuras.ReloadTriggerOptions(data)
       width = "double",
       order = 19,
       hidden = function()
-        if not(trigger.type == "custom" and trigger.customName and trigger.customName ~= "") then
+        if not(trigger.type == "custom" and trigger.custom_type ~= "stateupdate" and trigger.customName and trigger.customName ~= "") then
           return true;
         else
           local loadedFunction, errorString = loadstring("return "..(trigger.customName or ""));
@@ -5213,7 +5527,7 @@ function WeakAuras.ReloadTriggerOptions(data)
       order = 20,
       multiline = true,
       width = "normal",
-      hidden = function() return not (trigger.type == "custom") end,
+      hidden = function() return not (trigger.type == "custom" and trigger.custom_type ~= "stateupdate") end,
       get = function() return trigger.customIcon end,
       set = function(info, v)
         trigger.customIcon = v;
@@ -5230,7 +5544,7 @@ function WeakAuras.ReloadTriggerOptions(data)
       func = function()
         WeakAuras.TextEditor(data, appendToTriggerPath("customIcon"))
       end,
-      hidden = function() return not (trigger.type == "custom") end,
+      hidden = function() return not (trigger.type == "custom" and trigger.custom_type ~= "stateupdate") end,
     },
     custom_icon_error = {
       type = "description",
@@ -5244,7 +5558,7 @@ function WeakAuras.ReloadTriggerOptions(data)
       width = "double",
       order = 21,
       hidden = function()
-        if not(trigger.type == "custom" and trigger.customIcon and trigger.customIcon ~= "") then
+        if not(trigger.type == "custom" and trigger.custom_type ~= "stateupdate" and trigger.customIcon and trigger.customIcon ~= "") then
           return true;
         else
           local loadedFunction, errorString = loadstring("return "..(trigger.customIcon or ""));
@@ -5262,7 +5576,7 @@ function WeakAuras.ReloadTriggerOptions(data)
       order = 21.5,
       multiline = true,
       width = "normal",
-      hidden = function() return not (trigger.type == "custom") end,
+      hidden = function() return not (trigger.type == "custom" and trigger.custom_type ~= "stateupdate") end,
       get = function() return trigger.customTexture end,
       set = function(info, v)
         trigger.customTexture = v;
@@ -5279,12 +5593,12 @@ function WeakAuras.ReloadTriggerOptions(data)
       func = function()
         WeakAuras.TextEditor(data, appendToTriggerPath("customTexture"))
       end,
-      hidden = function() return not (trigger.type == "custom") end,
+      hidden = function() return not (trigger.type == "custom" and trigger.custom_type ~= "stateupdate") end,
     },
     custom_texture_error = {
       type = "description",
       name = function()
-        if not(trigger.customTexture and trigger.customTexture ~= "") then
+        if not(trigger.customTexture and trigger.custom_type ~= "stateupdate" and trigger.customTexture ~= "") then
           return "";
         end
         local _, errorString = loadstring("return "..(trigger.customTexture or ""));
@@ -5293,7 +5607,7 @@ function WeakAuras.ReloadTriggerOptions(data)
       width = "double",
       order = 22.5,
       hidden = function()
-        if not(trigger.type == "custom" and trigger.customTexture and trigger.customTexture ~= "") then
+        if not(trigger.type == "custom" and trigger.custom_type ~= "stateupdate" and trigger.customTexture and trigger.customTexture ~= "") then
           return true;
         else
           local loadedFunction, errorString = loadstring("return "..(trigger.customTexture or ""));
@@ -5311,7 +5625,7 @@ function WeakAuras.ReloadTriggerOptions(data)
       order = 23,
       multiline = true,
       width = "normal",
-      hidden = function() return not (trigger.type == "custom") end,
+      hidden = function() return not (trigger.type == "custom" and trigger.custom_type ~= "stateupdate") end,
       get = function() return trigger.customStacks end,
       set = function(info, v)
         trigger.customStacks = v;
@@ -5328,12 +5642,12 @@ function WeakAuras.ReloadTriggerOptions(data)
       func = function()
         WeakAuras.TextEditor(data, appendToTriggerPath("customStacks"))
       end,
-      hidden = function() return not (trigger.type == "custom") end,
+      hidden = function() return not (trigger.type == "custom" and trigger.custom_type ~= "stateupdate") end,
     },
     custom_stacks_error = {
       type = "description",
       name = function()
-        if not(trigger.customStacks and trigger.customStacks ~= "") then
+        if not(trigger.customStacks and trigger.custom_type ~= "stateupdate" and trigger.customStacks ~= "") then
           return "";
         end
         local _, errorString = loadstring("return "..(trigger.customStacks or ""));
@@ -5437,14 +5751,24 @@ function WeakAuras.ReloadTriggerOptions(data)
     displayOptions[id].hidden = function(info, ...) return hiddenAll(data, info, ...); end;
     displayOptions[id].disabled = function(info, ...) return disabledAll(data, info, ...); end;
 
-    trigger_options.chooseTrigger.set = options_set;
-    trigger_options.type.set = options_set;
-    trigger_options.event.set = options_set;
+    displayOptions[id].args.trigger.args.chooseTrigger.set = options_set;
+    displayOptions[id].args.trigger.args.type.set = options_set;
+    displayOptions[id].args.trigger.args.event.set = options_set;
 
     replaceNameDescFuncs(displayOptions[id], data);
     replaceImageFuncs(displayOptions[id], data);
 
-    local regionOption = regionOptions[data.regionType].create(id, data);
+    local regionOption;
+    if (regionOptions[data.regionType]) then
+      regionOption = regionOptions[data.regionType].create(id, data);
+    else
+      regionOption = {
+        unsupported = {
+          type = "description",
+          name = L["This region of type \"%s\" is not supported."]:format(data.regionType)
+        }
+      };
+    end
     displayOptions[id].args.group = {
       type = "group",
       name = L["Group"],
@@ -5489,7 +5813,7 @@ function WeakAuras.ReloadTriggerOptions(data)
     replaceImageFuncs(displayOptions[id].args.load, data);
 
     WeakAuras.ReloadGroupRegionOptions(data);
-  else
+  else -- One aura selected
     local function options_set(info, v)
       trigger[info[#info]] = v;
       WeakAuras.Add(data);
@@ -5498,6 +5822,7 @@ function WeakAuras.ReloadTriggerOptions(data)
       WeakAuras.UpdateDisplayButton(data);
       WeakAuras.ReloadTriggerOptions(data);
     end
+    local triggernum = optionTriggerChoices[id];
     if(trigger.type == "aura") then
       displayOptions[id].args.trigger.args = union(trigger_options, aura_options);
     elseif(trigger.type == "event" or trigger.type == "status") then
@@ -5531,16 +5856,18 @@ function WeakAuras.ReloadTriggerOptions(data)
 
     displayOptions[id].args.load.args = WeakAuras.ConstructOptions(WeakAuras.load_prototype, data, 10, nil, nil, optionTriggerChoices[id], "load");
 
-    trigger_options.event.set = function(info, v, ...)
-      local prototype = WeakAuras.event_prototypes[v];
-      if(prototype) then
-        if(prototype.automatic or prototype.automaticrequired) then
-          trigger.unevent = "auto";
-        else
-          trigger.unevent = "timed";
+    if (displayOptions[id].args.trigger.args.event) then
+      displayOptions[id].args.trigger.args.event.set = function(info, v, ...)
+        local prototype = WeakAuras.event_prototypes[v];
+        if(prototype) then
+          if(prototype.automatic or prototype.automaticrequired) then
+            trigger.unevent = "auto";
+          else
+            trigger.unevent = "timed";
+          end
         end
+        options_set(info, v, ...);
       end
-      options_set(info, v, ...);
     end
     trigger.event = trigger.event or "Health";
     trigger.subeventPrefix = trigger.subeventPrefix or "SPELL"
@@ -5584,6 +5911,13 @@ function WeakAuras.ReloadGroupRegionOptions(data)
   if(regionType) then
     if(regionOptions[regionType]) then
       regionOption = regionOptions[regionType].create(id, data);
+    else
+      regionOption = {
+        unsupported = {
+          type = "description",
+          name = L["This region of type \"%s\" is not supported."]:format(data.regionType)
+        }
+      };
     end
   end
   if(regionOption) then
@@ -6154,6 +6488,10 @@ function WeakAuras.CreateFrame()
         frame.importexport.frame:Show();
       elseif(frame.window == "texteditor") then
         frame.texteditor.frame:Show();
+      elseif(frame.window == "codereview") then
+        frame.codereview.frame:Show();
+      elseif(frame.window == "newview") then
+        frame.newView.frame:Show();
       end
       minimizebutton:SetNormalTexture("Interface\\BUTTONS\\UI-Panel-CollapseButton-Up.blp");
       minimizebutton:SetPushedTexture("Interface\\BUTTONS\\UI-Panel-CollapseButton-Down.blp");
@@ -6166,6 +6504,10 @@ function WeakAuras.CreateFrame()
       frame.modelPick.frame:Hide();
       frame.importexport.frame:Hide();
       frame.texteditor.frame:Hide();
+      frame.codereview.frame:Hide();
+      if (frame.newView) then
+        frame.newView.frame:Hide();
+      end
       frame.container.frame:Hide();
       minimizebutton:SetNormalTexture("Interface\\BUTTONS\\UI-Panel-ExpandButton-Up.blp");
       minimizebutton:SetPushedTexture("Interface\\BUTTONS\\UI-Panel-ExpandButton-Down.blp");
@@ -6271,14 +6613,19 @@ function WeakAuras.CreateFrame()
 
   local function texturePickGroupSelected(widget, event, uniquevalue)
     texturePickScroll:ReleaseChildren();
-    for texturePath, textureName in pairs(texture_types[uniquevalue]) do
+    for texturePath, textureName in pairs(texturePick.textures[uniquevalue]) do
       local textureWidget = AceGUI:Create("WeakAurasTextureButton");
-      textureWidget:SetTexture(texturePath, textureName);
+      if (texturePick.SetTextureFunc) then
+        texturePick.SetTextureFunc(textureWidget, texturePath, textureName);
+      else
+        textureWidget:SetTexture(texturePath, textureName);
+        local d = texturePick.textureData;
+        textureWidget:ChangeTexture(d.r, d.g, d.b, d.a, d.rotate, d.discrete_rotation, d.rotation, d.mirror, d.blendMode);
+      end
+
       textureWidget:SetClick(function()
         texturePick:Pick(texturePath);
       end);
-      local d = texturePick.textureData;
-      textureWidget:ChangeTexture(d.r, d.g, d.b, d.a, d.rotate, d.discrete_rotation, d.rotation, d.mirror, d.blendMode);
       texturePickScroll:AddChild(textureWidget);
       table.sort(texturePickScroll.children, function(a, b)
         local aPath, bPath = a:GetTexturePath(), b:GetTexturePath();
@@ -6298,7 +6645,7 @@ function WeakAuras.CreateFrame()
 
   function texturePick.UpdateList(self)
     wipe(texturePickDropdown.list);
-    for categoryName, category in pairs(texture_types) do
+    for categoryName, category in pairs(self.textures) do
       local match = false;
       for texturePath, textureName in pairs(category) do
         if(texturePath == self.data[self.field]) then
@@ -6322,6 +6669,7 @@ function WeakAuras.CreateFrame()
     if(pickedwidget) then
       pickedwidget:Pick();
     end
+
     if(self.data.controlledChildren) then
       setAll(self.data, {"region", self.field}, texturePath);
     else
@@ -6337,9 +6685,11 @@ function WeakAuras.CreateFrame()
     texturePickDropdown.dropdown:SetText(texturePickDropdown.list[status.selected]);
   end
 
-  function texturePick.Open(self, data, field)
+  function texturePick.Open(self, data, field, textures, SetTextureFunc)
     self.data = data;
     self.field = field;
+    self.textures = textures;
+    self.SetTextureFunc = SetTextureFunc
     if(data.controlledChildren) then
       self.givenPath = {};
       for index, childId in pairs(data.controlledChildren) do
@@ -6387,7 +6737,7 @@ function WeakAuras.CreateFrame()
       _, givenPath = next(self.givenPath);
     end
     WeakAuras.debug(givenPath, 3);
-    for categoryName, category in pairs(texture_types) do
+    for categoryName, category in pairs(self.textures) do
       if not(picked) then
         for texturePath, textureName in pairs(category) do
           if(texturePath == givenPath) then
@@ -6400,7 +6750,7 @@ function WeakAuras.CreateFrame()
       end
     end
     if not(picked) then
-      for categoryName, category in pairs(texture_types) do
+      for categoryName, category in pairs(self.textures) do
         texturePickDropdown:SetGroup(categoryName);
         break;
       end
@@ -6470,28 +6820,29 @@ function WeakAuras.CreateFrame()
     subname = tonumber(subname) and GetSpellInfo(tonumber(subname)) or subname;
     subname = subname:lower();
 
+    local usedIcons = {};
     local num = 0;
     if(subname ~= "") then
-      for name, path in pairs(iconCache) do
+      for name, icons in pairs(spellCache) do
         local bestDistance = math.huge;
         local bestName;
-        if(name:lower():find(subname) or path:lower():find(subname)) then
-          if(doSort) then
-            local distance = Lev(name, path:sub(17));
-            if(distances[path]) then
-              if(distance < distances[path]) then
-                names[path] = name;
-                distances[path] = distance;
+        if(name:lower():find(subname, 1, true)) then
+
+          for spellId, icon in pairs(icons) do
+            if (not usedIcons[icon]) then
+              local button = AceGUI:Create("WeakAurasIconButton");
+              button:SetName(name);
+              button:SetTexture(icon);
+              button:SetClick(function()
+                iconPick:Pick(icon);
+              end);
+              iconPickScroll:AddChild(button);
+
+              usedIcons[icon] = true;
+              num = num + 1;
+              if(num >= 60) then
+                break;
               end
-            else
-              names[path] = name;
-              distances[path] = distance;
-              num = num + 1;
-            end
-          else
-            if(not names[path]) then
-              names[path] = name;
-              num = num + 1;
             end
           end
         end
@@ -6499,16 +6850,6 @@ function WeakAuras.CreateFrame()
         if(num >= 60) then
           break;
         end
-      end
-
-      for path, name in pairs(names) do
-        local button = AceGUI:Create("WeakAurasIconButton");
-        button:SetName(name);
-        button:SetTexture(path);
-        button:SetClick(function()
-          iconPick:Pick(path);
-        end);
-        iconPickScroll:AddChild(button);
       end
     end
   end
@@ -6557,7 +6898,7 @@ function WeakAuras.CreateFrame()
     end
     local success = iconPickIcon:SetTexture(texturePath) and texturePath;
     if(success) then
-      iconPickIconLabel:SetText(texturePath:sub(17));
+      iconPickIconLabel:SetText(texturePath);
     else
       iconPickIconLabel:SetText();
     end
@@ -6853,10 +7194,10 @@ function WeakAuras.CreateFrame()
         elseif(mode == "table") then
           displayStr = WeakAuras.DisplayToTableString(id);
         end
+        importexportbox.editBox:SetMaxBytes(nil);
         importexportbox.editBox:SetScript("OnEscapePressed", function() importexport:Close(); end);
         importexportbox.editBox:SetScript("OnChar", function() importexportbox:SetText(displayStr); importexportbox.editBox:HighlightText(); end);
         importexportbox.editBox:SetScript("OnMouseUp", function() importexportbox.editBox:HighlightText(); end);
-        importexportbox.editBox:SetScript("OnTextChanged", nil);
         importexportbox:SetLabel(id.." - "..#displayStr);
         importexportbox.button:Hide();
         importexportbox:SetText(displayStr);
@@ -6864,19 +7205,34 @@ function WeakAuras.CreateFrame()
         importexportbox:SetFocus();
       end
     elseif(mode == "import") then
-      importexportbox.editBox:SetScript("OnEscapePressed", function() importexport:Close(); end);
-      importexportbox.editBox:SetScript("OnChar", nil);
-      importexportbox.editBox:SetScript("OnMouseUp", nil);
-      importexportbox.editBox:SetScript("OnTextChanged", function()
-        local str = importexportbox:GetText();
-        str = str:match( "^%s*(.-)%s*$" )
-        importexportbox:SetLabel(""..#str);
-        if(#str > 20) then
-          WeakAuras.ImportString(str);
+      local textBuffer, i, lastPaste = {}, 0, 0
+      local function clearBuffer(self)
+        self:SetScript('OnUpdate', nil)
+          local pasted = strtrim(table.concat(textBuffer))
+          importexportbox.editBox:ClearFocus();
+          pasted = pasted:match( "^%s*(.-)%s*$" );
+          if (#pasted > 20) then
+            WeakAuras.ImportString(pasted);
+            importexportbox:SetLabel(L["Processed %i chars"]:format(i));
+            importexportbox.editBox:SetMaxBytes(2500);
+            importexportbox.editBox:SetText(strsub(pasted, 1, 2500));
+          end
+      end
+
+      importexportbox.editBox:SetScript('OnChar', function(self, c)
+        if lastPaste ~= GetTime() then
+          textBuffer, i, lastPaste = {}, 0, GetTime()
+          self:SetScript('OnUpdate', clearBuffer)
         end
-      end);
-      importexportbox:SetText("");
-      importexportbox:SetLabel("0");
+        i = i + 1
+        textBuffer[i] = c
+      end)
+
+      importexportbox.editBox:SetText("");
+      importexportbox.editBox:SetMaxBytes(2500);
+      importexportbox.editBox:SetScript("OnEscapePressed", function() importexport:Close(); end);
+      importexportbox.editBox:SetScript("OnMouseUp", nil);
+      importexportbox:SetLabel(L["Paste text below"]);
       importexportbox:SetFocus();
     end
   end
@@ -6992,7 +7348,7 @@ function WeakAuras.CreateFrame()
     self.oldOnTextChanged = texteditorbox.editBox:GetScript("OnTextChanged");
     texteditorbox.editBox:SetScript("OnTextChanged", function(...)
       local str = texteditorbox.editBox:GetText();
-      if not(str) then
+      if not(str) or texteditorbox.combinedText == true then
         texteditorError:SetText("");
       else
         local _, errorString
@@ -7025,13 +7381,16 @@ function WeakAuras.CreateFrame()
         if not(combinedText == "") then
           combinedText = combinedText.."\n\n";
         end
-        combinedText = combinedText.."--"..childId.."\n";
+
+        combinedText = combinedText.. L["-- Do not remove this comment, it is part of this trigger: "] .. childId .. "\n";
         combinedText = combinedText..(text or "");
       end
       if(sameTexts) then
         texteditorbox:SetText(singleText or "");
+        texteditorbox.combinedText = false;
       else
         texteditorbox:SetText(combinedText);
+        texteditorbox.combinedText = true;
       end
     else
       if(addReturn) then
@@ -7053,14 +7412,48 @@ function WeakAuras.CreateFrame()
     frame.window = "default";
   end
 
+  local function extractTexts(input, ids)
+    local texts = {};
+
+    local currentPos, id, startIdLine, startId, endId, endIdLine;
+    while (true) do
+      startIdLine, startId = string.find(input, L["-- Do not remove this comment, it is part of this trigger: "], currentPos, true);
+      if (not startId) then break end
+
+      endId, endIdLine = string.find(input, "\n", startId, true);
+      if (not endId) then break end;
+
+      if (currentPos) then
+        local trimmedPosition = startIdLine - 1;
+        while (string.sub(input, trimmedPosition, trimmedPosition) == "\n") do
+          trimmedPosition = trimmedPosition - 1;
+        end
+
+        texts[id] = string.sub(input, currentPos, trimmedPosition);
+      end
+
+      id = string.sub(input, startId + 1, endId - 1);
+
+      currentPos = endIdLine + 1;
+    end
+
+    if (id) then
+      texts[id] = string.sub(input, currentPos, string.len(input));
+    end
+
+    return texts;
+  end
+
   function texteditor.Close(self)
     if(self.data.controlledChildren) then
+      local textById = texteditorbox.combinedText and extractTexts(texteditorbox:GetText(), self.data.controlledChildren);
       for index, childId in pairs(self.data.controlledChildren) do
+        local text = texteditorbox.combinedText and (textById[childId] or "") or texteditorbox:GetText();
         local childData = WeakAuras.GetData(childId);
         if(self.addReturn) then
-          valueToPath(childData, self.path, "return "..texteditorbox:GetText());
+          valueToPath(childData, self.path, "return "..text);
         else
-          valueToPath(childData, self.path, texteditorbox:GetText());
+          valueToPath(childData, self.path, text);
         end
         WeakAuras.Add(childData);
       end
@@ -7081,6 +7474,75 @@ function WeakAuras.CreateFrame()
     frame.window = "default";
 
     frame:RefreshPick();
+  end
+
+  local codereview = AceGUI:Create("InlineGroup");
+  codereview.frame:SetParent(frame);
+  codereview.frame:SetPoint("BOTTOMRIGHT", frame, "BOTTOMRIGHT", -17, 30);
+  codereview.frame:SetPoint("TOPLEFT", frame, "TOPLEFT", 17, -10);
+  codereview.frame:Hide();
+  codereview:SetLayout("flow");
+  frame.codereview = codereview;
+
+  local codeTree = AceGUI:Create("TreeGroup");
+  codereview.codeTree = codeTree;
+  codereview:SetLayout("fill");
+  codereview:AddChild(codeTree);
+
+  local codebox = AceGUI:Create("MultiLineEditBox");
+  codebox.frame:SetAllPoints(codeTree.content);
+  codebox.frame:SetFrameStrata("FULLSCREEN");
+  codebox:SetLabel("");
+  codereview:AddChild(codebox);
+
+  codebox.button:Hide();
+  IndentationLib.enable(codebox.editBox, colorTable, 4);
+  local fontPath = SharedMedia:Fetch("font", "Fira Mono Medium");
+  if(fontPath) then
+    codebox.editBox:SetFont(fontPath, 12);
+  end
+  codereview.codebox = codebox;
+
+  codeTree:SetCallback("OnGroupSelected", function(self, event, value)
+     for _, v in pairs(codereview.data) do
+       if (v.value == value) then
+          codebox:SetText(v.code);
+       end
+     end
+  end);
+
+  local codereviewCancel = CreateFrame("Button", nil, codereview.frame, "UIPanelButtonTemplate");
+  codereviewCancel:SetScript("OnClick", function() codereview:Close() end);
+  codereviewCancel:SetPoint("bottomright", frame, "bottomright", -27, 11);
+  codereviewCancel:SetHeight(20);
+  codereviewCancel:SetWidth(100);
+  codereviewCancel:SetText(L["Okay"]);
+
+  function codereview.Open(self, data)
+    if frame.window == "codereview" then
+      return
+    end
+
+    self.data = data;
+
+    self.codeTree:SetTree(data);
+    self.codebox.frame:Show();
+
+    WeakAuras.ShowOptions();
+
+    frame.importexport.frame:Hide();
+    frame.container.frame:Hide();
+    frame.buttonsContainer.frame:Hide();
+    self.frame:Show();
+    frame.window = "codereview";
+  end
+
+  function codereview.Close()
+    codereview.frame:Hide();
+    codebox.frame:Hide();
+    frame.container.frame:Show();
+    frame.buttonsContainer.frame:Show();
+    frame.window = "default";
   end
 
   local buttonsContainer = AceGUI:Create("InlineGroup");
@@ -7464,7 +7926,7 @@ function WeakAuras.CreateFrame()
     moversizer:ScaleCorners(region:GetWidth(), region:GetHeight());
 
     mover.startMoving = function()
-      WeakAuras.CancelAnimation("display", data.id, true, true, true, true, true);
+      WeakAuras.CancelAnimation(region, true, true, true, true, true);
       mover:ClearAllPoints();
       if(data.regionType == "group") then
         mover:SetPoint(mover.selfPoint, region, mover.anchorPoint, region.blx, region.bly);
@@ -7525,7 +7987,7 @@ function WeakAuras.CreateFrame()
     if(region:IsResizable()) then
       moversizer.startSizing = function(point)
         mover.isMoving = true;
-        WeakAuras.CancelAnimation("display", data.id, true, true, true, true, true);
+        WeakAuras.CancelAnimation(region, true, true, true, true, true);
         local rSelfPoint, rAnchor, rAnchorPoint, rXOffset, rYOffset = region:GetPoint(1);
         region:StartSizing(point);
         local textpoint, anchorpoint;
@@ -7846,6 +8308,8 @@ function WeakAuras.CreateFrame()
   end
 
   frame.ClearPicks = function(self, except)
+    WeakAuras.PauseAllDynamicGroups();
+
     frame.pickedDisplay = nil;
     frame.pickedOption = nil;
     wipe(tempGroup.controlledChildren);
@@ -7860,6 +8324,8 @@ function WeakAuras.CreateFrame()
     unloadedButton:ClearPick();
     container:ReleaseChildren();
     self.moversizer:Hide();
+
+    WeakAuras.ResumeAllDynamicGroups();
   end
 
   frame.PickOption = function(self, option)
@@ -7873,6 +8339,17 @@ function WeakAuras.CreateFrame()
       containerScroll:SetLayout("flow");
       container:SetLayout("fill");
       container:AddChild(containerScroll);
+
+      if(GetAddOnEnableState(UnitName("player"), "WeakAurasTemplates") ~= 0) then
+        local button = AceGUI:Create("WeakAurasNewButton");
+        button:SetTitle(L["From Template"]);
+        button:SetDescription(L["Offer a guided way to create auras for your class"])
+        button:SetIcon("Interface\\Icons\\INV_Misc_Book_06");
+        button:SetClick(function()
+          WeakAuras.OpenTriggerTemplate();
+        end);
+        containerScroll:AddChild(button);
+      end
 
       for regionType, regionData in pairs(regionOptions) do
         local button = AceGUI:Create("WeakAurasNewButton");
@@ -7894,6 +8371,8 @@ function WeakAuras.CreateFrame()
           local data = {
             id = new_id,
             regionType = regionType,
+            activeTriggerMode = WeakAuras.trigger_modes.first_active,
+            disjunctive = "all",
             trigger = {
               type = "aura",
               unit = "player",
@@ -7978,6 +8457,7 @@ tXmdmY4fDE5]];
           displayButtons[childId]:PriorityShow(1);
         end
       end
+      WeakAuras.ResumeAllDynamicGroups();
     end
 
     local list = {};
@@ -7992,8 +8472,10 @@ tXmdmY4fDE5]];
     end
     WeakAuras.EnsureOptions(id);
     if(num > 1) then
+      WeakAuras.PauseAllDynamicGroups();
       WeakAuras.BuildOptions(list, finishPicking);
     else
+      WeakAuras.PauseAllDynamicGroups();
       finishPicking();
     end
   end
@@ -8074,6 +8556,7 @@ function WeakAuras.ImportFromString()
 end
 
 function WeakAuras.CloseImportExport()
+  frame.codereview:Close();
   frame.importexport:Close();
 end
 
@@ -8119,7 +8602,10 @@ function WeakAuras.UpdateGroupOrders(data)
 end
 
 local previousFilter;
-function WeakAuras.SortDisplayButtons(filter, overrideReset)
+function WeakAuras.SortDisplayButtons(filter, overrideReset, id)
+  if (WeakAuras.IsOptionsProcessingPaused()) then
+    return;
+  end
   local recenter = false;
   filter = filter or (overrideReset and previousFilter or "");
   if(frame.filterInput:GetText() ~= filter) then
@@ -8149,7 +8635,7 @@ function WeakAuras.SortDisplayButtons(filter, overrideReset)
     else
       if(filter and data.controlledChildren) then
         for index, childId in pairs(data.controlledChildren) do
-          if(childId:lower():find(filter)) then
+          if(childId:lower():find(filter, 1, true)) then
             containsFilter = true;
             break;
           end
@@ -8157,7 +8643,7 @@ function WeakAuras.SortDisplayButtons(filter, overrideReset)
       end
       if(
         frame.loadedButton:GetExpanded()
-        and (not filter or id:lower():find(filter) or containsFilter)
+        and (not filter or id:lower():find(filter, 1, true) or containsFilter)
       ) then
         child.frame:Show();
         local group = child:GetGroup();
@@ -8211,7 +8697,7 @@ function WeakAuras.SortDisplayButtons(filter, overrideReset)
     local data = WeakAuras.GetData(id);
     if(filter and data.controlledChildren) then
       for index, childId in pairs(data.controlledChildren) do
-        if(childId:lower():find(filter)) then
+        if(childId:lower():find(filter, 1, true)) then
           containsFilter = true;
           break;
         end
@@ -8219,7 +8705,7 @@ function WeakAuras.SortDisplayButtons(filter, overrideReset)
     end
     if(
       frame.unloadedButton:GetExpanded()
-      and (not filter or id:lower():find(filter) or containsFilter)
+      and (not filter or id:lower():find(filter, 1, true) or containsFilter)
     ) then
       local group = child:GetGroup();
       if(group) then
@@ -8264,8 +8750,7 @@ function WeakAuras.SortDisplayButtons(filter, overrideReset)
   end
 end
 
-WeakAuras.loadFrame:SetScript("OnEvent", function (self, event, arg1)
-  WeakAuras.ScanForLoads(self, event, arg1);
+WeakAuras.afterScanForLoads = function()
   if(frame) then
     if (frame:IsVisible()) then
       WeakAuras.SortDisplayButtons();
@@ -8273,7 +8758,7 @@ WeakAuras.loadFrame:SetScript("OnEvent", function (self, event, arg1)
       frame.needsSort = true;
     end
   end
-end);
+end
 
 function WeakAuras.IsPickedMultiple()
   if(frame.pickedDisplay == tempGroup) then
@@ -8354,15 +8839,8 @@ end
 function WeakAuras.UpdateDisplayButton(data)
   local id = data.id;
   local button = displayButtons[id];
-  if not(button) then
-    error("Button for "..id.." was not found!");
-  else
-    if(regionOptions[data.regionType]) then
-      button:SetIcon(WeakAuras.SetThumbnail(data));
-    else
-      button:SetIcon("Interface\\Icons\\INV_Misc_QuestionMark");
-    end
-
+  if (button) then
+    button:SetIcon(WeakAuras.SetThumbnail(data));
   end
 end
 
@@ -8372,39 +8850,35 @@ function WeakAuras.SetThumbnail(data)
   if not(regionType) then
     error("Improper arguments to WeakAuras.SetThumbnail - regionType not defined");
   else
-    if(regionTypes[regionType]) then
-      local id = data.id;
-      if not(id) then
-        error("Improper arguments to WeakAuras.SetThumbnail - id not defined");
+    local id = data.id;
+    local button = displayButtons[id];
+    if (not button) then return end;
+    local thumbnail;
+    if((not thumbnails[id]) or (not thumbnails[id].region) or thumbnails[id].regionType ~= regionType) then
+      if(regionOptions[regionType] and regionOptions[regionType].createThumbnail and regionOptions[regionType].modifyThumbnail) then
+        thumbnail = regionOptions[regionType].createThumbnail(button.frame, regionTypes[regionType].create);
       else
-        local button = displayButtons[id];
-        local thumbnail, region;
-        if(regionOptions[regionType].createThumbnail and regionOptions[regionType].modifyThumbnail) then
-          if((not thumbnails[id]) or (not thumbnails[id].region) or thumbnails[id].regionType ~= regionType) then
-            thumbnail = regionOptions[regionType].createThumbnail(button.frame, regionTypes[regionType].create);
-            thumbnails[id] = {
-              regionType = regionType,
-              region = thumbnail
-            };
-          else
-            thumbnail = thumbnails[id].region;
-          end
-          WeakAuras.validate(data, regionTypes[regionType].default);
-          regionOptions[regionType].modifyThumbnail(button.frame, thumbnail, data, regionTypes[regionType].modify);
-        else
-          thumbnail = regionOptions[regionType].icon;
-        end
-
-        return thumbnail;
+        thumbnail = button.frame:CreateTexture();
+        thumbnail:SetTexture("Interface\\Icons\\INV_Misc_QuestionMark");
       end
-    else
-      error("Improper arguments to WeakAuras.SetThumbnail - regionType \""..data.regionType.."\" is not supported and no custom region was supplied");
+      thumbnails[id] = {
+        regionType = regionType,
+        region = thumbnail
+      };
     end
+
+    thumbnail = thumbnails[id].region;
+    if(regionOptions[regionType] and regionOptions[regionType].modifyThumbnail) then
+       WeakAuras.validate(data, regionTypes[regionType].default);
+      regionOptions[regionType].modifyThumbnail(button.frame, thumbnail, data, regionTypes[regionType].modify);
+    end
+
+    return thumbnail;
   end
 end
 
-function WeakAuras.OpenTexturePick(data, field)
-  frame.texturePick:Open(data, field);
+function WeakAuras.OpenTexturePick(data, field, textures, stopMotion)
+  frame.texturePick:Open(data, field, textures, stopMotion);
 end
 
 function WeakAuras.OpenIconPick(data, field)
@@ -8423,6 +8897,26 @@ function WeakAuras.OpenModelPick(data, field)
   frame.modelPick:Open(data, field);
 end
 
+function WeakAuras.OpenCodeReview(data)
+  frame.codereview:Open(data);
+end
+
+function WeakAuras.CloseCodeReview(data)
+  frame.codereview:Close();
+end
+
+function WeakAuras.OpenTriggerTemplate(data)
+  if not(IsAddOnLoaded("WeakAurasTemplates")) then
+    local loaded, reason = LoadAddOn("WeakAurasTemplates");
+    if not(loaded) then
+      print("|cff9900FF".."WeakAurasTemplates"..FONT_COLOR_CODE_CLOSE.." could not be loaded: "..RED_FONT_COLOR_CODE.._G["ADDON_"..reason]);
+      return;
+    end
+    frame.newView = WeakAuras.CreateTemplateView(frame);
+  end
+  frame.newView:Open(data);
+end
+
 function WeakAuras.ResetMoverSizer()
   if(frame and frame.mover and frame.moversizer and frame.mover.moving.region and frame.mover.moving.data) then
     frame.moversizer:SetToRegion(frame.mover.moving.region, frame.mover.moving.data);
@@ -8434,13 +8928,16 @@ function WeakAuras.CorrectAuraName(input)
   if(spellId) then
     local name, _, icon = GetSpellInfo(spellId);
     if(name) then
-      iconCache[name] = icon;
+      spellCache[name] = spellCache[name] or {};
+      if (not spellCache[name][spellId]) then
+        spellCache[name][spellId] = icon;
+      end
       return name, spellId;
     else
       return "Invalid Spell ID";
     end
   else
-    local ret = WeakAuras.BestKeyMatch(input, iconCache);
+    local ret = WeakAuras.BestKeyMatch(input, spellCache);
     if(ret == "") then
       return "No Match Found", nil;
     else
@@ -8451,6 +8948,11 @@ end
 
 function WeakAuras.BestKeyMatch(nearkey, table)
   for key, value in pairs(table) do
+    if(nearkey == key) then
+      return key;
+    end
+  end
+  for key, value in pairs(table) do
     if(nearkey:lower() == key:lower()) then
       return key;
     end
@@ -8459,7 +8961,7 @@ function WeakAuras.BestKeyMatch(nearkey, table)
   local bestDistance = math.huge;
   local partialMatches = {};
   for key, value in pairs(table) do
-    if(key:lower():find(nearkey:lower())) then
+    if(key:lower():find(nearkey:lower(), 1, true)) then
       partialMatches[key] = value;
     end
   end

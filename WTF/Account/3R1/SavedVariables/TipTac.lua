@@ -2,11 +2,11 @@
 TipTac_Config = {
 	["fontSizeDelta"] = 3,
 	["classification_rare"] = "%s|r (Rare) ",
-	["barsCondenseValues"] = true,
+	["showBuffs"] = false,
 	["classification_elite"] = "+%s ",
-	["barHeight"] = 12,
+	["barsCondenseValues"] = true,
 	["left"] = 5.99998378753662,
-	["healthBarText"] = "value",
+	["classification_rareelite"] = "+%s|r (Rare) ",
 	["tipColor"] = {
 		0.101960784313725, -- [1]
 		0.101960784313725, -- [2]
@@ -18,19 +18,14 @@ TipTac_Config = {
 	["classification_trivial"] = "~%s ",
 	["classification_worldboss"] = "%s|r (Boss) ",
 	["hideFactionText"] = true,
-	["classification_rareelite"] = "+%s|r (Rare) ",
+	["iconRaid"] = false,
 	["anchorFrameUnitPoint"] = "TOPLEFT",
 	["anchorWorldTipPoint"] = "TOPLEFT",
-	["showDebuffs"] = false,
+	["barTexture"] = "Interface\\Addons\\SharedMedia\\statusbar\\BantoBar",
 	["healthBar"] = true,
-	["iconRaid"] = false,
+	["healthBarText"] = "value",
 	["classification_normal"] = "%s ",
-	["tipBorderColor"] = {
-		0.301960784313726, -- [1]
-		0.301960784313726, -- [2]
-		0.4, -- [3]
-		0.500001192092896, -- [4]
-	},
+	["showDebuffs"] = false,
 	["targetYouText"] = "<<YOU>>",
 	["gradientColor"] = {
 		0.8, -- [1]
@@ -41,9 +36,14 @@ TipTac_Config = {
 	["top"] = 1193.00024414063,
 	["fontFace"] = "Interface\\Addons\\Skada\\fonts\\ABF.ttf",
 	["barFontFace"] = "Interface\\Addons\\Skada\\fonts\\ABF.ttf",
-	["barTexture"] = "Interface\\Addons\\SharedMedia\\statusbar\\BantoBar",
+	["tipBorderColor"] = {
+		0.301960784313726, -- [1]
+		0.301960784313726, -- [2]
+		0.4, -- [3]
+		0.500001192092896, -- [4]
+	},
 	["classification_minus"] = "-%s ",
 	["barFontFlags"] = "",
 	["anchorFrameTipPoint"] = "TOPLEFT",
-	["showBuffs"] = false,
+	["barHeight"] = 12,
 }

@@ -1,12 +1,12 @@
-## Interface: 60200
+## Interface: 70000
 ## Title: SavedInstances
 ## Notes: Tracks raid/instance/worldboss lockouts for all your characters, daily/weekly quests, currencies, trade cooldowns, and more!
 ## Author: oscarucb
-## Version: 6.2.7
-## X-Build: 476
-## X-ReleaseDate: 2015-12-19T09:52:15Z
-## X-Revision: $Revision: 474 $
-## X-AceForum: 14896
+## Version: 7.0.0
+## X-Build: 515
+## X-ReleaseDate: 2016-07-22T10:09:08Z
+## X-Revision: $Revision: 508 $
+## X-AceForum: 14072
 ## X-License: All Rights Reserved
 ## X-Category: Raid
 ## OptionalDeps: Ace3, CallbackHandler-1.0, LibDataBroker-1.1, LibDBIcon-1.0, LibQTip-1.0
@@ -16,7 +16,7 @@
 ## SavedVariables: SavedInstancesDB
 ## LoadManagers: AddonLoader
 ## X-LoadOn-Always: delayed
-## X-Curse-Packaged-Version: 6.2.7
+## X-Curse-Packaged-Version: 7.0.0
 ## X-Curse-Project-Name: SavedInstances
 ## X-Curse-Project-ID: saved_instances
 ## X-Curse-Repository-ID: wow/saved_instances/mainline

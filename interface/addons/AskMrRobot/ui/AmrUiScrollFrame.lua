@@ -230,7 +230,7 @@ local function Constructor()
 	local scrollbg = scrollbar:CreateTexture(nil, "BACKGROUND")
 	scrollbg:SetPoint("TOPLEFT", scrollbar, "TOPLEFT", 0, 16)
 	scrollbg:SetPoint("BOTTOMRIGHT", scrollbar, "BOTTOMRIGHT", 0, -16)
-	scrollbg:SetTexture(0, 0, 0, 0.3)
+	scrollbg:SetColorTexture(0, 0, 0, 0.3)
 	
 	--Container Support
 	local content = CreateFrame("Frame", nil, scrollframe)

@@ -71,22 +71,6 @@ local function ResetAllData()
 	AltoMsgBox:Show()
 end
 
-local function ResetConnectedRealms_MsgBox_Handler(self, button)
-	if not button then return end
-	
-	DataStore:ClearAllConnectedRealms()
-	addon:Print(L["Realm links successfully deleted"])
-end
-
-local function ResetConnectedRealms()
-	-- reset connected realms, only the links between realms, not the data from other alts
-	addon:SetMsgBoxHandler(ResetConnectedRealms_MsgBox_Handler)
-	
-	AltoMsgBox_Text:SetText(L["Reset connected realms ?"])
-	AltoMsgBox:Show()
-end
-
-
 -- ** Menu Icons **
 local locationLabels = {
 	format("%s %s(%s)", L["This realm"], colors.green, L["This account"]),
@@ -120,7 +104,7 @@ local function LevelIcon_Initialize(frame, level)
 	local option = addon:GetOption(OPTION_LEVELS)
 	
 	frame:AddTitle(L["FILTER_LEVELS"])
-	frame:AddButtonWithArgs(ALL, 1, OnLevelFilterChange, 1, 100, (option == 1))
+	frame:AddButtonWithArgs(ALL, 1, OnLevelFilterChange, 1, 110, (option == 1))
 	frame:AddTitle()
 	frame:AddButtonWithArgs("1-59", 2, OnLevelFilterChange, 1, 59, (option == 2))
 	frame:AddButtonWithArgs("60-69", 3, OnLevelFilterChange, 60, 69, (option == 3))
@@ -128,7 +112,8 @@ local function LevelIcon_Initialize(frame, level)
 	frame:AddButtonWithArgs("80-89", 5, OnLevelFilterChange, 80, 89, (option == 5))
 	frame:AddButtonWithArgs("90-99", 6, OnLevelFilterChange, 90, 99, (option == 6))
 	frame:AddButtonWithArgs("90-100", 7, OnLevelFilterChange, 90, 100, (option == 7))
-	frame:AddButtonWithArgs("100", 8, OnLevelFilterChange, 100, 100, (option == 8))
+	frame:AddButtonWithArgs("100-110", 8, OnLevelFilterChange, 100, 110, (option == 8))
+	frame:AddButtonWithArgs("110", 9, OnLevelFilterChange, 110, 110, (option == 9))
 	frame:AddCloseMenu()
 end
 
@@ -222,7 +207,6 @@ local function DataStoreOptionsIcon_Initialize(frame, level)
 	
 	frame:AddTitle()
 	frame:AddButton(L["Reset all data"], nil, ResetAllData)
-	frame:AddButton(L["Reset connected realms"], nil, ResetConnectedRealms)
 	frame:AddButton(HELP_LABEL, DataStoreHelp, ShowOptionsCategory)
 	frame:AddCloseMenu()
 end

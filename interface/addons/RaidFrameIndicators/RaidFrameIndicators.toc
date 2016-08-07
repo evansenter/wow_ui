@@ -1,7 +1,7 @@
-﻿## Interface: 60200
+## Interface: 70000
 ## Title: Raid Frame Indicators
 
-## Version: 1.10
+## Version: 1.11
 ## Author: Szandos
 ## Notes: Adds indicators to the standard raid frames
 ## SavedVariables: IndicatorsDB

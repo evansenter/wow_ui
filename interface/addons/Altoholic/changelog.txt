@@ -9,6 +9,55 @@ This means cleaning the following files in \WTF\Account\<your_account>\SavedVari
 There WILL be bugs if you use your old files without cleaning them first. 
 Some fixes to work around API changes are too time consuming, so cleaning is required. A meagre price to pay once per expansion.
 
+
+7.0.005 (31/07/2016)
+
+- DataStore: Fixed a lua error when getting AutoCompleteRealms.
+
+
+7.0.004 (31/07/2016)
+
+- Fixed issues related to connected realms (guild bank, tooltips, etc..)
+IMPORTANT NOTE: a guild bank will not be scanned if it's on a realm that is not known by the add-on.
+
+So if you have characters belonging to a guild from another realm, and you have no character on that realm, you will have to create a character on that other realm, and log him on once, just to identify the realm.
+
+The API provides absolutely no way of matching a short realm name to a long realm name.
+If your realm is a small name without spaces (like 'Dalaran'), then this might seem like a non-issue for you, but it makes it impossible to know precisely to which realm a guild belongs.
+Basically, my workaround is about making the addon know that "Marécage de Zangar" is also known as "MarécagedeZangar" by getting rid of spaces.
+
+This is an extremely imperfect solution, and I sincerely dislike it, but the API does not help in any way.
+The solution should hopefully work across all localizations, but I can't promise anything.
+
+Wanna help ? Relay this topic on the US forums :
+
+http://eu.battle.net/forums/en/wow/topic/17612943218
+
+and kindly bump.. 
+
+7.0.003 (27/07/2016)
+
+- Profession level cap raised to 800.
+- Fixed the counts not being shown in the item tooltip when mousing over a craft reagent in the tradeskill UI.
+- Fixed a Lua error when clicking on a recipe link in the chat log.
+- Fixed a Lua error when checking the guild bank tab.
+- DataStore_Talents: Rewrote scanning of talent information, UI will come back in a future release.
+
+7.0.002 (20/07/2016)
+
+- DataStore_Garrisons: Fixed a few Lua errors.
+- DataStore_Mails: Fixed the invalid attachment counts in the tooltip (note: you will have to visit the mailboxes that have a wrong count to correct it, it's not a display error, it's a database error)
+
+7.0.001 (19/07/2016)
+
+- REMINDER : CLEANING YOUR SAVED VARIABLES IS MANDATORY FOR 7.0 (YES I'M SHOUTING ! :D)
+- Various fixes to support 7.0 API changes.
+- Glyph UI has been removed.
+- Tabard UI has been removed.
+
+Note : I've been extremely busy with big projects & responsibilities at work in the past months (year ? .. almost!), but 21/07 is national day in Belgium so it's a long weekend over here, I'll have time to follow-up on 7.0 and release extra changes.
+I expect the rest of the year to keep quite busy given our current planning, hopefully 2017 should be quieter (and I'll have a long holiday in December, yay !).
+
 6.2.007 (12/09/2015)
 
 - Added Garona & Harrison Jones to the list of followers not recruited at the inn.

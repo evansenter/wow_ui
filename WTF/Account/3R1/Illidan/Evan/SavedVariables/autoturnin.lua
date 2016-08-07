@@ -4,25 +4,25 @@ AutoTurnInCharacterDB = {
 	["questlevel"] = true,
 	["showrewardtext"] = true,
 	["watchlevel"] = true,
-	["secondary"] = {
+	["weapon"] = {
 	},
-	["enabled"] = false,
+	["enabled"] = true,
 	["todarkmoon"] = true,
-	["debug"] = false,
-	["questshare"] = false,
+	["autoequip"] = false,
+	["trivial"] = false,
 	["armor"] = {
 	},
 	["darkmoonautostart"] = true,
 	["darkmoonteleport"] = true,
 	["completeonly"] = false,
+	["debug"] = false,
+	["version"] = "5.1.1",
+	["tournament"] = 2,
 	["stat"] = {
 	},
-	["autoequip"] = false,
-	["version"] = "4.5.N",
-	["tournament"] = 2,
 	["lootreward"] = 1,
 	["all"] = 2,
-	["trivial"] = false,
-	["weapon"] = {
+	["questshare"] = false,
+	["secondary"] = {
 	},
 }

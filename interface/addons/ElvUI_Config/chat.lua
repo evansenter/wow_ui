@@ -115,13 +115,24 @@ E.Options.args.chat = {
 					name = L["Chat History"],
 					desc = L["Log the main chat frames history. So when you reloadui or log in and out you see the history from your last session."],
 				},
-				spacer = {
+				useAltKey = {
 					order = 10,
-					type = 'description',
-					name = '',
+					type = "toggle",
+					name = L["Use Alt Key"],
+					desc = L["Require holding the Alt key down to move cursor or cycle through messages in the editbox."],
+					set = function(self, value)
+						E.db.chat.useAltKey = value;
+						CH:UpdateSettings()
+					end,
+				},
+				classColorMentionsChat = {
+					order = 11,
+					type = "toggle",
+					name = L["Class Color Mentions"],
+					desc = L["Use class color for the names of players when they are mentioned."],
 				},
 				throttleInterval = {
-					order = 11,
+					order = 12,
 					type = 'range',
 					name = L["Spam Interval"],
 					desc = L["Prevent the same messages from displaying in chat more than once within this set amount of seconds, set to zero to disable."],
@@ -134,7 +145,7 @@ E.Options.args.chat = {
 					end,
 				},
 				scrollDownInterval = {
-					order = 12,
+					order = 13,
 					type = 'range',
 					name = L["Scroll Interval"],
 					desc = L["Number of time in seconds to scroll down to the bottom of the chat window if you are not scrolled down completely."],
@@ -143,8 +154,15 @@ E.Options.args.chat = {
 						E.db.chat[ info[#info] ] = value
 					end,
 				},
+				numAllowedCombatRepeat = {
+					order = 14,
+					type = "range",
+					name = L["Allowed Combat Repeat"],
+					desc = L["Number of repeat characters while in combat before the chat editbox is automatically closed."],
+					min = 2, max = 10, step = 1,
+				},
 				timeStampFormat = {
-					order = 13,
+					order = 15,
 					type = 'select',
 					name = TIMESTAMPS_LABEL,
 					desc = OPTION_TOOLTIP_TIMESTAMPS,
@@ -235,14 +253,13 @@ E.Options.args.chat = {
 						['ABOVE_CHAT'] = L["Above Chat"],
 					},
 					set = function(info, value) E.db.chat[ info[#info] ] = value; CH:UpdateAnchors() end,
-					disabled = function() return not E.db.datatexts.leftChatPanel end,
 				},
 				panelBackdrop = {
 					order = 5,
 					type = 'select',
 					name = L["Panel Backdrop"],
 					desc = L["Toggle showing of the left and right chat panels."],
-					set = function(info, value) E.db.chat.panelBackdrop = value; E:GetModule('Layout'):ToggleChatPanels(); E:GetModule('Chat'):PositionChat(true) end,
+					set = function(info, value) E.db.chat.panelBackdrop = value; E:GetModule('Layout'):ToggleChatPanels(); E:GetModule('Chat'):PositionChat(true); E:GetModule('Chat'):UpdateAnchors() end,
 					values = {
 						['HIDEBOTH'] = L["Hide Both"],
 						['SHOWBOTH'] = L["Show Both"],
@@ -288,7 +305,7 @@ E.Options.args.chat = {
 						end
 						bags:Layout(true);
 					end,
-					min = 50, max = 700, step = 1,
+					min = 50, max = 1000, step = 1,
 				},
 				spacer2 = {
 					order = 10,
@@ -317,7 +334,7 @@ E.Options.args.chat = {
 						E:GetModule('Chat'):PositionChat(true);
 						E:GetModule('Bags'):Layout();
 					end,
-					min = 50, max = 700, step = 1,
+					min = 50, max = 1000, step = 1,
 				},
 				panelBackdropNameLeft = {
 					order = 13,
@@ -379,7 +396,7 @@ E.Options.args.chat = {
 					order = 5,
 					name = L["Tab Font Size"],
 					type = "range",
-					min = 4, max = 22, step = 1,
+					min = 4, max = 212, step = 1,
 				},
 				tabFontOutline = {
 					order = 6,
