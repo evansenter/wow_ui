@@ -20,6 +20,10 @@ VER 3 0100000000000014 "Renewing Mist" "INV_MISC_QUESTIONMARK"
 /use Thunder Focus Tea
 /use [@mouseover,help,nodead][]Renewing Mist
 END
+VER 3 0100000000000020 "RJW" "ABILITY_MONK_RUSHINGJADEWIND"
+#showtooltip
+/use [nochanneling]Rushing Jade Wind
+END
 VER 3 010000000000001A "SCK" "INV_Misc_QuestionMark"
 #showtooltip
 /use [nochanneling]Spinning Crane Kick

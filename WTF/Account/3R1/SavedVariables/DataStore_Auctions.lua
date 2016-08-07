@@ -2,13 +2,13 @@
 DataStore_AuctionsDB = {
 	["profileKeys"] = {
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
-		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
 		["Metal - Illidan"] = "Metal - Illidan",
+		["Pandatal - Illidan"] = "Pandatal - Illidan",
+		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Natal - Illidan"] = "Natal - Illidan",
 		["Evan - Illidan"] = "Evan - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
-		["Natal - Illidan"] = "Natal - Illidan",
-		["Pandatal - Illidan"] = "Pandatal - Illidan",
-		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
 	},
 	["global"] = {
 		["Characters"] = {
