@@ -20,10 +20,3 @@ X: 297
 Y: 77
 W: 232
 H: 348
-Frame: MacroToolkitFrame
-FrameLevel: 1
-Anchor: CENTER
-X: 90
-Y: 32
-W: 638
-H: 425

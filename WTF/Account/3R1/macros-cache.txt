@@ -9,14 +9,8 @@ VER 3 000000000000003F "Blackout Kick" "INV_MISC_QUESTIONMARK"
 #showtooltip Blackout Kick
 /use [nochanneling]Blackout Kick
 END
-VER 3 000000000000004A "Buy Shit" "INV_Misc_QuestionMark"
-/run BuyMerchantItem(2)
-END
 VER 3 0000000000000028 "Camera" "Spell_Shadow_EvilEye"
 /console CameraDistanceMaxFactor 9000
-END
-VER 3 0000000000000048 "Cancel HoP" "Spell_Holy_SealOfProtection"
-/cancelaura Hand of Protection
 END
 VER 3 0000000000000030 "Cloak" "INV_MISC_QUESTIONMARK"
 /use 15
@@ -31,10 +25,6 @@ END
 VER 3 0000000000000047 "Deathnote" "Ability_Hunter_MurderofCrows"
 /deathnote
 END
-VER 3 0000000000000041 "EH MW" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/use [@mouseover,help,nodead][]Expel Harm
-END
 VER 3 000000000000002E "Extra Action" "INV_Misc_Herb_Whispervine"
 /click ExtraActionButton1
 END
@@ -45,11 +35,6 @@ VER 3 000000000000004D "GS" "INV_Misc_QuestionMark"
 #showtooltip
 /use [target=mouseover,help,nodead][]Guardian Spirit
 END
-VER 3 0000000000000049 "Guard" "INV_Misc_QuestionMark"
-#showtooltip Guard
-/use 13
-/cast Guard
-END
 VER 3 0000000000000050 "HF" "INV_Misc_QuestionMark"
 #showtooltip
 /use [harm][@targettarget,harm][]Holy Fire
@@ -57,10 +42,6 @@ END
 VER 3 0000000000000034 "HS / GHS" "INV_Misc_QuestionMark"
 #showtooltip
 /use [nomod]Hearthstone;[mod:shift][mod:alt]Garrison Hearthstone
-END
-VER 3 000000000000003D "Jab" "INV_MISC_QUESTIONMARK"
-#showtooltip Jab
-/use [nochanneling:Fists of Fury]Jab
 END
 VER 3 0000000000000045 "Keg Smash" "INV_Misc_QuestionMark"
 #showtooltip Keg Smash
@@ -72,6 +53,9 @@ VER 3 0000000000000038 "Logs" "INV_Inscription_MajorGlyph01"
 END
 VER 3 000000000000002A "Macro" "Ability_Spy"
 /mac
+END
+VER 3 0000000000000051 "Mark Skull" "1373133"
+/run SetRaidTarget("target", 8)
 END
 VER 3 000000000000004F "PoM" "INV_Misc_QuestionMark"
 #showtooltip

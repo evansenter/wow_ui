@@ -2,13 +2,13 @@
 DataStore_AgendaDB = {
 	["profileKeys"] = {
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
+		["Comet - Illidan"] = "Comet - Illidan",
 		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
-		["Metal - Illidan"] = "Metal - Illidan",
-		["Pandatal - Illidan"] = "Pandatal - Illidan",
+		["Evan - Illidan"] = "Evan - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Natal - Illidan"] = "Natal - Illidan",
-		["Evan - Illidan"] = "Evan - Illidan",
-		["Comet - Illidan"] = "Comet - Illidan",
+		["Pandatal - Illidan"] = "Pandatal - Illidan",
+		["Metal - Illidan"] = "Metal - Illidan",
 	},
 	["global"] = {
 		["Options"] = {
@@ -26,20 +26,16 @@ DataStore_AgendaDB = {
 						["note"] = "",
 					},
 				},
-				["lastUpdate"] = 1470538980,
+				["lastUpdate"] = 1470592009,
+			},
+			["Default.Illidan.Natal"] = {
+				["lastUpdate"] = 1424741647,
 			},
 			["Default.Illidan.Combustion"] = {
 				["lastUpdate"] = 1424741664,
 			},
-			["Default.Illidan.Pandatal"] = {
-				["lastUpdate"] = 1461733291,
-			},
-			["Default.Illidan.Comet"] = {
-				["DungeonIDs"] = {
-					["Upper Blackrock Spire Mythic|236437483"] = "204211|1470550588|0|0",
-					["Hellfire Citadel Heroic|251527740"] = "204211|1470550588|0|1",
-				},
-				["lastUpdate"] = 1470550586,
+			["Default.Illidan.Metal"] = {
+				["lastUpdate"] = 1470154484,
 			},
 			["Default.Dark Iron.Colton"] = {
 				["Contacts"] = {
@@ -51,8 +47,8 @@ DataStore_AgendaDB = {
 					},
 					["Purephase"] = {
 						["note"] = "",
-						["class"] = "Rogue",
 						["level"] = 100,
+						["class"] = "Rogue",
 					},
 					["Rfl"] = {
 						["note"] = "",
@@ -63,7 +59,7 @@ DataStore_AgendaDB = {
 					["Hemos"] = {
 						["note"] = "",
 					},
-					["Bubblegurl"] = {
+					["Billbraskie"] = {
 						["note"] = "",
 					},
 					["Faluzure"] = {
@@ -72,17 +68,22 @@ DataStore_AgendaDB = {
 					["Pockee"] = {
 						["note"] = "",
 					},
-					["Billbraskie"] = {
+					["Bubblegurl"] = {
 						["note"] = "",
 					},
 				},
 				["lastUpdate"] = 1424741733,
 			},
-			["Default.Illidan.Metal"] = {
-				["lastUpdate"] = 1470154484,
+			["Default.Illidan.Comet"] = {
+				["DungeonIDs"] = {
+					["Upper Blackrock Spire Mythic|236437483"] = "112104|1470642696|0|0",
+					["Bloodmaul Slag Mines Mythic|252193704"] = "112104|1470642696|0|0",
+					["Hellfire Citadel Heroic|251527740"] = "112104|1470642696|0|1",
+				},
+				["lastUpdate"] = 1470642680,
 			},
-			["Default.Illidan.Natal"] = {
-				["lastUpdate"] = 1424741647,
+			["Default.Illidan.Pandatal"] = {
+				["lastUpdate"] = 1461733291,
 			},
 		},
 	},

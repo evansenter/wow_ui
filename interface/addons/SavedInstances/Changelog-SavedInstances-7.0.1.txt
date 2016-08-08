@@ -1,9 +1,11 @@
 ------------------------------------------------------------------------
-r516 | oscarucb | 2016-07-23 09:01:04 +0000 (Sat, 23 Jul 2016) | 1 line
+r517 | oscarucb | 2016-08-07 23:23:42 +0000 (Sun, 07 Aug 2016) | 3 lines
 Changed paths:
-   A /tags/7.0.0 (from /trunk:515)
+   A /tags/7.0.1 (from /trunk:516)
 
-Tagging as 7.0.0
+Tagging as 7.0.1
+
+Add itIT and esES translations (thanks skunkguru and LordAbaddon!)
 ------------------------------------------------------------------------
 r515 | oscarucb | 2016-07-22 10:09:08 +0000 (Fri, 22 Jul 2016) | 2 lines
 Changed paths:
