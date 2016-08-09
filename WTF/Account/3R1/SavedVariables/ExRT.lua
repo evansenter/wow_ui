@@ -32,23 +32,44 @@ VExRT = {
 			[72] = 10,
 			[104] = 10,
 			[73] = 10,
-			[252] = 10,
-			[105] = 10,
-			[254] = 10,
-			[256] = 10,
-			[577] = 10,
 			[581] = 10,
+			[105] = 10,
+			[577] = 10,
+			[256] = 10,
+			[254] = 10,
+			[252] = 10,
 		},
 		["Strata"] = "HIGH",
 	},
 	["ProfileKeys"] = {
 		["Comet-Illidan"] = "default",
-		["Metal-Illidan"] = "default",
 		["Evan-Illidan"] = "default",
+		["Metal-Illidan"] = "default",
 	},
 	["Arrow"] = {
 	},
 	["Encounter"] = {
+		["names"] = {
+			[1704] = "Blackhand",
+			[1677] = "Sadana Bloodfury",
+			[1679] = "Bonemaw",
+			[1688] = "Nhallish",
+			[1713] = "Kromog, Legend of the Mountain",
+			[1652] = "Roltall",
+			[1653] = "Slave Watcher Crushto",
+			[1654] = "Gug'rokk",
+			[1655] = "Magmolatus",
+			[1749] = "Fleshrender Nok'gar",
+			[1750] = "Oshir",
+			[1689] = "Flamebender Ka'graz",
+			[1690] = "Blast Furnace",
+			[1691] = "Gruul",
+			[1754] = "Skulloc, Son of Gruul",
+			[1693] = "Hans'gar & Franzok",
+			[1694] = "Beastlord Darmac",
+			[1682] = "Ner'zhul",
+			[1748] = "Grimrail Enforcers",
+		},
 		["list"] = {
 			["Evan"] = {
 				"^1677^2^1469914689^22^1^5^696.70^", -- [1]
@@ -66,20 +87,6 @@ VExRT = {
 				"^1655^23^1469923226^75^1^5^711.39^", -- [13]
 				"^1652^23^1469923485^28^1^5^711.59^", -- [14]
 				"^1654^23^1469923756^39^1^5^711.59^", -- [15]
-			},
-			["Metal"] = {
-				"69BE1426377890085015Ninjáman-Ragnaros", -- [1]
-				"69BE1426379138011019Danedrad-Hyjal", -- [2]
-				"69BE142637944912C119Annúnor-Zul'jin", -- [3]
-				"69EE1426380435208117Evasion-SteamwheedleCartel", -- [4]
-				"69DE1426381470133117Evasion-SteamwheedleCartel", -- [5]
-				"699E142638240119F017Solitice-Zul'jin", -- [6]
-				"699E14263829800E5017Azäzel-Zul'jin", -- [7]
-				"699E1426383852196018Lengzhai-BlackDragonflight", -- [8]
-				"699E142638444919A018Annúnor-Zul'jin", -- [9]
-				"699E1426540220139020Döctà", -- [10]
-				"699E1426540746159120", -- [11]
-				"6B1E142654180007B020Doublestufed-Gorefiend", -- [12]
 			},
 			["Comet"] = {
 				"6A8E1426373886111015Slimshamie-Zul'jin", -- [1]
@@ -117,27 +124,20 @@ VExRT = {
 				"^1750^23^1469934397^81^1^5^704.06^", -- [33]
 				"^1754^23^1469934557^146^1^5^704.06^Tweedler-BleedingHollow", -- [34]
 			},
-		},
-		["names"] = {
-			[1704] = "Blackhand",
-			[1677] = "Sadana Bloodfury",
-			[1679] = "Bonemaw",
-			[1655] = "Magmolatus",
-			[1713] = "Kromog, Legend of the Mountain",
-			[1652] = "Roltall",
-			[1653] = "Slave Watcher Crushto",
-			[1654] = "Gug'rokk",
-			[1748] = "Grimrail Enforcers",
-			[1749] = "Fleshrender Nok'gar",
-			[1750] = "Oshir",
-			[1689] = "Flamebender Ka'graz",
-			[1690] = "Blast Furnace",
-			[1691] = "Gruul",
-			[1754] = "Skulloc, Son of Gruul",
-			[1693] = "Hans'gar & Franzok",
-			[1694] = "Beastlord Darmac",
-			[1682] = "Ner'zhul",
-			[1688] = "Nhallish",
+			["Metal"] = {
+				"69BE1426377890085015Ninjáman-Ragnaros", -- [1]
+				"69BE1426379138011019Danedrad-Hyjal", -- [2]
+				"69BE142637944912C119Annúnor-Zul'jin", -- [3]
+				"69EE1426380435208117Evasion-SteamwheedleCartel", -- [4]
+				"69DE1426381470133117Evasion-SteamwheedleCartel", -- [5]
+				"699E142638240119F017Solitice-Zul'jin", -- [6]
+				"699E14263829800E5017Azäzel-Zul'jin", -- [7]
+				"699E1426383852196018Lengzhai-BlackDragonflight", -- [8]
+				"699E142638444919A018Annúnor-Zul'jin", -- [9]
+				"699E1426540220139020Döctà", -- [10]
+				"699E1426540746159120", -- [11]
+				"6B1E142654180007B020Doublestufed-Gorefiend", -- [12]
+			},
 		},
 	},
 	["Marks"] = {
@@ -264,24 +264,24 @@ VExRT = {
 			["Sarsio-Stormreaver"] = 255,
 			["Samashock-Area52"] = 262,
 			["Muffy-Barthilas"] = 250,
-			["Scrutinizer-Azralon"] = 66,
+			["Metal"] = 72,
 			["Xalli"] = 65,
-			["Nazàrken-Thrall"] = 63,
+			["Vazkala-Azralon"] = 104,
 			["Skamos-Mal'Ganis"] = 260,
-			["Lollie-Barthilas"] = 66,
+			["Kobeef-Antonidas"] = 253,
 			["Zaraeni-Mal'Ganis"] = 255,
 			["Mattcoss-Area52"] = 254,
 			["Healinspree"] = 258,
-			["Kobeef-Antonidas"] = 253,
-			["Vazkala-Azralon"] = 104,
-			["Metal"] = 72,
+			["Lollie-Barthilas"] = 66,
+			["Nazàrken-Thrall"] = 63,
+			["Scrutinizer-Azralon"] = 66,
 		},
 		["NoRaid"] = true,
 		["CDECol"] = {
 		},
 		["default_userCD"] = {
 		},
-		["userDB"] = {
+		["Save"] = {
 		},
 		["colSet"] = {
 			{
@@ -293,10 +293,10 @@ VExRT = {
 				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [1]
 			{
 				["enabled"] = true,
@@ -307,10 +307,10 @@ VExRT = {
 				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [2]
 			{
 				["enabled"] = true,
@@ -321,10 +321,10 @@ VExRT = {
 				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [3]
 			{
 				["frameGeneral"] = true,
@@ -334,10 +334,10 @@ VExRT = {
 				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [4]
 			{
 				["frameGeneral"] = true,
@@ -347,10 +347,10 @@ VExRT = {
 				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [5]
 			{
 				["frameGeneral"] = true,
@@ -360,10 +360,10 @@ VExRT = {
 				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [6]
 			{
 				["frameGeneral"] = true,
@@ -373,10 +373,10 @@ VExRT = {
 				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [7]
 			{
 				["frameGeneral"] = true,
@@ -386,10 +386,10 @@ VExRT = {
 				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [8]
 			{
 				["frameGeneral"] = true,
@@ -399,10 +399,10 @@ VExRT = {
 				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [9]
 			{
 				["frameGeneral"] = true,
@@ -412,10 +412,10 @@ VExRT = {
 				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [10]
 			{
 				["frameGeneral"] = true,
@@ -425,25 +425,25 @@ VExRT = {
 				["blacklistGeneral"] = true,
 				["iconGeneral"] = true,
 				["fontOutline"] = true,
-				["fontShadow"] = false,
+				["textureGeneral"] = true,
 				["fontGeneral"] = true,
 				["textureAnimation"] = true,
-				["textureGeneral"] = true,
+				["fontShadow"] = false,
 			}, -- [11]
 		},
 		["Priority"] = {
 		},
 		["CDE"] = {
 		},
-		["Save"] = {
+		["userDB"] = {
 		},
 	},
 	["Bossmods"] = {
-		["ModuleViewed3580"] = true,
-		["Kormrok"] = {
-		},
 		["Mannoroth"] = {
 		},
+		["Kormrok"] = {
+		},
+		["ModuleViewed3580"] = true,
 		["Kromog"] = {
 			nil, -- [1]
 			nil, -- [2]
@@ -469,9 +469,9 @@ VExRT = {
 			"Futìlíty", -- [22]
 			"Haseoh", -- [23]
 			"Chokune", -- [24]
+			["sync"] = true,
 			["time"] = 1426739223,
 			["name"] = "Lustya-Illidan",
-			["sync"] = true,
 		},
 	},
 	["LegendaryRing"] = {
@@ -480,31 +480,34 @@ VExRT = {
 		["ReadyCheckFrameTimerFade"] = 4,
 		["FlaskExp"] = 1,
 	},
-	["Attendance"] = {
-		["enabled"] = 2,
-		["data"] = {
-		},
-		["alts"] = {
-		},
+	["BattleRes"] = {
 	},
 	["Addon"] = {
 		["Version"] = 3725,
-		["PreVersion"] = 3725,
-		["IconMiniMapTop"] = 1.85814645560772,
-		["IconMiniMapLeft"] = -80,
-		["Timer"] = 0.1,
 		["IconMiniMapHide"] = true,
+		["PreVersion"] = 3725,
+		["Timer"] = 0.1,
+		["IconMiniMapLeft"] = -80,
+		["IconMiniMapTop"] = 1.85814645560772,
 	},
-	["InspectViewer"] = {
-		["ColorizeLowIlvl685"] = false,
-		["ColorizeNoEnch"] = true,
-		["ColorizeNoGems"] = true,
-		["ColorizeNoTopEnchGems"] = false,
-		["ColorizeLowIlvl"] = true,
-		["ColorizeNoValorUpgrade"] = false,
+	["BossWatcher"] = {
+		["optionsDamageGraph"] = true,
+		["fightsNum"] = 2,
+		["autoSegments"] = {
+		},
+		["optionsPositionsDist"] = true,
+		["optionsHealingGraph"] = true,
+		["trackingDamageSpells"] = {
+		},
 	},
-	["InspectArtifact"] = {
-		["players"] = {
+	["MarksBar"] = {
+		["pulltimer"] = 10,
+		["Strata"] = "HIGH",
+		["Show"] = {
+			true, -- [1]
+			true, -- [2]
+			true, -- [3]
+			true, -- [4]
 		},
 	},
 	["Profiles"] = {
@@ -541,26 +544,23 @@ VExRT = {
 	},
 	["Logging"] = {
 	},
-	["MarksBar"] = {
-		["pulltimer"] = 10,
-		["Strata"] = "HIGH",
-		["Show"] = {
-			true, -- [1]
-			true, -- [2]
-			true, -- [3]
-			true, -- [4]
+	["InspectArtifact"] = {
+		["players"] = {
 		},
 	},
-	["BossWatcher"] = {
-		["optionsDamageGraph"] = true,
-		["fightsNum"] = 2,
-		["autoSegments"] = {
-		},
-		["optionsPositionsDist"] = true,
-		["optionsHealingGraph"] = true,
-		["trackingDamageSpells"] = {
-		},
+	["InspectViewer"] = {
+		["ColorizeLowIlvl685"] = false,
+		["ColorizeNoEnch"] = true,
+		["ColorizeNoGems"] = true,
+		["ColorizeLowIlvl"] = true,
+		["ColorizeNoTopEnchGems"] = false,
+		["ColorizeNoValorUpgrade"] = false,
 	},
-	["BattleRes"] = {
+	["Attendance"] = {
+		["enabled"] = 2,
+		["data"] = {
+		},
+		["alts"] = {
+		},
 	},
 }

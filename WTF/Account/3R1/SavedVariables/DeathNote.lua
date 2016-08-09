@@ -2,51 +2,16 @@
 DeathNoteDB = {
 	["profileKeys"] = {
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
-		["Comet - Illidan"] = "Comet - Illidan",
+		["Metal - Illidan"] = "Metal - Illidan",
 		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
+		["Pandatal - Illidan"] = "Pandatal - Illidan",
+		["Comet - Illidan"] = "Comet - Illidan",
+		["Natal - Illidan"] = "Natal - Illidan",
 		["Evan - Illidan"] = "Evan - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
-		["Natal - Illidan"] = "Natal - Illidan",
-		["Pandatal - Illidan"] = "Pandatal - Illidan",
-		["Metal - Illidan"] = "Metal - Illidan",
 	},
 	["profiles"] = {
 		["Colton - Dark Iron"] = {
-		},
-		["Comet - Illidan"] = {
-			["display_filters"] = {
-				["hide_misses"] = true,
-				["debuff_gains"] = false,
-				["buff_gains"] = false,
-				["debuff_fades"] = false,
-				["buff_fades"] = false,
-			},
-			["display"] = {
-				["w"] = 1013.00042724609,
-				["y"] = 77.9998168945313,
-				["h"] = 621.999938964844,
-				["x"] = -81.4995422363281,
-				["namelist"] = 2,
-			},
-			["max_deaths"] = 75,
-		},
-		["Ereinion - Dark Iron"] = {
-		},
-		["Evan - Illidan"] = {
-		},
-		["Combustion - Illidan"] = {
-		},
-		["Natal - Illidan"] = {
-			["display_filters"] = {
-				["buff_fades"] = false,
-				["buff_gains"] = false,
-			},
-			["display"] = {
-				["namelist"] = 2,
-			},
-			["keep_data"] = false,
-		},
-		["Pandatal - Illidan"] = {
 		},
 		["Metal - Illidan"] = {
 			["display_filters"] = {
@@ -57,11 +22,46 @@ DeathNoteDB = {
 			["display"] = {
 				["y"] = 91.5,
 				["namelist"] = 2,
-				["x"] = -128.000244140625,
+				["h"] = 681,
 				["namelist_width"] = 245.000289916992,
 				["w"] = 775.999877929688,
-				["h"] = 681,
+				["x"] = -128.000244140625,
 			},
+		},
+		["Ereinion - Dark Iron"] = {
+		},
+		["Pandatal - Illidan"] = {
+		},
+		["Comet - Illidan"] = {
+			["display_filters"] = {
+				["hide_misses"] = true,
+				["debuff_fades"] = false,
+				["buff_fades"] = false,
+				["debuff_gains"] = false,
+				["buff_gains"] = false,
+			},
+			["max_deaths"] = 75,
+			["display"] = {
+				["y"] = 77.9998168945313,
+				["h"] = 621.999938964844,
+				["namelist"] = 2,
+				["w"] = 1013.00042724609,
+				["x"] = -81.4995422363281,
+			},
+		},
+		["Natal - Illidan"] = {
+			["display_filters"] = {
+				["buff_gains"] = false,
+				["buff_fades"] = false,
+			},
+			["display"] = {
+				["namelist"] = 2,
+			},
+			["keep_data"] = false,
+		},
+		["Evan - Illidan"] = {
+		},
+		["Combustion - Illidan"] = {
 		},
 	},
 }

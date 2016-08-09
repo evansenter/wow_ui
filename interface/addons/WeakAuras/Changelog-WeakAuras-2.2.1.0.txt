@@ -1,0 +1,87 @@
+tag 2.2.1.0
+be67b2d780fcdef15970197eb25f424b04e50a65
+Benjamin Staneck <staneck@gmail.com>
+2016-08-09 03:53:19 +0200
+
+
+
+--------------------
+
+Infus:
+	- For triggers with automaticrequired, ensure that trigger.unevent is "auto"
+	In the attached aura that was attached to the bug report trigger.unevent
+	was custom, even though there's code around line 5950 in
+	WeakAurasOptions.lua which sets the trigger.unevent on switching to
+	a automatic required trigger.
+	
+	That code works. Importing the aura, switching the prototype away
+	and back does fix the users aura.
+	
+	Ticket-Nr: 667
+	- IsSpellKnown Load condition
+	- Fix setAll for colors
+	In a recent commit to correct how groups and multiselection work,
+	I broke that by calling set(info, ..., not before), set gets passed
+	only the first value of in ...., but for colors 3 values need to be
+	passed.
+	
+	So special case multiselection, and only pass the third value in
+	for multiselection.
+	
+	The reason we need to pass in the third value for multiselection,
+	is that the set functions for multiselections by default only toggle
+	a value. If different auras in a group had different initial values,
+	toggling them leads to interesting behaviour.
+	- Adjust templates to Divine Stead changes
+	It's now baseline
+	- Text display type: Change initial value from "New" to %p
+	That's probably more useful.
+	- Icon: Fix not displaying any text without %
+	Ticket-Nr: 663
+	- Apply glow effects even if squelching actions
+	Ticket-Nr: 641
+Benjamin Staneck:
+	- move the old Tutorials modul into it's own repo
+	https://github.com/WeakAuras/WeakAurasTutorials
+Infus:
+	- Add in Combat Condition Trigger
+	Trivial to add, and more flexibel than a load condition. The Conditions
+	already react to PLAYER_REGEN_(ENABLED|DISABLED)
+	
+	Ticket-Nr: 656
+	- Fix group auras after closing Options
+	Closing the options would not correctly update the group auras
+	if not in a group at all and only group auras where used.
+	
+	Noticed while fixing related bug.
+	- Remove recent_chages code from BuffTrigger.lua
+	This caused some auras to not show up on loading.
+	
+	In the bug reports case, the code was tracking buffs only
+	outside of combat.
+	
+	The sequence of events:
+	- Apply the buff
+	- Enter combat, unloading the aura
+	- Leave combat, loading the aura
+	
+	Loading a aura causes a ScanAll(), in the bug reports case
+	this would call AssertAura, but due to the data being identical
+	to the data gathered before combat, the aura_cache would indicate
+	no change. Yet, after a load we want to update everything.
+	
+	I think this has been always broken, as I don't recall changing this
+	logic.
+	
+	The fix is, ignoring whether the aura_cache already knew that buff.
+	Since the return value of AssertAura/DeassertAura is the only place
+	where recent_changes is used, purge it from everywhere.
+	
+	Ticket-Nr: 645
+	- Never disable icon/choose icon in the icon options
+	They are hidden if the icon is on automatic mode.
+	
+	Ticket-Nr: 649
+	- Don't call ReplacePlaceHolders if there can't be any text replacemnet
+	- Add a valuesAll function that combines the values() functions
+	Ticket-Nr: 621
