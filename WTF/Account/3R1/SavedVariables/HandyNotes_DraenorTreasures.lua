@@ -2,8 +2,9 @@
 DraenorTreasuresDB = {
 	["profileKeys"] = {
 		["Comet - Illidan"] = "Default",
-		["Evan - Illidan"] = "Default",
 		["Metal - Illidan"] = "Default",
+		["Evan - Illidan"] = "Default",
+		["Cometron - Illidan"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

@@ -9,9 +9,6 @@ VER 3 000000000000003F "Blackout Kick" "INV_MISC_QUESTIONMARK"
 #showtooltip Blackout Kick
 /use [nochanneling]Blackout Kick
 END
-VER 3 0000000000000028 "Camera" "Spell_Shadow_EvilEye"
-/console CameraDistanceMaxFactor 9000
-END
 VER 3 0000000000000030 "Cloak" "INV_MISC_QUESTIONMARK"
 /use 15
 END
@@ -47,13 +44,6 @@ VER 3 0000000000000045 "Keg Smash" "INV_Misc_QuestionMark"
 #showtooltip Keg Smash
 /use Keg Smash
 END
-VER 3 0000000000000038 "Logs" "INV_Inscription_MajorGlyph01"
-/ra http://www.worldoflogs.com/guilds/290422/
-/ra http://www.warcraftlogs.com/guilds/usercalendar/8101
-END
-VER 3 000000000000002A "Macro" "Ability_Spy"
-/mac
-END
 VER 3 0000000000000051 "Mark Skull" "1373133"
 /run SetRaidTarget("target", 8)
 END
@@ -62,12 +52,16 @@ VER 3 000000000000004F "PoM" "INV_Misc_QuestionMark"
 /use [target=mouseover,help,nodead][]Prayer of Mending
 END
 VER 3 0000000000000027 "Pull" "INV_Gizmo_RocketBootExtreme"
-/i DBM Pull.
+/i DBM Pull
 /dbm pull 10
 END
 VER 3 0000000000000026 "Ready?" "INV_Gizmo_01"
-/i Ready check.
+/i Ready check
 /readycheck
+END
+VER 3 0000000000000052 "Roll" "INV_Misc_QuestionMark"
+#showtooltip Roll
+/use [nomod]Roll
 END
 VER 3 000000000000003C "RSK" "INV_MISC_QUESTIONMARK"
 #showtooltip Rising Sun Kick

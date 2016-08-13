@@ -70,8 +70,15 @@ function mod:HealthColourChange(f,caller)
                 f.HealthBar:SetStatusBarColor(unpack(self.colour))
             end
         end
-    elseif f.state.execute_range_coloured then
+
+        if not f.state.in_execute_range then
+            f.state.in_execute_range = true
+            addon:DispatchMessage('ExecuteUpdate',f,true)
+        end
+
+    elseif f.state.in_execute_range then
         f.state.execute_range_coloured = nil
+        f.state.in_execute_range = nil
 
         if CanOverwriteHealthColor(f) then
             f.state.health_colour_priority = nil
@@ -82,6 +89,8 @@ function mod:HealthColourChange(f,caller)
 
             addon:DispatchMessage('HealthColourChange', f, mod)
         end
+
+        addon:DispatchMessage('ExecuteUpdate',f,false)
     end
 end
 -- events ######################################################################

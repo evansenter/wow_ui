@@ -24,6 +24,73 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
+							["rows"] = 12,
+							["padding"] = 5,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 610,
+								["x"] = -82,
+								["point"] = "BOTTOMRIGHT",
+							},
+						}, -- [3]
+						{
+							["rows"] = 12,
+							["padding"] = 5,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 610,
+								["x"] = -42,
+								["point"] = "BOTTOMRIGHT",
+							},
+						}, -- [4]
+						{
+							["padding"] = 6,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 83,
+								["x"] = 3,
+								["point"] = "BOTTOM",
+							},
+						}, -- [5]
+						{
+							["padding"] = 6,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 83,
+								["x"] = -510,
+								["point"] = "BOTTOM",
+							},
+						}, -- [6]
+						{
+						}, -- [7]
+						{
+						}, -- [8]
+						nil, -- [9]
+						{
+						}, -- [10]
+					},
+				},
+				["Cometron - Illidan"] = {
+					["actionbars"] = {
+						{
+							["padding"] = 6,
+							["version"] = 3,
+							["position"] = {
+								["y"] = 41.75,
+								["x"] = -510,
+								["point"] = "BOTTOM",
+							},
+						}, -- [1]
+						{
+							["enabled"] = false,
+							["version"] = 3,
+							["position"] = {
+								["y"] = -227.499984741211,
+								["x"] = -231.500091552734,
+								["point"] = "CENTER",
+							},
+						}, -- [2]
+						{
 							["padding"] = 5,
 							["rows"] = 12,
 							["version"] = 3,
@@ -571,9 +638,9 @@ Bartender4DB = {
 						{
 							["rows"] = 12,
 							["fadeoutdelay"] = 0,
-							["fadeoutalpha"] = 0.25,
-							["fadeout"] = true,
 							["version"] = 3,
+							["fadeout"] = true,
+							["fadeoutalpha"] = 0.25,
 							["position"] = {
 								["y"] = 158,
 								["x"] = 1,
@@ -584,10 +651,10 @@ Bartender4DB = {
 						}, -- [3]
 						{
 							["rows"] = 12,
-							["fadeout"] = true,
+							["fadeoutdelay"] = 0,
 							["buttons"] = 10,
 							["version"] = 3,
-							["fadeoutdelay"] = 0,
+							["fadeout"] = true,
 							["fadeoutalpha"] = 0.25,
 							["position"] = {
 								["y"] = 155.300007457201,
@@ -599,7 +666,6 @@ Bartender4DB = {
 							["padding"] = 4,
 						}, -- [4]
 						{
-							["showgrid"] = true,
 							["version"] = 3,
 							["position"] = {
 								["y"] = 117,
@@ -717,8 +783,8 @@ Bartender4DB = {
 							},
 						}, -- [2]
 						{
+							["version"] = 3,
 							["fadeoutdelay"] = 0,
-							["fadeoutalpha"] = 0.25,
 							["position"] = {
 								["scale"] = 0.899999976158142,
 								["x"] = -39.1502451380075,
@@ -728,7 +794,7 @@ Bartender4DB = {
 							["fadeout"] = true,
 							["rows"] = 12,
 							["padding"] = 5,
-							["version"] = 3,
+							["fadeoutalpha"] = 0.25,
 						}, -- [3]
 						{
 							["version"] = 3,
@@ -852,6 +918,14 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
+				["Cometron - Illidan"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 223,
+						["x"] = -31.4999694824219,
+						["point"] = "BOTTOM",
+					},
+				},
 				["Combustion - Illidan"] = {
 					["version"] = 3,
 					["position"] = {
@@ -945,6 +1019,17 @@ Bartender4DB = {
 		["MicroMenu"] = {
 			["profiles"] = {
 				["Metal - Illidan"] = {
+					["padding"] = -2,
+					["version"] = 3,
+					["position"] = {
+						["y"] = 41.75,
+						["x"] = 37.5,
+						["point"] = "BOTTOM",
+						["scale"] = 1,
+					},
+				},
+				["Cometron - Illidan"] = {
+					["padding"] = -2,
 					["version"] = 3,
 					["position"] = {
 						["y"] = 41.75,
@@ -1060,7 +1145,6 @@ Bartender4DB = {
 		["XPBar"] = {
 			["profiles"] = {
 				["Comet - Illidan"] = {
-					["enabled"] = true,
 					["alpha"] = 0.5,
 					["position"] = {
 						["y"] = 4,
@@ -1085,6 +1169,15 @@ Bartender4DB = {
 		["BlizzardArt"] = {
 			["profiles"] = {
 				["Metal - Illidan"] = {
+					["enabled"] = true,
+					["version"] = 3,
+					["position"] = {
+						["y"] = 47,
+						["x"] = -512,
+						["point"] = "BOTTOM",
+					},
+				},
+				["Cometron - Illidan"] = {
 					["enabled"] = true,
 					["version"] = 3,
 					["position"] = {
@@ -1204,6 +1297,14 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
+				["Cometron - Illidan"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 38.5,
+						["x"] = 345,
+						["point"] = "BOTTOM",
+					},
+				},
 				["Combustion - Illidan"] = {
 					["version"] = 3,
 					["position"] = {
@@ -1301,6 +1402,14 @@ Bartender4DB = {
 		["Vehicle"] = {
 			["profiles"] = {
 				["Metal - Illidan"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 47.4999389648438,
+						["x"] = 99.5000610351563,
+						["point"] = "CENTER",
+					},
+				},
+				["Cometron - Illidan"] = {
 					["version"] = 3,
 					["position"] = {
 						["y"] = 47.4999389648438,
@@ -1407,6 +1516,14 @@ Bartender4DB = {
 						["x"] = -460,
 						["point"] = "BOTTOM",
 						["scale"] = 1,
+					},
+				},
+				["Cometron - Illidan"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = -15.0000381469727,
+						["x"] = -82.4999694824219,
+						["point"] = "CENTER",
 					},
 				},
 				["Combustion - Illidan"] = {
@@ -1523,6 +1640,14 @@ Bartender4DB = {
 						["point"] = "BOTTOM",
 					},
 				},
+				["Cometron - Illidan"] = {
+					["version"] = 3,
+					["position"] = {
+						["y"] = 116,
+						["x"] = -460,
+						["point"] = "BOTTOM",
+					},
+				},
 				["Combustion - Illidan"] = {
 					["version"] = 3,
 					["position"] = {
@@ -1630,6 +1755,7 @@ Bartender4DB = {
 	},
 	["profileKeys"] = {
 		["Metal - Illidan"] = "Comet - Illidan",
+		["Cometron - Illidan"] = "Comet - Illidan",
 		["Plane - Illidan"] = "Comet - Illidan",
 		["Centromere - Dark Iron"] = "Comet - Illidan",
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
@@ -1643,6 +1769,17 @@ Bartender4DB = {
 	["profiles"] = {
 		["Metal - Illidan"] = {
 			["focuscastmodifier"] = false,
+			["blizzardVehicle"] = true,
+			["minimapIcon"] = {
+				["minimapPos"] = 194.850387263024,
+			},
+			["outofrange"] = "hotkey",
+		},
+		["Cometron - Illidan"] = {
+			["focuscastmodifier"] = false,
+			["minimapIcon"] = {
+				["minimapPos"] = 199.983075256907,
+			},
 			["blizzardVehicle"] = true,
 			["outofrange"] = "hotkey",
 		},

@@ -52,7 +52,7 @@ function Indicators:OnLayoutApplied(frame)
 		local indicator = frame.auraIndicators["indicator-" .. id]
 		if( not indicator ) then
 			indicator = CreateFrame("Frame", nil, frame.auraIndicators)
-			indicator:SetFrameLevel(frame.topFrameLevel + 1)
+			indicator:SetFrameLevel(frame.topFrameLevel + 2)
 			indicator.texture = indicator:CreateTexture(nil, "OVERLAY")
 			indicator.texture:SetPoint("CENTER", indicator)
 			indicator:SetAlpha(indicatorConfig.alpha)
@@ -206,7 +206,7 @@ end
 function Indicators:UpdateIndicators(frame)
 	for key, indicatorConfig in pairs(ShadowUF.db.profile.auraIndicators.indicators) do
 		local indicator = frame.auraIndicators[key]
-		if( indicator and indicator.enabled and indicator.priority > -1 ) then
+		if( indicator and indicator.enabled and indicator.priority and indicator.priority > -1 ) then
 			-- Show a cooldown ring
 			if( indicator.showDuration and indicator.spellDuration > 0 and indicator.spellEnd > 0 ) then
 				indicator.cooldown:SetCooldown(indicator.spellEnd - indicator.spellDuration, indicator.spellDuration)

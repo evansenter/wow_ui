@@ -2,6 +2,7 @@
 Postal3DB = {
 	["profileKeys"] = {
 		["Venala - Cho'gall"] = "Venala - Cho'gall",
+		["Cometron - Illidan"] = "Cometron - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Metal - Illidan"] = "Metal - Illidan",
 		["Natal - Illidan"] = "Natal - Illidan",
@@ -21,21 +22,24 @@ Postal3DB = {
 				"Centromere|Dark Iron|Horde|90|WARRIOR", -- [1]
 				"Colton|Dark Iron|Horde|85|DEATHKNIGHT", -- [2]
 				"Combustion|Illidan|Horde|90|MAGE", -- [3]
-				"Comet|Illidan|Horde|100|MONK", -- [4]
-				"Ereinion|Dark Iron|Horde|81|WARLOCK", -- [5]
-				"Evan|Illidan|Horde|100|PRIEST", -- [6]
-				"Metal|Illidan|Horde|100|WARRIOR", -- [7]
-				"Natalan|Dark Iron|Horde|85|SHAMAN", -- [8]
-				"Natalan|Illidan|Horde|86|MAGE", -- [9]
-				"Natal|Illidan|Horde|90|SHAMAN", -- [10]
-				"Pandatal|Illidan|Horde|100|PALADIN", -- [11]
-				"Plane|Illidan|Horde|90|DRUID", -- [12]
-				"Venala|Cho'gall|Horde|20|ROGUE", -- [13]
+				"Cometron|Illidan|Horde|98|DEMONHUNTER", -- [4]
+				"Comet|Illidan|Horde|100|MONK", -- [5]
+				"Ereinion|Dark Iron|Horde|81|WARLOCK", -- [6]
+				"Evan|Illidan|Horde|100|PRIEST", -- [7]
+				"Metal|Illidan|Horde|100|WARRIOR", -- [8]
+				"Natalan|Dark Iron|Horde|85|SHAMAN", -- [9]
+				"Natalan|Illidan|Horde|86|MAGE", -- [10]
+				"Natal|Illidan|Horde|90|SHAMAN", -- [11]
+				"Pandatal|Illidan|Horde|100|PALADIN", -- [12]
+				"Plane|Illidan|Horde|90|DRUID", -- [13]
+				"Venala|Cho'gall|Horde|20|ROGUE", -- [14]
 			},
 		},
 	},
 	["profiles"] = {
 		["Venala - Cho'gall"] = {
+		},
+		["Cometron - Illidan"] = {
 		},
 		["Combustion - Illidan"] = {
 			["BlackBook"] = {

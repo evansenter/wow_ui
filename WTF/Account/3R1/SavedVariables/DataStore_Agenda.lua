@@ -1,55 +1,45 @@
 
 DataStore_AgendaDB = {
 	["profileKeys"] = {
-		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Metal - Illidan"] = "Metal - Illidan",
-		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
-		["Pandatal - Illidan"] = "Pandatal - Illidan",
-		["Comet - Illidan"] = "Comet - Illidan",
-		["Natal - Illidan"] = "Natal - Illidan",
-		["Evan - Illidan"] = "Evan - Illidan",
+		["Cometron - Illidan"] = "Cometron - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Natal - Illidan"] = "Natal - Illidan",
+		["Colton - Dark Iron"] = "Colton - Dark Iron",
+		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
+		["Comet - Illidan"] = "Comet - Illidan",
+		["Evan - Illidan"] = "Evan - Illidan",
+		["Pandatal - Illidan"] = "Pandatal - Illidan",
 	},
 	["global"] = {
 		["Options"] = {
 			["WeeklyResetHour"] = 6,
 			["WeeklyResetDay"] = 2,
-			["NextWeeklyReset"] = "2016-08-09",
+			["NextWeeklyReset"] = "2016-08-16",
 		},
 		["Characters"] = {
-			["Default.Dark Iron.Ereinion"] = {
-				["lastUpdate"] = 1424741767,
-			},
 			["Default.Illidan.Evan"] = {
 				["Contacts"] = {
 					["Clypssaa"] = {
 						["note"] = "",
 					},
 				},
-				["lastUpdate"] = 1470720199,
+				["lastUpdate"] = 1470807673,
 			},
 			["Default.Illidan.Pandatal"] = {
 				["lastUpdate"] = 1461733291,
-			},
-			["Default.Illidan.Combustion"] = {
-				["lastUpdate"] = 1424741664,
-			},
-			["Default.Illidan.Comet"] = {
-				["DungeonIDs"] = {
-					["Upper Blackrock Spire Mythic|236437483"] = "34997|1470719804|0|0",
-					["Grimrail Depot Mythic|221578567"] = "34997|1470719804|0|0",
-					["Bloodmaul Slag Mines Mythic|252193704"] = "34997|1470719804|0|0",
-					["The Everbloom Mythic|221567412"] = "34997|1470719804|0|0",
-					["Hellfire Citadel Heroic|251527740"] = "34997|1470719804|0|1",
-					["Iron Docks Mythic|252336490"] = "34997|1470719804|0|0",
-				},
-				["lastUpdate"] = 1470719553,
 			},
 			["Default.Illidan.Natal"] = {
 				["lastUpdate"] = 1424741647,
 			},
 			["Default.Illidan.Metal"] = {
 				["lastUpdate"] = 1470154484,
+			},
+			["Default.Dark Iron.Ereinion"] = {
+				["lastUpdate"] = 1424741767,
+			},
+			["Default.Illidan.Combustion"] = {
+				["lastUpdate"] = 1424741664,
 			},
 			["Default.Dark Iron.Colton"] = {
 				["Contacts"] = {
@@ -87,6 +77,15 @@ DataStore_AgendaDB = {
 					},
 				},
 				["lastUpdate"] = 1424741733,
+			},
+			["Default.Illidan.Comet"] = {
+				["DungeonIDs"] = {
+					["Hellfire Citadel Heroic|634167020"] = "240914|1471118690|0|1",
+				},
+				["lastUpdate"] = 1471118688,
+			},
+			["Default.Illidan.Cometron"] = {
+				["lastUpdate"] = 1470809237,
 			},
 		},
 	},

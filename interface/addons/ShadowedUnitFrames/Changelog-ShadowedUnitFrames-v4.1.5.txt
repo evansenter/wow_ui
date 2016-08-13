@@ -1,0 +1,20 @@
+tag v4.1.5
+c7a85e4a28ecdedb5e01466ccdb7094322f410aa
+Hendrik Leppkes <h.leppkes@gmail.com>
+2016-08-13 11:34:57 +0200
+
+Tag as v4.1.5
+
+
+--------------------
+
+Hendrik Leppkes:
+	- Add a smart hostfile/friendly aura filter
+	- Use RegisterUnitEvent for UNIT_AURA
+	- Added a new option to change the color of the healthbar if the unit has a curable debuff
+	- Update power statusbar and tags after repopping at a spirit healer
+	This uses the deprecated UNIT_MANA event, since its the only one that
+	actually fires in that instance and seems vaguely related.
+	- incheal: fix framelevel in a few cases and simplify frame level handling
+	- incheal: Always check the maxHealth and bail out early if its not set
+	- Remove more remnants of obsolete power types

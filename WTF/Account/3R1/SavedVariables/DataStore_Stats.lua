@@ -1,32 +1,20 @@
 
 DataStore_StatsDB = {
 	["profileKeys"] = {
-		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Metal - Illidan"] = "Metal - Illidan",
-		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
-		["Pandatal - Illidan"] = "Pandatal - Illidan",
-		["Comet - Illidan"] = "Comet - Illidan",
-		["Natal - Illidan"] = "Natal - Illidan",
-		["Evan - Illidan"] = "Evan - Illidan",
+		["Cometron - Illidan"] = "Cometron - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Natal - Illidan"] = "Natal - Illidan",
+		["Colton - Dark Iron"] = "Colton - Dark Iron",
+		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
+		["Comet - Illidan"] = "Comet - Illidan",
+		["Evan - Illidan"] = "Evan - Illidan",
+		["Pandatal - Illidan"] = "Pandatal - Illidan",
 	},
 	["global"] = {
 		["Characters"] = {
-			["Default.Dark Iron.Ereinion"] = {
-				["lastUpdate"] = 1424741768,
-				["Stats"] = {
-					["Ranged"] = "1-1|0|0|0|15.541702270508",
-					["HealthMax"] = 30143,
-					["Melee"] = "24-45|1.6910001039505|0|0|15.541702270508|0",
-					["MaxPower"] = "0|25500",
-					["Defense"] = "118|395|3|0|0|22",
-					["PVP"] = "21758|10",
-					["Base"] = "119|220|701|525|254|118",
-					["Spell"] = "680|680|0|15.541702270508|95|1357",
-				},
-			},
 			["Default.Illidan.Evan"] = {
-				["lastUpdate"] = 1470720199,
+				["lastUpdate"] = 1470809132,
 				["Stats"] = {
 					["Ranged"] = "1-2|0|0|0|16.590908050537",
 					["HealthMax"] = 344280,
@@ -49,32 +37,6 @@ DataStore_StatsDB = {
 					["PVP"] = "0|0",
 					["Base"] = "1460|451|3694|3281|1166|2458",
 					["Spell"] = "4335|4335|0|13.718181610107|721|8006",
-				},
-			},
-			["Default.Illidan.Combustion"] = {
-				["lastUpdate"] = 1424741665,
-				["Stats"] = {
-					["Ranged"] = "1-1|0|0|0|32.956523895264",
-					["HealthMax"] = 85701,
-					["Melee"] = "253-380|2.563000202179|0|0|32.956523895264|0",
-					["MaxPower"] = "0|37000",
-					["Spell"] = "2186|2186|0|32.956523895264|518|6390",
-					["PVP"] = "19457|9",
-					["Base"] = "183|252|1749|1575|352|338",
-					["Defense"] = "338|350|3|0|0|0",
-				},
-			},
-			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1470719968,
-				["Stats"] = {
-					["Ranged"] = "6457-6458|0|0|0|30.527273178101",
-					["HealthMax"] = 377160,
-					["Melee"] = "7369-7828|2.4970002174377|1281|0|30.527273178101|0",
-					["MaxPower"] = "0|160000",
-					["Spell"] = "7191|7191|0|30.527273178101|1615|6400",
-					["PVP"] = "282|0",
-					["Base"] = "627|1281|6286|7191|1255",
-					["Defense"] = "1255|1|2.9897944927216|3|0|0",
 				},
 			},
 			["Default.Illidan.Natal"] = {
@@ -103,6 +65,32 @@ DataStore_StatsDB = {
 					["Spell"] = "710|710|0|24.663635253906|585|0",
 				},
 			},
+			["Default.Dark Iron.Ereinion"] = {
+				["lastUpdate"] = 1424741768,
+				["Stats"] = {
+					["Ranged"] = "1-1|0|0|0|15.541702270508",
+					["HealthMax"] = 30143,
+					["Melee"] = "24-45|1.6910001039505|0|0|15.541702270508|0",
+					["MaxPower"] = "0|25500",
+					["Defense"] = "118|395|3|0|0|22",
+					["PVP"] = "21758|10",
+					["Base"] = "119|220|701|525|254|118",
+					["Spell"] = "680|680|0|15.541702270508|95|1357",
+				},
+			},
+			["Default.Illidan.Combustion"] = {
+				["lastUpdate"] = 1424741665,
+				["Stats"] = {
+					["Ranged"] = "1-1|0|0|0|32.956523895264",
+					["HealthMax"] = 85701,
+					["Melee"] = "253-380|2.563000202179|0|0|32.956523895264|0",
+					["MaxPower"] = "0|37000",
+					["Spell"] = "2186|2186|0|32.956523895264|518|6390",
+					["PVP"] = "19457|9",
+					["Base"] = "183|252|1749|1575|352|338",
+					["Defense"] = "338|350|3|0|0|0",
+				},
+			},
 			["Default.Dark Iron.Colton"] = {
 				["lastUpdate"] = 1424741733,
 				["Stats"] = {
@@ -114,6 +102,32 @@ DataStore_StatsDB = {
 					["PVP"] = "8809|0",
 					["Base"] = "604|257|1044|138|150|635",
 					["Spell"] = "138|138|0|10.675236701965|0|0",
+				},
+			},
+			["Default.Illidan.Comet"] = {
+				["lastUpdate"] = 1471119082,
+				["Stats"] = {
+					["Ranged"] = "6632-6633|0|0|0|29.309091567993",
+					["HealthMax"] = 387180,
+					["Melee"] = "7554-8018|2.4290001392365|1281|0|29.309091567993|0",
+					["MaxPower"] = "0|160000",
+					["Spell"] = "7308|7308|0|29.309091567993|1941|6400",
+					["PVP"] = "282|0",
+					["Base"] = "627|1281|6453|7308|1290",
+					["Defense"] = "1290|1|2.9897944927216|3|0|0",
+				},
+			},
+			["Default.Illidan.Cometron"] = {
+				["lastUpdate"] = 1470811743,
+				["Stats"] = {
+					["Ranged"] = "1-2|0|0|0|36.252632141113",
+					["HealthMax"] = 260280,
+					["Melee"] = "3100-3567|1.6960000991821|3731|0|36.252632141113|0",
+					["MaxPower"] = "17|100",
+					["Defense"] = "994|1|9.5447492599487|3|0|0",
+					["PVP"] = "0|0",
+					["Base"] = "1166|3731|4338|687|994",
+					["Spell"] = "687|687|0|36.252632141113|1541|0",
 				},
 			},
 		},

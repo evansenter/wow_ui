@@ -1,18 +1,17 @@
 
 DeathNoteDB = {
 	["profileKeys"] = {
-		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Metal - Illidan"] = "Metal - Illidan",
-		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
-		["Pandatal - Illidan"] = "Pandatal - Illidan",
-		["Comet - Illidan"] = "Comet - Illidan",
-		["Natal - Illidan"] = "Natal - Illidan",
-		["Evan - Illidan"] = "Evan - Illidan",
+		["Cometron - Illidan"] = "Cometron - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Natal - Illidan"] = "Natal - Illidan",
+		["Colton - Dark Iron"] = "Colton - Dark Iron",
+		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
+		["Comet - Illidan"] = "Comet - Illidan",
+		["Evan - Illidan"] = "Evan - Illidan",
+		["Pandatal - Illidan"] = "Pandatal - Illidan",
 	},
 	["profiles"] = {
-		["Colton - Dark Iron"] = {
-		},
 		["Metal - Illidan"] = {
 			["display_filters"] = {
 				["debuff_fades"] = false,
@@ -28,26 +27,9 @@ DeathNoteDB = {
 				["x"] = -128.000244140625,
 			},
 		},
-		["Ereinion - Dark Iron"] = {
+		["Cometron - Illidan"] = {
 		},
-		["Pandatal - Illidan"] = {
-		},
-		["Comet - Illidan"] = {
-			["display_filters"] = {
-				["hide_misses"] = true,
-				["debuff_fades"] = false,
-				["buff_fades"] = false,
-				["debuff_gains"] = false,
-				["buff_gains"] = false,
-			},
-			["max_deaths"] = 75,
-			["display"] = {
-				["y"] = 77.9998168945313,
-				["h"] = 621.999938964844,
-				["namelist"] = 2,
-				["w"] = 1013.00042724609,
-				["x"] = -81.4995422363281,
-			},
+		["Combustion - Illidan"] = {
 		},
 		["Natal - Illidan"] = {
 			["display_filters"] = {
@@ -59,9 +41,30 @@ DeathNoteDB = {
 			},
 			["keep_data"] = false,
 		},
+		["Colton - Dark Iron"] = {
+		},
+		["Ereinion - Dark Iron"] = {
+		},
+		["Comet - Illidan"] = {
+			["display_filters"] = {
+				["hide_misses"] = true,
+				["debuff_gains"] = false,
+				["buff_gains"] = false,
+				["debuff_fades"] = false,
+				["buff_fades"] = false,
+			},
+			["display"] = {
+				["w"] = 1013.00042724609,
+				["y"] = 77.9998168945313,
+				["x"] = -81.4995422363281,
+				["h"] = 621.999938964844,
+				["namelist"] = 2,
+			},
+			["max_deaths"] = 75,
+		},
 		["Evan - Illidan"] = {
 		},
-		["Combustion - Illidan"] = {
+		["Pandatal - Illidan"] = {
 		},
 	},
 }

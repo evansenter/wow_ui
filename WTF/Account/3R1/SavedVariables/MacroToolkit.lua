@@ -30,6 +30,7 @@ MacroToolkitDB = {
 	},
 	["profileKeys"] = {
 		["Metal - Illidan"] = "Comet - Illidan",
+		["Cometron - Illidan"] = "Comet - Illidan",
 		["Plane - Illidan"] = "profile",
 		["Natal - Illidan"] = "profile",
 		["Colton - Dark Iron"] = "profile",

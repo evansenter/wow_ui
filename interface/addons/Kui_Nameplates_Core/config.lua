@@ -42,7 +42,7 @@ local default_config = {
     nameonly_damaged_friends = true,
     nameonly_enemies = true,
     nameonly_all_enemies = false,
-    nameonly_target = false,
+    nameonly_target = true,
 
     fade_all = false,
     fade_alpha = .5,
@@ -52,6 +52,8 @@ local default_config = {
     fade_untracked = false,
     fade_avoid_nameonly = true,
     fade_avoid_raidicon = true,
+    fade_avoid_execute_friend = false,
+    fade_avoid_execute_hostile = false,
 
     font_face = DEFAULT_FONT,
     font_style = 2,
@@ -206,13 +208,13 @@ local function configChangedFadeRule(v,on_load)
     if core.profile.fade_avoid_nameonly then
         plugin:AddFadeRule(function(f)
             return f.state.nameonly and 1
-        end)
+        end,30)
     end
 
     if core.profile.fade_avoid_raidicon then
         plugin:AddFadeRule(function(f)
             return f.RaidIcon:IsShown() and 1
-        end,3)
+        end,1)
 
         -- force an alpha update whenever a raid icon is added/removed
         core:RegisterMessage('RaidIconUpdate')
@@ -220,11 +222,34 @@ local function configChangedFadeRule(v,on_load)
         core:UnregisterMessage('RaidIconUpdate')
     end
 
+    if  core.profile.fade_avoid_execute_friend or
+        core.profile.fade_avoid_execute_hostile
+    then
+        if core.profile.fade_avoid_execute_friend then
+            plugin:AddFadeRule(function(f)
+                return f.state.friend and
+                       f.state.in_execute_range and 1
+            end,21)
+        end
+
+        if core.profile.fade_avoid_execute_hostile then
+            plugin:AddFadeRule(function(f)
+                return not f.state.friend and
+                       f.state.in_execute_range and 1
+            end,21)
+        end
+
+        -- force alpha update when entering/leaving execute range
+        core:RegisterMessage('ExecuteUpdate')
+    else
+        core:UnregisterMessage('ExecuteUpdate')
+    end
+
     if core.profile.fade_neutral_enemy then
         plugin:AddFadeRule(function(f)
             return f.state.reaction == 4 and
                    UnitCanAttack('player',f.unit) and -1
-       end, core.profile.fade_avoid_raidicon and 4 or 3)
+       end,25)
     end
 
     if core.profile.fade_friendly_npc then
@@ -232,13 +257,13 @@ local function configChangedFadeRule(v,on_load)
             return f.state.reaction >= 4 and
                    not UnitIsPlayer(f.unit) and
                    not UnitCanAttack('player',f.unit) and -1
-        end, core.profile.fade_avoid_raidicon and 4 or 3)
+        end,25)
     end
 
     if core.profile.fade_untracked then
         plugin:AddFadeRule(function(f)
             return f.state.no_name and -1
-        end, core.profile.fade_avoid_raidicon and 4 or 3)
+        end,25)
     end
 end
 configChanged.fade_all = configChangedFadeRule
@@ -247,6 +272,8 @@ configChanged.fade_neutral_enemy = configChangedFadeRule
 configChanged.fade_untracked = configChangedFadeRule
 configChanged.fade_avoid_nameonly = configChangedFadeRule
 configChanged.fade_avoid_raidicon = configChangedFadeRule
+configChanged.fade_avoid_execute_friend = configChangedFadeRule
+configChanged.fade_avoid_execute_hostile = configChangedFadeRule
 
 local function configChangedTextOffset()
     core:configChangedTextOffset()
@@ -375,6 +402,7 @@ end
 function configChanged.execute_enabled(v)
     if v then
         addon:GetPlugin('Execute'):Enable()
+        configChanged.execute_percent()
     else
         addon:GetPlugin('Execute'):Disable()
     end

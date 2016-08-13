@@ -2,6 +2,7 @@
 MogItDB = {
 	["profileKeys"] = {
 		["Metal - Illidan"] = "Comet - Illidan",
+		["Cometron - Illidan"] = "Default",
 		["Plane - Illidan"] = "Default",
 		["Natal - Illidan"] = "Default",
 		["Colton - Dark Iron"] = "Default",
@@ -13,16 +14,16 @@ MogItDB = {
 		["Centromere - Dark Iron"] = "Default",
 	},
 	["global"] = {
-		["version"] = "3.6.1",
+		["version"] = "3.6.2",
 	},
 	["profiles"] = {
 		["Comet - Illidan"] = {
 			["previewProps"] = {
 				{
 					["y"] = 0,
-					["h"] = 384.999877929688,
-					["w"] = 334.999877929688,
 					["x"] = 0,
+					["w"] = 334.999877929688,
+					["h"] = 384.999877929688,
 				}, -- [1]
 			},
 			["gridHeight"] = 399.999877929688,
@@ -41,9 +42,9 @@ MogItDB = {
 			["previewProps"] = {
 				{
 					["y"] = 0,
-					["x"] = 0,
-					["w"] = 334.999877929688,
 					["h"] = 384.999877929688,
+					["w"] = 334.999877929688,
+					["x"] = 0,
 				}, -- [1]
 			},
 			["gridWidth"] = 599.999938964844,
@@ -78,6 +79,7 @@ MogItWishlist = {
 	},
 	["profileKeys"] = {
 		["Metal - Illidan"] = "Metal - Illidan",
+		["Cometron - Illidan"] = "Cometron - Illidan",
 		["Plane - Illidan"] = "Plane - Illidan",
 		["Natal - Illidan"] = "Natal - Illidan",
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
@@ -90,6 +92,8 @@ MogItWishlist = {
 	},
 	["profiles"] = {
 		["Metal - Illidan"] = {
+		},
+		["Cometron - Illidan"] = {
 		},
 		["Plane - Illidan"] = {
 		},

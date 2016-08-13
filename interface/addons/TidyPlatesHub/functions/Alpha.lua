@@ -8,7 +8,7 @@ local LocalVars = TidyPlatesHubDefaults
 ------------------------------------------------------------------------------
 local InCombatLockdown = InCombatLockdown
 local GetAggroCondition = TidyPlatesWidgets.GetThreatCondition
-local IsTankedByAnotherTank = TidyPlatesWidgets.IsTankedByAnotherTank
+local IsOffTanked = TidyPlatesHubFunctions.IsOffTanked
 local IsTankingAuraActive = TidyPlatesWidgets.IsPlayerTank
 local IsHealer = function() return false end
 local IsAuraShown = function() return false end
@@ -36,7 +36,7 @@ end
 -- Tank Mode
 local function AlphaFunctionByThreatLow (unit)
 	if InCombatLockdown() and unit.reaction ~= "FRIENDLY" then
-		if IsTankedByAnotherTank(unit) then return end
+		if IsOffTanked(unit) then return end
 		if unit.threatValue < 2 and unit.health > 0 then return LocalVars.OpacitySpotlight end
 	elseif LocalVars.ColorShowPartyAggro and unit.reaction == "FRIENDLY" then
 		if GetAggroCondition(unit.rawName) then return LocalVars.OpacitySpotlight end
@@ -153,7 +153,8 @@ local function AlphaDelegate(...)
 
 	else
 		-- Filter
-		if UnitFilter(unit) then alpha = LocalVars.OpacityFiltered
+		if UnitFilter(unit) then
+			alpha = LocalVars.OpacityFiltered
 		-- Spotlight
 		else
 			local func = DummyFunction
@@ -168,12 +169,10 @@ local function AlphaDelegate(...)
 		end
 	end
 
+	if not (UnitExists("target") or alpha) and LocalVars.OpacityFullNoTarget then return Diminish(LocalVars.OpacityTarget) end
 
 	if alpha then return Diminish(alpha)
-	else
-		if (not UnitExists("target")) and LocalVars.OpacityFullNoTarget then return Diminish(LocalVars.OpacityTarget)
-		else return Diminish(LocalVars.OpacityNonTarget) end
-	end
+	else return Diminish(LocalVars.OpacityNonTarget) end
 end
 
 ------------------------------------------------------------------------------

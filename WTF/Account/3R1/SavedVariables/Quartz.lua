@@ -3,15 +3,15 @@ Quartz3DB = {
 	["namespaces"] = {
 		["Swing"] = {
 			["profiles"] = {
-				["Pandatal - Illidan"] = {
-					["y"] = 0,
-					["x"] = 0,
-					["swingposition"] = "free",
-				},
 				["Comet - Illidan"] = {
 					["swingposition"] = "free",
 					["y"] = 0,
 					["x"] = 0,
+				},
+				["Pandatal - Illidan"] = {
+					["y"] = 0,
+					["x"] = 0,
+					["swingposition"] = "free",
 				},
 			},
 		},
@@ -149,12 +149,12 @@ Quartz3DB = {
 				["Default"] = {
 					["y"] = 458,
 					["noInterruptShield"] = false,
-					["iconposition"] = "left",
-					["font"] = "ABF",
+					["texture"] = "ElvUI Norm",
+					["x"] = 857,
 					["h"] = 20,
 					["noInterruptChangeBorder"] = false,
-					["x"] = 857,
-					["texture"] = "ElvUI Norm",
+					["font"] = "ABF",
+					["iconposition"] = "left",
 				},
 				["Comet - Illidan"] = {
 					["noInterruptChangeColor"] = true,
@@ -194,6 +194,7 @@ Quartz3DB = {
 	},
 	["profileKeys"] = {
 		["Venala - Cho'gall"] = "Default",
+		["Cometron - Illidan"] = "Comet - Illidan",
 		["Combustion - Illidan"] = "Pandatal - Illidan",
 		["Metal - Illidan"] = "Comet - Illidan",
 		["Pandatal - Illidan"] = "Comet - Illidan",

@@ -1,4 +1,4 @@
-## Interface: 70000
+﻿## Interface: 70000
 ## Title: DataStore_Pets
 ## Notes: Stores information about character pets and mounts
 ## Author: Thaoky (EU-Marécages de Zangar)

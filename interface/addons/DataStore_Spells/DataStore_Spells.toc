@@ -1,4 +1,4 @@
-## Interface: 70000
+﻿## Interface: 70000
 ## Title: DataStore_Spells
 ## Notes: Stores information about character spells
 ## Author: Thaoky (EU-Marécages de Zangar)

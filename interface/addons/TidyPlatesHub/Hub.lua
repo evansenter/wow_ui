@@ -20,7 +20,7 @@ local CreateQuickDropdown = TidyPlatesHubRapidPanel.CreateQuickDropdown
 local CreateQuickHeadingLabel = TidyPlatesHubRapidPanel.CreateQuickHeadingLabel
 local CreateQuickItemLabel = TidyPlatesHubRapidPanel.CreateQuickItemLabel
 local OnMouseWheelScrollFrame = TidyPlatesHubRapidPanel.OnMouseWheelScrollFrame
-local CreateInterfacePanel = TidyPlatesHubRapidPanel.CreateInterfacePanel
+local CreateHubInterfacePanel = TidyPlatesHubRapidPanel.CreateInterfacePanel
 
 -- Modes
 local ThemeList = TidyPlatesHubMenus.ThemeList
@@ -50,7 +50,7 @@ local cFriendly = "|cffc8e915"
 ------------------------------------------------------------------
 -- Generate Panel
 ------------------------------------------------------------------
-local function CreateInterfacePanelWidgets(panel)
+local function BuildHubPanel(panel)
 	local objectName = panel.objectName
 	local AlignmentColumn = panel.AlignmentColumn
 	local OffsetColumnB = 200						-- 240
@@ -110,7 +110,6 @@ local function CreateInterfacePanelWidgets(panel)
 
 	-- Other
 	panel.TextShowLevel, F = CreateQuickCheckbutton(objectName.."TextShowLevel", "Show Level", AlignmentColumn, F, 0, 2)
-	panel.TextUseBlizzardFont, F = CreateQuickCheckbutton(objectName.."TextUseBlizzardFont", "Use Default Blizzard Font", AlignmentColumn, F, 0)
     panel.TextShowOnlyOnTargets, F = CreateQuickCheckbutton(objectName.."TextShowOnlyOnTargets", "Show Status Text on Target & Mouseover", AlignmentColumn, F, 0)
     panel.TextShowOnlyOnActive, F = CreateQuickCheckbutton(objectName.."TextShowOnlyOnActive", "Show Status Text on Active/Damaged Units", AlignmentColumn, F, 0)
 
@@ -325,12 +324,14 @@ local function CreateInterfacePanelWidgets(panel)
 	panel.ColorThreatTransition = CreateQuickColorbox(objectName.."ColorThreatTransition", "Transition", AlignmentColumn, panel.ColorThreatWarning , 16)
 	panel.ColorThreatSafe = CreateQuickColorbox(objectName.."ColorThreatSafe", "Safe", AlignmentColumn, panel.ColorThreatTransition, 16)
 
+	panel.WidgetsThreatIndicator, F = CreateQuickCheckbutton(objectName.."WidgetsThreatIndicator", "Show Tug-o-Threat Indicator", AlignmentColumn, panel.ColorThreatSafe, 0, 2)
+
 	--[[
 	-- Warning Border Glow
 	--]]
 
     -- Column 2
-	panel.EnableOffTankHighlight = CreateQuickCheckbutton(objectName.."EnableOffTankHighlight", "(Broken) Highlight Mobs Tanked by other Tanks", AlignmentColumn, panel.ThreatLabel, OffsetColumnB)
+	panel.EnableOffTankHighlight = CreateQuickCheckbutton(objectName.."EnableOffTankHighlight", "Highlight Mobs on Off-Tanks", AlignmentColumn, panel.ThreatLabel, OffsetColumnB)
 	panel.ColorAttackingOtherTank = CreateQuickColorbox(objectName.."ColorAttackingOtherTank", "Attacking another Tank", AlignmentColumn, panel.EnableOffTankHighlight , 16+OffsetColumnB)
 
 	panel.ColorShowPartyAggro = CreateQuickCheckbutton(objectName.."ColorShowPartyAggro", "Highlight Group Members holding Aggro", AlignmentColumn, panel.ColorAttackingOtherTank, OffsetColumnB)
@@ -342,7 +343,7 @@ local function CreateInterfacePanelWidgets(panel)
 	------------------------------
 	-- Health
 	------------------------------
-	panel.HealthLabel, F = CreateQuickHeadingLabel(nil, "Health", AlignmentColumn, panel.ColorPartyAggroText, 0, 5)
+	panel.HealthLabel, F = CreateQuickHeadingLabel(nil, "Health", AlignmentColumn, panel.WidgetsThreatIndicator, 0, 5)
 	panel.EnableHealerWarning, F = CreateQuickCheckbutton(objectName.."EnableHealerWarning", "Enable Healer Warning Glow", AlignmentColumn, F)
 	panel.HighHealthThreshold = CreateQuickSlider(objectName.."HighHealthThreshold", "High Health Threshold:", AlignmentColumn, F, 0, 2)
 	panel.LowHealthThreshold =  CreateQuickSlider(objectName.."LowHealthThreshold", "Low Health Threshold:", AlignmentColumn, panel.HighHealthThreshold, 0, 2)
@@ -393,18 +394,20 @@ local function CreateInterfacePanelWidgets(panel)
 	panel.WidgetsTotemIcon = CreateQuickCheckbutton(objectName.."WidgetsTotemIcon", "Show Totem Art", AlignmentColumn, panel.ClassPartyIcon)
 	panel.WidgetsComboPoints = CreateQuickCheckbutton(objectName.."WidgetsComboPoints", "Show Combo Points", AlignmentColumn, panel.WidgetsTotemIcon)
 
-	panel.WidgetsEnableExternal = CreateQuickCheckbutton(objectName.."WidgetsEnableExternal", "Enable External Widgets", AlignmentColumn, panel.WidgetsComboPoints)
+	--panel.WidgetsEnableExternal = CreateQuickCheckbutton(objectName.."WidgetsEnableExternal", "Enable External Widgets", AlignmentColumn, panel.WidgetsComboPoints)
 
-	panel.WidgetsThreatIndicator, F = CreateQuickCheckbutton(objectName.."WidgetsThreatIndicator", "Show Tug-o-Threat Indicator", AlignmentColumn, panel.WidgetsLabel, OffsetColumnB)
 	--panel.WidgetsThreatIndicatorMode =  CreateQuickDropdown(objectName.."WidgetsThreatIndicatorMode", "Threat Indicator:", ThreatWidgetModes, 1, AlignmentColumn, panel.WidgetsThreatIndicator, OffsetColumnB+16)
-	panel.WidgetsRangeIndicator = CreateQuickCheckbutton(objectName.."WidgetsRangeIndicator", "Show Party Range Warning", AlignmentColumn, F, OffsetColumnB)
+	panel.WidgetsRangeIndicator = CreateQuickCheckbutton(objectName.."WidgetsRangeIndicator", "Show Party Range Warning", AlignmentColumn, panel.WidgetsLabel, OffsetColumnB)
 	panel.WidgetsRangeMode =  CreateQuickDropdown(objectName.."WidgetsRangeMode", "Range:", RangeModes, 1, AlignmentColumn, panel.WidgetsRangeIndicator, OffsetColumnB+16)
 
 	------------------------------
 	-- Advanced
 	------------------------------
-	panel.AdvancedLabel = CreateQuickHeadingLabel(nil, "Advanced", AlignmentColumn, panel.WidgetsEnableExternal, 0, 5)
-	panel.AdvancedEnableUnitCache, F = CreateQuickCheckbutton(objectName.."AdvancedEnableUnitCache", "Enable Class & Title Caching ", AlignmentColumn, panel.AdvancedLabel)
+	panel.AdvancedLabel, F = CreateQuickHeadingLabel(nil, "Funky Stuff", AlignmentColumn, panel.WidgetsComboPoints, 0, 5)
+
+	panel.TextUseBlizzardFont, F = CreateQuickCheckbutton(objectName.."TextUseBlizzardFont", "Use Default Blizzard Font", AlignmentColumn, F, 0)
+
+	panel.AdvancedEnableUnitCache, F = CreateQuickCheckbutton(objectName.."AdvancedEnableUnitCache", "Enable Class & Title Caching ", AlignmentColumn, F)
 	panel.FrameVerticalPosition, F = CreateQuickSlider(objectName.."FrameVerticalPosition", "Vertical Position of Artwork: (May cause targeting problems)", AlignmentColumn, F, 0, 4)
 	panel.FrameBarWidth, F = CreateQuickSlider(objectName.."FrameBarWidth", "Health Bar Width (%)", AlignmentColumn, F, 0, 4)
 
@@ -484,37 +487,33 @@ local function CreateInterfacePanelWidgets(panel)
 		-- Convert Unit Filter Strings
 		ConvertStringToTable(LocalVars.OpacityFilterList, LocalVars.OpacityFilterLookup)
 		ConvertStringToTable(LocalVars.UnitSpotlightList, LocalVars.UnitSpotlightLookup)
-
-		-- Convert Custom Code...  (Testing)
-
-		-- local func, err = loadstring( [[return function(unit) ]]..LocalVars.AdvancedCustomCodeTextbox..[[ end]])
-		-- if func == nil and err then print(panel.name, "|r CUSTOM SCRIPT ERROR", err)
-		-- elseif func then LocalVars.CustomHealthFunction = func()	end
 	end
 end
 
---local function OnLogin()
-	-- Init
-	--InitializeTidyPlatesHubMenus()
 
-	-- Create Instances of Panels
-	-- [[
-	local TankPanel = CreateInterfacePanel( "HubPanelSettingsTank", "Tidy Plates: |cFF3782D1Tank", nil )
-	CreateInterfacePanelWidgets(TankPanel)
-	InterfaceOptions_AddCategory(TankPanel)
-	function ShowTidyPlatesHubTankPanel() TidyPlatesUtility.OpenInterfacePanel(TankPanel) end
-	--]]
-
-	local DamagePanel = CreateInterfacePanel( "HubPanelSettingsDamage", "Tidy Plates: |cFFFF1100Damage", nil )
-	CreateInterfacePanelWidgets(DamagePanel)
-	InterfaceOptions_AddCategory(DamagePanel)
-	function ShowTidyPlatesHubDamagePanel() TidyPlatesUtility.OpenInterfacePanel(DamagePanel) end
+-- Create Instances of Panels
+local TankPanel = CreateHubInterfacePanel( "HubPanelSettingsTank", "|cFF3782D1Tank Profile", "Tidy Plates" )
+TidyPlatesPanel:AddProfile("Tank")
+BuildHubPanel(TankPanel)
+function ShowTidyPlatesHubTankPanel() TidyPlatesUtility.OpenInterfacePanel(TankPanel) end
 
 
-	local HealerPanel = CreateInterfacePanel( "HubPanelSettingsHealer", "Tidy Plates: |cFF44DD55Healer", nil )
-	CreateInterfacePanelWidgets(HealerPanel)
-	InterfaceOptions_AddCategory(HealerPanel)
-	function ShowTidyPlatesHubHealerPanel() InterfaceOptionsFrame_OpenToCategory(HealerPanel) end
+local DamagePanel = CreateHubInterfacePanel( "HubPanelSettingsDamage", "|cFFFF1100Damage Profile", "Tidy Plates" )
+TidyPlatesPanel:AddProfile("Damage")
+BuildHubPanel(DamagePanel)
+function ShowTidyPlatesHubDamagePanel() TidyPlatesUtility.OpenInterfacePanel(DamagePanel) end
+
+
+local HealerPanel = CreateHubInterfacePanel( "HubPanelSettingsHealer", "|cFF44DD55Healer Profile", "Tidy Plates"  )
+TidyPlatesPanel:AddProfile("Healer")
+BuildHubPanel(HealerPanel)
+function ShowTidyPlatesHubHealerPanel() TidyPlatesUtility.OpenInterfacePanel(HealerPanel) end
+
+
+local GladiatorPanel = CreateHubInterfacePanel( "HubPanelSettingsGladiator", "|cFFAA6600Gladiator Profile", "Tidy Plates"  )
+TidyPlatesPanel:AddProfile("Gladiator")
+BuildHubPanel(GladiatorPanel)
+function ShowTidyPlatesHubGladiatorPanel() TidyPlatesUtility.OpenInterfacePanel(GladiatorPanel) end
 
 
 
@@ -522,27 +521,23 @@ end
 -- Slash Commands
 ---------------------------------------------
 
-local function GetProfile()
-	if TidyPlatesUtility.GetSpec(false, false) == 2 then return TidyPlatesOptions.SecondaryProfile
-	else return TidyPlatesOptions.PrimaryProfile end
-end
-
-function ShowTidyPlatesHubPanel(profile)
-
+function ShowTidyPlatesHubPanel()
+	local profile = TidyPlatesOptions.ActiveProfile
 	if profile == "Tank" then
 		ShowTidyPlatesHubTankPanel()
 	elseif profile == "Healer" then
 		ShowTidyPlatesHubHealerPanel()
+	elseif profile == "Gladiator" then
+		ShowTidyPlatesHubGladiatorPanel()
 	else
 		ShowTidyPlatesHubDamagePanel()
 	end
-	--local theme = TidyPlatesThemeList[TidyPlatesOptions[GetCurrentSpec()]]
-	--if theme and theme.ShowConfigPanel and type(theme.ShowConfigPanel) == 'function' then theme.ShowConfigPanel() end
+
 end
 
 local function SlashCommandHub()
-	local profile = GetProfile()
-	ShowTidyPlatesHubPanel(profile)
+	--local profile = GetProfile()
+	ShowTidyPlatesHubPanel()
 end
 
 
@@ -567,7 +562,7 @@ SlashCmdList['HUB'] = SlashCommandHub
 
 --[[
 local GladiatorPanel = CreateInterfacePanel( "HubPanelSettingsGladiator", "Tidy Plates Hub: |cFFAA6600Gladiator", nil )
-CreateInterfacePanelWidgets(GladiatorPanel)
+BuildHubPanel(GladiatorPanel)
 function ShowTidyPlatesHubGladiatorPanel() InterfaceOptionsFrame_OpenToCategory(GladiatorPanel) end
 --]]
 --[[

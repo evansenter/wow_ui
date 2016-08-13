@@ -2,6 +2,7 @@
 EPGPLootMaster = {
 	["profileKeys"] = {
 		["Metal - Illidan"] = "Metal - Illidan",
+		["Cometron - Illidan"] = "Cometron - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
 		["Colton - Dark Iron"] = "Colton - Dark Iron",

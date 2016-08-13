@@ -1,14 +1,15 @@
 
 DataStore_PetsDB = {
 	["profileKeys"] = {
-		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Metal - Illidan"] = "Metal - Illidan",
-		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
-		["Pandatal - Illidan"] = "Pandatal - Illidan",
-		["Comet - Illidan"] = "Comet - Illidan",
-		["Natal - Illidan"] = "Natal - Illidan",
-		["Evan - Illidan"] = "Evan - Illidan",
+		["Cometron - Illidan"] = "Cometron - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Natal - Illidan"] = "Natal - Illidan",
+		["Colton - Dark Iron"] = "Colton - Dark Iron",
+		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
+		["Comet - Illidan"] = "Comet - Illidan",
+		["Evan - Illidan"] = "Evan - Illidan",
+		["Pandatal - Illidan"] = "Pandatal - Illidan",
 	},
 	["global"] = {
 		["Reference"] = {
@@ -64,15 +65,8 @@ DataStore_PetsDB = {
 			},
 		},
 		["Characters"] = {
-			["Default.Dark Iron.Ereinion"] = {
-				["lastUpdate"] = 1424741768,
-				["CRITTER"] = {
-					61855, -- [1]
-					55068, -- [2]
-				},
-			},
 			["Default.Illidan.Evan"] = {
-				["lastUpdate"] = 1470720199,
+				["lastUpdate"] = 1470807673,
 				["CRITTER"] = {
 					89670, -- [1]
 					78683, -- [2]
@@ -92,37 +86,6 @@ DataStore_PetsDB = {
 			},
 			["Default.Illidan.Pandatal"] = {
 				["lastUpdate"] = 1461733291,
-			},
-			["Default.Illidan.Combustion"] = {
-				["lastUpdate"] = 1424741664,
-				["CRITTER"] = {
-					69452, -- [1]
-					122748, -- [2]
-					55068, -- [3]
-				},
-			},
-			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1470719553,
-				["CRITTER"] = {
-					184482, -- [1]
-					69452, -- [2]
-					89039, -- [3]
-					155748, -- [4]
-					62513, -- [5]
-					176137, -- [6]
-					122748, -- [7]
-					170273, -- [8]
-					120501, -- [9]
-					188084, -- [10]
-					126885, -- [11]
-					169695, -- [12]
-					55068, -- [13]
-					170269, -- [14]
-					190020, -- [15]
-					170292, -- [16]
-					170282, -- [17]
-					164212, -- [18]
-				},
 			},
 			["Default.Illidan.Natal"] = {
 				["lastUpdate"] = 1424741647,
@@ -155,6 +118,21 @@ DataStore_PetsDB = {
 					62510, -- [14]
 				},
 			},
+			["Default.Dark Iron.Ereinion"] = {
+				["lastUpdate"] = 1424741768,
+				["CRITTER"] = {
+					61855, -- [1]
+					55068, -- [2]
+				},
+			},
+			["Default.Illidan.Combustion"] = {
+				["lastUpdate"] = 1424741664,
+				["CRITTER"] = {
+					69452, -- [1]
+					122748, -- [2]
+					55068, -- [3]
+				},
+			},
 			["Default.Dark Iron.Colton"] = {
 				["lastUpdate"] = 1424741751,
 				["CRITTER"] = {
@@ -171,6 +149,32 @@ DataStore_PetsDB = {
 					35911, -- [11]
 					26529, -- [12]
 				},
+			},
+			["Default.Illidan.Comet"] = {
+				["lastUpdate"] = 1471118688,
+				["CRITTER"] = {
+					184482, -- [1]
+					69452, -- [2]
+					89039, -- [3]
+					155748, -- [4]
+					62513, -- [5]
+					176137, -- [6]
+					122748, -- [7]
+					170273, -- [8]
+					120501, -- [9]
+					188084, -- [10]
+					126885, -- [11]
+					169695, -- [12]
+					55068, -- [13]
+					170269, -- [14]
+					190020, -- [15]
+					170292, -- [16]
+					170282, -- [17]
+					164212, -- [18]
+				},
+			},
+			["Default.Illidan.Cometron"] = {
+				["lastUpdate"] = 1470809779,
 			},
 		},
 	},

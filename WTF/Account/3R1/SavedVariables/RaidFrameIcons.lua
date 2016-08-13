@@ -2,6 +2,7 @@
 RaidFrameIconsDB = {
 	["profileKeys"] = {
 		["Venala - Cho'gall"] = "Venala - Cho'gall",
+		["Cometron - Illidan"] = "Cometron - Illidan",
 		["Combustion - Illidan"] = "Pandatal - Illidan",
 		["Metal - Illidan"] = "Comet - Illidan",
 		["Natal - Illidan"] = "Pandatal - Illidan",
@@ -17,6 +18,8 @@ RaidFrameIconsDB = {
 	},
 	["profiles"] = {
 		["Venala - Cho'gall"] = {
+		},
+		["Cometron - Illidan"] = {
 		},
 		["Combustion - Illidan"] = {
 		},

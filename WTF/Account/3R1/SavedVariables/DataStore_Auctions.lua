@@ -1,14 +1,15 @@
 
 DataStore_AuctionsDB = {
 	["profileKeys"] = {
-		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Metal - Illidan"] = "Metal - Illidan",
-		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
-		["Pandatal - Illidan"] = "Pandatal - Illidan",
-		["Comet - Illidan"] = "Comet - Illidan",
-		["Natal - Illidan"] = "Natal - Illidan",
-		["Evan - Illidan"] = "Evan - Illidan",
+		["Cometron - Illidan"] = "Cometron - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Natal - Illidan"] = "Natal - Illidan",
+		["Colton - Dark Iron"] = "Colton - Dark Iron",
+		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
+		["Comet - Illidan"] = "Comet - Illidan",
+		["Evan - Illidan"] = "Evan - Illidan",
+		["Pandatal - Illidan"] = "Pandatal - Illidan",
 	},
 	["global"] = {
 		["Characters"] = {
@@ -16,13 +17,13 @@ DataStore_AuctionsDB = {
 				["lastUpdate"] = 1463869027,
 				["lastVisitDate"] = "2016/05/21 15:17",
 			},
-			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1470591327,
-				["lastVisitDate"] = "2016/08/07 10:35",
-			},
 			["Default.Illidan.Metal"] = {
 				["lastUpdate"] = 1463988054,
 				["lastVisitDate"] = "2016/05/23 00:20",
+			},
+			["Default.Illidan.Comet"] = {
+				["lastUpdate"] = 1471118759,
+				["lastVisitDate"] = "2016/08/13 13:05",
 			},
 		},
 	},

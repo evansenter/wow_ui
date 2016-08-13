@@ -4,6 +4,7 @@ ThogarAssistDB = {
 		["Colton - Dark Iron"] = "Default",
 		["Metal - Illidan"] = "Default",
 		["Ereinion - Dark Iron"] = "Default",
+		["Cometron - Illidan"] = "Default",
 		["Comet - Illidan"] = "Default",
 		["Natal - Illidan"] = "Default",
 		["Evan - Illidan"] = "Default",

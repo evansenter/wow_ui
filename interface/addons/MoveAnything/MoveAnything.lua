@@ -937,6 +937,9 @@ function MovAny:Boot()
 	if GameTooltip and GameTooltip.SetGuildBankItem then
 		hooksecurefunc(GameTooltip, "SetGuildBankItem", self.hGameTooltip_SetGuildBankItem)
 	end
+	if ContainerFrameItemButton_CalculateItemTooltipAnchors then
+		hooksecurefunc("ContainerFrameItemButton_CalculateItemTooltipAnchors", self.hGameTooltip_SetBagItem)
+	end
 	if AddFrameLock then
 		hooksecurefunc("AddFrameLock", self.hAddFrameLock)
 	end
@@ -4711,9 +4714,10 @@ function MovAny:HookTooltip(mover)
 	tooltip:ClearAllPoints()
 	tooltip:SetPoint(anchor, mover, anchor, 0, 0)
 	--MovAny:LockPoint(tooltip)
-	--[[if opt.hidden then
+	local opt = MovAny:GetUserData(mover:GetName())
+	if opt and opt.hidden then
 		self:LockVisibility(tooltip)
-	end]]
+	end
 	MovAny.Alpha:Apply(mover.MAE, tooltip)
 	MovAny.Scale:Apply(mover.MAE, tooltip)
 	MovAny.Misc:Apply(mover.MAE, tooltip)

@@ -305,22 +305,7 @@ MSBTProfiles_SavedVars = {
 			["creationVersion"] = "5.7.125",
 		},
 		["Default"] = {
-			["critFontName"] = "ABF",
 			["scrollAreas"] = {
-				["Notification"] = {
-					["offsetY"] = 250,
-				},
-				["Static"] = {
-					["offsetY"] = 120,
-					["direction"] = "Up",
-					["scrollHeight"] = 100,
-				},
-				["Outgoing"] = {
-					["behavior"] = "MSBT_NORMAL",
-					["direction"] = "Up",
-					["offsetX"] = 250,
-					["animationStyle"] = "Straight",
-				},
 				["Incoming"] = {
 					["stickyDirection"] = "Up",
 					["direction"] = "Up",
@@ -329,7 +314,24 @@ MSBTProfiles_SavedVars = {
 					["animationStyle"] = "Straight",
 					["stickyBehavior"] = "Normal",
 				},
+				["Notification"] = {
+					["offsetY"] = 250,
+				},
+				["Outgoing"] = {
+					["behavior"] = "MSBT_NORMAL",
+					["direction"] = "Up",
+					["offsetX"] = 250,
+					["animationStyle"] = "Straight",
+				},
+				["Static"] = {
+					["offsetY"] = 120,
+					["direction"] = "Up",
+					["scrollHeight"] = 100,
+				},
 			},
+			["critFontName"] = "ABF",
+			["enableBlizzardDamage"] = false,
+			["enableBlizzardHealing"] = false,
 			["normalFontName"] = "ABF",
 			["events"] = {
 				["PET_INCOMING_HOT_CRIT"] = {
@@ -549,6 +551,9 @@ MSBTProfiles_SavedVars = {
 			["creationVersion"] = "5.7.125",
 		},
 		["Comet"] = {
+			["critFontName"] = "ABF",
+			["enableBlizzardDamage"] = false,
+			["creationVersion"] = "5.7.125",
 			["critFontSize"] = 20,
 			["events"] = {
 				["PET_INCOMING_SPELL_DAMAGE"] = {
@@ -829,7 +834,6 @@ MSBTProfiles_SavedVars = {
 					["colorR"] = 1,
 				},
 			},
-			["normalFontSize"] = 16,
 			["scrollAreas"] = {
 				["Incoming"] = {
 					["stickyDirection"] = "Up",
@@ -850,8 +854,8 @@ MSBTProfiles_SavedVars = {
 				},
 			},
 			["normalFontName"] = "ABF",
-			["critFontName"] = "ABF",
-			["creationVersion"] = "5.7.125",
+			["enableBlizzardHealing"] = false,
+			["normalFontSize"] = 16,
 		},
 	},
 }

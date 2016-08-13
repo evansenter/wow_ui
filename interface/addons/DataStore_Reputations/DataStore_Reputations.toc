@@ -1,4 +1,4 @@
-## Interface: 70000
+﻿## Interface: 70000
 ## Title: DataStore_Reputations
 ## Notes: Stores information about character reputation levels
 ## Author: Thaoky (EU-Marécages de Zangar)

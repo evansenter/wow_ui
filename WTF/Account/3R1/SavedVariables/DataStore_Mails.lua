@@ -1,24 +1,25 @@
 
 DataStore_MailsDB = {
 	["profileKeys"] = {
-		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Metal - Illidan"] = "Metal - Illidan",
-		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
-		["Pandatal - Illidan"] = "Pandatal - Illidan",
-		["Comet - Illidan"] = "Comet - Illidan",
-		["Natal - Illidan"] = "Natal - Illidan",
-		["Evan - Illidan"] = "Evan - Illidan",
+		["Cometron - Illidan"] = "Cometron - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Natal - Illidan"] = "Natal - Illidan",
+		["Colton - Dark Iron"] = "Colton - Dark Iron",
+		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
+		["Comet - Illidan"] = "Comet - Illidan",
+		["Evan - Illidan"] = "Evan - Illidan",
+		["Pandatal - Illidan"] = "Pandatal - Illidan",
 	},
 	["global"] = {
 		["Characters"] = {
+			["Default.Illidan.Comet"] = {
+				["lastUpdate"] = 1470795805,
+				["lastVisitDate"] = "2016/08/09 19:23",
+			},
 			["Default.Illidan.Evan"] = {
 				["lastUpdate"] = 1470592057,
 				["lastVisitDate"] = "2016/08/07 10:47",
-			},
-			["Default.Illidan.Pandatal"] = {
-				["lastUpdate"] = 1461733334,
-				["lastVisitDate"] = "2016/04/26 22:02",
 			},
 			["Default.Illidan.Metal"] = {
 				["lastUpdate"] = 1470154897,
@@ -36,9 +37,9 @@ DataStore_MailsDB = {
 				},
 				["lastVisitDate"] = "2016/08/02 09:21",
 			},
-			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1470592097,
-				["lastVisitDate"] = "2016/08/07 10:48",
+			["Default.Illidan.Pandatal"] = {
+				["lastUpdate"] = 1461733334,
+				["lastVisitDate"] = "2016/04/26 22:02",
 			},
 		},
 	},

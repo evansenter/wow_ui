@@ -1230,7 +1230,7 @@ ActionBarSaverDB = {
 				"macro|2||Renewing Mist|627487|#showtooltip Renewing Mist/n/use Thunder Focus Tea/n/use [@mouseover,help,nodead][]Renewing Mist", -- [2]
 				"macro|3||Vivify|1360980|#showtooltip/n/use [@mouseover,help,nodead][]Vivify", -- [3]
 				"macro|4||Enveloping Mist|775461|#showtooltip Enveloping Mist/n/use 13/n/use [@mouseover,help,nodead][]Enveloping Mist", -- [4]
-				"macro|5||Tier 6 MW|620831|#showtooltip/n/use [talent:6/1]Refreshing Jade Wind;[talent:6/2]Invoke Chi-Ji, the Red Crane;[talent:6/3]Summon Jade Serpent Statue", -- [5]
+				"macro|5||Tier 6 MW|877514|#showtooltip/n/use [talent:6/1]Refreshing Jade Wind;[talent:6/2]Invoke Chi-Ji, the Red Crane;[talent:6/3]Summon Jade Serpent Statue", -- [5]
 				"spell|115078||Paralysis||", -- [6]
 				"macro|7||Life Cocoon|627485|#showtooltip Life Cocoon/n/use [@mouseover,help,nodead][]Life Cocoon", -- [7]
 				"spell|212051||Reawaken||", -- [8]
@@ -1257,7 +1257,7 @@ ActionBarSaverDB = {
 				[65] = "spell|117952||Crackling Jade Lightning||",
 				[49] = "macro|49||Tier 5|608939|#showtooltip/n/use [talent:5/1]Healing Elixir;[talent:5/2]Diffuse Magic;[talent:5/3]Dampen Harm",
 				[57] = "spell|101643||Transcendence||",
-				[66] = "item|109223||Healing Tonic",
+				[66] = "item|5512||Healthstone",
 				[21] = "spell|129597||Arcane Torrent|Racial|",
 				[67] = "item|109222||Draenic Mana Potion",
 				[50] = "spell|109132||Roll||",
@@ -1268,7 +1268,7 @@ ActionBarSaverDB = {
 				[51] = "macro|51||HS / GHS|134414|#showtooltip/n/use [nomod]Hearthstone;[mod:shift][mod:alt]Garrison Hearthstone",
 				[59] = "macro|59||Cloak|1096902|/use 15",
 				[70] = "spell|191837||Essence Font||",
-				[71] = "macro|71||Tier 1 MW|613397|#showtooltip/n/use [talent:1/1]Chi Burst;[talent:1/2,@mouseover,help,nodead]Zen Pulse;[talent:1/2]Zen Pulse;[talent:1/3,@mouseover,help,nodead]Mistwalk;[talent:1/3]Mistwalk",
+				[71] = "macro|71||Tier 1 MW|135734|#showtooltip/n/use [talent:1/1]Chi Burst;[talent:1/2,@mouseover,help,nodead]Zen Pulse;[talent:1/2]Zen Pulse;[talent:1/3,@mouseover,help,nodead]Mistwalk;[talent:1/3]Mistwalk",
 				[87] = "spell|100784||Blackout Kick||",
 				[52] = "macro|52||Target Focus|319458|/tar focus",
 				[60] = "spell|101546||Spinning Crane Kick||",
