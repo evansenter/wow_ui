@@ -1,5 +1,6 @@
 
 TidyPlatesOptions = {
+	["ActiveTheme"] = "Neon",
 	["FriendlyAutomation"] = "Hide when Combat starts, Show when Combat ends",
 	["EnemyAutomation"] = "No Automation",
 	["primary"] = "Neon/|cFFFF4400Damage",

@@ -762,7 +762,15 @@ function IconSelectorFrame.private_OnInternalFrameSizeChanged(internalFrame, wid
 				
 				button:SetScript("OnEnter", function(button, motion)
 					if button.texture then
-						local keywordString = lib:LookupKeywords(button.texture)
+						local tex = button.texture
+						if MacroToolkit.usingiconlib then
+							if type(button.texture) == "number" then
+								if MacroToolkit.TextureNames[button.texture] then
+									tex = MacroToolkit.TextureNames[button.texture]
+								end
+							end
+						end
+						local keywordString = lib:LookupKeywords(tex)
 						local keywords = Helpers.GetTaggedStrings(keywordString, nil)
 						local spells = Helpers.GetTaggedStrings(keywordString, "spell")
 
@@ -779,7 +787,7 @@ function IconSelectorFrame.private_OnInternalFrameSizeChanged(internalFrame, wid
 						elseif button.textureKind == "Dynamic" then
 							GameTooltip:AddLine(NORMAL_FONT_COLOR_CODE .. L["Default / dynamic texture:"] .. FONT_COLOR_CODE_CLOSE)
 						end
-						GameTooltip:AddLine(tostring(button.texture), 1, 1, 1)
+						GameTooltip:AddLine(tostring(tex), 1, 1, 1)
 						Helpers.AddTaggedInformationToTooltip(keywordString, "spell", L["Spell: "], NORMAL_FONT_COLOR)
 						Helpers.AddTaggedInformationToTooltip(keywordString, "companion", L["Companion: "], NORMAL_FONT_COLOR)
 						Helpers.AddTaggedInformationToTooltip(keywordString, "mount", L["Mount: "], NORMAL_FONT_COLOR)
@@ -1050,7 +1058,7 @@ function SearchObject:Create(options)
 	search.sectionOrder = options.sectionOrder
 	search.firstSearch = true
 	search.shouldSkip = { }
-
+	
 	return search
 end
 
@@ -1187,6 +1195,11 @@ function SearchObject:private_OnSearchTick()
 		end
 
 		local id, kind, texture = self:GetIconInfo(self.searchIndex)
+		if type(texture) == "number" and MacroToolkit.usingiconlib then
+			if MacroToolkit.TextureNames[texture] then
+				texture = MacroToolkit.TextureNames[texture]
+			end
+		end
 		if self.OnIconScanned then self:OnIconScanned(texture, self.searchIndex, id, kind) end
 
 		if texture then

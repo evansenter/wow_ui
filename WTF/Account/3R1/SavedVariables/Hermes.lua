@@ -1,16 +1,5 @@
 
 HermesDB2 = {
-	["profileKeys"] = {
-		["Metal - Illidan"] = "Comet - Illidan",
-		["Cometron - Illidan"] = "Cometron - Illidan",
-		["Combustion - Illidan"] = "Combustion - Illidan",
-		["Pandatal - Illidan"] = "Comet - Illidan",
-		["Colton - Dark Iron"] = "Colton - Dark Iron",
-		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
-		["Comet - Illidan"] = "Comet - Illidan",
-		["Evan - Illidan"] = "Comet - Illidan",
-		["Natal - Illidan"] = "Natal - Illidan",
-	},
 	["global"] = {
 		["welcome"] = true,
 		["spellmetadata"] = {
@@ -149,8 +138,8 @@ HermesDB2 = {
 			[124974] = {
 				["duration"] = "30",
 			},
-			[47528] = {
-				["duration"] = "4",
+			[159916] = {
+				["duration"] = "6",
 			},
 			[31821] = {
 				["duration"] = "6",
@@ -158,10 +147,10 @@ HermesDB2 = {
 			[49039] = {
 				["duration"] = "10",
 			},
-			[108920] = {
-				["duration"] = "20",
+			[106898] = {
+				["duration"] = "8",
 			},
-			[1038] = {
+			[55233] = {
 				["duration"] = "10",
 			},
 			[22812] = {
@@ -176,464 +165,41 @@ HermesDB2 = {
 			[172106] = {
 				["duration"] = "6",
 			},
-			[109964] = {
-				["duration"] = "15",
-			},
-			[15286] = {
-				["duration"] = "15",
-			},
-			[2139] = {
-				["duration"] = "6",
-			},
-			[740] = {
-				["duration"] = "8",
-			},
-			[22842] = {
-				["duration"] = "20",
+			[102060] = {
+				["duration"] = "4",
 			},
 			[114028] = {
 				["duration"] = "5",
 			},
-			[102060] = {
-				["duration"] = "4",
-			},
-			[64843] = {
-				["duration"] = "8",
-			},
-			[55233] = {
-				["duration"] = "10",
-			},
-			[106898] = {
-				["duration"] = "8",
-			},
-			[159916] = {
-				["duration"] = "6",
-			},
-		},
-		["requirements"] = {
-			[31224] = {
-				{
-					["k"] = 10,
-					["level"] = 58,
-				}, -- [1]
-			},
-			[5394] = {
-				{
-					["k"] = 30,
-					["specializationId"] = 264,
-				}, -- [1]
-			},
-			[853] = {
-				{
-					["k"] = 10,
-					["level"] = 14,
-				}, -- [1]
-			},
-			[102060] = {
-				{
-					["k"] = 25,
-					["talentIndex"] = 9,
-				}, -- [1]
-			},
-			[20066] = {
-				{
-					["k"] = 25,
-					["talentIndex"] = 5,
-				}, -- [1]
-			},
-			[49028] = {
-				{
-					["k"] = 30,
-					["specializationId"] = 250,
-				}, -- [1]
-			},
-			[105593] = {
-				{
-					["k"] = 25,
-					["talentIndex"] = 4,
-				}, -- [1]
-			},
-			[49576] = {
-				{
-					["k"] = 10,
-					["level"] = 55,
-				}, -- [1]
-			},
-			[20608] = {
-				{
-					["k"] = 10,
-					["level"] = 30,
-				}, -- [1]
-			},
-			[116849] = {
-				{
-					["k"] = 30,
-					["specializationId"] = 270,
-				}, -- [1]
-			},
-			[57994] = {
-				{
-					["k"] = 10,
-					["level"] = 16,
-				}, -- [1]
-			},
-			[6552] = {
-				{
-					["k"] = 10,
-					["level"] = 38,
-				}, -- [1]
-			},
-			[29893] = {
-				{
-					["k"] = 10,
-					["level"] = 68,
-				}, -- [1]
-			},
-			[46584] = {
-				{
-					["k"] = 10,
-					["level"] = 56,
-				}, -- [1]
-			},
-			[108920] = {
-				{
-					["k"] = 25,
-					["talentIndex"] = 1,
-				}, -- [1]
-			},
-			[80353] = {
-				{
-					["k"] = 10,
-					["level"] = 85,
-				}, -- [1]
-			},
-			[633] = {
-				{
-					["k"] = 10,
-					["level"] = 16,
-				}, -- [1]
-			},
-			[1022] = {
-				{
-					["k"] = 10,
-					["level"] = 18,
-				}, -- [1]
-			},
-			[115310] = {
-				{
-					["k"] = 30,
-					["specializationId"] = 270,
-				}, -- [1]
-			},
-			[108968] = {
-				{
-					["k"] = 30,
-					["specializationId"] = 258,
-				}, -- [1]
-			},
-			[62618] = {
-				{
-					["k"] = 30,
-					["specializationId"] = 256,
-				}, -- [1]
-			},
-			[6940] = {
-				{
-					["k"] = 10,
-					["level"] = 80,
-				}, -- [1]
-			},
-			[61999] = {
-				{
-					["k"] = 10,
-					["level"] = 72,
-				}, -- [1]
-			},
-			[642] = {
-				{
-					["k"] = 10,
-					["level"] = 48,
-				}, -- [1]
-			},
-			[115176] = {
-				{
-					["k"] = 10,
-					["level"] = 82,
-				}, -- [1]
-			},
-			[698] = {
-				{
-					["k"] = 10,
-					["level"] = 42,
-				}, -- [1]
-			},
-			[2094] = {
-				{
-					["k"] = 10,
-					["level"] = 34,
-				}, -- [1]
-			},
-			[45438] = {
-				{
-					["k"] = 10,
-					["level"] = 30,
-				}, -- [1]
-			},
-			[498] = {
-				{
-					["k"] = 10,
-					["level"] = 30,
-				}, -- [1]
-			},
-			[98008] = {
-				{
-					["k"] = 30,
-					["specializationId"] = 264,
-				}, -- [1]
-			},
-			[114018] = {
-				{
-					["k"] = 10,
-					["level"] = 76,
-				}, -- [1]
-			},
-			[102342] = {
-				{
-					["k"] = 30,
-					["specializationId"] = 105,
-				}, -- [1]
-			},
-			[64901] = {
-				{
-					["k"] = 10,
-					["level"] = 64,
-				}, -- [1]
-			},
-			[48792] = {
-				{
-					["k"] = 10,
-					["level"] = 62,
-				}, -- [1]
-			},
-			[47788] = {
-				{
-					["k"] = 30,
-					["specializationId"] = 257,
-				}, -- [1]
-			},
-			[108280] = {
-				{
-					["k"] = 30,
-					["specializationId"] = 264,
-				}, -- [1]
-			},
-			[34477] = {
-				{
-					["k"] = 10,
-					["level"] = 76,
-				}, -- [1]
-			},
-			[20484] = {
-				{
-					["k"] = 10,
-					["level"] = 20,
-				}, -- [1]
-			},
-			[102351] = {
-				{
-					["k"] = 25,
-					["talentIndex"] = 6,
-				}, -- [1]
-			},
-			[86659] = {
-				{
-					["k"] = 30,
-					["specializationId"] = 66,
-				}, -- [1]
-			},
-			[97462] = {
-			},
-			[159916] = {
-				{
-					["k"] = 30,
-					["specializationId"] = 62,
-				}, -- [1]
-			},
-			[108281] = {
-				{
-					["k"] = 25,
-					["talentIndex"] = 14,
-				}, -- [1]
-			},
-			[740] = {
-				{
-					["k"] = 30,
-					["specializationId"] = 105,
-				}, -- [1]
-			},
-			[64843] = {
-				{
-					["k"] = 30,
-					["specializationId"] = 257,
-				}, -- [1]
-			},
-			[31687] = {
-				{
-					["k"] = 30,
-					["specializationId"] = 64,
-				}, -- [1]
-			},
-			[106898] = {
-				{
-					["k"] = 10,
-					["level"] = 84,
-				}, -- [1]
-			},
-			[64382] = {
-				{
-					["k"] = 10,
-					["level"] = 74,
-				}, -- [1]
-			},
-			[1044] = {
-				{
-					["k"] = 10,
-					["level"] = 52,
-				}, -- [1]
-			},
-			[33206] = {
-				{
-					["k"] = 30,
-					["specializationId"] = 256,
-				}, -- [1]
-			},
-			[124974] = {
-				{
-					["k"] = 30,
-					["specializationId"] = 105,
-				}, -- [1]
-			},
-			[114028] = {
-				{
-					["k"] = 25,
-					["talentIndex"] = 13,
-				}, -- [1]
-			},
-			[31821] = {
-				{
-					["k"] = 30,
-					["specializationId"] = 65,
-				}, -- [1]
-			},
-			[49039] = {
-				{
-					["k"] = 25,
-					["talentIndex"] = 4,
-				}, -- [1]
-			},
 			[15286] = {
-				{
-					["k"] = 30,
-					["specializationId"] = 258,
-				}, -- [1]
-			},
-			[73325] = {
-				{
-					["k"] = 10,
-					["level"] = 85,
-				}, -- [1]
-			},
-			[22812] = {
-				{
-					["k"] = 10,
-					["level"] = 58,
-				}, -- [1]
+				["duration"] = "15",
 			},
 			[22842] = {
-				{
-					["k"] = 10,
-					["level"] = 52,
-				}, -- [1]
+				["duration"] = "20",
 			},
-			[29166] = {
-				{
-					["k"] = 10,
-					["level"] = 28,
-				}, -- [1]
-			},
-			[172106] = {
-				{
-					["k"] = 10,
-					["level"] = 84,
-				}, -- [1]
-			},
-			[109964] = {
-				{
-					["k"] = 30,
-					["specializationId"] = 256,
-				}, -- [1]
-			},
-			[48707] = {
-				{
-					["k"] = 10,
-					["level"] = 68,
-				}, -- [1]
+			[740] = {
+				["duration"] = "8",
 			},
 			[2139] = {
-				{
-					["k"] = 10,
-					["level"] = 10,
-				}, -- [1]
+				["duration"] = "6",
 			},
-			[42650] = {
-				{
-					["k"] = 10,
-					["level"] = 80,
-				}, -- [1]
+			[109964] = {
+				["duration"] = "15",
 			},
-			[51052] = {
-				{
-					["k"] = 25,
-					["talentIndex"] = 5,
-				}, -- [1]
-			},
-			[55233] = {
-				{
-					["k"] = 30,
-					["specializationId"] = 250,
-				}, -- [1]
-			},
-			[47528] = {
-				{
-					["k"] = 10,
-					["level"] = 57,
-				}, -- [1]
-			},
-			[49222] = {
-				{
-					["k"] = 30,
-					["specializationId"] = 250,
-				}, -- [1]
-			},
-			[47476] = {
-				{
-					["k"] = 10,
-					["level"] = 59,
-				}, -- [1]
+			[64843] = {
+				["duration"] = "8",
 			},
 			[1038] = {
-				{
-					["k"] = 10,
-					["level"] = 66,
-				}, -- [1]
+				["duration"] = "10",
 			},
-			[48743] = {
-				{
-					["k"] = 25,
-					["talentIndex"] = 10,
-				}, -- [1]
+			[108920] = {
+				["duration"] = "20",
+			},
+			[47528] = {
+				["duration"] = "4",
 			},
 		},
+		["clientTime"] = 348262.787,
 		["durations"] = {
 			[31224] = 90,
 			[5394] = 30,
@@ -685,36 +251,36 @@ HermesDB2 = {
 			[12975] = 180,
 			[86659] = 180,
 			[97462] = 180,
-			[1038] = 120,
-			[102351] = 30,
+			[47476] = 120,
+			[51052] = 120,
 			[740] = 480,
-			[31687] = 180,
-			[64843] = 180,
-			[106898] = 120,
+			[55233] = 60,
+			[49222] = 60,
+			[42650] = 600,
 			[109964] = 60,
 			[1044] = 25,
-			[33206] = 180,
+			[48707] = 45,
 			[124974] = 90,
-			[22842] = 180,
+			[114028] = 60,
 			[31821] = 180,
-			[108281] = 120,
-			[2139] = 24,
+			[102060] = 40,
+			[15286] = 180,
 			[73325] = 90,
 			[22812] = 60,
-			[1766] = 10,
+			[108920] = 30,
 			[29166] = 180,
 			[172106] = 180,
 			[64382] = 300,
-			[108920] = 30,
-			[15286] = 180,
-			[102060] = 40,
-			[114028] = 60,
-			[48707] = 45,
-			[42650] = 600,
-			[49222] = 60,
-			[55233] = 60,
-			[51052] = 120,
-			[47476] = 120,
+			[1766] = 10,
+			[2139] = 24,
+			[108281] = 120,
+			[22842] = 180,
+			[33206] = 180,
+			[106898] = 120,
+			[64843] = 180,
+			[31687] = 180,
+			[102351] = 30,
+			[1038] = 120,
 		},
 		["classes"] = {
 			["DEATHKNIGHT"] = {
@@ -1017,7 +583,7 @@ HermesDB2 = {
 				["schema"] = 60000,
 				["revision"] = 1,
 			},
-			["PALADIN"] = {
+			["HUNTER"] = {
 				["talents"] = {
 					"Avatar", -- [1]
 					"Avatar", -- [2]
@@ -1377,7 +943,7 @@ HermesDB2 = {
 				["schema"] = 60000,
 				["revision"] = 1,
 			},
-			["HUNTER"] = {
+			["PALADIN"] = {
 				["talents"] = {
 					"Avatar", -- [1]
 					"Avatar", -- [2]
@@ -1447,8 +1013,442 @@ HermesDB2 = {
 			["Pandaren"] = "Pandaren",
 			["Goblin"] = "Goblin",
 		},
-		["clientTime"] = 216384.865,
-		["serverTime"] = 1470806900,
+		["requirements"] = {
+			[31224] = {
+				{
+					["k"] = 10,
+					["level"] = 58,
+				}, -- [1]
+			},
+			[5394] = {
+				{
+					["k"] = 30,
+					["specializationId"] = 264,
+				}, -- [1]
+			},
+			[853] = {
+				{
+					["k"] = 10,
+					["level"] = 14,
+				}, -- [1]
+			},
+			[102060] = {
+				{
+					["k"] = 25,
+					["talentIndex"] = 9,
+				}, -- [1]
+			},
+			[20066] = {
+				{
+					["k"] = 25,
+					["talentIndex"] = 5,
+				}, -- [1]
+			},
+			[49028] = {
+				{
+					["k"] = 30,
+					["specializationId"] = 250,
+				}, -- [1]
+			},
+			[105593] = {
+				{
+					["k"] = 25,
+					["talentIndex"] = 4,
+				}, -- [1]
+			},
+			[49576] = {
+				{
+					["k"] = 10,
+					["level"] = 55,
+				}, -- [1]
+			},
+			[20608] = {
+				{
+					["k"] = 10,
+					["level"] = 30,
+				}, -- [1]
+			},
+			[116849] = {
+				{
+					["k"] = 30,
+					["specializationId"] = 270,
+				}, -- [1]
+			},
+			[57994] = {
+				{
+					["k"] = 10,
+					["level"] = 16,
+				}, -- [1]
+			},
+			[6552] = {
+				{
+					["k"] = 10,
+					["level"] = 38,
+				}, -- [1]
+			},
+			[29893] = {
+				{
+					["k"] = 10,
+					["level"] = 68,
+				}, -- [1]
+			},
+			[46584] = {
+				{
+					["k"] = 10,
+					["level"] = 56,
+				}, -- [1]
+			},
+			[108920] = {
+				{
+					["k"] = 25,
+					["talentIndex"] = 1,
+				}, -- [1]
+			},
+			[80353] = {
+				{
+					["k"] = 10,
+					["level"] = 85,
+				}, -- [1]
+			},
+			[633] = {
+				{
+					["k"] = 10,
+					["level"] = 16,
+				}, -- [1]
+			},
+			[1022] = {
+				{
+					["k"] = 10,
+					["level"] = 18,
+				}, -- [1]
+			},
+			[115310] = {
+				{
+					["k"] = 30,
+					["specializationId"] = 270,
+				}, -- [1]
+			},
+			[108968] = {
+				{
+					["k"] = 30,
+					["specializationId"] = 258,
+				}, -- [1]
+			},
+			[62618] = {
+				{
+					["k"] = 30,
+					["specializationId"] = 256,
+				}, -- [1]
+			},
+			[6940] = {
+				{
+					["k"] = 10,
+					["level"] = 80,
+				}, -- [1]
+			},
+			[61999] = {
+				{
+					["k"] = 10,
+					["level"] = 72,
+				}, -- [1]
+			},
+			[642] = {
+				{
+					["k"] = 10,
+					["level"] = 48,
+				}, -- [1]
+			},
+			[115176] = {
+				{
+					["k"] = 10,
+					["level"] = 82,
+				}, -- [1]
+			},
+			[698] = {
+				{
+					["k"] = 10,
+					["level"] = 42,
+				}, -- [1]
+			},
+			[2094] = {
+				{
+					["k"] = 10,
+					["level"] = 34,
+				}, -- [1]
+			},
+			[45438] = {
+				{
+					["k"] = 10,
+					["level"] = 30,
+				}, -- [1]
+			},
+			[498] = {
+				{
+					["k"] = 10,
+					["level"] = 30,
+				}, -- [1]
+			},
+			[98008] = {
+				{
+					["k"] = 30,
+					["specializationId"] = 264,
+				}, -- [1]
+			},
+			[114018] = {
+				{
+					["k"] = 10,
+					["level"] = 76,
+				}, -- [1]
+			},
+			[102342] = {
+				{
+					["k"] = 30,
+					["specializationId"] = 105,
+				}, -- [1]
+			},
+			[64901] = {
+				{
+					["k"] = 10,
+					["level"] = 64,
+				}, -- [1]
+			},
+			[48792] = {
+				{
+					["k"] = 10,
+					["level"] = 62,
+				}, -- [1]
+			},
+			[47788] = {
+				{
+					["k"] = 30,
+					["specializationId"] = 257,
+				}, -- [1]
+			},
+			[108280] = {
+				{
+					["k"] = 30,
+					["specializationId"] = 264,
+				}, -- [1]
+			},
+			[34477] = {
+				{
+					["k"] = 10,
+					["level"] = 76,
+				}, -- [1]
+			},
+			[20484] = {
+				{
+					["k"] = 10,
+					["level"] = 20,
+				}, -- [1]
+			},
+			[48743] = {
+				{
+					["k"] = 25,
+					["talentIndex"] = 10,
+				}, -- [1]
+			},
+			[86659] = {
+				{
+					["k"] = 30,
+					["specializationId"] = 66,
+				}, -- [1]
+			},
+			[97462] = {
+			},
+			[1038] = {
+				{
+					["k"] = 10,
+					["level"] = 66,
+				}, -- [1]
+			},
+			[47476] = {
+				{
+					["k"] = 10,
+					["level"] = 59,
+				}, -- [1]
+			},
+			[108281] = {
+				{
+					["k"] = 25,
+					["talentIndex"] = 14,
+				}, -- [1]
+			},
+			[49222] = {
+				{
+					["k"] = 30,
+					["specializationId"] = 250,
+				}, -- [1]
+			},
+			[47528] = {
+				{
+					["k"] = 10,
+					["level"] = 57,
+				}, -- [1]
+			},
+			[55233] = {
+				{
+					["k"] = 30,
+					["specializationId"] = 250,
+				}, -- [1]
+			},
+			[64382] = {
+				{
+					["k"] = 10,
+					["level"] = 74,
+				}, -- [1]
+			},
+			[1044] = {
+				{
+					["k"] = 10,
+					["level"] = 52,
+				}, -- [1]
+			},
+			[51052] = {
+				{
+					["k"] = 25,
+					["talentIndex"] = 5,
+				}, -- [1]
+			},
+			[124974] = {
+				{
+					["k"] = 30,
+					["specializationId"] = 105,
+				}, -- [1]
+			},
+			[42650] = {
+				{
+					["k"] = 10,
+					["level"] = 80,
+				}, -- [1]
+			},
+			[31821] = {
+				{
+					["k"] = 30,
+					["specializationId"] = 65,
+				}, -- [1]
+			},
+			[49039] = {
+				{
+					["k"] = 25,
+					["talentIndex"] = 4,
+				}, -- [1]
+			},
+			[2139] = {
+				{
+					["k"] = 10,
+					["level"] = 10,
+				}, -- [1]
+			},
+			[73325] = {
+				{
+					["k"] = 10,
+					["level"] = 85,
+				}, -- [1]
+			},
+			[22812] = {
+				{
+					["k"] = 10,
+					["level"] = 58,
+				}, -- [1]
+			},
+			[48707] = {
+				{
+					["k"] = 10,
+					["level"] = 68,
+				}, -- [1]
+			},
+			[29166] = {
+				{
+					["k"] = 10,
+					["level"] = 28,
+				}, -- [1]
+			},
+			[172106] = {
+				{
+					["k"] = 10,
+					["level"] = 84,
+				}, -- [1]
+			},
+			[109964] = {
+				{
+					["k"] = 30,
+					["specializationId"] = 256,
+				}, -- [1]
+			},
+			[22842] = {
+				{
+					["k"] = 10,
+					["level"] = 52,
+				}, -- [1]
+			},
+			[15286] = {
+				{
+					["k"] = 30,
+					["specializationId"] = 258,
+				}, -- [1]
+			},
+			[114028] = {
+				{
+					["k"] = 25,
+					["talentIndex"] = 13,
+				}, -- [1]
+			},
+			[33206] = {
+				{
+					["k"] = 30,
+					["specializationId"] = 256,
+				}, -- [1]
+			},
+			[106898] = {
+				{
+					["k"] = 10,
+					["level"] = 84,
+				}, -- [1]
+			},
+			[31687] = {
+				{
+					["k"] = 30,
+					["specializationId"] = 64,
+				}, -- [1]
+			},
+			[64843] = {
+				{
+					["k"] = 30,
+					["specializationId"] = 257,
+				}, -- [1]
+			},
+			[740] = {
+				{
+					["k"] = 30,
+					["specializationId"] = 105,
+				}, -- [1]
+			},
+			[159916] = {
+				{
+					["k"] = 30,
+					["specializationId"] = 62,
+				}, -- [1]
+			},
+			[102351] = {
+				{
+					["k"] = 25,
+					["talentIndex"] = 6,
+				}, -- [1]
+			},
+		},
+		["serverTime"] = 1471197678,
+	},
+	["profileKeys"] = {
+		["Metal - Illidan"] = "Comet - Illidan",
+		["Cometron - Illidan"] = "Cometron - Illidan",
+		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Pandatal - Illidan"] = "Comet - Illidan",
+		["Colton - Dark Iron"] = "Colton - Dark Iron",
+		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
+		["Comet - Illidan"] = "Comet - Illidan",
+		["Evan - Illidan"] = "Comet - Illidan",
+		["Natal - Illidan"] = "Natal - Illidan",
 	},
 	["profiles"] = {
 		["Metal - Illidan"] = {
@@ -1473,45 +1473,45 @@ HermesDB2 = {
 							["filterrange"] = true,
 							["filter10man"] = true,
 							["filterself"] = false,
-							["name"] = "Default",
+							["enabled"] = true,
 							["profiles"] = {
 								["GridButtons"] = {
-									["merged"] = false,
-									["hideNoSender"] = false,
 									["scale"] = 1,
-									["h"] = 150.000030517578,
+									["hideNoSender"] = false,
+									["merged"] = false,
+									["w"] = 249.999938964844,
 									["coloredBorders"] = true,
-									["cellAnchor"] = "TOPLEFT",
+									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
 									["y"] = 1102.00024414062,
-									["x"] = 340.000061035156,
+									["h"] = 150.000030517578,
+									["locked"] = false,
+									["cellAnchor"] = "TOPLEFT",
 									["colorNS"] = {
 										["a"] = 0.75,
-										["b"] = 0.5,
-										["g"] = 0.5,
 										["r"] = 0.5,
+										["g"] = 0.5,
+										["b"] = 0.5,
 									},
-									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
-									["locked"] = false,
 									["padding"] = 5,
-									["w"] = 249.999938964844,
+									["x"] = 340.000061035156,
 									["colorU"] = {
 										["a"] = 1,
-										["b"] = 0.5,
-										["g"] = 0.5,
 										["r"] = 0.5,
+										["g"] = 0.5,
+										["b"] = 0.5,
 									},
 								},
 							},
-							["abilities"] = {
-							},
+							["includeAll"] = true,
+							["filterdead"] = false,
+							["name"] = "Default",
+							["filterconnection"] = true,
+							["filterplayertype"] = "disabled",
 							["playerfilters"] = {
 							},
 							["filter25man"] = true,
-							["filterplayertype"] = "disabled",
-							["filterconnection"] = true,
-							["filterdead"] = false,
-							["includeAll"] = true,
-							["enabled"] = true,
+							["abilities"] = {
+							},
 						}, -- [1]
 					},
 				},
@@ -2101,8 +2101,69 @@ HermesDB2 = {
 			},
 		},
 		["Cometron - Illidan"] = {
+			["items"] = {
+				{
+					["enabled"] = false,
+					["name"] = "Mirror of Broken Images",
+					["id"] = -62466,
+					["class"] = "ANY",
+					["icon"] = 134375,
+				}, -- [1]
+			},
+			["welcome"] = true,
 			["pluginState"] = {
 				["UI"] = true,
+			},
+			["plugins"] = {
+				["Hermes-UI"] = {
+					["views"] = {
+						{
+							["module"] = "GridButtons",
+							["filterrange"] = true,
+							["filter10man"] = true,
+							["filterself"] = false,
+							["enabled"] = true,
+							["profiles"] = {
+								["GridButtons"] = {
+									["coloredBorders"] = true,
+									["hideNoSender"] = false,
+									["scale"] = 1,
+									["merged"] = false,
+									["w"] = 250,
+									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
+									["y"] = 675.000122070313,
+									["x"] = 835.000061035156,
+									["locked"] = false,
+									["cellAnchor"] = "TOPLEFT",
+									["colorNS"] = {
+										["a"] = 0.75,
+										["r"] = 0.5,
+										["g"] = 0.5,
+										["b"] = 0.5,
+									},
+									["padding"] = 5,
+									["h"] = 150,
+									["colorU"] = {
+										["a"] = 1,
+										["r"] = 0.5,
+										["g"] = 0.5,
+										["b"] = 0.5,
+									},
+								},
+							},
+							["includeAll"] = true,
+							["filterdead"] = false,
+							["abilities"] = {
+							},
+							["filterconnection"] = true,
+							["filterplayertype"] = "disabled",
+							["playerfilters"] = {
+							},
+							["name"] = "Default",
+							["filter25man"] = true,
+						}, -- [1]
+					},
+				},
 			},
 			["spells"] = {
 				{
@@ -2638,67 +2699,6 @@ HermesDB2 = {
 					["icon"] = 642417,
 				}, -- [76]
 			},
-			["items"] = {
-				{
-					["enabled"] = false,
-					["name"] = "Mirror of Broken Images",
-					["id"] = -62466,
-					["class"] = "ANY",
-					["icon"] = 134375,
-				}, -- [1]
-			},
-			["plugins"] = {
-				["Hermes-UI"] = {
-					["views"] = {
-						{
-							["module"] = "GridButtons",
-							["filterrange"] = true,
-							["filter10man"] = true,
-							["filterself"] = false,
-							["abilities"] = {
-							},
-							["profiles"] = {
-								["GridButtons"] = {
-									["w"] = 250,
-									["hideNoSender"] = false,
-									["scale"] = 1,
-									["x"] = 835.000061035156,
-									["coloredBorders"] = true,
-									["cellAnchor"] = "TOPLEFT",
-									["y"] = 675.000122070313,
-									["h"] = 150,
-									["colorNS"] = {
-										["a"] = 0.75,
-										["b"] = 0.5,
-										["g"] = 0.5,
-										["r"] = 0.5,
-									},
-									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
-									["locked"] = false,
-									["padding"] = 5,
-									["merged"] = false,
-									["colorU"] = {
-										["a"] = 1,
-										["b"] = 0.5,
-										["g"] = 0.5,
-										["r"] = 0.5,
-									},
-								},
-							},
-							["filter25man"] = true,
-							["playerfilters"] = {
-							},
-							["name"] = "Default",
-							["filterplayertype"] = "disabled",
-							["filterconnection"] = true,
-							["filterdead"] = false,
-							["includeAll"] = true,
-							["enabled"] = true,
-						}, -- [1]
-					},
-				},
-			},
-			["welcome"] = true,
 		},
 		["Combustion - Illidan"] = {
 			["items"] = {
@@ -2722,45 +2722,45 @@ HermesDB2 = {
 							["filterrange"] = true,
 							["filter10man"] = true,
 							["filterself"] = false,
-							["abilities"] = {
-							},
+							["enabled"] = true,
 							["profiles"] = {
 								["GridButtons"] = {
-									["merged"] = false,
-									["hideNoSender"] = false,
 									["scale"] = 1,
-									["x"] = 835.000061035156,
+									["hideNoSender"] = false,
+									["merged"] = false,
+									["coloredBorders"] = true,
 									["w"] = 250,
-									["cellAnchor"] = "TOPLEFT",
+									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
 									["y"] = 675.000122070313,
-									["h"] = 150,
+									["x"] = 835.000061035156,
+									["locked"] = false,
+									["cellAnchor"] = "TOPLEFT",
 									["colorNS"] = {
 										["a"] = 0.75,
-										["b"] = 0.5,
-										["g"] = 0.5,
 										["r"] = 0.5,
+										["g"] = 0.5,
+										["b"] = 0.5,
 									},
-									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
-									["locked"] = false,
 									["padding"] = 5,
-									["coloredBorders"] = true,
+									["h"] = 150,
 									["colorU"] = {
 										["a"] = 1,
-										["b"] = 0.5,
-										["g"] = 0.5,
 										["r"] = 0.5,
+										["g"] = 0.5,
+										["b"] = 0.5,
 									},
 								},
 							},
-							["filter25man"] = true,
+							["includeAll"] = true,
+							["filterdead"] = false,
+							["abilities"] = {
+							},
+							["filterconnection"] = true,
+							["filterplayertype"] = "disabled",
 							["playerfilters"] = {
 							},
 							["name"] = "Default",
-							["filterplayertype"] = "disabled",
-							["filterconnection"] = true,
-							["filterdead"] = false,
-							["includeAll"] = true,
-							["enabled"] = true,
+							["filter25man"] = true,
 						}, -- [1]
 					},
 				},
@@ -3371,45 +3371,45 @@ HermesDB2 = {
 							["filterrange"] = true,
 							["filter10man"] = true,
 							["filterself"] = false,
-							["enabled"] = true,
+							["filter25man"] = true,
 							["profiles"] = {
 								["GridButtons"] = {
-									["scale"] = 1,
-									["hideNoSender"] = false,
 									["merged"] = false,
+									["hideNoSender"] = false,
+									["scale"] = 1,
+									["h"] = 149.999984741211,
 									["coloredBorders"] = true,
-									["w"] = 249.999984741211,
-									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
+									["cellAnchor"] = "TOPLEFT",
 									["y"] = 686.000183105469,
 									["x"] = 410.000152587891,
-									["locked"] = false,
-									["cellAnchor"] = "TOPLEFT",
 									["colorNS"] = {
 										["a"] = 0.75,
-										["r"] = 0.5,
-										["g"] = 0.5,
 										["b"] = 0.5,
+										["g"] = 0.5,
+										["r"] = 0.5,
 									},
+									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
+									["locked"] = false,
 									["padding"] = 5,
-									["h"] = 149.999984741211,
+									["w"] = 249.999984741211,
 									["colorU"] = {
 										["a"] = 1,
-										["r"] = 0.5,
-										["g"] = 0.5,
 										["b"] = 0.5,
+										["g"] = 0.5,
+										["r"] = 0.5,
 									},
 								},
 							},
-							["includeAll"] = true,
-							["filterdead"] = false,
-							["abilities"] = {
-							},
-							["filterconnection"] = true,
-							["filterplayertype"] = "disabled",
+							["name"] = "Default",
 							["playerfilters"] = {
 							},
-							["name"] = "Default",
-							["filter25man"] = true,
+							["abilities"] = {
+							},
+							["filterplayertype"] = "disabled",
+							["filterconnection"] = true,
+							["filterdead"] = false,
+							["includeAll"] = true,
+							["enabled"] = true,
 						}, -- [1]
 					},
 				},
@@ -4006,45 +4006,45 @@ HermesDB2 = {
 							["filterrange"] = true,
 							["filter10man"] = true,
 							["filterself"] = false,
-							["enabled"] = true,
+							["abilities"] = {
+							},
 							["profiles"] = {
 								["GridButtons"] = {
-									["scale"] = 1,
-									["hideNoSender"] = false,
 									["merged"] = false,
+									["hideNoSender"] = false,
+									["scale"] = 1,
+									["x"] = 835.000061035156,
 									["w"] = 250,
-									["coloredBorders"] = true,
-									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
+									["cellAnchor"] = "TOPLEFT",
 									["y"] = 675.000122070313,
 									["h"] = 150,
-									["locked"] = false,
-									["cellAnchor"] = "TOPLEFT",
 									["colorNS"] = {
 										["a"] = 0.75,
-										["r"] = 0.5,
-										["g"] = 0.5,
 										["b"] = 0.5,
+										["g"] = 0.5,
+										["r"] = 0.5,
 									},
+									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
+									["locked"] = false,
 									["padding"] = 5,
-									["x"] = 835.000061035156,
+									["coloredBorders"] = true,
 									["colorU"] = {
 										["a"] = 1,
-										["r"] = 0.5,
-										["g"] = 0.5,
 										["b"] = 0.5,
+										["g"] = 0.5,
+										["r"] = 0.5,
 									},
 								},
 							},
-							["includeAll"] = true,
-							["filterdead"] = false,
-							["name"] = "Default",
-							["filterconnection"] = true,
-							["filterplayertype"] = "disabled",
+							["filter25man"] = true,
 							["playerfilters"] = {
 							},
-							["filter25man"] = true,
-							["abilities"] = {
-							},
+							["name"] = "Default",
+							["filterplayertype"] = "disabled",
+							["filterconnection"] = true,
+							["filterdead"] = false,
+							["includeAll"] = true,
+							["enabled"] = true,
 						}, -- [1]
 					},
 				},
@@ -4655,45 +4655,45 @@ HermesDB2 = {
 							["filterrange"] = true,
 							["filter10man"] = true,
 							["filterself"] = false,
-							["enabled"] = true,
+							["name"] = "Default",
 							["profiles"] = {
 								["GridButtons"] = {
-									["scale"] = 1,
-									["hideNoSender"] = false,
 									["merged"] = false,
+									["hideNoSender"] = false,
+									["scale"] = 1,
+									["h"] = 150,
 									["coloredBorders"] = true,
-									["w"] = 250,
-									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
+									["cellAnchor"] = "TOPLEFT",
 									["y"] = 675.000122070313,
 									["x"] = 835.000061035156,
-									["locked"] = false,
-									["cellAnchor"] = "TOPLEFT",
 									["colorNS"] = {
 										["a"] = 0.75,
-										["r"] = 0.5,
-										["g"] = 0.5,
 										["b"] = 0.5,
+										["g"] = 0.5,
+										["r"] = 0.5,
 									},
+									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
+									["locked"] = false,
 									["padding"] = 5,
-									["h"] = 150,
+									["w"] = 250,
 									["colorU"] = {
 										["a"] = 1,
-										["r"] = 0.5,
-										["g"] = 0.5,
 										["b"] = 0.5,
+										["g"] = 0.5,
+										["r"] = 0.5,
 									},
 								},
 							},
-							["includeAll"] = true,
-							["filterdead"] = false,
-							["filter25man"] = true,
-							["filterconnection"] = true,
-							["filterplayertype"] = "disabled",
-							["playerfilters"] = {
-							},
 							["abilities"] = {
 							},
-							["name"] = "Default",
+							["playerfilters"] = {
+							},
+							["filter25man"] = true,
+							["filterplayertype"] = "disabled",
+							["filterconnection"] = true,
+							["filterdead"] = false,
+							["includeAll"] = true,
+							["enabled"] = true,
 						}, -- [1]
 					},
 				},
@@ -5283,492 +5283,9 @@ HermesDB2 = {
 			},
 		},
 		["Comet - Illidan"] = {
-			["items"] = {
-				{
-					["enabled"] = false,
-					["name"] = "Mirror of Broken Images",
-					["id"] = -62466,
-					["class"] = "ANY",
-					["icon"] = "Interface\\ICONS\\INV_Misc_Platnumdisks.blp",
-				}, -- [1]
-			},
-			["welcome"] = true,
+			["configMode"] = false,
 			["pluginState"] = {
 				["UI"] = true,
-			},
-			["plugins"] = {
-				["Hermes-UI"] = {
-					["views"] = {
-						{
-							["module"] = "GridButtons",
-							["filterrange"] = true,
-							["filter10man"] = true,
-							["filterself"] = false,
-							["enabled"] = true,
-							["profiles"] = {
-								["Logger"] = {
-									["fontSize"] = 12,
-									["fontColor"] = {
-										["a"] = 1,
-										["b"] = 0.6,
-										["g"] = 0.6,
-										["r"] = 0.6,
-									},
-									["scale"] = 1,
-									["alpha"] = 1,
-									["font"] = "Friz Quadrata TT",
-									["bgColor"] = {
-										["a"] = 0.75,
-										["b"] = 0,
-										["g"] = 0,
-										["r"] = 0,
-									},
-									["h"] = 100,
-									["showSlider"] = true,
-									["w"] = 400,
-									["locked"] = false,
-									["y"] = 650,
-									["x"] = 760.000122070313,
-									["showTimestamp"] = true,
-								},
-								["GridButtons"] = {
-									["scale"] = 1,
-									["hideNoSender"] = true,
-									["merged"] = false,
-									["w"] = 233.295700073242,
-									["coloredBorders"] = true,
-									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
-									["y"] = 1195.88842773438,
-									["h"] = 186.246963500977,
-									["locked"] = true,
-									["cellAnchor"] = "TOPRIGHT",
-									["colorNS"] = {
-										["a"] = 0.75,
-										["r"] = 0.5,
-										["g"] = 0.5,
-										["b"] = 0.5,
-									},
-									["padding"] = 5,
-									["x"] = 1488.59826660156,
-									["colorU"] = {
-										["a"] = 1,
-										["r"] = 0.5,
-										["g"] = 0.5,
-										["b"] = 0.5,
-									},
-								},
-								["GridBars"] = {
-									["barShowTime"] = true,
-									["npCCFont"] = true,
-									["barShowPlayerName"] = true,
-									["h"] = 670.350524902344,
-									["hideNoAvailSender"] = false,
-									["barColorC"] = {
-										["a"] = 0.74,
-										["b"] = 0.55,
-										["g"] = 0.55,
-										["r"] = 0.55,
-									},
-									["locked"] = true,
-									["barFont"] = "Friz Quadrata TT",
-									["barBGColorU"] = {
-										["a"] = 0.16,
-										["b"] = 0,
-										["g"] = 0,
-										["r"] = 0,
-									},
-									["hideNoSender"] = false,
-									["barTexture"] = "Blizzard",
-									["osCooldownStyle"] = "empty",
-									["barColorU"] = {
-										["a"] = 0.23,
-										["b"] = 0,
-										["g"] = 0,
-										["r"] = 0,
-									},
-									["y"] = 1149.99987792969,
-									["x"] = 10.1470918655396,
-									["barPadding"] = 1,
-									["scale"] = 1,
-									["npTexture"] = "Blizzard",
-									["barCooldownDirection"] = "right",
-									["barThickFont"] = false,
-									["barBGCCU"] = false,
-									["barColorCFont"] = {
-										["a"] = 1,
-										["b"] = 1,
-										["g"] = 1,
-										["r"] = 1,
-									},
-									["barCCAFont"] = false,
-									["barTextRatio"] = 65,
-									["cellAnchor"] = "TOPLEFT",
-									["padding"] = 0,
-									["barW"] = 100,
-									["barIcon"] = "none",
-									["barTextSide"] = "left",
-									["barCCA"] = true,
-									["barIconMerged"] = "left",
-									["npW"] = 120,
-									["barColorUFont"] = {
-										["a"] = 0.3,
-										["b"] = 1,
-										["g"] = 1,
-										["r"] = 1,
-									},
-									["barColorAFont"] = {
-										["a"] = 1,
-										["b"] = 0.94,
-										["g"] = 0.94,
-										["r"] = 0.94,
-									},
-									["barOutlineFont"] = true,
-									["w"] = 516.666687011719,
-									["barFontSize"] = 12,
-									["osCooldownDirection"] = "right",
-									["barColorA"] = {
-										["a"] = 1,
-										["b"] = 0.94,
-										["g"] = 0.94,
-										["r"] = 0.94,
-									},
-									["npFontColor"] = {
-										["a"] = 0.76,
-										["b"] = 0.92,
-										["g"] = 0.92,
-										["r"] = 0.92,
-									},
-									["barCCU"] = false,
-									["osEnabled"] = false,
-									["npIcon"] = "right",
-									["cellMax"] = 3,
-									["npUseNameplate"] = true,
-									["npFont"] = "Friz Quadrata TT",
-									["hideNoCooldown"] = false,
-									["barCCUFont"] = false,
-									["npTextSide"] = "right",
-									["npOutlineFont"] = true,
-									["merged"] = false,
-									["npH"] = 15,
-									["npTexColor"] = {
-										["a"] = 0.5,
-										["b"] = 0,
-										["g"] = 0,
-										["r"] = 0,
-									},
-									["npFontSize"] = 12,
-									["barH"] = 14,
-									["enableTooltip"] = true,
-									["barGap"] = 2,
-									["npCCBar"] = false,
-									["barShowSpellName"] = false,
-									["cellDir"] = false,
-									["npUseIcon"] = true,
-									["npThickFont"] = false,
-									["barBGCCC"] = true,
-									["barCooldownStyle"] = "empty",
-									["cellSide"] = false,
-									["barCCCFont"] = true,
-									["npShowLabel"] = true,
-									["barCCC"] = true,
-									["cellBGColor"] = {
-										["a"] = 0,
-										["b"] = 0,
-										["g"] = 0,
-										["r"] = 0,
-									},
-									["osFGColor"] = {
-										["a"] = 1,
-										["b"] = 0,
-										["g"] = 1,
-										["r"] = 0,
-									},
-									["barBGColorC"] = {
-										["a"] = 0.16,
-										["b"] = 0,
-										["g"] = 0,
-										["r"] = 0,
-									},
-								},
-								["Bars"] = {
-									["barIcon"] = "none",
-									["npCCFont"] = true,
-									["barOutlineFont"] = true,
-									["barTextSide"] = "left",
-									["barShowPlayerName"] = true,
-									["npShowLabel"] = true,
-									["npTexColor"] = {
-										["a"] = 0.5,
-										["b"] = 0,
-										["g"] = 0,
-										["r"] = 0,
-									},
-									["barCCCFont"] = true,
-									["npW"] = 120,
-									["barColorC"] = {
-										["a"] = 0.74,
-										["b"] = 0.55,
-										["g"] = 0.55,
-										["r"] = 0.55,
-									},
-									["barCCA"] = true,
-									["osEnabled"] = false,
-									["barLocation"] = "BOTTOM",
-									["barFont"] = "Friz Quadrata TT",
-									["barColorUFont"] = {
-										["a"] = 0.3,
-										["b"] = 1,
-										["g"] = 1,
-										["r"] = 1,
-									},
-									["osFGColor"] = {
-										["a"] = 1,
-										["b"] = 0,
-										["g"] = 1,
-										["r"] = 0,
-									},
-									["barBGColorU"] = {
-										["a"] = 0.16,
-										["b"] = 0,
-										["g"] = 0,
-										["r"] = 0,
-									},
-									["hideNoSender"] = true,
-									["barCooldownStyle"] = "empty",
-									["barTexture"] = "Blizzard",
-									["osCooldownStyle"] = "empty",
-									["barColorU"] = {
-										["a"] = 0.23,
-										["b"] = 0,
-										["g"] = 0,
-										["r"] = 0,
-									},
-									["y"] = 609,
-									["x"] = 910.000061035156,
-									["barColorAFont"] = {
-										["a"] = 1,
-										["b"] = 0.94,
-										["g"] = 0.94,
-										["r"] = 0.94,
-									},
-									["barColorCFont"] = {
-										["a"] = 1,
-										["b"] = 1,
-										["g"] = 1,
-										["r"] = 1,
-									},
-									["npUseNameplate"] = true,
-									["barPadding"] = 10,
-									["npThickFont"] = false,
-									["barColorA"] = {
-										["a"] = 1,
-										["b"] = 0.94,
-										["g"] = 0.94,
-										["r"] = 0.94,
-									},
-									["npFontColor"] = {
-										["a"] = 0.76,
-										["b"] = 0.92,
-										["g"] = 0.92,
-										["r"] = 0.92,
-									},
-									["barCCU"] = false,
-									["npFontSize"] = 12,
-									["npH"] = 15,
-									["npOutlineFont"] = true,
-									["barShowTime"] = true,
-									["npFont"] = "Friz Quadrata TT",
-									["osCooldownDirection"] = "right",
-									["barShowSpellName"] = false,
-									["barCCUFont"] = false,
-									["npIcon"] = "right",
-									["barThickFont"] = false,
-									["npTexture"] = "Blizzard",
-									["barIconMerged"] = "left",
-									["barCooldownDirection"] = "right",
-									["barH"] = 14,
-									["npTextSide"] = "right",
-									["barGap"] = 1,
-									["npCCBar"] = false,
-									["barBGCCU"] = false,
-									["merged"] = false,
-									["npUseIcon"] = true,
-									["scale"] = 1,
-									["barBGCCC"] = true,
-									["barCCAFont"] = false,
-									["growUp"] = false,
-									["barTextRatio"] = 65,
-									["barCCC"] = true,
-									["locked"] = false,
-									["barFontSize"] = 12,
-									["barBGColorC"] = {
-										["a"] = 0.16,
-										["b"] = 0,
-										["g"] = 0,
-										["r"] = 0,
-									},
-									["barW"] = 150,
-								},
-								["CooldownBars"] = {
-									["barheight"] = 14,
-									["scale"] = 1,
-									["barTextSide"] = "left",
-									["fontsize"] = 12,
-									["locked"] = false,
-									["barCooldownDirection"] = "right",
-									["hideSelf"] = false,
-									["barGap"] = 1,
-									["osFGColor"] = {
-										["a"] = 1,
-										["b"] = 0,
-										["g"] = 1,
-										["r"] = 0,
-									},
-									["font"] = "Friz Quadrata TT",
-									["bartexture"] = "Blizzard",
-									["growup"] = false,
-									["osCooldownDirection"] = "right",
-									["alpha"] = 1,
-									["barCooldownStyle"] = "full",
-									["y"] = 609,
-									["x"] = 870.000061035156,
-									["barShowSpellName"] = false,
-									["osCooldownStyle"] = "full",
-									["osEnabled"] = false,
-									["barIcon"] = "left",
-									["barwidth"] = 180,
-									["textratio"] = 60,
-								},
-							},
-							["includeAll"] = true,
-							["filterdead"] = true,
-							["name"] = "Default",
-							["filterconnection"] = true,
-							["filterplayertype"] = "disabled",
-							["playerfilters"] = {
-							},
-							["filter25man"] = true,
-							["abilities"] = {
-								{
-									["id"] = 51052,
-									["enabled"] = false,
-								}, -- [1]
-								{
-									["id"] = 61999,
-									["enabled"] = false,
-								}, -- [2]
-								{
-									["id"] = 20484,
-									["enabled"] = false,
-								}, -- [3]
-								{
-									["id"] = 106898,
-									["enabled"] = false,
-								}, -- [4]
-								{
-									["id"] = 740,
-									["enabled"] = false,
-								}, -- [5]
-								{
-									["id"] = 102342,
-									["enabled"] = false,
-								}, -- [6]
-								{
-									["id"] = 172106,
-									["enabled"] = false,
-								}, -- [7]
-								{
-									["id"] = 159916,
-									["enabled"] = false,
-								}, -- [8]
-								{
-									["id"] = 80353,
-									["enabled"] = false,
-								}, -- [9]
-								{
-									["id"] = 116849,
-									["enabled"] = false,
-								}, -- [10]
-								{
-									["id"] = 115310,
-									["enabled"] = false,
-								}, -- [11]
-								{
-									["id"] = 31821,
-									["enabled"] = false,
-								}, -- [12]
-								{
-									["id"] = 1022,
-									["enabled"] = false,
-								}, -- [13]
-								{
-									["id"] = 6940,
-									["enabled"] = false,
-								}, -- [14]
-								{
-									["id"] = 114039,
-									["enabled"] = false,
-								}, -- [15]
-								{
-									["id"] = 64843,
-									["enabled"] = false,
-								}, -- [16]
-								{
-									["id"] = 47788,
-									["enabled"] = false,
-								}, -- [17]
-								{
-									["id"] = 33206,
-									["enabled"] = false,
-								}, -- [18]
-								{
-									["id"] = 62618,
-									["enabled"] = false,
-								}, -- [19]
-								{
-									["id"] = 109964,
-									["enabled"] = false,
-								}, -- [20]
-								{
-									["id"] = 76577,
-									["enabled"] = false,
-								}, -- [21]
-								{
-									["id"] = 2825,
-									["enabled"] = false,
-								}, -- [22]
-								{
-									["id"] = 108280,
-									["enabled"] = false,
-								}, -- [23]
-								{
-									["id"] = 98008,
-									["enabled"] = false,
-								}, -- [24]
-								{
-									["id"] = 108281,
-									["enabled"] = false,
-								}, -- [25]
-								{
-									["id"] = 20707,
-									["enabled"] = false,
-								}, -- [26]
-								{
-									["id"] = 12975,
-									["enabled"] = false,
-								}, -- [27]
-								{
-									["id"] = 97462,
-									["enabled"] = false,
-								}, -- [28]
-								{
-									["id"] = 114028,
-									["enabled"] = false,
-								}, -- [29]
-							},
-						}, -- [1]
-					},
-				},
 			},
 			["spells"] = {
 				{
@@ -6353,7 +5870,490 @@ HermesDB2 = {
 					["icon"] = "Interface\\Icons\\ability_monk_zenmeditation",
 				}, -- [83]
 			},
-			["configMode"] = false,
+			["items"] = {
+				{
+					["enabled"] = false,
+					["name"] = "Mirror of Broken Images",
+					["id"] = -62466,
+					["class"] = "ANY",
+					["icon"] = "Interface\\ICONS\\INV_Misc_Platnumdisks.blp",
+				}, -- [1]
+			},
+			["plugins"] = {
+				["Hermes-UI"] = {
+					["views"] = {
+						{
+							["module"] = "GridButtons",
+							["filterrange"] = true,
+							["filter10man"] = true,
+							["filterself"] = false,
+							["abilities"] = {
+								{
+									["id"] = 51052,
+									["enabled"] = false,
+								}, -- [1]
+								{
+									["id"] = 61999,
+									["enabled"] = false,
+								}, -- [2]
+								{
+									["id"] = 20484,
+									["enabled"] = false,
+								}, -- [3]
+								{
+									["id"] = 106898,
+									["enabled"] = false,
+								}, -- [4]
+								{
+									["id"] = 740,
+									["enabled"] = false,
+								}, -- [5]
+								{
+									["id"] = 102342,
+									["enabled"] = false,
+								}, -- [6]
+								{
+									["id"] = 172106,
+									["enabled"] = false,
+								}, -- [7]
+								{
+									["id"] = 159916,
+									["enabled"] = false,
+								}, -- [8]
+								{
+									["id"] = 80353,
+									["enabled"] = false,
+								}, -- [9]
+								{
+									["id"] = 116849,
+									["enabled"] = false,
+								}, -- [10]
+								{
+									["id"] = 115310,
+									["enabled"] = false,
+								}, -- [11]
+								{
+									["id"] = 31821,
+									["enabled"] = false,
+								}, -- [12]
+								{
+									["id"] = 1022,
+									["enabled"] = false,
+								}, -- [13]
+								{
+									["id"] = 6940,
+									["enabled"] = false,
+								}, -- [14]
+								{
+									["id"] = 114039,
+									["enabled"] = false,
+								}, -- [15]
+								{
+									["id"] = 64843,
+									["enabled"] = false,
+								}, -- [16]
+								{
+									["id"] = 47788,
+									["enabled"] = false,
+								}, -- [17]
+								{
+									["id"] = 33206,
+									["enabled"] = false,
+								}, -- [18]
+								{
+									["id"] = 62618,
+									["enabled"] = false,
+								}, -- [19]
+								{
+									["id"] = 109964,
+									["enabled"] = false,
+								}, -- [20]
+								{
+									["id"] = 76577,
+									["enabled"] = false,
+								}, -- [21]
+								{
+									["id"] = 2825,
+									["enabled"] = false,
+								}, -- [22]
+								{
+									["id"] = 108280,
+									["enabled"] = false,
+								}, -- [23]
+								{
+									["id"] = 98008,
+									["enabled"] = false,
+								}, -- [24]
+								{
+									["id"] = 108281,
+									["enabled"] = false,
+								}, -- [25]
+								{
+									["id"] = 20707,
+									["enabled"] = false,
+								}, -- [26]
+								{
+									["id"] = 12975,
+									["enabled"] = false,
+								}, -- [27]
+								{
+									["id"] = 97462,
+									["enabled"] = false,
+								}, -- [28]
+								{
+									["id"] = 114028,
+									["enabled"] = false,
+								}, -- [29]
+							},
+							["profiles"] = {
+								["Logger"] = {
+									["fontSize"] = 12,
+									["fontColor"] = {
+										["a"] = 1,
+										["r"] = 0.6,
+										["g"] = 0.6,
+										["b"] = 0.6,
+									},
+									["scale"] = 1,
+									["alpha"] = 1,
+									["showTimestamp"] = true,
+									["bgColor"] = {
+										["a"] = 0.75,
+										["r"] = 0,
+										["g"] = 0,
+										["b"] = 0,
+									},
+									["font"] = "Friz Quadrata TT",
+									["showSlider"] = true,
+									["x"] = 760.000122070313,
+									["locked"] = false,
+									["y"] = 650,
+									["w"] = 400,
+									["h"] = 100,
+								},
+								["GridButtons"] = {
+									["merged"] = false,
+									["hideNoSender"] = true,
+									["scale"] = 1,
+									["x"] = 1488.59826660156,
+									["w"] = 233.295700073242,
+									["cellAnchor"] = "TOPRIGHT",
+									["y"] = 1195.88842773438,
+									["h"] = 186.246963500977,
+									["colorNS"] = {
+										["a"] = 0.75,
+										["b"] = 0.5,
+										["g"] = 0.5,
+										["r"] = 0.5,
+									},
+									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
+									["locked"] = true,
+									["padding"] = 5,
+									["coloredBorders"] = true,
+									["colorU"] = {
+										["a"] = 1,
+										["b"] = 0.5,
+										["g"] = 0.5,
+										["r"] = 0.5,
+									},
+								},
+								["GridBars"] = {
+									["barShowTime"] = true,
+									["npCCFont"] = true,
+									["barShowPlayerName"] = true,
+									["h"] = 670.350524902344,
+									["hideNoAvailSender"] = false,
+									["barColorC"] = {
+										["a"] = 0.74,
+										["r"] = 0.55,
+										["g"] = 0.55,
+										["b"] = 0.55,
+									},
+									["locked"] = true,
+									["barFont"] = "Friz Quadrata TT",
+									["barBGColorU"] = {
+										["a"] = 0.16,
+										["r"] = 0,
+										["g"] = 0,
+										["b"] = 0,
+									},
+									["hideNoSender"] = false,
+									["barTexture"] = "Blizzard",
+									["osCooldownStyle"] = "empty",
+									["barColorU"] = {
+										["a"] = 0.23,
+										["r"] = 0,
+										["g"] = 0,
+										["b"] = 0,
+									},
+									["y"] = 1149.99987792969,
+									["x"] = 10.1470918655396,
+									["barPadding"] = 1,
+									["scale"] = 1,
+									["npTexture"] = "Blizzard",
+									["barCooldownDirection"] = "right",
+									["barThickFont"] = false,
+									["barBGCCU"] = false,
+									["barColorCFont"] = {
+										["a"] = 1,
+										["r"] = 1,
+										["g"] = 1,
+										["b"] = 1,
+									},
+									["barCCAFont"] = false,
+									["barTextRatio"] = 65,
+									["cellAnchor"] = "TOPLEFT",
+									["padding"] = 0,
+									["barW"] = 100,
+									["barIcon"] = "none",
+									["barTextSide"] = "left",
+									["barCCA"] = true,
+									["barIconMerged"] = "left",
+									["npW"] = 120,
+									["barColorUFont"] = {
+										["a"] = 0.3,
+										["r"] = 1,
+										["g"] = 1,
+										["b"] = 1,
+									},
+									["barColorAFont"] = {
+										["a"] = 1,
+										["r"] = 0.94,
+										["g"] = 0.94,
+										["b"] = 0.94,
+									},
+									["barBGColorC"] = {
+										["a"] = 0.16,
+										["r"] = 0,
+										["g"] = 0,
+										["b"] = 0,
+									},
+									["osFGColor"] = {
+										["a"] = 1,
+										["r"] = 0,
+										["g"] = 1,
+										["b"] = 0,
+									},
+									["barFontSize"] = 12,
+									["barCCC"] = true,
+									["barColorA"] = {
+										["a"] = 1,
+										["r"] = 0.94,
+										["g"] = 0.94,
+										["b"] = 0.94,
+									},
+									["npFontColor"] = {
+										["a"] = 0.76,
+										["r"] = 0.92,
+										["g"] = 0.92,
+										["b"] = 0.92,
+									},
+									["barCCU"] = false,
+									["npShowLabel"] = true,
+									["barCCCFont"] = true,
+									["cellSide"] = false,
+									["barCooldownStyle"] = "empty",
+									["npFont"] = "Friz Quadrata TT",
+									["hideNoCooldown"] = false,
+									["npThickFont"] = false,
+									["barCCUFont"] = false,
+									["npOutlineFont"] = true,
+									["cellDir"] = false,
+									["barShowSpellName"] = false,
+									["npTexColor"] = {
+										["a"] = 0.5,
+										["r"] = 0,
+										["g"] = 0,
+										["b"] = 0,
+									},
+									["npFontSize"] = 12,
+									["barH"] = 14,
+									["enableTooltip"] = true,
+									["barGap"] = 2,
+									["npCCBar"] = false,
+									["npH"] = 15,
+									["merged"] = false,
+									["npUseIcon"] = true,
+									["npTextSide"] = "right",
+									["barBGCCC"] = true,
+									["npUseNameplate"] = true,
+									["cellMax"] = 3,
+									["npIcon"] = "right",
+									["osEnabled"] = false,
+									["osCooldownDirection"] = "right",
+									["cellBGColor"] = {
+										["a"] = 0,
+										["r"] = 0,
+										["g"] = 0,
+										["b"] = 0,
+									},
+									["w"] = 516.666687011719,
+									["barOutlineFont"] = true,
+								},
+								["Bars"] = {
+									["barIcon"] = "none",
+									["npCCFont"] = true,
+									["barW"] = 150,
+									["barTextSide"] = "left",
+									["barShowPlayerName"] = true,
+									["barBGColorC"] = {
+										["a"] = 0.16,
+										["r"] = 0,
+										["g"] = 0,
+										["b"] = 0,
+									},
+									["barFontSize"] = 12,
+									["locked"] = false,
+									["barCCC"] = true,
+									["barColorC"] = {
+										["a"] = 0.74,
+										["r"] = 0.55,
+										["g"] = 0.55,
+										["b"] = 0.55,
+									},
+									["barCCA"] = true,
+									["barTextRatio"] = 65,
+									["barLocation"] = "BOTTOM",
+									["barCCCFont"] = true,
+									["barTexture"] = "Blizzard",
+									["npW"] = 120,
+									["barBGColorU"] = {
+										["a"] = 0.16,
+										["r"] = 0,
+										["g"] = 0,
+										["b"] = 0,
+									},
+									["hideNoSender"] = true,
+									["barColorAFont"] = {
+										["a"] = 1,
+										["r"] = 0.94,
+										["g"] = 0.94,
+										["b"] = 0.94,
+									},
+									["barColorUFont"] = {
+										["a"] = 0.3,
+										["r"] = 1,
+										["g"] = 1,
+										["b"] = 1,
+									},
+									["osCooldownStyle"] = "empty",
+									["barColorU"] = {
+										["a"] = 0.23,
+										["r"] = 0,
+										["g"] = 0,
+										["b"] = 0,
+									},
+									["y"] = 609,
+									["x"] = 910.000061035156,
+									["barCooldownStyle"] = "empty",
+									["npThickFont"] = false,
+									["scale"] = 1,
+									["barPadding"] = 10,
+									["npUseIcon"] = true,
+									["npUseNameplate"] = true,
+									["npFontColor"] = {
+										["a"] = 0.76,
+										["r"] = 0.92,
+										["g"] = 0.92,
+										["b"] = 0.92,
+									},
+									["barCCU"] = false,
+									["npOutlineFont"] = true,
+									["barBGCCU"] = false,
+									["npFontSize"] = 12,
+									["barShowTime"] = true,
+									["npFont"] = "Friz Quadrata TT",
+									["osCooldownDirection"] = "right",
+									["npTextSide"] = "right",
+									["barCCUFont"] = false,
+									["barH"] = 14,
+									["barThickFont"] = false,
+									["npTexture"] = "Blizzard",
+									["barIconMerged"] = "left",
+									["barCooldownDirection"] = "right",
+									["npIcon"] = "right",
+									["barShowSpellName"] = false,
+									["barGap"] = 1,
+									["npCCBar"] = false,
+									["npH"] = 15,
+									["merged"] = false,
+									["barColorCFont"] = {
+										["a"] = 1,
+										["r"] = 1,
+										["g"] = 1,
+										["b"] = 1,
+									},
+									["barColorA"] = {
+										["a"] = 1,
+										["r"] = 0.94,
+										["g"] = 0.94,
+										["b"] = 0.94,
+									},
+									["barBGCCC"] = true,
+									["barCCAFont"] = false,
+									["growUp"] = false,
+									["osEnabled"] = false,
+									["osFGColor"] = {
+										["a"] = 1,
+										["r"] = 0,
+										["g"] = 1,
+										["b"] = 0,
+									},
+									["barFont"] = "Friz Quadrata TT",
+									["npTexColor"] = {
+										["a"] = 0.5,
+										["r"] = 0,
+										["g"] = 0,
+										["b"] = 0,
+									},
+									["npShowLabel"] = true,
+									["barOutlineFont"] = true,
+								},
+								["CooldownBars"] = {
+									["barheight"] = 14,
+									["scale"] = 1,
+									["barTextSide"] = "left",
+									["fontsize"] = 12,
+									["locked"] = false,
+									["barCooldownDirection"] = "right",
+									["hideSelf"] = false,
+									["textratio"] = 60,
+									["barGap"] = 1,
+									["barwidth"] = 180,
+									["bartexture"] = "Blizzard",
+									["growup"] = false,
+									["osCooldownDirection"] = "right",
+									["alpha"] = 1,
+									["barIcon"] = "left",
+									["y"] = 609,
+									["font"] = "Friz Quadrata TT",
+									["barCooldownStyle"] = "full",
+									["osEnabled"] = false,
+									["osCooldownStyle"] = "full",
+									["barShowSpellName"] = false,
+									["x"] = 870.000061035156,
+									["osFGColor"] = {
+										["a"] = 1,
+										["r"] = 0,
+										["g"] = 1,
+										["b"] = 0,
+									},
+								},
+							},
+							["filter25man"] = true,
+							["playerfilters"] = {
+							},
+							["name"] = "Default",
+							["filterplayertype"] = "disabled",
+							["filterconnection"] = true,
+							["filterdead"] = true,
+							["includeAll"] = true,
+							["enabled"] = true,
+						}, -- [1]
+					},
+				},
+			},
+			["welcome"] = true,
 		},
 		["Evan - Illidan"] = {
 			["items"] = {
@@ -6377,45 +6377,45 @@ HermesDB2 = {
 							["filterrange"] = true,
 							["filter10man"] = true,
 							["filterself"] = false,
-							["name"] = "Default",
+							["enabled"] = true,
 							["profiles"] = {
 								["GridButtons"] = {
-									["merged"] = false,
-									["hideNoSender"] = false,
 									["scale"] = 1,
-									["x"] = 257.000183105469,
+									["hideNoSender"] = false,
+									["merged"] = false,
+									["coloredBorders"] = true,
 									["w"] = 249.999908447266,
-									["cellAnchor"] = "TOPLEFT",
+									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
 									["y"] = 811.000183105469,
-									["h"] = 150.000091552734,
+									["x"] = 257.000183105469,
+									["locked"] = false,
+									["cellAnchor"] = "TOPLEFT",
 									["colorNS"] = {
 										["a"] = 0.75,
-										["b"] = 0.5,
-										["g"] = 0.5,
 										["r"] = 0.5,
+										["g"] = 0.5,
+										["b"] = 0.5,
 									},
-									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
-									["locked"] = false,
 									["padding"] = 5,
-									["coloredBorders"] = true,
+									["h"] = 150.000091552734,
 									["colorU"] = {
 										["a"] = 1,
-										["b"] = 0.5,
-										["g"] = 0.5,
 										["r"] = 0.5,
+										["g"] = 0.5,
+										["b"] = 0.5,
 									},
 								},
 							},
-							["abilities"] = {
-							},
+							["includeAll"] = true,
+							["filterdead"] = false,
+							["name"] = "Default",
+							["filterconnection"] = true,
+							["filterplayertype"] = "disabled",
 							["playerfilters"] = {
 							},
 							["filter25man"] = true,
-							["filterplayertype"] = "disabled",
-							["filterconnection"] = true,
-							["filterdead"] = false,
-							["includeAll"] = true,
-							["enabled"] = true,
+							["abilities"] = {
+							},
 						}, -- [1]
 					},
 				},
@@ -7027,45 +7027,45 @@ HermesDB2 = {
 							["filterrange"] = true,
 							["filter10man"] = true,
 							["filterself"] = false,
-							["enabled"] = true,
+							["filter25man"] = true,
 							["profiles"] = {
 								["GridButtons"] = {
-									["scale"] = 1,
-									["hideNoSender"] = false,
 									["merged"] = false,
+									["hideNoSender"] = false,
+									["scale"] = 1,
+									["h"] = 150,
 									["coloredBorders"] = true,
-									["w"] = 250,
-									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
+									["cellAnchor"] = "TOPLEFT",
 									["y"] = 675.000122070313,
 									["x"] = 835.000061035156,
-									["locked"] = false,
-									["cellAnchor"] = "TOPLEFT",
 									["colorNS"] = {
 										["a"] = 0.75,
-										["r"] = 0.5,
-										["g"] = 0.5,
 										["b"] = 0.5,
+										["g"] = 0.5,
+										["r"] = 0.5,
 									},
+									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
+									["locked"] = false,
 									["padding"] = 5,
-									["h"] = 150,
+									["w"] = 250,
 									["colorU"] = {
 										["a"] = 1,
-										["r"] = 0.5,
-										["g"] = 0.5,
 										["b"] = 0.5,
+										["g"] = 0.5,
+										["r"] = 0.5,
 									},
 								},
 							},
-							["includeAll"] = true,
-							["filterdead"] = false,
-							["abilities"] = {
-							},
-							["filterconnection"] = true,
-							["filterplayertype"] = "disabled",
+							["name"] = "Default",
 							["playerfilters"] = {
 							},
-							["name"] = "Default",
-							["filter25man"] = true,
+							["abilities"] = {
+							},
+							["filterplayertype"] = "disabled",
+							["filterconnection"] = true,
+							["filterdead"] = false,
+							["includeAll"] = true,
+							["enabled"] = true,
 						}, -- [1]
 					},
 				},

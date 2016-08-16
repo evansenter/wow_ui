@@ -42,6 +42,7 @@ VExRT = {
 		["Strata"] = "HIGH",
 	},
 	["ProfileKeys"] = {
+		["Pandatal-Illidan"] = "default",
 		["Comet-Illidan"] = "default",
 		["Evan-Illidan"] = "default",
 		["Cometron-Illidan"] = "default",
@@ -54,14 +55,14 @@ VExRT = {
 			[1704] = "Blackhand",
 			[1677] = "Sadana Bloodfury",
 			[1679] = "Bonemaw",
-			[1688] = "Nhallish",
+			[1750] = "Oshir",
 			[1713] = "Kromog, Legend of the Mountain",
 			[1652] = "Roltall",
 			[1653] = "Slave Watcher Crushto",
 			[1654] = "Gug'rokk",
-			[1655] = "Magmolatus",
+			[1748] = "Grimrail Enforcers",
 			[1749] = "Fleshrender Nok'gar",
-			[1750] = "Oshir",
+			[1688] = "Nhallish",
 			[1689] = "Flamebender Ka'graz",
 			[1690] = "Blast Furnace",
 			[1691] = "Gruul",
@@ -69,9 +70,11 @@ VExRT = {
 			[1693] = "Hans'gar & Franzok",
 			[1694] = "Beastlord Darmac",
 			[1682] = "Ner'zhul",
-			[1748] = "Grimrail Enforcers",
+			[1655] = "Magmolatus",
 		},
 		["list"] = {
+			["Cometron"] = {
+			},
 			["Comet"] = {
 				"6A8E1426373886111015Slimshamie-Zul'jin", -- [1]
 				"6A8D1426374514138025Metnaksh-Malfurion", -- [2]
@@ -108,6 +111,8 @@ VExRT = {
 				"^1750^23^1469934397^81^1^5^704.06^", -- [33]
 				"^1754^23^1469934557^146^1^5^704.06^Tweedler-BleedingHollow", -- [34]
 			},
+			["Pandatal"] = {
+			},
 			["Evan"] = {
 				"^1677^2^1469914689^22^1^5^696.70^", -- [1]
 				"^1688^2^1469914784^28^1^5^696.70^", -- [2]
@@ -124,8 +129,6 @@ VExRT = {
 				"^1655^23^1469923226^75^1^5^711.39^", -- [13]
 				"^1652^23^1469923485^28^1^5^711.59^", -- [14]
 				"^1654^23^1469923756^39^1^5^711.59^", -- [15]
-			},
-			["Cometron"] = {
 			},
 			["Metal"] = {
 				"69BE1426377890085015Ninjáman-Ragnaros", -- [1]
@@ -251,6 +254,7 @@ VExRT = {
 			["Hagbard-Thrall"] = 73,
 			["Ostorymar-Quel'Thalas"] = 104,
 			["Entheogenic-Staghelm"] = 262,
+			["Pandatal"] = 65,
 			["Arzuran-Deathwing"] = 254,
 			["Inaruz-Quel'Thalas"] = 260,
 			["Veggieburger-BoreanTundra"] = 102,
@@ -473,9 +477,9 @@ VExRT = {
 			"Futìlíty", -- [22]
 			"Haseoh", -- [23]
 			"Chokune", -- [24]
-			["name"] = "Lustya-Illidan",
 			["sync"] = true,
 			["time"] = 1426739223,
+			["name"] = "Lustya-Illidan",
 		},
 	},
 	["LegendaryRing"] = {
@@ -488,21 +492,13 @@ VExRT = {
 	},
 	["Addon"] = {
 		["Version"] = 3740,
-		["IconMiniMapTop"] = 1.85814645560772,
 		["IconMiniMapHide"] = true,
+		["PreVersion"] = 3740,
 		["Timer"] = 0.1,
 		["IconMiniMapLeft"] = -80,
-		["PreVersion"] = 3740,
+		["IconMiniMapTop"] = 1.85814645560772,
 	},
-	["BossWatcher"] = {
-		["optionsDamageGraph"] = true,
-		["fightsNum"] = 2,
-		["autoSegments"] = {
-		},
-		["optionsPositionsDist"] = true,
-		["optionsHealingGraph"] = true,
-		["trackingDamageSpells"] = {
-		},
+	["Profiles"] = {
 	},
 	["MarksBar"] = {
 		["pulltimer"] = 10,
@@ -514,7 +510,15 @@ VExRT = {
 			true, -- [4]
 		},
 	},
-	["Profiles"] = {
+	["BossWatcher"] = {
+		["optionsDamageGraph"] = true,
+		["fightsNum"] = 2,
+		["autoSegments"] = {
+		},
+		["optionsPositionsDist"] = true,
+		["optionsHealingGraph"] = true,
+		["trackingDamageSpells"] = {
+		},
 	},
 	["Profile"] = "default",
 	["LootLink"] = {

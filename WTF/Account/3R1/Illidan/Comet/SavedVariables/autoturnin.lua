@@ -15,8 +15,8 @@ AutoTurnInCharacterDB = {
 	["darkmoonautostart"] = true,
 	["darkmoonteleport"] = true,
 	["completeonly"] = false,
-	["tournament"] = 2,
 	["debug"] = false,
+	["tournament"] = 2,
 	["version"] = "5.1.1",
 	["stat"] = {
 	},

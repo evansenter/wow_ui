@@ -14,22 +14,22 @@ EPGPLootMaster = {
 		["Pandatal - Illidan"] = "Pandatal - Illidan",
 	},
 	["profiles"] = {
-		["Evan - Illidan"] = {
+		["Natal - Illidan"] = {
 		},
 		["Metal - Illidan"] = {
 		},
-		["Natal - Illidan"] = {
+		["Evan - Illidan"] = {
 		},
-		["Combustion - Illidan"] = {
+		["Comet - Illidan"] = {
+			["auto_announce_threshold"] = 0,
+			["hideMLOnCombat"] = false,
 		},
 		["Centromere - Dark Iron"] = {
 		},
 		["Pandatal - Illidan"] = {
 			["auto_announce_threshold"] = 0,
 		},
-		["Comet - Illidan"] = {
-			["auto_announce_threshold"] = 0,
-			["hideMLOnCombat"] = false,
+		["Combustion - Illidan"] = {
 		},
 	},
 }

@@ -24,10 +24,10 @@ DataStore_AgendaDB = {
 						["note"] = "",
 					},
 				},
-				["lastUpdate"] = 1470807673,
+				["lastUpdate"] = 1471198249,
 			},
 			["Default.Illidan.Pandatal"] = {
-				["lastUpdate"] = 1461733291,
+				["lastUpdate"] = 1471197690,
 			},
 			["Default.Illidan.Natal"] = {
 				["lastUpdate"] = 1424741647,
@@ -51,8 +51,8 @@ DataStore_AgendaDB = {
 					},
 					["Purephase"] = {
 						["note"] = "",
-						["class"] = "Rogue",
 						["level"] = 100,
+						["class"] = "Rogue",
 					},
 					["Rfl"] = {
 						["note"] = "",
@@ -63,7 +63,7 @@ DataStore_AgendaDB = {
 					["Hemos"] = {
 						["note"] = "",
 					},
-					["Bubblegurl"] = {
+					["Billbraskie"] = {
 						["note"] = "",
 					},
 					["Faluzure"] = {
@@ -72,7 +72,7 @@ DataStore_AgendaDB = {
 					["Pockee"] = {
 						["note"] = "",
 					},
-					["Billbraskie"] = {
+					["Bubblegurl"] = {
 						["note"] = "",
 					},
 				},
@@ -80,12 +80,16 @@ DataStore_AgendaDB = {
 			},
 			["Default.Illidan.Comet"] = {
 				["DungeonIDs"] = {
-					["Hellfire Citadel Heroic|634167020"] = "240914|1471118690|0|1",
+					["Hellfire Citadel Heroic|634167020"] = "126075|1471233531|0|1",
+					["Skyreach Mythic|309963336"] = "126075|1471233531|0|0",
 				},
-				["lastUpdate"] = 1471118688,
+				["lastUpdate"] = 1471233530,
 			},
 			["Default.Illidan.Cometron"] = {
-				["lastUpdate"] = 1470809237,
+				["DungeonIDs"] = {
+					["Iron Docks Heroic|3621264970"] = "75489|1471197715|0|0",
+				},
+				["lastUpdate"] = 1471197713,
 			},
 		},
 	},

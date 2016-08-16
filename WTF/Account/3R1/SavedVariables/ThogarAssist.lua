@@ -1,14 +1,15 @@
 
 ThogarAssistDB = {
 	["profileKeys"] = {
-		["Colton - Dark Iron"] = "Default",
 		["Metal - Illidan"] = "Default",
-		["Ereinion - Dark Iron"] = "Default",
 		["Cometron - Illidan"] = "Default",
-		["Comet - Illidan"] = "Default",
-		["Natal - Illidan"] = "Default",
-		["Evan - Illidan"] = "Default",
 		["Combustion - Illidan"] = "Default",
+		["Natal - Illidan"] = "Default",
+		["Colton - Dark Iron"] = "Default",
+		["Ereinion - Dark Iron"] = "Default",
+		["Comet - Illidan"] = "Default",
+		["Evan - Illidan"] = "Default",
+		["Pandatal - Illidan"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

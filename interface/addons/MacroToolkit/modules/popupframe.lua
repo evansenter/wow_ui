@@ -418,7 +418,7 @@ function MT:PopupOkayButtonOnClick()
 		MacroToolkitPopup:Hide()
 	else
 		local index = 1
-		local iconTexture = MT:GetSpellorMacroIconInfo(MacroToolkitPopup.selectedIcon)
+		local iconTexture = MT:GetSpellorMacroIconInfo(MacroToolkitPopup.selectedIcon)		
 		local text = MacroToolkitPopupEdit:GetText()
 		text = string.gsub(text, "\"", "")
 		if MacroToolkitPopup.mode == "new" then
