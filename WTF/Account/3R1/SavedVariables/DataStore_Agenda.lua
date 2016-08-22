@@ -15,7 +15,7 @@ DataStore_AgendaDB = {
 		["Options"] = {
 			["WeeklyResetHour"] = 6,
 			["WeeklyResetDay"] = 2,
-			["NextWeeklyReset"] = "2016-08-16",
+			["NextWeeklyReset"] = "2016-08-23",
 		},
 		["Characters"] = {
 			["Default.Illidan.Evan"] = {
@@ -79,16 +79,9 @@ DataStore_AgendaDB = {
 				["lastUpdate"] = 1424741733,
 			},
 			["Default.Illidan.Comet"] = {
-				["DungeonIDs"] = {
-					["Hellfire Citadel Heroic|634167020"] = "126075|1471233531|0|1",
-					["Skyreach Mythic|309963336"] = "126075|1471233531|0|0",
-				},
-				["lastUpdate"] = 1471233530,
+				["lastUpdate"] = 1471720484,
 			},
 			["Default.Illidan.Cometron"] = {
-				["DungeonIDs"] = {
-					["Iron Docks Heroic|3621264970"] = "75489|1471197715|0|0",
-				},
 				["lastUpdate"] = 1471197713,
 			},
 		},

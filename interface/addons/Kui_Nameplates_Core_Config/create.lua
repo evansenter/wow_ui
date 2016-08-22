@@ -7,7 +7,7 @@ version:SetAlpha(.7)
 version:SetPoint('TOPRIGHT',-12,-12)
 version:SetText(string.format(
     opt.titles.version,
-    'KuiNameplates','Kesava','2-10'
+    'KuiNameplates','Kesava','2-11-2-beta-2'
 ))
 
 opt:Initialise()
@@ -343,10 +343,50 @@ tankmode_other_colour:SetPoint('LEFT',tankmode_trans_colour,'RIGHT')
 local classpowers_enable = classpowers:CreateCheckBox('classpowers_enable')
 local classpowers_on_target = classpowers:CreateCheckBox('classpowers_on_target')
 local classpowers_size = classpowers:CreateSlider('classpowers_size',5,20)
+local classpowers_bar_width = classpowers:CreateSlider('classpowers_bar_width',10,100)
+local classpowers_bar_height = classpowers:CreateSlider('classpowers_bar_height',1,11)
+local classpowers_colour = classpowers:CreateColourPicker('classpowers_colour')
+local classpowers_colour_overflow = classpowers:CreateColourPicker('classpowers_colour_overflow')
+local classpowers_colour_inactive = classpowers:CreateColourPicker('classpowers_colour_inactive')
+
+classpowers_bar_width:SetValueStep(2)
+classpowers_bar_height:SetValueStep(2)
 
 classpowers_enable:SetPoint('TOPLEFT',10,-10)
 classpowers_on_target:SetPoint('LEFT',classpowers_enable,'RIGHT',190,0)
 classpowers_size:SetPoint('TOPLEFT',classpowers_enable,'BOTTOMLEFT',0,-20)
+classpowers_bar_width:SetPoint('TOPLEFT',classpowers_size,'BOTTOMLEFT',0,-30)
+classpowers_bar_height:SetPoint('LEFT',classpowers_bar_width,'RIGHT',20,0)
+
+classpowers_colour:SetPoint('TOPLEFT',15,-150)
+classpowers_colour_overflow:SetPoint('TOPLEFT',classpowers_colour,'BOTTOMLEFT')
+classpowers_colour_inactive:SetPoint('TOPLEFT',classpowers_colour_overflow,'BOTTOMLEFT')
+
+function classpowers_colour:Get()
+    local class = select(2,UnitClass('player'))
+    self.env = 'classpowers_colour_'..strlower(class)
+
+    if opt.profile[self.env] then
+        self.block:SetBackdropColor(unpack(opt.profile[self.env]))
+    else
+        self.block:SetBackdropColor(.5,.5,.5)
+        self:Disable()
+    end
+end
+function classpowers_colour:Set(col)
+    opt.config:SetConfig(self.env,col)
+    -- manually re-run OnShow since our env doesn't match the element name
+    self:Hide()
+    self:Show()
+end
+classpowers_colour:SetScript('OnEnter',function(self)
+    -- force tooltip to use classpowers_colour env
+    GameTooltip:SetOwner(self,'ANCHOR_TOPLEFT')
+    GameTooltip:SetWidth(200)
+    GameTooltip:AddLine(opt.titles['classpowers_colour'])
+    GameTooltip:AddLine(opt.tooltips['classpowers_colour'],1,1,1,true)
+    GameTooltip:Show()
+end)
 
 -- LSM dropdowns ###############################################################
 function bar_texture:initialize()

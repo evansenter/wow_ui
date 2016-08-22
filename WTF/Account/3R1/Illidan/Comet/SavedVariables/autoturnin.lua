@@ -8,15 +8,15 @@ AutoTurnInCharacterDB = {
 	},
 	["enabled"] = true,
 	["todarkmoon"] = true,
-	["autoequip"] = false,
+	["debug"] = false,
 	["trivial"] = false,
 	["armor"] = {
 	},
 	["darkmoonautostart"] = true,
 	["darkmoonteleport"] = true,
 	["completeonly"] = false,
-	["debug"] = false,
 	["tournament"] = 2,
+	["autoequip"] = false,
 	["version"] = "5.1.1",
 	["stat"] = {
 	},

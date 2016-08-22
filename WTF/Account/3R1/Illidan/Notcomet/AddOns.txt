@@ -144,3 +144,4 @@ DBM-Party-Legion: enabled
 DBM-Party-WoD: enabled
 DBM-Nighthold: enabled
 DBM-WorldEvents: enabled
+MacroToolkitIcons: enabled

@@ -393,7 +393,7 @@ DataStore_TalentsDB = {
 			},
 			["Default.Illidan.Comet"] = {
 				["ActiveTalents"] = 1,
-				["lastUpdate"] = 1471233528,
+				["lastUpdate"] = 1471720484,
 				["Class"] = "MONK",
 				["Specializations"] = {
 					13786, -- [1]
@@ -696,7 +696,7 @@ DataStore_TalentsDB = {
 				[1204] = "Army of the Dead",
 				[198] = "Divinity",
 				[192] = "Burden of Guilt",
-				[987] = "Falling Avenger",
+				[494] = "Bloodthirst",
 				[507] = "Resonating Power",
 				[1040] = "Paralysis",
 				[1207] = "Purify Spirit",
@@ -791,7 +791,7 @@ DataStore_TalentsDB = {
 				[253] = "Fade",
 				[314] = "Blink",
 				[755] = "Drain Life",
-				[494] = "Bloodthirst",
+				[987] = "Falling Avenger",
 				[1011] = "Transcendence",
 				[289] = "Soulstone",
 				[1068] = "Hand of Sacrifice",

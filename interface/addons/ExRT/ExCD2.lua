@@ -25,7 +25,7 @@ module.db.spellDB = {
 {740,	"DRUID",	nil,			nil,			nil,			nil,{740,180,	8},	},	--Спокойствие
 {115310,"MONK",		nil,			nil,			nil,			{115310,180,	0},	},	--Восстановление сил
 {15286,	"PRIEST",	nil,			nil,			nil,			{15286,	180,	15},	},	--Объятия вампира
-{196718,"DEMONHUNTER",	{196718,180,	8},	nil,			nil,						},	--Мрак
+{196718,"DEMONHUNTER",	nil,			{196718,180,	8},	nil,						},	--Мрак
 {207399,"SHAMAN",	nil,			nil,			nil,			{207399,300,	30},	},	--Тотем защиты Предков
 
 {102342,"DRUID",	nil,			nil,			nil,			nil,{102342,90,	12},	},	--Железная кора
@@ -701,6 +701,7 @@ module.db.spell_charge_fix = {		--Спелы с зарядами
 	[203720]=1,
 	[189110]=1,
 	[190784]=230332,
+	[215206]=1,
 }
 
 module.db.spell_durationByTalent_fix = {	--Изменение длительности талантом\глифом   вид: [спелл] = {spellid глифа\таланта, изменение времени (-10;10;*0.5;*1.5)}
@@ -876,6 +877,9 @@ module.db.spell_aura_list = {		--Спелы, время действия кот�
 	[116849]=116849,
 	[122470]=122470,
 	[227225]=227225,
+	[214366]=214366,
+	[214423]=214423,
+	[215670]=215670,
 }
 module.db.spell_speed_list = {		--Спелы, которым менять время действия на основании спелхасты
 	[740]=true,
@@ -981,8 +985,11 @@ module.db.spell_resetOtherSpells = {	--Заклинания, которые от
 	[187827]={{202137,210867},{204596,210867},{207684,210867},{202138,210867}},
 }
 module.db.spell_sharingCD = {		--Заклинания, которые запускают кд на другие заклинания 	[spellID] = {[otherSpellID] = CD}
-
+	[90633] = {[90632]=120,[90631]=120},
+	[90632] = {[90633]=120,[90631]=120},
+	[90631] = {[90632]=120,[90633]=120},
 }
+
 module.db.spell_runningSameSpell = {}	--Схожие заклинания
 
 do
@@ -995,6 +1002,7 @@ do
 		{51514,211015,210873,211010,211004},				--Hex
 		{202767,202771,202768},						--New moon [Balance Druid artifact]
 		{115308,119582},						--Brewmaster brew
+		{90633,90628},{90632,90626},{90631,89479},			--Guild Battle Standard
 	}
 	for i=1,#sameSpellsData do
 		local list = sameSpellsData[i]
@@ -1040,7 +1048,7 @@ module.db.spell_reduceCdCast = {	--Заклинания, применение к
 	[196819]={{1856,186279},-5},
 	[195452]={{1856,186279},-5},	
 	
-	[49998]={{55233,205723},-9},
+	[49998]={{55233,205723},-7.5},
 	
 	[47541]={{63560,198943},-5},
 	
@@ -1345,6 +1353,31 @@ module.db.itemsToSpells = {	-- Тринкеты вида [item ID] = spellID
 	[137061] = 215149,
 	[137071] = 210867,
 	[138949] = 210970,
+	
+	[64402] = 90633,
+	[64401] = 90632,
+	[64400] = 90631,
+	
+	[133642] = 215956,
+	[137541] = 215648,
+	[137539] = 214962,
+	[137538] = 215936,
+	[137537] = 215658,
+	[137486] = 214980,
+	[137462] = 215206,
+	[137440] = 214584,
+	[137433] = 215467,
+	[137369] = 214971,
+	[137344] = 214423,
+	[137338] = 214366,
+	[137329] = 215670,
+	[133647] = 214203,
+	[133646] = 214198,
+	[139322] = 221837,
+	[139333] = 221992,
+	[139327] = 221695,
+	[139326] = 222046,
+	[139320] = 221803,
 }
 module.db.itemsArtifacts = {	-- Artifacts & First trait
 	[127857] = 224968,
@@ -1420,6 +1453,10 @@ module.db.differentIcons = {	--Другие иконки заклинаниям
 	[187614]="Interface\\Icons\\inv_60legendary_ring1c",
 	[187613]="Interface\\Icons\\inv_60legendary_ring1b",
 	[187612]="Interface\\Icons\\inv_60legendary_ring1a",
+	
+	[90633] = "Interface\\Icons\\inv_guild_standard_horde_c",
+	[90632] = "Interface\\Icons\\inv_guild_standard_horde_b",
+	[90631] = "Interface\\Icons\\inv_guild_standard_horde_a",
 }
 
 module.db.artifactAllSpells = {
@@ -2507,6 +2544,46 @@ for i=1,module.db.maxColumns do
 end
 
 do
+	local isInCombat = false
+	local isInEncounter = false
+	function module:updateCombatVisibility()
+		for i=1,module.db.maxColumns do
+			local columnFrame = module.frame.colFrame[i]
+			if not columnFrame.methodsOnlyInCombat then
+			
+			elseif isInCombat and columnFrame.optionIsEnabled then
+				columnFrame:Show()
+			elseif not isInCombat then
+				columnFrame:Hide()
+			end
+		end
+		if VExRT.ExCD2.colSet[module.db.maxColumns+1].methodsOnlyInCombat and not VExRT.ExCD2.SplitOpt then
+			if isInCombat then
+				module.frame:Show()
+			else
+				module.frame:Hide()
+			end
+		end
+	end
+	function module:toggleCombatVisibility(currState,callType)
+		local isInstance, instanceType = IsInInstance()
+		if instanceType == "arena" or instanceType == "pvp" then
+			currState = true
+		elseif instanceType == "raid" or instanceType == "party" then
+			if callType == 1 then
+				isInEncounter = currState
+			elseif callType == 2 then
+				currState = currState or isInEncounter
+			end
+		elseif callType == 1 then
+			return	--ignore encounters not in raid/party
+		end
+		isInCombat = currState
+		module:updateCombatVisibility()
+	end
+end
+
+do
 	local lastSaving = GetTime() - 15
 	function SaveCDtoVar(overwrite)
 		local currTime = GetTime()
@@ -2808,6 +2885,7 @@ do
 			if difficulty == 14 or difficulty == 15 or difficulty == 16 or difficulty == 17 or difficulty == 7 then
 				_db.isResurectDisabled = true
 			end
+			module:toggleCombatVisibility(true,1)
 		elseif _db.isEncounter and not IsEncounterInProgress() then
 			_db.isEncounter = nil
 			_db.isResurectDisabled = nil
@@ -2816,6 +2894,7 @@ do
 				forceUpdateAllData = true
 				forceSortAllData = true
 			end
+			module:toggleCombatVisibility(false,1)
 		end
 		
 		
@@ -3642,7 +3721,7 @@ function module:Enable()
 
 	module:RegisterSlash()
 	module:RegisterTimer()
-	module:RegisterEvents('SCENARIO_UPDATE','GROUP_ROSTER_UPDATE','COMBAT_LOG_EVENT_UNFILTERED','UNIT_PET','PLAYER_LOGOUT','ZONE_CHANGED_NEW_AREA','CHALLENGE_MODE_RESET')
+	module:RegisterEvents('SCENARIO_UPDATE','GROUP_ROSTER_UPDATE','COMBAT_LOG_EVENT_UNFILTERED','UNIT_PET','PLAYER_LOGOUT','ZONE_CHANGED_NEW_AREA','CHALLENGE_MODE_RESET','PLAYER_REGEN_DISABLED','PLAYER_REGEN_ENABLED')
 end
 
 function module:Disable()
@@ -3657,9 +3736,8 @@ function module:Disable()
 	
 	module:UnregisterSlash()
 	module:UnregisterTimer()
-	module:UnregisterEvents('SCENARIO_UPDATE','GROUP_ROSTER_UPDATE','COMBAT_LOG_EVENT_UNFILTERED','UNIT_PET','PLAYER_LOGOUT','ZONE_CHANGED_NEW_AREA','CHALLENGE_MODE_RESET')
+	module:UnregisterEvents('SCENARIO_UPDATE','GROUP_ROSTER_UPDATE','COMBAT_LOG_EVENT_UNFILTERED','UNIT_PET','PLAYER_LOGOUT','ZONE_CHANGED_NEW_AREA','CHALLENGE_MODE_RESET','PLAYER_REGEN_DISABLED','PLAYER_REGEN_ENABLED')
 end
-
 
 function module.main:ADDON_LOADED()
 	VExRT = _G.VExRT
@@ -3826,6 +3904,14 @@ function module.main:SCENARIO_UPDATE()
 end
 module.main.CHALLENGE_MODE_RESET = module.main.SCENARIO_UPDATE
 
+function module.main:PLAYER_REGEN_DISABLED()
+	module:toggleCombatVisibility(true,2)
+end
+function module.main:PLAYER_REGEN_ENABLED()
+	module:toggleCombatVisibility(false,2)
+end
+
+
 do
 	local scheduledUpdateRoster = nil
 	local function funcScheduledUpdate()
@@ -3980,6 +4066,18 @@ do
 				end
 				UpdateAllData()
 				SortAllData()
+			end
+		elseif spellID == 206005 then	--Xavius: Dream Simulacrum
+			for i=1,#_C do
+				local unitSpellData = _C[i]		
+				if unitSpellData.fullName == destName then
+					unitSpellData.cd = 0
+					unitSpellData.duration = 0
+					
+					if unitSpellData.bar and unitSpellData.bar.data == unitSpellData then
+						unitSpellData.bar:UpdateStatus()
+					end
+				end
 			end
 		end
 		
@@ -5773,6 +5871,7 @@ function module.options:Load()
 		module.options.optColSet.sliderAlphaNotInRange:SetValue(VExRT.ExCD2.colSet[i].methodsAlphaNotInRangeNum or module.db.colsDefaults.methodsAlphaNotInRangeNum)
 		module.options.optColSet.chkDisableActive:SetChecked(VExRT.ExCD2.colSet[i].methodsDisableActive)
 		module.options.optColSet.chkOneSpellPerCol:SetChecked(VExRT.ExCD2.colSet[i].methodsOneSpellPerCol)
+		module.options.optColSet.chkOnlyInCombat:SetChecked(VExRT.ExCD2.colSet[i].methodsOnlyInCombat)
 
 		module.options.optColSet.chkGeneralMethods:doAlphas()
 		
@@ -6612,6 +6711,15 @@ function module.options:Load()
 		module:ReloadAllSplits()
 	end):Tooltip(L.cd2ColSetOneSpellPerColTooltip)
 	
+	self.optColSet.chkOnlyInCombat = ELib:Check(self.optColSet.superTabFrame.tab[6],L.TimerOnlyInCombat):Point(10,-330):OnClick(function(self) 
+		if self:GetChecked() then
+			VExRT.ExCD2.colSet[module.options.optColTabs.selected].methodsOnlyInCombat = true
+		else
+			VExRT.ExCD2.colSet[module.options.optColTabs.selected].methodsOnlyInCombat = nil
+		end
+		module:ReloadAllSplits()
+	end)
+	
 	self.optColSet.chkGeneralMethods = ELib:Check(self.optColSet.superTabFrame.tab[6],L.cd2ColSetGeneral):Point("TOPRIGHT",-10,-10):Left():OnClick(function(self) 
 		if self:GetChecked() then
 			VExRT.ExCD2.colSet[module.options.optColTabs.selected].methodsGeneral = true
@@ -6622,10 +6730,10 @@ function module.options:Load()
 		self:doAlphas()
 	end)
 	function self.optColSet.chkGeneralMethods:doAlphas()
-		ExRT.lib.SetAlphas(VExRT.ExCD2.colSet[module.options.optColTabs.selected].methodsGeneral and module.options.optColTabs.selected ~= (module.db.maxColumns + 1) and 0.5 or 1,module.options.optColSet.chkShowOnlyOnCD,module.options.optColSet.chkBotToTop,module.options.optColSet.dropDownStyleAnimation,module.options.optColSet.dropDownTimeLineAnimation,module.options.optColSet.chkIconTooltip,module.options.optColSet.chkLineClick,module.options.optColSet.chkNewSpellNewLine,module.options.optColSet.dropDownSortingRules,module.options.optColSet.textSortingRules,module.options.optColSet.textStyleAnimation,module.options.optColSet.textTimeLineAnimation,module.options.optColSet.chkHideOwnSpells,module.options.optColSet.chkAlphaNotInRange,module.options.optColSet.sliderAlphaNotInRange,module.options.optColSet.chkDisableActive,module.options.optColSet.chkOneSpellPerCol)
+		ExRT.lib.SetAlphas(VExRT.ExCD2.colSet[module.options.optColTabs.selected].methodsGeneral and module.options.optColTabs.selected ~= (module.db.maxColumns + 1) and 0.5 or 1,module.options.optColSet.chkShowOnlyOnCD,module.options.optColSet.chkBotToTop,module.options.optColSet.dropDownStyleAnimation,module.options.optColSet.dropDownTimeLineAnimation,module.options.optColSet.chkIconTooltip,module.options.optColSet.chkLineClick,module.options.optColSet.chkNewSpellNewLine,module.options.optColSet.dropDownSortingRules,module.options.optColSet.textSortingRules,module.options.optColSet.textStyleAnimation,module.options.optColSet.textTimeLineAnimation,module.options.optColSet.chkHideOwnSpells,module.options.optColSet.chkAlphaNotInRange,module.options.optColSet.sliderAlphaNotInRange,module.options.optColSet.chkDisableActive,module.options.optColSet.chkOneSpellPerCol,module.options.optColSet.chkOnlyInCombat)
 	end
 	
-	self.optColSet.chkSortByAvailability = ELib:Check(self.optColSet.superTabFrame.tab[6],L.cd2SortByAvailability,VExRT.ExCD2.SortByAvailability):Point(10,-330):OnClick(function(self) 
+	self.optColSet.chkSortByAvailability = ELib:Check(self.optColSet.superTabFrame.tab[6],L.cd2SortByAvailability,VExRT.ExCD2.SortByAvailability):Point(10,-355):OnClick(function(self) 
 		if self:GetChecked() then
 			VExRT.ExCD2.SortByAvailability = true
 		else
@@ -7737,6 +7845,7 @@ function module:ReloadAllSplits(argScaleFix)
 			columnFrame.methodsAlphaNotInRangeNum = columnFrame.methodsAlphaNotInRangeNum / 100
 		columnFrame.methodsDisableActive = (not VExRT_ColumnOptions[i].methodsGeneral and VExRT_ColumnOptions[i].methodsDisableActive) or (VExRT_ColumnOptions[i].methodsGeneral and VExRT_ColumnOptions[module.db.maxColumns+1].methodsDisableActive)
 		columnFrame.methodsOneSpellPerCol = (not VExRT_ColumnOptions[i].methodsGeneral and VExRT_ColumnOptions[i].methodsOneSpellPerCol) or (VExRT_ColumnOptions[i].methodsGeneral and VExRT_ColumnOptions[module.db.maxColumns+1].methodsOneSpellPerCol)
+		columnFrame.methodsOnlyInCombat = (not VExRT_ColumnOptions[i].methodsGeneral and VExRT_ColumnOptions[i].methodsOnlyInCombat) or (VExRT_ColumnOptions[i].methodsGeneral and VExRT_ColumnOptions[module.db.maxColumns+1].methodsOnlyInCombat)
 
 		columnFrame.textTemplateLeft = (not VExRT_ColumnOptions[i].textGeneral and VExRT_ColumnOptions[i].textTemplateLeft) or (VExRT_ColumnOptions[i].textGeneral and VExRT_ColumnOptions[module.db.maxColumns+1].textTemplateLeft) or module.db.colsDefaults.textTemplateLeft
 		columnFrame.textTemplateRight = (not VExRT_ColumnOptions[i].textGeneral and VExRT_ColumnOptions[i].textTemplateRight) or (VExRT_ColumnOptions[i].textGeneral and VExRT_ColumnOptions[module.db.maxColumns+1].textTemplateRight) or module.db.colsDefaults.textTemplateRight
@@ -7847,8 +7956,10 @@ function module:ReloadAllSplits(argScaleFix)
 		end
 		
 		if VExRT_ColumnOptions[i].enabled and VExRT.ExCD2.enabled then
+			columnFrame.optionIsEnabled = true
 			columnFrame:Show()
 		else
+			columnFrame.optionIsEnabled = nil
 			columnFrame:Hide()
 		end
 		if not VExRT.ExCD2.SplitOpt then
@@ -7875,6 +7986,8 @@ function module:ReloadAllSplits(argScaleFix)
 	else
 		module.frame:SetScale((VExRT_ColumnOptions[module.db.maxColumns+1].frameScale or module.db.colsDefaults.frameScale)/100) 
 	end
+	
+	module:updateCombatVisibility()
 	
  	SortAllData()
  	UpdateAllData()
@@ -8361,7 +8474,7 @@ module.db.allClassSpells = {
 	{179057,1,	{179057,60,	5},	nil,			nil,			},	--Кольцо Хаоса
 	{187827,3,	nil,			nil,			{187827,180,	15},	},	--Метаморфоза
 	{191427,3,	nil,			{191427,300,	30},	nil,			},	--Метаморфоза
-	{196718,1,	{196718,180,	8},	nil,			nil,			},	--Мрак
+	{196718,1,	nil,			{196718,180,	8},	nil,			},	--Мрак
 	{185245,5,	nil,			nil,			{185245,8,	0},	},	--Мучение
 	{204021,3,	nil,			nil,			{204021,60,	8},	},	--Огненное клеймо
 	{212084,3,	nil,			nil,			{212084,60,	0},	},	--Опустошение Скверны
@@ -8375,7 +8488,7 @@ module.db.allClassSpells = {
 	{227225,4,	nil,			nil,			{227225,20,	8},	},	--Призрачный барьер
 	{198013,3,	nil,			{198013,45,	0},	nil,			},	--Пронзающий взгляд
 	{196555,4,	nil,			{196555,90,	5},	nil,			},	--Путь Пустоты
-	{207407,3,	nil,			nil,			{207407,60,	0},	},	--Разрубатель душ
+	{207407,3,	nil,			nil,			{207407,40,	0},	},	--Разрубатель душ
 	{195072,4,	nil,			{195072,10,	0},	nil,			},	--Рывок Скверны
 	{207810,2,	nil,			nil,			{207810,120,	15},	},	--Узы Пустоты
 	{218256,4,	nil,			nil,			{218256,20,	6},	},	--Усиление оберегов
@@ -8404,17 +8517,41 @@ module.db.allClassSpells = {
 },
 ["ITEMS"] = {
 	{67826,	3,	{67826,	3600,	0},	},	--Jeevs
-	{177592,3,	{177592,120,	0},	},	--Candle
-	{176873,3,	{176873,120,	20},	},	--Tank BRF
-	{176875,3,	{176875,120,	20},	},	--Shard of nothing
-	{177597,3,	{177597,120,	20},	},	--Coin
-	{177594,3,	{177594,120,	20},	},	--Couplend
-	{177189,3,	{177189,90,	15},	},	--Kyanos
-	{176460,3,	{176460,120,	20},	},	--Kyb
-	{183929,3,	{183929,90,	15},	},	--Intuition's Gift
-	{184270,3,	{184270,60,	20},	},	--Mirror of the Blademaster
+	--{177592,3,	{177592,120,	0},	},	--Candle
+	--{176873,3,	{176873,120,	20},	},	--Tank BRF
+	--{176875,3,	{176875,120,	20},	},	--Shard of nothing
+	--{177597,3,	{177597,120,	20},	},	--Coin
+	--{177594,3,	{177594,120,	20},	},	--Couplend
+	--{177189,3,	{177189,90,	15},	},	--Kyanos
+	--{176460,3,	{176460,120,	20},	},	--Kyb
+	--{183929,3,	{183929,90,	15},	},	--Intuition's Gift
+	--{184270,3,	{184270,60,	20},	},	--Mirror of the Blademaster
 	{201414,3,	{201414,60,	0},	},	--Purified Shard of the Third Moon
 	{201371,3,	{201371,60,	0},	},	--Judgment of the Naaru
+	{90633,	3,	{90633,	600,	0},	},	--Guild Battle Standard
+	{90632,	3,	{90632,	600,	0},	},	--Guild Battle Standard
+	{90631,	3,	{90631,	600,	0},	},	--Guild Battle Standard
+	{215956,3,	{215956,120,	30},	},	--Horn of Valor
+	{215648,3,	{215648,90,	20},	},	--Moonlit Prism
+	{214962,3,	{214962,120,	30},	},	--Faulty Countermeasure
+	{215936,3,	{215936,120,	20},	},	--Orb of Torment
+	{215658,3,	{215658,75,	15},	},	--Tirathon's Betrayal
+	{214980,3,	{214980,120,	6},	},	--Windscar Whetstone
+	{215206,3,	{215206,20,	0},	},	--Jewel of Insatiable Desire
+	{214584,3,	{214584,60,	10},	},	--Shivermaw's Jawbone
+	{215467,3,	{215467,60,	15},	},	--Obelisk of the Void
+	{214971,3,	{214971,60,	8},	},	--Giant Ornamental Pearl
+	{214423,3,	{214423,60,	15},	},	--Talisman of the Cragshaper
+	{214366,3,	{214366,120,	30},	},	--Shard of Rokmora
+	{215670,3,	{215670,120,	15},	},	--Figurehead of the Naglfar
+	{214203,3,	{214203,60,	0},	},	--Gift of Radiance
+	{214198,3,	{214198,90,	0},	},	--Mote of Sanctification
+	{221837,3,	{221837,120,	10},	},	--Cocoon of Enforced Solitude
+	{221992,3,	{221992,60,	0},	},	--Horn of Cenarius
+	{221695,3,	{221695,120,	25},	},	--Unbridled Fury
+	{222046,3,	{222046,120,	0},	},	--Wriggling Sinew
+	{221803,3,	{221803,60,	10},	},	--Ravaged Seed Pod
+	
 },
 }
 ]]
@@ -9132,6 +9269,20 @@ moduleInspect.db.artifactDB = {}
 moduleInspect.db.artifactNoResDB = {}
 
 local ArtifactCache = {}
+moduleInspect.db.selfArtifactCache = ArtifactCache
+
+moduleInspect.db.relicTypeToID = {
+	["Fel"] = 0,
+	["Fire"] = 1,
+	["Blood"] = 2,
+	["Life"] = 3,
+	["Holy"] = 4,
+	["Frost"] = 5,
+	["Shadow"] = 6,
+	["Iron"] = 7,
+	["Arcane"] = 8,
+	["Wind"] = 9,
+}
 
 local function ScanArtifactData()
 	wipe(ArtifactCache)
@@ -9170,18 +9321,31 @@ local function ScanArtifactData()
 	local itemID, _, _, _, _, aLevel = C_ArtifactUI.GetArtifactInfo()
 	ArtifactCache.AftifactLevel = aLevel
 	ArtifactCache.itemID = itemID
+	
+	for i=1,3 do
+		local _,_,_,relicLink = C_ArtifactUI.GetRelicInfo(i)
+		if relicLink then
+			relicLink = relicLink:match("(item:.-)|h")
+		end
+		ArtifactCache["relic"..i] = relicLink
+		
+		local relicType = C_ArtifactUI.GetRelicSlotType(i)
+		relicType = moduleInspect.db.relicTypeToID[ relicType or "?" ]
+		ArtifactCache["relicType"..i] = relicType
+	end
 end
 
 local function BlizzUiFix_DealWithErrors()
 	if ArtifactFrame and ArtifactFrame:IsVisible() then
 		ArtifactFrame:Hide()
-	end
-	if ScriptErrorsFrame then
-		ScriptErrorsFrame:Hide()
+		if ScriptErrorsFrame then
+			ScriptErrorsFrame:Hide()
+		end
 	end
 end
 
 local function UpdateArtifactData()
+	moduleInspect:UnregisterEvents('ARTIFACT_UPDATE')
 	if not C_ArtifactUI.GetEquippedArtifactInfo() then
 		return
 	end
@@ -9194,13 +9358,17 @@ local function UpdateArtifactData()
 	if not isArtifactFrameShown then
 		C_ArtifactUI.Clear()
 	end
+	moduleInspect:RegisterEvents('ARTIFACT_UPDATE')
 end
 
 local artifactUIfixTimer
 local function artifactUI_CheckMajorFrames()
 	if (not WorldMapFrame or not WorldMapFrame:IsVisible()) and (not PlayerTalentFrame or not PlayerTalentFrame:IsVisible()) and (not OrderHallMissionFrame or not OrderHallMissionFrame:IsVisible()) then
-		artifactUIfixTimer:Cancel()
+		if artifactUIfixTimer then
+			artifactUIfixTimer:Cancel()
+		end
 		UpdateArtifactData()
+		return true
 	end
 end
 
@@ -9209,6 +9377,7 @@ artifactUIfix:RegisterEvent('LOADING_SCREEN_DISABLED')
 artifactUIfix:SetScript("OnEvent",function(self)
 	C_Timer.NewTimer(9,function()
 		artifactUIfixTimer = C_Timer.NewTicker(1,artifactUI_CheckMajorFrames)
+		moduleInspect:RegisterEvents('ARTIFACT_UPDATE')
 	end)
 	self:UnregisterAllEvents()
 end)
@@ -9244,12 +9413,26 @@ local function Inspect_SendArtifactData()
 	res = res .. equippedItemID
 	
 	ExRT.F.SendExMsg("inspect", ExRT.F.CreateAddonMsg("art","R",res))
+	
+	local res = ""
+	for i=1,3 do
+		res = res .. (ArtifactCache["relicType"..i] or "-") .. "^" .. (ArtifactCache["relic"..i] or "-") .. (i < 3 and "^" or "")
+	end
+	
+	ExRT.F.SendExMsg("inspect", ExRT.F.CreateAddonMsg("art","AR",res))
 end
 
 function moduleInspect.main:ENCOUNTER_START()
 	C_Timer.NewTimer(3,function()
 		Inspect_SendArtifactData()
 	end)
+end
+
+function moduleInspect.main:ARTIFACT_UPDATE()
+	artifactUIfixTimer = nil
+	if not artifactUI_CheckMajorFrames() then
+		artifactUIfixTimer = C_Timer.NewTicker(1,artifactUI_CheckMajorFrames)
+	end
 end
 
 local function Inspect_ParseArtifactString(db,string)
@@ -9276,6 +9459,27 @@ local function Inspect_ParseArtifactString(db,string)
 		db.itemID = tonumber(itemID)
 	end
 	tr = rest
+	
+	return db
+end
+
+local function Inspect_ParseArtifactRelicString(db,string)
+	for i=1,3 do
+		if not string then
+			break
+		end
+		local relicType,relicLink,o = strsplit("^",string,3)
+		
+		relicType = tonumber(relicType or "?")
+		if not relicLink or not relicLink:find("item:") then
+			relicLink = nil
+		end
+		
+		db["relic"..i] = relicLink
+		db["relicType"..i] = relicType
+		
+		string = o
+	end
 	
 	return db
 end
@@ -9393,6 +9597,14 @@ function moduleInspect:addonMessage(sender, prefix, prefix2, ...)
 					name,
 					currTime,
 				}
+			elseif type == "AR" then
+				local db = moduleInspect.db.artifactDB[ sender ]
+				if not db then
+					return
+				end
+				
+				Inspect_ParseArtifactRelicString(db,name)
+			
 			elseif type == "NO" then
 				moduleInspect.db.artifactNoResDB[ sender ] = true
 			end

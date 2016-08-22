@@ -151,7 +151,7 @@ DataStore_PetsDB = {
 				},
 			},
 			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1471233530,
+				["lastUpdate"] = 1471720484,
 				["CRITTER"] = {
 					184482, -- [1]
 					69452, -- [2]

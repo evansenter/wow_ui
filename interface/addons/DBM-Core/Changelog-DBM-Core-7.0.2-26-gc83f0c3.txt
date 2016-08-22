@@ -1,4 +1,20 @@
 subversion:
+	- Omega via svn r15144: Fix normal to use 30, 10, 30, 10. It was every 40 like LFR in an earlier test but the final test they did it used heroic/mythic timers
+	- Omega via svn r15143: Link to website version so no one can make any complaints
+	- Omega via svn r15142: lower this CD
+	- Omega via svn r15141: add in game notice
+	- Omega via svn r15140: Disable all hudmap functions in nighthold. No one will ever get to see these :\
+	- Omega via svn r15139: Fix regression in spanish locals. Don?\226?\128?\153t overwrite entire table .en table, just update table entries.
+	- Omega via svn r15138: use EXPANSION_NAME6 now that it?\226?\128?\153s available
+	- Omega via svn r15137: Change back to 34, it seems that some bosses it?\226?\128?\153s 34 and some it?\226?\128?\153s 50. I?\226?\128?\153m not really going to put the effort into building a list of which bosses have which for a temp event, so just leaving timers at 34
+	- Omega via svn r15136: just stop all timers on SCENARIO_COMPLETED. SCENARIO_UPDATE was unreliable
+	- Omega via svn r15135: Seems blizzard nerfed these cds
+	- Omega via svn r15134: remove spanish from help message
+	- Omega via svn r15133: Massive Spanish update thanks to Orden
+	- Omega via svn r15132: Add chaos wave
+	- Omega via svn r15131: fix a timer
+	- Omega via svn r15130: Fix bigwigs version display
+	- ebmor via svn r15129: deDE update
 	- Omega via svn r15128: Small timer tweak
 	- Omega via svn r15127: Change special warning slider behaviors to disable flash or sound when not appropriate to what slider does.
 	- Omega via svn r15126: Fix option default for skovald

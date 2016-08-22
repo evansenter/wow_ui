@@ -144,6 +144,9 @@ L["Are you sure you want to delete %s?"] = true
 L["Confirm macro deletion"] = true
 L["Use icon name lookup library for icon search"] = true
 L["This will enable macro icon names instead of numbers. Uses about 2MB of RAM."] = true
+L["Go Large"] = true
+L["Go Small"] = true
+
 --conditions
 L["Condition Builder"] = true
 L["Additional conditions"] = true

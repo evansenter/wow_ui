@@ -187,3 +187,4 @@ DBM-Highmaul: enabled
 DBM-Party-Legion: enabled
 DBM-Party-WoD: enabled
 DBM-Nighthold: enabled
+MacroToolkitIcons: enabled

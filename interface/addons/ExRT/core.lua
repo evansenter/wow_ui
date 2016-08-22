@@ -1,6 +1,13 @@
---	16:51 09.08.2016
+--	21:09 21.08.2016
 
 --[[
+3750
+* Raid Inspect: added tab to view aftifact relics
+* Raid cooldowns: updates due to last class balance changes
+* Raid cooldowns: added legion trinkets
+* Raid cooldowns: added option: show only in combat
+* Minor fixes
+
 3740
 * New module: WeakAuras checks
 http://i.imgur.com/59cZVTY.png
@@ -11,7 +18,7 @@ http://i.imgur.com/59cZVTY.png
 ]]
 local GlobalAddonName, ExRT = ...
 
-ExRT.V = 3740
+ExRT.V = 3750
 ExRT.T = "R"
 ExRT.is7 = false		--> Legion (7.x) Client
 

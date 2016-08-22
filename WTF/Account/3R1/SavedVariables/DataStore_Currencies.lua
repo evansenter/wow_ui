@@ -49,35 +49,35 @@ DataStore_CurrenciesDB = {
 			["CurrencyTextRev"] = {
 				["Mark of the World Tree"] = 21,
 				["Elder Charm of Good Fortune"] = 5,
-				["Oil"] = 27,
+				["Garrison Resources"] = 17,
 				["Nethershard"] = 31,
 				["Valor"] = 29,
-				["Garrison Resources"] = 17,
-				["Lesser Charm of Good Fortune"] = 10,
+				["Oil"] = 27,
+				["Illustrious Jewelcrafter's Token"] = 7,
 				["Seal of Inevitable Fate"] = 28,
 				["Seal of Tempered Fate"] = 18,
 				["Valor Points"] = 13,
-				["Tol Barad Commendation"] = 23,
+				["Warforged Seal"] = 14,
 				["Mists of Pandaria"] = 20,
 				["Ironpaw Token"] = 8,
 				["Player vs. Player"] = 1,
 				["Mote of Darkness"] = 22,
 				["Unused"] = 4,
-				["Conquest Points"] = 2,
 				["Miscellaneous"] = 24,
+				["Warlords of Draenor"] = 15,
 				["Legion"] = 30,
 				["Epicurean's Award"] = 26,
 				["Honor Points"] = 3,
+				["Conquest Points"] = 2,
 				["Timeless Coin"] = 12,
-				["Warlords of Draenor"] = 15,
 				["Essence of Corrupted Deathwing"] = 6,
 				["Apexis Crystal"] = 16,
 				["Justice Points"] = 9,
 				["Mogu Rune of Fate"] = 11,
 				["Dungeon and Raid"] = 19,
-				["Warforged Seal"] = 14,
+				["Tol Barad Commendation"] = 23,
 				["Champion's Seal"] = 25,
-				["Illustrious Jewelcrafter's Token"] = 7,
+				["Lesser Charm of Good Fortune"] = 10,
 			},
 		},
 		["Characters"] = {
@@ -333,23 +333,25 @@ DataStore_CurrenciesDB = {
 			},
 			["Default.Illidan.Comet"] = {
 				["Currencies"] = {
-					31, -- [1]
-					4284064, -- [2]
-					1069986, -- [3]
-					142774, -- [4]
-					696, -- [5]
-					1188, -- [6]
-					39, -- [7]
-					19258, -- [8]
-					9, -- [9]
-					10, -- [10]
-					140, -- [11]
-					142, -- [12]
-					144, -- [13]
-					33044, -- [14]
-					22, -- [15]
-					2352536, -- [16]
-					28, -- [17]
+					61, -- [1]
+					9406, -- [2]
+					39, -- [3]
+					19258, -- [4]
+					31, -- [5]
+					5111328, -- [6]
+					1198114, -- [7]
+					156854, -- [8]
+					824, -- [9]
+					1188, -- [10]
+					9, -- [11]
+					10, -- [12]
+					140, -- [13]
+					142, -- [14]
+					144, -- [15]
+					33044, -- [16]
+					22, -- [17]
+					2352536, -- [18]
+					28, -- [19]
 				},
 				["Archeology"] = {
 					0, -- [1]
@@ -371,15 +373,15 @@ DataStore_CurrenciesDB = {
 					0, -- [17]
 					0, -- [18]
 				},
-				["lastUpdate"] = 1471233528,
+				["lastUpdate"] = 1471720568,
 				["CurrencyInfo"] = {
 					[395] = "0-0-0-0",
 					[396] = "0-0-10-3000",
 					[390] = "0-0-0-0",
-					[823] = "33469-0-0-0",
+					[823] = "39932-0-0-0",
 					[392] = "0-0-0-0",
 					[994] = "9-0-0-20",
-					[824] = "8359-0-0-10000",
+					[824] = "9360-0-0-10000",
 				},
 			},
 			["Default.Illidan.Cometron"] = {

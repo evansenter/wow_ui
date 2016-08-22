@@ -1,4 +1,4 @@
-local MAJOR, MINOR = 'Kui-1.0', 20
+local MAJOR, MINOR = 'Kui-1.0', 21
 local kui = LibStub:NewLibrary(MAJOR, MINOR)
 
 if not kui then
@@ -128,9 +128,9 @@ kui.GetUnitColour = function(unit, str)
         return {r=r,g=g,b=b}
     end
 end
-kui.UnitLevel = function(unit, long)
-    local level, classification =
-        UnitLevel(unit), UnitClassification(unit)
+kui.UnitLevel = function(unit, long, real)
+    local level = real and UnitLevel(unit) or UnitEffectiveLevel(unit)
+    local classification = UnitClassification(unit)
     local diff = GetQuestDifficultyColor(level <= 0 and 999 or level)
 
     if ct[classification] then

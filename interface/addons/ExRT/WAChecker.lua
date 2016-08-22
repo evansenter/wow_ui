@@ -482,11 +482,13 @@ function module:addonMessage(sender, prefix, prefix2, ...)
 			module.db.responces[ sender ] = module.db.responces[ sender ] or {}
 			if str1 == "NOWA" then
 				module.db.responces[ sender ].noWA = true
+				return
 			end
 			local start = tonumber(str1 or "?")
 			if not start then
 				return
 			end
+			module.db.responces[ sender ].noWA = nil
 			for j=2,select("#", ...) do
 				local res = tonumber(select(j, ...),nil)
 				

@@ -436,3 +436,19 @@ L["Title color"] = true
 L["The text color of the title."] = true
 L["Border color"] = true
 L["The color used for the border."] = true
+
+L["Tweaks"] = true
+L["Inline bar display"] = true
+L["Data text"] = true
+L["Width"] = true
+L["Height"] = true
+L["Tile"] = true
+L["Tile the background texture."] = true
+L["Tile size"] = true
+L["The size of the texture pattern."] = true
+L["Border"] = true
+L["General"] = true
+L["Inline display is a horizontal window style."] = true
+L["Data text acts as an LDB data feed. It can be integrated in any LDB display such as Titan Panel or ChocolateBar. It also has an optional internal frame."] = true
+L["Bar display is the normal bar window used by most damage meters. It can be extensively styled."] = true
+

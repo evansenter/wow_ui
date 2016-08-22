@@ -1,5 +1,8 @@
 
 MogItDB = {
+	["global"] = {
+		["version"] = "3.6.3",
+	},
 	["profileKeys"] = {
 		["Metal - Illidan"] = "Comet - Illidan",
 		["Cometron - Illidan"] = "Default",
@@ -7,23 +10,20 @@ MogItDB = {
 		["Natal - Illidan"] = "Default",
 		["Colton - Dark Iron"] = "Default",
 		["Ereinion - Dark Iron"] = "Default",
-		["Pandatal - Illidan"] = "Comet - Illidan",
+		["Centromere - Dark Iron"] = "Default",
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Combustion - Illidan"] = "Default",
 		["Evan - Illidan"] = "Comet - Illidan",
-		["Centromere - Dark Iron"] = "Default",
-	},
-	["global"] = {
-		["version"] = "3.6.3",
+		["Pandatal - Illidan"] = "Comet - Illidan",
 	},
 	["profiles"] = {
 		["Comet - Illidan"] = {
 			["previewProps"] = {
 				{
 					["y"] = 0,
-					["x"] = 0,
-					["w"] = 334.999877929688,
 					["h"] = 384.999877929688,
+					["w"] = 334.999877929688,
+					["x"] = 0,
 				}, -- [1]
 			},
 			["gridHeight"] = 399.999877929688,
@@ -47,8 +47,8 @@ MogItDB = {
 					["x"] = 0,
 				}, -- [1]
 			},
-			["gridWidth"] = 599.999938964844,
 			["gridHeight"] = 399.999969482422,
+			["gridWidth"] = 599.999938964844,
 			["minimap"] = {
 				["minimapPos"] = 194.641887378338,
 				["hide"] = true,
@@ -65,8 +65,8 @@ MogItDB = {
 					["h"] = 384.999877929688,
 				}, -- [1]
 			},
-			["gridWidth"] = 599.999938964844,
 			["gridHeight"] = 399.999969482422,
+			["gridWidth"] = 599.999938964844,
 			["minimap"] = {
 				["hide"] = true,
 			},
@@ -74,9 +74,6 @@ MogItDB = {
 	},
 }
 MogItWishlist = {
-	["global"] = {
-		["version"] = 70000,
-	},
 	["profileKeys"] = {
 		["Metal - Illidan"] = "Metal - Illidan",
 		["Cometron - Illidan"] = "Cometron - Illidan",
@@ -84,11 +81,14 @@ MogItWishlist = {
 		["Natal - Illidan"] = "Natal - Illidan",
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
-		["Pandatal - Illidan"] = "Pandatal - Illidan",
+		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Evan - Illidan"] = "Comet - Illidan",
-		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
+		["Pandatal - Illidan"] = "Pandatal - Illidan",
+	},
+	["global"] = {
+		["version"] = 70000,
 	},
 	["profiles"] = {
 		["Metal - Illidan"] = {
@@ -103,7 +103,7 @@ MogItWishlist = {
 		},
 		["Ereinion - Dark Iron"] = {
 		},
-		["Pandatal - Illidan"] = {
+		["Centromere - Dark Iron"] = {
 		},
 		["Comet - Illidan"] = {
 			["sets"] = {
@@ -113,14 +113,14 @@ MogItWishlist = {
 						["WristSlot"] = "item:113634:0",
 						["ShoulderSlot"] = "item:99386:0",
 						["MainHandSlot"] = "item:113591:0",
+						["BackSlot"] = "item:118812:0",
 						["ShirtSlot"] = "item:89195:0",
-						["SecondaryHandSlot"] = "item:103961:0",
 						["FeetSlot"] = "item:87067:0",
+						["HeadSlot"] = "item:109171:0",
+						["HandsSlot"] = "item:105845:0",
 						["LegsSlot"] = "item:95729:0",
 						["WaistSlot"] = "item:87022:0",
-						["HandsSlot"] = "item:105845:0",
-						["HeadSlot"] = "item:109171:0",
-						["BackSlot"] = "item:118812:0",
+						["SecondaryHandSlot"] = "item:103961:0",
 					},
 					["name"] = "Red Goggles",
 					["alternateItems"] = {
@@ -132,7 +132,7 @@ MogItWishlist = {
 		},
 		["Evan - Illidan"] = {
 		},
-		["Centromere - Dark Iron"] = {
+		["Pandatal - Illidan"] = {
 		},
 	},
 }

@@ -48,6 +48,7 @@ MacroToolkitDB = {
 			["override"] = true,
 			["noskin"] = true,
 			["visconditions"] = true,
+			["scale"] = 1,
 			["fonts"] = {
 				["edfont"] = "ABF",
 				["edsize"] = 12,
@@ -57,7 +58,6 @@ MacroToolkitDB = {
 				["errsize"] = 12,
 				["errfont"] = "ABF",
 			},
-			["scale"] = 1,
 		},
 		["Pandatal - Illidan"] = {
 		},

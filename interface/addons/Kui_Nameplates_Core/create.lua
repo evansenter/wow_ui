@@ -280,6 +280,11 @@ do
             UpdateStatusBar(f.HealthBar)
             UpdateStatusBar(f.PowerBar)
         end
+
+        if addon.ClassPowersFrame then
+            UpdateStatusBar(addon.ClassPowersFrame.bar)
+            self.ClassPowers.bar_texture = BAR_TEXTURE
+        end
     end
 end
 function core:SetBarAnimation()
@@ -395,7 +400,7 @@ end
 -- name text ###################################################################
 do
     local function UpdateNameText(f)
-        if f.state.nameonly then
+        if f.IN_NAMEONLY then
             f.NameText:Show()
 
             if UnitIsPlayer(f.unit) then
@@ -453,7 +458,7 @@ end
 -- level text ##################################################################
 do
     local function UpdateLevelText(f)
-        if f.state.nameonly then return end
+        if f.IN_NAMEONLY then return end
         if not core.profile.level_text or f.state.minus or f.state.player then
             f.LevelText:Hide()
         else
@@ -498,7 +503,7 @@ do
     end
 
     local function UpdateHealthText(f)
-        if f.state.nameonly then return end
+        if f.IN_NAMEONLY then return end
         if not SHOW_HEALTH_TEXT or f.state.minus or f.state.player then
             f.HealthText:Hide()
         else
@@ -595,7 +600,7 @@ do
     end
     -- update
     local function UpdateFrameGlow(f)
-        if f.state.nameonly then
+        if f.IN_NAMEONLY then
             f.ThreatGlow:Hide()
             f.TargetGlow:Hide()
 
@@ -692,7 +697,7 @@ end
 -- target arrows ###############################################################
 do
     local function UpdateTargetArrows(f)
-        if f.state.nameonly or not core.profile.target_arrows then
+        if f.IN_NAMEONLY or not core.profile.target_arrows then
             f.TargetArrows:Hide()
             return
         end
@@ -789,7 +794,7 @@ do
         f.SpellShield:Hide()
     end
     local function UpdateCastBar(f)
-        if f.state.nameonly then
+        if f.IN_NAMEONLY then
             f.handler:DisableElement('CastBar')
         else
             if CASTBAR_SHOW_ICON then
@@ -914,7 +919,7 @@ do
 
     local function UpdateStateIcon(f)
         if  not SHOW_STATE_ICONS or
-            f.state.nameonly or
+            f.IN_NAMEONLY or
             (f.elements.LevelText and f.LevelText:IsShown())
         then
             f.StateIcon:Hide()
@@ -948,7 +953,7 @@ do
     local function UpdateRaidIcon(f)
         f.RaidIcon:ClearAllPoints()
 
-        if f.state.nameonly then
+        if f.IN_NAMEONLY then
             f.RaidIcon:SetParent(f)
             f.RaidIcon:SetDrawLayer('ARTWORK',1)
             f.RaidIcon:SetPoint('LEFT',f.NameText,f.NameText:GetStringWidth()+2,0)
@@ -1135,7 +1140,7 @@ function core.ClassPowers_PostPositionFrame(cpf,parent)
     if not parent or not cpf or not cpf:IsShown() then return end
 
     -- change position in nameonly mode/on the player's nameplate
-    if parent.state.nameonly then
+    if parent.IN_NAMEONLY then
         cpf:ClearAllPoints()
 
         if parent.GuildText and parent.state.guild_text then
@@ -1146,6 +1151,85 @@ function core.ClassPowers_PostPositionFrame(cpf,parent)
     elseif parent.state.player then
         cpf:ClearAllPoints()
         cpf:SetPoint('CENTER',parent.HealthBar,'TOP',0,1)
+    end
+end
+function core.ClassPowers_CreateBar()
+    local bar = CreateStatusBar(addon.ClassPowersFrame)
+    bar:SetSize(
+        core.profile.classpowers_bar_width,
+        core.profile.classpowers_bar_height
+    )
+    bar:SetPoint('CENTER',0,-1)
+
+    bar.fill:SetParent(bar)
+    bar.fill:SetDrawLayer('BACKGROUND',2)
+
+    bar:SetBackdrop({
+        bgFile=kui.m.t.solid,
+        insets={top=-1,right=-1,bottom=-1,left=-1}
+    })
+    bar:SetBackdropColor(0,0,0,.9)
+
+    return bar
+end
+do
+    local orig_SetVertexColor,orig_Active,orig_Inactive,orig_ActiveOverflow,
+          orig_Hide
+
+    local function Icon_SetVertexColor(icon,...)
+        -- also set glow colour
+        icon.glow:SetVertexColor(...)
+        icon.glow:SetAlpha(.8)
+
+        orig_SetVertexColor(icon,...)
+    end
+    local function Icon_Active(icon)
+        orig_Active(icon)
+        icon.glow:Show()
+    end
+    local function Icon_Inactive(icon)
+        orig_Inactive(icon)
+        icon.glow:Hide()
+    end
+    local function Icon_ActiveOverflow(icon)
+        orig_ActiveOverflow(icon)
+        icon.glow:Show()
+    end
+    local function Icon_Hide(icon)
+        orig_Hide(icon)
+        icon.glow:Hide()
+    end
+
+    function core.ClassPowers_PostCreateIcon(icon)
+        -- add icon glow
+        local ig = addon.ClassPowersFrame:CreateTexture(nil,'ARTWORK',nil,0)
+        ig:SetTexture(MEDIA..'combopoint-glow')
+        ig:SetPoint('TOPLEFT',icon,-5,5)
+        ig:SetPoint('BOTTOMRIGHT',icon,5,-5)
+        ig:SetVertexColor(icon:GetVertexColor())
+        ig:Hide()
+
+        icon.glow = ig
+
+        -- function overloads
+        orig_Hide = icon.Hide
+        orig_Active = icon.Active
+        orig_Inactive = icon.Inactive
+        orig_ActiveOverflow = icon.ActiveOverflow
+        orig_SetVertexColor = icon.SetVertexColor
+
+        icon.Hide = Icon_Hide
+        icon.Active = Icon_Active
+        icon.Inactive = Icon_Inactive
+        icon.ActiveOverflow = Icon_ActiveOverflow
+        icon.SetVertexColor = Icon_SetVertexColor
+    end
+end
+function core.ClassPowers_PostRuneUpdate(icon)
+    if icon.cd:IsShown() then
+        icon.glow:Hide()
+    else
+        icon.glow:Show()
     end
 end
 -- threat brackets #############################################################
@@ -1182,7 +1266,7 @@ do
     end
     -- update
     local function UpdateThreatBrackets(f)
-        if not core.profile.threat_brackets or f.state.nameonly then
+        if not core.profile.threat_brackets or f.IN_NAMEONLY then
             f.ThreatBrackets:Hide()
             return
         end
@@ -1223,7 +1307,7 @@ do
 end
 -- name show/hide ##############################################################
 function core:ShowNameUpdate(f)
-    if not FADE_UNTRACKED and f.state.nameonly then return end
+    if not FADE_UNTRACKED and f.IN_NAMEONLY then return end
 
     if f.state.player or not SHOW_NAME_TEXT then
         f.state.no_name = true
@@ -1262,17 +1346,29 @@ do
         end
     end
 
-    function core:CreateNameOnlyGlow(f)
-        if not NAMEONLY_ALL_ENEMIES and not NAMEONLY_TARGET then return end
-        if f.NameOnlyGlow then return end
+    do
+        local function UpdateNameOnlyGlowSize(f)
+            local g = f.NameOnlyGlow
+            if not g then return end
 
-        local g = f:CreateTexture(nil,'BACKGROUND',nil,-5)
-        g:SetTexture('interface/addons/kui_media/t/spark')
-        g:SetPoint('TOPLEFT',f.NameText,-20,8)
-        g:SetPoint('BOTTOMRIGHT',f.NameText,20,-8)
-        g:Hide()
+            g:SetPoint('TOPLEFT',f.NameText,
+                -12-FRAME_GLOW_SIZE,  FRAME_GLOW_SIZE)
+            g:SetPoint('BOTTOMRIGHT',f.NameText,
+                 12+FRAME_GLOW_SIZE, -FRAME_GLOW_SIZE)
+        end
+        function core:CreateNameOnlyGlow(f)
+            if not NAMEONLY_ALL_ENEMIES and not NAMEONLY_TARGET then return end
+            if f.NameOnlyGlow then return end
 
-        f.NameOnlyGlow = g
+            local g = f:CreateTexture(nil,'BACKGROUND',nil,-5)
+            g:SetTexture('interface/addons/kui_media/t/spark')
+            g:Hide()
+
+            f.NameOnlyGlow = g
+            f.UpdateNameOnlyGlowSize = UpdateNameOnlyGlowSize
+
+            f:UpdateNameOnlyGlowSize()
+        end
     end
 
     function core:NameOnlyUpdateFunctions(f)
@@ -1291,13 +1387,13 @@ do
 
         if f.NameOnlyGlow and addon.ClassPowersFrame then
             -- force-update classpowers position
-            plugin_classpowers:TargetUpdate(f)
+            plugin_classpowers:TargetUpdate()
         end
     end
 
     local function NameOnlyEnable(f)
-        if f.state.nameonly then return end
-        f.state.nameonly = true
+        if f.IN_NAMEONLY then return end
+        f.IN_NAMEONLY = true
 
         f.bg:Hide()
         f.HealthBar:Hide()
@@ -1332,8 +1428,8 @@ do
         end
     end
     local function NameOnlyDisable(f)
-        if not f.state.nameonly then return end
-        f.state.nameonly = nil
+        if not f.IN_NAMEONLY then return end
+        f.IN_NAMEONLY = nil
 
         f.NameText:SetText(f.state.name)
         f.NameText:SetTextColor(1,1,1,1)
@@ -1362,7 +1458,7 @@ do
     end
     function core:NameOnlySetNameTextToHealth(f)
         -- set name text colour to approximate health
-        if not f.state.nameonly then return end
+        if not f.IN_NAMEONLY then return end
 
         if f.state.health_cur and f.state.health_cur > 0 and
            f.state.health_max and f.state.health_max > 0
@@ -1434,11 +1530,22 @@ function core:InitialiseElements()
     self.ClassPowers = {
         on_target = self.profile.classpowers_on_target,
         icon_size = self.profile.classpowers_size or 10,
+        bar_width = self.profile.classpowers_bar_width,
+        bar_height = self.profile.classpowers_bar_height,
         icon_texture = MEDIA..'combopoint-round',
-        glow_texture = MEDIA..'combopoint-glow',
         cd_texture = 'interface/playerframe/classoverlay-runecooldown',
-        point = { 'CENTER','bg','BOTTOM',0,1 }
+        bar_texture = BAR_TEXTURE,
+        point = { 'CENTER','bg','BOTTOM',0,1 },
+        colours = {
+            overflow = self.profile.classpowers_colour_overflow,
+            inactive = self.profile.classpowers_colour_inactive,
+        }
     }
+
+    local class = select(2,UnitClass('player'))
+    if self.profile['classpowers_colour_'..strlower(class)] then
+        self.ClassPowers.colours[class] = self.profile['classpowers_colour_'..strlower(class)]
+    end
 
     local plugin_pb = addon:GetPlugin('PowerBar')
     if plugin_pb then

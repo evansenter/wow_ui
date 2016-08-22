@@ -1699,7 +1699,7 @@ DataStore_CraftsDB = {
 					},
 				},
 				["Prof2"] = "Jewelcrafting",
-				["lastUpdate"] = 1471233528,
+				["lastUpdate"] = 1471720484,
 				["Prof1"] = "Engineering",
 			},
 			["Default.Illidan.Cometron"] = {

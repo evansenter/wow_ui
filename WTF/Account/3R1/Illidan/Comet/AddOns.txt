@@ -284,3 +284,4 @@ LinkWrangler: enabled
 MobInfo2: enabled
 MultiTips: enabled
 Outfitter: enabled
+MacroToolkitIcons: disabled

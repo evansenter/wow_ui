@@ -128,6 +128,18 @@ local default_config = {
     classpowers_enable = true,
     classpowers_on_target = true,
     classpowers_size = 10,
+    classpowers_bar_width = 50,
+    classpowers_bar_height = 3,
+
+    classpowers_colour_deathknight = {1,.2,.3},
+    classpowers_colour_druid       = {1,1,.1},
+    classpowers_colour_paladin     = {1,1,.1},
+    classpowers_colour_rogue       = {1,1,.1},
+    classpowers_colour_mage        = {.5,.5,1},
+    classpowers_colour_monk        = {.3,1,.9},
+    classpowers_colour_warlock     = {1,.5,1},
+    classpowers_colour_overflow    = {1,.3,.3},
+    classpowers_colour_inactive    = {.5,.5,.5,.5},
 }
 -- local functions #############################################################
 local function UpdateClickboxSize()
@@ -207,7 +219,7 @@ local function configChangedFadeRule(v,on_load)
 
     if core.profile.fade_avoid_nameonly then
         plugin:AddFadeRule(function(f)
-            return f.state.nameonly and 1
+            return f.IN_NAMEONLY and 1
         end,30)
     end
 
@@ -384,20 +396,43 @@ function configChanged.classpowers_enable(v)
         addon:GetPlugin('ClassPowers'):Disable()
     end
 end
-function configChanged.classpowers_size(v)
-    core.ClassPowers.icon_size = v
+local function configChangedClassPowers()
+    core.ClassPowers.on_target = core.profile.classpowers_on_target
+    core.ClassPowers.icon_size = core.profile.classpowers_size
+    core.ClassPowers.bar_width = core.profile.classpowers_bar_width
+    core.ClassPowers.bar_height = core.profile.classpowers_bar_height
 
     if addon:GetPlugin('ClassPowers').enabled then
         addon:GetPlugin('ClassPowers'):UpdateConfig()
     end
 end
-function configChanged.classpowers_on_target(v)
-    core.ClassPowers.on_target = v
+configChanged.classpowers_size = configChangedClassPowers
+configChanged.classpowers_on_target = configChangedClassPowers
+configChanged.classpowers_bar_width = configChangedClassPowers
+configChanged.classpowers_bar_height = configChangedClassPowers
+
+local function configChangedClassPowersColour()
+    local class = select(2,UnitClass('player'))
+    if core.profile['classpowers_colour_'..strlower(class)] then
+        core.ClassPowers.colours[class] =  core.profile['classpowers_colour_'..strlower(class)]
+    end
+
+    core.ClassPowers.colours.overflow = core.profile.classpowers_colour_overflow
+    core.ClassPowers.colours.inactive = core.profile.classpowers_colour_inactive
 
     if addon:GetPlugin('ClassPowers').enabled then
         addon:GetPlugin('ClassPowers'):UpdateConfig()
     end
 end
+configChanged.classpowers_colour_deathknight = configChangedClassPowersColour
+configChanged.classpowers_colour_druid = configChangedClassPowersColour
+configChanged.classpowers_colour_paladin = configChangedClassPowersColour
+configChanged.classpowers_colour_rogue = configChangedClassPowersColour
+configChanged.classpowers_colour_mage = configChangedClassPowersColour
+configChanged.classpowers_colour_monk = configChangedClassPowersColour
+configChanged.classpowers_colour_warlock = configChangedClassPowersColour
+configChanged.classpowers_colour_overflow = configChangedClassPowersColour
+configChanged.classpowers_colour_inactive = configChangedClassPowersColour
 
 function configChanged.execute_enabled(v)
     if v then
@@ -430,6 +465,9 @@ function configChanged.frame_glow_size(v)
     for k,f in addon:Frames() do
         if f.ThreatGlow then
             f.ThreatGlow:SetSize(v)
+        end
+        if f.UpdateNameOnlyGlowSize then
+            f:UpdateNameOnlyGlowSize()
         end
     end
 end
