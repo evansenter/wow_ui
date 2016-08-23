@@ -51,8 +51,8 @@ DataStore_AgendaDB = {
 					},
 					["Purephase"] = {
 						["note"] = "",
-						["class"] = "Rogue",
 						["level"] = 100,
+						["class"] = "Rogue",
 					},
 					["Rfl"] = {
 						["note"] = "",
@@ -63,7 +63,7 @@ DataStore_AgendaDB = {
 					["Hemos"] = {
 						["note"] = "",
 					},
-					["Bubblegurl"] = {
+					["Billbraskie"] = {
 						["note"] = "",
 					},
 					["Faluzure"] = {
@@ -72,17 +72,17 @@ DataStore_AgendaDB = {
 					["Pockee"] = {
 						["note"] = "",
 					},
-					["Billbraskie"] = {
+					["Bubblegurl"] = {
 						["note"] = "",
 					},
 				},
 				["lastUpdate"] = 1424741733,
 			},
 			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1471969229,
 				["DungeonIDs"] = {
-					["Hellfire Citadel Heroic|239636781"] = "599942|1471969263|0|1",
+					["Hellfire Citadel Heroic|239636781"] = "593716|1471975483|0|1",
 				},
+				["lastUpdate"] = 1471976822,
 			},
 			["Default.Illidan.Cometron"] = {
 				["lastUpdate"] = 1471197713,
