@@ -41,7 +41,7 @@
 --  Globals/Default Options  --
 -------------------------------
 DBM = {
-	Revision = tonumber(("$Revision: 15144 $"):sub(12, -3)),
+	Revision = tonumber(("$Revision: 15153 $"):sub(12, -3)),
 	DisplayVersion = "7.0.3 alpha", -- the string that is shown as version
 	ReleaseRevision = 15117 -- the revision of the latest stable version that is available
 }
@@ -292,6 +292,7 @@ DBM.DefaultOptions = {
 	AITimer = true,
 	AutoCorrectTimer = false,
 	ShortTimerText = true,
+	EnablePatchRestrictions = false,
 	ChatFrame = "DEFAULT_CHAT_FRAME",
 }
 
@@ -471,7 +472,7 @@ local UnitExists, UnitIsDead, UnitIsFriend, UnitIsUnit, UnitIsAFK = UnitExists, 
 local GetSpellInfo, EJ_GetSectionInfo, GetSpellTexture, GetSpellCooldown = GetSpellInfo, EJ_GetSectionInfo, GetSpellTexture, GetSpellCooldown
 local EJ_GetEncounterInfo, EJ_GetCreatureInfo, GetDungeonInfo = EJ_GetEncounterInfo, EJ_GetCreatureInfo, GetDungeonInfo
 local GetInstanceInfo = GetInstanceInfo
-local UnitPosition, GetCurrentMapDungeonLevel, GetMapInfo, GetCurrentMapZone, SetMapToCurrentZone = UnitPosition, GetCurrentMapDungeonLevel, GetMapInfo, GetCurrentMapZone, SetMapToCurrentZone
+local UnitPosition, GetCurrentMapDungeonLevel, GetMapInfo, GetCurrentMapZone, SetMapToCurrentZone, GetPlayerMapAreaID = UnitPosition, GetCurrentMapDungeonLevel, GetMapInfo, GetCurrentMapZone, SetMapToCurrentZone, GetPlayerMapAreaID
 local GetSpecialization, GetSpecializationInfo, GetSpecializationInfoByID = GetSpecialization, GetSpecializationInfo, GetSpecializationInfoByID
 local UnitDetailedThreatSituation = UnitDetailedThreatSituation
 local GetPartyAssignment, UnitGroupRolesAssigned, UnitIsGroupLeader, UnitIsGroupAssistant, UnitRealmRelationship = GetPartyAssignment, UnitGroupRolesAssigned, UnitIsGroupLeader, UnitIsGroupAssistant, UnitRealmRelationship
@@ -2066,6 +2067,10 @@ do
 			DBM.Options.DebugMode = DBM.Options.DebugMode == false and true or false
 			DBM:AddMsg("Debug Message is " .. (DBM.Options.DebugMode and "ON" or "OFF"))
 		elseif cmd:sub(1, 8) == "whereiam" or cmd:sub(1, 8) == "whereami" then
+			if DBM.Options.EnablePatchRestrictions and IsInInstance() then
+				DBM:AddMsg("Location debug not available do to instance restrictions")
+				return
+			end
 			local x, y, _, map = UnitPosition("player")
 			SetMapToCurrentZone()
 			local mapID = GetCurrentMapAreaID()
@@ -2076,6 +2081,9 @@ do
 			DBM:RequestTimers(1)
 			DBM:RequestTimers(2)
 			DBM:RequestTimers(3)
+		elseif cmd:sub(1, 12) == "restrictions" then
+			DBM.Options.EnablePatchRestrictions = DBM.Options.EnablePatchRestrictions == false and true or false
+			DBM:AddMsg("EnablePatchRestrictions is " .. (DBM.Options.EnablePatchRestrictions and "ON" or "OFF"))
 		else
 			DBM:LoadGUI()
 		end
@@ -2087,6 +2095,9 @@ do
 		if DBM.RangeCheck:IsShown() then
 			DBM.RangeCheck:Hide(true)
 		else
+			if IsInInstance() then
+				DBM:AddMsg(DBM_CORE_NO_RANGE_SOON)
+			end
 			if r and (r < 201) then
 				DBM.RangeCheck:Show(r, nil, true, nil, reverse)
 			else
@@ -2751,17 +2762,17 @@ do
 	function DBM:GetNumRealPlayersInZone()
 		if not IsInGroup() then return 1 end
 		local total = 0
-		local currentMapId = select(4, UnitPosition("player"))
+		local currentMapId = GetPlayerMapAreaID("player") or 0
 		if IsInRaid() then
 			for i = 1, GetNumGroupMembers() do
-				if select(4, UnitPosition("raid"..i)) == currentMapId then
+				if (GetPlayerMapAreaID("raid"..i) or currentMapId) == currentMapId then
 					total = total + 1
 				end
 			end
 		else
 			total = 1--add player/self for "party" count
 			for i = 1, GetNumSubgroupMembers() do
-				if select(4, UnitPosition("party"..i)) == currentMapId then
+				if (GetPlayerMapAreaID("party"..i) or currentMapId) == currentMapId then
 					total = total + 1
 				end
 			end
@@ -2865,11 +2876,11 @@ function DBM:GetNumRealGroupMembers()
 	if not IsInInstance() then--Not accurate outside of instances (such as world bosses)
 		return IsInGroup() and GetNumGroupMembers() or 1--So just return regular group members.
 	end
-	local currentMapId = select(4, UnitPosition("player"))
+	local currentMapId = GetPlayerMapAreaID("player") or 0
 	local realGroupMembers = 0
 	if IsInGroup() then
 		for uId in self:GetGroupMembers() do
-			if select(4, UnitPosition(uId)) == currentMapId then
+			if (GetPlayerMapAreaID(uId) or currentMapId) == currentMapId then
 				realGroupMembers = realGroupMembers + 1
 			end
 		end
@@ -3861,7 +3872,7 @@ do
 		if LastInstanceType == "none" and (not UnitAffectingCombat("player") or #inCombat > 0) then--world boss
 			local senderuId = DBM:GetRaidUnitId(sender)
 			if not senderuId then return end--Should never happen, but just in case. If happens, MANY "C" syncs are sent. losing 1 no big deal.
-			local playerZone, senderZone = select(4, UnitPosition("player")), select(4, UnitPosition(senderuId))
+			local playerZone, senderZone = GetPlayerMapAreaID("player") or 0, GetPlayerMapAreaID(senderuId) or GetPlayerMapAreaID("player")
 			if playerZone ~= senderZone then return end--not same zone
 			local range = DBM.RangeCheck:GetDistance("player", senderuId)--Same zone, so check range
 			if not range or range > 120 then return end
@@ -7311,7 +7322,7 @@ end
 function bossModPrototype:CheckNearby(range, targetname)
 	local uId = DBM:GetRaidUnitId(targetname)
 	if uId then
-		local inRange = DBM.RangeCheck:GetDistance("player", uId)
+		local inRange = DBM.RangeCheck:GetDistance(uId)
 		if inRange and inRange < range then
 			return true
 		end
@@ -7392,18 +7403,17 @@ do
 			end
 			if uId then--Now we have a valid uId
 				if UnitIsUnit(uId, "player") then return true end--If "player" is target, avoid doing any complicated stuff
-				local x, y = UnitPosition(uId)
-				if not x then--Failed to pull coords. This is likely a pet or a guardian or an NPC.
-					local inRange2, checkedRange = UnitInRange(uId)--Use an API that works on pets and some NPCS (npcs that get a party/raid/pet ID)
-					if inRange2 and checkedRange then
-					end
-					if checkedRange and not inRange2 then--checkedRange only returns true if api worked, so if we get false, true then we are not near npc
-						return false
+				local inRange = 0
+				if not UnitIsPlayer(uId) then
+					local inRange2, checkedRange = UnitInRange(uId)
+					if checkedRange then--checkedRange only returns true if api worked, so if we get false, true then we are not near npc
+						return inRange2 and true or false
 					else--Its probably a totem or just something we can't assess. Fall back to no filtering
 						return true
 					end
+				else
+					inRange = DBM.RangeCheck:GetDistance("player", uId)--We check how far we are from the tank who has that boss
 				end
-				local inRange = DBM.RangeCheck:GetDistance("player", x, y)--We check how far we are from the tank who has that boss
 				rangeCache[cidOrGuid] = inRange
 				rangeUpdated[cidOrGuid] = GetTime()
 				if inRange and (inRange > distance) then--You are not near the person tanking boss

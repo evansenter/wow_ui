@@ -1,4 +1,13 @@
 subversion:
+	- Omega via svn r15153: Restore this to tank check
+	- Omega via svn r15152: CN update
+	- Omega via svn r15151: more refactoring
+	- Omega via svn r15150: Fix range radar breaking from earlier refacttoring, GetPlayerMapAreaID really is utter shit. i hope they fix this before 7.1 if we ever hope to filter stuff not in same zone.
+	- Omega via svn r15149: Add localization for 7.1 errors, to give plenty of time for translate
+	- Omega via svn r15148: More refactoring in more functions to remove more UnitPositions. this will cause some regressions in some things since GetPlayerMapAreaID is an inferior replacement that sometimes doesn?\226?\128?\153t return a good value. However without UnitPosition, GetPlayerMapAreaID is only way to really do unit to unit mapid comparisons for a lot of filters.
+	- Omega via svn r15147: Another tweak
+	- Omega via svn r15146: More range frame tweaks
+	- Omega via svn r15145: Some range frame refactoring so that UnitPosition is only used in radar method and text method only uses UnitDistanceSquared. (this of course still assumes blizzard isn?\226?\128?\153t breaking UnitDistanceSquared too, we shall see).
 	- Omega via svn r15144: Fix normal to use 30, 10, 30, 10. It was every 40 like LFR in an earlier test but the final test they did it used heroic/mythic timers
 	- Omega via svn r15143: Link to website version so no one can make any complaints
 	- Omega via svn r15142: lower this CD

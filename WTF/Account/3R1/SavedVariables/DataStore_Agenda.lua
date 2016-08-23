@@ -15,7 +15,7 @@ DataStore_AgendaDB = {
 		["Options"] = {
 			["WeeklyResetHour"] = 6,
 			["WeeklyResetDay"] = 2,
-			["NextWeeklyReset"] = "2016-08-23",
+			["NextWeeklyReset"] = "2016-08-30",
 		},
 		["Characters"] = {
 			["Default.Illidan.Evan"] = {
@@ -51,8 +51,8 @@ DataStore_AgendaDB = {
 					},
 					["Purephase"] = {
 						["note"] = "",
-						["level"] = 100,
 						["class"] = "Rogue",
+						["level"] = 100,
 					},
 					["Rfl"] = {
 						["note"] = "",
@@ -63,7 +63,7 @@ DataStore_AgendaDB = {
 					["Hemos"] = {
 						["note"] = "",
 					},
-					["Billbraskie"] = {
+					["Bubblegurl"] = {
 						["note"] = "",
 					},
 					["Faluzure"] = {
@@ -72,14 +72,17 @@ DataStore_AgendaDB = {
 					["Pockee"] = {
 						["note"] = "",
 					},
-					["Bubblegurl"] = {
+					["Billbraskie"] = {
 						["note"] = "",
 					},
 				},
 				["lastUpdate"] = 1424741733,
 			},
 			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1471720484,
+				["lastUpdate"] = 1471969229,
+				["DungeonIDs"] = {
+					["Hellfire Citadel Heroic|239636781"] = "599942|1471969263|0|1",
+				},
 			},
 			["Default.Illidan.Cometron"] = {
 				["lastUpdate"] = 1471197713,

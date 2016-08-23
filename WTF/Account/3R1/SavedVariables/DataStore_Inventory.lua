@@ -178,27 +178,26 @@ DataStore_InventoryDB = {
 			},
 			["Default.Illidan.Comet"] = {
 				["Inventory"] = {
-					"|cffa335ee|Hitem:113978::115812::::::100:269::6:2:565:567:::|h[Sorka's Nightshade Cowl]|h|r", -- [1]
-					"|cffa335ee|Hitem:109965:5321:::::::100:269:4:23:2:642:757:529:::|h[Fistbreak Choker]|h|r", -- [2]
-					"|cffa335ee|Hitem:124271::::::::100:269:4:5:2:1798:1487:529:::|h[Blood-Tanned Pauldrons]|h|r", -- [3]
+					"|cffa335ee|Hitem:113978::115812::::::100:270::6:2:565:567:::|h[Sorka's Nightshade Cowl]|h|r", -- [1]
+					"|cffa335ee|Hitem:124211:5317:::::::100:270:4:5:2:1798:1487:529:::|h[Glowing Firestone]|h|r", -- [2]
+					"|cffa335ee|Hitem:124271::::::::100:270:4:5:2:1798:1487:529:::|h[Blood-Tanned Pauldrons]|h|r", -- [3]
 					nil, -- [4]
-					"|cffa335ee|Hitem:124244::::::::100:269:4:5:3:1798:1497:3441:529:::|h[Chestguard of Gnawing Desire]|h|r", -- [5]
-					"|cffa335ee|Hitem:124276::::::::100:269:4:5:1:566:531:::|h[Waistwrap of Banishment]|h|r", -- [6]
-					"|cffa335ee|Hitem:124265::::::::100:269:4:5:2:1798:1487:529:::|h[Leggings of Eternal Terror]|h|r", -- [7]
-					"|cffa335ee|Hitem:124252::::::::100:269:4:6:1:567:531:::|h[Jungle Assassin's Footpads]|h|r", -- [8]
-					"|cffa335ee|Hitem:116181::::::::100:269:4:13:3:146:535:618:531:::|h[Supple Bracers of the Fireflash]|h|r", -- [9]
-					"|cffa335ee|Hitem:124256::::::::100:269:4:5:2:1798:1487:531:::|h[Fistwraps of the Hurricane's Eye]|h|r", -- [10]
-					"|cffff8000|Hitem:124636:5328:::::::100:269::11:2:649:625:::|h[Maalus, the Blood Drinker]|h|r", -- [11]
-					"|cffa335ee|Hitem:113917:5328:115814::::::100:269::6:2:565:567:::|h[Cinderwolf Signet]|h|r", -- [12]
-					"|cffa335ee|Hitem:112318::::::::100:269:4:13:2:529:618:529:::|h[Skull of War]|h|r", -- [13]
-					"|cffa335ee|Hitem:128024::::::::100:269:4:1::531:::|h[Stone of the Elements]|h|r", -- [14]
-					"|cffa335ee|Hitem:113971:5314:::::::100:269::6:1:567:::|h[Drape of the Dark Hunt]|h|r", -- [15]
-					"|cffa335ee|Hitem:140696:5337:::::::100:269::3:1:3438:::|h[Sword of Singing Wind]|h|r", -- [16]
-					"|cffa335ee|Hitem:140696:5337:::::::100:269::3:1:3438:::|h[Sword of Singing Wind]|h|r", -- [17]
+					"|cffa335ee|Hitem:124244::::::::100:270:4:5:3:1798:1497:3441:529:::|h[Chestguard of Gnawing Desire]|h|r", -- [5]
+					"|cffa335ee|Hitem:124276::::::::100:270:4:5:1:566:531:::|h[Waistwrap of Banishment]|h|r", -- [6]
+					"|cffa335ee|Hitem:124265::::::::100:270:4:5:2:1798:1487:529:::|h[Leggings of Eternal Terror]|h|r", -- [7]
+					"|cffa335ee|Hitem:124252::::::::100:270:4:6:1:567:531:::|h[Jungle Assassin's Footpads]|h|r", -- [8]
+					"|cffa335ee|Hitem:116181::::::::100:270:4:13:3:146:535:618:531:::|h[Supple Bracers of the Fireflash]|h|r", -- [9]
+					"|cffa335ee|Hitem:124256::::::::100:270:4:5:2:1798:1487:531:::|h[Fistwraps of the Hurricane's Eye]|h|r", -- [10]
+					"|cffff8000|Hitem:124638:5324:::::::100:270::14:2:621:650:::|h[Etheralus, the Eternal Reward]|h|r", -- [11]
+					"|cffa335ee|Hitem:124192:5324:::::::100:270:4:5:2:1798:1487:531:::|h[Loathful Encrusted Band]|h|r", -- [12]
+					"|cffa335ee|Hitem:110005::::::::100:270:4:23:2:642:756:531:::|h[Crystalline Blood Drop]|h|r", -- [13]
+					"|cffa335ee|Hitem:128024::::::::100:270:4:1::531:::|h[Stone of the Elements]|h|r", -- [14]
+					"|cffa335ee|Hitem:124138:5310:::::::100:270:4:5:2:1798:1487:531:::|h[Cloak of Hideous Unity]|h|r", -- [15]
+					"|cffa335ee|Hitem:124381:5335:::::::100:270:4:5:2:1798:1487:531:::|h[Voidcore Greatstaff]|h|r", -- [16]
 				},
-				["averageItemLvl"] = 714.1875,
+				["averageItemLvl"] = 720.3125,
 				["overallAIL"] = 722.625,
-				["lastUpdate"] = 1471720484,
+				["lastUpdate"] = 1471969229,
 			},
 			["Default.Illidan.Cometron"] = {
 				["Inventory"] = {
@@ -231,8 +230,8 @@ DataStore_InventoryDB = {
 					["Zuperthus"] = {
 						["averageItemLvl"] = 506,
 					},
-					["Combustion"] = {
-						["averageItemLvl"] = 576,
+					["Evan"] = {
+						["averageItemLvl"] = 640,
 					},
 					["Cattleclýsm"] = {
 						["averageItemLvl"] = 647,
@@ -243,17 +242,17 @@ DataStore_InventoryDB = {
 					["Thannage"] = {
 						["averageItemLvl"] = 505,
 					},
-					["Evan"] = {
-						["averageItemLvl"] = 640,
+					["Combustion"] = {
+						["averageItemLvl"] = 576,
 					},
 					["Sephyrah"] = {
 						["averageItemLvl"] = 635,
 					},
-					["Thannriest"] = {
-						["averageItemLvl"] = 557,
+					["Wushujuju"] = {
+						["averageItemLvl"] = 118,
 					},
-					["Natal"] = {
-						["averageItemLvl"] = 534,
+					["Khalisto"] = {
+						["averageItemLvl"] = 656,
 					},
 					["Brighde"] = {
 						["averageItemLvl"] = 644,
@@ -267,11 +266,11 @@ DataStore_InventoryDB = {
 					["Helldame"] = {
 						["averageItemLvl"] = 573,
 					},
-					["Khalisto"] = {
-						["averageItemLvl"] = 656,
+					["Natal"] = {
+						["averageItemLvl"] = 534,
 					},
-					["Wushujuju"] = {
-						["averageItemLvl"] = 118,
+					["Thannriest"] = {
+						["averageItemLvl"] = 557,
 					},
 					["Metal"] = {
 						["averageItemLvl"] = 670,
@@ -361,8 +360,8 @@ DataStore_InventoryDB = {
 					["Lokian"] = {
 						["averageItemLvl"] = 697,
 					},
-					["Sarufeng"] = {
-						["averageItemLvl"] = 127,
+					["Nullzap"] = {
+						["averageItemLvl"] = 643,
 					},
 					["Lustwarp"] = {
 						["averageItemLvl"] = 5,
@@ -382,14 +381,14 @@ DataStore_InventoryDB = {
 					["Jancarius"] = {
 						["averageItemLvl"] = 695,
 					},
-					["Lyekka"] = {
-						["averageItemLvl"] = 566,
+					["Auradari"] = {
+						["averageItemLvl"] = 682,
 					},
 					["Invincibüll"] = {
 						["averageItemLvl"] = 601,
 					},
-					["Auradari"] = {
-						["averageItemLvl"] = 682,
+					["Lyekka"] = {
+						["averageItemLvl"] = 566,
 					},
 					["Crîzîz"] = {
 						["averageItemLvl"] = 687,
@@ -403,14 +402,14 @@ DataStore_InventoryDB = {
 					["Tharenna"] = {
 						["averageItemLvl"] = 703,
 					},
-					["Apollovision"] = {
-						["averageItemLvl"] = 741,
+					["Aldrassarr"] = {
+						["averageItemLvl"] = 701,
 					},
 					["Nulladin"] = {
 						["averageItemLvl"] = 630,
 					},
-					["Galestealth"] = {
-						["averageItemLvl"] = 727,
+					["Nulldot"] = {
+						["averageItemLvl"] = 648,
 					},
 					["Nuttcancer"] = {
 						["averageItemLvl"] = 642,
@@ -418,8 +417,8 @@ DataStore_InventoryDB = {
 					["Lustea"] = {
 						["averageItemLvl"] = 681,
 					},
-					["Aldrassarr"] = {
-						["averageItemLvl"] = 701,
+					["Apollovision"] = {
+						["averageItemLvl"] = 741,
 					},
 					["Vohlaufar"] = {
 						["averageItemLvl"] = 679,
@@ -430,29 +429,29 @@ DataStore_InventoryDB = {
 					["Pandiana"] = {
 						["averageItemLvl"] = 630,
 					},
-					["Breeskie"] = {
-						["averageItemLvl"] = 4,
+					["Princip"] = {
+						["averageItemLvl"] = 690,
 					},
 					["Amaranthrose"] = {
 						["averageItemLvl"] = 674,
 					},
-					["Ashléna"] = {
-						["averageItemLvl"] = 683,
+					["Nullchi"] = {
+						["averageItemLvl"] = 640,
 					},
 					["Fêy"] = {
 						["averageItemLvl"] = 738,
 					},
-					["Greenpotato"] = {
-						["averageItemLvl"] = 538,
+					["Galelust"] = {
+						["averageItemLvl"] = 708,
 					},
-					["Fëy"] = {
-						["averageItemLvl"] = 674,
+					["Avallashe"] = {
+						["averageItemLvl"] = 12,
 					},
 					["Sheepíe"] = {
 						["averageItemLvl"] = 703,
 					},
-					["Drunkenbrew"] = {
-						["averageItemLvl"] = 743,
+					["Roidx"] = {
+						["averageItemLvl"] = 453,
 					},
 					["Nullwar"] = {
 						["averageItemLvl"] = 650,
@@ -463,11 +462,11 @@ DataStore_InventoryDB = {
 					["Shoestorm"] = {
 						["averageItemLvl"] = 73,
 					},
-					["Galeshape"] = {
-						["averageItemLvl"] = 700,
+					["Necrochimp"] = {
+						["averageItemLvl"] = 663,
 					},
-					["Galebubbles"] = {
-						["averageItemLvl"] = 721,
+					["Cyadraenor"] = {
+						["averageItemLvl"] = 700,
 					},
 					["Svetty"] = {
 						["averageItemLvl"] = 549,
@@ -475,26 +474,26 @@ DataStore_InventoryDB = {
 					["Boston"] = {
 						["averageItemLvl"] = 533,
 					},
-					["Ðârkângêl"] = {
-						["averageItemLvl"] = 704,
+					["Sephinia"] = {
+						["averageItemLvl"] = 740,
 					},
 					["Aurastrásza"] = {
 						["averageItemLvl"] = 679,
 					},
-					["Darkâ"] = {
-						["averageItemLvl"] = 724,
+					["Nullqt"] = {
+						["averageItemLvl"] = 744,
 					},
 					["Alyana"] = {
 						["averageItemLvl"] = 683,
 					},
-					["Galebrew"] = {
-						["averageItemLvl"] = 654,
+					["Levels"] = {
+						["averageItemLvl"] = 660,
 					},
 					["Galeplague"] = {
 						["averageItemLvl"] = 719,
 					},
-					["Auraiel"] = {
-						["averageItemLvl"] = 714,
+					["Galerage"] = {
+						["averageItemLvl"] = 704,
 					},
 					["Wardìck"] = {
 						["averageItemLvl"] = 690,
@@ -517,50 +516,50 @@ DataStore_InventoryDB = {
 					["Kaylenlee"] = {
 						["averageItemLvl"] = 624,
 					},
-					["Galerage"] = {
-						["averageItemLvl"] = 704,
+					["Auraiel"] = {
+						["averageItemLvl"] = 714,
 					},
-					["Levels"] = {
-						["averageItemLvl"] = 660,
+					["Galebrew"] = {
+						["averageItemLvl"] = 654,
 					},
 					["Aurelyn"] = {
 						["averageItemLvl"] = 709,
 					},
-					["Nullqt"] = {
-						["averageItemLvl"] = 744,
+					["Darkâ"] = {
+						["averageItemLvl"] = 724,
 					},
 					["Galechaos"] = {
 						["averageItemLvl"] = 672,
 					},
-					["Sephinia"] = {
-						["averageItemLvl"] = 740,
+					["Ðârkângêl"] = {
+						["averageItemLvl"] = 704,
 					},
 					["Hunger"] = {
 						["averageItemLvl"] = 741,
 					},
-					["Cyadraenor"] = {
+					["Galebubbles"] = {
+						["averageItemLvl"] = 721,
+					},
+					["Galeshape"] = {
 						["averageItemLvl"] = 700,
 					},
-					["Necrochimp"] = {
-						["averageItemLvl"] = 663,
+					["Drunkenbrew"] = {
+						["averageItemLvl"] = 743,
 					},
-					["Roidx"] = {
-						["averageItemLvl"] = 453,
+					["Fëy"] = {
+						["averageItemLvl"] = 674,
 					},
-					["Avallashe"] = {
-						["averageItemLvl"] = 12,
+					["Greenpotato"] = {
+						["averageItemLvl"] = 538,
 					},
-					["Galelust"] = {
-						["averageItemLvl"] = 708,
+					["Ashléna"] = {
+						["averageItemLvl"] = 683,
 					},
-					["Nullchi"] = {
-						["averageItemLvl"] = 640,
+					["Breeskie"] = {
+						["averageItemLvl"] = 4,
 					},
-					["Princip"] = {
-						["averageItemLvl"] = 690,
-					},
-					["Nulldot"] = {
-						["averageItemLvl"] = 648,
+					["Galestealth"] = {
+						["averageItemLvl"] = 727,
 					},
 					["Nulldh"] = {
 						["averageItemLvl"] = 686,
@@ -583,8 +582,8 @@ DataStore_InventoryDB = {
 					["Nullshot"] = {
 						["averageItemLvl"] = 679,
 					},
-					["Nullzap"] = {
-						["averageItemLvl"] = 643,
+					["Sarufeng"] = {
+						["averageItemLvl"] = 127,
 					},
 					["Metal"] = {
 						["averageItemLvl"] = 689,
@@ -613,6 +612,46 @@ DataStore_InventoryDB = {
 		},
 		["Reference"] = {
 			["AppearancesCounters"] = {
+				["DEMONHUNTER"] = {
+					"47/331", -- [1]
+					"43/307", -- [2]
+					"139/744", -- [3]
+					"50/378", -- [4]
+					"4/84", -- [5]
+					"3/75", -- [6]
+					"33/317", -- [7]
+					"36/349", -- [8]
+					"39/326", -- [9]
+					"39/333", -- [10]
+					"46/357", -- [11]
+					nil, -- [12]
+					"24/295", -- [13]
+					"38/439", -- [14]
+					[28] = "2/3",
+					[16] = "54/501",
+					[17] = "23/143",
+					[19] = "37/303",
+				},
+				["MONK"] = {
+					"55/338", -- [1]
+					"46/317", -- [2]
+					"140/750", -- [3]
+					"58/390", -- [4]
+					"4/84", -- [5]
+					"3/75", -- [6]
+					"33/353", -- [7]
+					"43/357", -- [8]
+					"45/367", -- [9]
+					"45/343", -- [10]
+					"45/394", -- [11]
+					[13] = "27/296",
+					[15] = "55/448",
+					[24] = "21/181",
+					[19] = "37/303",
+					[14] = "39/440",
+					[23] = "78/528",
+					[17] = "23/144",
+				},
 				["PRIEST"] = {
 					"55/397", -- [1]
 					"40/331", -- [2]
@@ -632,46 +671,6 @@ DataStore_InventoryDB = {
 					"54/501", -- [16]
 					[19] = "37/303",
 					[23] = "74/525",
-				},
-				["MONK"] = {
-					"55/338", -- [1]
-					"46/317", -- [2]
-					"140/750", -- [3]
-					"58/390", -- [4]
-					"4/84", -- [5]
-					"3/75", -- [6]
-					"33/353", -- [7]
-					"43/357", -- [8]
-					"45/367", -- [9]
-					"45/343", -- [10]
-					"45/394", -- [11]
-					[13] = "27/296",
-					[15] = "55/448",
-					[17] = "23/144",
-					[14] = "39/440",
-					[19] = "37/303",
-					[23] = "78/528",
-					[24] = "21/181",
-				},
-				["DEMONHUNTER"] = {
-					"47/331", -- [1]
-					"43/307", -- [2]
-					"139/744", -- [3]
-					"50/378", -- [4]
-					"4/84", -- [5]
-					"3/75", -- [6]
-					"33/317", -- [7]
-					"36/349", -- [8]
-					"39/326", -- [9]
-					"39/333", -- [10]
-					"46/357", -- [11]
-					nil, -- [12]
-					"24/295", -- [13]
-					"38/439", -- [14]
-					[16] = "54/501",
-					[19] = "37/303",
-					[17] = "23/143",
-					[28] = "2/3",
 				},
 			},
 		},

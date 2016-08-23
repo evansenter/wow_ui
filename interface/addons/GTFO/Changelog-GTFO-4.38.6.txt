@@ -1,10 +1,26 @@
 ------------------------------------------------------------------------
-r231 | zensunim | 2016-08-13 18:03:30 +0000 (Sat, 13 Aug 2016) | 2 lines
+r234 | zensunim | 2016-08-23 15:13:12 +0000 (Tue, 23 Aug 2016) | 4 lines
 Changed paths:
-   A /tags/4.38.5 (from /trunk:230)
+   A /tags/4.38.6 (from /trunk:233)
 
-4.38.5
+4.38.6
 * Added Legion spells for the Demon Invasion Event
+* Fixed WoD spells for Hellfire Citadel
+* Fixed Wrath spells for Icecrown Citadel
+------------------------------------------------------------------------
+r233 | zensunim | 2016-08-23 15:10:59 +0000 (Tue, 23 Aug 2016) | 1 line
+Changed paths:
+   M /trunk/GTFO.lua
+
+Version update
+------------------------------------------------------------------------
+r232 | zensunim | 2016-08-23 15:10:30 +0000 (Tue, 23 Aug 2016) | 1 line
+Changed paths:
+   M /trunk/GTFO_Spells_LK.lua
+   M /trunk/GTFO_Spells_Special.lua
+   M /trunk/GTFO_Spells_WOD.lua
+
+Prep for 4.38.6
 ------------------------------------------------------------------------
 r230 | zensunim | 2016-08-13 18:03:13 +0000 (Sat, 13 Aug 2016) | 2 lines
 Changed paths:
@@ -46,12 +62,4 @@ Changed paths:
    M /trunk/GTFO_Spells_LGN.lua
 
 Added Legion spells for Nighthold
-------------------------------------------------------------------------
-r223 | zensunim | 2016-07-19 06:31:32 +0000 (Tue, 19 Jul 2016) | 2 lines
-Changed paths:
-   M /trunk/GTFO.lua
-   M /trunk/GTFO.toc
-
-4.38.3
-* Updated for patch 7.0.3
 ------------------------------------------------------------------------
