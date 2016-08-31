@@ -1,6 +1,45 @@
 Pack Command:  		zip -vr TP_Release.zip TidyPlates* -x@exclude.lst
 Exclusion List: 	*.svn*   *.DS_Store*   exclude.lst   *.db   *.png   *.gif   *.jpg   *.tif   *.txt   *.psd   *.bmp   *.zip
 
+
+---------------------------
+6.18.2 - Happy Legion Day!
+---------------------------
+* Typo in Quest display
+
+---------------------------
+6.18.1 - Happy Legion Day!
+---------------------------
+* RESTORED the "Use Blizzard Font" from the Hub/Profile panel.  This will use the STANDARD_TEXT_FONT
+* Note: "Force Blizzard Font" has been renamed to "Force Multi-lingual Font" to make its purpose clear.
+* Renamed/Repurposed "Filter NPC" to "Filter Enemy NPC"
+* Added: "Filter Non-Titled Friendly NPC".. Which hides friendly NPCs that DON'T have a title, such as "Innkeeper".
+* Added: Experimental: Quest display on Headline Status Text.
+
+---------------------------
+6.18.Beta21
+---------------------------
+
+* "Force Blizzard Font" added to the Tidy Plates main panel.  This will use the Fritz Quadrata family,
+	and possibly fix localization issues
+* REMOVED the "Use Default Blizzard Font" from the Hub.  See above.
+
+# Fixed "Spotlight on Casting" Opacity
+* Fixed "Bar Width" shrinking
+
+* Better nil handling
+* Layering improvements
+* In Hub\Templates, changed OnEvent handler to OnShow and removed panel:RegisterEvent("PLAYER_ENTERING_WORLD")
+	(This will keep it from being called until the panel is shown)
+
+* Broke Guildmate and Friend coloring.  I'll fix at some point.
+* On the good side, No more caching of NPC roles!  They can be read instantly, now.
+
+* Cleaned up some ancient cludgy code.
+
+* Introduced more bugs. (It always happens!)
+
+
 ---------------------------
 6.18.Beta20
 ---------------------------

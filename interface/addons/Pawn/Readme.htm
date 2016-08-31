@@ -442,6 +442,11 @@ and Pawn.</p>
 	<li>Undermine Journal (may prevent you from selecting scales in the Pawn UI)</li>
 </ul>
 <h2>Known issues</h2>
+<ul>
+	<li>Pawn is currently saving too much information about the built-in scales 
+	in your SavedVariables, like names, spec IDs, and so on.&nbsp; That stuff 
+	should be dynamically created each time you log in, not saved.</li>
+</ul>
 <h3>Things I might remove in upcoming versions of Pawn</h3>
 <ul>
 		<li>The concept of the "current" state of an item, versus "base" (I'll just 
@@ -468,10 +473,20 @@ and Pawn.</p>
 	fully customizable.</li>
 	<li>I should add a feature to the Values tab to import Ask Mr. Robot stat 
 	weights.&nbsp; (They can be exported from the AMR character page: click the 
-	green arrow button, then Best in Slot, then Edit Weights, then Share.)</li>
+	green arrow button, then Best in Slot, then Edit Weights, then Share.)<ul>
+		<li>Import from SimulationCraft shouldn't be too hard either.</li>
+		<li>First, I'll probably add a way to merge an imported scale with the 
+		Pawn template, to get things like weapon types added to the scale 
+		automatically.&nbsp; (Maybe "Class=SHAMAN, Spec=1" can be added to the 
+		import string?)</li>
+	</ul>
+	</li>
 </ul>
 <h2>Updates</h2>
-<p>Pawn 2.0 only works on World of Warcraft 7.0, the Legion prepatch.</p>
+<h3>Version 2.0.8</h3>
+<ul>
+	<li>Fixes to the French translation.</li>
+</ul>
 <h3>Version 2.0.7</h3>
 <ul>
 	<li>Fixed a problem that could occur on some new items where Pawn would 
@@ -527,6 +542,7 @@ and Pawn.</p>
 	<li>Updated translations for Spanish and Italian.</li>
 </ul>
 <h3>Version 2.0</h3>
+<p>Pawn 2.0 only works on World of Warcraft 7.0, the Legion prepatch.</p>
 <h4>New features and big changes</h4>
 <ul>
 	<li>By default, Pawn will now automatically make suggestions based on your 

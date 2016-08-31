@@ -87,7 +87,7 @@ Pour plus d'information sur la Personnalisation de Pawn, regarder le fichier d'a
 		Crit = "Crit", -- Needs review
 		CritInfo = "Coup critique. affecte les attaques de m\195\169l\195\169e, les attaques a distance et les sorts", -- Needs review
 		DpsInfo = "d\195\169gat par secondes d'arme. (si vous voulez diff\195\169rentes estimation pour diff\195\169rents types d'arme, voir la section \"statistiques sp\195\169ciale arme\".)",
-		HasteInfo = "Hate. affecte les attaques de m\195\169l\195\169e, les attaques a distance et les sorts", -- Needs review
+		HasteInfo = "H\195\162te. affecte les attaques de m\195\169l\195\169e, les attaques a distance et les sorts", -- Needs review
 		IndestructibleInfo = "Indestructible. \195\169vite que votre \195\169quipement prenne des d\195\169g\195\162ts.", -- Needs review
 		IndestructibleIs = "Etre |cffffffffindestructible|r vaut mieux:", -- Needs review
 		IntellectInfo = "La statistique principale, Intelligence", -- Needs review
@@ -203,7 +203,7 @@ Pour plus d'information sur la Personnalisation de Pawn, regarder le fichier d'a
 		WeaponTypeWarglaiveInfo = "points devant etre assign\195\169 si la pi\195\168ce est un Glaive de guerre",
 	},
 	TooltipParsing = {
-		Agility = "^%+?([-%d%.,]+) Agilit\195\169$",
+		Agility = "^%+?([-%d%. ,]+) Agilit\195\169$",
 		AllStats = "^%+?([%d%. ,]+) \195\160 toutes les caract\195\169ristiques$",
 		Ap = "^%+?([%d%. ,]+) \195\160 la puissance d'attaque$",
 		Armor = "^Armure\194\160: ([%d%. ,]+)$",
@@ -241,8 +241,8 @@ Pour plus d'information sur la Personnalisation de Pawn, regarder le fichier d'a
 		Flexible = "^Flexible$", -- Needs review
 		Formula = "Formule\194\160:", -- Needs review
 		Gun = "^Arme \195\160 feu$",
-		Haste = "^%+?(%-?%d+) H\195\162te$", -- Needs review
-		Haste2 = "^%+?([%d%. ,]+) \195\160 la h\195\162te",
+		Haste = "^%+?([%d%. ,]+) H\195\162te$",
+		Haste2 = "^%+?([%d%. ,]+) \195\160 la H\195\162te", -- Needs review
 		HaventCollectedAppearance = "^Vous n'avez pas r\195\169cup\195\169r\195\169 cette apparence$",
 		HeirloomLevelRange = "^Requier un niveau de %d+ \195\160 (%d+)", -- Needs review
 		HeirloomXpBoost = "^\195\137quip\195\169\194\160: L?'?[Ee]xp\195\169rience gagn\195\169e", -- Needs review
@@ -255,7 +255,7 @@ Pour plus d'information sur la Personnalisation de Pawn, regarder le fichier d'a
 		Hp52 = "^Equip\195\169: Reconstitue([%d%. ,]+) de vie par 5 sec%.$",
 		Hp53 = " ^%+?([%d%. ,]+) Points de [vV]ie [tT]outes les 5 [sS]%.?$",
 		Hp54 = " ^%+?([%d%. ,]+) [vV]ie [pP]ar 5 [sS]ec%.?$",
-		Intellect = "^%+?([-%d%.,]+) Intelligence$",
+		Intellect = "^%+?([-%d%. ,]+) Intelligence$",
 		Leather = "^Cuir$",
 		Leech = "^%+([%d%. ,]+) Ponction$",
 		Mace = "^Masse$",
@@ -308,13 +308,13 @@ Pour plus d'information sur la Personnalisation de Pawn, regarder le fichier d'a
 		Wand = "^Baguette$",
 		Warforged = "^De guerre$", -- Needs review
 		Warglaives = "^Glaives de guerre$", -- Needs review
-		WeaponDamage = "^D\195\169g\195\162ts\194\160: ([%d%. ,]+) %- ([%d%. ,]+)$",
+		WeaponDamage = "^D\195\169g\195\162ts : ([%d%. ,]+) %- ([%d%. ,]+)$", -- Needs review
 		WeaponDamageArcane = "^%+?([%d%. ,]+) %- ([%d%. ,]+) points de d\195\169g\195\162ts %(Arcanes%)$",
 		WeaponDamageArcaneExact = "^%+?([%d%. ,]+) points de d\195\169g\195\162ts %(Arcanes%)$",
 		WeaponDamageEnchantment = "^%+?([%d%. ,]+) aux d\195\169g\195\162ts de l'arme$",
 		WeaponDamageEquip = "^\195\137quip\195\169\194\160: %+?([%d%. ,]+) aux d\195\169g\195\162ts de l'arme%.$",
-		WeaponDamageExact = "^D\195\169g\195\162ts\194\160: ([%d%. ,]+)$",
-		WeaponDamageFire = "^%+?([%d%. ,]+) %- ([%d%. ,]+) points de d\195\169g\195\162ts %(Feu%)$",
+		WeaponDamageExact = "^([%d%. ,]+)D\195\169g\195\162ts$", -- Needs review
+		WeaponDamageFire = "^%+?([%d%. ,]+) %- ([%d%. ,]+) points de D\195\169g\195\162ts %(Feu%)$", -- Needs review
 		WeaponDamageFireExact = "^%+?([%d%. ,]+) points de d\195\169g\195\162ts %(Feu%)$",
 		WeaponDamageFrost = "^%+?([%d%. ,]+) %- ([%d%. ,]+) points de d\195\169g\195\162ts %(Givre%)$",
 		WeaponDamageFrostExact = "^%+?([%d%. ,]+) points de d\195\169g\195\162ts %(Givre%)$",

@@ -722,10 +722,10 @@ module.db.spell_durationByTalent_fix = {	--Изменение длительно
 	[1160] = {188651,"*1.5"},
 	[31281] = {200311,2},
 	[498] = {200407,4},
-	[1022] = {206338,"*1.4"},
-	[1044] = {206338,"*1.4"},
-	[6940] = {206338,"*1.4"},
-	[204018] = {206338,"*1.4"},
+	[1022] = {206338,"*1.5"},
+	[1044] = {206338,"*1.5"},
+	[6940] = {206338,"*1.5"},
+	[204018] = {206338,"*1.5"},
 	[26573] = {209218,{1,2,3,4,5,6}},
 	[205273] = {179546,6},
 	[31884] = {186945,{2.5,5,7.5,10,12.5,15}},
@@ -751,7 +751,7 @@ module.db.spell_cdByTalent_fix = {		--Изменение кд талантом\�
 	[52174] = {202163,-15},
 	[642] = {114154,"*0.7",213313,"*0.5"},
 	[498] = {114154,"*0.7"},
-	[633] = {200326,{-54.5,-100,-138.5,-171.5,-200,-225},114154,"*0.7",206380,"*0.6"},
+	[633] = {200326,{-54.5,-100,-138.5,-171.5,-200,-225},114154,"*0.7",206380,"*0.4"},
 	[20473] = {53376,"*0.5"},
 	[190784] = {204139,"*0.5"},
 	[35395] = {203316,-1},
@@ -1054,14 +1054,14 @@ module.db.spell_reduceCdCast = {	--Заклинания, применение к
 	
 	[195676]={1953,-15},
 	
-	[107428]={{116680,210804},-30,{137639,209256},-1.2},
+	[107428]={{116680,210804},-30,{137639,209256},-2.2},
 	
 	[23922]={{871,215057},-4},
-	[185358]={{193526,206889},-1},
-	[198670]={{193526,206889},-1},
-	[19434]={{193526,206889},-1},
-	[186387]={{193526,206889},-1},
-	[120679]={{34026,212278},-3},
+	[185358]={{193526,206889},-1.1},
+	[198670]={{193526,206889},-1.1},
+	[19434]={{193526,206889},-1.1},
+	[186387]={{193526,206889},-1.1},
+	[120679]={{34026,212278},-3.1},
 	[185311]={{79140,208895},-0.6},
 	[51723]={{79140,208895},-0.7},
 	[703]={{79140,208895},-0.9},
@@ -1078,11 +1078,11 @@ module.db.spell_reduceCdCast = {	--Заклинания, применение к
 	[16511]={{79140,208895},-0.6},
 	[152150]={{79140,208895},-0.5},
 	[17]={{33206,214576},-4},
-	[206930]={{55233,208706},-3},
+	[206930]={{55233,208706},-2},
 	[51505]={{198067,191512},-2},
-	[113656]={{137639,209256},-1.8},
-	[100784]={{137639,209256},-0.6},
-	[115151]={{115310,206902},-3},
+	[113656]={{137639,209256},-3.3},
+	[100784]={{137639,209256},-1.1},
+	[115151]={{115310,206902},-2.1},
 	[78674]={{102560,208199},-5,{194223,208199},-5},
 	[191034]={{102560,208199},-7.5,{194223,208199},-7.5},
 }
@@ -1547,6 +1547,7 @@ module.db.colsInit = {
 	fontGeneral = true,
 	textGeneral = true,
 	blacklistGeneral = true,
+	visibilityGeneral = true,
 	
 	iconGray = true,
 	textureAnimation = true,
@@ -2547,21 +2548,62 @@ do
 	local isInCombat = false
 	local isInEncounter = false
 	function module:updateCombatVisibility()
+		local _, zoneType = GetInstanceInfo()
+		local inRaid = IsInRaid()
 		for i=1,module.db.maxColumns do
 			local columnFrame = module.frame.colFrame[i]
+			
+			local state = columnFrame.optionIsEnabled
+		
 			if not columnFrame.methodsOnlyInCombat then
 			
 			elseif isInCombat and columnFrame.optionIsEnabled then
-				columnFrame:Show()
+				state = state and true
 			elseif not isInCombat then
-				columnFrame:Hide()
+				state = false
 			end
-		end
-		if VExRT.ExCD2.colSet[module.db.maxColumns+1].methodsOnlyInCombat and not VExRT.ExCD2.SplitOpt then
-			if isInCombat then
-				module.frame:Show()
+			
+			if zoneType == "arena" then
+				if not columnFrame.visibilityArena then
+					state = false
+				end
+			elseif zoneType == "party" then
+				if not columnFrame.visibility5ppl then
+					state = false
+				end			
+			elseif zoneType == "pvp" then
+				if not columnFrame.visibilityBG then
+					state = false
+				end				
+			elseif zoneType == "raid" then
+				if not columnFrame.visibilityRaid then
+					state = false
+				end				
+			elseif zoneType == "scenario" then
+				if not columnFrame.visibility3ppl then
+					state = false
+				end				
 			else
-				module.frame:Hide()
+				if not columnFrame.visibilityWorld then
+					state = false
+				end				
+			end
+			
+			if (columnFrame.visibilityPartyType == 2 and not inRaid) or (columnFrame.visibilityPartyType == 1 and inRaid) then
+				state = false
+			end
+			
+			columnFrame:SetShown(state)
+		end
+		if not VExRT.ExCD2.SplitOpt then
+			if VExRT.ExCD2.colSet[module.db.maxColumns+1].methodsOnlyInCombat then
+				if isInCombat then
+					module.frame:Show()
+				else
+					module.frame:Hide()
+				end
+			elseif module.frame.IsEnabled then
+				module.frame:Show()
 			end
 		end
 	end
@@ -3718,10 +3760,14 @@ function module:Enable()
 	else
 		module:ReloadAllSplits()
 	end
+	
+	module.frame.IsEnabled = true
 
 	module:RegisterSlash()
 	module:RegisterTimer()
 	module:RegisterEvents('SCENARIO_UPDATE','GROUP_ROSTER_UPDATE','COMBAT_LOG_EVENT_UNFILTERED','UNIT_PET','PLAYER_LOGOUT','ZONE_CHANGED_NEW_AREA','CHALLENGE_MODE_RESET','PLAYER_REGEN_DISABLED','PLAYER_REGEN_ENABLED')
+
+	UpdateRoster()
 end
 
 function module:Disable()
@@ -3733,6 +3779,8 @@ function module:Disable()
 			module.frame.colFrame[i]:Hide()
 		end 
 	end
+	
+	module.frame.IsEnabled = false
 	
 	module:UnregisterSlash()
 	module:UnregisterTimer()
@@ -3770,6 +3818,15 @@ function module.main:ADDON_LOADED()
 			end
 		end
 	end
+	if VExRT.Addon.Version < 3755 then
+		if VExRT.ExCD2.colSet then
+			for i=1,module.db.maxColumns+1 do
+				if VExRT.ExCD2.colSet[i] then
+					VExRT.ExCD2.colSet[i].visibilityGeneral = true
+				end
+			end
+		end
+	end	
 	
 	if VExRT.ExCD2.Left and VExRT.ExCD2.Top then
 		module.frame:ClearAllPoints()
@@ -3917,6 +3974,7 @@ do
 	local function funcScheduledUpdate()
 		scheduledUpdateRoster = nil
 		UpdateRoster()
+		module:updateCombatVisibility()
 	end
 	function module.main:GROUP_ROSTER_UPDATE()
 		if not scheduledUpdateRoster then
@@ -3931,12 +3989,22 @@ do
 		scheduledUpdateRoster = nil
 		UpdateRoster()
 	end
+	
+	local scheduledVisibility = nil
+	local function funcScheduledVisibility()
+		scheduledVisibility = nil
+		module:updateCombatVisibility()
+	end
+	
 	function module.main:ZONE_CHANGED_NEW_AREA()
 		if select(2, IsInInstance()) == "arena" then
 			AfterCombatResetFunction(true)
 			UpdateAllData()
 			SortAllData()
 		end
+		if not scheduledUpdateRoster then
+			scheduledVisibility = ScheduleTimer(funcScheduledVisibility,2)
+		end		
 		if not scheduledUpdateRoster then
 			scheduledUpdateRoster = ScheduleTimer(funcScheduledUpdate,10)
 		end
@@ -4392,7 +4460,7 @@ do
 		elseif spellID == 31935 and session_gGUIDs[sourceName][207628] then
 			local line = CDList[sourceName][86659]
 			if line then
-				line.cd = line.cd - 4
+				line.cd = line.cd - 3
 				if line.cd < 0 then 
 					line.cd = 0 
 				end
@@ -4457,7 +4525,7 @@ do
 		elseif spellID == 198013 and critical and session_gGUIDs[sourceName][215149] then
 			local line = CDList[sourceName][198013]
 			if line then
-				line.cd = line.cd - 0.3
+				line.cd = line.cd - 0.1
 				if line.cd < 0 then 
 					line.cd = 0 
 				end
@@ -4470,7 +4538,7 @@ do
 		elseif spellID == 178740 and session_gGUIDs[sourceName][210970] then
 			local line = CDList[sourceName][204021]
 			if line then
-				line.cd = line.cd - 3
+				line.cd = line.cd - 2
 				if line.cd < 0 then 
 					line.cd = 0 
 				end
@@ -5880,6 +5948,19 @@ function module.options:Load()
 		module.options.optColSet.chkGeneralBlackList:SetChecked(VExRT.ExCD2.colSet[i].blacklistGeneral)		
 		
 		module.options.optColSet.chkGeneralBlackList:doAlphas()
+		
+		module.options.optColSet.chkVisibilityPartyTypeAlways:SetChecked(not VExRT.ExCD2.colSet[i].visibilityPartyType)
+		module.options.optColSet.chkVisibilityPartyTypeParty:SetChecked(VExRT.ExCD2.colSet[i].visibilityPartyType == 1)
+		module.options.optColSet.chkVisibilityPartyTypeRaid:SetChecked(VExRT.ExCD2.colSet[i].visibilityPartyType == 2)
+		module.options.optColSet.chkVisibilityZoneArena:SetChecked(not VExRT.ExCD2.colSet[i].visibilityDisableArena)
+		module.options.optColSet.chkVisibilityZoneBG:SetChecked(not VExRT.ExCD2.colSet[i].visibilityDisableBG)
+		module.options.optColSet.chkVisibilityZoneScenario:SetChecked(not VExRT.ExCD2.colSet[i].visibilityDisable3ppl)
+		module.options.optColSet.chkVisibilityZone5ppl:SetChecked(not VExRT.ExCD2.colSet[i].visibilityDisable5ppl)
+		module.options.optColSet.chkVisibilityZoneRaid:SetChecked(not VExRT.ExCD2.colSet[i].visibilityDisableRaid)
+		module.options.optColSet.chkVisibilityZoneOutdoor:SetChecked(not VExRT.ExCD2.colSet[i].visibilityDisableWorld)
+		module.options.optColSet.chkGeneralVisibility:SetChecked(VExRT.ExCD2.colSet[i].visibilityGeneral)
+
+		module.options.optColSet.chkGeneralVisibility:doAlphas()
 
 		ExRT.lib.ShowOrHide(module.options.optColSet.chkEnable,not isGeneralTab)
 		ExRT.lib.ShowOrHide(module.options.optColSet.chkGeneral,not isGeneralTab)
@@ -5889,6 +5970,7 @@ function module.options:Load()
 		ExRT.lib.ShowOrHide(module.options.optColSet.chkGeneralFont,not isGeneralTab)
 		ExRT.lib.ShowOrHide(module.options.optColSet.chkGeneralText,not isGeneralTab)
 		ExRT.lib.ShowOrHide(module.options.optColSet.chkGeneralMethods,not isGeneralTab)
+		ExRT.lib.ShowOrHide(module.options.optColSet.chkGeneralVisibility,not isGeneralTab)
 		ExRT.lib.ShowOrHide(module.options.optColSet.chkGeneralBlackList,not isGeneralTab)
 		
 		ExRT.lib.ShowOrHide(module.options.optColSet.chkSortByAvailability,isGeneralTab)
@@ -5928,7 +6010,7 @@ function module.options:Load()
 	self.tab.tabs[2].decorationLine.texture:SetGradientAlpha("VERTICAL",.24,.25,.30,1,.27,.28,.33,1)
 
 	 
-	self.optColSet.superTabFrame = ExRT.lib:ScrollTabsFrame(self.optColTabs,L.cd2OtherSetTabNameGeneral,L.cd2OtherSetTabNameIcons,L.cd2OtherSetTabNameColors,L.cd2OtherSetTabNameFont,L.cd2OtherSetTabNameText,L.cd2OtherSetTabNameOther,L.cd2OtherSetTabNameBlackList,L.cd2OtherSetTabNameTemplate):Size(660,450):Point("TOP",0,-10)	
+	self.optColSet.superTabFrame = ExRT.lib:ScrollTabsFrame(self.optColTabs,L.cd2OtherSetTabNameGeneral,L.cd2OtherSetTabNameIcons,L.cd2OtherSetTabNameColors,L.cd2OtherSetTabNameFont,L.cd2OtherSetTabNameText,L.cd2OtherSetTabNameOther,L.cd2OtherSetTabNameVisibility,L.cd2OtherSetTabNameBlackList,L.cd2OtherSetTabNameTemplate):Size(660,450):Point("TOP",0,-10)	
 	
 	self.optColSet.chkEnable = ELib:Check(self.optColSet.superTabFrame.tab[1],"|cff00ff00 >>>"..L.senable.."<<<"):Point(10,-10):OnClick(function(self) 
 		if self:GetChecked() then
@@ -6711,15 +6793,6 @@ function module.options:Load()
 		module:ReloadAllSplits()
 	end):Tooltip(L.cd2ColSetOneSpellPerColTooltip)
 	
-	self.optColSet.chkOnlyInCombat = ELib:Check(self.optColSet.superTabFrame.tab[6],L.TimerOnlyInCombat):Point(10,-330):OnClick(function(self) 
-		if self:GetChecked() then
-			VExRT.ExCD2.colSet[module.options.optColTabs.selected].methodsOnlyInCombat = true
-		else
-			VExRT.ExCD2.colSet[module.options.optColTabs.selected].methodsOnlyInCombat = nil
-		end
-		module:ReloadAllSplits()
-	end)
-	
 	self.optColSet.chkGeneralMethods = ELib:Check(self.optColSet.superTabFrame.tab[6],L.cd2ColSetGeneral):Point("TOPRIGHT",-10,-10):Left():OnClick(function(self) 
 		if self:GetChecked() then
 			VExRT.ExCD2.colSet[module.options.optColTabs.selected].methodsGeneral = true
@@ -6730,10 +6803,10 @@ function module.options:Load()
 		self:doAlphas()
 	end)
 	function self.optColSet.chkGeneralMethods:doAlphas()
-		ExRT.lib.SetAlphas(VExRT.ExCD2.colSet[module.options.optColTabs.selected].methodsGeneral and module.options.optColTabs.selected ~= (module.db.maxColumns + 1) and 0.5 or 1,module.options.optColSet.chkShowOnlyOnCD,module.options.optColSet.chkBotToTop,module.options.optColSet.dropDownStyleAnimation,module.options.optColSet.dropDownTimeLineAnimation,module.options.optColSet.chkIconTooltip,module.options.optColSet.chkLineClick,module.options.optColSet.chkNewSpellNewLine,module.options.optColSet.dropDownSortingRules,module.options.optColSet.textSortingRules,module.options.optColSet.textStyleAnimation,module.options.optColSet.textTimeLineAnimation,module.options.optColSet.chkHideOwnSpells,module.options.optColSet.chkAlphaNotInRange,module.options.optColSet.sliderAlphaNotInRange,module.options.optColSet.chkDisableActive,module.options.optColSet.chkOneSpellPerCol,module.options.optColSet.chkOnlyInCombat)
+		ExRT.lib.SetAlphas(VExRT.ExCD2.colSet[module.options.optColTabs.selected].methodsGeneral and module.options.optColTabs.selected ~= (module.db.maxColumns + 1) and 0.5 or 1,module.options.optColSet.chkShowOnlyOnCD,module.options.optColSet.chkBotToTop,module.options.optColSet.dropDownStyleAnimation,module.options.optColSet.dropDownTimeLineAnimation,module.options.optColSet.chkIconTooltip,module.options.optColSet.chkLineClick,module.options.optColSet.chkNewSpellNewLine,module.options.optColSet.dropDownSortingRules,module.options.optColSet.textSortingRules,module.options.optColSet.textStyleAnimation,module.options.optColSet.textTimeLineAnimation,module.options.optColSet.chkHideOwnSpells,module.options.optColSet.chkAlphaNotInRange,module.options.optColSet.sliderAlphaNotInRange,module.options.optColSet.chkDisableActive,module.options.optColSet.chkOneSpellPerCol)
 	end
 	
-	self.optColSet.chkSortByAvailability = ELib:Check(self.optColSet.superTabFrame.tab[6],L.cd2SortByAvailability,VExRT.ExCD2.SortByAvailability):Point(10,-355):OnClick(function(self) 
+	self.optColSet.chkSortByAvailability = ELib:Check(self.optColSet.superTabFrame.tab[6],L.cd2SortByAvailability,VExRT.ExCD2.SortByAvailability):Point(10,-330):OnClick(function(self) 
 		if self:GetChecked() then
 			VExRT.ExCD2.SortByAvailability = true
 		else
@@ -6759,12 +6832,117 @@ function module.options:Load()
 		end
 		module:ReloadAllSplits()
 	end)
+
+	--> Visibility
+	
+	
+	self.optColSet.chkOnlyInCombat = ELib:Check(self.optColSet.superTabFrame.tab[7],L.TimerOnlyInCombat):Point(10,-30):OnClick(function(self) 
+		if self:GetChecked() then
+			VExRT.ExCD2.colSet[module.options.optColTabs.selected].methodsOnlyInCombat = true
+		else
+			VExRT.ExCD2.colSet[module.options.optColTabs.selected].methodsOnlyInCombat = nil
+		end
+		module:ReloadAllSplits()
+	end)
+	
+	self.optColSet.visibilityTextPartyType = ELib:Text(self.optColSet.superTabFrame.tab[7],L.cd2OtherVisibilityPartyType..":",10):Point(10,-60):Color()
+	
+	self.optColSet.chkVisibilityPartyTypeAlways = ELib:Radio(self.optColSet.superTabFrame.tab[7],ALWAYS):Point(10,-75):OnClick(function(self) 
+		module.options.optColSet.chkVisibilityPartyTypeAlways:SetChecked(true)
+		module.options.optColSet.chkVisibilityPartyTypeParty:SetChecked(false)
+		module.options.optColSet.chkVisibilityPartyTypeRaid:SetChecked(false)
+		VExRT.ExCD2.colSet[module.options.optColTabs.selected].visibilityPartyType = nil
+		module:ReloadAllSplits()
+	end)
+	self.optColSet.chkVisibilityPartyTypeParty = ELib:Radio(self.optColSet.superTabFrame.tab[7],AGGRO_WARNING_IN_PARTY):Point(10,-95):OnClick(function(self) 
+		module.options.optColSet.chkVisibilityPartyTypeAlways:SetChecked(false)
+		module.options.optColSet.chkVisibilityPartyTypeParty:SetChecked(true)
+		module.options.optColSet.chkVisibilityPartyTypeRaid:SetChecked(false)
+		VExRT.ExCD2.colSet[module.options.optColTabs.selected].visibilityPartyType = 1
+		module:ReloadAllSplits()
+	end)
+	self.optColSet.chkVisibilityPartyTypeRaid = ELib:Radio(self.optColSet.superTabFrame.tab[7],L.cd2OtherVisibilityPartyTypeRaid):Point(10,-115):OnClick(function(self) 
+		module.options.optColSet.chkVisibilityPartyTypeAlways:SetChecked(false)
+		module.options.optColSet.chkVisibilityPartyTypeParty:SetChecked(false)
+		module.options.optColSet.chkVisibilityPartyTypeRaid:SetChecked(true)
+		VExRT.ExCD2.colSet[module.options.optColTabs.selected].visibilityPartyType = 2
+		module:ReloadAllSplits()
+	end)
+	
+	self.optColSet.visibilityTextZoneType = ELib:Text(self.optColSet.superTabFrame.tab[7],L.cd2OtherVisibilityZoneType..":",10):Point(10,-140):Color()
+	
+	self.optColSet.chkVisibilityZoneArena = ELib:Check(self.optColSet.superTabFrame.tab[7],ARENA):Point(10,-155):OnClick(function(self) 
+		if self:GetChecked() then
+			VExRT.ExCD2.colSet[module.options.optColTabs.selected].visibilityDisableArena = nil
+		else
+			VExRT.ExCD2.colSet[module.options.optColTabs.selected].visibilityDisableArena = true
+		end
+		module:ReloadAllSplits()
+	end)
+	
+	self.optColSet.chkVisibilityZoneBG = ELib:Check(self.optColSet.superTabFrame.tab[7],BATTLEGROUND):Point(10,-180):OnClick(function(self) 
+		if self:GetChecked() then
+			VExRT.ExCD2.colSet[module.options.optColTabs.selected].visibilityDisableBG = nil
+		else
+			VExRT.ExCD2.colSet[module.options.optColTabs.selected].visibilityDisableBG = true
+		end
+		module:ReloadAllSplits()
+	end)
+	
+	self.optColSet.chkVisibilityZoneScenario = ELib:Check(self.optColSet.superTabFrame.tab[7],TRACKER_HEADER_SCENARIO):Point(10,-205):OnClick(function(self) 
+		if self:GetChecked() then
+			VExRT.ExCD2.colSet[module.options.optColTabs.selected].visibilityDisable3ppl = nil
+		else
+			VExRT.ExCD2.colSet[module.options.optColTabs.selected].visibilityDisable3ppl = true
+		end
+		module:ReloadAllSplits()
+	end)
+	
+	self.optColSet.chkVisibilityZone5ppl = ELib:Check(self.optColSet.superTabFrame.tab[7],CALENDAR_TYPE_DUNGEON):Point(10,-230):OnClick(function(self) 
+		if self:GetChecked() then
+			VExRT.ExCD2.colSet[module.options.optColTabs.selected].visibilityDisable5ppl = nil
+		else
+			VExRT.ExCD2.colSet[module.options.optColTabs.selected].visibilityDisable5ppl = true
+		end
+		module:ReloadAllSplits()
+	end)
+	
+	self.optColSet.chkVisibilityZoneRaid = ELib:Check(self.optColSet.superTabFrame.tab[7],RAID):Point(10,-255):OnClick(function(self) 
+		if self:GetChecked() then
+			VExRT.ExCD2.colSet[module.options.optColTabs.selected].visibilityDisableRaid = nil
+		else
+			VExRT.ExCD2.colSet[module.options.optColTabs.selected].visibilityDisableRaid = true
+		end
+		module:ReloadAllSplits()
+	end)
+	
+	self.optColSet.chkVisibilityZoneOutdoor = ELib:Check(self.optColSet.superTabFrame.tab[7],WORLD):Point(10,-280):OnClick(function(self) 
+		if self:GetChecked() then
+			VExRT.ExCD2.colSet[module.options.optColTabs.selected].visibilityDisableWorld = nil
+		else
+			VExRT.ExCD2.colSet[module.options.optColTabs.selected].visibilityDisableWorld = true
+		end
+		module:ReloadAllSplits()
+	end)
+	
+	self.optColSet.chkGeneralVisibility = ELib:Check(self.optColSet.superTabFrame.tab[7],L.cd2ColSetGeneral):Point("TOPRIGHT",-10,-10):Left():OnClick(function(self) 
+		if self:GetChecked() then
+			VExRT.ExCD2.colSet[module.options.optColTabs.selected].visibilityGeneral = true
+		else
+			VExRT.ExCD2.colSet[module.options.optColTabs.selected].visibilityGeneral = nil
+		end
+		module:ReloadAllSplits()
+		self:doAlphas()
+	end)
+	function self.optColSet.chkGeneralVisibility:doAlphas()
+		ExRT.lib.SetAlphas(VExRT.ExCD2.colSet[module.options.optColTabs.selected].visibilityGeneral and module.options.optColTabs.selected ~= (module.db.maxColumns + 1) and 0.5 or 1,module.options.optColSet.chkOnlyInCombat,module.options.optColSet.visibilityTextPartyType,module.options.optColSet.chkVisibilityPartyTypeAlways,module.options.optColSet.chkVisibilityPartyTypeParty,module.options.optColSet.chkVisibilityPartyTypeRaid,module.options.optColSet.visibilityTextZoneType,module.options.optColSet.chkVisibilityZoneArena,module.options.optColSet.chkVisibilityZoneBG,module.options.optColSet.chkVisibilityZoneScenario,module.options.optColSet.chkVisibilityZone5ppl,module.options.optColSet.chkVisibilityZoneRaid,module.options.optColSet.chkVisibilityZoneOutdoor)
+	end
 	
 	--> Black List
 	
-	self.optColSet.blacklistText = ELib:Text(self.optColSet.superTabFrame.tab[7],L.cd2ColSetBlacklistTooltip,11):Size(430,200):Point(10,-30):Top():Color()
+	self.optColSet.blacklistText = ELib:Text(self.optColSet.superTabFrame.tab[8],L.cd2ColSetBlacklistTooltip,11):Size(430,200):Point(10,-30):Top():Color()
 	
-	self.optColSet.blacklistEditBox = ELib:MultiEdit(self.optColSet.superTabFrame.tab[7]):Size(430,140):Point("TOP",0,-85)
+	self.optColSet.blacklistEditBox = ELib:MultiEdit(self.optColSet.superTabFrame.tab[8]):Size(430,140):Point("TOP",0,-85)
 	do
 		local scheluded = nil
 		local function ScheludeFunc(self)
@@ -6782,9 +6960,9 @@ function module.options:Load()
 		end
 	end
 
-	self.optColSet.whitelistText = ELib:Text(self.optColSet.superTabFrame.tab[7],L.cd2ColSetWhitelistTooltip,11):Size(430,200):Point(10,-235):Top():Color()
+	self.optColSet.whitelistText = ELib:Text(self.optColSet.superTabFrame.tab[8],L.cd2ColSetWhitelistTooltip,11):Size(430,200):Point(10,-235):Top():Color()
 	
-	self.optColSet.whitelistEditBox = ELib:MultiEdit(self.optColSet.superTabFrame.tab[7]):Size(430,140):Point("TOP",0,-290)
+	self.optColSet.whitelistEditBox = ELib:MultiEdit(self.optColSet.superTabFrame.tab[8]):Size(430,140):Point("TOP",0,-290)
 	do
 		local scheluded = nil
 		local function ScheludeFunc(self)
@@ -6802,7 +6980,7 @@ function module.options:Load()
 		end
 	end
 		
-	self.optColSet.chkGeneralBlackList = ELib:Check(self.optColSet.superTabFrame.tab[7],L.cd2ColSetGeneral):Point("TOPRIGHT",-10,-10):Left():OnClick(function(self) 
+	self.optColSet.chkGeneralBlackList = ELib:Check(self.optColSet.superTabFrame.tab[8],L.cd2ColSetGeneral):Point("TOPRIGHT",-10,-10):Left():OnClick(function(self) 
 		if self:GetChecked() then
 			VExRT.ExCD2.colSet[module.options.optColTabs.selected].blacklistGeneral = true
 		else
@@ -7293,7 +7471,7 @@ function module.options:Load()
 	}
 	self.optColSet.templateSaveData = nil
 	
-	self.optColSet.templatesScrollFrame = ELib:ScrollFrame(self.optColSet.superTabFrame.tab[8]):Size(430,380):Point("TOP",0,-50):Height( ceil(#self.optColSet.templateData/2) * 125 + 10 )
+	self.optColSet.templatesScrollFrame = ELib:ScrollFrame(self.optColSet.superTabFrame.tab[9]):Size(430,380):Point("TOP",0,-50):Height( ceil(#self.optColSet.templateData/2) * 125 + 10 )
 	for i=1,#self.optColSet.templateData do if i==1 or not self.optColSet.templateData[i-1]._twoSized then
 		local templateFrame = CreateFrame("Button",nil,self.optColSet.templatesScrollFrame.C)
 		self.optColSet.templates[i] = templateFrame
@@ -7485,7 +7663,7 @@ function module.options:Load()
 		end end
 	end end
 	
-	self.optColSet.templateRestore = CreateFrame("Button",nil,self.optColSet.superTabFrame.tab[8])
+	self.optColSet.templateRestore = CreateFrame("Button",nil,self.optColSet.superTabFrame.tab[9])
 	self.optColSet.templateRestore:SetPoint("TOP",0,-10)
 	self.optColSet.templateRestore:SetSize(430,30)
 	self.optColSet.templateRestore:SetBackdrop({edgeFile = ExRT.F.defBorder, edgeSize = 8})
@@ -7845,7 +8023,15 @@ function module:ReloadAllSplits(argScaleFix)
 			columnFrame.methodsAlphaNotInRangeNum = columnFrame.methodsAlphaNotInRangeNum / 100
 		columnFrame.methodsDisableActive = (not VExRT_ColumnOptions[i].methodsGeneral and VExRT_ColumnOptions[i].methodsDisableActive) or (VExRT_ColumnOptions[i].methodsGeneral and VExRT_ColumnOptions[module.db.maxColumns+1].methodsDisableActive)
 		columnFrame.methodsOneSpellPerCol = (not VExRT_ColumnOptions[i].methodsGeneral and VExRT_ColumnOptions[i].methodsOneSpellPerCol) or (VExRT_ColumnOptions[i].methodsGeneral and VExRT_ColumnOptions[module.db.maxColumns+1].methodsOneSpellPerCol)
-		columnFrame.methodsOnlyInCombat = (not VExRT_ColumnOptions[i].methodsGeneral and VExRT_ColumnOptions[i].methodsOnlyInCombat) or (VExRT_ColumnOptions[i].methodsGeneral and VExRT_ColumnOptions[module.db.maxColumns+1].methodsOnlyInCombat)
+		
+		columnFrame.methodsOnlyInCombat = (not VExRT_ColumnOptions[i].visibilityGeneral and VExRT_ColumnOptions[i].methodsOnlyInCombat) or (VExRT_ColumnOptions[i].visibilityGeneral and VExRT_ColumnOptions[module.db.maxColumns+1].methodsOnlyInCombat)
+		columnFrame.visibilityPartyType = (not VExRT_ColumnOptions[i].visibilityGeneral and VExRT_ColumnOptions[i].visibilityPartyType) or (VExRT_ColumnOptions[i].visibilityGeneral and VExRT_ColumnOptions[module.db.maxColumns+1].visibilityPartyType)
+		columnFrame.visibilityArena = not ( (not VExRT_ColumnOptions[i].visibilityGeneral and VExRT_ColumnOptions[i].visibilityDisableArena) or (VExRT_ColumnOptions[i].visibilityGeneral and VExRT_ColumnOptions[module.db.maxColumns+1].visibilityDisableArena) )
+		columnFrame.visibilityBG = not ( (not VExRT_ColumnOptions[i].visibilityGeneral and VExRT_ColumnOptions[i].visibilityDisableBG) or (VExRT_ColumnOptions[i].visibilityGeneral and VExRT_ColumnOptions[module.db.maxColumns+1].visibilityDisableBG) )
+		columnFrame.visibility3ppl = not ( (not VExRT_ColumnOptions[i].visibilityGeneral and VExRT_ColumnOptions[i].visibilityDisable3ppl) or (VExRT_ColumnOptions[i].visibilityGeneral and VExRT_ColumnOptions[module.db.maxColumns+1].visibilityDisable3ppl) )
+		columnFrame.visibility5ppl = not ( (not VExRT_ColumnOptions[i].visibilityGeneral and VExRT_ColumnOptions[i].visibilityDisable5ppl) or (VExRT_ColumnOptions[i].visibilityGeneral and VExRT_ColumnOptions[module.db.maxColumns+1].visibilityDisable5ppl) )
+		columnFrame.visibilityRaid = not ( (not VExRT_ColumnOptions[i].visibilityGeneral and VExRT_ColumnOptions[i].visibilityDisableRaid) or (VExRT_ColumnOptions[i].visibilityGeneral and VExRT_ColumnOptions[module.db.maxColumns+1].visibilityDisableRaid) )
+		columnFrame.visibilityWorld = not ( (not VExRT_ColumnOptions[i].visibilityGeneral and VExRT_ColumnOptions[i].visibilityDisableWorld) or (VExRT_ColumnOptions[i].visibilityGeneral and VExRT_ColumnOptions[module.db.maxColumns+1].visibilityDisableWorld) )
 
 		columnFrame.textTemplateLeft = (not VExRT_ColumnOptions[i].textGeneral and VExRT_ColumnOptions[i].textTemplateLeft) or (VExRT_ColumnOptions[i].textGeneral and VExRT_ColumnOptions[module.db.maxColumns+1].textTemplateLeft) or module.db.colsDefaults.textTemplateLeft
 		columnFrame.textTemplateRight = (not VExRT_ColumnOptions[i].textGeneral and VExRT_ColumnOptions[i].textTemplateRight) or (VExRT_ColumnOptions[i].textGeneral and VExRT_ColumnOptions[module.db.maxColumns+1].textTemplateRight) or module.db.colsDefaults.textTemplateRight
@@ -9345,10 +9531,10 @@ local function BlizzUiFix_DealWithErrors()
 end
 
 local function UpdateArtifactData()
-	moduleInspect:UnregisterEvents('ARTIFACT_UPDATE')
 	if not C_ArtifactUI.GetEquippedArtifactInfo() then
 		return
 	end
+	moduleInspect:UnregisterEvents('ARTIFACT_UPDATE')
 	local isArtifactFrameShown = ArtifactFrame and ArtifactFrame:IsShown()
 	if not isArtifactFrameShown then
 		C_Timer.After(0.3,BlizzUiFix_DealWithErrors)

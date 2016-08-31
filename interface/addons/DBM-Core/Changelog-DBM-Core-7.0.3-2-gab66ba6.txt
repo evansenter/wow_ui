@@ -1,0 +1,3 @@
+subversion:
+	- Omega via svn r15181: Just never skip anything if C_Scenario.IsInScenario() is true
+	- tandanu via svn r15180: increment alpha version

@@ -41,9 +41,9 @@
 --  Globals/Default Options  --
 -------------------------------
 DBM = {
-	Revision = tonumber(("$Revision: 15153 $"):sub(12, -3)),
-	DisplayVersion = "7.0.3 alpha", -- the string that is shown as version
-	ReleaseRevision = 15117 -- the revision of the latest stable version that is available
+	Revision = tonumber(("$Revision: 15181 $"):sub(12, -3)),
+	DisplayVersion = "7.0.4 alpha", -- the string that is shown as version
+	ReleaseRevision = 15178 -- the revision of the latest stable version that is available
 }
 DBM.HighestRelease = DBM.ReleaseRevision --Updated if newer version is detected, used by update nags to reflect critical fixes user is missing on boss pulls
 
@@ -150,7 +150,6 @@ DBM.DefaultOptions = {
 	HideObjectivesFrame = true,
 	HideGarrisonToasts = true,
 	HideGuildChallengeUpdates = true,
-	HideApplicantAlerts = 0,
 	HideTooltips = false,
 	DisableSFX = false,
 	EnableModels = true,
@@ -279,6 +278,7 @@ DBM.DefaultOptions = {
 	NewsMessageShown = 4,
 	MoviesSeen = {},
 	MovieFilter = "AfterFirst",
+	TalkingHeadFilter = "Never",
 	LastRevision = 0,
 	FilterSayAndYell = false,
 	DebugMode = false,
@@ -422,8 +422,10 @@ local targetMonitor = nil
 local statusWhisperDisabled = false
 local wowTOC = select(4, GetBuildInfo())
 local dbmToc = 0
+local isTalkingHeadLoaded = false
+local talkingHeadUnregistered = false
 
-local fakeBWVersion, fakeBWHash = 7, "14c850d"
+local fakeBWVersion, fakeBWHash = 8, "f6fdc8d"
 local versionQueryString, versionResponseString = "Q:%d-%s", "V:%d-%s"
 
 local enableIcons = true -- set to false when a raid leader or a promoted player has a newer version of DBM
@@ -1119,6 +1121,13 @@ do
 				self.Options.tempBreak2 = nil
 			end
 		end
+		if TalkingHeadFrame and not talkingHeadUnregistered and (self.Options.TalkingHeadFilter == "Always" or self.Options.TalkingHeadFilter == "CombatOnly" and InCombatLockdown() or self.Options.TalkingHeadFilter == "BossCombatOnly" and IsEncounterInProgress()) then
+			TalkingHeadFrame:UnregisterAllEvents()
+			--TalkingHeadFrame_CloseImmediately()--Calling this crashes wow apparently
+			isTalkingHeadLoaded = true--it laoded before DBM, so this secondary check just checks if frame exists and sets loaded = true
+			talkingHeadUnregistered = true
+			self:Debug("TalkingHead has been unregistered", 2)
+		end
 	end
 
 	-- register a callback that will be executed once the addon is fully loaded (ADDON_LOADED fired, saved vars are available)
@@ -1272,7 +1281,6 @@ do
 				"LFG_PROPOSAL_FAILED",
 				"LFG_PROPOSAL_SUCCEEDED",
 				"READY_CHECK",
-				"LFG_LIST_APPLICANT_LIST_UPDATED",
 				"UPDATE_BATTLEFIELD_STATUS",
 				"CINEMATIC_START",
 				"PLAYER_LEVEL_UP",
@@ -1293,6 +1301,17 @@ do
 				healthCombatInitialized = true
 			end)
 			self:Schedule(10, runDelayedFunctions, self)
+		end
+		if modname == "Blizzard_TalkingHeadUI" and not isTalkingHeadLoaded then
+			isTalkingHeadLoaded = true
+			if not isLoaded then return end--DBM isn't loaded yet, options won't exist yet
+			self:Debug("Blizzard_TalkingHeadUI has been loaded", 2)
+			if self.Options.TalkingHeadFilter == "Always" or self.Options.TalkingHeadFilter == "CombatOnly" and InCombatLockdown() or self.Options.TalkingHeadFilter == "BossCombatOnly" and IsEncounterInProgress() then
+				TalkingHeadFrame:UnregisterAllEvents()
+				--TalkingHeadFrame_CloseImmediately()--Calling this crashes wow apparently
+				talkingHeadUnregistered = true
+				self:Debug("TalkingHead has been unregistered", 2)
+			end
 		end
 	end
 end
@@ -1924,6 +1943,10 @@ do
 			DBM:AddMsg(DBM_CORE_LAG_CHECKING)
 			C_TimerAfter(5, function() DBM:ShowLag() end)
 		elseif cmd:sub(1, 3) == "hud" then
+			if DBM.Options.EnablePatchRestrictions and IsInInstance() then
+				DBM:AddMsg(DBM_CORE_NO_HUD)
+				return
+			end
 			local hudType, target, duration = string.split(" ", msg:sub(4):trim())
 			if hudType == "" then
 				for i, v in ipairs(DBM_CORE_HUD_USAGE) do
@@ -2014,6 +2037,10 @@ do
 				DBM:AddMsg(DBM_CORE_HUD_SUCCESS:format(strFromTime(hudDuration)))
 			end
 		elseif cmd:sub(1, 5) == "arrow" then
+			if DBM.Options.EnablePatchRestrictions and IsInInstance() then
+				DBM:AddMsg(DBM_CORE_NO_ARROW)
+				return
+			end
 			local x, y, z = string.split(" ", msg:sub(6):trim())
 			local xNum, yNum, zNum = tonumber(x or ""), tonumber(y or ""), tonumber(z or "")
 			local success
@@ -3428,20 +3455,6 @@ function DBM:READY_CHECK()
 	end
 end
 
-do
-	local function stopQueueButtonDelay()
-		QueueStatusMinimapButton.EyeHighlightAnim:Stop()
-	end
-	function DBM:LFG_LIST_APPLICANT_LIST_UPDATED(hasNewPending, hasNewPendingWithData)
-		if QueueStatusMinimapButton:IsShown() and (self.Options.HideApplicantAlerts == 2 and not UnitIsGroupLeader("player", LE_PARTY_CATEGORY_HOME)) or (self.Options.HideApplicantAlerts >= 1 and GetNumGroupMembers() == 40) then
-			QueueStatusMinimapButton.EyeHighlightAnim:Stop()
-			self:Unschedule(stopQueueButtonDelay)
-			self:Schedule(1, stopQueueButtonDelay, self)
-			QueueStatusMinimapButton.EyeHighlightAnim:Stop()--Force stop the animation loop
-		end
-	end
-end
-
 function DBM:PLAYER_SPECIALIZATION_CHANGED()
 	local lastSpecID = currentSpecID
 	self:SetCurrentSpecInfo()
@@ -3527,6 +3540,14 @@ function DBM:PLAYER_REGEN_ENABLED()
 	if guiRequested and not IsAddOnLoaded("DBM-GUI") then
 		guiRequested = false
 		self:LoadGUI()
+	end
+	if self.Options.TalkingHeadFilter == "CombatOnly" and talkingHeadUnregistered then
+		TalkingHeadFrame:RegisterEvent("TALKINGHEAD_REQUESTED")
+		TalkingHeadFrame:RegisterEvent("TALKINGHEAD_CLOSE")
+		TalkingHeadFrame:RegisterEvent("SOUNDKIT_FINISHED")
+		TalkingHeadFrame:RegisterEvent("LOADING_SCREEN_ENABLED")
+		talkingHeadUnregistered = false
+		self:Debug("TalkingHead has been restored")
 	end
 end
 
@@ -3637,8 +3658,8 @@ do
 	function DBM:LOADING_SCREEN_DISABLED()
 		timerRequestInProgress = false
 		self:Debug("LOADING_SCREEN_DISABLED fired")
-		SecondaryLoadCheck(self)
 		self:Unschedule(SecondaryLoadCheck)
+		self:Schedule(1, SecondaryLoadCheck, self)
 		self:Schedule(5, SecondaryLoadCheck, self)
 	end
 
@@ -3891,7 +3912,7 @@ do
 				if dbmRevision < 10481 then return end
 				if mod and delay and (not mod.zones or mod.zones[LastInstanceMapID]) and (not mod.minSyncRevision or modRevision >= mod.minSyncRevision) then
 					DBM:StartCombat(mod, delay + lag, "SYNC from - "..sender, true, startHp)
-					if mod.revision < modHFRevision then--mod.revision because we want to compare to OUR revision not senders
+					if (mod.revision < modHFRevision) and (mod.revision > 1000) then--mod.revision because we want to compare to OUR revision not senders
 						if DBM:AntiSpam(3, "HOTFIX") then
 							if DBM.HighestRelease < modHFRevision then--There is a newer RELEASE version of DBM out that has this mods fixes
 								showConstantReminder = 2
@@ -4703,7 +4724,7 @@ do
 					sender = Ambiguate(sender, "none")
 					handleSync(channel, sender, "BV", version, hash)--Prefix changed, so it's not handled by DBMs "V" handler
 					if version > fakeBWVersion then--Newer revision found, upgrade!
-						fakeBWVersion = verString
+						fakeBWVersion = version
 						fakeBWHash = hash
 					end
 				elseif prefix == "Q" then--Version request prefix
@@ -5053,6 +5074,12 @@ do
 			end
 			self:PlaySoundFile(path)
 		end
+		if self.Options.TalkingHeadFilter == "CombatOnly" and not talkingHeadUnregistered and isTalkingHeadLoaded then
+			TalkingHeadFrame:UnregisterAllEvents()
+			--TalkingHeadFrame_CloseImmediately()--Calling this crashes wow apparently
+			talkingHeadUnregistered = true
+			self:Debug("TalkingHead has been unregistered", 2)
+		end
 	end
 
 	local function isBossEngaged(cId)
@@ -5352,16 +5379,6 @@ do
 	}
 
 	function DBM:StartCombat(mod, delay, event, synced, syncedStartHp)
-		if not mod.inCombat then
-			if event then
-				self:Debug("StartCombat called by : "..event..". LastInstanceMapID is "..LastInstanceMapID)
-				if event ~= "ENCOUNTER_START" then
-					self:Debug("This event is started by"..event..". Review ENCOUNTER_START event to ensure if this is still needed", 2)
-				end
-			else
-				self:Debug("StartCombat called by individual mod or unknown reason. LastInstanceMapID is "..LastInstanceMapID)
-			end
-		end
 		cSyncSender = {}
 		cSyncReceived = 0
 		if not checkEntry(inCombat, mod) then
@@ -5373,6 +5390,14 @@ do
 			--HACK: makes sure that we don't detect a false pull if the event fires again when the boss dies...
 			if mod.lastKillTime and GetTime() - mod.lastKillTime < (mod.reCombatTime or 120) and event ~= "LOADING_SCREEN_DISABLED" then return end
 			if mod.lastWipeTime and GetTime() - mod.lastWipeTime < (event == "ENCOUNTER_START" and 3 or mod.reCombatTime2 or 20) and event ~= "LOADING_SCREEN_DISABLED" then return end
+			if event then
+				self:Debug("StartCombat called by : "..event..". LastInstanceMapID is "..LastInstanceMapID)
+				if event ~= "ENCOUNTER_START" then
+					self:Debug("This event is started by"..event..". Review ENCOUNTER_START event to ensure if this is still needed", 2)
+				end
+			else
+				self:Debug("StartCombat called by individual mod or unknown reason. LastInstanceMapID is "..LastInstanceMapID)
+			end
 			--check completed. starting combat
 			tinsert(inCombat, mod)
 			if mod.inCombatOnlyEvents and not mod.inCombatOnlyEventsRegistered then
@@ -6555,6 +6580,12 @@ do
 			if self.Options.HideGuildChallengeUpdates or custom then
 				AlertFrame:UnregisterEvent("GUILD_CHALLENGE_COMPLETED")
 			end
+			if self.Options.TalkingHeadFilter == "CombatOnly" and not talkingHeadUnregistered and isTalkingHeadLoaded then
+				TalkingHeadFrame:UnregisterAllEvents()
+				--TalkingHeadFrame_CloseImmediately()--Calling this crashes wow apparently
+				talkingHeadUnregistered = true
+				self:Debug("TalkingHead has been unregistered", 2)
+			end
 		elseif toggle == 0 and blizzEventsUnregistered then
 			blizzEventsUnregistered = false
 			if self.Options.HideBossEmoteFrame or custom then
@@ -6568,6 +6599,14 @@ do
 			end
 			if self.Options.HideGuildChallengeUpdates then
 				AlertFrame:RegisterEvent("GUILD_CHALLENGE_COMPLETED")
+			end
+			if self.Options.TalkingHeadFilter == "BossCombatOnly" and talkingHeadUnregistered then
+				TalkingHeadFrame:RegisterEvent("TALKINGHEAD_REQUESTED")
+				TalkingHeadFrame:RegisterEvent("TALKINGHEAD_CLOSE")
+				TalkingHeadFrame:RegisterEvent("SOUNDKIT_FINISHED")
+				TalkingHeadFrame:RegisterEvent("LOADING_SCREEN_ENABLED")
+				talkingHeadUnregistered = false
+				self:Debug("TalkingHead has been restored")
 			end
 		end
 	end
@@ -6733,6 +6772,10 @@ function DBM:GetTOC()
 	return wowTOC
 end
 
+function DBM:TalkingHeadStatus()
+	return talkingHeadUnregistered, isTalkingHeadLoaded
+end
+
 function DBM:FlashClientIcon()
 	if self:AntiSpam(5, "FLASH") then
 		FlashClientIcon()
@@ -6794,7 +6837,7 @@ do
 	MovieFrame:HookScript("OnEvent", function(self, event, id)
 		if event == "PLAY_MOVIE" and id and not neverFilter[id] then
 			DBM:Debug("PLAY_MOVIE fired for ID: "..id, 2)
-			if not IsInInstance() or C_Garrison:IsOnGarrisonMap() or DBM.Options.MovieFilter == "Never" then return end
+			if not IsInInstance() or C_Garrison:IsOnGarrisonMap() or C_Scenario.IsInScenario() or DBM.Options.MovieFilter == "Never" then return end
 			if DBM.Options.MovieFilter == "Block" or DBM.Options.MovieFilter == "AfterFirst" and DBM.Options.MoviesSeen[id] then
 				MovieFrame_OnMovieFinished(self)
 				DBM:AddMsg(DBM_CORE_MOVIE_SKIPPED)
@@ -6805,8 +6848,8 @@ do
 	end)
 
 	function DBM:CINEMATIC_START()
-		DBM:Debug("CINEMATIC_START fired", 2)
-		if not IsInInstance() or C_Garrison:IsOnGarrisonMap() or self.Options.MovieFilter == "Never" then return end
+		self:Debug("CINEMATIC_START fired", 2)
+		if not IsInInstance() or C_Garrison:IsOnGarrisonMap() or C_Scenario.IsInScenario() or self.Options.MovieFilter == "Never" then return end
 		SetMapToCurrentZone()
 		local currentFloor = GetCurrentMapDungeonLevel() or 0
 		if self.Options.MovieFilter == "Block" or self.Options.MovieFilter == "AfterFirst" and self.Options.MoviesSeen[LastInstanceMapID..currentFloor] then
@@ -8873,7 +8916,7 @@ do
 	end
 
 	local function showCountdown(timer)
-		TimerTracker_OnEvent(TimerTracker, "START_TIMER", 2, timer, timer)
+		TimerTracker_OnEvent(TimerTracker, "START_TIMER", 2, timer+1, timer+1)
 	end
 
 	local function stopCountdown()

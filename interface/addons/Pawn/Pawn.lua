@@ -7,7 +7,7 @@
 -- Main non-UI code
 ------------------------------------------------------------
 
-PawnVersion = 2.0007
+PawnVersion = 2.0008
 
 -- Pawn requires this version of VgerCore:
 local PawnVgerCoreVersionRequired = 1.09
@@ -551,6 +551,8 @@ function PawnInitializeOptions()
 	end
 	PawnCommon.LastVersion = PawnVersion
 	PawnOptions.LastVersion = PawnVersion
+
+	-- TODO: *** Should remove any scales from the "Starter" provider that are still in peoples' SavedVariables...
 
 	-- Just to fix up people who used the beta...  (Can remove this when the Legion beta realms close down)
 	if PawnOptions.UpgradeTracking == nil then PawnOptions.UpgradeTracking = false end
