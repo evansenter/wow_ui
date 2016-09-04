@@ -15,7 +15,7 @@ DataStore_TalentsDB = {
 		["Characters"] = {
 			["Default.Illidan.Evan"] = {
 				["ActiveTalents"] = 1,
-				["lastUpdate"] = 1471198249,
+				["lastUpdate"] = 1473014604,
 				["GlyphList"] = {
 					11, -- [1]
 					11418, -- [2]
@@ -74,15 +74,15 @@ DataStore_TalentsDB = {
 					16844, -- [55]
 					16796, -- [56]
 				},
-				["Class"] = "PRIEST",
 				["Specializations"] = {
 					11222, -- [1]
 					14966, -- [2]
 				},
+				["Class"] = "PRIEST",
 			},
 			["Default.Illidan.Pandatal"] = {
 				["ActiveTalents"] = 1,
-				["lastUpdate"] = 1471197690,
+				["lastUpdate"] = 1473014630,
 				["GlyphList"] = {
 					11, -- [1]
 					3018, -- [2]
@@ -134,14 +134,15 @@ DataStore_TalentsDB = {
 					7252, -- [48]
 					7268, -- [49]
 				},
+				["Class"] = "PALADIN",
 				["Specializations"] = {
 					0, -- [1]
 				},
-				["Class"] = "PALADIN",
 			},
 			["Default.Illidan.Natal"] = {
 				["ActiveTalents"] = 1,
 				["lastUpdate"] = 1424741647,
+				["Class"] = "SHAMAN",
 				["GlyphList"] = {
 					11, -- [1]
 					3418, -- [2]
@@ -201,12 +202,14 @@ DataStore_TalentsDB = {
 					17476, -- [56]
 					9796, -- [57]
 				},
-				["Class"] = "SHAMAN",
 			},
 			["Default.Illidan.Metal"] = {
 				["ActiveTalents"] = 1,
-				["lastUpdate"] = 1470154484,
+				["lastUpdate"] = 1473014565,
 				["Class"] = "WARRIOR",
+				["Specializations"] = {
+					[2] = 5461,
+				},
 				["GlyphList"] = {
 					11, -- [1]
 					7962, -- [2]
@@ -256,13 +259,11 @@ DataStore_TalentsDB = {
 					17572, -- [46]
 					17620, -- [47]
 				},
-				["Specializations"] = {
-					[2] = 5461,
-				},
 			},
 			["Default.Dark Iron.Ereinion"] = {
 				["ActiveTalents"] = 1,
 				["lastUpdate"] = 1424741767,
+				["Class"] = "WARLOCK",
 				["GlyphList"] = {
 					11, -- [1]
 					4378, -- [2]
@@ -303,12 +304,10 @@ DataStore_TalentsDB = {
 					4516, -- [37]
 					4404, -- [38]
 				},
-				["Class"] = "WARLOCK",
 			},
 			["Default.Illidan.Combustion"] = {
 				["ActiveTalents"] = 2,
 				["lastUpdate"] = 1424741664,
-				["Class"] = "MAGE",
 				["GlyphList"] = {
 					11, -- [1]
 					5018, -- [2]
@@ -343,10 +342,12 @@ DataStore_TalentsDB = {
 					14780, -- [31]
 					17276, -- [32]
 				},
+				["Class"] = "MAGE",
 			},
 			["Default.Dark Iron.Colton"] = {
 				["ActiveTalents"] = 1,
 				["lastUpdate"] = 1424741732,
+				["Class"] = "DEATHKNIGHT",
 				["GlyphList"] = {
 					11, -- [1]
 					8202, -- [2]
@@ -389,17 +390,11 @@ DataStore_TalentsDB = {
 					8868, -- [39]
 					17188, -- [40]
 				},
-				["Class"] = "DEATHKNIGHT",
 			},
 			["Default.Illidan.Comet"] = {
 				["ActiveTalents"] = 1,
-				["lastUpdate"] = 1471976822,
+				["lastUpdate"] = 1473014308,
 				["Class"] = "MONK",
-				["Specializations"] = {
-					13786, -- [1]
-					10713, -- [2]
-					11739, -- [3]
-				},
 				["GlyphList"] = {
 					11, -- [1]
 					16250, -- [2]
@@ -444,9 +439,14 @@ DataStore_TalentsDB = {
 					16716, -- [41]
 					16684, -- [42]
 				},
+				["Specializations"] = {
+					13786, -- [1]
+					10713, -- [2]
+					11771, -- [3]
+				},
 			},
 			["Default.Illidan.Cometron"] = {
-				["lastUpdate"] = 1471197713,
+				["lastUpdate"] = 1473014657,
 				["Specializations"] = {
 					1, -- [1]
 					6, -- [2]
@@ -679,128 +679,128 @@ DataStore_TalentsDB = {
 				[490] = "Bloody Healing",
 				[491] = "Enraged Speed",
 				[214] = "Spirit Walk",
-				[1171] = "Spiritwalker's Aegis",
+				[456] = "Seal of Blood",
 				[492] = "Hindering Strikes",
-				[292] = "Falling Meteor",
+				[259] = "Mass Dispel",
 				[1083] = "Pillar of Light",
-				[1028] = "Rising Tiger Kick",
-				[271] = "Prayer of Mending",
-				[462] = "Reflective Shield",
-				[278] = "Felguard",
+				[190] = "Luminous Charger",
+				[561] = "Immediate Truth",
+				[1058] = "Gateway Attunement",
+				[1068] = "Hand of Sacrifice",
 				[1201] = "Frostbrand Weapon",
-				[191] = "Focused Shield",
+				[289] = "Soulstone",
 				[1202] = "Mind Harvest",
 				[183] = "Double Jeopardy",
 				[215] = "Capacitor Totem",
 				[986] = "Focused Wrath",
 				[1204] = "Army of the Dead",
 				[198] = "Divinity",
-				[192] = "Burden of Guilt",
+				[494] = "Bloodthirst",
 				[987] = "Falling Avenger",
 				[507] = "Resonating Power",
 				[1040] = "Paralysis",
 				[1207] = "Purify Spirit",
 				[988] = "Righteous Retreat",
 				[1208] = "Cleanse",
-				[495] = "Rude Interruption",
-				[1209] = "Detoxing",
 				[989] = "Bladed Judgment",
-				[216] = "Purge",
-				[184] = "Devotion Aura",
+				[1209] = "Detoxing",
+				[495] = "Rude Interruption",
 				[1211] = "Purification",
+				[184] = "Devotion Aura",
+				[216] = "Purge",
 				[990] = "Crow Feast",
 				[1212] = "Flying Fists",
 				[735] = "Thunder",
-				[754] = "Totemic Vigor",
+				[189] = "Consecration",
 				[991] = "Burning Anger",
-				[254] = "Fear Ward",
+				[1203] = "Merciful Wrath",
 				[736] = "Feral Spirit",
-				[505] = "Sweeping Strikes",
-				[769] = "Dark Simulacrum",
+				[1009] = "Mass Exorcism",
+				[194] = "Final Wrath",
 				[559] = "Denounce",
 				[737] = "Riptide",
 				[524] = "Icy Touch",
 				[497] = "Blitz",
-				[266] = "Renew",
+				[275] = "Verdant Spheres",
 				[185] = "Holy Wrath",
 				[217] = "Fire Elemental Totem",
-				[1187] = "Shattering Throw",
+				[496] = "Gag Order",
 				[611] = "Remove Curse",
 				[481] = "Enslave Demon",
-				[263] = "Power Word: Shield",
+				[286] = "Shadow Bolt",
 				[276] = "Nightmares",
 				[612] = "Thunderstorm",
-				[519] = "Death Grip",
+				[280] = "Health Funnel",
 				[272] = "Hand of Gul'dan",
 				[996] = "Battle Healer",
-				[771] = "Death Coil",
-				[252] = "Purify",
-				[499] = "Die by the Sword",
+				[1180] = "Strengthened Resolve",
+				[1006] = "Vampiric Embrace",
 				[997] = "Rapid Rolling",
+				[499] = "Die by the Sword",
 				[277] = "Fear",
 				[186] = "Divine Protection",
 				[218] = "Fire Nova",
 				[998] = "Guard",
-				[515] = "Icebound Fortitude",
+				[508] = "Victory Rush",
 				[279] = "Demon Training",
 				[871] = "Counterspell",
 				[999] = "Zen Meditation",
-				[525] = "Enduring Infection",
-				[527] = "Mind Freeze",
-				[516] = "Chains of Ice",
-				[264] = "Spirit of Redemption",
-				[1017] = "Flying Serpent Kick",
-				[557] = "Outbreak",
-				[274] = "Siphon Life",
+				[529] = "Foul Menagerie",
+				[773] = "Tranquil Grip",
+				[261] = "Holy Fire",
+				[1038] = "Touch of Karma",
+				[522] = "Horn of Winter",
+				[518] = "Death's Embrace",
+				[514] = "Geist",
 				[1001] = "Surging Mist",
-				[1003] = "Mind Flay",
+				[502] = "Shield Slam",
 				[187] = "Templar's Verdict",
 				[219] = "Flame Shock",
 				[251] = "Circle of Healing",
-				[558] = "Corpse Explosion",
-				[556] = "Unholy Command",
 				[1044] = "Water Roll",
-				[502] = "Shield Slam",
-				[514] = "Geist",
-				[518] = "Death's Embrace",
-				[522] = "Horn of Winter",
-				[1038] = "Touch of Karma",
-				[261] = "Holy Fire",
-				[773] = "Tranquil Grip",
-				[529] = "Foul Menagerie",
+				[556] = "Unholy Command",
+				[558] = "Corpse Explosion",
+				[1003] = "Mind Flay",
+				[274] = "Siphon Life",
+				[557] = "Outbreak",
+				[1017] = "Flying Serpent Kick",
+				[264] = "Spirit of Redemption",
+				[516] = "Chains of Ice",
+				[527] = "Mind Freeze",
+				[525] = "Enduring Infection",
 				[1005] = "Shadow Word: Death",
-				[508] = "Victory Rush",
+				[515] = "Icebound Fortitude",
 				[188] = "Avenging Wrath",
 				[220] = "Wind Shear",
-				[1006] = "Vampiric Embrace",
-				[1180] = "Strengthened Resolve",
+				[252] = "Purify",
+				[771] = "Death Coil",
 				[751] = "Deluge",
-				[280] = "Health Funnel",
+				[519] = "Death Grip",
 				[1007] = "Heavens",
-				[286] = "Shadow Bolt",
+				[263] = "Power Word: Shield",
 				[752] = "Shamanistic Rage",
-				[496] = "Gag Order",
-				[275] = "Verdant Spheres",
+				[1187] = "Shattering Throw",
+				[266] = "Renew",
 				[313] = "Arcane Explosion",
 				[753] = "Hex",
-				[194] = "Final Wrath",
-				[1009] = "Mass Exorcism",
-				[1203] = "Merciful Wrath",
-				[189] = "Consecration",
+				[769] = "Dark Simulacrum",
+				[505] = "Sweeping Strikes",
+				[254] = "Fear Ward",
+				[754] = "Totemic Vigor",
 				[221] = "Frost Shock",
 				[253] = "Fade",
 				[314] = "Blink",
 				[755] = "Drain Life",
-				[494] = "Bloodthirst",
+				[192] = "Burden of Guilt",
 				[1011] = "Transcendence",
-				[289] = "Soulstone",
-				[1068] = "Hand of Sacrifice",
-				[1058] = "Gateway Attunement",
-				[561] = "Immediate Truth",
-				[190] = "Luminous Charger",
+				[191] = "Focused Shield",
+				[278] = "Felguard",
+				[462] = "Reflective Shield",
+				[271] = "Prayer of Mending",
+				[1028] = "Rising Tiger Kick",
 				[757] = "Ember Tap",
-				[259] = "Mass Dispel",
-				[456] = "Seal of Blood",
+				[292] = "Falling Meteor",
+				[1171] = "Spiritwalker's Aegis",
 			},
 		},
 	},
@@ -854,7 +854,7 @@ DataStore_TalentsRefDB = {
 					["name"] = "Fury",
 				},
 			},
-			["Version"] = 22293,
+			["Version"] = 22566,
 		},
 		["PALADIN"] = {
 			["Locale"] = "enUS",
@@ -888,7 +888,7 @@ DataStore_TalentsRefDB = {
 					["name"] = "Holy",
 				}, -- [1]
 			},
-			["Version"] = 22423,
+			["Version"] = 22566,
 		},
 		["MAGE"] = {
 			["Locale"] = "enUS",
@@ -954,7 +954,7 @@ DataStore_TalentsRefDB = {
 					["name"] = "Holy",
 				}, -- [2]
 			},
-			["Version"] = 22423,
+			["Version"] = 22566,
 		},
 		["WARLOCK"] = {
 			["Locale"] = "enUS",
@@ -987,7 +987,7 @@ DataStore_TalentsRefDB = {
 					["name"] = "Vengeance",
 				}, -- [2]
 			},
-			["Version"] = 22423,
+			["Version"] = 22566,
 		},
 		["MONK"] = {
 			["Locale"] = "enUS",
@@ -1077,7 +1077,7 @@ DataStore_TalentsRefDB = {
 					["name"] = "Windwalker",
 				}, -- [3]
 			},
-			["Version"] = 22423,
+			["Version"] = 22566,
 		},
 		["SHAMAN"] = {
 			["Locale"] = "enUS",

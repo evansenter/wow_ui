@@ -5,7 +5,10 @@ FX_Saved = {
 	["Timers"] = {
 	},
 	["Healthstone"] = {
-		["Comet"] = 0,
+		["Pandatal"] = 0,
+		["Evan"] = 0,
+		["Cometron"] = 0,
+		["Metal"] = 0,
 	},
 	["Exceptions"] = {
 		["Hellfire Channeler"] = 0,
@@ -17,7 +20,7 @@ FX_Saved = {
 		["Master Engineer Telonicus"] = 1,
 		["Fathom-Guard Sharkkis"] = 1,
 	},
-	["Update"] = 478247.543,
+	["Update"] = 237257.904,
 	["Profiles"] = {
 		["Active"] = 1,
 		["Characters"] = {
@@ -924,15 +927,11 @@ FX_Saved = {
 					">> %s is fading in %s <<", -- [1]
 					[0] = 1,
 				},
+				["SummonHeight"] = 12,
+				["SummonSpace"] = 1,
 				["Output"] = {
 					"MyProChannel", -- [1]
 					[0] = true,
-				},
-				["SummonSpace"] = 1,
-				["HealthstoneMinColor"] = {
-					0.93, -- [1]
-					1, -- [2]
-					0, -- [3]
 				},
 				["SoulstoneMaxColor"] = {
 					0.64, -- [1]
@@ -1020,7 +1019,11 @@ FX_Saved = {
 				["ShowReady"] = false,
 				["SoulstoneStrata"] = "MEDIUM",
 				["HealthstoneExpand"] = false,
-				["SummonHeight"] = 12,
+				["HealthstoneMinColor"] = {
+					0.93, -- [1]
+					1, -- [2]
+					0, -- [3]
+				},
 				["SoulstoneReadySound"] = {
 					"Sound\\Spells\\SimonGame_Visual_GameTick.wav", -- [1]
 					1, -- [2]
@@ -1124,10 +1127,28 @@ FX_Saved = {
 		},
 	},
 	["RaidStatus"] = {
-		["Comet"] = {
+		["Pandatal"] = {
+			-2, -- [1]
+			237217.731, -- [2]
+			"PALADIN", -- [3]
+			"v1.980.8", -- [4]
+		},
+		["Evan"] = {
+			-2, -- [1]
+			237190.129, -- [2]
+			"PRIEST", -- [3]
+			"v1.980.8", -- [4]
+		},
+		["Cometron"] = {
 			0, -- [1]
-			478247.543, -- [2]
-			"MONK", -- [3]
+			237257.904, -- [2]
+			"DEMONHUNTER", -- [3]
+			"v1.980.8", -- [4]
+		},
+		["Metal"] = {
+			-2, -- [1]
+			237161.152, -- [2]
+			"WARRIOR", -- [3]
 			"v1.980.8", -- [4]
 		},
 	},

@@ -1,6 +1,6 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0007,
+	["LastVersion"] = 2.0009,
 	["LastPlayerFullName"] = "Metal-Illidan",
 	["AutoSelectScales"] = true,
 	["UpgradeTracking"] = false,

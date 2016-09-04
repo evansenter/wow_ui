@@ -49,7 +49,13 @@ CHTLWBDB = {
 				["messageLastTimeSent"] = 1368155387,
 			},
 			["counterSkinInset"] = 8,
-			["useChannel"] = "WHISPER",
+			["summonPhrases"] = {
+				"Lightwell up! (%m Charges)", -- [1]
+				["used"] = {
+					1, -- [1]
+				},
+				["messageLastTimeSent"] = 1372192076,
+			},
 			["usePhrases"] = {
 				"", -- [1]
 				["used"] = {
@@ -60,20 +66,8 @@ CHTLWBDB = {
 			["counterBorder"] = "None",
 			["counterLockPosition"] = true,
 			["msgOnLastUse"] = false,
-			["emptyPhrases"] = {
-				"Lightwell empty!", -- [1]
-				["used"] = {
-					1, -- [1]
-				},
-				["messageLastTimeSent"] = 1372134718,
-			},
-			["summonPhrases"] = {
-				"Lightwell up! (%m Charges)", -- [1]
-				["used"] = {
-					1, -- [1]
-				},
-				["messageLastTimeSent"] = 1372192076,
-			},
+			["counterBorderSize"] = 1,
+			["useChannel"] = "WHISPER",
 			["idlePhrases"] = {
 				"Lightwell:~~So lonely, oh so lonely~~ (%i seconds idle, %c charges remaining)", -- [1]
 				["used"] = {
@@ -82,7 +76,13 @@ CHTLWBDB = {
 				["messageLastTimeSent"] = 1372192068,
 			},
 			["counterFont"] = "ABF",
-			["counterBorderSize"] = 1,
+			["emptyPhrases"] = {
+				"Lightwell empty!", -- [1]
+				["used"] = {
+					1, -- [1]
+				},
+				["messageLastTimeSent"] = 1372134718,
+			},
 			["talkToStrangers"] = false,
 			["messagingEnabled"] = false,
 		},
@@ -146,7 +146,13 @@ CHTLWBDB = {
 			},
 			["enabled"] = false,
 			["counterBarTexture"] = "BantoBar",
-			["counterBorderSize"] = 1,
+			["emptyPhrases"] = {
+				"Lightwell empty!", -- [1]
+				["used"] = {
+					1, -- [1]
+				},
+				["messageLastTimeSent"] = 1372134718,
+			},
 			["usePhrases"] = {
 				"", -- [1]
 				["used"] = {
@@ -162,6 +168,12 @@ CHTLWBDB = {
 				["messageLastTimeSent"] = 1372192068,
 			},
 			["counterHideDown"] = true,
+			["useChannel"] = "WHISPER",
+			["counterSkinInset"] = 8,
+			["counterLockPosition"] = true,
+			["counterBorderSize"] = 1,
+			["counterFont"] = "ABF",
+			["talkToStrangers"] = false,
 			["summonPhrases"] = {
 				"Lightwell up! (%m Charges)", -- [1]
 				["used"] = {
@@ -169,18 +181,6 @@ CHTLWBDB = {
 				},
 				["messageLastTimeSent"] = 1372192076,
 			},
-			["talkToStrangers"] = false,
-			["counterFont"] = "ABF",
-			["emptyPhrases"] = {
-				"Lightwell empty!", -- [1]
-				["used"] = {
-					1, -- [1]
-				},
-				["messageLastTimeSent"] = 1372134718,
-			},
-			["counterLockPosition"] = true,
-			["counterSkinInset"] = 8,
-			["useChannel"] = "WHISPER",
 			["messagingEnabled"] = false,
 		},
 		["PRIEST"] = {

@@ -41,13 +41,6 @@ X: -383
 Y: 55
 W: 64
 H: 64
-Frame: Hansgar_And_Franzok_Assist
-FrameLevel: 1
-Anchor: CENTER
-X: 300
-Y: 200
-W: 155
-H: 159
 Frame: RaidUtility_ShowButton
 FrameLevel: 1
 Anchor: TOPLEFT

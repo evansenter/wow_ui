@@ -2,7 +2,7 @@
 PawnCommon = {
 	["ShowUpgradesOnTooltips"] = true,
 	["AlignNumbersRight"] = false,
-	["LastVersion"] = 2.0007,
+	["LastVersion"] = 2.0009,
 	["ShowValuesForUpgradesOnly"] = true,
 	["Digits"] = 1,
 	["Debug"] = false,
@@ -171,6 +171,9 @@ PawnCommon = {
 			["UnenchantedColor"] = "7a2496",
 			["IconTexturePath"] = "Interface\\Icons\\ability_demonhunter_spectank",
 			["PerCharacterOptions"] = {
+				["Cometron-Illidan"] = {
+					["Visible"] = true,
+				},
 			},
 			["ClassID"] = 12,
 			["UpgradesFollowSpecialization"] = true,
@@ -497,9 +500,6 @@ PawnCommon = {
 			["UnenchantedColor"] = "7a2496",
 			["IconTexturePath"] = "Interface\\Icons\\ability_demonhunter_specdps",
 			["PerCharacterOptions"] = {
-				["Cometron-Illidan"] = {
-					["Visible"] = true,
-				},
 			},
 			["ClassID"] = 12,
 			["UpgradesFollowSpecialization"] = true,

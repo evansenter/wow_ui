@@ -38,7 +38,7 @@ VER 3 0000000000000050 "HF" "INV_Misc_QuestionMark"
 END
 VER 3 0000000000000034 "HS / GHS" "INV_Misc_QuestionMark"
 #showtooltip
-/use [nomod]Hearthstone;[mod:shift][mod:alt]Garrison Hearthstone
+/use [nomod]Hearthstone;[mod:shift][mod:alt]Dalaran Hearthstone
 END
 VER 3 0000000000000045 "Keg Smash" "INV_Misc_QuestionMark"
 #showtooltip Keg Smash
@@ -66,6 +66,10 @@ END
 VER 3 000000000000003C "RSK" "INV_MISC_QUESTIONMARK"
 #showtooltip Rising Sun Kick
 /use [nochanneling]Rising Sun Kick
+END
+VER 3 0000000000000053 "SotW" "INV_Misc_QuestionMark"
+#showtooltip Strike of the Windlord
+/use [nochanneling]Strike of the Windlord
 END
 VER 3 000000000000002C "Target Focus" "Spell_Magic_PolymorphRabbit"
 /tar focus

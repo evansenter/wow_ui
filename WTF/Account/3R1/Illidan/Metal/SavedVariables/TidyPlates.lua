@@ -9,4 +9,5 @@ TidyPlatesOptions = {
 	["SecondaryProfile"] = "Tank",
 	["DisableSoftTransitions"] = false,
 	["WelcomeShown"] = true,
+	["ActiveTheme"] = "Neon",
 }

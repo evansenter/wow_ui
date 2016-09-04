@@ -9,9 +9,6 @@ VER 3 000000000000003F "Blackout Kick" "INV_MISC_QUESTIONMARK"
 #showtooltip Blackout Kick
 /use [nochanneling]Blackout Kick
 END
-VER 3 0000000000000028 "Camera" "Spell_Shadow_EvilEye"
-/console CameraDistanceMaxFactor 9000
-END
 VER 3 0000000000000030 "Cloak" "INV_MISC_QUESTIONMARK"
 /use 15
 END

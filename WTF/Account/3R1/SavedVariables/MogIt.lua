@@ -1,7 +1,7 @@
 
 MogItDB = {
 	["global"] = {
-		["version"] = "3.6.3",
+		["version"] = "3.6.4",
 	},
 	["profileKeys"] = {
 		["Metal - Illidan"] = "Comet - Illidan",
@@ -18,41 +18,41 @@ MogItDB = {
 	},
 	["profiles"] = {
 		["Comet - Illidan"] = {
+			["y"] = 0,
+			["x"] = 0,
 			["previewProps"] = {
 				{
 					["y"] = 0,
-					["h"] = 384.999877929688,
-					["w"] = 334.999877929688,
 					["x"] = 0,
+					["w"] = 334.999877929688,
+					["h"] = 384.999877929688,
 				}, -- [1]
 			},
+			["gridWidth"] = 599.999938964844,
+			["tooltipDress"] = true,
 			["gridHeight"] = 399.999877929688,
-			["x"] = 0,
 			["minimap"] = {
 				["minimapPos"] = 173.480150276523,
 				["hide"] = true,
 			},
-			["gridWidth"] = 599.999938964844,
-			["tooltipDress"] = true,
-			["y"] = 0,
 		},
 		["Default"] = {
-			["y"] = 0,
-			["x"] = 0,
 			["previewProps"] = {
 				{
 					["y"] = 0,
-					["h"] = 384.999877929688,
-					["w"] = 334.999877929688,
 					["x"] = 0,
+					["w"] = 334.999877929688,
+					["h"] = 384.999877929688,
 				}, -- [1]
 			},
 			["gridHeight"] = 399.999969482422,
-			["gridWidth"] = 599.999938964844,
+			["x"] = 0,
 			["minimap"] = {
 				["minimapPos"] = 194.641887378338,
 				["hide"] = true,
 			},
+			["gridWidth"] = 599.999938964844,
+			["y"] = 0,
 		},
 		["Pandatal - Illidan"] = {
 			["y"] = 0,

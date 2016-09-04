@@ -1447,8 +1447,8 @@ HermesDB2 = {
 			["Pandaren"] = "Pandaren",
 			["Goblin"] = "Goblin",
 		},
-		["clientTime"] = 478210.911,
-		["serverTime"] = 1471717177,
+		["clientTime"] = 237223.09,
+		["serverTime"] = 1473014646,
 	},
 	["profiles"] = {
 		["Metal - Illidan"] = {
@@ -1473,8 +1473,7 @@ HermesDB2 = {
 							["filterrange"] = true,
 							["filter10man"] = true,
 							["filterself"] = false,
-							["abilities"] = {
-							},
+							["name"] = "Default",
 							["profiles"] = {
 								["GridButtons"] = {
 									["merged"] = false,
@@ -1503,10 +1502,11 @@ HermesDB2 = {
 									},
 								},
 							},
-							["filter25man"] = true,
+							["abilities"] = {
+							},
 							["playerfilters"] = {
 							},
-							["name"] = "Default",
+							["filter25man"] = true,
 							["filterplayertype"] = "disabled",
 							["filterconnection"] = true,
 							["filterdead"] = false,
@@ -2101,69 +2101,8 @@ HermesDB2 = {
 			},
 		},
 		["Cometron - Illidan"] = {
-			["items"] = {
-				{
-					["enabled"] = false,
-					["name"] = "Mirror of Broken Images",
-					["id"] = -62466,
-					["class"] = "ANY",
-					["icon"] = 134375,
-				}, -- [1]
-			},
-			["welcome"] = true,
 			["pluginState"] = {
 				["UI"] = true,
-			},
-			["plugins"] = {
-				["Hermes-UI"] = {
-					["views"] = {
-						{
-							["module"] = "GridButtons",
-							["filterrange"] = true,
-							["filter10man"] = true,
-							["filterself"] = false,
-							["filter25man"] = true,
-							["profiles"] = {
-								["GridButtons"] = {
-									["merged"] = false,
-									["hideNoSender"] = false,
-									["scale"] = 1,
-									["h"] = 150,
-									["coloredBorders"] = true,
-									["cellAnchor"] = "TOPLEFT",
-									["y"] = 675.000122070313,
-									["x"] = 835.000061035156,
-									["colorNS"] = {
-										["a"] = 0.75,
-										["b"] = 0.5,
-										["g"] = 0.5,
-										["r"] = 0.5,
-									},
-									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
-									["locked"] = false,
-									["padding"] = 5,
-									["w"] = 250,
-									["colorU"] = {
-										["a"] = 1,
-										["b"] = 0.5,
-										["g"] = 0.5,
-										["r"] = 0.5,
-									},
-								},
-							},
-							["name"] = "Default",
-							["playerfilters"] = {
-							},
-							["abilities"] = {
-							},
-							["filterplayertype"] = "disabled",
-							["filterconnection"] = true,
-							["filterdead"] = false,
-							["includeAll"] = true,
-							["enabled"] = true,
-						}, -- [1]
-					},
-				},
 			},
 			["spells"] = {
 				{
@@ -2699,20 +2638,14 @@ HermesDB2 = {
 					["icon"] = 642417,
 				}, -- [76]
 			},
-		},
-		["Combustion - Illidan"] = {
 			["items"] = {
 				{
 					["enabled"] = false,
 					["name"] = "Mirror of Broken Images",
 					["id"] = -62466,
 					["class"] = "ANY",
-					["icon"] = "Interface\\ICONS\\INV_Misc_Platnumdisks.blp",
+					["icon"] = 134375,
 				}, -- [1]
-			},
-			["welcome"] = true,
-			["pluginState"] = {
-				["UI"] = true,
 			},
 			["plugins"] = {
 				["Hermes-UI"] = {
@@ -2722,7 +2655,8 @@ HermesDB2 = {
 							["filterrange"] = true,
 							["filter10man"] = true,
 							["filterself"] = false,
-							["filter25man"] = true,
+							["abilities"] = {
+							},
 							["profiles"] = {
 								["GridButtons"] = {
 									["merged"] = false,
@@ -2751,11 +2685,77 @@ HermesDB2 = {
 									},
 								},
 							},
-							["name"] = "Default",
+							["filter25man"] = true,
 							["playerfilters"] = {
 							},
+							["name"] = "Default",
+							["filterplayertype"] = "disabled",
+							["filterconnection"] = true,
+							["filterdead"] = false,
+							["includeAll"] = true,
+							["enabled"] = true,
+						}, -- [1]
+					},
+				},
+			},
+			["welcome"] = true,
+		},
+		["Combustion - Illidan"] = {
+			["items"] = {
+				{
+					["enabled"] = false,
+					["name"] = "Mirror of Broken Images",
+					["id"] = -62466,
+					["class"] = "ANY",
+					["icon"] = "Interface\\ICONS\\INV_Misc_Platnumdisks.blp",
+				}, -- [1]
+			},
+			["welcome"] = true,
+			["pluginState"] = {
+				["UI"] = true,
+			},
+			["plugins"] = {
+				["Hermes-UI"] = {
+					["views"] = {
+						{
+							["module"] = "GridButtons",
+							["filterrange"] = true,
+							["filter10man"] = true,
+							["filterself"] = false,
 							["abilities"] = {
 							},
+							["profiles"] = {
+								["GridButtons"] = {
+									["merged"] = false,
+									["hideNoSender"] = false,
+									["scale"] = 1,
+									["h"] = 150,
+									["coloredBorders"] = true,
+									["cellAnchor"] = "TOPLEFT",
+									["y"] = 675.000122070313,
+									["x"] = 835.000061035156,
+									["colorNS"] = {
+										["a"] = 0.75,
+										["b"] = 0.5,
+										["g"] = 0.5,
+										["r"] = 0.5,
+									},
+									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
+									["locked"] = false,
+									["padding"] = 5,
+									["w"] = 250,
+									["colorU"] = {
+										["a"] = 1,
+										["b"] = 0.5,
+										["g"] = 0.5,
+										["r"] = 0.5,
+									},
+								},
+							},
+							["filter25man"] = true,
+							["playerfilters"] = {
+							},
+							["name"] = "Default",
 							["filterplayertype"] = "disabled",
 							["filterconnection"] = true,
 							["filterdead"] = false,
@@ -3402,14 +3402,14 @@ HermesDB2 = {
 							},
 							["includeAll"] = true,
 							["filterdead"] = false,
-							["filter25man"] = true,
+							["abilities"] = {
+							},
 							["filterconnection"] = true,
 							["filterplayertype"] = "disabled",
 							["playerfilters"] = {
 							},
-							["abilities"] = {
-							},
 							["name"] = "Default",
+							["filter25man"] = true,
 						}, -- [1]
 					},
 				},
@@ -4037,14 +4037,14 @@ HermesDB2 = {
 							},
 							["includeAll"] = true,
 							["filterdead"] = false,
-							["abilities"] = {
-							},
+							["name"] = "Default",
 							["filterconnection"] = true,
 							["filterplayertype"] = "disabled",
 							["playerfilters"] = {
 							},
-							["name"] = "Default",
 							["filter25man"] = true,
+							["abilities"] = {
+							},
 						}, -- [1]
 					},
 				},
@@ -4686,14 +4686,14 @@ HermesDB2 = {
 							},
 							["includeAll"] = true,
 							["filterdead"] = false,
-							["name"] = "Default",
+							["filter25man"] = true,
 							["filterconnection"] = true,
 							["filterplayertype"] = "disabled",
 							["playerfilters"] = {
 							},
-							["filter25man"] = true,
 							["abilities"] = {
 							},
+							["name"] = "Default",
 						}, -- [1]
 					},
 				},
@@ -5283,9 +5283,492 @@ HermesDB2 = {
 			},
 		},
 		["Comet - Illidan"] = {
-			["welcome"] = true,
+			["items"] = {
+				{
+					["enabled"] = false,
+					["name"] = "Mirror of Broken Images",
+					["id"] = -62466,
+					["class"] = "ANY",
+					["icon"] = "Interface\\ICONS\\INV_Misc_Platnumdisks.blp",
+				}, -- [1]
+			},
+			["configMode"] = false,
 			["pluginState"] = {
 				["UI"] = true,
+			},
+			["plugins"] = {
+				["Hermes-UI"] = {
+					["views"] = {
+						{
+							["module"] = "GridButtons",
+							["filterrange"] = true,
+							["filter10man"] = true,
+							["filterself"] = false,
+							["enabled"] = true,
+							["profiles"] = {
+								["Logger"] = {
+									["fontSize"] = 12,
+									["fontColor"] = {
+										["a"] = 1,
+										["b"] = 0.6,
+										["g"] = 0.6,
+										["r"] = 0.6,
+									},
+									["scale"] = 1,
+									["alpha"] = 1,
+									["font"] = "Friz Quadrata TT",
+									["bgColor"] = {
+										["a"] = 0.75,
+										["b"] = 0,
+										["g"] = 0,
+										["r"] = 0,
+									},
+									["h"] = 100,
+									["showSlider"] = true,
+									["w"] = 400,
+									["locked"] = false,
+									["y"] = 650,
+									["x"] = 760.000122070313,
+									["showTimestamp"] = true,
+								},
+								["GridButtons"] = {
+									["scale"] = 1,
+									["hideNoSender"] = true,
+									["merged"] = false,
+									["coloredBorders"] = true,
+									["w"] = 233.295700073242,
+									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
+									["y"] = 1195.88842773438,
+									["x"] = 1488.59826660156,
+									["locked"] = true,
+									["cellAnchor"] = "TOPRIGHT",
+									["colorNS"] = {
+										["a"] = 0.75,
+										["r"] = 0.5,
+										["g"] = 0.5,
+										["b"] = 0.5,
+									},
+									["padding"] = 5,
+									["h"] = 186.246963500977,
+									["colorU"] = {
+										["a"] = 1,
+										["r"] = 0.5,
+										["g"] = 0.5,
+										["b"] = 0.5,
+									},
+								},
+								["GridBars"] = {
+									["barShowTime"] = true,
+									["npCCFont"] = true,
+									["barShowPlayerName"] = true,
+									["h"] = 670.350524902344,
+									["hideNoAvailSender"] = false,
+									["barColorC"] = {
+										["a"] = 0.74,
+										["b"] = 0.55,
+										["g"] = 0.55,
+										["r"] = 0.55,
+									},
+									["locked"] = true,
+									["barFont"] = "Friz Quadrata TT",
+									["barBGColorU"] = {
+										["a"] = 0.16,
+										["b"] = 0,
+										["g"] = 0,
+										["r"] = 0,
+									},
+									["hideNoSender"] = false,
+									["barTexture"] = "Blizzard",
+									["osCooldownStyle"] = "empty",
+									["barColorU"] = {
+										["a"] = 0.23,
+										["b"] = 0,
+										["g"] = 0,
+										["r"] = 0,
+									},
+									["y"] = 1149.99987792969,
+									["x"] = 10.1470918655396,
+									["barPadding"] = 1,
+									["scale"] = 1,
+									["npTexture"] = "Blizzard",
+									["barCooldownDirection"] = "right",
+									["barThickFont"] = false,
+									["barBGCCU"] = false,
+									["barColorCFont"] = {
+										["a"] = 1,
+										["b"] = 1,
+										["g"] = 1,
+										["r"] = 1,
+									},
+									["barCCAFont"] = false,
+									["barTextRatio"] = 65,
+									["cellAnchor"] = "TOPLEFT",
+									["padding"] = 0,
+									["barW"] = 100,
+									["barIcon"] = "none",
+									["barTextSide"] = "left",
+									["barCCA"] = true,
+									["barIconMerged"] = "left",
+									["npW"] = 120,
+									["barColorUFont"] = {
+										["a"] = 0.3,
+										["b"] = 1,
+										["g"] = 1,
+										["r"] = 1,
+									},
+									["barColorAFont"] = {
+										["a"] = 1,
+										["b"] = 0.94,
+										["g"] = 0.94,
+										["r"] = 0.94,
+									},
+									["barOutlineFont"] = true,
+									["w"] = 516.666687011719,
+									["barFontSize"] = 12,
+									["osCooldownDirection"] = "right",
+									["barColorA"] = {
+										["a"] = 1,
+										["b"] = 0.94,
+										["g"] = 0.94,
+										["r"] = 0.94,
+									},
+									["npFontColor"] = {
+										["a"] = 0.76,
+										["b"] = 0.92,
+										["g"] = 0.92,
+										["r"] = 0.92,
+									},
+									["barCCU"] = false,
+									["osEnabled"] = false,
+									["npIcon"] = "right",
+									["cellMax"] = 3,
+									["npUseNameplate"] = true,
+									["npFont"] = "Friz Quadrata TT",
+									["hideNoCooldown"] = false,
+									["npTextSide"] = "right",
+									["barCCUFont"] = false,
+									["npOutlineFont"] = true,
+									["merged"] = false,
+									["npH"] = 15,
+									["npTexColor"] = {
+										["a"] = 0.5,
+										["b"] = 0,
+										["g"] = 0,
+										["r"] = 0,
+									},
+									["npFontSize"] = 12,
+									["barH"] = 14,
+									["enableTooltip"] = true,
+									["barGap"] = 2,
+									["npCCBar"] = false,
+									["barShowSpellName"] = false,
+									["cellDir"] = false,
+									["npUseIcon"] = true,
+									["npThickFont"] = false,
+									["barBGCCC"] = true,
+									["barCooldownStyle"] = "empty",
+									["cellSide"] = false,
+									["barCCCFont"] = true,
+									["npShowLabel"] = true,
+									["barCCC"] = true,
+									["cellBGColor"] = {
+										["a"] = 0,
+										["b"] = 0,
+										["g"] = 0,
+										["r"] = 0,
+									},
+									["osFGColor"] = {
+										["a"] = 1,
+										["b"] = 0,
+										["g"] = 1,
+										["r"] = 0,
+									},
+									["barBGColorC"] = {
+										["a"] = 0.16,
+										["b"] = 0,
+										["g"] = 0,
+										["r"] = 0,
+									},
+								},
+								["Bars"] = {
+									["barIcon"] = "none",
+									["npCCFont"] = true,
+									["barOutlineFont"] = true,
+									["barTextSide"] = "left",
+									["barShowPlayerName"] = true,
+									["npShowLabel"] = true,
+									["npTexColor"] = {
+										["a"] = 0.5,
+										["b"] = 0,
+										["g"] = 0,
+										["r"] = 0,
+									},
+									["barCCCFont"] = true,
+									["osFGColor"] = {
+										["a"] = 1,
+										["b"] = 0,
+										["g"] = 1,
+										["r"] = 0,
+									},
+									["barColorC"] = {
+										["a"] = 0.74,
+										["b"] = 0.55,
+										["g"] = 0.55,
+										["r"] = 0.55,
+									},
+									["locked"] = false,
+									["osEnabled"] = false,
+									["barLocation"] = "BOTTOM",
+									["barFont"] = "Friz Quadrata TT",
+									["barColorUFont"] = {
+										["a"] = 0.3,
+										["b"] = 1,
+										["g"] = 1,
+										["r"] = 1,
+									},
+									["npW"] = 120,
+									["barBGColorU"] = {
+										["a"] = 0.16,
+										["b"] = 0,
+										["g"] = 0,
+										["r"] = 0,
+									},
+									["hideNoSender"] = true,
+									["barCooldownStyle"] = "empty",
+									["barTexture"] = "Blizzard",
+									["osCooldownStyle"] = "empty",
+									["barColorU"] = {
+										["a"] = 0.23,
+										["b"] = 0,
+										["g"] = 0,
+										["r"] = 0,
+									},
+									["y"] = 609,
+									["x"] = 910.000061035156,
+									["barColorAFont"] = {
+										["a"] = 1,
+										["b"] = 0.94,
+										["g"] = 0.94,
+										["r"] = 0.94,
+									},
+									["barColorCFont"] = {
+										["a"] = 1,
+										["b"] = 1,
+										["g"] = 1,
+										["r"] = 1,
+									},
+									["barColorA"] = {
+										["a"] = 1,
+										["b"] = 0.94,
+										["g"] = 0.94,
+										["r"] = 0.94,
+									},
+									["barPadding"] = 10,
+									["npThickFont"] = false,
+									["npUseNameplate"] = true,
+									["npFontColor"] = {
+										["a"] = 0.76,
+										["b"] = 0.92,
+										["g"] = 0.92,
+										["r"] = 0.92,
+									},
+									["barCCU"] = false,
+									["npFontSize"] = 12,
+									["npH"] = 15,
+									["scale"] = 1,
+									["barShowTime"] = true,
+									["npFont"] = "Friz Quadrata TT",
+									["osCooldownDirection"] = "right",
+									["barShowSpellName"] = false,
+									["npTextSide"] = "right",
+									["npIcon"] = "right",
+									["barThickFont"] = false,
+									["npTexture"] = "Blizzard",
+									["barIconMerged"] = "left",
+									["barCooldownDirection"] = "right",
+									["barH"] = 14,
+									["barCCUFont"] = false,
+									["barGap"] = 1,
+									["npCCBar"] = false,
+									["barBGCCU"] = false,
+									["merged"] = false,
+									["npUseIcon"] = true,
+									["npOutlineFont"] = true,
+									["barBGCCC"] = true,
+									["barCCAFont"] = false,
+									["growUp"] = false,
+									["barTextRatio"] = 65,
+									["barCCC"] = true,
+									["barCCA"] = true,
+									["barFontSize"] = 12,
+									["barBGColorC"] = {
+										["a"] = 0.16,
+										["b"] = 0,
+										["g"] = 0,
+										["r"] = 0,
+									},
+									["barW"] = 150,
+								},
+								["CooldownBars"] = {
+									["barheight"] = 14,
+									["scale"] = 1,
+									["barTextSide"] = "left",
+									["fontsize"] = 12,
+									["locked"] = false,
+									["barCooldownDirection"] = "right",
+									["hideSelf"] = false,
+									["osFGColor"] = {
+										["a"] = 1,
+										["b"] = 0,
+										["g"] = 1,
+										["r"] = 0,
+									},
+									["barGap"] = 1,
+									["x"] = 870.000061035156,
+									["bartexture"] = "Blizzard",
+									["barwidth"] = 180,
+									["osCooldownDirection"] = "right",
+									["alpha"] = 1,
+									["barShowSpellName"] = false,
+									["y"] = 609,
+									["font"] = "Friz Quadrata TT",
+									["barCooldownStyle"] = "full",
+									["osCooldownStyle"] = "full",
+									["osEnabled"] = false,
+									["barIcon"] = "left",
+									["growup"] = false,
+									["textratio"] = 60,
+								},
+							},
+							["includeAll"] = true,
+							["filterdead"] = true,
+							["name"] = "Default",
+							["filterconnection"] = true,
+							["filterplayertype"] = "disabled",
+							["playerfilters"] = {
+							},
+							["filter25man"] = true,
+							["abilities"] = {
+								{
+									["id"] = 51052,
+									["enabled"] = false,
+								}, -- [1]
+								{
+									["id"] = 61999,
+									["enabled"] = false,
+								}, -- [2]
+								{
+									["id"] = 20484,
+									["enabled"] = false,
+								}, -- [3]
+								{
+									["id"] = 106898,
+									["enabled"] = false,
+								}, -- [4]
+								{
+									["id"] = 740,
+									["enabled"] = false,
+								}, -- [5]
+								{
+									["id"] = 102342,
+									["enabled"] = false,
+								}, -- [6]
+								{
+									["id"] = 172106,
+									["enabled"] = false,
+								}, -- [7]
+								{
+									["id"] = 159916,
+									["enabled"] = false,
+								}, -- [8]
+								{
+									["id"] = 80353,
+									["enabled"] = false,
+								}, -- [9]
+								{
+									["id"] = 116849,
+									["enabled"] = false,
+								}, -- [10]
+								{
+									["id"] = 115310,
+									["enabled"] = false,
+								}, -- [11]
+								{
+									["id"] = 31821,
+									["enabled"] = false,
+								}, -- [12]
+								{
+									["id"] = 1022,
+									["enabled"] = false,
+								}, -- [13]
+								{
+									["id"] = 6940,
+									["enabled"] = false,
+								}, -- [14]
+								{
+									["id"] = 114039,
+									["enabled"] = false,
+								}, -- [15]
+								{
+									["id"] = 64843,
+									["enabled"] = false,
+								}, -- [16]
+								{
+									["id"] = 47788,
+									["enabled"] = false,
+								}, -- [17]
+								{
+									["id"] = 33206,
+									["enabled"] = false,
+								}, -- [18]
+								{
+									["id"] = 62618,
+									["enabled"] = false,
+								}, -- [19]
+								{
+									["id"] = 109964,
+									["enabled"] = false,
+								}, -- [20]
+								{
+									["id"] = 76577,
+									["enabled"] = false,
+								}, -- [21]
+								{
+									["id"] = 2825,
+									["enabled"] = false,
+								}, -- [22]
+								{
+									["id"] = 108280,
+									["enabled"] = false,
+								}, -- [23]
+								{
+									["id"] = 98008,
+									["enabled"] = false,
+								}, -- [24]
+								{
+									["id"] = 108281,
+									["enabled"] = false,
+								}, -- [25]
+								{
+									["id"] = 20707,
+									["enabled"] = false,
+								}, -- [26]
+								{
+									["id"] = 12975,
+									["enabled"] = false,
+								}, -- [27]
+								{
+									["id"] = 97462,
+									["enabled"] = false,
+								}, -- [28]
+								{
+									["id"] = 114028,
+									["enabled"] = false,
+								}, -- [29]
+							},
+						}, -- [1]
+					},
+				},
 			},
 			["spells"] = {
 				{
@@ -5870,490 +6353,7 @@ HermesDB2 = {
 					["icon"] = "Interface\\Icons\\ability_monk_zenmeditation",
 				}, -- [83]
 			},
-			["items"] = {
-				{
-					["enabled"] = false,
-					["name"] = "Mirror of Broken Images",
-					["id"] = -62466,
-					["class"] = "ANY",
-					["icon"] = "Interface\\ICONS\\INV_Misc_Platnumdisks.blp",
-				}, -- [1]
-			},
-			["plugins"] = {
-				["Hermes-UI"] = {
-					["views"] = {
-						{
-							["module"] = "GridButtons",
-							["filterrange"] = true,
-							["filter10man"] = true,
-							["filterself"] = false,
-							["enabled"] = true,
-							["profiles"] = {
-								["Logger"] = {
-									["fontSize"] = 12,
-									["fontColor"] = {
-										["a"] = 1,
-										["b"] = 0.6,
-										["g"] = 0.6,
-										["r"] = 0.6,
-									},
-									["scale"] = 1,
-									["alpha"] = 1,
-									["h"] = 100,
-									["bgColor"] = {
-										["a"] = 0.75,
-										["b"] = 0,
-										["g"] = 0,
-										["r"] = 0,
-									},
-									["showTimestamp"] = true,
-									["showSlider"] = true,
-									["w"] = 400,
-									["locked"] = false,
-									["y"] = 650,
-									["x"] = 760.000122070313,
-									["font"] = "Friz Quadrata TT",
-								},
-								["GridButtons"] = {
-									["scale"] = 1,
-									["hideNoSender"] = true,
-									["merged"] = false,
-									["coloredBorders"] = true,
-									["w"] = 233.295700073242,
-									["mergedicon"] = "Interface\\ICONS\\INV_Misc_QuestionMark",
-									["y"] = 1195.88842773438,
-									["x"] = 1488.59826660156,
-									["locked"] = true,
-									["cellAnchor"] = "TOPRIGHT",
-									["colorNS"] = {
-										["a"] = 0.75,
-										["r"] = 0.5,
-										["g"] = 0.5,
-										["b"] = 0.5,
-									},
-									["padding"] = 5,
-									["h"] = 186.246963500977,
-									["colorU"] = {
-										["a"] = 1,
-										["r"] = 0.5,
-										["g"] = 0.5,
-										["b"] = 0.5,
-									},
-								},
-								["GridBars"] = {
-									["barShowTime"] = true,
-									["npCCFont"] = true,
-									["barShowPlayerName"] = true,
-									["h"] = 670.350524902344,
-									["hideNoAvailSender"] = false,
-									["barColorC"] = {
-										["a"] = 0.74,
-										["b"] = 0.55,
-										["g"] = 0.55,
-										["r"] = 0.55,
-									},
-									["locked"] = true,
-									["barFont"] = "Friz Quadrata TT",
-									["barBGColorU"] = {
-										["a"] = 0.16,
-										["b"] = 0,
-										["g"] = 0,
-										["r"] = 0,
-									},
-									["hideNoSender"] = false,
-									["barTexture"] = "Blizzard",
-									["osCooldownStyle"] = "empty",
-									["barColorU"] = {
-										["a"] = 0.23,
-										["b"] = 0,
-										["g"] = 0,
-										["r"] = 0,
-									},
-									["y"] = 1149.99987792969,
-									["x"] = 10.1470918655396,
-									["barPadding"] = 1,
-									["scale"] = 1,
-									["npTexture"] = "Blizzard",
-									["barCooldownDirection"] = "right",
-									["barThickFont"] = false,
-									["barBGCCU"] = false,
-									["barColorCFont"] = {
-										["a"] = 1,
-										["b"] = 1,
-										["g"] = 1,
-										["r"] = 1,
-									},
-									["barCCAFont"] = false,
-									["barTextRatio"] = 65,
-									["cellAnchor"] = "TOPLEFT",
-									["padding"] = 0,
-									["barW"] = 100,
-									["barIcon"] = "none",
-									["barTextSide"] = "left",
-									["barCCA"] = true,
-									["barIconMerged"] = "left",
-									["npW"] = 120,
-									["barColorUFont"] = {
-										["a"] = 0.3,
-										["b"] = 1,
-										["g"] = 1,
-										["r"] = 1,
-									},
-									["barColorAFont"] = {
-										["a"] = 1,
-										["b"] = 0.94,
-										["g"] = 0.94,
-										["r"] = 0.94,
-									},
-									["barOutlineFont"] = true,
-									["w"] = 516.666687011719,
-									["barFontSize"] = 12,
-									["osCooldownDirection"] = "right",
-									["barColorA"] = {
-										["a"] = 1,
-										["b"] = 0.94,
-										["g"] = 0.94,
-										["r"] = 0.94,
-									},
-									["npFontColor"] = {
-										["a"] = 0.76,
-										["b"] = 0.92,
-										["g"] = 0.92,
-										["r"] = 0.92,
-									},
-									["barCCU"] = false,
-									["osEnabled"] = false,
-									["npIcon"] = "right",
-									["cellMax"] = 3,
-									["npUseNameplate"] = true,
-									["npFont"] = "Friz Quadrata TT",
-									["hideNoCooldown"] = false,
-									["npTextSide"] = "right",
-									["barCCUFont"] = false,
-									["npOutlineFont"] = true,
-									["merged"] = false,
-									["npH"] = 15,
-									["npTexColor"] = {
-										["a"] = 0.5,
-										["b"] = 0,
-										["g"] = 0,
-										["r"] = 0,
-									},
-									["npFontSize"] = 12,
-									["barH"] = 14,
-									["enableTooltip"] = true,
-									["barGap"] = 2,
-									["npCCBar"] = false,
-									["barShowSpellName"] = false,
-									["cellDir"] = false,
-									["npUseIcon"] = true,
-									["npThickFont"] = false,
-									["barBGCCC"] = true,
-									["barCooldownStyle"] = "empty",
-									["cellSide"] = false,
-									["barCCCFont"] = true,
-									["npShowLabel"] = true,
-									["barCCC"] = true,
-									["cellBGColor"] = {
-										["a"] = 0,
-										["b"] = 0,
-										["g"] = 0,
-										["r"] = 0,
-									},
-									["osFGColor"] = {
-										["a"] = 1,
-										["b"] = 0,
-										["g"] = 1,
-										["r"] = 0,
-									},
-									["barBGColorC"] = {
-										["a"] = 0.16,
-										["b"] = 0,
-										["g"] = 0,
-										["r"] = 0,
-									},
-								},
-								["Bars"] = {
-									["barIcon"] = "none",
-									["npCCFont"] = true,
-									["barOutlineFont"] = true,
-									["barTextSide"] = "left",
-									["barShowPlayerName"] = true,
-									["npShowLabel"] = true,
-									["npTexColor"] = {
-										["a"] = 0.5,
-										["b"] = 0,
-										["g"] = 0,
-										["r"] = 0,
-									},
-									["barFont"] = "Friz Quadrata TT",
-									["osFGColor"] = {
-										["a"] = 1,
-										["b"] = 0,
-										["g"] = 1,
-										["r"] = 0,
-									},
-									["barColorC"] = {
-										["a"] = 0.74,
-										["b"] = 0.55,
-										["g"] = 0.55,
-										["r"] = 0.55,
-									},
-									["locked"] = false,
-									["osEnabled"] = false,
-									["barLocation"] = "BOTTOM",
-									["barCCC"] = true,
-									["barColorUFont"] = {
-										["a"] = 0.3,
-										["b"] = 1,
-										["g"] = 1,
-										["r"] = 1,
-									},
-									["npW"] = 120,
-									["barBGColorU"] = {
-										["a"] = 0.16,
-										["b"] = 0,
-										["g"] = 0,
-										["r"] = 0,
-									},
-									["hideNoSender"] = true,
-									["barCooldownStyle"] = "empty",
-									["barTexture"] = "Blizzard",
-									["osCooldownStyle"] = "empty",
-									["barColorU"] = {
-										["a"] = 0.23,
-										["b"] = 0,
-										["g"] = 0,
-										["r"] = 0,
-									},
-									["y"] = 609,
-									["x"] = 910.000061035156,
-									["barColorAFont"] = {
-										["a"] = 1,
-										["b"] = 0.94,
-										["g"] = 0.94,
-										["r"] = 0.94,
-									},
-									["npUseIcon"] = true,
-									["barColorA"] = {
-										["a"] = 1,
-										["b"] = 0.94,
-										["g"] = 0.94,
-										["r"] = 0.94,
-									},
-									["barPadding"] = 10,
-									["barColorCFont"] = {
-										["a"] = 1,
-										["b"] = 1,
-										["g"] = 1,
-										["r"] = 1,
-									},
-									["npUseNameplate"] = true,
-									["npFontColor"] = {
-										["a"] = 0.76,
-										["b"] = 0.92,
-										["g"] = 0.92,
-										["r"] = 0.92,
-									},
-									["barCCU"] = false,
-									["npFontSize"] = 12,
-									["npH"] = 15,
-									["scale"] = 1,
-									["barShowTime"] = true,
-									["npFont"] = "Friz Quadrata TT",
-									["osCooldownDirection"] = "right",
-									["barShowSpellName"] = false,
-									["npTextSide"] = "right",
-									["npIcon"] = "right",
-									["barThickFont"] = false,
-									["npTexture"] = "Blizzard",
-									["barIconMerged"] = "left",
-									["barCooldownDirection"] = "right",
-									["barH"] = 14,
-									["barCCUFont"] = false,
-									["barGap"] = 1,
-									["npCCBar"] = false,
-									["barBGCCU"] = false,
-									["merged"] = false,
-									["npThickFont"] = false,
-									["npOutlineFont"] = true,
-									["barBGCCC"] = true,
-									["barCCAFont"] = false,
-									["growUp"] = false,
-									["barTextRatio"] = 65,
-									["barCCCFont"] = true,
-									["barCCA"] = true,
-									["barFontSize"] = 12,
-									["barBGColorC"] = {
-										["a"] = 0.16,
-										["b"] = 0,
-										["g"] = 0,
-										["r"] = 0,
-									},
-									["barW"] = 150,
-								},
-								["CooldownBars"] = {
-									["barheight"] = 14,
-									["scale"] = 1,
-									["barTextSide"] = "left",
-									["fontsize"] = 12,
-									["locked"] = false,
-									["barCooldownDirection"] = "right",
-									["hideSelf"] = false,
-									["osFGColor"] = {
-										["a"] = 1,
-										["b"] = 0,
-										["g"] = 1,
-										["r"] = 0,
-									},
-									["barGap"] = 1,
-									["x"] = 870.000061035156,
-									["bartexture"] = "Blizzard",
-									["barwidth"] = 180,
-									["osCooldownDirection"] = "right",
-									["alpha"] = 1,
-									["barShowSpellName"] = false,
-									["y"] = 609,
-									["font"] = "Friz Quadrata TT",
-									["barCooldownStyle"] = "full",
-									["osCooldownStyle"] = "full",
-									["osEnabled"] = false,
-									["barIcon"] = "left",
-									["growup"] = false,
-									["textratio"] = 60,
-								},
-							},
-							["includeAll"] = true,
-							["filterdead"] = true,
-							["abilities"] = {
-								{
-									["id"] = 51052,
-									["enabled"] = false,
-								}, -- [1]
-								{
-									["id"] = 61999,
-									["enabled"] = false,
-								}, -- [2]
-								{
-									["id"] = 20484,
-									["enabled"] = false,
-								}, -- [3]
-								{
-									["id"] = 106898,
-									["enabled"] = false,
-								}, -- [4]
-								{
-									["id"] = 740,
-									["enabled"] = false,
-								}, -- [5]
-								{
-									["id"] = 102342,
-									["enabled"] = false,
-								}, -- [6]
-								{
-									["id"] = 172106,
-									["enabled"] = false,
-								}, -- [7]
-								{
-									["id"] = 159916,
-									["enabled"] = false,
-								}, -- [8]
-								{
-									["id"] = 80353,
-									["enabled"] = false,
-								}, -- [9]
-								{
-									["id"] = 116849,
-									["enabled"] = false,
-								}, -- [10]
-								{
-									["id"] = 115310,
-									["enabled"] = false,
-								}, -- [11]
-								{
-									["id"] = 31821,
-									["enabled"] = false,
-								}, -- [12]
-								{
-									["id"] = 1022,
-									["enabled"] = false,
-								}, -- [13]
-								{
-									["id"] = 6940,
-									["enabled"] = false,
-								}, -- [14]
-								{
-									["id"] = 114039,
-									["enabled"] = false,
-								}, -- [15]
-								{
-									["id"] = 64843,
-									["enabled"] = false,
-								}, -- [16]
-								{
-									["id"] = 47788,
-									["enabled"] = false,
-								}, -- [17]
-								{
-									["id"] = 33206,
-									["enabled"] = false,
-								}, -- [18]
-								{
-									["id"] = 62618,
-									["enabled"] = false,
-								}, -- [19]
-								{
-									["id"] = 109964,
-									["enabled"] = false,
-								}, -- [20]
-								{
-									["id"] = 76577,
-									["enabled"] = false,
-								}, -- [21]
-								{
-									["id"] = 2825,
-									["enabled"] = false,
-								}, -- [22]
-								{
-									["id"] = 108280,
-									["enabled"] = false,
-								}, -- [23]
-								{
-									["id"] = 98008,
-									["enabled"] = false,
-								}, -- [24]
-								{
-									["id"] = 108281,
-									["enabled"] = false,
-								}, -- [25]
-								{
-									["id"] = 20707,
-									["enabled"] = false,
-								}, -- [26]
-								{
-									["id"] = 12975,
-									["enabled"] = false,
-								}, -- [27]
-								{
-									["id"] = 97462,
-									["enabled"] = false,
-								}, -- [28]
-								{
-									["id"] = 114028,
-									["enabled"] = false,
-								}, -- [29]
-							},
-							["filterconnection"] = true,
-							["filterplayertype"] = "disabled",
-							["playerfilters"] = {
-							},
-							["name"] = "Default",
-							["filter25man"] = true,
-						}, -- [1]
-					},
-				},
-			},
-			["configMode"] = false,
+			["welcome"] = true,
 		},
 		["Evan - Illidan"] = {
 			["items"] = {
@@ -6377,8 +6377,7 @@ HermesDB2 = {
 							["filterrange"] = true,
 							["filter10man"] = true,
 							["filterself"] = false,
-							["abilities"] = {
-							},
+							["name"] = "Default",
 							["profiles"] = {
 								["GridButtons"] = {
 									["merged"] = false,
@@ -6407,10 +6406,11 @@ HermesDB2 = {
 									},
 								},
 							},
-							["filter25man"] = true,
+							["abilities"] = {
+							},
 							["playerfilters"] = {
 							},
-							["name"] = "Default",
+							["filter25man"] = true,
 							["filterplayertype"] = "disabled",
 							["filterconnection"] = true,
 							["filterdead"] = false,
@@ -7058,14 +7058,14 @@ HermesDB2 = {
 							},
 							["includeAll"] = true,
 							["filterdead"] = false,
-							["filter25man"] = true,
+							["abilities"] = {
+							},
 							["filterconnection"] = true,
 							["filterplayertype"] = "disabled",
 							["playerfilters"] = {
 							},
-							["abilities"] = {
-							},
 							["name"] = "Default",
+							["filter25man"] = true,
 						}, -- [1]
 					},
 				},

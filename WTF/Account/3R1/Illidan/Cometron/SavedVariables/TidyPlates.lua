@@ -10,9 +10,9 @@ TidyPlatesOptions = {
 	["FourthSpecProfile"] = "Damage",
 	["SecondaryProfile"] = "Damage",
 	["ThirdSpecProfile"] = "Damage",
-	["DisableCastBars"] = false,
-	["ActiveProfile"] = "Damage",
 	["ActiveTheme"] = "Neon",
+	["ActiveProfile"] = "Damage",
+	["DisableCastBars"] = false,
 	["WelcomeShown"] = true,
 	["FirstSpecProfile"] = "Damage",
 }
