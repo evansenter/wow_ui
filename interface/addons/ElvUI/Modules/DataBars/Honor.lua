@@ -33,7 +33,7 @@ function mod:UpdateHonor(event, unit)
 		local level = UnitHonorLevel("player");
         local levelmax = GetMaxPlayerHonorLevel();
 
-		
+
         if (level == levelmax) then
 			-- Force the bar to full for the max level
 			bar.statusBar:SetMinMaxValues(0, 1)
@@ -65,7 +65,7 @@ function mod:UpdateHonor(event, unit)
 				text = PVP_HONOR_PRESTIGE_AVAILABLE
 			elseif (level == levelmax) then
 				text = MAX_HONOR_LEVEL
-			else		
+			else
 				text = format('%s - %s', E:ShortValue(current), E:ShortValue(max))
 			end
 		elseif textFormat == 'CURPERC' then
@@ -76,9 +76,33 @@ function mod:UpdateHonor(event, unit)
 			else
 				text = format('%s - %d%%', E:ShortValue(current), current / max * 100)
 			end
-		end		
+		elseif textFormat == 'CUR' then
+			if (CanPrestige()) then
+				text = PVP_HONOR_PRESTIGE_AVAILABLE
+			elseif (level == levelmax) then
+				text = MAX_HONOR_LEVEL
+			else
+				text = format('%s', E:ShortValue(current))
+			end
+		elseif textFormat == 'REM' then
+			if (CanPrestige()) then
+				text = PVP_HONOR_PRESTIGE_AVAILABLE
+			elseif (level == levelmax) then
+				text = MAX_HONOR_LEVEL
+			else
+				text = format('%s', E:ShortValue(max-current))
+			end
+		elseif textFormat == 'CURREM' then
+			if (CanPrestige()) then
+				text = PVP_HONOR_PRESTIGE_AVAILABLE
+			elseif (level == levelmax) then
+				text = MAX_HONOR_LEVEL
+			else
+				text = format('%s - %s', E:ShortValue(current), E:ShortValue(max-current))
+			end
+		end
 
-		bar.text:SetText(text)	
+		bar.text:SetText(text)
 	end
 end
 
@@ -110,6 +134,10 @@ function mod:HonorBar_OnEnter()
 	GameTooltip:Show()
 end
 
+function mod:HonorBar_OnClick()
+
+end
+
 function mod:UpdateHonorDimensions()
 	self.honorBar:Width(self.db.honor.width)
 	self.honorBar:Height(self.db.honor.height)
@@ -120,7 +148,7 @@ function mod:UpdateHonorDimensions()
 		self.honorBar:SetAlpha(0)
 	else
 		self.honorBar:SetAlpha(1)
-	end		
+	end
 end
 
 function mod:EnableDisable_HonorBar()
@@ -137,7 +165,7 @@ function mod:EnableDisable_HonorBar()
 end
 
 function mod:LoadHonorBar()
-	self.honorBar = self:CreateBar('ElvUI_HonorBar', self.HonorBar_OnEnter, 'RIGHT', RightChatPanel, 'LEFT', E.Border - E.Spacing*3, 0)
+	self.honorBar = self:CreateBar('ElvUI_HonorBar', self.HonorBar_OnEnter, self.HonorBar_OnClick, 'RIGHT', RightChatPanel, 'LEFT', E.Border - E.Spacing*3, 0)
 	self.honorBar.statusBar:SetStatusBarColor(240/255, 114/255, 65/255)
 	self.honorBar.statusBar:SetMinMaxValues(0, 325)
 

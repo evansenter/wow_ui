@@ -19,6 +19,7 @@ opt.tooltips = {
     combat_hostile = 'Action to take on hostile frames upon entering combat. Will be inverted upon leaving combat',
     combat_friendly = 'Action to take on friendly frames upon entering combat. Will be inverted upon leaving combat',
 
+    ignore_uiscale = 'Ignore the default UI\'s scaling. This allows nameplates to retain pixel-perfectness regardless of resolution, unless you manually resize the game window.|n|nIf running in windowed fullscreen, you must first set the resolution dropdown to your actual screen resolution for this to work correctly (i.e. change to windowed mode, set the resolution dropdown, then change back to windowed fullscreen).|n|n|cffff6666This will have not work if you are running the game in a manually-resized window.',
     state_icons = 'Show an icon on bosses and rare units (hidden when level text is shown)',
 
     nameonly = 'Hide the healthbars of friendly or unattackable units. While in name-only mode, name text is coloured as a percentage of health',
@@ -46,7 +47,7 @@ opt.tooltips = {
     colour_self = 'The health bar colour of your personal nameplate',
 
     execute_enabled = 'Recolour health bars when units are within execute range',
-    execute_auto = 'Automatically detect the appropriate execute range from your talents',
+    execute_auto = 'Automatically detect the appropriate execute range from your talents, defaulting to 20% on a character with no execute',
     execute_colour = 'Colour to use within execute range',
     execute_percent = 'Manually set execute range',
 
@@ -69,6 +70,7 @@ opt.tooltips = {
     frame_height_minus = 'Height of nameplates used on mobs flagged as "minus" (previously referred to as trivial), as well as nameless frames (i.e. "unimportant" units)',
     powerbar_height = 'Height of the power bar. Will not increase beyond frame height',
 
+    auras_enabled = 'Show auras that you cast on nameplates - buffs on friends, debuffs on enemies',
     auras_on_personal = 'Show auras on your character\'s nameplate if it is enabled',
     auras_whitelist = 'Use KuiSpellList to filter spells. You can use the extra addon KuiSpellListConfig from Curse to customise this list',
     auras_pulsate = 'Pulsate icons when they are about to expire',
@@ -117,6 +119,8 @@ opt.titles = {
 
     combat_hostile = 'Combat action: hostile',
     combat_friendly = 'Combat action: friendly',
+
+    ignore_uiscale = 'Ignore UI scale',
 
     nameonly = 'Use name-only mode',
     nameonly_no_font_style = 'No text outline',
@@ -188,7 +192,7 @@ opt.titles = {
     powerbar_height = 'Power bar height',
     castbar_height = 'Cast bar height',
 
-    auras_enabled = 'Show auras',
+    auras_enabled = 'Show own auras',
     auras_on_personal = 'Show on personal frame',
     auras_whitelist = 'Use whitelist',
     auras_pulsate = 'Pulsate icons',

@@ -1,8 +1,0 @@
-2016-08-03  yellowfive  <yellowfive>
-
-[af2474d28bb4] [v39]
-* AskMrRobot-Serializer/AskMrRobot-Serializer.lua, AskMrRobot.toc, Gear.lua, localization/ruRU.lua:
-
-Added Russian translation.
-
-

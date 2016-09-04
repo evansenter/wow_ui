@@ -308,7 +308,7 @@ Pour plus d'information sur la Personnalisation de Pawn, regarder le fichier d'a
 		Wand = "^Baguette$",
 		Warforged = "^De guerre$", -- Needs review
 		Warglaives = "^Glaives de guerre$", -- Needs review
-		WeaponDamage = "^D\195\169g\195\162ts : ([%d%. ,]+) %- ([%d%. ,]+)$", -- Needs review
+		WeaponDamage = "^D\195\169g\195\162ts.?.?: ([%d%. ,]+) %- ([%d%. ,]+)$", -- Needs review
 		WeaponDamageArcane = "^%+?([%d%. ,]+) %- ([%d%. ,]+) points de d\195\169g\195\162ts %(Arcanes%)$",
 		WeaponDamageArcaneExact = "^%+?([%d%. ,]+) points de d\195\169g\195\162ts %(Arcanes%)$",
 		WeaponDamageEnchantment = "^%+?([%d%. ,]+) aux d\195\169g\195\162ts de l'arme$",

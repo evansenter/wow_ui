@@ -7,11 +7,12 @@ local _G = _G
 local format = format
 
 --WoW API / Variables
-local GetWatchedFactionInfo, GetNumFactions, GetFactionInfo = GetWatchedFactionInfo, GetNumFactions, GetFactionInfo
 local GetFriendshipReputation = GetFriendshipReputation
-local REPUTATION, STANDING = REPUTATION, STANDING
-local FACTION_BAR_COLORS = FACTION_BAR_COLORS
+local GetWatchedFactionInfo, GetNumFactions, GetFactionInfo = GetWatchedFactionInfo, GetNumFactions, GetFactionInfo
 local InCombatLockdown = InCombatLockdown
+local ToggleCharacter = ToggleCharacter
+local FACTION_BAR_COLORS = FACTION_BAR_COLORS
+local REPUTATION, STANDING = REPUTATION, STANDING
 
 --Global variables that we don't cache, list them here for mikk's FindGlobals script
 -- GLOBALS: GameTooltip, RightChatPanel, CreateFrame
@@ -65,13 +66,19 @@ function mod:UpdateReputation(event)
 		else
 			standingLabel = FactionStandingLabelUnknown
 		end
-
+		
 		if textFormat == 'PERCENT' then
 			text = format('%s: %d%% [%s]', name, ((value - min) / (max - min) * 100), isFriend and friendText or standingLabel)
 		elseif textFormat == 'CURMAX' then
 			text = format('%s: %s - %s [%s]', name, E:ShortValue(value - min), E:ShortValue(max - min), isFriend and friendText or standingLabel)
 		elseif textFormat == 'CURPERC' then
 			text = format('%s: %s - %d%% [%s]', name, E:ShortValue(value - min), ((value - min) / (max - min) * 100), isFriend and friendText or standingLabel)
+		elseif textFormat == 'CUR' then
+			text = format('%s: %s [%s]', name, E:ShortValue(value - min), isFriend and friendText or standingLabel)
+		elseif textFormat == 'REM' then
+			text = format('%s: %s [%s]', name, E:ShortValue((max - min) - (value-min)), isFriend and friendText or standingLabel)
+		elseif textFormat == 'CURREM' then
+			text = format('%s: %s - %s [%s]', name, E:ShortValue(value - min), E:ShortValue((max - min) - (value-min)), isFriend and friendText or standingLabel)
 		end
 
 		bar.text:SetText(text)
@@ -95,6 +102,10 @@ function mod:ReputationBar_OnEnter()
 		GameTooltip:AddDoubleLine(REPUTATION..':', format('%d / %d (%d%%)', value - min, max - min, (value - min) / ((max - min == 0) and max or (max - min)) * 100), 1, 1, 1)
 	end
 	GameTooltip:Show()
+end
+
+function mod:ReputationBar_OnClick()
+	ToggleCharacter("ReputationFrame");
 end
 
 function mod:UpdateReputationDimensions()
@@ -124,7 +135,7 @@ end
 
 
 function mod:LoadReputationBar()
-	self.repBar = self:CreateBar('ElvUI_ReputationBar', self.ReputationBar_OnEnter, 'RIGHT', RightChatPanel, 'LEFT', E.Border - E.Spacing*3, 0)
+	self.repBar = self:CreateBar('ElvUI_ReputationBar', self.ReputationBar_OnEnter, self.ReputationBar_OnClick, 'RIGHT', RightChatPanel, 'LEFT', E.Border - E.Spacing*3, 0)
 	E:RegisterStatusBar(self.repBar.statusBar)
 
 	self.repBar.eventFrame = CreateFrame("Frame")

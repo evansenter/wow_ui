@@ -1,0 +1,14 @@
+tag 7.0.5
+8aad58b6bdc13d910360e42925ca731f2c7d4c9e
+Alex Shubert <shubert@animatron.com>
+2016-08-31 23:04:35 +0300
+
+7.0.5
+
+
+--------------------
+
+Arnvid Karstad:
+	- removed makeBreak
+arnvid:
+	- loc/localization_EN.lua - added 2 missing text AutoTurnIn.lua - added ievil's makebreak for debugging

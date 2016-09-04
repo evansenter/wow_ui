@@ -60,20 +60,19 @@ end
 
 local time_texture = "|TInterface\\Icons\\spell_holy_borrowedtime:0|t"
 
+local salvage_item = {
+   bag       = 139593,
+   crate     = 114119, -- outdated
+   big_crate = 140590,
+}
+
 local hardcoded_salvage_textures = {
-   [114116] = "Interface\\ICONS\\INV_Misc_Bag_12.blp",
-   [114119] = "Interface\\ICONS\\INV_Crate_01.blp",
-   [114120] = "Interface\\ICONS\\INV_Eng_Crate2.blp",
+   [salvage_item.bag      ] = "Interface\\ICONS\\inv_misc_bag_10_red.blp",
+   [salvage_item.crate    ] = "Interface\\ICONS\\INV_Crate_01.blp",
+   [salvage_item.big_crate] = "Interface\\ICONS\\inv_crate_05.blp",
 }
 local salvage_textures = setmetatable({}, { __index = function(t, key)
-   local item_id
-   if key == "bag" then
-      item_id = 114116
-   elseif key == "crate" then
-      item_id = 114119
-   elseif key == "big_crate" then
-      item_id = 114120
-   end
+   local item_id = salvage_item[key]
 
    if item_id then
       local itemName, itemLink, itemRarity, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice = GetItemInfo(item_id)
@@ -93,10 +92,9 @@ local top_for_mission = {}
 addon_env.top_for_mission = top_for_mission
 addon_env.top_for_mission_dirty = true
 
-local filtered_followers = {
-   [LE_FOLLOWER_TYPE_GARRISON_6_0] = {},
-   [LE_FOLLOWER_TYPE_SHIPYARD_6_2] = {},
-}
+local supported_follower_types = { LE_FOLLOWER_TYPE_GARRISON_6_0, LE_FOLLOWER_TYPE_SHIPYARD_6_2, LE_FOLLOWER_TYPE_GARRISON_7_0 }
+local filtered_followers = {}
+for _, type in pairs(supported_follower_types) do filtered_followers[type] = {} end
 local filtered_followers_dirty = true
 local follower_xp_cap = {}
 
@@ -189,6 +187,8 @@ function event_handlers:ADDON_LOADED(event, addon_loaded)
          ingored_followers = SVPC_GarrisonMissionManager.ingored_followers
       end
       event_frame:UnregisterEvent("ADDON_LOADED")
+   elseif addon_loaded == "Blizzard_OrderHallUI" and addon_env.OrderHallInitUI then
+      addon_env.OrderHallInitUI()
    end
 end
 local loaded, finished = IsAddOnLoaded(addon_name)
@@ -197,6 +197,11 @@ if finished then
 else
    event_frame:RegisterEvent("ADDON_LOADED")
 end
+
+function event_handlers:GARRISON_MISSION_NPC_OPENED()
+   if addon_env.OrderHallInitUI then addon_env.OrderHallInitUI() end
+end
+event_frame:RegisterEvent("GARRISON_MISSION_NPC_OPENED")
 
 local gmm_buttons = {}
 addon_env.gmm_buttons = gmm_buttons
@@ -235,7 +240,6 @@ local function SortFollowersByLevel(a, b)
    return a.iLevel > b.iLevel
 end
 
-local supported_follower_types = { LE_FOLLOWER_TYPE_GARRISON_6_0, LE_FOLLOWER_TYPE_SHIPYARD_6_2 }
 local function GetFilteredFollowers(type_id)
    if filtered_followers_dirty then
 
@@ -250,7 +254,7 @@ local function GetFilteredFollowers(type_id)
          local free = 0
          local all_maxed = true
 
-         for idx = 1, #followers do
+         for idx = 1, followers and #followers or 0 do
             local follower = followers[idx]
             repeat
                if not follower.isCollected then break end
@@ -595,7 +599,6 @@ local function GarrisonMissionPage_ShowMission_More(self, missionInfo)
    BestForCurrentSelectedMission(LE_FOLLOWER_TYPE_GARRISON_6_0, MissionPage, "MissionPage")
 end
 
-local class_based_SetClearFollower = GarrisonMissionFrame and GarrisonMissionFrame.AssignFollowerToMission and GarrisonMissionFrame.RemoveFollowerFromMission and true
 --[[ localized above ]] MissionPage_PartyButtonOnClick = function(self)
    local method_base = self.method_base
    local follower_frames = self.follower_frames
@@ -603,7 +606,7 @@ local class_based_SetClearFollower = GarrisonMissionFrame and GarrisonMissionFra
    if self[1] then
       event_frame:UnregisterEvent("GARRISON_FOLLOWER_LIST_UPDATE")
       for idx = 1, #follower_frames do
-         if class_based_SetClearFollower then method_base:RemoveFollowerFromMission(follower_frames[idx]) else GarrisonMissionPage_ClearFollower(follower_frames[idx]) end
+         method_base:RemoveFollowerFromMission(follower_frames[idx])
       end
 
       for idx = 1, #follower_frames do
@@ -611,17 +614,13 @@ local class_based_SetClearFollower = GarrisonMissionFrame and GarrisonMissionFra
          local follower = self[idx]
          if follower then
             local followerInfo = C_Garrison.GetFollowerInfo(follower)
-            if class_based_SetClearFollower then method_base:AssignFollowerToMission(followerFrame, followerInfo) else GarrisonMissionPage_SetFollower(followerFrame, followerInfo) end
+            method_base:AssignFollowerToMission(followerFrame, followerInfo)
          end
       end
       event_frame:RegisterEvent("GARRISON_FOLLOWER_LIST_UPDATE")
    end
 
-   if GarrisonFollowerMission_class_UpdateMissionParty then
-      method_base:UpdateMissionParty(follower_frames)
-   else
-      GarrisonMissionPage_UpdateMissionForParty()
-   end
+   method_base:UpdateMissionParty(follower_frames)
 end
 
 local function MissionList_PartyButtonOnClick(self)
@@ -792,11 +791,15 @@ addon_env.MissionPage_ButtonsInit = function(button_prefix, parent_frame)
          local name = button_prefix .. suffix .. idx
          if not gmm_buttons[name] then
             local set_followers_button = CreateFrame("Button", nil, parent_frame, "UIPanelButtonTemplate")
+            -- TODO: all this stuff should be given to this function as args, not hardcoded
             -- Ugly, but I can't just parent to BorderFrame - buttons would be visible even on map screen
             set_followers_button:SetFrameLevel(set_followers_button:GetFrameLevel() + 4)
             if button_prefix == "ShipyardMissionPage" then
                set_followers_button.method_base = GarrisonShipyardFrame
                set_followers_button.follower_frames = GarrisonShipyardFrame.MissionTab.MissionPage.Followers
+            elseif button_prefix == "OrderHallMissionPage" then
+               set_followers_button.method_base = OrderHallMissionFrame
+               set_followers_button.follower_frames = OrderHallMissionFrame.MissionTab.MissionPage.Followers
             else
                set_followers_button.method_base = GarrisonMissionFrame
                set_followers_button.follower_frames = MissionPage.Followers
@@ -914,9 +917,7 @@ end
 addon_env.MissionPage_ButtonsInit("MissionPage", MissionPage)
 MissionList_ButtonsInit()
 MissionPage_WarningInit()
-PostHookFunctionOrClass("GarrisonMissionPage_ShowMission", "GarrisonMissionFrame", "ShowMission", GarrisonMissionPage_ShowMission_More)
--- local count = 0
--- hooksecurefunc("GarrisonFollowerList_UpdateFollowers", function(self) count = count + 1 print("GarrisonFollowerList_UpdateFollowers", count, self:GetName(), self:GetParent():GetName()) end)
+hooksecurefunc(GarrisonMissionFrame, "ShowMission", GarrisonMissionPage_ShowMission_More)
 
 local info_ignore_toggle = {
    notCheckable = true,
@@ -929,7 +930,7 @@ local info_ignore_toggle = {
       addon_env.top_for_mission_dirty = true
       filtered_followers_dirty = true
       if GarrisonMissionFrame:IsShown() then
-         GarrisonFollowerList_UpdateFollowers(GarrisonMissionFrame.FollowerList)
+         GarrisonMissionFrame.FollowerList:UpdateFollowers()
          if MissionPage.missionInfo then
             BestForCurrentSelectedMission()
          end
@@ -988,8 +989,9 @@ local function GarrisonFollowerList_Update_More(self)
          local follower = followers[followersList[index]]
          if ( follower.isCollected ) then
             if ingored_followers[follower.followerID] then
-               button.BusyFrame:Show()
-               button.BusyFrame.Texture:SetTexture(0.5, 0, 0, 0.3)
+               local BusyFrame = follower_frame.BusyFrame
+               BusyFrame.Texture:SetColorTexture(0.5, 0, 0, 0.3)
+               BusyFrame:Show()
             end
 
             if follower.level == GARRISON_FOLLOWER_MAX_LEVEL then

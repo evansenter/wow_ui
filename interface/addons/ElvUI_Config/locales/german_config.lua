@@ -37,7 +37,12 @@ Die folgenden Suchbegriffe können auch benutzt werden:
     • bou : Beim Benutzen gebundene Gegenstände.
     • boe : Beim Ausrüsten gebundene Gegenstände.
     • boa : An den Account gebundene Gegenstände.
-    • quest : Gebundene Quest Gegenstände.]=];
+    • quest : Gebundene Quest Gegenstände.
+    • reagents, reagent, crafting : Berufs Reagenzien.
+    • naval : Schiffsausrüstung.
+    • follower, followe, follow : Anhänger Gegenstände.
+    • relic, reli, rel : Artefakt Relikte.
+    • power, powe, pow : Gegenstände die Artefaktkraft gewähren.]=];
 L["TEXT_FORMAT_DESC"] = [=[Wähle eine Zeichenfolge um das Textformat zu ändern.
 
 Beispiele:
@@ -59,16 +64,6 @@ Namensformate:
 'name:long' - Name auf 20 Zeichen beschränkt
 
 Zum Deaktvieren lasse das Feld leer. Brauchst du mehr Informationen besuche http://www.tukui.org]=];
-L["IGNORE_ITEMS_DESC"] = [=[Gültige Einträge:
-
-Gegenstandslinks oder Gegenstandsnamen
-
-Bedingungen vom Suchsyntax. Beispiele:
-q:epic
-s:Tank Set
-q:epic&lvl:>300
-
-Siehe "Taschen->Suchsyntax" für mehr.]=];
 
 --ActionBars
 L["Action Paging"] = "Seitenwechsel der Aktionsleisten"
@@ -83,8 +78,10 @@ L["Button Spacing"] = "Abstand der Tasten" --Also used in Bags
 L["Buttons Per Row"] = "Tasten pro Zeile"
 L["Buttons"] = "Tasten"
 L["Change the alpha level of the frame."] = "Ändere den Alphakanal des Fensters."
+L["Color of the actionbutton when not usable."] = "Farbe der Aktionsleisten wenn nicht nutzbar."
 L["Color of the actionbutton when out of power (Mana, Rage, Focus, Holy Power)."] = "Die Farbe der Aktionstasten, wenn keine Kraft, wie z.B. Mana, Wut, Fokus oder Heilige Kraft, mehr vorhanden ist."
 L["Color of the actionbutton when out of range."] = "Die Farbe der Aktionstasten, wenn das Ziel außer Reichweite ist."
+L["Color of the actionbutton when usable."] = "Farbe der Aktionsleisten wenn nutzbar."
 L["Color when the text is about to expire"] = "Färbe den Text in dieser Farbe, wenn er in Kürze abläuft."
 L["Color when the text is in the days format."] = "Färbe den Text in dieser Farbe, wenn er Tagen angezeigt wird."
 L["Color when the text is in the hours format."] = "Färbe den Text in dieser Farbe, wenn er in Stunden angezeigt wird."
@@ -114,6 +111,7 @@ L["Masque Support"] = "Masque Unterstützung"
 L["Minutes"] = "Minuten"
 L["Mouse Over"] = "Mouseover" --Also used in Bags
 L["Multiply the backdrops height or width by this value. This is usefull if you wish to have more than one bar behind a backdrop."] = "Multipliziere die Höhe und die Breite des Hintergrundes. Das ist nützlich, wenn du mehr als eine Leiste hinter einem Hintergrund haben möchtest."
+L["Not Usable"] = "Nicht nutzbar"
 L["Out of Power"] = "Keine Kraft"
 L["Out of Range"] = "Außer Reichweite"
 L["Restore Bar"] = "Leiste zurücksetzen"
@@ -130,6 +128,7 @@ L["This setting will be updated upon changing stances."] = "Diese Einstellungen 
 L["Threshold before text turns red and is in decimal form. Set to -1 for it to never turn red"] = "CD-Schwelle bevor der Text rot wird. Setze diesen Wert auf -1, wenn er nie rot werden soll"
 L["Toggles the display of the actionbars backdrop."] = "Aktiviere den Hintergrund der Aktionsleisten."
 L["Transparency level when not in combat, no target exists, full health, not casting, and no focus target exists."] = "Transparenz Level wenn nicht im Kampf, kein Ziel ausgewählt, volle Gesundheit, nicht am Zaubern und kein Fokus existiert."
+L["Usable"] = "Nutzbar"
 L["Visibility State"] = "Sichbarkeitszustand"
 L["Width Multiplier"] = "Breitenmultiplikator"
 L[ [=[This works like a macro, you can run different situations to get the actionbar to page differently.
@@ -140,10 +139,11 @@ L[ [=[This works like a macro, you can run different situations to get the actio
  Beispiel: '[combat] show;hide']=]
 
 --Bags
+L["Add an item or search syntax to the ignored list. Items matching the search syntax will be ignored."] = "Füge ein Gegenstand oder ein Suchoperator zu der Ignorierliste hinzu. Gegenstände die auf den Suchoperator zutreffen werden ignoriert."
+L["Add Item or Search Syntax"] = "Füge Gegenstand oder Suchoperator hinzu"
 L["Adjust the width of the bag frame."] = "Passe die Breite des Taschenfensters an."
 L["Adjust the width of the bank frame."] = "Passe die Breite des Bankfensters an."
 L["Align the width of the bag frame to fit inside the chat box."] = "Passt die Breite der Taschenfenster an, damit diese innerhalb des Chatfensters passen."
-L["Align To Chat"] = "Zum Chat ausrichten"
 L["Ascending"] = "Aufsteigend"
 L["Bag Sorting"] = "Taschen Sortierung"
 L["Bag-Bar"] = "Taschenleiste"
@@ -162,13 +162,13 @@ L["Displays item level on equippable items."] = "Zeigt das Itemlevel für ausrü
 L["Enable/Disable the all-in-one bag."] = "Einschalten/Ausschalten der zusammengefassten Tasche."
 L["Enable/Disable the Bag-Bar."] = "Aktiviere/Deaktiviere die Taschenleiste."
 L["Full"] = "Voll"
+L["Here you can add items or search terms that you want to be excluded from sorting. To remove an item just click on its name in the list."] = "Hier kannst du Gegenstände oder Suchbedingungen vom Suchen ausschließen. Um ein Gegenstand zu entfernen, klicke einfach auf den Namen in der Liste."
 L["Icons and Text (Short)"] = "Symbole und Text (Kurz)"
 L["Icons and Text"] = "Symbole und Text"
-L["Ignore Items"] = "Ignoriere Items"
+L["Ignored Items and Search Syntax"] = "Ignorierte Gegenstände oder Suchoperatoren"
 L["Item Count Font"] = "Gegenstandszähler Schriftart"
 L["Item Level Threshold"] = "Itemlevel Schwellenwert"
 L["Item Level"] = "Itemlevel"
-L["Items in this list or items that match any Search Syntax query in this list will be ignored when sorting. Separate each entry with a comma."] = "Gegenstände in dieser Liste oder Gegenstände die auf den Suchsyntax zutreffen werden ignoriert beim Sortieren. Trenne jeden Eintrag mit einem Komma."
 L["Money Format"] = "Geldformat"
 L["Panel Width (Bags)"] = "Leistenbreite (Taschen)"
 L["Panel Width (Bank)"] = "Leistenbreite (Bank)"
@@ -194,10 +194,6 @@ L["This makes the item level display more reliable but uses more resources. If t
 L["Top to Bottom"] = "Von oben nach unten"
 L["Use coin icons instead of colored text."] = "Benutze Währungssymbole anstatt von farbigem Text."
 L["Use Tooltip Scanning"] = "Benutze Tooltip-Scanning"
-L["X Offset Bags"] = "X-Versatz Taschen"
-L["X Offset Bank"] = "X-Versatz Bank"
-L["Y Offset Bags"] = "Y-Versatz Taschen"
-L["Y Offset Bank"] = "Y-Versatz Bank"
 
 --Buffs and Debuffs
 L["Begin a new row or column after this many auras."] = "Beginne nach so vielen Stärkungszaubern eine neue Reihe oder Spalte."
@@ -325,6 +321,7 @@ L["Testing:"] = "Tester:"
 
 --DataBars
 L["DATABAR_DESC"] = "Einstellung der Informationsleisten."
+L["Current - Remaining"] = "Aktuell - Verbleibend"
 L["DataBars"] = "Informationsleisten"
 L["Hide in Combat"] = "Im Kampf ausblenden"
 
@@ -338,7 +335,6 @@ L["Blocks datatext tooltip from showing in combat."] = "Blockiere Infotextetoolt
 L["BottomLeftMiniPanel"] = "Minimap Untenlinks (Innen)"
 L["BottomMiniPanel"] = "Minimap Unten (Innen)"
 L["BottomRightMiniPanel"] = "Minimap Untenrechts (Innen)"
-L["Change settings for the display of the location text that is on the minimap."] = "Ändere die Einstellungen für die Anzeige des Umgebungstextes an der Minimap."
 L["Datatext Panel (Left)"] = "Infotextleiste (Links)"
 L["Datatext Panel (Right)"] = "Infotextleiste (Rechts)"
 L["DataTexts"] = "Infotexte"
@@ -378,7 +374,6 @@ L["You must be targeting a player."] = "Du musst einen Spieler anvisiert haben."
 --General
 L["Accept Invites"] = "Einladungen akzeptieren"
 L["Adjust the position of the threat bar to either the left or right datatext panels."] = "Bestimme die Position der Bedrohungsleiste in den rechten oder linken Infotextleisten."
-L["Adjust the size of the minimap."] = "Stelle die Größe der Minimap ein."
 L["AFK Mode"] = "AFK Modus"
 L["Animate Config"] = "Animierte Konfiguration"
 L["Announce Interrupts"] = "Unterbrechungen ankündigen"
@@ -398,6 +393,7 @@ L["Bottom Panel"] = "Untere Leiste"
 L["Chat Bubbles Style"] = "Sprechblasen Stil"
 L["Chat Bubbles"] = "Sprechblasen"
 L["Direction the bar moves on gains/losses"] = "Richtung in die der Balken wächst/sinkt"
+L["Disable OrderHall Bar"] = "Deaktiviere die Orderhallen-Leiste"
 L["Disable Tutorial Buttons"] = "Deaktiviere Tutorial Tasten"
 L["Disables the tutorial button found on some frames."] = "Deaktiviert die Tutorial Taste auf einigen Fenstern."
 L["Display a panel across the bottom of the screen. This is for cosmetic only."] = "Zeige eine Leiste am unterem Bildschirmrand. Das ist rein kosmetisch."
@@ -407,7 +403,6 @@ L["Display emotion icons in chat."] = "Zeige Emoticons im Chat."
 L["Emotion Icons"] = "Emoticons"
 L["Enable/Disable the loot frame."] = "Aktiviere/Deaktiviere das Beutefenster."
 L["Enable/Disable the loot roll frame."] = "Aktiviere/Deaktiviere das Beutewürfelfenster."
-L["Enable/Disable the minimap. |cffFF0000Warning: This will prevent you from seeing the minimap datatexts.|r"] = "Aktiviere/Deaktiviere die Minimap. |cffFF0000Warnung: Durch diese Einstellung wird verhindert dass die Infotextleisten an der Minimap angezeigt werden.|r"
 L["Enhanced PVP Messages"] = "Erweiterte PvP Nachrichten"
 L["General"] = "Allgemein"
 L["Height of the objective tracker. Increase size to be able to see more objectives."] = "Höhe des Questfenster. Größe verändern um mehr Ziele zu sehen."
@@ -420,8 +415,6 @@ L["Login Message"] = "Login Nachricht"
 L["Loot Roll"] = "Würfelfenster"
 L["Loot"] = "Beute"
 L["Lowest Allowed UI Scale"] = "Niedrigste erlaubte UI Skalierung"
-L["Make the world map smaller."] = "Macht die Weltkarte kleiner."
-L["Map Opacity When Moving"] = "Deckkraft der Karte während der Bewegung"
 L["Multi-Monitor Support"] = "Multi-Monitor-Unterstützung"
 L["Name Font"] = "Schriftart von Spielernamen"
 L["Number Prefix"] = "Nummern-Präfix"
@@ -429,7 +422,6 @@ L["Objective Frame Height"] = "Questfenster Höhe"
 L["Party / Raid"] = "Gruppe / Schlachtzug"
 L["Party Only"] = "Nur in der Gruppe"
 L["Position of bonus quest reward frame relative to the objective tracker."] = "Position vom Bonusbeute Fenster, relativ zum Questfenster."
-L["Puts coordinates on the world map."] = "Platziert Koordinaten auf der Weltkarte."
 L["Raid Only"] = "Nur im Schlachtzug"
 L["Remove Backdrop"] = "Hintergrund entfernen"
 L["Reset all frames to their original positions."] = "Setze alle Einheiten an ihre ursprüngliche Position zurück."
@@ -439,7 +431,6 @@ L["Send ADDON_ACTION_BLOCKED errors to the Lua Error frame. These errors are les
 L["Skin Backdrop (No Borders)"] = "Skin für den Hintergrund (kein Rahmen)"
 L["Skin Backdrop"] = "Skin für den Hintergrund"
 L["Skin the blizzard chat bubbles."] = "Skin die Blizzard Chat Sprechblasen."
-L["Smaller World Map"] = "Kleinere Weltkarte"
 L["Talking Head Scale"] = "Sprechender Kopf Skalierung"
 L["The font that appears on the text above players heads. |cffFF0000WARNING: This requires a game restart or re-log for this change to take effect.|r"] = "Die Schrift, die über den Köpfen der Spieler auftaucht. |cffFF0000WARNUNG: Das benötigt einen Neustart des Spiels oder einen Relog um in Effekt zu treten.|r"
 L["The Thin Border Theme option will change the overall apperance of your UI. Using Thin Border Theme is a slight performance increase over the traditional layout."] = "Das Dünne Rahmen Theme ändert das gesamte Erscheinungsbild deines UI. Das Benutzten des Dünnen Rahmen Theme ist ein kleiner performance Schub gegenüber dem traditionellen Layout."
@@ -447,9 +438,6 @@ L["Thin Border Theme"] = "Dünner Rahmen Theme"
 L["Toggle Tutorials"] = "Tutorial starten"
 L["Top Panel"] = "Obere Leiste"
 L["When you go AFK display the AFK screen."] = "AFK Bildschirm anzeigen wenn du AFK bist."
-L["World Map Coordinates"] = "Weltkarten Koordinaten"
-L["X-Offset"] = "X-Versatz"
-L["Y-Offset"] = "Y-Versatz"
 
 --Media
 L["Applies the font and font size settings throughout the entire user interface. Note: Some font size settings will be skipped due to them having a smaller font size by default."] = "Wendet die Schrift und Schriftgröße überall im Interface an. Hinweis: Einige Schriftarten werden übersprungen, weil sie eine kleinere Schriftgröße als Standard haben."
@@ -481,23 +469,34 @@ L["The texture that will be used mainly for statusbars."] = "Diese Textur wird v
 L["This texture will get used on objects like chat windows and dropdown menus."] = "Diese Textur wird für Objekte wie Chatfenster und Dropdown-Menüs benutzt."
 L["Value Color"] = "Farbwert"
 
---Minimap
+--Maps
+L["Adjust the size of the minimap."] = "Stelle die Größe der Minimap ein."
 L["Always Display"] = "Immer anzeigen"
 L["Bottom Left"] = "Unten links"
 L["Bottom Right"] = "Unten rechts"
 L["Bottom"] = "Unten"
+L["Change settings for the display of the location text that is on the minimap."] = "Ändere die Einstellungen für die Anzeige des Umgebungstextes an der Minimap."
+L["Enable/Disable the minimap. |cffFF0000Warning: This will prevent you from seeing the minimap datatexts.|r"] = "Aktiviere/Deaktiviere die Minimap. |cffFF0000Warnung: Durch diese Einstellung wird verhindert dass die Infotextleisten an der Minimap angezeigt werden.|r"
 L["Instance Difficulty"] = "Instanz Schwierigkeitsgrad"
 L["Left"] = "Links"
 L["LFG Queue"] = "LFG Warteschlange"
 L["Location Text"] = "Umgebungstext"
+L["Make the world map smaller."] = "Macht die Weltkarte kleiner."
+L["Map Opacity When Moving"] = "Deckkraft der Karte während der Bewegung"
+L["Maps"] = "Karten";
 L["Minimap Buttons"] = "Minimap Tasten"
 L["Minimap Mouseover"] = "Minimap Mouseover"
 L["Open Ticket"] = "Offenes Ticket"
+L["Puts coordinates on the world map."] = "Platziert Koordinaten auf der Weltkarte."
 L["Right"] = "Rechts"
 L["Scale"] = "Skalierung"
+L["Smaller World Map"] = "Kleinere Weltkarte"
 L["Top Left"] = "Oben links"
 L["Top Right"] = "Oben rechts"
 L["Top"] = "Oben"
+L["World Map Coordinates"] = "Weltkarten Koordinaten"
+L["X-Offset"] = "X-Versatz"
+L["Y-Offset"] = "Y-Versatz"
 
 --Misc
 L["Enable"] = "Eingeschaltet"
@@ -521,9 +520,12 @@ L["Cast Color"] = "Zauberfarbe"
 L["Cast No Interrupt Color"] = "Nicht unterbrechbare Zauberfarbe"
 L["Clamp nameplates to the top of the screen when outside of view."] = "Hält die Namensplaketten am oberen Bildschirmrand, wenn nicht in Sicht."
 L["Clamp Nameplates"] = "Namensplaketten halten"
+L["Clickable Height"] = "Klickbare Höhe"
+L["Clickable Width"] = "Klickbare Breite"
 L["Color Tanked"] = "Färbe angetankt"
 L["Control enemy nameplates toggling on or off when in combat."] = "Legt fest ob die Namensplaketten im Kampf für Gegner ein- oder ausgeblendet werden."
 L["Control friendly nameplates toggling on or off when in combat."] = "Legt fest ob die Namensplaketten im Kampf für freundliche Einheiten ein- oder ausgeblendet werden."
+L["Controls how big of an area on the screen will accept clicks to target unit."] = "Legt die Größe des Bereichs auf dem Bildschirm fest, welche die klicks durch die feindlichen Einheiten erlaubt."
 L["Controls how many auras are displayed, this will also affect the size of the auras."] = "Legt fest wieviele Auren angezeigt werden. Dieses beeinflusst auch die Größe der Auren."
 L["Controls which nameplates will be displayed."] = "Legt fest welche Namensplaketten angezeigt werden."
 L["Copy settings from another unit."] = "Kopiere Einstellungen von einer anderen Einheit."
@@ -545,6 +547,7 @@ L["Filters"] = "Filter" --Also used in UnitFrames
 L["Friendly Combat Toggle"] = "Im Kampf für freundliche umschalten"
 L["Friendly NPC Frames"] = "Freundliche NPC Rahmen"
 L["Friendly Player Frames"] = "Freundliche Spieler Rahmen"
+L["General Options"] = "Allgemeine Optionen"
 L["Good Color"] = "Gute Farbe"
 L["Good Scale"] = "Gute Skalierung"
 L["Good Transition Color"] = "Gute Übergangsfarbe"
@@ -569,6 +572,7 @@ L["Scale of the nameplate that is targetted."] = "Skalierung der Namensplaketten
 L["Set Settings to Default"] = "Setzte die Einstellungen auf Standard"
 L["Set the transparency level of nameplates that are not the target nameplate."] = "Transparenzlevel von Namensplaketten die nicht ausgewählt sind."
 L["Set to either stack nameplates vertically or allow them to overlap."] = "Namensplaketten übereinander stapeln oder überlappen."
+L["Shortcuts"] = "Verknüpfungen"
 L["Show NPC Titles"] = "Zeige NPC Titel"
 L["Tagged NPC"] = "Ausgewählter NPC"
 L["Tanked Color"] = "Angetankte Farbe"

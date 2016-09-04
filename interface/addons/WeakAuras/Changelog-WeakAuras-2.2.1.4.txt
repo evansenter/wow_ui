@@ -1,0 +1,25 @@
+tag 2.2.1.4
+caf96ab9e161ec9a650af778acc873ff3d96311a
+Benjamin Staneck <staneck@gmail.com>
+2016-09-01 15:14:52 +0200
+
+
+
+--------------------
+
+Infus:
+	- Monk Templates: Fix Sheilun's Gift and Spinning Crane Kick
+	Ticket-Nr: 713
+	- Fix glow effects again
+	On login squelch glow effects for hide actions, but allow glow
+	effects for show actions.
+	
+	Ticket-Nr: 700
+	- Run CheckCooldownReady also on talent changes
+	We don't get any of the other events in those cases, but e.g. the
+	amoung of charges can change. I think this used to work in Warlords.
+	
+	Ticket-Nr: 704
+Benjamin Staneck:
+	- if there is no state, just return false instead
+	- fix error when converting an aura from one type into another

@@ -64,6 +64,12 @@ function mod:UpdateExperience(event)
 				text = format('%s - %s R:%s', E:ShortValue(cur), E:ShortValue(max), E:ShortValue(rested))
 			elseif textFormat == 'CURPERC' then
 				text = format('%s - %d%% R:%s [%d%%]', E:ShortValue(cur), cur / max * 100, E:ShortValue(rested), rested / max * 100)
+			elseif textFormat == 'CUR' then
+				text = format('%s R:%s', E:ShortValue(cur), E:ShortValue(rested))
+			elseif textFormat == 'REM' then
+				text = format('%s R:%s', E:ShortValue(max - cur), E:ShortValue(rested))
+			elseif textFormat == 'CURREM' then
+				text = format('%s - %s R:%s', E:ShortValue(cur), E:ShortValue(max - cur), E:ShortValue(rested))
 			end
 		else
 			bar.rested:SetMinMaxValues(0, 1)
@@ -75,6 +81,12 @@ function mod:UpdateExperience(event)
 				text = format('%s - %s', E:ShortValue(cur), E:ShortValue(max))
 			elseif textFormat == 'CURPERC' then
 				text = format('%s - %d%%', E:ShortValue(cur), cur / max * 100)
+			elseif textFormat == 'CUR' then
+				text = format('%s', E:ShortValue(cur))
+			elseif textFormat == 'REM' then
+				text = format('%s', E:ShortValue(max - cur))
+			elseif textFormat == 'CURREM' then
+				text = format('%s - %s', E:ShortValue(cur), E:ShortValue(max - cur))
 			end
 		end
 
@@ -102,6 +114,10 @@ function mod:ExperienceBar_OnEnter()
 	end
 
 	GameTooltip:Show()
+end
+
+function mod:ExperienceBar_OnClick()
+
 end
 
 function mod:UpdateExperienceDimensions()
@@ -144,7 +160,7 @@ function mod:EnableDisable_ExperienceBar()
 end
 
 function mod:LoadExperienceBar()
-	self.expBar = self:CreateBar('ElvUI_ExperienceBar', self.ExperienceBar_OnEnter, 'LEFT', LeftChatPanel, 'RIGHT', -E.Border + E.Spacing*3, 0)
+	self.expBar = self:CreateBar('ElvUI_ExperienceBar', self.ExperienceBar_OnEnter, self.ExperienceBar_OnClick, 'LEFT', LeftChatPanel, 'RIGHT', -E.Border + E.Spacing*3, 0)
 	self.expBar.statusBar:SetStatusBarColor(0, 0.4, 1, .8)
 	self.expBar.rested = CreateFrame('StatusBar', nil, self.expBar)
 	self.expBar.rested:SetInside()

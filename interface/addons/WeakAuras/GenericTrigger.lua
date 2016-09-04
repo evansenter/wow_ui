@@ -292,11 +292,15 @@ function ConstructFunction(prototype, trigger, inverse)
 end
 
 function WeakAuras.EndEvent(id, triggernum, force, state)
-  if (state.show ~= false and state.show ~= nil) then
-    state.show = false;
-    state.changed = true;
+  if state then
+    if (state.show ~= false and state.show ~= nil) then
+      state.show = false;
+      state.changed = true;
+    end
+    return state.changed;
+  else
+    return false
   end
-  return state.changed;
 end
 
 function WeakAuras.ActivateEvent(id, triggernum, data, state)
@@ -1190,9 +1194,13 @@ do
   cdReadyFrame:RegisterEvent("RUNE_POWER_UPDATE");
   cdReadyFrame:RegisterEvent("RUNE_TYPE_UPDATE");
   cdReadyFrame:RegisterEvent("UNIT_SPELLCAST_SENT");
+  cdReadyFrame:RegisterEvent("PLAYER_TALENT_UPDATE");
+  cdReadyFrame:RegisterEvent("PLAYER_PVP_TALENT_UPDATE");
   cdReadyFrame:SetScript("OnEvent", function(self, event, ...)
 
-    if(event == "SPELL_UPDATE_COOLDOWN" or event == "SPELL_UPDATE_CHARGES" or event == "RUNE_POWER_UPDATE" or event == "RUNE_TYPE_UPDATE") then
+    if(event == "SPELL_UPDATE_COOLDOWN" or event == "SPELL_UPDATE_CHARGES"
+       or event == "RUNE_POWER_UPDATE" or event == "RUNE_TYPE_UPDATE"
+       or event == "PLAYER_TALENT_UPDATE" or event == "PLAYER_PVP_TALENT_UPDATE") then
       WeakAuras.CheckCooldownReady();
     elseif(event == "UNIT_SPELLCAST_SENT") then
       local unit, name = ...;

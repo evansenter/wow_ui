@@ -157,22 +157,17 @@ P['databars'] = {
 --Bags
 P['bags'] = {
 	['sortInverted'] = true,
-	['xOffset'] = 0,
-	['yOffset'] = 0,
-	['xOffsetBank'] = 0,
-	['yOffsetBank'] = 0,
 	['bagSize'] = 34,
 	['bankSize'] = 34,
-	['alignToChat'] = true,
-	['bagWidth'] = 350,
-	['bankWidth'] = 350,
+	['bagWidth'] = 406,
+	['bankWidth'] = 406,
 	['currencyFormat'] = 'ICON_TEXT_ABBR',
 	['moneyFormat'] = 'SMART',
 	['moneyCoins'] = true,
 	["junkIcon"] = false,
-	['ignoreItems'] = '',
+	['ignoredItems'] = {},
 	['itemLevel'] = true,
-	["useTooltipScanning"] = false,
+	["useTooltipScanning"] = true,
 	['itemLevelThreshold'] = 1,
 	['itemLevelFont'] = 'Homespun',
 	['itemLevelFontSize'] = 10,
@@ -234,6 +229,9 @@ P["nameplates"] = {
 		["badScale"] = 1.2,
 		["useThreatColor"] = true,
 	},
+
+	["clickableWidth"] = 150,
+	["clickableHeight"] = 50,
 
 	['units'] = {
 		['PLAYER'] = {
@@ -2900,6 +2898,8 @@ P["actionbar"] = {
 
 	['noRangeColor'] = { r = 0.8, g = 0.1, b = 0.1 },
 	['noPowerColor'] = { r = 0.5, g = 0.5, b = 1 },
+	["usableColor"] = { r = 1, g = 1, b = 1 },
+	["notUsableColor"] = { r = 0.4, g = 0.4, b = 0.4 },
 
 	['keyDown'] = true,
 	['movementModifier'] = 'SHIFT',

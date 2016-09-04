@@ -317,6 +317,9 @@ PawnWowheadScaleProviderOptions.LastClass = Class
 local function DeleteOldScale(Spec)
 	local ScaleName = PawnGetProviderScaleName(ScaleProviderName, Spec)
 	PawnCommon.Scales[ScaleName] = nil
+	-- Also delete leftover starter scales from the WoD launch.
+	ScaleName = PawnGetProviderScaleName("Starter", Spec)
+	PawnCommon.Scales[ScaleName] = nil
 end 
 
 if PawnWowheadScaleProviderOptions.LastAdded < 5 then
