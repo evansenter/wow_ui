@@ -1,6 +1,9 @@
 --	0:13 28.08.2016
 
 --[[
+3765
+* Temp fix errors with artifact scaning
+
 3760
 * Raid cooldowns: updates due to last legendary tuning
 * Raid cooldowns: added new options tab "Visibility"
@@ -23,7 +26,7 @@ http://i.imgur.com/59cZVTY.png
 ]]
 local GlobalAddonName, ExRT = ...
 
-ExRT.V = 3760
+ExRT.V = 3765
 ExRT.T = "R"
 ExRT.is7 = false		--> Legion (7.x) Client
 

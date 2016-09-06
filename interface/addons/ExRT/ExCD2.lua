@@ -55,7 +55,7 @@ module.db.spellDB = {
 
 {46968,	"WARRIOR",	{46968,	40,	0},	nil,			nil,			nil,			},	--Ударная волна
 {119381,"MONK",		{119381,45,	5},	nil,			nil,			nil,			},	--Круговой удар ногой
-{179057,"DEMONHUNTER",	{179057,60,	5},	nil,			nil,						},	--Кольцо Хаоса
+{179057,"DEMONHUNTER",	nil,			{179057,60,	5},	nil,						},	--Кольцо Хаоса
 {192058,"SHAMAN",	{192058,45,	2},	nil,			nil,			nil,			},	--Тотем выброса тока
 
 {32375,	"PRIEST",	{32375,	15,	0},	nil,			nil,			nil,			},	--Массовое рассеивание
@@ -9521,37 +9521,40 @@ local function ScanArtifactData()
 	end
 end
 
-local function BlizzUiFix_DealWithErrors()
-	if ArtifactFrame and ArtifactFrame:IsVisible() then
-		ArtifactFrame:Hide()
-		if ScriptErrorsFrame then
-			ScriptErrorsFrame:Hide()
-		end
-	end
-end
-
 local function UpdateArtifactData()
 	if not C_ArtifactUI.GetEquippedArtifactInfo() then
 		return
 	end
-	moduleInspect:UnregisterEvents('ARTIFACT_UPDATE')
 	local isArtifactFrameShown = ArtifactFrame and ArtifactFrame:IsShown()
 	if not isArtifactFrameShown then
-		C_Timer.After(0.3,BlizzUiFix_DealWithErrors)
 		SocketInventoryItem(16)
 	end
 	ScanArtifactData()
 	if not isArtifactFrameShown then
 		C_ArtifactUI.Clear()
 	end
-	moduleInspect:RegisterEvents('ARTIFACT_UPDATE')
+end
+
+do
+	--Fix Blizzard Errors
+	local def = C_ArtifactUI.GetTotalPurchasedRanks
+	C_ArtifactUI.GetTotalPurchasedRanks = function(...)
+		local arg1,arg2,arg3 = def(...)
+		if not arg1 then
+			return 0
+		end
+		return arg1,arg2,arg3
+	end
 end
 
 local artifactUIfixTimer
-local function artifactUI_CheckMajorFrames()
+local function artifactUI_CheckMajorFrames(self)
 	if (not WorldMapFrame or not WorldMapFrame:IsVisible()) and (not PlayerTalentFrame or not PlayerTalentFrame:IsVisible()) and (not OrderHallMissionFrame or not OrderHallMissionFrame:IsVisible()) then
 		if artifactUIfixTimer then
 			artifactUIfixTimer:Cancel()
+		end
+		if self then
+			self:Cancel()
 		end
 		UpdateArtifactData()
 		return true
@@ -9563,7 +9566,7 @@ artifactUIfix:RegisterEvent('LOADING_SCREEN_DISABLED')
 artifactUIfix:SetScript("OnEvent",function(self)
 	C_Timer.NewTimer(9,function()
 		artifactUIfixTimer = C_Timer.NewTicker(1,artifactUI_CheckMajorFrames)
-		moduleInspect:RegisterEvents('ARTIFACT_UPDATE')
+		moduleInspect:RegisterEvents('ARTIFACT_XP_UPDATE')
 	end)
 	self:UnregisterAllEvents()
 end)
@@ -9614,7 +9617,7 @@ function moduleInspect.main:ENCOUNTER_START()
 	end)
 end
 
-function moduleInspect.main:ARTIFACT_UPDATE()
+function moduleInspect.main:ARTIFACT_XP_UPDATE()	
 	artifactUIfixTimer = nil
 	if not artifactUI_CheckMajorFrames() then
 		artifactUIfixTimer = C_Timer.NewTicker(1,artifactUI_CheckMajorFrames)

@@ -17,13 +17,13 @@ DataStore_MailsDB = {
 				["lastUpdate"] = 1471198368,
 				["Mails"] = {
 					{
-						["icon"] = 134327,
+						["lastCheck"] = 1471198368,
 						["sender"] = "Rolosh Wavechaser",
 						["subject"] = "Charting a Course - Horde",
 						["returned"] = false,
 						["money"] = 0,
 						["text"] = "Admiral,\r\n\r\nYou have proven yourself to be an excellent commander of our fleet.  Take this gift as a token of my appreciation.\r\n\r\nWear it proudly.\r\n\r\n--Rolosh Wavechaser",
-						["lastCheck"] = 1471198368,
+						["icon"] = 134327,
 						["daysLeft"] = 29.9989929199219,
 					}, -- [1]
 				},
@@ -33,10 +33,6 @@ DataStore_MailsDB = {
 				["lastUpdate"] = 1461733334,
 				["lastVisitDate"] = "2016/04/26 22:02",
 			},
-			["Default.Illidan.Cometron"] = {
-				["lastUpdate"] = 1471197742,
-				["lastVisitDate"] = "2016/08/14 11:02",
-			},
 			["Default.Illidan.Comet"] = {
 				["lastUpdate"] = 1471977015,
 				["lastVisitDate"] = "2016/08/23 11:30",
@@ -45,17 +41,21 @@ DataStore_MailsDB = {
 				["lastUpdate"] = 1470154897,
 				["Mails"] = {
 					{
-						["icon"] = 134327,
+						["lastCheck"] = 1470154897,
 						["sender"] = "Usuri Brightcoin",
 						["subject"] = "Currency Conversion: Honor",
 						["returned"] = false,
 						["money"] = 0,
 						["text"] = "Dear Sir or Madam,\r\n\r\nEnclosed you will find an amount of coin corresponding to the current fair market value of your Honor Points:\r\n\r\n - Honor Point @ 35 Silver Each\r\n\r\nYours Faithfully,\r\nUsuri Brightcoin\r\nDalaran Currency Exchange",
-						["lastCheck"] = 1470154897,
+						["icon"] = 134327,
 						["daysLeft"] = 21.4047222137451,
 					}, -- [1]
 				},
 				["lastVisitDate"] = "2016/08/02 09:21",
+			},
+			["Default.Illidan.Cometron"] = {
+				["lastUpdate"] = 1471197742,
+				["lastVisitDate"] = "2016/08/14 11:02",
 			},
 		},
 	},

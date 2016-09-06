@@ -26,34 +26,34 @@ DataStoreDB = {
 		["Version"] = 1,
 		["Characters"] = {
 			["Default.Illidan.Evan"] = {
-				["faction"] = "Horde",
 				["guildName"] = "Mind Games",
+				["faction"] = "Horde",
 			},
 			["Default.Illidan.Pandatal"] = {
 				["faction"] = "Horde",
 			},
 			["Default.Illidan.Natal"] = {
-				["guildName"] = "Slash Cry",
 				["faction"] = "Horde",
+				["guildName"] = "Slash Cry",
 			},
 			["Default.Illidan.Metal"] = {
-				["guildName"] = "Mind Games",
 				["faction"] = "Horde",
+				["guildName"] = "Mind Games",
 			},
 			["Default.Dark Iron.Ereinion"] = {
 				["faction"] = "Horde",
 			},
 			["Default.Illidan.Combustion"] = {
-				["faction"] = "Horde",
 				["guildName"] = "Slash Cry",
+				["faction"] = "Horde",
 			},
 			["Default.Dark Iron.Colton"] = {
-				["guildName"] = "Rated Baddie Grounds",
 				["faction"] = "Horde",
+				["guildName"] = "Rated Baddie Grounds",
 			},
 			["Default.Illidan.Comet"] = {
-				["faction"] = "Horde",
 				["guildName"] = "Mind Games",
+				["faction"] = "Horde",
 			},
 			["Default.Illidan.Cometron"] = {
 				["faction"] = "Horde",

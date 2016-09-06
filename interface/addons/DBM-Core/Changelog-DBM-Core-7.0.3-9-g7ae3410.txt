@@ -1,4 +1,6 @@
 subversion:
+	- Omega via svn r15188: Added interrupt warning dark mending on BRH trash Added interrupt warning to Parjesh for restoration Fixed toxic Wound timer on Serpentrix
+	- Omega via svn r15187: Add torrent to Helya
 	- Omega via svn r15186: Several dungeon fixes/updates to black Rook Hold, Halls of Valor, and Neltharions Lair
 	- Omega via svn r15185: Small voice tweak on hymdall Add Helya?\226?\128?\153s breath timers/warnings/countdown
 	- Omega via svn r15184: Fix odyn hud so it was on by default like meant to be, fix descriptino text for it as well Fix one timer on hyrja

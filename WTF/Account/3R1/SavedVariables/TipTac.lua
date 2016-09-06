@@ -32,20 +32,20 @@ TipTac_Config = {
 		0.100000023841858, -- [4]
 	},
 	["classification_rareelite"] = "+%s|r (Rare) ",
+	["barTexture"] = "Interface\\Addons\\SharedMedia\\statusbar\\BantoBar",
+	["targetYouText"] = "<<YOU>>",
+	["fontFlags"] = "",
+	["top"] = 1193.00024414063,
+	["fontSizeDelta"] = 3,
+	["barFontFace"] = "Interface\\Addons\\Skada\\media\\fonts\\ABF.ttf",
+	["iconRaid"] = false,
+	["showBuffs"] = false,
+	["barFontSize"] = 12,
+	["anchorFrameTipPoint"] = "TOPLEFT",
 	["tipBorderColor"] = {
 		0.301960784313726, -- [1]
 		0.301960784313726, -- [2]
 		0.4, -- [3]
 		0.500001192092896, -- [4]
 	},
-	["targetYouText"] = "<<YOU>>",
-	["fontFlags"] = "",
-	["top"] = 1193.00024414063,
-	["fontSizeDelta"] = 3,
-	["barFontFace"] = "Interface\\Addons\\Skada\\media\\fonts\\ABF.ttf",
-	["showBuffs"] = false,
-	["iconRaid"] = false,
-	["barFontSize"] = 12,
-	["anchorFrameTipPoint"] = "TOPLEFT",
-	["barTexture"] = "Interface\\Addons\\SharedMedia\\statusbar\\BantoBar",
 }

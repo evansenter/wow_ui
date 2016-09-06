@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1653, "DBM-Party-Legion", 1, 740)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 15186 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 15188 $"):sub(12, -3))
 mod:SetCreatureID(98696)
 mod:SetEncounterID(1833)
 mod:SetZone()
@@ -70,7 +70,7 @@ end
 function mod:OnCombatStart(delay)
 	timerBrutalGlaiveCD:Start(5.5-delay)
 	timerVengefulShearCD:Start(8-delay)
-	timerDarkRushCD:Start(12.3-delay)
+	timerDarkRushCD:Start(12.1-delay)
 end
 
 function mod:OnCombatEnd()

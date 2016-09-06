@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod("EoATrash", "DBM-Party-Legion", 3, 716)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 15043 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 15188 $"):sub(12, -3))
 --mod:SetModelID(47785)
 mod:SetZone()
 
@@ -24,7 +24,7 @@ local yellArcaneBomb			= mod:NewYell(192706)
 local voiceStorm				= mod:NewVoice(196870, "HasInterrupt")--kickcast
 local voiceRejuvWaters			= mod:NewVoice(195046, "HasInterrupt")--kickcast
 local voiceSpraySand			= mod:NewVoice(196127, "Tank")--shockwave
-local voiceArcaneBomb				= mod:NewVoice(192706)--runout
+local voiceArcaneBomb			= mod:NewVoice(192706)--runout
 
 mod:RemoveOption("HealthFrame")
 
