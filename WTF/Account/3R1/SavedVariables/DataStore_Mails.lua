@@ -34,8 +34,8 @@ DataStore_MailsDB = {
 				["lastVisitDate"] = "2016/04/26 22:02",
 			},
 			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1471977015,
-				["lastVisitDate"] = "2016/08/23 11:30",
+				["lastUpdate"] = 1474246125,
+				["lastVisitDate"] = "2016/09/18 17:48",
 			},
 			["Default.Illidan.Metal"] = {
 				["lastUpdate"] = 1470154897,

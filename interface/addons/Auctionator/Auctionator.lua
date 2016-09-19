@@ -10,6 +10,7 @@ local ZT = addonTable.ztt.ZT;
 local zc = addonTable.zc;
 local zz = zc.md;
 local _
+local ItemUpgradeInfo = LibStub( 'LibItemUpgradeInfo-1.0' )
 
 gAtrZC = addonTable.zc;   -- share with AuctionatorDev
 
@@ -293,7 +294,9 @@ local function VersionStringToInt( versionString )
   Auctionator.Debug.Message( 'VersionStringToInt', versionString )
   local major, minor, patch = strsplit( '.', versionString )
 
-  return tonumber( major ), tonumber( minor ), tonumber( patch )
+  return ( tonumber( major ) or -1 ),
+    ( tonumber( minor ) or -1 ),
+    ( tonumber( patch ) or -1 )
 end
 
 local function CheckVersion( verString )
@@ -973,7 +976,8 @@ function Atr_ScanBags (mats, gear)
       if (itemLink) then
         local texture, itemCount, locked, quality = GetContainerItemInfo(bagID, slotID);
 
-        local itemName, _, itemRarity, itemLevel, _, itemType, itemSubType, _, _, _, _, itemClassID, itemSubClassID = GetItemInfo( itemLink )
+        local itemName, _, itemRarity, _, _, itemType, itemSubType, _, _, _, _, itemClassID, itemSubClassID = GetItemInfo( itemLink )
+        local itemLevel = ItemUpgradeInfo:GetUpgradedItemLevel( itemLink )
 
         if ( Atr_IsWeaponType( itemClassID ) or Atr_IsArmorType( itemClassID ) ) and itemLevel > 271 then
           local key = itemType.."_"..itemSubType.."_"..itemRarity.."_"..itemLevel;

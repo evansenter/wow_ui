@@ -22,6 +22,9 @@ DataStoreDB = {
 			["Default.Dark Iron.Rated Baddie Grounds"] = {
 				["faction"] = "Horde",
 			},
+			["Default.Illidan.G L O R Y"] = {
+				["faction"] = "Horde",
+			},
 		},
 		["Version"] = 1,
 		["Characters"] = {
@@ -52,7 +55,7 @@ DataStoreDB = {
 				["guildName"] = "Rated Baddie Grounds",
 			},
 			["Default.Illidan.Comet"] = {
-				["guildName"] = "Mind Games",
+				["guildName"] = "G L O R Y",
 				["faction"] = "Horde",
 			},
 			["Default.Illidan.Cometron"] = {

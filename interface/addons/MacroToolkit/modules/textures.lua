@@ -15858,6 +15858,7 @@ MacroToolkit.TextureNames = {
 [1375677]="Rogue ShurikenStorm",
 [1376038]="Hunter BurstingShot",
 [1376039]="Hunter Carve",
+[1376043]="Hunter Marked Shot",
 [1376743]="Deathknight DeathsCaress",
 [1376744]="Deathknight HungeringRuneblade",
 [1376745]="Deathknight Marrowrend",

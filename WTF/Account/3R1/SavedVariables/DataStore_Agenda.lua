@@ -15,7 +15,7 @@ DataStore_AgendaDB = {
 		["Options"] = {
 			["WeeklyResetHour"] = 6,
 			["WeeklyResetDay"] = 2,
-			["NextWeeklyReset"] = "2016-09-06",
+			["NextWeeklyReset"] = "2016-09-20",
 		},
 		["Characters"] = {
 			["Default.Illidan.Evan"] = {
@@ -79,7 +79,7 @@ DataStore_AgendaDB = {
 				["lastUpdate"] = 1424741733,
 			},
 			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1473141673,
+				["lastUpdate"] = 1474301864,
 			},
 			["Default.Illidan.Cometron"] = {
 				["lastUpdate"] = 1473014657,

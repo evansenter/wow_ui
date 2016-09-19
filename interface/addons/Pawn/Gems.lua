@@ -277,10 +277,10 @@ local PawnGemData100Epic =
 local PawnGemData110Uncommon =
 {
 
-{ 130215, "CritRating", 150 }, -- Deadly Deep Amber
-{ 130216, "HasteRating", 150 }, -- Quick Azsunite
-{ 130217, "Versatility", 150 }, -- Versatile Skystone
-{ 130218, "MasteryRating", 150 }, -- Masterful Queen's Opal
+{ 130215, "CritRating", 100 }, -- Deadly Deep Amber
+{ 130216, "HasteRating", 100 }, -- Quick Azsunite
+{ 130217, "Versatility", 100 }, -- Versatile Skystone
+{ 130218, "MasteryRating", 100 }, -- Masterful Queen's Opal
 
 }
 
@@ -291,10 +291,10 @@ local PawnGemData110Uncommon =
 local PawnGemData110Rare =
 {
 
-{ 130219, "CritRating", 250 }, -- Deadly Eye of Prophecy
-{ 130220, "HasteRating", 250 }, -- Quick Dawnlight
-{ 130221, "Versatility", 250 }, -- Versatile Maelstrom Sapphire
-{ 130222, "MasteryRating", 250 }, -- Masterful Shadowruby
+{ 130219, "CritRating", 150 }, -- Deadly Eye of Prophecy
+{ 130220, "HasteRating", 150 }, -- Quick Dawnlight
+{ 130221, "Versatility", 150 }, -- Versatile Maelstrom Sapphire
+{ 130222, "MasteryRating", 150 }, -- Masterful Shadowruby
 
 }
 

@@ -143,6 +143,7 @@ local function GetUnitSettings(unit, name)
 						name = L["Enable"],
 						type = "toggle",
 						disabled = function() return unit == "PLAYER" end,
+						hidden = function() return unit == "PLAYER" end,
 					},
 					height = {
 						order = 2,
@@ -273,6 +274,26 @@ local function GetUnitSettings(unit, name)
 						name = L["Height"],
 						type = "range",
 						min = 4, max = 20, step = 1,
+					},
+					castTimeFormat = {
+						order = 5,
+						type = "select",
+						name = L["Cast Time Format"],
+						values = {
+							["CURRENT"] = L["Current"],
+							["CURRENT_MAX"] = L["Current / Max"],
+							["REMAINING"] = L["Remaining"],
+						},
+					},
+					channelTimeFormat = {
+						order = 6,
+						type = "select",
+						name = L["Channel Time Format"],
+						values = {
+							["CURRENT"] = L["Current"],
+							["CURRENT_MAX"] = L["Current / Max"],
+							["REMAINING"] = L["Remaining"],
+						},
 					},
 				},
 			},
@@ -586,6 +607,25 @@ local function GetUnitSettings(unit, name)
 					name = L["Y-Offset"],
 					type = "range",
 					min = -100, max = 100, step = 1,
+				},
+			},
+		}
+		group.args.detection = {
+			order = 11,
+			name = L["Detection"],
+			type = "group",
+			get = function(info) return E.db.nameplates.units[unit].detection[ info[#info] ] end,
+			set = function(info, value) E.db.nameplates.units[unit].detection[ info[#info] ] = value; NP:ConfigureAll() end,
+			args = {
+				header = {
+					order = 0,
+					type = "header",
+					name = L["Suramar Detection"],
+				},
+				enable = {
+					order = 1,
+					name = L["Enable"],
+					type = "toggle",
 				},
 			},
 		}

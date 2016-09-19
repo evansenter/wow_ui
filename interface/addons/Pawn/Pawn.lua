@@ -7,7 +7,7 @@
 -- Main non-UI code
 ------------------------------------------------------------
 
-PawnVersion = 2.0009
+PawnVersion = 2.0011
 
 -- Pawn requires this version of VgerCore:
 local PawnVgerCoreVersionRequired = 1.09
@@ -69,7 +69,7 @@ PawnImportScaleResultTagError = 3
 
 PawnIgnoreStatValue = -1000000
 PawnBigUpgradeThreshold = 100 -- 100 = 10000% upgrade: don't display upgrade numbers that large
-PawnMinimumItemLevelToConsiderGems = 685 -- Sockets on items below this ilvl are ignored *** change this to 800 when Legion (not just 7.0) actually launches
+PawnMinimumItemLevelToConsiderGems = 800 -- Sockets on items below this ilvl are ignored
 
 -- Data used by PawnGetSlotsForItemType.
 local PawnItemEquipLocToSlot1 = 
@@ -141,14 +141,6 @@ function PawnInitialize()
 	if (not VgerCore) or (not VgerCore.Version) or (VgerCore.Version < PawnVgerCoreVersionRequired) then
 		if DEFAULT_CHAT_FRAME then DEFAULT_CHAT_FRAME:AddMessage("|cfffe8460" .. PawnLocal.NeedNewerVgerCoreMessage) end
 		message(PawnLocal.NeedNewerVgerCoreMessage)
-		return
-	end
-
-	-- Check the current WoW version. *** Remove this when 7.0 launches worldwide.
-	_, _, _, Toc = GetBuildInfo()
-	if Toc < 70000 then
-		if DEFAULT_CHAT_FRAME then DEFAULT_CHAT_FRAME:AddMessage("|cfffe8460" .. "This version of Pawn is for World of Warcraft 7.0 only.  Please use Pawn 1.9 if your region hasn't updated to 7.0 yet.") end
-		message("This version of Pawn is for World of Warcraft 7.0 only.  Please use Pawn 1.9 if your region hasn't updated to 7.0 yet.")
 		return
 	end
 
@@ -256,6 +248,18 @@ function PawnInitialize()
 			if ItemLink then PawnUpdateTooltip("GameTooltip", "SetHyperlink", ItemLink) end
 		end)
 	hooksecurefunc(GameTooltip, "Hide", function(self, ...) PawnLastHoveredItem = nil end)
+
+	-- World quest embedded tooltips
+	hooksecurefunc("EmbeddedItemTooltip_SetItemByQuestReward",
+		function(self, QuestLogIndex, QuestID, ...)
+			if PawnCommon.ShowQuestUpgradeAdvisor then
+				local ItemName, ItemTexture = GetQuestLogRewardInfo(QuestLogIndex, QuestID)
+				if ItemName and ItemTexture then
+					PawnUpdateTooltip(self.Tooltip:GetName(), "SetQuestLogItem", "reward", QuestLogIndex, QuestID, ...)
+					self.Tooltip:Show() -- resizes the tooltip's boundaries in case our annotation made it wider
+				end
+			end
+		end)
 	
 	-- World map tooltip (for quest rewards)
 	hooksecurefunc(WorldMapTooltip, "SetHyperlink", function(self, ...) PawnUpdateTooltip("WorldMapTooltip", "SetHyperlink", ...) end) -- HandyNotes_DraenorTreasures compatibility
@@ -536,8 +540,6 @@ function PawnInitializeOptions()
 		PawnCommon.IgnoreGemsWhileLeveling = true
 	end
 	if (not PawnCommon.LastVersion) or (PawnCommon.LastVersion < 2.0000) then
-		-- WoW 7.0 is a major patch, so invalidate best item data.
-		PawnInvalidateBestItems()
 		-- The new "show spec icons" option is enabled by default.
 		PawnCommon.ShowSpecIcons = true
 	end
@@ -548,6 +550,10 @@ function PawnInitializeOptions()
 	if (not PawnCommon.LastVersion) or (PawnCommon.LastVersion < 2.0004) then
 		-- The baleful/valor upgrade option returned temporarily in 2.0.4, and it's on by default. 
 		PawnCommon.IgnoreItemUpgrades = true
+	end
+	if (not PawnCommon.LastVersion) or (PawnCommon.LastVersion < 2.0011) then
+		-- Gem values changed in 2.0.11 due to a hotfix, so invalidate best item data.
+		PawnInvalidateBestItems()
 	end
 	PawnCommon.LastVersion = PawnVersion
 	PawnOptions.LastVersion = PawnVersion
@@ -1543,6 +1549,7 @@ function PawnGetStatsFromTooltip(TooltipName, DebugMessages)
 	for i = ItemNameLineNumber + 1, Tooltip:NumLines() do
 		local LeftLine = _G[TooltipName .. "TextLeft" .. i]
 		local LeftLineText = LeftLine:GetText()
+		if not LeftLineText then break end
 		
 		-- Look for this line in the "kill lines" list.  If it's there, we're done.
 		local IsKillLine = false

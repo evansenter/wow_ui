@@ -920,6 +920,16 @@ Change Log:
 		- Added Legion spells for the Demon Invasion Event
 		- Fixed WoD spells for Hellfire Citadel
 		- Fixed Wrath spells for Icecrown Citadel
+	v4.38.7
+		- Added Legion spells for The Broken Isles (world)
+		- Added Legion spells for Neltharion's Lair
+		- Added Legion spells for The Violet Hold
+		- Added Legion spells for Maw of Souls
+		- Added Legion spells for Black Rook Hold
+		- Added Legion spells for Vault of the Wardens
+	v4.38.8
+		- Removed some Legion Event spells
+		- Added Legion spells for The Broken Isles (world)
 		
 		
 ]]--
@@ -938,8 +948,8 @@ GTFO = {
 		IgnoreOptions = { };
 		TrivialDamagePercent = 2; -- Minimum % of HP lost required for an alert to be trivial
 	};
-	Version = "4.38.6"; -- Version number (text format)
-	VersionNumber = 43806; -- Numeric version number for checking out-of-date clients
+	Version = "4.38.8"; -- Version number (text format)
+	VersionNumber = 43807; -- Numeric version number for checking out-of-date clients
 	DataLogging = nil; -- Indicate whether or not the addon needs to run the datalogging function (for hooking)
 	DataCode = "4"; -- Saved Variable versioning, change this value to force a reset to default
 	CanTank = nil; -- The active character is capable of tanking

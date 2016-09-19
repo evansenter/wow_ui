@@ -1,0 +1,13 @@
+tag v5.12.5
+0a43266154fb60ad6dbadc06489bcbc01c3ebdf4
+Brizag <vvv444@gmail.com>
+2016-09-17 13:35:56 +0300
+
+Bug fix release
+
+
+--------------------
+
+Brizag:
+	- [Bug fix] Fix GP calculation for items of "robe" type
+	These items are subtype of "chest" pieces and support for these was accidentally removed in last versions, so add it back.

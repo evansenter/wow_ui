@@ -28,6 +28,8 @@ opt.tooltips = {
     nameonly_enemies = 'Use name-only mode on unattackable enemies (not including enemy players under effects such as Ice Block)',
     nameonly_target = 'Also use name-only mode on your target',
     nameonly_all_enemies = 'Use name-only mode on all enemies',
+    guild_text_players = 'Show guilds on players in name-only mode',
+    title_text_players = 'Show players\' titles in name-only mode',
 
     target_arrows = 'Show arrows around your current target. These inherit the target glow colour',
     frame_glow_size = 'Size of the frame glow used for target highlighting and threat indication',
@@ -39,7 +41,7 @@ opt.tooltips = {
     fade_avoid_raidicon = 'Don\'t fade nameplates which have a raid icon visible',
     fade_friendly_npc = 'Fade friendly NPC nameplates by default (including those in name-only mode)',
     fade_neutral_enemy = 'Fade attackable neutral nameplates by default (including those in name-only mode)',
-    fade_untracked = 'Fade non-tracked nameplates by default (including those in name-only mode). Whether or not a unit is tracked can by set by changing the "NPC Names" dropdown in the default interface options under Esc > Interface > Names',
+    fade_untracked = 'Fade non-tracked nameplates by default (including those in name-only mode). Whether or not a unit is tracked can by set by changing the "NPC Names" dropdown and other checkboxes in the default interface options under Esc > Interface > Names',
     fade_avoid_execute_friend = 'Don\'t fade friendly nameplates in execute range (set in the "Health bars" page)',
     fade_avoid_execute_hostile = 'Don\'t fade hostile nameplates in execute range (set in the "Health bars" page)',
 
@@ -51,7 +53,7 @@ opt.tooltips = {
     execute_colour = 'Colour to use within execute range',
     execute_percent = 'Manually set execute range',
 
-    hide_names = 'Whether or not a unit is tracked can be set by changing the "NPC Names" dropdown in the default interface options under Esc > Interface > Names. Note that this does not affect name-only mode',
+    hide_names = 'Whether or not a unit is tracked can be set by changing the "NPC Names" dropdown and other checkboxes in the default interface options under Esc > Interface > Names. Note that this does not affect name-only mode',
     font_face = 'The font used for all strings on nameplates (provided by LibSharedMedia)',
     font_size_normal = 'Standard font size (name, etc)',
     font_size_small = 'Smaller font size (vendor, spell name, etc)',
@@ -68,6 +70,8 @@ opt.tooltips = {
     frame_height = 'Height of the standard nameplates',
     frame_width_minus = 'Width of nameplates used on mobs flagged as "minus" (previously referred to as trivial)',
     frame_height_minus = 'Height of nameplates used on mobs flagged as "minus" (previously referred to as trivial), as well as nameless frames (i.e. "unimportant" units)',
+    frame_width_personal = 'Width of the personal nameplate (enabled by Esc > Interface > Names > Personal Resource Display)',
+    frame_height_personal = 'Height of the personal nameplate (enabled by Esc > Interface > Names > Personal Resource Display)',
     powerbar_height = 'Height of the power bar. Will not increase beyond frame height',
 
     auras_enabled = 'Show auras that you cast on nameplates - buffs on friends, debuffs on enemies',
@@ -128,6 +132,8 @@ opt.titles = {
     nameonly_enemies = 'On unattackable enemies',
     nameonly_target = 'On target',
     nameonly_all_enemies = 'On enemies',
+    guild_text_players = 'Show player guilds',
+    title_text_players = 'Show player titles',
 
     glow_as_shadow = 'Show frame shadow',
     state_icons = 'Show state icons',
@@ -189,6 +195,8 @@ opt.titles = {
     frame_height = 'Frame height',
     frame_width_minus = 'Minus frame width',
     frame_height_minus = 'Minus frame height',
+    frame_width_personal = 'Personal frame width',
+    frame_height_personal = 'Personal frame height',
     powerbar_height = 'Power bar height',
     castbar_height = 'Cast bar height',
 

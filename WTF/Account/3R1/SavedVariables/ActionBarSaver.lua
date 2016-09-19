@@ -1046,45 +1046,45 @@ ActionBarSaverDB = {
 				"spell|126892||Zen Pilgrimage||", -- [96]
 			},
 			["bm"] = {
-				"spell|100780||Tiger Palm||", -- [1]
-				"spell|115181||Breath of Fire||", -- [2]
-				"spell|205523||Blackout Strike||", -- [3]
-				"spell|121253||Keg Smash||", -- [4]
+				"macro|1||Tiger Palm|606551|#showtooltip Tiger Palm/n/use [nochanneling]Tiger Palm", -- [1]
+				"spell|113656||Fists of Fury||", -- [2]
+				"macro|3||Blackout Kick|574575|#showtooltip Blackout Kick/n/use [nochanneling]Blackout Kick", -- [3]
+				"macro|4||RSK|642415|#showtooltip Rising Sun Kick/n/use [nochanneling]Rising Sun Kick", -- [4]
 				"spell|116705||Spear Hand Strike||", -- [5]
 				"spell|115078||Paralysis||", -- [6]
-				"spell|115176||Zen Meditation||", -- [7]
+				"spell|116095||Disable||", -- [7]
 				"macro|8||Effuse|1360977|#showtooltip Effuse/n/use [@mouseover,help,nodead][]Effuse", -- [8]
 				"spell|129597||Arcane Torrent|Racial|", -- [9]
 				nil, -- [10]
-				"spell|115546||Provoke||", -- [11]
-				"macro|12||Detox|460692|#showtooltip/n/use [@mouseover,help,nodead][]Detox", -- [12]
+				"spell|137639||Storm, Earth, and Fire||", -- [11]
+				"macro|12||ToD|606552|#showtooltip/n/use [@mouseover,harm,nodead][] Touch of Death", -- [12]
 				nil, -- [13]
 				"macro|14||Tiger Palm|606551|#showtooltip Tiger Palm/n/use [nochanneling]Tiger Palm", -- [14]
-				"macro|15||Blackout Kick|1500803|#showtooltip Blackout Kick/n/use [nochanneling]Blackout Kick", -- [15]
-				"macro|16||RSK|134400|#showtooltip Rising Sun Kick/n/use [nochanneling]Rising Sun Kick", -- [16]
+				"macro|15||Blackout Kick|574575|#showtooltip Blackout Kick/n/use [nochanneling]Blackout Kick", -- [15]
+				"macro|16||RSK|642415|#showtooltip Rising Sun Kick/n/use [nochanneling]Rising Sun Kick", -- [16]
 				"spell|116705||Spear Hand Strike||", -- [17]
 				"spell|115078||Paralysis||", -- [18]
 				nil, -- [19]
 				"macro|20||Effuse|1360977|#showtooltip Effuse/n/use [@mouseover,help,nodead][]Effuse", -- [20]
-				nil, -- [21]
+				"spell|116095||Disable||", -- [21]
 				nil, -- [22]
 				nil, -- [23]
 				nil, -- [24]
-				"macro|25||Ready?|132995|/i Ready check./n/readycheck", -- [25]
-				"macro|26||Pull|133031|/i DBM Pull./n/dbm pull 10", -- [26]
+				nil, -- [25]
+				nil, -- [26]
 				nil, -- [27]
-				"macro|28||Combat Log|611422|/combatlog", -- [28]
-				"macro|29||Macro|132319|/mac", -- [29]
+				nil, -- [28]
+				nil, -- [29]
 				nil, -- [30]
-				"spell|161332||Call to Arms||", -- [31]
+				nil, -- [31]
 				nil, -- [32]
 				nil, -- [33]
 				nil, -- [34]
-				"spell|158750||Jewelcrafting||", -- [35]
-				"spell|158739||Engineering||", -- [36]
+				nil, -- [35]
+				nil, -- [36]
 				nil, -- [37]
 				nil, -- [38]
-				"macro|39||Deathnote|645217|/deathnote", -- [39]
+				nil, -- [39]
 				nil, -- [40]
 				nil, -- [41]
 				nil, -- [42]
@@ -1096,7 +1096,7 @@ ActionBarSaverDB = {
 				nil, -- [48]
 				"macro|49||Tier 5|608939|#showtooltip/n/use [talent:5/1]Healing Elixir;[talent:5/2]Diffuse Magic;[talent:5/3]Dampen Harm", -- [49]
 				"spell|109132||Roll||", -- [50]
-				"macro|51||HS / GHS|134414|#showtooltip/n/use [nomod]Hearthstone;[mod:shift][mod:alt]Garrison Hearthstone", -- [51]
+				"macro|51||HS / GHS|134414|#showtooltip/n/use [nomod]Hearthstone;[mod:shift][mod:alt]Dalaran Hearthstone", -- [51]
 				"macro|52||Target Focus|319458|/tar focus", -- [52]
 				"macro|53||Focus|614257|/focus", -- [53]
 				"macro|54||Mark Skull|1373133|/run SetRaidTarget(\"target\", 8)", -- [54]
@@ -1104,33 +1104,44 @@ ActionBarSaverDB = {
 				"spell|119996||Transcendence: Transfer||", -- [56]
 				"spell|101643||Transcendence||", -- [57]
 				"macro|58||Tiger's Lust|651727|#showtooltip/n/use [@mouseover,help,nodead][@player][]Tiger's Lust", -- [58]
-				"macro|59||Cloak|1096902|/use 15", -- [59]
-				"macro|60||RJW|606549|#showtooltip/n/use [nochanneling]Rushing Jade Wind", -- [60]
-				"spell|115399||Black Ox Brew||", -- [61]
-				"spell|115308||Ironskin Brew||", -- [62]
-				"spell|119582||Purifying Brew||", -- [63]
+				"macro|59||Cloak|1338453|/use 15", -- [59]
+				"macro|60||SCK|606543|#showtooltip/n/use [nochanneling]Spinning Crane Kick", -- [60]
+				"macro|61||SotW|1282595|#showtooltip Strike of the Windlord/n/use [nochanneling]Strike of the Windlord", -- [61]
+				"macro|62||WDP|988194|#showtooltip/n/use [nochanneling]Whirling Dragon Punch", -- [62]
+				"spell|122470||Touch of Karma||", -- [63]
 				"spell|119381||Leg Sweep||", -- [64]
 				"spell|117952||Crackling Jade Lightning||", -- [65]
-				"item|109223||Healing Tonic", -- [66]
-				"macro|67||Statue Taunt|620830|#showtooltip Provoke/n/target Black Ox Statue/n/cast Provoke/n/targetlasttarget", -- [67]
+				"item|5512||Healthstone", -- [66]
+				"spell|126892||Zen Pilgrimage||", -- [67]
 				"spell|115178||Resuscitate||", -- [68]
 				"macro|69||Extra Action|134225|/click ExtraActionButton1", -- [69]
-				"spell|115203||Fortifying Brew||", -- [70]
-				"macro|71||Tier 1 WW/BM|135734|#showtooltip/n/use [talent:1/1,nochanneling]Chi Burst;[talent:1/2,nochanneling];Eye of the Tiger[talent:1/3,nochanneling]Chi Wave", -- [71]
-				"spell|115072||Expel Harm||", -- [72]
+				"macro|70||RJW|606549|#showtooltip/n/use [nochanneling]Rushing Jade Wind", -- [70]
+				"macro|71||Tier 1 WW/BM|606541|#showtooltip/n/use [talent:1/1,nochanneling]Chi Burst;[talent:1/2,nochanneling];Eye of the Tiger[talent:1/3,nochanneling]Chi Wave", -- [71]
+				"spell|101545||Flying Serpent Kick||", -- [72]
 				"spell|100780||Tiger Palm||", -- [73]
 				nil, -- [74]
-				"spell|205523||Blackout Strike||", -- [75]
-				nil, -- [76]
+				"spell|100784||Blackout Kick||", -- [75]
+				"spell|107428||Rising Sun Kick||", -- [76]
 				"spell|116705||Spear Hand Strike||", -- [77]
 				"spell|115078||Paralysis||", -- [78]
 				nil, -- [79]
 				"macro|80||Effuse|1360977|#showtooltip Effuse/n/use [@mouseover,help,nodead][]Effuse", -- [80]
-				[85] = "spell|100780||Tiger Palm||",
-				[87] = "spell|205523||Blackout Strike||",
-				[89] = "spell|116705||Spear Hand Strike||",
-				[95] = "spell|115178||Resuscitate||",
-				[96] = "spell|126892||Zen Pilgrimage||",
+				"spell|116095||Disable||", -- [81]
+				nil, -- [82]
+				nil, -- [83]
+				nil, -- [84]
+				"spell|100780||Tiger Palm||", -- [85]
+				nil, -- [86]
+				"spell|100784||Blackout Kick||", -- [87]
+				nil, -- [88]
+				"spell|116705||Spear Hand Strike||", -- [89]
+				nil, -- [90]
+				"spell|116095||Disable||", -- [91]
+				nil, -- [92]
+				nil, -- [93]
+				nil, -- [94]
+				"spell|115178||Resuscitate||", -- [95]
+				"spell|126892||Zen Pilgrimage||", -- [96]
 			},
 			["ww2"] = {
 				"macro|1||Tiger Palm|606551|#showtooltip Tiger Palm/n/use [nochanneling]Tiger Palm", -- [1]
@@ -1435,10 +1446,10 @@ ActionBarSaverDB = {
 				"macro|2||Renewing Mist|627487|#showtooltip Renewing Mist/n/use Thunder Focus Tea/n/use [@mouseover,help,nodead][]Renewing Mist", -- [2]
 				"macro|3||Vivify|1360980|#showtooltip/n/use [@mouseover,help,nodead][]Vivify", -- [3]
 				"macro|4||Enveloping Mist|775461|#showtooltip Enveloping Mist/n/use 13/n/use [@mouseover,help,nodead][]Enveloping Mist", -- [4]
-				"macro|5||Tier 6 MW|877514|#showtooltip/n/use [talent:6/1]Refreshing Jade Wind;[talent:6/2]Invoke Chi-Ji, the Red Crane;[talent:6/3]Summon Jade Serpent Statue", -- [5]
+				"macro|5||Tier 6 MW|620831|#showtooltip/n/use [talent:6/1]Refreshing Jade Wind;[talent:6/2]Invoke Chi-Ji, the Red Crane;[talent:6/3]Summon Jade Serpent Statue", -- [5]
 				"spell|115078||Paralysis||", -- [6]
 				"macro|7||Life Cocoon|627485|#showtooltip Life Cocoon/n/use [@mouseover,help,nodead][]Life Cocoon", -- [7]
-				"spell|212051||Reawaken||", -- [8]
+				"macro|8||Sheilun's Gift|1242282|#showtooltip Sheilun's Gift/n/use [@mouseover,help,nodead][]Sheilun's Gift", -- [8]
 				"spell|129597||Arcane Torrent|Racial|", -- [9]
 				nil, -- [10]
 				"spell|116680||Thunder Focus Tea||", -- [11]
@@ -1462,18 +1473,18 @@ ActionBarSaverDB = {
 				[65] = "spell|117952||Crackling Jade Lightning||",
 				[49] = "macro|49||Tier 5|608939|#showtooltip/n/use [talent:5/1]Healing Elixir;[talent:5/2]Diffuse Magic;[talent:5/3]Dampen Harm",
 				[57] = "spell|101643||Transcendence||",
-				[66] = "item|5512||Healthstone",
+				[66] = "item|109223||Healing Tonic",
 				[21] = "spell|129597||Arcane Torrent|Racial|",
-				[67] = "item|109222||Draenic Mana Potion",
-				[50] = "spell|109132||Roll||",
+				[67] = "spell|126892||Zen Pilgrimage||",
+				[50] = "macro|50||Roll|574574|#showtooltip Roll/n/use [nomod]Roll",
 				[58] = "macro|58||Tiger's Lust|651727|#showtooltip/n/use [@mouseover,help,nodead][@player][]Tiger's Lust",
-				[68] = "spell|115178||Resuscitate||",
+				[68] = "spell|212051||Reawaken||",
 				[69] = "macro|69||Extra Action|134225|/click ExtraActionButton1",
 				[85] = "spell|100780||Tiger Palm||",
-				[51] = "macro|51||HS / GHS|134414|#showtooltip/n/use [nomod]Hearthstone;[mod:shift][mod:alt]Garrison Hearthstone",
-				[59] = "macro|59||Cloak|1096902|/use 15",
+				[51] = "macro|51||HS / GHS|134414|#showtooltip/n/use [nomod]Hearthstone;[mod:shift][mod:alt]Dalaran Hearthstone",
+				[59] = "macro|59||Cloak|1338453|/use 15",
 				[70] = "spell|191837||Essence Font||",
-				[71] = "macro|71||Tier 1 MW|135734|#showtooltip/n/use [talent:1/1]Chi Burst;[talent:1/2,@mouseover,help,nodead]Zen Pulse;[talent:1/2]Zen Pulse;[talent:1/3,@mouseover,help,nodead]Mistwalk;[talent:1/3]Mistwalk",
+				[71] = "macro|71||Tier 1 MW|613397|#showtooltip/n/use [talent:1/1]Chi Burst;[talent:1/2,@mouseover,help,nodead]Zen Pulse;[talent:1/2]Zen Pulse;[talent:1/3,@mouseover,help,nodead]Mistwalk;[talent:1/3]Mistwalk",
 				[87] = "spell|100784||Blackout Kick||",
 				[52] = "macro|52||Target Focus|319458|/tar focus",
 				[60] = "spell|101546||Spinning Crane Kick||",

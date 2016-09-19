@@ -1,0 +1,156 @@
+
+WQTrackerDB = {
+	["profileKeys"] = {
+		["Comet - Illidan"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["GotTutorial"] = true,
+			["TutorialTaxyMap"] = true,
+			["quests_tracked"] = {
+				["Player-57-05DF4D8D"] = {
+				},
+			},
+			["quests_all_characters"] = {
+				["Player-57-05DF4D8D"] = {
+					[43324] = {
+						["expireAt"] = 1474016466,
+						["rewardAmount"] = "810",
+						["rewardTexture"] = 1391725,
+					},
+					[42086] = {
+						["expireAt"] = 1473973206,
+						["rewardAmount"] = "810",
+						["rewardTexture"] = 132858,
+					},
+					[41685] = {
+						["expireAt"] = 1474124466,
+						["rewardAmount"] = 545,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
+					},
+					[41965] = {
+						["expireAt"] = 1473973266,
+						["rewardAmount"] = 160,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
+					},
+					[43827] = {
+						["expireAt"] = 1473973266,
+						["rewardAmount"] = "1",
+						["rewardTexture"] = 1417744,
+					},
+					[42743] = {
+						["expireAt"] = 1474210866,
+						["rewardAmount"] = "810",
+						["rewardTexture"] = 1130508,
+					},
+					[42652] = {
+						["expireAt"] = 1474038066,
+						["rewardAmount"] = 350,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
+					},
+					[41984] = {
+						["expireAt"] = 1474038066,
+						["rewardAmount"] = 250,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
+					},
+					[41896] = {
+						["expireAt"] = 1473973206,
+						["rewardAmount"] = 250,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
+					},
+					[43452] = {
+						["expireAt"] = 1473994866,
+						["rewardAmount"] = "810",
+						["rewardTexture"] = 1130508,
+					},
+					[43618] = {
+						["expireAt"] = 1474038066,
+						["rewardAmount"] = 350,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
+					},
+					[43964] = {
+						["expireAt"] = 1474016466,
+						["rewardAmount"] = 210,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
+					},
+					[43101] = {
+						["expireAt"] = 1474038066,
+						["rewardAmount"] = 515,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
+					},
+					[44002] = {
+						["expireAt"] = 1473994866,
+						["rewardAmount"] = 205,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
+					},
+					[43436] = {
+						["expireAt"] = 1474016466,
+						["rewardAmount"] = 250,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
+					},
+					[41980] = {
+						["expireAt"] = 1473994866,
+						["rewardAmount"] = "810",
+						["rewardTexture"] = 1130281,
+					},
+					[41950] = {
+						["expireAt"] = 1473994866,
+						["rewardAmount"] = 250,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
+					},
+					[42788] = {
+						["expireAt"] = 1474038066,
+						["rewardAmount"] = "820",
+						["rewardTexture"] = 840190,
+					},
+					[42119] = {
+						["expireAt"] = 1473973266,
+						["rewardAmount"] = "810",
+						["rewardTexture"] = 1130506,
+					},
+					[41705] = {
+						["expireAt"] = 1474016406,
+						["rewardAmount"] = 165,
+						["rewardTexture"] = "Interface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_red_roundT",
+					},
+					[43628] = {
+						["expireAt"] = 1473973266,
+						["rewardAmount"] = "810",
+						["rewardTexture"] = 1391714,
+					},
+					[41676] = {
+						["expireAt"] = 1473973266,
+						["rewardAmount"] = "3",
+						["rewardTexture"] = 1417744,
+					},
+					[44033] = {
+						["expireAt"] = 1474038066,
+						["rewardAmount"] = "810",
+						["rewardTexture"] = 1130281,
+					},
+					[41860] = {
+						["expireAt"] = 1474038066,
+						["rewardAmount"] = "20",
+						["rewardTexture"] = 413584,
+					},
+					[44190] = {
+						["expireAt"] = 1474210866,
+						["rewardAmount"] = "810",
+						["rewardTexture"] = 1130507,
+					},
+					[42146] = {
+						["expireAt"] = 1474038066,
+						["rewardAmount"] = "19",
+						["rewardTexture"] = 413584,
+					},
+					[41652] = {
+						["expireAt"] = 1473994866,
+						["rewardAmount"] = "30",
+						["rewardTexture"] = 1394960,
+					},
+				},
+			},
+			["AlertTutorialStep"] = 5,
+		},
+	},
+}

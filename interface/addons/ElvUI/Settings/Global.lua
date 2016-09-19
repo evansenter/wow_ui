@@ -16,7 +16,7 @@ G['general'] = {
 	},
 	["disableTutorialButtons"] = true,
 	["animateConfig"] = true,
-	["disableOrderHallBar"] = true,
+	["commandBarSetting"] = "ENABLED_RESIZEPARENT",
 }
 
 G['classtimer'] = {}
@@ -26,4 +26,8 @@ G["nameplate"] = {}
 G['unitframe'] = {
 	['aurafilters'] = {},
 	['buffwatch'] = {},
+}
+
+G["bags"] = {
+	["ignoredItems"] = {},
 }

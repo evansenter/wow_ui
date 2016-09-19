@@ -7,7 +7,7 @@ Postal3DB = {
 				"Colton|Dark Iron|Horde|85|DEATHKNIGHT", -- [2]
 				"Combustion|Illidan|Horde|90|MAGE", -- [3]
 				"Cometron|Illidan|Horde|100|DEMONHUNTER", -- [4]
-				"Comet|Illidan|Horde|101|MONK", -- [5]
+				"Comet|Illidan|Horde|110|MONK", -- [5]
 				"Ereinion|Dark Iron|Horde|81|WARLOCK", -- [6]
 				"Evan|Illidan|Horde|100|PRIEST", -- [7]
 				"Metal|Illidan|Horde|100|WARRIOR", -- [8]

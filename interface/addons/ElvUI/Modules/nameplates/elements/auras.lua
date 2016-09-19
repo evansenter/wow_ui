@@ -5,7 +5,7 @@ local LSM = LibStub("LibSharedMedia-3.0")
 --Cache global variables
 --Lua functions
 local select, unpack = select, unpack
-local tinsert, tremove, twipe = table.insert, table.remove, table.wipe
+local tinsert, tremove = table.insert, table.remove
 --WoW API / Variables
 local CreateFrame = CreateFrame
 local UnitBuff = UnitBuff
@@ -14,7 +14,7 @@ local BUFF_STACKS_OVERFLOW = BUFF_STACKS_OVERFLOW
 
 local auraCache = {}
 
-function mod:SetAura(aura, index, name, filter, icon, count, debuffType, duration, expirationTime, unitCaster, canStealOrPurge, spellId, isBossAura)
+function mod:SetAura(aura, index, name, _, icon, count, _, duration, expirationTime)
 	aura.icon:SetTexture(icon);
 	aura.name = name
 	if ( count > 1 ) then
@@ -171,10 +171,17 @@ function mod:UpdateElement_Auras(frame)
 		TopOffset = 3
 	end
 
-	if(frame.TopLevelFrame ~= TopLevel and self.db.classbar.enable and self.db.classbar.position ~= "BELOW") then
+	if (frame.TopLevelFrame ~= TopLevel) then
 		frame.TopLevelFrame = TopLevel
 		frame.TopOffset = TopOffset
-		mod:ClassBar_Update(frame)
+
+		if (self.db.classbar.enable and self.db.classbar.position ~= "BELOW") then
+			mod:ClassBar_Update(frame)
+		end
+
+		if (self.db.units[frame.UnitType].detection and self.db.units[frame.UnitType].detection.enable) then
+			mod:ConfigureElement_Detection(frame)
+		end
 	end
 end
 
@@ -199,7 +206,7 @@ function mod:CreateAuraIcon(parent)
 	return aura
 end
 
-function mod:Auras_SizeChanged(width, height)
+function mod:Auras_SizeChanged(width)
 	local numAuras = #self.icons
 	for i=1, numAuras do
 		self.icons[i]:SetWidth((width - (mod.mult*numAuras)) / numAuras)
@@ -245,7 +252,7 @@ function mod:UpdateAuraIcons(auras)
 	end
 end
 
-function mod:ConstructElement_Auras(frame, maxAuras, side)
+function mod:ConstructElement_Auras(frame, side)
 	local auras = CreateFrame("FRAME", nil, frame)
 
 	auras:SetScript("OnSizeChanged", mod.Auras_SizeChanged)

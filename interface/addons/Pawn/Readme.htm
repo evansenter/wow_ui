@@ -446,33 +446,14 @@ and Pawn.</p>
 	<li>Pawn is currently saving too much information about the built-in scales 
 	in your SavedVariables, like names, spec IDs, and so on.&nbsp; That stuff 
 	should be dynamically created each time you log in, not saved.</li>
-</ul>
-<h3>Things I might remove in upcoming versions of Pawn</h3>
-<ul>
-		<li>The concept of the "current" state of an item, versus "base" (I'll just 
-	use base values for everything).&nbsp; BUT right now it isn't hurting 
-	anything being there, and some people like that feature.&nbsp; (I'd rather 
-	get rid of it when I can get some use out of it, such as by switching to 
-	GetItemStats instead of parsing tooltips.&nbsp; Pawn would lose even more 
-	functionality if I did that though, as the built-in GetItemStats doesn't 
-		tell Pawn everything it needs.)</li>
+	<li>When you have only one heirloom ring, Pawn doesn't show ring upgrades at 
+	all.&nbsp; (It's possible that this is no longer an issue in 2.0; I haven't 
+	re-verified it.)&nbsp;&nbsp; (<a href="https://wow.curseforge.com/addons/pawn/tickets/117-mage-not-working/">Ticket</a>)</li>
 </ul>
 <h3>Features I might add soon</h3>
 <ul>
 	<li>Like Pawn does with trinkets, the quest upgrade advisor shouldn't put 
 	vendor coins on any reward options if at least one of them is a relic.</li>
-	<li>A system where, instead of having Pawn scan for and trying to remember 
-	your best gear, it just compares a given item with what's currently 
-	equipped, like in Diablo and many other games.&nbsp; Now that almost all 
-	items are useful for almost all specs, and the items that aren't (weapons 
-	and trinkets) are not things Pawn can value effectively anyway, I think that 
-	makes a lot of sense, especially for people using Automatic mode.</li>
-	<li>Integration with Storyline</li>
-	<li>I've gotten a bunch of feedback on the way that Pawn makes assumptions 
-	about gems today.&nbsp; I may replace the existing low-level gems option with two 
-	new ones: "assume I won't use gems on anything below this level" and "assume 
-	I'll use the very best gems on anything above this level," and then make it 
-	fully customizable.</li>
 	<li>I should add a feature to the Values tab to import Ask Mr. Robot stat 
 	weights.&nbsp; (They can be exported from the AMR character page: click the 
 	green arrow button, then Best in Slot, then Edit Weights, then Share.)<ul>
@@ -483,8 +464,33 @@ and Pawn.</p>
 		import string?)</li>
 	</ul>
 	</li>
+	<li>Integration with Storyline</li>
+	<li>I've gotten a bunch of feedback on the way that Pawn makes assumptions 
+	about gems today.&nbsp; I may replace the existing low-level gems option with two 
+	new ones: "assume I won't use gems on anything below this level" (currently 
+	PawnMinimumItemLevelToConsiderGems) and "assume 
+	I'll use the very best gems on anything at least this level" (currently the 
+	gem table's final threshold), and then make it 
+	fully customizable.</li>
 </ul>
 <h2>Updates</h2>
+<h3>Version 2.0.12</h3>
+<ul>
+	<li>Pawn's Quest Upgrade Advisor will now also help you identify upgrades 
+	rewarded by world quests.</li>
+</ul>
+<h3>Version 2.0.11</h3>
+<ul>
+	<li>Updated the values of Broken Isles gems again after the recent hotfix.&nbsp;
+	<i>FFS, Blizzard.</i></li>
+</ul>
+<h3>Version 2.0.10</h3>
+<ul>
+	<li>The "ignore gems while leveling" feature will now ignore sockets on 
+	items below ilvl 800.</li>
+	<li>Made a small tweak to work around a problem that was reported where an 
+	error occurred when trying to sell a battle pet.</li>
+</ul>
 <h3>Version 2.0.9</h3>
 <ul>
 	<li>Updated the values of Broken Isles gems.&nbsp; Pawn will no longer 

@@ -1,14 +1,23 @@
 local addon_name, addon_env = ...
 
 -- [AUTOLOCAL START]
-local ITEM_QUALITY_COLORS = ITEM_QUALITY_COLORS
-local GetItemInfo = GetItemInfo
+local C_Garrison = C_Garrison
 local CastSpellOnFollower = C_Garrison.CastSpellOnFollower
-local FollowerTab = GarrisonMissionFrame.FollowerTab
+local CreateFrame = CreateFrame
+local GARRISON_FOLLOWER_MAX_LEVEL = GARRISON_FOLLOWER_MAX_LEVEL
+local GarrisonMissionFrame = GarrisonMissionFrame
+local GetFollowerAbilities = C_Garrison.GetFollowerAbilities
 local GetFollowerInfo = C_Garrison.GetFollowerInfo
 local GetFollowerItems = C_Garrison.GetFollowerItems
-local GetFollowerAbilities = C_Garrison.GetFollowerAbilities
+local GetItemInfo = GetItemInfo
+local ITEM_QUALITY_COLORS = ITEM_QUALITY_COLORS
+local LE_FOLLOWER_TYPE_GARRISON_6_0 = LE_FOLLOWER_TYPE_GARRISON_6_0
+local pairs = pairs
+local tinsert = table.insert
+local type = type
 -- [AUTOLOCAL END]
+
+local FollowerTab = GarrisonMissionFrame.FollowerTab
 
 local Widget = addon_env.Widget
 local event_frame = addon_env.event_frame
@@ -134,6 +143,19 @@ for idx, data in pairs (C_Garrison.GetAllEncounterThreats(LE_FOLLOWER_TYPE_GARRI
    tinsert(mechanic_id, data.id)
 end
 
+local function DrawAbilityCounters(frame, followerID, followerInfo)
+   local self = FollowerTab
+   local abilities = followerInfo.abilities or GetFollowerAbilities(followerID)
+
+   for i=1, #abilities do
+      local ability = abilities[i]
+
+      local abilityFrame = self.AbilitiesFrame.Abilities[i]
+
+      abilityFrame.Name:SetText(ability.name .. '!')
+   end
+end
+
 hooksecurefunc(GarrisonMissionFrame.FollowerList, "ShowFollower", function(self)
    local followerID = FollowerTab.followerID
    if not followerID then return end
@@ -205,3 +227,6 @@ for item_type = 1, #upgrade_items do
       prev = u
    end
 end
+
+hooksecurefunc(GarrisonMissionFrame.MissionTab.MissionList,            "Update", addon_env.GarrisonMissionList_Update_More)
+hooksecurefunc(GarrisonMissionFrame.MissionTab.MissionList.listScroll, "update", addon_env.GarrisonMissionList_Update_More)

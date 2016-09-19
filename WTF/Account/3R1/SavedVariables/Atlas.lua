@@ -12,12 +12,12 @@ AtlasOptions = {
 	["AtlasColoringDropDown"] = true,
 	["AtlasDontShowInfo_12201"] = false,
 	["AtlasAcronyms"] = true,
-	["AtlasType"] = 8,
+	["AtlasType"] = 9,
 	["AtlasButtonShown"] = true,
 	["AtlasVersion"] = "1.24.00",
 	["AtlasButtonPosition"] = 26,
 	["AtlasRightClick"] = false,
-	["AtlasZone"] = 3,
+	["AtlasZone"] = 8,
 	["AtlasScale"] = 0.999999940395355,
 	["AtlasBossDesc"] = true,
 	["AtlasBossDescScale"] = 0.899999976158142,
@@ -25,15 +25,17 @@ AtlasOptions = {
 AtlasDB = {
 	["profileKeys"] = {
 		["Comet - Illidan"] = "Comet - Illidan",
+		["Natal - Illidan"] = "Natal - Illidan",
 		["Metal - Illidan"] = "Metal - Illidan",
 		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
-		["Natal - Illidan"] = "Natal - Illidan",
 	},
 	["profiles"] = {
 		["Comet - Illidan"] = {
 			["minimap"] = {
-				["minimapPos"] = 177.954553807264,
+				["minimapPos"] = 200.725522709649,
 			},
+		},
+		["Natal - Illidan"] = {
 		},
 		["Metal - Illidan"] = {
 			["minimap"] = {
@@ -44,8 +46,6 @@ AtlasDB = {
 			["minimap"] = {
 				["minimapPos"] = 162.15970157202,
 			},
-		},
-		["Natal - Illidan"] = {
 		},
 	},
 }

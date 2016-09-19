@@ -33,6 +33,7 @@ L["Trigger"] = "觸發器"
 L["Bank"] = true;
 L["Deposit Reagents"] = true;
 L["Hold Control + Right Click:"] = '按住 Ctrl 並按滑鼠右鍵：'
+L["Hold Shift + Drag:"] = '按住 Shift 並拖曳：'
 L["Purchase Bags"] = true;
 L["Purchase"] = "購買銀行欄位"
 L["Reagent Bank"] = true;
@@ -59,6 +60,11 @@ L["RW"] = "團隊警告"
 L["says"] = "說"
 L["whispers"] = "密語"
 L["yells"] = "大喊"
+
+--DataBars
+L["Current Level:"] = true;
+L["Honor XP:"] = true;
+L["Honor Remaining:"] = true;
 
 --DataTexts
 L["(Hold Shift) Memory Usage"] = "(按住Shift) 記憶體使用量"
@@ -101,6 +107,7 @@ L["Offhand"] = "副手"
 L["Profit:"] = "利潤: "
 L["Reset Data: Hold Shift + Right Click"] = "重置數據: 按住 Shift + 右鍵點擊"
 L["Saved Raid(s)"] = "已有進度的副本"
+L["Saved Dungeon(s)"] = true;
 L["Server: "] = "伺服器: "
 L["Session:"] = "本次登入:"
 L["Shoulder"] = "肩部"
@@ -117,6 +124,7 @@ L["Waist"] = "腰部"
 L["Wrist"] = "護腕"
 L["|cffFFFFFFLeft Click:|r Change Talent Specialization"] = true;
 L["|cffFFFFFFRight Click:|r Change Loot Specialization"] = true;
+L["|cffFFFFFFShift + Left Click:|r Show Talent Specialization UI"] = true;
 
 --DebugTools
 L["%s: %s tried to call the protected function '%s'."] = "%s: %s 嘗試調用保護函數'%s'."
@@ -317,6 +325,7 @@ L["|cFFE30000Lua error recieved. You can view the error message when you exit co
 
 --Static Popups
 L["A setting you have changed will change an option for this character only. This setting that you have changed will be uneffected by changing user profiles. Changing this setting requires that you reload your User Interface."] = "你所做的改動只會影響到使用這個插件的本角色, 你需要重新加載介面才能使改動生效."
+L["Are you sure you want to apply this font to all ElvUI elements?"] = true;
 L["Are you sure you want to delete all your gray items?"] = "是否確定要刪除所有灰色物品?"
 L["Are you sure you want to disband the group?"] = "確定要解散隊伍?"
 L["Are you sure you want to reset all the settings on this profile?"] = "確定需要重置這個配置文件中的所有設置?"

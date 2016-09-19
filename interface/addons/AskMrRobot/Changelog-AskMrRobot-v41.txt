@@ -1,8 +1,0 @@
-2016-09-02  yellowfive  <yellowfive>
-
-[fe0bc2f32851] [v41]
-* AskMrRobot-Serializer/AskMrRobot-Serializer.lua, AskMrRobot.toc, Gear.lua:
-
-changed event for talent switch
-
-

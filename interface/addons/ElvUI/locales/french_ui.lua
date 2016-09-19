@@ -33,6 +33,7 @@ L["Trigger"] = "Déclencheur"
 L["Bank"] = "Banque";
 L["Deposit Reagents"] = "Déposer les composants";
 L["Hold Control + Right Click:"] = "Contrôle enfoncé + Clique droit"
+L["Hold Shift + Drag:"] = "Majuscule enfoncée + Déplacer"
 L["Purchase Bags"] = "Acheter des sacs";
 L["Purchase"] = "Acheter"
 L["Reagent Bank"] = "Banque de composants";
@@ -59,6 +60,11 @@ L["RW"] = "RW"
 L["says"] = "dit"
 L["whispers"] = "chuchote"
 L["yells"] = "crie"
+
+--DataBars
+L["Current Level:"] = true;
+L["Honor XP:"] = true;
+L["Honor Remaining:"] = true;
 
 --DataTexts
 L["(Hold Shift) Memory Usage"] = "(Maintenir MAJ) Utilisation de la Mémoire."
@@ -101,12 +107,13 @@ L["Offhand"] = "Main gauche"
 L["Profit:"] = "Profit:"
 L["Reset Data: Hold Shift + Right Click"] = "RAZ des données: MAJ + Clic droit"
 L["Saved Raid(s)"] = "Raid(s) Sauvegardé(s)"
+L["Saved Dungeon(s)"] = "Donjon(s) Sauvegardé(s)";
 L["Server: "] = "Serveur: "
 L["Session:"] = "Session:"
 L["Shoulder"] = "Épaule"
 L["silverabbrev"] = "|cffc7c7cfs|r" --Also used in Bags
 L["SP"] = "PdS"
-L["Spec"] = 'Spécialisation'
+L["Spec"] = "Spec"
 L["Spent:"] = "Dépensé: "
 L["Stats For:"] = "Stats pour:"
 L["Total CPU:"] = "Charge du CPU:"
@@ -117,6 +124,7 @@ L["Waist"] = "Ceinture"
 L["Wrist"] = "Poignets"
 L["|cffFFFFFFLeft Click:|r Change Talent Specialization"] = '|cffFFFFFFClick Gauche:|r Changer de spécialisation des talents'
 L["|cffFFFFFFRight Click:|r Change Loot Specialization"] = '|cffFFFFFFClick Droit:|r Changer la spécialisation de butin'
+L["|cffFFFFFFShift + Left Click:|r Show Talent Specialization UI"] = true;
 
 --DebugTools
 L["%s: %s tried to call the protected function '%s'."] = "%s: %s a essayé d'appeler la fonction protégée '%s'."
@@ -317,6 +325,7 @@ L["|cFFE30000Lua error recieved. You can view the error message when you exit co
 
 --Static Popups
 L["A setting you have changed will change an option for this character only. This setting that you have changed will be uneffected by changing user profiles. Changing this setting requires that you reload your User Interface."] = "Un réglage que vous avez modifié ne s'appliquera que pour ce personnage. La modification de ce réglage ne sera pas affecté par un changement de profil. Changer ce réglage requiert de relancer l'interface."
+L["Are you sure you want to apply this font to all ElvUI elements?"] = true;
 L["Are you sure you want to delete all your gray items?"] = "Êtes-vous sûr de vouloir détruire tous vos Objets Gris ?"
 L["Are you sure you want to disband the group?"] = "Êtes-vous sûr de vouloir dissoudre le groupe ? "
 L["Are you sure you want to reset all the settings on this profile?"] = "Êtes-vous sûr de vouloir réinitialiser tous les réglages sur ce profile?"

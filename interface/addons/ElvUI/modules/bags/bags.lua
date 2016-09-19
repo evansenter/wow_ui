@@ -376,8 +376,8 @@ function B:UpdateSlot(bagID, slotID)
 	if B.ProfessionColors[bagType] then
 		slot:SetBackdropBorderColor(unpack(B.ProfessionColors[bagType]))
 	elseif (clink) then
-		local iLvl, itemEquipLoc
-		slot.name, _, _, iLvl, _, _, _, _, itemEquipLoc = GetItemInfo(clink);
+		local iLvl, itemEquipLoc, itemClassID, itemSubClassID
+		slot.name, _, _, iLvl, _, _, _, _, itemEquipLoc, _, _, itemClassID, itemSubClassID = GetItemInfo(clink);
 
 		local isQuestItem, questId, isActiveQuest = GetContainerItemQuestInfo(bagID, slotID);
 		local r, g, b
@@ -393,7 +393,7 @@ function B:UpdateSlot(bagID, slotID)
 		end
 
 		--Item Level
-		if iLvl and B.db.itemLevel and (itemEquipLoc ~= nil and itemEquipLoc ~= "" and itemEquipLoc ~= "INVTYPE_BAG" and itemEquipLoc ~= "INVTYPE_QUIVER" and itemEquipLoc ~= "INVTYPE_TABARD") and (slot.rarity and slot.rarity > 1) then
+		if iLvl and B.db.itemLevel and ((itemClassID == 3 and itemSubClassID == 11) or (itemEquipLoc ~= nil and itemEquipLoc ~= "" and itemEquipLoc ~= "INVTYPE_BAG" and itemEquipLoc ~= "INVTYPE_QUIVER" and itemEquipLoc ~= "INVTYPE_TABARD") and (slot.rarity and slot.rarity > 1)) then
 			if (iLvl >= E.db.bags.itemLevelThreshold) then
 				slot.itemLevel:SetText(iLvl)
 				slot.itemLevel:SetTextColor(r, g, b)
@@ -1076,13 +1076,13 @@ function B:ContructContainerFrame(name, isBank)
 	f:SetMovable(true)
 	f:RegisterForDrag("LeftButton", "RightButton")
 	f:RegisterForClicks("AnyUp");
-	f:SetScript("OnDragStart", function(self) self:StartMoving() end)
+	f:SetScript("OnDragStart", function(self) if IsShiftKeyDown() then self:StartMoving() end end)
 	f:SetScript("OnDragStop", function(self) self:StopMovingOrSizing() end)
 	f:SetScript("OnClick", function(self) if IsControlKeyDown() then B.PostBagMove(self.mover) end end)
 	f:SetScript("OnEnter", function(self)
 		GameTooltip:SetOwner(self, "ANCHOR_TOPLEFT", 0, 4)
 		GameTooltip:ClearLines()
-		GameTooltip:AddDoubleLine(DRAG_MODEL, L["Temporary Move"], 1, 1, 1)
+		GameTooltip:AddDoubleLine(L["Hold Shift + Drag:"], L["Temporary Move"], 1, 1, 1)
 		GameTooltip:AddDoubleLine(L["Hold Control + Right Click:"], L["Reset Position"], 1, 1, 1)
 
 		GameTooltip:Show()
@@ -1191,6 +1191,10 @@ function B:ContructContainerFrame(name, isBank)
 		f.sortButton:SetPushedTexture("Interface\\ICONS\\INV_Pet_Broom")
 		f.sortButton:GetPushedTexture():SetTexCoord(unpack(E.TexCoords))
 		f.sortButton:GetPushedTexture():SetInside()
+		f.sortButton:SetDisabledTexture("Interface\\ICONS\\INV_Pet_Broom")
+		f.sortButton:GetDisabledTexture():SetTexCoord(unpack(E.TexCoords))
+		f.sortButton:GetDisabledTexture():SetInside()
+		f.sortButton:GetDisabledTexture():SetDesaturated(1)
 		f.sortButton:StyleButton(nil, true)
 		f.sortButton:SetScript("OnEnter", BagItemAutoSortButton:GetScript("OnEnter"))
 		f.sortButton:SetScript('OnClick', function()
@@ -1200,6 +1204,10 @@ function B:ContructContainerFrame(name, isBank)
 				SortReagentBankBags()
 			end
 		end)
+		if E.db.bags.disableBankSort then
+			f.sortButton:Disable()
+		end
+
 
 		--Toggle Bags Button
 		f.depositButton = CreateFrame("Button", name..'DepositButton', f.reagentFrame);
@@ -1270,7 +1278,13 @@ function B:ContructContainerFrame(name, isBank)
 			end
 		end)
 
-		f:SetScript('OnHide', CloseBankFrame)
+		f:SetScript('OnHide', function()
+			CloseBankFrame()
+
+			if E.db.bags.clearSearchOnClose then
+				B.ResetAndClear(f.editBox);
+			end
+		end)
 
 
 		--Search
@@ -1314,9 +1328,16 @@ function B:ContructContainerFrame(name, isBank)
 		f.sortButton:SetPushedTexture("Interface\\ICONS\\INV_Pet_Broom")
 		f.sortButton:GetPushedTexture():SetTexCoord(unpack(E.TexCoords))
 		f.sortButton:GetPushedTexture():SetInside()
+		f.sortButton:SetDisabledTexture("Interface\\ICONS\\INV_Pet_Broom")
+		f.sortButton:GetDisabledTexture():SetTexCoord(unpack(E.TexCoords))
+		f.sortButton:GetDisabledTexture():SetInside()
+		f.sortButton:GetDisabledTexture():SetDesaturated(1)
 		f.sortButton:StyleButton(nil, true)
 		f.sortButton:SetScript("OnEnter", BagItemAutoSortButton:GetScript("OnEnter"))
 		f.sortButton:SetScript('OnClick', function() B:CommandDecorator(B.SortBags, 'bags')(); end)
+		if E.db.bags.disableBagSort then
+			f.sortButton:Disable()
+		end
 
 
 		--Bags Button
@@ -1411,6 +1432,10 @@ function B:ContructContainerFrame(name, isBank)
 					bagButton:SetChecked(false)
 				end
 			end
+
+			if E.db.bags.clearSearchOnClose then
+				B.ResetAndClear(f.editBox);
+			end
 		end)
 	end
 
@@ -1438,6 +1463,23 @@ function B:ToggleBackpack()
 		self:OpenBags()
 	else
 		self:CloseBags()
+	end
+end
+
+function B:ToggleSortButtonState(isBank)
+	local button, disable;
+	if isBank and self.BankFrame then
+		button = self.BankFrame.sortButton
+		disable = E.db.bags.disableBankSort
+	elseif not isBank and self.BagFrame then
+		button = self.BagFrame.sortButton
+		disable = E.db.bags.disableBagSort
+	end
+
+	if button and disable then
+		button:Disable()
+	elseif button and not disable then
+		button:Enable()
 	end
 end
 
@@ -1599,15 +1641,16 @@ function B:PostBagMove()
 	if not E.private.bags.enable then return; end
 
 	--self refers to the mover (bag or bank)
-	local _, y = self:GetCenter();
+	local x, y = self:GetCenter();
 	local screenHeight = E.UIParent:GetTop();
+	local screenWidth = E.UIParent:GetRight()
 
 	if (y > (screenHeight / 2)) then
 		self:SetText(self.textGrowDown)
-		self.POINT = "TOP"
+		self.POINT = ((x > (screenWidth/2)) and "TOPRIGHT" or "TOPLEFT")
 	else
 		self:SetText(self.textGrowUp)
-		self.POINT = "BOTTOM"
+		self.POINT = ((x > (screenWidth/2)) and "BOTTOMRIGHT" or "BOTTOMLEFT")
 	end
 
 	local bagFrame
@@ -1646,14 +1689,14 @@ function B:Initialize()
 	self.BagFrames = {};
 
 	--Bag Mover: Set default anchor point and create mover
-	BagFrameHolder:Point("BOTTOM", RightChatPanel, "BOTTOM", 0, 22 + E.Border*4 - E.Spacing*2)
+	BagFrameHolder:Point("BOTTOMRIGHT", RightChatPanel, "BOTTOMRIGHT", 0, 22 + E.Border*4 - E.Spacing*2)
 	E:CreateMover(BagFrameHolder, 'ElvUIBagMover', L["Bag Mover (Grow Up)"], nil, nil, B.PostBagMove)
 
 	--Bank Mover
 	local BankFrameHolder = CreateFrame("Frame", nil, E.UIParent)
 	BankFrameHolder:Width(200)
 	BankFrameHolder:Height(22)
-	BankFrameHolder:Point("BOTTOM", LeftChatPanel, "BOTTOM", 0, 22 + E.Border*4 - E.Spacing*2)
+	BankFrameHolder:Point("BOTTOMLEFT", LeftChatPanel, "BOTTOMLEFT", 0, 22 + E.Border*4 - E.Spacing*2)
 	BankFrameHolder:SetFrameLevel(BankFrameHolder:GetFrameLevel() + 400)
 	E:CreateMover(BankFrameHolder, 'ElvUIBankMover', L["Bank Mover (Grow Up)"], nil, nil, B.PostBagMove)
 
@@ -1697,8 +1740,8 @@ function B:Initialize()
 	BankFrame:Point("TOPLEFT")
 	BankFrame:SetScript("OnShow", nil)
 
-	--Disable "Loot to left most bag", as the interface option has been removed
-	SetInsertItemsLeftToRight(false)
+	--Enable/Disable "Loot to Leftmost Bag"
+	SetInsertItemsLeftToRight(E.db.bags.reverseLoot)
 end
 
 E:RegisterModule(B:GetName())

@@ -12,33 +12,42 @@ local top_unavailable = addon_env.top_unavailable
 local Widget = addon_env.Widget
 
 -- [AUTOLOCAL START]
-local After = C_Timer.After
 local CANCEL = CANCEL
 local C_Garrison = C_Garrison
 local ChatEdit_ActivateChat = ChatEdit_ActivateChat
+local CreateFrame = CreateFrame
 local FONT_COLOR_CODE_CLOSE = FONT_COLOR_CODE_CLOSE
 local GARRISON_CURRENCY = GARRISON_CURRENCY
 local GARRISON_FOLLOWER_IN_PARTY = GARRISON_FOLLOWER_IN_PARTY
 local GARRISON_FOLLOWER_MAX_LEVEL = GARRISON_FOLLOWER_MAX_LEVEL
 local GARRISON_FOLLOWER_ON_MISSION = GARRISON_FOLLOWER_ON_MISSION
 local GARRISON_FOLLOWER_ON_MISSION_WITH_DURATION = GARRISON_FOLLOWER_ON_MISSION_WITH_DURATION
+local GARRISON_SHIP_OIL_CURRENCY = GARRISON_SHIP_OIL_CURRENCY
 local GREEN_FONT_COLOR_CODE = GREEN_FONT_COLOR_CODE
-local LE_FOLLOWER_TYPE_GARRISON_6_0 = LE_FOLLOWER_TYPE_GARRISON_6_0
-local LE_FOLLOWER_TYPE_SHIPYARD_6_2 = LE_FOLLOWER_TYPE_SHIPYARD_6_2
+local GarrisonLandingPage = GarrisonLandingPage
 local GarrisonMissionFrame = GarrisonMissionFrame
 local GetCurrencyInfo = GetCurrencyInfo
 local GetFollowerInfoForBuilding = C_Garrison.GetFollowerInfoForBuilding
 local GetFollowerMissionTimeLeft = C_Garrison.GetFollowerMissionTimeLeft
+local GetFollowers = C_Garrison.GetFollowers
 local GetFollowerStatus = C_Garrison.GetFollowerStatus
-local GetItemInfo = GetItemInfo
+local GetItemInfoInstant = GetItemInfoInstant
 local GetLandingPageShipmentInfo = C_Garrison.GetLandingPageShipmentInfo
+local GetTime = GetTime
 local HybridScrollFrame_GetOffset = HybridScrollFrame_GetOffset
+local LE_FOLLOWER_TYPE_GARRISON_6_0 = LE_FOLLOWER_TYPE_GARRISON_6_0
+local LE_FOLLOWER_TYPE_GARRISON_7_0 = LE_FOLLOWER_TYPE_GARRISON_7_0
+local LE_FOLLOWER_TYPE_SHIPYARD_6_2 = LE_FOLLOWER_TYPE_SHIPYARD_6_2
+local LE_GARRISON_TYPE_6_0 = LE_GARRISON_TYPE_6_0
 local RED_FONT_COLOR_CODE = RED_FONT_COLOR_CODE
+local RemoveFollowerFromMission = C_Garrison.RemoveFollowerFromMission
 local dump = DevTools_Dump
 local format = string.format
 local pairs = pairs
+local print = print
 local tconcat = table.concat
 local tsort = table.sort
+local type = type
 local wipe = wipe
 -- [AUTOLOCAL END]
 
@@ -66,19 +75,11 @@ local salvage_item = {
    big_crate = 140590,
 }
 
-local hardcoded_salvage_textures = {
-   [salvage_item.bag      ] = "Interface\\ICONS\\inv_misc_bag_10_red.blp",
-   [salvage_item.crate    ] = "Interface\\ICONS\\INV_Crate_01.blp",
-   [salvage_item.big_crate] = "Interface\\ICONS\\inv_crate_05.blp",
-}
 local salvage_textures = setmetatable({}, { __index = function(t, key)
    local item_id = salvage_item[key]
 
    if item_id then
-      local itemName, itemLink, itemRarity, itemLevel, itemMinLevel, itemType, itemSubType, itemStackCount, itemEquipLoc, itemTexture, itemSellPrice = GetItemInfo(item_id)
-      if not itemTexture then
-         return "|T" .. hardcoded_salvage_textures[item_id] .. ":0|t"
-      end
+      local itemID, itemType, itemSubType, itemEquipLoc, itemTexture = GetItemInfoInstant(item_id)
       itemTexture = "|T" .. itemTexture .. ":0|t"
       t[key] = itemTexture
       return itemTexture
@@ -206,6 +207,7 @@ event_frame:RegisterEvent("GARRISON_MISSION_NPC_OPENED")
 local gmm_buttons = {}
 addon_env.gmm_buttons = gmm_buttons
 local gmm_frames = {}
+addon_env.gmm_frames = gmm_frames
 
 function GMM_dumpl(pattern, ...)
    local names = { strsplit(",", pattern) }
@@ -217,23 +219,18 @@ function GMM_dumpl(pattern, ...)
    end
 end
 
--- easy hooking for similar old style (functional) and new style (class-like) functions
--- returns true on hooking class
-local function PostHookFunctionOrClass(old_function, new_class, new_method, post_hook)
-   if new_class then
-      local new_class_table = type(new_class) == "string" and _G[new_class] or new_class
-      if new_class_table and new_class_table[new_method] then
-         -- print("GMM: hooking", new_class, new_method)
-         hooksecurefunc(new_class_table, new_method, post_hook)
-         return true
-      end
+-- Sort troops to the end of the list,
+-- and greater level and greater ilevel to the start of the list.
+local function SortFollowers(a, b)
+   local a_is_troop = a.isTroop
+   local b_is_troop = b.isTroop
+
+   if a_is_troop then
+      if not b_is_troop then return false end
+   else
+      if b_is_troop then return true end
    end
 
-   -- print("GMM: hooking", old_function)
-   hooksecurefunc(old_function, post_hook)
-end
-
-local function SortFollowersByLevel(a, b)
    local a_level = a.level
    local b_level = b.level
    if a_level ~= b_level then return a_level > b_level end
@@ -246,7 +243,7 @@ local function GetFilteredFollowers(type_id)
       for follower_type_idx = 1, #supported_follower_types do
          local follower_type = supported_follower_types[follower_type_idx]
 
-         local followers = C_Garrison.GetFollowers(follower_type)
+         local followers = GetFollowers(follower_type)
 
          local container = filtered_followers[follower_type]
          wipe(container)
@@ -300,7 +297,8 @@ local function GetFilteredFollowers(type_id)
          container.count = count
          container.free = free
          container.all_maxed = all_maxed
-         tsort(container, SortFollowersByLevel)
+         container.type = follower_type
+         tsort(container, SortFollowers)
       end
 
       -- dump(filtered_followers)
@@ -430,7 +428,7 @@ local function BestForCurrentSelectedMission(type_id, mission_page, button_prefi
          local button = gmm_buttons[button_prefix .. suffix .. idx]
          local top_entry
          if suffix == 'Yield' then
-            if top.material_rewards or top.gold_rewards then
+            if top.yield or top.material_rewards or top.gold_rewards then
                top_entry = top_yield[idx]
             else
                top_entry = false
@@ -544,8 +542,7 @@ CheckPartyForProfessionFollowers = function()
       end
    end
 end
-
-local GarrisonFollowerMission_class_UpdateMissionParty = PostHookFunctionOrClass("GarrisonMissionPage_UpdateMissionForParty", "GarrisonMissionFrame", "UpdateMissionParty", CheckPartyForProfessionFollowers)
+hooksecurefunc(GarrisonMissionFrame, "UpdateMissionParty", CheckPartyForProfessionFollowers)
 
 local function GarrisonMissionFrame_SetFollowerPortrait_More(portraitFrame, followerInfo, forMissionPage)
    if not forMissionPage then return end
@@ -567,7 +564,7 @@ local function GarrisonMissionFrame_SetFollowerPortrait_More(portraitFrame, foll
       boosted = true
    end
 
-   if level == GARRISON_FOLLOWER_MAX_LEVEL then
+   if followerInfo.isMaxLevel then
       local level_border = portraitFrame.LevelBorder
       level_border:SetAtlas("GarrMission_PortraitRing_iLvlBorder")
       level_border:SetWidth(70)
@@ -671,113 +668,6 @@ local function UpdateMissionListButton(mission, filtered_followers, blizzard_but
    return more_missions_to_cache
 end
 addon_env.UpdateMissionListButton = UpdateMissionListButton
-
-local mission_expiration_format_days  = "%s" .. DAY_ONELETTER_ABBR:gsub(" ", "") .. " %02d:%02d"
-local mission_expiration_format_hours = "%s" ..                                        "%d:%02d"
--- Add more data to mission list over Blizzard's own
--- GarrisonMissionList_Update
-local function GarrisonMissionList_Update_More()
-   local self = GarrisonMissionFrame.MissionTab.MissionList
-   -- Blizzard updates those when not visible too, but there's no reason to copy them.
-   if not self:IsVisible() then return end
-   local scrollFrame = self.listScroll
-   local buttons = scrollFrame.buttons
-   local numButtons = #buttons
-
-   if self.showInProgress then
-      for i = 1, numButtons do
-         gmm_buttons['MissionList' .. i]:Hide()
-         gmm_frames['MissioListExpirationText' .. i]:SetText()
-         buttons[i]:SetAlpha(1)
-      end
-      return
-   end
-
-   local missions = self.availableMissions
-   local numMissions = #missions
-   if numMissions == 0 then return end
-
-   if addon_env.top_for_mission_dirty then
-      wipe(top_for_mission)
-      addon_env.top_for_mission_dirty = false
-   end
-
-   local missions = self.availableMissions
-   local offset = HybridScrollFrame_GetOffset(scrollFrame)
-
-   local filtered_followers = GetFilteredFollowers(LE_FOLLOWER_TYPE_GARRISON_6_0)
-   local more_missions_to_cache
-   local _, garrison_resources = GetCurrencyInfo(GARRISON_CURRENCY)
-
-   local time = GetTime()
-
-   for i = 1, numButtons do
-      local button = buttons[i]
-      local alpha = 1
-      local index = offset + i
-      if index <= numMissions then
-         local mission = missions[index]
-         local gmm_button = gmm_buttons['MissionList' .. i]
-
-         more_missions_to_cache = UpdateMissionListButton(mission, filtered_followers, button, gmm_button, more_missions_to_cache, garrison_resources)
-
-         local is_rare = mission.isRare
-
-         local expiration_text_set
-         local offerEndTime = mission.offerEndTime
-
-         -- offerEndTime seems to be present on all missions, though Blizzard UI shows tooltips only on rare
-         if offerEndTime then
-            local xp_only_rewards
-            if not is_rare then
-               for _, reward in pairs(mission.rewards) do
-                  if reward.followerXP and xp_only_rewards == nil then xp_only_rewards = true end
-                  if not reward.followerXP then xp_only_rewards = false break end
-               end
-            end
-
-            if not xp_only_rewards then
-               local remaining = offerEndTime - time -- seconds at this line, but will be reduced to minutes/hours/days below
-               local color_code = (remaining < (60 * 60 * 8)) and RED_FONT_COLOR_CODE or ''
-               local seconds = remaining % 60
-               remaining = (remaining - seconds) / 60
-               local minutes = remaining % 60
-               remaining = (remaining - minutes) / 60
-               local hours = remaining % 24
-               local days = (remaining - hours) / 24
-               if days > 0 then
-                  gmm_frames['MissioListExpirationText' .. i]:SetFormattedText(mission_expiration_format_days, color_code, days, hours, minutes)
-               else
-                  gmm_frames['MissioListExpirationText' .. i]:SetFormattedText(mission_expiration_format_hours, color_code, hours, minutes)
-               end
-               expiration_text_set = true
-            end
-         end
-
-         if not expiration_text_set then
-            gmm_frames['MissioListExpirationText' .. i]:SetText()
-         end
-
-         -- Just overwrite level with ilevel if it is not 0. There's no use knowing what base level mission have.
-         -- Blizzard UI also checks that mission is max "normal" UI, but there's at least one mission mistakenly marked as level 90, despite requiring 675 ilevel.
-         if mission.iLevel > 0 then
-            button.ItemLevel:Hide()
-            -- Restore position that Blizzard's UI changes if mission have both ilevel and rare! text
-            if mission.isRare then
-               button.Level:SetPoint("CENTER", button, "TOPLEFT", 40, -36)
-            end
-            button.Level:SetFormattedText("|cffffffd9%d", mission.iLevel)
-         end
-      end
-   end
-
-   if more_missions_to_cache and more_missions_to_cache > 0 then
-      -- print(more_missions_to_cache, GetTime())
-      After(0.001, GarrisonMissionList_Update_More)
-   end
-end
-hooksecurefunc(GarrisonMissionFrame.MissionTab.MissionList,            "Update", GarrisonMissionList_Update_More)
-hooksecurefunc(GarrisonMissionFrame.MissionTab.MissionList.listScroll, "update", GarrisonMissionList_Update_More)
 
 addon_env.HideGameTooltip = GameTooltip_Hide or function() return GameTooltip:Hide() end
 addon_env.OnShowEmulateDisabled = function(self) self:GetScript("OnDisable")(self) end
@@ -1011,6 +901,13 @@ local function GarrisonFollowerList_Update_More(self)
    end
 end
 hooksecurefunc(GarrisonMissionFrame.FollowerList, "UpdateData", GarrisonFollowerList_Update_More)
+
+GarrisonLandingPageMinimapButton:HookScript("OnClick", function(self, button, down)
+   if not (button == "RightButton" and not down) then return end
+   HideUIPanel(GarrisonLandingPage)
+   ShowGarrisonLandingPage(LE_GARRISON_TYPE_6_0)
+end)
+GarrisonLandingPageMinimapButton:RegisterForClicks("LeftButtonUp", "RightButtonUp")
 
 gmm_buttons.StartMission = MissionPage.StartMissionButton
 

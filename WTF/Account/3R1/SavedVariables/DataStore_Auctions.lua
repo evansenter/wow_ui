@@ -14,8 +14,8 @@ DataStore_AuctionsDB = {
 	["global"] = {
 		["Characters"] = {
 			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1473013836,
-				["lastVisitDate"] = "2016/09/04 11:30",
+				["lastUpdate"] = 1474246330,
+				["lastVisitDate"] = "2016/09/18 17:52",
 			},
 			["Default.Illidan.Cometron"] = {
 				["lastUpdate"] = 1471197761,

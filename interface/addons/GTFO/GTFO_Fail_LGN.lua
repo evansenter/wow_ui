@@ -161,6 +161,112 @@ GTFO.SpellID["191530"] = {
   sound = 3;
 };
 
+GTFO.SpellID["208724"] = {
+  --desc = "Crushing Thrash (Arch-Desecrator Malithar)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["211901"] = {
+  --desc = "Fusion Press (Mimiron)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["211488"] = {
+  --desc = "Thundershot (Storm Cannon)";
+  sound = 3;
+};
+
+GTFO.SpellID["221701"] = {
+  --desc = "Ring of Frost (Eternal Groom)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["182832"] = {
+  --desc = "Petrified (Stoneblood Elderwitch)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["189157"] = {
+  --desc = "Death Wail (Theryssia)";
+  sound = 3;
+};
+
+GTFO.SpellID["189187"] = {
+  --desc = "Shadow Pounce (Darkshade)";
+  sound = 3;
+};
+
+GTFO.SpellID["203323"] = {
+  --desc = "Club Smash (Gornoth the Lost)";
+  sound = 3;
+};
+
+GTFO.SpellID["213144"] = {
+  --desc = "Squish 'Em (Gurbog da Basher)";
+  sound = 3;
+};
+
+GTFO.SpellID["213208"] = {
+  --desc = "Bash n Smash (Gurbog da Basher)";
+  sound = 3;
+};
+
+GTFO.SpellID["188574"] = {
+  --desc = "Explosive Blight (Forsaken Dreadwing)";
+  sound = 3;
+};
+
+GTFO.SpellID["197499"] = {
+  --desc = "Mana Surge (Ael'Yith)";
+  sound = 3;
+};
+
+GTFO.SpellID["225358"] = {
+  --desc = "Threatening Roar (Bahagar)";
+  sound = 3;
+};
+
+GTFO.SpellID["216779"] = {
+  --desc = "Energy Expulsion (Orbyth)";
+  sound = 3;
+};
+
+GTFO.SpellID["183001"] = {
+  --desc = "Massive Crush (Queen Kraklaa)";
+  sound = 3;
+};
+
+GTFO.SpellID["199340"] = {
+  --desc = "Bear Trap (Huntress Estrid)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["225258"] = {
+  --desc = "Fel Eruption (Archimonde)";
+  sound = 3;
+};
+
+GTFO.SpellID["222482"] = {
+  --desc = "Sea Quake (Sea King Tidross)";
+  sound = 3;
+};
+
+GTFO.SpellID["215741"] = {
+  --desc = "Maul (Arru)";
+  sound = 3;
+};
+
+GTFO.SpellID["225385"] = {
+  --desc = "Spit Blood (Bahagar)";
+  sound = 3;
+};
+
+
 -- **********
 -- * Mardum *
 -- **********
@@ -350,6 +456,11 @@ GTFO.SpellID["201852"] = {
   sound = 3;
 };
 
+GTFO.SpellID["201598"] = {
+  --desc = "Congealing Vomit (Festerface)";
+  sound = 3;
+};
+
 -- *********************
 -- * Darkheart Thicket *
 -- *********************
@@ -517,8 +628,8 @@ GTFO.SpellID["209867"] = {
 GTFO.SpellID["198605"] = {
   --desc = "Thunderstrike (Valarjar Thundercaller)";
   sound = 3;
-  negatingBuffSpellID = 198599; 
-  negatingIgnoreTime = 5;
+  negatingDebuffSpellID = 198599; 
+  negatingIgnoreTime = 1;
 };
 
 GTFO.SpellID["198412"] = {
@@ -541,6 +652,188 @@ GTFO.SpellID["198088"] = {
   applicationOnly = true;
   sound = 3;
 };
+
+-- **************
+-- * The Arcway *
+-- **************
+
+-- TODO: Volatile Magic (Ivanyr) FF fail Alert?
+-- TODO: Cleansing Force (Corstilax) - Fail on explosion
+-- TODO: Fel Eruption (General Xakal)
+-- TODO: Shadow Slash (General Xakal) 
+-- TODO: Bombardment (General Xakal) - avoidable? 
+-- TODO: Force Bomb (Advisor Vandros)
+-- TODO: Time Split (Advisor Vandros) - shard explosion
+
+
+-- ****************
+-- * Maw of Souls *
+-- ****************
+
+-- TODO: Arise, Fallen (Ymiron)
+-- TODO: Nether Rip (Harbaron) - Impact damage only
+-- TODO: Tainted Essence (Helya) - Explosion
+
+GTFO.SpellID["195038"] = {
+  --desc = "Defiant Strike - Final hit (Seacursed Soulkeeper)";
+  sound = 3;
+};
+
+GTFO.SpellID["193513"] = {
+  --desc = "Bane (Ymiron, the Fallen King)";
+  sound = 3;
+};
+
+GTFO.SpellID["194099"] = {
+  --desc = "Bile Breath (The Grimewalker)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["194218"] = {
+  --desc = "Cosmic Scythe (Harbaron)";
+  sound = 3;
+};
+
+GTFO.SpellID["197117"] = {
+  --desc = "Piercing Tentacle (Helya)";
+  sound = 3;
+};
+
+GTFO.SpellID["195309"] = {
+  --desc = "Swirling Water (Helya)";
+  sound = 3;
+};
+
+GTFO.SpellID["197858"] = {
+  --desc = "Turbulent Waters (Helya)";
+  sound = 3;
+};
+
+-- ******************
+-- * Court of Stars *
+-- ******************
+
+-- TODO: Resonant Slash (Patrol Captain Gerdo) - Avoidable?
+-- TODO: Streetsweeper (Patrol Captain Gerdo) - Heroic
+-- TODO: Shockwave (Talixae Flamewreath) - Avoidable?
+-- TODO: Whirling Blades (Talixae Flamewreath) - Avoidable?
+-- TODO: Enveloping Winds (Advisor Melandrus) - Heroic
+-- TODO: Piercing Gale (Advisor Melandrus)
+-- TODO: Blade Surge (Advisor Melandrus) - Fail when hit more than once
+
+
+-- ************************
+-- * Vault of the Wardens *
+-- ************************
+
+-- TODO: Fel Chain (Tirathon Saltheril)
+-- TODO: Corrupted Touch (Lingering Corruption) - FF fail
+-- TODO: Fissure (Ash'golm)
+-- TODO: Volcano (Ash'golm)
+-- TODO: Pulse (Glazer)
+-- TODO: Detonating Moonglaive (Cordana Felsong)
+
+GTFO.SpellID["193610"] = {
+  --desc = "Fel Detonation (Glayvianna Soulrender)";
+  sound = 3;
+};
+
+GTFO.SpellID["191684"] = {
+  --desc = "Burning Pitch (Viletongue Belcher)";
+  sound = 3;
+};
+
+GTFO.SpellID["194037"] = {
+  --desc = "Mortar (Foul Mother)";
+  sound = 3;
+};
+
+GTFO.SpellID["199918"] = {
+  --desc = "Shadow Crash (Faceless Voidcaster)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["200202"] = {
+  --desc = "Chilled to the Bone (Ash'golm)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["193969"] = {
+  --desc = "Razors (Aranasi Broodmother)";
+  applicationOnly = true;
+  sound = 3;
+  test = true;
+};
+
+GTFO.SpellID["197334"] = {
+  --desc = "Fel Glaive (Cordana Felsong)";
+  sound = 3;
+};
+
+-- *******************
+-- * Black Rook Hold *
+-- *******************
+
+GTFO.SpellID["196517"] = {
+  --desc = "Swirling Scythe (Amalgam of Souls)";
+  sound = 3;
+};
+
+GTFO.SpellID["194956"] = {
+  --desc = "Reap Soul (Amalgam of Souls)";
+  sound = 3;
+};
+
+GTFO.SpellID["194960"] = {
+  --desc = "Soul Echoes (Amalgam of Souls)";
+  sound = 3;
+};
+
+GTFO.SpellID["200256"] = {
+  --desc = "Phased Explosion (Arcane Minion)";
+  sound = 3;
+};
+
+GTFO.SpellID["200261"] = {
+  --desc = "Bonebreaking Strike (Soul-Torn Champion)";
+  sound = 3;
+};
+
+GTFO.SpellID["222397"] = {
+  --desc = "Boulder Crush";
+  sound = 3;
+};
+
+GTFO.SpellID["222417"] = {
+  --desc = "Boulder Crush";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["214002"] = {
+  --desc = "Raven's Dive (Risen Lancer)";
+  sound = 3;
+};
+
+GTFO.SpellID["199567"] = {
+  --desc = "Dark Obliteration (Latosius)";
+  sound = 3;
+};
+
+GTFO.SpellID["198820"] = {
+  --desc = "Dark Blast (Latosius)";
+  sound = 3;
+};
+
+GTFO.SpellID["199097"] = {
+  --desc = "Cloud of Hypnosis (Latosius)";
+  applicationOnly = true;
+  sound = 3;
+};
+
 
 -- *********************
 -- * The Emerald Dream *

@@ -5,11 +5,11 @@
 ## Notes: Load on demand data for MacroToolkit
 ## LoadOnDemand: 1
 ## RequiredDeps: MacroToolkit
-## X-Curse-Packaged-Version: v7.0.1.1
+## X-Curse-Packaged-Version: v7.0.1.2
 ## X-Curse-Project-Name: Macro-Toolkit
 ## X-Curse-Project-ID: Macro-Toolkit
 ## X-Curse-Repository-ID: wow/macro-toolkit/mainline
-## X-Curse-Packaged-Version: v7.0.1.1
+## X-Curse-Packaged-Version: v7.0.1.2
 ## X-Curse-Project-Name: Macro Toolkit
 ## X-Curse-Project-ID: macro-toolkit
 ## X-Curse-Repository-ID: wow/macro-toolkit/mainline

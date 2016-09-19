@@ -4,6 +4,7 @@ local c_garrison_cache = addon_env.c_garrison_cache
 
 -- [AUTOLOCAL START]
 local AddFollowerToMission = C_Garrison.AddFollowerToMission
+local After = C_Timer.After
 local C_Garrison = C_Garrison
 local CreateFrame = CreateFrame
 local GARRISON_CURRENCY = GARRISON_CURRENCY
@@ -12,11 +13,16 @@ local GARRISON_SHIP_OIL_CURRENCY = GARRISON_SHIP_OIL_CURRENCY
 local GarrisonMissionFrame = GarrisonMissionFrame
 local GetFramesRegisteredForEvent = GetFramesRegisteredForEvent
 local GetPartyMissionInfo = C_Garrison.GetPartyMissionInfo
+local LE_FOLLOWER_TYPE_GARRISON_6_0 = LE_FOLLOWER_TYPE_GARRISON_6_0
+local LE_FOLLOWER_TYPE_GARRISON_7_0 = LE_FOLLOWER_TYPE_GARRISON_7_0
 local RemoveFollowerFromMission = C_Garrison.RemoveFollowerFromMission
 local dump = DevTools_Dump
 local pairs = pairs
+local print = print
 local sfind = string.find
 local tinsert = table.insert
+local tremove = table.remove
+local type = type
 local wipe = wipe
 -- [AUTOLOCAL END]
 
@@ -54,10 +60,14 @@ local function FindBestFollowersForMission(mission, followers, mode)
       wipe(top_unavailable[idx])
    end
 
+   local type70 = followers.type == LE_FOLLOWER_TYPE_GARRISON_7_0
+
    local slots = mission.numFollowers
-   if slots > followers_count then return end
+   if slots > followers_count and not type70 then return end
 
    local event_handlers = { GetFramesRegisteredForEvent("GARRISON_FOLLOWER_LIST_UPDATE") }
+   -- TODO: this can break everything else if player initiates combat and gets "too slow" before handlers are returned
+   -- TODO: restoration of events and previous followers should be put in separate function and called through .After
    for idx = 1, #event_handlers do UnregisterEvent(event_handlers[idx], "GARRISON_FOLLOWER_LIST_UPDATE") end
 
    local mission_id = mission.missionID
@@ -81,6 +91,18 @@ local function FindBestFollowersForMission(mission, followers, mode)
    for idx = slots + 1, 3 do
       max[idx] = followers_count + 1
       min[idx] = followers_count + 1
+   end
+
+   if type70 then
+      for idx = followers_count, 1, -1 do
+         if not followers[idx].isTroop then
+            max[1] = idx
+            break
+         end
+      end
+      for idx = 2, 3 do
+         max[idx] = followers_count + 1
+      end
    end
 
    local best_modes_count = 1
@@ -113,7 +135,7 @@ local function FindBestFollowersForMission(mission, followers, mode)
       end
    end
 
-   local salvage_yard_level = c_garrison_cache.salvage_yard_level
+   local salvage_yard_level = followers.type == LE_FOLLOWER_TYPE_GARRISON_6_0 and c_garrison_cache.salvage_yard_level
    local all_followers_maxed = followers.all_maxed
 
    local follower1_added, follower2_added, follower3_added
@@ -124,91 +146,85 @@ local function FindBestFollowersForMission(mission, followers, mode)
       local follower1 = followers[i1]
       local follower1_id = follower1.followerID
       local follower1_maxed = follower1.levelXP == 0 and 1 or 0
-      local follower1_level = follower1.level if follower1_level == GARRISON_FOLLOWER_MAX_LEVEL then follower1_level = follower1.iLevel end
+      local follower1_level = follower1.isMaxLevel and follower1.iLevel or follower1.level
       local follower1_busy = follower1.is_busy_for_mission and 1 or 0
+      local follower1_is_troop = follower1.isTroop and 1 or 0
       for i2 = min[2] or (i1 + 1), max[2] do
          local follower2_maxed = 0
          local follower2 = followers[i2]
          local follower2_id
          local follower2_level = 0
          local follower2_busy = 0
+         local follower2_is_troop = 0
          if follower2 then
             follower2_id = follower2.followerID
             if follower2.levelXP == 0 then follower2_maxed = 1 end
-            follower2_level = follower2.level if follower2_level == GARRISON_FOLLOWER_MAX_LEVEL then follower2_level = follower2.iLevel end
+            follower2_level = follower2.isMaxLevel and follower2.iLevel or follower2.level
             if follower2.is_busy_for_mission then follower2_busy = 1 end
+            if follower2.isTroop then follower2_is_troop = 1 end
          end
-         for i3 = min[3] or (i2 + 1), max[3] do
+         -- Special handling to calculate precisely one team for 1 filled slot in 3 members missions.
+         local i3_start = min[3] or (i2 + 1)
+         if type70 then
+            if i2 == followers_count + 1 then i3_start = followers_count + 1 end
+         end
+         for i3 = i3_start, max[3] do
             local follower3_maxed = 0
             local follower3 = followers[i3]
             local follower3_id
             local follower3_level = 0
             local follower3_busy = 0
+            local follower3_is_troop = 0
             if follower3 then
                follower3_id = follower3.followerID
                if follower3.levelXP == 0 then follower3_maxed = 1 end
-               follower3_level = follower3.level if follower3_level == GARRISON_FOLLOWER_MAX_LEVEL then follower3_level = follower3.iLevel end
+               follower3_level = follower3.isMaxLevel and follower3.iLevel or follower3.level
                if follower3.is_busy_for_mission then follower3_busy = 1 end
+               if follower3.isTroop then follower3_is_troop = 1 end
             end
 
             local followers_maxed = follower1_maxed + follower2_maxed + follower3_maxed
             -- at least one follower in party is busy (i.e. staus non-empty/non-party) for mission
             local follower_is_busy_for_mission = (follower1_busy + follower2_busy + follower3_busy) > 0
 
-            if
-               -- On follower XP-only missions throw away any team that is completely filled with maxed out followers
-               (xp_only_rewards and slots == followers_maxed and not (salvage_yard_level and all_followers_maxed))
-               -- On mission list screen don't bother calculating unavailable followers for now
-               or (mode == "mission_list" and follower_is_busy_for_mission)
-            then
-               -- skip
-            else
-               local follower_level_total = follower1_level + follower2_level + follower3_level
+            local skip -- if set, skip this team completely
 
-               if follower3 then
-                  if follower3_added and follower3_added ~= follower3_id then
-                     RemoveFollowerFromMission(mission_id, follower3_added)
-                     follower3_added = nil
+            if xp_only_rewards then
+               -- Throw away teams that are completely filled with maxed out followers
+               if slots == followers_maxed then
+                  -- However, if ALL free followers are maxed and we have salvage yard - don't.
+                  if not (salvage_yard_level and all_followers_maxed) then
+                     skip = true
                   end
                end
+            end
 
-               if follower2 then
-                  if follower2_added and follower2_added ~= follower2_id then
-                     RemoveFollowerFromMission(mission_id, follower2_added)
-                     follower2_added = nil
-                  end
+            -- Throw away "potential" teams with busy followers if we're just calculating one button for mission list
+            if mode == "mission_list" and follower_is_busy_for_mission then
+               skip = true
+            end
+
+            if not skip then
+               if follower3_added ~= follower3_id then
+                  if follower3_added then RemoveFollowerFromMission(mission_id, follower3_added) end
+                  if follower3_id then AddFollowerToMission(mission_id, follower3_id) end
+                  follower3_added = follower3_id
                end
 
-               if follower1_added and follower1_added ~= follower1_id then
-                  RemoveFollowerFromMission(mission_id, follower1_added)
-                  follower1_added = nil
+               if follower2_added ~= follower2_id then
+                  if follower2_added then RemoveFollowerFromMission(mission_id, follower2_added) end
+                  if follower2_id then AddFollowerToMission(mission_id, follower2_id) end
+                  follower2_added = follower2_id
                end
 
-               if not follower1_added then
-                  if AddFollowerToMission(mission_id, follower1_id) then
-                     follower1_added = follower1_id
-                  else
-                     --[[ error handling! ]]
-                  end
-               end
-
-               if follower2 and not follower2_added then
-                  if AddFollowerToMission(mission_id, follower2_id) then
-                     follower2_added = follower2_id
-                  else
-                     --[[ error handling! ]]
-                  end
-               end
-
-               if follower3 and not follower3_added then
-                  if AddFollowerToMission(mission_id, follower3_id) then
-                     follower3_added = follower3_id
-                  else
-                     --[[ error handling! ]]
-                  end
+               if follower1_added ~= follower1_id then
+                  if follower1_added then RemoveFollowerFromMission(mission_id, follower1_added) end
+                  AddFollowerToMission(mission_id, follower1_id)
+                  follower1_added = follower1_id
                end
 
                -- Calculate result
+               local follower_level_total = follower1_level + follower2_level + follower3_level
                local totalTimeString, totalTimeSeconds, isMissionTimeImproved, successChance, partyBuffs, isEnvMechanicCountered, xpBonus, materialMultiplier, goldMultiplier = GetPartyMissionInfo(mission_id)
                -- Uh, thanks 6.2, for lots of new calls and tables going directly to garbage right in the middle of most computational heavy loop.
                -- At least I can eliminate "type" after first check.
@@ -252,7 +268,7 @@ local function FindBestFollowersForMission(mission, followers, mode)
                   end
 
                   for idx = 1, top_entries do
-                     local current = top_list[idx]
+                     local prev_top = top_list[idx]
 
                      local found
                      repeat -- Checking if new candidate for top is better than any top 3 already sored
@@ -266,46 +282,49 @@ local function FindBestFollowersForMission(mission, followers, mode)
                            break
                         end
 
-                        if not current[1] then found = true break end
+                        if not prev_top[1] then found = true break end
 
-                        local c_material_yield = current.material_yield
+                        local prev_SuccessChance = prev_top.successChance
+                        local prev_followers_maxed = prev_top.followers_maxed
+
+                        local c_material_yield = prev_top.material_yield
                         if mode == 'material_yield' then
                            if c_material_yield < material_yield then found = true break end
                            if c_material_yield > material_yield then break end
                         end
 
-                        local c_gold_yield = current.gold_yield
+                        local c_gold_yield = prev_top.gold_yield
                         if mode == 'gold_yield' then
                            if c_gold_yield < gold_yield then found = true break end
                            if c_gold_yield > gold_yield then break end
                         end
 
-                        local cSuccessChance = current.successChance
-                        if cSuccessChance < successChance then found = true break end
-                        if cSuccessChance > successChance then break end
+                        do
+                           if prev_SuccessChance < successChance then found = true break end
+                           if prev_SuccessChance > successChance then break end
+                        end
 
                         if material_rewards then
-                           local cMaterialMultiplier = current.materialMultiplier
+                           local cMaterialMultiplier = prev_top.materialMultiplier
                            if cMaterialMultiplier < materialMultiplier then found = true break end
                            if cMaterialMultiplier > materialMultiplier then break end
                         end
 
-                        local c_followers_maxed = current.followers_maxed
-                        if c_followers_maxed > followers_maxed then found = true break end
-                        if c_followers_maxed < followers_maxed then break end
+                        if prev_followers_maxed > followers_maxed then found = true break end
+                        if prev_followers_maxed < followers_maxed then break end
 
-                        local cXpBonus = current.xpBonus
+                        local cXpBonus = prev_top.xpBonus
                         -- Maximize XP bonus only if party have unmaxed followers
                         if slots ~= followers_maxed then
                            if cXpBonus < xpBonus then found = true break end
                            if cXpBonus > xpBonus then break end
                         end
 
-                        local cTotalTimeSeconds = current.totalTimeSeconds
+                        local cTotalTimeSeconds = prev_top.totalTimeSeconds
                         if cTotalTimeSeconds > totalTimeSeconds then found = true break end
                         if cTotalTimeSeconds < totalTimeSeconds then break end
 
-                        local c_follower_level_total = current.follower_level_total
+                        local c_follower_level_total = prev_top.follower_level_total
                         if c_follower_level_total > follower_level_total then found = true break end
                         if c_follower_level_total < follower_level_total then break end
 
@@ -331,18 +350,18 @@ local function FindBestFollowersForMission(mission, followers, mode)
 
                         -- Minimize material/gold multiplier if possible if no corresponding reward is available.
                         if not material_rewards then
-                           local c_material_multiplier = current.materialMultiplier
+                           local c_material_multiplier = prev_top.materialMultiplier
                            if c_material_multiplier > materialMultiplier then found = true break end
                            if c_material_multiplier < materialMultiplier then break end
                         end
 
                         if not gold_rewards then
-                           local c_gold_multiplier = current.goldMultiplier
+                           local c_gold_multiplier = prev_top.goldMultiplier
                            if c_gold_multiplier > goldMultiplier then found = true break end
                            if c_gold_multiplier < goldMultiplier then break end
                         end
 
-                        local cBuffCount = current.buffCount
+                        local cBuffCount = prev_top.buffCount
                         if cBuffCount > buffCount then found = true break end
                         if cBuffCount < buffCount then break end
 
@@ -353,7 +372,7 @@ local function FindBestFollowersForMission(mission, followers, mode)
                            end
                         end
 
-                        local cIsEnvMechanicCountered = current.isEnvMechanicCountered
+                        local cIsEnvMechanicCountered = prev_top.isEnvMechanicCountered
                         if cIsEnvMechanicCountered > isEnvMechanicCountered then found = true break end
                         if cIsEnvMechanicCountered < isEnvMechanicCountered then break end
                      until true

@@ -46,40 +46,44 @@ DataStore_CurrenciesDB = {
 				"Legion|", -- [30]
 				"Nethershard|Interface\\Icons\\inv_datacrystal01", -- [31]
 				"Order Resources|Interface\\Icons\\inv_orderhall_orderresources", -- [32]
+				"Sightless Eye|Interface\\Icons\\achievement_reputation_kirintor_offensive", -- [33]
+				"Ancient Mana|Interface\\Icons\\inv_misc_ancient_mana", -- [34]
 			},
 			["CurrencyTextRev"] = {
 				["Mark of the World Tree"] = 21,
-				["Elder Charm of Good Fortune"] = 5,
-				["Oil"] = 27,
-				["Garrison Resources"] = 17,
+				["Mogu Rune of Fate"] = 11,
 				["Nethershard"] = 31,
 				["Valor"] = 29,
+				["Dungeon and Raid"] = 19,
 				["Seal of Tempered Fate"] = 18,
-				["Lesser Charm of Good Fortune"] = 10,
-				["Seal of Inevitable Fate"] = 28,
 				["Order Resources"] = 32,
-				["Valor Points"] = 13,
 				["Tol Barad Commendation"] = 23,
-				["Mists of Pandaria"] = 20,
-				["Ironpaw Token"] = 8,
-				["Player vs. Player"] = 1,
 				["Mote of Darkness"] = 22,
-				["Unused"] = 4,
-				["Warlords of Draenor"] = 15,
+				["Sightless Eye"] = 33,
 				["Timeless Coin"] = 12,
-				["Legion"] = 30,
+				["Essence of Corrupted Deathwing"] = 6,
+				["Ironpaw Token"] = 8,
+				["Lesser Charm of Good Fortune"] = 10,
+				["Oil"] = 27,
+				["Valor Points"] = 13,
+				["Mists of Pandaria"] = 20,
+				["Player vs. Player"] = 1,
+				["Unused"] = 4,
+				["Ancient Mana"] = 34,
+				["Elder Charm of Good Fortune"] = 5,
+				["Seal of Inevitable Fate"] = 28,
 				["Epicurean's Award"] = 26,
 				["Honor Points"] = 3,
-				["Miscellaneous"] = 24,
 				["Conquest Points"] = 2,
-				["Essence of Corrupted Deathwing"] = 6,
-				["Apexis Crystal"] = 16,
+				["Miscellaneous"] = 24,
+				["Illustrious Jewelcrafter's Token"] = 7,
+				["Legion"] = 30,
 				["Justice Points"] = 9,
-				["Mogu Rune of Fate"] = 11,
-				["Dungeon and Raid"] = 19,
+				["Apexis Crystal"] = 16,
+				["Warlords of Draenor"] = 15,
 				["Warforged Seal"] = 14,
 				["Champion's Seal"] = 25,
-				["Illustrious Jewelcrafter's Token"] = 7,
+				["Garrison Resources"] = 17,
 			},
 		},
 		["Characters"] = {
@@ -336,25 +340,27 @@ DataStore_CurrenciesDB = {
 			["Default.Illidan.Comet"] = {
 				["Currencies"] = {
 					61, -- [1]
-					1982, -- [2]
-					246720, -- [3]
-					39, -- [4]
-					19258, -- [5]
-					31, -- [6]
-					5788448, -- [7]
-					1280034, -- [8]
-					156854, -- [9]
-					824, -- [10]
-					1188, -- [11]
-					9, -- [12]
-					10, -- [13]
-					140, -- [14]
-					142, -- [15]
-					144, -- [16]
-					33044, -- [17]
-					22, -- [18]
-					2352536, -- [19]
-					28, -- [20]
+					11716, -- [2]
+					1982, -- [3]
+					854080, -- [4]
+					55106, -- [5]
+					39, -- [6]
+					19258, -- [7]
+					31, -- [8]
+					5788448, -- [9]
+					1280034, -- [10]
+					156854, -- [11]
+					824, -- [12]
+					1188, -- [13]
+					9, -- [14]
+					10, -- [15]
+					140, -- [16]
+					142, -- [17]
+					144, -- [18]
+					33044, -- [19]
+					22, -- [20]
+					2352536, -- [21]
+					28, -- [22]
 				},
 				["Archeology"] = {
 					0, -- [1]
@@ -376,7 +382,7 @@ DataStore_CurrenciesDB = {
 					0, -- [17]
 					0, -- [18]
 				},
-				["lastUpdate"] = 1473141673,
+				["lastUpdate"] = 1474301864,
 				["CurrencyInfo"] = {
 					[395] = "0-0-0-0",
 					[396] = "0-0-10-3000",

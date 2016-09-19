@@ -14,6 +14,7 @@ local cc = CreateFrame('Frame')
 -- add media to LSM ############################################################
 LSM:Register(LSM.MediaType.FONT,'Yanone Kaffesatz Bold',kui.m.f.yanone)
 LSM:Register(LSM.MediaType.FONT,'FrancoisOne',kui.m.f.francois)
+LSM:Register(LSM.MediaType.FONT,'Roboto Condensed Bold',kui.m.f.roboto)
 
 LSM:Register(LSM.MediaType.STATUSBAR, 'Kui status bar', kui.m.t.bar)
 LSM:Register(LSM.MediaType.STATUSBAR, 'Kui shaded bar', kui.m.t.oldbar)
@@ -44,6 +45,8 @@ local default_config = {
     nameonly_enemies = true,
     nameonly_all_enemies = false,
     nameonly_target = true,
+    guild_text_players = false,
+    title_text_players = false,
 
     fade_all = false,
     fade_alpha = .5,
@@ -93,6 +96,8 @@ local default_config = {
     frame_height = 13,
     frame_width_minus = 72,
     frame_height_minus = 9,
+    frame_width_personal = 132,
+    frame_height_personal = 13,
     castbar_height = 5,
     powerbar_height = 3,
 
@@ -100,7 +105,7 @@ local default_config = {
     auras_on_personal = true,
     auras_whitelist = false,
     auras_pulsate = true,
-    auras_centre = false,
+    auras_centre = true,
     auras_sort = 2,
     auras_time_threshold = 60,
     auras_minimum_length = 0,
@@ -128,7 +133,7 @@ local default_config = {
 
     classpowers_enable = true,
     classpowers_on_target = true,
-    classpowers_size = 10,
+    classpowers_size = 11,
     classpowers_bar_width = 50,
     classpowers_bar_height = 3,
 
@@ -275,7 +280,7 @@ local function configChangedFadeRule(v,on_load)
 
     if core.profile.fade_untracked then
         plugin:AddFadeRule(function(f)
-            return f.state.no_name and -1
+            return not f.state.tracked and -1
         end,25)
     end
 end

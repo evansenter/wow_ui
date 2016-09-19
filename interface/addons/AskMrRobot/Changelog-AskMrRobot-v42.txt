@@ -1,0 +1,9 @@
+2016-09-18  yellowfive  <yellowfive>
+
+[6bbe64d587b4] [v42]
+* AskMrRobot-Serializer/AskMrRobot-Serializer.lua, AskMrRobot.toc, CombatLog.lua, Constants.lua, Export.lua, Gear.lua, Import.lua, Shopping.lua, ui/Ui.lua:
+
+Improved artifact/relic reading, gear display.
+Now creates equipment manager sets when you use button or command to equip a set.
+
+

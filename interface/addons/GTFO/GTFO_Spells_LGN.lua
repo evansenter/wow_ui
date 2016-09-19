@@ -90,6 +90,124 @@ GTFO.SpellID["215604"] = {
   sound = 1;
 };
 
+GTFO.SpellID["191187"] = {
+  --desc = "Storm Nova (Swirling Storms)";
+  sound = 2;
+};
+
+GTFO.SpellID["212203"] = {
+  --desc = "Fusion Press (Mimiron)";
+  sound = 1;
+};
+
+GTFO.SpellID["212016"] = {
+  --desc = "Lightning Bolt (Prustaga)";
+  sound = 1;
+};
+
+GTFO.SpellID["190620"] = {
+  --desc = "Felblaze Orb (Fel Orb)";
+  sound = 2;
+  tankSound = 0;
+};
+
+GTFO.SpellID["182815"] = {
+  --desc = "Stoneblood Poison (Stoneblood Elderwitch)";
+  applicationOnly = true;
+	minimumStacks = 1;
+	sound = 1;
+};
+
+GTFO.SpellID["186227"] = {
+  --desc = "Raging Fire (Heathrow House)";
+  sound = 1;
+};
+
+GTFO.SpellID["186237"] = {
+  --desc = "Raging Fire (Heathrow House)";
+  sound = 1;
+};
+
+GTFO.SpellID["215707"] = {
+  --desc = "Burning (Tenpak Flametotem)";
+  sound = 1;
+};
+
+GTFO.SpellID["214421"] = {
+  --desc = "Searing Gaze (Inquisitor Tivos)";
+  sound = 1;
+};
+
+GTFO.SpellID["222136"] = {
+  --desc = "Corrosive Maw";
+  sound = 1;
+};
+
+GTFO.SpellID["218866"] = {
+  --desc = "Plagued Ground";
+  sound = 1;
+};
+
+GTFO.SpellID["210584"] = {
+  --desc = "Holy Ground";
+  sound = 1;
+};
+
+GTFO.SpellID["219859"] = {
+  --desc = "Claw Flurry (Bahagar)";
+  sound = 1;
+};
+
+GTFO.SpellID["216498"] = {
+  --desc = "Energy Smash (Orbyth)";
+  sound = 1;
+};
+
+GTFO.SpellID["216495"] = {
+  --desc = "Energy Smash (Orbyth)";
+  sound = 1;
+};
+
+GTFO.SpellID["208639"] = {
+  --desc = "Echo (Nameless King)";
+  sound = 1;
+};
+
+GTFO.SpellID["217529"] = {
+  --desc = "Overflowing Taint (Infernal Lord)";
+  sound = 1;
+};
+
+GTFO.SpellID["216149"] = {
+  --desc = "Barrage (Huntress Estrid)";
+  sound = 1;
+};
+
+GTFO.SpellID["219120"] = {
+  --desc = "Doomfire (Archimonde)";
+  sound = 1;
+};
+
+GTFO.SpellID["214491"] = {
+  --desc = "Hindering Anomaly";
+  sound = 1;
+};
+
+GTFO.SpellID["214123"] = {
+  --desc = "Translocate Field (Arcavellus)";
+  sound = 1;
+};
+
+GTFO.SpellID["225682"] = {
+  --desc = "Furious Swipes (Bahagar)";
+  sound = 1;
+};
+
+GTFO.SpellID["215717"] = {
+  --desc = "Murky Secretion (Congealed Corruption)";
+  sound = 1;
+};
+
 -- **********
 -- * Mardum *
 -- **********
@@ -214,7 +332,6 @@ GTFO.SpellID["196871"] = {
 GTFO.SpellID["195473"] = {
   --desc = "Abrasive Slime (Gritslime Snail)";
   sound = 1;
-  tankSound = 0;
   applicationOnly = true;
 };
 
@@ -241,6 +358,7 @@ GTFO.SpellID["183407"] = {
 GTFO.SpellID["192800"] = {
   --desc = "Choking Dust (Rokmora)";
   sound = 1;
+  damageMinimum = 1;
 };
 
 GTFO.SpellID["183566"] = {
@@ -360,6 +478,131 @@ GTFO.SpellID["204762"] = {
   --desc = "Violent Fel Energy (Portal Keeper)";
   sound = 1;
 };
+
+GTFO.SpellID["202266"] = {
+  --desc = "Icky Goo (Festerface)";
+  sound = 1;
+};
+
+
+
+-- **************
+-- * The Arcway *
+-- **************
+
+-- TODO: Arcane Pool (Ivanyr) - pool created by nether link
+-- TODO: Charged Bolt (Ivanyr) Heroic only
+-- TODO: Suppression Protocol (Corstilax)
+-- TODO: Destabilized Orb (Corstilax) - Heroic only
+-- TODO: Wake of Shadows (General Xakal)
+-- TODO: Blink Strikes (Nal'tira) - For other players, not main target
+-- TODO: Force Nova (Advisor Vandros)
+-- TODO: Unstable Mana (Advisor Vandros) - FF when not the target
+
+GTFO.SpellID["200040"] = {
+  --desc = "Nether Venom (Nal'tira)";
+  sound = 1;
+};
+
+-- ****************
+-- * Maw of Souls *
+-- ****************
+
+-- TODO: Nether Rip (Harbaron) - Heroic only, defiled ground AOE
+
+GTFO.SpellID["195035"] = {
+  --desc = "Defiant Strike - Charge (Seacursed Soulkeeper)";
+  sound = 1;
+};
+
+GTFO.SpellID["227234"] = {
+  --desc = "Corrupted Bellow (Helya)";
+  sound = 1;
+};
+
+-- ******************
+-- * Court of Stars *
+-- ******************
+
+-- TODO: Arcane Lockdown (Patrol Captain Gerdo) - Sound when not jumping and reducing stacks
+-- TODO: Disintegration Beam (Talixae Flamewreath) - Avoidable?
+
+-- ************************
+-- * Vault of the Wardens *
+-- ************************
+
+-- TODO: Tormenting Orb (Inquisitor Tormentorum)
+
+GTFO.SpellID["202862"] = {
+  --desc = "Hatred (Tirathon Saltheril)";
+  sound = 1;
+};
+
+GTFO.SpellID["202919"] = {
+  --desc = "Furious Flames (Tirathon Saltheril)";
+  sound = 1;
+};
+
+GTFO.SpellID["194071"] = {
+  --desc = "A Mother's Love (Foul Mother)";
+  sound = 1;
+};
+
+GTFO.SpellID["199916"] = {
+  --desc = "Shadow Crash (Faceless Voidcaster)";
+  sound = 1;
+};
+
+GTFO.SpellID["194945"] = {
+  --desc = "Lingering Gaze (Glazer)";
+  sound = 1;
+};
+
+GTFO.SpellID["202046"] = {
+  --desc = "Beam (Glazer)";
+  sound = 1;
+};
+
+GTFO.SpellID["202608"] = {
+  --desc = "Anguished Souls (Grimhorn the Enslaver)";
+  sound = 1;
+};
+
+GTFO.SpellID["213395"] = {
+  --desc = "Deepening Shadows (Cordana Felsong)";
+  sound = 1;
+};
+
+-- *******************
+-- * Black Rook Hold *
+-- *******************
+
+GTFO.SpellID["221131"] = {
+  --desc = "Arcane Overcharge (Archmage Galeorn)";
+  sound = 4;
+  negatingDebuffSpellID = 221132; -- Arcane Overcharge
+};
+
+GTFO.SpellID["220922"] = {
+  --desc = "Overwhelming Release (Archmage Galeorn)";
+  sound = 1;
+};
+
+GTFO.SpellID["197521"] = {
+  --desc = "Blazing Trail (Illysanna Ravencrest)";
+  sound = 1;
+};
+
+GTFO.SpellID["197821"] = {
+  --desc = "Felblazed Ground (Illysanna Ravencrest)";
+  sound = 1;
+};
+
+GTFO.SpellID["198446"] = {
+  --desc = "Fel Vomit (Smashspite the Hateful)";
+  sound = 1;
+};
+
 
 -- *********************
 -- * The Emerald Dream *

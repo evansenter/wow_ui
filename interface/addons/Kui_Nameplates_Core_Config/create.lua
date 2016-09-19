@@ -7,7 +7,7 @@ version:SetAlpha(.7)
 version:SetPoint('TOPRIGHT',-12,-12)
 version:SetText(string.format(
     opt.titles.version,
-    'KuiNameplates','Kesava','2-12-2'
+    'KuiNameplates','Kesava','2-13-2'
 ))
 
 opt:Initialise()
@@ -219,34 +219,45 @@ local nameonly_damaged_friends = nameonly:CreateCheckBox('nameonly_damaged_frien
 local nameonly_enemies = nameonly:CreateCheckBox('nameonly_enemies')
 local nameonly_all_enemies = nameonly:CreateCheckBox('nameonly_all_enemies')
 local nameonly_target = nameonly:CreateCheckBox('nameonly_target')
+local guild_text_players = nameonly:CreateCheckBox('guild_text_players')
+local title_text_players = nameonly:CreateCheckBox('title_text_players')
 
 nameonly_no_font_style.enabled = function(p) return p.nameonly end
 nameonly_enemies.enabled = function(p) return p.nameonly and not p.nameonly_all_enemies end
 nameonly_damaged_friends.enabled = nameonly_no_font_style.enabled
 nameonly_all_enemies.enabled = nameonly_no_font_style.enabled
 nameonly_target.enabled = nameonly_no_font_style.enabled
+guild_text_players.enabled = nameonly_no_font_style.enabled
+title_text_players.enabled = nameonly_no_font_style.enabled
 
 nameonlyCheck:SetPoint('TOPLEFT',10,-10)
 nameonly_no_font_style:SetPoint('LEFT',nameonlyCheck,'RIGHT',190,0)
 
-nameonly_target:SetPoint('TOPLEFT',nameonlyCheck,'BOTTOMLEFT')
+nameonly_target:SetPoint('TOPLEFT',nameonlyCheck,'BOTTOMLEFT',0,-20)
 nameonly_all_enemies:SetPoint('TOPLEFT',nameonly_target,'BOTTOMLEFT')
 nameonly_enemies:SetPoint('LEFT',nameonly_all_enemies,'RIGHT',190,0)
 nameonly_damaged_friends:SetPoint('TOPLEFT',nameonly_all_enemies,'BOTTOMLEFT')
+
+guild_text_players:SetPoint('TOPLEFT',nameonly_damaged_friends,'BOTTOMLEFT',0,-20)
+title_text_players:SetPoint('LEFT',guild_text_players,'RIGHT',190,0)
 
 -- frame sizes #################################################################
 local frame_width = framesizes:CreateSlider('frame_width',20,200)
 local frame_height = framesizes:CreateSlider('frame_height',3,40)
 local frame_width_minus = framesizes:CreateSlider('frame_width_minus',20,200)
 local frame_height_minus = framesizes:CreateSlider('frame_height_minus',3,40)
+local frame_width_personal = framesizes:CreateSlider('frame_width_personal',20,200)
+local frame_height_personal = framesizes:CreateSlider('frame_height_personal',3,40)
 local castbar_height = framesizes:CreateSlider('castbar_height',3,20)
 local powerbar_height = framesizes:CreateSlider('powerbar_height',1,20)
 
 frame_width:SetPoint('TOPLEFT',10,-30)
 frame_height:SetPoint('LEFT',frame_width,'RIGHT',20,0)
-frame_width_minus:SetPoint('TOPLEFT',frame_width,'BOTTOMLEFT',0,-30)
+frame_width_personal:SetPoint('TOPLEFT',frame_width,'BOTTOMLEFT',0,-30)
+frame_height_personal:SetPoint('LEFT',frame_width_personal,'RIGHT',20,0)
+frame_width_minus:SetPoint('TOPLEFT',frame_width_personal,'BOTTOMLEFT',0,-30)
 frame_height_minus:SetPoint('LEFT',frame_width_minus,'RIGHT',20,0)
-castbar_height:SetPoint('TOPLEFT',frame_width_minus,'BOTTOMLEFT',0,-30)
+castbar_height:SetPoint('TOPLEFT',frame_width_minus,'BOTTOMLEFT',0,-60)
 powerbar_height:SetPoint('LEFT',castbar_height,'RIGHT',20,0)
 
 -- auras #######################################################################

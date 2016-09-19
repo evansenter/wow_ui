@@ -393,11 +393,11 @@ DataStore_TalentsDB = {
 			},
 			["Default.Illidan.Comet"] = {
 				["ActiveTalents"] = 1,
-				["lastUpdate"] = 1473141673,
+				["lastUpdate"] = 1474301863,
 				["Class"] = "MONK",
 				["Specializations"] = {
-					13786, -- [1]
-					10713, -- [2]
+					5594, -- [1]
+					10745, -- [2]
 					11771, -- [3]
 				},
 				["GlyphList"] = {
@@ -1077,7 +1077,7 @@ DataStore_TalentsRefDB = {
 					["name"] = "Windwalker",
 				}, -- [3]
 			},
-			["Version"] = 22566,
+			["Version"] = 22594,
 		},
 		["SHAMAN"] = {
 			["Locale"] = "enUS",

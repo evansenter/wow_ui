@@ -1,5 +1,17 @@
 # Changelog
 
+## Changed in v7
+
+* Tweaked the rare icon size.
+* Highmountain got a number of cave entrances marked.
+* Added more notes / fixes. (Thanks to: LaoTseu, Victaliaa. Ssateneth, DKong27)
+
+## Changed in v6
+
+* Added rares to all zones, because I got tired of people complaining and it's not like I don't have the dataset available from [SilverDragon](https://mods.curse.com/addons/WoW/silver-dragon).
+* Added more Highmountain grapple points.
+* Made grapple point icon more visible.
+
 ## Changed in v5
 
 * Show item previews in an attached tooltip rather than squeezing them into the main tooltip.

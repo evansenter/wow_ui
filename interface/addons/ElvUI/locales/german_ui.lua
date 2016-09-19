@@ -33,6 +33,7 @@ L["Trigger"] = "Auslöser"
 L["Bank"] = true;
 L["Deposit Reagents"] = "Reagenzien einlagern"
 L["Hold Control + Right Click:"] = "Halte Steuerung + Rechtsklick:"
+L["Hold Shift + Drag:"] = "Halte Shift + Ziehen:"
 L["Purchase Bags"] = "Taschen kaufen"
 L["Purchase"] = "Kaufen"
 L["Reagent Bank"] = "Reagenzien Bank"
@@ -59,6 +60,11 @@ L["RW"] = "RW"
 L["says"] = "sagen"
 L["whispers"] = "flüstern"
 L["yells"] = "schreien"
+
+--DataBars
+L["Current Level:"] = "Derzeitiges Level:"
+L["Honor XP:"] = "Ehre XP:"
+L["Honor Remaining:"] = "Ehre verbleibend:"
 
 --DataTexts
 L["(Hold Shift) Memory Usage"] = "(Shift gedrückt) Speichernutzung"
@@ -101,6 +107,7 @@ L["Offhand"] = "Schildhand"
 L["Profit:"] = "Gewinn:"
 L["Reset Data: Hold Shift + Right Click"] = "Daten zurücksetzen: Halte Shift + Rechtsklick"
 L["Saved Raid(s)"] = "Gespeicherte Schlachtzüge"
+L["Saved Dungeon(s)"] = "Gespeicherte Instanz(en)"
 L["Server: "] = "Server: "
 L["Session:"] = "Sitzung:"
 L["Shoulder"] = "Schulter"
@@ -117,6 +124,7 @@ L["Waist"] = "Taille"
 L["Wrist"] = "Handgelenke"
 L["|cffFFFFFFLeft Click:|r Change Talent Specialization"] = "|cffFFFFFFRechtsklick:|r Talentspezialisierung ändern"
 L["|cffFFFFFFRight Click:|r Change Loot Specialization"] = "|cffFFFFFFRechtsklick:|r Beutespezialisierung ändern"
+L["|cffFFFFFFShift + Left Click:|r Show Talent Specialization UI"] = "|cffFFFFFFShift + Linksklick:|r Zeige Talent Spezialisierung UI"
 
 --DebugTools
 L["%s: %s tried to call the protected function '%s'."] = "%s: %s versucht die geschützte Funktion aufrufen '%s'."
@@ -317,6 +325,7 @@ L["|cFFE30000Lua error recieved. You can view the error message when you exit co
 
 --Static Popups
 L["A setting you have changed will change an option for this character only. This setting that you have changed will be uneffected by changing user profiles. Changing this setting requires that you reload your User Interface."] = "Eine Einstellung, die du geändert hast, betrifft nur einen Charakter. Diese Einstellung, die du verändert hast, wird die Benutzerprofile unbeeinflusst lassen. Eine Änderung dieser Einstellung erfordert, dass du dein Interface neu laden musst."
+L["Are you sure you want to apply this font to all ElvUI elements?"] = "Bist du sicher, dass du diese Schrifart auf alle ElvUI Elemente anwenden möchtest?"
 L["Are you sure you want to delete all your gray items?"] = "Bist du sicher, dass du alle grauen Gegenstände löschen willst?"
 L["Are you sure you want to disband the group?"] = "Bist du dir sicher, dass du die Gruppe auflösen willst?"
 L["Are you sure you want to reset all the settings on this profile?"] = "Bist du dir sicher dass du alle Einstellungen dieses Profils zurücksetzen willst?"
