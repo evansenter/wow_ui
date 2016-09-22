@@ -35,7 +35,7 @@ blockchinese: disabled
 DBM-Profiles: disabled
 TidyPlates_Neon: disabled
 ActionBarSaver: disabled
-ACP: disabled
+ACP: enabled
 AddonUsage: disabled
 Altoholic: disabled
 Altoholic_Achievements: disabled

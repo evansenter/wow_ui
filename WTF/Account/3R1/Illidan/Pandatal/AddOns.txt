@@ -80,7 +80,7 @@ AskMrRobot: disabled
 oqueue: disabled
 MageNuggets: disabled
 StealPurgeDispel: disabled
-ACP: disabled
+ACP: enabled
 Crossdresser: disabled
 Masque: disabled
 BlizzBuffsFacade: disabled

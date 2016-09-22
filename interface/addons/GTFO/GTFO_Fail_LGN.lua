@@ -264,6 +264,7 @@ GTFO.SpellID["215741"] = {
 GTFO.SpellID["225385"] = {
   --desc = "Spit Blood (Bahagar)";
   sound = 3;
+  applicationOnly = true;
 };
 
 
@@ -439,6 +440,11 @@ GTFO.SpellID["205101"] = {
   sound = 3;
 };
 
+GTFO.SpellID["204498"] = {
+  --desc = "Soul Explosion (Portal Guardian)";
+  sound = 3;
+};
+
 GTFO.SpellID["202037"] = {
   --desc = "Frozen (Shivermaw)";
   sound = 3;
@@ -459,6 +465,11 @@ GTFO.SpellID["201852"] = {
 GTFO.SpellID["201598"] = {
   --desc = "Congealing Vomit (Festerface)";
   sound = 3;
+};
+
+GTFO.SpellID["202364"] = {
+  --desc = "Execution (Fel Lord Betrug)";
+  sound = 1;
 };
 
 -- *********************
@@ -513,6 +524,12 @@ GTFO.SpellID["195217"] = {
 
 GTFO.SpellID["193597"] = {
   --desc = "Static Nova (Lady Hatecoil)";
+  sound = 3;
+};
+
+GTFO.SpellID["196610"] = {
+  --desc = "Monsoon (Lady Hatecoil)";
+  applicationOnly = true;
   sound = 3;
 };
 
@@ -583,12 +600,6 @@ GTFO.SpellID["200338"] = {
 GTFO.SpellID["198475"] = {
   --desc = "Strike of the Mountain (Ularogg Cragshaper)";
   sound = 3;
-};
-
-GTFO.SpellID["183088"] = {
-  --desc = "Avalanche (Mightstone Breaker)";
-  sound = 3;
-  test = true; -- one of these is avoidable...not sure which one
 };
 
 GTFO.SpellID["226406"] = {
@@ -671,8 +682,6 @@ GTFO.SpellID["198088"] = {
 -- ****************
 
 -- TODO: Arise, Fallen (Ymiron)
--- TODO: Nether Rip (Harbaron) - Impact damage only
--- TODO: Tainted Essence (Helya) - Explosion
 
 GTFO.SpellID["195038"] = {
   --desc = "Defiant Strike - Final hit (Seacursed Soulkeeper)";
@@ -681,6 +690,12 @@ GTFO.SpellID["195038"] = {
 
 GTFO.SpellID["193513"] = {
   --desc = "Bane (Ymiron, the Fallen King)";
+  sound = 3;
+};
+
+GTFO.SpellID["193364"] = {
+  --desc = "Screams of the Dead (Ymiron, the Fallen King)";
+  applicationOnly = true;
   sound = 3;
 };
 
@@ -707,6 +722,11 @@ GTFO.SpellID["195309"] = {
 
 GTFO.SpellID["197858"] = {
   --desc = "Turbulent Waters (Helya)";
+  sound = 3;
+};
+
+GTFO.SpellID["202472"] = {
+  --desc = "Tainted Essence (Helya)";
   sound = 3;
 };
 
@@ -833,6 +853,19 @@ GTFO.SpellID["199097"] = {
   applicationOnly = true;
   sound = 3;
 };
+
+GTFO.SpellID["221688"] = {
+  --desc = "Overwhelming Detonation (Braxas the Fleshcarver)";
+  sound = 3;
+};
+
+GTFO.SpellID["224188"] = {
+  --desc = "Hateful Charge (Smashspite the Hateful)";
+  applicationOnly = true;
+  sound = 3;
+  minimumStacks = 1;
+};
+
 
 
 -- *********************

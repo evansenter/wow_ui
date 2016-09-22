@@ -393,10 +393,10 @@ DataStore_TalentsDB = {
 			},
 			["Default.Illidan.Comet"] = {
 				["ActiveTalents"] = 1,
-				["lastUpdate"] = 1474301863,
+				["lastUpdate"] = 1474583022,
 				["Class"] = "MONK",
 				["Specializations"] = {
-					5594, -- [1]
+					5610, -- [1]
 					10745, -- [2]
 					11771, -- [3]
 				},
@@ -696,7 +696,7 @@ DataStore_TalentsDB = {
 				[1204] = "Army of the Dead",
 				[198] = "Divinity",
 				[192] = "Burden of Guilt",
-				[987] = "Falling Avenger",
+				[494] = "Bloodthirst",
 				[507] = "Resonating Power",
 				[1040] = "Paralysis",
 				[1207] = "Purify Spirit",
@@ -791,7 +791,7 @@ DataStore_TalentsDB = {
 				[253] = "Fade",
 				[314] = "Blink",
 				[755] = "Drain Life",
-				[494] = "Bloodthirst",
+				[987] = "Falling Avenger",
 				[1011] = "Transcendence",
 				[289] = "Soulstone",
 				[1068] = "Hand of Sacrifice",
@@ -1077,7 +1077,7 @@ DataStore_TalentsRefDB = {
 					["name"] = "Windwalker",
 				}, -- [3]
 			},
-			["Version"] = 22594,
+			["Version"] = 22624,
 		},
 		["SHAMAN"] = {
 			["Locale"] = "enUS",

@@ -15,7 +15,7 @@ DataStore_AgendaDB = {
 		["Options"] = {
 			["WeeklyResetHour"] = 6,
 			["WeeklyResetDay"] = 2,
-			["NextWeeklyReset"] = "2016-09-20",
+			["NextWeeklyReset"] = "2016-09-27",
 		},
 		["Characters"] = {
 			["Default.Illidan.Evan"] = {
@@ -79,7 +79,19 @@ DataStore_AgendaDB = {
 				["lastUpdate"] = 1424741733,
 			},
 			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1474301864,
+				["Contacts"] = {
+					["Homicidium"] = {
+						["note"] = "",
+					},
+				},
+				["DungeonIDs"] = {
+					["Darkheart Thicket Mythic|641934212"] = "405377|1474583025|0|0",
+					["Halls of Valor Mythic|181426525"] = "405377|1474583025|0|0",
+					["The Emerald Nightmare Normal|228465464"] = "405377|1474583025|0|1",
+					["Assault on Violet Hold Mythic|181613028"] = "405377|1474583025|0|0",
+					["Maw of Souls Mythic|315589059"] = "405377|1474583025|0|0",
+				},
+				["lastUpdate"] = 1474583022,
 			},
 			["Default.Illidan.Cometron"] = {
 				["lastUpdate"] = 1473014657,

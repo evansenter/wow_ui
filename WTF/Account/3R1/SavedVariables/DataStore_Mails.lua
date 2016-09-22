@@ -33,10 +33,6 @@ DataStore_MailsDB = {
 				["lastUpdate"] = 1461733334,
 				["lastVisitDate"] = "2016/04/26 22:02",
 			},
-			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1474246125,
-				["lastVisitDate"] = "2016/09/18 17:48",
-			},
 			["Default.Illidan.Metal"] = {
 				["lastUpdate"] = 1470154897,
 				["Mails"] = {
@@ -52,6 +48,10 @@ DataStore_MailsDB = {
 					}, -- [1]
 				},
 				["lastVisitDate"] = "2016/08/02 09:21",
+			},
+			["Default.Illidan.Comet"] = {
+				["lastUpdate"] = 1474583302,
+				["lastVisitDate"] = "2016/09/22 15:28",
 			},
 			["Default.Illidan.Cometron"] = {
 				["lastUpdate"] = 1471197742,

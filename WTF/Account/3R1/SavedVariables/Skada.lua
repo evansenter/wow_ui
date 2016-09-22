@@ -9,8 +9,8 @@ SkadaDB = {
 		["Venala - Cho'gall"] = "Default",
 		["Cometron - Illidan"] = "Comet - Illidan",
 		["Combustion - Illidan"] = "Pandatal - Illidan",
-		["Centromere - Dark Iron"] = "Pandatal - Illidan",
 		["Pandatal - Illidan"] = "Comet - Illidan",
+		["Centromere - Dark Iron"] = "Pandatal - Illidan",
 		["Plane - Illidan"] = "Pandatal - Illidan",
 		["Colton - Dark Iron"] = "Default",
 		["Natalan - Dark Iron"] = "Default",
@@ -113,14 +113,7 @@ SkadaDB = {
 					["x"] = 5.00001859664917,
 					["mode"] = "Damage",
 					["modeincombat"] = "",
-					["buttons"] = {
-						["report"] = true,
-						["stop"] = true,
-						["menu"] = true,
-						["mode"] = true,
-						["segment"] = true,
-						["reset"] = true,
-					},
+					["bartexture"] = "BantoBar",
 					["barwidth"] = 410.999542236328,
 					["barspacing"] = 1,
 					["returnaftercombat"] = false,
@@ -142,7 +135,14 @@ SkadaDB = {
 					["scale"] = 1,
 					["classcolorbars"] = true,
 					["point"] = "BOTTOMLEFT",
-					["bartexture"] = "BantoBar",
+					["buttons"] = {
+						["report"] = true,
+						["stop"] = true,
+						["menu"] = true,
+						["mode"] = true,
+						["segment"] = true,
+						["reset"] = true,
+					},
 					["enabletitle"] = true,
 					["name"] = "Damage",
 				}, -- [2]
@@ -179,7 +179,6 @@ SkadaDB = {
 					["barslocked"] = true,
 					["name"] = "Healing",
 					["barfont"] = "ABF",
-					["mode"] = "DPS",
 					["background"] = {
 						["color"] = {
 							["a"] = 0.200000047683716,
@@ -187,6 +186,7 @@ SkadaDB = {
 						},
 						["height"] = 97.9999160766602,
 					},
+					["mode"] = "DPS",
 					["title"] = {
 						["color"] = {
 							["a"] = 0.800000011920929,
@@ -256,14 +256,7 @@ SkadaDB = {
 						["margin"] = 0,
 						["texture"] = "Solid",
 					},
-					["buttons"] = {
-						["segment"] = true,
-						["menu"] = true,
-						["stop"] = true,
-						["mode"] = true,
-						["report"] = true,
-						["reset"] = true,
-					},
+					["bartexture"] = "BantoBar",
 					["barwidth"] = 407.999664306641,
 					["barspacing"] = 0,
 					["returnaftercombat"] = false,
@@ -273,7 +266,14 @@ SkadaDB = {
 					["scale"] = 1,
 					["classcolorbars"] = true,
 					["enabletitle"] = true,
-					["bartexture"] = "BantoBar",
+					["buttons"] = {
+						["segment"] = true,
+						["menu"] = true,
+						["stop"] = true,
+						["mode"] = true,
+						["report"] = true,
+						["reset"] = true,
+					},
 					["name"] = "Damage",
 					["version"] = 1,
 				}, -- [2]
@@ -305,6 +305,7 @@ SkadaDB = {
 					["barfont"] = "ABF",
 					["barslocked"] = true,
 					["name"] = "Healing",
+					["mode"] = "Healing",
 					["background"] = {
 						["height"] = 113.999969482422,
 						["color"] = {
@@ -312,7 +313,6 @@ SkadaDB = {
 							["b"] = 0,
 						},
 					},
-					["mode"] = "Healing",
 					["x"] = -4.0013427734375,
 					["title"] = {
 						["color"] = {
@@ -363,6 +363,7 @@ SkadaDB = {
 					["snapto"] = true,
 					["name"] = "Damage",
 					["enabletitle"] = true,
+					["bartexture"] = "BantoBar",
 					["buttons"] = {
 						["report"] = true,
 						["menu"] = true,
@@ -371,7 +372,6 @@ SkadaDB = {
 						["segment"] = true,
 						["reset"] = true,
 					},
-					["bartexture"] = "BantoBar",
 					["barwidth"] = 410.999542236328,
 					["barspacing"] = 1,
 					["point"] = "BOTTOMLEFT",
@@ -442,7 +442,6 @@ SkadaDB = {
 						["font"] = "ABF",
 					},
 					["x"] = 5.99948120117188,
-					["mode"] = "Healing",
 					["background"] = {
 						["height"] = 97.9999160766602,
 						["color"] = {
@@ -450,6 +449,7 @@ SkadaDB = {
 							["b"] = 0,
 						},
 					},
+					["mode"] = "Healing",
 					["name"] = "Healing",
 				}, -- [1]
 				{

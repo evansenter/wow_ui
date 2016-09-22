@@ -1,8 +1,0 @@
-subversion:
-	- Omega via svn r15234: That just doesn?\226?\128?\153t work, so now everyone just gets the warnings in english
-	- Omega via svn r15233: Make the hatecoil messages localizable, since it?\226?\128?\153s gotten so many numerous complains. The poor auto localizations will still be default until each localizer corrects them in their respecting files.
-	- Omega via svn r15232: Several timer tweaks/fixes to arcway thanks to Bay?\226?\128?\153s great logs. If i had known how bad arcway was I would have delayed todays release to get these fixes into it first :\ Blizz nerfed like all the fights with longer CDs all across board and reduce size of Ivan?\226?\128?\153s bomb.
-	- Omega via svn r15231: Auto hide on reach
-	- Omega via svn r15230: Fix last not using local maps
-	- Omega via svn r15229: if TomTom is not installed, support /way with dbm arrow. Note this is still not intended as a full replacement for TomTom. just a simpler way to invoke a single use arrow. For waypoint queuing of multiple waypoints and the like use TomTom. this just ensures the dbm arrow gets SOME use post 7.1. It shouldn?\226?\128?\153t rot. :\
-	- tandanu via svn r15228: increment alpha version

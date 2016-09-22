@@ -1,5 +1,5 @@
 ActionBarSaver: disabled
-ACP: disabled
+ACP: enabled
 AddonUsage: disabled
 Altoholic: disabled
 Altoholic_Achievements: disabled

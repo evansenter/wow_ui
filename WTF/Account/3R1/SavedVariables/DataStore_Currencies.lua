@@ -77,9 +77,9 @@ DataStore_CurrenciesDB = {
 				["Conquest Points"] = 2,
 				["Miscellaneous"] = 24,
 				["Illustrious Jewelcrafter's Token"] = 7,
-				["Legion"] = 30,
-				["Justice Points"] = 9,
 				["Apexis Crystal"] = 16,
+				["Justice Points"] = 9,
+				["Legion"] = 30,
 				["Warlords of Draenor"] = 15,
 				["Warforged Seal"] = 14,
 				["Champion's Seal"] = 25,
@@ -340,9 +340,9 @@ DataStore_CurrenciesDB = {
 			["Default.Illidan.Comet"] = {
 				["Currencies"] = {
 					61, -- [1]
-					11716, -- [2]
+					35396, -- [2]
 					1982, -- [3]
-					854080, -- [4]
+					1715264, -- [4]
 					55106, -- [5]
 					39, -- [6]
 					19258, -- [7]
@@ -382,7 +382,7 @@ DataStore_CurrenciesDB = {
 					0, -- [17]
 					0, -- [18]
 				},
-				["lastUpdate"] = 1474301864,
+				["lastUpdate"] = 1474583061,
 				["CurrencyInfo"] = {
 					[395] = "0-0-0-0",
 					[396] = "0-0-10-3000",

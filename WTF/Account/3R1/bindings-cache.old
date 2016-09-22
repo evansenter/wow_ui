@@ -44,7 +44,7 @@ bind ALT-SPACE NONE
 bind ` TOGGLEAUTORUN
 bind SHIFT-` CLICK BT4Button54:LeftButton
 bind SHIFT-BUTTON4 CLICK BT4Button53:LeftButton
-bind ALT-1 CLICK BT4Button40:LeftButton
+bind ALT-1 NONE
 bind ALT-2 NONE
 bind ALT-UP NONE
 bind SHIFT-\ SCREENSHOT

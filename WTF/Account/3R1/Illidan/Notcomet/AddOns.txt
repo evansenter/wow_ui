@@ -8,7 +8,7 @@ TidyPlates_Neon: disabled
 TidyPlates_Quatre: disabled
 TipTac: disabled
 ActionBarSaver: disabled
-ACP: disabled
+ACP: enabled
 AddonUsage: disabled
 Altoholic: disabled
 Altoholic_Achievements: disabled

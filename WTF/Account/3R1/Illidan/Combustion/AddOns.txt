@@ -8,7 +8,7 @@ LightwellBuddy: disabled
 StormEarthAndFire: enabled
 Prospect: disabled
 ActionBarSaver: disabled
-ACP: disabled
+ACP: enabled
 Auctionator: disabled
 BlockChinese: disabled
 Crossdresser: disabled

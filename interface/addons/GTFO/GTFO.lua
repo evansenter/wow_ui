@@ -907,7 +907,7 @@ Change Log:
 		- Added Legion spells for Darkheart Thicket
 		- Added Legion spells for Halls of Valor
 		- Added Legion spells for The Violet Hold
-		- Added Legion spells for The Emerald Dream
+		- Added Legion spells for The Emerald Nightmare
 		- Added Legion spells for the Demon Invasion (Legion Event)
 	v4.38.3
 		- Updated for patch 7.0.3
@@ -930,7 +930,15 @@ Change Log:
 	v4.38.8
 		- Removed some Legion Event spells
 		- Added Legion spells for The Broken Isles (world)
-		
+	v4.39
+		- Added sound override support (unfinished)
+		- Added Legion spells for The Broken Isles (world)
+		- Added Legion spells for Maw of Souls
+		- Added Legion spells for Darkheart Thicket
+		- Added Legion spells for Eye of Azshara
+		- Added Legion spells for Black Rook Hold
+		- Added Legion spells for The Violet Hold
+		- Added Legion spells for The Emerald Nightmare
 		
 ]]--
 GTFO = {
@@ -947,9 +955,10 @@ GTFO = {
 		SoundChannel = "Master"; -- Sound channel to play on
 		IgnoreOptions = { };
 		TrivialDamagePercent = 2; -- Minimum % of HP lost required for an alert to be trivial
+		SoundOverrides = { }; -- Override table for GTFO sounds
 	};
-	Version = "4.38.8"; -- Version number (text format)
-	VersionNumber = 43807; -- Numeric version number for checking out-of-date clients
+	Version = "4.39"; -- Version number (text format)
+	VersionNumber = 43900; -- Numeric version number for checking out-of-date clients
 	DataLogging = nil; -- Indicate whether or not the addon needs to run the datalogging function (for hooking)
 	DataCode = "4"; -- Saved Variable versioning, change this value to force a reset to default
 	CanTank = nil; -- The active character is capable of tanking
@@ -1072,10 +1081,16 @@ function GTFO_OnEvent(self, event, ...)
 			TrivialDamagePercent = GTFOData.TrivialDamagePercent or GTFO.DefaultSettings.TrivialDamagePercent;
 			SoundChannel = GTFOData.SoundChannel or GTFO.DefaultSettings.SoundChannel;
 			IgnoreOptions = { };
+			SoundOverrides = { };
 		};
 		if (GTFOData.IgnoreOptions) then
 			for key, option in pairs(GTFOData.IgnoreOptions) do
 				GTFO.Settings.IgnoreOptions[key] = GTFOData.IgnoreOptions[key];
+			end
+		end
+		if (GTFOData.SoundOverrides) then
+			for key, option in pairs(GTFOData.SoundOverrides) do
+				GTFO.Settings.SoundOverrides[key] = GTFOData.SoundOverrides[key];
 			end
 		end
 
@@ -2480,6 +2495,12 @@ function GTFO_SaveSettings()
 			GTFOData.IgnoreOptions[key] = GTFO.Settings.IgnoreOptions[key];
 		end
 	end
+	GTFOData.SoundOverrides = { };
+	if (GTFO.Settings.SoundOverrides) then
+		for key, option in pairs(GTFO.Settings.SoundOverrides) do
+			GTFOData.SoundOverrides[key] = GTFO.Settings.SoundOverrides[key];
+		end
+	end
 
 	GTFO.Settings.OriginalVolume = GTFO.Settings.Volume;
 	GTFO.Settings.OriginalTrivialDamagePercent = GTFO.Settings.TrivialDamagePercent;
@@ -2527,6 +2548,7 @@ function GTFO_SetDefaults()
 		--UIDropDownMenu_SetSelectedValue(GTFO_SoundChannelDropdown, GTFO.Settings.SoundChannel);
 	end
 	GTFO.Settings.IgnoreOptions = GTFO.DefaultSettings.IgnoreOptions;
+	GTFO.Settings.SoundOverrides = GTFO.DefaultSettings.SoundOverrides;
 	GTFO_SaveSettings();
 end
 

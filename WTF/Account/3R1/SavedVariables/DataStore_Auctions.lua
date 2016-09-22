@@ -13,14 +13,6 @@ DataStore_AuctionsDB = {
 	},
 	["global"] = {
 		["Characters"] = {
-			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1474246330,
-				["lastVisitDate"] = "2016/09/18 17:52",
-			},
-			["Default.Illidan.Cometron"] = {
-				["lastUpdate"] = 1471197761,
-				["lastVisitDate"] = "2016/08/14 11:02",
-			},
 			["Default.Illidan.Metal"] = {
 				["lastUpdate"] = 1463988054,
 				["lastVisitDate"] = "2016/05/23 00:20",
@@ -28,6 +20,17 @@ DataStore_AuctionsDB = {
 			["Default.Illidan.Evan"] = {
 				["lastUpdate"] = 1463869027,
 				["lastVisitDate"] = "2016/05/21 15:17",
+			},
+			["Default.Illidan.Comet"] = {
+				["lastUpdate"] = 1474583320,
+				["Auctions"] = {
+					"0|141288|1||469300|494000|3", -- [1]
+				},
+				["lastVisitDate"] = "2016/09/22 15:28",
+			},
+			["Default.Illidan.Cometron"] = {
+				["lastUpdate"] = 1471197761,
+				["lastVisitDate"] = "2016/08/14 11:02",
 			},
 		},
 	},

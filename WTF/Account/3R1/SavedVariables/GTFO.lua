@@ -2,6 +2,7 @@
 GTFOData = {
 	["Active"] = true,
 	["TrivialDamagePercent"] = 2,
+	["TestMode"] = false,
 	["Sounds"] = {
 		true, -- [1]
 		true, -- [2]
@@ -9,7 +10,8 @@ GTFOData = {
 		true, -- [4]
 	},
 	["DataCode"] = "4",
-	["TestMode"] = false,
+	["SoundOverrides"] = {
+	},
 	["Volume"] = 1,
 	["IgnoreOptions"] = {
 	},
