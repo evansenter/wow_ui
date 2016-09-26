@@ -343,7 +343,7 @@ DataStore_ReputationsDB = {
 				["guildName"] = "Rated Baddie Grounds",
 			},
 			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1474583022,
+				["lastUpdate"] = 1474862165,
 				["guildName"] = "G L O R Y",
 				["guildRep"] = 42999,
 				["Factions"] = {

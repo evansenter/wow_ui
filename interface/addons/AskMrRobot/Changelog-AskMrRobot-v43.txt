@@ -1,8 +1,0 @@
-2016-09-21  yellowfive  <yellowfive>
-
-[b8e9664d3229] [v43]
-* AskMrRobot-Serializer/AskMrRobot-Serializer.lua, AskMrRobot.toc, CombatLog.lua, Constants.lua, Core.lua, Export.lua, Gear.lua, Options.lua, localization/enUS.lua, localization/frFR.lua, localization/itIT.lua, localization/ruRU.lua:
-
-option to disable equipment manager sets, minor artifact/talent bug fixes
-
-

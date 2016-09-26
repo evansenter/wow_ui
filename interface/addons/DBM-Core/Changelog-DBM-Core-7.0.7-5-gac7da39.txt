@@ -1,0 +1,6 @@
+subversion:
+	- Omega via svn r15269: So simple, and so overdo. Special warnings will now so icons (if available) like their non special counterpart
+	- Omega via svn r15268: Support hiding objective frame in mythic+ now by starting a temp timer during boss fights, as was done in warlords
+	- ebmor via svn r15267: deDE update
+	- Omega via svn r15266: Add some additional failsafes to ursok and fix a bug where overwhelm warnings would fail if stack went above 1 Fixed bug where unit name on rend flesh warning wasn?\226?\128?\153t displayed.
+	- tandanu via svn r15265: increment alpha version

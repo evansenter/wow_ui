@@ -48,6 +48,7 @@ DataStore_CurrenciesDB = {
 				"Order Resources|Interface\\Icons\\inv_orderhall_orderresources", -- [32]
 				"Sightless Eye|Interface\\Icons\\achievement_reputation_kirintor_offensive", -- [33]
 				"Ancient Mana|Interface\\Icons\\inv_misc_ancient_mana", -- [34]
+				"Seal of Broken Fate|Interface\\Icons\\inv_misc_elvencoins", -- [35]
 			},
 			["CurrencyTextRev"] = {
 				["Mark of the World Tree"] = 21,
@@ -63,6 +64,7 @@ DataStore_CurrenciesDB = {
 				["Timeless Coin"] = 12,
 				["Essence of Corrupted Deathwing"] = 6,
 				["Ironpaw Token"] = 8,
+				["Seal of Broken Fate"] = 35,
 				["Lesser Charm of Good Fortune"] = 10,
 				["Oil"] = 27,
 				["Valor Points"] = 13,
@@ -340,27 +342,28 @@ DataStore_CurrenciesDB = {
 			["Default.Illidan.Comet"] = {
 				["Currencies"] = {
 					61, -- [1]
-					35396, -- [2]
+					124100, -- [2]
 					1982, -- [3]
-					1715264, -- [4]
-					55106, -- [5]
-					39, -- [6]
-					19258, -- [7]
-					31, -- [8]
-					5788448, -- [9]
-					1280034, -- [10]
-					156854, -- [11]
-					824, -- [12]
-					1188, -- [13]
-					9, -- [14]
-					10, -- [15]
-					140, -- [16]
-					142, -- [17]
-					144, -- [18]
-					33044, -- [19]
-					22, -- [20]
-					2352536, -- [21]
-					28, -- [22]
+					54336, -- [4]
+					326, -- [5]
+					71490, -- [6]
+					39, -- [7]
+					19258, -- [8]
+					31, -- [9]
+					5788448, -- [10]
+					1280034, -- [11]
+					156854, -- [12]
+					824, -- [13]
+					1188, -- [14]
+					9, -- [15]
+					10, -- [16]
+					140, -- [17]
+					142, -- [18]
+					144, -- [19]
+					33044, -- [20]
+					22, -- [21]
+					2352536, -- [22]
+					28, -- [23]
 				},
 				["Archeology"] = {
 					0, -- [1]
@@ -382,7 +385,7 @@ DataStore_CurrenciesDB = {
 					0, -- [17]
 					0, -- [18]
 				},
-				["lastUpdate"] = 1474583061,
+				["lastUpdate"] = 1474862206,
 				["CurrencyInfo"] = {
 					[395] = "0-0-0-0",
 					[396] = "0-0-10-3000",

@@ -29,7 +29,7 @@ ElvDB = {
 			["Combustion"] = 60467821,
 			["Natal"] = 6615423,
 			["Natalan"] = 19768910,
-			["Comet"] = 197601690,
+			["Comet"] = 141720826,
 		},
 	},
 	["namespaces"] = {
@@ -70,15 +70,15 @@ ElvDB = {
 					},
 					[17] = {
 					},
-					[10060] = {
+					[139] = {
 					},
 					[33206] = {
 					},
-					[6788] = {
-					},
-					[139] = {
-					},
 					[123258] = {
+					},
+					[10060] = {
+					},
+					[6788] = {
 					},
 					[41635] = {
 					},
@@ -1804,7 +1804,7 @@ ElvDB = {
 					["enable"] = false,
 				},
 			},
-			["currentTutorial"] = 3,
+			["currentTutorial"] = 2,
 			["general"] = {
 				["totems"] = {
 					["size"] = 35,
@@ -2192,7 +2192,7 @@ ElvDB = {
 					},
 					["LeftChatDataPanel"] = {
 						["right"] = "System",
-						["left"] = "Simple iLevel",
+						["left"] = "O Item Level",
 						["middle"] = "Talent/Loot Specialization",
 					},
 				},

@@ -393,11 +393,11 @@ DataStore_TalentsDB = {
 			},
 			["Default.Illidan.Comet"] = {
 				["ActiveTalents"] = 1,
-				["lastUpdate"] = 1474583022,
+				["lastUpdate"] = 1474862165,
 				["Class"] = "MONK",
 				["Specializations"] = {
-					5610, -- [1]
-					10745, -- [2]
+					13802, -- [1]
+					10746, -- [2]
 					11771, -- [3]
 				},
 				["GlyphList"] = {

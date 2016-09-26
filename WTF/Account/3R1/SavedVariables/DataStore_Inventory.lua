@@ -178,27 +178,27 @@ DataStore_InventoryDB = {
 			},
 			["Default.Illidan.Comet"] = {
 				["Inventory"] = {
-					"|cffa335ee|Hitem:133618::::::::110:269::23:3:1727:1492:1813:::|h[Kraken Hide Helm]|h|r", -- [1]
-					"|cffa335ee|Hitem:133767::130218::::::110:269::23:5:1727:1808:41:1492:1813:::|h[Pendant of the Stormforger]|h|r", -- [2]
+					"|cffa335ee|Hitem:133618::::::::110:269::16:3:3410:1497:1813:::|h[Kraken Hide Helm]|h|r", -- [1]
+					"|cffa335ee|Hitem:134499::::::::110:269::33:3:3411:1497:1813:::|h[Raven Filigree Pendant]|h|r", -- [2]
 					"|cffa335ee|Hitem:137510::::::::110:269::2:3:1726:1502:3337:::|h[Charskin Mantle]|h|r", -- [3]
 					nil, -- [4]
-					"|cff0070dd|Hitem:139731::::::::110:269::11:2:3385:3383:::|h[Grandmaster's Tunic]|h|r", -- [5]
+					"|cffa335ee|Hitem:139731::::::::110:269::11:2:3386:3384:::|h[Grandmaster's Tunic]|h|r", -- [5]
 					"|cffa335ee|Hitem:121299::::::::110:269::29:3:3396:1512:3337:::|h[Dreadhide Girdle]|h|r", -- [6]
-					"|cffa335ee|Hitem:134451::::::::110:269::16:3:3410:1497:1813:::|h[Legguards of Endless Horrors]|h|r", -- [7]
+					"|cffa335ee|Hitem:134370::::::::110:269::16:3:3410:1517:3336:::|h[Felbat Leather Leggings]|h|r", -- [7]
 					"|cffa335ee|Hitem:134429::::::::110:269::23:3:1727:1492:1813:::|h[Grove Darkener's Treads]|h|r", -- [8]
 					"|cffa335ee|Hitem:136979::::::::110:269::16:3:3410:1502:3336:::|h[Shorn Batbrood Cuffs]|h|r", -- [9]
 					"|cffa335ee|Hitem:139107::::::::110:269::36:3:3432:1497:1674:::|h[Rivermane Gloves]|h|r", -- [10]
 					"|cffa335ee|Hitem:134487:5425:::::::110:269::16:3:3410:1502:3336:::|h[Arch-Druid's Tainted Seal]|h|r", -- [11]
-					"|cff0070dd|Hitem:134537::::::::110:269::2:3:1726:1487:3339:::|h[Signet of the Highborne Magi]|h|r", -- [12]
-					"|cff0070dd|Hitem:121310::::::::110:269::30:4:3397:605:1492:1675:::|h[Nightmare Thorn]|h|r", -- [13]
-					"|cff0070dd|Hitem:134335::::::::110:269::30:4:3397:604:1492:1675:::|h[Mana Crystal Shard]|h|r", -- [14]
-					"|cffa335ee|Hitem:133771::::::::110:269::23:3:1727:1492:1813:::|h[Seacursed Wrap]|h|r", -- [15]
-					"|cffe6cc80|Hitem:128940::133682:141262:133682::::110:269:256:9:1:734:529:3:1726:1482:3339:3:3397:1507:3337:3:1727:1497:3336|h[Fists of the Heavens]|h|r", -- [16]
-					"|cffe6cc80|Hitem:133948::::::::110:269:256:::529:::|h[Fists of the Heavens]|h|r", -- [17]
+					"|cffa335ee|Hitem:133638:5425:::::::110:269::23:3:1727:1492:1813:::|h[Woe-Bearer's Band]|h|r", -- [12]
+					"|cffa335ee|Hitem:137373::::::::110:269::23:3:1727:1497:3336:::|h[Tempered Egg of Serpentrix]|h|r", -- [13]
+					"|cffa335ee|Hitem:134291::::::::110:269::36:4:3432:603:1502:3336:::|h[Nightborne's Hunting Horn]|h|r", -- [14]
+					"|cffa335ee|Hitem:136977:5432:::::::110:269::33:3:3411:1502:3336:::|h[Shadowfeather Shawl]|h|r", -- [15]
+					"|cffe6cc80|Hitem:128940::137550:141262:133682::::110:269:256:9:1:734:528:3:1727:1512:3337:3:3397:1507:3337:3:1727:1497:3336|h[Fists of the Heavens]|h|r", -- [16]
+					"|cffe6cc80|Hitem:133948::::::::110:269:256:::528:::|h[Fists of the Heavens]|h|r", -- [17]
 				},
-				["averageItemLvl"] = 844.1875,
-				["overallAIL"] = 844.1875,
-				["lastUpdate"] = 1474583022,
+				["averageItemLvl"] = 849.6875,
+				["overallAIL"] = 849.6875,
+				["lastUpdate"] = 1474862165,
 			},
 			["Default.Illidan.Cometron"] = {
 				["Inventory"] = {
@@ -625,7 +625,7 @@ DataStore_InventoryDB = {
 			["Default.Illidan.G L O R Y"] = {
 				["Members"] = {
 					["Comet"] = {
-						["averageItemLvl"] = 841,
+						["averageItemLvl"] = 849,
 					},
 				},
 			},
@@ -655,13 +655,13 @@ DataStore_InventoryDB = {
 				["MONK"] = {
 					"63/338", -- [1]
 					"51/317", -- [2]
-					"154/750", -- [3]
+					"156/750", -- [3]
 					"65/390", -- [4]
 					"4/85", -- [5]
 					"3/75", -- [6]
 					"43/354", -- [7]
 					"49/357", -- [8]
-					"50/367", -- [9]
+					"51/367", -- [9]
 					"51/343", -- [10]
 					"53/395", -- [11]
 					[13] = "27/296",

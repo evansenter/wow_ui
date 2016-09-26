@@ -1,9 +1,0 @@
-subversion:
-	- Omega via svn r15253: Fix some more executable svn flags
-	- Omega via svn r15252: Fix a weird property, tweak corruption horror timers by .4 seconds
-	- Omega via svn r15251: Filter mages from dispel warning on CoS trash
-	- Omega via svn r15250: fix dispel voice from playing for people who don?\226?\128?\153t have dispel warning enabled on cenarius Refactor the shadow code on renferal since that debuff was also removed from combat log and changed to a screwup debuff instead (ie when people walk into tornados not when people are about to form them) Unfortunately the scanner might fail if someone walks into a tornado while it?\226?\128?\153s running! Added web of pain announces
-	- Omega via svn r15249: Fix bug with mod revision not being set
-	- Omega via svn r15248: Fix that error for real
-	- Omega via svn r15247: CheckNearby should always return false if comparison unit is player. this will universally fix any Near warnings from ever warning player.
-	- tandanu via svn r15246: increment alpha version

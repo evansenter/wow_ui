@@ -67,6 +67,10 @@ VER 3 000000000000003C "RSK" "INV_MISC_QUESTIONMARK"
 #showtooltip Rising Sun Kick
 /use [nochanneling]Rising Sun Kick
 END
+VER 3 0000000000000054 "Sheilun's Gift" "INV_Misc_QuestionMark"
+#showtooltip Sheilun's Gift
+/use [@mouseover,help,nodead][]Sheilun's Gift
+END
 VER 3 0000000000000053 "SotW" "INV_Misc_QuestionMark"
 #showtooltip Strike of the Windlord
 /use [nochanneling]Strike of the Windlord

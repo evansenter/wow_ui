@@ -1058,7 +1058,7 @@ DataStore_SpellsDB = {
 				},
 			},
 			["Default.Illidan.Comet"] = {
-				["lastUpdate"] = 1474583022,
+				["lastUpdate"] = 1474862165,
 				["Spells"] = {
 					["Windwalker"] = {
 						25800704, -- [1]
