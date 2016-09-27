@@ -4,12 +4,12 @@ DBM_BidBot_ItemHistory = {
 DBM_BidBot_Settings = {
 	["enabled"] = false,
 	["bidtyp_open"] = false,
-	["chatchannel"] = "GUILD",
-	["withraidwarn"] = false,
-	["duration"] = 30,
-	["bidtyp_payall"] = false,
-	["minGebot"] = 10,
 	["output"] = 4,
+	["minGebot"] = 10,
+	["bidtyp_payall"] = false,
+	["duration"] = 30,
+	["withraidwarn"] = false,
+	["chatchannel"] = "GUILD",
 }
 DBM_AutoInvite_Settings = {
 	["enabled"] = true,
@@ -21,9 +21,9 @@ DBM_AutoInvite_Settings = {
 	["friends"] = true,
 	["promote_rank"] = 3,
 	["promote_all"] = false,
-	["other"] = false,
 	["lastaoerank"] = 5,
 	["guildmates"] = true,
+	["other"] = false,
 }
 DBM_DKP_System_Settings = {
 	["boss_event"] = false,
@@ -39,23 +39,23 @@ DBM_DKP_System_Settings = {
 	},
 	["history"] = {
 	},
-	["grpandraid"] = false,
-	["enabled"] = false,
+	["time_points"] = 10,
+	["boss_points"] = 10,
 	["start_event"] = false,
 	["working_in"] = 0,
-	["boss_points"] = 10,
-	["time_points"] = 10,
+	["enabled"] = false,
+	["grpandraid"] = false,
 }
 DBM_Standby_Settings = {
 	["enabled"] = false,
 	["log"] = {
 	},
 	["send_whisper"] = false,
-	["sb_times"] = {
+	["history"] = {
 	},
 	["sb_users"] = {
 	},
-	["history"] = {
+	["sb_times"] = {
 	},
 }
 DBM_RaidLead_Settings = {

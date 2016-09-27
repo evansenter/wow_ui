@@ -51,8 +51,8 @@ DataStore_AgendaDB = {
 					},
 					["Purephase"] = {
 						["note"] = "",
-						["level"] = 100,
 						["class"] = "Rogue",
+						["level"] = 100,
 					},
 					["Rfl"] = {
 						["note"] = "",
@@ -63,7 +63,7 @@ DataStore_AgendaDB = {
 					["Hemos"] = {
 						["note"] = "",
 					},
-					["Billbraskie"] = {
+					["Bubblegurl"] = {
 						["note"] = "",
 					},
 					["Faluzure"] = {
@@ -72,7 +72,7 @@ DataStore_AgendaDB = {
 					["Pockee"] = {
 						["note"] = "",
 					},
-					["Bubblegurl"] = {
+					["Billbraskie"] = {
 						["note"] = "",
 					},
 				},
@@ -87,18 +87,18 @@ DataStore_AgendaDB = {
 					},
 				},
 				["DungeonIDs"] = {
-					["Eye of Azshara Mythic|315717851"] = "126189|1474862210|0|0",
-					["Black Rook Hold Mythic|315750724"] = "126189|1474862210|0|0",
-					["Vault of the Wardens Mythic|260928578"] = "126189|1474862210|0|0",
-					["Darkheart Thicket Mythic|641934212"] = "126189|1474862210|0|0",
-					["Halls of Valor Mythic|181426525"] = "126189|1474862210|0|0",
-					["The Emerald Nightmare Normal|228465464"] = "126189|1474862210|0|1",
-					["Assault on Violet Hold Mythic|181613028"] = "126189|1474862210|0|0",
-					["Maw of Souls Mythic|315589059"] = "126189|1474862210|0|0",
-					["The Emerald Nightmare Heroic|245572086"] = "126189|1474862210|0|1",
-					["Neltharion's Lair Mythic|642174702"] = "126189|1474862210|0|0",
+					["Eye of Azshara Mythic|315717851"] = "32054|1474956345|0|0",
+					["Black Rook Hold Mythic|315750724"] = "32054|1474956345|0|0",
+					["Vault of the Wardens Mythic|260928578"] = "32054|1474956345|0|0",
+					["Darkheart Thicket Mythic|641934212"] = "32054|1474956345|0|0",
+					["Halls of Valor Mythic|181426525"] = "32054|1474956345|0|0",
+					["The Emerald Nightmare Normal|228465464"] = "32054|1474956345|0|1",
+					["Assault on Violet Hold Mythic|181613028"] = "32054|1474956345|0|0",
+					["Maw of Souls Mythic|315589059"] = "32054|1474956345|0|0",
+					["The Emerald Nightmare Heroic|245572086"] = "32054|1474956345|0|1",
+					["Neltharion's Lair Mythic|642174702"] = "32054|1474956345|0|0",
 				},
-				["lastUpdate"] = 1474862165,
+				["lastUpdate"] = 1474956344,
 			},
 			["Default.Illidan.Cometron"] = {
 				["lastUpdate"] = 1473014657,
