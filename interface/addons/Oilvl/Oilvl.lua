@@ -160,44 +160,6 @@ local classcolor = {
 	[12] = "|cFFA330C9",
 }
 
-local artifactwep = {
-	128402,
-	128403,
-	128858,
-	128306,
-	128861,
-	128826,
-	128808,
-	127857,
-	128862,
-	128938,
-	128937,
-	128823,
-	120978,
-	128868,
-	128825,
-	128942,
-	128941,
-	128910,
-	128292,128293,
-	127829,127830,
-	128832,128831,
-	128860,128859,
-	128821,128822,
-	128820,133959,
-	128940,133948,
-	128866,128867,
-	128827,133958,
-	128870,128869,
-	128872,134552,
-	128476,128479,
-	128935,128936,
-	128819,128873,
-	128911,128934,
-	128943,137246,
-	128908,134553,
-	128289,128288}
-
 local Oilvlrole = {};
 local Oilvlrank = {};
 local ItemUpgradeInfo = LibStub("LibItemUpgradeInfo-1.0")
@@ -3992,10 +3954,8 @@ function otooltip6func()
 		otooltip6:Hide()
 		LibQTip:Release(otooltip6)
 		otooltip6 = nil
-	end
-	if UnitAffectingCombat("player") then otooltip6sw = false end
+	end	
 	collectgarbage()
-if not UnitAffectingCombat("player") then
 	if LibQTip:IsAcquired("Oraidprog") or otooltip2 then
 		otooltip2:Clear()
 		otooltip2:Hide()
@@ -4255,17 +4215,17 @@ if not UnitAffectingCombat("player") then
 				otooltip6func()
 			end)
 		end
+		local function checklegendary(itemlink)
+			local _,_,quality,_ = GetItemInfo(itemlink)
+			if quality == 5 then return true else return false end
+		end
 		otooltip6:SetCell(line, 5, oicomp[m].nset,"CENTER")
 		if (otooltip6gearsw or otooltip6gearsw2) and oicomp[m].sw then
 			for ot = 6,21 do
 				if tonumber(oicomp[m][ot6gear[ot-5]][1]) and tonumber(oilvlframedata.gear[oicomp[m].id][ot6gear[ot-5]][1]) and 
 					tonumber(oicomp[m].ilvl) then 
-					if ot6gear[ot-5] == RING1 or ot6gear[ot-5] == RING2 then
-						if oicomp[m][ot6gear[ot-5]][1] >= 735 and not oicomp[m][ot6gear[ot-5]][4] then
-							otooltip6:SetCell(line,ot, "|cFFFF8000"..oicomp[m][ot6gear[ot-5]][1].." |cFF00FF00"..(oicomp[m][ot6gear[ot-5]][4] or ""))
-						else
-							otooltip6:SetCell(line,ot, oicomp[m][ot6gear[ot-5]][3]..oicomp[m][ot6gear[ot-5]][1].." |cFF00FF00"..(oicomp[m][ot6gear[ot-5]][4] or ""))
-						end
+					if checklegendary(oicomp[m][ot6gear[ot-5]][2]) then
+						otooltip6:SetCell(line,ot, "|cFFFF8000"..oicomp[m][ot6gear[ot-5]][1].." |cFF00FF00"..(oicomp[m][ot6gear[ot-5]][4] or ""))
 					else
 						otooltip6:SetCell(line,ot, oicomp[m][ot6gear[ot-5]][3]..oicomp[m][ot6gear[ot-5]][1].." |cFF00FF00"..(oicomp[m][ot6gear[ot-5]][4] or ""))
 						if ot >= 6 and ot <= 10 then
@@ -4453,13 +4413,10 @@ if not UnitAffectingCombat("player") then
 	otooltip6:UpdateScrolling();
 	otooltip6:Show();
 end
-end
 
 function LDB.OnEnter(self)
-	if not UnitAffectingCombat("player") then
-		LDB_ANCHOR = self;
-		otooltip6func();
-	end
+	LDB_ANCHOR = self;
+	otooltip6func();
 end
 
 function otooltip7func()
@@ -4670,9 +4627,8 @@ function OItemAnalysisLowGem(itemLink)
 end
 
 function OTCheckartifactwep(itemID)
-	for i = 1, #artifactwep do
-		if artifactwep[i] == itemID then return true end
-	end
+	local _,_,quality,_ = GetItemInfo(itemID)
+	if quality == 6 then return true end
 	return false
 end
 
@@ -4692,7 +4648,6 @@ function OTgathertil(guid, unitid)
 	if OTCurrent3 ~= "" then 
 		oilvlframedata.gear[OTCurrent3] = {};
 	end
-	local wep750 = false
 	local cgear = {}
 	for i = 1,17 do
 		local xupgrade = nil
@@ -4904,9 +4859,7 @@ function OTgathertil(guid, unitid)
 		end
 		if #cfg.oilvlcache > 100 then cfg.oilvlcache[#cfg.oilvlcache] = nil; end
 	end
-	if cgear[16] and cgear[16][1] == 750 then wep750 = true end
-	if cgear[17] and cgear[17][1] == 750 then wep750 = true end
-	return avgIlvl, mia, missenchant, missgem, missHenchant, missHgem, count, wep750;
+	return avgIlvl, mia, missenchant, missgem, missHenchant, missHgem, count;
 end
 
 function OTgathertilPvP(r)
@@ -4981,9 +4934,9 @@ end
 function oilvlSaveItemLevel()
 	if OILVL_Unit ~= "" then
 		if CheckInteractDistance(OILVL_Unit, 1) then
-			local OTilvl, OTmia, missenchant, missgem,  missenchant2, missgem2, count2, weperror = OTgathertil(UnitGUID("OILVL_Unit"),OILVL_Unit)
-			if weperror then rescanilvl = rescanilvl + 1 else rescanilvl = 0 end
-			if rescanilvl > 2 then rescanilvl = 0 end
+			local OTilvl, OTmia, missenchant, missgem,  missenchant2, missgem2, count2 = OTgathertil(UnitGUID("OILVL_Unit"),OILVL_Unit)
+			rescanilvl = rescanilvl + 1
+			if rescanilvl > 1 then rescanilvl = 0 end
 			if rescanilvl > 0 then ORfbIlvl(OTCurrent3,true) end
 			if (OTmia == 0 and rescanilvl == 0) then
 				miacount=0;	miaunit[1]="";miaunit[2]="";miaunit[3]="";miaunit[4]="";miaunit[5]="";miaunit[6]="";
@@ -5032,7 +4985,7 @@ function oilvlSaveItemLevel()
 				ountrack=true;
 				OILVL_Unit="";	
 			else
-				if OTmia < 3 then
+				if OTmia < 3 and OTmia > 0 then
 					miacount = miacount + 1
 					miaunit[miacount] = UnitGUID("OILVL_Unit");
 					if miaunit[1] == miaunit[2] and miaunit[2] == miaunit[3] and miaunit[3] == miaunit[4] and miaunit[4] == miaunit[5] and miaunit[5] == miaunit[6] then
@@ -5257,6 +5210,7 @@ function events:ADDON_LOADED(...)
 	if cfg.oilvlaltclickroll == nil then cfg.oilvlaltclickroll = true end
 	if cfg.oilvlautoscan == nil then cfg.oilvlautoscan = true end
 	if cfg.oilvlsamefaction == nil then cfg.oilvlsamefaction = false end
+	if not cfg.oilvlautoscan then cfg.oilvlautoscan = true end
 	OilvlConfigFrame();
 	oilvlframe();
 	Oilvltimer:ScheduleTimer(OVILRefresh,2);
@@ -5743,7 +5697,7 @@ end
 ------------------------------------------------------------------
 
 GameTooltip:HookScript("OnTooltipSetUnit", function() 
-	if not UnitAffectingCombat("player") and cfg.oilvlms and UnitExists("target") then
+	if not UnitAffectingCombat("player") and cfg.oilvlms and UnitExists("target") and not IsInRaid() and not IsInGroup(LE_PARTY_CATEGORY_INSTANCE) and not IsInGroup(LE_PARTY_CATEGORY_HOME) then
 		local oname, _ = GameTooltip:GetUnit()
 		if oname ~= nil then oname = oname:gsub("%-.+", ""); else return -1; end
 		if  oname == GetUnitName("target",""):gsub("%-.+", "") then

@@ -32,7 +32,7 @@ MADB = {
 						"UIParent", -- [2]
 						"BOTTOM", -- [3]
 						0, -- [4]
-						220, -- [5]
+						220.000015258789, -- [5]
 					},
 					["name"] = "ZoneAbilityFrame",
 					["pos"] = {
@@ -46,8 +46,8 @@ MADB = {
 			},
 		},
 	},
-	["frameListRows"] = 18,
-	["noBags"] = false,
-	["playSound"] = false,
 	["closeGUIOnEscape"] = false,
+	["playSound"] = false,
+	["noBags"] = false,
+	["frameListRows"] = 18,
 }

@@ -1,2 +1,3 @@
 
-SV_GarrisonMissionManager = nil
+SV_GarrisonMissionManager = {
+}

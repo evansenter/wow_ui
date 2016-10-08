@@ -52,3 +52,5 @@ GTFO.IgnoreScan["104330"] = true; -- Demonic Synergy
 GTFO.IgnoreScan["1604"] = true; -- Dazed
 GTFO.IgnoreScan["187464"] = true; -- Shadow Mend
 GTFO.IgnoreScan["186439"] = true; -- Shadow Mend
+GTFO.IgnoreScan["210279"] = true; -- Creeping Nightmares
+

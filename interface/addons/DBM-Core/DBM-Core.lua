@@ -41,9 +41,9 @@
 --  Globals/Default Options  --
 -------------------------------
 DBM = {
-	Revision = tonumber(("$Revision: 15270 $"):sub(12, -3)),
-	DisplayVersion = "7.0.8 alpha", -- the string that is shown as version
-	ReleaseRevision = 15263 -- the revision of the latest stable version that is available
+	Revision = tonumber(("$Revision: 15334 $"):sub(12, -3)),
+	DisplayVersion = "7.0.12 alpha", -- the string that is shown as version
+	ReleaseRevision = 15307 -- the revision of the latest stable version that is available
 }
 DBM.HighestRelease = DBM.ReleaseRevision --Updated if newer version is detected, used by update nags to reflect critical fixes user is missing on boss pulls
 
@@ -144,6 +144,7 @@ DBM.DefaultOptions = {
 	HideObjectivesFrame = true,
 	HideGarrisonToasts = true,
 	HideGuildChallengeUpdates = true,
+	HideQuestTooltips = true,
 	HideTooltips = false,
 	DisableSFX = false,
 	EnableModels = true,
@@ -162,6 +163,7 @@ DBM.DefaultOptions = {
 	InfoFrameX = 75,
 	InfoFrameY = -75,
 	InfoFrameShowSelf = false,
+	InfoFrameLines = 0,
 	HPFramePoint = "CENTER",
 	HPFrameX = -50,
 	HPFrameY = 50,
@@ -179,7 +181,7 @@ DBM.DefaultOptions = {
 	SpecialWarningX = 0,
 	SpecialWarningY = 75,
 	SpecialWarningFont = standardFont,
-	SpecialWarningFontSize = 50,
+	SpecialWarningFontSize2 = 40,
 	SpecialWarningFontStyle = "THICKOUTLINE",
 	SpecialWarningFontShadow = false,
 	SpecialWarningIcon = true,
@@ -420,7 +422,7 @@ local dbmToc = 0
 local isTalkingHeadLoaded = false
 local talkingHeadUnregistered = false
 
-local fakeBWVersion, fakeBWHash = 12, "97ac161"
+local fakeBWVersion, fakeBWHash = 15, "dec3d68"
 local versionQueryString, versionResponseString = "Q:%d-%s", "V:%d-%s"
 
 local enableIcons = true -- set to false when a raid leader or a promoted player has a newer version of DBM
@@ -3601,11 +3603,13 @@ function DBM:CHALLENGE_MODE_START(mapID)
 end
 
 function DBM:CHALLENGE_MODE_RESET()
+	self.Bars:CancelBar(PLAYER_DIFFICULTY6.."+")
 	self:Debug("CHALLENGE_MODE_RESET fired")
 end
 
-function DBM:CHALLENGE_MODE_COMPLETED(mapID, success, medal, completionTime)
-	self:Debug("CHALLENGE_MODE_COMPLETED fired for mapID "..mapID)
+function DBM:CHALLENGE_MODE_COMPLETED()
+	self.Bars:CancelBar(PLAYER_DIFFICULTY6.."+")
+	self:Debug("CHALLENGE_MODE_COMPLETED fired for mapID "..LastInstanceMapID)
 end
 --REFACTOR IN LEGION
 
@@ -6587,6 +6591,9 @@ do
 	function DBM:HideBlizzardEvents(toggle, custom)
 		if toggle == 1 and not blizzEventsUnregistered then
 			blizzEventsUnregistered = true
+			if self.Options.HideQuestTooltips then
+				SetCVar("showQuestTrackingTooltips", 0)
+			end
 			if self.Options.HideBossEmoteFrame or custom then
 				RaidBossEmoteFrame:UnregisterEvent("RAID_BOSS_EMOTE")
 				RaidBossEmoteFrame:UnregisterEvent("RAID_BOSS_WHISPER")
@@ -6607,6 +6614,9 @@ do
 			end
 		elseif toggle == 0 and blizzEventsUnregistered then
 			blizzEventsUnregistered = false
+			if self.Options.HideQuestTooltips then
+				SetCVar("showQuestTrackingTooltips", 1)
+			end
 			if self.Options.HideBossEmoteFrame or custom then
 				RaidBossEmoteFrame:RegisterEvent("RAID_BOSS_EMOTE")
 				RaidBossEmoteFrame:RegisterEvent("RAID_BOSS_WHISPER")
@@ -6793,6 +6803,14 @@ end
 
 function DBM:TalkingHeadStatus()
 	return talkingHeadUnregistered, isTalkingHeadLoaded
+end
+
+function DBM:SetTalkingHeadState(disabled)
+	if disabled then
+		talkingHeadUnregistered = true
+	else
+		talkingHeadUnregistered = false
+	end
 end
 
 function DBM:FlashClientIcon()
@@ -7230,6 +7248,17 @@ do
 			end
 		end
 		if name or scanOnlyBoss then return name, uid, bossuid end
+		-- Now lets check nameplates
+		for i = 1, 40 do
+			if UnitGUID("nameplate"..i) == guid then
+				bossuid = "nameplate"..i
+				name = DBM:GetUnitFullName("nameplate"..i.."target")
+				uid = "nameplate"..i.."target"
+				bossuIdCache[guid] = bossuid
+				break
+			end
+		end
+		if name then return name, uid, bossuid end
 		-- failed to detect from default uIds, scan all group members's target.
 		if IsInRaid() then
 			for i = 1, GetNumGroupMembers() do
@@ -9231,8 +9260,8 @@ do
 	function DBM:UpdateSpecialWarningOptions()
 		frame:ClearAllPoints()
 		frame:SetPoint(self.Options.SpecialWarningPoint, UIParent, self.Options.SpecialWarningPoint, self.Options.SpecialWarningX, self.Options.SpecialWarningY)
-		font1:SetFont(self.Options.SpecialWarningFont, self.Options.SpecialWarningFontSize, self.Options.SpecialWarningFontStyle == "None" and nil or self.Options.SpecialWarningFontStyle)
-		font2:SetFont(self.Options.SpecialWarningFont, self.Options.SpecialWarningFontSize, self.Options.SpecialWarningFontStyle == "None" and nil or self.Options.SpecialWarningFontStyle)
+		font1:SetFont(self.Options.SpecialWarningFont, self.Options.SpecialWarningFontSize2, self.Options.SpecialWarningFontStyle == "None" and nil or self.Options.SpecialWarningFontStyle)
+		font2:SetFont(self.Options.SpecialWarningFont, self.Options.SpecialWarningFontSize2, self.Options.SpecialWarningFontStyle == "None" and nil or self.Options.SpecialWarningFontStyle)
 		font1:SetTextColor(unpack(self.Options.SpecialWarningFontCol))
 		font2:SetTextColor(unpack(self.Options.SpecialWarningFontCol))
 		if self.Options.SpecialWarningFontShadow then
@@ -10888,12 +10917,14 @@ do
 		if uId or UnitExists(target) then--target accepts uid, unitname both.
 			uId = uId or target
 			--save previous icon into a table.
+			local oldIcon = self:GetIcon(uId) or 0
 			if not self.iconRestore[uId] then
-				local oldIcon = self:GetIcon(uId) or 0
 				self.iconRestore[uId] = oldIcon
 			end
 			--set icon
-			SetRaidTarget(uId, self.iconRestore[uId] and icon == 0 and self.iconRestore[uId] or icon)
+			if oldIcon ~= icon then--Don't set icon if it's already set to what we're setting it to
+				SetRaidTarget(uId, self.iconRestore[uId] and icon == 0 and self.iconRestore[uId] or icon)
+			end
 			--schedule restoring old icon if timer enabled.
 			if timer then
 				self:ScheduleMethod(timer, "SetIcon", target, 0)
@@ -11045,7 +11076,7 @@ do
 		return false
 	end
 
-	local mobUids = {"mouseover", "boss1", "boss2", "boss3", "boss4", "boss5"}
+	local mobUids = {"mouseover", "boss1", "boss2", "boss3", "boss4", "boss5", "nameplate1", "nameplate2", "nameplate3", "nameplate4", "nameplate5", "nameplate6", "nameplate7", "nameplate8", "nameplate9", "nameplate10", "nameplate11", "nameplate12", "nameplate13", "nameplate14", "nameplate15", "nameplate16", "nameplate17", "nameplate18", "nameplate19", "nameplate20"}
 	function bossModPrototype:ScanForMobs(creatureID, iconSetMethod, mobIcon, maxIcon, scanInterval, scanningTime, optionName)
 		if not optionName then optionName = self.findFastestComputer[1] end
 		if canSetIcons[optionName] then

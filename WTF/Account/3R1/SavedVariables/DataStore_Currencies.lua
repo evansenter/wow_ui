@@ -49,6 +49,7 @@ DataStore_CurrenciesDB = {
 				"Sightless Eye|Interface\\Icons\\achievement_reputation_kirintor_offensive", -- [33]
 				"Ancient Mana|Interface\\Icons\\inv_misc_ancient_mana", -- [34]
 				"Seal of Broken Fate|Interface\\Icons\\inv_misc_elvencoins", -- [35]
+				"Curious Coin|Interface\\Icons\\inv_misc_elvencoins", -- [36]
 			},
 			["CurrencyTextRev"] = {
 				["Mark of the World Tree"] = 21,
@@ -70,22 +71,23 @@ DataStore_CurrenciesDB = {
 				["Valor Points"] = 13,
 				["Mists of Pandaria"] = 20,
 				["Player vs. Player"] = 1,
+				["Curious Coin"] = 36,
 				["Unused"] = 4,
-				["Garrison Resources"] = 17,
+				["Ancient Mana"] = 34,
 				["Elder Charm of Good Fortune"] = 5,
-				["Warforged Seal"] = 14,
+				["Seal of Inevitable Fate"] = 28,
 				["Epicurean's Award"] = 26,
 				["Honor Points"] = 3,
-				["Conquest Points"] = 2,
 				["Miscellaneous"] = 24,
+				["Warlords of Draenor"] = 15,
 				["Apexis Crystal"] = 16,
 				["Legion"] = 30,
 				["Justice Points"] = 9,
+				["Conquest Points"] = 2,
 				["Illustrious Jewelcrafter's Token"] = 7,
-				["Warlords of Draenor"] = 15,
-				["Seal of Inevitable Fate"] = 28,
+				["Warforged Seal"] = 14,
 				["Champion's Seal"] = 25,
-				["Ancient Mana"] = 34,
+				["Garrison Resources"] = 17,
 			},
 		},
 		["Characters"] = {
@@ -139,8 +141,8 @@ DataStore_CurrenciesDB = {
 					[390] = "0-0-0-0",
 					[823] = "15062-0-0-0",
 					[392] = "0-0-0-0",
-					[824] = "8818-0-0-10000",
 					[994] = "16-0-0-20",
+					[824] = "8818-0-0-10000",
 				},
 			},
 			["Default.Illidan.Pandatal"] = {
@@ -172,8 +174,8 @@ DataStore_CurrenciesDB = {
 					[390] = "0-0-0-0",
 					[823] = "0-0-0-0",
 					[392] = "0-0-0-0",
-					[994] = "0-0-0-0",
 					[824] = "809-0-0-10000",
+					[994] = "0-0-0-0",
 				},
 			},
 			["Default.Illidan.Natal"] = {
@@ -199,8 +201,8 @@ DataStore_CurrenciesDB = {
 					[390] = "0-0-12700-0",
 					[823] = "0-0-0-0",
 					[392] = "312-0-0-4000",
-					[994] = "0-0-0-0",
 					[824] = "0-0-0-0",
+					[994] = "0-0-0-0",
 				},
 			},
 			["Default.Illidan.Metal"] = {
@@ -245,8 +247,8 @@ DataStore_CurrenciesDB = {
 					[390] = "0-0-0-0",
 					[823] = "21259-0-0-0",
 					[392] = "0-0-0-0",
-					[994] = "11-0-0-20",
 					[824] = "9586-0-0-10000",
+					[994] = "11-0-0-20",
 				},
 			},
 			["Default.Dark Iron.Ereinion"] = {
@@ -264,8 +266,8 @@ DataStore_CurrenciesDB = {
 					[390] = "0-0-12700-0",
 					[823] = "0-0-0-0",
 					[392] = "564-0-0-4000",
-					[994] = "0-0-0-0",
 					[824] = "0-0-0-0",
+					[994] = "0-0-0-0",
 				},
 			},
 			["Default.Illidan.Combustion"] = {
@@ -290,8 +292,8 @@ DataStore_CurrenciesDB = {
 					[390] = "0-0-12700-0",
 					[823] = "0-0-0-0",
 					[392] = "3312-0-0-4000",
-					[824] = "0-0-0-0",
 					[994] = "0-0-0-0",
+					[824] = "0-0-0-0",
 				},
 			},
 			["Default.Dark Iron.Colton"] = {
@@ -335,35 +337,36 @@ DataStore_CurrenciesDB = {
 					[390] = "0-0-12700-0",
 					[823] = "0-0-0-0",
 					[392] = "2676-0-0-4000",
-					[994] = "0-0-0-0",
 					[824] = "0-0-0-0",
+					[994] = "0-0-0-0",
 				},
 			},
 			["Default.Illidan.Comet"] = {
 				["Currencies"] = {
 					61, -- [1]
-					68164, -- [2]
-					1982, -- [3]
-					193216, -- [4]
-					326, -- [5]
-					114370, -- [6]
-					39, -- [7]
-					19258, -- [8]
-					31, -- [9]
-					5788448, -- [10]
-					1280034, -- [11]
-					156854, -- [12]
-					824, -- [13]
-					1188, -- [14]
-					9, -- [15]
-					10, -- [16]
-					140, -- [17]
-					142, -- [18]
-					144, -- [19]
-					33044, -- [20]
-					22, -- [21]
-					2352536, -- [22]
-					28, -- [23]
+					130244, -- [2]
+					328, -- [3]
+					1982, -- [4]
+					90048, -- [5]
+					582, -- [6]
+					114370, -- [7]
+					39, -- [8]
+					19258, -- [9]
+					31, -- [10]
+					5788448, -- [11]
+					1280034, -- [12]
+					156854, -- [13]
+					824, -- [14]
+					1188, -- [15]
+					9, -- [16]
+					10, -- [17]
+					140, -- [18]
+					142, -- [19]
+					144, -- [20]
+					33044, -- [21]
+					22, -- [22]
+					2352536, -- [23]
+					28, -- [24]
 				},
 				["Archeology"] = {
 					0, -- [1]
@@ -385,15 +388,15 @@ DataStore_CurrenciesDB = {
 					0, -- [17]
 					0, -- [18]
 				},
-				["lastUpdate"] = 1474956344,
+				["lastUpdate"] = 1475950209,
 				["CurrencyInfo"] = {
 					[395] = "0-0-0-0",
 					[396] = "0-0-10-3000",
 					[390] = "0-0-0-0",
 					[823] = "45222-0-0-0",
 					[392] = "0-0-0-0",
-					[824] = "10000-0-0-10000",
 					[994] = "9-0-0-20",
+					[824] = "10000-0-0-10000",
 				},
 			},
 			["Default.Illidan.Cometron"] = {
@@ -428,8 +431,8 @@ DataStore_CurrenciesDB = {
 					[390] = "0-0-0-0",
 					[823] = "0-0-0-0",
 					[392] = "0-0-0-0",
-					[994] = "0-0-0-0",
 					[824] = "0-0-0-0",
+					[994] = "0-0-0-0",
 				},
 			},
 		},

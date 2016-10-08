@@ -10,22 +10,16 @@ MacroToolkitDB = {
 			},
 		},
 		["Evan - Illidan"] = {
-			["backups"] = {
-			},
 			["extended"] = {
 				["122"] = {
-					["icon"] = "237545",
 					["name"] = "DPS Penance",
+					["icon"] = "237545",
 					["body"] = "#showtooltip\n/use [harm][@targettarget,harm][]Penance\n",
 				},
 			},
+			["backups"] = {
+			},
 			["wodupgrade"] = true,
-		},
-	},
-	["global"] = {
-		["backups"] = {
-		},
-		["ebackups"] = {
 		},
 	},
 	["profileKeys"] = {
@@ -36,9 +30,15 @@ MacroToolkitDB = {
 		["Colton - Dark Iron"] = "profile",
 		["Ereinion - Dark Iron"] = "profile",
 		["Comet - Illidan"] = "Comet - Illidan",
-		["Pandatal - Illidan"] = "Comet - Illidan",
-		["Evan - Illidan"] = "Comet - Illidan",
 		["Combustion - Illidan"] = "profile",
+		["Evan - Illidan"] = "Comet - Illidan",
+		["Pandatal - Illidan"] = "Comet - Illidan",
+	},
+	["global"] = {
+		["ebackups"] = {
+		},
+		["backups"] = {
+		},
 	},
 	["profiles"] = {
 		["Comet - Illidan"] = {
@@ -48,14 +48,13 @@ MacroToolkitDB = {
 			["override"] = true,
 			["noskin"] = true,
 			["visconditions"] = true,
-			["scale"] = 1,
 			["fonts"] = {
 				["edfont"] = "ABF",
 				["edsize"] = 12,
 				["mfont"] = "ABF",
 				["mifont"] = "ABF",
-				["errsize"] = 12,
 				["misize"] = 12,
+				["errsize"] = 12,
 				["errfont"] = "ABF",
 			},
 		},
@@ -64,16 +63,16 @@ MacroToolkitDB = {
 		["profile"] = {
 			["y"] = 486.99951171875,
 			["x"] = 1045.39929199219,
-			["override"] = true,
 			["fonts"] = {
 				["edfont"] = "ABF",
 				["edsize"] = 12,
 				["mfont"] = "ABF",
 				["mifont"] = "ABF",
-				["misize"] = 12,
 				["errsize"] = 12,
+				["misize"] = 12,
 				["errfont"] = "ABF",
 			},
+			["override"] = true,
 		},
 	},
 }

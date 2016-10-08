@@ -431,9 +431,9 @@ function OiLvLInspect_Update()
 							if totalilvl[Value] < totalilvl[16] then
 								totalilvl[Value], xupgrade[Value] = totalilvl[16], xupgrade[16]
 							end
-							if totalilvl[Value] > totalilvl[16] then
-								_G[Items[16].."Stock"]:SetText(totalilvl[Value]);
-								_G[Items[16].."Stock"]:SetShadowColor(1,1,1,1);
+							if totalilvl[Value] > totalilvl[16] then								
+								_G[InspectItems[16].."Stock"]:SetText(totalilvl[Value]);
+								_G[InspectItems[16].."Stock"]:SetShadowColor(1,1,1,1);
 								ailvl = ailvl -  totalilvl[16] + totalilvl[Value]
 							end
 						end

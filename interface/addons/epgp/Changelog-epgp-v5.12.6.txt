@@ -1,0 +1,17 @@
+tag v5.12.6
+5b37e95df7fe04c24baf61de0c083a4d7b92ebf3
+Brizag <vvv444@gmail.com>
+2016-10-06 15:25:12 +0300
+
+v5.12.6 - Bug fix release
+
+
+--------------------
+
+Brizag:
+	- [Bug fix] Sometimes wrong region (US/EU/...) was specified on data export
+	Use LibRealmInfo instead of GetCVar("portal") which is unreliable to determine the current region.
+	- [Bug fix] Legion socketed items were not accounted for additional GP.
+	- Use short names in the UI for non-cross realm characters
+	- Refactored common code
+	New functions GetFullCharacterName()/GetDisplayCharacterName() for nickname manipulation. It is used in several places.

@@ -1,17 +1,79 @@
 ------------------------------------------------------------------------
-r255 | zensunim | 2016-09-21 07:22:23 +0000 (Wed, 21 Sep 2016) | 9 lines
+r266 | zensunim | 2016-10-07 05:54:40 +0000 (Fri, 07 Oct 2016) | 3 lines
 Changed paths:
-   A /tags/4.39 (from /trunk:254)
+   A /tags/4.40.2 (from /trunk:265)
 
-4.39
-* Added sound override support (unfinished)
+4.40.2
 * Added Legion spells for The Broken Isles (world)
-* Added Legion spells for Maw of Souls
-* Added Legion spells for Darkheart Thicket
-* Added Legion spells for Eye of Azshara
-* Added Legion spells for Black Rook Hold
-* Added Legion spells for The Violet Hold
 * Added Legion spells for The Emerald Nightmare
+------------------------------------------------------------------------
+r265 | zensunim | 2016-10-07 05:54:22 +0000 (Fri, 07 Oct 2016) | 1 line
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO.toc
+   M /trunk/GTFO_Fail_LGN.lua
+   M /trunk/GTFO_Spells_LGN.lua
+
+4.40.2 prep
+------------------------------------------------------------------------
+r264 | zensunim | 2016-09-30 07:12:24 +0000 (Fri, 30 Sep 2016) | 2 lines
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO.toc
+   M /trunk/GTFO_Fail_LGN.lua
+   M /trunk/GTFO_Spells_LGN.lua
+   M /trunk/ReadMe.txt
+
+* Added Legion spells for The Broken Isles (world)
+* Added Legion spells for The Emerald Nightmare
+------------------------------------------------------------------------
+r262 | zensunim | 2016-09-29 15:51:31 +0000 (Thu, 29 Sep 2016) | 1 line
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO.toc
+   M /trunk/GTFO_Fail_LGN.lua
+   M /trunk/ReadMe.txt
+
+4.40.1
+------------------------------------------------------------------------
+r260 | zensunim | 2016-09-29 07:22:22 +0000 (Thu, 29 Sep 2016) | 1 line
+Changed paths:
+   M /trunk/ReadMe.txt
+
+4.40 release
+------------------------------------------------------------------------
+r259 | zensunim | 2016-09-29 07:22:05 +0000 (Thu, 29 Sep 2016) | 1 line
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO.toc
+   M /trunk/GTFO_Spells_LGN.lua
+
+4.40 release
+------------------------------------------------------------------------
+r258 | zensunim | 2016-09-29 07:14:59 +0000 (Thu, 29 Sep 2016) | 1 line
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO_Ignore.lua
+   A /trunk/ReadMe.txt
+
+Moved version log to ReadMe.txt
+------------------------------------------------------------------------
+r257 | zensunim | 2016-09-29 06:51:19 +0000 (Thu, 29 Sep 2016) | 1 line
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO_Fail_LGN.lua
+   M /trunk/GTFO_Spells_LGN.lua
+
+Added Legion spells for The Emerald Nightmare
+------------------------------------------------------------------------
+r256 | zensunim | 2016-09-26 15:21:11 +0000 (Mon, 26 Sep 2016) | 1 line
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO.toc
+   M /trunk/GTFO_Fail_LGN.lua
+   M /trunk/GTFO_Spells_LGN.lua
+
+Added Legion spells for The Emerald Nightmare, world
 ------------------------------------------------------------------------
 r254 | zensunim | 2016-09-21 07:21:42 +0000 (Wed, 21 Sep 2016) | 1 line
 Changed paths:
@@ -145,24 +207,4 @@ Changed paths:
    M /trunk/GTFO_Spells_LGN.lua
 
 Added Hunter BM artifact quest, Druid Guardian artifact quest
-------------------------------------------------------------------------
-r235 | zensunim | 2016-08-23 15:22:22 +0000 (Tue, 23 Aug 2016) | 1 line
-Changed paths:
-   M /trunk/GTFO.toc
-
-Fixed TOC
-------------------------------------------------------------------------
-r233 | zensunim | 2016-08-23 15:10:59 +0000 (Tue, 23 Aug 2016) | 1 line
-Changed paths:
-   M /trunk/GTFO.lua
-
-Version update
-------------------------------------------------------------------------
-r232 | zensunim | 2016-08-23 15:10:30 +0000 (Tue, 23 Aug 2016) | 1 line
-Changed paths:
-   M /trunk/GTFO_Spells_LK.lua
-   M /trunk/GTFO_Spells_Special.lua
-   M /trunk/GTFO_Spells_WOD.lua
-
-Prep for 4.38.6
 ------------------------------------------------------------------------

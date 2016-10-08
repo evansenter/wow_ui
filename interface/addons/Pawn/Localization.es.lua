@@ -4,7 +4,8 @@
 -- See Readme.htm for more information.
 
 -- 
--- European Spanish resources
+-- Spanish (European and Latin American) resources
+-- See special cases at the end of the file!
 ------------------------------------------------------------
 
 local function PawnUseThisLocalization()
@@ -550,8 +551,14 @@ Para más información sobre éstas opciones, consulta el archivo leeme.]=],
 }
 end 
 
-if GetLocale() == "esES" or GetLocale() == "esMX" then 
+if GetLocale() == "esES" then
+	PawnUseThisLocalization()
+	PawnLocal.ThousandsSeparator = "."
+	PawnLocal.DecimalSeparator = ","
+elseif GetLocale() == "esMX" then 
    PawnUseThisLocalization() 
+	PawnLocal.ThousandsSeparator = ","
+	PawnLocal.DecimalSeparator = "."
 end 
 
 -- After using this localization or deciding that we don't need it, remove it from memory.

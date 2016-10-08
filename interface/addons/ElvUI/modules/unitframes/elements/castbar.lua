@@ -36,7 +36,7 @@ local ticks = {}
 
 function UF:Construct_Castbar(frame, direction, moverName)
 	local castbar = CreateFrame("StatusBar", nil, frame)
-	castbar:SetFrameStrata("HIGH")
+	castbar:SetFrameStrata("MEDIUM")
 	self['statusbars'][castbar] = true
 	castbar.CustomDelayText = self.CustomCastDelayText
 	castbar.CustomTimeText = self.CustomTimeText
@@ -167,6 +167,8 @@ function UF:Configure_Castbar(frame)
 		if(castbar.Holder.mover) then
 			E:DisableMover(castbar.Holder.mover:GetName())
 		end
+
+		castbar:SetFrameStrata("HIGH")
 	else
 		local isMoved = E:HasMoverBeenMoved(frame:GetName()..'CastbarMover') or not castbar.Holder.mover
 		if not isMoved then
@@ -189,6 +191,8 @@ function UF:Configure_Castbar(frame)
 		if(castbar.Holder.mover) then
 			E:EnableMover(castbar.Holder.mover:GetName())
 		end
+
+		castbar:SetFrameStrata("MEDIUM")
 	end
 
 	if not db.castbar.iconAttached and db.castbar.icon then
@@ -196,7 +200,7 @@ function UF:Configure_Castbar(frame)
 		local anchorPoint = db.castbar.iconPosition
 		castbar.Icon.bg:ClearAllPoints()
 		castbar.Icon.bg:Point(INVERT_ANCHORPOINT[anchorPoint], attachPoint, anchorPoint, db.castbar.iconXOffset, db.castbar.iconYOffset)
-		castbar.Icon.bg:SetFrameStrata("HIGH")
+		castbar.Icon.bg:SetFrameStrata("MEDIUM")
 	elseif(db.castbar.icon) then
 		castbar.Icon.bg:ClearAllPoints()
 		if frame.ORIENTATION == "RIGHT" then
@@ -204,6 +208,7 @@ function UF:Configure_Castbar(frame)
 		else
 			castbar.Icon.bg:Point("RIGHT", castbar, "LEFT", -frame.SPACING*3, 0)
 		end
+		castbar.Icon.bg:SetFrameStrata(castbar:GetFrameStrata())
 	end
 
 	--Adjust tick heights

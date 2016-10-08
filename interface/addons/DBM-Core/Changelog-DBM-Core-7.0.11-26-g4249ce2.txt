@@ -1,0 +1,27 @@
+subversion:
+	- Omega via svn r15334: Different attempt at filtering
+	- Omega via svn r15333: Filter explosion casters
+	- Omega via svn r15332: Another fix
+	- Omega via svn r15331: Fix bug where that?\226?\128?\153d trigger even if option wasn?\226?\128?\153t enabled
+	- Omega via svn r15330: make slightly more efficient.
+	- Omega via svn r15329: Force trigger on explosion
+	- Omega via svn r15328: improve target scanning
+	- ebmor via svn r15327: deDE update
+	- Omega via svn r15326: Cancel this bar in more places, it shouldn?\226?\128?\153t be needed but strange bugs keep happening that don?\226?\128?\153t make sense
+	- ultrashining via svn r15325: zhTW update
+	- Omega via svn r15324: Improve icon code reduce pointless calls to SetRaidTarget and avoid icon set throttling
+	- Omega via svn r15323: Remove this debug
+	- Omega via svn r15322: DURR
+	- Omega via svn r15321: Bump packager
+	- Omega via svn r15320: Added core option to disable quests in tooltips during boss fights (on by default) Added dragon swap warning to dragons of nightmare Antispam Exploding mushroom warning on dragons Added yell for infested mind to nyth
+	- Omega via svn r15319: Fixes to mark scanner
+	- Omega via svn r15318: Fixit so mind control yells don?\226?\128?\153t appear for dreamed players
+	- Omega via svn r15317: Oh and disable that in LFR
+	- Omega via svn r15316: Experimental auto marking of lowest health ichors on Ilgynoth. OFF BY DEFAULT. It requires nameplates enabled and in range.
+	- Omega via svn r15315: Just disable all of Jims warnings. there is honestly no point to any of his mechanics orw arnings
+	- Omega via svn r15314: update version check
+	- Omega via svn r15313: KR Update
+	- ebmor via svn r15312: deDE update; fix enUS EmeraldNightmareTrash localization
+	- Omega via svn r15311: Add Arcane Reconstitution trash warning to arcway
+	- Omega via svn r15310: Fix bug where talking had toggles didn?\226?\128?\153t set variable in core, causing changing between diff options to actually not restore events.
+	- tandanu via svn r15309: increment alpha version

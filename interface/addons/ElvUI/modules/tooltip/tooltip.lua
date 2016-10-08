@@ -280,7 +280,6 @@ function TT:GameTooltip_SetDefaultAnchor(tt, parent)
 			return
 		else
 			tt:SetOwner(parent, "ANCHOR_NONE")
-			tt:ClearAllPoints()
 			if(GameTooltipStatusBar.anchoredToTop) then
 				GameTooltipStatusBar:ClearAllPoints()
 				GameTooltipStatusBar:Point("TOPLEFT", GameTooltip, "BOTTOMLEFT", E.Border, -(E.Spacing * 3))
@@ -291,24 +290,28 @@ function TT:GameTooltip_SetDefaultAnchor(tt, parent)
 		end
 	end
 
-	if(not E:HasMoverBeenMoved('TooltipMover')) then
-		if ElvUI_ContainerFrame and ElvUI_ContainerFrame:IsShown() then
-			tt:Point('BOTTOMRIGHT', ElvUI_ContainerFrame, 'TOPRIGHT', 0, 18)
-		elseif RightChatPanel:GetAlpha() == 1 and RightChatPanel:IsShown() then
-			tt:Point('BOTTOMRIGHT', RightChatPanel, 'TOPRIGHT', 0, 18)
+	local _, anchor = tt:GetPoint()
+	if (anchor == nil or (ElvUI_ContainerFrame and anchor == ElvUI_ContainerFrame) or anchor == RightChatPanel or anchor == TooltipMover or anchor == UIParent or anchor == E.UIParent) then
+		tt:ClearAllPoints()
+		if(not E:HasMoverBeenMoved('TooltipMover')) then
+			if ElvUI_ContainerFrame and ElvUI_ContainerFrame:IsShown() then
+				tt:Point('BOTTOMRIGHT', ElvUI_ContainerFrame, 'TOPRIGHT', 0, 18)
+			elseif RightChatPanel:GetAlpha() == 1 and RightChatPanel:IsShown() then
+				tt:Point('BOTTOMRIGHT', RightChatPanel, 'TOPRIGHT', 0, 18)
+			else
+				tt:Point('BOTTOMRIGHT', RightChatPanel, 'BOTTOMRIGHT', 0, 18)
+			end
 		else
-			tt:Point('BOTTOMRIGHT', RightChatPanel, 'BOTTOMRIGHT', 0, 18)
-		end
-	else
-		local point = E:GetScreenQuadrant(TooltipMover)
-		if point == "TOPLEFT" then
-			tt:Point("TOPLEFT", TooltipMover, "BOTTOMLEFT", 1, -4)
-		elseif point == "TOPRIGHT" then
-			tt:Point("TOPRIGHT", TooltipMover, "BOTTOMRIGHT", -1, -4)
-		elseif point == "BOTTOMLEFT" or point == "LEFT" then
-			tt:Point("BOTTOMLEFT", TooltipMover, "TOPLEFT", 1, 18)
-		else
-			tt:Point("BOTTOMRIGHT", TooltipMover, "TOPRIGHT", -1, 18)
+			local point = E:GetScreenQuadrant(TooltipMover)
+			if point == "TOPLEFT" then
+				tt:Point("TOPLEFT", TooltipMover, "BOTTOMLEFT", 1, -4)
+			elseif point == "TOPRIGHT" then
+				tt:Point("TOPRIGHT", TooltipMover, "BOTTOMRIGHT", -1, -4)
+			elseif point == "BOTTOMLEFT" or point == "LEFT" then
+				tt:Point("BOTTOMLEFT", TooltipMover, "TOPLEFT", 1, 18)
+			else
+				tt:Point("BOTTOMRIGHT", TooltipMover, "TOPRIGHT", -1, 18)
+			end
 		end
 	end
 end
@@ -783,7 +786,8 @@ function TT:CheckBackdropColor()
 	r = E:Round(r, 1)
 	g = E:Round(g, 1)
 	b = E:Round(b, 1)
-	local red, green, blue, alpha = unpack(E.media.backdropfadecolor)
+	local red, green, blue = unpack(E.media.backdropfadecolor)
+	local alpha = self.db.colorAlpha
 
 	if(r ~= red or g ~= green or b ~= blue) then
 		GameTooltip:SetBackdropColor(red, green, blue, alpha)
@@ -880,6 +884,7 @@ function TT:Initialize()
 	self:HookScript(GameTooltip, 'OnTooltipSetItem', 'GameTooltip_OnTooltipSetItem')
 	self:HookScript(GameTooltip, 'OnTooltipSetUnit', 'GameTooltip_OnTooltipSetUnit')
 	self:HookScript(GameTooltip, "OnSizeChanged", "CheckBackdropColor")
+	self:HookScript(GameTooltip, "OnUpdate", "CheckBackdropColor") --There has to be a more elegant way of doing this.
 
 	self:HookScript(GameTooltipStatusBar, 'OnValueChanged', 'GameTooltipStatusBar_OnValueChanged')
 
@@ -890,6 +895,14 @@ function TT:Initialize()
 		self:HookScript(tt, 'OnShow', 'SetStyle')
 		if tt.BackdropFrame then tt.BackdropFrame:Kill() end
 	end
+
+	--World Quest Reward Icon
+	WorldMapTooltip.ItemTooltip.IconBorder:SetAlpha(0)
+	WorldMapTooltip.ItemTooltip.Icon:SetTexCoord(unpack(E.TexCoords))
+	WorldMapTooltip.ItemTooltip:CreateBackdrop()
+	WorldMapTooltip.ItemTooltip.backdrop:SetOutside(WorldMapTooltip.ItemTooltip.Icon)
+	WorldMapTooltip.ItemTooltip.Count:ClearAllPoints()
+	WorldMapTooltip.ItemTooltip.Count:SetPoint("BOTTOMRIGHT", WorldMapTooltip.ItemTooltip.Icon, "BOTTOMRIGHT", 0, 2)
 
 	--Variable is localized at top of file, then set here when we're sure the frame has been created
 	--Used to check if keybinding is active, if so then don't hide tooltips on actionbars

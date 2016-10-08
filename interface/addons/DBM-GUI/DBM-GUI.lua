@@ -43,7 +43,7 @@
 --
 
 
-local revision =("$Revision: 15269 $"):sub(12, -3)
+local revision =("$Revision: 15322 $"):sub(12, -3)
 local FrameTitle = "DBM_GUI_Option_"	-- all GUI frames get automatically a name FrameTitle..ID
 
 local PanelPrototype = {}
@@ -2469,11 +2469,11 @@ local function CreateOptionsMenu()
 			local firstshow = true
 			fontSizeSlider:SetScript("OnShow", function(self)
 				firstshow = true
-				self:SetValue(DBM.Options.SpecialWarningFontSize)
+				self:SetValue(DBM.Options.SpecialWarningFontSize2)
 			end)
 			fontSizeSlider:HookScript("OnValueChanged", function(self)
 				if firstshow then firstshow = false return end
-				DBM.Options.SpecialWarningFontSize = self:GetValue()
+				DBM.Options.SpecialWarningFontSize2 = self:GetValue()
 				DBM:UpdateSpecialWarningOptions()
 				DBM:ShowTestSpecialWarning()--Pass with no sound, disabling both flash and sound play. This is a font slider so it only needs font
 			end)
@@ -2870,7 +2870,7 @@ local function CreateOptionsMenu()
 				DBM.Options.SpecialWarningSound3 = DBM.DefaultOptions.SpecialWarningSound3
 				DBM.Options.SpecialWarningSound4 = DBM.DefaultOptions.SpecialWarningSound4
 				DBM.Options.SpecialWarningSound5 = DBM.DefaultOptions.SpecialWarningSound5
-				DBM.Options.SpecialWarningFontSize = DBM.DefaultOptions.SpecialWarningFontSize
+				DBM.Options.SpecialWarningFontSize2 = DBM.DefaultOptions.SpecialWarningFontSize2
 				DBM.Options.SpecialWarningFlashCol1[1] = DBM.DefaultOptions.SpecialWarningFlashCol1[1]
 				DBM.Options.SpecialWarningFlashCol1[2] = DBM.DefaultOptions.SpecialWarningFlashCol1[2]
 				DBM.Options.SpecialWarningFlashCol1[3] = DBM.DefaultOptions.SpecialWarningFlashCol1[3]
@@ -2909,7 +2909,7 @@ local function CreateOptionsMenu()
 				SpecialWarnSoundDropDown3:SetSelectedValue(DBM.Options.SpecialWarningSound3)
 				SpecialWarnSoundDropDown4:SetSelectedValue(DBM.Options.SpecialWarningSound4)
 				SpecialWarnSoundDropDown5:SetSelectedValue(DBM.Options.SpecialWarningSound5)
-				fontSizeSlider:SetValue(DBM.DefaultOptions.SpecialWarningFontSize)
+				fontSizeSlider:SetValue(DBM.DefaultOptions.SpecialWarningFontSize2)
 				color0:SetColorRGB(DBM.Options.SpecialWarningFontCol[1], DBM.Options.SpecialWarningFontCol[2], DBM.Options.SpecialWarningFontCol[3])
 				color1:SetColorRGB(DBM.Options.SpecialWarningFlashCol1[1], DBM.Options.SpecialWarningFlashCol1[2], DBM.Options.SpecialWarningFlashCol1[3])
 				color2:SetColorRGB(DBM.Options.SpecialWarningFlashCol2[1], DBM.Options.SpecialWarningFlashCol2[2], DBM.Options.SpecialWarningFlashCol2[3])
@@ -3409,11 +3409,12 @@ local function CreateOptionsMenu()
 
 	do
 		local hideBlizzPanel = DBM_GUI_Frame:CreateNewPanel(L.Panel_HideBlizzard, "option")
-		local hideBlizzArea = hideBlizzPanel:CreateArea(L.Area_HideBlizzard, nil, 305, true)
+		local hideBlizzArea = hideBlizzPanel:CreateArea(L.Area_HideBlizzard, nil, 335, true)
 		hideBlizzArea:CreateCheckButton(L.HideBossEmoteFrame, true, nil, "HideBossEmoteFrame")
 		hideBlizzArea:CreateCheckButton(L.HideWatchFrame, true, nil, "HideObjectivesFrame")
 		hideBlizzArea:CreateCheckButton(L.HideGarrisonUpdates, true, nil, "HideGarrisonToasts")
 		hideBlizzArea:CreateCheckButton(L.HideGuildChallengeUpdates, true, nil, "HideGuildChallengeUpdates")
+		hideBlizzArea:CreateCheckButton(L.HideQuestTooltips, true, nil, "HideQuestTooltips")
 		hideBlizzArea:CreateCheckButton(L.HideTooltips, true, nil, "HideTooltips")
 		hideBlizzArea:CreateCheckButton(L.DisableSFX, true, nil, "DisableSFX")
 		local filterYell	= hideBlizzArea:CreateCheckButton(L.SpamBlockSayYell, true, nil, "FilterSayAndYell")
@@ -3441,31 +3442,37 @@ local function CreateOptionsMenu()
 				if value == "Always" and not disabled then
 					TalkingHeadFrame:UnregisterAllEvents()
 					--TalkingHeadFrame_CloseImmediately()
+					DBM:SetTalkingHeadState(true)
 				else
 					if value == "Never" and disabled then
 						TalkingHeadFrame:RegisterEvent("TALKINGHEAD_REQUESTED")
 						TalkingHeadFrame:RegisterEvent("TALKINGHEAD_CLOSE")
 						TalkingHeadFrame:RegisterEvent("SOUNDKIT_FINISHED")
 						TalkingHeadFrame:RegisterEvent("LOADING_SCREEN_ENABLED")
+						DBM:SetTalkingHeadState(false)
 					elseif value == "CombatOnly" then
 						if InCombatLockdown() and not disabled then
 							TalkingHeadFrame:UnregisterAllEvents()
 							--TalkingHeadFrame_CloseImmediately()
+							DBM:SetTalkingHeadState(true)
 						else
 							TalkingHeadFrame:RegisterEvent("TALKINGHEAD_REQUESTED")
 							TalkingHeadFrame:RegisterEvent("TALKINGHEAD_CLOSE")
 							TalkingHeadFrame:RegisterEvent("SOUNDKIT_FINISHED")
 							TalkingHeadFrame:RegisterEvent("LOADING_SCREEN_ENABLED")
+							DBM:SetTalkingHeadState(false)
 						end
 					elseif value == "BossCombatOnly" then
 						if IsEncounterInProgress() and not disabled then
 							TalkingHeadFrame:UnregisterAllEvents()
 							--TalkingHeadFrame_CloseImmediately()
+							DBM:SetTalkingHeadState(true)
 						else
 							TalkingHeadFrame:RegisterEvent("TALKINGHEAD_REQUESTED")
 							TalkingHeadFrame:RegisterEvent("TALKINGHEAD_CLOSE")
 							TalkingHeadFrame:RegisterEvent("SOUNDKIT_FINISHED")
 							TalkingHeadFrame:RegisterEvent("LOADING_SCREEN_ENABLED")
+							DBM:SetTalkingHeadState(false)
 						end
 					end
 				end

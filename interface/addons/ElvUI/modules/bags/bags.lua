@@ -85,6 +85,7 @@ B.ProfessionColors = {
 	[0x0080] = {232/255, 118/255, 46/255}, -- Engineering
 	[0x0200] = {8/255, 180/255, 207/255}, -- Gems
 	[0x0400] = {105/255, 79/255,  7/255}, -- Mining
+	[0x8000] = {107/255, 150/255, 255/255}, -- Fishing
 	[0x010000] = {222/255, 13/255,  65/255} -- Cooking
 }
 
@@ -324,6 +325,16 @@ function B:UpdateCountDisplay()
 			bagFrame:UpdateAllSlots()
 		end
 	end
+
+	--Reagent Bank
+	if self.BankFrame and self.BankFrame.reagentFrame then
+		for i = 1, 98 do
+			local slot = self.BankFrame.reagentFrame.slots[i]
+			slot.Count:FontTemplate(E.LSM:Fetch("font", E.db.bags.countFont), E.db.bags.countFontSize, E.db.bags.countFontOutline)
+			slot.Count:SetTextColor(color.r, color.g, color.b)
+			self:UpdateReagentSlot(i)
+		end
+	end
 end
 
 function B:UpdateBagTypes(isBank)
@@ -556,8 +567,16 @@ function B:Layout(isBank)
 			if not f.ContainerHolder[i] then
 				if(isBank) then
 					f.ContainerHolder[i] = CreateFrame("CheckButton", "ElvUIBankBag" .. bagID - 4, f.ContainerHolder, "BankItemButtonBagTemplate")
+					f.ContainerHolder[i]:SetScript('OnClick', function(self)
+						local inventoryID = self:GetInventorySlot();
+						PutItemInBag(inventoryID);--Put bag on empty slot, or drop item in this bag
+					end)
 				else
 					f.ContainerHolder[i] = CreateFrame("CheckButton", "ElvUIMainBag" .. bagID .. "Slot", f.ContainerHolder, "BagSlotButtonTemplate")
+					f.ContainerHolder[i]:SetScript('OnClick', function(self)
+						local id = self:GetID();
+						PutItemInBag(id);--Put bag on empty slot, or drop item in this bag
+					end)
 				end
 
 				f.ContainerHolder[i]:SetTemplate('Default', true)
@@ -566,7 +585,7 @@ function B:Layout(isBank)
 				f.ContainerHolder[i]:SetNormalTexture("")
 				f.ContainerHolder[i]:SetCheckedTexture(nil)
 				f.ContainerHolder[i]:SetPushedTexture("")
-				f.ContainerHolder[i]:SetScript('OnClick', nil)
+				
 				f.ContainerHolder[i].id = isBank and bagID or bagID + 1
 				f.ContainerHolder[i]:HookScript("OnEnter", function(self) B.SetSlotAlphaForBag(self, f) end)
 				f.ContainerHolder[i]:HookScript("OnLeave", function(self) B.ResetSlotAlphaForBags(self, f) end)

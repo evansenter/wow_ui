@@ -15,7 +15,7 @@ DataStore_AgendaDB = {
 		["Options"] = {
 			["WeeklyResetHour"] = 6,
 			["WeeklyResetDay"] = 2,
-			["NextWeeklyReset"] = "2016-09-27",
+			["NextWeeklyReset"] = "2016-10-11",
 		},
 		["Characters"] = {
 			["Default.Illidan.Evan"] = {
@@ -51,8 +51,8 @@ DataStore_AgendaDB = {
 					},
 					["Purephase"] = {
 						["note"] = "",
-						["class"] = "Rogue",
 						["level"] = 100,
+						["class"] = "Rogue",
 					},
 					["Rfl"] = {
 						["note"] = "",
@@ -63,7 +63,7 @@ DataStore_AgendaDB = {
 					["Hemos"] = {
 						["note"] = "",
 					},
-					["Bubblegurl"] = {
+					["Billbraskie"] = {
 						["note"] = "",
 					},
 					["Faluzure"] = {
@@ -72,7 +72,7 @@ DataStore_AgendaDB = {
 					["Pockee"] = {
 						["note"] = "",
 					},
-					["Billbraskie"] = {
+					["Bubblegurl"] = {
 						["note"] = "",
 					},
 				},
@@ -82,23 +82,9 @@ DataStore_AgendaDB = {
 				["Contacts"] = {
 					["Homicidium"] = {
 						["note"] = "",
-						["class"] = "Warrior",
-						["level"] = 110,
 					},
 				},
-				["DungeonIDs"] = {
-					["Eye of Azshara Mythic|315717851"] = "32054|1474956345|0|0",
-					["Black Rook Hold Mythic|315750724"] = "32054|1474956345|0|0",
-					["Vault of the Wardens Mythic|260928578"] = "32054|1474956345|0|0",
-					["Darkheart Thicket Mythic|641934212"] = "32054|1474956345|0|0",
-					["Halls of Valor Mythic|181426525"] = "32054|1474956345|0|0",
-					["The Emerald Nightmare Normal|228465464"] = "32054|1474956345|0|1",
-					["Assault on Violet Hold Mythic|181613028"] = "32054|1474956345|0|0",
-					["Maw of Souls Mythic|315589059"] = "32054|1474956345|0|0",
-					["The Emerald Nightmare Heroic|245572086"] = "32054|1474956345|0|1",
-					["Neltharion's Lair Mythic|642174702"] = "32054|1474956345|0|0",
-				},
-				["lastUpdate"] = 1474956344,
+				["lastUpdate"] = 1475950165,
 			},
 			["Default.Illidan.Cometron"] = {
 				["lastUpdate"] = 1473014657,

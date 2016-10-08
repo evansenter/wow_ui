@@ -1,0 +1,13 @@
+tag 7.1.0
+66d78093673f6dbfabeedf02af9e9ac5687a9b9c
+Alex Shubert <shubert@animatron.com>
+2016-09-28 21:04:05 +0300
+
+7.1.07.1.07.1.07.1.07.1.07.1.07.1.0
+
+
+--------------------
+
+Alex Shubert:
+	- gossip rework
+	- avoid taint in UI_dropdown

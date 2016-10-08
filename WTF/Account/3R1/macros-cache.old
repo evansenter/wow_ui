@@ -38,7 +38,7 @@ VER 3 0000000000000050 "HF" "INV_Misc_QuestionMark"
 END
 VER 3 0000000000000034 "HS / GHS" "INV_Misc_QuestionMark"
 #showtooltip
-/use [nomod]Hearthstone;[mod:shift][mod:alt]Dalaran Hearthstone
+/use [nomod]Hearthstone;[mod:shift]Dalaran Hearthstone;[mod:alt]Flight Master's Whistle;
 END
 VER 3 0000000000000045 "Keg Smash" "INV_Misc_QuestionMark"
 #showtooltip Keg Smash

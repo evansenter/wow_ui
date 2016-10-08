@@ -1,8 +1,0 @@
-2016-09-23  yellowfive  <yellowfive>
-
-[adec0972d4e1] [v44]
-* Constants.lua, TeamOptimizer.lua:
-
-Minor tweak for team optimizer.
-
-

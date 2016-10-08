@@ -16,7 +16,7 @@ SIL = LibStub("AceAddon-3.0"):NewAddon(L.core.name, "AceEvent-3.0", "AceConsole-
 SIL.category = GetAddOnMetadata("SimpleILevel", "X-Category");
 SIL.version = GetAddOnMetadata("SimpleILevel", "Version");
 SIL.versionMajor = 3;                    -- Used for cache DB versioning
-SIL.versionRev = 'r251';    -- Used for version information
+SIL.versionRev = 'r253';    -- Used for version information
 SIL.action = {};        -- DB of unitGUID->function to run when a update comes through
 SIL.hooks = {};         -- List of hooks in [type][] = function;
 SIL.autoscan = 0;       -- time() value of last autoscan, must be more then 1sec
@@ -598,23 +598,48 @@ function SIL:GearSum(items, level)
     if items and level and type(items) == 'table' then
         local totalItems = 0;
         local totalScore = 0;
-        
+        local artifactLevel = 750;
+		
+		-- Determine totalItems first
+		for i,itemLink in pairs(items) do
+            if itemLink and not ( i == INVSLOT_BODY or i == INVSLOT_RANGED or i == INVSLOT_TABARD ) then
+				totalItems = totalItems + 1;
+			end
+		end
+		
         for i,itemLink in pairs(items) do
             if itemLink and not ( i == INVSLOT_BODY or i == INVSLOT_RANGED or i == INVSLOT_TABARD ) then
                 -- local name, link, itemRarity , itemLevel = GetItemInfo(itemLink);
                 local itemLevel = self.itemUpgrade:GetUpgradedItemLevel(itemLink);
 
-                --- print(i, itemLevel, itemLink);
+                -- print(totalItems, i, itemLevel, itemRarity, itemLink);
                 
                 if itemLevel then
-                    
-                    -- Fix for heirlooms
-                    if itemRarity == 7 then
+					local itemRarity = select(3, GetItemInfo(itemLink));
+					if itemRarity == 6 then
+						-- Fix for Artifacts - Thanks Solofme
+						if totalItems == 15 then
+							-- Two handed Artifact
+							-- Count as both main hand and offhand weapons
+							totalScore = totalScore + itemLevel * 2;
+							totalItems = totalItems + 1;
+						elseif i == 16 then
+							-- Main and offhand. 
+							-- iLvl is reported wrongly for one of the two.
+							-- Keep local iLvl for artifact
+							artifactLevel = itemLevel;
+						elseif i == 17 then
+							itemLevel = max(artifactLevel,itemLevel);
+							totalScore = totalScore + itemLevel * 2;
+						end
+					elseif itemRarity == 7 then
+						-- Fix for heirlooms
                         itemLevel = self:Heirloom(level, itemLink);
-                    end
-                    
-                    totalItems = totalItems + 1;
-                    totalScore = totalScore + itemLevel;
+						totalScore = totalScore + itemLevel;
+					else
+						-- Normal item
+						totalScore = totalScore + itemLevel;
+					end
                 end
             end
         end
