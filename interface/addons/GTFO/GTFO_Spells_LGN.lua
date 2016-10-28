@@ -253,6 +253,27 @@ GTFO.SpellID["169002"] = {
   tankSound = 0;
 };
 
+GTFO.SpellID["206777"] = {
+  --desc = "Nightmare Void";
+  applicationOnly = true;
+  sound = 1;
+};
+
+GTFO.SpellID["209008"] = {
+  --desc = "Fel Firestorm (Destromath)";
+  sound = 1;
+};
+
+GTFO.SpellID["199568"] = {
+  --desc = "Grasping Spirits";
+  sound = 1;
+};
+
+GTFO.SpellID["201832"] = {
+  --desc = "Fel Immolation (Ariden)";
+  sound = 1;
+};
+
 -- **********
 -- * Mardum *
 -- **********
@@ -511,7 +532,7 @@ GTFO.SpellID["199818"] = {
 GTFO.SpellID["200682"] = {
   --desc = "Eye of the Storm (Solsten)";
   sound = 1;
-  negatingBuffSpellID = 203963; -- Eye of the Storm
+  negatingDebuffSpellID = 203963; -- Eye of the Storm
 };
 
 GTFO.SpellID["193702"] = {
@@ -561,19 +582,60 @@ GTFO.SpellID["202266"] = {
 -- * The Arcway *
 -- **************
 
--- TODO: Arcane Pool (Ivanyr) - pool created by nether link
--- TODO: Charged Bolt (Ivanyr) Heroic only
 -- TODO: Suppression Protocol (Corstilax)
--- TODO: Destabilized Orb (Corstilax) - Heroic only
--- TODO: Wake of Shadows (General Xakal)
--- TODO: Blink Strikes (Nal'tira) - For other players, not main target
 -- TODO: Force Nova (Advisor Vandros)
 -- TODO: Unstable Mana (Advisor Vandros) - FF when not the target
+
+GTFO.SpellID["194006"] = {
+  --desc = "Ooze Puddle (Unstable Amalgamation)";
+  sound = 1;
+};
 
 GTFO.SpellID["200040"] = {
   --desc = "Nether Venom (Nal'tira)";
   sound = 1;
 };
+
+GTFO.SpellID["199812"] = {
+  --desc = "Blink Strikes (Nal'tira)";
+  sound = 1;
+};
+
+GTFO.SpellID["210750"] = {
+  --desc = "Collapsing Rift (Withered Manawraith)";
+  sound = 1;
+};
+
+GTFO.SpellID["220500"] = {
+  --desc = "Destabilized Orb (Corstilax)";
+  sound = 1;
+};
+
+GTFO.SpellID["211209"] = {
+  --desc = "Arcane Slicer (Arcane Anomaly)";
+  sound = 1;
+};
+
+GTFO.SpellID["196824"] = {
+  --desc = "Nether Link (Ivanyr)";
+  sound = 1;
+};
+
+GTFO.SpellID["220597"] = {
+  --desc = "Charged Bolt (Ivanyr)";
+  sound = 1;
+};
+
+GTFO.SpellID["211745"] = {
+  --desc = "Fel Strike (Wrathguard Felblade)";
+  sound = 1;
+};
+
+GTFO.SpellID["220443"] = {
+  --desc = "Wake of Shadows (General Xakal)";
+  sound = 1;
+};
+
 
 -- ****************
 -- * Maw of Souls *
@@ -608,8 +670,41 @@ GTFO.SpellID["227234"] = {
 -- * Court of Stars *
 -- ******************
 
--- TODO: Arcane Lockdown (Patrol Captain Gerdo) - Sound when not jumping and reducing stacks
--- TODO: Disintegration Beam (Talixae Flamewreath) - Avoidable?
+GTFO.SpellID["207278"] = {
+	--desc = "Arcane Lockdown (Patrol Captain Gerdo)";
+	test = true;
+	alwaysAlert = true;
+	soundFunction = function() 
+		-- Alert if hit more than 3 times
+		if (not GTFO.VariableStore.ArcaneLockdownHitCount) then
+			GTFO.VariableStore.ArcaneLockdownHitCount = 0;
+			GTFO.VariableStore.ArcaneLockdownStackCount = 0;
+		end
+		GTFO_AddEvent("ResetArcaneLockdownCounter", 5, function() GTFO.VariableStore.ArcaneLockdownHitCount = 0; GTFO.VariableStore.ArcaneLockdownStackCount = 0; end);
+		GTFO.VariableStore.ArcaneLockdownHitCount = GTFO.VariableStore.ArcaneLockdownHitCount + 1;
+		local stackCount = GTFO_DebuffStackCount("player", 207278);
+		if (GTFO.VariableStore.ArcaneLockdownStackCount == stackCount) then
+			if (GTFO.VariableStore.ArcaneLockdownHitCount > 2) then
+				return 1;
+			end			
+		else
+			GTFO.VariableStore.ArcaneLockdownStackCount = stackCount;
+			if (stackCount < 3) then			
+				GTFO.VariableStore.ArcaneLockdownHitCount = 1;
+			end
+		end
+	end;
+};
+
+GTFO.SpellID["209027"] = {
+  --desc = "Disrupting Energy (Guardian Construct)";
+  sound = 1;
+};
+
+GTFO.SpellID["211391"] = {
+  --desc = "Felblaze Puddle (Legion Hound)";
+  sound = 1;
+};
 
 -- ************************
 -- * Vault of the Wardens *
@@ -749,7 +844,7 @@ GTFO.SpellID["202978"] = {
   sound = 1;
 };
 
-GTFO.FFSpellID["203097"] = {
+GTFO.SpellID["203097"] = {
   --desc = "Rot (Nythendra)";
   sound = 4;
   negatingBuffSpellID = 203096; -- Rot
@@ -773,6 +868,11 @@ GTFO.SpellID["212238"] = {
 GTFO.SpellID["223596"] = {
   --desc = "Darkfall (Dreadsoul Corruptor)";
   sound = 1;
+};
+
+GTFO.SpellID["203788"] = {
+  --desc = "Volatile Infection (Emeriss)";
+  sound = 4;
 };
 
 GTFO.SpellID["211196"] = {

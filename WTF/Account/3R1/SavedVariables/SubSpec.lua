@@ -15,9 +15,9 @@ SubSpecStorage = {
 					["column"] = 2,
 				}, -- [2]
 				{
-					["id"] = 19992,
-					["name"] = "Power Strikes",
-					["column"] = 3,
+					["id"] = 22099,
+					["name"] = "Energizing Elixir",
+					["column"] = 1,
 				}, -- [3]
 				{
 					["id"] = 19995,
@@ -55,9 +55,9 @@ SubSpecStorage = {
 					["column"] = 2,
 				}, -- [2]
 				{
-					["id"] = 19992,
-					["name"] = "Power Strikes",
-					["column"] = 3,
+					["id"] = 22099,
+					["name"] = "Energizing Elixir",
+					["column"] = 1,
 				}, -- [3]
 				{
 					["id"] = 19995,

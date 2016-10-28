@@ -22,6 +22,10 @@ END
 VER 3 0000000000000047 "Deathnote" "Ability_Hunter_MurderofCrows"
 /deathnote
 END
+VER 3 0000000000000055 "EE" "ABILITY_MONK_ENERGIZINGWINE"
+#showtooltip
+/use Energizing Elixir
+END
 VER 3 000000000000002E "Extra Action" "INV_Misc_Herb_Whispervine"
 /click ExtraActionButton1
 END
@@ -75,7 +79,7 @@ VER 3 0000000000000053 "SotW" "INV_Misc_QuestionMark"
 #showtooltip Strike of the Windlord
 /use [nochanneling]Strike of the Windlord
 END
-VER 3 000000000000002C "Target Focus" "1100023"
+VER 3 000000000000002C "Target Focus" "132284"
 /tar focus
 END
 VER 3 0000000000000044 "Tier 3" "INV_Misc_QuestionMark"

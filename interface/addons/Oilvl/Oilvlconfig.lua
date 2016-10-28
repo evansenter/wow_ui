@@ -9,6 +9,7 @@ cfg.oilvlscale = 0.8;
 cfg.oilvlalpha = 1;
 cfg.oilvlten = false; -- the emerald nightmare
 cfg.oilvltn = false; -- the nighthold
+cfg.oilvltov = false; -- trial of valor
 cfg.oilvlms = true; -- mouse scanning for target and raid progression
 cfg.oilvlme = true; -- enchant and gem reminder
 cfg.oilvlme2 = false; -- best enchant and gem reminder

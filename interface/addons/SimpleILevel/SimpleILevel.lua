@@ -16,7 +16,7 @@ SIL = LibStub("AceAddon-3.0"):NewAddon(L.core.name, "AceEvent-3.0", "AceConsole-
 SIL.category = GetAddOnMetadata("SimpleILevel", "X-Category");
 SIL.version = GetAddOnMetadata("SimpleILevel", "Version");
 SIL.versionMajor = 3;                    -- Used for cache DB versioning
-SIL.versionRev = 'r253';    -- Used for version information
+SIL.versionRev = 'r263';    -- Used for version information
 SIL.action = {};        -- DB of unitGUID->function to run when a update comes through
 SIL.hooks = {};         -- List of hooks in [type][] = function;
 SIL.autoscan = 0;       -- time() value of last autoscan, must be more then 1sec
@@ -609,14 +609,16 @@ function SIL:GearSum(items, level)
 		
         for i,itemLink in pairs(items) do
             if itemLink and not ( i == INVSLOT_BODY or i == INVSLOT_RANGED or i == INVSLOT_TABARD ) then
-                -- local name, link, itemRarity , itemLevel = GetItemInfo(itemLink);
+                local name, link, itemRarity , itemLevelBlizz = GetItemInfo(itemLink);
                 local itemLevel = self.itemUpgrade:GetUpgradedItemLevel(itemLink);
 
                 -- print(totalItems, i, itemLevel, itemRarity, itemLink);
                 
                 if itemLevel then
-					local itemRarity = select(3, GetItemInfo(itemLink));
+					--local itemRarity = select(3, GetItemInfo(itemLink));
 					if itemRarity == 6 then
+						if itemLevelBlizz > itemLevel then itemLevel = itemLevelBlizz; end
+						self:Debug('Artifact!', i, itemLink, itemLevel, itemLevelBlizz)
 						-- Fix for Artifacts - Thanks Solofme
 						if totalItems == 15 then
 							-- Two handed Artifact
@@ -798,6 +800,7 @@ end
 
 -- Format the score for color and round it to xxx.x
 function SIL:FormatScore(score, items, color)
+	if not score then score = 0; end
     if not items then items = self.grayScore + 1; end
     if type(color) == 'nil' then color = true; end
     if score < 0 then score = 0; end	-- Ticket #29, thanks Torsin
@@ -965,7 +968,8 @@ end
 
 function SIL:UpdatePaperDollFrame(statFrame, unit)
     local score, age, items = self:GetScoreTarget(unit, true);
-    local formated = self:FormatScore(score, items, false);
+	local formated = score and self:FormatScore(score, items, false) or "n/a";
+
     
     PaperDollFrame_SetLabelAndText(statFrame, L.core.name, formated, false);
     statFrame.tooltip = HIGHLIGHT_FONT_COLOR_CODE..L.core.name..FONT_COLOR_CODE_CLOSE;

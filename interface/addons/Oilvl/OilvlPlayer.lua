@@ -93,6 +93,11 @@ local enchantID = {
 	5427,5428,5429,5430 -- ring
 }
 
+local relictooltip = {}
+relictooltip[1] = CreateFrame('GameTooltip', 'oilvlrelictooltip1', UIParent, 'GameTooltipTemplate');
+relictooltip[2] = CreateFrame('GameTooltip', 'oilvlrelictooltip2', UIParent, 'GameTooltipTemplate');
+relictooltip[3] = CreateFrame('GameTooltip', 'oilvlrelictooltip3', UIParent, 'GameTooltipTemplate');
+
 function OiLvLPlayer_buttonsw(sw)
 	if sw then
 		if CharacterFrameAverageItemLevel then
@@ -107,6 +112,8 @@ function OiLvLPlayer_buttonsw(sw)
 	end
 end
 
+local xname = {}
+
 function OiLvlPlayer_Update(sw)
 	if CharacterFrame:GetWidth() > 500 then
 		OiLvlPlayer.frame:UnregisterEvent("PLAYER_EQUIPMENT_CHANGED")
@@ -115,7 +122,6 @@ function OiLvlPlayer_Update(sw)
 			local ailvl = 0 -- average item level
 			local n2 = 0 -- total upgradable gear
 			local aun = 0 -- total fully upgraded gear
-			local xname = {}
 			local totalilvl = {};
 			local xupgrade = {};
 			for Value = 1,17 do
@@ -141,7 +147,7 @@ function OiLvlPlayer_Update(sw)
 					end
 					-- add gem and enchant fontstring
 					if not _G[Key.."ge" ] then
-						local ge = _G[Key]:CreateFontString(Key.."ge","OVERLAY") 
+						local ge = _G[Key]:CreateFontString(Key.."ge","OVERLAY")
 						ge:SetFontObject("GameFontNormalSmall")
 						ge:SetTextColor(1,1,0)
 						if Value == 1 or Value == 2 or Value == 3 or Value == 5 or Value == 9 or Value == 15 or Value == 17 then
@@ -159,10 +165,59 @@ function OiLvlPlayer_Update(sw)
 						else
 							ge:Hide()
 						end
+						if Value == 16 or Value == 17 then
+							CreateFrame("Frame", "oilvlrelic"..Value, _G[Key]);
+							local w,h = _G[Key]:GetSize()							
+							_G["oilvlrelic"..Value]:SetSize(w,h)
+							if Value == 16 then
+								_G["oilvlrelic"..Value]:SetPoint("TOPRIGHT",_G[Key],"TOPLEFT")
+							end
+							if Value == 17 then
+								_G["oilvlrelic"..Value]:SetPoint("TOPLEFT",_G[Key],"TOPRIGHT")
+							end
+							_G["oilvlrelic"..Value]:SetScript("OnEnter", function(self)
+								local n = tonumber(self:GetName():gsub("oilvlrelic","").."")
+								if xname[n] and OTCheckartifactwep(tonumber(xname[n])) and GetInventoryItemLink("player", n) then
+									for aw = 1, 3 do 
+										local reliclink = select(2,GetItemGem(GetInventoryItemLink("player", n),aw))
+										if reliclink then
+											relictooltip[aw]:SetOwner(_G[Key],"ANCHOR_NONE")
+											relictooltip[aw]:ClearLines();
+											if aw == 1 then
+												relictooltip[aw]:SetPoint("BOTTOMLEFT",_G[Key],"TOPRIGHT")
+											end
+											if aw == 2 then
+												if relictooltip[1]:IsShown() then
+													relictooltip[aw]:SetPoint("BOTTOMLEFT",relictooltip[1],"BOTTOMRIGHT")
+												else
+													relictooltip[aw]:SetPoint("BOTTOMLEFT",_G[Key],"TOPRIGHT")
+												end
+											end
+											if aw == 3 then
+												if relictooltip[2]:IsShown() then
+													relictooltip[aw]:SetPoint("BOTTOMLEFT",relictooltip[2],"BOTTOMRIGHT")
+												elseif relictooltip[1]:IsShown() then
+													relictooltip[aw]:SetPoint("BOTTOMLEFT",relictooltip[1],"BOTTOMRIGHT")
+												else
+													relictooltip[aw]:SetPoint("BOTTOMLEFT",_G[Key],"TOPRIGHT")
+												end
+											end
+											relictooltip[aw]:SetHyperlink(reliclink)
+											relictooltip[aw]:Show()
+										end
+									end
+								end						
+							end)
+							_G["oilvlrelic"..Value]:SetScript("OnLeave", function(self) 
+								for aw = 1, 3 do 
+									relictooltip[aw]:Hide()
+								end
+							end)
+						end
 					else
 						_G[Key.."ge" ]:SetText("")
 					end
-					
+										
 					if ItemLink then
 						n = n + 1
 						Slot:ClearAllPoints();
@@ -171,8 +226,8 @@ function OiLvlPlayer_Update(sw)
 						-- check item level
 						ItemLink = ItemLink:gsub("::",":0:"):gsub("::",":0:")
 						local itemID,enchant,_,_,_,_,_ = ItemLink:match("%a+:(%d+):(%d+):(%d+):(%d+):(%d+):(%d+)");
-						if OItemAnalysis_CheckILVLGear(ItemLink) ~= 0 then
-							totalilvl[Value], xupgrade[Value] = OItemAnalysis_CheckILVLGear(ItemLink)
+						if OItemAnalysis_CheckILVLGear("player",Value) ~= 0 then
+							totalilvl[Value], xupgrade[Value] = OItemAnalysis_CheckILVLGear("player",Value)
 							xname[Value] = itemID
 							if Value == 17 and OTCheckartifactwep(tonumber(itemID)) then
 								if totalilvl[Value] < totalilvl[16] then
@@ -198,17 +253,19 @@ function OiLvlPlayer_Update(sw)
 							ailvl = ailvl + (totalilvl[Value] or 0)
 							
 							-- check gem and enchant
-							GemEnchant:SetOwner(UIParent, 'ANCHOR_NONE');
-							GemEnchant:ClearLines();
-							GemEnchant:SetHyperlink(ItemLink);
-							for m = 1, GemEnchant:NumLines() do
-								local enchant = _G["oilvlgetooltipTextLeft"..m]:GetText():match(ENCHANTED_TOOLTIP_LINE:gsub("%%s", "(.+)"))
-								if enchant then 
-									_G[Key.."ge"]:SetText("|cff00ff00"..enchant);
+							if Value < 16 then
+								GemEnchant:SetOwner(UIParent, 'ANCHOR_NONE');
+								GemEnchant:ClearLines();
+								GemEnchant:SetHyperlink(ItemLink);
+								for m = 1, GemEnchant:NumLines() do
+									local enchant = _G["oilvlgetooltipTextLeft"..m]:GetText():match(ENCHANTED_TOOLTIP_LINE:gsub("%%s", "(.+)"))
+									if enchant then 
+										_G[Key.."ge"]:SetText("|cff00ff00"..enchant);
+									end
 								end
 							end
 							-- check low enchant
-							if (Value == 2 or Value == 15 or Value == 11 or Value == 12 or Value == 16) and enchant ~= "0" and oicb8 and oicb8:GetChecked() then
+							if (Value == 2 or Value == 15 or Value == 11 or Value == 12) and enchant ~= "0" and oicb8 and oicb8:GetChecked() then
 								local function CheckLowEnchant(eID)
 									for mm = 1, #enchantID do 
 										if tonumber(eID) == enchantID[mm] then return false end 
@@ -224,7 +281,7 @@ function OiLvlPlayer_Update(sw)
 								_G[Key.."ge"]:SetText(("|TInterface\\MINIMAP\\TRACKING\\OBJECTICONS:0:0:0:0:256:64:43:53:34:61|t" or "")..L["Not enchanted"]);
 							end
 							-- check no gem
-							if OItemAnalysis_CountEmptySockets(ItemLink) > 0 and _G[Key.."ge"] then
+							if OItemAnalysis_CountEmptySockets("player", Value) > 0 and _G[Key.."ge"] then
 								_G[Key.."ge"]:SetText((_G[Key.."ge"]:GetText() or "").."\n"..("|TInterface\\MINIMAP\\TRACKING\\OBJECTICONS:0:0:0:0:256:64:107:117:34:61|t" or "")..L["Not socketed"]);
 							end
 							-- check gem
@@ -241,8 +298,19 @@ function OiLvlPlayer_Update(sw)
 								end
 							end
 							-- check low gem
-							if gemlink and OItemAnalysisLowGem(ItemLink) > 0 and _G[Key.."ge"]:GetText() and oicb8 and oicb8:GetChecked() then
+							if gemlink and OItemAnalysisLowGem("player", Value) > 0 and _G[Key.."ge"]:GetText() and oicb8 and oicb8:GetChecked() then
 								_G[Key.."ge"]:SetText((_G[Key.."ge"]:GetText() or "")..("(|TInterface\\MINIMAP\\TRACKING\\OBJECTICONS:0:0:0:0:256:64:107:117:34:61|t" or "")..L["Low level socketed"]..")");
+							end							
+							-- check relic
+							if (Value == 16 or Value == 17) and OTCheckartifactwep(tonumber(itemID)) then
+								_G[Key.."ge"]:SetText("")
+								for aw = 1, 3 do 
+									local reliclink = select(2,GetItemGem(ItemLink,aw))
+									if reliclink then
+										_G[Key.."ge"]:SetText((_G[Key.."ge"]:GetText() or "").."\n"..OItemAnalysis_CheckILVLRelic(reliclink))
+									end
+								end
+								_G[Key.."ge"]:Show()
 							end
 							if cfg.oilvlge then _G[Key.."ge"]:Show() end
 						end
@@ -287,7 +355,7 @@ function OiLvlPlayer_Update(sw)
 					for Value = 1,17 do
 						local Key = Items[Value]
 					--for Key, Value in pairs(Items) do
-						if _G[Key.."ge"] and Value ~= 4 then
+						if _G[Key.."ge"] and Value ~= 4 and Value ~= 16 and Value ~= 17 then
 							if _G[Key.."ge"]:IsShown() then 
 								_G[Key.."ge"]:Hide()
 								cfg.oilvlge = false
@@ -300,7 +368,7 @@ function OiLvlPlayer_Update(sw)
 					for Value = 1,17 do
 						local Key = InspectItems[Value]
 					--for Key, Value in pairs(InspectItems) do
-						if _G[Key.."ge2"] and Value ~= 4 then
+						if _G[Key.."ge2"] and Value ~= 4 and Value ~= 16 and Value ~= 17 then
 							if _G[Key.."ge2"]:IsShown() then 
 								_G[Key.."ge2"]:Hide() 
 								cfg.oilvlge = false
@@ -362,6 +430,8 @@ function OiLvlPlayer_Update(sw)
 	end
 end
 
+local xname2 = {}
+
 function OiLvLInspect_Update()
 	if InspectFrame and not InspectFrame:IsShown() then return -1 end
 	if cfg ~= nil and cfg.oilvlcharilvl and cfg.oilvlcharilvl ~= nil then
@@ -371,7 +441,6 @@ function OiLvLInspect_Update()
 		local aun = 0 -- total fully upgraded gear
 		local totalilvl = {}
 		local xupgrade = {}
-		local xname = {}
 		for Value = 1,17 do
 		--for Key, Value in pairs(InspectItems) do
 			local Key = InspectItems[Value]
@@ -396,6 +465,55 @@ function OiLvLInspect_Update()
 				-- add gem and enchant fontstring
 				if not _G[Key.."ge2" ] then
 					local ge = _G[Key]:CreateFontString(Key.."ge2","OVERLAY") 
+					if Value == 16 or Value == 17 then
+						CreateFrame("Frame", "oilvlrelici"..Value, _G[Key]);
+						local w,h = _G[Key]:GetSize()							
+						_G["oilvlrelici"..Value]:SetSize(w,h)
+						if Value == 16 then
+							_G["oilvlrelici"..Value]:SetPoint("TOPRIGHT",_G[Key],"TOPLEFT")
+						end
+						if Value == 17 then
+							_G["oilvlrelici"..Value]:SetPoint("TOPLEFT",_G[Key],"TOPRIGHT")
+						end
+						_G["oilvlrelici"..Value]:SetScript("OnEnter", function(self) 							
+							local n = tonumber(self:GetName():gsub("oilvlrelici","").."")
+							if xname2[n] and OTCheckartifactwep(tonumber(xname2[n])) and InspectFrame.unit and GetInventoryItemLink(InspectFrame.unit, n) then
+								for aw = 1, 3 do 
+									local reliclink = select(2,GetItemGem(GetInventoryItemLink(InspectFrame.unit, n),aw))
+									if reliclink then
+										relictooltip[aw]:SetOwner(_G[Key],"ANCHOR_NONE")
+										relictooltip[aw]:ClearLines();
+										if aw == 1 then
+											relictooltip[aw]:SetPoint("BOTTOMLEFT",_G[Key],"TOPRIGHT")
+										end
+										if aw == 2 then
+											if relictooltip[1]:IsShown() then
+												relictooltip[aw]:SetPoint("BOTTOMLEFT",relictooltip[1],"BOTTOMRIGHT")
+											else
+												relictooltip[aw]:SetPoint("BOTTOMLEFT",_G[Key],"TOPRIGHT")
+											end
+										end
+										if aw == 3 then
+											if relictooltip[2]:IsShown() then
+												relictooltip[aw]:SetPoint("BOTTOMLEFT",relictooltip[2],"BOTTOMRIGHT")
+											elseif relictooltip[1]:IsShown() then
+												relictooltip[aw]:SetPoint("BOTTOMLEFT",relictooltip[1],"BOTTOMRIGHT")
+											else
+												relictooltip[aw]:SetPoint("BOTTOMLEFT",_G[Key],"TOPRIGHT")
+											end
+										end
+										relictooltip[aw]:SetHyperlink(reliclink)
+										relictooltip[aw]:Show()
+									end
+								end
+							end						
+						end)
+						_G["oilvlrelici"..Value]:SetScript("OnLeave", function(self) 
+							for aw = 1, 3 do 
+								relictooltip[aw]:Hide()
+							end
+						end)
+					end
 					ge:SetFontObject("GameFontNormalSmall")
 					ge:SetTextColor(1,1,0)
 					if Value == 1 or Value == 2 or Value == 3 or Value == 5 or Value == 9 or Value == 15 or Value == 17 then
@@ -412,7 +530,7 @@ function OiLvLInspect_Update()
 						ge:Show()
 					else
 						ge:Hide()
-					end
+					end					
 				else
 					_G[Key.."ge2" ]:SetText("")
 				end
@@ -424,9 +542,9 @@ function OiLvLInspect_Update()
 					-- check item level
 					ItemLink = ItemLink:gsub("::",":0:"):gsub("::",":0:")
 					local itemID,enchant,_,_,_,_,_ = ItemLink:match("%a+:(%d+):(%d+):(%d+):(%d+):(%d+):(%d+)");
-					if OItemAnalysis_CheckILVLGear(ItemLink) ~= 0 then
-						totalilvl[Value], xupgrade[Value] = OItemAnalysis_CheckILVLGear(ItemLink)
-						xname[Value] = itemID
+					if OItemAnalysis_CheckILVLGear("target",Value) ~= 0 then
+						totalilvl[Value], xupgrade[Value] = OItemAnalysis_CheckILVLGear("target",Value)
+						xname2[Value] = itemID
 						if Value == 17 and OTCheckartifactwep(tonumber(itemID)) then
 							if totalilvl[Value] < totalilvl[16] then
 								totalilvl[Value], xupgrade[Value] = totalilvl[16], xupgrade[16]
@@ -461,7 +579,7 @@ function OiLvLInspect_Update()
 							end
 						end
 						-- check low enchant
-						if (Value == 2 or Value == 15 or Value == 11 or Value == 12 or Value == 16) and enchant ~= "0" and oicb8 and oicb8:GetChecked() then
+						if (Value == 2 or Value == 15 or Value == 11 or Value == 12) and enchant ~= "0" and oicb8 and oicb8:GetChecked() then
 							local function CheckLowEnchant(eID)
 								for mm = 1, #enchantID do 
 									if tonumber(eID) == enchantID[mm] then return false end 
@@ -477,7 +595,7 @@ function OiLvLInspect_Update()
 							_G[Key.."ge2"]:SetText(("|TInterface\\MINIMAP\\TRACKING\\OBJECTICONS:0:0:0:0:256:64:43:53:34:61|t" or "")..L["Not enchanted"]);
 						end
 						-- check no gem
-						if OItemAnalysis_CountEmptySockets(ItemLink) > 0 and _G[Key.."ge2"] then
+						if OItemAnalysis_CountEmptySockets("target",Value) > 0 and _G[Key.."ge2"] then
 							_G[Key.."ge2"]:SetText((_G[Key.."ge2"]:GetText() or "").."\n"..("|TInterface\\MINIMAP\\TRACKING\\OBJECTICONS:0:0:0:0:256:64:107:117:34:61|t" or "")..L["Not socketed"]);
 						end
 						-- check gem
@@ -494,9 +612,22 @@ function OiLvLInspect_Update()
 							end
 						end
 						-- check low gem
-						if gemlink and OItemAnalysisLowGem(ItemLink) > 0 and _G[Key.."ge2"]:GetText() and oicb8 and oicb8:GetChecked() then
+						if gemlink and OItemAnalysisLowGem("target",Value) > 0 and _G[Key.."ge2"]:GetText() and oicb8 and oicb8:GetChecked() then
 							_G[Key.."ge2"]:SetText((_G[Key.."ge2"]:GetText() or "")..("(|TInterface\\MINIMAP\\TRACKING\\OBJECTICONS:0:0:0:0:256:64:107:117:34:61|t" or "")..L["Low level socketed"]..")");
 						end	
+						-- check relic
+						if (Value == 16 or Value == 17) and OTCheckartifactwep(tonumber(itemID)) then
+							_G[Key.."ge2"]:SetText("")
+							for aw = 1, 3 do 
+								local reliclink = select(2,GetItemGem(ItemLink,aw))
+								if reliclink then
+									_G[Key.."ge2"]:SetText((_G[Key.."ge2"]:GetText() or "").."\n"..OItemAnalysis_CheckILVLRelic(reliclink))
+								end
+							end
+							_G[Key.."ge2"]:Show()
+						else
+							_G[Key.."ge2"]:Hide()
+						end													
 						if cfg.oilvlge then _G[Key.."ge2"]:Show() end
 					end
 				end
@@ -540,7 +671,7 @@ function OiLvLInspect_Update()
 				for Value = 1,17 do
 					local Key = Items[Value]
 				--for Key, Value in pairs(Items) do
-					if _G[Key.."ge"] and Value ~= 4 then
+					if _G[Key.."ge"] and Value ~= 4 and Value ~= 16 and Value ~= 17 then
 						if _G[Key.."ge"]:IsShown() then 
 							_G[Key.."ge"]:Hide()
 							cfg.oilvlge = false
@@ -553,7 +684,7 @@ function OiLvLInspect_Update()
 				for Value = 1,17 do
 					local Key = InspectItems[Value]
 				--for Key, Value in pairs(InspectItems) do
-					if _G[Key.."ge2"] and Value ~= 4 then
+					if _G[Key.."ge2"] and Value ~= 4 and Value ~= 16 and Value ~= 17 then
 						if _G[Key.."ge2"]:IsShown() then 
 							_G[Key.."ge2"]:Hide() 
 							cfg.oilvlge = false
@@ -624,7 +755,22 @@ OiLvlPlayer.frame:SetScript("OnEvent", function(self, event, ...)
   
 	if event == "INSPECT_READY"  and InspectFrame then
 		if not OiLvLInspect_Updatehooksw then 
-			InspectFrame:HookScript("OnShow", OiLvLInspect_Update)
+			InspectFrame:HookScript("OnShow", function()
+				OiLvLInspect_Update()
+				C_Timer.After(1,OiLvLInspect_Update)
+				C_Timer.After(2,OiLvLInspect_Update)
+				C_Timer.After(3,OiLvLInspect_Update)
+			end)
+			InspectFrame:HookScript("OnHide", 
+				function() 
+					for i = 1, 17 do 
+						local Slot = getglobal(InspectItems[i].."Stock");
+						if Slot and i ~= 4 then
+							Slot:Hide();
+						end
+					end	
+				end
+			)
 			OiLvLInspect_Updatehooksw = true
 		end
 		OiLvlPlayer.frame:UnregisterEvent("INSPECT_READY");

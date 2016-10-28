@@ -40,15 +40,6 @@ local function HideDispelDebuffs(frame)
 end
 hooksecurefunc("CompactUnitFrame_UpdateDispellableDebuffs", HideDispelDebuffs)
 
--- Dirty fix for UnitHasIncomingResurrection being bugged, which sometimes leaves the resurrect "angels" on the unit frames
-local function AngelFix(frame)
-	if UnitHasIncomingResurrection(frame.unit) and UnitHealth(frame.displayedUnit) > 0 then
-		frame.centerStatusIcon:Hide()
-	end
-end
-hooksecurefunc("CompactUnitFrame_UpdateCenterStatusIcon", AngelFix)
-hooksecurefunc("CompactUnitFrame_UpdateHealth", AngelFix)
-
 -- Hook CompactUnitFrame_OnEnter and OnLeave so we know if a tooltip is showing or not.
 local function TipHook_OnEnter(frame)
 	local unit = frame.unit
@@ -312,7 +303,7 @@ function Indicators.UpdateIndicatorFrame(frame)
 						castBy = "player"
 						n = -1 
 						local factionGroup = UnitFactionGroup(unit)
-						icon = "Interface\\GroupFrame\\UI-Group-PVP-"..factionGroup
+						if factionGroup then icon = "Interface\\GroupFrame\\UI-Group-PVP-"..factionGroup end
 						f[frameName][i].index = -1
 					end
 				elseif auraName:upper() == "TOT" then -- Check if we want to show ToT flag
@@ -321,7 +312,6 @@ function Indicators.UpdateIndicatorFrame(frame)
 						expirationTime = 0
 						castBy = "player"
 						n = -1 
-						local factionGroup = UnitFactionGroup(unit)
 						icon = "Interface\\Icons\\Ability_Hunter_SniperShot"
 						f[frameName][i].index = -1
 					end

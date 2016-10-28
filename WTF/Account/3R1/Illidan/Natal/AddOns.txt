@@ -153,7 +153,7 @@ nRange: disabled
 OmniCC: disabled
 OmniCC_Config: disabled
 OregorgerTracker: enabled
-Pawn: disabled
+Pawn: enabled
 SharedMedia: disabled
 SimpleILevel: disabled
 SimpleILevel_Group: disabled
@@ -188,3 +188,4 @@ Atlas_Legion: disabled
 HandyNotes_LegionTreasures: disabled
 WorldQuestTracker: disabled
 DBM-TrialofValor: disabled
+RCLootCouncil: disabled

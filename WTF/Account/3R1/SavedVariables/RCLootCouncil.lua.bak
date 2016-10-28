@@ -1,0 +1,87 @@
+
+RCLootCouncilDB = {
+	["global"] = {
+		["localizedSubTypes"] = {
+			["Two-Handed Maces"] = "Two-Handed Maces",
+			["Artifact Relic"] = "Artifact Relic",
+			["One-Handed Swords"] = "One-Handed Swords",
+			["Staves"] = "Staves",
+			["Crossbows"] = "Crossbows",
+			["Plate"] = "Plate",
+			["One-Handed Maces"] = "One-Handed Maces",
+			["created"] = true,
+			["Shields"] = "Shields",
+			["Polearms"] = "Polearms",
+			["Daggers"] = "Daggers",
+			["Bows"] = "Bows",
+			["Two-Handed Swords"] = "Two-Handed Swords",
+			["One-Handed Axes"] = "One-Handed Axes",
+			["Leather"] = "Leather",
+			["Cloth"] = "Cloth",
+			["Guns"] = "Guns",
+			["Fist Weapons"] = "Fist Weapons",
+			["Mail"] = "Mail",
+			["Wands"] = "Wands",
+			["Warglaives"] = "Warglaives",
+			["Two-Handed Axes"] = "Two-Handed Axes",
+		},
+		["log"] = {
+			"10/19/16", -- [1]
+			"14:12:31 - Logged In", -- [2]
+			"14:12:31 - ML initialized!", -- [3]
+			"14:13:02 - Comet-Illidan (2.1.6) (nil)", -- [4]
+			"14:13:02 - We didn't find: (One-Handed Axes) (128196)", -- [5]
+			"14:13:04 - Event: (PLAYER_ENTERING_WORLD)", -- [6]
+			"14:13:04 - GetML()", -- [7]
+			"14:13:04 - LootMethod =  (personalloot)", -- [8]
+			"14:13:07 - Comm received: (^1^SverTest^T^N1^S2.1.6^t^^) (from:) (Comet) (distri:) (GUILD)", -- [9]
+			"14:13:07 - GetPlayersGuildRank()", -- [10]
+			"14:13:07 - Found Guild Rank: Raider", -- [11]
+			"14:13:07 - Timer LocalizeSubTypes passed", -- [12]
+			"14:13:07 - Found One-Handed Axes localized as: One-Handed Axes", -- [13]
+			"14:13:07 - Found Artifact Relic localized as: Artifact Relic", -- [14]
+			"14:13:07 - Found One-Handed Swords localized as: One-Handed Swords", -- [15]
+			"14:13:07 - Found Staves localized as: Staves", -- [16]
+			"14:13:07 - Found Crossbows localized as: Crossbows", -- [17]
+			"14:13:07 - Found Plate localized as: Plate", -- [18]
+			"14:13:07 - Found One-Handed Maces localized as: One-Handed Maces", -- [19]
+			"14:13:07 - Found Warglaives localized as: Warglaives", -- [20]
+			"14:13:07 - Found Shields localized as: Shields", -- [21]
+			"14:13:07 - Found Polearms localized as: Polearms", -- [22]
+			"14:13:07 - Found Bows localized as: Bows", -- [23]
+			"14:13:07 - Found Two-Handed Swords localized as: Two-Handed Swords", -- [24]
+			"14:13:07 - Found Two-Handed Maces localized as: Two-Handed Maces", -- [25]
+			"14:13:07 - Found Leather localized as: Leather", -- [26]
+			"14:13:07 - Found Mail localized as: Mail", -- [27]
+			"14:13:07 - Found Guns localized as: Guns", -- [28]
+			"14:13:07 - Found Fist Weapons localized as: Fist Weapons", -- [29]
+			"14:13:07 - Found Cloth localized as: Cloth", -- [30]
+			"14:13:07 - Found Wands localized as: Wands", -- [31]
+			"14:13:07 - Found Daggers localized as: Daggers", -- [32]
+			"14:13:07 - Found Two-Handed Axes localized as: Two-Handed Axes", -- [33]
+		},
+		["version"] = "2.1.6",
+	},
+	["profileKeys"] = {
+		["Comet - Illidan"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["UI"] = {
+				["default"] = {
+					["background"] = "Blizzard Garrison Background 2",
+					["border"] = "Blizzard Dialog Gold",
+				},
+				["lootframe"] = {
+					["background"] = "Blizzard Garrison Background 2",
+					["border"] = "Blizzard Dialog Gold",
+				},
+			},
+		},
+	},
+}
+RCLootCouncilLootDB = {
+	["profileKeys"] = {
+		["Comet - Illidan"] = "Comet - Illidan",
+	},
+}

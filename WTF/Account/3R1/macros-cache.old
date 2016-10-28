@@ -22,10 +22,14 @@ END
 VER 3 0000000000000047 "Deathnote" "Ability_Hunter_MurderofCrows"
 /deathnote
 END
+VER 3 0000000000000055 "EB" "ABILITY_MONK_ENERGIZINGWINE"
+#showtooltip
+/use Energizing Brew
+END
 VER 3 000000000000002E "Extra Action" "INV_Misc_Herb_Whispervine"
 /click ExtraActionButton1
 END
-VER 3 000000000000002B "Focus" "Ability_Priest_Phantasm"
+VER 3 000000000000002B "Focus" "1029718"
 /focus
 END
 VER 3 000000000000004D "GS" "INV_Misc_QuestionMark"
@@ -44,7 +48,7 @@ VER 3 0000000000000045 "Keg Smash" "INV_Misc_QuestionMark"
 #showtooltip Keg Smash
 /use Keg Smash
 END
-VER 3 0000000000000051 "Mark Skull" "1373133"
+VER 3 0000000000000051 "Mark Skull" "1325309"
 /run SetRaidTarget("target", 8)
 END
 VER 3 000000000000004F "PoM" "INV_Misc_QuestionMark"
@@ -75,7 +79,7 @@ VER 3 0000000000000053 "SotW" "INV_Misc_QuestionMark"
 #showtooltip Strike of the Windlord
 /use [nochanneling]Strike of the Windlord
 END
-VER 3 000000000000002C "Target Focus" "Spell_Magic_PolymorphRabbit"
+VER 3 000000000000002C "Target Focus" "132284"
 /tar focus
 END
 VER 3 0000000000000044 "Tier 3" "INV_Misc_QuestionMark"

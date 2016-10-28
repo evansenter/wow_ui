@@ -205,14 +205,14 @@ MogIt_TwoHanded: disabled
 MogIt_Accessories: disabled
 MoveAnything: enabled
 SavedInstances: enabled
-WoWNotifier: enabled
+WoWNotifier: disabled
 DBM-RaidLeadTools: enabled
 Kui_Nameplates: disabled
 Kui_Nameplates_Core_Config: disabled
 Kui_Nameplates_Core: disabled
 MasterPlan: enabled
 MasterPlanA: enabled
-Pawn: disabled
+Pawn: enabled
 SimpleILevel: enabled
 SimpleILevel_Group: enabled
 SimpleILevel_Resilience: enabled
@@ -295,3 +295,4 @@ DBM-TrialofValor: enabled
 WorldQuestTracker: enabled
 SubSpec: enabled
 TransmogTokens: enabled
+RCLootCouncil: disabled

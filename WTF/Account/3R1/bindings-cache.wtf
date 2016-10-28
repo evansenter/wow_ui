@@ -1,5 +1,5 @@
 BINDINGMODE 0
-bind BUTTON3 NONE
+bind BUTTON3 CLICK BT4Button69:LeftButton
 bind LEFT NONE
 bind RIGHT NONE
 bind Q CLICK BT4Button49:LeftButton

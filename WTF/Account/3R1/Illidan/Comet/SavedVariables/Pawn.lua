@@ -1,12 +1,12 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0007,
+	["LastVersion"] = 2.0104,
 	["LastPlayerFullName"] = "Comet-Illidan",
-	["AutoSelectScales"] = true,
+	["AutoSelectScales"] = false,
 	["UpgradeTracking"] = false,
 	["LastKeybindingsSet"] = 1,
 }
-PawnWowheadScaleProviderOptions = {
+PawnMrRobotScaleProviderOptions = {
 	["LastClass"] = "MONK",
-	["LastAdded"] = 5,
+	["LastAdded"] = 1,
 }

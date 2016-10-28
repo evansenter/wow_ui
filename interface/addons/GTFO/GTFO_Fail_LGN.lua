@@ -10,6 +10,11 @@ Author: Zensunim of Malygos
 --- * The Broken Isles *
 --- ********************
 
+GTFO.SpellID["209862"] = {
+  --desc = "Volcanic Plume (Mythic+ Keystone)";
+  sound = 3;
+};
+
 GTFO.SpellID["225574"] = {
   --desc = "Trespasser!";
   applicationOnly = true;
@@ -290,6 +295,26 @@ GTFO.SpellID["217553"] = {
 
 GTFO.SpellID["222091"] = {
   --desc = "Steam Vent";
+  sound = 3;
+};
+
+GTFO.SpellID["223708"] = {
+  --desc = "Nightshifted Bolts (Withered J'im)";
+  sound = 3;
+};
+
+GTFO.SpellID["204659"] = {
+  --desc = "Bloodreap (Ariden)";
+  sound = 3;
+};
+
+GTFO.SpellID["222528"] = {
+  --desc = "Explosive Geyser (Torrentius)";
+  sound = 3;
+};
+
+GTFO.SpellID["214302"] = {
+  --desc = "Erupting Shadow (Thondrax)";
   sound = 3;
 };
 
@@ -695,11 +720,19 @@ GTFO.SpellID["198088"] = {
 
 -- TODO: Volatile Magic (Ivanyr) FF fail Alert?
 -- TODO: Cleansing Force (Corstilax) - Fail on explosion
--- TODO: Fel Eruption (General Xakal)
 -- TODO: Shadow Slash (General Xakal) 
--- TODO: Bombardment (General Xakal) - avoidable? 
 -- TODO: Force Bomb (Advisor Vandros)
 -- TODO: Time Split (Advisor Vandros) - shard explosion
+
+GTFO.SpellID["197788"] = {
+  --desc = "Bombardment (General Xakal)";
+  sound = 3;
+};
+
+GTFO.SpellID["197579"] = {
+  --desc = "Fel Eruption (General Xakal)";
+  sound = 3;
+};
 
 
 -- ****************
@@ -759,13 +792,70 @@ GTFO.SpellID["202472"] = {
 -- * Court of Stars *
 -- ******************
 
--- TODO: Resonant Slash (Patrol Captain Gerdo) - Avoidable?
--- TODO: Streetsweeper (Patrol Captain Gerdo) - Heroic
--- TODO: Shockwave (Talixae Flamewreath) - Avoidable?
--- TODO: Whirling Blades (Talixae Flamewreath) - Avoidable?
--- TODO: Enveloping Winds (Advisor Melandrus) - Heroic
--- TODO: Piercing Gale (Advisor Melandrus)
 -- TODO: Blade Surge (Advisor Melandrus) - Fail when hit more than once
+
+GTFO.SpellID["209027"] = {
+  --desc = "Quelling Strike (Duskwatch Guard)";
+  sound = 3;
+};
+
+GTFO.SpellID["209477"] = {
+  --desc = "Wild Detonation (Mana Wyrm)";
+  sound = 3;
+};
+
+GTFO.SpellID["209404"] = {
+  --desc = "Seal Magic (Duskwatch Arcanist)";
+  sound = 3;
+};
+
+GTFO.SpellID["206574"] = {
+  --desc = "Resonant Slash (Patrol Captain Gerdo)";
+  sound = 3;
+};
+
+GTFO.SpellID["219498"] = {
+  --desc = "Streetsweeper (Patrol Captain Gerdo)";
+  sound = 3;
+};
+
+GTFO.SpellID["209378"] = {
+  --desc = "Whirling Blades (Imacu'tya)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["207979"] = {
+  --desc = "Shockwave (Jazshariu)";
+  sound = 3;
+};
+
+GTFO.SpellID["207887"] = {
+  --desc = "Infernal Eruption (Talixae Flamewreath)";
+  sound = 3;
+};
+
+GTFO.SpellID["211457"] = {
+  --desc = "Infernal Eruption (Talixae Flamewreath)";
+  sound = 3;
+};
+
+GTFO.SpellID["224333"] = {
+  --desc = "Enveloping Winds (Advisor Melandrus)";
+  sound = 3;
+};
+
+GTFO.SpellID["209630"] = {
+  --desc = "Piercing Gale (Advisor Melandrus)";
+  sound = 3;
+  test = true;
+};
+
+GTFO.SpellID["209628"] = {
+  --desc = "Piercing Gale (Advisor Melandrus)";
+  sound = 3;
+  test = true;
+};
 
 
 -- ************************
@@ -994,6 +1084,49 @@ GTFO.SpellID["225296"] = {
   sound = 3;
   tankSound = 0;
 };
+
+GTFO.SpellID["198108"] = {
+  --desc = "Momentum (Ursoc)";
+  applicationOnly = true;
+  minimumStacks = 1;
+  sound = 3;
+};
+
+GTFO.SpellID["225356"] = {
+  --desc = "Seeping Fog (Seeping Fog)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["205870"] = {
+  --desc = "Gloom (Lethon)";
+  sound = 3;
+};
+
+GTFO.SpellID["223201"] = {
+  --desc = "Gloom (Rothos)";
+  sound = 3;
+};
+
+GTFO.SpellID["203028"] = {
+  --desc = "Corrupted Breath (Ysondre)";
+  sound = 3;
+  tankSound = 0;
+};
+
+GTFO.SpellID["204767"] = {
+  --desc = "Corrupted Breath (Shade of Taerar)";
+  sound = 3;
+  tankSound = 0;
+};
+
+
+GTFO.SpellID["203110"] = {
+  --desc = "Slumbering Nightmare (Ysondre)";
+  applicationOnly = true;
+  sound = 3;
+};
+
 
 -- *************
 -- * Nighthold *

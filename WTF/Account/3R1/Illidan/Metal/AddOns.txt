@@ -10,7 +10,7 @@ TipTac: disabled
 lightwellbuddy: disabled
 reckonerspromending: disabled
 StormEarthAndFire: enabled
-Pawn: disabled
+Pawn: enabled
 ActionBarSaver: disabled
 ACP: enabled
 AddonUsage: disabled
@@ -216,3 +216,4 @@ Atlas_Legion: disabled
 HandyNotes_LegionTreasures: disabled
 WorldQuestTracker: disabled
 DBM-TrialofValor: disabled
+RCLootCouncil: disabled

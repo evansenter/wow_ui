@@ -15,16 +15,16 @@ DataStore_AgendaDB = {
 		["Options"] = {
 			["WeeklyResetHour"] = 6,
 			["WeeklyResetDay"] = 2,
-			["NextWeeklyReset"] = "2016-10-11",
+			["NextWeeklyReset"] = "2016-11-01",
 		},
 		["Characters"] = {
 			["Default.Illidan.Evan"] = {
+				["lastUpdate"] = 1473014604,
 				["Contacts"] = {
 					["Clypssaa"] = {
 						["note"] = "",
 					},
 				},
-				["lastUpdate"] = 1473014604,
 			},
 			["Default.Illidan.Pandatal"] = {
 				["lastUpdate"] = 1473014630,
@@ -42,6 +42,7 @@ DataStore_AgendaDB = {
 				["lastUpdate"] = 1424741664,
 			},
 			["Default.Dark Iron.Colton"] = {
+				["lastUpdate"] = 1424741733,
 				["Contacts"] = {
 					["Huv"] = {
 						["note"] = "",
@@ -51,8 +52,8 @@ DataStore_AgendaDB = {
 					},
 					["Purephase"] = {
 						["note"] = "",
-						["level"] = 100,
 						["class"] = "Rogue",
+						["level"] = 100,
 					},
 					["Rfl"] = {
 						["note"] = "",
@@ -63,7 +64,7 @@ DataStore_AgendaDB = {
 					["Hemos"] = {
 						["note"] = "",
 					},
-					["Billbraskie"] = {
+					["Bubblegurl"] = {
 						["note"] = "",
 					},
 					["Faluzure"] = {
@@ -72,19 +73,26 @@ DataStore_AgendaDB = {
 					["Pockee"] = {
 						["note"] = "",
 					},
-					["Bubblegurl"] = {
+					["Billbraskie"] = {
 						["note"] = "",
 					},
 				},
-				["lastUpdate"] = 1424741733,
 			},
 			["Default.Illidan.Comet"] = {
+				["lastUpdate"] = 1477669486,
 				["Contacts"] = {
 					["Homicidium"] = {
 						["note"] = "",
 					},
 				},
-				["lastUpdate"] = 1475950165,
+				["DungeonIDs"] = {
+					["Assault on Violet Hold Mythic|249271565"] = "342918|1477669487|0|0",
+					["Return to Karazhan Mythic|646788832"] = "342918|1477669487|0|0",
+					["Black Rook Hold Mythic|232904668"] = "342918|1477669487|0|0",
+					["The Emerald Nightmare Heroic|249307798"] = "342918|1477669487|0|1",
+					["Halls of Valor Mythic|646776865"] = "342918|1477669487|0|0",
+					["Vault of the Wardens Mythic|232903050"] = "342918|1477669487|0|0",
+				},
 			},
 			["Default.Illidan.Cometron"] = {
 				["lastUpdate"] = 1473014657,

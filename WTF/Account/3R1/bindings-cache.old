@@ -1,8 +1,6 @@
 BINDINGMODE 0
 bind BUTTON3 NONE
-bind A STRAFELEFT
 bind LEFT NONE
-bind D STRAFERIGHT
 bind RIGHT NONE
 bind Q CLICK BT4Button49:LeftButton
 bind E CLICK BT4Button50:LeftButton
