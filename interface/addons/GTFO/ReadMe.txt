@@ -1162,3 +1162,6 @@ Change Log:
 4.41.2
 * Updated for patch 7.1
 
+4.41.3
+* Added Legion spells for The Broken Isles (world)
+* Added Legion spells for Trial of Valor

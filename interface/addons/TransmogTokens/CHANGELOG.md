@@ -1,5 +1,6 @@
-** Version 1.4.4 **
+** Version 1.4.5 **
 * Fixed Lua error with AQ items.
+* Added localization support for zhTW.
 
 ** Version 1.4.3 **
 * Added full support for Tier 18 tokens, including Demon Hunters unique set!

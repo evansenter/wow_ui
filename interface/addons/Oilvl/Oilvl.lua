@@ -1309,7 +1309,7 @@ if not UnitAffectingCombat("player") and oilvlframesw then
 				end
 			end
 			
-			if oilvlframedata.ilvl[i][1] ~= "" then 
+			if oilvlframedata.ilvl[i] and oilvlframedata.ilvl[i][1] ~= "" then 
 				n = n + 1;
 				total = total + oilvlframedata.ilvl[i][1];
 				if oilvlframedata.role[i] == "TANK" then
@@ -1356,7 +1356,7 @@ if not UnitAffectingCombat("player") and oilvlframesw then
 			end
 		end
 		for i = 1, rnum + 1 do
-			if oilvlframedata.ilvl[i][1] ~= "" then 
+			if oilvlframedata.ilvl[i] and oilvlframedata.ilvl[i][1] ~= "" then 
 				n = n + 1;
 				total = total + oilvlframedata.ilvl[i][1];
 				if oilvlframedata.role[i] == "TANK" then
@@ -1403,7 +1403,7 @@ if not UnitAffectingCombat("player") and oilvlframesw then
 			end
 		end
 		for i = 1, rnum + 1 do
-			if oilvlframedata.ilvl[i][1] ~= "" then 
+			if oilvlframedata.ilvl[i] and oilvlframedata.ilvl[i][1] ~= "" then 
 				n = n + 1;
 				total = total + oilvlframedata.ilvl[i][1];
 				if oilvlframedata.role[i] == "TANK" then
@@ -4807,6 +4807,13 @@ function OTCheckartifactwep(itemID)
 	return false
 end
 
+function OTCheckLegendary(itemID)
+	local _,_,quality,_ = GetItemInfo(itemID)
+	if quality == 5 then return true end
+	return false
+end
+
+
 function OTgathertil(guid, unitid)
 	local totalIlvl, avgIlvl = 0
 	local iter_min, iter_max = 0
@@ -4824,6 +4831,7 @@ function OTgathertil(guid, unitid)
 		oilvlframedata.gear[OTCurrent3] = {};
 	end
 	local cgear = {}
+	local legendary = 0
 	--local relic = {}
 	for i = 1,17 do
 		local xupgrade = nil
@@ -4964,6 +4972,10 @@ function OTgathertil(guid, unitid)
 					end
 					if itemLevel == nil then itemLevel = "" end
 					if item == nil then item = "" end
+					
+					-- check legendary
+					if OTCheckLegendary(tonumber(itemID)) then legendary = legendary + 1 end
+					
 					if OTCurrent3 ~= "" then
 						oilvlframedata.gear[OTCurrent3][i] = {itemLevel, item, ogme, ogmg, ogmHe, ogmHg, OItemAnalysis_CheckPvPGear(unitid,i),tonumber(itemID),xupgrade}
 					end
@@ -5041,7 +5053,7 @@ function OTgathertil(guid, unitid)
 		end
 		if #cfg.oilvlcache > 100 then cfg.oilvlcache[#cfg.oilvlcache] = nil; end
 	end
-	return avgIlvl, mia, missenchant, missgem, missHenchant, missHgem, count;
+	return avgIlvl, mia, missenchant, missgem, missHenchant, missHgem, count, legendary;
 end
 
 function OTgathertilPvP(r)
@@ -5116,7 +5128,7 @@ end
 function oilvlSaveItemLevel(n)
 	if OILVL_Unit ~= "" then
 		if CheckInteractDistance(OILVL_Unit, 1) then
-			local OTilvl, OTmia, missenchant, missgem,  missenchant2, missgem2, count2 = OTgathertil(UnitGUID("OILVL_Unit"),OILVL_Unit)
+			local OTilvl, OTmia, missenchant, missgem,  missenchant2, missgem2, count2, legendary2 = OTgathertil(UnitGUID("OILVL_Unit"),OILVL_Unit)
 			if (OTmia == 0 and n > 1) then
 				miacount=0;	miaunit[1]="";miaunit[2]="";miaunit[3]="";miaunit[4]="";miaunit[5]="";miaunit[6]="";
 				local ntex4 = _G[OTCurrent]:CreateTexture()
@@ -5141,12 +5153,8 @@ function oilvlSaveItemLevel(n)
 				end
 				if oilvlframedata.name[OTCurrent3] ~= "" then
 				-- check legendary ring
-					if oilvlframedata.gear[OTCurrent3][RING1] and oilvlframedata.gear[OTCurrent3][RING2] then
-						if oilvlframedata.gear[OTCurrent3][RING1][2]:find("ffff8000") or oilvlframedata.gear[OTCurrent3][RING2][2]:find("ffff8000") then
-							_G[OTCurrent]:SetText(oClassColor(OTCurrent2)..oilvlframedata.name[OTCurrent3].."\n|r|cFFFF8000"..OTilvl);
-						else
-							_G[OTCurrent]:SetText(oClassColor(OTCurrent2)..oilvlframedata.name[OTCurrent3].."\n|r|cFF00FF00"..OTilvl);
-						end
+					if legendary2 > 0 then
+						_G[OTCurrent]:SetText(oClassColor(OTCurrent2)..oilvlframedata.name[OTCurrent3].."\n|r|cFFFF8000"..OTilvl);
 					else
 						_G[OTCurrent]:SetText(oClassColor(OTCurrent2)..oilvlframedata.name[OTCurrent3].."\n|r|cFF00FF00"..OTilvl);
 					end

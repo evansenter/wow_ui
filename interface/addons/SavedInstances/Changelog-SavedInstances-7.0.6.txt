@@ -1,9 +1,37 @@
 ------------------------------------------------------------------------
-r530 | oscarucb | 2016-10-26 01:13:39 +0000 (Wed, 26 Oct 2016) | 1 line
+r536 | oscarucb | 2016-10-31 11:50:07 +0000 (Mon, 31 Oct 2016) | 1 line
 Changed paths:
-   A /tags/7.0.4 (from /trunk:529)
+   A /tags/7.0.6 (from /trunk:535)
 
-Tagging as 7.0.4
+Tagging as 7.0.6
+------------------------------------------------------------------------
+r535 | oscarucb | 2016-10-31 11:48:10 +0000 (Mon, 31 Oct 2016) | 2 lines
+Changed paths:
+   M /trunk/SavedInstances.lua
+
+fix EN LFR for 7.1
+
+------------------------------------------------------------------------
+r533 | oscarucb | 2016-10-30 12:01:37 +0000 (Sun, 30 Oct 2016) | 2 lines
+Changed paths:
+   M /trunk/SavedInstances.lua
+
+Add order hall Seal of Broken Fate
+
+------------------------------------------------------------------------
+r532 | oscarucb | 2016-10-30 11:30:38 +0000 (Sun, 30 Oct 2016) | 2 lines
+Changed paths:
+   M /trunk/SavedInstances.lua
+
+Add special case for Return to Karazhan
+
+------------------------------------------------------------------------
+r531 | oscarucb | 2016-10-29 12:23:19 +0000 (Sat, 29 Oct 2016) | 2 lines
+Changed paths:
+   M /trunk/SavedInstances.lua
+
+fix a display minor glitch in 7.x
+
 ------------------------------------------------------------------------
 r529 | oscarucb | 2016-10-26 01:11:45 +0000 (Wed, 26 Oct 2016) | 2 lines
 Changed paths:

@@ -391,12 +391,12 @@ Quando ricevi ricompense da una missione o bottino da una spedizione che può es
 		OptionsAdvisorHeader = "Opzioni avvisi",
 		OptionsAlignRight = "Allinea i valori a destra",
 		OptionsAlignRightTooltip = "Abilita questa opzione per allineare i valori di Pawn e le informazioni di miglioramento al bordo destro della tooltip invece che a sinistra.",
-		OptionsBagUpgradeAdvisor = "Show bag upgrade advisor", -- Requires localization
-		OptionsBagUpgradeAdvisorTooltip = [=[Enable this option to have Pawn take over the in-bag upgrade arrows.
+		OptionsBagUpgradeAdvisor = "Mostra avviso di miglioramento nelle borse",
+		OptionsBagUpgradeAdvisorTooltip = [=[Abilita questa opzione per far sì che Pawn possa applicare le freccie di miglioramento nelle borse.
 
-If checked, Pawn will find upgrades in your bags and mark items that are an upgrade for any of your active scales with green arrows. 
+Se abilitata, Pawn cercherà i miglioramenti nelle tue borse e marcherà con una freccia verde gli oggetti che costituiscono un miglioramento per una qualsiasi delle tue formule attive.
 
-If unchecked, WoW will mark items with a higher item level than what you're currently wearing, and Pawn will not interfere with the built-in feature.]=], -- Requires localization
+Se disabilitata, WoW marcherà gli oggetti di livello superiore a quelli che indossi attualmente. Pawn non interferirà con questa funzionalità integrata.]=],
 		OptionsBlankLine = "Aggiungi una riga vuota prima dei valori",
 		OptionsBlankLineTooltip = "Mantieni la tooltip dei tuoi oggetti estremamente ordinata abilitando questa opzione. Essa aggiungerà una riga vuota prima dei valori di Pawn.",
 		OptionsButtonHidden = "Nascondilo",

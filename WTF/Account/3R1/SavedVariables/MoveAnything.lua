@@ -43,11 +43,28 @@ MADB = {
 						54.9997520446777, -- [5]
 					},
 				},
+				["GarrisonLandingPageMinimapButton"] = {
+					["orgPos"] = {
+						"TOPLEFT", -- [1]
+						"Minimap", -- [2]
+						"TOPLEFT", -- [3]
+						0, -- [4]
+						0, -- [5]
+					},
+					["name"] = "GarrisonLandingPageMinimapButton",
+					["pos"] = {
+						"TOPLEFT", -- [1]
+						"Minimap", -- [2]
+						"TOPLEFT", -- [3]
+						161.80516378692, -- [4]
+						1.38874582076688, -- [5]
+					},
+				},
 			},
 		},
 	},
-	["frameListRows"] = 18,
-	["noBags"] = false,
-	["playSound"] = false,
 	["closeGUIOnEscape"] = false,
+	["playSound"] = false,
+	["noBags"] = false,
+	["frameListRows"] = 18,
 }

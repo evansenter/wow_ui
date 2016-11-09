@@ -318,6 +318,11 @@ GTFO.SpellID["214302"] = {
   sound = 3;
 };
 
+GTFO.SpellID["215806"] = {
+  --desc = "Tail Lash (Shar'thos)";
+  sound = 3;
+};
+
 -- **********
 -- * Mardum *
 -- **********
@@ -1011,6 +1016,22 @@ GTFO.SpellID["210850"] = {
   sound = 3;
 };
 
+GTFO.SpellID["210850"] = {
+  --desc = "Twisting Shadows (Elerethe Renferal)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["213790"] = {
+  --desc = "Venomous Pool (Elerethe Renferal)";
+  sound = 3;
+};
+
+GTFO.SpellID["215503"] = {
+  --desc = "Violent Rupture (Elerethe Renferal)";
+  sound = 3;
+};
+
 GTFO.SpellID["225329"] = {
   --desc = "Drake's Wrath (Drake's Fury)";
   sound = 3;
@@ -1154,4 +1175,79 @@ GTFO.SpellID["213328"] = {
   --desc = "Detonate: Arcane Orb (Spellblade Aluriel)";
   sound = 3;
 };
+
+
+--- ******************
+--- * Trial of Valor *
+--- ******************
+
+GTFO.SpellID["228874"] = {
+  --desc = "Horn of Valor (Odyn)";
+  sound = 4;
+  ignoreSelfInflicted = true;
+};
+
+GTFO.SpellID["227781"] = {
+  --desc = "Glowing Fragment (Odyn)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["227712"] = {
+  --desc = "Spear of Light (Odyn)";
+  sound = 3;
+};
+
+GTFO.SpellID["227843"] = {
+  --desc = "Trample (Guarm)";
+  sound = 3;
+};
+
+GTFO.SpellID["227514"] = {
+  --desc = "Flashing Fangs (Guarm)";
+  sound = 3;
+  tankSound = 0;
+};
+
+GTFO.SpellID["227642"] = {
+  --desc = "Multi-Headed (Guarm)";
+  sound = 3;
+  tankSound = 0;
+};
+
+GTFO.SpellID["227735"] = {
+  --desc = "Mixed Elements (Guarm)";
+  sound = 3;
+};
+
+GTFO.SpellID["227721"] = {
+  --desc = "Mixed Elements (Guarm)";
+  sound = 3;
+};
+
+GTFO.SpellID["227720"] = {
+  --desc = "Mixed Elements (Guarm)";
+  sound = 3;
+};
+
+-- TODO: Expel Light (Odyn)
+-- TODO: Storm of Justice (Odyn)
+-- TODO: Unerring Blast (Odyn) - Mythic, without Protected debuff
+-- TODO: Echo of Radiance (Odyn) - Mythic, wrong rune combo
+-- TODO: Flame Lick (Guarm) -- If not original target
+-- TODO: Frost Lick (Guarm) -- If not original target
+-- TODO: Shadow Lick (Guarm) -- If not original target
+-- TODO: Corrupted Slicer (Helya) -- Mythic
+-- TODO: Bilewater Breath (Helya) -- Non-tank fail
+-- TODO: Tainted Essence (Helya)
+-- TODO: Turbulent Waters/Orbs of Muck (Helya) -- Mythic
+-- TODO: Fetid Rot (Helya) -- Dispel fail
+-- TODO: Anchor Slam (Helya) -- Non-tank/swap fail?
+-- TODO: Give No Quarter (Helya) -- Avoidable?
+-- TODO: Corrosive Slicer (Helya) -- Mythic
+
+
+--- **********************
+--- * Return to Karazhan *
+--- **********************
 

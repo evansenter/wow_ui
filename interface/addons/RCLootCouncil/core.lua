@@ -50,7 +50,7 @@ function RCLootCouncil:OnInitialize()
   	self.version = GetAddOnMetadata("RCLootCouncil", "Version")
 	self.nnp = false
 	self.debug = false
-	self.tVersion = nil -- String or nil. Indicates test version, which alters stuff like version check. Is appended to 'version', i.e. "version-tVersion"
+	self.tVersion = nil -- String or nil. Indicates test version, which alters stuff like version check. Is appended to 'version', i.e. "version-tVersion" (max 10 letters for stupid security)
 
 	self.playerClass = select(2, UnitClass("player"))
 	self.guildRank = L["Unguilded"]
@@ -106,6 +106,7 @@ function RCLootCouncil:OnInitialize()
 				never = false,			-- Never enable
 				state = "ask_ml", 	-- Current state
 			},
+			onlyUseInRaids = true,
 			ambiguate = false, -- Append realm names to players
 			autoStart = false, -- start a session with all eligible items
 			autoLoot = true, -- Auto loot equippable items
@@ -184,7 +185,11 @@ function RCLootCouncil:OnInitialize()
 			currentSkin = "legion",
 
 			modules = { -- For storing module specific data
-				['*'] = {},
+				['*'] = {
+					filters = { -- Default filtering is showed
+						['*'] = true,
+					}
+				},
 			},
 
 			announceAward = true,
@@ -646,11 +651,13 @@ function RCLootCouncil:OnCommReceived(prefix, serializedMsg, distri, sender)
 				end
 
 			elseif command == "MLdb" and not self.isMasterLooter then -- ML sets his own mldb
-				if self:UnitIsUnit(sender, self.masterLooter) then
+				--[[ NOTE: 2.1.7 - While a check for this does make sense, I'm just really tired of mldb problems, and
+					noone should really be able to send it without being ML in the first place. So just accept it as is. ]]
+				--if self:UnitIsUnit(sender, self.masterLooter) then
 					self.mldb = unpack(data)
-				else
-					self:Debug("Non-ML:", sender, "sent Mldb!")
-				end
+				--else
+				--	self:Debug("Non-ML:", sender, "sent Mldb!")
+				--end
 
 			elseif command == "verTest" and not self:UnitIsUnit(sender, "player") then -- Don't reply to our own verTests
 				local otherVersion, tVersion = unpack(data)
@@ -659,22 +666,26 @@ function RCLootCouncil:OnCommReceived(prefix, serializedMsg, distri, sender)
 					sender = "guild"
 				end
 				self:SendCommand(sender, "verTestReply", self.playerName, self.playerClass, self.guildRank, self.version, self.tVersion, self:GetInstalledModulesFormattedData())
+				if strfind(otherVersion, "%a+") then return self:Debug("Someone's tampering with version?", otherVersion) end
 				if self.version < otherVersion and not self.verCheckDisplayed and (not (tVersion or self.tVersion)) then
 					self:Print(format(L["version_outdated_msg"], self.version, otherVersion))
 					self.verCheckDisplayed = true
 
 				elseif tVersion and self.tVersion and not self.verCheckDisplayed and self.tVersion < tVersion then
+					if #tVersion >= 10 then return self:Debug("Someone's tampering with tVersion?", tVersion) end
 					self:Print(format(L["tVersion_outdated_msg"], tVersion))
 					self.verCheckDisplayed = true
 				end
 
 			elseif command == "verTestReply" then
 				local _,_,_, otherVersion, tVersion = unpack(data)
+				if strfind(otherVersion, "%a+") then return self:Debug("Someone's tampering with version?", otherVersion) end
 				if self.version < otherVersion and not self.verCheckDisplayed and (not (tVersion or self.tVersion)) then
 					self:Print(format(L["version_outdated_msg"], self.version, otherVersion))
 					self.verCheckDisplayed = true
 
 				elseif tVersion and self.tVersion and not self.verCheckDisplayed and self.tVersion < tVersion then
+					if #tVersion >= 10 then return self:Debug("Someone's tampering with tVersion?", tVersion) end
 					self:Print(format(L["tVersion_outdated_msg"], tVersion))
 					self.verCheckDisplayed = true
 				end
@@ -694,9 +705,6 @@ function RCLootCouncil:OnCommReceived(prefix, serializedMsg, distri, sender)
 
 			elseif command == "playerInfoRequest" then
 				self:SendCommand(sender, "playerInfo", self:GetPlayerInfo())
-
-			elseif command == "message" then
-				self:Print(unpack(data))
 
 			elseif command == "session_end" and self.enabled then
 				if self:UnitIsUnit(sender, self.masterLooter) then
@@ -898,6 +906,7 @@ end
 function RCLootCouncil:GetArtifactRelics(link)
 	local id = self:GetItemIDFromLink(link)
 	local g1,g2;
+	if not C_ArtifactUI.GetEquippedArtifactNumRelicSlots() then return end -- Check if we even have an artifact
 	for i = 1, C_ArtifactUI.GetEquippedArtifactNumRelicSlots() do
 		if C_ArtifactUI.CanApplyRelicItemIDToEquippedArtifactSlot(id,i) then -- We can equip it
 			if g1 then
@@ -918,11 +927,11 @@ function RCLootCouncil:Timer(type, ...)
 		-- If we have a ML
 		if self.masterLooter then
 			-- But haven't received the mldb, then request it
-			if not self.mldb then
+			if not self.mldb or #self.mldb == 0 then
 				self:SendCommand(self.masterLooter, "MLdb_request")
 			end
 			-- and if we haven't received a council, request it
-			if not self.council then
+			if not self.council or #self.council == 0 then
 				self:SendCommand(self.masterLooter, "council_request")
 			end
 		end
@@ -1138,6 +1147,7 @@ end
 function RCLootCouncil:NewMLCheck()
 	local old_ml = self.masterLooter
 	self.isMasterLooter, self.masterLooter = self:GetML()
+	if IsPartyLFG() then return end	-- We can't use in lfg/lfd so don't bother
 	if self.masterLooter and self.masterLooter ~= "" and strfind(self.masterLooter, "Unknown") then
 		-- ML might be unknown for some reason
 		self:Debug("Unknown ML")
@@ -1153,6 +1163,9 @@ function RCLootCouncil:NewMLCheck()
 	self:Debug("Resetting council as we have a new ML!")
 	self.council = {}
 	if not self.isMasterLooter and self.masterLooter then return end -- Someone else has become ML
+
+	-- Check if we can use in party
+	if not IsInRaid() and db.onlyUseInRaids then return end
 
 	-- We are ML and shouldn't ask the player for usage
 	if self.isMasterLooter and db.usage.ml then -- addon should auto start
@@ -1173,6 +1186,9 @@ end
 function RCLootCouncil:OnRaidEnter(arg)
 	-- NOTE: We shouldn't need to call GetML() as it's most likely called on "LOOT_METHOD_CHANGED"
 	-- There's no ML, and lootmethod ~= ML, but we are the group leader
+	if IsPartyLFG() then return end	-- We can't use in lfg/lfd so don't bother
+	-- Check if we can use in party
+	if not IsInRaid() and db.onlyUseInRaids then return end
 	if not self.masterLooter and UnitIsGroupLeader("player") then
 		-- We don't need to ask the player for usage, so change loot method to master, and make the player ML
 		if db.usage.leader then

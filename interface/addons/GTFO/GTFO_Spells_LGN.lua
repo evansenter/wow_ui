@@ -274,6 +274,11 @@ GTFO.SpellID["201832"] = {
   sound = 1;
 };
 
+GTFO.SpellID["215876"] = {
+  --desc = "Burning Earth (Shar'thos)";
+  sound = 1;
+};
+
 -- **********
 -- * Mardum *
 -- **********
@@ -959,4 +964,51 @@ GTFO.SpellID["209433"] = {
   --desc = "Spanning Singularity (Grand Magistrix Elisande)";
   sound = 1;
 };
+
+--- ******************
+--- * Trial of Valor *
+--- ******************
+
+GTFO.SpellID["228007"] = {
+  --desc = "Dancing Blade (Odyn)";
+  sound = 1;
+};
+
+GTFO.SpellID["228683"] = {
+  --desc = "Cleansing Flame (Odyn)";
+  sound = 1;
+};
+
+GTFO.SpellID["227998"] = {
+  --desc = "Bilewater Corrosion (Helya)";
+  sound = 1;
+};
+
+GTFO.SpellID["228127"] = {
+  --desc = "Decay (Helya)";
+  sound = 1;
+};
+
+GTFO.SpellID["227930"] = {
+  --desc = "Orb of Corruption (Helya)";
+  sound = 1;
+  --negatingBuffSpellID = 229119; -- Orb of Corruption
+  test = true;
+};
+
+GTFO.SpellID["228063"] = {
+  --desc = "Orb of Corrosion (Helya)";
+  sound = 1;
+  --negatingBuffSpellID = 230267; -- Orb of Corrosion
+  test = true;
+};
+
+GTFO.SpellID["228371"] = {
+  --desc = "Breath of Dread (Helhound)";
+  sound = 1;
+};
+
+--- **********************
+--- * Return to Karazhan *
+--- **********************
 

@@ -7,7 +7,7 @@
 -- Main non-UI code
 ------------------------------------------------------------
 
-PawnVersion = 2.0104
+PawnVersion = 2.0108
 
 -- Pawn requires this version of VgerCore:
 local PawnVgerCoreVersionRequired = 1.09
@@ -27,7 +27,7 @@ PawnPrivateTooltipName = "PawnPrivateTooltip1"
 --	An entry in the Values table is an ordered array in the following format:
 --	{ ScaleName, Value, UnenchantedValue }
 local PawnItemCache = nil
-local PawnItemCacheMaxSize = 50
+local PawnItemCacheMaxSize = 200 -- ...was 50; thanks to bag arrows, this should be greater than the number of possible inventory slots
 
 local PawnScaleTotals = { }
 
@@ -121,7 +121,7 @@ function PawnOnEvent(Event, arg1, arg2, ...)
 		PawnOnItemLocked(arg1, arg2)
 	elseif Event == "ADDON_LOADED" then
 		PawnOnAddonLoaded(arg1)
-	elseif Event == "PLAYER_SPECIALIZATION_CHANGED" then
+	elseif Event == "PLAYER_SPECIALIZATION_CHANGED" and arg1 == "player" then
 		PawnOnSpecChanged()
 	elseif Event == "PLAYER_LOGIN" then
 		PawnInitialize()
@@ -373,10 +373,12 @@ function PawnInitialize()
 			local _, _, _, _, _, _, ItemLink = GetContainerItemInfo(bagID, slot)
 			local Item = PawnGetItemData(ItemLink)
 			if not Item then return nil end
+			--TEMPupgcounter = (TEMPupgcounter or 0) + 1 VgerCore.Message("*** Calling PawnIsItemAnUpgrade " .. TEMPupgcounter) -- ***
 			return PawnIsItemAnUpgrade(Item) ~= nil
 		else
 			return PawnOriginalIsContainerItemAnUpgrade(bagID, slot, ...)
 		end
+		-- FUTURE: Consider hooking ContainerFrameItemButton_UpdateItemUpgradeIcon instead, but then Pawn would need its own "retry when not enough information is available" logic
 	end
 
 	-- We're now effectively initialized.  Just the last steps of scale initialization remain.
@@ -563,13 +565,13 @@ function PawnInitializeOptions()
 		-- When upgrading each character to 2.0, turn on the auto-scale option, but just once.
 		PawnOptions.AutoSelectScales = true
 	end
-	if (not PawnCommon.LastVersion) or (PawnCommon.LastVersion < 2.01) then
-		-- The default scales changed in 2.1 when we switched from Wowhead to Ask Mr. Robot, so reset all upgrade data.
-		PawnInvalidateBestItems()
-	end
 	if (not PawnCommon.LastVersion) or (PawnCommon.LastVersion < 2.0101) then
 		-- The new Bag Upgrade Advisor is on by default.
 		PawnCommon.ShowBagUpgradeAdvisor = true
+	end
+	if (not PawnCommon.LastVersion) or (PawnCommon.LastVersion < PawnMrRobotLastUpdatedVersion) then
+		-- If the Ask Mr. Robot scales have been updated since the last time they used Pawn, re-scan gear.
+		PawnInvalidateBestItems()
 	end
 	PawnCommon.LastVersion = PawnVersion
 	PawnOptions.LastVersion = PawnVersion
@@ -3466,9 +3468,6 @@ function PawnOnSpecChanged()
 	-- Don't do anything if they've turned off auto-scales.
 	if not PawnOptions.AutoSelectScales then return end
 
-	PawnClearCache()
-	PawnInvalidateBestItems()
-
 	local _, _, ClassID = UnitClass("player")
 	local SpecID = GetSpecialization()
 
@@ -3476,18 +3475,31 @@ function PawnOnSpecChanged()
 	-- of them in the UI.
 	-- Right now, we only take scales from a provider into account, because some code assumes that only one
 	-- scale can ever be enabled in Automatic mode. 
-	local ScaleName, Scale, LastEnabledScaleName
+	local ScaleName, Scale, LastEnabledScaleName, MadeChanges
 	for ScaleName, Scale in pairs(PawnCommon.Scales) do
+		local IsVisible = PawnIsScaleVisible(ScaleName) 
 		if Scale.ClassID == ClassID and Scale.SpecID == SpecID and Scale.Provider ~= nil then
-			PawnSetScaleVisible(ScaleName, true)
-			LastEnabledScaleName = ScaleName
+			if not IsVisible then
+				PawnSetScaleVisible(ScaleName, true)
+				LastEnabledScaleName = ScaleName
+				MadeChanges = true
+			end
 		else
-			PawnSetScaleVisible(ScaleName, false)
+			if IsVisible then
+				PawnSetScaleVisible(ScaleName, false)
+				MadeChanges = true
+			end
 		end
 	end
-	PawnUICurrentScale = nil -- Let the refresh method re-set this
-	PawnUIFrame_ScaleSelector_Refresh()
-	PawnUI_SelectScale(PawnUICurrentScale)
+	if MadeChanges then
+		-- Don't reset the UI if their spec didn't actually change—this notification can be a bit spammy.
+		PawnClearCache()
+		PawnInvalidateBestItems()
+
+		PawnUICurrentScale = nil -- Let the refresh method re-set this
+		PawnUIFrame_ScaleSelector_Refresh()
+		PawnUI_SelectScale(PawnUICurrentScale)
+	end
 end
 
 function PawnEnableAllScalesForClass()

@@ -57,7 +57,7 @@ VER 3 010000000000001D "Tier 6 MW" "INV_Misc_QuestionMark"
 END
 VER 3 010000000000001B "Tiger's Lust" "INV_Misc_QuestionMark"
 #showtooltip
-/use [@mouseover,help,nodead][@player][]Tiger's Lust
+/use [nomod,@mouseover,help,nodead][nomod,@player][nomod][mod:ctrl][mod:alt]Tiger's Lust;[mod:shift]6
 END
 VER 3 010000000000000E "ToD" "INV_MISC_QUESTIONMARK"
 #showtooltip
@@ -73,7 +73,7 @@ VER 3 0100000000000018 "Vivify" "INV_Misc_QuestionMark"
 /use 14
 /use [@mouseover,help,nodead][]Vivify
 END
-VER 3 010000000000001E "WDP" "INV_Misc_QuestionMark"
+VER 3 010000000000001E "WDP" "988194"
 #showtooltip
 /use [nochanneling]Whirling Dragon Punch
 END

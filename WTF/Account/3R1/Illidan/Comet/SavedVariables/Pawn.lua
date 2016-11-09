@@ -1,6 +1,6 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0104,
+	["LastVersion"] = 2.0108,
 	["LastPlayerFullName"] = "Comet-Illidan",
 	["AutoSelectScales"] = false,
 	["UpgradeTracking"] = false,

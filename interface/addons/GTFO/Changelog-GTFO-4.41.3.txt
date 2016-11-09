@@ -1,10 +1,44 @@
 ------------------------------------------------------------------------
-r280 | zensunim | 2016-10-25 06:51:45 +0000 (Tue, 25 Oct 2016) | 2 lines
+r284 | zensunim | 2016-11-09 07:31:23 +0000 (Wed, 09 Nov 2016) | 4 lines
 Changed paths:
-   A /tags/4.41.2 (from /trunk:279)
+   A /tags/4.41.3 (from /trunk:283)
 
-4.41.2
-* Updated for patch 7.1
+4.41.3
+* Added Legion spells for The Broken Isles (world)
+* Added Legion spells for Trial of Valor
+
+------------------------------------------------------------------------
+r283 | zensunim | 2016-11-09 07:31:04 +0000 (Wed, 09 Nov 2016) | 4 lines
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO.toc
+   M /trunk/GTFO_Fail_LGN.lua
+   M /trunk/GTFO_Spells_LGN.lua
+   M /trunk/ReadMe.txt
+
+4.41.3
+* Added Legion spells for The Broken Isles (world)
+* Added Legion spells for Trial of Valor
+
+------------------------------------------------------------------------
+r282 | zensunim | 2016-11-09 01:11:35 +0000 (Wed, 09 Nov 2016) | 2 lines
+Changed paths:
+   M /trunk/GTFO.lua
+   M /trunk/GTFO_Fail_LGN.lua
+   M /trunk/GTFO_Spells_LGN.lua
+
+Added Legion spells for Trial of Valor
+
+------------------------------------------------------------------------
+r281 | zensunim | 2016-11-08 20:41:20 +0000 (Tue, 08 Nov 2016) | 2 lines
+Changed paths:
+   M /trunk/GTFO.toc
+   M /trunk/GTFO_Fail_LGN.lua
+   M /trunk/GTFO_Spells_LGN.lua
+   M /trunk/ReadMe.txt
+
+Added Legion spells for Trial of Valor
+
 ------------------------------------------------------------------------
 r279 | zensunim | 2016-10-25 06:51:31 +0000 (Tue, 25 Oct 2016) | 2 lines
 Changed paths:
@@ -99,72 +133,4 @@ Changed paths:
    M /trunk/ReadMe.txt
 
 Fixed Legion spells for Halls of Valor
-------------------------------------------------------------------------
-r265 | zensunim | 2016-10-07 05:54:22 +0000 (Fri, 07 Oct 2016) | 1 line
-Changed paths:
-   M /trunk/GTFO.lua
-   M /trunk/GTFO.toc
-   M /trunk/GTFO_Fail_LGN.lua
-   M /trunk/GTFO_Spells_LGN.lua
-
-4.40.2 prep
-------------------------------------------------------------------------
-r264 | zensunim | 2016-09-30 07:12:24 +0000 (Fri, 30 Sep 2016) | 2 lines
-Changed paths:
-   M /trunk/GTFO.lua
-   M /trunk/GTFO.toc
-   M /trunk/GTFO_Fail_LGN.lua
-   M /trunk/GTFO_Spells_LGN.lua
-   M /trunk/ReadMe.txt
-
-* Added Legion spells for The Broken Isles (world)
-* Added Legion spells for The Emerald Nightmare
-------------------------------------------------------------------------
-r262 | zensunim | 2016-09-29 15:51:31 +0000 (Thu, 29 Sep 2016) | 1 line
-Changed paths:
-   M /trunk/GTFO.lua
-   M /trunk/GTFO.toc
-   M /trunk/GTFO_Fail_LGN.lua
-   M /trunk/ReadMe.txt
-
-4.40.1
-------------------------------------------------------------------------
-r260 | zensunim | 2016-09-29 07:22:22 +0000 (Thu, 29 Sep 2016) | 1 line
-Changed paths:
-   M /trunk/ReadMe.txt
-
-4.40 release
-------------------------------------------------------------------------
-r259 | zensunim | 2016-09-29 07:22:05 +0000 (Thu, 29 Sep 2016) | 1 line
-Changed paths:
-   M /trunk/GTFO.lua
-   M /trunk/GTFO.toc
-   M /trunk/GTFO_Spells_LGN.lua
-
-4.40 release
-------------------------------------------------------------------------
-r258 | zensunim | 2016-09-29 07:14:59 +0000 (Thu, 29 Sep 2016) | 1 line
-Changed paths:
-   M /trunk/GTFO.lua
-   M /trunk/GTFO_Ignore.lua
-   A /trunk/ReadMe.txt
-
-Moved version log to ReadMe.txt
-------------------------------------------------------------------------
-r257 | zensunim | 2016-09-29 06:51:19 +0000 (Thu, 29 Sep 2016) | 1 line
-Changed paths:
-   M /trunk/GTFO.lua
-   M /trunk/GTFO_Fail_LGN.lua
-   M /trunk/GTFO_Spells_LGN.lua
-
-Added Legion spells for The Emerald Nightmare
-------------------------------------------------------------------------
-r256 | zensunim | 2016-09-26 15:21:11 +0000 (Mon, 26 Sep 2016) | 1 line
-Changed paths:
-   M /trunk/GTFO.lua
-   M /trunk/GTFO.toc
-   M /trunk/GTFO_Fail_LGN.lua
-   M /trunk/GTFO_Spells_LGN.lua
-
-Added Legion spells for The Emerald Nightmare, world
 ------------------------------------------------------------------------

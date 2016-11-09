@@ -1,4 +1,0 @@
-subversion:
-	- Omega via svn r15422: Make the improved behavior new default, but keep it optional in case people preferred it other way
-	- Omega via svn r15421: Check debuff time on ilgyoth and warn to taunt earlier if it?\226?\128?\153ll fall off before next cast. Add timer correction when horror is delayed by flowers. Remove some redundancy in core
-	- tandanu via svn r15420: increment alpha version

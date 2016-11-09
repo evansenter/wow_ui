@@ -1,0 +1,17 @@
+tag 2.2.2.0
+a1e0f1d498c2c5391b7f27088d2e3ecd4e5f9639
+Benjamin Staneck <staneck@gmail.com>
+2016-10-31 22:14:47 +0100
+
+
+
+--------------------
+
+Infus:
+	- Order the texture pickers's okay/cancel button and the textures
+	This feels like a Blizzard bug. Apparently the scroll frame no
+	longer clips the mouse interaction. So increase the okay and cancel
+	button's frame level to ensure that they are in front.
+	- Update Trigger Templates for 7.1
+	TODO!!! Add new trinkets, investigate patch notes
+	- Fix remaining time check of cooldown progress (item slot)

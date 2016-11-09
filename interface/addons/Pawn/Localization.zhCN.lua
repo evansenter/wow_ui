@@ -391,12 +391,14 @@ Pawn插件默认已经参考AskMrRobot给所有职业的专精建立了标准评
 		OptionsAdvisorHeader = "建议选项",
 		OptionsAlignRight = "排列数值到提示栏右边.",
 		OptionsAlignRightTooltip = "让数值靠最右边显示，而不是放在属性权重项目名称的后面。",
-		OptionsBagUpgradeAdvisor = "Show bag upgrade advisor", -- Requires localization
-		OptionsBagUpgradeAdvisorTooltip = [=[Enable this option to have Pawn take over the in-bag upgrade arrows.
+		OptionsBagUpgradeAdvisor = "显示背包提升建议",
+		OptionsBagUpgradeAdvisorTooltip = [=[启用此选项后，Pawn会标记显示背包里有属性提升的装备。
 
-If checked, Pawn will find upgrades in your bags and mark items that are an upgrade for any of your active scales with green arrows. 
+如果启用，对应你当前选择的专精属性权重下，Pawn将扫描你背包里对你有属性提升的装备并作出绿色箭头的标记。
 
-If unchecked, WoW will mark items with a higher item level than what you're currently wearing, and Pawn will not interfere with the built-in feature.]=], -- Requires localization
+如果未启用，游戏将会显示内置的装等提升，Pawn仍然会扫描装备的属性提升但不提示也不会影响游戏内置功能的正常工作。
+
+译者注：7.1新功能，默认背包支持，但部分背包插件可能不兼容，并不会有提示。]=],
 		OptionsBlankLine = "数值前加一个空白行",
 		OptionsBlankLineTooltip = "在Pawn的数据信息之前加一个空格，让显示更清爽。",
 		OptionsButtonHidden = "隐藏",

@@ -295,4 +295,5 @@ DBM-TrialofValor: enabled
 WorldQuestTracker: enabled
 SubSpec: enabled
 TransmogTokens: enabled
-RCLootCouncil: disabled
+RCLootCouncil: enabled
+lib-st: enabled

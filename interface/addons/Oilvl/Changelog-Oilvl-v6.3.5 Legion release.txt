@@ -1,9 +1,23 @@
 ------------------------------------------------------------------------
-r634 | olzenkhaw | 2016-10-26 08:58:35 +0000 (Wed, 26 Oct 2016) | 1 line
+r638 | olzenkhaw | 2016-11-05 15:06:32 +0000 (Sat, 05 Nov 2016) | 1 line
 Changed paths:
-   A /tags/v6.3.3 Legion release (from /trunk:633)
+   A /tags/v6.3.5 Legion release (from /trunk:637)
 
-v6.3.3 - fixed a bug
+v6.3.5 - fixed a bug
+------------------------------------------------------------------------
+r637 | olzenkhaw | 2016-11-05 15:06:11 +0000 (Sat, 05 Nov 2016) | 1 line
+Changed paths:
+   M /trunk/Oilvl.lua
+   M /trunk/Oilvl.toc
+
+v6.3.5 - fixed a bug
+------------------------------------------------------------------------
+r635 | olzenkhaw | 2016-10-31 05:40:04 +0000 (Mon, 31 Oct 2016) | 1 line
+Changed paths:
+   M /trunk/Oilvl.lua
+   M /trunk/Oilvl.toc
+
+v6.3.4 - change item level color to legendary color if player wear at least 1 legendary item.
 ------------------------------------------------------------------------
 r633 | olzenkhaw | 2016-10-26 08:58:14 +0000 (Wed, 26 Oct 2016) | 1 line
 Changed paths:
@@ -177,61 +191,4 @@ Changed paths:
 v6.2.24 
 - Data Broker feature is enabled during combat.
 - Revert the change of autoscan disable everytime the addon is loaded.
-------------------------------------------------------------------------
-r586 | olzenkhaw | 2016-10-02 01:57:39 +0000 (Sun, 02 Oct 2016) | 1 line
-Changed paths:
-   M /trunk/Oilvl.lua
-   M /trunk/Oilvl.toc
-
-v6.2.23 - fixed a bug
-------------------------------------------------------------------------
-r584 | olzenkhaw | 2016-09-30 08:21:55 +0000 (Fri, 30 Sep 2016) | 1 line
-Changed paths:
-   M /trunk/Oilvl.toc
-   M /trunk/OilvlPlayer.lua
-
-v6.2.22 - fixed a bug
-------------------------------------------------------------------------
-r582 | olzenkhaw | 2016-09-30 04:44:42 +0000 (Fri, 30 Sep 2016) | 1 line
-Changed paths:
-   M /trunk/Oilvl.lua
-   M /trunk/Oilvl.toc
-
-v6.2.21 - turn off auto scanning every time the addon is loaded to avoid lag issues.
-------------------------------------------------------------------------
-r580 | olzenkhaw | 2016-09-29 13:35:41 +0000 (Thu, 29 Sep 2016) | 1 line
-Changed paths:
-   M /trunk/Oilvl.lua
-   M /trunk/Oilvl.toc
-
-v6.2.19 - fixed a bug
-------------------------------------------------------------------------
-r578 | olzenkhaw | 2016-09-27 13:06:02 +0000 (Tue, 27 Sep 2016) | 1 line
-Changed paths:
-   M /trunk/Oilvl.lua
-   M /trunk/Oilvl.toc
-
-v6.2.18 - When in raid / party / instance, mouseover portrait / nameplate will not show item level or raid progression or both.
-------------------------------------------------------------------------
-r576 | olzenkhaw | 2016-09-26 00:14:41 +0000 (Mon, 26 Sep 2016) | 1 line
-Changed paths:
-   M /trunk/Oilvl.lua
-   M /trunk/Oilvl.toc
-
-v6.2.17 - fixed a bug
-------------------------------------------------------------------------
-r574 | olzenkhaw | 2016-09-26 00:08:42 +0000 (Mon, 26 Sep 2016) | 1 line
-Changed paths:
-   M /trunk/Oilvl.lua
-   M /trunk/Oilvl.toc
-   M /trunk/Oilvlconfig.lua
-
-v6.2.16 - fixed a bug
-------------------------------------------------------------------------
-r572 | olzenkhaw | 2016-09-25 23:38:51 +0000 (Sun, 25 Sep 2016) | 1 line
-Changed paths:
-   M /trunk/Oilvl.lua
-   M /trunk/Oilvl.toc
-
-v6.2.15 - fixed a bug
 ------------------------------------------------------------------------
