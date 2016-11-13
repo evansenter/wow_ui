@@ -297,3 +297,6 @@ SubSpec: enabled
 TransmogTokens: enabled
 RCLootCouncil: enabled
 lib-st: enabled
+Telemancy: enabled
+TellMeWhen: disabled
+TellMeWhen_Options: disabled

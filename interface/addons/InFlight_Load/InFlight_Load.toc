@@ -1,10 +1,10 @@
-## Interface: 70000
+## Interface: 70100
 ## Title: InFlight_Load
 ## Notes: Loader for InFlight
 ## Notes-zhTW: InFlight 的載入器
 ## Notes-zhCN: 显示各地飞行点
 ## Author: TotalPackage
-## Version: 7.0.002
+## Version: 7.1.001
 
 ## X-Category: Interface Enhancements
 

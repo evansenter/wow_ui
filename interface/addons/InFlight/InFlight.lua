@@ -264,8 +264,8 @@ function InFlight:LoadBulk()  -- called from InFlight_Load
 	InFlightVars = InFlightVars or { Alliance = {}, Horde = {}, }  -- flight time data
 	vars = InFlightVars[UnitFactionGroup("player")]
 
-	if db.dbinit ~= 15 then
-		db.dbinit = 15
+	if db.dbinit ~= 16 then
+		db.dbinit = 16
 		local function SetDefaults(db, t)  -- set saved variables
 			for k,v in pairs(t) do
 				if type(db[k]) == "table" then
@@ -297,9 +297,11 @@ function InFlight:LoadBulk()  -- called from InFlight_Load
 				for source, dt in pairs(t) do
 					InFlightVars[faction][source] = InFlightVars[faction][source] or { }
 					for destination, dtime in pairs(dt) do
-						local vtime = InFlightVars[faction][source][destination]
-						if not vtime or vtime > dtime then
-							InFlightVars[faction][source][destination] = dtime
+						if type(dtime) == "number" then
+							local vtime = InFlightVars[faction][source][destination]
+							if not vtime or vtime > dtime then
+								InFlightVars[faction][source][destination] = dtime
+							end
 						end
 					end
 				end

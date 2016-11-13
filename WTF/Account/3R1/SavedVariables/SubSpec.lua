@@ -75,9 +75,9 @@ SubSpecStorage = {
 					["column"] = 3,
 				}, -- [6]
 				{
-					["id"] = 22105,
-					["name"] = "Whirling Dragon Punch",
-					["column"] = 2,
+					["id"] = 21191,
+					["name"] = "Serenity",
+					["column"] = 3,
 				}, -- [7]
 			},
 		}, -- [2]

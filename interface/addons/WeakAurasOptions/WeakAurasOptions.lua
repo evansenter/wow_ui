@@ -489,12 +489,13 @@ function WeakAuras.ConstructOptions(prototype, data, startorder, subPrefix, subS
       if(triggertype == "untrigger") then
         name = "untrigger_"..name;
       end
-      if (arg.type ~= "toggle" and arg.type ~= "tristate") then
+      if (arg.type == "multiselect") then
         -- Ensure new line for non-toggle options
         options["spacer_"..name] = {
           type = "description",
           name = "",
           order = order,
+          hidden = hidden,
         }
         order = order + 1;
       end
@@ -2347,7 +2348,12 @@ function WeakAuras.AddOption(id, data)
             name = L["Message"],
             width = "double",
             order = 5,
-            disabled = function() return not data.actions.start.do_message end
+            disabled = function() return not data.actions.start.do_message end,
+            desc = function()
+                 local ret = L["Dynamic text tooltip"];
+                 ret = ret .. WeakAuras.GetAdditionalProperties(data);
+                 return ret
+            end,
           },
           start_do_sound = {
             type = "toggle",
@@ -2522,7 +2528,12 @@ function WeakAuras.AddOption(id, data)
             name = L["Message"],
             width = "double",
             order = 25,
-            disabled = function() return not data.actions.finish.do_message end
+            disabled = function() return not data.actions.finish.do_message end,
+            desc = function()
+                 local ret = L["Dynamic text tooltip"];
+                 ret = ret .. WeakAuras.GetAdditionalProperties(data);
+                 return ret
+            end,
           },
           finish_do_sound = {
             type = "toggle",
@@ -5267,6 +5278,12 @@ function WeakAuras.ReloadTriggerOptions(data)
       order = 9,
       values = subevent_suffix_types,
       hidden = function() return not (trigger.type == "event" and trigger.event == "Combat Log" and subevent_actual_prefix_types[trigger.subeventPrefix]); end
+    },
+    spacer_suffix = {
+      type = "description",
+      name = "",
+      order = 9.1,
+      hidden = function() return not (trigger.type == "event" and trigger.event == "Combat Log"); end
     },
     custom_type = {
       type = "select",
