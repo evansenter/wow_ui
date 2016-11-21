@@ -1,0 +1,20 @@
+Changes since tag 2.2.2.2
+
+commit 9bc46e548cf6055cf5c5f2d6fdc8a734eb90d899
+Author: Benjamin Staneck <staneck@gmail.com>
+Date:   Fri Nov 18 01:17:42 2016 +0100
+
+    Test for the CurseForge packager.
+
+commit 9bc46e548cf6055cf5c5f2d6fdc8a734eb90d899
+Author: Benjamin Staneck <staneck@gmail.com>
+Date:   Fri Nov 18 01:17:42 2016 +0100
+
+    Test for the CurseForge packager.
+
+commit c4993033ae81c31e9cb94eebed7365c4f7bcd6fb
+Author: Benjamin Staneck <staneck@gmail.com>
+Date:   Fri Nov 18 00:11:03 2016 +0100
+
+    dummy commit to trigger wowace packager
+
