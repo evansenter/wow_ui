@@ -104,6 +104,7 @@ if not L then return end
 -- L["Choose when to use RCLootCouncil"] = ""
 -- L["Clear Loot History"] = ""
 -- L["clear_loot_history_desc"] = ""
+-- L["Clear Selection"] = ""
 -- L["Click to add note to send to the council."] = ""
 -- L["Click to expand/collapse more info"] = ""
 -- L["Click to switch to 'item'"] = ""

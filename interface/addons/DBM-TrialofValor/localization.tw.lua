@@ -1,4 +1,4 @@
-﻿if GetLocale() ~= "zhTW" then return end
+if GetLocale() ~= "zhTW" then return end
 local L
 
 ---------------
@@ -29,7 +29,10 @@ L= DBM:GetModLocalization(1830)
 L= DBM:GetModLocalization(1829)
 
 L:SetMiscLocalization({
-	phaseThree =	"Your efforts are for naught, mortals! Odyn will NEVER be free!"
+	phaseThree =	"Your efforts are for naught, mortals! Odyn will NEVER be free!",
+	near =			"近",
+	far =			"遠",
+	multiple =		"多"
 })
 
 -------------

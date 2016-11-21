@@ -172,80 +172,80 @@ AskMrRobotDb3 = {
 				[113977] = 1,
 				[35595] = 1,
 				[113866] = 1,
-				[113261] = 194,
-				[110611] = 2378,
+				[27944] = 1,
+				[113295] = 2,
 				[40187] = 1,
 				[99047] = 1,
 				[113660] = 2,
 				[109985] = 1,
 				[99198] = 1,
 				[113811] = 1,
-				[112318] = 1,
+				[26045] = 500,
 				[109128] = 3,
 				[118135] = 1,
 				[111557] = 1,
 				[112953] = 1,
-				[98920] = 1,
+				[64400] = 1,
 				[118883] = 1,
 				[113808] = 1,
 				[9372] = 1,
 				[109802] = 1,
 				[113264] = 60,
-				[113810] = 1,
-				[119331] = 1,
-				[111366] = 6,
-				[26044] = 200,
+				[118892] = 1,
+				[6975] = 1,
 				[112796] = 1,
 				[128171] = 1,
+				[64401] = 1,
+				[26044] = 200,
 				[109129] = 2,
-				[116257] = 1,
 				[113844] = 1,
+				[116257] = 1,
 				[86547] = 3,
 				[113606] = 1,
-				[39680] = 1,
+				[118472] = 2,
 				[67061] = 1,
 				[109693] = 82,
 				[114781] = 4,
-				[118472] = 2,
+				[39680] = 1,
 				[118750] = 1,
-				[118758] = 1,
-				[118369] = 1,
 				[113805] = 1,
-				[119394] = 1,
+				[118369] = 1,
+				[118758] = 1,
+				[113806] = 1,
 				[110011] = 1,
-				[114234] = 1,
+				[42768] = 1,
 				[27985] = 1,
 				[108257] = 2262,
-				[42768] = 1,
+				[114234] = 1,
 				[101796] = 1,
 				[101677] = 1,
 				[87454] = 1,
 				[65625] = 1,
-				[99747] = 1,
-				[113263] = 280,
 				[35576] = 1,
+				[113263] = 280,
+				[99747] = 1,
 				[114552] = 1,
 				[87509] = 1,
-				[113806] = 1,
+				[119394] = 1,
 				[64402] = 1,
 				[112933] = 1,
 				[118148] = 1,
 				[112949] = 1,
 				[113846] = 1,
 				[113600] = 1,
-				[118892] = 1,
-				[6975] = 1,
-				[64401] = 1,
+				[111366] = 6,
+				[119331] = 1,
+				[113810] = 1,
 				[113632] = 2,
 				[113894] = 1,
 				[113648] = 1,
 				[87494] = 1,
-				[64400] = 1,
+				[98920] = 1,
 				[117355] = 1,
 				[113807] = 1,
-				[26045] = 500,
-				[113295] = 2,
-				[27944] = 1,
+				[112318] = 1,
+				[110611] = 2378,
+				[113261] = 194,
 			},
 		},
 		["Cometron - Illidan"] = {
@@ -302,37 +302,37 @@ AskMrRobotDb3 = {
 			["Talents"] = {
 				"2223113", -- [1]
 				"1233122", -- [2]
-				"1213133", -- [3]
+				"3213133", -- [3]
 			},
 			["BankItems"] = {
-				"|cff00ccff|Hitem:104405:4444:76681:76681:::::110:269::5::::|h[Hellscream's Decapitator]|h|r", -- [1]
-				"|cff00ccff|Hitem:105679:4444:76681:76681:::::110:269::3::::|h[Hellscream's Decapitator]|h|r", -- [2]
-				"|cff00ccff|Hitem:133597::::::::110:269::::::|h[Infallible Tracking Charm]|h|r", -- [3]
-				"|cff00ccff|Hitem:133585::::::::110:269::23::::|h[Judgment of the Naaru]|h|r", -- [4]
-				"|cff00ccff|Hitem:133598::::::::110:269::::::|h[Purified Shard of the Third Moon]|h|r", -- [5]
-				"|cff00ccff|Hitem:128318::::::::110:269::1::::|h[Touch of the Void]|h|r", -- [6]
-				"|cff00ccff|Hitem:128318::::::::110:269::1::::|h[Touch of the Void]|h|r", -- [7]
-				"|cff00ccff|Hitem:128318::::::::110:269::1::::|h[Touch of the Void]|h|r", -- [8]
-				"|cffff8000|Hitem:124638:5324:::::::110:269::14:2:621:650:::|h[Etheralus, the Eternal Reward]|h|r", -- [9]
-				"|cffff8000|Hitem:124636:5328:::::::110:269::11:2:649:625:::|h[Maalus, the Blood Drinker]|h|r", -- [10]
-				"|cffff8000|Hitem:124637:5326:::::::110:269::14:2:621:649:::|h[Sanctus, Sigil of the Unbroken]|h|r", -- [11]
-				"|cffa335ee|Hitem:64402::::::::110:269::14::::|h[Battle Standard of Coordination]|h|r", -- [12]
-				"|cffa335ee|Hitem:141001::::::::110:269::::::|h[Replica Blood Guard's Cleaver]|h|r", -- [13]
-				"|cffa335ee|Hitem:142207::::::::110:269::23:3:3453:1477:3336:::|h[Amulet of the Last Guardian]|h|r", -- [14]
-				"|cffa335ee|Hitem:139731::::::::110:269::11:2:3386:3384:::|h[Grandmaster's Tunic]|h|r", -- [15]
-				"|cffa335ee|Hitem:139198::::::::110:269::5:2:1805:1487:::|h[Forest-Lord's Waistwrap]|h|r", -- [16]
-				"|cffa335ee|Hitem:139737::::::::110:269::14:2:3385:3384:::|h[Grandmaster's Waistband]|h|r", -- [17]
-				"|cff0070dd|Hitem:118922::::::::110:269::11::::|h[Oralius' Whispering Crystal]|h|r", -- [18]
-				"|cff0070dd|Hitem:64401::::::::110:269::14::::|h[Standard of Unity]|h|r", -- [19]
-				"|cff0070dd|Hitem:128312::::::::110:269::::::|h[Elixir of the Rapid Mind]|h|r", -- [20]
-				"|cff0070dd|Hitem:139734::::::::110:269::11:2:3386:3381:::|h[Grandmaster's Crown]|h|r", -- [21]
-				"|cff0070dd|Hitem:139735::::::::110:269::14:2:3386:3382:::|h[Grandmaster's Legguards]|h|r", -- [22]
-				"|cff0070dd|Hitem:139738::::::::110:269::11:2:3386:3381:::|h[Grandmaster's Cuffs]|h|r", -- [23]
-				"|cff0070dd|Hitem:139733::::::::110:269::14:2:3386:3382:::|h[Grandmaster's Palms]|h|r", -- [24]
-				"|cff0070dd|Hitem:118100::::::::110:269::::::|h[Highmaul Relic]|h|r", -- [25]
-				"|cff1eff00|Hitem:141287::::::::110:269:512::1:1812:110:::|h[Law of Strength]|h|r", -- [26]
-				"|cff1eff00|Hitem:141292::::::::110:269:512::1:1812:110:::|h[Crystallizing Mana]|h|r", -- [27]
-				"|cff1eff00|Hitem:121049::::::::110:269:512::2:1812:1717:110:::|h[Temporal Scholar's Cowl of the Harmonious]|h|r", -- [28]
+				"|cffa335ee|Hitem:64402::::::::110:269::14::::|h[Battle Standard of Coordination]|h|r", -- [1]
+				"|cffa335ee|Hitem:142207::::::::110:269::23:3:3453:1477:3336:::|h[Amulet of the Last Guardian]|h|r", -- [2]
+				"|cffa335ee|Hitem:139731::::::::110:269::11:2:3386:3384:::|h[Grandmaster's Tunic]|h|r", -- [3]
+				"|cffa335ee|Hitem:139198::::::::110:269::5:2:1805:1487:::|h[Forest-Lord's Waistwrap]|h|r", -- [4]
+				"|cffa335ee|Hitem:139737::::::::110:269::14:2:3385:3384:::|h[Grandmaster's Waistband]|h|r", -- [5]
+				"|cffa335ee|Hitem:139732::::::::110:269::14:2:3386:3384:::|h[Grandmaster's Footwraps]|h|r", -- [6]
+				"|cff0070dd|Hitem:118922::::::::110:269::11::::|h[Oralius' Whispering Crystal]|h|r", -- [7]
+				"|cff0070dd|Hitem:64401::::::::110:269::14::::|h[Standard of Unity]|h|r", -- [8]
+				"|cff0070dd|Hitem:128312::::::::110:269::::::|h[Elixir of the Rapid Mind]|h|r", -- [9]
+				"|cff0070dd|Hitem:139734::::::::110:269::11:2:3386:3381:::|h[Grandmaster's Crown]|h|r", -- [10]
+				"|cff0070dd|Hitem:139735::::::::110:269::14:2:3386:3382:::|h[Grandmaster's Legguards]|h|r", -- [11]
+				"|cff0070dd|Hitem:139738::::::::110:269::11:2:3386:3381:::|h[Grandmaster's Cuffs]|h|r", -- [12]
+				"|cff0070dd|Hitem:139733::::::::110:269::14:2:3386:3382:::|h[Grandmaster's Palms]|h|r", -- [13]
+				"|cff0070dd|Hitem:118100::::::::110:269::::::|h[Highmaul Relic]|h|r", -- [14]
+				"|cff1eff00|Hitem:141287::::::::110:269:512::1:1812:110:::|h[Law of Strength]|h|r", -- [15]
+				"|cff1eff00|Hitem:141292::::::::110:269:512::1:1812:110:::|h[Crystallizing Mana]|h|r", -- [16]
+				"|cff1eff00|Hitem:121049::::::::110:269:512::2:1812:1717:110:::|h[Temporal Scholar's Cowl of the Harmonious]|h|r", -- [17]
+				"|cff1eff00|Hitem:121214::::::::110:269:512::2:1812:1708:110:::|h[Crescent Vale Cowl of the Aurora]|h|r", -- [18]
+				"|cff1eff00|Hitem:121214::::::::110:269:512::2:1812:1684:110:::|h[Crescent Vale Cowl of the Peerless]|h|r", -- [19]
+				"|cff1eff00|Hitem:121224::::::::110:269:512::2:1812:1687:110:::|h[Jandvik Helm of the Peerless]|h|r", -- [20]
+				"|cff1eff00|Hitem:121274::::::::110:269:512::2:1812:1697:110:::|h[Moonfall Shoulderpads of the Feverflare]|h|r", -- [21]
+				"|cff1eff00|Hitem:121156::::::::110:269:512::2:1812:1717:110:::|h[Valisdall Spaulders of the Harmonious]|h|r", -- [22]
+				"|cff1eff00|Hitem:121226::::::::110:269:512::2:1812:1682:110:::|h[Jandvik Pauldrons of the Quickblade]|h|r", -- [23]
+				"|cff1eff00|Hitem:121133::::::::110:269:512::2:1812:1716:110:::|h[Haustvelt Shoulders of the Harmonious]|h|r", -- [24]
+				"|cff1eff00|Hitem:121054::::::::110:269:512::2:1812:1692:110:::|h[Temporal Scholar's Shoulderpads of the Fireflash]|h|r", -- [25]
+				"|cff1eff00|Hitem:121077::::::::110:269:512::2:1812:1689:110:::|h[Icepine Jerkin of the Peerless]|h|r", -- [26]
+				"|cff1eff00|Hitem:121001::::::::110:269:512::2:1812:1702:110:::|h[Rhut'van Breastplate of the Feverflare]|h|r", -- [27]
+				"|cff1eff00|Hitem:121166::::::::110:269:512::2:1812:1676:110:::|h[Kal'delar Breastplate of the Quickblade]|h|r", -- [28]
 				"|cff0070dd|Hitem:124441::::::::110:269::::::|h[Leylight Shard]|h|r", -- [29]
 				"|cffffffff|Hitem:124440::::::::110:269::::::|h[Arkhana]|h|r", -- [30]
 				"|cffa335ee|Hitem:124442::::::::110:269::::::|h[Chaos Crystal]|h|r", -- [31]
@@ -366,11 +366,11 @@ AskMrRobotDb3 = {
 				"|cffffffff|Hitem:124121::::::::110:269::::::|h[Wildfowl Egg]|h|r", -- [59]
 				"|cffffffff|Hitem:124120::::::::110:269::::::|h[Leyblood]|h|r", -- [60]
 				"|cffffffff|Hitem:124119::::::::110:269::::::|h[Big Gamy Ribs]|h|r", -- [61]
-				"|cffffffff|Hitem:124118::::::::110:269::::::|h[Fatty Bearsteak]|h|r", -- [62]
+				"|cffffffff|Hitem:124437::::::::110:269::::::|h[Shal'dorei Silk]|h|r", -- [62]
 				"|cffffffff|Hitem:124437::::::::110:269::::::|h[Shal'dorei Silk]|h|r", -- [63]
-				"|cffffffff|Hitem:124437::::::::110:269::::::|h[Shal'dorei Silk]|h|r", -- [64]
-				"|cff0070dd|Hitem:130181::::::::110:269::::::|h[Pandemonite]|h|r", -- [65]
-				"|cff1eff00|Hitem:130176::::::::110:269::::::|h[Skystone]|h|r", -- [66]
+				"|cff0070dd|Hitem:130181::::::::110:269::::::|h[Pandemonite]|h|r", -- [64]
+				"|cff1eff00|Hitem:111366::::::::110:269::::::|h[Gearspring Parts]|h|r", -- [65]
+				"|cff1eff00|Hitem:111366::::::::110:269::::::|h[Gearspring Parts]|h|r", -- [66]
 				"|cff1eff00|Hitem:111366::::::::110:269::::::|h[Gearspring Parts]|h|r", -- [67]
 				"|cff1eff00|Hitem:111366::::::::110:269::::::|h[Gearspring Parts]|h|r", -- [68]
 				"|cff1eff00|Hitem:111366::::::::110:269::::::|h[Gearspring Parts]|h|r", -- [69]
@@ -399,67 +399,58 @@ AskMrRobotDb3 = {
 				"|cff1eff00|Hitem:111366::::::::110:269::::::|h[Gearspring Parts]|h|r", -- [92]
 				"|cff1eff00|Hitem:111366::::::::110:269::::::|h[Gearspring Parts]|h|r", -- [93]
 				"|cff1eff00|Hitem:111366::::::::110:269::::::|h[Gearspring Parts]|h|r", -- [94]
-				"|cff1eff00|Hitem:111366::::::::110:269::::::|h[Gearspring Parts]|h|r", -- [95]
-				"|cff1eff00|Hitem:111366::::::::110:269::::::|h[Gearspring Parts]|h|r", -- [96]
-				"|cffffffff|Hitem:90146::::::::110:269::::::|h[Tinker's Kit]|h|r", -- [97]
-				"|cffa335ee|Hitem:136342::::::::110:269::::::|h[Obliterum Ash]|h|r", -- [98]
-				"|cff1eff00|Hitem:121214::::::::110:269:512::2:1812:1684:110:::|h[Crescent Vale Cowl of the Peerless]|h|r", -- [99]
-				"|cff1eff00|Hitem:121224::::::::110:269:512::2:1812:1687:110:::|h[Jandvik Helm of the Peerless]|h|r", -- [100]
-				"|cff1eff00|Hitem:121274::::::::110:269:512::2:1812:1697:110:::|h[Moonfall Shoulderpads of the Feverflare]|h|r", -- [101]
-				"|cff1eff00|Hitem:121156::::::::110:269:512::2:1812:1717:110:::|h[Valisdall Spaulders of the Harmonious]|h|r", -- [102]
-				"|cff1eff00|Hitem:121226::::::::110:269:512::2:1812:1682:110:::|h[Jandvik Pauldrons of the Quickblade]|h|r", -- [103]
-				"|cff1eff00|Hitem:121133::::::::110:269:512::2:1812:1716:110:::|h[Haustvelt Shoulders of the Harmonious]|h|r", -- [104]
-				"|cff1eff00|Hitem:121054::::::::110:269:512::2:1812:1692:110:::|h[Temporal Scholar's Shoulderpads of the Fireflash]|h|r", -- [105]
-				"|cff1eff00|Hitem:121077::::::::110:269:512::2:1812:1689:110:::|h[Icepine Jerkin of the Peerless]|h|r", -- [106]
-				"|cff1eff00|Hitem:121001::::::::110:269:512::2:1812:1702:110:::|h[Rhut'van Breastplate of the Feverflare]|h|r", -- [107]
-				"|cff1eff00|Hitem:121166::::::::110:269:512::2:1812:1676:110:::|h[Kal'delar Breastplate of the Quickblade]|h|r", -- [108]
-				"|cff1eff00|Hitem:121048::::::::110:269:512::2:1812:1684:110:::|h[Temporal Scholar's Cord of the Peerless]|h|r", -- [109]
-				"|cff1eff00|Hitem:121268::::::::110:269:512::2:1812:1714:110:::|h[Moonfall Cord of the Harmonious]|h|r", -- [110]
-				"|cff1eff00|Hitem:121268::::::::110:269:512::2:1812:1714:110:::|h[Moonfall Cord of the Harmonious]|h|r", -- [111]
-				"|cff1eff00|Hitem:121040::::::::110:269:512::2:1812:1712:110:::|h[Faronaar Chain Belt of the Harmonious]|h|r", -- [112]
-				"|cff1eff00|Hitem:121223::::::::110:269:512::2:1812:1705:110:::|h[Jandvik Girdle of the Aurora]|h|r", -- [113]
-				"|cff1eff00|Hitem:121168::::::::110:269:512::2:1812:1681:110:::|h[Kal'delar Girdle of the Quickblade]|h|r", -- [114]
-				"|cff1eff00|Hitem:121210::::::::110:269:512::2:1812:1680:110:::|h[Dreadroot Linked Legguards of the Quickblade]|h|r", -- [115]
-				"|cff1eff00|Hitem:121115::::::::110:269:512::2:1812:1710:110:::|h[Valarsmidd Legplates of the Aurora]|h|r", -- [116]
-				"|cff1eff00|Hitem:121051::::::::110:269:512::2:1812:1708:110:::|h[Temporal Scholar's Leggings of the Aurora]|h|r", -- [117]
-				"|cff1eff00|Hitem:121117::::::::110:269:512::2:1812:1708:110:::|h[Valarsmidd Sabatons of the Aurora]|h|r", -- [118]
-				"|cff1eff00|Hitem:121208::::::::110:269:512::2:1812:1706:110:::|h[Dreadroot Linked Greaves of the Aurora]|h|r", -- [119]
-				"|cff1eff00|Hitem:121053::::::::110:269:512::2:1812:1685:110:::|h[Temporal Scholar's Sandals of the Peerless]|h|r", -- [120]
-				"|cff1eff00|Hitem:121183::::::::110:269:512::2:1812:1684:110:::|h[Smolderhide Boots of the Peerless]|h|r", -- [121]
-				"|cff1eff00|Hitem:121275::::::::110:269:512::2:1812:1695:110:::|h[Moonfall Wristwraps of the Fireflash]|h|r", -- [122]
-				"|cff1eff00|Hitem:121165::::::::110:269:512::2:1812:1692:110:::|h[Hrydshal Wristwraps of the Fireflash]|h|r", -- [123]
-				"|cff1eff00|Hitem:121237::::::::110:269:512::2:1812:1677:110:::|h[Ambervale Bindings of the Quickblade]|h|r", -- [124]
-				"|cff1eff00|Hitem:121207::::::::110:269:512::2:1812:1701:110:::|h[Dreadroot Linked Gauntlets of the Feverflare]|h|r", -- [125]
-				"|cff1eff00|Hitem:121222::::::::110:269:512::2:1812:1696:110:::|h[Jandvik Gauntlets of the Fireflash]|h|r", -- [126]
-				"|cff1eff00|Hitem:121167::::::::110:269:512::2:1812:1702:110:::|h[Kal'delar Gauntlets of the Feverflare]|h|r", -- [127]
-				"|cff1eff00|Hitem:121027::::::::110:269:512::2:1812:1748:110:::|h[Azurewing Signet of the Quickblade]|h|r", -- [128]
-				"|cff1eff00|Hitem:121192::::::::110:269:512::2:1812:1780:110:::|h[Vale Walker's Circle of the Harmonious]|h|r", -- [129]
-				"|cff1eff00|Hitem:121247::::::::110:269:512::2:1812:1783:110:::|h[Nightfall Loop of the Harmonious]|h|r", -- [130]
-				"|cff1eff00|Hitem:121247::::::::110:269:512::2:1812:1771:110:::|h[Nightfall Loop of the Aurora]|h|r", -- [131]
-				"|cff1eff00|Hitem:121069::::::::110:269:512::2:1812:604:110:::|h[Brulwurm Scale]|h|r", -- [132]
-				"|cff1eff00|Hitem:121179::::::::110:269:512::2:1812:605:110:::|h[Mark of Malorne]|h|r", -- [133]
-				"|cff1eff00|Hitem:121124::::::::110:269:512::2:1812:605:110:::|h[Stormforged Idol]|h|r", -- [134]
-				"|cff1eff00|Hitem:121124::::::::110:269:512::2:1812:605:110:::|h[Stormforged Idol]|h|r", -- [135]
-				"|cff1eff00|Hitem:121071::::::::110:269:512::2:1812:607:110:::|h[Enchanted Roc Feather]|h|r", -- [136]
-				"|cff1eff00|Hitem:121232::::::::110:269:512::2:1812:1682:110:::|h[Nightfallen Outcast's Cloak of the Quickblade]|h|r", -- [137]
-				"|cff1eff00|Hitem:109585::::::::110:269::::::|h[Arakkoa Cipher]|h|r", -- [138]
-				"|cff1eff00|Hitem:26045::::::::110:269::::::|h[Halaa Battle Token]|h|r", -- [139]
-				"|cff1eff00|Hitem:26045::::::::110:269::::::|h[Halaa Battle Token]|h|r", -- [140]
-				"|cff1eff00|Hitem:26045::::::::110:269::::::|h[Halaa Battle Token]|h|r", -- [141]
-				"|cff1eff00|Hitem:26045::::::::110:269::::::|h[Halaa Battle Token]|h|r", -- [142]
-				"|cff1eff00|Hitem:26045::::::::110:269::::::|h[Halaa Battle Token]|h|r", -- [143]
-				"|cff1eff00|Hitem:26045::::::::110:269::::::|h[Halaa Battle Token]|h|r", -- [144]
-				"|cff1eff00|Hitem:26045::::::::110:269::::::|h[Halaa Battle Token]|h|r", -- [145]
-				"|cff1eff00|Hitem:26044::::::::110:269::::::|h[Halaa Research Token]|h|r", -- [146]
-				"|cff1eff00|Hitem:26044::::::::110:269::::::|h[Halaa Research Token]|h|r", -- [147]
-				"|cff1eff00|Hitem:26044::::::::110:269::::::|h[Halaa Research Token]|h|r", -- [148]
-				"|cffffffff|Hitem:119299::::::::110:269::::::|h[Secret of Draenor Engineering]|h|r", -- [149]
-				"|cffffffff|Hitem:118723::::::::110:269::::::|h[Secret of Draenor Jewelcrafting]|h|r", -- [150]
-				"|cffffffff|Hitem:113821::::::::110:269::::::|h[Battered Iron Horde Helmet]|h|r", -- [151]
-				"|cffffffff|Hitem:113823::::::::110:269::::::|h[Crusted Iron Horde Pauldrons]|h|r", -- [152]
-				"|cffffffff|Hitem:113681::::::::110:269::::::|h[Iron Horde Scraps]|h|r", -- [153]
-				"|cffffffff|Hitem:113681::::::::110:269::::::|h[Iron Horde Scraps]|h|r", -- [154]
-				"|cffffffff|Hitem:113822::::::::110:269::::::|h[Ravaged Iron Horde Belt]|h|r", -- [155]
+				"|cffffffff|Hitem:90146::::::::110:269::::::|h[Tinker's Kit]|h|r", -- [95]
+				"|cffa335ee|Hitem:136342::::::::110:269::::::|h[Obliterum Ash]|h|r", -- [96]
+				"|cff1eff00|Hitem:121048::::::::110:269:512::2:1812:1684:110:::|h[Temporal Scholar's Cord of the Peerless]|h|r", -- [97]
+				"|cff1eff00|Hitem:121048::::::::110:269:512::2:1812:1717:110:::|h[Temporal Scholar's Cord of the Harmonious]|h|r", -- [98]
+				"|cff1eff00|Hitem:121213::::::::110:269:512::2:1812:1680:110:::|h[Crescent Vale Cord of the Quickblade]|h|r", -- [99]
+				"|cff1eff00|Hitem:121268::::::::110:269:512::2:1812:1714:110:::|h[Moonfall Cord of the Harmonious]|h|r", -- [100]
+				"|cff1eff00|Hitem:121268::::::::110:269:512::2:1812:1714:110:::|h[Moonfall Cord of the Harmonious]|h|r", -- [101]
+				"|cff1eff00|Hitem:121040::::::::110:269:512::2:1812:1712:110:::|h[Faronaar Chain Belt of the Harmonious]|h|r", -- [102]
+				"|cff1eff00|Hitem:121168::::::::110:269:512::2:1812:1681:110:::|h[Kal'delar Girdle of the Quickblade]|h|r", -- [103]
+				"|cff1eff00|Hitem:121115::::::::110:269:512::2:1812:1710:110:::|h[Valarsmidd Legplates of the Aurora]|h|r", -- [104]
+				"|cff1eff00|Hitem:121051::::::::110:269:512::2:1812:1708:110:::|h[Temporal Scholar's Leggings of the Aurora]|h|r", -- [105]
+				"|cff1eff00|Hitem:121117::::::::110:269:512::2:1812:1708:110:::|h[Valarsmidd Sabatons of the Aurora]|h|r", -- [106]
+				"|cff1eff00|Hitem:121208::::::::110:269:512::2:1812:1706:110:::|h[Dreadroot Linked Greaves of the Aurora]|h|r", -- [107]
+				"|cff1eff00|Hitem:121053::::::::110:269:512::2:1812:1685:110:::|h[Temporal Scholar's Sandals of the Peerless]|h|r", -- [108]
+				"|cff1eff00|Hitem:121008::::::::110:269:512::2:1812:1709:110:::|h[Rhut'van Vambraces of the Aurora]|h|r", -- [109]
+				"|cff1eff00|Hitem:121237::::::::110:269:512::2:1812:1677:110:::|h[Ambervale Bindings of the Quickblade]|h|r", -- [110]
+				"|cff1eff00|Hitem:121207::::::::110:269:512::2:1812:1701:110:::|h[Dreadroot Linked Gauntlets of the Feverflare]|h|r", -- [111]
+				"|cff1eff00|Hitem:121222::::::::110:269:512::2:1812:1696:110:::|h[Jandvik Gauntlets of the Fireflash]|h|r", -- [112]
+				"|cff1eff00|Hitem:121167::::::::110:269:512::2:1812:1702:110:::|h[Kal'delar Gauntlets of the Feverflare]|h|r", -- [113]
+				"|cff1eff00|Hitem:121027::::::::110:269:512::2:1812:1748:110:::|h[Azurewing Signet of the Quickblade]|h|r", -- [114]
+				"|cff1eff00|Hitem:121192::::::::110:269:512::2:1812:1780:110:::|h[Vale Walker's Circle of the Harmonious]|h|r", -- [115]
+				"|cff1eff00|Hitem:121247::::::::110:269:512::2:1812:1783:110:::|h[Nightfall Loop of the Harmonious]|h|r", -- [116]
+				"|cff1eff00|Hitem:121247::::::::110:269:512::2:1812:1771:110:::|h[Nightfall Loop of the Aurora]|h|r", -- [117]
+				"|cff1eff00|Hitem:121069::::::::110:269:512::2:1812:604:110:::|h[Brulwurm Scale]|h|r", -- [118]
+				"|cff1eff00|Hitem:121179::::::::110:269:512::2:1812:605:110:::|h[Mark of Malorne]|h|r", -- [119]
+				"|cff1eff00|Hitem:121124::::::::110:269:512::2:1812:605:110:::|h[Stormforged Idol]|h|r", -- [120]
+				"|cff1eff00|Hitem:121124::::::::110:269:512::2:1812:605:110:::|h[Stormforged Idol]|h|r", -- [121]
+				"|cff1eff00|Hitem:121071::::::::110:269:512::2:1812:607:110:::|h[Enchanted Roc Feather]|h|r", -- [122]
+				"|cff1eff00|Hitem:121232::::::::110:269:512::2:1812:1682:110:::|h[Nightfallen Outcast's Cloak of the Quickblade]|h|r", -- [123]
+				"|cff1eff00|Hitem:109585::::::::110:269::::::|h[Arakkoa Cipher]|h|r", -- [124]
+				"|cff1eff00|Hitem:26045::::::::110:269::::::|h[Halaa Battle Token]|h|r", -- [125]
+				"|cff1eff00|Hitem:26045::::::::110:269::::::|h[Halaa Battle Token]|h|r", -- [126]
+				"|cff1eff00|Hitem:26045::::::::110:269::::::|h[Halaa Battle Token]|h|r", -- [127]
+				"|cff1eff00|Hitem:26045::::::::110:269::::::|h[Halaa Battle Token]|h|r", -- [128]
+				"|cff1eff00|Hitem:26045::::::::110:269::::::|h[Halaa Battle Token]|h|r", -- [129]
+				"|cff1eff00|Hitem:26045::::::::110:269::::::|h[Halaa Battle Token]|h|r", -- [130]
+				"|cff1eff00|Hitem:26045::::::::110:269::::::|h[Halaa Battle Token]|h|r", -- [131]
+				"|cff1eff00|Hitem:26044::::::::110:269::::::|h[Halaa Research Token]|h|r", -- [132]
+				"|cff1eff00|Hitem:26044::::::::110:269::::::|h[Halaa Research Token]|h|r", -- [133]
+				"|cff1eff00|Hitem:26044::::::::110:269::::::|h[Halaa Research Token]|h|r", -- [134]
+				"|cffffffff|Hitem:119299::::::::110:269::::::|h[Secret of Draenor Engineering]|h|r", -- [135]
+				"|cffffffff|Hitem:118723::::::::110:269::::::|h[Secret of Draenor Jewelcrafting]|h|r", -- [136]
+				"|cffffffff|Hitem:113821::::::::110:269::::::|h[Battered Iron Horde Helmet]|h|r", -- [137]
+				"|cff1eff00|Hitem:121223::::::::110:269:512::2:1812:1705:110:::|h[Jandvik Girdle of the Aurora]|h|r", -- [138]
+				"|cffffffff|Hitem:113681::::::::110:269::::::|h[Iron Horde Scraps]|h|r", -- [139]
+				"|cff1eff00|Hitem:121210::::::::110:269:512::2:1812:1680:110:::|h[Dreadroot Linked Legguards of the Quickblade]|h|r", -- [140]
+				"|cff1eff00|Hitem:121183::::::::110:269:512::2:1812:1684:110:::|h[Smolderhide Boots of the Peerless]|h|r", -- [141]
+				"|cff1eff00|Hitem:121275::::::::110:269:512::2:1812:1695:110:::|h[Moonfall Wristwraps of the Fireflash]|h|r", -- [142]
+				"|cffffffff|Hitem:113823::::::::110:269::::::|h[Crusted Iron Horde Pauldrons]|h|r", -- [143]
+				"|cff1eff00|Hitem:121165::::::::110:269:512::2:1812:1692:110:::|h[Hrydshal Wristwraps of the Fireflash]|h|r", -- [144]
+				"|cffffffff|Hitem:113681::::::::110:269::::::|h[Iron Horde Scraps]|h|r", -- [145]
+				"|cffffffff|Hitem:113822::::::::110:269::::::|h[Ravaged Iron Horde Belt]|h|r", -- [146]
 			},
 			["Artifacts"] = {
 				{
@@ -483,18 +474,21 @@ AskMrRobotDb3 = {
 				{
 					["Relics"] = {
 						"|cffa335ee|Hitem:139259::::::::110:270::5:2:1805:1487:::|h[Cube of Malice]|h|r", -- [1]
-						"|cffa335ee|Hitem:137327::::::::110:270::33:3:3414:1512:3336:::|h[Relinquishing Grip of Helheim]|h|r", -- [2]
+						"|cffa335ee|Hitem:139249::::::::110:270::5:2:1805:1487:::|h[Shaladrassil's Blossom]|h|r", -- [2]
 						"|cffa335ee|Hitem:137421::::::::110:270::16:3:3413:1507:3336:::|h[Accelerating Torrent]|h|r", -- [3]
 					},
 					["Powers"] = {
-						[936] = 1,
-						[931] = 1,
 						[940] = 3,
 						[942] = 3,
+						[944] = 3,
+						[931] = 1,
+						[937] = 1,
+						[939] = 3,
 						[945] = 3,
-						[1295] = 1,
-						[946] = 3,
 						[932] = 1,
+						[1295] = 1,
+						[936] = 1,
+						[946] = 3,
 					},
 				}, -- [2]
 				{
@@ -512,168 +506,192 @@ AskMrRobotDb3 = {
 						[800] = 3,
 						[832] = 1,
 						[821] = 3,
-						[830] = 1,
+						[1341] = 1,
 						[825] = 3,
 						[827] = 1,
-						[801] = 3,
 						[831] = 1,
-						[1341] = 1,
+						[801] = 3,
+						[830] = 1,
 					},
 				}, -- [3]
 			},
 			["FirstUse"] = false,
 			["VoidItems"] = {
-				"|cffa335ee|Hitem:69210::::::::110:268::::::|h[Renowned Guild Tabard]|h|r", -- [1]
-				"|cff00ccff|Hitem:44095::::::::110:268::::::|h[Grand Staff of Jordan]|h|r", -- [2]
-				"|cff0070dd|Hitem:89553:::::::403058560:110:268::::::|h[Aspirant's Staff of Grace]|h|r", -- [3]
-				"|cffff8000|Hitem:102247:::::::1220268672:110:268:4:::505:::|h[Jina-Kang, Kindness of Chi-Ji]|h|r", -- [4]
-				"|cffff8000|Hitem:102248:::::::4720768:110:268:4:::505:::|h[Fen-Yu, Fury of Xuen]|h|r", -- [5]
-				"|cffff8000|Hitem:102245:::::::1766424064:110:268:4:::505:::|h[Qian-Le, Courage of Niuzao]|h|r", -- [6]
-				"|cff0070dd|Hitem:118372::::::::110:268::11::::|h[Orgrimmar Tabard]|h|r", -- [7]
-				"|cff0070dd|Hitem:97131::::::::110:268::::::|h[Shado-Pan Assault Tabard]|h|r", -- [8]
-				"|cffa335ee|Hitem:95824:::::::1211103360:110:268:4:::465:::|h[Chest of the Crackling Protector]|h|r", -- [9]
-				"|cffa335ee|Hitem:89266:::::::1801218048:110:268:4:::445:::|h[Chest of the Shadowy Protector]|h|r", -- [10]
-				"|cffa335ee|Hitem:95889:::::::170316160:110:268:4:::465:::|h[Leggings of the Crackling Protector]|h|r", -- [11]
-				"|cffa335ee|Hitem:99747::::::::110:268:4:::491:::|h[Gauntlets of the Cursed Protector]|h|r", -- [12]
-				"|cffa335ee|Hitem:99722::::::::110:268::::::|h[Gauntlets of the Cursed Protector]|h|r", -- [13]
-				"|cffa335ee|Hitem:95824:::::::1775979136:110:268:4:::465:::|h[Chest of the Crackling Protector]|h|r", -- [14]
-				"|cffa335ee|Hitem:89251:::::::126753920:110:268:4:::445:::|h[Chest of the Shadowy Protector]|h|r", -- [15]
-				"|cffa335ee|Hitem:89254:::::::1562538368:110:268:4:::445:::|h[Leggings of the Shadowy Protector]|h|r", -- [16]
-				"|cffa335ee|Hitem:89257:::::::2133390080:110:268:4:::445:::|h[Gauntlets of the Shadowy Protector]|h|r", -- [17]
-				"|cffa335ee|Hitem:89254:::::::548870272:110:268:4:::445:::|h[Leggings of the Shadowy Protector]|h|r", -- [18]
-				"|cffa335ee|Hitem:95957:::::::77634688:110:268:4:::465:::|h[Shoulders of the Crackling Protector]|h|r", -- [19]
+				"|cffa335ee|Hitem:69210::::::::110:270::::::|h[Renowned Guild Tabard]|h|r", -- [1]
+				"|cff00ccff|Hitem:44095::::::::110:270::::::|h[Grand Staff of Jordan]|h|r", -- [2]
+				"|cff0070dd|Hitem:89553:::::::403058560:110:270::::::|h[Aspirant's Staff of Grace]|h|r", -- [3]
+				"|cffff8000|Hitem:124636::::::::110:270::11:2:649:625:::|h[Maalus, the Blood Drinker]|h|r", -- [4]
+				"|cffff8000|Hitem:124637::::::::110:270::14:2:621:649:::|h[Sanctus, Sigil of the Unbroken]|h|r", -- [5]
+				"|cffff8000|Hitem:102247:::::::1220268672:110:270:4:::505:::|h[Jina-Kang, Kindness of Chi-Ji]|h|r", -- [6]
+				"|cffff8000|Hitem:102248:::::::4720768:110:270:4:::505:::|h[Fen-Yu, Fury of Xuen]|h|r", -- [7]
+				"|cffff8000|Hitem:102245:::::::1766424064:110:270:4:::505:::|h[Qian-Le, Courage of Niuzao]|h|r", -- [8]
+				"|cff0070dd|Hitem:118372::::::::110:270::11::::|h[Orgrimmar Tabard]|h|r", -- [9]
+				"|cffff8000|Hitem:124638::::::::110:270::14:2:621:650:::|h[Etheralus, the Eternal Reward]|h|r", -- [10]
+				"|cff00ccff|Hitem:128318::::::::110:270::1::::|h[Touch of the Void]|h|r", -- [11]
+				"|cff00ccff|Hitem:128318::::::::110:270::1::::|h[Touch of the Void]|h|r", -- [12]
+				"|cff00ccff|Hitem:128318::::::::110:270::1::::|h[Touch of the Void]|h|r", -- [13]
+				"|cff00ccff|Hitem:133598::::::::110:270::::::|h[Purified Shard of the Third Moon]|h|r", -- [14]
+				"|cff00ccff|Hitem:133585::::::::110:270::23::::|h[Judgment of the Naaru]|h|r", -- [15]
+				"|cff00ccff|Hitem:133597::::::::110:270::::::|h[Infallible Tracking Charm]|h|r", -- [16]
+				"|cff0070dd|Hitem:97131::::::::110:270::::::|h[Shado-Pan Assault Tabard]|h|r", -- [17]
+				"|cffa335ee|Hitem:95824:::::::1211103360:110:270:4:::465:::|h[Chest of the Crackling Protector]|h|r", -- [18]
+				"|cffa335ee|Hitem:89266:::::::1801218048:110:270:4:::445:::|h[Chest of the Shadowy Protector]|h|r", -- [19]
+				"|cffa335ee|Hitem:95889:::::::170316160:110:270:4:::465:::|h[Leggings of the Crackling Protector]|h|r", -- [20]
+				"|cffa335ee|Hitem:99747::::::::110:270:4:::491:::|h[Gauntlets of the Cursed Protector]|h|r", -- [21]
+				"|cffa335ee|Hitem:99722::::::::110:270::::::|h[Gauntlets of the Cursed Protector]|h|r", -- [22]
+				"|cffa335ee|Hitem:95824:::::::1775979136:110:270:4:::465:::|h[Chest of the Crackling Protector]|h|r", -- [23]
+				"|cffa335ee|Hitem:89251:::::::126753920:110:270:4:::445:::|h[Chest of the Shadowy Protector]|h|r", -- [24]
+				"|cffa335ee|Hitem:89254:::::::1562538368:110:270:4:::445:::|h[Leggings of the Shadowy Protector]|h|r", -- [25]
+				"|cffa335ee|Hitem:89257:::::::2133390080:110:270:4:::445:::|h[Gauntlets of the Shadowy Protector]|h|r", -- [26]
+				"|cffa335ee|Hitem:89254:::::::548870272:110:270:4:::445:::|h[Leggings of the Shadowy Protector]|h|r", -- [27]
+				"|cffa335ee|Hitem:95957:::::::77634688:110:270:4:::465:::|h[Shoulders of the Crackling Protector]|h|r", -- [28]
 			},
 			["BagItemsAndCounts"] = {
-				[87216] = 1,
-				[141215] = 22,
+				[142144] = 1,
+				[141215] = 16,
+				[139325] = 1,
+				[127847] = 3,
 				[128938] = 1,
+				[137207] = 4,
 				[140302] = 38,
 				[139239] = 1,
 				[140192] = 1,
-				[20815] = 1,
 				[140287] = 2,
-				[137208] = 1,
-				[127848] = 1,
-				[134460] = 1,
-				[138815] = 1,
+				[137712] = 1,
+				[20815] = 1,
+				[138019] = 1,
+				[137208] = 2,
+				[87216] = 1,
+				[127848] = 3,
 				[134287] = 1,
+				[141655] = 1,
+				[139327] = 1,
 				[139335] = 1,
 				[140288] = 1,
-				[134374] = 1,
+				[132925] = 1,
 				[143328] = 1,
+				[143734] = 5,
 				[133642] = 1,
 				[139320] = 1,
-				[132925] = 1,
-				[133972] = 8,
-				[137712] = 1,
-				[23858] = 1,
+				[141198] = 1,
+				[140581] = 1,
+				[138221] = 1,
+				[128940] = 1,
+				[139801] = 1,
 				[128353] = 1,
 				[6219] = 1,
 				[141652] = 1,
-				[111820] = 1,
+				[139329] = 1,
 				[141605] = 1,
-				[142117] = 159,
-				[5956] = 1,
-				[6256] = 1,
-				[133573] = 44,
-				[110560] = 1,
-				[143734] = 1,
-				[139330] = 1,
-				[127834] = 48,
-				[140291] = 2,
-				[142340] = 1,
-				[127846] = 4,
-				[133574] = 47,
-				[133771] = 1,
+				[142117] = 90,
+				[142173] = 1,
+				[140291] = 1,
+				[133573] = 32,
+				[111820] = 1,
 				[114943] = 1,
+				[127850] = 2,
+				[127834] = 27,
+				[134495] = 1,
+				[139732] = 1,
+				[127846] = 5,
+				[133574] = 49,
+				[142142] = 1,
+				[143733] = 1,
 				[6948] = 1,
-				[128937] = 1,
+				[5956] = 1,
+				[110560] = 1,
+				[139859] = 1,
+				[6256] = 1,
 				[138111] = 1,
-				[139859] = 2,
-				[139237] = 1,
-				[141198] = 1,
 				[138875] = 5,
-				[141655] = 1,
-				[139332] = 1,
-				[127835] = 28,
-				[139204] = 1,
-				[139419] = 2,
+				[129276] = 1,
+				[140587] = 4,
+				[127835] = 25,
+				[137332] = 1,
+				[139419] = 1,
 				[10498] = 1,
-				[141351] = 1,
+				[136412] = 4,
 			},
 			["Logging"] = {
 				["LastDiff"] = 0,
 				["LastZone"] = "Broken Isles",
 			},
 			["BagItems"] = {
-				"|cffe6cc80|Hitem:128938::137327:143688:137326::::110:269:256:9:1:732:337:3:1727:1492:1813:3:3474:1507:1674:3:3417:1512:1813|h[Fu Zan, the Wanderer's Companion]|h|r", -- [1]
-				"|cffe6cc80|Hitem:128937::139259:141275:137421::::110:269:256:9:1:733:509:2:1805:1487:3:3396:1512:3337:3:3413:1507:3336|h[Sheilun, Staff of the Mists]|h|r", -- [2]
-				"|cffa335ee|Hitem:141655::::::::110:269::::::|h[Shimmering Ancient Mana Cluster]|h|r", -- [3]
-				"|cffa335ee|Hitem:137208::::::::110:269::::::|h[Indestructible Armor Set]|h|r", -- [4]
-				"|cffa335ee|Hitem:139204::::::::110:269::5:3:1805:41:1487:::|h[Mask of Multitudinous Eyes]|h|r", -- [5]
-				"|cffa335ee|Hitem:139239:5439:::::::110:269::5:3:1805:1492:3336:::|h[Cursed Beartooth Necklace]|h|r", -- [6]
-				"|cffa335ee|Hitem:139332:5890:::::::110:269::5:2:1805:1487:::|h[Blackened Portalstone Necklace]|h|r", -- [7]
-				"|cffa335ee|Hitem:134374:5882:::::::110:269::35:4:3412:43:1522:3336:::|h[Felbat Leather Pauldrons]|h|r", -- [8]
-				"|cffa335ee|Hitem:134287::::::::110:269::35:3:3417:1537:3337:::|h[Swordsinger's Belt]|h|r", -- [9]
-				"|cffa335ee|Hitem:134460::::::::110:269::35:3:3413:1517:3337:::|h[Fevermelt Legguards]|h|r", -- [10]
-				"|cffa335ee|Hitem:139237:5430:::::::110:269::5:2:1805:1487:::|h[Dreadful Cyclopean Signet]|h|r", -- [11]
-				"|cffa335ee|Hitem:139330::::::::110:269::5:2:1805:1487:::|h[Heightened Senses]|h|r", -- [12]
-				"|cffa335ee|Hitem:133642::130248::::::110:269::23:4:1727:1808:1502:3336:::|h[Horn of Valor]|h|r", -- [13]
-				"|cffa335ee|Hitem:139320::::::::110:269::6:3:1806:1512:3336:::|h[Ravaged Seed Pod]|h|r", -- [14]
-				"|cffa335ee|Hitem:139335::130220::::::110:269::5:3:1805:1808:1487:::|h[Grotesque Statuette]|h|r", -- [15]
-				"|cffa335ee|Hitem:133771:5433:::::::110:269::35:3:3414:1517:3336:::|h[Seacursed Wrap]|h|r", -- [16]
-				"|cff0070dd|Hitem:114943::::::::110:269::1::::|h[Ultimate Gnomish Army Knife]|h|r", -- [17]
-				"|cff0070dd|Hitem:111820::::::::110:269::::::|h[Swapblaster]|h|r", -- [18]
-				"|cff0070dd|Hitem:140288::::::::110:269::::::|h[Bubblebelly Brew]|h|r", -- [19]
-				"|cff0070dd|Hitem:140291::::::::110:269::::::|h[Featherfoot Brew]|h|r", -- [20]
-				"|cff0070dd|Hitem:140291::::::::110:269::::::|h[Featherfoot Brew]|h|r", -- [21]
-				"|cff0070dd|Hitem:140287::::::::110:269::::::|h[Stoutheart Brew]|h|r", -- [22]
-				"|cff0070dd|Hitem:140287::::::::110:269::::::|h[Stoutheart Brew]|h|r", -- [23]
-				"|cff0070dd|Hitem:143734::::::::110:269::23::::|h[Ancient Mana Crystal Cluster]|h|r", -- [24]
-				"|cff0070dd|Hitem:143328::::::::110:269::::::|h[Battle Report]|h|r", -- [25]
-				"|cff0070dd|Hitem:141198::::::::110:269::::::|h[Carved Shell]|h|r", -- [26]
-				"|cff0070dd|Hitem:142340::::::::110:269::::::|h[Head of Thar'zul]|h|r", -- [27]
-				"|cff0070dd|Hitem:128353::::::::110:269::::::|h[Admiral's Compass]|h|r", -- [28]
-				"|cff0070dd|Hitem:141652::::::::110:269::11::::|h[Mana Divining Stone]|h|r", -- [29]
-				"|cff0070dd|Hitem:141605::::::::110:269::11::::|h[Flight Master's Whistle]|h|r", -- [30]
-				"|cff1eff00|Hitem:139859::::::::110:269::::::|h[Chi Empowered Jewel]|h|r", -- [31]
-				"|cff1eff00|Hitem:138875::::::::110:269::::::|h[Small Ley Crystal]|h|r", -- [32]
-				"|cff1eff00|Hitem:139419::::::::110:269::::::|h[Golden Banana]|h|r", -- [33]
-				"|cffffffff|Hitem:87216::::::::110:269::11::::|h[Thermal Anvil]|h|r", -- [34]
-				"|cffffffff|Hitem:127835::::::::110:269::::::|h[Ancient Mana Potion]|h|r", -- [35]
-				"|cffffffff|Hitem:127835::::::::110:269::::::|h[Ancient Mana Potion]|h|r", -- [36]
-				"|cffffffff|Hitem:127846::::::::110:269::::::|h[Leytorrent Potion]|h|r", -- [37]
-				"|cffffffff|Hitem:142117::::::::110:269::::::|h[Potion of Prolonged Power]|h|r", -- [38]
-				"|cffffffff|Hitem:142117::::::::110:269::::::|h[Potion of Prolonged Power]|h|r", -- [39]
-				"|cffffffff|Hitem:127834::::::::110:269::::::|h[Ancient Healing Potion]|h|r", -- [40]
-				"|cffffffff|Hitem:127834::::::::110:269::::::|h[Ancient Healing Potion]|h|r", -- [41]
-				"|cffffffff|Hitem:127834::::::::110:269::::::|h[Ancient Healing Potion]|h|r", -- [42]
-				"|cffffffff|Hitem:127848::::::::110:269::::::|h[Flask of the Seventh Demon]|h|r", -- [43]
-				"|cffffffff|Hitem:141215::::::::110:269::::::|h[Arcberry Juice]|h|r", -- [44]
-				"|cffffffff|Hitem:141215::::::::110:269::::::|h[Arcberry Juice]|h|r", -- [45]
-				"|cffffffff|Hitem:140302::::::::110:269::::::|h[Arcway Bisque]|h|r", -- [46]
-				"|cffffffff|Hitem:140302::::::::110:269::::::|h[Arcway Bisque]|h|r", -- [47]
-				"|cffffffff|Hitem:133574::::::::110:269::::::|h[Fishbrul Special]|h|r", -- [48]
-				"|cffffffff|Hitem:133574::::::::110:269::::::|h[Fishbrul Special]|h|r", -- [49]
-				"|cffffffff|Hitem:133574::::::::110:269::::::|h[Fishbrul Special]|h|r", -- [50]
-				"|cffffffff|Hitem:133573::::::::110:269::::::|h[Seed-Battered Fish Plate]|h|r", -- [51]
-				"|cffffffff|Hitem:133573::::::::110:269::::::|h[Seed-Battered Fish Plate]|h|r", -- [52]
-				"|cffffffff|Hitem:133573::::::::110:269::::::|h[Seed-Battered Fish Plate]|h|r", -- [53]
-				"|cffffffff|Hitem:6256::::::::110:269::14::::|h[Fishing Pole]|h|r", -- [54]
-				"|cffffffff|Hitem:6219:::::::1499919744:110:269::::::|h[Arclight Spanner]|h|r", -- [55]
-				"|cffffffff|Hitem:5956::::::::110:269::::::|h[Blacksmith Hammer]|h|r", -- [56]
-				"|cffffffff|Hitem:10498:::::::2111593344:110:269::::::|h[Gyromatic Micro-Adjustor]|h|r", -- [57]
-				"|cffffffff|Hitem:20815::::::::110:269::::::|h[Jeweler's Kit]|h|r", -- [58]
-				"|cffffffff|Hitem:137712::::::::110:269::23::::|h[Schematic: Tactical Headgun]|h|r", -- [59]
-				"|cffffffff|Hitem:133972::::::::110:269::::::|h[Basilisk Meat]|h|r", -- [60]
-				"|cffffffff|Hitem:138815::::::::110:269::11::::|h[Old Grizzleback's Staff]|h|r", -- [61]
-				"|cffffffff|Hitem:141351::::::::110:269::::::|h[Tear of Elune]|h|r", -- [62]
-				"|cffffffff|Hitem:132925::::::::110:269::::::|h[Tiffany's Notebook]|h|r", -- [63]
-				"|cffffffff|Hitem:140192::::::::110:269::11::::|h[Dalaran Hearthstone]|h|r", -- [64]
-				"|cffffffff|Hitem:110560::::::::110:269::11::::|h[Garrison Hearthstone]|h|r", -- [65]
-				"|cffffffff|Hitem:23858::::::::110:269::::::|h[Singed Page]|h|r", -- [66]
-				"|cffffffff|Hitem:6948::::::::110:269::::::|h[Hearthstone]|h|r", -- [67]
-				"|cffffffff|Hitem:138111::::::::110:269::::::|h[Stormforged Grapple Launcher]|h|r", -- [68]
+				"|cffe6cc80|Hitem:128938::137327:143688:137326::::110:270:256:9:1:732:337:3:1727:1492:1813:3:3474:1507:1674:3:3417:1512:1813|h[Fu Zan, the Wanderer's Companion]|h|r", -- [1]
+				"|cffe6cc80|Hitem:128940::142518:142306:137008::::110:270:256:9:1:734:290:3:3506:1497:3337:2:3453:1472:2:1805:1487|h[Fists of the Heavens]|h|r", -- [2]
+				"|cffa335ee|Hitem:141655::::::::110:270::::::|h[Shimmering Ancient Mana Cluster]|h|r", -- [3]
+				"|cffa335ee|Hitem:137208::::::::110:270::::::|h[Indestructible Armor Set]|h|r", -- [4]
+				"|cffa335ee|Hitem:142142::::::::110:270::23:3:3453:1477:3336:::|h[Unbound Reality Mask]|h|r", -- [5]
+				"|cffa335ee|Hitem:139239:5439:::::::110:270::5:3:1805:1492:3336:::|h[Cursed Beartooth Necklace]|h|r", -- [6]
+				"|cffa335ee|Hitem:134495:5439:130221::::::110:270::16:4:3413:1808:1512:3336:::|h[Chain of the Underking]|h|r", -- [7]
+				"|cffa335ee|Hitem:142144::::::::110:270::23:3:3453:1477:3336:::|h[Unending Horizon Spaulders]|h|r", -- [8]
+				"|cffa335ee|Hitem:137332:5882:130221::::::110:270::16:4:3411:1808:1507:3336:::|h[Mantle of the Dark Sea]|h|r", -- [9]
+				"|cffa335ee|Hitem:134287::::::::110:270::35:3:3417:1537:3337:::|h[Swordsinger's Belt]|h|r", -- [10]
+				"|cffa335ee|Hitem:139732::::::::110:270::14:2:3386:3384:::|h[Grandmaster's Footwraps]|h|r", -- [11]
+				"|cffa335ee|Hitem:142173:5430:::::::110:270::23:3:3453:1477:3336:::|h[Ring of Collapsing Futures]|h|r", -- [12]
+				"|cffa335ee|Hitem:139329::130221::::::110:270::5:4:1805:1808:1492:3336:::|h[Bloodthirsty Instinct]|h|r", -- [13]
+				"|cffa335ee|Hitem:139327::::::::110:270::5:2:1805:1487:::|h[Unbridled Fury]|h|r", -- [14]
+				"|cffa335ee|Hitem:139325::130247::::::110:270::5:3:1805:1808:1487:::|h[Spontaneous Appendages]|h|r", -- [15]
+				"|cffa335ee|Hitem:139320::::::::110:270::6:3:1806:1512:3336:::|h[Ravaged Seed Pod]|h|r", -- [16]
+				"|cffa335ee|Hitem:139335::130220::::::110:270::5:3:1805:1808:1487:::|h[Grotesque Statuette]|h|r", -- [17]
+				"|cffa335ee|Hitem:133642::130248::::::110:270::23:4:1727:1808:1502:3336:::|h[Horn of Valor]|h|r", -- [18]
+				"|cffa335ee|Hitem:138221:5435:::::::110:270::5:2:1805:1487:::|h[Gossamer-Spun Greatcloak]|h|r", -- [19]
+				"|cffa335ee|Hitem:138019::::::::110:270:5111808:::1492:5:7:1:::|h[Mythic Keystone]|h|r", -- [20]
+				"|cff0070dd|Hitem:114943::::::::110:270::1::::|h[Ultimate Gnomish Army Knife]|h|r", -- [21]
+				"|cff0070dd|Hitem:111820::::::::110:270::::::|h[Swapblaster]|h|r", -- [22]
+				"|cff0070dd|Hitem:140288::::::::110:270::::::|h[Bubblebelly Brew]|h|r", -- [23]
+				"|cff0070dd|Hitem:140291::::::::110:270::::::|h[Featherfoot Brew]|h|r", -- [24]
+				"|cff0070dd|Hitem:140287::::::::110:270::::::|h[Stoutheart Brew]|h|r", -- [25]
+				"|cff0070dd|Hitem:140287::::::::110:270::::::|h[Stoutheart Brew]|h|r", -- [26]
+				"|cff0070dd|Hitem:140587::::::::110:270::::::|h[Defiled Augment Rune]|h|r", -- [27]
+				"|cff0070dd|Hitem:143734::::::::110:270::23::::|h[Ancient Mana Crystal Cluster]|h|r", -- [28]
+				"|cff0070dd|Hitem:143734::::::::110:270::::::|h[Ancient Mana Crystal Cluster]|h|r", -- [29]
+				"|cff0070dd|Hitem:143734::::::::110:270::::::|h[Ancient Mana Crystal Cluster]|h|r", -- [30]
+				"|cff0070dd|Hitem:143734::::::::110:270::::::|h[Ancient Mana Crystal Cluster]|h|r", -- [31]
+				"|cff0070dd|Hitem:143734::::::::110:270::::::|h[Ancient Mana Crystal Cluster]|h|r", -- [32]
+				"|cff0070dd|Hitem:143733::::::::110:270::::::|h[Ancient Mana Shards]|h|r", -- [33]
+				"|cff0070dd|Hitem:137207::::::::110:270::::::|h[Fortified Armor Set]|h|r", -- [34]
+				"|cff0070dd|Hitem:139801::::::::110:270::::::|h[Lucky Doodad]|h|r", -- [35]
+				"|cff0070dd|Hitem:143328::::::::110:270::::::|h[Battle Report]|h|r", -- [36]
+				"|cff0070dd|Hitem:141198::::::::110:270::::::|h[Carved Shell]|h|r", -- [37]
+				"|cff0070dd|Hitem:128353::::::::110:270::::::|h[Admiral's Compass]|h|r", -- [38]
+				"|cff0070dd|Hitem:129276::::::::110:270::14::::|h[Beginner's Guide to Dimensional Rifting]|h|r", -- [39]
+				"|cff0070dd|Hitem:141652::::::::110:270::11::::|h[Mana Divining Stone]|h|r", -- [40]
+				"|cff0070dd|Hitem:141605::::::::110:270::11::::|h[Flight Master's Whistle]|h|r", -- [41]
+				"|cff1eff00|Hitem:139859::::::::110:270::::::|h[Chi Empowered Jewel]|h|r", -- [42]
+				"|cff1eff00|Hitem:136412::::::::110:270::::::|h[Heavy Armor Set]|h|r", -- [43]
+				"|cff1eff00|Hitem:140581::::::::110:270::::::|h[Sturdy Hiking Boots]|h|r", -- [44]
+				"|cff1eff00|Hitem:138875::::::::110:270::::::|h[Small Ley Crystal]|h|r", -- [45]
+				"|cff1eff00|Hitem:139419::::::::110:270::::::|h[Golden Banana]|h|r", -- [46]
+				"|cffffffff|Hitem:87216::::::::110:270::11::::|h[Thermal Anvil]|h|r", -- [47]
+				"|cffffffff|Hitem:127835::::::::110:270::::::|h[Ancient Mana Potion]|h|r", -- [48]
+				"|cffffffff|Hitem:127835::::::::110:270::::::|h[Ancient Mana Potion]|h|r", -- [49]
+				"|cffffffff|Hitem:127846::::::::110:270::::::|h[Leytorrent Potion]|h|r", -- [50]
+				"|cffffffff|Hitem:142117::::::::110:270::::::|h[Potion of Prolonged Power]|h|r", -- [51]
+				"|cffffffff|Hitem:127834::::::::110:270::::::|h[Ancient Healing Potion]|h|r", -- [52]
+				"|cffffffff|Hitem:127834::::::::110:270::::::|h[Ancient Healing Potion]|h|r", -- [53]
+				"|cffffffff|Hitem:127850::::::::110:270::::::|h[Flask of Ten Thousand Scars]|h|r", -- [54]
+				"|cffffffff|Hitem:127848::::::::110:270::::::|h[Flask of the Seventh Demon]|h|r", -- [55]
+				"|cffffffff|Hitem:127847::::::::110:270::::::|h[Flask of the Whispered Pact]|h|r", -- [56]
+				"|cffffffff|Hitem:141215::::::::110:270::::::|h[Arcberry Juice]|h|r", -- [57]
+				"|cffffffff|Hitem:140302::::::::110:270::::::|h[Arcway Bisque]|h|r", -- [58]
+				"|cffffffff|Hitem:140302::::::::110:270::::::|h[Arcway Bisque]|h|r", -- [59]
+				"|cffffffff|Hitem:133574::::::::110:270::::::|h[Fishbrul Special]|h|r", -- [60]
+				"|cffffffff|Hitem:133574::::::::110:270::::::|h[Fishbrul Special]|h|r", -- [61]
+				"|cffffffff|Hitem:133574::::::::110:270::::::|h[Fishbrul Special]|h|r", -- [62]
+				"|cffffffff|Hitem:133573::::::::110:270::::::|h[Seed-Battered Fish Plate]|h|r", -- [63]
+				"|cffffffff|Hitem:133573::::::::110:270::::::|h[Seed-Battered Fish Plate]|h|r", -- [64]
+				"|cffffffff|Hitem:6256::::::::110:270::14::::|h[Fishing Pole]|h|r", -- [65]
+				"|cffffffff|Hitem:6219:::::::1499919744:110:270::::::|h[Arclight Spanner]|h|r", -- [66]
+				"|cffffffff|Hitem:5956::::::::110:270::::::|h[Blacksmith Hammer]|h|r", -- [67]
+				"|cffffffff|Hitem:10498:::::::2111593344:110:270::::::|h[Gyromatic Micro-Adjustor]|h|r", -- [68]
+				"|cffffffff|Hitem:20815::::::::110:270::::::|h[Jeweler's Kit]|h|r", -- [69]
+				"|cffffffff|Hitem:137712::::::::110:270::23::::|h[Schematic: Tactical Headgun]|h|r", -- [70]
+				"|cffffffff|Hitem:132925::::::::110:270::::::|h[Tiffany's Notebook]|h|r", -- [71]
+				"|cffffffff|Hitem:140192::::::::110:270::11::::|h[Dalaran Hearthstone]|h|r", -- [72]
+				"|cffffffff|Hitem:110560::::::::110:270::11::::|h[Garrison Hearthstone]|h|r", -- [73]
+				"|cffffffff|Hitem:6948::::::::110:270::::::|h[Hearthstone]|h|r", -- [74]
+				"|cffffffff|Hitem:138111::::::::110:270::::::|h[Stormforged Grapple Launcher]|h|r", -- [75]
 			},
 			["Equipped"] = {
 				{
@@ -681,11 +699,11 @@ AskMrRobotDb3 = {
 					"|cffa335ee|Hitem:139239:5439:::::::110:268::5:3:1805:1492:3336:::|h[Cursed Beartooth Necklace]|h|r", -- [2]
 					"|cffa335ee|Hitem:134374:5882:::::::110:268::35:4:3412:43:1522:3336:::|h[Felbat Leather Pauldrons]|h|r", -- [3]
 					nil, -- [4]
-					"|cffa335ee|Hitem:139207::::::::110:268::5:2:1805:1487:::|h[Grove Keeper's Robe]|h|r", -- [5]
+					"|cffa335ee|Hitem:139208::130221::::::110:268::6:4:1806:1808:1507:3336:::|h[Scarred Ragefang Chestpiece]|h|r", -- [5]
 					"|cffff8000|Hitem:138879::::::::110:268:::2:1811:3458:::|h[Ovyd's Winter Wrap]|h|r", -- [6]
-					"|cffa335ee|Hitem:134460::::::::110:268::35:3:3413:1517:3337:::|h[Fevermelt Legguards]|h|r", -- [7]
+					"|cffa335ee|Hitem:139201::::::::110:268::6:2:1806:1502:::|h[Splotched Bloodfur Leggings]|h|r", -- [7]
 					"|cffa335ee|Hitem:141430::::::::110:268::3:1:1472:::|h[Mana-Tanned Sandals]|h|r", -- [8]
-					"|cffa335ee|Hitem:139209::::::::110:268::5:4:1805:42:1492:3336:::|h[Wristwraps of Broken Trust]|h|r", -- [9]
+					"|cffa335ee|Hitem:134280::130221::::::110:268::35:5:3415:1808:42:1532:3337:::|h[Swordsinger's Wristguards]|h|r", -- [9]
 					"|cffa335ee|Hitem:141440::::::::110:268::3:2:1477:3336:::|h[Seaweed \"Leather\" Mitts]|h|r", -- [10]
 					"|cffa335ee|Hitem:133634:5430:::::::110:268::33:3:3415:1517:3336:::|h[Grasping Tentacle Loop]|h|r", -- [11]
 					"|cffa335ee|Hitem:139237:5430:::::::110:268::5:2:1805:1487:::|h[Dreadful Cyclopean Signet]|h|r", -- [12]
@@ -696,32 +714,32 @@ AskMrRobotDb3 = {
 				}, -- [1]
 				{
 					"|cffa335ee|Hitem:139204::::::::110:270::5:3:1805:41:1487:::|h[Mask of Multitudinous Eyes]|h|r", -- [1]
-					"|cffa335ee|Hitem:139332:5890:::::::110:270::5:2:1805:1487:::|h[Blackened Portalstone Necklace]|h|r", -- [2]
+					"|cffa335ee|Hitem:139332:5891:::::::110:270::5:2:1805:1487:::|h[Blackened Portalstone Necklace]|h|r", -- [2]
 					"|cffa335ee|Hitem:134374:5882:::::::110:270::35:4:3412:43:1522:3336:::|h[Felbat Leather Pauldrons]|h|r", -- [3]
 					nil, -- [4]
-					"|cffa335ee|Hitem:139207::::::::110:270::5:2:1805:1487:::|h[Grove Keeper's Robe]|h|r", -- [5]
+					"|cffa335ee|Hitem:139208::130221::::::110:270::6:4:1806:1808:1507:3336:::|h[Scarred Ragefang Chestpiece]|h|r", -- [5]
 					"|cffff8000|Hitem:138879::::::::110:270:::2:1811:3458:::|h[Ovyd's Winter Wrap]|h|r", -- [6]
-					"|cffa335ee|Hitem:134460::::::::110:270::35:3:3413:1517:3337:::|h[Fevermelt Legguards]|h|r", -- [7]
+					"|cffa335ee|Hitem:139201::::::::110:270::6:2:1806:1502:::|h[Splotched Bloodfur Leggings]|h|r", -- [7]
 					"|cffa335ee|Hitem:141430::::::::110:270::3:1:1472:::|h[Mana-Tanned Sandals]|h|r", -- [8]
-					"|cffa335ee|Hitem:139209::::::::110:270::5:4:1805:42:1492:3336:::|h[Wristwraps of Broken Trust]|h|r", -- [9]
+					"|cffa335ee|Hitem:134280::130221::::::110:270::35:5:3415:1808:42:1532:3337:::|h[Swordsinger's Wristguards]|h|r", -- [9]
 					"|cffa335ee|Hitem:141440::::::::110:270::3:2:1477:3336:::|h[Seaweed \"Leather\" Mitts]|h|r", -- [10]
 					"|cffa335ee|Hitem:133634:5430:::::::110:270::33:3:3415:1517:3336:::|h[Grasping Tentacle Loop]|h|r", -- [11]
 					"|cffa335ee|Hitem:139237:5430:::::::110:270::5:2:1805:1487:::|h[Dreadful Cyclopean Signet]|h|r", -- [12]
-					"|cffa335ee|Hitem:133642::130248::::::110:270::23:4:1727:1808:1502:3336:::|h[Horn of Valor]|h|r", -- [13]
+					"|cffa335ee|Hitem:138222::130248::::::110:270::5:3:1805:1808:1487:::|h[Vial of Nightmare Fog]|h|r", -- [13]
 					"|cffa335ee|Hitem:139330::::::::110:270::5:2:1805:1487:::|h[Heightened Senses]|h|r", -- [14]
 					"|cffa335ee|Hitem:133771:5433:::::::110:270::35:3:3414:1517:3336:::|h[Seacursed Wrap]|h|r", -- [15]
-					"|cffe6cc80|Hitem:128937::139259:137327:137421::::110:270:256:9:1:733:511:2:1805:1487:3:3414:1512:3336:3:3413:1507:3336|h[Sheilun, Staff of the Mists]|h|r", -- [16]
+					"|cffe6cc80|Hitem:128937::139259:139249:137421::::110:270:256:9:1:733:519:2:1805:1487:2:1805:1487:3:3413:1507:3336|h[Sheilun, Staff of the Mists]|h|r", -- [16]
 				}, -- [2]
 				{
 					"|cffa335ee|Hitem:139204::::::::110:269::5:3:1805:41:1487:::|h[Mask of Multitudinous Eyes]|h|r", -- [1]
 					"|cffa335ee|Hitem:134495:5439:130221::::::110:269::16:4:3413:1808:1512:3336:::|h[Chain of the Underking]|h|r", -- [2]
 					"|cffa335ee|Hitem:137332:5882:130221::::::110:269::16:4:3411:1808:1507:3336:::|h[Mantle of the Dark Sea]|h|r", -- [3]
 					nil, -- [4]
-					"|cffa335ee|Hitem:139207::::::::110:269::5:2:1805:1487:::|h[Grove Keeper's Robe]|h|r", -- [5]
+					"|cffa335ee|Hitem:139208::130221::::::110:269::6:4:1806:1808:1507:3336:::|h[Scarred Ragefang Chestpiece]|h|r", -- [5]
 					"|cffff8000|Hitem:138879::::::::110:269:::2:1811:3458:::|h[Ovyd's Winter Wrap]|h|r", -- [6]
-					"|cffa335ee|Hitem:139203::::::::110:269::5:2:1805:1487:::|h[Repulsive Leathery Pants]|h|r", -- [7]
+					"|cffa335ee|Hitem:139201::::::::110:269::6:2:1806:1502:::|h[Splotched Bloodfur Leggings]|h|r", -- [7]
 					"|cffa335ee|Hitem:141430::::::::110:269::3:1:1472:::|h[Mana-Tanned Sandals]|h|r", -- [8]
-					"|cffa335ee|Hitem:139209::::::::110:269::5:4:1805:42:1492:3336:::|h[Wristwraps of Broken Trust]|h|r", -- [9]
+					"|cffa335ee|Hitem:134280::130221::::::110:269::35:5:3415:1808:42:1532:3337:::|h[Swordsinger's Wristguards]|h|r", -- [9]
 					"|cffa335ee|Hitem:141440::::::::110:269::3:2:1477:3336:::|h[Seaweed \"Leather\" Mitts]|h|r", -- [10]
 					"|cffa335ee|Hitem:142173:5430:::::::110:269::23:3:3453:1477:3336:::|h[Ring of Collapsing Futures]|h|r", -- [11]
 					"|cffa335ee|Hitem:133634:5430:::::::110:269::33:3:3415:1517:3336:::|h[Grasping Tentacle Loop]|h|r", -- [12]
@@ -733,103 +751,94 @@ AskMrRobotDb3 = {
 				}, -- [3]
 			},
 			["BankItemsAndCounts"] = {
-				[124118] = 5,
+				[121213] = 1,
 				[121237] = 1,
 				[136342] = 7,
 				[109585] = 5,
 				[121166] = 1,
 				[113681] = 1693,
 				[26045] = 700,
-				[124119] = 1,
-				[128318] = 3,
-				[121214] = 1,
-				[133597] = 1,
-				[124437] = 294,
-				[133598] = 1,
+				[124119] = 3,
+				[121214] = 2,
+				[121222] = 1,
+				[124437] = 321,
 				[121040] = 1,
-				[121048] = 1,
+				[121048] = 2,
 				[121183] = 1,
 				[124112] = 2,
 				[120945] = 983,
-				[124636] = 1,
+				[121207] = 1,
 				[121223] = 1,
 				[115524] = 2999,
 				[121247] = 2,
 				[121001] = 1,
-				[124438] = 44,
+				[124438] = 47,
 				[121168] = 1,
 				[121049] = 1,
 				[121192] = 1,
-				[124121] = 8,
-				[124637] = 1,
-				[133585] = 1,
+				[124121] = 1,
+				[121208] = 1,
 				[121224] = 1,
 				[121232] = 1,
-				[124439] = 61,
+				[124439] = 74,
 				[111366] = 5879,
-				[104405] = 1,
 				[142207] = 1,
 				[139731] = 1,
-				[124110] = 2,
-				[141001] = 1,
 				[39354] = 36,
 				[141287] = 1,
-				[124440] = 62,
+				[124440] = 88,
 				[142335] = 22,
 				[121027] = 1,
-				[121054] = 1,
-				[142336] = 6,
-				[64401] = 1,
+				[139732] = 1,
 				[124107] = 4,
-				[139198] = 1,
-				[118922] = 1,
-				[121210] = 1,
-				[26044] = 280,
+				[121008] = 1,
+				[142336] = 6,
+				[113823] = 1,
 				[121226] = 1,
-				[139734] = 1,
+				[139738] = 1,
 				[139733] = 1,
-				[124108] = 2,
+				[118723] = 74,
 				[114781] = 12,
-				[124441] = 17,
+				[124441] = 19,
 				[121274] = 1,
-				[90146] = 8,
-				[139737] = 1,
-				[128312] = 3,
-				[121179] = 1,
+				[121165] = 1,
+				[124108] = 2,
+				[26044] = 280,
+				[139734] = 1,
 				[113821] = 1,
-				[130176] = 4,
-				[124124] = 120,
-				[124120] = 3,
-				[124638] = 1,
-				[121077] = 1,
-				[141292] = 1,
+				[121179] = 1,
+				[124124] = 13,
+				[118922] = 1,
+				[121167] = 1,
+				[121117] = 1,
+				[121051] = 1,
 				[139735] = 1,
 				[121124] = 2,
-				[121115] = 1,
-				[124442] = 3,
-				[121275] = 1,
+				[141292] = 1,
+				[124442] = 5,
+				[118100] = 5,
 				[121156] = 1,
 				[130181] = 2,
-				[64402] = 1,
+				[121077] = 1,
 				[121053] = 1,
 				[113822] = 1,
 				[121069] = 1,
 				[119299] = 92,
-				[118100] = 5,
-				[121051] = 1,
-				[121208] = 1,
-				[121071] = 1,
-				[121117] = 1,
-				[121207] = 1,
+				[128312] = 3,
+				[64402] = 1,
+				[90146] = 8,
+				[121275] = 1,
+				[139737] = 1,
+				[121115] = 1,
 				[121133] = 1,
 				[121268] = 2,
-				[121222] = 1,
-				[121167] = 1,
-				[121165] = 1,
-				[105679] = 1,
-				[139738] = 1,
-				[113823] = 1,
-				[118723] = 74,
+				[121071] = 1,
+				[124120] = 2,
+				[139198] = 1,
+				[64401] = 1,
+				[121054] = 1,
+				[124110] = 2,
+				[121210] = 1,
 			},
 		},
 		["Evan - Illidan"] = {
@@ -1085,43 +1094,43 @@ AskMrRobotDb3 = {
 				[97985] = 1,
 				[113868] = 1,
 				[128124] = 1,
-				[113986] = 1,
+				[114129] = 1,
 				[118631] = 1,
-				[6218] = 1,
+				[113823] = 1,
 				[113821] = 1,
 				[113889] = 1,
 				[128315] = 1,
 				[128069] = 2,
-				[128129] = 1,
-				[109931] = 1,
+				[6948] = 1,
+				[118722] = 33,
 				[109805] = 1,
 				[114131] = 4,
-				[124591] = 3,
+				[109218] = 44,
 				[115798] = 1,
-				[118632] = 1,
+				[114822] = 3,
 				[113655] = 1,
 				[114806] = 7,
-				[118474] = 2,
-				[114822] = 3,
-				[118354] = 6,
+				[109076] = 20,
+				[118632] = 1,
+				[113842] = 1,
 				[113822] = 1,
 				[113957] = 1,
-				[124571] = 2,
-				[113981] = 2,
+				[113854] = 1,
 				[109155] = 8,
+				[113981] = 2,
 				[110560] = 1,
 				[118304] = 1,
 				[113878] = 1,
-				[113854] = 1,
-				[113842] = 1,
-				[109076] = 20,
+				[124571] = 2,
+				[118354] = 6,
+				[118474] = 2,
 				[113656] = 1,
-				[109218] = 44,
-				[118722] = 33,
-				[6948] = 1,
+				[124591] = 3,
+				[109931] = 1,
+				[128129] = 1,
 				[113942] = 2,
-				[113823] = 1,
-				[114129] = 1,
+				[6218] = 1,
+				[113986] = 1,
 			},
 			["Logging"] = {
 				["LastDiff"] = 1,
@@ -1186,28 +1195,28 @@ AskMrRobotDb3 = {
 				[113261] = 118,
 				[118372] = 1,
 				[113840] = 1,
-				[113588] = 1,
+				[101677] = 1,
 				[113596] = 1,
 				[109127] = 1,
-				[113609] = 1,
+				[116003] = 1,
 				[109133] = 1,
 				[113801] = 1,
 				[116053] = 3,
 				[52723] = 1,
 				[109126] = 391,
 				[105690] = 1,
-				[111556] = 722,
+				[115996] = 1,
 				[111557] = 2,
 				[113262] = 173,
-				[113967] = 1,
-				[109129] = 3,
 				[82467] = 1,
-				[115996] = 1,
+				[109129] = 3,
+				[113967] = 1,
+				[111556] = 722,
 				[109124] = 43,
 				[109128] = 4,
 				[115999] = 1,
-				[116003] = 1,
-				[101677] = 1,
+				[113609] = 1,
+				[113588] = 1,
 			},
 		},
 		["Pandatal - Illidan"] = {
@@ -1219,13 +1228,6 @@ AskMrRobotDb3 = {
 				"0000000", -- [1]
 			},
 		},
-	},
-	["profileKeys"] = {
-		["Metal - Illidan"] = "Metal - Illidan",
-		["Cometron - Illidan"] = "Cometron - Illidan",
-		["Comet - Illidan"] = "Comet - Illidan",
-		["Evan - Illidan"] = "Evan - Illidan",
-		["Pandatal - Illidan"] = "Pandatal - Illidan",
 	},
 	["global"] = {
 		["Shopping"] = {
@@ -1240,6 +1242,13 @@ AskMrRobotDb3 = {
 			},
 		},
 		["Region"] = "US",
+	},
+	["profileKeys"] = {
+		["Metal - Illidan"] = "Metal - Illidan",
+		["Cometron - Illidan"] = "Cometron - Illidan",
+		["Comet - Illidan"] = "Comet - Illidan",
+		["Evan - Illidan"] = "Evan - Illidan",
+		["Pandatal - Illidan"] = "Pandatal - Illidan",
 	},
 	["profiles"] = {
 		["Metal - Illidan"] = {
@@ -1282,15 +1291,13 @@ AskMrRobotDb3 = {
 					},
 					[939] = {
 					},
-					[1648] = {
-					},
-					[1621] = {
+					[530] = {
 					},
 					[1477] = {
 					},
 					[1571] = {
 					},
-					[530] = {
+					[1621] = {
 					},
 				},
 			},

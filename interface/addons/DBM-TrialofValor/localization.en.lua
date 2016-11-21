@@ -5,16 +5,8 @@ local L
 ---------------
 L= DBM:GetModLocalization(1819)
 
-L:SetWarningLocalization({
-})
-
-L:SetTimerLocalization({
-})
-
-L:SetOptionLocalization({
-})
-
 L:SetMiscLocalization({
+	BrandYell = "{rt%d} %s {rt%d}"--Shouldn't need translating
 })
 
 ---------------------------
@@ -28,7 +20,10 @@ L= DBM:GetModLocalization(1830)
 L= DBM:GetModLocalization(1829)
 
 L:SetMiscLocalization({
-	phaseThree =	"Your efforts are for naught, mortals! Odyn will NEVER be free!"
+	phaseThree =	"Your efforts are for naught, mortals! Odyn will NEVER be free!",
+	near =			"near",
+	far =			"far",
+	multiple =		"Multiple"
 })
 
 -------------

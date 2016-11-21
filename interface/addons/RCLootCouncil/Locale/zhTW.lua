@@ -127,6 +127,7 @@ L["Check to have all frames minimize when entering combat"] = "\233\128\178\229\
 L["Choose when to use RCLootCouncil"] = "\233\129\184\230\147\135\228\189\149\230\153\130\228\189\191\231\148\168RCLootCouncil" -- Needs review
 L["Clear Loot History"] = "\230\184\133\233\153\164\230\139\190\229\143\150\230\173\183\229\143\178" -- Needs review
 L["clear_loot_history_desc"] = "\229\136\170\233\153\164\229\133\168\233\131\168\230\139\190\229\143\150\230\173\183\229\143\178" -- Needs review
+-- L["Clear Selection"] = ""
 L["Click to add note to send to the council."] = "\233\187\158\230\147\138\229\162\158\229\138\160\231\153\188\233\128\129\231\173\134\232\168\152" -- Needs review
 L["Click to expand/collapse more info"] = "\233\187\158\230\147\138\229\177\149\233\150\139/\230\148\182\232\181\183" -- Needs review
 L["Click to switch to 'item'"] = "\233\187\158\230\147\138\229\136\135\230\143\155\231\130\186%s" -- Needs review

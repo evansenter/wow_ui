@@ -3,7 +3,7 @@
 ## X-Curse-Project-Name: AceGUI-3.0-SharedMediaWidgets
 ## X-Curse-Project-ID: ace-gui-3-0-shared-media-widgets
 ## X-Curse-Repository-ID: wow/ace-gui-3-0-shared-media-widgets/mainline
-## X-Curse-Packaged-Version: 2.1.7-Release
+## X-Curse-Packaged-Version: 2.1.8-Release
 ## X-Curse-Project-Name: RCLootCouncil
 ## X-Curse-Project-ID: rclootcouncil
 ## X-Curse-Repository-ID: wow/rclootcouncil/mainline
