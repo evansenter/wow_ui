@@ -1,0 +1,12 @@
+tag 200ac6c1a8bb2cff58112340e405911dcb572575 v4.1.12
+Author:	Shadowed <shadowed.wow@gmail.com>
+Date:	Sat Nov 26 10:17:35 2016 -0800
+
+Tagging as release v4.1.12
+
+commit d087c24adfd708df7a9e8e5bbaaffbf5d83847e9
+Author: Shadowed <shadowed.wow@gmail.com>
+Date:   Sat Nov 26 10:14:39 2016 -0800
+
+    Force rebuild
+
