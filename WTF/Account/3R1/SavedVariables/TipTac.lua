@@ -24,14 +24,14 @@ TipTac_Config = {
 	["enableChatHoverTips"] = true,
 	["barsCondenseValues"] = true,
 	["left"] = 5.99998378753662,
-	["barTexture"] = "Interface\\Addons\\SharedMedia\\statusbar\\BantoBar",
+	["if_showSpellIdAndRank"] = true,
 	["if_showItemLevelAndId"] = false,
 	["showAuraCooldown"] = false,
 	["anchorWorldUnitPoint"] = "TOPLEFT",
 	["classification_trivial"] = "~%s ",
 	["classification_worldboss"] = "%s|r (Boss) ",
-	["showBuffs"] = false,
-	["classification_rareelite"] = "+%s|r (Rare) ",
+	["manaBar"] = true,
+	["iconRaid"] = false,
 	["if_borderlessIcons"] = false,
 	["anchorWorldTipPoint"] = "TOPLEFT",
 	["colorNameByClass"] = true,
@@ -41,22 +41,22 @@ TipTac_Config = {
 		0.8, -- [3]
 		0.100000023841858, -- [4]
 	},
-	["iconRaid"] = false,
+	["classColoredBorder"] = true,
 	["tipBorderColor"] = {
 		0.301960784313726, -- [1]
 		0.301960784313726, -- [2]
 		0.4, -- [3]
 		0.500001192092896, -- [4]
 	},
-	["fontSizeDelta"] = 3,
-	["targetYouText"] = "You",
-	["top"] = 1193.00024414063,
-	["showGuildRank"] = true,
 	["fontFlags"] = "",
+	["targetYouText"] = "You",
+	["showGuildRank"] = true,
+	["top"] = 1193.00024414063,
+	["fontSizeDelta"] = 3,
 	["barFontFace"] = "Interface\\Addons\\Skada\\media\\fonts\\ABF.ttf",
-	["classColoredBorder"] = true,
-	["manaBar"] = true,
+	["classification_rareelite"] = "+%s|r (Rare) ",
+	["showBuffs"] = false,
 	["barFontSize"] = 12,
 	["anchorFrameTipPoint"] = "TOPLEFT",
-	["if_showSpellIdAndRank"] = true,
+	["barTexture"] = "Interface\\Addons\\SharedMedia\\statusbar\\BantoBar",
 }

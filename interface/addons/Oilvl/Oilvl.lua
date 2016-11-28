@@ -5137,24 +5137,22 @@ function oilvlSaveItemLevel(n)
 				ntex4:SetColorTexture(0.2,0.2,0.2,0.5)
 				ntex4:SetAllPoints()	
 				_G[OTCurrent]:SetNormalTexture(ntex4)
+				_G[OTCurrent]:SetText(oClassColor(OTCurrent2)..GetUnitName(OTCurrent2,""):gsub("%-.+", ""));
+				oilvlframedata.name[OTCurrent3] = GetUnitName(OTCurrent2,""):gsub("%-.+", "");
+				oilvlframedata.me[OTCurrent3] = "";
+				oilvlframedata.mg[OTCurrent3] = "";
+				oilvlframedata.spec[OTCurrent3] = "";
 				if missenchant ~= "" or missgem ~= "" then
-					oilvlframedata.name[OTCurrent3] = oilvlframedata.name[OTCurrent3]:gsub("!","");
 					oilvlframedata.name[OTCurrent3] = "! "..oilvlframedata.name[OTCurrent3]
 					oilvlframedata.me[OTCurrent3] = {missenchant,missenchant2};
 					oilvlframedata.mg[OTCurrent3] = {missgem,missgem2};
 				elseif missenchant2 ~= "" or missgem2 ~= "" then
-					oilvlframedata.name[OTCurrent3] = oilvlframedata.name[OTCurrent3]:gsub("~","");
 					oilvlframedata.name[OTCurrent3] = "~ "..oilvlframedata.name[OTCurrent3]
 					oilvlframedata.me[OTCurrent3] = {missenchant,missenchant2};
 					oilvlframedata.mg[OTCurrent3] = {missgem,missgem2};
-				else
-					oilvlframedata.name[OTCurrent3] = oilvlframedata.name[OTCurrent3]:gsub("!",""):gsub("~",""):gsub(" ","");
-					oilvlframedata.me[OTCurrent3] = "";
-					oilvlframedata.mg[OTCurrent3] = "";
-					oilvlframedata.spec[OTCurrent3] = "";
 				end
 				if oilvlframedata.name[OTCurrent3] ~= "" then
-				-- check legendary ring
+				-- check legendary
 					if legendary2 > 0 then
 						_G[OTCurrent]:SetText(oClassColor(OTCurrent2)..oilvlframedata.name[OTCurrent3].."\n|r|cFFFF8000"..OTilvl);
 					else
@@ -6141,11 +6139,9 @@ function oilvlCheckUpgrade(i)
 	local upgrade=0;
 	local n = 0;
 	for j = 1, 17 do
-		if oilvlframedata.gear[i][j] then 
-			if oilvlframedata.gear[i][j][9] then 
-				upgrade = upgrade +  oilvlframedata.gear[i][j][9] / 2;
-				n = n + 1;
-			end 
+		if oilvlframedata.gear[i] and oilvlframedata.gear[i][j] and oilvlframedata.gear[i][j][9] then 
+			upgrade = upgrade +  oilvlframedata.gear[i][j][9] / 2;
+			n = n + 1;
 		end
 	end
 	if n == 0 then return "" end
