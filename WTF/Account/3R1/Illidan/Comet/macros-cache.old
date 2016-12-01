@@ -57,7 +57,7 @@ VER 3 010000000000001D "Tier 6 MW" "INV_Misc_QuestionMark"
 END
 VER 3 010000000000001B "Tiger's Lust" "INV_Misc_QuestionMark"
 #showtooltip
-/use [nomod,@mouseover,help,nodead][nomod,@player][nomod]Tiger's Lust;[mod:shift]6
+/use [nomod,@mouseover,help,nodead][nomod,@player][nomod][mod:ctrl][mod:alt]Tiger's Lust;[mod:shift]6
 END
 VER 3 010000000000000E "ToD" "INV_MISC_QUESTIONMARK"
 #showtooltip

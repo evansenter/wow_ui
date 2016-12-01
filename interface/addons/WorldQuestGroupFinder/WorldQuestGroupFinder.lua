@@ -48,12 +48,17 @@ local blacklistedQuests = {
 	[43772] = true, -- Enigmatic
 	[43767] = true, -- Enigmatic
 	[43756] = true, -- Enigmatic
+	[45032] = true, -- Like the Wind
+	[45046] = true, -- Like the Wind
+	[45047] = true, -- Like the Wind
+	[45048] = true, -- Like the Wind
 	[45049] = true, -- Like the Wind
 	[41327] = true, -- Supplies Needed: Stormscales
+	[41318] = true, -- Supplies Needed: Felslate
 	[41237] = true, -- Supplies Needed: Stonehide Leather
+	[41339] = true, -- Supplies Needed: Stonehide Leather
 	[41351] = true, -- Supplies Needed: Stonehide Leather
 	[41207] = true, -- Supplies Needed: Leystone
-	[41339] = true, -- Supplies Needed: Stonehide Leather
 	[41298] = true, -- Supplies Needed: Fjarnskaggl
 	[41315] = true, -- Supplies Needed: Leystone
 	[41316] = true, -- Supplies Needed: Leystone
@@ -217,6 +222,7 @@ local raidQuests = {
 	[42779] = true, -- The Sleeping Corruption
 	[42269] = true, -- The Soultakers
 	[42819] = true, -- Pocket Wizard
+	[42270] = true, -- Scourge of the Skies
 	[43985] = true -- A Dark Tide
 }
 
@@ -660,7 +666,7 @@ function WorldQuestGroupFinder.InitWQGroup(wqID, retry)
 	if (WorldQuestGroupFinder.IsAlreadyQueued(true)) then
 		return false
 	end
-	-- Check if in the right location
+	-- Get location ID
 	local tmpCurrentMapID = GetCurrentMapAreaID()
 	SetMapToCurrentZone()
 	local mapAreaID = GetCurrentMapAreaID()
@@ -673,6 +679,15 @@ function WorldQuestGroupFinder.InitWQGroup(wqID, retry)
 		mapAreaID = GetCurrentMapAreaID()
 		SetMapByID(tmpCurrentMapID)
 		foundZone = WorldQuestGroupFinder.IsWQInZone(wqID, mapAreaID)
+		-- Temp fix for location not found, there will be a new way to deal with this in 7.1.5
+		if (not foundZone) then
+			SetMapToCurrentZone()
+			if (GetCurrentMapContinent() == 8) then
+				foundZone = true
+				mapAreaID = 1015
+			end
+			SetMapByID(tmpCurrentMapID)
+		end
 	end
 	if (foundZone) then
 		tempWQ = wqID
@@ -893,37 +908,41 @@ function WorldQuestGroupFinder.HandleCustomAutoInvite()
 				local applicants = C_LFGList.GetApplicants();
 				local applicantsWQGF = {}
 				local applicantsNonWQGF = {}
-				for i=1, #applicants do
-					local id, status, pendingStatus, numMembers, isNew, comment = C_LFGList.GetApplicantInfo(applicants[i]);
-					if (status == "applied") then
-						if (comment == "WorldQuestGroupFinder User") then
-							applicantsWQGF[id] = numMembers
-						else
-							applicantsNonWQGF[id] = numMembers
-						end
-					end			
-				end
-				-- Get current group members count, including pending invites
-				upToDateGroupMembersCount = GetNumGroupMembers() + pendingInvites
-				-- If we're here then the addon is at least set to invite WQGF users
-				for aid, numMembers in pairs(applicantsWQGF) do
-					if ((upToDateGroupMembersCount + numMembers) <= 5 or raidQuests[currentWQ]) then
-						C_LFGList.InviteApplicant(aid)
-						recentlyInvitedPlayers = true
-						upToDateGroupMembersCount = upToDateGroupMembersCount + numMembers
-						WorldQuestGroupFinder.dprint(string.format("Auto-inviting WQGF user(s). New member(s): %d. Current members count: %d.", numMembers, upToDateGroupMembersCount))
+				if (applicants) then
+					for i=1, #applicants do
+						local id, status, pendingStatus, numMembers, isNew, comment = C_LFGList.GetApplicantInfo(applicants[i]);
+						if (status == "applied") then
+							if (comment == "WorldQuestGroupFinder User") then
+								applicantsWQGF[id] = numMembers
+							else
+								applicantsNonWQGF[id] = numMembers
+							end
+						end			
 					end
-				end
-				-- If set to invite everyone
-				if (WorldQuestGroupFinderConf.GetConfigValue("autoinvite")) then
-					for aid, numMembers in pairs(applicantsNonWQGF) do
+					-- Get current group members count, including pending invites
+					upToDateGroupMembersCount = GetNumGroupMembers() + pendingInvites
+					-- If we're here then the addon is at least set to invite WQGF users
+					for aid, numMembers in pairs(applicantsWQGF) do
 						if ((upToDateGroupMembersCount + numMembers) <= 5 or raidQuests[currentWQ]) then
 							C_LFGList.InviteApplicant(aid)
 							recentlyInvitedPlayers = true
 							upToDateGroupMembersCount = upToDateGroupMembersCount + numMembers
-							WorldQuestGroupFinder.dprint(string.format("Auto-inviting NON-WQGF user(s). New member(s): %d. Current members count: %d.", numMembers, upToDateGroupMembersCount))
+							WorldQuestGroupFinder.dprint(string.format("Auto-inviting WQGF user(s). New member(s): %d. Current members count: %d.", numMembers, upToDateGroupMembersCount))
 						end
 					end
+					-- If set to invite everyone
+					if (WorldQuestGroupFinderConf.GetConfigValue("autoinvite")) then
+						for aid, numMembers in pairs(applicantsNonWQGF) do
+							if ((upToDateGroupMembersCount + numMembers) <= 5 or raidQuests[currentWQ]) then
+								C_LFGList.InviteApplicant(aid)
+								recentlyInvitedPlayers = true
+								upToDateGroupMembersCount = upToDateGroupMembersCount + numMembers
+								WorldQuestGroupFinder.dprint(string.format("Auto-inviting NON-WQGF user(s). New member(s): %d. Current members count: %d.", numMembers, upToDateGroupMembersCount))
+							end
+						end
+					end
+				else
+					WorldQuestGroupFinder.dprint("Tried to invite but there were no applicants")
 				end
 			end)
 			-- Check for groups dropping error
@@ -947,12 +966,19 @@ function WorldQuestGroupFinder.HandleCustomAutoInvite()
 							mapAreaID = GetCurrentMapAreaID()
 							SetMapByID(tmpCurrentMapID)
 							foundZone = WorldQuestGroupFinder.IsWQInZone(wqID, mapAreaID)
+							-- Temp fix for location not found, there will be a new way to deal with this in 7.1.5
+							if (not foundZone) then
+								SetMapToCurrentZone()
+								if (GetCurrentMapContinent() == 8) then
+									foundZone = true
+									mapAreaID = 1015
+								end
+								SetMapByID(tmpCurrentMapID)
+							end
 						end
 						if (foundZone) then
 							local currentRealmType = WorldQuestGroupFinder.getCurrentRealmType()
 							C_LFGList.CreateListing(activityIDs[mapAreaID], shortTitle, 0, 0, "", string.format(L["WQGF_WQ_GROUP_DESCRIPTION"], title, GetMapNameByID(mapAreaID), GetAddOnMetadata("WorldQuestGroupFinder", "Version")).." #WQ:"..currentWQ.."#"..currentRealmType.."#", false);
-						else 
-							WorldQuestGroupFinder.dprint("Couldn't find zone ID :(")
 						end
 					end
 				end

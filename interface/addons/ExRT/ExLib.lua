@@ -149,7 +149,7 @@ CheckButton	ExRTRadioButtonModernTemplate
 local GlobalAddonName, ExRT = ...
 local isExRT = GlobalAddonName == "ExRT"
 
-local libVersion = 23
+local libVersion = 24
 
 if type(ELib)=='table' and type(ELib.V)=='number' and ELib.V > libVersion then return end
 
@@ -2510,6 +2510,13 @@ do
 		self:SetScript("OnTextChanged",func)
 		return self
 	end
+	local function Widget_AddSearchIcon(self,size)
+		self.searchTexture = self:CreateTexture(nil, "BACKGROUND",nil,2)
+		self.searchTexture:SetPoint("RIGHT",-2,0)
+		self.searchTexture:SetTexture([[Interface\Common\UI-Searchbox-Icon]])
+		self.searchTexture:SetSize(size or 14,size or 14)	
+		return self
+	end
 	
 	function ELib:Edit(parent,maxLetters,onlyNum,template)
 		if template == 0 then
@@ -2540,7 +2547,8 @@ do
 		Mod(self,
 			'Text',Widget_SetText,
 			'Tooltip',Widget_Tooltip,
-			'OnChange',Widget_OnChange
+			'OnChange',Widget_OnChange,
+			'AddSearchIcon',Widget_AddSearchIcon
 		)
 
 		return self
@@ -2851,6 +2859,24 @@ do
 end
 
 do
+	local function Click(self)
+		self:GetParent():Click()
+	end
+	local function ButtonOnEnter(self)
+		self.colorSave = {self:GetParent().text:GetTextColor()}
+		self:GetParent().text:SetTextColor(1,1,1)
+	end
+	local function ButtonOnLeave(self)
+		self:GetParent().text:SetTextColor(unpack(self.colorSave))
+	end
+	local function Widget_TextToButton(self)
+		self.Button = CreateFrame("Button",nil,self)
+		self.Button:SetAllPoints(self.text)
+		self.Button:SetScript("OnClick",Click)
+		self.Button:SetScript("OnEnter",ButtonOnEnter)
+		self.Button:SetScript("OnLeave",ButtonOnLeave)
+		return self
+	end
 	function ELib:Radio(parent,text,checked,template)
 		if template == 0 then
 			template = "UIRadioButtonTemplate"
@@ -2863,6 +2889,7 @@ do
 		self:SetChecked(checked and true or false)
 		
 		Mod(self)
+		self.AddButton = Widget_TextToButton
 		
 		return self
 	end
@@ -4570,6 +4597,9 @@ do
 		parent.ZoomMaxX = nil
 		if parent.OnResetZoom then
 			parent:OnResetZoom()
+		end
+		if parent.DisableReloadOnResetZoom then
+			return
 		end
 		parent:Reload()
 	end

@@ -3,6 +3,8 @@ local GlobalAddonName, ExRT = ...
 local module = ExRT.mod:New("WhoPulled",ExRT.L.WhoPulled,nil,true)
 local ELib,L = ExRT.lib,ExRT.L
 
+local bit_band, UnitAffectingCombat, IsEncounterInProgress = bit.band, UnitAffectingCombat, IsEncounterInProgress
+
 module.db.lastPull = nil
 module.db.lastBossName = nil
 module.db.whoPulled = nil

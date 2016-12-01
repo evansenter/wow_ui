@@ -346,10 +346,14 @@ function module.options:Load()
 				
 				
 				local totalTime,isFK = 0
+				local legitPulls = 0
 				-- redo firstkill counter, cuz exist error if you kill boss on another char
 				for i=1,#encounterData.pullTable do
+					if (encounterData.pullTable[i].d or 31) >= 30 or encounterData.pullTable[i].d == 0 then
+						legitPulls = legitPulls + 1
+					end
 					if not isFK and encounterData.pullTable[i].k then
-						encounterData.firstKill = i
+						encounterData.firstKill = legitPulls
 						isFK = true
 					end
 					totalTime = totalTime + (encounterData.pullTable[i].d or 0)

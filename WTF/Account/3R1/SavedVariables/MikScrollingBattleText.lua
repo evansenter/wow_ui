@@ -87,10 +87,10 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 				["INCOMING_DODGE"] = {
-					["colorG"] = 1,
-					["fontSize"] = 26,
 					["alwaysSticky"] = true,
 					["colorR"] = 1,
+					["colorG"] = 1,
+					["fontSize"] = 26,
 				},
 				["PET_INCOMING_BLOCK"] = {
 					["disabled"] = true,
@@ -275,10 +275,10 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 				["INCOMING_PARRY"] = {
-					["colorG"] = 1,
-					["fontSize"] = 26,
 					["alwaysSticky"] = true,
 					["colorR"] = 1,
+					["colorG"] = 1,
+					["fontSize"] = 26,
 				},
 			},
 			["scrollAreas"] = {
@@ -309,16 +309,13 @@ MSBTProfiles_SavedVars = {
 			["critFontName"] = "ABF",
 			["enableBlizzardDamage"] = false,
 			["scrollAreas"] = {
-				["Incoming"] = {
-					["stickyDirection"] = "Up",
-					["direction"] = "Up",
-					["offsetX"] = -285,
-					["behavior"] = "MSBT_NORMAL",
-					["animationStyle"] = "Straight",
-					["stickyBehavior"] = "Normal",
-				},
 				["Notification"] = {
 					["offsetY"] = 250,
+				},
+				["Static"] = {
+					["offsetY"] = 120,
+					["scrollHeight"] = 100,
+					["direction"] = "Up",
 				},
 				["Outgoing"] = {
 					["behavior"] = "MSBT_NORMAL",
@@ -326,10 +323,13 @@ MSBTProfiles_SavedVars = {
 					["offsetX"] = 250,
 					["animationStyle"] = "Straight",
 				},
-				["Static"] = {
-					["offsetY"] = 120,
-					["scrollHeight"] = 100,
+				["Incoming"] = {
+					["stickyDirection"] = "Up",
 					["direction"] = "Up",
+					["offsetX"] = -285,
+					["behavior"] = "MSBT_NORMAL",
+					["animationStyle"] = "Straight",
+					["stickyBehavior"] = "Normal",
 				},
 			},
 			["normalFontName"] = "ABF",
@@ -640,10 +640,10 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 				["INCOMING_DODGE"] = {
-					["colorR"] = 1,
 					["fontSize"] = 26,
-					["colorG"] = 1,
+					["colorR"] = 1,
 					["alwaysSticky"] = true,
+					["colorG"] = 1,
 				},
 				["PET_INCOMING_BLOCK"] = {
 					["disabled"] = true,
@@ -828,10 +828,10 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 				["INCOMING_PARRY"] = {
-					["colorR"] = 1,
 					["fontSize"] = 26,
-					["colorG"] = 1,
+					["colorR"] = 1,
 					["alwaysSticky"] = true,
+					["colorG"] = 1,
 				},
 			},
 			["scrollAreas"] = {

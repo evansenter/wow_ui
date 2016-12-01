@@ -1,4 +1,9 @@
-0.19.2 (18/11/2016)
+0.19.3 (29/11/2016)
+- Removed location restrictions to search for a WQ as it was causing issues to some users. Please don't abuse this!
+- Added this week's WB in the raid WQs list
+- Fixed german translation
+
+0.19.2 (25/11/2016)
 - Improved realm type detection for the "Avoid PvP servers" option. WQGF will no longer use the group author's realm to determine is a group is on a PvP realm. Instead, it now check the player's PvP flag which can almost everytime say if he is currently phased on a PvP realm or not. Additionally, the group's realm type flag is now refreshed if for some reason the group switches to another type of realm.
 - New WQ dialog will no longer appear in Ashran
 - Updated localizations

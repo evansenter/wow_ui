@@ -30,18 +30,18 @@ TipTac_Config = {
 	["anchorWorldUnitPoint"] = "TOPLEFT",
 	["classification_trivial"] = "~%s ",
 	["classification_worldboss"] = "%s|r (Boss) ",
-	["manaBar"] = true,
-	["iconRaid"] = false,
+	["colorNameByClass"] = true,
+	["classColoredBorder"] = true,
 	["if_borderlessIcons"] = false,
 	["anchorWorldTipPoint"] = "TOPLEFT",
-	["colorNameByClass"] = true,
+	["manaBar"] = true,
 	["gradientColor"] = {
 		0.8, -- [1]
 		0.8, -- [2]
 		0.8, -- [3]
 		0.100000023841858, -- [4]
 	},
-	["classColoredBorder"] = true,
+	["classification_rareelite"] = "+%s|r (Rare) ",
 	["tipBorderColor"] = {
 		0.301960784313726, -- [1]
 		0.301960784313726, -- [2]
@@ -54,7 +54,7 @@ TipTac_Config = {
 	["top"] = 1193.00024414063,
 	["fontSizeDelta"] = 3,
 	["barFontFace"] = "Interface\\Addons\\Skada\\media\\fonts\\ABF.ttf",
-	["classification_rareelite"] = "+%s|r (Rare) ",
+	["iconRaid"] = false,
 	["showBuffs"] = false,
 	["barFontSize"] = 12,
 	["anchorFrameTipPoint"] = "TOPLEFT",
