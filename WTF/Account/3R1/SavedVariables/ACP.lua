@@ -2,7 +2,6 @@
 ACP_Data = {
 	["sorter"] = "Group By Name",
 	["NoRecurse"] = false,
-	["NoChildren"] = true,
 	["AddonSet"] = {
 		{
 			"ActionBarSaver", -- [1]
@@ -377,9 +376,10 @@ ACP_Data = {
 			["name"] = "Minimal",
 		}, -- [4]
 	},
+	["NoChildren"] = true,
 	["collapsed"] = {
-		["BigWigs"] = true,
 		["OmniCC"] = true,
+		["BigWigs"] = true,
 	},
 	["ProtectedAddons"] = {
 		["ACP"] = true,

@@ -1,20 +1,12 @@
-Changes since tag 2.2.2.2
+tag 5f792559f05e180093549a886e599f158a7e1dad 2.2.2.4
+Author:	Benjamin Staneck <staneck@gmail.com>
+Date:	Mon Dec 12 23:08:03 2016 +0100
 
-commit 9bc46e548cf6055cf5c5f2d6fdc8a734eb90d899
+commit 097f9e99bd8428dc32076b90add68d834eff3477
 Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Fri Nov 18 01:17:42 2016 +0100
+Date:   Mon Dec 12 23:07:04 2016 +0100
 
-    Test for the CurseForge packager.
-
-commit 9bc46e548cf6055cf5c5f2d6fdc8a734eb90d899
-Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Fri Nov 18 01:17:42 2016 +0100
-
-    Test for the CurseForge packager.
-
-commit c4993033ae81c31e9cb94eebed7365c4f7bcd6fb
-Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Fri Nov 18 00:11:03 2016 +0100
-
-    dummy commit to trigger wowace packager
+    Revert "Use SetClipsChildren for Texture and Icon Frame"
+    
+    This reverts commit 4f8aac7277b4175cb2a14e5e854ba11a5bd5f84e.
 

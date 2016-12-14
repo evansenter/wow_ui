@@ -70,8 +70,8 @@ L["WQGF_NO_APPLICATIONS_ANSWERED"] = "Aucune de vos inscriptions pour |c00bfffff
 L["WQGF_NO_APPLY_BLACKLIST"] = "Vous n'avez pas été inscrit à %d groupe(s) car leur chef de groupe était dans la blacklist. Vous pouvez utiliser |c00bfffff/wqgf unbl |c00ffffffpour vider la blacklist."
 L["WQGF_PLAYER_IS_NOT_LEADER"] = "Vous n'êtes pas le chef du groupe."
 L["WQGF_RAID_MODE_WARNING"] = "|c0000ffffATTENTION:|c00ffffff Ce groupe est en mode raid, ce qui signifie que vous ne serez pas en mesure d'effectuer l'expédition. Vous devriez demander au chef de groupe de revenir en mode Groupe si cela est possible. Le retour en mode Groupe sera automatiquement effectué si vous devenez le chef de groupe."
-L["WQGF_SEARCHING_FOR_GROUP"] = "Recherche d'un groupe pour l'expédition |c00bfffff%s|c00ffffff..."
 L["WQGF_SEARCH_OR_CREATE_GROUP"] = "Rechercher ou créer un groupe"
+L["WQGF_SEARCHING_FOR_GROUP"] = "Recherche d'un groupe pour l'expédition |c00bfffff%s|c00ffffff..."
 L["WQGF_SLASH_COMMANDS_1"] = "|c00bfffffCommandes slash (/wqgf):"
 L["WQGF_SLASH_COMMANDS_2"] = "|c00bfffff /wqgf config : Ouvre la configuration de l'addon"
 L["WQGF_SLASH_COMMANDS_3"] = "|c00bfffff /wqgf unbl : Vide la blacklist des chefs de groupe"
@@ -84,10 +84,10 @@ L["WQGF_USER_JOINED"] = "Un utilisateur de World Quest Group Finder a rejoint le
 L["WQGF_USERS_JOINED"] = "Des utilisateurs de World Quest Group Finder ont rejoint le groupe !"
 L["WQGF_WQ_AREA_ENTERED_ALREADY_GROUPED_DIALOG"] = [=[Vous êtes entré dans une nouvelle zone d'expédition, mais vous êtes déjà groupé pour une autre expédition.
 
-Souhaitez-vous quitter votre groupe et en rechercher un autre pour \"%s\" ?]=]
+Souhaitez-vous quitter votre groupe et en rechercher un autre pour "%s" ?]=]
 L["WQGF_WQ_AREA_ENTERED_DIALOG"] = [=[Vous êtes entré dans une nouvelle zone d'expédition.
 
-Souhaitez-vous rechercher un groupe pour \"%s\" ?]=]
+Souhaitez-vous rechercher un groupe pour "%s" ?]=]
 L["WQGF_WQ_COMPLETE_LEAVE_DIALOG"] = [=[Vous avez terminé l'expédition.
 
 Souhaitez-vous quitter le groupe ?]=]

@@ -38,8 +38,6 @@ module.db.raceStatsDiffs = {
 		--	Human,	Dwarf,	NElf,	Orc,	Tauren,	Undead,	Gnome,	Troll,	BElf,	Draenei,Goblin,	Worgen,	Pandaren
 }
 
-module.db.statsMultiplayBySpec = {}
-
 module.db.armorType = ExRT.GDB.ClassArmorType
 module.db.roleBySpec = ExRT.GDB.ClassSpecializationRole
 
@@ -986,6 +984,16 @@ function module.options:Load()
 					line.spec.texture:SetTexture("Interface\\Icons\\INV_MISC_QUESTIONMARK")
 					line.spec.id = nil
 					line.ilvl:SetText("")
+					
+					line.relic1:SetText("")
+					line.relic2:SetText("")
+					line.relic3:SetText("")
+					
+					line.updateAP:Hide()
+					
+					line.refreshArtifact:Hide()
+					
+					line.apinfo:SetText("")
 					
 					line.back:SetGradientAlpha("HORIZONTAL", 0, 0, 0, 0.5, 0, 0, 0, 0)
 				end

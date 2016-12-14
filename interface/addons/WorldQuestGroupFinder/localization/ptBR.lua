@@ -70,8 +70,8 @@ L["WQGF_NO_APPLICATIONS_ANSWERED"] = "Nenhum de seus convites para |c00bfffff%s|
 L["WQGF_NO_APPLY_BLACKLIST"] = "Você não foi convidade para o grupo %d pois o lider esta na Lista Negra  |c00bfffff/wqgf unbl |c00ffffffpara limpar a Lista."
 L["WQGF_PLAYER_IS_NOT_LEADER"] = "Você não é o lider do grupo."
 L["WQGF_RAID_MODE_WARNING"] = "|c0000ffffATTENTION:|c00ffffff Esta grupo esta convertido para Raide, isso significa que você não pode completar a Missão Mundial. Você pode pedir para o lider converter novamente para grupo se possivel. Esse grupo sera convertido automaticamente se você se tornar o Lider."
-L["WQGF_SEARCHING_FOR_GROUP"] = "Procurando um grupo para a Missão Mundial |c00bfffff%s|c00ffffff..."
 L["WQGF_SEARCH_OR_CREATE_GROUP"] = "Procurar ou Criar Grupo"
+L["WQGF_SEARCHING_FOR_GROUP"] = "Procurando um grupo para a Missão Mundial |c00bfffff%s|c00ffffff..."
 L["WQGF_SLASH_COMMANDS_1"] = "|c00bfffffComandos de barra (/wqgf):"
 L["WQGF_SLASH_COMMANDS_2"] = "|c00bfffff /wqgf config : Abre a configuração do ADDON"
 L["WQGF_SLASH_COMMANDS_3"] = "|c00bfffff /wqgf unbl : Limpa a lista negra de lideres"
@@ -84,10 +84,10 @@ L["WQGF_USER_JOINED"] = "Um usuário do World Guest Group Finder enrou no grupo!
 L["WQGF_USERS_JOINED"] = "Usuarios do World Quest Group Finder entraram no grupo!"
 L["WQGF_WQ_AREA_ENTERED_ALREADY_GROUPED_DIALOG"] = [=[Você entrou na area de uma nova Missão Mundial, mas ja esta em grupo para outra Missão.
 
-Gostaria de sai do grupo atual e procurar um novo para \"%s\" ?]=]
+Gostaria de sai do grupo atual e procurar um novo para "%s" ?]=]
 L["WQGF_WQ_AREA_ENTERED_DIALOG"] = [=[Você entrou na area de uma nova Missão Mundial.
 
-Gostaria de procurar um novo grupo para \"%s\" ?]=]
+Gostaria de procurar um novo grupo para "%s" ?]=]
 L["WQGF_WQ_COMPLETE_LEAVE_DIALOG"] = [=[Você completou esta Missão Mundial.
 
 Você gostaria de sair do grupo ?]=]

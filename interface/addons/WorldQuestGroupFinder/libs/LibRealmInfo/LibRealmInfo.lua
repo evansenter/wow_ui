@@ -1,4 +1,4 @@
---[[--------------------------------------------------------------------
+﻿--[[--------------------------------------------------------------------
 	LibRealmInfo
 	World of Warcraft library for obtaining information about realms.
 	Copyright 2014 Phanx <addons@phanx.net>

@@ -672,7 +672,7 @@ function RCLootCouncil:OnCommReceived(prefix, serializedMsg, distri, sender)
 				end
 				self:SendCommand(sender, "verTestReply", self.playerName, self.playerClass, self.guildRank, self.version, self.tVersion, self:GetInstalledModulesFormattedData())
 				if strfind(otherVersion, "%a+") then return self:Debug("Someone's tampering with version?", otherVersion) end
-				if self.version < otherVersion and not self.verCheckDisplayed and (not (tVersion or self.tVersion)) then
+				if self:VersionCompare(self.version,otherVersion) and not self.verCheckDisplayed and (not (tVersion or self.tVersion)) then
 					self:Print(format(L["version_outdated_msg"], self.version, otherVersion))
 					self.verCheckDisplayed = true
 
@@ -686,7 +686,7 @@ function RCLootCouncil:OnCommReceived(prefix, serializedMsg, distri, sender)
 				local name,_,_, otherVersion, tVersion = unpack(data)
 				self.db.global.verTestCandidates[name] = otherVersion.. "-" .. tostring(tVersion) .. ": - " .. self.playerName
 				if strfind(otherVersion, "%a+") then return self:Debug("Someone's tampering with version?", otherVersion) end
-				if self.version < otherVersion and not self.verCheckDisplayed and (not (tVersion or self.tVersion)) then
+				if self:VersionCompare(self.version,otherVersion) and not self.verCheckDisplayed and (not (tVersion or self.tVersion)) then
 					self:Print(format(L["version_outdated_msg"], self.version, otherVersion))
 					self.verCheckDisplayed = true
 
@@ -1024,7 +1024,7 @@ end
 function RCLootCouncil:CreateResponse(session, link, ilvl, response, equipLoc, note, subType)
 	self:DebugLog("CreateResponse", session, link, ilvl, response, equipLoc, note, subType)
 	local g1, g2;
-	if equipLoc == "" and subType == self.db.global.localizedSubTypes["Artifact Relic"] then
+	if equipLoc == "" and self.db.global.localizedSubTypes[subType] == "Artifact Relic" then
 		g1, g2 = self:GetArtifactRelics(link)
 	else
 	 	g1, g2 = self:GetPlayersGear(link, equipLoc)
@@ -1332,6 +1332,16 @@ function RCLootCouncil.round(num, decimals)
 	return tonumber(string.format("%." .. (decimals or 0) .. "f", num))
 end
 
+--- Compares two versions
+-- returns true if ver1 is smaller than ver2
+-- Assumes strings of format "x.y.z"
+function RCLootCouncil:VersionCompare(ver1, ver2)
+	local a1,b1,c1 = string.split(".", ver1)
+	local a2,b2,c2 = string.split(".", ver2)
+	if not (c1 and c2) then return end -- Check if it exists
+	return tonumber(a1) < tonumber(a2) or tonumber(b1) < tonumber(b2) or tonumber(c1) < tonumber(c2)
+end
+
 -- from LibUtilities-1.0, which adds bonus index after bonus ID
 -- therefore a patched version is reproduced here
 -- replace with LibUtilities when bug is fixed
@@ -1367,9 +1377,11 @@ function RCLootCouncil:DecodeItemLink(itemLink)
     end
 
     -- more clean up
-    local upgradeID = select(numBonuses + 1, string.split(":", affixes)) or 0
-    upgradeID = string.match(upgradeID, "%d*")
-    upgradeID = tonumber(upgradeID) or 0
+	 if affixes then
+	    local upgradeID = select(numBonuses + 1, string.split(":", affixes)) or 0
+	    upgradeID = string.match(upgradeID, "%d*")
+	    upgradeID = tonumber(upgradeID) or 0
+	 end
 
     return color, itemType, itemID, enchantID, gemID1, gemID2, gemID3, gemID4, suffixID, uniqueID, linkLevel,
 	 		specializationID, upgradeTypeID, upgradeID, instanceDifficultyID, numBonuses, bonusIDs
@@ -1673,12 +1685,28 @@ end
 -- @param link The link to display
 function RCLootCouncil:CreateHypertip(link)
 	if not link or link == "" then return end
+	local function tip() -- Implement shift click compare on all tooltips
+		local tip = CreateFrame("GameTooltip", "RCLootCouncil_TooltipEventHandler", UIParent, "GameTooltipTemplate")
+		tip:RegisterEvent("MODIFIER_STATE_CHANGED")
+		tip:SetScript("OnEvent", function(this, event, arg)
+			if self.tooltip.showing and event == "MODIFIER_STATE_CHANGED" and (arg == "LSHIFT" or arg == "RSHIFT") and self.tooltip.link then
+				self:CreateHypertip(self.tooltip.link) -- Recall to recreate
+			end
+		end)
+		return tip
+	end
+	if not self.tooltip then self.tooltip = tip() end
+	self.tooltip.showing = true
+	self.tooltip.link = link
 	GameTooltip:SetOwner(UIParent, "ANCHOR_CURSOR")
 	GameTooltip:SetHyperlink(link)
 end
 
 --- Hide the tooltip created with :CreateTooltip()
 function RCLootCouncil:HideTooltip()
+	if self.tooltip then
+		self.tooltip.showing = false
+	end
 	GameTooltip:Hide()
 end
 

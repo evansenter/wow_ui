@@ -134,9 +134,6 @@ function RCVotingFrame:OnCommReceived(prefix, serializedMsg, distri, sender)
 						if self:GetCandidateData(i, name, "response") == "ANNOUNCED" then
 							addon:DebugLog("No response from:", name)
 							self:SetCandidateData(i, name, "response", "NOTHING")
-							if addon.isMasterLooter then -- Give them one last try
-								addon:SendCommand(name, "lootTable", addon:GetActiveModule("masterlooter").lootTable)
-							end
 						end
 					end
 				end
@@ -461,7 +458,7 @@ function RCVotingFrame:GetFrame()
 		if not lootTable then return; end
 		addon:CreateHypertip(lootTable[session].link)
 	end)
-	item:SetScript("OnLeave", addon.HideTooltip)
+	item:SetScript("OnLeave", function() addon:HideTooltip() end)
 	item:SetScript("OnClick", function()
 		if not lootTable then return; end
 	    if ( IsModifiedClick() ) then
@@ -530,7 +527,7 @@ function RCVotingFrame:GetFrame()
 		self:UpdateMoreInfo()
 	end)
 	b2:SetScript("OnEnter", function() addon:CreateTooltip(L["Click to expand/collapse more info"]) end)
-	b2:SetScript("OnLeave", addon.HideTooltip)
+	b2:SetScript("OnLeave", function() addon:HideTooltip() end)
 	f.moreInfoBtn = b2
 
 	f.moreInfo = CreateFrame( "GameTooltip", "RCVotingFrameMoreInfo", nil, "GameTooltipTemplate" )
@@ -540,7 +537,7 @@ function RCVotingFrame:GetFrame()
 	b3:SetPoint("RIGHT", b1, "LEFT", -10, 0)
 	b3:SetScript("OnClick", function(self) Lib_ToggleDropDownMenu(1, nil, filterMenu, self, 0, 0) end )
 	b3:SetScript("OnEnter", function() addon:CreateTooltip(L["Deselect responses to filter them"]) end)
-	b3:SetScript("OnLeave", addon.HideTooltip)
+	b3:SetScript("OnLeave", function() addon:HideTooltip() end)
 	f.filter = b3
 
 	-- Disenchant button
@@ -731,6 +728,11 @@ function RCVotingFrame.SetCellGear(rowFrame, frame, data, cols, row, realrow, co
 		frame:SetNormalTexture(texture)
 		frame:SetScript("OnEnter", function() addon:CreateHypertip(gear) end)
 		frame:SetScript("OnLeave", function() addon:HideTooltip() end)
+		frame:SetScript("OnClick", function()
+		if IsModifiedClick() then
+		   HandleModifiedItemClick(gear);
+      end
+	end)
 		frame:Show()
 	else
 		frame:Hide()

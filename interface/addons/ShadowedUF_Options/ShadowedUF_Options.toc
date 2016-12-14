@@ -4,10 +4,6 @@
 ## Author: Shadowed
 ## LoadOnDemand: true
 ## Dependencies: ShadowedUnitFrames
-## X-Curse-Packaged-Version: v4.1.10
-## X-Curse-Project-Name: Shadowed Unit Frames
-## X-Curse-Project-ID: shadowed-unit-frames
-## X-Curse-Repository-ID: wow/shadowed-unit-frames/mainline
 
 #@no-lib-strip@
 libs\AceDBOptions-3.0\AceDBOptions-3.0.xml

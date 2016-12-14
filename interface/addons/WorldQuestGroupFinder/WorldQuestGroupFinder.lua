@@ -53,6 +53,11 @@ local blacklistedQuests = {
 	[45047] = true, -- Like the Wind
 	[45048] = true, -- Like the Wind
 	[45049] = true, -- Like the Wind
+	[45068] = true, -- Barrels o' fun
+	[45069] = true, -- Barrels o' fun
+	[45070] = true, -- Barrels o' fun
+	[45071] = true, -- Barrels o' fun
+	[45072] = true, -- Barrels o' fun
 	[41327] = true, -- Supplies Needed: Stormscales
 	[41318] = true, -- Supplies Needed: Felslate
 	[41237] = true, -- Supplies Needed: Stonehide Leather
@@ -306,7 +311,7 @@ function RegisteredEvents:LFG_LIST_APPLICANT_LIST_UPDATED(event, hasNewPending, 
 end
 
 function RegisteredEvents:LFG_LIST_APPLICANT_UPDATED(event, applicantID)
-	pendingInvites = WorldQuestGroupFinder.GetInvitedApplicantsCount()
+	pendingInvites = C_LFGList.GetNumInvitedApplicantMembers()
 	local id, status, pendingStatus, numMembers, isNew, comment = C_LFGList.GetApplicantInfo(applicantID)
 	if (status == "inviteaccepted" and comment == "WorldQuestGroupFinder User") then
 		if (numMembers > 1) then
@@ -496,6 +501,9 @@ end
 function WorldQuestGroupFinder.GetQuestInfo (questID)
 	local tagID, tagName, worldQuestType, rarity, elite, tradeskillLineIndex = GetQuestTagInfo (questID)
 	local title, factionID = C_TaskQuest.GetQuestInfoByQuestID (questID)
+	if (not title) then
+		title = select(4, GetTaskInfo(questID));
+	end
 	return title, factionID, tagID, tagName, worldQuestType, rarity, elite, tradeskillLineIndex
 end
 
@@ -506,13 +514,13 @@ end
 
 function WorldQuestGroupFinder.SetHooks()	
 	hooksecurefunc("BonusObjectiveTracker_OnBlockClick", function(self, button)
-		if ((button == "LeftButton" and not IsShiftKeyDown()) or button == "MiddleButton") then
+		if (button == "MiddleButton" or (button == "LeftButton" and IsControlKeyDown())) then
 			WorldQuestGroupFinder.HandleBlockClick(self.TrackedQuest.questID)
 		end
 	end)
 	
 	hooksecurefunc("TaskPOI_OnClick", function(self, button)
-		if (self.worldQuest and button == "MiddleButton") then
+		if (self.worldQuest and (button == "MiddleButton"  or (button == "LeftButton" and IsControlKeyDown()))) then
 			WorldQuestGroupFinder.HandleBlockClick(self.questID)
 		end
 	end)
@@ -874,20 +882,6 @@ function WorldQuestGroupFinder.HideDialog(dialog)
 		StaticPopup_Hide(dialog)
 		WorldQuestGroupFinder.dprint(string.format("Hiding dialog %s", dialog))
 	end
-end
-
-function WorldQuestGroupFinder.GetInvitedApplicantsCount() 
-	local applicants = C_LFGList.GetApplicants();
-	local aCount = 0
-	if (applicants) then
-		for i=1, #applicants do
-			local id, status, pendingStatus, numMembers, isNew, comment = C_LFGList.GetApplicantInfo(applicants[i]);
-			if (status == "invited") then
-				aCount = aCount + 1
-			end	
-		end
-	end
-	return aCount
 end
 
 function WorldQuestGroupFinder.StopTimeoutTimer()

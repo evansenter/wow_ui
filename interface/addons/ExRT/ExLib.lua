@@ -149,7 +149,7 @@ CheckButton	ExRTRadioButtonModernTemplate
 local GlobalAddonName, ExRT = ...
 local isExRT = GlobalAddonName == "ExRT"
 
-local libVersion = 24
+local libVersion = 25
 
 if type(ELib)=='table' and type(ELib.V)=='number' and ELib.V > libVersion then return end
 
@@ -266,7 +266,7 @@ do
 	local GlobalIndexNow = 0
 	function GetNextGlobalName()
 		GlobalIndexNow = GlobalIndexNow + 1
-		return "GExRTUIGlobal"..tostring(GlobalIndexNow)
+		return GlobalAddonName.."UIGlobal"..tostring(GlobalIndexNow)
 	end
 end
 
@@ -486,16 +486,16 @@ do
 			GameTooltip:AddLine(self.NormalText:GetText())
 			GameTooltip:Show()
 		end
-		GExRT.lib.ScrollDropDown.OnButtonEnter(self)
+		ELib.ScrollDropDown.OnButtonEnter(self)
 	end
 	local function OnLeave(self)
 		self.Highlight:Hide()
 		UIDropDownMenu_StartCounting(self:GetParent())
 		GameTooltip:Hide()
-		GExRT.lib.ScrollDropDown.OnButtonLeave(self)
+		ELib.ScrollDropDown.OnButtonLeave(self)
 	end
 	local function OnClick(self)
-		GExRT.lib.ScrollDropDown.OnClick(self, button, down)
+		ELib.ScrollDropDown.OnClick(self, button, down)
 	end
 	local function OnLoad(self)
 		self:SetFrameLevel(self:GetParent():GetFrameLevel()+2)
@@ -564,7 +564,7 @@ do
 		UIDropDownMenu_StopCounting(self)
 	end
 	local function OnUpdate(self, elapsed)
-		GExRT.lib.ScrollDropDown.Update(self, elapsed)
+		ELib.ScrollDropDown.Update(self, elapsed)
 	end
 	function Templates:ExRTDropDownListTemplate(parent)
 		local self = CreateFrame("Button",nil,parent)
@@ -1971,7 +1971,7 @@ do
 	local additionalTooltipBackdrop = {bgFile="Interface/Buttons/WHITE8X8",edgeFile="Interface/Tooltips/UI-Tooltip-Border",tile=false,edgeSize=14,insets={left=2.5,right=2.5,top=2.5,bottom=2.5}}
 	local function CreateAdditionalTooltip()
 		local new = #additionalTooltips + 1
-		local tip = CreateFrame("GameTooltip", "ExRTlibAdditionalTooltip"..new, UIParent, "GameTooltipTemplate")
+		local tip = CreateFrame("GameTooltip", GlobalAddonName.."LibAdditionalTooltip"..new, UIParent, "GameTooltipTemplate")
 		additionalTooltips[new] = tip
 		
 		tip:SetScript("OnLoad",nil)
@@ -3572,7 +3572,7 @@ local ScrollDropDown_Blizzard,ScrollDropDown_Modern = {},{}
 
 for i=1,2 do
 	ScrollDropDown_Modern[i] = ELib:Template("ExRTDropDownListModernTemplate",UIParent)
-	_G["ExRTDropDownListModern"..i] = ScrollDropDown_Modern[i]
+	_G[GlobalAddonName.."DropDownListModern"..i] = ScrollDropDown_Modern[i]
 	ScrollDropDown_Modern[i]:SetClampedToScreen(true)
 	ScrollDropDown_Modern[i].border = ELib:Shadow(ScrollDropDown_Modern[i],20)
 	ScrollDropDown_Modern[i].Buttons = {}
@@ -3624,7 +3624,7 @@ end
 
 for i=1,2 do
 	ScrollDropDown_Blizzard[i] = ELib:Template("ExRTDropDownListTemplate",UIParent)
-	_G["ExRTDropDownList"..i] = ScrollDropDown_Blizzard[i]
+	_G[GlobalAddonName.."DropDownList"..i] = ScrollDropDown_Blizzard[i]
 	ScrollDropDown_Blizzard[i].Buttons = {}
 	ScrollDropDown_Blizzard[i].MaxLines = 0
 	
@@ -3706,6 +3706,10 @@ do
 	end
 end
 
+local function ScrollDropDown_DefaultCheckFunc(self)
+	self:Click()
+end
+
 function ELib.ScrollDropDown.ClickButton(self)
 	if ELib.ScrollDropDown.DropDownList[1]:IsShown() then
 		ELib:DropDownClose()
@@ -3746,9 +3750,9 @@ function ELib.ScrollDropDown:Reload(level)
 					end
 					
 					if data.font then
-						local font = _G["ExRTDropDownListFont"..now]
+						local font = _G[GlobalAddonName.."DropDownListFont"..now]
 						if not font then
-							font = CreateFont("ExRTDropDownListFont"..now)
+							font = CreateFont(GlobalAddonName.."DropDownListFont"..now)
 						end
 						font:SetFont(data.font,12)
 						font:SetShadowOffset(1,-1)
@@ -3819,6 +3823,10 @@ function ELib.ScrollDropDown:Reload(level)
 					button.hoverArg = data.hoverArg
 					button.checkFunc = data.checkFunc
 					
+					if not data.checkFunc then
+						button.checkFunc = ScrollDropDown_DefaultCheckFunc
+					end
+					
 					button.subMenu = data.subMenu
 					button.Lines = data.Lines --Max lines for second level
 					
@@ -3833,6 +3841,21 @@ function ELib.ScrollDropDown:Reload(level)
 			end
 			for i=(now+1),ELib.ScrollDropDown.DropDownList[j].MaxLines do
 				ELib.ScrollDropDown.DropDownList[j].Buttons[i]:Hide()
+			end
+		end
+	end
+end
+
+function ELib.ScrollDropDown.UpdateChecks()
+	local parent = ELib.ScrollDropDown.DropDownList[1].parent
+	if parent.additionalToggle then
+		parent.additionalToggle(parent)
+	end
+	for j=1,#ELib.ScrollDropDown.DropDownList do
+		for i=1,#ELib.ScrollDropDown.DropDownList[j].Buttons do
+			local button = ELib.ScrollDropDown.DropDownList[j].Buttons[i]
+			if button:IsShown() and button.data then
+				button.checkButton:SetChecked(button.data.checkState)
 			end
 		end
 	end

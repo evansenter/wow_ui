@@ -1,3 +1,12 @@
+0.19.5 (0/12/2016)
+- In addition to middle click, it is now possible to use CTRL + left click on the objective tracker and world map to start searching for a group
+- Minor localization fixes
+
+0.19.4 (07/12/2016)
+- WQGF should now be compatible with the bugged WQs that don't appear on the world map
+- It is time to remove support for left clicking on the quest tracker :) Use the middle button now!
+- Updated blacklisted WQs list
+
 0.19.3 (29/11/2016)
 - Removed location restrictions to search for a WQ as it was causing issues to some users. Please don't abuse this!
 - Added this week's WB in the raid WQs list

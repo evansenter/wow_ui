@@ -7,7 +7,7 @@
 -- Main non-UI code
 ------------------------------------------------------------
 
-PawnVersion = 2.0108
+PawnVersion = 2.0110
 
 -- Pawn requires this version of VgerCore:
 local PawnVgerCoreVersionRequired = 1.09
@@ -27,7 +27,7 @@ PawnPrivateTooltipName = "PawnPrivateTooltip1"
 --	An entry in the Values table is an ordered array in the following format:
 --	{ ScaleName, Value, UnenchantedValue }
 local PawnItemCache = nil
-local PawnItemCacheMaxSize = 200 -- ...was 50; thanks to bag arrows, this should be greater than the number of possible inventory slots
+local PawnItemCacheMaxSize = 200 -- thanks to bag arrows, this should be greater than the number of possible inventory slots
 
 local PawnScaleTotals = { }
 
@@ -319,6 +319,17 @@ function PawnInitialize()
 				PawnAttachIconToTooltip(ShoppingTooltip2, true)
 			end
 		end)
+	hooksecurefunc(WorldMapCompareTooltip1, "SetCompareItem",
+		function(self, ...)
+			local _, ItemLink1 = WorldMapCompareTooltip1:GetItem()
+			PawnUpdateTooltip("WorldMapCompareTooltip1", "SetCompareItem", ItemLink1, ...)
+			PawnAttachIconToTooltip(WorldMapCompareTooltip1, true)
+			local _, ItemLink2 = WorldMapCompareTooltip2:GetItem()
+			if ItemLink2 and WorldMapCompareTooltip2:IsShown() then
+				PawnUpdateTooltip("WorldMapCompareTooltip2", "SetHyperlink", ItemLink2, ...)
+				PawnAttachIconToTooltip(WorldMapCompareTooltip2, true)
+			end
+		end)
 	hooksecurefunc(ItemRefShoppingTooltip1, "SetCompareItem",
 		function(self, ...)
 			local _, ItemLink1 = ItemRefShoppingTooltip1:GetItem()
@@ -371,9 +382,11 @@ function PawnInitialize()
 	IsContainerItemAnUpgrade = function(bagID, slot, ...)
 		if PawnCommon.ShowBagUpgradeAdvisor then
 			local _, _, _, _, _, _, ItemLink = GetContainerItemInfo(bagID, slot)
+			if not ItemLink then return nil end
+			local _, _, _, _, MinLevel = GetItemInfo(ItemLink)
+			if not MinLevel or UnitLevel("player") < MinLevel then return nil end
 			local Item = PawnGetItemData(ItemLink)
 			if not Item then return nil end
-			--TEMPupgcounter = (TEMPupgcounter or 0) + 1 VgerCore.Message("*** Calling PawnIsItemAnUpgrade " .. TEMPupgcounter) -- ***
 			return PawnIsItemAnUpgrade(Item) ~= nil
 		else
 			return PawnOriginalIsContainerItemAnUpgrade(bagID, slot, ...)
@@ -889,12 +902,17 @@ function PawnGetItemData(ItemLink)
 	-- If we have an item link, we can extract basic data from it from the user's WoW cache (not the Pawn item cache).
 	-- We get a new, normalized version of ItemLink so that items don't end up in the cache multiple times if they're requested
 	-- using different styles of links that all point to the same item.
-	local ItemID = PawnGetItemIDFromLink(ItemLink)
-	local ItemName, NewItemLink, ItemRarity, ItemLevel, _, _, _, _, InvType, ItemTexture = GetItemInfo(ItemLink)
-	if InvType == "INVTYPE_RELIC" or InvType == "INVTYPE_THROWN" then
+	local ItemID, _, _, InvType, _, ItemClassID = GetItemInfoInstant(ItemLink)
+	if (InvType == nil or InvType == "") and (ItemClassID ~= LE_ITEM_CLASS_GEM) then
+		-- If the item isn't equippable don't bother parsing it, unless it's a gem.
+		-- FUTURE: Also allow LE_ITEM_CLASS_RECIPE if we want to work with recipes someday. 
+		return
+	elseif InvType == "INVTYPE_RELIC" or InvType == "INVTYPE_THROWN" then
 		-- Old (grey) relics might have sockets and therefore "stats" but they aren't equippable anymore so they shouldn't get values, so just bail out now.
 		return
 	end
+
+	local ItemName, NewItemLink, ItemRarity, ItemLevel, _, _, _, _, InvType, ItemTexture = GetItemInfo(ItemLink)
 	if NewItemLink then
 		ItemLink = NewItemLink
 	else
@@ -905,6 +923,11 @@ function PawnGetItemData(ItemLink)
 	
 	-- Now, with that information, we can look up the item in the Pawn item cache.
 	local Item = PawnGetCachedItem(ItemLink, ItemName, ItemNumLines)
+	if not Item and not NewItemLink then
+		-- The item isn't in the user's WoW cache or Pawn cache.  Bail out now.
+		if PawnCommon.DebugCache then VgerCore.Message("*** Pawn debug cache: PawnGetItemData is bailing out because it didn't get item data in time for " .. ItemLink) end
+		return 
+	end
 	if Item and Item.Values then
 		return Item
 	end
@@ -1162,7 +1185,7 @@ function PawnUpdateTooltip(TooltipName, MethodName, Param1, ...)
 	
 	-- If this is the main GameTooltip, remember the item that was hovered over.
 	-- AtlasLoot compatibility: enable hover comparison for AtlasLoot tooltips too.
-	if TooltipName == "GameTooltip" or TooltipName == "AtlasLootTooltip" then
+	if TooltipName == "GameTooltip" or TooltipName == "AtlasLootTooltip" or TooltipName == "WorldMapTooltipTooltip" then -- "TooltipTooltip" isn't a typo; it's an embedded tooltip
 		PawnLastHoveredItem = Item.Link
 	end
 	
@@ -1436,9 +1459,9 @@ function PawnFixStupidTooltipFormatting(TooltipName)
 		local LeftLine = _G[TooltipName .. "TextLeft" .. i]
 		local Text = LeftLine:GetText()
 		local Updated = false
-		if Text and strsub(Text, 1, 2) ~= "\n" then
+		if Text and strfind(Text, "\n", 1, true) ~= 1 then
 			-- First, look for a color.
-			if strsub(Text, 1, 10) == "|cffffffff" then
+			if strfind(Text, "|cffffffff", 1, true) == 1 then
 				Text = strsub(Text, 11)
 				LeftLine:SetTextColor(1, 1, 1)
 				Updated = true
@@ -1449,7 +1472,7 @@ function PawnFixStupidTooltipFormatting(TooltipName)
 				Updated = true
 			end
 			-- Then, look for a trailing color restoration flag.
-			if strsub(Text, -2) == "|r" then
+			if strfind(Text, "|r", strlen(Text) - 1, true) then
 				Text = strsub(Text, 1, -3)
 				Updated = true
 			end
@@ -1546,27 +1569,21 @@ end
 --		UnknownLines: A list of lines in the tooltip that were not understood.
 --		PrettyLink: A beautified item link, if available.
 function PawnGetStatsFromTooltip(TooltipName, DebugMessages)
-	local Stats, SocketBonusStats, UnknownLines = {}, {}, {}
-	local HadUnknown = false
-	local SocketBonusIsValid = false
 	local Tooltip = _G[TooltipName]
 	if DebugMessages == nil then DebugMessages = true end
 	
 	-- Get the item name.  It could be on line 2 if the first line is "Currently Equipped".
 	local ItemName, ItemNameLineNumber = PawnGetItemNameFromTooltip(TooltipName)
-	if (not ItemName) or (not ItemNameLineNumber) then return end
-
-	-- First, check for the ignored item names: for example, any item that starts with "Design:" should
-	-- be ignored, because it's a jewelcrafting design, not a real item with stats.
-	local ThisName, _
-	for _, ThisName in pairs(PawnIgnoreNames) do
-		if strsub(ItemName, 1, strlen(ThisName)) == ThisName then
-			-- This is a known ignored item name; don't return any stats.
-			return
-		end
+	if (not ItemName) or (not ItemNameLineNumber) then
+		if PawnCommon.DebugCache then VgerCore.Message("*** Pawn debug cache: PawnGetStatsFromTooltip exiting because the item in " .. TooltipName .. " had no name") end
+		return
 	end
-	
+
 	-- Now, read the tooltip for stats.
+	local Stats, SocketBonusStats, UnknownLines = {}, {}, {}
+	local HadUnknown = false
+	local SocketBonusIsValid = false
+
 	for i = ItemNameLineNumber + 1, Tooltip:NumLines() do
 		local LeftLine = _G[TooltipName .. "TextLeft" .. i]
 		local LeftLineText = LeftLine:GetText()
@@ -1575,10 +1592,7 @@ function PawnGetStatsFromTooltip(TooltipName, DebugMessages)
 		-- Look for this line in the "kill lines" list.  If it's there, we're done.
 		local IsKillLine = false
 		-- Dirty, dirty hack for artifacts: check the color of the text; if it's artifact gold and it's not at the beginning of the tooltip, then treat it as a kill line.
-		--local r, g, b = LeftLine:GetTextColor()
-		--local ArtifactGold = ITEM_QUALITY_COLORS[6]
-		--if (math.abs(r - ArtifactGold.r) < .01) and (math.abs(g - ArtifactGold.g) < .01) and (math.abs(b - ArtifactGold.b) < .01) then
-		if i > ItemNameLineNumber + 2 and strsub(LeftLineText, 1, 10) == "|cFFE6CC80" then
+		if i > ItemNameLineNumber + 2 and strfind(LeftLineText, "|cFFE6CC80", 1, true) == 1 then
 			IsKillLine = true
 		end
 		if not IsKillLine then
@@ -1610,7 +1624,7 @@ function PawnGetStatsFromTooltip(TooltipName, DebugMessages)
 			end
 			
 			local ThisLineIsSocketBonus = false
-			if Side == 1 and strsub(CurrentParseText, 1, strlen(PawnLocal.TooltipParsing.SocketBonusPrefix)) == PawnLocal.TooltipParsing.SocketBonusPrefix then
+			if Side == 1 and strfind(CurrentParseText, PawnLocal.TooltipParsing.SocketBonusPrefix, 1, true) then
 				-- This line is the socket bonus.
 				ThisLineIsSocketBonus = true
 				if LeftLine.GetTextColor then
@@ -1636,7 +1650,7 @@ function PawnGetStatsFromTooltip(TooltipName, DebugMessages)
 				local IgnoreLine = false
 				local ThisPrefix
 				for _, ThisPrefix in pairs(PawnSeparatorIgnorePrefixes) do
-					if strsub(CurrentParseText, 1, strlen(ThisPrefix)) == ThisPrefix then
+					if strfind(CurrentParseText, ThisPrefix, 1, true) == 1 then
 						-- We know that this line doesn't contain a complex stat, so ignore it.
 						IgnoreLine = true
 						if CurrentDebugMessages then PawnDebugMessage(VgerCore.Color.Blue .. format(PawnLocal.DidntUnderstandMessage, PawnEscapeString(CurrentParseText))) end
@@ -1917,7 +1931,7 @@ function PawnGetItemNameFromTooltip(TooltipName)
 	local TooltipTopLine = _G[TooltipName .. "TextLeft1"]
 	if not TooltipTopLine then return end
 	local ItemName = TooltipTopLine:GetText()
-	if not ItemName or ItemName == "" then return end
+	if not ItemName or ItemName == "" or ItemName == RETRIEVING_ITEM_INFO then return end
 	
 	-- If this is a Currently Equipped tooltip, skip the first line.
 	if ItemName == CURRENTLY_EQUIPPED then
@@ -3992,12 +4006,11 @@ function PawnSetAllScaleProviderScalesVisible(ProviderInternalName, Visible)
 	-- Using the provider internal name provided, produce a prefix that we'll search for in the list of scales.  This works because
 	-- the format of a provider scale is "ProviderName":ScaleName.
 	local ScaleNamePrefix = PawnGetProviderScaleName(ProviderInternalName, "")
-	local ScaleNamePrefixLength = strlen(ScaleNamePrefix)
 	
 	-- Loop through all scales and turn them on or off.
 	local ScaleName, Scale
 	for ScaleName, Scale in pairs(PawnCommon.Scales) do
-		if strsub(ScaleName, 1, ScaleNamePrefixLength) == ScaleNamePrefix then
+		if strfind(ScaleName, ScaleNamePrefix, 1, true) == 1 then
 			if Scale.PerCharacterOptions == nil then Scale.PerCharacterOptions = {} end
 			if Scale.PerCharacterOptions[PawnPlayerFullName] == nil then Scale.PerCharacterOptions[PawnPlayerFullName] = {} end
 			Scale.PerCharacterOptions[PawnPlayerFullName].Visible = Visible
@@ -4298,7 +4311,7 @@ end
 -- Given a scale internal name, return the provider internal name.
 function PawnGetProviderNameFromScale(ScaleInternalName)
 	-- If this isn't a provider scale, then just return the scale name.
-	if not ScaleInternalName or strsub(ScaleInternalName, 1, 1) ~= "\"" then return ScaleInternalName end
+	if not ScaleInternalName or strbyte(ScaleInternalName) ~= 34 then return ScaleInternalName end -- 34 is "
 
 	-- Otherwise, get the provider name.
 	local Pos = strfind(ScaleInternalName, "\"", 2, true)

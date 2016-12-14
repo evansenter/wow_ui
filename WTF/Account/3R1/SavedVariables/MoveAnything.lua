@@ -28,11 +28,11 @@ MADB = {
 				},
 				["ZoneAbilityFrame"] = {
 					["orgPos"] = {
-						"BOTTOM", -- [1]
-						"UIParent", -- [2]
-						"BOTTOM", -- [3]
+						"TOPLEFT", -- [1]
+						"BT4BarZoneAbilityBar", -- [2]
+						"TOPLEFT", -- [3]
 						0, -- [4]
-						220.000015258789, -- [5]
+						0, -- [5]
 					},
 					["name"] = "ZoneAbilityFrame",
 					["pos"] = {
@@ -63,8 +63,8 @@ MADB = {
 			},
 		},
 	},
-	["closeGUIOnEscape"] = false,
-	["playSound"] = false,
-	["noBags"] = false,
 	["frameListRows"] = 18,
+	["noBags"] = false,
+	["playSound"] = false,
+	["closeGUIOnEscape"] = false,
 }

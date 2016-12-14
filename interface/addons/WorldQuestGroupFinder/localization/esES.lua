@@ -1,4 +1,4 @@
-local L = LibStub("AceLocale-3.0"):NewLocale("WorldQuestGroupFinder", "esES") 
+﻿local L = LibStub("AceLocale-3.0"):NewLocale("WorldQuestGroupFinder", "esES") 
 if not L then return end 
 
 L["WQGF_ALREADY_IS_GROUP_FOR_WQ"] = "Ya estás en un grupo para hacer esta misión de mundo."
@@ -84,10 +84,10 @@ L["WQGF_USER_JOINED"] = "Un usuario de World Quest Group Finder se ha unido al g
 L["WQGF_USERS_JOINED"] = "Los usuarios de World Quest Group Finder se han unido al grupo!"
 L["WQGF_WQ_AREA_ENTERED_ALREADY_GROUPED_DIALOG"] = [=[Has entrado en una nueva zona de misión de mundo,pero ya estás en un grupo para otra misión de mundo.
 
-Te gustaría dejar el grupo para encontrar otro para \"%s\" ?]=]
+Te gustaría dejar el grupo para encontrar otro para "%s" ?]=]
 L["WQGF_WQ_AREA_ENTERED_DIALOG"] = [=[Has entrado en una nueva zona de misión de mundo.
 
-Te gustaría buscar un grupo para \"%s\" ?]=]
+¿Te gustaría buscar un grupo para "%s" ?]=]
 L["WQGF_WQ_COMPLETE_LEAVE_DIALOG"] = [=[Has completado la misión de mundo.
 
 Quieres abandonar el grupo?]=]
