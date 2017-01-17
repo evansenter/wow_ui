@@ -1,4 +1,4 @@
-﻿--[[ Credit for these translations goes to:
+--[[ Credit for these translations goes to:
 	lsjyzjl
 	szp1222
 --]]
@@ -6,6 +6,7 @@ local L = LibStub("AceLocale-3.0"):NewLocale("TellMeWhen", "zhTW", false)
 if not L then return end
 
 
+L["!!Main Addon Description"] = "為冷卻、增益/減益及其他各個方面提供視覺、聽覺以及文字上的通知。"
 L["ABSORBAMT"] = "護盾吸收量"
 L["ABSORBAMT_DESC"] = "檢查單位上的護盾的吸收總量。"
 L["ACTIVE"] = "%d 作用中"
@@ -325,17 +326,6 @@ L["CMD_PROFILE_INVALIDPROFILE_SPACES"] = [=[提示：如果設定檔包含空格
 或
 /tmw 設定檔 "薇璇 - 地獄吼"]=]
 L["CMD_TOGGLE"] = "切換"
-L["CNDTCAT_ARCHFRAGS"] = "考古學碎片"
-L["CNDTCAT_ATTRIBUTES_PLAYER"] = "玩家屬性/狀態"
-L["CNDTCAT_ATTRIBUTES_UNIT"] = "單位屬性/狀態"
-L["CNDTCAT_BOSSMODS"] = "首領模塊"
-L["CNDTCAT_BUFFSDEBUFFS"] = "增益/減益"
-L["CNDTCAT_CURRENCIES"] = "通貨"
-L["CNDTCAT_FREQUENTLYUSED"] = "常用條件"
-L["CNDTCAT_MISC"] = "其他"
-L["CNDTCAT_RESOURCES"] = "能量類型"
-L["CNDTCAT_SPELLSABILITIES"] = "法術/物品"
-L["CNDTCAT_STATS"] = "戰鬥統計（人物屬性）"
 L["CNDT_DEPRECATED_DESC"] = "條件%s無效。這可能是因為遊戲機制改變所造成的，請移除它或者更改為其他條件。"
 L["CNDT_MULTIPLEVALID"] = "你可以利用分號分隔的方式輸入多個用於檢查的名稱或ID。"
 L["CNDT_ONLYFIRST"] = "僅檢查第一個法術/物品，使用分號分隔的列表不適用此條件類型。"
@@ -351,6 +341,17 @@ L["CNDT_TOTEMNAME_DESC"] = [=[設定為空白檢查所選的圖騰類型中的�
 
 如果需要檢查指定的圖騰，請輸入一個圖騰名稱或是利用分號分隔開的名稱列表。]=]
 L["CNDT_UNKNOWN_DESC"] = "你的設定中有一個名為%s的標識無法找到對應的條件。可能是因為使用了舊版本的TMW或者該條件已經被移除。"
+L["CNDTCAT_ARCHFRAGS"] = "考古學碎片"
+L["CNDTCAT_ATTRIBUTES_PLAYER"] = "玩家屬性/狀態"
+L["CNDTCAT_ATTRIBUTES_UNIT"] = "單位屬性/狀態"
+L["CNDTCAT_BOSSMODS"] = "首領模塊"
+L["CNDTCAT_BUFFSDEBUFFS"] = "增益/減益"
+L["CNDTCAT_CURRENCIES"] = "通貨"
+L["CNDTCAT_FREQUENTLYUSED"] = "常用條件"
+L["CNDTCAT_MISC"] = "其他"
+L["CNDTCAT_RESOURCES"] = "能量類型"
+L["CNDTCAT_SPELLSABILITIES"] = "法術/物品"
+L["CNDTCAT_STATS"] = "戰鬥統計（人物屬性）"
 L["CODESNIPPET_AUTORUN"] = "登入時自動執行"
 L["CODESNIPPET_CODE"] = "用於執行的Lua程式碼"
 L["CODESNIPPET_DELETE"] = "刪除片段"
@@ -391,12 +392,35 @@ L["COLOR_MSQ_COLOR_DESC"] = "勾選此項將使用Masque皮膚中設定的邊框
 L["COLOR_MSQ_ONLY"] = "使用Masque邊框顏色（僅邊框）"
 L["COLOR_MSQ_ONLY_DESC"] = "勾選此項將僅對圖示邊框使用Masque皮膚中設定的邊框顏色進行著色（假如你在皮膚設定中有使用邊框的話）。圖示不會被著色。"
 L["COMPARISON"] = "比較"
+L["CONDITION_COUNTER"] = "用於檢查的計數器"
+L["CONDITION_COUNTER_EB_DESC"] = "輸入你想要檢查的計數器名稱。"
+L["CONDITION_QUESTCOMPLETE"] = "任務完成"
+L["CONDITION_QUESTCOMPLETE_DESC"] = "檢查一個任務是否已完成。"
+L["CONDITION_QUESTCOMPLETE_EB_DESC"] = [=[輸入你想檢查的任務ID​​。
+
+任務ID可以在魔獸世界數據庫網站獲得，像是db.178.com（中文）和www.wowhead.com（英文）。
+
+例如：http:////db.178.com/wow/tw/quest/32615.html<更多更多龐大的恐龍骨頭>任務ID為32615。]=]
+L["CONDITION_TIMEOFDAY"] = "一天中的時間"
+L["CONDITION_TIMEOFDAY_DESC"] = [=[此條件將使用當前時間與設定時間進行比較。
+
+用於比較的時間是當地時間（基於你的電腦時鐘）。它不會獲取伺服器時間。]=]
+L["CONDITION_TIMER"] = "用於檢查的計時器"
+L["CONDITION_TIMER_EB_DESC"] = "輸入你想用於檢查的計時器名稱。"
+L["CONDITION_TIMERS_FAIL_DESC"] = [=[設定條件無法通過以後圖示計時器的持續時間
+
+（譯者註：圖示在條件每次通過/無法通過後都會重新計時，另外在預設的情況下圖示的顯示只會根據條件通過情況來改變，設定的持續時間不會影響到圖示的顯示情況，不會在設定的持續時間倒數結束後隱藏圖示，如果想要圖示在計時結束後隱藏，需要勾選「僅在計時器作用時顯示」，這是4.5.3版本新加入的功能。）]=]
+L["CONDITION_TIMERS_SUCCEED_DESC"] = [=[設定條件成功通過以後圖示計時器的持續時間
+
+（譯者註：圖示在條件每次通過/無法通過後都會重新計時，另外在預設的情況下圖示的顯示只會根據條件通過情況來改變，設定的持續時間不會影響到圖示的顯示情況，不會在設定的持續時間倒數結束後隱藏圖示，如果想要圖示在計時結束後隱藏，需要勾選'僅在計時器作用時顯示'，這是4.5.3版本新加入的功能。）]=]
+L["CONDITION_WEEKDAY"] = "星期幾"
+L["CONDITION_WEEKDAY_DESC"] = [=[檢查今天是不是星期幾。
+
+用於檢查的時間是當地時間（基於你的電腦時鐘）。它不會獲取伺服器時間。]=]
 L["CONDITIONALPHA_METAICON"] = "條件未通過時"
 L["CONDITIONALPHA_METAICON_DESC"] = [=[此可見度用於條件未通過時。
 
 條件可在%q選項卡中設定。]=]
-L["CONDITION_COUNTER"] = "用於檢查的計數器"
-L["CONDITION_COUNTER_EB_DESC"] = "輸入你想要檢查的計數器名稱。"
 L["CONDITIONPANEL_ABSOLUTE"] = "（非百分比/絕對值）"
 L["CONDITIONPANEL_ADD"] = "新增條件"
 L["CONDITIONPANEL_ADD2"] = "點擊增加一個條件"
@@ -463,7 +487,7 @@ L["CONDITIONPANEL_DBM_TIMER_DESC"] = [=[檢查Deadly Boss Mods計時器的持續
 
 請輸入計時器的全名到「用於檢查的計時器」。]=]
 L["CONDITIONPANEL_DEFAULT"] = "選擇條件類型……"
-L["CONDITIONPANEL_ECLIPSE_DESC"] = "蝕星蔽月有一個範圍在-100（月蝕）到100（日蝕）。如果你想讓圖示在有80月蝕的時候顯示請輸入-80。" -- Needs review
+L["CONDITIONPANEL_ECLIPSE_DESC"] = "蝕星蔽月有一個範圍在-100（月蝕）到100（日蝕）。如果你想讓圖示在有80月蝕的時候顯示請輸入-80。"
 L["CONDITIONPANEL_EQUALS"] = "等於"
 L["CONDITIONPANEL_EXISTS"] = "單位存在"
 L["CONDITIONPANEL_GREATER"] = "大於"
@@ -481,11 +505,11 @@ L["CONDITIONPANEL_ICON_DESC"] = [=[此條件檢查指定的圖示為顯示或隱
 
 The group of the icon being checked must be shown in order to check the icon， even if the condition is set to false。]=]
 L["CONDITIONPANEL_ICON_HIDDEN"] = "隱藏"
+L["CONDITIONPANEL_ICON_SHOWN"] = "顯示"
 L["CONDITIONPANEL_ICONHIDDENTIME"] = "圖示隱藏時間"
 L["CONDITIONPANEL_ICONHIDDENTIME_DESC"] = [=[此條件檢查指定的圖示隱藏了多久時間。
 
 如果你不想顯示被檢查的圖示，請在被檢查圖示的圖示編輯器勾選 %q。]=]
-L["CONDITIONPANEL_ICON_SHOWN"] = "顯示"
 L["CONDITIONPANEL_ICONSHOWNTIME"] = "圖示顯示時間"
 L["CONDITIONPANEL_ICONSHOWNTIME_DESC"] = [=[此條件檢查指定的圖示顯示了多久時間。
 
@@ -527,7 +551,7 @@ L["CONDITIONPANEL_PERCENT"] = "（百分比）"
 L["CONDITIONPANEL_PETMODE"] = "寵物攻擊模式"
 L["CONDITIONPANEL_PETSPEC"] = "寵物種類"
 L["CONDITIONPANEL_POWER"] = "基本資源"
-L["CONDITIONPANEL_POWER_DESC"] = "檢查單位為德魯伊時在貓形態的能量，或者單位為戰士時的怒氣等等。" -- Needs review
+L["CONDITIONPANEL_POWER_DESC"] = "檢查單位為德魯伊時在貓形態的能量，或者單位為戰士時的怒氣等等。"
 L["CONDITIONPANEL_PVPFLAG"] = "開啟PVP的單位"
 L["CONDITIONPANEL_RAIDICON"] = "單位團隊標記"
 L["CONDITIONPANEL_REMOVE"] = "移除此條件"
@@ -567,30 +591,7 @@ L["CONDITIONPANEL_VALUEN"] = "值"
 L["CONDITIONPANEL_VEHICLE"] = "單位控制載具"
 L["CONDITIONPANEL_ZONEPVP"] = "區域PvP類型"
 L["CONDITIONPANEL_ZONEPVP_FFA"] = "自由PVP"
-L["CONDITION_QUESTCOMPLETE"] = "任務完成"
-L["CONDITION_QUESTCOMPLETE_DESC"] = "檢查一個任務是否已完成。"
-L["CONDITION_QUESTCOMPLETE_EB_DESC"] = [=[輸入你想檢查的任務ID​​。
-
-任務ID可以在魔獸世界數據庫網站獲得，像是db.178.com（中文）和www.wowhead.com（英文）。
-
-例如：http:////db.178.com/wow/tw/quest/32615.html<更多更多龐大的恐龍骨頭>任務ID為32615。]=]
 L["CONDITIONS"] = "條件"
-L["CONDITION_TIMEOFDAY"] = "一天中的時間"
-L["CONDITION_TIMEOFDAY_DESC"] = [=[此條件將使用當前時間與設定時間進行比較。
-
-用於比較的時間是當地時間（基於你的電腦時鐘）。它不會獲取伺服器時間。]=]
-L["CONDITION_TIMER"] = "用於檢查的計時器"
-L["CONDITION_TIMER_EB_DESC"] = "輸入你想用於檢查的計時器名稱。"
-L["CONDITION_TIMERS_FAIL_DESC"] = [=[設定條件無法通過以後圖示計時器的持續時間
-
-（譯者註：圖示在條件每次通過/無法通過後都會重新計時，另外在預設的情況下圖示的顯示只會根據條件通過情況來改變，設定的持續時間不會影響到圖示的顯示情況，不會在設定的持續時間倒數結束後隱藏圖示，如果想要圖示在計時結束後隱藏，需要勾選「僅在計時器作用時顯示」，這是4.5.3版本新加入的功能。）]=]
-L["CONDITION_TIMERS_SUCCEED_DESC"] = [=[設定條件成功通過以後圖示計時器的持續時間
-
-（譯者註：圖示在條件每次通過/無法通過後都會重新計時，另外在預設的情況下圖示的顯示只會根據條件通過情況來改變，設定的持續時間不會影響到圖示的顯示情況，不會在設定的持續時間倒數結束後隱藏圖示，如果想要圖示在計時結束後隱藏，需要勾選'僅在計時器作用時顯示'，這是4.5.3版本新加入的功能。）]=]
-L["CONDITION_WEEKDAY"] = "星期幾"
-L["CONDITION_WEEKDAY_DESC"] = [=[檢查今天是不是星期幾。
-
-用於檢查的時間是當地時間（基於你的電腦時鐘）。它不會獲取伺服器時間。]=]
 L["CONFIGMODE"] = "TellMeWhen正處於設定模式。 在離開設定模式之前，圖示無法正常使用。 輸入'/tellmewhen'或'/tmw'可以開啟或關閉設定模式。"
 L["CONFIGMODE_EXIT"] = "退出設定模式"
 L["CONFIGMODE_EXITED"] = "TMW已鎖定。輸入/tmw重新進入設定模式。"
@@ -600,8 +601,8 @@ L["CONFIGPANEL_CBAR_HEADER"] = "計時條覆蓋"
 L["CONFIGPANEL_CLEU_HEADER"] = "戰鬥事件"
 L["CONFIGPANEL_CNDTTIMERS_HEADER"] = "條件計時器"
 L["CONFIGPANEL_PBAR_HEADER"] = "能量條覆蓋"
-L["CONFIGPANEL_TIMERBAR_BARDISPLAY_HEADER"] = "計時條"
 L["CONFIGPANEL_TIMER_HEADER"] = "計時器時鐘"
+L["CONFIGPANEL_TIMERBAR_BARDISPLAY_HEADER"] = "計時條"
 L["COPYGROUP"] = "複製群組"
 L["COPYPOSSCALE"] = "僅複製位置/比例"
 L["CrowdControl"] = "控場技能"
@@ -698,11 +699,14 @@ L["EVENT_CATEGORY_CONDITION"] = "條件"
 L["EVENT_CATEGORY_MISC"] = "其他"
 L["EVENT_CATEGORY_TIMER"] = "計時器"
 L["EVENT_CATEGORY_VISIBILITY"] = "顯示"
+L["EVENT_FREQUENCY"] = "觸發頻率"
+L["EVENT_FREQUENCY_DESC"] = "設定條件通過的觸發頻率（單位為秒）。"
+L["EVENT_WHILECONDITIONS"] = "觸發條件"
+L["EVENT_WHILECONDITIONS_DESC"] = "點擊設定條件，當它們通過時會觸發通知事件。"
+L["EVENT_WHILECONDITIONS_TAB_DESC"] = "設定觸發通知事件需要的條件。"
 L["EVENTCONDITIONS"] = "事件條件"
 L["EVENTCONDITIONS_DESC"] = "點擊進入設定用於觸發此事件的條件。"
 L["EVENTCONDITIONS_TAB_DESC"] = "設定的條件通過時則觸發此事件。"
-L["EVENT_FREQUENCY"] = "觸發頻率"
-L["EVENT_FREQUENCY_DESC"] = "設定條件通過的觸發頻率（單位為秒）。"
 L["EVENTHANDLER_COUNTER_TAB"] = "計數器"
 L["EVENTHANDLER_COUNTER_TAB_DESC"] = "設定一個計數器。此計數器可用於條件中檢查或DogTags標籤中顯示文字。"
 L["EVENTHANDLER_LUA_CODE"] = "用於執行的Lua程式碼"
@@ -766,9 +770,6 @@ L["EVENTS_SETTINGS_TIMER_NAME_DESC"] = [=[輸入你需要修改的計時器名�
 L["EVENTS_SETTINGS_TIMER_OP_DESC"] = "選擇你想要計時器使用的運算符"
 L["EVENTS_TAB"] = "通知事件"
 L["EVENTS_TAB_DESC"] = "設定聲音/文字輸出/動畫的觸發器。"
-L["EVENT_WHILECONDITIONS"] = "觸發條件"
-L["EVENT_WHILECONDITIONS_DESC"] = "點擊設定條件，當它們通過時會觸發通知事件。"
-L["EVENT_WHILECONDITIONS_TAB_DESC"] = "設定觸發通知事件需要的條件。"
 L["EXPORT_ALLGLOBALGROUPS"] = "所有|cff00c300共用|r群組"
 L["EXPORT_f"] = "匯出 %s"
 L["EXPORT_HEADING"] = "匯出"
@@ -806,7 +807,7 @@ L["GLYPHTOCHECK"] = "要檢查的雕紋"
 L["GROUP"] = "組"
 L["GROUPCONDITIONS"] = "群組條件"
 L["GROUPCONDITIONS_DESC"] = "設定條件進行微調，以便更好的顯示這個群組。"
-L["GROUPICON"] = "群組：%s，圖示：%s" -- Needs review
+L["GROUPICON"] = "群組：%s，圖示：%s"
 L["GROUPSETTINGS_DESC"] = "設定此群組。"
 L["GUIDCONFLICT_DESC_PART1"] = [=[TellMeWhen檢測到下列的物件擁有相同的全域唯一識別碼（GUID）。如果你從它們其中之一調用數據可能會發生料想不到問題（例如：將它們之中的一個加入到整合圖示中）。
 
@@ -814,7 +815,7 @@ L["GUIDCONFLICT_DESC_PART1"] = [=[TellMeWhen檢測到下列的物件擁有相同
 L["GUIDCONFLICT_DESC_PART2"] = "你也可以自行解決這個問題（例如：刪除兩個之中的某一個）。"
 L["GUIDCONFLICT_IGNOREFORSESSION"] = "忽略此設定會話衝突。"
 L["GUIDCONFLICT_REGENERATE"] = "為%s重新生成GUID"
-L["Heals"] = "玩家治療法術" -- Needs review
+L["Heals"] = "玩家治療法術"
 L["HELP_ANN_LINK_INSERTED"] = [=[你插入的連結看起來很詭異，可能是因為DogTag的格式轉換所引起。
 
 如果輸出到暴雪頻道時連結無法正常顯示，請更改顏色代碼。]=]
@@ -883,12 +884,18 @@ L["HELP_SCROLLBAR_DROPDOWN"] = [=[一些TellMeWhen的下拉選單有捲動條。
 
 你也可以使用滑鼠滾輪。]=]
 L["ICON"] = "圖示"
+L["ICON_TOOLTIP_CONTROLLED"] = "此圖示被這群組的第一個圖示接管。你不能單獨修改它。"
+L["ICON_TOOLTIP_CONTROLLER"] = "此圖示具有群組控制功能。"
+L["ICON_TOOLTIP2NEW"] = [=[|cff7fffff點擊右鍵|r進入圖示設定。
+|cff7fffff點擊右鍵並拖拽|r 複製/移動 到另一個圖示。
+|cff7fffff拖拽|r法術或物品到圖示來快速設定。]=]
+L["ICON_TOOLTIP2NEWSHORT"] = "|cff7fffff點擊右鍵|r進入圖示設定。"
 L["ICONALPHAPANEL_FAKEHIDDEN"] = "總是隱藏"
 L["ICONALPHAPANEL_FAKEHIDDEN_DESC"] = [=[強制隱藏此圖示，但保持它其他的正常功能。
 
 |cff7fffff-|r 此圖示依然可以通過其他圖示的條件進行檢查。
 |cff7fffff-|r 整合圖示可以包含並顯示此圖示。
-|cff7fffff-|r 此圖示的通知仍正常運作。]=] -- Needs review
+|cff7fffff-|r 此圖示的通知仍正常運作。]=]
 L["ICONCONDITIONS_DESC"] = "設定條件進行微調，以便更好的顯示這個圖示。"
 L["ICONGROUP"] = "圖示：%s （群組：%s）"
 L["ICONMENU_ABSENT"] = "缺少"
@@ -1026,8 +1033,8 @@ L["ICONMENU_DOTWATCH_GCREQ_DESC"] = [=[此圖示類型必須使用群組控制�
 請創建一個圖示並且設定為群組控制器，他必須是群組中第一個圖示（例如，他的圖示ID為1），再啟用%q選項，它在勾選框%q附近。]=]
 L["ICONMENU_DOTWATCH_NOFOUND_DESC"] = "設定在無法找到被檢查的增益/減益時圖示的可見度。"
 L["ICONMENU_DR"] = "遞減"
-L["ICONMENU_DRABSENT"] = "未遞減"
 L["ICONMENU_DR_DESC"] = "檢查遞減程度跟遞減時間。"
+L["ICONMENU_DRABSENT"] = "未遞減"
 L["ICONMENU_DRPRESENT"] = "已遞減"
 L["ICONMENU_DRS"] = "遞減"
 L["ICONMENU_DURATION_MAX_DESC"] = "允許圖示顯示的最大持續時間，高於此數值圖示將被隱藏。"
@@ -1055,6 +1062,9 @@ L["ICONMENU_HIDEUNEQUIPPED"] = "當裝備欄缺少武器時隱藏"
 L["ICONMENU_HIDEUNEQUIPPED_DESC"] = "勾選此項在檢查的武器欄沒有裝備武器時強制隱藏圖示"
 L["ICONMENU_HOSTILE"] = "敵對"
 L["ICONMENU_ICD"] = "內置冷卻"
+L["ICONMENU_ICD_DESC"] = [=[檢查一個觸發效果或與其類似效果的冷卻。
+
+|cFFFF5959重要提示|r：關於如何檢查每種類型的內置冷卻請參閱在 %q 下方選項的提示資訊。]=]
 L["ICONMENU_ICDAURA_DESC"] = [=[如果是在以下情況開始內置冷卻，請選擇此項：
 
 |cff7fffff1）|r在你應用某個減益/獲得某個增益以後（包括觸發），或是
@@ -1071,9 +1081,6 @@ L["ICONMENU_ICDAURA_DESC"] = [=[如果是在以下情況開始內置冷卻，請
 
 （請檢查你的戰鬥記錄或者利用插件來確認法術名稱或ID）]=]
 L["ICONMENU_ICDBDE"] = "增益/減益/傷害/充能/召喚"
-L["ICONMENU_ICD_DESC"] = [=[檢查一個觸發效果或與其類似效果的冷卻。
-
-|cFFFF5959重要提示|r：關於如何檢查每種類型的內置冷卻請參閱在 %q 下方選項的提示資訊。]=]
 L["ICONMENU_ICDTYPE"] = "何時開始冷卻……"
 L["ICONMENU_IGNORENOMANA"] = "忽略能量不足"
 L["ICONMENU_IGNORENOMANA_DESC"] = [=[勾選此項當一個技能僅僅是因為能量不足而不可用時視該技能為可用。  
@@ -1103,8 +1110,8 @@ L["ICONMENU_META_DESC"] = [=[組合多個圖示到一個圖示。
 
 在整合圖示中被檢查的那些圖示即使設定為%q，在可以顯示時同樣會顯示。]=]
 L["ICONMENU_META_ICONMENUTOOLTIP"] = "（%d個圖示）"
-L["ICONMENU_MOUSEOVER"] = "遊標對象" -- Needs review
-L["ICONMENU_MOUSEOVERTARGET"] = "遊標對象的目標" -- Needs review
+L["ICONMENU_MOUSEOVER"] = "遊標對象"
+L["ICONMENU_MOUSEOVERTARGET"] = "遊標對象的目標"
 L["ICONMENU_MOVEHERE"] = "移動到此"
 L["ICONMENU_NOTCOUNTING"] = "未倒數"
 L["ICONMENU_NOTREADY"] = "沒有準備好"
@@ -1156,12 +1163,11 @@ L["ICONMENU_SHOWTIMER_DESC"] = "勾選此項讓該圖示的冷卻時鐘動畫在
 L["ICONMENU_SHOWTIMERTEXT"] = "顯示計時器數字"
 L["ICONMENU_SHOWTIMERTEXT_DESC"] = [=[勾選此項在圖示上顯示剩餘冷卻時間或持續時間的數字。
 
-你需要安裝OmniCC或類似插件，或者勾選內建遊戲設定「快捷列」一頁中「顯示冷卻時間」一項。]=] -- Needs review
+你需要安裝OmniCC或類似插件，或者勾選內建遊戲設定「快捷列」一頁中「顯示冷卻時間」一項。]=]
 L["ICONMENU_SHOWTIMERTEXT_NOOCC"] = "顯示ElvUI計時器數字"
 L["ICONMENU_SHOWTIMERTEXT_NOOCC_DESC"] = [=[勾選此項使用ElvUI的冷卻數字來顯示圖示剩餘的冷卻時間/持續時間。
 
 此設定僅用於ElvUI的計時器。如果你有其他插件提供類似此種計時器的功能（像是OmniCC），你可以利用%q選項來控制那些計時器。 我們不推薦兩個選項同時啟用。]=]
-L["ICONMENU_SHOWTTTEXT2"] = "法術效果變數"
 L["ICONMENU_SHOWTTTEXT_DESC2"] = [=[在圖示的疊加層數位置顯示技能效果的變數數值。較常使用在監視傷害護盾的數值等。
 
 此數值會顯示到圖示的疊加層數位置並替代它。
@@ -1179,21 +1185,22 @@ L["ICONMENU_SHOWTTTEXT_VAR"] = "僅變數#%d"
 L["ICONMENU_SHOWTTTEXT_VAR_DESC"] = [=[僅在圖示疊加層數位置顯示此變數數值。
 
 請自行嘗試並選擇正確的數值來源。]=]
+L["ICONMENU_SHOWTTTEXT2"] = "法術效果變數"
 L["ICONMENU_SHOWWHEN"] = "何時顯示圖示"
-L["ICONMENU_SHOWWHENNONE"] = "沒有結果時顯示"
-L["ICONMENU_SHOWWHENNONE_DESC"] = "勾選此項允許在單位沒有被檢查到遞減時顯示圖示。"
 L["ICONMENU_SHOWWHEN_OPACITY_GENERIC_DESC"] = "設定此圖示在這個圖示狀態下用來顯示的可視度。"
 L["ICONMENU_SHOWWHEN_OPACITYWHEN_WRAP"] = "當%s|r時的可視度"
+L["ICONMENU_SHOWWHENNONE"] = "沒有結果時顯示"
+L["ICONMENU_SHOWWHENNONE_DESC"] = "勾選此項允許在單位沒有被檢查到遞減時顯示圖示。"
+L["ICONMENU_SORT_STACKS_ASC"] = "堆疊數量升序"
+L["ICONMENU_SORT_STACKS_ASC_DESC"] = "勾選此項優先顯示堆疊數量最低的法術。"
+L["ICONMENU_SORT_STACKS_DESC"] = "堆疊數量降序"
+L["ICONMENU_SORT_STACKS_DESC_DESC"] = "勾選此項優先顯示堆疊數量最高的法術。"
 L["ICONMENU_SORTASC"] = "持續時間升序"
 L["ICONMENU_SORTASC_DESC"] = "勾選此項優先顯示持續時間最低的法術。"
 L["ICONMENU_SORTASC_META_DESC"] = "勾選此項優先顯示持續時間最低的圖示。"
 L["ICONMENU_SORTDESC"] = "持續時間降序"
 L["ICONMENU_SORTDESC_DESC"] = "勾選此項優先顯示持續時間最高的法術。"
 L["ICONMENU_SORTDESC_META_DESC"] = "勾選此項優先顯示持續時間最高的圖示。"
-L["ICONMENU_SORT_STACKS_ASC"] = "堆疊數量升序"
-L["ICONMENU_SORT_STACKS_ASC_DESC"] = "勾選此項優先顯示堆疊數量最低的法術。"
-L["ICONMENU_SORT_STACKS_DESC"] = "堆疊數量降序"
-L["ICONMENU_SORT_STACKS_DESC_DESC"] = "勾選此項優先顯示堆疊數量最高的法術。"
 L["ICONMENU_SPELLCAST_COMPLETE"] = "施法結束/瞬發施法"
 L["ICONMENU_SPELLCAST_COMPLETE_DESC"] = [=[如果是在以下情況開始內置冷卻，請選擇此項：
 
@@ -1213,8 +1220,8 @@ L["ICONMENU_SPLIT"] = "拆分成新的群組"
 L["ICONMENU_SPLIT_DESC"] = "創建一個新的群組並將這個圖示移動到上面。 原群組中的許多設定會保留到新的群組。"
 L["ICONMENU_SPLIT_GLOBAL"] = "拆分成新的|cff00c300global共用群組|r"
 L["ICONMENU_SPLIT_NOCOMBAT_DESC"] = "戰鬥中不能創建新的群組。請在脫離戰鬥後分離到新的群組。"
-L["ICONMENU_STACKS_MAX_DESC"] = "允許圖示顯示的最大堆疊數量，高於此數值圖示將被隱藏。" -- Needs review
-L["ICONMENU_STACKS_MIN_DESC"] = "顯示圖示所需的最低堆疊數量，低於此數值圖示將被隱藏。" -- Needs review
+L["ICONMENU_STACKS_MAX_DESC"] = "允許圖示顯示的最大堆疊數量，高於此數值圖示將被隱藏。"
+L["ICONMENU_STACKS_MIN_DESC"] = "顯示圖示所需的最低堆疊數量，低於此數值圖示將被隱藏。"
 L["ICONMENU_STEALABLE"] = "僅可法術竊取"
 L["ICONMENU_STEALABLE_DESC"] = "勾選此項僅顯示能被\"法術竊取\"的增益，非常適合跟驅散類型中的魔法搭配使用。"
 L["ICONMENU_SUCCEED2"] = "條件通過時"
@@ -1231,16 +1238,6 @@ L["ICONMENU_TYPE_CANCONTROL"] = "此圖示類型如果在群組的第一個圖�
 L["ICONMENU_TYPE_DISABLED_BY_VIEW"] = "此圖示類型不支援顯示方式：%q。你可以更改群組顯示方式或者創建一個新的群組使用這個圖示類型。"
 L["ICONMENU_UIERROR"] = "戰鬥錯誤訊息"
 L["ICONMENU_UIERROR_DESC"] = "檢查UI錯誤訊息。例如：「怒氣不足」、「你需要一個目標」等等。"
-L["ICONMENU_UNITCNDTIC"] = "單位條件圖示"
-L["ICONMENU_UNITCNDTIC_DESC"] = [=[檢查單位的條件狀態。
-
-設定中所有應用的單位都會被檢查。]=]
-L["ICONMENU_UNITCOOLDOWN"] = "單位冷卻"
-L["ICONMENU_UNITCOOLDOWN_DESC"] = [=[檢查其他單位的冷卻。
-
-檢查 %s 可以使用 %q 作為名稱。
-
-譯者註：玩家也可以作為被檢查的單位。]=]
 L["ICONMENU_UNIT_DESC"] = [=[在此框輸入需要監視的單位。此單位能從右邊的下拉列表插入，或者你是一位高端玩家可以自行輸入需要監視的單位。多個單位請用分號分隔開（;）可使用標準單位（像是player，target，mouseover等等可用於巨集的單位），或者是友好玩家的名字（像是%s，Cybeloras，小兔是豬，阿光是豬等。）
 
 需要瞭解更多關於單位的相關資訊，請訪問http://www.wowpedia.org/UnitId]=]
@@ -1252,6 +1249,16 @@ L["ICONMENU_UNIT_DESC_CONDITIONUNIT"] = [=[在此框輸入需要監視的單位�
 L["ICONMENU_UNIT_DESC_UNITCONDITIONUNIT"] = [=[在此框輸入需要監視的單位。此單位能從右邊的下拉列表插入。
 
 "unit"是指當前圖示正在檢查的任意單位。]=]
+L["ICONMENU_UNITCNDTIC"] = "單位條件圖示"
+L["ICONMENU_UNITCNDTIC_DESC"] = [=[檢查單位的條件狀態。
+
+設定中所有應用的單位都會被檢查。]=]
+L["ICONMENU_UNITCOOLDOWN"] = "單位冷卻"
+L["ICONMENU_UNITCOOLDOWN_DESC"] = [=[檢查其他單位的冷卻。
+
+檢查 %s 可以使用 %q 作為名稱。
+
+譯者註：玩家也可以作為被檢查的單位。]=]
 L["ICONMENU_UNITFAIL"] = "單位條件未通過"
 L["ICONMENU_UNITS"] = "單位"
 L["ICONMENU_UNITSTOWATCH"] = "監視的單位"
@@ -1283,12 +1290,6 @@ L["IconModule_Texture_ColoredTexture"] = "圖示材質"
 L["IconModule_TimerBar_BarDisplayTimerBar"] = "計時條（計量條顯示）"
 L["IconModule_TimerBar_OverlayTimerBar"] = "重疊式計時條"
 L["ICONTOCHECK"] = "要檢查的圖示"
-L["ICON_TOOLTIP2NEW"] = [=[|cff7fffff點擊右鍵|r進入圖示設定。
-|cff7fffff點擊右鍵並拖拽|r 複製/移動 到另一個圖示。
-|cff7fffff拖拽|r法術或物品到圖示來快速設定。]=]
-L["ICON_TOOLTIP2NEWSHORT"] = "|cff7fffff點擊右鍵|r進入圖示設定。"
-L["ICON_TOOLTIP_CONTROLLED"] = "此圖示被這群組的第一個圖示接管。你不能單獨修改它。"
-L["ICON_TOOLTIP_CONTROLLER"] = "此圖示具有群組控制功能。"
 L["ICONTYPE_DEFAULT_HEADER"] = "提示資訊"
 L["ICONTYPE_DEFAULT_INSTRUCTIONS"] = [=[要開始設定該圖示，請先從%q下拉式選單中選擇一個圖示類型。
 
@@ -1302,8 +1303,6 @@ L["ICONTYPE_SWINGTIMER_TIP"] = [=[你需要檢查%s的時間嗎？圖示類型%s
 L["ICONTYPE_SWINGTIMER_TIP_APPLYSETTINGS"] = "套用%s設定"
 L["ImmuneToMagicCC"] = "免疫法術控制"
 L["ImmuneToStun"] = "免疫擊暈"
-L["IMPORTERROR_FAILEDPARSE"] = "處理字串時發生錯誤。請確保你複製的字串是完整的。"
-L["IMPORTERROR_INVALIDTYPE"] = "嘗試匯入未知類型的數據，請檢查是否已安裝了最新版本的TellMeWhen。"
 L["IMPORT_EXPORT"] = "匯入/匯出/還原"
 L["IMPORT_EXPORT_BUTTON_DESC"] = "點擊此下拉式選單來匯出或匯入圖示/群組/設定檔。"
 L["IMPORT_EXPORT_DESC"] = [=[點擊這個編輯框右側的下拉式選單的箭頭來匯出圖示，群組或設定檔。
@@ -1341,6 +1340,8 @@ L["IMPORT_PROFILE"] = "複製設定檔"
 L["IMPORT_PROFILE_NEW"] = "|cff59ff59創建|r新的設定檔"
 L["IMPORT_PROFILE_OVERWRITE"] = "|cFFFF5959覆寫|r %s"
 L["IMPORT_SUCCESSFUL"] = "匯入完成!"
+L["IMPORTERROR_FAILEDPARSE"] = "處理字串時發生錯誤。請確保你複製的字串是完整的。"
+L["IMPORTERROR_INVALIDTYPE"] = "嘗試匯入未知類型的數據，請檢查是否已安裝了最新版本的TellMeWhen。"
 L["Incapacitated"] = "癱瘓"
 L["INCHEALS"] = "單位受到的治療量"
 L["INCHEALS_DESC"] = [=[檢查單位即將受到的治療量（包括下一跳HoT和施放中的法術）
@@ -1357,8 +1358,8 @@ L["ITEMTOCHECK"] = "要檢查的物品"
 L["ITEMTOCOMP1"] = "進行比較的第一個物品"
 L["ITEMTOCOMP2"] = "進行比較的第二個物品"
 L["LAYOUTDIRECTION"] = "佈局方向"
-L["LDB_TOOLTIP1"] = "|cff7fffff左鍵點擊：|r鎖定群組" -- Needs review
-L["LDB_TOOLTIP2"] = "|cff7fffff右鍵點擊：|r顯示TWM選項" -- Needs review
+L["LDB_TOOLTIP1"] = "|cff7fffff左鍵點擊：|r鎖定群組"
+L["LDB_TOOLTIP2"] = "|cff7fffff右鍵點擊：|r顯示TWM選項"
 L["LEFT"] = "左"
 L["LOADERROR"] = "TellMeWhen設定插件無法載入："
 L["LOADINGOPT"] = "正在載入TellMeWhen設定插件。"
@@ -1375,7 +1376,6 @@ L["LOSECONTROL_TYPE_DESC_USEUNKNOWN"] = "注意：圖示無法判斷這個失去
 L["LOSECONTROL_TYPE_MAGICAL_IMMUNITY"] = "魔法免疫"
 L["LOSECONTROL_TYPE_SCHOOLLOCK"] = "法術類別被鎖定"
 L["LUACONDITION"] = "Lua（進階）"
-L["LUACONDITION2"] = "Lua條件"
 L["LUACONDITION_DESC"] = [=[此條件類型允許你使用Lua語言來評估一個條件的狀態。
 
 輸入不能為「if……then」敘述，也不能為function closure。它可以是一個普通的敘述評估，例如：「a and b or c」。如果需要複雜功能，可使用函數調用，例如：「CheckStuff()」，這是一個外部函數。 （你也可以使用Lua片段功能）。
@@ -1385,6 +1385,7 @@ L["LUACONDITION_DESC"] = [=[此條件類型允許你使用Lua語言來評估一�
 如果需要更多的幫助（但不是關於如何去寫Lua代碼），到CurseForge提交一份回報單。關於如何編寫Lua语言，請自行去互聯網搜尋資料。
 
 註：Lua語言部份就不翻譯了，翻譯了反而覺得怪怪的。]=]
+L["LUACONDITION2"] = "Lua條件"
 L["MACROCONDITION"] = "巨集條件式"
 L["MACROCONDITION_DESC"] = [=[此條件將會評估巨集的條件式，在巨集條件式成立時則此條件通過。
 所有的巨集條件式都能在前面加上"no"進行逆向檢查。
@@ -1398,10 +1399,9 @@ L["MACROCONDITION_EB_DESC"] = "使用單一條件時中括號是可選的，使�
 L["MACROTOEVAL"] = "輸入需要評估的巨集條件式（允許多個）"
 L["Magic"] = "魔法"
 L["MAIN"] = "主頁面"
-L["!!Main Addon Description"] = "為冷卻、增益/減益及其他各個方面提供視覺、聽覺以及文字上的通知。"
+L["MAIN_DESC"] = "包含這個圖示的主要選項。"
 L["MAINASSIST"] = "主助攻"
 L["MAINASSIST_DESC"] = "檢查團隊中被標記為主助攻的單位。"
-L["MAIN_DESC"] = "包含這個圖示的主要選項。"
 L["MAINOPTIONS_SHOW"] = "群組設定"
 L["MAINTANK"] = "主坦克"
 L["MAINTANK_DESC"] = "檢查團隊中被標記為主坦克的單位。"
@@ -1432,9 +1432,9 @@ L["MODTIMER_PATTERN_DESC"] = [=[預設情況下，這個條件將匹配任何包
 L["MODTIMERTOCHECK"] = "用於檢查的計時器"
 L["MODTIMERTOCHECK_DESC"] = "輸入顯示在首領模塊計時器顯示在計時條上的全名。"
 L["MOON"] = "月蝕"
+L["MOUSEOVER_TOKEN_NOT_FOUND"] = "無遊標對象"
 L["MOUSEOVERCONDITION"] = "滑鼠遊標停留"
 L["MOUSEOVERCONDITION_DESC"] = "此條件檢查你的滑鼠遊標是否有停留在此圖示上，如果為群組條件則檢查滑鼠遊標是否有停留在該群組的某個圖示上。"
-L["MOUSEOVER_TOKEN_NOT_FOUND"] = "無遊標對象"
 L["MP5"] = "%d 5秒回藍"
 L["MUSHROOM"] = "蘑菇%d"
 L["NEWVERSION"] = "有新版本可升級（%s）"
@@ -1495,26 +1495,26 @@ L["PROFILE_LOADED"] = "已載入設定檔：%s"
 L["PvPSpells"] = "PVP控制技能以及其他"
 L["QUESTIDTOCHECK"] = "用於檢查的任務ID"
 L["RAID_WARNING_FAKE"] = "團隊警報 （假）"
-L["RAID_WARNING_FAKE_DESC"] = "輸出類似於團隊警報訊息的文字，此訊息不會被其他人看到，你不需要團隊權限，也不需要在團隊中就可使用。" -- Needs review
+L["RAID_WARNING_FAKE_DESC"] = "輸出類似於團隊警報訊息的文字，此訊息不會被其他人看到，你不需要團隊權限，也不需要在團隊中就可使用。"
 L["RaidWarningFrame"] = "團隊警告框架"
 L["rare"] = "稀有"
 L["rareelite"] = "稀有精英"
-L["REACTIVECNDT_DESC"] = "此條件僅檢查技能的觸發/可用情況，並非它的冷卻。" -- Needs review
-L["REDO"] = "重作" -- Needs review
+L["REACTIVECNDT_DESC"] = "此條件僅檢查技能的觸發/可用情況，並非它的冷卻。"
+L["REDO"] = "重作"
 L["ReducedHealing"] = "治療效果降低"
 L["REQFAILED_ALPHA"] = "無效時的可視度"
 L["RESET_ICON"] = "重設"
 L["RESET_ICON_DESC"] = "重置這個圖示的所有設定為預設值。"
 L["RESIZE"] = "改變大小"
-L["RESIZE_GROUP_CLOBBERWARN"] = "當你使用|cff7fffff右鍵點擊並拖拽|r縮減群組格數時，部分圖示的設定將會臨時存檔，在你使用|cff7fffff右鍵點擊並拖拽|r加大群組格數時會恢復，但是在你登出或者重新載入UI後臨時存檔的數據將會丟失。" -- Needs review
-L["RESIZE_TOOLTIP"] = "|cff7fffff點擊並拖拽：|r改變大小" -- Needs review
+L["RESIZE_GROUP_CLOBBERWARN"] = "當你使用|cff7fffff右鍵點擊並拖拽|r縮減群組格數時，部分圖示的設定將會臨時存檔，在你使用|cff7fffff右鍵點擊並拖拽|r加大群組格數時會恢復，但是在你登出或者重新載入UI後臨時存檔的數據將會丟失。"
+L["RESIZE_TOOLTIP"] = "|cff7fffff點擊並拖拽：|r改變大小"
 L["RESIZE_TOOLTIP_CHANGEDIMS"] = "|cff7fffff右鍵點擊並拖拽：|r更改群組的格數"
 L["RESIZE_TOOLTIP_SCALEX_SIZEY"] = "|cff7fffff點擊並拖拽：|r改變大小"
 L["RESIZE_TOOLTIP_SCALEXY"] = [=[|cff7fffff點擊並拖拽：|r快速調整大小比例
 |cff7fffff按住CTRL：|r微調大小比例]=]
 L["RESIZE_TOOLTIP_SCALEY_SIZEX"] = "|cff7fffff點擊並拖拽：|r調整大小比例"
 L["RIGHT"] = "右"
-L["ROLEf"] = "職責：%s" -- Needs review
+L["ROLEf"] = "職責：%s"
 L["Rooted"] = "纏繞"
 L["RUNEOFPOWER"] = "符文%d"
 L["RUNES"] = "要檢查的符文"
@@ -1554,11 +1554,6 @@ L["SOUND_CUSTOM_DESC"] = [=[輸入需要用來播放的自訂音效檔案的路�
 -「file.ext」： WOW主目錄的某個檔案
 
 注意：魔獸世界必須在重開之後才能正常使用那些在它啟動時還不存在的檔案。]=]
-L["SOUNDERROR1"] = "檔案必須有一個副檔名!"
-L["SOUNDERROR2"] = [=[魔獸世界4.0+不支援自訂WAV檔案
-
-（WoW自帶WAV音效可以使用）]=]
-L["SOUNDERROR3"] = "只支援OGG和MP3檔案!"
 L["SOUND_ERROR_ALLDISABLED"] = [=[無法進行音效播放測試，原因：遊戲音效已經被完全禁用。
 
 你需要去更改暴雪音效選項的相關設定。]=]
@@ -1624,17 +1619,22 @@ L["SOUND_EVENT_WHILECONDITION_DESC"] = "此類型的通知事件會在你設定�
 L["SOUND_SOUNDTOPLAY"] = "要播放的音效"
 L["SOUND_TAB"] = "音效"
 L["SOUND_TAB_DESC"] = "設定用於播放的聲音。你可以使用LibSharedMedia的聲音或者指定一個聲音檔案。"
+L["SOUNDERROR1"] = "檔案必須有一個副檔名!"
+L["SOUNDERROR2"] = [=[魔獸世界4.0+不支援自訂WAV檔案
+
+（WoW自帶WAV音效可以使用）]=]
+L["SOUNDERROR3"] = "只支援OGG和MP3檔案!"
 L["SPEED"] = "單位速度"
-L["SpeedBoosts"] = "速度提升"
 L["SPEED_DESC"] = [=[這是指單位當前的移動速度，如果單位不移動則為0。
 如果您要檢查單位的最高奔跑速度，可以使用'單位奔跑速度'條件來代替。]=]
+L["SpeedBoosts"] = "速度提升"
+L["SPELL_EQUIV_REMOVE_FAILED"] = "警告：嘗試把「%q」從法術列表「%q」中移除，但是無法找到。"
 L["SPELLCHARGES"] = "法術次數"
 L["SPELLCHARGES_DESC"] = "檢查像是%s或%s此類法術的可用次數。"
 L["SPELLCHARGES_FULLYCHARGED"] = "完全恢復"
 L["SPELLCHARGETIME"] = "法術次數恢復計時"
 L["SPELLCHARGETIME_DESC"] = "檢查像是%s或%s恢復一次充能還需多少時間。"
 L["SPELLCOOLDOWN"] = "法術冷卻"
-L["SPELL_EQUIV_REMOVE_FAILED"] = "警告：嘗試把「%q」從法術列表「%q」中移除，但是無法找到。"
 L["SPELLREACTIVITY"] = "法術反應（激活/觸發/可用）"
 L["SPELLTOCHECK"] = "要檢查的法術"
 L["SPELLTOCOMP1"] = "進行比較的第一個法術"
@@ -1671,22 +1671,19 @@ L["SUG_FIRSTHELP_DESC"] = [=[這是一個提示與建議列表，它可以顯示
 大部分情況下，用名稱來檢查是比較好的選擇。在同個名稱存在多個不同效果可能發生重疊的情況下你才需要使用ID來檢查。
 
 如果你輸入的是一個名稱，則|cff7fffff右鍵點擊|r條目會插入一個ID，反之亦然，你輸入的是ID則|cff7fffff右鍵點擊|r會插入一個名稱。]=]
-L["SUGGESTIONS"] = "提示與建議："
-L["SUGGESTIONS_DOGTAGS"] = "DogTags："
-L["SUGGESTIONS_SORTING"] = "排序中……"
 L["SUG_INSERT_ANY"] = "|cff7fffff點擊滑鼠|r"
+L["SUG_INSERT_LEFT"] = "|cff7fffff點擊左鍵|r"
+L["SUG_INSERT_RIGHT"] = "|cff7fffff點擊右鍵|r"
+L["SUG_INSERT_TAB"] = "或者按|cff7fffffTab|r鍵"
 L["SUG_INSERTEQUIV"] = "%s插入同類型條目"
 L["SUG_INSERTERROR"] = "%s插入錯誤訊息"
 L["SUG_INSERTID"] = "%s插入編號（ID）"
 L["SUG_INSERTITEMSLOT"] = "%s插入物品對應的裝備欄位編號"
-L["SUG_INSERT_LEFT"] = "|cff7fffff點擊左鍵|r"
 L["SUG_INSERTNAME"] = "%s插入名稱"
 L["SUG_INSERTNAME_INTERFERE"] = [=[|TInterface\AddOns\TellMeWhen\Textures\Alert:0:2|t|cffffa500CAUTION:|TInterface\AddOns\TellMeWhen\Textures\Alert:0:2|t|cffff1111
 此法術可能有多個效果。
 如果使用名稱可能無法被正確的檢查。
 你應當使用一個ID來檢查。 |r]=]
-L["SUG_INSERT_RIGHT"] = "|cff7fffff點擊右鍵|r"
-L["SUG_INSERT_TAB"] = "或者按|cff7fffffTab|r鍵"
 L["SUG_INSERTTEXTSUB"] = "%s插入標籤"
 L["SUG_INSERTTUNITID"] = "%s插入單位ID"
 L["SUG_MISC"] = "雜項"
@@ -1713,6 +1710,9 @@ L["SUG_TOOLTIPTITLE_GENERIC"] = [=[當你輸入時，TellMeWhen會嘗試確定�
 L["SUG_TOOLTIPTITLE_TEXTSUBS"] = [=[下列的單位變數可以使用在輸出顯示的文字內容中。變數將會被替換成與其相應的內容後再輸出顯示。
 
 點擊一個條目將其插入到編輯框中。]=]
+L["SUGGESTIONS"] = "提示與建議："
+L["SUGGESTIONS_DOGTAGS"] = "DogTags："
+L["SUGGESTIONS_SORTING"] = "排序中……"
 L["SUN"] = "日蝕"
 L["SWINGTIMER"] = "揮擊計時"
 L["TEXTLAYOUTS"] = "文字顯示樣式"
@@ -1769,10 +1769,10 @@ L["TEXTLAYOUTS_IMPORT_OVERWRITE_DESC"] = [=[文字顯示樣式中已有一個跟
 
 選擇此項覆寫已有唯一標識的顯示樣式並匯入新的顯示樣式。那些正在使用被覆寫掉的那個文字顯示樣式的圖示都會在匯入後自動作出相應的更新。]=]
 L["TEXTLAYOUTS_IMPORT_OVERWRITE_DISABLED_DESC"] = "你無法覆寫預設文字顯示樣式。"
-L["TEXTLAYOUTS_LAYOUTDISPLAYS"] = [=[文字顯示方案：
-%s]=]
 L["TEXTLAYOUTS_LAYOUT_SETDEFAULTS"] = "重設為預設值"
 L["TEXTLAYOUTS_LAYOUT_SETDEFAULTS_DESC"] = "重設當前文字顯示樣式設定中所有方案的文字為預設顯示文字。"
+L["TEXTLAYOUTS_LAYOUTDISPLAYS"] = [=[文字顯示方案：
+%s]=]
 L["TEXTLAYOUTS_LAYOUTSETTINGS"] = "顯示樣式設定"
 L["TEXTLAYOUTS_LAYOUTSETTINGS_DESC"] = "點擊以設定文字顯示樣式%q。"
 L["TEXTLAYOUTS_NOEDIT_DESC"] = [=[這個文字顯示樣式是TellMeWhen預設的文字顯示樣式，你無法對其作出更改。
@@ -1823,7 +1823,7 @@ L["TREEf"] = "專精：%s"
 L["TRUE"] = "是"
 L["UIPANEL_ANCHORNUM"] = "依附錨點 %d"
 L["UIPANEL_BARTEXTURE"] = "計量條材質"
-L["UIPANEL_COLUMNS"] = "欄" -- Needs review
+L["UIPANEL_COLUMNS"] = "欄"
 L["UIPANEL_COMBATCONFIG"] = "允許在戰鬥中進行設定"
 L["UIPANEL_COMBATCONFIG_DESC"] = [=[啟用這個選項就可以在戰鬥中對TellMeWhen進行設定。
 
@@ -1834,12 +1834,11 @@ L["UIPANEL_COMBATCONFIG_DESC"] = [=[啟用這個選項就可以在戰鬥中對Te
 |cff7fffff需要重新載入UI|cffff5959才能生效。|r]=]
 L["UIPANEL_DELGROUP"] = "刪除此群組"
 L["UIPANEL_DRAWEDGE"] = "高亮計時器指針"
-L["UIPANEL_DRAWEDGE_DESC"] = "高亮冷卻計時器指針（時鐘動畫）來突出顯示效果" -- Needs review
+L["UIPANEL_DRAWEDGE_DESC"] = "高亮冷卻計時器指針（時鐘動畫）來突出顯示效果"
 L["UIPANEL_EFFTHRESHOLD"] = "增益效率閥值"
 L["UIPANEL_EFFTHRESHOLD_DESC"] = [=[輸入增益/減益的最小時間以便在它們有很高的數值時切換到更有效的檢查模式。 注意：一旦效果的數值超出所選擇的數字的限定，數值較大的效果會優先顯示，而不是按照設定的優先級順序。
 ]=]
 L["UIPANEL_FONT_DESC"] = "選擇圖示堆疊數量文字的字型"
-L["UIPANEL_FONTFACE"] = "字型"
 L["UIPANEL_FONT_HEIGHT"] = "高"
 L["UIPANEL_FONT_HEIGHT_DESC"] = [=[設定顯示文字的最大高度。如果設為0將自動使用可能的最大高度。
 
@@ -1864,10 +1863,13 @@ L["UIPANEL_FONT_XOFFS"] = "X位移"
 L["UIPANEL_FONT_XOFFS_DESC"] = "附著點的X軸位移值"
 L["UIPANEL_FONT_YOFFS"] = "Y位移"
 L["UIPANEL_FONT_YOFFS_DESC"] = "附著點的Y軸位移值"
+L["UIPANEL_FONTFACE"] = "字型"
 L["UIPANEL_FORCEDISABLEBLIZZ"] = "禁用暴雪冷卻文字"
 L["UIPANEL_FORCEDISABLEBLIZZ_DESC"] = "強制關閉暴雪內置的冷卻文字顯示。它在你安裝了有此類功能的插件時會自動開啟禁用。"
 L["UIPANEL_GLYPH"] = "雕紋"
 L["UIPANEL_GLYPH_DESC"] = "檢查你是否使用了某一特定的雕紋。"
+L["UIPANEL_GROUP_QUICKSORT_DEFAULT"] = "按照ID排序"
+L["UIPANEL_GROUP_QUICKSORT_DURATION"] = "按照持續時間排序"
 L["UIPANEL_GROUPALPHA"] = "群組可視度"
 L["UIPANEL_GROUPALPHA_DESC"] = [=[設定整個群組的可視度等級。
 
@@ -1875,8 +1877,6 @@ L["UIPANEL_GROUPALPHA_DESC"] = [=[設定整個群組的可視度等級。
 
 如果你要隱藏整個群組並且仍然允許此群組下的圖示正常運作，請將此選項設定為0（該選項有點類似於圖示設定中的%q）。]=]
 L["UIPANEL_GROUPNAME"] = "重命名群組"
-L["UIPANEL_GROUP_QUICKSORT_DEFAULT"] = "按照ID排序"
-L["UIPANEL_GROUP_QUICKSORT_DURATION"] = "按照持續時間排序"
 L["UIPANEL_GROUPRESET"] = "重設位置"
 L["UIPANEL_GROUPS"] = "群組"
 L["UIPANEL_GROUPS_GLOBAL"] = "|cff00c300共用|r群組"
@@ -1887,7 +1887,7 @@ L["UIPANEL_GROUPSORT_duration"] = "持續時間"
 L["UIPANEL_GROUPSORT_duration_DESC"] = "群組將根據圖示剩餘的持續時間來排序。"
 L["UIPANEL_GROUPSORT_id"] = "圖示ID"
 L["UIPANEL_GROUPSORT_id_DESC"] = "群組將根據圖示ID數字來排序。"
-L["UIPANEL_GROUPSORT_shown"] = "顯示" -- Needs review
+L["UIPANEL_GROUPSORT_shown"] = "顯示"
 L["UIPANEL_GROUPSORT_shown_DESC"] = "群組將根據圖示是否顯示來排序。"
 L["UIPANEL_GROUPSORT_stacks"] = "堆疊數量"
 L["UIPANEL_GROUPSORT_stacks_DESC"] = "群組將根據每個圖示的堆疊數量來排序。"
@@ -1921,7 +1921,7 @@ L["UIPANEL_RELATIVETO_DESC"] = [=[輸入'/framestack'來觀察當前滑鼠遊標
 需要更多幫助，請訪問http:////www.wowpedia.org/API_Region_SetPoint]=]
 L["UIPANEL_RELATIVETO_DESC_GUIDINFO"] = "當前值是另一群組的唯一識別碼。它是在該分組右鍵點擊並拖拽到另一群組並且\"依附到\"選項被選中時設定的。"
 L["UIPANEL_ROLE_DESC"] = "勾選此項允許在你當前專精可以擔任這個職責時顯示群組。"
-L["UIPANEL_ROWS"] = "列" -- Needs review
+L["UIPANEL_ROWS"] = "列"
 L["UIPANEL_SCALE"] = "比例"
 L["UIPANEL_SECONDARYSPEC"] = "第二天賦"
 L["UIPANEL_SPEC"] = "雙天賦"
@@ -1933,19 +1933,19 @@ L["UIPANEL_SUBTEXT2"] = [=[圖示僅在鎖定後開始工作。
 
 在未鎖定時，你可以變更大小或移動圖示群組，右鍵點擊圖示開啟設定頁面。
 
-你可以輸入「/tellmewhen」或「/tmw」來鎖定、解鎖。]=] -- Needs review
+你可以輸入「/tellmewhen」或「/tmw」來鎖定、解鎖。]=]
 L["UIPANEL_TALENTLEARNED"] = "已學天賦"
-L["UIPANEL_TOOLTIP_COLUMNS"] = "設定此群組的欄數" -- Needs review
+L["UIPANEL_TOOLTIP_COLUMNS"] = "設定此群組的欄數"
 L["UIPANEL_TOOLTIP_GROUPRESET"] = "重設此群組位置跟比例"
 L["UIPANEL_TOOLTIP_ONLYINCOMBAT"] = "勾選此項讓該群組只在戰鬥中顯示"
-L["UIPANEL_TOOLTIP_ROWS"] = "設定此群組的列數" -- Needs review
+L["UIPANEL_TOOLTIP_ROWS"] = "設定此群組的列數"
 L["UIPANEL_TOOLTIP_UPDATEINTERVAL"] = [=[設定圖示顯示/隱藏、可見度、條件等的檢查頻率（秒）。
 
 0為最快。低階電腦設定數值過低會使幀數明顯降低。]=]
 L["UIPANEL_TREE_DESC"] = "勾選來允許該組在某個天賦樹激活時顯示，或者不勾選讓它在天賦樹沒激活時隱藏。"
 L["UIPANEL_UPDATEINTERVAL"] = "更新頻率"
 L["UIPANEL_WARNINVALIDS"] = "提示無效圖示"
-L["UNDO"] = "復原" -- Needs review
+L["UNDO"] = "復原"
 L["UNITCONDITIONS"] = "單位條件"
 L["UNITCONDITIONS_DESC"] = [=[點擊以便設定條件在上面輸入的全部單位中篩選出你想用於檢查的每個單位。
 
@@ -1961,8 +1961,8 @@ L["UNKNOWN_GROUP"] = "<未知/不可用群組>"
 L["UNKNOWN_ICON"] = "<未知/不可用圖示>"
 L["UNKNOWN_UNKNOWN"] = "<未知???>"
 L["UNNAMED"] = "（未命名）"
-L["VALIDITY_CONDITION2_DESC"] = "第%d個條件>>>"
 L["VALIDITY_CONDITION_DESC"] = "條件中檢測的圖示是無效的 >>>"
+L["VALIDITY_CONDITION2_DESC"] = "第%d個條件>>>"
 L["VALIDITY_ISINVALID"] = "。"
 L["VALIDITY_META_DESC"] = "整合圖示中檢查的第%d個圖示是無效的 >>>"
 L["WARN_DRMISMATCH"] = [=[警告！你正在檢查遞減的法術來自兩個不同的已知分類。
@@ -1972,5 +1972,4 @@ L["WARN_DRMISMATCH"] = [=[警告！你正在檢查遞減的法術來自兩個不
 檢測到下列你所使用的法術及其分類：]=]
 L["WATER"] = "水之圖騰"
 L["worldboss"] = "首領"
-
 

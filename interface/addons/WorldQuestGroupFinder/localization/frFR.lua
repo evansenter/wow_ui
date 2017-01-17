@@ -1,6 +1,7 @@
 local L = LibStub("AceLocale-3.0"):NewLocale("WorldQuestGroupFinder", "frFR") 
 if not L then return end 
 
+L["WQGF_ADDON_DESCRIPTION"] = "Permet de trouver facilement des groupes pour les expéditions en utilisant l'outil de recherche de groupe."
 L["WQGF_ALREADY_IS_GROUP_FOR_WQ"] = "Vous êtes déjà dans un groupe pour cette expédition."
 L["WQGF_ALREADY_QUEUED_BG"] = "Vous êtes actuellement en file d'attente de champ de bataille. Veuillez quitter la file et réessayer."
 L["WQGF_ALREADY_QUEUED_DF"] = "Vous êtes actuellement en file d'attente de recherche de donjon. Veuillez quitter la file et réessayer."
@@ -39,6 +40,9 @@ L["WQGF_CONFIG_PARTY_NOTIFICATION_TITLE"] = "Notifier le groupe lorsque l'expéd
 L["WQGF_CONFIG_PVP_REALMS_ENABLE"] = "Eviter de rejoindre des groupes sur des serveurs JcJ"
 L["WQGF_CONFIG_PVP_REALMS_HOVER"] = "Evitera de rejoindre des groupes sur des serveurs JcJ (ce paramètre est ignoré sur les personnages de serveurs JcJ)"
 L["WQGF_CONFIG_PVP_REALMS_TITLE"] = "Serveurs JcJ"
+L["WQGF_CONFIG_QUEST_SUPPORT_ENABLE"] = "Activer le support des quêtes classiques"
+L["WQGF_CONFIG_QUEST_SUPPORT_HOVER"] = "Activer ceci ajoutera un bouton permettant de rechercher un groupe pour les quêtes supportées"
+L["WQGF_CONFIG_QUEST_SUPPORT_TITLE"] = "Support des quêtes classiques"
 L["WQGF_CONFIG_SILENT_MODE_ENABLE"] = "Activer le mode silencieux"
 L["WQGF_CONFIG_SILENT_MODE_HOVER"] = "Lorsque le mode silencieux est activé, seuls les messages de WQGF les plus importants sont affichés"
 L["WQGF_CONFIG_SILENT_MODE_TITLE"] = "Mode silencieux"
@@ -64,7 +68,7 @@ L["WQGF_INIT_MSG"] = "Cliquez avec le bouton du milieu de la souris sur une exp�
 L["WQGF_JOINED_WQ_GROUP"] = "Vous avez rejoint le groupe de |c00bfffff%s|c00ffffff's pour |c00bfffff%s|c00ffffff. Amusez-vous bien !"
 L["WQGF_LEADERS_BL_CLEARED"] = "La blacklist des chefs de groupe a été vidée."
 L["WQGF_LEAVE"] = "Quitter"
-L["WQGF_NEW_ENTRY_CREATED"] = "Un nouveau groupe a été créé pour |c00bfffff%s|c00ffffff à |c00bfffff%s|c00ffffff."
+L["WQGF_NEW_ENTRY_CREATED"] = "Un nouveau groupe a été créé pour |c00bfffff%s|c00ffffff."
 L["WQGF_NO"] = "Non"
 L["WQGF_NO_APPLICATIONS_ANSWERED"] = "Aucune de vos inscriptions pour |c00bfffff%s|c00ffffff n'a reçu de réponse dans les temps. Tentative de recherche d'un nouveau groupe..."
 L["WQGF_NO_APPLY_BLACKLIST"] = "Vous n'avez pas été inscrit à %d groupe(s) car leur chef de groupe était dans la blacklist. Vous pouvez utiliser |c00bfffff/wqgf unbl |c00ffffffpour vider la blacklist."
@@ -95,6 +99,6 @@ L["WQGF_WQ_COMPLETE_LEAVE_OR_DELIST_DIALOG"] = [=[Vous avez terminé l'expéditi
 
 Souhaitez-vous quitter le groupe ou le désinscrire de l'outil recherche de groupe ?"]=]
 L["WQGF_WQ_GROUP_APPLY_CANCELLED"] = "Vous avez annulé votre inscription au groupe de |c00bfffff%s|c00ffffff' pour l'expédition |c00bfffff%s|c00ffffff. WQGF n'essaiera plus de rejoindre ce groupe jusqu'à ce que vous ne vous reconnectiez ou que vous vidiez la blacklist des chefs de groupe."
-L["WQGF_WQ_GROUP_DESCRIPTION"] = "En train de faire l'expédition \"%s\" à %s. Automatiquement créé par World Quest Group Finder %s."
+L["WQGF_WQ_GROUP_DESCRIPTION"] = "Automatiquement créé par World Quest Group Finder %s."
 L["WQGF_WRONG_LOCATION_FOR_WQ"] = "Vous n'êtes pas dans la bonne zone pour cette expédition."
 L["WQGF_YES"] = "Oui"

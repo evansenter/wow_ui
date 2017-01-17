@@ -141,10 +141,10 @@ function RCLootCouncil:OnInitialize()
 					x		= 0,
 					point	= "CENTER",
 					scale	= 0.8,
-					bgColor = {0.1, 1, 0, 1},
-					borderColor = {0, 0.8, 0, 0.75},
-					border = "Blizzard Garrison Background 2",
-					background = "Blizzard Dialog Gold",
+					bgColor = {0, 0, 0.2, 1},
+					borderColor = {0.3, 0.3, 0.5, 1},
+					border = "Blizzard Tooltip",
+					background = "Blizzard Tooltip",
 				},
 				lootframe = { -- We want the Loot Frame to get a little lower
 					y = -200,
@@ -182,7 +182,7 @@ function RCLootCouncil:OnInitialize()
 					border = "Blizzard Dialog Gold",
 				},
 			},
-			currentSkin = "legion",
+			currentSkin = "new_blue",
 
 			modules = { -- For storing module specific data
 				['*'] = {
@@ -511,8 +511,8 @@ function RCLootCouncil:ChatCommand(msg)
 		self:Print("Debug Log cleared.")
 --[===[@debug@
 	elseif input == 't' then -- Tester cmd
-		self:Print("Not mldb.buttons:", not self.mldb.buttons)
-		self:Print("#council", #self.council)
+		local meh = self:Serialize(db)
+		self:Print("Db size:", #meh)
 --@end-debug@]===]
 	else
 		-- Check if the input matches anything
@@ -599,6 +599,19 @@ function RCLootCouncil:OnCommReceived(prefix, serializedMsg, distri, sender)
 							self:SendCommand("group", "response", i, self.playerName, {response = "DISABLED"})
 						end
 						return self:Debug("Sent 'DISABLED' response to", sender)
+					end
+
+					-- TODO: v2.2.0 While we don't rely on the cache for normal items, we do for artifact relics.
+					-- I can't get around it until I find out if C_ArtifactUI.GetRelicInfoByItemID() returns a localized result.
+					-- So meanwhile, we'll just delay everything until we've got it cached:
+					local cached = true
+					for ses, v in ipairs(lootTable) do
+						local iName = GetItemInfo(v.link)
+						if not iName then cached = false end
+					end
+					if not cached then
+						self:Debug("Some items wasn't cached, delaying loot by 1 sec")
+						return self:ScheduleTimer("OnCommReceived", 1, prefix, serializedMsg, distri, sender)
 					end
 
 					-- Out of instance support
@@ -797,8 +810,9 @@ end
 
 function RCLootCouncil:Test(num)
 	self:Debug("Test", num)
-	local testItems = {105473,105407,105513,105465,105482,104631,105450,105537,104554,105509,104412,105499,104476,104544,104495,105568,105514,105479,104532,105639,104508,105621,
+	local testItems = {105473,105407,105513,105465,105482,104631,105450,105537,104554,105509,104412,105499,104476,104544,104495,
 		137471,137463,137474,137472,137468, -- Artifact relics
+		143562,143563,143564,143565,143566, -- Tier 19 tokens
 	}
 	local items = {};
 	-- pick "num" random items

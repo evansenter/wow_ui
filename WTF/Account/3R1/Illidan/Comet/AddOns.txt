@@ -123,7 +123,7 @@ CarboniteItems: disabled
 CarboniteNodes: disabled
 CarboniteTransfer: disabled
 ButtonFacade: enabled
-masque_darion: enabled
+masque_darion: disabled
 Masque_Serenity: disabled
 masque_renaitre: disabled
 TipTac: enabled
@@ -210,8 +210,8 @@ DBM-RaidLeadTools: enabled
 Kui_Nameplates: disabled
 Kui_Nameplates_Core_Config: disabled
 Kui_Nameplates_Core: disabled
-MasterPlan: enabled
-MasterPlanA: enabled
+MasterPlan: disabled
+MasterPlanA: disabled
 Pawn: enabled
 SimpleILevel: enabled
 SimpleILevel_Group: enabled
@@ -294,10 +294,13 @@ HandyNotes_LegionTreasures: enabled
 DBM-TrialofValor: enabled
 WorldQuestTracker: enabled
 SubSpec: enabled
-TransmogTokens: enabled
+TransmogTokens: disabled
 RCLootCouncil: enabled
 lib-st: enabled
 Telemancy: enabled
 TellMeWhen: disabled
 TellMeWhen_Options: disabled
-Oilvl: enabled
+Oilvl: disabled
+Simulationcraft: enabled
+WorldQuestGroupFinder: enabled
+ReagentBanker: enabled

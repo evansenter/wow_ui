@@ -41,9 +41,9 @@
 --  Globals/Default Options  --
 -------------------------------
 DBM = {
-	Revision = tonumber(("$Revision: 15569 $"):sub(12, -3)),
-	DisplayVersion = "7.1.5", -- the string that is shown as version
-	ReleaseRevision = 15569 -- the revision of the latest stable version that is available
+	Revision = tonumber(("$Revision: 15639 $"):sub(12, -3)),
+	DisplayVersion = "7.1.7", -- the string that is shown as version
+	ReleaseRevision = 15639 -- the revision of the latest stable version that is available
 }
 DBM.HighestRelease = DBM.ReleaseRevision --Updated if newer version is detected, used by update nags to reflect critical fixes user is missing on boss pulls
 
@@ -420,7 +420,7 @@ local dbmToc = 0
 local UpdateChestTimer
 local breakTimerStart
 
-local fakeBWVersion, fakeBWHash = 29, "d5c4347"
+local fakeBWVersion, fakeBWHash = 31, "df1c3cd"
 local versionQueryString, versionResponseString = "Q^%d^%s", "V^%d^%s"
 
 local enableIcons = true -- set to false when a raid leader or a promoted player has a newer version of DBM
@@ -1059,9 +1059,16 @@ do
 		noDelay = false
 		--Check if voice pack missing
 		local activeVP = self.Options.ChosenVoicePack
-		if (activeVP ~= "None" and not self.VoiceVersions[activeVP]) or (self.VoiceVersions[activeVP] and self.VoiceVersions[activeVP] == 0) then--A voice pack is selected that does not belong
-			self.Options.ChosenVoicePack = "None"--Set ChosenVoicePack back to None
-			self:AddMsg(DBM_CORE_VOICE_MISSING)
+		if activeVP ~= "None" then
+			if not self.VoiceVersions[activeVP] or (self.VoiceVersions[activeVP] and self.VoiceVersions[activeVP] == 0) then--A voice pack is selected that does not belong
+				self.Options.ChosenVoicePack = "None"--Set ChosenVoicePack back to None
+				self:AddMsg(DBM_CORE_VOICE_MISSING)
+			end
+		else
+			if #self.Voices > 1 then
+				--At least one voice pack installed but activeVP set to "None"
+				self:AddMsg(DBM_CORE_VOICE_DISABLED)
+			end
 		end
 		--Check if any of countdown sounds are using missing voice pack
 		local voice1 = self.Options.CountdownVoice
@@ -1070,13 +1077,6 @@ do
 		if voice1 == "None" then--Migrate to new setting
 			self.Options.CountdownVoice = self.DefaultOptions.CountdownVoice
 			self.Options.DontPlayCountdowns = true
-		end
-		if voice1 == "Yike" then--Migration for CN Users
-			if self.VoiceVersions["Yike"] then
-				self.Options.CountdownVoice = "VP:Yike"
-			else
-				self.Options.CountdownVoice = self.DefaultOptions.CountdownVoice--Defaults
-			end
 		end
 		local found1, found2, found3 = false, false, false
 		for i = 1, #self.Counts do
@@ -3596,9 +3596,9 @@ do
 	end
 	local function SecondaryLoadCheck(self)
 		local _, instanceType, difficulty, _, _, _, _, mapID, instanceGroupSize = GetInstanceInfo()
-		self:Debug("Instance Check fired with mapID "..mapID.." and difficulty "..difficulty)
+		self:Debug("Instance Check fired with mapID "..mapID.." and difficulty "..difficulty, 2)
 		if LastInstanceMapID == mapID then
-			self:Debug("No action taken because mapID hasn't changed since last check")
+			self:Debug("No action taken because mapID hasn't changed since last check", 2)
 			return
 		end--ID hasn't changed, don't waste cpu doing anything else (example situation, porting into garrosh phase 4 is a loading screen)
 		LastInstanceMapID = mapID
@@ -3704,7 +3704,7 @@ function DBM:LoadMod(mod, force)
 		self:SetCurrentSpecInfo()
 	end
 	EJ_SetDifficulty(difficultyIndex)--Work around blizzard crash bug where other mods (like Boss) screw with Ej difficulty value, which makes EJ_GetSectionInfo crash the game when called with invalid difficulty index set.
-	self:Debug("LoadAddOn should have fired for "..mod.name)
+	self:Debug("LoadAddOn should have fired for "..mod.name, 2)
 	local loaded, reason = LoadAddOn(mod.modId)
 	if not loaded then
 		if reason then
@@ -5519,15 +5519,10 @@ do
 				--elect icon person
 				if mod.findFastestComputer and not self.Options.DontSetIcons then
 					if self:GetRaidRank() > 0 then
-						local optionName = mod.findFastestComputer[1]
-						if #mod.findFastestComputer == 1 and mod.Options[optionName] then
-							sendSync("IS", UnitGUID("player").."\t"..DBM.Revision.."\t"..optionName)
-						else
-							for i = 1, #mod.findFastestComputer do
-								local option = mod.findFastestComputer[i]
-								if mod.Options[option] then
-									sendSync("IS", UnitGUID("player").."\t"..DBM.Revision.."\t"..option)
-								end
+						for i = 1, #mod.findFastestComputer do
+							local option = mod.findFastestComputer[i]
+							if mod.Options[option] then
+								sendSync("IS", UnitGUID("player").."\t"..DBM.Revision.."\t"..option)
 							end
 						end
 					elseif not IsInGroup() then
@@ -5765,9 +5760,9 @@ do
 					else
 						if difficultyIndex == 8 then--Mythic+/Challenge Mode
 							--TODO, figure out how to get current mythic plus rank, compare to our best rank.
-							local currentMPRank = 0--0 is temp, until know api to call to get actual rank
+							local currentMPRank = C_ChallengeMode.GetActiveKeystoneInfo() or 0
 							local bestMPRank = mod.stats.challengeBestRank or 0
-							if mod.stats.challengeBestRank > currentMPRank then--Don't save stats at all
+							if mod.stats.challengeBestRank > currentMPRank then--Don't save time stats at all
 								--DO nothing
 							elseif mod.stats.challengeBestRank < currentMPRank then--Update best time and best rank, even if best time is lower (for a lower rank)
 								mod.stats.challengeBestRank = currentMPRank--Update best rank
@@ -6701,8 +6696,9 @@ function DBM:RoleCheck(ignoreLoot)
 	local spec = GetSpecialization()
 	if not spec then return end
 	local role = GetSpecializationRole(spec)
+	if not role then return end
 	local specID = GetLootSpecialization()
-	local _, _, _, _, _, lootrole = GetSpecializationInfoByID(specID)
+	local _, _, _, _, lootrole = GetSpecializationInfoByID(specID)
 	if not InCombatLockdown() and ((IsPartyLFG() and (difficultyIndex == 14 or difficultyIndex == 15)) or not IsPartyLFG()) then
 		if UnitGroupRolesAssigned("player") ~= role then
 			UnitSetRole("player", role)
@@ -7989,7 +7985,7 @@ function bossModPrototype:IsTank()
 	if not currentSpecID then
 		DBM:SetCurrentSpecInfo()
 	end
-	local _, _, _, _, _, role = GetSpecializationInfoByID(currentSpecID)
+	local _, _, _, _, role = GetSpecializationInfoByID(currentSpecID)
 	if role == "TANK" then
 		return true
 	else
@@ -8007,7 +8003,7 @@ function bossModPrototype:IsDps(uId)
 	if not currentSpecID then
 		DBM:SetCurrentSpecInfo()
 	end
-	local _, _, _, _, _, role = GetSpecializationInfoByID(currentSpecID)
+	local _, _, _, _, role = GetSpecializationInfoByID(currentSpecID)
 	if role == "DAMAGER" then
 		return true
 	else
@@ -8025,7 +8021,7 @@ function bossModPrototype:IsHealer(uId)
 	if not currentSpecID then
 		DBM:SetCurrentSpecInfo()
 	end
-	local _, _, _, _, _, role = GetSpecializationInfoByID(currentSpecID)
+	local _, _, _, _, role = GetSpecializationInfoByID(currentSpecID)
 	if role == "HEALER" then
 		return true
 	else

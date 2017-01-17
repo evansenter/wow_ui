@@ -1,6 +1,8 @@
 local L = LibStub("AceLocale-3.0"):NewLocale("WorldQuestGroupFinder", "enUS", true) 
 if not L then return end 
 
+L = L or {}
+L["WQGF_ADDON_DESCRIPTION"] = "Makes it easy to find groups for World Quests by using the Group Finder tool."
 L["WQGF_ALREADY_IS_GROUP_FOR_WQ"] = "You already are in a group for this world quest."
 L["WQGF_ALREADY_QUEUED_BG"] = "You are currently queued for a battleground. Please leave the queue and try again."
 L["WQGF_ALREADY_QUEUED_DF"] = "You are currently queued in the Dungeon Finder. Please leave the queue and try again."
@@ -39,6 +41,9 @@ L["WQGF_CONFIG_PARTY_NOTIFICATION_TITLE"] = "Notify the group when the world que
 L["WQGF_CONFIG_PVP_REALMS_ENABLE"] = "Avoid joining groups on PvP realms"
 L["WQGF_CONFIG_PVP_REALMS_HOVER"] = "Will avoid joining groups on PvP realms (this parameter is ignored for characters on PvP realms)"
 L["WQGF_CONFIG_PVP_REALMS_TITLE"] = "PvP realms"
+L["WQGF_CONFIG_QUEST_SUPPORT_ENABLE"] = "Enable support for regular quests"
+L["WQGF_CONFIG_QUEST_SUPPORT_HOVER"] = "Enabling this will display a button to find groups for supported regular quests"
+L["WQGF_CONFIG_QUEST_SUPPORT_TITLE"] = "Regular quests support"
 L["WQGF_CONFIG_SILENT_MODE_ENABLE"] = "Enable silent mode"
 L["WQGF_CONFIG_SILENT_MODE_HOVER"] = "When silent mode is enabled, only the most important WQGF messages are displayed"
 L["WQGF_CONFIG_SILENT_MODE_TITLE"] = "Silent mode"
@@ -64,14 +69,14 @@ L["WQGF_INIT_MSG"] = "Click with the middle mouse button on a world quest in the
 L["WQGF_JOINED_WQ_GROUP"] = "You have joined |c00bfffff%s|c00ffffff's group for |c00bfffff%s|c00ffffff. Have fun!"
 L["WQGF_LEADERS_BL_CLEARED"] = "The leaders blacklist has been cleared."
 L["WQGF_LEAVE"] = "Leave"
-L["WQGF_NEW_ENTRY_CREATED"] = "A new group finder entry has been created for |c00bfffff%s|c00ffffff in |c00bfffff%s|c00ffffff."
+L["WQGF_NEW_ENTRY_CREATED"] = "A new group finder entry has been created for |c00bfffff%s|c00ffffff."
 L["WQGF_NO"] = "No"
 L["WQGF_NO_APPLICATIONS_ANSWERED"] = "None of your applications for |c00bfffff%s|c00ffffff were answered in time. Trying to find new groups..."
 L["WQGF_NO_APPLY_BLACKLIST"] = "You have not been applied to %d group(s) because their leader was blacklisted. You can use |c00bfffff/wqgf unbl |c00ffffffto clear the blacklist."
 L["WQGF_PLAYER_IS_NOT_LEADER"] = "You are not the group leader."
 L["WQGF_RAID_MODE_WARNING"] = "|c0000ffffWARNING:|c00ffffff This group is in raid mode which means you won't be able to complete the world quest. You should ask the leader to switch back to party mode if possible. The group will automatically switch to party mode if you become the leader."
-L["WQGF_SEARCHING_FOR_GROUP"] = "Searching for a group for world quest |c00bfffff%s|c00ffffff..."
 L["WQGF_SEARCH_OR_CREATE_GROUP"] = "Search or Create Group"
+L["WQGF_SEARCHING_FOR_GROUP"] = "Searching for a group for world quest |c00bfffff%s|c00ffffff..."
 L["WQGF_SLASH_COMMANDS_1"] = "|c00bfffffSlash commands (/wqgf):"
 L["WQGF_SLASH_COMMANDS_2"] = "|c00bfffff /wqgf config : Open addon configuration"
 L["WQGF_SLASH_COMMANDS_3"] = "|c00bfffff /wqgf unbl : Clear the leaders blacklist"
@@ -95,6 +100,6 @@ L["WQGF_WQ_COMPLETE_LEAVE_OR_DELIST_DIALOG"] = [=[You have completed the world q
 
 Would you like to leave the group or delist it from the Group Finder?]=]
 L["WQGF_WQ_GROUP_APPLY_CANCELLED"] = "You have cancelled your apply for |c00bfffff%s|c00ffffff's group for |c00bfffff%s|c00ffffff. WQGF will not try to join this group again until you relog or clear the leaders blacklist."
-L["WQGF_WQ_GROUP_DESCRIPTION"] = "Doing the world quest \"%s\" in %s. Automatically created by World Quest Group Finder %s."
+L["WQGF_WQ_GROUP_DESCRIPTION"] = "Automatically created by World Quest Group Finder %s."
 L["WQGF_WRONG_LOCATION_FOR_WQ"] = "You are not in the right location for this world quest."
 L["WQGF_YES"] = "Yes"

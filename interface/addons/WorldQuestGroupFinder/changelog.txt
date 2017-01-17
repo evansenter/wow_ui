@@ -1,4 +1,42 @@
-0.19.5 (0/12/2016)
+0.20.5 (16/01/2016)
+- Added an option to remove support for regular quests, removing the group find button
+- The "Hide init message" option has been removed and its effect is now included in the "Silent mode" option
+- Added additionnal measures to avoid taint
+- Updated blacklist
+
+0.20.4 (14/01/2016)
+- Fix for a rare bug sometimes causing WQGF to apply to incorrect groups
+
+0.20.3 (12/01/2016)
+- Moar updates!
+- The groups browser can now be called by right clicking on the button, and no longer by clicking with CTRL pressed.
+- Taint issues should be fixed (for real this time) (I hope) (please)
+
+0.20.2 (11/01/2016)
+- Fixed joining raid WQs with more than 5 players
+- Remove WQGF tag requirement in group descriptions to join them
+- Reduced waiting times for group search
+
+0.20.1 (11/01/2016)
+- Fixed group search for special WQs (like those at Eye of Azshara)
+- The group finder button should no longer appear while in a group for the current WQ
+- Hopefully, fix for taint issues
+- Error fixes
+
+0.20 (11/01/2016)
+- Updated for 7.1.5, overloading the new in-game WQ group search with all the WQGF features you love!
+- Now compatible with regular quests (experimental)
+- WQGF now displays the blizzard find group button on every compatible quest / world quest. Clicking it will start searching for a group. Clicking it with CTRL down will call the built-in group finding function.
+- Thanks to some new 7.1.5 interface functions other players will now see the name of the World Quest in your group's name in their own language
+- Updated localizations
+- Updated WQ blacklist
+
+0.19.6 (22/12/2016)
+- Added Korean localization by Mieow, NA-Tichondrius
+- Added Traditional Chinese localization by asgard1991
+- Updated WQs blacklist
+
+0.19.5 (13/12/2016)
 - In addition to middle click, it is now possible to use CTRL + left click on the objective tracker and world map to start searching for a group
 - Minor localization fixes
 

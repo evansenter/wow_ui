@@ -5,10 +5,6 @@ MacroToolkitDB = {
 			["backups"] = {
 			},
 		},
-		["Metal - Illidan"] = {
-			["backups"] = {
-			},
-		},
 		["Evan - Illidan"] = {
 			["backups"] = {
 			},
@@ -20,6 +16,14 @@ MacroToolkitDB = {
 				},
 			},
 			["wodupgrade"] = true,
+		},
+		["Metal - Illidan"] = {
+			["backups"] = {
+			},
+		},
+		["Combustion - Illidan"] = {
+			["backups"] = {
+			},
 		},
 	},
 	["global"] = {
@@ -38,12 +42,12 @@ MacroToolkitDB = {
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Pandatal - Illidan"] = "Comet - Illidan",
 		["Evan - Illidan"] = "Comet - Illidan",
-		["Combustion - Illidan"] = "profile",
+		["Combustion - Illidan"] = "Comet - Illidan",
 	},
 	["profiles"] = {
 		["Comet - Illidan"] = {
-			["y"] = 202.733703613281,
-			["x"] = 1445.71081542969,
+			["y"] = 403.289154052734,
+			["x"] = 252.932800292969,
 			["height"] = 425,
 			["override"] = true,
 			["noskin"] = true,

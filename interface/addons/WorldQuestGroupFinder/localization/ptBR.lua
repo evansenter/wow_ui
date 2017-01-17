@@ -1,6 +1,7 @@
 local L = LibStub("AceLocale-3.0"):NewLocale("WorldQuestGroupFinder", "ptBR") 
 if not L then return end 
 
+L["WQGF_ADDON_DESCRIPTION"] = "Torna facil achar grupos para Missões Mundiais usando a ferramenta de Busca de Grupo."
 L["WQGF_ALREADY_IS_GROUP_FOR_WQ"] = "Você ja esta em um grupo para esta Missão."
 L["WQGF_ALREADY_QUEUED_BG"] = "Você esta em fila para Campos de batalha. Por favor saia e tente novamente"
 L["WQGF_ALREADY_QUEUED_DF"] = "Você esta em fila para Masmorras. Por favor saia e tente novamente"
@@ -39,6 +40,9 @@ L["WQGF_CONFIG_PARTY_NOTIFICATION_TITLE"] = "Notifique o grupo quando a Missão 
 L["WQGF_CONFIG_PVP_REALMS_ENABLE"] = "Evite juntar-se a grupos em Reinos PvP"
 L["WQGF_CONFIG_PVP_REALMS_HOVER"] = "Ira evitar juntar-se a grupos em Reinos PvP (esse parâmetro é ignorado para personagens em Reinos PvP)"
 L["WQGF_CONFIG_PVP_REALMS_TITLE"] = "Reinos PvP"
+L["WQGF_CONFIG_QUEST_SUPPORT_ENABLE"] = "Enable support for regular quests"
+L["WQGF_CONFIG_QUEST_SUPPORT_HOVER"] = "Enabling this will display a button to find groups for supported regular quests"
+L["WQGF_CONFIG_QUEST_SUPPORT_TITLE"] = "Regular quests support"
 L["WQGF_CONFIG_SILENT_MODE_ENABLE"] = "Habilitar modo silencioso"
 L["WQGF_CONFIG_SILENT_MODE_HOVER"] = "Quando o modo silencioso esta habilitado, somente as mensagens mais importantes do WQGF aparecerão"
 L["WQGF_CONFIG_SILENT_MODE_TITLE"] = "Modo silencioso"
@@ -64,7 +68,7 @@ L["WQGF_INIT_MSG"] = "Clique com o botão do meio do mouse na Missão Mundial na
 L["WQGF_JOINED_WQ_GROUP"] = "Você entrou no grupo |c00bfffff%s|c00ffffff's para |c00bfffff%s|c00ffffff. Se divirta !"
 L["WQGF_LEADERS_BL_CLEARED"] = "A lista negra de lideres foi limpa."
 L["WQGF_LEAVE"] = "Sair"
-L["WQGF_NEW_ENTRY_CREATED"] = "Um novo grupo foi criada para |c00bfffff%s|c00ffffff em |c00bfffff%s|c00ffffff."
+L["WQGF_NEW_ENTRY_CREATED"] = "Um novo grupo foi criada para |c00bfffff%s|c00ffffff."
 L["WQGF_NO"] = "Não"
 L["WQGF_NO_APPLICATIONS_ANSWERED"] = "Nenhum de seus convites para |c00bfffff%s|c00ffffff respondeu a tempo. Tentando achar um novo grupo..."
 L["WQGF_NO_APPLY_BLACKLIST"] = "Você não foi convidade para o grupo %d pois o lider esta na Lista Negra  |c00bfffff/wqgf unbl |c00ffffffpara limpar a Lista."
@@ -95,6 +99,6 @@ L["WQGF_WQ_COMPLETE_LEAVE_OR_DELIST_DIALOG"] = [=[Você completou essa Missão M
 
 Gostaria de sair do grupo ou retira-lo da Busca ?]=]
 L["WQGF_WQ_GROUP_APPLY_CANCELLED"] = "Você cancelou seu convite para o grupo |c00bfffff%s|c00ffffff' para |c00bfffff%s|c00ffffff. WQGF não ira tentar se juntar a este grupo novamente a´te você relogar ou limpar a Lista Negra."
-L["WQGF_WQ_GROUP_DESCRIPTION"] = "Fazendo a Missão Mundial \"%s\" em %s. Criado automaticamente por World Quest Group Finder %s."
+L["WQGF_WQ_GROUP_DESCRIPTION"] = "Criado automaticamente por World Quest Group Finder %s."
 L["WQGF_WRONG_LOCATION_FOR_WQ"] = "Você não esta no loca certo para esta Missão Mundial."
 L["WQGF_YES"] = "Sim"

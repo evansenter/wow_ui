@@ -1,0 +1,35 @@
+VER 3 0100000000000052 "Combustion" "INV_MISC_QUESTIONMARK"
+#showtooltip Combustion
+/cast Berserking
+/cast Combustion
+END
+VER 3 0100000000000055 "FB" "INV_Misc_QuestionMark"
+#showtooltip Fire Blast
+/castsequence reset=1 Fire Blast, null
+END
+VER 3 0100000000000046 "Ice Block" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/stopcasting
+/cancelaura Ice Block
+/cast Ice Block
+END
+VER 3 0100000000000050 "Portals" "SPELL_ARCANE_PORTAL_VALEOFBLOSSOMS"
+/magenuggets ports
+END
+VER 3 0100000000000047 "Slow Fall" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@mouseover,nodead,help][nodead,help][@player] Slow Fall
+END
+VER 3 0100000000000044 "Spellsteal" "INV_Misc_QuestionMark"
+#showtooltip
+/stopcasting
+/cast [@focus,exists][@target] Spellsteal
+END
+VER 3 0100000000000053 "Tier 3" "INV_Misc_QuestionMark"
+#showtooltip
+/use [talent:3/1]Mirror Image;[talent:3/2]Rune of Power;[talent:3/3]Incanter's Flow
+END
+VER 3 0100000000000054 "Tier 7" "INV_Misc_QuestionMark"
+#showtooltip
+/use [talent:7/1]Kindling;[talent:7/2]Cinderstorm;[talent:7/3]Meteor
+END

@@ -1,4 +1,4 @@
-﻿-- --------------------
+-- --------------------
 -- TellMeWhen
 -- Originally by Nephthys of Hyjal <lieandswell@yahoo.com>
 
@@ -160,6 +160,63 @@ ConditionCategory:RegisterCondition(26, "CHI", {
 	events = function(ConditionObject, c)
 		return
 			ConditionObject:GenerateNormalEventString("UNIT_POWER", "player", "CHI")
+	end,
+	hidden = pclass ~= "MONK",
+})
+ConditionCategory:RegisterCondition(26.1, "STAGGER", {
+	text = GetSpellInfo(115069) .. " - " .. L["CONDITIONPANEL_PERCENTOFMAXHP"],
+	percent = true,
+	formatter = TMW.C.Formatter.PERCENT,
+	min = 0,
+	max = 100,
+	unit = PLAYER,
+	icon = 611419,
+	tcoords = CNDT.COMMON.standardtcoords,
+	Env = {
+		UnitStagger = UnitStagger,
+	},
+	funcstr = [[UnitStagger("player") / (UnitHealthMax("player")+epsilon) c.Operator c.Level]],
+	events = function(ConditionObject, c)
+		return
+			ConditionObject:GenerateNormalEventString("UNIT_ABSORB_AMOUNT_CHANGED", "player"),
+			ConditionObject:GenerateNormalEventString("UNIT_MAXHEALTH", "player")
+	end,
+	hidden = pclass ~= "MONK",
+})
+ConditionCategory:RegisterCondition(26.15, "STAGGER_CURPCT", {
+	text = GetSpellInfo(115069) .. " - " .. L["CONDITIONPANEL_PERCENTOFCURHP"],
+	percent = true,
+	formatter = TMW.C.Formatter.PERCENT,
+	min = 0,
+	max = 100,
+	unit = PLAYER,
+	icon = 611419,
+	tcoords = CNDT.COMMON.standardtcoords,
+	Env = {
+		UnitStagger = UnitStagger,
+	},
+	funcstr = [[UnitStagger("player") / (UnitHealth("player")+epsilon) c.Operator c.Level]],
+	events = function(ConditionObject, c)
+		return
+			ConditionObject:GenerateNormalEventString("UNIT_ABSORB_AMOUNT_CHANGED", "player"),
+			ConditionObject:GenerateNormalEventString("UNIT_HEALTH_FREQUENT", "player")
+	end,
+	hidden = pclass ~= "MONK",
+})
+ConditionCategory:RegisterCondition(26.2, "STAGGER_ABS", {
+	text = GetSpellInfo(115069) .. " - " .. L["CONDITIONPANEL_ABSOLUTE"],
+	min = 0,
+	range = 1000000,
+	unit = PLAYER,
+	icon = 611419,
+	tcoords = CNDT.COMMON.standardtcoords,
+	Env = {
+		UnitStagger = UnitStagger,
+	},
+	funcstr = [[UnitStagger("player") c.Operator c.Level]],
+	events = function(ConditionObject, c)
+		return
+			ConditionObject:GenerateNormalEventString("UNIT_ABSORB_AMOUNT_CHANGED", "player")
 	end,
 	hidden = pclass ~= "MONK",
 })

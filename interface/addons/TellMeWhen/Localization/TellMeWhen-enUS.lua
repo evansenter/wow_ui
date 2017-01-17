@@ -1,4 +1,4 @@
-﻿--GAME_LOCALE = UnitName("player") == "Cybeloras" and "zhCN" --FOR TESTING
+--GAME_LOCALE = UnitName("player") == "Cybeloras" and "zhCN" --FOR TESTING
 local L = LibStub("AceLocale-3.0"):NewLocale("TellMeWhen", "enUS", true)
 
 -- WARNING! DO NOT EXPECT TO FIND ANY DECENT LEVEL OF ORGANIZATION IN THIS FILE, BECAUSE IT SIMPLY DOES NOT EXIST. MOVE ALONG.
@@ -1283,6 +1283,8 @@ L["CONDITIONPANEL_ANDOR"] = "And / Or"
 L["CONDITIONPANEL_ANDOR_DESC"] = "|cff7fffffClick|r to toggle between logical operators AND and OR"
 L["CONDITIONPANEL_POWER"] = "Primary Resource"
 L["CONDITIONPANEL_PERCENT"] = "Percent"
+L["CONDITIONPANEL_PERCENTOFMAXHP"] = "Percent of Max Health"
+L["CONDITIONPANEL_PERCENTOFCURHP"] = "Percent of Current Health"
 L["CONDITIONPANEL_ABSOLUTE"] = "Current"
 L["CONDITIONPANEL_MAX"] = "Max"
 L["CONDITIONPANEL_COMBO"] = "Combo Points"
@@ -1374,7 +1376,9 @@ Players in melee range pull aggro at 110%
 Players at range pull aggro at 130%
 Players with aggro have a raw threat percentage of 255%]]
 L["CONDITIONPANEL_CASTCOUNT"] = "Spell Cast Count"
-L["CONDITIONPANEL_CASTCOUNT_DESC"] = [[Checks the number of times that a unit has cast a certain spell.]]
+L["CONDITIONPANEL_CASTCOUNT_DESC"] = [[Checks the number of times that a unit has cast a certain spell.
+
+If you would like more advanced functionality, use a Counter notification with appropriate triggers, and then check that counter in your condition instead.]]
 L["CONDITIONPANEL_CASTTOMATCH"] = "Spell to Match"
 L["CONDITIONPANEL_CASTTOMATCH_DESC"] = [[Enter a spell name here to make the condition only pass if the spell cast matches it exactly.
 

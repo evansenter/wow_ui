@@ -1053,7 +1053,7 @@ function OilvlCheckFrame()
 				oilvlframedata.spec[i] = td.spec[i];
 				oilvlframedata.gear[i] = td.gear[i];
 				OilvlSetMouseoverTooltips(_G["OILVLRAIDFRAME"..i], "raid"..i);
-				_G["Oilvltier"..i]:SetText(oilvlCheckHFCTierBonusSet(i))
+				_G["Oilvltier"..i]:SetText(oilvlCheckTierBonusSet(i))
 				_G["OilvlUpgrade"..i]:SetText(oilvlCheckUpgrade(i))
 			end
 		elseif IsInGroup(LE_PARTY_CATEGORY_INSTANCE) then
@@ -1100,7 +1100,7 @@ function OilvlCheckFrame()
 				OILVLRAIDFRAME1:Show();
 				OilvlSetRole(1, UnitGroupRolesAssigned("player"));
 				OilvlSetMouseoverTooltips(OILVLRAIDFRAME1, "player");
-				Oilvltier1:SetText(oilvlCheckHFCTierBonusSet(1))
+				Oilvltier1:SetText(oilvlCheckTierBonusSet(1))
 				OilvlUpgrade1:SetText(oilvlCheckUpgrade(1))
 				if UnitIsGroupLeader("player") then	OilvlSetRank(1, 2);	else OilvlSetRank(1, 0); end
 				for i = 2, (rnum+1) do
@@ -1125,7 +1125,7 @@ function OilvlCheckFrame()
 					oilvlframedata.spec[i] = td.spec[i];
 					oilvlframedata.gear[i] = td.gear[i];
 					OilvlSetMouseoverTooltips(_G["OILVLRAIDFRAME"..i], "party"..(i-1));
-					_G["Oilvltier"..i]:SetText(oilvlCheckHFCTierBonusSet(i))
+					_G["Oilvltier"..i]:SetText(oilvlCheckTierBonusSet(i))
 					_G["OilvlUpgrade"..i]:SetText(oilvlCheckUpgrade(i))
 				end
 				OIVLFRAME:SetWidth(400);
@@ -1174,7 +1174,7 @@ function OilvlCheckFrame()
 				OILVLRAIDFRAME1:Show();
 				OilvlSetRole(1, UnitGroupRolesAssigned("player"));
 				OilvlSetMouseoverTooltips(OILVLRAIDFRAME1, "player");
-				Oilvltier1:SetText(oilvlCheckHFCTierBonusSet(1))
+				Oilvltier1:SetText(oilvlCheckTierBonusSet(1))
 				OilvlUpgrade1:SetText(oilvlCheckUpgrade(1))
 				if UnitIsGroupLeader("player") then	OilvlSetRank(1, 2);	else OilvlSetRank(1, 0); end
 				for i = 2, (rnum+1) do
@@ -1199,7 +1199,7 @@ function OilvlCheckFrame()
 					oilvlframedata.spec[i] = td.spec[i];
 					oilvlframedata.gear[i] = td.gear[i];
 					OilvlSetMouseoverTooltips(_G["OILVLRAIDFRAME"..i], "party"..(i-1));
-					_G["Oilvltier"..i]:SetText(oilvlCheckHFCTierBonusSet(i))
+					_G["Oilvltier"..i]:SetText(oilvlCheckTierBonusSet(i))
 					_G["OilvlUpgrade"..i]:SetText(oilvlCheckUpgrade(i))
 				end
 				OIVLFRAME:SetWidth(400);
@@ -1251,7 +1251,7 @@ function OilvlCheckFrame()
 			OilvlSetRank(1, 0);
 			OilvlSetRole(1, UnitGroupRolesAssigned("player"));
 			OilvlSetMouseoverTooltips(OILVLRAIDFRAME1, "player");
-			Oilvltier1:SetText(oilvlCheckHFCTierBonusSet(1))
+			Oilvltier1:SetText(oilvlCheckTierBonusSet(1))
 			OilvlUpgrade1:SetText(oilvlCheckUpgrade(1))
 		end	
 	end
@@ -3207,10 +3207,12 @@ function OGetRaidProgression2(RaidName, OSTAT, NumRaidBosses)
 		end
 	end
 
-	-- check Achivements for 2 raids
+	-- check Achivements for 3 raids
 	local RaidAchiv = {}
-	RaidAchiv[TNname],RaidAchiv[TENname]={},{}
-	SaveAOTCCE(RaidAchiv[TNname],11195,11192) SaveAOTCCE(RaidAchiv[TENname],11194,11191)
+	RaidAchiv[TNname],RaidAchiv[TENname], RaidAchiv[TOVname]={},{},{}
+	SaveAOTCCE(RaidAchiv[TNname],11195,11192) 
+	SaveAOTCCE(RaidAchiv[TENname],11194,11191) 
+	SaveAOTCCE(RaidAchiv[TOVname],11581,11580)
 	
 	local oilvltooltiptexts = {}
 	for i = 1, OilvlTooltip:NumLines() do
@@ -3652,9 +3654,10 @@ function OGetRaidProgression3(RaidName, OSTAT, NumRaidBosses)
 	end
 
 	local RaidAchiv = {}
-	RaidAchiv[TNname],RaidAchiv[TENname]={},{}
+	RaidAchiv[TNname],RaidAchiv[TENname], RaidAchiv[TOVname]={},{},{}
 	SaveAOTCCE(RaidAchiv[TNname],11195,11192) 
-	SaveAOTCCE(RaidAchiv[TENname],11194,11191)
+	SaveAOTCCE(RaidAchiv[TENname],11194,11191) 
+	SaveAOTCCE(RaidAchiv[TOVname],11581,11580)
 
 	local oilvltooltiptexts = {}
 	for i = 1, OilvlTooltip:NumLines() do
@@ -4049,36 +4052,27 @@ function otooltip5func()
 	otooltip5:Show();
 end
 
-local tiergears = {HELM,SHOULDER,CHEST,HANDS,LEGS}
-local tierslots = {INVTYPE_HEAD,INVTYPE_SHOULDER,INVTYPE_CHEST,INVTYPE_HAND,INVTYPE_LEGS}
-local hfctierID = {124155, 124161, 124166, 124172, 124178, 124319, 124329, 124334, 124340, 124346, 124284, 124292, 124296, 124301, 124307, 124247, 124256, 124262, 124268, 124273, 124156, 124162, 124167, 124173, 124179, 124317, 124327, 124332, 124338, 124344, 124293, 124297, 124302, 124303, 124308, 124248, 124257, 124263, 124269, 124274, 124246, 124255, 124261, 124267, 124272, 124154, 124160, 124165, 124171, 124177, 124318, 124328, 124333, 124339, 124345}
-local function checkhfctierID(id) for i = 1, #hfctierID do if hfctierID[i] == id then return true end end return false end
-local function checkhfcNtier(slot) 
-	if slot then if 	(slot[1] == 695 
-					or	slot[1] == 700
-					or	slot[1] == 705 
-					or	slot[1] == 701 
-					or	slot[1] == 706
-					or	slot[1] == 711) 					
-	and checkhfctierID(slot[8]) then return true else return false end end 
+local tiergears = {HELM,SHOULDER,CHEST,HANDS,LEGS,BACK}
+local tierslots = {INVTYPE_HEAD,INVTYPE_SHOULDER,INVTYPE_CHEST,INVTYPE_HAND,INVTYPE_LEGS,INVTYPE_CLOAK}
+local function checktierID(id) if id >= 138309 and id <= 138380 then return true else return false end end
+
+local function checkNtier(slot) 
+	if slot then if 	(slot[1] == 875 
+					or	slot[1] == 880
+					or	slot[1] == 885) 					
+	and checktierID(slot[8]) then return true else return false end end 
 end
-local function checkhfcHtier(slot) 
-	if slot then if 	(slot[1] == 710 
-					or	slot[1] == 715
-					or	slot[1] == 720 
-					or	slot[1] == 716 
-					or	slot[1] == 721
-					or	slot[1] == 726)
-	and checkhfctierID(slot[8]) then return true else return false end end 
+local function checkHtier(slot) 
+	if slot then if 	(slot[1] == 890 
+					or	slot[1] == 895
+					or	slot[1] == 900)
+	and checktierID(slot[8]) then return true else return false end end 
 end
-local function checkhfcMtier(slot) 
-	if slot then if 	(slot[1] == 725
-					or	slot[1] == 730
-					or	slot[1] == 735 
-					or	slot[1] == 731 
-					or	slot[1] == 736
-					or	slot[1] == 741)
-	and checkhfctierID(slot[8]) then return true else return false end end 
+local function checkMtier(slot) 
+	if slot then if 	(slot[1] == 905
+					or	slot[1] == 910
+					or	slot[1] == 915)
+	and checktierID(slot[8]) then return true else return false end end 
 end
 
 local function otooltip6sort(method)
@@ -4265,10 +4259,10 @@ function otooltip6func()
 				end
 			end
 			if pvpsw then
-				oicomp[compi] = {id = m, name = ooname, role = oilvlframedata.role[m], ilvl = oilvlframedata.ilvl[m][1], sw = oilvlframedata.ilvl[m][2], nset = oilvlCheckHFCTierBonusSet(m)}
+				oicomp[compi] = {id = m, name = ooname, role = oilvlframedata.role[m], ilvl = oilvlframedata.ilvl[m][1], sw = oilvlframedata.ilvl[m][2], nset = oilvlCheckTierBonusSet(m)}
 				for ot = 1, #ot6gear do oicomp[compi][ot6gear[ot]] = CheckGearAvail(m,ot6gear[ot],7) end
 			else
-				oicomp[compi] = {id = m, name = ooname, role = oilvlframedata.role[m], ilvl = oilvlframedata.ilvl[m][1], sw = oilvlframedata.ilvl[m][2], nset = oilvlCheckHFCTierBonusSet(m)}
+				oicomp[compi] = {id = m, name = ooname, role = oilvlframedata.role[m], ilvl = oilvlframedata.ilvl[m][1], sw = oilvlframedata.ilvl[m][2], nset = oilvlCheckTierBonusSet(m)}
 				for ot = 1, #ot6gear do oicomp[compi][ot6gear[ot]] = CheckGearAvail(m,ot6gear[ot],1) end
 			end
 		end
@@ -4406,11 +4400,11 @@ function otooltip6func()
 					else
 						otooltip6:SetCell(line,ot, oicomp[m][ot6gear[ot-5]][3]..oicomp[m][ot6gear[ot-5]][1].." |cFF00FF00"..(oicomp[m][ot6gear[ot-5]][4] or ""))
 						if ot >= 6 and ot <= 10 then
-							if checkhfcMtier(oilvlframedata.gear[oicomp[m].id][ot6gear[ot-5]]) then
+							if checkMtier(oilvlframedata.gear[oicomp[m].id][ot6gear[ot-5]]) then
 								otooltip6:SetCellColor(line,ot,255/255, 127/255, 243/255,1)
-							elseif checkhfcHtier(oilvlframedata.gear[oicomp[m].id][ot6gear[ot-5]]) then
+							elseif checkHtier(oilvlframedata.gear[oicomp[m].id][ot6gear[ot-5]]) then
 								otooltip6:SetCellColor(line,ot,25/255, 127.5/255, 255/255,1)
-							elseif checkhfcNtier(oilvlframedata.gear[oicomp[m].id][ot6gear[ot-5]]) then
+							elseif checkNtier(oilvlframedata.gear[oicomp[m].id][ot6gear[ot-5]]) then
 								otooltip6:SetCellColor(line,ot,0,1,0,1)
 							else
 								otooltip6:SetCellColor(line,ot,0,0,0,0)
@@ -5163,7 +5157,7 @@ function oilvlSaveItemLevel(n)
 					local temp = GetInspectSpecialization(OILVL_Unit);
 					if temp ~= nil then oilvlframedata.spec[OTCurrent3] = temp;	else oilvlframedata.spec[OTCurrent3] = ""; end
 				end
-				_G["Oilvltier"..OTCurrent3]:SetText(oilvlCheckHFCTierBonusSet(OTCurrent3))
+				_G["Oilvltier"..OTCurrent3]:SetText(oilvlCheckTierBonusSet(OTCurrent3))
 				_G["OilvlUpgrade"..OTCurrent3]:SetText(oilvlCheckUpgrade(OTCurrent3))
 				oilvlUpdateLDBTooltip();
 				OTCurrent = "";
@@ -5946,6 +5940,19 @@ GameTooltip:HookScript("OnTooltipSetUnit", function()
 	end 
 end); 
 
+BINDING_HEADER_OiLvL = "O Item Level"
+BINDING_NAME_OILVL_RAID_PROGRESSION = L["Raid Progression"]
+
+function OMouseover2()
+	if not UnitAffectingCombat("player") and cfg.oilvlms and UnitExists("target") then
+		local oname, _ = GameTooltip:GetUnit()
+		if oname ~= nil then oname = oname:gsub("%-.+", ""); else return -1; end
+		if  oname == GetUnitName("target",""):gsub("%-.+", "") then
+			OMouseover();
+		end
+	end 
+end
+
 function oilvlaltc()
 	lootslotSW = true;
 	for i = 1, LOOTFRAME_NUMBUTTONS do
@@ -6125,11 +6132,11 @@ function oilvlchecktiers()
 	return vanquisher, protector, conqueror;
 end
 
-function oilvlCheckHFCTierBonusSet(i)
+function oilvlCheckTierBonusSet(i)
 	local set=0;
 	for j = 1, #tiergears do
 		if oilvlframedata.gear[i] and tiergears[j] and oilvlframedata.gear[i][tiergears[j]] then 
-			if checkhfctierID(oilvlframedata.gear[i][tiergears[j]][8]) then set = set + 1 end 
+			if checktierID(oilvlframedata.gear[i][tiergears[j]][8]) then set = set + 1 end 
 		end
 	end
 	if set >=4 then return 4 elseif set >=2 then return 2 else	return "" end
@@ -6147,6 +6154,7 @@ function oilvlCheckUpgrade(i)
 	if n == 0 then return "" end
 	return upgrade.."/"..n;
 end
+
 
 
 SLASH_OILVL_OIT1 = "/oit"

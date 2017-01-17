@@ -1,11 +1,12 @@
 local L = LibStub("AceLocale-3.0"):NewLocale("WorldQuestGroupFinder", "deDE") 
 if not L then return end 
 
+L["WQGF_ADDON_DESCRIPTION"] = "Macht es dir einfach Gruppen für Weltquests mit dem Gruppenfinder zu finden."
 L["WQGF_ALREADY_IS_GROUP_FOR_WQ"] = "Du bist bereits in einer Gruppe für diese Weltquest."
 L["WQGF_ALREADY_QUEUED_BG"] = "Du bist momentan in der Warteschlange für ein Schlachtfeld. Bitte verlasse die Warteschlange und versuche es erneut."
 L["WQGF_ALREADY_QUEUED_DF"] = "Du bist momentan in der Warteschlange des Dungeonbrowsers. Bitte verlasse die Warteschlange und versuche es erneut."
 L["WQGF_ALREADY_QUEUED_RF"] = "Du bist momentan in der Warteschlange des Schlachtzugsbrowsers. Bitte verlasse die Warteschlange und versuche es erneut."
-L["WQGF_APPLIED_TO_GROUPS"] = "Du wurst bei |c00bfffff%d|c00ffffff Gruppe(n) für die Weltquest |c00bfffff%s|c00ffffff angemeldet."
+L["WQGF_APPLIED_TO_GROUPS"] = "Du wirst bei |c00bfffff%d|c00ffffff Gruppe(n) für die Weltquest |c00bfffff%s|c00ffffff angemeldet."
 L["WQGF_AUTO_LEAVING_DIALOG"] = [=[Du hast die Weltquest abgeschlossen und verlässt die Gruppe in %d Sekunden.
 
 Sag auf Wiedersehen!]=]
@@ -39,6 +40,9 @@ L["WQGF_CONFIG_PARTY_NOTIFICATION_TITLE"] = "Die Gruppe benachrichtigen, wenn di
 L["WQGF_CONFIG_PVP_REALMS_ENABLE"] = "Den Beitritt in Gruppen auf PvP-Realms vermeiden"
 L["WQGF_CONFIG_PVP_REALMS_HOVER"] = "Vermeidet den Beitritt in Gruppe auf PvP-Realms (dieser Parameter wird bei Charakteren, die sich auf PvP-Realms befinden, ignoriert)"
 L["WQGF_CONFIG_PVP_REALMS_TITLE"] = "PvP-Realms"
+L["WQGF_CONFIG_QUEST_SUPPORT_ENABLE"] = "Enable support for regular quests"
+L["WQGF_CONFIG_QUEST_SUPPORT_HOVER"] = "Enabling this will display a button to find groups for supported regular quests"
+L["WQGF_CONFIG_QUEST_SUPPORT_TITLE"] = "Regular quests support"
 L["WQGF_CONFIG_SILENT_MODE_ENABLE"] = "Lautlosmodus aktivieren"
 L["WQGF_CONFIG_SILENT_MODE_HOVER"] = "Wenn der Lautlosmodus aktiviert ist, werden nur die wichtigsten WQGF-Nachrichten angezeigt"
 L["WQGF_CONFIG_SILENT_MODE_TITLE"] = "Lautlosmodus"
@@ -64,7 +68,7 @@ L["WQGF_INIT_MSG"] = "Klicke mit der mittleren Maustaste auf eine Weltquest in d
 L["WQGF_JOINED_WQ_GROUP"] = "Du bist der Gruppe von |c00bfffff%s|c00ffffff für |c00bfffff%s|c00ffffff beigetreten. Viel Spaß!"
 L["WQGF_LEADERS_BL_CLEARED"] = "Die Ignorierliste für Anführer wurde geleert."
 L["WQGF_LEAVE"] = "Verlassen"
-L["WQGF_NEW_ENTRY_CREATED"] = "Ein neuer Eintrag im Dungeonbrowser wurde für |c00bfffff%s|c00ffffff in |c00bfffff%s|c00ffffff erstellt."
+L["WQGF_NEW_ENTRY_CREATED"] = "Ein neuer Eintrag im Dungeonbrowser wurde für |c00bfffff%s|c00ffffff erstellt."
 L["WQGF_NO"] = "Nein"
 L["WQGF_NO_APPLICATIONS_ANSWERED"] = "Keine deiner Anmeldungen für |c00bfffff%s|c00ffffff wurden rechtzeitig beantwortet. Suche nach neuen Gruppen..."
 L["WQGF_NO_APPLY_BLACKLIST"] = "Du wurdest nicht bei %d Gruppe(n) angemeldet, weil deren Anführer auf der Ignorierliste steht. Du kannst mit |c00bfffff/wqgf unbl |c00ffffffdie Ignorierliste leeren."
@@ -95,6 +99,6 @@ L["WQGF_WQ_COMPLETE_LEAVE_OR_DELIST_DIALOG"] = [=[Du hast die Weltquest abgeschl
 
 Willst du die Gruppe verlassen oder sie vom Dungeonbrowser abmelden?]=]
 L["WQGF_WQ_GROUP_APPLY_CANCELLED"] = "Du hast deine Anmeldung für die Gruppe von |c00bfffff%s|c00ffffff für |c00bfffff%s|c00ffffff abgebrochen. WQGF wird nicht versuchen, dieser Gruppe erneut beizutreten, bis du dich erneut in das Spiel einloggst oder die Ignorierliste für Anführer leerst."
-L["WQGF_WQ_GROUP_DESCRIPTION"] = "Diese Gruppe macht die Weltquest \"%s\" in %s. Automatisch erstellt durch World Quest Group Finder %s."
+L["WQGF_WQ_GROUP_DESCRIPTION"] = "Automatisch erstellt durch World Quest Group Finder %s."
 L["WQGF_WRONG_LOCATION_FOR_WQ"] = "Du bist nicht am richtigen Ort für diese Weltquest"
 L["WQGF_YES"] = "Ja"

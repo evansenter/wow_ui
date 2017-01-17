@@ -118,20 +118,20 @@ Quartz3DB = {
 					["showfriendly"] = false,
 					["showtarget"] = false,
 					["y"] = 626.666809082031,
-					["font"] = "ABF",
-					["texture"] = "BantoBar",
 					["x"] = 960.555358886719,
+					["texture"] = "BantoBar",
+					["font"] = "ABF",
 					["alpha"] = 0.75,
 				},
 				["Pandatal - Illidan"] = {
 					["y"] = 415,
 					["h"] = 20,
-					["texture"] = "BantoBar",
+					["noInterruptChangeColor"] = true,
 					["x"] = 857.000183105469,
 					["showfriendly"] = false,
 					["showtarget"] = false,
 					["font"] = "ABF",
-					["noInterruptChangeColor"] = true,
+					["texture"] = "BantoBar",
 				},
 				["Evan - Illidan"] = {
 					["x"] = 860.000061035156,
@@ -170,12 +170,12 @@ Quartz3DB = {
 				["Pandatal - Illidan"] = {
 					["y"] = 445,
 					["h"] = 20,
-					["iconposition"] = "left",
+					["noInterruptChangeColor"] = true,
 					["x"] = 857,
 					["texture"] = "BantoBar",
 					["noInterruptChangeBorder"] = false,
 					["font"] = "ABF",
-					["noInterruptChangeColor"] = true,
+					["iconposition"] = "left",
 				},
 				["Evan - Illidan"] = {
 					["x"] = 860.000061035156,
@@ -195,9 +195,9 @@ Quartz3DB = {
 	["profileKeys"] = {
 		["Venala - Cho'gall"] = "Default",
 		["Cometron - Illidan"] = "Comet - Illidan",
-		["Combustion - Illidan"] = "Pandatal - Illidan",
+		["Combustion - Illidan"] = "Comet - Illidan",
 		["Metal - Illidan"] = "Comet - Illidan",
-		["Pandatal - Illidan"] = "Comet - Illidan",
+		["Centromere - Dark Iron"] = "Pandatal - Illidan",
 		["Plane - Illidan"] = "Pandatal - Illidan",
 		["Colton - Dark Iron"] = "Default",
 		["Natalan - Dark Iron"] = "Default",
@@ -206,7 +206,7 @@ Quartz3DB = {
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Natal - Illidan"] = "Pandatal - Illidan",
 		["Evan - Illidan"] = "Comet - Illidan",
-		["Centromere - Dark Iron"] = "Pandatal - Illidan",
+		["Pandatal - Illidan"] = "Comet - Illidan",
 	},
 	["profiles"] = {
 		["Illidan"] = {
@@ -231,13 +231,13 @@ Quartz3DB = {
 				nil, -- [3]
 				1, -- [4]
 			},
+			["borderalpha"] = 0.25,
 			["completecolor"] = {
 				0, -- [1]
 				1, -- [2]
 				0.588235294117647, -- [3]
 				1, -- [4]
 			},
-			["borderalpha"] = 0.25,
 			["modules"] = {
 				["Tradeskill"] = false,
 				["Buff"] = false,
@@ -249,14 +249,14 @@ Quartz3DB = {
 				["Mirror"] = false,
 				["Latency"] = false,
 			},
+			["backgroundalpha"] = 0.75,
+			["casttimeprecision"] = 2,
 			["castingcolor"] = {
 				nil, -- [1]
 				0.850980392156863, -- [2]
 				0.101960784313725, -- [3]
 				1, -- [4]
 			},
-			["casttimeprecision"] = 2,
-			["backgroundalpha"] = 0.75,
 		},
 		["Pandatal - Illidan"] = {
 			["channelingcolor"] = {

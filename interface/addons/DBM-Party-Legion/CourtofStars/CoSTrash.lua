@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod("CoSTrash", "DBM-Party-Legion", 7)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 15538 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 15624 $"):sub(12, -3))
 --mod:SetModelID(47785)
 mod:SetZone()
 
@@ -48,10 +48,10 @@ mod:AddBoolOption("SpyHelper", true)
 function mod:SPELL_CAST_START(args)
 	if not self.Options.Enabled then return end
 	local spellId = args.spellId
-	if spellId == 209027 then
+	if spellId == 209027 and self:AntiSpam(2, 1) then
 		specWarnQuellingStrike:Show()
 		voiceQuellingStrike:Play("shockwave")
-	elseif spellId == 212031 then
+	elseif spellId == 212031 and self:AntiSpam(2, 2) then
 		specWarnChargedBlast:Show()
 		voiceChargedBlast:Play("shockwave")
 	elseif spellId == 209485 and self:CheckInterruptFilter(args.sourceGUID) then
@@ -98,6 +98,22 @@ function mod:SPELL_AURA_APPLIED(args)
 end
 
 do
+	local hintTranslations = {
+		["gloves"] = L.Gloves,
+		["no gloves"] = L.NoGloves,
+		["cape"] = L.Cape,
+		["no cape"] = L.Nocape,
+		["light vest"] = L.LightVest,
+		["dark vest"] = L.DarkVest,
+		["female"] = L.Female,
+		["male"] = L.Male,
+		["short sleeves"] = L.ShortSleeve,
+		["long sleeves"] = L.LongSleeve,
+		["potions"] = L.Potions,
+		["no potion"] = L.NoPotions,
+		["book"] = L.Book,
+		["pouch"] = L.Pouch
+	}
 	local hints = {}
 	local clues = {
 		[L.Gloves1] = "gloves",
@@ -135,19 +151,20 @@ do
 		[L.Male3] = "male",
 		[L.Male4] = "male",
 		
-		[L.ShortSleave1] = "short sleeves",
-		[L.ShortSleave2] = "short sleeves",
-		[L.ShortSleave3] = "short sleeves",
-		[L.ShortSleave4] = "short sleeves",
+		[L.ShortSleeve1] = "short sleeves",
+		[L.ShortSleeve2] = "short sleeves",
+		[L.ShortSleeve3] = "short sleeves",
+		[L.ShortSleeve4] = "short sleeves",
 		
-		[L.LongSleave1] = "long sleeves",
-		[L.LongSleave2] = "long sleeves",
-		[L.LongSleave3] = "long sleeves",
-		[L.LongSleave4] = "long sleeves",
+		[L.LongSleeve1] = "long sleeves",
+		[L.LongSleeve2] = "long sleeves",
+		[L.LongSleeve3] = "long sleeves",
+		[L.LongSleeve4] = "long sleeves",
 		
 		[L.Potions1] = "potions",
 		[L.Potions2] = "potions",
 		[L.Potions3] = "potions",
+		[L.Potions4] = "potions",
 		
 		[L.NoPotions1] = "no potion",
 		[L.NoPotions2] = "no potion",
@@ -163,9 +180,9 @@ do
 
 	local function updateInfoFrame()
 		local lines = {}
-
 		for hint, j in pairs(hints) do
-			lines[hint] = ""
+			local text = hintTranslations[hint] or hint
+			lines[text] = ""
 		end
 		
 		return lines
@@ -198,7 +215,7 @@ do
 				local clue = clues[GetGossipText()]
 				if clue and not hints[clue] then
 					CloseGossip()
-					SendChatMessage(clue, "PARTY")
+					SendChatMessage(hintTranslations[clue], "PARTY")
 					hints[clue] = true
 					self:SendSync("CoS", clue)
 					DBM.InfoFrame:Show(5, "function", updateInfoFrame)

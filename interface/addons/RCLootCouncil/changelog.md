@@ -1,3 +1,19 @@
+### v2.2.0
+---
+* **Tier 19**
+ * Added support for Nighthold Tier 19 tokens.
+
+
+* **Skin**
+  * Legion's been out for a while, so the default skin is now back to Midnight Blue.
+
+
+* Buttons on the Loot Frame now always have a minimum witdh of 40 px.
+
+##### Bugfixes
++ *Added extra checks so a name related error won't happen (#223).*
++ *Fixed some false autopasses on artifact relics related to uncached items.*
+
 ### v2.1.11
 ---
 ##### Bugfixes

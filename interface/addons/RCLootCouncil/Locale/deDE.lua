@@ -13,7 +13,7 @@ L["Accept Whispers"] = "Flüsternachrichten akzeptieren"
 L["accept_whispers_desc"] = "Ermöglicht es Spielern, ihre(n) momentanen Gegenstand/-stände zu dir zu flüstern, um dem Abstimmungsfenster hinzugefügt zu werden."
 L["Acknowledged as 'response'"] = "Als \" %s \" anerkannt"
 L["Active"] = "Aktiv"
-L["active_desc"] = "Abwählen, um RCLootCouncil zu deaktivieren. Dies ist nützlich wenn du in einem Schlachtzug bist, aber nicht wirklich beteiligt bist. Hinweis: Dies wird beim Abmelden automatisch zurückgesetzt."
+L["active_desc"] = "Abwählen, um RCLootCouncil zu deaktivieren. Dies ist nützlich, wenn du in einem Schlachtzug bist, aber nicht wirklich beteiligt bist. Hinweis: Dies wird beim Abmelden automatisch zurückgesetzt."
 L["add"] = "hinzufügen"
 L["Add Item"] = "Gegenstand hinzufügen"
 L["Add Note"] = "Notiz hinzufügen"
@@ -26,7 +26,7 @@ Wähle oben einen Rang aus, um alle Mitglieder, dieses oder höheren Ranges, zum
 
 Klicke auf die Ränge auf der linken Seite, um einzelne Spieler dem Rat hinzuzufügen.
 
-Klicke auf den Reiter 'Aktueller Rat', um deine Auswahl zu sehen.]=]
+Klicke auf den Reiter Aktueller Ra', um deine Auswahl zu sehen.]=]
 L["All items"] = "Alle Gegenstände"
 L["All items has been awarded and  the loot session concluded"] = "Alle Gegenstände wurden vergeben und die Plündersitzung ist abgeschlossen."
 L["Alt click Looting"] = "Alt-Klick-Plündern"
@@ -69,7 +69,7 @@ L["auto_loot_desc"] = "Aktiviert automatisches Plündern für alle anlegbaren Ge
 L["auto_open_desc"] = "Aktivieren, um das Abstimmungsfenster automatisch zu öffnen, falls es verfügbar ist. Das Abstimmungsfenster kann anderenfalls mit \"/rc open\" geöffnet werden. Hinweis: Dies erfordert die Erlaubnis des Plündermeisters."
 L["auto_pass_boe_desc"] = "Deaktivieren, um niemals auf beim Anlegen gebundene Gegenstände automatisch zu passen."
 L["auto_pass_desc"] = "Aktivieren, um automatisch auf Gegenstände zu passen, die deine Klasse nicht benutzen kann."
-L["auto_start_desc"] = "Aktiviert den automatischen Start, das heißt, dass eine Sitzung mit allen geeigneten Gegenständen gestartet wird. Deaktivieren, um eine editierbare Liste von Gegenständen vor dem Start einer Sitzung, zu zeigen."
+L["auto_start_desc"] = "Aktiviert den automatischen Start, das heißt, dass eine Sitzung mit allen geeigneten Gegenständen gestartet wird. Deaktivieren, um eine editierbare Liste von Gegenständen vor dem Start einer Sitzung zu zeigen."
 L["Autoloot BoE"] = "BoE automatisch plündern"
 L["autoloot_BoE_desc"] = "Aktiviert das automatische Plündern von BoE-Gegenständen (Bind on Equip – Beim Anlegen gebunden) ."
 L["Autopass"] = "Automatisches Passen"
@@ -170,7 +170,7 @@ L["Export"] = "Exportieren"
 L["Filter"] = true
 L["Following winners was registered:"] = "Die folgenden Gewinner wurden registriert:"
 L["Free"] = "Frei"
-L["From:"] = "Von"
+L["From:"] = "Von:"
 L["g1"] = true
 L["g2"] = true
 L["General"] = "Allgemein"
@@ -178,8 +178,8 @@ L["General options"] = "Allgemeine Einstellungen"
 L["Greed"] = "Gier"
 L["Group"] = "Gruppe"
 L["Group Council Members"] = "Ratsmitglieder der Gruppe"
-L["group_council_members_desc"] = "Benutze dies, um Ratsmitglieder, von einem anderem Realm oder Gilde, hinzuzufügen."
-L["group_council_members_head"] = "Füge Ratsmitglieder aus deiner aktuelle Gruppe hinzu."
+L["group_council_members_desc"] = "Benutze dies, um Ratsmitglieder von einem anderem Realm oder Gilde hinzuzufügen."
+L["group_council_members_head"] = "Füge Ratsmitglieder aus deiner aktuellen Gruppe hinzu."
 L["Guild"] = "Gilde"
 L["Guild Council Members"] = "Ratsmitglieder der Gilde"
 L["Healer"] = "Heiler"
@@ -208,7 +208,7 @@ L["Loot announced, waiting for answer"] = "Beute angekündigt, warte auf Antwort
 L["Loot Everything"] = "Alles plündern"
 L["Loot History"] = "Beuteverlauf"
 L["Loot won:"] = "Beute gewann:"
-L["loot_everything_desc"] = "Aktiviert das automatische Plündern von Nicht-Gegenständen (z.B. Reittiere, Tier-Marken)."
+L["loot_everything_desc"] = "Aktiviert das automatische Plündern von nicht anlegbaren Gegenständen (z.B. Reittiere, Tier-Marken)."
 L["loot_history_desc"] = [=[RCLootCouncil zeichnet automatisch relevante Informationen aus Sitzungen auf.
 Die Rohdaten werden in ".../SavedVariables/RCLootCouncil.lua" gespeichert.
 
@@ -252,9 +252,9 @@ L["Not installed"] = "Nicht installiert"
 L["Note"] = "Notiz"
 L["Note: Huge exports will cause lag."] = "Hinweis: Große Exporte verursachen Verzögerungen."
 L["Notes"] = "Notizen"
-L["notes_desc"] = "Erlaubt es Kandidaten, eine Notiz an den Rat zusammen mit ihrem Wurf, zu schicken."
+L["notes_desc"] = "Erlaubt es Kandidaten, eine Notiz an den Rat zusammen mit ihrem Wurf zu schicken."
 L["Now handles looting"] = "Greift jetzt ins Plündern ein"
-L["Number of buttons"] = "Buttonanzahl"
+L["Number of buttons"] = "Anzahl der Buttons"
 L["Number of reasons"] = "Anzahl der Gründe"
 L["Number of responses"] = "Anzahl der Antworten"
 L["number_of_buttons_desc"] = "Verschieben, um die Buttonanzahl zu ändern."
@@ -318,7 +318,7 @@ L["Set the text for button i's response."] = "Stelle den Text für Antwort des B
 L["Set the text on button 'number'"] = "Stelle die Beschriftung des Buttons %i ein."
 L["Set the whisper keys for button i."] = "Lege die Flüsterschlüssel für Button %d fest."
 L["Silent Auto Pass"] = "Leises automatisches Passen"
-L["silent_auto_pass_desc"] = "Aktivieren, um Nachrichten, aufgrund \"automatischen Passens\", zu verstecken."
+L["silent_auto_pass_desc"] = "Aktivieren, um Nachrichten aufgrund \"automatischen Passens\" zu verstecken."
 L["Simple BBCode output."] = "Einfache BBCode-Ausgabe."
 L["Skins"] = "Optiken"
 L["skins_description"] = "Wähle eine der Standardoptiken aus oder erstelle deine eigene. Beachte, dass diese Optionen rein ästhetisch sind. Öffne den Versionsprüfer, um das Ergebnis sofort zu sehen (/rc version)."
@@ -334,7 +334,7 @@ L["Text color"] = "Schriftfarbe"
 L["Text for reason #i"] = "Text für Grund #"
 L["text_color_desc"] = "Farbe des angezeigten Textes."
 L["The following council members have voted"] = "Die folgenden Ratsmitglieder haben abgestimmt"
-L["The item would now be awarded to 'player'"] = "Der Gegenstand würde jetzt an den Spieler %s vergeben werden."
+L["The item would now be awarded to 'player'"] = "Der Gegenstand würde jetzt an %s vergeben werden."
 L["The loot is already on the list"] = "Die Beute ist bereits auf der Liste"
 L["The Master Looter doesn't allow multiple votes."] = "Der Plündermeister erlaubt keine Mehrfachabstimmungen."
 L["The Master Looter doesn't allow votes for yourself."] = "Der Plündermeister erlaubt keine Stimmen für dich selbst."
@@ -375,7 +375,7 @@ L["whisper"] = "flüstern"
 L["whisper_guide"] = "[RCLootCouncil]: Nummer Antwort [Gegenstand1] [Gegenstand2]. Nummer: Der Gegenstand, auf den du würfeln möchtest. Antwort: Eines der untenstehenden Schlüsselwörter. Verlinke deine(n) Gegenstand/-ände, die der mit Nummer angegebene Gegenstand ersetzen würde. Beispiel: '1 Bedarf [Gegenstand1]' würde auf den Gegenstand Nummer 1 für Bedarf würfeln."
 L["whisper_guide2"] = "[RCLootCouncil]: Du wirst eine Bestätigungsnachricht bekommen, wenn du erfolgreich hinzugefügt wurdest."
 L["whisper_help"] = [=[Schlachtzugsteilnehmer können das Flüstersystem benutzen, für den Fall, dass jemand das Addon nicht installiert hat.
-Beim Flüstern von 'rchelp' an den Plündermeister, bekommen sie eine Anleitung zusammen mit der Liste der Schlüsselwörter, welche im Reiter 'Buttons und Antworten' bearbeitet werden können.
+Beim Flüstern von 'rchelp' an den Plündermeister bekommen sie eine Anleitung zusammen mit der Liste der Schlüsselwörter, welche im Reiter Buttons und Antworten bearbeitet werden können.
 Dem Plündermeister wird empfohlen, 'Betrachtungen ankündigen' zu aktivieren, da jede Gegenstandsnummer (Item-ID) erforderlich ist, um das Flüstersystem zu benutzen.
 Hinweis: Die Leute sollten dennoch das Addon installieren, ansonsten sind nicht alle Spielerinformationen verfügbar.]=]
 L["whisperKey_greed"] = "Gier, Nebenspezialisierung, os, 2"

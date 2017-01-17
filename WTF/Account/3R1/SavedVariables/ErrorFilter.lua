@@ -11,12 +11,13 @@ ErrorFilterDB = {
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Natal - Illidan"] = "Default",
 		["Evan - Illidan"] = "Comet - Illidan",
-		["Combustion - Illidan"] = "Default",
+		["Combustion - Illidan"] = "Comet - Illidan",
 	},
 	["profiles"] = {
 		["Comet - Illidan"] = {
-			["mode"] = 3,
 			["throttle"] = false,
+			["mode"] = 3,
+			["updateOnlyInCombat"] = true,
 		},
 		["Default"] = {
 			["mode"] = 3,

@@ -21,8 +21,8 @@ DBM_AutoInvite_Settings = {
 	["friends"] = true,
 	["promote_rank"] = 3,
 	["promote_all"] = false,
-	["guildmates"] = true,
 	["lastaoerank"] = 5,
+	["guildmates"] = true,
 	["other"] = false,
 }
 DBM_DKP_System_Settings = {
@@ -53,9 +53,9 @@ DBM_Standby_Settings = {
 	["send_whisper"] = false,
 	["history"] = {
 	},
-	["sb_times"] = {
-	},
 	["sb_users"] = {
+	},
+	["sb_times"] = {
 	},
 }
 DBM_RaidLead_Settings = {
