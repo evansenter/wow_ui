@@ -57,10 +57,6 @@ VER 3 010000000000001B "Tiger's Lust" "INV_Misc_QuestionMark"
 #showtooltip
 /use [nomod,@mouseover,help,nodead][nomod,@player][nomod][mod:ctrl][mod:alt]Tiger's Lust;[mod:shift]6
 END
-VER 3 010000000000000E "ToD" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/use [@mouseover,harm,nodead][] Touch of Death
-END
 VER 3 0100000000000007 "Transcendence" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /use [nomod]Transcendence: Transfer;[mod:shift][mod:alt]Transcendence

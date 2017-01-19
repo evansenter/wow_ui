@@ -233,6 +233,8 @@ local raidQuests = {
 	[42269] = true, -- The Soultakers
 	[42819] = true, -- Pocket Wizard
 	[42270] = true, -- Scourge of the Skies
+	[43512] = true, -- Ana-Mouz
+	[44932] = true, -- The Nighthold: Ettin Your Foot In The Door
 	[43985] = true -- A Dark Tide
 }
 
@@ -472,7 +474,7 @@ function RegisteredEvents:GROUP_ROSTER_UPDATE(event)
 			if (descRealmType) then
 				local currentRealmType = WorldQuestGroupFinder.getCurrentRealmType()
 				if (currentRealmType ~= descRealmType) then
-					WorldQuestGroupFinder.dprint(string.format("Changing current realm type in comment to ", currentRealmType))
+					WorldQuestGroupFinder.dprint(string.format("Changing current realm type in comment to %s", currentRealmType))
 					WorldQuestGroupFinder.updateRealmTypeInComment(currentRealmType)
 				end
 			end
@@ -1005,11 +1007,11 @@ function WorldQuestGroupFinder.HandleCustomAutoInvite()
 					WorldQuestGroupFinder.dprint("Group finder entry has disappeared!")
 					if (currentWQ) then
 						WorldQuestGroupFinder.dprint("Creating queue again")
-
+						local title, tagID, tagName, worldQuestType, rarity, elite, tradeskillLineIndex, activityID, categoryID, filters
 						if (QuestUtils_IsQuestWorldQuest(currentWQ)) then
-							local title, tagID, tagName, worldQuestType, rarity, elite, tradeskillLineIndex, activityID, categoryID, filters = WorldQuestGroupFinder.GetQuestInfo(currentWQ)
+							title, tagID, tagName, worldQuestType, rarity, elite, tradeskillLineIndex, activityID, categoryID, filters = WorldQuestGroupFinder.GetQuestInfo(currentWQ)
 						else 
-							local title, activityID, categoryID, filters = WorldQuestGroupFinder.GetQuestInfo(currentWQ)
+							title, activityID, categoryID, filters = WorldQuestGroupFinder.GetQuestInfo(currentWQ)
 						end
 					
 						local tmpCurrentMapID = GetCurrentMapAreaID()
@@ -1173,7 +1175,7 @@ function WorldQuestGroupFinder.AttachBorderToWQ(wqID, update)
 end
 
 function WorldQuestGroupFinder.SendWQCompletionPartyNotification (wqID)
-	SendChatMessage(string.format("[WQGF] \"%s\" %s :)", WorldQuestGroupFinder.GetQuestInfo(wqID), WORLD_QUEST_COMPLETE), "PARTY", "", "");
+	SendChatMessage(string.format("[WQGF] %s: %s :)", WorldQuestGroupFinder.GetQuestInfo(wqID), WORLD_QUEST_COMPLETE), "PARTY", "", "");
 end
 
 function WorldQuestGroupFinder.AssignButtonTextures(button)
@@ -1354,7 +1356,7 @@ function WorldQuestGroupFinder.updateRealmTypeInComment(newType)
 		--If we're not listed, we can't change the value.
 		return;
 	end
-
 	comment = string.gsub(comment, "#([%w]+)#", "#"..newType.."#")
-	C_LFGList.UpdateListing(activityID, name, iLevel, honorLevel, voiceChat, comment, autoAccept, currentWQ);
+	WorldQuestGroupFinder.dprint("New comment: %s", comment)
+	C_LFGList.UpdateListing(activityID, "", iLevel, honorLevel, voiceChat, comment, autoAccept, currentWQ);
 end

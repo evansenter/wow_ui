@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1713, "DBM-Nighthold", nil, 786)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 15557 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 15681 $"):sub(12, -3))
 mod:SetCreatureID(101002)
 mod:SetEncounterID(1842)
 mod:SetZone()
@@ -25,20 +25,20 @@ mod:RegisterEventsInCombat(
 local warnExpelOrbDestro			= mod:NewTargetCountAnnounce(205344, 4)
 local warnSlam						= mod:NewCountAnnounce(205862, 2)--Regular slams don't need special warn, only bridge smashing ones
 
-local specWarnSearingBrand			= mod:NewSpecialWarningStack(206677, nil, 10, nil, 2, 1, 2)--Lets go with 10 for now
+local specWarnSearingBrand			= mod:NewSpecialWarningStack(206677, nil, 5, nil, 2, 1, 2)--Lets go with 5 for now
 local specWarnSearingBrandOther		= mod:NewSpecialWarningTaunt(206677, nil, nil, nil, 1, 2)
 local specWarnFelBeam				= mod:NewSpecialWarningDodge(205368, nil, nil, nil, 2, 2)
 local specWarnOrbDestro				= mod:NewSpecialWarningMoveAway(205344, nil, nil, nil, 3, 2)
 local yellOrbDestro					= mod:NewFadesYell(205344)
 local specWarnBurningPitch			= mod:NewSpecialWarningCount(205420, nil, nil, nil, 2, 6)
 local specWarnSlam					= mod:NewSpecialWarningDodge(205862, nil, nil, nil, 3, 2)--every 3rd slam level 3 special warning
-local specWarnFelBlast				= mod:NewSpecialWarningInterrupt(209017, "HasInterrupt", nil, nil, 1, 2)
+local specWarnFelBlast				= mod:NewSpecialWarningInterrupt(209017, false, nil, 2, 1, 2)
 local specWarnFelBurst				= mod:NewSpecialWarningInterrupt(206352, "HasInterrupt", nil, nil, 1, 2)
 
 local timerSearingBrand				= mod:NewTargetTimer(20, 206677, nil, "Tank", nil, 5)
 local timerFelBeamCD				= mod:NewNextCountTimer(16, 205368, nil, nil, nil, 3)
 local timerOrbDestroCD				= mod:NewNextCountTimer(16, 205344, nil, nil, nil, 3, nil, DBM_CORE_DEADLY_ICON)--Not that deadly on non mythic but on mythic it is
-local timerBurningPitchCD			= mod:NewNextCountTimer(16, 205420, nil, "-Tank", nil, 5)
+local timerBurningPitchCD			= mod:NewNextCountTimer(16, 205420, nil, nil, 2, 5)
 local timerSlamCD					= mod:NewNextCountTimer(30, 205862, nil, nil, nil, 3, nil, DBM_CORE_DEADLY_ICON)
 
 local berserkTimer					= mod:NewBerserkTimer(360)--technically not a berserk, but raid instantly wipes during final bridge smash, at 6 minutes.
@@ -51,7 +51,7 @@ local voiceFelBeam					= mod:NewVoice(205368)--moveleft/moveright
 local voiceOrbDestro				= mod:NewVoice(205344)--runout
 local voiceBurningPitch				= mod:NewVoice(205420)--watchstep/helpsoak(new)
 local voiceSlam						= mod:NewVoice(205862)--justrun
-local voiceFelBlast					= mod:NewVoice(209017, "HasInterrupt")--kickcast
+local voiceFelBlast					= mod:NewVoice(209017, false, nil, 2)--kickcast
 local voiceFelBurst					= mod:NewVoice(206352, "HasInterrupt")--kickcast
 
 mod:AddRangeFrameOption(5, 206352)
@@ -97,7 +97,7 @@ function mod:OnCombatStart(delay)
 	elseif self:IsHeroic() then
 		timerFelBeamCD:Start(5-delay, 1)
 		timerOrbDestroCD:Start(22-delay, 1)
-		timerBurningPitchCD:Start(52-delay, 1)
+		timerBurningPitchCD:Start(50-delay, 1)
 		timerSlamCD:Start(-delay, 1)
 		countdownBigSlam:Start(-delay)
 		berserkTimer:Start(-delay)
@@ -131,18 +131,18 @@ function mod:SPELL_CAST_START(args)
 	local spellId = args.spellId
 	if spellId == 205368 or spellId == 205370 then--205370 left, 205368 right
 		self.vb.beamCount = self.vb.beamCount + 1
-		specWarnFelBeam:Show(self.vb.beamCount)
+		specWarnFelBeam:Show()
 		local nextCount = self.vb.beamCount + 1
 		local timers = self:IsMythic() and mythicBeamTimers[nextCount] or self:IsHeroic() and heroicBeamTimers[nextCount] or lolBeamTimers[nextCount]
 		if timers then
 			timerFelBeamCD:Start(timers, nextCount)
 		end
-		if spellId == 205368 then--Coming from right
+		if spellId == 205368 then--Coming from right (facing boss)
 			voiceFelBeam:Play("moveleft")
 			if self.Options.ArrowOnBeam then
 				DBM.Arrow:ShowStatic(90, 4)
 			end
-		else--coming from left
+		else--coming from left (facing boss)
 			voiceFelBeam:Play("moveright")
 			if self.Options.ArrowOnBeam then
 				DBM.Arrow:ShowStatic(270, 4)
@@ -159,7 +159,7 @@ function mod:SPELL_CAST_START(args)
 		local nextCount = self.vb.pitchCount + 1
 		local timers = self:IsMythic() and mythicBurningPitchTimers[nextCount] or self:IsHeroic() and heroicBurningPitchTimers[nextCount] or lolBurningPitchTimers[nextCount]
 		if timers then
-			timerBurningPitchCD:Start(nil, nextCount)
+			timerBurningPitchCD:Start(timers, nextCount)
 		end
 	elseif spellId == 209017 and self:CheckInterruptFilter(args.sourceGUID) then
 		specWarnFelBlast:Show(args.sourceName)
@@ -201,7 +201,7 @@ function mod:SPELL_AURA_APPLIED(args)
 	if spellId == 206677 then
 		local amount = args.amount or 1
 		timerSearingBrand:Start(args.destName)
-		if amount >= 10 then
+		if amount >= 5 and self:AntiSpam(3, 1) then
 			if args:IsPlayer() then
 				specWarnSearingBrand:Show(amount)
 				voiceSearingBrand:Play("changemt")

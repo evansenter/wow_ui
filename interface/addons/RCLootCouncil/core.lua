@@ -5,8 +5,6 @@ core.lua	Contains core elements of the addon
 TODOs/Notes
 	Things marked with "todo"
 		- IDEA add an observer/council string to show players their role?
-		- If we truly want to be able to edit votingframe scrolltable with modules, it needs to have GetCol by name
-		- Pressing shift while hovering an item should do the same as vanilla
 		- The 4'th cell in @line81 in versionCheck should not be static
 --------------------------------
 CHANGELOG
@@ -511,8 +509,9 @@ function RCLootCouncil:ChatCommand(msg)
 		self:Print("Debug Log cleared.")
 --[===[@debug@
 	elseif input == 't' then -- Tester cmd
-		local meh = self:Serialize(db)
-		self:Print("Db size:", #meh)
+		local ItemUpgradeInfo = LibStub("LibItemUpgradeInfo-1.0")
+		self:Print(self:GetItemStringFromLink(arg1),self:GetItemStringFromLink(arg2))
+		self:Print("ItemUpgradeInfo",ItemUpgradeInfo:GetItemUpgradeInfo(arg1))
 --@end-debug@]===]
 	else
 		-- Check if the input matches anything
@@ -1353,7 +1352,7 @@ function RCLootCouncil:VersionCompare(ver1, ver2)
 	local a1,b1,c1 = string.split(".", ver1)
 	local a2,b2,c2 = string.split(".", ver2)
 	if not (c1 and c2) then return end -- Check if it exists
-	return tonumber(a1) < tonumber(a2) or tonumber(b1) < tonumber(b2) or tonumber(c1) < tonumber(c2)
+	if a1 ~= a2 then return  tonumber(a1) < tonumber(a2) elseif b1 ~= b2 then return tonumber(b1) < tonumber(b2) else return tonumber(c1) < tonumber(c2) end
 end
 
 -- from LibUtilities-1.0, which adds bonus index after bonus ID

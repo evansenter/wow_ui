@@ -1,6 +1,6 @@
 
 DBMBrokenIsles_SavedStats = {
-	["1769"] = {
+	["1795"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -57,7 +57,7 @@ DBMBrokenIsles_SavedStats = {
 		["mythicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["1795"] = {
+	["1756"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -76,7 +76,7 @@ DBMBrokenIsles_SavedStats = {
 		["mythicPulls"] = 0,
 		["challengePulls"] = 0,
 	},
-	["1756"] = {
+	["1769"] = {
 		["normalPulls"] = 0,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
@@ -153,7 +153,7 @@ DBMBrokenIsles_SavedStats = {
 		["challengePulls"] = 0,
 	},
 	["1790"] = {
-		["normalPulls"] = 0,
+		["normalPulls"] = 1,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
 		["mythicKills"] = 0,
@@ -161,7 +161,7 @@ DBMBrokenIsles_SavedStats = {
 		["heroic25Pulls"] = 0,
 		["lfr25Pulls"] = 0,
 		["normal25Pulls"] = 0,
-		["normalKills"] = 0,
+		["normalKills"] = 1,
 		["heroic25Kills"] = 0,
 		["timewalkerPulls"] = 0,
 		["heroicKills"] = 0,
@@ -191,7 +191,7 @@ DBMBrokenIsles_SavedStats = {
 		["challengePulls"] = 0,
 	},
 	["1770"] = {
-		["normalPulls"] = 0,
+		["normalPulls"] = 1,
 		["challengeKills"] = 0,
 		["challengeBestRank"] = 0,
 		["mythicKills"] = 0,
@@ -199,7 +199,7 @@ DBMBrokenIsles_SavedStats = {
 		["heroic25Pulls"] = 0,
 		["lfr25Pulls"] = 0,
 		["normal25Pulls"] = 0,
-		["normalKills"] = 0,
+		["normalKills"] = 1,
 		["heroic25Kills"] = 0,
 		["timewalkerPulls"] = 0,
 		["heroicKills"] = 0,
