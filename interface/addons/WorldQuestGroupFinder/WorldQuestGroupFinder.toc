@@ -1,6 +1,6 @@
 ﻿## Interface: 70100
 ## Title: World Quest Group Finder
-## Version: 0.20.7
+## Version: 0.21.2
 ## Notes: Makes it easy to find groups for World Quests by using the Group Finder tool.
 ## Notes-frFR: Permet de trouver facilement des groupes pour les expéditions en utilisant l'outil de recherche de groupe.
 ## Notes-ptBR: Torna facil achar grupos para Missões Mundiais usando a ferramenta de Busca de Grupo.
@@ -26,9 +26,9 @@
 ## SavedVariables: WorldQuestGroupFinderConfig
 
 #@no-lib-strip@
-libs/LibStub/LibStub.lua
-libs/LibRealmInfo/LibRealmInfo.lua
-libs/AceLocale-3.0/AceLocale-3.0.lua
+libs\LibStub\LibStub.lua
+libs\LibRealmInfo\LibRealmInfo.lua
+libs\AceLocale-3.0\AceLocale-3.0.lua
 #@end-no-lib-strip@
 
 localization\enUS.lua

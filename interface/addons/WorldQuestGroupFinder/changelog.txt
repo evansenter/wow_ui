@@ -1,3 +1,17 @@
+0.21.2 (22/01/2017)
+- Bug fix
+
+0.21.1 (22/01/2017)
+- The find group icon will no longer overlap quest icons
+- Changed the button's strata to make it clickable on Kaliel's Tracker
+- Updated localizations
+
+0.21 (19/01/2017)
+- Added a custom "Join Group" button to prevent world map taint
+- Added a new slash command to toggle the world quest detection : /wqgf toggle
+- Realm type should now be correctly updated in the group's description
+- Updated strings to reflect regular quests support
+
 0.20.7 (18/01/2017)
 - Raid WQs list updated
 - Fix for Simplified Chinese localization

@@ -1185,10 +1185,7 @@ GTFO.SpellID["203110"] = {
 -- TODO: Arcane Slash (Trilliax) -- non-tank fail
 -- TODO: Toxic Slice (Trilliax) -- impact, not DoT
 -- TODO: Annihilation (Trilliax) -- Avoidable or raid fail?
--- TODO: Seeker Swarm (Tichondrius) -- When not debuffed with Carrion Plague
 -- TODO: Burning Soul (Tichondrius) -- FF Fail
--- TODO: Fel Beam (Krosus)
--- TODO: Orb of Destruction (Krosus) -- damage distance fail
 -- TODO: Felburst (Krosus)
 -- TODO: Controlled Chaos (High Botanist Tel'arn) -- inside ring damage only
 -- TODO: Toxic Spores (High Botanist Tel'arn)
@@ -1234,6 +1231,30 @@ GTFO.SpellID["224510"] = {
   tankSound = 0;
   test = true;
 };
+
+GTFO.SpellID["205391"] = {
+  --desc = "Fel Beam (Krosus)";
+  sound = 3;
+};
+
+GTFO.SpellID["205863"] = {
+  --desc = "Slam (Krosus)";
+  sound = 3;
+  tankSound = 0;
+};
+
+GTFO.SpellID["215988"] = {
+  --desc = "Carrion Nightmare (Carrion Nightmare)";
+  sound = 3;
+};
+
+GTFO.SpellID["206474"] = {
+  --desc = "Seeker Swarm (Tichondrius)";
+  sound = 3;
+  negatingDebuffSpellID = 206480; -- Carrion Plague 
+  test = true; -- Not working because plague is getting applied first
+};
+
 
 GTFO.SpellID["218155"] = {
   --desc = "Solar Collapse (High Botanist Tel'arn)";

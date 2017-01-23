@@ -73,7 +73,8 @@ local blacklistedQuests = {
 	[41316] = true, -- Supplies Needed: Leystone
 	[41317] = true, -- Supplies Needed: Leystone
 	[41303] = true, -- Supplies Needed: Starlight Roses
-	[41288] = true -- Supplies Needed: Aethril
+	[41288] = true, -- Supplies Needed: Aethril
+	[44932] = true -- The Nighthold: Ettin Your Foot In The Door
 }
 
 -- Quests you can complete while in a raid
@@ -234,7 +235,6 @@ local raidQuests = {
 	[42819] = true, -- Pocket Wizard
 	[42270] = true, -- Scourge of the Skies
 	[43512] = true, -- Ana-Mouz
-	[44932] = true, -- The Nighthold: Ettin Your Foot In The Door
 	[43985] = true -- A Dark Tide
 }
 
@@ -318,21 +318,46 @@ function RegisteredEvents:CHAT_MSG_ADDON(event, prefix, message, channel, sender
 		if (string.find(message, "#WQS:")) then
 			local tmpMsgWQ = string.gsub(message, "#WQS:(.*)#", "%1")
 			tempWQ = tonumber(tmpMsgWQ)
+			local isWQ = true
+			if not QuestUtils_IsQuestWorldQuest(tempWQ) then
+				isWQ = false
+			end
 			if (tempWQ ~= currentWQ) then
 				if(IsQuestFlaggedCompleted(tempWQ)) then
-					WorldQuestGroupFinder.prefixedPrint(string.format(L["WQGF_GROUP_NOW_DOING_WQ_ALREADY_COMPLETE"], WorldQuestGroupFinder.GetQuestInfo(tempWQ)), true)
+					if isWQ then
+						WorldQuestGroupFinder.prefixedPrint(string.format(L["WQGF_GROUP_NOW_DOING_WQ_ALREADY_COMPLETE"], WorldQuestGroupFinder.GetQuestInfo(tempWQ)), true)
+					else
+						WorldQuestGroupFinder.prefixedPrint(string.format(L["WQGF_GROUP_NOW_DOING_QUEST_ALREADY_COMPLETE"], WorldQuestGroupFinder.GetQuestInfo(tempWQ)), true)
+					end
 				else
-					if (WorldQuestGroupFinder.HandleWorldQuestStart(tempWQ)) then
-						WorldQuestGroupFinder.prefixedPrint(string.format(L["WQGF_GROUP_NOW_DOING_WQ"], WorldQuestGroupFinder.GetQuestInfo(tonumber(tmpMsgWQ))), true)
-					else 
-						WorldQuestGroupFinder.prefixedPrint(string.format(L["WQGF_GROUP_NOW_DOING_WQ_NOT_ELIGIBLE"], WorldQuestGroupFinder.GetQuestInfo(tonumber(tmpMsgWQ))), true)
+					if (WorldQuestGroupFinder.HandleWorldQuestStart(tempWQ)) then						
+						if isWQ then
+							WorldQuestGroupFinder.prefixedPrint(string.format(L["WQGF_GROUP_NOW_DOING_WQ"], WorldQuestGroupFinder.GetQuestInfo(tempWQ)), true)
+						else
+							WorldQuestGroupFinder.prefixedPrint(string.format(L["WQGF_GROUP_NOW_DOING_QUEST"], WorldQuestGroupFinder.GetQuestInfo(tempWQ)), true)
+						end
+					else 					
+						if isWQ then
+							WorldQuestGroupFinder.prefixedPrint(string.format(L["WQGF_GROUP_NOW_DOING_WQ_NOT_ELIGIBLE"], WorldQuestGroupFinder.GetQuestInfo(tempWQ)), true)
+						else
+							WorldQuestGroupFinder.prefixedPrint(string.format(L["WQGF_GROUP_NOW_DOING_QUEST_NOT_ELIGIBLE"], WorldQuestGroupFinder.GetQuestInfo(tempWQ)), true)
+						end
+						
 					end
 				end	
 			end
 		elseif (string.find(message, "#WQE:")) then
 			local tmpMsgWQ = string.gsub(message, "#WQE:(.*)#", "%1")
 			tempWQ = tonumber(tmpMsgWQ)
-			WorldQuestGroupFinder.prefixedPrint(string.format(L["WQGF_GROUP_NO_LONGER_DOING_WQ"], WorldQuestGroupFinder.GetQuestInfo(tempWQ)), true)
+			local isWQ = true
+			if not QuestUtils_IsQuestWorldQuest(tempWQ) then
+				isWQ = false
+			end
+			if isWQ then
+				WorldQuestGroupFinder.prefixedPrint(string.format(L["WQGF_GROUP_NO_LONGER_DOING_WQ"], WorldQuestGroupFinder.GetQuestInfo(tempWQ)), true)
+			else
+				WorldQuestGroupFinder.prefixedPrint(string.format(L["WQGF_GROUP_NO_LONGER_DOING_QUEST"], WorldQuestGroupFinder.GetQuestInfo(tempWQ)), true)
+			end
 			if (currentWQ == tempWQ) then
 				WorldQuestGroupFinder.HandleWorldQuestEnd(tempWQ)
 			end
@@ -342,18 +367,26 @@ end
 
 function RegisteredEvents:QUEST_TURNED_IN(event, questID, experience, money)
 	-- Hide join WQ prompts
+	local isWQ = true
+	if not QuestUtils_IsQuestWorldQuest(questID) then
+		isWQ = false
+	end
 	WorldQuestGroupFinder.HideDialog ("WORLD_QUEST_ENTERED_PROMPT")
 	WorldQuestGroupFinder.HideDialog ("WORLD_QUEST_ENTERED_SWITCH_PROMPT")
-	WorldQuestGroupFinder.dprint(string.format("Quest completed. (ID: %d)", questID))
+	WorldQuestGroupFinder.dprint(string.format("Quest complete. (ID: %d)", questID))
 	if (currentWQ ~= nil and questID == currentWQ) then
 		if (WorldQuestGroupFinderConf.GetConfigValue("notifyParty") and IsInGroup()) then
 			WorldQuestGroupFinder.SendWQCompletionPartyNotification(questID)
 		end
 		if (WorldQuestGroupFinderConf.GetConfigValue("askToLeave")) then
 			if (WorldQuestGroupFinderConf.GetConfigValue("autoLeaveGroup")) then
-				WorldQuestGroupFinder.ShowDialog ("WORLD_QUEST_COMPLETED_LEAVE_GROUP_DIALOG")
+				if isWQ then
+					WorldQuestGroupFinder.ShowDialog ("WORLD_QUEST_COMPLETED_LEAVE_GROUP_DIALOG")
+				else
+					WorldQuestGroupFinder.ShowDialog ("QUEST_COMPLETED_LEAVE_GROUP_DIALOG")
+				end
 			else
-				WorldQuestGroupFinder.ShowLeavePrompt()
+				WorldQuestGroupFinder.ShowLeavePrompt(isWQ)
 			end
 		end
 		WorldQuestGroupFinder.HandleWorldQuestEnd(currentWQ)
@@ -522,55 +555,26 @@ function WorldQuestGroupFinder.SetHooks()
 		end
 	end)
 	
-	hooksecurefunc("QuestObjectiveFindGroup_OnEnter", function(self)
-		GameTooltip:SetOwner(self);
-		GameTooltip:AddLine(TOOLTIP_TRACKER_FIND_GROUP_BUTTON .. " (WQGF)", HIGHLIGHT_FONT_COLOR:GetRGB());
-		if not self:IsEnabled() and C_LFGList.GetActiveEntryInfo() then
-			local r, g, b = RED_FONT_COLOR:GetRGB();
-			GameTooltip:AddLine(CANNOT_DO_THIS_WHILE_LFGLIST_LISTED, r, g, b, true);
-		end
-
-		GameTooltip:Show();
-	end)
-	
 	hooksecurefunc("QuestObjectiveSetupBlockButton_FindGroup", function(block, questID)
-		-- Don't call this in combat to avoid taint
-		if (not InCombatLockdown() and (QuestUtils_IsQuestWorldQuest(questID) or WorldQuestGroupFinderConf.GetConfigValue("regularQuests"))) then
-			-- Show find group button on every compatible quest/world quest
-			if block.hasGroupFinderButton == nil then
-				if QuestUtils_IsQuestWorldQuest(questID) then
-					local _, _, _, worldQuestType, _, _, _, _, _, _ = WorldQuestGroupFinder.GetQuestInfo(questID)
-					block.hasGroupFinderButton = true
-					if (blacklistedQuests[questID] or worldQuestType == LE_QUEST_TAG_TYPE_PET_BATTLE or worldQuestType == LE_QUEST_TAG_TYPE_DUNGEON or worldQuestType == LE_QUEST_TAG_TYPE_PROFESSION) then
-						block.hasGroupFinderButton = false
-					end
-				else
-					block.hasGroupFinderButton = QuestUtils_CanUseAutoGroupFinder(questID, true)
-				end
+		if block.hasGroupFinderButton then
+			local groupFinderButton = block.groupFinderButton;
+			groupFinderButton:Hide()
+		end
+		local canFindGroup = false
+		if QuestUtils_IsQuestWorldQuest(questID) then
+			local _, _, _, worldQuestType, _, _, _, _, _, _ = WorldQuestGroupFinder.GetQuestInfo(questID)
+			canFindGroup = true
+			if (blacklistedQuests[questID] or worldQuestType == LE_QUEST_TAG_TYPE_PET_BATTLE or worldQuestType == LE_QUEST_TAG_TYPE_DUNGEON or worldQuestType == LE_QUEST_TAG_TYPE_PROFESSION) then
+				canFindGroup = false
 			end
-
-			if block.hasGroupFinderButton then
-				local groupFinderButton = block.groupFinderButton;
-				if not groupFinderButton then
-				  groupFinderButton = QuestObjectiveFindGroup_AcquireButton(block, questID);
-				  block.groupFinderButton = groupFinderButton;
-				end
-
-				QuestObjectiveFindGroupButton_Initialize(groupFinderButton);
-				groupFinderButton:RegisterForClicks("LeftButtonUp", "RightButtonUp");
-				groupFinderButton:SetScript("OnClick", function(self, button, down)
-					if (button == "RightButton") then
-						LFGListUtil_FindQuestGroup(self.questID)
-					else
-						WorldQuestGroupFinder.HandleBlockClick(self.questID)
-					end
-				end)
-				QuestObjectiveSetupBlockButton_AddRightButton(block, groupFinderButton, block.module.buttonOffsets.groupFinder);
-			else
-				QuestObjectiveReleaseBlockButton_FindGroup(block);
-			end
-			
-			return block.hasGroupFinderButton;
+		else 
+			canFindGroup = (QuestUtils_CanUseAutoGroupFinder(questID, true) and WorldQuestGroupFinderConf.GetConfigValue("regularQuests")) or block.hasGroupFinderButton
+		end
+		if (canFindGroup and not block.WQGFButton) then
+			block.WQGFButton = WorldQuestGroupFinder.CreateWQGFButton(block, questID, block.itemButton)
+		end
+		if (block.itemButton and block.WQGFButton) then
+			block.WQGFButton:SetPoint("TOPRIGHT", block, 5, -26)
 		end
 	end)
 	
@@ -770,7 +774,11 @@ function WorldQuestGroupFinder.InitWQGroup(questID, retry)
 		if (raidQuests[questID]) then
 			WorldQuestGroupFinder.dprint("This WQ can be completed in a raid")
 		end
-		WorldQuestGroupFinder.prefixedPrint(string.format(L["WQGF_SEARCHING_FOR_GROUP"], title))
+		if (worldQuestType) then
+			WorldQuestGroupFinder.prefixedPrint(string.format(L["WQGF_SEARCHING_FOR_GROUP"], title))
+		else
+			WorldQuestGroupFinder.prefixedPrint(string.format(L["WQGF_SEARCHING_FOR_GROUP_QUEST"], title))
+		end
 		-- Search for existing groups
 		C_LFGList.ClearSearchResults()
 		local selectedLanguages = {}
@@ -864,7 +872,11 @@ function WorldQuestGroupFinder.InitWQGroup(questID, retry)
 					WorldQuestGroupFinder.dprint(string.format("Failed group data: activityID: %d", activityID))
 				end
 			else 
-				WorldQuestGroupFinder.prefixedPrint(string.format(L["WQGF_APPLIED_TO_GROUPS"], applicationsCount, title), true)
+				if (worldQuestType) then
+					WorldQuestGroupFinder.prefixedPrint(string.format(L["WQGF_APPLIED_TO_GROUPS"], applicationsCount, title), true)
+				else
+					WorldQuestGroupFinder.prefixedPrint(string.format(L["WQGF_APPLIED_TO_GROUPS_QUEST"], applicationsCount, title), true)
+				end
 				TIMEOUT_TIMER = C_Timer.NewTicker(INVITE_TIMEOUT_DELAY, function() 
 					WorldQuestGroupFinder.HandleRequestTimeout(questID) 
 					WorldQuestGroupFinder.dprint(string.format("The timeout timer has ended (%d seconds)", INVITE_TIMEOUT_DELAY))
@@ -903,6 +915,10 @@ end
 function WorldQuestGroupFinder.HandleWorldQuestEnd(wqID, broadcast)
 	local broadcast = broadcast or false
 	currentWQ = nil
+	local targetBlock = WorldQuestGroupFinder.FindWQBlock(wqID)
+	if (targetBlock) then
+		targetBlock.WQGFButton:Show()
+	end
 	WorldQuestGroupFinder.resetTmpWQ()
 	WorldQuestGroupFinder.dprint(string.format("World quest ending process. ID: %d", wqID))
 	WorldQuestGroupFinderConf.SetConfigValue("savedCurrentWQ", nil, "CHAR")
@@ -910,10 +926,6 @@ function WorldQuestGroupFinder.HandleWorldQuestEnd(wqID, broadcast)
 	LFGListFrame.ApplicationViewer.AutoAcceptButton:Show()
 	if (IsInGroup() and UnitIsGroupLeader("player") and broadcast) then
 		WorldQuestGroupFinder.BroadcastMessage("#WQE:"..wqID.."#")
-	end
-	local targetBlock = WorldQuestGroupFinder.FindWQBlock(wqID)
-	if (targetBlock) then
-		targetBlock.groupFinderButton:Show()
 	end
 	currentWQFrame:Hide()
 end
@@ -1084,7 +1096,11 @@ function WorldQuestGroupFinder.HandleBlockClick(wqID)
 		end
 		if (currentWQ ~= nil and wqID ~= currentWQ) then
 			WorldQuestGroupFinder.dprint(string.format("Clicked world quest is not the same is current (%d). Showing NEW_WORLD_QUEST_PROMPT.", currentWQ))
-			WorldQuestGroupFinder.ShowDialog ("NEW_WORLD_QUEST_PROMPT")
+			if QuestUtils_IsQuestWorldQuest(currentWQ) then
+				WorldQuestGroupFinder.ShowDialog ("NEW_WORLD_QUEST_PROMPT")
+			else
+				WorldQuestGroupFinder.ShowDialog ("NEW_QUEST_PROMPT")
+			end
 		else 
 			-- No current WQ. 
 			if (currentWQ == nil or (C_LFGList.GetNumApplications() == 0 and not C_LFGList.GetActiveEntryInfo())) then
@@ -1143,6 +1159,7 @@ function WorldQuestGroupFinder.AttachBorderToWQ(wqID, update)
 			currentWQFrame.RefreshButton:SetFrameLevel(10)
 			currentWQFrame.RefreshButton:RegisterForClicks("LeftButtonUp")
 			currentWQFrame.RefreshButton:SetScript("OnClick", WorldQuestGroupFinder.RefreshButton_OnClick)
+			currentWQFrame.RefreshButton:SetScript("OnEnter", RefreshButton_OnEnter)
 			currentWQFrame.RefreshButton:SetSize(20, 20);
 
 			currentWQFrame.RefreshButton.Icon = currentWQFrame.RefreshButton:CreateTexture(currentWQFrame.RefreshButton:GetName().."Texture", "OVERLAY")
@@ -1155,6 +1172,7 @@ function WorldQuestGroupFinder.AttachBorderToWQ(wqID, update)
 			currentWQFrame.StopButton:SetFrameLevel(10)
 			currentWQFrame.StopButton:RegisterForClicks("LeftButtonUp")
 			currentWQFrame.StopButton:SetScript("OnClick", WorldQuestGroupFinder.StopButton_OnClick)
+			currentWQFrame.StopButton:SetScript("OnEnter", StopButton_OnEnter)
 			currentWQFrame.StopButton:SetSize(20, 20);
 
 			currentWQFrame.StopButton.Icon = currentWQFrame.StopButton:CreateTexture(currentWQFrame.StopButton:GetName().."Texture", "OVERLAY")
@@ -1166,7 +1184,9 @@ function WorldQuestGroupFinder.AttachBorderToWQ(wqID, update)
 			WorldQuestGroupFinder.AssignButtonTextures(currentWQFrame.StopButton)
 		end
 		
-		targetBlock.groupFinderButton:Hide()
+		if (targetBlock.WQGFButton) then
+			targetBlock.WQGFButton:Hide()
+		end
 		
 		return currentWQFrame
 	else 
@@ -1174,8 +1194,37 @@ function WorldQuestGroupFinder.AttachBorderToWQ(wqID, update)
 	end
 end
 
+function WorldQuestGroupFinder.CreateWQGFButton(block, questID) 
+	local groupFinderButton = CreateFrame("button", questID.."GroupFinderButton", block)
+	groupFinderButton:SetFlattensRenderLayers(true)
+	groupFinderButton:SetPoint("TOPRIGHT", 5, 0)
+	groupFinderButton:SetFrameLevel(10)
+	groupFinderButton:RegisterForClicks("LeftButtonUp", "RightButtonUp")
+	groupFinderButton:SetScript("OnClick", function(self, button, down)
+		if (button == "RightButton") then
+			LFGListUtil_FindQuestGroup(self:GetParent().id)
+		else
+			WorldQuestGroupFinder.HandleBlockClick(self:GetParent().id)
+		end
+	end)
+	groupFinderButton:SetScript("OnEnter", WQGFButton_OnEnter)
+	groupFinderButton:SetSize(20, 20)
+	groupFinderButton:SetFrameLevel(500)
+	
+	groupFinderButton.Icon = groupFinderButton:CreateTexture(groupFinderButton:GetName().."Texture", "OVERLAY")
+	groupFinderButton.Icon:SetSize(12, 12)
+	groupFinderButton.Icon:SetPoint("CENTER", 0, 0)
+	groupFinderButton.Icon:SetAtlas("socialqueuing-icon-eye")
+	WorldQuestGroupFinder.AssignButtonTextures(groupFinderButton)
+	return groupFinderButton
+end
+
 function WorldQuestGroupFinder.SendWQCompletionPartyNotification (wqID)
-	SendChatMessage(string.format("[WQGF] %s: %s :)", WorldQuestGroupFinder.GetQuestInfo(wqID), WORLD_QUEST_COMPLETE), "PARTY", "", "");
+	if QuestUtils_IsQuestWorldQuest(wqID) then
+		SendChatMessage(string.format("[WQGF] %s: %s :)", WorldQuestGroupFinder.GetQuestInfo(wqID), WORLD_QUEST_COMPLETE), "PARTY", "", "");
+	else
+		SendChatMessage(string.format("[WQGF] %s: %s :)", WorldQuestGroupFinder.GetQuestInfo(wqID), QUEST_COMPLETE), "PARTY", "", "");
+	end
 end
 
 function WorldQuestGroupFinder.AssignButtonTextures(button)
@@ -1194,6 +1243,37 @@ function WorldQuestGroupFinder.AssignButtonTextures(button)
 	button:GetPushedTexture():SetPoint("CENTER", button:GetPushedTexture():GetParent())
 	button:GetPushedTexture():SetSize(32, 32)
 	button:GetPushedTexture():SetTexCoord(0.375, 0.500, 0.375, 0.5)
+end
+	
+function RefreshButton_OnEnter(self)
+	GameTooltip:SetOwner(self);
+	GameTooltip:AddLine(L["WQGF_REFRESH_TOOLTIP"], HIGHLIGHT_FONT_COLOR:GetRGB());
+	if not self:IsEnabled() and C_LFGList.GetActiveEntryInfo() then
+		local r, g, b = RED_FONT_COLOR:GetRGB();
+		GameTooltip:AddLine(CANNOT_DO_THIS_WHILE_LFGLIST_LISTED, r, g, b, true);
+	end
+	GameTooltip:Show();
+end
+
+function StopButton_OnEnter(self)
+	GameTooltip:SetOwner(self);
+	GameTooltip:AddLine(L["WQGF_STOP_TOOLTIP"], HIGHLIGHT_FONT_COLOR:GetRGB());
+	if not self:IsEnabled() and C_LFGList.GetActiveEntryInfo() then
+		local r, g, b = RED_FONT_COLOR:GetRGB();
+		GameTooltip:AddLine(CANNOT_DO_THIS_WHILE_LFGLIST_LISTED, r, g, b, true);
+	end
+	GameTooltip:Show();
+end
+
+function WQGFButton_OnEnter(self)
+	GameTooltip:SetOwner(self);
+	GameTooltip:AddLine(L["WQGF_FIND_GROUP_TOOLTIP"], YELLOW_FONT_COLOR:GetRGB());
+	GameTooltip:AddLine(L["WQGF_FIND_GROUP_TOOLTIP_2"], HIGHLIGHT_FONT_COLOR:GetRGB());
+	if not self:IsEnabled() and C_LFGList.GetActiveEntryInfo() then
+		local r, g, b = RED_FONT_COLOR:GetRGB();
+		GameTooltip:AddLine(CANNOT_DO_THIS_WHILE_LFGLIST_LISTED, r, g, b, true);
+	end
+	GameTooltip:Show();
 end
 
 function WorldQuestGroupFinder.RefreshButton_OnClick()
@@ -1222,11 +1302,19 @@ function WorldQuestGroupFinder.StopButton_OnClick()
 	end
 end
 
-function WorldQuestGroupFinder.ShowLeavePrompt()
+function WorldQuestGroupFinder.ShowLeavePrompt(isWQ)
 	if (UnitIsGroupLeader("player")) then
-		WorldQuestGroupFinder.ShowDialog ("WORLD_QUEST_FINISHED_LEADER_PROMPT")
+		if isWQ then
+			WorldQuestGroupFinder.ShowDialog ("WORLD_QUEST_FINISHED_LEADER_PROMPT")
+		else
+			WorldQuestGroupFinder.ShowDialog ("QUEST_FINISHED_LEADER_PROMPT")
+		end
 	else 
-		WorldQuestGroupFinder.ShowDialog ("WORLD_QUEST_FINISHED_PROMPT")
+		if isWQ then
+			WorldQuestGroupFinder.ShowDialog ("WORLD_QUEST_FINISHED_PROMPT")
+		else
+			WorldQuestGroupFinder.ShowDialog ("QUEST_FINISHED_PROMPT")
+		end
 	end
 end
 
@@ -1257,6 +1345,15 @@ function WorldQuestGroupFinder.handleCMD(msg, editbox)
 	elseif (string.lower(msg) == "unbl") then
 		blacklistedLeaders = {}
 		WorldQuestGroupFinder.prefixedPrint(L["WQGF_LEADERS_BL_CLEARED"])
+	elseif (string.lower(msg) == "toggle") then
+		local currentValue = WorldQuestGroupFinderConf.GetConfigValue("askZoning")
+		if (currentValue) then
+			WorldQuestGroupFinderConf.SetConfigValue("askZoning", false)
+			WorldQuestGroupFinder.prefixedPrint(L["WQGF_ZONE_DETECTION_DISABLED"])
+		else
+			WorldQuestGroupFinderConf.SetConfigValue("askZoning", true)
+			WorldQuestGroupFinder.prefixedPrint(L["WQGF_ZONE_DETECTION_ENABLED"])
+		end
 	else
 		WorldQuestGroupFinder.help()
 	end
@@ -1266,6 +1363,7 @@ function WorldQuestGroupFinder.help()
 	print(L["WQGF_SLASH_COMMANDS_1"])
 	print(L["WQGF_SLASH_COMMANDS_2"])
 	print(L["WQGF_SLASH_COMMANDS_3"])
+	print(L["WQGF_SLASH_COMMANDS_4"])
 end
 
 function WorldQuestGroupFinder.prefixedPrint(text, verbose)
@@ -1357,6 +1455,5 @@ function WorldQuestGroupFinder.updateRealmTypeInComment(newType)
 		return;
 	end
 	comment = string.gsub(comment, "#([%w]+)#", "#"..newType.."#")
-	WorldQuestGroupFinder.dprint("New comment: %s", comment)
-	C_LFGList.UpdateListing(activityID, "", iLevel, honorLevel, voiceChat, comment, autoAccept, currentWQ);
+	C_LFGList.UpdateListing(activityID, "", iLevel, honorLevel, voiceChat, comment, autoAccept, false, currentWQ);
 end

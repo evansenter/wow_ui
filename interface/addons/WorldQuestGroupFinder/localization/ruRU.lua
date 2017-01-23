@@ -1,13 +1,17 @@
 local L = LibStub("AceLocale-3.0"):NewLocale("WorldQuestGroupFinder", "ruRU") 
 if not L then return end 
-
+L = L or {}
 L["WQGF_ADDON_DESCRIPTION"] = "Упрощает поиск игроков для выполнения локальных заданий используя \"Заранее собранные группы\""
 L["WQGF_ALREADY_IS_GROUP_FOR_WQ"] = "Вы уже находитесь в группе для выполнения этого локального задания."
 L["WQGF_ALREADY_QUEUED_BG"] = "Вы состоите в поиске поля боя. Пожалуйста покиньте очередь и повторите снова."
 L["WQGF_ALREADY_QUEUED_DF"] = "Вы состоите в поиске подземелья. Пожалуйста покиньте очередь и повторите снова."
 L["WQGF_ALREADY_QUEUED_RF"] = "Вы состоите в поиске рейда. Пожалуйста покиньте очередь и повторите снова."
 L["WQGF_APPLIED_TO_GROUPS"] = "Было отправлено |c00bfffff%d|c00ffffff заявок для локального задания |c00bfffff%s|c00ffffff."
+L["WQGF_APPLIED_TO_GROUPS_QUEST"] = "Было отправлено |c00bfffff%d|c00ffffff заявок для задания |c00bfffff%s|c00ffffff."
 L["WQGF_AUTO_LEAVING_DIALOG"] = [=[Вы выполнили локальное задание и покинете группу через %d секунд.
+
+Скажите до свидания!]=]
+L["WQGF_AUTO_LEAVING_DIALOG_QUEST"] = [=[Вы выполнили задание и покинете группу через %d секунд.
 
 Скажите до свидания!]=]
 L["WQGF_CANCEL"] = "Отменить"
@@ -58,9 +62,15 @@ L["WQGF_DEBUG_MODE_ENABLED"] = "Режим отладки активирован
 L["WQGF_DEBUG_NO_CURRENT_WQ_ID"] = "Неизвестное локальное задание."
 L["WQGF_DEBUG_WQ_ZONES_ENTERED"] = "Квестовые зоны посещенные за данную сессию:"
 L["WQGF_DELIST"] = "Отписать группу"
+L["WQGF_FIND_GROUP_TOOLTIP"] = "Найти группу"
+L["WQGF_FIND_GROUP_TOOLTIP_2"] = "Правый клик мыши для обзора открытых групп"
 L["WQGF_GLOBAL_CONFIGURATION"] = "Глобальная конфигурация:"
 L["WQGF_GROUP_CREATION_ERROR"] = "При попытке создания новой группы произошла ошибка."
+L["WQGF_GROUP_NO_LONGER_DOING_QUEST"] = "Ваша группа больше не выполняет задание |c00bfffff%s|c00ffffff."
 L["WQGF_GROUP_NO_LONGER_DOING_WQ"] = "Ваша группа больше не выполняет локальное задание |c00bfffff%s|c00ffffff."
+L["WQGF_GROUP_NOW_DOING_QUEST"] = "Ваша группа на данный момент выполняет задание |c00bfffff%s|c00ffffff."
+L["WQGF_GROUP_NOW_DOING_QUEST_ALREADY_COMPLETE"] = "Ваша группа на данный момент выполняет задание |c00bfffff%s|c00ffffff. Вы уже выполнили данное задание."
+L["WQGF_GROUP_NOW_DOING_QUEST_NOT_ELIGIBLE"] = "Ваша группа на данный момент выполняет задание |c00bfffff%s|c00ffffff. Вы не соответствуете требованиям для выполнения задания."
 L["WQGF_GROUP_NOW_DOING_WQ"] = "Ваша группа сейчас выполняет локальное задание |c00bfffff%s|c00ffffff."
 L["WQGF_GROUP_NOW_DOING_WQ_ALREADY_COMPLETE"] = "Ваша група сейчас выполняет локальное задание |c00bfffff%s|c00ffffff. Вы уже выполнили данное задание."
 L["WQGF_GROUP_NOW_DOING_WQ_NOT_ELIGIBLE"] = "Ваша группа сейчас выполняет локальное задание |c00bfffff%s|c00ffffff. Вы не удовлетворяете условиям для выполнения данного задания."
@@ -73,16 +83,27 @@ L["WQGF_NO"] = "Нет"
 L["WQGF_NO_APPLICATIONS_ANSWERED"] = "Истекло время для ответа на запрос для выполнения задания |c00bfffff%s|c00ffffff. Пытаемся найти новую группу..."
 L["WQGF_NO_APPLY_BLACKLIST"] = "Вы не отправили заявку в %d групп, поскольку игнорируете их лидеров. Вы можете использовать |c00bfffff/wqgf unbl |c00ffffffчтобы очистить список."
 L["WQGF_PLAYER_IS_NOT_LEADER"] = "Вы не являетесь лидером группы."
+L["WQGF_QUEST_COMPLETE_LEAVE_DIALOG"] = [=[Вы выполнили задание.
+Желаете покинуть группу?]=]
+L["WQGF_QUEST_COMPLETE_LEAVE_OR_DELIST_DIALOG"] = [=[Вы выполнили задание.
+Желаете покинуть группу или отписать ее?]=]
 L["WQGF_RAID_MODE_WARNING"] = "|c0000ffffПРЕДУПРЕЖДЕНИЕ:|c00ffffff Группа находится в режиме рейда, вы не сможете выполнять локальные квесты. Попросите лидера изменить тип группы. Тип группы будет изменен автоматически, если вы станете ее лидером."
+L["WQGF_REFRESH_TOOLTIP"] = "Найти другую группу"
 L["WQGF_SEARCH_OR_CREATE_GROUP"] = "Найти или создать новую группу для выполнения задания."
 L["WQGF_SEARCHING_FOR_GROUP"] = "Ищем группу для локального задания |c00bfffff%s|c00ffffff..."
+L["WQGF_SEARCHING_FOR_GROUP_QUEST"] = "Ищем группу для задания |c00bfffff%s|c00ffffff..."
 L["WQGF_SLASH_COMMANDS_1"] = "|c00bfffffСлеш команды (/wqgf):"
 L["WQGF_SLASH_COMMANDS_2"] = "|c00bfffff /wqgf config : Открыть конфигурацию аддона"
 L["WQGF_SLASH_COMMANDS_3"] = "|c00bfffff /wqgf unbl : Очистить черный список лидеров группы"
+L["WQGF_SLASH_COMMANDS_4"] = "|c00bfffff /wqgf toggle : Включить обнаружение новых зон для локальных заданий"
+L["WQGF_START_ANOTHER_QUEST_DIALOG"] = [=[Вы состоите в группе для выполнения другого задания.
+
+Желаете начать выполнение нового задания?]=]
 L["WQGF_START_ANOTHER_WQ_DIALOG"] = [=[Вы состоите в группе для выполнения другого локального задания.
 
-Желаете начать выполнение другого задания?]=]
+Желаете начать выполнение нового задания?]=]
 L["WQGF_STAY"] = "Остаться"
+L["WQGF_STOP_TOOLTIP"] = "Остановить выполнение локального задания"
 L["WQGF_TRANSLATION_INFO"] = "Перевод выполнен Минтерм (EU-Soulflayer)"
 L["WQGF_USER_JOINED"] = "Пользователь World Quest Group Finder присоединился к группе!"
 L["WQGF_USERS_JOINED"] = "Пользователи World Quest Group Finder присоединились к группе!"
@@ -102,3 +123,5 @@ L["WQGF_WQ_GROUP_APPLY_CANCELLED"] = "Вы отменили предложени
 L["WQGF_WQ_GROUP_DESCRIPTION"] = "Создано автоматически аддоном World Quest Group Finder %s."
 L["WQGF_WRONG_LOCATION_FOR_WQ"] = "Вы находитесь в неподходящей локации для выполнения данного локального задания."
 L["WQGF_YES"] = "Да"
+L["WQGF_ZONE_DETECTION_DISABLED"] = "Обнаружение новых зон заданий отключено."
+L["WQGF_ZONE_DETECTION_ENABLED"] = "Обнаружение новых зон заданий включено."

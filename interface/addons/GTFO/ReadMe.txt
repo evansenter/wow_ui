@@ -1186,3 +1186,6 @@ Change Log:
 * Added Legion spells for The Broken Isles (world)
 * Added Legion spells for Nighthold
 
+4.42.2
+* Added Legion spells for Nighthold
+

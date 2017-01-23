@@ -1,13 +1,17 @@
 local L = LibStub("AceLocale-3.0"):NewLocale("WorldQuestGroupFinder", "deDE") 
 if not L then return end 
-
+L = L or {}
 L["WQGF_ADDON_DESCRIPTION"] = "Macht es dir einfach Gruppen für Weltquests mit dem Gruppenfinder zu finden."
 L["WQGF_ALREADY_IS_GROUP_FOR_WQ"] = "Du bist bereits in einer Gruppe für diese Weltquest."
 L["WQGF_ALREADY_QUEUED_BG"] = "Du bist momentan in der Warteschlange für ein Schlachtfeld. Bitte verlasse die Warteschlange und versuche es erneut."
 L["WQGF_ALREADY_QUEUED_DF"] = "Du bist momentan in der Warteschlange des Dungeonbrowsers. Bitte verlasse die Warteschlange und versuche es erneut."
 L["WQGF_ALREADY_QUEUED_RF"] = "Du bist momentan in der Warteschlange des Schlachtzugsbrowsers. Bitte verlasse die Warteschlange und versuche es erneut."
 L["WQGF_APPLIED_TO_GROUPS"] = "Du wirst bei |c00bfffff%d|c00ffffff Gruppe(n) für die Weltquest |c00bfffff%s|c00ffffff angemeldet."
+L["WQGF_APPLIED_TO_GROUPS_QUEST"] = "Du wurdest bei |c00bfffff%d|c00ffffff Gruppe(n) für die Quest |c00bfffff%s|c00ffffff angemeldet."
 L["WQGF_AUTO_LEAVING_DIALOG"] = [=[Du hast die Weltquest abgeschlossen und verlässt die Gruppe in %d Sekunden.
+
+Sag auf Wiedersehen!]=]
+L["WQGF_AUTO_LEAVING_DIALOG_QUEST"] = [=[Du hast die Quest abgeschlossen und wirst die Gruppe in %d Sekunden verlassen.
 
 Sag auf Wiedersehen!]=]
 L["WQGF_CANCEL"] = "Abbrechen"
@@ -58,9 +62,15 @@ L["WQGF_DEBUG_MODE_ENABLED"] = "Debugmodus ist jetzt aktiviert."
 L["WQGF_DEBUG_NO_CURRENT_WQ_ID"] = "Keine aktuelle Weltquest."
 L["WQGF_DEBUG_WQ_ZONES_ENTERED"] = "Betretene Weltquestgebiete in dieser Sitzung:"
 L["WQGF_DELIST"] = "Abmelden"
+L["WQGF_FIND_GROUP_TOOLTIP"] = "Gruppe mit WQGF finden"
+L["WQGF_FIND_GROUP_TOOLTIP_2"] = "Rechtsklicken, um Gruppen zu durchstöbern"
 L["WQGF_GLOBAL_CONFIGURATION"] = "Allgemeine Konfiguration:"
 L["WQGF_GROUP_CREATION_ERROR"] = "Ein Fehler ist bei der Erstellung eines neuen Eintrages im Dungeonbrowser aufgetreten. Bitte erneut versuchen."
+L["WQGF_GROUP_NO_LONGER_DOING_QUEST"] = "Deine Gruppe macht nicht mehr die Quest |c00bfffff%s|c00ffffff."
 L["WQGF_GROUP_NO_LONGER_DOING_WQ"] = "Deine Gruppe macht nicht mehr die Weltquest |c00bfffff%s|c00ffffff."
+L["WQGF_GROUP_NOW_DOING_QUEST"] = "Deine Gruppe macht jetzt die Quest |c00bfffff%s|c00ffffff."
+L["WQGF_GROUP_NOW_DOING_QUEST_ALREADY_COMPLETE"] = "Deine Gruppe macht jetzt die Quest |c00bfffff%s|c00ffffff. Du hast diese Quest bereits abgeschlossen."
+L["WQGF_GROUP_NOW_DOING_QUEST_NOT_ELIGIBLE"] = "Deine Gruppe macht jetzt die Quest |c00bfffff%s|c00ffffff. Du bist nicht für diese Quest berechtigt."
 L["WQGF_GROUP_NOW_DOING_WQ"] = "Deine Gruppe macht jetzt die Weltquest |c00bfffff%s|c00ffffff."
 L["WQGF_GROUP_NOW_DOING_WQ_ALREADY_COMPLETE"] = "Deine Gruppe macht jetzt die Weltquest |c00bfffff%s|c00ffffff. Du hast diese Weltquest bereits abgeschlossen."
 L["WQGF_GROUP_NOW_DOING_WQ_NOT_ELIGIBLE"] = "Deine Gruppe macht jetzt die Weltquest |c00bfffff%s|c00ffffff. Du bist nicht für diese Weltquest berechtigt."
@@ -73,16 +83,29 @@ L["WQGF_NO"] = "Nein"
 L["WQGF_NO_APPLICATIONS_ANSWERED"] = "Keine deiner Anmeldungen für |c00bfffff%s|c00ffffff wurden rechtzeitig beantwortet. Suche nach neuen Gruppen..."
 L["WQGF_NO_APPLY_BLACKLIST"] = "Du wurdest nicht bei %d Gruppe(n) angemeldet, weil deren Anführer auf der Ignorierliste steht. Du kannst mit |c00bfffff/wqgf unbl |c00ffffffdie Ignorierliste leeren."
 L["WQGF_PLAYER_IS_NOT_LEADER"] = "Du bist nicht der Gruppenanführer"
+L["WQGF_QUEST_COMPLETE_LEAVE_DIALOG"] = [=[Du hast die Quest abgeschlossen.
+
+Willst du die Gruppe verlassen?]=]
+L["WQGF_QUEST_COMPLETE_LEAVE_OR_DELIST_DIALOG"] = [=[Du hast die Quest abgeschlossen.
+
+Willst du die Gruppe verlassen oder sie vom Dungeonbrowser abmelden?]=]
 L["WQGF_RAID_MODE_WARNING"] = "|c0000ffffWARNUNG:|c00ffffff Diese Gruppe ist ein Schlachtzug, das bedeutet, dass du die Weltquest nicht abschließen kannst. Du solltest den Anführer bitten, den Schlachtzug in eine Gruppe umzuwandeln. Der Schlachtzug wird automatisch in eine Gruppe umgewandelt, wenn du der Anführer wirst."
+L["WQGF_REFRESH_TOOLTIP"] = "Eine andere Gruppe suchen"
 L["WQGF_SEARCH_OR_CREATE_GROUP"] = "Gruppe suchen oder erstellen"
 L["WQGF_SEARCHING_FOR_GROUP"] = "Suche nach einer Gruppe für die Weltquest |c00bfffff%s|c00ffffff..."
+L["WQGF_SEARCHING_FOR_GROUP_QUEST"] = "Suche nach einer Gruppe für die Quest |c00bfffff%s|c00ffffff..."
 L["WQGF_SLASH_COMMANDS_1"] = "|c00bfffffSlash-Befehle (/wqgf):"
 L["WQGF_SLASH_COMMANDS_2"] = "|c00bfffff /wqgf config : Öffnet die Addon-Konfiguration"
 L["WQGF_SLASH_COMMANDS_3"] = "|c00bfffff /wqgf unbl : Leert die Ignorierliste für Anführer"
+L["WQGF_SLASH_COMMANDS_4"] = "|c00bfffff /wqgf toggle : Schaltet die Erkennung neuer Weltquestgebiete ein/aus"
+L["WQGF_START_ANOTHER_QUEST_DIALOG"] = [=[Du bist momentan in einer Gruppe für eine andere Quest.
+
+Bist du sicher, dass du eine andere anfangen möchtest?]=]
 L["WQGF_START_ANOTHER_WQ_DIALOG"] = [=[Du bist momentan in einer Gruppe für eine andere Weltquest.
 
 Bist du sicher, dass du eine andere anfangen möchtest?]=]
 L["WQGF_STAY"] = "Bleiben"
+L["WQGF_STOP_TOOLTIP"] = "Mit dieser Weltquest aufhören"
 L["WQGF_TRANSLATION_INFO"] = "Ins Deutsche übersetzt von Bullsei"
 L["WQGF_USER_JOINED"] = "Ein Nutzer von World Quest Group Finder ist der Gruppe beigetreten!"
 L["WQGF_USERS_JOINED"] = "Eine Gruppe mit WQGF-Nutzern sind der Gruppe beigetreten!"
@@ -102,3 +125,5 @@ L["WQGF_WQ_GROUP_APPLY_CANCELLED"] = "Du hast deine Anmeldung für die Gruppe vo
 L["WQGF_WQ_GROUP_DESCRIPTION"] = "Automatisch erstellt durch World Quest Group Finder %s."
 L["WQGF_WRONG_LOCATION_FOR_WQ"] = "Du bist nicht am richtigen Ort für diese Weltquest"
 L["WQGF_YES"] = "Ja"
+L["WQGF_ZONE_DETECTION_DISABLED"] = "Die Erkennung neuer Weltquestgebiete ist jetzt deaktiviert."
+L["WQGF_ZONE_DETECTION_ENABLED"] = "Die Erkennung neuer Weltquestgebiete ist jetzt aktiviert."

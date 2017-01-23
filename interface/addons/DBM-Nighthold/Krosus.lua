@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1713, "DBM-Nighthold", nil, 786)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 15681 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 15690 $"):sub(12, -3))
 mod:SetCreatureID(101002)
 mod:SetEncounterID(1842)
 mod:SetZone()
@@ -23,6 +23,7 @@ mod:RegisterEventsInCombat(
 --(ability.id = 205368 or ability.id = 205370 or ability.id = 205420 or ability.id = 205361) and type = "begincast"
 --TODO, improve info frame to show active mob count on top of burning pitch on player true/false? instead of just being burning pitch list for entire raid?
 local warnExpelOrbDestro			= mod:NewTargetCountAnnounce(205344, 4)
+local warnSlamSoon					= mod:NewAnnounce("warnSlamSoon", 4, 205862, nil, nil, true)
 local warnSlam						= mod:NewCountAnnounce(205862, 2)--Regular slams don't need special warn, only bridge smashing ones
 
 local specWarnSearingBrand			= mod:NewSpecialWarningStack(206677, nil, 5, nil, 2, 1, 2)--Lets go with 5 for now
@@ -31,7 +32,7 @@ local specWarnFelBeam				= mod:NewSpecialWarningDodge(205368, nil, nil, nil, 2, 
 local specWarnOrbDestro				= mod:NewSpecialWarningMoveAway(205344, nil, nil, nil, 3, 2)
 local yellOrbDestro					= mod:NewFadesYell(205344)
 local specWarnBurningPitch			= mod:NewSpecialWarningCount(205420, nil, nil, nil, 2, 6)
-local specWarnSlam					= mod:NewSpecialWarningDodge(205862, nil, nil, nil, 3, 2)--every 3rd slam level 3 special warning
+local specWarnSlam					= mod:NewSpecialWarningRun(205862, nil, nil, nil, 4, 2)
 local specWarnFelBlast				= mod:NewSpecialWarningInterrupt(209017, false, nil, 2, 1, 2)
 local specWarnFelBurst				= mod:NewSpecialWarningInterrupt(206352, "HasInterrupt", nil, nil, 1, 2)
 
@@ -47,7 +48,7 @@ local countdownBigSlam				= mod:NewCountdown(90, 205862)
 local countdownOrbDestro			= mod:NewCountdownFades("AltTwo5", 205344)
 
 local voiceSearingBrand				= mod:NewVoice(206677)--tauntboss
-local voiceFelBeam					= mod:NewVoice(205368)--moveleft/moveright
+local voiceFelBeam					= mod:NewVoice(205368)--shockwave
 local voiceOrbDestro				= mod:NewVoice(205344)--runout
 local voiceBurningPitch				= mod:NewVoice(205420)--watchstep/helpsoak(new)
 local voiceSlam						= mod:NewVoice(205862)--justrun
@@ -57,7 +58,6 @@ local voiceFelBurst					= mod:NewVoice(206352, "HasInterrupt")--kickcast
 mod:AddRangeFrameOption(5, 206352)
 --mod:AddSetIconOption("SetIconOnMC", 163472, false)
 mod:AddInfoFrameOption(215944, false)
-mod:AddArrowOption("ArrowOnBeam", 205368, true)
 
 local burningPitchDebuff = GetSpellInfo(215944)
 local mobGUIDs = {}
@@ -122,31 +122,18 @@ function mod:OnCombatEnd()
 	if self.Options.RangeFrame then
 		DBM.RangeCheck:Hide()
 	end
-	if self.Options.ArrowOnBeam then
-		DBM.Arrow:Hide()
-	end
 end
 
 function mod:SPELL_CAST_START(args)
 	local spellId = args.spellId
-	if spellId == 205368 or spellId == 205370 then--205370 left, 205368 right
+	if spellId == 205368 or spellId == 205370 then--205370 left, 205368 right (right no longer is used)
 		self.vb.beamCount = self.vb.beamCount + 1
 		specWarnFelBeam:Show()
+		voiceFelBeam:Play("shockwave")
 		local nextCount = self.vb.beamCount + 1
 		local timers = self:IsMythic() and mythicBeamTimers[nextCount] or self:IsHeroic() and heroicBeamTimers[nextCount] or lolBeamTimers[nextCount]
 		if timers then
 			timerFelBeamCD:Start(timers, nextCount)
-		end
-		if spellId == 205368 then--Coming from right (facing boss)
-			voiceFelBeam:Play("moveleft")
-			if self.Options.ArrowOnBeam then
-				DBM.Arrow:ShowStatic(90, 4)
-			end
-		else--coming from left (facing boss)
-			voiceFelBeam:Play("moveright")
-			if self.Options.ArrowOnBeam then
-				DBM.Arrow:ShowStatic(270, 4)
-			end
 		end
 	elseif spellId == 205420 then
 		self.vb.pitchCount = self.vb.pitchCount+ 1
@@ -183,8 +170,18 @@ function mod:SPELL_CAST_START(args)
 			specWarnSlam:Show()
 			voiceSlam:Play("justrun")
 			countdownBigSlam:Start()
+			warnSlamSoon:Schedule(85, 5)
+			warnSlamSoon:Schedule(86, 4)
+			warnSlamSoon:Schedule(87, 3)
+			warnSlamSoon:Schedule(88, 2)
+			warnSlamSoon:Schedule(89, 1)
 		else
 			warnSlam:Show(self.vb.slamCount)
+			if self:IsMeleeDps() then
+				--Warn melee to run out of all of them
+				specWarnSlam:Show()
+				voiceSlam:Play("justrun")
+			end
 		end
 	elseif spellId == 205361 then
 		self.vb.orbCount = self.vb.orbCount + 1

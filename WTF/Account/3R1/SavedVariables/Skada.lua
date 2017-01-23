@@ -41,7 +41,18 @@ SkadaDB = {
 					["barslocked"] = true,
 					["y"] = 183.999633789063,
 					["barfont"] = "ABF",
-					["name"] = "Healing",
+					["title"] = {
+						["color"] = {
+							["a"] = 0,
+							["r"] = 0,
+							["g"] = 0,
+							["b"] = 0,
+						},
+						["font"] = "ABF",
+						["fontsize"] = 11,
+						["height"] = 16,
+						["texture"] = "BantoBar",
+					},
 					["point"] = "BOTTOMRIGHT",
 					["barfontsize"] = 12,
 					["mode"] = "Healing",
@@ -59,18 +70,7 @@ SkadaDB = {
 						["bordertexture"] = "None",
 					},
 					["x"] = -4.00146484375,
-					["title"] = {
-						["color"] = {
-							["a"] = 0,
-							["r"] = 0,
-							["g"] = 0,
-							["b"] = 0,
-						},
-						["font"] = "ABF",
-						["fontsize"] = 11,
-						["height"] = 16,
-						["texture"] = "BantoBar",
-					},
+					["name"] = "Healing",
 				}, -- [1]
 				{
 					["titleset"] = false,

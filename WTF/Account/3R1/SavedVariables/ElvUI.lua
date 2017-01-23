@@ -26,10 +26,10 @@ ElvDB = {
 			["Evan"] = 46272594,
 			["Cometron"] = 11330625,
 			["Natal"] = 6615423,
-			["Combustion"] = 65005061,
+			["Combustion"] = 82575875,
 			["Pandatal"] = 404400,
 			["Natalan"] = 19768910,
-			["Comet"] = 442713219,
+			["Comet"] = 358931087,
 		},
 	},
 	["namespaces"] = {
@@ -92,15 +92,15 @@ ElvDB = {
 					},
 					[17] = {
 					},
-					[10060] = {
+					[139] = {
 					},
 					[33206] = {
 					},
-					[6788] = {
-					},
-					[139] = {
-					},
 					[123258] = {
+					},
+					[10060] = {
+					},
+					[6788] = {
 					},
 					[41635] = {
 					},
@@ -1816,7 +1816,7 @@ ElvDB = {
 					["enable"] = false,
 				},
 			},
-			["currentTutorial"] = 9,
+			["currentTutorial"] = 11,
 			["general"] = {
 				["totems"] = {
 					["size"] = 35,
@@ -1831,9 +1831,9 @@ ElvDB = {
 				},
 				["valuecolor"] = {
 					["a"] = 1,
-					["r"] = 0.25,
-					["g"] = 0.78,
-					["b"] = 0.92,
+					["r"] = 0,
+					["g"] = 1,
+					["b"] = 0.59,
 				},
 				["topPanel"] = false,
 				["bordercolor"] = {
@@ -1869,25 +1869,23 @@ ElvDB = {
 					["enable"] = false,
 				},
 			},
-			["bags"] = {
-				["countFontSize"] = 12,
-				["itemLevelFont"] = "ABF",
-				["ignoreItems"] = "",
-				["itemLevelFontSize"] = 12,
-				["sortInverted"] = false,
-				["junkIcon"] = true,
-				["countFont"] = "ABF",
-				["clearSearchOnClose"] = true,
-				["countFontOutline"] = "OUTLINE",
-				["itemLevelFontOutline"] = "OUTLINE",
-			},
-			["chat"] = {
-				["font"] = "ABF",
-				["tapFontSize"] = 12,
+			["bossAuraFiltersConverted"] = true,
+			["hideTutorial"] = true,
+			["auras"] = {
 				["fontSize"] = 12,
-				["emotionIcons"] = false,
-				["tabFont"] = "ABF",
-				["keywords"] = "%MYNAME%",
+				["font"] = "ABF",
+				["fontOutline"] = "OUTLINE",
+				["consolidatedBuffs"] = {
+					["fontSize"] = 12,
+					["durations"] = false,
+					["filter"] = false,
+				},
+				["buffs"] = {
+					["sortMethod"] = "INDEX",
+				},
+				["debuffs"] = {
+					["sortMethod"] = "INDEX",
+				},
 			},
 			["layoutSet"] = "healer",
 			["bagSortIgnoreItemsReset"] = true,
@@ -1936,7 +1934,11 @@ ElvDB = {
 					["combat"] = true,
 				},
 			},
-			["bossAuraFiltersConverted"] = true,
+			["raidcooldown"] = {
+				["enable"] = false,
+				["castannounce"] = true,
+				["cdannounce"] = true,
+			},
 			["unitframe"] = {
 				["fontSize"] = 14,
 				["statusbar"] = "BantoBar",
@@ -2258,26 +2260,25 @@ ElvDB = {
 			["nameplates"] = {
 				["font"] = "ABF",
 			},
-			["raidcooldown"] = {
-				["enable"] = false,
-				["castannounce"] = true,
-				["cdannounce"] = true,
-			},
-			["auras"] = {
-				["fontSize"] = 12,
+			["chat"] = {
 				["font"] = "ABF",
-				["fontOutline"] = "OUTLINE",
-				["consolidatedBuffs"] = {
-					["fontSize"] = 12,
-					["durations"] = false,
-					["filter"] = false,
-				},
-				["buffs"] = {
-					["sortMethod"] = "INDEX",
-				},
-				["debuffs"] = {
-					["sortMethod"] = "INDEX",
-				},
+				["tapFontSize"] = 12,
+				["fontSize"] = 12,
+				["emotionIcons"] = false,
+				["tabFont"] = "ABF",
+				["keywords"] = "%MYNAME%",
+			},
+			["bags"] = {
+				["countFontSize"] = 12,
+				["itemLevelFont"] = "ABF",
+				["ignoreItems"] = "",
+				["itemLevelFontSize"] = 12,
+				["sortInverted"] = false,
+				["junkIcon"] = true,
+				["countFont"] = "ABF",
+				["clearSearchOnClose"] = true,
+				["countFontOutline"] = "OUTLINE",
+				["itemLevelFontOutline"] = "OUTLINE",
 			},
 		},
 		["Venala - Cho'gall"] = {
@@ -3206,13 +3207,13 @@ ElvPrivateDB = {
 			},
 			["general"] = {
 				["chatBubbleFontSize"] = 12,
+				["normTex"] = "BantoBar",
+				["glossTex"] = "BantoBar",
 				["chatBubbles"] = "nobackdrop",
 				["raidmarkerbar"] = {
 					["enable"] = false,
 				},
 				["namefont"] = "ABF",
-				["glossTex"] = "BantoBar",
-				["normTex"] = "BantoBar",
 				["chatBubbleFont"] = "ABF",
 				["dmgfont"] = "ABF",
 			},
@@ -3231,16 +3232,19 @@ ElvPrivateDB = {
 				["enable"] = false,
 				["disableBlizzard"] = false,
 			},
+			["actionbar"] = {
+				["enable"] = false,
+			},
 			["skins"] = {
 				["blizzard"] = {
-					["tradeskill"] = false,
-					["talent"] = false,
 					["achievement"] = false,
-					["spellbook"] = false,
-					["pvp"] = false,
+					["tradeskill"] = false,
+					["losscontrol"] = false,
+					["talent"] = false,
 					["enable"] = false,
 					["lfg"] = false,
-					["losscontrol"] = false,
+					["pvp"] = false,
+					["spellbook"] = false,
 				},
 				["addons"] = {
 					["WeakAurasSkin"] = false,
@@ -3248,9 +3252,6 @@ ElvPrivateDB = {
 					["QuartzSkin"] = false,
 					["DBMSkin"] = false,
 				},
-			},
-			["actionbar"] = {
-				["enable"] = false,
 			},
 			["nameplates"] = {
 				["enable"] = false,
@@ -3402,10 +3403,10 @@ ElvPrivateDB = {
 			},
 			["general"] = {
 				["chatBubbleFontSize"] = 12,
-				["normTex"] = "BantoBar",
 				["chatBubbles"] = "nobackdrop",
-				["glossTex"] = "BantoBar",
 				["namefont"] = "ABF",
+				["glossTex"] = "BantoBar",
+				["normTex"] = "BantoBar",
 				["chatBubbleFont"] = "ABF",
 				["dmgfont"] = "ABF",
 			},
@@ -3426,16 +3427,16 @@ ElvPrivateDB = {
 			},
 			["skins"] = {
 				["blizzard"] = {
-					["lfg"] = false,
-					["enable"] = false,
-					["encounterjournal"] = false,
-					["garrison"] = false,
-					["spellbook"] = false,
-					["achievement"] = false,
-					["character"] = false,
 					["talent"] = false,
-					["quest"] = false,
+					["achievement"] = false,
+					["spellbook"] = false,
+					["enable"] = false,
 					["auctionhouse"] = false,
+					["quest"] = false,
+					["character"] = false,
+					["encounterjournal"] = false,
+					["lfg"] = false,
+					["garrison"] = false,
 				},
 			},
 			["cooldown"] = {

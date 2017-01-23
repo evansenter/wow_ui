@@ -31,9 +31,9 @@ Frame: ZoneAbilityFrame
 FrameLevel: 2
 Anchor: BOTTOM
 X: 0
-Y: 224
+Y: 220
 W: 64
-H: 5
+H: 4
 Frame: DBMMinimapButton
 FrameLevel: 3
 Anchor: TOPRIGHT

@@ -937,7 +937,6 @@ GTFO.SpellID["211634"] = {
 -- TODO: Arcing Bonds (Trilliax) -- FF Damage
 -- TODO: Fel Stomp (Spellblade Aluriel)
 -- TODO: Flames of Argus (Tichondrius)
--- TODO: Tainted Blood (Tichondrius) -- non-tank?  avoidable and not instant death?
 -- TODO: Ring of Shadows (Tichondrius)
 -- TODO: Isolated Rage (Krosus)
 -- TODO: Call of Night (High Botanist Tel'arn) -- when marked and not standing by someone unmarked
@@ -1012,12 +1011,6 @@ GTFO.SpellID["213278"] = {
   sound = 1;
 };
 
-GTFO.SpellID["219950"] = {
-  --desc = "Controlled Chaos (High Botanist Tel'arn)";
-  sound = 1;
-  test = true;
-};
-
 GTFO.SpellID["213624"] = {
   --desc = "Mark of Frost (Spellblade Aluriel)";
   sound = 4;
@@ -1027,7 +1020,6 @@ GTFO.SpellID["213624"] = {
 GTFO.SpellID["213520"] = {
   --desc = "Arcane Orb (Spellblade Aluriel)";
   sound = 1;
-  test = true;
 };
 
 GTFO.SpellID["212494"] = {
@@ -1039,6 +1031,28 @@ GTFO.SpellID["212494"] = {
 GTFO.SpellID["216027"] = {
   --desc = "Nether Zone (Tichondrius)";
   sound = 1;
+};
+
+GTFO.SpellID["224978"] = {
+  --desc = "Infinite Abyss (Abyss Watcher)";
+  sound = 1;
+};
+
+GTFO.SpellID["224984"] = {
+  --desc = "Fel Glare (Abyss Watcher)";
+  sound = 1;
+  negatingDebuffSpellID = 224982; -- Fel Glare
+};
+
+GTFO.SpellID["213534"] = {
+  --desc = "Echoes of the Void (Tichondrius)";
+  sound = 1;
+};
+
+GTFO.SpellID["219950"] = {
+  --desc = "Controlled Chaos (High Botanist Tel'arn)";
+  sound = 1;
+  test = true;
 };
 
 GTFO.SpellID["206398"] = {
