@@ -1,6 +1,6 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0114,
+	["LastVersion"] = 2.0115,
 	["LastPlayerFullName"] = "Combustion-Illidan",
 	["AutoSelectScales"] = true,
 	["UpgradeTracking"] = false,

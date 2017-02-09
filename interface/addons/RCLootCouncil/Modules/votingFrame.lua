@@ -5,7 +5,7 @@
 --		Will only show certain aspects depending on addon.isMasterLooter, addon.isCouncil and addon.mldb.observe
 
 local addon = LibStub("AceAddon-3.0"):GetAddon("RCLootCouncil")
-RCVotingFrame = addon:NewModule("RCVotingFrame", "AceComm-3.0")
+RCVotingFrame = addon:NewModule("RCVotingFrame", "AceComm-3.0", "AceTimer-3.0")
 local LibDialog = LibStub("LibDialog-1.0")
 local L = LibStub("AceLocale-3.0"):GetLocale("RCLootCouncil")
 
@@ -62,6 +62,8 @@ function RCVotingFrame:OnEnable()
 	active = true
 	moreInfo = db.modules["RCVotingFrame"].moreInfo
 	self.frame = self:GetFrame()
+	self:ScheduleTimer("CandidateCheck", 20)
+	addon:Debug("RCVotingFrame", "enabled")
 end
 
 function RCVotingFrame:OnDisable() -- We never really call this
@@ -94,6 +96,14 @@ function RCVotingFrame:EndSession(hide)
 	active = false -- The session has ended, so deactivate
 	self:Update()
 	if hide then self:Hide() end -- Hide if need be
+end
+
+function RCVotingFrame:CandidateCheck()
+	if not candidates[addon.playerName] and addon.masterLooter then -- If our own name isn't there, we assume it's not received
+		addon:DebugLog("CandidateCheck", "failed")
+		addon:SendCommand(addon.masterLooter, "candidates_request")
+		self:ScheduleTimer("CandidateCheck", 20) -- check again in 20
+	end
 end
 
 -- Removes a specific entry from the voting frame's columns
@@ -317,9 +327,9 @@ function RCVotingFrame:SwitchSession(s)
 	elseif t.subType ~= "Miscellaneous" and t.subType ~= "Junk" then
 		if t.subType == addon.db.global.localizedSubTypes["Artifact Relic"] then
 			local id = addon:GetItemIDFromLink(t.link)
-         self.frame.itemType:SetText(select(3, C_ArtifactUI.GetRelicInfoByItemID(id)).." "..t.subType)
+         self.frame.itemType:SetText(tostring(select(3, C_ArtifactUI.GetRelicInfoByItemID(id))).." "..t.subType)
 		else
-			self.frame.itemType:SetText(t.subType)
+			self.frame.itemType:SetText(tostring(t.subType))
 		end
 	else
 		if RCTokenTable[addon:GetItemIDFromLink(t.link)] then -- It's a token
@@ -350,11 +360,11 @@ function RCVotingFrame:BuildST()
 	local i = 1
 	-- We need to build the columns from the data in self.scrollCols
 	-- We only really need the colName and value to get added
-	local data = {}
-	for num, col in pairs(self.scrollCols) do
-		data[num] = {value = "", colName = col.colName}
-	end
 	for name in pairs(candidates) do
+		local data = {}
+		for num, col in ipairs(self.scrollCols) do
+			data[num] = {value = "", colName = col.colName}
+		end
 		rows[i] = {
 			name = name,
 			cols = data,

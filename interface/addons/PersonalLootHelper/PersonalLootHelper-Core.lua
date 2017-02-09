@@ -39,6 +39,31 @@ When PLH becomes disabled, set isAnnouncer to false
 	
 Changelog
 
+20170126 - 1.19
+	Resolved "script ran too long" error
+		note:  Reduced calls to PLH_GetRelicType() in IsAnUpgradeForCharacter()
+
+20170125 - 1.18
+	Fixed bug that was cauing PLH to activate even if loot method was set to "Master Looter"
+
+	Disabled PLH in BGs & arena
+	
+	Removed PLH enabled/PLH disabled announcements
+
+	Removed PLH whispers (for coordinate rolls mode);
+		players can still whisper "trade" or "trade [item]" to initiate rolls, but there will be less whisper spam now
+
+	Fixed bug in "coordinate rolls" mode where PLH would sometimes tell players that PLH did not have a record of the item they looted
+		note:  fixed by moving the addition of the looted item to whisperedItems[] earlier in PerformNotify()
+
+	Fixed bug that was causing trinkets to not be evaluated properly
+		note:  moved the trinket eligibility check before the primary attribute check in IsEquippableItemForCharacter
+
+	Added missing ToV and Nightbane (Karazhan) trinkets
+
+	Fixed bug that was causing rolls for off-spec relics to be incorrectly ignored
+		note:  added off-spec relic check back into IsEquippableItemForCharacter
+		
 20161025 - 1.17
 	Updated for 7.1
 	
@@ -646,6 +671,10 @@ to easily populate these arrays:
 ]]--	
 local TRINKET_AGILITY_DPS = {
 
+	-- 7.1.5 and previously missed 7.1 trinkets
+	142506, -- Eye of Guarm
+	142166, -- Ethereal Urn
+	
 	-- 7.1 trinkets
 	140027, -- Ley Spark
 	142164, -- Toe Knee's Promise
@@ -708,6 +737,9 @@ local TRINKET_AGILITY_DPS = {
 }
 
 local TRINKET_INTELLECT_DPS = {
+	-- 7.1.5 and previously missed 7.1 trinkets
+	142166, -- Ethereal Urn
+
 	-- 7.1 trinkets
 	140031, -- Mana Spark
 	142160, -- Mrrgria's Favor
@@ -755,6 +787,10 @@ local TRINKET_INTELLECT_DPS = {
 }
 
 local TRINKET_STRENGTH_DPS = {
+	-- 7.1.5 and previously missed 7.1 trinkets
+	142166, -- Ethereal Urn
+	142508, -- Chains of the Valorous
+
 	-- 7.1 trinkets
 	140035, -- Fluctuating Arc Capacitor
 	142164, -- Toe Knee's Promise
@@ -798,6 +834,10 @@ local TRINKET_STRENGTH_DPS = {
 }
 
 local TRINKET_HEALER = {
+	-- 7.1.5 and previously missed 7.1 trinkets
+	142166, -- Ethereal Urn
+	142507, -- Brinewater Slime in a Bottle
+
 	-- 7.1 trinkets
 	140031, -- Mana Spark
 	142160, -- Mrrgria's Favor
@@ -858,6 +898,10 @@ local TRINKET_HEALER = {
 }
 
 local TRINKET_TANK = {
+	-- 7.1.5 and previously missed 7.1 trinkets
+	142506, -- Eye of Guarm
+	142166, -- Ethereal Urn
+
 	-- 7.1 trinkets
 	140027, -- Ley Spark
 	140035, -- Fluctuating Arc Capacitor
@@ -1151,7 +1195,7 @@ local function IsEquippableItemForCharacter(item, characterName)
 			if isEquippableForClass then
 				if itemEquipLoc == 'INVTYPE_TRINKET' then
 					if spec == 105 or spec == 270 or spec == 65 or spec == 256 or spec == 257 or spec == 264 then
-						isEquippableForSpec = IsTrinketUsable(item, 'Healer')
+						isEquippableForSpec = IsTrinketUsable(item, 'Healer')					
 					elseif spec == 250 or spec == 581 or spec == 104 or spec == 268 or spec == 66 or spec == 73 then
 						isEquippableForSpec = IsTrinketUsable(item, 'Tank')
 					elseif spec == 577 or spec == 103 or spec == 253 or spec == 254 or spec == 255 or spec == 269 or spec == 259 or spec == 260 or spec == 261 or spec == 263 then
@@ -1210,11 +1254,7 @@ local function IsEquippableItemForCharacter(item, characterName)
 			elseif isRelic then
 				local relicType = PLH_GetRelicType(item)
 				isEquippableForSpec = IsValidRelicTypeForSpec(relicType, spec)
---print('in IsEquippableItemForCharacter for ' .. item .. ' for ' .. character .. ' ' .. tostring(spec))
---print('   relicType is ', relicType)
---print('   isEquippableForSpec is ', isEquippableForSpec)
 				isEquippableForClass = isEquippableForSpec
-	--[[  No point in checking offspec since we can't inspect the off-spec Artifact to see what relics it has!
 				if not PLH_CURRENT_SPEC_ONLY and not isEquippableForSpec then
 					if class == DEATH_KNIGHT then
 						isEquippableForOffspec = IsValidRelicTypeForSpec(relicType, 250) or IsValidRelicTypeForSpec(relicType, 251) or IsValidRelicTypeForSpec(relicType, 252)
@@ -1243,11 +1283,9 @@ local function IsEquippableItemForCharacter(item, characterName)
 					end
 					isEquippableForClass = isEquippableForSpec or isEquippableForOffspec
 				end
-	]]--			
 			end
 		end
 	end
-	
 --	PLH_SendDebugMessage('For ' .. characterName .. ' item ' .. item .. ' isEquippableForClass = ' .. tostring(isEquippableForClass) .. ' and isEquippableForSpec = ' .. tostring(isEquippableForSpec)  .. ' and isEquippableForOffspec = ' .. tostring(isEquippableForOffspec))
 	
 	return isEquippableForClass and (isEquippableForSpec or isEquippableForOffspec)
@@ -1329,33 +1367,25 @@ local function IsAnUpgradeForCharacter(item, characterName)
 
 		local relic1 = GetEquippedRelic(characterName, 1)
 		local relic1ILVL = PLH_GetRealILVL(relic1)
+		local relic1Type = PLH_GetRelicType(relic1)
 		local relic2 = GetEquippedRelic(characterName, 2)
 		local relic2ILVL = PLH_GetRealILVL(relic2)
+		local relic2Type = PLH_GetRelicType(relic2)
 		local relic3 = GetEquippedRelic(characterName, 3)
 		local relic3ILVL = PLH_GetRealILVL(relic3)
-		isAnUpgrade = (relicType == PLH_GetRelicType(relic1) and IsAnUpgrade(item, relic1))
-			or (relicType == PLH_GetRelicType(relic2) and IsAnUpgrade(item, relic2))
-			or (relicType == PLH_GetRelicType(relic3) and IsAnUpgrade(item, relic3))
---print('In IsAnUpgradeForCharacter ' .. characterName .. ' ' .. item)
---print('   isAnUpgrade = ', isAnUpgrade)
---print('   relic1ILVL = ', relic1ILVL)
---print('   relic1Type = ', PLH_GetRelicType(relic1))
---print('   relic2ILVL = ', relic2ILVL)
---print('   relic1Type = ', PLH_GetRelicType(relic2))
---print('   relic3ILVL = ', relic3ILVL)
---print('   relic1Type = ', PLH_GetRelicType(relic3))
---print('   looted relic ilvl = ', PLH_GetRealILVL(item))
---print('   looted relicType = ', relicType)
-		if relicType == PLH_GetRelicType(relic1) then
+		local relic3Type = PLH_GetRelicType(relic3)
+		isAnUpgrade = (relicType == relic1Type and IsAnUpgrade(item, relic1))
+			or (relicType == relic2Type and IsAnUpgrade(item, relic2))
+			or (relicType == relic3Type and IsAnUpgrade(item, relic3))
+		if relicType == relic1Type then
 			equippedILVL = relic1ILVL
 		end
-		if relicType == PLH_GetRelicType(relic2) and (equippedILVL == 0 or relic2ILVL < equippedILVL) then
+		if relicType == relic2Type and (equippedILVL == 0 or relic2ILVL < equippedILVL) then
 			equippedILVL = relic2ILVL
 		end
-		if relicType == PLH_GetRelicType(relic3) and (equippedILVL == 0 or relic3ILVL < equippedILVL) then
+		if relicType == relic3Type and (equippedILVL == 0 or relic3ILVL < equippedILVL) then
 			equippedILVL = relic3ILVL
 		end
---print('   equippedILVL = ', equippedILVL)		
 	end
 	return isAnUpgrade, equippedILVL
 end
@@ -1431,6 +1461,14 @@ end
 -- If that's the case, performs the action based on the users' selected Notify Mode
 local function PerformNotify(item, characterName)
 	local isAnUpgradeForLooter, equippedILVL = IsAnUpgradeForCharacter(item, characterName)
+	if PLH_NOTIFY_MODE == NOTIFY_MODE_COORDINATE_ROLLS and UnitIsGroupLeader('player') then
+		if not PLH_IsInLFR() then
+			whisperedItems[characterName] = item  -- use full name-realm since that what we'll get when we look it up from the whisper
+--			if #isAnUpgradeForAnyCharacterNames > 1 then  -- more than 1 person can use the item
+--						PLH_SendWhisper('You can trade ' .. item .. ', which is an ilvl upgrade for ' .. names .. '. Reply \'' .. TRADE_MESSAGE .. '\' to initiate rolls for this item.', characterName)
+--			end
+		end
+	end
 	if equippedILVL > 0 and not isAnUpgradeForLooter then
 		-- we now know the item can be traded by the person who received it, so let's check to see if anyone can actually
 		--    use the item as an upgrade
@@ -1441,14 +1479,6 @@ local function PerformNotify(item, characterName)
 			if PLH_NOTIFY_MODE == NOTIFY_MODE_GROUP or PLH_NOTIFY_MODE == NOTIFY_MODE_COORDINATE_ROLLS then
 				if not PLH_IsInLFR() then
 					PLH_SendBroadcast(PLH_GetNameWithoutRealm(characterName) .. ' can trade ' .. item .. ', which is an ilvl upgrade for ' .. names)
-				end
-			end
-			if PLH_NOTIFY_MODE == NOTIFY_MODE_COORDINATE_ROLLS and UnitIsGroupLeader('player') then
-				if not PLH_IsInLFR() then
-					whisperedItems[characterName] = item  -- use full name-realm since that what we'll get when we look it up from the whisper
-					if #isAnUpgradeForAnyCharacterNames > 1 then  -- more than 1 person can use the item
-						PLH_SendWhisper('You can trade ' .. item .. ', which is an ilvl upgrade for ' .. names .. '. Reply \'' .. TRADE_MESSAGE .. '\' to initiate rolls for this item.', characterName)
-					end
 				end
 			end
 
@@ -1515,11 +1545,6 @@ local function LootReceivedEvent(self, event, ...)
 	local arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9 = ...
 	local owner
 
-print('Entering LootReceivedEvent')
-print('arg1 is ', arg1)
-print('arg2 is ', arg2)
-print('arg5 is ', arg5)
-	
 	local message = arg1			
 	local _, _, lootedItem = string.find(message, 'You receive loot: (|.+|r)')
 	if lootedItem then
@@ -1723,14 +1748,11 @@ local function RollReceivedEvent(self, event, ...)
 end
 
 -- note that GetLootMethod() only works if you're in a party or in a raid.  If you're in an instance (i.e. queued via LFR),
---   then loot method is personal loot
+--   then loot method is automatically personal loot
 local function IsPersonalLoot()
-	local method, _, _ = GetLootMethod()
-	return IsInInstance() or method == 'personalloot'
-end
-
-local function ShouldBeEnabled()
-	return (IsPersonalLoot() and IsInGroup())
+	local isInstance, instanceType = IsInInstance()
+	return (IsInGroup(LE_PARTY_CATEGORY_INSTANCE) or (IsInGroup() and GetLootMethod() == 'personalloot'))
+		and (instanceType == "party" or instanceType == "raid")
 end
 
 local function ResetVariables()
@@ -2012,7 +2034,7 @@ local function Enable()
 	combatStatusChangedEventFrame:RegisterEvent('PLAYER_REGEN_DISABLED')   -- player entered combat
 	groupMemberInfoChangedEventFrame:RegisterEvent('PLAYER_SPECIALIZATION_CHANGED')
 	groupMemberInfoChangedEventFrame:RegisterEvent('UNIT_INVENTORY_CHANGED')
-	PLH_SendStatusMessage(false)
+--	PLH_SendStatusMessage(false)
 end
 
 local function Disable()
@@ -2025,11 +2047,11 @@ local function Disable()
 	combatStatusChangedEventFrame:UnregisterAllEvents()
 	groupMemberInfoChangedEventFrame:UnregisterAllEvents()
 	groupInfoCache = {}
-	PLH_SendStatusMessage(false)
+--	PLH_SendStatusMessage(false)
 end
 
 local function EnableOrDisable()
-	local shouldBeEnabled = ShouldBeEnabled()
+	local shouldBeEnabled = IsPersonalLoot()
 	if not isEnabled and shouldBeEnabled then	
 		Enable()
 	elseif isEnabled and not shouldBeEnabled then
@@ -2324,6 +2346,10 @@ function PLH_TestRelic(relic, item)
 --	print('gem1 ', gem1)
 --	print('gem2 ', gem2)
 --	print('gem3 ', gem3)
+end
+
+function PLH_Test(item)
+	print(IsEquippableItemForCharacter(item, "Madone-Zul'jin"))
 end
 
 --[[

@@ -1,3 +1,30 @@
+### v2.2.3
+---
+* **History Export**
+ * ItemStrings are now in a seperate column.
+ * Added a tab delimited export with hyperlinks on items (#232).
+
+
+* Allowed raid groups with less than 5 people (#236).
+
+##### Bugfixes
++ *CSV export now works as intended (#233)*
++ *Made ML/candidate communication more reliable (#235)*
++ *The Version Checker will now display the realm part of a crossrealm players' name correctly.*
+
+### v2.2.2
+---
+* **Delete History entry**
+ * You can now delete individual entries in the loot history.
+
+
+* Comms optimizations.
+
+##### Bugfixes
++ *Loot History now works directly after clearing it (#228)*
++ *The previous version broke most sorting - reverted that.*
+
+
 ### v2.2.1
 ---
 * Artifact Relic type is now displayed in the voting frame.

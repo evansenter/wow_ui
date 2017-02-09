@@ -1,11 +1,9 @@
 ------------------------------------------------------------------------
-r653 | olzenkhaw | 2017-01-17 08:52:23 -0600 (Tue, 17 Jan 2017) | 1 line
+r689 | olzenkhaw | 2017-02-09 07:00:41 -0600 (Thu, 09 Feb 2017) | 1 line
 Changed paths:
-   A /trunk/Bindings.xml
    M /trunk/Oilvl.lua
    M /trunk/Oilvl.toc
-   M /trunk/localization.lua
 
-6.4.2 - Add key binding option in WoW Default Key Binding under AddOns section. The key binding will show Raid Progression when mouseover target frame in raid / party.
+v6.4.20 - fix a bug
 ------------------------------------------------------------------------
 

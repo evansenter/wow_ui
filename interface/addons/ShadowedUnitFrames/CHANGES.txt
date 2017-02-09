@@ -1,12 +1,30 @@
-tag fda368cc94bb47cb49389b092c826a007bcfefb6 v4.1.13
+tag 7bbe2e48791e47406475e52d7c4efe0ef5259911 v4.1.14
 Author:	Hendrik Leppkes <h.leppkes@gmail.com>
-Date:	Tue Dec 13 01:02:21 2016 +0100
+Date:	Wed Feb 1 06:26:31 2017 +0100
 
-Tag as v4.1.13
+Tag as v4.1.14
 
-commit d087c24adfd708df7a9e8e5bbaaffbf5d83847e9
-Author: Shadowed <shadowed.wow@gmail.com>
-Date:   Sat Nov 26 10:14:39 2016 -0800
+commit 317a7d240e90089d7ed37fec31d77b4941ec9573
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Feb 1 06:22:19 2017 +0100
 
-    Force rebuild
+    Use Shadow Bolt as the default warlock range spell
+
+commit e51d92629865a966f3d1c88c9da6fd375fc0c5a3
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Feb 1 06:19:01 2017 +0100
+
+    Fix class token retrievel for arena unit frames
+
+commit b485eb905368920247d3d62e1c18e54dbb77c847
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Wed Dec 14 20:26:14 2016 +0100
+
+    Update TOC for 7.1
+
+commit 0c703873ed80b3a0863a2142df0103fc72bc41f0
+Author: Hendrik Leppkes <h.leppkes@gmail.com>
+Date:   Tue Dec 13 01:23:13 2016 +0100
+
+    Cleanup pkgmeta repository paths a bit to include less clutter
 

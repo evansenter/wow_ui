@@ -78,7 +78,7 @@ function PLH_CreateOptionsPanel()
 
 	PLH_CoordinateRollsLabel2 = PLH_CoordinateRollsCheckbox:CreateFontString(nil, 'ARTWORK', 'GameFontHighlight')
 	PLH_CoordinateRollsLabel2:SetPoint('TOPLEFT', PLH_CoordinateRollsLabel1, 'BOTTOMLEFT', 20, -10)
-	PLH_CoordinateRollsLabel2:SetText('Prompt for and manage rolls if loot is an upgrade for more than one person')
+	PLH_CoordinateRollsLabel2:SetText('Prompt for and manage loot rolls. Players can whisper the group leader with "trade" or "trade [item]" to initiate rolls.')
 	PLH_CoordinateRollsLabel2:SetWordWrap(true)
 	PLH_CoordinateRollsLabel2:SetJustifyH('LEFT')
 	PLH_CoordinateRollsLabel2:SetWidth(450)

@@ -1183,19 +1183,14 @@ GTFO.SpellID["203110"] = {
 
 -- TODO: Volatile Resonance (Skorpyron)
 -- TODO: Arcane Slash (Trilliax) -- non-tank fail
--- TODO: Toxic Slice (Trilliax) -- impact, not DoT
--- TODO: Annihilation (Trilliax) -- Avoidable or raid fail?
 -- TODO: Burning Soul (Tichondrius) -- FF Fail
 -- TODO: Felburst (Krosus)
--- TODO: Controlled Chaos (High Botanist Tel'arn) -- inside ring damage only
 -- TODO: Toxic Spores (High Botanist Tel'arn)
--- TODO: Frozen Solid (Star Augur Etaeus)
 -- TODO: Shatter (Star Augur Etaeus) -- FF fail
 -- TODO: Fel Ember (Star Augur Etaeus)
 -- TODO: World-Devouring Force (Star Augur Etaeus)
 -- TODO: Delphuric Beam (Grand Magistrix Elisande)
 -- TODO: Epocheric Orb (Grand Magistrix Elisande) -- when debuffed with Epocheric Vulnerability
--- TODO: Gaze of Vethriz (Gul'dan)
 -- TODO: Storm of the Destroyer (Gul'dan) -- x4
 
 
@@ -1210,6 +1205,11 @@ GTFO.SpellID["204275"] = {
   tankSound = 0;
 };
 
+GTFO.SpellID["221153"] = {
+  --desc = "Beam (Pulsauron)";
+  sound = 3;
+};
+
 GTFO.SpellID["230438"] = {
   --desc = "Devastating Strike (Torm the Brute)";
   sound = 3;
@@ -1222,6 +1222,17 @@ GTFO.SpellID["221164"] = {
 
 GTFO.SpellID["206612"] = {
   --desc = "Burst of Time (Chronomatic Anomaly)";
+  sound = 3;
+};
+
+GTFO.SpellID["206792"] = {
+  --desc = "Toxic Slice (Trilliax)";
+  sound = 3;
+};
+
+GTFO.SpellID["207631"] = {
+  --desc = "Annihilation (Trilliax)";
+  applicationOnly = true;
   sound = 3;
 };
 
@@ -1255,7 +1266,6 @@ GTFO.SpellID["206474"] = {
   test = true; -- Not working because plague is getting applied first
 };
 
-
 GTFO.SpellID["218155"] = {
   --desc = "Solar Collapse (High Botanist Tel'arn)";
   sound = 3;
@@ -1267,6 +1277,71 @@ GTFO.SpellID["219235"] = {
   sound = 3;
 };
 
+GTFO.SpellID["225807"] = {
+  --desc = "Pillars of Night (Duskwatch Weaver)";
+  sound = 3;
+};
+
+GTFO.SpellID["219950"] = {
+  --desc = "Controlled Chaos (High Botanist Tel'arn)";
+  sound = 0;
+  test = true; -- DPS amount check
+};
+
+GTFO.SpellID["224484"] = {
+  --desc = "Falling Star";
+  sound = 3;
+};
+
+GTFO.SpellID["207720"] = {
+  --desc = "Witness the Void (Thing That Should Not Be)";
+  sound = 3;
+  applicationOnly = true;
+};
+
+GTFO.SpellID["221490"] = {
+  --desc = "Starfall (Astral Farseer)";
+  sound = 3;
+};
+
+GTFO.SpellID["206603"] = {
+  --desc = "Frozen Solid (Star Augur Etraeus)";
+  sound = 3;
+  applicationOnly = true;
+};
+
+GTFO.SpellID["206577"] = {
+  --desc = "Comet Impact (Star Augur Etraeus)";
+  sound = 3;
+  tankSound = 0;
+};
+
+GTFO.SpellID["206433"] = {
+  --desc = "Fel Impact (Star Augur Etraeus)";
+  sound = 3;
+  tankSound = 0;
+};
+
+GTFO.SpellID["207813"] = {
+  --desc = "Void Impact (Star Augur Etraeus)";
+  sound = 3;
+  tankSound = 0;
+};
+
+GTFO.SpellID["208865"] = {
+  --desc = "Leave the Nightwell (Elisande)";
+  sound = 3;
+};
+
+GTFO.SpellID["231005"] = {
+  --desc = "Arcane Emanations (Kar'zun)";
+  sound = 3;
+};
+
+GTFO.SpellID["212262"] = {
+  --desc = "Hand of Gul'dan (Gul'dan)";
+  sound = 3;
+};
 
 --- ******************
 --- * Trial of Valor *

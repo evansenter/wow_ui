@@ -532,10 +532,9 @@ function RCLootCouncil:SendCommand(target, command, ...)
 	local toSend = self:Serialize(command, {...})
 
 	if target == "group" then
-		local num = GetNumGroupMembers()
-		if num > 5 then -- Raid
+		if IsInRaid() then -- Raid
 			self:SendCommMessage("RCLootCouncil", toSend, "RAID")
-		elseif num > 0 then -- Party
+		elseif IsInGroup() then -- Party
 			self:SendCommMessage("RCLootCouncil", toSend, "PARTY")
 		else--if self.testMode then -- Alone (testing)
 			self:SendCommMessage("RCLootCouncil", toSend, "WHISPER", self.playerName)
@@ -606,7 +605,7 @@ function RCLootCouncil:OnCommReceived(prefix, serializedMsg, distri, sender)
 					local cached = true
 					for ses, v in ipairs(lootTable) do
 						local iName = GetItemInfo(v.link)
-						if not iName then cached = false end
+						if not iName then self:Debug(v.link); cached = false end
 					end
 					if not cached then
 						self:Debug("Some items wasn't cached, delaying loot by 1 sec")
@@ -1151,6 +1150,7 @@ function RCLootCouncil:OnEvent(event, ...)
 		self:NewMLCheck()
 		-- Ask for data when we have done a /rl and have a ML
 		if not self.isMasterLooter and self.masterLooter and self.masterLooter ~= "" and player_relogged then
+			self:Debug("Player relog...")
 			self:ScheduleTimer("SendCommand", 2, self.masterLooter, "reconnect")
 			self:SendCommand(self.masterLooter, "playerInfo", self:GetPlayerInfo()) -- Also send out info, just in case
 		end
@@ -1322,6 +1322,10 @@ end
 
 function RCLootCouncil:GetHistoryDB()
 	return self.lootDB.factionrealm
+end
+
+function RCLootCouncil:UpdateHistoryDB()
+	historyDB = self:GetHistoryDB()
 end
 
 function RCLootCouncil:GetAnnounceChannel(channel)

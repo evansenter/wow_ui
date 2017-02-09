@@ -1,12 +1,12 @@
 local mod	= DBM:NewMod(1762, "DBM-Nighthold", nil, 786)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 15681 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 15820 $"):sub(12, -3))
 mod:SetCreatureID(103685)
 mod:SetEncounterID(1862)
 mod:SetZone()
 mod:SetUsedIcons(8, 7, 6, 5, 4, 3, 2, 1)--Unknown carrions
-mod:SetHotfixNoticeRev(15669)
+mod:SetHotfixNoticeRev(15736)
 mod.respawnTime = 30
 
 mod:RegisterCombat("combat")
@@ -16,9 +16,10 @@ mod:RegisterEventsInCombat(
 	"SPELL_CAST_SUCCESS 212997 212794 208230",
 	"SPELL_AURA_APPLIED 206480 212794 208230 216040",
 	"SPELL_AURA_APPLIED_DOSE 216024",
-	"SPELL_AURA_REMOVED 212794 216040",
+	"SPELL_AURA_REMOVED 212794 216040 206480",
 	"SPELL_PERIODIC_DAMAGE 216027",
-	"SPELL_PERIODIC_MISSED 216027"
+	"SPELL_PERIODIC_MISSED 216027",
+	"CHAT_MSG_MONSTER_YELL"
 )
 
 --TODO, more review on Feast of Blood
@@ -43,6 +44,7 @@ local yellBrandOfArgus				= mod:NewPosYell(212794, 156225)--"Branded" short text
 local specWarnFeastOfBlood			= mod:NewSpecialWarningRun(208230, nil, nil, nil, 1, 2)--Move away, or run? neither one really says "get 30 yards from boss"
 local specWarnFeastOfBloodOther		= mod:NewSpecialWarningTaunt(208230, nil, nil, nil, 1, 2)
 local specWarnEchoesOfVoid			= mod:NewSpecialWarningDodge(213531, nil, nil, nil, 3, 2)
+local specWarnAdds					= mod:NewSpecialWarningAdds(216726, "-Healer", nil, nil, 1, 2)
 --Nightborne
 local specWarnBlastNova				= mod:NewSpecialWarningInterrupt(216034, "HasInterrupt", nil, nil, 2, 2)
 local specWarnNetherZoneGTFO		= mod:NewSpecialWarningMove(216027, nil, nil, nil, 2, 2)
@@ -57,6 +59,7 @@ local timerFeastOfBloodCD			= mod:NewNextCountTimer(25, 208230, nil, nil, 2, 1)
 local timerEchoesOfVoidCD			= mod:NewNextCountTimer(65, 213531, nil, nil, nil, 2)
 local timerIllusionaryNightCD		= mod:NewNextCountTimer(125, 206365, nil, nil, nil, 6)
 local timerIllusionaryNight			= mod:NewBuffActiveTimer(32, 206365, nil, nil, nil, 6)
+local timerAddsCD					= mod:NewAddsTimer(25, 216726, nil, "-Healer")
 
 local berserkTimer					= mod:NewBerserkTimer(480)
 
@@ -69,6 +72,7 @@ local voiceCarrionPlague			= mod:NewVoice(206480)--scatter
 local voiceSeekerSwarm				= mod:NewVoice(213238)--targetyou/farfromline
 local voiceFeastOfBlood				= mod:NewVoice(208230)--runout/tauntboss
 local voiceEchoesOfVoid				= mod:NewVoice(213531)--findshelter
+local voiceAdds						= mod:NewVoice(216726, "-Healer", DBM_CORE_AUTO_VOICE3_OPTION_TEXT)--killmob
 --Nightborne
 local voiceBlastNova				= mod:NewVoice(216034)--kickcast
 local voiceNetherZone				= mod:NewVoice(216027)--runaway
@@ -77,6 +81,7 @@ local voiceBurningSoul				= mod:NewVoice(216040)--runout
 
 mod:AddRangeFrameOption(8, 216040)
 mod:AddSetIconOption("SetIconOnBrandOfArgus", 212794, true)
+mod:AddNamePlateOption("NPAuraOnCarrionPlague", 206480)
 mod:AddInfoFrameOption(212794)
 mod:AddHudMapOption("HudMapOnSeeker", 213238)
 mod:AddBoolOption("HUDSeekerLines", true)--On by default for beta testing. Actual defaults for live subject to accuracy review.
@@ -107,6 +112,7 @@ mod.vb.feastOfBloodCast = 0
 mod.vb.seekerSwarmCast = 0
 mod.vb.brandOfArgusCast = 0
 mod.vb.echoesOfVoidCast = 0
+mod.vb.addsCount = 0
 
 local updateInfoFrame, sortInfoFrame, breakMarks
 do
@@ -174,27 +180,23 @@ function mod:OnCombatStart(delay)
 	self.vb.seekerSwarmCast = 0
 	self.vb.brandOfArgusCast = 0
 	self.vb.echoesOfVoidCast = 0
+	self.vb.addsCount = 0
 	table.wipe(carrionTargets)
 	table.wipe(argusTargets)
 	timerCarrionPlagueCD:Start(7-delay, 1)--Cast end
+	timerFeastOfBloodCD:Start(20-delay, 1)
+	countdownFeastOfBlood:Start(20-delay)
+	timerSeekerSwarmCD:Start(25-delay, 1)
+	countdownSeekerSwarm:Start(25-delay)
+	timerEchoesOfVoidCD:Start(55-delay, 1)
+	countdownEchoesOfVoid:Start(55-delay)
+	timerIllusionaryNightCD:Start(130-delay, 1)
 	if not self:IsEasy() then
 		timerBrandOfArgusCD:Start(15-delay, 1)
-		timerFeastOfBloodCD:Start(20-delay, 1)
-		countdownFeastOfBlood:Start(20-delay)
-		timerSeekerSwarmCD:Start(25-delay, 1)
-		countdownSeekerSwarm:Start(25-delay)
-		timerEchoesOfVoidCD:Start(55-delay, 1)
-		countdownEchoesOfVoid:Start(55-delay)
-		timerIllusionaryNightCD:Start(130-delay, 1)
 		berserkTimer:Start(-delay)
-	else
-		timerFeastOfBloodCD:Start(10-delay, 1)
-		countdownFeastOfBlood:Start(10-delay)
-		timerSeekerSwarmCD:Start(15-delay, 1)
-		countdownSeekerSwarm:Start(15-delay)
-		timerEchoesOfVoidCD:Start(35-delay, 1)
-		countdownEchoesOfVoid:Start(35-delay)
-		timerIllusionaryNightCD:Start(90-delay, 1)
+	end
+	if self.Options.NPAuraOnCarrionPlague then
+		DBM:FireEvent("BossMod_EnableFriendlyNameplates")
 	end
 end
 
@@ -208,6 +210,9 @@ function mod:OnCombatEnd()
 	end
 	if self.Options.HudMapOnSeeker then
 		DBMHudMap:Disable()
+	end
+	if self.Options.NPAuraOnCarrionPlague then
+		DBM.Nameplate:Hide(nil, true)
 	end
 end
 
@@ -223,35 +228,24 @@ function mod:SPELL_CAST_START(args)
 			self.vb.seekerSwarmCast = 0
 			self.vb.brandOfArgusCast = 0
 			self.vb.echoesOfVoidCast = 0
+			self.vb.addsCount = 0
 			DBM:Debug("First carrion Swarm after dark phase, Tichondrius returning", 2)
 			--Timers same as combat start - 5
 			if not self:IsEasy() then
 				timerBrandOfArgusCD:Start(10, 1)
-				timerFeastOfBloodCD:Start(14.5, 1)
-				countdownFeastOfBlood:Start(14.5)
-				timerSeekerSwarmCD:Start(20, 1)
-				countdownSeekerSwarm:Start(20)
-				timerIllusionaryNightCD:Start(123, 1)
-				if self.vb.phase == 2 then
-					timerEchoesOfVoidCD:Start(50, 1)
-					countdownEchoesOfVoid:Start(50)
-				else
-					timerEchoesOfVoidCD:Start(55, 1)
-					countdownEchoesOfVoid:Start(55)
-				end
-			else
-				timerFeastOfBloodCD:Start(5, 1)
-				countdownFeastOfBlood:Start(5)
-				timerSeekerSwarmCD:Start(10, 1)
-				countdownSeekerSwarm:Start(10)
-				timerEchoesOfVoidCD:Start(30, 1)
-				countdownEchoesOfVoid:Start(30)
-				timerIllusionaryNightCD:Start(83, 1)
 			end
+			timerFeastOfBloodCD:Start(14.5, 1)
+			countdownFeastOfBlood:Start(14.5)
+			timerSeekerSwarmCD:Start(20, 1)
+			countdownSeekerSwarm:Start(20)
+			timerAddsCD:Start(20)
+			timerIllusionaryNightCD:Start(123, 1)
 			if self.vb.phase == 2 then--The Nightborne
-		
+				timerEchoesOfVoidCD:Start(50, 1)
+				countdownEchoesOfVoid:Start(50)
 			else--The Legion
-		
+				timerEchoesOfVoidCD:Start(55, 1)
+				countdownEchoesOfVoid:Start(55)
 			end
 			--Restore argus tracker if for some reason you let people have it this long
 			if self.Options.InfoFrame and self:IsMythic() then
@@ -407,6 +401,9 @@ function mod:SPELL_AURA_APPLIED(args)
 			specWarnCarrionPlague:Show()
 			voiceCarrionPlague:Play("scatter")
 		end
+		if self.Options.NPAuraOnCarrionPlague then
+			DBM.Nameplate:Show(args.destGUID, spellId)
+		end
 	elseif spellId == 212794 then
 		argusTargets[#argusTargets+1] = args.destName
 		self:Unschedule(breakMarks)
@@ -456,6 +453,10 @@ function mod:SPELL_AURA_REMOVED(args)
 		end
 	elseif spellId == 216040 and args:IsPlayer() and self.Options.RangeFrame then
 		DBM.RangeCheck:Hide()
+	elseif spellId == 206480 then
+		if self.Options.NPAuraOnCarrionPlague then
+			DBM.Nameplate:Hide(args.destGUID)
+		end
 	end
 end
 
@@ -466,3 +467,21 @@ function mod:SPELL_PERIODIC_DAMAGE(_, _, _, _, destGUID, _, _, _, spellId)
 	end
 end
 mod.SPELL_PERIODIC_MISSED = mod.SPELL_PERIODIC_DAMAGE
+
+function mod:CHAT_MSG_MONSTER_YELL(msg, npc, _, _, target)
+	if msg == L.Adds1 or msg:find(L.Adds1) or msg == L.Adds2 or msg:find(L.Adds2) then
+		self:SendSync("Adds")--Syncing to help unlocalized clients
+	end
+end
+
+function mod:OnSync(msg, targetname)
+	if not self:IsInCombat() then return end
+	if msg == "Adds" then
+		self.vb.addsCount = self.vb.addsCount + 1
+		specWarnAdds:Show()
+		voiceAdds:Play("killmob")
+		if self.vb.addsCount == 1 then
+			timerAddsCD:Start(47)
+		end
+	end
+end

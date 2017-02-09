@@ -74,7 +74,7 @@ DBT_AllPersistentOptions = {
 			["EndColorIG"] = 0.87843137254902,
 			["EndColorAEG"] = 0.0431372549019608,
 			["StartColorAEB"] = 0.458823529411765,
-			["HugeTimerY"] = -143.000015258789,
+			["HugeTimerY"] = 93.6661911010742,
 			["EndColorUIB"] = 0.0117647058823529,
 			["EndColorUIG"] = 0.92156862745098,
 			["StartColorPG"] = 0.776470588235294,
@@ -101,7 +101,7 @@ DBT_AllPersistentOptions = {
 			["StartColorDB"] = 1,
 			["EndColorPB"] = 0.286274509803922,
 			["HugeBarYOffset"] = 0,
-			["HugeTimerX"] = 9.99983501434326,
+			["HugeTimerX"] = 8.88873672485352,
 		},
 	},
 }
