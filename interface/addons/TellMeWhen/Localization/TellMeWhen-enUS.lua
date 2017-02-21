@@ -762,6 +762,8 @@ L["ICONMENU_HIDEUNEQUIPPED"] = "Hide when slot lacks weapon"
 L["ICONMENU_HIDEUNEQUIPPED_DESC"] = "Check this to force the icon to be hidden if the weapon spot being checked does not have a weapon in it, or if that slot has a shield or an off-hand frill."
 L["ICONMENU_USEACTIVATIONOVERLAY"] = "Check activation border"
 L["ICONMENU_USEACTIVATIONOVERLAY_DESC"] = "Check this to cause the presence of the sparkly yellow border around an action to force the icon to act as usable."
+L["ICONMENU_ONLYACTIVATIONOVERLAY"] = "Require activation border"
+L["ICONMENU_ONLYACTIVATIONOVERLAY_DESC"] = "Check this to require the presence of the sparkly yellow border around an action to allow the icon to act as usable."
 L["ICONMENU_ONLYEQPPD"] = "Only if equipped"
 L["ICONMENU_ONLYEQPPD_DESC"] = "Check this to make the icon show only if the item is equipped."
 L["ICONMENU_SHOWSTACKS"] = "Show stacks"
@@ -1388,6 +1390,9 @@ L["CONDITIONPANEL_LASTCAST"] = "Last Ability Used"
 L["CONDITIONPANEL_LASTCAST_ISSPELL"] = "Matches"
 L["CONDITIONPANEL_LASTCAST_ISNTSPELL"] = "Doesn't Match"
 
+L["CONDITIONPANEL_OVERLAYED"] = "Spell activation overlay"
+L["CONDITIONPANEL_OVERLAYED_DESC"] = "Checks if a given spell has the activation overlay effect (the sparkly yellow border on your action bars)."
+
 L["CONDITIONPANEL_INTERRUPTIBLE"] = "Interruptible"
 L["CONDITIONPANEL_NAME"] = "Unit Name"
 L["CONDITIONPANEL_NAMETOMATCH"] = "Name to Match"
@@ -1422,6 +1427,8 @@ L["CONDITIONPANEL_MANAUSABLE"] = "Spell Usable (Mana/Energy/etc.)"
 L["CONDITIONPANEL_MANAUSABLE_DESC"] = [[Checks if a spell is usable base on how much primary resource (mana/energy/rage/focus/runic power/etc.) you have.
 
 Does not check usability based on secondary resources (runes/holy power/chi/etc.)]]
+L["CONDITIONPANEL_SPELLCOST"] = "Spell Cost"
+L["CONDITIONPANEL_SPELLCOST_DESC"] = "Checks the cost of a spell. Units are mana/rage/energy/etc."
 L["CONDITIONPANEL_SPELLRANGE"] = "Spell in range of unit"
 L["CONDITIONPANEL_ITEMRANGE"] = "Item in range of unit"
 L["CONDITIONPANEL_AUTOCAST"] = "Pet spell autocasting"
@@ -1446,7 +1453,9 @@ L["LUACONDITION"] = "Lua (Advanced)"
 L["LUACONDITION2"] = "Lua Condition"
 L["LUACONDITION_DESC"] = [[This condition type allows you to evaluate Lua code to determine the state of a condition.
 
-The input is not an 'if .. then' statement, nor is it a function closure. It is a regular statement to be evaluated, e.g. 'a and b or c'.  If complex functionality is required, use a call to a function, e.g. 'CheckStuff()', that is defined externally (perhaps using TMW's Lua snippets feature).
+If your input is a regular statement to be evaluated, e.g. 'a and b or c', you don't need a return statement.
+
+If you have any control blocks (e.g. if/then), you'll need return statements.
 
 To get a reference to this icon/group, use "thisobj". To insert a reference to another icon by GUID, shift click that icon while this editbox has focus.
 

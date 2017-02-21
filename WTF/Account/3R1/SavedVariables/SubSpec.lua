@@ -1,5 +1,87 @@
 
 SubSpecStorage = {
+	["Monk Windwalker"] = {
+		{
+			["name"] = "ST",
+			["data"] = {
+				{
+					["id"] = 20185,
+					["name"] = "Chi Wave",
+					["column"] = 3,
+				}, -- [1]
+				{
+					["id"] = 19818,
+					["name"] = "Tiger's Lust",
+					["column"] = 2,
+				}, -- [2]
+				{
+					["id"] = 22099,
+					["name"] = "Energizing Elixir",
+					["column"] = 1,
+				}, -- [3]
+				{
+					["id"] = 19995,
+					["name"] = "Leg Sweep",
+					["column"] = 3,
+				}, -- [4]
+				{
+					["id"] = 20174,
+					["name"] = "Healing Elixir",
+					["column"] = 1,
+				}, -- [5]
+				{
+					["id"] = 22103,
+					["name"] = "Hit Combo",
+					["column"] = 3,
+				}, -- [6]
+				{
+					["id"] = 22105,
+					["name"] = "Whirling Dragon Punch",
+					["column"] = 2,
+				}, -- [7]
+			},
+		}, -- [1]
+		{
+			["name"] = "AoE",
+			["data"] = {
+				{
+					["id"] = 19823,
+					["name"] = "Chi Burst",
+					["column"] = 1,
+				}, -- [1]
+				{
+					["id"] = 19818,
+					["name"] = "Tiger's Lust",
+					["column"] = 2,
+				}, -- [2]
+				{
+					["id"] = 22099,
+					["name"] = "Energizing Elixir",
+					["column"] = 1,
+				}, -- [3]
+				{
+					["id"] = 19995,
+					["name"] = "Leg Sweep",
+					["column"] = 3,
+				}, -- [4]
+				{
+					["id"] = 20174,
+					["name"] = "Healing Elixir",
+					["column"] = 1,
+				}, -- [5]
+				{
+					["id"] = 19819,
+					["name"] = "Rushing Jade Wind",
+					["column"] = 1,
+				}, -- [6]
+				{
+					["id"] = 21191,
+					["name"] = "Serenity",
+					["column"] = 3,
+				}, -- [7]
+			},
+		}, -- [2]
+	},
 	["Mage Fire"] = {
 		{
 			["name"] = "ST Default",
@@ -122,44 +204,44 @@ SubSpecStorage = {
 			},
 		}, -- [3]
 	},
-	["Monk Windwalker"] = {
+	["Mage Frost"] = {
 		{
 			["name"] = "ST",
 			["data"] = {
 				{
-					["id"] = 20185,
-					["name"] = "Chi Wave",
+					["id"] = 22463,
+					["name"] = "Bone Chilling",
 					["column"] = 3,
 				}, -- [1]
 				{
-					["id"] = 19818,
-					["name"] = "Tiger's Lust",
+					["id"] = 22903,
+					["name"] = "Ice Floes",
 					["column"] = 2,
 				}, -- [2]
 				{
-					["id"] = 22099,
-					["name"] = "Energizing Elixir",
+					["id"] = 22444,
+					["name"] = "Mirror Image",
 					["column"] = 1,
 				}, -- [3]
 				{
-					["id"] = 19995,
-					["name"] = "Leg Sweep",
-					["column"] = 3,
+					["id"] = 22466,
+					["name"] = "Frozen Touch",
+					["column"] = 2,
 				}, -- [4]
 				{
-					["id"] = 20174,
-					["name"] = "Healing Elixir",
-					["column"] = 1,
+					["id"] = 22471,
+					["name"] = "Ice Ward",
+					["column"] = 3,
 				}, -- [5]
 				{
-					["id"] = 22103,
-					["name"] = "Hit Combo",
-					["column"] = 3,
+					["id"] = 22449,
+					["name"] = "Unstable Magic",
+					["column"] = 2,
 				}, -- [6]
 				{
-					["id"] = 22105,
-					["name"] = "Whirling Dragon Punch",
-					["column"] = 2,
+					["id"] = 21632,
+					["name"] = "Thermal Void",
+					["column"] = 1,
 				}, -- [7]
 			},
 		}, -- [1]
@@ -167,41 +249,81 @@ SubSpecStorage = {
 			["name"] = "AoE",
 			["data"] = {
 				{
-					["id"] = 19823,
-					["name"] = "Chi Burst",
-					["column"] = 1,
+					["id"] = 22463,
+					["name"] = "Bone Chilling",
+					["column"] = 3,
 				}, -- [1]
 				{
-					["id"] = 19818,
-					["name"] = "Tiger's Lust",
+					["id"] = 22903,
+					["name"] = "Ice Floes",
 					["column"] = 2,
 				}, -- [2]
 				{
-					["id"] = 22099,
-					["name"] = "Energizing Elixir",
-					["column"] = 1,
+					["id"] = 22447,
+					["name"] = "Incanter's Flow",
+					["column"] = 3,
 				}, -- [3]
 				{
-					["id"] = 19995,
-					["name"] = "Leg Sweep",
+					["id"] = 22469,
+					["name"] = "Splitting Ice",
 					["column"] = 3,
 				}, -- [4]
 				{
-					["id"] = 20174,
-					["name"] = "Healing Elixir",
-					["column"] = 1,
+					["id"] = 22471,
+					["name"] = "Ice Ward",
+					["column"] = 3,
 				}, -- [5]
 				{
-					["id"] = 19819,
-					["name"] = "Rushing Jade Wind",
-					["column"] = 1,
+					["id"] = 22473,
+					["name"] = "Arctic Gale",
+					["column"] = 3,
 				}, -- [6]
 				{
-					["id"] = 21191,
-					["name"] = "Serenity",
-					["column"] = 3,
+					["id"] = 21632,
+					["name"] = "Thermal Void",
+					["column"] = 1,
 				}, -- [7]
 			},
 		}, -- [2]
+		{
+			["name"] = "Lazy",
+			["data"] = {
+				{
+					["id"] = 22463,
+					["name"] = "Bone Chilling",
+					["column"] = 3,
+				}, -- [1]
+				{
+					["id"] = 22903,
+					["name"] = "Ice Floes",
+					["column"] = 2,
+				}, -- [2]
+				{
+					["id"] = 22447,
+					["name"] = "Incanter's Flow",
+					["column"] = 3,
+				}, -- [3]
+				{
+					["id"] = 22469,
+					["name"] = "Splitting Ice",
+					["column"] = 3,
+				}, -- [4]
+				{
+					["id"] = 22471,
+					["name"] = "Ice Ward",
+					["column"] = 3,
+				}, -- [5]
+				{
+					["id"] = 22454,
+					["name"] = "Frost Bomb",
+					["column"] = 1,
+				}, -- [6]
+				{
+					["id"] = 21632,
+					["name"] = "Thermal Void",
+					["column"] = 1,
+				}, -- [7]
+			},
+		}, -- [3]
 	},
 }

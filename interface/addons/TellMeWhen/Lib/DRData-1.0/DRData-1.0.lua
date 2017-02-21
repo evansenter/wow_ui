@@ -2020,353 +2020,1802 @@ L["ANN_TAB"] = "Testo"
 L["ASCENDING"] = "Ascendente"
 L["ASPECT"] = "Aspetto"
 elseif locale == "koKR" then
-L["!!Main Addon Description"] = "재사용 대기 시간, 버프, 그 밖의 꽤 많은 것에 대해 시각적, 청각적, 문자적인 알림을 제공합니다."
-L["ABSORBAMT"] = "보호막 흡수량"
-L["ABSORBAMT_DESC"] = "대상의 보호막 흡수량을 체크합니다."
-L["ACTIVE"] = "%d 활성화"
+L["!!Main Addon Description"] = "재사용 대기시간, 강화 효과, 그 밖의 꽤 많은 것에 대해 시각적, 청각적, 문자적인 알림을 제공합니다."
+L["ABSORBAMT"] = "흡수 보호막 수치"
+L["ABSORBAMT_DESC"] = "유닛에 적용된 흡수 보호막의 전체 수치를 확인합니다."
+L["ACTIVE"] = "%d개 활성"
+L["ADDONSETTINGS_DESC"] = "애드온의 모든 일반 설정을 구성합니다."
 L["AIR"] = "바람"
-L["ALLOWCOMM"] = "아이콘 들여오기 허용"
-L["ALLOWCOMM_DESC"] = "당신의 데이터를 다른 사용자에게 보내기를 허락합니다."
-L["ALLOWVERSIONWARN"] = "새로운 버전 알림"
-L["ALPHA"] = "투명도"
+L["ALLOWCOMM"] = "게임 내 공유 허용"
+L["ALLOWCOMM_DESC"] = [=[다른 TellMeWhen 사용자들의 데이터 전송을 허용합니다.
+
+UI를 다시 불러오거나 재접속 해야 데이터를 수신할 수 있습니다.]=]
+L["ALLOWVERSIONWARN"] = "새로운 버전 알리기"
+L["ALPHA"] = "불투명도"
+L["ANCHOR_CURSOR_DUMMY"] = "TellMeWhen 커서 위치 기준 더미"
+L["ANCHOR_CURSOR_DUMMY_DESC"] = [=[커서에 주변에 위치시킬 아이콘의 위치 설정을 도와주는 더미 커서입니다.
+
+그룹을 커서 주변에 위치시키면 '마우스오버' 유닛을 확인하는 아이콘에 유용합니다.
+
+그룹을 커서 주변에 위치시키려면, 아이콘을 이 더미로 |cff7fffff오른쪽 클릭하고 끄세요|r.
+
+블리자드 버그때문에 움직이고 있을 때는 재사용 대기시간 애니메이션이 작동하지 않습니다, 따라서 커서 위치 아이콘은 비활성하는 게 좋습니다.
+
+|cff7fffff클릭하고 끌면|r 이 더미를 이동합니다.]=]
+L["ANCHORTO"] = "고정시키기: "
+L["ANIM_ACTVTNGLOW"] = "아이콘: 활성화 테두리"
+L["ANIM_ACTVTNGLOW_DESC"] = "아이콘에 블리자드 주문 활성화 테두리를 표시합니다."
+L["ANIM_ALPHASTANDALONE"] = "불투명도"
+L["ANIM_ALPHASTANDALONE_DESC"] = "애니메이션의 불투명도를 설정합니다."
+L["ANIM_ANCHOR_NOT_FOUND"] = "애니메이션을 고정시킬 %q 이름을 가진 프레임을 찾을 수 없습니다. 이 프레임이 아이콘의 현재 표시에 의해 사용되고 있습니까?"
+L["ANIM_ANIMSETTINGS"] = "설정"
+L["ANIM_ANIMTOUSE"] = "사용할 애니메이션"
+L["ANIM_COLOR"] = "색상/불투명도"
+L["ANIM_COLOR_DESC"] = "반짝임의 색상과 불투명도를 설정합니다."
+L["ANIM_DURATION"] = "지속시간"
+L["ANIM_DURATION_DESC"] = "발생된 후부터 애니메이션이 얼마나 지속될 지 설정합니다."
+L["ANIM_FADE"] = "흐릿한 반짝임"
+L["ANIM_FADE_DESC"] = "체크하면 각 반짝임 간에 부드럽게 흐릿해집니다. 체크하지 않으면 즉시 반짝입니다."
+L["ANIM_ICONALPHAFLASH"] = "아이콘: 투명도 반짝임"
+L["ANIM_ICONALPHAFLASH_DESC"] = [=[불투명도를 변경하면서 아이콘을 반짝입니다.
+
+불투명도는 아이콘의 보통 불투명도와 애니메이션에 설정된 불투명도 간에 변경됩니다.]=]
+L["ANIM_ICONBORDER"] = "아이콘: 테두리"
+L["ANIM_ICONBORDER_DESC"] = "아이콘 위에 색상화된 테두리를 입힙니다."
+L["ANIM_ICONCLEAR"] = "아이콘: 스톱 애니메이션"
+L["ANIM_ICONCLEAR_DESC"] = "현재 아이콘 위에 진행중인 모든 애니메이션을 멈춥니다."
+L["ANIM_ICONFADE"] = "아이콘: 서서히 표시/숨기기"
+L["ANIM_ICONFADE_DESC"] = "선택한 이벤트가 발생하면 불투명도를 부드럽게 변경합니다."
+L["ANIM_ICONFLASH"] = "아이콘: 색상 반짝임"
+L["ANIM_ICONFLASH_DESC"] = "아이콘에 색상화된 반짝임을 입힙니다."
+L["ANIM_ICONOVERLAYIMG"] = "아이콘: 이미지 입히기"
+L["ANIM_ICONOVERLAYIMG_DESC"] = "아이콘 위에 사용자 설정 이미지를 입힙니다."
+L["ANIM_ICONSHAKE"] = "아이콘: 흔들기"
+L["ANIM_ICONSHAKE_DESC"] = "발생되면 아이콘을 흔듭니다."
+L["ANIM_INFINITE"] = "무한 재생"
+L["ANIM_INFINITE_DESC"] = "체크하면 같은 형식의 아이콘 위에 다른 애니메이션이 덮어씌워지거나, %q 애니메이션이 재생될 때까지 애니메이션을 재생합니다."
+L["ANIM_MAGNITUDE"] = "흔들기 강도"
+L["ANIM_MAGNITUDE_DESC"] = "얼마나 심하게 흔들 지 설정합니다."
+L["ANIM_PERIOD"] = "반짝임 시간"
+L["ANIM_PERIOD_DESC"] = [=[반짝임이 표시될 시간을 설정하세요 - 반짝임이 표시되거나 서서히 나타날 시간.
+
+서서히 나타나거나 반짝이고 싶지 않다면 0으로 설정하세요.]=]
+L["ANIM_PIXELS"] = "%s 픽셀"
+L["ANIM_SCREENFLASH"] = "화면: 반짝임"
+L["ANIM_SCREENFLASH_DESC"] = "화면 위에 색상화된 반짝임을 입힙니다."
+L["ANIM_SCREENSHAKE"] = "화면: 흔들기"
+L["ANIM_SCREENSHAKE_DESC"] = [=[발생되면 화면 전체를 흔듭니다.
+
+참고: 이 기능은 접속 후 이름표를 활성화 한 적이 없거나 전투 중이 아닐 때만 작동합니다.]=]
+L["ANIM_SECONDS"] = "%s초"
+L["ANIM_SIZE_ANIM"] = "테두리 외형"
+L["ANIM_SIZE_ANIM_DESC"] = "모든 테두리의 크기를 설정합니다."
+L["ANIM_SIZEX"] = "이미지 너비"
+L["ANIM_SIZEX_DESC"] = "이미지의 너비를 설정합니다."
+L["ANIM_SIZEY"] = "이미지 높이"
+L["ANIM_SIZEY_DESC"] = "이미지의 높이를 설정합니다."
+L["ANIM_TAB"] = "애니메이션"
+L["ANIM_TAB_DESC"] = "아이콘이나 화면 전체에 애니메이션 효과를 줍니다."
+L["ANIM_TEX"] = "무늬"
+L["ANIM_TEX_DESC"] = [=[입혀질 무늬를 선택하세요.
+
+사용하고 싶은 무늬를 가진 주문의 이름 이나 ID를 입력하거나, 'Interface/Icons/spell_nature_healingtouch'같은 무늬의 경로 또는 경로가 'Interface/Icons'라면 'spell_nature_healingtouch'만 입력하세요.
+
+와우 디렉토리 안에 위치한 개인 무늬를 사용할 수 있습니다 (이 입력 영역에 와우 루트 폴더를 기준으로 한 경로와 무늬를 입력하세요), .tga 또는 .blp 포맷이며 2의 제곱 수의 크기를 가져야 합니다 (32, 64, 128, 등등)]=]
+L["ANIM_THICKNESS"] = "테두리 두께"
+L["ANIM_THICKNESS_DESC"] = "테두리의 두께를 설정합니다."
 L["ANN_CHANTOUSE"] = "사용할 채널"
 L["ANN_EDITBOX"] = "출력 될 문자"
-L["ANN_SHOWICON"] = "아이콘 텍스쳐 보이기"
-L["ANN_TAB"] = "문자 출력"
+L["ANN_EDITBOX_DESC"] = "알림이 발생했을 때 출력하고 싶은 문자를 입력하세요."
+L["ANN_EDITBOX_WARN"] = "여기에 출력하고 싶은 문자를 입력하세요"
+L["ANN_FCT_DESC"] = "블리자드의 %s 기능에 출력합니다. 문자가 출력되려면 인터페이스 설정에 활성화 되어 있어야 합니다."
+L["ANN_NOTEXT"] = "<문자 없음>"
+L["ANN_SHOWICON"] = "아이콘 무늬 표시"
+L["ANN_SHOWICON_DESC"] = "일부 문자 출력부는 문자와 함께 무늬를 함께 표시할 수 있습니다. 기능을 사용하려면 체크하세요."
+L["ANN_STICKY"] = "고정"
+L["ANN_SUB_CHANNEL"] = "하위 섹션"
+L["ANN_TAB"] = "문자"
+L["ANN_TAB_DESC"] = "대화 채널, UI 프레임, 또는 다른 애드온에 문자를 출력합니다."
 L["ANN_WHISPERTARGET"] = "귓속말 대상"
-L["ASCENDING"] = "오름"
-L["ASPECT"] = "상"
+L["ANN_WHISPERTARGET_DESC"] = [=[귓속말을 보낼 플레이어의 이름을 입력하세요.
+
+일반적인 서버/진영 귓속말 요구 사항이 적용됩니다.]=]
+L["ASCENDING"] = "오름차순"
+L["ASPECT"] = "상태"
 L["AURA"] = "오라"
-L["BACK_IE"] = "뒤"
-L["BACK_IE_DESC"] = [=[편집된 마지막 아이콘 불러오기
+L["BACK_IE"] = "뒤로"
+L["BACK_IE_DESC"] = [=[마지막으로 편집된 아이콘을 불러옵니다
 
 %s |T%s:0|t.]=]
 L["Bleeding"] = "출혈"
 L["BOTTOM"] = "하단"
 L["BOTTOMLEFT"] = "좌측 하단"
 L["BOTTOMRIGHT"] = "우측 하단"
-L["BUFFCNDT_DESC"] = "처음 주문만 체크 합니다. 나머지는 무시 됩니다."
-L["BUFFTOCHECK"] = "체크할 강화 효과"
-L["BUFFTOCOMP1"] = "비교할 첫번째 강화 효과 "
-L["BUFFTOCOMP2"] = "비교할 두번째 강화 효과 "
+L["BUFFCNDT_DESC"] = "첫 주문만 확인합니다, 모든 나머지는 무시합니다."
+L["BUFFTOCHECK"] = "확인할 강화 효과"
+L["BUFFTOCOMP1"] = "비교할 첫번째 강화 효과"
+L["BUFFTOCOMP2"] = "비교할 두번째 강화 효과"
+L["BURNING_EMBERS_FRAGMENTS"] = "타오르는 불씨 '조각'"
+L["BURNING_EMBERS_FRAGMENTS_DESC"] = [=[하나의 타오르는 불씨는 10개의 조각으로 이루어져 있습니다.
+
+예를 들어 1개의 불씨와 절반의 불씨를 가지고 있다면 15개의 조각을 가지고 있는 것과 같습니다.]=]
+L["CACHING"] = [=[TellMeWhen은 게임 내 모든 주문을 저장하고 선별합니다. 와우 패치마다 한번만 완료하면 됩니다. 아래 슬라이더를 사용해 처리 속도를 올리거나 낮출 수 있습니다.
+
+TellMeWhen을 사용하기 위해 이 과정이 완료될 때까지 기다릴 필요는 없습니다. 오직 추천 목록만 주문 캐시의 완성도에 영향을 받습니다.]=]
 L["CACHINGSPEED"] = "프레임당 주문:"
 L["CASTERFORM"] = "인간형"
-L["CENTER"] = "정중앙"
-L["CHAT_FRAME"] = "대화 프레임"
+L["CENTER"] = "중앙"
+L["CHANGELOG"] = "변경 내역"
+L["CHANGELOG_DESC"] = "TellMeWhen의 현재와 이전 버전에 만들어진 변경 내역을 표시합니다."
+L["CHANGELOG_INFO2"] = [=[TellMeWhen v%s에 오신걸 환영합니다!
+<br/><br/>
+변경된 사항을 확인한 후에, %s 탭을 클릭하거나 하단의 %s 탭으로 TellMeWhen 설정을 시작하세요.]=]
+L["CHANGELOG_LAST_VERSION"] = "이전에 설치된 버전"
+L["CHAT_FRAME"] = "대화 창"
 L["CHAT_MSG_CHANNEL"] = "대화 채널"
-L["CHAT_MSG_CHANNEL_DESC"] = "거래 또는 현재 연결 중인 사용자 채널과 같은 대화 채널로 출력하게 됩니다."
-L["CHOOSENAME_DIALOG"] = [=[이 아이콘에 관찰하고자 하는 이름 또는 ID를 입력하십시오. 세미콜론(;)으로 항목을 구분지어 여러 개의 항목(이름, ID의 모든 조합)을 추가할 수 있습니다.
+L["CHAT_MSG_CHANNEL_DESC"] = "거래 또는 현재 참여 중인 사용자 채널과 같은 대화 채널로 출력합니다."
+L["CHAT_MSG_SMART"] = "똑똑한 채널"
+L["CHAT_MSG_SMART_DESC"] = "전장, 공격대, 파티, 또는 일반 대화로 출력합니다 - 적절한 채널로 출력합니다."
+L["CHOOSEICON"] = "확인할 아이콘 선택"
+L["CHOOSEICON_DESC"] = [=[|cff7fffff클릭|r하여 아이콘/그룹을 선택합니다
+|cff7fffff클릭하고 끌어서|r 재정렬합니다. 
+|cff7fffff오른쪽 클릭하고 끌어서|r 교체합니다.]=]
+L["CHOOSENAME_DIALOG"] = [=[이 아이콘으로 관찰하고자 하는 이름 또는 ID를 입력하세요. 세미콜론(;)으로 항목을 구분지어 여러 개의 항목(이름, ID의 모든 조합)을 추가할 수 있습니다.
 
-주문/아이템/대화창 링크를 |cff7fffff쉬프트-클릭|r 하거나 주문/아이템을 이 편집박스로 끌어와 넣을 수 있습니다.]=]
+하이픈을 사용해 접두사를 붙이면 똑같은 내용을 생략할 수 있습니다, 예. "느려짐; -멍해짐".
+
+주문/아이템/대화 링크를 |cff7fffffShift-클릭|r하거나 주문/아이템을 이 편집박스로 끌어다 놓을 수 있습니다.]=]
 L["CHOOSENAME_DIALOG_PETABILITIES"] = "|cFFFF5959소환수 능력|r은 주문ID를 사용해야 합니다."
-L["CLEU_CAT_AURA"] = "버프/디버프"
+L["CLEU_"] = "모든 이벤트"
+L["CLEU_CAT_AURA"] = "강화 효과/약화 효과"
 L["CLEU_CAT_CAST"] = "시전"
 L["CLEU_CAT_MISC"] = "기타"
 L["CLEU_CAT_SPELL"] = "주문"
-L["CLEU_CAT_SWING"] = "근접/원거리"
-L["CLEU_ENVIRONMENTAL_DAMAGE_DESC"] = "용암, 피로, 익사, 그리고 추락 피해를 포함합니다."
-L["CMD_OPTIONS"] = "옵션"
+L["CLEU_CAT_SWING"] = "근접/원거리 공격"
+L["CLEU_COMBATLOG_OBJECT_AFFILIATION_MASK"] = "조종자 관계"
+L["CLEU_COMBATLOG_OBJECT_AFFILIATION_MINE"] = "조종자 관계: 플레이어 (자신)"
+L["CLEU_COMBATLOG_OBJECT_AFFILIATION_MINE_DESC"] = "자신이 조종하고 있는 유닛인지 확인합니다."
+L["CLEU_COMBATLOG_OBJECT_AFFILIATION_OUTSIDER"] = "조종자 관계: 외부인"
+L["CLEU_COMBATLOG_OBJECT_AFFILIATION_OUTSIDER_DESC"] = "자신과 파티/공격대 중이지 않은 사람이 조종하는 유닛인지 확인합니다."
+L["CLEU_COMBATLOG_OBJECT_AFFILIATION_PARTY"] = "조종자 관계: 파티원"
+L["CLEU_COMBATLOG_OBJECT_AFFILIATION_PARTY_DESC"] = "같은 파티원이 조종하는 유닛인지 확인합니다."
+L["CLEU_COMBATLOG_OBJECT_AFFILIATION_RAID"] = "조종자 관계: 공격대원"
+L["CLEU_COMBATLOG_OBJECT_AFFILIATION_RAID_DESC"] = "같은 공격대에 속한 사람이 조종하는 유닛인지 확인합니다."
+L["CLEU_COMBATLOG_OBJECT_CONTROL_MASK"] = "조종자"
+L["CLEU_COMBATLOG_OBJECT_CONTROL_NPC"] = "조종자: 서버"
+L["CLEU_COMBATLOG_OBJECT_CONTROL_NPC_DESC"] = "그의 소환수와 수호자를 포함한 서버가 조종하는 유닛인지 확인합니다."
+L["CLEU_COMBATLOG_OBJECT_CONTROL_PLAYER"] = "조종자: 사람"
+L["CLEU_COMBATLOG_OBJECT_CONTROL_PLAYER_DESC"] = "그의 소환수와 수호자를 포함한 사람이 조종하는 유닛인지 확인합니다."
+L["CLEU_COMBATLOG_OBJECT_FOCUS"] = "기타: 자신의 주시 대상"
+L["CLEU_COMBATLOG_OBJECT_FOCUS_DESC"] = "주시 대상으로 설정된 유닛인지 확인합니다."
+L["CLEU_COMBATLOG_OBJECT_MAINASSIST"] = "기타: 지원 전담"
+L["CLEU_COMBATLOG_OBJECT_MAINASSIST_DESC"] = "공격대에서 지원 전담으로 지정된 유닛인지 확인합니다."
+L["CLEU_COMBATLOG_OBJECT_MAINTANK"] = "기타: 방어 전담"
+L["CLEU_COMBATLOG_OBJECT_MAINTANK_DESC"] = "공격대에서 방어 전담으로 지정된 유닛인지 확인합니다."
+L["CLEU_COMBATLOG_OBJECT_NONE"] = "기타: 알 수 없는 유닛"
+L["CLEU_COMBATLOG_OBJECT_NONE_DESC"] = "와우 클라이언트가 완벽히 알 수 없는 유닛인지 확인하며, 게임 클라이언트에 의해 제공되지 않은 유닛의 이벤트를 제외시킵니다."
+L["CLEU_COMBATLOG_OBJECT_REACTION_FRIENDLY"] = "유닛 반응: 우호적"
+L["CLEU_COMBATLOG_OBJECT_REACTION_FRIENDLY_DESC"] = "자신과 우호적인 유닛인지 확인합니다."
+L["CLEU_COMBATLOG_OBJECT_REACTION_HOSTILE"] = "유닛 반응: 적대적"
+L["CLEU_COMBATLOG_OBJECT_REACTION_HOSTILE_DESC"] = "자신과 적대적인 유닛인지 확인합니다."
+L["CLEU_COMBATLOG_OBJECT_REACTION_MASK"] = "유닛 반응"
+L["CLEU_COMBATLOG_OBJECT_REACTION_NEUTRAL"] = "유닛 반응: 중립"
+L["CLEU_COMBATLOG_OBJECT_REACTION_NEUTRAL_DESC"] = "자신과 중립적인 유닛인지 확인합니다."
+L["CLEU_COMBATLOG_OBJECT_TARGET"] = "기타: 자신의 대상"
+L["CLEU_COMBATLOG_OBJECT_TARGET_DESC"] = "대상 지정 중인 유닛인지 확인합니다."
+L["CLEU_COMBATLOG_OBJECT_TYPE_GUARDIAN"] = "유닛 유형: 수호자"
+L["CLEU_COMBATLOG_OBJECT_TYPE_GUARDIAN_DESC"] = "수호자 여부를 확인합니다. 수호자는 그의 조종자를 수호하지만 직접적으로 조종할 수 없는 유닛입니다."
+L["CLEU_COMBATLOG_OBJECT_TYPE_MASK"] = "유닛 유형"
+L["CLEU_COMBATLOG_OBJECT_TYPE_NPC"] = "유닛 유형: NPC"
+L["CLEU_COMBATLOG_OBJECT_TYPE_NPC_DESC"] = "비-플레이어 캐릭터 여부를 확인합니다."
+L["CLEU_COMBATLOG_OBJECT_TYPE_OBJECT"] = "유닛 유형: 물건"
+L["CLEU_COMBATLOG_OBJECT_TYPE_OBJECT_DESC"] = "덫, 낚시찌, 또는 다른 \"유닛 유형\" 범주에 속하지 않는 유닛인지 확인합니다."
+L["CLEU_COMBATLOG_OBJECT_TYPE_PET"] = "유닛 유형: 소환수"
+L["CLEU_COMBATLOG_OBJECT_TYPE_PET_DESC"] = "소환수 여부를 확인합니다. 소환수는 그의 조종자를 수호하며 직접적으로 조종할 수 있습니다."
+L["CLEU_COMBATLOG_OBJECT_TYPE_PLAYER"] = "유닛 유형: 플레이어 캐릭터"
+L["CLEU_COMBATLOG_OBJECT_TYPE_PLAYER_DESC"] = "플레이어 캐릭터 여부를 확인합니다."
+L["CLEU_CONDITIONS_DESC"] = [=[확인하기 위해서 개별 유닛이 만족해야 할 조건을 설정하세요.
+
+이 조건들은 확인할 유닛을 유닛ID를 이용해서 입력했을 때만 사용 가능합니다 - 이름은 이 조건들과 사용할 수 없습니다.]=]
+L["CLEU_CONDITIONS_DEST"] = "대상 조건"
+L["CLEU_CONDITIONS_SOURCE"] = "행위자 조건"
+L["CLEU_DAMAGE_SHIELD"] = "피해 보호막"
+L["CLEU_DAMAGE_SHIELD_DESC"] = "근접 공격자에게 피해를 입히는 주문이나 능력 (%s, %s, 등등, %s|1은;는; 제외)으로 유닛에게 피해를 입혔을 때 발생합니다."
+L["CLEU_DAMAGE_SHIELD_MISSED"] = "피해 보호막 적중 실패"
+L["CLEU_DAMAGE_SHIELD_MISSED_DESC"] = "근접 공격자에게 피해를 입히는 주문이나 능력 (%s, %s, 등등, %s|1은;는; 제외)으로 유닛에게 피해를 입히지 못했을 때 발생합니다."
+L["CLEU_DAMAGE_SPLIT"] = "피해 분배"
+L["CLEU_DAMAGE_SPLIT_DESC"] = "피해가 둘 이상의 대상에게 분배되었을 때 발생합니다."
+L["CLEU_DESTUNITS"] = "확인할 대상 유닛"
+L["CLEU_DESTUNITS_DESC"] = "아이콘이 반응할 대상 유닛을 선택하세요, |cff7fffff또는|r 모든 이벤트 대상에 아이콘이 반응하게 하려면 공란으로 비워두세요."
+L["CLEU_DIED"] = "죽음"
+L["CLEU_ENCHANT_APPLIED"] = "마법부여 사용"
+L["CLEU_ENCHANT_APPLIED_DESC"] = "도적의 독이나 주술사의 주입같은 일시적 무기 마법부여를 포함합니다."
+L["CLEU_ENCHANT_REMOVED"] = "마법부여 사라짐"
+L["CLEU_ENCHANT_REMOVED_DESC"] = "도적의 독이나 주술사의 주입같은 일시적 무기 마법부여를 포함합니다."
+L["CLEU_ENVIRONMENTAL_DAMAGE"] = "환경 피해"
+L["CLEU_ENVIRONMENTAL_DAMAGE_DESC"] = "용암, 피로, 호흡 불가, 그리고 낙하 충격을 포함합니다."
+L["CLEU_EVENTS"] = "확인할 이벤트"
+L["CLEU_EVENTS_ALL"] = "모두"
+L["CLEU_EVENTS_DESC"] = "아이콘이 반응할 전투 이벤트를 선택하세요."
+L["CLEU_FLAGS_DESC"] = "아이콘 발생시키지 못하도록 특정 유닛을 제외하는 데 사용하는 속성의 목록을 포함합니다. 제외가 확인되고, 유닛이 속성을 가지고 있으면, 아이콘은 유닛이 포함된 이벤트를 처리하지 않습니다."
+L["CLEU_FLAGS_DEST"] = "제외"
+L["CLEU_FLAGS_SOURCE"] = "제외"
+L["CLEU_HEADER"] = "전투 이벤트 필터"
+L["CLEU_HEADER_DEST"] = "대상 유닛"
+L["CLEU_HEADER_SOURCE"] = "행위자 유닛"
+L["CLEU_NOFILTERS"] = "%2$s의 %1$s 아이콘에 정의된 필터가 없습니다. 최소 하나의 필터를 정의하기 전까지 기능하지 않습니다."
+L["CLEU_PARTY_KILL"] = "죽임"
+L["CLEU_PARTY_KILL_DESC"] = "파티 내 누군가가 무엇인가 처치했을 때 발생합니다."
+L["CLEU_RANGE_DAMAGE"] = "원거리 공격 피해"
+L["CLEU_RANGE_MISSED"] = "원거리 공격 적중 실패"
+L["CLEU_SOURCEUNITS"] = "확인할 행위자 유닛"
+L["CLEU_SOURCEUNITS_DESC"] = "아이콘이 반응할 행위자 유닛을 선택하세요, |cff7fffff또는|r 모든 이벤트 행위자에 아이콘이 반응하게 하려면 공란으로 비워두세요."
+L["CLEU_SPELL_AURA_APPLIED"] = "효과 적용"
+L["CLEU_SPELL_AURA_APPLIED_DOSE"] = "효과 중첩 적용"
+L["CLEU_SPELL_AURA_BROKEN"] = "오라 파괴"
+L["CLEU_SPELL_AURA_BROKEN_SPELL"] = "주문에 의해 오라 파괴"
+L["CLEU_SPELL_AURA_BROKEN_SPELL_DESC"] = [=[일반적으로 군중 제어의 일부 형태인 오라가 주문 피해로 파괴되었을 때 발생합니다.
+
+파괴된 오라는 파괴한 주문 아이콘 별로 선별됩니다; 파괴한 주문은 문자 디스플레이에서 대체자 [Extra]를 사용하여 접근할 수 있습니다.]=]
+L["CLEU_SPELL_AURA_REFRESH"] = "오라 지속시간 초기화"
+L["CLEU_SPELL_AURA_REMOVED"] = "오라 제거"
+L["CLEU_SPELL_AURA_REMOVED_DOSE"] = "오라 중첩 감소"
+L["CLEU_SPELL_CAST_FAILED"] = "주문 시전 실패"
+L["CLEU_SPELL_CAST_START"] = "주문 시전 시작"
+L["CLEU_SPELL_CAST_START_DESC"] = [=[주문 시전이 시작될 때 발생합니다.
+
+참고: 부정 사용을 막기위해, 블리자드는 이 이벤트에서 대상 유닛을 제외시켰습니다, 따라서 대상 유닛으로 필터링할 수 없습니다.]=]
+L["CLEU_SPELL_CAST_SUCCESS"] = "주문 시전 성공"
+L["CLEU_SPELL_CAST_SUCCESS_DESC"] = "주문을 성공적으로 시전했을 때 발생합니다."
+L["CLEU_SPELL_CREATE"] = "만듦"
+L["CLEU_SPELL_CREATE_DESC"] = "사냥꾼의 덫이나 마법사의 포탈같은 개체가 생성되면 발생합니다."
+L["CLEU_SPELL_DAMAGE"] = "주문 피해"
+L["CLEU_SPELL_DAMAGE_CRIT"] = "주문 극대화"
+L["CLEU_SPELL_DAMAGE_CRIT_DESC"] = "주문이 극대화 효과를 발휘했을 때 발생합니다. %q 이벤트와 동시에 발생합니다."
+L["CLEU_SPELL_DAMAGE_DESC"] = "주문이 피해를 입혔을 때 발생합니다."
+L["CLEU_SPELL_DAMAGE_NONCRIT"] = "주문 일반"
+L["CLEU_SPELL_DAMAGE_NONCRIT_DESC"] = "주문이 일반 피해를 주었을 때 발생합니다. %q 이벤트와 동시에 발생합니다."
+L["CLEU_SPELL_DISPEL"] = "무효화"
+L["CLEU_SPELL_DISPEL_DESC"] = [=[오라가 무효화되면 발생합니다.
+
+아이콘은 무효화된 오라에 의해 필터링될 수 있습니다. 문자 디스플레이에서 대체자 [Extra]를 사용하여 주문을 무효화한 주문에 접근할 수 있습니다.]=]
+L["CLEU_SPELL_DISPEL_FAILED"] = "무효화 실패"
+L["CLEU_SPELL_DISPEL_FAILED_DESC"] = [=[오라가 무효화되는데 실패하면 발생합니다.
+
+아이콘은 무효화를 시도한 오라에 의해 필터링될 수 있습니다. 문자 디스플레이에서 대체자 [Extra]를 사용하여 주문을 무효화하려고 시도한 주문에 접근할 수 있습니다.]=]
+L["CLEU_SPELL_DRAIN"] = "자원 소진"
+L["CLEU_SPELL_DRAIN_DESC"] = "자원 (생명력/마나/분노/기력/등등)이 유닛에게서 사라지면 발생합니다."
+L["CLEU_SPELL_ENERGIZE"] = "자원 얻음"
+L["CLEU_SPELL_ENERGIZE_DESC"] = "유닛이 자원 (생명력/마나/분노/기력/등등)을 획득하면 발생합니다."
+L["CLEU_SPELL_EXTRA_ATTACKS"] = "추가 공격 획득"
+L["CLEU_SPELL_EXTRA_ATTACKS_DESC"] = "발동 효과로 추가 근접 공격 기회를 얻으면 발생합니다."
+L["CLEU_SPELL_HEAL"] = "생명력 회복"
+L["CLEU_SPELL_INSTAKILL"] = "죽임"
+L["CLEU_SPELL_INTERRUPT"] = "방해 - 방해된 주문"
+L["CLEU_SPELL_INTERRUPT_DESC"] = [=[주문 시전이 방해되면 발생합니다.
+
+아이콘은 방해된 주문에 의해 필터링될 수 있습니다. 문자 디스플레이에서 대체자 [Extra]를 사용하여 주문을 방해한 주문에 접근할 수 있습니다.
+
+두개의 방해 이벤트엔 차이가 있다는 걸 참고하세요 - 주문이 방해되면 둘 다 발생하지만, 연관된 주문을 각각 다르게 필터링합니다.]=]
+L["CLEU_SPELL_INTERRUPT_SPELL"] = "방해 - 사용한 방해 주문"
+L["CLEU_SPELL_INTERRUPT_SPELL_DESC"] = [=[주문 시전이 방해되면 발생합니다.
+
+아이콘은 방해시킨 주문에 의해 필터링될 수 있습니다. 문자 디스플레이에서 대체자 [Extra]를 사용하여 방해된 주문에 접근할 수 있습니다.
+
+두개의 방해 이벤트엔 차이가 있다는 걸 참고하세요 - 주문이 방해되면 둘 다 발생하지만, 연관된 주문을 각각 다르게 필터링합니다.]=]
+L["CLEU_SPELL_LEECH"] = "자원 소진"
+L["CLEU_SPELL_LEECH_DESC"] = "자원 (생명력/마나/분노/기력/등등)이 한 유닛에게서 사라지고 동시에 다른 유닛에게 주어질 때 발생합니다."
+L["CLEU_SPELL_MISSED"] = "주문 적중 실패"
+L["CLEU_SPELL_PERIODIC_DAMAGE"] = "주기적인 피해"
+L["CLEU_SPELL_PERIODIC_DRAIN"] = "주기적인 자원 소진"
+L["CLEU_SPELL_PERIODIC_ENERGIZE"] = "주기적인 자원 얻음"
+L["CLEU_SPELL_PERIODIC_HEAL"] = "주기적인 생명력 회복"
+L["CLEU_SPELL_PERIODIC_LEECH"] = "주기적인 소진"
+L["CLEU_SPELL_PERIODIC_MISSED"] = "주기적인 적중 실패"
+L["CLEU_SPELL_REFLECT"] = "주문 반사"
+L["CLEU_SPELL_REFLECT_DESC"] = [=[주문을 시전자에게 반사하면 발생합니다.
+
+시전자 유닛은 반사한 유닛이고, 대상 유닛은 반사당한 유닛입니다]=]
+L["CLEU_SPELL_RESURRECT"] = "부활"
+L["CLEU_SPELL_RESURRECT_DESC"] = "유닛이 죽음으로부터 부활하면 발생합니다."
+L["CLEU_SPELL_STOLEN"] = "오라 훔침"
+L["CLEU_SPELL_STOLEN_DESC"] = [=[아마 %s에 의해 강화 효과가 훔쳐졌을 때 발생합니다.
+
+아이콘은 훔쳐진 주문에 따라 필터링될 수 있습니다.]=]
+L["CLEU_SPELL_SUMMON"] = "소환 주문"
+L["CLEU_SPELL_SUMMON_DESC"] = "소환수나 토템같은 NPC가 소환되거나 생성되면 발생합니다."
+L["CLEU_SWING_DAMAGE"] = "자동 공격 피해"
+L["CLEU_SWING_MISSED"] = "자동 공격 적중 실패"
+L["CLEU_TIMER"] = "이벤트에 설정할 타이머"
+L["CLEU_TIMER_DESC"] = [=[이벤트 발생 시 아이콘에 설정되는 초 단위의 타이머 지속시간입니다.
+
+필터로 설정한 주문을 사용하여 이벤트를 처리할 때마다 %q 입력상자에 "주문: 지속시간" 구문을 사용하여 지속시간을 설정할 수도 있습니다.
+
+지속시간이 없는 주문이거나, 주문 필터 세트가 없으면(입력상자가 비었을 경우), 이 지속시간이 사용됩니다.]=]
+L["CLEU_UNIT_DESTROYED"] = "유닛 파괴됨"
+L["CLEU_UNIT_DESTROYED_DESC"] = "토템같은 유닛이 파괴되면 발생합니다."
+L["CLEU_UNIT_DIED"] = "유닛 죽음"
+L["CLEU_WHOLECATEGORYEXCLUDED"] = [=[%q 범주의 모든 부분을 제외했으므로, 이 아이콘은 어떤 이벤트도 처리하지 않습니다.
+
+적절한 기능을 위해 최소 하나는 체크해제하세요.]=]
+L["CLICK_TO_EDIT"] = "|cff7fffff클릭|r하여 편집합니다."
+L["CMD_CHANGELOG"] = "changelog"
+L["CMD_DISABLE"] = "disable"
+L["CMD_ENABLE"] = "enable"
+L["CMD_OPTIONS"] = "options"
+L["CMD_PROFILE"] = "profile"
+L["CMD_PROFILE_INVALIDPROFILE"] = "%q|1이라는;라는; 이름의 프로필이 없습니다!"
+L["CMD_PROFILE_INVALIDPROFILE_SPACES"] = "팁: 프로필 이름에 공백이 있으면, 주위에 따옴표를 삽입하세요."
+L["CMD_TOGGLE"] = "toggle"
+L["CNDT_DEPRECATED_DESC"] = "%s 조건이 작동하지 않습니다. 아마도 게임 작동 구조의 변경 때문입니다. 조건을 제거하거나 다른 조건으로 변경하세요."
+L["CNDT_MULTIPLEVALID"] = "세미콜론으로 여러 개의 이름/ID를 구분지어 입력할 수 있습니다."
+L["CNDT_ONLYFIRST"] = "첫 주문/아이템만 확인합니다 - 세미콜론으로 구분된 목록은 이 조건 유형에 맞지 않습니다."
+L["CNDT_RANGE"] = "유닛 거리"
+L["CNDT_RANGE_DESC"] = [=[LibRangeCheck-2.0을 사용하여 유닛의 대략적인 거리를 확인합니다.
+유닛이 존재하지 않으면 조건은 false 값을 나타냅니다.]=]
+L["CNDT_RANGE_IMPRECISE"] = "%d미터. (|cffff1300대략적으로|r)"
+L["CNDT_RANGE_PRECISE"] = "%d미터. (|cff00c322정확하게|r)"
+L["CNDT_SLIDER_DESC_CLICKSWAP_TOMANUAL"] = "|cff7fffff오른쪽-클릭|r하여 수동 입력으로 전환합니다."
+L["CNDT_SLIDER_DESC_CLICKSWAP_TOSLIDER"] = "|cff7fffff오른쪽-클릭|r하여 슬라이더 입력으로 전환합니다."
+L["CNDT_SLIDER_DESC_CLICKSWAP_TOSLIDER_DISALLOWED"] = "%s 이상의 값은 수동 입력만 허용됩니다 (블리자드의 슬라이더는 큰 값에서 제대로 작동하지 않을 수 있습니다.)"
+L["CNDT_TOTEMNAME"] = "토템 이름"
+L["CNDT_TOTEMNAME_DESC"] = [=[선택한 유형의 모든 토템을 추적하려면 공란으로 비워두세요.
+
+토템 이름을 입력하거나, 세미콜론으로 구분한 이름의 목록을 입력하면 특정 토템만 확인합니다.]=]
+L["CNDT_UNKNOWN_DESC"] = "당신의 설정에 식별자 %s|1을;를; 사용한 조건이 있지만, 그런 조건은 발견할 수 없었습니다. 아마도 구버전의 TMW를 사용 중이거나, 이 조건이 제거되었을 수 있습니다."
+L["CNDTCAT_ARCHFRAGS"] = "고고학 조각"
+L["CNDTCAT_ATTRIBUTES_PLAYER"] = "플레이어 속성"
+L["CNDTCAT_ATTRIBUTES_UNIT"] = "유닛 속성"
+L["CNDTCAT_BOSSMODS"] = "우두머리 모듈"
 L["CNDTCAT_BUFFSDEBUFFS"] = "강화 효과/약화 효과"
+L["CNDTCAT_CURRENCIES"] = "화폐"
 L["CNDTCAT_FREQUENTLYUSED"] = "지속적으로 사용"
-L["CNDTCAT_RESOURCES"] = "출처"
+L["CNDTCAT_LOCATION"] = "그룹과 위치"
+L["CNDTCAT_MISC"] = "기타"
+L["CNDTCAT_RESOURCES"] = "자원"
 L["CNDTCAT_SPELLSABILITIES"] = "주문/아이템"
-L["CNDTCAT_STATS"] = "전투 상태"
+L["CNDTCAT_STATS"] = "전투 능력치"
+L["CNDTCAT_TALENTS"] = "직업과 특성"
+L["CODESNIPPET_ADD2"] = "새로운 %s 코드 조각"
+L["CODESNIPPET_ADD2_DESC"] = "|cff7fffff클릭|r하여 새로운 %s 코드 조각을 추가합니다."
+L["CODESNIPPET_AUTORUN"] = "접속 시 자동실행"
+L["CODESNIPPET_AUTORUN_DESC"] = "활성화하면 이 코드 조각은 TMW_INITIALIZE가 발생하면 (PLAYER_LOGIN 중 발생하지만, 모든 아이콘과 그룹은 그 이전에 생성됩니다) 실행됩니다."
+L["CODESNIPPET_CODE"] = "실행할 Lua 코드"
+L["CODESNIPPET_DELETE"] = "코드 조각 삭제"
+L["CODESNIPPET_DELETE_CONFIRM"] = "%q 코드 조각을 정말로 삭제할까요?"
+L["CODESNIPPET_EDIT_DESC"] = "|cff7fffff클릭|r하여 이 코드 조각을 편집합니다."
+L["CODESNIPPET_GLOBAL"] = "공통 코드 조각"
+L["CODESNIPPET_ORDER"] = "실행 순서"
+L["CODESNIPPET_ORDER_DESC"] = [=[이 코드 조각이 다른 코드 조각과 연관되어 실행될 순서를 설정합니다.
+
+%s|1과;와; %s|1은;는; 실행될 때 이 값에 기반하여 함께 섞입니다.
+
+십진수가 유효합니다. 두 코드 조각이 같은 순서를 공유하면 일관된 순서는 보장되지 않습니다.]=]
+L["CODESNIPPET_PROFILE"] = "프로필 코드 조각"
+L["CODESNIPPET_RENAME"] = "코드 조각 이름"
+L["CODESNIPPET_RENAME_DESC"] = [=[자신이 알아 보기 쉽게 이 코드 조각의 이름을 선택하세요.
+
+이름이 고유할 필요는 없습니다.]=]
+L["CODESNIPPET_RUNAGAIN"] = "코드 조각 다시 실행"
+L["CODESNIPPET_RUNAGAIN_DESC"] = [=[이 코드 조각은 이번 세션에서 이미 한번 실행되었습니다.
+
+|cff7fffff클릭|r하여 다시 실행합니다.]=]
+L["CODESNIPPET_RUNNOW"] = "지금 코드 조각 실행"
+L["CODESNIPPET_RUNNOW_DESC"] = "|cff7fffff클릭|r하여 이 코드 조각의 코드를 실행합니다."
+L["CODESNIPPETS"] = "Lua 코드 조각"
+L["CODESNIPPETS_DEFAULTNAME"] = "새로운 코드 조각"
+L["CODESNIPPETS_DESC"] = [=[이 기능은 TellMeWhen이 초기 구동될 때 실행될 Lua 코드의 덩어리를 작성할 수 있게 해줍니다.
+
+Lua에 경험이 있는 사람들을 위한 고급 기능입니다 (또는 다른 TellMeWhen 사용자가 전달한 코드 조각의 사용자).
+
+Lua 환경에서 사용할 사용자 설정 함수의 작성을 포함합니다.
+
+코드 조각은 프로필 별로 또는 공용으로 정의될 수 있습니다 (공용 코드 조각은 모든 프로필에서 실행됩니다).
+
+당신의 코드에 TellMeWhen 아이콘을 사용하려면, 아이콘을 |cff7fffffShift-클릭|r하세요.]=]
+L["CODESNIPPETS_DESC_SHORT"] = "TellMeWhen이 초기 구동될 때 실행될 Lua 코드의 덩어리를 작성합니다."
+L["CODESNIPPETS_IMPORT_GLOBAL"] = "새로운 공통 코드 조각"
+L["CODESNIPPETS_IMPORT_GLOBAL_DESC"] = "공통 코드 조각으로 코드 조각을 가져옵니다."
+L["CODESNIPPETS_IMPORT_PROFILE"] = "새로운 프로필 코드 조각"
+L["CODESNIPPETS_IMPORT_PROFILE_DESC"] = "프로필 관련 코드 조각으로 코드 조각을 가져옵니다."
+L["CODESNIPPETS_TITLE"] = "Lua 코드 조각"
 L["CODETOEXE"] = "실행할 코드"
+L["COLOR_MSQ_COLOR"] = "Masque 테두리 색상 입히기"
+L["COLOR_MSQ_COLOR_DESC"] = "체크하면 Masque 스킨의 테두리에 색상을 입힙니다 (사용 중인 스킨에 테두리가 있으면)."
+L["COLOR_MSQ_ONLY"] = "Masque 테두리만 색상입히기"
+L["COLOR_MSQ_ONLY_DESC"] = "체크하면 Masque 스킨의 테두리만 색상을 입힙니다 (사용 중인 스킨에 테두리가 있으면). 아이콘은 색상을 입히지 않습니다"
+L["COLOR_OVERRIDE_GLOBAL"] = "공통 색상 강제 적용"
+L["COLOR_OVERRIDE_GLOBAL_DESC"] = "공통으로 정의된 색상을 독립적으로 설정하려면 체크하세요."
+L["COLOR_OVERRIDE_GROUP"] = "그룹 색상 강제 적용"
+L["COLOR_OVERRIDE_GROUP_DESC"] = "아이콘의 그룹 별로 색상을 독립적으로 설정하려면 체크하세요."
+L["COLORPICKER_BRIGHTNESS"] = "밝기"
+L["COLORPICKER_BRIGHTNESS_DESC"] = "색상의 밝기를 설정합니다 (종종 값이라고 부릅니다)."
+L["COLORPICKER_DESATURATE"] = "흑백"
+L["COLORPICKER_DESATURATE_DESC"] = "색상을 적용하기 전에 무늬를 흑백화합니다, 색칠하지 않고 무늬에 색상을 다시 입힐 수 있습니다."
+L["COLORPICKER_HUE"] = "색조"
+L["COLORPICKER_HUE_DESC"] = "색상의 색조를 설정합니다."
+L["COLORPICKER_ICON"] = "미리보기"
+L["COLORPICKER_OPACITY"] = "불투명도"
+L["COLORPICKER_OPACITY_DESC"] = "색상의 불투명도를 설정합니다 (종종 투명도라고 부릅니다)."
+L["COLORPICKER_RECENT"] = "최근 사용한 색상"
+L["COLORPICKER_RECENT_DESC"] = [=[|cff7fffff클릭|r하여 이 색상을 불러옵니다.
+|cff7fffff오른쪽-클릭|r하여 이 목록에서 제거합니다.]=]
+L["COLORPICKER_SATURATION"] = "채도"
+L["COLORPICKER_SATURATION_DESC"] = "색상의 채도를 설정합니다."
+L["COLORPICKER_STRING"] = "16진 문자열"
+L["COLORPICKER_STRING_DESC"] = "현재 색상을 (A)RGB 16진 표현으로 설정하거나 가져옵니다."
+L["COLORPICKER_SWATCH"] = "색상"
 L["COMPARISON"] = "비교"
+L["CONDITION_COUNTER"] = "확인할 카운터"
+L["CONDITION_COUNTER_EB_DESC"] = "확인하고 싶은 카운터의 이름을 입력하세요."
+L["CONDITION_QUESTCOMPLETE"] = "퀘스트 완료"
+L["CONDITION_QUESTCOMPLETE_DESC"] = "퀘스트 완료 여부를 확인합니다."
+L["CONDITION_QUESTCOMPLETE_EB_DESC"] = [=[확인하고 싶은 퀘스트ID를 입력하세요.
+
+퀘스트ID는 Wowhead같은 데이터베이스 사이트에서 퀘스트를 볼 때 URL에서 확인할 수 있습니다.
+
+예. http://www.wowhead.com/quest=28716/heros-call-twilight-highlands에서 퀘스트ID는 28716 입니다]=]
+L["CONDITION_TIMEOFDAY"] = "시간 확인"
+L["CONDITION_TIMEOFDAY_DESC"] = [=[현재 시간을 확인하는 조건입니다.
+
+자신의 지역 시간을 확인하며, 컴퓨터의 시계에 따릅니다. 서버 시간을 확인하지 않습니다.]=]
+L["CONDITION_TIMER"] = "확인할 타이머"
+L["CONDITION_TIMER_EB_DESC"] = "확인하고 싶은 타이머의 이름을 입력하세요."
+L["CONDITION_TIMERS_FAIL_DESC"] = "조건이 실패할 때 아이콘에 설정할 타이머의 지속시간"
+L["CONDITION_TIMERS_SUCCEED_DESC"] = "조건이 만족했을 때 아이콘에 설정할 타이머의 지속시간"
+L["CONDITION_WEEKDAY"] = "주일"
+L["CONDITION_WEEKDAY_DESC"] = [=[현재 주일을 확인하는 조건입니다.
+
+자신의 지역 시간을 확인하며, 컴퓨터의 시계에 따릅니다. 서버 시간을 확인하지 않습니다.]=]
+L["CONDITIONALPHA_METAICON"] = "실패한 조건"
+L["CONDITIONALPHA_METAICON_DESC"] = [=[이 불투명도는 조건이 실패하면 사용됩니다.
+
+다른 %s 설정에 의해 아이콘이 이미 숨겨져 있다면 이 설정은 무시됩니다.
+
+조건은 %q 탭에서 설정할 수 있습니다.]=]
+L["CONDITIONPANEL_ABSOLUTE"] = "현재"
 L["CONDITIONPANEL_ADD"] = "조건 추가"
+L["CONDITIONPANEL_ADD2"] = "클릭하여 조건을 추가합니다"
 L["CONDITIONPANEL_ALIVE"] = "유닛 생존"
-L["CONDITIONPANEL_ALIVE_DESC"] = "지정된 유닛이 살아있으면 상태 조건이 활성화됩니다."
-L["CONDITIONPANEL_AND"] = "과(와)"
-L["CONDITIONPANEL_ANDOR"] = "과(와)/또는"
-L["CONDITIONPANEL_AUTOCAST"] = "주문 자동시전"
-L["CONDITIONPANEL_CASTTOMATCH"] = "일치하는 주문"
-L["CONDITIONPANEL_CASTTOMATCH_DESC"] = "주문 시전이 정확하게 일치한 경우에만 조건이 통과되도록 하려면 여기에 주문의 이름을 입력하십시오."
+L["CONDITIONPANEL_ALIVE_DESC"] = "지정된 유닛이 살아있으면 조건을 만족합니다."
+L["CONDITIONPANEL_ALTPOWER"] = "보조 자원"
+L["CONDITIONPANEL_ALTPOWER_DESC"] = "여러 퀘스트와 우두머리 전투에서 사용하는 자원입니다."
+L["CONDITIONPANEL_AND"] = "And"
+L["CONDITIONPANEL_ANDOR"] = "And / Or"
+L["CONDITIONPANEL_ANDOR_DESC"] = "|cff7fffff클릭|r하여 논리 연산자 AND 와 OR을 전환합니다"
+L["CONDITIONPANEL_AUTOCAST"] = "소환수 주문 자동시전"
+L["CONDITIONPANEL_AUTOCAST_DESC"] = "특정 소환수 주문이 자동시전인지 확인합니다."
+L["CONDITIONPANEL_BIGWIGS_ENGAGED"] = "Big Wigs - 우두머리 교전 중"
+L["CONDITIONPANEL_BIGWIGS_ENGAGED_DESC"] = [=[Big Wigs에 따라서 우두머리와 교전 중인지 확인합니다.
+
+"확인할 공격대 전투"에 공격대 전투의 전체 이름이나 부분 이름을 입력하세요.]=]
+L["CONDITIONPANEL_BIGWIGS_TIMER"] = "Big Wigs - 타이머"
+L["CONDITIONPANEL_BIGWIGS_TIMER_DESC"] = [=[Big Wigs 우두머리 모듈 타이머의 지속시간을 확인합니다.
+
+"확인할 타이머"에 타이머의 전체 이름이나 부분 이름을 입력하세요.]=]
+L["CONDITIONPANEL_BITFLAGS_ALWAYS"] = "항상 True"
+L["CONDITIONPANEL_BITFLAGS_CHECK"] = "선택한 항목 무시"
+L["CONDITIONPANEL_BITFLAGS_CHECK_DESC"] = [=[이 조건을 확인하는데 사용되는 논리를 반대로 전환하려면 체크하세요.
+
+기본값으로, 선택한 옵션 중 하나라도 true 값이면 이 조건은 충족됩니다.
+
+이 설정을 체크하면, 선택한 모든 옵션이 false 값일 때 조건이 충족됩니다.]=]
+L["CONDITIONPANEL_BITFLAGS_CHOOSECLASS"] = "직업 선택..."
+L["CONDITIONPANEL_BITFLAGS_CHOOSEMENU_CONTINENT"] = "대륙 선택..."
+L["CONDITIONPANEL_BITFLAGS_CHOOSEMENU_RAIDICON"] = "아이콘 선택..."
+L["CONDITIONPANEL_BITFLAGS_CHOOSEMENU_TYPES"] = "유형 선택..."
+L["CONDITIONPANEL_BITFLAGS_CHOOSERACE"] = "종족 선택..."
+L["CONDITIONPANEL_BITFLAGS_NEVER"] = "없음 - 항상 False"
+L["CONDITIONPANEL_BITFLAGS_NOT"] = "Not"
+L["CONDITIONPANEL_BITFLAGS_SELECTED"] = "|cff7fffff선택|r:"
+L["CONDITIONPANEL_BLIZZEQUIPSET"] = "장비 구성 착용"
+L["CONDITIONPANEL_BLIZZEQUIPSET_DESC"] = "특정 블리자드 장비 관리 구성을 착용 중인지 확인합니다."
+L["CONDITIONPANEL_BLIZZEQUIPSET_INPUT"] = "장비 구성 이름"
+L["CONDITIONPANEL_BLIZZEQUIPSET_INPUT_DESC"] = [=[확인하고 싶은 블리자드 장비 구성의 이름을 입력하세요.
+
+오직 하나의 장비 구성만 입력할 수 있으며, |cFFFF5959대/소문자를 구분|r합니다]=]
+L["CONDITIONPANEL_CASTCOUNT"] = "주문 시전 횟수"
+L["CONDITIONPANEL_CASTCOUNT_DESC"] = "유닛이 특정 주문을 시전한 횟수를 확인합니다."
+L["CONDITIONPANEL_CASTTOMATCH"] = "일치시킬 주문"
+L["CONDITIONPANEL_CASTTOMATCH_DESC"] = [=[주문 시전이 정확하게 일치한 경우에만 조건이 만족되도록 하려면 여기에 주문 이름을 입력하세요.
+
+모든 주문 시전/정신 집중을 확인하려면 공란으로 비워두세요.]=]
 L["CONDITIONPANEL_CLASS"] = "유닛 직업"
-L["CONDITIONPANEL_CLASSIFICATION"] = "유닛 분류"
+L["CONDITIONPANEL_CLASSIFICATION"] = "유닛 등급"
+L["CONDITIONPANEL_CLASSIFICATION_DESC"] = "유닛의 희귀/정예/야외 우두머리 상태를 확인합니다."
 L["CONDITIONPANEL_COMBAT"] = "전투 중 유닛"
 L["CONDITIONPANEL_COMBO"] = "연계 점수"
+L["CONDITIONPANEL_COUNTER_DESC"] = "\"카운터\" 알림 처리기가 설정하고 수정한 카운터의 값을 확인합니다"
+L["CONDITIONPANEL_CREATURETYPE"] = "유닛 생명체 유형"
+L["CONDITIONPANEL_CREATURETYPE_DESC"] = [=[세미콜론(;)으로 구분지어 여러 개의 생명체 유형을 입력할 수 있습니다.
+
+생명체 유형은 생명체의 툴팁에 나타나는 대로 정확하게 입력해야 합니다.
+
+유형이 일치하면 조건이 만족됩니다.]=]
+L["CONDITIONPANEL_CREATURETYPE_LABEL"] = "생명체 유형"
+L["CONDITIONPANEL_DBM_ENGAGED"] = "Deadly Boss Mods - 우두머리 교전 중"
+L["CONDITIONPANEL_DBM_ENGAGED_DESC"] = [=[Deadly Boss Mods에 따라서 우두머리와 교전 중인지 확인합니다.
+
+"확인할 공격대 전투"에 공격대 전투의 전체 이름이나 부분 이름을 입력하세요.]=]
+L["CONDITIONPANEL_DBM_TIMER"] = "Deadly Boss Mods - 타이머"
+L["CONDITIONPANEL_DBM_TIMER_DESC"] = [=[Deadly Boss Mods 타이머의 지속시간을 확인합니다.
+
+"확인할 타이머"에 타이머의 전체 이름이나 부분 이름을 입력하세요.]=]
 L["CONDITIONPANEL_DEFAULT"] = "유형 선택..."
-L["CONDITIONPANEL_ECLIPSE_DESC"] = "식은 -100(월식)에서 100(일식)의 범위를 갖고 있습니다. 80의 월력 값으로 작동하는 아이콘을 원한다면 -80을 입력하십시오."
+L["CONDITIONPANEL_ECLIPSE_DESC"] = "식은 -100(월식)에서 100(일식)의 범위를 갖습니다. 80의 월력 값으로 작동하는 아이콘을 원한다면 -80을 입력하십시오."
 L["CONDITIONPANEL_EQUALS"] = "같음"
 L["CONDITIONPANEL_EXISTS"] = "유닛 존재"
 L["CONDITIONPANEL_GREATER"] = "보다 큼"
 L["CONDITIONPANEL_GREATEREQUAL"] = "보다 크거나/같음"
+L["CONDITIONPANEL_GROUPSIZE"] = "인스턴스 규모"
+L["CONDITIONPANEL_GROUPSIZE_DESC"] = [=[현재 인스턴스에 맞춰진 플레이어의 숫자를 확인합니다.
+
+여기에는 현재 탄력적 공격대도 포함됩니다.]=]
 L["CONDITIONPANEL_GROUPTYPE"] = "그룹 유형"
+L["CONDITIONPANEL_GROUPTYPE_DESC"] = "당신이 속한 파티의 유형을 확인합니다 (솔로, 파티, 또는 공격대)."
 L["CONDITIONPANEL_ICON"] = "아이콘 표시됨"
-L["CONDITIONPANEL_ICON_DESC"] = [=[지정된 아이콘을 표시 또는 숨길 상태를 체크합니다.
+L["CONDITIONPANEL_ICON_DESC"] = [=[지정한 아이콘의 표시 여부를 확인하는 조건입니다.
 
-체크했을 때 아이콘을 표시하고 싶지 않으면, 그 아이콘의 아이콘 편집기에서 %q에 체크하세요.
+확인 중인 아이콘을 표시하고 싶지 않다면, 해당 아이콘의 아이콘 편집기에서 %q|1을;를; 확인하세요.
 
-체크된 아이콘의 그룹은 상태 조건이 만족하지 않더라도 아이콘을 체크하기 위해 무조건 표시됩니다.]=]
-L["CONDITIONPANEL_INSTANCETYPE"] = "인던 유형"
-L["CONDITIONPANEL_INTERRUPTIBLE"] = "차단 가능"
-L["CONDITIONPANEL_ITEMRANGE"] = "유닛의 사정 거리내 아이템"
+조건이 숨겨짐으로 설정된 경우에도 아이콘을 확인하려면 확인 중인 아이콘 그룹이 표시되어야만 합니다.]=]
+L["CONDITIONPANEL_ICON_HIDDEN"] = "숨겨짐"
+L["CONDITIONPANEL_ICON_SHOWN"] = "표시됨"
+L["CONDITIONPANEL_ICONHIDDENTIME"] = "아이콘 숨겨짐 시간"
+L["CONDITIONPANEL_ICONHIDDENTIME_DESC"] = [=[지정한 아이콘이 얼마나 오래 숨겨졌는지 확인하는 조건입니다.
+
+확인 중인 아이콘을 표시하고 싶지 않다면, 해당 아이콘의 아이콘 편집기에서 %q|1을;를; 확인하세요.
+
+아이콘을 확인하려면 확인 중인 아이콘 그룹이 표시되어야만 합니다.]=]
+L["CONDITIONPANEL_ICONSHOWNTIME"] = "아이콘 표시됨 시간"
+L["CONDITIONPANEL_ICONSHOWNTIME_DESC"] = [=[지정한 아이콘이 얼마나 오래 표시되었는지 확인하는 조건입니다.
+
+확인 중인 아이콘을 표시하고 싶지 않다면, 해당 아이콘의 아이콘 편집기에서 %q|1을;를; 확인하세요.
+
+아이콘을 확인하려면 확인 중인 아이콘 그룹이 표시되어야만 합니다.]=]
+L["CONDITIONPANEL_INPETBATTLE"] = "애완동물 대전 중"
+L["CONDITIONPANEL_INSTANCETYPE"] = "인스턴스 유형"
+L["CONDITIONPANEL_INSTANCETYPE_DESC"] = "모든 던전이나 공격대의 난이도 설정을 포함하여, 당신이 속해 있는 인스턴스의 유형을 확인합니다."
+L["CONDITIONPANEL_INSTANCETYPE_LEGACY"] = "%s (낭만)"
+L["CONDITIONPANEL_INSTANCETYPE_NONE"] = "외부"
+L["CONDITIONPANEL_INTERRUPTIBLE"] = "방해 가능"
+L["CONDITIONPANEL_ITEMRANGE"] = "유닛의 사정 거리 내 아이템"
 L["CONDITIONPANEL_LESS"] = "보다 작음"
 L["CONDITIONPANEL_LESSEQUAL"] = "보다 작거나/같음"
 L["CONDITIONPANEL_LEVEL"] = "유닛 레벨"
-L["CONDITIONPANEL_MANAUSABLE"] = "사용 가능 주문(마나/기력/기타)"
+L["CONDITIONPANEL_LOC_CONTINENT"] = "대륙"
+L["CONDITIONPANEL_LOC_SUBZONE"] = "하위 지역"
+L["CONDITIONPANEL_LOC_SUBZONE_BOXDESC"] = "확인하고 싶은 하위 지역을 입력하세요. 세미콜론으로 구분하여 여러 개의 하위 지역을 입력할 수 있습니다."
+L["CONDITIONPANEL_LOC_SUBZONE_DESC"] = "자신의 현재 하위 지역을 확인합니다. 때때로 하위 지역에 있지 않기도 하다는 걸 참고하세요."
+L["CONDITIONPANEL_LOC_SUBZONE_LABEL"] = "확인할 하위 지역 입력"
+L["CONDITIONPANEL_LOC_ZONE"] = "지역"
+L["CONDITIONPANEL_LOC_ZONE_DESC"] = "확인하고 싶은 지역을 입력하세요. 세미콜론으로 구분하여 여러 개의 지역을 입력할 수 있습니다."
+L["CONDITIONPANEL_LOC_ZONE_LABEL"] = "확인할 지역 입력"
+L["CONDITIONPANEL_MANAUSABLE"] = "사용 가능 주문 (마나/기력/기타)"
+L["CONDITIONPANEL_MANAUSABLE_DESC"] = [=[주 자원 (마나/기력/분노/집중/룬마력/등등)을 얼마나 가지고 있는 지에 따라 주문이 사용 가능한 지 확인합니다.
+
+부 자원 (룬/신성한 힘/기/등등)에 따른 사용 가능성을 확인하지 않습니다.]=]
+L["CONDITIONPANEL_MAX"] = "최대"
+L["CONDITIONPANEL_MOUNTED"] = "탈것 탑승 중"
 L["CONDITIONPANEL_NAME"] = "유닛 이름"
-L["CONDITIONPANEL_NAMETOMATCH"] = "일치하는 이름"
+L["CONDITIONPANEL_NAMETOMATCH"] = "일치시킬 이름"
+L["CONDITIONPANEL_NAMETOOLTIP"] = "세미콜론(;)으로 구분하여 여러 개의 이름을 입력할 수 있습니다. 이름이 일치하면 조건이 만족됩니다."
 L["CONDITIONPANEL_NOTEQUAL"] = "같지 않음"
+L["CONDITIONPANEL_NPCID"] = "유닛 NPC ID"
+L["CONDITIONPANEL_NPCID_DESC"] = [=[유닛이 특정 NPC ID인지 확인합니다.
+
+NPC ID는 NPC의 Wowhead 페이지 (예. http://www.wowhead.com/npc=62943) URL에서 찾을 수 있는 숫자입니다.
+
+NPC ID가 없는 플레이어와 다른 유닛은 이 조건에서 0의 ID를 갖는 것으로 취급됩니다.]=]
+L["CONDITIONPANEL_NPCIDTOMATCH"] = "일치시킬 ID"
+L["CONDITIONPANEL_NPCIDTOOLTIP"] = "세미콜론(;)으로 구분하여 여러 개의 NPC ID를 입력할 수 있습니다. ID가 일치하면 조건이 만족됩니다."
+L["CONDITIONPANEL_OLD"] = "<|cffff1300구|r>"
+L["CONDITIONPANEL_OLD_DESC"] = "<|cffff1300구|r> - 사용 가능한 이 조건의 최신/개선 버전이 있습니다."
 L["CONDITIONPANEL_OPERATOR"] = "연산자"
 L["CONDITIONPANEL_OR"] = "또는"
+L["CONDITIONPANEL_OVERRBAR"] = "행동 단축바 강제 적용"
+L["CONDITIONPANEL_OVERRBAR_DESC"] = "주 행동 단축바를 강제 적용하는 몇몇 효과를 가지고 있는지 확인합니다. 애완동물 대전은 포함하지 않습니다."
+L["CONDITIONPANEL_PERCENT"] = "백분율"
 L["CONDITIONPANEL_PETMODE"] = "소환수 공격 모드"
+L["CONDITIONPANEL_PETMODE_DESC"] = "현재 소환수의 공격 모드를 확인합니다."
+L["CONDITIONPANEL_PETMODE_NONE"] = "소환수 없음"
+L["CONDITIONPANEL_PETSPEC"] = "소환수 전문화"
+L["CONDITIONPANEL_PETSPEC_DESC"] = "현재 소환수의 전문화를 확인합니다."
 L["CONDITIONPANEL_POWER"] = "주 자원"
-L["CONDITIONPANEL_POWER_DESC"] = "유닛이 표범 변신 중인 드루이드라면 기력에, 유닛이 전사 또는 그외라면 분노에 체크하면 됩니다."
+L["CONDITIONPANEL_POWER_DESC"] = "유닛이 표범 변신 중인 드루이드라면 기력을, 유닛이 전사라면 분노를 확인합니다."
+L["CONDITIONPANEL_PVPFLAG"] = "PvP 전투 상태 활성화 유닛"
 L["CONDITIONPANEL_RAIDICON"] = "유닛 공격대 아이콘"
+L["CONDITIONPANEL_RAIDICON_DESC"] = "유닛에 적용된 공격대 징표 아이콘을 확인합니다."
 L["CONDITIONPANEL_REMOVE"] = "이 조건 제거"
-L["CONDITIONPANEL_RESTING"] = "휴식"
-L["CONDITIONPANEL_ROLE"] = "유닛 역활"
-L["CONDITIONPANEL_SPELLRANGE"] = "유닛의 사정 거리내 주문"
-L["CONDITIONPANEL_SWIMMING"] = "수영"
+L["CONDITIONPANEL_RESTING"] = "휴식 중"
+L["CONDITIONPANEL_ROLE"] = "유닛 파티 역할"
+L["CONDITIONPANEL_ROLE_DESC"] = "파티/공격대에서 플레이어에 지정된 역할을 확인합니다."
+L["CONDITIONPANEL_RUNES"] = "룬 갯수"
+L["CONDITIONPANEL_RUNES_CHECK_DESC"] = "이 유형의 룬을 조건의 총 갯수로 계산하려면 체크하세요."
+L["CONDITIONPANEL_RUNES_DESC3"] = "원하는 룬의 갯수가 언제 사용 가능한 지 확인하려면 이 조건 유형을 사용하세요."
+L["CONDITIONPANEL_RUNESLOCK"] = "룬 갯수 잠금"
+L["CONDITIONPANEL_RUNESLOCK_DESC"] = "원하는 룬의 갯수가 언제 잠기는 지 (충전 중) 확인하려면 이 조건 유형을 사용하세요."
+L["CONDITIONPANEL_RUNESRECH"] = "충전 중인 룬 갯수"
+L["CONDITIONPANEL_RUNESRECH_DESC"] = "원하는 룬의 갯수가 언제 충전되는 지 확인하려면 이 조건 유형을 사용하세요."
+L["CONDITIONPANEL_SPELLRANGE"] = "유닛의 사정 거리 내 주문"
+L["CONDITIONPANEL_SWIMMING"] = "수영 중"
+L["CONDITIONPANEL_THREAT_RAW"] = "유닛 위협 수준 - 원래의"
+L["CONDITIONPANEL_THREAT_RAW_DESC"] = [=[이 조건은 유닛에 자신의 원래의 위협 수준 백분율을 확인합니다.
+
+근접거리 플레이어는 110%에 어그로를 끕니다
+원거리 플레이어는 130%에 어그로를 끕니다
+어그로를 가진 플레이어는 255%의 원래의 위협 수준 백분율을 가집니다]=]
+L["CONDITIONPANEL_THREAT_SCALED"] = "유닛 위협 수준 - 비율화"
+L["CONDITIONPANEL_THREAT_SCALED_DESC"] = [=[이 조건은 유닛에 비율화된 위협 수준 백분율을 확인합니다.
+
+자신이 유닛을 방어 중이면 100% 가리킵니다.]=]
+L["CONDITIONPANEL_TIMER_DESC"] = "\"타이머\" 알림 처리기가 설정하고 수정한 타이머의 값을 확인합니다."
 L["CONDITIONPANEL_TRACKING"] = "추적 활성"
+L["CONDITIONPANEL_TRACKING_DESC"] = "활성화한 미니맵 추적의 유형을 확인합니다."
 L["CONDITIONPANEL_TYPE"] = "유형"
 L["CONDITIONPANEL_UNIT"] = "유닛"
-L["CONDITIONPANEL_UNITISUNIT"] = "Unit is Unit(유닛이 유닛)"
-L["CONDITIONPANEL_UNITISUNIT_DESC"] = "이 조건은 유닛이 첫번째 편집 박스에 들어 있고 두번째 편집 박스에도 동일하게 들어 있다면 통과됩니다. "
-L["CONDITIONPANEL_UNITISUNIT_EBDESC"] = "이 편집 박스에 첫번째 유닛과 비교할 유닛을 입력합니다."
+L["CONDITIONPANEL_UNITISUNIT"] = "유닛 일치"
+L["CONDITIONPANEL_UNITISUNIT_DESC"] = "이 조건은 첫번째 입력 상자에 입력된 유닛과 두번째 입력 상자에 입력된 유닛이 완전히 같으면 만족됩니다."
+L["CONDITIONPANEL_UNITISUNIT_EBDESC"] = "이 입력 상자에 첫번째 유닛과 비교할 유닛을 입력하세요."
+L["CONDITIONPANEL_UNITRACE"] = "유닛 종족"
+L["CONDITIONPANEL_UNITSPEC"] = "유닛 전문화"
+L["CONDITIONPANEL_UNITSPEC_CHOOSEMENU"] = "전문화 선택..."
+L["CONDITIONPANEL_UNITSPEC_DESC"] = [=[이 조건은 다음에만 작동합니다:
+|cff7fffff-|r 자기 자신
+|cff7fffff-|r 전장 적
+|cff7fffff-|r 투기장 적
+
+다음에 작동하지 않습니다: |TInterface/AddOns/TellMeWhen/Textures/Alert:0:2|t
+|cff7fffff-|r 파티원
+|cff7fffff-|r 모든 다른 플레이어]=]
 L["CONDITIONPANEL_VALUEN"] = "값"
+L["CONDITIONPANEL_VEHICLE"] = "유닛 차량 조종"
+L["CONDITIONPANEL_ZONEPVP"] = "지역 PvP 상태"
+L["CONDITIONPANEL_ZONEPVP_DESC"] = "지역의 PvP 모드를 확인합니다 (예. 분쟁 지역, 성역, 전투 지역, 등등)"
+L["CONDITIONPANEL_ZONEPVP_FFA"] = "개인 PvP 전투"
 L["CONDITIONS"] = "조건"
-L["CONFIGMODE"] = "TellMeWhen이 설정 모드 상태입니다. 설정 모드를 빠져 나가기 까지 아이콘은 기능하지 않습니다. 설정 모드 켜기와 끄기를 전환하려면 '/tmw'를 입력하십시오. "
+L["CONFIGMODE"] = "TellMeWhen이 설정 모드 상태입니다. 설정 모드를 빠져 나가기 까지 아이콘은 기능하지 않습니다. 설정 모드 켜기와 끄기를 전환하려면 '/tellmewhen'이나 '/tmw'를 입력하세요."
 L["CONFIGMODE_EXIT"] = "설정 모드 나가기"
-L["CONFIGMODE_NEVERSHOW"] = "다시 보여 주지 않음"
-L["COPYGROUP"] = "해당 그룹 복사"
-L["COPYPOSSCALE"] = "위치/크기 비율 복사"
+L["CONFIGMODE_EXITED"] = "TMW가 잠겼습니다. 다시 설정 모드로 들어가려면 /tmw를 입력하세요."
+L["CONFIGMODE_NEVERSHOW"] = "다시 보지 않기"
+L["CONFIGPANEL_BACKDROP_HEADER"] = "배경"
+L["CONFIGPANEL_CBAR_HEADER"] = "타이머 바 오버레이"
+L["CONFIGPANEL_CLEU_HEADER"] = "전투 이벤트"
+L["CONFIGPANEL_CNDTTIMERS_HEADER"] = "조건 타이머"
+L["CONFIGPANEL_COMM_HEADER"] = "통신"
+L["CONFIGPANEL_MEDIA_HEADER"] = "미디어"
+L["CONFIGPANEL_PBAR_HEADER"] = "자원 바 오버레이"
+L["CONFIGPANEL_TIMER_HEADER"] = "타이머 회전"
+L["CONFIGPANEL_TIMERBAR_BARDISPLAY_HEADER"] = "타이머 바"
+L["CONFIRM_DELETE_GENERIC_DESC"] = "%s|1이;가; 삭제됩니다."
+L["CONFIRM_DELGROUP"] = "그룹 삭제"
+L["CONFIRM_DELLAYOUT"] = "배치 삭제"
+L["CONFIRM_HEADER"] = "진행할까요?"
+L["COPYGROUP"] = "그룹 복사"
+L["COPYPOSSCALE"] = "위치/크기 비율만 복사"
 L["CrowdControl"] = "군중 제어"
 L["Curse"] = "저주"
-L["DEBUFFTOCHECK"] = "체크할 약화 효과"
+L["DamageBuffs"] = "피해 강화 효과"
+L["DamageShield"] = "피해 반사"
+L["DBRESTORED_INFO"] = [=[TellMeWhen 데이터베이스가 비었거나 손상되었습니다.
+여러가지 이유로 발생할 수 있으며, 일반적으로 WoW의 비정상적인 종료로 인해 발생합니다.
+
+TellMeWhen_Options은 이런 식으로 TellMeWhen과 TellMeWhen_Options의 데이터베이스가 동시에 손상 될 가능성이 거의 없기 때문에 데이터베이스의 백업을 유지합니다.
+
+
+%s에 시작된 세션에서 생성된 백업으로 복원되었습니다.]=]
+L["DEBUFFTOCHECK"] = "확인할 약화 효과"
 L["DEBUFFTOCOMP1"] = "비교할 첫번째 약화 효과 "
-L["DEBUFFTOCOMP2"] = "비교할 두번째 약화 효과 "
-L["DEFAULT"] = "기본"
-L["DefensiveBuffs"] = "방어적 강화효과"
+L["DEBUFFTOCOMP2"] = "비교할 두번째 약화 효과"
+L["DEFAULT"] = "기본값"
+L["DefensiveBuffs"] = "방어 강화 효과"
+L["DefensiveBuffsAOE"] = "광역 방어 강화 효과"
+L["DefensiveBuffsSingle"] = "대상 지정 방어 강화 효과"
 L["DESCENDING"] = "내림"
 L["DISABLED"] = "비활성화"
 L["Disease"] = "질병"
-L["Disoriented"] = "혼란"
+L["Disoriented"] = "방향 감각 상실"
+L["DOMAIN_GLOBAL"] = "|cff00c300공통|r"
+L["DOMAIN_PROFILE"] = "프로필"
+L["DOWN"] = "아래로"
+L["DR-Disorient"] = "방향 감각 상실"
+L["DR-Incapacitate"] = "행동 불가"
+L["DR-Root"] = "이동 불가"
 L["DR-Silence"] = "침묵"
+L["DR-Stun"] = "기절"
 L["DR-Taunt"] = "도발"
+L["DT_DOC_AuraSource"] = [=[아이콘이 확인 중인 강화 효과/약화 효과의 시전 유닛을 반환합니다. 오라의 시전자 유닛ID가 올바를 경우에만 데이터를 가집니다 (일반적으로 시전자가 같은 파티일 때만 해당됩니다).
+
+[Name] 태그와 함께 사용하는 것이 가장 좋습니다. (이 태그는 %s 형식의 아이콘과 사용할 수 있습니다)]=]
+L["DT_DOC_Counter"] = "TellMeWhen 카운터의 값을 반환합니다. 카운터는 아이콘 알림에서 생성되고 수정됩니다."
+L["DT_DOC_Destination"] = "목적 대상 유닛이나 아이콘이 처리한 마지막 전투 이벤트의 이름을 반환합니다. [Name] 태그와 함께 사용하는 것이 가장 좋습니다. (이 태그는 %s 형식의 아이콘과 사용할 수 있습니다)"
+L["DT_DOC_Duration"] = "아이콘에 현재 남은 지속시간으로 반환합니다. [TMWFormatDuration]으로 이 형식을 지정하는 것을 추천합니다."
+L["DT_DOC_Extra"] = "아이콘이 처리한 마지막 전투 이벤트로부터 추가 주문을 반환합니다. (이 태그는 %s 형식의 아이콘과 사용할 수 있습니다)"
+L["DT_DOC_gsub"] = [=[강력한 문자열 조작 기능의 DogTags를 위해 Lua의 string.gsub 함수를 사용합니다.
+
+선택적인 대체 횟수 제한 옵션과 함께, 값에서 패턴과 일치하는 모든 부분을 대체합니다.]=]
+L["DT_DOC_IsShown"] = "아이콘의 표시 여부를 반환합니다."
+L["DT_DOC_LocType"] = [=[아이콘이 표시하고 있는 제어 불가 효과의 유형을 반환합니다.
+(이 태그는 %s 형식의 아이콘과 사용할 수 있습니다).]=]
+L["DT_DOC_Name"] = "유닛의 이름을 반환합니다. DogTag에서 제공한 기본 [Name] 태그의 향상된 버전입니다."
+L["DT_DOC_Opacity"] = "아이콘의 불투명도를 반환합니다. 0에서 1 사이의 값을 반환합니다."
+L["DT_DOC_PreviousUnit"] = "현재 유닛 이전에 아이콘이 확인한 유닛이나 유닛의 이름을 반환합니다. [Name] 태그와 함께 사용하는 것이 가장 좋습니다."
+L["DT_DOC_Source"] = "아이콘이 처리한 마지막 전투 이벤트의 이름이나 시전자 유닛을 반환합니다. [Name] 태그와 함께 사용하는 것이 가장 좋습니다. (이 태그는 %s 형식의 아이콘과 사용할 수 있습니다)."
+L["DT_DOC_Spell"] = "아이콘이 표시 중인 데이터의 주문이나 아이템을 반환합니다."
+L["DT_DOC_Stacks"] = "아이콘의 현재 중첩을 반환합니다"
+L["DT_DOC_strfind"] = [=[강력한 문자열 조작 기능의 DogTags를 위해 Lua의 string.find 함수를 사용합니다.
+
+첫 시작 문자부터 시작하여 값 내에 패턴이 처음 나타나는 위치를 반환합니다.]=]
+L["DT_DOC_StripServer"] = "유닛 이름에서 서버 이름을 제거합니다. 이름의 마지막 하이픈 다음의 모든 내용을 서버 이름으로 간주합니다."
+L["DT_DOC_Timer"] = "TellMeWhen 타이머의 값을 반환합니다. 타이머는 아이콘 알림에서 생성되고 수정됩니다."
+L["DT_DOC_TMWFormatDuration"] = "TellMeWhen의 시간 형식으로 형식화된 문자열을 반환합니다. [FormatDuration]과 비슷합니다."
+L["DT_DOC_Unit"] = "아이콘이 확인 중인 유닛이나 유닛의 이름을 반환합니다. [Name] 태그와 함께 사용하는 것이 가장 좋습니다."
+L["DT_DOC_Value"] = "아이콘이 표시 중인 숫자 값을 반환합니다. 아이콘 형식 중 몇몇에서만 사용할 수 있습니다."
+L["DT_DOC_ValueMax"] = "아이콘이 표시 중인 숫자 값의 최대 값을 반환합니다. 아이콘 형식 중 몇몇에서만 사용할 수 있습니다."
+L["DT_INSERTGUID_GENERIC_DESC"] = "하나의 아이콘에 다른 정보를 표시하고 싶다면, 해당 아이콘을 |cff7fffffShift-클릭|r하여 태그의 \"아이콘\" 매개 변수로 전달할 수 있는 고유 식별자를 삽입할 수 있습니다."
+L["DT_INSERTGUID_TOOLTIP"] = "|cff7fffffShift-클릭|r하여 이 아이콘의 식별자를 DogTag에 삽입합니다."
 L["DURATION"] = "지속시간"
+L["DURATIONALPHA_DESC"] = [=[지속시간 요구 사항이 실패했을 때 아이콘이 표시할 불투명도 등급을 설정하세요.
+
+다른 %s 설정으로 아이콘이 이미 숨겨져 있다면 이 설정은 무시됩니다.]=]
+L["DURATIONPANEL_TITLE2"] = "지속시간 요구 사항"
 L["EARTH"] = "대지"
 L["ECLIPSE_DIRECTION"] = "식 진행방향"
 L["elite"] = "정예"
-L["ERROR_MISSINGFILE"] = "TellMeWhen %s(%s|1을;를; 찾을 수 없습니다)|1을;를; 사용하려면 WoW의 완벽한 재시작이 필요합니다. 지금 WoW를 재시작하시겠습니까? "
-L["EVENTS_TAB"] = "알 림"
+L["ENABLINGOPT"] = "TellMeWhen_Options가 비활성 중입니다. 활성화 중..."
+L["ENCOUNTERTOCHECK"] = "확인할 우두머리 전투"
+L["ENCOUNTERTOCHECK_DESC_BIGWIGS"] = "우두머리 전투의 전체 이름이나 부분 이름을 입력하세요. 이름은 BigWig 설정에 표시되며, 모험 안내서에도 있습니다."
+L["ENCOUNTERTOCHECK_DESC_DBM"] = "우두머리 전투의 전체 이름이나 부분 이름을 입력하세요. 이름은 전투 시작/전멸/처치 시에 대화에 나타나며, 모험 안내서에도 있습니다."
+L["Enraged"] = "광폭화"
+L["EQUIPSETTOCHECK"] = "확인할 장비 구성 (|cFFFF5959대/소문자 구분|r)"
+L["ERROR_ACTION_DENIED_IN_LOCKDOWN"] = "%q 옵션을 활성화하지 않았다면 전투 중에 할 수 없습니다 (이 옵션에 접근하려면 '/tmw options'를 입력하세요)."
+L["ERROR_ANCHOR_CYCLICALDEPS"] = "%s|1을;를; %s에 고정하려고 시도했지만 %s의 위치는 %s의 위치에 영향을 받습니다, 따라서 TellMeWhen은 큰 변동을 방지하기 위해 고정 위치를 화면의 중앙으로 재설정 했습니다."
+L["ERROR_ANCHORSELF"] = "%s|1이;가; 자기 자신에게 고정되려고 시도했습니다, 따라서 TellMeWhen은 큰 변동을 방지하기 위해 고정 위치를 화면의 중앙으로 재설정 했습니다."
+L["ERROR_INVALID_SPELLID2"] = "아이콘이 올바르지 않은 주문ID를 확인하고 있습니다: %s. 원치 않는 아이콘의 동작을 피하려면 제거해 주세요."
+L["ERROR_MISSINGFILE"] = [=[TellMeWhen %s|1을;를; 사용하려면 WoW의 완전한 재시작이 필요합니다.
+
+%s|1을;를; 찾을 수 없습니다.
+
+지금 WoW를 재시작하시겠습니까? ]=]
+L["ERROR_MISSINGFILE_NOREQ"] = [=[TellMeWhen %s|1을;를; 완벽하게 사용하려면 WoW의 완전한 재시작이 필요할 수 있습니다.
+
+%s|1을;를; 찾을 수 없습니다.
+
+지금 WoW를 재시작하시겠습니까? ]=]
+L["ERROR_MISSINGFILE_OPT"] = [=[TellMeWhen %s|1을;를; 설정하려면 WoW의 완전한 재시작이 필요합니다.
+
+%s|1을;를; 찾을 수 없습니다.
+
+지금 WoW를 재시작하시겠습니까? ]=]
+L["ERROR_MISSINGFILE_OPT_NOREQ"] = [=[TellMeWhen %s|1을;를; 완벽하게 설정하려면 WoW의 완전한 재시작이 필요할 수 있습니다.
+
+%s|1을;를; 찾을 수 없습니다.
+
+지금 WoW를 재시작하시겠습니까? ]=]
+L["ERROR_MISSINGFILE_REQFILE"] = "필요한 파일"
+L["ERROR_NO_LOCKTOGGLE_IN_LOCKDOWN"] = "%q 옵션이 비활성 중이면 전투 중에 TellMeWhen을 잠금해제 할 수 없습니다 (이 옵션에 접근하려면 \"/tmw options'을 입력하세요)."
+L["ERROR_NOTINITIALIZED_NO_ACTION"] = "애드온 초기 실행에 실패하면 TellMeWhen은 그 동작을 수행할 수 없습니다!"
+L["ERROR_NOTINITIALIZED_NO_LOAD"] = "TellMeWhen 초기 실행에 실패하면 TellMeWhen_Options을 불러올 수 없습니다."
+L["ERROR_NOTINITIALIZED_OPT_NO_ACTION"] = "애드온 초기 실행에 실패하면 TellMeWhen_Options은 그 동작을 수행할 수 없습니다."
+L["ERRORS_FRAME"] = "오류 프레임"
+L["ERRORS_FRAME_DESC"] = "%q같은 일반 표시 메시지를 표준 오류 프레임에 출력합니다"
+L["EVENT_CATEGORY_CHANGED"] = "데이터 변경됨"
+L["EVENT_CATEGORY_CLICK"] = "상호 작용"
+L["EVENT_CATEGORY_CONDITION"] = "조건"
+L["EVENT_CATEGORY_MISC"] = "기타"
+L["EVENT_CATEGORY_TIMER"] = "타이머"
+L["EVENT_CATEGORY_VISIBILITY"] = "표시"
+L["EVENT_FREQUENCY"] = "발생 주기"
+L["EVENT_FREQUENCY_DESC"] = "조건 세트가 만족했을 때 처리기가 발생되는 빈도를 초 단위로 설정하세요."
+L["EVENT_WHILECONDITIONS"] = "발생 조건"
+L["EVENT_WHILECONDITIONS_DESC"] = "조건 세트가 만족할 때까지 이 알림을 재생시킬 조건의 세트를 설정하려면 클릭하세요."
+L["EVENT_WHILECONDITIONS_TAB_DESC"] = "조건 세트가 만족할 때까지 알림을 재생시킬 조건의 세트를 설정합니다."
+L["EVENTCONDITIONS"] = "이벤트 조건"
+L["EVENTCONDITIONS_DESC"] = "조건 세트가 통과하기 시작할 때 이 이벤트를 발생시킬 조건의 세트를 설정하려면 클릭하세요."
+L["EVENTCONDITIONS_TAB_DESC"] = "조건 세트가 통과하기 시작할 때 이벤트를 발생시킬 조건의 세트를 설정합니다."
+L["EVENTHANDLER_COUNTER_TAB"] = "카운터"
+L["EVENTHANDLER_COUNTER_TAB_DESC"] = "카운터를 설정, 증가 또는 감소시킵니다. 조건으로 확인하거나 DogTags로 표시할 수 있습니다."
+L["EVENTHANDLER_LUA_CODE"] = "실행할 Lua 코드"
+L["EVENTHANDLER_LUA_CODE_DESC"] = "이벤트가 발생했을 때 실행될 Lua 코드를 여기에 적으세요."
+L["EVENTHANDLER_LUA_LUA"] = "Lua"
+L["EVENTHANDLER_LUA_LUAEVENTf"] = "Lua 이벤트: %s"
+L["EVENTHANDLER_LUA_TAB"] = "Lua"
+L["EVENTHANDLER_LUA_TAB_DESC"] = "Lua 프로그래밍 경험이 있는 고급 사용자는 실행할 스크립트를 작성할 수 있습니다."
+L["EVENTHANDLER_TIMER_TAB"] = "타이머"
+L["EVENTHANDLER_TIMER_TAB_DESC"] = "초시계 스타일의 타이머를 재생하거나 멈춥니다. 조건으로 확인하거나 DogTags로 표시할 수 있습니다."
+L["EVENTS_CHANGETRIGGER"] = "발생 조건 변경"
+L["EVENTS_CHOOSE_EVENT"] = "발생 조건 선택:"
+L["EVENTS_CHOOSE_HANDLER"] = "알림 선택:"
+L["EVENTS_CLONEHANDLER"] = "복제"
+L["EVENTS_HANDLER_ADD_DESC"] = "|cff7fffff클릭|r하여 알림의 이 유형을 추가합니다."
+L["EVENTS_HANDLERS_ADD"] = "알림 추가..."
+L["EVENTS_HANDLERS_ADD_DESC"] = "|cff7fffff클릭|r하여 이 아이콘에 추가할 알림을 선택합니다."
+L["EVENTS_HANDLERS_GLOBAL_DESC"] = [=[|cff7fffff클릭|r - 알림 옵션
+|cff7fffff오른쪽-클릭|r - 복제 또는 발생 조건 변경
+|cff7fffff클릭하고 끌기|r - 재정렬]=]
+L["EVENTS_HANDLERS_HEADER"] = "알림 처리기"
+L["EVENTS_HANDLERS_PLAY"] = "테스트 알림"
+L["EVENTS_HANDLERS_PLAY_DESC"] = "|cff7fffff클릭|r하여 알림을 테스트합니다"
+L["EVENTS_SETTINGS_CNDTJUSTPASSED"] = "조건이 만족하기 시작"
+L["EVENTS_SETTINGS_CNDTJUSTPASSED_DESC"] = "위에서 설정된 조건이 만족하지 않으면 알림이 처리되지 않도록 방지합니다."
+L["EVENTS_SETTINGS_COUNTER_AMOUNT"] = "값"
+L["EVENTS_SETTINGS_COUNTER_AMOUNT_DESC"] = "카운터를 설정하거나 수정할 값을 입력하세요."
+L["EVENTS_SETTINGS_COUNTER_HEADER"] = "카운터 설정"
+L["EVENTS_SETTINGS_COUNTER_NAME"] = "카운터 이름"
+L["EVENTS_SETTINGS_COUNTER_NAME_DESC"] = [=[변경할 카운터의 이름을 입력하세요. 카운터가 존재하지 않으면 첫 번째가 변경되며, 초기 값은 0입니다.
+
+카운터 이름은 공백없이 소문자여야 합니다.
+
+이 카운터를 확인하고 싶은 다른 위치에 이 카운터 이름을 사용하세요 ([Counter] Dogtag를 통해 조건과 문자 표시)
+
+
+고급 사용자: 카운터는 TMW.COUNTERS[counterName] = value 에 저장됩니다.  사용자 설정 Lua 스크립트에서 카운터를 변경하는 경우 TMW:Fire( "TMW_COUNTER_MODIFIED", counterName ) 를 호출하세요.]=]
+L["EVENTS_SETTINGS_COUNTER_OP"] = "연산"
+L["EVENTS_SETTINGS_COUNTER_OP_DESC"] = "카운터에서 수행할 연산을 선택하세요"
+L["EVENTS_SETTINGS_HEADER"] = "발생 조건 설정"
+L["EVENTS_SETTINGS_ONLYSHOWN"] = "아이콘이 표시될 때만 처리"
+L["EVENTS_SETTINGS_ONLYSHOWN_DESC"] = "아이콘이 표시되고 있지 않을 때 알림이 처리되는 걸 방지합니다."
+L["EVENTS_SETTINGS_PASSINGCNDT"] = "조건이 만족할 때만 처리:"
+L["EVENTS_SETTINGS_PASSINGCNDT_DESC"] = "아래에서 설정된 조건이 만족하지 않으면 알림이 처리되지 않도록 방지합니다."
+L["EVENTS_SETTINGS_PASSTHROUGH"] = "하위 이벤트로 계속"
+L["EVENTS_SETTINGS_PASSTHROUGH_DESC"] = [=[이 다음에 다른 이벤트-발생 알림이 처리되도록 허용하려면 체크하세요.
+
+체크하지 않으면, 성공적으로 처리하고 출력/표시 한 경우 아이콘은 이 이벤트 이후에 더 이상의 이벤트를 처리하지 않습니다.
+
+예외가 적용될 수 있습니다, 자세한 내용은 개별 이벤트 설명을 확인하세요.]=]
+L["EVENTS_SETTINGS_SIMPLYSHOWN"] = "아이콘이 표시될 때만 발생"
+L["EVENTS_SETTINGS_SIMPLYSHOWN_DESC"] = [=[아이콘이 표시되고 있을 때만 알림이 발생하도록 합니다.
+
+다른 추가 조건 없이 알림을 사용받으려면 이 설정을 활성화하고 조건 세트를 공란으로 비워두세요.
+
+또는 이 설정을 추가 조건과 결합할 수 있습니다.]=]
+L["EVENTS_SETTINGS_TIMER_HEADER"] = "타이머 설정"
+L["EVENTS_SETTINGS_TIMER_NAME"] = "타이머 이름"
+L["EVENTS_SETTINGS_TIMER_NAME_DESC"] = [=[수정할 타이머의 이름을 입력하세요.
+
+타이머 이름은 공백없이 소문자여야 합니다.
+
+이 타이머를 확인하고 싶은 다른 위치에 이 타이머 이름을 사용하세요 ([Timer] DogTag를 통한 조건과 문자 표시)]=]
+L["EVENTS_SETTINGS_TIMER_OP_DESC"] = "타이머에 수행할 연산을 선택하세요"
+L["EVENTS_TAB"] = "알림"
+L["EVENTS_TAB_DESC"] = "소리, 문자 출력, 애니메이션을 위한 발생 조건을 설정합니다."
+L["EXPORT_ALLGLOBALGROUPS"] = "모든 |cff00c300공통|r 그룹"
 L["EXPORT_f"] = "%s 내보내기 "
 L["EXPORT_HEADING"] = "내보내기"
+L["EXPORT_SPECIALDESC2"] = "%s 버전을 사용 중인 다른 TellMeWhen 사용자만 이 데이터를 가져오기 할 수 있습니다"
 L["EXPORT_TOCOMM"] = "플레이어에게"
-L["EXPORT_TOSTRING"] = "문자열에"
+L["EXPORT_TOCOMM_DESC"] = [=[편집 상자에 플레이어의 이름을 입력하고 데이터를 전송하려면 이 옵션을 선택하세요. 귓속말을 할 수 있는 사람이어야 하며(같은 진영, 서버, 접속 중), TellMeWhen v4.0.0+ 버전을 사용하고 있어야 합니다.
+
+"GUILD" 또는 "RAID" (대/소문자 구분)를 입력하여 전체 길드 또는 공격대에 전송할 수 있습니다.]=]
+L["EXPORT_TOGUILD"] = "길드로 내보내기"
+L["EXPORT_TORAID"] = "공격대로 내보내기"
+L["EXPORT_TOSTRING"] = "문자열로 내보내기"
+L["EXPORT_TOSTRING_DESC"] = [=[필요한 데이터가 포함된 문자열이 편집 상자에 붙여 넣어집니다.
+Ctrl+C를 눌러 복사하고 공유하고 싶은 곳에 붙여넣기 하세요.]=]
 L["FALSE"] = "False(거짓)"
+L["fCODESNIPPET"] = "코드 조각: %s"
 L["Feared"] = "공포"
 L["fGROUP"] = "그룹: %s"
+L["fGROUPS"] = "그룹: %s"
 L["fICON"] = "아이콘: %s"
 L["FIRE"] = "불"
 L["FONTCOLOR"] = "글꼴 색상"
 L["FONTSIZE"] = "글꼴 크기"
+L["FORWARDS_IE"] = "전송"
+L["FORWARDS_IE_DESC"] = [=[편집된 다음 아이콘을 불러옵니다
+
+%s |T%s:0|t.]=]
 L["fPROFILE"] = "프로필: %s"
-L["GCD"] = "전체 대기시간"
+L["FROMNEWERVERSION"] = "당신의 버전보다 최신 버전의 TellMeWhen에서 생성된 데이터를 가져왔습니다. 최신 버전으로 업그레이드 하기 전까지 몇몇 설정은 작동하지 않을 수 있습니다."
+L["fTEXTLAYOUT"] = "문자 레이아웃: %s"
+L["GCD"] = "전역 재사용 대기시간"
 L["GCD_ACTIVE"] = "GCD 활성 상태"
-L["GENERIC_NUMREQ_CHECK_DESC"] = "%s|1을;를; 활성화하고 설정하려면 체크하십시오."
+L["GENERIC_NUMREQ_CHECK_DESC"] = "%s|1을;를; 활성화하고 설정하려면 체크하세요."
+L["GENERICTOTEM"] = "토템 %d"
+L["GLOBAL_GROUP_GENERIC_DESC"] = "이 WoW 계정의 모든 TellMeWhen 프로필에 |cff00c300공통|r 그룹을 사용할 수 있습니다."
+L["GLYPHTOCHECK"] = "확인할 문양"
+L["GROUP"] = "그룹"
+L["GROUP_UNAVAILABLE"] = "|TInterface/PaperDollInfoFrame/UI-GearManager-LeaveItem-Transparent:20|t 지나치게 제한적인 전문화/역할 설정때문에 이 그룹을 표시할 수 없습니다."
 L["GROUPCONDITIONS"] = "그룹 조건"
+L["GROUPCONDITIONS_DESC"] = "이 그룹이 표시될 때 미세 조정할 수 있도록 허용하는 조건을 설정합니다."
 L["GROUPICON"] = "그룹: %s, 아이콘: %s"
+L["GROUPSELECT_TOOLTIP"] = [=[|cff7fffff클릭|r하여 편집합니다.
+
+|cff7fffff클릭하고 끌어서|r 재정렬 하거나 도메인을 변경합니다.]=]
+L["GROUPSETTINGS_DESC"] = "이 그룹의 설정을 구성합니다."
+L["GUIDCONFLICT_DESC_PART1"] = [=[TellMeWhen은 다음 항목이 동일한 전역 고유 식별자(GUID)를 가지고 있는 걸 감지했습니다. 다른 아이콘이나 그룹에서 참조하려는 경우 많은 문제를 야기할 수 있습니다 (예. 메타 아이콘의 대상을 만드는 경우).
+
+해결하려면 새로운 GUID를 생성하고 싶은 하나를 선택해주세요. 이전에 생성한 GUID를 가리키는 모든 참조는 GUID를 생성하지 않은 것을 가리키게 됩니다. 모두 정상 작동하게 하려면 설정을 조정해야 할 수 있습니다.]=]
+L["GUIDCONFLICT_DESC_PART2"] = "(예를 들어 둘 중에 하나를 삭제하는 방법으로) 직접 이 문제를 해결하고 싶다면, 당신도 이를 수행할 수 있습니다."
+L["GUIDCONFLICT_IGNOREFORSESSION"] = "이 구성 세션에 대한 충돌을 무시합니다."
+L["GUIDCONFLICT_REGENERATE"] = "%s의 GUID 재생성"
 L["Heals"] = "플레이어 치유"
-L["HELP_EXPORT_DOCOPY_WIN"] = "|cff7fffffCTRL+C|r 입력시 복사"
+L["HELP_ANN_LINK_INSERTED"] = [=[당신이 삽입한 링크가 이상해 보이지만 DogTag로 형식화하기 위한 방법입니다.
+
+블리자드 채널로 출력하는 경우 색상 코드를 변경하면 링크가 파괴됩니다.]=]
+L["HELP_BUFF_NOSOURCERPPM"] = [=[RPPM 체계를 사용하는 강화 효과인 %s|1을;를; 추적하려고 시도하는 것 같습니다.
+
+블리자드 오류때문에 %q 설정을 활성화했다면 이 강화 효과는 추적될 수 없습니다.
+
+이 강화 효과를 제대로 추적하고 싶다면 이 설정을 비활성 해주세요.]=]
+L["HELP_CNDT_ANDOR_FIRSTSEE"] = [=[조건 모두가 만족해야 하는지 아니면 하나만 만족해도 되는지 선택할 수 있습니다.
+
+당신이 원할 경우 당신의 조건 사이의 설정을 |cff7fffff클릭|r하여 이 동작을 변경할 수 있습니다.]=]
+L["HELP_CNDT_PARENTHESES_FIRSTSEE"] = [=[특히 %q 설정과 결합했을 때 복합 검사 기능을 위해 조건의 세트를 함께 묶을 수 있습니다.
+
+원하는 경우 조건 사이의 괄호를 |cff7fffff클릭|r하여 조건들을 묶어 그룹화합니다.]=]
+L["HELP_EXPORT_DOCOPY_MAC"] = "복사하려면 |cff7fffffCMD+C|r를 누르세요"
+L["HELP_EXPORT_DOCOPY_WIN"] = "복사하려면 |cff7fffffCTRL+C|r를 누르세요"
+L["HELP_EXPORT_MULTIPLE_COMM"] = "내보낸 데이터는 당신이 내보낸 기본 데이터에 필요한 추가 데이터를 포함합니다. 포함된 내용을 확인하려면, 같은 데이터를 문자열로 내보내기한 후 해당 문자열의 \"문자열로부터\" 가져오기 메뉴를 확인하세요."
+L["HELP_EXPORT_MULTIPLE_STRING"] = [=[내보내기 문자열은 당신이 내보낸 기본 데이터에 필요한 데이터의 추가 문자열을 포함합니다. 포함된 내용을 확인하려면, 문자열의 "문자열로부터" 가져오기 메뉴를 확인하세요.
+
+TellMeWhen v7.0.0+ 사용자는 모든 문자열을 한번에 복사하여 가져오기 할 수 있습니다. 하위 버전의 사용자는 각 문자열을 개별적으로 붙여넣기 해야 합니다.]=]
+L["HELP_FIRSTUCD"] = [=[특별한 지속시간 구문을 사용하는 아이콘 형식을 처음 사용했습니다! 특정 아이콘 형식으로 %q 편집 상자에 추가된 주문은 다음 구문을 사용하여 각 주문 다음에 즉시 지속시간을 정의해야 합니다:
+
+주문: 지속시간
+
+예제:
+
+"%s: 120"
+"%s: 10; %s: 24"
+"%s: 180"
+"%s: 3:00"
+"62618: 3:00"
+
+추천 목록에서 추가하면 자동으로 툴팁 상의 지속시간을 추가합니다.]=]
+L["HELP_IMPORT_CURRENTPROFILE"] = [=[이 프로필의 아이콘을 다른 아이콘 칸으로 옮기거나 복사하려고 시도 중인가요?
+
+아이콘을 |cff7fffff오른쪽-클릭하고|r (마우스 버튼을 누르고 있는 채로) 다른 칸으로 |cff7fffff끌면|r 쉽게 할 수 있습니다. 마우스 버튼을 놓으면 여러 옵션이 있는 메뉴가 나타납니다.
+
+다른 옵션을 사용하려면 아이콘을 메타 아이콘, 다른 그룹, 또는 화면 상의 다른 프레임으로 끌기 해보세요.]=]
+L["HELP_MISSINGDURS"] = [=[다음 주문은 지속시간이 누락되었습니다:
+
+%s
+
+지속시간을 추가하기 위해, 다음 구문을 사용하세요:
+
+주문 이름: 지속시간
+
+예. "%s: 10"
+
+추천 목록에서 추가하면 자동으로 툴팁 상의 지속시간을 추가합니다.]=]
+L["HELP_NOUNIT"] = "유닛을 반드시 입력해야 합니다!"
+L["HELP_NOUNITS"] = "최소 하나의 유닛을 입력해야 합니다!"
+L["HELP_ONLYONEUNIT"] = [=[하나의 유닛에만 적용하는 조건이지만 당신은 %d개의 유닛을 입력했습니다.
+
+여러 유닛을 확인하고 싶다면, 아이콘 표시 조건을 사용하는 아이콘으로 해당 아이콘을 참조하는 별개의 방법을 고려해보세요.]=]
+L["HELP_POCKETWATCH"] = [=[|TInterface/Icons/INV_Misc_PocketWatch_01:20|t -- 회중 시계 무늬.
+이 무늬는 확인되고 있는 첫번째 유효한 주문이 이름으로 입력되었고 자신의 마법책에 없는 주문이기 때문에 사용되었습니다.
+
+게임을 플레이하는 동안 주문을 한번이라도 확인하면 올바른 무늬가 사용됩니다.
+
+지금 바로 올바른 무늬를 보려면 확인되고 있는 첫번째 주문을 주문 ID로 변경하세요. 편집 상자에서 항목을 클릭하거나 추천 목록에서 올바르게 일치하는 항목을 오른쪽 클릭하는 것으로 쉽게 할 수 있습니다.]=]
+L["HELP_SCROLLBAR_DROPDOWN"] = [=[TellMeWhen의 드롭다운 메뉴 중 몇몇은 스크롤바입니다.
+
+메뉴에서 모든 항목을 보려면 스크롤을 아래로 내려야합니다.
+
+마우스 휠을 사용할 수 있습니다.]=]
 L["ICON"] = "아이콘"
+L["ICON_TOOLTIP_CONTROLLED"] = "이 아이콘은 이 그룹에서 제어하는 첫번째 아이콘입니다. 개별적으로 편집할 수 없습니다."
+L["ICON_TOOLTIP_CONTROLLER"] = "이 아이콘은 그룹을 제어합니다."
+L["ICON_TOOLTIP2NEW"] = [=[|cff7fffff오른쪽-클릭|r하면 아이콘 옵션을 엽니다.
+|cff7fffff클릭하고 끌면|r 이 그룹을 이동시킵니다.
+|cff7fffff오른쪽-클릭하고 끌면|r 다른 아이콘으로 이동/복사합니다.
+아이콘에 주문이나 아이템을 |cff7fffff끌면|r 빠른 설정을 할 수 있습니다.]=]
+L["ICON_TOOLTIP2NEWSHORT"] = "|cff7fffff오른쪽-클릭|r하여 아이콘 옵션을 봅니다."
 L["ICONALPHAPANEL_FAKEHIDDEN"] = "항상 숨기기"
-L["ICONGROUP"] = "아이콘: %s(그룹: %s)"
+L["ICONALPHAPANEL_FAKEHIDDEN_DESC"] = [=[일반 기능을 허용하는 동안 아이콘이 항상 숨겨지도록 강제합니다:
+
+|cff7fffff-|r 아이콘은 다른 아이콘의 조건으로 계속 확인될 수 있습니다.
+|cff7fffff-|r 메타 아이콘이 이 아이콘을 표시할 수 있습니다.
+|cff7fffff-|r 이 아이콘의 알림이 계속 처리됩니다.]=]
+L["ICONCONDITIONS_DESC"] = "이 아이콘이 표시될 때 미세 조정할 수 있도록 허용하는 조건을 설정합니다."
+L["ICONGROUP"] = "아이콘: %s (그룹: %s)"
 L["ICONMENU_ABSENT"] = "없음"
-L["ICONMENU_BOTH"] = "Either(둘 중의 하나)"
+L["ICONMENU_ABSENTONALL"] = "모두 없음"
+L["ICONMENU_ABSENTONALL_DESC"] = "확인 중인 모든 유닛에 확인 중인 모든 강화 효과/약화 효과가 없을 때 아이콘 불투명도 단계를 설정합니다."
+L["ICONMENU_ABSENTONANY"] = "하나라도 없음"
+L["ICONMENU_ABSENTONANY_DESC"] = "확인 중인 유닛중 하나라도 확인 중인 모든 강화 효과/약화 효과가 없을 때 아이콘 불투명도 단계를 설정합니다."
+L["ICONMENU_ADDMETA"] = "메타 아이콘에 추가"
+L["ICONMENU_ALLOWGCD"] = "전역 재사용 대기시간 허용"
+L["ICONMENU_ALLOWGCD_DESC"] = "타이머가 전역 재사용 대기시간을 무시하지 않고 반응하거나 표시하도록 하려면 이 옵션을 체크하세요."
+L["ICONMENU_ALLSPELLS"] = "모든 주문 사용 가능"
+L["ICONMENU_ALLSPELLS_DESC"] = "이 아이콘이 추적하는 모든 주문이 특정 유닛에게 모두 준비되어 있을 때 이 상태가 활성화됩니다."
+L["ICONMENU_ANCHORTO"] = "%s에 고정시키기"
+L["ICONMENU_ANCHORTO_DESC"] = [=[%s|1을;를; %s에 고정시킵니다, 따라서 언제든 %s|1을;를; 이동하면 %s도 같이 이동합니다.
+
+그룹 옵션에서 고급 고정 설정을 사용할 수 있습니다.]=]
+L["ICONMENU_ANCHORTO_UIPARENT"] = "고정 위치 초기화"
+L["ICONMENU_ANCHORTO_UIPARENT_DESC"] = [=[%s의 고정 위치를 다시 화면으로 되돌립니다 (UIParent). 현재는 %s에 고정되어 있습니다.
+
+그룹 옵션에서 고급 고정 설정을 사용할 수 있습니다.]=]
+L["ICONMENU_ANYSPELLS"] = "아무 주문 사용 가능"
+L["ICONMENU_ANYSPELLS_DESC"] = "이 아이콘이 추적하는 주문 중 하나라도 특정 유닛에게 준비되어 있을 때 이 상태가 활성화됩니다."
+L["ICONMENU_APPENDCONDT"] = "%q 조건으로 추가"
+L["ICONMENU_BAR_COLOR_BACKDROP"] = "배경 색상"
+L["ICONMENU_BAR_COLOR_BACKDROP_DESC"] = "바 뒤쪽 배경의 색상과 불투명도를 설정합니다."
+L["ICONMENU_BAR_COLOR_COMPLETE"] = "완료 색상"
+L["ICONMENU_BAR_COLOR_COMPLETE_DESC"] = "재사용 대기시간/지속시간이 완료했을 때 바의 색상입니다."
+L["ICONMENU_BAR_COLOR_MIDDLE"] = "중간 색상"
+L["ICONMENU_BAR_COLOR_MIDDLE_DESC"] = "재사용 대기시간/지속시간이 절반 완료되었을 때 바의 색상입니다."
+L["ICONMENU_BAR_COLOR_START"] = "시작 색상"
+L["ICONMENU_BAR_COLOR_START_DESC"] = "재사용 대기시간/지속시간이 시작될 때 바의 색상입니다."
+L["ICONMENU_BAROFFS"] = [=[사용자 설정 지시기 표시를 위해 바에 공간이 추가됩니다.
+
+강화 효과가 사라지지 않게 주문을 시전하기 시작해야 할 때의 사용자 설정 지시기에 유용하고, 또는 주문이 시전하는 데 필요한 자원을 표시하고 시전 방해를 위한 여유를 조금 남겨 둘 수 있습니다.]=]
+L["ICONMENU_BOTH"] = "둘 중 하나"
 L["ICONMENU_BUFF"] = "강화 효과"
-L["ICONMENU_BUFFCHECK"] = "강한효과/약한효과 확인"
+L["ICONMENU_BUFFCHECK"] = "강화 효과/약화 효과 확인"
+L["ICONMENU_BUFFCHECK_DESC"] = [=[확인하는 유닛 중 하나라도 강화 효과가 없는 지 확인합니다.
+
+누락된 공격대 강화 효과를 확인하기 위해 이 아이콘 형식을 사용하세요.
+
+대부분의 다른 상황에서는 %q 아이콘 형식을 사용하세요.]=]
 L["ICONMENU_BUFFDEBUFF"] = "강화 효과/약화 효과"
+L["ICONMENU_BUFFDEBUFF_DESC"] = "강화 효과 및 약화 효과를 추적합니다."
 L["ICONMENU_BUFFTYPE"] = "강화 효과 또는 약화 효과"
 L["ICONMENU_CAST"] = "주문 시전"
-L["ICONMENU_CHOOSENAME_ORBLANK"] = "모두 추적하려면 OR를 빈란으로 놔 두십시오. "
+L["ICONMENU_CAST_DESC"] = "주문 시전과 정신 집중을 추적합니다."
+L["ICONMENU_CHECKNEXT"] = "하위-메타 확장"
+L["ICONMENU_CHECKNEXT_DESC"] = [=[이 확인 란을 체크하면 검사 중인 메타 아이콘이 구성 요소 아이콘으로 확장되고 메타 아이콘이 남아 있지 않을 때까지 반복됩니다.
+
+또한 이 아이콘은 이전에 갱신된 다른 메타 아이콘에 의해 이미 표시되었던 아이콘은 표시하지 않습니다.]=]
+L["ICONMENU_CHECKREFRESH"] = "갱신 수신"
+L["ICONMENU_CHECKREFRESH_DESC"] = [=[블리자드의 전투 기록은 주문 갱신이나 공포 (또는 특정 피해량을 받으면 풀리는 다른 주문)가 나타나면 오류가 많습니다. 전투 기록은 피해를 줬을 때 주문이 갱신됐다고 말하지만 기술적으로는 그렇지 않습니다. 체크 해제하면 주문 갱신에 대한 내용을 수신하지 않고, 적법한 갱신도 무시됩니다.
+
+ 특정 피해량을 받아도 풀리지 않는 점감을 확인 중이라면 체크하는 걸 추천합니다.]=]
+L["ICONMENU_CHOOSENAME_EVENTS"] = "확인할 메시지 선택"
+L["ICONMENU_CHOOSENAME_EVENTS_DESC"] = [=[이 아이콘이 감시할 오류 메시지를 입력하세요. 세미콜론(;)으로 구분하여 여러 항목을 추가할 수 있습니다.
+
+오류 메시지는 입력된 대로 정확하게 일치해야 하지만, 대/소문자는 구분하지 않습니다.]=]
+L["ICONMENU_CHOOSENAME_ITEMSLOT_DESC"] = [=[이름, ID, 또는 이 아이콘이 감시할 장비 칸을 입력하세요. 세미콜론(;)으로 구분하여 여러 항목을 (이름, ID, 장비 칸의 모든 조합) 입력할 수 있습니다.
+
+장비 칸은 장착한 아이템에 해당하는 숫자 색인입니다. 장비 칸에 장착 중인 아이템을 변경하면 아이콘에 반영됩니다.
+
+아이템이나 대화 링크를 |cff7fffffShift-클릭|r하거나 편집 상자에 아이템을 끌어다 놓으세요.]=]
+L["ICONMENU_CHOOSENAME_ORBLANK"] = "(모두 추적하려면 |cff7fffff공란|r으로 두세요)"
+L["ICONMENU_CHOOSENAME_WPNENCH_DESC"] = [=[이 아이콘이 감시할 무기 마법부여의 이름을 입력하세요. 세미콜론(;)으로 구분하여 여러 항목을 입력할 수 있습니다.
+
+|cFFFF5959중요|r: 마법부여 이름은 마법부여가 활성화 중일 때의 무기 툴팁에 나타난대로 정확하게 입력해야 합니다 (예, "%s", "%s"|1은;는; 틀림).]=]
+L["ICONMENU_CHOOSENAME3"] = "추적할 것"
+L["ICONMENU_CHOSEICONTODRAGTO"] = "끌어다 놓기로 아이콘 선택:"
+L["ICONMENU_CHOSEICONTOEDIT"] = "편집할 아이콘 선택:"
 L["ICONMENU_CLEU"] = "전투 이벤트"
+L["ICONMENU_CLEU_DESC"] = [=[전투 이벤트를 추적합니다.
+
+예를 들어 주문 반사, 적중 실패, 즉시 시전, 죽음을 포함하지만, 아이콘은 사실상 무엇이든 추적할 수 있습니다.]=]
+L["ICONMENU_CLEU_NOREFRESH"] = "지속시간 초기화 하지 않기"
+L["ICONMENU_CLEU_NOREFRESH_DESC"] = "체크하면 아이콘의 타이머가 활성화 중일 때는 이벤트를 무시합니다."
 L["ICONMENU_CNDTIC"] = "조건 아이콘"
-L["ICONMENU_COOLDOWNCHECK"] = "재사용 대기 시간 체크"
+L["ICONMENU_CNDTIC_DESC"] = "조건의 상태를 추적합니다."
+L["ICONMENU_CNDTIC_ICONMENUTOOLTIP"] = "(%d개 조건)"
+L["ICONMENU_COMPONENTICONS"] = "구성 요소 아이콘 & 그룹"
+L["ICONMENU_COOLDOWNCHECK"] = "재사용 대기 시간 확인"
 L["ICONMENU_COOLDOWNCHECK_DESC"] = "체크하면 재사용 대기 중일 때 아이콘을 사용할 수 없는 것으로 간주합니다."
+L["ICONMENU_COPYCONDITIONS"] = "%d개의 조건 복사"
+L["ICONMENU_COPYCONDITIONS_DESC"] = "%s의 %d개 조건을 %s|1으로;로; 복사합니다."
+L["ICONMENU_COPYCONDITIONS_DESC_OVERWRITE"] = "%d개의 존재하는 조건을 덮어씁니다"
+L["ICONMENU_COPYCONDITIONS_GROUP"] = "%d개의 그룹 조건 복사"
+L["ICONMENU_COPYEVENTHANDLERS"] = "%d개의 알림 복사"
+L["ICONMENU_COPYEVENTHANDLERS_DESC"] = "%s의 %d개의 알림을 %s로 복사합니다"
 L["ICONMENU_COPYHERE"] = "여기에 복사"
-L["ICONMENU_CUSTOMTEX"] = "사용자 텍스쳐"
+L["ICONMENU_COUNTING"] = "타이머 진행"
+L["ICONMENU_CTRLGROUP"] = "그룹 제어기"
+L["ICONMENU_CTRLGROUP_DESC"] = [=[이 아이콘이 전체 그룹을 제어하도록 하려면 이 설정을 활성화하세요.
+
+활성화하면 이 아이콘이 수집한 데이터로 그룹을 채웁니다.
+
+그룹 내 다른 모든 아이콘은 개별 설정을 사용할 수 없게 됩니다.
+
+제어된 그룹으로 사용하면 그룹의 배치 방향 및 정렬 옵션을 사용자 설정할 수 있습니다.]=]
+L["ICONMENU_CTRLGROUP_UNAVAILABLE_DESC"] = "현재 아이콘 형식은 전체 그룹을 제어할 능력이 없습니다."
+L["ICONMENU_CTRLGROUP_UNAVAILABLEID_DESC"] = "그룹 내 첫번째 아이콘만 (아이콘 ID 1) 그룹 제어기가 될 수 있습니다."
+L["ICONMENU_CUSTOMTEX"] = "사용자 설정 무늬"
+L["ICONMENU_CUSTOMTEX_DESC"] = [=[다음 방법으로 이 아이콘에 표시되는 무늬를 강제 적용할 수 있습니다:
+
+|cff00d1ff주문 무늬|r
+사용하고 싶은 무늬의 주문 이름이나 ID를 입력하세요.
+
+|cff00d1ff다른 블리자드 무늬|r
+'Interface/Icons/spell_nature_healingtouch' 같은 무늬 경로를 입력하거나, 경로가 'Interface/Icons'라면 'spell_nature_healingtouch'만 입력할 수 있습니다.
+
+|cff00d1ff공란|r
+"none"이나 "blank"를 입력하면 아이콘이 무늬를 표시하지 않습니다.
+
+|cff00d1ff아이템 칸|r
+이 상자에 "$" (달러 기호; ALT-036)를 입력하면 유동적 무늬의 목록을 볼 수 있습니다.
+
+|cff00d1ff사용자 설정|r
+WoW 디렉토리의 하위 폴더에 있는 자기만의 무늬를 사용할 수 있습니다, 무늬는 .tga 또는 .blp 형식에 2의 배수 (32, 64, 등등)의 크기여야 합니다. WoW 루트 폴더를 기준으로 무늬의 경로를 이 영역에 입력하세요.]=]
+L["ICONMENU_CUSTOMTEX_MOPAPPEND_DESC"] = [=[|cff00d1ff문제해결|r
+|TNULL:0|t 이 아이콘의 무늬가 녹색 사각형으로 보이고 사용자 설정 무늬가 WoW의 루트 폴더에 있다면, WoW 루트의 하위 디렉토리로 이동시키고 WoW를 재시작한 후 이 설정을 새로운 위치로 업데이트 해주세요. 사용자 설정 무늬가 주문에 설정되어 있고 더이상 존재하지 않는 주문이나 주문 이름인 경우, 존재 하는 주문의 주문ID로 변경해야 합니다.]=]
 L["ICONMENU_DEBUFF"] = "약화 효과"
-L["ICONMENU_DISPEL"] = "해제 유형"
+L["ICONMENU_DISPEL"] = "무효화 유형"
 L["ICONMENU_DONTREFRESH"] = "갱신 안 함"
-L["ICONMENU_DURATION_MAX_DESC"] = "아이콘이 보여지는 최대 지속시간, 초 단위"
-L["ICONMENU_DURATION_MIN_DESC"] = "아이콘이 보여지는데 필요한 최소 지속시간, 초 단위"
+L["ICONMENU_DONTREFRESH_DESC"] = "초읽기 중일 때 발생하면 재사용 대기시간이 초기화되지 않도록 하려면 체크하세요."
+L["ICONMENU_DOTWATCH"] = "모든 유닛 강화 효과/약화 효과"
+L["ICONMENU_DOTWATCH_AURASFOUND_DESC"] = "어떤 유닛이라도 확인 중인 강화 효과/약화 효과 중 하나라도 가지고 있을 때 아이콘 불투명도 레벨을 설정합니다."
+L["ICONMENU_DOTWATCH_DESC"] = [=[유닛ID에 관계없이, 자신이 모든 유닛에게 적용한 강화 효과와 약화 효과를 추적하도록 시도합니다.
+
+다중-도트 추적에 유용합니다.
+
+이 아이콘 유형은 반드시 그룹 제어기로 사용되어야 합니다 - 독립 아이콘은 할 수 없습니다.]=]
+L["ICONMENU_DOTWATCH_GCREQ"] = "반드시 그룹 제어기"
+L["ICONMENU_DOTWATCH_GCREQ_DESC"] = [=[이 아이콘 유형은 기능하기 위해 반드시 그룹 제어기여야 합니다. 독립 아이콘으로 사용할 수 없습니다.
+
+그룹 제어기에 아이콘을 만드려면, 그룹에서 첫번째 아이콘이어야 합니다 (예. 1의 아이콘ID). 그후, %$2q 체크박스 옆에 있는 %$1q 설정을 활성화해야 합니다.]=]
+L["ICONMENU_DOTWATCH_NOFOUND_DESC"] = "추적된 강화 효과/약화 효과가 없을 때 아이콘 불투명도를 설정합니다."
+L["ICONMENU_DR"] = "점감 효과"
+L["ICONMENU_DR_DESC"] = "점감 효과의 길이와 범위를 추적합니다."
+L["ICONMENU_DRABSENT"] = "점감되지 않음"
+L["ICONMENU_DRPRESENT"] = "점감됨"
+L["ICONMENU_DRS"] = "점감 효과"
+L["ICONMENU_DURATION_MAX_DESC"] = "아이콘을 표시할 최대 지속시간, 초 단위"
+L["ICONMENU_DURATION_MIN_DESC"] = "아이콘을 표시하는 데 필요한 최소 지속시간, 초 단위"
 L["ICONMENU_ENABLE"] = "활성화"
+L["ICONMENU_ENABLE_DESC"] = "아이콘은 활성화 되었을 때만 기능합니다."
+L["ICONMENU_ENABLE_GROUP_DESC"] = "그룹은 활성화 되었을 때만 기능합니다."
+L["ICONMENU_ENABLE_PROFILE"] = "프로필 활성화"
+L["ICONMENU_ENABLE_PROFILE_DESC"] = "현재 프로필의 |cff00c300공통|r 그룹을 비활성하려면 체크해제 하세요."
+L["ICONMENU_FAIL2"] = "조건 실패"
+L["ICONMENU_FAKEMAX"] = "인공 최대"
+L["ICONMENU_FAKEMAX_DESC"] = [=[타이머의 인공 최대 값을 설정합니다.
+
+이 설정을 사용하면 전체 아이콘 그룹을 동일한 비율로 감소시킬 수 있으며, 첫번째로 끝나는 타이머에 시각적 지시기를 제공할 수 있습니다.
+
+이 설정을 비활성하려면 0으로 설정하세요.]=]
 L["ICONMENU_FOCUS"] = "주시 대상"
 L["ICONMENU_FOCUSTARGET"] = "주시 대상의 대상"
 L["ICONMENU_FRIEND"] = "우호적"
-L["ICONMENU_HIDEUNEQUIPPED"] = "무기칸이 비워 있는 경우에 숨기기"
-L["ICONMENU_HOSTILE"] = "적대적"
-L["ICONMENU_ICD"] = "내부 재사용 대기"
-L["ICONMENU_ICDBDE"] = "버프/디버프/피해/자원회복/소환"
-L["ICONMENU_IGNORENOMANA"] = "마력 부족 무시"
-L["ICONMENU_IGNORERUNES"] = "룬 무시"
-L["ICONMENU_INVERTBARS"] = "바 채우기"
-L["ICONMENU_ITEMCOOLDOWN"] = "아이템 재사용 대기"
-L["ICONMENU_MANACHECK"] = "마력 체크"
-L["ICONMENU_MANACHECK_DESC"] = "마나/분노/룬 마력 등이 부족한 경우에 아이콘의 색상 변경 기능을 활성화하려면 이것에 체크하십시오."
-L["ICONMENU_META_DESC"] = [=[이 아이콘 유형은 몇개의 아이콘을 하나로 합치는데 사용될 수 있습니다.
+L["ICONMENU_GROUPUNIT_DESC"] = [=[TellMeWhen에서 그룹은 공격대에 속해 있다면 공격대원을, 파티에 속해 있다면 파티원을 추적하는 특별한 유닛입니다.
 
-다른 아이콘이 보여질 때라도 %q 체크된 아이콘은 여전히 메타 아이콘에 보여집니다.]=]
+공격대 중이라면 절대로 중복되는 유닛이 없습니다 (공격대에 있을 때 "player; party; raid" 추적은 겹쳐지므로, 파티원은 두번 확인됩니다.)]=]
+L["ICONMENU_HIDENOUNITS"] = "유닛이 없으면 숨기기"
+L["ICONMENU_HIDENOUNITS_DESC"] = "이 아이콘이 확인 중인 모든 유닛이 유닛 조건이나 또는 유닛이 존재 하지 않아서 무효화되었을 때 아이콘을 숨기려면 체크하세요."
+L["ICONMENU_HIDEUNEQUIPPED"] = "장비 칸에 무기가 없을 때 숨기기"
+L["ICONMENU_HIDEUNEQUIPPED_DESC"] = "확인 중인 무기 위치에 무기가 없거나, 해당 칸에 방패나 보조장비 장식을 장착 중일 때 아이콘을 숨기려면 체크하세요."
+L["ICONMENU_HOSTILE"] = "적대적"
+L["ICONMENU_ICD"] = "내부 재사용 대기시간"
+L["ICONMENU_ICD_DESC"] = [=[발동 또는 비슷한 효과의 재사용 대기시간을 추적합니다.
+
+|cFFFF5959중요|r: 각 내부 재사용 대기시간 유형을 추적하는 방법은 %q 설정 아래의 툴팁을 확인하세요.]=]
+L["ICONMENU_ICDAURA_DESC"] = [=[내부 재사용 대기시간이 시작되는 경우를 선택하세요:
+
+|cff7fffff1)|r 강화 효과 또는 약화 효과가 자신에 의해 적용되었을 때 (발동 포함), 또는
+|cff7fffff2)|r 피해를 주었을 때, 또는
+|cff7fffff3)|r 마나/분노/등등을 획득 했을 때.
+|cff7fffff4)|r 물체나 NPC를 소환하거나 만들었을 때.
+
+%q 편집상자에 주문 이름/ID를 입력해야 합니다:
+
+|cff7fffff1)|r 내부 재사용 대기시간이 발동했을 때 얻는 강화 효과/약화 효과, 또는
+|cff7fffff2)|r 피해를 준 주문 (전투 기록을 확인하세요), 또는
+|cff7fffff3)|r 자원 회복 효과 (전투 기록을 확인하세요), 또는
+|cff7fffff4)|r 소환을 발동시킨 주문 (전투 기록을 확인하세요).]=]
+L["ICONMENU_ICDBDE"] = "강화 효과/약화 효과/피해/자원 회복/소환"
+L["ICONMENU_ICDTYPE"] = "다음에 재사용 대기시간 시작..."
+L["ICONMENU_IGNORENOMANA"] = "자원 부족 무시"
+L["ICONMENU_IGNORENOMANA_DESC"] = [=[능력을 사용할 자원이 부족할 때 능력을 사용할 수 없는 것으로 취급하지 않도록 하려면 체크하세요.
+
+%s 또는 %s 같은 능력에 유용합니다]=]
+L["ICONMENU_IGNORERUNES"] = "룬 무시"
+L["ICONMENU_IGNORERUNES_DESC"] = "유일한 방해물이 룬 재사용 대기시간 (또는 전역 재사용 대기시간)일 때 사용 가능한 것으로 취급하려면 체크하세요."
+L["ICONMENU_IGNORERUNES_DESC_DISABLED"] = "\"룬 무시\" 설정을 활성화하려면 \"재사용 대기시간 확인\" 설정을 활성화해야 합니다."
+L["ICONMENU_INVERTBARDISPLAYBAR_DESC"] = "값이 0이 될수록 바를 채웁니다."
+L["ICONMENU_INVERTBARS"] = "바 채우기"
+L["ICONMENU_INVERTCBAR_DESC"] = "지속시간이 0이 될수록 바를 채웁니다."
+L["ICONMENU_INVERTPBAR_DESC"] = "자원이 충분해 질수록 바를 채웁니다."
+L["ICONMENU_INVERTTIMER"] = "음영 반전"
+L["ICONMENU_INVERTTIMER_DESC"] = "타이머의 음영 효과를 반전시키려면 이 옵션을 체크하세요."
+L["ICONMENU_ISPLAYER"] = "유닛이 플레이어일 때"
+L["ICONMENU_ITEMCOOLDOWN"] = "아이템 재사용 대기시간"
+L["ICONMENU_ITEMCOOLDOWN_DESC"] = "사용 효과가 있는 아이템의 재사용 대기시간을 추적합니다."
+L["ICONMENU_LIGHTWELL_DESC"] = "%s의 지속시간과 충전량을 추적합니다."
+L["ICONMENU_MANACHECK"] = "자원 확인"
+L["ICONMENU_MANACHECK_DESC"] = "마나/분노/룬 마력 등이 부족할 때 아이콘의 색상을 변경하려면 체크하세요."
+L["ICONMENU_META"] = "메타 아이콘"
+L["ICONMENU_META_DESC"] = [=[여러 아이콘을 하나로 결합시킵니다.
+
+다른 아이콘이 표시되고 있어도 %q|1이;가; 체크된 아이콘은 계속 메타 아이콘으로 표시됩니다.]=]
+L["ICONMENU_META_ICONMENUTOOLTIP"] = "(%d개 아이콘)"
 L["ICONMENU_MOUSEOVER"] = "마우스오버"
 L["ICONMENU_MOUSEOVERTARGET"] = "마우스오버의 대상"
 L["ICONMENU_MOVEHERE"] = "여기로 이동"
-L["ICONMENU_OFFS"] = "좌표"
-L["ICONMENU_ONLYBAGS"] = "가방에 있다면 한해"
-L["ICONMENU_ONLYIFCOUNTING"] = "활성화 상태의 타이머에 한해 보이기"
-L["ICONMENU_ONLYINTERRUPTIBLE"] = "차단 가능한 것만"
-L["ICONMENU_ONLYINTERRUPTIBLE_DESC"] = "차단할 수 있는 주문 시전만을 보여주려면 이 박스에 체크하십시오."
-L["ICONMENU_ONLYMINE"] = "내 것만 보이기"
-L["ICONMENU_ONLYMINE_DESC"] = "이 아이콘을 자신의 강화 효과/약화 효과에 한해 체크하려면 이 옵션에 체크하십시오."
+L["ICONMENU_NAMEPLATE"] = "이름표"
+L["ICONMENU_NOTCOUNTING"] = "타이머 미작동"
+L["ICONMENU_NOTREADY"] = "준비되지 않음"
+L["ICONMENU_OFFS"] = "위치"
+L["ICONMENU_ONCOOLDOWN"] = "재사용 대기 시"
+L["ICONMENU_ONFAIL"] = "실패 시"
+L["ICONMENU_ONLYBAGS"] = "가방에 있을 때만"
+L["ICONMENU_ONLYBAGS_DESC"] = "아이템이 가방에 있을 때만 (또는 착용 중) 아이콘을 표시하려면 체크하세요. \"착용 중일 때만\" 옵션이 활성화되어 있으면, 이 옵션도 강제로 활성화됩니다."
+L["ICONMENU_ONLYEQPPD"] = "착용 중일 때만"
+L["ICONMENU_ONLYEQPPD_DESC"] = "아이템을 착용 중일 때만 아이콘을 표시하려면 체크하세요."
+L["ICONMENU_ONLYIFCOUNTING"] = "타이머가 활성화되었을 때만 표시"
+L["ICONMENU_ONLYIFCOUNTING_DESC"] = "아이콘에 0보다 큰 지속시간을 가진 타이머가 진행 중일 때만 아이콘을 표시하려면 체크하세요."
+L["ICONMENU_ONLYIFNOTCOUNTING"] = "타이머가 활성화되지 않았을 때만 표시"
+L["ICONMENU_ONLYIFNOTCOUNTING_DESC"] = "아이콘에 0보다 큰 지속시간을 가진 타이머가 없을 때만 아이콘을 표시하려면 체크하세요."
+L["ICONMENU_ONLYINTERRUPTIBLE"] = "시전 방해 가능한 것만"
+L["ICONMENU_ONLYINTERRUPTIBLE_DESC"] = "방해할 수 있는 주문 시전만 표시하려면 체크하세요."
+L["ICONMENU_ONLYMINE"] = "내가 시전한 것만"
+L["ICONMENU_ONLYMINE_DESC"] = "이 아이콘이 자신이 시전한 강화 효과/약화 효과만 확인하려면 체크하세요."
+L["ICONMENU_ONLYSEEN"] = "관찰된 주문만"
+L["ICONMENU_ONLYSEEN_ALL"] = "모든 주문 허용"
+L["ICONMENU_ONLYSEEN_ALL_DESC"] = "확인된 모든 유닛에 모든 능력을 표시하려면 체크하세요."
+L["ICONMENU_ONLYSEEN_CLASS"] = "유닛의 직업 주문만"
+L["ICONMENU_ONLYSEEN_CLASS_DESC"] = [=[유닛의 직업이 가진 능력만 아이콘에 표시하려면 체크하세요.
+
+알려진 직업 주문은 추천 목록에서 파란색이나 분홍색으로 강조됩니다.]=]
+L["ICONMENU_ONLYSEEN_DESC"] = "유닛이 최소 한번 시전한 주문만 아이콘에 표시하려면 체크하세요."
+L["ICONMENU_ONLYSEEN_HEADER"] = "주문 필터링"
+L["ICONMENU_ONSUCCEED"] = "성공 시"
+L["ICONMENU_OO_F"] = "%s 없음"
+L["ICONMENU_OOPOWER"] = "자원 없음"
+L["ICONMENU_OORANGE"] = "사정 거리 벗어남"
 L["ICONMENU_PETTARGET"] = "소환수의 대상"
-L["ICONMENU_PRESENT"] = "현재"
-L["ICONMENU_RANGECHECK"] = "사정 거리 체크"
-L["ICONMENU_RANGECHECK_DESC"] = "사정 거리 밖인 경우에 아이콘의 색상 변경 기능을 활성화하려면 이것에 체크하십시오."
-L["ICONMENU_REACT"] = "유닛 대응"
-L["ICONMENU_REACTIVE"] = "대응 능력"
-L["ICONMENU_RUNES"] = "룬 재사용 대기"
-L["ICONMENU_SHOWSTACKS"] = "중첩 횟수 보이기"
-L["ICONMENU_SHOWTIMER"] = "타이머 보이기"
-L["ICONMENU_SHOWTIMER_DESC"] = "적용이 가능한 경우에 아이콘에 기본 재사용 대기 교체 애니메이션을 표시하려면 이 옵션에 체크하십시오."
-L["ICONMENU_SHOWTIMERTEXT"] = "타이머 문자 보이기"
-L["ICONMENU_SHOWTIMERTEXT_DESC"] = [=[아이콘에 남은 재사용 대기/지속시간의 문자를 표시하려면 이 옵션을 체크하십시오.
+L["ICONMENU_PRESENT"] = "존재"
+L["ICONMENU_PRESENTONALL"] = "모두 존재"
+L["ICONMENU_PRESENTONALL_DESC"] = "확인 중인 모든 유닛에 최소 하나의 강화 효과/약화 효과가 확인 중일 때 아이콘 불투명도를 설정합니다."
+L["ICONMENU_PRESENTONANY"] = "아무 존재"
+L["ICONMENU_PRESENTONANY_DESC"] = "확인 중인 어떤 유닛이라도 최소 하나의 강화 효과/약화 효과가 확인 중일 때 아이콘 불투명도를 설정합니다."
+L["ICONMENU_RANGECHECK"] = "사정 거리 확인"
+L["ICONMENU_RANGECHECK_DESC"] = "사정 거리를 벗어났을 때 아이콘의 색상을 변경하려면 체크하세요."
+L["ICONMENU_REACT"] = "유닛 반응"
+L["ICONMENU_REACTIVE"] = "반응 능력"
+L["ICONMENU_REACTIVE_DESC"] = [=[반응 능력의 사용 가능성을 추적합니다.
 
-작동하려면, OmniCC같은 애드온이 설치 되어있거나, 또는 인터페이스 옵션의 행동 단축바 범주에서 블리자드 기본 타이머를 사용해야 합니다.
-]=]
-L["ICONMENU_SHOWWHEN"] = "상태 및 투명도 보기"
+반응 능력은 %s, %s, 그리고 %s 같은 것들입니다 - 특정 조건에서만 사용할 수 있는 능력입니다.]=]
+L["ICONMENU_READY"] = "준비"
+L["ICONMENU_RUNES"] = "룬 재사용 대기시간"
+L["ICONMENU_RUNES_CHARGES"] = "충전으로 사용할 수 없는 룬"
+L["ICONMENU_RUNES_CHARGES_DESC"] = "아이콘이 사용 가능한 룬을 표시할 때 재사용 대기 중인 룬을 추가 충전으로 취급하게 하려면 이 설정을 활성화하세요."
+L["ICONMENU_RUNES_DESC"] = "룬 재사용 대기시간 추적"
+L["ICONMENU_SHOWCBAR_DESC"] = "아이콘의 아래쪽 절반에 타이머를 표시하는 바를 표시합니다."
+L["ICONMENU_SHOWPBAR_DESC"] = "아이콘의 위쪽 절반에 주문 시전에 필요한 자원을 표시하는 바를 표시합니다."
+L["ICONMENU_SHOWSTACKS"] = "중첩 갯수 표시"
+L["ICONMENU_SHOWSTACKS_DESC"] = "소지하고 있는 아이템의 중첩 갯수를 표시하려면 체크하세요."
+L["ICONMENU_SHOWTIMER"] = "타이머 표시"
+L["ICONMENU_SHOWTIMER_DESC"] = "아이콘에 표준 재사용 대기시간 회전 애니메이션을 표시하려면 이 옵션을 체크하세요."
+L["ICONMENU_SHOWTIMERTEXT"] = "타이머 문자 표시"
+L["ICONMENU_SHOWTIMERTEXT_DESC"] = [=[아이콘에 남은 재사용 대기시간/지속시간의 문자를 표시하려면 이 옵션을 체크하세요.
+
+작동하려면 OmniCC같은 애드온이 설치 되어있거나, 또는 인터페이스 옵션의 행동 단축바 범주에서 '재사용 대기시간 숫자 보이기'를 사용해야 합니다.]=]
+L["ICONMENU_SHOWTIMERTEXT_NOOCC"] = "ElvUI 타이머 문자 표시"
+L["ICONMENU_SHOWTIMERTEXT_NOOCC_DESC"] = [=[아이콘에 남은 재사용 대기시간/지속시간의 ElvUI 문자를 표시하려면 이 옵션을 체크하세요.
+
+이 설정은 ElvUI의 타이머에만 영향을 줍니다. 타이머를 제공하는 다른 애드온 (OmniCC 같은)을 사용 중이라면, %q 설정으로 그 타이머들을 조절할 수 있습니다. 이 두가지 설정을 같이 사용하는 것은 추천하지 않습니다.]=]
+L["ICONMENU_SHOWTTTEXT_DESC2"] = [=[아이콘의 중첩을 효과와 연관된 변수로 보고합니다. 실제 사용은 피해 반사량 감시를 포함합니다.
+
+이 값은 아이콘의 중첩 횟수 위치에 보고되고 표시됩니다.
+
+숫자는 블리자드 API에 의해 제공되며 효과의 툴팁에서 발견한 숫자와 일치할 필요는 없습니다.]=]
+L["ICONMENU_SHOWTTTEXT_FIRST"] = "첫번째 0이 아닌 변수"
+L["ICONMENU_SHOWTTTEXT_FIRST_DESC"] = [=[강화 효과/약화 효과와 연관된 첫번째 0이 아닌 변수를 아이콘의 중첩으로 보고합니다.
+
+일반적으로 효과의 변수 중 하나를 원하면 올바른 변수입니다.
+
+%s|1을;를; 추적 중이면 변수 #1을 명시적으로 관찰해야 합니다.]=]
+L["ICONMENU_SHOWTTTEXT_STACKS"] = "중첩 (기본 동작)"
+L["ICONMENU_SHOWTTTEXT_STACKS_DESC"] = "강화 효과/약화 효과의 중첩을 아이콘의 중첩으로 보고합니다."
+L["ICONMENU_SHOWTTTEXT_VAR"] = "변수 #%d만"
+L["ICONMENU_SHOWTTTEXT_VAR_DESC"] = [=[이 변수만 아이콘의 중첩으로 보고되도록 합니다.
+
+가끔 올바르지 않은 변수가 보고될 때 사용하세요. 어느 변수가 올바른지 시행 착오를 겪어 확인하세요.]=]
+L["ICONMENU_SHOWTTTEXT2"] = "효과 변수"
+L["ICONMENU_SHOWWHEN"] = "불투명도 & 색상"
+L["ICONMENU_SHOWWHEN_OPACITY_GENERIC_DESC"] = "이 아이콘 상태일 때 표시될 아이콘의 불투명도를 설정합니다."
+L["ICONMENU_SHOWWHEN_OPACITYWHEN_WRAP"] = "%s일 때 불투명도|r"
+L["ICONMENU_SHOWWHENNONE"] = "결과 없으면 표시"
+L["ICONMENU_SHOWWHENNONE_DESC"] = "어떤 유닛에서도 점감 효과를 발견할 수 없을 때 아이콘을 비점감으로 표시하도록 허용하려면 체크하세요."
 L["ICONMENU_SORT_STACKS_ASC"] = "낮은 중첩"
-L["ICONMENU_SORT_STACKS_ASC_DESC"] = "체크하면 낮은 중첩 주문 순으로 표시합니다."
-L["ICONMENU_SORTASC"] = "낮은 지속시간"
-L["ICONMENU_SORTDESC"] = "높은 지속시간"
-L["ICONMENU_SORTDESC_DESC"] = "가장 높은 지속시간으로 주문의 우선 순위를 매기고 보이려면 이 박스에 체크하십시오."
+L["ICONMENU_SORT_STACKS_ASC_DESC"] = "체크하면 낮은 중첩 순으로 주문을 표시합니다."
+L["ICONMENU_SORT_STACKS_DESC"] = "높은 중첩"
+L["ICONMENU_SORT_STACKS_DESC_DESC"] = "체크하면 높은 중첩 순으로 주문을 표시합니다."
+L["ICONMENU_SORTASC"] = "짧은 지속시간"
+L["ICONMENU_SORTASC_DESC"] = "체크하면 짧은 지속시간 순으로 주문을 표시합니다."
+L["ICONMENU_SORTASC_META_DESC"] = "체크하면 짧은 지속시간 순으로 아이콘을 표시합니다."
+L["ICONMENU_SORTDESC"] = "긴 지속시간"
+L["ICONMENU_SORTDESC_DESC"] = "체크하면 긴 지속시간 순으로 주문을 표시합니다."
+L["ICONMENU_SORTDESC_META_DESC"] = "체크하면 긴 지속시간 순으로 아이콘을 표시합니다."
 L["ICONMENU_SPELLCAST_COMPLETE"] = "주문 시전 완료/즉시 시전"
-L["ICONMENU_SPELLCAST_COMPLETE_DESC"] = [=[이 옵션은 주문 시전이 끝난 경우에, 또는 즉시 시전 주문을 시전한 경우에 내부 재사용 대기가 시작된다면 선택하십시오.
+L["ICONMENU_SPELLCAST_COMPLETE_DESC"] = [=[내부 재사용 대기시간이 시작되는 경우를 선택하세요:
 
-%q 편집 박스에 내부 재사용 대기를 적용할 주문의 이름/ID를 입력하는 것이 필요합니다.   ]=]
+|cff7fffff1)|r 주문 시전을 완료했을 때, 또는
+|cff7fffff2)|r 즉시 시전 부문을 시전했을 때.
+
+%q 편집 상자에 내부 재사용 대기시간을 발동하는 주문 시전의 이름/ID를 입력해야 합니다.   ]=]
 L["ICONMENU_SPELLCAST_START"] = "주문 시전 시작"
-L["ICONMENU_SPELLCAST_START_DESC"] = [=[이 옵션은 주문을 시전하기 시작할 경우에 내부 재사용 대기가 시작한다면 선택하십시오.
+L["ICONMENU_SPELLCAST_START_DESC"] = [=[내부 재사용 대기시간이 다음 상황에 시작되면 이 옵션을 선택하세요:
 
-%q 편집 박스에 내부 재사용 대기를 적용할 주문의 이름/ID를 입력하는 것이 필요합니다. ]=]
-L["ICONMENU_SPELLCOOLDOWN"] = "주문 재사용 대기"
-L["ICONMENU_STACKS_MAX_DESC"] = "아이콘에 보여 줄 수 있는 최대 중첩 횟수"
-L["ICONMENU_STACKS_MIN_DESC"] = "아이콘에 보여 주는데 필요한 최소 중첩 횟수"
-L["ICONMENU_STEALABLE"] = "훔칠 수 있는 것에 한해"
-L["ICONMENU_STEALABLE_DESC"] = "주문을 훔칠 수 있는 강화 효과에 한해 보이려면 이것에 체크하십시오. '마법' 유형에 대해 체크할 경우에 가장 낫게 사용될 수 있습니다. "
+|cff7fffff1)|r 주문 시전을 시작할 때.
+
+%q 편집 상자에 내부 재사용 대기시간을 발동하는 주문 시전의 이름/ID를 입력해야 합니다. ]=]
+L["ICONMENU_SPELLCOOLDOWN"] = "주문 재사용 대기시간"
+L["ICONMENU_SPELLCOOLDOWN_DESC"] = "마법책 주문의 재사용 대기시간을 추적합니다."
+L["ICONMENU_SPLIT"] = "새로운 그룹으로 분리"
+L["ICONMENU_SPLIT_DESC"] = "새로운 그룹을 만들고 이 아이콘을 이동시킵니다. 많은 그룹 설정이 새로운 그룹으로 옮겨집니다."
+L["ICONMENU_SPLIT_GLOBAL"] = "새로운 |cff00c300공통|r 그룹으로 분리"
+L["ICONMENU_SPLIT_NOCOMBAT_DESC"] = "전투 중엔 새로운 그룹을 만들 수 없습니다. 새로운 그룹으로 분리하려면 전투를 벗어나세요."
+L["ICONMENU_STACKS_MAX_DESC"] = "아이콘에 표시할 최대 중첩 횟수"
+L["ICONMENU_STACKS_MIN_DESC"] = "아이콘에 표시할 최소 중첩 횟수"
+L["ICONMENU_STATECOLOR"] = "아이콘 색조 & 무늬"
+L["ICONMENU_STATECOLOR_DESC"] = [=[이 아이콘 상태일 때 아이콘 무늬의 색조를 설정합니다.
+
+하얀색이 보통입니다. 다른 색상은 무늬를 해당 색상으로 색칠합니다.
+
+이 상태일 때 아이콘에 표시할 무늬를 강제 적용할 수 있습니다.]=]
+L["ICONMENU_STATUE"] = "수도사 석상"
+L["ICONMENU_STEALABLE"] = "훔칠 수 있는 것만"
+L["ICONMENU_STEALABLE_DESC"] = "주문을 훔칠 수 있는 강화 효과만 표시하려면 체크하세요. '마법' 무효화 유형에 대해 확인할 때 사용하는 게 좋습니다. "
+L["ICONMENU_SUCCEED2"] = "조건 만족"
+L["ICONMENU_SWAPWITH"] = "다음으로 전환:"
+L["ICONMENU_SWINGTIMER"] = "자동 공격 타이머"
+L["ICONMENU_SWINGTIMER_DESC"] = "주장비와 보조장비 무기의 자동 공격 타이머를 추적합니다."
+L["ICONMENU_SWINGTIMER_NOTSWINGING"] = "공격 중지 중"
+L["ICONMENU_SWINGTIMER_SWINGING"] = "자동 공격 중"
 L["ICONMENU_TARGETTARGET"] = "대상의 대상"
 L["ICONMENU_TOTEM"] = "토템"
+L["ICONMENU_TOTEM_DESC"] = "토템을 추적합니다."
+L["ICONMENU_TOTEM_GENERIC_DESC"] = "%s|1을;를; 추적합니다."
 L["ICONMENU_TYPE"] = "아이콘 유형"
-L["ICONMENU_UNITCOOLDOWN"] = "유닛 재사용 대기"
+L["ICONMENU_TYPE_CANCONTROL"] = "이 아이콘 유형은 그룹의 첫번째 아이콘으로 설정되면 전체 그룹을 제어할 수 있습니다."
+L["ICONMENU_TYPE_DISABLED_BY_VIEW"] = "이 아이콘 유형은 %q 표시 방법에 사용할 수 없습니다. 이 그룹의 표시 방법을 변경하거나 이 아이콘 유형을 사용할 새로운 그룹을 만드세요."
+L["ICONMENU_UIERROR"] = "전투 오류 이벤트"
+L["ICONMENU_UIERROR_DESC"] = [=[UI 오류 메시지를 추적합니다.
+
+예를 들어 "당신은 죽었습니다" 와 "대상이 없습니다" 같은 것들이 포함됩니다.]=]
+L["ICONMENU_UNIT_DESC"] = [=[이 상자에 관찰할 유닛을 입력하세요. 오른쪽의 추천 목록에서 입력할 수 있으며, 고급 사용자는 유닛을 직접 입력할 수 있습니다.
+
+표준 유닛 (예. 플레이어)과 또는 같은 파티나 공격대 내에 있는 플레이어의 이름은 유닛으로 사용할 수 있습니다.
+
+어려 유닛은 세미콜론 (;)으로 분리하세요.
+
+유닛에 대한 더 자세한 정보는, http://www.wowpedia.org/UnitId 에서 확인하세요.]=]
+L["ICONMENU_UNIT_DESC_CONDITIONUNIT"] = [=[이 상자에 관찰할 유닛을 입력하세요. 오른쪽의 추천 목록에서 입력할 수 있으며, 고급 사용자는 유닛을 직접 입력할 수 있습니다.
+
+표준 유닛 (예. 플레이어)과 또는 같은 파티나 공격대 내에 있는 플레이어의 이름은 유닛으로 사용할 수 있습니다.
+
+어려 유닛은 세미콜론 (;)으로 분리하세요.
+
+유닛에 대한 더 자세한 정보는, http://www.wowpedia.org/UnitId 에서 확인하세요.]=]
+L["ICONMENU_UNIT_DESC_UNITCONDITIONUNIT"] = [=[이 상자에 관찰할 유닛을 입력하세요. 오른쪽의 추천 목록에서 입력할 수 있습니다.
+
+"unit"은 아이콘이 확인 중인 각 유닛을 대체합니다.]=]
+L["ICONMENU_UNITCNDTIC"] = "유닛 조건 아이콘"
+L["ICONMENU_UNITCNDTIC_DESC"] = [=[여러 유닛의 조건 상태를 추적합니다.
+
+이 아이콘에 구성된 설정은 확인 중인 각 유닛에 적용됩니다.]=]
+L["ICONMENU_UNITCOOLDOWN"] = "유닛 재사용 대기시간"
+L["ICONMENU_UNITCOOLDOWN_DESC"] = [=[누군가의 재사용 대기시간을 추적합니다.
+
+%q|1을;를; 사용하여 %s|1을;를; 동시에 추적할 수 있습니다.]=]
+L["ICONMENU_UNITFAIL"] = "유닛의 조건 실패"
 L["ICONMENU_UNITS"] = "유닛"
-L["ICONMENU_UNITSTOWATCH"] = "감시할 유닛"
+L["ICONMENU_UNITSTOWATCH"] = "관찰할 대상"
+L["ICONMENU_UNITSUCCEED"] = "유닛의 조건 만족"
 L["ICONMENU_UNUSABLE"] = "사용할 수 없음"
+L["ICONMENU_UNUSABLE_DESC"] = "위의 상태가 활성화되지 않았을 때 이 상태가 활성화됩니다. 0%의 불투명도를 가진 상태는 활성화되지 않습니다."
 L["ICONMENU_USABLE"] = "사용 가능"
-L["ICONMENU_VEHICLE"] = "탈것"
+L["ICONMENU_USEACTIVATIONOVERLAY"] = "활성화 테두리 확인"
+L["ICONMENU_USEACTIVATIONOVERLAY_DESC"] = "아이콘이 사용 가능한 것으로 보이게끔 테두리 주변에 노란 불꽃을 표시하려면 체크하세요."
+L["ICONMENU_VALUE"] = "자원 표시"
+L["ICONMENU_VALUE_DESC"] = "유닛의 자원 (체력, 마나, 등등)을 표시합니다."
+L["ICONMENU_VALUE_HASUNIT"] = "유닛 발견"
+L["ICONMENU_VALUE_NOUNIT"] = "유닛 없음"
+L["ICONMENU_VALUE_POWERTYPE"] = "자원 유형"
+L["ICONMENU_VALUE_POWERTYPE_DESC"] = "아이콘에 추적할 자원을 설정합니다."
+L["ICONMENU_VEHICLE"] = "차량"
+L["ICONMENU_VIEWREQ"] = "그룹 표시 방법과 미호환"
+L["ICONMENU_VIEWREQ_DESC"] = [=[아 아이콘 유형은 모든 데이터를 표시하는 데 필요한 구성 요소가 없어서 이 그룹의 현재 표시 방법으로 사용할 수 없습니다.
+
+그룹의 표시 방법을 변경하거나 이 아이콘 유형을 사용할 새로운 그룹을 만드세요.]=]
 L["ICONMENU_WPNENCHANT"] = "무기 마법부여"
+L["ICONMENU_WPNENCHANT_DESC"] = "임시 무기 마법부여를 추적합니다."
 L["ICONMENU_WPNENCHANTTYPE"] = "관찰할 무기 칸"
-L["ICONTOCHECK"] = "체크할 아이콘"
+L["IconModule_CooldownSweepCooldown"] = "재사용 대기시간 나선"
+L["IconModule_IconContainer_MasqueIconContainer"] = "아이콘 컨테이너"
+L["IconModule_IconContainer_MasqueIconContainer_DESC"] = "아이콘의 무늬 같은 주요 부분을 유지합니다"
+L["IconModule_PowerBar_OverlayPowerBar"] = "자원 바 오버레이"
+L["IconModule_SelfIcon"] = "아이콘"
+L["IconModule_Texture_ColoredTexture"] = "아이콘 무늬"
+L["IconModule_TimerBar_BarDisplayTimerBar"] = "타이머 바"
+L["IconModule_TimerBar_OverlayTimerBar"] = "타이머 바 오버레이"
+L["ICONTOCHECK"] = "확인할 아이콘"
+L["ICONTYPE_DEFAULT_HEADER"] = "명령"
+L["ICONTYPE_DEFAULT_INSTRUCTIONS"] = [=[시작하려면 위의 %q 드롭다운 메뉴에서 아이콘 유형을 선택하세요.
+
+아이콘은 TellMeWhen이 잠겨있을 때만 작동합니다, 따라서 완료 후 '/tmw'를 입력하세요.
+
+TellMeWhen을 설정할 때 각 설정의 툴팁을 읽어보세요. 툴팁은 설정 방법에 대한 중요한 정보를 포함하고 있습니다!]=]
+L["ICONTYPE_SWINGTIMER_TIP"] = [=[%s의 타이머를 추적하고 싶나요? %s 아이콘 형식이 당신이 원하는 기능을 가지고 있습니다. %s 아이콘이 %q|1을;를; 추적하도록 설정하세요 (주문ID %d)!
+
+아래 버튼을 클릭하면 적절한 설정을 자동으로 적용할 수 있습니다.]=]
+L["ICONTYPE_SWINGTIMER_TIP_APPLYSETTINGS"] = "%s 설정 적용"
+L["IE_NOLOADED_GROUP"] = "불러올 그룹 선택:"
+L["IE_NOLOADED_ICON"] = "불러온 아이콘 없음!"
+L["IE_NOLOADED_ICON_DESC"] = [=[아이콘을 불러오려면 아이콘을 오른쪽 클릭하세요.
+
+화면에 표시할 수 있는 아이콘이 없다면 하단의 %s 탭을 클릭하세요.
+
+거기에서 새로운 그룹을 추가하거나 존재하는 그룹을 사용할 수 있도록 설정할 수 있습니다.
+
+'/tmw'를 입력하면 설정 모드를 끕니다.]=]
 L["ImmuneToMagicCC"] = "마법 CC에 면역"
 L["ImmuneToStun"] = "기절에 면역"
-L["IMPORT_EXPORT"] = "들여오기/내보내기"
+L["IMPORT_EXPORT"] = "가져오기/내보내기/복원하기"
 L["IMPORT_EXPORT_BUTTON_DESC"] = "아이콘, 그룹, 그리고 프로필을 가져오거나 내보내려면 이 버튼을 클릭하세요."
-L["IMPORT_EXPORT_DESC"] = [=[아이콘, 그룹, 프로필을 들여오고 내보내려면 우측의 버튼을 클릭하세요
+L["IMPORT_EXPORT_DESC"] = [=[아이콘, 그룹, 프로필을 가져오거나 내보내려면 오른쪽의 버튼을 클릭하세요.
 
-문자열에서 가져오거나 다른 플레이어로 내보낼때 이 편집박스의 사용을 필요로합니다. 자세한 내용은 드롭다운 메뉴에서 툴팁을 참조하세요]=]
+문자열에서 가져오거나 다른 플레이어로 내보낼 때 이 편집상자의 사용을 필요로 합니다. 자세한 내용은 드롭다운 메뉴에서 툴팁을 확인하세요.]=]
+L["IMPORT_FAILED"] = "가져오기 실패!"
 L["IMPORT_FROMBACKUP"] = "백업본에서"
+L["IMPORT_FROMBACKUP_DESC"] = "이 메뉴로부터 설정이 복원되었습니다: %s"
 L["IMPORT_FROMBACKUP_WARNING"] = "백업본 설정: %s"
-L["IMPORT_FROMCOMM"] = "플레이어에서"
-L["IMPORT_FROMCOMM_DESC"] = "다른 텔미웬 사용자가 당신에게 설정값을 보내면, 이 메뉴를 통해서 들여올 수 있습니다."
+L["IMPORT_FROMCOMM"] = "플레이어로부터"
+L["IMPORT_FROMCOMM_DESC"] = "다른 TellMeWhen 사용자가 당신에게 구성 데이터를 보내면, 이 메뉴를 통해서 해당 데이터를 가져올 수 있습니다."
 L["IMPORT_FROMLOCAL"] = "프로필에서"
 L["IMPORT_FROMSTRING"] = "문자열에서"
-L["IMPORT_HEADING"] = "들여오기"
+L["IMPORT_FROMSTRING_DESC"] = [=[TellMeWhen 구성 데이터를 게임 외부로 전송할 수 있는 문자열입니다.
+
+문자열로부터 가져오려면, 클립보드에 문자열을 복사한 후 CTRL+V를 눌러 문자열을 편집상자에 붙여넣기한 후, 이 하위메뉴로 돌아오세요.]=]
+L["IMPORT_GROUPIMPORTED"] = "그룹 가져옴!"
+L["IMPORT_GROUPNOVISIBLE"] = "그룹 구성과 당신의 현재 직업과 전문화때문에 가져오기 한 그룹이 표시되지 않습니다. TMW의 그룹 옵션에서 설정을 확인하세요 - '/tmw options'."
+L["IMPORT_HEADING"] = "가져오기"
+L["IMPORT_ICON_DISABLED_DESC"] = "아이콘을 가져오려면 아이콘을 편집해야 합니다."
+L["IMPORT_LUA_CONFIRM"] = "Ok, 이것을 가져옵니다"
+L["IMPORT_LUA_DENY"] = "가져오기 조작 취소"
+L["IMPORT_LUA_DESC"] = [=[가져오기한 데이터에 TellMeWhen이 실행할 수 있는 Lua 코드를 포함하고 있습니다.
+
+악의적 목적으로 사용될 수 있기때문에 신뢰할 수 없는 출처로부터 Lua 코드를 가져올 때는 주의해야 합니다. 대부분 안전하지만 당신에게 잘못된 방법으로 사용하는 사람이 있습니다.
+
+코드를 살펴본 후 신뢰할 수 있는 출처에서 왔는지 또는 우편을 보내거나 거래를 수락하는 등의 동작을 하지 않는 지 확인하세요.]=]
+L["IMPORT_LUA_DESC2"] = "|TInterface/AddOns/TellMeWhen/Textures/Alert:0:2|t 빨간색 코드 부분을 살펴보세요, 보통 악의적 활동을 나타내는 단어/구문입니다. |TInterface/AddOns/TellMeWhen/Textures/Alert:0:2|t"
+L["IMPORT_NEWGUIDS"] = [=[가져오기한 데이터가 %d개의 그룹과 %d개의 아이콘의 고유 식별자와 문제를 일으켰습니다. 이것은 아마도 예전에 이 데이터를 가져왔거나, 데이터의 구 버전을 가져왔었던 걸 의미합니다.
+
+가져온 데이터에 새로운 고유 식별자가 지정되었습니다. 앞으로 가져오기할 아이콘은 새로운 데이터를 참조해야만 의도한 대로 기능합니다 - 새로운 데이터와 문제를 일으킨 오래된 아이콘을 참조합니다.
+
+기존 데이터를 교체하려면, 올바른 위치에 다시 가져오기 해주세요.]=]
 L["IMPORT_PROFILE"] = "프로필 복사"
 L["IMPORT_PROFILE_NEW"] = "새 프로필 |cff59ff59생성|r"
 L["IMPORT_PROFILE_OVERWRITE"] = "%s |cFFFF5959덮어쓰기|r"
-L["IMPORTERROR_FAILEDPARSE"] = "문자열을 처리하는 도중 오류가 발생했습니다. 출처에서 전체 문자열이 복사되었는지 확인하십시오."
+L["IMPORT_SUCCESSFUL"] = "가져오기 성공!"
+L["IMPORTERROR_FAILEDPARSE"] = "문자열을 처리하는 도중 오류가 발생했습니다. 출처에서 문자열 전체가 복사되었는지 확인하세요."
+L["IMPORTERROR_INVALIDTYPE"] = "알 수 없는 유형의 데이터를 가져오려고 시도했습니다. 최신 버전의 TellMeWhen이 설치되어 있는지 확인해보세요."
 L["Incapacitated"] = "움직이지 못함"
-L["INRANGE"] = "사정 거리내"
-L["ITEMCOOLDOWN"] = "아이템 재사용 대기"
-L["ITEMSPELL"] = "아이템에 사용 효과 있음"
-L["ITEMTOCHECK"] = "체크할 아이템"
+L["INCHEALS"] = "유닛 받는 치유"
+L["INCHEALS_DESC"] = [=[유닛이 받는 총 치유량을 확인합니다 (진행 중인 HoT와 시전).
+
+우호적 유닛만 작동합니다. 적대적 유닛은 항상 0의 치유량이 보고됩니다.]=]
+L["INRANGE"] = "사정 거리 내"
+L["ITEMCOOLDOWN"] = "아이템 재사용 대기시간"
+L["ITEMEQUIPPED"] = "착용 중인 아이템"
+L["ITEMINBAGS"] = "아이템 갯수 (충전량 포함)"
+L["ITEMSPELL"] = "사용 효과를 가진 아이템"
+L["ITEMTOCHECK"] = "확인할 아이템"
 L["ITEMTOCOMP1"] = "비교할 첫번째 아이템 "
 L["ITEMTOCOMP2"] = "비교할 두번째 아이템 "
-L["LDB_TOOLTIP1"] = "|cff7fffff좌-클릭|r: 그룹 잠금 전환"
-L["LDB_TOOLTIP2"] = "|cff7fffff우-클릭|r: 주 TMW 옵션 보이기"
+L["LAYOUTDIRECTION"] = "배치 방향"
+L["LAYOUTDIRECTION_PRIMARY_DESC"] = "아이콘의 주 배치 방향을 %s 방향으로 확장시킵니다."
+L["LAYOUTDIRECTION_SECONDARY_DESC"] = "아이콘의 연속 행/열을 %s 방향으로 확장시킵니다."
+L["LDB_TOOLTIP1"] = "|cff7fffff왼쪽 클릭|r: 그룹 잠금 전환"
+L["LDB_TOOLTIP2"] = "|cff7fffff오른쪽 클릭|r: 아이콘 편집기 표시"
 L["LEFT"] = "좌측"
-L["LOADERROR"] = "TellMeWhen_Options을 들여올 수 없습니다: "
-L["LOADINGOPT"] = "TellMeWhen_Options을 불러들입니다."
+L["LOADERROR"] = "TellMeWhen_Options를 불러올 수 없습니다: "
+L["LOADINGOPT"] = "TellMeWhen_Options를 불러옵니다."
+L["LOCKED"] = "잠금"
+L["LOCKED2"] = "위치가 잠겼습니다."
+L["LOSECONTROL_CONTROLLOST"] = "제어 상실"
+L["LOSECONTROL_DROPDOWNLABEL"] = "제어 불가 유형"
+L["LOSECONTROL_DROPDOWNLABEL_DESC"] = "아이콘이 반응할 제어 불가 유형을 선택하세요."
+L["LOSECONTROL_ICONTYPE"] = "제어 불가"
+L["LOSECONTROL_ICONTYPE_DESC"] = "캐릭터를 제어 불가 상태로 만드는 효과를 추적합니다."
+L["LOSECONTROL_INCONTROL"] = "제어 중"
+L["LOSECONTROL_TYPE_ALL"] = "모든 유형"
+L["LOSECONTROL_TYPE_ALL_DESC"] = "아이콘이 효과의 모든 유형에 대한 정보를 표시하도록 합니다."
+L["LOSECONTROL_TYPE_DESC_USEUNKNOWN"] = "참고: 이 제어 불가 유형의 사용 여부가 알려지지 않았습니다."
+L["LOSECONTROL_TYPE_MAGICAL_IMMUNITY"] = "마법 면역"
+L["LOSECONTROL_TYPE_SCHOOLLOCK"] = "주문 속성 잠금"
+L["LUA_INSERTGUID_TOOLTIP"] = "|cff7fffffShift-클릭|r하여 아이콘에 대한 참조를 코드에 삽입합니다."
 L["LUACONDITION"] = "Lua (전문가)"
+L["LUACONDITION_DESC"] = [=[이 조건 유형은 Lua 코드를 평가하여 조건의 상태를 판단할 수 있도록 허용합니다.
+
+입력문은 'if .. then' 구문이 아니며, 종결 함수도 아닙니다. 평가하기 위한 일반적인 구문입니다, 예. 'a and b or c'. 복합 함수가 필요하다면, 외부에서 정의한 함수를 호출하세요, 예. 'CheckStuff()' (아마도 TMW의 Lua 코드 조각 기능을 사용하여).
+
+이 아이콘/그룹에 참조를 획득하려면, 'thisobj'를 사용하세요. GUID로 다른 아이콘에 참조를 삽입하려면, 이 편집 상자를 활성화 중일 때 아이콘을 Shift 클릭하세요.
+
+도움이 더 필요하다면 (Lua 코드 작성법에 관한 도움은 아닙니다), CurseForge에 티켓을 열어주세요. Lua 작성법에 도움을 받고싶다면, 인터넷을 검색해보세요.]=]
+L["LUACONDITION2"] = "Lua 조건"
 L["MACROCONDITION"] = "매크로 조건"
+L["MACROCONDITION_DESC"] = [=[이 조건은 매크로 조건을 평가하며, 매크로 조건 통과시 조건도 통과합니다.
+모든 매크로 조건은 앞에 "no"를 붙여 반대되는 조건을 만들 수 있습니다.
+
+예제: 
+   "[nomodifier:alt]" - alt 키를 누르고 있지 않을 때.
+   "[@target, help][mod:ctrl]" - 대상이 우호적이거나 ctrl 키를 누르고 있을 때
+   "[@focus, harm, nomod:shift]" - 주시 대상이 적대적이면서 shift 키를 누르고 있지 않을 때
+
+자세한 정보는, http://www.wowpedia.org/Making_a_macro 를 확인하세요.]=]
+L["MACROCONDITION_EB_DESC"] = [=[단일 조건을 사용하면, 괄호의 열고 닫기는 선택적입니다.
+복수 조건을 사용할 때 괄호가 필요합니다.]=]
+L["MACROTOEVAL"] = "평가할 매크로 조건"
 L["Magic"] = "마법"
+L["MAIN"] = "일반"
+L["MAIN_DESC"] = "이 아이콘의 주 옵션을 포함합니다."
 L["MAINASSIST"] = "지원 전담"
+L["MAINASSIST_DESC"] = "공격대에서 지원 전담으로 지정된 유닛을 추적합니다."
+L["MAINOPTIONS_SHOW"] = "그룹 옵션"
 L["MAINTANK"] = "방어 전담"
+L["MAINTANK_DESC"] = "공격대에서 방어 전담으로 지정된 유닛을 추적합니다."
+L["MAKENEWGROUP_GLOBAL"] = "새로운 |cff00c300공통|r 그룹 |cff59ff59만들기|r"
+L["MAKENEWGROUP_PROFILE"] = "새로운 프로필 그룹 |cff59ff59만들기|r"
+L["MESSAGERECIEVE"] = "%s님이 TellMeWhen 데이터를 보냈습니다! 아이콘 편집기의 하단에 위치한 %q 버튼을 사용하여 데이터를 TellMeWhen으로 가져올 수 있습니다."
+L["MESSAGERECIEVE_SHORT"] = "%s님이 TellMeWhen 데이터를 보냈습니다!"
+L["META_ADDICON"] = "아이콘 추가"
+L["META_ADDICON_DESC"] = "이 메타 아이콘에 포함시킬 다른 아이콘을 추가하려면 클릭하세요."
+L["META_GROUP_INVALID_VIEW_DIFFERENT"] = [=[다른 표시 방법을 사용해서 이 메타 아이콘이 이 그룹에 있는 아이콘을 확인할 수 없습니다.
+
+이 그룹: %s
+대상 그룹: %s]=]
+L["METAPANEL_DOWN"] = "아래로 이동"
+L["METAPANEL_REMOVE"] = "아이콘 제거"
+L["METAPANEL_REMOVE_DESC"] = "메타 아이콘이 확인할 목록에서 이 아이콘을 제거하려면 클릭하세요."
+L["METAPANEL_UP"] = "위로 이동"
+L["minus"] = "하수인"
+L["MISCELLANEOUS"] = "기타"
+L["MiscHelpfulBuffs"] = "기타 이로운 강화 효과"
+L["MODTIMER_PATTERN"] = "Lua 패턴 일치 허용"
+L["MODTIMER_PATTERN_DESC"] = [=[기본적으로 이 조건은 당신이 입력한 문자를 포함한 모든 타이머의 이름과 일치시키며 대/소문자를 구분하지 않습니다.
+
+이 설정을 활성화하면 입력 내용이 Lua 스타일 strmatch 패턴으로 사용됩니다.
+
+타이머 이름과 정확히 일치시키려면, ^timer name$ 을 입력하세요. TMW는 타이머 이름을 소문자로 저장하므로, 이 이름은 소문자로 타이머 이름과 반드시 일치해야 합니다.
+
+자세한 정보는 http://wowpedia.org/Pattern_matching 에서 확인하세요]=]
+L["MODTIMERTOCHECK"] = "확인할 타이머"
+L["MODTIMERTOCHECK_DESC"] = "우두머리 모듈의 타이머 바에 나타나는 타이머의 전체 또는 부분 이름을 입력하세요."
 L["MOON"] = "달"
-L["MOUSEOVER_TOKEN_NOT_FOUND"] = "<마우스 올림 없음>"
+L["MOUSEOVER_TOKEN_NOT_FOUND"] = "<마우스오버 없음>"
+L["MOUSEOVERCONDITION"] = "마우스 올려짐"
+L["MOUSEOVERCONDITION_DESC"] = "조건이 지정된 아이콘이나 그룹에 마우스가 올려져 있는지 확인하는 조건입니다."
 L["MP5"] = "%d MP5"
-L["NEWVERSION"] = "TellMeWhen의 새 버전이 이용 가능합니다: %s "
+L["MUSHROOM"] = "%d 버섯"
+L["NEWVERSION"] = "TellMeWhen의 새 버전이 이용 가능합니다: %s"
+L["NOGROUPS_DIALOG_BODY"] = [=[당신의 현재 TellMeWhen 구성과/또는 플레이어 전문화가 어떤 TellMeWhen 그룹도 표시되도록 허용하지 않았습니다, 따라서 설정할 것이 없습니다.
+
+존재하는 그룹의 설정을 변경하거나 새로운 그룹을 만드려면, '/tmw options'를 입력하여 TellMeWhen의 그룹 옵션을 열거나 하단의 버튼을 클릭하세요.
+
+'/tmw'를 입력하면 설정 모드를 종료합니다.]=]
+L["NONE"] = "이것들 중 아무것도 아닌"
 L["normal"] = "일반"
-L["NOTINRANGE"] = "사정 거리내에 없음"
-L["ONLYCHECKMINE"] = "내것에 한해 체크"
+L["NOTINRANGE"] = "사정 거리 벗어남"
+L["NOTYPE"] = "<아이콘 형식 없음>"
+L["NUMAURAS"] = "갯수: "
+L["NUMAURAS_DESC"] = "이 조건은 활성화된 오라의 갯수를 확인합니다 - 오라의 중첩 횟수와 혼동하지 마세요. 동시에 두개의 무기 마법부여 발동 활성화 같은 것을 확인합니다. 숫자를 세는 데 사용되는 처리 과정이 CPU를 많이 사용하므로 적게 사용하세요."
+L["ONLYCHECKMINE"] = "내가 시전한 것만"
+L["ONLYCHECKMINE_DESC"] = "이 조건이 자신이 시전한 강화 효과/약화 효과만 확인하게 하려면 체크하세요."
+L["OPERATION_DIVIDE"] = "나누기"
+L["OPERATION_MINUS"] = "빼기"
+L["OPERATION_MULTIPLY"] = "곱하기"
+L["OPERATION_PLUS"] = "더하기"
+L["OPERATION_SET"] = "집합"
 L["OPERATION_TPAUSE"] = "일시정지"
 L["OPERATION_TPAUSE_DESC"] = "타이머를 일시정지 합니다."
 L["OPERATION_TRESET"] = "초기화"
-L["OPERATION_TRESET_DESC"] = "타이머를 0으로 초기화 합니다. 작동중에는 멈추지 않습니다."
+L["OPERATION_TRESET_DESC"] = "타이머를 0으로 초기화 합니다. 작동 중에는 멈추지 않습니다."
 L["OPERATION_TRESTART"] = "재시작"
-L["OPERATION_TRESTART_DESC"] = "타이머를 0으로 초기화하고, 작동중이 아니면 시작합니다."
+L["OPERATION_TRESTART_DESC"] = "타이머를 0으로 초기화하고, 작동 중이 아니면 시작합니다."
 L["OPERATION_TSTART"] = "시작"
-L["OPERATION_TSTART_DESC"] = "작동중이 아니면 타이머를 시작합니다. 초기화하지 않습니다."
+L["OPERATION_TSTART_DESC"] = "작동 중이 아니면 타이머를 시작합니다. 초기화하지 않습니다."
 L["OPERATION_TSTOP"] = "중단"
-L["OPERATION_TSTOP_DESC"] = "멈추고 타이머를 0으로 초기화 합니다."
+L["OPERATION_TSTOP_DESC"] = "타이머를 멈추고 0으로 초기화합니다."
 L["OUTLINE_MONOCHORME"] = "흑백"
 L["OUTLINE_NO"] = "외곽선 없음"
 L["OUTLINE_THICK"] = "굵은 외곽선"
 L["OUTLINE_THIN"] = "얇은 외곽선 "
 L["PARENTHESIS_TYPE_("] = "열기"
 L["PARENTHESIS_TYPE_)"] = "닫기"
-L["PLAYER_DESC"] = "(당신)"
+L["PARENTHESIS_WARNING1"] = [=[열고 닫는 괄호의 숫자가 일치하지 않습니다!
+
+%d개의 %s 괄호가 필요합니다.]=]
+L["PARENTHESIS_WARNING2"] = [=[일부 닫기 괄호가 열기 괄호가 없습니다!
+
+%d개의 열기 괄호가 필요합니다.]=]
+L["PERCENTAGE"] = "백분율"
+L["PERCENTAGE_DEPRECATED_DESC"] = [=[백분율 조건은 속임수때문에 사용되지 않습니다.
+
+드레노어의 전쟁군주에서, 강화 효과/약화 효과의 기존 지속시간을 버리지 않고 새로 고침할 수 있는 시점은 현재 지속시간이 아닌 효과의 기본 지속시간의 30%입니다.
+
+이 조건들을 사용하여 강화 효과/약화 효과가 30% 이하로 남았는 지 확인하는 것은 좋지 않습니다, 왜냐하면 이미 확장된 효과는 30%가 남은 시점에서 새로 적용하면 효과의 일부를 버리게 됩니다.
+
+대신, 확인하고 싶은 효과의 기본 지속시간 중 30%를 수동으로 계산하고 그 값과 비교해야 합니다.]=]
+L["PET_TYPE_CUNNING"] = "교활함"
+L["PET_TYPE_FEROCITY"] = "흉포함"
+L["PET_TYPE_TENACITY"] = "강인함"
+L["PLAYER_DESC"] = "'플레이어' 유닛은 자신입니다."
 L["Poison"] = "독"
-L["PvPSpells"] = "PvP 군중 제어 등"
+L["PROFILE_LOADED"] = "프로필 불러옴: %s"
+L["PROFILES_COPY"] = "프로필 복사..."
+L["PROFILES_COPY_CONFIRM"] = "프로필 복사"
+L["PROFILES_COPY_CONFIRM_DESC"] = "프로필 %q|1이;가; %q 프로필의 복사본으로 덮어 씌워집니다."
+L["PROFILES_COPY_DESC"] = [=[복사해 올 다른 프로필을 선택하세요. 선택한 프로필로 현재 프로필을 덮어씁니다.
+
+%2$q 메뉴 하단에 있는 %1$q 옵션을 사용하여 다음 접속 종료나 다시 불러오기 전까지 이 작업을 실행 취소할 수 있습니다.]=]
+L["PROFILES_DELETE"] = "프로필 삭제..."
+L["PROFILES_DELETE_CONFIRM"] = "프로필 삭제"
+L["PROFILES_DELETE_CONFIRM_DESC"] = "프로필 %q|1이;가; 삭제됩니다."
+L["PROFILES_DELETE_DESC"] = [=[삭제할 프로필을 선택하세요.
+
+%2$q 메뉴 하단에 있는 %1$q 옵션을 사용하여 다음 접속 종료나 다시 불러오기 전까지 이 작업을 실행 취소할 수 있습니다.]=]
+L["PROFILES_NEW"] = "새 프로필"
+L["PROFILES_NEW_DESC"] = "새 프로필의 이름을 입력하고 엔터를 눌러 생성합니다."
+L["PROFILES_SET"] = "프로필 변경..."
+L["PROFILES_SET_DESC"] = "전환할 다른 프로필을 선택하세요."
+L["PROFILES_SET_LABEL"] = "현재 프로필"
+L["PvPSpells"] = "PvP 군중 제어, 등등."
+L["QUESTIDTOCHECK"] = "확인할 퀘스트ID"
+L["RAID_WARNING_FAKE"] = "공격대 경보 (가짜)"
+L["RAID_WARNING_FAKE_DESC"] = "공격대 경보로 메시지를 출력하지만, 다른 누구도 볼수 없으며 공격대 경보 권한이나 공격대에 속해 있지 않아도 됩니다."
+L["RaidWarningFrame"] = "공격대 경보 프레임"
 L["rare"] = "희귀"
-L["rareelite"] = "희귀 정에"
+L["rareelite"] = "희귀 정예"
+L["REACTIVECNDT_DESC"] = "이 조건은 능력의 재사용 대기시간이 아닌 반응 상태만 확인합니다."
 L["REDO"] = "다시 실행"
+L["REDO_DESC"] = "이 설정들을 만든 마지막 변경을 다시 실행합니다."
 L["ReducedHealing"] = "치유량 감소"
+L["REQFAILED_ALPHA"] = "실패 시 불투명도"
 L["RESET_ICON"] = "초기화"
+L["RESET_ICON_DESC"] = "이 아이콘의 모든 설정을 기본값으로 초기화합니다."
 L["RESIZE"] = "크기 조절"
-L["RESIZE_TOOLTIP"] = "|cff7fffff클릭과 드래그|r로 크기변경"
-L["RESIZE_TOOLTIP_SCALEX_SIZEY"] = "|cff7fffff클릭과 드래그|r로 크기 조절"
-L["RIGHT"] = "우측"
+L["RESIZE_GROUP_CLOBBERWARN"] = "|cff7fffff오른쪽 클릭하고 끌기|r를 사용하여 그룹을 축소하면, 몇몇 아이콘이 잘릴 수 있습니다. 이 아이콘들은 임시로 저장되며  |cff7fffff오른쪽 클릭하고 끌기|r로 크기를 다시 늘리면 복원됩니다, 하지만 접속 종료나 UI를 다시 불러오면 영원히 잃게 됩니다."
+L["RESIZE_TOOLTIP"] = "|cff7fffff클릭하고 끌어서|r 크기 조절"
+L["RESIZE_TOOLTIP_CHANGEDIMS"] = "|cff7fffff오른쪽 클릭하고 끌어서|r 그룹과 열의 숫자 변경"
+L["RESIZE_TOOLTIP_SCALEX_SIZEY"] = "|cff7fffff클릭하고 끌어서|r 크기 비율 조절"
+L["RESIZE_TOOLTIP_SCALEXY"] = [=[|cff7fffff클릭하고 끌어서|r 크기 비율 조절
+|cff7fffffControl을 누른 상태면|r 크기 비율 축 반전]=]
+L["RESIZE_TOOLTIP_SCALEY_SIZEX"] = "|cff7fffff클릭하고 끌어서|r 크기 비율 조절"
+L["RIGHT"] = "오른쪽"
+L["ROLEf"] = "역할: %s"
 L["Rooted"] = "이동 불가"
-L["RUNES"] = "체크할 룬"
+L["RUNEOFPOWER"] = "룬 %d"
+L["RUNES"] = "확인할 룬"
 L["RUNSPEED"] = "유닛 달리기 속도"
-L["SENDSUCCESSFUL"] = "성공적으로 보냈습니다."
+L["RUNSPEED_DESC"] = "유닛이 현재 이동 중이지 않아도, 유닛의 최대 달리기 속도를 나타냅니다."
+L["SAFESETUP_COMPLETE"] = "안전 & 느린 설정 완료."
+L["SAFESETUP_FAILED"] = "안전 & 느린 설정 실패: %s"
+L["SAFESETUP_TRIGGERED"] = "안전 & 느린 설정 실행 중..."
+L["SEAL"] = "문장"
+L["SENDSUCCESSFUL"] = "성공적으로 보냈습니다"
 L["SHAPESHIFT"] = "변신"
+L["Shatterable"] = "산산조각 가능"
+L["SHOWGUIDS_OPTION"] = "툴팁에 GUID를 표시합니다."
+L["SHOWGUIDS_OPTION_DESC"] = "그룹이나 아이콘의 GUID (전역-고유 식별자)를 툴팁에 표시하려면 이 설정을 활성화하세요. 아이콘과 연관된 GUID를 알고 싶을 때 유용할 수 있습니다."
 L["Silenced"] = "침묵"
-L["SORTBY"] = "우선순위 매기기"
-L["SOUND_CUSTOM"] = "사용자 소리 파일"
-L["SOUND_EVENT_ONALPHADEC"] = "투명도 감소시"
-L["SOUND_EVENT_ONALPHADEC_DESC"] = [=[이 이벤트는 아이콘의 불투명도가 감소된 경우에 적용됩니다.
+L["Slowed"] = "느려짐"
+L["SORTBY"] = "우선 순위 지정"
+L["SORTBYNONE"] = "일반"
+L["SORTBYNONE_DESC"] = [=[체크하면, 주문이 "%s" 편집상자에 입력된 순서대로 확인되고 나타납니다.
 
-주의: 이 이벤트는 0% 반투명도(숨기기시)로 감소되는 경우에 적용되지 않습니다.]=]
-L["SOUND_EVENT_ONALPHAINC"] = "투명도 증가 시"
-L["SOUND_EVENT_ONALPHAINC_DESC"] = [=[이 이벤트는 아이콘의 불투명도가 증가된 경우에 적용됩니다.
+이 아이콘이 강화 효과/약화 효과 아이콘이고 확인 중인 효과의 갯수가 효율 한계 설정을 초과하면, 효과는 유닛의 유닛 프레임에 나타나는 일반적인 순서로 확인됩니다.]=]
+L["SORTBYNONE_DURATION"] = "일반 지속시간"
+L["SORTBYNONE_META_DESC"] = "체크하면, 아이콘은 위에 설정된 순서대로 확인됩니다."
+L["SORTBYNONE_STACKS"] = "일반 중첩"
+L["SOUND_CHANNEL"] = "소리 채널"
+L["SOUND_CHANNEL_DESC"] = [=[소리를 재생할 때 사용할 소리 채널과 음량 설정을 선택하세요.
 
-주의: 이 이벤트는 0% 반투명도(보이기시)로 증가되는 경우에 적용되지 않습니다.]=]
-L["SOUND_EVENT_ONHIDE_DESC"] = "이 이벤트는 아이콘이 숨겨져 있는 경우에 적용됩니다(비록 '항상 숨기기'가 체크되어 있다 할지라도)"
-L["SOUND_EVENT_ONSHOW"] = "On Show(보이기시)"
-L["SOUND_EVENT_ONSHOW_DESC"] = "이 이벤트는 아이콘이 보여지는 경우에 적용됩니다(비록 '항상 숨기기'가 체크되어 있다 할지라도)"
-L["SOUND_EVENT_ONSTART"] = "On Start(시작시)"
-L["SOUND_EVENT_ONSTART_DESC"] = "이 이벤트는 재사용 대기가 사용할 수 없게 되고, 강화/약화 효과가  적용되어 있는 등의 경우에 적용됩니다."
+%q|1을;를; 선택하면 소리 설정이 꺼져 있을 때도 소리가 재생됩니다.]=]
+L["SOUND_CHANNEL_MASTER"] = "주 채널"
+L["SOUND_CUSTOM"] = "사용자 설정 소리 파일"
+L["SOUND_CUSTOM_DESC"] = [=[재생할 사용자 설정 소리 파일의 경로를 입력하세요. 숫자로 된 소리 Kit ID를 입력할 수 있습니다.
+
+몇가지 예제가 있습니다, "file"은 소리 파일의 이름이며, "ext"는 파일의 확장자입니다 (ogg 또는 mp3 만 가능!):
+
+- "CustomSounds/file.ext": WoW의 루트 디렉토리에 있는 "CustomSounds"라는 이름의 새로운 폴더에 위치한 파일 (같은 위치로 Wow.exe, Interface와 WTF 폴더, 등이 있습니다)
+
+- "Interface/AddOns/file.ext": AddOns 폴더에 있는 파일
+
+- "file.ext": WoW의 루트 디렉토리에 있는 파일
+
+참고: WoW를 시작할 때 존재하지 않았던 파일을 인식하려면 먼저 재시작해야 하니다.]=]
+L["SOUND_ERROR_ALLDISABLED"] = [=[게임 소리가 완전히 꺼져있어서 이 소리를 테스트할 수 없습니다.
+
+블리자드의 소리 옵션에서 설정을 변경하세요.]=]
+L["SOUND_ERROR_DISABLED"] = [=[%q 소리 채널이 꺼져있어서 이 소리를 테스트할 수 없습니다.
+
+블리자드의 소리 옵션에서 설정을 변경하세요.
+
+또한, TellMeWhen의 주 옵션에서 사용하도록 설정한 소리 채널을 변경할 수 있습니다 ('/tmw options')]=]
+L["SOUND_ERROR_MUTED"] = [=[%q 소리 채널의 음량이 0으로 설정되어 있어서 이 소리를 테스트할 수 없습니다.
+
+블리자드의 소리 옵션에서 설정을 변경하세요.
+
+또한, TellMeWhen의 주 옵션에서 사용하도록 설정한 소리 채널을 변경할 수 있습니다 ("/tmw options')]=]
+L["SOUND_EVENT_DISABLEDFORTYPE"] = "사용할 수 없음"
+L["SOUND_EVENT_DISABLEDFORTYPE_DESC2"] = [=[이 이벤트는 현재 아이콘 구성에 사용할 수 없습니다.
+
+아마도 이 이벤트는 현재 아이콘 형식 (%s)에 사용할 수 없기 때문일 수 있습니다.
+
+|cff7fffff오른쪽 클릭|r으로 이벤트를 변경합니다.]=]
+L["SOUND_EVENT_NOEVENT"] = "구성되지 않은 이벤트"
+L["SOUND_EVENT_ONALPHADEC"] = "불투명도 감소 시"
+L["SOUND_EVENT_ONALPHADEC_DESC"] = [=[이 이벤트는 아이콘의 불투명도가 감소될 때 발동합니다.
+
+참고: 이 이벤트는 0% 불투명도로 감소할 때는 발동하지 않습니다 (숨길 시).]=]
+L["SOUND_EVENT_ONALPHAINC"] = "불투명도 증가 시"
+L["SOUND_EVENT_ONALPHAINC_DESC"] = [=[이 이벤트는 아이콘의 불투명도가 증가할 때 발동합니다.
+
+주의: 이 이벤트는 0% 불투명도에서 증가할 때는 발동하지 않습니다 (표시될 때).]=]
+L["SOUND_EVENT_ONCLEU"] = "전투 이벤트 발생 시"
+L["SOUND_EVENT_ONCLEU_DESC"] = "이 이벤트는 아이콘이 전투 이벤트를 처리할 때 발동합니다."
+L["SOUND_EVENT_ONCONDITION"] = "조건 세트 만족 시"
+L["SOUND_EVENT_ONCONDITION_DESC"] = "이 이벤트에 대해 구성할 수 있는 조건의 세트가 만족할 때 발동합니다."
+L["SOUND_EVENT_ONDURATION"] = "지속시간 변경 시"
+L["SOUND_EVENT_ONDURATION_DESC"] = [=[이 이벤트는 아이콘의 지속시간 타이머가 변경될 때 발동합니다.
+
+이 이벤트는 타이머가 작동하는 동안 아아콘이 갱신될 때마다 발생하기 때문에 해당 조건의 상태가 변경될 때만 발생하도록 조건을 설정해야만 합니다.]=]
+L["SOUND_EVENT_ONEVENTSRESTORED"] = "아이콘 구성 시"
+L["SOUND_EVENT_ONEVENTSRESTORED_DESC"] = [=[이 이벤트는 이 아이콘이 구성된 후 즉시 발동합니다.
+
+이것은 주로 설정 모드를 종료하면 발생하지만, 다른 것들 중에서 지역에 입장/퇴장할 때 발생하기도 합니다.
+
+이것은 아이콘의 "소프트 초기화"로도 생각할 수 있습니다.
+
+이 이벤트는 아이콘의 기본 상태를 만들 때 유용할 수 있습니다.]=]
+L["SOUND_EVENT_ONFINISH"] = "종료 시"
+L["SOUND_EVENT_ONFINISH_DESC"] = "이 이벤트는 재사용 대기시간이 끝나거나, 강화 효과/약화 효과가 사라지면 발동합니다."
+L["SOUND_EVENT_ONHIDE"] = "숨기기 시"
+L["SOUND_EVENT_ONHIDE_DESC"] = "이 이벤트는 아이콘이 숨겨지면 발동합니다(%q|1이;가; 체크되어 있어도)."
+L["SOUND_EVENT_ONLEFTCLICK"] = "왼쪽 클릭 시"
+L["SOUND_EVENT_ONLEFTCLICK_DESC"] = "이 이벤트는 아이콘이 잠겨 있는 동안 아이콘을 |cff7fffff왼쪽 클릭|r하면 발동합니다."
+L["SOUND_EVENT_ONRIGHTCLICK"] = "오른쪽 클릭 시"
+L["SOUND_EVENT_ONRIGHTCLICK_DESC"] = "이 이벤트는 아이콘이 잠겨 있는 동안 아이콘을 |cff7fffff오른쪽 클릭|r하면 발동합니다."
+L["SOUND_EVENT_ONSHOW"] = "표시될 때"
+L["SOUND_EVENT_ONSHOW_DESC"] = "이 이벤트는 아이콘이 표시될 때 발동합니다 (%q|1이;가; 체크되어 있어도)."
+L["SOUND_EVENT_ONSPELL"] = "주문 변경 시"
+L["SOUND_EVENT_ONSPELL_DESC"] = "이 이벤트는 아이콘이 표시 중인 주문/아이템/기타 등의 정보가 변경되면 발동합니다."
+L["SOUND_EVENT_ONSTACK"] = "중첩 변경 시"
+L["SOUND_EVENT_ONSTACK_DESC"] = [=[이 이벤트는 아이콘이 추적 중인 것의 중첩이 변경되면 발동합니다.
+
+%s 아이콘의 감소 수치도 포함합니다.]=]
+L["SOUND_EVENT_ONSTART"] = "시작 시"
+L["SOUND_EVENT_ONSTART_DESC"] = "이 이벤트는 재사용 대기시간이 시작되거나, 강화 효과/약화 효과가 적용되면 발동합니다."
+L["SOUND_EVENT_ONUIERROR"] = "전투 오류 이벤트 시"
+L["SOUND_EVENT_ONUIERROR_DESC"] = "이 이벤트는 아이콘이 전투 이벤트 오류를 처리할 때 발동합니다."
+L["SOUND_EVENT_ONUNIT"] = "유닛 변경 시"
+L["SOUND_EVENT_ONUNIT_DESC"] = "이 이벤트는 아이콘이 표시 중인 유닛의 정보가 변경되면 발동합니다."
+L["SOUND_EVENT_WHILECONDITION"] = "조건 세트가 만족하는 동안"
+L["SOUND_EVENT_WHILECONDITION_DESC"] = "이 알림은 자신이 설정한 조건의 세트가 만족할 때 발동합니다."
 L["SOUND_SOUNDTOPLAY"] = "재생할 소리"
 L["SOUND_TAB"] = "소리"
-L["SOUNDERROR2"] = "사용자 wav 파일은 WoW 4.0+에서 지원하지 않습니다."
-L["SOUNDERROR3"] = "OGG와  MP3 파일만 지원됩니다!"
+L["SOUND_TAB_DESC"] = "LibSharedMedia 소리나 사용자 설정 소리 파일을 재생합니다."
+L["SOUNDERROR1"] = "파일은 반드시 확장자가 있어야 합니다!"
+L["SOUNDERROR2"] = [=[사용자 설정 WAV 파일은 WoW 4.0+ 버전에서 지원하지 않습니다
+
+(WoW에 내장된 소리는 여전히 작동합니다)]=]
+L["SOUNDERROR3"] = "OGG와  MP3 파일만 지원합니다!"
 L["SPEED"] = "유닛 속도"
-L["SPEED_DESC"] = "이것은 유닛의 현재 이동 속도를 제공합니다. 유닛이 이동할 수 없다면 그것은 0일 것 입니다. 유닛의 최고 달리기 속도를 추적하고자 한다면 이것 대신에 '유닛 달리기 속도' 조건을 사용하십시오.  "
-L["SPELLCOOLDOWN"] = "주문 재사용 대기"
-L["SPELLTOCHECK"] = "체크할 주문"
+L["SPEED_DESC"] = "이것은 유닛의 현재 이동 속도를 나타냅니다. 유닛이 이동할 수 없다면 그것은 0일 것 입니다. 유닛의 최고 달리기 속도를 추적하고 싶다면 이것 대신에 '유닛 달리기 속도' 조건을 사용하세요.  "
+L["SpeedBoosts"] = "속도 증가"
+L["SPELL_EQUIV_REMOVE_FAILED"] = "경고: 주문 목록 %2$q에서 %1$s|1을;를; 제거하려고 했지만 찾을 수 없습니다."
+L["SPELLCHARGES"] = "주문 충전량"
+L["SPELLCHARGES_DESC"] = "%s 또는 %s 같은 주문의 충전량을 추적합니다."
+L["SPELLCHARGES_FULLYCHARGED"] = "완전히 충전됨"
+L["SPELLCHARGETIME"] = "주문 충전 시간"
+L["SPELLCHARGETIME_DESC"] = "%s 또는 %s 같은 주문이 한번 재충전될 때까지 남은 시간을 추적합니다."
+L["SPELLCOOLDOWN"] = "주문 재사용 대기시간"
+L["SPELLREACTIVITY"] = "주문 반응"
+L["SPELLTOCHECK"] = "확인할 주문"
 L["SPELLTOCOMP1"] = "비교할 첫번째 주문"
 L["SPELLTOCOMP2"] = "비교할 두번째 주문"
+L["STACKALPHA_DESC"] = [=[중첩 요구 사항이 실패할 때 아이콘이 표시할 불투명도를 설정합니다.
+
+다른 %s 설정때문에 아이콘이 이미 숨겨져 있으면 이 설정은 무시됩니다.]=]
+L["STACKS"] = "중첩"
+L["STACKSPANEL_TITLE2"] = "중첩 요구 사항"
 L["STANCE"] = "태세"
+L["STANCE_DESC"] = [=[세미콜론 (;)으로 구분하여 일치시킬 여러 태세를 입력할 수 있습니다.
+
+아무 태세라도 일치하면 조건은 만족합니다.]=]
+L["STANCE_LABEL"] = "태세"
 L["STRATA_BACKGROUND"] = "배경"
 L["STRATA_DIALOG"] = "대화상자"
 L["STRATA_FULLSCREEN"] = "전체화면"
@@ -2376,63 +3825,367 @@ L["STRATA_LOW"] = "낮음"
 L["STRATA_MEDIUM"] = "중간"
 L["STRATA_TOOLTIP"] = "툴팁"
 L["Stunned"] = "기절"
-L["SUG_DISPELTYPES"] = "해제 유형"
+L["SUG_BUFFEQUIVS"] = "강화 효과 동등성"
+L["SUG_CLASSSPELLS"] = "알려진 플레이어 직업/소환수 주문"
+L["SUG_DEBUFFEQUIVS"] = "약화 효과 동등성"
+L["SUG_DISPELTYPES"] = "무효화 유형"
+L["SUG_FINISHHIM"] = "캐싱 지금 종료"
+L["SUG_FINISHHIM_DESC"] = "|cff7fffff클릭하여|r 즉시 캐싱/필터링 처리 과정을 종료합니다. 당신의 컴퓨터가 몇 초동안 멈출 수 있습니다."
+L["SUG_FIRSTHELP_DESC"] = [=[추천 목록이 빠르게 설정할 수 있게 도와줍니다.
+
+|cff7fffff클릭|r 또는 |cff7fffff위/아래|r 화살표 키나 |cff7fffffTab|r 키를 사용하여 항목을 삽입하세요.
+
+이름을 원하면, 올바른 ID를 선택할 필요가 없습니다 - 단지 올바른 이름을 선택하세요.
+
+일반적으로, 이름으로 추적하는 게 제일 좋습니다. 같은 이름의 다른 것들이 겹칠때만 ID 사용이 필요합니다.
+
+이름을 입력하는 것처럼 똑같이 |cff7fffff오른쪽 클릭|r으로 ID를 삽입하세요.]=]
+L["SUG_INSERT_ANY"] = "|cff7fffff클릭|r"
+L["SUG_INSERT_LEFT"] = "|cff7fffff왼쪽 클릭|r"
+L["SUG_INSERT_RIGHT"] = "|cff7fffff오른쪽 클릭|r"
+L["SUG_INSERT_TAB"] = " 또는 |cff7fffffTab|r"
+L["SUG_INSERTEQUIV"] = "%s하여 동등성 삽입"
+L["SUG_INSERTERROR"] = "%s하여 오류 메시지 삽입"
+L["SUG_INSERTID"] = "%s하여 ID 삽입"
+L["SUG_INSERTITEMSLOT"] = "%s하여 아이템 칸 ID 삽입"
+L["SUG_INSERTNAME"] = "%s하여 이름 삽입"
+L["SUG_INSERTNAME_INTERFERE"] = [=[%s하여 이름으로 삽입
+
+|TInterface/AddOns/TellMeWhen/Textures/Alert:0:2|t|cffffa500주의: |TInterface/AddOns/TellMeWhen/Textures/Alert:0:2|t|cffff1111 이 주문은 동등성과 문제가 있습니다. 아마도 이름으로 삽입하면 추적할 수 없는 것 같습니다. 대신 ID를 삽입하세요.|r]=]
+L["SUG_INSERTTEXTSUB"] = "%s하여 태그 삽입"
+L["SUG_INSERTTUNITID"] = "%s하여 유닛ID 삽입"
 L["SUG_MISC"] = "기타"
+L["SUG_NPCAURAS"] = "알려진 NPC 강화 효과/약화 효과"
+L["SUG_OTHEREQUIVS"] = "기타 동등성"
 L["SUG_PATTERNMATCH_FISHINGLURE"] = "미끼 %(낚시 숙련도 %+%d+%)"
 L["SUG_PATTERNMATCH_SHARPENINGSTONE"] = "무기 연마 %(공격력 %+%d+%)"
 L["SUG_PATTERNMATCH_WEIGHTSTONE"] = "무게 증강 %(공격력 %+%d+%)"
-L["SUG_PLAYERSPELLS"] = "당신의 주문"
+L["SUG_PLAYERAURAS"] = "알려진 플레이어 직업/소환수 강화 효과/약화 효과"
+L["SUG_PLAYERSPELLS"] = "자신의 주문"
+L["SUG_TOOLTIPTITLE"] = [=[입력하는 동안 TellMeWhen은 캐시를 살펴보고 가장 가능성이 높은 주문을 결정합니다.
+
+주문은 아래 목록 별로 분류되고 색상화됩니다. "알려진" 단어로 시작하는 범주에는 다른 직업으로 플레이하거나 접속해서 확인하기 전까지 주문을 넣을 수 없습니다.
+
+항목을 클릭하면 편집상자에 삽입합니다.]=]
+L["SUG_TOOLTIPTITLE_GENERIC"] = [=[입력하는 동안 TellMeWhen은 캐시를 살펴보고 가장 가능성이 높은 주문을 결정합니다.
+
+이 목록은 항상 철저하지 않습니다 - 몇몇 상황에서 나타나지 않는 올바른 입력이 있을 수 있습니다. 추천 목록에 있는 항목을 사용하지 않아도 됩니다 - 편집상자에 올바른 문자만 입력하면 TellMeWhen은 문제없이 허용합니다.
+
+항목을 클릭하면 편집상자에 삽입합니다.]=]
+L["SUG_TOOLTIPTITLE_TEXTSUBS"] = [=[다음은 이 문자 디스플레이에서 사용할 수 있는 태그입니다. 대체자를 사용하면 적당한 데이터로 변환되어 표시됩니다.
+
+태그에 대한 자세한 정보와 더 많은 태그는 이 버튼을 클릭하세요.
+
+항목을 클릭하면 편집상자에 삽입합니다.]=]
+L["SUGGESTIONS"] = "추천:"
+L["SUGGESTIONS_DOGTAGS"] = "DogTags:"
+L["SUGGESTIONS_SORTING"] = "정렬 중..."
 L["SUN"] = "해"
-L["TEXTLAYOUTS_DEFAULTS_BAR2"] = "수직 바 레이아웃 1"
-L["Tier11Interrupts"] = "티어 11 차단 가능"
-L["Tier12Interrupts"] = "티어 12 차단가능"
+L["SWINGTIMER"] = "자동 공격 타이머"
+L["TABGROUP_GROUP_DESC"] = "TellMeWhen 그룹을 설정합니다."
+L["TABGROUP_ICON_DESC"] = "TellMeWhen 아이콘을 설정합니다."
+L["TABGROUP_MAIN_DESC"] = "일반 TellMeWhen 설정을 구성합니다."
+L["TEXTLAYOUTS"] = "문자 배치"
+L["TEXTLAYOUTS_ADDANCHOR"] = "고정 위치 추가"
+L["TEXTLAYOUTS_ADDANCHOR_DESC"] = "클릭하여 다른 문자 고정 위치를 추가합니다."
+L["TEXTLAYOUTS_ADDLAYOUT"] = "새로운 배치 만들기"
+L["TEXTLAYOUTS_ADDLAYOUT_DESC"] = "아이콘에 적용할 수 있는 새로운 문자 배치를 만듭니다."
+L["TEXTLAYOUTS_ADDSTRING"] = "문자 디스플레이 추가"
+L["TEXTLAYOUTS_ADDSTRING_DESC"] = "이 문자 배치에 새로운 문자 디스플레이를 추가합니다."
+L["TEXTLAYOUTS_BLANK"] = "(공란)"
+L["TEXTLAYOUTS_CHOOSELAYOUT"] = "배치 선택..."
+L["TEXTLAYOUTS_CHOOSELAYOUT_DESC"] = "이 아이콘에 사용할 문자 배치를 선택하세요."
+L["TEXTLAYOUTS_CLONELAYOUT"] = "배치 복제"
+L["TEXTLAYOUTS_CLONELAYOUT_DESC"] = "따로 편집할 수 있는 이 배치의 복사본을 만드려면 클릭하세요."
+L["TEXTLAYOUTS_DEFAULTS_BAR1"] = "바 배치 1"
+L["TEXTLAYOUTS_DEFAULTS_BAR2"] = "세로 바 배치 1"
+L["TEXTLAYOUTS_DEFAULTS_BINDINGLABEL"] = "단축/제목"
+L["TEXTLAYOUTS_DEFAULTS_CENTERNUMBER"] = "중앙 숫자"
+L["TEXTLAYOUTS_DEFAULTS_DURATION"] = "지속시간"
+L["TEXTLAYOUTS_DEFAULTS_ICON1"] = "아이콘 배치 1"
+L["TEXTLAYOUTS_DEFAULTS_NOLAYOUT"] = "<배치 없음>"
+L["TEXTLAYOUTS_DEFAULTS_NUMBER"] = "숫자"
+L["TEXTLAYOUTS_DEFAULTS_SPELL"] = "주문"
+L["TEXTLAYOUTS_DEFAULTS_STACKS"] = "중첩"
+L["TEXTLAYOUTS_DEFAULTS_WRAPPER"] = "|cff666666기본값:|r %s"
+L["TEXTLAYOUTS_DEFAULTTEXT"] = "기본 문자"
+L["TEXTLAYOUTS_DEFAULTTEXT_DESC"] = "이 문자 배치가 아이콘에 설정됐을 때 사용할 기본 문자를 편집합니다."
+L["TEXTLAYOUTS_DEGREES"] = "%d도"
+L["TEXTLAYOUTS_DELANCHOR"] = "고정 위치 삭제"
+L["TEXTLAYOUTS_DELANCHOR_DESC"] = "클릭하여 이 문자 고정 위치를 삭제합니다."
+L["TEXTLAYOUTS_DELETELAYOUT"] = "배치 삭제"
+L["TEXTLAYOUTS_DELETELAYOUT_CONFIRM_LISTING"] = "%s: ~%d개 아이콘"
+L["TEXTLAYOUTS_DELETELAYOUT_CONFIRM_NUM2"] = "|cFFFF2929다음 프로필은 아이콘에 이 배치를 사용합니다. 이 배치를 삭제하면, 기본 배치를 다시 사용합니다:|r"
+L["TEXTLAYOUTS_DELETELAYOUT_DESC2"] = "클릭하여 이 문자 배치를 삭제합니다."
+L["TEXTLAYOUTS_DELETESTRING"] = "문자 디스플레이 삭제"
+L["TEXTLAYOUTS_DELETESTRING_DESC2"] = "이 문자 배치에서 이 문자 디스플레이를 삭제합니다."
+L["TEXTLAYOUTS_DESC"] = "아무 아이콘에 적용할 수 있는 문자 배치를 정의합니다."
+L["TEXTLAYOUTS_ERR_ANCHOR_BADANCHOR"] = "이 문자 배치는 이 그룹의 표시 방법과 작동할 수 없습니다. 다른 문자 배치를 선택하세요. (누락된 고정 위치: %s)"
+L["TEXTLAYOUTS_ERR_ANCHOR_BADINDEX"] = "배치 오류: 문자 디스플레이 #%d|1이;가; 문자 디스플레이 #%d에 고정하려고 시도했지만 #%d|1은;는; 존재하지 않습니다, 따라서 문자 디스플레이 #%d|1은;는; 작동하지 않습니다."
+L["TEXTLAYOUTS_ERROR_FALLBACK"] = [=[이 아이콘을 위한 문자 배치를 찾을 수 없습니다. 의도한 배치를 찾을 수 있을 때까지, 또는 다른 배치를 선택할 때까지 기본 배치를 사용합니다.
+
+(배치를 삭제했나요? 아니면 아이콘이 사용하는 배치를 제외하고 이 아이콘을 가져오기 했나요?)]=]
+L["TEXTLAYOUTS_fLAYOUT"] = "문자 배치: %s"
+L["TEXTLAYOUTS_FONTSETTINGS"] = "글꼴 설정"
+L["TEXTLAYOUTS_fSTRING"] = "%s 디스플레이"
+L["TEXTLAYOUTS_fSTRING2"] = "%d 디스플레이: %s"
+L["TEXTLAYOUTS_fSTRING3"] = "문자 디스플레이: %s"
+L["TEXTLAYOUTS_HEADER_DISPLAY"] = "문자 디스플레이"
+L["TEXTLAYOUTS_HEADER_LAYOUT"] = "문자 배치"
+L["TEXTLAYOUTS_IMPORT"] = "문자 배치 가져오기"
+L["TEXTLAYOUTS_IMPORT_CREATENEW"] = "새로 |cff59ff59만들기|r"
+L["TEXTLAYOUTS_IMPORT_CREATENEW_DESC"] = [=[같은 고유 식별자를 가진 문자 배치가 이미 존재합니다.
+
+이 옵션을 선택하여 새로운 고유 식별자를 만들고 배치를 가져오세요.]=]
+L["TEXTLAYOUTS_IMPORT_NORMAL_DESC"] = "클릭하여 문자 배치를 가져옵니다."
+L["TEXTLAYOUTS_IMPORT_OVERWRITE"] = "존재하는 것 |cFFFF5959교체|r"
+L["TEXTLAYOUTS_IMPORT_OVERWRITE_DESC"] = [=[같은 고유 식별자를 가진 문자 배치가 이미 존재합니다.
+
+이 옵션을 선택하면 존재하는 문자 배치를 이 문자 배치로 덮어씁니다. 존재하는 배치에서 사용하는 모든 아이콘은 적절하게 업데이트됩니다.]=]
+L["TEXTLAYOUTS_IMPORT_OVERWRITE_DISABLED_DESC"] = "기본 문자 배치를 덮어쓸 수 없습니다."
+L["TEXTLAYOUTS_LAYOUT_SETDEFAULTS"] = "기본값으로 초기화"
+L["TEXTLAYOUTS_LAYOUT_SETDEFAULTS_DESC"] = "모든 디스플레이의 문자를 기본 문자로 초기화 합니다, 현재 문자 배치의 설정에서 설정합니다."
+L["TEXTLAYOUTS_LAYOUTDISPLAYS"] = [=[디스플레이:
+%s]=]
+L["TEXTLAYOUTS_LAYOUTSETTINGS"] = "배치 설정"
+L["TEXTLAYOUTS_LAYOUTSETTINGS_DESC"] = "문자 배치 %q|1을;를; 설정하려면 클릭하세요."
+L["TEXTLAYOUTS_NOEDIT_DESC"] = [=[이 문자 배치는 TellMeWhen 표준으로 제공되는 배치이며, 편집할 수 없습니다.
+
+
+편집하고 싶다면, 복제해주세요.]=]
+L["TEXTLAYOUTS_POINT2"] = "문자 지점"
+L["TEXTLAYOUTS_POINT2_DESC"] = "문자 디스플레이의 %s|1을;를; 고정 대상에 고정시킵니다."
+L["TEXTLAYOUTS_POSITIONSETTINGS"] = "위치 설정"
+L["TEXTLAYOUTS_RELATIVEPOINT2_DESC"] = "문자 디스플레이를 고정 대상의 %s에 고정시킵니다."
+L["TEXTLAYOUTS_RELATIVETO_DESC"] = "문자가 고정될 객체입니다"
+L["TEXTLAYOUTS_RENAME"] = "배치 이름 변경"
+L["TEXTLAYOUTS_RENAME_DESC"] = "이 배치의 이름을 쉽게 식별할 수 있게 목적에 맞는 이름으로 변경합니다."
+L["TEXTLAYOUTS_RENAMESTRING"] = "디스플레이 이름 변경"
+L["TEXTLAYOUTS_RENAMESTRING_DESC"] = "이 디스플레이의 이름을 쉽게 식별할 수 있게 목적에 맞는 이름으로 변경합니다."
+L["TEXTLAYOUTS_RESETSKINAS"] = "글꼴 문자열 %3$q의 새로운 설정과 충돌을 방지하기 위해 글꼴 문자열 %2$q의 %1$q 설정을 초기화했습니다."
+L["TEXTLAYOUTS_SETGROUPLAYOUT"] = "문자 배치"
+L["TEXTLAYOUTS_SETGROUPLAYOUT_DDVALUE"] = "배치 선택..."
+L["TEXTLAYOUTS_SETGROUPLAYOUT_DESC"] = [=[이 그룹의 모든 아이콘이 사용할 문자 배치를 설정합니다.
+
+문자 배치는 각 아이콘 설정에서 아이콘 별로 개별 설정할 수 있습니다.]=]
+L["TEXTLAYOUTS_SETTEXT"] = "문자 지정"
+L["TEXTLAYOUTS_SETTEXT_DESC"] = [=[이 문자 디스플레이에 사용할 문자를 설정합니다.
+
+정보의 유동적 표시를 허용하려면 문자는 DogTag 태그로 형식화되어야 합니다. '/dogtag' 또는 '/dt'를 입력하면 태그 사용법에 도움을 받을 수 있습니다.]=]
+L["TEXTLAYOUTS_SIZE_AUTO"] = "자동"
+L["TEXTLAYOUTS_SKINAS"] = "스킨 선택"
+L["TEXTLAYOUTS_SKINAS_COUNT"] = "중첩 문자"
+L["TEXTLAYOUTS_SKINAS_DESC"] = "이 문자에 스킨으로 입힐 Masque 요소를 선택하세요."
+L["TEXTLAYOUTS_SKINAS_HOTKEY"] = "단축키 문자"
+L["TEXTLAYOUTS_SKINAS_NONE"] = "없음"
+L["TEXTLAYOUTS_SKINAS_SKINNEDINFO"] = [=[이 문자 디스플레이는 Masque로 스킨을 입히도록 설정되었습니다.
+
+결과적으로, 이 배치를 Masque로 스킨을 입힌 TellMeWhen 아이콘에 사용하면 아래의 설정은 적용되지 않습니다.]=]
+L["TEXTLAYOUTS_STRING_COPYMENU"] = "복사하기"
+L["TEXTLAYOUTS_STRING_COPYMENU_DESC"] = "이 문자 디스플레이에 복사할 수 있는 이 프로필에 사용된 모든 문자의 목록을 열려면 클릭하세요."
+L["TEXTLAYOUTS_STRING_SETDEFAULT"] = "기본값으로 초기화"
+L["TEXTLAYOUTS_STRING_SETDEFAULT_DESC"] = [=[디스플레이의 문자를 다음 기본 문자로 초기화합니다, 현재 문자 배치의 설정은 다음을 지정합니다:
+
+%s]=]
+L["TEXTLAYOUTS_STRINGUSEDBY"] = "%d번 사용됨"
+L["TEXTLAYOUTS_TAB"] = "문자 디스플레이"
+L["TEXTLAYOUTS_UNNAMED"] = "<이름 없음>"
+L["TEXTLAYOUTS_USEDBY_HEADER"] = "다음 프로필은 이 배치를 사용합니다:"
+L["TEXTLAYOUTS_USEDBY_NONE"] = "이 배치는 TellMeWhen 프로필 중 어떤 것에도 사용되지 않습니다."
+L["TEXTMANIP"] = "문자 조작"
+L["Tier11Interrupts"] = "11단계 방해 가능"
+L["Tier12Interrupts"] = "12단계 방해 가능"
+L["TOOLTIPSCAN"] = "효과 변수"
+L["TOOLTIPSCAN_DESC"] = "이 조건 유형은 효과와 연관된 첫번째 변수를 확인하도록 허용합니다. 숫자는 블리자드 API로 제공되며 효과의 툴팁에서 찾은 숫자와 일치할 필요는 없습니다. 또한 효과에 대한 숫자를 얻을 수 있다는 보장이 없습니다. 그래도 실제로 대부분은 올바른 숫자가 확인됩니다."
 L["TOP"] = "상단"
 L["TOPLEFT"] = "좌측 상단"
 L["TOPRIGHT"] = "우측 상단"
-L["TOTEMS"] = "체크할 토템"
-L["TRUE"] = "True(참)"
-L["UIPANEL_BARTEXTURE"] = "바 텍스쳐"
-L["UIPANEL_COLUMNS"] = "행 개수"
+L["TOTEMS"] = "확인할 토템"
+L["TREEf"] = "트리: %s"
+L["TRUE"] = "True (참)"
+L["UIPANEL_ADDGROUP2"] = "새로운 %s 그룹"
+L["UIPANEL_ADDGROUP2_DESC"] = "|cff7fffff클릭|r하여 새로운 %s 그룹을 추가합니다."
+L["UIPANEL_ANCHORNUM"] = "고정 %d"
+L["UIPANEL_BAR_BORDERBAR"] = "바 테두리"
+L["UIPANEL_BAR_BORDERBAR_DESC"] = "바 주위의 테두리를 설정합니다."
+L["UIPANEL_BAR_BORDERCOLOR"] = "테두리 색상"
+L["UIPANEL_BAR_BORDERCOLOR_DESC"] = "아이콘과 바 테두리의 색상을 변경합니다."
+L["UIPANEL_BAR_BORDERICON"] = "아이콘 테두리"
+L["UIPANEL_BAR_BORDERICON_DESC"] = "무늬, 재사용 대기시간 나선, 다른 비슷한 요소 주위의 테두리를 설정합니다,"
+L["UIPANEL_BAR_FLIP"] = "아이콘 반대로"
+L["UIPANEL_BAR_FLIP_DESC"] = "무늬, 재사용 대기시간 나선, 다른 비슷한 요소들을 아이콘의 반대편에 놓습니다."
+L["UIPANEL_BAR_PADDING"] = "채우기"
+L["UIPANEL_BAR_PADDING_DESC"] = "아이콘과 바 사이의 간격을 설정합니다."
+L["UIPANEL_BAR_SHOWICON"] = "아이콘 표시"
+L["UIPANEL_BAR_SHOWICON_DESC"] = "이 설정을 비활성하면 무늬, 재사용 대기시간 나선, 다른 비슷한 구성요소를 숨깁니다."
+L["UIPANEL_BARTEXTURE"] = "바 무늬"
+L["UIPANEL_COLUMNS"] = "행"
+L["UIPANEL_COMBATCONFIG"] = "전투 중 설정 허용"
+L["UIPANEL_COMBATCONFIG_DESC"] = [=[전투 중에도 TellMeWhen을 설정할 수 있게 허용합니다.
+
+옵션 모듈을 항상 불러오도록 강제하며, 결과적으로 메모리 사용량이 늘어나고 로딩 시간이 길어집니다.
+
+계정 공유 옵션: 모든 프로필이 이 설정을 공유합니다.
+
+|cffff5959변경 사항은 |cff7fffffUI를 다시 불러온 후에 |cffff5959적용됩니다.|r]=]
 L["UIPANEL_DELGROUP"] = "이 그룹 삭제"
-L["UIPANEL_DRAWEDGE"] = "타이머 모서리 강조"
-L["UIPANEL_DRAWEDGE_DESC"] = "가시성을 높이기 위해 재사용 대기 타이머(시계 방향 애니메이션)의 모서리를 강조합니다."
-L["UIPANEL_EFFTHRESHOLD"] = "강화 효과 효력 한계치"
-L["UIPANEL_FONT_DESC"] = "아이콘의 중첩 횟수 문자에 사용될 글꼴을 선택하십시오."
+L["UIPANEL_DIMENSIONS"] = "치수"
+L["UIPANEL_DRAWEDGE"] = "타이머 가장자리 강조"
+L["UIPANEL_DRAWEDGE_DESC"] = "가시성을 높이기 위해 재사용 대기시간 타이머(시계 애니메이션)의 가장자리를 강조합니다."
+L["UIPANEL_EFFTHRESHOLD"] = "강화 효과 효율 한계치"
+L["UIPANEL_EFFTHRESHOLD_DESC"] = [=[강화 효과/약화 효과 아이콘이 확인하도록 설정한 강화 효과/약화 효과의 숫자에 기반해서 한계치를 설정합니다.
+
+이 한계치가 아이콘의 설정보다 높으면, 두가지 현상이 일어납니다:
+
+|cff7fffff1)|r 이 아이콘은 데이터의 값이 클수록 빠른 스캔 방법으로 전환합니다 (하지만 값이 작으면 느립니다).
+
+|cff7fffff2)|r 1번의 결과로, 스캔 순서는 설정에 입력된 순서 대신 유닛 프레임에 표시되는 강화 효과/약화 효과의 순서를 따릅니다.
+
+이 설정의 기본값은 15입니다.]=]
+L["UIPANEL_FONT_DESC"] = "아이콘의 중첩 문자에 사용될 글꼴을 선택하세요."
+L["UIPANEL_FONT_HEIGHT"] = "높이"
+L["UIPANEL_FONT_HEIGHT_DESC"] = [=[문자 디스플레이의 최대 높이를 설정합니다. 0으로 설정하면, 가능한 만큼 크게 확장됩니다.
+
+이 문자 디스플레이의 상단과 하단이 고정되면, 이 설정은 효과가 없습니다.]=]
+L["UIPANEL_FONT_JUSTIFY"] = "가로 정렬"
+L["UIPANEL_FONT_JUSTIFY_DESC"] = "이 문자 디스플레이에 가로 정렬 (왼쪽/가운데/오른쪽)을 설정합니다."
+L["UIPANEL_FONT_JUSTIFYV"] = "세로 정렬"
+L["UIPANEL_FONT_JUSTIFYV_DESC"] = "이 문자 디스플레이에 세로 정렬 (상단/중앙/하단)을 설정합니다."
 L["UIPANEL_FONT_OUTLINE"] = "글꼴 외곽선"
+L["UIPANEL_FONT_OUTLINE_DESC2"] = "문자 디스플레이의 외곽선 스타일을 설정합니다."
 L["UIPANEL_FONT_ROTATE"] = "회전"
+L["UIPANEL_FONT_ROTATE_DESC"] = [=[문자 디스플레이를 회전시킬 각도를 설정합니다.
+
+이 방법은 블리자드가 제공하지 않기 때문에, 이상하게 작동해도 해결할 방법이 없습니다.]=]
+L["UIPANEL_FONT_SHADOW"] = "그림자 위치"
+L["UIPANEL_FONT_SHADOW_DESC"] = "문자 뒤 편 그림자의 위치를 변경합니다. 0으로 설정하면 그림자를 비활성합니다."
 L["UIPANEL_FONT_SIZE"] = "글꼴 크기"
+L["UIPANEL_FONT_SIZE_DESC2"] = "글꼴의 크기를 변경합니다."
+L["UIPANEL_FONT_WIDTH"] = "너비"
+L["UIPANEL_FONT_WIDTH_DESC"] = [=[문자 디스플레이의 최대 너비를 설정합니다. 0으로 설정하면, 가능한 만큼 넓게 확장됩니다.
+
+이 문자 디스플레이의 좌측과 우측이 고정되면, 이 설정은 효과가 없습니다.]=]
 L["UIPANEL_FONT_XOFFS"] = "X 좌표"
+L["UIPANEL_FONT_XOFFS_DESC"] = "고정기의 x-축 좌표"
 L["UIPANEL_FONT_YOFFS"] = "Y 좌표"
+L["UIPANEL_FONT_YOFFS_DESC"] = "고정기의 y-축 좌표"
 L["UIPANEL_FONTFACE"] = "글꼴체"
-L["UIPANEL_FORCEDISABLEBLIZZ"] = "블리자드 재사용 대기시간 숫자 비활성화"
-L["UIPANEL_GROUP_QUICKSORT_DEFAULT"] = "ID로 정렬"
-L["UIPANEL_GROUP_QUICKSORT_DURATION"] = "지속 시간으로 정렬"
+L["UIPANEL_FORCEDISABLEBLIZZ"] = "블리자드 재사용 대기시간 문자 비활성화"
+L["UIPANEL_FORCEDISABLEBLIZZ_DESC"] = [=[블리자드의 내장 재사용 대기시간 타이머 문자를 강제로 비활성합니다.
+
+이 문자를 제공한다고 알려진 애드온을 설치하면 자동으로 비활성화됩니다.]=]
+L["UIPANEL_GLYPH"] = "문양 활성화"
+L["UIPANEL_GLYPH_DESC"] = "특정 문양이 활성화 상태인지 확인합니다."
+L["UIPANEL_GROUP_QUICKSORT_DEFAULT"] = "ID 별 정렬"
+L["UIPANEL_GROUP_QUICKSORT_DURATION"] = "지속시간 별 정렬"
+L["UIPANEL_GROUP_QUICKSORT_SHOWN"] = "표시된 아이콘 순"
+L["UIPANEL_GROUPALPHA"] = "그룹 불투명도"
+L["UIPANEL_GROUPALPHA_DESC"] = [=[모든 그룹의 불투명도를 설정합니다.
+
+이 설정은 아이콘의 기능에 영향을 주지 않습니다. 그룹과 그 아이콘의 모양만 변경합니다.
+
+기능을 유지하면서 모든 그룹을 숨기려면 0으로 설정하세요 (아이콘의 %q 설정과 유사).]=]
 L["UIPANEL_GROUPNAME"] = "그룹 이름 변경"
 L["UIPANEL_GROUPRESET"] = "위치 초기화"
 L["UIPANEL_GROUPS"] = "그룹"
+L["UIPANEL_GROUPS_DROPDOWN"] = "그룹 선택 또는 만들기..."
+L["UIPANEL_GROUPS_DROPDOWN_DESC"] = [=[설정할 다른 그룹을 불러오거나 새로운 그룹을 만들려면 이 메뉴를 사용하세요.
+
+화면의 아이콘을 |cff7fffff오른쪽-클릭|r하여 아이콘의 그룹을 불러올 수 있습니다.]=]
+L["UIPANEL_GROUPS_GLOBAL"] = "|cff00c300공통|r 그룹"
+L["UIPANEL_GROUPSORT"] = "아이콘 정렬"
+L["UIPANEL_GROUPSORT_ADD"] = "우선순위 추가"
+L["UIPANEL_GROUPSORT_ADD_DESC"] = "이 그룹에 새로운 아이콘 정렬 우선순위를 추가합니다."
+L["UIPANEL_GROUPSORT_ADD_NOMORE"] = "사용 가능한 우선순위 없음"
+L["UIPANEL_GROUPSORT_ALLDESC"] = [=[|cff7fffff클릭|r하여 이 정렬 우선순위의 순서를 변경합니다.
+|cff7fffff클릭하고 끌어서|r 재정렬 합니다.
+
+아래로 끌면 삭제합니다.]=]
+L["UIPANEL_GROUPSORT_alpha"] = "불투명도"
+L["UIPANEL_GROUPSORT_alpha_1"] = "낮은 불투명도 순"
+L["UIPANEL_GROUPSORT_alpha_-1"] = "높은 불투명도 순"
+L["UIPANEL_GROUPSORT_alpha_DESC"] = "아이콘의 불투명도로 그룹을 정렬합니다."
+L["UIPANEL_GROUPSORT_duration"] = "지속시간"
+L["UIPANEL_GROUPSORT_duration_1"] = "짧은 지속시간 순"
+L["UIPANEL_GROUPSORT_duration_-1"] = "긴 지속시간 순"
+L["UIPANEL_GROUPSORT_duration_DESC"] = "아이콘의 남은 지속시간으로 그룹을 정렬합니다."
+L["UIPANEL_GROUPSORT_fakehidden"] = "%s"
+L["UIPANEL_GROUPSORT_fakehidden_1"] = "항상 표시된 순"
+L["UIPANEL_GROUPSORT_fakehidden_-1"] = "항상 숨겨진 순"
+L["UIPANEL_GROUPSORT_fakehidden_DESC"] = "%q 설정의 상태에 따라 그룹을 정렬합니다."
+L["UIPANEL_GROUPSORT_id"] = "아이콘 ID"
+L["UIPANEL_GROUPSORT_id_1"] = "낮은 ID 순"
+L["UIPANEL_GROUPSORT_id_-1"] = "높은 ID 순"
+L["UIPANEL_GROUPSORT_id_DESC"] = "아이콘의 ID 숫자로 그룹을 정렬합니다."
+L["UIPANEL_GROUPSORT_PRESETS"] = "프리셋 선택..."
+L["UIPANEL_GROUPSORT_PRESETS_DESC"] = "정렬 우선순위 프리셋 목록에서 이 아이콘에 적용할 우선순위를 선택하세요."
+L["UIPANEL_GROUPSORT_shown"] = "표시"
+L["UIPANEL_GROUPSORT_shown_1"] = "숨겨진 아이콘 순"
+L["UIPANEL_GROUPSORT_shown_-1"] = "표시된 아이콘 순"
+L["UIPANEL_GROUPSORT_shown_DESC"] = "아이콘의 표시 여부로 그룹을 정렬합니다."
+L["UIPANEL_GROUPSORT_stacks"] = "중첩"
+L["UIPANEL_GROUPSORT_stacks_1"] = "낮은 중첩 순"
+L["UIPANEL_GROUPSORT_stacks_-1"] = "높은 중첩 순"
+L["UIPANEL_GROUPSORT_stacks_DESC"] = "각 아이콘의 중첩 별로 그룹을 정렬합니다."
+L["UIPANEL_GROUPSORT_value"] = "수치"
+L["UIPANEL_GROUPSORT_value_1"] = "낮은 수치 순"
+L["UIPANEL_GROUPSORT_value_-1"] = "높은 수치 순"
+L["UIPANEL_GROUPSORT_value_DESC"] = "진행 바 수치로 그룹을 정렬합니다. %s 아이콘 형식이 제공하는 값입니다."
+L["UIPANEL_GROUPSORT_valuep"] = "수치 백분율"
+L["UIPANEL_GROUPSORT_valuep_1"] = "낮은 % 수치 순"
+L["UIPANEL_GROUPSORT_valuep_-1"] = "높은 % 수치 순"
+L["UIPANEL_GROUPSORT_valuep_DESC"] = "진행 바 수치 백분율로 그룹을 정렬합니다. %s 아이콘 형식이 제공하는 값입니다."
+L["UIPANEL_GROUPTYPE"] = "표시 방법"
+L["UIPANEL_GROUPTYPE_BAR"] = "바"
+L["UIPANEL_GROUPTYPE_BAR_DESC"] = "진행 바가 붙여진 아이콘으로 그룹 안의 아이콘을 표시합니다."
 L["UIPANEL_GROUPTYPE_BARV"] = "수직 바"
+L["UIPANEL_GROUPTYPE_BARV_DESC"] = "세로 진행 바가 붙여진 아이콘으로 그룹 안의 아이콘을 표시합니다."
+L["UIPANEL_GROUPTYPE_ICON"] = "아이콘"
+L["UIPANEL_GROUPTYPE_ICON_DESC"] = "TellMeWhen의 고유 아이콘 표시 방법을 사용하여 그룹 안의 아이콘을 표시합니다."
+L["UIPANEL_HIDEBLIZZCDBLING"] = "블리자드 재사용 대기시간 종료 효과 비활성화"
+L["UIPANEL_HIDEBLIZZCDBLING_DESC"] = [=[타이머가 종료됐을 때 재사용 대기시간 범위에 블리자드의 진동 효과를 비활성합니다.
+
+이 효과는 6.2 패치에 블리자드에 의해 추가되었습니다.]=]
 L["UIPANEL_ICONS"] = "아이콘"
-L["UIPANEL_ICONSPACING"] = "아이콘 간격조절"
-L["UIPANEL_ICONSPACING_DESC"] = "그룹 내 아이콘 별 간격"
+L["UIPANEL_ICONSPACING"] = "아이콘 간격"
+L["UIPANEL_ICONSPACING_DESC"] = "그룹 내 각 아이콘 간의 간격입니다."
+L["UIPANEL_ICONSPACINGX"] = "가로"
+L["UIPANEL_ICONSPACINGY"] = "세로"
 L["UIPANEL_LEVEL"] = "프레임 레벨"
-L["UIPANEL_LOCK"] = "그룹 잠그기"
+L["UIPANEL_LEVEL_DESC"] = "프레임이 그려질 그룹의 우선순위 레벨입니다."
+L["UIPANEL_LOCK"] = "위치 잠그기"
+L["UIPANEL_LOCK_DESC"] = "이 그룹을 잠급니다, 이동 또는 그룹이나 크기 비율 탭을 끌어서 크기가 변경되지 않게 방지합니다."
 L["UIPANEL_LOCKUNLOCK"] = "애드온 잠금/잠금 해제"
 L["UIPANEL_MAINOPT"] = "주 옵션"
-L["UIPANEL_ONLYINCOMBAT"] = "전투시에만 보이기"
-L["UIPANEL_POINT"] = "포인트"
+L["UIPANEL_ONLYINCOMBAT"] = "전투 중에만 표시"
+L["UIPANEL_PERFORMANCE"] = "성능"
+L["UIPANEL_POINT"] = "그룹 지점"
+L["UIPANEL_POINT2_DESC"] = "그룹의 %s|1을;를; 고정 대상에 고정시킵니다."
 L["UIPANEL_POSITION"] = "위치"
 L["UIPANEL_PRIMARYSPEC"] = "주 특성 전문화"
-L["UIPANEL_PTSINTAL"] = "특성에서의 포인트"
+L["UIPANEL_PROFILES"] = "프로필"
+L["UIPANEL_PTSINTAL"] = "특성 포인트"
+L["UIPANEL_RELATIVEPOINT"] = "대상 지점"
+L["UIPANEL_RELATIVEPOINT2_DESC"] = "고정 대상의 %s|1으로;로; 그룹을 고정시킵니다."
+L["UIPANEL_RELATIVETO"] = "고정 대상"
+L["UIPANEL_RELATIVETO_DESC"] = "'/framestack'|1을;를; 입력하면 마우스가 올려진 모든 프레임의 목록과 이름을 포함하는 툴팁이 표시 전환되며, 이 대화 상자에 입력하세요."
+L["UIPANEL_RELATIVETO_DESC_GUIDINFO"] = "현재 값은 다른 그룹의 고유 식별자입니다. 고정시키기 옵션을 선택하고 이 그룹을 다른 그룹으로 오른쪽-클릭하고 끌면 설정됩니다."
+L["UIPANEL_ROLE_DESC"] = "자신의 현재 전문화가 이 역할을 수행할 때 이 그룹을 표시하도록 허용하려면 체크하세요."
 L["UIPANEL_ROWS"] = "열 개수"
-L["UIPANEL_SCALE"] = "크기비율"
+L["UIPANEL_SCALE"] = "크기 비율"
 L["UIPANEL_SECONDARYSPEC"] = "보조 특성 전문화"
 L["UIPANEL_SPEC"] = "이중 특성 전문화"
+L["UIPANEL_SPECIALIZATION"] = "특성 전문화"
+L["UIPANEL_SPECIALIZATIONROLE"] = "전문화 역할"
+L["UIPANEL_SPECIALIZATIONROLE_DESC"] = "자신의 현재 특성 전문화에 따른 역할 (탱커, 힐러, 또는 딜러)을 확인합니다."
 L["UIPANEL_STRATA"] = "프레임 계층"
-L["UIPANEL_SUBTEXT2"] = [=[잠겨 있는 경우에 아이콘이 작동합니다. 
+L["UIPANEL_STRATA_DESC"] = "그룹이 그려질 UI의 단면 층입니다."
+L["UIPANEL_SUBTEXT2"] = [=[잠겨 있을때만 아이콘이 작동합니다. 
 
-잠금이 해제된 경우에, 아이콘 그룹을 이동하거나 크기를 조절할 수 있으며 더 많은 설정을 위해서 각 아이콘을 개별적으로 우-클릭할 수 있습니다.
+잠금이 해제되면, 아이콘 그룹을 이동하거나 크기를 조절할 수 있으며 각 아이콘을 오른쪽 클릭하여 그것들을 설정할 수 있습니다.
 
 또한 잠금/잠금 해제하기 위해 /tellmewhen 또는 /tmw를 입력할 수 있습니다.]=]
+L["UIPANEL_TALENTLEARNED"] = "배운 특성"
 L["UIPANEL_TOOLTIP_COLUMNS"] = "이 그룹에서의 행 개수를 설정합니다."
 L["UIPANEL_TOOLTIP_GROUPRESET"] = "이 그룹의 위치와 크기 비율을 초기화합니다."
 L["UIPANEL_TOOLTIP_ONLYINCOMBAT"] = "체크하면 이 그룹은 전투 중에만 표시됩니다"
@@ -2440,11 +4193,33 @@ L["UIPANEL_TOOLTIP_ROWS"] = "이 그룹의 열 개수를 설정합니다."
 L["UIPANEL_TOOLTIP_UPDATEINTERVAL"] = [=[보이기/숨기기, 투명도, 조건 등을 위해 아이콘의 확인 빈도(초 단위)를 설정합니다.
 
 0 값은 가능한 가장 빠른 속도입니다. 낮은 값은 성능이 낮은 컴퓨터에 대해 프레임율에 상당한 영향을 미칠 수 있습니다.]=]
-L["UIPANEL_UPDATEINTERVAL"] = "업데이트 간격"
-L["UIPANEL_WARNINVALIDS"] = "개별적인 아이콘에 대해 경고"
+L["UIPANEL_TREE_DESC"] = "이 전문화가 활성화 중일 때 이 그룹을 표시하려면 체크하고, 비활성 중일 때 숨기려면 체크해제 하세요."
+L["UIPANEL_UPDATEINTERVAL"] = "갱신 주기"
+L["UIPANEL_WARNINVALIDS"] = "올바르지 않은 아이콘에 대해 경고"
 L["UNDO"] = "실행 취소"
+L["UNDO_DESC"] = "이 설정들의 마지막 변경점을 취소합니다."
+L["UNITCONDITIONS"] = "유닛 조건"
+L["UNITCONDITIONS_DESC"] = "확인하기 위해 개별 유닛이 통과해야할 조건의 세트를 설정하려면 클릭하세요."
+L["UNITCONDITIONS_STATICUNIT"] = "<아이콘 유닛>"
+L["UNITCONDITIONS_STATICUNIT_DESC"] = "아이콘이 확인 중인 개별 유닛을 확인하는 조건을 발생시킵니다."
+L["UNITCONDITIONS_STATICUNIT_TARGET"] = "<아이콘 유닛>의 대상"
+L["UNITCONDITIONS_STATICUNIT_TARGET_DESC"] = "아이콘이 확인 중인 개별 유닛의 대상을 확인하는 조건을 발생시킵니다."
+L["UNITCONDITIONS_TAB_DESC"] = "확인하기 위해 각 유닛이 통과해야할 조건을 설정합니다."
+L["UNITTWO"] = "두번째 유닛"
+L["UNKNOWN_GROUP"] = "<알 수 없는/사용할 수 없는 그룹>"
+L["UNKNOWN_ICON"] = "<알 수 없는/사용할 수 없는 아이콘>"
+L["UNKNOWN_UNKNOWN"] = "<알 수 없음 ???>"
+L["UNNAMED"] = "(이름 없음)"
+L["UP"] = "위로"
+L["VALIDITY_CONDITION_DESC"] = "조건의 대상: "
+L["VALIDITY_CONDITION2_DESC"] = "#%d 조건: "
+L["VALIDITY_ISINVALID"] = "올바르지 않습니다."
+L["VALIDITY_META_DESC"] = "#%d 아이콘이 메타 아이콘에 의해 확인됩니다"
+L["WARN_DRMISMATCH"] = [=[경고! 두개의 다르게 알려진 범주로 주문의 점감 효과를 확인하고 있습니다.
+
+아이콘이 정상 작동하려면 모든 주문은 같은 점감 효과 범주에 있어야 합니다. 다음 범주와 주문이 감지되었습니다:]=]
 L["WATER"] = "물"
-L["worldboss"] = "우두머리"
+L["worldboss"] = "야외 우두머리"
 elseif locale == "ptBR" then
 L["ABSORBAMT"] = "Quantidade de absorção do escudo"
 L["ABSORBAMT_DESC"] = "Verifique o total de absorção que o escudo de sua unidade teve."
@@ -3682,6 +5457,8 @@ L["CACHING"] = "TellMeWhen считывает и фильтрует все ум�
 L["CACHINGSPEED"] = "Умения/заклинания по названию:"
 L["CASTERFORM"] = "Может произносить заклинания"
 L["CENTER"] = "В центре"
+L["CHANGELOG"] = "Список изменений"
+L["CHANGELOG_DESC"] = "Отображает список изменений, внесенных в текущей и предыдущих версиях TellMeWhen."
 L["CHAT_FRAME"] = "Область чата"
 L["CHAT_MSG_CHANNEL"] = "Канал чата"
 L["CHAT_MSG_CHANNEL_DESC"] = "Отображает в виде сообщения в канале чата (например Торговля или любой другой к которому вы присоединены)"
@@ -4571,6 +6348,7 @@ L["!!Main Addon Description"] = "为冷却、增益/减益及其他各个方面�
 L["ABSORBAMT"] = "护盾吸收量"
 L["ABSORBAMT_DESC"] = "检测单位上的护盾的吸收总量."
 L["ACTIVE"] = "%d 作用中"
+L["ADDONSETTINGS_DESC"] = "配置所有通用插件的设置。"
 L["AIR"] = "空气图腾"
 L["ALLOWCOMM"] = "允许图标导入"
 L["ALLOWCOMM_DESC"] = "允许另一个TellMeWhen使用者给你发送数据."
@@ -4764,6 +6542,9 @@ L["CLEU_COMBATLOG_OBJECT_TYPE_PET"] = "单位类型:宠物"
 L["CLEU_COMBATLOG_OBJECT_TYPE_PET_DESC"] = "勾选以排除宠物. 宠物是指那些会保护操控者并且可以直接被控制的单位."
 L["CLEU_COMBATLOG_OBJECT_TYPE_PLAYER"] = "单位类型:玩家角色"
 L["CLEU_COMBATLOG_OBJECT_TYPE_PLAYER_DESC"] = "勾选以排除玩家角色."
+L["CLEU_CONDITIONS_DESC"] = [=[配置每个单元必须通过的条件，以便进行检查。
+
+这些条件仅在输入要检查的单位，并且所有输入的单位均为单位ID时可用 - 不能在这些条件下使用名称。]=]
 L["CLEU_CONDITIONS_DEST"] = "目标条件"
 L["CLEU_CONDITIONS_SOURCE"] = "来源条件"
 L["CLEU_DAMAGE_SHIELD"] = "伤害护盾"
@@ -4976,10 +6757,13 @@ L["COLOR_MSQ_COLOR_DESC"] = "勾选此项将使用Masque皮肤中设置的边框
 L["COLOR_MSQ_ONLY"] = "使用Masque边框颜色(仅边框)"
 L["COLOR_MSQ_ONLY_DESC"] = "勾选此项将仅对图标边框使用Masque皮肤中设置的边框颜色进行着色(假如你在皮肤设置中有使用边框的话).图标不会被着色."
 L["COLOR_OVERRIDE_GLOBAL"] = "覆盖全局颜色"
+L["COLOR_OVERRIDE_GLOBAL_DESC"] = "检查以配置独立于全局定义颜色的颜色。"
 L["COLOR_OVERRIDE_GROUP"] = "覆盖分组颜色"
+L["COLOR_OVERRIDE_GROUP_DESC"] = "检查以配置与为图标组指定的颜色无关的颜色。"
 L["COLORPICKER_BRIGHTNESS"] = "亮度"
 L["COLORPICKER_BRIGHTNESS_DESC"] = "设置颜色的亮度(有时也称为值)"
 L["COLORPICKER_DESATURATE"] = "减小饱和度"
+L["COLORPICKER_DESATURATE_DESC"] = "在应用颜色之前对纹理去饱和，允许您重新着色纹理，而不是着色。"
 L["COLORPICKER_HUE"] = "色度"
 L["COLORPICKER_HUE_DESC"] = "设置颜色的色度"
 L["COLORPICKER_ICON"] = "预览"
@@ -5133,7 +6917,11 @@ L["CONDITIONPANEL_LESSEQUAL"] = "小于或等于"
 L["CONDITIONPANEL_LEVEL"] = "单位等级"
 L["CONDITIONPANEL_LOC_CONTINENT"] = "大陆"
 L["CONDITIONPANEL_LOC_SUBZONE"] = "子地区"
+L["CONDITIONPANEL_LOC_SUBZONE_BOXDESC"] = "输入您要检查的子区域。 用分号分隔多个子区域。"
+L["CONDITIONPANEL_LOC_SUBZONE_DESC"] = "检查您当前的子区域。 请注意：有时，您可能不在子区域。"
+L["CONDITIONPANEL_LOC_SUBZONE_LABEL"] = "输入子区域进行检查"
 L["CONDITIONPANEL_LOC_ZONE"] = "地区"
+L["CONDITIONPANEL_LOC_ZONE_DESC"] = "输入您要检查的区域。 用分号分隔多个区域。"
 L["CONDITIONPANEL_LOC_ZONE_LABEL"] = "输入用于检测的区域"
 L["CONDITIONPANEL_MANAUSABLE"] = "法术可用(魔法值/能量/等是否够用.)"
 L["CONDITIONPANEL_MANAUSABLE_DESC"] = [=[如果一个法术的可用基于你的主要能量（法力、能量、怒气、符能、集中值等）。
@@ -5436,9 +7224,13 @@ L["GENERICTOTEM"] = "图腾 %d"
 L["GLOBAL_GROUP_GENERIC_DESC"] = "|cff00c300共用分组|r是指在你这个魔兽世界帐号中的TellMeWhen配置文件的所有角色都可共同使用的分组。"
 L["GLYPHTOCHECK"] = "要检测的雕文"
 L["GROUP"] = "分组"
+L["GROUP_UNAVAILABLE"] = "|TInterface/PaperDollInfoFrame/UI-GearManager-LeaveItem-Transparent:20|t 由于其过度限制的规范/角色设置，此组无法显示。"
 L["GROUPCONDITIONS"] = "分组条件"
 L["GROUPCONDITIONS_DESC"] = "设置条件进行微调,以便更好的显示这个分组."
 L["GROUPICON"] = "分组:%s ，图标:%s"
+L["GROUPSELECT_TOOLTIP"] = [=[|cff7fffff点击|r 来编辑。
+
+|cff7fffff点击拖拽|r 重新排序或更改域。]=]
 L["GROUPSETTINGS_DESC"] = "设置此分组。"
 L["GUIDCONFLICT_DESC_PART1"] = [=[TellMeWhen检测到下列的对象拥有相同的全局唯一标识符（GUID）。如果你从它们其中之一调用数据可能会发生料想不到问题（例如：将它们之中的一个加入到整合图标中）。
 
@@ -5538,6 +7330,7 @@ L["ICONMENU_ADDMETA"] = "添加到'整合图标'"
 L["ICONMENU_ALLOWGCD"] = "允许公共冷却"
 L["ICONMENU_ALLOWGCD_DESC"] = "勾选此项允许冷却时钟显示公共冷却,而不是忽略它."
 L["ICONMENU_ALLSPELLS"] = "所有法术技能可用"
+L["ICONMENU_ALLSPELLS_DESC"] = "当此图标正在跟踪的所有法术准备好在特定单位上时，此状态处于活动状态。"
 L["ICONMENU_ANCHORTO"] = "附着到 %s"
 L["ICONMENU_ANCHORTO_DESC"] = [=[附着%s到%s,无论%s如何移动,%s都会跟随它一起移动.
 
@@ -5549,6 +7342,7 @@ L["ICONMENU_ANCHORTO_UIPARENT_DESC"] = [=[让%s重新附着到你的屏幕(UIPar
 
 分组选项中有更为详细的附着设置.]=]
 L["ICONMENU_ANYSPELLS"] = "任意法术技能可用"
+L["ICONMENU_ANYSPELLS_DESC"] = "当被该图标跟踪的法术中的至少一个准备好在特定单元上时，该状态是活动的。"
 L["ICONMENU_APPENDCONDT"] = "添加到'图标显示'条件"
 L["ICONMENU_BAR_COLOR_BACKDROP"] = "背景颜色/透明度"
 L["ICONMENU_BAR_COLOR_BACKDROP_DESC"] = "设置计量条后的背景颜色和透明度。"
@@ -5635,6 +7429,7 @@ L["ICONMENU_CTRLGROUP_DESC"] = [=[启用此选项让这个图标控制整个分�
 
 当你需要快速定制分组的布局、样式或者排列选项，可以选择使用它控制分组。]=]
 L["ICONMENU_CTRLGROUP_UNAVAILABLE_DESC"] = "当前图标类型不能控制整个分组。"
+L["ICONMENU_CTRLGROUP_UNAVAILABLEID_DESC"] = "只有组中的第一个图标（图标ID 1）可以是组控制器。"
 L["ICONMENU_CUSTOMTEX"] = "自定义图标材质"
 L["ICONMENU_CUSTOMTEX_DESC"] = [=[你可以使用下列方法更改这个图标的显示材质：
 
@@ -5772,10 +7567,15 @@ L["ICONMENU_ONLYMINE"] = "仅检测自己施放的"
 L["ICONMENU_ONLYMINE_DESC"] = "勾选此项让该图标只显示你施放的增益或减益"
 L["ICONMENU_ONLYSEEN"] = "仅显示施放过的法术"
 L["ICONMENU_ONLYSEEN_ALL"] = "允许所有法术"
+L["ICONMENU_ONLYSEEN_ALL_DESC"] = "选中此项以允许为所有检查的单元显示所有功能。"
 L["ICONMENU_ONLYSEEN_CLASS"] = "仅单位职业法术、技能"
+L["ICONMENU_ONLYSEEN_CLASS_DESC"] = [=[选中此项，只有在已知该单元的类具有该能力时，才允许该图标显示能力。
+
+已知的类法术在建议列表中用蓝色或粉红色突出显示。]=]
 L["ICONMENU_ONLYSEEN_DESC"] = "选择此项可以让图标只显示某单位至少施放过一次的法术冷却.如果你想在同一个图标中检测来自不同职业的法术那么应该勾上它."
 L["ICONMENU_ONLYSEEN_HEADER"] = "法术筛选"
 L["ICONMENU_ONSUCCEED"] = "在通过时"
+L["ICONMENU_OO_F"] = "在 %s 之外"
 L["ICONMENU_OOPOWER"] = "没有能量"
 L["ICONMENU_OORANGE"] = "超出范围"
 L["ICONMENU_PETTARGET"] = "宠物的目标"
@@ -5867,6 +7667,12 @@ L["ICONMENU_SPLIT_NOCOMBAT_DESC"] = "战斗中不能创建新的分组。请在�
 L["ICONMENU_STACKS_MAX_DESC"] = "允许图标显示的最大叠加数量,高于此数值图标将被隐藏."
 L["ICONMENU_STACKS_MIN_DESC"] = "显示图标所需的最低叠加数量,低于此数值图标将被隐藏."
 L["ICONMENU_STATECOLOR"] = "图标色彩和材质"
+L["ICONMENU_STATECOLOR_DESC"] = [=[将图标纹理的色调设置为此图标状态。
+
+白色是正常的。 任何其他颜色会使纹理的颜色。
+
+在此状态下，还可以覆盖图标上显示的纹理。]=]
+L["ICONMENU_STATUE"] = "武僧雕像"
 L["ICONMENU_STEALABLE"] = "仅可法术吸取"
 L["ICONMENU_STEALABLE_DESC"] = "勾选此项仅显示能被“法术吸取”的增益，非常适合跟驱散类型中的魔法搭配使用。"
 L["ICONMENU_SUCCEED2"] = "条件通过"
@@ -5912,6 +7718,7 @@ L["ICONMENU_UNITS"] = "单位"
 L["ICONMENU_UNITSTOWATCH"] = "监视的单位"
 L["ICONMENU_UNITSUCCEED"] = "单位条件通过"
 L["ICONMENU_UNUSABLE"] = "不可用"
+L["ICONMENU_UNUSABLE_DESC"] = "当上述状态也不激活时，该状态是活动的。 不透明度为0％的状态将永远不会被激活。"
 L["ICONMENU_USABLE"] = "可用"
 L["ICONMENU_USEACTIVATIONOVERLAY"] = "检测激活边框"
 L["ICONMENU_USEACTIVATIONOVERLAY_DESC"] = "检测系统默认提示技能可用时的黄色发光边框."
@@ -6015,6 +7822,8 @@ L["ITEMTOCHECK"] = "要检测的物品"
 L["ITEMTOCOMP1"] = "进行比较的第一个物品"
 L["ITEMTOCOMP2"] = "进行比较的第二个物品"
 L["LAYOUTDIRECTION"] = "布局方向"
+L["LAYOUTDIRECTION_PRIMARY_DESC"] = "使图标的主要布局方向沿 %s 方向展开。"
+L["LAYOUTDIRECTION_SECONDARY_DESC"] = "使连续的行/列图标沿 %s 方向展开。"
 L["LDB_TOOLTIP1"] = "|cff7fffff左键点击|r 锁定或解锁分组"
 L["LDB_TOOLTIP2"] = "|cff7fffff右键点击|r 显示主选项"
 L["LEFT"] = "左"
@@ -6078,6 +7887,7 @@ L["METAPANEL_DOWN"] = "往下移动"
 L["METAPANEL_REMOVE"] = "移除此图标"
 L["METAPANEL_REMOVE_DESC"] = "点击从整合图标检测列表中移除该图标."
 L["METAPANEL_UP"] = "往上移动"
+L["minus"] = "仆从"
 L["MISCELLANEOUS"] = "其他"
 L["MiscHelpfulBuffs"] = "其他增益"
 L["MODTIMER_PATTERN"] = "允许Lua匹配模式"
@@ -6177,6 +7987,7 @@ L["rare"] = "稀有"
 L["rareelite"] = "稀有精英"
 L["REACTIVECNDT_DESC"] = "此条件仅检测技能的触发/激活情况,并非它的冷却."
 L["REDO"] = "恢复"
+L["REDO_DESC"] = "重做上次对这些设置所做的更改。"
 L["ReducedHealing"] = "治疗效果降低"
 L["REQFAILED_ALPHA"] = "无效时的不透明度"
 L["RESET_ICON"] = "重置"
@@ -6195,6 +8006,7 @@ L["Rooted"] = "被缠绕"
 L["RUNEOFPOWER"] = "符文%d"
 L["RUNES"] = "要检测的符文"
 L["RUNSPEED"] = "单位奔跑速度"
+L["RUNSPEED_DESC"] = "这是指单位的最大运行速度，而不管单位是否正在移动。"
 L["SAFESETUP_COMPLETE"] = "安全&慢速设置完成."
 L["SAFESETUP_FAILED"] = "安全&慢速设置失败:%s"
 L["SAFESETUP_TRIGGERED"] = "正在进行安全&慢速设置..."
@@ -6467,7 +8279,9 @@ L["TEXTLAYOUTS_NOEDIT_DESC"] = [=[这个文字显示样式是TellMeWhen默认的
 
 如果你想更改的话,请克隆一份此文字显示样式的副本.]=]
 L["TEXTLAYOUTS_POINT2"] = "文字位置"
+L["TEXTLAYOUTS_POINT2_DESC"] = "将 %s 的文本显示到锚定目标。"
 L["TEXTLAYOUTS_POSITIONSETTINGS"] = "位置设定"
+L["TEXTLAYOUTS_RELATIVEPOINT2_DESC"] = "将文本显示到 %s 的锚定目标。"
 L["TEXTLAYOUTS_RELATIVETO_DESC"] = "文字将依附的对象"
 L["TEXTLAYOUTS_RENAME"] = "重命名显示样式"
 L["TEXTLAYOUTS_RENAME_DESC"] = "为此文字显示样式修改一个与其用途相符的名称,让你可以轻松的找到它."
@@ -6489,6 +8303,9 @@ L["TEXTLAYOUTS_SKINAS_COUNT"] = "叠加数量"
 L["TEXTLAYOUTS_SKINAS_DESC"] = "选择你想让这些显示文字使用的Masque皮肤."
 L["TEXTLAYOUTS_SKINAS_HOTKEY"] = "绑定/标签"
 L["TEXTLAYOUTS_SKINAS_NONE"] = "无"
+L["TEXTLAYOUTS_SKINAS_SKINNEDINFO"] = [=[此文本显示皮肤由Masque设置。 
+
+因此，当此布局用于由Masque设置外观的TellMeWhen图标时，下面的设置不会有任何效果。]=]
 L["TEXTLAYOUTS_STRING_COPYMENU"] = "复制"
 L["TEXTLAYOUTS_STRING_COPYMENU_DESC"] = [=[点击打开一个此配置文件中所有的已使用显示文字列表,你可以将它们加入到这个文字显示方案中.
 ]=]
@@ -6520,8 +8337,13 @@ L["UIPANEL_BAR_BORDERBAR_DESC"] = "设置进度条边框."
 L["UIPANEL_BAR_BORDERCOLOR"] = "边框颜色"
 L["UIPANEL_BAR_BORDERCOLOR_DESC"] = "改变图标和进度条边框颜色."
 L["UIPANEL_BAR_BORDERICON"] = "图标边框"
+L["UIPANEL_BAR_BORDERICON_DESC"] = "在纹理，冷却扫描和其他类似组件周围设置边框。"
+L["UIPANEL_BAR_FLIP"] = "翻转图标"
+L["UIPANEL_BAR_FLIP_DESC"] = "将纹理，冷却扫描和其他类似的组件放置在图标的另一侧。"
+L["UIPANEL_BAR_PADDING"] = "填充"
 L["UIPANEL_BAR_PADDING_DESC"] = "设置图标和计时条间距."
 L["UIPANEL_BAR_SHOWICON"] = "显示图标"
+L["UIPANEL_BAR_SHOWICON_DESC"] = "禁用此设置可隐藏纹理，冷却扫描和其他类似组件。"
 L["UIPANEL_BARTEXTURE"] = "计量条材质"
 L["UIPANEL_COLUMNS"] = "列"
 L["UIPANEL_COMBATCONFIG"] = "允许在战斗中进行设置"
@@ -6533,6 +8355,7 @@ L["UIPANEL_COMBATCONFIG_DESC"] = [=[启用这个选项就可以在战斗中对Te
 
 |cff7fffff需要重新加载UI|cffff5959才能生效.|r]=]
 L["UIPANEL_DELGROUP"] = "删除该分组"
+L["UIPANEL_DIMENSIONS"] = "尺寸"
 L["UIPANEL_DRAWEDGE"] = "高亮计时器指针"
 L["UIPANEL_DRAWEDGE_DESC"] = "高亮冷却计时器的指针来改善可视性"
 L["UIPANEL_EFFTHRESHOLD"] = "增益效率閥值"
@@ -6582,11 +8405,18 @@ L["UIPANEL_GROUPNAME"] = "重命名此分组"
 L["UIPANEL_GROUPRESET"] = "重置位置"
 L["UIPANEL_GROUPS"] = "分组"
 L["UIPANEL_GROUPS_DROPDOWN"] = "选择/创建分组"
+L["UIPANEL_GROUPS_DROPDOWN_DESC"] = [=[使用此菜单加载要配置的其他组，或创建新组。
+
+您也可以|cff7fffff右键点击|r在屏幕上的图标加载该图标的组。]=]
 L["UIPANEL_GROUPS_GLOBAL"] = "|cff00c300共用|r分组"
 L["UIPANEL_GROUPSORT"] = "图标排列"
 L["UIPANEL_GROUPSORT_ADD"] = "增加优先级"
 L["UIPANEL_GROUPSORT_ADD_DESC"] = "为分组新增一个图标优先级排序."
 L["UIPANEL_GROUPSORT_ADD_NOMORE"] = "无可用优先级"
+L["UIPANEL_GROUPSORT_ALLDESC"] = [=[|cff7fffff点击|r更改此排序优先级的方向。
+|cff7fffff点击并拖动|r重新排列。
+
+拖动到底部删除。]=]
 L["UIPANEL_GROUPSORT_alpha"] = "不透明度"
 L["UIPANEL_GROUPSORT_alpha_1"] = "透明靠前"
 L["UIPANEL_GROUPSORT_alpha_-1"] = "不透明靠前"
@@ -6598,11 +8428,13 @@ L["UIPANEL_GROUPSORT_duration_DESC"] = "分组将根据图标剩余的持续时�
 L["UIPANEL_GROUPSORT_fakehidden"] = "%s"
 L["UIPANEL_GROUPSORT_fakehidden_1"] = "总是隐藏靠后"
 L["UIPANEL_GROUPSORT_fakehidden_-1"] = "总是隐藏靠前"
+L["UIPANEL_GROUPSORT_fakehidden_DESC"] = "按 %q 设置的状态对组进行排序。"
 L["UIPANEL_GROUPSORT_id"] = "图标ID"
 L["UIPANEL_GROUPSORT_id_1"] = "低IDs靠前"
 L["UIPANEL_GROUPSORT_id_-1"] = "高IDs靠前"
 L["UIPANEL_GROUPSORT_id_DESC"] = "分组将根据图标ID数字来排列."
 L["UIPANEL_GROUPSORT_PRESETS"] = "选择预设值..."
+L["UIPANEL_GROUPSORT_PRESETS_DESC"] = "从预设排序优先级列表中选择以应用于此图标。"
 L["UIPANEL_GROUPSORT_shown"] = "显示"
 L["UIPANEL_GROUPSORT_shown_1"] = "隐藏的图标靠前"
 L["UIPANEL_GROUPSORT_shown_-1"] = "显示的图标靠前"
@@ -6614,7 +8446,11 @@ L["UIPANEL_GROUPSORT_stacks_DESC"] = "分组将根据每个图标的叠加数量
 L["UIPANEL_GROUPSORT_value"] = "数值"
 L["UIPANEL_GROUPSORT_value_1"] = "低数值靠前"
 L["UIPANEL_GROUPSORT_value_-1"] = "高数值靠前"
+L["UIPANEL_GROUPSORT_value_DESC"] = "按进度条值对组进行排序。 这是 %s 图标类型提供的值。"
 L["UIPANEL_GROUPSORT_valuep"] = "百分比数值"
+L["UIPANEL_GROUPSORT_valuep_1"] = "低值％优先"
+L["UIPANEL_GROUPSORT_valuep_-1"] = "高值％优先"
+L["UIPANEL_GROUPSORT_valuep_DESC"] = "按进度条值百分比对组进行排序。 这是 %s 图标类型提供的值。"
 L["UIPANEL_GROUPTYPE"] = "分组显示方式"
 L["UIPANEL_GROUPTYPE_BAR"] = "计时条"
 L["UIPANEL_GROUPTYPE_BAR_DESC"] = "分组使用图标+进度条的方式来显示."
@@ -6632,6 +8468,7 @@ L["UIPANEL_ICONSPACING_DESC"] = "同组图标之间的间隔距离"
 L["UIPANEL_ICONSPACINGX"] = "图标横向间隔"
 L["UIPANEL_ICONSPACINGY"] = "图标纵向间隔"
 L["UIPANEL_LEVEL"] = "框体优先级"
+L["UIPANEL_LEVEL_DESC"] = "在组的层次内，应该绘制的等级。"
 L["UIPANEL_LOCK"] = "锁定位置"
 L["UIPANEL_LOCK_DESC"] = "锁定该组,禁止移动或改变比例."
 L["UIPANEL_LOCKUNLOCK"] = "锁定/解锁插件"
@@ -6639,11 +8476,13 @@ L["UIPANEL_MAINOPT"] = "主选项"
 L["UIPANEL_ONLYINCOMBAT"] = "仅在战斗中显示"
 L["UIPANEL_PERFORMANCE"] = "性能"
 L["UIPANEL_POINT"] = "附着点"
+L["UIPANEL_POINT2_DESC"] = "将组的 %s 锚定到锚定目标。"
 L["UIPANEL_POSITION"] = "位置"
 L["UIPANEL_PRIMARYSPEC"] = "主天赋"
 L["UIPANEL_PROFILES"] = "配置文件"
 L["UIPANEL_PTSINTAL"] = "天赋使用点数(非天赋树)"
 L["UIPANEL_RELATIVEPOINT"] = "附着位置"
+L["UIPANEL_RELATIVEPOINT2_DESC"] = "将组锚到 %s 的锚定目标的。"
 L["UIPANEL_RELATIVETO"] = "附着框体"
 L["UIPANEL_RELATIVETO_DESC"] = [=[输入'/framestack'来观察当前鼠标指针所在框体的提示信息,以便寻找需要输入文本框的框体名称.
 
@@ -6658,6 +8497,7 @@ L["UIPANEL_SPECIALIZATION"] = "天赋类型"
 L["UIPANEL_SPECIALIZATIONROLE"] = "专精职责"
 L["UIPANEL_SPECIALIZATIONROLE_DESC"] = "检测你当前专精所能满足的职责（坦克，治疗，伤害输出）。"
 L["UIPANEL_STRATA"] = "框体层级"
+L["UIPANEL_STRATA_DESC"] = "应该绘制组的UI的层。"
 L["UIPANEL_SUBTEXT2"] = [=[图标在锁定后开始工作.
 在解除锁定时,你可以移动图标分组(或更改大小),右键点击图标打开设置页面.
 

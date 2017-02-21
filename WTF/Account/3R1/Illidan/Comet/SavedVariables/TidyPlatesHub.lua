@@ -536,14 +536,14 @@ TidyPlatesHubSettings = {
 		["ThreatGlowEnable"] = true,
 		["ScaleStandard"] = 0.75,
 		["WidgetAuraTrackDispelFriendly"] = false,
-		["ScaleIgnoreInactive"] = false,
-		["FriendlyAlphaSpotlightMode"] = 1,
 		["ColorFriendlyPlayer"] = {
 			["a"] = 0.999997794628143,
 			["r"] = 0,
 			["g"] = 0,
 			["b"] = 0.999997794628143,
 		},
+		["FriendlyAlphaSpotlightMode"] = 1,
+		["ScaleIgnoreInactive"] = false,
 		["ColorLowHealth"] = {
 			["a"] = 0.999997794628143,
 			["r"] = 0.999997794628143,

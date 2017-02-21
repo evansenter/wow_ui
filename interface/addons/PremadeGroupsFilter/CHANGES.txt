@@ -1,0 +1,40 @@
+lightweight tag 25fbfb00f25fc38b2c05b6170c8d981fd4581c6b 1.7
+Author:	Bernhard Saumweber <b.saumweber@gmail.com>
+Date:	Sun Feb 12 18:00:02 2017 +0100
+
+commit 25fbfb00f25fc38b2c05b6170c8d981fd4581c6b
+Author: Bernhard Saumweber <b.saumweber@gmail.com>
+Date:   Sun Feb 12 18:00:02 2017 +0100
+
+    Fixed a tiny issue when closing the dropdown popup using the ESC key.
+
+commit 7ab39550409a07d7bc900e163801e9432fd02f53
+Author: Bernhard Saumweber <b.saumweber@gmail.com>
+Date:   Sun Feb 12 17:57:22 2017 +0100
+
+    Fixed a bug that caused a lua error when closing the PGF window without using the difficulty dropdown.
+
+commit 74a96369c0faf606be6b53789b54ba18c44a0719
+Author: Bernhard Saumweber <b.saumweber@gmail.com>
+Date:   Sun Feb 12 17:52:50 2017 +0100
+
+    Removed class/role information from tooltips that already show this information.
+
+commit e51c6136dfa00a5695101c0fcda78b9167229f78
+Author: Bernhard Saumweber <b.saumweber@gmail.com>
+Date:   Sun Feb 12 17:34:14 2017 +0100
+
+    Replaced the dropdown menu with a custom implementation to avoid random taints.
+
+commit 8af4252e17b00ef621bdf2320acc90b32dab422d
+Author: Bernhard Saumweber <b.saumweber@gmail.com>
+Date:   Fri Feb 10 09:32:14 2017 +0100
+
+    Fixed placement of PGF filter checkbox when there is no language filter button.
+
+commit ad857e3d20f969771ae66551adf1a20ba74f88ed
+Author: Bernhard Saumweber <b.saumweber@gmail.com>
+Date:   Fri Feb 10 09:31:25 2017 +0100
+
+    Set version to next release version: 1.7
+

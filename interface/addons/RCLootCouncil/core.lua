@@ -5,7 +5,7 @@ core.lua	Contains core elements of the addon
 TODOs/Notes
 	Things marked with "todo"
 		- IDEA add an observer/council string to show players their role?
-		- The 4'th cell in @line81 in versionCheck should not be static
+		- Item subtype in history exports
 --------------------------------
 CHANGELOG
 	-- SEE CHANGELOG.TXT
@@ -45,7 +45,7 @@ local lootTable = {}
 function RCLootCouncil:OnInitialize()
 	--IDEA Consider if we want everything on self, or just whatever modules could need.
   	self.version = GetAddOnMetadata("RCLootCouncil", "Version")
-	self.nnp = false
+	self.nnp = false 
 	self.debug = false
 	self.tVersion = nil -- String or nil. Indicates test version, which alters stuff like version check. Is appended to 'version', i.e. "version-tVersion" (max 10 letters for stupid security)
 
@@ -236,6 +236,7 @@ function RCLootCouncil:OnInitialize()
 				124442, -- Chaos Crystal (Legion)
 				124441, -- Leylight Shard (Legion)
 				141303,141304,141305, -- Essence of Clarity (Emerald Nightmare quest item)
+				143656,143657,143658, -- Echo of Time (Nighthold quest item)
 			},
 		},
 	} -- defaults end
@@ -1370,7 +1371,7 @@ function RCLootCouncil:DecodeItemLink(itemLink)
 	 upgradeTypeID, instanceDifficultyID, numBonuses, affixes = string.split(":", itemLink, 15)
 
 	 -- clean it up
-    local color = string.match(linkType, "^c?f?f?(%x*)")
+    local color = string.match(linkType, "|?c?f?f?(%x*)")
     linkType = string.gsub(linkType, "|?c?f?f?(%x*)|?H?", "")
     itemID = tonumber(itemID) or 0
     enchantID = tonumber(enchantID) or 0
@@ -1400,7 +1401,7 @@ function RCLootCouncil:DecodeItemLink(itemLink)
 	    upgradeID = tonumber(upgradeID) or 0
 	 end
 
-    return color, itemType, itemID, enchantID, gemID1, gemID2, gemID3, gemID4, suffixID, uniqueID, linkLevel,
+    return color, linktype, itemID, enchantID, gemID1, gemID2, gemID3, gemID4, suffixID, uniqueID, linkLevel,
 	 		specializationID, upgradeTypeID, upgradeID, instanceDifficultyID, numBonuses, bonusIDs
 end
 

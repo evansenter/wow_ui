@@ -417,12 +417,12 @@ function OiLvlPlayer_Update(sw)
 			if IsInRaid() then
 				for i=1,40 do
 					if GetRaidRosterInfo(i) == UnitName("player") then
-						oilvlSetABCD("player","OILVLRAIDFRAME"..i,"player",i)
+						oilvlSetABCD(i)
 						break
 					end
 				end	
 			else
-				oilvlSetABCD("player","OILVLRAIDFRAME1","player",1)
+				oilvlSetABCD(1)
 			end
 		end
 	else

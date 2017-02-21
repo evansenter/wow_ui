@@ -69,7 +69,7 @@ L:SetWarningLocalization({
 })
 
 L:SetOptionLocalization({
-	warnStarLow				= "Show special warning when Plasma Sphere is low (at ~15%)"
+	warnStarLow				= "Show special warning when Plasma Sphere is low (at ~25%)"
 })
 
 L:SetMiscLocalization({
@@ -82,7 +82,7 @@ L:SetMiscLocalization({
 L= DBM:GetModLocalization(1732)
 
 L:SetOptionLocalization({
-	ShowCustomNPAuraTexture	= "Show custom green/red icon textures in nameplates instead of debuff signs if you are affected by star signs",
+	ShowCustomNPAuraTextures= "Show custom green/red icon textures in nameplates instead of debuff signs if you are affected by star signs",
 	FilterOtherSigns		= "Filter target announces for Star Signs you are not affected by."
 })
 
@@ -119,3 +119,8 @@ L = DBM:GetModLocalization("NightholdTrash")
 L:SetGeneralLocalization({
 	name =	"Nighthold Trash"
 })
+
+L:SetMiscLocalization({
+	mythicPhase3		= "Time to return the demon hunter's soul to his body... and deny the Legion's master a host!"
+})
+

@@ -187,7 +187,6 @@ local omover2=0;
 local OTCurrent=""; -- current raid frame
 local OTCurrent2=""; -- current unit id
 local OTCurrent3=""; -- current raid frame number
-local ountrack=true;
 local ail=0; -- average item level
 local ailtank=0;
 local aildps=0;
@@ -538,7 +537,6 @@ function oilvl(unit)
 			OTCurrent = "";
 			OTCurrent2 = "";
 			OTCurrent3 = "";
-			ountrack=true;			
 		end
 	end
 end
@@ -724,9 +722,8 @@ function oilvlcheckunknown()
 end
 
 function OILVLCheckUpdate()
-	if (not UnitAffectingCombat("player") or cfg.oilvlcombatcanscan) and OILVL_Unit == "" and oilvlframesw then
+	if (not UnitAffectingCombat("player") or cfg.oilvlcombatcanscan) and oilvlframesw then
 		oilvlcheckunknown();
-		ountrack=false; -- don run OILVLCheckUpdate()
 		for i = 1, 40 do
 			if not _G["OILVLRAIDFRAME"..i] then break; end
 			if not _G["OILVLRAIDFRAME"..i]:IsShown() then
@@ -760,7 +757,6 @@ function OVILRefresh()
 if (not UnitAffectingCombat("player") or cfg.oilvlcombatcanscan)  and oilvlframesw then
 	local i=0;
 	local rnum=0;
-	ountrack=true;
 	OTCurrent=""; -- current raid frame
 	OTCurrent2=""; -- current unit id
 	OTCurrent3=""; -- current raid frame number
@@ -955,7 +951,6 @@ if (not UnitAffectingCombat("player") or cfg.oilvlcombatcanscan)  and oilvlframe
 		OilvlSetMouseoverTooltips(OILVLRAIDFRAME1, "player");
 	end
 end
-	ountrack=true;
 	OTCurrent=""; -- current raid frame
 	OTCurrent2=""; -- current unit id
 	OTCurrent3=""; -- current raid frame number
@@ -985,7 +980,6 @@ function OilvlCheckFrame()
 			_G["Oilvltier"..i]:SetText("")
 			_G["OilvlUpgrade"..i]:SetText("")
 		end
-		ountrack=true;
 		OTCurrent=""; -- current raid frame
 		OTCurrent2=""; -- current unit id
 		OTCurrent3=""; -- current raid frame number
@@ -1275,7 +1269,7 @@ function OilvlCheckFrame()
 			OilvlUpgrade1:SetText(oilvlCheckUpgrade(1))
 		end	
 	end
-	ountrack=true; OTCurrent=""; OTCurrent2=""; OTCurrent3="";
+	OTCurrent=""; OTCurrent2=""; OTCurrent3="";
 end
 
 function OilvlRPDTimeCheck()
@@ -1287,7 +1281,6 @@ function OilvlRPDTimeCheck()
 	end
 end
 
-local ountracksw=0;
 function oilvlcheckrange()
 	if (not UnitAffectingCombat("player") or cfg.oilvlcombatcanscan) and oilvlframesw then
 		local i=0;
@@ -1307,7 +1300,7 @@ function oilvlcheckrange()
 				if not CheckInteractDistance("raid"..i, 1) then
 					if OTCurrent2 == "raid"..i then
 						miacount=0;	miaunit[1]="";miaunit[2]="";miaunit[3]="";miaunit[4]="";miaunit[5]="";miaunit[6]="";
-						ountrack=true; OTCurrent=""; OTCurrent2=""; OTCurrent3=""; OILVL_Unit="";
+						OTCurrent=""; OTCurrent2=""; OTCurrent3=""; OILVL_Unit="";
 					end
 					local ntex4 = _G["OILVLRAIDFRAME"..i]:CreateTexture()
 					ntex4:SetColorTexture(0,0,0,1)
@@ -1353,7 +1346,7 @@ function oilvlcheckrange()
 				if not CheckInteractDistance("party"..i, 1) then 
 					if OTCurrent2 == "party"..i then
 						miacount=0;	miaunit[1]="";miaunit[2]="";miaunit[3]="";miaunit[4]="";miaunit[5]="";miaunit[6]="";
-						ountrack=true; OTCurrent=""; OTCurrent2=""; OTCurrent3=""; OILVL_Unit="";
+						OTCurrent=""; OTCurrent2=""; OTCurrent3=""; OILVL_Unit="";
 					end
 					local ntex4 = _G["OILVLRAIDFRAME"..(i+1)]:CreateTexture()
 					ntex4:SetColorTexture(0,0,0,1)
@@ -1400,7 +1393,7 @@ function oilvlcheckrange()
 				if not CheckInteractDistance("party"..i, 1) then 
 					if OTCurrent2 == "party"..i then
 						miacount=0;	miaunit[1]="";miaunit[2]="";miaunit[3]="";miaunit[4]="";miaunit[5]="";miaunit[6]="";
-						ountrack=true; OTCurrent=""; OTCurrent2=""; OTCurrent3=""; OILVL_Unit="";
+						OTCurrent=""; OTCurrent2=""; OTCurrent3=""; OILVL_Unit="";
 					end
 					local ntex4 = _G["OILVLRAIDFRAME"..(i+1)]:CreateTexture()
 					ntex4:SetColorTexture(0,0,0,1)
@@ -1448,7 +1441,7 @@ function oilvlcheckrange()
 			htex4:SetAllPoints()
 			_G[OTCurrent]:SetNormalTexture(htex4)	
 		end
-		if ountrack and (not UnitAffectingCombat("player") or cfg.oilvlcombatcanscan) and not (InspectFrame and InspectFrame:IsShown()) then
+		if (not UnitAffectingCombat("player") or cfg.oilvlcombatcanscan) and not (InspectFrame and InspectFrame:IsShown()) then
 			OILVLCheckUpdate()
 		end
 		-- Calculate Average Item Level
@@ -1551,16 +1544,11 @@ function oilvlcheckrange()
 		-- Optimize Raid Progression Details
 		if otooltip2 then return -1 end
 		local oframe = GetMouseFocus();
-		ountracksw = ountracksw + 1;
 		local function resetrpd()
 			ClearAchievementComparisonUnit();
 			rpsw=false;
 			rpunit="";
 			Omover2=0;
-			if ountracksw % 2 == 0 then
-				ountrack=true;
-				ountracksw = 0
-			end
 		end
 		
 		if oframe == nil then resetrpd() return -1 end
@@ -5150,11 +5138,8 @@ function oilvlUpdateLDBTooltip()
 	end						
 end
 
-function oilvlSetABCD(a,b,c,d)
-	OILVL_Unit=a
-	OTCurrent=b; -- current raid frame
-	OTCurrent2=c; -- current unit id
-	OTCurrent3=d; -- current raid frame number
+function oilvlSetABCD(i)
+	oilvlframedata.ilvl[i][1] = ""
 end
 
 function oilvlSaveItemLevel(n)
@@ -5198,7 +5183,6 @@ function oilvlSaveItemLevel(n)
 				OTCurrent = "";
 				OTCurrent2 = "";
 				OTCurrent3 = "";
-				ountrack=true;
 				OILVL_Unit="";	
 			else
 				if OTmia < 3 and OTmia > 0 then
@@ -5218,7 +5202,6 @@ function oilvlSaveItemLevel(n)
 						OTCurrent = "";
 						OTCurrent2 = "";
 						OTCurrent3 = "";
-						ountrack=true;						
 					end
 				end
 			end
@@ -5233,7 +5216,6 @@ function oilvlSaveItemLevel(n)
 			OTCurrent = "";
 			OTCurrent2 = "";
 			OTCurrent3 = "";
-			ountrack=true;
 		end	
 	end
 	if n > 0 then OILVL:UnregisterEvent("INSPECT_READY") end
@@ -5243,6 +5225,9 @@ local events = {}
 
 function events:INSPECT_READY(...)
 	oilvlSaveItemLevel(0)
+	C_Timer.After(0.5,function() oilvlSaveItemLevel(0) end)
+	C_Timer.After(1,function() oilvlSaveItemLevel(0) end)
+	C_Timer.After(1.5,function() oilvlSaveItemLevel(0) end)
 	C_Timer.After(2,function() oilvlSaveItemLevel(1) end)
 	-- GameTooltip		
 	if (Omover ==1) and cfg.oilvlms then
@@ -5550,7 +5535,6 @@ function events:PLAYER_REGEN_DISABLED(...)
 		OTCurrent = "";
 		OTCurrent2 = "";
 		OTCurrent3 = "";
-		ountrack=true;	
 	end
 end
 
@@ -5584,7 +5568,6 @@ function events:PLAYER_REGEN_ENABLED(...)
 		OTCurrent = "";
 		OTCurrent2 = "";
 		OTCurrent3 = "";
-		ountrack=true;
 	end
 end	
 
@@ -6294,7 +6277,6 @@ SlashCmdList["OILVL_OIBI"] = function(msg)
 	end
 end
 
-
 -- check who roll the gear
 ChatFrame_AddMessageEventFilter("CHAT_MSG_SYSTEM", function(frame, event, message)
 	-- Thank for eglohpri's help.
@@ -6375,3 +6357,7 @@ local function SystemSpamFilter(frame, event, message)
     return false
 end
 ChatFrame_AddMessageEventFilter("CHAT_MSG_SYSTEM", SystemSpamFilter)
+
+function oilvlfakeaotc(id,month,day,year)
+	print(GetAchievementLink(id):gsub("0:0:0:%-1","1:"..month..":"..day..":"..year).."")
+end

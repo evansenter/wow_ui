@@ -39,6 +39,10 @@ When PLH becomes disabled, set isAnnouncer to false
 	
 Changelog
 
+20170218 - 1.20
+	Added check to see if a character is a high enough level to equip an item that drops (to fix recommendations in holiday and TW dungeons)
+		note:  added check in IsEquippableItemForCharacter
+
 20170126 - 1.19
 	Resolved "script ran too long" error
 		note:  Reduced calls to PLH_GetRelicType() in IsAnUpgradeForCharacter()
@@ -1168,19 +1172,28 @@ local function IsEquippableItemForCharacter(item, characterName)
 	local isEquippableForOffspec = false
 	if item ~= nil and characterName ~= nil then
 		if IsEquippableItem(item) or IsRelic(item) then
-			local _, _, _, _, _, _, _, _, itemEquipLoc, _, _, itemClass, itemSubclass = GetItemInfo(item)
+			local _, _, _, _, requiredLevel, _, _, _, itemEquipLoc, _, _, itemClass, itemSubclass = GetItemInfo(item)
 			local class
 			local spec
+			local characterLevel
 			if characterName == PLH_GetUnitNameWithRealm('player') then
 				_, class = UnitClass('player')
 				spec = GetSpecializationInfo(GetSpecialization())
+				characterLevel = UnitLevel('player')
 			elseif groupInfoCache[characterName] ~= nil then
 				class = groupInfoCache[characterName]['ClassName']
 				spec = groupInfoCache[characterName]['Spec']
+				characterLevel = groupInfoCache[characterName]['Level']
 			else
 				PLH_SendDebugMessage('Unable to determine class and spec in InEquippableItemForCharacter()!!!!')
 				return false  -- should never reach here, but if we do it means we're not looking up the player or anyone in cache
 			end
+			
+			-- check if character is a high enough level to equip the item
+			if requiredLevel > characterLevel then
+				return false
+			end
+			
 			local isRelic = IsRelic(item)
 			isEquippableForClass = itemEquipLoc == 'INVTYPE_CLOAK' -- cloaks show up as type=armor, subtype=cloth, but they're equippable by all, so set to true if cloak
 			local i = 1
