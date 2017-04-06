@@ -163,7 +163,7 @@ DBM_CORE_UPDATEREMINDER_HEADER			= "Your version of Deadly Boss Mods is out-of-d
 DBM_CORE_UPDATEREMINDER_HEADER_ALPHA	= "Your ALPHA version of Deadly Boss Mods is out-of-date.\n You are at least %d test versions behind. It is recommended that DBM users that choose ALPHA versions run the latest ALPHA. Otherwise, they should run latest RELEASE version. Out of date ALPHAs have a stricter version check because they are development versions of DBM."
 DBM_CORE_UPDATEREMINDER_FOOTER			= "Press " .. (IsMacClient() and "Cmd-C" or "Ctrl-C")  ..  " to copy the download link to your clipboard."
 DBM_CORE_UPDATEREMINDER_FOOTER_GENERIC	= "Press " .. (IsMacClient() and "Cmd-C" or "Ctrl-C")  ..  " to copy the link to your clipboard."
-DBM_CORE_UPDATEREMINDER_DISABLE			= "WARNING: Do to your Deadly Boss Mods being too out of date, it has been force disabled and cannot be enabled until updated. This is to ensure old and incompatible code doesn't cause poor play experience for yourself or fellow raid members."
+DBM_CORE_UPDATEREMINDER_DISABLE			= "WARNING: Do to your Deadly Boss Mods being too out of date, it has been force disabled and cannot used until updated. This is to ensure old and incompatible code doesn't cause poor play experience for yourself or fellow raid members."
 DBM_CORE_UPDATEREMINDER_HOTFIX			= "DBM version you are on has known issues during this boss encounter that are corrected if you update to latest release"
 DBM_CORE_UPDATEREMINDER_HOTFIX_ALPHA	= "DBM version you are on has known issues during this boss encounter that are corrected in an upcoming release (or latest alpha version)"
 DBM_CORE_UPDATEREMINDER_MAJORPATCH		= "WARNING: Do to your Deadly Boss Mods being out of date, DBM has been disabled until updated, since this is a major game patch. This is to ensure old and incompatible code doesn't cause poor play experience for yourself or fellow group members. Make sure you download a newer version from deadlybossmods.com or curse as soon as possible."
@@ -245,6 +245,8 @@ DBM_ERROR_NO_PERMISSION				= "You don't have the required permission to do this.
 DBM_CORE_BOSSHEALTH_HIDE_FRAME		= "Close health frame"
 
 --Common Locals
+DBM_NEXT							= "Next %s"
+DBM_COOLDOWN						= "%s CD"
 DBM_CORE_UNKNOWN					= "unknown"--UNKNOWN which is "Unknown" (does u vs U matter?)
 DBM_CORE_LEFT						= "Left"
 DBM_CORE_RIGHT						= "Right"
@@ -255,6 +257,8 @@ DBM_CORE_INTERMISSION				= "Intermission"--No blizz global for this, and will pr
 DBM_CORE_ORB						= "Orb"
 DBM_CHEST							= "Chest"--As in Treasure 'Chest'. Not Chest as in body part.
 DBM_NO_DEBUFF						= "Not %s"--For use in places like info frame where you put "Not Spellname"
+DBM_ALLY							= "Ally"--Such as "Move to Ally"
+DBM_ADDS							= "Adds"--Such as "Move to Ally"
 --Common Locals end
 
 DBM_CORE_BREAK_USAGE				= "Break timer cannot be longer than 60 minutes. Make sure you're inputting time in minutes and not seconds."
@@ -369,7 +373,7 @@ DBM_CORE_AUTO_SPEC_WARN_OPTIONS = {
 	move 			= "Show special warning to move out from $spell:%s",
 	dodge 			= "Show special warning to dodge $spell:%s",
 	moveaway		= "Show special warning to move away from others for $spell:%s",
-	moveto			= "Show special warning to move to someone affected by $spell:%s",
+	moveto			= "Show special warning to move to someone or some place for $spell:%s",
 	jump			= "Show special warning to move to jump for $spell:%s",
 	run 			= "Show special warning to run away from $spell:%s",
 	cast 			= "Show special warning to stop casting for $spell:%s",--Spell Interrupt

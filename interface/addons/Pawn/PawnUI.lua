@@ -183,6 +183,17 @@ function PawnUI_SocketingPawnButton_Attach()
 	hooksecurefunc(ItemSocketingDescription, "SetSocketedItem", PawnUI_OnSocketUpdate)
 end
 
+function PawnUI_HookArtifactUI()
+	local OriginalOnRelicSlotMouseEnter = ArtifactFrame.PerksTab.TitleContainer.OnRelicSlotMouseEnter
+	ArtifactFrame.PerksTab.TitleContainer.OnRelicSlotMouseEnter =
+	function(...)
+		PawnIsHoveringSocketedRelic = true
+		OriginalOnRelicSlotMouseEnter(...)
+		PawnIsHoveringSocketedRelic = false
+	end
+	-- individual slots: ArtifactFrame.PerksTab.TitleContainer.RelicSlots[1]
+end
+
 ------------------------------------------------------------
 -- Scale selector events
 ------------------------------------------------------------
@@ -948,6 +959,8 @@ function PawnUI_InitCompareTab()
 end
 
 function PawnUI_CompareTab_Refresh()
+	PawnUI_InitCompareTab()
+
 	-- Update the currently visible comparison, if any.
 	PawnUI_CompareItems()
 	-- Then, update the best in slot shortcuts.
@@ -956,6 +969,12 @@ function PawnUI_CompareTab_Refresh()
 	if Item then _, _, _, _, _, _, _, _, ItemEquipLoc = GetItemInfo(Item.Link) end
 	PawnUI_SetShortcutBestItem(3, ItemEquipLoc)
 	PawnUI_SetShortcutBestItem(4, ItemEquipLoc)
+end
+
+-- Called whenever we reset the tooltips due to a calculation change.
+function PawnUI_ClearCacheValues()
+	if PawnUIComparisonItems[1] then PawnUIComparisonItems[1].Values = nil end
+	if PawnUIComparisonItems[2] then PawnUIComparisonItems[2].Values = nil end
 end
 
 -- Sets either the left (index 1) or right (index 2) comparison item, using an item link.  If the passed item
@@ -1729,20 +1748,19 @@ function PawnUIOptionsTabPage_OnShow()
 	PawnUIFrame_ShowSpecIconsCheck:SetChecked(PawnCommon.ShowSpecIcons)
 	PawnUIFrame_AlignRightCheck:SetChecked(PawnCommon.AlignNumbersRight)
 	PawnUIFrame_TooltipUpgradeList_UpdateSelection()
-	PawnUIFrame_UpgradeTrackingList_UpdateSelection()
 	PawnUIFrame_ColorTooltipBorderCheck:SetChecked(PawnCommon.ColorTooltipBorder)
 	PawnUIFrame_EnchantedValuesCheck:SetChecked(PawnCommon.ShowEnchanted)
-	
+
+	-- Upgrade options	
+	PawnUIFrame_IgnoreGemsWhileLevelingCheck:SetChecked(PawnCommon.IgnoreGemsWhileLeveling)
+	PawnUIFrame_UpgradeTrackingList_UpdateSelection()
+
 	-- Advisor options
-	if PawnOriginalIsContainerItemAnUpgrade == nil then
-		-- On WoW 7.0, hide the bag upgrade advisor checkbox since that feature doesn't work yet.
-		PawnUIFrame_ShowBagUpgradeAdvisorCheck:Disable()
-	end 
 	PawnUIFrame_ShowBagUpgradeAdvisorCheck:SetChecked(PawnCommon.ShowBagUpgradeAdvisor)
 	PawnUIFrame_ShowLootUpgradeAdvisorCheck:SetChecked(PawnCommon.ShowLootUpgradeAdvisor)
 	PawnUIFrame_ShowQuestUpgradeAdvisorCheck:SetChecked(PawnCommon.ShowQuestUpgradeAdvisor)
 	PawnUIFrame_ShowSocketingAdvisorCheck:SetChecked(PawnCommon.ShowSocketingAdvisor)
-	PawnUIFrame_IgnoreGemsWhileLevelingCheck:SetChecked(PawnCommon.IgnoreGemsWhileLeveling)
+	PawnUIFrame_ShowRelicUpgradesCheck:SetChecked(PawnCommon.ShowRelicUpgrades)
 
 	-- Other options
 	PawnUIFrame_DebugCheck:SetChecked(PawnCommon.Debug)
@@ -1830,6 +1848,10 @@ end
 
 function PawnUIFrame_ShowSocketingAdvisorCheck_OnClick()
 	PawnCommon.ShowSocketingAdvisor = PawnUIFrame_ShowSocketingAdvisorCheck:GetChecked()
+end
+
+function PawnUIFrame_ShowRelicUpgradesCheck_OnClick()
+	PawnCommon.ShowRelicUpgrades = PawnUIFrame_ShowRelicUpgradesCheck:GetChecked()
 end
 
 function PawnUIFrame_IgnoreGemsWhileLevelingCheck_OnClick()
@@ -1936,7 +1958,6 @@ end
 function PawnUI_LootUpgradeAdvisor_OnLoad(self)
 	self:SetFrameLevel(self:GetParent():GetFrameLevel() + 8)
 			
-	-- No clue how this works; I got it from Clique.  <3
 	self.arrow:SetSize(21, 53)
 	self.arrow.arrow = _G[self.arrow:GetName() .. "Arrow"]
 	self.arrow.glow = _G[self.arrow:GetName() .. "Glow"]
@@ -1959,54 +1980,69 @@ function PawnUI_GroupLootFrame_OnShow(self)
 	if not ItemLink then LootAdvisor:Hide() return end
 	
 	-- Is it an upgrade?
-	local Item = PawnGetItemData(ItemLink)
-	if not Item then LootAdvisor:Hide() return end
-	local UpgradeInfo = PawnIsItemAnUpgrade(Item)
-	if UpgradeInfo then
-		-- It's an upgrade!  Decide how to display it.
-		local NumUpgrades = #UpgradeInfo
-		local ShowOldItems = (NumUpgrades == 1) -- If the item upgrades exactly one scale, show a detailed tooltip showing the item being replaced.
-		local ShowScaleNames = (NumUpgrades <= 3) -- If the item upgrades two or three scales, show a less detailed tooltip showing the upgrade percentages.
-		if ShowScaleNames then
-			local UpgradeText = PawnLocal.LootUpgradeAdvisorHeader
-			local ThisUpgradeData, _
-			for _, ThisUpgradeData in pairs(UpgradeInfo) do
-				local ScaleName = ThisUpgradeData.ScaleName
-				local SetAnnotation = ""
-				if InvType == "INVTYPE_2HWEAPON" then
-					SetAnnotation = PawnLocal.TooltipUpgradeFor2H
-				elseif InvType == "INVTYPE_WEAPONMAINHAND" or InvType == "INVTYPE_WEAPON" or InvType == "INVTYPE_WEAPONOFFHAND" then
-					SetAnnotation = PawnLocal.TooltipUpgradeFor1H
-				end
-				local ThisText
-				if ThisUpgradeData.PercentUpgrade >= 100 then
-					ThisText = format(PawnLocal.TooltipBigUpgradeAnnotation, format("|n%s%s:", PawnGetScaleColor(ScaleName), ThisUpgradeData.LocalizedScaleName), SetAnnotation)
-				else
-					ThisText = format(PawnLocal.TooltipUpgradeAnnotation, format("|n%s%s:", PawnGetScaleColor(ScaleName), ThisUpgradeData.LocalizedScaleName), ThisUpgradeData.PercentUpgrade * 100, SetAnnotation)
-				end
-				if ShowOldItems and ThisUpgradeData.ExistingItemLink then
-					local ExistingItemName, _, Quality = GetItemInfo(ThisUpgradeData.ExistingItemLink)
-					if ExistingItemName then
-						-- It's possible (though rare) that the existing item isn't in the user's cache, so we can't get its quality color.  In that case, don't display it in the tooltip.
-						local _, _, _, QualityColor =  GetItemQualityColor(Quality)
-						ThisText = format(PawnLocal.TooltipVersusLine, ThisText, QualityColor, ExistingItemName)
+	local IsUpgrade = false
+	if PawnCanItemHaveStats(ItemLink) then
+		local Item = PawnGetItemData(ItemLink)
+		if Item then
+			local UpgradeInfo = PawnIsItemAnUpgrade(Item)
+			if UpgradeInfo then
+				-- It's an upgrade!  Decide how to display it.
+				local NumUpgrades = #UpgradeInfo
+				local ShowOldItems = (NumUpgrades == 1) -- If the item upgrades exactly one scale, show a detailed tooltip showing the item being replaced.
+				local ShowScaleNames = (NumUpgrades <= 3) -- If the item upgrades two or three scales, show a less detailed tooltip showing the upgrade percentages.
+				if ShowScaleNames then
+					local UpgradeText = PawnLocal.LootUpgradeAdvisorHeader
+					local ThisUpgradeData, _
+					for _, ThisUpgradeData in pairs(UpgradeInfo) do
+						local ScaleName = ThisUpgradeData.ScaleName
+						local SetAnnotation = ""
+						if InvType == "INVTYPE_2HWEAPON" then
+							SetAnnotation = PawnLocal.TooltipUpgradeFor2H
+						elseif InvType == "INVTYPE_WEAPONMAINHAND" or InvType == "INVTYPE_WEAPON" or InvType == "INVTYPE_WEAPONOFFHAND" then
+							SetAnnotation = PawnLocal.TooltipUpgradeFor1H
+						end
+						local ThisText
+						if ThisUpgradeData.PercentUpgrade >= 100 then
+							ThisText = format(PawnLocal.TooltipBigUpgradeAnnotation, format("|n%s%s:", PawnGetScaleColor(ScaleName), ThisUpgradeData.LocalizedScaleName), SetAnnotation)
+						else
+							ThisText = format(PawnLocal.TooltipUpgradeAnnotation, format("|n%s%s:", PawnGetScaleColor(ScaleName), ThisUpgradeData.LocalizedScaleName), ThisUpgradeData.PercentUpgrade * 100, SetAnnotation)
+						end
+						if ShowOldItems and ThisUpgradeData.ExistingItemLink then
+							local ExistingItemName, _, Quality = GetItemInfo(ThisUpgradeData.ExistingItemLink)
+							if ExistingItemName then
+								-- It's possible (though rare) that the existing item isn't in the user's cache, so we can't get its quality color.  In that case, don't display it in the tooltip.
+								local _, _, _, QualityColor =  GetItemQualityColor(Quality)
+								ThisText = format(PawnLocal.TooltipVersusLine, ThisText, QualityColor, ExistingItemName)
+							end
+						end
+						UpgradeText = UpgradeText .. ThisText
 					end
+					LootAdvisor.text:SetText(UpgradeText)
+				else
+					-- If the item upgrades more than three scales, show a generic tooltip.
+					LootAdvisor.text:SetText(format(PawnLocal.LootUpgradeAdvisorHeaderMany, NumUpgrades))
 				end
-				UpgradeText = UpgradeText .. ThisText
+				IsUpgrade = true
+			end
+		end
+	elseif PawnCanItemBeArtifactUpgrade(ItemLink) then
+		local UpgradeInfo = PawnGetRelicUpgradeInfo(ItemLink)
+		if UpgradeInfo then
+			local ArtifactName, ArtifactUpgradeInfo, UpgradeText
+			for ArtifactName, ArtifactUpgradeInfo in pairs(UpgradeInfo) do
+				if UpgradeText then UpgradeText = UpgradeText .. "\n" else UpgradeText = "" end
+				UpgradeText = UpgradeText .. format(PawnLocal.TooltipRelicUpgradeAnnotation, tostring(ArtifactName) .. ":", ArtifactUpgradeInfo.ItemLevelIncrease, "")
 			end
 			LootAdvisor.text:SetText(UpgradeText)
-		else
-			-- If the item upgrades more than three scales, show a generic tooltip.
-			LootAdvisor.text:SetText(format(PawnLocal.LootUpgradeAdvisorHeaderMany, NumUpgrades))
+			IsUpgrade = true
 		end
-		
-		-- Resize the window to fit the content, and then show it.
+	end
+
+	if IsUpgrade then
 		LootAdvisor:SetHeight(LootAdvisor.text:GetHeight() + 32)
 		LootAdvisor:Show()
 	else
-		-- Not an upgrade.
 		LootAdvisor:Hide()
-		return
 	end
 	
 end
@@ -2021,11 +2057,9 @@ function PawnUI_LootHistoryFrame_UpdateItemFrame(self, ItemFrame, ...)
 	-- called again later.
 	local RollID, ItemLink = C_LootHistory.GetItem(ItemFrame.itemIdx)
 	if ItemLink == nil then return end
-	local Item = PawnGetItemData(ItemLink)
-	if not Item then return end
 	
 	-- Is this item an upgrade?
-	local IsUpgrade = PawnCommon.ShowLootUpgradeAdvisor and (PawnIsItemAnUpgrade(Item) ~= nil)
+	local IsUpgrade = PawnCommon.ShowLootUpgradeAdvisor and PawnShouldItemLinkHaveUpgradeArrow(ItemLink)
 	if IsUpgrade then
 		-- If the arrow hasn't already been created, create it.
 		if not ItemFrame.PawnLootAdvisorArrow then
@@ -2049,9 +2083,7 @@ function PawnUI_LootWonAlertFrame_SetUp(self, ItemLink, ...)
 
 	-- Is this item an upgrade?
 	if ItemLink == nil then return end
-	local Item = PawnGetItemData(ItemLink)
-	if not Item then return end
-	local IsUpgrade = PawnCommon.ShowLootUpgradeAdvisor and (PawnIsItemAnUpgrade(Item) ~= nil)
+	local IsUpgrade = PawnCommon.ShowLootUpgradeAdvisor and PawnShouldItemLinkHaveUpgradeArrow(ItemLink)
 	
 	if IsUpgrade then
 		-- If the arrow hasn't already been created, create it.

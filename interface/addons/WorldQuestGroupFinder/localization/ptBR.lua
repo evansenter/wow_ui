@@ -13,7 +13,7 @@ L["WQGF_AUTO_LEAVING_DIALOG"] = [=[Você completou a Missão Mundial e ira sair 
  Diga tchau!]=]
 L["WQGF_AUTO_LEAVING_DIALOG_QUEST"] = [=[Você completou a missão e ira sair do grupo em %d segundos.
 
- Diga tchau!]=]
+ Diga tchau!!]=]
 L["WQGF_CANCEL"] = "Cancelar"
 L["WQGF_CANNOT_DO_WQ_IN_GROUP"] = "Essa Missão Mundial não pode ser feita em grupo."
 L["WQGF_CANNOT_DO_WQ_TYPE_IN_GROUP"] = "Esse tipo de Missão Mundial não pode ser completada em grupo."

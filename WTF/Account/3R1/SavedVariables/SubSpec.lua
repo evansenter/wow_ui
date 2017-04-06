@@ -82,136 +82,14 @@ SubSpecStorage = {
 			},
 		}, -- [2]
 	},
-	["Mage Fire"] = {
-		{
-			["name"] = "ST Default",
-			["data"] = {
-				{
-					["id"] = 22456,
-					["name"] = "Pyromaniac",
-					["column"] = 1,
-				}, -- [1]
-				{
-					["id"] = 22442,
-					["name"] = "Shimmer",
-					["column"] = 1,
-				}, -- [2]
-				{
-					["id"] = 22444,
-					["name"] = "Mirror Image",
-					["column"] = 1,
-				}, -- [3]
-				{
-					["id"] = 22450,
-					["name"] = "Alexstrasza's Fury",
-					["column"] = 1,
-				}, -- [4]
-				{
-					["id"] = 22904,
-					["name"] = "Frenetic Speed",
-					["column"] = 1,
-				}, -- [5]
-				{
-					["id"] = 22449,
-					["name"] = "Unstable Magic",
-					["column"] = 2,
-				}, -- [6]
-				{
-					["id"] = 21633,
-					["name"] = "Meteor",
-					["column"] = 3,
-				}, -- [7]
-			},
-		}, -- [1]
-		{
-			["name"] = "AoE Default",
-			["data"] = {
-				{
-					["id"] = 22459,
-					["name"] = "Conflagration",
-					["column"] = 2,
-				}, -- [1]
-				{
-					["id"] = 22442,
-					["name"] = "Shimmer",
-					["column"] = 1,
-				}, -- [2]
-				{
-					["id"] = 22445,
-					["name"] = "Rune of Power",
-					["column"] = 2,
-				}, -- [3]
-				{
-					["id"] = 22450,
-					["name"] = "Alexstrasza's Fury",
-					["column"] = 1,
-				}, -- [4]
-				{
-					["id"] = 22904,
-					["name"] = "Frenetic Speed",
-					["column"] = 1,
-				}, -- [5]
-				{
-					["id"] = 22451,
-					["name"] = "Living Bomb",
-					["column"] = 1,
-				}, -- [6]
-				{
-					["id"] = 22220,
-					["name"] = "Cinderstorm",
-					["column"] = 2,
-				}, -- [7]
-			},
-		}, -- [2]
-		{
-			["name"] = "Lazy",
-			["data"] = {
-				{
-					["id"] = 22459,
-					["name"] = "Conflagration",
-					["column"] = 2,
-				}, -- [1]
-				{
-					["id"] = 22442,
-					["name"] = "Shimmer",
-					["column"] = 1,
-				}, -- [2]
-				{
-					["id"] = 22445,
-					["name"] = "Rune of Power",
-					["column"] = 2,
-				}, -- [3]
-				{
-					["id"] = 22450,
-					["name"] = "Alexstrasza's Fury",
-					["column"] = 1,
-				}, -- [4]
-				{
-					["id"] = 22904,
-					["name"] = "Frenetic Speed",
-					["column"] = 1,
-				}, -- [5]
-				{
-					["id"] = 22449,
-					["name"] = "Unstable Magic",
-					["column"] = 2,
-				}, -- [6]
-				{
-					["id"] = 21633,
-					["name"] = "Meteor",
-					["column"] = 3,
-				}, -- [7]
-			},
-		}, -- [3]
-	},
 	["Mage Frost"] = {
 		{
 			["name"] = "ST",
 			["data"] = {
 				{
-					["id"] = 22463,
-					["name"] = "Bone Chilling",
-					["column"] = 3,
+					["id"] = 22460,
+					["name"] = "Lonely Winter",
+					["column"] = 2,
 				}, -- [1]
 				{
 					["id"] = 22903,
@@ -219,9 +97,9 @@ SubSpecStorage = {
 					["column"] = 2,
 				}, -- [2]
 				{
-					["id"] = 22444,
-					["name"] = "Mirror Image",
-					["column"] = 1,
+					["id"] = 22447,
+					["name"] = "Incanter's Flow",
+					["column"] = 3,
 				}, -- [3]
 				{
 					["id"] = 22466,
@@ -322,6 +200,128 @@ SubSpecStorage = {
 					["id"] = 21632,
 					["name"] = "Thermal Void",
 					["column"] = 1,
+				}, -- [7]
+			},
+		}, -- [3]
+	},
+	["Mage Fire"] = {
+		{
+			["name"] = "ST Default",
+			["data"] = {
+				{
+					["id"] = 22456,
+					["name"] = "Pyromaniac",
+					["column"] = 1,
+				}, -- [1]
+				{
+					["id"] = 22442,
+					["name"] = "Shimmer",
+					["column"] = 1,
+				}, -- [2]
+				{
+					["id"] = 22444,
+					["name"] = "Mirror Image",
+					["column"] = 1,
+				}, -- [3]
+				{
+					["id"] = 22450,
+					["name"] = "Alexstrasza's Fury",
+					["column"] = 1,
+				}, -- [4]
+				{
+					["id"] = 22904,
+					["name"] = "Frenetic Speed",
+					["column"] = 1,
+				}, -- [5]
+				{
+					["id"] = 22449,
+					["name"] = "Unstable Magic",
+					["column"] = 2,
+				}, -- [6]
+				{
+					["id"] = 22220,
+					["name"] = "Cinderstorm",
+					["column"] = 2,
+				}, -- [7]
+			},
+		}, -- [1]
+		{
+			["name"] = "AoE Default",
+			["data"] = {
+				{
+					["id"] = 22459,
+					["name"] = "Conflagration",
+					["column"] = 2,
+				}, -- [1]
+				{
+					["id"] = 22442,
+					["name"] = "Shimmer",
+					["column"] = 1,
+				}, -- [2]
+				{
+					["id"] = 22445,
+					["name"] = "Rune of Power",
+					["column"] = 2,
+				}, -- [3]
+				{
+					["id"] = 22450,
+					["name"] = "Alexstrasza's Fury",
+					["column"] = 1,
+				}, -- [4]
+				{
+					["id"] = 22904,
+					["name"] = "Frenetic Speed",
+					["column"] = 1,
+				}, -- [5]
+				{
+					["id"] = 22451,
+					["name"] = "Living Bomb",
+					["column"] = 1,
+				}, -- [6]
+				{
+					["id"] = 22220,
+					["name"] = "Cinderstorm",
+					["column"] = 2,
+				}, -- [7]
+			},
+		}, -- [2]
+		{
+			["name"] = "Lazy",
+			["data"] = {
+				{
+					["id"] = 22459,
+					["name"] = "Conflagration",
+					["column"] = 2,
+				}, -- [1]
+				{
+					["id"] = 22442,
+					["name"] = "Shimmer",
+					["column"] = 1,
+				}, -- [2]
+				{
+					["id"] = 22445,
+					["name"] = "Rune of Power",
+					["column"] = 2,
+				}, -- [3]
+				{
+					["id"] = 22450,
+					["name"] = "Alexstrasza's Fury",
+					["column"] = 1,
+				}, -- [4]
+				{
+					["id"] = 22904,
+					["name"] = "Frenetic Speed",
+					["column"] = 1,
+				}, -- [5]
+				{
+					["id"] = 22449,
+					["name"] = "Unstable Magic",
+					["column"] = 2,
+				}, -- [6]
+				{
+					["id"] = 22220,
+					["name"] = "Cinderstorm",
+					["column"] = 2,
 				}, -- [7]
 			},
 		}, -- [3]

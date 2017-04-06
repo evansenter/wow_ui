@@ -1,4 +1,4 @@
-﻿local _G = _G
+local _G = _G
 local MT = MacroToolkit
 MT.LS = LibStub
 MT.L = MT.LS("AceLocale-3.0"):GetLocale("MacroToolkit")

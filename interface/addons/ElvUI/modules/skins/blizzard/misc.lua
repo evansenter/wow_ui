@@ -86,19 +86,35 @@ local function LoadSkin()
 	for i = 1, 4 do
 		for j = 1, 3 do
 			S:HandleButton(_G["StaticPopup"..i.."Button"..j])
-			S:HandleEditBox(_G["StaticPopup"..i.."EditBox"])
-			S:HandleEditBox(_G["StaticPopup"..i.."MoneyInputFrameGold"])
-			S:HandleEditBox(_G["StaticPopup"..i.."MoneyInputFrameSilver"])
-			S:HandleEditBox(_G["StaticPopup"..i.."MoneyInputFrameCopper"])
-			_G["StaticPopup"..i.."EditBox"].backdrop:Point("TOPLEFT", -2, -4)
-			_G["StaticPopup"..i.."EditBox"].backdrop:Point("BOTTOMRIGHT", 2, 4)
-			_G["StaticPopup"..i.."ItemFrameNameFrame"]:Kill()
-			_G["StaticPopup"..i.."ItemFrame"]:GetNormalTexture():Kill()
-			_G["StaticPopup"..i.."ItemFrame"]:SetTemplate("Default")
-			_G["StaticPopup"..i.."ItemFrame"]:StyleButton()
-			_G["StaticPopup"..i.."ItemFrameIconTexture"]:SetTexCoord(unpack(E.TexCoords))
-			_G["StaticPopup"..i.."ItemFrameIconTexture"]:SetInside()
 		end
+		S:HandleEditBox(_G["StaticPopup"..i.."EditBox"])
+		S:HandleEditBox(_G["StaticPopup"..i.."MoneyInputFrameGold"])
+		S:HandleEditBox(_G["StaticPopup"..i.."MoneyInputFrameSilver"])
+		S:HandleEditBox(_G["StaticPopup"..i.."MoneyInputFrameCopper"])
+		_G["StaticPopup"..i.."EditBox"].backdrop:Point("TOPLEFT", -2, -4)
+		_G["StaticPopup"..i.."EditBox"].backdrop:Point("BOTTOMRIGHT", 2, 4)
+		_G["StaticPopup"..i.."ItemFrameNameFrame"]:Kill()
+		_G["StaticPopup"..i.."ItemFrame"]:SetTemplate("Default")
+		_G["StaticPopup"..i.."ItemFrame"]:StyleButton()
+		_G["StaticPopup"..i.."ItemFrame"].IconBorder:SetAlpha(0)
+		_G["StaticPopup"..i.."ItemFrameIconTexture"]:SetTexCoord(unpack(E.TexCoords))
+		_G["StaticPopup"..i.."ItemFrameIconTexture"]:SetInside()
+		local normTex = _G["StaticPopup"..i.."ItemFrame"]:GetNormalTexture()
+		if normTex then
+			normTex:SetTexture(nil)
+			hooksecurefunc(normTex, "SetTexture", function(self, tex)
+				if tex ~= nil then self:SetTexture(nil) end
+			end)
+		end
+
+		-- Quality IconBorder
+		hooksecurefunc(_G["StaticPopup"..i.."ItemFrame"].IconBorder, 'SetVertexColor', function(self, r, g, b)
+ 			self:GetParent():SetBackdropBorderColor(r, g, b)
+ 			self:SetTexture("")
+ 		end)
+ 		hooksecurefunc(_G["StaticPopup"..i.."ItemFrame"].IconBorder, 'Hide', function(self)
+ 			self:GetParent():SetBackdropBorderColor(unpack(E.media.bordercolor))
+		end)
 	end
 
 	if not IsAddOnLoaded("ConsolePort") then
@@ -266,17 +282,6 @@ local function LoadSkin()
 
 	-- mac menu/option panel, made by affli.
 	if IsMacClient() then
-		S:HandleDropDownBox(MovieRecordingOptionsFrameResolutionDropDown)
-		S:HandleDropDownBox(MovieRecordingOptionsFrameFramerateDropDown)
-		S:HandleDropDownBox(MovieRecordingOptionsFrameCodecDropDown)
-
-		S:HandleButton(MovieRecordingOptionsButtonCompress)
-		S:HandleSliderFrame(MovieRecordingOptionsFrameQualitySlider)
-
-		for i=1, 6 do
-			S:HandleCheckBox(_G["MovieRecordingOptionsFrameCheckButton"..i])
-		end
-
 		S:HandleCheckBox(MacKeyboardOptionsFrameCheckButton9)
 		S:HandleCheckBox(MacKeyboardOptionsFrameCheckButton10)
 		S:HandleCheckBox(MacKeyboardOptionsFrameCheckButton11)
@@ -735,6 +740,7 @@ local function LoadSkin()
 		"SocialPanelProfanityFilter",
 		"SocialPanelSpamFilter",
 		"SocialPanelEnableTwitter",
+		"SocialPanelAutoAcceptQuickJoinRequests",
 		-- ActionBars
 		"ActionBarsPanelLockActionBars",
 		"ActionBarsPanelAlwaysShowActionBars",
@@ -939,7 +945,16 @@ local function LoadSkin()
 		S:HandleButton(CompactUnitFrameProfilesGeneralOptionsFrameResetPositionButton)
 		S:HandleButton(CompactUnitFrameProfilesSaveButton)
 		S:HandleButton(CompactUnitFrameProfilesDeleteButton)
+
+		CompactUnitFrameProfilesNewProfileDialog:StripTextures()
+		CompactUnitFrameProfilesNewProfileDialog:CreateBackdrop("Transparent")
+		S:HandleEditBox(CompactUnitFrameProfilesNewProfileDialogEditBox)
+		CompactUnitFrameProfilesNewProfileDialogEditBox:SetSize(150, 20)
+		S:HandleDropDownBox(CompactUnitFrameProfilesNewProfileDialogBaseProfileSelector)
+		S:HandleButton(CompactUnitFrameProfilesNewProfileDialogCreateButton)
+		S:HandleButton(CompactUnitFrameProfilesNewProfileDialogCancelButton)
 	end
+
 	GraphicsButton:StripTextures()
 	RaidButton:StripTextures()
 	local raidcheckbox = {

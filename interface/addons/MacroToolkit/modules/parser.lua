@@ -82,7 +82,7 @@ function MT:BuildCommandList()
 end
 
 --*************************************************
---* Damerau–Levenshtein Distance                  *
+--* Damerauï¿½Levenshtein Distance                  *
 --* based on code from http://nayruden.com/?p=115 *
 --*************************************************
 function getLevenshtein(s, t, lim)

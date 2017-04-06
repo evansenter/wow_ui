@@ -264,8 +264,8 @@ function InFlight:LoadBulk()  -- called from InFlight_Load
 	InFlightVars = InFlightVars or { Alliance = {}, Horde = {}, }  -- flight time data
 	vars = InFlightVars[UnitFactionGroup("player")]
 
-	if db.dbinit ~= 16 then
-		db.dbinit = 16
+	if db.dbinit ~= 33 then
+		db.dbinit = 33
 		local function SetDefaults(db, t)  -- set saved variables
 			for k,v in pairs(t) do
 				if type(db[k]) == "table" then
@@ -363,7 +363,7 @@ function InFlight:InitSource()  -- cache source location and hook tooltips
 				source = ShortenName(TaxiNodeName(i))
 			end
 		end
-	else
+	elseif FlightMapFrame then
 		local tb = FlightMapFrame.pinPools.FlightMap_FlightPointPinTemplate
 		for flightnode in tb:EnumerateActive() do
 			if flightnode then
@@ -484,6 +484,9 @@ do  -- timer bar
 					this:Hide()
 				end
 				return
+			end
+			if not UnitOnTaxi("player") then  -- event bug fix
+				ontaxi = nil
 			end
 			if not ontaxi then  -- flight ended
 				if not porttaken then
@@ -861,8 +864,8 @@ function InFlight.ShowOptions()
 	ToggleDropDownMenu(1, nil, InFlightDD, "cursor")
 end
 
-
---[[function inflightupdate()
+--[[
+function inflightupdate()
 	local updates = {}
 	--for table, updates in pairs(updates) do
 	for faction, t in pairs(updates) do

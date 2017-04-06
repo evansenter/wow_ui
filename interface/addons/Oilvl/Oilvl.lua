@@ -47,6 +47,15 @@ local gslot = {
 	["INVTYPE_HOLDABLE"] = 17,
 }
 
+-- RANGE MELEE
+local RM = {}
+RM[62]="R" RM[63]="R" RM[64]="R" RM[65]="R" RM[66]="M" RM[70]="M" RM[71]="M" RM[72]="M" RM[73]="M" RM[102]="R"
+RM[103]="M" RM[104]="M" RM[105]="R" RM[250]="M" RM[251]="M" RM[252]="M" RM[253]="R" RM[254]="R" RM[255]="M" RM[256]="R"
+RM[257]="R" RM[258]="R" RM[259]="M" RM[260]="M" RM[261]="M" RM[262]="R" RM[263]="M" RM[264]="R" RM[265]="R" RM[266]="R"
+RM[267]="R" RM[268]="M" RM[269]="M" RM[270]="R" RM[577]="M" RM[581]="M"
+local range = 0;
+local melee = 0;
+
 local LibQTip = LibStub('LibQTip-1.0');
 local otooltip; -- target raid progression detail tooltips
 local otooltip2; -- OiLvL raid progression detail tooltips
@@ -218,9 +227,10 @@ local otooltip6gearsw2=false; -- show only specific raider
 local bagilvltime=0
 
 local Legion, _, _ = EJ_GetTierInfo(7);
-local TENname, _, _, _, _, _, _ = EJ_GetInstanceInfo(768)
-local TNname, _, _, _, _, _, _ = EJ_GetInstanceInfo(786)
-local TOVname, _, _, _, _, _, _ = EJ_GetInstanceInfo(861)
+local TENname, _, _, _, _, _, _ = EJ_GetInstanceInfo(768) -- The Emerald Nightmare
+local TNname, _, _, _, _, _, _ = EJ_GetInstanceInfo(786) -- The Nighthold
+local TOVname, _, _, _, _, _, _ = EJ_GetInstanceInfo(861) -- Trial of Valor
+local TOSname, _, _, _, _, _, _ = EJ_GetInstanceInfo(875) -- Tomb of Sargeras
 
 local OSTATTEN = {
 	{
@@ -350,6 +360,8 @@ local OSTATTOV = {
 		11418, -- [4]
 	}, -- [3]
 }
+
+--local OSTATTOS = {}
 
 local function round(number, digits)
     return tonumber(string.format("%." .. (digits or 0) .. "f", number))
@@ -1294,9 +1306,12 @@ function oilvlcheckrange()
 		local nheal=0;
 		local totalheal=0;
 		ail=0; ailtank=0; aildps=0; ailheal=0;	
+		range = 0 melee = 0
 		if IsInRaid() then
 			rnum = GetNumGroupMembers();
-			for i = 1, rnum do
+			for i = 1, rnum do				
+				if RM[oilvlframedata.spec[i]] == "M" then melee = melee + 1 end
+				if RM[oilvlframedata.spec[i]] == "R" then range = range + 1 end
 				if not CheckInteractDistance("raid"..i, 1) then
 					if OTCurrent2 == "raid"..i then
 						miacount=0;	miaunit[1]="";miaunit[2]="";miaunit[3]="";miaunit[4]="";miaunit[5]="";miaunit[6]="";
@@ -1571,6 +1586,10 @@ function oilvlcheckrange()
 			end
 		end
 	end
+end
+
+function oilvlprintrm()
+	print("Range: "..range.." Melee: "..melee)
 end
 
 function OCheckSendMark()
@@ -2828,6 +2847,7 @@ end
 -- OilvlGetStatisticId(Legion, TENname:sub(4,strlen(TENname)), OSTATTEN, false)
 -- OilvlGetStatisticId(Legion, TNname:sub(4,strlen(TNname)), OSTATTN, false)
 -- OilvlGetStatisticId(Legion, TOVname, OSTATTOV, false)
+-- OilvlGetStatisticId(Legion, TOSname, OSTATTOS, false)
 
 function oilvlSetOSTATTEN()
 	for i = 1,7 do
@@ -2844,6 +2864,12 @@ end
 function oilvlSetOSTATTOV()
 	for i = 1,3 do
 		OSTATTOV[i][5] = select(2,GetAchievementInfo(OSTATTOV[i][1])):gsub(" %(.*%)","")..""
+	end
+end
+
+function oilvlSetOSTATTOS()
+	for i = 1,9 do
+		OSTATTOS[i][5] = select(2,GetAchievementInfo(OSTATTOS[i][1])):gsub(" %(.*%)","")..""
 	end
 end
 
@@ -3213,6 +3239,7 @@ function OGetRaidProgression2(RaidName, OSTAT, NumRaidBosses)
 	bigorp[TNname] = Save_orp(TNname, OSTATTN, 10)
 	bigorp[TENname] = Save_orp(TENname, OSTATTEN, 7)
 	bigorp[TOVname] = Save_orp(TOVname, OSTATTOV, 3)
+	--bigorp[TOSname] = Save_orp(TOSname, OSTATTOS, 9)
 	
 	local function Save_orp_vars(raidname3)
 		OSTAT, NumRaidBosses, twohighest, progression, orp["raidname"], orp["progression"], orp["LFR"], orp["Normal"], orp["Heroic"], orp["Mythic"] = bigorp[raidname3][1],bigorp[raidname3][2],bigorp[raidname3][3],bigorp[raidname3][4],bigorp[raidname3][5],bigorp[raidname3][6],bigorp[raidname3][7],bigorp[raidname3][8],bigorp[raidname3][9],bigorp[raidname3][10]
@@ -3231,10 +3258,12 @@ function OGetRaidProgression2(RaidName, OSTAT, NumRaidBosses)
 
 	-- check Achivements for 3 raids
 	local RaidAchiv = {}
+	--RaidAchiv[TNname],RaidAchiv[TENname], RaidAchiv[TOVname], RaidAchiv[TOSname]={},{},{},{}
 	RaidAchiv[TNname],RaidAchiv[TENname], RaidAchiv[TOVname]={},{},{}
 	SaveAOTCCE(RaidAchiv[TNname],11195,11192) 
 	SaveAOTCCE(RaidAchiv[TENname],11194,11191) 
 	SaveAOTCCE(RaidAchiv[TOVname],11581,11580)
+	--SaveAOTCCE(RaidAchiv[TOSname],11581,11580) pls modify 11581 and 11580
 	
 	local oilvltooltiptexts = {}
 	for i = 1, OilvlTooltip:NumLines() do
@@ -3660,6 +3689,7 @@ function OGetRaidProgression3(RaidName, OSTAT, NumRaidBosses)
 	bigorp[TNname] = Save_orp(TNname, OSTATTN, 10)
 	bigorp[TENname] = Save_orp(TENname, OSTATTEN, 7)
 	bigorp[TOVname] = Save_orp(TOVname, OSTATTOV, 3)
+	--bigorp[TOSname] = Save_orp(TOSname, OSTATTOS, 9)
 	local function Save_orp_vars(raidname3)
 		OSTAT, NumRaidBosses, twohighest, progression, orp["raidname"], orp["progression"], orp["LFR"], orp["Normal"], orp["Heroic"], orp["Mythic"] = bigorp[raidname3][1],bigorp[raidname3][2],bigorp[raidname3][3],bigorp[raidname3][4],bigorp[raidname3][5],bigorp[raidname3][6],bigorp[raidname3][7],bigorp[raidname3][8],bigorp[raidname3][9],bigorp[raidname3][10]
 	end
@@ -3676,10 +3706,12 @@ function OGetRaidProgression3(RaidName, OSTAT, NumRaidBosses)
 	end
 
 	local RaidAchiv = {}
-	RaidAchiv[TNname],RaidAchiv[TENname], RaidAchiv[TOVname]={},{},{}
+	--RaidAchiv[TNname],RaidAchiv[TENname], RaidAchiv[TOVname], RaidAchiv[TOSname]={},{},{},{}
+	RaidAchiv[TNname],RaidAchiv[TENname], RaidAchiv[TOVname] ={},{},{}
 	SaveAOTCCE(RaidAchiv[TNname],11195,11192) 
 	SaveAOTCCE(RaidAchiv[TENname],11194,11191) 
 	SaveAOTCCE(RaidAchiv[TOVname],11581,11580)
+	--SaveAOTCCE(RaidAchiv[TOSname],11581,11580) pls modify 11581 and 11580
 
 	local oilvltooltiptexts = {}
 	for i = 1, OilvlTooltip:NumLines() do
@@ -5225,9 +5257,7 @@ local events = {}
 
 function events:INSPECT_READY(...)
 	oilvlSaveItemLevel(0)
-	C_Timer.After(0.5,function() oilvlSaveItemLevel(0) end)
 	C_Timer.After(1,function() oilvlSaveItemLevel(0) end)
-	C_Timer.After(1.5,function() oilvlSaveItemLevel(0) end)
 	C_Timer.After(2,function() oilvlSaveItemLevel(1) end)
 	-- GameTooltip		
 	if (Omover ==1) and cfg.oilvlms then
@@ -5328,6 +5358,7 @@ function events:INSPECT_ACHIEVEMENT_READY(...)
 					if cfg.oilvlten then OGetRaidProgression2(TENname, OSTATTEN, 7); end
 					if cfg.oilvltn then OGetRaidProgression2(TNname, OSTATTN, 10); end
 					if cfg.oilvltov then OGetRaidProgression2(TOVname, OSTATTOV, 3); end
+					--if cfg.oilvltos then OGetRaidProgression2(TOSname, OSTATTOS, 9); end
 				else
 					ClearAchievementComparisonUnit();
 					rpsw=false;
@@ -5339,6 +5370,7 @@ function events:INSPECT_ACHIEVEMENT_READY(...)
 					if cfg.oilvlten then OGetRaidProgression3(TENname, OSTATTEN, 7); end
 					if cfg.oilvltn then OGetRaidProgression3(TNname, OSTATTN, 10); end
 					if cfg.oilvltov then OGetRaidProgression3(TOVname, OSTATTOV, 3); end
+					--if cfg.oilvltos then OGetRaidProgression3(TOSname, OSTATTOS, 9); end
 				else
 					ClearAchievementComparisonUnit();
 					rpsw=false;
@@ -5350,6 +5382,7 @@ function events:INSPECT_ACHIEVEMENT_READY(...)
 					if cfg.oilvlten then OGetRaidProgression(TENname, OSTATTEN, 7); end
 					if cfg.oilvltn then OGetRaidProgression(TNname, OSTATTN, 10); end
 					if cfg.oilvltov then OGetRaidProgression(TOVname, OSTATTOV, 3); end
+					--if cfg.oilvltos then OGetRaidProgression(TOSname, OSTATTOS, 9); end
 				else
 					ClearAchievementComparisonUnit();
 					rpsw=false;
@@ -5405,9 +5438,10 @@ function events:PLAYER_LOGIN(...)
 	if cfg.oilvlframeY == nil then cfg.oilvlframeY = -60; end
 	if cfg.oilvlscale  == nil then cfg.oilvlscale = 0.8; end
 	if cfg.oilvlalpha  == nil then cfg.oilvlalpha = 1; end
-	if cfg.oilvlten == nil then cfg.oilvlten = true; end
-	if cfg.oilvltn == nil then cfg.oilvltn = false; end
+	if cfg.oilvlten == nil then cfg.oilvlten = false; end
+	if cfg.oilvltn == nil then cfg.oilvltn = true; end
 	if cfg.oilvltov == nil then cfg.oilvltov = false; end
+	if cfg.oilvltos == nil then cfg.oilvltos = false; end
 	if cfg.oilvlms == nil then cfg.oilvlms = true; end
 	if cfg.oilvlme == nil then cfg.oilvlme = true; end
 	if cfg.oilvlme2 == nil then cfg.oilvlme2 = false; end
@@ -5444,6 +5478,8 @@ function events:PLAYER_LOGIN(...)
 	oilvlSetOSTATTEN()
 	oilvlSetOSTATTN()
 	oilvlSetOSTATTOV()
+	--oilvlSetOSTATTOS()
+	--cfg["TOS"] = OSTATTOS
 	--[[Fix for Lua errors with Blizzard_AchievementUI below]]--
 	local unregistered,reregistered
 	local function reregisterBlizz()

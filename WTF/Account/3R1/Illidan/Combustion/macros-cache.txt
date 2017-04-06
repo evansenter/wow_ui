@@ -1,6 +1,6 @@
-VER 3 0100000000000058 "Barrier / Invis" "INV_Misc_QuestionMark"
+VER 3 010000000000005A "BB / Invis" "INV_Misc_QuestionMark"
 #showtooltip
-/use [nomod][mod:ctrl][mod:alt]Ice Barrier;[mod:shift]Invisibility;
+/use [nomod][mod:ctrl][mod:alt]Blazing Barrier;[mod:shift]Invisibility;
 END
 VER 3 0100000000000052 "Combustion" "INV_MISC_QUESTIONMARK"
 #showtooltip Combustion
@@ -20,6 +20,10 @@ END
 VER 3 0100000000000056 "Freeze" "INV_Misc_QuestionMark"
 #showtooltip
 /cast [pet] Freeze; Summon Water Elemental
+END
+VER 3 0100000000000058 "IB / Invis" "INV_Misc_QuestionMark"
+#showtooltip
+/use [nomod][mod:ctrl][mod:alt]Ice Barrier;[mod:shift]Invisibility;
 END
 VER 3 0100000000000046 "Ice Block" "INV_MISC_QUESTIONMARK"
 #showtooltip

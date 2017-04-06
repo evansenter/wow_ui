@@ -101,7 +101,7 @@ Altoholic_Grids: disabled
 Altoholic_Guild: disabled
 Altoholic_Search: disabled
 Altoholic_Summary: disabled
-autoturnin: enabled
+autoturnin: disabled
 BulkOrder: disabled
 DataStore: disabled
 DataStore_Achievements: disabled
@@ -267,3 +267,6 @@ LibBabble-Race-3.0: enabled
 InstancePortals: enabled
 lib-st: enabled
 LibDialog-1.0: enabled
+PremadeGroupsFilter: enabled
+DBM-TombofSargeras: enabled
+LibNotify-1.0: enabled

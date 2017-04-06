@@ -7,24 +7,24 @@ PremadeGroupsFilterState = {
 		["act"] = false,
 	},
 	["ilvl"] = {
-		["max"] = "",
+		["max"] = "880",
 		["min"] = "",
-		["act"] = false,
+		["act"] = true,
 	},
 	["dps"] = {
-		["max"] = "",
+		["max"] = "2",
 		["min"] = "",
-		["act"] = false,
+		["act"] = true,
 	},
 	["noilvl"] = {
 		["act"] = false,
 	},
 	["expression"] = "",
 	["difficulty"] = {
-		["act"] = false,
 		["val"] = 3,
+		["act"] = false,
 	},
-	["members"] = {
+	["defeated"] = {
 		["max"] = "",
 		["min"] = "",
 		["act"] = false,
@@ -34,7 +34,7 @@ PremadeGroupsFilterState = {
 		["min"] = "",
 		["act"] = false,
 	},
-	["defeated"] = {
+	["members"] = {
 		["max"] = "",
 		["min"] = "",
 		["act"] = false,

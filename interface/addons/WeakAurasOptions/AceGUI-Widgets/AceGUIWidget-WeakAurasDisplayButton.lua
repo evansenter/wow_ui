@@ -9,8 +9,6 @@ if not AceGUI or (AceGUI:GetWidgetVersion(Type) or 0) >= Version then return end
 local L = WeakAuras.L;
 local fullName;
 
--- GLOBALS: GameTooltip GetCursorPosition UIParent WeakAuras WeakAuras_DropDownMenu WeakAurasOptionsSaved
-
 local function Hide_Tooltip()
     GameTooltip:Hide();
 end
@@ -680,78 +678,94 @@ local methods = {
                 notCheckable = 1,
                 func = self.callbacks.OnCopyClick
             },
-            {
-                text = L["Set tooltip description"],
+          };
+        if (not data.controlledChildren) then
+          local convertMenu = {};
+          for regionType, regionData in pairs(WeakAuras.regionOptions) do
+            if(regionType ~= "group" and regionType ~= "dynamicgroup" and regionType ~= "timer" and regionType ~= data.regionType) then
+              tinsert(convertMenu, {
+                text = regionData.displayName,
                 notCheckable = 1,
-                func = function() WeakAuras.ShowDisplayTooltip(data, nil, nil, nil, nil, nil, true) end
-            },
-            {
-                text = L["Export to string..."],
-                notCheckable = 1,
-                func = function() WeakAuras.ExportToString(data.id) end
-            },
-            {
-                text = L["Export to Lua table..."],
-                notCheckable = 1,
-                func = function() WeakAuras.ExportToTable(data.id) end
-            },
-            {
-                text = " ",
-                notClickable = 1,
-                notCheckable = 1,
-            },
-            {
-                text = L["Delete"],
-                notCheckable = 1,
-                func = self.callbacks.OnDeleteClick
-            },
-            {
-                text = " ",
-                notClickable = 1,
-                notCheckable = 1,
-            },
-            {
-                text = L["Close"],
-                notCheckable = 1,
-                func = function() WeakAuras_DropDownMenu:Hide() end
-            }
-        }
+                func = function()
+                  WeakAuras.ConvertDisplay(data, regionType);
+                  WeakAuras_DropDownMenu:Hide();
+                end
+              });
+            end
+          end
+          tinsert(self.menu, {
+            text = L["Convert to..."],
+            notCheckable = 1,
+            hasArrow = true,
+            menuList = convertMenu
+          });
+          tinsert(self.menu, {
+            text = L["Duplicate"],
+            notCheckable = 1,
+            func = self.callbacks.OnDuplicateClick
+          });
+        end
+
+        tinsert(self.menu, {
+          text = L["Set tooltip description"],
+          notCheckable = 1,
+          func = function() WeakAuras.ShowDisplayTooltip(data, nil, nil, nil, nil, nil, "desc") end
+        });
+
+
+        if (data.url and data.url ~= "") then
+          tinsert(self.menu, {
+            text = L["Copy URL"],
+            notCheckable = 1,
+            func = function() WeakAuras.ShowDisplayTooltip(data, nil, nil, nil, nil, nil, "url") end
+          });
+        end
+
+        tinsert(self.menu, {
+          text = L["Export to string..."],
+          notCheckable = 1,
+          func = function() WeakAuras.ExportToString(data.id) end
+        });
+        tinsert(self.menu, {
+          text = L["Export to Lua table..."],
+          notCheckable = 1,
+          func = function() WeakAuras.ExportToTable(data.id) end
+        });
+        tinsert(self.menu, {
+          text = " ",
+          notClickable = 1,
+          notCheckable = 1,
+        });
+        tinsert(self.menu, {
+          text = L["Delete"],
+          notCheckable = 1,
+          func = self.callbacks.OnDeleteClick
+        });
+
+        if (data.controlledChildren) then
+          tinsert(self.menu, {
+            text = L["Delete children and group"],
+            notCheckable = 1,
+            func = self.callbacks.OnDeleteAllClick
+          });
+        end
+        tinsert(self.menu, {
+          text = " ",
+          notClickable = 1,
+          notCheckable = 1,
+        });
+        tinsert(self.menu, {
+          text = L["Close"],
+          notCheckable = 1,
+          func = function() WeakAuras_DropDownMenu:Hide() end
+        });
         if(data.controlledChildren) then
-            tinsert(self.menu, 8, {
-                text = L["Delete children and group"],
-                notCheckable = 1,
-                func = self.callbacks.OnDeleteAllClick
-            });
             self:SetViewClick(self.callbacks.OnViewClick);
             self:SetViewTest(self.callbacks.ViewTest);
             self:DisableGroup();
             self.callbacks.UpdateExpandButton();
             self:SetOnExpandCollapse(function() WeakAuras.SortDisplayButtons(nil, true) end);
         else
-            local convertMenu = {};
-            for regionType, regionData in pairs(WeakAuras.regionOptions) do
-                if(regionType ~= "group" and regionType ~= "dynamicgroup" and regionType ~= "timer" and regionType ~= data.regionType) then
-                    tinsert(convertMenu, {
-                        text = regionData.displayName,
-                        notCheckable = 1,
-                        func = function()
-                            WeakAuras.ConvertDisplay(data, regionType);
-                            WeakAuras_DropDownMenu:Hide();
-                        end
-                    });
-                end
-            end
-            tinsert(self.menu, 3, {
-                text = L["Convert to..."],
-                notCheckable = 1,
-                hasArrow = true,
-                menuList = convertMenu
-            });
-            tinsert(self.menu, 4, {
-                text = L["Duplicate"],
-                notCheckable = 1,
-                func = self.callbacks.OnDuplicateClick
-            });
             self:SetViewRegion(WeakAuras.regions[data.id].region);
             self:EnableGroup();
         end
@@ -821,7 +835,7 @@ local methods = {
                                         end
                                     end
                                 end
-                                local icon = WeakAuras.GetIconFromSpellCache(name) or "Interface\\Icons\\INV_Misc_QuestionMark";
+                                local icon = WeakAuras.spellCache.GetIcon(name) or "Interface\\Icons\\INV_Misc_QuestionMark";
                                 tinsert(namestable, {left, name, icon});
                             end
                         end
@@ -847,10 +861,22 @@ local methods = {
             tinsert(namestable, " ");
             tinsert(namestable, {" ", "|cFF00FFFF"..L["Addon"]..": "..WeakAuras.IsDefinedByAddon(data.id)});
         end
-        if(data.desc and data.desc ~= "") then
-            tinsert(namestable, " ");
-            tinsert(namestable, "|cFFFFD100\""..data.desc.."\"");
+
+        local hasDescription = data.desc and data.desc ~= "";
+        local hasUrl = data.url and data.url ~= "";
+
+        if(hasDescription or hasUrl) then
+          tinsert(namestable, " ");
         end
+
+        if(hasDescription) then
+          tinsert(namestable, "|cFFFFD100\""..data.desc.."\"");
+        end
+
+        if (hasUrl) then
+          tinsert(namestable, "|cFFFFD100".. data.url);
+        end
+
         tinsert(namestable, " ");
         tinsert(namestable, {" ", "|cFF00FFFF"..L["Right-click for more options"]});
         if not(data.controlledChildren) then
@@ -941,7 +967,9 @@ local methods = {
             -- restore events and layout
             self.frame:SetScript("OnClick", self.callbacks.OnClickNormal)
             self:Enable()
-            self:Drop(true)
+            if (self.dragging) then
+              self:Drop(true)
+            end
         end
     end,
     ["ShowTooltip"] = function(self)

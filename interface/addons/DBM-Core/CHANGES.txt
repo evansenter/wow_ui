@@ -1,227 +1,141 @@
-tag e8c1638be1f6f98466bb8e41de3115167f7bef15 7.1.15
+tag c2c4254b115d315214e278eb5629a0c35efea55f 7.2.3
 Author:	subversion <svn@deadlybossmods.com>
-Date:	Thu Feb 16 21:44:29 2017 +0100
+Date:	Thu Apr 6 18:20:13 2017 +0200
 
-Tagging as 7.1.15
+Tagging as 7.2.3
 
-commit d90e7418f17f36aa3243e9a4c0ac3c2540b8c323
+commit adec88c4090c5a15ed7a6ea4969ae60fbf27df11
 Author: subversion <svn@deadlybossmods.com>
-Date:   Thu Feb 16 21:44:29 2017 +0100
+Date:   Thu Apr 6 18:20:13 2017 +0200
 
-    increment version number to 7.1.15
+    increment version number to 7.2.3
 
-commit b4bde65f2262a4500e0d43b2c0a4cdd83741f91f
+commit bcf765e941bdd2fb244fb816da80b7bd2d8c23e1
 Author: subversion <svn@deadlybossmods.com>
-Date:   Thu Feb 16 21:40:13 2017 +0100
+Date:   Thu Apr 6 13:13:14 2017 +0200
 
-    Omega via svn r15924:
-    Fix a bug that caused heavenly crash warning not to work on trash
-    Bump some HF revisions
+    Omega via svn r16140:
+    Kr update
 
-commit ffff4b8c60f9453eb4eb2407d53c953838346230
+commit b5e947354955068c53f6ded890aa6b7bbdcefdf6
 Author: subversion <svn@deadlybossmods.com>
-Date:   Thu Feb 16 21:14:29 2017 +0100
+Date:   Thu Apr 6 13:09:44 2017 +0200
 
-    tandanu via svn r15923:
-    fix AddMsg assignment
+    Omega via svn r16139:
+    And remove this
 
-commit 92b69a182e4124c4b654ee2beb3bd1cbb1959ed5
+commit 5d0c895b3bfe6f6706fb3a26387b501229e16c34
 Author: subversion <svn@deadlybossmods.com>
-Date:   Thu Feb 16 11:05:55 2017 +0100
+Date:   Thu Apr 6 13:06:57 2017 +0200
 
-    Omega via svn r15922:
-    And here too
+    Omega via svn r16138:
+    Disable combat mechanics, they don?\226?\128?\153t work even remotely correctly. Shouldn?\226?\128?\153t be needed anyways
 
-commit cc98968621bbcc9cc8bc5934c652a08e72994527
+commit ccc987a2f7f39c72e39c158f0f22641bbfc661ea
 Author: subversion <svn@deadlybossmods.com>
-Date:   Thu Feb 16 10:58:56 2017 +0100
+Date:   Thu Apr 6 09:22:01 2017 +0200
 
-    Omega via svn r15921:
-    Remove message from login though, but absolutely show it on zone in to any zone
+    ultrashining via svn r16137:
+    zhTW update
 
-commit 25804f45ce0939cbb6c8a6b588f0ebea7c957fba
+commit 3a329295e8a3fc668366c01fd76a61d885ee9a8e
 Author: subversion <svn@deadlybossmods.com>
-Date:   Thu Feb 16 10:51:27 2017 +0100
+Date:   Thu Apr 6 06:42:23 2017 +0200
 
-    Omega via svn r15920:
-    do V messages too
+    Omega via svn r16136:
+    Flame crash countdown for kihra
 
-commit 2cd36b4af36b8e0255240296292e93e07e80ba02
+commit a404c55f199cb73b5de72a8a3267a0b440ed2e70
 Author: subversion <svn@deadlybossmods.com>
-Date:   Thu Feb 16 10:45:43 2017 +0100
+Date:   Thu Apr 6 06:19:53 2017 +0200
 
-    Omega via svn r15919:
-    tweaks
+    Omega via svn r16135:
+    Add more countdowns to star auger
 
-commit 7d5d355559c176c6d500fca287104f28925bda51
+commit 9e2eacc664b4cf794f201b31741fc0782ec0e6bc
 Author: subversion <svn@deadlybossmods.com>
-Date:   Thu Feb 16 10:43:34 2017 +0100
+Date:   Thu Apr 6 00:07:31 2017 +0200
 
-    Omega via svn r15918:
-    prune some duplicate messages
-    Bump BW version
+    Omega via svn r16134:
+    Add loading for other 3 invasions and one new warning for val scenario
 
-commit 6bf7d6ed1d002051c79560111956e456e8801168
+commit 5e4cb3337c364a4bb50329e73b242cb2bf24e577
 Author: subversion <svn@deadlybossmods.com>
-Date:   Thu Feb 16 07:37:38 2017 +0100
+Date:   Wed Apr 5 14:32:43 2017 +0200
 
-    Omega via svn r15917:
-    Most of mythic guldan stuff, but more work to do. Just want to get this much out tonight. credits to justwait for sharing most of phase 3 stuff.
-    
-    Also fix two voice pack filters in maw of souls
+    Omega via svn r16133:
+    Tweak another timer
+    Attempt to fix voice pack filter on custom option text warnings
 
-commit c3f23addebdde1f63f48b37f89c159edaaaec7f9
+commit 4545671eda32790effe656b033890dcdb590bd45
 Author: subversion <svn@deadlybossmods.com>
-Date:   Thu Feb 16 02:28:25 2017 +0100
+Date:   Wed Apr 5 00:33:49 2017 +0200
 
-    Omega via svn r15916:
-    commit locals update so people can get started there. i?\226?\128?\153mstuck in raid for next 4 hours so i can?\226?\128?\153t push guldan mythic mod until after since it?\226?\128?\153s not quite finished.
+    Omega via svn r16132:
+    Update challenges message
 
-commit 1f96c3d29720341e144bfe85de35acc7ae932cfb
+commit 52ffd86663dec3402c73152cfc01dab7a73e2bcb
 Author: subversion <svn@deadlybossmods.com>
-Date:   Wed Feb 15 10:33:14 2017 +0100
+Date:   Wed Apr 5 00:18:49 2017 +0200
 
-    Omega via svn r15915:
-    better voice pack warnings though for non run out slams
+    Omega via svn r16131:
+    Preliminary invasion support. this supports two warnings in azsuna scenario
 
-commit abae057c60a64c944b12d8f2eecb96396f23b57b
+commit 94007a980943dd4e9b538912532ffa002dfbc9cd
 Author: subversion <svn@deadlybossmods.com>
-Date:   Wed Feb 15 10:23:20 2017 +0100
+Date:   Tue Apr 4 03:29:58 2017 +0200
 
-    Omega via svn r15914:
-    Add count to bonds of fel, by request
-    Change cd timers to next timers, they are pretty precise.
+    Omega via svn r16130:
+    Update Banned mods
 
-commit 4586a81e25c42398e0c0c2dfe0fe66207da139f2
+commit f6adfcfcd9bf3707fca32c1faf5d0c68fa415283
 Author: subversion <svn@deadlybossmods.com>
-Date:   Wed Feb 15 10:12:21 2017 +0100
+Date:   Mon Apr 3 20:42:22 2017 +0200
 
-    Omega via svn r15913:
-    Change Ablative Pulse to tank only warning by default. two tanks are enough to keep it interrupted, doesn?\226?\128?\153t need to spam everyone in raid.
+    Omega via svn r16129:
+    fix error
 
-commit 7e65a8e28c4445103c41c911b0ff4be8ea45d73c
+commit f2c84b8f24ef39f8ec5697fb9c79b0f1aa358536
 Author: subversion <svn@deadlybossmods.com>
-Date:   Wed Feb 15 10:08:15 2017 +0100
+Date:   Mon Apr 3 04:08:35 2017 +0200
 
-    Omega via svn r15912:
-    NP aura for exploding scrubbers, if trilliax scrubber mod isn?\226?\128?\153t installed.
+    Omega via svn r16128:
+    Bump revision
 
-commit e3e512b89a69d775eb6b9563a06e2f8b34a00302
+commit f18e63610f3911526410bee0fc177c572c7d8d51
 Author: subversion <svn@deadlybossmods.com>
-Date:   Wed Feb 15 09:25:10 2017 +0100
+Date:   Mon Apr 3 04:05:56 2017 +0200
 
-    Omega via svn r15911:
-    fix bug where melee were told to run out on every krosus slam instead of the ones they should run out on
+    Omega via svn r16127:
+    Add LFR timers for Elisande
+    Fix some other timer bugs in normal elisande and mythic elisande
 
-commit d07643dcf87bd565ad2c0962defbcb4f917c578d
+commit 766b08db25756a3036d27c1b72f0459999291d86
 Author: subversion <svn@deadlybossmods.com>
-Date:   Wed Feb 15 08:52:33 2017 +0100
+Date:   Sun Apr 2 22:43:54 2017 +0200
 
-    Omega via svn r15910:
-    Update mythic anomaly timers, which changed at some point to include a fast fast that wasn?\226?\128?\153t there the first week. No idea when this change was made though. I sort of space out on this farm boss and didn?\226?\128?\153t notice it and no one reported it til today. It?\226?\128?\153s fixed now though.
+    Omega via svn r16126:
+    Remove debug message forgot to remove
 
-commit a362c64e7ad4fd3e2cc77e30869b43f559b44f97
+commit dc7e4e53e97dd7fcdc25331f06ec97a31b95922f
 Author: subversion <svn@deadlybossmods.com>
-Date:   Tue Feb 14 00:15:15 2017 +0100
+Date:   Sun Apr 2 07:24:22 2017 +0200
 
-    Omega via svn r15909:
-    Fix the fix
+    Omega via svn r16125:
+    fix a bug where BuildVoiceCountdownCache would fail to set paths correctly if more than one were set to same voice.
+    Unfortunately I could find no fix that worked that didn?\226?\128?\153t require making it a LOT less inefficient. Fortunately it?\226?\128?\153s a one time function.
 
-commit d71f3e23342e0744a53ad85f6165791b1ea21c67
+commit 209633e717cd9796c0ee89214db815fc4c454ceb
 Author: subversion <svn@deadlybossmods.com>
-Date:   Tue Feb 14 00:01:50 2017 +0100
+Date:   Sun Apr 2 05:33:23 2017 +0200
 
-    Omega via svn r15908:
-    Make compatible with elvui
+    Omega via svn r16124:
+    updated version code for guild. may contain bugs
 
-commit 92907dd5bce07d2bd0885bfcadac7acee5a92448
+commit ac823f7bb142858c0dfee499775fbb56fcefa80f
 Author: subversion <svn@deadlybossmods.com>
-Date:   Mon Feb 13 23:56:22 2017 +0100
+Date:   Sat Apr 1 12:33:12 2017 +0200
 
-    Omega via svn r15907:
-    Fix stupid
-
-commit 74c355b065e9046f8896d3c15bbfa6d6657560f0
-Author: subversion <svn@deadlybossmods.com>
-Date:   Mon Feb 13 23:22:53 2017 +0100
-
-    Omega via svn r15906:
-    Couple mythic timer tweaks
-
-commit 4ab73a36640f004b8857cae4f9ed415aa702efdf
-Author: subversion <svn@deadlybossmods.com>
-Date:   Mon Feb 13 22:42:19 2017 +0100
-
-    Omega via svn r15905:
-    Bump BW version for version check
-
-commit d41091e0485b45c358f9b96c018e3b623976e865
-Author: subversion <svn@deadlybossmods.com>
-Date:   Mon Feb 13 22:03:20 2017 +0100
-
-    Omega via svn r15904:
-    Properly handle removing of ALL textures when no texture is passed
-
-commit 4bcde0cf7bf65e60642db889941aca6209a2a33a
-Author: subversion <svn@deadlybossmods.com>
-Date:   Mon Feb 13 03:44:07 2017 +0100
-
-    Omega via svn r15903:
-    Maiden of Vigilance mod
-
-commit f981bc87ac5f1ae80c6fee6c6a78666fed4fbb6f
-Author: subversion <svn@deadlybossmods.com>
-Date:   Sun Feb 12 19:49:24 2017 +0100
-
-    Omega via svn r15902:
-    more mythic tweaks
-
-commit 8152024b8057001d2218ae4831f802f7c99577aa
-Author: subversion <svn@deadlybossmods.com>
-Date:   Sun Feb 12 19:43:26 2017 +0100
-
-    Omega via svn r15901:
-    this is also 20 seconds on mythic
-
-commit 71f95db046f349de274fe9b5b6fe0194b757a7ce
-Author: subversion <svn@deadlybossmods.com>
-Date:   Sun Feb 12 19:33:40 2017 +0100
-
-    Omega via svn r15900:
-    And update timerShatterEssenceCD for mythic as well (20 seconds? i guess he has a soft enrage of get it dead in under a minute then!)
-
-commit 30798a4b3ec40ae9e5618d54773abe3d07829d46
-Author: subversion <svn@deadlybossmods.com>
-Date:   Sun Feb 12 19:24:47 2017 +0100
-
-    Omega via svn r15899:
-    Another batch of mythic timers (phase 2). these are drycoded by observed mathematical differences but should be right.
-
-commit 4a93b8c6e8277f4a0c26898170722e68e07a4763
-Author: subversion <svn@deadlybossmods.com>
-Date:   Sun Feb 12 19:10:56 2017 +0100
-
-    Omega via svn r15898:
-    Push first batch of mythic guldan timers since i?\226?\128?\153m being rushed :P
-
-commit 83c128868fc34d38ce369a7cd1aae5b205219bc7
-Author: subversion <svn@deadlybossmods.com>
-Date:   Sun Feb 12 06:21:30 2017 +0100
-
-    Omega via svn r15897:
-    Change low warning to 25% instead of 15%
-
-commit a40ebb871d399631475ce290c3a13c1f62a98647
-Author: subversion <svn@deadlybossmods.com>
-Date:   Sun Feb 12 05:44:59 2017 +0100
-
-    Omega via svn r15896:
-    Push Desolate Host mod (which is ugly as sin and still will need a ton of work/refactoring based on how the phasing works)
-
-commit b73796094e406a8d4231fe704f43041ab448b6b6
-Author: subversion <svn@deadlybossmods.com>
-Date:   Sat Feb 11 20:33:20 2017 +0100
-
-    tandanu via svn r15895:
+    tandanu via svn r16123:
     increment alpha version
 

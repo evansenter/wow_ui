@@ -372,34 +372,33 @@ function MT:CreateMTPopup()
 end
 
 function MT:RefreshPlayerSpellIconInfo()
-	MT.MACRO_ICON_FILENAMES = {}
-	local index = 1;
-	local numFlyouts = 0;
-
+	--if MT.MACRO_ICON_FILENAMES then return end
+	
+	-- We need to avoid adding duplicate spellIDs from the spellbook tabs for your other specs.
+	local activeIcons = {}
+	
 	for i = 1, GetNumSpellTabs() do
 		local tab, tabTex, offset, numSpells, _ = GetSpellTabInfo(i)
 		offset = offset + 1
 		local tabEnd = offset + numSpells
 		for j = offset, tabEnd - 1 do
 			--to get spell info by slot, you have to pass in a pet argument
-			local spellType, ID = GetSpellBookItemInfo(j, "player")
+			local spellType, ID = GetSpellBookItemInfo(j, "player");
 			if (spellType ~= "FUTURESPELL") then
-				local spellTexture = strupper(GetSpellBookItemTextureFileName(j, "player"))
-				if ( not string.match( spellTexture, "INTERFACE\\BUTTONS\\") ) then
-					MT.MACRO_ICON_FILENAMES[index] = gsub( spellTexture, "INTERFACE\\ICONS\\", "")
-					index = index + 1;
+				local fileID = GetSpellBookItemTexture(j, "player")
+				if (fileID) then
+					activeIcons[fileID] = true
 				end
 			end
 			if (spellType == "FLYOUT") then
-				local _, _, numSlots, isKnown = GetFlyoutInfo(ID);
+				local _, _, numSlots, isKnown = GetFlyoutInfo(ID)
 				if (isKnown and numSlots > 0) then
 					for k = 1, numSlots do 
 						local spellID, overrideSpellID, isKnown = GetFlyoutSlotInfo(ID, k)
 						if (isKnown) then
-							local spellTexture = GetSpellTextureFileName(spellID)
-							if spellTexture then
-								MT.MACRO_ICON_FILENAMES[index] = gsub( strupper(spellTexture), "INTERFACE\\ICONS\\", "")
-								index = index + 1
+							local fileID = GetSpellTexture(spellID)
+							if (fileID) then
+								activeIcons[fileID] = true
 							end
 						end
 					end
@@ -407,8 +406,13 @@ function MT:RefreshPlayerSpellIconInfo()
 			end
 		end
 	end
-	
-	GetLooseMacroIcons(MT.MACRO_ICON_FILENAMES)
+
+	MT.MACRO_ICON_FILENAMES = {}
+	for fileDataID in pairs(activeIcons) do
+		MT.MACRO_ICON_FILENAMES[#MT.MACRO_ICON_FILENAMES + 1] = fileDataID
+	end
+
+	GetLooseMacroIcons(MT.MACRO_ICON_FILENAMES )
 	GetLooseMacroItemIcons(MT.MACRO_ICON_FILENAMES)
 	GetMacroIcons(MT.MACRO_ICON_FILENAMES)
 	GetMacroItemIcons(MT.MACRO_ICON_FILENAMES)

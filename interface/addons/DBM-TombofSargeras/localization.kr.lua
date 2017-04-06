@@ -7,9 +7,11 @@ local L
 L= DBM:GetModLocalization(1862)
 
 L:SetTimerLocalization({
+	timerComboWamboCD =	"다음 유성/가시 (%d)"
 })
 
 L:SetOptionLocalization({
+	timerComboWamboCD =	"다음 몰아치는 유성/지옥불 가시 타이머 바 보기"
 })
 
 L:SetMiscLocalization({
@@ -49,6 +51,10 @@ L= DBM:GetModLocalization(1897)
 -- Fallen Avatar --
 ---------------------------
 L= DBM:GetModLocalization(1873)
+
+L:SetOptionLocalization({
+	InfoFrame =	"보스 기력을 정보 창에 표시"
+})
 
 ---------------------------
 -- Kil'jaeden --

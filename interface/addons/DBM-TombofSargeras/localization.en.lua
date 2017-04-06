@@ -6,9 +6,11 @@ local L
 L= DBM:GetModLocalization(1862)
 
 L:SetTimerLocalization({
+	timerComboWamboCD =	"Next Comet/Spike (%d)"
 })
 
 L:SetOptionLocalization({
+	timerComboWamboCD =	"Show timer for next Crashing Comet/Infernal Spike"
 })
 
 L:SetMiscLocalization({
@@ -48,6 +50,10 @@ L= DBM:GetModLocalization(1897)
 -- Fallen Avatar --
 ---------------------------
 L= DBM:GetModLocalization(1873)
+
+L:SetOptionLocalization({
+	InfoFrame =	"Show InfoFrame for boss power"
+})
 
 ---------------------------
 -- Kil'jaeden --

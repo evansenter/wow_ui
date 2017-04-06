@@ -101,7 +101,13 @@ module.db.topEnchGems = {
 }
 
 module.db.achievementsList = {
-	{	--Nightmare
+	{	--Nighthold
+		L.S_ZoneT19Suramar,
+		10829,10837,10838,10839,10840,10842,10843,10844,10848,10847,10846,10845,10849,10850,11195,
+	},{	--Trial of Valor
+		L.S_ZoneT19ToV,
+		11426,11396,11397,11398,11581,
+	},{	--Nightmare
 		L.S_ZoneT19Nightmare,
 		10818,10819,10820,10821,10822,10823,10824,10825,10826,10827,
 	
@@ -137,7 +143,11 @@ module.db.achievementsList = {
 	},
 }
 module.db.achievementsList_statistic = {
-	{	--Nightmare
+	{	--Nighthold
+		0,0,0,0,{10940,10941,10942,10943},{10944,10945,10946,10947},{10948,10949,10950,10951},{10952,10953,10954,10955},{10969,10970,10971,10972},{10965,10966,10967,10968},{10961,10962,10963,10964},{10956,10957,10959,10960},{10973,10974,10975,10976},{10977,10978,10979,10980},
+	},{	--Trial of Valor
+		0,{11407,11408,11409,11410},{11411,11412,11413,11414},{11415,11416,11417,11418},
+	},{	--Nightmare
 		0,0,0,{10911,10912,10913,10914},{10920,10921,10922,10923},{10924,10925,10926,10927},{10915,10916,10917,10918},{10928,10929,10930,10931},{10932,10933,10934,10935},{10936,10937,10938,10939},
 	},{	--Legion 5ppl
 		{10981,10982},{10890,10891,10892,10893,10894,10895},{10899,10900,10901},{10910},{10881,10882,10883},{10878,10879,10880},{10887,10888,10889},{10902,10903,10904},
@@ -297,9 +307,44 @@ function module.options:Load()
 	self.chkArtifact.id = 5
 	
 	do
-		local text = RELIC_TOOLTIP_TYPE:gsub(" %(.+$","")
+		local text = RELIC_TOOLTIP_TYPE:gsub("[%( ]*%%s[%) ]*","")
 		self.chkRelics = ELib:Radio(self,text):Point(260,-28+25):AddButton():OnClick(reloadChks)
 		self.chkRelics.id = 6
+	end
+	
+	local inspectScantip = CreateFrame("GameTooltip", "ExRTInspectViewerScanningTooltip", nil, "GameTooltipTemplate")
+	inspectScantip:SetOwner(UIParent, "ANCHOR_NONE")
+
+	local ScanRelicType_STR = RELIC_TOOLTIP_TYPE:gsub("([%(%)])","%%%1"):gsub("%%s","(.-)")
+	local ScanRelicType_Cache = {}
+	local function ScanRelicType(relicLink)
+		local _,itemID = strsplit(":",relicLink)
+		if ScanRelicType_Cache[itemID] then
+			return ScanRelicType_Cache[itemID]
+		end
+		inspectScantip:SetHyperlink(relicLink)
+		
+		for j=2, inspectScantip:NumLines() do
+			local text = _G["ExRTInspectViewerScanningTooltipTextLeft"..j]:GetText()
+			if text and text:find(ScanRelicType_STR) then
+				local type_name = text:match(ScanRelicType_STR)
+				
+				local type_name_lower = type_name:lower()
+				for id,str in pairs(module.db.relicLocalizated) do
+					if str:lower():find(type_name_lower) then
+						inspectScantip:ClearLines()
+						ScanRelicType_Cache[itemID] = id
+						return id
+					end
+				end
+				
+				inspectScantip:ClearLines()
+				ScanRelicType_Cache[itemID] = type_name
+				return type_name
+			end		
+		end
+		
+		inspectScantip:ClearLines()
 	end
 	
 	local function ItemsTrackDropDownClick(self)
@@ -315,8 +360,8 @@ function module.options:Load()
 	module.db.colorizeLowIlvl685 = VExRT.InspectViewer.ColorizeLowIlvl685
 	module.db.colorizeNoValorUpgrade = VExRT.InspectViewer.ColorizeNoValorUpgrade
 	
-	local colorizeLowIlvl630 = 860
-	local colorizeLowIlvl685 = 880
+	local colorizeLowIlvl630 = 875
+	local colorizeLowIlvl685 = 900
 	
 	self.chkItemsTrackDropDown = ELib:DropDown(self,300,7):Point(50,0):Size(50)
 	self.chkItemsTrackDropDown:Hide()
@@ -465,7 +510,7 @@ function module.options:Load()
 		end, arg1 = dropDownTable[4][1][i]}
 	end
 	
-	module.db.achievementList = 2
+	module.db.achievementList = 1
 	self.achievementsDropDown = ELib:DropDown(self,330,#module.db.achievementsList + 2):Point(405,-25):Size(249):SetText(ACHIEVEMENT_FILTER_TITLE)
 	self.achievementsDropDown:Hide()
 	self.achievementsDropDown.List = {}
@@ -685,6 +730,9 @@ function module.options:Load()
 									local itemColor = select(4,GetItemQualityColor(itemQuality or 1))
 									if itemQuality == 6 then
 										itemLevel = items_ilvl[slotID]
+										if slotID == 16 or slotID == 17 then
+											itemLevel = max(items_ilvl[16] or 0,items_ilvl[17] or 0)
+										end
 									end
 									line.items[j].text:SetText("|c"..(itemColor or "ffffffff")..(itemLevel or ""))
 									
@@ -886,6 +934,9 @@ function module.options:Load()
 							local it = 0
 							for j=1,#db do
 								local spellID = C_ArtifactUI.GetPowerInfo(db[j][1])
+								if ExRT.clientVersion >= 70200 then
+									spellID = spellID.spellID
+								end
 								
 								local spellTexture = GetSpellTexture(spellID)
 								
@@ -910,56 +961,41 @@ function module.options:Load()
 						
 						line.ilvl:SetText("")
 						
-						local db
-						for long_name,DB in pairs(module.db.artifactDB) do
-							if ExRT.F.delUnitNameServer(long_name) == ExRT.F.delUnitNameServer(name) then
-								if (not db) or (DB.time > db.time) then
-									db = DB
+						for j=1,3 do
+							local relicLink = data.items['relic'..j]
+							if relicLink then
+								local icon = line.items[j*5]
+								local _,_,_,ilvl,_,_,_,_,_,itemTexture = GetItemInfo(relicLink)
+								if not itemTexture then
+									local _,_,_,_,t = GetItemInfoInstant(relicLink)
+									itemTexture = t
 								end
-							end						
-						end
-						
-						if not db then
-							if not RefreshArtifactCache[ name ] then
-								line.refreshArtifact:Show()
-							else
-								local isAddonOn = false
-								for long_name,_ in pairs(parentModule.db.artifactNoResDB) do
-									if ExRT.F.delUnitNameServer(long_name) == ExRT.F.delUnitNameServer(name) then
-										isAddonOn = true
-										break
-									end						
-								end
-							
-								if isAddonOn then
-									line.otherInfo:SetText(L.BossWatcherDamageSwitchTabInfoNoInfo)
-								else
-									line.otherInfo:SetText(L.InspectViewerNoExRTAddon)
-								end
-								line.otherInfo:Show()
-								line.updateAP:Show()
-							end
-						else
-							line.updateAP:Show()
-							for j=1,3 do
-								local relicLink = db["relic"..j]
-								if relicLink then
-									local icon = line.items[j*5]
-									local _,_,_,ilvl,_,_,_,_,_,itemTexture = GetItemInfo(relicLink)
-									if not itemTexture then
-										local _,_,_,_,t = GetItemInfoInstant(relicLink)
-										itemTexture = t
-									end
-									icon.text:SetText(ilvl or "")
-									icon.texture:SetTexture(itemTexture or "")
-									icon.link = relicLink
-									icon:Show()
-								end
-								local relicType = db["relicType"..j]
+								icon.text:SetText(ilvl or "")
+								icon.texture:SetTexture(itemTexture or "")
+								icon.link = relicLink
+								icon:Show()
+								
+								local relicType = ScanRelicType(relicLink)
 								if relicType then
-									line["relic"..j]:SetText(module.db.relicLocalizated[relicType] or "")
+									if type(relicType) == 'number' then
+										relicType = module.db.relicLocalizated[relicType] or ""
+									end
+									line["relic"..j]:SetText(relicType)
+								else
+									line["relic"..j]:SetText("")
 								end
 							end
+						end	
+						
+						local weaponIlvl = 0
+						local items_ilvl = data.items_ilvl
+						if items_ilvl then
+							for slotID=16,17 do
+								weaponIlvl = max(weaponIlvl,items_ilvl[slotID] or 0)
+							end
+						end
+						if weaponIlvl > 0 then
+							line.ilvl:SetFormattedText("|cffe5cc7f%d",weaponIlvl)
 						end
 					end
 					
@@ -996,6 +1032,8 @@ function module.options:Load()
 					line.apinfo:SetText("")
 					
 					line.back:SetGradientAlpha("HORIZONTAL", 0, 0, 0, 0.5, 0, 0, 0, 0)
+					
+					line.perksData = nil
 				end
 				
 				if (nowDB[i][3] or not parentModule.db.inspectQuery[ name ]) and module.db.page < 3 then
@@ -1014,7 +1052,9 @@ function module.options:Load()
 			module.options.lines[i]:Hide()
 		end
 		
-		module.options.ScrollBar:SetMinMaxValues(1,max(#nowDB-module.db.perPage+1,1),nil,true):UpdateButtons()
+		if not module.options.ScrollBar.ignore then
+			module.options.ScrollBar:SetMinMaxValues(1,max(#nowDB-module.db.perPage+1,1),nil,true):UpdateButtons()
+		end
 		module.options.RaidIlvl()
 	end
 	self.ScrollBar:SetScript("OnValueChanged", module.options.ReloadPage)
@@ -1723,6 +1763,13 @@ function module.options:Load()
 	
 	local function SetupButton(self, powerID, anchorRegion, currRank, totalRanks)
 		local spellID, cost, currentRank, maxRank, bonusRanks, x, y, prereqsMet, isStart, isGoldMedal, isFinal = C_ArtifactUI.GetPowerInfo(powerID)
+
+		if ExRT.clientVersion >= 70200 then
+			cost, currentRank, maxRank, bonusRanks, x, y, prereqsMet, isStart, isGoldMedal, isFinal = 
+			spellID.cost, spellID.currentRank, spellID.maxRank, spellID.bonusRanks, spellID.position.x, spellID.position.y, spellID.prereqsMet, spellID.isStart, spellID.isGoldMedal, spellID.isFinal
+			spellID = spellID.spellID
+		end
+
 		self:ClearAllPoints()
 		self:SetPoint("CENTER", anchorRegion, "TOPLEFT", x * anchorRegion:GetWidth() / ARTIFACT_TRAIT_SCALE, -y * anchorRegion:GetHeight() / ARTIFACT_TRAIT_SCALE)
 		
@@ -1742,6 +1789,7 @@ function module.options:Load()
 		self.isStart = isStart
 		self.isGoldMedal = isGoldMedal
 		self.isFinal = isFinal
+		self.tier = 1
 	
 		self.isCompletelyPurchased = currRank == totalRanks or self.isStart
 		self.hasSpentAny = currRank > 0
@@ -1827,7 +1875,7 @@ function module.options:Load()
 			powersToData[ powerID ] = artifactData[i]
 		end
 		
-		for powerID,button in ipairs(PerksTab.powerIDToPowerButton) do
+		for powerID,button in pairs(PerksTab.powerIDToPowerButton) do
 			button:Hide()
 		end
 		for i, powerID in ipairs(powers) do
@@ -1955,17 +2003,27 @@ function module.options:Load()
 	
 	function module.options.showPage()
 		local count = 0
-		for _ in pairs(module.db.inspectDB) do
-			count = count + 1
+		local nowDB = {}
+		for name,data in pairs(module.db.inspectDB) do
+			table.insert(nowDB,{name,data})
 		end
 		for name,_ in pairs(module.db.inspectQuery) do
 			if not module.db.inspectDB[name] then
-				count = count + 1
+				table.insert(nowDB,{name})
 			end
 		end
+		ReloadPage_CreateNowDB(nowDB)
+		count = #nowDB
+		
 		local val = self.ScrollBar:GetValue()
 		local newMax = max(count-module.db.perPage+1,1)
-		self.ScrollBar:SetMinMaxValues(1,newMax):SetValue(min(val,newMax))
+		self.ScrollBar:SetMinMaxValues(1,newMax)
+		if val > newMax then
+			val = newMax
+		end
+		self.ScrollBar.ignore = true
+		self.ScrollBar:SetValue(val)
+		self.ScrollBar.ignore = nil
 		
 		module.options.ReloadPage()
 		

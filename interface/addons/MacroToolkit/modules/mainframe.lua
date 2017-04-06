@@ -1,4 +1,4 @@
-﻿local _G = _G
+local _G = _G
 local MT = MacroToolkit
 local CreateFrame, PlaySound, GameTooltip, GameTooltip_Hide, UnitName = CreateFrame, PlaySound, GameTooltip, GameTooltip_Hide, UnitName
 local format, string, ipairs = format, string, ipairs
@@ -77,11 +77,11 @@ function MT:CreateMTFrame()
 	mtfportrait:SetSize(96, 96)
 	mtfportrait:SetTexture("Interface\\AddOns\\MacroToolkit\\mt")
 	mtfportrait:SetPoint("TOPLEFT", -24, 24)
-	
+
 	local mttitle = mtframe:CreateFontString(nil, "BORDER", "GameFontNormal")
 	mttitle:SetText("Macro Toolkit")
 	mttitle:SetPoint("TOP", 0, -5)
-	
+
 	local drake, mterrorbg
 	local mtresizer = CreateFrame("Frame", nil, mtframe)
 	mtresizer:SetSize(638, 28)
@@ -182,7 +182,7 @@ function MT:CreateMTFrame()
 	local mtcharlt = mtframe:CreateFontString("MacroToolkitLimit", "ARTWORK", "GameFontHighlightSmall")
 	mtcharlt:SetSize(0, 10)
 	mtcharlt:SetPoint("BOTTOM", -165, 30)
-	
+
 	local mtselbutton = CreateFrame("CheckButton", "MacroToolkitSelMacroButton", mtframe, "MacroToolkitButtonTemplate")
 	mtselbutton:SetID(0)
 	mtselbutton:SetFrameStrata("HIGH")
@@ -194,19 +194,19 @@ function MT:CreateMTFrame()
 	mtscroll:SetSize(294, 146)
 	mtscroll:SetPoint("TOPLEFT", 12, -66)
 	ScrollFrame_OnLoad(mtscroll)
-	
+
 	local mtscrolltop = mtscroll:CreateTexture(nil, "ARTWORK")
 	mtscrolltop:SetTexture("Interface\\PaperDollInfoFrame\\UI-Character-ScrollBar")
 	mtscrolltop:SetSize(31, 102)
 	mtscrolltop:SetPoint("TOPLEFT", mtscroll, "TOPRIGHT", -2, 5)
 	mtscrolltop:SetTexCoord(0, 0.484375, 0, 0.4)
-	
+
 	local mtscrollbot = mtscroll:CreateTexture(nil, "ARTWORK")
 	mtscrollbot:SetTexture("Interface\\PaperDollInfoFrame\\UI-Character-ScrollBar")
 	mtscrollbot:SetSize(31, 106)
 	mtscrollbot:SetPoint("BOTTOMLEFT", mtscroll, "BOTTOMRIGHT", -2, -2)
 	mtscrollbot:SetTexCoord(0.515625, 1, 0, 0.4140625)
-	
+
 	local mtscrollmid = mtscroll:CreateTexture(nil, "ARTWORK")
 	mtscrollmid:SetTexture("Interface\\PaperDollInfoFrame\\UI-Character-ScrollBar")
 	mtscrollmid:SetSize(31, 1)
@@ -232,7 +232,7 @@ function MT:CreateMTFrame()
 	mteditbutton:SetFrameStrata("HIGH")
 	mteditbutton:SetSize(170, 22)
 	mteditbutton:SetPoint("TOPLEFT", mtselbg, 55, -30)
-	mteditbutton:SetScript("OnClick", 
+	mteditbutton:SetScript("OnClick",
 		function()
 			MT:SaveMacro()
 			if not MT.MTPF then MT.MTPF = MT:CreateMTPopup() end
@@ -273,7 +273,7 @@ function MT:CreateMTFrame()
 			ScrollFrameTemplate_OnMouseWheel(MacroToolkitFauxScrollFrame, value)
 			ScrollFrameTemplate_OnMouseWheel(this, value)
 		end)
-	
+
 	local function ontextchanged(this, userinput)
 		MT:UpdateCharLimit()
 		if not userinput then return end
@@ -285,14 +285,14 @@ function MT:CreateMTFrame()
 		ScrollingEdit_OnTextChanged(this, this:GetParent())
 		ScrollingEdit_OnTextChanged(MacroToolkitFauxText, MacroToolkitFauxScrollFrame)
 	end
-	
+
 	local mtmscrollchild = CreateFrame("EditBox", "MacroToolkitText", mtmscroll)
 	mtmscrollchild:SetMultiLine(true)
 	mtmscrollchild:SetAutoFocus(false)
 	mtmscrollchild:SetCountInvisibleLetters(true)
 	mtmscrollchild:SetSize(mtmscroll:GetSize())
 	mtmscrollchild:SetScript("OnTextChanged", ontextchanged)
-		
+
 	local function reformat(key)
 		if key == "enter" then mtmscrollchild:Insert("\n") end
 		local _, err = MT:FormatMacro(mtmscrollchild:GetText())
@@ -307,7 +307,7 @@ function MT:CreateMTFrame()
 		MacroToolkitFauxText.cursorHeight = h
 		MacroToolkitFauxText.handleCursorChange = true
 	end
-	
+
 	mtmscrollchild:SetScript("OnCursorChanged", oncursorchanged)
 	mtmscrollchild:SetScript("OnEnterPressed", function(this) reformat("enter") end)
 	mtmscrollchild:SetScript("OnSpacePressed", function(this) reformat("space") end)
@@ -331,7 +331,7 @@ function MT:CreateMTFrame()
 	local ebfontstring = MacroToolkitText:GetRegions()
 	ebfontstring:SetAlpha(0.4) -- make the main text fontstring alpha 0.4, rendering it transparent
 	-- ***
-	
+
 	local mtmfscrollchild = CreateFrame("EditBox", "MacroToolkitFauxText", mtmfscroll)
 	mtmfscrollchild:SetMultiLine(true)
 	mtmfscrollchild:SetAutoFocus(false)
@@ -344,14 +344,14 @@ function MT:CreateMTFrame()
 	mtmfscrollchild:SetFont(font, MT.db.profile.fonts.edsize)
 	mtmfscrollchild:SetScript("OnEditFocusGained", function() mtmscrollchild:SetFocus() end)
 	mtmfscroll:SetScrollChild(mtmfscrollchild)
-	
+
 	mterrorbg = CreateFrame("Frame", "MacroToolkitErrorBg", mtframe)
 	mterrorbg:SetPoint("TOPLEFT", 328, -289)
 	mterrorbg:SetPoint("BOTTOMRIGHT", -8, 40)
 	mterrorbg:SetBackdrop({bgFile = "Interface\\Tooltips\\UI-Tooltip-Background", edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", edgeSize = 16, tileSize = 16, tile = true, insets = {left = 5, right = 5, top = 5, bottom = 5}})
 	mterrorbg:SetBackdropBorderColor(_G.TOOLTIP_DEFAULT_COLOR.r, _G.TOOLTIP_DEFAULT_COLOR.g, _G.TOOLTIP_DEFAULT_COLOR.b)
 	mterrorbg:SetBackdropColor(_G.TOOLTIP_DEFAULT_BACKGROUND_COLOR.r, _G.TOOLTIP_DEFAULT_BACKGROUND_COLOR.g, _G.TOOLTIP_DEFAULT_BACKGROUND_COLOR.b)
-	
+
 	local mterrorscroll = CreateFrame("ScrollFrame", "MacroToolkitErrorScrollFrame", mterrorbg, "UIPanelScrollFrameTemplate")
 	mterrorscroll:SetPoint("TOPLEFT", 10, -6)
 	mterrorscroll:SetPoint("BOTTOMRIGHT", -26, 4)
@@ -374,7 +374,7 @@ function MT:CreateMTFrame()
 	local mterrort = mterrorscroll:CreateFontString("MacroToolkitErrorLabel", "ARTWORK", "GameFontHighlightSmall")
 	mterrort:SetFormattedText("%s:", _G.ERRORS)
 	mterrort:SetPoint("BOTTOMLEFT", mterrorscroll, "TOPLEFT", -3, 5)
-	
+
 	local mttextbutton = CreateFrame("Button", nil, mtframe)
 	mttextbutton:SetSize(286, 85)
 	mttextbutton:SetPoint("TOPLEFT", mtmfscrollchild)
@@ -385,7 +385,7 @@ function MT:CreateMTFrame()
 	mtcancelbutton:SetFrameStrata("HIGH")
 	mtcancelbutton:SetSize(80, 22)
 	mtcancelbutton:SetPoint("TOPLEFT", 245, -263)
-	mtcancelbutton:SetScript("OnClick", 
+	mtcancelbutton:SetScript("OnClick",
 		function()
 			PlaySound("igMainMenuOptionCheckBoxOn")
 			MT:MacroFrameUpdate()
@@ -398,7 +398,7 @@ function MT:CreateMTFrame()
 	mtsavebutton:SetFrameStrata("HIGH")
 	mtsavebutton:SetSize(80, 22)
 	mtsavebutton:SetPoint("BOTTOM", mtcancelbutton, "TOP", 0, 15)
-	mtsavebutton:SetScript("OnClick", 
+	mtsavebutton:SetScript("OnClick",
 		function()
 			PlaySound("igMainMenuOptionCheckBoxOn")
 			MT:SaveMacro()
@@ -406,7 +406,7 @@ function MT:CreateMTFrame()
 			if MT.MTPF then MT.MTPF:Hide() end
 			MacroToolkitText:ClearFocus()
 		end)
-	
+
 	local mcopy
 	local mttab1 = CreateFrame("Button", "MacroToolkitFrameTab1", mtframe, "TabButtonTemplate")
 	--mttab1:SetText(_G.GENERAL_MACROS)
@@ -430,7 +430,7 @@ function MT:CreateMTFrame()
 			MT:GetLastBackupDate()
 			mcopy:Hide()
 		end)
-	
+
 	local mttab2 = CreateFrame("Button", "MacroToolkitFrameTab2", mtframe, "TabButtonTemplate")
 	mttab2:SetID(2)
 	mttab2:SetPoint("LEFT", mttab1, "RIGHT", 0, 0)
@@ -461,7 +461,7 @@ function MT:CreateMTFrame()
 			MT:GetLastBackupDate()
 			mcopy:Show()
 		end)
-	
+
 	local mttab3 = CreateFrame("Button", "MacroToolkitFrameTab3", mtframe, "TabButtonTemplate")
 	mttab3:SetID(3)
 	mttab3:SetPoint("LEFT", mttab2, "RIGHT", 0, 0)
@@ -492,7 +492,7 @@ function MT:CreateMTFrame()
 
 	mcopy = CreateFrame("Button", "MacroToolkitCopyButton", mtframe)
 	mcopy:SetSize(32, 32)
-	
+
 	--mcopy:SetPoint("TOPLEFT", -30, -60)
 	mcopy:SetPoint("LEFT", mttab3, "RIGHT", 0, -3)
 	mcopy:SetScript("OnEnter",
@@ -548,7 +548,7 @@ function MT:CreateMTFrame()
 	mtshorten:SetFrameStrata("HIGH")
 	mtshorten:SetFrameLevel(lvl)
 	mtshorten:SetPoint("LEFT", mtex, "RIGHT", 00, 0)
-	mtshorten:SetScript("OnClick", 
+	mtshorten:SetScript("OnClick",
 		function()
 			local mt, c = MT:ShortenMacro(mtmscrollchild:GetText())
 			mtmscrollchild:SetText(mt)
@@ -557,13 +557,13 @@ function MT:CreateMTFrame()
 			mtframe.textChanged = true
 			MT:ShowShortened(c)
 		end)
-		
+
 	local mtnew = CreateFrame("Button", "MacroToolkitNew", mtframe, "UIPanelButtonTemplate")
 	mtnew:SetText(_G.NEW)
 	mtnew:SetSize(80, 22)
 	mtnew:SetFrameLevel(lvl)
 	mtnew:SetPoint("BOTTOMRIGHT", -84, 4)
-	mtnew:SetScript("OnClick", 
+	mtnew:SetScript("OnClick",
 		function()
 			MT:SaveMacro()
 			if not MT.MTPF then MT.MTPF = MT:CreateMTPopup() end
@@ -579,7 +579,7 @@ function MT:CreateMTFrame()
 	mtexit:SetScript("OnClick", HideParentPanel)
 
 	MT.dwfunc =
-		function() 
+		function()
 			if MT.db.profile.doublewide then
 				if not mterrorbg:IsVisible() then
 					mttextbg:SetPoint("BOTTOMRIGHT", mterrorbg, "BOTTOMRIGHT")
@@ -597,7 +597,7 @@ function MT:CreateMTFrame()
 
 	PanelTemplates_SetNumTabs(mtframe, 3)
 	PanelTemplates_SetTab(mtframe, 1)
-	mtframe:SetScript("OnShow", 
+	mtframe:SetScript("OnShow",
 		function()
 			if MT.db.profile.override then
 				if not (MacroFrameText == MacroToolkitText) then MacroFrameText = MacroToolkitText end
@@ -614,7 +614,7 @@ function MT:CreateMTFrame()
 			MT.dwfunc()
 		end)
 
-	mtframe:SetScript("OnHide", 
+	mtframe:SetScript("OnHide",
 		function()
 			if MT.MTPF then MT.MTPF:Hide() end
 			MT:SaveMacro()
@@ -721,7 +721,7 @@ function MT:CreateMTFrame()
 	mtscriptdd:SetList(ddvalues)
 	mtscriptdd:SetWidth(200)
 	mtscriptdd:SetLabel(format("%s:", L["Insert special"]))
-	mtscriptdd:SetCallback("OnValueChanged", 
+	mtscriptdd:SetCallback("OnValueChanged",
 		function(info, name, key)
 			MT.insertspecial = key
 			if MT:FindScript(ddvalues[key])[3] == "raidtarget" then
@@ -768,7 +768,7 @@ function MT:CreateMTFrame()
 	mtchan:SetCallback("OnValueChanged", function(info, name, key) MT.channel = key end)
 	mtchan:SetPoint("TOPLEFT", mtscriptdd.frame, "BOTTOMLEFT", 0, -7)
 	mtchan.frame:Hide()
-	
+
 	mtseltarget = AceGUI:Create("EditBox")
 	mtseltarget.frame:SetParent(mtframe)
 	mtseltarget.label:SetTextColor(1, 1, 1, 1)
@@ -777,7 +777,7 @@ function MT:CreateMTFrame()
 	mtseltarget:SetCallback("OnTextChanged", function(info, name, text) MT.markertarget = text end)
 	mtseltarget:SetPoint("TOPLEFT", mtscriptdd.frame, "BOTTOMLEFT", 0, -7)
 	mtseltarget.frame:Hide()
-	
+
 	local mtmarkers = {}
 	for m = 1, 8 do mtmarkers[m] = format("%s0|t", _G.ICON_LIST[_G.ICON_TAG_LIST[format("rt%d", m)]]) end
 	mtmarkerdd = AceGUI:Create("Dropdown")
@@ -789,7 +789,7 @@ function MT:CreateMTFrame()
 	mtmarkerdd:SetCallback("OnValueChanged", function(info, name, key) MT.targetmarker = key end)
 	mtmarkerdd:SetPoint("LEFT", mtseltarget.frame, "RIGHT", 20, 0)
 	mtmarkerdd.frame:Hide()
-	
+
 	local mtaddslot = CreateFrame("Button", "MacroToolkitAddSlot", mtframe, "UIPanelButtonTemplate")
 	mtaddslot:SetText(_G.KEY_INSERT)
 	mtaddslot:SetSize(80, 22)
@@ -811,7 +811,7 @@ function MT:CreateMTFrame()
 				mtmfscrollchild:SetText(m)
 			end
 		end)
-		
+
 	local mtslotdd = AceGUI:Create("Dropdown")
 	mtslotdd.frame:SetParent(mtaddslot)
 	mtslotdd.label:SetTextColor(1, 1, 1, 1)
@@ -875,8 +875,10 @@ function MT:CreateMTFrame()
 	mtbbutton:SetSize(16, 16)
 	mtbbutton:SetPoint("LEFT", MT.brokericon, "RIGHT")
 	mtbbutton:SetScript("OnLeave", GameTooltip_Hide)
+	--mtbbutton:SetFrameLevel(99)
+	mtbbutton:SetFrameLevel(mtmscroll:GetFrameLevel() + 1)
 	mtbrokericon:Hide()
-	
+
 	local mterroricon = CreateFrame("Frame", "MacroToolkitErrorIcon", mtframe)
 	mterroricon:SetSize(16, 16)
 	local mteit = mterroricon:CreateTexture(nil, "ARTWORK")
@@ -899,82 +901,45 @@ function MT:CreateMTFrame()
 end
 
 function MT:UpdateIcon(this, justicon)
-	--this is proving difficult to get working properly, so disabled for the time being
 	return
-	
-	--[[
-	local index, icon = select(3, string.find(this:GetName(), "MTSB(%d+)"))
-	--index = MT:GetExMacroIndex(index)
-	if not index then return end
-	local macro, isspell, item = this:GetAttribute("macrotext"), false, ""
-	--local isdynamic = this:GetAttribute("dynamic")
-	--if not justicon and not isdynamic then return end
-	local mtext = {strsplit("\n", macro)}
-	local showtext
-	if mtext[1] then
-		if strsub(mtext[1], 1, 6) == "#show " then showtext = strsub(mtext[1], 7)
-		elseif strsub(mtext[1], 1, 1) == "#showtooltip " then showtext = strsub(mtext[1], 14) end
-	end
-	if showtext then
-		showtext = strtrim(showtext)
-		if showtext ~= "" then
-			showtext = SecureCmdOptionParse(showtext)
-			if showtext and showtext ~= "" then
-				local num = tonumber(showtext)
-				local sicon, iicon
-				if not num then
-					sicon = GetSpellTexture(showtext)
-					iicon = GetItemIcon(showtext)
-				end
-				if not justicon then
-					if num then
-						local name = GetItemInfo(GetInventoryItemLink("player", num))
-						if name then SetMacroItem(index, name) end
-					elseif sicon then SetMacroSpell(index, showtext)
-					elseif iicon then SetMacroItem(index, showtext)	end
-					return
-				elseif num then
-					if num then return GetInventoryItemTexture("player", num)
-					else return sicon or iicon end
-				end
-						
-			end
-			return nil
-		end
-	end
- 
-	for _, mline in ipairs(mtext) do
-		if mline then
-			local cmd = select(3, MT:ParseMacro(mline))
-			if MT:IsCast(cmd) or MT:IsCastSequence(cmd) then
-				local spell, target = SecureCmdOptionParse(mline)
-				if MT:IsCastSequence(cmd) then
-					if spell then
-						local idx, it, sp = QueryCastSequence(spell)
-						spell = sp or it
-						if spell then if string.sub(spell, 1, 1) == "!" then spell = string.sub(spell, 2) end end
-					end
-				end
-				if spell then
-					icon = select(3, GetSpellInfo(spell))
-					if icon then
-						if not justicon then SetMacroSpell(index, spell, target) end
-						isspell = true
-						break
-					elseif item == "" then
-						item = spell
-					end
-				end
-			end
-		end
-	end
-	if not isspell then
-		icon = GetItemIcon(item)
-		if not justicon then SetMacroItem(index, item) end
-	end
-	if justicon then return icon end
-	]]--
 end
+
+--local stateCode = [[
+--	local command, target, action = strmatch(newstate or "", "^(.*),(.*)>%s*(.*)")
+--	if target == "" or target == "target" then target = nil end
+--	control:CallMethod("macroEventHandlers", command, target, action)
+--	control:CallMethod("updateMacro", command, target, action)
+--]]
+
+--[[
+local function macroEventHandlers()
+end
+
+local function updateMacro()
+end
+
+local function stateHandlerOnEvent()
+end
+
+local frunction stateHandlerOnUpdate()
+end
+
+local registerStateHandler(frame)
+	local sh = CreateFrame("frame", nil, frame, "SecureHandlerStateTemplate")
+	frame.stateHandler = sh
+	
+	sh:RegisterEvent("ACTIONBAR_SLOT_CHANGED")
+	sh:RegisterEvent("BAG_UPDATE_DELAYED")
+	sh:RegisterEvent("CRITERIA_UPDATE")
+	sh:RegisterEvent("MERCHANT_CLOSED")
+	sh:RegisterEvent("PLAYER_EQUIPMENT_CHANGED")
+	sh:RegisterEvent("SPELLS_CHANGED")
+	sh:RegisterEvent("UNIT_INVENTORY_CHANGED")
+	sh:RegisterEvent("UPDATE_MACROS")
+	sh:SetScript("OnEvent", )
+	
+end
+]]--
 
 function MT:CreateSecureFrames()
 	for b = 1, _G.MAX_ACCOUNT_MACROS + _G.MAX_CHARACTER_MACROS do
@@ -984,9 +949,9 @@ function MT:CreateSecureFrames()
 		frame:SetAttribute("type", "macro")
 		frame:SetAttribute("macrotext", "")
 		frame:SetAttribute("dynamic", false)
-		frame.MTUpdateIcon = function(this) MT:UpdateIcon(this) end
-		frame:WrapScript(frame, "OnClick", "self:CallMethod('MTUpdateIcon')")
+		--registerStateHandler(frame)
 	end
+
 	--extra macros
 	for b = 1001, 1000 + _G.MAX_ACCOUNT_MACROS do
 		local frame = CreateFrame("Button", format("MTSB%d", b), nil, "SecureActionButtonTemplate, SecureHandlerBaseTemplate")

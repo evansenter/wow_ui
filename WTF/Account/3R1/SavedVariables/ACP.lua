@@ -2,7 +2,6 @@
 ACP_Data = {
 	["sorter"] = "Group By Name",
 	["NoRecurse"] = false,
-	["NoChildren"] = true,
 	["AddonSet"] = {
 		{
 			"ActionBarSaver", -- [1]
@@ -276,34 +275,34 @@ ACP_Data = {
 		{
 			"AskMrRobot", -- [1]
 			"Auctionator", -- [2]
-			"autoturnin", -- [3]
-			"Bartender4", -- [4]
-			"BlockChinese", -- [5]
-			"DeathNote", -- [6]
-			"ErrorFilter", -- [7]
-			"GarrisonMissionManager", -- [8]
-			"GTFO", -- [9]
-			"HandyNotes", -- [10]
-			"HandyNotes_LegionTreasures", -- [11]
-			"InFlight", -- [12]
-			"InFlight_Load", -- [13]
-			"InstancePortals", -- [14]
-			"LibChatAnims", -- [15]
-			"LibStub", -- [16]
-			"LibSharedMedia-3.0", -- [17]
-			"MacroToolkit", -- [18]
-			"MacroToolkitIcons", -- [19]
-			"Masque", -- [20]
-			"BlizzBuffsFacade", -- [21]
-			"ShadowedUFFacade", -- [22]
-			"Masque_Caith", -- [23]
-			"MikScrollingBattleText", -- [24]
-			"MoveAnything", -- [25]
-			"MSBTOptions", -- [26]
-			"OmniCC", -- [27]
-			"OmniCC_Config", -- [28]
-			"Pawn", -- [29]
-			"Postal", -- [30]
+			"Bartender4", -- [3]
+			"BlockChinese", -- [4]
+			"DeathNote", -- [5]
+			"ErrorFilter", -- [6]
+			"GarrisonMissionManager", -- [7]
+			"GTFO", -- [8]
+			"HandyNotes", -- [9]
+			"HandyNotes_LegionTreasures", -- [10]
+			"InFlight", -- [11]
+			"InFlight_Load", -- [12]
+			"InstancePortals", -- [13]
+			"LibChatAnims", -- [14]
+			"LibStub", -- [15]
+			"LibSharedMedia-3.0", -- [16]
+			"MacroToolkit", -- [17]
+			"MacroToolkitIcons", -- [18]
+			"Masque", -- [19]
+			"BlizzBuffsFacade", -- [20]
+			"ShadowedUFFacade", -- [21]
+			"Masque_Caith", -- [22]
+			"MikScrollingBattleText", -- [23]
+			"MoveAnything", -- [24]
+			"MSBTOptions", -- [25]
+			"OmniCC", -- [26]
+			"OmniCC_Config", -- [27]
+			"Pawn", -- [28]
+			"Postal", -- [29]
+			"PremadeGroupsFilter", -- [30]
 			"Quartz", -- [31]
 			"RaidFrameIcons", -- [32]
 			"RaidFrameIndicators", -- [33]
@@ -354,14 +353,16 @@ ACP_Data = {
 			"DBM-Party-Legion", -- [78]
 			"DBM-PvP", -- [79]
 			"DBM-Nighthold", -- [80]
-			"DBM-TrialofValor", -- [81]
-			"DBM-WorldEvents", -- [82]
+			"DBM-TombofSargeras", -- [81]
+			"DBM-TrialofValor", -- [82]
+			"DBM-WorldEvents", -- [83]
 			["name"] = "Minimal",
 		}, -- [4]
 	},
+	["NoChildren"] = true,
 	["collapsed"] = {
-		["BigWigs"] = true,
 		["OmniCC"] = true,
+		["BigWigs"] = true,
 	},
 	["ProtectedAddons"] = {
 		["ACP"] = true,

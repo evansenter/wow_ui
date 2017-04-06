@@ -178,6 +178,8 @@ function module.options:Load()
 		{1114,1958,1962,2008},	--Один,Гарм,Хелия
 		{1115,1957,1954,1961,1960,1964,1965,1959,2017,2031},	--Оперный зал,Благочестивая дева,Мороуз,Ловчий Аттумен,Смотритель,Тень Медива,Пожиратель маны,Виз\'адуум Всевидящий,Ночная Погибель
 		{1088,1849,1865,1867,1871,1862,1886,1842,1863,1872,1866},	--Скорпирон,Хрономатическая аномалия,Триллиакс,Заклинательница клинков Алуриэль,Тихондрий,Верховный ботаник Тел\'арн,Крос,Звездный авгур Этрей,Великий магистр Элисанда,Гул\'дан
+		{1146,2055,2057,2039,2053},				--ToS 5ppl
+		{1147,2032,2048,2036,2037,2050,2054,2052,2038,2051},	--ToS
 	}
 
 	local LegacyDiffs = {
@@ -221,7 +223,7 @@ function module.options:Load()
 		str = format("%d:%02d",m,s)
 		if num == 0 then return str end
 		local h = num % 24
-		num = floor(num / 60)
+		num = floor(num / 24)
 		str = format("%d:%02d:%02d",h,m,s)
 		if num == 0 then return str end
 		return num .. "." .. str
@@ -307,7 +309,7 @@ function module.options:Load()
 								encounterLine.pulls = encounterLine.pulls + 1
 							else
 								encounterLine.wipeTime = max( encounterLine.wipeTime or 0, pullTime )
-								if not pullTime or pullTime > minPullTime or pullTime == 0 then
+								if not pullTime or pullTime >= minPullTime or pullTime == 0 then
 									encounterLine.pulls = encounterLine.pulls + 1
 								end
 							end
@@ -347,9 +349,9 @@ function module.options:Load()
 				
 				local totalTime,isFK = 0
 				local legitPulls = 0
-				-- redo firstkill counter, cuz exist error if you kill boss on another char
+
 				for i=1,#encounterData.pullTable do
-					if (encounterData.pullTable[i].d or 31) >= 30 or encounterData.pullTable[i].d == 0 then
+					if not encounterData.pullTable[i].d or encounterData.pullTable[i].d >= minPullTime or encounterData.pullTable[i].d == 0 then
 						legitPulls = legitPulls + 1
 					end
 					if not isFK and encounterData.pullTable[i].k then

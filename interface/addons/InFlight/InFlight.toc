@@ -2,7 +2,7 @@
 ## Title: InFlight
 ## Notes: Statusbar timer for your flightpaths.
 ## Author: TotalPackage
-## Version: 7.1.001
+## Version: 7.1.002
 
 ## SavedVariables: InFlightVars, InFlightDB
 ## SavedVariablesPerCharacter: InFlightCharDB

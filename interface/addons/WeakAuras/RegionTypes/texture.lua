@@ -1,5 +1,3 @@
--- GLOBALS: WeakAuras UIParent
-
 local root2 = math.sqrt(2);
 local halfroot2 = root2/2;
 
@@ -42,14 +40,7 @@ local function modify(parent, region, data)
     region.texture:SetBlendMode(data.blendMode);
     --region.texture:SetRotation((data.rotation / 180) * math.pi);
     region:ClearAllPoints();
-    local anchorFrame = WeakAuras.GetAnchorFrame(data.id, data.anchorFrameType, parent, data.anchorFrameFrame);
-    region:SetParent(anchorFrame);
-    region:SetPoint(data.selfPoint, anchorFrame, data.anchorPoint, data.xOffset, data.yOffset);
-    if(data.frameStrata == 1) then
-        region:SetFrameStrata(region:GetParent():GetFrameStrata());
-    else
-        region:SetFrameStrata(WeakAuras.frame_strata_types[data.frameStrata]);
-    end
+    WeakAuras.AnchorFrame(data, region, parent);
 
     local function GetRotatedPoints(degrees)
         local angle = rad(135 - degrees);

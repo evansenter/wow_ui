@@ -483,7 +483,13 @@ local function onEquipGearSetComplete()
 	end
 	if item then
 		Amr.GetItemInfo(item.id, function(customArg, name, link, quality, iLevel, reqLevel, class, subclass, maxStack, equipSlot, texture)
-			SaveEquipmentSet("AMR " .. specName, texture)
+			local setname = "AMR " .. specName
+			local setid = C_EquipmentSet.GetEquipmentSetID(setname)
+			if setid then
+				C_EquipmentSet.SaveEquipmentSet(setid, texture)
+			else
+				C_EquipmentSet.CreateEquipmentSet(setname, texture)
+			end
 		end)
 	end
 end

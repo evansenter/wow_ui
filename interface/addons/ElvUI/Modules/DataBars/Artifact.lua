@@ -1,5 +1,6 @@
 local E, L, V, P, G = unpack(select(2, ...)); --Inport: Engine, Locales, PrivateDB, ProfileDB, GlobalDB
 local mod = E:GetModule('DataBars');
+local LSM = LibStub("LibSharedMedia-3.0")
 
 --Cache global variables
 --Lua functions
@@ -7,17 +8,19 @@ local _G = _G
 local tonumber, select, pcall = tonumber, select, pcall
 local format, gsub, strmatch, strfind = string.format, string.gsub, string.match, string.find
 --WoW API / Variables
-local C_ArtifactUIGetEquippedArtifactInfo = C_ArtifactUI.GetEquippedArtifactInfo
+local BreakUpLargeNumbers = BreakUpLargeNumbers
+local C_ArtifactUI_GetEquippedArtifactInfo = C_ArtifactUI.GetEquippedArtifactInfo
 local GetContainerItemInfo = GetContainerItemInfo
 local GetContainerItemLink = GetContainerItemLink
 local GetContainerNumSlots = GetContainerNumSlots
+local GetItemSpell = GetItemSpell
+local GetSpellInfo = GetSpellInfo
 local HasArtifactEquipped = HasArtifactEquipped
 local HideUIPanel = HideUIPanel
 local InCombatLockdown = InCombatLockdown
 local MainMenuBar_GetNumArtifactTraitsPurchasableFromXP = MainMenuBar_GetNumArtifactTraitsPurchasableFromXP
 local ShowUIPanel = ShowUIPanel
 local SocketInventoryItem = SocketInventoryItem
-local AP_NAME = format("|cFFE6CC80%s|r", ARTIFACT_POWER)
 local ARTIFACT_POWER = ARTIFACT_POWER
 local ARTIFACT_POWER_TOOLTIP_BODY = ARTIFACT_POWER_TOOLTIP_BODY
 
@@ -49,8 +52,9 @@ function mod:UpdateArtifact(event, unit)
 		end
 
 		local text = ''
-		local _, _, _, _, totalXP, pointsSpent = C_ArtifactUIGetEquippedArtifactInfo();
-		local _, xp, xpForNextPoint = MainMenuBar_GetNumArtifactTraitsPurchasableFromXP(pointsSpent, totalXP);
+		local _, _, _, _, totalXP, pointsSpent, _, _, _, _, _, _, artifactTier = C_ArtifactUI_GetEquippedArtifactInfo();
+		local _, xp, xpForNextPoint = MainMenuBar_GetNumArtifactTraitsPurchasableFromXP(pointsSpent, totalXP, artifactTier);
+
 		bar.statusBar:SetMinMaxValues(0, xpForNextPoint)
 		bar.statusBar:SetValue(xp)
 
@@ -76,6 +80,8 @@ function mod:UpdateArtifact(event, unit)
 			text = format('%s', E:ShortValue(xpForNextPoint - xp))
 		elseif textFormat == 'CURREM' then
 			text = format('%s - %s', E:ShortValue(xp), E:ShortValue(xpForNextPoint - xp))
+		elseif textFormat == 'CURPERCREM' then
+			text = format('%s - %d%% (%s)', E:ShortValue(xp), xp / xpForNextPoint * 100, E:ShortValue(xpForNextPoint - xp))
 		end
 
 		bar.text:SetText(text)
@@ -92,14 +98,15 @@ function mod:ArtifactBar_OnEnter()
 	GameTooltip:AddLine(ARTIFACT_POWER)
 	GameTooltip:AddLine(' ')
 
-	local _, _, _, _, totalXP, pointsSpent = C_ArtifactUIGetEquippedArtifactInfo();
-	local numPointsAvailableToSpend, xp, xpForNextPoint = MainMenuBar_GetNumArtifactTraitsPurchasableFromXP(pointsSpent, totalXP);
+	local _, _, _, _, totalXP, pointsSpent, _, _, _, _, _, _, artifactTier = C_ArtifactUI_GetEquippedArtifactInfo();
+	local numPointsAvailableToSpend, xp, xpForNextPoint = MainMenuBar_GetNumArtifactTraitsPurchasableFromXP(pointsSpent, totalXP, artifactTier);
+
 	local remaining = xpForNextPoint - xp
 	local apInBags = self.BagArtifactPower
 
-	GameTooltip:AddDoubleLine(L["XP:"], format(' %d / %d (%d%%)', xp, xpForNextPoint, xp/xpForNextPoint * 100), 1, 1, 1)
-	GameTooltip:AddDoubleLine(L["Remaining:"], format(' %d (%d%% - %d %s)', xpForNextPoint - xp, remaining / xpForNextPoint * 100, 20 * remaining / xpForNextPoint, L["Bars"]), 1, 1, 1)
-	GameTooltip:AddDoubleLine(L["In Bags:"], format(' %d (%d%% - %d %s)', apInBags, apInBags / xpForNextPoint * 100, 20 * apInBags / xpForNextPoint, L["Bars"]), 1, 1, 1)
+	GameTooltip:AddDoubleLine(L["XP:"], format(' %s / %s (%d%%)', BreakUpLargeNumbers(xp), BreakUpLargeNumbers(xpForNextPoint), xp/xpForNextPoint * 100), 1, 1, 1)
+	GameTooltip:AddDoubleLine(L["Remaining:"], format(' %s (%d%% - %d %s)', BreakUpLargeNumbers(xpForNextPoint - xp), remaining / xpForNextPoint * 100, 20 * remaining / xpForNextPoint, L["Bars"]), 1, 1, 1)
+	GameTooltip:AddDoubleLine(L["In Bags:"], format(' %s (%d%% - %d %s)', BreakUpLargeNumbers(apInBags), apInBags / xpForNextPoint * 100, 20 * apInBags / xpForNextPoint, L["Bars"]), 1, 1, 1)
 	GameTooltip:AddLine(" ")
 	GameTooltip:AddLine(format(ARTIFACT_POWER_TOOLTIP_BODY, numPointsAvailableToSpend), nil, nil, nil, true)
 
@@ -122,7 +129,7 @@ function mod:UpdateArtifactDimensions()
 	self.artifactBar.bagValue:SetOrientation(self.db.artifact.orientation)
 	self.artifactBar.bagValue:SetReverseFill(self.db.artifact.reverseFill)
 
-	self.artifactBar.text:FontTemplate(nil, self.db.artifact.textSize)
+	self.artifactBar.text:FontTemplate(LSM:Fetch("font", self.db.artifact.font), self.db.artifact.textSize, self.db.artifact.fontOutline)
 	if self.db.artifact.mouseover then
 		self.artifactBar:SetAlpha(0)
 	else
@@ -148,6 +155,23 @@ function mod:EnableDisable_ArtifactBar()
 	end
 end
 
+local apStringValueMillion = {
+	["enUS"] = "(%d*[%p%s]?%d+) million",
+	["enGB"] = "(%d*[%p%s]?%d+) million",
+	["ptBR"] = "(%d*[%p%s]?%d+) [[milhão][milhões]]?",
+	["esMX"] = "(%d*[%p%s]?%d+) [[millón][millones]]?",
+	["deDE"] = "(%d*[%p%s]?%d+) [[Million][Millionen]]?",
+	["esES"] = "(%d*[%p%s]?%d+) [[millón][millones]]?",
+	["frFR"] = "(%d*[%p%s]?%d+) [[million][millions]]?",
+	["itIT"] = "(%d*[%p%s]?%d+) [[milione][milioni]]?",
+	["ruRU"] = "(%d*[%p%s]?%d+) млн",
+	["koKR"] = "(%d*[%p%s]?%d+)만",
+	["zhTW"] = "(%d*[%p%s]?%d+)萬",
+	["zhCN"] = "(%d*[%p%s]?%d+)万",
+}
+local apStringValueMillionLocal = apStringValueMillion[GetLocale()]
+local empoweringSpellName
+
 --AP item caches
 local apValueCache = {}
 local apItemCache = {}
@@ -158,40 +182,65 @@ local apLineIndex
 local function GetAPFromTooltip(itemLink)
 	local apValue = 0
 
-	--Clear tooltip from previous item
-	mod.artifactBar.tooltip:SetOwner(UIParent, "ANCHOR_NONE")
+	local itemSpell = GetItemSpell(itemLink)
+	if itemSpell and itemSpell == empoweringSpellName then
+		--Clear tooltip from previous item
+		mod.artifactBar.tooltip:SetOwner(UIParent, "ANCHOR_NONE")
+		--We need to use SetHyperlink, as SetItemByID doesn't work for items you looted before
+		-- gaining Artifact Knowledge level. For those items it would display a value higher
+		-- than what you would actually get.
+		mod.artifactBar.tooltip:SetHyperlink(itemLink)
 
-	--We need to use SetHyperlink, as SetItemByID doesn't work for items you looted before gaining Artifact Knowledge level.
-	--For those items it would display a value higher than what you would actually get.
-	--We also need to use pcall to trap errors that will occur when supplying itemLink for certain items (caged pets among others)
-	local success = pcall(mod.artifactBar.tooltip.SetHyperlink, mod.artifactBar.tooltip, itemLink)
-	if (not success) then
+		local apFound
+		for i = #mod.artifactBar.tooltipLines, 1, -1 do
+			local tooltipText = mod.artifactBar.tooltipLines[i]:GetText()
+
+			if (tooltipText) then
+				local digit1, digit2, digit3, ap
+				local value = strmatch(tooltipText, apStringValueMillionLocal)
+
+				if (value) then
+					digit1, digit2 = strmatch(value, "(%d+)[%p%s](%d+)")
+					if (digit1 and digit2) then
+						ap = tonumber(format("%s.%s", digit1, digit2)) * 1e6 --Multiply by one million
+					else
+						ap = tonumber(value) * 1e6 --Multiply by one million
+					end 
+				else
+					digit1, digit2, digit3 = strmatch(tooltipText,"(%d+)[%p%s]?(%d+)[%p%s]?(%d+)")
+					ap = tonumber(format("%s%s%s", digit1 or "", digit2 or "", (digit2 and digit3) and digit3 or ""))
+				end
+
+				if (ap) then
+					apValue = ap
+					apFound = true
+					break
+				end
+			end
+		end
+
+		if (not apFound) then
+			apItemCache[itemLink] = false --Cache item as not granting AP
+		end
+	else
 		apItemCache[itemLink] = false --Cache item as not granting AP
-		return apValue
-	end
-
-	local apFound
-	if (mod.artifactBar.tooltipLines[2]:GetText() == AP_NAME) then
-		apLineIndex = 4
-		apFound = true
-	elseif (mod.artifactBar.tooltipLines[3]:GetText() == AP_NAME) then --When using colorblind mode then line 2 becomes the rarity, pushing ap text down 1 line
-		apLineIndex = 5
-		apFound = true
-	end
-
-	if (not apFound) then
-		apItemCache[itemLink] = false --Cache item as not granting AP
-		return apValue
-	end
-
-	if strfind(mod.artifactBar.tooltipLines[apLineIndex]:GetText(), "(%d+)[,.%s](%d+)") then
-		apValue = gsub(strmatch(mod.artifactBar.tooltipLines[apLineIndex]:GetText(), "(%d+[,.%s]%d+)"), "[,.%s]", "")
-		apValue = tonumber(apValue)
-	elseif strfind(mod.artifactBar.tooltipLines[apLineIndex]:GetText(), "%d+") then
-		apValue = tonumber(strmatch(mod.artifactBar.tooltipLines[apLineIndex]:GetText(), "%d+"))
 	end
 
 	return apValue
+end
+
+--This can be used to test if the tooltip scanning works as expected
+--/run ElvUI[1].DataBars:TestAPExtraction(147203)
+--/run ElvUI[1].DataBars:TestAPExtraction(140307)
+function mod:TestAPExtraction(itemID)
+	local itemLink = select(2, GetItemInfo(itemID))
+	if not itemLink then --WoW client hasn't seen this item before, so run again a little later when info has been received
+		C_Timer.After(2, function() mod:TestAPExtraction(itemID) end)
+		return
+	end
+
+	local apValue = GetAPFromTooltip(itemLink)
+	E:Print("AP value from", itemLink, "is:", apValue, "("..BreakUpLargeNumbers(apValue, true)..")")
 end
 
 --This function is responsible for retrieving the AP value from an itemLink.
@@ -242,6 +291,8 @@ function mod:GetArtifactPowerInBags()
 end
 
 function mod:LoadArtifactBar()
+	empoweringSpellName = GetSpellInfo(227907)
+
 	self.artifactBar = self:CreateBar('ElvUI_ArtifactBar', self.ArtifactBar_OnEnter, self.ArtifactBar_OnClick, 'RIGHT', self.honorBar, 'LEFT', E.Border - E.Spacing*3, 0)
 	self.artifactBar.statusBar:SetStatusBarColor(.901, .8, .601)
 	self.artifactBar.statusBar:SetMinMaxValues(0, 325)

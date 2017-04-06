@@ -1,4 +1,4 @@
-﻿local MT = MacroToolkit
+local MT = MacroToolkit
 local MTF
 local L, _G = MT.L, _G
 local LSM = MT.LS("LibSharedMedia-3.0")

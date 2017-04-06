@@ -1,32 +1,31 @@
 --[[ GenericTrigger.lua
-This file contains the generic trigger system. That is every trigger except the aura triggers
+This file contains the generic trigger system. That is every trigger except the aura triggers.
 
-It registers the GenericTrigger table for the trigger types "status", "event" and "custom".
-The GenericTrigger has the following API:
+It registers the GenericTrigger table for the trigger types "status", "event" and "custom" and has the following API:
 
 Add(data)
-  Adds a display, creating all internal data structures for all triggers
+  Adds a display, creating all internal data structures for all triggers.
 
 Delete(id)
-  Deletes all triggers for display id
+  Deletes all triggers for display id.
 
 Rename(oldid, newid)
-  Updates all trigger information from oldid to newid
+  Updates all trigger information from oldid to newid.
 
 LoadDisplay(id)
-  Loads all triggers of display id
+  Loads all triggers of display id.
 
 UnloadAll
-  Unloads all triggers
+  Unloads all triggers.
 
 UnloadDisplay(id)
-  Unloads all triggers of the display id
+  Unloads all triggers of the display id.
 
 ScanAll
-  Resets the trigger state for all triggers
+  Resets the trigger state for all triggers.
 
 Modernize(data)
-  Modernizes all generic triggers in data
+  Modernizes all generic triggers in data.
 
 #####################################################
 # Helper functions mainly for the WeakAuras Options #
@@ -34,32 +33,32 @@ Modernize(data)
 
 CanGroupShowWithZero(data)
   Returns whether the first trigger could be shown without any affected group members.
-  If that is the case no automatic icon can be determined. Only used by the Options dialog.
-  (If I understood the code correctly)
+  If that is the case no automatic icon can be determined. Only used by the options dialog.
 
 CanHaveDuration(data, triggernum)
-  Returns whether the trigger can have a duration
+  Returns whether the trigger can have a duration.
 
 CanHaveAuto(data, triggernum)
-  Returns whether the icon can be automatically selected
+  Returns whether the icon can be automatically selected.
 
 CanHaveClones(data)
-  Returns whether the trigger can have clones
+  Returns whether the trigger can have clones.
 
 CanHaveTooltip(data, triggernum)
-  Returns the type of tooltip to show for the trigger
+  Returns the type of tooltip to show for the trigger.
 
 GetNameAndIcon(data, triggernum)
-    Returns the name and icon to show in the options
+  Returns the name and icon to show in the options.
 
 GetAdditionalProperties(data, triggernum)
-  Returns the a tooltip for the additional properties
+  Returns the a tooltip for the additional properties.
+
 ]]--
 
 
 -- Lua APIs
 local tinsert, tconcat, wipe = table.insert, table.concat, wipe
-local tostring, select, pairs, type = tostring, select, pairs, type
+local tostring, pairs, type = tostring, pairs, type
 local error, setmetatable = error, setmetatable
 
 -- WoW APIs
@@ -83,11 +82,11 @@ local loaded_events = WeakAuras.loaded_events;
 local timers = WeakAuras.timers;
 local specificBosses = WeakAuras.specificBosses;
 
--- local function
+-- Local functions
 local LoadEvent, HandleEvent, TestForTriState, TestForToggle, TestForLongString, TestForMultiSelect
 local ConstructTest, ConstructFunction
 
--- GLOBALS: WeakAurasAceEvents GameTooltip GTFO DBM BigWigsLoader
+-- luacheck: globals GTFO DBM BigWigsLoader
 
 function WeakAuras.split(input)
   input = input or "";
@@ -568,7 +567,7 @@ function HandleEvent(frame, event, arg1, arg2, ...)
       if(loaded_events[event] and loaded_events[event][arg2]) then
         WeakAuras.ScanEvents(event, arg1, arg2, ...);
       end
-      -- This is triggers the scanning of "hacked" COMBAT_LOG_EVENT_UNFILTERED events that were renamed in order to circumvent
+      -- This triggers the scanning of "hacked" COMBAT_LOG_EVENT_UNFILTERED events that were renamed in order to circumvent
       -- the "proper" COMBAT_LOG_EVENT_UNFILTERED checks
       if(loaded_events["COMBAT_LOG_EVENT_UNFILTERED_CUSTOM"]) then
         WeakAuras.ScanEvents("COMBAT_LOG_EVENT_UNFILTERED_CUSTOM", arg1, arg2, ...);
@@ -657,6 +656,13 @@ function GenericTrigger.LoadDisplay(id)
   end
 end
 
+local function trueFunction()
+  return true;
+end
+
+--- Adds a display, creating all internal data structures for all triggers.
+-- @param data
+-- @param region
 function GenericTrigger.Add(data, region)
   local id = data.id;
   events[id] = nil;
@@ -725,6 +731,9 @@ function GenericTrigger.Add(data, region)
             local prototype = event_prototypes[trigger.event];
             if(prototype) then
               trigger_events = prototype.events;
+              if (type(trigger_events) == "function") then
+                trigger_events = trigger_events(trigger, untrigger);
+              end
               for index, event in ipairs(trigger_events) do
                 frame:RegisterEvent(event);
                 aceEvents:RegisterMessage(event, HandleEvent, frame)
@@ -741,6 +750,9 @@ function GenericTrigger.Add(data, region)
           triggerFunc = WeakAuras.LoadFunction("return "..(trigger.custom or ""));
           if(trigger.custom_type == "status" or trigger.custom_type == "event" and trigger.custom_hide == "custom") then
             untriggerFunc = WeakAuras.LoadFunction("return "..(untrigger.custom or ""));
+            if (not untriggerFunc) then
+              untriggerFunc = trueFunction;
+            end
           end
 
           if(trigger.custom_type ~= "stateupdate" and trigger.customDuration and trigger.customDuration ~= "") then
@@ -848,7 +860,7 @@ end
 do
   local update_clients = {};
   local update_clients_num = 0;
-  local update_frame;
+  local update_frame = nil
   WeakAuras.frames["Custom Trigger Every Frame Updater"] = update_frame;
   local updating = false;
 
@@ -909,46 +921,9 @@ local oldPowerTriggers = {
 }
 
 function GenericTrigger.Modernize(data)
-  -- Convert any references to "COMBAT_LOG_EVENT_UNFILTERED_CUSTOM" to "COMBAT_LOG_EVENT_UNFILTERED"
-  for triggernum=0,(data.numTriggers or 9) do
-    local trigger, untrigger;
-    if(triggernum == 0) then
-      trigger = data.trigger;
-    elseif(data.additional_triggers and data.additional_triggers[triggernum]) then
-      trigger = data.additional_triggers[triggernum].trigger;
-    end
-    if(trigger and trigger.custom) then
-      trigger.custom = trigger.custom:gsub("COMBAT_LOG_EVENT_UNFILTERED_CUSTOM", "COMBAT_LOG_EVENT_UNFILTERED");
-    end
-    if(untrigger and untrigger.custom) then
-      untrigger.custom = untrigger.custom:gsub("COMBAT_LOG_EVENT_UNFILTERED_CUSTOM", "COMBAT_LOG_EVENT_UNFILTERED");
-    end
-  end
-
-  -- Rename ["event"] = "Cooldown (Spell)" to ["event"] = "Cooldown Progress (Spell)"
   for triggernum=0,(data.numTriggers or 9) do
     local trigger, untrigger;
 
-    if(triggernum == 0) then
-      trigger = data.trigger;
-    elseif(data.additional_triggers and data.additional_triggers[triggernum]) then
-      trigger = data.additional_triggers[triggernum].trigger;
-    end
-
-    if trigger and trigger["event"] and trigger["event"] == "Cooldown (Spell)" then
-      trigger["event"] = "Cooldown Progress (Spell)";
-    end
-
-    if trigger and trigger["event"] and trigger["event"] == "DBM Timer" then
-      if (type(trigger.spellId) == "number") then
-        trigger.spellId = tostring(trigger.spellId);
-      end
-    end
-  end
-
-  -- Add status/event information to triggers
-  for triggernum=0,(data.numTriggers or 9) do
-    local trigger, untrigger;
     if(triggernum == 0) then
       trigger = data.trigger;
       untrigger = data.untrigger;
@@ -956,13 +931,21 @@ function GenericTrigger.Modernize(data)
       trigger = data.additional_triggers[triggernum].trigger;
       untrigger = data.additional_triggers[triggernum].untrigger;
     end
-    -- Add status/event information to triggers
-    if(trigger and trigger.event and (trigger.type == "status" or trigger.type == "event")) then
-      local prototype = event_prototypes[trigger.event];
-      if(prototype) then
-        trigger.type = prototype.type;
+    -- Convert any references to "COMBAT_LOG_EVENT_UNFILTERED_CUSTOM" to "COMBAT_LOG_EVENT_UNFILTERED"
+    if(trigger and trigger.custom) then
+      trigger.custom = trigger.custom:gsub("COMBAT_LOG_EVENT_UNFILTERED_CUSTOM", "COMBAT_LOG_EVENT_UNFILTERED");
+    end
+
+    if(untrigger and untrigger.custom) then
+      untrigger.custom = untrigger.custom:gsub("COMBAT_LOG_EVENT_UNFILTERED_CUSTOM", "COMBAT_LOG_EVENT_UNFILTERED");
+    end
+
+    if trigger and trigger["event"] and trigger["event"] == "DBM Timer" then
+      if (type(trigger.spellId) == "number") then
+        trigger.spellId = tostring(trigger.spellId);
       end
     end
+
     -- Convert ember trigger
     local fixEmberTrigger = function(trigger)
       if (trigger.power and not trigger.ember) then
@@ -982,15 +965,15 @@ function GenericTrigger.Modernize(data)
 
     if (trigger and trigger.type and trigger.event and trigger.type == "status"
         and (trigger.event == "Cooldown Progress (Spell)"
-              or trigger.event == "Cooldown Progress (Item)")) then
-        if (not trigger.showOn) then
-            if (trigger.use_inverse) then
-                trigger.showOn = "showOnReady"
-            else
-                trigger.showOn = "showOnCooldown"
-            end
-            trigger.use_inverse = nil
+        or trigger.event == "Cooldown Progress (Item)")) then
+      if (not trigger.showOn) then
+        if (trigger.use_inverse) then
+            trigger.showOn = "showOnReady"
+        else
+            trigger.showOn = "showOnCooldown"
         end
+        trigger.use_inverse = nil
+      end
     end
 
     for old, new in pairs(combatLogUpgrade) do
@@ -1004,6 +987,7 @@ function GenericTrigger.Modernize(data)
         trigger[useOld] = nil;
       end
     end
+
     -- Convert separated Power Triggers to sub options of the Power trigger
     if (trigger and trigger.type and trigger.event and trigger.type == "status" and oldPowerTriggers[trigger.event]) then
       trigger.powertype = oldPowerTriggers[trigger.event]
@@ -1024,12 +1008,12 @@ function GenericTrigger.AllAdded()
   -- Remove GTFO options if GTFO isn't enabled and there are no saved GTFO auras
   local hideGTFO = true;
   local hideDBM = true;
+
   if (GTFO) then
     hideGTFO = false;
   end
 
-  if (DBM and DBM.Revision >= 14433) then
-    -- Revisions before 14433 had a different callback api
+  if (DBM) then
     hideDBM = false;
   end
 
@@ -1056,7 +1040,7 @@ end
 --# Support code for triggers #
 --#############################
 
--- Swing Timer Support code
+-- Swing timer support code
 do
   local mh = GetInventorySlotInfo("MainHandSlot")
   local oh = GetInventorySlotInfo("SecondaryHandSlot")
@@ -1129,7 +1113,7 @@ do
             event = "SWING_TIMER_CHANGE";
             mainTimer = timer:ScheduleTimer(swingEnd, mainSpeed, "main");
           else
-            timer:CancelTimer(mainTimer, true);
+            timer:CancelTimer(offTimer, true);
             lastSwingOff = currentTime;
             swingDurationOff = offSpeed;
             event = "SWING_TIMER_CHANGE";
@@ -1166,7 +1150,7 @@ do
   end
 end
 
--- CD/Rune/GCD Support Code
+-- CD/Rune/GCD support code
 do
   local cdReadyFrame;
 
@@ -1204,35 +1188,36 @@ do
   local gcdEndCheck;
 
   function WeakAuras.InitCooldownReady()
-  cdReadyFrame = CreateFrame("FRAME");
-  WeakAuras.frames["Cooldown Trigger Handler"] = cdReadyFrame
-  cdReadyFrame:RegisterEvent("SPELL_UPDATE_COOLDOWN");
-  cdReadyFrame:RegisterEvent("SPELL_UPDATE_CHARGES");
-  cdReadyFrame:RegisterEvent("RUNE_POWER_UPDATE");
-  cdReadyFrame:RegisterEvent("RUNE_TYPE_UPDATE");
-  cdReadyFrame:RegisterEvent("UNIT_SPELLCAST_SENT");
-  cdReadyFrame:RegisterEvent("PLAYER_TALENT_UPDATE");
-  cdReadyFrame:RegisterEvent("PLAYER_PVP_TALENT_UPDATE");
-  cdReadyFrame:RegisterEvent("BAG_UPDATE_COOLDOWN");
-  cdReadyFrame:RegisterEvent("UNIT_INVENTORY_CHANGED")
-  cdReadyFrame:SetScript("OnEvent", function(self, event, ...)
-    if(event == "SPELL_UPDATE_COOLDOWN" or event == "SPELL_UPDATE_CHARGES"
-       or event == "RUNE_POWER_UPDATE" or event == "RUNE_TYPE_UPDATE"
-       or event == "PLAYER_TALENT_UPDATE" or event == "PLAYER_PVP_TALENT_UPDATE") then
-      WeakAuras.CheckCooldownReady();
-    elseif(event == "UNIT_SPELLCAST_SENT") then
-      local unit, name = ...;
-      if(unit == "player") then
-        if(gcdSpellName ~= name) then
-          local icon = GetSpellTexture(name);
-          gcdSpellName = name;
-          gcdSpellIcon = icon;
+    cdReadyFrame = CreateFrame("FRAME");
+    WeakAuras.frames["Cooldown Trigger Handler"] = cdReadyFrame
+    cdReadyFrame:RegisterEvent("SPELL_UPDATE_COOLDOWN");
+    cdReadyFrame:RegisterEvent("SPELL_UPDATE_CHARGES");
+    cdReadyFrame:RegisterEvent("RUNE_POWER_UPDATE");
+    cdReadyFrame:RegisterEvent("RUNE_TYPE_UPDATE");
+    cdReadyFrame:RegisterEvent("UNIT_SPELLCAST_SENT");
+    cdReadyFrame:RegisterEvent("PLAYER_TALENT_UPDATE");
+    cdReadyFrame:RegisterEvent("PLAYER_PVP_TALENT_UPDATE");
+    cdReadyFrame:RegisterEvent("BAG_UPDATE_COOLDOWN");
+    cdReadyFrame:RegisterEvent("UNIT_INVENTORY_CHANGED")
+    cdReadyFrame:RegisterEvent("PLAYER_EQUIPMENT_CHANGED");
+    cdReadyFrame:SetScript("OnEvent", function(self, event, ...)
+      if(event == "SPELL_UPDATE_COOLDOWN" or event == "SPELL_UPDATE_CHARGES"
+        or event == "RUNE_POWER_UPDATE" or event == "RUNE_TYPE_UPDATE"
+        or event == "PLAYER_TALENT_UPDATE" or event == "PLAYER_PVP_TALENT_UPDATE") then
+        WeakAuras.CheckCooldownReady();
+      elseif(event == "UNIT_SPELLCAST_SENT") then
+        local unit, name = ...;
+        if(unit == "player") then
+          if(gcdSpellName ~= name) then
+            local icon = GetSpellTexture(name);
+            gcdSpellName = name;
+            gcdSpellIcon = icon;
+          end
         end
+      elseif(event == "UNIT_INVENTORY_CHANGED" or event == "BAG_UPDATE_COOLDOWN" or event == "PLAYER_EQUIPMENT_CHANGED") then
+        WeakAuras.CheckItemSlotCooldowns();
       end
-    elseif(event == "UNIT_INVENTORY_CHANGED" or event == "BAG_UPDATE_COOLDOWN") then
-      WeakAuras.CheckItemSlotCooldowns();
-    end
-  end);
+    end);
   end
 
   function WeakAuras.GetRuneCooldown(id)
@@ -1243,20 +1228,34 @@ do
     end
   end
 
-  function WeakAuras.GetSpellCooldown(id, ignoreRuneCD)
+  function WeakAuras.GetSpellCooldown(id, ignoreRuneCD, showgcd)
+    local startTime, duration;
     if (ignoreRuneCD) then
       if (spellsRune[id] and spellCdExpsRune[id] and spellCdDursRune[id]) then
-        return spellCdExpsRune[id] - spellCdDursRune[id], spellCdDursRune[id];
+        startTime = spellCdExpsRune[id] - spellCdDursRune[id]
+        duration = spellCdDursRune[id];
       else
-        return 0, 0
+        startTime = 0;
+        duration = 0;
+      end
+    else
+      if(spells[id] and spellCdExps[id] and spellCdDurs[id]) then
+        startTime = spellCdExps[id] - spellCdDurs[id];
+        duration = spellCdDurs[id];
+      else
+        startTime = 0;
+        duration = 0;
       end
     end
 
-    if(spells[id] and spellCdExps[id] and spellCdDurs[id]) then
-      return spellCdExps[id] - spellCdDurs[id], spellCdDurs[id];
-    else
-      return 0, 0;
+    if (showgcd) then
+      if ((gcdStart or 0) + (gcdDuration or 0) > startTime + duration) then
+        startTime = gcdStart;
+        duration = gcdDuration;
+      end
     end
+
+    return startTime, duration;
   end
 
   function WeakAuras.GetSpellCharges(id)
@@ -1302,7 +1301,8 @@ do
     spellCdRuneHandles[id] = nil;
     spellCdDursRune[id] = nil;
     spellCdExpsRune[id] = nil;
-    local charges = GetSpellCharges(id);
+
+    local charges = WeakAuras.GetSpellCooldownUnified(id);
     local chargesDifference = (charges or 0) - (spellCharges[id] or 0)
     if (chargesDifference ~= 0 ) then
       WeakAuras.ScanEvents("SPELL_CHARGES_CHANGED", id, chargesDifference, charges or 0);
@@ -1315,7 +1315,7 @@ do
     spellCdHandles[id] = nil;
     spellCdDurs[id] = nil;
     spellCdExps[id] = nil;
-    local charges = GetSpellCharges(id);
+    local charges = WeakAuras.GetSpellCooldownUnified(id);
     local chargesDifference =  (charges or 0) - (spellCharges[id] or 0)
     if (chargesDifference ~= 0 ) then
       WeakAuras.ScanEvents("SPELL_CHARGES_CHANGED", id, chargesDifference, charges or 0);
@@ -1415,20 +1415,47 @@ do
     return runeDuration;
   end
 
-  function WeakAuras.CheckSpellCooldows(runeDuration)
-    for id, _ in pairs(spells) do
-      local charges, maxCharges, startTime, duration = GetSpellCharges(id);
-      local cooldownBecauseRune = false;
-      if (charges == nil) then -- charges is nil if the spell has no charges
-        startTime, duration = GetSpellCooldown(id);
-        charges = GetSpellCount(id);
-        cooldownBecauseRune = duration and abs(duration - runeDuration) < 0.001;
-      elseif (charges == maxCharges) then
-        startTime, duration = 0, 0;
+  function WeakAuras.GetSpellCooldownUnified(id, runeDuration)
+    local charges, maxCharges, startTime, duration = GetSpellCharges(id);
+    local cooldownBecauseRune = false;
+    if (charges == nil) then -- charges is nil if the spell has no charges. Or in other words GetSpellCharges is the wrong api
+      local basecd = GetSpellBaseCooldown(id);
+      startTime, duration = GetSpellCooldown(id);
+      local spellcount = GetSpellCount(id);
+      -- GetSpellCount returns 0 for all spells that have no spell counts, so we only use that information if
+      -- either the spell count is greater than 0
+      -- or we have a ability without a base cooldown
+      -- Checking the base cooldown is not enough though, since some abilities have no base cooldown, but can still be on cooldown
+      -- e.g. Raging Blow that gains a cooldown with a talent
+      if (spellcount > 0) then
+        charges = spellcount;
       end
 
-      startTime = startTime or 0;
-      duration = duration or 0;
+      local onNonGCDCD = duration and startTime and duration > 0 and (duration ~= gcdDuration or startTime ~= gcdStart);
+
+      if ((basecd and basecd > 0) or onNonGCDCD) then
+        cooldownBecauseRune = runeDuration and duration and abs(duration - runeDuration) < 0.001;
+      else
+        charges = spellcount;
+        startTime = 0;
+        duration = 0;
+      end
+    elseif (charges == maxCharges) then
+      startTime, duration = 0, 0;
+    elseif (charges == 0 and duration == 0) then -- Lavaburst while under Ascendance can return 0 charges even if the spell is useable
+      charges = 1;
+    end
+
+    startTime = startTime or 0;
+    duration = duration or 0;
+
+    return charges, maxCharges, startTime, duration, cooldownBecauseRune;
+  end
+
+  function WeakAuras.CheckSpellCooldows(runeDuration)
+    for id, _ in pairs(spells) do
+      local charges, maxCharges, startTime, duration, cooldownBecauseRune = WeakAuras.GetSpellCooldownUnified(id, runeDuration);
+
       local time = GetTime();
       local remaining = startTime + duration - time;
 
@@ -1439,7 +1466,7 @@ do
       end
       spellCharges[id] = charges;
 
-      if(duration > 0 and duration ~= WeakAuras.gcdDuration()) then
+      if(duration > 0 and (duration ~= gcdDuration or startTime ~= gcdStart)) then
         -- On non-GCD cooldown
         local endTime = startTime + duration;
 
@@ -1479,7 +1506,7 @@ do
       else
         if(spellCdExps[id]) then
           local endTime = startTime + duration;
-          if (duration == WeakAuras.gcdDuration() and spellCdExps[id] > endTime or duration == 0) then
+          if (duration == WeakAuras.gcdDuration() and startTime == gcdStart and spellCdExps[id] > endTime or duration == 0) then
            -- CheckCooldownReady caught the spell cooldown before the timer callback
            -- This happens if a proc resets the cooldown
             if(spellCdHandles[id]) then
@@ -1543,7 +1570,7 @@ do
   end
 
   function WeakAuras.CheckItemSlotCooldowns()
-    for id, _ in pairs(itemSlots) do
+    for id, itemId in pairs(itemSlots) do
       local startTime, duration, enable = GetInventoryItemCooldown("player", id);
       itemSlotsEnable[id] = enable;
       startTime = startTime or 0;
@@ -1581,6 +1608,12 @@ do
           end
           ItemSlotCooldownFinished(id);
         end
+      end
+
+      local newItemId = GetInventoryItemID("player", id);
+      if (itemId ~= newItemId) then
+        WeakAuras.ScanEvents("ITEM_SLOT_COOLDOWN_ITEM_CHANGED");
+        itemSlots[id] = newItemId or 0;
       end
     end
   end
@@ -1643,19 +1676,11 @@ do
 
     if not(spells[id]) then
       spells[id] = true;
-      local charges, maxCharges, startTime, duration = GetSpellCharges(id);
-      if (charges == nil) then
-          startTime, duration = GetSpellCooldown(id);
-      elseif (charges == maxCharges) then
-          startTime, duration = 0, 0;
-      end
-      startTime = startTime or 0;
-      duration = duration or 0;
 
+      local charges, maxCharges, startTime, duration = WeakAuras.GetSpellCooldownUnified(id);
       spellCharges[id] = charges;
 
-
-      if(duration > 0 and duration ~= WeakAuras.gcdDuration()) then
+      if(duration > 0 and (duration ~= gcdDuration or startTime ~= gcdStart)) then
         local time = GetTime();
         local endTime = startTime + duration;
         spellCdDurs[id] = duration;
@@ -1711,7 +1736,7 @@ do
     if not id or id == 0 then return end
 
     if not(itemSlots[id]) then
-      itemSlots[id] = true;
+      itemSlots[id] = GetInventoryItemID("player", id);
       local startTime, duration, enable = GetInventoryItemCooldown("player", id);
       itemSlotsEnable[id] = enable;
       if(duration > 0 and duration ~= WeakAuras.gcdDuration()) then
@@ -1771,17 +1796,14 @@ do
   local function dbmRecheckTimers()
     local now = GetTime();
     nextExpire = nil;
-    local nextMsg = nil;
     for k, v in pairs(bars) do
       if (v.expirationTime < now) then
         bars[k] = nil;
         WeakAuras.ScanEvents("DBM_TimerStop", k);
       elseif (nextExpire == nil) then
         nextExpire = v.expirationTime;
-        nextMsg = v.message;
       elseif (v.expirationTime < nextExpire) then
         nextExpire = v.expirationTime;
-        nextMsg = v.message;
       end
     end
 
@@ -1966,7 +1988,7 @@ do
       bar.duration = duration;
       bar.expirationTime = expirationTime;
       bar.icon = icon;
-      WeakAuras.ScanEvents("BigWigs_StartBar", spellId);
+      WeakAuras.ScanEvents("BigWigs_StartBar", text);
       if (nextExpire == nil) then
         recheckTimer = timer:ScheduleTimer(recheckTimers, expirationTime - now);
         nextExpire = expirationTime;
@@ -2066,10 +2088,10 @@ do
     return bars[id];
   end
 
-  function WeakAuras.GetBigWigsTimer(addon, spellId, text, operator)
+  function WeakAuras.GetBigWigsTimer(addon, spellId, operator, text)
     local bestMatch
     for id, bar in pairs(bars) do
-      if (WeakAuras.BigWigsTimerMatches(id, addon, spellId, text, operator)) then
+      if (WeakAuras.BigWigsTimerMatches(id, addon, spellId, operator, text)) then
         if (bestMatch == nil or bar.expirationTime < bestMatch.expirationTime) then
           bestMatch = bar;
         end
@@ -2099,17 +2121,13 @@ do
   local mh = GetInventorySlotInfo("MainHandSlot")
   local oh = GetInventorySlotInfo("SecondaryHandSlot")
 
-  local mh_name;
-  local mh_exp;
-  local mh_dur;
+  local mh_name, mh_exp, mh_dur;
   local mh_icon = GetInventoryItemTexture("player", mh);
 
-  local oh_name;
-  local oh_exp;
-  local oh_dur;
+  local oh_name, oh_exp, oh_dur;
   local oh_icon = GetInventoryItemTexture("player", oh);
 
-  local tenchFrame;
+  local tenchFrame = nil
   WeakAuras.frames["Temporary Enchant Handler"] = tenchFrame;
   local tenchTip;
 
@@ -2177,9 +2195,9 @@ do
   end
 end
 
--- Mount
+-- Mounts
 do
-  local mountedFrame;
+  local mountedFrame = nil
   WeakAuras.frames["Mount Use Handler"] = mountedFrame;
   function WeakAuras.WatchForMounts()
     if not(mountedFrame) then
@@ -2207,9 +2225,9 @@ do
   end
 end
 
--- Pet
+-- Pets
 do
-  local petFrame;
+  local petFrame = nil
   WeakAuras.frames["Pet Use Handler"] = petFrame;
   function WeakAuras.WatchForPetDeath()
     if not(petFrame) then
@@ -2220,23 +2238,11 @@ do
       end)
     end
   end
-
-  local unitPetFrame;
-  WeakAuras.frames["Unit Pet Handler"] = unitPetFrame;
-  function WeakAuras.WatchForUnitPet()
-    if (not unitPetFrame) then
-      unitPetFrame = CreateFrame("frame");
-      unitPetFrame:RegisterEvent("UNIT_PET");
-      unitPetFrame:SetScript("OnEvent", function()
-        WeakAuras.ScanEvents("WA_UNIT_PET", "pet");
-      end);
-    end
-  end
 end
 
 -- Player Moving
 do
-  local playerMovingFrame;
+  local playerMovingFrame = nil
   WeakAuras.frames["Player Moving Frame"] =  playerMovingFrame;
   local moving;
   function WeakAuras.WatchForPlayerMoving()
@@ -2409,7 +2415,6 @@ function GenericTrigger.CanHaveAuto(data, triggernum)
   end
 end
 
-
 function GenericTrigger.CanHaveClones(data)
   return false;
 end
@@ -2432,10 +2437,14 @@ function GenericTrigger.GetNameAndIcon(data, triggernum)
       end
     end
   end
+
   return name, icon
  end
 
-
+---Returns the type of tooltip to show for the trigger.
+-- @param data
+-- @param triggernum
+-- @return string
 function GenericTrigger.CanHaveTooltip(data, triggernum)
   local trigger;
   if (triggernum == 0) then
@@ -2452,6 +2461,7 @@ function GenericTrigger.CanHaveTooltip(data, triggernum)
       end
     end
   end
+
   return false;
 end
 
@@ -2491,6 +2501,7 @@ function GenericTrigger.GetAdditionalProperties(data, triggernum)
       end
     end
   end
+
   return ret;
 end
 

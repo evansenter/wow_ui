@@ -4,7 +4,7 @@
 	please see the included License.txt file.
 
 	* File...: Caith.lua
-	* Date...: 2016-07-26T00:07:00Z
+	* Date...: 2016-07-26T5:07:00Z
 	* Hash...: 9ca03cb
 	* Author.: StormFX
 
@@ -16,7 +16,7 @@ if not MSQ then return end
 -- Caith
 MSQ:AddSkin("Caith", {
 	Author = "StormFX",
-	Version = "7.1.0",
+	Version = "7.2.0",
 	Shape = "Square",
 	Masque_Version = 60200,
 	Backdrop = {

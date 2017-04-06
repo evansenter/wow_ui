@@ -7,6 +7,12 @@ VER 3 0100000000000052 "Combustion" "INV_MISC_QUESTIONMARK"
 /cast Berserking
 /cast Combustion
 END
+VER 3 0100000000000059 "Ebonbolt" "INV_Misc_QuestionMark"
+#showtooltip Ebonbolt
+/use 13
+/use 14
+/cast Ebonbolt
+END
 VER 3 0100000000000055 "FB" "INV_Misc_QuestionMark"
 #showtooltip Fire Blast
 /castsequence reset=0.5 Fire Blast, null

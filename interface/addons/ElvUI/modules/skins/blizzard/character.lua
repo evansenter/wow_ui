@@ -359,6 +359,8 @@ local function LoadSkin()
 	hooksecurefunc("PaperDollFrame_UpdateSidebarTabs", FixSidebarTabCoords)
 
 	--Reputation
+	S:HandleCloseButton(CharacterFrame.ReputationTabHelpBox.CloseButton)
+
 	local function UpdateFactionSkins()
 		ReputationListScrollFrame:StripTextures()
 		ReputationFrame:StripTextures(true)
@@ -390,6 +392,24 @@ local function LoadSkin()
 	ReputationFrame:HookScript("OnShow", UpdateFactionSkins)
 	hooksecurefunc("ExpandFactionHeader", UpdateFactionSkins)
 	hooksecurefunc("CollapseFactionHeader", UpdateFactionSkins)
+
+	--Reputation Paragon Tooltip
+	local tooltip = ReputationParagonTooltip
+	local statusBar = ReputationParagonTooltipStatusBar.Bar
+	local reward = tooltip.ItemTooltip
+	local icon = reward.Icon
+	tooltip:SetTemplate("Transparent")
+	statusBar:StripTextures()
+	statusBar:SetStatusBarTexture(E["media"].normTex)
+	statusBar:CreateBackdrop("Transparent")
+	if icon then
+		S:HandleIcon(icon)
+		reward.IconBorder:SetTexture(nil)
+		reward.IconBorder:SetAlpha(0)
+	end
+	tooltip:HookScript("OnShow", function(self)
+		self:SetTemplate("Transparent")
+	end)
 
 	--Currency
 	TokenFrame:HookScript("OnShow", function()

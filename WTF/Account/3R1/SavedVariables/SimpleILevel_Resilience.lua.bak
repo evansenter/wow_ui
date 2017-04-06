@@ -1,9 +1,10 @@
 
 SIL_ResilSettings = {
 	["profileKeys"] = {
-		["Natal - Illidan"] = "Default",
-	},
-	["global"] = {
-		["paperdoll"] = false,
+		["Metal - Illidan"] = "Default",
+		["Cometron - Illidan"] = "Default",
+		["Combustion - Illidan"] = "Default",
+		["Pandatal - Illidan"] = "Default",
+		["Evan - Illidan"] = "Default",
 	},
 }

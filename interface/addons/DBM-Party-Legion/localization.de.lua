@@ -254,7 +254,7 @@ L:SetOptionLocalization({
 })
 
 L:SetMiscLocalization({
-Gloves1			= "Einem Gerücht zufolge trägt der Spion immer Handschuhe.",
+	Gloves1			= "Einem Gerücht zufolge trägt der Spion immer Handschuhe.",
 	Gloves2			= "Wie ich hörte, verbirgt der Spion sorgfältig die Hände.",
 	Gloves3			= "Ich hörte, dass der Spion immer Handschuhe anlegt.",
 	Gloves4			= "Jemand behauptete, dass der Spion Handschuhe trägt, um sichtbare Narben zu verbergen.",
@@ -272,7 +272,7 @@ Gloves1			= "Einem Gerücht zufolge trägt der Spion immer Handschuhe.",
 	DarkVest1		= "Der Spion bevorzugt auf alle Fälle dunkle Kleidung.",
 	DarkVest2		= "Ich hörte, dass die Weste des Spions heute Abend von dunkler, kräftiger Farbe ist.",
 	DarkVest3		= "Dem Spion gefallen Westen mit dunklen Farben... dunkel wie die Nacht.",
-	DarkVest4		= "Gerüchte zufolge vermeidet der Spion es, helle Kleidung zu tragen, damit er nicht so auffällt.",
+	DarkVest4		= "Gerüchten zufolge vermeidet der Spion es, helle Kleidung zu tragen, damit er nicht so auffällt.",
 	Female1			= "Ein Gast hat beobachtet, wie sie und Elisande vorhin gemeinsam eingetroffen sind.",
 	Female2			= "Wie ich höre, hat eine Frau sich ständig nach diesem Bezirk erkundigt...",
 	Female3			= "Jemand hat behauptet, dass unser neuester Gast nicht männlich ist.",
@@ -283,9 +283,9 @@ Gloves1			= "Einem Gerücht zufolge trägt der Spion immer Handschuhe.",
 	Male4			= "Einer der Musiker sagte, er stellte unablässig Fragen über den Bezirk.",
 	ShortSleeve1	= "Mir ist zu Ohren gekommen, dass der Spion kurze Ärmel trägt, damit er seine Arme ungehindert bewegen kann.",
 	ShortSleeve2	= "Jemand sagte mir, dass der Spion lange Ärmel hasst.",
-	ShortSleeve3	= "Einer meiner Freundinnen sagte, dass sie die Kleidung des Spions gesehen hat. Er trägt keine langen Ärmel.",
+	ShortSleeve3	= "Eine meiner Freundinnen sagte, dass sie die Kleidung des Spions gesehen hat. Er trägt keine langen Ärmel.",
 	ShortSleeve4	= "Man hat mir zugetragen, dass der Spion die kühle Luft mag und deshalb heute Abend keine langen Ärmel trägt.",
-	LongSleeve1		= "Wie ich höre, trägt der Spion heute Abend Kleidung mit langen Ärmeln.",
+	LongSleeve1		= "Wie ich hörte, trägt der Spion heute Abend Kleidung mit langen Ärmeln.",
 	LongSleeve2		= "Jemand sagte, dass der Spion heute Abend seine Arme mit langen Ärmeln bedeckt.",
 	LongSleeve3		= "Ich habe am frühen Abend einen kurzen Blick auf die langen Ärmel des Spions erhascht.",
 	LongSleeve4		= "Einer meiner Freunde erwähnte, dass der Spion lange Ärmel trägt.",
@@ -296,26 +296,26 @@ Gloves1			= "Einem Gerücht zufolge trägt der Spion immer Handschuhe.",
 	NoPotions1		= "Wie ich hörte, hat der Spion keine Tränke bei sich.",
 	NoPotions2		= "Eine Musikerin erzählte mir, dass sie gesehen hat, wie der Spion seinen letzten Trank wegwarf und jetzt keinen mehr übrig hat.",
 	Book1			= "Ich hörte, dass der Spion immer ein Buch mit niedergeschriebenen Geheimnissen am Gürtel trägt.",
-	Book2			= "Gerüchte zufolge liest der Spion gerne und trägt immer mindestens ein Buch bei sich.",
+	Book2			= "Gerüchten zufolge liest der Spion gerne und trägt immer mindestens ein Buch bei sich.",
 	Pouch1			= "Ich hörte, dass der Spion immer einen magischen Beutel mit sich herumträgt.",
 	Pouch2			= "Ein Freund behauptet, dass der Spion Gold liebt und einen Gürtelbeutel voll davon hat.",
 	Pouch3			= "Ich hörte, dass der Gürtelbeutel des Spions mit ausgefallenem Garn gesäumt wurde.",
 	Pouch4			= "Mir ist zu Ohren gekommen, dass der Gürtelbeutel des Spions mit Gold gefüllt ist, um besonders extravagant zu erscheinen.",
-    --
-    Gloves        = "Handschuhe",
-    NoGloves    = "keine Handschuhe",
-    Cape        = "Umhang",
-    Nocape        = "kein Umhang",
-    LightVest    = "helle Weste",
-    DarkVest    = "dunkle Weste",
-    Female        = "weiblich",
-    Male        = "männlich",
-    ShortSleeve = "kurze Ärmel",
-    LongSleeve    = "lange Ärmel",
-    Potions        = "Tränke",
-    NoPotions    = "keine Tränke",
-    Book        = "Buch",
-    Pouch        = "Beutel"
+	--
+	Gloves			= "Handschuhe",
+	NoGloves		= "keine Handschuhe",
+	Cape			= "Umhang",
+	Nocape			= "kein Umhang",
+	LightVest		= "helle Weste",
+	DarkVest		= "dunkle Weste",
+	Female			= "weiblich",
+	Male			= "männlich",
+	ShortSleeve		= "kurze Ärmel",
+	LongSleeve		= "lange Ärmel",
+	Potions			= "Tränke",
+	NoPotions		= "keine Tränke",
+	Book			= "Buch",
+	Pouch			= "Beutel"
 })
 
 
@@ -529,5 +529,37 @@ L:SetGeneralLocalization({
 
 L:SetMiscLocalization({
 	speedRun		=	"Die seltsame Kühle einer dunklen Präsenz durchweht die Luft..."
+})
+
+-----------------------
+-- <<<Cathedral of Eternal Night >>> --
+-----------------------
+-----------------------
+-- Agronox --
+-----------------------
+L= DBM:GetModLocalization(1905)
+
+-----------------------
+-- Trashbite the Scornful  --
+-----------------------
+L= DBM:GetModLocalization(1906)
+
+-----------------------
+-- Domatrax --
+-----------------------
+L= DBM:GetModLocalization(1904)
+
+-----------------------
+-- Mephistroth  --
+-----------------------
+L= DBM:GetModLocalization(1878)
+
+-----------------------
+--Cathedral of Eternal Night Trash
+-----------------------
+L = DBM:GetModLocalization("CoENTrash")
+
+L:SetGeneralLocalization({
+	name =	"Trash der Kathedr. d. ew. Nacht"
 })
 

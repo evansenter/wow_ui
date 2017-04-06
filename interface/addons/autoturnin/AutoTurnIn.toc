@@ -1,4 +1,4 @@
-﻿## Interface: 70100
+## Interface: 70200
 ## Title: AutoTurnIn
 ## Version: 7.0.9
 ## Author: Alexandr Shubert
@@ -13,10 +13,6 @@
 ## X-Date: 2016-07-21
 ## X-Category: Quest
 ## X-Embeds: Ace3
-## X-Curse-Packaged-Version: 7.1.1
-## X-Curse-Project-Name: AutoTurnIn
-## X-Curse-Project-ID: autoturnin
-## X-Curse-Repository-ID: wow/autoturnin/mainline
 
 embeds.xml
 libs\DropDownMenu\UIDropDownMenuTemplates.xml

@@ -80,8 +80,8 @@ VER 3 0000000000000054 "Sheilun's Gift" "INV_Misc_QuestionMark"
 END
 VER 3 0000000000000053 "SotW" "INV_Misc_QuestionMark"
 #showtooltip Strike of the Windlord
-/use [nochanneling]11
-/use [nochanneling]12
+/use [nochanneling]13
+/use [nochanneling]14
 /use [nochanneling]Strike of the Windlord
 END
 VER 3 000000000000002C "Target Focus" "132284"

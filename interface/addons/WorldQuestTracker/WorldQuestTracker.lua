@@ -150,6 +150,7 @@ local default_config = {
 			scale = 1,
 		},
 		filter_always_show_faction_objectives = true,
+		filter_force_show_brokenshore = true,
 		sort_order = {
 			[WQT_QUESTTYPE_TRADE] = 9,
 			[WQT_QUESTTYPE_APOWER] = 8,
@@ -230,6 +231,8 @@ local is_broken_isles_map = {
 	[suramar_mapId] = true,
 	[valsharah_mapId] = true,
 	[eoa_mapId] = true,
+	[1014] = true, --dalaran
+	[1021] = true, --broken shore
 }
 
 local WORLDMAP_SQUARE_SIZE = 24
@@ -332,6 +335,9 @@ local BROKEN_ISLES_ZONES = {
 	[stormheim_mapId] = true, --stormheim
 	[suramar_mapId] = true, --suramar
 	[eoa_mapId] = true, --eye of azshara
+	
+	[1014] = true, --dalaran
+	[1021] = true, --broken shore	
 }
 
 local WorldQuestTracker = DF:CreateAddOn ("WorldQuestTrackerAddon", "WQTrackerDB", default_config)
@@ -1270,6 +1276,7 @@ end
 function WorldQuestTracker.GetAllWorldQuests_Ids()
 	local allQuests, dataUnavaliable = {}, false
 	for mapId, configTable in pairs (WorldQuestTracker.mapTables) do
+		--local taskInfo = GetQuestsForPlayerByMapID (mapId, 1007)
 		local taskInfo = GetQuestsForPlayerByMapID (mapId)
 		if (taskInfo and #taskInfo > 0) then
 			for i, info  in ipairs (taskInfo) do
@@ -1369,7 +1376,11 @@ function WorldQuestTracker.GetBorderByQuestType (self, rarity, worldQuestType)
 	elseif (worldQuestType == LE_QUEST_TAG_TYPE_PROFESSION) then
 		return "border_zone_browT"
 	elseif (rarity == LE_WORLD_QUEST_QUALITY_COMMON) then
-		return "border_zone_whiteT"
+		if (worldQuestType == LE_QUEST_TAG_TYPE_INVASION) then
+			return "border_zone_legionT"
+		else
+			return "border_zone_whiteT"
+		end
 	elseif (rarity == LE_WORLD_QUEST_QUALITY_RARE) then
 		return "border_zone_blueT"
 	elseif (rarity == LE_WORLD_QUEST_QUALITY_EPIC) then
@@ -1383,6 +1394,7 @@ function WorldQuestTracker.UpdateBorder (self, rarity, worldQuestType, mapID)
 		self.commonBorder:Hide()
 		self.rareBorder:Hide()
 		self.epicBorder:Hide()
+		self.invasionBorder:Hide()
 		
 		if (WorldQuestTracker.IsQuestBeingTracked (self.questID)) then
 			self.borderAnimation:Show()
@@ -1397,7 +1409,7 @@ function WorldQuestTracker.UpdateBorder (self, rarity, worldQuestType, mapID)
 		AnimatedShine_Stop (self)
 		
 		local coords = WorldQuestTracker.GetBorderCoords (rarity)
-		if (rarity == LE_WORLD_QUEST_QUALITY_COMMON) then
+		if (rarity == LE_WORLD_QUEST_QUALITY_COMMON and worldQuestType ~= LE_QUEST_TAG_TYPE_INVASION) then
 			if (self.isArtifact) then
 				self.commonBorder:Show()
 				--self.squareBorder:SetTexCoord (unpack (coords))
@@ -1442,6 +1454,9 @@ function WorldQuestTracker.UpdateBorder (self, rarity, worldQuestType, mapID)
 			--self.borderAnimation:Show()
 			--AutoCastShine_AutoCastStart (self.borderAnimation, .3, .3, 1)
 			AnimatedShine_Start (self, 1, 1, 1);
+			
+		elseif (worldQuestType == LE_QUEST_TAG_TYPE_INVASION) then
+			self.invasionBorder:Show()
 			
 		end
 
@@ -1657,9 +1672,21 @@ end
 --pega a quantidade de recursos para a order hall
 function WorldQuestTracker.GetQuestReward_Resource (questID)
 	local numQuestCurrencies = GetNumQuestLogRewardCurrencies (questID)
-	for i = 1, numQuestCurrencies do
-		local name, texture, numItems = GetQuestLogRewardCurrencyInfo (i, questID)
-		return name, texture, numItems
+	if (numQuestCurrencies == 2) then
+		for i = 1, numQuestCurrencies do
+			local name, texture, numItems = GetQuestLogRewardCurrencyInfo (i, questID)
+			--legion invasion quest
+			if (texture and texture:find ("inv_datacrystal01")) then -- [[Interface\Icons\inv_datacrystal01]]
+			
+			else
+				return name, texture, numItems
+			end
+		end
+	else
+		for i = 1, numQuestCurrencies do
+			local name, texture, numItems = GetQuestLogRewardCurrencyInfo (i, questID)
+			return name, texture, numItems
+		end
 	end
 end
 
@@ -2393,15 +2420,24 @@ function WorldQuestTracker.UpdateZoneWidgets()
 	
 	WorldQuestTracker.lastZoneWidgetsUpdate = GetTime()
 	
-	local taskInfo = GetQuestsForPlayerByMapID (mapID)
-	local index = 1
+	--local taskInfo = GetQuestsForPlayerByMapID (mapID, 1007)
+	local taskInfo
+	if (mapID == 1014) then
+		--taskInfo = GetQuestsForPlayerByMapID (mapID, 1007)
+		taskInfo = GetQuestsForPlayerByMapID (mapID) --fix from @legowxelab2z8 from curse
+	else
+		taskInfo = GetQuestsForPlayerByMapID (mapID, mapID)
+	end
 	
+	local index = 1
+
 	--parar a anima��o de loading
 	if (WorldQuestTracker.IsPlayingLoadAnimation()) then
 		WorldQuestTracker.StopLoadingAnimation()
 	end	
 	
 	local filters = WorldQuestTracker.db.profile.filters
+	local forceShowBrokenShore = WorldQuestTracker.db.profile.filter_force_show_brokenshore
 	
 	wipe (WorldQuestTracker.Cache_ShownQuestOnZoneMap)
 	wipe (WorldQuestTracker.Cache_ShownWidgetsOnZoneMap)
@@ -2414,15 +2450,15 @@ function WorldQuestTracker.UpdateZoneWidgets()
 			if (HaveQuestData (questID)) then
 				local isWorldQuest = QuestMapFrame_IsQuestWorldQuest (questID)
 				if (isWorldQuest) then
-				
+
 					local isSuppressed = WorldMap_IsWorldQuestSuppressed (questID)
 					local passFilters = WorldMap_DoesWorldQuestInfoPassFilters (info, true, true) --blizzard filters
 					local timeLeft = WorldQuestTracker.GetQuest_TimeLeft (questID)
 					
 					if (not isSuppressed and passFilters and timeLeft > 3) then
 						C_TaskQuest.RequestPreloadRewardData (questID)
-						
-						local tagID, tagName, worldQuestType, rarity, isElite, tradeskillLineIndex = GetQuestTagInfo (questID)
+
+						local tagID, tagName, worldQuestType, rarity, isElite, tradeskillLineIndex, allowDisplayPastCritical = GetQuestTagInfo (questID) -- allowDisplayPastCritical 7.2
 						
 						------ adicionados para fazer o filtro
 							--gold
@@ -2434,6 +2470,11 @@ function WorldQuestTracker.UpdateZoneWidgets()
 						------
 						
 						local filter, order = WorldQuestTracker.GetQuestFilterTypeAndOrder (worldQuestType, gold, rewardName, itemName, isArtifact, stackAmount)
+						
+						-- ~legion
+						-- worldQuestType == LE_QUEST_TAG_TYPE_INVASION
+						-- LE_QUEST_TAG_TYPE_RAID
+						-- 
 						
 						local passFilter = filters [filter]
 						if (not passFilter) then
@@ -2451,7 +2492,7 @@ function WorldQuestTracker.UpdateZoneWidgets()
 							end
 						end
 
-						if (passFilter) then
+						if (passFilter or (forceShowBrokenShore and mapID == 1021)) then
 							local widget = WorldQuestTracker.GetOrCreateZoneWidget (info, index)
 
 							local selected = questID == GetSuperTrackedQuestID()
@@ -2693,7 +2734,7 @@ function WorldQuestTracker.SetupWorldQuestButton (self, worldQuestType, rarity, 
 			
 			-- class hall resource
 			local name, texture, numRewardItems = WorldQuestTracker.GetQuestReward_Resource (questID)
-			if (name) then
+			if (name and not okay) then
 				if (texture) then
 					self.Texture:SetTexture (texture)
 					--self.Texture:SetTexCoord (0, 1, 0, 1)
@@ -3839,6 +3880,7 @@ hooksecurefunc ("ToggleWorldMap", function (self)
 				local data = {}
 				for i = 1, #dateString do
 					local hadTable = false
+					twoWeeks = twoWeeks or {}
 					for o = 1, #twoWeeks do
 						if (twoWeeks[o].day == dateString[i]) then
 							if (GraphicDataToUse == 1) then
@@ -4066,6 +4108,17 @@ hooksecurefunc ("ToggleWorldMap", function (self)
 				end	
 			end
 			
+			local toggle_brokenshore_bypass = function()
+				WorldQuestTracker.db.profile.filter_force_show_brokenshore = not WorldQuestTracker.db.profile.filter_force_show_brokenshore
+				GameCooltip:ExecFunc (filterButton)
+				--atualiza as quests
+				if (WorldQuestTrackerAddon.GetCurrentZoneType() == "world") then
+					WorldQuestTracker.UpdateWorldQuestsOnWorldMap (true)
+				elseif (WorldQuestTrackerAddon.GetCurrentZoneType() == "zone") then
+					WorldQuestTracker.UpdateZoneWidgets()
+				end
+			end
+			
 			local BuildFilterMenu = function()
 				GameCooltip:Preset (2)
 				GameCooltip:SetOption ("TextSize", 10)
@@ -4098,6 +4151,7 @@ hooksecurefunc ("ToggleWorldMap", function (self)
 				end
 				
 				GameCooltip:AddLine ("$div")
+				
 				local l, r, t, b = unpack (WQT_GENERAL_STRINGS_AND_ICONS.criteria.coords)
 				l = 0.8731118125
 				
@@ -4112,6 +4166,19 @@ hooksecurefunc ("ToggleWorldMap", function (self)
 					GameCooltip:AddIcon (WQT_GENERAL_STRINGS_AND_ICONS.criteria.icon, 1, 1, 23*.54, 37*.40, l, r, t, b, nil, nil, true)
 				end
 				GameCooltip:AddMenu (1, toggle_faction_objectives)
+				GameCooltip:AddLine ("$div")
+				
+				if (WorldQuestTracker.db.profile.filter_force_show_brokenshore) then
+					GameCooltip:AddLine ("Ignore Broken Shore")
+					GameCooltip:AddLine ("World quets on Broken Shore map will always be shown.", "", 2)
+					GameCooltip:AddIcon ([[Interface\ICONS\70_inscription_vantus_rune_tomb]], 1, 1, 23*.54, 37*.40, 0, 1, 0, 1)
+					GameCooltip:AddIcon ([[Interface\BUTTONS\UI-CheckBox-Check]], 1, 2, 16, 16, 0, 1, 0, 1, overlayColor, nil, true)
+				else
+					GameCooltip:AddLine ("Ignore Broken Shore", "", 1, "silver")
+					GameCooltip:AddLine ("World quets on Broken Shore map will always be shown.", "", 2)
+					GameCooltip:AddIcon (WQT_GENERAL_STRINGS_AND_ICONS.criteria.icon, 1, 1, 23*.54, 37*.40, l, r, t, b, nil, nil, true)
+				end
+				GameCooltip:AddMenu (1, toggle_brokenshore_bypass)
 			end
 			
 			filterButton.CoolTip = {
@@ -5022,7 +5089,12 @@ hooksecurefunc ("ToggleWorldMap", function (self)
 				
 				local itemID, altItemID, name, icon, totalXP, pointsSpent, quality, artifactAppearanceID, appearanceModID, itemAppearanceID, altItemAppearanceID, altOnTop = C_ArtifactUI.GetEquippedArtifactInfo()
 				if (itemID and WorldQuestTracker.WorldMap_APowerIndicator.Amount) then
-					local numPointsAvailableToSpend, xp, xpForNextPoint = MainMenuBar_GetNumArtifactTraitsPurchasableFromXP (pointsSpent, totalXP)
+				
+					--7.2 need to get the artifact tier
+					local artifactItemID, _, _, _, artifactTotalXP, artifactPointsSpent, _, _, _, _, _, _, artifactTier = C_ArtifactUI.GetEquippedArtifactInfo()
+					--then request the xp details
+					local numPointsAvailableToSpend, xp, xpForNextPoint = MainMenuBar_GetNumArtifactTraitsPurchasableFromXP (pointsSpent, totalXP, artifactTier)
+
 					local Available_APower = WorldQuestTracker.WorldMap_APowerIndicator.Amount / xpForNextPoint * 100
 					local diff = xpForNextPoint - xp
 					local Diff_APower = WorldQuestTracker.WorldMap_APowerIndicator.Amount / diff * 100
@@ -7085,7 +7157,10 @@ function WorldQuestTracker:GetAllWorldQuests_Info()
 	SetMapByID (MAPID_BROKENISLES)
 	local total = 0
 	for mapId, configTable in pairs (WorldQuestTracker.mapTables) do
+	
+		--local taskInfo = GetQuestsForPlayerByMapID (mapId, 1007)
 		local taskInfo = GetQuestsForPlayerByMapID (mapId)
+		
 		if (taskInfo and #taskInfo > 0) then
 			for i, info  in ipairs (taskInfo) do
 				local questID = info.questId
@@ -7411,7 +7486,7 @@ WorldQuestTracker.mapTables = {
 		widgets = azsuna_widgets,
 		
 		Anchor_X = 0.01,
-		Anchor_Y = 0.59,
+		Anchor_Y = 0.52,
 		GrowRight = true,
 	},
 	[valsharah_mapId] = {
@@ -7480,10 +7555,23 @@ WorldQuestTracker.mapTables = {
 		squarePoints = {mySide = "topright", anchorSide = "bottomright", y = -1, xDirection = -1},
 		widgets = eoa_widgets,
 		
-		Anchor_X = 0.48,
+		Anchor_X = 0.47,
 		Anchor_Y = 0.62,
 		GrowRight = true,
-	}
+	},
+	
+	[1021] = { --broken shore
+		worldMapLocation = {x = 425, y = -480, lineWidth = 50},
+		worldMapLocationMax = {x = 614, y = -633, lineWidth = 50},
+		bipAnchor = {side = "left", x = 0, y = -1},
+		factionAnchor = {mySide = "right", anchorSide = "left", x = -0, y = 0},
+		squarePoints = {mySide = "topright", anchorSide = "bottomright", y = -1, xDirection = -1},
+		widgets = eoa_widgets,
+		
+		Anchor_X = 0.62,
+		Anchor_Y = 0.67,
+		GrowRight = true,
+	},
 }
  
 --esconde todos os widgets do world map
@@ -7632,6 +7720,12 @@ local create_worldmap_square = function (mapName, index)
 	epicBorder:SetPoint ("topleft", button, "topleft")
 	epicBorder:SetTexture ([[Interface\AddOns\WorldQuestTracker\media\border_pinkT]])
 	epicBorder:SetSize (WORLDMAP_SQUARE_SIZE, WORLDMAP_SQUARE_SIZE)
+	
+	local invasionBorder = button:CreateTexture (nil, "artwork", 1)
+	invasionBorder:SetPoint ("topleft", button, "topleft")
+	invasionBorder:SetTexture ([[Interface\AddOns\WorldQuestTracker\media\border_legionT]])
+	invasionBorder:SetSize (WORLDMAP_SQUARE_SIZE, WORLDMAP_SQUARE_SIZE)
+	
 	local trackingBorder = button:CreateTexture (nil, "artwork", 1)
 	trackingBorder:SetPoint ("topleft", button, "topleft")
 	trackingBorder:SetTexture ([[Interface\Artifacts\Artifacts]])
@@ -7858,6 +7952,7 @@ local create_worldmap_square = function (mapName, index)
 	button.commonBorder = commonBorder
 	button.rareBorder = rareBorder
 	button.epicBorder = epicBorder
+	button.invasionBorder = invasionBorder
 	button.trackingBorder = trackingBorder
 	button.trackingGlowBorder = trackingGlowBorder
 	
@@ -8120,7 +8215,6 @@ function WorldQuestTracker.UpdateWorldQuestsOnWorldMap (noCache, showFade, isQue
 	
 	--limpa todos os widgets no world map
 	WorldQuestTracker.ClearWorldMapWidgets()
-	
 --	
 	if (WorldQuestTracker.WorldWidgets_NeedFullRefresh) then
 		WorldQuestTracker.WorldWidgets_NeedFullRefresh = nil
@@ -8132,15 +8226,37 @@ function WorldQuestTracker.UpdateWorldQuestsOnWorldMap (noCache, showFade, isQue
 	local filters = WorldQuestTracker.db.profile.filters
 	local timePriority = WorldQuestTracker.db.profile.sort_time_priority and WorldQuestTracker.db.profile.sort_time_priority * 60 --4 8 12 16 24
 	local showTimeLeftText = WorldQuestTracker.db.profile.show_timeleft
-	
+	local forceShowBrokenShore = WorldQuestTracker.db.profile.filter_force_show_brokenshore
+
 	local sortByTimeLeft = WorldQuestTracker.db.profile.force_sort_by_timeleft
+	local worldMapID = GetCurrentMapAreaID()
 	
 	for mapId, configTable in pairs (WorldQuestTracker.mapTables) do
-		
+	
+		--PTR
 		questsAvailable [mapId] = {}
-		local taskInfo = GetQuestsForPlayerByMapID (mapId)
-		local shownQuests = 0
+		--print (GetMapNameByID (1021), #GetQuestsForPlayerByMapID (1014, 1007))
+		--print (GetMapNameByID (1021), #GetQuestsForPlayerByMapID (1021, 1007))
 		
+		--local azsuna_mapId = 1015
+		--local highmountain_mapId = 1024
+		--local stormheim_mapId = 1017
+		--local suramar_mapId = 1033
+		--local valsharah_mapId = 1018
+		--local eoa_mapId = 1096	
+		
+		-- 1014, 1021
+		
+		--local taskInfo = GetQuestsForPlayerByMapID (mapId, 1007)
+		local taskInfo = GetQuestsForPlayerByMapID (mapId, worldMapID)
+
+		--print (mapId, #GetQuestsForPlayerByMapID (mapId, worldMapID))
+
+		--print (mapId, #taskInfo)
+		
+		local shownQuests = 0
+--		/dump #GetQuestsForPlayerByMapID (1015)
+
 		if (taskInfo and #taskInfo > 0) then
 			for i, info in ipairs (taskInfo) do
 				local questID = info.questId
@@ -8180,7 +8296,7 @@ function WorldQuestTracker.UpdateWorldQuestsOnWorldMap (noCache, showFade, isQue
 								end
 							end
 							
-							if (filters [filter] or rarity == LE_WORLD_QUEST_QUALITY_EPIC) then
+							if (filters [filter] or rarity == LE_WORLD_QUEST_QUALITY_EPIC or (forceShowBrokenShore and mapId == 1021)) then --force show broken shore quests
 								tinsert (questsAvailable [mapId], {questID, order, info.numObjectives})
 								shownQuests = shownQuests + 1
 							else
@@ -8269,8 +8385,11 @@ function WorldQuestTracker.UpdateWorldQuestsOnWorldMap (noCache, showFade, isQue
 		end
 	end
 	
+	local worldMapID = GetCurrentMapAreaID()
+	
 	for mapId, configTable in pairs (WorldQuestTracker.mapTables) do
-		local taskInfo = GetQuestsForPlayerByMapID (mapId)
+		--local taskInfo = GetQuestsForPlayerByMapID (mapId, 1007)
+		local taskInfo = GetQuestsForPlayerByMapID (mapId, worldMapID)
 		local taskIconIndex = 1
 		local widgets = configTable.widgets
 		
@@ -8513,7 +8632,8 @@ function WorldQuestTracker.UpdateWorldQuestsOnWorldMap (noCache, showFade, isQue
 										tinsert (WorldQuestTracker.Cache_ShownQuestOnWorldMap [WQT_QUESTTYPE_GOLD], questID)
 										okey = true
 									end
-									if (rewardName) then
+									
+									if (rewardName and not okey) then
 										widget.texture:SetTexture (rewardTexture)
 										--WorldQuestTracker.SetIconTexture (widget.texture, rewardTexture, false, false)
 										--widget.texture:SetTexCoord (0, 1, 0, 1)
@@ -8532,8 +8652,9 @@ function WorldQuestTracker.UpdateWorldQuestsOnWorldMap (noCache, showFade, isQue
 										total_Resources = total_Resources + numRewardItems
 										tinsert (WorldQuestTracker.Cache_ShownQuestOnWorldMap [WQT_QUESTTYPE_RESOURCE], questID)
 										okey = true
+									end
 									
-									elseif (itemName) then
+									if (itemName) then
 										if (isArtifact) then
 											local artifactIcon = WorldQuestTracker.GetArtifactPowerIcon (artifactPower)
 											

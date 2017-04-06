@@ -100,6 +100,3 @@ function Module:Table_GetSorter()
 	end
 end
 
-
-
-

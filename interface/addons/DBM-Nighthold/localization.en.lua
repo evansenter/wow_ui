@@ -5,14 +5,16 @@ local L
 ---------------
 L= DBM:GetModLocalization(1706)
 
-L:SetMiscLocalization({
-	NoDebuff	= "No %s"
-})
-
 ---------------------------
 -- Chronomatic Anomaly --
 ---------------------------
 L= DBM:GetModLocalization(1725)
+
+L:SetOptionLocalization({
+	InfoFrameBehavior	= "Set information InfoFrame shows during encounter",
+	TimeRelease			= "Show players affected by Time Release",
+	TimeBomb			= "Show players affected by Time Bomb"
+})
 
 ---------------------------
 -- Trilliax --
@@ -28,10 +30,6 @@ L= DBM:GetModLocalization(1751)
 -- Tichondrius --
 ------------------
 L= DBM:GetModLocalization(1762)
-
-L:SetOptionLocalization({
-	HUDSeekerLines		= "Show HUD lines with Seeker Swarm"
-})
 
 L:SetMiscLocalization({
 	First				= "First",
@@ -82,8 +80,7 @@ L:SetMiscLocalization({
 L= DBM:GetModLocalization(1732)
 
 L:SetOptionLocalization({
-	ShowCustomNPAuraTextures= "Show custom green/red icon textures in nameplates instead of debuff signs if you are affected by star signs",
-	FilterOtherSigns		= "Filter target announces for Star Signs you are not affected by."
+	ConjunctionYellFilter	= "During $spell:205408, disable all other SAY messages and just spam the star sign message says instead until conjunction has ended"
 })
 
 ------------------
@@ -103,13 +100,19 @@ L:SetOptionLocalization({
 
 L:SetMiscLocalization({
 	noCLEU4EchoRings		= "Let the waves of time crash over you!",
-	noCLEU4EchoOrbs			= "You'll find time can be quite volatile."
+	noCLEU4EchoOrbs			= "You'll find time can be quite volatile.",
+	prePullRP				= "I foresaw your coming, of course. The threads of fate that led you to this place. Your desperate attempt to stop the Legion."
 })
 
 ------------------
 -- Gul'dan --
 ------------------
 L= DBM:GetModLocalization(1737)
+
+L:SetMiscLocalization({
+	mythicPhase3		= "Time to return the demon hunter's soul to his body... and deny the Legion's master a host!",
+	prePullRP			= "Ah yes, the heroes have arrived. So persistent. So confident. But your arrogance will be your undoing!"
+})
 
 -------------
 --  Trash  --
@@ -119,8 +122,3 @@ L = DBM:GetModLocalization("NightholdTrash")
 L:SetGeneralLocalization({
 	name =	"Nighthold Trash"
 })
-
-L:SetMiscLocalization({
-	mythicPhase3		= "Time to return the demon hunter's soul to his body... and deny the Legion's master a host!"
-})
-

@@ -1,4 +1,4 @@
-﻿local _G = _G
+local _G = _G
 local MT = MacroToolkit
 local L = MT.L
 local AceGUI = MT.LS("AceGUI-3.0")

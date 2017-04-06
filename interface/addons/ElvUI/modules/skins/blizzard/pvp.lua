@@ -51,6 +51,12 @@ local function LoadSkin()
 	HonorFrame.BonusFrame.AshranButton.SelectedTexture:SetInside()
 	HonorFrame.BonusFrame.AshranButton.SelectedTexture:SetColorTexture(1, 1, 0, 0.1)
 
+	HonorFrame.BonusFrame.BrawlButton:StripTextures()
+	HonorFrame.BonusFrame.BrawlButton:SetTemplate()
+	HonorFrame.BonusFrame.BrawlButton:StyleButton(nil, true)
+	HonorFrame.BonusFrame.BrawlButton.SelectedTexture:SetInside()
+	HonorFrame.BonusFrame.BrawlButton.SelectedTexture:SetColorTexture(1, 1, 0, 0.1)
+
 	HonorFrame.BonusFrame.DiceButton:DisableDrawLayer("ARTWORK")
 	HonorFrame.BonusFrame.DiceButton:SetHighlightTexture("")
 
@@ -96,6 +102,7 @@ local function LoadSkin()
 	honorBar:StripTextures()
 
 	bar:CreateBackdrop("Default")
+	bar.Spark:SetAlpha(0)
 
 	text:ClearAllPoints()
 	text:Point("CENTER", bar)
@@ -165,6 +172,7 @@ local function LoadSkin()
 	conquestBar:StripTextures()
 
 	bar:CreateBackdrop("Default")
+	bar.Spark:SetAlpha(0)
 
 	text:ClearAllPoints()
 	text:Point("CENTER", bar)

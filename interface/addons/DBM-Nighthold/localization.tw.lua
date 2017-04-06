@@ -6,14 +6,16 @@ local L
 ---------------
 L= DBM:GetModLocalization(1706)
 
-L:SetMiscLocalization({
-	NoDebuff	= "無%s"
-})
-
 ---------------------------
 -- Chronomatic Anomaly --
 ---------------------------
 L= DBM:GetModLocalization(1725)
+
+L:SetOptionLocalization({
+	InfoFrameBehavior	= "設置此戰鬥訊息框架的顯示方式",
+	TimeRelease			= "顯示中了定時釋放的玩家",
+	TimeBomb			= "顯示中了定時炸彈的玩家"
+})
 
 ---------------------------
 -- Trilliax --
@@ -29,10 +31,6 @@ L= DBM:GetModLocalization(1751)
 -- Tichondrius --
 ------------------
 L= DBM:GetModLocalization(1762)
-
-L:SetOptionLocalization({
-	HUDSeekerLines		= "為覓腐蟲群顯示HUD線條"
-})
 
 L:SetMiscLocalization({
 	First				= "第一",
@@ -78,11 +76,8 @@ L:SetMiscLocalization({
 ------------------
 L= DBM:GetModLocalization(1732)
 
-
-
 L:SetOptionLocalization({
-	ShowCustomNPAuraTexture	= "如果你中了星之記號則在名條上顯示自訂的綠/紅圖示材質而不是星之記號減益",
-	FilterOtherSigns		= "過濾與你無關的星之記號點名。"
+	ConjunctionYellFilter	= "在$spell:205408當中，停用其他所有說話訊息而不停重複的說著星之記號直到大連線結束"
 })
 
 ------------------
@@ -102,13 +97,19 @@ L:SetOptionLocalization({
 
 L:SetMiscLocalization({
 	noCLEU4EchoRings		= "時間的浪潮會粉碎你！",
-	noCLEU4EchoOrbs			= "你會發現時光有時很不穩定。"
+	noCLEU4EchoOrbs			= "你會發現時光有時很不穩定。",
+	prePullRP				= "我預見了你的到來。命運的絲線帶你來到這裡。你竭盡全力，想阻止燃燒軍團。"
 })
 
 ------------------
 -- Gul'dan --
 ------------------
 L= DBM:GetModLocalization(1737)
+
+L:SetMiscLocalization({
+	mythicPhase3		= "把靈魂送回惡魔獵人的體內...別讓燃燒軍團的主宰占用!",
+	prePullRP			= "啊，很好，英雄們來了。真有毅力，真有自信。不過你們的傲慢會害死你們！"
+})
 
 -------------
 --  Trash  --

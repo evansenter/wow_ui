@@ -1,2 +1,49 @@
 
-InFlightCharDB = nil
+InFlightCharDB = {
+	["backcolor"] = {
+		["a"] = 0.6,
+		["r"] = 0.1,
+		["g"] = 0.1,
+		["b"] = 0.1,
+	},
+	["barcolor"] = {
+		["a"] = 1,
+		["r"] = 0.5,
+		["g"] = 0.5,
+		["b"] = 0.8,
+	},
+	["border"] = "None",
+	["fontsize"] = 12,
+	["perchar"] = true,
+	["fill"] = true,
+	["p"] = "TOP",
+	["confirmflight"] = false,
+	["rp"] = "TOP",
+	["totext"] = " --> ",
+	["bordercolor"] = {
+		["a"] = 0.8,
+		["r"] = 0.6,
+		["g"] = 0.6,
+		["b"] = 0.6,
+	},
+	["x"] = 1,
+	["width"] = 230,
+	["y"] = -281,
+	["font"] = "ABF",
+	["unknowncolor"] = {
+		["a"] = 1,
+		["r"] = 0.2,
+		["g"] = 0.2,
+		["b"] = 0.4,
+	},
+	["texture"] = "BantoBar",
+	["height"] = 14,
+	["dbinit"] = 33,
+	["fontcolor"] = {
+		["a"] = 1,
+		["r"] = 1,
+		["g"] = 1,
+		["b"] = 1,
+	},
+	["inline"] = true,
+}

@@ -6,14 +6,14 @@ L["WQGF_ALREADY_IS_GROUP_FOR_WQ"] = "당신이 이미 해당 전역 퀘스트를
 L["WQGF_ALREADY_QUEUED_BG"] = "현재 전장 대기열에 등록되어 있습니다. 대기 취소 후 다시 시도하십시오."
 L["WQGF_ALREADY_QUEUED_DF"] = "현재 던전 찾기 대기열에 등록되어 있습니다. 대기 취소 후 다시 시도하십시오."
 L["WQGF_ALREADY_QUEUED_RF"] = "현재 공격대 찾기 대기열에 등록되어 있습니다. 대기 취소 후 다시 시도하십시오."
-L["WQGF_APPLIED_TO_GROUPS"] = "|c00bfffff%s|c00ffffff 전역 퀘스트를 위한 |c00bfffff%d|c00ffffff 파티에 신청되었습니다."
-L["WQGF_APPLIED_TO_GROUPS_QUEST"] = "|c00bfffff%s|c00ffffff 퀘스트를 위한 |c00bfffff%d|c00ffffff 그룹에 신청되었습니다."
+L["WQGF_APPLIED_TO_GROUPS"] = "|c00bfffff%s|c00ffffff 전역 퀘스트를 위한 |c00bfffff%d|c00ffffff개 파티에 신청되었습니다."
+L["WQGF_APPLIED_TO_GROUPS_QUEST"] = "|c00bfffff%s|c00ffffff 퀘스트를 위한 |c00bfffff%d|c00ffffff개 파티에 신청되었습니다."
 L["WQGF_AUTO_LEAVING_DIALOG"] = [=[전역 퀘스트를 완료했으며 %d초 뒤에 그룹을 떠납니다.
 
-파티원에게 작별인사를 하세요!]=]
+파티원에게 작별 인사를 하세요!]=]
 L["WQGF_AUTO_LEAVING_DIALOG_QUEST"] = [=[퀘스트를 완료했으며 %d초 뒤에 그룹을 떠납니다.
 
-파티원에게 작별인사를 하세요!]=]
+파티원에게 작별 인사를 하세요!]=]
 L["WQGF_CANCEL"] = "취소"
 L["WQGF_CANNOT_DO_WQ_IN_GROUP"] = "이 전역 퀘스트는 파티로 수행할 수 없습니다."
 L["WQGF_CANNOT_DO_WQ_TYPE_IN_GROUP"] = "이 유형의 전역 퀘스트는 파티로 수행할 수 없습니다."
@@ -62,10 +62,12 @@ L["WQGF_DEBUG_MODE_ENABLED"] = "디버그 모드가 이제 활성화 됩니다."
 L["WQGF_DEBUG_NO_CURRENT_WQ_ID"] = "현재 퀘스트 없음"
 L["WQGF_DEBUG_WQ_ZONES_ENTERED"] = "현재 세션에서 진입한 전역 퀘스트 지역:"
 L["WQGF_DELIST"] = "파티 등록 취소"
+L["WQGF_DROPPED_WB_SUPPORT"] = [=[WQGF 0.21.3에서 야외 우두머리 전역 퀘스트 지원이 중단되었습니다.
+파티를 찾으려면 기본 UI 버튼을 사용해 주세요.]=]
 L["WQGF_FIND_GROUP_TOOLTIP"] = "WQGF로 파티 찾기"
 L["WQGF_FIND_GROUP_TOOLTIP_2"] = "오른쪽 클릭으로 파티를 탐색합니다"
 L["WQGF_GLOBAL_CONFIGURATION"] = "공통 설정:"
-L["WQGF_GROUP_CREATION_ERROR"] = "새로운 파티 찾기 목록을 만드는 동안 오류가 발생했습니다. 다시 시도하십시오."
+L["WQGF_GROUP_CREATION_ERROR"] = "새로운 파티 찾기 항목을 만드는 동안 오류가 발생했습니다. 다시 시도하십시오."
 L["WQGF_GROUP_NO_LONGER_DOING_QUEST"] = "당신의 파티는 더 이상 |c00bfffff%s|c00ffffff 퀘스트를 수행하지 않습니다."
 L["WQGF_GROUP_NO_LONGER_DOING_WQ"] = "당신의 파티는 더 이상 |c00bfffff%s|c00ffffff 전역 퀘스트를 수행하지 않습니다."
 L["WQGF_GROUP_NOW_DOING_QUEST"] = "당신의 파티는 이제 |c00bfffff%s|c00ffffff 퀘스트를 수행합니다."
@@ -76,9 +78,11 @@ L["WQGF_GROUP_NOW_DOING_WQ_ALREADY_COMPLETE"] = "당신의 파티는 이제 |c00
 L["WQGF_GROUP_NOW_DOING_WQ_NOT_ELIGIBLE"] = "당신의 파티는 이제 |c00bfffff%s|c00ffffff 전역 퀘스트를 수행합니다. 당신은 이 전역 퀘스트를 수행할 수 있는 조건을 충족하지 못했습니다."
 L["WQGF_INIT_MSG"] = "파티를 찾으려면 임무 추적 창이나 세계 지도 상의 전역 퀘스트를 마우스 가운데 버튼으로 클릭하세요."
 L["WQGF_JOINED_WQ_GROUP"] = "|c00bfffff%2$s|c00ffffff|1을;를; 위해 |c00bfffff%1$s|c00ffffff의 파티에 참여했습니다. 즐거운 시간되세요!"
+L["WQGF_KICK_TOOLTIP"] = "너무 먼 곳에 있는 모든 플레이어를 추방합니다"
 L["WQGF_LEADERS_BL_CLEARED"] = "파티장 차단 목록이 초기화 되었습니다."
 L["WQGF_LEAVE"] = "떠나기"
-L["WQGF_NEW_ENTRY_CREATED"] = "|c00bfffff%s|c00ffffff|1을;를; 위한 새로운 파티 찾기 목록이 생성되었습니다."
+L["WQGF_MEMBER_TOO_FAR_AWAY"] = "파티원 %s|1이;가; %s미터 떨어져 있습니다. 파티에서 제거하려면 자동 추방 버튼을 사용하세요."
+L["WQGF_NEW_ENTRY_CREATED"] = "|c00bfffff%s|c00ffffff|1을;를; 위한 새로운 파티 찾기 항목이 생성되었습니다."
 L["WQGF_NO"] = "아니오"
 L["WQGF_NO_APPLICATIONS_ANSWERED"] = "|c00bfffff%s|c00ffffff|1을;를; 위한 당신의 신청 중 어떠한 것도 응답이 없었습니다. 새 파티를 찾고 있습니다..."
 L["WQGF_NO_APPLY_BLACKLIST"] = "해당 파티장이 차단 목록에 있기 때문에 %d개 그룹에 신청하지 않았습니다. |c00bfffff/wqgf unbl|c00ffffff을 입력하여 차단 목록을 초기화할 수 있습니다."
@@ -109,7 +113,7 @@ L["WQGF_STOP_TOOLTIP"] = "이 전역 퀘스트 그만하기"
 L["WQGF_TRANSLATION_INFO"] = "적셔줄게가 한국어로 번역했습니다"
 L["WQGF_USER_JOINED"] = "World Quest Group Finder 사용자가 파티에 참여했습니다!"
 L["WQGF_USERS_JOINED"] = "World Quest Group Finder 사용자들이 파티에 참여했습니다!"
-L["WQGF_WQ_AREA_ENTERED_ALREADY_GROUPED_DIALOG"] = [=[새로운 전역 퀘스트 지역에 진입했지만, 현재 다른 전역 퀘스트 파티에 속해있습니다.
+L["WQGF_WQ_AREA_ENTERED_ALREADY_GROUPED_DIALOG"] = [=[새로운 전역 퀘스트 지역에 진입했지만 현재 다른 전역 퀘스트 파티에 속해있습니다.
 
 현재 파티를 떠나고 "%s" 파티를 찾으시겠습니까?]=]
 L["WQGF_WQ_AREA_ENTERED_DIALOG"] = [=[새로운 전역 퀘스트 지역에 진입했습니다.

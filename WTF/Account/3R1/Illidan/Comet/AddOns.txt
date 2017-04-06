@@ -161,7 +161,7 @@ Altoholic_Grids: disabled
 Altoholic_Guild: disabled
 Altoholic_Search: disabled
 Altoholic_Summary: disabled
-autoturnin: enabled
+autoturnin: disabled
 BulkOrder: disabled
 DataStore: enabled
 DataStore_Achievements: enabled

@@ -149,7 +149,7 @@ CheckButton	ExRTRadioButtonModernTemplate
 local GlobalAddonName, ExRT = ...
 local isExRT = GlobalAddonName == "ExRT"
 
-local libVersion = 26
+local libVersion = 28
 
 if type(ELib)=='table' and type(ELib.V)=='number' and ELib.V > libVersion then return end
 
@@ -194,12 +194,14 @@ do
 		self:SetScript("OnClick",func)
 		return self
 	end
-	local function Widget_OnShow(self,func)
+	local function Widget_OnShow(self,func,disableFirstRun)
 		if not func then
 			return self
 		end
 		self:SetScript("OnShow",func)
-		func(self)
+		if not disableFirstRun then
+			func(self)
+		end
 		return self
 	end
 	local function Widget_Run(self,func,...)
@@ -3054,6 +3056,25 @@ do
 			self.Frame.ScrollBar.buttonDown:Click("LeftButton")
 		end
 	end
+	local function ScrollListListMultitableEnter(self)
+		local mainFrame = self:GetParent().mainFrame
+		if mainFrame.HoverMultitableListValue then
+			mainFrame:HoverMultitableListValue(true,self.index,self)
+		end		
+	end
+	local function ScrollListListMultitableLeave(self)
+		local mainFrame = self:GetParent().mainFrame
+		if mainFrame.HoverMultitableListValue then
+			mainFrame:HoverMultitableListValue(false,self.index,self)
+		end
+	end
+	local function ScrollListListMultitableClick(self)
+		local mainFrame = self:GetParent().mainFrame
+		if mainFrame.ClickMultitableListValue then
+			mainFrame:ClickMultitableListValue(self.index,self)
+		end		
+	end	
+	
 	local ScrollListBackdrop = {bgFile = "", edgeFile = "Interface/Tooltips/UI-Tooltip-Border",tile = true, tileSize = 16, edgeSize = 16, insets = { left = 5, right = 5, top = 5, bottom = 5 }}
 	local ScrollListBackdropModern = {edgeFile = "Interface/AddOns/"..GlobalAddonName.."/media/border", edgeSize = 16}
 	
@@ -3107,9 +3128,21 @@ do
 			local zeroWidth = nil
 			for j=1,#self.T do
 				local width = self.T[j]
-				line['text'..j] = ELib:Text(line,"List",self.fontSize or 12):Size(width,16):Color():Shadow():Left()
+				local textObj = ELib:Text(line,"List",self.fontSize or 12):Size(width,16):Color():Shadow():Left()
+				line['text'..j] = textObj
 				if width == 0 then
 					zeroWidth = j
+				end
+				
+				if self.additionalLineFunctions then
+					local hoverFrame = CreateFrame('Button',nil,line)
+					hoverFrame:SetScript("OnEnter",ScrollListListMultitableEnter)
+					hoverFrame:SetScript("OnLeave",ScrollListListMultitableLeave)
+					hoverFrame:SetScript("OnClick",ScrollListListMultitableClick)
+					hoverFrame:SetAllPoints(textObj)
+					hoverFrame.index = j
+					hoverFrame.parent = textObj
+					--hoverFrame:EnableMouse(false)
 				end
 			end
 			for j=1,#self.T do
@@ -3216,6 +3249,7 @@ do
 			end
 			line:Show()
 			line.index = i
+			line.table = self.L[i]
 			if (j >= #self.L) or (j >= self.linesPerPage) then
 				break
 			end

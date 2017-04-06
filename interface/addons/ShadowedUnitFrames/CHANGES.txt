@@ -1,30 +1,12 @@
-tag 7bbe2e48791e47406475e52d7c4efe0ef5259911 v4.1.14
+tag a2a35582749c673cb347611f632278d596fa38db v4.1.17
 Author:	Hendrik Leppkes <h.leppkes@gmail.com>
-Date:	Wed Feb 1 06:26:31 2017 +0100
+Date:	Wed Mar 29 09:43:46 2017 +0200
 
-Tag as v4.1.14
+Tag as v4.1.17
 
-commit 317a7d240e90089d7ed37fec31d77b4941ec9573
+commit 3d49caef98e9b6f79734fd45b7559fb3e8e6533a
 Author: Hendrik Leppkes <h.leppkes@gmail.com>
-Date:   Wed Feb 1 06:22:19 2017 +0100
+Date:   Wed Mar 29 09:43:15 2017 +0200
 
-    Use Shadow Bolt as the default warlock range spell
-
-commit e51d92629865a966f3d1c88c9da6fd375fc0c5a3
-Author: Hendrik Leppkes <h.leppkes@gmail.com>
-Date:   Wed Feb 1 06:19:01 2017 +0100
-
-    Fix class token retrievel for arena unit frames
-
-commit b485eb905368920247d3d62e1c18e54dbb77c847
-Author: Hendrik Leppkes <h.leppkes@gmail.com>
-Date:   Wed Dec 14 20:26:14 2016 +0100
-
-    Update TOC for 7.1
-
-commit 0c703873ed80b3a0863a2142df0103fc72bc41f0
-Author: Hendrik Leppkes <h.leppkes@gmail.com>
-Date:   Tue Dec 13 01:23:13 2016 +0100
-
-    Cleanup pkgmeta repository paths a bit to include less clutter
+    Separate Blizzard cooldown count from OmniCC cooldown count and disable Blizzard by default
 

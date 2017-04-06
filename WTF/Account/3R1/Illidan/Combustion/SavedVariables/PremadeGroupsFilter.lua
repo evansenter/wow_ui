@@ -7,14 +7,14 @@ PremadeGroupsFilterState = {
 		["act"] = false,
 	},
 	["ilvl"] = {
-		["max"] = "",
-		["min"] = "860",
-		["act"] = false,
+		["max"] = "880",
+		["min"] = "",
+		["act"] = true,
 	},
 	["dps"] = {
 		["max"] = "2",
 		["min"] = "",
-		["act"] = false,
+		["act"] = true,
 	},
 	["noilvl"] = {
 		["act"] = false,

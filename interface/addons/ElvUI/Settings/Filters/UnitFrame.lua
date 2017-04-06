@@ -671,6 +671,9 @@ G.unitframe.aurafilters['RaidDebuffs'] = {
 	-- Chronomatic Anomaly
 		[206607] = Defaults(), -- Chronometric Particles (Tank stack debuff)
 		[206609] = Defaults(), -- Time Release (Heal buff/debuff)
+		[219966] = Defaults(), -- Time Release (Heal Absorb Red)
+		[219965] = Defaults(), -- Time Release (Heal Absorb Yellow)
+		[219964] = Defaults(), -- Time Release (Heal Absorb Green)
 		[205653] = Defaults(), -- Passage of Time
 		[225901] = Defaults(), -- Time Bomb
 		[207871] = Defaults(), -- Vortex (Mythic)
@@ -840,9 +843,18 @@ G.unitframe.aurafilters['RaidDebuffs'] = {
 -- Trial of Valor
 	-- Odyn
 		[227959] = Defaults(), -- Storm of Justice
+		[227807] = Defaults(), -- Storm of Justice
 		[227475] = Defaults(), -- Cleansing Flame
 		[192044] = Defaults(), -- Expel Light
+		[228030] = Defaults(), -- Expel Light
 		[227781] = Defaults(), -- Glowing Fragment
+		[228918] = Defaults(), -- Stormforged Spear
+		[227490] = Defaults(), -- Branded
+		[227491] = Defaults(), -- Branded
+		[227498] = Defaults(), -- Branded
+		[227499] = Defaults(), -- Branded
+		[227500] = Defaults(), -- Branded
+		[231297] = Defaults(), -- Runic Brand (Mythic Only)
 
 	-- Guarm
 		[228228] = Defaults(), -- Flame Lick
@@ -853,8 +865,10 @@ G.unitframe.aurafilters['RaidDebuffs'] = {
 		[227570] = Defaults(), -- Dark Discharge
 
 	-- Helya
+		[228883] = Defaults(5), -- Unholy Reckoning (Trash)
 		[227903] = Defaults(), -- Orb of Corruption
 		[228058] = Defaults(), -- Orb of Corrosion
+		[229119] = Defaults(), -- Orb of Corrosion
 		[228054] = Defaults(), -- Taint of the Sea
 		[193367] = Defaults(), -- Fetid Rot
 		[227982] = Defaults(), -- Bilewater Redox
@@ -871,7 +885,7 @@ E.ReverseTimer = {
 
 --BuffWatch
 --List of personal spells to show on unitframes as icon
-local function ClassBuff(id, point, color, anyUnit, onlyShowMissing, style, displayText, decimalThreshold, textColor, textThreshold, xOffset, yOffset)
+local function ClassBuff(id, point, color, anyUnit, onlyShowMissing, style, displayText, decimalThreshold, textColor, textThreshold, xOffset, yOffset, sizeOverride)
 	local r, g, b = unpack(color)
 
 	local r2, g2, b2 = 1, 1, 1
@@ -881,7 +895,7 @@ local function ClassBuff(id, point, color, anyUnit, onlyShowMissing, style, disp
 
 	return {["enabled"] = true, ["id"] = id, ["point"] = point, ["color"] = {["r"] = r, ["g"] = g, ["b"] = b},
 	["anyUnit"] = anyUnit, ["onlyShowMissing"] = onlyShowMissing, ['style'] = style or 'coloredIcon', ['displayText'] = displayText or false, ['decimalThreshold'] = decimalThreshold or 5,
-	['textColor'] = {["r"] = r2, ["g"] = g2, ["b"] = b2}, ['textThreshold'] = textThreshold or -1, ['xOffset'] = xOffset or 0, ['yOffset'] = yOffset or 0}
+	['textColor'] = {["r"] = r2, ["g"] = g2, ["b"] = b2}, ['textThreshold'] = textThreshold or -1, ['xOffset'] = xOffset or 0, ['yOffset'] = yOffset or 0, ["sizeOverride"] = sizeOverride or 0}
 end
 
 G.unitframe.buffwatch = {

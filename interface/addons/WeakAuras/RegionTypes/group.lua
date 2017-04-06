@@ -1,7 +1,5 @@
 local SharedMedia = LibStub("LibSharedMedia-3.0");
 
--- GLOBALS: WeakAuras
-
 -- Default settings
 local default = {
     controlledChildren     = {},
@@ -95,15 +93,7 @@ local function modify(parent, region, data)
 
     -- Reset position and size
     region:ClearAllPoints();
-    local anchorFrame = WeakAuras.GetAnchorFrame(data.id, data.anchorFrameType, parent, data.anchorFrameFrame);
-    region:SetParent(anchorFrame);
-    region:SetPoint(data.selfPoint, anchorFrame, data.anchorPoint, data.xOffset, data.yOffset);
-    -- Adjust framestrata
-    if(data.frameStrata == 1) then
-        region:SetFrameStrata(region:GetParent():GetFrameStrata());
-    else
-        region:SetFrameStrata(WeakAuras.frame_strata_types[data.frameStrata]);
-    end
+    WeakAuras.AnchorFrame(data, region, parent);
 
     -- Adjust frame-level sorting
     local frameLevel = 1
