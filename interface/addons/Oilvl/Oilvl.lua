@@ -6243,7 +6243,7 @@ function oilvlShowBagItemLevel()
 	for i=1,NUM_CONTAINER_FRAMES do
 		for j=1,MAX_CONTAINER_ITEMS do
 			local frame = _G["ContainerFrame"..i.."Item"..j]
-			if frame then
+			if frame and frame:GetParent() and frame:GetParent():GetID() then
 				if not frame.iLvl then
 					frame.iLvl = frame:CreateFontString(nil, "OVERLAY", "NumberFontNormal")
 					frame.iLvl:SetPoint("BOTTOM", 0, 0)

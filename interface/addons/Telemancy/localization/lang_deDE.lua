@@ -1,4 +1,4 @@
--- German localization by Gnarfoz and Bloerwald.
+-- German localization by Gnarfoz, Bloerwald and flow0284.
 
 if GetLocale() == "deDE" then
 	local L = Telemancy.strings;
@@ -15,4 +15,5 @@ if GetLocale() == "deDE" then
 	L["TELE_EVERMOON_TERRACE"] = "Immermondterrasse";
 	L["TELE_ACTIVE"] = "Status: Aktiv";
 	L["TELE_INACTIVE"] = "Status: Inaktiv";
+	L["TELE_ASTRAVAR_HARBOR"] = "Hafen der Astravar";
 end

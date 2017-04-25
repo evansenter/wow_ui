@@ -379,7 +379,7 @@ DBM_AllSavedOptions = {
 			0.5, -- [2]
 			0, -- [3]
 		},
-		["HideGarrisonUpdates"] = false,
+		["ShortTimerText"] = true,
 		["HUDTexture2"] = "highlight",
 		["RangeFrameRadarPoint"] = "CENTER",
 		["SpecialWarningY"] = 102.999732971191,
@@ -387,12 +387,12 @@ DBM_AllSavedOptions = {
 		["ShowTranscriptorMessage"] = true,
 		["RangeFrameUpdates"] = "Average",
 		["CountdownVoice3v2"] = "HoTS_R",
-		["RoleSpecAlert"] = true,
+		["HideGarrisonUpdates"] = false,
 		["WarningY"] = 260,
 		["CustomSounds"] = 0,
 		["HUDTexture1"] = "highlight",
 		["SpecialWarningFlashRepeat3"] = true,
-		["ShortTimerText"] = true,
+		["RoleSpecAlert"] = true,
 		["WhisperStats"] = false,
 		["VoiceOverSpecW2"] = "DefaultOnly",
 		["RangeFrameFrames"] = "radar",
@@ -543,36 +543,33 @@ DBM_AllSavedOptions = {
 			0.968627450980392, -- [3]
 		},
 		["WarningFontStyle"] = "None",
+		["HelpMessageVersion"] = 2,
 		["InfoFrameY"] = -75,
 		["ChatFrame"] = "DEFAULT_CHAT_FRAME",
 		["HealthFrameLocked"] = false,
 		["UseSoundChannel"] = "Master",
-		["HelpMessageVersion"] = 2,
-		["EnablePatchRestrictions"] = false,
+		["SpecialWarningSound3"] = "Sound\\Creature\\KilJaeden\\KILJAEDEN02.ogg",
+		["AFKHealthWarning"] = false,
 		["ShowCountdownText"] = false,
 		["SpecialWarningDuration"] = 3,
-		["AFKHealthWarning"] = false,
-		["HideQuestTooltips"] = true,
+		["DontRestoreIcons"] = false,
 		["PTCountThreshold"] = 10,
-		["SpecialWarningFlashDura5"] = 1,
+		["HideQuestTooltips"] = true,
 		["SWarnNameInNote"] = true,
 		["HUDColor1"] = {
 			1, -- [1]
 			1, -- [2]
 			0, -- [3]
 		},
+		["HUDSize3"] = 5,
+		["NewsMessageShown"] = 9,
 		["FakeBWVersion"] = false,
-		["NewsMessageShown"] = 8,
 		["HUDColor2"] = {
 			1, -- [1]
 			0, -- [2]
 			0, -- [3]
 		},
-		["HUDColor4"] = {
-			0, -- [1]
-			1, -- [2]
-			0, -- [3]
-		},
+		["HUDAlpha2"] = 0.5,
 		["FilterDispel"] = true,
 		["HUDSize2"] = 5,
 		["ShowFakedRaidWarnings"] = false,
@@ -584,7 +581,7 @@ DBM_AllSavedOptions = {
 		["DontShowPTNoID"] = false,
 		["HideGarrisonToasts"] = true,
 		["RangeFramePoint"] = "TOP",
-		["HUDAlpha2"] = 0.5,
+		["PGMessageShown2"] = false,
 		["SpecialWarningFontShadow"] = false,
 		["RLReadyCheckSound"] = true,
 		["AutoReplySound"] = true,
@@ -766,16 +763,20 @@ DBM_AllSavedOptions = {
 		["Enabled"] = false,
 		["HUDTexture3"] = "highlight",
 		["BCTWMessageShown"] = false,
-		["SpecialWarningSound3"] = "Sound\\Creature\\KilJaeden\\KILJAEDEN02.ogg",
 		["DontShowHealthFrame"] = true,
+		["HUDColor4"] = {
+			0, -- [1]
+			1, -- [2]
+			0, -- [3]
+		},
 		["BugMessageShown"] = 2,
 		["ShowWipeMessage"] = true,
 		["LogOnlyRaidBosses"] = false,
 		["StripServerName"] = true,
-		["HUDSize3"] = 5,
 		["WarningPoint"] = "CENTER",
+		["SpecialWarningFlashDura5"] = 1,
 		["HPFrameX"] = -158.999984741211,
-		["DontRestoreIcons"] = false,
+		["EnablePatchRestrictions"] = false,
 		["SpamBlockBossWhispers"] = true,
 		["CATATWMessageShown"] = false,
 		["ShowFlashFrame"] = false,

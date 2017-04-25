@@ -100,13 +100,18 @@ local function CreateSimcTalentString()
 end
 
 -- function that translates between the game's role values and ours
-local function translateRole(str)
+local function translateRole(spec_id, str)
+  local spec_role = Simulationcraft.RoleTable[spec_id]
+  if spec_role ~= nil then
+    return spec_role
+  end
+
   if str == 'TANK' then
-    return tokenize(str)
+    return 'tank'
   elseif str == 'DAMAGER' then
     return 'attack'
   elseif str == 'HEALER' then
-    return 'healer'
+    return 'heal'
   else
     return ''
   end
@@ -124,7 +129,8 @@ function Simulationcraft:GetArtifactString()
     return nil
   end
 
-  if not IsArtifactFrameOpen() then
+  local artifactFrameOpen = IsArtifactFrameOpen()
+  if not artifactFrameOpen then
     SocketInventoryItem(INVSLOT_MAINHAND)
   end
 
@@ -145,9 +151,13 @@ function Simulationcraft:GetArtifactString()
   for i = 1, #powers do
     local power_id = powers[i]
     local power_info = ArtifactUI.GetPowerInfo(power_id)
-    if power_info.currentRank > 0 and power_info.currentRank - power_info.bonusRanks > 0 then
+    if power_info ~= nil and power_info.currentRank > 0 and power_info.currentRank - power_info.bonusRanks > 0 then
       str = str .. ':' .. power_id .. ':' .. (power_info.currentRank - power_info.bonusRanks)
     end
+  end
+
+  if not artifactFrameOpen then
+    HideUIPanel(ArtifactFrame)
   end
 
   return str
@@ -334,7 +344,7 @@ function Simulationcraft:PrintSimcProfile()
   local player = tokenize(playerClass) .. '="' .. playerName .. '"'
   playerLevel = 'level=' .. playerLevel
   playerRace = 'race=' .. tokenize(playerRace)
-  playerRole = 'role=' .. translateRole(role)
+  playerRole = 'role=' .. translateRole(globalSpecID, role)
   playerSpec = 'spec=' .. tokenize(playerSpec)
   playerRealm = 'server=' .. tokenize(playerRealm)
   playerRegion = 'region=' .. tokenize(playerRegion)
@@ -373,7 +383,6 @@ function Simulationcraft:PrintSimcProfile()
     simulationcraftProfile = "Error: You need to pick a spec!"
   end
 
-  HideUIPanel(ArtifactFrame)
   -- show the appropriate frames
   SimcCopyFrame:Show()
   SimcCopyFrameScroll:Show()

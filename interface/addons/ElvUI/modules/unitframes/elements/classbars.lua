@@ -46,17 +46,12 @@ function UF:Configure_ClassBar(frame, cur)
 	--We don't want to modify the original frame.CLASSBAR_WIDTH value, as it bugs out when the classbar gains more buttons
 	local CLASSBAR_WIDTH = frame.CLASSBAR_WIDTH
 
-	local c = self.db.colors.classResources.bgColor
+	local color = self.db.colors.classResources.bgColor
 	bars.backdrop.ignoreUpdates = true
-	bars.backdrop.backdropTexture:SetVertexColor(c.r, c.g, c.b)
-	if(not E.PixelMode) then
-		c = E.db.general.bordercolor
-		if(self.thinBorders) then
-			bars.backdrop:SetBackdropBorderColor(0, 0, 0)
-		else
-			bars.backdrop:SetBackdropBorderColor(c.r, c.g, c.b)
-		end
-	end
+	bars.backdrop.backdropTexture:SetVertexColor(color.r, color.g, color.b)
+
+	color = E.db.general.bordercolor
+	bars.backdrop:SetBackdropBorderColor(color.r, color.g, color.b)
 
 	if frame.USE_MINI_CLASSBAR and not frame.CLASSBAR_DETACHED then
 		bars:ClearAllPoints()
@@ -134,11 +129,11 @@ function UF:Configure_ClassBar(frame, cur)
 
 			if i <= frame.MAX_CLASS_BAR then
 				bars[i].backdrop.ignoreUpdates = true
-				bars[i].backdrop.backdropTexture:SetVertexColor(c.r, c.g, c.b)
-				if(not E.PixelMode) then
-					c = E.db.general.bordercolor
-					bars[i].backdrop:SetBackdropBorderColor(c.r, c.g, c.b)
-				end
+				bars[i].backdrop.backdropTexture:SetVertexColor(color.r, color.g, color.b)
+				
+				color = E.db.general.bordercolor
+				bars[i].backdrop:SetBackdropBorderColor(color.r, color.g, color.b)
+
 				bars[i]:Height(bars:GetHeight())
 				if frame.MAX_CLASS_BAR == 1 then
 					bars[i]:SetWidth(CLASSBAR_WIDTH)
@@ -298,7 +293,7 @@ UF.ToggleResourceBar = ToggleResourceBar --Make available to combobar
 -------------------------------------------------------------
 function UF:Construct_ClassBar(frame)
 	local bars = CreateFrame("Frame", nil, frame)
-	bars:CreateBackdrop('Default', nil, nil, self.thinBorders)
+	bars:CreateBackdrop('Default', nil, nil, self.thinBorders, true)
 
 	local maxBars = max(UF['classMaxResourceBar'][E.myclass] or 0, MAX_COMBO_POINTS)
 	for i = 1, maxBars do
@@ -307,7 +302,7 @@ function UF:Construct_ClassBar(frame)
 		bars[i]:GetStatusBarTexture():SetHorizTile(false)
 		UF['statusbars'][bars[i]] = true
 
-		bars[i]:CreateBackdrop('Default', nil, nil, self.thinBorders)
+		bars[i]:CreateBackdrop('Default', nil, nil, self.thinBorders, true)
 		bars[i].backdrop:SetParent(bars)
 
 		bars[i].bg = bars:CreateTexture(nil, 'OVERLAY')
@@ -368,7 +363,7 @@ end
 -------------------------------------------------------------
 function UF:Construct_DeathKnightResourceBar(frame)
 	local runes = CreateFrame("Frame", nil, frame)
-	runes:CreateBackdrop('Default', nil, nil, self.thinBorders)
+	runes:CreateBackdrop('Default', nil, nil, self.thinBorders, true)
 
 	for i = 1, UF['classMaxResourceBar'][E.myclass] do
 		runes[i] = CreateFrame("StatusBar", frame:GetName().."RuneButton"..i, runes)
@@ -376,7 +371,7 @@ function UF:Construct_DeathKnightResourceBar(frame)
 		runes[i]:SetStatusBarTexture(E['media'].blankTex)
 		runes[i]:GetStatusBarTexture():SetHorizTile(false)
 
-		runes[i]:CreateBackdrop('Default', nil, nil, self.thinBorders)
+		runes[i]:CreateBackdrop('Default', nil, nil, self.thinBorders, true)
 		runes[i].backdrop:SetParent(runes)
 
 		runes[i].bg = runes[i]:CreateTexture(nil, 'BORDER')
@@ -525,7 +520,7 @@ end
 function UF:Construct_Stagger(frame)
 	local stagger = CreateFrame("Statusbar", nil, frame)
 	UF['statusbars'][stagger] = true
-	stagger:CreateBackdrop("Default",nil, nil, self.thinBorders)
+	stagger:CreateBackdrop("Default",nil, nil, self.thinBorders, true)
 	stagger.PostUpdate = UF.PostUpdateStagger
 	stagger.PostUpdateVisibility = UF.PostUpdateVisibilityStagger
 

@@ -1,3 +1,18 @@
+** Version 1.1.8 **
+* Corrected required quest for Astravar Harbor portal indicator.
+
+** Version 1.1.7 **
+* Updated localization for deDE, esES, koKR.
+
+** Version 1.1.6 **
+* Updated localization for frFR.
+* Fixed missing coma that broke everything (thanks Nelfym for the catch).
+* Fixed another missing character that broke everything (thanks flow0284 for the catch).
+
+** Version 1.1.5 **
+* Added portal: Astravar Harbor.
+* Updated localization for koKR, zhCN, zhTW.
+
 ** Version 1.1.4 **
 * Updated Russian (ruRU) localization.
 

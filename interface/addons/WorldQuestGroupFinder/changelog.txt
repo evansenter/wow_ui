@@ -1,4 +1,24 @@
-﻿0.22.1 (31/03/2017)
+﻿0.22.5 (24/04/2017)
+- Fixed an LUA error that was sometimes occuring
+
+0.22.4 (22/04/2017)
+- Fixed taint issues
+
+0.22.3 (22/04/2017)
+- The raid group issue should hopefully now be fixed
+
+0.22.2 (21/04/2017)
+- Fixed auto-invite broken for regular quests
+- Fixed groups sometimes being converted to raid
+- Auto-kick range is now 650yd
+- Possible fix for the eye minimap icon stuck blinking
+- Will no longer try to apply to more than 5 groups, removing the error message spam
+- Players lower than level 110 now get auto-invited for invasion world quests (Thanks Nimid!)
+- Removed text about blacklisted groups as it was confusing for some people
+- Updated quest blacklists
+- Updated localizations
+
+0.22.1 (31/03/2017)
 - Changed TOC to 7.2
 - Added new slash command to auto-kick out of range players : /wqgf autokick
 - Updated localizations

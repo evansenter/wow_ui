@@ -2,38 +2,36 @@ local WeakAuras = WeakAuras
 local L = WeakAuras.L
 local GetSpellInfo, tinsert, GetItemInfo, GetSpellDescription, C_Timer = GetSpellInfo, tinsert, GetItemInfo, GetSpellDescription, C_Timer
 
--- TODO Display Templates
-
 -- The templates tables are created on demand
 local templates =
-{
-  class = { },
-  race = {
-    Human = {},
-    NightElf = {},
-    Dwarf = {},
-    Gnome = {},
-    Draenei = {},
-    Worgen = {},
-    Pandaren = {},
-    Orc = {},
-    Scourge = {},
-    Tauren = {},
-    Troll = {},
-    BloodElf = {},
-    Goblin = {}
-  },
-  general = {
-    title = L["General"],
-    icon = 136116,
-    args = {}
-  },
-  items = {
-  },
-}
+  {
+    class = { },
+    race = {
+      Human = {},
+      NightElf = {},
+      Dwarf = {},
+      Gnome = {},
+      Draenei = {},
+      Worgen = {},
+      Pandaren = {},
+      Orc = {},
+      Scourge = {},
+      Tauren = {},
+      Troll = {},
+      BloodElf = {},
+      Goblin = {}
+    },
+    general = {
+      title = L["General"],
+      icon = 136116,
+      args = {}
+    },
+    items = {
+    },
+  }
 
 local powerTypes =
-{
+  {
     [0] = { name = MANA, icon = "Interface\\Icons\\inv_elemental_mote_mana" },
     [1] = { name = RAGE, icon = "Interface\\Icons\\spell_misc_emotionangry"},
     [2] = { name = FOCUS, icon = "Interface\\Icons\\ability_hunter_focusfire"},
@@ -50,7 +48,7 @@ local powerTypes =
     [17] = {name = FURY, icon = 1344651},
     [18] = {name = PAIN, icon = 1247265},
     [99] = {name = L["Stagger"], icon = "Interface\\Icons\\monk_stance_drunkenox"}
-}
+  }
 
 -- Collected by WeakAurasTemplateCollector:
 
@@ -1999,6 +1997,7 @@ templates.class.MAGE = {
         { spell = 108839, type = "ability"}, -- Ice Floes
         { spell = 113724, type = "ability", talent = 14}, -- Ring of Frost
         { spell = 116011, type = "ability", talent = 8}, -- Rune of Power
+        { spell = 135029, type = "ability", titleSuffix = L["(Water Elemental)"]}, -- Freeze
         { spell = 153595, type = "ability", talent = 21}, -- Comet Storm
         { spell = 157997, type = "ability", talent = 10}, -- Ice Nova
         { spell = 190356, type = "ability"}, -- Blizzard
@@ -3861,34 +3860,34 @@ for i = 1, 3 do
 end
 
 local runeOfPower =
-{
-  title = GetSpellInfo(116011),
-  icon = select(3, GetSpellInfo(116011)),
-  talent = 8,
-  triggers = {
-    [0] = {
-      trigger = {
-        type = "status",
-        event = "Totem",
-        use_totemType = true,
-        totemType = 1,
-        unevent = "auto"
+  {
+    title = GetSpellInfo(116011),
+    icon = select(3, GetSpellInfo(116011)),
+    talent = 8,
+    triggers = {
+      [0] = {
+        trigger = {
+          type = "status",
+          event = "Totem",
+          use_totemType = true,
+          totemType = 1,
+          unevent = "auto"
+        }
+      },
+      [1] = {
+        trigger = {
+          type = "aura",
+          spellIds = { 116014 },
+          unit = "player",
+          use_unit = true,
+          debuffType = "HELPFUL",
+          unevent = "auto",
+          ownOnly = true
+        }
       }
     },
-    [1] = {
-      trigger = {
-        type = "aura",
-        spellIds = { 116014 },
-        unit = "player",
-        use_unit = true,
-        debuffType = "HELPFUL",
-        unevent = "auto",
-        ownOnly = true
-      }
-    }
-  },
-  disjunctive = "all"
-}
+    disjunctive = "all"
+  }
 
 for i = 1, 3 do
   local tmpTable = {};

@@ -1,30 +1,12 @@
-tag b9f9fd7eca78f4db620e4af4b974bb0200b0f664 v1.6.0
+tag 4d1603b0c050a969d2e558d693fd3114062ce847 v1.6.2
 Author:	Navv <navv1234@gmail.com>
-Date:	Wed Mar 29 22:12:20 2017 +0300
+Date:	Thu Apr 13 19:28:33 2017 +0300
 
 release
 
-commit 34d7921e1dbde5ef6fe9ef0e597aaa450bedfd37
+commit e8c2b6068da7dd23081a2ecad5228af44f880b6f
 Author: Navv <navv1234@gmail.com>
-Date:   Wed Mar 29 22:10:21 2017 +0300
+Date:   Thu Apr 13 19:28:24 2017 +0300
 
-    Update version
-
-commit 5ee5441747d222bdc5ec0f69c4c8e24988f312de
-Author: Navv <navv1234@gmail.com>
-Date:   Wed Mar 29 22:04:28 2017 +0300
-
-    Hide artifact UI automatically
-
-commit 2819746e18febbfacd40cf7d183b1d3a900e509f
-Author: Navv <navv1234@gmail.com>
-Date:   Wed Mar 29 22:03:20 2017 +0300
-
-    Fix 7.2 item parsing for new trait enabled artifacts
-
-commit f53681963e729dc9903f62c8a92fa508c208c168
-Author: Navv <navv1234@gmail.com>
-Date:   Wed Mar 29 20:46:01 2017 +0300
-
-    Update TOC. Fix artifact option string generation.
+    Less breaking
 

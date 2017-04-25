@@ -38,7 +38,7 @@ InFlightCharDB = {
 	},
 	["texture"] = "BantoBar",
 	["height"] = 14,
-	["dbinit"] = 33,
+	["dbinit"] = 16,
 	["fontcolor"] = {
 		["a"] = 1,
 		["r"] = 1,

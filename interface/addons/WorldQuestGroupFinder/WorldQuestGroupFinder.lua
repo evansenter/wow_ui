@@ -20,11 +20,13 @@ local recentlyTimedOut = false
 local recentlyInvited = false
 local upToDateGroupMembersCount = 0
 local currentlyApplying = false
-local INVITE_TIMEOUT_DELAY = 10
+local INVITE_TIMEOUT_DELAY = 8
 local BROADCAST_PREFIX = "WQGF"
 local playerRealmType = "PVE"
 local pendingInvites = 0
 local recentlyInvitedPlayers = false
+local autoInviteRunning = false
+local autoInviteQueued = false
 
 local activityIDs = {
 	[1015] = 419,
@@ -37,6 +39,8 @@ local activityIDs = {
 }
 
 local blacklistedQuests = { 
+	[45379] = true, -- Treasure Master Iks'reeged  
+	[45988] = true, -- Ancient Bones  
 	[43943] = true, -- Withered Army Training
 	[42725] = true, -- Sharing the Wealth
 	[42880] = true, -- Meeting their Quota
@@ -236,6 +240,8 @@ local raidQuests = {
 }
 
 local WorldBosses = {
+	[47061] = true, -- Apocron
+	[46948] = true, -- Malificus
 	[42270] = true, -- Scourge of the Skies
 	[44287] = true, -- DEADLY: Withered J'im
 	[43192] = true, -- Terror of the Deep
@@ -519,14 +525,14 @@ end
 function CheckDistances()
 	if (currentWQ ~= nil) then
 		if (UnitIsGroupLeader("player")) then
-			-- Auto-kick all realm hoppers (players that are more than 500 yards away)
+			-- Auto-kick all realm hoppers (players that are more than 650 yards away)
 			for i=1, GetNumGroupMembers() do
 				local unitName, unitRank = GetRaidRosterInfo(i)
 				if unitName == GetUnitName(GetUnitID(i), true) then		-- make sure we don't kick the wrong players
 					if (unitRank ~= 2 and blacklistedRealmHoppers[unitName] == nil) then
 						distanceSquared, checkedDistance = UnitDistanceSquared(GetUnitID(i))
 						if checkedDistance then
-							if distanceSquared ^ 0.5 >= 500 then
+							if distanceSquared ^ 0.5 >= 650 then
 								WorldQuestGroupFinder.prefixedPrint(string.format(L["WQGF_MEMBER_TOO_FAR_AWAY"], unitName, floor(distanceSquared ^ 0.5 + 0.5)))
 								blacklistedRealmHoppers[unitName] = true
 								currentWQFrame.KickButton:Show()
@@ -556,11 +562,13 @@ function RegisteredEvents:GROUP_ROSTER_UPDATE(event)
 		if (UnitIsGroupLeader("player")) then
 			CheckDistances()
 			-- If doing a world quest, group is not full and applicants are waiting, we will try to invite them
-			if ((GetNumGroupMembers() < 5 or raidQuests[currentWQ]) and C_LFGList.GetNumApplicants() > 0) then
-				WorldQuestGroupFinder.HandleCustomAutoInvite()
-			end
+			C_Timer.After(1, function()
+				if (((GetNumGroupMembers(LE_PARTY_CATEGORY_HOME) + C_LFGList.GetNumInvitedApplicantMembers() < (MAX_PARTY_MEMBERS+1)) or raidQuests[currentWQ]) and C_LFGList.GetNumApplicants() > 0) then
+					WorldQuestGroupFinder.HandleCustomAutoInvite()
+				end
+			end)
 			-- You don't want to  be in raid mode, unless it is an elite quest
-			if (IsInRaid() and GetNumGroupMembers() <= 5 and not raidQuests[currentWQ]) then
+			if (IsInRaid() and GetNumGroupMembers() <= MAX_PARTY_MEMBERS+1 and not raidQuests[currentWQ]) then
 				ConvertToParty()
 			end			
 			-- Check for auto-invite. We don't like that!
@@ -578,6 +586,8 @@ function RegisteredEvents:GROUP_ROSTER_UPDATE(event)
 					WorldQuestGroupFinder.updateRealmTypeInComment(currentRealmType)
 				end
 			end
+			-- Avoid raid mode
+			recentlyInvitedPlayers = true
 		end
 	end
 	-- GetPlayerMapPosition("party1")
@@ -874,7 +884,7 @@ function WorldQuestGroupFinder.InitWQGroup(questID, retry, forceCreate)
 				for k, v in pairs( searchResults ) do
 					local id,_,name,description,_,ilvl,_,_,_,_,_,_,author,members,autoinv = C_LFGList.GetSearchResultInfo(v)
 					-- Check group is correct
-					if (name == title and GetAverageItemLevel() > ilvl and (members + currentPlayers <= 5 or raidQuests[questID]) and author ~= UnitName("player") and not autoinv) then
+					if (name == title and GetAverageItemLevel() > ilvl and (members + currentPlayers <= MAX_PARTY_MEMBERS+1 or raidQuests[questID]) and author ~= UnitName("player") and not autoinv) then
 						if (blacklistedLeaders[author] == true or (retry and not author)) then
 							if (author) then
 								WorldQuestGroupFinder.dprint(string.format("Ignoring group because leader is blacklisted. ID: %d, Name: %s, Leader: %s", id, name, author))
@@ -912,13 +922,17 @@ function WorldQuestGroupFinder.InitWQGroup(questID, retry, forceCreate)
 								if ((canBeTank or canBeHealer or canBeDamager) == false) then
 									canBeTank, canBeHealer, canBeDamager = UnitGetAvailableRoles("player")
 								end
-								if (author) then
-									WorldQuestGroupFinder.dprint(string.format("Applying to group. ID: %d, Name: %s, Leader: %s", id, name, author))
+								if (applicationsCount < 5) then
+									if (author) then
+										WorldQuestGroupFinder.dprint(string.format("Applying to group. ID: %d, Name: %s, Leader: %s", id, name, author))
+									else
+										WorldQuestGroupFinder.dprint(string.format("Applying to group. ID: %d, Name: %s", id, name))
+									end
+									C_LFGList.ApplyToGroup(v, "WorldQuestGroupFinderUser-"..questID, canBeTank, canBeHealer, canBeDamager)
+									applicationsCount = applicationsCount + 1
 								else
-									WorldQuestGroupFinder.dprint(string.format("Applying to group. ID: %d, Name: %s", id, name))
+									WorldQuestGroupFinder.dprint(string.format("Too many applications, ignoring. ID: %d, Name: %s", id, name))
 								end
-								C_LFGList.ApplyToGroup(v, "WorldQuestGroupFinderUser-"..questID, canBeTank, canBeHealer, canBeDamager)
-								applicationsCount = applicationsCount + 1
 							end
 						end
 					end
@@ -927,9 +941,6 @@ function WorldQuestGroupFinder.InitWQGroup(questID, retry, forceCreate)
 			end
 			-- No group found, creating a new one
 			if (foundGroup == false or forceCreate) then
-				if (blacklistedApplicationsCount > 0) then
-					WorldQuestGroupFinder.prefixedPrint(string.format(L["WQGF_NO_APPLY_BLACKLIST"], blacklistedApplicationsCount), true)
-				end
 				local currentRealmType = WorldQuestGroupFinder.getCurrentRealmType()
 				local descriptionFormat = AUTO_GROUP_CREATION_NORMAL_QUEST;
 				if QuestUtils_IsQuestWorldQuest(questID) then
@@ -994,7 +1005,7 @@ function WorldQuestGroupFinder.HandleWorldQuestEnd(wqID, broadcast)
 	WorldQuestGroupFinder.resetTmpWQ()
 	WorldQuestGroupFinder.dprint(string.format("World quest ending process. ID: %d", wqID))
 	WorldQuestGroupFinderConf.SetConfigValue("savedCurrentWQ", nil, "CHAR")
-	BonusObjectiveTracker_UntrackWorldQuest(wqID)
+	--BonusObjectiveTracker_UntrackWorldQuest(wqID)
 	LFGListFrame.ApplicationViewer.AutoAcceptButton:Show()
 	if (IsInGroup() and UnitIsGroupLeader("player") and broadcast) then
 		WorldQuestGroupFinder.BroadcastMessage("#WQE:"..wqID.."#")
@@ -1037,125 +1048,147 @@ end
 	
 function WorldQuestGroupFinder.HandleCustomAutoInvite()
 	if (WorldQuestGroupFinderConf.GetConfigValue("autoinviteUsers")) then
-		--local autoAccept = select(9, C_LFGList.GetActiveEntryInfo());
-		if (UnitIsGroupLeader("player") and (GetNumGroupMembers() < 5 or raidQuests[currentWQ])) then 
-			local invTimer = 0
-			-- If another instance of the custom auto invite has been run recently we'll wait till the pending invites count gets refreshed
-			if (recentlyInvitedPlayers) then
-				invTimer = 2
-			end
-			C_Timer.After(invTimer, function()
-				local applicants = C_LFGList.GetApplicants();
-				local applicantsWQGF = {}
-				local applicantsNonWQGF = {}
-				if (applicants) then
-					for i=1, #applicants do
-						local id, status, pendingStatus, numMembers, isNew, comment = C_LFGList.GetApplicantInfo(applicants[i]);
-						if (status == "applied") then
-							local applicantName, _, _, applicantLevel, _, _, _, _, _ = C_LFGList.GetApplicantMemberInfo(applicants[i], numMembers)
-							WorldQuestGroupFinder.dprint(applicantName .. " [" .. applicantLevel .. "] - blacklisted: " .. (blacklistedRealmHoppers[applicantLevel] or "false"))
-							if (applicantName and (QuestUtils_IsQuestWorldQuest(currentWQ) and applicantLevel == 110)) then
-								if (blacklistedRealmHoppers[applicantName] == nil) then
-									if (comment == "WorldQuestGroupFinderUser-"..currentWQ) then
-										applicantsWQGF[id] = numMembers
-									else
-										applicantsNonWQGF[id] = numMembers
+		if (not autoInviteRunning) then
+			autoInviteRunning = true
+			WorldQuestGroupFinder.dprint('Called Auto-Invite')
+			--local autoAccept = select(9, C_LFGList.GetActiveEntryInfo());
+			if (UnitIsGroupLeader("player") and ((GetNumGroupMembers(LE_PARTY_CATEGORY_HOME) + C_LFGList.GetNumInvitedApplicantMembers() < (MAX_PARTY_MEMBERS+1)) or raidQuests[currentWQ])) then 
+				local invTimer = 0
+				-- If another instance of the custom auto invite has been run recently we'll wait till the pending invites count gets refreshed
+				if (recentlyInvitedPlayers) then
+					invTimer = 1
+				end
+				C_Timer.After(invTimer, function()
+					local applicants = C_LFGList.GetApplicants();
+					local applicantsWQGF = {}
+					local applicantsNonWQGF = {}
+					if (applicants) then
+						for i=1, #applicants do
+							local id, status, pendingStatus, numMembers, isNew, comment = C_LFGList.GetApplicantInfo(applicants[i]);
+							if (status == "applied") then
+								local applicantName, _, _, applicantLevel, _, _, _, _, _ = C_LFGList.GetApplicantMemberInfo(applicants[i], numMembers)
+								WorldQuestGroupFinder.dprint('[' .. id .. '] ' .. applicantName .. " (" .. applicantLevel ..")")
+								if (currentWQ) then
+									local questTag = GetQuestTagInfo(currentWQ)
+									if (applicantName and (not QuestUtils_IsQuestWorldQuest(currentWQ) or (QuestUtils_IsQuestWorldQuest(currentWQ) and (applicantLevel >= 110 or ((questTag == 139 or questTag == 142) and applicantLevel >= 98))))) then
+										if (blacklistedRealmHoppers[applicantName] == nil) then
+											if (comment == "WorldQuestGroupFinderUser-"..currentWQ) then
+												applicantsWQGF[id] = numMembers
+											else
+												applicantsNonWQGF[id] = numMembers
+											end
+										end
 									end
 								end
-							end
-						end			
-					end
-					-- Get current group members count, including pending invites
-					upToDateGroupMembersCount = GetNumGroupMembers() + pendingInvites
-					-- If we're here then the addon is at least set to invite WQGF users
-					for aid, numMembers in pairs(applicantsWQGF) do
-						if ((upToDateGroupMembersCount + numMembers) <= 5 or raidQuests[currentWQ]) then
-							C_LFGList.InviteApplicant(aid)
-							recentlyInvitedPlayers = true
-							upToDateGroupMembersCount = upToDateGroupMembersCount + numMembers
-							WorldQuestGroupFinder.dprint(string.format("Auto-inviting WQGF user(s). New member(s): %d. Current members count: %d.", numMembers, upToDateGroupMembersCount))
+							end			
 						end
-					end
-					-- If set to invite everyone
-					if (WorldQuestGroupFinderConf.GetConfigValue("autoinvite")) then
-						for aid, numMembers in pairs(applicantsNonWQGF) do
+						-- Get current group members count, including pending invites
+						upToDateGroupMembersCount = GetNumGroupMembers(LE_PARTY_CATEGORY_HOME) + C_LFGList.GetNumInvitedApplicantMembers()
+						-- If we're here then the addon is at least set to invite WQGF users
+						for aid, numMembers in pairs(applicantsWQGF) do
 							if ((upToDateGroupMembersCount + numMembers) <= 5 or raidQuests[currentWQ]) then
 								C_LFGList.InviteApplicant(aid)
 								recentlyInvitedPlayers = true
-								upToDateGroupMembersCount = upToDateGroupMembersCount + numMembers
-								WorldQuestGroupFinder.dprint(string.format("Auto-inviting NON-WQGF user(s). New member(s): %d. Current members count: %d.", numMembers, upToDateGroupMembersCount))
+								upToDateGroupMembersCount = GetNumGroupMembers(LE_PARTY_CATEGORY_HOME) + C_LFGList.GetNumInvitedApplicantMembers()
+								WorldQuestGroupFinder.dprint(string.format("Auto-inviting WQGF user(s). Group ID: %d. New member(s): %d. Current members count: %d. In Group: %d. Invited: %d.", aid, numMembers, upToDateGroupMembersCount, GetNumGroupMembers(LE_PARTY_CATEGORY_HOME), C_LFGList.GetNumInvitedApplicantMembers()))
 							end
 						end
-					end
-				else
-					WorldQuestGroupFinder.dprint("Tried to invite but there were no applicants")
-				end
-			end)
-			-- Check for groups dropping error
-			C_Timer.After(3, function()
-				if (not C_LFGList.GetActiveEntryInfo()) then
-					WorldQuestGroupFinder.dprint("Group finder entry has disappeared!")
-					if (currentWQ) then
-						WorldQuestGroupFinder.dprint("Creating queue again")
-						local title, tagID, tagName, worldQuestType, rarity, elite, tradeskillLineIndex, activityID, categoryID, filters
-						if (QuestUtils_IsQuestWorldQuest(currentWQ)) then
-							title, tagID, tagName, worldQuestType, rarity, elite, tradeskillLineIndex, activityID, categoryID, filters = WorldQuestGroupFinder.GetQuestInfo(currentWQ)
-						else 
-							title, activityID, categoryID, filters = WorldQuestGroupFinder.GetQuestInfo(currentWQ)
-						end
-					
-						local tmpCurrentMapID = GetCurrentMapAreaID()
-						SetMapToCurrentZone()
-						local mapAreaID = GetCurrentMapAreaID()
-						local foundZone = false
-						SetMapByID(tmpCurrentMapID)
-						foundZone = WorldQuestGroupFinder.IsWQInZone(currentWQ, mapAreaID)
-						if not activityID then
-							-- Get location ID
-							local tmpCurrentMapID = GetCurrentMapAreaID()
-							SetMapToCurrentZone()
-							local mapAreaID = GetCurrentMapAreaID()
-							SetMapByID(tmpCurrentMapID)
-							foundZone = WorldQuestGroupFinder.IsWQInZone(currentWQ, mapAreaID)
-							if (foundZone) then
-								activityID = activityIDs[mapAreaID]
-							else
-								-- Maybe the player is in a subzone
-								SetMapToCurrentZone()
-								ZoomOut()
-								mapAreaID = GetCurrentMapAreaID()
-								SetMapByID(tmpCurrentMapID)
-								foundZone = WorldQuestGroupFinder.IsWQInZone(currentWQ, mapAreaID)
-								-- Temp fix for location not found, there will be a new way to deal with this in 7.1.5
-								if (foundZone) then
-									activityID = activityIDs[mapAreaID]
-								else
-									SetMapToCurrentZone()
-									if (GetCurrentMapContinent() == 8) then
-										foundZone = true
-										mapAreaID = 1015
-										activityID = activityIDs[mapAreaID]
-									end
-									SetMapByID(tmpCurrentMapID)
+						-- If set to invite everyone
+						if (WorldQuestGroupFinderConf.GetConfigValue("autoinvite")) then
+							for aid, numMembers in pairs(applicantsNonWQGF) do
+								if ((upToDateGroupMembersCount + numMembers) <= 5 or raidQuests[currentWQ]) then
+									C_LFGList.InviteApplicant(aid)
+									recentlyInvitedPlayers = true
+									upToDateGroupMembersCount = GetNumGroupMembers(LE_PARTY_CATEGORY_HOME) + C_LFGList.GetNumInvitedApplicantMembers()
+									WorldQuestGroupFinder.dprint(string.format("Auto-inviting NON-WQGF user(s). Group ID: %d. New member(s): %d. Current members count: %d. In Group: %d. Invited: %d.", aid, numMembers, upToDateGroupMembersCount, GetNumGroupMembers(LE_PARTY_CATEGORY_HOME), C_LFGList.GetNumInvitedApplicantMembers()))
 								end
 							end
 						end
-						if (activityID) then
-							local currentRealmType = WorldQuestGroupFinder.getCurrentRealmType()
-							local descriptionFormat = AUTO_GROUP_CREATION_NORMAL_QUEST;
-							if QuestUtils_IsQuestWorldQuest(currentWQ) then
-								descriptionFormat = AUTO_GROUP_CREATION_WORLD_QUEST;
+					else
+						WorldQuestGroupFinder.dprint("Tried to invite but there were no applicants")
+					end
+				end)
+				-- Check for groups dropping error
+				C_Timer.After(3, function()
+					if (not C_LFGList.GetActiveEntryInfo()) then
+						WorldQuestGroupFinder.dprint("Group finder entry has disappeared!")
+						if (currentWQ) then
+							WorldQuestGroupFinder.dprint("Creating queue again")
+							local title, tagID, tagName, worldQuestType, rarity, elite, tradeskillLineIndex, activityID, categoryID, filters
+							if (QuestUtils_IsQuestWorldQuest(currentWQ)) then
+								title, tagID, tagName, worldQuestType, rarity, elite, tradeskillLineIndex, activityID, categoryID, filters = WorldQuestGroupFinder.GetQuestInfo(currentWQ)
+							else 
+								title, activityID, categoryID, filters = WorldQuestGroupFinder.GetQuestInfo(currentWQ)
 							end
-							local completeDescription = string.format(descriptionFormat .. " " .. L["WQGF_WQ_GROUP_DESCRIPTION"], title, GetAddOnMetadata("WorldQuestGroupFinder", "Version")).." #WQ:"..currentWQ.."#"..currentRealmType.."#"
-							C_LFGList.CreateListing(activityID, "", 0, 0, "", completeDescription, false, false, currentWQ);
+						
+							local tmpCurrentMapID = GetCurrentMapAreaID()
+							SetMapToCurrentZone()
+							local mapAreaID = GetCurrentMapAreaID()
+							local foundZone = false
+							SetMapByID(tmpCurrentMapID)
+							foundZone = WorldQuestGroupFinder.IsWQInZone(currentWQ, mapAreaID)
+							if not activityID then
+								-- Get location ID
+								local tmpCurrentMapID = GetCurrentMapAreaID()
+								SetMapToCurrentZone()
+								local mapAreaID = GetCurrentMapAreaID()
+								SetMapByID(tmpCurrentMapID)
+								foundZone = WorldQuestGroupFinder.IsWQInZone(currentWQ, mapAreaID)
+								if (foundZone) then
+									activityID = activityIDs[mapAreaID]
+								else
+									-- Maybe the player is in a subzone
+									SetMapToCurrentZone()
+									ZoomOut()
+									mapAreaID = GetCurrentMapAreaID()
+									SetMapByID(tmpCurrentMapID)
+									foundZone = WorldQuestGroupFinder.IsWQInZone(currentWQ, mapAreaID)
+									-- Temp fix for location not found, there will be a new way to deal with this in 7.1.5
+									if (foundZone) then
+										activityID = activityIDs[mapAreaID]
+									else
+										SetMapToCurrentZone()
+										if (GetCurrentMapContinent() == 8) then
+											foundZone = true
+											mapAreaID = 1015
+											activityID = activityIDs[mapAreaID]
+										end
+										SetMapByID(tmpCurrentMapID)
+									end
+								end
+							end
+							if (activityID) then
+								local currentRealmType = WorldQuestGroupFinder.getCurrentRealmType()
+								local descriptionFormat = AUTO_GROUP_CREATION_NORMAL_QUEST;
+								if QuestUtils_IsQuestWorldQuest(currentWQ) then
+									descriptionFormat = AUTO_GROUP_CREATION_WORLD_QUEST;
+								end
+								local completeDescription = string.format(descriptionFormat .. " " .. L["WQGF_WQ_GROUP_DESCRIPTION"], title, GetAddOnMetadata("WorldQuestGroupFinder", "Version")).." #WQ:"..currentWQ.."#"..currentRealmType.."#"
+								C_LFGList.CreateListing(activityID, "", 0, 0, "", completeDescription, false, false, currentWQ);
+							end
 						end
 					end
-				end
-				recentlyInvitedPlayers = false
+					recentlyInvitedPlayers = false
+				end)
+			end
+			C_Timer.After(2, function()
+				autoInviteRunning = false
 			end)
+			-- Disable minimap button animation
+			QueueStatusMinimapButton_SetGlowLock(QueueStatusMinimapButton, "lfglist-applicant", false)
+		else
+			if autoInviteQueued then
+				WorldQuestGroupFinder.dprint("Throwing Auto-Invite")
+			else
+				WorldQuestGroupFinder.dprint("Queueing Auto-Invite")
+				autoInviteQueued = true
+				C_Timer.After(2, function()
+					WorldQuestGroupFinder.dprint("Calling Auto-Invite (queued)")
+					WorldQuestGroupFinder.HandleCustomAutoInvite()
+				autoInviteQueued = false
+				end)
+			end
 		end
-		-- Disable minimap button animation
-		QueueStatusMinimapButton.EyeHighlightAnim:Stop();
 	end
 end	
 	
