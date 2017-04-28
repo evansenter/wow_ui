@@ -1,9 +1,5 @@
 
 AdiBagsDB = {
-	["profileKeys"] = {
-		["Comet - Illidan"] = "Comet - Illidan",
-		["Combustion - Illidan"] = "Default",
-	},
 	["namespaces"] = {
 		["ItemLevel"] = {
 		},
@@ -28,7 +24,7 @@ AdiBagsDB = {
 		},
 		["AdiBags_TooltipInfo"] = {
 		},
-		["MoneyFrame"] = {
+		["Equipment"] = {
 		},
 		["CurrencyFrame"] = {
 			["profiles"] = {
@@ -40,18 +36,18 @@ AdiBagsDB = {
 						["Curious Coin"] = false,
 						["Warforged Seal"] = false,
 						["Timewarped Badge"] = false,
-						["Mogu Rune of Fate"] = false,
+						["Ironpaw Token"] = false,
 						["Seal of Tempered Fate"] = false,
 						["Sightless Eye"] = false,
 						["Timeless Coin"] = false,
 						["Essence of Corrupted Deathwing"] = false,
 						["Apexis Crystal"] = false,
-						["Oil"] = false,
-						["Garrison Resources"] = false,
-						["Seal of Inevitable Fate"] = false,
 						["Lesser Charm of Good Fortune"] = false,
+						["Seal of Inevitable Fate"] = false,
+						["Garrison Resources"] = false,
+						["Oil"] = false,
 						["Lingering Soul Fragment"] = false,
-						["Ironpaw Token"] = false,
+						["Mogu Rune of Fate"] = false,
 					},
 					["text"] = {
 						["name"] = "ABF",
@@ -66,8 +62,12 @@ AdiBagsDB = {
 		},
 		["Junk"] = {
 		},
-		["Equipment"] = {
+		["MoneyFrame"] = {
 		},
+	},
+	["profileKeys"] = {
+		["Comet - Illidan"] = "Comet - Illidan",
+		["Combustion - Illidan"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
