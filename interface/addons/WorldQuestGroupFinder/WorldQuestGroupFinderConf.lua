@@ -33,19 +33,8 @@ function WorldQuestGroupFinderConf.CreateConfigMenu()
 	local regularQuests = WorldQuestGroupFinderConf.CreateCheckButton(L["WQGF_CONFIG_QUEST_SUPPORT_ENABLE"], configPanel, L["WQGF_CONFIG_QUEST_SUPPORT_HOVER"], "regularQuests", 'InterfaceOptionsCheckButtonTemplate')
 	regularQuests:SetPoint('TOPLEFT', regularQuestsDesc, 'BOTTOMLEFT', 0, -2)
 	
-	local autoInviteDesc = configPanel:CreateFontString(nil, 'ARTWORK', 'GameFontNormal')
-	autoInviteDesc:SetPoint('TOPLEFT', regularQuests, 'BOTTOMLEFT', 0, -6)
-	autoInviteDesc:SetText(L["WQGF_CONFIG_AUTOINVITE"])
-
-	local autoInviteUsers = WorldQuestGroupFinderConf.CreateCheckButton(L["WQGF_CONFIG_AUTOINVITE_WQGF_USERS"], configPanel, L["WQGF_CONFIG_AUTOINVITE_WQGF_USERS_HOVER"], "autoinviteUsers", 'InterfaceOptionsCheckButtonTemplate')
-	autoInviteUsers:SetPoint('TOPLEFT', autoInviteDesc, 'BOTTOMLEFT', 0, -2)
-	
-	local autoInvite = WorldQuestGroupFinderConf.CreateCheckButton(L["WQGF_CONFIG_AUTOINVITE_EVERYONE"], configPanel, L["WQGF_CONFIG_AUTOINVITE_EVERYONE_HOVER"], "autoinvite", 'InterfaceOptionsCheckButtonTemplate')
-	autoInvite:SetPoint('TOPLEFT', autoInviteUsers, 'BOTTOMLEFT', 10, 2)
-	WorldQuestGroupFinderConf.AddDependentCheckbox(autoInviteUsers, autoInvite, false)
-	
 	local askToLeaveDesc = configPanel:CreateFontString(nil, 'ARTWORK', 'GameFontNormal')
-	askToLeaveDesc:SetPoint('TOPLEFT', autoInvite, 'BOTTOMLEFT', -10, -6)
+	askToLeaveDesc:SetPoint('TOPLEFT', regularQuests, 'BOTTOMLEFT', 0, -6)
 	askToLeaveDesc:SetText(L["WQGF_CONFIG_WQ_END_DIALOG_TITLE"])
 
 	local askToLeave = WorldQuestGroupFinderConf.CreateCheckButton(L["WQGF_CONFIG_WQ_END_DIALOG_ENABLE"], configPanel, L["WQGF_CONFIG_WQ_END_DIALOG_HOVER"], "askToLeave", 'InterfaceOptionsCheckButtonTemplate')
@@ -69,23 +58,8 @@ function WorldQuestGroupFinderConf.CreateConfigMenu()
 	local askZoning = WorldQuestGroupFinderConf.CreateCheckButton(L["WQGF_CONFIG_NEW_WQ_AREA_DETECTION_ENABLE"], configPanel, L["WQGF_CONFIG_NEW_WQ_AREA_DETECTION_HOVER"], "askZoning", 'InterfaceOptionsCheckButtonTemplate')
 	askZoning:SetPoint('TOPLEFT', askZoningDesc, 'BOTTOMLEFT', 0, -2)
 
-	local askZoningBusy = WorldQuestGroupFinderConf.CreateCheckButton(L["WQGF_CONFIG_NEW_WQ_AREA_DETECTION_SWITCH_ENABLE"], configPanel, L["WQGF_CONFIG_NEW_WQ_AREA_DETECTION_SWITCH_ENABLE"], "askZoningBusy", 'InterfaceOptionsCheckButtonTemplate')
-	askZoningBusy:SetPoint('TOPLEFT', askZoning, 'BOTTOMLEFT', 10, 2)
-	WorldQuestGroupFinderConf.AddDependentCheckbox(askZoning, askZoningBusy, false)
-
-	local askZoningAuto = WorldQuestGroupFinderConf.CreateCheckButton(L["WQGF_CONFIG_NEW_WQ_AREA_DETECTION_AUTO_ENABLE"], configPanel, L["WQGF_CONFIG_NEW_WQ_AREA_DETECTION_AUTO_HOVER"], "askZoningAuto", 'InterfaceOptionsCheckButtonTemplate')
-	askZoningAuto:SetPoint('TOPLEFT', askZoningBusy, 'BOTTOMLEFT', 0, 2)
-	WorldQuestGroupFinderConf.AddDependentCheckbox(askZoning, askZoningAuto, false)
-
-	local autoAcceptInviteDesc = configPanel:CreateFontString(nil, 'ARTWORK', 'GameFontNormal')
-	autoAcceptInviteDesc:SetPoint('TOPLEFT', askZoningAuto, 'BOTTOMLEFT', -10, -6)
-	autoAcceptInviteDesc:SetText(L["WQGF_CONFIG_AUTO_ACCEPT_INVITES_TITLE"])
-
-	local autoAcceptInvite = WorldQuestGroupFinderConf.CreateCheckButton(L["WQGF_CONFIG_AUTO_ACCEPT_INVITES_ENABLE"], configPanel, L["WQGF_CONFIG_AUTO_ACCEPT_INVITES_HOVER"], "autoAcceptInvites", 'InterfaceOptionsCheckButtonTemplate')
-	autoAcceptInvite:SetPoint('TOPLEFT', autoAcceptInviteDesc, 'BOTTOMLEFT', 0, -2)
-
 	local allLanguagesDesc = configPanel:CreateFontString(nil, 'ARTWORK', 'GameFontNormal')
-	allLanguagesDesc:SetPoint('TOPLEFT', autoAcceptInvite, 'BOTTOMLEFT', 0, -6)
+	allLanguagesDesc:SetPoint('TOPLEFT', askZoning, 'BOTTOMLEFT', 0, -6)
 	allLanguagesDesc:SetText(L["WQGF_CONFIG_LANGUAGE_FILTER_TITLE"])
 
 	local allLanguagesOpt = WorldQuestGroupFinderConf.CreateCheckButton(L["WQGF_CONFIG_LANGUAGE_FILTER_ENABLE"], configPanel, L["WQGF_CONFIG_LANGUAGE_FILTER_HOVER"], "allLanguages", 'InterfaceOptionsCheckButtonTemplate')
@@ -209,13 +183,12 @@ WorldQuestGroupFinderConf.DefaultConfig = {
 	askToLeave = true,
 	notifyParty = true,
 	askZoning = true,
-	askZoningBusy = true,
-	askZoningAuto = false,
 	hideLoginMessage = false,
 	autoAcceptInvites = false,
 	printDebug = false,
 	allLanguages = true,
 	avoidPVP = false,
 	autoLeaveGroup = false,
-	regularQuests = true
+	regularQuests = true,
+	frameUnlocked = true
 }

@@ -1,34 +1,28 @@
-lightweight tag c796de3718ee40b7a952c6edfe6a6030411958d7 1.8
+lightweight tag b507450cb50411f771120fc500faefd238737e54 1.9
 Author:	Bernhard Saumweber <b.saumweber@gmail.com>
-Date:	Sun Mar 26 16:51:56 2017 +0200
+Date:	Sat Apr 29 13:04:51 2017 +0200
 
-commit c796de3718ee40b7a952c6edfe6a6030411958d7
+commit b507450cb50411f771120fc500faefd238737e54
 Author: Bernhard Saumweber <b.saumweber@gmail.com>
-Date:   Sun Mar 26 16:51:56 2017 +0200
+Date:   Sat Apr 29 13:04:51 2017 +0200
 
-    Set interface version to patch 7.2
+    Fixed some tainting issues caused by Blizzards Group Finder hotfix. Rare permament taints may still happen.
 
-commit f455dbcc55e311e4000224ad86f8942ab40f7276
+commit 9d5c1aa2914737115d27ab02931cc50febc3c79b
 Author: Bernhard Saumweber <b.saumweber@gmail.com>
-Date:   Sun Mar 12 18:22:07 2017 +0100
+Date:   Tue Apr 25 21:16:12 2017 +0200
 
-    Preparing for upcoming patch 7.2: added keyword tos for Tomb of Sargeras; added keyword coen for Cathedral of Eternal Night; added keywords lkara and ukara for lower and upper karazhan; the kara keyword now finds all Karazhan difficulties and versions (i.e. mythic complete or upper or lower kara)
+    Fixed EN lockout not recognized correctly
 
-commit 4f95f5eeac8c86fcc87895def5c9c9affd59e7f4
+commit 66e79100d39bd13f1c82a456885a035ae24b0c79
 Author: Bernhard Saumweber <b.saumweber@gmail.com>
-Date:   Sun Mar 12 17:17:57 2017 +0100
+Date:   Wed Apr 5 19:39:28 2017 +0200
 
-    Renamed numberinrange(min,max) to findnumber(min,max) and extended help tooltip.
+    Added synonym "healers" (equals "heals")
 
-commit 0e8e6d207b21473a6220b4786ec71ce2082458aa
+commit dfbbb3e79bc3509b9ceae7cdfc7a810fdcc51b83
 Author: Bernhard Saumweber <b.saumweber@gmail.com>
-Date:   Fri Mar 10 18:25:38 2017 +0100
+Date:   Wed Apr 5 19:36:04 2017 +0200
 
-    It is now possible to filter groups that contain numbers in their name or comment in a specific range, e.g. numberinrange(10,13) to search for groups that contain at least one of 10,11,12,13 (thanks to @gedsol).
-
-commit 53dcd946265011c038d86a90833ecb368668523a
-Author: Bernhard Saumweber <b.saumweber@gmail.com>
-Date:   Sun Feb 12 18:13:37 2017 +0100
-
-    Set version to next release version: 1.8
+    Added french translation, merci à cacahuete586
 
