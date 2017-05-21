@@ -1,9 +1,10 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0204,
+	["LastVersion"] = 2.0205,
 	["LastPlayerFullName"] = "Comet-Illidan",
 	["AutoSelectScales"] = false,
 	["UpgradeTracking"] = false,
+	["LastKeybindingsSet"] = 1,
 	["Artifacts"] = {
 		[128940] = {
 			["Relics"] = {
@@ -12,7 +13,7 @@ PawnOptions = {
 					["Type"] = "Wind",
 				}, -- [1]
 				{
-					["ItemLevel"] = 55,
+					["ItemLevel"] = 61,
 					["Type"] = "Iron",
 				}, -- [2]
 				{
@@ -29,11 +30,11 @@ PawnOptions = {
 					["Type"] = "Life",
 				}, -- [1]
 				{
-					["ItemLevel"] = 53,
+					["ItemLevel"] = 55,
 					["Type"] = "Wind",
 				}, -- [2]
 				{
-					["ItemLevel"] = 51,
+					["ItemLevel"] = 55,
 					["Type"] = "Iron",
 				}, -- [3]
 			},
@@ -46,7 +47,7 @@ PawnOptions = {
 					["Type"] = "Frost",
 				}, -- [1]
 				{
-					["ItemLevel"] = 53,
+					["ItemLevel"] = 55,
 					["Type"] = "Life",
 				}, -- [2]
 				{
@@ -57,7 +58,6 @@ PawnOptions = {
 			["Name"] = "Sheilun, Staff of the Mists",
 		},
 	},
-	["LastKeybindingsSet"] = 1,
 }
 PawnMrRobotScaleProviderOptions = {
 	["LastClass"] = "MONK",

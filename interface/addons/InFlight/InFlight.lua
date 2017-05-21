@@ -264,8 +264,8 @@ function InFlight:LoadBulk()  -- called from InFlight_Load
 	InFlightVars = InFlightVars or { Alliance = {}, Horde = {}, }  -- flight time data
 	vars = InFlightVars[UnitFactionGroup("player")]
 
-	if db.dbinit ~= 33 then
-		db.dbinit = 33
+	if db.dbinit ~= 34 then
+		db.dbinit = 34
 		local function SetDefaults(db, t)  -- set saved variables
 			for k,v in pairs(t) do
 				if type(db[k]) == "table" then
@@ -341,6 +341,7 @@ function InFlight:LoadBulk()  -- called from InFlight_Load
 	end
 
 	-- function hooks to detect if a user took a summon
+	hooksecurefunc("TaxiRequestEarlyLanding", function() porttaken = true end)
 	hooksecurefunc("AcceptBattlefieldPort", function(index, accept) porttaken = accept and true end)
 	hooksecurefunc("ConfirmSummon", function() porttaken = true end)
 	hooksecurefunc("CompleteLFGRoleCheck", function(bool) porttaken = bool end)
@@ -493,8 +494,10 @@ do  -- timer bar
 					if GetGuildLevel and GetGuildLevel() >= 21 then
 						totalTime = totalTime * 1.25
 					end
-					vars[source] = vars[source] or { }
-					vars[source][destination] = floor(totalTime + 0.5)
+					if type(vars) == "table" then
+						vars[source] = vars[source] or { }
+						vars[source][destination] = floor(totalTime + 0.5)
+					end
 				end
 				endTime = nil
 				sb:Hide()

@@ -3,7 +3,7 @@ PawnCommon = {
 	["ShowUpgradesOnTooltips"] = true,
 	["AlignNumbersRight"] = false,
 	["ShowBagUpgradeAdvisor"] = true,
-	["LastVersion"] = 2.0204,
+	["LastVersion"] = 2.0205,
 	["ShowRelicUpgrades"] = true,
 	["ShowValuesForUpgradesOnly"] = false,
 	["ShownGettingStarted"] = true,
@@ -164,7 +164,6 @@ PawnCommon = {
 			["UnenchantedColor"] = "00bf70",
 		},
 		["Default BM"] = {
-			["NormalizationFactor"] = 1,
 			["Values"] = {
 				["IsWand"] = -1000000,
 				["Indestructible"] = 0.01,
@@ -202,7 +201,6 @@ PawnCommon = {
 			},
 		},
 		["Default MW"] = {
-			["NormalizationFactor"] = 1,
 			["Values"] = {
 				["Intellect"] = 14.22,
 				["Is2HMace"] = -1000000,
@@ -265,6 +263,21 @@ PawnCommon = {
 			["SpecID"] = 1,
 			["UnenchantedColor"] = "bf3950",
 		},
+		["Comet WW 20170510"] = {
+			["PerCharacterOptions"] = {
+				["Comet-Illidan"] = {
+					["Visible"] = true,
+				},
+			},
+			["Values"] = {
+				["Agility"] = 17.22,
+				["HasteRating"] = 7.58,
+				["MasteryRating"] = 10.26,
+				["CritRating"] = 9.82,
+				["Versatility"] = 9.3,
+			},
+			["UpgradesFollowSpecialization"] = true,
+		},
 		["\"MrRobot\":ROGUE3"] = {
 			["IconTexturePath"] = 132320,
 			["PerCharacterOptions"] = {
@@ -279,22 +292,6 @@ PawnCommon = {
 			["Provider"] = "MrRobot",
 			["SpecID"] = 3,
 			["UnenchantedColor"] = "bfb74e",
-		},
-		["Comet WW 20161230.1"] = {
-			["NormalizationFactor"] = 1,
-			["Values"] = {
-				["Agility"] = 11.94,
-				["HasteRating"] = 5.92,
-				["MasteryRating"] = 8.86,
-				["CritRating"] = 8.38,
-				["Versatility"] = 9.28,
-			},
-			["UpgradesFollowSpecialization"] = true,
-			["PerCharacterOptions"] = {
-				["Comet-Illidan"] = {
-					["Visible"] = true,
-				},
-			},
 		},
 		["\"MrRobot\":PRIEST2"] = {
 			["IconTexturePath"] = 237542,

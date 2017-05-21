@@ -1,4 +1,4 @@
 
 DMouseDB = {
-	["enabled"] = true,
+	["enabled"] = false,
 }

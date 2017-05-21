@@ -104,7 +104,7 @@ Malkorok: enabled
 _NPCScan.Overlay: disabled
 _NPCScan: disabled
 AddonUsage: enabled
-AngryAssignments: disabled
+AngryAssignments: enabled
 epgp_lootmaster: disabled
 epgp_lootmaster_ml: disabled
 ErrorFilter: enabled
@@ -152,7 +152,7 @@ BL_Cooldown: disabled
 ThogarAssist: disabled
 OregorgerTracker: disabled
 Hansgar_And_Franzok_Assist: disabled
-ExRT: disabled
+ExRT: enabled
 Altoholic: disabled
 Altoholic_Achievements: disabled
 Altoholic_Agenda: disabled

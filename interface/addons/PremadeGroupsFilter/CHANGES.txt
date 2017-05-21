@@ -1,28 +1,34 @@
-lightweight tag b507450cb50411f771120fc500faefd238737e54 1.9
+tag be703f9fdb104e55d1512bfc1556d2f3e629c2d2 1.10
 Author:	Bernhard Saumweber <b.saumweber@gmail.com>
-Date:	Sat Apr 29 13:04:51 2017 +0200
+Date:	Wed May 3 23:31:34 2017 +0200
 
-commit b507450cb50411f771120fc500faefd238737e54
+commit 091064ca54464405fb8dd8fcbc612a58d83c9773
 Author: Bernhard Saumweber <b.saumweber@gmail.com>
-Date:   Sat Apr 29 13:04:51 2017 +0200
+Date:   Wed May 3 23:31:14 2017 +0200
 
-    Fixed some tainting issues caused by Blizzards Group Finder hotfix. Rare permament taints may still happen.
+    Added LICENSE and README.md
 
-commit 9d5c1aa2914737115d27ab02931cc50febc3c79b
+commit 096c8ceb9f9cd1076e94968e8215f38728704709
 Author: Bernhard Saumweber <b.saumweber@gmail.com>
-Date:   Tue Apr 25 21:16:12 2017 +0200
+Date:   Wed May 3 23:09:22 2017 +0200
 
-    Fixed EN lockout not recognized correctly
+    Fixed a problem with empty variable apps/applications and fixed filter not applied when re-showing the group finder window.
 
-commit 66e79100d39bd13f1c82a456885a035ae24b0c79
+commit 7d800c1eee29f615b596ca934873ed66f8d97d74
 Author: Bernhard Saumweber <b.saumweber@gmail.com>
-Date:   Wed Apr 5 19:39:28 2017 +0200
+Date:   Tue May 2 11:20:47 2017 +0200
 
-    Added synonym "healers" (equals "heals")
+    Filtering is now skipped on empty listing to avoid taints.
 
-commit dfbbb3e79bc3509b9ceae7cdfc7a810fdcc51b83
+commit 7ad4f7b896e1220a46f538bb45c48b37b9fcb0aa
 Author: Bernhard Saumweber <b.saumweber@gmail.com>
-Date:   Wed Apr 5 19:36:04 2017 +0200
+Date:   Mon May 1 20:09:34 2017 +0200
 
-    Added french translation, merci à cacahuete586
+    Added korean translation from yuk6196
+
+commit 9e40e401965ec21e1be158b63dba309bdd1c3048
+Author: Bernhard Saumweber <b.saumweber@gmail.com>
+Date:   Sat Apr 29 13:10:00 2017 +0200
+
+    Set version to next release version: 1.10
 

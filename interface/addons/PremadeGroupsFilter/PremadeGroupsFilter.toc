@@ -1,6 +1,6 @@
 ## Interface: 70200
 ## Title: Premade Groups Filter
-## Version: 1.9
+## Version: 1.10
 ## Notes: Allows filtering of premade groups using an UI or advanced filter expressions.
 ## Author: Elotheon-Arthas-EU
 ## SavedVariables:
@@ -10,6 +10,7 @@ Init.lua
 Localization\enUS.lua
 Localization\frFR.lua
 Localization\deDE.lua
+Localization\koKR.lua
 Modules\Util.lua
 Modules\Difficulty.lua
 Modules\Lockout.lua

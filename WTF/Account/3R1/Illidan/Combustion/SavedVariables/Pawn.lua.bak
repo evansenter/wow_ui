@@ -1,10 +1,9 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0204,
+	["LastVersion"] = 2.0205,
 	["LastPlayerFullName"] = "Combustion-Illidan",
 	["AutoSelectScales"] = true,
 	["UpgradeTracking"] = false,
-	["LastKeybindingsSet"] = 1,
 	["Artifacts"] = {
 		[128862] = {
 			["Relics"] = {
@@ -17,7 +16,7 @@ PawnOptions = {
 					["Type"] = "Arcane",
 				}, -- [2]
 				{
-					["ItemLevel"] = 42,
+					["ItemLevel"] = 51,
 					["Type"] = "Frost",
 				}, -- [3]
 			},
@@ -26,7 +25,7 @@ PawnOptions = {
 		[128820] = {
 			["Relics"] = {
 				{
-					["ItemLevel"] = 42,
+					["ItemLevel"] = 48,
 					["Type"] = "Fire",
 				}, -- [1]
 				{
@@ -41,6 +40,7 @@ PawnOptions = {
 			["Name"] = "Felo'melorn",
 		},
 	},
+	["LastKeybindingsSet"] = 1,
 }
 PawnMrRobotScaleProviderOptions = {
 	["LastClass"] = "MAGE",

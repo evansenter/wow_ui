@@ -22,8 +22,8 @@ RaidFrameIconsDB = {
 		["Cometron - Illidan"] = {
 		},
 		["Combustion - Illidan"] = {
-			["iconPosition"] = "TOPRIGHT",
 			["iconSize"] = 12,
+			["iconPosition"] = "TOPRIGHT",
 		},
 		["Metal - Illidan"] = {
 		},
@@ -40,8 +40,8 @@ RaidFrameIconsDB = {
 		["Plane - Illidan"] = {
 		},
 		["Comet - Illidan"] = {
-			["iconPosition"] = "TOPRIGHT",
 			["iconSize"] = 12,
+			["iconPosition"] = "TOPRIGHT",
 		},
 		["Pandatal - Illidan"] = {
 			["iconSize"] = 12,

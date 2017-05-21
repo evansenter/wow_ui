@@ -26,10 +26,10 @@ ElvDB = {
 			["Natal"] = 6615423,
 			["Cometron"] = 11330625,
 			["Pandatal"] = 404400,
-			["Combustion"] = 54044711,
+			["Combustion"] = 155760988,
 			["Evan"] = 46272594,
 			["Natalan"] = 19768910,
-			["Comet"] = 50786703,
+			["Comet"] = 1022791356,
 		},
 	},
 	["namespaces"] = {
@@ -56,6 +56,7 @@ ElvDB = {
 			["mapAlphaWhenMoving"] = 0.25,
 		},
 		["uiScale"] = "0.64",
+		["screenwidth"] = 1919.68,
 		["unitframe"] = {
 			["aurafilters"] = {
 				["Whitelist"] = {
@@ -163,7 +164,6 @@ ElvDB = {
 			},
 		},
 		["screenheight"] = 1200,
-		["screenwidth"] = 1919.68,
 	},
 	["profiles"] = {
 		["Natalan - Illidan"] = {
@@ -1831,9 +1831,9 @@ ElvDB = {
 				},
 				["valuecolor"] = {
 					["a"] = 1,
-					["r"] = 0,
-					["g"] = 1,
-					["b"] = 0.59,
+					["r"] = 0.25,
+					["g"] = 0.78,
+					["b"] = 0.92,
 				},
 				["topPanel"] = false,
 				["bordercolor"] = {
@@ -2004,8 +2004,8 @@ ElvDB = {
 						["roleIcon"] = {
 							["enable"] = true,
 						},
-						["healPrediction"] = true,
 						["enable"] = false,
+						["healPrediction"] = true,
 						["name"] = {
 							["position"] = "TOP",
 						},
@@ -3208,13 +3208,13 @@ ElvPrivateDB = {
 			},
 			["general"] = {
 				["chatBubbleFontSize"] = 12,
-				["normTex"] = "BantoBar",
 				["glossTex"] = "BantoBar",
 				["chatBubbles"] = "nobackdrop",
 				["raidmarkerbar"] = {
 					["enable"] = false,
 				},
 				["namefont"] = "ABF",
+				["normTex"] = "BantoBar",
 				["chatBubbleFont"] = "ABF",
 				["dmgfont"] = "ABF",
 			},
@@ -3230,22 +3230,19 @@ ElvPrivateDB = {
 				},
 			},
 			["unitframe"] = {
-				["enable"] = false,
 				["disableBlizzard"] = false,
-			},
-			["actionbar"] = {
 				["enable"] = false,
 			},
 			["skins"] = {
 				["blizzard"] = {
-					["achievement"] = false,
-					["tradeskill"] = false,
-					["spellbook"] = false,
 					["lfg"] = false,
-					["enable"] = false,
+					["tradeskill"] = false,
 					["talent"] = false,
+					["achievement"] = false,
 					["losscontrol"] = false,
+					["spellbook"] = false,
 					["pvp"] = false,
+					["enable"] = false,
 				},
 				["addons"] = {
 					["WeakAurasSkin"] = false,
@@ -3254,7 +3251,13 @@ ElvPrivateDB = {
 					["DBMSkin"] = false,
 				},
 			},
+			["actionbar"] = {
+				["enable"] = false,
+			},
 			["nameplates"] = {
+				["enable"] = false,
+			},
+			["bags"] = {
 				["enable"] = false,
 			},
 			["install_complete"] = "10.41",
@@ -3404,10 +3407,10 @@ ElvPrivateDB = {
 			},
 			["general"] = {
 				["chatBubbleFontSize"] = 12,
-				["chatBubbles"] = "nobackdrop",
-				["namefont"] = "ABF",
-				["glossTex"] = "BantoBar",
 				["normTex"] = "BantoBar",
+				["chatBubbles"] = "nobackdrop",
+				["glossTex"] = "BantoBar",
+				["namefont"] = "ABF",
 				["chatBubbleFont"] = "ABF",
 				["dmgfont"] = "ABF",
 			},
@@ -3432,15 +3435,15 @@ ElvPrivateDB = {
 			["skins"] = {
 				["blizzard"] = {
 					["talent"] = false,
-					["achievement"] = false,
-					["spellbook"] = false,
 					["enable"] = false,
+					["encounterjournal"] = false,
+					["garrison"] = false,
+					["spellbook"] = false,
+					["achievement"] = false,
+					["character"] = false,
 					["auctionhouse"] = false,
 					["quest"] = false,
-					["character"] = false,
-					["encounterjournal"] = false,
 					["lfg"] = false,
-					["garrison"] = false,
 				},
 			},
 			["cooldown"] = {

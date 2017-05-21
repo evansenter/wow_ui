@@ -1,5 +1,9 @@
 
 AdiBagsDB = {
+	["profileKeys"] = {
+		["Comet - Illidan"] = "Comet - Illidan",
+		["Combustion - Illidan"] = "Comet - Illidan",
+	},
 	["namespaces"] = {
 		["ItemLevel"] = {
 		},
@@ -64,10 +68,6 @@ AdiBagsDB = {
 		},
 		["MoneyFrame"] = {
 		},
-	},
-	["profileKeys"] = {
-		["Comet - Illidan"] = "Comet - Illidan",
-		["Combustion - Illidan"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

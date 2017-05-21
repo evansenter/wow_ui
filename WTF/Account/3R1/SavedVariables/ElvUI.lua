@@ -19,11 +19,11 @@ ElvDB = {
 			["Colton"] = 7241299,
 		},
 		["Illidan"] = {
-			["Comet"] = 69842144,
+			["Comet"] = 2081381327,
 			["Pandatal"] = 404400,
 			["Cometron"] = 11330625,
 			["Evan"] = 46272594,
-			["Combustion"] = 54044711,
+			["Combustion"] = 155760988,
 			["Natal"] = 6615423,
 			["Natalan"] = 19768910,
 			["Metal"] = 25524979,
@@ -42,6 +42,7 @@ ElvDB = {
 			["mapAlphaWhenMoving"] = 0.25,
 		},
 		["uiScale"] = "0.64",
+		["screenwidth"] = 1919.68,
 		["unitframe"] = {
 			["buffwatchBackup"] = {
 				["DEATHKNIGHT"] = {
@@ -163,7 +164,6 @@ ElvDB = {
 				},
 			},
 		},
-		["screenwidth"] = 1919.68,
 	},
 	["profiles"] = {
 		["Natalan - Illidan"] = {
@@ -2078,8 +2078,8 @@ ElvDB = {
 						["roleIcon"] = {
 							["enable"] = true,
 						},
-						["healPrediction"] = true,
 						["enable"] = false,
+						["healPrediction"] = true,
 						["health"] = {
 							["frequentUpdates"] = true,
 							["orientation"] = "VERTICAL",
@@ -3230,8 +3230,8 @@ ElvPrivateDB = {
 				},
 			},
 			["unitframe"] = {
-				["enable"] = false,
 				["disableBlizzard"] = false,
+				["enable"] = false,
 			},
 			["actionbar"] = {
 				["enable"] = false,
@@ -3240,10 +3240,10 @@ ElvPrivateDB = {
 				["blizzard"] = {
 					["achievement"] = false,
 					["tradeskill"] = false,
-					["pvp"] = false,
-					["lfg"] = false,
 					["enable"] = false,
+					["lfg"] = false,
 					["losscontrol"] = false,
+					["pvp"] = false,
 					["talent"] = false,
 					["spellbook"] = false,
 				},
@@ -3255,6 +3255,9 @@ ElvPrivateDB = {
 				},
 			},
 			["nameplates"] = {
+				["enable"] = false,
+			},
+			["bags"] = {
 				["enable"] = false,
 			},
 			["install_complete"] = "10.41",

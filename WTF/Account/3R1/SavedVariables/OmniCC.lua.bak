@@ -247,7 +247,7 @@ OmniCC4Config = {
 		},
 	},
 	["engine"] = "AniUpdater",
-	["version"] = "7.1.1",
+	["version"] = "7.2.0",
 	["groups"] = {
 		{
 			["id"] = "Ignore",

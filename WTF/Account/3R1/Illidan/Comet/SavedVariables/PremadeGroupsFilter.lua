@@ -21,11 +21,11 @@ PremadeGroupsFilterState = {
 	},
 	["expression"] = "",
 	["difficulty"] = {
-		["val"] = 3,
 		["act"] = false,
+		["val"] = 3,
 	},
-	["defeated"] = {
-		["max"] = "2",
+	["members"] = {
+		["max"] = "",
 		["min"] = "",
 		["act"] = false,
 	},
@@ -34,8 +34,8 @@ PremadeGroupsFilterState = {
 		["min"] = "",
 		["act"] = false,
 	},
-	["members"] = {
-		["max"] = "",
+	["defeated"] = {
+		["max"] = "2",
 		["min"] = "",
 		["act"] = false,
 	},
