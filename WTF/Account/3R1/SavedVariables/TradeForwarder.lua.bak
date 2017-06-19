@@ -1,6 +1,7 @@
 
 TFW_CHAT_LIST = {
-	1, -- [1]
+	false, -- [1]
+	[3] = true,
 }
 TFW_knownMaxVersion = 2225
 TFW_SHOW = true

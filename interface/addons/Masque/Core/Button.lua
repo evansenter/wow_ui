@@ -3,8 +3,6 @@
 	please see the included License.txt file.
 
 	* File...: Core\Button.lua
-	* Date...: 2015-12-17T1:28:52Z
-	* Hash...: 3bd8938
 	* Author.: StormFX, JJSheets
 
 ]]
@@ -23,10 +21,6 @@ local __MTT = {}
 -- Utility Functions
 ---------------------------------------------
 
--- Empty function.
-local __MTF = function() end
-
--- Returns a set of color values.
 local function GetColor(Color, Alpha)
 	if type(Color) == "table" then
 		return Color[1] or 1, Color[2] or 1, Color[3] or 1, Alpha or Color[4] or 1
@@ -50,6 +44,13 @@ local function GetScale(Button)
 	local x = (Button:GetWidth() or 36) / 36
 	local y = (Button:GetHeight() or 36) / 36
 	return x, y
+end
+
+-- Returns the height and width of a region.
+local function GetSize(Width, Height, xScale, yScale)
+	local w = (Width or 36) * xScale
+	local h = (Height or 36) * yScale
+	return w, h
 end
 
 -- Returns a random table key.
@@ -100,8 +101,7 @@ do
 		Region:SetDrawLayer("BACKGROUND", 0)
 		Region:SetBlendMode(Skin.BlendMode or "BLEND")
 		Region:SetVertexColor(GetColor(Color or Skin.Color))
-		Region:SetWidth((Skin.Width or 36) * xScale)
-		Region:SetHeight((Skin.Height or 36) * yScale)
+		Region:SetSize(GetSize(Skin.Width, Skin.Height, xScale, yScale))
 		Region:ClearAllPoints()
 		Region:SetPoint("CENTER", Button, "CENTER", Skin.OffsetX or 0, Skin.OffsetY or 0)
 		Region:Show()
@@ -120,6 +120,39 @@ do
 end
 
 ---------------------------------------------
+-- Icon Layer
+---------------------------------------------
+
+local function SkinIcon(Button, Region, Skin, xScale, yScale)
+	Region:SetParent(Button.__MSQ_BaseFrame or Button)
+	Region:SetTexCoord(GetTexCoords(Skin.TexCoords))
+	Region:SetDrawLayer("BORDER", 0)
+	Region:SetSize(GetSize(Skin.Width, Skin.Height, xScale, yScale))
+	Region:ClearAllPoints()
+	Region:SetPoint("CENTER", Button, "CENTER", Skin.OffsetX or 0, Skin.OffsetY or 0)
+	-- Mask support added in 7.2. @InfusOnWoW
+	if Skin.Mask then
+		if not Region.__MSQ_Mask then
+			Region.__MSQ_Mask = Button:CreateMaskTexture()
+		end
+		local Mask = Region.__MSQ_Mask
+		Mask:SetTexture(Skin.Mask)
+		Mask:SetSize(GetSize(Skin.MaskWidth or Skin.Width, Skin.MaskHeight or Skin.Height, xScale, yScale))
+		Mask:SetPoint("CENTER", Button, "CENTER", 0, 0)
+		if not Mask.active then
+			Region:AddMaskTexture(Mask)
+			Mask.active = true
+		end
+	else
+		local Mask = Region.__MSQ_Mask
+		if Mask and Mask.active then
+			Region:RemoveMaskTexture(Mask)
+			Mask.active = false
+		end
+	end
+end
+
+---------------------------------------------
 -- Normal Texture Layer
 ---------------------------------------------
 
@@ -127,7 +160,6 @@ local SkinNormal
 
 do
 	local Base = {}
-	local Hooked = {}
 
 	-- Hook to catch changes to a button's 'Normal' texture. 
 	local function Hook_SetNormalTexture(Button, Texture)
@@ -193,9 +225,9 @@ do
 			Region:SetTexCoord(GetTexCoords(Skin.TexCoords))
 			Region:SetVertexColor(GetColor(Button.__MSQ_NormalColor))
 		end
-		if not Hooked[Button] then
+		if not Button.__MSQ_NormalHook then
 			hooksecurefunc(Button, "SetNormalTexture", Hook_SetNormalTexture)
-			Hooked[Button] = true
+			Button.__MSQ_NormalHook = true
 		end
 		Button.__MSQ_NormalSkin = Skin
 		Region:Show()
@@ -206,8 +238,7 @@ do
 		end
 		Region:SetDrawLayer("BORDER", 0)
 		Region:SetBlendMode(Skin.BlendMode or "BLEND")
-		Region:SetWidth((Skin.Width or 36) * xScale)
-		Region:SetHeight((Skin.Height or 36) * yScale)
+		Region:SetSize(GetSize(Skin.Width, Skin.Height, xScale, yScale))
 		Region:ClearAllPoints()
 		Region:SetPoint("CENTER", Button, "CENTER", Skin.OffsetX or 0, Skin.OffsetY or 0)
 	end
@@ -260,10 +291,9 @@ do
 		Region:SetTexture(Skin.Texture)
 		Region:SetTexCoord(GetTexCoords(Skin.TexCoords))
 		Region:SetDrawLayer("OVERLAY", 0)
-		Region:SetVertexColor(GetColor(Color or Skin.Color, Alpha))
 		Region:SetBlendMode(Skin.BlendMode or "BLEND")
-		Region:SetWidth((Skin.Width or 36) * xScale)
-		Region:SetHeight((Skin.Height or 36) * yScale)
+		Region:SetVertexColor(GetColor(Color or Skin.Color, Alpha))
+		Region:SetSize(GetSize(Skin.Width, Skin.Height, xScale, yScale))
 		Region:ClearAllPoints()
 		Region:SetPoint("CENTER", Button, "CENTER", Skin.OffsetX or 0, Skin.OffsetY or 0)
 		if Button.__MSQ_Empty then
@@ -286,57 +316,90 @@ do
 end
 
 ---------------------------------------------
+-- Border Layer
+---------------------------------------------
+
+local SkinBorder
+
+do
+	-- Default Color
+	local BaseColor = {0, 1, 0, 0.35}
+
+	-- Hook to counter color changes.
+	local function Hook_SetVertexColor(Region, ...)
+		if Region.__ExitHook then return end
+		Region.__ExitHook = true
+		Region:SetVertexColor(GetColor(Region.__MSQ_Color))
+		Region.__ExitHook = nil
+	end
+
+	-- Skins the Border layer.
+	function SkinBorder(Button, Region, Skin, Color, xScale, yScale, IsActionButton)
+		if Skin.Hide then
+			Region:SetTexture("")
+			Region:Hide()
+			return
+		end
+		local Texture = Skin.Texture or Region:GetTexture()
+		Region:SetTexture(Texture)
+		Region:SetTexCoord(GetTexCoords(Skin.TexCoords))
+		Region:SetBlendMode(Skin.BlendMode or "ADD")
+		Region:SetDrawLayer("ARTWORK", 0)
+		if IsActionButton then
+			Region.__MSQ_Color = Color or Skin.Color or BaseColor
+			if not Region.__MSQ_Hooked then
+				hooksecurefunc(Region, "SetVertexColor", Hook_SetVertexColor)
+				Region.__MSQ_Hooked = true
+			end
+			Hook_SetVertexColor(Region)
+		end
+		Region:SetSize(GetSize(Skin.Width, Skin.Height, xScale, yScale))
+		Region:ClearAllPoints()
+		Region:SetPoint("CENTER", Button, "CENTER", Skin.OffsetX or 0, Skin.OffsetY or 0)
+	end
+end
+
+---------------------------------------------
 -- Texture Layer
 ---------------------------------------------
 
-local SkinTexture
-
 -- Draw Layers
 local Layers = {
-		Icon = "BORDER",
 		Flash = "ARTWORK",
 		Pushed = "BACKGROUND",
 		Disabled = "BORDER",
 		Checked = "BORDER",
-		Border = "ARTWORK",
 		AutoCastable = "OVERLAY",
 		Highlight = "HIGHLIGHT",
 }
 
+local SkinTexture
+
 do
 	-- Draw Levels
 	local Levels = {
-		Icon = 0,
 		Flash = 0,
 		Pushed = 0,
 		Disabled = 1,
 		Checked = 2,
-		Border = 0,
 		AutoCastable = 1,
 		Highlight = 0,
 	}
 
-	-- Skins a generic texture layer.
+	-- Skins a texture layer.
 	function SkinTexture(Button, Region, Layer, Skin, Color, xScale, yScale)
-		if Layer == "Icon" then
-			Region:SetParent(Button.__MSQ_BaseFrame or Button)
-		else
-			if Skin.Hide then
-				Region:SetTexture("")
-				Region:Hide()
-				return
-			end
-			local Texture = Skin.Texture or Region:GetTexture()
-			Region:SetTexture(Texture)
-			Region:SetBlendMode(Skin.BlendMode or "BLEND")
-			if Layer ~= "Border" then
-				Region:SetVertexColor(GetColor(Color or Skin.Color))
-			end
+		if Skin.Hide then
+			Region:SetTexture("")
+			Region:Hide()
+			return
 		end
+		local Texture = Skin.Texture or Region:GetTexture()
+		Region:SetTexture(Texture)
 		Region:SetTexCoord(GetTexCoords(Skin.TexCoords))
+		Region:SetBlendMode(Skin.BlendMode or "BLEND")
 		Region:SetDrawLayer(Layers[Layer], Levels[Layer])
-		Region:SetWidth((Skin.Width or 36) * xScale)
-		Region:SetHeight((Skin.Height or 36) * yScale)
+		Region:SetVertexColor(GetColor(Color or Skin.Color))
+		Region:SetSize(GetSize(Skin.Width, Skin.Height, xScale, yScale))
 		Region:ClearAllPoints()
 		Region:SetPoint("CENTER", Button, "CENTER", Skin.OffsetX or 0, Skin.OffsetY or 0)
 	end
@@ -371,20 +434,30 @@ do
 		Duration = "BOTTOM",
 	}
 
+	-- Hook to counter add-ons that call HotKey.SetPoint after Masque has skinned the region.
+	local function Hook_SetPoint(Region, ...)
+		if Region.__ExitHook then return end
+		Region.__ExitHook = true
+		local Skin = Region.__MSQ_Skin
+		Region:SetPoint("TOPLEFT", Region.__MSQ_Button, "TOPLEFT", Skin.OffsetX or 0, Skin.OffsetY or 0)
+		Region.__ExitHook = nil
+	end
+
 	-- Skins a text layer.
 	function SkinText(Button, Region, Layer, Skin, Color, xScale, yScale)
 		Region:SetJustifyH(Skin.JustifyH or Justify[Layer])
 		Region:SetJustifyV(Skin.JustifyV or "MIDDLE")
 		Region:SetDrawLayer("OVERLAY")
-		Region:SetWidth((Skin.Width or 36) * xScale)
-		Region:SetHeight((Skin.Height or 10) * yScale)
+		Region:SetSize(GetSize(Skin.Width, Skin.Height or 10, xScale, yScale))
 		Region:ClearAllPoints()
 		if Layer == "HotKey" then
-			if not Region.__MSQ_SetPoint then
-				Region.__MSQ_SetPoint = Region.SetPoint
-				Region.SetPoint = __MTF
+			Region.__MSQ_Button = Button
+			Region.__MSQ_Skin = Skin
+			if not Region.__MSQ_Hooked then
+				hooksecurefunc(Region, "SetPoint", Hook_SetPoint)
+				Region.__MSQ_Hooked = true
 			end
-			Region:__MSQ_SetPoint("TOPLEFT", Button, "TOPLEFT", Skin.OffsetX or 0, Skin.OffsetY or 0)
+			Hook_SetPoint(Region)
 		else
 			Region:SetVertexColor(GetColor(Color or Skin.Color))
 			Region:SetPoint(Point[Layer], Button, RelPoint[Layer], Skin.OffsetX or 0, Skin.OffsetY or 0)
@@ -393,17 +466,56 @@ do
 end
 
 ---------------------------------------------
+-- Cooldown Frame Layer
+---------------------------------------------
+
+local SkinCooldown
+
+do
+	local BaseColor = {0, 0, 0, 0.8}
+
+	-- Hook to counter unwanted changes.
+	local function Hook_SetSwipeColor(Region, ...)
+		if Region.__ExitHook then return end
+		Region.__ExitHook = true
+		Region:SetSwipeColor(GetColor(Region.__MSQ_Color))
+		Region.__ExitHook = nil
+	end
+
+	-- Skins the Cooldown frame.
+	function SkinCooldown(Button, Region, Skin, Color, xScale, yScale)
+		if Skin.Hide then
+			Region:Hide()
+			return
+		end
+		if Region.SetSwipeTexture then
+			Region:SetSwipeTexture(Skin.Texture or "")
+		end
+		if Region.SetSwipeColor then
+			Region.__MSQ_Color = Color or Skin.Color or BaseColor
+			if not Region.__MSQ_Hooked then
+				hooksecurefunc(Region, "SetSwipeColor", Hook_SetSwipeColor)
+				Region.__MSQ_Hooked = true
+			end
+			Hook_SetSwipeColor(Region)
+		end
+		Region:SetSize(GetSize(Skin.Width, Skin.Height, xScale, yScale))
+		Region:ClearAllPoints()
+		Region:SetPoint("CENTER", Button, "CENTER", Skin.OffsetX or 0, Skin.OffsetY or 0)
+	end
+end
+
+---------------------------------------------
 -- Frame Layer
 ---------------------------------------------
 
 -- Skins an animation frame.
-local function SkinFrame(Button, Region, Skin, xScale, yScale)
+local function SkinFrame(Button, Region, Skin, xScale, yScale, Color)
 	if Skin.Hide then
 		Region:Hide()
 		return
 	end
-	Region:SetWidth((Skin.Width or 36) * xScale)
-	Region:SetHeight((Skin.Height or 36) * yScale)
+	Region:SetSize(GetSize(Skin.Width, Skin.Height, xScale, yScale))
 	Region:ClearAllPoints()
 	Region:SetPoint("CENTER", Button, "CENTER", Skin.OffsetX or 0, Skin.OffsetY or 0)
 end
@@ -451,7 +563,7 @@ do
 	-- Hook to update the spell alert animation.
 	function UpdateSpellAlert(Button)
 		local Overlay = Button.overlay
-		if not Overlay or not Overlay.spark then return end
+		if (not Overlay) or (not Overlay.spark) then return end
 		if Overlay.__MSQ_Shape ~= Button.__MSQ_Shape then
 			local Shape = Button.__MSQ_Shape
 			local Glow, Ants
@@ -519,8 +631,6 @@ end
 ---------------------------------------------
 
 do
-	local Hooked = {}
-
 	-- Hook to automatically adjust the button's additional frame levels.
 	local function Hook_SetFrameLevel(Button, Level)
 		local base = Level or Button:GetFrameLevel()
@@ -537,7 +647,7 @@ do
 	end
 
 	-- Applies a skin to a button and its associated layers.
-	function Core.SkinButton(Button, ButtonData, SkinID, Gloss, Backdrop, Colors)
+	function Core.SkinButton(Button, ButtonData, SkinID, Gloss, Backdrop, Colors, IsActionButton)
 		if not Button then return end
 		if not Button.__MSQ_BaseFrame then
 			Button.__MSQ_BaseFrame = CreateFrame("Frame", nil, Button)
@@ -557,10 +667,20 @@ do
 		else
 			RemoveBackdrop(Button)
 		end
+		-- Icon
+		local Icon = ButtonData.Icon
+		if Icon then
+			SkinIcon(Button, Icon, Skin.Icon, xScale, yScale)
+		end
 		-- Normal
 		local Normal = ButtonData.Normal
 		if Normal ~= false then
 			SkinNormal(Button, Normal, Skin.Normal, Colors.Normal, xScale, yScale)
+		end
+		-- Border
+		local Border = ButtonData.Border
+		if Border then
+			SkinBorder(Button, Border, Skin.Border, Colors.Border, xScale, yScale, IsActionButton)
 		end
 		-- Textures
 		for Layer in pairs(Layers) do
@@ -586,7 +706,7 @@ do
 		local Cooldown = ButtonData.Cooldown
 		if Cooldown then
 			Button.__MSQ_Cooldown = Cooldown
-			SkinFrame(Button, Cooldown, Skin.Cooldown, xScale, yScale)
+			SkinCooldown(Button, Cooldown, Skin.Cooldown, Colors.Cooldown, xScale, yScale)
 		end
 		-- Charge Cooldown
 		local Charge = Button.chargeCooldown
@@ -606,9 +726,9 @@ do
 			UpdateSpellAlert(Button)
 		end
 		-- Frame Level
-		if not Hooked[Button] then
+		if not Button.__MSQ_FrameHook then
 			hooksecurefunc(Button, "SetFrameLevel", Hook_SetFrameLevel)
-			Hooked[Button] = true
+			Button.__MSQ_FrameHook = true
 		end
 		-- Taint protection, just in case.
 		if Button.IsProtected and Button:IsProtected() and InCombatLockdown() then

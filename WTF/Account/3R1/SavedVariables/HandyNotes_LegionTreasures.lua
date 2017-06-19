@@ -1,13 +1,16 @@
 
 HandyNotes_LegionTreasuresDB = {
 	["profileKeys"] = {
-		["Comet - Illidan"] = "Comet - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
+		["Cometstorm - Illidan"] = "Cometstorm - Illidan",
+		["Comet - Illidan"] = "Comet - Illidan",
 	},
 	["profiles"] = {
-		["Comet - Illidan"] = {
-		},
 		["Combustion - Illidan"] = {
+		},
+		["Cometstorm - Illidan"] = {
+		},
+		["Comet - Illidan"] = {
 		},
 	},
 }

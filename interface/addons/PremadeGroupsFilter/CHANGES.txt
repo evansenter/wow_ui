@@ -1,34 +1,20 @@
-tag be703f9fdb104e55d1512bfc1556d2f3e629c2d2 1.10
-Author:	Bernhard Saumweber <b.saumweber@gmail.com>
-Date:	Wed May 3 23:31:34 2017 +0200
+Changes since tag 1.10
 
-commit 091064ca54464405fb8dd8fcbc612a58d83c9773
+commit 0f9e0eb6659c3c72028b493756f228d750912df4
 Author: Bernhard Saumweber <b.saumweber@gmail.com>
-Date:   Wed May 3 23:31:14 2017 +0200
+Date:   Sun Jun 18 11:25:36 2017 +0200
 
-    Added LICENSE and README.md
+    Reverted filtering hooks back to old method to enable additional filtering through other addons
 
-commit 096c8ceb9f9cd1076e94968e8215f38728704709
+commit 56b1fc1d5718ea27ddea041fa4e6a6819f599c08
 Author: Bernhard Saumweber <b.saumweber@gmail.com>
-Date:   Wed May 3 23:09:22 2017 +0200
+Date:   Sun Jun 18 11:12:35 2017 +0200
 
-    Fixed a problem with empty variable apps/applications and fixed filter not applied when re-showing the group finder window.
+    Updated difficulty fallback list
 
-commit 7d800c1eee29f615b596ca934873ed66f8d97d74
+commit 27677dcc33af0fd6a1ab6a157773c4daf8fcd2ab
 Author: Bernhard Saumweber <b.saumweber@gmail.com>
-Date:   Tue May 2 11:20:47 2017 +0200
+Date:   Sun Jun 18 10:50:26 2017 +0200
 
-    Filtering is now skipped on empty listing to avoid taints.
-
-commit 7ad4f7b896e1220a46f538bb45c48b37b9fcb0aa
-Author: Bernhard Saumweber <b.saumweber@gmail.com>
-Date:   Mon May 1 20:09:34 2017 +0200
-
-    Added korean translation from yuk6196
-
-commit 9e40e401965ec21e1be158b63dba309bdd1c3048
-Author: Bernhard Saumweber <b.saumweber@gmail.com>
-Date:   Sat Apr 29 13:10:00 2017 +0200
-
-    Set version to next release version: 1.10
+    Set version to next release version: 1.11
 

@@ -1,6 +1,7 @@
 
 ErrorFilterDB = {
 	["profileKeys"] = {
+		["Cometstorm - Illidan"] = "Comet - Illidan",
 		["Metal - Illidan"] = "Comet - Illidan",
 		["Cometron - Illidan"] = "Default",
 		["Plane - Illidan"] = "Default",

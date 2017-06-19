@@ -42,7 +42,7 @@ L.SpecsShort = {
     [18] = "Танцующий с ветром", -- MonkWindwalker
     [19] = "Свет", -- PaladinHoly
     [20] = "Защита", -- PaladinProtection
-    [21] = "Воздояние", -- PaladinRetribution
+    [21] = "Воздаяние", -- PaladinRetribution
     [22] = "Послушание", -- PriestDiscipline
     [23] = "Свет", -- PriestHoly
     [24] = "Тьма", -- PriestShadow
@@ -87,7 +87,8 @@ L.StatsShort = {
 L.InstanceNames = {
 	[1520] = "Emerald Nightmare",
 	[1530] = "Nighthold",
-	[1648] = "Trial of Valor"
+	[1648] = "Trial of Valor",
+	[1676] = "Tomb of Sargeras"
 }
 
 L.DifficultyNames = {

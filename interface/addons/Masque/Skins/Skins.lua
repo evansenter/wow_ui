@@ -3,8 +3,6 @@
 	please see the included License.txt file.
 
 	* File...: Skins\Skins.lua
-	* Date...: 2015-12-17T1:22:26Z
-	* Hash...: 00937e6
 	* Author.: StormFX
 
 ]]

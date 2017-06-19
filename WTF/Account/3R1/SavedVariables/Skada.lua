@@ -6,6 +6,7 @@ SkadaDB = {
 	},
 	["hasUpgraded"] = true,
 	["profileKeys"] = {
+		["Cometstorm - Illidan"] = "Comet - Illidan",
 		["Venala - Cho'gall"] = "Default",
 		["Cometron - Illidan"] = "Comet - Illidan",
 		["Combustion - Illidan"] = "Comet - Illidan",
@@ -49,7 +50,6 @@ SkadaDB = {
 						["height"] = 113.999969482422,
 						["bordertexture"] = "None",
 					},
-					["barfont"] = "ABF",
 					["title"] = {
 						["color"] = {
 							["a"] = 0,
@@ -62,6 +62,7 @@ SkadaDB = {
 						["height"] = 16,
 						["texture"] = "BantoBar",
 					},
+					["barfont"] = "ABF",
 				}, -- [1]
 				{
 					["titleset"] = false,
@@ -156,7 +157,7 @@ SkadaDB = {
 				["number"] = 5,
 				["channel"] = "party",
 				["target"] = "oorroozz",
-				["mode"] = "Deaths",
+				["mode"] = "Damage taken",
 				["set"] = "total",
 			},
 			["tooltiprows"] = 10,
@@ -252,17 +253,17 @@ SkadaDB = {
 				}, -- [1]
 			},
 			["modeclicks"] = {
-				["Deaths"] = 3,
+				["Deaths"] = 4,
 				["Dispels"] = 4,
-				["Damage taken by spell"] = 10,
-				["Healing"] = 60,
+				["Damage taken by spell"] = 20,
+				["Healing"] = 77,
 				["Healing taken"] = 6,
 				["Enemy damage taken"] = 13,
-				["Buff uptimes"] = 3,
-				["Interrupts"] = 3,
-				["Damage taken"] = 7,
+				["Buff uptimes"] = 6,
+				["Interrupts"] = 4,
+				["Damage taken"] = 8,
 				["Total healing"] = 3,
-				["Damage"] = 53,
+				["Damage"] = 71,
 			},
 			["setstokeep"] = 99,
 			["updatefrequency"] = 0.5,
@@ -274,16 +275,26 @@ SkadaDB = {
 				["target"] = "teanbiscuits",
 				["channel"] = "guild",
 			},
-			["showtotals"] = true,
 			["tooltiprows"] = 5,
+			["hidepvp"] = true,
+			["setstokeep"] = 30,
 			["windows"] = {
 				{
 					["point"] = "BOTTOMLEFT",
 					["barwidth"] = 407.999206542969,
 					["barfontsize"] = 12,
-					["y"] = 188.999923706055,
+					["y"] = 188.999938964844,
 					["x"] = 5.99948120117188,
 					["barslocked"] = true,
+					["barfont"] = "ABF",
+					["name"] = "Healing",
+					["background"] = {
+						["height"] = 97.9999160766602,
+						["color"] = {
+							["a"] = 0.200000047683716,
+						},
+					},
+					["mode"] = "DPS",
 					["title"] = {
 						["color"] = {
 							["a"] = 0.800000011920929,
@@ -293,16 +304,6 @@ SkadaDB = {
 						},
 						["font"] = "ABF",
 					},
-					["background"] = {
-						["color"] = {
-							["a"] = 0.200000047683716,
-							["b"] = 0,
-						},
-						["height"] = 97.9999160766602,
-					},
-					["mode"] = "DPS",
-					["barfont"] = "ABF",
-					["name"] = "Healing",
 				}, -- [1]
 				{
 					["barheight"] = 15,
@@ -312,7 +313,7 @@ SkadaDB = {
 					["wipemode"] = "",
 					["set"] = "current",
 					["hidden"] = false,
-					["y"] = -225.999847412109,
+					["y"] = -225.99983215332,
 					["barfont"] = "ABF",
 					["title"] = {
 						["color"] = {
@@ -365,7 +366,7 @@ SkadaDB = {
 					["point"] = "LEFT",
 					["scale"] = 1,
 					["reversegrowth"] = false,
-					["x"] = 5.99995422363281,
+					["x"] = 5.99995374679565,
 					["classcolorbars"] = true,
 					["returnaftercombat"] = false,
 					["background"] = {
@@ -385,12 +386,16 @@ SkadaDB = {
 					["mode"] = "Damage",
 				}, -- [2]
 			},
-			["setstokeep"] = 30,
+			["versions"] = {
+				["1.6.7"] = true,
+				["1.6.4"] = true,
+				["1.6.3"] = true,
+			},
 			["icon"] = {
 				["minimapPos"] = 181.018472339963,
 				["hide"] = true,
 			},
-			["hidepvp"] = true,
+			["showtotals"] = true,
 		},
 		["Pandatal - Illidan"] = {
 			["report"] = {

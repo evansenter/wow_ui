@@ -1,6 +1,7 @@
 
 DeathNoteDB = {
 	["profileKeys"] = {
+		["Cometstorm - Illidan"] = "Cometstorm - Illidan",
 		["Metal - Illidan"] = "Metal - Illidan",
 		["Cometron - Illidan"] = "Cometron - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
@@ -12,6 +13,8 @@ DeathNoteDB = {
 		["Pandatal - Illidan"] = "Pandatal - Illidan",
 	},
 	["profiles"] = {
+		["Cometstorm - Illidan"] = {
+		},
 		["Metal - Illidan"] = {
 			["display_filters"] = {
 				["debuff_fades"] = false,

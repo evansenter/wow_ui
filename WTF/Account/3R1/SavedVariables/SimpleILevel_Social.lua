@@ -1,6 +1,7 @@
 
 SIL_Social = {
 	["profileKeys"] = {
+		["Cometstorm - Illidan"] = "Default",
 		["Metal - Illidan"] = "Default",
 		["Cometron - Illidan"] = "Default",
 		["Combustion - Illidan"] = "Default",

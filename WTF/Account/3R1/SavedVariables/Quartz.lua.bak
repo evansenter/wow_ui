@@ -156,10 +156,10 @@ Quartz3DB = {
 					["y"] = 458,
 					["noInterruptShield"] = false,
 					["iconposition"] = "left",
-					["font"] = "ABF",
+					["x"] = 857,
 					["h"] = 20,
 					["noInterruptChangeBorder"] = false,
-					["x"] = 857,
+					["font"] = "ABF",
 					["texture"] = "ElvUI Norm",
 				},
 				["Comet - Illidan"] = {
@@ -199,6 +199,7 @@ Quartz3DB = {
 		},
 	},
 	["profileKeys"] = {
+		["Cometstorm - Illidan"] = "Comet - Illidan",
 		["Venala - Cho'gall"] = "Default",
 		["Cometron - Illidan"] = "Comet - Illidan",
 		["Combustion - Illidan"] = "Comet - Illidan",

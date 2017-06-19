@@ -1,9 +1,5 @@
 
 AdiBagsDB = {
-	["profileKeys"] = {
-		["Comet - Illidan"] = "Comet - Illidan",
-		["Combustion - Illidan"] = "Comet - Illidan",
-	},
 	["namespaces"] = {
 		["ItemLevel"] = {
 		},
@@ -14,6 +10,9 @@ AdiBagsDB = {
 				},
 				["Comet - Illidan"] = {
 					["version"] = 3,
+					["overrides"] = {
+						[141446] = "Consumable#Consumable",
+					},
 				},
 			},
 		},
@@ -69,6 +68,11 @@ AdiBagsDB = {
 		["MoneyFrame"] = {
 		},
 	},
+	["profileKeys"] = {
+		["Combustion - Illidan"] = "Comet - Illidan",
+		["Cometstorm - Illidan"] = "Comet - Illidan",
+		["Comet - Illidan"] = "Comet - Illidan",
+	},
 	["profiles"] = {
 		["Default"] = {
 			["bagFont"] = {
@@ -89,6 +93,9 @@ AdiBagsDB = {
 			},
 		},
 		["Comet - Illidan"] = {
+			["virtualStacks"] = {
+				["incomplete"] = true,
+			},
 			["scale"] = 0.9,
 			["skin"] = {
 				["ReagentBankColor"] = {
@@ -109,14 +116,19 @@ AdiBagsDB = {
 					0.501960784313726, -- [3]
 					0.75, -- [4]
 				},
+				["border"] = "None",
+				["insets"] = 0,
 			},
 			["bagFont"] = {
 				["name"] = "ABF",
 			},
+			["compactLayout"] = true,
+			["rightClickConfig"] = false,
+			["autoDeposit"] = true,
+			["qualityOpacity"] = 0.75,
 			["sectionFont"] = {
 				["name"] = "ABF",
 			},
-			["autoDeposit"] = true,
 		},
 	},
 }

@@ -112,22 +112,36 @@ local function initializeDb()
 		}
 	}
 	
-	-- set defaults for auto-logging
+	Amr.db = LibStub("AceDB-3.0"):New("AskMrRobotDb3", defaults)
+	
+	-- set defaults for auto logging; if a new zone is added and some other stuff was turned on, turn on the new zone too
+	local hasSomeLogging = false
+	local addedLogging = {}
 	for i, instanceId in ipairs(Amr.InstanceIdsOrdered) do
-		local byDiff = defaults.profile.Logging.Auto[instanceId]
+		local byDiff = Amr.db.profile.Logging.Auto[instanceId]
 		if not byDiff then
 			byDiff = {}
-			defaults.profile.Logging.Auto[instanceId] = byDiff
+			Amr.db.profile.Logging.Auto[instanceId] = byDiff
+			addedLogging[instanceId] = byDiff
 		end
 		
 		for k, difficultyId in pairs(Amr.Difficulties) do
-			if byDiff[difficultyId] == nil then
+			if not byDiff[difficultyId] then
 				byDiff[difficultyId] = false
+			else
+				hasSomeLogging = true
 			end
 		end
 	end
 	
-	Amr.db = LibStub("AceDB-3.0"):New("AskMrRobotDb3", defaults)
+	if hasSomeLogging then		
+		for instanceId, byDiff in pairs(addedLogging) do
+			for k, difficultyId in pairs(Amr.Difficulties) do
+				byDiff[difficultyId] = true
+			end
+		end
+	end
+	
 	
 	Amr.db.RegisterCallback(Amr, "OnProfileChanged", "RefreshConfig")
 	Amr.db.RegisterCallback(Amr, "OnProfileCopied", "RefreshConfig")

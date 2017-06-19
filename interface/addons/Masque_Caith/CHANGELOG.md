@@ -1,3 +1,10 @@
+### 7.2.1 ###
+
+- Add support for Equipped and Cooldown colors.
+- Update Masque_Version.
+- Update ReadMe.
+- Update locales.
+
 ### 7.2.0 ###
 
 - ToC to 70200.

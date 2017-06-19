@@ -494,7 +494,7 @@ do  -- timer bar
 					if GetGuildLevel and GetGuildLevel() >= 21 then
 						totalTime = totalTime * 1.25
 					end
-					if type(vars) == "table" then
+					if type(vars) == "table" and type(source) == "string" then
 						vars[source] = vars[source] or { }
 						vars[source][destination] = floor(totalTime + 0.5)
 					end

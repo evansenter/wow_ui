@@ -3,8 +3,6 @@
 	please see the included License.txt file.
 
 	* File...: Core\Options.lua
-	* Date...: 2015-10-22T3:43:12Z
-	* Hash...: 829af9f
 	* Author.: StormFX
 
 ]]
@@ -214,7 +212,11 @@ do
 		if Layer == "Color" then
 			Layer = info[#info-1]
 		end
-		return Skin[Layer].Hide or db.Disabled
+		if Layer == "Border" then
+			return (not info.arg.IsActionBar) or Skin[Layer].Hide or db.Disabled
+		else
+			return Skin[Layer].Hide or db.Disabled
+		end
 	end
 
 	-- Gets the state of the backdrop color.
@@ -367,13 +369,21 @@ do
 							hasAlpha = true,
 							order = 3,
 						},
+						Border = {
+							type = "color",
+							name = L["Equipped"],
+							desc = L["Set the color of the equipped item texture."],
+							arg = Group,
+							hasAlpha = true,
+							order = 4,
+						},
 						Flash = {
 							type = "color",
 							name = L["Flash"],
 							desc = L["Set the color of the flash texture."],
 							arg = Group,
 							hasAlpha = true,
-							order = 4,
+							order = 5,
 						},
 						Pushed = {
 							type = "color",
@@ -381,7 +391,7 @@ do
 							desc = L["Set the color of the pushed texture."],
 							arg = Group,
 							hasAlpha = true,
-							order = 5,
+							order = 6,
 						},
 						Disabled = {
 							type = "color",
@@ -389,7 +399,15 @@ do
 							desc = L["Set the color of the disabled texture."],
 							arg = Group,
 							hasAlpha = true,
-							order = 6,
+							order = 7,
+						},
+						Cooldown = {
+							type = "color",
+							name = L["Cooldown"],
+							desc = L["Set the color of the cooldown animation."],
+							arg = Group,
+							hasAlpha = true,
+							order = 8,
 						},
 					},
 				},

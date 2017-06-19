@@ -49,7 +49,7 @@ VER 3 0000000000000034 "HS / GHS" "INV_Misc_QuestionMark"
 END
 VER 3 0000000000000056 "Mana Pot" "INV_Misc_QuestionMark"
 #showtooltip
-/use [nomod][mod:ctrl][mod:alt]Potion of Prolonged Power;[mod:shift]15
+/use [nomod][mod:ctrl][mod:alt]Ancient Mana Potion;[mod:shift]15
 END
 VER 3 0000000000000051 "Mark Skull" "1325309"
 /run SetRaidTarget("target", 8)

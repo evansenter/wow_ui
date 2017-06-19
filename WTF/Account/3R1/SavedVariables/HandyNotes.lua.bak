@@ -1,6 +1,7 @@
 
 HandyNotesDB = {
 	["profileKeys"] = {
+		["Cometstorm - Illidan"] = "Comet - Illidan",
 		["Metal - Illidan"] = "Metal - Illidan",
 		["Cometron - Illidan"] = "Cometron - Illidan",
 		["Plane - Illidan"] = "Plane - Illidan",
@@ -14,6 +15,8 @@ HandyNotesDB = {
 		["Pandatal - Illidan"] = "Comet - Illidan",
 	},
 	["profiles"] = {
+		["Cometstorm - Illidan"] = {
+		},
 		["Metal - Illidan"] = {
 		},
 		["Cometron - Illidan"] = {
@@ -42,6 +45,7 @@ HandyNotesDB = {
 }
 HandyNotes_HandyNotesDB = {
 	["profileKeys"] = {
+		["Cometstorm - Illidan"] = "Cometstorm - Illidan",
 		["Metal - Illidan"] = "Metal - Illidan",
 		["Cometron - Illidan"] = "Cometron - Illidan",
 		["Plane - Illidan"] = "Plane - Illidan",
@@ -55,6 +59,8 @@ HandyNotes_HandyNotesDB = {
 		["Pandatal - Illidan"] = "Pandatal - Illidan",
 	},
 	["profiles"] = {
+		["Cometstorm - Illidan"] = {
+		},
 		["Metal - Illidan"] = {
 		},
 		["Cometron - Illidan"] = {

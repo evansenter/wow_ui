@@ -1,8 +1,28 @@
+### v2.4.0-Beta.1
+---
+**Note:**
+While this version is backwards compatible, the tier tokens buttons will not be showed on older clients,
+ and any tier rolls will show up as normal rolls for all intents and purposes.
+
+
+* **Tier tokens**
+ * By default, tier tokens now receive special roll options.
+ * A brand new set of buttons and responses have been added for tier tokens only.
+ * Check them out in the options menu, where it can also be disabled if need be.
+
+
+* **Loot History**
+ * You can now edit recipients and reasons in the loot history.
+ * Simply right click any entry and change it to what you want.
+ * Exports have been optimized.
+ * Time-Sort no longer memory leaks.
+
+
 ### v2.3.2
 ---
 * Added backwards compatibility for the latest updates for non-english clients.
 
- *Note: This requires at least one v2.3.1+ award entry for each instance/difficulty.
+  *Note: This requires at least one v2.3.1+ award entry for each instance/difficulty.
    The update happens upon logging in after upgrading to v2.3.2, and can be forced afterwards with "/rc updatehistory".*
 
 ###### Bugfixes
@@ -17,15 +37,15 @@
  * Tier tokens received from the current instance is displayed under more info in the voting frame.
  * All tier tokens are displayed in the loot history more info.
 
-   *Note: neither of these are backwards compatible with non-english clients, but will show up for all items awarded after this update.*
+    *Note: neither of these are backwards compatible with non-english clients, but will show up for all items awarded after this update.*
  * Total awards are now displayed in the loot history.
  * Loot History is now sorted by award time by default.
  * Removed response text from voting frame more info to make it smaller.
 
 
 * Minor optimizations.
-
 * Fixed some spelling mistakes.
+
 
 ### v2.3.0
 ---
@@ -55,7 +75,7 @@
 
 ##### Bugfixes
 + *Links for gear2 is now properly generated when using TSV export.*
-+ *~~Items will no longer be added multiple times to the session setup if you reopen the ML loot before starting the session (#237).~~*
++ ~~*Items will no longer be added multiple times to the session setup if you reopen the ML loot before starting the session (#237).*~~
 + *The Version Checker will no longer fail to show correct modules after manipulating the list.*
 
 
