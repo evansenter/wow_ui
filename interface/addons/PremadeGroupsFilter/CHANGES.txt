@@ -1,5 +1,17 @@
 Changes since tag 1.10
 
+commit 67bc4d44eba78ef7b56b61a448d4369d6a9dea55
+Author: Bernhard Saumweber <b.saumweber@gmail.com>
+Date:   Mon Jun 26 16:44:08 2017 +0200
+
+    Filters can now be set individually for each Premade category
+
+commit 49bd0879074197bde7950eb90364e685c02598a0
+Author: Bernhard Saumweber <b.saumweber@gmail.com>
+Date:   Sat Jun 24 12:03:25 2017 +0200
+
+    Added traditional chinese (zhTW) translation by gaspy10
+
 commit 0f9e0eb6659c3c72028b493756f228d750912df4
 Author: Bernhard Saumweber <b.saumweber@gmail.com>
 Date:   Sun Jun 18 11:25:36 2017 +0200

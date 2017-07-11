@@ -20,7 +20,7 @@ VER 3 010000000000005B "Frozen Orb" "INV_Misc_QuestionMark"
 #showtooltip Frozen Orb
 /use 13
 /use 14
-/use Frozen Orb
+/cast Frozen Orb
 END
 VER 3 0100000000000058 "IB / Invis" "INV_Misc_QuestionMark"
 #showtooltip

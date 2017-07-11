@@ -689,5 +689,6 @@ L["You will need to do a /console reloadui before a hidden frame becomes visible
 L["Your active layout is the profile used for import backup, this cannot be overwritten by an import. Change your profiles to something else and try again."] = "Ваше активное расположение рамок - это профиль используемый для резервного копирования импорта, и он не может быть перезаписан при импорте. Измените свой профиль на какой-нибудь другой, и попробуйте еще раз."
 L["Your code must be wrapped in a function, for example, if you were to make a tag to return the units name you would do:|n|nfunction(unit, unitOwner)|nreturn UnitName(unitOwner)|nend"] = "Ваш код должен быть написан с разделением строк. Например, если вы хотите создать тег для возврата наименования объекта, вам необходимо сделать это так:|n|nfunction(unit, unitOwner)|nreturn UnitName(unitOwner)|nend"
 L["Zone configuration units"] = "Настройка зон объектов"
+
 local ShadowUF = select(2, ...)
 ShadowUF.L = setmetatable(L, {__index = ShadowUF.L})

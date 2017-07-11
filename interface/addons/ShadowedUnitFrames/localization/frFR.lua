@@ -931,5 +931,6 @@ L["Your Auras"] = "Vos auras"
 L["Your code must be wrapped in a function, for example, if you were to make a tag to return the units name you would do:|n|nfunction(unit, unitOwner)|nreturn UnitName(unitOwner)|nend"] = "Votre code doit être contenu dans une fonction. Par exemple, si vous voulez créer un tag qui renvoie le nom de l'unité, le code doit ressembler à ceci :|n|nfunction(unit, unitOwner)|nreturn UnitName(unitOwner)|nend"
 L["Zone Configuration"] = "Configuration de zone"
 L["Zone configuration units"] = "Unités de Config. de zone"
+
 local ShadowUF = select(2, ...)
 ShadowUF.L = setmetatable(L, {__index = ShadowUF.L})

@@ -11,7 +11,7 @@ HandyNotesDB = {
 		["Pandatal - Illidan"] = "Comet - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Combustion - Illidan"] = "Comet - Illidan",
-		["Evan - Illidan"] = "Evan - Illidan",
+		["Evan - Illidan"] = "Comet - Illidan",
 		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
 	},
 	["profiles"] = {

@@ -12,7 +12,7 @@ VER 3 0100000000000026 "Heal" "INV_Misc_QuestionMark"
 END
 VER 3 0100000000000007 "HW:C" "INV_Misc_QuestionMark"
 #showtooltip
-/use [harm][@targettarget,harm][]Holy Word: Chastise
+/use [harm][@mouseovertarget,harm][]Holy Word: Chastise
 END
 VER 3 0100000000000027 "HW:S" "INV_Misc_QuestionMark"
 #showtooltip
@@ -64,7 +64,7 @@ VER 3 0100000000000021 "Shining Force" "INV_Misc_QuestionMark"
 END
 VER 3 0100000000000006 "Smite" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/use [harm][@targettarget,harm][]Smite
+/use [harm][@mouseovertarget,harm][]Smite
 END
 VER 3 0100000000000004 "SW:P" "INV_Misc_QuestionMark"
 #showtooltip

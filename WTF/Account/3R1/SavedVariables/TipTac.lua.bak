@@ -3,6 +3,7 @@ TipTac_Config = {
 	["fontFace"] = "Interface\\Addons\\Skada\\media\\fonts\\ABF.ttf",
 	["classification_elite"] = "+%s ",
 	["barHeight"] = 12,
+	["tipBackdropEdge"] = "Interface\\Tooltips\\UI-Tooltip-Border",
 	["modifyFonts"] = true,
 	["reactText"] = false,
 	["hideFactionText"] = true,

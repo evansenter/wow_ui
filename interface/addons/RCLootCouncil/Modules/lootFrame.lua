@@ -66,6 +66,12 @@ end
 
 function LootFrame:OnDisable()
 	self.frame:Hide() -- We don't disable the frame as we probably gonna need it later
+	-- Trash all entries just in case:
+	for _,entry in pairs(self.EntryManager.entries) do
+		if type(entry) == "table" then
+			self.EntryManager:Trash(entry)
+		end
+	end
 	items = {}
 	numRolled = 0
 end
@@ -168,8 +174,8 @@ do
 			else
 				entry.timeoutBar:Hide()
 			end
-			entry:Show()
 			entry:UpdateButtons()
+			entry:Show()
 		end,
 		Show = function(entry) entry.frame:Show() end,
 		Hide = function(entry) entry.frame:Hide() end,
@@ -224,10 +230,11 @@ do
 					else
 						b[i]:SetPoint("LEFT", b[i-1], "RIGHT", 5, 0)
 					end
+					b[i]:Show()
 				end
 				-- Check if we've more buttons than we should
 				if #b > numButtons + 1 then
-					for i = numButtons + 1, #b[i] do b[i]:Hide() end
+					for i = numButtons + 2, #b do b[i]:Hide() end
 				end
 				-- Store the width of this entry. Our handler will set it
 				entry.width = width
@@ -408,10 +415,11 @@ do
 				else
 					b[i]:SetPoint("LEFT", b[i-1], "RIGHT", 5, 0)
 				end
+				b[i]:Show()
 			end
 			-- Check if we've more buttons than we should
 			if #b > numButtons + 1 then
-				for i = numButtons + 1, #b[i] do b[i]:Hide() end
+				for i = numButtons + 2, #b do b[i]:Hide() end
 			end
 			-- Store the width of this entry. Our handler will set it
 			entry.width = width

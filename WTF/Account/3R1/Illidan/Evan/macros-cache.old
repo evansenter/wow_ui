@@ -59,7 +59,7 @@ VER 3 0100000000000020 "Shadow Mend" "INV_Misc_QuestionMark"
 /use [target=mouseover,help,nodead][]Shadow Mend
 END
 VER 3 0100000000000021 "Shining Force" "INV_Misc_QuestionMark"
-#showtooltip
+#showtooltip Shining Force
 /use [target=mouseover,help,nodead][]Shining Force
 END
 VER 3 0100000000000006 "Smite" "INV_MISC_QUESTIONMARK"

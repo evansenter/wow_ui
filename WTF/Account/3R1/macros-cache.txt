@@ -29,6 +29,12 @@ VER 3 0000000000000055 "EE" "ABILITY_MONK_ENERGIZINGWINE"
 #showtooltip
 /use Energizing Elixir
 END
+VER 3 0000000000000058 "Essence Font" "INV_Misc_QuestionMark"
+#showtooltip Essence Font
+/use 13
+/use 14
+/use Essence Font
+END
 VER 3 000000000000002E "Extra Action" "INV_Misc_Herb_Whispervine"
 /click ExtraActionButton1
 END
@@ -41,7 +47,7 @@ VER 3 000000000000004D "GS" "INV_Misc_QuestionMark"
 END
 VER 3 0000000000000050 "HF" "INV_Misc_QuestionMark"
 #showtooltip
-/use [harm][@targettarget,harm][]Holy Fire
+/use [harm][@mouseovertarget,harm][]Holy Fire
 END
 VER 3 0000000000000034 "HS / GHS" "INV_Misc_QuestionMark"
 #showtooltip
@@ -49,7 +55,13 @@ VER 3 0000000000000034 "HS / GHS" "INV_Misc_QuestionMark"
 END
 VER 3 0000000000000056 "Mana Pot" "INV_Misc_QuestionMark"
 #showtooltip
-/use [nomod][mod:ctrl][mod:alt]Ancient Mana Potion;[mod:shift]15
+/use [nomod][mod:ctrl][mod:alt]Leytorrent Potion;[mod:shift]15
+END
+VER 3 0000000000000057 "Mana Tea" "INV_Misc_QuestionMark"
+#showtooltip Mana Tea
+/use 13
+/use 14
+/use Mana Tea
 END
 VER 3 0000000000000051 "Mark Skull" "1325309"
 /run SetRaidTarget("target", 8)

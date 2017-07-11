@@ -21,9 +21,9 @@ ElvDB = {
 		},
 		["Illidan"] = {
 			["Cometron"] = 11330625,
-			["Evan"] = 46272594,
-			["Comet"] = 1464723895,
-			["Cometstorm"] = 314232218,
+			["Evan"] = 37563179,
+			["Comet"] = 1520422166,
+			["Cometstorm"] = 161641526,
 			["Combustion"] = 506078957,
 			["Pandatal"] = 404400,
 			["Natal"] = 6615423,
@@ -99,13 +99,13 @@ ElvDB = {
 					},
 					[33206] = {
 					},
-					[10060] = {
-					},
-					[6788] = {
+					[139] = {
 					},
 					[123258] = {
 					},
-					[139] = {
+					[6788] = {
+					},
+					[10060] = {
 					},
 				},
 				["PALADIN"] = {
@@ -1958,7 +1958,7 @@ ElvDB = {
 					["hideInCombat"] = true,
 				},
 				["experience"] = {
-					["enable"] = false,
+					["mouseover"] = true,
 					["font"] = "ABF",
 				},
 				["honor"] = {
@@ -3493,6 +3493,7 @@ ElvPrivateDB = {
 			},
 			["general"] = {
 				["chatBubbleFontSize"] = 12,
+				["chatBubbleHideInInstance"] = true,
 				["chatBubbles"] = "nobackdrop",
 				["namefont"] = "ABF",
 				["dmgfont"] = "ABF",
@@ -3578,7 +3579,7 @@ ElvPrivateDB = {
 			["general"] = {
 				["dmgfont"] = "ABF",
 				["normTex"] = "BantoBar",
-				["chatBubbles"] = "nobackdrop",
+				["chatBubbleFont"] = "ABF",
 				["minimapbar"] = {
 					["mouseover"] = true,
 					["backdrop"] = true,
@@ -3587,8 +3588,8 @@ ElvPrivateDB = {
 				["raidmarkerbar"] = {
 					["enable"] = false,
 				},
-				["chatBubbleFont"] = "ABF",
 				["namefont"] = "ABF",
+				["chatBubbles"] = "nobackdrop",
 				["glossTex"] = "BantoBar",
 			},
 			["tooltip"] = {
@@ -3597,9 +3598,12 @@ ElvPrivateDB = {
 			["auras"] = {
 				["enable"] = false,
 			},
-			["unitframe"] = {
+			["bags"] = {
 				["enable"] = false,
+			},
+			["unitframe"] = {
 				["disableBlizzard"] = false,
+				["enable"] = false,
 			},
 			["addonskins"] = {
 				["DBMSkin"] = false,
@@ -3613,6 +3617,7 @@ ElvPrivateDB = {
 			["skins"] = {
 				["blizzard"] = {
 					["socket"] = false,
+					["enable"] = false,
 					["talent"] = false,
 					["losscontrol"] = false,
 					["encounterjournal"] = false,
@@ -3621,9 +3626,9 @@ ElvPrivateDB = {
 					["achievement"] = false,
 					["character"] = false,
 					["lfg"] = false,
-					["tradeskill"] = false,
-					["mail"] = false,
 					["auctionhouse"] = false,
+					["mail"] = false,
+					["tradeskill"] = false,
 					["quest"] = false,
 					["pvp"] = false,
 				},

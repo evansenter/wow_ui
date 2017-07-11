@@ -87,7 +87,7 @@ end
 
 function RCVotingFrame:Show()
 	if self.frame then
-		councilInGroup = addon:GetCouncilInGroup()
+		councilInGroup = addon.council
 		self.frame:Show()
 		self:SwitchSession(session)
 	else
@@ -420,7 +420,7 @@ function RCVotingFrame:UpdateMoreInfo(row, data)
 	tip:SetOwner(self.frame, "ANCHOR_RIGHT")
 
 	tip:AddLine(addon.Ambiguate(name), color.r, color.g, color.b)
-	if moreInfoData[name] then
+	if moreInfoData and moreInfoData[name] then
 		local r,g,b
 		tip:AddLine(L["Latest item(s) won"])
 		for i, v in ipairs(moreInfoData[name]) do -- extract latest awarded items

@@ -1,0 +1,18 @@
+## Interface: 70200
+## Author: Parnic
+## Name: Breakables
+## Title: Breakables |cff7fff7f-Ace3-|r
+## Notes: Tracks herbs/ore/items that can be broken into component pieces
+## Version: 1.4.8 (Revision: 3897e6378d70a93aee4e193d695e8cc37889b777)
+## SavedVariables: BreakablesDB
+## OptionalDeps: Ace3, LibBabble-Inventory-3.0, Masque
+## X-Compatible-With: 60200
+
+#@no-lib-strip@
+embeds.xml
+#@end-no-lib-strip@
+# LDB is hard-embedded so don't skip it if packaging no-lib
+LibDataBroker-1.1.lua
+loc\loc.xml
+
+Breakables.lua

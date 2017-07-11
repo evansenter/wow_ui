@@ -48,7 +48,7 @@ function RCLootCouncil:OnInitialize()
   	self.version = GetAddOnMetadata("RCLootCouncil", "Version")
 	self.nnp = false
 	self.debug = false
-	self.tVersion = "Beta.1" -- String or nil. Indicates test version, which alters stuff like version check. Is appended to 'version', i.e. "version-tVersion" (max 10 letters for stupid security)
+	self.tVersion = nil -- String or nil. Indicates test version, which alters stuff like version check. Is appended to 'version', i.e. "version-tVersion" (max 10 letters for stupid security)
 
 	self.playerClass = select(2, UnitClass("player"))
 	self.guildRank = L["Unguilded"]
@@ -247,15 +247,11 @@ function RCLootCouncil:OnInitialize()
 
 			-- List of items to ignore:
 			ignore = {
-				109693, -- Draenic Dust
-				115502, -- Small Luminous Shard
-				111245, -- Luminous Shard
-				115504, -- Fractured Temporal Crystal
-				113588, -- Temporal Crystal
-				124442, -- Chaos Crystal (Legion)
-				124441, -- Leylight Shard (Legion)
-				141303,141304,141305, -- Essence of Clarity (Emerald Nightmare quest item)
-				143656,143657,143658, -- Echo of Time (Nighthold quest item)
+				109693,115502,111245,115504,113588, -- WoD enchant mats
+				124442,124441, 							-- Chaos Crystal (Legion), Leylight Shard (Legion)
+				141303,141304,141305, 					-- Essence of Clarity (Emerald Nightmare quest item)
+				143656,143657,143658, 					-- Echo of Time (Nighthold quest item)
+				132204,151248,151249, 151250,			-- Sticky Volatile Essence, Fragment of the Guardian's Seal (Tomb of Sargeras)
 			},
 		},
 	} -- defaults end
@@ -351,7 +347,7 @@ function RCLootCouncil:OnEnable()
 	self:ActivateSkin(db.currentSkin)
 
 	if self.db.global.version and self:VersionCompare(self.db.global.version, self.version) then -- We've upgraded
-		if self:VersionCompare(self.db.global.version, "2.4.0") then -- Update lootDB with newest changes
+		if self:VersionCompare(self.db.global.version, "2.4.3") then -- Update lootDB with newest changes
 			self:Print("v2.4 adds seperate buttons for tier tokens. You might want to change your buttons setup - have a look in the options menu! (/rc config)")
 			-- delay it abit
 			self:ScheduleTimer("UpdateLootHistory", 5)
@@ -1329,32 +1325,6 @@ function RCLootCouncil:IsCouncil(name)
 	return ret
 end
 
---- Fetches the council members in the current group.
--- @return table [i] = "council_man_name".
-function RCLootCouncil:GetCouncilInGroup()
-	local council = {}
-	if IsInRaid() then
-		for k,v in ipairs(self.council) do
-			if UnitInRaid(Ambiguate(v, "short")) then
-				tinsert(council, v)
-			end
-		end
-	elseif IsInGroup() then -- Party
-		for k,v in ipairs(self.council) do
-			if UnitInParty(Ambiguate(v, "short")) then
-				tinsert(council, v)
-			end
-		end
-	elseif self.isCouncil then -- When we're alone
-		tinsert(council, self.playerName)
-	end
-	if self.masterLooter and not tContains(council, self.masterLooter) then -- We always need to count the ML
-		tinsert(council, self.masterLooter)
-	end
-	self:DebugLog("GetCouncilInGroup", unpack(council))
-	return council
-end
-
 function RCLootCouncil:GetInstalledModulesFormattedData()
 	local modules = {}
 	-- We're interested in everything that isn't a default module
@@ -1409,45 +1379,57 @@ end
 local lootDBStatistics
 function RCLootCouncil:GetLootDBStatistics()
 	self:DebugLog("GetLootDBStatistics()")
-	lootDBStatistics = {}
-	local entry, id
-	for name, data in pairs(self:GetHistoryDB()) do
-		local count, responseText, color, numTokens = {},{},{},{}
-		local lastestAwardFound = 0
-		lootDBStatistics[name] = {}
-		for i = #data, 1, -1 do -- Start from the end
-			entry = data[i]
-			id = entry.responseID
-			if entry.isAwardReason then id = id + 100 end -- Bump to distingush from normal awards
-			if entry.tokenRoll then id = id + 200 end
-			-- We assume the mapID and difficultyID is available on any item if at all.
-			if not numTokens[entry.instance] then numTokens[entry.instance] = {num = 0, mapID = entry.mapID, difficultyID = entry.difficultyID} end
-			if entry.tierToken then -- If it's a tierToken, increase the count
-				numTokens[entry.instance].num = numTokens[entry.instance].num + 1
+	-- v2.4: This is very sensitive to errors in the loot history, which will most likely crash calling modules,
+	-- as in ticket #261. For the sole reason of crash proofing, let's catch any errors:
+	local check, ret = pcall(function()
+		lootDBStatistics = {}
+		local entry, id
+		for name, data in pairs(self:GetHistoryDB()) do
+			local count, responseText, color, numTokens = {},{},{},{}
+			local lastestAwardFound = 0
+			lootDBStatistics[name] = {}
+			for i = #data, 1, -1 do -- Start from the end
+				entry = data[i]
+				id = entry.responseID
+				if type(id) == "number" then -- ID may be string, e.g. "PASS"
+					if entry.isAwardReason then id = id + 100 end -- Bump to distingush from normal awards
+					if entry.tokenRoll then id = id + 200 end
+				end
+				-- We assume the mapID and difficultyID is available on any item if at all.
+				if not numTokens[entry.instance] then numTokens[entry.instance] = {num = 0, mapID = entry.mapID, difficultyID = entry.difficultyID} end
+				if entry.tierToken then -- If it's a tierToken, increase the count
+					numTokens[entry.instance].num = numTokens[entry.instance].num + 1
+				end
+				count[id] = count[id] and count[id] + 1 or 1
+				responseText[id] = responseText[id] and responseText[id] or entry.response
+				if (not color[id] or unpack(color[id],1,3) == unpack{1,1,1}) and (entry.color and #entry.color ~= 0)  then -- If it's not already added
+					color[id] = #entry.color ~= 0 and #entry.color == 4 and entry.color or {1,1,1}
+				end
+				if lastestAwardFound < 5 and type(id) == "number" and not entry.isAwardReason
+				 	and (id <= db.numMoreInfoButtons or (entry.tokenRoll and id - 200 <= db.numMoreInfoButtons)) then
+					tinsert(lootDBStatistics[name], {entry.lootWon, --[[entry.response .. ", "..]] format(L["'n days' ago"], self:ConvertDateToString(self:GetNumberOfDaysFromNow(entry.date))), color[id], i})
+					lastestAwardFound = lastestAwardFound + 1
+				end
 			end
-			count[id] = count[id] and count[id] + 1 or 1
-			responseText[id] = responseText[id] and responseText[id] or entry.response
-			if (not color[id] or unpack(color[id],1,3) == unpack{1,1,1}) and (entry.color and #entry.color ~= 0)  then -- If it's not already added
-				color[id] = #entry.color ~= 0 and #entry.color == 4 and entry.color or {1,1,1}
+			-- Totals:
+			local totalNum = 0
+			lootDBStatistics[name].totals = {}
+			lootDBStatistics[name].totals.tokens = numTokens
+			lootDBStatistics[name].totals.responses = {}
+			for id, num in pairs(count) do
+				tinsert(lootDBStatistics[name].totals.responses, {responseText[id], num, color[id], id})
+				totalNum = totalNum + num
 			end
-			if lastestAwardFound < 5 and type(id) == "number" and not entry.isAwardReason
-			 	and (id <= db.numMoreInfoButtons or (entry.tokenRoll and id - 200 <= db.numMoreInfoButtons)) then
-				tinsert(lootDBStatistics[name], {entry.lootWon, --[[entry.response .. ", "..]] format(L["'n days' ago"], self:ConvertDateToString(self:GetNumberOfDaysFromNow(entry.date))), color[id], i})
-				lastestAwardFound = lastestAwardFound + 1
-			end
+			lootDBStatistics[name].totals.total = totalNum
 		end
-		-- Totals:
-		local totalNum = 0
-		lootDBStatistics[name].totals = {}
-		lootDBStatistics[name].totals.tokens = numTokens
-		lootDBStatistics[name].totals.responses = {}
-		for id, num in pairs(count) do
-			tinsert(lootDBStatistics[name].totals.responses, {responseText[id], num, color[id], id})
-			totalNum = totalNum + num
-		end
-		lootDBStatistics[name].totals.total = totalNum
+		return lootDBStatistics
+	end)
+	if not check then
+		self:DebugLog(ret)
+		self:Print("Something's wrong in your loot history. Please contact the author.")
+	else
+		return ret
 	end
-	return lootDBStatistics
 end
 
 function RCLootCouncil:SessionError(...)
@@ -1986,8 +1968,8 @@ function RCLootCouncil:UpdateLootHistory()
 		end
 		self:Debug("Result:",nighthold, trialofvalor, emeraldnightmare, normal, heroic, mythic)
 	end
-	for _, data in pairs(historyDB) do
-		for _, v in pairs(data) do
+	for name, data in pairs(historyDB) do
+		for i, v in pairs(data) do
 			local id = self:GetItemIDFromLink(v.lootWon)
 			v.tierToken = id and RCTokenTable[id]
 			if strmatch(v.instance, nighthold) then
@@ -2003,6 +1985,15 @@ function RCLootCouncil:UpdateLootHistory()
 				v.difficultyID = 15
 			elseif strmatch(v.instance, mythic) then
 				v.difficultyID = 16
+			end
+			-- Fix corruption caused by v2.4-beta:
+			if v.color and type(v.color) ~= "table" then
+				if v.tokenRoll then
+					v.color = {unpack(db.responses.tier[v.responseID].color)}
+				else
+					v.color = {unpack(db.responses[v.responseID].color)}
+				end
+				self:DebugLog("Fixed 2.4beta corruption @", name, i)
 			end
 		end
 	end

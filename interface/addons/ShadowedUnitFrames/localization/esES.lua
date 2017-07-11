@@ -334,5 +334,6 @@ L["Yellow (>30% HP)"] = "Amarillo (>30% HP)"
 L["Your aura color"] = "Sus colores de auras"
 L["Your Auras"] = "Sus auras"
 L["Zone Configuration"] = "Configuración de Zonas"
+
 local ShadowUF = select(2, ...)
 ShadowUF.L = setmetatable(L, {__index = ShadowUF.L})

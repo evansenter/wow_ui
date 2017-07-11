@@ -935,6 +935,7 @@ L["Your code must be wrapped in a function, for example, if you were to make a t
 L["Zone Configuration"] = "Zone Configuration"
 L["Zone configuration units"] = "Zone configuration units"
 
+
 ShadowUF.L = L
 --[===[@debug@
 ShadowUF.L = setmetatable(ShadowUF.L, {

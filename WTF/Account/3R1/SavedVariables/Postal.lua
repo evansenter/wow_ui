@@ -27,7 +27,7 @@ Postal3DB = {
 				"Cometstorm|Illidan|Horde|110|MAGE", -- [5]
 				"Comet|Illidan|Horde|110|MONK", -- [6]
 				"Ereinion|Dark Iron|Horde|81|WARLOCK", -- [7]
-				"Evan|Illidan|Horde|100|PRIEST", -- [8]
+				"Evan|Illidan|Horde|102|PRIEST", -- [8]
 				"Metal|Illidan|Horde|100|WARRIOR", -- [9]
 				"Natalan|Dark Iron|Horde|85|SHAMAN", -- [10]
 				"Natalan|Illidan|Horde|86|MAGE", -- [11]
@@ -113,11 +113,11 @@ Postal3DB = {
 		["Comet - Illidan"] = {
 			["BlackBook"] = {
 				["recent"] = {
-					"Cometstorm|Illidan|Horde", -- [1]
-					"Combustion|Illidan|Horde", -- [2]
-					"Biscuitss|Illidan|Horde", -- [3]
-					"Cometron|Illidan|Horde", -- [4]
-					"Evan|Illidan|Horde", -- [5]
+					"Evan|Illidan|Horde", -- [1]
+					"Cometstorm|Illidan|Horde", -- [2]
+					"Combustion|Illidan|Horde", -- [3]
+					"Biscuitss|Illidan|Horde", -- [4]
+					"Cometron|Illidan|Horde", -- [5]
 					"Metal|Illidan|Horde", -- [6]
 					"Princip-Illidan|Illidan|Horde", -- [7]
 					"Olgheals|Illidan|Horde", -- [8]

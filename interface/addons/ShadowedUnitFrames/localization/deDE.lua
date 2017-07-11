@@ -749,5 +749,6 @@ L["Your aura color"] = "Deine Aurenfarbe"
 L["Your Auras"] = "Deine Auren"
 L["Your code must be wrapped in a function, for example, if you were to make a tag to return the units name you would do:|n|nfunction(unit, unitOwner)|nreturn UnitName(unitOwner)|nend"] = "Dein Code muss in eine Funktion umgebrochen werden. Wenn Du beispielsweise einen Tag erstellst um den Einheitenname auszugeben, würdest Du folgendes tun:|n|nfunction(unit, unitOwner)|nreturn UnitName(unitOwner)|nend"
 L["Zone configuration units"] = "Gebiet Konfiguration - Einheiten"
+
 local ShadowUF = select(2, ...)
 ShadowUF.L = setmetatable(L, {__index = ShadowUF.L})

@@ -18,6 +18,8 @@ VER 3 0100000000000022 "FoF" "INV_Misc_QuestionMark"
 END
 VER 3 0100000000000013 "Life Cocoon" "INV_MISC_QUESTIONMARK"
 #showtooltip Life Cocoon
+/use 13
+/use 14
 /use [@mouseover,help,nodead][]Life Cocoon
 END
 VER 3 0100000000000014 "Renewing Mist" "INV_MISC_QUESTIONMARK"

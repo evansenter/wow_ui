@@ -3,6 +3,7 @@ RCLootCouncilDB = {
 	["profileKeys"] = {
 		["Combustion - Illidan"] = "Default",
 		["Cometstorm - Illidan"] = "Default",
+		["Evan - Illidan"] = "Default",
 		["Comet - Illidan"] = "Comet - Illidan",
 	},
 	["global"] = {
@@ -31,2149 +32,2223 @@ RCLootCouncilDB = {
 			["Two-Handed Axes"] = "Two-Handed Axes",
 		},
 		["log"] = {
-			"13:53:31 - ML initialized!", -- [1]
-			"13:53:58 - Cometstorm-Illidan (2.3.4) (nil)", -- [2]
-			"13:53:59 - Event: (PLAYER_ENTERING_WORLD)", -- [3]
-			"13:53:59 - GetML()", -- [4]
-			"13:53:59 - LootMethod =  (personalloot)", -- [5]
-			"13:54:00 - GetPlayersGuildRank()", -- [6]
-			"13:54:00 - Found Guild Rank: ALT.", -- [7]
-			"13:54:00 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Cometstorm) (distri:) (GUILD)", -- [8]
-			"13:56:18 - Event: (PLAYER_ENTERING_WORLD)", -- [9]
-			"13:56:18 - GetML()", -- [10]
-			"13:56:18 - LootMethod =  (personalloot)", -- [11]
-			"14:01:51 - Event: (PLAYER_ENTERING_WORLD)", -- [12]
-			"14:01:51 - GetML()", -- [13]
-			"14:01:51 - LootMethod =  (personalloot)", -- [14]
-			"06/13/17", -- [15]
-			"15:44:47 - Logged In", -- [16]
-			"15:44:47 - ML initialized!", -- [17]
-			"15:45:13 - Cometstorm-Illidan (2.3.4) (nil)", -- [18]
-			"15:45:14 - Event: (PLAYER_ENTERING_WORLD)", -- [19]
-			"15:45:14 - GetML()", -- [20]
-			"15:45:14 - LootMethod =  (personalloot)", -- [21]
-			"15:45:15 - GetPlayersGuildRank()", -- [22]
-			"15:45:15 - Found Guild Rank: ALT.", -- [23]
-			"15:45:15 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Cometstorm) (distri:) (GUILD)", -- [24]
-			"15:45:15 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [25]
-			"15:45:15 - GetML()", -- [26]
-			"15:45:15 - LootMethod =  (group)", -- [27]
-			"15:45:50 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Blutarski) (distri:) (GUILD)", -- [28]
-			"15:50:39 - Event: (PLAYER_ENTERING_WORLD)", -- [29]
-			"15:50:39 - GetML()", -- [30]
-			"15:50:39 - LootMethod =  (personalloot)", -- [31]
-			"15:50:44 - Comm received:^1^SverTest^T^N1^S2.3.3^t^^ (from:) (Fearmeter) (distri:) (GUILD)", -- [32]
-			"15:53:49 - Comm received:^1^SverTest^T^N1^S2.3.3^t^^ (from:) (Fearmeter) (distri:) (GUILD)", -- [33]
-			"15:54:16 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Madmartigàn) (distri:) (GUILD)", -- [34]
-			"15:55:04 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Thenex) (distri:) (GUILD)", -- [35]
-			"15:55:37 - Comm received:^1^SverTest^T^N1^S2.3.3^t^^ (from:) (Fearmeter) (distri:) (GUILD)", -- [36]
-			"15:57:11 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Lanféar) (distri:) (GUILD)", -- [37]
-			"15:57:27 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Thenex) (distri:) (GUILD)", -- [38]
-			"15:58:44 - Comm received:^1^SverTest^T^N1^S2.3.2^t^^ (from:) (Djdivine) (distri:) (GUILD)", -- [39]
-			"15:59:24 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [40]
-			"15:59:24 - GetML()", -- [41]
-			"15:59:24 - LootMethod =  (personalloot)", -- [42]
-			"15:59:40 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Thenex) (distri:) (GUILD)", -- [43]
-			"16:01:49 - Event: (PLAYER_ENTERING_WORLD)", -- [44]
-			"16:01:49 - GetML()", -- [45]
-			"16:01:49 - LootMethod =  (personalloot)", -- [46]
-			"16:02:17 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Thenex) (distri:) (GUILD)", -- [47]
-			"16:02:37 - Event: (PLAYER_ENTERING_WORLD)", -- [48]
-			"16:02:37 - GetML()", -- [49]
-			"16:02:37 - LootMethod =  (personalloot)", -- [50]
-			"16:02:46 - Comm received:^1^SverTest^T^N1^S2.3.2^t^^ (from:) (Djdivine) (distri:) (GUILD)", -- [51]
-			"16:04:04 - Comm received:^1^SverTest^T^N1^S2.3.3^t^^ (from:) (Swîftmender) (distri:) (GUILD)", -- [52]
-			"16:06:42 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Thenex) (distri:) (GUILD)", -- [53]
-			"16:08:33 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [54]
-			"16:08:33 - GetML()", -- [55]
-			"16:08:33 - LootMethod =  (personalloot)", -- [56]
-			"16:10:22 - Event: (PLAYER_ENTERING_WORLD)", -- [57]
-			"16:10:22 - GetML()", -- [58]
-			"16:10:22 - LootMethod =  (personalloot)", -- [59]
-			"16:10:36 - Comm received:^1^SverTest^T^N1^S2.3.3^t^^ (from:) (Viceversace) (distri:) (GUILD)", -- [60]
-			"16:12:21 - Event: (PLAYER_ENTERING_WORLD)", -- [61]
-			"16:12:21 - GetML()", -- [62]
-			"16:12:21 - LootMethod =  (personalloot)", -- [63]
-			"16:13:25 - Event: (PLAYER_ENTERING_WORLD)", -- [64]
-			"16:13:25 - GetML()", -- [65]
-			"16:13:25 - LootMethod =  (personalloot)", -- [66]
-			"16:14:35 - Event: (PLAYER_ENTERING_WORLD)", -- [67]
-			"16:14:35 - GetML()", -- [68]
-			"16:14:35 - LootMethod =  (personalloot)", -- [69]
-			"16:15:47 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [70]
-			"16:15:47 - GetML()", -- [71]
-			"16:15:47 - LootMethod =  (group)", -- [72]
-			"16:15:49 - Event: (RAID_INSTANCE_WELCOME) (Mogu'shan Palace (Heroic)) (56650) (0) (0)", -- [73]
-			"16:15:50 - Event: (PLAYER_ENTERING_WORLD)", -- [74]
-			"16:15:50 - GetML()", -- [75]
-			"16:15:50 - LootMethod =  (group)", -- [76]
-			"16:16:48 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Lanféar) (distri:) (GUILD)", -- [77]
-			"16:20:29 - Event: (PLAYER_ENTERING_WORLD)", -- [78]
-			"16:20:29 - GetML()", -- [79]
-			"16:20:29 - LootMethod =  (personalloot)", -- [80]
-			"06/13/17", -- [81]
-			"16:22:10 - Logged In", -- [82]
-			"16:22:10 - ML initialized!", -- [83]
-			"16:22:16 - Comet-Illidan (2.3.4) (nil)", -- [84]
-			"16:22:17 - Event: (PLAYER_ENTERING_WORLD)", -- [85]
-			"16:22:17 - GetML()", -- [86]
-			"16:22:17 - LootMethod =  (personalloot)", -- [87]
-			"16:22:17 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [88]
-			"16:22:17 - GetPlayersGuildRank()", -- [89]
-			"16:22:17 - Found Guild Rank: Member", -- [90]
-			"16:22:42 - Event: (PLAYER_ENTERING_WORLD)", -- [91]
-			"16:22:42 - GetML()", -- [92]
-			"16:22:42 - LootMethod =  (personalloot)", -- [93]
-			"16:25:31 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Cenzic) (distri:) (GUILD)", -- [94]
-			"16:29:22 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Cenzic) (distri:) (GUILD)", -- [95]
-			"16:35:37 - Event: (PLAYER_ENTERING_WORLD)", -- [96]
-			"16:35:37 - GetML()", -- [97]
-			"16:35:37 - LootMethod =  (personalloot)", -- [98]
-			"16:43:14 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Jimrando) (distri:) (GUILD)", -- [99]
-			"16:43:44 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Thenex) (distri:) (GUILD)", -- [100]
-			"16:45:01 - Comm received:^1^SverTest^T^N1^S2.3.3^t^^ (from:) (Zilorin) (distri:) (GUILD)", -- [101]
-			"16:45:44 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Dadizzle) (distri:) (GUILD)", -- [102]
-			"16:46:19 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [103]
-			"16:46:19 - GetML()", -- [104]
-			"16:46:19 - LootMethod =  (personalloot)", -- [105]
-			"16:48:45 - Event: (PLAYER_ENTERING_WORLD)", -- [106]
-			"16:48:45 - GetML()", -- [107]
-			"16:48:45 - LootMethod =  (personalloot)", -- [108]
-			"16:50:01 - Event: (PLAYER_ENTERING_WORLD)", -- [109]
-			"16:50:01 - GetML()", -- [110]
-			"16:50:01 - LootMethod =  (personalloot)", -- [111]
-			"16:53:34 - Event: (PLAYER_ENTERING_WORLD)", -- [112]
-			"16:53:34 - GetML()", -- [113]
-			"16:53:34 - LootMethod =  (personalloot)", -- [114]
-			"17:03:07 - Comm received:^1^SverTest^T^N1^S2.3.0^t^^ (from:) (Dvldocdk) (distri:) (GUILD)", -- [115]
-			"17:05:27 - Comm received:^1^SverTest^T^N1^S2.3.0^t^^ (from:) (Grimuhs) (distri:) (GUILD)", -- [116]
-			"17:06:23 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Telgina) (distri:) (GUILD)", -- [117]
-			"17:06:52 - Comm received:^1^SverTest^T^N1^S2.3.3^t^^ (from:) (Swîftmender) (distri:) (GUILD)", -- [118]
-			"17:09:06 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Madmartigàn) (distri:) (GUILD)", -- [119]
-			"17:10:42 - Comm received:^1^SverTest^T^N1^S2.3.3^t^^ (from:) (Fearmeter) (distri:) (GUILD)", -- [120]
-			"17:12:19 - Comm received:^1^SverTest^T^N1^S2.3.3^t^^ (from:) (Reinhärt) (distri:) (GUILD)", -- [121]
-			"17:13:25 - Comm received:^1^SverTest^T^N1^S2.3.3^t^^ (from:) (Reinhärt) (distri:) (GUILD)", -- [122]
-			"06/13/17", -- [123]
-			"17:14:23 - Logged In", -- [124]
-			"17:14:23 - ML initialized!", -- [125]
-			"17:14:34 - Cometstorm-Illidan (2.3.4) (nil)", -- [126]
-			"17:14:35 - Event: (PLAYER_ENTERING_WORLD)", -- [127]
-			"17:14:35 - GetML()", -- [128]
-			"17:14:35 - LootMethod =  (personalloot)", -- [129]
-			"17:14:35 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Cometstorm) (distri:) (GUILD)", -- [130]
-			"17:14:35 - GetPlayersGuildRank()", -- [131]
-			"17:14:35 - Found Guild Rank: ALT.", -- [132]
-			"17:18:48 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [133]
-			"17:18:48 - GetML()", -- [134]
-			"17:18:48 - LootMethod =  (personalloot)", -- [135]
-			"17:19:37 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Reinhärt) (distri:) (GUILD)", -- [136]
-			"17:19:46 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Ugliestdruid) (distri:) (GUILD)", -- [137]
-			"17:19:56 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [138]
-			"17:19:56 - GetML()", -- [139]
-			"17:19:56 - LootMethod =  (master)", -- [140]
-			"17:19:56 - MasterLooter =  (Fearmeter-Illidan)", -- [141]
-			"17:19:56 - Resetting council as we have a new ML!", -- [142]
-			"17:19:57 - Comm received:^1^SplayerInfoRequest^T^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [143]
-			"17:19:57 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N30^SselfVote^B^Sobserve^b^Sresponses^T^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^t^SnumButtons^N3^SanonymousVoting^b^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [144]
-			"17:19:57 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [145]
-			"17:19:57 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [146]
-			"17:19:57 - Comm received:^1^Scandidates^T^N1^T^SReinhärt-Illidan^T^Srole^STANK^Sclass^SWARRIOR^Srank^S^t^SZilorin-Illidan^T^Srole^SDAMAGER^Sclass^SDEMONHUNTER^Srank^S^t^SColonferal-Illidan^T^Srole^SDAMAGER^Sclass^SDRUID^Srank^S^t^SJimrando-Illidan^T^Srole^SDAMAGER^Sclass^SWARRIOR^Srank^S^t^SCometstorm-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SLanféar-Illidan^T^Srole^SHEALER^Sclass^SPRIEST^Srank^S^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Sclass^SDRUID^Srank^S^t^STelgina-Illidan^T^Srole^SDAMAGER^Sclass^SHUNTER^Srank^S^t^SThenex-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SGrimuhs-Illidan^T^Srole^SDAMAGER^Sclass^SPRIEST^Srank^S^t^SMadmartigàn-Illidan^T^Srole^SDAMAGER^Sclass^SWARRIOR^Srank^S^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Sclass^SWARLOCK^Srank^S^t^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [147]
-			"17:20:01 - Timer MLdb_check passed", -- [148]
-			"17:20:01 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [149]
-			"17:20:01 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [150]
-			"17:20:01 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [151]
-			"17:20:01 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [152]
-			"17:20:01 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [153]
-			"17:20:01 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [154]
-			"17:20:01 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [155]
-			"17:20:01 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [156]
-			"17:20:01 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [157]
-			"17:20:01 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [158]
-			"17:20:01 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [159]
-			"17:20:01 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [160]
-			"17:20:01 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [161]
-			"17:20:01 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [162]
-			"17:20:01 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [163]
-			"17:20:01 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [164]
-			"17:20:02 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [165]
-			"17:20:02 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [166]
-			"17:20:02 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [167]
-			"17:20:02 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [168]
-			"17:20:05 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [169]
-			"17:20:05 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [170]
-			"17:20:07 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [171]
-			"17:20:07 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [172]
-			"17:20:07 - Comm received:^1^Scandidates^T^N1^T^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^SZilorin-Illidan^T^Srole^SNONE^Senchant_lvl^N101^Sclass^SDEMONHUNTER^Senchanter^B^Srank^SRaider^t^SColonferal-Illidan^T^Srole^SDAMAGER^Sclass^SDRUID^Srank^S^t^SJimrando-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SRaider^t^SCometstorm-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SALT.^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SMember^t^SGrimuhs-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N761^Sclass^SPRIEST^Senchanter^B^Srank^SRaider^t^SMadmartigàn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer~`Alt^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARLOCK^Srank^SOfficer^t^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [173]
-			"17:20:31 - Comm received:^1^SverTest^T^N1^S2.3.0^t^^ (from:) (Dvldocdk) (distri:) (GUILD)", -- [174]
-			"17:20:40 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [175]
-			"17:20:40 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [176]
-			"17:21:00 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [177]
-			"17:21:00 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [178]
-			"17:21:16 - Event: (PLAYER_ENTERING_WORLD)", -- [179]
-			"17:21:16 - GetML()", -- [180]
-			"17:21:16 - LootMethod =  (master)", -- [181]
-			"17:21:16 - MasterLooter =  (Fearmeter-Illidan)", -- [182]
-			"17:21:21 - Timer MLdb_check passed", -- [183]
-			"17:21:22 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [184]
-			"17:21:22 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [185]
-			"17:22:19 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N30^SselfVote^B^Sobserve^b^Sresponses^T^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^t^SnumButtons^N3^SanonymousVoting^b^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [186]
-			"17:22:19 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [187]
-			"17:22:19 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [188]
-			"17:22:22 - Comm received:^1^Scandidates^T^N1^T^SDvldocdk-Illidan^T^Srole^SDAMAGER^Sclass^SDEATHKNIGHT^Srank^S^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^SZilorin-Illidan^T^Srole^SNONE^Senchant_lvl^N101^Sclass^SDEMONHUNTER^Senchanter^B^Srank^SRaider^t^SColonferal-Illidan^T^Srole^SDAMAGER^Sclass^SDRUID^Srank^S^t^SJimrando-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SRaider^t^SCometstorm-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SALT.^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SMember^t^SGrimuhs-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N761^Sclass^SPRIEST^Senchanter^B^Srank^SRaider^t^SMadmartigàn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer~`Alt^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARLOCK^Srank^SOfficer^t^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [189]
-			"17:22:29 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N30^SselfVote^B^Sobserve^b^Sresponses^T^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^t^SnumButtons^N3^SanonymousVoting^b^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [190]
-			"17:22:29 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [191]
-			"17:22:29 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [192]
-			"17:22:42 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [193]
-			"17:22:42 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [194]
-			"17:22:42 - Comm received:^1^Scandidates^T^N1^T^SDvldocdk-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SGuild~`Friend^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^SZilorin-Illidan^T^Srole^SNONE^Senchant_lvl^N101^Sclass^SDEMONHUNTER^Senchanter^B^Srank^SRaider^t^SColonferal-Illidan^T^Srole^SDAMAGER^Sclass^SDRUID^Srank^S^t^SJimrando-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SRaider^t^SCenzic-Illidan^T^Srole^SDAMAGER^Sclass^SDEATHKNIGHT^Srank^S^t^SCometstorm-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SALT.^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SMember^t^SGrimuhs-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N761^Sclass^SPRIEST^Senchanter^B^Srank^SRaider^t^SMadmartigàn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer~`Alt^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARLOCK^Srank^SOfficer^t^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [195]
-			"17:22:51 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Reinhärt) (distri:) (GUILD)", -- [196]
-			"17:22:53 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N30^SselfVote^B^Sobserve^b^Sresponses^T^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^t^SnumButtons^N3^SanonymousVoting^b^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [197]
-			"17:22:53 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [198]
-			"17:22:53 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [199]
-			"17:23:11 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [200]
-			"17:23:11 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [201]
-			"17:23:21 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [202]
-			"17:23:21 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [203]
-			"17:23:35 - Event: (RAID_INSTANCE_WELCOME) (The Nighthold (Heroic)) (570984) (0) (0)", -- [204]
-			"17:23:35 - Event: (PLAYER_ENTERING_WORLD)", -- [205]
-			"17:23:35 - GetML()", -- [206]
-			"17:23:35 - LootMethod =  (master)", -- [207]
-			"17:23:35 - MasterLooter =  (Fearmeter-Illidan)", -- [208]
-			"17:23:40 - Timer MLdb_check passed", -- [209]
-			"17:23:41 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [210]
-			"17:23:41 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [211]
-			"17:24:37 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [212]
-			"17:24:37 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [213]
-			"17:24:39 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Reinhärt) (distri:) (GUILD)", -- [214]
-			"17:24:42 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N30^SselfVote^B^Sobserve^b^Sresponses^T^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^t^SnumButtons^N3^SanonymousVoting^b^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [215]
-			"17:24:42 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [216]
-			"17:24:42 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [217]
-			"17:26:47 - Comm received:^1^SverTest^T^N1^S2.3.0^t^^ (from:) (Dvldocdk) (distri:) (GUILD)", -- [218]
-			"17:26:56 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N30^SselfVote^B^Sobserve^b^Sresponses^T^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^t^SnumButtons^N3^SanonymousVoting^b^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [219]
-			"17:26:56 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [220]
-			"17:26:56 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [221]
-			"17:27:27 - Comm received:^1^SverTest^T^N1^S2.3.0^t^^ (from:) (Aedalina) (distri:) (GUILD)", -- [222]
-			"17:28:06 - Comm received:^1^SverTest^T^N1^S2.3.3^t^^ (from:) (Fearmeter) (distri:) (GUILD)", -- [223]
-			"17:28:52 - Comm received:^1^SplayerInfoRequest^T^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [224]
-			"17:28:52 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N30^SselfVote^B^Sobserve^b^Sresponses^T^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^t^SnumButtons^N3^SanonymousVoting^b^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [225]
-			"17:28:52 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [226]
-			"17:28:52 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [227]
-			"17:28:52 - Comm received:^1^Scandidates^T^N1^T^SDvldocdk-Illidan^T^Srole^SDAMAGER^Sclass^SDEATHKNIGHT^Srank^S^t^SLanféar-Illidan^T^Srole^SHEALER^Sclass^SPRIEST^Srank^S^t^SAedalina-Illidan^T^Srole^SDAMAGER^Sclass^SPALADIN^Srank^S^t^SReinhärt-Illidan^T^Srole^STANK^Sclass^SWARRIOR^Srank^S^t^SZilorin-Illidan^T^Srole^SDAMAGER^Sclass^SDEMONHUNTER^Srank^S^t^SColonferal-Illidan^T^Srole^SDAMAGER^Sclass^SDRUID^Srank^S^t^SJimrando-Illidan^T^Srole^SDAMAGER^Sclass^SWARRIOR^Srank^S^t^SCenzic-Illidan^T^Srole^SDAMAGER^Sclass^SDEATHKNIGHT^Srank^S^t^SCometstorm-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SUgliestdruid-Illidan^T^Srole^STANK^Sclass^SDRUID^Srank^S^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Sclass^SDRUID^Srank^S^t^STelgina-Illidan^T^Srole^SDAMAGER^Sclass^SHUNTER^Srank^S^t^SThenex-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SGrimuhs-Illidan^T^Srole^SDAMAGER^Sclass^SPRIEST^Srank^S^t^SMadmartigàn-Illidan^T^Srole^SDAMAGER^Sclass^SWARRIOR^Srank^S^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Sclass^SWARLOCK^Srank^S^t^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [228]
-			"17:29:02 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [229]
-			"17:29:02 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [230]
-			"17:29:02 - Comm received:^1^Scandidates^T^N1^T^SDvldocdk-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SGuild~`Friend^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^SAedalina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SPALADIN^Srank^SRaider^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^SZilorin-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N101^Sclass^SDEMONHUNTER^Senchanter^B^Srank^SRaider^t^SColonferal-Illidan^T^Srole^SDAMAGER^Sclass^SDRUID^Srank^S^t^SJimrando-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SRaider^t^SCenzic-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N778^Sclass^SDEATHKNIGHT^Senchanter^B^Srank^SRaider^t^SCometstorm-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SALT.^t^SUgliestdruid-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDRUID^Srank^SOfficer^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SMember^t^SGrimuhs-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N761^Sclass^SPRIEST^Senchanter^B^Srank^SRaider^t^SMadmartigàn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer~`Alt^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARLOCK^Srank^SOfficer^t^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [231]
-			"17:29:27 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [232]
-			"17:29:27 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [233]
-			"17:29:40 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [234]
-			"17:29:40 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [235]
-			"17:29:44 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [236]
-			"17:29:44 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [237]
-			"17:29:46 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [238]
-			"17:29:46 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [239]
-			"17:29:47 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [240]
-			"17:29:47 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [241]
-			"17:29:51 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [242]
-			"17:29:51 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [243]
-			"17:30:00 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Shietnorunes) (distri:) (GUILD)", -- [244]
-			"17:30:01 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [245]
-			"17:30:01 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [246]
-			"17:30:27 - Comm received:^1^SverTest^T^N1^S2.3.3^t^^ (from:) (Swîftmender) (distri:) (GUILD)", -- [247]
-			"17:31:32 - Comm received:^1^SverTest^T^N1^S2.3.3^t^^ (from:) (Furyisthy) (distri:) (GUILD)", -- [248]
-			"06/13/17", -- [249]
-			"17:33:23 - Logged In", -- [250]
-			"17:33:23 - ML initialized!", -- [251]
-			"17:33:25 - Cometstorm-Illidan (2.3.4) (nil)", -- [252]
-			"17:33:26 - Event: (PLAYER_ENTERING_WORLD)", -- [253]
-			"17:33:26 - GetML()", -- [254]
-			"17:33:26 - LootMethod =  (master)", -- [255]
-			"17:33:26 - MasterLooter =  (Fearmeter-Illidan)", -- [256]
-			"17:33:26 - Resetting council as we have a new ML!", -- [257]
-			"17:33:26 - Player relog...", -- [258]
-			"17:33:26 - GetPlayersGuildRank()", -- [259]
-			"17:33:26 - Found Guild Rank: ALT.", -- [260]
-			"17:33:26 - Timer MLdb_check passed", -- [261]
-			"17:33:27 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Cometstorm) (distri:) (GUILD)", -- [262]
-			"17:33:30 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [263]
-			"17:33:30 - GetML()", -- [264]
-			"17:33:30 - LootMethod =  (master)", -- [265]
-			"17:33:30 - MasterLooter =  (Madmartigàn-Illidan)", -- [266]
-			"17:33:30 - Resetting council as we have a new ML!", -- [267]
-			"17:33:32 - Comm received:^1^SplayerInfoRequest^T^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [268]
-			"17:33:32 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [269]
-			"17:33:32 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [270]
-			"17:33:32 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [271]
-			"17:33:32 - Comm received:^1^Scandidates^T^N1^T^SThenex-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SZilorin-Illidan^T^Srole^SDAMAGER^Sclass^SDEMONHUNTER^Srank^S^t^SColonferal-Illidan^T^Srole^SDAMAGER^Sclass^SDRUID^Srank^S^t^SJimrando-Illidan^T^Srole^SDAMAGER^Sclass^SWARRIOR^Srank^S^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Sclass^SDRUID^Srank^S^t^SGrimuhs-Illidan^T^Srole^SDAMAGER^Sclass^SPRIEST^Srank^S^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Sclass^SWARLOCK^Srank^S^t^SDvldocdk-Illidan^T^Srole^SDAMAGER^Sclass^SDEATHKNIGHT^Srank^S^t^SReinhärt-Illidan^T^Srole^STANK^Sclass^SWARRIOR^Srank^S^t^SCenzic-Illidan^T^Srole^SDAMAGER^Sclass^SDEATHKNIGHT^Srank^S^t^SCometstorm-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SAedalina-Illidan^T^Srole^SDAMAGER^Sclass^SPALADIN^Srank^S^t^SNadzieja-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SFuryisthy-Illidan^T^Srole^SDAMAGER^Sclass^SDEMONHUNTER^Srank^S^t^SMadmartigàn-Illidan^T^Srole^SDAMAGER^Sclass^SWARRIOR^Srank^S^t^STelgina-Illidan^T^Srole^SDAMAGER^Sclass^SHUNTER^Srank^S^t^SSwîftmender-Illidan^T^Srole^SHEALER^Sclass^SDRUID^Srank^S^t^SShietnorunes-Illidan^T^Srole^STANK^Sclass^SDEATHKNIGHT^Srank^S^t^SMarketfreshe-Illidan^T^Srole^SHEALER^Sclass^SDRUID^Srank^S^t^SLanféar-Illidan^T^Srole^SHEALER^Sclass^SPRIEST^Srank^S^t^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [272]
-			"17:33:35 - Timer MLdb_check passed", -- [273]
-			"17:33:42 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [274]
-			"17:33:42 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [275]
-			"17:33:42 - Comm received:^1^Scandidates^T^N1^T^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SMember^t^SZilorin-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N101^Sclass^SDEMONHUNTER^Senchanter^B^Srank^SRaider^t^SColonferal-Illidan^T^Srole^SDAMAGER^Sclass^SDRUID^Srank^S^t^SJimrando-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SRaider^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^SGrimuhs-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N761^Sclass^SPRIEST^Senchanter^B^Srank^SRaider^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Sclass^SWARLOCK^Srank^S^t^SDvldocdk-Illidan^T^Srole^SDAMAGER^Sclass^SDEATHKNIGHT^Srank^S^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^SCenzic-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N778^Sclass^SDEATHKNIGHT^Senchanter^B^Srank^SRaider^t^SCometstorm-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SALT.^t^SAedalina-Illidan^T^Srole^SDAMAGER^Sclass^SPALADIN^Srank^S^t^SNadzieja-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SFuryisthy-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEMONHUNTER^Srank^SMember^t^SMadmartigàn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer~`Alt^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SSwîftmender-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SOfficer~`Alt^t^SShietnorunes-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SALT.^t^SMarketfreshe-Illidan^T^Srole^SHEALER^Sclass^SDRUID^Srank^S^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [276]
-			"06/13/17", -- [277]
-			"17:34:59 - Logged In", -- [278]
-			"17:34:59 - ML initialized!", -- [279]
-			"17:35:25 - Cometstorm-Illidan (2.3.4) (nil)", -- [280]
-			"17:35:26 - Event: (PLAYER_ENTERING_WORLD)", -- [281]
-			"17:35:26 - GetML()", -- [282]
-			"17:35:26 - LootMethod =  (personalloot)", -- [283]
-			"17:35:26 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Cometstorm) (distri:) (GUILD)", -- [284]
-			"17:35:26 - GetPlayersGuildRank()", -- [285]
-			"17:35:26 - Found Guild Rank: ALT.", -- [286]
-			"17:35:26 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [287]
-			"17:35:26 - GetML()", -- [288]
-			"17:35:26 - LootMethod =  (master)", -- [289]
-			"17:35:26 - MasterLooter =  (Madmartigàn-Illidan)", -- [290]
-			"17:35:26 - Resetting council as we have a new ML!", -- [291]
-			"17:35:31 - Timer MLdb_check passed", -- [292]
-			"17:35:32 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [293]
-			"17:35:32 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [294]
-			"17:35:32 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [295]
-			"17:35:43 - Comm received:^1^SverTest^T^N1^S2.3.0^t^^ (from:) (Aedalina) (distri:) (GUILD)", -- [296]
-			"17:35:51 - Comm received:^1^SverTest^T^N1^S2.3.3^t^^ (from:) (Beallz) (distri:) (GUILD)", -- [297]
-			"17:36:07 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [298]
-			"17:36:07 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [299]
-			"17:36:07 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [300]
-			"17:36:21 - Comm received:^1^Scandidates^T^N1^T^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SMember^t^SZilorin-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N101^Sclass^SDEMONHUNTER^Senchanter^B^Srank^SRaider^t^SColonferal-Illidan^T^Srole^SDAMAGER^Sclass^SDRUID^Srank^S^t^SJimrando-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SRaider^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^SGrimuhs-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N761^Sclass^SPRIEST^Senchanter^B^Srank^SRaider^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Sclass^SWARLOCK^Srank^S^t^SDvldocdk-Illidan^T^Srole^SDAMAGER^Sclass^SDEATHKNIGHT^Srank^S^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^SCenzic-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N778^Sclass^SDEATHKNIGHT^Senchanter^B^Srank^SRaider^t^SCometstorm-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SALT.^t^SFuryisthy-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEMONHUNTER^Srank^SMember^t^SNadzieja-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SBeallz-Illidan^T^Srole^SHEALER^Sclass^SMONK^Srank^S^t^SMadmartigàn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer~`Alt^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SSwîftmender-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SOfficer~`Alt^t^SShietnorunes-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SALT.^t^SMarketfreshe-Illidan^T^Srole^SHEALER^Sclass^SDRUID^Srank^S^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [301]
-			"17:36:49 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [302]
-			"17:36:49 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [303]
-			"17:36:49 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [304]
-			"17:39:37 - Comm received:^1^SverTest^T^N1^S2.3.2^t^^ (from:) (Djpurge) (distri:) (GUILD)", -- [305]
-			"17:39:43 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Luthanen) (distri:) (GUILD)", -- [306]
-			"17:39:51 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Thenex) (distri:) (GUILD)", -- [307]
-			"17:39:53 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [308]
-			"17:39:54 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [309]
-			"17:39:54 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [310]
-			"17:41:16 - Comm received:^1^SlootTable^T^N1^T^N1^T^SequipLoc^SINVTYPE_WRIST^SlootSlot^N1^Slink^S|cffa335ee|Hitem:140876::::::::110:72::5:3:3444:1487:3336:::|h[Stinger~`Resistant~`Bracers]|h|r^SsubType^SMail^Srelic^b^Sawarded^b^Sname^SStinger~`Resistant~`Bracers^Stexture^N1318378^Silvl^N890^Sboe^b^Sbagged^b^Squality^N4^t^N2^T^SequipLoc^SINVTYPE_CHEST^SlootSlot^N2^Slink^S|cffa335ee|Hitem:140875::::::::110:72::5:3:3444:1487:3336:::|h[Arcanochitin~`Hauberk]|h|r^SsubType^SMail^Srelic^b^Sawarded^b^Sname^SArcanochitin~`Hauberk^Stexture^N1339437^Silvl^N890^Sboe^b^Sbagged^b^Squality^N4^t^N3^T^SequipLoc^SINVTYPE_WRIST^SlootSlot^N3^Slink^S|cffa335ee|Hitem:140902::::::::110:72::5:3:3444:1482:3528:::|h[Jagged~`Carapace~`Wristclamps]|h|r^SsubType^SPlate^Srelic^b^Sawarded^b^Sname^SJagged~`Carapace~`Wristclamps^Stexture^N1320039^Silvl^N885^Sboe^b^Sbagged^b^Squality^N4^t^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [311]
-			"17:41:16 - Autopassed on:  (|cffa335ee|Hitem:140876::::::::110:72::5:3:3444:1487:3336:::|h[Stinger Resistant Bracers]|h|r)", -- [312]
-			"17:41:16 - CreateResponse (1) (|cffa335ee|Hitem:140876::::::::110:72::5:3:3444:1487:3336:::|h[Stinger Resistant Bracers]|h|r) (890) (AUTOPASS) (INVTYPE_WRIST) (nil) (Mail)", -- [313]
-			"17:41:16 - GetPlayersGear (140876) (INVTYPE_WRIST)", -- [314]
-			"17:41:16 - Autopassed on:  (|cffa335ee|Hitem:140875::::::::110:72::5:3:3444:1487:3336:::|h[Arcanochitin Hauberk]|h|r)", -- [315]
-			"17:41:16 - CreateResponse (2) (|cffa335ee|Hitem:140875::::::::110:72::5:3:3444:1487:3336:::|h[Arcanochitin Hauberk]|h|r) (890) (AUTOPASS) (INVTYPE_CHEST) (nil) (Mail)", -- [316]
-			"17:41:16 - GetPlayersGear (140875) (INVTYPE_CHEST)", -- [317]
-			"17:41:16 - Autopassed on:  (|cffa335ee|Hitem:140902::::::::110:72::5:3:3444:1482:3528:::|h[Jagged Carapace Wristclamps]|h|r)", -- [318]
-			"17:41:16 - CreateResponse (3) (|cffa335ee|Hitem:140902::::::::110:72::5:3:3444:1482:3528:::|h[Jagged Carapace Wristclamps]|h|r) (885) (AUTOPASS) (INVTYPE_WRIST) (nil) (Plate)", -- [319]
-			"17:41:16 - GetPlayersGear (140902) (INVTYPE_WRIST)", -- [320]
-			"17:41:16 - LootFrame (GetFrame())", -- [321]
-			"17:41:16 - LootFrame:Start()", -- [322]
-			"17:41:16 - Comm received:^1^SlootAck^T^N1^SNadzieja-Illidan^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [323]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SNadzieja-Illidan^N3^T^Silvl^N902.625^Sdiff^N-20^Sgear1^S|cffa335ee|Hitem:133614::::::::110:64::34:3:3418:1562:3337:::|h[Frost-Stricken~`Cuffs]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [324]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N2^N2^SNadzieja-Illidan^N3^T^Silvl^N902.625^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:140848::::::::110:64::5:3:3444:1482:3528:::|h[Robes~`of~`Fluctuating~`Energy]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [325]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SNadzieja-Illidan^N3^T^Silvl^N902.625^Sdiff^N-25^Sgear1^S|cffa335ee|Hitem:133614::::::::110:64::34:3:3418:1562:3337:::|h[Frost-Stricken~`Cuffs]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [326]
-			"17:41:16 - Comm received:^1^SlootAck^T^N1^SMadmartigàn-Illidan^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [327]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SMadmartigàn-Illidan^N3^T^Silvl^N900^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:139283::::::::110:72::33:3:3418:1557:3337:::|h[Wristbands~`of~`Magnificent~`Splendor]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [328]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N2^N2^SMadmartigàn-Illidan^N3^T^Silvl^N900^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:138351::::::::110:72::5:3:3516:1487:3528:::|h[Chestplate~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [329]
-			"17:41:16 - Comm received:^1^SlootAck^T^N1^SDadizzle-Illidan^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [330]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:137092::::::::110:102:::2:3459:3530:::|h[Oneth's~`Intuition]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [331]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N2^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:138324::::::::110:102::5:3:3516:1487:3528:::|h[Robe~`of~`the~`Astral~`Warden]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [332]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N-55^Sgear1^S|cffff8000|Hitem:137092::::::::110:102:::2:3459:3530:::|h[Oneth's~`Intuition]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [333]
-			"17:41:16 - Comm received:^1^SextraUtilData^T^N1^SMadmartigàn-Illidan^N2^T^Sforged^N6^Spawn^T^N1^T^Sequipped^N19394.26^Snew^N6289.7^t^N2^T^Sequipped^N679.749^Snew^N12103.51^t^N3^T^Sequipped^N19394.26^Snew^N16260.38^t^t^SspecID^N72^Straits^N52^Slegend^N2^Ssockets^N3^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [334]
-			"17:41:16 - Comm received:^1^SlootAck^T^N1^SReinhärt-Illidan^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [335]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SReinhärt-Illidan^N3^T^Silvl^N908.9375^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:137107::::::::110:73:::2:1811:3530:::|h[Mannoroth's~`Bloodletting~`Manacles]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [336]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N2^N2^SReinhärt-Illidan^N3^T^Silvl^N908.9375^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:140913::::::::110:73::5:3:3517:1497:3336:::|h[Breastplate~`of~`the~`Remembered~`King]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [337]
-			"17:41:16 - Comm received:^1^SlootAck^T^N1^STelgina-Illidan^t^^ (from:) (Telgina) (distri:) (RAID)", -- [338]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N3^N2^STelgina-Illidan^N3^T^Silvl^N908.8125^Sdiff^N-20^Sgear1^S|cffa335ee|Hitem:134296::::::::110:253::35:3:3418:1567:3337:::|h[Ley~`Dragoon's~`Wristbraces]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [339]
-			"17:41:16 - Comm received:^1^SextraUtilData^T^N1^SShietnorunes-Illidan^N2^T^Sforged^N9^Spawn^T^N1^T^Sequipped^N612.935^Snew^N352.305^t^N2^T^Sequipped^N918.919^Snew^N604.169^t^N3^T^Sequipped^N612.935^Snew^N441.518^t^t^SspecID^N250^Straits^N51^Slegend^N2^Ssockets^N1^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [340]
-			"17:41:16 - Comm received:^1^SlootAck^T^N1^SShietnorunes-Illidan^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [341]
-			"17:41:16 - Comm received:^1^SlootAck^T^N1^SDvldocdk-Illidan^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [342]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SDvldocdk-Illidan^N3^T^Silvl^N905.375^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:132365::::::::110:251:::2:1811:3530:::|h[Shackles~`of~`Bryndaor]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [343]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N2^N2^SDvldocdk-Illidan^N3^T^Silvl^N905.375^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:134135::::::::110:251::43:3:3573:1547:3336:::|h[Rockbound~`Chestguard]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [344]
-			"17:41:16 - Comm received:^1^SlootAck^T^N1^SJimrando-Illidan^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [345]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SJimrando-Illidan^N3^T^Silvl^N906.9375^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:140902::::::::110:71::6:3:3445:1497:3528:::|h[Jagged~`Carapace~`Wristclamps]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [346]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N2^N2^SJimrando-Illidan^N3^T^Silvl^N906.9375^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:138351::::::::110:71::6:3:3518:1502:3528:::|h[Chestplate~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [347]
-			"17:41:16 - Comm received:^1^SlootAck^T^N1^SCometstorm-Illidan^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [348]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SCometstorm-Illidan^N3^T^Silvl^N902.5625^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140886::::::::110:64::5:3:3516:1487:3528:::|h[Woven~`Lasher~`Tendril~`Bracers]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [349]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N2^N2^SCometstorm-Illidan^N3^T^Silvl^N902.5625^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:138318::130220::::::110:64::5:4:3516:1808:1487:3528:::|h[Robe~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [350]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SCometstorm-Illidan^N3^T^Silvl^N902.5625^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:140886::::::::110:64::5:3:3516:1487:3528:::|h[Woven~`Lasher~`Tendril~`Bracers]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [351]
-			"17:41:16 - Comm received:^1^SlootAck^T^N1^SGrimuhs-Illidan^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [352]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SGrimuhs-Illidan^N3^T^Silvl^N903.3125^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:132409::::::::110:258:::2:3459:3530:::|h[Anund's~`Seared~`Shackles]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [353]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N2^N2^SGrimuhs-Illidan^N3^T^Silvl^N903.3125^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:138319::::::::110:258::5:3:3516:1487:1813:::|h[Purifier's~`Cassock]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [354]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SGrimuhs-Illidan^N3^T^Silvl^N903.3125^Sdiff^N-55^Sgear1^S|cffff8000|Hitem:132409::::::::110:258:::2:3459:3530:::|h[Anund's~`Seared~`Shackles]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [355]
-			"17:41:16 - Comm received:^1^SlootAck^T^N1^SLanféar-Illidan^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [356]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:134437::::::::110:257::35:3:3417:1552:3337:::|h[Harrowing~`Soulspun~`Bracers]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [357]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N2^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:138319::::::::110:257::6:3:3518:1502:3528:::|h[Purifier's~`Cassock]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [358]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:134437::::::::110:257::35:3:3417:1552:3337:::|h[Harrowing~`Soulspun~`Bracers]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [359]
-			"17:41:16 - Comm received:^1^SlootAck^T^N1^SSwîftmender-Illidan^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [360]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SSwîftmender-Illidan^N3^T^Silvl^N883.4375^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:146768::::::::110:105::27:4:3394:1808:1542:3337:::|h[Netherfiend~`Armbands]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [361]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N2^N2^SSwîftmender-Illidan^N3^T^Silvl^N883.4375^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:137015::::::::110:105:::2:3459:3530:::|h[Ekowraith,~`Creator~`of~`Worlds]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [362]
-			"17:41:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SSwîftmender-Illidan^N3^T^Silvl^N883.4375^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:146768::::::::110:105::27:4:3394:1808:1542:3337:::|h[Netherfiend~`Armbands]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [363]
-			"17:41:17 - Comm received:^1^SlootAck^T^N1^SCenzic-Illidan^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [364]
-			"17:41:17 - Comm received:^1^Sresponse^T^N1^N1^N2^SCenzic-Illidan^N3^T^Silvl^N910.0625^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:132458::::::::110:251:::2:3459:3530:::|h[Toravon's~`Whiteout~`Bindings]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [365]
-			"17:41:17 - Comm received:^1^Sresponse^T^N1^N2^N2^SCenzic-Illidan^N3^T^Silvl^N910.0625^Sdiff^N-30^Sgear1^S|cffa335ee|Hitem:138349::::::::110:251::5:3:3516:1517:3337:::|h[Dreadwyrm~`Breastplate]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [366]
-			"17:41:17 - Comm received:^1^Sresponse^T^N1^N1^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:146792::130219::::::110:63::43:4:3573:1808:1567:3337:::|h[Vileweave~`Cuffs]|h|r^Sresponse^SNOTINRAID^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [367]
-			"17:41:17 - Comm received:^1^Sresponse^T^N1^N2^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:138318::130219::::::110:63::6:4:3518:1808:1502:3528:::|h[Robe~`of~`Everburning~`Knowledge]|h|r^Sresponse^SNOTINRAID^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [368]
-			"17:41:17 - Comm received:^1^Sresponse^T^N1^N3^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sdiff^N-20^Sgear1^S|cffa335ee|Hitem:146792::130219::::::110:63::43:4:3573:1808:1567:3337:::|h[Vileweave~`Cuffs]|h|r^Sresponse^SNOTINRAID^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [369]
-			"17:41:19 - Comm received:^1^Sresponse^T^N1^N3^N2^SCenzic-Illidan^N3^T^Silvl^N910.0625^Sdiff^N-55^Sgear1^S|cffff8000|Hitem:132458::::::::110:251:::2:3459:3530:::|h[Toravon's~`Whiteout~`Bindings]|h|r^Sresponse^SPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [370]
-			"17:41:22 - Comm received:^1^Sresponse^T^N1^N3^N2^SReinhärt-Illidan^N3^T^Silvl^N908.9375^Sdiff^N-55^Sgear1^S|cffff8000|Hitem:137107::::::::110:73:::2:1811:3530:::|h[Mannoroth's~`Bloodletting~`Manacles]|h|r^Sresponse^SPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [371]
-			"17:41:23 - Comm received:^1^Sresponse^T^N1^N3^N2^SMadmartigàn-Illidan^N3^T^Silvl^N900^Sdiff^N-20^Sgear1^S|cffa335ee|Hitem:139283::::::::110:72::33:3:3418:1557:3337:::|h[Wristbands~`of~`Magnificent~`Splendor]|h|r^Sresponse^SPASS^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [372]
-			"17:41:24 - Comm received:^1^Sresponse^T^N1^N3^N2^SDvldocdk-Illidan^N3^T^Silvl^N905.375^Sdiff^N-55^Sgear1^S|cffff8000|Hitem:132365::::::::110:251:::2:1811:3530:::|h[Shackles~`of~`Bryndaor]|h|r^Sresponse^SPASS^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [373]
-			"17:41:25 - Comm received:^1^Sresponse^T^N1^N1^N2^SShietnorunes-Illidan^N3^T^Silvl^N902.3125^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:132365::::::::110:250:::2:1811:3530:::|h[Shackles~`of~`Bryndaor]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [374]
-			"17:41:25 - Comm received:^1^Sresponse^T^N1^N1^N2^STelgina-Illidan^N3^T^Silvl^N908.8125^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:134296::::::::110:253::35:3:3418:1567:3337:::|h[Ley~`Dragoon's~`Wristbraces]|h|r^Sresponse^SPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [375]
-			"17:41:26 - Comm received:^1^Sresponse^T^N1^N2^N2^SShietnorunes-Illidan^N3^T^Silvl^N902.3125^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:137527::::::::110:250::35:3:3418:1557:3337:::|h[Polished~`Jade~`Chestguard]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [376]
-			"17:41:26 - Comm received:^1^Sresponse^T^N1^N2^N2^STelgina-Illidan^N3^T^Silvl^N908.8125^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:138339::::::::110:253::6:3:3518:1502:3528:::|h[Eagletalon~`Tunic]|h|r^Sresponse^SPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [377]
-			"17:41:26 - Comm received:^1^Sresponse^T^N1^N3^N2^SShietnorunes-Illidan^N3^T^Silvl^N902.3125^Sdiff^N-55^Sgear1^S|cffff8000|Hitem:132365::::::::110:250:::2:1811:3530:::|h[Shackles~`of~`Bryndaor]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [378]
-			"17:41:26 - Comm received:^1^Soffline_timer^T^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [379]
-			"17:41:31 - Comm received:^1^Sresponse^T^N1^N3^N2^SJimrando-Illidan^N3^T^Silvl^N906.9375^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:140902::::::::110:71::6:3:3445:1497:3528:::|h[Jagged~`Carapace~`Wristclamps]|h|r^Sresponse^SPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [380]
-			"17:42:09 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [381]
-			"17:42:09 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [382]
-			"17:42:09 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [383]
-			"17:42:23 - Comm received:^1^Scandidates^T^N1^T^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SMember^t^SZilorin-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N101^Sclass^SDEMONHUNTER^Senchanter^B^Srank^SRaider^t^SColonferal-Illidan^T^Srole^SDAMAGER^Sclass^SDRUID^Srank^S^t^SJimrando-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SRaider^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^SDjpurge-Illidan^T^Srole^SHEALER^Sclass^SSHAMAN^Srank^S^t^SGrimuhs-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N761^Sclass^SPRIEST^Senchanter^B^Srank^SRaider^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Sclass^SWARLOCK^Srank^S^t^SDvldocdk-Illidan^T^Srole^SDAMAGER^Sclass^SDEATHKNIGHT^Srank^S^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^SCenzic-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N778^Sclass^SDEATHKNIGHT^Senchanter^B^Srank^SRaider^t^SCometstorm-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SALT.^t^SFuryisthy-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEMONHUNTER^Srank^SMember^t^SNadzieja-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SBeallz-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SMONK^Srank^SRaider^t^SMadmartigàn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer~`Alt^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SSwîftmender-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SOfficer~`Alt^t^SShietnorunes-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SALT.^t^SMarketfreshe-Illidan^T^Srole^SHEALER^Sclass^SDRUID^Srank^S^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [384]
-			"17:42:50 - Comm received:^1^Sawarded^T^N1^N1^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [385]
-			"17:42:50 - Comm received:^1^Shistory^T^N1^SNadzieja-Illidan^N2^T^SitemReplaced1^S|cffa335ee|Hitem:133614::::::::110:64::34:3:3418:1562:3337:::|h[Frost-Stricken~`Cuffs]|h|r^SgroupSize^N17^SmapID^N1530^Sinstance^SThe~`Nighthold-Heroic^Sclass^SMAGE^SdifficultyID^N15^Sresponse^SDisenchant^SisAwardReason^B^Sboss^SSkorpyron^Stime^S19:43:00^Scolor^T^N1^N1^N2^N1^N3^N1^N4^N1^t^Svotes^N0^SresponseID^N1^SlootWon^S|cffa335ee|Hitem:140876::::::::110:72::5:3:3444:1487:3336:::|h[Stinger~`Resistant~`Bracers]|h|r^Sdate^S13/06/17^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [386]
-			"17:42:58 - Comm received:^1^Sawarded^T^N1^N2^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [387]
-			"17:42:58 - Comm received:^1^Shistory^T^N1^SNadzieja-Illidan^N2^T^SitemReplaced1^S|cffa335ee|Hitem:140848::::::::110:64::5:3:3444:1482:3528:::|h[Robes~`of~`Fluctuating~`Energy]|h|r^Stime^S19:43:08^SmapID^N1530^Scolor^T^N1^N1^N2^N1^N3^N1^N4^N1^t^Sclass^SMAGE^SgroupSize^N17^Sresponse^SDisenchant^Sdate^S13/06/17^Sboss^SSkorpyron^SlootWon^S|cffa335ee|Hitem:140875::::::::110:72::5:3:3444:1487:3336:::|h[Arcanochitin~`Hauberk]|h|r^Sinstance^SThe~`Nighthold-Heroic^SdifficultyID^N15^SresponseID^N1^Svotes^N0^SisAwardReason^B^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [388]
-			"17:43:09 - Comm received:^1^Sawarded^T^N1^N3^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [389]
-			"17:43:09 - Comm received:^1^Ssession_end^T^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [390]
-			"17:43:09 - Comm received:^1^Shistory^T^N1^SNadzieja-Illidan^N2^T^SitemReplaced1^S|cffa335ee|Hitem:133614::::::::110:64::34:3:3418:1562:3337:::|h[Frost-Stricken~`Cuffs]|h|r^SdifficultyID^N15^SmapID^N1530^Sdate^S13/06/17^Sclass^SMAGE^Stime^S19:43:19^SgroupSize^N17^Sinstance^SThe~`Nighthold-Heroic^Svotes^N0^SlootWon^S|cffa335ee|Hitem:140902::::::::110:72::5:3:3444:1482:3528:::|h[Jagged~`Carapace~`Wristclamps]|h|r^Scolor^T^N1^N1^N2^N1^N3^N1^N4^N1^t^Sresponse^SDisenchant^SresponseID^N1^SisAwardReason^B^Sboss^SSkorpyron^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [391]
-			"17:43:30 - Comm received:^1^SlootTable^T^N1^T^N1^T^SequipLoc^S^SlootSlot^N1^Slink^S|cff1eff00|Hitem:121331::::::::110:72::5::::|h[Leystone~`Lockbox]|h|r^SsubType^SJunk^Srelic^b^Sawarded^b^Sname^SLeystone~`Lockbox^Stexture^N644388^Silvl^N110^Sboe^b^Sbagged^b^Squality^N2^t^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [392]
-			"17:43:30 - LootFrame:Start()", -- [393]
-			"17:43:30 - GetEntry(1)", -- [394]
-			"17:43:30 - Comm received:^1^SlootAck^T^N1^SNadzieja-Illidan^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [395]
-			"17:43:30 - Comm received:^1^SlootAck^T^N1^SDadizzle-Illidan^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [396]
-			"17:43:30 - Comm received:^1^SlootAck^T^N1^SMadmartigàn-Illidan^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [397]
-			"17:43:30 - Comm received:^1^SextraUtilData^T^N1^SMadmartigàn-Illidan^N2^T^Sforged^N6^Spawn^T^N1^T^Sequipped^N0^Snew^N0^t^t^SspecID^N72^Straits^N52^Slegend^N2^Ssockets^N3^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [398]
-			"17:43:30 - Comm received:^1^SlootAck^T^N1^SReinhärt-Illidan^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [399]
-			"17:43:30 - Comm received:^1^SlootAck^T^N1^STelgina-Illidan^t^^ (from:) (Telgina) (distri:) (RAID)", -- [400]
-			"17:43:30 - Comm received:^1^SextraUtilData^T^N1^SDjpurge-Illidan^N2^T^Sforged^N5^Spawn^T^N1^T^Sequipped^N0^Snew^N0^t^t^SspecID^N264^Straits^N47^Slegend^N2^Ssockets^N1^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [401]
-			"17:43:30 - Comm received:^1^SextraUtilData^T^N1^SShietnorunes-Illidan^N2^T^Sforged^N9^Spawn^T^N1^T^Sequipped^N0^Snew^N0^t^t^SspecID^N250^Straits^N51^Slegend^N2^Ssockets^N1^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [402]
-			"17:43:30 - Comm received:^1^SlootAck^T^N1^SShietnorunes-Illidan^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [403]
-			"17:43:30 - Comm received:^1^SlootAck^T^N1^SDvldocdk-Illidan^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [404]
-			"17:43:30 - Comm received:^1^SlootAck^T^N1^SCometstorm-Illidan^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [405]
-			"17:43:30 - Comm received:^1^SlootAck^T^N1^SGrimuhs-Illidan^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [406]
-			"17:43:30 - Comm received:^1^SlootAck^T^N1^SBeallz-Illidan^t^^ (from:) (Beallz) (distri:) (RAID)", -- [407]
-			"17:43:30 - Comm received:^1^SlootAck^T^N1^SCenzic-Illidan^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [408]
-			"17:43:30 - Comm received:^1^SlootAck^T^N1^SSwîftmender-Illidan^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [409]
-			"17:43:30 - Comm received:^1^SlootAck^T^N1^SLanféar-Illidan^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [410]
-			"17:43:31 - Comm received:^1^Sresponse^T^N1^N1^N2^SDjpurge-Illidan^N3^T^Silvl^N904.375^Sresponse^SNOTINRAID^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [411]
-			"17:43:31 - Comm received:^1^Sresponse^T^N1^N1^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sresponse^SNOTINRAID^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [412]
-			"17:43:33 - Comm received:^1^Sresponse^T^N1^N1^N2^SBeallz-Illidan^N3^T^Silvl^N906.8125^Sresponse^SPASS^t^t^^ (from:) (Beallz) (distri:) (RAID)", -- [413]
-			"17:43:33 - LootFrame:OnRoll (1) (4) (Response:) (Mainspec/Best in Slot)", -- [414]
-			"17:43:33 - CreateResponse (1) (|cff1eff00|Hitem:121331::::::::110:72::5::::|h[Leystone Lockbox]|h|r) (110) (4) () (nil) (Junk)", -- [415]
-			"17:43:33 - GetPlayersGear (121331) ()", -- [416]
-			"17:43:33 - Comm received:^1^Sresponse^T^N1^N1^N2^SNadzieja-Illidan^N3^T^Silvl^N902.625^Sresponse^SPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [417]
-			"17:43:33 - Comm received:^1^Sresponse^T^N1^N1^N2^SDvldocdk-Illidan^N3^T^Silvl^N905.375^Sresponse^SPASS^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [418]
-			"17:43:33 - Comm received:^1^Sresponse^T^N1^N1^N2^SCometstorm-Illidan^N3^T^Silvl^N902.5625^Sresponse^N4^t^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [419]
-			"17:43:33 - Comm received:^1^Sresponse^T^N1^N1^N2^SGrimuhs-Illidan^N3^T^Silvl^N903.3125^Sresponse^N4^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [420]
-			"17:43:34 - Comm received:^1^Sresponse^T^N1^N1^N2^SSwîftmender-Illidan^N3^T^Silvl^N883.4375^Sresponse^SPASS^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [421]
-			"17:43:34 - Comm received:^1^Sresponse^T^N1^N1^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sresponse^SPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [422]
-			"17:43:35 - Comm received:^1^Sresponse^T^N1^N1^N2^SMadmartigàn-Illidan^N3^T^Silvl^N900^Sresponse^N1^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [423]
-			"17:43:36 - Comm received:^1^Sresponse^T^N1^N1^N2^SReinhärt-Illidan^N3^T^Silvl^N908.9375^Sresponse^SPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [424]
-			"17:43:36 - Comm received:^1^Sresponse^T^N1^N1^N2^SShietnorunes-Illidan^N3^T^Silvl^N902.3125^Sresponse^N4^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [425]
-			"17:43:37 - Comm received:^1^Sresponse^T^N1^N1^N2^SCenzic-Illidan^N3^T^Silvl^N910.0625^Sresponse^SPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [426]
-			"17:43:38 - Comm received:^1^Sresponse^T^N1^N1^N2^STelgina-Illidan^N3^T^Silvl^N908.8125^Sresponse^N1^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [427]
-			"17:43:40 - Comm received:^1^Soffline_timer^T^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [428]
-			"17:43:40 - Comm received:^1^Sresponse^T^N1^N1^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sresponse^N4^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [429]
-			"17:43:45 - Comm received:^1^Ssession_end^T^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [430]
-			"17:44:10 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Thenex) (distri:) (GUILD)", -- [431]
-			"17:44:13 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [432]
-			"17:44:13 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [433]
-			"17:44:13 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [434]
-			"17:44:24 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Thenex) (distri:) (GUILD)", -- [435]
-			"17:45:17 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Thenex) (distri:) (GUILD)", -- [436]
-			"17:45:20 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [437]
-			"17:45:20 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [438]
-			"17:45:20 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [439]
-			"17:45:26 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Thenex) (distri:) (GUILD)", -- [440]
-			"17:45:29 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [441]
-			"17:45:29 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [442]
-			"17:45:29 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [443]
-			"17:45:41 - Comm received:^1^SverTest^T^N1^S2.3.0^t^^ (from:) (Aedalina) (distri:) (GUILD)", -- [444]
-			"17:46:17 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [445]
-			"17:46:17 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [446]
-			"17:46:17 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [447]
-			"17:47:19 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Cenzic) (distri:) (GUILD)", -- [448]
-			"17:47:19 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [449]
-			"17:47:19 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [450]
-			"17:47:19 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [451]
-			"17:48:23 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [452]
-			"17:48:23 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [453]
-			"17:48:23 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [454]
-			"17:48:25 - Comm received:^1^SverTest^T^N1^S2.3.3^t^^ (from:) (Furyisthy) (distri:) (GUILD)", -- [455]
-			"17:48:30 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [456]
-			"17:48:30 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [457]
-			"17:48:30 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [458]
-			"17:48:33 - Comm received:^1^Scandidates^T^N1^T^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SMember^t^SZilorin-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N101^Sclass^SDEMONHUNTER^Senchanter^B^Srank^SRaider^t^SColonferal-Illidan^T^Srole^SDAMAGER^Sclass^SDRUID^Srank^S^t^SJimrando-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SRaider^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^SDjpurge-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SSHAMAN^Srank^SOfficer~`Alt^t^SGrimuhs-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N761^Sclass^SPRIEST^Senchanter^B^Srank^SRaider^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Sclass^SWARLOCK^Srank^S^t^SDvldocdk-Illidan^T^Srole^SDAMAGER^Sclass^SDEATHKNIGHT^Srank^S^t^SLuthanen-Illidan^T^Srole^SHEALER^Sclass^SPALADIN^Srank^S^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^SCenzic-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N778^Sclass^SDEATHKNIGHT^Senchanter^B^Srank^SRaider^t^SCometstorm-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SALT.^t^SFuryisthy-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEMONHUNTER^Srank^SMember^t^SNadzieja-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SBeallz-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SMONK^Srank^SRaider^t^SMadmartigàn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer~`Alt^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SSwîftmender-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SOfficer~`Alt^t^SShietnorunes-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SALT.^t^SMarketfreshe-Illidan^T^Srole^SHEALER^Sclass^SDRUID^Srank^S^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [459]
-			"17:50:04 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Luthanen) (distri:) (GUILD)", -- [460]
-			"17:50:05 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [461]
-			"17:50:05 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [462]
-			"17:50:05 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [463]
-			"17:50:56 - Comm received:^1^SlootTable^T^N1^T^N1^T^SequipLoc^SINVTYPE_HEAD^SlootSlot^N1^Slink^S|cffa335ee|Hitem:140903::::::::110:72::5:3:3444:1482:3528:::|h[Hood~`of~`Fading~`Opportunity]|h|r^SsubType^SMail^Srelic^b^Sawarded^b^Sname^SHood~`of~`Fading~`Opportunity^Stexture^N1318381^Silvl^N885^Sboe^b^Sbagged^b^Squality^N4^t^N2^T^SequipLoc^SINVTYPE_NECK^SlootSlot^N2^Slink^S|cffa335ee|Hitem:140894::::::::110:72::5:3:3444:1487:3336:::|h[Zealous~`Timestone~`Pendant]|h|r^SsubType^SMiscellaneous^Srelic^b^Sawarded^b^Sname^SZealous~`Timestone~`Pendant^Stexture^N1360023^Silvl^N890^Sboe^b^Sbagged^b^Squality^N4^t^N3^T^SequipLoc^SINVTYPE_TRINKET^SlootSlot^N3^Slink^S|cffa335ee|Hitem:140792::::::::110:72::5:3:3444:1482:3528:::|h[Erratic~`Metronome]|h|r^SsubType^SMiscellaneous^Srelic^b^Sawarded^b^Sname^SErratic~`Metronome^Stexture^N134376^Silvl^N885^Sboe^b^Sbagged^b^Squality^N4^t^N4^T^SequipLoc^SINVTYPE_HAND^SlootSlot^N4^Slink^S|cffa335ee|Hitem:140863::::::::110:72::5:3:3444:1482:3528:::|h[Temporally~`Displaced~`Gloves]|h|r^SsubType^SLeather^Srelic^b^Sawarded^b^Sname^STemporally~`Displaced~`Gloves^Stexture^N1408495^Silvl^N885^Sboe^b^Sbagged^b^Squality^N4^t^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [464]
-			"17:50:56 - Autopassed on:  (|cffa335ee|Hitem:140903::::::::110:72::5:3:3444:1482:3528:::|h[Hood of Fading Opportunity]|h|r)", -- [465]
-			"17:50:56 - CreateResponse (1) (|cffa335ee|Hitem:140903::::::::110:72::5:3:3444:1482:3528:::|h[Hood of Fading Opportunity]|h|r) (885) (AUTOPASS) (INVTYPE_HEAD) (nil) (Mail)", -- [466]
-			"17:50:56 - GetPlayersGear (140903) (INVTYPE_HEAD)", -- [467]
-			"17:50:56 - Autopassed on:  (|cffa335ee|Hitem:140863::::::::110:72::5:3:3444:1482:3528:::|h[Temporally Displaced Gloves]|h|r)", -- [468]
-			"17:50:56 - CreateResponse (4) (|cffa335ee|Hitem:140863::::::::110:72::5:3:3444:1482:3528:::|h[Temporally Displaced Gloves]|h|r) (885) (AUTOPASS) (INVTYPE_HAND) (nil) (Leather)", -- [469]
-			"17:50:56 - GetPlayersGear (140863) (INVTYPE_HAND)", -- [470]
-			"17:50:56 - LootFrame:Start()", -- [471]
-			"17:50:56 - GetEntry(2)", -- [472]
-			"17:50:56 - Comm received:^1^SlootAck^T^N1^SDadizzle-Illidan^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [473]
-			"17:50:56 - Comm received:^1^Sresponse^T^N1^N1^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:138330::::::::110:102::5:4:3516:42:1487:3528:::|h[Hood~`of~`the~`Astral~`Warden]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [474]
-			"17:50:56 - Comm received:^1^SlootAck^T^N1^SDjpurge-Illidan^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [475]
-			"17:50:56 - Comm received:^1^SlootAck^T^N1^SNadzieja-Illidan^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [476]
-			"17:50:56 - Comm received:^1^Sresponse^T^N1^N1^N2^SNadzieja-Illidan^N3^T^Silvl^N902.625^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:138312::::::::110:64::5:3:3516:1487:3528:::|h[Hood~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [477]
-			"17:50:56 - Comm received:^1^Sresponse^T^N1^N4^N2^SNadzieja-Illidan^N3^T^Silvl^N902.625^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:138309::::::::110:64::3:3:3514:1492:3337:::|h[Gloves~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [478]
-			"17:50:56 - Comm received:^1^SlootAck^T^N1^SMadmartigàn-Illidan^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [479]
-			"17:50:56 - Comm received:^1^Sresponse^T^N1^N1^N2^SMadmartigàn-Illidan^N3^T^Silvl^N900^Sdiff^N-25^Sgear1^S|cffa335ee|Hitem:140881::::::::110:72::5:3:3516:1507:3337:::|h[Eventide~`Casque]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [480]
-			"17:50:56 - Comm received:^1^SlootAck^T^N1^SReinhärt-Illidan^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [481]
-			"17:50:56 - Comm received:^1^Sresponse^T^N1^N1^N2^SReinhärt-Illidan^N3^T^Silvl^N908.9375^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:138357::130220::::::110:73::5:4:3516:1808:1487:1813:::|h[Warhelm~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [482]
-			"17:50:56 - Comm received:^1^Sresponse^T^N1^N4^N2^SReinhärt-Illidan^N3^T^Silvl^N908.9375^Sdiff^N-55^Sgear1^S|cffff8000|Hitem:137108::::::::110:73:::2:1811:3455:::|h[Kakushan's~`Stormscale~`Gauntlets]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [483]
-			"17:50:56 - Comm received:^1^Sresponse^T^N1^N4^N2^SMadmartigàn-Illidan^N3^T^Silvl^N900^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:140879::::::::110:72::5:3:3444:1492:3336:::|h[Gauntlets~`of~`Fractured~`Eons]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [484]
-			"17:50:56 - Comm received:^1^Sresponse^T^N1^N4^N2^SDjpurge-Illidan^N3^T^Silvl^N904.375^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:134209::::::::110:264::33:3:3417:1557:3336:::|h[Tideskorn~`Gauntlets]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [485]
-			"17:50:56 - Comm received:^1^SlootAck^T^N1^STelgina-Illidan^t^^ (from:) (Telgina) (distri:) (RAID)", -- [486]
-			"17:50:56 - Comm received:^1^SextraUtilData^T^N1^SDjpurge-Illidan^N2^T^Sforged^N5^Spawn^T^N1^T^Sequipped^N37957.84^Snew^N34758.09^t^N2^T^Sequipped^N557.258^Snew^N492.26^t^N3^T^Sequipped^N206.963^Snew^N22442.94^t^N4^T^Sequipped^N33612.97^Snew^N27596.87^t^t^SspecID^N264^Straits^N47^Slegend^N2^Ssockets^N1^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [487]
-			"17:50:56 - Comm received:^1^SlootAck^T^N1^SCenzic-Illidan^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [488]
-			"17:50:56 - Comm received:^1^Sresponse^T^N1^N4^N2^STelgina-Illidan^N3^T^Silvl^N907.875^Sdiff^N-25^Sgear1^S|cffa335ee|Hitem:140869::::::::110:253::6:3:3445:1507:3336:::|h[Sterilizer's~`Insulated~`Gauntlets]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [489]
-			"17:50:56 - Comm received:^1^SextraUtilData^T^N1^SMadmartigàn-Illidan^N2^T^Sforged^N6^Spawn^T^N1^T^Sequipped^N34811.45^Snew^N311.999^t^N2^T^Sequipped^N572.845^Snew^N411.93^t^N3^T^Sequipped^N559.763^Snew^N0^t^N4^T^Sequipped^N547.112^Snew^N198.822^t^t^SspecID^N72^Straits^N52^Slegend^N2^Ssockets^N3^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [490]
-			"17:50:56 - Comm received:^1^SlootAck^T^N1^SBeallz-Illidan^t^^ (from:) (Beallz) (distri:) (RAID)", -- [491]
-			"17:50:56 - Comm received:^1^Sresponse^T^N1^N1^N2^SBeallz-Illidan^N3^T^Silvl^N903.625^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:138331::::::::110:269::5:3:3516:1487:3528:::|h[Hood~`of~`Enveloped~`Dissonance]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Beallz) (distri:) (RAID)", -- [492]
-			"17:50:56 - Comm received:^1^SlootAck^T^N1^SDvldocdk-Illidan^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [493]
-			"17:50:56 - Comm received:^1^SlootAck^T^N1^SThenex-Illidan^t^^ (from:) (Thenex) (distri:) (RAID)", -- [494]
-			"17:50:56 - Comm received:^1^SlootAck^T^N1^SCometstorm-Illidan^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [495]
-			"17:50:56 - Comm received:^1^Sresponse^T^N1^N1^N2^SDvldocdk-Illidan^N3^T^Silvl^N905.375^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:147749::::::::110:251::3:3:3572:1482:3528:::|h[Polished~`Felfury~`Helmet]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [496]
-			"17:50:56 - Comm received:^1^Sresponse^T^N1^N1^N2^SCometstorm-Illidan^N3^T^Silvl^N902.5625^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:138312::::::::110:64::5:3:3516:1492:3336:::|h[Hood~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [497]
-			"17:50:56 - Comm received:^1^Sresponse^T^N1^N4^N2^SCometstorm-Illidan^N3^T^Silvl^N902.5625^Sdiff^N-35^Sgear1^S|cffa335ee|Hitem:138309::::::::110:64::5:3:3516:1517:3337:::|h[Gloves~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [498]
-			"17:50:56 - Comm received:^1^SextraUtilData^T^N1^SShietnorunes-Illidan^N2^T^Sforged^N9^Spawn^T^N1^T^Sequipped^N866.66^Snew^N594.261^t^N2^T^Sequipped^N448.509^Snew^N363.664^t^N3^T^Sequipped^N134.079^Snew^N0^t^N4^T^Sequipped^N584.286^Snew^N384.986^t^t^SspecID^N250^Straits^N51^Slegend^N2^Ssockets^N1^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [499]
-			"17:50:56 - Comm received:^1^SlootAck^T^N1^SShietnorunes-Illidan^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [500]
-			"17:50:56 - Comm received:^1^Sresponse^T^N1^N4^N2^SDvldocdk-Illidan^N3^T^Silvl^N905.375^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:134519::130246::::::110:251::16:4:3413:1808:1537:3336:::|h[Ravencrest~`Bonecrush~`Gauntlets]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [501]
-			"17:50:56 - Comm received:^1^Sresponse^T^N1^N1^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:138312::::::::110:63::5:3:3516:1487:3528:::|h[Hood~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [502]
-			"17:50:56 - Comm received:^1^Sresponse^T^N1^N4^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:140888::::::::110:63::6:4:3445:40:1497:3528:::|h[Scorpid~`Handler's~`Gloves]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [503]
-			"17:50:56 - Comm received:^1^SlootAck^T^N1^SGrimuhs-Illidan^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [504]
-			"17:50:56 - Comm received:^1^Sresponse^T^N1^N1^N2^SGrimuhs-Illidan^N3^T^Silvl^N903.3125^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:138313::::::::110:258::5:3:3516:1492:3336:::|h[Purifier's~`Gorget]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [505]
-			"17:50:56 - Comm received:^1^Sresponse^T^N1^N4^N2^SGrimuhs-Illidan^N3^T^Silvl^N903.3125^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:140888::::::::110:258::5:3:3444:1497:3337:::|h[Scorpid~`Handler's~`Gloves]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [506]
-			"17:50:57 - Comm received:^1^Sresponse^T^N1^N1^N2^SCenzic-Illidan^N3^T^Silvl^N907.875^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:138355::::::::110:251::5:3:3516:1492:3336:::|h[Dreadwyrm~`Crown]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [507]
-			"17:50:57 - Comm received:^1^Sresponse^T^N1^N4^N2^SCenzic-Illidan^N3^T^Silvl^N907.875^Sdiff^N-25^Sgear1^S|cffa335ee|Hitem:140907::::::::110:251::5:3:3516:1507:3337:::|h[Bridgebreaker~`Gauntlets]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [508]
-			"17:50:57 - Comm received:^1^SlootAck^T^N1^SSwîftmender-Illidan^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [509]
-			"17:50:57 - Comm received:^1^Sresponse^T^N1^N1^N2^SSwîftmender-Illidan^N3^T^Silvl^N883.4375^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:140866::::::::110:105::3:3:3514:1477:3336:::|h[Nightborne~`Battle-Magus~`Hood]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [510]
-			"17:50:57 - Comm received:^1^SlootAck^T^N1^SLanféar-Illidan^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [511]
-			"17:50:57 - Comm received:^1^Sresponse^T^N1^N1^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:138313::::::::110:257::5:3:3516:1487:3528:::|h[Purifier's~`Gorget]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [512]
-			"17:50:57 - Comm received:^1^Sresponse^T^N1^N4^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:138310::::::::110:257::5:4:3516:40:1487:3528:::|h[Purifier's~`Gloves]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [513]
-			"17:50:58 - Comm received:^1^SlootAck^T^N1^SFuryisthy-Illidan^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [514]
-			"17:50:58 - Comm received:^1^Sresponse^T^N1^N1^N2^SFuryisthy-Illidan^N3^T^Silvl^N906.5625^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:138378::130219::::::110:577::5:4:3516:1808:1487:3528:::|h[Mask~`of~`Second~`Sight]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [515]
-			"17:50:58 - Comm received:^1^Sresponse^T^N1^N1^N2^SLuthanen-Illidan^N3^T^Silvl^N903.25^Sdiff^N-20^Sgear1^S|cffa335ee|Hitem:138356::::::::110:65::5:3:3516:1502:3337:::|h[Helmet~`of~`the~`Highlord]|h|r^Sresponse^SNOTINRAID^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [516]
-			"17:50:58 - Comm received:^1^Sresponse^T^N1^N2^N2^SLuthanen-Illidan^N3^T^Silvl^N903.25^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:140899:5891:::::::110:65::5:3:3516:1497:3336:::|h[Beleron's~`Choker~`of~`Misery]|h|r^Sresponse^SNOTINRAID^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [517]
-			"17:50:58 - Comm received:^1^Sresponse^T^N1^N3^N2^SLuthanen-Illidan^N3^T^Silvl^N903.25^Sresponse^SNOTINRAID^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140793::::::::110:65::6:3:3445:1522:3337:::|h[Perfectly~`Preserved~`Cake]|h|r^Sgear2^S|cffa335ee|Hitem:144739::130219::::::110:65::43:5:3573:1808:603:1517:3336:::|h[Cruel~`Gladiator's~`Accolade~`of~`Dominance]|h|r^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [518]
-			"17:50:58 - Comm received:^1^Sresponse^T^N1^N4^N2^SLuthanen-Illidan^N3^T^Silvl^N903.25^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138353::::::::110:65::3:3:3514:1472:1813:::|h[Gauntlets~`of~`the~`Highlord]|h|r^Sresponse^SNOTINRAID^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [519]
-			"17:50:58 - LootFrame:OnRoll (2) (4) (Response:) (Mainspec/Best in Slot)", -- [520]
-			"17:50:58 - CreateResponse (3) (|cffa335ee|Hitem:140792::::::::110:72::5:3:3444:1482:3528:::|h[Erratic Metronome]|h|r) (885) (4) (INVTYPE_TRINKET) (nil) (Miscellaneous)", -- [521]
-			"17:50:58 - GetPlayersGear (140792) (INVTYPE_TRINKET)", -- [522]
-			"17:50:59 - Comm received:^1^Sresponse^T^N1^N3^N2^SCometstorm-Illidan^N3^T^Silvl^N902.5625^Sresponse^N4^Sdiff^N10^Sgear1^S|cffff8000|Hitem:144259::::::::110:64:::2:1811:3530:::|h[Kil'jaeden's~`Burning~`Wish]|h|r^Sgear2^S|cffa335ee|Hitem:140792::::::::110:64::3:4:3443:41:1472:3336:::|h[Erratic~`Metronome]|h|r^t^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [523]
-			"17:51:00 - Comm received:^1^Sresponse^T^N1^N2^N2^SNadzieja-Illidan^N3^T^Silvl^N902.625^Sdiff^N-20^Sgear1^S|cffa335ee|Hitem:147765:5439:130248::::::110:64::3:4:3572:1808:1492:3336:::|h[Clasp~`of~`Burning~`Demise]|h|r^Sresponse^SPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [524]
-			"17:51:01 - Comm received:^1^Sresponse^T^N1^N2^N2^SCenzic-Illidan^N3^T^Silvl^N907.875^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:137536:5890:::::::110:251::33:3:3418:1547:3336:::|h[Pendant~`of~`the~`Watchful~`Eye]|h|r^Sresponse^SPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [525]
-			"17:51:01 - Comm received:^1^Sresponse^T^N1^N2^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sdiff^N-20^Sgear1^S|cffa335ee|Hitem:140899:5439:130221::::::110:63::5:4:3516:1808:1507:3337:::|h[Beleron's~`Choker~`of~`Misery]|h|r^Sresponse^SPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [526]
-			"17:51:01 - Comm received:^1^Sresponse^T^N1^N2^N2^SReinhärt-Illidan^N3^T^Silvl^N908.9375^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:140898:5890:::::::110:73::6:3:3445:1497:3528:::|h[Radiant~`String~`of~`Scorpid~`Eyes]|h|r^Sresponse^SPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [527]
-			"17:51:02 - Comm received:^1^Sresponse^T^N1^N3^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sresponse^SPASS^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140809::::::::110:63::5:3:3517:1497:3336:::|h[Whispers~`in~`the~`Dark]|h|r^Sgear2^S|cffa335ee|Hitem:140792::130221::::::110:63::5:4:3444:1808:1482:3528:::|h[Erratic~`Metronome]|h|r^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [528]
-			"17:51:02 - Comm received:^1^Sresponse^T^N1^N3^N2^SCenzic-Illidan^N3^T^Silvl^N907.875^Sresponse^SPASS^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:133642::130222::::::110:251::34:4:3418:1808:1542:3528:::|h[Horn~`of~`Valor]|h|r^Sgear2^S|cffa335ee|Hitem:140806::::::::110:251::3:3:3514:1477:3336:::|h[Convergence~`of~`Fates]|h|r^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [529]
-			"17:51:02 - Comm received:^1^Sresponse^T^N1^N3^N2^SShietnorunes-Illidan^N3^T^Silvl^N902.3125^Sresponse^SPASS^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:136736::::::::110:250::43:4:3573:604:1542:3528:::|h[Badge~`of~`the~`Wardens]|h|r^Sgear2^S|cffa335ee|Hitem:144745::::::::110:250::43:4:3573:607:1517:3336:::|h[Cruel~`Gladiator's~`Accolade~`of~`Victory]|h|r^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [530]
-			"17:51:02 - Comm received:^1^Sresponse^T^N1^N2^N2^SGrimuhs-Illidan^N3^T^Silvl^N903.3125^Sdiff^N-25^Sgear1^S|cffa335ee|Hitem:140898:5890:::::::110:258::6:3:3445:1512:3337:::|h[Radiant~`String~`of~`Scorpid~`Eyes]|h|r^Sresponse^SPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [531]
-			"17:51:02 - Comm received:^1^Sresponse^T^N1^N4^N2^SShietnorunes-Illidan^N3^T^Silvl^N902.3125^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:134509::::::::110:250::33:3:3417:1542:3336:::|h[Fists~`of~`the~`Legion]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [532]
-			"17:51:02 - Comm received:^1^Sresponse^T^N1^N3^N2^SReinhärt-Illidan^N3^T^Silvl^N908.9375^Sresponse^SPASS^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:140790::::::::110:73::6:3:3445:1502:3336:::|h[Claw~`of~`the~`Crystalline~`Scorpid]|h|r^Sgear2^S|cffa335ee|Hitem:144745::130246::::::110:73::43:5:3573:1808:604:1532:3337:::|h[Cruel~`Gladiator's~`Accolade~`of~`Victory]|h|r^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [533]
-			"17:51:03 - Comm received:^1^Sresponse^T^N1^N3^N2^SDjpurge-Illidan^N3^T^Silvl^N904.375^Sresponse^SPASS^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140793::::::::110:264::5:3:3444:1482:3528:::|h[Perfectly~`Preserved~`Cake]|h|r^Sgear2^S|cffff8000|Hitem:144258::::::::110:264:::2:1811:3530:::|h[Velen's~`Future~`Sight]|h|r^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [534]
-			"17:51:03 - Comm received:^1^Sresponse^T^N1^N3^N2^STelgina-Illidan^N3^T^Silvl^N907.875^Sresponse^SPASS^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:139329::130222::::::110:253::6:4:1806:1808:1502:3528:::|h[Bloodthirsty~`Instinct]|h|r^Sgear2^S|cffa335ee|Hitem:140806::130222::::::110:253::3:4:3514:1808:1472:3528:::|h[Convergence~`of~`Fates]|h|r^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [535]
-			"17:51:04 - Comm received:^1^Sresponse^T^N1^N3^N2^SGrimuhs-Illidan^N3^T^Silvl^N903.3125^Sresponse^SPASS^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:140809::::::::110:258::3:3:3515:1512:3337:::|h[Whispers~`in~`the~`Dark]|h|r^Sgear2^S|cffa335ee|Hitem:141482::::::::110:258::3:3:3466:1477:3336:::|h[Unstable~`Arcanocrystal]|h|r^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [536]
-			"17:51:05 - Comm received:^1^Sresponse^T^N1^N4^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:138327:5444:::::::110:102::5:3:3516:1497:3336:::|h[Gloves~`of~`the~`Astral~`Warden]|h|r^Sresponse^SPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [537]
-			"17:51:05 - Comm received:^1^Sresponse^T^N1^N2^N2^SDjpurge-Illidan^N3^T^Silvl^N904.375^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:140899:5890:130218::::::110:264::3:4:3514:1808:1472:3528:::|h[Beleron's~`Choker~`of~`Misery]|h|r^Sresponse^SPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [538]
-			"17:51:06 - Comm received:^1^Soffline_timer^T^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [539]
-			"17:51:06 - Comm received:^1^Sresponse^T^N1^N2^N2^SDvldocdk-Illidan^N3^T^Silvl^N905.375^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:140894:5437:::::::110:251::6:3:3445:1497:3528:::|h[Zealous~`Timestone~`Pendant]|h|r^Sresponse^SPASS^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [540]
-			"17:51:07 - Comm received:^1^Sresponse^T^N1^N2^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:132444:5891:130248::::::110:257:::2:3459:3530:::|h[Prydaz,~`Xavaric's~`Magnum~`Opus]|h|r^Sresponse^SPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [541]
-			"17:51:07 - Comm received:^1^Sresponse^T^N1^N1^N2^SDjpurge-Illidan^N3^T^Silvl^N904.375^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:138343::::::::110:264::5:3:3516:1487:3528:::|h[Helm~`of~`Shackled~`Elements]|h|r^Sresponse^SPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [542]
-			"17:51:07 - Comm received:^1^Sresponse^T^N1^N3^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sresponse^SPASS^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:140805::::::::110:257::6:3:3518:1507:3336:::|h[Ephemeral~`Paradox]|h|r^Sgear2^S|cffa335ee|Hitem:140793::::::::110:257::5:3:3444:1487:3336:::|h[Perfectly~`Preserved~`Cake]|h|r^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [543]
-			"17:51:07 - Comm received:^1^Sresponse^T^N1^N3^N2^SDvldocdk-Illidan^N3^T^Silvl^N905.375^Sresponse^SPASS^Sdiff^N0^Sgear1^S|cffff8000|Hitem:144259::::::::110:251:::2:3459:3530:::|h[Kil'jaeden's~`Burning~`Wish]|h|r^Sgear2^S|cffa335ee|Hitem:144745::::::::110:251::43:4:3573:604:1517:3336:::|h[Cruel~`Gladiator's~`Accolade~`of~`Victory]|h|r^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [544]
-			"17:51:08 - Comm received:^1^Sresponse^T^N1^N2^N2^STelgina-Illidan^N3^T^Silvl^N907.875^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:133636:5439:::::::110:253::35:3:3418:1557:3337:::|h[Brysngamen,~`Torc~`of~`Helheim]|h|r^Sresponse^SPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [545]
-			"17:51:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sresponse^SPASS^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140809::::::::110:102::5:4:3517:41:1502:3336:::|h[Whispers~`in~`the~`Dark]|h|r^Sgear2^S|cffa335ee|Hitem:140792::::::::110:102::5:3:3444:1482:3528:::|h[Erratic~`Metronome]|h|r^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [546]
-			"17:51:09 - LootFrame:OnRoll (1) (PASS) (Response:) (Pass)", -- [547]
-			"17:51:09 - CreateResponse (2) (|cffa335ee|Hitem:140894::::::::110:72::5:3:3444:1487:3336:::|h[Zealous Timestone Pendant]|h|r) (890) (PASS) (INVTYPE_NECK) (nil) (Miscellaneous)", -- [548]
-			"17:51:09 - GetPlayersGear (140894) (INVTYPE_NECK)", -- [549]
-			"17:51:10 - Comm received:^1^Sresponse^T^N1^N1^N2^SShietnorunes-Illidan^N3^T^Silvl^N902.3125^Sdiff^N-20^Sgear1^S|cffa335ee|Hitem:147749::::::::110:250::3:3:3572:1487:3336:::|h[Polished~`Felfury~`Helmet]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [550]
-			"17:51:10 - Comm received:^1^Sresponse^T^N1^N2^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:140898:5437:::::::110:102::6:3:3445:1497:3528:::|h[Radiant~`String~`of~`Scorpid~`Eyes]|h|r^Sresponse^SPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [551]
-			"17:51:10 - Comm received:^1^Sresponse^T^N1^N2^N2^SCometstorm-Illidan^N3^T^Silvl^N902.5625^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140900:5437:130219::::::110:64::5:4:3516:1808:1487:3528:::|h[Brooch~`of~`the~`Astral~`Scryer]|h|r^Sresponse^SPASS^t^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [552]
-			"17:51:11 - Comm received:^1^Sresponse^T^N1^N1^N2^STelgina-Illidan^N3^T^Silvl^N907.875^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:138342::130222::::::110:253::5:4:3516:1808:1487:1813:::|h[Eagletalon~`Cowl]|h|r^Sresponse^SPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [553]
-			"17:51:11 - Comm received:^1^Sresponse^T^N1^N3^N2^SSwîftmender-Illidan^N3^T^Silvl^N883.4375^Sresponse^SPASS^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:134292::::::::110:105::43:4:3573:603:1567:3337:::|h[Nightborne~`Researcher's~`Phial]|h|r^Sgear2^S|cffa335ee|Hitem:140805::::::::110:105::3:4:3514:1808:1482:3336:::|h[Ephemeral~`Paradox]|h|r^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [554]
-			"17:51:12 - Comm received:^1^Sresponse^T^N1^N2^N2^SBeallz-Illidan^N3^T^Silvl^N903.625^Sdiff^N-20^Sgear1^S|cffa335ee|Hitem:134491:5890:::::::110:269::33:4:3418:42:1562:3337:::|h[Understone~`Gorget]|h|r^Sresponse^SPASS^t^t^^ (from:) (Beallz) (distri:) (RAID)", -- [555]
-			"17:51:13 - Comm received:^1^Sresponse^T^N1^N2^N2^SShietnorunes-Illidan^N3^T^Silvl^N902.3125^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:144657:5889:130246::::::110:250::8:4:3568:1808:1532:3337:::|h[Cruel~`Gladiator's~`Pendant]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [556]
-			"17:51:17 - Comm received:^1^Sresponse^T^N1^N2^N2^SMadmartigàn-Illidan^N3^T^Silvl^N900^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:140898:5439:130220::::::110:72::5:4:3444:1808:1482:3528:::|h[Radiant~`String~`of~`Scorpid~`Eyes]|h|r^Sresponse^N3^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [557]
-			"17:51:17 - Comm received:^1^Sresponse^T^N1^N3^N2^SBeallz-Illidan^N3^T^Silvl^N903.625^Sresponse^SPASS^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:142166::::::::110:269::23:2:3454:1472:::|h[Ethereal~`Urn]|h|r^Sgear2^S|cffa335ee|Hitem:140791::::::::110:269::6:3:3445:1497:3528:::|h[Royal~`Dagger~`Haft]|h|r^t^t^^ (from:) (Beallz) (distri:) (RAID)", -- [558]
-			"17:51:19 - Comm received:^1^Sresponse^T^N1^N3^N2^SMadmartigàn-Illidan^N3^T^Silvl^N900^Sresponse^SPASS^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:142166::::::::110:72::43:3:3573:1487:3336:::|h[Ethereal~`Urn]|h|r^Sgear2^S|cffff8000|Hitem:144259::::::::110:72:::2:3459:3530:::|h[Kil'jaeden's~`Burning~`Wish]|h|r^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [559]
-			"17:51:20 - Comm received:^1^Sresponse^T^N1^N4^N2^SBeallz-Illidan^N3^T^Silvl^N903.625^Sdiff^N-55^Sgear1^S|cffff8000|Hitem:137057::::::::110:269:::2:3459:3530:::|h[Hidden~`Master's~`Forbidden~`Touch]|h|r^Sresponse^SPASS^t^t^^ (from:) (Beallz) (distri:) (RAID)", -- [560]
-			"17:51:24 - Comm received:^1^Sresponse^T^N1^N3^N2^SNadzieja-Illidan^N3^T^Silvl^N902.625^Sresponse^N1^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:136750::::::::110:64::43:4:3573:604:1547:3336:::|h[Vault~`Guardian's~`Talisman]|h|r^Sgear2^S|cffff8000|Hitem:144259::::::::110:64:::2:1811:3530:::|h[Kil'jaeden's~`Burning~`Wish]|h|r^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [561]
-			"17:51:27 - Comm received:^1^Sresponse^T^N1^N4^N2^SFuryisthy-Illidan^N3^T^Silvl^N906.5625^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:137480::::::::110:577::33:3:3418:1542:3528:::|h[Guileful~`Intruder~`Handguards]|h|r^Sresponse^STIMEOUT^t^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [562]
-			"17:51:27 - Comm received:^1^Sresponse^T^N1^N3^N2^SFuryisthy-Illidan^N3^T^Silvl^N906.5625^Sresponse^STIMEOUT^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:141482::::::::110:577::43:3:3573:1507:3337:::|h[Unstable~`Arcanocrystal]|h|r^Sgear2^S|cffa335ee|Hitem:133644::::::::110:577::43:3:3573:1552:3337:::|h[Memento~`of~`Angerboda]|h|r^t^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [563]
-			"17:51:27 - Comm received:^1^Sresponse^T^N1^N2^N2^SFuryisthy-Illidan^N3^T^Silvl^N906.5625^Sdiff^N-35^Sgear1^S|cffa335ee|Hitem:137487:5437:::::::110:577::33:3:3418:1577:3337:::|h[Strand~`of~`the~`Stars]|h|r^Sresponse^STIMEOUT^t^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [564]
-			"17:51:28 - Comm received:^1^Sresponse^T^N1^N2^N2^SSwîftmender-Illidan^N3^T^Silvl^N883.4375^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:140894::::::::110:105::5:3:3444:1482:3528:::|h[Zealous~`Timestone~`Pendant]|h|r^Sresponse^N4^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [565]
-			"17:51:31 - Comm received:^1^Sresponse^T^N1^N4^N2^SSwîftmender-Illidan^N3^T^Silvl^N883.4375^Sdiff^N30^Sgear1^S|cffa335ee|Hitem:140863::::::::110:105::4:3:3446:1452:3528:::|h[Temporally~`Displaced~`Gloves]|h|r^Sresponse^N4^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [566]
-			"17:51:34 - Comm received:^1^Svote^T^N1^N3^N2^SCometstorm-Illidan^N3^N1^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [567]
-			"17:51:42 - Comm received:^1^Svote^T^N1^N4^N2^SSwîftmender-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [568]
-			"17:51:47 - Comm received:^1^Sawarded^T^N1^N4^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [569]
-			"17:51:47 - Comm received:^1^Shistory^T^N1^SSwîftmender-Illidan^N2^T^SitemReplaced1^S|cffa335ee|Hitem:140863::::::::110:105::4:3:3446:1452:3528:::|h[Temporally~`Displaced~`Gloves]|h|r^Svotes^N1^SmapID^N1530^Sinstance^SThe~`Nighthold-Heroic^Sclass^SDRUID^SdifficultyID^N15^SgroupSize^N18^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^SisAwardReason^b^SlootWon^S|cffa335ee|Hitem:140863::::::::110:72::5:3:3444:1482:3528:::|h[Temporally~`Displaced~`Gloves]|h|r^Sdate^S13/06/17^Sresponse^SMainspec/Best~`in~`Slot^SresponseID^N4^Stime^S19:51:56^Sboss^SChronomatic~`Anomaly^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [570]
-			"17:51:58 - Comm received:^1^Sawarded^T^N1^N2^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [571]
-			"17:51:58 - Comm received:^1^Shistory^T^N1^SSwîftmender-Illidan^N2^T^SitemReplaced1^S|cffa335ee|Hitem:140894::::::::110:105::5:3:3444:1482:3528:::|h[Zealous~`Timestone~`Pendant]|h|r^SisAwardReason^b^SmapID^N1530^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Sclass^SDRUID^Svotes^N0^SgroupSize^N18^Sdate^S13/06/17^Sboss^SChronomatic~`Anomaly^SlootWon^S|cffa335ee|Hitem:140894::::::::110:72::5:3:3444:1487:3336:::|h[Zealous~`Timestone~`Pendant]|h|r^Sinstance^SThe~`Nighthold-Heroic^Sresponse^SMainspec/Best~`in~`Slot^SresponseID^N4^SdifficultyID^N15^Stime^S19:52:08^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [572]
-			"17:52:01 - Comm received:^1^Svote^T^N1^N3^N2^SCometstorm-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [573]
-			"17:52:07 - Comm received:^1^Sawarded^T^N1^N1^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [574]
-			"17:52:07 - Comm received:^1^Shistory^T^N1^SNadzieja-Illidan^N2^T^SitemReplaced1^S|cffa335ee|Hitem:138312::::::::110:64::5:3:3516:1487:3528:::|h[Hood~`of~`Everburning~`Knowledge]|h|r^Sboss^SChronomatic~`Anomaly^SmapID^N1530^Sdate^S13/06/17^Sclass^SMAGE^SisAwardReason^B^SgroupSize^N18^Sinstance^SThe~`Nighthold-Heroic^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:140903::::::::110:72::5:3:3444:1482:3528:::|h[Hood~`of~`Fading~`Opportunity]|h|r^Scolor^T^N1^N1^N2^N1^N3^N1^N4^N1^t^Sresponse^SDisenchant^SresponseID^N1^Svotes^N0^Stime^S19:52:17^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [575]
-			"17:52:20 - Comm received:^1^Sawarded^T^N1^N3^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [576]
-			"17:52:20 - Comm received:^1^Ssession_end^T^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [577]
-			"17:52:20 - Comm received:^1^Shistory^T^N1^SCometstorm-Illidan^N2^T^SmapID^N1530^Sdate^S13/06/17^Sclass^SMAGE^SgroupSize^N18^Svotes^N2^Stime^S19:52:30^SitemReplaced1^S|cffff8000|Hitem:144259::::::::110:64:::2:1811:3530:::|h[Kil'jaeden's~`Burning~`Wish]|h|r^Sinstance^SThe~`Nighthold-Heroic^Sresponse^SMainspec/Best~`in~`Slot^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:140792::::::::110:72::5:3:3444:1482:3528:::|h[Erratic~`Metronome]|h|r^Sboss^SChronomatic~`Anomaly^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^SresponseID^N4^SitemReplaced2^S|cffa335ee|Hitem:140792::::::::110:64::3:4:3443:41:1472:3336:::|h[Erratic~`Metronome]|h|r^SisAwardReason^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [578]
-			"06/13/17", -- [579]
-			"17:54:46 - Logged In", -- [580]
-			"17:54:46 - ML initialized!", -- [581]
-			"17:54:47 - Cometstorm-Illidan (2.3.4) (nil)", -- [582]
-			"17:54:49 - Event: (PLAYER_ENTERING_WORLD)", -- [583]
-			"17:54:49 - GetML()", -- [584]
-			"17:54:49 - LootMethod =  (master)", -- [585]
-			"17:54:49 - MasterLooter =  (Madmartigàn-Illidan)", -- [586]
-			"17:54:49 - Resetting council as we have a new ML!", -- [587]
-			"17:54:49 - Player relog...", -- [588]
-			"17:54:49 - Comm received:^1^SverTest^T^N1^S2.3.0^t^^ (from:) (Zefarion) (distri:) (GUILD)", -- [589]
-			"17:54:49 - GetPlayersGuildRank()", -- [590]
-			"17:54:49 - Found Guild Rank: ALT.", -- [591]
-			"17:54:50 - Timer MLdb_check passed", -- [592]
-			"17:54:50 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Cometstorm) (distri:) (GUILD)", -- [593]
-			"17:54:50 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (WHISPER)", -- [594]
-			"17:54:50 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (WHISPER)", -- [595]
-			"17:54:50 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [596]
-			"17:54:50 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [597]
-			"17:54:50 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [598]
-			"17:54:50 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [599]
-			"17:54:52 - Comm received:^1^Scandidates^T^N1^T^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SMember^t^SZilorin-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N101^Sclass^SDEMONHUNTER^Senchanter^B^Srank^SRaider^t^SColonferal-Illidan^T^Srole^SDAMAGER^Sclass^SDRUID^Srank^S^t^SJimrando-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SRaider^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^SDjpurge-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SSHAMAN^Srank^SOfficer~`Alt^t^SGrimuhs-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N761^Sclass^SPRIEST^Senchanter^B^Srank^SRaider^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Sclass^SWARLOCK^Srank^S^t^SDvldocdk-Illidan^T^Srole^SDAMAGER^Sclass^SDEATHKNIGHT^Srank^S^t^SLuthanen-Illidan^T^Srole^SHEALER^Senchant_lvl^N756^Sclass^SPALADIN^Senchanter^B^Srank^SMember^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^SCenzic-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N778^Sclass^SDEATHKNIGHT^Senchanter^B^Srank^SRaider^t^SCometstorm-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SALT.^t^SFuryisthy-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEMONHUNTER^Srank^SMember^t^SNadzieja-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SBeallz-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SMONK^Srank^SRaider^t^SMadmartigàn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer~`Alt^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SSwîftmender-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SOfficer~`Alt^t^SShietnorunes-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SALT.^t^SMarketfreshe-Illidan^T^Srole^SHEALER^Sclass^SDRUID^Srank^S^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^t^t^^ (from:) (Madmartigàn) (distri:) (WHISPER)", -- [600]
-			"17:59:57 - Comm received:^1^SlootTable^T^N1^T^N1^T^SequipLoc^S^SlootSlot^N3^Slink^S|cffa335ee|Hitem:140812::::::::110:72::5:3:3444:1482:3528:::|h[Soggy~`Manascrubber~`Brush]|h|r^SsubType^SArtifact~`Relic^Srelic^SArcane^Sawarded^b^Sname^SSoggy~`Manascrubber~`Brush^Stexture^N461132^Silvl^N885^Sboe^b^Sbagged^b^Squality^N4^t^N2^T^SequipLoc^SINVTYPE_LEGS^SlootSlot^N2^Slink^S|cffa335ee|Hitem:140871::::::::110:72::5:3:3444:1487:3336:::|h[Pertinacious~`Legplates]|h|r^SsubType^SMail^Srelic^b^Sawarded^b^Sname^SPertinacious~`Legplates^Stexture^N1318382^Silvl^N890^Sboe^b^Sbagged^b^Squality^N4^t^N3^T^SequipLoc^S^SlootSlot^N1^Slink^S|cffa335ee|Hitem:143578::::::::110:72::5:1:570:::|h[Cloak~`of~`the~`Foreseen~`Vanquisher]|h|r^SsubType^SJunk^Stoken^SBackSlot^Srelic^b^Sawarded^b^Sname^SCloak~`of~`the~`Foreseen~`Vanquisher^Stexture^N133772^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^N4^T^SequipLoc^S^SlootSlot^N4^Slink^S|cffa335ee|Hitem:143578::::::::110:72::5:1:570:::|h[Cloak~`of~`the~`Foreseen~`Vanquisher]|h|r^SsubType^SJunk^Stoken^SBackSlot^Srelic^b^Sawarded^b^Sname^SCloak~`of~`the~`Foreseen~`Vanquisher^Stexture^N133772^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [601]
-			"17:59:57 - NewRelicAutopassCheck (|cffa335ee|Hitem:140812::::::::110:72::5:3:3444:1482:3528:::|h[Soggy Manascrubber Brush]|h|r) (Arcane)", -- [602]
-			"17:59:57 - Autopassed on:  (|cffa335ee|Hitem:140871::::::::110:72::5:3:3444:1487:3336:::|h[Pertinacious Legplates]|h|r)", -- [603]
-			"17:59:57 - CreateResponse (2) (|cffa335ee|Hitem:140871::::::::110:72::5:3:3444:1487:3336:::|h[Pertinacious Legplates]|h|r) (890) (AUTOPASS) (INVTYPE_LEGS) (nil) (Mail)", -- [604]
-			"17:59:57 - GetPlayersGear (140871) (INVTYPE_LEGS)", -- [605]
-			"17:59:57 - LootFrame (GetFrame())", -- [606]
-			"17:59:57 - LootFrame:Start()", -- [607]
-			"17:59:57 - GetEntry(1)", -- [608]
-			"17:59:57 - GetEntry(2)", -- [609]
-			"17:59:57 - GetEntry(3)", -- [610]
-			"17:59:58 - Comm received:^1^SlootAck^T^N1^SDadizzle-Illidan^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [611]
-			"17:59:58 - Comm received:^1^SlootAck^T^N1^SNadzieja-Illidan^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [612]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N2^N2^SNadzieja-Illidan^N3^T^Silvl^N902.625^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:138315::::::::110:64::3:3:3514:1482:3336:::|h[Leggings~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [613]
-			"17:59:58 - Comm received:^1^SlootAck^T^N1^SDjpurge-Illidan^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [614]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N1^N2^SDjpurge-Illidan^N3^T^Silvl^N899.5625^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [615]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N3^N2^SDjpurge-Illidan^N3^T^Silvl^N899.5625^Sdiff^N-765^Sgear1^S|cffa335ee|Hitem:138372:5435:::::::110:263::3:3:3514:1472:3528:::|h[Cloak~`of~`Shackled~`Elements]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [616]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N2^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:140862::::::::110:102::6:3:3445:1502:3336:::|h[Gnawed~`Nightfallen~`Britches]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [617]
-			"17:59:58 - Comm received:^1^SlootAck^T^N1^STelgina-Illidan^t^^ (from:) (Telgina) (distri:) (RAID)", -- [618]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N4^N2^SDjpurge-Illidan^N3^T^Silvl^N899.5625^Sdiff^N-765^Sgear1^S|cffa335ee|Hitem:138372:5435:::::::110:263::3:3:3514:1472:3528:::|h[Cloak~`of~`Shackled~`Elements]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [619]
-			"17:59:58 - Comm received:^1^SlootAck^T^N1^SMadmartigàn-Illidan^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [620]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N1^N2^SMadmartigàn-Illidan^N3^T^Silvl^N900^Sresponse^SAUTOPASS^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [621]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N2^N2^SMadmartigàn-Illidan^N3^T^Silvl^N900^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:138360::::::::110:72::5:3:3516:1492:3336:::|h[Legplates~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [622]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N3^N2^SMadmartigàn-Illidan^N3^T^Silvl^N900^Sdiff^N-830^Sgear1^S|cffff8000|Hitem:137053:5434:::::::110:72:::2:3459:3530:::|h[Kazzalax,~`Fujieda's~`Fury]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [623]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N4^N2^SMadmartigàn-Illidan^N3^T^Silvl^N900^Sdiff^N-830^Sgear1^S|cffff8000|Hitem:137053:5434:::::::110:72:::2:3459:3530:::|h[Kazzalax,~`Fujieda's~`Fury]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [624]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N3^N2^STelgina-Illidan^N3^T^Silvl^N907.875^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138368:5435:::::::110:253::6:3:3518:1502:3528:::|h[Eagletalon~`Cloak]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [625]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N4^N2^STelgina-Illidan^N3^T^Silvl^N907.875^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138368:5435:::::::110:253::6:3:3518:1502:3528:::|h[Eagletalon~`Cloak]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [626]
-			"17:59:58 - Comm received:^1^SlootAck^T^N1^SCenzic-Illidan^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [627]
-			"17:59:58 - Comm received:^1^SextraUtilData^T^N1^SDjpurge-Illidan^N2^T^Sforged^N4^Spawn^T^N1^T^Sequipped^N0^Snew^N0^t^N2^T^Sequipped^N73504.59^Snew^N45220.7^t^N3^T^Sequipped^N447^Snew^N0^t^N4^T^Sequipped^N447^Snew^N0^t^t^SspecID^N263^Straits^N37^Slegend^N2^Ssockets^N1^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [628]
-			"17:59:58 - Comm received:^1^SlootAck^T^N1^SReinhärt-Illidan^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [629]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N1^N2^SReinhärt-Illidan^N3^T^Silvl^N908.9375^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [630]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N2^N2^SReinhärt-Illidan^N3^T^Silvl^N908.9375^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:138360::::::::110:73::5:3:3516:1487:3528:::|h[Legplates~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [631]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N3^N2^SReinhärt-Illidan^N3^T^Silvl^N908.9375^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138374:5434:::::::110:73::6:3:3518:1502:3528:::|h[Greatcloak~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [632]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N4^N2^SReinhärt-Illidan^N3^T^Silvl^N908.9375^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138374:5434:::::::110:73::6:3:3518:1502:3528:::|h[Greatcloak~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [633]
-			"17:59:58 - Comm received:^1^SextraUtilData^T^N1^SShietnorunes-Illidan^N2^T^Sforged^N9^Spawn^T^N1^T^Sequipped^N0^Snew^N0^t^N2^T^Sequipped^N775.98^Snew^N594.242^t^N3^T^Sequipped^N352.612^Snew^N0^t^N4^T^Sequipped^N352.612^Snew^N0^t^t^SspecID^N250^Straits^N51^Slegend^N2^Ssockets^N1^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [634]
-			"17:59:58 - Comm received:^1^SlootAck^T^N1^SShietnorunes-Illidan^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [635]
-			"17:59:58 - Comm received:^1^SlootAck^T^N1^SDvldocdk-Illidan^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [636]
-			"17:59:58 - Comm received:^1^SlootAck^T^N1^SLuthanen-Illidan^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [637]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N2^N2^SLuthanen-Illidan^N3^T^Silvl^N904.1875^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:138359::::::::110:65::5:3:3516:1487:1813:::|h[Legplates~`of~`the~`Highlord]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [638]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N3^N2^SLuthanen-Illidan^N3^T^Silvl^N904.1875^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:142170:5436:::::::110:65::16:3:3415:1507:3336:::|h[Drape~`of~`Shame]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [639]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N4^N2^SLuthanen-Illidan^N3^T^Silvl^N904.1875^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:142170:5436:::::::110:65::16:3:3415:1507:3336:::|h[Drape~`of~`Shame]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [640]
-			"17:59:58 - Comm received:^1^SlootAck^T^N1^SThenex-Illidan^t^^ (from:) (Thenex) (distri:) (RAID)", -- [641]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N2^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:138315::::::::110:63::5:4:3516:40:1497:3336:::|h[Leggings~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [642]
-			"17:59:58 - Comm received:^1^SlootAck^T^N1^SCometstorm-Illidan^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [643]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N2^N2^SCometstorm-Illidan^N3^T^Silvl^N903.1875^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:140852::::::::110:64::5:3:3516:1492:3336:::|h[Master~`Warmage's~`Leggings]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [644]
-			"17:59:58 - Comm received:^1^SextraUtilData^T^N1^SMadmartigàn-Illidan^N2^T^Sforged^N6^Spawn^T^N1^T^Sequipped^N0^Snew^N0^t^N2^T^Sequipped^N34410.03^Snew^N321.811^t^N3^T^Sequipped^N584.443^Snew^N0^t^N4^T^Sequipped^N584.443^Snew^N0^t^t^SspecID^N72^Straits^N52^Slegend^N2^Ssockets^N3^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [645]
-			"17:59:58 - Comm received:^1^SlootAck^T^N1^SBeallz-Illidan^t^^ (from:) (Beallz) (distri:) (RAID)", -- [646]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N1^N2^SDvldocdk-Illidan^N3^T^Silvl^N905.375^Sresponse^SAUTOPASS^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [647]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N1^N2^SCenzic-Illidan^N3^T^Silvl^N907.875^Sresponse^SAUTOPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [648]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N2^N2^SCenzic-Illidan^N3^T^Silvl^N907.875^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:138358::::::::110:251::5:3:3516:1487:1813:::|h[Dreadwyrm~`Legplates]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [649]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N1^N2^SBeallz-Illidan^N3^T^Silvl^N903.625^Sresponse^SAUTOPASS^t^t^^ (from:) (Beallz) (distri:) (RAID)", -- [650]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N2^N2^SBeallz-Illidan^N3^T^Silvl^N903.625^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:138334::::::::110:269::5:4:3516:43:1487:3528:::|h[Leggings~`of~`Enveloped~`Dissonance]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Beallz) (distri:) (RAID)", -- [651]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N3^N2^SBeallz-Illidan^N3^T^Silvl^N903.625^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138367::::::::110:269::6:3:3518:1502:3528:::|h[Cloak~`of~`Enveloped~`Dissonance]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Beallz) (distri:) (RAID)", -- [652]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N4^N2^SBeallz-Illidan^N3^T^Silvl^N903.625^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138367::::::::110:269::6:3:3518:1502:3528:::|h[Cloak~`of~`Enveloped~`Dissonance]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Beallz) (distri:) (RAID)", -- [653]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N2^N2^SDvldocdk-Illidan^N3^T^Silvl^N905.375^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:140882::::::::110:251::6:3:3445:1502:3336:::|h[Chrono-Tempered~`Legplates]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [654]
-			"17:59:58 - Comm received:^1^SlootAck^T^N1^SGrimuhs-Illidan^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [655]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N1^N2^SGrimuhs-Illidan^N3^T^Silvl^N903.3125^Sresponse^SAUTOPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [656]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N2^N2^SGrimuhs-Illidan^N3^T^Silvl^N903.3125^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:138316::::::::110:258::5:3:3516:1487:3528:::|h[Purifier's~`Leggings]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [657]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N3^N2^SGrimuhs-Illidan^N3^T^Silvl^N903.3125^Sdiff^N-770^Sgear1^S|cffa335ee|Hitem:140910:5436:130220::::::110:258::3:4:3514:1808:1477:3336:::|h[Cloak~`of~`Temporal~`Recalibration]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [658]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N4^N2^SGrimuhs-Illidan^N3^T^Silvl^N903.3125^Sdiff^N-770^Sgear1^S|cffa335ee|Hitem:140910:5436:130220::::::110:258::3:4:3514:1808:1477:3336:::|h[Cloak~`of~`Temporal~`Recalibration]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [659]
-			"17:59:58 - Comm received:^1^SlootAck^T^N1^SSwîftmender-Illidan^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [660]
-			"17:59:58 - Comm received:^1^Sresponse^T^N1^N2^N2^SSwîftmender-Illidan^N3^T^Silvl^N885.625^Sdiff^N30^Sgear1^S|cffa335ee|Hitem:134194::::::::110:105::26:3:1825:1522:3337:::|h[Biornskin~`Leggings]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [661]
-			"17:59:59 - Comm received:^1^SlootAck^T^N1^SFuryisthy-Illidan^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [662]
-			"17:59:59 - Comm received:^1^Sresponse^T^N1^N2^N2^SFuryisthy-Illidan^N3^T^Silvl^N906.5625^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:138379::::::::110:577::5:3:3516:1492:3336:::|h[Legwraps~`of~`Second~`Sight]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [663]
-			"17:59:59 - Comm received:^1^Sresponse^T^N1^N3^N2^SFuryisthy-Illidan^N3^T^Silvl^N906.5625^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138375:5435:::::::110:577::6:3:3518:1502:3528:::|h[Cape~`of~`Second~`Sight]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [664]
-			"17:59:59 - Comm received:^1^Sresponse^T^N1^N4^N2^SFuryisthy-Illidan^N3^T^Silvl^N906.5625^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138375:5435:::::::110:577::6:3:3518:1502:3528:::|h[Cape~`of~`Second~`Sight]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [665]
-			"17:59:59 - Comm received:^1^SlootAck^T^N1^SLanféar-Illidan^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [666]
-			"17:59:59 - Comm received:^1^Sresponse^T^N1^N1^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [667]
-			"17:59:59 - Comm received:^1^Sresponse^T^N1^N2^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:140852::130222::::::110:257::6:4:3518:1808:1502:3528:::|h[Master~`Warmage's~`Leggings]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [668]
-			"17:59:59 - Comm received:^1^Sresponse^T^N1^N3^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N-830^Sgear1^S|cffff8000|Hitem:137109:5436:::::::110:257:::2:1811:3530:::|h[X'anshi,~`Shroud~`of~`Archbishop~`Benedictus]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [669]
-			"17:59:59 - Comm received:^1^Sresponse^T^N1^N4^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N-830^Sgear1^S|cffff8000|Hitem:137109:5436:::::::110:257:::2:1811:3530:::|h[X'anshi,~`Shroud~`of~`Archbishop~`Benedictus]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [670]
-			"18:00:00 - Comm received:^1^Sresponse^T^N1^N3^N2^SSwîftmender-Illidan^N3^T^Silvl^N885.625^Sdiff^N-770^Sgear1^S|cffa335ee|Hitem:140910:5436:::::::110:105::3:3:3514:1477:3336:::|h[Cloak~`of~`Temporal~`Recalibration]|h|r^Sresponse^N4^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [671]
-			"18:00:00 - Comm received:^1^Sresponse^T^N1^N3^N2^SCenzic-Illidan^N3^T^Silvl^N907.875^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:138364:5434:::::::110:251::5:3:3516:1497:3336:::|h[Dreadwyrm~`Greatcloak]|h|r^Sresponse^N3^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [672]
-			"18:00:01 - Comm received:^1^Sresponse^T^N1^N4^N2^SSwîftmender-Illidan^N3^T^Silvl^N885.625^Sdiff^N-770^Sgear1^S|cffa335ee|Hitem:140910:5436:::::::110:105::3:3:3514:1477:3336:::|h[Cloak~`of~`Temporal~`Recalibration]|h|r^Sresponse^N4^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [673]
-			"18:00:01 - Comm received:^1^Sresponse^T^N1^N4^N2^SCenzic-Illidan^N3^T^Silvl^N907.875^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:138364:5434:::::::110:251::5:3:3516:1497:3336:::|h[Dreadwyrm~`Greatcloak]|h|r^Sresponse^N3^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [674]
-			"18:00:01 - Comm received:^1^Sresponse^T^N1^N2^N2^SDjpurge-Illidan^N3^T^Silvl^N899.5625^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:132466::::::::110:263:::2:1811:3530:::|h[Roots~`of~`Shaladrassil]|h|r^Sresponse^SPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [675]
-			"18:00:01 - Comm received:^1^Sresponse^T^N1^N1^N2^SShietnorunes-Illidan^N3^T^Silvl^N902.3125^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [676]
-			"18:00:02 - Comm received:^1^Sresponse^T^N1^N1^N2^STelgina-Illidan^N3^T^Silvl^N907.875^Sdiff^N-20^Sgear1^S|cffa335ee|Hitem:140812::::::::110:253::6:3:3445:1502:3336:::|h[Soggy~`Manascrubber~`Brush]|h|r^Sresponse^SPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [677]
-			"18:00:02 - Comm received:^1^Sresponse^T^N1^N1^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sresponse^SPASS^Sdiff^N-20^Sgear1^S|cffa335ee|Hitem:142175::::::::110:102::35:3:3418:1522:3337:::|h[Arcanum~`of~`Weightlessness]|h|r^Sgear2^S|cffa335ee|Hitem:140812::::::::110:102::6:3:3445:1502:3336:::|h[Soggy~`Manascrubber~`Brush]|h|r^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [678]
-			"18:00:03 - Comm received:^1^Sresponse^T^N1^N1^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sdiff^N-20^Sgear1^S|cffa335ee|Hitem:144463::::::::110:63::35:3:3418:1557:3337:::|h[Shard~`of~`Kaldorei~`Stained~`Glass]|h|r^Sresponse^SPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [679]
-			"18:00:04 - Comm received:^1^Sresponse^T^N1^N3^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:138366:5436:::::::110:102::5:3:3516:1497:3336:::|h[Cloak~`of~`the~`Astral~`Warden]|h|r^Sresponse^SPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [680]
-			"18:00:04 - Comm received:^1^Sresponse^T^N1^N4^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:138366:5436:::::::110:102::5:3:3516:1497:3336:::|h[Cloak~`of~`the~`Astral~`Warden]|h|r^Sresponse^SPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [681]
-			"18:00:05 - Comm received:^1^Sresponse^T^N1^N2^N2^SShietnorunes-Illidan^N3^T^Silvl^N902.3125^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138358::::::::110:250::43:3:3573:1477:3528:::|h[Dreadwyrm~`Legplates]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [682]
-			"18:00:05 - Comm received:^1^Sresponse^T^N1^N1^N2^SSwîftmender-Illidan^N3^T^Silvl^N885.625^Sresponse^SPASS^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [683]
-			"18:00:07 - Comm received:^1^Soffline_timer^T^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [684]
-			"18:00:09 - Comm received:^1^Sresponse^T^N1^N2^N2^STelgina-Illidan^N3^T^Silvl^N907.875^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:138344::::::::110:253::5:3:3516:1487:3528:::|h[Eagletalon~`Legchains]|h|r^Sresponse^SPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [685]
-			"18:00:10 - LootFrame:OnRoll (1) (2) (Response:) (Offspec)", -- [686]
-			"18:00:10 - CreateResponse (1) (|cffa335ee|Hitem:140812::::::::110:72::5:3:3444:1482:3528:::|h[Soggy Manascrubber Brush]|h|r) (885) (2) () (nil) (Artifact Relic)", -- [687]
-			"18:00:10 - Comm received:^1^Sresponse^T^N1^N1^N2^SCometstorm-Illidan^N3^T^Silvl^N903.1875^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:140813::::::::110:64::5:3:3516:1497:3336:::|h[Arcana~`Crux]|h|r^Sresponse^N2^t^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [688]
-			"18:00:12 - Comm received:^1^Sresponse^T^N1^N1^N2^SLuthanen-Illidan^N3^T^Silvl^N904.1875^Sresponse^N2^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [689]
-			"18:00:13 - Comm received:^1^Sresponse^T^N1^N3^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:144403:5436:::::::110:63::6:3:3445:1497:3528:::|h[Fashionable~`Autumn~`Cloak]|h|r^Sresponse^N2^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [690]
-			"18:00:13 - Comm received:^1^Sresponse^T^N1^N3^N2^SDvldocdk-Illidan^N3^T^Silvl^N905.375^Sdiff^N-800^Sgear1^S|cffa335ee|Hitem:138364:5434:::::::110:251::6:3:3518:1507:3336:::|h[Dreadwyrm~`Greatcloak]|h|r^Sresponse^SPASS^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [691]
-			"18:00:13 - Comm received:^1^Sresponse^T^N1^N4^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:144403:5436:::::::110:63::6:3:3445:1497:3528:::|h[Fashionable~`Autumn~`Cloak]|h|r^Sresponse^N2^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [692]
-			"18:00:14 - Comm received:^1^Sresponse^T^N1^N4^N2^SDvldocdk-Illidan^N3^T^Silvl^N905.375^Sdiff^N-800^Sgear1^S|cffa335ee|Hitem:138364:5434:::::::110:251::6:3:3518:1507:3336:::|h[Dreadwyrm~`Greatcloak]|h|r^Sresponse^SPASS^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [693]
-			"18:00:18 - Comm received:^1^Sresponse^T^N1^N3^N2^SShietnorunes-Illidan^N3^T^Snote^S2pc^Silvl^N902.3125^Sdiff^N-770^Sgear1^S|cffa335ee|Hitem:144535::::::::110:250::8:4:3568:1714:1512:3336:::|h[Cruel~`Gladiator's~`Dreadcloak]|h|r^Sresponse^N1^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [694]
-			"18:00:18 - Comm received:^1^Sresponse^T^N1^N1^N2^SFuryisthy-Illidan^N3^T^Silvl^N906.5625^Sresponse^SPASS^t^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [695]
-			"18:00:24 - Comm received:^1^Sresponse^T^N1^N4^N2^SShietnorunes-Illidan^N3^T^Snote^S2pc^Silvl^N902.3125^Sdiff^N-770^Sgear1^S|cffa335ee|Hitem:144535::::::::110:250::8:4:3568:1714:1512:3336:::|h[Cruel~`Gladiator's~`Dreadcloak]|h|r^Sresponse^N1^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [696]
-			"18:00:25 - LootFrame:OnRoll (1) (3) (Response:) (Minor Upgrade)", -- [697]
-			"18:00:25 - CreateResponse (3) (|cffa335ee|Hitem:143578::::::::110:72::5:1:570:::|h[Cloak of the Foreseen Vanquisher]|h|r) (110) (3) () (nil) (Junk)", -- [698]
-			"18:00:25 - GetPlayersGear (143578) ()", -- [699]
-			"18:00:25 - Comm received:^1^Sresponse^T^N1^N3^N2^SCometstorm-Illidan^N3^T^Silvl^N903.1875^Sdiff^N-785^Sgear1^S|cffa335ee|Hitem:138365:5436:::::::110:64::3:3:3514:1492:3337:::|h[Cloak~`of~`Everburning~`Knowledge]|h|r^Sresponse^N3^t^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [700]
-			"18:00:25 - LootFrame:OnRoll (1) (3) (Response:) (Minor Upgrade)", -- [701]
-			"18:00:25 - CreateResponse (4) (|cffa335ee|Hitem:143578::::::::110:72::5:1:570:::|h[Cloak of the Foreseen Vanquisher]|h|r) (110) (3) () (nil) (Junk)", -- [702]
-			"18:00:25 - GetPlayersGear (143578) ()", -- [703]
-			"18:00:25 - Comm received:^1^Sresponse^T^N1^N4^N2^SCometstorm-Illidan^N3^T^Silvl^N903.1875^Sdiff^N-785^Sgear1^S|cffa335ee|Hitem:138365:5436:::::::110:64::3:3:3514:1492:3337:::|h[Cloak~`of~`Everburning~`Knowledge]|h|r^Sresponse^N3^t^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [704]
-			"18:00:44 - Comm received:^1^Sresponse^T^N1^N1^N2^SNadzieja-Illidan^N3^T^Silvl^N902.625^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:144506::::::::110:64::43:3:3573:3144:3337:::|h[Taboo~`Knowledge]|h|r^Sresponse^N1^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [705]
-			"18:00:47 - Comm received:^1^Sresponse^T^N1^N3^N2^SNadzieja-Illidan^N3^T^Silvl^N902.625^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138365::130220::::::110:64::5:4:3516:1808:1487:3528:::|h[Cloak~`of~`Everburning~`Knowledge]|h|r^Sresponse^N3^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [706]
-			"18:00:47 - Comm received:^1^Sresponse^T^N1^N4^N2^SNadzieja-Illidan^N3^T^Silvl^N902.625^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138365::130220::::::110:64::5:4:3516:1808:1487:3528:::|h[Cloak~`of~`Everburning~`Knowledge]|h|r^Sresponse^N3^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [707]
-			"18:00:56 - Comm received:^1^Sawarded^T^N1^N4^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [708]
-			"18:00:56 - Comm received:^1^Shistory^T^N1^SSwîftmender-Illidan^N2^T^SmapID^N1530^Sdate^S13/06/17^Sclass^SDRUID^SgroupSize^N19^Svotes^N0^Stime^S20:01:06^SitemReplaced1^S|cffa335ee|Hitem:140910:5436:::::::110:105::3:3:3514:1477:3336:::|h[Cloak~`of~`Temporal~`Recalibration]|h|r^Sinstance^SThe~`Nighthold-Heroic^StierToken^SBackSlot^Sresponse^SMainspec/Best~`in~`Slot^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:143578::::::::110:72::5:1:570:::|h[Cloak~`of~`the~`Foreseen~`Vanquisher]|h|r^Sboss^STrilliax^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^SresponseID^N4^SisAwardReason^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [709]
-			"18:01:01 - Comm received:^1^Svote^T^N1^N3^N2^SShietnorunes-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [710]
-			"18:01:03 - Comm received:^1^Sawarded^T^N1^N3^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [711]
-			"18:01:03 - Comm received:^1^Shistory^T^N1^SShietnorunes-Illidan^N2^T^SmapID^N1530^Sdate^S13/06/17^Sclass^SDEATHKNIGHT^SgroupSize^N19^Svotes^N1^Stime^S20:01:13^SitemReplaced1^S|cffa335ee|Hitem:144535::::::::110:250::8:4:3568:1714:1512:3336:::|h[Cruel~`Gladiator's~`Dreadcloak]|h|r^Sinstance^SThe~`Nighthold-Heroic^StierToken^SBackSlot^Sresponse^SMainspec/Need^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:143578::::::::110:72::5:1:570:::|h[Cloak~`of~`the~`Foreseen~`Vanquisher]|h|r^Sboss^STrilliax^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^SresponseID^N1^SisAwardReason^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [712]
-			"18:01:05 - Comm received:^1^SverTest^T^N1^S2.3.3^t^^ (from:) (Marketfreshe) (distri:) (GUILD)", -- [713]
-			"18:01:15 - Comm received:^1^Sawarded^T^N1^N1^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [714]
-			"18:01:15 - Comm received:^1^Shistory^T^N1^SNadzieja-Illidan^N2^T^SmapID^N1530^Sdate^S13/06/17^Sclass^SMAGE^SgroupSize^N19^Svotes^N0^Stime^S20:01:25^SitemReplaced1^S|cffa335ee|Hitem:144506::::::::110:64::43:3:3573:3144:3337:::|h[Taboo~`Knowledge]|h|r^Sinstance^SThe~`Nighthold-Heroic^Sresponse^SMainspec/Need^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:140812::::::::110:72::5:3:3444:1482:3528:::|h[Soggy~`Manascrubber~`Brush]|h|r^Sboss^STrilliax^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^SresponseID^N1^SisAwardReason^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [715]
-			"18:01:25 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [716]
-			"18:01:25 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [717]
-			"18:01:25 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [718]
-			"18:01:27 - Comm received:^1^Sawarded^T^N1^N2^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [719]
-			"18:01:27 - Comm received:^1^Ssession_end^T^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [720]
-			"18:01:27 - Comm received:^1^Shistory^T^N1^SNadzieja-Illidan^N2^T^SmapID^N1530^Sdate^S13/06/17^Sclass^SMAGE^SgroupSize^N19^Svotes^N0^Stime^S20:01:37^SitemReplaced1^S|cffa335ee|Hitem:138315::::::::110:64::3:3:3514:1482:3336:::|h[Leggings~`of~`Everburning~`Knowledge]|h|r^Sinstance^SThe~`Nighthold-Heroic^Sresponse^SDisenchant^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:140871::::::::110:72::5:3:3444:1487:3336:::|h[Pertinacious~`Legplates]|h|r^Sboss^STrilliax^Scolor^T^N1^N1^N2^N1^N3^N1^N4^N1^t^SresponseID^N1^SisAwardReason^B^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [721]
-			"18:04:33 - Comm received:^1^SverTest^T^N1^S2.3.3^t^^ (from:) (Furyisthy) (distri:) (GUILD)", -- [722]
-			"18:04:38 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [723]
-			"18:04:38 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [724]
-			"18:04:38 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [725]
-			"18:06:27 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Cannibal) (distri:) (GUILD)", -- [726]
-			"18:07:29 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Jimrando) (distri:) (GUILD)", -- [727]
-			"18:07:49 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [728]
-			"18:07:49 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [729]
-			"18:07:49 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [730]
-			"18:07:49 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [731]
-			"18:07:49 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [732]
-			"18:07:49 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [733]
-			"18:10:12 - Comm received:^1^SlootTable^T^N1^T^N1^T^SequipLoc^S^SlootSlot^N1^Slink^S|cffa335ee|Hitem:140832::::::::110:72::5:3:3516:1497:3336:::|h[Heart~`of~`Frost]|h|r^SsubType^SArtifact~`Relic^Srelic^SFrost^Sawarded^b^Sname^SHeart~`of~`Frost^Stexture^N609814^Silvl^N900^Sboe^b^Sbagged^b^Squality^N4^t^N2^T^SequipLoc^SINVTYPE_WRIST^SlootSlot^N2^Slink^S|cffa335ee|Hitem:140850::::::::110:72::5:3:3516:1487:3528:::|h[Bracers~`of~`Harnessed~`Flame]|h|r^SsubType^SCloth^Srelic^b^Sawarded^b^Sname^SBracers~`of~`Harnessed~`Flame^Stexture^N1345975^Silvl^N890^Sboe^b^Sbagged^b^Squality^N4^t^N3^T^SequipLoc^SINVTYPE_ROBE^SlootSlot^N3^Slink^S|cffa335ee|Hitem:140877::::::::110:72::5:4:3516:1808:1497:3336:::|h[Captain's~`Parade~`Breastplate]|h|r^SsubType^SPlate^Srelic^b^Sawarded^b^Sname^SCaptain's~`Parade~`Breastplate^Stexture^N1316217^Silvl^N900^Sboe^b^Sbagged^b^Squality^N4^t^N4^T^SequipLoc^SINVTYPE_FINGER^SlootSlot^N4^Slink^S|cffa335ee|Hitem:140895::::::::110:72::5:3:3516:1487:3528:::|h[Spellblade's~`Gemmed~`Signet]|h|r^SsubType^SMiscellaneous^Srelic^b^Sawarded^b^Sname^SSpellblade's~`Gemmed~`Signet^Stexture^N1391748^Silvl^N890^Sboe^b^Sbagged^b^Squality^N4^t^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [734]
-			"18:10:12 - NewRelicAutopassCheck (|cffa335ee|Hitem:140832::::::::110:72::5:3:3516:1497:3336:::|h[Heart of Frost]|h|r) (Frost)", -- [735]
-			"18:10:12 - Autopassed on:  (|cffa335ee|Hitem:140877::::::::110:72::5:4:3516:1808:1497:3336:::|h[Captain's Parade Breastplate]|h|r)", -- [736]
-			"18:10:12 - CreateResponse (3) (|cffa335ee|Hitem:140877::::::::110:72::5:4:3516:1808:1497:3336:::|h[Captain's Parade Breastplate]|h|r) (900) (AUTOPASS) (INVTYPE_ROBE) (nil) (Plate)", -- [737]
-			"18:10:12 - GetPlayersGear (140877) (INVTYPE_ROBE)", -- [738]
-			"18:10:12 - LootFrame:Start()", -- [739]
-			"18:10:12 - Comm received:^1^SlootAck^T^N1^SDjpurge-Illidan^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [740]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N2^N2^SDjpurge-Illidan^N3^T^Silvl^N899.5625^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:134252::::::::110:263::43:4:3573:41:1542:3528:::|h[Sea~`Stalker's~`Bracers]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [741]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N3^N2^SDjpurge-Illidan^N3^T^Silvl^N899.5625^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:138346::::::::110:263::6:3:3518:1502:3528:::|h[Raiment~`of~`Shackled~`Elements]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [742]
-			"18:10:12 - Comm received:^1^SextraUtilData^T^N1^SDjpurge-Illidan^N2^T^Sforged^N4^Spawn^T^N1^T^Sequipped^N0^Snew^N0^t^N2^T^Sequipped^N399.407^Snew^N164.177^t^N3^T^Sequipped^N831.945^Snew^N0^t^N4^T^Sequipped^N563.706^Snew^N463.416^t^t^SspecID^N263^Straits^N37^Slegend^N2^Ssockets^N1^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [743]
-			"18:10:12 - Comm received:^1^SlootAck^T^N1^SLanféar-Illidan^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [744]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N1^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [745]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N3^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:138319::::::::110:257::6:3:3518:1502:3528:::|h[Purifier's~`Cassock]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [746]
-			"18:10:12 - Comm received:^1^SlootAck^T^N1^SNadzieja-Illidan^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [747]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N3^N2^SNadzieja-Illidan^N3^T^Silvl^N902.625^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:140848::::::::110:64::5:3:3444:1482:3528:::|h[Robes~`of~`Fluctuating~`Energy]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [748]
-			"18:10:12 - Comm received:^1^SlootAck^T^N1^SDadizzle-Illidan^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [749]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N2^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:137092::::::::110:102:::2:3459:3530:::|h[Oneth's~`Intuition]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [750]
-			"18:10:12 - Comm received:^1^SlootAck^T^N1^SDvldocdk-Illidan^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [751]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N3^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138324::::::::110:102::5:3:3516:1487:3528:::|h[Robe~`of~`the~`Astral~`Warden]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [752]
-			"18:10:12 - Comm received:^1^SlootAck^T^N1^SReinhärt-Illidan^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [753]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N1^N2^SReinhärt-Illidan^N3^T^Silvl^N908.9375^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [754]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N2^N2^SReinhärt-Illidan^N3^T^Silvl^N908.9375^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:137107::::::::110:73:::2:1811:3530:::|h[Mannoroth's~`Bloodletting~`Manacles]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [755]
-			"18:10:12 - Comm received:^1^SlootAck^T^N1^SMadmartigàn-Illidan^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [756]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N1^N2^SMadmartigàn-Illidan^N3^T^Silvl^N900^Sresponse^SAUTOPASS^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [757]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N2^N2^SMadmartigàn-Illidan^N3^T^Silvl^N900^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:139283::::::::110:72::33:3:3418:1557:3337:::|h[Wristbands~`of~`Magnificent~`Splendor]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [758]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N2^N2^SDvldocdk-Illidan^N3^T^Silvl^N905.375^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:132365::::::::110:251:::2:1811:3530:::|h[Shackles~`of~`Bryndaor]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [759]
-			"18:10:12 - Comm received:^1^SextraUtilData^T^N1^SShietnorunes-Illidan^N2^T^Sforged^N8^Spawn^T^N1^T^Sequipped^N0^Snew^N0^t^N2^T^Sequipped^N612.935^Snew^N286.973^t^N3^T^Sequipped^N918.919^Snew^N965.485^t^N4^T^Sequipped^N333.425^Snew^N342.489^t^t^SspecID^N250^Straits^N51^Slegend^N2^Ssockets^N1^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [760]
-			"18:10:12 - Comm received:^1^SlootAck^T^N1^SShietnorunes-Illidan^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [761]
-			"18:10:12 - Comm received:^1^SlootAck^T^N1^SThenex-Illidan^t^^ (from:) (Thenex) (distri:) (RAID)", -- [762]
-			"18:10:12 - Comm received:^1^SlootAck^T^N1^SFuryisthy-Illidan^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [763]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N1^N2^SFuryisthy-Illidan^N3^T^Silvl^N906.5625^Sresponse^SAUTOPASS^t^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [764]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N2^N2^SFuryisthy-Illidan^N3^T^Silvl^N906.5625^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:137090::::::::110:577:::2:3459:3530:::|h[Mo'arg~`Bionic~`Stabilizers]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [765]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N3^N2^SFuryisthy-Illidan^N3^T^Silvl^N906.5625^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:138376::::::::110:577::6:3:3518:1502:3528:::|h[Tunic~`of~`Second~`Sight]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [766]
-			"18:10:12 - Comm received:^1^SextraUtilData^T^N1^SMadmartigàn-Illidan^N2^T^Sforged^N6^Spawn^T^N1^T^Sequipped^N0^Snew^N0^t^N2^T^Sequipped^N19394.26^Snew^N131.185^t^N3^T^Sequipped^N679.749^Snew^N777.053^t^N4^T^Sequipped^N498.802^Snew^N421.488^t^t^SspecID^N72^Straits^N52^Slegend^N2^Ssockets^N3^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [767]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N3^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:138318::130221::::::110:63::6:4:3518:1808:1502:3528:::|h[Robe~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [768]
-			"18:10:12 - Comm received:^1^SlootAck^T^N1^SCometstorm-Illidan^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [769]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N3^N2^SCometstorm-Illidan^N3^T^Silvl^N903.1875^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138318::130220::::::110:64::5:4:3516:1808:1487:3528:::|h[Robe~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [770]
-			"18:10:12 - Comm received:^1^SlootAck^T^N1^SCenzic-Illidan^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [771]
-			"18:10:12 - Comm received:^1^SlootAck^T^N1^SMarketfreshe-Illidan^t^^ (from:) (Marketfreshe) (distri:) (RAID)", -- [772]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N2^N2^SMarketfreshe-Illidan^N3^T^Silvl^N887.5625^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:138219::::::::110:105::5:3:1805:1507:3337:::|h[Dragonspur~`Wristguards]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Marketfreshe) (distri:) (RAID)", -- [773]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N3^N2^SMarketfreshe-Illidan^N3^T^Silvl^N887.5625^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:147737::::::::110:105::3:4:3572:40:1482:3528:::|h[Shorebreaker~`Robes]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Marketfreshe) (distri:) (RAID)", -- [774]
-			"18:10:12 - Comm received:^1^SlootAck^T^N1^SSwîftmender-Illidan^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [775]
-			"18:10:12 - Comm received:^1^SlootAck^T^N1^SBeallz-Illidan^t^^ (from:) (Beallz) (distri:) (RAID)", -- [776]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N2^N2^SBeallz-Illidan^N3^T^Silvl^N903.625^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:134458::::::::110:269::35:3:3418:1557:3337:::|h[Wristbands~`of~`Rousing~`Violence]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Beallz) (distri:) (RAID)", -- [777]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N3^N2^SBeallz-Illidan^N3^T^Silvl^N903.625^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:139071::::::::110:269::35:3:3418:1567:3337:::|h[Tranquil~`Bough~`Vest]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Beallz) (distri:) (RAID)", -- [778]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N2^N2^SSwîftmender-Illidan^N3^T^Silvl^N885.625^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:146768::::::::110:105::27:4:3394:1808:1542:3337:::|h[Netherfiend~`Armbands]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [779]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N3^N2^SSwîftmender-Illidan^N3^T^Silvl^N885.625^Sdiff^N-40^Sgear1^S|cffff8000|Hitem:137015::::::::110:105:::2:3459:3530:::|h[Ekowraith,~`Creator~`of~`Worlds]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [780]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N1^N2^SJimrando-Illidan^N3^T^Silvl^N906.9375^Sresponse^SNOTINRAID^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [781]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N2^N2^SJimrando-Illidan^N3^T^Silvl^N906.9375^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:140902::::::::110:71::6:3:3445:1497:3528:::|h[Jagged~`Carapace~`Wristclamps]|h|r^Sresponse^SNOTINRAID^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [782]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N3^N2^SJimrando-Illidan^N3^T^Silvl^N906.9375^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:138351::::::::110:71::6:3:3518:1502:3528:::|h[Chestplate~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^SNOTINRAID^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [783]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N4^N2^SJimrando-Illidan^N3^T^Silvl^N906.9375^Sresponse^SNOTINRAID^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:140897::::::::110:71::6:3:3519:1507:3528:::|h[Ring~`of~`the~`Scoured~`Clan]|h|r^Sgear2^S|cffa335ee|Hitem:134534:5429:::::::110:71::35:3:3418:1557:3337:::|h[Dingy~`Wedding~`Band]|h|r^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [784]
-			"18:10:12 - Comm received:^1^Sresponse^T^N1^N2^N2^SCenzic-Illidan^N3^T^Silvl^N907.875^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:132458::::::::110:251:::2:3459:3530:::|h[Toravon's~`Whiteout~`Bindings]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [785]
-			"18:10:13 - Comm received:^1^SlootAck^T^N1^STelgina-Illidan^t^^ (from:) (Telgina) (distri:) (RAID)", -- [786]
-			"18:10:13 - Comm received:^1^Sresponse^T^N1^N1^N2^STelgina-Illidan^N3^T^Silvl^N907.875^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [787]
-			"18:10:13 - Comm received:^1^Sresponse^T^N1^N2^N2^STelgina-Illidan^N3^T^Silvl^N907.875^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:137101::::::::110:253:::2:1811:3455:::|h[Call~`of~`the~`Wild]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [788]
-			"18:10:13 - Comm received:^1^Sresponse^T^N1^N3^N2^STelgina-Illidan^N3^T^Silvl^N907.875^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:138339::::::::110:253::6:3:3518:1502:3528:::|h[Eagletalon~`Tunic]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [789]
-			"18:10:13 - Comm received:^1^SlootAck^T^N1^SLuthanen-Illidan^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [790]
-			"18:10:13 - Comm received:^1^Sresponse^T^N1^N1^N2^SLuthanen-Illidan^N3^T^Silvl^N904.1875^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [791]
-			"18:10:13 - Comm received:^1^Sresponse^T^N1^N2^N2^SLuthanen-Illidan^N3^T^Silvl^N904.1875^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140878::::::::110:65::5:3:3516:1487:1813:::|h[Duskwatch~`Plate~`Bracers]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [792]
-			"18:10:13 - Comm received:^1^SlootAck^T^N1^SGrimuhs-Illidan^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [793]
-			"18:10:13 - Comm received:^1^Sresponse^T^N1^N1^N2^SGrimuhs-Illidan^N3^T^Silvl^N903.3125^Sresponse^SAUTOPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [794]
-			"18:10:13 - Comm received:^1^Sresponse^T^N1^N3^N2^SGrimuhs-Illidan^N3^T^Silvl^N903.3125^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138319::::::::110:258::5:3:3516:1487:1813:::|h[Purifier's~`Cassock]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [795]
-			"18:10:16 - Comm received:^1^Sresponse^T^N1^N4^N2^SFuryisthy-Illidan^N3^T^Silvl^N906.5625^Sresponse^N4^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:134526:5427:::::::110:577::34:3:3418:1542:3528:::|h[Gnawed~`Thumb~`Ring]|h|r^Sgear2^S|cffff8000|Hitem:137038:5427:130247::::::110:577:::2:1811:3530:::|h[Anger~`of~`the~`Half-Giants]|h|r^t^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [796]
-			"18:10:17 - Comm received:^1^Sresponse^T^N1^N1^N2^SShietnorunes-Illidan^N3^T^Silvl^N902.9375^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [797]
-			"18:10:18 - Comm received:^1^Sresponse^T^N1^N4^N2^STelgina-Illidan^N3^T^Silvl^N907.875^Sresponse^SPASS^Sdiff^N-20^Sgear1^S|cffa335ee|Hitem:140897:5429:::::::110:253::6:3:3519:1512:3336:::|h[Ring~`of~`the~`Scoured~`Clan]|h|r^Sgear2^S|cffa335ee|Hitem:142173:5429:::::::110:253::35:3:3418:1522:3337:::|h[Ring~`of~`Collapsing~`Futures]|h|r^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [798]
-			"18:10:18 - Comm received:^1^Sresponse^T^N1^N2^N2^SShietnorunes-Illidan^N3^T^Silvl^N902.9375^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:132365::::::::110:250:::2:1811:3530:::|h[Shackles~`of~`Bryndaor]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [799]
-			"18:10:19 - Comm received:^1^Sresponse^T^N1^N1^N2^SMarketfreshe-Illidan^N3^T^Silvl^N887.5625^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:143527::::::::110:105::23:2:3454:1472:::|h[Scale~`of~`Arcanagos]|h|r^Sresponse^N1^t^t^^ (from:) (Marketfreshe) (distri:) (RAID)", -- [800]
-			"18:10:20 - Comm received:^1^Sresponse^T^N1^N1^N2^SDvldocdk-Illidan^N3^T^Silvl^N905.375^Sresponse^N1^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:142186::::::::110:251::35:3:3415:1512:3337:::|h[Mrrmgmrl~`Grmmlmglrg]|h|r^Sgear2^S|cffa335ee|Hitem:137370::::::::110:251::33:3:3416:1547:3336:::|h[Heart~`of~`the~`Sea]|h|r^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [801]
-			"18:10:21 - Comm received:^1^Sresponse^T^N1^N4^N2^SGrimuhs-Illidan^N3^T^Silvl^N903.3125^Sresponse^SPASS^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:134530:5429:::::::110:258::35:3:3418:1532:3337:::|h[Loop~`of~`Vitriolic~`Intent]|h|r^Sgear2^S|cffa335ee|Hitem:137532::::::::110:258::16:3:3418:1542:3528:::|h[Seal~`of~`Saltheril]|h|r^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [802]
-			"18:10:21 - Comm received:^1^Sresponse^T^N1^N3^N2^SLuthanen-Illidan^N3^T^Silvl^N904.1875^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:138350::::::::110:65::6:3:3518:1502:3528:::|h[Breastplate~`of~`the~`Highlord]|h|r^Sresponse^SPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [803]
-			"18:10:21 - Comm received:^1^Sresponse^T^N1^N2^N2^SGrimuhs-Illidan^N3^T^Silvl^N903.3125^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:132409::::::::110:258:::2:3459:3530:::|h[Anund's~`Seared~`Shackles]|h|r^Sresponse^SPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [804]
-			"18:10:22 - Comm received:^1^Soffline_timer^T^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [805]
-			"18:10:22 - Comm received:^1^Sresponse^T^N1^N4^N2^SLuthanen-Illidan^N3^T^Silvl^N904.1875^Sresponse^SPASS^Sdiff^N0^Sgear1^S|cffff8000|Hitem:137046:5427:130248::::::110:65:::2:1811:3530:::|h[Ilterendi,~`Crown~`Jewel~`of~`Silvermoon]|h|r^Sgear2^S|cffa335ee|Hitem:140895:5427:::::::110:65::5:4:3516:41:1487:3528:::|h[Spellblade's~`Gemmed~`Signet]|h|r^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [806]
-			"18:10:23 - Comm received:^1^Sresponse^T^N1^N4^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sresponse^SPASS^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140895:5429:::::::110:257::5:3:3516:1497:3336:::|h[Spellblade's~`Gemmed~`Signet]|h|r^Sgear2^S|cffa335ee|Hitem:140906:5429:130222::::::110:257::5:4:3516:1808:1487:3528:::|h[Ring~`of~`Exclusive~`Servitude]|h|r^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [807]
-			"18:10:25 - Comm received:^1^Sresponse^T^N1^N3^N2^SShietnorunes-Illidan^N3^T^Silvl^N902.9375^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:137527::::::::110:250::35:3:3418:1557:3337:::|h[Polished~`Jade~`Chestguard]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [808]
-			"18:10:25 - Comm received:^1^Sresponse^T^N1^N4^N2^SShietnorunes-Illidan^N3^T^Silvl^N902.9375^Sresponse^SPASS^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:133634:5428:::::::110:250::34:3:3418:1557:3337:::|h[Grasping~`Tentacle~`Loop]|h|r^Sgear2^S|cffa335ee|Hitem:147766:5428:::::::110:250::3:3:3572:1487:3336:::|h[Band~`of~`Dark~`Millennia]|h|r^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [809]
-			"18:10:26 - LootFrame:OnRoll (1) (4) (Response:) (Mainspec/Best in Slot)", -- [810]
-			"18:10:26 - CreateResponse (1) (|cffa335ee|Hitem:140832::::::::110:72::5:3:3516:1497:3336:::|h[Heart of Frost]|h|r) (900) (4) () (nil) (Artifact Relic)", -- [811]
-			"18:10:27 - Comm received:^1^Sresponse^T^N1^N1^N2^SCometstorm-Illidan^N3^T^Silvl^N903.1875^Sresponse^N4^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:140832::::::::110:64::5:3:3516:1487:3528:::|h[Heart~`of~`Frost]|h|r^Sgear2^S|cffa335ee|Hitem:140833::::::::110:64::5:3:3516:1487:3528:::|h[Sundered~`Comet]|h|r^t^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [812]
-			"18:10:27 - Comm received:^1^Sresponse^T^N1^N4^N2^SMarketfreshe-Illidan^N3^T^Silvl^N887.5625^Sresponse^N1^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:134525:5423:::::::110:105::35:3:3418:1532:3337:::|h[Seal~`of~`the~`Nazjatar~`Empire]|h|r^Sgear2^S|cffa335ee|Hitem:140024::::::::110:105::25:3:1824:1542:3337:::|h[Ley-Charged~`Band]|h|r^t^t^^ (from:) (Marketfreshe) (distri:) (RAID)", -- [813]
-			"18:10:27 - Comm received:^1^Sresponse^T^N1^N1^N2^SCenzic-Illidan^N3^T^Silvl^N907.875^Sresponse^N1^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:139259::::::::110:251::6:2:1806:1502:::|h[Cube~`of~`Malice]|h|r^Sgear2^S|cffa335ee|Hitem:139259::::::::110:251::6:2:1806:1502:::|h[Cube~`of~`Malice]|h|r^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [814]
-			"18:10:27 - Comm received:^1^Sresponse^T^N1^N1^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sresponse^N2^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [815]
-			"18:10:28 - Comm received:^1^Sresponse^T^N1^N3^N2^SMadmartigàn-Illidan^N3^T^Silvl^N900^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138351::::::::110:72::5:3:3516:1487:3528:::|h[Chestplate~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^N2^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [816]
-			"18:10:29 - Comm received:^1^Sresponse^T^N1^N2^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:134437::::::::110:257::35:3:3417:1552:3337:::|h[Harrowing~`Soulspun~`Bracers]|h|r^Sresponse^SPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [817]
-			"18:10:30 - Comm received:^1^Sresponse^T^N1^N2^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:146792::130221::::::110:63::43:4:3573:1808:1567:3337:::|h[Vileweave~`Cuffs]|h|r^Sresponse^SPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [818]
-			"18:10:31 - Comm received:^1^Sresponse^T^N1^N1^N2^SNadzieja-Illidan^N3^T^Silvl^N902.625^Sresponse^N1^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:140832::::::::110:64::5:3:3516:1487:3528:::|h[Heart~`of~`Frost]|h|r^Sgear2^S|cffa335ee|Hitem:137340::::::::110:64::16:3:3418:1542:3528:::|h[Crystalline~`Energies]|h|r^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [819]
-			"18:10:32 - Comm received:^1^Sresponse^T^N1^N3^N2^SCenzic-Illidan^N3^T^Silvl^N907.875^Sdiff^N-20^Sgear1^S|cffa335ee|Hitem:138349::::::::110:251::5:3:3516:1517:3337:::|h[Dreadwyrm~`Breastplate]|h|r^Sresponse^N2^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [820]
-			"18:10:32 - Comm received:^1^Sresponse^T^N1^N4^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sresponse^SPASS^Sdiff^N-25^Sgear1^S|cffff8000|Hitem:132452:5430:130248::::::110:63:::2:1811:3530:::|h[Sephuz's~`Secret]|h|r^Sgear2^S|cffa335ee|Hitem:140895:5430:::::::110:63::5:3:3516:1512:3337:::|h[Spellblade's~`Gemmed~`Signet]|h|r^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [821]
-			"18:10:33 - Comm received:^1^Sresponse^T^N1^N3^N2^SDvldocdk-Illidan^N3^T^Silvl^N905.375^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:134135::::::::110:251::43:3:3573:1547:3336:::|h[Rockbound~`Chestguard]|h|r^Sresponse^N1^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [822]
-			"18:10:34 - Comm received:^1^Sresponse^T^N1^N4^N2^SBeallz-Illidan^N3^T^Silvl^N903.625^Sresponse^SPASS^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:137533:5427:::::::110:269::16:3:3418:1547:3336:::|h[Ring~`of~`Minute~`Mirrors]|h|r^Sgear2^S|cffa335ee|Hitem:147767:5427:::::::110:269::3:3:3572:1482:3528:::|h[Coral~`Band~`of~`the~`Abyss]|h|r^t^t^^ (from:) (Beallz) (distri:) (RAID)", -- [823]
-			"18:10:34 - Comm received:^1^Sresponse^T^N1^N4^N2^SCenzic-Illidan^N3^T^Silvl^N907.875^Sresponse^SPASS^Sdiff^N-25^Sgear1^S|cffff8000|Hitem:137223:5429:130222::::::110:251:::3:3529:3530:1811:::|h[Seal~`of~`Necrofantasia]|h|r^Sgear2^S|cffa335ee|Hitem:147767:5429:130246::::::110:251::3:4:3572:1808:1497:3337:::|h[Coral~`Band~`of~`the~`Abyss]|h|r^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [824]
-			"18:10:35 - Comm received:^1^Sresponse^T^N1^N1^N2^SDjpurge-Illidan^N3^T^Silvl^N899.5625^Sresponse^N1^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [825]
-			"18:10:35 - Comm received:^1^Sresponse^T^N1^N1^N2^SSwîftmender-Illidan^N3^T^Silvl^N885.625^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:140833::::::::110:105::3:3:3514:1472:3528:::|h[Sundered~`Comet]|h|r^Sresponse^N4^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [826]
-			"18:10:35 - Comm received:^1^Sresponse^T^N1^N4^N2^SMadmartigàn-Illidan^N3^T^Silvl^N900^Sresponse^N2^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140896:5428:::::::110:72::5:3:3516:1487:3528:::|h[Ring~`of~`Braided~`Stems]|h|r^Sgear2^S|cffa335ee|Hitem:140895:5428:130220::::::110:72::5:4:3516:1808:1487:3528:::|h[Spellblade's~`Gemmed~`Signet]|h|r^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [827]
-			"18:10:36 - Comm received:^1^Sresponse^T^N1^N4^N2^SSwîftmender-Illidan^N3^T^Silvl^N885.625^Sresponse^N4^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:140895:5429:::::::110:105::3:3:3514:1482:3336:::|h[Spellblade's~`Gemmed~`Signet]|h|r^Sgear2^S|cffa335ee|Hitem:140897:5429:::::::110:105::4:3:3521:1467:3336:::|h[Ring~`of~`the~`Scoured~`Clan]|h|r^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [828]
-			"18:10:36 - LootFrame:OnRoll (1) (PASS) (Response:) (Pass)", -- [829]
-			"18:10:36 - CreateResponse (2) (|cffa335ee|Hitem:140850::::::::110:72::5:3:3516:1487:3528:::|h[Bracers of Harnessed Flame]|h|r) (890) (PASS) (INVTYPE_WRIST) (nil) (Cloth)", -- [830]
-			"18:10:36 - GetPlayersGear (140850) (INVTYPE_WRIST)", -- [831]
-			"18:10:36 - Comm received:^1^Sresponse^T^N1^N2^N2^SCometstorm-Illidan^N3^T^Silvl^N903.1875^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140886::::::::110:64::5:3:3516:1487:3528:::|h[Woven~`Lasher~`Tendril~`Bracers]|h|r^Sresponse^SPASS^t^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [832]
-			"18:10:36 - Comm received:^1^Sresponse^T^N1^N4^N2^SDjpurge-Illidan^N3^T^Silvl^N899.5625^Sresponse^SPASS^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:140895:5429:::::::110:263::3:3:3514:1507:3337:::|h[Spellblade's~`Gemmed~`Signet]|h|r^Sgear2^S|cffa335ee|Hitem:140897:5429:::::::110:263::5:3:3517:1497:3336:::|h[Ring~`of~`the~`Scoured~`Clan]|h|r^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [833]
-			"18:10:37 - Comm received:^1^Sresponse^T^N1^N1^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sresponse^N2^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [834]
-			"18:10:40 - Comm received:^1^Sresponse^T^N1^N2^N2^SNadzieja-Illidan^N3^T^Silvl^N902.625^Sdiff^N-20^Sgear1^S|cffa335ee|Hitem:133614::::::::110:64::34:3:3418:1562:3337:::|h[Frost-Stricken~`Cuffs]|h|r^Sresponse^SPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [835]
-			"18:10:40 - Comm received:^1^Sresponse^T^N1^N4^N2^SNadzieja-Illidan^N3^T^Silvl^N902.625^Sresponse^SPASS^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:134533:5428:::::::110:64::35:4:3418:42:1557:3337:::|h[Ring~`of~`Looming~`Menace]|h|r^Sgear2^S|cffa335ee|Hitem:133637:5428:::::::110:64::34:3:3417:1562:3337:::|h[Utgarde~`Royal~`Signet]|h|r^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [836]
-			"18:10:41 - Comm received:^1^Sresponse^T^N1^N4^N2^SDvldocdk-Illidan^N3^T^Silvl^N905.375^Sresponse^SPASS^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140897:5427:::::::110:251::43:3:3573:1517:3337:::|h[Ring~`of~`the~`Scoured~`Clan]|h|r^Sgear2^S|cffa335ee|Hitem:140896:5427:130219::::::110:251::5:4:3516:1808:1487:3528:::|h[Ring~`of~`Braided~`Stems]|h|r^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [837]
-			"18:10:41 - Comm received:^1^Sresponse^T^N1^N3^N2^SReinhärt-Illidan^N3^T^Silvl^N908.9375^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140913::::::::110:73::5:3:3517:1497:3336:::|h[Breastplate~`of~`the~`Remembered~`King]|h|r^Sresponse^SPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [838]
-			"18:10:42 - LootFrame:OnRoll (1) (PASS) (Response:) (Pass)", -- [839]
-			"18:10:42 - CreateResponse (4) (|cffa335ee|Hitem:140895::::::::110:72::5:3:3516:1487:3528:::|h[Spellblade's Gemmed Signet]|h|r) (890) (PASS) (INVTYPE_FINGER) (nil) (Miscellaneous)", -- [840]
-			"18:10:42 - GetPlayersGear (140895) (INVTYPE_FINGER)", -- [841]
-			"18:10:42 - Comm received:^1^Sresponse^T^N1^N4^N2^SReinhärt-Illidan^N3^T^Silvl^N908.9375^Sresponse^SPASS^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:140897:5428:::::::110:73::5:3:3517:1497:3336:::|h[Ring~`of~`the~`Scoured~`Clan]|h|r^Sgear2^S|cffa335ee|Hitem:147766:5428:::::::110:73::3:3:3572:1482:3528:::|h[Band~`of~`Dark~`Millennia]|h|r^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [842]
-			"18:10:42 - Comm received:^1^Sresponse^T^N1^N4^N2^SCometstorm-Illidan^N3^T^Silvl^N903.1875^Sresponse^SPASS^Sdiff^N0^Sgear1^S|cffff8000|Hitem:132410:5428:130248::::::110:64:::3:3529:3530:1811:::|h[Shard~`of~`the~`Exodar]|h|r^Sgear2^S|cffa335ee|Hitem:133637:5428:::::::110:64::33:3:3418:1542:3528:::|h[Utgarde~`Royal~`Signet]|h|r^t^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [843]
-			"18:10:49 - Comm received:^1^Sresponse^T^N1^N1^N2^SBeallz-Illidan^N3^T^Silvl^N903.625^Sresponse^N3^t^t^^ (from:) (Beallz) (distri:) (RAID)", -- [844]
-			"18:11:06 - Comm received:^1^Sresponse^T^N1^N4^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sresponse^SPASS^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:142520:5428:::::::110:102::5:3:3468:1512:3337:::|h[Ring~`of~`Ascended~`Glory]|h|r^Sgear2^S|cffa335ee|Hitem:140897:5428:::::::110:102::5:3:3517:1517:3337:::|h[Ring~`of~`the~`Scoured~`Clan]|h|r^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [845]
-			"18:11:12 - Comm received:^1^Svote^T^N1^N3^N2^SDvldocdk-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [846]
-			"18:11:18 - Comm received:^1^Sawarded^T^N1^N3^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [847]
-			"18:11:18 - Comm received:^1^Shistory^T^N1^SDvldocdk-Illidan^N2^T^SmapID^N1530^Sdate^S13/06/17^Sclass^SDEATHKNIGHT^SgroupSize^N20^Svotes^N1^Stime^S20:11:28^SitemReplaced1^S|cffa335ee|Hitem:134135::::::::110:251::43:3:3573:1547:3336:::|h[Rockbound~`Chestguard]|h|r^Sinstance^SThe~`Nighthold-Heroic^Sresponse^SMainspec/Need^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:140877::::::::110:72::5:4:3516:1808:1497:3336:::|h[Captain's~`Parade~`Breastplate]|h|r^Sboss^SSpellblade~`Aluriel^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^SresponseID^N1^SisAwardReason^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [848]
-			"18:11:46 - Comm received:^1^Svote^T^N1^N4^N2^SSwîftmender-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [849]
-			"18:11:57 - Comm received:^1^Svote^T^N1^N4^N2^SSwîftmender-Illidan^N3^N1^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [850]
-			"18:13:41 - Comm received:^1^Scandidates^T^N1^T^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SMember^t^SZilorin-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N101^Sclass^SDEMONHUNTER^Senchanter^B^Srank^SRaider^t^SColonferal-Illidan^T^Srole^SDAMAGER^Sclass^SDRUID^Srank^S^t^SJimrando-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SRaider^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^SDjpurge-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SSHAMAN^Srank^SOfficer~`Alt^t^SGrimuhs-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N761^Sclass^SPRIEST^Senchanter^B^Srank^SRaider^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Sclass^SWARLOCK^Srank^S^t^SLuthanen-Illidan^T^Srole^SHEALER^Senchant_lvl^N756^Sclass^SPALADIN^Senchanter^B^Srank^SMember^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^SCenzic-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N778^Sclass^SDEATHKNIGHT^Senchanter^B^Srank^SRaider^t^SCometstorm-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SALT.^t^SFuryisthy-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEMONHUNTER^Srank^SMember^t^SNadzieja-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SBeallz-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SMONK^Srank^SRaider^t^SMadmartigàn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer~`Alt^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SSwîftmender-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SOfficer~`Alt^t^SShietnorunes-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SALT.^t^SMarketfreshe-Illidan^T^Srole^SHEALER^Sclass^SDRUID^Srank^S^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [851]
-			"18:13:53 - Comm received:^1^Sawarded^T^N1^N4^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [852]
-			"18:13:53 - Comm received:^1^Shistory^T^N1^SFuryisthy-Illidan^N2^T^SmapID^N1530^Sdate^S13/06/17^Sclass^SDEMONHUNTER^SgroupSize^N19^Svotes^N0^Stime^S20:14:03^SitemReplaced1^S|cffa335ee|Hitem:134526:5427:::::::110:577::34:3:3418:1542:3528:::|h[Gnawed~`Thumb~`Ring]|h|r^Sinstance^SThe~`Nighthold-Heroic^Sresponse^SMainspec/Best~`in~`Slot^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:140895::::::::110:72::5:3:3516:1487:3528:::|h[Spellblade's~`Gemmed~`Signet]|h|r^Sboss^SSpellblade~`Aluriel^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^SresponseID^N4^SitemReplaced2^S|cffff8000|Hitem:137038:5427:130247::::::110:577:::2:1811:3530:::|h[Anger~`of~`the~`Half-Giants]|h|r^SisAwardReason^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [853]
-			"18:13:58 - Comm received:^1^SverTest^T^N1^S2.3.0^t^^ (from:) (Roivon) (distri:) (GUILD)", -- [854]
-			"18:14:22 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Lanféar) (distri:) (GUILD)", -- [855]
-			"18:14:23 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [856]
-			"18:14:23 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [857]
-			"18:14:23 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [858]
-			"18:14:27 - Comm received:^1^Sawarded^T^N1^N2^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [859]
-			"18:14:27 - Comm received:^1^Shistory^T^N1^SNadzieja-Illidan^N2^T^SmapID^N1530^Sdate^S13/06/17^Sclass^SMAGE^SgroupSize^N19^Svotes^N0^Stime^S20:14:36^SitemReplaced1^S|cffa335ee|Hitem:133614::::::::110:64::34:3:3418:1562:3337:::|h[Frost-Stricken~`Cuffs]|h|r^Sinstance^SThe~`Nighthold-Heroic^Sresponse^SDisenchant^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:140850::::::::110:72::5:3:3516:1487:3528:::|h[Bracers~`of~`Harnessed~`Flame]|h|r^Sboss^SSpellblade~`Aluriel^Scolor^T^N1^N1^N2^N1^N3^N1^N4^N1^t^SresponseID^N1^SisAwardReason^B^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [860]
-			"18:14:39 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Lanféar) (distri:) (GUILD)", -- [861]
-			"18:14:41 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [862]
-			"18:14:42 - Comm received:^1^SlootAck^T^N1^SLanféar-Illidan^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [863]
-			"18:14:42 - Comm received:^1^Sresponse^T^N1^N1^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [864]
-			"18:14:42 - Comm received:^1^Sresponse^T^N1^N3^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:138319::::::::110:257::6:3:3518:1502:3528:::|h[Purifier's~`Cassock]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [865]
-			"18:14:43 - Comm received:^1^SverTest^T^N1^S2.3.0^t^^ (from:) (Dvldocshaman) (distri:) (GUILD)", -- [866]
-			"18:14:44 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [867]
-			"18:14:46 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [868]
-			"18:14:46 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [869]
-			"18:14:46 - Comm received:^1^Sawarded^T^N1^N1^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [870]
-			"18:14:47 - Comm received:^1^Ssession_end^T^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [871]
-			"18:14:49 - Comm received:^1^Shistory^T^N1^SCenzic-Illidan^N2^T^SmapID^N1530^Sdate^S13/06/17^Sclass^SDEATHKNIGHT^SgroupSize^N19^Svotes^N0^Stime^S20:14:49^SitemReplaced1^S|cffa335ee|Hitem:139259::::::::110:251::6:2:1806:1502:::|h[Cube~`of~`Malice]|h|r^Sinstance^SThe~`Nighthold-Heroic^Sresponse^SMainspec/Need^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:140832::::::::110:72::5:3:3516:1497:3336:::|h[Heart~`of~`Frost]|h|r^Sboss^SSpellblade~`Aluriel^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^SresponseID^N1^SitemReplaced2^S|cffa335ee|Hitem:139259::::::::110:251::6:2:1806:1502:::|h[Cube~`of~`Malice]|h|r^SisAwardReason^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [872]
-			"18:14:51 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [873]
-			"18:14:53 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [874]
-			"18:14:55 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [875]
-			"18:15:16 - Comm received:^1^SlootAck^T^N1^SLanféar-Illidan^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [876]
-			"18:15:16 - !!!! We got an lootAck without having lootTable!!!!", -- [877]
-			"18:15:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SLanféar-Illidan^N3^T^Silvl^N902.4375^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [878]
-			"18:15:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SLanféar-Illidan^N3^T^Silvl^N902.4375^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:138319::::::::110:256::6:3:3518:1502:3528:::|h[Purifier's~`Cassock]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [879]
-			"18:15:19 - Comm received:^1^Sresponse^T^N1^N4^N2^SLanféar-Illidan^N3^T^Silvl^N902.4375^Sresponse^SPASS^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:145185:5429:::::::110:256::43:3:3573:1547:3336:::|h[Cruel~`Combatant's~`Ring]|h|r^Sgear2^S|cffa335ee|Hitem:140906:5429:130222::::::110:256::5:4:3516:1808:1487:3528:::|h[Ring~`of~`Exclusive~`Servitude]|h|r^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [880]
-			"18:15:20 - Comm received:^1^Sresponse^T^N1^N2^N2^SLanféar-Illidan^N3^T^Silvl^N902.4375^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:132436::::::::110:256:::2:3459:3530:::|h[Skjoldr,~`Sanctuary~`of~`Ivagont]|h|r^Sresponse^SPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [881]
-			"18:15:21 - ResetReconnectRequest", -- [882]
-			"06/13/17", -- [883]
-			"18:15:34 - Logged In", -- [884]
-			"18:15:34 - ML initialized!", -- [885]
-			"18:15:36 - Cometstorm-Illidan (2.3.4) (nil)", -- [886]
-			"18:15:37 - Event: (PLAYER_ENTERING_WORLD)", -- [887]
-			"18:15:37 - GetML()", -- [888]
-			"18:15:37 - LootMethod =  (master)", -- [889]
-			"18:15:37 - MasterLooter =  (Madmartigàn-Illidan)", -- [890]
-			"18:15:37 - Resetting council as we have a new ML!", -- [891]
-			"18:15:37 - Player relog...", -- [892]
-			"18:15:38 - GetPlayersGuildRank()", -- [893]
-			"18:15:38 - Found Guild Rank: ALT.", -- [894]
-			"18:15:38 - Timer MLdb_check passed", -- [895]
-			"18:15:38 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Cometstorm) (distri:) (GUILD)", -- [896]
-			"18:15:48 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (WHISPER)", -- [897]
-			"18:15:48 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [898]
-			"18:15:55 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [899]
-			"18:16:04 - Comm received:^1^SverTest^T^N1^S2.3.0^t^^ (from:) (Roivon) (distri:) (GUILD)", -- [900]
-			"18:16:15 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [901]
-			"18:16:15 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [902]
-			"18:16:32 - Comm received:^1^Scandidates^T^N1^T^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SMember^t^SZilorin-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N101^Sclass^SDEMONHUNTER^Senchanter^B^Srank^SRaider^t^SColonferal-Illidan^T^Srole^SDAMAGER^Sclass^SDRUID^Srank^S^t^SJimrando-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SRaider^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^SDjpurge-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SSHAMAN^Srank^SOfficer~`Alt^t^SGrimuhs-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N761^Sclass^SPRIEST^Senchanter^B^Srank^SRaider^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Sclass^SWARLOCK^Srank^S^t^SLuthanen-Illidan^T^Srole^SHEALER^Senchant_lvl^N756^Sclass^SPALADIN^Senchanter^B^Srank^SMember^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^SCenzic-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N778^Sclass^SDEATHKNIGHT^Senchanter^B^Srank^SRaider^t^SCometstorm-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SALT.^t^SFuryisthy-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEMONHUNTER^Srank^SMember^t^SNadzieja-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SBeallz-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SMONK^Srank^SRaider^t^SMadmartigàn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer~`Alt^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SSwîftmender-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SOfficer~`Alt^t^SShietnorunes-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SALT.^t^SMarketfreshe-Illidan^T^Srole^SHEALER^Sclass^SDRUID^Srank^S^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^t^t^^ (from:) (Madmartigàn) (distri:) (WHISPER)", -- [903]
-			"18:16:36 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (WHISPER)", -- [904]
-			"18:16:38 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (WHISPER)", -- [905]
-			"18:16:38 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [906]
-			"18:16:43 - Comm received:^1^Scandidates^T^N1^T^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SMember^t^SZilorin-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N101^Sclass^SDEMONHUNTER^Senchanter^B^Srank^SRaider^t^SColonferal-Illidan^T^Srole^SDAMAGER^Sclass^SDRUID^Srank^S^t^SJimrando-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SRaider^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^SDjpurge-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SSHAMAN^Srank^SOfficer~`Alt^t^SGrimuhs-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N761^Sclass^SPRIEST^Senchanter^B^Srank^SRaider^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Sclass^SWARLOCK^Srank^S^t^SLuthanen-Illidan^T^Srole^SHEALER^Senchant_lvl^N756^Sclass^SPALADIN^Senchanter^B^Srank^SMember^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^SCenzic-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N778^Sclass^SDEATHKNIGHT^Senchanter^B^Srank^SRaider^t^SCometstorm-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SALT.^t^SFuryisthy-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEMONHUNTER^Srank^SMember^t^SNadzieja-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SBeallz-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SMONK^Srank^SRaider^t^SMadmartigàn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer~`Alt^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SSwîftmender-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SOfficer~`Alt^t^SShietnorunes-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SALT.^t^SMarketfreshe-Illidan^T^Srole^SHEALER^Sclass^SDRUID^Srank^S^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^t^t^^ (from:) (Madmartigàn) (distri:) (WHISPER)", -- [907]
-			"18:21:16 - Comm received:^1^SlootTable^T^N1^T^N1^T^SequipLoc^S^SlootSlot^N1^Slink^S|cffa335ee|Hitem:140845::::::::110:72::5:3:3516:1487:3528:::|h[Glistening~`Meteorite~`Shard]|h|r^SsubType^SArtifact~`Relic^Srelic^SHoly^Sawarded^b^Sname^SGlistening~`Meteorite~`Shard^Stexture^N237196^Silvl^N890^Sboe^b^Sbagged^b^Squality^N4^t^N2^T^SequipLoc^SINVTYPE_TRINKET^SlootSlot^N2^Slink^S|cffa335ee|Hitem:140803::::::::110:72::5:3:3516:1492:3336:::|h[Etraeus'~`Celestial~`Map]|h|r^SsubType^SMiscellaneous^Srelic^b^Sawarded^b^Sname^SEtraeus'~`Celestial~`Map^Stexture^N1519351^Silvl^N895^Sboe^b^Sbagged^b^Squality^N4^t^N3^T^SequipLoc^S^SlootSlot^N3^Slink^S|cffa335ee|Hitem:143573::::::::110:72::5:1:570:::|h[Gauntlets~`of~`the~`Foreseen~`Protector]|h|r^SsubType^SJunk^Stoken^SHandsSlot^Srelic^b^Sawarded^b^Sname^SGauntlets~`of~`the~`Foreseen~`Protector^Stexture^N132963^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^N4^T^SequipLoc^S^SlootSlot^N4^Slink^S|cffa335ee|Hitem:143567::::::::110:72::5:1:570:::|h[Gauntlets~`of~`the~`Foreseen~`Vanquisher]|h|r^SsubType^SJunk^Stoken^SHandsSlot^Srelic^b^Sawarded^b^Sname^SGauntlets~`of~`the~`Foreseen~`Vanquisher^Stexture^N132963^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [908]
-			"18:21:16 - NewRelicAutopassCheck (|cffa335ee|Hitem:140845::::::::110:72::5:3:3516:1487:3528:::|h[Glistening Meteorite Shard]|h|r) (Holy)", -- [909]
-			"18:21:16 - Autopassed on:  (|cffa335ee|Hitem:140845::::::::110:72::5:3:3516:1487:3528:::|h[Glistening Meteorite Shard]|h|r)", -- [910]
-			"18:21:16 - CreateResponse (1) (|cffa335ee|Hitem:140845::::::::110:72::5:3:3516:1487:3528:::|h[Glistening Meteorite Shard]|h|r) (890) (AUTOPASS) () (nil) (Artifact Relic)", -- [911]
-			"18:21:16 - Autopassed on:  (|cffa335ee|Hitem:143573::::::::110:72::5:1:570:::|h[Gauntlets of the Foreseen Protector]|h|r)", -- [912]
-			"18:21:16 - CreateResponse (3) (|cffa335ee|Hitem:143573::::::::110:72::5:1:570:::|h[Gauntlets of the Foreseen Protector]|h|r) (110) (AUTOPASS) () (nil) (Junk)", -- [913]
-			"18:21:16 - GetPlayersGear (143573) ()", -- [914]
-			"18:21:16 - LootFrame (GetFrame())", -- [915]
-			"18:21:16 - LootFrame:Start()", -- [916]
-			"18:21:16 - GetEntry(1)", -- [917]
-			"18:21:16 - GetEntry(2)", -- [918]
-			"18:21:16 - Comm received:^1^SlootAck^T^N1^SNadzieja-Illidan^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [919]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SNadzieja-Illidan^N3^T^Silvl^N902.625^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [920]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SNadzieja-Illidan^N3^T^Silvl^N902.625^Sdiff^N-785^Sgear1^S|cffa335ee|Hitem:138309::::::::110:64::3:3:3514:1492:3337:::|h[Gloves~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [921]
-			"18:21:16 - Comm received:^1^SlootAck^T^N1^SDadizzle-Illidan^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [922]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [923]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:138327:5444:::::::110:102::5:3:3516:1497:3336:::|h[Gloves~`of~`the~`Astral~`Warden]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [924]
-			"18:21:16 - Comm received:^1^SlootAck^T^N1^SMadmartigàn-Illidan^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [925]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SMadmartigàn-Illidan^N3^T^Silvl^N900^Sresponse^SAUTOPASS^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [926]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N4^N2^SMadmartigàn-Illidan^N3^T^Silvl^N900^Sdiff^N-785^Sgear1^S|cffa335ee|Hitem:140879::::::::110:72::5:3:3444:1492:3336:::|h[Gauntlets~`of~`Fractured~`Eons]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [927]
-			"18:21:16 - Comm received:^1^SlootAck^T^N1^SReinhärt-Illidan^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [928]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SReinhärt-Illidan^N3^T^Silvl^N908.9375^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [929]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N4^N2^SReinhärt-Illidan^N3^T^Silvl^N908.9375^Sdiff^N-830^Sgear1^S|cffff8000|Hitem:137108::::::::110:73:::2:1811:3455:::|h[Kakushan's~`Stormscale~`Gauntlets]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [930]
-			"18:21:16 - Comm received:^1^SextraUtilData^T^N1^SShietnorunes-Illidan^N2^T^Sforged^N8^Spawn^T^N1^T^Sequipped^N0^Snew^N0^t^N2^T^Sequipped^N134.079^Snew^N0^t^N3^T^Sequipped^N584.286^Snew^N0^t^N4^T^Sequipped^N584.286^Snew^N0^t^t^SspecID^N250^Straits^N51^Slegend^N2^Ssockets^N1^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [931]
-			"18:21:16 - Comm received:^1^SlootAck^T^N1^SShietnorunes-Illidan^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [932]
-			"18:21:16 - Comm received:^1^SlootAck^T^N1^STelgina-Illidan^t^^ (from:) (Telgina) (distri:) (RAID)", -- [933]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N1^N2^STelgina-Illidan^N3^T^Silvl^N907.875^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [934]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N4^N2^STelgina-Illidan^N3^T^Silvl^N907.875^Sdiff^N-800^Sgear1^S|cffa335ee|Hitem:140869::::::::110:253::6:3:3445:1507:3336:::|h[Sterilizer's~`Insulated~`Gauntlets]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [935]
-			"18:21:16 - Comm received:^1^SextraUtilData^T^N1^SDjpurge-Illidan^N2^T^Sforged^N4^Spawn^T^N1^T^Sequipped^N0^Snew^N0^t^N2^T^Sequipped^N394.94^Snew^N0^t^N3^T^Sequipped^N579.204^Snew^N0^t^N4^T^Sequipped^N579.204^Snew^N0^t^t^SspecID^N263^Straits^N37^Slegend^N2^Ssockets^N1^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [936]
-			"18:21:16 - Comm received:^1^SlootAck^T^N1^SJimrando-Illidan^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [937]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SJimrando-Illidan^N3^T^Silvl^N908.0625^Sresponse^SAUTOPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [938]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N4^N2^SJimrando-Illidan^N3^T^Silvl^N908.0625^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:138354::::::::110:72::5:4:3516:42:1497:3336:::|h[Gauntlets~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [939]
-			"18:21:16 - Comm received:^1^SextraUtilData^T^N1^SMadmartigàn-Illidan^N2^T^Sforged^N6^Spawn^T^N1^T^Sequipped^N0^Snew^N0^t^N2^T^Sequipped^N559.763^Snew^N0^t^N3^T^Sequipped^N547.112^Snew^N0^t^N4^T^Sequipped^N547.112^Snew^N0^t^t^SspecID^N72^Straits^N52^Slegend^N2^Ssockets^N3^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [940]
-			"18:21:16 - Comm received:^1^SlootAck^T^N1^SMarketfreshe-Illidan^t^^ (from:) (Marketfreshe) (distri:) (RAID)", -- [941]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SMarketfreshe-Illidan^N3^T^Silvl^N887.5625^Sresponse^SAUTOPASS^t^t^^ (from:) (Marketfreshe) (distri:) (RAID)", -- [942]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SMarketfreshe-Illidan^N3^T^Silvl^N887.5625^Sdiff^N-785^Sgear1^S|cffa335ee|Hitem:139202::::::::110:105::5:3:1805:1517:3337:::|h[Dreamsculptor's~`Gloves]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Marketfreshe) (distri:) (RAID)", -- [943]
-			"18:21:16 - Comm received:^1^SlootAck^T^N1^SFuryisthy-Illidan^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [944]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SFuryisthy-Illidan^N3^T^Silvl^N906.5625^Sresponse^SAUTOPASS^t^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [945]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SFuryisthy-Illidan^N3^T^Silvl^N906.5625^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:137480::::::::110:577::33:3:3418:1542:3528:::|h[Guileful~`Intruder~`Handguards]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [946]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N4^N2^SFuryisthy-Illidan^N3^T^Silvl^N906.5625^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:137480::::::::110:577::33:3:3418:1542:3528:::|h[Guileful~`Intruder~`Handguards]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [947]
-			"18:21:16 - Comm received:^1^SlootAck^T^N1^SCometstorm-Illidan^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [948]
-			"18:21:16 - Comm received:^1^SlootAck^T^N1^SLuthanen-Illidan^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [949]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SLuthanen-Illidan^N3^T^Silvl^N904.1875^Sdiff^N-765^Sgear1^S|cffa335ee|Hitem:138353::::::::110:65::3:3:3514:1472:1813:::|h[Gauntlets~`of~`the~`Highlord]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [950]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N4^N2^SLuthanen-Illidan^N3^T^Silvl^N904.1875^Sdiff^N-765^Sgear1^S|cffa335ee|Hitem:138353::::::::110:65::3:3:3514:1472:1813:::|h[Gauntlets~`of~`the~`Highlord]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [951]
-			"18:21:16 - Comm received:^1^SlootAck^T^N1^SGrimuhs-Illidan^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [952]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SCometstorm-Illidan^N3^T^Silvl^N903.1875^Sresponse^SAUTOPASS^t^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [953]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SCometstorm-Illidan^N3^T^Silvl^N903.1875^Sdiff^N-810^Sgear1^S|cffa335ee|Hitem:138309::::::::110:64::5:3:3516:1517:3337:::|h[Gloves~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [954]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SGrimuhs-Illidan^N3^T^Silvl^N903.3125^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:140888::::::::110:258::5:3:3444:1497:3337:::|h[Scorpid~`Handler's~`Gloves]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [955]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N4^N2^SGrimuhs-Illidan^N3^T^Silvl^N903.3125^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:140888::::::::110:258::5:3:3444:1497:3337:::|h[Scorpid~`Handler's~`Gloves]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [956]
-			"18:21:16 - Comm received:^1^SlootAck^T^N1^SBeallz-Illidan^t^^ (from:) (Beallz) (distri:) (RAID)", -- [957]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SBeallz-Illidan^N3^T^Silvl^N903.625^Sresponse^SAUTOPASS^t^t^^ (from:) (Beallz) (distri:) (RAID)", -- [958]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N4^N2^SBeallz-Illidan^N3^T^Silvl^N903.625^Sdiff^N-830^Sgear1^S|cffff8000|Hitem:137057::::::::110:269:::2:3459:3530:::|h[Hidden~`Master's~`Forbidden~`Touch]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Beallz) (distri:) (RAID)", -- [959]
-			"18:21:16 - Comm received:^1^SlootAck^T^N1^SThenex-Illidan^t^^ (from:) (Thenex) (distri:) (RAID)", -- [960]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [961]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:140888::::::::110:63::6:4:3445:40:1497:3528:::|h[Scorpid~`Handler's~`Gloves]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [962]
-			"18:21:16 - Comm received:^1^SlootAck^T^N1^SLanféar-Illidan^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [963]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SLanféar-Illidan^N3^T^Silvl^N902.4375^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138310::::::::110:256::5:4:3516:40:1487:3528:::|h[Purifier's~`Gloves]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [964]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N4^N2^SLanféar-Illidan^N3^T^Silvl^N902.4375^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138310::::::::110:256::5:4:3516:40:1487:3528:::|h[Purifier's~`Gloves]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [965]
-			"18:21:16 - Comm received:^1^SlootAck^T^N1^SSwîftmender-Illidan^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [966]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SSwîftmender-Illidan^N3^T^Silvl^N885.625^Sresponse^SAUTOPASS^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [967]
-			"18:21:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SSwîftmender-Illidan^N3^T^Silvl^N885.625^Sdiff^N-775^Sgear1^S|cffa335ee|Hitem:140863::::::::110:105::5:3:3444:1482:3528:::|h[Temporally~`Displaced~`Gloves]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [968]
-			"18:21:16 - Comm received:^1^SlootAck^T^N1^SCenzic-Illidan^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [969]
-			"18:21:17 - Comm received:^1^Sresponse^T^N1^N1^N2^SCenzic-Illidan^N3^T^Silvl^N908.625^Sresponse^SAUTOPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [970]
-			"18:21:17 - Comm received:^1^Sresponse^T^N1^N3^N2^SCenzic-Illidan^N3^T^Silvl^N908.625^Sdiff^N-800^Sgear1^S|cffa335ee|Hitem:140907::::::::110:251::5:3:3516:1507:3337:::|h[Bridgebreaker~`Gauntlets]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [971]
-			"18:21:17 - Comm received:^1^SlootAck^T^N1^SDjpurge-Illidan^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [972]
-			"18:21:17 - Comm received:^1^Sresponse^T^N1^N1^N2^SDjpurge-Illidan^N3^T^Silvl^N899.5625^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [973]
-			"18:21:17 - Comm received:^1^Sresponse^T^N1^N4^N2^SDjpurge-Illidan^N3^T^Silvl^N899.5625^Sdiff^N-785^Sgear1^S|cffa335ee|Hitem:134209::::::::110:263::33:3:3417:1557:3336:::|h[Tideskorn~`Gauntlets]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [974]
-			"18:21:19 - Comm received:^1^Sresponse^T^N1^N2^N2^SNadzieja-Illidan^N3^T^Silvl^N902.625^Sresponse^SPASS^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:136750::::::::110:64::43:4:3573:604:1547:3336:::|h[Vault~`Guardian's~`Talisman]|h|r^Sgear2^S|cffff8000|Hitem:144259::::::::110:64:::2:1811:3530:::|h[Kil'jaeden's~`Burning~`Wish]|h|r^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [975]
-			"18:21:22 - Comm received:^1^Sresponse^T^N1^N1^N2^SLuthanen-Illidan^N3^T^Silvl^N904.1875^Sresponse^SPASS^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:133685::::::::110:65::16:3:3418:1542:3528:::|h[Odyn's~`Boon]|h|r^Sgear2^S|cffa335ee|Hitem:140843::::::::110:65::6:3:3445:1497:3528:::|h[Flickering~`Timespark]|h|r^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [976]
-			"18:21:22 - Comm received:^1^Sresponse^T^N1^N2^N2^SReinhärt-Illidan^N3^T^Silvl^N908.9375^Sresponse^SPASS^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:140790::::::::110:73::6:3:3445:1502:3336:::|h[Claw~`of~`the~`Crystalline~`Scorpid]|h|r^Sgear2^S|cffa335ee|Hitem:144745::130246::::::110:73::43:5:3573:1808:604:1532:3337:::|h[Cruel~`Gladiator's~`Accolade~`of~`Victory]|h|r^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [977]
-			"18:21:22 - Comm received:^1^Sresponse^T^N1^N1^N2^SGrimuhs-Illidan^N3^T^Silvl^N903.3125^Sresponse^SPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [978]
-			"18:21:22 - Comm received:^1^Sresponse^T^N1^N2^N2^SFuryisthy-Illidan^N3^T^Silvl^N906.5625^Sresponse^SPASS^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:141482::::::::110:577::43:3:3573:1507:3337:::|h[Unstable~`Arcanocrystal]|h|r^Sgear2^S|cffa335ee|Hitem:133644::::::::110:577::43:3:3573:1552:3337:::|h[Memento~`of~`Angerboda]|h|r^t^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [979]
-			"18:21:22 - Comm received:^1^Sresponse^T^N1^N2^N2^SLuthanen-Illidan^N3^T^Silvl^N904.1875^Sresponse^SPASS^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:140793::::::::110:65::6:3:3445:1522:3337:::|h[Perfectly~`Preserved~`Cake]|h|r^Sgear2^S|cffa335ee|Hitem:128709::::::::110:65::13:3:689:601:679:::|h[Darkmoon~`Deck:~`Hellfire]|h|r^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [980]
-			"18:21:22 - Comm received:^1^Sresponse^T^N1^N3^N2^SMadmartigàn-Illidan^N3^T^Silvl^N900^Sdiff^N-785^Sgear1^S|cffa335ee|Hitem:140879::::::::110:72::5:3:3444:1492:3336:::|h[Gauntlets~`of~`Fractured~`Eons]|h|r^Sresponse^N4^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [981]
-			"18:21:22 - Comm received:^1^Sresponse^T^N1^N2^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sresponse^SPASS^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:140809::::::::110:63::5:3:3517:1497:3336:::|h[Whispers~`in~`the~`Dark]|h|r^Sgear2^S|cffa335ee|Hitem:140792::130221::::::110:63::5:4:3444:1808:1482:3528:::|h[Erratic~`Metronome]|h|r^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [982]
-			"18:21:23 - LootFrame:OnRoll (2) (PASS) (Response:) (Pass)", -- [983]
-			"18:21:23 - CreateResponse (4) (|cffa335ee|Hitem:143567::::::::110:72::5:1:570:::|h[Gauntlets of the Foreseen Vanquisher]|h|r) (110) (PASS) () (nil) (Junk)", -- [984]
-			"18:21:23 - GetPlayersGear (143567) ()", -- [985]
-			"18:21:23 - Comm received:^1^Sresponse^T^N1^N2^N2^SSwîftmender-Illidan^N3^T^Silvl^N885.625^Sresponse^N4^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:134292::::::::110:105::43:4:3573:603:1567:3337:::|h[Nightborne~`Researcher's~`Phial]|h|r^Sgear2^S|cffa335ee|Hitem:140805::::::::110:105::3:4:3514:1808:1482:3336:::|h[Ephemeral~`Paradox]|h|r^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [986]
-			"18:21:23 - Comm received:^1^Sresponse^T^N1^N4^N2^SCometstorm-Illidan^N3^T^Silvl^N903.1875^Sdiff^N-810^Sgear1^S|cffa335ee|Hitem:138309::::::::110:64::5:3:3516:1517:3337:::|h[Gloves~`of~`Everburning~`Knowledge]|h|r^Sresponse^SPASS^t^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [987]
-			"18:21:23 - Comm received:^1^Sresponse^T^N1^N1^N2^SShietnorunes-Illidan^N3^T^Silvl^N902.9375^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [988]
-			"18:21:24 - Comm received:^1^Sresponse^T^N1^N2^N2^SGrimuhs-Illidan^N3^T^Silvl^N903.3125^Sresponse^SPASS^Sdiff^N30^Sgear1^S|cffa335ee|Hitem:140809::::::::110:258::3:3:3515:1512:3337:::|h[Whispers~`in~`the~`Dark]|h|r^Sgear2^S|cffa335ee|Hitem:141482::::::::110:258::3:3:3466:1477:3336:::|h[Unstable~`Arcanocrystal]|h|r^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [989]
-			"18:21:24 - Comm received:^1^Sresponse^T^N1^N4^N2^SNadzieja-Illidan^N3^T^Silvl^N902.625^Sdiff^N-785^Sgear1^S|cffa335ee|Hitem:138309::::::::110:64::3:3:3514:1492:3337:::|h[Gloves~`of~`Everburning~`Knowledge]|h|r^Sresponse^N3^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [990]
-			"18:21:24 - Comm received:^1^Sresponse^T^N1^N2^N2^SShietnorunes-Illidan^N3^T^Silvl^N902.9375^Sresponse^SPASS^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:136736::::::::110:250::43:4:3573:604:1542:3528:::|h[Badge~`of~`the~`Wardens]|h|r^Sgear2^S|cffa335ee|Hitem:144745::::::::110:250::43:4:3573:607:1517:3336:::|h[Cruel~`Gladiator's~`Accolade~`of~`Victory]|h|r^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [991]
-			"18:21:24 - Comm received:^1^Sresponse^T^N1^N2^N2^STelgina-Illidan^N3^T^Silvl^N907.875^Sresponse^SPASS^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:139329::130222::::::110:253::6:4:1806:1808:1502:3528:::|h[Bloodthirsty~`Instinct]|h|r^Sgear2^S|cffa335ee|Hitem:140806::130222::::::110:253::3:4:3514:1808:1472:3528:::|h[Convergence~`of~`Fates]|h|r^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [992]
-			"18:21:25 - Comm received:^1^Sresponse^T^N1^N4^N2^SMarketfreshe-Illidan^N3^T^Silvl^N887.5625^Sdiff^N-785^Sgear1^S|cffa335ee|Hitem:139202::::::::110:105::5:3:1805:1517:3337:::|h[Dreamsculptor's~`Gloves]|h|r^Sresponse^N1^t^t^^ (from:) (Marketfreshe) (distri:) (RAID)", -- [993]
-			"18:21:25 - Comm received:^1^Sresponse^T^N1^N2^N2^SMadmartigàn-Illidan^N3^T^Silvl^N900^Sresponse^SPASS^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:142166::::::::110:72::43:3:3573:1487:3336:::|h[Ethereal~`Urn]|h|r^Sgear2^S|cffff8000|Hitem:144259::::::::110:72:::2:3459:3530:::|h[Kil'jaeden's~`Burning~`Wish]|h|r^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [994]
-			"18:21:26 - Comm received:^1^Sresponse^T^N1^N4^N2^SSwîftmender-Illidan^N3^T^Silvl^N885.625^Sdiff^N-775^Sgear1^S|cffa335ee|Hitem:140863::::::::110:105::5:3:3444:1482:3528:::|h[Temporally~`Displaced~`Gloves]|h|r^Sresponse^N4^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [995]
-			"18:21:26 - Comm received:^1^Sresponse^T^N1^N3^N2^STelgina-Illidan^N3^T^Silvl^N907.875^Sdiff^N-800^Sgear1^S|cffa335ee|Hitem:140869::::::::110:253::6:3:3445:1507:3336:::|h[Sterilizer's~`Insulated~`Gauntlets]|h|r^Sresponse^SPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [996]
-			"18:21:26 - Comm received:^1^Soffline_timer^T^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [997]
-			"18:21:27 - Comm received:^1^Sresponse^T^N1^N2^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sresponse^N2^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:140809::::::::110:102::5:4:3517:41:1502:3336:::|h[Whispers~`in~`the~`Dark]|h|r^Sgear2^S|cffa335ee|Hitem:140792::::::::110:102::5:3:3444:1482:3528:::|h[Erratic~`Metronome]|h|r^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [998]
-			"18:21:27 - Comm received:^1^Sresponse^T^N1^N3^N2^SShietnorunes-Illidan^N3^T^Silvl^N902.9375^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:134509::::::::110:250::33:3:3417:1542:3336:::|h[Fists~`of~`the~`Legion]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [999]
-			"18:21:27 - Comm received:^1^Sresponse^T^N1^N4^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:140888::::::::110:63::6:4:3445:40:1497:3528:::|h[Scorpid~`Handler's~`Gloves]|h|r^Sresponse^N2^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1000]
-			"18:21:28 - LootFrame:OnRoll (1) (PASS) (Response:) (Pass)", -- [1001]
-			"18:21:28 - CreateResponse (2) (|cffa335ee|Hitem:140803::::::::110:72::5:3:3516:1492:3336:::|h[Etraeus' Celestial Map]|h|r) (895) (PASS) (INVTYPE_TRINKET) (nil) (Miscellaneous)", -- [1002]
-			"18:21:28 - GetPlayersGear (140803) (INVTYPE_TRINKET)", -- [1003]
-			"18:21:28 - Comm received:^1^Sresponse^T^N1^N2^N2^SCometstorm-Illidan^N3^T^Silvl^N903.1875^Sresponse^SPASS^Sdiff^N10^Sgear1^S|cffff8000|Hitem:144259::::::::110:64:::2:1811:3530:::|h[Kil'jaeden's~`Burning~`Wish]|h|r^Sgear2^S|cffa335ee|Hitem:140792::::::::110:64::5:3:3444:1482:3528:::|h[Erratic~`Metronome]|h|r^t^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [1004]
-			"18:21:29 - Comm received:^1^Sresponse^T^N1^N3^N2^SReinhärt-Illidan^N3^T^Silvl^N908.9375^Sdiff^N-830^Sgear1^S|cffff8000|Hitem:137108::::::::110:73:::2:1811:3455:::|h[Kakushan's~`Stormscale~`Gauntlets]|h|r^Sresponse^SPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1005]
-			"18:21:30 - Comm received:^1^Sresponse^T^N1^N2^N2^SCenzic-Illidan^N3^T^Silvl^N908.625^Sresponse^SPASS^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:133642::130222::::::110:251::34:4:3418:1808:1542:3528:::|h[Horn~`of~`Valor]|h|r^Sgear2^S|cffa335ee|Hitem:140806::::::::110:251::3:3:3514:1477:3336:::|h[Convergence~`of~`Fates]|h|r^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1006]
-			"18:21:30 - Comm received:^1^Sresponse^T^N1^N4^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:138327:5444:::::::110:102::5:3:3516:1497:3336:::|h[Gloves~`of~`the~`Astral~`Warden]|h|r^Sresponse^SPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1007]
-			"18:21:31 - Comm received:^1^Sresponse^T^N1^N4^N2^SCenzic-Illidan^N3^T^Silvl^N908.625^Sdiff^N-800^Sgear1^S|cffa335ee|Hitem:140907::::::::110:251::5:3:3516:1507:3337:::|h[Bridgebreaker~`Gauntlets]|h|r^Sresponse^N3^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1008]
-			"18:21:37 - Comm received:^1^Sresponse^T^N1^N3^N2^SJimrando-Illidan^N3^T^Silvl^N908.0625^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:138354::::::::110:72::5:4:3516:42:1497:3336:::|h[Gauntlets~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^N3^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [1009]
-			"18:21:38 - Comm received:^1^Sresponse^T^N1^N3^N2^SBeallz-Illidan^N3^T^Silvl^N903.625^Sdiff^N-830^Sgear1^S|cffff8000|Hitem:137057::::::::110:269:::2:3459:3530:::|h[Hidden~`Master's~`Forbidden~`Touch]|h|r^Sresponse^N3^t^t^^ (from:) (Beallz) (distri:) (RAID)", -- [1010]
-			"18:21:40 - Comm received:^1^Sresponse^T^N1^N4^N2^SShietnorunes-Illidan^N3^T^Silvl^N902.9375^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:134509::::::::110:250::33:3:3417:1542:3336:::|h[Fists~`of~`the~`Legion]|h|r^Sresponse^N3^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1011]
-			"18:21:40 - Comm received:^1^Sresponse^T^N1^N2^N2^SJimrando-Illidan^N3^T^Silvl^N908.0625^Sresponse^SPASS^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:140806::::::::110:72::5:3:3516:1512:3337:::|h[Convergence~`of~`Fates]|h|r^Sgear2^S|cffa335ee|Hitem:140808::::::::110:72::3:3:3515:1487:3336:::|h[Draught~`of~`Souls]|h|r^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [1012]
-			"18:21:41 - Comm received:^1^Sresponse^T^N1^N2^N2^SMarketfreshe-Illidan^N3^T^Silvl^N887.5625^Sresponse^N1^Sdiff^N35^Sgear1^S|cffa335ee|Hitem:141482::::::::110:105::3:1:1472:::|h[Unstable~`Arcanocrystal]|h|r^Sgear2^S|cffa335ee|Hitem:134292::::::::110:105::43:5:3573:1808:603:1557:3337:::|h[Nightborne~`Researcher's~`Phial]|h|r^t^t^^ (from:) (Marketfreshe) (distri:) (RAID)", -- [1013]
-			"18:21:53 - Comm received:^1^Sresponse^T^N1^N2^N2^SBeallz-Illidan^N3^T^Silvl^N903.625^Sresponse^N1^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:142166::::::::110:269::23:2:3454:1472:::|h[Ethereal~`Urn]|h|r^Sgear2^S|cffa335ee|Hitem:140791::::::::110:269::6:3:3445:1497:3528:::|h[Royal~`Dagger~`Haft]|h|r^t^t^^ (from:) (Beallz) (distri:) (RAID)", -- [1014]
-			"18:22:02 - Comm received:^1^Sresponse^T^N1^N1^N2^SLanféar-Illidan^N3^T^Silvl^N902.4375^Sresponse^N2^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:142187::::::::110:256::43:3:3573:1497:3528:::|h[Virtuous~`Directive]|h|r^Sgear2^S|cffa335ee|Hitem:141519::::::::110:256::43:3:3573:1497:3336:::|h[Pillaged~`Titan~`Disc]|h|r^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1015]
-			"18:22:07 - Comm received:^1^Sresponse^T^N1^N2^N2^SDjpurge-Illidan^N3^T^Silvl^N899.5625^Sresponse^N3^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:137537::130247::::::110:263::16:4:3418:1808:1542:3528:::|h[Tirathon's~`Betrayal]|h|r^Sgear2^S|cffa335ee|Hitem:140806::::::::110:263::3:3:3514:1472:3528:::|h[Convergence~`of~`Fates]|h|r^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1016]
-			"18:22:16 - Comm received:^1^Sresponse^T^N1^N2^N2^SLanféar-Illidan^N3^T^Silvl^N902.4375^Sresponse^STIMEOUT^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:140798::::::::110:256::5:3:3516:1487:3528:::|h[Icon~`of~`Rot]|h|r^Sgear2^S|cffa335ee|Hitem:144480::::::::110:256::43:4:3573:40:1532:3528:::|h[Dreadstone~`of~`Endless~`Shadows]|h|r^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1017]
-			"18:22:17 - Comm received:^1^Sresponse^T^N1^N3^N2^SDjpurge-Illidan^N3^T^Silvl^N899.5625^Sdiff^N-785^Sgear1^S|cffa335ee|Hitem:134209::::::::110:263::33:3:3417:1557:3336:::|h[Tideskorn~`Gauntlets]|h|r^Sresponse^STIMEOUT^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1018]
-			"18:22:23 - Comm received:^1^Sawarded^T^N1^N1^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1019]
-			"18:22:23 - Comm received:^1^Shistory^T^N1^SLanféar-Illidan^N2^T^SmapID^N1530^Sdate^S13/06/17^Sclass^SPRIEST^SgroupSize^N19^Svotes^N0^Stime^S20:22:33^SitemReplaced1^S|cffa335ee|Hitem:142187::::::::110:256::43:3:3573:1497:3528:::|h[Virtuous~`Directive]|h|r^Sinstance^SThe~`Nighthold-Heroic^Sresponse^SOffspec^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:140845::::::::110:72::5:3:3516:1487:3528:::|h[Glistening~`Meteorite~`Shard]|h|r^Sboss^SStar~`Augur~`Etraeus^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^SresponseID^N2^SitemReplaced2^S|cffa335ee|Hitem:141519::::::::110:256::43:3:3573:1497:3336:::|h[Pillaged~`Titan~`Disc]|h|r^SisAwardReason^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1020]
-			"18:22:37 - Comm received:^1^Sawarded^T^N1^N2^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1021]
-			"18:22:37 - Comm received:^1^Shistory^T^N1^SBeallz-Illidan^N2^T^SmapID^N1530^Sdate^S13/06/17^Sclass^SMONK^SgroupSize^N19^Svotes^N0^Stime^S20:22:47^SitemReplaced1^S|cffa335ee|Hitem:142166::::::::110:269::23:2:3454:1472:::|h[Ethereal~`Urn]|h|r^Sinstance^SThe~`Nighthold-Heroic^Sresponse^SMainspec/Need^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:140803::::::::110:72::5:3:3516:1492:3336:::|h[Etraeus'~`Celestial~`Map]|h|r^Sboss^SStar~`Augur~`Etraeus^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^SresponseID^N1^SitemReplaced2^S|cffa335ee|Hitem:140791::::::::110:269::6:3:3445:1497:3528:::|h[Royal~`Dagger~`Haft]|h|r^SisAwardReason^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1022]
-			"18:23:20 - Comm received:^1^Sawarded^T^N1^N3^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1023]
-			"18:23:20 - Comm received:^1^Shistory^T^N1^SMadmartigàn-Illidan^N2^T^SmapID^N1530^Sdate^S13/06/17^Sclass^SWARRIOR^SgroupSize^N19^Svotes^N0^Stime^S20:23:30^StierToken^SHandsSlot^SitemReplaced1^S|cffa335ee|Hitem:140879::::::::110:72::5:3:3444:1492:3336:::|h[Gauntlets~`of~`Fractured~`Eons]|h|r^Sinstance^SThe~`Nighthold-Heroic^Sresponse^SMainspec/Best~`in~`Slot^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:143573::::::::110:72::5:1:570:::|h[Gauntlets~`of~`the~`Foreseen~`Protector]|h|r^Sboss^SStar~`Augur~`Etraeus^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^SresponseID^N4^SisAwardReason^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1024]
-			"18:23:29 - Comm received:^1^Sawarded^T^N1^N4^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1025]
-			"18:23:29 - Comm received:^1^Ssession_end^T^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1026]
-			"18:23:29 - Comm received:^1^Shistory^T^N1^SSwîftmender-Illidan^N2^T^SmapID^N1530^Sdate^S13/06/17^Sclass^SDRUID^SgroupSize^N19^Svotes^N0^Stime^S20:23:38^StierToken^SHandsSlot^SitemReplaced1^S|cffa335ee|Hitem:140863::::::::110:105::5:3:3444:1482:3528:::|h[Temporally~`Displaced~`Gloves]|h|r^Sinstance^SThe~`Nighthold-Heroic^Sresponse^SMainspec/Best~`in~`Slot^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:143567::::::::110:72::5:1:570:::|h[Gauntlets~`of~`the~`Foreseen~`Vanquisher]|h|r^Sboss^SStar~`Augur~`Etraeus^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^SresponseID^N4^SisAwardReason^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1027]
-			"18:24:41 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Lanféar) (distri:) (GUILD)", -- [1028]
-			"18:24:41 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1029]
-			"18:24:41 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1030]
-			"18:24:41 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [1031]
-			"18:25:52 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Cannibal) (distri:) (GUILD)", -- [1032]
-			"18:27:11 - Comm received:^1^SverTest^T^N1^S2.3.0^t^^ (from:) (Roivon) (distri:) (GUILD)", -- [1033]
-			"18:28:34 - Comm received:^1^SverTest^T^N1^S2.3.0^t^^ (from:) (Zefarion) (distri:) (GUILD)", -- [1034]
-			"18:29:38 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1035]
-			"18:29:38 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1036]
-			"18:29:38 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [1037]
-			"18:29:52 - Comm received:^1^Scandidates^T^N1^T^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SMember^t^SZilorin-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N101^Sclass^SDEMONHUNTER^Senchanter^B^Srank^SRaider^t^SColonferal-Illidan^T^Srole^SDAMAGER^Sclass^SDRUID^Srank^S^t^SJimrando-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SRaider^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^SDjpurge-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SSHAMAN^Srank^SOfficer~`Alt^t^SGrimuhs-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N761^Sclass^SPRIEST^Senchanter^B^Srank^SRaider^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Sclass^SWARLOCK^Srank^S^t^SZefarion-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SLuthanen-Illidan^T^Srole^SHEALER^Senchant_lvl^N756^Sclass^SPALADIN^Senchanter^B^Srank^SMember^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^SCenzic-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N778^Sclass^SDEATHKNIGHT^Senchanter^B^Srank^SRaider^t^SCometstorm-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SALT.^t^SFuryisthy-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEMONHUNTER^Srank^SMember^t^SNadzieja-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SBeallz-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SMONK^Srank^SRaider^t^SMadmartigàn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer~`Alt^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SSwîftmender-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SOfficer~`Alt^t^SShietnorunes-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SALT.^t^SMarketfreshe-Illidan^T^Srole^SHEALER^Sclass^SDRUID^Srank^S^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1038]
-			"18:30:42 - Comm received:^1^SverTest^T^N1^S2.3.0^t^^ (from:) (Zefarion) (distri:) (GUILD)", -- [1039]
-			"18:30:42 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1040]
-			"18:30:42 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1041]
-			"18:30:42 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [1042]
-			"18:32:35 - Comm received:^1^SlootTable^T^N1^T^N1^T^SequipLoc^SINVTYPE_SHOULDER^SlootSlot^N1^Slink^S|cffa335ee|Hitem:140883::::::::110:72::5:4:3516:42:1497:3336:::|h[Shoulderguard~`of~`the~`Eclipse]|h|r^SsubType^SPlate^Srelic^b^Sawarded^b^Sname^SShoulderguard~`of~`the~`Eclipse^Stexture^N1357450^Silvl^N900^Sboe^b^Sbagged^b^Squality^N4^t^N2^T^SequipLoc^S^SlootSlot^N2^Slink^S|cffa335ee|Hitem:140839::::::::110:72::5:3:3516:1507:3337:::|h[Parasitic~`Spore]|h|r^SsubType^SArtifact~`Relic^Srelic^SLife^Sawarded^b^Sname^SParasitic~`Spore^Stexture^N132371^Silvl^N910^Sboe^b^Sbagged^b^Squality^N4^t^N3^T^SequipLoc^SINVTYPE_TRINKET^SlootSlot^N3^Slink^S|cffa335ee|Hitem:140801::::::::110:72::5:3:3516:1492:3336:::|h[Fury~`of~`the~`Burning~`Sky]|h|r^SsubType^SMiscellaneous^Srelic^b^Sawarded^b^Sname^SFury~`of~`the~`Burning~`Sky^Stexture^N1029580^Silvl^N895^Sboe^b^Sbagged^b^Squality^N4^t^N4^T^SequipLoc^S^SlootSlot^N4^Slink^S|cffa335ee|Hitem:140822::::::::110:72::5:3:3516:1487:3528:::|h[Breath~`of~`Dusk]|h|r^SsubType^SArtifact~`Relic^Srelic^SShadow^Sawarded^b^Sname^SBreath~`of~`Dusk^Stexture^N136201^Silvl^N890^Sboe^b^Sbagged^b^Squality^N4^t^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1043]
-			"18:32:35 - Autopassed on:  (|cffa335ee|Hitem:140883::::::::110:72::5:4:3516:42:1497:3336:::|h[Shoulderguard of the Eclipse]|h|r)", -- [1044]
-			"18:32:35 - CreateResponse (1) (|cffa335ee|Hitem:140883::::::::110:72::5:4:3516:42:1497:3336:::|h[Shoulderguard of the Eclipse]|h|r) (900) (AUTOPASS) (INVTYPE_SHOULDER) (nil) (Plate)", -- [1045]
-			"18:32:35 - GetPlayersGear (140883) (INVTYPE_SHOULDER)", -- [1046]
-			"18:32:35 - NewRelicAutopassCheck (|cffa335ee|Hitem:140839::::::::110:72::5:3:3516:1507:3337:::|h[Parasitic Spore]|h|r) (Life)", -- [1047]
-			"18:32:35 - Autopassed on:  (|cffa335ee|Hitem:140839::::::::110:72::5:3:3516:1507:3337:::|h[Parasitic Spore]|h|r)", -- [1048]
-			"18:32:35 - CreateResponse (2) (|cffa335ee|Hitem:140839::::::::110:72::5:3:3516:1507:3337:::|h[Parasitic Spore]|h|r) (910) (AUTOPASS) () (nil) (Artifact Relic)", -- [1049]
-			"18:32:35 - NewRelicAutopassCheck (|cffa335ee|Hitem:140822::::::::110:72::5:3:3516:1487:3528:::|h[Breath of Dusk]|h|r) (Shadow)", -- [1050]
-			"18:32:35 - Autopassed on:  (|cffa335ee|Hitem:140822::::::::110:72::5:3:3516:1487:3528:::|h[Breath of Dusk]|h|r)", -- [1051]
-			"18:32:35 - CreateResponse (4) (|cffa335ee|Hitem:140822::::::::110:72::5:3:3516:1487:3528:::|h[Breath of Dusk]|h|r) (890) (AUTOPASS) () (nil) (Artifact Relic)", -- [1052]
-			"18:32:35 - LootFrame:Start()", -- [1053]
-			"18:32:35 - Comm received:^1^SlootAck^T^N1^SMadmartigàn-Illidan^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1054]
-			"18:32:35 - Comm received:^1^Sresponse^T^N1^N2^N2^SMadmartigàn-Illidan^N3^T^Silvl^N897.5^Sresponse^SAUTOPASS^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1055]
-			"18:32:35 - Comm received:^1^SextraUtilData^T^N1^SMadmartigàn-Illidan^N2^T^Sforged^N4^Spawn^T^N1^T^Sequipped^N567.409^Snew^N537.02^t^N2^T^Sequipped^N0^Snew^N0^t^N3^T^Sequipped^N559.763^Snew^N160.897^t^N4^T^Sequipped^N0^Snew^N0^t^t^SspecID^N72^Straits^N52^Slegend^N2^Ssockets^N3^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1056]
-			"18:32:35 - Comm received:^1^SlootAck^T^N1^SNadzieja-Illidan^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1057]
-			"18:32:35 - Comm received:^1^Sresponse^T^N1^N1^N2^SNadzieja-Illidan^N3^T^Silvl^N902.625^Sdiff^N-40^Sgear1^S|cffff8000|Hitem:144260::::::::110:64:::2:3459:3530:::|h[Ice~`Time]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1058]
-			"18:32:35 - Comm received:^1^Sresponse^T^N1^N2^N2^SNadzieja-Illidan^N3^T^Silvl^N902.625^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1059]
-			"18:32:35 - Comm received:^1^Sresponse^T^N1^N4^N2^SNadzieja-Illidan^N3^T^Silvl^N902.625^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1060]
-			"18:32:35 - Comm received:^1^SlootAck^T^N1^STelgina-Illidan^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1061]
-			"18:32:35 - Comm received:^1^Sresponse^T^N1^N1^N2^STelgina-Illidan^N3^T^Silvl^N907.875^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138347:5441:::::::110:253::5:3:3516:1487:3528:::|h[Eagletalon~`Spaulders]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1062]
-			"18:32:35 - Comm received:^1^SlootAck^T^N1^SDadizzle-Illidan^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1063]
-			"18:32:35 - Comm received:^1^Sresponse^T^N1^N1^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N-40^Sgear1^S|cffff8000|Hitem:144295:5883:::::::110:102:::3:3529:3530:1811:::|h[Lady~`and~`the~`Child]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1064]
-			"18:32:35 - Comm received:^1^SlootAck^T^N1^SDjpurge-Illidan^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1065]
-			"18:32:35 - Comm received:^1^Sresponse^T^N1^N4^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1066]
-			"18:32:35 - Comm received:^1^Sresponse^T^N1^N1^N2^SDjpurge-Illidan^N3^T^Silvl^N899.5625^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:138348::::::::110:263::5:3:3516:1497:3336:::|h[Pauldrons~`of~`Shackled~`Elements]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1067]
-			"18:32:35 - Comm received:^1^Sresponse^T^N1^N4^N2^SDjpurge-Illidan^N3^T^Silvl^N899.5625^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1068]
-			"18:32:35 - Comm received:^1^Sresponse^T^N1^N4^N2^STelgina-Illidan^N3^T^Silvl^N907.875^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1069]
-			"18:32:35 - Comm received:^1^SlootAck^T^N1^SBeallz-Illidan^t^^ (from:) (Beallz) (distri:) (RAID)", -- [1070]
-			"18:32:35 - Comm received:^1^SextraUtilData^T^N1^SDjpurge-Illidan^N2^T^Sforged^N4^Spawn^T^N1^T^Sequipped^N597.531^Snew^N0^t^N2^T^Sequipped^N0^Snew^N0^t^N3^T^Sequipped^N394.94^Snew^N233.532^t^N4^T^Sequipped^N0^Snew^N0^t^t^SspecID^N263^Straits^N37^Slegend^N2^Ssockets^N1^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1071]
-			"18:32:35 - Comm received:^1^Sresponse^T^N1^N1^N2^SBeallz-Illidan^N3^T^Silvl^N903.625^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138337:5883:::::::110:269::5:3:3516:1487:3528:::|h[Pauldrons~`of~`Enveloped~`Dissonance]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Beallz) (distri:) (RAID)", -- [1072]
-			"18:32:35 - Comm received:^1^Sresponse^T^N1^N4^N2^SBeallz-Illidan^N3^T^Silvl^N903.625^Sresponse^SAUTOPASS^t^t^^ (from:) (Beallz) (distri:) (RAID)", -- [1073]
-			"18:32:35 - Comm received:^1^SlootAck^T^N1^SReinhärt-Illidan^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1074]
-			"18:32:35 - Comm received:^1^SlootAck^T^N1^SThenex-Illidan^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1075]
-			"18:32:35 - Comm received:^1^SlootAck^T^N1^SLuthanen-Illidan^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1076]
-			"18:32:35 - Comm received:^1^Sresponse^T^N1^N4^N2^SLuthanen-Illidan^N3^T^Silvl^N904.1875^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1077]
-			"18:32:35 - Comm received:^1^SlootAck^T^N1^SJimrando-Illidan^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [1078]
-			"18:32:35 - Comm received:^1^Sresponse^T^N1^N2^N2^SJimrando-Illidan^N3^T^Silvl^N908.0625^Sresponse^SAUTOPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [1079]
-			"18:32:35 - Comm received:^1^Sresponse^T^N1^N2^N2^SReinhärt-Illidan^N3^T^Silvl^N908.9375^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1080]
-			"18:32:35 - Comm received:^1^Sresponse^T^N1^N1^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138321::130221::::::110:63::5:4:3516:1808:1487:3528:::|h[Mantle~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1081]
-			"18:32:35 - Comm received:^1^Sresponse^T^N1^N2^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1082]
-			"18:32:35 - Comm received:^1^Sresponse^T^N1^N4^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1083]
-			"18:32:35 - Comm received:^1^SextraUtilData^T^N1^SShietnorunes-Illidan^N2^T^Sforged^N8^Spawn^T^N1^T^Sequipped^N687.784^Snew^N690.469^t^N2^T^Sequipped^N0^Snew^N0^t^N3^T^Sequipped^N134.079^Snew^N41.959^t^N4^T^Sequipped^N0^Snew^N0^t^t^SspecID^N250^Straits^N51^Slegend^N2^Ssockets^N1^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1084]
-			"18:32:35 - Comm received:^1^SlootAck^T^N1^SShietnorunes-Illidan^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1085]
-			"18:32:35 - Comm received:^1^SlootAck^T^N1^SFuryisthy-Illidan^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [1086]
-			"18:32:35 - Comm received:^1^Sresponse^T^N1^N1^N2^SFuryisthy-Illidan^N3^T^Silvl^N906.5625^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:140864::::::::110:577::5:4:3516:43:1487:3528:::|h[Mantle~`of~`the~`Torn~`Sky]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [1087]
-			"18:32:35 - Comm received:^1^Sresponse^T^N1^N2^N2^SFuryisthy-Illidan^N3^T^Silvl^N906.5625^Sresponse^SAUTOPASS^t^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [1088]
-			"18:32:35 - Comm received:^1^SlootAck^T^N1^SCometstorm-Illidan^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [1089]
-			"18:32:35 - Comm received:^1^Sresponse^T^N1^N1^N2^SCometstorm-Illidan^N3^T^Silvl^N903.1875^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140853:5441:::::::110:64::6:3:3445:1497:3528:::|h[Chaos-Scarred~`Mantle]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [1090]
-			"18:32:35 - Comm received:^1^Sresponse^T^N1^N2^N2^SCometstorm-Illidan^N3^T^Silvl^N903.1875^Sresponse^SAUTOPASS^t^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [1091]
-			"18:32:35 - Comm received:^1^Sresponse^T^N1^N4^N2^SCometstorm-Illidan^N3^T^Silvl^N903.1875^Sresponse^SAUTOPASS^t^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [1092]
-			"18:32:35 - Comm received:^1^SlootAck^T^N1^SCenzic-Illidan^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1093]
-			"18:32:35 - Comm received:^1^SlootAck^T^N1^SLanféar-Illidan^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1094]
-			"18:32:35 - Comm received:^1^Sresponse^T^N1^N1^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:138322:5442:130222::::::110:257::5:4:3516:1808:1492:3336:::|h[Purifier's~`Mantle]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1095]
-			"18:32:36 - Comm received:^1^Sresponse^T^N1^N2^N2^SCenzic-Illidan^N3^T^Silvl^N908.625^Sresponse^SAUTOPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1096]
-			"18:32:36 - Comm received:^1^SlootAck^T^N1^SSwîftmender-Illidan^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [1097]
-			"18:32:36 - Comm received:^1^Sresponse^T^N1^N1^N2^SSwîftmender-Illidan^N3^T^Silvl^N887.1875^Sdiff^N40^Sgear1^S|cffa335ee|Hitem:146865::::::::110:105::27:3:3394:1522:3528:::|h[Lunarblight~`Mantle]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [1098]
-			"18:32:36 - Comm received:^1^Sresponse^T^N1^N4^N2^SSwîftmender-Illidan^N3^T^Silvl^N887.1875^Sresponse^SAUTOPASS^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [1099]
-			"18:32:37 - Comm received:^1^SlootAck^T^N1^SGrimuhs-Illidan^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1100]
-			"18:32:37 - Comm received:^1^Sresponse^T^N1^N1^N2^SGrimuhs-Illidan^N3^T^Silvl^N903.3125^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:138322:5900:::::::110:258::5:3:3516:1497:3336:::|h[Purifier's~`Mantle]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1101]
-			"18:32:38 - Comm received:^1^Sresponse^T^N1^N3^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sresponse^SPASS^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:140809::::::::110:63::5:3:3517:1497:3336:::|h[Whispers~`in~`the~`Dark]|h|r^Sgear2^S|cffa335ee|Hitem:140792::130221::::::110:63::5:4:3444:1808:1482:3528:::|h[Erratic~`Metronome]|h|r^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1102]
-			"18:32:41 - Comm received:^1^Sresponse^T^N1^N3^N2^SNadzieja-Illidan^N3^T^Silvl^N902.625^Sresponse^SPASS^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:136750::::::::110:64::43:4:3573:604:1547:3336:::|h[Vault~`Guardian's~`Talisman]|h|r^Sgear2^S|cffff8000|Hitem:144259::::::::110:64:::2:1811:3530:::|h[Kil'jaeden's~`Burning~`Wish]|h|r^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1103]
-			"18:32:42 - Comm received:^1^SlootAck^T^N1^SMarketfreshe-Illidan^t^^ (from:) (Marketfreshe) (distri:) (RAID)", -- [1104]
-			"18:32:42 - Comm received:^1^Sresponse^T^N1^N1^N2^SMarketfreshe-Illidan^N3^T^Silvl^N887.5625^Sdiff^N30^Sgear1^S|cffa335ee|Hitem:139206:5883:::::::110:105::5:3:1805:1492:3336:::|h[Otherworldy~`Leather~`Mantle]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Marketfreshe) (distri:) (RAID)", -- [1105]
-			"18:32:42 - Comm received:^1^Sresponse^T^N1^N4^N2^SMarketfreshe-Illidan^N3^T^Silvl^N887.5625^Sresponse^SAUTOPASS^t^t^^ (from:) (Marketfreshe) (distri:) (RAID)", -- [1106]
-			"18:32:44 - Comm received:^1^Sresponse^T^N1^N3^N2^SBeallz-Illidan^N3^T^Silvl^N903.625^Sresponse^SPASS^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:142166::::::::110:269::23:2:3454:1472:::|h[Ethereal~`Urn]|h|r^Sgear2^S|cffa335ee|Hitem:140791::::::::110:269::6:3:3445:1497:3528:::|h[Royal~`Dagger~`Haft]|h|r^t^t^^ (from:) (Beallz) (distri:) (RAID)", -- [1107]
-			"18:32:45 - LootFrame:OnRoll (1) (PASS) (Response:) (Pass)", -- [1108]
-			"18:32:45 - CreateResponse (3) (|cffa335ee|Hitem:140801::::::::110:72::5:3:3516:1492:3336:::|h[Fury of the Burning Sky]|h|r) (895) (PASS) (INVTYPE_TRINKET) (nil) (Miscellaneous)", -- [1109]
-			"18:32:45 - GetPlayersGear (140801) (INVTYPE_TRINKET)", -- [1110]
-			"18:32:45 - Comm received:^1^Sresponse^T^N1^N3^N2^SCometstorm-Illidan^N3^T^Silvl^N903.1875^Sresponse^SPASS^Sdiff^N10^Sgear1^S|cffff8000|Hitem:144259::::::::110:64:::2:1811:3530:::|h[Kil'jaeden's~`Burning~`Wish]|h|r^Sgear2^S|cffa335ee|Hitem:140792::::::::110:64::5:3:3444:1482:3528:::|h[Erratic~`Metronome]|h|r^t^t^^ (from:) (Cometstorm) (distri:) (RAID)", -- [1111]
-			"18:32:45 - Comm received:^1^Soffline_timer^T^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1112]
-			"18:32:45 - Comm received:^1^Sresponse^T^N1^N4^N2^SFuryisthy-Illidan^N3^T^Silvl^N906.5625^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:140823::::::::110:577::5:3:3517:1502:3336:::|h[Warchief's~`Shattered~`Tusk]|h|r^Sresponse^SPASS^t^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [1113]
-			"18:32:46 - Comm received:^1^Sresponse^T^N1^N2^N2^SLuthanen-Illidan^N3^T^Silvl^N904.1875^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:140838::::::::110:65::5:3:3444:1482:1813:::|h[Construct~`Personality~`Sphere]|h|r^Sresponse^N1^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1114]
-			"18:32:46 - Comm received:^1^Sresponse^T^N1^N2^N2^SGrimuhs-Illidan^N3^T^Silvl^N903.3125^Sresponse^SPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1115]
-			"18:32:47 - Comm received:^1^Sresponse^T^N1^N3^N2^SGrimuhs-Illidan^N3^T^Silvl^N903.3125^Sresponse^SPASS^Sdiff^N30^Sgear1^S|cffa335ee|Hitem:140809::::::::110:258::3:3:3515:1512:3337:::|h[Whispers~`in~`the~`Dark]|h|r^Sgear2^S|cffa335ee|Hitem:141482::::::::110:258::3:3:3466:1477:3336:::|h[Unstable~`Arcanocrystal]|h|r^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1116]
-			"18:32:47 - Comm received:^1^Sresponse^T^N1^N2^N2^STelgina-Illidan^N3^T^Silvl^N907.875^Sresponse^N2^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1117]
-			"18:32:47 - Comm received:^1^Sresponse^T^N1^N2^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:142309::::::::110:257::43:3:3573:1522:3337:::|h[Fauna~`Analysis~`Widget]|h|r^Sresponse^SPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1118]
-			"18:32:48 - Comm received:^1^Sresponse^T^N1^N3^N2^SShietnorunes-Illidan^N3^T^Silvl^N902.9375^Sresponse^SPASS^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:136736::::::::110:250::43:4:3573:604:1542:3528:::|h[Badge~`of~`the~`Wardens]|h|r^Sgear2^S|cffa335ee|Hitem:144745::::::::110:250::43:4:3573:607:1517:3336:::|h[Cruel~`Gladiator's~`Accolade~`of~`Victory]|h|r^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1119]
-			"18:32:49 - Comm received:^1^Sresponse^T^N1^N3^N2^SFuryisthy-Illidan^N3^T^Silvl^N906.5625^Sresponse^SPASS^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:141482::::::::110:577::43:3:3573:1507:3337:::|h[Unstable~`Arcanocrystal]|h|r^Sgear2^S|cffa335ee|Hitem:133644::::::::110:577::43:3:3573:1552:3337:::|h[Memento~`of~`Angerboda]|h|r^t^t^^ (from:) (Furyisthy) (distri:) (RAID)", -- [1120]
-			"18:32:49 - Comm received:^1^Sresponse^T^N1^N4^N2^SGrimuhs-Illidan^N3^T^Silvl^N903.3125^Sresponse^SPASS^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:140821::::::::110:258::6:3:3445:1497:3528:::|h[Precipice~`of~`Eternity]|h|r^Sgear2^S|cffa335ee|Hitem:140821::::::::110:258::6:3:3445:1497:3528:::|h[Precipice~`of~`Eternity]|h|r^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1121]
-			"18:32:49 - Comm received:^1^Sresponse^T^N1^N1^N2^SCenzic-Illidan^N3^T^Silvl^N908.625^Sdiff^N-20^Sgear1^S|cffa335ee|Hitem:133631::::::::110:251::33:3:3418:1572:3337:::|h[Pauldrons~`of~`the~`All-Father]|h|r^Sresponse^SPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1122]
-			"18:32:50 - Comm received:^1^Sresponse^T^N1^N3^N2^STelgina-Illidan^N3^T^Silvl^N907.875^Sresponse^SPASS^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:139329::130222::::::110:253::6:4:1806:1808:1502:3528:::|h[Bloodthirsty~`Instinct]|h|r^Sgear2^S|cffa335ee|Hitem:140806::130222::::::110:253::3:4:3514:1808:1472:3528:::|h[Convergence~`of~`Fates]|h|r^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1123]
-			"18:32:50 - Comm received:^1^Sresponse^T^N1^N2^N2^SShietnorunes-Illidan^N3^T^Silvl^N902.9375^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1124]
-			"18:32:52 - Comm received:^1^Sresponse^T^N1^N1^N2^SReinhärt-Illidan^N3^T^Silvl^N908.9375^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138363:5883:::::::110:73::5:3:3516:1487:1813:::|h[Shoulderplates~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^SPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1125]
-			"18:32:53 - Comm received:^1^Sresponse^T^N1^N1^N2^SShietnorunes-Illidan^N3^T^Silvl^N902.9375^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:142201::::::::110:250::35:3:3418:1522:3337:::|h[Mantle~`of~`Conflicted~`Loyalties]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1126]
-			"18:32:54 - Comm received:^1^Sresponse^T^N1^N3^N2^SCenzic-Illidan^N3^T^Silvl^N908.625^Sresponse^SPASS^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:133642::130222::::::110:251::34:4:3418:1808:1542:3528:::|h[Horn~`of~`Valor]|h|r^Sgear2^S|cffa335ee|Hitem:140806::::::::110:251::3:3:3514:1477:3336:::|h[Convergence~`of~`Fates]|h|r^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1127]
-			"18:32:54 - Comm received:^1^Sresponse^T^N1^N1^N2^SMadmartigàn-Illidan^N3^T^Silvl^N897.5^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:147752::::::::110:72::3:3:3572:1482:3528:::|h[Pauldrons~`of~`the~`Engulfing~`Tide]|h|r^Sresponse^N3^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1128]
-			"18:32:56 - Comm received:^1^Sresponse^T^N1^N3^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sresponse^SPASS^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:140805::::::::110:257::6:3:3518:1507:3336:::|h[Ephemeral~`Paradox]|h|r^Sgear2^S|cffa335ee|Hitem:140793::::::::110:257::5:3:3444:1487:3336:::|h[Perfectly~`Preserved~`Cake]|h|r^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1129]
-			"18:32:57 - Comm received:^1^Sresponse^T^N1^N3^N2^SLuthanen-Illidan^N3^T^Silvl^N904.1875^Sresponse^SPASS^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:140793::::::::110:65::6:3:3445:1522:3337:::|h[Perfectly~`Preserved~`Cake]|h|r^Sgear2^S|cffa335ee|Hitem:128709::::::::110:65::13:3:689:601:679:::|h[Darkmoon~`Deck:~`Hellfire]|h|r^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1130]
-			"18:32:57 - Comm received:^1^Sresponse^T^N1^N3^N2^SSwîftmender-Illidan^N3^T^Silvl^N887.1875^Sresponse^SPASS^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:134292::::::::110:105::43:4:3573:603:1567:3337:::|h[Nightborne~`Researcher's~`Phial]|h|r^Sgear2^S|cffa335ee|Hitem:140803::::::::110:105::5:3:3516:1492:3336:::|h[Etraeus'~`Celestial~`Map]|h|r^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [1131]
-			"18:32:58 - Comm received:^1^Sresponse^T^N1^N2^N2^SSwîftmender-Illidan^N3^T^Silvl^N887.1875^Sresponse^N1^Sdiff^N50^Sgear1^S|cffa335ee|Hitem:140838::::::::110:105::5:3:3444:1482:3528:::|h[Construct~`Personality~`Sphere]|h|r^Sgear2^S|cffa335ee|Hitem:146925::::::::110:105::11::::|h[Mature~`Morrowsprout]|h|r^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [1132]
-			"18:32:58 - Comm received:^1^Sresponse^T^N1^N4^N2^SShietnorunes-Illidan^N3^T^Silvl^N902.9375^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:144529::::::::110:250::8:3:3568:1662:3528:::|h[Polished~`Shadowstone]|h|r^Sresponse^N4^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1133]
-			"18:32:58 - Comm received:^1^Sresponse^T^N1^N3^N2^SMadmartigàn-Illidan^N3^T^Silvl^N897.5^Sresponse^SPASS^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:142166::::::::110:72::43:3:3573:1487:3336:::|h[Ethereal~`Urn]|h|r^Sgear2^S|cffff8000|Hitem:144259::::::::110:72:::2:3459:3530:::|h[Kil'jaeden's~`Burning~`Wish]|h|r^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1134]
-			"18:32:58 - Comm received:^1^Sresponse^T^N1^N2^N2^SBeallz-Illidan^N3^T^Silvl^N903.625^Sresponse^N3^t^t^^ (from:) (Beallz) (distri:) (RAID)", -- [1135]
-			"18:32:58 - Comm received:^1^Sresponse^T^N1^N1^N2^SLuthanen-Illidan^N3^T^Silvl^N904.1875^Sdiff^N-40^Sgear1^S|cffff8000|Hitem:137076::::::::110:65:::2:1811:3455:::|h[Obsidian~`Stone~`Spaulders]|h|r^Sresponse^SPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1136]
-			"18:33:00 - Comm received:^1^Sresponse^T^N1^N3^N2^SReinhärt-Illidan^N3^T^Silvl^N908.9375^Sresponse^SPASS^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:140790::::::::110:73::6:3:3445:1502:3336:::|h[Claw~`of~`the~`Crystalline~`Scorpid]|h|r^Sgear2^S|cffa335ee|Hitem:144745::130246::::::110:73::43:5:3573:1808:604:1532:3337:::|h[Cruel~`Gladiator's~`Accolade~`of~`Victory]|h|r^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1137]
-			"18:33:00 - Comm received:^1^Sresponse^T^N1^N3^N2^SDjpurge-Illidan^N3^T^Silvl^N899.5625^Sresponse^SPASS^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:137537::130247::::::110:263::16:4:3418:1808:1542:3528:::|h[Tirathon's~`Betrayal]|h|r^Sgear2^S|cffa335ee|Hitem:140806::::::::110:263::3:3:3514:1472:3528:::|h[Convergence~`of~`Fates]|h|r^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1138]
-			"18:33:00 - Comm received:^1^Sresponse^T^N1^N4^N2^SReinhärt-Illidan^N3^T^Silvl^N908.9375^Sresponse^SPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1139]
-			"18:33:02 - Comm received:^1^Sresponse^T^N1^N4^N2^SMadmartigàn-Illidan^N3^T^Silvl^N897.5^Sresponse^N2^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1140]
-			"18:33:03 - Comm received:^1^Sresponse^T^N1^N4^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sresponse^N2^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1141]
-			"18:33:07 - Comm received:^1^Sresponse^T^N1^N2^N2^SMarketfreshe-Illidan^N3^T^Silvl^N887.5625^Sresponse^SPASS^Sdiff^N35^Sgear1^S|cffa335ee|Hitem:143530::::::::110:105::23:2:3454:1472:::|h[Ritual~`of~`Animation]|h|r^Sgear2^S|cffa335ee|Hitem:143530::::::::110:105::23:2:3454:1472:::|h[Ritual~`of~`Animation]|h|r^t^t^^ (from:) (Marketfreshe) (distri:) (RAID)", -- [1142]
-			"18:33:10 - Comm received:^1^Sresponse^T^N1^N3^N2^SMarketfreshe-Illidan^N3^T^Silvl^N887.5625^Sresponse^SPASS^Sdiff^N35^Sgear1^S|cffa335ee|Hitem:141482::::::::110:105::3:1:1472:::|h[Unstable~`Arcanocrystal]|h|r^Sgear2^S|cffa335ee|Hitem:134292::::::::110:105::43:5:3573:1808:603:1557:3337:::|h[Nightborne~`Researcher's~`Phial]|h|r^t^t^^ (from:) (Marketfreshe) (distri:) (RAID)", -- [1143]
-			"18:33:12 - Comm received:^1^Sresponse^T^N1^N2^N2^SDjpurge-Illidan^N3^T^Silvl^N899.5625^Sresponse^N1^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1144]
-			"18:33:13 - Comm received:^1^Sresponse^T^N1^N4^N2^SJimrando-Illidan^N3^T^Silvl^N908.0625^Sresponse^N2^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [1145]
-			"18:33:15 - Comm received:^1^Sresponse^T^N1^N3^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sresponse^SPASS^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:140809::::::::110:102::5:4:3517:41:1502:3336:::|h[Whispers~`in~`the~`Dark]|h|r^Sgear2^S|cffa335ee|Hitem:140792::::::::110:102::5:3:3444:1482:3528:::|h[Erratic~`Metronome]|h|r^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1146]
-			"18:33:18 - Comm received:^1^Sresponse^T^N1^N3^N2^SJimrando-Illidan^N3^T^Silvl^N908.0625^Sresponse^SPASS^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:140806::::::::110:72::5:3:3516:1512:3337:::|h[Convergence~`of~`Fates]|h|r^Sgear2^S|cffa335ee|Hitem:140808::::::::110:72::3:3:3515:1487:3336:::|h[Draught~`of~`Souls]|h|r^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [1147]
-			"18:33:21 - Comm received:^1^Sresponse^T^N1^N4^N2^SCenzic-Illidan^N3^T^Silvl^N908.625^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:140821::::::::110:251::5:3:3444:1502:3337:::|h[Precipice~`of~`Eternity]|h|r^Sresponse^N2^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1148]
-			"18:33:26 - Comm received:^1^Sresponse^T^N1^N1^N2^SJimrando-Illidan^N3^T^Silvl^N908.0625^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:138363:5883:130220::::::110:72::5:4:3516:1808:1492:3336:::|h[Shoulderplates~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^N2^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [1149]
-			"18:33:27 - Comm received:^1^Sawarded^T^N1^N4^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1150]
-			"18:33:27 - Comm received:^1^Shistory^T^N1^SShietnorunes-Illidan^N2^T^SmapID^N1530^Sdate^S13/06/17^Sclass^SDEATHKNIGHT^SgroupSize^N18^Svotes^N0^Stime^S20:33:36^SitemReplaced1^S|cffa335ee|Hitem:144529::::::::110:250::8:3:3568:1662:3528:::|h[Polished~`Shadowstone]|h|r^Sinstance^SThe~`Nighthold-Heroic^Sresponse^SMainspec/Best~`in~`Slot^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:140822::::::::110:72::5:3:3516:1487:3528:::|h[Breath~`of~`Dusk]|h|r^Sboss^SArcanist~`Tel'arn^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^SresponseID^N4^SisAwardReason^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1151]
-			"18:33:32 - Comm received:^1^Sawarded^T^N1^N3^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1152]
-			"18:33:32 - Comm received:^1^Shistory^T^N1^SNadzieja-Illidan^N2^T^SmapID^N1530^Sdate^S13/06/17^Sclass^SMAGE^SgroupSize^N18^Svotes^N0^Stime^S20:33:42^SitemReplaced1^S|cffa335ee|Hitem:136750::::::::110:64::43:4:3573:604:1547:3336:::|h[Vault~`Guardian's~`Talisman]|h|r^Sinstance^SThe~`Nighthold-Heroic^Sresponse^SDisenchant^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:140801::::::::110:72::5:3:3516:1492:3336:::|h[Fury~`of~`the~`Burning~`Sky]|h|r^Sboss^SArcanist~`Tel'arn^Scolor^T^N1^N1^N2^N1^N3^N1^N4^N1^t^SresponseID^N1^SitemReplaced2^S|cffff8000|Hitem:144259::::::::110:64:::2:1811:3530:::|h[Kil'jaeden's~`Burning~`Wish]|h|r^SisAwardReason^B^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1153]
-			"18:33:36 - Comm received:^1^Sresponse^T^N1^N2^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:137478::::::::110:102::35:3:3418:1557:3337:::|h[Reflection~`of~`Sorrow]|h|r^Sresponse^STIMEOUT^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1154]
-			"18:33:46 - Comm received:^1^Svote^T^N1^N2^N2^SSwîftmender-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1155]
-			"18:33:55 - Comm received:^1^Sawarded^T^N1^N2^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1156]
-			"18:33:55 - Comm received:^1^Shistory^T^N1^SLuthanen-Illidan^N2^T^SmapID^N1530^Sdate^S13/06/17^Sclass^SPALADIN^SgroupSize^N18^Svotes^N0^Stime^S20:34:04^SitemReplaced1^S|cffa335ee|Hitem:140838::::::::110:65::5:3:3444:1482:1813:::|h[Construct~`Personality~`Sphere]|h|r^Sinstance^SThe~`Nighthold-Heroic^Sresponse^SMainspec/Need^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:140839::::::::110:72::5:3:3516:1507:3337:::|h[Parasitic~`Spore]|h|r^Sboss^SArcanist~`Tel'arn^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^SresponseID^N1^SisAwardReason^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1157]
-			"18:34:09 - Comm received:^1^Sawarded^T^N1^N1^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1158]
-			"18:34:09 - Comm received:^1^Ssession_end^T^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1159]
-			"18:34:09 - Comm received:^1^Shistory^T^N1^SMadmartigàn-Illidan^N2^T^SmapID^N1530^Sdate^S13/06/17^Sclass^SWARRIOR^SgroupSize^N18^Svotes^N0^Stime^S20:34:19^SitemReplaced1^S|cffa335ee|Hitem:147752::::::::110:72::3:3:3572:1482:3528:::|h[Pauldrons~`of~`the~`Engulfing~`Tide]|h|r^Sinstance^SThe~`Nighthold-Heroic^Sresponse^SMinor~`Upgrade^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:140883::::::::110:72::5:4:3516:42:1497:3336:::|h[Shoulderguard~`of~`the~`Eclipse]|h|r^Sboss^SArcanist~`Tel'arn^Scolor^T^N1^N0^N2^N0.7^N3^N0.7^N4^N1^t^SresponseID^N3^SisAwardReason^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1160]
-			"18:35:09 - Comm received:^1^SverTest^T^N1^S2.3.0^t^^ (from:) (Zefarion) (distri:) (GUILD)", -- [1161]
-			"18:35:15 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1162]
-			"18:35:15 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1163]
-			"18:35:15 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [1164]
-			"18:36:40 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1165]
-			"18:36:40 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1166]
-			"18:36:40 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [1167]
-			"18:36:41 - Comm received:^1^SverTest^T^N1^S2.3.0^t^^ (from:) (Zefarion) (distri:) (GUILD)", -- [1168]
-			"18:36:41 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1169]
-			"18:36:41 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1170]
-			"18:36:41 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [1171]
-			"18:36:54 - Comm received:^1^Scandidates^T^N1^T^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SMember^t^SZilorin-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N101^Sclass^SDEMONHUNTER^Senchanter^B^Srank^SRaider^t^SColonferal-Illidan^T^Srole^SDAMAGER^Sclass^SDRUID^Srank^S^t^SJimrando-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SRaider^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^SDjpurge-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SSHAMAN^Srank^SOfficer~`Alt^t^SGrimuhs-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N761^Sclass^SPRIEST^Senchanter^B^Srank^SRaider^t^SCannibal-Illidan^T^Srole^SDAMAGER^Sclass^SDEATHKNIGHT^Srank^S^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Sclass^SWARLOCK^Srank^S^t^SZefarion-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SRaider^t^SLuthanen-Illidan^T^Srole^SHEALER^Senchant_lvl^N756^Sclass^SPALADIN^Senchanter^B^Srank^SMember^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^SCenzic-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N778^Sclass^SDEATHKNIGHT^Senchanter^B^Srank^SRaider^t^SCometstorm-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SALT.^t^SFuryisthy-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEMONHUNTER^Srank^SMember^t^SNadzieja-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SBeallz-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SMONK^Srank^SRaider^t^SMadmartigàn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer~`Alt^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SSwîftmender-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SOfficer~`Alt^t^SShietnorunes-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SALT.^t^SMarketfreshe-Illidan^T^Srole^SHEALER^Sclass^SDRUID^Srank^S^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1172]
-			"18:37:51 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Cenzic) (distri:) (GUILD)", -- [1173]
-			"18:37:56 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1174]
-			"18:37:56 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1175]
-			"18:37:56 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [1176]
-			"06/13/17", -- [1177]
-			"18:58:49 - Logged In", -- [1178]
-			"18:58:49 - ML initialized!", -- [1179]
-			"06/13/17", -- [1180]
-			"19:04:06 - Logged In", -- [1181]
-			"19:04:06 - ML initialized!", -- [1182]
-			"19:06:00 - Comet-Illidan (2.3.4) (nil)", -- [1183]
-			"19:06:01 - Event: (PLAYER_ENTERING_WORLD)", -- [1184]
-			"19:06:01 - GetML()", -- [1185]
-			"19:06:01 - LootMethod =  (personalloot)", -- [1186]
-			"19:06:02 - GetPlayersGuildRank()", -- [1187]
-			"19:06:02 - Found Guild Rank: Member", -- [1188]
-			"19:06:02 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1189]
-			"19:06:32 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Luthanen) (distri:) (GUILD)", -- [1190]
-			"06/13/17", -- [1191]
-			"19:07:14 - Logged In", -- [1192]
-			"19:07:14 - ML initialized!", -- [1193]
-			"19:07:42 - Cometstorm-Illidan (2.3.4) (nil)", -- [1194]
-			"19:07:44 - Event: (PLAYER_ENTERING_WORLD)", -- [1195]
-			"19:07:44 - GetML()", -- [1196]
-			"19:07:44 - LootMethod =  (personalloot)", -- [1197]
-			"19:07:44 - GetPlayersGuildRank()", -- [1198]
-			"19:07:44 - Found Guild Rank: ALT.", -- [1199]
-			"19:07:44 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Cometstorm) (distri:) (GUILD)", -- [1200]
-			"19:07:45 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1201]
-			"19:07:45 - GetML()", -- [1202]
-			"19:07:45 - LootMethod =  (personalloot)", -- [1203]
-			"19:08:07 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Furyisthy) (distri:) (GUILD)", -- [1204]
-			"19:08:31 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Lanféar) (distri:) (GUILD)", -- [1205]
-			"19:09:19 - Comm received:^1^SverTest^T^N1^S2.3.0^t^^ (from:) (Zefarion) (distri:) (GUILD)", -- [1206]
-			"19:09:31 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Beallz) (distri:) (GUILD)", -- [1207]
-			"19:11:32 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1208]
-			"19:11:32 - GetML()", -- [1209]
-			"19:11:32 - LootMethod =  (master)", -- [1210]
-			"19:11:32 - MasterLooter =  (Swîftmender-Illidan)", -- [1211]
-			"19:11:32 - Resetting council as we have a new ML!", -- [1212]
-			"19:11:34 - Comm received:^1^SplayerInfoRequest^T^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [1213]
-			"19:11:34 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N30^SselfVote^B^Sobserve^b^Sresponses^T^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^t^SnumButtons^N3^SanonymousVoting^b^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [1214]
-			"19:11:34 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [1215]
-			"19:11:34 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [1216]
-			"19:11:34 - Comm received:^1^Scandidates^T^N1^T^SThenex-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SLuthanen-Illidan^T^Srole^SHEALER^Sclass^SPALADIN^Srank^S^t^SColonferal-Illidan^T^Srole^SDAMAGER^Sclass^SDRUID^Srank^S^t^SJimrando-Illidan^T^Srole^SDAMAGER^Sclass^SWARRIOR^Srank^S^t^SDjpurge-Illidan^T^Srole^SDAMAGER^Sclass^SSHAMAN^Srank^S^t^SGrimuhs-Illidan^T^Srole^SDAMAGER^Sclass^SPRIEST^Srank^S^t^SShietnorunes-Illidan^T^Srole^STANK^Sclass^SDEATHKNIGHT^Srank^S^t^SCometstorm-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SLanféar-Illidan^T^Srole^SHEALER^Sclass^SPRIEST^Srank^S^t^SFuryisthy-Illidan^T^Srole^SDAMAGER^Sclass^SDEMONHUNTER^Srank^S^t^SCannibal-Illidan^T^Srole^SDAMAGER^Sclass^SDEATHKNIGHT^Srank^S^t^SNadzieja-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^STelgina-Illidan^T^Srole^SDAMAGER^Sclass^SHUNTER^Srank^S^t^SSwîftmender-Illidan^T^Srole^SHEALER^Sclass^SDRUID^Srank^S^t^SReinhärt-Illidan^T^Srole^STANK^Sclass^SWARRIOR^Srank^S^t^SMarketfreshe-Illidan^T^Srole^SHEALER^Sclass^SDRUID^Srank^S^t^SMadmartigàn-Illidan^T^Srole^SDAMAGER^Sclass^SWARRIOR^Srank^S^t^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [1217]
-			"19:11:37 - Timer MLdb_check passed", -- [1218]
-			"19:11:38 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [1219]
-			"19:11:38 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [1220]
-			"19:11:38 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [1221]
-			"19:11:38 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [1222]
-			"19:11:38 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [1223]
-			"19:11:38 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [1224]
-			"19:11:38 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [1225]
-			"19:11:38 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [1226]
-			"19:11:38 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [1227]
-			"19:11:38 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [1228]
-			"19:11:38 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [1229]
-			"19:11:38 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [1230]
-			"19:11:38 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [1231]
-			"19:11:38 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [1232]
-			"19:11:38 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [1233]
-			"19:11:38 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [1234]
-			"19:11:38 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [1235]
-			"19:11:38 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [1236]
-			"19:11:38 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [1237]
-			"19:11:38 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [1238]
-			"19:11:38 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [1239]
-			"19:11:38 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [1240]
-			"19:11:38 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [1241]
-			"19:11:38 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [1242]
-			"19:11:39 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [1243]
-			"19:11:39 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [1244]
-			"19:11:41 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [1245]
-			"19:11:41 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [1246]
-			"19:11:42 - Comm received:^1^Scouncil^T^N1^T^t^t^^ (from:) (Swîftmender) (distri:) (RAID)", -- [1247]
-			"19:11:42 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [1248]
-			"19:11:43 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1249]
-			"19:11:43 - GetML()", -- [1250]
-			"19:11:43 - LootMethod =  (master)", -- [1251]
-			"19:11:43 - MasterLooter =  (Madmartigàn-Illidan)", -- [1252]
-			"19:11:43 - Resetting council as we have a new ML!", -- [1253]
-			"19:11:48 - Timer MLdb_check passed", -- [1254]
-			"19:13:19 - Event: (PLAYER_ENTERING_WORLD)", -- [1255]
-			"19:13:19 - GetML()", -- [1256]
-			"19:13:19 - LootMethod =  (master)", -- [1257]
-			"19:13:19 - MasterLooter =  (Madmartigàn-Illidan)", -- [1258]
-			"19:13:24 - Timer MLdb_check passed", -- [1259]
-			"19:14:23 - Event: (RAID_INSTANCE_WELCOME) (The Nighthold (Heroic)) (564336) (1) (0)", -- [1260]
-			"19:14:23 - Event: (PLAYER_ENTERING_WORLD)", -- [1261]
-			"19:14:23 - GetML()", -- [1262]
-			"19:14:23 - LootMethod =  (master)", -- [1263]
-			"19:14:23 - MasterLooter =  (Madmartigàn-Illidan)", -- [1264]
-			"19:14:28 - Timer MLdb_check passed", -- [1265]
-			"06/13/17", -- [1266]
-			"19:19:41 - Logged In", -- [1267]
-			"19:19:41 - ML initialized!", -- [1268]
-			"19:19:42 - Cometstorm-Illidan (2.3.4) (nil)", -- [1269]
-			"19:19:44 - Event: (PLAYER_ENTERING_WORLD)", -- [1270]
-			"19:19:44 - GetML()", -- [1271]
-			"19:19:44 - LootMethod =  (master)", -- [1272]
-			"19:19:44 - MasterLooter =  (Madmartigàn-Illidan)", -- [1273]
-			"19:19:44 - Resetting council as we have a new ML!", -- [1274]
-			"19:19:44 - Player relog...", -- [1275]
-			"19:19:44 - GetPlayersGuildRank()", -- [1276]
-			"19:19:44 - Found Guild Rank: ALT.", -- [1277]
-			"19:19:44 - Timer MLdb_check passed", -- [1278]
-			"19:19:44 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Cometstorm) (distri:) (GUILD)", -- [1279]
-			"19:20:21 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Furyisthy) (distri:) (GUILD)", -- [1280]
-			"19:22:32 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Roivon) (distri:) (GUILD)", -- [1281]
-			"19:37:55 - Comm received:^1^SverTest^T^N1^S2.3.0^t^^ (from:) (Zefarion) (distri:) (GUILD)", -- [1282]
-			"19:54:19 - Comm received:^1^SEUBonusRoll^T^N1^SMadmartigàn-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:72:8388608:5::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1283]
-			"20:11:25 - Comm received:^1^SEUBonusRoll^T^N1^SMadmartigàn-Illidan^N2^Sitem^N3^S|cffa335ee|Hitem:140897::::::::110:72::5:3:3517:1492:3528:::|h[Ring~`of~`the~`Scoured~`Clan]|h|r^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1284]
-			"20:12:03 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Lanféar) (distri:) (GUILD)", -- [1285]
-			"20:12:55 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Bealziwoding) (distri:) (GUILD)", -- [1286]
-			"20:14:28 - Event: (PLAYER_ENTERING_WORLD)", -- [1287]
-			"20:14:28 - GetML()", -- [1288]
-			"20:14:28 - LootMethod =  (personalloot)", -- [1289]
-			"06/13/17", -- [1290]
-			"20:14:55 - Logged In", -- [1291]
-			"20:14:55 - ML initialized!", -- [1292]
-			"20:15:05 - Comet-Illidan (2.3.4) (nil)", -- [1293]
-			"20:15:06 - Event: (PLAYER_ENTERING_WORLD)", -- [1294]
-			"20:15:06 - GetML()", -- [1295]
-			"20:15:06 - LootMethod =  (personalloot)", -- [1296]
-			"20:15:07 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1297]
-			"20:15:07 - GetPlayersGuildRank()", -- [1298]
-			"20:15:07 - Found Guild Rank: Member", -- [1299]
-			"06/13/17", -- [1300]
-			"20:17:24 - Logged In", -- [1301]
-			"20:17:24 - ML initialized!", -- [1302]
-			"20:17:28 - Cometstorm-Illidan (2.3.4) (nil)", -- [1303]
-			"20:17:29 - Event: (PLAYER_ENTERING_WORLD)", -- [1304]
-			"20:17:29 - GetML()", -- [1305]
-			"20:17:29 - LootMethod =  (personalloot)", -- [1306]
-			"20:17:29 - GetPlayersGuildRank()", -- [1307]
-			"20:17:29 - Found Guild Rank: ALT.", -- [1308]
-			"20:17:29 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Cometstorm) (distri:) (GUILD)", -- [1309]
-			"20:17:48 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1310]
-			"20:17:48 - GetML()", -- [1311]
-			"20:17:48 - LootMethod =  (personalloot)", -- [1312]
-			"20:18:41 - Event: (PLAYER_ENTERING_WORLD)", -- [1313]
-			"20:18:41 - GetML()", -- [1314]
-			"20:18:41 - LootMethod =  (personalloot)", -- [1315]
-			"20:21:20 - Comm received:^1^SverTest^T^N1^S2.3.0^t^^ (from:) (Grimuhs) (distri:) (GUILD)", -- [1316]
-			"20:22:21 - Comm received:^1^SverTest^T^N1^S2.3.3^t^^ (from:) (Swîftmender) (distri:) (GUILD)", -- [1317]
-			"20:25:42 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Beallz) (distri:) (GUILD)", -- [1318]
-			"20:26:09 - Event: (RAID_INSTANCE_WELCOME) (Neltharion's Lair (Mythic)) (560030) (0) (0)", -- [1319]
-			"20:26:10 - Event: (PLAYER_ENTERING_WORLD)", -- [1320]
-			"20:26:10 - GetML()", -- [1321]
-			"20:26:10 - LootMethod =  (personalloot)", -- [1322]
-			"20:27:10 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Bealziwoding) (distri:) (GUILD)", -- [1323]
-			"20:50:52 - Event: (PLAYER_ENTERING_WORLD)", -- [1324]
-			"20:50:52 - GetML()", -- [1325]
-			"20:50:52 - LootMethod =  (personalloot)", -- [1326]
-			"20:51:33 - Event: (PLAYER_ENTERING_WORLD)", -- [1327]
-			"20:51:33 - GetML()", -- [1328]
-			"20:51:33 - LootMethod =  (personalloot)", -- [1329]
-			"20:53:01 - Event: (PLAYER_ENTERING_WORLD)", -- [1330]
-			"20:53:01 - GetML()", -- [1331]
-			"20:53:01 - LootMethod =  (personalloot)", -- [1332]
-			"20:53:26 - Event: (RAID_INSTANCE_WELCOME) (Darkheart Thicket (Mythic)) (558393) (0) (0)", -- [1333]
-			"20:53:26 - Event: (PLAYER_ENTERING_WORLD)", -- [1334]
-			"20:53:26 - GetML()", -- [1335]
-			"20:53:26 - LootMethod =  (personalloot)", -- [1336]
-			"20:55:53 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Cenzic) (distri:) (GUILD)", -- [1337]
-			"21:03:15 - Comm received:^1^SverTest^T^N1^S2.3.0^t^^ (from:) (Aedalina) (distri:) (GUILD)", -- [1338]
-			"21:32:25 - Event: (PLAYER_ENTERING_WORLD)", -- [1339]
-			"21:32:25 - GetML()", -- [1340]
-			"21:32:25 - LootMethod =  (personalloot)", -- [1341]
-			"06/13/17", -- [1342]
-			"21:32:52 - Logged In", -- [1343]
-			"21:32:52 - ML initialized!", -- [1344]
-			"21:33:02 - Comet-Illidan (2.3.4) (nil)", -- [1345]
-			"21:33:03 - Event: (PLAYER_ENTERING_WORLD)", -- [1346]
-			"21:33:03 - GetML()", -- [1347]
-			"21:33:03 - LootMethod =  (personalloot)", -- [1348]
-			"21:33:04 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1349]
-			"21:33:04 - GetPlayersGuildRank()", -- [1350]
-			"21:33:04 - Found Guild Rank: Member", -- [1351]
-			"21:33:22 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Ugliestdruid) (distri:) (GUILD)", -- [1352]
-			"21:33:26 - Event: (PLAYER_ENTERING_WORLD)", -- [1353]
-			"21:33:26 - GetML()", -- [1354]
-			"21:33:26 - LootMethod =  (personalloot)", -- [1355]
-			"21:34:44 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Blutarski) (distri:) (GUILD)", -- [1356]
-			"21:35:59 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1357]
-			"21:35:59 - GetML()", -- [1358]
-			"21:35:59 - LootMethod =  (personalloot)", -- [1359]
-			"21:38:12 - Comm received:^1^SverTest^T^N1^S2.3.0^t^^ (from:) (Grimuhs) (distri:) (GUILD)", -- [1360]
-			"21:39:08 - Event: (PLAYER_ENTERING_WORLD)", -- [1361]
-			"21:39:08 - GetML()", -- [1362]
-			"21:39:08 - LootMethod =  (personalloot)", -- [1363]
-			"21:39:38 - Event: (PLAYER_ENTERING_WORLD)", -- [1364]
-			"21:39:38 - GetML()", -- [1365]
-			"21:39:38 - LootMethod =  (personalloot)", -- [1366]
-			"21:41:31 - Event: (RAID_INSTANCE_WELCOME) (Return to Karazhan (Mythic)) (555508) (0) (0)", -- [1367]
-			"21:41:32 - Event: (PLAYER_ENTERING_WORLD)", -- [1368]
-			"21:41:32 - GetML()", -- [1369]
-			"21:41:32 - LootMethod =  (personalloot)", -- [1370]
-			"22:05:31 - Event: (PLAYER_ENTERING_WORLD)", -- [1371]
-			"22:05:31 - GetML()", -- [1372]
-			"22:05:31 - LootMethod =  (personalloot)", -- [1373]
-			"22:06:40 - Event: (PLAYER_ENTERING_WORLD)", -- [1374]
-			"22:06:40 - GetML()", -- [1375]
-			"22:06:40 - LootMethod =  (personalloot)", -- [1376]
-			"22:09:01 - Event: (RAID_INSTANCE_WELCOME) (Halls of Valor (Mythic)) (553858) (0) (0)", -- [1377]
-			"22:09:02 - Event: (PLAYER_ENTERING_WORLD)", -- [1378]
-			"22:09:02 - GetML()", -- [1379]
-			"22:09:02 - LootMethod =  (personalloot)", -- [1380]
-			"22:10:03 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Telgina) (distri:) (GUILD)", -- [1381]
-			"22:38:18 - Event: (PLAYER_ENTERING_WORLD)", -- [1382]
-			"22:38:18 - GetML()", -- [1383]
-			"22:38:18 - LootMethod =  (personalloot)", -- [1384]
-			"06/15/17", -- [1385]
-			"17:42:52 - Logged In", -- [1386]
-			"17:42:52 - ML initialized!", -- [1387]
-			"17:43:19 - Comet-Illidan (2.4.0) (Beta.1)", -- [1388]
-			"17:43:20 - Event: (PLAYER_ENTERING_WORLD)", -- [1389]
-			"17:43:20 - GetML()", -- [1390]
-			"17:43:20 - LootMethod =  (personalloot)", -- [1391]
-			"17:43:21 - Comm received:^1^SverTest^T^N1^S2.4.0^N2^SBeta.1^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1392]
-			"17:43:21 - GetPlayersGuildRank()", -- [1393]
-			"17:43:21 - Found Guild Rank: Member", -- [1394]
-			"17:43:25 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1395]
-			"17:43:25 - GetML()", -- [1396]
-			"17:43:25 - LootMethod =  (master)", -- [1397]
-			"17:43:25 - MasterLooter =  (Madmartigàn-Illidan)", -- [1398]
-			"17:43:25 - Resetting council as we have a new ML!", -- [1399]
-			"17:43:29 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1400]
-			"17:43:29 - nil = (IsCouncil) (Comet-Illidan)", -- [1401]
-			"17:43:29 - Comm received:^1^Scandidates^T^N1^T^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SMember^t^SNadzieja-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SColonferal-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^SWowjayson-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^SDjpurge-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SSHAMAN^Srank^SOfficer~`Alt^t^SGrimuhs-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N763^Sclass^SPRIEST^Senchanter^B^Srank^SRaider^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARLOCK^Srank^SOfficer^t^SDvldocdk-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SGuild~`Friend^t^SShietnorunes-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SALT.^t^SCoolaidcow-Illidan^T^Srole^SDAMAGER^Sclass^SWARRIOR^Srank^S^t^SZefarion-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SRaider^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^SLuthanen-Illidan^T^Srole^SHEALER^Senchant_lvl^N757^Sclass^SPALADIN^Senchanter^B^Srank^SMember^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SXorn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N764^Sclass^SWARLOCK^Senchanter^B^Srank^SMember^t^SCenzic-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N778^Sclass^SDEATHKNIGHT^Senchanter^B^Srank^SRaider^t^SMadmartigàn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer~`Alt^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1402]
-			"17:43:30 - Timer MLdb_check passed", -- [1403]
-			"17:43:30 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1404]
-			"17:43:45 - Comm received:^1^SplayerInfoRequest^T^t^^ (from:) (Madmartigàn) (distri:) (WHISPER)", -- [1405]
-			"17:43:45 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (WHISPER)", -- [1406]
-			"17:43:45 - Comm received:^1^Scandidates^T^N1^T^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SMember^t^SNadzieja-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SColonferal-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^SWowjayson-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^SDjpurge-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SSHAMAN^Srank^SOfficer~`Alt^t^SGrimuhs-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N763^Sclass^SPRIEST^Senchanter^B^Srank^SRaider^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARLOCK^Srank^SOfficer^t^SDvldocdk-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SGuild~`Friend^t^SShietnorunes-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SALT.^t^SCoolaidcow-Illidan^T^Srole^SDAMAGER^Sclass^SWARRIOR^Srank^S^t^SZefarion-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SRaider^t^SComet-Illidan^T^Srole^SHEALER^Sclass^SMONK^Srank^S^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^SLuthanen-Illidan^T^Srole^SHEALER^Senchant_lvl^N757^Sclass^SPALADIN^Senchanter^B^Srank^SMember^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SXorn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N764^Sclass^SWARLOCK^Senchanter^B^Srank^SMember^t^SCenzic-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N778^Sclass^SDEATHKNIGHT^Senchanter^B^Srank^SRaider^t^SMadmartigàn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer~`Alt^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1407]
-			"17:44:45 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Nadzieja) (distri:) (GUILD)", -- [1408]
-			"17:44:51 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1409]
-			"17:44:51 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1410]
-			"17:44:51 - nil = (IsCouncil) (Comet-Illidan)", -- [1411]
-			"17:50:16 - Comm received:^1^SlootTable^T^N1^T^N1^T^SequipLoc^SINVTYPE_TRINKET^SlootSlot^N1^Slink^S|cffa335ee|Hitem:140790::::::::110:72::6:3:3445:1497:3528:::|h[Claw~`of~`the~`Crystalline~`Scorpid]|h|r^SsubType^SMiscellaneous^Srelic^b^Sawarded^b^Sname^SClaw~`of~`the~`Crystalline~`Scorpid^Stexture^N133448^Silvl^N900^Sboe^b^Sbagged^b^Squality^N4^t^N2^T^SequipLoc^SINVTYPE_WRIST^SlootSlot^N2^Slink^S|cffa335ee|Hitem:140902::::::::110:72::6:3:3445:1497:3528:::|h[Jagged~`Carapace~`Wristclamps]|h|r^SsubType^SPlate^Srelic^b^Sawarded^b^Sname^SJagged~`Carapace~`Wristclamps^Stexture^N1346143^Silvl^N900^Sboe^b^Sbagged^b^Squality^N4^t^N3^T^SequipLoc^SINVTYPE_FEET^SlootSlot^N3^Slink^S|cffa335ee|Hitem:140884::::::::110:72::6:3:3445:1497:3528:::|h[Leystone-Toe~`Kickers]|h|r^SsubType^SPlate^Srelic^b^Sawarded^b^Sname^SLeystone-Toe~`Kickers^Stexture^N1346142^Silvl^N900^Sboe^b^Sbagged^b^Squality^N4^t^N4^T^SequipLoc^SINVTYPE_HEAD^SlootSlot^N4^Slink^S|cffa335ee|Hitem:140901::::::::110:72::6:4:3445:41:1497:3528:::|h[Vintage~`Suramar~`Nobility~`Hat]|h|r^SsubType^SLeather^Srelic^b^Sawarded^b^Sname^SVintage~`Suramar~`Nobility~`Hat^Stexture^N1337285^Silvl^N900^Sboe^b^Sbagged^b^Squality^N4^t^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1412]
-			"17:50:16 - Autopassed on:  (|cffa335ee|Hitem:140902::::::::110:72::6:3:3445:1497:3528:::|h[Jagged Carapace Wristclamps]|h|r)", -- [1413]
-			"17:50:16 - CreateResponse (2) (|cffa335ee|Hitem:140902::::::::110:72::6:3:3445:1497:3528:::|h[Jagged Carapace Wristclamps]|h|r) (900) (AUTOPASS) (INVTYPE_WRIST) (nil) (Plate) (nil)", -- [1414]
-			"17:50:16 - GetPlayersGear (140902) (INVTYPE_WRIST)", -- [1415]
-			"17:50:16 - Autopassed on:  (|cffa335ee|Hitem:140884::::::::110:72::6:3:3445:1497:3528:::|h[Leystone-Toe Kickers]|h|r)", -- [1416]
-			"17:50:16 - CreateResponse (3) (|cffa335ee|Hitem:140884::::::::110:72::6:3:3445:1497:3528:::|h[Leystone-Toe Kickers]|h|r) (900) (AUTOPASS) (INVTYPE_FEET) (nil) (Plate) (nil)", -- [1417]
-			"17:50:16 - GetPlayersGear (140884) (INVTYPE_FEET)", -- [1418]
-			"17:50:16 - LootFrame (GetFrame())", -- [1419]
-			"17:50:16 - LootFrame:Start()", -- [1420]
-			"17:50:16 - Comm received:^1^SextraUtilData^T^N1^SShietnorunes-Illidan^N2^T^Sforged^N7^Spawn^T^N1^T^Sequipped^N134.079^Snew^N108.207^t^N2^T^Sequipped^N612.935^Snew^N484.767^t^N3^T^Sequipped^N620.028^Snew^N668.421^t^N4^T^Sequipped^N866.66^Snew^N636.087^t^t^SspecID^N250^Straits^N52^Slegend^N2^Ssockets^N2^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1421]
-			"17:50:16 - Comm received:^1^SlootAck^T^N1^SShietnorunes-Illidan^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1422]
-			"17:50:16 - Comm received:^1^SlootAck^T^N1^SLanféar-Illidan^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1423]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N2^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:134437::::::::110:257::35:3:3417:1552:3337:::|h[Harrowing~`Soulspun~`Bracers]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1424]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140885::130222::::::110:257::5:4:3516:1808:1497:3336:::|h[Treads~`of~`Galactic~`Odyssey]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1425]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N4^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138313::::::::110:257::5:3:3516:1487:3528:::|h[Purifier's~`Gorget]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1426]
-			"17:50:16 - Comm received:^1^SlootAck^T^N1^SXorn-Illidan^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1427]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N2^N2^SXorn-Illidan^N3^T^Silvl^N902.75^Sdiff^N-40^Sgear1^S|cffff8000|Hitem:132381::::::::110:265:::2:1811:3530:::|h[Streten's~`Sleepless~`Shackles]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1428]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SXorn-Illidan^N3^T^Silvl^N902.75^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:134308::::::::110:265::33:3:3418:1567:3337:::|h[Manawracker~`Sandals]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1429]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N4^N2^SXorn-Illidan^N3^T^Silvl^N902.75^Sdiff^N-40^Sgear1^S|cffff8000|Hitem:132394::::::::110:265:::2:1811:3530:::|h[Hood~`of~`Eternal~`Disdain]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1430]
-			"17:50:16 - Comm received:^1^SlootAck^T^N1^SFearmeter-Illidan^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1431]
-			"17:50:16 - Comm received:^1^SlootAck^T^N1^SMadmartigàn-Illidan^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1432]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N4^N2^SMadmartigàn-Illidan^N3^T^Silvl^N901.375^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:140881::::::::110:72::5:3:3516:1507:3337:::|h[Eventide~`Casque]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1433]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N2^N2^SFearmeter-Illidan^N3^T^Silvl^N904.4375^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:140850::130222::::::110:265::3:4:3514:1808:1477:3336:::|h[Bracers~`of~`Harnessed~`Flame]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1434]
-			"17:50:16 - Comm received:^1^SlootAck^T^N1^SCenzic-Illidan^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1435]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N4^N2^SCenzic-Illidan^N3^T^Silvl^N908.3125^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:138355::::::::110:251::5:3:3516:1492:3336:::|h[Dreadwyrm~`Crown]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1436]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SFearmeter-Illidan^N3^T^Silvl^N904.4375^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:140854::::::::110:265::6:3:3445:1502:3336:::|h[Perpetually~`Muddy~`Sandals]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1437]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N4^N2^SFearmeter-Illidan^N3^T^Silvl^N904.4375^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138314::::::::110:265::5:3:3516:1487:1813:::|h[Eyes~`of~`Azj'Aqir]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1438]
-			"17:50:16 - Comm received:^1^SextraUtilData^T^N1^SMadmartigàn-Illidan^N2^T^Sforged^N7^Spawn^T^N1^T^Sequipped^N559.763^Snew^N19969.84^t^N2^T^Sequipped^N19394.26^Snew^N18158.4^t^N3^T^Sequipped^N497.162^Snew^N26060.34^t^N4^T^Sequipped^N34811.45^Snew^N12445.24^t^t^SspecID^N72^Straits^N52^Slegend^N2^Ssockets^N3^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1439]
-			"17:50:16 - Comm received:^1^SlootAck^T^N1^STelgina-Illidan^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1440]
-			"17:50:16 - Comm received:^1^SlootAck^T^N1^SReinhärt-Illidan^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1441]
-			"17:50:16 - Comm received:^1^SlootAck^T^N1^SColonferal-Illidan^t^^ (from:) (Colonferal) (distri:) (RAID)", -- [1442]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N4^N2^SReinhärt-Illidan^N3^T^Silvl^N908.3125^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138357::130220::::::110:73::5:4:3516:1808:1487:1813:::|h[Warhelm~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1443]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N2^N2^SColonferal-Illidan^N3^T^Silvl^N900.625^Sdiff^N-40^Sgear1^S|cffff8000|Hitem:137056::::::::110:103:::3:3529:3530:1811:::|h[Luffa~`Wrappings]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Colonferal) (distri:) (RAID)", -- [1444]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SColonferal-Illidan^N3^T^Silvl^N900.625^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:140861::::::::110:103::5:3:3516:1487:1813:::|h[Grove-Tender's~`Moccasins]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Colonferal) (distri:) (RAID)", -- [1445]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N2^N2^STelgina-Illidan^N3^T^Silvl^N910.0625^Sdiff^N-40^Sgear1^S|cffff8000|Hitem:137101::::::::110:253:::2:1811:3455:::|h[Call~`of~`the~`Wild]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1446]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N3^N2^STelgina-Illidan^N3^T^Silvl^N910.0625^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:140867::::::::110:253::5:3:3516:1492:3336:::|h[Sabatons~`of~`Burning~`Steps]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1447]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N4^N2^STelgina-Illidan^N3^T^Silvl^N910.0625^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138342::130222::::::110:253::5:4:3516:1808:1487:1813:::|h[Eagletalon~`Cowl]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1448]
-			"17:50:16 - Comm received:^1^SlootAck^T^N1^SThenex-Illidan^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1449]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N2^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:146792::130221::::::110:63::43:4:3573:1808:1567:3337:::|h[Vileweave~`Cuffs]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1450]
-			"17:50:16 - Comm received:^1^SlootAck^T^N1^SDvldocdk-Illidan^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [1451]
-			"17:50:16 - Comm received:^1^SextraUtilData^T^N1^SDjpurge-Illidan^N2^T^Sforged^N5^Spawn^T^N1^T^Sequipped^N949.539^Snew^N0^t^N2^T^Sequipped^N23874.06^Snew^N0^t^N3^T^Sequipped^N577.763^Snew^N0^t^N4^T^Sequipped^N37957.84^Snew^N824.381^t^t^SspecID^N264^Straits^N51^Slegend^N2^Ssockets^N0^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1452]
-			"17:50:16 - Comm received:^1^SlootAck^T^N1^SComet-Illidan^t^^ (from:) (Comet) (distri:) (RAID)", -- [1453]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N2^N2^SComet-Illidan^N3^T^Silvl^N905.875^Sdiff^N-40^Sgear1^S|cffff8000|Hitem:137096::::::::110:270:::3:3529:3530:1811:::|h[Petrichor~`Lagniappe]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [1454]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SComet-Illidan^N3^T^Silvl^N905.875^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140861::::::::110:270::5:4:3516:40:1497:3336:::|h[Grove-Tender's~`Moccasins]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [1455]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N4^N2^SDvldocdk-Illidan^N3^T^Silvl^N906.3125^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:147749::::::::110:251::3:3:3572:1482:3528:::|h[Polished~`Felfury~`Helmet]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [1456]
-			"17:50:16 - Comm received:^1^SlootAck^T^N1^SDjpurge-Illidan^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1457]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N2^N2^SDjpurge-Illidan^N3^T^Silvl^N905^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140876::::::::110:264::6:3:3445:1497:3528:::|h[Stinger~`Resistant~`Bracers]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1458]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SDjpurge-Illidan^N3^T^Silvl^N905^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:147744::::::::110:264::3:3:3572:1482:3528:::|h[Treads~`of~`Disorderly~`Retreat]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1459]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N4^N2^SDjpurge-Illidan^N3^T^Silvl^N905^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138343::::::::110:264::5:3:3516:1487:3528:::|h[Helm~`of~`Shackled~`Elements]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1460]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140854::130221::::::110:63::6:4:3445:1808:1497:3528:::|h[Perpetually~`Muddy~`Sandals]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1461]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N4^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138312::::::::110:63::5:3:3516:1487:3528:::|h[Hood~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1462]
-			"17:50:16 - Comm received:^1^SlootAck^T^N1^SLuthanen-Illidan^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1463]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N4^N2^SLuthanen-Illidan^N3^T^Silvl^N905.1875^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:138356::::::::110:65::5:3:3516:1502:3337:::|h[Helmet~`of~`the~`Highlord]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1464]
-			"17:50:16 - Comm received:^1^SlootAck^T^N1^SDadizzle-Illidan^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1465]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N2^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N-40^Sgear1^S|cffff8000|Hitem:137092::::::::110:102:::2:3459:3530:::|h[Oneth's~`Intuition]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1466]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:134193::::::::110:102::34:4:3418:42:1572:3337:::|h[Biornskin~`Moccasins]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1467]
-			"17:50:16 - Comm received:^1^SlootAck^T^N1^SGrimuhs-Illidan^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1468]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N2^N2^SGrimuhs-Illidan^N3^T^Silvl^N904.25^Sdiff^N-40^Sgear1^S|cffff8000|Hitem:132409::::::::110:258:::2:3459:3530:::|h[Anund's~`Seared~`Shackles]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1469]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SGrimuhs-Illidan^N3^T^Silvl^N904.25^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:140854::::::::110:258::6:4:3445:41:1502:3336:::|h[Perpetually~`Muddy~`Sandals]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1470]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N4^N2^SGrimuhs-Illidan^N3^T^Silvl^N904.25^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:138313::::::::110:258::5:3:3516:1492:3336:::|h[Purifier's~`Gorget]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1471]
-			"17:50:16 - Comm received:^1^SlootAck^T^N1^SWowjayson-Illidan^t^^ (from:) (Wowjayson) (distri:) (RAID)", -- [1472]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N2^N2^SWowjayson-Illidan^N3^T^Silvl^N907.1875^Sdiff^N-40^Sgear1^S|cffff8000|Hitem:137092::::::::110:102:::2:1811:3530:::|h[Oneth's~`Intuition]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Wowjayson) (distri:) (RAID)", -- [1473]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SWowjayson-Illidan^N3^T^Silvl^N907.1875^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140860::::::::110:102::6:3:3445:1497:3528:::|h[Stutterstep~`Treads]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Wowjayson) (distri:) (RAID)", -- [1474]
-			"17:50:16 - Comm received:^1^SlootAck^T^N1^SZefarion-Illidan^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [1475]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N2^N2^SZefarion-Illidan^N3^T^Silvl^N907.0625^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:137372::130219::::::110:64::43:4:3573:1808:1532:3528:::|h[Wristbands~`of~`the~`Swirling~`Deeps]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [1476]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N3^N2^SZefarion-Illidan^N3^T^Silvl^N907.0625^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:140914::::::::110:64::6:3:3519:1507:3528:::|h[Outcast~`Wanderer's~`Footrags]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [1477]
-			"17:50:16 - Comm received:^1^Sresponse^T^N1^N4^N2^SZefarion-Illidan^N3^T^Silvl^N907.0625^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:137341::::::::110:64::16:3:3418:1567:3337:::|h[Cragshaper's~`Fitted~`Hood]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [1478]
-			"17:50:17 - Comm received:^1^SlootAck^T^N1^SNadzieja-Illidan^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1479]
-			"17:50:17 - Comm received:^1^Sresponse^T^N1^N2^N2^SNadzieja-Illidan^N3^T^Silvl^N904.8125^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:133614::::::::110:64::34:3:3418:1562:3337:::|h[Frost-Stricken~`Cuffs]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1480]
-			"17:50:17 - Comm received:^1^Sresponse^T^N1^N3^N2^SNadzieja-Illidan^N3^T^Silvl^N904.8125^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:140914::::::::110:64::3:3:3515:1477:3528:::|h[Outcast~`Wanderer's~`Footrags]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1481]
-			"17:50:17 - Comm received:^1^Sresponse^T^N1^N4^N2^SNadzieja-Illidan^N3^T^Silvl^N904.8125^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138312::::::::110:64::5:3:3516:1487:3528:::|h[Hood~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1482]
-			"17:50:20 - Comm received:^1^Sresponse^T^N1^N1^N2^SDjpurge-Illidan^N3^T^Silvl^N905^Sresponse^SPASS^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:140793::::::::110:264::5:3:3444:1482:3528:::|h[Perfectly~`Preserved~`Cake]|h|r^Sgear2^S|cffff8000|Hitem:144258::::::::110:264:::2:1811:3530:::|h[Velen's~`Future~`Sight]|h|r^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1483]
-			"17:50:20 - Comm received:^1^Sresponse^T^N1^N1^N2^SColonferal-Illidan^N3^T^Silvl^N900.625^Sresponse^SPASS^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:142166::::::::110:103::23:3:3454:1477:3336:::|h[Ethereal~`Urn]|h|r^Sgear2^S|cffa335ee|Hitem:140794::::::::110:103::5:3:3444:1487:3336:::|h[Arcanogolem~`Digit]|h|r^t^t^^ (from:) (Colonferal) (distri:) (RAID)", -- [1484]
-			"17:50:21 - Comm received:^1^Sresponse^T^N1^N1^N2^SGrimuhs-Illidan^N3^T^Silvl^N904.25^Sresponse^SPASS^Sdiff^N35^Sgear1^S|cffa335ee|Hitem:140809::::::::110:258::3:3:3515:1512:3337:::|h[Whispers~`in~`the~`Dark]|h|r^Sgear2^S|cffa335ee|Hitem:141482::::::::110:258::3:3:3466:1477:3336:::|h[Unstable~`Arcanocrystal]|h|r^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1485]
-			"17:50:22 - Comm received:^1^Sresponse^T^N1^N1^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sresponse^SPASS^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:140805::::::::110:257::6:3:3518:1507:3336:::|h[Ephemeral~`Paradox]|h|r^Sgear2^S|cffa335ee|Hitem:140793::::::::110:257::5:3:3444:1487:3336:::|h[Perfectly~`Preserved~`Cake]|h|r^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1486]
-			"17:50:23 - Comm received:^1^Sresponse^T^N1^N1^N2^SCenzic-Illidan^N3^T^Silvl^N908.3125^Sdiff^N20^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:133642::130222::::::110:251::34:4:3418:1808:1542:3528:::|h[Horn~`of~`Valor]|h|r^Sgear2^S|cffa335ee|Hitem:140806::::::::110:251::3:3:3514:1477:3336:::|h[Convergence~`of~`Fates]|h|r^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1487]
-			"17:50:24 - Comm received:^1^Sresponse^T^N1^N1^N2^SXorn-Illidan^N3^T^Silvl^N902.75^Sresponse^SPASS^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:140809::::::::110:265::3:3:3515:1477:1813:::|h[Whispers~`in~`the~`Dark]|h|r^Sgear2^S|cffa335ee|Hitem:141482::::::::110:265::3:3:3466:1492:3337:::|h[Unstable~`Arcanocrystal]|h|r^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1488]
-			"17:50:24 - Comm received:^1^Sresponse^T^N1^N1^N2^SThenex-Illidan^N3^T^Silvl^N907.875^Sresponse^SPASS^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:140809::::::::110:63::5:3:3517:1497:3336:::|h[Whispers~`in~`the~`Dark]|h|r^Sgear2^S|cffa335ee|Hitem:140792::130221::::::110:63::5:4:3444:1808:1482:3528:::|h[Erratic~`Metronome]|h|r^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1489]
-			"17:50:25 - Comm received:^1^Sresponse^T^N1^N1^N2^SMadmartigàn-Illidan^N3^T^Silvl^N901.375^Sresponse^N1^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:142166::::::::110:72::43:3:3573:1487:3336:::|h[Ethereal~`Urn]|h|r^Sgear2^S|cffff8000|Hitem:144259::::::::110:72:::2:3459:3530:::|h[Kil'jaeden's~`Burning~`Wish]|h|r^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1490]
-			"17:50:26 - Comm received:^1^Soffline_timer^T^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1491]
-			"17:50:26 - Comm received:^1^Sresponse^T^N1^N1^N2^STelgina-Illidan^N3^T^Silvl^N910.0625^Sresponse^SPASS^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:139329::130222::::::110:253::6:4:1806:1808:1502:3528:::|h[Bloodthirsty~`Instinct]|h|r^Sgear2^S|cffa335ee|Hitem:140806::::::::110:253::5:3:3516:1492:3336:::|h[Convergence~`of~`Fates]|h|r^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1492]
-			"17:50:26 - Comm received:^1^Sresponse^T^N1^N1^N2^SZefarion-Illidan^N3^T^Silvl^N907.0625^Sresponse^SPASS^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:140809::::::::110:64::5:3:3517:1492:3528:::|h[Whispers~`in~`the~`Dark]|h|r^Sgear2^S|cffa335ee|Hitem:140792::130220::::::110:64::6:4:3445:1808:1502:3336:::|h[Erratic~`Metronome]|h|r^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [1493]
-			"17:50:30 - Comm received:^1^Sresponse^T^N1^N2^N2^SCenzic-Illidan^N3^T^Silvl^N908.3125^Sdiff^N-40^Sgear1^S|cffff8000|Hitem:132458::::::::110:251:::2:3459:3530:::|h[Toravon's~`Whiteout~`Bindings]|h|r^Sresponse^SPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1494]
-			"17:50:30 - Comm received:^1^Sresponse^T^N1^N1^N2^SLuthanen-Illidan^N3^T^Silvl^N905.1875^Sresponse^N2^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140793::::::::110:65::6:3:3445:1522:3337:::|h[Perfectly~`Preserved~`Cake]|h|r^Sgear2^S|cffa335ee|Hitem:128709::::::::110:65::13:3:689:601:679:::|h[Darkmoon~`Deck:~`Hellfire]|h|r^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1495]
-			"17:50:30 - Comm received:^1^Sresponse^T^N1^N1^N2^SDvldocdk-Illidan^N3^T^Silvl^N906.3125^Sresponse^N3^Sdiff^N15^Sgear1^S|cffff8000|Hitem:144259::::::::110:251:::2:3459:3530:::|h[Kil'jaeden's~`Burning~`Wish]|h|r^Sgear2^S|cffa335ee|Hitem:144745::::::::110:251::43:4:3573:604:1517:3336:::|h[Cruel~`Gladiator's~`Accolade~`of~`Victory]|h|r^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [1496]
-			"17:50:32 - Comm received:^1^Sresponse^T^N1^N3^N2^SReinhärt-Illidan^N3^T^Silvl^N908.3125^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:140884::::::::110:73::5:3:3444:1512:3337:::|h[Leystone-Toe~`Kickers]|h|r^Sresponse^SPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1497]
-			"17:50:32 - Comm received:^1^Sresponse^T^N1^N3^N2^SShietnorunes-Illidan^N3^T^Silvl^N904.625^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:137529::::::::110:250::16:3:3418:1542:3528:::|h[Pathfinders~`of~`Dark~`Omens]|h|r^Sresponse^N1^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1498]
-			"17:50:34 - Comm received:^1^Sresponse^T^N1^N4^N2^SColonferal-Illidan^N3^T^Silvl^N900.625^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138330::::::::110:103::3:4:3514:41:1487:3337:::|h[Hood~`of~`the~`Astral~`Warden]|h|r^Sresponse^SPASS^t^t^^ (from:) (Colonferal) (distri:) (RAID)", -- [1499]
-			"17:50:34 - Comm received:^1^Sresponse^T^N1^N4^N2^SShietnorunes-Illidan^N3^T^Silvl^N904.625^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:147749::::::::110:250::3:3:3572:1487:3336:::|h[Polished~`Felfury~`Helmet]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1500]
-			"17:50:34 - Comm received:^1^Sresponse^T^N1^N2^N2^SShietnorunes-Illidan^N3^T^Silvl^N904.625^Sdiff^N-40^Sgear1^S|cffff8000|Hitem:132365::::::::110:250:::2:1811:3530:::|h[Shackles~`of~`Bryndaor]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1501]
-			"17:50:35 - Comm received:^1^Sresponse^T^N1^N1^N2^SShietnorunes-Illidan^N3^T^Silvl^N904.625^Sresponse^SPASS^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:136736::::::::110:250::43:4:3573:604:1542:3528:::|h[Badge~`of~`the~`Wardens]|h|r^Sgear2^S|cffa335ee|Hitem:134190::130220::::::110:250::43:6:3573:1808:40:604:1542:3528:::|h[Ironrune~`Charm]|h|r^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1502]
-			"17:50:35 - Comm received:^1^Sresponse^T^N1^N2^N2^SReinhärt-Illidan^N3^T^Silvl^N908.3125^Sdiff^N-40^Sgear1^S|cffff8000|Hitem:137107::::::::110:73:::2:1811:3530:::|h[Mannoroth's~`Bloodletting~`Manacles]|h|r^Sresponse^SPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1503]
-			"17:50:35 - Comm received:^1^Sresponse^T^N1^N2^N2^SDvldocdk-Illidan^N3^T^Silvl^N906.3125^Sdiff^N-40^Sgear1^S|cffff8000|Hitem:132365::::::::110:251:::2:1811:3530:::|h[Shackles~`of~`Bryndaor]|h|r^Sresponse^SPASS^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [1504]
-			"17:50:36 - Comm received:^1^Sresponse^T^N1^N3^N2^SCenzic-Illidan^N3^T^Silvl^N908.3125^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140884::130222::::::110:251::6:4:3445:1808:1497:3528:::|h[Leystone-Toe~`Kickers]|h|r^Sresponse^SPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1505]
-			"17:50:37 - Comm received:^1^Sresponse^T^N1^N2^N2^SLuthanen-Illidan^N3^T^Silvl^N905.1875^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:140878::::::::110:65::5:3:3516:1487:1813:::|h[Duskwatch~`Plate~`Bracers]|h|r^Sresponse^SPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1506]
-			"17:50:38 - Comm received:^1^Sresponse^T^N1^N1^N2^SNadzieja-Illidan^N3^T^Silvl^N904.8125^Sresponse^SPASS^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:136750::::::::110:64::43:4:3573:604:1547:3336:::|h[Vault~`Guardian's~`Talisman]|h|r^Sgear2^S|cffff8000|Hitem:144259::::::::110:64:::2:1811:3530:::|h[Kil'jaeden's~`Burning~`Wish]|h|r^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1507]
-			"17:50:38 - Comm received:^1^Sresponse^T^N1^N2^N2^SMadmartigàn-Illidan^N3^T^Silvl^N901.375^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:139283::::::::110:72::33:3:3418:1557:3337:::|h[Wristbands~`of~`Magnificent~`Splendor]|h|r^Sresponse^N1^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1508]
-			"17:50:39 - Comm received:^1^Sresponse^T^N1^N1^N2^SReinhärt-Illidan^N3^T^Silvl^N908.3125^Sresponse^SPASS^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:140789::::::::110:73::43:4:3573:41:1492:3337:::|h[Animated~`Exoskeleton]|h|r^Sgear2^S|cffa335ee|Hitem:144745::130246::::::110:73::43:5:3573:1808:604:1532:3337:::|h[Cruel~`Gladiator's~`Accolade~`of~`Victory]|h|r^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1509]
-			"17:50:40 - Comm received:^1^Sresponse^T^N1^N3^N2^SDvldocdk-Illidan^N3^T^Silvl^N906.3125^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140884::::::::110:251::6:3:3445:1497:3528:::|h[Leystone-Toe~`Kickers]|h|r^Sresponse^SPASS^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [1510]
-			"17:50:41 - LootFrame:OnRoll (nil) (PASS) (Response:) (Pass)", -- [1511]
-			"17:50:41 - CreateResponse (1) (|cffa335ee|Hitem:140790::::::::110:72::6:3:3445:1497:3528:::|h[Claw of the Crystalline Scorpid]|h|r) (900) (PASS) (INVTYPE_TRINKET) (nil) (Miscellaneous) (nil)", -- [1512]
-			"17:50:41 - GetPlayersGear (140790) (INVTYPE_TRINKET)", -- [1513]
-			"17:50:41 - Trashing entry: (1) (|cffa335ee|Hitem:140790::::::::110:72::6:3:3445:1497:3528:::|h[Claw of the Crystalline Scorpid]|h|r)", -- [1514]
-			"17:50:42 - Comm received:^1^Sresponse^T^N1^N1^N2^SComet-Illidan^N3^T^Silvl^N905.875^Sdiff^N20^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:140803::::::::110:270::3:3:3514:1487:3337:::|h[Etraeus'~`Celestial~`Map]|h|r^Sgear2^S|cffa335ee|Hitem:139076::130219::::::110:270::43:5:3573:1808:603:1542:3528:::|h[Bloom~`of~`New~`Growth]|h|r^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [1515]
-			"17:50:42 - LootFrame:OnRoll (nil) (PASS) (Response:) (Pass)", -- [1516]
-			"17:50:42 - CreateResponse (4) (|cffa335ee|Hitem:140901::::::::110:72::6:4:3445:41:1497:3528:::|h[Vintage Suramar Nobility Hat]|h|r) (900) (PASS) (INVTYPE_HEAD) (nil) (Leather) (nil)", -- [1517]
-			"17:50:42 - GetPlayersGear (140901) (INVTYPE_HEAD)", -- [1518]
-			"17:50:42 - Trashing entry: (1) (|cffa335ee|Hitem:140901::::::::110:72::6:4:3445:41:1497:3528:::|h[Vintage Suramar Nobility Hat]|h|r)", -- [1519]
-			"17:50:42 - Comm received:^1^Sresponse^T^N1^N4^N2^SComet-Illidan^N3^T^Silvl^N905.875^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:138331::::::::110:270::5:3:3516:1497:3336:::|h[Hood~`of~`Enveloped~`Dissonance]|h|r^Sresponse^SPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [1520]
-			"17:50:42 - Comm received:^1^Sresponse^T^N1^N3^N2^SLuthanen-Illidan^N3^T^Silvl^N905.1875^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140884::::::::110:65::6:3:3445:1497:3528:::|h[Leystone-Toe~`Kickers]|h|r^Sresponse^SPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1521]
-			"17:50:44 - Comm received:^1^Sresponse^T^N1^N1^N2^SFearmeter-Illidan^N3^T^Silvl^N904.4375^Sresponse^SPASS^Sdiff^N30^Sgear1^S|cffa335ee|Hitem:141482::::::::110:265::3:3:3466:1482:3336:::|h[Unstable~`Arcanocrystal]|h|r^Sgear2^S|cffa335ee|Hitem:140809::::::::110:265::5:3:3517:1492:3528:::|h[Whispers~`in~`the~`Dark]|h|r^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1522]
-			"17:50:44 - Comm received:^1^Sresponse^T^N1^N3^N2^SMadmartigàn-Illidan^N3^T^Silvl^N901.375^Sdiff^N35^Sgear1^S|cffa335ee|Hitem:140891::130220::::::110:72::4:4:3520:1808:1462:3336:::|h[Sabatons~`of~`Unchanging~`Fate]|h|r^Sresponse^N1^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1523]
-			"17:50:50 - Comm received:^1^Svote^T^N1^N1^N2^SMadmartigàn-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1524]
-			"17:50:53 - Comm received:^1^Svote^T^N1^N2^N2^SMadmartigàn-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1525]
-			"17:50:56 - Comm received:^1^Sresponse^T^N1^N4^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138330::::::::110:102::5:4:3516:42:1487:3528:::|h[Hood~`of~`the~`Astral~`Warden]|h|r^Sresponse^N3^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1526]
-			"17:50:57 - Comm received:^1^Svote^T^N1^N3^N2^SShietnorunes-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1527]
-			"17:50:59 - Comm received:^1^Sresponse^T^N1^N1^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sresponse^SPASS^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:140809::::::::110:102::5:4:3517:41:1502:3336:::|h[Whispers~`in~`the~`Dark]|h|r^Sgear2^S|cffa335ee|Hitem:140792::::::::110:102::5:3:3444:1482:3528:::|h[Erratic~`Metronome]|h|r^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1528]
-			"17:51:00 - Comm received:^1^Svote^T^N1^N1^N2^SMadmartigàn-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1529]
-			"17:51:05 - Comm received:^1^Svote^T^N1^N2^N2^SMadmartigàn-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1530]
-			"17:51:11 - Comm received:^1^Svote^T^N1^N3^N2^SShietnorunes-Illidan^N3^N1^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1531]
-			"17:51:12 - Comm received:^1^Svote^T^N1^N3^N2^SShietnorunes-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1532]
-			"17:51:12 - Comm received:^1^Sresponse^T^N1^N4^N2^SWowjayson-Illidan^N3^T^Silvl^N907.1875^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138330::::::::110:102::5:3:3516:1487:3528:::|h[Hood~`of~`the~`Astral~`Warden]|h|r^Sresponse^N3^t^t^^ (from:) (Wowjayson) (distri:) (RAID)", -- [1533]
-			"17:51:15 - Comm received:^1^Sresponse^T^N1^N1^N2^SWowjayson-Illidan^N3^T^Silvl^N907.1875^Sresponse^SPASS^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:140800::::::::110:102::6:3:3518:1502:3528:::|h[Pharamere's~`Forbidden~`Grimoire]|h|r^Sgear2^S|cffa335ee|Hitem:140792::130220::::::110:102::5:4:3444:1808:1482:1813:::|h[Erratic~`Metronome]|h|r^t^t^^ (from:) (Wowjayson) (distri:) (RAID)", -- [1534]
-			"17:51:19 - Comm received:^1^Sawarded^T^N1^N3^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1535]
-			"17:51:19 - Comm received:^1^Shistory^T^N1^SShietnorunes-Illidan^N2^T^SitemReplaced1^S|cffa335ee|Hitem:137529::::::::110:250::16:3:3418:1542:3528:::|h[Pathfinders~`of~`Dark~`Omens]|h|r^SgroupSize^N20^SmapID^N1530^Sinstance^SThe~`Nighthold-Mythic^Sclass^SDEATHKNIGHT^SdifficultyID^N16^Sresponse^SMainspec/Need^SisAwardReason^b^Sboss^SSkorpyron^Stime^S19:51:34^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Svotes^N3^SresponseID^N1^SlootWon^S|cffa335ee|Hitem:140884::::::::110:72::6:3:3445:1497:3528:::|h[Leystone-Toe~`Kickers]|h|r^Sdate^S15/06/17^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1536]
-			"17:51:23 - Comm received:^1^Sawarded^T^N1^N2^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1537]
-			"17:51:23 - Comm received:^1^Shistory^T^N1^SMadmartigàn-Illidan^N2^T^SitemReplaced1^S|cffa335ee|Hitem:139283::::::::110:72::33:3:3418:1557:3337:::|h[Wristbands~`of~`Magnificent~`Splendor]|h|r^Stime^S19:51:38^SmapID^N1530^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Sclass^SWARRIOR^SgroupSize^N20^Sresponse^SMainspec/Need^Sdate^S15/06/17^Sboss^SSkorpyron^SlootWon^S|cffa335ee|Hitem:140902::::::::110:72::6:3:3445:1497:3528:::|h[Jagged~`Carapace~`Wristclamps]|h|r^Sinstance^SThe~`Nighthold-Mythic^SdifficultyID^N16^SresponseID^N1^Svotes^N2^SisAwardReason^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1538]
-			"17:51:31 - Comm received:^1^Sawarded^T^N1^N1^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1539]
-			"17:51:31 - Comm received:^1^Shistory^T^N1^SMadmartigàn-Illidan^N2^T^SmapID^N1530^Sdate^S15/06/17^Sclass^SWARRIOR^SgroupSize^N20^Svotes^N2^Stime^S19:51:46^SitemReplaced1^S|cffa335ee|Hitem:142166::::::::110:72::43:3:3573:1487:3336:::|h[Ethereal~`Urn]|h|r^Sinstance^SThe~`Nighthold-Mythic^Sresponse^SMainspec/Need^SdifficultyID^N16^SlootWon^S|cffa335ee|Hitem:140790::::::::110:72::6:3:3445:1497:3528:::|h[Claw~`of~`the~`Crystalline~`Scorpid]|h|r^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^SisAwardReason^b^SresponseID^N1^SitemReplaced2^S|cffff8000|Hitem:144259::::::::110:72:::2:3459:3530:::|h[Kil'jaeden's~`Burning~`Wish]|h|r^Sboss^SSkorpyron^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1540]
-			"17:51:48 - Comm received:^1^Sawarded^T^N1^N4^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1541]
-			"17:51:48 - Comm received:^1^Ssession_end^T^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1542]
-			"17:51:48 - Comm received:^1^Shistory^T^N1^SWowjayson-Illidan^N2^T^SmapID^N1530^Sdate^S15/06/17^Sclass^SDRUID^SgroupSize^N20^Svotes^N0^Stime^S19:52:04^SitemReplaced1^S|cffa335ee|Hitem:138330::::::::110:102::5:3:3516:1487:3528:::|h[Hood~`of~`the~`Astral~`Warden]|h|r^Sinstance^SThe~`Nighthold-Mythic^Sresponse^SMinor~`Upgrade^SdifficultyID^N16^SlootWon^S|cffa335ee|Hitem:140901::::::::110:72::6:4:3445:41:1497:3528:::|h[Vintage~`Suramar~`Nobility~`Hat]|h|r^Scolor^T^N1^N0^N2^N0.7^N3^N0.7^N4^N1^t^SisAwardReason^b^SresponseID^N3^Sboss^SSkorpyron^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1543]
-			"18:04:09 - Comm received:^1^SlootTable^T^N1^T^N1^T^SequipLoc^SINVTYPE_FEET^SlootSlot^N1^Slink^S|cffa335ee|Hitem:140860::::::::110:72::6:3:3445:1497:3528:::|h[Stutterstep~`Treads]|h|r^SsubType^SLeather^Srelic^b^Sawarded^b^Sname^SStutterstep~`Treads^Stexture^N1335522^Silvl^N900^Sboe^b^Sbagged^b^Squality^N4^t^N2^T^SequipLoc^S^SlootSlot^N2^Slink^S|cffa335ee|Hitem:140843::::::::110:72::6:3:3445:1497:3528:::|h[Flickering~`Timespark]|h|r^SsubType^SArtifact~`Relic^Srelic^SHoly^Sawarded^b^Sname^SFlickering~`Timespark^Stexture^N1519263^Silvl^N900^Sboe^b^Sbagged^b^Squality^N4^t^N3^T^SequipLoc^SINVTYPE_ROBE^SlootSlot^N3^Slink^S|cffa335ee|Hitem:140848::::::::110:72::6:3:3445:1502:3336:::|h[Robes~`of~`Fluctuating~`Energy]|h|r^SsubType^SCloth^Srelic^b^Sawarded^b^Sname^SRobes~`of~`Fluctuating~`Energy^Stexture^N1345989^Silvl^N905^Sboe^b^Sbagged^b^Squality^N4^t^N4^T^SequipLoc^SINVTYPE_HAND^SlootSlot^N4^Slink^S|cffa335ee|Hitem:140863::::::::110:72::6:3:3445:1497:3528:::|h[Temporally~`Displaced~`Gloves]|h|r^SsubType^SLeather^Srelic^b^Sawarded^b^Sname^STemporally~`Displaced~`Gloves^Stexture^N1408495^Silvl^N900^Sboe^b^Sbagged^b^Squality^N4^t^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1544]
-			"18:04:09 - NewRelicAutopassCheck (|cffa335ee|Hitem:140843::::::::110:72::6:3:3445:1497:3528:::|h[Flickering Timespark]|h|r) (Holy)", -- [1545]
-			"18:04:09 - Autopassed on:  (|cffa335ee|Hitem:140843::::::::110:72::6:3:3445:1497:3528:::|h[Flickering Timespark]|h|r)", -- [1546]
-			"18:04:09 - CreateResponse (2) (|cffa335ee|Hitem:140843::::::::110:72::6:3:3445:1497:3528:::|h[Flickering Timespark]|h|r) (900) (AUTOPASS) () (nil) (Artifact Relic) (nil)", -- [1547]
-			"18:04:09 - Autopassed on:  (|cffa335ee|Hitem:140848::::::::110:72::6:3:3445:1502:3336:::|h[Robes of Fluctuating Energy]|h|r)", -- [1548]
-			"18:04:09 - CreateResponse (3) (|cffa335ee|Hitem:140848::::::::110:72::6:3:3445:1502:3336:::|h[Robes of Fluctuating Energy]|h|r) (905) (AUTOPASS) (INVTYPE_ROBE) (nil) (Cloth) (nil)", -- [1549]
-			"18:04:09 - GetPlayersGear (140848) (INVTYPE_ROBE)", -- [1550]
-			"18:04:09 - LootFrame:Start()", -- [1551]
-			"18:04:09 - Restoring entry: (normal) (1)", -- [1552]
-			"18:04:09 - Restoring entry: (normal) (1)", -- [1553]
-			"18:04:09 - Comm received:^1^SlootAck^T^N1^SCenzic-Illidan^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1554]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SCenzic-Illidan^N3^T^Silvl^N908.9375^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140884::130222::::::110:251::6:4:3445:1808:1497:3528:::|h[Leystone-Toe~`Kickers]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1555]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SCenzic-Illidan^N3^T^Silvl^N908.9375^Sresponse^SAUTOPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1556]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SCenzic-Illidan^N3^T^Silvl^N908.9375^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:138349::::::::110:251::5:3:3516:1517:3337:::|h[Dreadwyrm~`Breastplate]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1557]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SCenzic-Illidan^N3^T^Silvl^N908.9375^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:140907::::::::110:251::5:3:3516:1507:3337:::|h[Bridgebreaker~`Gauntlets]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1558]
-			"18:04:09 - Comm received:^1^SlootAck^T^N1^SLanféar-Illidan^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1559]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140885::130222::::::110:257::5:4:3516:1808:1497:3336:::|h[Treads~`of~`Galactic~`Odyssey]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1560]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138310::::::::110:257::5:4:3516:40:1487:3528:::|h[Purifier's~`Gloves]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1561]
-			"18:04:09 - Comm received:^1^SlootAck^T^N1^SFearmeter-Illidan^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1562]
-			"18:04:09 - Comm received:^1^SlootAck^T^N1^SWowjayson-Illidan^t^^ (from:) (Wowjayson) (distri:) (RAID)", -- [1563]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SFearmeter-Illidan^N3^T^Silvl^N904.4375^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:140854::::::::110:265::6:3:3445:1502:3336:::|h[Perpetually~`Muddy~`Sandals]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1564]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SFearmeter-Illidan^N3^T^Silvl^N904.4375^Sresponse^SAUTOPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1565]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SFearmeter-Illidan^N3^T^Silvl^N904.4375^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:138311:5444:::::::110:265::5:3:3516:1497:3336:::|h[Clutch~`of~`Azj'Aqir]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1566]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SWowjayson-Illidan^N3^T^Silvl^N907.1875^Sresponse^SAUTOPASS^t^t^^ (from:) (Wowjayson) (distri:) (RAID)", -- [1567]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SWowjayson-Illidan^N3^T^Silvl^N907.1875^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:138324::::::::110:102::5:3:3516:1487:3528:::|h[Robe~`of~`the~`Astral~`Warden]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Wowjayson) (distri:) (RAID)", -- [1568]
-			"18:04:09 - Comm received:^1^SlootAck^T^N1^SNadzieja-Illidan^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1569]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SNadzieja-Illidan^N3^T^Silvl^N904.8125^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:140914::::::::110:64::3:3:3515:1477:3528:::|h[Outcast~`Wanderer's~`Footrags]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1570]
-			"18:04:09 - Comm received:^1^SlootAck^T^N1^SXorn-Illidan^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1571]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SXorn-Illidan^N3^T^Silvl^N902.75^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:134308::::::::110:265::33:3:3418:1567:3337:::|h[Manawracker~`Sandals]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1572]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SNadzieja-Illidan^N3^T^Silvl^N904.8125^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1573]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SNadzieja-Illidan^N3^T^Silvl^N904.8125^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:138309::::::::110:64::3:3:3514:1492:3337:::|h[Gloves~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1574]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SXorn-Illidan^N3^T^Silvl^N902.75^Sresponse^SAUTOPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1575]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SXorn-Illidan^N3^T^Silvl^N902.75^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:138311::::::::110:265::5:3:3516:1492:3336:::|h[Clutch~`of~`Azj'Aqir]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1576]
-			"18:04:09 - Comm received:^1^SlootAck^T^N1^SColonferal-Illidan^t^^ (from:) (Colonferal) (distri:) (RAID)", -- [1577]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SColonferal-Illidan^N3^T^Silvl^N900.3125^Sresponse^SAUTOPASS^t^t^^ (from:) (Colonferal) (distri:) (RAID)", -- [1578]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SColonferal-Illidan^N3^T^Silvl^N900.3125^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:138324::::::::110:103::5:4:3516:40:1487:3528:::|h[Robe~`of~`the~`Astral~`Warden]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Colonferal) (distri:) (RAID)", -- [1579]
-			"18:04:09 - Comm received:^1^SlootAck^T^N1^SReinhärt-Illidan^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1580]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SReinhärt-Illidan^N3^T^Silvl^N908.3125^Sdiff^N-15^Sgear1^S|cffa335ee|Hitem:140884::::::::110:73::5:3:3444:1512:3337:::|h[Leystone-Toe~`Kickers]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1581]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SReinhärt-Illidan^N3^T^Silvl^N908.3125^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1582]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SReinhärt-Illidan^N3^T^Silvl^N908.3125^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:140913::::::::110:73::5:3:3517:1497:3336:::|h[Breastplate~`of~`the~`Remembered~`King]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1583]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SReinhärt-Illidan^N3^T^Silvl^N908.3125^Sdiff^N-40^Sgear1^S|cffff8000|Hitem:137108::::::::110:73:::2:1811:3455:::|h[Kakushan's~`Stormscale~`Gauntlets]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1584]
-			"18:04:09 - Comm received:^1^SlootAck^T^N1^SMadmartigàn-Illidan^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1585]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SMadmartigàn-Illidan^N3^T^Silvl^N901.6875^Sdiff^N35^Sgear1^S|cffa335ee|Hitem:140891::130220::::::110:72::4:4:3520:1808:1462:3336:::|h[Sabatons~`of~`Unchanging~`Fate]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1586]
-			"18:04:09 - Comm received:^1^SextraUtilData^T^N1^SShietnorunes-Illidan^N2^T^Sforged^N7^Spawn^T^N1^T^Sequipped^N668.421^Snew^N472.929^t^N2^T^Sequipped^N0^Snew^N0^t^N3^T^Sequipped^N918.919^Snew^N587.972^t^N4^T^Sequipped^N656.572^Snew^N428.155^t^t^SspecID^N250^Straits^N52^Slegend^N2^Ssockets^N2^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1587]
-			"18:04:09 - Comm received:^1^SlootAck^T^N1^SShietnorunes-Illidan^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1588]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SMadmartigàn-Illidan^N3^T^Silvl^N901.6875^Sresponse^SAUTOPASS^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1589]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SMadmartigàn-Illidan^N3^T^Silvl^N901.6875^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:138351::::::::110:72::5:3:3516:1487:3528:::|h[Chestplate~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1590]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SMadmartigàn-Illidan^N3^T^Silvl^N901.6875^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138354::::::::110:72::5:3:3516:1487:3528:::|h[Gauntlets~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1591]
-			"18:04:09 - Comm received:^1^SextraUtilData^T^N1^SMadmartigàn-Illidan^N2^T^Sforged^N5^Spawn^T^N1^T^Sequipped^N497.162^Snew^N252.024^t^N2^T^Sequipped^N0^Snew^N0^t^N3^T^Sequipped^N679.749^Snew^N330.374^t^N4^T^Sequipped^N22333.44^Snew^N210.389^t^t^SspecID^N72^Straits^N52^Slegend^N2^Ssockets^N3^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1592]
-			"18:04:09 - Comm received:^1^SlootAck^T^N1^STelgina-Illidan^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1593]
-			"18:04:09 - Comm received:^1^SlootAck^T^N1^SDadizzle-Illidan^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1594]
-			"18:04:09 - Comm received:^1^SlootAck^T^N1^SZefarion-Illidan^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [1595]
-			"18:04:09 - Comm received:^1^SlootAck^T^N1^SDvldocdk-Illidan^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [1596]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N1^N2^STelgina-Illidan^N3^T^Silvl^N910.0625^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:140867::::::::110:253::5:3:3516:1492:3336:::|h[Sabatons~`of~`Burning~`Steps]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1597]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N2^N2^STelgina-Illidan^N3^T^Silvl^N910.0625^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1598]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N3^N2^STelgina-Illidan^N3^T^Silvl^N910.0625^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:138339::::::::110:253::6:3:3518:1502:3528:::|h[Eagletalon~`Tunic]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1599]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N4^N2^STelgina-Illidan^N3^T^Silvl^N910.0625^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:140869::::::::110:253::6:3:3445:1507:3336:::|h[Sterilizer's~`Insulated~`Gauntlets]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1600]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1601]
-			"18:04:09 - Comm received:^1^SlootAck^T^N1^SLuthanen-Illidan^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1602]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SLuthanen-Illidan^N3^T^Silvl^N905.1875^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140884::::::::110:65::6:3:3445:1497:3528:::|h[Leystone-Toe~`Kickers]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1603]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SLuthanen-Illidan^N3^T^Silvl^N905.1875^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:138350::::::::110:65::6:3:3518:1502:3528:::|h[Breastplate~`of~`the~`Highlord]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1604]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SLuthanen-Illidan^N3^T^Silvl^N905.1875^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:138353::::::::110:65::3:3:3514:1472:1813:::|h[Gauntlets~`of~`the~`Highlord]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1605]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SZefarion-Illidan^N3^T^Silvl^N907.0625^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:140914::::::::110:64::6:3:3519:1507:3528:::|h[Outcast~`Wanderer's~`Footrags]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [1606]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SZefarion-Illidan^N3^T^Silvl^N907.0625^Sresponse^SAUTOPASS^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [1607]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SZefarion-Illidan^N3^T^Silvl^N907.0625^Sdiff^N-40^Sgear1^S|cffff8000|Hitem:132411::::::::110:64:::2:3459:3530:::|h[Lady~`Vashj's~`Grasp]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [1608]
-			"18:04:09 - Comm received:^1^SlootAck^T^N1^SComet-Illidan^t^^ (from:) (Comet) (distri:) (RAID)", -- [1609]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SComet-Illidan^N3^T^Silvl^N905.875^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [1610]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SComet-Illidan^N3^T^Silvl^N905.875^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:138325::::::::110:270::5:4:3516:41:1487:3528:::|h[Tunic~`of~`Enveloped~`Dissonance]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [1611]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SDvldocdk-Illidan^N3^T^Silvl^N906.3125^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140884::::::::110:251::6:3:3445:1497:3528:::|h[Leystone-Toe~`Kickers]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [1612]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SDvldocdk-Illidan^N3^T^Silvl^N906.3125^Sresponse^SAUTOPASS^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [1613]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:138324::::::::110:102::5:3:3516:1487:3528:::|h[Robe~`of~`the~`Astral~`Warden]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1614]
-			"18:04:09 - Comm received:^1^SlootAck^T^N1^SThenex-Illidan^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1615]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SThenex-Illidan^N3^T^Silvl^N909.125^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140854::130221::::::110:63::6:4:3445:1808:1497:3528:::|h[Perpetually~`Muddy~`Sandals]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1616]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SThenex-Illidan^N3^T^Silvl^N909.125^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1617]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SThenex-Illidan^N3^T^Silvl^N909.125^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140888::::::::110:63::6:4:3445:40:1497:3528:::|h[Scorpid~`Handler's~`Gloves]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1618]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SDvldocdk-Illidan^N3^T^Silvl^N906.3125^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:140877::130219::::::110:251::5:4:3516:1808:1497:3336:::|h[Captain's~`Parade~`Breastplate]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [1619]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SDvldocdk-Illidan^N3^T^Silvl^N906.3125^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:134519::130246::::::110:251::16:4:3413:1808:1537:3336:::|h[Ravencrest~`Bonecrush~`Gauntlets]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [1620]
-			"18:04:09 - Comm received:^1^SlootAck^T^N1^SGrimuhs-Illidan^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1621]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SGrimuhs-Illidan^N3^T^Silvl^N904.25^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:140854::::::::110:258::6:4:3445:41:1502:3336:::|h[Perpetually~`Muddy~`Sandals]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1622]
-			"18:04:09 - Comm received:^1^SextraUtilData^T^N1^SDjpurge-Illidan^N2^T^Sforged^N5^Spawn^T^N1^T^Sequipped^N577.763^Snew^N546.739^t^N2^T^Sequipped^N0^Snew^N0^t^N3^T^Sequipped^N906.472^Snew^N765.491^t^N4^T^Sequipped^N633.49^Snew^N581.211^t^t^SspecID^N264^Straits^N51^Slegend^N2^Ssockets^N0^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1623]
-			"18:04:09 - Comm received:^1^SlootAck^T^N1^SDjpurge-Illidan^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1624]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SDjpurge-Illidan^N3^T^Silvl^N905^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:147744::::::::110:264::3:3:3572:1482:3528:::|h[Treads~`of~`Disorderly~`Retreat]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1625]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SDjpurge-Illidan^N3^T^Silvl^N905^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1626]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SDjpurge-Illidan^N3^T^Silvl^N905^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:138346::::::::110:264::6:3:3518:1502:3528:::|h[Raiment~`of~`Shackled~`Elements]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1627]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SDjpurge-Illidan^N3^T^Silvl^N905^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:134209::::::::110:264::33:3:3417:1557:3336:::|h[Tideskorn~`Gauntlets]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1628]
-			"18:04:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SGrimuhs-Illidan^N3^T^Silvl^N904.25^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140888::::::::110:258::5:3:3444:1497:3337:::|h[Scorpid~`Handler's~`Gloves]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1629]
-			"18:04:10 - Comm received:^1^SEUBonusRoll^T^N1^SShietnorunes-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:250:8388608:6::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1630]
-			"18:04:11 - Comm received:^1^Sresponse^T^N1^N1^N2^SColonferal-Illidan^N3^T^Silvl^N900.3125^Sdiff^N-40^Sgear1^S|cffff8000|Hitem:137024::::::::110:103:::3:3529:3530:1811:::|h[Ailuro~`Pouncers]|h|r^Sresponse^SPASS^t^t^^ (from:) (Colonferal) (distri:) (RAID)", -- [1631]
-			"18:04:12 - Comm received:^1^Sresponse^T^N1^N4^N2^SColonferal-Illidan^N3^T^Silvl^N900.3125^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138327::::::::110:103::5:4:3516:43:1487:1813:::|h[Gloves~`of~`the~`Astral~`Warden]|h|r^Sresponse^SPASS^t^t^^ (from:) (Colonferal) (distri:) (RAID)", -- [1632]
-			"18:04:13 - Comm received:^1^Sresponse^T^N1^N3^N2^SZefarion-Illidan^N3^T^Silvl^N907.0625^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140848::::::::110:64::6:3:3445:1502:3336:::|h[Robes~`of~`Fluctuating~`Energy]|h|r^Sresponse^SPASS^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [1633]
-			"18:04:14 - Comm received:^1^Sresponse^T^N1^N1^N2^SWowjayson-Illidan^N3^T^Silvl^N907.1875^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140860::::::::110:102::6:3:3445:1497:3528:::|h[Stutterstep~`Treads]|h|r^Sresponse^SPASS^t^t^^ (from:) (Wowjayson) (distri:) (RAID)", -- [1634]
-			"18:04:14 - Comm received:^1^Sresponse^T^N1^N3^N2^SFearmeter-Illidan^N3^T^Silvl^N904.4375^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:138320::130222::::::110:265::5:4:3516:1808:1497:3336:::|h[Finery~`of~`Azj'Aqir]|h|r^Sresponse^SPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1635]
-			"18:04:14 - Comm received:^1^Sresponse^T^N1^N4^N2^SWowjayson-Illidan^N3^T^Silvl^N907.1875^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140863:5447:::::::110:102::6:3:3445:1497:3528:::|h[Temporally~`Displaced~`Gloves]|h|r^Sresponse^SPASS^t^t^^ (from:) (Wowjayson) (distri:) (RAID)", -- [1636]
-			"18:04:15 - Comm received:^1^Sresponse^T^N1^N3^N2^SThenex-Illidan^N3^T^Silvl^N909.125^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:138318::130221::::::110:63::6:4:3518:1808:1502:3528:::|h[Robe~`of~`Everburning~`Knowledge]|h|r^Sresponse^SPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1637]
-			"18:04:17 - Comm received:^1^Sresponse^T^N1^N2^N2^SLuthanen-Illidan^N3^T^Silvl^N905.1875^Sresponse^N3^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:133685::::::::110:65::16:3:3418:1542:3528:::|h[Odyn's~`Boon]|h|r^Sgear2^S|cffa335ee|Hitem:140843::::::::110:65::6:3:3445:1497:3528:::|h[Flickering~`Timespark]|h|r^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1638]
-			"18:04:19 - Comm received:^1^Soffline_timer^T^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1639]
-			"18:04:19 - LootFrame:OnRoll (nil) (PASS) (Response:) (Pass)", -- [1640]
-			"18:04:19 - CreateResponse (1) (|cffa335ee|Hitem:140860::::::::110:72::6:3:3445:1497:3528:::|h[Stutterstep Treads]|h|r) (900) (PASS) (INVTYPE_FEET) (nil) (Leather) (nil)", -- [1641]
-			"18:04:19 - GetPlayersGear (140860) (INVTYPE_FEET)", -- [1642]
-			"18:04:19 - Trashing entry: (1) (|cffa335ee|Hitem:140860::::::::110:72::6:3:3445:1497:3528:::|h[Stutterstep Treads]|h|r)", -- [1643]
-			"18:04:19 - Comm received:^1^Sresponse^T^N1^N1^N2^SComet-Illidan^N3^T^Silvl^N905.875^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140861::::::::110:270::5:4:3516:40:1497:3336:::|h[Grove-Tender's~`Moccasins]|h|r^Sresponse^SPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [1644]
-			"18:04:20 - LootFrame:OnRoll (nil) (PASS) (Response:) (Pass)", -- [1645]
-			"18:04:20 - CreateResponse (4) (|cffa335ee|Hitem:140863::::::::110:72::6:3:3445:1497:3528:::|h[Temporally Displaced Gloves]|h|r) (900) (PASS) (INVTYPE_HAND) (nil) (Leather) (nil)", -- [1646]
-			"18:04:20 - GetPlayersGear (140863) (INVTYPE_HAND)", -- [1647]
-			"18:04:20 - Trashing entry: (1) (|cffa335ee|Hitem:140863::::::::110:72::6:3:3445:1497:3528:::|h[Temporally Displaced Gloves]|h|r)", -- [1648]
-			"18:04:20 - Comm received:^1^Sresponse^T^N1^N4^N2^SComet-Illidan^N3^T^Silvl^N905.875^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:142141::::::::110:270::16:3:3415:1512:3337:::|h[Custodian's~`Soothing~`Touch]|h|r^Sresponse^SPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [1649]
-			"18:04:20 - Comm received:^1^Sresponse^T^N1^N1^N2^SShietnorunes-Illidan^N3^T^Silvl^N905.25^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140884::::::::110:250::6:3:3445:1497:3528:::|h[Leystone-Toe~`Kickers]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1650]
-			"18:04:20 - Comm received:^1^Sresponse^T^N1^N2^N2^SShietnorunes-Illidan^N3^T^Silvl^N905.25^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1651]
-			"18:04:20 - Comm received:^1^Sresponse^T^N1^N3^N2^SShietnorunes-Illidan^N3^T^Silvl^N905.25^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:137527::::::::110:250::35:3:3418:1557:3337:::|h[Polished~`Jade~`Chestguard]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1652]
-			"18:04:20 - Comm received:^1^Sresponse^T^N1^N4^N2^SShietnorunes-Illidan^N3^T^Silvl^N905.25^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:140907::::::::110:250::5:3:3516:1502:3337:::|h[Bridgebreaker~`Gauntlets]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1653]
-			"18:04:22 - Comm received:^1^Sresponse^T^N1^N1^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:134193::::::::110:102::34:4:3418:42:1572:3337:::|h[Biornskin~`Moccasins]|h|r^Sresponse^N1^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1654]
-			"18:04:22 - Comm received:^1^Sresponse^T^N1^N2^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sresponse^N2^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140843::::::::110:257::6:3:3445:1502:3336:::|h[Flickering~`Timespark]|h|r^Sgear2^S|cffa335ee|Hitem:147758::::::::110:257::3:3:3572:1482:3528:::|h[Beguiling~`Revelation]|h|r^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1655]
-			"18:04:24 - Comm received:^1^Sresponse^T^N1^N3^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:138319::::::::110:257::6:3:3518:1502:3528:::|h[Purifier's~`Cassock]|h|r^Sresponse^SPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1656]
-			"18:04:27 - Comm received:^1^Sresponse^T^N1^N3^N2^SGrimuhs-Illidan^N3^T^Silvl^N904.25^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:138319::::::::110:258::5:3:3516:1487:1813:::|h[Purifier's~`Cassock]|h|r^Sresponse^SPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1657]
-			"18:04:28 - Comm received:^1^Sresponse^T^N1^N2^N2^SGrimuhs-Illidan^N3^T^Silvl^N904.25^Sresponse^SPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1658]
-			"18:04:31 - Comm received:^1^Sawarded^T^N1^N1^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1659]
-			"18:04:31 - Comm received:^1^Shistory^T^N1^SDadizzle-Illidan^N2^T^SmapID^N1530^Sdate^S15/06/17^Sclass^SDRUID^SgroupSize^N20^Svotes^N0^Stime^S20:04:46^SitemReplaced1^S|cffa335ee|Hitem:134193::::::::110:102::34:4:3418:42:1572:3337:::|h[Biornskin~`Moccasins]|h|r^Sinstance^SThe~`Nighthold-Mythic^Sresponse^SMainspec/Need^SdifficultyID^N16^SlootWon^S|cffa335ee|Hitem:140860::::::::110:72::6:3:3445:1497:3528:::|h[Stutterstep~`Treads]|h|r^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^SisAwardReason^b^SresponseID^N1^Sboss^SChronomatic~`Anomaly^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1660]
-			"18:04:33 - Comm received:^1^Sresponse^T^N1^N3^N2^SXorn-Illidan^N3^T^Silvl^N902.75^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:138320::::::::110:265::5:3:3516:1487:1813:::|h[Finery~`of~`Azj'Aqir]|h|r^Sresponse^SPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1661]
-			"18:04:35 - Comm received:^1^Sresponse^T^N1^N4^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:138327:5444:::::::110:102::5:3:3516:1497:3336:::|h[Gloves~`of~`the~`Astral~`Warden]|h|r^Sresponse^N3^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1662]
-			"18:04:38 - Comm received:^1^Sawarded^T^N1^N2^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1663]
-			"18:04:38 - Comm received:^1^Shistory^T^N1^SLuthanen-Illidan^N2^T^SmapID^N1530^Sdate^S15/06/17^Sclass^SPALADIN^SgroupSize^N20^Svotes^N0^Stime^S20:04:53^SitemReplaced1^S|cffa335ee|Hitem:133685::::::::110:65::16:3:3418:1542:3528:::|h[Odyn's~`Boon]|h|r^Sinstance^SThe~`Nighthold-Mythic^Sresponse^SMinor~`Upgrade^SdifficultyID^N16^SlootWon^S|cffa335ee|Hitem:140843::::::::110:72::6:3:3445:1497:3528:::|h[Flickering~`Timespark]|h|r^Scolor^T^N1^N0^N2^N0.7^N3^N0.7^N4^N1^t^SisAwardReason^b^SresponseID^N3^SitemReplaced2^S|cffa335ee|Hitem:140843::::::::110:65::6:3:3445:1497:3528:::|h[Flickering~`Timespark]|h|r^Sboss^SChronomatic~`Anomaly^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1664]
-			"18:04:38 - Comm received:^1^Sresponse^T^N1^N3^N2^SNadzieja-Illidan^N3^T^Snote^Sxmog~`will~`trade~`for~`shard~`:D^Silvl^N904.8125^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138318::::::::110:64::5:3:3516:1492:3336:::|h[Robe~`of~`Everburning~`Knowledge]|h|r^Sresponse^N2^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1665]
-			"18:04:43 - Comm received:^1^Sawarded^T^N1^N3^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1666]
-			"18:04:43 - Comm received:^1^Shistory^T^N1^SNadzieja-Illidan^N2^T^SmapID^N1530^Sdate^S15/06/17^Sclass^SMAGE^SgroupSize^N20^Svotes^N0^Stime^S20:04:58^SitemReplaced1^S|cffa335ee|Hitem:138318::::::::110:64::5:3:3516:1492:3336:::|h[Robe~`of~`Everburning~`Knowledge]|h|r^Sinstance^SThe~`Nighthold-Mythic^Sresponse^SOffspec^SdifficultyID^N16^SlootWon^S|cffa335ee|Hitem:140848::::::::110:72::6:3:3445:1502:3336:::|h[Robes~`of~`Fluctuating~`Energy]|h|r^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^SisAwardReason^b^SresponseID^N2^Sboss^SChronomatic~`Anomaly^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1667]
-			"18:04:49 - Comm received:^1^Sawarded^T^N1^N4^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1668]
-			"18:04:49 - Comm received:^1^Ssession_end^T^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1669]
-			"18:04:49 - Comm received:^1^Shistory^T^N1^SDadizzle-Illidan^N2^T^SmapID^N1530^Sdate^S15/06/17^Sclass^SDRUID^SgroupSize^N20^Svotes^N0^Stime^S20:05:05^SitemReplaced1^S|cffa335ee|Hitem:138327:5444:::::::110:102::5:3:3516:1497:3336:::|h[Gloves~`of~`the~`Astral~`Warden]|h|r^Sinstance^SThe~`Nighthold-Mythic^Sresponse^SMinor~`Upgrade^SdifficultyID^N16^SlootWon^S|cffa335ee|Hitem:140863::::::::110:72::6:3:3445:1497:3528:::|h[Temporally~`Displaced~`Gloves]|h|r^Scolor^T^N1^N0^N2^N0.7^N3^N0.7^N4^N1^t^SisAwardReason^b^SresponseID^N3^Sboss^SChronomatic~`Anomaly^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1670]
-			"18:12:44 - Comm received:^1^SlootTable^T^N1^T^N1^T^SequipLoc^SINVTYPE_TRINKET^SlootSlot^N2^Slink^S|cffa335ee|Hitem:140794::::::::110:72::6:3:3445:1497:3528:::|h[Arcanogolem~`Digit]|h|r^SsubType^SMiscellaneous^Srelic^b^Sawarded^b^Sname^SArcanogolem~`Digit^Stexture^N133874^Silvl^N900^Sboe^b^Sbagged^b^Squality^N4^t^N2^T^SequipLoc^S^SlootSlot^N3^Slink^S|cffa335ee|Hitem:140812::::::::110:72::6:3:3445:1497:3528:::|h[Soggy~`Manascrubber~`Brush]|h|r^SsubType^SArtifact~`Relic^Srelic^SArcane^Sawarded^b^Sname^SSoggy~`Manascrubber~`Brush^Stexture^N461132^Silvl^N900^Sboe^b^Sbagged^b^Squality^N4^t^N3^T^SequipLoc^S^SlootSlot^N4^Slink^S|cffa335ee|Hitem:143578::::::::110:72::6:1:569:::|h[Cloak~`of~`the~`Foreseen~`Vanquisher]|h|r^SsubType^SJunk^Stoken^SBackSlot^Srelic^b^Sawarded^b^Sname^SCloak~`of~`the~`Foreseen~`Vanquisher^Stexture^N133772^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^N4^T^SequipLoc^S^SlootSlot^N5^Slink^S|cffa335ee|Hitem:143577::::::::110:72::6:1:569:::|h[Cloak~`of~`the~`Foreseen~`Conqueror]|h|r^SsubType^SJunk^Stoken^SBackSlot^Srelic^b^Sawarded^b^Sname^SCloak~`of~`the~`Foreseen~`Conqueror^Stexture^N133772^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1671]
-			"18:12:44 - NewRelicAutopassCheck (|cffa335ee|Hitem:140812::::::::110:72::6:3:3445:1497:3528:::|h[Soggy Manascrubber Brush]|h|r) (Arcane)", -- [1672]
-			"18:12:44 - Autopassed on:  (|cffa335ee|Hitem:140812::::::::110:72::6:3:3445:1497:3528:::|h[Soggy Manascrubber Brush]|h|r)", -- [1673]
-			"18:12:44 - CreateResponse (2) (|cffa335ee|Hitem:140812::::::::110:72::6:3:3445:1497:3528:::|h[Soggy Manascrubber Brush]|h|r) (900) (AUTOPASS) () (nil) (Artifact Relic) (nil)", -- [1674]
-			"18:12:44 - Autopassed on:  (|cffa335ee|Hitem:143578::::::::110:72::6:1:569:::|h[Cloak of the Foreseen Vanquisher]|h|r)", -- [1675]
-			"18:12:44 - CreateResponse (3) (|cffa335ee|Hitem:143578::::::::110:72::6:1:569:::|h[Cloak of the Foreseen Vanquisher]|h|r) (110) (AUTOPASS) () (nil) (Junk) (nil)", -- [1676]
-			"18:12:44 - GetPlayersGear (143578) ()", -- [1677]
-			"18:12:44 - Autopassed on:  (|cffa335ee|Hitem:143577::::::::110:72::6:1:569:::|h[Cloak of the Foreseen Conqueror]|h|r)", -- [1678]
-			"18:12:44 - CreateResponse (4) (|cffa335ee|Hitem:143577::::::::110:72::6:1:569:::|h[Cloak of the Foreseen Conqueror]|h|r) (110) (AUTOPASS) () (nil) (Junk) (nil)", -- [1679]
-			"18:12:44 - GetPlayersGear (143577) ()", -- [1680]
-			"18:12:44 - LootFrame:Start()", -- [1681]
-			"18:12:44 - Restoring entry: (normal) (1)", -- [1682]
-			"18:12:45 - Comm received:^1^SlootAck^T^N1^SDadizzle-Illidan^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1683]
-			"18:12:45 - Comm received:^1^Sresponse^T^N1^N4^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:138366:5436:::::::110:102::5:3:3516:1497:3336:::|h[Cloak~`of~`the~`Astral~`Warden]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1684]
-			"18:12:45 - Comm received:^1^SlootAck^T^N1^SNadzieja-Illidan^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1685]
-			"18:12:45 - Comm received:^1^Sresponse^T^N1^N4^N2^SNadzieja-Illidan^N3^T^Silvl^N904.8125^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:133771:5436:::::::110:64::35:3:3418:1557:3337:::|h[Seacursed~`Wrap]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1686]
-			"18:12:45 - Comm received:^1^SlootAck^T^N1^SXorn-Illidan^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1687]
-			"18:12:45 - Comm received:^1^Sresponse^T^N1^N2^N2^SXorn-Illidan^N3^T^Silvl^N903.375^Sresponse^SAUTOPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1688]
-			"18:12:45 - Comm received:^1^Sresponse^T^N1^N3^N2^SXorn-Illidan^N3^T^Silvl^N903.375^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138373:5436:::::::110:265::5:3:3516:1487:1813:::|h[Cloak~`of~`Azj'Aqir]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1689]
-			"18:12:45 - Comm received:^1^SlootAck^T^N1^SMadmartigàn-Illidan^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1690]
-			"18:12:45 - Comm received:^1^Sresponse^T^N1^N2^N2^SMadmartigàn-Illidan^N3^T^Silvl^N901.6875^Sresponse^SAUTOPASS^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1691]
-			"18:12:45 - Comm received:^1^Sresponse^T^N1^N3^N2^SMadmartigàn-Illidan^N3^T^Silvl^N901.6875^Sdiff^N-830^Sgear1^S|cffff8000|Hitem:137053:5434:::::::110:72:::2:3459:3530:::|h[Kazzalax,~`Fujieda's~`Fury]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1692]
-			"18:12:45 - Comm received:^1^Sresponse^T^N1^N4^N2^SMadmartigàn-Illidan^N3^T^Silvl^N901.6875^Sdiff^N-830^Sgear1^S|cffff8000|Hitem:137053:5434:::::::110:72:::2:3459:3530:::|h[Kazzalax,~`Fujieda's~`Fury]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1693]
-			"18:12:45 - Comm received:^1^SextraUtilData^T^N1^SMadmartigàn-Illidan^N2^T^Sforged^N5^Spawn^T^N1^T^Sequipped^N876.713^Snew^N0^t^N2^T^Sequipped^N0^Snew^N0^t^N3^T^Sequipped^N584.443^Snew^N0^t^N4^T^Sequipped^N584.443^Snew^N0^t^t^SspecID^N72^Straits^N52^Slegend^N2^Ssockets^N3^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1694]
-			"18:12:45 - Comm received:^1^SlootAck^T^N1^SFearmeter-Illidan^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1695]
-			"18:12:45 - Comm received:^1^Sresponse^T^N1^N2^N2^SFearmeter-Illidan^N3^T^Silvl^N904.4375^Sresponse^SAUTOPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1696]
-			"18:12:45 - Comm received:^1^Sresponse^T^N1^N3^N2^SFearmeter-Illidan^N3^T^Silvl^N904.4375^Sdiff^N-830^Sgear1^S|cffff8000|Hitem:144364:5436:::::::110:265:::2:1811:3455:::|h[Reap~`and~`Sow]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1697]
-			"18:12:45 - Comm received:^1^SlootAck^T^N1^SReinhärt-Illidan^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1698]
-			"18:12:45 - Comm received:^1^Sresponse^T^N1^N2^N2^SReinhärt-Illidan^N3^T^Silvl^N908.3125^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1699]
-			"18:12:45 - Comm received:^1^SlootAck^T^N1^SCenzic-Illidan^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1700]
-			"18:12:45 - Comm received:^1^Sresponse^T^N1^N2^N2^SCenzic-Illidan^N3^T^Silvl^N908.9375^Sresponse^SAUTOPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1701]
-			"18:12:45 - Comm received:^1^Sresponse^T^N1^N3^N2^SReinhärt-Illidan^N3^T^Silvl^N908.3125^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138374:5434:::::::110:73::6:3:3518:1502:3528:::|h[Greatcloak~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1702]
-			"18:12:45 - Comm received:^1^Sresponse^T^N1^N4^N2^SReinhärt-Illidan^N3^T^Silvl^N908.3125^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138374:5434:::::::110:73::6:3:3518:1502:3528:::|h[Greatcloak~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1703]
-			"18:12:45 - Comm received:^1^Sresponse^T^N1^N4^N2^SCenzic-Illidan^N3^T^Silvl^N908.9375^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:138364:5434:::::::110:251::5:3:3516:1497:3336:::|h[Dreadwyrm~`Greatcloak]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1704]
-			"18:12:45 - Comm received:^1^SlootAck^T^N1^SColonferal-Illidan^t^^ (from:) (Colonferal) (distri:) (RAID)", -- [1705]
-			"18:12:45 - Comm received:^1^SextraUtilData^T^N1^SDjpurge-Illidan^N2^T^Sforged^N5^Spawn^T^N1^T^Sequipped^N949.539^Snew^N0^t^N2^T^Sequipped^N0^Snew^N0^t^N3^T^Sequipped^N451.724^Snew^N0^t^N4^T^Sequipped^N451.724^Snew^N0^t^t^SspecID^N264^Straits^N51^Slegend^N2^Ssockets^N0^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1706]
-			"18:12:45 - Comm received:^1^Sresponse^T^N1^N4^N2^SColonferal-Illidan^N3^T^Silvl^N900.3125^Sdiff^N-785^Sgear1^S|cffa335ee|Hitem:134412:5435:::::::110:103::33:3:3535:1547:3337:::|h[Cloak~`of~`Unwavering~`Loyalty]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Colonferal) (distri:) (RAID)", -- [1707]
-			"18:12:45 - Comm received:^1^SlootAck^T^N1^SDjpurge-Illidan^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1708]
-			"18:12:45 - Comm received:^1^Sresponse^T^N1^N2^N2^SDjpurge-Illidan^N3^T^Silvl^N905^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1709]
-			"18:12:45 - Comm received:^1^Sresponse^T^N1^N3^N2^SDjpurge-Illidan^N3^T^Silvl^N905^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138372:5436:::::::110:264::5:3:3516:1487:3528:::|h[Cloak~`of~`Shackled~`Elements]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1710]
-			"18:12:45 - Comm received:^1^Sresponse^T^N1^N4^N2^SDjpurge-Illidan^N3^T^Silvl^N905^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138372:5436:::::::110:264::5:3:3516:1487:3528:::|h[Cloak~`of~`Shackled~`Elements]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1711]
-			"18:12:45 - Comm received:^1^SlootAck^T^N1^SThenex-Illidan^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1712]
-			"18:12:45 - Comm received:^1^SextraUtilData^T^N1^SShietnorunes-Illidan^N2^T^Sforged^N7^Spawn^T^N1^T^Sequipped^N134.079^Snew^N0^t^N2^T^Sequipped^N0^Snew^N0^t^N3^T^Sequipped^N377.394^Snew^N0^t^N4^T^Sequipped^N377.394^Snew^N0^t^t^SspecID^N250^Straits^N52^Slegend^N2^Ssockets^N2^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1713]
-			"18:12:45 - Comm received:^1^SlootAck^T^N1^SShietnorunes-Illidan^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1714]
-			"18:12:45 - Comm received:^1^Sresponse^T^N1^N4^N2^SThenex-Illidan^N3^T^Silvl^N909.125^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:144403:5436:::::::110:63::6:3:3445:1497:3528:::|h[Fashionable~`Autumn~`Cloak]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1715]
-			"18:12:45 - Comm received:^1^SlootAck^T^N1^SComet-Illidan^t^^ (from:) (Comet) (distri:) (RAID)", -- [1716]
-			"18:12:45 - Comm received:^1^Sresponse^T^N1^N2^N2^SComet-Illidan^N3^T^Silvl^N905.875^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [1717]
-			"18:12:45 - Comm received:^1^Sresponse^T^N1^N3^N2^SComet-Illidan^N3^T^Silvl^N905.875^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138367:5436:::::::110:270::6:4:3518:41:1502:3528:::|h[Cloak~`of~`Enveloped~`Dissonance]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [1718]
-			"18:12:45 - Comm received:^1^Sresponse^T^N1^N4^N2^SComet-Illidan^N3^T^Silvl^N905.875^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138367:5436:::::::110:270::6:4:3518:41:1502:3528:::|h[Cloak~`of~`Enveloped~`Dissonance]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [1719]
-			"18:12:45 - Comm received:^1^SlootAck^T^N1^SWowjayson-Illidan^t^^ (from:) (Wowjayson) (distri:) (RAID)", -- [1720]
-			"18:12:45 - Comm received:^1^Sresponse^T^N1^N4^N2^SWowjayson-Illidan^N3^T^Silvl^N907.1875^Sdiff^N-805^Sgear1^S|cffa335ee|Hitem:138366:5436:::::::110:102::6:3:3518:1512:3336:::|h[Cloak~`of~`the~`Astral~`Warden]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Wowjayson) (distri:) (RAID)", -- [1721]
-			"18:12:46 - Comm received:^1^SlootAck^T^N1^SLanféar-Illidan^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1722]
-			"18:12:46 - Comm received:^1^Sresponse^T^N1^N2^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1723]
-			"18:12:46 - Comm received:^1^Sresponse^T^N1^N3^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N-830^Sgear1^S|cffff8000|Hitem:137109:5436:::::::110:257:::2:1811:3530:::|h[X'anshi,~`Shroud~`of~`Archbishop~`Benedictus]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1724]
-			"18:12:46 - Comm received:^1^SlootAck^T^N1^SZefarion-Illidan^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [1725]
-			"18:12:46 - Comm received:^1^Sresponse^T^N1^N4^N2^SZefarion-Illidan^N3^T^Silvl^N907.0625^Sdiff^N-785^Sgear1^S|cffa335ee|Hitem:138365:5436:::::::110:64::5:3:3516:1492:3336:::|h[Cloak~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [1726]
-			"18:12:46 - Comm received:^1^SlootAck^T^N1^STelgina-Illidan^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1727]
-			"18:12:46 - Comm received:^1^Sresponse^T^N1^N3^N2^STelgina-Illidan^N3^T^Silvl^N910.0625^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138368:5435:::::::110:253::6:3:3518:1502:3528:::|h[Eagletalon~`Cloak]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1728]
-			"18:12:46 - Comm received:^1^Sresponse^T^N1^N4^N2^STelgina-Illidan^N3^T^Silvl^N910.0625^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138368:5435:::::::110:253::6:3:3518:1502:3528:::|h[Eagletalon~`Cloak]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1729]
-			"18:12:46 - Comm received:^1^SlootAck^T^N1^SDvldocdk-Illidan^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [1730]
-			"18:12:46 - Comm received:^1^Sresponse^T^N1^N2^N2^SDvldocdk-Illidan^N3^T^Silvl^N906.3125^Sresponse^SAUTOPASS^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [1731]
-			"18:12:46 - Comm received:^1^Sresponse^T^N1^N4^N2^SDvldocdk-Illidan^N3^T^Silvl^N906.3125^Sdiff^N-800^Sgear1^S|cffa335ee|Hitem:138364:5434:::::::110:251::6:3:3518:1507:3336:::|h[Dreadwyrm~`Greatcloak]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [1732]
-			"18:12:46 - Comm received:^1^SlootAck^T^N1^SLuthanen-Illidan^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1733]
-			"18:12:46 - Comm received:^1^Sresponse^T^N1^N3^N2^SLuthanen-Illidan^N3^T^Silvl^N905.5625^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:142170:5436:::::::110:65::16:3:3415:1507:3336:::|h[Drape~`of~`Shame]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1734]
-			"18:12:46 - Comm received:^1^SlootAck^T^N1^SGrimuhs-Illidan^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1735]
-			"18:12:46 - Comm received:^1^Sresponse^T^N1^N2^N2^SGrimuhs-Illidan^N3^T^Silvl^N904.25^Sresponse^SAUTOPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1736]
-			"18:12:46 - Comm received:^1^Sresponse^T^N1^N3^N2^SGrimuhs-Illidan^N3^T^Silvl^N904.25^Sdiff^N-770^Sgear1^S|cffa335ee|Hitem:140910:5436:130220::::::110:258::3:4:3514:1808:1477:3336:::|h[Cloak~`of~`Temporal~`Recalibration]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1737]
-			"18:12:48 - Comm received:^1^Sresponse^T^N1^N1^N2^SReinhärt-Illidan^N3^T^Silvl^N908.3125^Sresponse^SPASS^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:140789::::::::110:73::43:4:3573:41:1492:3337:::|h[Animated~`Exoskeleton]|h|r^Sgear2^S|cffa335ee|Hitem:144745::130246::::::110:73::43:5:3573:1808:604:1532:3337:::|h[Cruel~`Gladiator's~`Accolade~`of~`Victory]|h|r^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1738]
-			"18:12:49 - Comm received:^1^Sresponse^T^N1^N1^N2^SCenzic-Illidan^N3^T^Silvl^N908.9375^Sdiff^N20^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:133642::130222::::::110:251::34:4:3418:1808:1542:3528:::|h[Horn~`of~`Valor]|h|r^Sgear2^S|cffa335ee|Hitem:140806::::::::110:251::3:3:3514:1477:3336:::|h[Convergence~`of~`Fates]|h|r^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1739]
-			"18:12:49 - Comm received:^1^Sresponse^T^N1^N4^N2^SFearmeter-Illidan^N3^T^Silvl^N904.4375^Sdiff^N-830^Sgear1^S|cffff8000|Hitem:144364:5436:::::::110:265:::2:1811:3455:::|h[Reap~`and~`Sow]|h|r^Sresponse^SPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1740]
-			"18:12:49 - Comm received:^1^Sresponse^T^N1^N1^N2^SThenex-Illidan^N3^T^Silvl^N909.125^Sresponse^SPASS^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140792::::::::110:63::6:3:3445:1502:3336:::|h[Erratic~`Metronome]|h|r^Sgear2^S|cffa335ee|Hitem:140809::::::::110:63::5:3:3517:1497:3336:::|h[Whispers~`in~`the~`Dark]|h|r^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1741]
-			"18:12:49 - Comm received:^1^Sresponse^T^N1^N1^N2^SFearmeter-Illidan^N3^T^Silvl^N904.4375^Sresponse^SPASS^Sdiff^N30^Sgear1^S|cffa335ee|Hitem:141482::::::::110:265::3:3:3466:1482:3336:::|h[Unstable~`Arcanocrystal]|h|r^Sgear2^S|cffa335ee|Hitem:140809::::::::110:265::5:3:3517:1492:3528:::|h[Whispers~`in~`the~`Dark]|h|r^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1742]
-			"18:12:50 - Comm received:^1^Sresponse^T^N1^N1^N2^SLuthanen-Illidan^N3^T^Silvl^N905.5625^Sresponse^SPASS^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140793::::::::110:65::6:3:3445:1522:3337:::|h[Perfectly~`Preserved~`Cake]|h|r^Sgear2^S|cffa335ee|Hitem:128709::::::::110:65::13:3:689:601:679:::|h[Darkmoon~`Deck:~`Hellfire]|h|r^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1743]
-			"18:12:52 - Comm received:^1^Sresponse^T^N1^N1^N2^SGrimuhs-Illidan^N3^T^Silvl^N904.25^Sresponse^SPASS^Sdiff^N35^Sgear1^S|cffa335ee|Hitem:140809::::::::110:258::3:3:3515:1512:3337:::|h[Whispers~`in~`the~`Dark]|h|r^Sgear2^S|cffa335ee|Hitem:141482::::::::110:258::3:3:3466:1477:3336:::|h[Unstable~`Arcanocrystal]|h|r^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1744]
-			"18:12:52 - Comm received:^1^Sresponse^T^N1^N4^N2^SGrimuhs-Illidan^N3^T^Silvl^N904.25^Sdiff^N-770^Sgear1^S|cffa335ee|Hitem:140910:5436:130220::::::110:258::3:4:3514:1808:1477:3336:::|h[Cloak~`of~`Temporal~`Recalibration]|h|r^Sresponse^SPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1745]
-			"18:12:52 - Comm received:^1^Sresponse^T^N1^N3^N2^SZefarion-Illidan^N3^T^Silvl^N907.0625^Sdiff^N-785^Sgear1^S|cffa335ee|Hitem:138365:5436:::::::110:64::5:3:3516:1492:3336:::|h[Cloak~`of~`Everburning~`Knowledge]|h|r^Sresponse^N4^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [1746]
-			"18:12:53 - Comm received:^1^Sresponse^T^N1^N1^N2^SShietnorunes-Illidan^N3^T^Silvl^N905.25^Sresponse^SPASS^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:136736::::::::110:250::43:4:3573:604:1542:3528:::|h[Badge~`of~`the~`Wardens]|h|r^Sgear2^S|cffa335ee|Hitem:134190::130220::::::110:250::43:6:3573:1808:40:604:1542:3528:::|h[Ironrune~`Charm]|h|r^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1747]
-			"18:12:53 - Comm received:^1^Sresponse^T^N1^N1^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sresponse^SPASS^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:140795::::::::110:257::5:3:3516:1507:3337:::|h[Aluriel's~`Mirror]|h|r^Sgear2^S|cffa335ee|Hitem:140793::::::::110:257::5:3:3444:1487:3336:::|h[Perfectly~`Preserved~`Cake]|h|r^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1748]
-			"18:12:53 - Comm received:^1^Sresponse^T^N1^N3^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:138366:5436:::::::110:102::5:3:3516:1497:3336:::|h[Cloak~`of~`the~`Astral~`Warden]|h|r^Sresponse^N1^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1749]
-			"18:12:54 - Comm received:^1^Sresponse^T^N1^N4^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N-830^Sgear1^S|cffff8000|Hitem:137109:5436:::::::110:257:::2:1811:3530:::|h[X'anshi,~`Shroud~`of~`Archbishop~`Benedictus]|h|r^Sresponse^SPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1750]
-			"18:12:54 - Comm received:^1^Sresponse^T^N1^N1^N2^SXorn-Illidan^N3^T^Silvl^N903.375^Sresponse^SPASS^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:140809::::::::110:265::3:3:3515:1477:1813:::|h[Whispers~`in~`the~`Dark]|h|r^Sgear2^S|cffa335ee|Hitem:141482::::::::110:265::3:3:3466:1492:3337:::|h[Unstable~`Arcanocrystal]|h|r^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1751]
-			"18:12:54 - Comm received:^1^Soffline_timer^T^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1752]
-			"18:12:55 - Comm received:^1^Sresponse^T^N1^N2^N2^SShietnorunes-Illidan^N3^T^Silvl^N905.25^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1753]
-			"18:12:55 - Comm received:^1^Sresponse^T^N1^N2^N2^STelgina-Illidan^N3^T^Silvl^N910.0625^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:140812::::::::110:253::6:3:3445:1502:3336:::|h[Soggy~`Manascrubber~`Brush]|h|r^Sresponse^SPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1754]
-			"18:12:56 - Comm received:^1^Sresponse^T^N1^N1^N2^SMadmartigàn-Illidan^N3^T^Silvl^N901.6875^Sresponse^SPASS^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140790::::::::110:72::6:3:3445:1497:3528:::|h[Claw~`of~`the~`Crystalline~`Scorpid]|h|r^Sgear2^S|cffff8000|Hitem:144259::::::::110:72:::2:3459:3530:::|h[Kil'jaeden's~`Burning~`Wish]|h|r^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1755]
-			"18:12:56 - Comm received:^1^Sresponse^T^N1^N1^N2^SWowjayson-Illidan^N3^T^Silvl^N907.1875^Sresponse^SPASS^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:140800::::::::110:102::6:3:3518:1502:3528:::|h[Pharamere's~`Forbidden~`Grimoire]|h|r^Sgear2^S|cffa335ee|Hitem:140792::130220::::::110:102::5:4:3444:1808:1482:1813:::|h[Erratic~`Metronome]|h|r^t^t^^ (from:) (Wowjayson) (distri:) (RAID)", -- [1756]
-			"18:12:58 - Comm received:^1^Sresponse^T^N1^N1^N2^SDvldocdk-Illidan^N3^T^Silvl^N906.3125^Sresponse^SPASS^Sdiff^N15^Sgear1^S|cffff8000|Hitem:144259::::::::110:251:::2:3459:3530:::|h[Kil'jaeden's~`Burning~`Wish]|h|r^Sgear2^S|cffa335ee|Hitem:144745::::::::110:251::43:4:3573:604:1517:3336:::|h[Cruel~`Gladiator's~`Accolade~`of~`Victory]|h|r^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [1757]
-			"18:12:58 - Comm received:^1^Sresponse^T^N1^N3^N2^SColonferal-Illidan^N3^T^Silvl^N900.3125^Sdiff^N-785^Sgear1^S|cffa335ee|Hitem:134412:5435:::::::110:103::33:3:3535:1547:3337:::|h[Cloak~`of~`Unwavering~`Loyalty]|h|r^Sresponse^N1^t^t^^ (from:) (Colonferal) (distri:) (RAID)", -- [1758]
-			"18:12:59 - Comm received:^1^Sresponse^T^N1^N3^N2^SWowjayson-Illidan^N3^T^Silvl^N907.1875^Sdiff^N-805^Sgear1^S|cffa335ee|Hitem:138366:5436:::::::110:102::6:3:3518:1512:3336:::|h[Cloak~`of~`the~`Astral~`Warden]|h|r^Sresponse^SPASS^t^t^^ (from:) (Wowjayson) (distri:) (RAID)", -- [1759]
-			"18:13:00 - Comm received:^1^Sresponse^T^N1^N1^N2^SDjpurge-Illidan^N3^T^Silvl^N905^Sresponse^SPASS^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:140793::::::::110:264::5:3:3444:1482:3528:::|h[Perfectly~`Preserved~`Cake]|h|r^Sgear2^S|cffff8000|Hitem:144258::::::::110:264:::2:1811:3530:::|h[Velen's~`Future~`Sight]|h|r^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1760]
-			"18:13:00 - Comm received:^1^Sresponse^T^N1^N1^N2^STelgina-Illidan^N3^T^Silvl^N910.0625^Sresponse^SPASS^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:139329::130222::::::110:253::6:4:1806:1808:1502:3528:::|h[Bloodthirsty~`Instinct]|h|r^Sgear2^S|cffa335ee|Hitem:140806::::::::110:253::5:3:3516:1492:3336:::|h[Convergence~`of~`Fates]|h|r^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1761]
-			"18:13:01 - Comm received:^1^Sresponse^T^N1^N2^N2^SThenex-Illidan^N3^T^Silvl^N909.125^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:144463::::::::110:63::35:3:3418:1557:3337:::|h[Shard~`of~`Kaldorei~`Stained~`Glass]|h|r^Sresponse^SPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1762]
-			"18:13:03 - Comm received:^1^Sresponse^T^N1^N1^N2^SZefarion-Illidan^N3^T^Silvl^N907.0625^Sresponse^SPASS^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:140809::::::::110:64::5:3:3517:1492:3528:::|h[Whispers~`in~`the~`Dark]|h|r^Sgear2^S|cffa335ee|Hitem:140792::130220::::::110:64::6:4:3445:1808:1502:3336:::|h[Erratic~`Metronome]|h|r^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [1763]
-			"18:13:04 - Comm received:^1^Sresponse^T^N1^N4^N2^SShietnorunes-Illidan^N3^T^Silvl^N905.25^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138364:5434:::::::110:250::5:3:3516:1487:3528:::|h[Dreadwyrm~`Greatcloak]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1764]
-			"18:13:04 - Comm received:^1^Sresponse^T^N1^N2^N2^SLuthanen-Illidan^N3^T^Silvl^N905.5625^Sresponse^N2^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1765]
-			"18:13:05 - Comm received:^1^Sresponse^T^N1^N4^N2^SXorn-Illidan^N3^T^Silvl^N903.375^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138373:5436:::::::110:265::5:3:3516:1487:1813:::|h[Cloak~`of~`Azj'Aqir]|h|r^Sresponse^N1^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1766]
-			"18:13:05 - Comm received:^1^Sresponse^T^N1^N3^N2^SShietnorunes-Illidan^N3^T^Silvl^N905.25^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138364:5434:::::::110:250::5:3:3516:1487:3528:::|h[Dreadwyrm~`Greatcloak]|h|r^Sresponse^N1^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1767]
-			"18:13:06 - Comm received:^1^Sresponse^T^N1^N3^N2^SCenzic-Illidan^N3^T^Silvl^N908.9375^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:138364:5434:::::::110:251::5:3:3516:1497:3336:::|h[Dreadwyrm~`Greatcloak]|h|r^Sresponse^N3^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1768]
-			"18:13:06 - Comm received:^1^SEUBonusRoll^T^N1^SShietnorunes-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:250:8388608:6::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1769]
-			"18:13:07 - Comm received:^1^Sresponse^T^N1^N4^N2^SLuthanen-Illidan^N3^T^Silvl^N905.5625^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:142170:5436:::::::110:65::16:3:3415:1507:3336:::|h[Drape~`of~`Shame]|h|r^Sresponse^SPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1770]
-			"18:13:07 - Comm received:^1^Sresponse^T^N1^N3^N2^SDvldocdk-Illidan^N3^T^Silvl^N906.3125^Sdiff^N-800^Sgear1^S|cffa335ee|Hitem:138364:5434:::::::110:251::6:3:3518:1507:3336:::|h[Dreadwyrm~`Greatcloak]|h|r^Sresponse^SPASS^t^t^^ (from:) (Dvldocdk) (distri:) (RAID)", -- [1771]
-			"18:13:08 - Comm received:^1^Sresponse^T^N1^N2^N2^SZefarion-Illidan^N3^T^Silvl^N907.0625^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:140812::::::::110:64::6:3:3445:1502:3336:::|h[Soggy~`Manascrubber~`Brush]|h|r^Sresponse^N2^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [1772]
-			"18:13:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SWowjayson-Illidan^N3^T^Snote^Sneed^Silvl^N907.1875^Sresponse^N1^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140827::::::::110:102::5:3:3444:1497:3337:::|h[Manatoxin~`Gland]|h|r^Sgear2^S|cffa335ee|Hitem:140810::::::::110:102::5:3:3516:1497:3336:::|h[Farsight~`Spiritjewel]|h|r^t^t^^ (from:) (Wowjayson) (distri:) (RAID)", -- [1773]
-			"18:13:09 - LootFrame:OnRoll (nil) (PASS) (Response:) (Pass)", -- [1774]
-			"18:13:09 - CreateResponse (1) (|cffa335ee|Hitem:140794::::::::110:72::6:3:3445:1497:3528:::|h[Arcanogolem Digit]|h|r) (900) (PASS) (INVTYPE_TRINKET) (nil) (Miscellaneous) (nil)", -- [1775]
-			"18:13:09 - GetPlayersGear (140794) (INVTYPE_TRINKET)", -- [1776]
-			"18:13:09 - Trashing entry: (1) (|cffa335ee|Hitem:140794::::::::110:72::6:3:3445:1497:3528:::|h[Arcanogolem Digit]|h|r)", -- [1777]
-			"18:13:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SComet-Illidan^N3^T^Silvl^N905.875^Sdiff^N20^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:140803::::::::110:270::3:3:3514:1487:3337:::|h[Etraeus'~`Celestial~`Map]|h|r^Sgear2^S|cffa335ee|Hitem:139076::130219::::::110:270::43:5:3573:1808:603:1542:3528:::|h[Bloom~`of~`New~`Growth]|h|r^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [1778]
-			"18:13:10 - Comm received:^1^Sresponse^T^N1^N1^N2^SNadzieja-Illidan^N3^T^Silvl^N904.8125^Sresponse^SPASS^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:136750::::::::110:64::43:4:3573:604:1547:3336:::|h[Vault~`Guardian's~`Talisman]|h|r^Sgear2^S|cffff8000|Hitem:144259::::::::110:64:::2:1811:3530:::|h[Kil'jaeden's~`Burning~`Wish]|h|r^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1779]
-			"18:13:10 - Comm received:^1^Sresponse^T^N1^N3^N2^SThenex-Illidan^N3^T^Silvl^N909.125^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:144403:5436:::::::110:63::6:3:3445:1497:3528:::|h[Fashionable~`Autumn~`Cloak]|h|r^Sresponse^N1^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1780]
-			"18:13:13 - Comm received:^1^Sresponse^T^N1^N1^N2^SColonferal-Illidan^N3^T^Silvl^N900.3125^Sresponse^N1^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:140802::::::::110:103::3:3:3514:1472:1813:::|h[Nightblooming~`Frond]|h|r^Sgear2^S|cffa335ee|Hitem:140806::::::::110:103::5:3:3516:1487:1813:::|h[Convergence~`of~`Fates]|h|r^t^t^^ (from:) (Colonferal) (distri:) (RAID)", -- [1781]
-			"18:13:14 - Comm received:^1^Sresponse^T^N1^N2^N2^SColonferal-Illidan^N3^T^Silvl^N900.3125^Sresponse^SPASS^t^t^^ (from:) (Colonferal) (distri:) (RAID)", -- [1782]
-			"18:13:18 - Comm received:^1^Sresponse^T^N1^N2^N2^SNadzieja-Illidan^N3^T^Silvl^N904.8125^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:144506::::::::110:64::43:3:3573:3144:3337:::|h[Taboo~`Knowledge]|h|r^Sresponse^N1^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1783]
-			"18:13:21 - Comm received:^1^Sresponse^T^N1^N3^N2^SNadzieja-Illidan^N3^T^Silvl^N904.8125^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:133771:5436:::::::110:64::35:3:3418:1557:3337:::|h[Seacursed~`Wrap]|h|r^Sresponse^N1^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1784]
-			"18:13:30 - Comm received:^1^Sresponse^T^N1^N1^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sresponse^SPASS^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:140809::::::::110:102::5:4:3517:41:1502:3336:::|h[Whispers~`in~`the~`Dark]|h|r^Sgear2^S|cffa335ee|Hitem:140792::::::::110:102::5:3:3444:1482:3528:::|h[Erratic~`Metronome]|h|r^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1785]
-			"18:13:31 - Comm received:^1^Sresponse^T^N1^N2^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sresponse^SPASS^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:142175::::::::110:102::35:3:3418:1522:3337:::|h[Arcanum~`of~`Weightlessness]|h|r^Sgear2^S|cffa335ee|Hitem:140812::::::::110:102::6:3:3445:1502:3336:::|h[Soggy~`Manascrubber~`Brush]|h|r^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1786]
-			"18:13:37 - Comm received:^1^Sawarded^T^N1^N4^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1787]
-			"18:13:37 - Comm received:^1^Shistory^T^N1^SXorn-Illidan^N2^T^SmapID^N1530^Sdate^S15/06/17^Sclass^SWARLOCK^SgroupSize^N20^Svotes^N0^Stime^S20:13:52^SitemReplaced1^S|cffa335ee|Hitem:138373:5436:::::::110:265::5:3:3516:1487:1813:::|h[Cloak~`of~`Azj'Aqir]|h|r^StierToken^SBackSlot^Sinstance^SThe~`Nighthold-Mythic^Sresponse^SMainspec/Need^SdifficultyID^N16^SlootWon^S|cffa335ee|Hitem:143577::::::::110:72::6:1:569:::|h[Cloak~`of~`the~`Foreseen~`Conqueror]|h|r^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^SisAwardReason^b^SresponseID^N1^Sboss^STrilliax^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1788]
-			"18:13:41 - Comm received:^1^Svote^T^N1^N3^N2^SShietnorunes-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1789]
-			"18:13:54 - Comm received:^1^Sawarded^T^N1^N1^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1790]
-			"18:13:54 - Comm received:^1^Shistory^T^N1^SColonferal-Illidan^N2^T^SmapID^N1530^Sdate^S15/06/17^Sclass^SDRUID^SgroupSize^N20^Svotes^N0^Stime^S20:14:10^SitemReplaced1^S|cffa335ee|Hitem:140802::::::::110:103::3:3:3514:1472:1813:::|h[Nightblooming~`Frond]|h|r^Sinstance^SThe~`Nighthold-Mythic^Sresponse^SMainspec/Need^SdifficultyID^N16^SlootWon^S|cffa335ee|Hitem:140794::::::::110:72::6:3:3445:1497:3528:::|h[Arcanogolem~`Digit]|h|r^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^SisAwardReason^b^SresponseID^N1^SitemReplaced2^S|cffa335ee|Hitem:140806::::::::110:103::5:3:3516:1487:1813:::|h[Convergence~`of~`Fates]|h|r^Sboss^STrilliax^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1791]
-			"18:14:24 - Comm received:^1^Svote^T^N1^N3^N2^SShietnorunes-Illidan^N3^N1^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1792]
-			"18:14:30 - Comm received:^1^Sawarded^T^N1^N3^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1793]
-			"18:14:30 - Comm received:^1^Shistory^T^N1^SShietnorunes-Illidan^N2^T^SmapID^N1530^Sdate^S15/06/17^Sclass^SDEATHKNIGHT^SgroupSize^N20^Svotes^N2^Stime^S20:14:46^SitemReplaced1^S|cffa335ee|Hitem:138364:5434:::::::110:250::5:3:3516:1487:3528:::|h[Dreadwyrm~`Greatcloak]|h|r^StierToken^SBackSlot^Sinstance^SThe~`Nighthold-Mythic^Sresponse^SMainspec/Need^SdifficultyID^N16^SlootWon^S|cffa335ee|Hitem:143578::::::::110:72::6:1:569:::|h[Cloak~`of~`the~`Foreseen~`Vanquisher]|h|r^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^SisAwardReason^b^SresponseID^N1^Sboss^STrilliax^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1794]
-			"18:14:41 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Roivon) (distri:) (GUILD)", -- [1795]
-			"18:15:21 - Comm received:^1^Sawarded^T^N1^N2^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1796]
-			"18:15:21 - Comm received:^1^Ssession_end^T^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1797]
-			"18:15:21 - Comm received:^1^Shistory^T^N1^SWowjayson-Illidan^N2^T^SmapID^N1530^Sdate^S15/06/17^Sclass^SDRUID^SgroupSize^N20^Svotes^N0^Stime^S20:15:37^SitemReplaced1^S|cffa335ee|Hitem:140827::::::::110:102::5:3:3444:1497:3337:::|h[Manatoxin~`Gland]|h|r^Sinstance^SThe~`Nighthold-Mythic^Sresponse^SMainspec/Need^SdifficultyID^N16^SlootWon^S|cffa335ee|Hitem:140812::::::::110:72::6:3:3445:1497:3528:::|h[Soggy~`Manascrubber~`Brush]|h|r^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^SisAwardReason^b^SresponseID^N1^SitemReplaced2^S|cffa335ee|Hitem:140810::::::::110:102::5:3:3516:1497:3336:::|h[Farsight~`Spiritjewel]|h|r^Sboss^STrilliax^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1798]
-			"06/15/17", -- [1799]
-			"18:15:41 - Logged In", -- [1800]
-			"18:15:41 - ML initialized!", -- [1801]
-			"18:15:43 - Comet-Illidan (2.4.0) (Beta.1)", -- [1802]
-			"18:15:45 - Event: (PLAYER_ENTERING_WORLD)", -- [1803]
-			"18:15:45 - GetML()", -- [1804]
-			"18:15:45 - LootMethod =  (master)", -- [1805]
-			"18:15:45 - MasterLooter =  (Madmartigàn-Illidan)", -- [1806]
-			"18:15:45 - Resetting council as we have a new ML!", -- [1807]
-			"18:15:45 - Player relog...", -- [1808]
-			"18:15:45 - GetPlayersGuildRank()", -- [1809]
-			"18:15:45 - Found Guild Rank: Member", -- [1810]
-			"18:15:46 - Timer MLdb_check passed", -- [1811]
-			"18:15:46 - Comm received:^1^SverTest^T^N1^S2.4.0^N2^SBeta.1^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1812]
-			"18:15:46 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (WHISPER)", -- [1813]
-			"18:15:46 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (WHISPER)", -- [1814]
-			"18:15:46 - nil = (IsCouncil) (Comet-Illidan)", -- [1815]
-			"18:15:46 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1816]
-			"18:15:46 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1817]
-			"18:15:46 - nil = (IsCouncil) (Comet-Illidan)", -- [1818]
-			"18:15:48 - Comm received:^1^Scandidates^T^N1^T^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SMember^t^SNadzieja-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SColonferal-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^SWowjayson-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^SDjpurge-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SSHAMAN^Srank^SOfficer~`Alt^t^SGrimuhs-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N763^Sclass^SPRIEST^Senchanter^B^Srank^SRaider^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARLOCK^Srank^SOfficer^t^SDvldocdk-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SGuild~`Friend^t^SShietnorunes-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SALT.^t^SCoolaidcow-Illidan^T^Srole^SDAMAGER^Sclass^SWARRIOR^Srank^S^t^SZefarion-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SRaider^t^SComet-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SMONK^Srank^SMember^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^SLuthanen-Illidan^T^Srole^SHEALER^Senchant_lvl^N757^Sclass^SPALADIN^Senchanter^B^Srank^SMember^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SXorn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N764^Sclass^SWARLOCK^Senchanter^B^Srank^SMember^t^SCenzic-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N778^Sclass^SDEATHKNIGHT^Senchanter^B^Srank^SRaider^t^SMadmartigàn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer~`Alt^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^t^t^^ (from:) (Madmartigàn) (distri:) (WHISPER)", -- [1819]
-			"18:21:54 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Cannibal) (distri:) (GUILD)", -- [1820]
-			"18:25:49 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Cannibal) (distri:) (GUILD)", -- [1821]
-			"18:26:45 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Lanféar) (distri:) (GUILD)", -- [1822]
-			"18:26:46 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1823]
-			"18:26:46 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1824]
-			"18:26:46 - nil = (IsCouncil) (Comet-Illidan)", -- [1825]
-			"18:30:28 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Nadzieja) (distri:) (GUILD)", -- [1826]
-			"18:30:31 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1827]
-			"18:30:31 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1828]
-			"18:30:31 - nil = (IsCouncil) (Comet-Illidan)", -- [1829]
-			"18:39:57 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Cannibal) (distri:) (GUILD)", -- [1830]
-			"19:08:04 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Roivon) (distri:) (GUILD)", -- [1831]
-			"19:09:22 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1832]
-			"19:09:22 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1833]
-			"19:09:22 - nil = (IsCouncil) (Comet-Illidan)", -- [1834]
-			"19:09:36 - Comm received:^1^Scandidates^T^N1^T^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SMember^t^SNadzieja-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SColonferal-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^SWowjayson-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^SDjpurge-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SSHAMAN^Srank^SOfficer~`Alt^t^SGrimuhs-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N763^Sclass^SPRIEST^Senchanter^B^Srank^SRaider^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARLOCK^Srank^SOfficer^t^SDvldocdk-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SGuild~`Friend^t^SShietnorunes-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SALT.^t^SCoolaidcow-Illidan^T^Srole^SDAMAGER^Sclass^SWARRIOR^Srank^S^t^SZefarion-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SRaider^t^SCannibal-Illidan^T^Srole^SDAMAGER^Sclass^SDEATHKNIGHT^Srank^S^t^SComet-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SMONK^Srank^SMember^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^SLuthanen-Illidan^T^Srole^SHEALER^Senchant_lvl^N757^Sclass^SPALADIN^Senchanter^B^Srank^SMember^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SXorn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N764^Sclass^SWARLOCK^Senchanter^B^Srank^SMember^t^SCenzic-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N778^Sclass^SDEATHKNIGHT^Senchanter^B^Srank^SRaider^t^SMadmartigàn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer~`Alt^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1835]
-			"19:10:38 - Comm received:^1^Scandidates^T^N1^T^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SMember^t^SNadzieja-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SColonferal-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^SWowjayson-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^SDjpurge-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SSHAMAN^Srank^SOfficer~`Alt^t^SGrimuhs-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N763^Sclass^SPRIEST^Senchanter^B^Srank^SRaider^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARLOCK^Srank^SOfficer^t^SShietnorunes-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SALT.^t^SCoolaidcow-Illidan^T^Srole^SDAMAGER^Sclass^SWARRIOR^Srank^S^t^SZefarion-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SRaider^t^SCannibal-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SRaider^t^SComet-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SMONK^Srank^SMember^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^SLuthanen-Illidan^T^Srole^SHEALER^Senchant_lvl^N757^Sclass^SPALADIN^Senchanter^B^Srank^SMember^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SXorn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N764^Sclass^SWARLOCK^Senchanter^B^Srank^SMember^t^SCenzic-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N778^Sclass^SDEATHKNIGHT^Senchanter^B^Srank^SRaider^t^SMadmartigàn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer~`Alt^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SMember^t^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1836]
-			"19:15:11 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Marketfreshe) (distri:) (GUILD)", -- [1837]
-			"19:15:26 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Roivon) (distri:) (GUILD)", -- [1838]
-			"19:20:25 - Comm received:^1^SverTest^T^N1^S2.4.0^N2^SBeta.1^t^^ (from:) (Cenzic) (distri:) (GUILD)", -- [1839]
-			"19:20:30 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^Sresponses^T^N1^T^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^Stext^SMainspec/Need^Ssort^N1^t^N2^T^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SOffspec^Ssort^N2^t^N4^T^Scolor^T^N1^F8512686354480700^f-53^N2^F7064470003718424^f-55^N3^F7912206404164632^f-57^N4^N1^t^Stext^SMainspec/Best~`in~`Slot^Ssort^N4^t^t^ShideVotes^b^SmultiVote^B^Sbuttons^T^N1^T^Stext^SMainspec^t^N2^T^Stext^SOffspec^t^N4^T^Stext^SBiS^t^t^SnumButtons^N4^SanonymousVoting^b^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1840]
-			"19:20:30 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SDjdivine-Illidan^N3^SDjdodge-Illidan^N4^SAndasia-Illidan^N5^SDjcleave-Illidan^N6^SDjdõts-Illidan^N7^SDjpoopypants-Illidan^N8^SDjchaos-Illidan^N9^SDjchi-Illidan^N10^SDjshiv-Illidan^N11^SDjpurge-Illidan^N12^SKrieggeist-Illidan^N13^STobbo-Illidan^N14^SBlutosan-Illidan^N15^SBlutò-Illidan^N16^SDjhots-Illidan^N17^SDjtraps-Illidan^N18^SMadriän-Illidan^N19^SXgr-Illidan^N20^SEklypto-Illidan^N21^SEklipto-Illidan^N22^SEkliptò-Illidan^N23^SFearmeter-Illidan^N24^SGingerfu-Illidan^N25^SReinhärt-Illidan^N26^SUgliestdruid-Illidan^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1841]
-			"19:20:30 - nil = (IsCouncil) (Comet-Illidan)", -- [1842]
-			"19:29:08 - Comm received:^1^SlootTable^T^N1^T^N1^T^SequipLoc^SINVTYPE_HAND^SlootSlot^N1^Slink^S|cffa335ee|Hitem:140907::::::::110:72::6:4:3518:1808:1502:3528:::|h[Bridgebreaker~`Gauntlets]|h|r^SsubType^SPlate^Srelic^b^Sawarded^b^Sname^SBridgebreaker~`Gauntlets^Stexture^N1346145^Silvl^N905^Sboe^b^Sbagged^b^Squality^N4^t^N2^T^SequipLoc^S^SlootSlot^N2^Slink^S|cffa335ee|Hitem:140816::::::::110:72::6:3:3518:1502:3528:::|h[Fingernail~`of~`the~`Fel~`Brute]|h|r^SsubType^SArtifact~`Relic^Srelic^SIron^Sawarded^b^Sname^SFingernail~`of~`the~`Fel~`Brute^Stexture^N134887^Silvl^N905^Sboe^b^Sbagged^b^Squality^N4^t^N3^T^SequipLoc^S^SlootSlot^N3^Slink^S|cffa335ee|Hitem:143562::::::::110:72::6:1:569:::|h[Chest~`of~`the~`Foreseen~`Conqueror]|h|r^SsubType^SJunk^Stoken^SChestSlot^Srelic^b^Sawarded^b^Sname^SChest~`of~`the~`Foreseen~`Conqueror^Stexture^N132632^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^N4^T^SequipLoc^S^SlootSlot^N4^Slink^S|cffa335ee|Hitem:143571::::::::110:72::6:1:569:::|h[Chest~`of~`the~`Foreseen~`Vanquisher]|h|r^SsubType^SJunk^Stoken^SChestSlot^Srelic^b^Sawarded^b^Sname^SChest~`of~`the~`Foreseen~`Vanquisher^Stexture^N132632^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1843]
-			"19:29:08 - |cffa335ee|Hitem:143562::::::::110:72::6:1:569:::|h[Chest of the Foreseen Conqueror]|h|r", -- [1844]
-			"19:29:08 - |cffa335ee|Hitem:143571::::::::110:72::6:1:569:::|h[Chest of the Foreseen Vanquisher]|h|r", -- [1845]
-			"19:29:08 - Some items wasn't cached, delaying loot by 1 sec", -- [1846]
-			"19:29:08 - Comm received:^1^SlootAck^T^N1^SMadmartigàn-Illidan^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1847]
-			"19:29:08 - Comm received:^1^Sresponse^T^N1^N3^N2^SMadmartigàn-Illidan^N3^T^Silvl^N901.6875^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138351::::::::110:72::5:3:3516:1487:3528:::|h[Chestplate~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1848]
-			"19:29:08 - Comm received:^1^Sresponse^T^N1^N4^N2^SMadmartigàn-Illidan^N3^T^Silvl^N901.6875^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138351::::::::110:72::5:3:3516:1487:3528:::|h[Chestplate~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1849]
-			"19:29:08 - Comm received:^1^SextraUtilData^T^N1^SMadmartigàn-Illidan^N2^T^Sforged^N5^Spawn^T^N1^T^Sequipped^N22333.44^Snew^N619.892^t^N2^T^Sequipped^N0^Snew^N0^t^N3^T^Sequipped^N679.749^Snew^N0^t^N4^T^Sequipped^N679.749^Snew^N0^t^t^SspecID^N72^Straits^N52^Slegend^N2^Ssockets^N3^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1850]
-			"19:29:08 - Comm received:^1^SlootAck^T^N1^SWowjayson-Illidan^t^^ (from:) (Wowjayson) (distri:) (RAID)", -- [1851]
-			"19:29:08 - Comm received:^1^Sresponse^T^N1^N1^N2^SWowjayson-Illidan^N3^T^Silvl^N907.1875^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:140863:5447:::::::110:102::6:3:3445:1497:3528:::|h[Temporally~`Displaced~`Gloves]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Wowjayson) (distri:) (RAID)", -- [1852]
-			"19:29:08 - Comm received:^1^Sresponse^T^N1^N2^N2^SWowjayson-Illidan^N3^T^Silvl^N907.1875^Sresponse^SAUTOPASS^t^t^^ (from:) (Wowjayson) (distri:) (RAID)", -- [1853]
-			"19:29:08 - Comm received:^1^Sresponse^T^N1^N3^N2^SWowjayson-Illidan^N3^T^Silvl^N907.1875^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138324::::::::110:102::5:3:3516:1487:3528:::|h[Robe~`of~`the~`Astral~`Warden]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Wowjayson) (distri:) (RAID)", -- [1854]
-			"19:29:08 - Comm received:^1^SextraUtilData^T^N1^SShietnorunes-Illidan^N2^T^Sforged^N7^Spawn^T^N1^T^Sequipped^N656.572^Snew^N656.572^t^N2^T^Sequipped^N0^Snew^N0^t^N3^T^Sequipped^N918.919^Snew^N0^t^N4^T^Sequipped^N918.919^Snew^N0^t^t^SspecID^N250^Straits^N52^Slegend^N2^Ssockets^N2^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1855]
-			"19:29:08 - Comm received:^1^SlootAck^T^N1^SShietnorunes-Illidan^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1856]
-			"19:29:08 - Comm received:^1^SlootAck^T^N1^SZefarion-Illidan^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [1857]
-			"19:29:08 - Comm received:^1^Sresponse^T^N1^N1^N2^SZefarion-Illidan^N3^T^Silvl^N907.0625^Sdiff^N-35^Sgear1^S|cffff8000|Hitem:132411::::::::110:64:::2:3459:3530:::|h[Lady~`Vashj's~`Grasp]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [1858]
-			"19:29:08 - Comm received:^1^SextraUtilData^T^N1^SDjpurge-Illidan^N2^T^Sforged^N5^Spawn^T^N1^T^Sequipped^N633.49^Snew^N0^t^N2^T^Sequipped^N0^Snew^N0^t^N3^T^Sequipped^N906.472^Snew^N0^t^N4^T^Sequipped^N906.472^Snew^N0^t^t^SspecID^N264^Straits^N51^Slegend^N2^Ssockets^N0^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1859]
-			"19:29:08 - Comm received:^1^Sresponse^T^N1^N2^N2^SZefarion-Illidan^N3^T^Silvl^N907.0625^Sresponse^SAUTOPASS^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [1860]
-			"19:29:08 - Comm received:^1^Sresponse^T^N1^N3^N2^SZefarion-Illidan^N3^T^Silvl^N907.0625^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:140848::::::::110:64::6:3:3445:1502:3336:::|h[Robes~`of~`Fluctuating~`Energy]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [1861]
-			"19:29:08 - Comm received:^1^SlootAck^T^N1^SDadizzle-Illidan^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1862]
-			"19:29:08 - Comm received:^1^Sresponse^T^N1^N1^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:138327:5444:::::::110:102::5:3:3516:1497:3336:::|h[Gloves~`of~`the~`Astral~`Warden]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1863]
-			"19:29:08 - Comm received:^1^Sresponse^T^N1^N2^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1864]
-			"19:29:08 - Comm received:^1^Sresponse^T^N1^N3^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138324::::::::110:102::5:3:3516:1487:3528:::|h[Robe~`of~`the~`Astral~`Warden]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1865]
-			"19:29:09 - Comm received:^1^SlootTable^T^N1^T^N1^T^SequipLoc^SINVTYPE_HAND^SlootSlot^N1^Slink^S|cffa335ee|Hitem:140907::::::::110:72::6:4:3518:1808:1502:3528:::|h[Bridgebreaker~`Gauntlets]|h|r^SsubType^SPlate^Srelic^b^Sawarded^b^Sname^SBridgebreaker~`Gauntlets^Stexture^N1346145^Silvl^N905^Sboe^b^Sbagged^b^Squality^N4^t^N2^T^SequipLoc^S^SlootSlot^N2^Slink^S|cffa335ee|Hitem:140816::::::::110:72::6:3:3518:1502:3528:::|h[Fingernail~`of~`the~`Fel~`Brute]|h|r^SsubType^SArtifact~`Relic^Srelic^SIron^Sawarded^b^Sname^SFingernail~`of~`the~`Fel~`Brute^Stexture^N134887^Silvl^N905^Sboe^b^Sbagged^b^Squality^N4^t^N3^T^SequipLoc^S^SlootSlot^N3^Slink^S|cffa335ee|Hitem:143562::::::::110:72::6:1:569:::|h[Chest~`of~`the~`Foreseen~`Conqueror]|h|r^SsubType^SJunk^Stoken^SChestSlot^Srelic^b^Sawarded^b^Sname^SChest~`of~`the~`Foreseen~`Conqueror^Stexture^N132632^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^N4^T^SequipLoc^S^SlootSlot^N4^Slink^S|cffa335ee|Hitem:143571::::::::110:72::6:1:569:::|h[Chest~`of~`the~`Foreseen~`Vanquisher]|h|r^SsubType^SJunk^Stoken^SChestSlot^Srelic^b^Sawarded^b^Sname^SChest~`of~`the~`Foreseen~`Vanquisher^Stexture^N132632^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1866]
-			"19:29:09 - Autopassed on:  (|cffa335ee|Hitem:140907::::::::110:72::6:4:3518:1808:1502:3528:::|h[Bridgebreaker Gauntlets]|h|r)", -- [1867]
-			"19:29:09 - CreateResponse (1) (|cffa335ee|Hitem:140907::::::::110:72::6:4:3518:1808:1502:3528:::|h[Bridgebreaker Gauntlets]|h|r) (905) (AUTOPASS) (INVTYPE_HAND) (nil) (Plate) (nil)", -- [1868]
-			"19:29:09 - GetPlayersGear (140907) (INVTYPE_HAND)", -- [1869]
-			"19:29:09 - NewRelicAutopassCheck (|cffa335ee|Hitem:140816::::::::110:72::6:3:3518:1502:3528:::|h[Fingernail of the Fel Brute]|h|r) (Iron)", -- [1870]
-			"19:29:09 - Autopassed on:  (|cffa335ee|Hitem:143562::::::::110:72::6:1:569:::|h[Chest of the Foreseen Conqueror]|h|r)", -- [1871]
-			"19:29:09 - CreateResponse (3) (|cffa335ee|Hitem:143562::::::::110:72::6:1:569:::|h[Chest of the Foreseen Conqueror]|h|r) (110) (AUTOPASS) () (nil) (Junk) (nil)", -- [1872]
-			"19:29:09 - GetPlayersGear (143562) ()", -- [1873]
-			"19:29:09 - Autopassed on:  (|cffa335ee|Hitem:143571::::::::110:72::6:1:569:::|h[Chest of the Foreseen Vanquisher]|h|r)", -- [1874]
-			"19:29:09 - CreateResponse (4) (|cffa335ee|Hitem:143571::::::::110:72::6:1:569:::|h[Chest of the Foreseen Vanquisher]|h|r) (110) (AUTOPASS) () (nil) (Junk) (nil)", -- [1875]
-			"19:29:09 - GetPlayersGear (143571) ()", -- [1876]
-			"19:29:09 - LootFrame (GetFrame())", -- [1877]
-			"19:29:09 - LootFrame:Start()", -- [1878]
-			"19:29:09 - Comm received:^1^SlootAck^T^N1^SFearmeter-Illidan^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1879]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SFearmeter-Illidan^N3^T^Silvl^N904.4375^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:138311:5444:::::::110:265::5:3:3516:1497:3336:::|h[Clutch~`of~`Azj'Aqir]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1880]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SFearmeter-Illidan^N3^T^Silvl^N904.4375^Sresponse^SAUTOPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1881]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SFearmeter-Illidan^N3^T^Silvl^N904.4375^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:138320::130222::::::110:265::5:4:3516:1808:1497:3336:::|h[Finery~`of~`Azj'Aqir]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1882]
-			"19:29:09 - Comm received:^1^SlootAck^T^N1^SLanféar-Illidan^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1883]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:138310::::::::110:257::5:4:3516:40:1487:3528:::|h[Purifier's~`Gloves]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1884]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1885]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138319::::::::110:257::6:3:3518:1502:3528:::|h[Purifier's~`Cassock]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1886]
-			"19:29:09 - Comm received:^1^SlootAck^T^N1^SCannibal-Illidan^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [1887]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SCannibal-Illidan^N3^T^Silvl^N909.875^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138349::::::::110:251::5:3:3516:1487:1813:::|h[Dreadwyrm~`Breastplate]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [1888]
-			"19:29:09 - Comm received:^1^SlootAck^T^N1^SReinhärt-Illidan^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1889]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SReinhärt-Illidan^N3^T^Silvl^N908.3125^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:140913::::::::110:73::5:3:3517:1497:3336:::|h[Breastplate~`of~`the~`Remembered~`King]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1890]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SReinhärt-Illidan^N3^T^Silvl^N908.3125^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:140913::::::::110:73::5:3:3517:1497:3336:::|h[Breastplate~`of~`the~`Remembered~`King]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1891]
-			"19:29:09 - Comm received:^1^SlootAck^T^N1^SXorn-Illidan^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1892]
-			"19:29:09 - Comm received:^1^SlootAck^T^N1^SColonferal-Illidan^t^^ (from:) (Colonferal) (distri:) (RAID)", -- [1893]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SXorn-Illidan^N3^T^Silvl^N905.5625^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138311::::::::110:265::5:3:3516:1492:3336:::|h[Clutch~`of~`Azj'Aqir]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1894]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SXorn-Illidan^N3^T^Silvl^N905.5625^Sresponse^SAUTOPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1895]
-			"19:29:09 - Comm received:^1^SlootAck^T^N1^SNadzieja-Illidan^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1896]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SNadzieja-Illidan^N3^T^Silvl^N904.8125^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138309::::::::110:64::3:3:3514:1492:3337:::|h[Gloves~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1897]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SNadzieja-Illidan^N3^T^Silvl^N904.8125^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1898]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SNadzieja-Illidan^N3^T^Silvl^N904.8125^Sdiff^N-785^Sgear1^S|cffa335ee|Hitem:138318::::::::110:64::5:3:3516:1492:3336:::|h[Robe~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1899]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SXorn-Illidan^N3^T^Silvl^N905.5625^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138320::::::::110:265::5:3:3516:1487:1813:::|h[Finery~`of~`Azj'Aqir]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1900]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SColonferal-Illidan^N3^T^Silvl^N900.3125^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:138327::::::::110:103::5:4:3516:43:1487:1813:::|h[Gloves~`of~`the~`Astral~`Warden]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Colonferal) (distri:) (RAID)", -- [1901]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SColonferal-Illidan^N3^T^Silvl^N900.3125^Sresponse^SAUTOPASS^t^t^^ (from:) (Colonferal) (distri:) (RAID)", -- [1902]
-			"19:29:09 - Comm received:^1^SlootAck^T^N1^SCenzic-Illidan^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1903]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SCenzic-Illidan^N3^T^Silvl^N908.9375^Sdiff^N-810^Sgear1^S|cffa335ee|Hitem:138349::::::::110:251::5:3:3516:1517:3337:::|h[Dreadwyrm~`Breastplate]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1904]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SColonferal-Illidan^N3^T^Silvl^N900.3125^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138324::::::::110:103::5:4:3516:40:1487:3528:::|h[Robe~`of~`the~`Astral~`Warden]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Colonferal) (distri:) (RAID)", -- [1905]
-			"19:29:09 - Comm received:^1^SlootAck^T^N1^SDjpurge-Illidan^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1906]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SDjpurge-Illidan^N3^T^Silvl^N905.9375^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:134209::::::::110:264::33:3:3417:1557:3336:::|h[Tideskorn~`Gauntlets]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1907]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SDjpurge-Illidan^N3^T^Silvl^N905.9375^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138346::::::::110:264::6:3:3518:1502:3528:::|h[Raiment~`of~`Shackled~`Elements]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1908]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SDjpurge-Illidan^N3^T^Silvl^N905.9375^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138346::::::::110:264::6:3:3518:1502:3528:::|h[Raiment~`of~`Shackled~`Elements]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1909]
-			"19:29:09 - Comm received:^1^SlootAck^T^N1^STelgina-Illidan^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1910]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N1^N2^STelgina-Illidan^N3^T^Silvl^N910.0625^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:140869::::::::110:253::6:3:3445:1507:3336:::|h[Sterilizer's~`Insulated~`Gauntlets]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1911]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N3^N2^STelgina-Illidan^N3^T^Silvl^N910.0625^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138339::::::::110:253::6:3:3518:1502:3528:::|h[Eagletalon~`Tunic]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1912]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N4^N2^STelgina-Illidan^N3^T^Silvl^N910.0625^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138339::::::::110:253::6:3:3518:1502:3528:::|h[Eagletalon~`Tunic]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1913]
-			"19:29:09 - Comm received:^1^SlootAck^T^N1^SThenex-Illidan^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1914]
-			"19:29:09 - Comm received:^1^SlootAck^T^N1^SComet-Illidan^t^^ (from:) (Comet) (distri:) (RAID)", -- [1915]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SComet-Illidan^N3^T^Silvl^N905.875^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:142141::::::::110:270::16:3:3415:1512:3337:::|h[Custodian's~`Soothing~`Touch]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [1916]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SComet-Illidan^N3^T^Silvl^N905.875^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138325::::::::110:270::5:4:3516:41:1487:3528:::|h[Tunic~`of~`Enveloped~`Dissonance]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [1917]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SComet-Illidan^N3^T^Silvl^N905.875^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138325::::::::110:270::5:4:3516:41:1487:3528:::|h[Tunic~`of~`Enveloped~`Dissonance]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [1918]
-			"19:29:09 - Comm received:^1^SlootAck^T^N1^SLuthanen-Illidan^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1919]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SLuthanen-Illidan^N3^T^Silvl^N905.5625^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138350::::::::110:65::6:3:3518:1502:3528:::|h[Breastplate~`of~`the~`Highlord]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1920]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SThenex-Illidan^N3^T^Silvl^N909.125^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:140888::::::::110:63::6:4:3445:40:1497:3528:::|h[Scorpid~`Handler's~`Gloves]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1921]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SThenex-Illidan^N3^T^Silvl^N909.125^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1922]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SThenex-Illidan^N3^T^Silvl^N909.125^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138318::130221::::::110:63::6:4:3518:1808:1502:3528:::|h[Robe~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1923]
-			"19:29:09 - Comm received:^1^SlootAck^T^N1^SGrimuhs-Illidan^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1924]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SGrimuhs-Illidan^N3^T^Silvl^N904.25^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:140888::::::::110:258::5:3:3444:1497:3337:::|h[Scorpid~`Handler's~`Gloves]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1925]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SGrimuhs-Illidan^N3^T^Silvl^N904.25^Sresponse^SAUTOPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1926]
-			"19:29:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SGrimuhs-Illidan^N3^T^Silvl^N904.25^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138319::::::::110:258::5:3:3516:1487:1813:::|h[Purifier's~`Cassock]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1927]
-			"19:29:12 - Comm received:^1^Sresponse^T^N1^N4^N2^SDadizzle-Illidan^N3^T^Silvl^N908.375^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138324::::::::110:102::5:3:3516:1487:3528:::|h[Robe~`of~`the~`Astral~`Warden]|h|r^Sresponse^N1^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1928]
-			"19:29:12 - Comm received:^1^Sresponse^T^N1^N4^N2^SColonferal-Illidan^N3^T^Silvl^N900.3125^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138324::::::::110:103::5:4:3516:40:1487:3528:::|h[Robe~`of~`the~`Astral~`Warden]|h|r^Sresponse^N1^t^t^^ (from:) (Colonferal) (distri:) (RAID)", -- [1929]
-			"19:29:13 - Comm received:^1^Sresponse^T^N1^N4^N2^SNadzieja-Illidan^N3^T^Silvl^N904.8125^Sdiff^N-785^Sgear1^S|cffa335ee|Hitem:138318::::::::110:64::5:3:3516:1492:3336:::|h[Robe~`of~`Everburning~`Knowledge]|h|r^Sresponse^N1^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1930]
-			"19:29:15 - Comm received:^1^Sresponse^T^N1^N2^N2^STelgina-Illidan^N3^T^Silvl^N910.0625^Sdiff^N-20^Sgear1^S|cffa335ee|Hitem:140817::::::::110:253::6:3:3519:1522:3337:::|h[Lionshead~`Lapel~`Clasp]|h|r^Sresponse^SPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1931]
-			"19:29:15 - Comm received:^1^Sresponse^T^N1^N4^N2^SThenex-Illidan^N3^T^Silvl^N909.125^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138318::130221::::::110:63::6:4:3518:1808:1502:3528:::|h[Robe~`of~`Everburning~`Knowledge]|h|r^Sresponse^SPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1932]
-			"19:29:17 - Comm received:^1^Sresponse^T^N1^N2^N2^SReinhärt-Illidan^N3^T^Silvl^N908.3125^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:147759::::::::110:73::3:3:3572:1492:3336:::|h[Charged~`Felfire~`Casing]|h|r^Sresponse^SPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1933]
-			"19:29:17 - Comm received:^1^Sresponse^T^N1^N4^N2^SCannibal-Illidan^N3^T^Silvl^N909.875^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138349::::::::110:251::5:3:3516:1487:1813:::|h[Dreadwyrm~`Breastplate]|h|r^Sresponse^N1^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [1934]
-			"19:29:17 - Comm received:^1^Sresponse^T^N1^N3^N2^SLanféar-Illidan^N3^T^Silvl^N907.5625^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138319::::::::110:257::6:3:3518:1502:3528:::|h[Purifier's~`Cassock]|h|r^Sresponse^SPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1935]
-			"19:29:18 - Comm received:^1^Soffline_timer^T^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1936]
-			"19:29:18 - Comm received:^1^Sresponse^T^N1^N4^N2^SWowjayson-Illidan^N3^T^Snote^Sneed~`alot~`^Silvl^N907.1875^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138324::::::::110:102::5:3:3516:1487:3528:::|h[Robe~`of~`the~`Astral~`Warden]|h|r^Sresponse^N1^t^t^^ (from:) (Wowjayson) (distri:) (RAID)", -- [1937]
-			"19:29:19 - Comm received:^1^Sresponse^T^N1^N3^N2^SGrimuhs-Illidan^N3^T^Silvl^N904.25^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138319::::::::110:258::5:3:3516:1487:1813:::|h[Purifier's~`Cassock]|h|r^Sresponse^SPASS^t^t^^ (from:) (Grimuhs) (distri:) (RAID)", -- [1938]
-			"19:29:20 - Comm received:^1^Sresponse^T^N1^N2^N2^SCannibal-Illidan^N3^T^Silvl^N909.875^Sresponse^SPASS^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [1939]
-			"19:29:21 - Comm received:^1^Sresponse^T^N1^N2^N2^SMadmartigàn-Illidan^N3^T^Silvl^N901.6875^Sdiff^N35^Sgear1^S|cffa335ee|Hitem:144522::::::::110:72::8:3:3568:1662:3528:::|h[Battle-Tempered~`Hilt]|h|r^Sresponse^N1^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1940]
-			"19:29:23 - Comm received:^1^Sresponse^T^N1^N1^N2^SShietnorunes-Illidan^N3^T^Silvl^N906.1875^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:140907::::::::110:250::5:3:3516:1502:3337:::|h[Bridgebreaker~`Gauntlets]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1941]
-			"19:29:25 - Comm received:^1^Sresponse^T^N1^N4^N2^SZefarion-Illidan^N3^T^Silvl^N907.0625^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:140848::::::::110:64::6:3:3445:1502:3336:::|h[Robes~`of~`Fluctuating~`Energy]|h|r^Sresponse^N1^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [1942]
-			"19:29:25 - Comm received:^1^Sresponse^T^N1^N2^N2^SLuthanen-Illidan^N3^T^Silvl^N905.5625^Sresponse^N2^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1943]
-			"19:29:27 - Comm received:^1^Sresponse^T^N1^N1^N2^SCannibal-Illidan^N3^T^Silvl^N909.875^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:138352::::::::110:251::5:3:3516:1497:3336:::|h[Dreadwyrm~`Gauntlets]|h|r^Sresponse^SPASS^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [1944]
-			"19:29:27 - Comm received:^1^Sresponse^T^N1^N2^N2^SShietnorunes-Illidan^N3^T^Silvl^N906.1875^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:147759::::::::110:250::3:3:3572:1487:3336:::|h[Charged~`Felfire~`Casing]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1945]
-			"19:29:29 - Comm received:^1^Sresponse^T^N1^N3^N2^SXorn-Illidan^N3^T^Silvl^N905.5625^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138320::::::::110:265::5:3:3516:1487:1813:::|h[Finery~`of~`Azj'Aqir]|h|r^Sresponse^N1^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1946]
-			"19:29:30 - Comm received:^1^Sresponse^T^N1^N1^N2^SMadmartigàn-Illidan^N3^T^Silvl^N901.6875^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:138354::::::::110:72::5:3:3516:1487:3528:::|h[Gauntlets~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^N2^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1947]
-			"19:29:30 - Comm received:^1^Sresponse^T^N1^N3^N2^SShietnorunes-Illidan^N3^T^Silvl^N906.1875^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:137527::::::::110:250::35:3:3418:1557:3337:::|h[Polished~`Jade~`Chestguard]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1948]
-			"19:29:33 - Comm received:^1^Sresponse^T^N1^N2^N2^SCenzic-Illidan^N3^T^Silvl^N908.9375^Sresponse^N2^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1949]
-			"19:29:35 - Comm received:^1^Sresponse^T^N1^N4^N2^SCenzic-Illidan^N3^T^Silvl^N908.9375^Sdiff^N-810^Sgear1^S|cffa335ee|Hitem:138349::::::::110:251::5:3:3516:1517:3337:::|h[Dreadwyrm~`Breastplate]|h|r^Sresponse^N3^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1950]
-			"19:29:35 - Comm received:^1^Sresponse^T^N1^N3^N2^SFearmeter-Illidan^N3^T^Silvl^N904.4375^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:138320::130222::::::110:265::5:4:3516:1808:1497:3336:::|h[Finery~`of~`Azj'Aqir]|h|r^Sresponse^SPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1951]
-			"19:29:36 - LootFrame:OnRoll (nil) (2) (Response:) (Offspec)", -- [1952]
-			"19:29:36 - CreateResponse (2) (|cffa335ee|Hitem:140816::::::::110:72::6:3:3518:1502:3528:::|h[Fingernail of the Fel Brute]|h|r) (905) (2) () (nil) (Artifact Relic) (nil)", -- [1953]
-			"19:29:36 - Trashing entry: (1) (|cffa335ee|Hitem:140816::::::::110:72::6:3:3518:1502:3528:::|h[Fingernail of the Fel Brute]|h|r)", -- [1954]
-			"19:29:36 - Comm received:^1^Sresponse^T^N1^N2^N2^SComet-Illidan^N3^T^Silvl^N905.875^Sresponse^N2^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [1955]
-			"19:29:39 - Comm received:^1^Sresponse^T^N1^N1^N2^SReinhärt-Illidan^N3^T^Silvl^N908.3125^Sdiff^N-35^Sgear1^S|cffff8000|Hitem:137108::::::::110:73:::2:1811:3455:::|h[Kakushan's~`Stormscale~`Gauntlets]|h|r^Sresponse^N2^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1956]
-			"19:29:40 - Comm received:^1^Sresponse^T^N1^N1^N2^SCenzic-Illidan^N3^T^Silvl^N908.9375^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:140907::::::::110:251::5:3:3516:1507:3337:::|h[Bridgebreaker~`Gauntlets]|h|r^Sresponse^SPASS^t^t^^ (from:) (Cenzic) (distri:) (RAID)", -- [1957]
-			"19:29:49 - Comm received:^1^Sresponse^T^N1^N1^N2^SLuthanen-Illidan^N3^T^Silvl^N905.5625^Sdiff^N30^Sgear1^S|cffa335ee|Hitem:138353::::::::110:65::3:3:3514:1472:1813:::|h[Gauntlets~`of~`the~`Highlord]|h|r^Sresponse^SPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1958]
-			"19:29:53 - Comm received:^1^Sresponse^T^N1^N3^N2^SLuthanen-Illidan^N3^T^Silvl^N905.5625^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138350::::::::110:65::6:3:3518:1502:3528:::|h[Breastplate~`of~`the~`Highlord]|h|r^Sresponse^N2^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1959]
-			"19:29:55 - Comm received:^1^Svote^T^N1^N2^N2^SMadmartigàn-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1960]
-			"19:29:55 - Comm received:^1^Sresponse^T^N1^N4^N2^SShietnorunes-Illidan^N3^T^Silvl^N906.1875^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:137527::::::::110:250::35:3:3418:1557:3337:::|h[Polished~`Jade~`Chestguard]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1961]
-			"19:29:56 - Comm received:^1^Sresponse^T^N1^N2^N2^SDjpurge-Illidan^N3^T^Silvl^N905.9375^Sresponse^SPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1962]
-			"19:29:57 - Comm received:^1^Svote^T^N1^N4^N2^SCannibal-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1963]
-			"19:30:04 - Comm received:^1^Svote^T^N1^N3^N2^SXorn-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1964]
-			"19:30:09 - Comm received:^1^Svote^T^N1^N3^N2^SXorn-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1965]
-			"19:30:42 - Comm received:^1^Svote^T^N1^N1^N2^SReinhärt-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1966]
-			"19:30:48 - Comm received:^1^Svote^T^N1^N2^N2^SMadmartigàn-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1967]
-			"19:31:32 - Comm received:^1^Svote^T^N1^N4^N2^SCannibal-Illidan^N3^N-1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1968]
-			"19:31:55 - Comm received:^1^Svote^T^N1^N4^N2^SZefarion-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1969]
-			"19:31:57 - Comm received:^1^Svote^T^N1^N4^N2^SWowjayson-Illidan^N3^N1^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1970]
-			"19:32:00 - Comm received:^1^Svote^T^N1^N1^N2^SReinhärt-Illidan^N3^N1^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1971]
-			"19:32:03 - Comm received:^1^Svote^T^N1^N4^N2^SWowjayson-Illidan^N3^N-1^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1972]
-			"19:32:03 - Comm received:^1^Svote^T^N1^N1^N2^SReinhärt-Illidan^N3^N-1^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1973]
-			"19:32:05 - Comm received:^1^Svote^T^N1^N1^N2^SCoolaidcow-Illidan^N3^N1^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1974]
-			"19:32:09 - Comm received:^1^Svote^T^N1^N1^N2^SCoolaidcow-Illidan^N3^N-1^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1975]
-			"19:32:21 - Comm received:^1^Svote^T^N1^N4^N2^SZefarion-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1976]
-			"19:33:37 - Comm received:^1^Sawarded^T^N1^N1^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1977]
-			"19:33:37 - Comm received:^1^Shistory^T^N1^SReinhärt-Illidan^N2^T^SmapID^N1530^Sdate^S15/06/17^Sclass^SWARRIOR^SgroupSize^N20^Svotes^N1^Stime^S21:33:53^SitemReplaced1^S|cffff8000|Hitem:137108::::::::110:73:::2:1811:3455:::|h[Kakushan's~`Stormscale~`Gauntlets]|h|r^Sinstance^SThe~`Nighthold-Mythic^Sresponse^SOffspec^SdifficultyID^N16^SlootWon^S|cffa335ee|Hitem:140907::::::::110:72::6:4:3518:1808:1502:3528:::|h[Bridgebreaker~`Gauntlets]|h|r^Scolor^T^N1^F5439641902863197^f-54^N2^F5545608952918964^f-53^N3^F6216733603272216^f-56^N4^N1^t^SisAwardReason^b^SresponseID^N2^Sboss^SKrosus^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1978]
-			"19:33:41 - Comm received:^1^Sawarded^T^N1^N2^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1979]
-			"19:33:41 - Comm received:^1^Shistory^T^N1^SMadmartigàn-Illidan^N2^T^SmapID^N1530^Sdate^S15/06/17^Sclass^SWARRIOR^SgroupSize^N20^Svotes^N2^Stime^S21:33:57^SitemReplaced1^S|cffa335ee|Hitem:144522::::::::110:72::8:3:3568:1662:3528:::|h[Battle-Tempered~`Hilt]|h|r^Sinstance^SThe~`Nighthold-Mythic^Sresponse^SMainspec/Need^SdifficultyID^N16^SlootWon^S|cffa335ee|Hitem:140816::::::::110:72::6:3:3518:1502:3528:::|h[Fingernail~`of~`the~`Fel~`Brute]|h|r^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^SisAwardReason^b^SresponseID^N1^Sboss^SKrosus^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1980]
-			"19:33:45 - Comm received:^1^Sawarded^T^N1^N3^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1981]
-			"19:33:45 - Comm received:^1^Shistory^T^N1^SXorn-Illidan^N2^T^SmapID^N1530^Sdate^S15/06/17^Sclass^SWARLOCK^SgroupSize^N20^Svotes^N2^Stime^S21:34:00^StierToken^SChestSlot^SitemReplaced1^S|cffa335ee|Hitem:138320::::::::110:265::5:3:3516:1487:1813:::|h[Finery~`of~`Azj'Aqir]|h|r^Sinstance^SThe~`Nighthold-Mythic^Sresponse^SMainspec/Need^SdifficultyID^N16^SlootWon^S|cffa335ee|Hitem:143562::::::::110:72::6:1:569:::|h[Chest~`of~`the~`Foreseen~`Conqueror]|h|r^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^SisAwardReason^b^SresponseID^N1^Sboss^SKrosus^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1982]
-			"19:33:49 - Comm received:^1^Sawarded^T^N1^N4^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1983]
-			"19:33:49 - Comm received:^1^Ssession_end^T^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1984]
-			"19:33:49 - Comm received:^1^Shistory^T^N1^SZefarion-Illidan^N2^T^SmapID^N1530^Sdate^S15/06/17^Sclass^SMAGE^SgroupSize^N20^Svotes^N2^Stime^S21:34:05^StierToken^SChestSlot^SitemReplaced1^S|cffa335ee|Hitem:140848::::::::110:64::6:3:3445:1502:3336:::|h[Robes~`of~`Fluctuating~`Energy]|h|r^Sinstance^SThe~`Nighthold-Mythic^Sresponse^SMainspec/Need^SdifficultyID^N16^SlootWon^S|cffa335ee|Hitem:143571::::::::110:72::6:1:569:::|h[Chest~`of~`the~`Foreseen~`Vanquisher]|h|r^Scolor^T^N1^N1^N2^F5580931302937557^f-53^N3^F6216733603272216^f-57^N4^N1^t^SisAwardReason^b^SresponseID^N1^Sboss^SKrosus^t^t^^ (from:) (Madmartigàn) (distri:) (RAID)", -- [1985]
-			"19:34:26 - Event: (PLAYER_ENTERING_WORLD)", -- [1986]
-			"19:34:26 - GetML()", -- [1987]
-			"19:34:26 - LootMethod =  (master)", -- [1988]
-			"19:34:26 - MasterLooter =  (Madmartigàn-Illidan)", -- [1989]
-			"19:34:30 - Timer MLdb_check passed", -- [1990]
-			"19:36:47 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1991]
-			"19:36:47 - GetML()", -- [1992]
-			"19:36:47 - LootMethod =  (personalloot)", -- [1993]
-			"19:38:00 - Event: (RAID_INSTANCE_WELCOME) (The Nighthold (Heroic)) (390119) (0) (0)", -- [1994]
-			"19:38:00 - Event: (PLAYER_ENTERING_WORLD)", -- [1995]
-			"19:38:00 - GetML()", -- [1996]
-			"19:38:00 - LootMethod =  (personalloot)", -- [1997]
-			"19:47:25 - Comm received:^1^SverTest^T^N1^S2.3.4^t^^ (from:) (Djpurge) (distri:) (GUILD)", -- [1998]
-			"19:47:51 - Event: (PLAYER_ENTERING_WORLD)", -- [1999]
-			"19:47:51 - GetML()", -- [2000]
-			"19:47:51 - LootMethod =  (personalloot)", -- [2001]
+			"20:18:45 - Comm received:^1^Sresponse^T^N1^N5^N2^SXorn-Illidan^N3^T^Silvl^N916.5625^Sdiff^N35^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:140792::::::::110:265::6:3:3445:1497:3528:::|h[Erratic~`Metronome]|h|r^Sgear2^S|cffa335ee|Hitem:141482::::::::110:265::3:3:3466:1492:3337:::|h[Unstable~`Arcanocrystal]|h|r^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1]
+			"20:18:50 - Comm received:^1^Sresponse^T^N1^N1^N2^SFearmeter-Illidan^N3^T^Silvl^N916.9375^Sdiff^N20^Sresponse^SPASS^Sgear1^S|cffff8000|Hitem:144259::::::::110:265:::2:3459:3570:::|h[Kil'jaeden's~`Burning~`Wish]|h|r^Sgear2^S|cffa335ee|Hitem:140809::::::::110:265::5:3:3517:1492:3528:::|h[Whispers~`in~`the~`Dark]|h|r^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [2]
+			"20:18:50 - Comm received:^1^Sresponse^T^N1^N5^N2^SFearmeter-Illidan^N3^T^Silvl^N916.9375^Sdiff^N20^Sresponse^SPASS^Sgear1^S|cffff8000|Hitem:144259::::::::110:265:::2:3459:3570:::|h[Kil'jaeden's~`Burning~`Wish]|h|r^Sgear2^S|cffa335ee|Hitem:140809::::::::110:265::5:3:3517:1492:3528:::|h[Whispers~`in~`the~`Dark]|h|r^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [3]
+			"20:18:50 - Comm received:^1^Sresponse^T^N1^N1^N2^SChèss-Illidan^N3^T^Silvl^N902.875^Sdiff^N50^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:140806::::::::110:253::5:4:3516:42:1487:3528:::|h[Convergence~`of~`Fates]|h|r^Sgear2^S|cffa335ee|Hitem:139329::::::::110:253::5:2:1805:1487:::|h[Bloodthirsty~`Instinct]|h|r^t^t^^ (from:) (Chèss) (distri:) (RAID)", -- [4]
+			"20:18:53 - Comm received:^1^Sresponse^T^N1^N2^N2^SDjpurge-Illidan^N3^T^Silvl^N914.1875^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:144406::::::::110:264::6:3:3445:1502:3336:::|h[Vintage~`Duskwatch~`Cinch]|h|r^Sresponse^N4^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [5]
+			"20:18:56 - Comm received:^1^Sresponse^T^N1^N2^N2^SChèss-Illidan^N3^T^Silvl^N902.875^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:147055::::::::110:253::5:3:3562:1502:3336:::|h[Belt~`of~`Screaming~`Slag]|h|r^Sresponse^SPASS^t^t^^ (from:) (Chèss) (distri:) (RAID)", -- [6]
+			"20:18:58 - Comm received:^1^Sresponse^T^N1^N5^N2^SDjpurge-Illidan^N3^T^Silvl^N914.1875^Sdiff^N0^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:147004::::::::110:264::5:3:3562:1497:3528:::|h[Sea~`Star~`of~`the~`Depthmother]|h|r^Sgear2^S|cffff8000|Hitem:144258::::::::110:264:::2:3459:3570:::|h[Velen's~`Future~`Sight]|h|r^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [7]
+			"20:19:06 - Comm received:^1^Sresponse^T^N1^N1^N2^SLuthanen-Illidan^N3^T^Silvl^N912.625^Sdiff^N15^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:128709::::::::110:65::13:3:689:601:679:::|h[Darkmoon~`Deck:~`Hellfire]|h|r^Sgear2^S|cffa335ee|Hitem:147004::::::::110:65::5:3:3562:1512:3337:::|h[Sea~`Star~`of~`the~`Depthmother]|h|r^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [8]
+			"20:19:09 - Comm received:^1^Sresponse^T^N1^N5^N2^SLuthanen-Illidan^N3^T^Silvl^N912.625^Sdiff^N15^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:128709::::::::110:65::13:3:689:601:679:::|h[Darkmoon~`Deck:~`Hellfire]|h|r^Sgear2^S|cffa335ee|Hitem:147004::::::::110:65::5:3:3562:1512:3337:::|h[Sea~`Star~`of~`the~`Depthmother]|h|r^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [9]
+			"20:19:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SLanféar-Illidan^N3^T^Silvl^N911.8125^Sdiff^N15^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:140843::::::::110:257::6:3:3445:1502:3336:::|h[Flickering~`Timespark]|h|r^Sgear2^S|cffa335ee|Hitem:147099::::::::110:257::3:3:3561:1512:3337:::|h[Boon~`of~`the~`Prophet]|h|r^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [10]
+			"20:19:11 - Comm received:^1^Sresponse^T^N1^N3^N2^SLuthanen-Illidan^N3^T^Silvl^N912.625^Sdiff^N20^Sresponse^N2^Sgear1^S|cffa335ee|Hitem:140843::::::::110:65::6:3:3445:1497:3528:::|h[Flickering~`Timespark]|h|r^Sgear2^S|cffa335ee|Hitem:147096::::::::110:65::5:3:3562:1497:3528:::|h[Inquisition's~`Master~`Key]|h|r^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [11]
+			"20:19:12 - Comm received:^1^Sresponse^T^N1^N4^N2^SBlutarski-Illidan^N3^T^Silvl^N910.125^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:138332::130222::::::110:261::5:4:3516:1808:1487:3528:::|h[Doomblade~`Cowl]|h|r^Sresponse^N4^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [12]
+			"20:19:13 - Comm received:^1^Sresponse^T^N1^N1^N2^SLanféar-Illidan^N3^T^Silvl^N911.8125^Sdiff^N25^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:147006::::::::110:257::3:3:3561:1482:3528:::|h[Archive~`of~`Faith]|h|r^Sgear2^S|cffa335ee|Hitem:140793::::::::110:257::5:3:3444:1487:3336:::|h[Perfectly~`Preserved~`Cake]|h|r^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [13]
+			"20:19:13 - Comm received:^1^Sresponse^T^N1^N5^N2^SChèss-Illidan^N3^T^Silvl^N902.875^Sdiff^N50^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:140806::::::::110:253::5:4:3516:42:1487:3528:::|h[Convergence~`of~`Fates]|h|r^Sgear2^S|cffa335ee|Hitem:139329::::::::110:253::5:2:1805:1487:::|h[Bloodthirsty~`Instinct]|h|r^t^t^^ (from:) (Chèss) (distri:) (RAID)", -- [14]
+			"20:19:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SDjpurge-Illidan^N3^T^Silvl^N914.1875^Sdiff^N0^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:147004::::::::110:264::5:3:3562:1497:3528:::|h[Sea~`Star~`of~`the~`Depthmother]|h|r^Sgear2^S|cffff8000|Hitem:144258::::::::110:264:::2:3459:3570:::|h[Velen's~`Future~`Sight]|h|r^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [15]
+			"20:19:17 - Comm received:^1^Sresponse^T^N1^N5^N2^SDrkillbotz-Illidan^N3^T^Silvl^N912.75^Sdiff^N25^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:140806::::::::110:251::5:4:3516:42:1487:1813:::|h[Convergence~`of~`Fates]|h|r^Sgear2^S|cffa335ee|Hitem:137459::::::::110:251::35:3:3418:1557:3337:::|h[Chaos~`Talisman]|h|r^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [16]
+			"20:19:19 - Comm received:^1^Svote^T^N1^N2^N2^SDjpurge-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [17]
+			"20:19:20 - Comm received:^1^Sresponse^T^N1^N1^N2^SBlutarski-Illidan^N3^T^Silvl^N910.125^Sdiff^N20^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:140806::::::::110:261::5:3:3516:1502:3337:::|h[Convergence~`of~`Fates]|h|r^Sgear2^S|cffa335ee|Hitem:140802::::::::110:261::5:3:3516:1492:3336:::|h[Nightblooming~`Frond]|h|r^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [18]
+			"20:19:20 - LootFrame:OnRoll (nil) (4) (Response:) (Offspec)", -- [19]
+			"20:19:20 - CreateResponse (5) (|cffa335ee|Hitem:147012::::::::110:577::5:3:3562:1497:3528:::|h[Umbral Moonglaives]|h|r) (915) (4) (INVTYPE_TRINKET) (nil) (Miscellaneous) (nil)", -- [20]
+			"20:19:20 - GetPlayersGear (147012) (INVTYPE_TRINKET)", -- [21]
+			"20:19:20 - Trashing entry: (3) (|cffa335ee|Hitem:147012::::::::110:577::5:3:3562:1497:3528:::|h[Umbral Moonglaives]|h|r)", -- [22]
+			"20:19:21 - Comm received:^1^Sresponse^T^N1^N5^N2^SComet-Illidan^N3^T^Silvl^N913.25^Sdiff^N30^Sresponse^N4^Sgear1^S|cffa335ee|Hitem:128710::::::::110:270::13:3:689:600:679:::|h[Darkmoon~`Deck:~`Promises]|h|r^Sgear2^S|cffa335ee|Hitem:146071::130219::::::110:270::43:4:3573:1808:1547:3336:::|h[Ferocious~`Combatant's~`Badge~`of~`Dominance]|h|r^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [23]
+			"20:19:22 - Comm received:^1^Sresponse^T^N1^N5^N2^SBlutarski-Illidan^N3^T^Silvl^N910.125^Sdiff^N20^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:140806::::::::110:261::5:3:3516:1502:3337:::|h[Convergence~`of~`Fates]|h|r^Sgear2^S|cffa335ee|Hitem:140802::::::::110:261::5:3:3516:1492:3336:::|h[Nightblooming~`Frond]|h|r^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [24]
+			"20:19:22 - LootFrame:OnRoll (nil) (5) (Response:) (Transmog)", -- [25]
+			"20:19:22 - CreateResponse (4) (|cffa335ee|Hitem:147033::::::::110:577::5:3:3562:1497:3528:::|h[Lunar-Wrath Headgear]|h|r) (915) (5) (INVTYPE_HEAD) (nil) (Leather) (nil)", -- [26]
+			"20:19:22 - GetPlayersGear (147033) (INVTYPE_HEAD)", -- [27]
+			"20:19:22 - Trashing entry: (2) (|cffa335ee|Hitem:147033::::::::110:577::5:3:3562:1497:3528:::|h[Lunar-Wrath Headgear]|h|r)", -- [28]
+			"20:19:23 - Comm received:^1^Sresponse^T^N1^N4^N2^SComet-Illidan^N3^T^Silvl^N913.25^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:138331::::::::110:270::5:3:3516:1497:3336:::|h[Hood~`of~`Enveloped~`Dissonance]|h|r^Sresponse^N5^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [29]
+			"20:19:25 - Comm received:^1^Svote^T^N1^N4^N2^SBlutarski-Illidan^N3^N1^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [30]
+			"20:19:26 - Comm received:^1^Svote^T^N1^N3^N2^SLuthanen-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [31]
+			"20:19:27 - LootFrame:OnRoll (nil) (TIMEOUT) (Response:) (Candidate didn't respond on time)", -- [32]
+			"20:19:27 - CreateResponse (1) (|cffa335ee|Hitem:147005::::::::110:577::5:4:3562:1808:1497:3528:::|h[Chalice of Moonlight]|h|r) (915) (TIMEOUT) (INVTYPE_TRINKET) (nil) (Miscellaneous) (nil)", -- [33]
+			"20:19:27 - GetPlayersGear (147005) (INVTYPE_TRINKET)", -- [34]
+			"20:19:27 - Trashing entry: (1) (|cffa335ee|Hitem:147005::::::::110:577::5:4:3562:1808:1497:3528:::|h[Chalice of Moonlight]|h|r)", -- [35]
+			"20:19:27 - Comm received:^1^Sresponse^T^N1^N5^N2^SEklipto-Illidan^N3^T^Silvl^N912.5^Sdiff^N50^Sresponse^STIMEOUT^Sgear1^S|cffff8000|Hitem:144259::::::::110:577:::3:3529:3459:3570:::|h[Kil'jaeden's~`Burning~`Wish]|h|r^Sgear2^S|cffa335ee|Hitem:141482::::::::110:577::3:3:3466:1477:3336:::|h[Unstable~`Arcanocrystal]|h|r^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [36]
+			"20:19:27 - Comm received:^1^Sresponse^T^N1^N1^N2^SComet-Illidan^N3^T^Silvl^N913.25^Sdiff^N30^Sresponse^STIMEOUT^Sgear1^S|cffa335ee|Hitem:128710::::::::110:270::13:3:689:600:679:::|h[Darkmoon~`Deck:~`Promises]|h|r^Sgear2^S|cffa335ee|Hitem:146071::130219::::::110:270::43:4:3573:1808:1547:3336:::|h[Ferocious~`Combatant's~`Badge~`of~`Dominance]|h|r^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [37]
+			"20:19:28 - Comm received:^1^Sresponse^T^N1^N5^N2^SDadizzle-Illidan^N3^T^Silvl^N912.75^Sdiff^N30^Sresponse^STIMEOUT^Sgear1^S|cffa335ee|Hitem:140809::::::::110:102::5:4:3517:41:1502:3336:::|h[Whispers~`in~`the~`Dark]|h|r^Sgear2^S|cffa335ee|Hitem:140792::::::::110:102::5:3:3444:1482:3528:::|h[Erratic~`Metronome]|h|r^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [38]
+			"20:19:28 - Comm received:^1^Sresponse^T^N1^N4^N2^SDadizzle-Illidan^N3^T^Silvl^N912.75^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:138330::::::::110:102::5:4:3516:42:1487:3528:::|h[Hood~`of~`the~`Astral~`Warden]|h|r^Sresponse^STIMEOUT^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [39]
+			"20:19:28 - Comm received:^1^Sresponse^T^N1^N1^N2^SDadizzle-Illidan^N3^T^Silvl^N912.75^Sdiff^N30^Sresponse^STIMEOUT^Sgear1^S|cffa335ee|Hitem:140809::::::::110:102::5:4:3517:41:1502:3336:::|h[Whispers~`in~`the~`Dark]|h|r^Sgear2^S|cffa335ee|Hitem:140792::::::::110:102::5:3:3444:1482:3528:::|h[Erratic~`Metronome]|h|r^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [40]
+			"20:19:30 - Comm received:^1^Svote^T^N1^N3^N2^SLuthanen-Illidan^N3^N1^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [41]
+			"20:19:31 - Comm received:^1^Svote^T^N1^N3^N2^SLuthanen-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [42]
+			"20:19:36 - Comm received:^1^Svote^T^N1^N2^N2^SDjpurge-Illidan^N3^N1^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [43]
+			"20:19:37 - Comm received:^1^Svote^T^N1^N4^N2^SBlutarski-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [44]
+			"20:19:44 - Comm received:^1^Svote^T^N1^N5^N2^SJimrando-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [45]
+			"20:19:47 - Comm received:^1^Svote^T^N1^N5^N2^SJimrando-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [46]
+			"20:20:06 - Comm received:^1^Svote^T^N1^N2^N2^SDjpurge-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [47]
+			"20:20:40 - Comm received:^1^Sawarded^T^N1^N2^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [48]
+			"20:20:40 - Comm received:^1^Shistory^T^N1^SDjpurge-Illidan^N2^T^SitemReplaced1^S|cffa335ee|Hitem:144406::::::::110:264::6:3:3445:1502:3336:::|h[Vintage~`Duskwatch~`Cinch]|h|r^SmapID^N1676^Sdate^S29/06/17^Scolor^T^N1^F5263030152770226^f-53^N2^F6640601803495317^f-54^N3^F6322700653327995^f-53^N4^N1^t^Sclass^SSHAMAN^SgroupSize^N24^Sresponse^SOffspec^Sboss^SPriestess~`Lunaspyre^SisAwardReason^b^SlootWon^S|cffa335ee|Hitem:147056::::::::110:577::5:3:3562:1497:3528:::|h[Waistguard~`of~`Interminable~`Unity]|h|r^Stime^S22:20:52^Svotes^N3^SresponseID^N4^Sinstance^STomb~`of~`Sargeras-Heroic^SdifficultyID^N15^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [49]
+			"20:20:49 - Comm received:^1^Sawarded^T^N1^N1^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [50]
+			"20:20:49 - Comm received:^1^Shistory^T^N1^SComet-Illidan^N2^T^SmapID^N1676^Scolor^T^N1^N1^N2^N0^N3^N0^N4^N1^t^Sclass^SMONK^SgroupSize^N24^Svotes^N0^Stime^S22:21:01^SitemReplaced1^S|cffa335ee|Hitem:128710::::::::110:270::13:3:689:600:679:::|h[Darkmoon~`Deck:~`Promises]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^Sresponse^SCandidate~`didn't~`respond~`on~`time^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:147005::::::::110:577::5:4:3562:1808:1497:3528:::|h[Chalice~`of~`Moonlight]|h|r^Sdate^S29/06/17^Sboss^SPriestess~`Lunaspyre^SresponseID^STIMEOUT^SitemReplaced2^S|cffa335ee|Hitem:146071::130219::::::110:270::43:4:3573:1808:1547:3336:::|h[Ferocious~`Combatant's~`Badge~`of~`Dominance]|h|r^SisAwardReason^b^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [51]
+			"20:21:19 - Comm received:^1^Svote^T^N1^N5^N2^SJimrando-Illidan^N3^N1^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [52]
+			"20:22:03 - Comm received:^1^Svote^T^N1^N5^N2^SJimrando-Illidan^N3^N1^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [53]
+			"20:22:20 - Comm received:^1^Sawarded^T^N1^N5^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [54]
+			"20:22:20 - Comm received:^1^Shistory^T^N1^SJimrando-Illidan^N2^T^SmapID^N1676^Scolor^T^N1^N0^N2^N1^N3^N0^N4^N1^t^Sclass^SWARRIOR^SgroupSize^N24^Svotes^N4^Stime^S22:22:33^SitemReplaced1^S|cffa335ee|Hitem:140806::::::::110:72::5:3:3516:1512:3337:::|h[Convergence~`of~`Fates]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^Sresponse^SBiS^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:147012::::::::110:577::5:3:3562:1497:3528:::|h[Umbral~`Moonglaives]|h|r^Sdate^S29/06/17^Sboss^SPriestess~`Lunaspyre^SresponseID^N1^SitemReplaced2^S|cffa335ee|Hitem:147012::130220::::::110:72::3:5:3561:1808:41:1482:3528:::|h[Umbral~`Moonglaives]|h|r^SisAwardReason^b^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [55]
+			"20:22:26 - Comm received:^1^Sawarded^T^N1^N4^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [56]
+			"20:22:26 - Comm received:^1^Shistory^T^N1^SBlutarski-Illidan^N2^T^SmapID^N1676^Scolor^T^N1^F5263030152770226^f-53^N2^F6640601803495317^f-54^N3^F6322700653327995^f-53^N4^N1^t^Sclass^SROGUE^SgroupSize^N24^Svotes^N2^Stime^S22:22:39^SitemReplaced1^S|cffa335ee|Hitem:138332::130222::::::110:261::5:4:3516:1808:1487:3528:::|h[Doomblade~`Cowl]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^Sresponse^SOffspec^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:147033::::::::110:577::5:3:3562:1497:3528:::|h[Lunar-Wrath~`Headgear]|h|r^Sdate^S29/06/17^Sboss^SPriestess~`Lunaspyre^SresponseID^N4^SisAwardReason^b^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [57]
+			"20:22:30 - Comm received:^1^Sawarded^T^N1^N3^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [58]
+			"20:22:30 - Comm received:^1^Ssession_end^T^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [59]
+			"20:22:30 - Comm received:^1^Shistory^T^N1^SLuthanen-Illidan^N2^T^SmapID^N1676^Scolor^T^N1^N1^N2^N0.5^N3^N0^N4^N1^t^Sclass^SPALADIN^SgroupSize^N24^Svotes^N3^Stime^S22:22:42^SitemReplaced1^S|cffa335ee|Hitem:140843::::::::110:65::6:3:3445:1497:3528:::|h[Flickering~`Timespark]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^Sresponse^SMainspec^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:147097::::::::110:577::5:3:3562:1502:3336:::|h[Blessing~`of~`the~`White~`Lady]|h|r^Sdate^S29/06/17^Sboss^SPriestess~`Lunaspyre^SresponseID^N2^SitemReplaced2^S|cffa335ee|Hitem:147096::::::::110:65::5:3:3562:1497:3528:::|h[Inquisition's~`Master~`Key]|h|r^SisAwardReason^b^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [60]
+			"20:54:33 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Marketfreshé) (distri:) (GUILD)", -- [61]
+			"21:04:47 - Event: (PLAYER_ENTERING_WORLD)", -- [62]
+			"21:04:47 - GetML()", -- [63]
+			"21:04:47 - LootMethod =  (master)", -- [64]
+			"21:04:47 - MasterLooter =  (Eklipto-Illidan)", -- [65]
+			"21:04:52 - Timer MLdb_check passed", -- [66]
+			"21:06:44 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Krieggeist) (distri:) (GUILD)", -- [67]
+			"06/30/17", -- [68]
+			"02:21:12 - Logged In", -- [69]
+			"02:21:12 - ML initialized!", -- [70]
+			"02:21:40 - Comet-Illidan (2.4.3) (nil)", -- [71]
+			"02:21:41 - Event: (PLAYER_ENTERING_WORLD)", -- [72]
+			"02:21:41 - GetML()", -- [73]
+			"02:21:41 - LootMethod =  (personalloot)", -- [74]
+			"02:21:42 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Comet) (distri:) (GUILD)", -- [75]
+			"02:21:42 - GetPlayersGuildRank()", -- [76]
+			"02:21:42 - Found Guild Rank: Raider", -- [77]
+			"02:25:36 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [78]
+			"02:25:36 - GetML()", -- [79]
+			"02:25:36 - LootMethod =  (personalloot)", -- [80]
+			"02:31:34 - Event: (PLAYER_ENTERING_WORLD)", -- [81]
+			"02:31:34 - GetML()", -- [82]
+			"02:31:34 - LootMethod =  (personalloot)", -- [83]
+			"02:31:54 - Event: (RAID_INSTANCE_WELCOME) (Cathedral of Eternal Night (Mythic)) (365285) (0) (0)", -- [84]
+			"02:31:54 - Event: (PLAYER_ENTERING_WORLD)", -- [85]
+			"02:31:54 - GetML()", -- [86]
+			"02:31:54 - LootMethod =  (personalloot)", -- [87]
+			"07/01/17", -- [88]
+			"11:55:06 - Logged In", -- [89]
+			"11:55:06 - ML initialized!", -- [90]
+			"11:55:17 - Comet-Illidan (2.4.3) (nil)", -- [91]
+			"11:55:18 - Event: (PLAYER_ENTERING_WORLD)", -- [92]
+			"11:55:18 - GetML()", -- [93]
+			"11:55:18 - LootMethod =  (personalloot)", -- [94]
+			"11:55:19 - GetPlayersGuildRank()", -- [95]
+			"11:55:19 - Found Guild Rank: Raider", -- [96]
+			"11:55:19 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Comet) (distri:) (GUILD)", -- [97]
+			"11:57:26 - Event: (PLAYER_ENTERING_WORLD)", -- [98]
+			"11:57:26 - GetML()", -- [99]
+			"11:57:26 - LootMethod =  (personalloot)", -- [100]
+			"11:59:08 - Event: (PLAYER_ENTERING_WORLD)", -- [101]
+			"11:59:08 - GetML()", -- [102]
+			"11:59:08 - LootMethod =  (personalloot)", -- [103]
+			"12:06:05 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Eklypto) (distri:) (GUILD)", -- [104]
+			"07/02/17", -- [105]
+			"12:02:57 - Logged In", -- [106]
+			"12:02:57 - ML initialized!", -- [107]
+			"12:03:06 - Comet-Illidan (2.4.3) (nil)", -- [108]
+			"12:03:07 - Event: (PLAYER_ENTERING_WORLD)", -- [109]
+			"12:03:07 - GetML()", -- [110]
+			"12:03:07 - LootMethod =  (personalloot)", -- [111]
+			"12:03:08 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Comet) (distri:) (GUILD)", -- [112]
+			"12:03:08 - GetPlayersGuildRank()", -- [113]
+			"12:03:08 - Found Guild Rank: Raider", -- [114]
+			"12:04:51 - Event: (PLAYER_ENTERING_WORLD)", -- [115]
+			"12:04:51 - GetML()", -- [116]
+			"12:04:51 - LootMethod =  (personalloot)", -- [117]
+			"12:06:02 - Event: (PLAYER_ENTERING_WORLD)", -- [118]
+			"12:06:02 - GetML()", -- [119]
+			"12:06:02 - LootMethod =  (personalloot)", -- [120]
+			"12:07:41 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [121]
+			"12:07:41 - GetML()", -- [122]
+			"12:07:41 - LootMethod =  (personalloot)", -- [123]
+			"12:08:04 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Blutarski) (distri:) (GUILD)", -- [124]
+			"12:10:11 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [125]
+			"12:10:11 - GetML()", -- [126]
+			"12:10:11 - LootMethod =  (personalloot)", -- [127]
+			"07/02/17", -- [128]
+			"16:38:35 - Logged In", -- [129]
+			"16:38:35 - ML initialized!", -- [130]
+			"16:38:49 - Comet-Illidan (2.4.3) (nil)", -- [131]
+			"16:38:50 - Event: (PLAYER_ENTERING_WORLD)", -- [132]
+			"16:38:50 - GetML()", -- [133]
+			"16:38:50 - LootMethod =  (personalloot)", -- [134]
+			"16:38:51 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Comet) (distri:) (GUILD)", -- [135]
+			"16:38:51 - GetPlayersGuildRank()", -- [136]
+			"16:38:51 - Found Guild Rank: Raider", -- [137]
+			"16:39:09 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Thenex) (distri:) (GUILD)", -- [138]
+			"16:39:23 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [139]
+			"16:39:23 - GetML()", -- [140]
+			"16:39:23 - LootMethod =  (personalloot)", -- [141]
+			"16:39:31 - Event: (RAID_INSTANCE_WELCOME) (Vault of the Wardens (Heroic)) (55228) (0) (0)", -- [142]
+			"16:39:31 - Event: (PLAYER_ENTERING_WORLD)", -- [143]
+			"16:39:31 - GetML()", -- [144]
+			"16:39:31 - LootMethod =  (personalloot)", -- [145]
+			"16:47:33 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Eklipto) (distri:) (GUILD)", -- [146]
+			"16:49:30 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Krieggeist) (distri:) (GUILD)", -- [147]
+			"16:51:50 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Eklypto) (distri:) (GUILD)", -- [148]
+			"16:54:05 - Event: (PLAYER_ENTERING_WORLD)", -- [149]
+			"16:54:05 - GetML()", -- [150]
+			"16:54:05 - LootMethod =  (personalloot)", -- [151]
+			"16:55:41 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [152]
+			"16:55:41 - GetML()", -- [153]
+			"16:55:41 - LootMethod =  (personalloot)", -- [154]
+			"16:56:00 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Reinhärt) (distri:) (GUILD)", -- [155]
+			"16:59:13 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [156]
+			"16:59:13 - GetML()", -- [157]
+			"16:59:13 - LootMethod =  (personalloot)", -- [158]
+			"16:59:41 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Krieggeist) (distri:) (GUILD)", -- [159]
+			"17:01:35 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [160]
+			"17:01:35 - GetML()", -- [161]
+			"17:01:35 - LootMethod =  (personalloot)", -- [162]
+			"17:03:18 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Telgina) (distri:) (GUILD)", -- [163]
+			"17:04:33 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Fearmeter) (distri:) (GUILD)", -- [164]
+			"17:04:54 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [165]
+			"17:04:54 - GetML()", -- [166]
+			"17:04:54 - LootMethod =  (personalloot)", -- [167]
+			"17:06:59 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [168]
+			"17:06:59 - GetML()", -- [169]
+			"17:06:59 - LootMethod =  (personalloot)", -- [170]
+			"17:09:29 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [171]
+			"17:09:29 - GetML()", -- [172]
+			"17:09:29 - LootMethod =  (personalloot)", -- [173]
+			"17:12:56 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [174]
+			"17:12:56 - GetML()", -- [175]
+			"17:12:56 - LootMethod =  (personalloot)", -- [176]
+			"17:20:17 - Event: (PLAYER_ENTERING_WORLD)", -- [177]
+			"17:20:17 - GetML()", -- [178]
+			"17:20:17 - LootMethod =  (personalloot)", -- [179]
+			"17:20:30 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Reinhärt) (distri:) (GUILD)", -- [180]
+			"17:21:59 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Eklipto) (distri:) (GUILD)", -- [181]
+			"17:22:28 - Comm received:^1^SverTest^T^N1^S2.4.0^t^^ (from:) (Grimuhs) (distri:) (GUILD)", -- [182]
+			"17:23:27 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [183]
+			"17:23:27 - GetML()", -- [184]
+			"17:23:27 - LootMethod =  (personalloot)", -- [185]
+			"17:24:30 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Xorn) (distri:) (GUILD)", -- [186]
+			"17:25:57 - Event: (PLAYER_ENTERING_WORLD)", -- [187]
+			"17:25:57 - GetML()", -- [188]
+			"17:25:57 - LootMethod =  (personalloot)", -- [189]
+			"17:28:19 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Blutarski) (distri:) (GUILD)", -- [190]
+			"17:28:28 - Event: (PLAYER_ENTERING_WORLD)", -- [191]
+			"17:28:28 - GetML()", -- [192]
+			"17:28:28 - LootMethod =  (personalloot)", -- [193]
+			"17:30:25 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Zhaida) (distri:) (GUILD)", -- [194]
+			"17:31:18 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Xorn) (distri:) (GUILD)", -- [195]
+			"17:34:12 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Shietnorunes) (distri:) (GUILD)", -- [196]
+			"07/02/17", -- [197]
+			"17:38:27 - Logged In", -- [198]
+			"17:38:27 - ML initialized!", -- [199]
+			"17:38:44 - Comet-Illidan (2.4.3) (nil)", -- [200]
+			"17:38:45 - Event: (PLAYER_ENTERING_WORLD)", -- [201]
+			"17:38:45 - GetML()", -- [202]
+			"17:38:45 - LootMethod =  (personalloot)", -- [203]
+			"17:38:45 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Comet) (distri:) (GUILD)", -- [204]
+			"17:38:45 - GetPlayersGuildRank()", -- [205]
+			"17:38:45 - Found Guild Rank: Raider", -- [206]
+			"17:38:46 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [207]
+			"17:38:46 - GetML()", -- [208]
+			"17:38:46 - LootMethod =  (personalloot)", -- [209]
+			"17:39:15 - Event: (RAID_INSTANCE_WELCOME) (Tomb of Sargeras (Normal)) (138044) (1) (0)", -- [210]
+			"17:39:16 - Event: (PLAYER_ENTERING_WORLD)", -- [211]
+			"17:39:16 - GetML()", -- [212]
+			"17:39:16 - LootMethod =  (personalloot)", -- [213]
+			"17:44:08 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Reinhärt) (distri:) (GUILD)", -- [214]
+			"18:01:36 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Zedlogic) (distri:) (GUILD)", -- [215]
+			"18:05:07 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Mizzraym) (distri:) (GUILD)", -- [216]
+			"18:06:32 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Zefarion) (distri:) (GUILD)", -- [217]
+			"18:06:33 - Comm received:^1^SEUBonusRoll^T^N1^SShietnorunes-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:250:8388608:3::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [218]
+			"18:07:02 - Comm received:^1^SEUBonusRoll^T^N1^SBlutarski-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:261:8388608:3::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [219]
+			"18:09:04 - Event: (PLAYER_ENTERING_WORLD)", -- [220]
+			"18:09:04 - GetML()", -- [221]
+			"18:09:04 - LootMethod =  (personalloot)", -- [222]
+			"18:09:45 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Ugliestdruid) (distri:) (GUILD)", -- [223]
+			"18:09:47 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Eklypto) (distri:) (GUILD)", -- [224]
+			"18:11:44 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Cannibal) (distri:) (GUILD)", -- [225]
+			"18:13:49 - Event: (PLAYER_ENTERING_WORLD)", -- [226]
+			"18:13:49 - GetML()", -- [227]
+			"18:13:49 - LootMethod =  (personalloot)", -- [228]
+			"18:16:13 - Event: (PLAYER_ENTERING_WORLD)", -- [229]
+			"18:16:13 - GetML()", -- [230]
+			"18:16:13 - LootMethod =  (personalloot)", -- [231]
+			"07/02/17", -- [232]
+			"18:17:13 - Logged In", -- [233]
+			"18:17:13 - ML initialized!", -- [234]
+			"18:17:19 - Cometstorm-Illidan (2.4.3) (nil)", -- [235]
+			"18:17:19 - Event: (PLAYER_ENTERING_WORLD)", -- [236]
+			"18:17:19 - GetML()", -- [237]
+			"18:17:19 - LootMethod =  (personalloot)", -- [238]
+			"18:17:20 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Cometstorm) (distri:) (GUILD)", -- [239]
+			"18:17:20 - GetPlayersGuildRank()", -- [240]
+			"18:17:20 - Found Guild Rank: ALT.", -- [241]
+			"18:17:23 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [242]
+			"18:17:23 - GetML()", -- [243]
+			"18:17:23 - LootMethod =  (personalloot)", -- [244]
+			"18:18:27 - Event: (RAID_INSTANCE_WELCOME) (The Nighthold (Heroic)) (135692) (0) (0)", -- [245]
+			"18:18:28 - Event: (PLAYER_ENTERING_WORLD)", -- [246]
+			"18:18:28 - GetML()", -- [247]
+			"18:18:28 - LootMethod =  (personalloot)", -- [248]
+			"18:19:57 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [249]
+			"18:19:57 - GetML()", -- [250]
+			"18:19:57 - LootMethod =  (master)", -- [251]
+			"18:19:57 - MasterLooter =  (Fearmeter-Illidan)", -- [252]
+			"18:19:57 - Resetting council as we have a new ML!", -- [253]
+			"18:19:59 - Comm received:^1^SplayerInfoRequest^T^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [254]
+			"18:19:59 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N30^SselfVote^B^Sobserve^b^StierNumButtons^N4^Sresponses^T^Stier^T^t^t^ShideVotes^b^StierButtonsEnabled^B^SmultiVote^B^StierButtons^T^t^Sbuttons^T^t^SnumButtons^N3^SanonymousVoting^b^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [255]
+			"18:19:59 - Comm received:^1^Scandidates^T^N1^T^SSecrett-BleedingHollow^T^Srole^SHEALER^Sclass^SSHAMAN^Srank^S^t^SThenex-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SEklypto-Illidan^T^Srole^STANK^Sclass^SDEATHKNIGHT^Srank^S^t^SLanféar-Illidan^T^Srole^SHEALER^Sclass^SPRIEST^Srank^S^t^SReinhärt-Illidan^T^Srole^STANK^Sclass^SWARRIOR^Srank^S^t^SCometstorm-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SUgliestdruid-Illidan^T^Srole^SDAMAGER^Sclass^SDRUID^Srank^S^t^SXorn-Illidan^T^Srole^SDAMAGER^Sclass^SWARLOCK^Srank^S^t^STelgina-Illidan^T^Srole^SDAMAGER^Sclass^SHUNTER^Srank^S^t^SBlutarski-Illidan^T^Srole^SDAMAGER^Sclass^SROGUE^Srank^S^t^SCannibal-Illidan^T^Srole^SDAMAGER^Sclass^SDEATHKNIGHT^Srank^S^t^SMarketfreshe-Illidan^T^Srole^SHEALER^Sclass^SDRUID^Srank^S^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Sclass^SWARLOCK^Srank^S^t^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [256]
+			"18:19:59 - Comm received:^1^Scouncil^T^N1^T^N1^SFearmeter-Illidan^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [257]
+			"18:19:59 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [258]
+			"18:19:59 - Comm received:^1^Sxrealm^T^N1^SFearmeter-Illidan^N2^SplayerInfo^N3^SSecrett-BleedingHollow^N4^SSHAMAN^N5^SHEALER^N6^SCouncil~`of~`Rem^N8^N0^N9^N882.625^t^^ (from:) (Secrett-BleedingHollow) (distri:) (RAID)", -- [259]
+			"18:20:02 - Timer MLdb_check passed", -- [260]
+			"18:20:09 - Comm received:^1^Scouncil^T^N1^T^N1^SFearmeter-Illidan^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [261]
+			"18:20:09 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [262]
+			"18:20:09 - Comm received:^1^Scandidates^T^N1^T^SSecrett-BleedingHollow^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SSHAMAN^Srank^SCouncil~`of~`Rem^t^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SRaider^t^SEklypto-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SOfficer^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^SCometstorm-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SALT.^t^SUgliestdruid-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SOfficer^t^SXorn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N765^Sclass^SWARLOCK^Senchanter^B^Srank^SRaider^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SBlutarski-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SROGUE^Srank^SOfficer^t^SCannibal-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SRaider^t^SMarketfreshe-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SGuild~`Friend^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARLOCK^Srank^SOfficer^t^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [263]
+			"18:21:16 - Comm received:^1^Sxrealm^T^N1^SFearmeter-Illidan^N2^SplayerInfo^N3^SSecrett-BleedingHollow^N4^SSHAMAN^N5^SHEALER^N6^SCouncil~`of~`Rem^N8^N0^N9^N882.625^t^^ (from:) (Secrett-BleedingHollow) (distri:) (RAID)", -- [264]
+			"18:21:16 - Comm received:^1^Sxrealm^T^N1^SFearmeter-Illidan^N2^Sreconnect^t^^ (from:) (Secrett-BleedingHollow) (distri:) (RAID)", -- [265]
+			"18:21:16 - Comm received:^1^Sxrealm^T^N1^SFearmeter-Illidan^N2^SMLdb_request^t^^ (from:) (Secrett-BleedingHollow) (distri:) (RAID)", -- [266]
+			"18:21:16 - Comm received:^1^Sxrealm^T^N1^SFearmeter-Illidan^N2^Scouncil_request^t^^ (from:) (Secrett-BleedingHollow) (distri:) (RAID)", -- [267]
+			"18:21:16 - Comm received:^1^Sxrealm^T^N1^SSecrett-BleedingHollow^N2^SMLdb^N3^T^SallowNotes^B^Stimeout^N30^SselfVote^B^Sobserve^b^StierNumButtons^N4^Sresponses^T^Stier^T^t^t^ShideVotes^b^StierButtonsEnabled^B^SmultiVote^B^StierButtons^T^t^Sbuttons^T^t^SnumButtons^N3^SanonymousVoting^b^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [268]
+			"18:21:16 - Comm received:^1^Sxrealm^T^N1^SSecrett-BleedingHollow^N2^Scouncil^N3^T^N1^SFearmeter-Illidan^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [269]
+			"18:21:16 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N30^SselfVote^B^Sobserve^b^StierNumButtons^N4^Sresponses^T^Stier^T^t^t^ShideVotes^b^StierButtonsEnabled^B^SmultiVote^B^StierButtons^T^t^Sbuttons^T^t^SnumButtons^N3^SanonymousVoting^b^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [270]
+			"18:21:16 - Comm received:^1^Scouncil^T^N1^T^N1^SFearmeter-Illidan^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [271]
+			"18:21:16 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [272]
+			"18:21:18 - Comm received:^1^Sxrealm^T^N1^SSecrett-BleedingHollow^N2^Scandidates^N3^T^SSecrett-BleedingHollow^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SSHAMAN^Srank^SCouncil~`of~`Rem^t^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SRaider^t^SEklypto-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SOfficer^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^SCometstorm-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SALT.^t^SUgliestdruid-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SOfficer^t^SXorn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N765^Sclass^SWARLOCK^Senchanter^B^Srank^SRaider^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SBlutarski-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SROGUE^Srank^SOfficer^t^SCannibal-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SRaider^t^SMarketfreshe-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SGuild~`Friend^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARLOCK^Srank^SOfficer^t^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [273]
+			"18:26:54 - Event: (PLAYER_ENTERING_WORLD)", -- [274]
+			"18:26:54 - GetML()", -- [275]
+			"18:26:54 - LootMethod =  (master)", -- [276]
+			"18:26:54 - MasterLooter =  (Fearmeter-Illidan)", -- [277]
+			"18:26:59 - Timer MLdb_check passed", -- [278]
+			"18:28:02 - Event: (PLAYER_ENTERING_WORLD)", -- [279]
+			"18:28:02 - GetML()", -- [280]
+			"18:28:02 - LootMethod =  (master)", -- [281]
+			"18:28:02 - MasterLooter =  (Fearmeter-Illidan)", -- [282]
+			"18:28:07 - Timer MLdb_check passed", -- [283]
+			"18:28:17 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Madmartigàn) (distri:) (GUILD)", -- [284]
+			"18:28:19 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Thenexjr) (distri:) (GUILD)", -- [285]
+			"18:28:27 - Comm received:^1^Scandidates^T^N1^T^SSecrett-BleedingHollow^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SSHAMAN^Srank^SCouncil~`of~`Rem^t^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SRaider^t^SEklypto-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SOfficer^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^SCometstorm-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SALT.^t^SUgliestdruid-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SOfficer^t^SXorn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N765^Sclass^SWARLOCK^Senchanter^B^Srank^SRaider^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SCannibal-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SRaider^t^SMarketfreshe-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SGuild~`Friend^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARLOCK^Srank^SOfficer^t^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [286]
+			"18:28:47 - Comm received:^1^Scandidates^T^N1^T^SSecrett-BleedingHollow^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SSHAMAN^Srank^SCouncil~`of~`Rem^t^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SRaider^t^SEklypto-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SOfficer^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^SCometstorm-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SALT.^t^SUgliestdruid-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SOfficer^t^SXorn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N765^Sclass^SWARLOCK^Senchanter^B^Srank^SRaider^t^SCannibal-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SRaider^t^SMarketfreshe-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SGuild~`Friend^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARLOCK^Srank^SOfficer^t^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [287]
+			"18:28:54 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Pocketröckêt) (distri:) (GUILD)", -- [288]
+			"18:29:07 - Comm received:^1^Scandidates^T^N1^T^SSecrett-BleedingHollow^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SSHAMAN^Srank^SCouncil~`of~`Rem^t^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SRaider^t^SEklypto-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SOfficer^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^SCometstorm-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SALT.^t^SUgliestdruid-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SOfficer^t^SCannibal-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SRaider^t^SMarketfreshe-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SGuild~`Friend^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARLOCK^Srank^SOfficer^t^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [289]
+			"18:29:24 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Ugliestdruid) (distri:) (GUILD)", -- [290]
+			"18:29:24 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N30^SselfVote^B^Sobserve^b^StierNumButtons^N4^Sresponses^T^Stier^T^t^t^ShideVotes^b^StierButtonsEnabled^B^SmultiVote^B^StierButtons^T^t^Sbuttons^T^t^SnumButtons^N3^SanonymousVoting^b^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [291]
+			"18:29:24 - Comm received:^1^Scouncil^T^N1^T^N1^SFearmeter-Illidan^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [292]
+			"18:29:24 - nil = (IsCouncil) (Cometstorm-Illidan)", -- [293]
+			"18:29:31 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Ishaar) (distri:) (GUILD)", -- [294]
+			"18:29:34 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [295]
+			"18:29:34 - GetML()", -- [296]
+			"18:29:34 - LootMethod =  (master)", -- [297]
+			"18:29:34 - MasterLooter =  (Eklypto-Illidan)", -- [298]
+			"18:29:34 - Resetting council as we have a new ML!", -- [299]
+			"18:29:34 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Krieggeist) (distri:) (GUILD)", -- [300]
+			"18:29:39 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [301]
+			"18:29:39 - GetML()", -- [302]
+			"18:29:39 - LootMethod =  (personalloot)", -- [303]
+			"18:29:39 - Timer MLdb_check passed", -- [304]
+			"18:30:01 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Akromä) (distri:) (GUILD)", -- [305]
+			"18:32:41 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Zefarion) (distri:) (GUILD)", -- [306]
+			"18:34:33 - Event: (RAID_INSTANCE_WELCOME) (Tomb of Sargeras (Normal)) (134726) (0) (0)", -- [307]
+			"18:34:33 - Event: (PLAYER_ENTERING_WORLD)", -- [308]
+			"18:34:33 - GetML()", -- [309]
+			"18:34:33 - LootMethod =  (personalloot)", -- [310]
+			"18:56:12 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Nadzieja) (distri:) (GUILD)", -- [311]
+			"18:58:10 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Luthanen) (distri:) (GUILD)", -- [312]
+			"18:59:39 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Zefarion) (distri:) (GUILD)", -- [313]
+			"19:03:12 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Krieggeist) (distri:) (GUILD)", -- [314]
+			"19:10:22 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Pocketröckêt) (distri:) (GUILD)", -- [315]
+			"19:17:49 - Comm received:^1^SEUBonusRoll^T^N1^SIshaar-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:64:8388608:3::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Ishaar) (distri:) (RAID)", -- [316]
+			"19:17:52 - Comm received:^1^SEUBonusRoll^T^N1^SEklypto-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:250:8388608:3::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Eklypto) (distri:) (RAID)", -- [317]
+			"19:18:04 - Comm received:^1^SEUBonusRoll^T^N1^SUgliestdruid-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:102:8388608:3::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Ugliestdruid) (distri:) (RAID)", -- [318]
+			"19:21:47 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Marketfreshe) (distri:) (GUILD)", -- [319]
+			"19:24:57 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Lanféar) (distri:) (GUILD)", -- [320]
+			"07/06/17", -- [321]
+			"10:56:04 - Logged In", -- [322]
+			"10:56:04 - ML initialized!", -- [323]
+			"10:56:11 - Comet-Illidan (2.4.3) (nil)", -- [324]
+			"10:56:12 - Event: (PLAYER_ENTERING_WORLD)", -- [325]
+			"10:56:12 - GetML()", -- [326]
+			"10:56:12 - LootMethod =  (personalloot)", -- [327]
+			"10:56:13 - GetPlayersGuildRank()", -- [328]
+			"10:56:13 - Found Guild Rank: Raider", -- [329]
+			"10:56:13 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Comet) (distri:) (GUILD)", -- [330]
+			"11:04:28 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Shieldvsface) (distri:) (GUILD)", -- [331]
+			"11:05:01 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Markwallberg) (distri:) (GUILD)", -- [332]
+			"07/06/17", -- [333]
+			"17:24:00 - Logged In", -- [334]
+			"17:24:00 - ML initialized!", -- [335]
+			"17:24:28 - Comet-Illidan (2.4.4) (nil)", -- [336]
+			"17:24:29 - Event: (PLAYER_ENTERING_WORLD)", -- [337]
+			"17:24:29 - GetML()", -- [338]
+			"17:24:29 - LootMethod =  (personalloot)", -- [339]
+			"17:24:30 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [340]
+			"17:24:30 - GetPlayersGuildRank()", -- [341]
+			"17:24:30 - Found Guild Rank: Raider", -- [342]
+			"17:24:39 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [343]
+			"17:24:39 - GetML()", -- [344]
+			"17:24:39 - LootMethod =  (personalloot)", -- [345]
+			"17:25:43 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Drkillbotz) (distri:) (GUILD)", -- [346]
+			"17:26:16 - Event: (PLAYER_ENTERING_WORLD)", -- [347]
+			"17:26:16 - GetML()", -- [348]
+			"17:26:16 - LootMethod =  (personalloot)", -- [349]
+			"17:26:35 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Zilorin) (distri:) (GUILD)", -- [350]
+			"17:27:02 - Event: (RAID_INSTANCE_WELCOME) (Tomb of Sargeras (Heroic)) (397977) (0) (0)", -- [351]
+			"17:27:03 - Event: (PLAYER_ENTERING_WORLD)", -- [352]
+			"17:27:03 - GetML()", -- [353]
+			"17:27:03 - LootMethod =  (personalloot)", -- [354]
+			"17:27:41 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Drkillbotz) (distri:) (GUILD)", -- [355]
+			"17:28:44 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Shietnorunes) (distri:) (GUILD)", -- [356]
+			"17:30:54 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Dadizzle) (distri:) (GUILD)", -- [357]
+			"17:36:30 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [358]
+			"17:36:30 - GetML()", -- [359]
+			"17:36:30 - LootMethod =  (master)", -- [360]
+			"17:36:30 - MasterLooter =  (Eklipto-Illidan)", -- [361]
+			"17:36:30 - Resetting council as we have a new ML!", -- [362]
+			"17:36:31 - Comm received:^1^SplayerInfoRequest^T^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [363]
+			"17:36:31 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^StierNumButtons^N5^Sresponses^T^N1^T^Scolor^T^N1^N0^N2^N1^N3^N0^N4^N1^t^Stext^SBiS^Ssort^N1^t^N2^T^Scolor^T^N1^N1^N2^N0.5^N3^N0^N4^N1^t^Stext^SMainspec^Ssort^N2^t^N4^T^Scolor^T^N1^F5263030152770226^f-53^N2^F6640601803495317^f-54^N3^F6322700653327995^f-53^N4^N1^t^Stext^SOffspec^Ssort^N4^t^N5^T^Scolor^T^N1^F8336074604387747^f-54^N2^F6322700653327995^f-53^N3^F5545608952918964^f-53^N4^N1^t^Stext^STransmog^Ssort^N5^t^Stier^T^N3^T^Scolor^T^N1^N1^N2^N0.5^N3^N1^N4^N1^t^Stext^S3rd~`Tier~`Piece^Ssort^N3^t^N4^T^Scolor^T^N1^N0.5^N2^N1^N3^N1^N4^N1^t^Stext^S1st~`Tier~`Piece^Ssort^N4^t^N5^T^Scolor^T^N1^N0.56078431372549^N2^F6322700653327995^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SUpgrade^Ssort^N5^t^t^t^ShideVotes^b^StierButtonsEnabled^B^SmultiVote^B^StierButtons^T^N1^T^Stext^S4th~`Piece^t^N2^T^Stext^S2nd~`Piece^t^N3^T^Stext^S3rd~`Piece^t^N4^T^Stext^S1st~`Piece^t^N5^T^Stext^SUpgrade^t^t^Sbuttons^T^N1^T^Stext^SBiS^t^N2^T^Stext^SMainspec^t^N4^T^Stext^SOffspec^t^N5^T^Stext^STransmog^t^t^SnumButtons^N5^SanonymousVoting^b^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [364]
+			"17:36:31 - Comm received:^1^Scandidates^T^N1^T^SThenex-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SNadzieja-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SFuryisthy-Illidan^T^Srole^SDAMAGER^Sclass^SDEMONHUNTER^Srank^S^t^SJimrando-Illidan^T^Srole^SDAMAGER^Sclass^SWARRIOR^Srank^S^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Sclass^SDRUID^Srank^S^t^SBlutarski-Illidan^T^Srole^SDAMAGER^Sclass^SROGUE^Srank^S^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Sclass^SWARLOCK^Srank^S^t^SShietnorunes-Illidan^T^Srole^STANK^Sclass^SDEATHKNIGHT^Srank^S^t^SEklipto-Illidan^T^Srole^SDAMAGER^Sclass^SDEMONHUNTER^Srank^S^t^SZefarion-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SComet-Illidan^T^Srole^SHEALER^Sclass^SMONK^Srank^S^t^SLuthanen-Illidan^T^Srole^SHEALER^Sclass^SPALADIN^Srank^S^t^SLanféar-Illidan^T^Srole^SHEALER^Sclass^SPRIEST^Srank^S^t^SDjpurge-Illidan^T^Srole^SHEALER^Sclass^SSHAMAN^Srank^S^t^SReinhärt-Illidan^T^Srole^STANK^Sclass^SWARRIOR^Srank^S^t^STelgina-Illidan^T^Srole^SDAMAGER^Sclass^SHUNTER^Srank^S^t^SXorn-Illidan^T^Srole^SDAMAGER^Sclass^SWARLOCK^Srank^S^t^SDrkillbotz-Illidan^T^Srole^SDAMAGER^Sclass^SDEATHKNIGHT^Srank^S^t^SZilorin-Illidan^T^Srole^SDAMAGER^Sclass^SDEMONHUNTER^Srank^S^t^SCannibal-Illidan^T^Srole^SDAMAGER^Sclass^SDEATHKNIGHT^Srank^S^t^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [365]
+			"17:36:31 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SEklipto-Illidan^N3^SReinhärt-Illidan^N4^SDjpurge-Illidan^N5^SFearmeter-Illidan^N6^SShietnorunes-Illidan^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [366]
+			"17:36:31 - nil = (IsCouncil) (Comet-Illidan)", -- [367]
+			"17:36:35 - Timer MLdb_check passed", -- [368]
+			"17:36:41 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SEklipto-Illidan^N3^SReinhärt-Illidan^N4^SDjpurge-Illidan^N5^SFearmeter-Illidan^N6^SShietnorunes-Illidan^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [369]
+			"17:36:41 - nil = (IsCouncil) (Comet-Illidan)", -- [370]
+			"17:36:41 - Comm received:^1^Scandidates^T^N1^T^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SRaider^t^SNadzieja-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SFuryisthy-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEMONHUNTER^Srank^SRaider^t^SJimrando-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SRaider^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SRaider^t^SBlutarski-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SROGUE^Srank^SOfficer^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARLOCK^Srank^SOfficer^t^SShietnorunes-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SOfficer^t^SEklipto-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N195^Sclass^SDEMONHUNTER^Senchanter^B^Srank^SOfficer^t^SZefarion-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SRaider^t^SComet-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SMONK^Srank^SRaider^t^SLuthanen-Illidan^T^Srole^SHEALER^Senchant_lvl^N762^Sclass^SPALADIN^Senchanter^B^Srank^SRaider^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^SDjpurge-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SSHAMAN^Srank^SOfficer^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SXorn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N765^Sclass^SWARLOCK^Senchanter^B^Srank^SRaider^t^SDrkillbotz-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SRaider^t^SZilorin-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N101^Sclass^SDEMONHUNTER^Senchanter^B^Srank^SRaider^t^SCannibal-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SRaider^t^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [371]
+			"17:36:53 - Comm received:^1^SEUBonusRoll^T^N1^SBlutarski-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:261:8388608:5::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [372]
+			"17:38:38 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Drkillbotz) (distri:) (GUILD)", -- [373]
+			"17:38:44 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^StierNumButtons^N5^Sresponses^T^N1^T^Scolor^T^N1^N0^N2^N1^N3^N0^N4^N1^t^Stext^SBiS^Ssort^N1^t^N2^T^Scolor^T^N1^N1^N2^N0.5^N3^N0^N4^N1^t^Stext^SMainspec^Ssort^N2^t^N4^T^Scolor^T^N1^F5263030152770226^f-53^N2^F6640601803495317^f-54^N3^F6322700653327995^f-53^N4^N1^t^Stext^SOffspec^Ssort^N4^t^N5^T^Scolor^T^N1^F8336074604387747^f-54^N2^F6322700653327995^f-53^N3^F5545608952918964^f-53^N4^N1^t^Stext^STransmog^Ssort^N5^t^Stier^T^N3^T^Scolor^T^N1^N1^N2^N0.5^N3^N1^N4^N1^t^Stext^S3rd~`Tier~`Piece^Ssort^N3^t^N4^T^Scolor^T^N1^N0.5^N2^N1^N3^N1^N4^N1^t^Stext^S1st~`Tier~`Piece^Ssort^N4^t^N5^T^Scolor^T^N1^N0.56078431372549^N2^F6322700653327995^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SUpgrade^Ssort^N5^t^t^t^ShideVotes^b^StierButtonsEnabled^B^SmultiVote^B^StierButtons^T^N1^T^Stext^S4th~`Piece^t^N2^T^Stext^S2nd~`Piece^t^N3^T^Stext^S3rd~`Piece^t^N4^T^Stext^S1st~`Piece^t^N5^T^Stext^SUpgrade^t^t^Sbuttons^T^N1^T^Stext^SBiS^t^N2^T^Stext^SMainspec^t^N4^T^Stext^SOffspec^t^N5^T^Stext^STransmog^t^t^SnumButtons^N5^SanonymousVoting^b^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [374]
+			"17:38:44 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SEklipto-Illidan^N3^SReinhärt-Illidan^N4^SDjpurge-Illidan^N5^SFearmeter-Illidan^N6^SShietnorunes-Illidan^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [375]
+			"17:38:44 - nil = (IsCouncil) (Comet-Illidan)", -- [376]
+			"17:40:02 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Thenex) (distri:) (GUILD)", -- [377]
+			"17:40:05 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^StierNumButtons^N5^Sresponses^T^N1^T^Scolor^T^N1^N0^N2^N1^N3^N0^N4^N1^t^Stext^SBiS^Ssort^N1^t^N2^T^Scolor^T^N1^N1^N2^N0.5^N3^N0^N4^N1^t^Stext^SMainspec^Ssort^N2^t^N4^T^Scolor^T^N1^F5263030152770226^f-53^N2^F6640601803495317^f-54^N3^F6322700653327995^f-53^N4^N1^t^Stext^SOffspec^Ssort^N4^t^N5^T^Scolor^T^N1^F8336074604387747^f-54^N2^F6322700653327995^f-53^N3^F5545608952918964^f-53^N4^N1^t^Stext^STransmog^Ssort^N5^t^Stier^T^N3^T^Scolor^T^N1^N1^N2^N0.5^N3^N1^N4^N1^t^Stext^S3rd~`Tier~`Piece^Ssort^N3^t^N4^T^Scolor^T^N1^N0.5^N2^N1^N3^N1^N4^N1^t^Stext^S1st~`Tier~`Piece^Ssort^N4^t^N5^T^Scolor^T^N1^N0.56078431372549^N2^F6322700653327995^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SUpgrade^Ssort^N5^t^t^t^ShideVotes^b^StierButtonsEnabled^B^SmultiVote^B^StierButtons^T^N1^T^Stext^S4th~`Piece^t^N2^T^Stext^S2nd~`Piece^t^N3^T^Stext^S3rd~`Piece^t^N4^T^Stext^S1st~`Piece^t^N5^T^Stext^SUpgrade^t^t^Sbuttons^T^N1^T^Stext^SBiS^t^N2^T^Stext^SMainspec^t^N4^T^Stext^SOffspec^t^N5^T^Stext^STransmog^t^t^SnumButtons^N5^SanonymousVoting^b^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [378]
+			"17:40:05 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SEklipto-Illidan^N3^SReinhärt-Illidan^N4^SDjpurge-Illidan^N5^SFearmeter-Illidan^N6^SShietnorunes-Illidan^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [379]
+			"17:40:05 - nil = (IsCouncil) (Comet-Illidan)", -- [380]
+			"17:40:47 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Chèss) (distri:) (GUILD)", -- [381]
+			"17:40:59 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [382]
+			"17:40:59 - GetML()", -- [383]
+			"17:40:59 - LootMethod =  (master)", -- [384]
+			"17:40:59 - MasterLooter =  (Eklipto-Illidan)", -- [385]
+			"17:41:02 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^StierNumButtons^N5^Sresponses^T^N1^T^Scolor^T^N1^N0^N2^N1^N3^N0^N4^N1^t^Stext^SBiS^Ssort^N1^t^N2^T^Scolor^T^N1^N1^N2^N0.5^N3^N0^N4^N1^t^Stext^SMainspec^Ssort^N2^t^N4^T^Scolor^T^N1^F5263030152770226^f-53^N2^F6640601803495317^f-54^N3^F6322700653327995^f-53^N4^N1^t^Stext^SOffspec^Ssort^N4^t^N5^T^Scolor^T^N1^F8336074604387747^f-54^N2^F6322700653327995^f-53^N3^F5545608952918964^f-53^N4^N1^t^Stext^STransmog^Ssort^N5^t^Stier^T^N3^T^Scolor^T^N1^N1^N2^N0.5^N3^N1^N4^N1^t^Stext^S3rd~`Tier~`Piece^Ssort^N3^t^N4^T^Scolor^T^N1^N0.5^N2^N1^N3^N1^N4^N1^t^Stext^S1st~`Tier~`Piece^Ssort^N4^t^N5^T^Scolor^T^N1^N0.56078431372549^N2^F6322700653327995^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SUpgrade^Ssort^N5^t^t^t^ShideVotes^b^StierButtonsEnabled^B^SmultiVote^B^StierButtons^T^N1^T^Stext^S4th~`Piece^t^N2^T^Stext^S2nd~`Piece^t^N3^T^Stext^S3rd~`Piece^t^N4^T^Stext^S1st~`Piece^t^N5^T^Stext^SUpgrade^t^t^Sbuttons^T^N1^T^Stext^SBiS^t^N2^T^Stext^SMainspec^t^N4^T^Stext^SOffspec^t^N5^T^Stext^STransmog^t^t^SnumButtons^N5^SanonymousVoting^b^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [386]
+			"17:41:02 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SEklipto-Illidan^N3^SReinhärt-Illidan^N4^SDjpurge-Illidan^N5^SFearmeter-Illidan^N6^SShietnorunes-Illidan^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [387]
+			"17:41:02 - nil = (IsCouncil) (Comet-Illidan)", -- [388]
+			"17:41:04 - Timer MLdb_check passed", -- [389]
+			"17:41:05 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Telgina) (distri:) (GUILD)", -- [390]
+			"17:41:17 - Comm received:^1^Scandidates^T^N1^T^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SRaider^t^SNadzieja-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SFuryisthy-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEMONHUNTER^Srank^SRaider^t^SJimrando-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SRaider^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SRaider^t^SBlutarski-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SROGUE^Srank^SOfficer^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARLOCK^Srank^SOfficer^t^SChèss-Illidan^T^Srole^SDAMAGER^Sclass^SHUNTER^Srank^S^t^SShietnorunes-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SOfficer^t^SEklipto-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N195^Sclass^SDEMONHUNTER^Senchanter^B^Srank^SOfficer^t^SZefarion-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SRaider^t^SComet-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SMONK^Srank^SRaider^t^SLuthanen-Illidan^T^Srole^SHEALER^Senchant_lvl^N762^Sclass^SPALADIN^Senchanter^B^Srank^SRaider^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^SDjpurge-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SSHAMAN^Srank^SOfficer^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SXorn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N765^Sclass^SWARLOCK^Senchanter^B^Srank^SRaider^t^SDrkillbotz-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SRaider^t^SZilorin-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N101^Sclass^SDEMONHUNTER^Senchanter^B^Srank^SRaider^t^SCannibal-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SRaider^t^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [391]
+			"17:47:39 - Comm received:^1^SlootTable^T^N1^T^N1^T^SequipLoc^SINVTYPE_WAIST^SlootSlot^N1^Slink^S|cffa335ee|Hitem:146998::::::::110:577::5:3:3562:1497:3528:::|h[Braided~`Torture~`Lash]|h|r^SsubType^SCloth^Srelic^b^Sawarded^b^Sname^SBraided~`Torture~`Lash^Stexture^N1533494^Silvl^N915^Sboe^b^Sbagged^b^Squality^N4^t^N2^T^SequipLoc^S^SlootSlot^N2^Slink^S|cffa335ee|Hitem:147077::::::::110:577::5:3:3562:1497:3528:::|h[Inexorable~`Truth~`Serum]|h|r^SsubType^SArtifact~`Relic^Srelic^SArcane^Sawarded^b^Sname^SInexorable~`Truth~`Serum^Stexture^N236884^Silvl^N915^Sboe^b^Sbagged^b^Squality^N4^t^N3^T^SequipLoc^SINVTYPE_SHOULDER^SlootSlot^N3^Slink^S|cffa335ee|Hitem:146996::::::::110:577::5:3:3562:1502:3336:::|h[Mantle~`of~`Broken~`Spirits]|h|r^SsubType^SCloth^Srelic^b^Sawarded^b^Sname^SMantle~`of~`Broken~`Spirits^Stexture^N1518072^Silvl^N920^Sboe^b^Sbagged^b^Squality^N4^t^N4^T^SequipLoc^S^SlootSlot^N4^Slink^S|cffa335ee|Hitem:147323::::::::110:577::5:1:570:::|h[Helm~`of~`the~`Foregone~`Conqueror]|h|r^SsubType^SJunk^Stoken^SHeadSlot^Srelic^b^Sawarded^b^Sname^SHelm~`of~`the~`Foregone~`Conqueror^Stexture^N133126^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^N5^T^SequipLoc^S^SlootSlot^N5^Slink^S|cffa335ee|Hitem:147322::::::::110:577::5:1:570:::|h[Helm~`of~`the~`Foregone~`Vanquisher]|h|r^SsubType^SJunk^Stoken^SHeadSlot^Srelic^b^Sawarded^b^Sname^SHelm~`of~`the~`Foregone~`Vanquisher^Stexture^N133126^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [392]
+			"17:47:39 - |cffa335ee|Hitem:147323::::::::110:577::5:1:570:::|h[Helm of the Foregone Conqueror]|h|r", -- [393]
+			"17:47:39 - |cffa335ee|Hitem:147322::::::::110:577::5:1:570:::|h[Helm of the Foregone Vanquisher]|h|r", -- [394]
+			"17:47:39 - Some items wasn't cached, delaying loot by 1 sec", -- [395]
+			"17:47:39 - Comm received:^1^SlootAck^T^N1^SFearmeter-Illidan^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [396]
+			"17:47:39 - Comm received:^1^Sresponse^T^N1^N2^N2^SFearmeter-Illidan^N3^T^Silvl^N916.875^Sresponse^SAUTOPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [397]
+			"17:47:39 - Comm received:^1^Sresponse^T^N1^N5^N2^SFearmeter-Illidan^N3^T^Silvl^N916.875^Sdiff^N-815^Sgear1^S|cffa335ee|Hitem:147183::130222::::::110:265::5:4:3562:1808:1507:3336:::|h[Diabolic~`Helm]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [398]
+			"17:47:39 - Comm received:^1^SextraUtilData^T^N1^SXorn-Illidan^N2^T^Sforged^N7^Spawn^T^t^SspecID^N265^Straits^N52^Slegend^N2^Ssockets^N1^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [399]
+			"17:47:39 - Comm received:^1^SlootAck^T^N1^SEklipto-Illidan^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [400]
+			"17:47:39 - Comm received:^1^Sresponse^T^N1^N1^N2^SEklipto-Illidan^N3^T^Silvl^N914.6875^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:142196::::::::110:577::35:3:3418:1522:3337:::|h[Cinch~`of~`Improbable~`Desire]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [401]
+			"17:47:39 - Comm received:^1^Sresponse^T^N1^N3^N2^SEklipto-Illidan^N3^T^Silvl^N914.6875^Sdiff^N45^Sgear1^S|cffa335ee|Hitem:138380:5883:::::::110:577::3:3:3514:1472:1813:::|h[Shoulderguards~`of~`Second~`Sight]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [402]
+			"17:47:39 - Comm received:^1^Sresponse^T^N1^N5^N2^SEklipto-Illidan^N3^T^Silvl^N914.6875^Sdiff^N-785^Sgear1^S|cffa335ee|Hitem:138378::130219::::::110:577::5:4:3516:1808:1492:3336:::|h[Mask~`of~`Second~`Sight]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [403]
+			"17:47:39 - Comm received:^1^SextraUtilData^T^N1^SEklipto-Illidan^N2^T^Sforged^N10^Spawn^T^N1^T^Sequipped^N566.331^Snew^N301.944^t^N2^T^Sequipped^N0^Snew^N0^t^N3^T^Sequipped^N389.499^Snew^N199.111^t^N4^T^Sequipped^N698.826^Snew^N0^t^N5^T^Sequipped^N698.826^Snew^N0^t^t^SspecID^N577^Straits^N57^Slegend^N2^Ssockets^N4^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [404]
+			"17:47:39 - Comm received:^1^SextraUtilData^T^N1^SShietnorunes-Illidan^N2^T^Sforged^N8^Spawn^T^N1^T^Sequipped^N1025.211^Snew^N330.055^t^N2^T^Sequipped^N0^Snew^N0^t^N3^T^Sequipped^N537.346^Snew^N0^t^N4^T^Sequipped^N747.782^Snew^N0^t^N5^T^Sequipped^N747.782^Snew^N0^t^t^SspecID^N250^Straits^N55^Slegend^N2^Ssockets^N3^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [405]
+			"17:47:39 - Comm received:^1^SextraUtilData^T^N1^SDjpurge-Illidan^N2^T^Sforged^N5^Spawn^T^N1^T^Sequipped^N46198.3^Snew^N47394.29^t^N2^T^Sequipped^N0^Snew^N0^t^N3^T^Sequipped^N593.684^Snew^N0^t^N4^T^Sequipped^N679.303^Snew^N0^t^N5^T^Sequipped^N679.303^Snew^N0^t^t^SspecID^N264^Straits^N52^Slegend^N2^Ssockets^N2^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [406]
+			"17:47:39 - Comm received:^1^SlootAck^T^N1^SThenex-Illidan^t^^ (from:) (Thenex) (distri:) (RAID)", -- [407]
+			"17:47:39 - Comm received:^1^Sresponse^T^N1^N4^N2^SThenex-Illidan^N3^T^Silvl^N916.625^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138312::::::::110:63::5:3:3516:1487:3528:::|h[Hood~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [408]
+			"17:47:39 - Comm received:^1^SextraUtilData^T^N1^SBlutarski-Illidan^N2^T^Sforged^N8^Spawn^T^N1^T^Sequipped^N55132.47^Snew^N16961.46^t^N2^T^Sequipped^N0^Snew^N0^t^N3^T^Sequipped^N1017.68^Snew^N260.023^t^N4^T^Sequipped^N812.547^Snew^N0^t^N5^T^Sequipped^N812.547^Snew^N0^t^t^SspecID^N261^Straits^N56^Slegend^N2^Ssockets^N4^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [409]
+			"17:47:40 - Comm received:^1^SlootTable^T^N1^T^N1^T^SequipLoc^SINVTYPE_WAIST^SlootSlot^N1^Slink^S|cffa335ee|Hitem:146998::::::::110:577::5:3:3562:1497:3528:::|h[Braided~`Torture~`Lash]|h|r^SsubType^SCloth^Srelic^b^Sawarded^b^Sname^SBraided~`Torture~`Lash^Stexture^N1533494^Silvl^N915^Sboe^b^Sbagged^b^Squality^N4^t^N2^T^SequipLoc^S^SlootSlot^N2^Slink^S|cffa335ee|Hitem:147077::::::::110:577::5:3:3562:1497:3528:::|h[Inexorable~`Truth~`Serum]|h|r^SsubType^SArtifact~`Relic^Srelic^SArcane^Sawarded^b^Sname^SInexorable~`Truth~`Serum^Stexture^N236884^Silvl^N915^Sboe^b^Sbagged^b^Squality^N4^t^N3^T^SequipLoc^SINVTYPE_SHOULDER^SlootSlot^N3^Slink^S|cffa335ee|Hitem:146996::::::::110:577::5:3:3562:1502:3336:::|h[Mantle~`of~`Broken~`Spirits]|h|r^SsubType^SCloth^Srelic^b^Sawarded^b^Sname^SMantle~`of~`Broken~`Spirits^Stexture^N1518072^Silvl^N920^Sboe^b^Sbagged^b^Squality^N4^t^N4^T^SequipLoc^S^SlootSlot^N4^Slink^S|cffa335ee|Hitem:147323::::::::110:577::5:1:570:::|h[Helm~`of~`the~`Foregone~`Conqueror]|h|r^SsubType^SJunk^Stoken^SHeadSlot^Srelic^b^Sawarded^b^Sname^SHelm~`of~`the~`Foregone~`Conqueror^Stexture^N133126^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^N5^T^SequipLoc^S^SlootSlot^N5^Slink^S|cffa335ee|Hitem:147322::::::::110:577::5:1:570:::|h[Helm~`of~`the~`Foregone~`Vanquisher]|h|r^SsubType^SJunk^Stoken^SHeadSlot^Srelic^b^Sawarded^b^Sname^SHelm~`of~`the~`Foregone~`Vanquisher^Stexture^N133126^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [410]
+			"17:47:40 - Autopassed on:  (|cffa335ee|Hitem:146998::::::::110:577::5:3:3562:1497:3528:::|h[Braided Torture Lash]|h|r)", -- [411]
+			"17:47:40 - CreateResponse (1) (|cffa335ee|Hitem:146998::::::::110:577::5:3:3562:1497:3528:::|h[Braided Torture Lash]|h|r) (915) (AUTOPASS) (INVTYPE_WAIST) (nil) (Cloth) (nil)", -- [412]
+			"17:47:40 - GetPlayersGear (146998) (INVTYPE_WAIST)", -- [413]
+			"17:47:40 - NewRelicAutopassCheck (|cffa335ee|Hitem:147077::::::::110:577::5:3:3562:1497:3528:::|h[Inexorable Truth Serum]|h|r) (Arcane)", -- [414]
+			"17:47:40 - Autopassed on:  (|cffa335ee|Hitem:147077::::::::110:577::5:3:3562:1497:3528:::|h[Inexorable Truth Serum]|h|r)", -- [415]
+			"17:47:40 - CreateResponse (2) (|cffa335ee|Hitem:147077::::::::110:577::5:3:3562:1497:3528:::|h[Inexorable Truth Serum]|h|r) (915) (AUTOPASS) () (nil) (Artifact Relic) (nil)", -- [416]
+			"17:47:40 - Autopassed on:  (|cffa335ee|Hitem:146996::::::::110:577::5:3:3562:1502:3336:::|h[Mantle of Broken Spirits]|h|r)", -- [417]
+			"17:47:40 - CreateResponse (3) (|cffa335ee|Hitem:146996::::::::110:577::5:3:3562:1502:3336:::|h[Mantle of Broken Spirits]|h|r) (920) (AUTOPASS) (INVTYPE_SHOULDER) (nil) (Cloth) (nil)", -- [418]
+			"17:47:40 - GetPlayersGear (146996) (INVTYPE_SHOULDER)", -- [419]
+			"17:47:40 - Autopassed on:  (|cffa335ee|Hitem:147323::::::::110:577::5:1:570:::|h[Helm of the Foregone Conqueror]|h|r)", -- [420]
+			"17:47:40 - CreateResponse (4) (|cffa335ee|Hitem:147323::::::::110:577::5:1:570:::|h[Helm of the Foregone Conqueror]|h|r) (110) (AUTOPASS) () (nil) (Junk) (nil)", -- [421]
+			"17:47:40 - GetPlayersGear (147323) ()", -- [422]
+			"17:47:40 - Autopassed on:  (|cffa335ee|Hitem:147322::::::::110:577::5:1:570:::|h[Helm of the Foregone Vanquisher]|h|r)", -- [423]
+			"17:47:40 - CreateResponse (5) (|cffa335ee|Hitem:147322::::::::110:577::5:1:570:::|h[Helm of the Foregone Vanquisher]|h|r) (110) (AUTOPASS) () (nil) (Junk) (nil)", -- [424]
+			"17:47:40 - GetPlayersGear (147322) ()", -- [425]
+			"17:47:40 - LootFrame (GetFrame())", -- [426]
+			"17:47:40 - LootFrame:Start()", -- [427]
+			"17:47:40 - Comm received:^1^SlootAck^T^N1^SXorn-Illidan^t^^ (from:) (Xorn) (distri:) (RAID)", -- [428]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N2^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sresponse^SAUTOPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [429]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N5^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sdiff^N-860^Sgear1^S|cffff8000|Hitem:132394::::::::110:265:::2:3459:3570:::|h[Hood~`of~`Eternal~`Disdain]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [430]
+			"17:47:40 - Comm received:^1^SlootAck^T^N1^SLanféar-Illidan^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [431]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N2^N2^SLanféar-Illidan^N3^T^Silvl^N914.3125^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [432]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N5^N2^SLanféar-Illidan^N3^T^Silvl^N914.3125^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138313::::::::110:257::5:3:3516:1487:3528:::|h[Purifier's~`Gorget]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [433]
+			"17:47:40 - Comm received:^1^SlootAck^T^N1^SCannibal-Illidan^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [434]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N1^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sdiff^N-55^Sgear1^S|cffff8000|Hitem:132441::::::::110:252:::2:3459:3570:::|h[Draugr,~`Girdle~`of~`the~`Everlasting~`King]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [435]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N2^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sresponse^SAUTOPASS^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [436]
+			"17:47:40 - Comm received:^1^SlootAck^T^N1^SBlutarski-Illidan^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [437]
+			"17:47:40 - Comm received:^1^SlootAck^T^N1^SNadzieja-Illidan^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [438]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N4^N2^SNadzieja-Illidan^N3^T^Silvl^N918.3125^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:138312::::::::110:64::5:3:3516:1497:3336:::|h[Hood~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [439]
+			"17:47:40 - Comm received:^1^SlootAck^T^N1^SDadizzle-Illidan^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [440]
+			"17:47:40 - Comm received:^1^SlootAck^T^N1^SReinhärt-Illidan^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [441]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N1^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:140892::::::::110:73::5:3:3516:1507:3337:::|h[Goresmeared~`Abyssal~`Waistplate]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [442]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N2^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [443]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N3^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:147192::::::::110:73::3:3:3561:1492:3336:::|h[Titanic~`Onslaught~`Pauldrons]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [444]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N4^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138357::130220::::::110:73::5:4:3516:1808:1487:1813:::|h[Warhelm~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [445]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N5^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138357::130220::::::110:73::5:4:3516:1808:1487:1813:::|h[Warhelm~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [446]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N1^N2^SDadizzle-Illidan^N3^T^Silvl^N912.75^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:140859::::::::110:102::5:3:3516:1497:3336:::|h[Girdle~`of~`Nefarious~`Strategy]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [447]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N3^N2^SDadizzle-Illidan^N3^T^Silvl^N912.75^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:144295:5883:::::::110:102:::3:3529:3459:3570:::|h[Lady~`and~`the~`Child]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [448]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N4^N2^SDadizzle-Illidan^N3^T^Silvl^N912.75^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138330::::::::110:102::5:4:3516:42:1487:3528:::|h[Hood~`of~`the~`Astral~`Warden]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [449]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N3^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sdiff^N30^Sgear1^S|cffa335ee|Hitem:138361::::::::110:252::5:3:3516:1487:1813:::|h[Dreadwyrm~`Shoulderguards]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [450]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N4^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:142126::::::::110:252::35:3:3418:1522:3337:::|h[Helm~`of~`Phantasmal~`Scars]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [451]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N1^N2^SBlutarski-Illidan^N3^T^Silvl^N911.375^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:134199::::::::110:261::16:3:3418:1572:3337:::|h[Biornskin~`Belt]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [452]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N2^N2^SBlutarski-Illidan^N3^T^Silvl^N911.375^Sresponse^SAUTOPASS^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [453]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N3^N2^SBlutarski-Illidan^N3^T^Silvl^N911.375^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:144236:5883:::::::110:261:::3:3529:3459:3570:::|h[Mantle~`of~`the~`Master~`Assassin]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [454]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N4^N2^SBlutarski-Illidan^N3^T^Silvl^N911.375^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138332::130222::::::110:261::5:4:3516:1808:1487:3528:::|h[Doomblade~`Cowl]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [455]
+			"17:47:40 - Comm received:^1^SlootAck^T^N1^SDrkillbotz-Illidan^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [456]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N1^N2^SDrkillbotz-Illidan^N3^T^Silvl^N912.125^Sdiff^N-55^Sgear1^S|cffff8000|Hitem:132366::::::::110:251:::2:3459:3570:::|h[Koltira's~`Newfound~`Will]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [457]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N2^N2^SDrkillbotz-Illidan^N3^T^Silvl^N912.125^Sresponse^SAUTOPASS^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [458]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N3^N2^SDrkillbotz-Illidan^N3^T^Silvl^N912.125^Sdiff^N30^Sgear1^S|cffa335ee|Hitem:138361:5883:::::::110:251::5:3:3516:1487:3528:::|h[Dreadwyrm~`Shoulderguards]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [459]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N4^N2^SDrkillbotz-Illidan^N3^T^Silvl^N912.125^Sdiff^N-770^Sgear1^S|cffa335ee|Hitem:138355::130220::::::110:251::3:4:3514:1808:1477:3336:::|h[Dreadwyrm~`Crown]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [460]
+			"17:47:40 - Comm received:^1^SlootAck^T^N1^SDjpurge-Illidan^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [461]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N1^N2^SDjpurge-Illidan^N3^T^Silvl^N914.1875^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:144406::::::::110:264::6:3:3445:1502:3336:::|h[Vintage~`Duskwatch~`Cinch]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [462]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N2^N2^SDjpurge-Illidan^N3^T^Silvl^N914.1875^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [463]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N3^N2^SDjpurge-Illidan^N3^T^Silvl^N914.1875^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:147180::130222::::::110:264::3:4:3561:1808:1482:3528:::|h[Pauldrons~`of~`the~`Skybreaker]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [464]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N4^N2^SDjpurge-Illidan^N3^T^Silvl^N914.1875^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:147178::130222::::::110:264::3:4:3561:1808:1482:3528:::|h[Helmet~`of~`the~`Skybreaker]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [465]
+			"17:47:40 - Comm received:^1^SlootAck^T^N1^SShietnorunes-Illidan^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [466]
+			"17:47:40 - Comm received:^1^SlootAck^T^N1^STelgina-Illidan^t^^ (from:) (Telgina) (distri:) (RAID)", -- [467]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N5^N2^SDjpurge-Illidan^N3^T^Silvl^N914.1875^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:147178::130222::::::110:264::3:4:3561:1808:1482:3528:::|h[Helmet~`of~`the~`Skybreaker]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [468]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N1^N2^STelgina-Illidan^N3^T^Silvl^N918^Sdiff^N-55^Sgear1^S|cffff8000|Hitem:137080::::::::110:253:::3:3529:3459:3570:::|h[Roar~`of~`the~`Seven~`Lions]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [469]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N3^N2^STelgina-Illidan^N3^T^Silvl^N918^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:144326:5441:::::::110:253:::3:3529:3459:3570:::|h[The~`Mantle~`of~`Command]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [470]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N4^N2^STelgina-Illidan^N3^T^Silvl^N918^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:147142::::::::110:253::3:3:3561:1482:3528:::|h[Wildstalker~`Helmet]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [471]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N5^N2^STelgina-Illidan^N3^T^Silvl^N918^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:147142::::::::110:253::3:3:3561:1482:3528:::|h[Wildstalker~`Helmet]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [472]
+			"17:47:40 - Comm received:^1^SlootAck^T^N1^SJimrando-Illidan^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [473]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N1^N2^SJimrando-Illidan^N3^T^Silvl^N917.125^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:144407::130246::::::110:72::6:4:3445:1808:1497:3528:::|h[Gleaming~`Celestial~`Waistguard]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [474]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N2^N2^SJimrando-Illidan^N3^T^Silvl^N917.125^Sresponse^SAUTOPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [475]
+			"17:47:40 - Comm received:^1^SlootAck^T^N1^SZilorin-Illidan^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [476]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N1^N2^SZilorin-Illidan^N3^T^Silvl^N916.0625^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:137513::::::::110:577::35:3:3535:1577:3337:::|h[Girdle~`of~`Lidless~`Sight]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [477]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N3^N2^SZilorin-Illidan^N3^T^Silvl^N916.0625^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:147132::::::::110:577::3:4:3561:41:1492:3336:::|h[Demonbane~`Shoulderpads]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [478]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N3^N2^SJimrando-Illidan^N3^T^Silvl^N917.125^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:147192::::::::110:72::3:3:3561:1482:3528:::|h[Titanic~`Onslaught~`Pauldrons]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [479]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N4^N2^SJimrando-Illidan^N3^T^Silvl^N917.125^Sdiff^N-860^Sgear1^S|cffff8000|Hitem:137088::::::::110:72:::3:3529:3459:3570:::|h[Ceann-Ar~`Charger]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [480]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N5^N2^SJimrando-Illidan^N3^T^Silvl^N917.125^Sdiff^N-860^Sgear1^S|cffff8000|Hitem:137088::::::::110:72:::3:3529:3459:3570:::|h[Ceann-Ar~`Charger]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [481]
+			"17:47:40 - Comm received:^1^SlootAck^T^N1^SChèss-Illidan^t^^ (from:) (Chèss) (distri:) (RAID)", -- [482]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N1^N2^SChèss-Illidan^N3^T^Silvl^N904.4375^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:147055::::::::110:253::5:3:3562:1502:3336:::|h[Belt~`of~`Screaming~`Slag]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Chèss) (distri:) (RAID)", -- [483]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N3^N2^SChèss-Illidan^N3^T^Silvl^N904.4375^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:144326::::::::110:253:::3:3529:3459:3570:::|h[The~`Mantle~`of~`Command]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Chèss) (distri:) (RAID)", -- [484]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N4^N2^SChèss-Illidan^N3^T^Silvl^N904.4375^Sdiff^N-765^Sgear1^S|cffa335ee|Hitem:138342::::::::110:253::3:3:3514:1472:1813:::|h[Eagletalon~`Cowl]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Chèss) (distri:) (RAID)", -- [485]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N5^N2^SChèss-Illidan^N3^T^Silvl^N904.4375^Sdiff^N-765^Sgear1^S|cffa335ee|Hitem:138342::::::::110:253::3:3:3514:1472:1813:::|h[Eagletalon~`Cowl]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Chèss) (distri:) (RAID)", -- [486]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N5^N2^SZilorin-Illidan^N3^T^Silvl^N916.0625^Sdiff^N-805^Sgear1^S|cffa335ee|Hitem:147130::::::::110:577::5:3:3562:1497:3528:::|h[Demonbane~`Faceguard]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [487]
+			"17:47:40 - Comm received:^1^SlootAck^T^N1^SComet-Illidan^t^^ (from:) (Comet) (distri:) (RAID)", -- [488]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N1^N2^SComet-Illidan^N3^T^Silvl^N918.25^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:147039::130219::::::110:270::5:4:3562:1808:1502:3336:::|h[Cinch~`of~`Sizzling~`Flesh]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [489]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N2^N2^SComet-Illidan^N3^T^Silvl^N918.25^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [490]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N3^N2^SComet-Illidan^N3^T^Silvl^N918.25^Sdiff^N30^Sgear1^S|cffa335ee|Hitem:138337:5883:::::::110:270::5:3:3516:1487:3528:::|h[Pauldrons~`of~`Enveloped~`Dissonance]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [491]
+			"17:47:40 - Comm received:^1^SlootAck^T^N1^SLuthanen-Illidan^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [492]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N1^N2^SLuthanen-Illidan^N3^T^Silvl^N912.75^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:147072::::::::110:65::3:3:3561:1492:3528:::|h[Soul-Render's~`Greatbelt]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [493]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N4^N2^SComet-Illidan^N3^T^Silvl^N918.25^Sdiff^N-815^Sgear1^S|cffa335ee|Hitem:147033::::::::110:270::5:3:3562:1507:3336:::|h[Lunar-Wrath~`Headgear]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [494]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N5^N2^SComet-Illidan^N3^T^Silvl^N918.25^Sdiff^N-815^Sgear1^S|cffa335ee|Hitem:147033::::::::110:270::5:3:3562:1507:3336:::|h[Lunar-Wrath~`Headgear]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [495]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N3^N2^SLuthanen-Illidan^N3^T^Silvl^N912.75^Sdiff^N30^Sgear1^S|cffa335ee|Hitem:138362::::::::110:65::5:3:3516:1487:1813:::|h[Pauldrons~`of~`the~`Highlord]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [496]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N5^N2^SLuthanen-Illidan^N3^T^Silvl^N912.75^Sdiff^N-805^Sgear1^S|cffa335ee|Hitem:147160::130219::::::110:65::5:4:3562:1808:1497:3528:::|h[Radiant~`Lightbringer~`Crown]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [497]
+			"17:47:40 - Comm received:^1^SlootAck^T^N1^SZefarion-Illidan^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [498]
+			"17:47:40 - Comm received:^1^Sresponse^T^N1^N4^N2^SZefarion-Illidan^N3^T^Silvl^N914.5625^Sdiff^N-805^Sgear1^S|cffa335ee|Hitem:137341::::::::110:64::16:3:3418:1567:3337:::|h[Cragshaper's~`Fitted~`Hood]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [499]
+			"17:47:43 - Comm received:^1^Sresponse^T^N1^N4^N2^SFearmeter-Illidan^N3^T^Silvl^N916.875^Sdiff^N-815^SisTier^B^Sgear1^S|cffa335ee|Hitem:147183::130222::::::110:265::5:4:3562:1808:1507:3336:::|h[Diabolic~`Helm]|h|r^Sresponse^SPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [500]
+			"17:47:43 - Comm received:^1^Sresponse^T^N1^N1^N2^SShietnorunes-Illidan^N3^T^Silvl^N916.5^Sdiff^N-55^Sgear1^S|cffff8000|Hitem:132367::::::::110:250:::2:3459:3570:::|h[Service~`of~`Gorefiend]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [501]
+			"17:47:45 - Comm received:^1^Sresponse^T^N1^N1^N2^SNadzieja-Illidan^N3^T^Silvl^N918.3125^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:146998::::::::110:64::5:3:3562:1502:3336:::|h[Braided~`Torture~`Lash]|h|r^Sresponse^SPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [502]
+			"17:47:45 - Comm received:^1^Sresponse^T^N1^N5^N2^SDrkillbotz-Illidan^N3^T^Silvl^N912.125^Sdiff^N-770^SisTier^B^Sgear1^S|cffa335ee|Hitem:138355::130220::::::110:251::3:4:3514:1808:1477:3336:::|h[Dreadwyrm~`Crown]|h|r^Sresponse^N3^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [503]
+			"17:47:47 - Comm received:^1^Sresponse^T^N1^N2^N2^SShietnorunes-Illidan^N3^T^Silvl^N916.5^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [504]
+			"17:47:47 - Comm received:^1^Sresponse^T^N1^N2^N2^SLuthanen-Illidan^N3^T^Silvl^N912.75^Sresponse^N4^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [505]
+			"17:47:47 - Comm received:^1^Sresponse^T^N1^N5^N2^SZefarion-Illidan^N3^T^Silvl^N914.5625^Sdiff^N-805^SisTier^B^Sgear1^S|cffa335ee|Hitem:137341::::::::110:64::16:3:3418:1567:3337:::|h[Cragshaper's~`Fitted~`Hood]|h|r^Sresponse^N4^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [506]
+			"17:47:48 - Comm received:^1^SEUBonusRoll^T^N1^SXorn-Illidan^N2^Sitem^N3^S|cffa335ee|Hitem:146996::::::::110:265::5:3:3562:1497:3528:::|h[Mantle~`of~`Broken~`Spirits]|h|r^t^^ (from:) (Xorn) (distri:) (RAID)", -- [507]
+			"17:47:48 - Comm received:^1^Sresponse^T^N1^N5^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sdiff^N-795^SisTier^B^Sgear1^S|cffa335ee|Hitem:142126::::::::110:252::35:3:3418:1522:3337:::|h[Helm~`of~`Phantasmal~`Scars]|h|r^Sresponse^N4^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [508]
+			"17:47:49 - Comm received:^1^Sresponse^T^N1^N2^N2^SNadzieja-Illidan^N3^T^Silvl^N918.3125^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:142305::::::::110:64::35:3:3535:1537:3337:::|h[Suffused~`Manapearl]|h|r^Sresponse^N4^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [509]
+			"17:47:49 - Comm received:^1^Sresponse^T^N1^N1^N2^SZefarion-Illidan^N3^T^Silvl^N914.5625^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:146999::::::::110:64::5:3:3562:1497:3528:::|h[Strife-Riddled~`Cinch]|h|r^Sresponse^N1^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [510]
+			"17:47:49 - Comm received:^1^Sresponse^T^N1^N3^N2^SShietnorunes-Illidan^N3^T^Silvl^N916.5^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:142201::::::::110:250::35:3:3418:1522:3337:::|h[Mantle~`of~`Conflicted~`Loyalties]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [511]
+			"17:47:49 - Comm received:^1^Soffline_timer^T^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [512]
+			"17:47:50 - Comm received:^1^Sresponse^T^N1^N5^N2^SThenex-Illidan^N3^T^Silvl^N916.625^Sdiff^N-780^SisTier^B^Sgear1^S|cffa335ee|Hitem:138312::::::::110:63::5:3:3516:1487:3528:::|h[Hood~`of~`Everburning~`Knowledge]|h|r^Sresponse^SPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [513]
+			"17:47:52 - Comm received:^1^Sresponse^T^N1^N4^N2^SShietnorunes-Illidan^N3^T^Silvl^N916.5^Sdiff^N-815^SisTier^B^Sgear1^S|cffa335ee|Hitem:134358::::::::110:250::35:3:3535:1587:3337:::|h[Portalguard~`Helm]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [514]
+			"17:47:52 - Comm received:^1^Sresponse^T^N1^N5^N2^SShietnorunes-Illidan^N3^T^Silvl^N916.5^Sdiff^N-815^SisTier^B^Sgear1^S|cffa335ee|Hitem:134358::::::::110:250::35:3:3535:1587:3337:::|h[Portalguard~`Helm]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [515]
+			"17:47:52 - Comm received:^1^Sresponse^T^N1^N1^N2^SFearmeter-Illidan^N3^T^Silvl^N916.875^Sdiff^N-55^Sgear1^S|cffff8000|Hitem:132457::::::::110:265:::2:1811:3570:::|h[Power~`Cord~`of~`Lethtendris]|h|r^Sresponse^SPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [516]
+			"17:47:53 - Comm received:^1^Sresponse^T^N1^N4^N2^SLuthanen-Illidan^N3^T^Silvl^N912.75^Sdiff^N-805^SisTier^B^Sgear1^S|cffa335ee|Hitem:147160::130219::::::110:65::5:4:3562:1808:1497:3528:::|h[Radiant~`Lightbringer~`Crown]|h|r^Sresponse^SPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [517]
+			"17:47:53 - Comm received:^1^Sresponse^T^N1^N2^N2^STelgina-Illidan^N3^T^Silvl^N918^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:147079::::::::110:253::5:3:3562:1507:3528:::|h[Torn~`Fabric~`of~`Reality]|h|r^Sresponse^SPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [518]
+			"17:47:53 - Comm received:^1^Sresponse^T^N1^N3^N2^SFearmeter-Illidan^N3^T^Silvl^N916.875^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:146997::::::::110:265::5:3:3562:1507:3336:::|h[Shoulderpads~`of~`Whispering~`Twilight]|h|r^Sresponse^SPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [519]
+			"17:47:53 - Comm received:^1^Sresponse^T^N1^N3^N2^SZefarion-Illidan^N3^T^Silvl^N914.5625^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:138321:5899:130248::::::110:64::5:4:3516:1808:1497:3336:::|h[Mantle~`of~`Everburning~`Knowledge]|h|r^Sresponse^SPASS^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [520]
+			"17:47:54 - Comm received:^1^Sresponse^T^N1^N3^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sdiff^N30^Sgear1^S|cffa335ee|Hitem:138323::::::::110:265::5:3:3516:1487:3528:::|h[Pauldrons~`of~`Azj'Aqir]|h|r^Sresponse^SPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [521]
+			"17:47:55 - Comm received:^1^Sresponse^T^N1^N3^N2^SThenex-Illidan^N3^T^Silvl^N916.625^Sdiff^N30^Sgear1^S|cffa335ee|Hitem:138321::130221::::::110:63::5:4:3516:1808:1487:3528:::|h[Mantle~`of~`Everburning~`Knowledge]|h|r^Sresponse^SPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [522]
+			"17:47:57 - Comm received:^1^Sresponse^T^N1^N2^N2^SZilorin-Illidan^N3^T^Silvl^N916.0625^Sresponse^N4^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [523]
+			"17:47:57 - Comm received:^1^Sresponse^T^N1^N1^N2^SLanféar-Illidan^N3^T^Silvl^N914.3125^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:134423::::::::110:257::16:3:3418:1552:3336:::|h[Poisonroot~`Belt]|h|r^Sresponse^SPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [524]
+			"17:47:57 - Comm received:^1^Sresponse^T^N1^N2^N2^SEklipto-Illidan^N3^T^Silvl^N914.6875^Sresponse^N4^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [525]
+			"17:47:58 - Comm received:^1^Sresponse^T^N1^N4^N2^SEklipto-Illidan^N3^T^Silvl^N914.6875^Sdiff^N-785^SisTier^B^Sgear1^S|cffa335ee|Hitem:138378::130219::::::110:577::5:4:3516:1808:1492:3336:::|h[Mask~`of~`Second~`Sight]|h|r^Sresponse^SPASS^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [526]
+			"17:47:59 - Comm received:^1^Sresponse^T^N1^N2^N2^SThenex-Illidan^N3^T^Silvl^N916.625^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:144463::::::::110:63::35:3:3418:1557:3337:::|h[Shard~`of~`Kaldorei~`Stained~`Glass]|h|r^Sresponse^N2^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [527]
+			"17:48:00 - Comm received:^1^Sresponse^T^N1^N2^N2^SZefarion-Illidan^N3^T^Silvl^N914.5625^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:140812::::::::110:64::6:3:3445:1502:3336:::|h[Soggy~`Manascrubber~`Brush]|h|r^Sresponse^N2^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [528]
+			"17:48:01 - Comm received:^1^Sresponse^T^N1^N3^N2^SLanféar-Illidan^N3^T^Silvl^N914.3125^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:134221:5899:::::::110:257::35:3:3418:1567:3337:::|h[Bonespeaker~`Mantle]|h|r^Sresponse^SPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [529]
+			"17:48:03 - Comm received:^1^Sresponse^T^N1^N1^N2^SThenex-Illidan^N3^T^Silvl^N916.625^Sdiff^N-55^Sgear1^S|cffff8000|Hitem:132454::::::::110:63:::2:3459:3570:::|h[Koralon's~`Burning~`Touch]|h|r^Sresponse^N4^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [530]
+			"17:48:05 - Comm received:^1^Sresponse^T^N1^N2^N2^SDadizzle-Illidan^N3^T^Silvl^N912.75^Sdiff^N10^Sresponse^N2^Sgear1^S|cffa335ee|Hitem:147077::::::::110:102::5:3:3562:1502:3336:::|h[Inexorable~`Truth~`Serum]|h|r^Sgear2^S|cffa335ee|Hitem:140812::::::::110:102::6:3:3445:1502:3336:::|h[Soggy~`Manascrubber~`Brush]|h|r^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [531]
+			"17:48:05 - Comm received:^1^Sresponse^T^N1^N3^N2^SNadzieja-Illidan^N3^T^Silvl^N918.3125^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:140911:5900:130220::::::110:64::5:4:3516:1808:1497:3336:::|h[Mantle~`of~`Prestidigitation]|h|r^Sresponse^N5^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [532]
+			"17:48:05 - Comm received:^1^Sresponse^T^N1^N4^N2^SLanféar-Illidan^N3^T^Silvl^N914.3125^Sdiff^N-780^SisTier^B^Sgear1^S|cffa335ee|Hitem:138313::::::::110:257::5:3:3516:1487:3528:::|h[Purifier's~`Gorget]|h|r^Sresponse^N3^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [533]
+			"17:48:06 - Comm received:^1^Sresponse^T^N1^N1^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:140887::::::::110:265::6:3:3518:1502:3528:::|h[Man'ari~`Skullbuckled~`Cinch]|h|r^Sresponse^SPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [534]
+			"17:48:08 - Comm received:^1^Sresponse^T^N1^N4^N2^SZilorin-Illidan^N3^T^Snote^Schance~`at~`upgrade^Silvl^N916.0625^Sdiff^N-805^SisTier^B^Sgear1^S|cffa335ee|Hitem:147130::::::::110:577::5:3:3562:1497:3528:::|h[Demonbane~`Faceguard]|h|r^Sresponse^N5^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [535]
+			"17:48:10 - Comm received:^1^Sresponse^T^N1^N2^N2^SChèss-Illidan^N3^T^Silvl^N904.4375^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:147078::::::::110:253::3:3:3561:1492:3336:::|h[Mote~`of~`Astral~`Suffusion]|h|r^Sresponse^N3^t^t^^ (from:) (Chèss) (distri:) (RAID)", -- [536]
+			"17:48:16 - Comm received:^1^Sresponse^T^N1^N5^N2^SDadizzle-Illidan^N3^T^Silvl^N912.75^Sdiff^N-780^SisTier^B^Sgear1^S|cffa335ee|Hitem:138330::::::::110:102::5:4:3516:42:1487:3528:::|h[Hood~`of~`the~`Astral~`Warden]|h|r^Sresponse^N5^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [537]
+			"17:48:18 - Comm received:^1^Svote^T^N1^N3^N2^SNadzieja-Illidan^N3^N1^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [538]
+			"17:48:20 - Comm received:^1^Svote^T^N1^N1^N2^SZefarion-Illidan^N3^N1^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [539]
+			"17:48:23 - Comm received:^1^Svote^T^N1^N2^N2^SThenex-Illidan^N3^N1^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [540]
+			"17:48:27 - Comm received:^1^Sresponse^T^N1^N5^N2^SBlutarski-Illidan^N3^T^Silvl^N911.375^Sdiff^N-780^SisTier^B^Sgear1^S|cffa335ee|Hitem:138332::130222::::::110:261::5:4:3516:1808:1487:3528:::|h[Doomblade~`Cowl]|h|r^Sresponse^SPASS^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [541]
+			"17:48:28 - Comm received:^1^Svote^T^N1^N1^N2^SZefarion-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [542]
+			"17:48:39 - Comm received:^1^Sresponse^T^N1^N4^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sdiff^N-860^SisTier^B^Sgear1^S|cffff8000|Hitem:132394::::::::110:265:::2:3459:3570:::|h[Hood~`of~`Eternal~`Disdain]|h|r^Sresponse^N4^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [543]
+			"17:48:40 - Comm received:^1^Sresponse^T^N1^N5^N2^SNadzieja-Illidan^N3^T^Silvl^N918.3125^Sdiff^N-790^SisTier^B^Sgear1^S|cffa335ee|Hitem:138312::::::::110:64::5:3:3516:1497:3336:::|h[Hood~`of~`Everburning~`Knowledge]|h|r^Sresponse^STIMEOUT^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [544]
+			"17:48:41 - Comm received:^1^Svote^T^N1^N2^N2^SThenex-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [545]
+			"17:48:42 - Comm received:^1^Svote^T^N1^N1^N2^SZefarion-Illidan^N3^N1^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [546]
+			"17:48:47 - Comm received:^1^Schange_response^T^N1^N4^N2^SFuryisthy-Illidan^N3^N2^N4^B^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [547]
+			"17:48:55 - Comm received:^1^Svote^T^N1^N1^N2^SZefarion-Illidan^N3^N1^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [548]
+			"17:48:59 - Comm received:^1^Svote^T^N1^N3^N2^SNadzieja-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [549]
+			"17:49:05 - Comm received:^1^Sawarded^T^N1^N1^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [550]
+			"17:49:05 - Comm received:^1^Shistory^T^N1^SZefarion-Illidan^N2^T^SmapID^N1676^SitemReplaced1^S|cffa335ee|Hitem:146999::::::::110:64::5:3:3562:1497:3528:::|h[Strife-Riddled~`Cinch]|h|r^SgroupSize^N20^Sdate^S06/07/17^Sclass^SMAGE^Sinstance^STomb~`of~`Sargeras-Heroic^Sresponse^SBiS^SdifficultyID^N15^Svotes^N4^SlootWon^S|cffa335ee|Hitem:146998::::::::110:577::5:3:3562:1497:3528:::|h[Braided~`Torture~`Lash]|h|r^SisAwardReason^b^Sboss^SAtrigan^SresponseID^N1^Stime^S19:49:34^Scolor^T^N1^N0^N2^N1^N3^N0^N4^N1^t^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [551]
+			"17:49:08 - Comm received:^1^Svote^T^N1^N5^N2^SDrkillbotz-Illidan^N3^N1^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [552]
+			"17:49:10 - Comm received:^1^Svote^T^N1^N4^N2^SXorn-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [553]
+			"17:49:15 - Comm received:^1^Svote^T^N1^N4^N2^SXorn-Illidan^N3^N1^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [554]
+			"17:49:19 - Comm received:^1^Svote^T^N1^N5^N2^SCannibal-Illidan^N3^N1^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [555]
+			"17:49:30 - Event: (PLAYER_ENTERING_WORLD)", -- [556]
+			"17:49:30 - GetML()", -- [557]
+			"17:49:30 - LootMethod =  (master)", -- [558]
+			"17:49:30 - MasterLooter =  (Eklipto-Illidan)", -- [559]
+			"17:49:34 - Comm received:^1^Svote^T^N1^N5^N2^SCannibal-Illidan^N3^N1^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [560]
+			"17:49:34 - Timer MLdb_check passed", -- [561]
+			"17:49:34 - Comm received:^1^Schange_response^T^N1^N4^N2^SLanféar-Illidan^N3^SREMOVED^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [562]
+			"17:49:39 - Comm received:^1^Svote^T^N1^N2^N2^SDadizzle-Illidan^N3^N1^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [563]
+			"17:49:53 - Comm received:^1^Svote^T^N1^N4^N2^SFuryisthy-Illidan^N3^N1^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [564]
+			"17:49:57 - Comm received:^1^Svote^T^N1^N4^N2^SFuryisthy-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [565]
+			"17:50:01 - Comm received:^1^Svote^T^N1^N2^N2^SZefarion-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [566]
+			"17:50:04 - Comm received:^1^Svote^T^N1^N4^N2^SXorn-Illidan^N3^N1^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [567]
+			"17:50:04 - Comm received:^1^Svote^T^N1^N5^N2^SCannibal-Illidan^N3^N1^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [568]
+			"17:50:11 - Comm received:^1^Svote^T^N1^N5^N2^SCannibal-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [569]
+			"17:50:21 - Comm received:^1^Svote^T^N1^N4^N2^SXorn-Illidan^N3^N1^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [570]
+			"17:50:25 - Comm received:^1^Sawarded^T^N1^N4^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [571]
+			"17:50:25 - Comm received:^1^Shistory^T^N1^SXorn-Illidan^N2^T^SmapID^N1676^Sdate^S06/07/17^Sclass^SWARLOCK^SgroupSize^N19^Svotes^N4^Stime^S19:50:54^SitemReplaced1^S|cffff8000|Hitem:132394::::::::110:265:::2:3459:3570:::|h[Hood~`of~`Eternal~`Disdain]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^Sresponse^S1st~`Tier~`Piece^StokenRoll^B^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:147323::::::::110:577::5:1:570:::|h[Helm~`of~`the~`Foregone~`Conqueror]|h|r^StierToken^SHeadSlot^Scolor^T^N1^N0.5^N2^N1^N3^N1^N4^N1^t^SresponseID^N4^SisAwardReason^b^Sboss^SAtrigan^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [572]
+			"17:50:30 - Comm received:^1^Sawarded^T^N1^N5^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [573]
+			"17:50:30 - Comm received:^1^Shistory^T^N1^SCannibal-Illidan^N2^T^SmapID^N1676^Sdate^S06/07/17^Sclass^SDEATHKNIGHT^SgroupSize^N19^Svotes^N5^Stime^S19:50:59^SitemReplaced1^S|cffa335ee|Hitem:142126::::::::110:252::35:3:3418:1522:3337:::|h[Helm~`of~`Phantasmal~`Scars]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^SisAwardReason^b^Sresponse^S1st~`Tier~`Piece^StokenRoll^B^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:147322::::::::110:577::5:1:570:::|h[Helm~`of~`the~`Foregone~`Vanquisher]|h|r^StierToken^SHeadSlot^Scolor^T^N1^N0.5^N2^N1^N3^N1^N4^N1^t^SresponseID^N4^Sboss^SAtrigan^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [574]
+			"17:50:37 - Event: (PLAYER_ENTERING_WORLD)", -- [575]
+			"17:50:37 - GetML()", -- [576]
+			"17:50:37 - LootMethod =  (master)", -- [577]
+			"17:50:37 - MasterLooter =  (Eklipto-Illidan)", -- [578]
+			"17:50:42 - Timer MLdb_check passed", -- [579]
+			"17:51:07 - Comm received:^1^Svote^T^N1^N2^N2^SThenex-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [580]
+			"17:51:10 - Comm received:^1^Svote^T^N1^N2^N2^SZefarion-Illidan^N3^N-1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [581]
+			"17:51:18 - Comm received:^1^Sawarded^T^N1^N5^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [582]
+			"17:51:18 - Comm received:^1^Shistory^T^N1^SCannibal-Illidan^N2^T^SmapID^N1676^Sdate^S06/07/17^Sclass^SDEATHKNIGHT^SgroupSize^N18^Svotes^N5^Stime^S19:51:47^SitemReplaced1^S|cffa335ee|Hitem:142126::::::::110:252::35:3:3418:1522:3337:::|h[Helm~`of~`Phantasmal~`Scars]|h|r^StokenRoll^B^Sinstance^STomb~`of~`Sargeras-Heroic^StierToken^SHeadSlot^SisAwardReason^b^Sresponse^S1st~`Tier~`Piece^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:147322::::::::110:577::5:1:570:::|h[Helm~`of~`the~`Foregone~`Vanquisher]|h|r^Scolor^T^N1^N0.5^N2^N1^N3^N1^N4^N1^t^SresponseID^N4^Sboss^SAtrigan^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [583]
+			"17:51:23 - Comm received:^1^Svote^T^N1^N2^N2^SDadizzle-Illidan^N3^N1^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [584]
+			"17:51:39 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Zilorin) (distri:) (GUILD)", -- [585]
+			"17:51:44 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^StierNumButtons^N5^Sresponses^T^N1^T^Scolor^T^N1^N0^N2^N1^N3^N0^N4^N1^t^Stext^SBiS^Ssort^N1^t^N2^T^Scolor^T^N1^N1^N2^N0.5^N3^N0^N4^N1^t^Stext^SMainspec^Ssort^N2^t^N4^T^Scolor^T^N1^F5263030152770226^f-53^N2^F6640601803495317^f-54^N3^F6322700653327995^f-53^N4^N1^t^Stext^SOffspec^Ssort^N4^t^N5^T^Scolor^T^N1^F8336074604387747^f-54^N2^F6322700653327995^f-53^N3^F5545608952918964^f-53^N4^N1^t^Stext^STransmog^Ssort^N5^t^Stier^T^N3^T^Scolor^T^N1^N1^N2^N0.5^N3^N1^N4^N1^t^Stext^S3rd~`Tier~`Piece^Ssort^N3^t^N4^T^Scolor^T^N1^N0.5^N2^N1^N3^N1^N4^N1^t^Stext^S1st~`Tier~`Piece^Ssort^N4^t^N5^T^Scolor^T^N1^N0.56078431372549^N2^F6322700653327995^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SUpgrade^Ssort^N5^t^t^t^ShideVotes^b^StierButtonsEnabled^B^SmultiVote^B^StierButtons^T^N1^T^Stext^S4th~`Piece^t^N2^T^Stext^S2nd~`Piece^t^N3^T^Stext^S3rd~`Piece^t^N4^T^Stext^S1st~`Piece^t^N5^T^Stext^SUpgrade^t^t^Sbuttons^T^N1^T^Stext^SBiS^t^N2^T^Stext^SMainspec^t^N4^T^Stext^SOffspec^t^N5^T^Stext^STransmog^t^t^SnumButtons^N5^SanonymousVoting^b^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [586]
+			"17:51:44 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SEklipto-Illidan^N3^SReinhärt-Illidan^N4^SDjpurge-Illidan^N5^SFearmeter-Illidan^N6^SShietnorunes-Illidan^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [587]
+			"17:51:44 - nil = (IsCouncil) (Comet-Illidan)", -- [588]
+			"17:52:30 - Comm received:^1^Sawarded^T^N1^N2^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [589]
+			"17:52:30 - Comm received:^1^Ssession_end^T^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [590]
+			"17:52:30 - Comm received:^1^Shistory^T^N1^SThenex-Illidan^N2^T^SmapID^N1676^Sdate^S06/07/17^Sclass^SMAGE^SgroupSize^N18^Svotes^N3^Stime^S19:52:59^SitemReplaced1^S|cffa335ee|Hitem:144463::::::::110:63::35:3:3418:1557:3337:::|h[Shard~`of~`Kaldorei~`Stained~`Glass]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^SisAwardReason^b^Sresponse^SMainspec^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:147077::::::::110:577::5:3:3562:1497:3528:::|h[Inexorable~`Truth~`Serum]|h|r^Scolor^T^N1^N1^N2^N0.5^N3^N0^N4^N1^t^SresponseID^N2^Sboss^SAtrigan^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [591]
+			"17:53:26 - Event: (RAID_INSTANCE_WELCOME) (Tomb of Sargeras (Heroic)) (396393) (1) (0)", -- [592]
+			"17:53:27 - Event: (PLAYER_ENTERING_WORLD)", -- [593]
+			"17:53:27 - GetML()", -- [594]
+			"17:53:27 - LootMethod =  (master)", -- [595]
+			"17:53:27 - MasterLooter =  (Eklipto-Illidan)", -- [596]
+			"17:53:32 - Timer MLdb_check passed", -- [597]
+			"18:00:00 - Comm received:^1^Scandidates^T^N1^T^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SRaider^t^SNadzieja-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SFuryisthy-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEMONHUNTER^Srank^SRaider^t^SJimrando-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SRaider^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SRaider^t^SBlutarski-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SROGUE^Srank^SOfficer^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARLOCK^Srank^SOfficer^t^SShietnorunes-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SOfficer^t^SEklipto-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N195^Sclass^SDEMONHUNTER^Senchanter^B^Srank^SOfficer^t^SZefarion-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SMAGE^Srank^SRaider^t^SComet-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SMONK^Srank^SRaider^t^SLuthanen-Illidan^T^Srole^SHEALER^Senchant_lvl^N762^Sclass^SPALADIN^Senchanter^B^Srank^SRaider^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^SDjpurge-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SSHAMAN^Srank^SOfficer^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SXorn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N765^Sclass^SWARLOCK^Senchanter^B^Srank^SRaider^t^SDrkillbotz-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SRaider^t^SZilorin-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N101^Sclass^SDEMONHUNTER^Senchanter^B^Srank^SRaider^t^SCannibal-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SRaider^t^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [598]
+			"18:06:08 - Comm received:^1^SlootTable^T^N1^T^N1^T^SequipLoc^SINVTYPE_WAIST^SlootSlot^N1^Slink^S|cffa335ee|Hitem:147071::::::::110:577::5:3:3562:1497:3528:::|h[Shiversleet~`Waistguard]|h|r^SsubType^SPlate^Srelic^b^Sawarded^b^Sname^SShiversleet~`Waistguard^Stexture^N1512747^Silvl^N915^Sboe^b^Sbagged^b^Squality^N4^t^N2^T^SequipLoc^SINVTYPE_ROBE^SlootSlot^N2^Slink^S|cffa335ee|Hitem:146994::::::::110:577::5:3:3562:1497:3528:::|h[Robe~`of~`Aqueous~`Command]|h|r^SsubType^SCloth^Srelic^b^Sawarded^b^Sname^SRobe~`of~`Aqueous~`Command^Stexture^N1533501^Silvl^N915^Sboe^b^Sbagged^b^Squality^N4^t^N3^T^SequipLoc^S^SlootSlot^N3^Slink^S|cffa335ee|Hitem:147319::::::::110:577::5:1:570:::|h[Gauntlets~`of~`the~`Foregone~`Vanquisher]|h|r^SsubType^SJunk^Stoken^SHandsSlot^Srelic^b^Sawarded^b^Sname^SGauntlets~`of~`the~`Foregone~`Vanquisher^Stexture^N132963^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^N4^T^SequipLoc^S^SlootSlot^N4^Slink^S|cffa335ee|Hitem:147319::::::::110:577::5:1:570:::|h[Gauntlets~`of~`the~`Foregone~`Vanquisher]|h|r^SsubType^SJunk^Stoken^SHandsSlot^Srelic^b^Sawarded^b^Sname^SGauntlets~`of~`the~`Foregone~`Vanquisher^Stexture^N132963^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [599]
+			"18:06:08 - |cffa335ee|Hitem:147319::::::::110:577::5:1:570:::|h[Gauntlets of the Foregone Vanquisher]|h|r", -- [600]
+			"18:06:08 - |cffa335ee|Hitem:147319::::::::110:577::5:1:570:::|h[Gauntlets of the Foregone Vanquisher]|h|r", -- [601]
+			"18:06:08 - Some items wasn't cached, delaying loot by 1 sec", -- [602]
+			"18:06:08 - Comm received:^1^SlootAck^T^N1^SDadizzle-Illidan^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [603]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N1^N2^SDadizzle-Illidan^N3^T^Silvl^N912.75^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:140859::::::::110:102::5:3:3516:1497:3336:::|h[Girdle~`of~`Nefarious~`Strategy]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [604]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N2^N2^SDadizzle-Illidan^N3^T^Silvl^N912.75^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:138324::::::::110:102::5:3:3516:1487:3528:::|h[Robe~`of~`the~`Astral~`Warden]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [605]
+			"18:06:08 - Comm received:^1^SlootAck^T^N1^SFearmeter-Illidan^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [606]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N1^N2^SFearmeter-Illidan^N3^T^Silvl^N916.875^Sdiff^N-55^Sgear1^S|cffff8000|Hitem:132457::::::::110:265:::2:1811:3570:::|h[Power~`Cord~`of~`Lethtendris]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [607]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N3^N2^SFearmeter-Illidan^N3^T^Silvl^N916.875^Sdiff^N-815^Sgear1^S|cffa335ee|Hitem:147182:5444:::::::110:265::5:3:3562:1507:3336:::|h[Diabolic~`Gloves]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [608]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N4^N2^SFearmeter-Illidan^N3^T^Silvl^N916.875^Sdiff^N-815^Sgear1^S|cffa335ee|Hitem:147182:5444:::::::110:265::5:3:3562:1507:3336:::|h[Diabolic~`Gloves]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [609]
+			"18:06:08 - Comm received:^1^SlootAck^T^N1^SNadzieja-Illidan^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [610]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N1^N2^SNadzieja-Illidan^N3^T^Silvl^N918.3125^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:146998::::::::110:64::5:3:3562:1502:3336:::|h[Braided~`Torture~`Lash]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [611]
+			"18:06:08 - Comm received:^1^SlootAck^T^N1^SXorn-Illidan^t^^ (from:) (Xorn) (distri:) (RAID)", -- [612]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N1^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:140887::::::::110:265::6:3:3518:1502:3528:::|h[Man'ari~`Skullbuckled~`Cinch]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [613]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N3^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sdiff^N-785^Sgear1^S|cffa335ee|Hitem:138311::::::::110:265::5:3:3516:1492:3336:::|h[Clutch~`of~`Azj'Aqir]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [614]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N4^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sdiff^N-785^Sgear1^S|cffa335ee|Hitem:138311::::::::110:265::5:3:3516:1492:3336:::|h[Clutch~`of~`Azj'Aqir]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [615]
+			"18:06:08 - Comm received:^1^SextraUtilData^T^N1^SXorn-Illidan^N2^T^Sforged^N7^Spawn^T^t^SspecID^N265^Straits^N52^Slegend^N2^Ssockets^N1^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [616]
+			"18:06:08 - Comm received:^1^SlootAck^T^N1^SEklipto-Illidan^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [617]
+			"18:06:08 - Comm received:^1^SextraUtilData^T^N1^SBlutarski-Illidan^N2^T^Sforged^N8^Spawn^T^N1^T^Sequipped^N55132.47^Snew^N0^t^N2^T^Sequipped^N60760.25^Snew^N337.211^t^N3^T^Sequipped^N51265.45^Snew^N0^t^N4^T^Sequipped^N51265.45^Snew^N0^t^t^SspecID^N261^Straits^N56^Slegend^N2^Ssockets^N4^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [618]
+			"18:06:08 - Comm received:^1^SlootAck^T^N1^SBlutarski-Illidan^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [619]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N1^N2^SBlutarski-Illidan^N3^T^Silvl^N911.375^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:134199::::::::110:261::16:3:3418:1572:3337:::|h[Biornskin~`Belt]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [620]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N2^N2^SBlutarski-Illidan^N3^T^Silvl^N911.375^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:138326::::::::110:261::5:3:3516:1492:3336:::|h[Doomblade~`Tunic]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [621]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N1^N2^SEklipto-Illidan^N3^T^Silvl^N914.6875^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:142196::::::::110:577::35:3:3418:1522:3337:::|h[Cinch~`of~`Improbable~`Desire]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [622]
+			"18:06:08 - Comm received:^1^SlootAck^T^N1^SCannibal-Illidan^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [623]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N2^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:138349::::::::110:252::5:3:3516:1487:1813:::|h[Dreadwyrm~`Breastplate]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [624]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N2^N2^SEklipto-Illidan^N3^T^Silvl^N914.6875^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:138376::130247::::::110:577::5:4:3516:1808:1492:3336:::|h[Tunic~`of~`Second~`Sight]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [625]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N3^N2^SEklipto-Illidan^N3^T^Silvl^N914.6875^Sdiff^N-815^Sgear1^S|cffa335ee|Hitem:137509::::::::110:577::35:3:3535:1577:3337:::|h[Glaivemaster's~`Studded~`Grips]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [626]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N4^N2^SEklipto-Illidan^N3^T^Silvl^N914.6875^Sdiff^N-815^Sgear1^S|cffa335ee|Hitem:137509::::::::110:577::35:3:3535:1577:3337:::|h[Glaivemaster's~`Studded~`Grips]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [627]
+			"18:06:08 - Comm received:^1^SextraUtilData^T^N1^SEklipto-Illidan^N2^T^Sforged^N10^Spawn^T^N1^T^Sequipped^N566.331^Snew^N0^t^N2^T^Sequipped^N730.807^Snew^N384.676^t^N3^T^Sequipped^N540.201^Snew^N0^t^N4^T^Sequipped^N540.201^Snew^N0^t^t^SspecID^N577^Straits^N57^Slegend^N2^Ssockets^N4^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [628]
+			"18:06:08 - Comm received:^1^SlootAck^T^N1^STelgina-Illidan^t^^ (from:) (Telgina) (distri:) (RAID)", -- [629]
+			"18:06:08 - Comm received:^1^SextraUtilData^T^N1^SDjpurge-Illidan^N2^T^Sforged^N5^Spawn^T^N1^T^Sequipped^N46198.3^Snew^N0^t^N2^T^Sequipped^N69789.25^Snew^N831.436^t^N3^T^Sequipped^N44448.53^Snew^N0^t^N4^T^Sequipped^N44448.53^Snew^N0^t^t^SspecID^N264^Straits^N52^Slegend^N2^Ssockets^N2^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [630]
+			"18:06:08 - Comm received:^1^SextraUtilData^T^N1^SShietnorunes-Illidan^N2^T^Sforged^N8^Spawn^T^N1^T^Sequipped^N1025.211^Snew^N579.52^t^N2^T^Sequipped^N687.231^Snew^N496.199^t^N3^T^Sequipped^N576.69^Snew^N0^t^N4^T^Sequipped^N576.69^Snew^N0^t^t^SspecID^N250^Straits^N55^Slegend^N2^Ssockets^N3^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [631]
+			"18:06:08 - Comm received:^1^SlootAck^T^N1^SShietnorunes-Illidan^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [632]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N1^N2^STelgina-Illidan^N3^T^Silvl^N918^Sdiff^N-55^Sgear1^S|cffff8000|Hitem:137080::::::::110:253:::3:3529:3459:3570:::|h[Roar~`of~`the~`Seven~`Lions]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [633]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N2^N2^STelgina-Illidan^N3^T^Silvl^N918^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:144495::130222::::::110:253::35:4:3418:1808:1557:3337:::|h[Domatrax's~`Chain~`Hauberk]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [634]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N3^N2^STelgina-Illidan^N3^T^Silvl^N918^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:147141::::::::110:253::3:3:3561:1482:3528:::|h[Wildstalker~`Gauntlets]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [635]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N4^N2^STelgina-Illidan^N3^T^Silvl^N918^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:147141::::::::110:253::3:3:3561:1482:3528:::|h[Wildstalker~`Gauntlets]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [636]
+			"18:06:08 - Comm received:^1^SlootAck^T^N1^SJimrando-Illidan^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [637]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N2^N2^SJimrando-Illidan^N3^T^Silvl^N917.125^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:147187::::::::110:72::3:3:3561:1502:3337:::|h[Titanic~`Onslaught~`Breastplate]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [638]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N3^N2^SJimrando-Illidan^N3^T^Silvl^N917.125^Sdiff^N-800^Sgear1^S|cffa335ee|Hitem:147189::::::::110:72::3:3:3561:1492:3336:::|h[Titanic~`Onslaught~`Handguards]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [639]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N4^N2^SJimrando-Illidan^N3^T^Silvl^N917.125^Sdiff^N-800^Sgear1^S|cffa335ee|Hitem:147189::::::::110:72::3:3:3561:1492:3336:::|h[Titanic~`Onslaught~`Handguards]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [640]
+			"18:06:08 - Comm received:^1^SlootAck^T^N1^SZilorin-Illidan^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [641]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N1^N2^SZilorin-Illidan^N3^T^Silvl^N916.0625^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:137513::::::::110:577::35:3:3535:1577:3337:::|h[Girdle~`of~`Lidless~`Sight]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [642]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N2^N2^SZilorin-Illidan^N3^T^Silvl^N916.0625^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:138376::::::::110:577::5:3:3516:1487:3528:::|h[Tunic~`of~`Second~`Sight]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [643]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N3^N2^SZilorin-Illidan^N3^T^Silvl^N916.0625^Sdiff^N-805^Sgear1^S|cffa335ee|Hitem:147129::::::::110:577::5:3:3562:1497:3528:::|h[Demonbane~`Gauntlets]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [644]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N4^N2^SZilorin-Illidan^N3^T^Silvl^N916.0625^Sdiff^N-805^Sgear1^S|cffa335ee|Hitem:147129::::::::110:577::5:3:3562:1497:3528:::|h[Demonbane~`Gauntlets]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [645]
+			"18:06:08 - Comm received:^1^SlootAck^T^N1^SThenex-Illidan^t^^ (from:) (Thenex) (distri:) (RAID)", -- [646]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N1^N2^SThenex-Illidan^N3^T^Silvl^N917^Sdiff^N-55^Sgear1^S|cffff8000|Hitem:132454::::::::110:63:::2:3459:3570:::|h[Koralon's~`Burning~`Touch]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [647]
+			"18:06:08 - Comm received:^1^SlootAck^T^N1^SZefarion-Illidan^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [648]
+			"18:06:08 - Comm received:^1^Sresponse^T^N1^N1^N2^SZefarion-Illidan^N3^T^Silvl^N914.5625^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:146998::::::::110:64::5:3:3562:1497:3528:::|h[Braided~`Torture~`Lash]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [649]
+			"18:06:09 - Comm received:^1^SlootTable^T^N1^T^N1^T^SequipLoc^SINVTYPE_WAIST^SlootSlot^N1^Slink^S|cffa335ee|Hitem:147071::::::::110:577::5:3:3562:1497:3528:::|h[Shiversleet~`Waistguard]|h|r^SsubType^SPlate^Srelic^b^Sawarded^b^Sname^SShiversleet~`Waistguard^Stexture^N1512747^Silvl^N915^Sboe^b^Sbagged^b^Squality^N4^t^N2^T^SequipLoc^SINVTYPE_ROBE^SlootSlot^N2^Slink^S|cffa335ee|Hitem:146994::::::::110:577::5:3:3562:1497:3528:::|h[Robe~`of~`Aqueous~`Command]|h|r^SsubType^SCloth^Srelic^b^Sawarded^b^Sname^SRobe~`of~`Aqueous~`Command^Stexture^N1533501^Silvl^N915^Sboe^b^Sbagged^b^Squality^N4^t^N3^T^SequipLoc^S^SlootSlot^N3^Slink^S|cffa335ee|Hitem:147319::::::::110:577::5:1:570:::|h[Gauntlets~`of~`the~`Foregone~`Vanquisher]|h|r^SsubType^SJunk^Stoken^SHandsSlot^Srelic^b^Sawarded^b^Sname^SGauntlets~`of~`the~`Foregone~`Vanquisher^Stexture^N132963^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^N4^T^SequipLoc^S^SlootSlot^N4^Slink^S|cffa335ee|Hitem:147319::::::::110:577::5:1:570:::|h[Gauntlets~`of~`the~`Foregone~`Vanquisher]|h|r^SsubType^SJunk^Stoken^SHandsSlot^Srelic^b^Sawarded^b^Sname^SGauntlets~`of~`the~`Foregone~`Vanquisher^Stexture^N132963^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [650]
+			"18:06:09 - Autopassed on:  (|cffa335ee|Hitem:147071::::::::110:577::5:3:3562:1497:3528:::|h[Shiversleet Waistguard]|h|r)", -- [651]
+			"18:06:09 - CreateResponse (1) (|cffa335ee|Hitem:147071::::::::110:577::5:3:3562:1497:3528:::|h[Shiversleet Waistguard]|h|r) (915) (AUTOPASS) (INVTYPE_WAIST) (nil) (Plate) (nil)", -- [652]
+			"18:06:09 - GetPlayersGear (147071) (INVTYPE_WAIST)", -- [653]
+			"18:06:09 - Autopassed on:  (|cffa335ee|Hitem:146994::::::::110:577::5:3:3562:1497:3528:::|h[Robe of Aqueous Command]|h|r)", -- [654]
+			"18:06:09 - CreateResponse (2) (|cffa335ee|Hitem:146994::::::::110:577::5:3:3562:1497:3528:::|h[Robe of Aqueous Command]|h|r) (915) (AUTOPASS) (INVTYPE_ROBE) (nil) (Cloth) (nil)", -- [655]
+			"18:06:09 - GetPlayersGear (146994) (INVTYPE_ROBE)", -- [656]
+			"18:06:09 - Autopassed on:  (|cffa335ee|Hitem:147319::::::::110:577::5:1:570:::|h[Gauntlets of the Foregone Vanquisher]|h|r)", -- [657]
+			"18:06:09 - CreateResponse (3) (|cffa335ee|Hitem:147319::::::::110:577::5:1:570:::|h[Gauntlets of the Foregone Vanquisher]|h|r) (110) (AUTOPASS) () (nil) (Junk) (nil)", -- [658]
+			"18:06:09 - GetPlayersGear (147319) ()", -- [659]
+			"18:06:09 - Autopassed on:  (|cffa335ee|Hitem:147319::::::::110:577::5:1:570:::|h[Gauntlets of the Foregone Vanquisher]|h|r)", -- [660]
+			"18:06:09 - CreateResponse (4) (|cffa335ee|Hitem:147319::::::::110:577::5:1:570:::|h[Gauntlets of the Foregone Vanquisher]|h|r) (110) (AUTOPASS) () (nil) (Junk) (nil)", -- [661]
+			"18:06:09 - GetPlayersGear (147319) ()", -- [662]
+			"18:06:09 - LootFrame:Start()", -- [663]
+			"18:06:09 - Comm received:^1^SlootAck^T^N1^SLanféar-Illidan^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [664]
+			"18:06:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SLanféar-Illidan^N3^T^Silvl^N916.5^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:134423::::::::110:257::16:3:3418:1552:3336:::|h[Poisonroot~`Belt]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [665]
+			"18:06:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SLanféar-Illidan^N3^T^Silvl^N916.5^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138310::::::::110:257::5:4:3516:40:1487:3528:::|h[Purifier's~`Gloves]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [666]
+			"18:06:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SLanféar-Illidan^N3^T^Silvl^N916.5^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138310::::::::110:257::5:4:3516:40:1487:3528:::|h[Purifier's~`Gloves]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [667]
+			"18:06:09 - Comm received:^1^SlootAck^T^N1^SDrkillbotz-Illidan^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [668]
+			"18:06:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SDrkillbotz-Illidan^N3^T^Silvl^N912.125^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:138349::::::::110:251::5:3:3516:1497:3336:::|h[Dreadwyrm~`Breastplate]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [669]
+			"18:06:09 - Comm received:^1^SlootAck^T^N1^SReinhärt-Illidan^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [670]
+			"18:06:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:140913::::::::110:73::5:3:3517:1497:3336:::|h[Breastplate~`of~`the~`Remembered~`King]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [671]
+			"18:06:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sdiff^N-860^Sgear1^S|cffff8000|Hitem:137108::::::::110:73:::2:3459:3570:::|h[Kakushan's~`Stormscale~`Gauntlets]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [672]
+			"18:06:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sdiff^N-860^Sgear1^S|cffff8000|Hitem:137108::::::::110:73:::2:3459:3570:::|h[Kakushan's~`Stormscale~`Gauntlets]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [673]
+			"18:06:09 - Comm received:^1^SlootAck^T^N1^SComet-Illidan^t^^ (from:) (Comet) (distri:) (RAID)", -- [674]
+			"18:06:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SComet-Illidan^N3^T^Silvl^N919.1875^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:147039::130219::::::110:270::5:4:3562:1808:1502:3336:::|h[Cinch~`of~`Sizzling~`Flesh]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [675]
+			"18:06:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SComet-Illidan^N3^T^Silvl^N919.1875^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:147027::::::::110:270::5:3:3562:1497:3528:::|h[Spirebreaker~`Harness]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [676]
+			"18:06:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SComet-Illidan^N3^T^Silvl^N919.1875^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:142141::::::::110:270::16:3:3415:1512:3337:::|h[Custodian's~`Soothing~`Touch]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [677]
+			"18:06:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SComet-Illidan^N3^T^Silvl^N919.1875^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:142141::::::::110:270::16:3:3415:1512:3337:::|h[Custodian's~`Soothing~`Touch]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [678]
+			"18:06:09 - Comm received:^1^SlootAck^T^N1^SLuthanen-Illidan^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [679]
+			"18:06:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SLuthanen-Illidan^N3^T^Silvl^N912.75^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:147157::::::::110:65::3:3:3561:1482:3528:::|h[Radiant~`Lightbringer~`Breastplate]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [680]
+			"18:06:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SLuthanen-Illidan^N3^T^Silvl^N912.75^Sdiff^N-805^Sgear1^S|cffa335ee|Hitem:147159::::::::110:65::5:3:3562:1497:3528:::|h[Radiant~`Lightbringer~`Gauntlets]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [681]
+			"18:06:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SLuthanen-Illidan^N3^T^Silvl^N912.75^Sdiff^N-805^Sgear1^S|cffa335ee|Hitem:147159::::::::110:65::5:3:3562:1497:3528:::|h[Radiant~`Lightbringer~`Gauntlets]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [682]
+			"18:06:09 - Comm received:^1^SlootAck^T^N1^SDjpurge-Illidan^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [683]
+			"18:06:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SDjpurge-Illidan^N3^T^Silvl^N914.1875^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:144406::::::::110:264::6:3:3445:1502:3336:::|h[Vintage~`Duskwatch~`Cinch]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [684]
+			"18:06:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SDjpurge-Illidan^N3^T^Silvl^N914.1875^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:147043::::::::110:264::5:3:3562:1502:3336:::|h[Hauberk~`of~`Frozen~`Mist]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [685]
+			"18:06:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SDjpurge-Illidan^N3^T^Silvl^N914.1875^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:147177::::::::110:264::3:4:3561:40:1487:3336:::|h[Grips~`of~`the~`Skybreaker]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [686]
+			"18:06:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SDjpurge-Illidan^N3^T^Silvl^N914.1875^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:147177::::::::110:264::3:4:3561:40:1487:3336:::|h[Grips~`of~`the~`Skybreaker]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [687]
+			"18:06:12 - Comm received:^1^Sresponse^T^N1^N2^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:138320::::::::110:265::6:3:3518:1512:3336:::|h[Finery~`of~`Azj'Aqir]|h|r^Sresponse^SPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [688]
+			"18:06:13 - Comm received:^1^Sresponse^T^N1^N3^N2^SThenex-Illidan^N3^T^Silvl^N917^Sdiff^N-800^SisTier^B^Sgear1^S|cffa335ee|Hitem:146988::::::::110:63::3:3:3561:1492:3528:::|h[Gloves~`of~`Furtive~`Oppression]|h|r^Sresponse^N2^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [689]
+			"18:06:13 - Comm received:^1^SEUBonusRoll^T^N1^SXorn-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:265:8388608:5::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Xorn) (distri:) (RAID)", -- [690]
+			"18:06:15 - Comm received:^1^Sresponse^T^N1^N4^N2^SThenex-Illidan^N3^T^Silvl^N917^Sdiff^N-800^SisTier^B^Sgear1^S|cffa335ee|Hitem:146988::::::::110:63::3:3:3561:1492:3528:::|h[Gloves~`of~`Furtive~`Oppression]|h|r^Sresponse^N2^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [691]
+			"18:06:15 - Comm received:^1^SEUBonusRoll^T^N1^SEklipto-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:577:8388608:5::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [692]
+			"18:06:15 - Comm received:^1^Sresponse^T^N1^N3^N2^SDadizzle-Illidan^N3^T^Silvl^N912.75^Sdiff^N-790^SisTier^B^Sgear1^S|cffa335ee|Hitem:138327:5444:::::::110:102::5:3:3516:1497:3336:::|h[Gloves~`of~`the~`Astral~`Warden]|h|r^Sresponse^N1^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [693]
+			"18:06:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SDrkillbotz-Illidan^N3^T^Silvl^N912.125^Sdiff^N-55^Sgear1^S|cffff8000|Hitem:132366::::::::110:251:::2:3459:3570:::|h[Koltira's~`Newfound~`Will]|h|r^Sresponse^SPASS^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [694]
+			"18:06:16 - Comm received:^1^Sresponse^T^N1^N4^N2^SDadizzle-Illidan^N3^T^Silvl^N912.75^Sdiff^N-790^SisTier^B^Sgear1^S|cffa335ee|Hitem:138327:5444:::::::110:102::5:3:3516:1497:3336:::|h[Gloves~`of~`the~`Astral~`Warden]|h|r^Sresponse^N1^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [695]
+			"18:06:16 - Comm received:^1^Sresponse^T^N1^N1^N2^SShietnorunes-Illidan^N3^T^Silvl^N916.5^Sdiff^N-55^Sgear1^S|cffff8000|Hitem:132367::::::::110:250:::2:3459:3570:::|h[Service~`of~`Gorefiend]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [696]
+			"18:06:17 - Comm received:^1^Sresponse^T^N1^N3^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sdiff^N-790^SisTier^B^Sgear1^S|cffa335ee|Hitem:138352::::::::110:252::5:3:3516:1497:3336:::|h[Dreadwyrm~`Gauntlets]|h|r^Sresponse^N2^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [697]
+			"18:06:17 - Comm received:^1^Sresponse^T^N1^N2^N2^SThenex-Illidan^N3^T^Silvl^N917^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138318::130221::::::110:63::6:4:3518:1808:1502:3528:::|h[Robe~`of~`Everburning~`Knowledge]|h|r^Sresponse^SPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [698]
+			"18:06:18 - Comm received:^1^Sresponse^T^N1^N2^N2^SShietnorunes-Illidan^N3^T^Silvl^N916.5^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:137527::::::::110:250::35:3:3418:1557:3337:::|h[Polished~`Jade~`Chestguard]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [699]
+			"18:06:18 - Comm received:^1^Sresponse^T^N1^N4^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sdiff^N-790^SisTier^B^Sgear1^S|cffa335ee|Hitem:138352::::::::110:252::5:3:3516:1497:3336:::|h[Dreadwyrm~`Gauntlets]|h|r^Sresponse^N2^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [700]
+			"18:06:18 - Comm received:^1^Soffline_timer^T^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [701]
+			"18:06:19 - Comm received:^1^Sresponse^T^N1^N3^N2^SDrkillbotz-Illidan^N3^T^Silvl^N912.125^Sdiff^N-790^SisTier^B^Sgear1^S|cffa335ee|Hitem:147123::::::::110:251::4:3:3564:1482:3337:::|h[Gravewarden~`Handguards]|h|r^Sresponse^N5^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [702]
+			"18:06:20 - Comm received:^1^Sresponse^T^N1^N4^N2^SDrkillbotz-Illidan^N3^T^Silvl^N912.125^Sdiff^N-790^SisTier^B^Sgear1^S|cffa335ee|Hitem:147123::::::::110:251::4:3:3564:1482:3337:::|h[Gravewarden~`Handguards]|h|r^Sresponse^N5^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [703]
+			"18:06:21 - Comm received:^1^Sresponse^T^N1^N2^N2^SNadzieja-Illidan^N3^T^Silvl^N918.3125^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:147149::::::::110:64::3:3:3561:1482:3528:::|h[Robes~`of~`the~`Arcane~`Tempest]|h|r^Sresponse^SPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [704]
+			"18:06:22 - Comm received:^1^SEUBonusRoll^T^N1^SShietnorunes-Illidan^N2^Sitem^N3^S|cffa335ee|Hitem:147020::::::::110:250::5:3:3562:1497:3528:::|h[Scaled~`Band~`of~`Servitude]|h|r^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [705]
+			"18:06:24 - Comm received:^1^Sresponse^T^N1^N1^N2^SJimrando-Illidan^N3^T^Silvl^N917.125^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:144407::130246::::::110:72::6:4:3445:1808:1497:3528:::|h[Gleaming~`Celestial~`Waistguard]|h|r^Sresponse^N2^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [706]
+			"18:06:27 - Comm received:^1^Sresponse^T^N1^N4^N2^SZefarion-Illidan^N3^T^Silvl^N914.5625^Sdiff^N-860^SisTier^B^Sgear1^S|cffff8000|Hitem:132411::::::::110:64:::2:1811:3570:::|h[Lady~`Vashj's~`Grasp]|h|r^Sresponse^N4^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [707]
+			"18:06:27 - Comm received:^1^Sresponse^T^N1^N2^N2^SLanféar-Illidan^N3^T^Silvl^N916.5^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138319::::::::110:257::6:3:3518:1502:3528:::|h[Purifier's~`Cassock]|h|r^Sresponse^SPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [708]
+			"18:06:28 - Comm received:^1^Sresponse^T^N1^N3^N2^SNadzieja-Illidan^N3^T^Silvl^N918.3125^Sdiff^N-860^SisTier^B^Sgear1^S|cffff8000|Hitem:132411::::::::110:64:::2:3459:3570:::|h[Lady~`Vashj's~`Grasp]|h|r^Sresponse^N2^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [709]
+			"18:06:28 - Comm received:^1^Sresponse^T^N1^N3^N2^SZefarion-Illidan^N3^T^Silvl^N914.5625^Sdiff^N-860^SisTier^B^Sgear1^S|cffff8000|Hitem:132411::::::::110:64:::2:1811:3570:::|h[Lady~`Vashj's~`Grasp]|h|r^Sresponse^N4^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [710]
+			"18:06:28 - Comm received:^1^Sresponse^T^N1^N3^N2^SShietnorunes-Illidan^N3^T^Silvl^N916.5^Sdiff^N-810^SisTier^B^Sgear1^S|cffa335ee|Hitem:147062::130222::::::110:250::5:4:3562:1808:1502:3336:::|h[Groundshatter~`Gauntlets]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [711]
+			"18:06:29 - Comm received:^1^Sresponse^T^N1^N4^N2^SShietnorunes-Illidan^N3^T^Silvl^N916.5^Sdiff^N-810^SisTier^B^Sgear1^S|cffa335ee|Hitem:147062::130222::::::110:250::5:4:3562:1808:1502:3336:::|h[Groundshatter~`Gauntlets]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [712]
+			"18:06:29 - Comm received:^1^Sresponse^T^N1^N4^N2^SNadzieja-Illidan^N3^T^Silvl^N918.3125^Sdiff^N-860^SisTier^B^Sgear1^S|cffff8000|Hitem:132411::::::::110:64:::2:3459:3570:::|h[Lady~`Vashj's~`Grasp]|h|r^Sresponse^N2^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [713]
+			"18:06:30 - Comm received:^1^Sresponse^T^N1^N1^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:140892::::::::110:73::5:3:3516:1507:3337:::|h[Goresmeared~`Abyssal~`Waistplate]|h|r^Sresponse^N3^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [714]
+			"18:06:31 - Comm received:^1^SEUBonusRoll^T^N1^SDjpurge-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:264:8388608:5::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [715]
+			"18:06:35 - Comm received:^1^Sresponse^T^N1^N1^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sdiff^N-55^Sgear1^S|cffff8000|Hitem:132441::::::::110:252:::2:3459:3570:::|h[Draugr,~`Girdle~`of~`the~`Everlasting~`King]|h|r^Sresponse^N3^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [716]
+			"18:06:38 - Comm received:^1^Sresponse^T^N1^N1^N2^SLuthanen-Illidan^N3^T^Silvl^N912.75^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:147072::::::::110:65::3:3:3561:1492:3528:::|h[Soul-Render's~`Greatbelt]|h|r^Sresponse^SPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [717]
+			"18:06:45 - Comm received:^1^Svote^T^N1^N1^N2^SJimrando-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [718]
+			"18:06:52 - Comm received:^1^Sresponse^T^N1^N2^N2^SFearmeter-Illidan^N3^T^Silvl^N916.875^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:138320::130222::::::110:265::5:4:3516:1808:1497:3336:::|h[Finery~`of~`Azj'Aqir]|h|r^Sresponse^SPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [719]
+			"18:06:52 - Comm received:^1^Schange_response^T^N1^N3^N2^SNadzieja-Illidan^N3^SREMOVED^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [720]
+			"18:06:56 - Comm received:^1^Schange_response^T^N1^N4^N2^SNadzieja-Illidan^N3^SREMOVED^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [721]
+			"18:06:58 - Comm received:^1^Sresponse^T^N1^N2^N2^SZefarion-Illidan^N3^T^Silvl^N914.5625^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:138318::::::::110:64::6:3:3518:1507:3336:::|h[Robe~`of~`Everburning~`Knowledge]|h|r^Sresponse^N3^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [722]
+			"18:07:08 - Comm received:^1^Sresponse^T^N1^N4^N2^SBlutarski-Illidan^N3^T^Silvl^N911.375^Sdiff^N-790^SisTier^B^Sgear1^S|cffa335ee|Hitem:147031::::::::110:261::3:3:3561:1482:3528:::|h[Moonfire~`Stranglers]|h|r^Sresponse^STIMEOUT^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [723]
+			"18:07:08 - Comm received:^1^Sresponse^T^N1^N3^N2^SBlutarski-Illidan^N3^T^Silvl^N911.375^Sdiff^N-790^SisTier^B^Sgear1^S|cffa335ee|Hitem:147031::::::::110:261::3:3:3561:1482:3528:::|h[Moonfire~`Stranglers]|h|r^Sresponse^STIMEOUT^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [724]
+			"18:07:11 - Comm received:^1^Sawarded^T^N1^N1^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [725]
+			"18:07:11 - Comm received:^1^Shistory^T^N1^SJimrando-Illidan^N2^T^SmapID^N1676^Sdate^S06/07/17^Sclass^SWARRIOR^SgroupSize^N20^Svotes^N1^Stime^S20:07:40^SitemReplaced1^S|cffa335ee|Hitem:144407::130246::::::110:72::6:4:3445:1808:1497:3528:::|h[Gleaming~`Celestial~`Waistguard]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^SisAwardReason^b^Sresponse^SMainspec^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:147071::::::::110:577::5:3:3562:1497:3528:::|h[Shiversleet~`Waistguard]|h|r^Scolor^T^N1^N1^N2^N0.5^N3^N0^N4^N1^t^SresponseID^N2^Sboss^SHarjatan^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [726]
+			"18:07:15 - Comm received:^1^Sawarded^T^N1^N2^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [727]
+			"18:07:15 - Comm received:^1^Shistory^T^N1^SZefarion-Illidan^N2^T^SmapID^N1676^Sdate^S06/07/17^Sclass^SMAGE^SgroupSize^N20^Svotes^N0^Stime^S20:07:44^SitemReplaced1^S|cffa335ee|Hitem:138318::::::::110:64::6:3:3518:1507:3336:::|h[Robe~`of~`Everburning~`Knowledge]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^SisAwardReason^b^Sresponse^SMinor~`Upgrade^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:146994::::::::110:577::5:3:3562:1497:3528:::|h[Robe~`of~`Aqueous~`Command]|h|r^Scolor^T^N1^N0^N2^N0.7^N3^N0.7^N4^N1^t^SresponseID^N3^Sboss^SHarjatan^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [728]
+			"18:07:20 - Comm received:^1^Svote^T^N1^N3^N2^SCannibal-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [729]
+			"18:07:25 - Comm received:^1^Svote^T^N1^N4^N2^SDadizzle-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [730]
+			"18:07:32 - Comm received:^1^Svote^T^N1^N3^N2^SZefarion-Illidan^N3^N1^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [731]
+			"18:07:36 - Comm received:^1^Svote^T^N1^N4^N2^SDadizzle-Illidan^N3^N1^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [732]
+			"18:07:52 - Comm received:^1^Svote^T^N1^N3^N2^SCannibal-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [733]
+			"18:07:57 - Comm received:^1^Svote^T^N1^N4^N2^SDadizzle-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [734]
+			"18:08:36 - Comm received:^1^Svote^T^N1^N3^N2^SDadizzle-Illidan^N3^N1^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [735]
+			"18:08:57 - Comm received:^1^Svote^T^N1^N4^N2^SDadizzle-Illidan^N3^N1^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [736]
+			"18:09:01 - Comm received:^1^Sawarded^T^N1^N4^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [737]
+			"18:09:01 - Comm received:^1^Shistory^T^N1^SDadizzle-Illidan^N2^T^SmapID^N1676^Sdate^S06/07/17^Sclass^SDRUID^SgroupSize^N20^Svotes^N4^Stime^S20:09:30^StokenRoll^B^StierToken^SHandsSlot^SitemReplaced1^S|cffa335ee|Hitem:138327:5444:::::::110:102::5:3:3516:1497:3336:::|h[Gloves~`of~`the~`Astral~`Warden]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^SisAwardReason^b^Sresponse^S4th~`Tier~`Piece^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:147319::::::::110:577::5:1:570:::|h[Gauntlets~`of~`the~`Foregone~`Vanquisher]|h|r^Scolor^T^N1^N0.1^N2^N1^N3^N0.5^N4^N1^t^SresponseID^N1^Sboss^SHarjatan^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [738]
+			"18:09:04 - Comm received:^1^Svote^T^N1^N3^N2^SCannibal-Illidan^N3^N1^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [739]
+			"18:09:09 - Comm received:^1^Sawarded^T^N1^N3^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [740]
+			"18:09:09 - Comm received:^1^Ssession_end^T^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [741]
+			"18:09:09 - Comm received:^1^Shistory^T^N1^SCannibal-Illidan^N2^T^SmapID^N1676^Sdate^S06/07/17^Sclass^SDEATHKNIGHT^SgroupSize^N20^Svotes^N3^Stime^S20:09:38^StokenRoll^B^StierToken^SHandsSlot^SitemReplaced1^S|cffa335ee|Hitem:138352::::::::110:252::5:3:3516:1497:3336:::|h[Dreadwyrm~`Gauntlets]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^SisAwardReason^b^Sresponse^S2nd~`Tier~`Piece^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:147319::::::::110:577::5:1:570:::|h[Gauntlets~`of~`the~`Foregone~`Vanquisher]|h|r^Scolor^T^N1^N1^N2^N1^N3^N0.5^N4^N1^t^SresponseID^N2^Sboss^SHarjatan^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [742]
+			"18:22:17 - Comm received:^1^SlootTable^T^N1^T^N1^T^SequipLoc^SINVTYPE_CHEST^SlootSlot^N1^Slink^S|cffa335ee|Hitem:147028::::::::110:577::5:3:3562:1497:3528:::|h[Hide~`of~`the~`Abyssal~`Behemoth]|h|r^SsubType^SLeather^Srelic^b^Sawarded^b^Sname^SHide~`of~`the~`Abyssal~`Behemoth^Stexture^N1549275^Silvl^N915^Sboe^b^Sbagged^b^Squality^N4^t^N2^T^SequipLoc^S^SlootSlot^N2^Slink^S|cffa335ee|Hitem:147113::::::::110:577::5:3:3562:1497:3528:::|h[Flawless~`Hurricane~`Pearl]|h|r^SsubType^SArtifact~`Relic^Srelic^SWind^Sawarded^b^Sname^SFlawless~`Hurricane~`Pearl^Stexture^N237371^Silvl^N915^Sboe^b^Sbagged^b^Squality^N4^t^N3^T^SequipLoc^S^SlootSlot^N3^Slink^S|cffa335ee|Hitem:147326::::::::110:577::5:1:570:::|h[Leggings~`of~`the~`Foregone~`Conqueror]|h|r^SsubType^SJunk^Stoken^SLegsSlot^Srelic^b^Sawarded^b^Sname^SLeggings~`of~`the~`Foregone~`Conqueror^Stexture^N133834^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^N4^T^SequipLoc^S^SlootSlot^N4^Slink^S|cffa335ee|Hitem:147325::::::::110:577::5:1:570:::|h[Leggings~`of~`the~`Foregone~`Vanquisher]|h|r^SsubType^SJunk^Stoken^SLegsSlot^Srelic^b^Sawarded^b^Sname^SLeggings~`of~`the~`Foregone~`Vanquisher^Stexture^N133834^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [743]
+			"18:22:17 - |cffa335ee|Hitem:147326::::::::110:577::5:1:570:::|h[Leggings of the Foregone Conqueror]|h|r", -- [744]
+			"18:22:17 - |cffa335ee|Hitem:147325::::::::110:577::5:1:570:::|h[Leggings of the Foregone Vanquisher]|h|r", -- [745]
+			"18:22:17 - Some items wasn't cached, delaying loot by 1 sec", -- [746]
+			"18:22:17 - Comm received:^1^SextraUtilData^T^N1^SXorn-Illidan^N2^T^Sforged^N7^Spawn^T^t^SspecID^N265^Straits^N52^Slegend^N2^Ssockets^N1^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [747]
+			"18:22:17 - Comm received:^1^SextraUtilData^T^N1^SBlutarski-Illidan^N2^T^Sforged^N8^Spawn^T^N1^T^Sequipped^N60760.25^Snew^N931.601^t^N2^T^Sequipped^N0^Snew^N0^t^N3^T^Sequipped^N883.115^Snew^N0^t^N4^T^Sequipped^N883.115^Snew^N0^t^t^SspecID^N261^Straits^N56^Slegend^N2^Ssockets^N4^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [748]
+			"18:22:17 - Comm received:^1^SlootAck^T^N1^SBlutarski-Illidan^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [749]
+			"18:22:17 - Comm received:^1^SlootAck^T^N1^SEklipto-Illidan^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [750]
+			"18:22:17 - Comm received:^1^Sresponse^T^N1^N2^N2^SEklipto-Illidan^N3^T^Silvl^N914.6875^Sresponse^SAUTOPASS^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [751]
+			"18:22:17 - Comm received:^1^SlootAck^T^N1^SCannibal-Illidan^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [752]
+			"18:22:17 - Comm received:^1^Sresponse^T^N1^N1^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:138349::::::::110:252::5:3:3516:1487:1813:::|h[Dreadwyrm~`Breastplate]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [753]
+			"18:22:17 - Comm received:^1^Sresponse^T^N1^N4^N2^SEklipto-Illidan^N3^T^Silvl^N914.6875^Sdiff^N-785^Sgear1^S|cffa335ee|Hitem:138379::::::::110:577::5:3:3516:1492:3336:::|h[Legwraps~`of~`Second~`Sight]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [754]
+			"18:22:17 - Comm received:^1^SextraUtilData^T^N1^SEklipto-Illidan^N2^T^Sforged^N10^Spawn^T^N1^T^Sequipped^N730.807^Snew^N749.017^t^N2^T^Sequipped^N0^Snew^N0^t^N3^T^Sequipped^N577.31^Snew^N0^t^N4^T^Sequipped^N577.31^Snew^N0^t^t^SspecID^N577^Straits^N57^Slegend^N2^Ssockets^N4^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [755]
+			"18:22:17 - Comm received:^1^SlootAck^T^N1^SNadzieja-Illidan^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [756]
+			"18:22:17 - Comm received:^1^Sresponse^T^N1^N1^N2^SNadzieja-Illidan^N3^T^Silvl^N918.3125^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:147149::::::::110:64::3:3:3561:1482:3528:::|h[Robes~`of~`the~`Arcane~`Tempest]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [757]
+			"18:22:17 - Comm received:^1^Sresponse^T^N1^N2^N2^SNadzieja-Illidan^N3^T^Silvl^N918.3125^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [758]
+			"18:22:17 - Comm received:^1^Sresponse^T^N1^N3^N2^SNadzieja-Illidan^N3^T^Silvl^N918.3125^Sdiff^N-800^Sgear1^S|cffa335ee|Hitem:146993::::::::110:64::3:3:3561:1492:3336:::|h[Leggings~`of~`Divine~`Portents]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [759]
+			"18:22:17 - Comm received:^1^Sresponse^T^N1^N3^N2^SBlutarski-Illidan^N3^T^Silvl^N911.375^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:138335::130247::::::110:261::3:4:3514:1808:1497:3337:::|h[Doomblade~`Pants]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [760]
+			"18:22:17 - Comm received:^1^Sresponse^T^N1^N2^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sresponse^SAUTOPASS^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [761]
+			"18:22:17 - Comm received:^1^Sresponse^T^N1^N3^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:140882::::::::110:252::6:3:3445:1502:3336:::|h[Chrono-Tempered~`Legplates]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [762]
+			"18:22:17 - Comm received:^1^SextraUtilData^T^N1^SShietnorunes-Illidan^N2^T^Sforged^N7^Spawn^T^N1^T^Sequipped^N687.231^Snew^N537.718^t^N2^T^Sequipped^N0^Snew^N0^t^N3^T^Sequipped^N741.389^Snew^N0^t^N4^T^Sequipped^N741.389^Snew^N0^t^t^SspecID^N250^Straits^N55^Slegend^N2^Ssockets^N3^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [763]
+			"18:22:17 - Comm received:^1^SlootAck^T^N1^SShietnorunes-Illidan^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [764]
+			"18:22:17 - Comm received:^1^SextraUtilData^T^N1^SDjpurge-Illidan^N2^T^Sforged^N5^Spawn^T^N1^T^Sequipped^N69789.25^Snew^N794.336^t^N2^T^Sequipped^N0^Snew^N0^t^N3^T^Sequipped^N98432^Snew^N0^t^N4^T^Sequipped^N98432^Snew^N0^t^t^SspecID^N264^Straits^N52^Slegend^N2^Ssockets^N2^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [765]
+			"18:22:17 - Comm received:^1^SlootAck^T^N1^SZilorin-Illidan^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [766]
+			"18:22:17 - Comm received:^1^Sresponse^T^N1^N2^N2^SZilorin-Illidan^N3^T^Silvl^N916.0625^Sresponse^SAUTOPASS^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [767]
+			"18:22:17 - Comm received:^1^Sresponse^T^N1^N4^N2^SZilorin-Illidan^N3^T^Silvl^N916.0625^Sdiff^N-775^Sgear1^S|cffa335ee|Hitem:147131::::::::110:577::4:3:3564:1467:3528:::|h[Demonbane~`Leggings]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [768]
+			"18:22:17 - Comm received:^1^SlootAck^T^N1^SZefarion-Illidan^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [769]
+			"18:22:17 - Comm received:^1^Sresponse^T^N1^N1^N2^SZefarion-Illidan^N3^T^Silvl^N914.5625^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:138318::::::::110:64::6:3:3518:1507:3336:::|h[Robe~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [770]
+			"18:22:17 - Comm received:^1^Sresponse^T^N1^N2^N2^SZefarion-Illidan^N3^T^Silvl^N914.5625^Sresponse^SAUTOPASS^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [771]
+			"18:22:17 - Comm received:^1^Sresponse^T^N1^N3^N2^SZefarion-Illidan^N3^T^Silvl^N914.5625^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138315::::::::110:64::5:3:3516:1487:3528:::|h[Leggings~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [772]
+			"18:22:18 - Comm received:^1^SlootTable^T^N1^T^N1^T^SequipLoc^SINVTYPE_CHEST^SlootSlot^N1^Slink^S|cffa335ee|Hitem:147028::::::::110:577::5:3:3562:1497:3528:::|h[Hide~`of~`the~`Abyssal~`Behemoth]|h|r^SsubType^SLeather^Srelic^b^Sawarded^b^Sname^SHide~`of~`the~`Abyssal~`Behemoth^Stexture^N1549275^Silvl^N915^Sboe^b^Sbagged^b^Squality^N4^t^N2^T^SequipLoc^S^SlootSlot^N2^Slink^S|cffa335ee|Hitem:147113::::::::110:577::5:3:3562:1497:3528:::|h[Flawless~`Hurricane~`Pearl]|h|r^SsubType^SArtifact~`Relic^Srelic^SWind^Sawarded^b^Sname^SFlawless~`Hurricane~`Pearl^Stexture^N237371^Silvl^N915^Sboe^b^Sbagged^b^Squality^N4^t^N3^T^SequipLoc^S^SlootSlot^N3^Slink^S|cffa335ee|Hitem:147326::::::::110:577::5:1:570:::|h[Leggings~`of~`the~`Foregone~`Conqueror]|h|r^SsubType^SJunk^Stoken^SLegsSlot^Srelic^b^Sawarded^b^Sname^SLeggings~`of~`the~`Foregone~`Conqueror^Stexture^N133834^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^N4^T^SequipLoc^S^SlootSlot^N4^Slink^S|cffa335ee|Hitem:147325::::::::110:577::5:1:570:::|h[Leggings~`of~`the~`Foregone~`Vanquisher]|h|r^SsubType^SJunk^Stoken^SLegsSlot^Srelic^b^Sawarded^b^Sname^SLeggings~`of~`the~`Foregone~`Vanquisher^Stexture^N133834^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [773]
+			"18:22:18 - NewRelicAutopassCheck (|cffa335ee|Hitem:147113::::::::110:577::5:3:3562:1497:3528:::|h[Flawless Hurricane Pearl]|h|r) (Wind)", -- [774]
+			"18:22:18 - Autopassed on:  (|cffa335ee|Hitem:147326::::::::110:577::5:1:570:::|h[Leggings of the Foregone Conqueror]|h|r)", -- [775]
+			"18:22:18 - CreateResponse (3) (|cffa335ee|Hitem:147326::::::::110:577::5:1:570:::|h[Leggings of the Foregone Conqueror]|h|r) (110) (AUTOPASS) () (nil) (Junk) (nil)", -- [776]
+			"18:22:18 - GetPlayersGear (147326) ()", -- [777]
+			"18:22:18 - Autopassed on:  (|cffa335ee|Hitem:147325::::::::110:577::5:1:570:::|h[Leggings of the Foregone Vanquisher]|h|r)", -- [778]
+			"18:22:18 - CreateResponse (4) (|cffa335ee|Hitem:147325::::::::110:577::5:1:570:::|h[Leggings of the Foregone Vanquisher]|h|r) (110) (AUTOPASS) () (nil) (Junk) (nil)", -- [779]
+			"18:22:18 - GetPlayersGear (147325) ()", -- [780]
+			"18:22:18 - LootFrame:Start()", -- [781]
+			"18:22:18 - Comm received:^1^SlootAck^T^N1^SLanféar-Illidan^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [782]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N1^N2^SLanféar-Illidan^N3^T^Silvl^N916.5^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138319::::::::110:257::6:3:3518:1502:3528:::|h[Purifier's~`Cassock]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [783]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N2^N2^SLanféar-Illidan^N3^T^Silvl^N916.5^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [784]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N4^N2^SLanféar-Illidan^N3^T^Silvl^N916.5^Sdiff^N-810^Sgear1^S|cffa335ee|Hitem:147166::::::::110:257::3:3:3561:1502:3337:::|h[Leggings~`of~`Blind~`Absolution]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [785]
+			"18:22:18 - Comm received:^1^SlootAck^T^N1^SXorn-Illidan^t^^ (from:) (Xorn) (distri:) (RAID)", -- [786]
+			"18:22:18 - Comm received:^1^SlootAck^T^N1^SDadizzle-Illidan^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [787]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N2^N2^SDadizzle-Illidan^N3^T^Silvl^N912.75^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [788]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N1^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:138320::::::::110:265::6:3:3518:1512:3336:::|h[Finery~`of~`Azj'Aqir]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [789]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N2^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sresponse^SAUTOPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [790]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N4^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sdiff^N-805^Sgear1^S|cffa335ee|Hitem:146992::::::::110:265::5:4:3562:43:1497:3528:::|h[Legwraps~`of~`Fused~`Loathing]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [791]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N3^N2^SDadizzle-Illidan^N3^T^Silvl^N912.75^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:140862::::::::110:102::6:3:3445:1502:3336:::|h[Gnawed~`Nightfallen~`Britches]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [792]
+			"18:22:18 - Comm received:^1^SlootAck^T^N1^SReinhärt-Illidan^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [793]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N1^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:140913::::::::110:73::5:3:3517:1497:3336:::|h[Breastplate~`of~`the~`Remembered~`King]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [794]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N3^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sdiff^N-810^Sgear1^S|cffa335ee|Hitem:147066::::::::110:73::3:3:3561:1502:3336:::|h[Greaves~`of~`Impure~`Midnight]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [795]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N4^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sdiff^N-810^Sgear1^S|cffa335ee|Hitem:147066::::::::110:73::3:3:3561:1502:3336:::|h[Greaves~`of~`Impure~`Midnight]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [796]
+			"18:22:18 - Comm received:^1^SlootAck^T^N1^SDrkillbotz-Illidan^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [797]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N1^N2^SDrkillbotz-Illidan^N3^T^Silvl^N912.125^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:138349::::::::110:251::5:3:3516:1497:3336:::|h[Dreadwyrm~`Breastplate]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [798]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N2^N2^SDrkillbotz-Illidan^N3^T^Silvl^N912.125^Sresponse^SAUTOPASS^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [799]
+			"18:22:18 - Comm received:^1^SlootAck^T^N1^SFearmeter-Illidan^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [800]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N1^N2^SFearmeter-Illidan^N3^T^Silvl^N916.875^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:138320::130222::::::110:265::5:4:3516:1808:1497:3336:::|h[Finery~`of~`Azj'Aqir]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [801]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N3^N2^SDrkillbotz-Illidan^N3^T^Silvl^N912.125^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:147125::::::::110:251::3:3:3561:1482:3528:::|h[Gravewarden~`Legplates]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [802]
+			"18:22:18 - Comm received:^1^SlootAck^T^N1^STelgina-Illidan^t^^ (from:) (Telgina) (distri:) (RAID)", -- [803]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N1^N2^STelgina-Illidan^N3^T^Silvl^N919.25^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:144495::130222::::::110:253::35:4:3418:1808:1557:3337:::|h[Domatrax's~`Chain~`Hauberk]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [804]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N2^N2^SFearmeter-Illidan^N3^T^Silvl^N916.875^Sresponse^SAUTOPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [805]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N4^N2^SFearmeter-Illidan^N3^T^Silvl^N916.875^Sdiff^N-785^Sgear1^S|cffa335ee|Hitem:138317::::::::110:265::5:3:3516:1492:3336:::|h[Leggings~`of~`Azj'Aqir]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [806]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N3^N2^STelgina-Illidan^N3^T^Silvl^N919.25^Sdiff^N-810^Sgear1^S|cffa335ee|Hitem:147143::::::::110:253::5:4:3562:41:1502:3336:::|h[Wildstalker~`Leggings]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [807]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N4^N2^STelgina-Illidan^N3^T^Silvl^N919.25^Sdiff^N-810^Sgear1^S|cffa335ee|Hitem:147143::::::::110:253::5:4:3562:41:1502:3336:::|h[Wildstalker~`Leggings]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [808]
+			"18:22:18 - Comm received:^1^SlootAck^T^N1^SDjpurge-Illidan^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [809]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N1^N2^SDjpurge-Illidan^N3^T^Silvl^N914.1875^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:147043::::::::110:264::5:3:3562:1502:3336:::|h[Hauberk~`of~`Frozen~`Mist]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [810]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N3^N2^SDjpurge-Illidan^N3^T^Silvl^N914.1875^Sdiff^N-860^Sgear1^S|cffff8000|Hitem:132466::::::::110:264:::2:3459:3570:::|h[Roots~`of~`Shaladrassil]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [811]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N4^N2^SDjpurge-Illidan^N3^T^Silvl^N914.1875^Sdiff^N-860^Sgear1^S|cffff8000|Hitem:132466::::::::110:264:::2:3459:3570:::|h[Roots~`of~`Shaladrassil]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [812]
+			"18:22:18 - Comm received:^1^SlootAck^T^N1^SJimrando-Illidan^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [813]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N1^N2^SJimrando-Illidan^N3^T^Silvl^N918.0625^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:147187::::::::110:72::3:3:3561:1502:3337:::|h[Titanic~`Onslaught~`Breastplate]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [814]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N3^N2^SJimrando-Illidan^N3^T^Silvl^N918.0625^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:147191::::::::110:72::3:3:3561:1482:3528:::|h[Titanic~`Onslaught~`Greaves]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [815]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N4^N2^SJimrando-Illidan^N3^T^Silvl^N918.0625^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:147191::::::::110:72::3:3:3561:1482:3528:::|h[Titanic~`Onslaught~`Greaves]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [816]
+			"18:22:18 - Comm received:^1^SlootAck^T^N1^SThenex-Illidan^t^^ (from:) (Thenex) (distri:) (RAID)", -- [817]
+			"18:22:18 - Comm received:^1^SlootAck^T^N1^SComet-Illidan^t^^ (from:) (Comet) (distri:) (RAID)", -- [818]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N3^N2^SComet-Illidan^N3^T^Silvl^N919.1875^Sdiff^N-805^Sgear1^S|cffa335ee|Hitem:147035::::::::110:270::5:4:3562:40:1497:3528:::|h[Bonespur~`Studded~`Legwraps]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [819]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N4^N2^SComet-Illidan^N3^T^Silvl^N919.1875^Sdiff^N-805^Sgear1^S|cffa335ee|Hitem:147035::::::::110:270::5:4:3562:40:1497:3528:::|h[Bonespur~`Studded~`Legwraps]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [820]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N1^N2^SThenex-Illidan^N3^T^Silvl^N917^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138318::130221::::::110:63::6:4:3518:1808:1502:3528:::|h[Robe~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [821]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N2^N2^SThenex-Illidan^N3^T^Silvl^N917^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [822]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N3^N2^SThenex-Illidan^N3^T^Silvl^N917^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:138315::::::::110:63::5:4:3516:40:1497:3336:::|h[Leggings~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [823]
+			"18:22:18 - Comm received:^1^SlootAck^T^N1^SLuthanen-Illidan^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [824]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N1^N2^SLuthanen-Illidan^N3^T^Silvl^N912.75^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:147157::::::::110:65::3:3:3561:1482:3528:::|h[Radiant~`Lightbringer~`Breastplate]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [825]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N2^N2^SLuthanen-Illidan^N3^T^Silvl^N912.75^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [826]
+			"18:22:18 - Comm received:^1^Sresponse^T^N1^N4^N2^SLuthanen-Illidan^N3^T^Silvl^N912.75^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138359::::::::110:65::5:3:3516:1487:1813:::|h[Legplates~`of~`the~`Highlord]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [827]
+			"18:22:20 - Comm received:^1^Sresponse^T^N1^N4^N2^SNadzieja-Illidan^N3^T^Silvl^N918.3125^Sdiff^N-800^SisTier^B^Sgear1^S|cffa335ee|Hitem:146993::::::::110:64::3:3:3561:1492:3336:::|h[Leggings~`of~`Divine~`Portents]|h|r^Sresponse^N2^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [828]
+			"18:22:20 - Comm received:^1^SEUBonusRoll^T^N1^SXorn-Illidan^N2^Sitem^N3^S|cffa335ee|Hitem:147016::::::::110:265::5:3:3562:1497:3528:::|h[Terror~`From~`Below]|h|r^t^^ (from:) (Xorn) (distri:) (RAID)", -- [829]
+			"18:22:21 - Comm received:^1^Sresponse^T^N1^N4^N2^SThenex-Illidan^N3^T^Silvl^N917^Sdiff^N-790^SisTier^B^Sgear1^S|cffa335ee|Hitem:138315::::::::110:63::5:4:3516:40:1497:3336:::|h[Leggings~`of~`Everburning~`Knowledge]|h|r^Sresponse^N2^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [830]
+			"18:22:23 - Comm received:^1^Sresponse^T^N1^N4^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sdiff^N-795^SisTier^B^Sgear1^S|cffa335ee|Hitem:140882::::::::110:252::6:3:3445:1502:3336:::|h[Chrono-Tempered~`Legplates]|h|r^Sresponse^N3^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [831]
+			"18:22:24 - Comm received:^1^Sresponse^T^N1^N3^N2^SLanféar-Illidan^N3^T^Silvl^N916.5^Sdiff^N-810^SisTier^B^Sgear1^S|cffa335ee|Hitem:147166::::::::110:257::3:3:3561:1502:3337:::|h[Leggings~`of~`Blind~`Absolution]|h|r^Sresponse^SPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [832]
+			"18:22:24 - Comm received:^1^Sresponse^T^N1^N2^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sresponse^N4^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [833]
+			"18:22:27 - Comm received:^1^Sresponse^T^N1^N1^N2^SShietnorunes-Illidan^N3^T^Silvl^N917.125^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:137527::::::::110:250::35:3:3418:1557:3337:::|h[Polished~`Jade~`Chestguard]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [834]
+			"18:22:27 - Comm received:^1^Soffline_timer^T^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [835]
+			"18:22:29 - Comm received:^1^Sresponse^T^N1^N2^N2^SShietnorunes-Illidan^N3^T^Silvl^N917.125^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [836]
+			"18:22:29 - Comm received:^1^Sresponse^T^N1^N3^N2^SFearmeter-Illidan^N3^T^Silvl^N916.875^Sdiff^N-785^SisTier^B^Sgear1^S|cffa335ee|Hitem:138317::::::::110:265::5:3:3516:1492:3336:::|h[Leggings~`of~`Azj'Aqir]|h|r^Sresponse^N1^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [837]
+			"18:22:30 - Comm received:^1^Sresponse^T^N1^N2^N2^STelgina-Illidan^N3^T^Silvl^N919.25^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:140840::::::::110:253::6:3:3445:1517:3337:::|h[Chittering~`Mandible]|h|r^Sresponse^N4^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [838]
+			"18:22:30 - Comm received:^1^Sresponse^T^N1^N4^N2^SDrkillbotz-Illidan^N3^T^Silvl^N912.125^Sdiff^N-790^SisTier^B^Sgear1^S|cffa335ee|Hitem:147125::::::::110:251::3:3:3561:1482:3528:::|h[Gravewarden~`Legplates]|h|r^Sresponse^N5^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [839]
+			"18:22:31 - Comm received:^1^Sresponse^T^N1^N1^N2^SZilorin-Illidan^N3^T^Silvl^N916.0625^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:138376::::::::110:577::5:3:3516:1487:3528:::|h[Tunic~`of~`Second~`Sight]|h|r^Sresponse^SPASS^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [840]
+			"18:22:32 - Comm received:^1^Sresponse^T^N1^N3^N2^SShietnorunes-Illidan^N3^T^Silvl^N917.125^Sdiff^N-810^SisTier^B^Sgear1^S|cffa335ee|Hitem:147065::::::::110:250::5:3:3562:1502:3336:::|h[Lava-Slough~`Legguards]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [841]
+			"18:22:32 - Comm received:^1^Sresponse^T^N1^N4^N2^SShietnorunes-Illidan^N3^T^Silvl^N917.125^Sdiff^N-810^SisTier^B^Sgear1^S|cffa335ee|Hitem:147065::::::::110:250::5:3:3562:1502:3336:::|h[Lava-Slough~`Legguards]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [842]
+			"18:22:33 - Comm received:^1^Sresponse^T^N1^N4^N2^SBlutarski-Illidan^N3^T^Snote^Sonly~`tier~`piece~`i~`can~`go~`for^Silvl^N911.375^Sdiff^N-790^SisTier^B^Sgear1^S|cffa335ee|Hitem:138335::130247::::::110:261::3:4:3514:1808:1497:3337:::|h[Doomblade~`Pants]|h|r^Sresponse^N2^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [843]
+			"18:22:36 - Comm received:^1^Sresponse^T^N1^N3^N2^SLuthanen-Illidan^N3^T^Snote^SWill~`allow~`to~`equip~`BiS~`cloak^Silvl^N912.75^Sdiff^N-780^SisTier^B^Sgear1^S|cffa335ee|Hitem:138359::::::::110:65::5:3:3516:1487:1813:::|h[Legplates~`of~`the~`Highlord]|h|r^Sresponse^N5^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [844]
+			"18:22:36 - Comm received:^1^Sresponse^T^N1^N4^N2^SZefarion-Illidan^N3^T^Silvl^N914.5625^Sdiff^N-780^SisTier^B^Sgear1^S|cffa335ee|Hitem:138315::::::::110:64::5:3:3516:1487:3528:::|h[Leggings~`of~`Everburning~`Knowledge]|h|r^Sresponse^N4^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [845]
+			"18:22:39 - Comm received:^1^Sresponse^T^N1^N3^N2^SEklipto-Illidan^N3^T^Silvl^N914.6875^Sdiff^N-785^SisTier^B^Sgear1^S|cffa335ee|Hitem:138379::::::::110:577::5:3:3516:1492:3336:::|h[Legwraps~`of~`Second~`Sight]|h|r^Sresponse^N5^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [846]
+			"18:22:41 - Comm received:^1^SEUBonusRoll^T^N1^SBlutarski-Illidan^N2^Sitem^N3^S|cffa335ee|Hitem:147173::::::::110:261::5:3:3562:1497:3528:::|h[Fanged~`Slayer's~`Legguards]|h|r^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [847]
+			"18:22:44 - Comm received:^1^Sresponse^T^N1^N3^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sdiff^N-805^SisTier^B^Sgear1^S|cffa335ee|Hitem:146992::::::::110:265::5:4:3562:43:1497:3528:::|h[Legwraps~`of~`Fused~`Loathing]|h|r^Sresponse^N4^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [848]
+			"18:22:47 - Comm received:^1^Sresponse^T^N1^N3^N2^SZilorin-Illidan^N3^T^Snote^SMine~`is~`885~`RF^Silvl^N916.0625^Sdiff^N-775^SisTier^B^Sgear1^S|cffa335ee|Hitem:147131::::::::110:577::4:3:3564:1467:3528:::|h[Demonbane~`Leggings]|h|r^Sresponse^N5^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [849]
+			"18:22:57 - Comm received:^1^Sresponse^T^N1^N1^N2^SEklipto-Illidan^N3^T^Silvl^N914.6875^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:138376::130247::::::110:577::5:4:3516:1808:1492:3336:::|h[Tunic~`of~`Second~`Sight]|h|r^Sresponse^N2^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [850]
+			"18:22:59 - LootFrame:OnRoll (nil) (2) (Response:) (Mainspec)", -- [851]
+			"18:22:59 - CreateResponse (1) (|cffa335ee|Hitem:147028::::::::110:577::5:3:3562:1497:3528:::|h[Hide of the Abyssal Behemoth]|h|r) (915) (2) (INVTYPE_CHEST) (nil) (Leather) (nil)", -- [852]
+			"18:22:59 - GetPlayersGear (147028) (INVTYPE_CHEST)", -- [853]
+			"18:22:59 - Trashing entry: (1) (|cffa335ee|Hitem:147028::::::::110:577::5:3:3562:1497:3528:::|h[Hide of the Abyssal Behemoth]|h|r)", -- [854]
+			"18:22:59 - Comm received:^1^Sresponse^T^N1^N1^N2^SComet-Illidan^N3^T^Silvl^N919.1875^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:147027::::::::110:270::5:3:3562:1497:3528:::|h[Spirebreaker~`Harness]|h|r^Sresponse^N2^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [855]
+			"18:23:01 - Comm received:^1^Sresponse^T^N1^N4^N2^SDadizzle-Illidan^N3^T^Silvl^N912.75^Sdiff^N-795^SisTier^B^Sgear1^S|cffa335ee|Hitem:140862::::::::110:102::6:3:3445:1502:3336:::|h[Gnawed~`Nightfallen~`Britches]|h|r^Sresponse^N5^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [856]
+			"18:23:02 - Comm received:^1^Sresponse^T^N1^N2^N2^SBlutarski-Illidan^N3^T^Silvl^N911.375^Sresponse^N4^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [857]
+			"18:23:04 - LootFrame:OnRoll (nil) (4) (Response:) (Offspec)", -- [858]
+			"18:23:04 - CreateResponse (2) (|cffa335ee|Hitem:147113::::::::110:577::5:3:3562:1497:3528:::|h[Flawless Hurricane Pearl]|h|r) (915) (4) () (nil) (Artifact Relic) (nil)", -- [859]
+			"18:23:04 - Trashing entry: (1) (|cffa335ee|Hitem:147113::::::::110:577::5:3:3562:1497:3528:::|h[Flawless Hurricane Pearl]|h|r)", -- [860]
+			"18:23:05 - Comm received:^1^Sresponse^T^N1^N2^N2^SComet-Illidan^N3^T^Silvl^N919.1875^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:147115::::::::110:270::5:3:3562:1502:3336:::|h[Unfurling~`Origination]|h|r^Sresponse^N4^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [861]
+			"18:23:07 - Comm received:^1^Schange_response^T^N1^N4^N2^SBlutarski-Illidan^N3^SREMOVED^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [862]
+			"18:23:07 - Comm received:^1^Sresponse^T^N1^N1^N2^SBlutarski-Illidan^N3^T^Silvl^N911.375^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:138326::::::::110:261::5:3:3516:1492:3336:::|h[Doomblade~`Tunic]|h|r^Sresponse^N5^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [863]
+			"18:23:19 - Comm received:^1^Sresponse^T^N1^N1^N2^SDadizzle-Illidan^N3^T^Silvl^N912.75^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:138324::::::::110:102::5:3:3516:1487:3528:::|h[Robe~`of~`the~`Astral~`Warden]|h|r^Sresponse^STIMEOUT^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [864]
+			"18:23:19 - Comm received:^1^Sresponse^T^N1^N2^N2^SDjpurge-Illidan^N3^T^Silvl^N914.1875^Sresponse^STIMEOUT^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [865]
+			"18:23:19 - Comm received:^1^Sresponse^T^N1^N2^N2^SJimrando-Illidan^N3^T^Silvl^N918.0625^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:140841::::::::110:72::5:3:3516:1487:3528:::|h[Tempest~`of~`the~`Heavens]|h|r^Sresponse^STIMEOUT^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [866]
+			"18:23:31 - Comm received:^1^Svote^T^N1^N3^N2^SFearmeter-Illidan^N3^N1^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [867]
+			"18:23:31 - Comm received:^1^Svote^T^N1^N4^N2^SNadzieja-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [868]
+			"18:23:39 - Comm received:^1^Svote^T^N1^N4^N2^SNadzieja-Illidan^N3^N1^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [869]
+			"18:23:42 - Comm received:^1^Schange_response^T^N1^N3^N2^SFuryisthy-Illidan^N3^N5^N4^B^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [870]
+			"18:23:49 - Comm received:^1^Svote^T^N1^N3^N2^SFearmeter-Illidan^N3^N1^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [871]
+			"18:23:50 - Comm received:^1^Svote^T^N1^N2^N2^SJimrando-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [872]
+			"18:23:51 - Comm received:^1^Svote^T^N1^N2^N2^SJimrando-Illidan^N3^N1^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [873]
+			"18:23:58 - Comm received:^1^Svote^T^N1^N2^N2^SJimrando-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [874]
+			"18:24:12 - Comm received:^1^Svote^T^N1^N1^N2^SComet-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [875]
+			"18:24:14 - Comm received:^1^Svote^T^N1^N4^N2^SNadzieja-Illidan^N3^N1^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [876]
+			"18:24:21 - Comm received:^1^Svote^T^N1^N1^N2^SEklipto-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [877]
+			"18:24:22 - Comm received:^1^Svote^T^N1^N1^N2^SComet-Illidan^N3^N1^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [878]
+			"18:24:26 - Comm received:^1^Svote^T^N1^N3^N2^SFearmeter-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [879]
+			"18:24:36 - Comm received:^1^Svote^T^N1^N4^N2^SNadzieja-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [880]
+			"18:24:38 - Comm received:^1^Svote^T^N1^N4^N2^SNadzieja-Illidan^N3^N1^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [881]
+			"18:24:40 - Comm received:^1^Svote^T^N1^N3^N2^SFearmeter-Illidan^N3^N1^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [882]
+			"18:25:09 - Comm received:^1^Sawarded^T^N1^N3^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [883]
+			"18:25:09 - Comm received:^1^Shistory^T^N1^SFearmeter-Illidan^N2^T^SmapID^N1676^Sdate^S06/07/17^Sclass^SWARLOCK^SgroupSize^N20^Svotes^N4^Stime^S20:25:39^StokenRoll^B^StierToken^SLegsSlot^SitemReplaced1^S|cffa335ee|Hitem:138317::::::::110:265::5:3:3516:1492:3336:::|h[Leggings~`of~`Azj'Aqir]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^SisAwardReason^b^Sresponse^S4th~`Tier~`Piece^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:147326::::::::110:577::5:1:570:::|h[Leggings~`of~`the~`Foregone~`Conqueror]|h|r^Scolor^T^N1^N0.1^N2^N1^N3^N0.5^N4^N1^t^SresponseID^N1^Sboss^SMistress~`Sassz'ine^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [884]
+			"18:25:16 - Comm received:^1^Sawarded^T^N1^N4^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [885]
+			"18:25:16 - Comm received:^1^Shistory^T^N1^SNadzieja-Illidan^N2^T^SmapID^N1676^Sdate^S06/07/17^Sclass^SMAGE^SgroupSize^N20^Svotes^N5^Stime^S20:25:45^StokenRoll^B^StierToken^SLegsSlot^SitemReplaced1^S|cffa335ee|Hitem:146993::::::::110:64::3:3:3561:1492:3336:::|h[Leggings~`of~`Divine~`Portents]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^SisAwardReason^b^Sresponse^S2nd~`Tier~`Piece^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:147325::::::::110:577::5:1:570:::|h[Leggings~`of~`the~`Foregone~`Vanquisher]|h|r^Scolor^T^N1^N1^N2^N1^N3^N0.5^N4^N1^t^SresponseID^N2^Sboss^SMistress~`Sassz'ine^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [886]
+			"18:26:11 - Comm received:^1^Svote^T^N1^N1^N2^SEklipto-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [887]
+			"18:27:10 - Comm received:^1^Svote^T^N1^N1^N2^SEklipto-Illidan^N3^N-1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [888]
+			"18:27:13 - Comm received:^1^Sawarded^T^N1^N1^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [889]
+			"18:27:13 - Comm received:^1^Shistory^T^N1^SComet-Illidan^N2^T^SmapID^N1676^Sdate^S06/07/17^Sclass^SMONK^SgroupSize^N20^Svotes^N2^Stime^S20:27:42^SitemReplaced1^S|cffa335ee|Hitem:147027::::::::110:270::5:3:3562:1497:3528:::|h[Spirebreaker~`Harness]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^SisAwardReason^b^Sresponse^SMainspec^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:147028::::::::110:577::5:3:3562:1497:3528:::|h[Hide~`of~`the~`Abyssal~`Behemoth]|h|r^Scolor^T^N1^N1^N2^N0.5^N3^N0^N4^N1^t^SresponseID^N2^Sboss^SMistress~`Sassz'ine^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [890]
+			"18:28:01 - Comm received:^1^Ssession_end^T^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [891]
+			"18:34:10 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Dadizzle) (distri:) (GUILD)", -- [892]
+			"18:34:10 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^StierNumButtons^N5^Sresponses^T^N1^T^Scolor^T^N1^N0^N2^N1^N3^N0^N4^N1^t^Stext^SBiS^Ssort^N1^t^N2^T^Scolor^T^N1^N1^N2^N0.5^N3^N0^N4^N1^t^Stext^SMainspec^Ssort^N2^t^N4^T^Scolor^T^N1^F5263030152770226^f-53^N2^F6640601803495317^f-54^N3^F6322700653327995^f-53^N4^N1^t^Stext^SOffspec^Ssort^N4^t^N5^T^Scolor^T^N1^F8336074604387747^f-54^N2^F6322700653327995^f-53^N3^F5545608952918964^f-53^N4^N1^t^Stext^STransmog^Ssort^N5^t^Stier^T^N3^T^Scolor^T^N1^N1^N2^N0.5^N3^N1^N4^N1^t^Stext^S3rd~`Tier~`Piece^Ssort^N3^t^N4^T^Scolor^T^N1^N0.5^N2^N1^N3^N1^N4^N1^t^Stext^S1st~`Tier~`Piece^Ssort^N4^t^N5^T^Scolor^T^N1^N0.56078431372549^N2^F6322700653327995^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SUpgrade^Ssort^N5^t^t^t^ShideVotes^b^StierButtonsEnabled^B^SmultiVote^B^StierButtons^T^N1^T^Stext^S4th~`Piece^t^N2^T^Stext^S2nd~`Piece^t^N3^T^Stext^S3rd~`Piece^t^N4^T^Stext^S1st~`Piece^t^N5^T^Stext^SUpgrade^t^t^Sbuttons^T^N1^T^Stext^SBiS^t^N2^T^Stext^SMainspec^t^N4^T^Stext^SOffspec^t^N5^T^Stext^STransmog^t^t^SnumButtons^N5^SanonymousVoting^b^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [893]
+			"18:34:10 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SEklipto-Illidan^N3^SReinhärt-Illidan^N4^SDjpurge-Illidan^N5^SFearmeter-Illidan^N6^SShietnorunes-Illidan^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [894]
+			"18:34:10 - nil = (IsCouncil) (Comet-Illidan)", -- [895]
+			"18:52:09 - Comm received:^1^SlootTable^T^N1^T^N1^T^SequipLoc^SINVTYPE_SHOULDER^SlootSlot^N1^Slink^S|cffa335ee|Hitem:146997::::::::110:577::5:3:3562:1502:3336:::|h[Shoulderpads~`of~`Whispering~`Twilight]|h|r^SsubType^SCloth^Srelic^b^Sawarded^b^Sname^SShoulderpads~`of~`Whispering~`Twilight^Stexture^N1511494^Silvl^N920^Sboe^b^Sbagged^b^Squality^N4^t^N2^T^SequipLoc^SINVTYPE_HEAD^SlootSlot^N2^Slink^S|cffa335ee|Hitem:147033::::::::110:577::5:3:3562:1512:3337:::|h[Lunar-Wrath~`Headgear]|h|r^SsubType^SLeather^Srelic^b^Sawarded^b^Sname^SLunar-Wrath~`Headgear^Stexture^N1549277^Silvl^N930^Sboe^b^Sbagged^b^Squality^N4^t^N3^T^SequipLoc^SINVTYPE_CHEST^SlootSlot^N3^Slink^S|cffa335ee|Hitem:147068::::::::110:577::5:3:3562:1497:3528:::|h[Cuirass~`of~`Blinding~`Dawn]|h|r^SsubType^SPlate^Srelic^b^Sawarded^b^Sname^SCuirass~`of~`Blinding~`Dawn^Stexture^N1518777^Silvl^N915^Sboe^b^Sbagged^b^Squality^N4^t^N4^T^SequipLoc^SINVTYPE_HEAD^SlootSlot^N4^Slink^S|cffa335ee|Hitem:147033::::::::110:577::5:4:3562:41:1497:3528:::|h[Lunar-Wrath~`Headgear]|h|r^SsubType^SLeather^Srelic^b^Sawarded^b^Sname^SLunar-Wrath~`Headgear^Stexture^N1549277^Silvl^N915^Sboe^b^Sbagged^b^Squality^N4^t^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [896]
+			"18:52:09 - Autopassed on:  (|cffa335ee|Hitem:146997::::::::110:577::5:3:3562:1502:3336:::|h[Shoulderpads of Whispering Twilight]|h|r)", -- [897]
+			"18:52:09 - CreateResponse (1) (|cffa335ee|Hitem:146997::::::::110:577::5:3:3562:1502:3336:::|h[Shoulderpads of Whispering Twilight]|h|r) (920) (AUTOPASS) (INVTYPE_SHOULDER) (nil) (Cloth) (nil)", -- [898]
+			"18:52:09 - GetPlayersGear (146997) (INVTYPE_SHOULDER)", -- [899]
+			"18:52:09 - Autopassed on:  (|cffa335ee|Hitem:147068::::::::110:577::5:3:3562:1497:3528:::|h[Cuirass of Blinding Dawn]|h|r)", -- [900]
+			"18:52:09 - CreateResponse (3) (|cffa335ee|Hitem:147068::::::::110:577::5:3:3562:1497:3528:::|h[Cuirass of Blinding Dawn]|h|r) (915) (AUTOPASS) (INVTYPE_CHEST) (nil) (Plate) (nil)", -- [901]
+			"18:52:09 - GetPlayersGear (147068) (INVTYPE_CHEST)", -- [902]
+			"18:52:09 - LootFrame:Start()", -- [903]
+			"18:52:09 - Restoring entry: (normal) (1)", -- [904]
+			"18:52:09 - Restoring entry: (normal) (1)", -- [905]
+			"18:52:09 - Comm received:^1^SextraUtilData^T^N1^SXorn-Illidan^N2^T^Sforged^N7^Spawn^T^t^SspecID^N265^Straits^N52^Slegend^N2^Ssockets^N1^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [906]
+			"18:52:09 - Comm received:^1^SlootAck^T^N1^SNadzieja-Illidan^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [907]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SNadzieja-Illidan^N3^T^Silvl^N919.75^Sdiff^N30^Sgear1^S|cffa335ee|Hitem:138312::::::::110:64::5:3:3516:1497:3336:::|h[Hood~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [908]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SNadzieja-Illidan^N3^T^Silvl^N919.75^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:147149::::::::110:64::3:3:3561:1482:3528:::|h[Robes~`of~`the~`Arcane~`Tempest]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [909]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SNadzieja-Illidan^N3^T^Silvl^N919.75^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:138312::::::::110:64::5:3:3516:1497:3336:::|h[Hood~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [910]
+			"18:52:09 - Comm received:^1^SlootAck^T^N1^SCannibal-Illidan^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [911]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sdiff^N30^Sgear1^S|cffa335ee|Hitem:138361::::::::110:252::5:3:3516:1487:1813:::|h[Dreadwyrm~`Shoulderguards]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [912]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:142126::::::::110:252::35:3:3418:1522:3337:::|h[Helm~`of~`Phantasmal~`Scars]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [913]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:142126::::::::110:252::35:3:3418:1522:3337:::|h[Helm~`of~`Phantasmal~`Scars]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [914]
+			"18:52:09 - Comm received:^1^SlootAck^T^N1^SDadizzle-Illidan^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [915]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SDadizzle-Illidan^N3^T^Silvl^N912.75^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:144295:5883:::::::110:102:::3:3529:3459:3570:::|h[Lady~`and~`the~`Child]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [916]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SDadizzle-Illidan^N3^T^Silvl^N912.75^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:138324::::::::110:102::5:3:3516:1487:3528:::|h[Robe~`of~`the~`Astral~`Warden]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [917]
+			"18:52:09 - Comm received:^1^SlootAck^T^N1^SReinhärt-Illidan^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [918]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:147192::::::::110:73::3:3:3561:1492:3336:::|h[Titanic~`Onslaught~`Pauldrons]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [919]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sdiff^N40^Sgear1^S|cffa335ee|Hitem:138357::130220::::::110:73::5:4:3516:1808:1487:1813:::|h[Warhelm~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [920]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:138357::130220::::::110:73::5:4:3516:1808:1487:1813:::|h[Warhelm~`of~`the~`Obsidian~`Aspect]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [921]
+			"18:52:09 - Comm received:^1^SlootAck^T^N1^SLanféar-Illidan^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [922]
+			"18:52:09 - Comm received:^1^SlootAck^T^N1^SFearmeter-Illidan^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [923]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SLanféar-Illidan^N3^T^Silvl^N916.5^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:147165::::::::110:257::5:3:3562:1517:3337:::|h[Hood~`of~`Blind~`Absolution]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [924]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SLanféar-Illidan^N3^T^Silvl^N916.5^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138319::::::::110:257::6:3:3518:1502:3528:::|h[Purifier's~`Cassock]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [925]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SLanféar-Illidan^N3^T^Silvl^N916.5^Sdiff^N-20^Sgear1^S|cffa335ee|Hitem:147165::::::::110:257::5:3:3562:1517:3337:::|h[Hood~`of~`Blind~`Absolution]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [926]
+			"18:52:09 - Comm received:^1^SlootAck^T^N1^STelgina-Illidan^t^^ (from:) (Telgina) (distri:) (RAID)", -- [927]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SFearmeter-Illidan^N3^T^Silvl^N918.125^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:147183::130222::::::110:265::5:4:3562:1808:1507:3336:::|h[Diabolic~`Helm]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [928]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SFearmeter-Illidan^N3^T^Silvl^N918.125^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:138320::130222::::::110:265::5:4:3516:1808:1497:3336:::|h[Finery~`of~`Azj'Aqir]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [929]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SFearmeter-Illidan^N3^T^Silvl^N918.125^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:147183::130222::::::110:265::5:4:3562:1808:1507:3336:::|h[Diabolic~`Helm]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [930]
+			"18:52:09 - Comm received:^1^SlootAck^T^N1^SDrkillbotz-Illidan^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [931]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SDrkillbotz-Illidan^N3^T^Silvl^N912.125^Sdiff^N30^Sgear1^S|cffa335ee|Hitem:138361:5883:::::::110:251::5:3:3516:1487:3528:::|h[Dreadwyrm~`Shoulderguards]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [932]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SDrkillbotz-Illidan^N3^T^Silvl^N912.125^Sdiff^N50^Sgear1^S|cffa335ee|Hitem:138355::130220::::::110:251::3:4:3514:1808:1477:3336:::|h[Dreadwyrm~`Crown]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [933]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SDrkillbotz-Illidan^N3^T^Silvl^N912.125^Sdiff^N35^Sgear1^S|cffa335ee|Hitem:138355::130220::::::110:251::3:4:3514:1808:1477:3336:::|h[Dreadwyrm~`Crown]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [934]
+			"18:52:09 - Comm received:^1^SextraUtilData^T^N1^SShietnorunes-Illidan^N2^T^Sforged^N7^Spawn^T^N1^T^Sequipped^N537.346^Snew^N352.279^t^N2^T^Sequipped^N747.782^Snew^N543.107^t^N3^T^Sequipped^N687.231^Snew^N808.432^t^N4^T^Sequipped^N747.782^Snew^N601.665^t^t^SspecID^N250^Straits^N55^Slegend^N2^Ssockets^N3^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [935]
+			"18:52:09 - Comm received:^1^SlootAck^T^N1^SShietnorunes-Illidan^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [936]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N1^N2^STelgina-Illidan^N3^T^Silvl^N919.25^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:144326:5441:::::::110:253:::3:3529:3459:3570:::|h[The~`Mantle~`of~`Command]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [937]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N2^N2^STelgina-Illidan^N3^T^Silvl^N919.25^Sdiff^N30^Sgear1^S|cffa335ee|Hitem:147142::::::::110:253::3:3:3561:1482:3528:::|h[Wildstalker~`Helmet]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [938]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N3^N2^STelgina-Illidan^N3^T^Silvl^N919.25^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:144495::130222::::::110:253::35:4:3418:1808:1557:3337:::|h[Domatrax's~`Chain~`Hauberk]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [939]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N4^N2^STelgina-Illidan^N3^T^Silvl^N919.25^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:147142::::::::110:253::3:3:3561:1482:3528:::|h[Wildstalker~`Helmet]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [940]
+			"18:52:09 - Comm received:^1^SlootAck^T^N1^SJimrando-Illidan^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [941]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SJimrando-Illidan^N3^T^Silvl^N918.0625^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:147192::::::::110:72::3:3:3561:1482:3528:::|h[Titanic~`Onslaught~`Pauldrons]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [942]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SJimrando-Illidan^N3^T^Silvl^N918.0625^Sdiff^N-40^Sgear1^S|cffff8000|Hitem:137088::::::::110:72:::3:3529:3459:3570:::|h[Ceann-Ar~`Charger]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [943]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SJimrando-Illidan^N3^T^Silvl^N918.0625^Sdiff^N-55^Sgear1^S|cffff8000|Hitem:137088::::::::110:72:::3:3529:3459:3570:::|h[Ceann-Ar~`Charger]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [944]
+			"18:52:09 - Comm received:^1^SlootAck^T^N1^SThenex-Illidan^t^^ (from:) (Thenex) (distri:) (RAID)", -- [945]
+			"18:52:09 - Comm received:^1^SlootAck^T^N1^SZilorin-Illidan^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [946]
+			"18:52:09 - Comm received:^1^SextraUtilData^T^N1^SDjpurge-Illidan^N2^T^Sforged^N5^Spawn^T^N1^T^Sequipped^N593.684^Snew^N596.782^t^N2^T^Sequipped^N679.303^Snew^N767.133^t^N3^T^Sequipped^N69789.25^Snew^N0^t^N4^T^Sequipped^N679.303^Snew^N761.309^t^t^SspecID^N264^Straits^N52^Slegend^N2^Ssockets^N2^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [947]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SZilorin-Illidan^N3^T^Silvl^N916.0625^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:147132::::::::110:577::3:4:3561:41:1492:3336:::|h[Demonbane~`Shoulderpads]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [948]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SThenex-Illidan^N3^T^Silvl^N917^Sdiff^N40^Sgear1^S|cffa335ee|Hitem:138312::::::::110:63::5:3:3516:1487:3528:::|h[Hood~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [949]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SThenex-Illidan^N3^T^Silvl^N917^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138318::130221::::::110:63::6:4:3518:1808:1502:3528:::|h[Robe~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [950]
+			"18:52:09 - Comm received:^1^SlootAck^T^N1^SComet-Illidan^t^^ (from:) (Comet) (distri:) (RAID)", -- [951]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SZilorin-Illidan^N3^T^Silvl^N916.0625^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:138376::::::::110:577::5:3:3516:1487:3528:::|h[Tunic~`of~`Second~`Sight]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [952]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SComet-Illidan^N3^T^Silvl^N919.1875^Sdiff^N30^Sgear1^S|cffa335ee|Hitem:138337:5883:::::::110:270::5:3:3516:1487:3528:::|h[Pauldrons~`of~`Enveloped~`Dissonance]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [953]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SComet-Illidan^N3^T^Silvl^N919.1875^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:147028::::::::110:270::5:3:3562:1497:3528:::|h[Hide~`of~`the~`Abyssal~`Behemoth]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [954]
+			"18:52:09 - Comm received:^1^SlootAck^T^N1^SDjpurge-Illidan^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [955]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SDjpurge-Illidan^N3^T^Silvl^N914.1875^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:147180::130222::::::110:264::3:4:3561:1808:1482:3528:::|h[Pauldrons~`of~`the~`Skybreaker]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [956]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SDjpurge-Illidan^N3^T^Silvl^N914.1875^Sdiff^N30^Sgear1^S|cffa335ee|Hitem:147178::130222::::::110:264::3:4:3561:1808:1482:3528:::|h[Helmet~`of~`the~`Skybreaker]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [957]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SDjpurge-Illidan^N3^T^Silvl^N914.1875^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:147043::::::::110:264::5:3:3562:1502:3336:::|h[Hauberk~`of~`Frozen~`Mist]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [958]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SDjpurge-Illidan^N3^T^Silvl^N914.1875^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:147178::130222::::::110:264::3:4:3561:1808:1482:3528:::|h[Helmet~`of~`the~`Skybreaker]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [959]
+			"18:52:09 - Comm received:^1^SlootAck^T^N1^SZefarion-Illidan^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [960]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SZefarion-Illidan^N3^T^Silvl^N914.5625^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:137341::::::::110:64::16:3:3418:1567:3337:::|h[Cragshaper's~`Fitted~`Hood]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [961]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SZefarion-Illidan^N3^T^Silvl^N914.5625^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:138318::::::::110:64::6:3:3518:1507:3336:::|h[Robe~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [962]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SZefarion-Illidan^N3^T^Silvl^N914.5625^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:137341::::::::110:64::16:3:3418:1567:3337:::|h[Cragshaper's~`Fitted~`Hood]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [963]
+			"18:52:09 - Comm received:^1^SlootAck^T^N1^SEklipto-Illidan^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [964]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SEklipto-Illidan^N3^T^Silvl^N914.6875^Sdiff^N45^Sgear1^S|cffa335ee|Hitem:138380:5883:::::::110:577::3:3:3514:1472:1813:::|h[Shoulderguards~`of~`Second~`Sight]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [965]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SEklipto-Illidan^N3^T^Silvl^N914.6875^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:138376::130247::::::110:577::5:4:3516:1808:1492:3336:::|h[Tunic~`of~`Second~`Sight]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [966]
+			"18:52:09 - Comm received:^1^SextraUtilData^T^N1^SEklipto-Illidan^N2^T^Sforged^N10^Spawn^T^N1^T^Sequipped^N389.499^Snew^N302.209^t^N2^T^Sequipped^N698.826^Snew^N759.665^t^N3^T^Sequipped^N730.807^Snew^N0^t^N4^T^Sequipped^N698.826^Snew^N683.116^t^t^SspecID^N577^Straits^N57^Slegend^N2^Ssockets^N4^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [967]
+			"18:52:09 - Comm received:^1^SextraUtilData^T^N1^SBlutarski-Illidan^N2^T^Sforged^N6^Spawn^T^N1^T^Sequipped^N1017.68^Snew^N206.403^t^N2^T^Sequipped^N812.547^Snew^N926.981^t^N3^T^Sequipped^N68323.95^Snew^N0^t^N4^T^Sequipped^N812.547^Snew^N824.395^t^t^SspecID^N261^Straits^N56^Slegend^N2^Ssockets^N3^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [968]
+			"18:52:09 - Comm received:^1^SlootAck^T^N1^SBlutarski-Illidan^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [969]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SBlutarski-Illidan^N3^T^Silvl^N912.625^Sdiff^N-50^Sgear1^S|cffff8000|Hitem:144236:5883:::::::110:261:::3:3529:3459:3570:::|h[Mantle~`of~`the~`Master~`Assassin]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [970]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SBlutarski-Illidan^N3^T^Silvl^N912.625^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:147169::::::::110:261::3:3:3561:1482:3528:::|h[Fanged~`Slayer's~`Chestguard]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [971]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SThenex-Illidan^N3^T^Silvl^N917^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:138312::::::::110:63::5:3:3516:1487:3528:::|h[Hood~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [972]
+			"18:52:09 - Comm received:^1^SlootAck^T^N1^SLuthanen-Illidan^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [973]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N1^N2^SLuthanen-Illidan^N3^T^Silvl^N912.75^Sdiff^N30^Sgear1^S|cffa335ee|Hitem:138362::::::::110:65::5:3:3516:1487:1813:::|h[Pauldrons~`of~`the~`Highlord]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [974]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N2^N2^SLuthanen-Illidan^N3^T^Silvl^N912.75^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:147160::130219::::::110:65::5:4:3562:1808:1497:3528:::|h[Radiant~`Lightbringer~`Crown]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [975]
+			"18:52:09 - Comm received:^1^Sresponse^T^N1^N4^N2^SLuthanen-Illidan^N3^T^Silvl^N912.75^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:147160::130219::::::110:65::5:4:3562:1808:1497:3528:::|h[Radiant~`Lightbringer~`Crown]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [976]
+			"18:52:10 - Comm received:^1^SlootAck^T^N1^SXorn-Illidan^t^^ (from:) (Xorn) (distri:) (RAID)", -- [977]
+			"18:52:10 - Comm received:^1^Sresponse^T^N1^N2^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sdiff^N-40^Sgear1^S|cffff8000|Hitem:132394::::::::110:265:::2:3459:3570:::|h[Hood~`of~`Eternal~`Disdain]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [978]
+			"18:52:10 - Comm received:^1^Sresponse^T^N1^N3^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:138320::::::::110:265::6:3:3518:1512:3336:::|h[Finery~`of~`Azj'Aqir]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [979]
+			"18:52:10 - Comm received:^1^Sresponse^T^N1^N4^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sdiff^N-55^Sgear1^S|cffff8000|Hitem:132394::::::::110:265:::2:3459:3570:::|h[Hood~`of~`Eternal~`Disdain]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [980]
+			"18:52:12 - Comm received:^1^Sresponse^T^N1^N1^N2^SShietnorunes-Illidan^N3^T^Silvl^N917.125^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:142201::::::::110:250::35:3:3418:1522:3337:::|h[Mantle~`of~`Conflicted~`Loyalties]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [981]
+			"18:52:14 - Comm received:^1^Sresponse^T^N1^N4^N2^SEklipto-Illidan^N3^T^Silvl^N914.6875^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:138378::130219::::::110:577::5:4:3516:1808:1492:3336:::|h[Mask~`of~`Second~`Sight]|h|r^Sresponse^N5^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [982]
+			"18:52:15 - Comm received:^1^Sresponse^T^N1^N2^N2^SEklipto-Illidan^N3^T^Silvl^N914.6875^Sdiff^N35^Sgear1^S|cffa335ee|Hitem:138378::130219::::::110:577::5:4:3516:1808:1492:3336:::|h[Mask~`of~`Second~`Sight]|h|r^Sresponse^N5^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [983]
+			"18:52:16 - Comm received:^1^Sresponse^T^N1^N2^N2^SShietnorunes-Illidan^N3^T^Silvl^N917.125^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:134358::::::::110:250::35:3:3535:1587:3337:::|h[Portalguard~`Helm]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [984]
+			"18:52:16 - LootFrame:OnRoll (nil) (3) (Response:) (Minor Upgrade)", -- [985]
+			"18:52:16 - CreateResponse (2) (|cffa335ee|Hitem:147033::::::::110:577::5:3:3562:1512:3337:::|h[Lunar-Wrath Headgear]|h|r) (930) (3) (INVTYPE_HEAD) (nil) (Leather) (nil)", -- [986]
+			"18:52:16 - GetPlayersGear (147033) (INVTYPE_HEAD)", -- [987]
+			"18:52:16 - Trashing entry: (1) (|cffa335ee|Hitem:147033::::::::110:577::5:3:3562:1512:3337:::|h[Lunar-Wrath Headgear]|h|r)", -- [988]
+			"18:52:16 - Comm received:^1^Sresponse^T^N1^N2^N2^SComet-Illidan^N3^T^Silvl^N919.1875^Sdiff^N5^Sgear1^S|cffa335ee|Hitem:147033::::::::110:270::5:3:3562:1507:3336:::|h[Lunar-Wrath~`Headgear]|h|r^Sresponse^N3^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [989]
+			"18:52:17 - LootFrame:OnRoll (nil) (PASS) (Response:) (Pass)", -- [990]
+			"18:52:17 - CreateResponse (4) (|cffa335ee|Hitem:147033::::::::110:577::5:4:3562:41:1497:3528:::|h[Lunar-Wrath Headgear]|h|r) (915) (PASS) (INVTYPE_HEAD) (nil) (Leather) (nil)", -- [991]
+			"18:52:17 - GetPlayersGear (147033) (INVTYPE_HEAD)", -- [992]
+			"18:52:17 - Trashing entry: (1) (|cffa335ee|Hitem:147033::::::::110:577::5:4:3562:41:1497:3528:::|h[Lunar-Wrath Headgear]|h|r)", -- [993]
+			"18:52:17 - Comm received:^1^Sresponse^T^N1^N4^N2^SComet-Illidan^N3^T^Silvl^N919.1875^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:147033::::::::110:270::5:3:3562:1507:3336:::|h[Lunar-Wrath~`Headgear]|h|r^Sresponse^SPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [994]
+			"18:52:19 - Comm received:^1^SEUBonusRoll^T^N1^SXorn-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:265:8388608:5::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Xorn) (distri:) (RAID)", -- [995]
+			"18:52:19 - Comm received:^1^Soffline_timer^T^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [996]
+			"18:52:19 - Comm received:^1^Sresponse^T^N1^N1^N2^SThenex-Illidan^N3^T^Silvl^N917^Sdiff^N30^Sgear1^S|cffa335ee|Hitem:138321::130221::::::110:63::5:4:3516:1808:1487:3528:::|h[Mantle~`of~`Everburning~`Knowledge]|h|r^Sresponse^SPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [997]
+			"18:52:21 - Comm received:^1^Sresponse^T^N1^N1^N2^SNadzieja-Illidan^N3^T^Silvl^N919.75^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:140911:5900:130220::::::110:64::5:4:3516:1808:1497:3336:::|h[Mantle~`of~`Prestidigitation]|h|r^Sresponse^N5^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [998]
+			"18:52:21 - Comm received:^1^Sresponse^T^N1^N4^N2^SShietnorunes-Illidan^N3^T^Silvl^N917.125^Sdiff^N-10^Sgear1^S|cffa335ee|Hitem:134358::::::::110:250::35:3:3535:1587:3337:::|h[Portalguard~`Helm]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [999]
+			"18:52:21 - Comm received:^1^Sresponse^T^N1^N1^N2^SLanféar-Illidan^N3^T^Silvl^N916.5^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:134221:5899:::::::110:257::35:3:3418:1567:3337:::|h[Bonespeaker~`Mantle]|h|r^Sresponse^SPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1000]
+			"18:52:23 - Comm received:^1^Sresponse^T^N1^N2^N2^SZilorin-Illidan^N3^T^Silvl^N916.0625^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:147130::::::::110:577::5:3:3562:1497:3528:::|h[Demonbane~`Faceguard]|h|r^Sresponse^N5^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [1001]
+			"18:52:23 - Comm received:^1^Sresponse^T^N1^N4^N2^SZilorin-Illidan^N3^T^Silvl^N916.0625^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:147130::::::::110:577::5:3:3562:1497:3528:::|h[Demonbane~`Faceguard]|h|r^Sresponse^N5^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [1002]
+			"18:52:27 - Comm received:^1^Sresponse^T^N1^N3^N2^SShietnorunes-Illidan^N3^T^Silvl^N917.125^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:137527::::::::110:250::35:3:3418:1557:3337:::|h[Polished~`Jade~`Chestguard]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1003]
+			"18:52:30 - Comm received:^1^Sresponse^T^N1^N1^N2^SFearmeter-Illidan^N3^T^Silvl^N918.125^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:146997::::::::110:265::5:3:3562:1507:3336:::|h[Shoulderpads~`of~`Whispering~`Twilight]|h|r^Sresponse^SPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1004]
+			"18:52:31 - Comm received:^1^Sresponse^T^N1^N3^N2^SLuthanen-Illidan^N3^T^Silvl^N912.75^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:147157::::::::110:65::3:3:3561:1482:3528:::|h[Radiant~`Lightbringer~`Breastplate]|h|r^Sresponse^SPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1005]
+			"18:52:35 - Comm received:^1^Sresponse^T^N1^N2^N2^SDadizzle-Illidan^N3^T^Silvl^N912.75^Sdiff^N40^Sgear1^S|cffa335ee|Hitem:138330::::::::110:102::5:4:3516:42:1487:3528:::|h[Hood~`of~`the~`Astral~`Warden]|h|r^Sresponse^N3^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1006]
+			"18:52:36 - Comm received:^1^Sresponse^T^N1^N3^N2^SJimrando-Illidan^N3^T^Silvl^N918.0625^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:147187::::::::110:72::3:3:3561:1502:3337:::|h[Titanic~`Onslaught~`Breastplate]|h|r^Sresponse^N3^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [1007]
+			"18:52:37 - Comm received:^1^Sresponse^T^N1^N4^N2^SDadizzle-Illidan^N3^T^Silvl^N912.75^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:138330::::::::110:102::5:4:3516:42:1487:3528:::|h[Hood~`of~`the~`Astral~`Warden]|h|r^Sresponse^N5^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1008]
+			"18:52:44 - Comm received:^1^Sresponse^T^N1^N3^N2^SDrkillbotz-Illidan^N3^T^Silvl^N912.125^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:138349::::::::110:251::5:3:3516:1497:3336:::|h[Dreadwyrm~`Breastplate]|h|r^Sresponse^SPASS^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [1009]
+			"18:52:55 - Comm received:^1^Sresponse^T^N1^N1^N2^SZefarion-Illidan^N3^T^Silvl^N914.5625^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:138321:5899:130248::::::110:64::5:4:3516:1808:1497:3336:::|h[Mantle~`of~`Everburning~`Knowledge]|h|r^Sresponse^SPASS^t^t^^ (from:) (Zefarion) (distri:) (RAID)", -- [1010]
+			"18:53:00 - Comm received:^1^Sresponse^T^N1^N3^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:140913::::::::110:73::5:3:3517:1497:3336:::|h[Breastplate~`of~`the~`Remembered~`King]|h|r^Sresponse^SPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1011]
+			"18:53:02 - Comm received:^1^Sresponse^T^N1^N1^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sdiff^N30^Sgear1^S|cffa335ee|Hitem:138323::::::::110:265::5:3:3516:1487:3528:::|h[Pauldrons~`of~`Azj'Aqir]|h|r^Sresponse^N4^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1012]
+			"18:53:03 - Comm received:^1^SEUBonusRoll^T^N1^SDjpurge-Illidan^N2^Sitem^N3^S|cffa335ee|Hitem:147105::::::::110:264::5:3:3562:1497:3528:::|h[Moontalon's~`Feather]|h|r^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1013]
+			"18:53:08 - Comm received:^1^Sresponse^T^N1^N2^N2^SBlutarski-Illidan^N3^T^Silvl^N912.625^Sdiff^N40^Sgear1^S|cffa335ee|Hitem:138332::130222::::::110:261::5:4:3516:1808:1487:3528:::|h[Doomblade~`Cowl]|h|r^Sresponse^SPASS^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [1014]
+			"18:53:08 - Comm received:^1^Sresponse^T^N1^N4^N2^SBlutarski-Illidan^N3^T^Silvl^N912.625^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:138332::130222::::::110:261::5:4:3516:1808:1487:3528:::|h[Doomblade~`Cowl]|h|r^Sresponse^SPASS^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [1015]
+			"18:53:09 - Comm received:^1^Sresponse^T^N1^N3^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:138349::::::::110:252::5:3:3516:1487:1813:::|h[Dreadwyrm~`Breastplate]|h|r^Sresponse^STIMEOUT^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [1016]
+			"18:53:25 - Comm received:^1^Svote^T^N1^N3^N2^SJimrando-Illidan^N3^N1^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1017]
+			"18:53:51 - Comm received:^1^Svote^T^N1^N2^N2^SComet-Illidan^N3^N1^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [1018]
+			"18:53:56 - Comm received:^1^Svote^T^N1^N2^N2^SComet-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1019]
+			"18:54:00 - Comm received:^1^Sawarded^T^N1^N2^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1020]
+			"18:54:00 - Comm received:^1^Shistory^T^N1^SComet-Illidan^N2^T^SmapID^N1676^Sdate^S06/07/17^Sclass^SMONK^SgroupSize^N20^Svotes^N2^Stime^S20:54:29^SitemReplaced1^S|cffa335ee|Hitem:147033::::::::110:270::5:3:3562:1507:3336:::|h[Lunar-Wrath~`Headgear]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^SisAwardReason^b^Sresponse^SMinor~`Upgrade^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:147033::::::::110:577::5:3:3562:1512:3337:::|h[Lunar-Wrath~`Headgear]|h|r^Scolor^T^N1^N0^N2^N0.7^N3^N0.7^N4^N1^t^SresponseID^N3^Sboss^SPriestess~`Lunaspyre^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1021]
+			"18:54:02 - Comm received:^1^Svote^T^N1^N3^N2^SJimrando-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1022]
+			"18:54:08 - Comm received:^1^Svote^T^N1^N3^N2^SJimrando-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1023]
+			"18:54:16 - Comm received:^1^Sawarded^T^N1^N1^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1024]
+			"18:54:16 - Comm received:^1^Shistory^T^N1^SXorn-Illidan^N2^T^SmapID^N1676^Sdate^S06/07/17^Sclass^SWARLOCK^SgroupSize^N20^Svotes^N0^Stime^S20:54:46^SitemReplaced1^S|cffa335ee|Hitem:138323::::::::110:265::5:3:3516:1487:3528:::|h[Pauldrons~`of~`Azj'Aqir]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^SisAwardReason^b^Sresponse^SOffspec^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:146997::::::::110:577::5:3:3562:1502:3336:::|h[Shoulderpads~`of~`Whispering~`Twilight]|h|r^Scolor^T^N1^F5263030152770226^f-53^N2^F6640601803495317^f-54^N3^F6322700653327995^f-53^N4^N1^t^SresponseID^N4^Sboss^SPriestess~`Lunaspyre^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1025]
+			"18:54:21 - Comm received:^1^Svote^T^N1^N3^N2^SJimrando-Illidan^N3^N1^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1026]
+			"18:54:26 - Comm received:^1^Sawarded^T^N1^N3^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1027]
+			"18:54:26 - Comm received:^1^Shistory^T^N1^SJimrando-Illidan^N2^T^SmapID^N1676^Sdate^S06/07/17^Sclass^SWARRIOR^SgroupSize^N20^Svotes^N4^Stime^S20:54:55^SitemReplaced1^S|cffa335ee|Hitem:147187::::::::110:72::3:3:3561:1502:3337:::|h[Titanic~`Onslaught~`Breastplate]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^SisAwardReason^b^Sresponse^SMinor~`Upgrade^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:147068::::::::110:577::5:3:3562:1497:3528:::|h[Cuirass~`of~`Blinding~`Dawn]|h|r^Scolor^T^N1^N0^N2^N0.7^N3^N0.7^N4^N1^t^SresponseID^N3^Sboss^SPriestess~`Lunaspyre^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1028]
+			"18:55:30 - Comm received:^1^Sawarded^T^N1^N4^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1029]
+			"18:55:30 - Comm received:^1^Ssession_end^T^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1030]
+			"18:55:30 - Comm received:^1^Shistory^T^N1^SEklipto-Illidan^N2^T^SmapID^N1676^Sdate^S06/07/17^Sclass^SDEMONHUNTER^SgroupSize^N20^Svotes^N0^Stime^S20:56:00^SitemReplaced1^S|cffa335ee|Hitem:138378::130219::::::110:577::5:4:3516:1808:1492:3336:::|h[Mask~`of~`Second~`Sight]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^SisAwardReason^b^Sresponse^STransmog^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:147033::::::::110:577::5:4:3562:41:1497:3528:::|h[Lunar-Wrath~`Headgear]|h|r^Scolor^T^N1^F8336074604387747^f-54^N2^F6322700653327995^f-53^N3^F5545608952918964^f-53^N4^N1^t^SresponseID^N5^Sboss^SPriestess~`Lunaspyre^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1031]
+			"18:56:17 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Lanféar) (distri:) (GUILD)", -- [1032]
+			"18:56:17 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^StierNumButtons^N5^Sresponses^T^N1^T^Scolor^T^N1^N0^N2^N1^N3^N0^N4^N1^t^Stext^SBiS^Ssort^N1^t^N2^T^Scolor^T^N1^N1^N2^N0.5^N3^N0^N4^N1^t^Stext^SMainspec^Ssort^N2^t^N4^T^Scolor^T^N1^F5263030152770226^f-53^N2^F6640601803495317^f-54^N3^F6322700653327995^f-53^N4^N1^t^Stext^SOffspec^Ssort^N4^t^N5^T^Scolor^T^N1^F8336074604387747^f-54^N2^F6322700653327995^f-53^N3^F5545608952918964^f-53^N4^N1^t^Stext^STransmog^Ssort^N5^t^Stier^T^N3^T^Scolor^T^N1^N1^N2^N0.5^N3^N1^N4^N1^t^Stext^S3rd~`Tier~`Piece^Ssort^N3^t^N4^T^Scolor^T^N1^N0.5^N2^N1^N3^N1^N4^N1^t^Stext^S1st~`Tier~`Piece^Ssort^N4^t^N5^T^Scolor^T^N1^N0.56078431372549^N2^F6322700653327995^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SUpgrade^Ssort^N5^t^t^t^ShideVotes^b^StierButtonsEnabled^B^SmultiVote^B^StierButtons^T^N1^T^Stext^S4th~`Piece^t^N2^T^Stext^S2nd~`Piece^t^N3^T^Stext^S3rd~`Piece^t^N4^T^Stext^S1st~`Piece^t^N5^T^Stext^SUpgrade^t^t^Sbuttons^T^N1^T^Stext^SBiS^t^N2^T^Stext^SMainspec^t^N4^T^Stext^SOffspec^t^N5^T^Stext^STransmog^t^t^SnumButtons^N5^SanonymousVoting^b^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1033]
+			"18:56:17 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SEklipto-Illidan^N3^SReinhärt-Illidan^N4^SDjpurge-Illidan^N5^SFearmeter-Illidan^N6^SShietnorunes-Illidan^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1034]
+			"18:56:17 - nil = (IsCouncil) (Comet-Illidan)", -- [1035]
+			"19:08:14 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Lanféar) (distri:) (GUILD)", -- [1036]
+			"19:08:15 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^StierNumButtons^N5^Sresponses^T^N1^T^Scolor^T^N1^N0^N2^N1^N3^N0^N4^N1^t^Stext^SBiS^Ssort^N1^t^N2^T^Scolor^T^N1^N1^N2^N0.5^N3^N0^N4^N1^t^Stext^SMainspec^Ssort^N2^t^N4^T^Scolor^T^N1^F5263030152770226^f-53^N2^F6640601803495317^f-54^N3^F6322700653327995^f-53^N4^N1^t^Stext^SOffspec^Ssort^N4^t^N5^T^Scolor^T^N1^F8336074604387747^f-54^N2^F6322700653327995^f-53^N3^F5545608952918964^f-53^N4^N1^t^Stext^STransmog^Ssort^N5^t^Stier^T^N3^T^Scolor^T^N1^N1^N2^N0.5^N3^N1^N4^N1^t^Stext^S3rd~`Tier~`Piece^Ssort^N3^t^N4^T^Scolor^T^N1^N0.5^N2^N1^N3^N1^N4^N1^t^Stext^S1st~`Tier~`Piece^Ssort^N4^t^N5^T^Scolor^T^N1^N0.56078431372549^N2^F6322700653327995^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SUpgrade^Ssort^N5^t^t^t^ShideVotes^b^StierButtonsEnabled^B^SmultiVote^B^StierButtons^T^N1^T^Stext^S4th~`Piece^t^N2^T^Stext^S2nd~`Piece^t^N3^T^Stext^S3rd~`Piece^t^N4^T^Stext^S1st~`Piece^t^N5^T^Stext^SUpgrade^t^t^Sbuttons^T^N1^T^Stext^SBiS^t^N2^T^Stext^SMainspec^t^N4^T^Stext^SOffspec^t^N5^T^Stext^STransmog^t^t^SnumButtons^N5^SanonymousVoting^b^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1037]
+			"19:08:15 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SEklipto-Illidan^N3^SReinhärt-Illidan^N4^SDjpurge-Illidan^N5^SFearmeter-Illidan^N6^SShietnorunes-Illidan^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1038]
+			"19:08:15 - nil = (IsCouncil) (Comet-Illidan)", -- [1039]
+			"19:15:15 - Comm received:^1^Scandidates^T^N1^T^SThenex-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N700^Sclass^SMAGE^Senchanter^B^Srank^SRaider^t^SNadzieja-Illidan^T^Srole^SDAMAGER^Sclass^SMAGE^Srank^S^t^SFuryisthy-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEMONHUNTER^Srank^SRaider^t^SJimrando-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SRaider^t^SDadizzle-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDRUID^Srank^SRaider^t^SBlutarski-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SROGUE^Srank^SOfficer^t^SFearmeter-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SWARLOCK^Srank^SOfficer^t^SShietnorunes-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SOfficer^t^SEklipto-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N195^Sclass^SDEMONHUNTER^Senchanter^B^Srank^SOfficer^t^SComet-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SMONK^Srank^SRaider^t^SLuthanen-Illidan^T^Srole^SHEALER^Senchant_lvl^N762^Sclass^SPALADIN^Senchanter^B^Srank^SRaider^t^SLanféar-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SPRIEST^Srank^SRaider^t^SDjpurge-Illidan^T^Srole^SHEALER^Senchant_lvl^N0^Sclass^SSHAMAN^Srank^SOfficer^t^SReinhärt-Illidan^T^Srole^STANK^Senchant_lvl^N0^Sclass^SWARRIOR^Srank^SOfficer^t^STelgina-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SHUNTER^Srank^SRaider^t^SXorn-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N765^Sclass^SWARLOCK^Senchanter^B^Srank^SRaider^t^SDrkillbotz-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SRaider^t^SZilorin-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N101^Sclass^SDEMONHUNTER^Senchanter^B^Srank^SRaider^t^SCannibal-Illidan^T^Srole^SDAMAGER^Senchant_lvl^N0^Sclass^SDEATHKNIGHT^Srank^SRaider^t^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1040]
+			"19:16:57 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Blutarski) (distri:) (GUILD)", -- [1041]
+			"19:16:58 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^StierNumButtons^N5^Sresponses^T^N1^T^Scolor^T^N1^N0^N2^N1^N3^N0^N4^N1^t^Stext^SBiS^Ssort^N1^t^N2^T^Scolor^T^N1^N1^N2^N0.5^N3^N0^N4^N1^t^Stext^SMainspec^Ssort^N2^t^N4^T^Scolor^T^N1^F5263030152770226^f-53^N2^F6640601803495317^f-54^N3^F6322700653327995^f-53^N4^N1^t^Stext^SOffspec^Ssort^N4^t^N5^T^Scolor^T^N1^F8336074604387747^f-54^N2^F6322700653327995^f-53^N3^F5545608952918964^f-53^N4^N1^t^Stext^STransmog^Ssort^N5^t^Stier^T^N3^T^Scolor^T^N1^N1^N2^N0.5^N3^N1^N4^N1^t^Stext^S3rd~`Tier~`Piece^Ssort^N3^t^N4^T^Scolor^T^N1^N0.5^N2^N1^N3^N1^N4^N1^t^Stext^S1st~`Tier~`Piece^Ssort^N4^t^N5^T^Scolor^T^N1^N0.56078431372549^N2^F6322700653327995^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SUpgrade^Ssort^N5^t^t^t^ShideVotes^b^StierButtonsEnabled^B^SmultiVote^B^StierButtons^T^N1^T^Stext^S4th~`Piece^t^N2^T^Stext^S2nd~`Piece^t^N3^T^Stext^S3rd~`Piece^t^N4^T^Stext^S1st~`Piece^t^N5^T^Stext^SUpgrade^t^t^Sbuttons^T^N1^T^Stext^SBiS^t^N2^T^Stext^SMainspec^t^N4^T^Stext^SOffspec^t^N5^T^Stext^STransmog^t^t^SnumButtons^N5^SanonymousVoting^b^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1042]
+			"19:16:58 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SEklipto-Illidan^N3^SReinhärt-Illidan^N4^SDjpurge-Illidan^N5^SFearmeter-Illidan^N6^SShietnorunes-Illidan^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1043]
+			"19:16:58 - nil = (IsCouncil) (Comet-Illidan)", -- [1044]
+			"19:17:08 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Shietnorunes) (distri:) (GUILD)", -- [1045]
+			"19:17:09 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^StierNumButtons^N5^Sresponses^T^N1^T^Scolor^T^N1^N0^N2^N1^N3^N0^N4^N1^t^Stext^SBiS^Ssort^N1^t^N2^T^Scolor^T^N1^N1^N2^N0.5^N3^N0^N4^N1^t^Stext^SMainspec^Ssort^N2^t^N4^T^Scolor^T^N1^F5263030152770226^f-53^N2^F6640601803495317^f-54^N3^F6322700653327995^f-53^N4^N1^t^Stext^SOffspec^Ssort^N4^t^N5^T^Scolor^T^N1^F8336074604387747^f-54^N2^F6322700653327995^f-53^N3^F5545608952918964^f-53^N4^N1^t^Stext^STransmog^Ssort^N5^t^Stier^T^N3^T^Scolor^T^N1^N1^N2^N0.5^N3^N1^N4^N1^t^Stext^S3rd~`Tier~`Piece^Ssort^N3^t^N4^T^Scolor^T^N1^N0.5^N2^N1^N3^N1^N4^N1^t^Stext^S1st~`Tier~`Piece^Ssort^N4^t^N5^T^Scolor^T^N1^N0.56078431372549^N2^F6322700653327995^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SUpgrade^Ssort^N5^t^t^t^ShideVotes^b^StierButtonsEnabled^B^SmultiVote^B^StierButtons^T^N1^T^Stext^S4th~`Piece^t^N2^T^Stext^S2nd~`Piece^t^N3^T^Stext^S3rd~`Piece^t^N4^T^Stext^S1st~`Piece^t^N5^T^Stext^SUpgrade^t^t^Sbuttons^T^N1^T^Stext^SBiS^t^N2^T^Stext^SMainspec^t^N4^T^Stext^SOffspec^t^N5^T^Stext^STransmog^t^t^SnumButtons^N5^SanonymousVoting^b^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1046]
+			"19:17:09 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SEklipto-Illidan^N3^SReinhärt-Illidan^N4^SDjpurge-Illidan^N5^SFearmeter-Illidan^N6^SShietnorunes-Illidan^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1047]
+			"19:17:09 - nil = (IsCouncil) (Comet-Illidan)", -- [1048]
+			"19:18:45 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Marketfreshe) (distri:) (GUILD)", -- [1049]
+			"19:42:11 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Telgina) (distri:) (GUILD)", -- [1050]
+			"19:42:11 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^StierNumButtons^N5^Sresponses^T^N1^T^Scolor^T^N1^N0^N2^N1^N3^N0^N4^N1^t^Stext^SBiS^Ssort^N1^t^N2^T^Scolor^T^N1^N1^N2^N0.5^N3^N0^N4^N1^t^Stext^SMainspec^Ssort^N2^t^N4^T^Scolor^T^N1^F5263030152770226^f-53^N2^F6640601803495317^f-54^N3^F6322700653327995^f-53^N4^N1^t^Stext^SOffspec^Ssort^N4^t^N5^T^Scolor^T^N1^F8336074604387747^f-54^N2^F6322700653327995^f-53^N3^F5545608952918964^f-53^N4^N1^t^Stext^STransmog^Ssort^N5^t^Stier^T^N3^T^Scolor^T^N1^N1^N2^N0.5^N3^N1^N4^N1^t^Stext^S3rd~`Tier~`Piece^Ssort^N3^t^N4^T^Scolor^T^N1^N0.5^N2^N1^N3^N1^N4^N1^t^Stext^S1st~`Tier~`Piece^Ssort^N4^t^N5^T^Scolor^T^N1^N0.56078431372549^N2^F6322700653327995^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SUpgrade^Ssort^N5^t^t^t^ShideVotes^b^StierButtonsEnabled^B^SmultiVote^B^StierButtons^T^N1^T^Stext^S4th~`Piece^t^N2^T^Stext^S2nd~`Piece^t^N3^T^Stext^S3rd~`Piece^t^N4^T^Stext^S1st~`Piece^t^N5^T^Stext^SUpgrade^t^t^Sbuttons^T^N1^T^Stext^SBiS^t^N2^T^Stext^SMainspec^t^N4^T^Stext^SOffspec^t^N5^T^Stext^STransmog^t^t^SnumButtons^N5^SanonymousVoting^b^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1051]
+			"19:42:11 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SEklipto-Illidan^N3^SReinhärt-Illidan^N4^SDjpurge-Illidan^N5^SFearmeter-Illidan^N6^SShietnorunes-Illidan^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1052]
+			"19:42:11 - nil = (IsCouncil) (Comet-Illidan)", -- [1053]
+			"19:43:46 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Blutarski) (distri:) (GUILD)", -- [1054]
+			"19:43:46 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^StierNumButtons^N5^Sresponses^T^N1^T^Scolor^T^N1^N0^N2^N1^N3^N0^N4^N1^t^Stext^SBiS^Ssort^N1^t^N2^T^Scolor^T^N1^N1^N2^N0.5^N3^N0^N4^N1^t^Stext^SMainspec^Ssort^N2^t^N4^T^Scolor^T^N1^F5263030152770226^f-53^N2^F6640601803495317^f-54^N3^F6322700653327995^f-53^N4^N1^t^Stext^SOffspec^Ssort^N4^t^N5^T^Scolor^T^N1^F8336074604387747^f-54^N2^F6322700653327995^f-53^N3^F5545608952918964^f-53^N4^N1^t^Stext^STransmog^Ssort^N5^t^Stier^T^N3^T^Scolor^T^N1^N1^N2^N0.5^N3^N1^N4^N1^t^Stext^S3rd~`Tier~`Piece^Ssort^N3^t^N4^T^Scolor^T^N1^N0.5^N2^N1^N3^N1^N4^N1^t^Stext^S1st~`Tier~`Piece^Ssort^N4^t^N5^T^Scolor^T^N1^N0.56078431372549^N2^F6322700653327995^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SUpgrade^Ssort^N5^t^t^t^ShideVotes^b^StierButtonsEnabled^B^SmultiVote^B^StierButtons^T^N1^T^Stext^S4th~`Piece^t^N2^T^Stext^S2nd~`Piece^t^N3^T^Stext^S3rd~`Piece^t^N4^T^Stext^S1st~`Piece^t^N5^T^Stext^SUpgrade^t^t^Sbuttons^T^N1^T^Stext^SBiS^t^N2^T^Stext^SMainspec^t^N4^T^Stext^SOffspec^t^N5^T^Stext^STransmog^t^t^SnumButtons^N5^SanonymousVoting^b^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1055]
+			"19:43:46 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SEklipto-Illidan^N3^SReinhärt-Illidan^N4^SDjpurge-Illidan^N5^SFearmeter-Illidan^N6^SShietnorunes-Illidan^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1056]
+			"19:43:46 - nil = (IsCouncil) (Comet-Illidan)", -- [1057]
+			"19:51:21 - Comm received:^1^SEUBonusRoll^T^N1^SEklipto-Illidan^N2^Sitem^N3^S|cffa335ee|Hitem:147128::::::::110:577::5:3:3562:1502:3336:::|h[Demonbane~`Shroud]|h|r^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1058]
+			"19:51:35 - Comm received:^1^SlootTable^T^N1^T^N1^T^SequipLoc^S^SlootSlot^N1^Slink^S|cffa335ee|Hitem:147086::::::::110:577::5:3:3562:1502:3336:::|h[Befouled~`Effigy~`of~`Elune]|h|r^SsubType^SArtifact~`Relic^Srelic^SFel^Sawarded^b^Sname^SBefouled~`Effigy~`of~`Elune^Stexture^N134443^Silvl^N920^Sboe^b^Sbagged^b^Squality^N4^t^N2^T^SequipLoc^SINVTYPE_ROBE^SlootSlot^N2^Slink^S|cffa335ee|Hitem:146995::::::::110:577::5:4:3562:42:1497:3528:::|h[Soul~`Queen's~`Ceremonial~`Robes]|h|r^SsubType^SCloth^Srelic^b^Sawarded^b^Sname^SSoul~`Queen's~`Ceremonial~`Robes^Stexture^N1518071^Silvl^N915^Sboe^b^Sbagged^b^Squality^N4^t^N3^T^SequipLoc^SINVTYPE_TRINKET^SlootSlot^N3^Slink^S|cffa335ee|Hitem:147024::::::::110:577::5:3:3562:1517:3337:::|h[Reliquary~`of~`the~`Damned]|h|r^SsubType^SMiscellaneous^Srelic^b^Sawarded^b^Sname^SReliquary~`of~`the~`Damned^Stexture^N134547^Silvl^N935^Sboe^b^Sbagged^b^Squality^N4^t^N4^T^SequipLoc^S^SlootSlot^N4^Slink^S|cffa335ee|Hitem:147332::::::::110:577::5:1:570:::|h[Cloak~`of~`the~`Foregone~`Conqueror]|h|r^SsubType^SJunk^Stoken^SBackSlot^Srelic^b^Sawarded^b^Sname^SCloak~`of~`the~`Foregone~`Conqueror^Stexture^N133772^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1059]
+			"19:51:35 - NewRelicAutopassCheck (|cffa335ee|Hitem:147086::::::::110:577::5:3:3562:1502:3336:::|h[Befouled Effigy of Elune]|h|r) (Fel)", -- [1060]
+			"19:51:35 - Autopassed on:  (|cffa335ee|Hitem:147086::::::::110:577::5:3:3562:1502:3336:::|h[Befouled Effigy of Elune]|h|r)", -- [1061]
+			"19:51:35 - CreateResponse (1) (|cffa335ee|Hitem:147086::::::::110:577::5:3:3562:1502:3336:::|h[Befouled Effigy of Elune]|h|r) (920) (AUTOPASS) () (nil) (Artifact Relic) (nil)", -- [1062]
+			"19:51:35 - Autopassed on:  (|cffa335ee|Hitem:146995::::::::110:577::5:4:3562:42:1497:3528:::|h[Soul Queen's Ceremonial Robes]|h|r)", -- [1063]
+			"19:51:35 - CreateResponse (2) (|cffa335ee|Hitem:146995::::::::110:577::5:4:3562:42:1497:3528:::|h[Soul Queen's Ceremonial Robes]|h|r) (915) (AUTOPASS) (INVTYPE_ROBE) (nil) (Cloth) (nil)", -- [1064]
+			"19:51:35 - GetPlayersGear (146995) (INVTYPE_ROBE)", -- [1065]
+			"19:51:35 - Autopassed on:  (|cffa335ee|Hitem:147332::::::::110:577::5:1:570:::|h[Cloak of the Foregone Conqueror]|h|r)", -- [1066]
+			"19:51:35 - CreateResponse (4) (|cffa335ee|Hitem:147332::::::::110:577::5:1:570:::|h[Cloak of the Foregone Conqueror]|h|r) (110) (AUTOPASS) () (nil) (Junk) (nil)", -- [1067]
+			"19:51:35 - GetPlayersGear (147332) ()", -- [1068]
+			"19:51:35 - LootFrame:Start()", -- [1069]
+			"19:51:35 - Restoring entry: (normal) (1)", -- [1070]
+			"19:51:35 - Comm received:^1^SlootAck^T^N1^SShietnorunes-Illidan^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1071]
+			"19:51:35 - Comm received:^1^SextraUtilData^T^N1^SShietnorunes-Illidan^N2^T^Sforged^N7^Spawn^T^N1^T^Sequipped^N0^Snew^N0^t^N2^T^Sequipped^N687.231^Snew^N524.402^t^N3^T^Sequipped^N128.637^Snew^N251.549^t^N4^T^Sequipped^N361.607^Snew^N0^t^t^SspecID^N250^Straits^N55^Slegend^N2^Ssockets^N3^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1072]
+			"19:51:35 - Comm received:^1^SlootAck^T^N1^SLanféar-Illidan^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1073]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N1^N2^SLanféar-Illidan^N3^T^Silvl^N916.5^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1074]
+			"19:51:35 - Comm received:^1^SlootAck^T^N1^SNadzieja-Illidan^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1075]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N1^N2^SNadzieja-Illidan^N3^T^Silvl^N919.75^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1076]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N4^N2^SNadzieja-Illidan^N3^T^Silvl^N919.75^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138365:5436:130248::::::110:64::5:4:3516:1808:1487:3528:::|h[Cloak~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1077]
+			"19:51:35 - Comm received:^1^SlootAck^T^N1^SXorn-Illidan^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1078]
+			"19:51:35 - Comm received:^1^SextraUtilData^T^N1^SXorn-Illidan^N2^T^Sforged^N7^Spawn^T^t^SspecID^N265^Straits^N52^Slegend^N2^Ssockets^N1^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1079]
+			"19:51:35 - Comm received:^1^SlootAck^T^N1^SDadizzle-Illidan^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1080]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N1^N2^SDadizzle-Illidan^N3^T^Silvl^N912.75^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1081]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N2^N2^SDadizzle-Illidan^N3^T^Silvl^N912.75^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:138324::::::::110:102::5:3:3516:1487:3528:::|h[Robe~`of~`the~`Astral~`Warden]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1082]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N4^N2^SDadizzle-Illidan^N3^T^Silvl^N912.75^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:138366:5436:::::::110:102::5:3:3516:1497:3336:::|h[Cloak~`of~`the~`Astral~`Warden]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1083]
+			"19:51:35 - Comm received:^1^SlootAck^T^N1^SFearmeter-Illidan^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1084]
+			"19:51:35 - Comm received:^1^SlootAck^T^N1^SReinhärt-Illidan^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1085]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N1^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1086]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N2^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:140913::::::::110:73::5:3:3517:1497:3336:::|h[Breastplate~`of~`the~`Remembered~`King]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1087]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N4^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:147188:5434:::::::110:73::3:3:3561:1487:3336:::|h[Titanic~`Onslaught~`Cloak]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1088]
+			"19:51:35 - Comm received:^1^SextraUtilData^T^N1^SBlutarski-Illidan^N2^T^Sforged^N6^Spawn^T^N1^T^Sequipped^N0^Snew^N0^t^N2^T^Sequipped^N68323.95^Snew^N22068.78^t^N3^T^Sequipped^N231.844^Snew^N0.526^t^N4^T^Sequipped^N536.769^Snew^N0^t^t^SspecID^N261^Straits^N56^Slegend^N2^Ssockets^N3^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [1089]
+			"19:51:35 - Comm received:^1^SlootAck^T^N1^SEklipto-Illidan^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1090]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N2^N2^SEklipto-Illidan^N3^T^Silvl^N914.6875^Sdiff^N20^Sgear1^S|cffa335ee|Hitem:138376::130247::::::110:577::5:4:3516:1808:1492:3336:::|h[Tunic~`of~`Second~`Sight]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1091]
+			"19:51:35 - Comm received:^1^SlootAck^T^N1^SDrkillbotz-Illidan^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [1092]
+			"19:51:35 - Comm received:^1^SextraUtilData^T^N1^SEklipto-Illidan^N2^T^Sforged^N10^Spawn^T^N1^T^Sequipped^N0^Snew^N0^t^N2^T^Sequipped^N730.807^Snew^N282.473^t^N3^T^Sequipped^N459.733^Snew^N0.485^t^N4^T^Sequipped^N665.816^Snew^N0^t^t^SspecID^N577^Straits^N57^Slegend^N2^Ssockets^N4^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1093]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N1^N2^SDrkillbotz-Illidan^N3^T^Silvl^N912.125^Sresponse^SAUTOPASS^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [1094]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N2^N2^SDrkillbotz-Illidan^N3^T^Silvl^N912.125^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:138349::::::::110:251::5:3:3516:1497:3336:::|h[Dreadwyrm~`Breastplate]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [1095]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N4^N2^SDrkillbotz-Illidan^N3^T^Silvl^N912.125^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138364:5434:::::::110:251::5:3:3516:1487:3528:::|h[Dreadwyrm~`Greatcloak]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [1096]
+			"19:51:35 - Comm received:^1^SlootAck^T^N1^SCannibal-Illidan^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [1097]
+			"19:51:35 - Comm received:^1^SlootAck^T^N1^STelgina-Illidan^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1098]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N1^N2^STelgina-Illidan^N3^T^Silvl^N919.25^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1099]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N2^N2^STelgina-Illidan^N3^T^Silvl^N919.25^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:144495::130222::::::110:253::35:4:3418:1808:1557:3337:::|h[Domatrax's~`Chain~`Hauberk]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1100]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N4^N2^STelgina-Illidan^N3^T^Silvl^N919.25^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:147140::::::::110:253::3:3:3561:1482:3528:::|h[Wildstalker~`Cape]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1101]
+			"19:51:35 - Comm received:^1^SlootAck^T^N1^SJimrando-Illidan^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [1102]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N1^N2^SJimrando-Illidan^N3^T^Silvl^N918.0625^Sresponse^SAUTOPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [1103]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N2^N2^SJimrando-Illidan^N3^T^Silvl^N918.0625^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:147187::::::::110:72::3:3:3561:1502:3337:::|h[Titanic~`Onslaught~`Breastplate]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [1104]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N4^N2^SJimrando-Illidan^N3^T^Silvl^N918.0625^Sdiff^N-860^Sgear1^S|cffff8000|Hitem:137053:5434:::::::110:72:::2:1811:3570:::|h[Kazzalax,~`Fujieda's~`Fury]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [1105]
+			"19:51:35 - Comm received:^1^SextraUtilData^T^N1^SDjpurge-Illidan^N2^T^Sforged^N5^Spawn^T^N1^T^Sequipped^N0^Snew^N0^t^N2^T^Sequipped^N69789.25^Snew^N709.983^t^N3^T^Sequipped^N18295.68^Snew^N0.528^t^N4^T^Sequipped^N440.049^Snew^N0^t^t^SspecID^N264^Straits^N52^Slegend^N2^Ssockets^N2^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1106]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N1^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sresponse^SAUTOPASS^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [1107]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N2^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:138349::::::::110:252::5:3:3516:1487:1813:::|h[Dreadwyrm~`Breastplate]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [1108]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N4^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138364:5434:::::::110:252::6:3:3518:1502:3528:::|h[Dreadwyrm~`Greatcloak]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [1109]
+			"19:51:35 - Comm received:^1^SlootAck^T^N1^SThenex-Illidan^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1110]
+			"19:51:35 - Comm received:^1^SlootAck^T^N1^SZilorin-Illidan^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [1111]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N2^N2^SZilorin-Illidan^N3^T^Silvl^N916.0625^Sdiff^N25^Sgear1^S|cffa335ee|Hitem:138376::::::::110:577::5:3:3516:1487:3528:::|h[Tunic~`of~`Second~`Sight]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [1112]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N1^N2^SThenex-Illidan^N3^T^Silvl^N917^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1113]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N4^N2^SThenex-Illidan^N3^T^Silvl^N917^Sdiff^N-810^Sgear1^S|cffa335ee|Hitem:146984:5436:::::::110:63::5:3:3562:1502:3336:::|h[Cloak~`of~`Stifling~`Brimstone]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1114]
+			"19:51:35 - Comm received:^1^SlootAck^T^N1^SComet-Illidan^t^^ (from:) (Comet) (distri:) (RAID)", -- [1115]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N1^N2^SComet-Illidan^N3^T^Silvl^N919.5^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [1116]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N2^N2^SComet-Illidan^N3^T^Silvl^N919.5^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:147028::::::::110:270::5:3:3562:1497:3528:::|h[Hide~`of~`the~`Abyssal~`Behemoth]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [1117]
+			"19:51:35 - Comm received:^1^Sresponse^T^N1^N4^N2^SComet-Illidan^N3^T^Silvl^N919.5^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138367:5436:::::::110:270::6:4:3518:41:1502:3528:::|h[Cloak~`of~`Enveloped~`Dissonance]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [1118]
+			"19:51:36 - Comm received:^1^SlootAck^T^N1^SBlutarski-Illidan^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [1119]
+			"19:51:36 - Comm received:^1^Sresponse^T^N1^N2^N2^SBlutarski-Illidan^N3^T^Silvl^N912.625^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:147169::::::::110:261::3:3:3561:1482:3528:::|h[Fanged~`Slayer's~`Chestguard]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [1120]
+			"19:51:36 - Comm received:^1^Sresponse^T^N1^N4^N2^SBlutarski-Illidan^N3^T^Silvl^N912.625^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138371:5435:::::::110:261::5:3:3516:1502:3337:::|h[Doomblade~`Shadowwrap]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [1121]
+			"19:51:36 - Comm received:^1^SlootAck^T^N1^SDjpurge-Illidan^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1122]
+			"19:51:36 - Comm received:^1^Sresponse^T^N1^N1^N2^SDjpurge-Illidan^N3^T^Silvl^N914.5625^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1123]
+			"19:51:36 - Comm received:^1^Sresponse^T^N1^N2^N2^SDjpurge-Illidan^N3^T^Silvl^N914.5625^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:147043::::::::110:264::5:3:3562:1502:3336:::|h[Hauberk~`of~`Frozen~`Mist]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1124]
+			"19:51:36 - Comm received:^1^Sresponse^T^N1^N4^N2^SDjpurge-Illidan^N3^T^Silvl^N914.5625^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:147176:5436:::::::110:264::3:3:3561:1482:3528:::|h[Drape~`of~`the~`Skybreaker]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1125]
+			"19:51:36 - Comm received:^1^SlootAck^T^N1^SLuthanen-Illidan^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1126]
+			"19:51:36 - Comm received:^1^Sresponse^T^N1^N1^N2^SLuthanen-Illidan^N3^T^Silvl^N912.75^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1127]
+			"19:51:36 - Comm received:^1^Sresponse^T^N1^N2^N2^SLuthanen-Illidan^N3^T^Silvl^N912.75^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:147157::::::::110:65::3:3:3561:1482:3528:::|h[Radiant~`Lightbringer~`Breastplate]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1128]
+			"19:51:38 - Comm received:^1^Sresponse^T^N1^N2^N2^SThenex-Illidan^N3^T^Silvl^N917^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138318::130221::::::110:63::6:4:3518:1808:1502:3528:::|h[Robe~`of~`Everburning~`Knowledge]|h|r^Sresponse^SPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1129]
+			"19:51:40 - Comm received:^1^Sresponse^T^N1^N4^N2^SLanféar-Illidan^N3^T^Silvl^N916.5^Sdiff^N-860^SisTier^B^Sgear1^S|cffff8000|Hitem:137109:5436:::::::110:257:::2:3459:3570:::|h[X'anshi,~`Shroud~`of~`Archbishop~`Benedictus]|h|r^Sresponse^SPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1130]
+			"19:51:41 - Comm received:^1^Sresponse^T^N1^N3^N2^SThenex-Illidan^N3^T^Silvl^N917^Sdiff^N35^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:140792::::::::110:63::6:3:3445:1502:3336:::|h[Erratic~`Metronome]|h|r^Sgear2^S|cffa335ee|Hitem:140809::::::::110:63::5:3:3517:1497:3336:::|h[Whispers~`in~`the~`Dark]|h|r^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1131]
+			"19:51:41 - Comm received:^1^Sresponse^T^N1^N1^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sresponse^SPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1132]
+			"19:51:41 - Comm received:^1^Sresponse^T^N1^N3^N2^STelgina-Illidan^N3^T^Silvl^N919.25^Sdiff^N55^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:140806::::::::110:253::5:3:3516:1492:3336:::|h[Convergence~`of~`Fates]|h|r^Sgear2^S|cffa335ee|Hitem:139329::130222::::::110:253::6:4:1806:1808:1502:3528:::|h[Bloodthirsty~`Instinct]|h|r^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1133]
+			"19:51:42 - Comm received:^1^Sresponse^T^N1^N1^N2^SShietnorunes-Illidan^N3^T^Silvl^N917.125^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1134]
+			"19:51:44 - Comm received:^1^Sresponse^T^N1^N2^N2^SShietnorunes-Illidan^N3^T^Silvl^N917.125^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:137527::::::::110:250::35:3:3418:1557:3337:::|h[Polished~`Jade~`Chestguard]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1135]
+			"19:51:44 - Comm received:^1^Sresponse^T^N1^N3^N2^SNadzieja-Illidan^N3^T^Silvl^N919.75^Sdiff^N15^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:147017::::::::110:64::3:3:3561:1502:3337:::|h[Tarnished~`Sentinel~`Medallion]|h|r^Sgear2^S|cffff8000|Hitem:144259::::::::110:64:::2:3459:3570:::|h[Kil'jaeden's~`Burning~`Wish]|h|r^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1136]
+			"19:51:45 - Comm received:^1^Soffline_timer^T^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1137]
+			"19:51:45 - LootFrame:OnRoll (nil) (4) (Response:) (Offspec)", -- [1138]
+			"19:51:45 - CreateResponse (3) (|cffa335ee|Hitem:147024::::::::110:577::5:3:3562:1517:3337:::|h[Reliquary of the Damned]|h|r) (935) (4) (INVTYPE_TRINKET) (nil) (Miscellaneous) (nil)", -- [1139]
+			"19:51:45 - GetPlayersGear (147024) (INVTYPE_TRINKET)", -- [1140]
+			"19:51:45 - Trashing entry: (1) (|cffa335ee|Hitem:147024::::::::110:577::5:3:3562:1517:3337:::|h[Reliquary of the Damned]|h|r)", -- [1141]
+			"19:51:45 - Comm received:^1^Sresponse^T^N1^N3^N2^SComet-Illidan^N3^T^Silvl^N919.5^Sdiff^N35^Sresponse^N4^Sgear1^S|cffa335ee|Hitem:128710::::::::110:270::13:3:689:600:679:::|h[Darkmoon~`Deck:~`Promises]|h|r^Sgear2^S|cffa335ee|Hitem:147005::130219::::::110:270::5:4:3562:1808:1497:3528:::|h[Chalice~`of~`Moonlight]|h|r^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [1142]
+			"19:51:45 - Comm received:^1^Sresponse^T^N1^N1^N2^SZilorin-Illidan^N3^T^Snote^SBiS~`trait^Silvl^N916.0625^Sdiff^N15^Sresponse^N1^Sgear1^S|cffa335ee|Hitem:137407::::::::110:577::35:3:3418:1557:3337:::|h[Sealed~`Fel~`Fissure]|h|r^Sgear2^S|cffa335ee|Hitem:140826::::::::110:577::5:3:3517:1502:3336:::|h[Felstained~`Jawbone~`Fragments]|h|r^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [1143]
+			"19:51:45 - Comm received:^1^Sresponse^T^N1^N3^N2^SLanféar-Illidan^N3^T^Silvl^N916.5^Sdiff^N45^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:147006::::::::110:257::3:3:3561:1482:3528:::|h[Archive~`of~`Faith]|h|r^Sgear2^S|cffa335ee|Hitem:140793::::::::110:257::5:3:3444:1487:3336:::|h[Perfectly~`Preserved~`Cake]|h|r^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1144]
+			"19:51:48 - Comm received:^1^Sresponse^T^N1^N2^N2^SLanféar-Illidan^N3^T^Silvl^N916.5^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:138319::::::::110:257::6:3:3518:1502:3528:::|h[Purifier's~`Cassock]|h|r^Sresponse^SPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1145]
+			"19:51:48 - Comm received:^1^Sresponse^T^N1^N4^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sdiff^N-815^SisTier^B^Sgear1^S|cffa335ee|Hitem:138373:5436:::::::110:265::6:4:3518:41:1522:3337:::|h[Cloak~`of~`Azj'Aqir]|h|r^Sresponse^SPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1146]
+			"19:51:49 - Comm received:^1^Sresponse^T^N1^N4^N2^SEklipto-Illidan^N3^T^Silvl^N914.6875^Sdiff^N-860^SisTier^B^Sgear1^S|cffff8000|Hitem:151798:5435:::::::110:577:::2:1811:3570:::|h[Chaos~`Theory]|h|r^Sresponse^SPASS^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1147]
+			"19:51:49 - Comm received:^1^Sresponse^T^N1^N2^N2^SNadzieja-Illidan^N3^T^Silvl^N919.75^Sdiff^N15^Sgear1^S|cffa335ee|Hitem:147149::::::::110:64::3:3:3561:1482:3528:::|h[Robes~`of~`the~`Arcane~`Tempest]|h|r^Sresponse^N5^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1148]
+			"19:51:51 - Comm received:^1^Sresponse^T^N1^N1^N2^SFearmeter-Illidan^N3^T^Silvl^N919.0625^Sresponse^SPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1149]
+			"19:51:51 - Comm received:^1^Sresponse^T^N1^N3^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sdiff^N55^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:140809::::::::110:265::5:3:3517:1492:3528:::|h[Whispers~`in~`the~`Dark]|h|r^Sgear2^S|cffa335ee|Hitem:141482::::::::110:265::3:3:3466:1492:3337:::|h[Unstable~`Arcanocrystal]|h|r^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1150]
+			"19:51:52 - Comm received:^1^Sresponse^T^N1^N1^N2^SEklipto-Illidan^N3^T^Silvl^N914.6875^Sdiff^N15^Sresponse^N1^Sgear1^S|cffa335ee|Hitem:140825::::::::110:577::6:3:3518:1502:3528:::|h[Felfire~`Pitch]|h|r^Sgear2^S|cffa335ee|Hitem:137542::::::::110:577::35:3:3510:1567:3337:::|h[Metamorphosis~`Spark]|h|r^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1151]
+			"19:51:52 - Comm received:^1^Sresponse^T^N1^N3^N2^SDrkillbotz-Illidan^N3^T^Silvl^N912.125^Sdiff^N45^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:140806::::::::110:251::5:4:3516:42:1487:1813:::|h[Convergence~`of~`Fates]|h|r^Sgear2^S|cffa335ee|Hitem:137459::::::::110:251::35:3:3418:1557:3337:::|h[Chaos~`Talisman]|h|r^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [1152]
+			"19:51:53 - Comm received:^1^Sresponse^T^N1^N3^N2^SLuthanen-Illidan^N3^T^Silvl^N912.75^Sdiff^N75^Sresponse^N4^Sgear1^S|cffa335ee|Hitem:141482::::::::110:65::3:3:3466:1472:3528:::|h[Unstable~`Arcanocrystal]|h|r^Sgear2^S|cffa335ee|Hitem:147004::::::::110:65::5:3:3562:1512:3337:::|h[Sea~`Star~`of~`the~`Depthmother]|h|r^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1153]
+			"19:51:53 - Comm received:^1^Sresponse^T^N1^N3^N2^SDadizzle-Illidan^N3^T^Silvl^N912.75^Sdiff^N50^Sresponse^N5^Sgear1^S|cffa335ee|Hitem:140809::::::::110:102::5:4:3517:41:1502:3336:::|h[Whispers~`in~`the~`Dark]|h|r^Sgear2^S|cffa335ee|Hitem:140792::::::::110:102::5:3:3444:1482:3528:::|h[Erratic~`Metronome]|h|r^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1154]
+			"19:51:53 - Comm received:^1^Sresponse^T^N1^N2^N2^SFearmeter-Illidan^N3^T^Silvl^N919.0625^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:147185::130222::::::110:265::5:4:3562:1808:1497:3528:::|h[Diabolic~`Robe]|h|r^Sresponse^SPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1155]
+			"19:51:54 - Comm received:^1^Sresponse^T^N1^N4^N2^SShietnorunes-Illidan^N3^T^Silvl^N917.125^Sdiff^N-805^SisTier^B^Sgear1^S|cffa335ee|Hitem:146984::::::::110:250::5:3:3562:1497:3528:::|h[Cloak~`of~`Stifling~`Brimstone]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1156]
+			"19:51:54 - Comm received:^1^Sresponse^T^N1^N4^N2^SLuthanen-Illidan^N3^T^Silvl^N912.75^Sdiff^N-790^SisTier^B^Sgear1^S|cffa335ee|Hitem:147158:5436:::::::110:65::3:3:3561:1482:3528:::|h[Radiant~`Lightbringer~`Cape]|h|r^Sresponse^SPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1157]
+			"19:51:57 - Comm received:^1^Sresponse^T^N1^N3^N2^SJimrando-Illidan^N3^T^Silvl^N918.0625^Sdiff^N20^Sresponse^N4^Sgear1^S|cffa335ee|Hitem:140806::::::::110:72::5:3:3516:1512:3337:::|h[Convergence~`of~`Fates]|h|r^Sgear2^S|cffa335ee|Hitem:147012::::::::110:72::5:3:3562:1497:3528:::|h[Umbral~`Moonglaives]|h|r^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [1158]
+			"19:51:58 - Comm received:^1^Sresponse^T^N1^N3^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sdiff^N35^Sresponse^N2^Sgear1^S|cffa335ee|Hitem:147022::::::::110:73::5:3:3562:1512:3337:::|h[Feverish~`Carapace]|h|r^Sgear2^S|cffa335ee|Hitem:144745::130246::::::110:73::43:5:3573:1808:604:1532:3337:::|h[Cruel~`Gladiator's~`Accolade~`of~`Victory]|h|r^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1159]
+			"19:51:58 - Comm received:^1^Sresponse^T^N1^N3^N2^SEklipto-Illidan^N3^T^Silvl^N914.6875^Sdiff^N70^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:151190::130219::::::110:577::3:4:3561:1808:1507:3337:::|h[Specter~`of~`Betrayal]|h|r^Sgear2^S|cffa335ee|Hitem:141482::::::::110:577::3:3:3466:1477:3336:::|h[Unstable~`Arcanocrystal]|h|r^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1160]
+			"19:51:59 - Comm received:^1^Sresponse^T^N1^N3^N2^SFearmeter-Illidan^N3^T^Silvl^N919.0625^Sdiff^N65^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:141482::::::::110:265::3:3:3466:1482:3336:::|h[Unstable~`Arcanocrystal]|h|r^Sgear2^S|cffa335ee|Hitem:140809::::::::110:265::5:3:3517:1492:3528:::|h[Whispers~`in~`the~`Dark]|h|r^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1161]
+			"19:51:59 - Comm received:^1^Svote^T^N1^N1^N2^SFuryisthy-Illidan^N3^N1^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1162]
+			"19:52:01 - Comm received:^1^Sresponse^T^N1^N4^N2^SFearmeter-Illidan^N3^T^Silvl^N919.0625^Sdiff^N-860^SisTier^B^Sgear1^S|cffff8000|Hitem:144364:5436:::::::110:265:::2:3459:3570:::|h[Reap~`and~`Sow]|h|r^Sresponse^SPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1163]
+			"19:52:06 - Comm received:^1^Sresponse^T^N1^N2^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:138320::::::::110:265::6:3:3518:1512:3336:::|h[Finery~`of~`Azj'Aqir]|h|r^Sresponse^SPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1164]
+			"19:52:06 - Comm received:^1^Sresponse^T^N1^N4^N2^SZilorin-Illidan^N3^T^Snote^Stransmog^Silvl^N916.0625^Sdiff^N-800^SisTier^B^Sgear1^S|cffa335ee|Hitem:138375:5435:::::::110:577::6:3:3518:1507:3336:::|h[Cape~`of~`Second~`Sight]|h|r^Sresponse^N4^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [1165]
+			"19:52:10 - Comm received:^1^SEUBonusRoll^T^N1^SDjpurge-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:264:8388608:5::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1166]
+			"19:52:10 - Comm received:^1^Svote^T^N1^N1^N2^SFuryisthy-Illidan^N3^N1^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1167]
+			"19:52:13 - Comm received:^1^Sresponse^T^N1^N1^N2^SBlutarski-Illidan^N3^T^Silvl^N912.625^Sdiff^N40^Sresponse^N2^Sgear1^S|cffa335ee|Hitem:151500::::::::110:261::43:3:3573:1672:3528:::|h[Fel-Loaded~`Dice]|h|r^Sgear2^S|cffa335ee|Hitem:151500::::::::110:261::8:3:3567:1672:3528:::|h[Fel-Loaded~`Dice]|h|r^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [1168]
+			"19:52:14 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Telgina) (distri:) (GUILD)", -- [1169]
+			"19:52:14 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^StierNumButtons^N5^Sresponses^T^N1^T^Scolor^T^N1^N0^N2^N1^N3^N0^N4^N1^t^Stext^SBiS^Ssort^N1^t^N2^T^Scolor^T^N1^N1^N2^N0.5^N3^N0^N4^N1^t^Stext^SMainspec^Ssort^N2^t^N4^T^Scolor^T^N1^F5263030152770226^f-53^N2^F6640601803495317^f-54^N3^F6322700653327995^f-53^N4^N1^t^Stext^SOffspec^Ssort^N4^t^N5^T^Scolor^T^N1^F8336074604387747^f-54^N2^F6322700653327995^f-53^N3^F5545608952918964^f-53^N4^N1^t^Stext^STransmog^Ssort^N5^t^Stier^T^N3^T^Scolor^T^N1^N1^N2^N0.5^N3^N1^N4^N1^t^Stext^S3rd~`Tier~`Piece^Ssort^N3^t^N4^T^Scolor^T^N1^N0.5^N2^N1^N3^N1^N4^N1^t^Stext^S1st~`Tier~`Piece^Ssort^N4^t^N5^T^Scolor^T^N1^N0.56078431372549^N2^F6322700653327995^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SUpgrade^Ssort^N5^t^t^t^ShideVotes^b^StierButtonsEnabled^B^SmultiVote^B^StierButtons^T^N1^T^Stext^S4th~`Piece^t^N2^T^Stext^S2nd~`Piece^t^N3^T^Stext^S3rd~`Piece^t^N4^T^Stext^S1st~`Piece^t^N5^T^Stext^SUpgrade^t^t^Sbuttons^T^N1^T^Stext^SBiS^t^N2^T^Stext^SMainspec^t^N4^T^Stext^SOffspec^t^N5^T^Stext^STransmog^t^t^SnumButtons^N5^SanonymousVoting^b^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1170]
+			"19:52:14 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SEklipto-Illidan^N3^SReinhärt-Illidan^N4^SDjpurge-Illidan^N5^SFearmeter-Illidan^N6^SShietnorunes-Illidan^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1171]
+			"19:52:14 - nil = (IsCouncil) (Comet-Illidan)", -- [1172]
+			"19:52:14 - Comm received:^1^Sresponse^T^N1^N3^N2^SDjpurge-Illidan^N3^T^Silvl^N914.5625^Sdiff^N20^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:147004::::::::110:264::5:3:3562:1497:3528:::|h[Sea~`Star~`of~`the~`Depthmother]|h|r^Sgear2^S|cffff8000|Hitem:144258::::::::110:264:::2:3459:3570:::|h[Velen's~`Future~`Sight]|h|r^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1173]
+			"19:52:17 - Comm received:^1^Sresponse^T^N1^N3^N2^SBlutarski-Illidan^N3^T^Silvl^N912.625^Sdiff^N35^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:140806::::::::110:261::5:3:3516:1502:3337:::|h[Convergence~`of~`Fates]|h|r^Sgear2^S|cffa335ee|Hitem:147015::::::::110:261::3:3:3561:1482:3528:::|h[Engine~`of~`Eradication]|h|r^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [1174]
+			"19:52:17 - Comm received:^1^Sresponse^T^N1^N3^N2^SZilorin-Illidan^N3^T^Silvl^N916.0625^Sdiff^N45^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:142167::::::::110:577::16:3:3412:1502:3337:::|h[Eye~`of~`Command]|h|r^Sgear2^S|cffa335ee|Hitem:147010::::::::110:577::5:3:3562:1502:3336:::|h[Cradle~`of~`Anguish]|h|r^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [1175]
+			"19:52:18 - Comm received:^1^SlootAck^T^N1^STelgina-Illidan^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1176]
+			"19:52:18 - Comm received:^1^Sresponse^T^N1^N1^N2^STelgina-Illidan^N3^T^Silvl^N919.25^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1177]
+			"19:52:18 - Comm received:^1^Sresponse^T^N1^N2^N2^STelgina-Illidan^N3^T^Silvl^N919.25^Sdiff^N10^Sgear1^S|cffa335ee|Hitem:144495::130222::::::110:253::35:4:3418:1808:1557:3337:::|h[Domatrax's~`Chain~`Hauberk]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1178]
+			"19:52:18 - Comm received:^1^Sresponse^T^N1^N4^N2^STelgina-Illidan^N3^T^Silvl^N919.25^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:147140::::::::110:253::3:3:3561:1482:3528:::|h[Wildstalker~`Cape]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1179]
+			"19:52:23 - Comm received:^1^Sresponse^T^N1^N3^N2^STelgina-Illidan^N3^T^Silvl^N919.25^Sdiff^N55^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:140806::::::::110:253::5:3:3516:1492:3336:::|h[Convergence~`of~`Fates]|h|r^Sgear2^S|cffa335ee|Hitem:139329::130222::::::110:253::6:4:1806:1808:1502:3528:::|h[Bloodthirsty~`Instinct]|h|r^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1180]
+			"19:52:27 - Comm received:^1^Sresponse^T^N1^N3^N2^SShietnorunes-Illidan^N3^T^Silvl^N917.125^Sdiff^N55^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:128711::::::::110:250::13:3:689:600:679:::|h[Darkmoon~`Deck:~`Immortality]|h|r^Sgear2^S|cffa335ee|Hitem:134190::130220::::::110:250::43:6:3573:1808:40:604:1542:3528:::|h[Ironrune~`Charm]|h|r^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1181]
+			"19:52:30 - Comm received:^1^Sresponse^T^N1^N3^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sdiff^N30^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:151190::::::::110:252::3:3:3561:1492:3528:::|h[Specter~`of~`Betrayal]|h|r^Sgear2^S|cffa335ee|Hitem:142167::130222::::::110:252::35:4:3418:1808:1517:3337:::|h[Eye~`of~`Command]|h|r^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [1182]
+			"19:52:31 - Comm received:^1^Svote^T^N1^N1^N2^SFuryisthy-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1183]
+			"19:52:33 - Comm received:^1^Svote^T^N1^N1^N2^SFuryisthy-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1184]
+			"19:52:33 - Comm received:^1^Svote^T^N1^N2^N2^SNadzieja-Illidan^N3^N1^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1185]
+			"19:52:37 - Comm received:^1^Svote^T^N1^N3^N2^SReinhärt-Illidan^N3^N1^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1186]
+			"19:52:39 - Comm received:^1^Svote^T^N1^N2^N2^SNadzieja-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1187]
+			"19:52:41 - Comm received:^1^Sawarded^T^N1^N1^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1188]
+			"19:52:44 - Comm received:^1^Shistory^T^N1^SFuryisthy-Illidan^N2^T^SmapID^N1676^Sdate^S06/07/17^Sclass^SDEMONHUNTER^SgroupSize^N19^Svotes^N4^Stime^S21:53:10^SitemReplaced1^S|cffa335ee|Hitem:140824::::::::110:577::5:3:3516:1487:3528:::|h[Writ~`of~`Subjugation]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^SisAwardReason^b^Sresponse^SBiS^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:147086::::::::110:577::5:3:3562:1502:3336:::|h[Befouled~`Effigy~`of~`Elune]|h|r^Scolor^T^N1^N0^N2^N1^N3^N0^N4^N1^t^SresponseID^N1^SitemReplaced2^S|cffa335ee|Hitem:140824::::::::110:577::5:3:3516:1492:3336:::|h[Writ~`of~`Subjugation]|h|r^Sboss^SThe~`Desolate~`Host^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1189]
+			"19:52:47 - Comm received:^1^SEUBonusRoll^T^N1^SShietnorunes-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:250:8388608:5::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1190]
+			"19:52:48 - Comm received:^1^SEUBonusRoll^T^N1^SBlutarski-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:261:8388608:5::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [1191]
+			"19:53:08 - Comm received:^1^Svote^T^N1^N4^N2^SFuryisthy-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1192]
+			"19:53:18 - Comm received:^1^Sawarded^T^N1^N2^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1193]
+			"19:53:18 - Comm received:^1^Shistory^T^N1^SNadzieja-Illidan^N2^T^SmapID^N1676^Sdate^S06/07/17^Sclass^SMAGE^SgroupSize^N18^Svotes^N2^Stime^S21:53:47^SitemReplaced1^S|cffa335ee|Hitem:147149::::::::110:64::3:3:3561:1482:3528:::|h[Robes~`of~`the~`Arcane~`Tempest]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^SisAwardReason^b^Sresponse^STransmog^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:146995::::::::110:577::5:4:3562:42:1497:3528:::|h[Soul~`Queen's~`Ceremonial~`Robes]|h|r^Scolor^T^N1^F8336074604387747^f-54^N2^F6322700653327995^f-53^N3^F5545608952918964^f-53^N4^N1^t^SresponseID^N5^Sboss^SThe~`Desolate~`Host^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1194]
+			"19:53:23 - Comm received:^1^Sawarded^T^N1^N3^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1195]
+			"19:53:23 - Comm received:^1^Shistory^T^N1^SReinhärt-Illidan^N2^T^SmapID^N1676^Sdate^S06/07/17^Sclass^SWARRIOR^SgroupSize^N18^Svotes^N1^Stime^S21:53:52^SitemReplaced1^S|cffa335ee|Hitem:147022::::::::110:73::5:3:3562:1512:3337:::|h[Feverish~`Carapace]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^SisAwardReason^b^Sresponse^SMainspec^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:147024::::::::110:577::5:3:3562:1517:3337:::|h[Reliquary~`of~`the~`Damned]|h|r^Scolor^T^N1^N1^N2^N0.5^N3^N0^N4^N1^t^SresponseID^N2^SitemReplaced2^S|cffa335ee|Hitem:144745::130246::::::110:73::43:5:3573:1808:604:1532:3337:::|h[Cruel~`Gladiator's~`Accolade~`of~`Victory]|h|r^Sboss^SThe~`Desolate~`Host^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1196]
+			"19:53:32 - Comm received:^1^Schange_response^T^N1^N4^N2^SFuryisthy-Illidan^N3^N3^N4^B^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1197]
+			"19:53:47 - Comm received:^1^Schange_response^T^N1^N4^N2^SZilorin-Illidan^N3^N5^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1198]
+			"19:53:56 - Comm received:^1^Svote^T^N1^N4^N2^SFuryisthy-Illidan^N3^N1^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1199]
+			"19:54:02 - Comm received:^1^Svote^T^N1^N4^N2^SFuryisthy-Illidan^N3^N1^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1200]
+			"19:54:22 - Comm received:^1^Sawarded^T^N1^N4^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1201]
+			"19:54:22 - Comm received:^1^Ssession_end^T^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1202]
+			"19:54:22 - Comm received:^1^Shistory^T^N1^SFuryisthy-Illidan^N2^T^StokenRoll^B^SmapID^N1676^StierToken^SBackSlot^Sdate^S06/07/17^Sclass^SDEMONHUNTER^SgroupSize^N18^Svotes^N3^Stime^S21:54:51^SitemReplaced1^S|cffa335ee|Hitem:138375:5435:::::::110:577::6:3:3518:1502:3528:::|h[Cape~`of~`Second~`Sight]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^SisAwardReason^b^Sresponse^S3rd~`Tier~`Piece^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:147332::::::::110:577::5:1:570:::|h[Cloak~`of~`the~`Foregone~`Conqueror]|h|r^Scolor^T^N1^N1^N2^N0.5^N3^N1^N4^N1^t^SresponseID^N3^Sboss^SThe~`Desolate~`Host^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1203]
+			"19:59:50 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Drkillbotz) (distri:) (GUILD)", -- [1204]
+			"19:59:56 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^StierNumButtons^N5^Sresponses^T^N1^T^Scolor^T^N1^N0^N2^N1^N3^N0^N4^N1^t^Stext^SBiS^Ssort^N1^t^N2^T^Scolor^T^N1^N1^N2^N0.5^N3^N0^N4^N1^t^Stext^SMainspec^Ssort^N2^t^N4^T^Scolor^T^N1^F5263030152770226^f-53^N2^F6640601803495317^f-54^N3^F6322700653327995^f-53^N4^N1^t^Stext^SOffspec^Ssort^N4^t^N5^T^Scolor^T^N1^F8336074604387747^f-54^N2^F6322700653327995^f-53^N3^F5545608952918964^f-53^N4^N1^t^Stext^STransmog^Ssort^N5^t^Stier^T^N3^T^Scolor^T^N1^N1^N2^N0.5^N3^N1^N4^N1^t^Stext^S3rd~`Tier~`Piece^Ssort^N3^t^N4^T^Scolor^T^N1^N0.5^N2^N1^N3^N1^N4^N1^t^Stext^S1st~`Tier~`Piece^Ssort^N4^t^N5^T^Scolor^T^N1^N0.56078431372549^N2^F6322700653327995^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SUpgrade^Ssort^N5^t^t^t^ShideVotes^b^StierButtonsEnabled^B^SmultiVote^B^StierButtons^T^N1^T^Stext^S4th~`Piece^t^N2^T^Stext^S2nd~`Piece^t^N3^T^Stext^S3rd~`Piece^t^N4^T^Stext^S1st~`Piece^t^N5^T^Stext^SUpgrade^t^t^Sbuttons^T^N1^T^Stext^SBiS^t^N2^T^Stext^SMainspec^t^N4^T^Stext^SOffspec^t^N5^T^Stext^STransmog^t^t^SnumButtons^N5^SanonymousVoting^b^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1205]
+			"19:59:56 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SEklipto-Illidan^N3^SReinhärt-Illidan^N4^SDjpurge-Illidan^N5^SFearmeter-Illidan^N6^SShietnorunes-Illidan^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1206]
+			"19:59:56 - nil = (IsCouncil) (Comet-Illidan)", -- [1207]
+			"20:25:53 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Drkillbotz) (distri:) (GUILD)", -- [1208]
+			"20:25:58 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sobserve^b^StierNumButtons^N5^Sresponses^T^N1^T^Scolor^T^N1^N0^N2^N1^N3^N0^N4^N1^t^Stext^SBiS^Ssort^N1^t^N2^T^Scolor^T^N1^N1^N2^N0.5^N3^N0^N4^N1^t^Stext^SMainspec^Ssort^N2^t^N4^T^Scolor^T^N1^F5263030152770226^f-53^N2^F6640601803495317^f-54^N3^F6322700653327995^f-53^N4^N1^t^Stext^SOffspec^Ssort^N4^t^N5^T^Scolor^T^N1^F8336074604387747^f-54^N2^F6322700653327995^f-53^N3^F5545608952918964^f-53^N4^N1^t^Stext^STransmog^Ssort^N5^t^Stier^T^N3^T^Scolor^T^N1^N1^N2^N0.5^N3^N1^N4^N1^t^Stext^S3rd~`Tier~`Piece^Ssort^N3^t^N4^T^Scolor^T^N1^N0.5^N2^N1^N3^N1^N4^N1^t^Stext^S1st~`Tier~`Piece^Ssort^N4^t^N5^T^Scolor^T^N1^N0.56078431372549^N2^F6322700653327995^f-53^N3^F6216733603272216^f-56^N4^N1^t^Stext^SUpgrade^Ssort^N5^t^t^t^ShideVotes^b^StierButtonsEnabled^B^SmultiVote^B^StierButtons^T^N1^T^Stext^S4th~`Piece^t^N2^T^Stext^S2nd~`Piece^t^N3^T^Stext^S3rd~`Piece^t^N4^T^Stext^S1st~`Piece^t^N5^T^Stext^SUpgrade^t^t^Sbuttons^T^N1^T^Stext^SBiS^t^N2^T^Stext^SMainspec^t^N4^T^Stext^SOffspec^t^N5^T^Stext^STransmog^t^t^SnumButtons^N5^SanonymousVoting^b^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1209]
+			"20:25:58 - Comm received:^1^Scouncil^T^N1^T^N1^SBlutarski-Illidan^N2^SEklipto-Illidan^N3^SReinhärt-Illidan^N4^SDjpurge-Illidan^N5^SFearmeter-Illidan^N6^SShietnorunes-Illidan^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1210]
+			"20:25:58 - nil = (IsCouncil) (Comet-Illidan)", -- [1211]
+			"20:49:07 - Comm received:^1^SEUBonusRoll^T^N1^SDjpurge-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:264:8388608:5::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1212]
+			"20:49:11 - Comm received:^1^SlootTable^T^N1^T^N1^T^SequipLoc^SINVTYPE_TRINKET^SlootSlot^N1^Slink^S|cffa335ee|Hitem:147025::::::::110:577::5:3:3562:1497:3528:::|h[Recompiled~`Guardian~`Module]|h|r^SsubType^SMiscellaneous^Srelic^b^Sawarded^b^Sname^SRecompiled~`Guardian~`Module^Stexture^N967515^Silvl^N915^Sboe^b^Sbagged^b^Squality^N4^t^N2^T^SequipLoc^S^SlootSlot^N2^Slink^S|cffa335ee|Hitem:147115::::::::110:577::5:3:3562:1497:3528:::|h[Unfurling~`Origination]|h|r^SsubType^SArtifact~`Relic^Srelic^SWind^Sawarded^b^Sname^SUnfurling~`Origination^Stexture^N462522^Silvl^N915^Sboe^b^Sbagged^b^Squality^N4^t^N3^T^SequipLoc^S^SlootSlot^N4^Slink^S|cffa335ee|Hitem:147317::::::::110:577::5:1:570:::|h[Chest~`of~`the~`Foregone~`Conqueror]|h|r^SsubType^SJunk^Stoken^SChestSlot^Srelic^b^Sawarded^b^Sname^SChest~`of~`the~`Foregone~`Conqueror^Stexture^N132632^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^N4^T^SequipLoc^S^SlootSlot^N5^Slink^S|cffa335ee|Hitem:147316::::::::110:577::5:1:570:::|h[Chest~`of~`the~`Foregone~`Vanquisher]|h|r^SsubType^SJunk^Stoken^SChestSlot^Srelic^b^Sawarded^b^Sname^SChest~`of~`the~`Foregone~`Vanquisher^Stexture^N132632^Silvl^N110^Sboe^b^Sbagged^b^Squality^N4^t^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1213]
+			"20:49:11 - NewRelicAutopassCheck (|cffa335ee|Hitem:147115::::::::110:577::5:3:3562:1497:3528:::|h[Unfurling Origination]|h|r) (Wind)", -- [1214]
+			"20:49:11 - Autopassed on:  (|cffa335ee|Hitem:147317::::::::110:577::5:1:570:::|h[Chest of the Foregone Conqueror]|h|r)", -- [1215]
+			"20:49:11 - CreateResponse (3) (|cffa335ee|Hitem:147317::::::::110:577::5:1:570:::|h[Chest of the Foregone Conqueror]|h|r) (110) (AUTOPASS) () (nil) (Junk) (nil)", -- [1216]
+			"20:49:11 - GetPlayersGear (147317) ()", -- [1217]
+			"20:49:11 - Autopassed on:  (|cffa335ee|Hitem:147316::::::::110:577::5:1:570:::|h[Chest of the Foregone Vanquisher]|h|r)", -- [1218]
+			"20:49:11 - CreateResponse (4) (|cffa335ee|Hitem:147316::::::::110:577::5:1:570:::|h[Chest of the Foregone Vanquisher]|h|r) (110) (AUTOPASS) () (nil) (Junk) (nil)", -- [1219]
+			"20:49:11 - GetPlayersGear (147316) ()", -- [1220]
+			"20:49:11 - LootFrame:Start()", -- [1221]
+			"20:49:11 - Restoring entry: (normal) (1)", -- [1222]
+			"20:49:11 - Restoring entry: (normal) (1)", -- [1223]
+			"20:49:12 - Comm received:^1^SextraUtilData^T^N1^SXorn-Illidan^N2^T^Sforged^N7^Spawn^T^t^SspecID^N265^Straits^N52^Slegend^N2^Ssockets^N1^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1224]
+			"20:49:12 - Comm received:^1^SlootAck^T^N1^SCannibal-Illidan^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [1225]
+			"20:49:12 - Comm received:^1^Sresponse^T^N1^N2^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sresponse^SAUTOPASS^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [1226]
+			"20:49:12 - Comm received:^1^Sresponse^T^N1^N3^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138349::::::::110:252::5:3:3516:1487:1813:::|h[Dreadwyrm~`Breastplate]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [1227]
+			"20:49:12 - Comm received:^1^SlootAck^T^N1^SNadzieja-Illidan^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1228]
+			"20:49:12 - Comm received:^1^Sresponse^T^N1^N2^N2^SNadzieja-Illidan^N3^T^Silvl^N919.75^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1229]
+			"20:49:12 - Comm received:^1^Sresponse^T^N1^N3^N2^SNadzieja-Illidan^N3^T^Silvl^N919.75^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:147149::::::::110:64::3:3:3561:1482:3528:::|h[Robes~`of~`the~`Arcane~`Tempest]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1230]
+			"20:49:12 - Comm received:^1^SextraUtilData^T^N1^SBlutarski-Illidan^N2^T^Sforged^N6^Spawn^T^N1^T^Sequipped^N231.844^Snew^N238.159^t^N2^T^Sequipped^N0^Snew^N0^t^N3^T^Sequipped^N68323.95^Snew^N0^t^N4^T^Sequipped^N68323.95^Snew^N0^t^t^SspecID^N261^Straits^N56^Slegend^N2^Ssockets^N3^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [1231]
+			"20:49:12 - Comm received:^1^SlootAck^T^N1^SBlutarski-Illidan^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [1232]
+			"20:49:12 - Comm received:^1^Sresponse^T^N1^N3^N2^SBlutarski-Illidan^N3^T^Silvl^N912.625^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:147169::::::::110:261::3:3:3561:1482:3528:::|h[Fanged~`Slayer's~`Chestguard]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [1233]
+			"20:49:12 - Comm received:^1^SlootAck^T^N1^SReinhärt-Illidan^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1234]
+			"20:49:12 - Comm received:^1^Sresponse^T^N1^N3^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:140913::::::::110:73::5:3:3517:1497:3336:::|h[Breastplate~`of~`the~`Remembered~`King]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1235]
+			"20:49:12 - Comm received:^1^Sresponse^T^N1^N4^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:140913::::::::110:73::5:3:3517:1497:3336:::|h[Breastplate~`of~`the~`Remembered~`King]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1236]
+			"20:49:12 - Comm received:^1^SlootAck^T^N1^SEklipto-Illidan^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1237]
+			"20:49:12 - Comm received:^1^SlootAck^T^N1^SShietnorunes-Illidan^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1238]
+			"20:49:12 - Comm received:^1^Sresponse^T^N1^N2^N2^SEklipto-Illidan^N3^T^Silvl^N921.25^Sresponse^SAUTOPASS^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1239]
+			"20:49:12 - Comm received:^1^Sresponse^T^N1^N4^N2^SEklipto-Illidan^N3^T^Silvl^N921.25^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:147028::::::::110:577::3:3:3561:1487:3336:::|h[Hide~`of~`the~`Abyssal~`Behemoth]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1240]
+			"20:49:12 - Comm received:^1^SextraUtilData^T^N1^SEklipto-Illidan^N2^T^Sforged^N10^Spawn^T^N1^T^Sequipped^N459.733^Snew^N196.105^t^N2^T^Sequipped^N0^Snew^N0^t^N3^T^Sequipped^N700.315^Snew^N0^t^N4^T^Sequipped^N700.315^Snew^N0^t^t^SspecID^N577^Straits^N57^Slegend^N2^Ssockets^N3^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1241]
+			"20:49:12 - Comm received:^1^SextraUtilData^T^N1^SDjpurge-Illidan^N2^T^Sforged^N5^Spawn^T^N1^T^Sequipped^N18295.68^Snew^N225.316^t^N2^T^Sequipped^N0^Snew^N0^t^N3^T^Sequipped^N69789.25^Snew^N0^t^N4^T^Sequipped^N69789.25^Snew^N0^t^t^SspecID^N264^Straits^N52^Slegend^N2^Ssockets^N2^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1242]
+			"20:49:12 - Comm received:^1^SlootAck^T^N1^SJimrando-Illidan^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [1243]
+			"20:49:12 - Comm received:^1^Sresponse^T^N1^N3^N2^SJimrando-Illidan^N3^T^Silvl^N918.9375^Sdiff^N-810^Sgear1^S|cffa335ee|Hitem:147187::::::::110:72::3:3:3561:1502:3337:::|h[Titanic~`Onslaught~`Breastplate]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [1244]
+			"20:49:12 - Comm received:^1^Sresponse^T^N1^N4^N2^SJimrando-Illidan^N3^T^Silvl^N918.9375^Sdiff^N-810^Sgear1^S|cffa335ee|Hitem:147187::::::::110:72::3:3:3561:1502:3337:::|h[Titanic~`Onslaught~`Breastplate]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [1245]
+			"20:49:12 - Comm received:^1^SextraUtilData^T^N1^SShietnorunes-Illidan^N2^T^Sforged^N7^Spawn^T^N1^T^Sequipped^N128.637^Snew^N204.606^t^N2^T^Sequipped^N0^Snew^N0^t^N3^T^Sequipped^N687.231^Snew^N0^t^N4^T^Sequipped^N687.231^Snew^N0^t^t^SspecID^N250^Straits^N55^Slegend^N2^Ssockets^N3^SupgradeIlvl^N0^Supgrades^S0/0^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1246]
+			"20:49:12 - Comm received:^1^SlootAck^T^N1^SDjpurge-Illidan^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1247]
+			"20:49:12 - Comm received:^1^SlootAck^T^N1^SThenex-Illidan^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1248]
+			"20:49:12 - Comm received:^1^Sresponse^T^N1^N3^N2^SDjpurge-Illidan^N3^T^Silvl^N914.5625^Sdiff^N-810^Sgear1^S|cffa335ee|Hitem:147043::::::::110:264::5:3:3562:1502:3336:::|h[Hauberk~`of~`Frozen~`Mist]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1249]
+			"20:49:12 - Comm received:^1^Sresponse^T^N1^N4^N2^SDjpurge-Illidan^N3^T^Silvl^N914.5625^Sdiff^N-810^Sgear1^S|cffa335ee|Hitem:147043::::::::110:264::5:3:3562:1502:3336:::|h[Hauberk~`of~`Frozen~`Mist]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1250]
+			"20:49:12 - Comm received:^1^Sresponse^T^N1^N2^N2^SThenex-Illidan^N3^T^Silvl^N917^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1251]
+			"20:49:12 - Comm received:^1^Sresponse^T^N1^N3^N2^SThenex-Illidan^N3^T^Silvl^N917^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138318::130221::::::110:63::6:4:3518:1808:1502:3528:::|h[Robe~`of~`Everburning~`Knowledge]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1252]
+			"20:49:12 - Comm received:^1^SlootAck^T^N1^SComet-Illidan^t^^ (from:) (Comet) (distri:) (RAID)", -- [1253]
+			"20:49:12 - Comm received:^1^Sresponse^T^N1^N3^N2^SComet-Illidan^N3^T^Silvl^N919.5^Sdiff^N-805^Sgear1^S|cffa335ee|Hitem:147028::::::::110:270::5:3:3562:1497:3528:::|h[Hide~`of~`the~`Abyssal~`Behemoth]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [1254]
+			"20:49:12 - Comm received:^1^Sresponse^T^N1^N4^N2^SComet-Illidan^N3^T^Silvl^N919.5^Sdiff^N-805^Sgear1^S|cffa335ee|Hitem:147028::::::::110:270::5:3:3562:1497:3528:::|h[Hide~`of~`the~`Abyssal~`Behemoth]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [1255]
+			"20:49:13 - Comm received:^1^SlootAck^T^N1^SXorn-Illidan^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1256]
+			"20:49:13 - Comm received:^1^Sresponse^T^N1^N2^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sresponse^SAUTOPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1257]
+			"20:49:13 - Comm received:^1^Sresponse^T^N1^N4^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sdiff^N-805^Sgear1^S|cffa335ee|Hitem:138320::::::::110:265::6:3:3518:1512:3336:::|h[Finery~`of~`Azj'Aqir]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1258]
+			"20:49:13 - Comm received:^1^SlootAck^T^N1^SLanféar-Illidan^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1259]
+			"20:49:13 - Comm received:^1^Sresponse^T^N1^N2^N2^SLanféar-Illidan^N3^T^Silvl^N916.5^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1260]
+			"20:49:13 - Comm received:^1^Sresponse^T^N1^N4^N2^SLanféar-Illidan^N3^T^Silvl^N916.5^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:138319::::::::110:257::6:3:3518:1502:3528:::|h[Purifier's~`Cassock]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1261]
+			"20:49:13 - Comm received:^1^SlootAck^T^N1^SFearmeter-Illidan^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1262]
+			"20:49:13 - Comm received:^1^Sresponse^T^N1^N2^N2^SFearmeter-Illidan^N3^T^Silvl^N919.0625^Sresponse^SAUTOPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1263]
+			"20:49:13 - Comm received:^1^Sresponse^T^N1^N4^N2^SFearmeter-Illidan^N3^T^Silvl^N919.0625^Sdiff^N-805^Sgear1^S|cffa335ee|Hitem:147185::130222::::::110:265::5:4:3562:1808:1497:3528:::|h[Diabolic~`Robe]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1264]
+			"20:49:13 - Comm received:^1^SlootAck^T^N1^SDrkillbotz-Illidan^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [1265]
+			"20:49:13 - Comm received:^1^Sresponse^T^N1^N2^N2^SDrkillbotz-Illidan^N3^T^Silvl^N911.5^Sresponse^SAUTOPASS^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [1266]
+			"20:49:13 - Comm received:^1^Sresponse^T^N1^N3^N2^SDrkillbotz-Illidan^N3^T^Silvl^N911.5^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:138349::::::::110:251::5:3:3516:1497:3336:::|h[Dreadwyrm~`Breastplate]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [1267]
+			"20:49:13 - Comm received:^1^SlootAck^T^N1^STelgina-Illidan^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1268]
+			"20:49:13 - Comm received:^1^Sresponse^T^N1^N3^N2^STelgina-Illidan^N3^T^Silvl^N919.25^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:144495::130222::::::110:253::35:4:3418:1808:1557:3337:::|h[Domatrax's~`Chain~`Hauberk]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1269]
+			"20:49:13 - Comm received:^1^Sresponse^T^N1^N4^N2^STelgina-Illidan^N3^T^Silvl^N919.25^Sdiff^N-795^Sgear1^S|cffa335ee|Hitem:144495::130222::::::110:253::35:4:3418:1808:1557:3337:::|h[Domatrax's~`Chain~`Hauberk]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1270]
+			"20:49:13 - Comm received:^1^SlootAck^T^N1^SDadizzle-Illidan^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1271]
+			"20:49:13 - Comm received:^1^Sresponse^T^N1^N2^N2^SDadizzle-Illidan^N3^T^Silvl^N913.0625^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1272]
+			"20:49:13 - Comm received:^1^Sresponse^T^N1^N3^N2^SDadizzle-Illidan^N3^T^Silvl^N913.0625^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138324::::::::110:102::5:3:3516:1487:3528:::|h[Robe~`of~`the~`Astral~`Warden]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1273]
+			"20:49:13 - Comm received:^1^SlootAck^T^N1^SLuthanen-Illidan^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1274]
+			"20:49:13 - Comm received:^1^Sresponse^T^N1^N2^N2^SLuthanen-Illidan^N3^T^Silvl^N912.75^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1275]
+			"20:49:13 - Comm received:^1^Sresponse^T^N1^N4^N2^SLuthanen-Illidan^N3^T^Silvl^N912.75^Sdiff^N-790^Sgear1^S|cffa335ee|Hitem:147157::::::::110:65::3:3:3561:1482:3528:::|h[Radiant~`Lightbringer~`Breastplate]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1276]
+			"20:49:13 - Comm received:^1^SlootAck^T^N1^SZilorin-Illidan^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [1277]
+			"20:49:13 - Comm received:^1^Sresponse^T^N1^N2^N2^SZilorin-Illidan^N3^T^Silvl^N916.0625^Sresponse^SAUTOPASS^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [1278]
+			"20:49:13 - Comm received:^1^Sresponse^T^N1^N4^N2^SZilorin-Illidan^N3^T^Silvl^N916.0625^Sdiff^N-780^Sgear1^S|cffa335ee|Hitem:138376::::::::110:577::5:3:3516:1487:3528:::|h[Tunic~`of~`Second~`Sight]|h|r^Sresponse^SAUTOPASS^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [1279]
+			"20:49:15 - Comm received:^1^Sresponse^T^N1^N4^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sdiff^N-780^SisTier^B^Sgear1^S|cffa335ee|Hitem:138349::::::::110:252::5:3:3516:1487:1813:::|h[Dreadwyrm~`Breastplate]|h|r^Sresponse^N3^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [1280]
+			"20:49:17 - Comm received:^1^Sresponse^T^N1^N2^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sresponse^N4^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1281]
+			"20:49:18 - Comm received:^1^Sresponse^T^N1^N4^N2^SBlutarski-Illidan^N3^T^Silvl^N912.625^Sdiff^N-790^SisTier^B^Sgear1^S|cffa335ee|Hitem:147169::::::::110:261::3:3:3561:1482:3528:::|h[Fanged~`Slayer's~`Chestguard]|h|r^Sresponse^N5^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [1282]
+			"20:49:19 - Comm received:^1^Sresponse^T^N1^N1^N2^STelgina-Illidan^N3^T^Silvl^N919.25^Sdiff^N35^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:140806::::::::110:253::5:3:3516:1492:3336:::|h[Convergence~`of~`Fates]|h|r^Sgear2^S|cffa335ee|Hitem:139329::130222::::::110:253::6:4:1806:1808:1502:3528:::|h[Bloodthirsty~`Instinct]|h|r^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1283]
+			"20:49:21 - Comm received:^1^Soffline_timer^T^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1284]
+			"20:49:22 - Comm received:^1^Sresponse^T^N1^N1^N2^SReinhärt-Illidan^N3^T^Silvl^N918^Sdiff^N15^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:147022::::::::110:73::5:3:3562:1512:3337:::|h[Feverish~`Carapace]|h|r^Sgear2^S|cffa335ee|Hitem:144745::130246::::::110:73::43:5:3573:1808:604:1532:3337:::|h[Cruel~`Gladiator's~`Accolade~`of~`Victory]|h|r^t^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1285]
+			"20:49:24 - Comm received:^1^Sresponse^T^N1^N1^N2^SThenex-Illidan^N3^T^Silvl^N917^Sdiff^N15^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:140792::::::::110:63::6:3:3445:1502:3336:::|h[Erratic~`Metronome]|h|r^Sgear2^S|cffa335ee|Hitem:140809::::::::110:63::5:3:3517:1497:3336:::|h[Whispers~`in~`the~`Dark]|h|r^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1286]
+			"20:49:25 - Comm received:^1^Sresponse^T^N1^N1^N2^SCannibal-Illidan^N3^T^Silvl^N911.9375^Sdiff^N10^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:151190::::::::110:252::3:3:3561:1492:3528:::|h[Specter~`of~`Betrayal]|h|r^Sgear2^S|cffa335ee|Hitem:142167::130222::::::110:252::35:4:3418:1808:1517:3337:::|h[Eye~`of~`Command]|h|r^t^t^^ (from:) (Cannibal) (distri:) (RAID)", -- [1287]
+			"20:49:26 - Comm received:^1^Sresponse^T^N1^N4^N2^SThenex-Illidan^N3^T^Silvl^N917^Sdiff^N-795^SisTier^B^Sgear1^S|cffa335ee|Hitem:138318::130221::::::110:63::6:4:3518:1808:1502:3528:::|h[Robe~`of~`Everburning~`Knowledge]|h|r^Sresponse^N2^t^t^^ (from:) (Thenex) (distri:) (RAID)", -- [1288]
+			"20:49:26 - Comm received:^1^Sresponse^T^N1^N1^N2^SLuthanen-Illidan^N3^T^Silvl^N912.75^Sdiff^N55^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:141482::::::::110:65::3:3:3466:1472:3528:::|h[Unstable~`Arcanocrystal]|h|r^Sgear2^S|cffa335ee|Hitem:147004::::::::110:65::5:3:3562:1512:3337:::|h[Sea~`Star~`of~`the~`Depthmother]|h|r^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1289]
+			"20:49:27 - Comm received:^1^Sresponse^T^N1^N4^N2^SDrkillbotz-Illidan^N3^T^Silvl^N911.5^Sdiff^N-790^SisTier^B^Sgear1^S|cffa335ee|Hitem:138349::::::::110:251::5:3:3516:1497:3336:::|h[Dreadwyrm~`Breastplate]|h|r^Sresponse^N3^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [1290]
+			"20:49:27 - Comm received:^1^Sresponse^T^N1^N4^N2^SNadzieja-Illidan^N3^T^Silvl^N919.75^Sdiff^N-790^SisTier^B^Sgear1^S|cffa335ee|Hitem:147149::::::::110:64::3:3:3561:1482:3528:::|h[Robes~`of~`the~`Arcane~`Tempest]|h|r^Sresponse^SPASS^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1291]
+			"20:49:27 - Comm received:^1^Sresponse^T^N1^N2^N2^SDjpurge-Illidan^N3^T^Silvl^N914.5625^Sresponse^SPASS^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1292]
+			"20:49:27 - Comm received:^1^Sresponse^T^N1^N2^N2^STelgina-Illidan^N3^T^Silvl^N919.25^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:140840::::::::110:253::6:3:3445:1517:3337:::|h[Chittering~`Mandible]|h|r^Sresponse^SPASS^t^t^^ (from:) (Telgina) (distri:) (RAID)", -- [1293]
+			"20:49:27 - Comm received:^1^Sresponse^T^N1^N1^N2^SDjpurge-Illidan^N3^T^Silvl^N914.5625^Sdiff^N0^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:147004::::::::110:264::5:3:3562:1497:3528:::|h[Sea~`Star~`of~`the~`Depthmother]|h|r^Sgear2^S|cffff8000|Hitem:144258::::::::110:264:::2:3459:3570:::|h[Velen's~`Future~`Sight]|h|r^t^t^^ (from:) (Djpurge) (distri:) (RAID)", -- [1294]
+			"20:49:27 - Comm received:^1^Sresponse^T^N1^N3^N2^SFearmeter-Illidan^N3^T^Silvl^N919.0625^Sdiff^N-805^SisTier^B^Sgear1^S|cffa335ee|Hitem:147185::130222::::::110:265::5:4:3562:1808:1497:3528:::|h[Diabolic~`Robe]|h|r^Sresponse^SPASS^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1295]
+			"20:49:28 - Comm received:^1^Sresponse^T^N1^N3^N2^SLuthanen-Illidan^N3^T^Silvl^N912.75^Sdiff^N-790^SisTier^B^Sgear1^S|cffa335ee|Hitem:147157::::::::110:65::3:3:3561:1482:3528:::|h[Radiant~`Lightbringer~`Breastplate]|h|r^Sresponse^SPASS^t^t^^ (from:) (Luthanen) (distri:) (RAID)", -- [1296]
+			"20:49:28 - Comm received:^1^Sresponse^T^N1^N1^N2^SFearmeter-Illidan^N3^T^Silvl^N919.0625^Sdiff^N45^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:141482::::::::110:265::3:3:3466:1482:3336:::|h[Unstable~`Arcanocrystal]|h|r^Sgear2^S|cffa335ee|Hitem:140809::::::::110:265::5:3:3517:1492:3528:::|h[Whispers~`in~`the~`Dark]|h|r^t^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1297]
+			"20:49:29 - Comm received:^1^Sresponse^T^N1^N1^N2^SNadzieja-Illidan^N3^T^Silvl^N919.75^Sdiff^N-5^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:147017::::::::110:64::3:3:3561:1502:3337:::|h[Tarnished~`Sentinel~`Medallion]|h|r^Sgear2^S|cffff8000|Hitem:144259::::::::110:64:::2:3459:3570:::|h[Kil'jaeden's~`Burning~`Wish]|h|r^t^t^^ (from:) (Nadzieja) (distri:) (RAID)", -- [1298]
+			"20:49:30 - Comm received:^1^Sresponse^T^N1^N1^N2^SZilorin-Illidan^N3^T^Silvl^N916.0625^Sdiff^N25^Sresponse^N4^Sgear1^S|cffa335ee|Hitem:142167::::::::110:577::16:3:3412:1502:3337:::|h[Eye~`of~`Command]|h|r^Sgear2^S|cffa335ee|Hitem:147010::::::::110:577::5:3:3562:1502:3336:::|h[Cradle~`of~`Anguish]|h|r^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [1299]
+			"20:49:30 - Comm received:^1^Sresponse^T^N1^N1^N2^SDrkillbotz-Illidan^N3^T^Silvl^N911.5^Sdiff^N25^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:140806::::::::110:251::5:4:3516:42:1487:1813:::|h[Convergence~`of~`Fates]|h|r^Sgear2^S|cffa335ee|Hitem:137459::::::::110:251::35:3:3418:1557:3337:::|h[Chaos~`Talisman]|h|r^t^t^^ (from:) (Drkillbotz) (distri:) (RAID)", -- [1300]
+			"20:49:30 - Comm received:^1^SEUBonusRoll^T^N1^SBlutarski-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:261:8388608:5::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [1301]
+			"20:49:30 - Comm received:^1^Sresponse^T^N1^N1^N2^SLanféar-Illidan^N3^T^Silvl^N916.5^Sdiff^N25^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:147006::::::::110:257::3:3:3561:1482:3528:::|h[Archive~`of~`Faith]|h|r^Sgear2^S|cffa335ee|Hitem:140793::::::::110:257::5:3:3444:1487:3336:::|h[Perfectly~`Preserved~`Cake]|h|r^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1302]
+			"20:49:31 - Comm received:^1^Sresponse^T^N1^N1^N2^SDadizzle-Illidan^N3^T^Silvl^N913.0625^Sdiff^N30^Sresponse^N4^Sgear1^S|cffa335ee|Hitem:140809::::::::110:102::5:4:3517:41:1502:3336:::|h[Whispers~`in~`the~`Dark]|h|r^Sgear2^S|cffa335ee|Hitem:140792::::::::110:102::5:3:3444:1482:3528:::|h[Erratic~`Metronome]|h|r^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1303]
+			"20:49:31 - LootFrame:OnRoll (nil) (PASS) (Response:) (Pass)", -- [1304]
+			"20:49:31 - CreateResponse (2) (|cffa335ee|Hitem:147115::::::::110:577::5:3:3562:1497:3528:::|h[Unfurling Origination]|h|r) (915) (PASS) () (nil) (Artifact Relic) (nil)", -- [1305]
+			"20:49:31 - Trashing entry: (2) (|cffa335ee|Hitem:147115::::::::110:577::5:3:3562:1497:3528:::|h[Unfurling Origination]|h|r)", -- [1306]
+			"20:49:31 - Comm received:^1^Sresponse^T^N1^N2^N2^SComet-Illidan^N3^T^Silvl^N922^Sdiff^N-5^Sgear1^S|cffa335ee|Hitem:147115::::::::110:270::5:3:3562:1502:3336:::|h[Unfurling~`Origination]|h|r^Sresponse^SPASS^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [1307]
+			"20:49:32 - Comm received:^1^Sresponse^T^N1^N1^N2^SEklipto-Illidan^N3^T^Silvl^N921.25^Sdiff^N50^Sresponse^N4^Sgear1^S|cffa335ee|Hitem:151190::130219::::::110:577::3:4:3561:1808:1507:3337:::|h[Specter~`of~`Betrayal]|h|r^Sgear2^S|cffa335ee|Hitem:141482::::::::110:577::3:3:3466:1477:3336:::|h[Unstable~`Arcanocrystal]|h|r^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1308]
+			"20:49:34 - Comm received:^1^Sresponse^T^N1^N1^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sdiff^N35^Sresponse^SPASS^Sgear1^S|cffa335ee|Hitem:140809::::::::110:265::5:3:3517:1492:3528:::|h[Whispers~`in~`the~`Dark]|h|r^Sgear2^S|cffa335ee|Hitem:141482::::::::110:265::3:3:3466:1492:3337:::|h[Unstable~`Arcanocrystal]|h|r^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1309]
+			"20:49:34 - Comm received:^1^Sresponse^T^N1^N2^N2^SShietnorunes-Illidan^N3^T^Silvl^N917.125^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1310]
+			"20:49:34 - Comm received:^1^Sresponse^T^N1^N2^N2^SJimrando-Illidan^N3^T^Silvl^N918.9375^Sdiff^N0^Sgear1^S|cffa335ee|Hitem:147113::::::::110:72::5:3:3562:1497:3528:::|h[Flawless~`Hurricane~`Pearl]|h|r^Sresponse^N4^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [1311]
+			"20:49:35 - Comm received:^1^Sresponse^T^N1^N4^N2^SDadizzle-Illidan^N3^T^Silvl^N913.0625^Sdiff^N-780^SisTier^B^Sgear1^S|cffa335ee|Hitem:138324::::::::110:102::5:3:3516:1487:3528:::|h[Robe~`of~`the~`Astral~`Warden]|h|r^Sresponse^N5^t^t^^ (from:) (Dadizzle) (distri:) (RAID)", -- [1312]
+			"20:49:36 - Comm received:^1^Sresponse^T^N1^N1^N2^SBlutarski-Illidan^N3^T^Silvl^N912.625^Sdiff^N15^Sresponse^N5^Sgear1^S|cffa335ee|Hitem:140806::::::::110:261::5:3:3516:1502:3337:::|h[Convergence~`of~`Fates]|h|r^Sgear2^S|cffa335ee|Hitem:147015::::::::110:261::3:3:3561:1482:3528:::|h[Engine~`of~`Eradication]|h|r^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [1313]
+			"20:49:38 - Comm received:^1^Sresponse^T^N1^N3^N2^SXorn-Illidan^N3^T^Silvl^N916.25^Sdiff^N-805^SisTier^B^Sgear1^S|cffa335ee|Hitem:138320::::::::110:265::6:3:3518:1512:3336:::|h[Finery~`of~`Azj'Aqir]|h|r^Sresponse^SPASS^t^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1314]
+			"20:49:38 - Comm received:^1^SEUBonusRoll^T^N1^SXorn-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:265:8388608:5::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Xorn) (distri:) (RAID)", -- [1315]
+			"20:49:39 - Comm received:^1^Sresponse^T^N1^N2^N2^SBlutarski-Illidan^N3^T^Silvl^N912.625^Sresponse^N4^t^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [1316]
+			"20:49:40 - Comm received:^1^Sresponse^T^N1^N1^N2^SJimrando-Illidan^N3^T^Silvl^N918.9375^Sdiff^N0^Sresponse^N4^Sgear1^S|cffa335ee|Hitem:140806::::::::110:72::5:3:3516:1512:3337:::|h[Convergence~`of~`Fates]|h|r^Sgear2^S|cffa335ee|Hitem:147012::::::::110:72::5:3:3562:1497:3528:::|h[Umbral~`Moonglaives]|h|r^t^t^^ (from:) (Jimrando) (distri:) (RAID)", -- [1317]
+			"20:49:42 - Comm received:^1^Sresponse^T^N1^N3^N2^SEklipto-Illidan^N3^T^Silvl^N921.25^Sdiff^N-795^SisTier^B^Sgear1^S|cffa335ee|Hitem:147028::::::::110:577::3:3:3561:1487:3336:::|h[Hide~`of~`the~`Abyssal~`Behemoth]|h|r^Sresponse^SPASS^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1318]
+			"20:49:51 - Comm received:^1^Sresponse^T^N1^N3^N2^SShietnorunes-Illidan^N3^T^Silvl^N917.125^Sdiff^N-795^SisTier^B^Sgear1^S|cffa335ee|Hitem:137527::::::::110:250::35:3:3418:1557:3337:::|h[Polished~`Jade~`Chestguard]|h|r^Sresponse^SPASS^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1319]
+			"20:49:54 - Comm received:^1^Sresponse^T^N1^N3^N2^SZilorin-Illidan^N3^T^Snote^STRANSMOG^Silvl^N916.0625^Sdiff^N-780^SisTier^B^Sgear1^S|cffa335ee|Hitem:138376::::::::110:577::5:3:3516:1487:3528:::|h[Tunic~`of~`Second~`Sight]|h|r^Sresponse^N4^t^t^^ (from:) (Zilorin) (distri:) (RAID)", -- [1320]
+			"20:49:55 - LootFrame:OnRoll (nil) (4) (Response:) (Offspec)", -- [1321]
+			"20:49:55 - CreateResponse (1) (|cffa335ee|Hitem:147025::::::::110:577::5:3:3562:1497:3528:::|h[Recompiled Guardian Module]|h|r) (915) (4) (INVTYPE_TRINKET) (nil) (Miscellaneous) (nil)", -- [1322]
+			"20:49:55 - GetPlayersGear (147025) (INVTYPE_TRINKET)", -- [1323]
+			"20:49:55 - Trashing entry: (1) (|cffa335ee|Hitem:147025::::::::110:577::5:3:3562:1497:3528:::|h[Recompiled Guardian Module]|h|r)", -- [1324]
+			"20:49:55 - Comm received:^1^Sresponse^T^N1^N1^N2^SComet-Illidan^N3^T^Silvl^N922^Sdiff^N15^Sresponse^N4^Sgear1^S|cffa335ee|Hitem:128710::::::::110:270::13:3:689:600:679:::|h[Darkmoon~`Deck:~`Promises]|h|r^Sgear2^S|cffa335ee|Hitem:147005::130219::::::110:270::5:4:3562:1808:1497:3528:::|h[Chalice~`of~`Moonlight]|h|r^t^t^^ (from:) (Comet) (distri:) (RAID)", -- [1325]
+			"20:49:57 - Comm received:^1^Sresponse^T^N1^N3^N2^SLanféar-Illidan^N3^T^Silvl^N916.5^Sdiff^N-795^SisTier^B^Sgear1^S|cffa335ee|Hitem:138319::::::::110:257::6:3:3518:1502:3528:::|h[Purifier's~`Cassock]|h|r^Sresponse^N1^t^t^^ (from:) (Lanféar) (distri:) (RAID)", -- [1326]
+			"20:50:12 - Comm received:^1^Sresponse^T^N1^N4^N2^SShietnorunes-Illidan^N3^T^Silvl^N917.125^Sdiff^N-795^SisTier^B^Sgear1^S|cffa335ee|Hitem:137527::::::::110:250::35:3:3418:1557:3337:::|h[Polished~`Jade~`Chestguard]|h|r^Sresponse^STIMEOUT^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1327]
+			"20:50:12 - Comm received:^1^Sresponse^T^N1^N1^N2^SShietnorunes-Illidan^N3^T^Silvl^N917.125^Sdiff^N35^Sresponse^STIMEOUT^Sgear1^S|cffa335ee|Hitem:128711::::::::110:250::13:3:689:600:679:::|h[Darkmoon~`Deck:~`Immortality]|h|r^Sgear2^S|cffa335ee|Hitem:134190::130220::::::110:250::43:6:3573:1808:40:604:1542:3528:::|h[Ironrune~`Charm]|h|r^t^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1328]
+			"20:50:16 - Comm received:^1^Svote^T^N1^N4^N2^SThenex-Illidan^N3^N1^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1329]
+			"20:50:19 - Comm received:^1^Schange_response^T^N1^N3^N2^SZilorin-Illidan^N3^N5^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1330]
+			"20:50:23 - Comm received:^1^Svote^T^N1^N3^N2^SLanféar-Illidan^N3^N1^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1331]
+			"20:50:24 - Comm received:^1^Svote^T^N1^N3^N2^SLanféar-Illidan^N3^N1^t^^ (from:) (Shietnorunes) (distri:) (RAID)", -- [1332]
+			"20:50:25 - Comm received:^1^Svote^T^N1^N3^N2^SLanféar-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1333]
+			"20:50:29 - Comm received:^1^Svote^T^N1^N4^N2^SThenex-Illidan^N3^N1^t^^ (from:) (Fearmeter) (distri:) (RAID)", -- [1334]
+			"20:50:39 - Comm received:^1^Svote^T^N1^N4^N2^SThenex-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1335]
+			"20:50:40 - Comm received:^1^Svote^T^N1^N4^N2^SThenex-Illidan^N3^N1^t^^ (from:) (Blutarski) (distri:) (RAID)", -- [1336]
+			"20:50:54 - Comm received:^1^Svote^T^N1^N3^N2^SLanféar-Illidan^N3^N1^t^^ (from:) (Reinhärt) (distri:) (RAID)", -- [1337]
+			"20:50:56 - Comm received:^1^Sawarded^T^N1^N3^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1338]
+			"20:50:56 - Comm received:^1^Shistory^T^N1^SLanféar-Illidan^N2^T^StokenRoll^B^SmapID^N1676^StierToken^SChestSlot^Sdate^S06/07/17^Sclass^SPRIEST^SgroupSize^N18^Svotes^N4^Stime^S22:51:25^SitemReplaced1^S|cffa335ee|Hitem:138319::::::::110:257::6:3:3518:1502:3528:::|h[Purifier's~`Cassock]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^SisAwardReason^b^Sresponse^S4th~`Tier~`Piece^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:147317::::::::110:577::5:1:570:::|h[Chest~`of~`the~`Foregone~`Conqueror]|h|r^Scolor^T^N1^N0.1^N2^N1^N3^N0.5^N4^N1^t^SresponseID^N1^Sboss^SMaiden~`of~`Vigilance^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1339]
+			"20:51:10 - Comm received:^1^Sawarded^T^N1^N4^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1340]
+			"20:51:10 - Comm received:^1^Shistory^T^N1^SThenex-Illidan^N2^T^StokenRoll^B^SmapID^N1676^StierToken^SChestSlot^Sdate^S06/07/17^Sclass^SMAGE^SgroupSize^N18^Svotes^N4^Stime^S22:51:39^SitemReplaced1^S|cffa335ee|Hitem:138318::130221::::::110:63::6:4:3518:1808:1502:3528:::|h[Robe~`of~`Everburning~`Knowledge]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^SisAwardReason^b^Sresponse^S2nd~`Tier~`Piece^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:147316::::::::110:577::5:1:570:::|h[Chest~`of~`the~`Foregone~`Vanquisher]|h|r^Scolor^T^N1^N1^N2^N1^N3^N0.5^N4^N1^t^SresponseID^N2^Sboss^SMaiden~`of~`Vigilance^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1341]
+			"20:51:31 - Comm received:^1^Sawarded^T^N1^N2^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1342]
+			"20:51:31 - Comm received:^1^Shistory^T^N1^SReinhärt-Illidan^N2^T^SmapID^N1676^Sdate^S06/07/17^Sclass^SWARRIOR^SgroupSize^N18^Svotes^N0^Stime^S22:52:00^Sinstance^STomb~`of~`Sargeras-Heroic^SisAwardReason^b^Sresponse^SOffspec^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:147115::::::::110:577::5:3:3562:1497:3528:::|h[Unfurling~`Origination]|h|r^Scolor^T^N1^F5263030152770226^f-53^N2^F6640601803495317^f-54^N3^F6322700653327995^f-53^N4^N1^t^SresponseID^N4^Sboss^SMaiden~`of~`Vigilance^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1343]
+			"20:51:54 - Comm received:^1^Sawarded^T^N1^N1^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1344]
+			"20:51:54 - Comm received:^1^Ssession_end^T^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1345]
+			"20:51:54 - Comm received:^1^Shistory^T^N1^SFuryisthy-Illidan^N2^T^SmapID^N1676^Sdate^S06/07/17^Sclass^SDEMONHUNTER^SgroupSize^N18^Svotes^N0^Stime^S22:52:24^SitemReplaced1^S|cffa335ee|Hitem:141482::::::::110:577::43:3:3573:1507:3337:::|h[Unstable~`Arcanocrystal]|h|r^Sinstance^STomb~`of~`Sargeras-Heroic^SisAwardReason^b^Sresponse^SOffspec^SdifficultyID^N15^SlootWon^S|cffa335ee|Hitem:147025::::::::110:577::5:3:3562:1497:3528:::|h[Recompiled~`Guardian~`Module]|h|r^Scolor^T^N1^F5263030152770226^f-53^N2^F6640601803495317^f-54^N3^F6322700653327995^f-53^N4^N1^t^SresponseID^N4^SitemReplaced2^S|cffa335ee|Hitem:142167::::::::110:577::34:3:3417:1497:3528:::|h[Eye~`of~`Command]|h|r^Sboss^SMaiden~`of~`Vigilance^t^t^^ (from:) (Eklipto) (distri:) (RAID)", -- [1346]
+			"21:01:17 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Djpurge) (distri:) (GUILD)", -- [1347]
+			"21:01:19 - Event: (PLAYER_ENTERING_WORLD)", -- [1348]
+			"21:01:19 - GetML()", -- [1349]
+			"21:01:19 - LootMethod =  (master)", -- [1350]
+			"21:01:19 - MasterLooter =  (Eklipto-Illidan)", -- [1351]
+			"21:01:24 - Timer MLdb_check passed", -- [1352]
+			"21:01:27 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1353]
+			"21:01:27 - GetML()", -- [1354]
+			"21:01:27 - LootMethod =  (master)", -- [1355]
+			"21:01:27 - MasterLooter =  (Reinhärt-Illidan)", -- [1356]
+			"21:01:27 - Resetting council as we have a new ML!", -- [1357]
+			"21:01:32 - Timer MLdb_check passed", -- [1358]
+			"21:01:46 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1359]
+			"21:01:46 - GetML()", -- [1360]
+			"21:01:46 - LootMethod =  (personalloot)", -- [1361]
+			"21:02:24 - Event: (PLAYER_ENTERING_WORLD)", -- [1362]
+			"21:02:24 - GetML()", -- [1363]
+			"21:02:24 - LootMethod =  (personalloot)", -- [1364]
+			"21:02:37 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Krieggeist) (distri:) (GUILD)", -- [1365]
+			"21:04:14 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Drtotem) (distri:) (GUILD)", -- [1366]
+			"07/06/17", -- [1367]
+			"21:08:15 - Logged In", -- [1368]
+			"21:08:15 - ML initialized!", -- [1369]
+			"21:08:17 - Comet-Illidan (2.4.4) (nil)", -- [1370]
+			"21:08:18 - Event: (PLAYER_ENTERING_WORLD)", -- [1371]
+			"21:08:18 - GetML()", -- [1372]
+			"21:08:18 - LootMethod =  (personalloot)", -- [1373]
+			"21:08:18 - GetPlayersGuildRank()", -- [1374]
+			"21:08:18 - Found Guild Rank: Raider", -- [1375]
+			"21:08:19 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1376]
+			"21:09:08 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Xgr) (distri:) (GUILD)", -- [1377]
+			"21:09:10 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Madmartigàn) (distri:) (GUILD)", -- [1378]
+			"21:09:36 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Ishaar) (distri:) (GUILD)", -- [1379]
+			"07/06/17", -- [1380]
+			"21:10:28 - Logged In", -- [1381]
+			"21:10:28 - ML initialized!", -- [1382]
+			"21:10:29 - Comet-Illidan (2.4.4) (nil)", -- [1383]
+			"21:10:31 - Event: (PLAYER_ENTERING_WORLD)", -- [1384]
+			"21:10:31 - GetML()", -- [1385]
+			"21:10:31 - LootMethod =  (personalloot)", -- [1386]
+			"21:10:31 - GetPlayersGuildRank()", -- [1387]
+			"21:10:31 - Found Guild Rank: Raider", -- [1388]
+			"21:10:31 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1389]
+			"21:11:05 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Ishaar) (distri:) (GUILD)", -- [1390]
+			"07/06/17", -- [1391]
+			"21:27:27 - Logged In", -- [1392]
+			"21:27:27 - ML initialized!", -- [1393]
+			"21:28:01 - Comet-Illidan (2.4.4) (nil)", -- [1394]
+			"21:28:02 - Event: (PLAYER_ENTERING_WORLD)", -- [1395]
+			"21:28:02 - GetML()", -- [1396]
+			"21:28:02 - LootMethod =  (personalloot)", -- [1397]
+			"21:28:03 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1398]
+			"21:28:03 - GetPlayersGuildRank()", -- [1399]
+			"21:28:03 - Found Guild Rank: Raider", -- [1400]
+			"21:32:26 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Hemotherapy) (distri:) (GUILD)", -- [1401]
+			"21:35:29 - Event: (PLAYER_ENTERING_WORLD)", -- [1402]
+			"21:35:29 - GetML()", -- [1403]
+			"21:35:29 - LootMethod =  (personalloot)", -- [1404]
+			"21:41:40 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Luthanen) (distri:) (GUILD)", -- [1405]
+			"21:42:22 - Event: (PLAYER_ENTERING_WORLD)", -- [1406]
+			"21:42:22 - GetML()", -- [1407]
+			"21:42:22 - LootMethod =  (personalloot)", -- [1408]
+			"21:44:35 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Marketfreshe) (distri:) (GUILD)", -- [1409]
+			"21:44:56 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1410]
+			"21:44:56 - GetML()", -- [1411]
+			"21:44:56 - LootMethod =  (personalloot)", -- [1412]
+			"21:46:12 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Firstmarket) (distri:) (GUILD)", -- [1413]
+			"21:47:11 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1414]
+			"21:47:11 - GetML()", -- [1415]
+			"21:47:11 - LootMethod =  (personalloot)", -- [1416]
+			"21:49:25 - Event: (PLAYER_ENTERING_WORLD)", -- [1417]
+			"21:49:25 - GetML()", -- [1418]
+			"21:49:25 - LootMethod =  (personalloot)", -- [1419]
+			"07/06/17", -- [1420]
+			"21:50:45 - Logged In", -- [1421]
+			"21:50:45 - ML initialized!", -- [1422]
+			"21:50:49 - Cometstorm-Illidan (2.4.4) (nil)", -- [1423]
+			"21:50:51 - Event: (PLAYER_ENTERING_WORLD)", -- [1424]
+			"21:50:51 - GetML()", -- [1425]
+			"21:50:51 - LootMethod =  (personalloot)", -- [1426]
+			"21:50:51 - GetPlayersGuildRank()", -- [1427]
+			"21:50:51 - Found Guild Rank: ALT.", -- [1428]
+			"21:50:51 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Cometstorm) (distri:) (GUILD)", -- [1429]
+			"21:51:47 - Event: (PLAYER_ENTERING_WORLD)", -- [1430]
+			"21:51:47 - GetML()", -- [1431]
+			"21:51:47 - LootMethod =  (personalloot)", -- [1432]
+			"22:00:33 - Event: (PLAYER_ENTERING_WORLD)", -- [1433]
+			"22:00:33 - GetML()", -- [1434]
+			"22:00:33 - LootMethod =  (personalloot)", -- [1435]
+			"22:02:10 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Madmartigàn) (distri:) (GUILD)", -- [1436]
+			"22:05:25 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1437]
+			"22:05:25 - GetML()", -- [1438]
+			"22:05:25 - LootMethod =  (personalloot)", -- [1439]
+			"22:06:52 - Event: (PLAYER_ENTERING_WORLD)", -- [1440]
+			"22:06:52 - GetML()", -- [1441]
+			"22:06:52 - LootMethod =  (personalloot)", -- [1442]
+			"22:07:41 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Dadizzle) (distri:) (GUILD)", -- [1443]
+			"07/06/17", -- [1444]
+			"22:09:18 - Logged In", -- [1445]
+			"22:09:18 - ML initialized!", -- [1446]
+			"22:09:23 - Comet-Illidan (2.4.4) (nil)", -- [1447]
+			"22:09:24 - Event: (PLAYER_ENTERING_WORLD)", -- [1448]
+			"22:09:24 - GetML()", -- [1449]
+			"22:09:24 - LootMethod =  (personalloot)", -- [1450]
+			"22:09:24 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1451]
+			"22:09:24 - GetPlayersGuildRank()", -- [1452]
+			"22:09:24 - Found Guild Rank: Raider", -- [1453]
+			"07/06/17", -- [1454]
+			"22:41:05 - Logged In", -- [1455]
+			"22:41:05 - ML initialized!", -- [1456]
+			"22:41:10 - Comet-Illidan (2.4.4) (nil)", -- [1457]
+			"22:41:11 - Event: (PLAYER_ENTERING_WORLD)", -- [1458]
+			"22:41:11 - GetML()", -- [1459]
+			"22:41:11 - LootMethod =  (personalloot)", -- [1460]
+			"22:41:11 - GetPlayersGuildRank()", -- [1461]
+			"22:41:11 - Found Guild Rank: Raider", -- [1462]
+			"22:41:11 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1463]
+			"22:42:57 - Event: (PLAYER_ENTERING_WORLD)", -- [1464]
+			"22:42:57 - GetML()", -- [1465]
+			"22:42:57 - LootMethod =  (personalloot)", -- [1466]
+			"22:44:46 - Event: (PLAYER_ENTERING_WORLD)", -- [1467]
+			"22:44:46 - GetML()", -- [1468]
+			"22:44:46 - LootMethod =  (personalloot)", -- [1469]
+			"22:45:07 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1470]
+			"22:45:07 - GetML()", -- [1471]
+			"22:45:07 - LootMethod =  (personalloot)", -- [1472]
+			"07/07/17", -- [1473]
+			"12:41:05 - Logged In", -- [1474]
+			"12:41:05 - ML initialized!", -- [1475]
+			"12:41:12 - Comet-Illidan (2.4.4) (nil)", -- [1476]
+			"12:41:13 - Event: (PLAYER_ENTERING_WORLD)", -- [1477]
+			"12:41:13 - GetML()", -- [1478]
+			"12:41:13 - LootMethod =  (personalloot)", -- [1479]
+			"12:41:14 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1480]
+			"12:41:14 - GetPlayersGuildRank()", -- [1481]
+			"12:41:14 - Found Guild Rank: Raider", -- [1482]
+			"12:42:24 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1483]
+			"12:42:24 - GetML()", -- [1484]
+			"12:42:24 - LootMethod =  (personalloot)", -- [1485]
+			"12:43:59 - Event: (PLAYER_ENTERING_WORLD)", -- [1486]
+			"12:43:59 - GetML()", -- [1487]
+			"12:43:59 - LootMethod =  (personalloot)", -- [1488]
+			"12:47:29 - Event: (RAID_INSTANCE_WELCOME) (Eye of Azshara (Mythic)) (328350) (0) (0)", -- [1489]
+			"12:47:29 - Event: (PLAYER_ENTERING_WORLD)", -- [1490]
+			"12:47:29 - GetML()", -- [1491]
+			"12:47:29 - LootMethod =  (personalloot)", -- [1492]
+			"12:53:31 - Event: (PLAYER_ENTERING_WORLD)", -- [1493]
+			"12:53:31 - GetML()", -- [1494]
+			"12:53:31 - LootMethod =  (personalloot)", -- [1495]
+			"12:53:43 - Event: (RAID_INSTANCE_WELCOME) (Eye of Azshara (Mythic)) (327976) (0) (0)", -- [1496]
+			"12:53:43 - Event: (PLAYER_ENTERING_WORLD)", -- [1497]
+			"12:53:43 - GetML()", -- [1498]
+			"12:53:43 - LootMethod =  (personalloot)", -- [1499]
+			"13:14:05 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Firstmarket) (distri:) (GUILD)", -- [1500]
+			"13:15:33 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Firstmarket) (distri:) (GUILD)", -- [1501]
+			"13:21:36 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Drtotem) (distri:) (GUILD)", -- [1502]
+			"13:21:41 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Zukas) (distri:) (GUILD)", -- [1503]
+			"13:39:14 - Event: (PLAYER_ENTERING_WORLD)", -- [1504]
+			"13:39:14 - GetML()", -- [1505]
+			"13:39:14 - LootMethod =  (personalloot)", -- [1506]
+			"13:41:09 - Event: (PLAYER_ENTERING_WORLD)", -- [1507]
+			"13:41:09 - GetML()", -- [1508]
+			"13:41:09 - LootMethod =  (personalloot)", -- [1509]
+			"07/08/17", -- [1510]
+			"13:15:09 - Logged In", -- [1511]
+			"13:15:09 - ML initialized!", -- [1512]
+			"13:15:46 - Comet-Illidan (2.4.4) (nil)", -- [1513]
+			"13:15:47 - Event: (PLAYER_ENTERING_WORLD)", -- [1514]
+			"13:15:47 - GetML()", -- [1515]
+			"13:15:47 - LootMethod =  (personalloot)", -- [1516]
+			"13:15:48 - GetPlayersGuildRank()", -- [1517]
+			"13:15:48 - Found Guild Rank: Raider", -- [1518]
+			"13:15:48 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1519]
+			"13:16:00 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Zefarion) (distri:) (GUILD)", -- [1520]
+			"13:17:46 - Event: (PLAYER_ENTERING_WORLD)", -- [1521]
+			"13:17:46 - GetML()", -- [1522]
+			"13:17:46 - LootMethod =  (personalloot)", -- [1523]
+			"13:24:29 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1524]
+			"13:24:29 - GetML()", -- [1525]
+			"13:24:29 - LootMethod =  (personalloot)", -- [1526]
+			"13:25:07 - Event: (PLAYER_ENTERING_WORLD)", -- [1527]
+			"13:25:07 - GetML()", -- [1528]
+			"13:25:07 - LootMethod =  (personalloot)", -- [1529]
+			"13:25:35 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1530]
+			"13:25:35 - GetML()", -- [1531]
+			"13:25:35 - LootMethod =  (personalloot)", -- [1532]
+			"13:27:17 - Event: (PLAYER_ENTERING_WORLD)", -- [1533]
+			"13:27:17 - GetML()", -- [1534]
+			"13:27:17 - LootMethod =  (personalloot)", -- [1535]
+			"13:28:01 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1536]
+			"13:28:01 - GetML()", -- [1537]
+			"13:28:01 - LootMethod =  (personalloot)", -- [1538]
+			"13:29:11 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1539]
+			"13:29:11 - GetML()", -- [1540]
+			"13:29:11 - LootMethod =  (personalloot)", -- [1541]
+			"13:34:19 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1542]
+			"13:34:19 - GetML()", -- [1543]
+			"13:34:19 - LootMethod =  (personalloot)", -- [1544]
+			"13:35:36 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1545]
+			"13:35:36 - GetML()", -- [1546]
+			"13:35:36 - LootMethod =  (personalloot)", -- [1547]
+			"13:39:36 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1548]
+			"13:39:36 - GetML()", -- [1549]
+			"13:39:36 - LootMethod =  (personalloot)", -- [1550]
+			"13:45:38 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1551]
+			"13:45:38 - GetML()", -- [1552]
+			"13:45:38 - LootMethod =  (personalloot)", -- [1553]
+			"13:51:58 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1554]
+			"13:51:58 - GetML()", -- [1555]
+			"13:51:58 - LootMethod =  (group)", -- [1556]
+			"13:52:02 - Event: (PLAYER_ENTERING_WORLD)", -- [1557]
+			"13:52:02 - GetML()", -- [1558]
+			"13:52:02 - LootMethod =  (group)", -- [1559]
+			"13:52:06 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Zilorin) (distri:) (GUILD)", -- [1560]
+			"13:56:22 - Comm received:^1^SverTest^T^N1^S2.3.0^t^^ (from:) (Disabusë) (distri:) (GUILD)", -- [1561]
+			"13:58:58 - Event: (PLAYER_ENTERING_WORLD)", -- [1562]
+			"13:58:58 - GetML()", -- [1563]
+			"13:58:58 - LootMethod =  (group)", -- [1564]
+			"14:00:49 - Event: (PLAYER_ENTERING_WORLD)", -- [1565]
+			"14:00:49 - GetML()", -- [1566]
+			"14:00:49 - LootMethod =  (personalloot)", -- [1567]
+			"14:04:11 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1568]
+			"14:04:11 - GetML()", -- [1569]
+			"14:04:11 - LootMethod =  (personalloot)", -- [1570]
+			"14:08:37 - Event: (PLAYER_ENTERING_WORLD)", -- [1571]
+			"14:08:37 - GetML()", -- [1572]
+			"14:08:37 - LootMethod =  (personalloot)", -- [1573]
+			"14:10:38 - Event: (PLAYER_ENTERING_WORLD)", -- [1574]
+			"14:10:38 - GetML()", -- [1575]
+			"14:10:38 - LootMethod =  (personalloot)", -- [1576]
+			"07/08/17", -- [1577]
+			"14:18:32 - Logged In", -- [1578]
+			"14:18:32 - ML initialized!", -- [1579]
+			"14:18:34 - Evan-Illidan (2.4.4) (nil)", -- [1580]
+			"14:18:36 - Event: (PLAYER_ENTERING_WORLD)", -- [1581]
+			"14:18:36 - GetML()", -- [1582]
+			"14:18:36 - LootMethod =  (group)", -- [1583]
+			"14:18:36 - GetPlayersGuildRank()", -- [1584]
+			"14:18:36 - Found Guild Rank: Alt", -- [1585]
+			"14:18:37 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Evan) (distri:) (GUILD)", -- [1586]
+			"14:23:31 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Iori) (distri:) (GUILD)", -- [1587]
+			"14:26:36 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Vixeav) (distri:) (GUILD)", -- [1588]
+			"07/08/17", -- [1589]
+			"14:26:58 - Logged In", -- [1590]
+			"14:26:58 - ML initialized!", -- [1591]
+			"14:26:59 - Evan-Illidan (2.4.4) (nil)", -- [1592]
+			"14:27:00 - Event: (PLAYER_ENTERING_WORLD)", -- [1593]
+			"14:27:00 - GetML()", -- [1594]
+			"14:27:00 - LootMethod =  (group)", -- [1595]
+			"14:27:00 - GetPlayersGuildRank()", -- [1596]
+			"14:27:00 - Found Guild Rank: Alt", -- [1597]
+			"14:27:00 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Evan) (distri:) (GUILD)", -- [1598]
+			"14:40:49 - Event: (PLAYER_ENTERING_WORLD)", -- [1599]
+			"14:40:49 - GetML()", -- [1600]
+			"14:40:49 - LootMethod =  (group)", -- [1601]
+			"14:43:01 - Event: (PLAYER_ENTERING_WORLD)", -- [1602]
+			"14:43:01 - GetML()", -- [1603]
+			"14:43:01 - LootMethod =  (personalloot)", -- [1604]
+			"14:43:30 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Orangejulius) (distri:) (GUILD)", -- [1605]
+			"14:46:27 - Event: (PLAYER_ENTERING_WORLD)", -- [1606]
+			"14:46:27 - GetML()", -- [1607]
+			"14:46:27 - LootMethod =  (personalloot)", -- [1608]
+			"14:46:50 - Event: (PLAYER_ENTERING_WORLD)", -- [1609]
+			"14:46:50 - GetML()", -- [1610]
+			"14:46:50 - LootMethod =  (personalloot)", -- [1611]
+			"14:48:04 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1612]
+			"14:48:04 - GetML()", -- [1613]
+			"14:48:04 - LootMethod =  (personalloot)", -- [1614]
+			"14:55:08 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1615]
+			"14:55:08 - GetML()", -- [1616]
+			"14:55:08 - LootMethod =  (personalloot)", -- [1617]
+			"14:57:27 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1618]
+			"14:57:27 - GetML()", -- [1619]
+			"14:57:27 - LootMethod =  (personalloot)", -- [1620]
+			"14:57:30 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1621]
+			"14:57:30 - GetML()", -- [1622]
+			"14:57:30 - LootMethod =  (personalloot)", -- [1623]
+			"14:58:02 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Brbsheepings) (distri:) (GUILD)", -- [1624]
+			"14:58:58 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1625]
+			"14:58:58 - GetML()", -- [1626]
+			"14:58:58 - LootMethod =  (personalloot)", -- [1627]
+			"15:02:29 - Event: (PLAYER_ENTERING_WORLD)", -- [1628]
+			"15:02:29 - GetML()", -- [1629]
+			"15:02:29 - LootMethod =  (personalloot)", -- [1630]
+			"15:03:17 - Event: (PLAYER_ENTERING_WORLD)", -- [1631]
+			"15:03:17 - GetML()", -- [1632]
+			"15:03:17 - LootMethod =  (personalloot)", -- [1633]
+			"15:06:44 - Event: (PLAYER_ENTERING_WORLD)", -- [1634]
+			"15:06:44 - GetML()", -- [1635]
+			"15:06:44 - LootMethod =  (personalloot)", -- [1636]
+			"07/08/17", -- [1637]
+			"15:10:32 - Logged In", -- [1638]
+			"15:10:32 - ML initialized!", -- [1639]
+			"15:10:33 - Evan-Illidan (2.4.4) (nil)", -- [1640]
+			"15:10:34 - Event: (PLAYER_ENTERING_WORLD)", -- [1641]
+			"15:10:34 - GetML()", -- [1642]
+			"15:10:34 - LootMethod =  (personalloot)", -- [1643]
+			"15:10:34 - GetPlayersGuildRank()", -- [1644]
+			"15:10:34 - Found Guild Rank: Alt", -- [1645]
+			"15:10:35 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Evan) (distri:) (GUILD)", -- [1646]
+			"15:13:45 - Event: (PLAYER_ENTERING_WORLD)", -- [1647]
+			"15:13:45 - GetML()", -- [1648]
+			"15:13:45 - LootMethod =  (personalloot)", -- [1649]
+			"15:13:46 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1650]
+			"15:13:46 - GetML()", -- [1651]
+			"15:13:46 - LootMethod =  (group)", -- [1652]
+			"15:24:51 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1653]
+			"15:24:51 - GetML()", -- [1654]
+			"15:24:51 - LootMethod =  (personalloot)", -- [1655]
+			"15:24:58 - Event: (PLAYER_ENTERING_WORLD)", -- [1656]
+			"15:24:58 - GetML()", -- [1657]
+			"15:24:58 - LootMethod =  (personalloot)", -- [1658]
+			"15:27:15 - Event: (PLAYER_ENTERING_WORLD)", -- [1659]
+			"15:27:15 - GetML()", -- [1660]
+			"15:27:15 - LootMethod =  (personalloot)", -- [1661]
+			"15:27:16 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1662]
+			"15:27:16 - GetML()", -- [1663]
+			"15:27:16 - LootMethod =  (group)", -- [1664]
+			"15:29:22 - Event: (PLAYER_ENTERING_WORLD)", -- [1665]
+			"15:29:22 - GetML()", -- [1666]
+			"15:29:22 - LootMethod =  (group)", -- [1667]
+			"15:36:14 - Event: (PLAYER_ENTERING_WORLD)", -- [1668]
+			"15:36:14 - GetML()", -- [1669]
+			"15:36:14 - LootMethod =  (personalloot)", -- [1670]
+			"07/08/17", -- [1671]
+			"15:38:05 - Logged In", -- [1672]
+			"15:38:05 - ML initialized!", -- [1673]
+			"15:38:13 - Evan-Illidan (2.4.4) (nil)", -- [1674]
+			"15:38:13 - Event: (PLAYER_ENTERING_WORLD)", -- [1675]
+			"15:38:13 - GetML()", -- [1676]
+			"15:38:13 - LootMethod =  (personalloot)", -- [1677]
+			"15:38:14 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Evan) (distri:) (GUILD)", -- [1678]
+			"15:38:14 - GetPlayersGuildRank()", -- [1679]
+			"15:38:14 - Found Guild Rank: Alt", -- [1680]
+			"15:46:54 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Galelust) (distri:) (GUILD)", -- [1681]
+			"15:57:03 - Event: (PLAYER_ENTERING_WORLD)", -- [1682]
+			"15:57:03 - GetML()", -- [1683]
+			"15:57:03 - LootMethod =  (personalloot)", -- [1684]
+			"07/08/17", -- [1685]
+			"15:58:00 - Logged In", -- [1686]
+			"15:58:00 - ML initialized!", -- [1687]
+			"15:58:10 - Comet-Illidan (2.4.4) (nil)", -- [1688]
+			"15:58:12 - Event: (PLAYER_ENTERING_WORLD)", -- [1689]
+			"15:58:12 - GetML()", -- [1690]
+			"15:58:12 - LootMethod =  (personalloot)", -- [1691]
+			"15:58:13 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1692]
+			"15:58:13 - GetPlayersGuildRank()", -- [1693]
+			"15:58:13 - Found Guild Rank: Raider", -- [1694]
+			"16:01:44 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Krieggeist) (distri:) (GUILD)", -- [1695]
+			"16:03:33 - Comm received:^1^SverTest^T^N1^S2.3.0^t^^ (from:) (Disabusë) (distri:) (GUILD)", -- [1696]
+			"07/08/17", -- [1697]
+			"16:11:17 - Logged In", -- [1698]
+			"16:11:17 - ML initialized!", -- [1699]
+			"16:11:42 - Evan-Illidan (2.4.4) (nil)", -- [1700]
+			"16:11:43 - Event: (PLAYER_ENTERING_WORLD)", -- [1701]
+			"16:11:43 - GetML()", -- [1702]
+			"16:11:43 - LootMethod =  (personalloot)", -- [1703]
+			"16:11:43 - GetPlayersGuildRank()", -- [1704]
+			"16:11:43 - Found Guild Rank: Alt", -- [1705]
+			"16:11:43 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Evan) (distri:) (GUILD)", -- [1706]
+			"16:12:25 - Event: (PLAYER_ENTERING_WORLD)", -- [1707]
+			"16:12:25 - GetML()", -- [1708]
+			"16:12:25 - LootMethod =  (personalloot)", -- [1709]
+			"07/08/17", -- [1710]
+			"17:03:31 - Logged In", -- [1711]
+			"17:03:31 - ML initialized!", -- [1712]
+			"17:04:03 - Evan-Illidan (2.4.4) (nil)", -- [1713]
+			"17:04:04 - Event: (PLAYER_ENTERING_WORLD)", -- [1714]
+			"17:04:04 - GetML()", -- [1715]
+			"17:04:04 - LootMethod =  (personalloot)", -- [1716]
+			"17:04:04 - GetPlayersGuildRank()", -- [1717]
+			"17:04:04 - Found Guild Rank: Alt", -- [1718]
+			"17:04:04 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Evan) (distri:) (GUILD)", -- [1719]
+			"17:15:14 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Drkillbotz) (distri:) (GUILD)", -- [1720]
+			"17:33:24 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Chèss) (distri:) (GUILD)", -- [1721]
+			"17:34:54 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Djdivine) (distri:) (GUILD)", -- [1722]
+			"07/08/17", -- [1723]
+			"17:37:29 - Logged In", -- [1724]
+			"17:37:29 - ML initialized!", -- [1725]
+			"17:37:30 - Evan-Illidan (2.4.4) (nil)", -- [1726]
+			"17:37:31 - Event: (PLAYER_ENTERING_WORLD)", -- [1727]
+			"17:37:31 - GetML()", -- [1728]
+			"17:37:31 - LootMethod =  (personalloot)", -- [1729]
+			"17:37:31 - GetPlayersGuildRank()", -- [1730]
+			"17:37:31 - Found Guild Rank: ALT.", -- [1731]
+			"17:37:32 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Evan) (distri:) (GUILD)", -- [1732]
+			"17:44:53 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Zefarion) (distri:) (GUILD)", -- [1733]
+			"17:45:48 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1734]
+			"17:45:48 - GetML()", -- [1735]
+			"17:45:48 - LootMethod =  (personalloot)", -- [1736]
+			"17:45:52 - Event: (PLAYER_ENTERING_WORLD)", -- [1737]
+			"17:45:52 - GetML()", -- [1738]
+			"17:45:52 - LootMethod =  (personalloot)", -- [1739]
+			"07/08/17", -- [1740]
+			"17:45:57 - Logged In", -- [1741]
+			"17:45:57 - ML initialized!", -- [1742]
+			"17:45:58 - Evan-Illidan (2.4.4) (nil)", -- [1743]
+			"17:45:59 - Event: (PLAYER_ENTERING_WORLD)", -- [1744]
+			"17:45:59 - GetML()", -- [1745]
+			"17:45:59 - LootMethod =  (personalloot)", -- [1746]
+			"17:46:00 - GetPlayersGuildRank()", -- [1747]
+			"17:46:00 - Found Guild Rank: ALT.", -- [1748]
+			"17:46:00 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Evan) (distri:) (GUILD)", -- [1749]
+			"17:56:21 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Djdivine) (distri:) (GUILD)", -- [1750]
+			"18:03:29 - Event: (PLAYER_ENTERING_WORLD)", -- [1751]
+			"18:03:29 - GetML()", -- [1752]
+			"18:03:29 - LootMethod =  (personalloot)", -- [1753]
+			"18:05:21 - Event: (PLAYER_ENTERING_WORLD)", -- [1754]
+			"18:05:21 - GetML()", -- [1755]
+			"18:05:21 - LootMethod =  (personalloot)", -- [1756]
+			"18:07:49 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Thenex) (distri:) (GUILD)", -- [1757]
+			"07/09/17", -- [1758]
+			"12:52:28 - Logged In", -- [1759]
+			"12:52:28 - ML initialized!", -- [1760]
+			"12:52:55 - Evan-Illidan (2.4.4) (nil)", -- [1761]
+			"12:52:56 - Event: (PLAYER_ENTERING_WORLD)", -- [1762]
+			"12:52:56 - GetML()", -- [1763]
+			"12:52:56 - LootMethod =  (personalloot)", -- [1764]
+			"12:52:57 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Evan) (distri:) (GUILD)", -- [1765]
+			"12:52:57 - GetPlayersGuildRank()", -- [1766]
+			"12:52:57 - Found Guild Rank: ALT.", -- [1767]
+			"07/09/17", -- [1768]
+			"12:55:19 - Logged In", -- [1769]
+			"12:55:19 - ML initialized!", -- [1770]
+			"12:55:31 - Comet-Illidan (2.4.4) (nil)", -- [1771]
+			"12:55:32 - Event: (PLAYER_ENTERING_WORLD)", -- [1772]
+			"12:55:32 - GetML()", -- [1773]
+			"12:55:32 - LootMethod =  (personalloot)", -- [1774]
+			"12:55:33 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1775]
+			"12:55:33 - GetPlayersGuildRank()", -- [1776]
+			"12:55:33 - Found Guild Rank: Raider", -- [1777]
+			"12:56:20 - Event: (PLAYER_ENTERING_WORLD)", -- [1778]
+			"12:56:20 - GetML()", -- [1779]
+			"12:56:20 - LootMethod =  (personalloot)", -- [1780]
+			"12:57:37 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Krieggeist) (distri:) (GUILD)", -- [1781]
+			"07/09/17", -- [1782]
+			"12:57:48 - Logged In", -- [1783]
+			"12:57:48 - ML initialized!", -- [1784]
+			"12:57:53 - Cometstorm-Illidan (2.4.4) (nil)", -- [1785]
+			"12:57:54 - Event: (PLAYER_ENTERING_WORLD)", -- [1786]
+			"12:57:54 - GetML()", -- [1787]
+			"12:57:54 - LootMethod =  (personalloot)", -- [1788]
+			"12:57:54 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Cometstorm) (distri:) (GUILD)", -- [1789]
+			"12:57:54 - GetPlayersGuildRank()", -- [1790]
+			"12:57:54 - Found Guild Rank: ALT.", -- [1791]
+			"07/09/17", -- [1792]
+			"17:20:17 - Logged In", -- [1793]
+			"17:20:17 - ML initialized!", -- [1794]
+			"17:20:21 - Evan-Illidan (2.4.4) (nil)", -- [1795]
+			"17:20:22 - Event: (PLAYER_ENTERING_WORLD)", -- [1796]
+			"17:20:22 - GetML()", -- [1797]
+			"17:20:22 - LootMethod =  (personalloot)", -- [1798]
+			"17:20:22 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Evan) (distri:) (GUILD)", -- [1799]
+			"17:20:22 - GetPlayersGuildRank()", -- [1800]
+			"17:20:22 - Found Guild Rank: ALT.", -- [1801]
+			"17:20:37 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Ishaar) (distri:) (GUILD)", -- [1802]
+			"17:25:22 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Thenexjr) (distri:) (GUILD)", -- [1803]
+			"07/09/17", -- [1804]
+			"17:25:37 - Logged In", -- [1805]
+			"17:25:37 - ML initialized!", -- [1806]
+			"17:25:42 - Cometstorm-Illidan (2.4.4) (nil)", -- [1807]
+			"17:25:43 - Event: (PLAYER_ENTERING_WORLD)", -- [1808]
+			"17:25:43 - GetML()", -- [1809]
+			"17:25:43 - LootMethod =  (personalloot)", -- [1810]
+			"17:25:43 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Cometstorm) (distri:) (GUILD)", -- [1811]
+			"17:25:43 - GetPlayersGuildRank()", -- [1812]
+			"17:25:43 - Found Guild Rank: ALT.", -- [1813]
+			"07/09/17", -- [1814]
+			"17:26:26 - Logged In", -- [1815]
+			"17:26:26 - ML initialized!", -- [1816]
+			"17:26:31 - Comet-Illidan (2.4.4) (nil)", -- [1817]
+			"17:26:32 - Event: (PLAYER_ENTERING_WORLD)", -- [1818]
+			"17:26:32 - GetML()", -- [1819]
+			"17:26:32 - LootMethod =  (personalloot)", -- [1820]
+			"17:26:33 - GetPlayersGuildRank()", -- [1821]
+			"17:26:33 - Found Guild Rank: Raider", -- [1822]
+			"17:26:33 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1823]
+			"17:27:46 - Event: (PLAYER_ENTERING_WORLD)", -- [1824]
+			"17:27:46 - GetML()", -- [1825]
+			"17:27:46 - LootMethod =  (personalloot)", -- [1826]
+			"17:30:39 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Ishaar) (distri:) (GUILD)", -- [1827]
+			"17:30:56 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Chèss) (distri:) (GUILD)", -- [1828]
+			"17:32:58 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1829]
+			"17:32:58 - GetML()", -- [1830]
+			"17:32:58 - LootMethod =  (personalloot)", -- [1831]
+			"17:36:27 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1832]
+			"17:36:27 - GetML()", -- [1833]
+			"17:36:27 - LootMethod =  (personalloot)", -- [1834]
+			"17:39:10 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Ugliestdruid) (distri:) (GUILD)", -- [1835]
+			"17:40:06 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1836]
+			"17:40:06 - GetML()", -- [1837]
+			"17:40:06 - LootMethod =  (personalloot)", -- [1838]
+			"17:41:34 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Xgr) (distri:) (GUILD)", -- [1839]
+			"17:42:52 - Event: (PLAYER_ENTERING_WORLD)", -- [1840]
+			"17:42:52 - GetML()", -- [1841]
+			"17:42:52 - LootMethod =  (personalloot)", -- [1842]
+			"07/09/17", -- [1843]
+			"17:43:05 - Logged In", -- [1844]
+			"17:43:05 - ML initialized!", -- [1845]
+			"17:43:09 - Cometstorm-Illidan (2.4.4) (nil)", -- [1846]
+			"17:43:10 - Event: (PLAYER_ENTERING_WORLD)", -- [1847]
+			"17:43:10 - GetML()", -- [1848]
+			"17:43:10 - LootMethod =  (personalloot)", -- [1849]
+			"17:43:10 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Cometstorm) (distri:) (GUILD)", -- [1850]
+			"17:43:10 - GetPlayersGuildRank()", -- [1851]
+			"17:43:10 - Found Guild Rank: ALT.", -- [1852]
+			"17:43:28 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1853]
+			"17:43:28 - GetML()", -- [1854]
+			"17:43:28 - LootMethod =  (personalloot)", -- [1855]
+			"17:44:22 - Event: (PLAYER_ENTERING_WORLD)", -- [1856]
+			"17:44:22 - GetML()", -- [1857]
+			"17:44:22 - LootMethod =  (personalloot)", -- [1858]
+			"17:45:40 - Event: (RAID_INSTANCE_WELCOME) (Tomb of Sargeras (Normal)) (137659) (0) (0)", -- [1859]
+			"17:45:40 - Event: (PLAYER_ENTERING_WORLD)", -- [1860]
+			"17:45:40 - GetML()", -- [1861]
+			"17:45:40 - LootMethod =  (personalloot)", -- [1862]
+			"17:46:56 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Furyisthy) (distri:) (GUILD)", -- [1863]
+			"17:49:21 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Thenexjr) (distri:) (GUILD)", -- [1864]
+			"17:51:34 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Djpurge) (distri:) (GUILD)", -- [1865]
+			"17:53:32 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Djpurge) (distri:) (GUILD)", -- [1866]
+			"17:57:14 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Djpurge) (distri:) (GUILD)", -- [1867]
+			"18:04:07 - Comm received:^1^SEUBonusRoll^T^N1^SXgr-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:264:8388608:3::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Xgr) (distri:) (RAID)", -- [1868]
+			"18:21:01 - Event: (PLAYER_ENTERING_WORLD)", -- [1869]
+			"18:21:01 - GetML()", -- [1870]
+			"18:21:01 - LootMethod =  (personalloot)", -- [1871]
+			"07/09/17", -- [1872]
+			"18:21:10 - Logged In", -- [1873]
+			"18:21:10 - ML initialized!", -- [1874]
+			"18:21:14 - Comet-Illidan (2.4.4) (nil)", -- [1875]
+			"18:21:15 - Event: (PLAYER_ENTERING_WORLD)", -- [1876]
+			"18:21:15 - GetML()", -- [1877]
+			"18:21:15 - LootMethod =  (personalloot)", -- [1878]
+			"18:21:16 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1879]
+			"18:21:16 - GetPlayersGuildRank()", -- [1880]
+			"18:21:16 - Found Guild Rank: Raider", -- [1881]
+			"18:21:20 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1882]
+			"18:21:20 - GetML()", -- [1883]
+			"18:21:20 - LootMethod =  (personalloot)", -- [1884]
+			"18:21:34 - Event: (PLAYER_ENTERING_WORLD)", -- [1885]
+			"18:21:34 - GetML()", -- [1886]
+			"18:21:34 - LootMethod =  (personalloot)", -- [1887]
+			"18:22:05 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Ugliestdruid) (distri:) (GUILD)", -- [1888]
+			"18:24:13 - Event: (RAID_INSTANCE_WELCOME) (Tomb of Sargeras (Normal)) (135346) (0) (0)", -- [1889]
+			"18:24:14 - Event: (PLAYER_ENTERING_WORLD)", -- [1890]
+			"18:24:14 - GetML()", -- [1891]
+			"18:24:14 - LootMethod =  (personalloot)", -- [1892]
+			"18:24:31 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Jimrando) (distri:) (GUILD)", -- [1893]
+			"18:28:47 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Fearmeter) (distri:) (GUILD)", -- [1894]
+			"18:33:19 - Comm received:^1^SEUBonusRoll^T^N1^SUgliestdruid-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:102:8388608:3::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Ugliestdruid) (distri:) (RAID)", -- [1895]
+			"18:33:20 - Comm received:^1^SEUBonusRoll^T^N1^SIshaar-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:64:8388608:3::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Ishaar) (distri:) (RAID)", -- [1896]
+			"18:48:35 - Comm received:^1^SEUBonusRoll^T^N1^SEklypto-Illidan^N2^Sitem^N3^S|cffa335ee|Hitem:147020::::::::110:250::3:3:3561:1482:3528:::|h[Scaled~`Band~`of~`Servitude]|h|r^t^^ (from:) (Eklypto) (distri:) (RAID)", -- [1897]
+			"18:48:46 - Comm received:^1^SEUBonusRoll^T^N1^SUgliestdruid-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:102:8388608:3::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Ugliestdruid) (distri:) (RAID)", -- [1898]
+			"19:03:08 - Comm received:^1^SEUBonusRoll^T^N1^SUgliestdruid-Illidan^N2^Sitem^N3^S|cffa335ee|Hitem:147023::::::::110:102::3:3:3561:1487:3336:::|h[Leviathan's~`Hunger]|h|r^t^^ (from:) (Ugliestdruid) (distri:) (RAID)", -- [1899]
+			"19:03:13 - Comm received:^1^SEUBonusRoll^T^N1^SIshaar-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:64:8388608:3::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Ishaar) (distri:) (RAID)", -- [1900]
+			"19:03:44 - Comm received:^1^SEUBonusRoll^T^N1^SEklypto-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:250:8388608:3::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Eklypto) (distri:) (RAID)", -- [1901]
+			"19:10:39 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Zefarion) (distri:) (GUILD)", -- [1902]
+			"19:17:45 - Comm received:^1^SEUBonusRoll^T^N1^SUgliestdruid-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:102:8388608:3::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Ugliestdruid) (distri:) (RAID)", -- [1903]
+			"19:17:49 - Comm received:^1^SEUBonusRoll^T^N1^SIshaar-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:64:8388608:3::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Ishaar) (distri:) (RAID)", -- [1904]
+			"19:18:05 - Comm received:^1^SEUBonusRoll^T^N1^SEklypto-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:250:8388608:3::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Eklypto) (distri:) (RAID)", -- [1905]
+			"19:19:57 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Marketfreshe) (distri:) (GUILD)", -- [1906]
+			"19:30:56 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Akromä) (distri:) (GUILD)", -- [1907]
+			"19:33:03 - Comm received:^1^SEUBonusRoll^T^N1^SEklypto-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:250:8388608:3::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Eklypto) (distri:) (RAID)", -- [1908]
+			"19:33:05 - Comm received:^1^SEUBonusRoll^T^N1^SUgliestdruid-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:102:8388608:3::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Ugliestdruid) (distri:) (RAID)", -- [1909]
+			"19:33:07 - Comm received:^1^SEUBonusRoll^T^N1^SIshaar-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:64:8388608:3::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Ishaar) (distri:) (RAID)", -- [1910]
+			"07/09/17", -- [1911]
+			"19:39:27 - Logged In", -- [1912]
+			"19:39:27 - ML initialized!", -- [1913]
+			"19:40:00 - Comet-Illidan (2.4.4) (nil)", -- [1914]
+			"19:40:01 - Event: (PLAYER_ENTERING_WORLD)", -- [1915]
+			"19:40:01 - GetML()", -- [1916]
+			"19:40:01 - LootMethod =  (personalloot)", -- [1917]
+			"19:40:02 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1918]
+			"19:40:02 - GetML()", -- [1919]
+			"19:40:02 - LootMethod =  (personalloot)", -- [1920]
+			"19:40:02 - GetPlayersGuildRank()", -- [1921]
+			"19:40:02 - Found Guild Rank: Raider", -- [1922]
+			"19:40:02 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1923]
+			"19:45:53 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Thenexjr) (distri:) (GUILD)", -- [1924]
+			"19:55:54 - Comm received:^1^SEUBonusRoll^T^N1^SIshaar-Illidan^N2^Sartifact_power^N3^S|cff0070dd|Hitem:147581::::::::110:64:8388608:3::41:::|h[Depleted~`Azsharan~`Seal]|h|r^t^^ (from:) (Ishaar) (distri:) (RAID)", -- [1925]
+			"19:58:56 - Event: (PLAYER_ENTERING_WORLD)", -- [1926]
+			"19:58:56 - GetML()", -- [1927]
+			"19:58:56 - LootMethod =  (personalloot)", -- [1928]
+			"07/09/17", -- [1929]
+			"22:39:25 - Logged In", -- [1930]
+			"22:39:25 - ML initialized!", -- [1931]
+			"22:39:52 - Evan-Illidan (2.4.4) (nil)", -- [1932]
+			"22:39:53 - Event: (PLAYER_ENTERING_WORLD)", -- [1933]
+			"22:39:53 - GetML()", -- [1934]
+			"22:39:53 - LootMethod =  (personalloot)", -- [1935]
+			"22:39:53 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Evan) (distri:) (GUILD)", -- [1936]
+			"22:39:53 - GetPlayersGuildRank()", -- [1937]
+			"22:39:53 - Found Guild Rank: ALT.", -- [1938]
+			"22:40:39 - Event: (PLAYER_ENTERING_WORLD)", -- [1939]
+			"22:40:39 - GetML()", -- [1940]
+			"22:40:39 - LootMethod =  (personalloot)", -- [1941]
+			"22:43:35 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1942]
+			"22:43:35 - GetML()", -- [1943]
+			"22:43:35 - LootMethod =  (personalloot)", -- [1944]
+			"22:44:44 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1945]
+			"22:44:44 - GetML()", -- [1946]
+			"22:44:44 - LootMethod =  (personalloot)", -- [1947]
+			"22:45:22 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Zaelen) (distri:) (GUILD)", -- [1948]
+			"22:47:02 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1949]
+			"22:47:02 - GetML()", -- [1950]
+			"22:47:02 - LootMethod =  (personalloot)", -- [1951]
+			"22:49:03 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1952]
+			"22:49:03 - GetML()", -- [1953]
+			"22:49:03 - LootMethod =  (personalloot)", -- [1954]
+			"22:52:09 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1955]
+			"22:52:09 - GetML()", -- [1956]
+			"22:52:09 - LootMethod =  (personalloot)", -- [1957]
+			"22:54:21 - Comm received:^1^SverTest^T^N1^S2.4.3^t^^ (from:) (Homostorm) (distri:) (GUILD)", -- [1958]
+			"22:54:37 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1959]
+			"22:54:37 - GetML()", -- [1960]
+			"22:54:37 - LootMethod =  (personalloot)", -- [1961]
+			"22:56:41 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1962]
+			"22:56:41 - GetML()", -- [1963]
+			"22:56:41 - LootMethod =  (personalloot)", -- [1964]
+			"22:56:49 - Event: (PLAYER_ENTERING_WORLD)", -- [1965]
+			"22:56:49 - GetML()", -- [1966]
+			"22:56:49 - LootMethod =  (personalloot)", -- [1967]
+			"23:16:38 - Event: (PLAYER_ENTERING_WORLD)", -- [1968]
+			"23:16:38 - GetML()", -- [1969]
+			"23:16:38 - LootMethod =  (personalloot)", -- [1970]
+			"23:16:56 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1971]
+			"23:16:56 - GetML()", -- [1972]
+			"23:16:56 - LootMethod =  (personalloot)", -- [1973]
+			"07/09/17", -- [1974]
+			"23:17:19 - Logged In", -- [1975]
+			"23:17:19 - ML initialized!", -- [1976]
+			"23:17:21 - Evan-Illidan (2.4.4) (nil)", -- [1977]
+			"23:17:22 - Event: (PLAYER_ENTERING_WORLD)", -- [1978]
+			"23:17:22 - GetML()", -- [1979]
+			"23:17:22 - LootMethod =  (personalloot)", -- [1980]
+			"23:17:23 - GetPlayersGuildRank()", -- [1981]
+			"23:17:23 - Found Guild Rank: ALT.", -- [1982]
+			"23:17:23 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Evan) (distri:) (GUILD)", -- [1983]
+			"23:20:47 - Event: (PLAYER_ENTERING_WORLD)", -- [1984]
+			"23:20:47 - GetML()", -- [1985]
+			"23:20:47 - LootMethod =  (personalloot)", -- [1986]
+			"23:21:11 - Event: (PLAYER_ENTERING_WORLD)", -- [1987]
+			"23:21:11 - GetML()", -- [1988]
+			"23:21:11 - LootMethod =  (personalloot)", -- [1989]
+			"23:22:49 - Event: (PLAYER_ENTERING_WORLD)", -- [1990]
+			"23:22:49 - GetML()", -- [1991]
+			"23:22:49 - LootMethod =  (personalloot)", -- [1992]
+			"23:24:11 - Event: (PLAYER_ENTERING_WORLD)", -- [1993]
+			"23:24:11 - GetML()", -- [1994]
+			"23:24:11 - LootMethod =  (personalloot)", -- [1995]
+			"23:25:47 - Event: (PARTY_LOOT_METHOD_CHANGED)", -- [1996]
+			"23:25:47 - GetML()", -- [1997]
+			"23:25:47 - LootMethod =  (group)", -- [1998]
+			"23:45:29 - Event: (PLAYER_ENTERING_WORLD)", -- [1999]
+			"23:45:29 - GetML()", -- [2000]
+			"23:45:29 - LootMethod =  (group)", -- [2001]
+			"23:45:47 - Event: (PLAYER_ENTERING_WORLD)", -- [2002]
+			"23:45:47 - GetML()", -- [2003]
+			"23:45:47 - LootMethod =  (personalloot)", -- [2004]
+			"07/10/17", -- [2005]
+			"09:06:45 - Logged In", -- [2006]
+			"09:06:45 - ML initialized!", -- [2007]
+			"09:06:51 - Evan-Illidan (2.4.4) (nil)", -- [2008]
+			"09:06:52 - Event: (PLAYER_ENTERING_WORLD)", -- [2009]
+			"09:06:52 - GetML()", -- [2010]
+			"09:06:52 - LootMethod =  (personalloot)", -- [2011]
+			"09:06:53 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Evan) (distri:) (GUILD)", -- [2012]
+			"09:06:53 - GetPlayersGuildRank()", -- [2013]
+			"09:06:53 - Found Guild Rank: ALT.", -- [2014]
+			"07/10/17", -- [2015]
+			"09:07:58 - Logged In", -- [2016]
+			"09:07:58 - ML initialized!", -- [2017]
+			"09:08:02 - Cometstorm-Illidan (2.4.4) (nil)", -- [2018]
+			"09:08:04 - Event: (PLAYER_ENTERING_WORLD)", -- [2019]
+			"09:08:04 - GetML()", -- [2020]
+			"09:08:04 - LootMethod =  (personalloot)", -- [2021]
+			"09:08:04 - GetPlayersGuildRank()", -- [2022]
+			"09:08:04 - Found Guild Rank: ALT.", -- [2023]
+			"09:08:04 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Cometstorm) (distri:) (GUILD)", -- [2024]
+			"07/10/17", -- [2025]
+			"09:09:19 - Logged In", -- [2026]
+			"09:09:19 - ML initialized!", -- [2027]
+			"09:09:24 - Comet-Illidan (2.4.4) (nil)", -- [2028]
+			"09:09:25 - Event: (PLAYER_ENTERING_WORLD)", -- [2029]
+			"09:09:25 - GetML()", -- [2030]
+			"09:09:25 - LootMethod =  (personalloot)", -- [2031]
+			"09:09:26 - GetPlayersGuildRank()", -- [2032]
+			"09:09:26 - Found Guild Rank: Raider", -- [2033]
+			"09:09:26 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [2034]
+			"09:10:37 - Event: (PLAYER_ENTERING_WORLD)", -- [2035]
+			"09:10:37 - GetML()", -- [2036]
+			"09:10:37 - LootMethod =  (personalloot)", -- [2037]
+			"07/10/17", -- [2038]
+			"11:21:17 - Logged In", -- [2039]
+			"11:21:17 - ML initialized!", -- [2040]
+			"11:21:24 - Comet-Illidan (2.4.4) (nil)", -- [2041]
+			"11:21:25 - Event: (PLAYER_ENTERING_WORLD)", -- [2042]
+			"11:21:25 - GetML()", -- [2043]
+			"11:21:25 - LootMethod =  (personalloot)", -- [2044]
+			"11:21:26 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [2045]
+			"11:21:26 - GetPlayersGuildRank()", -- [2046]
+			"11:21:26 - Found Guild Rank: Raider", -- [2047]
+			"11:24:55 - Event: (PLAYER_ENTERING_WORLD)", -- [2048]
+			"11:24:55 - GetML()", -- [2049]
+			"11:24:55 - LootMethod =  (personalloot)", -- [2050]
+			"11:25:44 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Hemotherapy) (distri:) (GUILD)", -- [2051]
+			"07/11/17", -- [2052]
+			"10:19:41 - Logged In", -- [2053]
+			"10:19:41 - ML initialized!", -- [2054]
+			"10:19:46 - Comet-Illidan (2.4.4) (nil)", -- [2055]
+			"10:19:47 - Event: (PLAYER_ENTERING_WORLD)", -- [2056]
+			"10:19:47 - GetML()", -- [2057]
+			"10:19:47 - LootMethod =  (personalloot)", -- [2058]
+			"10:19:48 - Comm received:^1^SverTest^T^N1^S2.4.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [2059]
+			"10:19:48 - GetPlayersGuildRank()", -- [2060]
+			"10:19:48 - Found Guild Rank: Raider", -- [2061]
 		},
-		["version"] = "2.4.0",
-		["oldVersion"] = "2.3.4",
+		["version"] = "2.4.4",
+		["oldVersion"] = "2.4.3",
 		["verTestCandidates"] = {
 			["Ekliptò-Illidan"] = "2.3.3-nil: - Combustion-Illidan",
-			["Zilorin-Illidan"] = "2.3.3-nil: - Cometstorm-Illidan",
-			["Furyisthy-Illidan"] = "2.3.4-nil: - Comet-Illidan",
+			["Zilorin-Illidan"] = "2.4.3-nil: - Comet-Illidan",
+			["Furyisthy-Illidan"] = "2.4.4-nil: - Cometstorm-Illidan",
 			["Embertap-Illidan"] = "2.1.11-nil: - Comet-Illidan",
 			["Wowjaysön-Illidan"] = "2.3.4-nil: - Comet-Illidan",
 			["Krispers-Illidan"] = "2.3.0-nil: - Combustion-Illidan",
 			["Sâpphire-Illidan"] = "2.3.0-nil: - Comet-Illidan",
 			["Abracadávér-Illidan"] = "2.3.0-nil: - Comet-Illidan",
-			["Cenzic-Illidan"] = "2.4.0-Beta.1: - Comet-Illidan",
+			["Cenzic-Illidan"] = "2.4.3-nil: - Comet-Illidan",
 			["Litchbite-Illidan"] = "2.1.6-nil: - Comet-Illidan",
 			["Plentakill-Illidan"] = "2.1.11-nil: - Comet-Illidan",
 			["Evilslippers-Illidan"] = "2.3.0-nil: - Comet-Illidan",
 			["Cribb-Illidan"] = "2.1.11-nil: - Comet-Illidan",
-			["Lanféar-Illidan"] = "2.3.4-nil: - Comet-Illidan",
+			["Lanféar-Illidan"] = "2.4.4-nil: - Comet-Illidan",
 			["Hashtagwin-Illidan"] = "2.2.5-nil: - Comet-Illidan",
-			["Roivon-Illidan"] = "2.3.4-nil: - Comet-Illidan",
+			["Roivon-Illidan"] = "2.4.3-nil: - Comet-Illidan",
 			["Thendorian-Illidan"] = "2.2.0-nil: - Comet-Illidan",
-			["Bealziwoding-Illidan"] = "2.3.4-nil: - Cometstorm-Illidan",
-			["Djpurge-Illidan"] = "2.3.4-nil: - Comet-Illidan",
-			["Fearmeter-Illidan"] = "2.3.3-nil: - Comet-Illidan",
+			["Bealziwoding-Illidan"] = "2.4.1-nil: - Comet-Illidan",
+			["Djpurge-Illidan"] = "2.4.4-nil: - Comet-Illidan",
+			["Hemotherapy-Illidan"] = "2.4.4-nil: - Comet-Illidan",
+			["Fearmeter-Illidan"] = "2.4.3-nil: - Comet-Illidan",
 			["Dvldocdk-Illidan"] = "2.3.0-nil: - Comet-Illidan",
 			["Deräil-Illidan"] = "2.1.8-nil: - Comet-Illidan",
 			["Ellípses-Illidan"] = "2.2.3-nil: - Combustion-Illidan",
 			["Salamanderr-Illidan"] = "2.3.2-nil: - Comet-Illidan",
-			["Xgr-Illidan"] = "2.3.0-nil: - Comet-Illidan",
+			["Xgr-Illidan"] = "2.4.4-nil: - Comet-Illidan",
 			["Shieldvsface-Illidan"] = "2.3.3-nil: - Combustion-Illidan",
 			["Livepets-Illidan"] = "2.3.1-nil: - Comet-Illidan",
 			["Pawclaw-Illidan"] = "2.1.7-nil: - Comet-Illidan",
 			["Toadsack-Illidan"] = "2.3.0-nil: - Comet-Illidan",
+			["Zilock-Illidan"] = "2.4.3-nil: - Comet-Illidan",
 			["Moonkow-Illidan"] = "2.3.2-nil: - Combustion-Illidan",
 			["Dumpstrbacon-Illidan"] = "2.1.6-nil: - Comet-Illidan",
 			["Heisenberg-Illidan"] = "2.2.1-nil: - Combustion-Illidan",
-			["Zefarion-Illidan"] = "2.3.0-nil: - Comet-Illidan",
+			["Zefarion-Illidan"] = "2.4.3-nil: - Comet-Illidan",
 			["Guzzedup-Illidan"] = "2.2.5-nil: - Comet-Illidan",
 			["Vaerys-Illidan"] = "2.3.3-nil: - Combustion-Illidan",
 			["Tåbadin-Illidan"] = "2.3.0-nil: - Comet-Illidan",
-			["Xorn-Illidan"] = "2.3.3-nil: - Comet-Illidan",
+			["Xorn-Illidan"] = "2.4.3-nil: - Comet-Illidan",
 			["Trapnfäp-Illidan"] = "2.3.0-nil: - Comet-Illidan",
 			["Katalÿst-Illidan"] = "2.2.3-nil: - Comet-Illidan",
 			["Maivon-Illidan"] = "2.3.0-nil: - Comet-Illidan",
+			["Eklypto-Illidan"] = "2.4.4-nil: - Comet-Illidan",
 			["Biscuitss-Illidan"] = "2.2.5-nil: - Comet-Illidan",
-			["Wowjayson-Illidan"] = "2.3.0-nil: - Comet-Illidan",
+			["Wowjayson-Illidan"] = "2.3.4-nil: - Comet-Illidan",
 			["Helfstone-Illidan"] = "2.3.0-nil: - Comet-Illidan",
 			["Semigin-Illidan"] = "2.3.2-nil: - Comet-Illidan",
 			["Kyongi-Illidan"] = "2.3.0-nil: - Comet-Illidan",
 			["Cheekzqt-Illidan"] = "2.2.3-nil: - Comet-Illidan",
-			["Akromä-Illidan"] = "2.3.0-nil: - Combustion-Illidan",
+			["Akromä-Illidan"] = "2.4.3-nil: - Comet-Illidan",
 			["Betterbealz-Illidan"] = "2.3.3-nil: - Combustion-Illidan",
 			["Dimeßag-Illidan"] = "2.1.7-nil: - Comet-Illidan",
 			["Zrail-Illidan"] = "2.1.8-nil: - Comet-Illidan",
-			["Thenex-Illidan"] = "2.3.4-nil: - Comet-Illidan",
+			["Thenex-Illidan"] = "2.4.4-nil: - Comet-Illidan",
 			["Juíceßox-Illidan"] = "2.2.5-nil: - Comet-Illidan",
-			["Shietnorunes-Illidan"] = "2.3.4-nil: - Comet-Illidan",
-			["Drtotem-Illidan"] = "2.3.2-nil: - Combustion-Illidan",
+			["Shietnorunes-Illidan"] = "2.4.4-nil: - Comet-Illidan",
+			["Drtotem-Illidan"] = "2.4.4-nil: - Comet-Illidan",
+			["Evan-Illidan"] = "2.4.4-nil: - Evan-Illidan",
 			["Akromatic-Illidan"] = "2.3.0-nil: - Comet-Illidan",
 			["Swîftmender-Illidan"] = "2.3.3-nil: - Cometstorm-Illidan",
-			["Drkillbotz-Illidan"] = "2.3.2-nil: - Combustion-Illidan",
+			["Drkillbotz-Illidan"] = "2.4.4-nil: - Evan-Illidan",
+			["Vixeav-Illidan"] = "2.4.4-nil: - Evan-Illidan",
 			["Kolortam-Illidan"] = "2.2.5-nil: - Combustion-Illidan",
 			["Zibear-Illidan"] = "2.3.2-nil: - Comet-Illidan",
-			["Nadzieja-Illidan"] = "2.3.4-nil: - Comet-Illidan",
+			["Nadzieja-Illidan"] = "2.4.3-nil: - Comet-Illidan",
 			["Combustion-Illidan"] = "2.3.4-nil: - Combustion-Illidan",
 			["Namlat-Illidan"] = "2.2.0-nil: - Combustion-Illidan",
 			["Overpow-Illidan"] = "2.1.8-nil: - Comet-Illidan",
-			["Ugliestdruid-Illidan"] = "2.3.4-nil: - Comet-Illidan",
-			["Dadizzle-Illidan"] = "2.3.4-nil: - Comet-Illidan",
+			["Ugliestdruid-Illidan"] = "2.4.4-nil: - Comet-Illidan",
+			["Dadizzle-Illidan"] = "2.4.4-nil: - Evan-Illidan",
 			["Tylovanth-Illidan"] = "2.3.0-nil: - Comet-Illidan",
-			["Comet-Illidan"] = "2.4.0-Beta.1: - Comet-Illidan",
-			["Grimuhs-Illidan"] = "2.3.0-nil: - Comet-Illidan",
+			["Comet-Illidan"] = "2.4.4-nil: - Comet-Illidan",
+			["Grimuhs-Illidan"] = "2.4.0-nil: - Cometstorm-Illidan",
 			["Ygramir-Illidan"] = "2.2.5-nil: - Comet-Illidan",
 			["Zedlogic-Illidan"] = "2.3.0-nil: - Cometstorm-Illidan",
 			["Sureno-Illidan"] = "2.3.0-nil: - Comet-Illidan",
-			["Eklipto-Illidan"] = "2.3.4-nil: - Cometstorm-Illidan",
+			["Eklipto-Illidan"] = "2.4.4-nil: - Comet-Illidan",
+			["Brbsheepings-Illidan"] = "2.4.4-nil: - Evan-Illidan",
 			["Kobesliders-Illidan"] = "2.1.11-nil: - Comet-Illidan",
+			["Iori-Illidan"] = "2.4.3-nil: - Evan-Illidan",
+			["Zanvën-Illidan"] = "2.1.8-nil: - Evan-Illidan",
 			["ðerail-Illidan"] = "2.1.11-nil: - Comet-Illidan",
+			["Lukekuechly-Illidan"] = "2.2.0-nil: - Combustion-Illidan",
 			["Demóògly-Illidan"] = "2.3.0-nil: - Comet-Illidan",
-			["Marketfreshe-Illidan"] = "2.3.4-nil: - Comet-Illidan",
+			["Chèss-Illidan"] = "2.4.4-nil: - Evan-Illidan",
+			["Marketfreshe-Illidan"] = "2.4.4-nil: - Comet-Illidan",
+			["Teroq-Illidan"] = "2.1.8-nil: - Comet-Illidan",
 			["Dërail-Illidan"] = "2.1.11-nil: - Comet-Illidan",
-			["Pocketröckêt-Illidan"] = "2.3.3-nil: - Cometstorm-Illidan",
-			["Disabusë-Illidan"] = "2.3.0-nil: - Comet-Illidan",
-			["Palabee-Illidan"] = "2.2.3-nil: - Comet-Illidan",
-			["Colonferal-Illidan"] = "2.3.4-nil: - Comet-Illidan",
+			["Pocketröckêt-Illidan"] = "2.4.3-nil: - Cometstorm-Illidan",
+			["Marketfreshé-Illidan"] = "2.4.3-nil: - Comet-Illidan",
 			["Spacetauren-Illidan"] = "2.2.3-nil: - Comet-Illidan",
-			["Thenexjr-Illidan"] = "2.3.4-nil: - Cometstorm-Illidan",
-			["Blutarski-Illidan"] = "2.3.4-nil: - Comet-Illidan",
-			["Luthanen-Illidan"] = "2.3.4-nil: - Comet-Illidan",
-			["Jechundesung-Illidan"] = "2.2.3-nil: - Combustion-Illidan",
+			["Thenexjr-Illidan"] = "2.4.4-nil: - Comet-Illidan",
+			["Zhaida-Illidan"] = "2.4.3-nil: - Comet-Illidan",
+			["Disabusë-Illidan"] = "2.3.0-nil: - Comet-Illidan",
 			["Ellden-Illidan"] = "2.3.2-nil: - Comet-Illidan",
+			["Palabee-Illidan"] = "2.2.3-nil: - Comet-Illidan",
 			["Shayari-Illidan"] = "2.2.0-nil: - Comet-Illidan",
 			["Dvldocshaman-Illidan"] = "2.3.0-nil: - Cometstorm-Illidan",
-			["Cannibal-Illidan"] = "2.3.4-nil: - Comet-Illidan",
-			["Reinhärt-Illidan"] = "2.3.4-nil: - Comet-Illidan",
-			["Shachan-Illidan"] = "2.3.4-nil: - Cometstorm-Illidan",
-			["Cometstorm-Illidan"] = "2.3.4-nil: - Cometstorm-Illidan",
+			["Homostorm-Illidan"] = "2.4.3-nil: - Evan-Illidan",
+			["Blutarski-Illidan"] = "2.4.4-nil: - Comet-Illidan",
+			["Tabmonk-Illidan"] = "2.3.0-nil: - Comet-Illidan",
+			["Jechundesung-Illidan"] = "2.2.3-nil: - Combustion-Illidan",
 			["Needfoodz-Illidan"] = "2.2.2-nil: - Combustion-Illidan",
-			["Aedalina-Illidan"] = "2.3.0-nil: - Comet-Illidan",
-			["Locknloade-Illidan"] = "2.1.8-nil: - Comet-Illidan",
-			["Beallz-Illidan"] = "2.3.4-nil: - Cometstorm-Illidan",
-			["Mizzraym-Illidan"] = "2.3.0-nil: - Comet-Illidan",
-			["Markwallberg-Illidan"] = "2.3.3-nil: - Comet-Illidan",
-			["Sauvagine-Illidan"] = "2.2.5-nil: - Combustion-Illidan",
+			["Zukas-Illidan"] = "2.4.3-nil: - Comet-Illidan",
 			["Pwnenpally-Illidan"] = "2.3.3-nil: - Comet-Illidan",
-			["Ishaar-Illidan"] = "2.3.3-nil: - Comet-Illidan",
-			["Sollus-Illidan"] = "2.1.11-nil: - Comet-Illidan",
+			["Aedalina-Illidan"] = "2.4.3-nil: - Comet-Illidan",
+			["Cannibal-Illidan"] = "2.4.4-nil: - Comet-Illidan",
+			["Shachan-Illidan"] = "2.3.4-nil: - Cometstorm-Illidan",
+			["Cometstorm-Illidan"] = "2.4.4-nil: - Cometstorm-Illidan",
+			["Madmartigàn-Illidan"] = "2.4.4-nil: - Evan-Illidan",
+			["Beallz-Illidan"] = "2.4.1-nil: - Comet-Illidan",
+			["Sauvagine-Illidan"] = "2.2.5-nil: - Combustion-Illidan",
+			["Terox-Illidan"] = "2.2.3-nil: - Comet-Illidan",
+			["Mizzraym-Illidan"] = "2.4.3-nil: - Comet-Illidan",
+			["Markwallberg-Illidan"] = "2.3.3-nil: - Comet-Illidan",
+			["Thennexx-Illidan"] = "2.4.4-nil: - Comet-Illidan",
 			["Viceversace-Illidan"] = "2.3.3-nil: - Cometstorm-Illidan",
-			["Atmos-Illidan"] = "2.3.2-nil: - Comet-Illidan",
-			["Zukas-Illidan"] = "2.3.0-nil: - Comet-Illidan",
-			["Ooroboross-Illidan"] = "2.2.5-nil: - Comet-Illidan",
+			["Locknloade-Illidan"] = "2.1.8-nil: - Comet-Illidan",
+			["Atmos-Illidan"] = "2.3.3-nil: - Comet-Illidan",
+			["Schikaree-Illidan"] = "2.3.0-nil: - Comet-Illidan",
+			["Sollus-Illidan"] = "2.1.11-nil: - Comet-Illidan",
+			["Galelust-Illidan"] = "2.4.4-nil: - Evan-Illidan",
+			["Razagül-Illidan"] = "2.4.4-nil: - Evan-Illidan",
 			["Ellegy-Illidan"] = "2.3.0-nil: - Comet-Illidan",
-			["Madmartigàn-Illidan"] = "2.3.4-nil: - Comet-Illidan",
-			["Lukekuechly-Illidan"] = "2.2.0-nil: - Combustion-Illidan",
-			["Healingkuush-Illidan"] = "2.3.0-nil: - Comet-Illidan",
-			["Zyglroxx-Illidan"] = "2.2.3-nil: - Comet-Illidan",
+			["Porosnacks-Illidan"] = "2.2.0-nil: - Combustion-Illidan",
 			["Nadhira-Illidan"] = "2.3.3-nil: - Combustion-Illidan",
+			["Zyglroxx-Illidan"] = "2.2.3-nil: - Comet-Illidan",
 			["Boomp-Illidan"] = "2.1.11-nil: - Comet-Illidan",
-			["Improbus-Illidan"] = "2.3.0-nil: - Comet-Illidan",
 			["Fireßox-Illidan"] = "2.1.7-nil: - Comet-Illidan",
+			["Wowjaysón-Illidan"] = "2.3.4-nil: - Combustion-Illidan",
+			["Improbus-Illidan"] = "2.3.0-nil: - Comet-Illidan",
+			["Ishaar-Illidan"] = "2.4.3-nil: - Comet-Illidan",
 			["Milkßox-Illidan"] = "2.1.7-nil: - Comet-Illidan",
 			["Bartotemz-Illidan"] = "2.3.2-nil: - Comet-Illidan",
-			["Porosnacks-Illidan"] = "2.2.0-nil: - Combustion-Illidan",
-			["Wowjaysón-Illidan"] = "2.3.4-nil: - Combustion-Illidan",
-			["Telgina-Illidan"] = "2.3.4-nil: - Comet-Illidan",
+			["Ooroboross-Illidan"] = "2.2.5-nil: - Comet-Illidan",
+			["Telgina-Illidan"] = "2.4.3-nil: - Comet-Illidan",
+			["Reinhärt-Illidan"] = "2.4.3-nil: - Comet-Illidan",
 			["Rofltrolly-Illidan"] = "2.3.0-nil: - Comet-Illidan",
 			["Chillxez-Illidan"] = "2.1.7-nil: - Comet-Illidan",
-			["Schikaree-Illidan"] = "2.3.0-nil: - Comet-Illidan",
-			["Terox-Illidan"] = "2.2.3-nil: - Comet-Illidan",
-			["Djdivine-Illidan"] = "2.3.2-nil: - Cometstorm-Illidan",
-			["Jimrando-Illidan"] = "2.3.4-nil: - Cometstorm-Illidan",
-			["Pelli-Illidan"] = "2.3.0-nil: - Combustion-Illidan",
+			["Djdivine-Illidan"] = "2.4.4-nil: - Evan-Illidan",
+			["Jimrando-Illidan"] = "2.4.4-nil: - Comet-Illidan",
 			["Vandalgyonn-Illidan"] = "2.2.5-nil: - Comet-Illidan",
-			["Tabmonk-Illidan"] = "2.3.0-nil: - Comet-Illidan",
-			["Zhaida-Illidan"] = "2.3.3-nil: - Combustion-Illidan",
-			["Teroq-Illidan"] = "2.1.8-nil: - Comet-Illidan",
+			["Luthanen-Illidan"] = "2.4.4-nil: - Comet-Illidan",
+			["Pelli-Illidan"] = "2.3.0-nil: - Combustion-Illidan",
+			["Healingkuush-Illidan"] = "2.3.0-nil: - Comet-Illidan",
 			["Oxom-Illidan"] = "2.2.5-nil: - Combustion-Illidan",
-			["Zaelen-Illidan"] = "2.3.3-nil: - Cometstorm-Illidan",
+			["Zaelen-Illidan"] = "2.4.3-nil: - Comet-Illidan",
+			["Colonferal-Illidan"] = "2.4.3-nil: - Comet-Illidan",
+			["Krieggeist-Illidan"] = "2.4.3-nil: - Comet-Illidan",
+			["Firstmarket-Illidan"] = "2.4.4-nil: - Comet-Illidan",
 			["Syleerae-Illidan"] = "2.2.5-nil: - Comet-Illidan",
 		},
-		["logMaxEntries"] = 2000,
-		["tVersion"] = "Beta.1",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -2250,6 +2325,7 @@ RCLootCouncilLootDB = {
 	["profileKeys"] = {
 		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Cometstorm - Illidan"] = "Cometstorm - Illidan",
+		["Evan - Illidan"] = "Evan - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
 	},
 	["factionrealm"] = {
@@ -2302,13 +2378,13 @@ RCLootCouncilLootDB = {
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:140809::::::::110:63::3:3:3515:1482:3336:::|h[Whispers in the Dark]|h|r",
 					["instance"] = "The Nighthold-Heroic",
-					["boss"] = "Arcanist Tel'arn",
+					["votes"] = 2,
 					["date"] = "04/05/17",
 					["class"] = "MAGE",
-					["difficultyID"] = 15,
-					["response"] = "Minor Upgrade",
 					["isAwardReason"] = false,
-					["votes"] = 2,
+					["response"] = "Minor Upgrade",
+					["difficultyID"] = 15,
+					["boss"] = "Arcanist Tel'arn",
 					["lootWon"] = "|cffa335ee|Hitem:140801::::::::110:577::5:3:3516:1487:3528:::|h[Fury of the Burning Sky]|h|r",
 					["color"] = {
 						0, -- [1]
@@ -2355,13 +2431,13 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["class"] = "MAGE",
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["response"] = "Mainspec",
 					["lootWon"] = "|cffa335ee|Hitem:143569::::::::110:577::5:1:570:::|h[Leggings of the Foreseen Vanquisher]|h|r",
-					["boss"] = "Unknown/Chest",
-					["time"] = "21:39:45",
 					["votes"] = 4,
-					["isAwardReason"] = false,
+					["time"] = "21:39:45",
+					["boss"] = "Unknown/Chest",
+					["difficultyID"] = 15,
 					["responseID"] = 2,
 					["tierToken"] = "LegsSlot",
 					["mapID"] = 1530,
@@ -2400,17 +2476,63 @@ RCLootCouncilLootDB = {
 					["response"] = "Mainspec",
 					["instance"] = "The Nighthold-Mythic",
 					["class"] = "MAGE",
-					["difficultyID"] = 16,
+					["boss"] = "Unknown/Chest",
 					["groupSize"] = 20,
 					["lootWon"] = "|cffa335ee|Hitem:143571::::::::110:577::6:1:569:::|h[Chest of the Foreseen Vanquisher]|h|r",
-					["isAwardReason"] = false,
-					["time"] = "21:00:22",
 					["votes"] = 2,
-					["boss"] = "Unknown/Chest",
+					["time"] = "21:00:22",
+					["isAwardReason"] = false,
+					["difficultyID"] = 16,
 					["responseID"] = 2,
 					["date"] = "30/05/17",
 					["mapID"] = 1530,
 				}, -- [7]
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:144463::::::::110:63::35:3:3418:1557:3337:::|h[Shard of Kaldorei Stained Glass]|h|r",
+					["mapID"] = 1676,
+					["date"] = "06/07/17",
+					["color"] = {
+						1, -- [1]
+						0.5, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["class"] = "MAGE",
+					["votes"] = 3,
+					["groupSize"] = 18,
+					["isAwardReason"] = false,
+					["boss"] = "Atrigan",
+					["lootWon"] = "|cffa335ee|Hitem:147077::::::::110:577::5:3:3562:1497:3528:::|h[Inexorable Truth Serum]|h|r",
+					["difficultyID"] = 15,
+					["time"] = "19:52:59",
+					["responseID"] = 2,
+					["response"] = "Mainspec",
+					["instance"] = "Tomb of Sargeras-Heroic",
+				}, -- [8]
+				{
+					["tierToken"] = "ChestSlot",
+					["date"] = "06/07/17",
+					["class"] = "MAGE",
+					["groupSize"] = 18,
+					["isAwardReason"] = false,
+					["time"] = "22:51:39",
+					["itemReplaced1"] = "|cffa335ee|Hitem:138318::130221::::::110:63::6:4:3518:1808:1502:3528:::|h[Robe of Everburning Knowledge]|h|r",
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["response"] = "2nd Tier Piece",
+					["mapID"] = 1676,
+					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:147316::::::::110:577::5:1:570:::|h[Chest of the Foregone Vanquisher]|h|r",
+					["votes"] = 4,
+					["color"] = {
+						1, -- [1]
+						1, -- [2]
+						0.5, -- [3]
+						1, -- [4]
+					},
+					["responseID"] = 2,
+					["tokenRoll"] = true,
+					["boss"] = "Maiden of Vigilance",
+				}, -- [9]
 			},
 			["Zilorin-Illidan"] = {
 				{
@@ -2456,6 +2578,123 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 				}, -- [2]
+				{
+					["mapID"] = 1676,
+					["date"] = "27/06/17",
+					["class"] = "DEMONHUNTER",
+					["groupSize"] = 23,
+					["boss"] = "Atrigan",
+					["time"] = "20:25:55",
+					["itemReplaced1"] = "|cffa335ee|Hitem:147034::::::::110:577::3:3:3561:1492:3528:::|h[Shadow-Scarred Headcover]|h|r",
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["response"] = "Mainspec",
+					["color"] = {
+						1, -- [1]
+						0.5, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:147323::::::::110:577::5:1:570:::|h[Helm of the Foregone Conqueror]|h|r",
+					["tokenRoll"] = false,
+					["isAwardReason"] = false,
+					["responseID"] = 2,
+					["votes"] = 4,
+					["tierToken"] = "HeadSlot",
+				}, -- [3]
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:138377::130219::::::110:577::5:4:3516:1808:1497:3336:::|h[Gloves of Second Sight]|h|r",
+					["tierToken"] = "HandsSlot",
+					["mapID"] = 1676,
+					["color"] = {
+						1, -- [1]
+						0.5, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["date"] = "27/06/17",
+					["class"] = "DEMONHUNTER",
+					["response"] = "Mainspec",
+					["groupSize"] = 23,
+					["difficultyID"] = 15,
+					["votes"] = 3,
+					["time"] = "20:50:33",
+					["lootWon"] = "|cffa335ee|Hitem:147320::::::::110:577::5:1:570:::|h[Gauntlets of the Foregone Conqueror]|h|r",
+					["isAwardReason"] = false,
+					["responseID"] = 2,
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["tokenRoll"] = false,
+				}, -- [4]
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:134374:5442:130219::::::110:577::23:4:1727:1808:1557:3337:::|h[Felbat Leather Pauldrons]|h|r",
+					["mapID"] = 1676,
+					["date"] = "29/06/17",
+					["instance"] = "Tomb of Sargeras-Normal",
+					["class"] = "DEMONHUNTER",
+					["boss"] = "Harjatan",
+					["groupSize"] = 21,
+					["votes"] = 1,
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:147037::::::::110:577::3:3:3561:1482:3528:::|h[Dripping Arcfin Shoulderpads]|h|r",
+					["difficultyID"] = 14,
+					["time"] = "19:51:33",
+					["responseID"] = 5,
+					["response"] = "Transmog",
+					["color"] = {
+						0.462745098039216, -- [1]
+						0.701960784313726, -- [2]
+						0.615686274509804, -- [3]
+						1, -- [4]
+					},
+				}, -- [5]
+				{
+					["mapID"] = 1676,
+					["color"] = {
+						1, -- [1]
+						0.5, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["class"] = "DEMONHUNTER",
+					["groupSize"] = 23,
+					["boss"] = "The Desolate Host",
+					["time"] = "20:46:16",
+					["itemReplaced1"] = "|cffa335ee|Hitem:138375:5435:::::::110:577::6:3:3518:1507:3336:::|h[Cape of Second Sight]|h|r",
+					["instance"] = "Tomb of Sargeras-Normal",
+					["response"] = "3rd Tier Piece",
+					["tierToken"] = "BackSlot",
+					["difficultyID"] = 14,
+					["lootWon"] = "|cffa335ee|Hitem:147332::::::::110:577::3::::|h[Cloak of the Foregone Conqueror]|h|r",
+					["date"] = "29/06/17",
+					["tokenRoll"] = true,
+					["responseID"] = 3,
+					["votes"] = 3,
+					["isAwardReason"] = false,
+				}, -- [6]
+				{
+					["tierToken"] = "ShoulderSlot",
+					["color"] = {
+						0.1, -- [1]
+						1, -- [2]
+						0.5, -- [3]
+						1, -- [4]
+					},
+					["class"] = "DEMONHUNTER",
+					["groupSize"] = 16,
+					["boss"] = "Fallen Avatar",
+					["time"] = "21:14:16",
+					["itemReplaced1"] = "|cffa335ee|Hitem:134374:5442:130219::::::110:577::23:4:1727:1808:1557:3337:::|h[Felbat Leather Pauldrons]|h|r",
+					["instance"] = "Tomb of Sargeras-Normal",
+					["response"] = "4th Tier Piece",
+					["tokenRoll"] = true,
+					["difficultyID"] = 14,
+					["lootWon"] = "|cffa335ee|Hitem:147329::::::::110:577::3::::|h[Shoulders of the Foregone Conqueror]|h|r",
+					["date"] = "29/06/17",
+					["mapID"] = 1676,
+					["responseID"] = 1,
+					["votes"] = 4,
+					["isAwardReason"] = false,
+				}, -- [7]
 			},
 			["Shayari-Illidan"] = {
 				{
@@ -2482,10 +2721,10 @@ RCLootCouncilLootDB = {
 					["mapID"] = 1520,
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "PALADIN",
-					["boss"] = "Ysondre",
-					["response"] = "Offline or RCLootCouncil not installed",
-					["isAwardReason"] = false,
 					["votes"] = 0,
+					["response"] = "Offline or RCLootCouncil not installed",
+					["difficultyID"] = 15,
+					["boss"] = "Ysondre",
 					["lootWon"] = "|cffa335ee|Hitem:138218::::::::110:258::5:3:1805:1497:3336:::|h[Dragonbone Wristclamps]|h|r",
 					["color"] = {
 						0.5, -- [1]
@@ -2496,16 +2735,16 @@ RCLootCouncilLootDB = {
 					["date"] = "22/11/16",
 					["responseID"] = "NOTHING",
 					["time"] = "20:35:26",
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 				}, -- [2]
 				{
 					["mapID"] = 1520,
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "PALADIN",
-					["boss"] = "Xavius",
-					["response"] = "Offline or RCLootCouncil not installed",
-					["isAwardReason"] = false,
 					["votes"] = 0,
+					["response"] = "Offline or RCLootCouncil not installed",
+					["difficultyID"] = 15,
+					["boss"] = "Xavius",
 					["lootWon"] = "|cffa335ee|Hitem:139266::::::::110:258::5:2:1805:1487:::|h[Fragment of Eternal Spite]|h|r",
 					["color"] = {
 						0.5, -- [1]
@@ -2516,7 +2755,7 @@ RCLootCouncilLootDB = {
 					["date"] = "22/11/16",
 					["responseID"] = "NOTHING",
 					["time"] = "21:13:36",
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 				}, -- [3]
 				{
 					["mapID"] = 1520,
@@ -2675,13 +2914,13 @@ RCLootCouncilLootDB = {
 					["groupSize"] = 20,
 					["instance"] = "The Nighthold-Mythic",
 					["class"] = "WARRIOR",
-					["votes"] = 3,
-					["response"] = "BiS",
-					["boss"] = "Unknown/Chest",
 					["difficultyID"] = 16,
+					["response"] = "BiS",
+					["isAwardReason"] = false,
+					["votes"] = 3,
 					["time"] = "20:28:46",
 					["lootWon"] = "|cffa335ee|Hitem:143572::::::::110:577::6:1:569:::|h[Chest of the Foreseen Protector]|h|r",
-					["isAwardReason"] = false,
+					["boss"] = "Unknown/Chest",
 					["responseID"] = 1,
 					["color"] = {
 						0, -- [1]
@@ -2692,27 +2931,27 @@ RCLootCouncilLootDB = {
 					["itemReplaced1"] = "|cffa335ee|Hitem:138351::130220::::::110:72::5:4:3516:1808:1487:3528:::|h[Chestplate of the Obsidian Aspect]|h|r",
 				}, -- [2]
 				{
-					["boss"] = "Elisande",
-					["mapID"] = 1530,
 					["instance"] = "The Nighthold-Heroic",
-					["response"] = "BiS",
-					["date"] = "18/05/17",
-					["class"] = "WARRIOR",
-					["votes"] = 1,
-					["groupSize"] = 26,
+					["itemReplaced1"] = "|cffa335ee|Hitem:140808::::::::110:72::3:3:3515:1487:3336:::|h[Draught of Souls]|h|r",
 					["color"] = {
 						0, -- [1]
 						1, -- [2]
 						0, -- [3]
 						1, -- [4]
 					},
+					["response"] = "BiS",
+					["date"] = "18/05/17",
+					["class"] = "WARRIOR",
+					["votes"] = 1,
+					["groupSize"] = 26,
 					["isAwardReason"] = false,
-					["time"] = "21:17:42",
-					["lootWon"] = "|cffa335ee|Hitem:140806::::::::110:577::5:3:3516:1512:3337:::|h[Convergence of Fates]|h|r",
 					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:140806::::::::110:577::5:3:3516:1512:3337:::|h[Convergence of Fates]|h|r",
+					["time"] = "21:17:42",
+					["boss"] = "Elisande",
 					["responseID"] = 1,
 					["itemReplaced2"] = "|cffa335ee|Hitem:137459::::::::110:72::35:3:3418:1557:3337:::|h[Chaos Talisman]|h|r",
-					["itemReplaced1"] = "|cffa335ee|Hitem:140808::::::::110:72::3:3:3515:1487:3336:::|h[Draught of Souls]|h|r",
+					["mapID"] = 1530,
 				}, -- [3]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:144533::::::::110:72::8:3:3568:1657:3528:::|h[Roar of the Crowd]|h|r",
@@ -2736,6 +2975,95 @@ RCLootCouncilLootDB = {
 					},
 					["mapID"] = 1530,
 				}, -- [4]
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:147189::::::::110:72::3:3:3561:1482:3528:::|h[Titanic Onslaught Handguards]|h|r",
+					["mapID"] = 1676,
+					["date"] = "29/06/17",
+					["instance"] = "Tomb of Sargeras-Normal",
+					["class"] = "WARRIOR",
+					["boss"] = "Priestess Lunaspyre",
+					["groupSize"] = 23,
+					["votes"] = 2,
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:147061::::::::110:577::3:3:3561:1482:3528:::|h[Dusk-Crusher Handguards]|h|r",
+					["difficultyID"] = 14,
+					["time"] = "20:25:33",
+					["responseID"] = 4,
+					["response"] = "Offspec",
+					["color"] = {
+						0.584313725490196, -- [1]
+						0.368627450980392, -- [2]
+						0.701960784313726, -- [3]
+						1, -- [4]
+					},
+				}, -- [5]
+				{
+					["mapID"] = 1676,
+					["itemReplaced1"] = "|cffa335ee|Hitem:140806::::::::110:72::5:3:3516:1512:3337:::|h[Convergence of Fates]|h|r",
+					["date"] = "29/06/17",
+					["groupSize"] = 24,
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["class"] = "WARRIOR",
+					["boss"] = "Priestess Lunaspyre",
+					["response"] = "BiS",
+					["lootWon"] = "|cffa335ee|Hitem:147012::::::::110:577::5:3:3562:1497:3528:::|h[Umbral Moonglaives]|h|r",
+					["isAwardReason"] = false,
+					["time"] = "22:22:33",
+					["votes"] = 4,
+					["difficultyID"] = 15,
+					["responseID"] = 1,
+					["itemReplaced2"] = "|cffa335ee|Hitem:147012::130220::::::110:72::3:5:3561:1808:41:1482:3528:::|h[Umbral Moonglaives]|h|r",
+					["color"] = {
+						0, -- [1]
+						1, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [6]
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:144407::130246::::::110:72::6:4:3445:1808:1497:3528:::|h[Gleaming Celestial Waistguard]|h|r",
+					["mapID"] = 1676,
+					["date"] = "06/07/17",
+					["color"] = {
+						1, -- [1]
+						0.5, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["class"] = "WARRIOR",
+					["votes"] = 1,
+					["groupSize"] = 20,
+					["isAwardReason"] = false,
+					["boss"] = "Harjatan",
+					["lootWon"] = "|cffa335ee|Hitem:147071::::::::110:577::5:3:3562:1497:3528:::|h[Shiversleet Waistguard]|h|r",
+					["difficultyID"] = 15,
+					["time"] = "20:07:40",
+					["responseID"] = 2,
+					["response"] = "Mainspec",
+					["instance"] = "Tomb of Sargeras-Heroic",
+				}, -- [7]
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:147187::::::::110:72::3:3:3561:1502:3337:::|h[Titanic Onslaught Breastplate]|h|r",
+					["mapID"] = 1676,
+					["date"] = "06/07/17",
+					["color"] = {
+						0, -- [1]
+						0.7, -- [2]
+						0.7, -- [3]
+						1, -- [4]
+					},
+					["class"] = "WARRIOR",
+					["votes"] = 4,
+					["groupSize"] = 20,
+					["isAwardReason"] = false,
+					["boss"] = "Priestess Lunaspyre",
+					["lootWon"] = "|cffa335ee|Hitem:147068::::::::110:577::5:3:3562:1497:3528:::|h[Cuirass of Blinding Dawn]|h|r",
+					["difficultyID"] = 15,
+					["time"] = "20:54:55",
+					["responseID"] = 3,
+					["response"] = "Minor Upgrade",
+					["instance"] = "Tomb of Sargeras-Heroic",
+				}, -- [8]
 			},
 			["Sâpphire-Illidan"] = {
 				{
@@ -2912,51 +3240,95 @@ RCLootCouncilLootDB = {
 			},
 			["Cenzic-Illidan"] = {
 				{
-					["isAwardReason"] = false,
-					["mapID"] = 1530,
 					["instance"] = "The Nighthold-Mythic",
-					["response"] = "Mainspec",
-					["date"] = "30/05/17",
-					["class"] = "DEATHKNIGHT",
-					["boss"] = "Unknown/Chest",
-					["groupSize"] = 20,
+					["itemReplaced1"] = "|cffa335ee|Hitem:142167::130246::::::110:251::34:4:3417:1808:1497:3528:::|h[Eye of Command]|h|r",
 					["color"] = {
 						1, -- [1]
 						0.5, -- [2]
 						0, -- [3]
 						1, -- [4]
 					},
+					["response"] = "Mainspec",
+					["date"] = "30/05/17",
+					["class"] = "DEATHKNIGHT",
+					["boss"] = "Unknown/Chest",
+					["groupSize"] = 20,
 					["votes"] = 3,
-					["time"] = "20:58:13",
-					["lootWon"] = "|cffa335ee|Hitem:140799::::::::110:577::6:3:3518:1512:3336:::|h[Might of Krosus]|h|r",
 					["difficultyID"] = 16,
+					["lootWon"] = "|cffa335ee|Hitem:140799::::::::110:577::6:3:3518:1512:3336:::|h[Might of Krosus]|h|r",
+					["time"] = "20:58:13",
+					["isAwardReason"] = false,
 					["responseID"] = 2,
 					["itemReplaced2"] = "|cffa335ee|Hitem:133642::130222::::::110:251::34:4:3418:1808:1542:3528:::|h[Horn of Valor]|h|r",
-					["itemReplaced1"] = "|cffa335ee|Hitem:142167::130246::::::110:251::34:4:3417:1808:1497:3528:::|h[Eye of Command]|h|r",
+					["mapID"] = 1530,
 				}, -- [1]
 				{
-					["votes"] = 0,
-					["mapID"] = 1530,
 					["instance"] = "The Nighthold-Heroic",
-					["response"] = "Mainspec/Need",
-					["date"] = "13/06/17",
-					["class"] = "DEATHKNIGHT",
-					["isAwardReason"] = false,
-					["groupSize"] = 19,
+					["itemReplaced1"] = "|cffa335ee|Hitem:139259::::::::110:251::6:2:1806:1502:::|h[Cube of Malice]|h|r",
 					["color"] = {
 						1, -- [1]
 						0.619607843137255, -- [2]
 						0.0431372549019608, -- [3]
 						1, -- [4]
 					},
+					["response"] = "Mainspec/Need",
+					["date"] = "13/06/17",
+					["class"] = "DEATHKNIGHT",
+					["isAwardReason"] = false,
+					["groupSize"] = 19,
 					["boss"] = "Spellblade Aluriel",
-					["time"] = "20:14:49",
-					["lootWon"] = "|cffa335ee|Hitem:140832::::::::110:72::5:3:3516:1497:3336:::|h[Heart of Frost]|h|r",
 					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:140832::::::::110:72::5:3:3516:1497:3336:::|h[Heart of Frost]|h|r",
+					["time"] = "20:14:49",
+					["votes"] = 0,
 					["responseID"] = 1,
 					["itemReplaced2"] = "|cffa335ee|Hitem:139259::::::::110:251::6:2:1806:1502:::|h[Cube of Malice]|h|r",
-					["itemReplaced1"] = "|cffa335ee|Hitem:139259::::::::110:251::6:2:1806:1502:::|h[Cube of Malice]|h|r",
+					["mapID"] = 1530,
 				}, -- [2]
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:138364:5434:::::::110:251::5:3:3516:1497:3336:::|h[Dreadwyrm Greatcloak]|h|r",
+					["mapID"] = 1676,
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["color"] = {
+						1, -- [1]
+						0.5, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["class"] = "DEATHKNIGHT",
+					["votes"] = 2,
+					["response"] = "Mainspec",
+					["difficultyID"] = 15,
+					["isAwardReason"] = false,
+					["time"] = "19:48:09",
+					["lootWon"] = "|cffa335ee|Hitem:146984::::::::110:577::5:3:3562:1502:3336:::|h[Cloak of Stifling Brimstone]|h|r",
+					["boss"] = "Goroth",
+					["responseID"] = 2,
+					["groupSize"] = 20,
+					["date"] = "27/06/17",
+				}, -- [3]
+				{
+					["mapID"] = 1676,
+					["itemReplaced1"] = "|cffa335ee|Hitem:140884::130222::::::110:251::6:4:3445:1808:1497:3528:::|h[Leystone-Toe Kickers]|h|r",
+					["votes"] = 3,
+					["instance"] = "Tomb of Sargeras-Normal",
+					["class"] = "DEATHKNIGHT",
+					["boss"] = "Maiden of Vigilance",
+					["groupSize"] = 23,
+					["difficultyID"] = 14,
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:147060::::::::110:577::3:4:3561:43:1497:3337:::|h[Steadfast Purifier's Warboots]|h|r",
+					["response"] = "Mainspec",
+					["time"] = "21:02:10",
+					["responseID"] = 2,
+					["date"] = "29/06/17",
+					["color"] = {
+						1, -- [1]
+						0.5, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [4]
 			},
 			["Drtotem-Illidan"] = {
 				{
@@ -3197,6 +3569,30 @@ RCLootCouncilLootDB = {
 					},
 					["instance"] = "The Nighthold-Mythic",
 				}, -- [6]
+				{
+					["mapID"] = 1676,
+					["date"] = "27/06/17",
+					["class"] = "HUNTER",
+					["groupSize"] = 23,
+					["boss"] = "Mistress Sassz'ine",
+					["time"] = "22:40:18",
+					["itemReplaced1"] = "|cffa335ee|Hitem:138344::::::::110:253::5:3:3516:1487:3528:::|h[Eagletalon Legchains]|h|r",
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["response"] = "4th Tier Piece",
+					["color"] = {
+						0.1, -- [1]
+						1, -- [2]
+						0.5, -- [3]
+						1, -- [4]
+					},
+					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:147327::::::::110:577::5:1:570:::|h[Leggings of the Foregone Protector]|h|r",
+					["tokenRoll"] = true,
+					["isAwardReason"] = false,
+					["responseID"] = 1,
+					["votes"] = 4,
+					["tierToken"] = "LegsSlot",
+				}, -- [7]
 			},
 			["Litchbite-Illidan"] = {
 				{
@@ -3241,6 +3637,32 @@ RCLootCouncilLootDB = {
 					["isAwardReason"] = false,
 					["mapID"] = 1520,
 				}, -- [2]
+			},
+			["Drkillbotz-Illidan"] = {
+				{
+					["mapID"] = 1676,
+					["color"] = {
+						1, -- [1]
+						1, -- [2]
+						0.5, -- [3]
+						1, -- [4]
+					},
+					["class"] = "DEATHKNIGHT",
+					["groupSize"] = 22,
+					["boss"] = "Mistress Sassz'ine",
+					["time"] = "20:03:34",
+					["itemReplaced1"] = "|cffa335ee|Hitem:138358::130220::::::110:251::5:4:3516:1808:1492:3336:::|h[Dreadwyrm Legplates]|h|r",
+					["instance"] = "Tomb of Sargeras-Normal",
+					["response"] = "2nd Tier Piece",
+					["tokenRoll"] = true,
+					["difficultyID"] = 14,
+					["lootWon"] = "|cffa335ee|Hitem:147325::::::::110:577::3::::|h[Leggings of the Foregone Vanquisher]|h|r",
+					["tierToken"] = "LegsSlot",
+					["date"] = "29/06/17",
+					["responseID"] = 2,
+					["votes"] = 4,
+					["isAwardReason"] = false,
+				}, -- [1]
 			},
 			["Plentakill-Illidan"] = {
 				{
@@ -3307,13 +3729,13 @@ RCLootCouncilLootDB = {
 				}, -- [3]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:139217:5442:::::::110:253::5:2:1805:1487:::|h[Matted Fur Pauldrons]|h|r",
-					["votes"] = 4,
+					["boss"] = "Unknown/Chest",
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "HUNTER",
-					["isAwardReason"] = false,
+					["difficultyID"] = 15,
 					["response"] = "Mainspec/Need",
 					["lootWon"] = "|cffa335ee|Hitem:139218::::::::110:258::5:3:1805:40:1487:::|h[Thorny Bramblemail Pauldrons]|h|r",
-					["boss"] = "Unknown/Chest",
+					["votes"] = 4,
 					["time"] = "21:01:45",
 					["date"] = "22/11/16",
 					["color"] = {
@@ -3323,7 +3745,7 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 1,
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["mapID"] = 1520,
 				}, -- [4]
 				{
@@ -3634,9 +4056,9 @@ RCLootCouncilLootDB = {
 					["mapID"] = 1530,
 				}, -- [7]
 				{
-					["boss"] = "Arcanist Tel'arn",
-					["mapID"] = 1530,
 					["instance"] = "The Nighthold-Heroic",
+					["itemReplaced1"] = "|cffa335ee|Hitem:136750::::::::110:64::43:4:3573:604:1547:3336:::|h[Vault Guardian's Talisman]|h|r",
+					["date"] = "13/06/17",
 					["response"] = "Disenchant",
 					["color"] = {
 						1, -- [1]
@@ -3647,37 +4069,194 @@ RCLootCouncilLootDB = {
 					["class"] = "MAGE",
 					["isAwardReason"] = true,
 					["groupSize"] = 18,
-					["date"] = "13/06/17",
 					["votes"] = 0,
-					["time"] = "20:33:42",
-					["lootWon"] = "|cffa335ee|Hitem:140801::::::::110:72::5:3:3516:1492:3336:::|h[Fury of the Burning Sky]|h|r",
 					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:140801::::::::110:72::5:3:3516:1492:3336:::|h[Fury of the Burning Sky]|h|r",
+					["time"] = "20:33:42",
+					["boss"] = "Arcanist Tel'arn",
 					["responseID"] = 1,
 					["itemReplaced2"] = "|cffff8000|Hitem:144259::::::::110:64:::2:1811:3530:::|h[Kil'jaeden's Burning Wish]|h|r",
-					["itemReplaced1"] = "|cffa335ee|Hitem:136750::::::::110:64::43:4:3573:604:1547:3336:::|h[Vault Guardian's Talisman]|h|r",
+					["mapID"] = 1530,
 				}, -- [8]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:138318::::::::110:64::5:3:3516:1492:3336:::|h[Robe of Everburning Knowledge]|h|r",
 					["mapID"] = 1530,
-					["instance"] = "The Nighthold-Mythic",
-					["date"] = "15/06/17",
-					["class"] = "MAGE",
 					["color"] = {
 						0.301960784313726, -- [1]
 						0.615686274509804, -- [2]
 						0.0862745098039216, -- [3]
 						1, -- [4]
 					},
-					["response"] = "Offspec",
+					["date"] = "15/06/17",
+					["class"] = "MAGE",
 					["difficultyID"] = 16,
+					["response"] = "Offspec",
+					["isAwardReason"] = false,
 					["boss"] = "Chronomatic Anomaly",
 					["time"] = "20:04:58",
 					["lootWon"] = "|cffa335ee|Hitem:140848::::::::110:72::6:3:3445:1502:3336:::|h[Robes of Fluctuating Energy]|h|r",
 					["votes"] = 0,
 					["responseID"] = 2,
 					["groupSize"] = 20,
-					["isAwardReason"] = false,
+					["instance"] = "The Nighthold-Mythic",
 				}, -- [9]
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:144404::::::::110:64::5:3:3444:1482:3528:::|h[Mana-Cord of Deception]|h|r",
+					["color"] = {
+						0, -- [1]
+						1, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["response"] = "BiS",
+					["date"] = "27/06/17",
+					["class"] = "MAGE",
+					["isAwardReason"] = false,
+					["groupSize"] = 23,
+					["votes"] = 2,
+					["boss"] = "Atrigan",
+					["time"] = "20:24:14",
+					["lootWon"] = "|cffa335ee|Hitem:146998::::::::110:577::5:3:3562:1502:3336:::|h[Braided Torture Lash]|h|r",
+					["difficultyID"] = 15,
+					["responseID"] = 1,
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["mapID"] = 1676,
+				}, -- [10]
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:147076::::::::110:64::5:3:3562:1497:3528:::|h[Charred Hymnal of the Moon]|h|r",
+					["mapID"] = 1676,
+					["date"] = "29/06/17",
+					["instance"] = "Tomb of Sargeras-Normal",
+					["class"] = "MAGE",
+					["boss"] = "Priestess Lunaspyre",
+					["groupSize"] = 23,
+					["votes"] = 3,
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:147078::::::::110:577::3:3:3561:1482:3528:::|h[Mote of Astral Suffusion]|h|r",
+					["difficultyID"] = 14,
+					["time"] = "20:25:19",
+					["responseID"] = 4,
+					["response"] = "Offspec",
+					["color"] = {
+						0.584313725490196, -- [1]
+						0.368627450980392, -- [2]
+						0.701960784313726, -- [3]
+						1, -- [4]
+					},
+				}, -- [11]
+				{
+					["itemReplaced1"] = "|cffff8000|Hitem:132455::::::::110:64:::2:1811:3570:::|h[Norgannon's Foresight]|h|r",
+					["mapID"] = 1676,
+					["date"] = "29/06/17",
+					["instance"] = "Tomb of Sargeras-Normal",
+					["class"] = "MAGE",
+					["boss"] = "Priestess Lunaspyre",
+					["groupSize"] = 23,
+					["votes"] = 1,
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:146987::::::::110:577::3:3:3561:1482:3528:::|h[Slippers of Enduring Vigilance]|h|r",
+					["difficultyID"] = 14,
+					["time"] = "20:25:23",
+					["responseID"] = 4,
+					["response"] = "Offspec",
+					["color"] = {
+						0.584313725490196, -- [1]
+						0.368627450980392, -- [2]
+						0.701960784313726, -- [3]
+						1, -- [4]
+					},
+				}, -- [12]
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:140848::::::::110:64::6:3:3445:1502:3336:::|h[Robes of Fluctuating Energy]|h|r",
+					["mapID"] = 1676,
+					["date"] = "29/06/17",
+					["instance"] = "Tomb of Sargeras-Normal",
+					["class"] = "MAGE",
+					["boss"] = "The Desolate Host",
+					["groupSize"] = 23,
+					["votes"] = 1,
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:146995::::::::110:577::3:3:3561:1482:3528:::|h[Soul Queen's Ceremonial Robes]|h|r",
+					["difficultyID"] = 14,
+					["time"] = "20:43:21",
+					["responseID"] = 5,
+					["response"] = "Transmog",
+					["color"] = {
+						0.462745098039216, -- [1]
+						0.701960784313726, -- [2]
+						0.615686274509804, -- [3]
+						1, -- [4]
+					},
+				}, -- [13]
+				{
+					["date"] = "29/06/17",
+					["mapID"] = 1676,
+					["color"] = {
+						1, -- [1]
+						0.5, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["response"] = "Mainspec",
+					["instance"] = "Tomb of Sargeras-Normal",
+					["class"] = "MAGE",
+					["votes"] = 3,
+					["groupSize"] = 23,
+					["difficultyID"] = 14,
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:147094::::::::110:577::3:3:3561:1487:3336:::|h[Virus of Lethargy]|h|r",
+					["time"] = "20:59:39",
+					["boss"] = "Maiden of Vigilance",
+					["responseID"] = 2,
+					["itemReplaced2"] = "|cffa335ee|Hitem:137340::::::::110:64::16:3:3418:1542:3528:::|h[Crystalline Energies]|h|r",
+					["itemReplaced1"] = "|cffa335ee|Hitem:140832::::::::110:64::5:3:3516:1487:3528:::|h[Heart of Frost]|h|r",
+				}, -- [14]
+				{
+					["mapID"] = 1676,
+					["date"] = "06/07/17",
+					["class"] = "MAGE",
+					["groupSize"] = 20,
+					["isAwardReason"] = false,
+					["time"] = "20:25:45",
+					["itemReplaced1"] = "|cffa335ee|Hitem:146993::::::::110:64::3:3:3561:1492:3336:::|h[Leggings of Divine Portents]|h|r",
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["response"] = "2nd Tier Piece",
+					["tierToken"] = "LegsSlot",
+					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:147325::::::::110:577::5:1:570:::|h[Leggings of the Foregone Vanquisher]|h|r",
+					["votes"] = 5,
+					["color"] = {
+						1, -- [1]
+						1, -- [2]
+						0.5, -- [3]
+						1, -- [4]
+					},
+					["responseID"] = 2,
+					["tokenRoll"] = true,
+					["boss"] = "Mistress Sassz'ine",
+				}, -- [15]
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:147149::::::::110:64::3:3:3561:1482:3528:::|h[Robes of the Arcane Tempest]|h|r",
+					["mapID"] = 1676,
+					["date"] = "06/07/17",
+					["color"] = {
+						0.462745098039216, -- [1]
+						0.701960784313726, -- [2]
+						0.615686274509804, -- [3]
+						1, -- [4]
+					},
+					["class"] = "MAGE",
+					["votes"] = 2,
+					["groupSize"] = 18,
+					["isAwardReason"] = false,
+					["boss"] = "The Desolate Host",
+					["lootWon"] = "|cffa335ee|Hitem:146995::::::::110:577::5:4:3562:42:1497:3528:::|h[Soul Queen's Ceremonial Robes]|h|r",
+					["difficultyID"] = 15,
+					["time"] = "21:53:47",
+					["responseID"] = 5,
+					["response"] = "Transmog",
+					["instance"] = "Tomb of Sargeras-Heroic",
+				}, -- [16]
 			},
 			["Spacetauren-Illidan"] = {
 				{
@@ -3945,13 +4524,13 @@ RCLootCouncilLootDB = {
 				}, -- [8]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:140810::::::::110:63::3:3:3514:1482:3336:::|h[Farsight Spiritjewel]|h|r",
-					["votes"] = 0,
+					["boss"] = "Skorpyron",
 					["instance"] = "The Nighthold-Heroic",
 					["class"] = "MAGE",
-					["isAwardReason"] = false,
+					["difficultyID"] = 15,
 					["response"] = "Pass",
 					["lootWon"] = "|cffa335ee|Hitem:140827::::::::110:258::5:3:3444:1482:1813:::|h[Manatoxin Gland]|h|r",
-					["boss"] = "Skorpyron",
+					["votes"] = 0,
 					["time"] = "22:44:46",
 					["date"] = "31/01/17",
 					["color"] = {
@@ -3961,7 +4540,7 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = "PASS",
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["mapID"] = 1530,
 				}, -- [9]
 				{
@@ -4031,13 +4610,13 @@ RCLootCouncilLootDB = {
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:140836::::::::110:63::3:3:3514:1472:1813:::|h[Sunflare Coal]|h|r",
 					["instance"] = "The Nighthold-Normal",
-					["boss"] = "Spellblade Aluriel",
+					["votes"] = 3,
 					["date"] = "14/02/17",
 					["class"] = "MAGE",
-					["difficultyID"] = 14,
-					["response"] = "Need",
 					["isAwardReason"] = false,
-					["votes"] = 3,
+					["response"] = "Need",
+					["difficultyID"] = 14,
+					["boss"] = "Spellblade Aluriel",
 					["lootWon"] = "|cffa335ee|Hitem:140834::::::::110:258::3:3:3514:1477:3336:::|h[Soul of Flame]|h|r",
 					["color"] = {
 						1, -- [1]
@@ -4185,47 +4764,71 @@ RCLootCouncilLootDB = {
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:134193::::::::110:102::34:4:3418:42:1572:3337:::|h[Biornskin Moccasins]|h|r",
 					["mapID"] = 1530,
-					["instance"] = "The Nighthold-Mythic",
-					["date"] = "15/06/17",
-					["class"] = "DRUID",
 					["color"] = {
 						1, -- [1]
 						0.619607843137255, -- [2]
 						0.0431372549019608, -- [3]
 						1, -- [4]
 					},
-					["response"] = "Mainspec/Need",
+					["date"] = "15/06/17",
+					["class"] = "DRUID",
 					["difficultyID"] = 16,
+					["response"] = "Mainspec/Need",
+					["isAwardReason"] = false,
 					["boss"] = "Chronomatic Anomaly",
 					["time"] = "20:04:46",
 					["lootWon"] = "|cffa335ee|Hitem:140860::::::::110:72::6:3:3445:1497:3528:::|h[Stutterstep Treads]|h|r",
 					["votes"] = 0,
 					["responseID"] = 1,
 					["groupSize"] = 20,
-					["isAwardReason"] = false,
+					["instance"] = "The Nighthold-Mythic",
 				}, -- [3]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:138327:5444:::::::110:102::5:3:3516:1497:3336:::|h[Gloves of the Astral Warden]|h|r",
 					["mapID"] = 1530,
-					["instance"] = "The Nighthold-Mythic",
-					["date"] = "15/06/17",
-					["class"] = "DRUID",
 					["color"] = {
 						0, -- [1]
 						0.7, -- [2]
 						0.7, -- [3]
 						1, -- [4]
 					},
-					["response"] = "Minor Upgrade",
+					["date"] = "15/06/17",
+					["class"] = "DRUID",
 					["difficultyID"] = 16,
+					["response"] = "Minor Upgrade",
+					["isAwardReason"] = false,
 					["boss"] = "Chronomatic Anomaly",
 					["time"] = "20:05:05",
 					["lootWon"] = "|cffa335ee|Hitem:140863::::::::110:72::6:3:3445:1497:3528:::|h[Temporally Displaced Gloves]|h|r",
 					["votes"] = 0,
 					["responseID"] = 3,
 					["groupSize"] = 20,
-					["isAwardReason"] = false,
+					["instance"] = "The Nighthold-Mythic",
 				}, -- [4]
+				{
+					["mapID"] = 1676,
+					["date"] = "06/07/17",
+					["class"] = "DRUID",
+					["groupSize"] = 20,
+					["isAwardReason"] = false,
+					["time"] = "20:09:30",
+					["itemReplaced1"] = "|cffa335ee|Hitem:138327:5444:::::::110:102::5:3:3516:1497:3336:::|h[Gloves of the Astral Warden]|h|r",
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["response"] = "4th Tier Piece",
+					["tierToken"] = "HandsSlot",
+					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:147319::::::::110:577::5:1:570:::|h[Gauntlets of the Foregone Vanquisher]|h|r",
+					["votes"] = 4,
+					["color"] = {
+						0.1, -- [1]
+						1, -- [2]
+						0.5, -- [3]
+						1, -- [4]
+					},
+					["responseID"] = 1,
+					["tokenRoll"] = true,
+					["boss"] = "Harjatan",
+				}, -- [5]
 			},
 			["Oorroozz-Illidan"] = {
 				{
@@ -4359,13 +4962,13 @@ RCLootCouncilLootDB = {
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:139329::130221::::::110:269::5:4:1805:1808:1492:3336:::|h[Bloodthirsty Instinct]|h|r",
 					["date"] = "15/11/16",
-					["isAwardReason"] = false,
+					["boss"] = "Ursoc",
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "MONK",
-					["difficultyID"] = 15,
-					["response"] = "OFFSPEC",
 					["votes"] = 3,
-					["boss"] = "Ursoc",
+					["response"] = "OFFSPEC",
+					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["lootWon"] = "|cffa335ee|Hitem:139327::::::::110:258::5:2:1805:1487:::|h[Unbridled Fury]|h|r",
 					["color"] = {
 						1, -- [1]
@@ -4400,13 +5003,13 @@ RCLootCouncilLootDB = {
 				}, -- [6]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:137332:5882:130221::::::110:269::16:4:3411:1808:1507:3336:::|h[Mantle of the Dark Sea]|h|r",
-					["votes"] = 3,
+					["boss"] = "Il'gynoth",
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "MONK",
-					["isAwardReason"] = false,
+					["difficultyID"] = 15,
 					["response"] = "Mainspec/Need",
 					["lootWon"] = "|cffa335ee|Hitem:139206::::::::110:258::5:2:1805:1487:::|h[Otherworldy Leather Mantle]|h|r",
-					["boss"] = "Il'gynoth",
+					["votes"] = 3,
 					["time"] = "20:53:15",
 					["date"] = "22/11/16",
 					["color"] = {
@@ -4416,17 +5019,17 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 1,
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["mapID"] = 1520,
 				}, -- [7]
 				{
 					["mapID"] = 1520,
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "MONK",
-					["boss"] = "Il'gynoth",
-					["response"] = "OFFSPEC",
-					["isAwardReason"] = false,
 					["votes"] = 4,
+					["response"] = "OFFSPEC",
+					["difficultyID"] = 15,
+					["boss"] = "Il'gynoth",
 					["lootWon"] = "|cffa335ee|Hitem:139259::::::::110:258::5:2:1805:1487:::|h[Cube of Malice]|h|r",
 					["color"] = {
 						1, -- [1]
@@ -4437,7 +5040,7 @@ RCLootCouncilLootDB = {
 					["date"] = "22/11/16",
 					["responseID"] = 4,
 					["time"] = "20:53:20",
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 				}, -- [8]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:138221:5435:::::::110:269::5:2:1805:1487:::|h[Gossamer-Spun Greatcloak]|h|r",
@@ -4762,10 +5365,10 @@ RCLootCouncilLootDB = {
 					["mapID"] = 1530,
 					["instance"] = "The Nighthold-Heroic",
 					["class"] = "MONK",
-					["boss"] = "Trilliax",
-					["response"] = "Need",
-					["isAwardReason"] = false,
 					["votes"] = 0,
+					["response"] = "Need",
+					["difficultyID"] = 15,
+					["boss"] = "Trilliax",
 					["lootWon"] = "|cffa335ee|Hitem:140838::::::::110:258::5:3:3444:1482:1813:::|h[Construct Personality Sphere]|h|r",
 					["color"] = {
 						1, -- [1]
@@ -4776,7 +5379,7 @@ RCLootCouncilLootDB = {
 					["date"] = "31/01/17",
 					["responseID"] = 2,
 					["time"] = "23:09:58",
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 				}, -- [24]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:140803::::::::110:270::3:3:3514:1487:3337:::|h[Etraeus' Celestial Map]|h|r",
@@ -5033,27 +5636,27 @@ RCLootCouncilLootDB = {
 					["mapID"] = 1530,
 				}, -- [36]
 				{
-					["boss"] = "Trilliax",
-					["mapID"] = 1530,
 					["instance"] = "The Nighthold-Mythic",
-					["response"] = "BiS",
-					["date"] = "16/05/17",
-					["class"] = "MONK",
-					["isAwardReason"] = false,
-					["groupSize"] = 20,
+					["itemReplaced1"] = "|cffa335ee|Hitem:140796::::::::110:269::5:3:3516:1502:3337:::|h[Entwined Elemental Foci]|h|r",
 					["color"] = {
 						0, -- [1]
 						1, -- [2]
 						0, -- [3]
 						1, -- [4]
 					},
+					["response"] = "BiS",
+					["date"] = "16/05/17",
+					["class"] = "MONK",
+					["isAwardReason"] = false,
+					["groupSize"] = 20,
 					["votes"] = 5,
-					["time"] = "20:30:09",
-					["lootWon"] = "|cffa335ee|Hitem:140794::::::::110:577::6:3:3445:1507:3336:::|h[Arcanogolem Digit]|h|r",
 					["difficultyID"] = 16,
+					["lootWon"] = "|cffa335ee|Hitem:140794::::::::110:577::6:3:3445:1507:3336:::|h[Arcanogolem Digit]|h|r",
+					["time"] = "20:30:09",
+					["boss"] = "Trilliax",
 					["responseID"] = 1,
 					["itemReplaced2"] = "|cffa335ee|Hitem:139320::::::::110:269::6:3:1806:1512:3336:::|h[Ravaged Seed Pod]|h|r",
-					["itemReplaced1"] = "|cffa335ee|Hitem:140796::::::::110:269::5:3:3516:1502:3337:::|h[Entwined Elemental Foci]|h|r",
+					["mapID"] = 1530,
 				}, -- [37]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:140839::::::::110:270::5:3:3516:1487:3528:::|h[Parasitic Spore]|h|r",
@@ -5077,6 +5680,165 @@ RCLootCouncilLootDB = {
 					["votes"] = 3,
 					["mapID"] = 1530,
 				}, -- [38]
+				{
+					["mapID"] = 1676,
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["response"] = "Mainspec",
+					["color"] = {
+						1, -- [1]
+						0.5, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["class"] = "MONK",
+					["difficultyID"] = 15,
+					["groupSize"] = 21,
+					["votes"] = 3,
+					["boss"] = "Goroth",
+					["time"] = "19:46:38",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:147112::::::::110:577::5:3:3562:1497:3528:::|h[Felsoul Vortex]|h|r",
+					["responseID"] = 2,
+					["date"] = "27/06/17",
+					["itemReplaced1"] = "|cffa335ee|Hitem:140842::::::::110:270::5:3:3516:1487:1813:::|h[Collapsing Epoch]|h|r",
+				}, -- [39]
+				{
+					["mapID"] = 1676,
+					["date"] = "29/06/17",
+					["class"] = "MONK",
+					["groupSize"] = 21,
+					["boss"] = "Harjatan",
+					["time"] = "19:51:42",
+					["itemReplaced1"] = "|cffa335ee|Hitem:142141::::::::110:270::16:3:3415:1512:3337:::|h[Custodian's Soothing Touch]|h|r",
+					["instance"] = "Tomb of Sargeras-Normal",
+					["response"] = "1st Tier Piece",
+					["tokenRoll"] = true,
+					["difficultyID"] = 14,
+					["lootWon"] = "|cffa335ee|Hitem:147321::::::::110:577::3::::|h[Gauntlets of the Foregone Protector]|h|r",
+					["tierToken"] = "HandsSlot",
+					["votes"] = 4,
+					["responseID"] = 4,
+					["color"] = {
+						0.5, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["isAwardReason"] = false,
+				}, -- [40]
+				{
+					["mapID"] = 1676,
+					["color"] = {
+						1, -- [1]
+						1, -- [2]
+						0.5, -- [3]
+						1, -- [4]
+					},
+					["class"] = "MONK",
+					["groupSize"] = 23,
+					["boss"] = "The Desolate Host",
+					["time"] = "20:42:42",
+					["itemReplaced1"] = "|cffa335ee|Hitem:138367:5436:::::::110:270::6:4:3518:41:1502:3528:::|h[Cloak of Enveloped Dissonance]|h|r",
+					["instance"] = "Tomb of Sargeras-Normal",
+					["response"] = "2nd Tier Piece",
+					["tierToken"] = "BackSlot",
+					["difficultyID"] = 14,
+					["lootWon"] = "|cffa335ee|Hitem:147333::::::::110:577::3::::|h[Cloak of the Foregone Protector]|h|r",
+					["date"] = "29/06/17",
+					["votes"] = 2,
+					["responseID"] = 2,
+					["tokenRoll"] = true,
+					["isAwardReason"] = false,
+				}, -- [41]
+				{
+					["mapID"] = 1676,
+					["itemReplaced1"] = "|cffa335ee|Hitem:140861::::::::110:270::5:4:3516:40:1497:3336:::|h[Grove-Tender's Moccasins]|h|r",
+					["votes"] = 1,
+					["instance"] = "Tomb of Sargeras-Normal",
+					["class"] = "MONK",
+					["boss"] = "Fallen Avatar",
+					["groupSize"] = 16,
+					["difficultyID"] = 14,
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:147030::::::::110:577::3:3:3561:1492:3336:::|h[Felscape Pathfinders]|h|r",
+					["response"] = "Mainspec",
+					["time"] = "21:14:13",
+					["responseID"] = 2,
+					["date"] = "29/06/17",
+					["color"] = {
+						1, -- [1]
+						0.5, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [42]
+				{
+					["mapID"] = 1676,
+					["itemReplaced1"] = "|cffa335ee|Hitem:128710::::::::110:270::13:3:689:600:679:::|h[Darkmoon Deck: Promises]|h|r",
+					["date"] = "29/06/17",
+					["groupSize"] = 24,
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["class"] = "MONK",
+					["boss"] = "Priestess Lunaspyre",
+					["response"] = "Candidate didn't respond on time",
+					["lootWon"] = "|cffa335ee|Hitem:147005::::::::110:577::5:4:3562:1808:1497:3528:::|h[Chalice of Moonlight]|h|r",
+					["isAwardReason"] = false,
+					["time"] = "22:21:01",
+					["votes"] = 0,
+					["difficultyID"] = 15,
+					["responseID"] = "TIMEOUT",
+					["itemReplaced2"] = "|cffa335ee|Hitem:146071::130219::::::110:270::43:4:3573:1808:1547:3336:::|h[Ferocious Combatant's Badge of Dominance]|h|r",
+					["color"] = {
+						1, -- [1]
+						0, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [43]
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:147027::::::::110:270::5:3:3562:1497:3528:::|h[Spirebreaker Harness]|h|r",
+					["mapID"] = 1676,
+					["date"] = "06/07/17",
+					["color"] = {
+						1, -- [1]
+						0.5, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["class"] = "MONK",
+					["votes"] = 2,
+					["groupSize"] = 20,
+					["isAwardReason"] = false,
+					["boss"] = "Mistress Sassz'ine",
+					["lootWon"] = "|cffa335ee|Hitem:147028::::::::110:577::5:3:3562:1497:3528:::|h[Hide of the Abyssal Behemoth]|h|r",
+					["difficultyID"] = 15,
+					["time"] = "20:27:42",
+					["responseID"] = 2,
+					["response"] = "Mainspec",
+					["instance"] = "Tomb of Sargeras-Heroic",
+				}, -- [44]
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:147033::::::::110:270::5:3:3562:1507:3336:::|h[Lunar-Wrath Headgear]|h|r",
+					["mapID"] = 1676,
+					["date"] = "06/07/17",
+					["color"] = {
+						0, -- [1]
+						0.7, -- [2]
+						0.7, -- [3]
+						1, -- [4]
+					},
+					["class"] = "MONK",
+					["votes"] = 2,
+					["groupSize"] = 20,
+					["isAwardReason"] = false,
+					["boss"] = "Priestess Lunaspyre",
+					["lootWon"] = "|cffa335ee|Hitem:147033::::::::110:577::5:3:3562:1512:3337:::|h[Lunar-Wrath Headgear]|h|r",
+					["difficultyID"] = 15,
+					["time"] = "20:54:29",
+					["responseID"] = 3,
+					["response"] = "Minor Upgrade",
+					["instance"] = "Tomb of Sargeras-Heroic",
+				}, -- [45]
 			},
 			["Grimuhs-Illidan"] = {
 				{
@@ -5086,13 +5848,13 @@ RCLootCouncilLootDB = {
 					["groupSize"] = 25,
 					["instance"] = "The Nighthold-Heroic",
 					["class"] = "PRIEST",
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["response"] = "Minor Upgrade",
 					["lootWon"] = "|cffa335ee|Hitem:143562::::::::110:577::5:1:570:::|h[Chest of the Foreseen Conqueror]|h|r",
-					["votes"] = 0,
-					["time"] = "21:51:11",
 					["boss"] = "Unknown/Chest",
-					["isAwardReason"] = false,
+					["time"] = "21:51:11",
+					["votes"] = 0,
+					["difficultyID"] = 15,
 					["responseID"] = 3,
 					["color"] = {
 						0, -- [1]
@@ -5101,6 +5863,54 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["itemReplaced1"] = "|cffa335ee|Hitem:138319::::::::110:258::5:3:3516:1487:1813:::|h[Purifier's Cassock]|h|r",
+				}, -- [1]
+				{
+					["mapID"] = 1676,
+					["itemReplaced1"] = "|cffa335ee|Hitem:140910:5436:130220::::::110:258::3:4:3514:1808:1477:3336:::|h[Cloak of Temporal Recalibration]|h|r",
+					["votes"] = 3,
+					["instance"] = "Tomb of Sargeras-Normal",
+					["class"] = "PRIEST",
+					["boss"] = "Fallen Avatar",
+					["groupSize"] = 12,
+					["difficultyID"] = 14,
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:147193::::::::110:577::3:3:3561:1482:3528:::|h[Cape of Mindless Fury]|h|r",
+					["response"] = "Minor Upgrade",
+					["time"] = "21:15:15",
+					["responseID"] = 3,
+					["date"] = "29/06/17",
+					["color"] = {
+						0, -- [1]
+						0.7, -- [2]
+						0.7, -- [3]
+						1, -- [4]
+					},
+				}, -- [2]
+			},
+			["Hemotherapy-Illidan"] = {
+				{
+					["tierToken"] = "ShoulderSlot",
+					["color"] = {
+						0.5, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["class"] = "ROGUE",
+					["groupSize"] = 12,
+					["boss"] = "Fallen Avatar",
+					["time"] = "21:15:06",
+					["itemReplaced1"] = "|cffa335ee|Hitem:138338::::::::110:259::3:4:3514:41:1482:3336:::|h[Doomblade Spaulders]|h|r",
+					["instance"] = "Tomb of Sargeras-Normal",
+					["response"] = "1st Tier Piece",
+					["tokenRoll"] = true,
+					["difficultyID"] = 14,
+					["lootWon"] = "|cffa335ee|Hitem:147328::::::::110:577::3::::|h[Shoulders of the Foregone Vanquisher]|h|r",
+					["date"] = "29/06/17",
+					["mapID"] = 1676,
+					["responseID"] = 4,
+					["votes"] = 3,
+					["isAwardReason"] = false,
 				}, -- [1]
 			},
 			["Ygramir-Illidan"] = {
@@ -5358,9 +6168,9 @@ RCLootCouncilLootDB = {
 					["mapID"] = 1530,
 				}, -- [6]
 				{
-					["isAwardReason"] = false,
-					["mapID"] = 1530,
 					["instance"] = "The Nighthold-Heroic",
+					["itemReplaced1"] = "|cffa335ee|Hitem:140896:5427:130219::::::110:251::5:4:3516:1808:1487:3528:::|h[Ring of Braided Stems]|h|r",
+					["date"] = "18/05/17",
 					["response"] = "Mainspec",
 					["color"] = {
 						1, -- [1]
@@ -5371,14 +6181,14 @@ RCLootCouncilLootDB = {
 					["class"] = "DEATHKNIGHT",
 					["boss"] = "Tichondrius",
 					["groupSize"] = 25,
-					["date"] = "18/05/17",
 					["votes"] = 3,
-					["time"] = "22:05:15",
-					["lootWon"] = "|cffa335ee|Hitem:140906::::::::110:577::5:3:3516:1487:3528:::|h[Ring of Exclusive Servitude]|h|r",
 					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:140906::::::::110:577::5:3:3516:1487:3528:::|h[Ring of Exclusive Servitude]|h|r",
+					["time"] = "22:05:15",
+					["isAwardReason"] = false,
 					["responseID"] = 2,
 					["itemReplaced2"] = "|cffa335ee|Hitem:140897:5427:::::::110:251::43:3:3573:1517:3337:::|h[Ring of the Scoured Clan]|h|r",
-					["itemReplaced1"] = "|cffa335ee|Hitem:140896:5427:130219::::::110:251::5:4:3516:1808:1487:3528:::|h[Ring of Braided Stems]|h|r",
+					["mapID"] = 1530,
 				}, -- [7]
 				{
 					["tierToken"] = "ShoulderSlot",
@@ -5387,13 +6197,13 @@ RCLootCouncilLootDB = {
 					["response"] = "Mainspec",
 					["date"] = "18/05/17",
 					["class"] = "DEATHKNIGHT",
-					["votes"] = 3,
+					["difficultyID"] = 15,
 					["groupSize"] = 25,
 					["lootWon"] = "|cffa335ee|Hitem:143570::::::::110:577::5:1:570:::|h[Shoulders of the Foreseen Vanquisher]|h|r",
-					["isAwardReason"] = false,
-					["time"] = "22:08:04",
 					["boss"] = "Tichondrius",
-					["difficultyID"] = 15,
+					["time"] = "22:08:04",
+					["isAwardReason"] = false,
+					["votes"] = 3,
 					["responseID"] = 2,
 					["color"] = {
 						1, -- [1]
@@ -5649,13 +6459,13 @@ RCLootCouncilLootDB = {
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:139329::130222::::::110:263::5:3:1805:1808:1487:::|h[Bloodthirsty Instinct]|h|r",
 					["date"] = "15/11/16",
-					["isAwardReason"] = false,
+					["boss"] = "Ysondre",
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "SHAMAN",
-					["difficultyID"] = 15,
-					["response"] = "OFFSPEC",
 					["votes"] = 2,
-					["boss"] = "Ysondre",
+					["response"] = "OFFSPEC",
+					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["lootWon"] = "|cffa335ee|Hitem:138222::::::::110:258::5:3:1805:1808:1487:::|h[Vial of Nightmare Fog]|h|r",
 					["color"] = {
 						1, -- [1]
@@ -5671,13 +6481,13 @@ RCLootCouncilLootDB = {
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:139329::130222::::::110:263::5:3:1805:1808:1487:::|h[Bloodthirsty Instinct]|h|r",
 					["date"] = "15/11/16",
-					["isAwardReason"] = false,
+					["boss"] = "Elerethe Renferal",
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "SHAMAN",
-					["difficultyID"] = 15,
-					["response"] = "OFFSPEC",
 					["votes"] = 0,
-					["boss"] = "Elerethe Renferal",
+					["response"] = "OFFSPEC",
+					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["lootWon"] = "|cffa335ee|Hitem:139322::::::::110:258::5:2:1805:1487:::|h[Cocoon of Enforced Solitude]|h|r",
 					["color"] = {
 						1, -- [1]
@@ -5734,13 +6544,13 @@ RCLootCouncilLootDB = {
 				}, -- [5]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:134405:5435:::::::110:263::35:3:3417:1527:3337:::|h[Cloak of Fading Echoes]|h|r",
-					["votes"] = 3,
+					["boss"] = "Elerethe Renferal",
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "SHAMAN",
-					["isAwardReason"] = false,
+					["difficultyID"] = 15,
 					["response"] = "Mainspec/Need",
 					["lootWon"] = "|cffa335ee|Hitem:138221::::::::110:258::5:3:1805:1808:1487:::|h[Gossamer-Spun Greatcloak]|h|r",
-					["boss"] = "Elerethe Renferal",
+					["votes"] = 3,
 					["time"] = "20:44:40",
 					["date"] = "22/11/16",
 					["color"] = {
@@ -5750,19 +6560,19 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 1,
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["mapID"] = 1520,
 				}, -- [6]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:139329::130222::::::110:263::5:3:1805:1808:1487:::|h[Bloodthirsty Instinct]|h|r",
 					["date"] = "22/11/16",
-					["votes"] = 4,
+					["isAwardReason"] = false,
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "SHAMAN",
-					["difficultyID"] = 15,
-					["response"] = "BIS",
 					["boss"] = "Il'gynoth",
-					["isAwardReason"] = false,
+					["response"] = "BIS",
+					["difficultyID"] = 15,
+					["votes"] = 4,
 					["time"] = "20:53:04",
 					["color"] = {
 						0.815686274509804, -- [1]
@@ -5799,13 +6609,13 @@ RCLootCouncilLootDB = {
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:140030::130219::::::110:262::42:4:3474:1808:1507:3336:::|h[Devilsaur Shock-Baton]|h|r",
 					["instance"] = "The Emerald Nightmare-Heroic",
-					["boss"] = "Ysondre",
+					["votes"] = 5,
 					["date"] = "13/12/16",
 					["class"] = "SHAMAN",
-					["difficultyID"] = 15,
-					["response"] = "Need",
 					["isAwardReason"] = false,
-					["votes"] = 5,
+					["response"] = "Need",
+					["difficultyID"] = 15,
+					["boss"] = "Ysondre",
 					["time"] = "20:59:32",
 					["color"] = {
 						1, -- [1]
@@ -6422,13 +7232,13 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["class"] = "DEMONHUNTER",
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["response"] = "Minor Upgrade",
 					["lootWon"] = "|cffa335ee|Hitem:143564::::::::110:577::5:1:570:::|h[Leggings of the Foreseen Conqueror]|h|r",
-					["boss"] = "Unknown/Chest",
-					["time"] = "21:39:49",
 					["votes"] = 4,
-					["isAwardReason"] = false,
+					["time"] = "21:39:49",
+					["boss"] = "Unknown/Chest",
+					["difficultyID"] = 15,
 					["responseID"] = 3,
 					["tierToken"] = "LegsSlot",
 					["mapID"] = 1530,
@@ -6465,13 +7275,13 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["class"] = "DEMONHUNTER",
-					["boss"] = "Unknown/Chest",
-					["groupSize"] = 25,
-					["isAwardReason"] = false,
 					["difficultyID"] = 15,
+					["groupSize"] = 25,
+					["votes"] = 0,
+					["boss"] = "Unknown/Chest",
 					["time"] = "21:51:05",
 					["lootWon"] = "|cffa335ee|Hitem:143562::::::::110:577::5:1:570:::|h[Chest of the Foreseen Conqueror]|h|r",
-					["votes"] = 0,
+					["isAwardReason"] = false,
 					["responseID"] = 3,
 					["itemReplaced1"] = "|cffa335ee|Hitem:138376::130247::::::110:577::5:4:3516:1808:1487:1813:::|h[Tunic of Second Sight]|h|r",
 					["mapID"] = 1530,
@@ -6596,6 +7406,180 @@ RCLootCouncilLootDB = {
 					["boss"] = "Chronomatic Anomaly",
 					["groupSize"] = 20,
 				}, -- [33]
+				{
+					["mapID"] = 1676,
+					["date"] = "27/06/17",
+					["class"] = "DEMONHUNTER",
+					["color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["groupSize"] = 23,
+					["difficultyID"] = 15,
+					["boss"] = "Atrigan",
+					["time"] = "20:26:14",
+					["isAwardReason"] = true,
+					["lootWon"] = "|cffa335ee|Hitem:146996::::::::110:577::5:3:3562:1497:3528:::|h[Mantle of Broken Spirits]|h|r",
+					["responseID"] = 1,
+					["response"] = "Disenchant",
+					["instance"] = "Tomb of Sargeras-Heroic",
+				}, -- [34]
+				{
+					["mapID"] = 1676,
+					["date"] = "27/06/17",
+					["class"] = "DEMONHUNTER",
+					["groupSize"] = 23,
+					["boss"] = "Atrigan",
+					["time"] = "20:26:47",
+					["itemReplaced1"] = "|cffa335ee|Hitem:138378::130219::::::110:577::5:4:3516:1808:1492:3336:::|h[Mask of Second Sight]|h|r",
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["response"] = "Mainspec",
+					["color"] = {
+						1, -- [1]
+						0.5, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:147323::::::::110:577::5:1:570:::|h[Helm of the Foregone Conqueror]|h|r",
+					["tokenRoll"] = false,
+					["isAwardReason"] = false,
+					["responseID"] = 2,
+					["votes"] = 3,
+					["tierToken"] = "HeadSlot",
+				}, -- [35]
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:144487::::::::110:577::35:4:3417:41:1552:3337:::|h[Treads of Creeping Shadows]|h|r",
+					["mapID"] = 1676,
+					["date"] = "27/06/17",
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["class"] = "DEMONHUNTER",
+					["boss"] = "Harjatan",
+					["groupSize"] = 23,
+					["isAwardReason"] = false,
+					["difficultyID"] = 15,
+					["time"] = "20:50:59",
+					["lootWon"] = "|cffa335ee|Hitem:147029::::::::110:577::5:3:3562:1502:3336:::|h[Glacier Walkers]|h|r",
+					["votes"] = 3,
+					["responseID"] = 2,
+					["response"] = "Mainspec",
+					["color"] = {
+						1, -- [1]
+						0.5, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [36]
+				{
+					["mapID"] = 1676,
+					["date"] = "29/06/17",
+					["class"] = "DEMONHUNTER",
+					["instance"] = "Tomb of Sargeras-Normal",
+					["groupSize"] = 21,
+					["color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["isAwardReason"] = true,
+					["time"] = "19:51:38",
+					["lootWon"] = "|cffa335ee|Hitem:147000::::::::110:577::3:4:3561:42:1482:3528:::|h[Ravenous Devotee's Bracelets]|h|r",
+					["difficultyID"] = 14,
+					["responseID"] = 1,
+					["boss"] = "Harjatan",
+					["response"] = "Disenchant",
+				}, -- [37]
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:138376::130247::::::110:577::5:4:3516:1808:1492:3336:::|h[Tunic of Second Sight]|h|r",
+					["mapID"] = 1676,
+					["date"] = "29/06/17",
+					["instance"] = "Tomb of Sargeras-Normal",
+					["class"] = "DEMONHUNTER",
+					["boss"] = "Mistress Sassz'ine",
+					["groupSize"] = 22,
+					["votes"] = 2,
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:147028::::::::110:577::3:3:3561:1482:3528:::|h[Hide of the Abyssal Behemoth]|h|r",
+					["difficultyID"] = 14,
+					["time"] = "20:03:10",
+					["responseID"] = 2,
+					["response"] = "Mainspec",
+					["color"] = {
+						1, -- [1]
+						0.5, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [38]
+				{
+					["mapID"] = 1676,
+					["color"] = {
+						1, -- [1]
+						0.5, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["class"] = "DEMONHUNTER",
+					["groupSize"] = 22,
+					["boss"] = "Mistress Sassz'ine",
+					["time"] = "20:04:52",
+					["itemReplaced1"] = "|cffa335ee|Hitem:138379::::::::110:577::5:3:3516:1492:3336:::|h[Legwraps of Second Sight]|h|r",
+					["instance"] = "Tomb of Sargeras-Normal",
+					["response"] = "3rd Tier Piece",
+					["date"] = "29/06/17",
+					["difficultyID"] = 14,
+					["lootWon"] = "|cffa335ee|Hitem:147326::::::::110:577::3::::|h[Leggings of the Foregone Conqueror]|h|r",
+					["votes"] = 3,
+					["tokenRoll"] = true,
+					["responseID"] = 3,
+					["tierToken"] = "LegsSlot",
+					["isAwardReason"] = false,
+				}, -- [39]
+				{
+					["mapID"] = 1676,
+					["date"] = "29/06/17",
+					["class"] = "DEMONHUNTER",
+					["instance"] = "Tomb of Sargeras-Normal",
+					["groupSize"] = 23,
+					["color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["isAwardReason"] = true,
+					["time"] = "20:43:27",
+					["lootWon"] = "|cffa335ee|Hitem:147018::::::::110:577::3:3:3561:1482:3528:::|h[Spectral Thurible]|h|r",
+					["difficultyID"] = 14,
+					["responseID"] = 1,
+					["boss"] = "The Desolate Host",
+					["response"] = "Disenchant",
+				}, -- [40]
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:138378::130219::::::110:577::5:4:3516:1808:1492:3336:::|h[Mask of Second Sight]|h|r",
+					["mapID"] = 1676,
+					["date"] = "06/07/17",
+					["color"] = {
+						0.462745098039216, -- [1]
+						0.701960784313726, -- [2]
+						0.615686274509804, -- [3]
+						1, -- [4]
+					},
+					["class"] = "DEMONHUNTER",
+					["votes"] = 0,
+					["groupSize"] = 20,
+					["isAwardReason"] = false,
+					["boss"] = "Priestess Lunaspyre",
+					["lootWon"] = "|cffa335ee|Hitem:147033::::::::110:577::5:4:3562:41:1497:3528:::|h[Lunar-Wrath Headgear]|h|r",
+					["difficultyID"] = 15,
+					["time"] = "20:56:00",
+					["responseID"] = 5,
+					["response"] = "Transmog",
+					["instance"] = "Tomb of Sargeras-Heroic",
+				}, -- [41]
 			},
 			["Ellípses-Illidan"] = {
 				{
@@ -6666,13 +7650,13 @@ RCLootCouncilLootDB = {
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:136716::::::::110:254::23:4:1727:42:1507:3337:::|h[Caged Horror]|h|r",
 					["instance"] = "The Emerald Nightmare-Heroic",
-					["isAwardReason"] = false,
+					["votes"] = 4,
 					["date"] = "01/11/16",
 					["class"] = "HUNTER",
-					["difficultyID"] = 15,
-					["response"] = "Mainspec/Need",
 					["boss"] = "Unknown/Chest",
-					["votes"] = 4,
+					["response"] = "Mainspec/Need",
+					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["lootWon"] = "|cffa335ee|Hitem:139334::::::::110:258::5:2:1805:1487:::|h[Nature's Call]|h|r",
 					["color"] = {
 						0, -- [1]
@@ -6730,13 +7714,13 @@ RCLootCouncilLootDB = {
 				}, -- [5]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:133623::::::::110:254::35:3:3410:1507:3336:::|h[Felstep Footguards]|h|r",
-					["votes"] = 1,
+					["boss"] = "Unknown/Chest",
 					["instance"] = "Trial of Valor-Normal",
 					["class"] = "HUNTER",
-					["isAwardReason"] = false,
+					["difficultyID"] = 14,
 					["response"] = "Minor Upgrade",
 					["lootWon"] = "|cffa335ee|Hitem:142422::::::::110:258::3:3:3467:1482:3336:::|h[Radiant Soul Sabatons]|h|r",
-					["boss"] = "Unknown/Chest",
+					["votes"] = 1,
 					["time"] = "22:00:32",
 					["date"] = "15/11/16",
 					["color"] = {
@@ -6746,18 +7730,18 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 3,
-					["difficultyID"] = 14,
+					["isAwardReason"] = false,
 					["mapID"] = 1648,
 				}, -- [6]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:139213::::::::110:254::3:3:1807:40:1472:::|h[Gauntlets of Malevolent Intent]|h|r",
-					["votes"] = 3,
+					["boss"] = "Guarm",
 					["instance"] = "Trial of Valor-Normal",
 					["class"] = "HUNTER",
-					["isAwardReason"] = false,
+					["difficultyID"] = 14,
 					["response"] = "Mainspec/Need",
 					["lootWon"] = "|cffa335ee|Hitem:142434::::::::110:258::3:3:3467:1808:1477:::|h[Kvaldir Exult's Grips]|h|r",
-					["boss"] = "Guarm",
+					["votes"] = 3,
 					["time"] = "22:17:17",
 					["date"] = "15/11/16",
 					["color"] = {
@@ -6767,19 +7751,19 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 1,
-					["difficultyID"] = 14,
+					["isAwardReason"] = false,
 					["mapID"] = 1648,
 				}, -- [7]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:136716::::::::110:254::23:4:1727:42:1507:3337:::|h[Caged Horror]|h|r",
 					["date"] = "22/11/16",
-					["votes"] = 2,
+					["isAwardReason"] = false,
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "HUNTER",
-					["difficultyID"] = 15,
-					["response"] = "Minor Upgrade",
 					["boss"] = "Elerethe Renferal",
-					["isAwardReason"] = false,
+					["response"] = "Minor Upgrade",
+					["difficultyID"] = 15,
+					["votes"] = 2,
 					["time"] = "20:45:34",
 					["color"] = {
 						0, -- [1]
@@ -6903,13 +7887,13 @@ RCLootCouncilLootDB = {
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:134191:5425:::::::110:257::42:3:3474:1517:3336:::|h[Rough-Hammered Silver Ring]|h|r",
 					["instance"] = "The Emerald Nightmare-Heroic",
-					["boss"] = "Xavius",
+					["votes"] = 0,
 					["date"] = "13/12/16",
 					["class"] = "PRIEST",
-					["difficultyID"] = 15,
-					["response"] = "Offspec",
 					["isAwardReason"] = false,
-					["votes"] = 0,
+					["response"] = "Offspec",
+					["difficultyID"] = 15,
+					["boss"] = "Xavius",
 					["time"] = "21:36:15",
 					["color"] = {
 						1, -- [1]
@@ -6951,10 +7935,10 @@ RCLootCouncilLootDB = {
 					["mapID"] = 1520,
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "DEMONHUNTER",
-					["boss"] = "Unknown/Chest",
-					["response"] = "Offline or RCLootCouncil not installed",
-					["isAwardReason"] = false,
 					["votes"] = 0,
+					["response"] = "Offline or RCLootCouncil not installed",
+					["difficultyID"] = 15,
+					["boss"] = "Unknown/Chest",
 					["lootWon"] = "|cffa335ee|Hitem:139207::::::::110:258::5:2:1805:1487:::|h[Grove Keeper's Robe]|h|r",
 					["color"] = {
 						0.5, -- [1]
@@ -6965,16 +7949,16 @@ RCLootCouncilLootDB = {
 					["date"] = "22/11/16",
 					["responseID"] = "NOTHING",
 					["time"] = "21:02:15",
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 				}, -- [1]
 				{
 					["mapID"] = 1520,
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "DEMONHUNTER",
-					["boss"] = "Xavius",
-					["response"] = "Offline or RCLootCouncil not installed",
-					["isAwardReason"] = false,
 					["votes"] = 0,
+					["response"] = "Offline or RCLootCouncil not installed",
+					["difficultyID"] = 15,
+					["boss"] = "Xavius",
 					["lootWon"] = "|cffa335ee|Hitem:139332::::::::110:258::5:2:1805:1487:::|h[Blackened Portalstone Necklace]|h|r",
 					["color"] = {
 						0.5, -- [1]
@@ -6985,8 +7969,32 @@ RCLootCouncilLootDB = {
 					["date"] = "22/11/16",
 					["responseID"] = "NOTHING",
 					["time"] = "21:13:29",
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 				}, -- [2]
+			},
+			["Chèss-Illidan"] = {
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:140813::::::::110:253::5:3:3516:1497:3336:::|h[Arcana Crux]|h|r",
+					["mapID"] = 1676,
+					["date"] = "29/06/17",
+					["instance"] = "Tomb of Sargeras-Normal",
+					["class"] = "HUNTER",
+					["boss"] = "Priestess Lunaspyre",
+					["groupSize"] = 23,
+					["votes"] = 3,
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:147078::::::::110:577::3:3:3561:1492:3336:::|h[Mote of Astral Suffusion]|h|r",
+					["difficultyID"] = 14,
+					["time"] = "20:24:54",
+					["responseID"] = 1,
+					["response"] = "BiS",
+					["color"] = {
+						0, -- [1]
+						1, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [1]
 			},
 			["Dërail-Illidan"] = {
 				{
@@ -7077,13 +8085,13 @@ RCLootCouncilLootDB = {
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:141258::::::::110:269::30:3:3397:1512:3337:::|h[Whirlpool Seed]|h|r",
 					["date"] = "15/11/16",
-					["isAwardReason"] = false,
+					["boss"] = "Elerethe Renferal",
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "MONK",
-					["difficultyID"] = 15,
-					["response"] = "Mainspec/Need",
 					["votes"] = 3,
-					["boss"] = "Elerethe Renferal",
+					["response"] = "Mainspec/Need",
+					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["lootWon"] = "|cffa335ee|Hitem:137008::::::::110:258::5:3:1805:1507:3337:::|h[Stormfury Diamond]|h|r",
 					["color"] = {
 						0, -- [1]
@@ -7253,13 +8261,13 @@ RCLootCouncilLootDB = {
 				}, -- [5]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:137397::::::::110:103::23:3:1727:1507:3337:::|h[Tunnel Trudger Footguards]|h|r",
-					["votes"] = 1,
+					["boss"] = "Guarm",
 					["instance"] = "Trial of Valor-Normal",
 					["class"] = "DRUID",
-					["isAwardReason"] = false,
+					["difficultyID"] = 14,
 					["response"] = "Pass",
 					["lootWon"] = "|cffa335ee|Hitem:142417::::::::110:258::3:3:3467:40:1477:::|h[Moccasins of Silent Passage]|h|r",
-					["boss"] = "Guarm",
+					["votes"] = 1,
 					["time"] = "22:17:59",
 					["date"] = "15/11/16",
 					["color"] = {
@@ -7269,7 +8277,7 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = "PASS",
-					["difficultyID"] = 14,
+					["isAwardReason"] = false,
 					["mapID"] = 1648,
 				}, -- [6]
 			},
@@ -7340,6 +8348,52 @@ RCLootCouncilLootDB = {
 					["groupSize"] = 20,
 					["mapID"] = 1530,
 				}, -- [2]
+				{
+					["tierToken"] = "ChestSlot",
+					["color"] = {
+						0.5, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["class"] = "ROGUE",
+					["groupSize"] = 23,
+					["boss"] = "Maiden of Vigilance",
+					["time"] = "21:01:49",
+					["itemReplaced1"] = "|cffa335ee|Hitem:138326::::::::110:261::5:3:3516:1492:3336:::|h[Doomblade Tunic]|h|r",
+					["instance"] = "Tomb of Sargeras-Normal",
+					["response"] = "1st Tier Piece",
+					["tokenRoll"] = true,
+					["difficultyID"] = 14,
+					["lootWon"] = "|cffa335ee|Hitem:147316::::::::110:577::3::::|h[Chest of the Foregone Vanquisher]|h|r",
+					["date"] = "29/06/17",
+					["mapID"] = 1676,
+					["responseID"] = 4,
+					["votes"] = 2,
+					["isAwardReason"] = false,
+				}, -- [3]
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:138332::130222::::::110:261::5:4:3516:1808:1487:3528:::|h[Doomblade Cowl]|h|r",
+					["mapID"] = 1676,
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["date"] = "29/06/17",
+					["class"] = "ROGUE",
+					["difficultyID"] = 15,
+					["response"] = "Offspec",
+					["boss"] = "Priestess Lunaspyre",
+					["isAwardReason"] = false,
+					["time"] = "22:22:39",
+					["lootWon"] = "|cffa335ee|Hitem:147033::::::::110:577::5:3:3562:1497:3528:::|h[Lunar-Wrath Headgear]|h|r",
+					["votes"] = 2,
+					["responseID"] = 4,
+					["groupSize"] = 24,
+					["color"] = {
+						0.584313725490196, -- [1]
+						0.368627450980392, -- [2]
+						0.701960784313726, -- [3]
+						1, -- [4]
+					},
+				}, -- [4]
 			},
 			["Jechundesung-Illidan"] = {
 				{
@@ -7472,10 +8526,10 @@ RCLootCouncilLootDB = {
 					["mapID"] = 1648,
 					["instance"] = "Trial of Valor-Normal",
 					["class"] = "WARRIOR",
-					["boss"] = "Guarm",
-					["response"] = "OFFSPEC",
-					["isAwardReason"] = false,
 					["votes"] = 2,
+					["response"] = "OFFSPEC",
+					["difficultyID"] = 14,
+					["boss"] = "Guarm",
 					["lootWon"] = "|cffa335ee|Hitem:142512::::::::110:258::3:2:3467:1477:::|h[Accursed Cuspid]|h|r",
 					["color"] = {
 						1, -- [1]
@@ -7486,17 +8540,17 @@ RCLootCouncilLootDB = {
 					["date"] = "15/11/16",
 					["responseID"] = 4,
 					["time"] = "22:17:46",
-					["difficultyID"] = 14,
+					["isAwardReason"] = false,
 				}, -- [7]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:123916::::::::110:72::13:5:689:1697:3408:601:670:::|h[Demonsteel Waistguard of the Feverflare]|h|r",
-					["votes"] = 4,
+					["boss"] = "Il'gynoth",
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "WARRIOR",
-					["isAwardReason"] = false,
+					["difficultyID"] = 15,
 					["response"] = "BIS",
 					["lootWon"] = "|cffa335ee|Hitem:139227::::::::110:258::5:2:1805:1487:::|h[Waistplate of Nameless Horror]|h|r",
-					["boss"] = "Il'gynoth",
+					["votes"] = 4,
 					["time"] = "20:52:55",
 					["date"] = "22/11/16",
 					["color"] = {
@@ -7506,7 +8560,7 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 5,
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["mapID"] = 1520,
 				}, -- [8]
 				{
@@ -7636,13 +8690,13 @@ RCLootCouncilLootDB = {
 				}, -- [14]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:140884::130220::::::110:72::3:4:3443:1808:1467:1813:::|h[Leystone-Toe Kickers]|h|r",
-					["votes"] = 4,
+					["boss"] = "Skorpyron",
 					["instance"] = "The Nighthold-Heroic",
 					["class"] = "WARRIOR",
-					["isAwardReason"] = false,
+					["difficultyID"] = 15,
 					["response"] = "Minor",
 					["lootWon"] = "|cffa335ee|Hitem:140884::::::::110:258::5:4:3444:42:1487:3336:::|h[Leystone-Toe Kickers]|h|r",
-					["boss"] = "Skorpyron",
+					["votes"] = 4,
 					["time"] = "22:44:54",
 					["date"] = "31/01/17",
 					["color"] = {
@@ -7652,7 +8706,7 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 3,
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["mapID"] = 1530,
 				}, -- [15]
 				{
@@ -7745,13 +8799,13 @@ RCLootCouncilLootDB = {
 				}, -- [2]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:137460::130222::::::110:253::23:4:1727:1808:1512:3337:::|h[Constricting Chain Harness]|h|r",
-					["votes"] = 3,
+					["boss"] = "Helya",
 					["instance"] = "Trial of Valor-Normal",
 					["class"] = "HUNTER",
-					["isAwardReason"] = false,
+					["difficultyID"] = 14,
 					["response"] = "BIS",
 					["lootWon"] = "|cffa335ee|Hitem:142433::::::::110:258::3:3:3506:1487:3336:::|h[Corroded Val'kyr Chainmail]|h|r",
-					["boss"] = "Helya",
+					["votes"] = 3,
 					["time"] = "22:39:43",
 					["date"] = "15/11/16",
 					["color"] = {
@@ -7761,7 +8815,7 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 5,
-					["difficultyID"] = 14,
+					["isAwardReason"] = false,
 					["mapID"] = 1648,
 				}, -- [3]
 			},
@@ -7855,24 +8909,229 @@ RCLootCouncilLootDB = {
 				}, -- [4]
 				{
 					["itemReplaced1"] = "|cffff8000|Hitem:137108::::::::110:73:::2:1811:3455:::|h[Kakushan's Stormscale Gauntlets]|h|r",
-					["boss"] = "Krosus",
-					["response"] = "Offspec",
 					["date"] = "15/06/17",
+					["response"] = "Offspec",
+					["instance"] = "The Nighthold-Mythic",
 					["class"] = "WARRIOR",
-					["isAwardReason"] = false,
+					["boss"] = "Krosus",
 					["groupSize"] = 20,
+					["difficultyID"] = 16,
+					["votes"] = 1,
+					["time"] = "21:33:53",
+					["lootWon"] = "|cffa335ee|Hitem:140907::::::::110:72::6:4:3518:1808:1502:3528:::|h[Bridgebreaker Gauntlets]|h|r",
+					["isAwardReason"] = false,
+					["responseID"] = 2,
 					["color"] = {
 						0.301960784313726, -- [1]
 						0.615686274509804, -- [2]
 						0.0862745098039216, -- [3]
 						1, -- [4]
 					},
+					["mapID"] = 1530,
+				}, -- [5]
+				{
+					["mapID"] = 1676,
+					["itemReplaced1"] = "|cffa335ee|Hitem:147024::::::::110:73::3:3:3561:1487:3336:::|h[Reliquary of the Damned]|h|r",
+					["date"] = "29/06/17",
+					["response"] = "Minor Upgrade",
+					["instance"] = "Tomb of Sargeras-Normal",
+					["class"] = "WARRIOR",
 					["votes"] = 1,
-					["time"] = "21:33:53",
-					["lootWon"] = "|cffa335ee|Hitem:140907::::::::110:72::6:4:3518:1808:1502:3528:::|h[Bridgebreaker Gauntlets]|h|r",
-					["difficultyID"] = 16,
+					["groupSize"] = 22,
+					["difficultyID"] = 14,
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:147023::::::::110:577::3:3:3561:1482:3528:::|h[Leviathan's Hunger]|h|r",
+					["time"] = "20:03:57",
+					["boss"] = "Mistress Sassz'ine",
+					["responseID"] = 3,
+					["itemReplaced2"] = "|cffa335ee|Hitem:144745::130246::::::110:73::43:5:3573:1808:604:1532:3337:::|h[Cruel Gladiator's Accolade of Victory]|h|r",
+					["color"] = {
+						0, -- [1]
+						0.7, -- [2]
+						0.7, -- [3]
+						1, -- [4]
+					},
+				}, -- [6]
+				{
+					["tierToken"] = "ShoulderSlot",
+					["color"] = {
+						1, -- [1]
+						1, -- [2]
+						0.5, -- [3]
+						1, -- [4]
+					},
+					["class"] = "WARRIOR",
+					["groupSize"] = 18,
+					["boss"] = "Fallen Avatar",
+					["time"] = "21:14:01",
+					["itemReplaced1"] = "|cffa335ee|Hitem:138363:5883:::::::110:73::5:3:3516:1487:1813:::|h[Shoulderplates of the Obsidian Aspect]|h|r",
+					["instance"] = "Tomb of Sargeras-Normal",
+					["response"] = "2nd Tier Piece",
+					["tokenRoll"] = true,
+					["difficultyID"] = 14,
+					["lootWon"] = "|cffa335ee|Hitem:147330::::::::110:577::3::::|h[Shoulders of the Foregone Protector]|h|r",
+					["date"] = "29/06/17",
+					["mapID"] = 1676,
 					["responseID"] = 2,
+					["votes"] = 2,
+					["isAwardReason"] = false,
+				}, -- [7]
+				{
+					["mapID"] = 1676,
+					["itemReplaced1"] = "|cffa335ee|Hitem:147022::::::::110:73::5:3:3562:1512:3337:::|h[Feverish Carapace]|h|r",
+					["date"] = "06/07/17",
+					["groupSize"] = 18,
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["class"] = "WARRIOR",
+					["difficultyID"] = 15,
+					["response"] = "Mainspec",
+					["votes"] = 1,
+					["boss"] = "The Desolate Host",
+					["lootWon"] = "|cffa335ee|Hitem:147024::::::::110:577::5:3:3562:1517:3337:::|h[Reliquary of the Damned]|h|r",
+					["time"] = "21:53:52",
+					["isAwardReason"] = false,
+					["responseID"] = 2,
+					["itemReplaced2"] = "|cffa335ee|Hitem:144745::130246::::::110:73::43:5:3573:1808:604:1532:3337:::|h[Cruel Gladiator's Accolade of Victory]|h|r",
+					["color"] = {
+						1, -- [1]
+						0.5, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [8]
+				{
+					["mapID"] = 1676,
+					["date"] = "06/07/17",
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["class"] = "WARRIOR",
+					["isAwardReason"] = false,
+					["response"] = "Offspec",
+					["votes"] = 0,
+					["boss"] = "Maiden of Vigilance",
+					["time"] = "22:52:00",
+					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:147115::::::::110:577::5:3:3562:1497:3528:::|h[Unfurling Origination]|h|r",
+					["responseID"] = 4,
+					["groupSize"] = 18,
+					["color"] = {
+						0.584313725490196, -- [1]
+						0.368627450980392, -- [2]
+						0.701960784313726, -- [3]
+						1, -- [4]
+					},
+				}, -- [9]
+			},
+			["Madmartigàn-Illidan"] = {
+				{
+					["mapID"] = 1530,
+					["tierToken"] = "HandsSlot",
+					["itemReplaced1"] = "|cffa335ee|Hitem:140879::::::::110:72::5:3:3444:1492:3336:::|h[Gauntlets of Fractured Eons]|h|r",
+					["response"] = "Mainspec/Best in Slot",
+					["color"] = {
+						0.945098039215686, -- [1]
+						0.196078431372549, -- [2]
+						0.0549019607843137, -- [3]
+						1, -- [4]
+					},
+					["class"] = "WARRIOR",
+					["isAwardReason"] = false,
+					["groupSize"] = 19,
+					["votes"] = 0,
+					["boss"] = "Star Augur Etraeus",
+					["lootWon"] = "|cffa335ee|Hitem:143573::::::::110:72::5:1:570:::|h[Gauntlets of the Foreseen Protector]|h|r",
+					["time"] = "20:23:30",
+					["difficultyID"] = 15,
+					["responseID"] = 4,
+					["instance"] = "The Nighthold-Heroic",
+					["date"] = "13/06/17",
+				}, -- [1]
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:147752::::::::110:72::3:3:3572:1482:3528:::|h[Pauldrons of the Engulfing Tide]|h|r",
+					["mapID"] = 1530,
+					["date"] = "13/06/17",
+					["color"] = {
+						0, -- [1]
+						0.7, -- [2]
+						0.7, -- [3]
+						1, -- [4]
+					},
+					["class"] = "WARRIOR",
+					["boss"] = "Arcanist Tel'arn",
+					["response"] = "Minor Upgrade",
+					["difficultyID"] = 15,
+					["isAwardReason"] = false,
+					["time"] = "20:34:19",
+					["lootWon"] = "|cffa335ee|Hitem:140883::::::::110:72::5:4:3516:42:1497:3336:::|h[Shoulderguard of the Eclipse]|h|r",
+					["votes"] = 0,
+					["responseID"] = 3,
+					["groupSize"] = 18,
+					["instance"] = "The Nighthold-Heroic",
+				}, -- [2]
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:139283::::::::110:72::33:3:3418:1557:3337:::|h[Wristbands of Magnificent Splendor]|h|r",
+					["mapID"] = 1530,
+					["response"] = "Mainspec/Need",
+					["color"] = {
+						1, -- [1]
+						0.619607843137255, -- [2]
+						0.0431372549019608, -- [3]
+						1, -- [4]
+					},
+					["class"] = "WARRIOR",
+					["difficultyID"] = 16,
+					["groupSize"] = 20,
+					["lootWon"] = "|cffa335ee|Hitem:140902::::::::110:72::6:3:3445:1497:3528:::|h[Jagged Carapace Wristclamps]|h|r",
+					["isAwardReason"] = false,
+					["time"] = "19:51:38",
 					["instance"] = "The Nighthold-Mythic",
+					["boss"] = "Skorpyron",
+					["responseID"] = 1,
+					["votes"] = 2,
+					["date"] = "15/06/17",
+				}, -- [3]
+				{
+					["color"] = {
+						1, -- [1]
+						0.619607843137255, -- [2]
+						0.0431372549019608, -- [3]
+						1, -- [4]
+					},
+					["itemReplaced1"] = "|cffa335ee|Hitem:142166::::::::110:72::43:3:3573:1487:3336:::|h[Ethereal Urn]|h|r",
+					["instance"] = "The Nighthold-Mythic",
+					["response"] = "Mainspec/Need",
+					["date"] = "15/06/17",
+					["class"] = "WARRIOR",
+					["difficultyID"] = 16,
+					["groupSize"] = 20,
+					["boss"] = "Skorpyron",
+					["votes"] = 2,
+					["lootWon"] = "|cffa335ee|Hitem:140790::::::::110:72::6:3:3445:1497:3528:::|h[Claw of the Crystalline Scorpid]|h|r",
+					["time"] = "19:51:46",
+					["isAwardReason"] = false,
+					["responseID"] = 1,
+					["itemReplaced2"] = "|cffff8000|Hitem:144259::::::::110:72:::2:3459:3530:::|h[Kil'jaeden's Burning Wish]|h|r",
+					["mapID"] = 1530,
+				}, -- [4]
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:144522::::::::110:72::8:3:3568:1662:3528:::|h[Battle-Tempered Hilt]|h|r",
+					["date"] = "15/06/17",
+					["response"] = "Mainspec/Need",
+					["instance"] = "The Nighthold-Mythic",
+					["class"] = "WARRIOR",
+					["boss"] = "Krosus",
+					["groupSize"] = 20,
+					["difficultyID"] = 16,
+					["votes"] = 2,
+					["time"] = "21:33:57",
+					["lootWon"] = "|cffa335ee|Hitem:140816::::::::110:72::6:3:3518:1502:3528:::|h[Fingernail of the Fel Brute]|h|r",
+					["isAwardReason"] = false,
+					["responseID"] = 1,
+					["color"] = {
+						1, -- [1]
+						0.619607843137255, -- [2]
+						0.0431372549019608, -- [3]
+						1, -- [4]
+					},
 					["mapID"] = 1530,
 				}, -- [5]
 			},
@@ -8028,53 +9287,95 @@ RCLootCouncilLootDB = {
 					["mapID"] = 1530,
 				}, -- [7]
 				{
-					["boss"] = "Krosus",
-					["tierToken"] = "ChestSlot",
-					["instance"] = "The Nighthold-Mythic",
-					["isAwardReason"] = false,
-					["date"] = "15/06/17",
-					["class"] = "MAGE",
 					["color"] = {
 						1, -- [1]
 						0.619607843137255, -- [2]
 						0.0431372549019608, -- [3]
 						1, -- [4]
 					},
+					["tierToken"] = "ChestSlot",
+					["date"] = "15/06/17",
+					["response"] = "Mainspec/Need",
+					["instance"] = "The Nighthold-Mythic",
+					["class"] = "MAGE",
+					["difficultyID"] = 16,
 					["groupSize"] = 20,
 					["lootWon"] = "|cffa335ee|Hitem:143571::::::::110:72::6:1:569:::|h[Chest of the Foreseen Vanquisher]|h|r",
 					["votes"] = 2,
 					["time"] = "21:34:05",
-					["difficultyID"] = 16,
-					["response"] = "Mainspec/Need",
+					["isAwardReason"] = false,
+					["boss"] = "Krosus",
 					["responseID"] = 1,
 					["itemReplaced1"] = "|cffa335ee|Hitem:140848::::::::110:64::6:3:3445:1502:3336:::|h[Robes of Fluctuating Energy]|h|r",
 					["mapID"] = 1530,
 				}, -- [8]
-			},
-			["Colonferal-Illidan"] = {
 				{
-					["mapID"] = 1530,
-					["itemReplaced1"] = "|cffa335ee|Hitem:140802::::::::110:103::3:3:3514:1472:1813:::|h[Nightblooming Frond]|h|r",
+					["mapID"] = 1676,
+					["itemReplaced1"] = "|cffa335ee|Hitem:141482::::::::110:64::3:3:3466:1472:3528:::|h[Unstable Arcanocrystal]|h|r",
+					["date"] = "29/06/17",
+					["response"] = "BiS",
+					["instance"] = "Tomb of Sargeras-Normal",
+					["class"] = "MAGE",
+					["votes"] = 3,
+					["groupSize"] = 23,
+					["difficultyID"] = 14,
 					["isAwardReason"] = false,
-					["groupSize"] = 20,
-					["instance"] = "The Nighthold-Mythic",
-					["class"] = "DRUID",
-					["difficultyID"] = 16,
-					["response"] = "Mainspec/Need",
-					["lootWon"] = "|cffa335ee|Hitem:140794::::::::110:72::6:3:3445:1497:3528:::|h[Arcanogolem Digit]|h|r",
-					["boss"] = "Trilliax",
-					["time"] = "20:14:10",
-					["votes"] = 0,
+					["lootWon"] = "|cffa335ee|Hitem:147017::::::::110:577::3:3:3561:1482:3528:::|h[Tarnished Sentinel Medallion]|h|r",
+					["time"] = "20:24:44",
+					["boss"] = "Priestess Lunaspyre",
+					["responseID"] = 1,
+					["itemReplaced2"] = "|cffa335ee|Hitem:140792::130220::::::110:64::6:4:3445:1808:1502:3336:::|h[Erratic Metronome]|h|r",
 					["color"] = {
-						1, -- [1]
-						0.619607843137255, -- [2]
-						0.0431372549019608, -- [3]
+						0, -- [1]
+						1, -- [2]
+						0, -- [3]
 						1, -- [4]
 					},
+				}, -- [9]
+				{
+					["mapID"] = 1676,
+					["color"] = {
+						0, -- [1]
+						1, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["response"] = "BiS",
+					["date"] = "06/07/17",
+					["class"] = "MAGE",
+					["difficultyID"] = 15,
+					["groupSize"] = 20,
+					["votes"] = 4,
+					["boss"] = "Atrigan",
+					["time"] = "19:49:34",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:146998::::::::110:577::5:3:3562:1497:3528:::|h[Braided Torture Lash]|h|r",
 					["responseID"] = 1,
-					["itemReplaced2"] = "|cffa335ee|Hitem:140806::::::::110:103::5:3:3516:1487:1813:::|h[Convergence of Fates]|h|r",
-					["date"] = "15/06/17",
-				}, -- [1]
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["itemReplaced1"] = "|cffa335ee|Hitem:146999::::::::110:64::5:3:3562:1497:3528:::|h[Strife-Riddled Cinch]|h|r",
+				}, -- [10]
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:138318::::::::110:64::6:3:3518:1507:3336:::|h[Robe of Everburning Knowledge]|h|r",
+					["mapID"] = 1676,
+					["date"] = "06/07/17",
+					["color"] = {
+						0, -- [1]
+						0.7, -- [2]
+						0.7, -- [3]
+						1, -- [4]
+					},
+					["class"] = "MAGE",
+					["votes"] = 0,
+					["groupSize"] = 20,
+					["isAwardReason"] = false,
+					["boss"] = "Harjatan",
+					["lootWon"] = "|cffa335ee|Hitem:146994::::::::110:577::5:3:3562:1497:3528:::|h[Robe of Aqueous Command]|h|r",
+					["difficultyID"] = 15,
+					["time"] = "20:07:44",
+					["responseID"] = 3,
+					["response"] = "Minor Upgrade",
+					["instance"] = "Tomb of Sargeras-Heroic",
+				}, -- [11]
 			},
 			["Shietnorunes-Illidan"] = {
 				{
@@ -8089,13 +9390,13 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["class"] = "DEATHKNIGHT",
-					["votes"] = 1,
+					["difficultyID"] = 15,
 					["response"] = "Mainspec/Need",
 					["time"] = "20:01:13",
-					["boss"] = "Trilliax",
-					["lootWon"] = "|cffa335ee|Hitem:143578::::::::110:72::5:1:570:::|h[Cloak of the Foreseen Vanquisher]|h|r",
 					["isAwardReason"] = false,
-					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:143578::::::::110:72::5:1:570:::|h[Cloak of the Foreseen Vanquisher]|h|r",
+					["boss"] = "Trilliax",
+					["votes"] = 1,
 					["responseID"] = 1,
 					["date"] = "13/06/17",
 					["tierToken"] = "BackSlot",
@@ -8124,8 +9425,8 @@ RCLootCouncilLootDB = {
 				}, -- [2]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:137529::::::::110:250::16:3:3418:1542:3528:::|h[Pathfinders of Dark Omens]|h|r",
-					["response"] = "Mainspec/Need",
 					["mapID"] = 1530,
+					["response"] = "Mainspec/Need",
 					["date"] = "15/06/17",
 					["class"] = "DEATHKNIGHT",
 					["difficultyID"] = 16,
@@ -8148,25 +9449,50 @@ RCLootCouncilLootDB = {
 					["mapID"] = 1530,
 					["itemReplaced1"] = "|cffa335ee|Hitem:138364:5434:::::::110:250::5:3:3516:1487:3528:::|h[Dreadwyrm Greatcloak]|h|r",
 					["tierToken"] = "BackSlot",
+					["groupSize"] = 20,
 					["color"] = {
 						1, -- [1]
 						0.619607843137255, -- [2]
 						0.0431372549019608, -- [3]
 						1, -- [4]
 					},
-					["instance"] = "The Nighthold-Mythic",
 					["class"] = "DEATHKNIGHT",
-					["response"] = "Mainspec/Need",
-					["groupSize"] = 20,
-					["difficultyID"] = 16,
 					["boss"] = "Trilliax",
+					["response"] = "Mainspec/Need",
+					["isAwardReason"] = false,
+					["difficultyID"] = 16,
 					["lootWon"] = "|cffa335ee|Hitem:143578::::::::110:72::6:1:569:::|h[Cloak of the Foreseen Vanquisher]|h|r",
 					["time"] = "20:14:46",
 					["votes"] = 2,
 					["responseID"] = 1,
+					["instance"] = "The Nighthold-Mythic",
 					["date"] = "15/06/17",
-					["isAwardReason"] = false,
 				}, -- [4]
+			},
+			["Cometstorm-Illidan"] = {
+				{
+					["instance"] = "The Nighthold-Heroic",
+					["itemReplaced1"] = "|cffff8000|Hitem:144259::::::::110:64:::2:1811:3530:::|h[Kil'jaeden's Burning Wish]|h|r",
+					["date"] = "13/06/17",
+					["response"] = "Mainspec/Best in Slot",
+					["color"] = {
+						0.945098039215686, -- [1]
+						0.196078431372549, -- [2]
+						0.0549019607843137, -- [3]
+						1, -- [4]
+					},
+					["class"] = "MAGE",
+					["boss"] = "Chronomatic Anomaly",
+					["groupSize"] = 18,
+					["isAwardReason"] = false,
+					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:140792::::::::110:72::5:3:3444:1482:3528:::|h[Erratic Metronome]|h|r",
+					["time"] = "19:52:30",
+					["votes"] = 2,
+					["responseID"] = 4,
+					["itemReplaced2"] = "|cffa335ee|Hitem:140792::::::::110:64::3:4:3443:41:1472:3336:::|h[Erratic Metronome]|h|r",
+					["mapID"] = 1530,
+				}, -- [1]
 			},
 			["Guzzedup-Illidan"] = {
 				{
@@ -8193,13 +9519,13 @@ RCLootCouncilLootDB = {
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:136715::::::::110:72::16:3:3413:1502:1813:::|h[Spiked Counterweight]|h|r",
 					["instance"] = "The Emerald Nightmare-Heroic",
-					["isAwardReason"] = false,
+					["votes"] = 5,
 					["date"] = "01/11/16",
 					["class"] = "WARRIOR",
-					["difficultyID"] = 15,
-					["response"] = "Mainspec/Need",
 					["boss"] = "Il'gynoth",
-					["votes"] = 5,
+					["response"] = "Mainspec/Need",
+					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["lootWon"] = "|cffa335ee|Hitem:139325::::::::110:258::5:2:1805:1487:::|h[Spontaneous Appendages]|h|r",
 					["color"] = {
 						0, -- [1]
@@ -8340,13 +9666,13 @@ RCLootCouncilLootDB = {
 				}, -- [8]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:142194::::::::110:72::23:3:3452:1477:3336:::|h[Gloomy Vortex]|h|r",
-					["votes"] = 1,
+					["boss"] = "Elerethe Renferal",
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "WARRIOR",
-					["isAwardReason"] = false,
+					["difficultyID"] = 15,
 					["response"] = "Minor Upgrade",
 					["lootWon"] = "|cffa335ee|Hitem:137008::::::::110:258::5:2:1805:1487:::|h[Stormfury Diamond]|h|r",
-					["boss"] = "Elerethe Renferal",
+					["votes"] = 1,
 					["time"] = "20:45:21",
 					["date"] = "22/11/16",
 					["color"] = {
@@ -8356,18 +9682,18 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 3,
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["mapID"] = 1520,
 				}, -- [9]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:142194::::::::110:72::23:3:3452:1477:3336:::|h[Gloomy Vortex]|h|r",
-					["votes"] = 4,
+					["boss"] = "Elerethe Renferal",
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "WARRIOR",
-					["isAwardReason"] = false,
+					["difficultyID"] = 15,
 					["response"] = "Minor Upgrade",
 					["lootWon"] = "|cffa335ee|Hitem:137008::::::::110:258::5:2:1805:1487:::|h[Stormfury Diamond]|h|r",
-					["boss"] = "Elerethe Renferal",
+					["votes"] = 4,
 					["time"] = "20:45:38",
 					["date"] = "22/11/16",
 					["color"] = {
@@ -8377,7 +9703,7 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 3,
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["mapID"] = 1520,
 				}, -- [10]
 				{
@@ -8661,27 +9987,27 @@ RCLootCouncilLootDB = {
 					["mapID"] = 1530,
 				}, -- [3]
 				{
-					["boss"] = "Chronomatic Anomaly",
-					["mapID"] = 1530,
 					["instance"] = "The Nighthold-Mythic",
-					["response"] = "Minor Upgrade",
-					["date"] = "16/05/17",
-					["class"] = "MONK",
-					["isAwardReason"] = false,
-					["groupSize"] = 20,
+					["itemReplaced1"] = "|cffa335ee|Hitem:142166::::::::110:269::23:2:3454:1472:::|h[Ethereal Urn]|h|r",
 					["color"] = {
 						0, -- [1]
 						0.7, -- [2]
 						0.7, -- [3]
 						1, -- [4]
 					},
+					["response"] = "Minor Upgrade",
+					["date"] = "16/05/17",
+					["class"] = "MONK",
+					["isAwardReason"] = false,
+					["groupSize"] = 20,
 					["votes"] = 3,
-					["time"] = "19:56:13",
-					["lootWon"] = "|cffa335ee|Hitem:140791::::::::110:577::6:3:3445:1497:3528:::|h[Royal Dagger Haft]|h|r",
 					["difficultyID"] = 16,
+					["lootWon"] = "|cffa335ee|Hitem:140791::::::::110:577::6:3:3445:1497:3528:::|h[Royal Dagger Haft]|h|r",
+					["time"] = "19:56:13",
+					["boss"] = "Chronomatic Anomaly",
 					["responseID"] = 3,
 					["itemReplaced2"] = "|cffa335ee|Hitem:140791::::::::110:269::5:3:3444:1482:3528:::|h[Royal Dagger Haft]|h|r",
-					["itemReplaced1"] = "|cffa335ee|Hitem:142166::::::::110:269::23:2:3454:1472:::|h[Ethereal Urn]|h|r",
+					["mapID"] = 1530,
 				}, -- [4]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:138367:5436:::::::110:270::5:3:3516:1487:3528:::|h[Cloak of Enveloped Dissonance]|h|r",
@@ -8690,13 +10016,13 @@ RCLootCouncilLootDB = {
 					["response"] = "Minor Upgrade",
 					["date"] = "06/06/17",
 					["class"] = "MONK",
-					["isAwardReason"] = false,
-					["groupSize"] = 20,
-					["boss"] = "Trilliax",
 					["difficultyID"] = 16,
+					["groupSize"] = 20,
+					["votes"] = 3,
+					["isAwardReason"] = false,
 					["time"] = "20:25:48",
 					["lootWon"] = "|cffa335ee|Hitem:143579::::::::110:577::6:1:569:::|h[Cloak of the Foreseen Protector]|h|r",
-					["votes"] = 3,
+					["boss"] = "Trilliax",
 					["responseID"] = 3,
 					["instance"] = "The Nighthold-Mythic",
 					["color"] = {
@@ -8707,9 +10033,9 @@ RCLootCouncilLootDB = {
 					},
 				}, -- [5]
 				{
-					["boss"] = "Star Augur Etraeus",
-					["mapID"] = 1530,
 					["instance"] = "The Nighthold-Heroic",
+					["itemReplaced1"] = "|cffa335ee|Hitem:142166::::::::110:269::23:2:3454:1472:::|h[Ethereal Urn]|h|r",
+					["date"] = "13/06/17",
 					["response"] = "Mainspec/Need",
 					["color"] = {
 						1, -- [1]
@@ -8720,39 +10046,38 @@ RCLootCouncilLootDB = {
 					["class"] = "MONK",
 					["isAwardReason"] = false,
 					["groupSize"] = 19,
-					["date"] = "13/06/17",
 					["votes"] = 0,
-					["time"] = "20:22:47",
-					["lootWon"] = "|cffa335ee|Hitem:140803::::::::110:72::5:3:3516:1492:3336:::|h[Etraeus' Celestial Map]|h|r",
 					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:140803::::::::110:72::5:3:3516:1492:3336:::|h[Etraeus' Celestial Map]|h|r",
+					["time"] = "20:22:47",
+					["boss"] = "Star Augur Etraeus",
 					["responseID"] = 1,
 					["itemReplaced2"] = "|cffa335ee|Hitem:140791::::::::110:269::6:3:3445:1497:3528:::|h[Royal Dagger Haft]|h|r",
-					["itemReplaced1"] = "|cffa335ee|Hitem:142166::::::::110:269::23:2:3454:1472:::|h[Ethereal Urn]|h|r",
+					["mapID"] = 1530,
 				}, -- [6]
 			},
-			["Cometstorm-Illidan"] = {
+			["Mizzraym-Illidan"] = {
 				{
-					["votes"] = 2,
-					["mapID"] = 1530,
-					["instance"] = "The Nighthold-Heroic",
-					["response"] = "Mainspec/Best in Slot",
+					["itemReplaced1"] = "|cffa335ee|Hitem:138336:5883:130220::::::110:105::3:4:3514:1808:1487:3337:::|h[Mantle of the Astral Warden]|h|r",
+					["mapID"] = 1676,
+					["date"] = "27/06/17",
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["class"] = "DRUID",
+					["boss"] = "Harjatan",
+					["groupSize"] = 23,
+					["isAwardReason"] = false,
+					["difficultyID"] = 15,
+					["time"] = "20:51:05",
+					["lootWon"] = "|cffa335ee|Hitem:147037::::::::110:577::5:3:3562:1497:3528:::|h[Dripping Arcfin Shoulderpads]|h|r",
+					["votes"] = 3,
+					["responseID"] = 2,
+					["response"] = "Mainspec",
 					["color"] = {
-						0.945098039215686, -- [1]
-						0.196078431372549, -- [2]
-						0.0549019607843137, -- [3]
+						1, -- [1]
+						0.5, -- [2]
+						0, -- [3]
 						1, -- [4]
 					},
-					["class"] = "MAGE",
-					["boss"] = "Chronomatic Anomaly",
-					["groupSize"] = 18,
-					["date"] = "13/06/17",
-					["isAwardReason"] = false,
-					["time"] = "19:52:30",
-					["lootWon"] = "|cffa335ee|Hitem:140792::::::::110:72::5:3:3444:1482:3528:::|h[Erratic Metronome]|h|r",
-					["difficultyID"] = 15,
-					["responseID"] = 4,
-					["itemReplaced2"] = "|cffa335ee|Hitem:140792::::::::110:64::3:4:3443:41:1472:3336:::|h[Erratic Metronome]|h|r",
-					["itemReplaced1"] = "|cffff8000|Hitem:144259::::::::110:64:::2:1811:3530:::|h[Kil'jaeden's Burning Wish]|h|r",
 				}, -- [1]
 			},
 			["Djpurge-Illidan"] = {
@@ -8763,13 +10088,13 @@ RCLootCouncilLootDB = {
 					["response"] = "Mainspec",
 					["date"] = "18/05/17",
 					["class"] = "SHAMAN",
-					["votes"] = 2,
+					["difficultyID"] = 15,
 					["groupSize"] = 25,
 					["lootWon"] = "|cffa335ee|Hitem:143576::::::::110:577::5:1:570:::|h[Shoulders of the Foreseen Protector]|h|r",
-					["isAwardReason"] = false,
-					["time"] = "22:05:27",
 					["boss"] = "Tichondrius",
-					["difficultyID"] = 15,
+					["time"] = "22:05:27",
+					["isAwardReason"] = false,
+					["votes"] = 2,
 					["responseID"] = 2,
 					["color"] = {
 						1, -- [1]
@@ -8786,13 +10111,13 @@ RCLootCouncilLootDB = {
 					["response"] = "Mainspec",
 					["date"] = "18/05/17",
 					["class"] = "SHAMAN",
-					["votes"] = 1,
+					["difficultyID"] = 15,
 					["groupSize"] = 25,
 					["lootWon"] = "|cffa335ee|Hitem:143576::::::::110:577::5:1:570:::|h[Shoulders of the Foreseen Protector]|h|r",
-					["isAwardReason"] = false,
-					["time"] = "22:05:30",
 					["boss"] = "Tichondrius",
-					["difficultyID"] = 15,
+					["time"] = "22:05:30",
+					["isAwardReason"] = false,
+					["votes"] = 1,
 					["responseID"] = 2,
 					["color"] = {
 						1, -- [1]
@@ -8823,6 +10148,51 @@ RCLootCouncilLootDB = {
 					["votes"] = 2,
 					["instance"] = "The Nighthold-Mythic",
 				}, -- [3]
+				{
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["mapID"] = 1676,
+					["color"] = {
+						1, -- [1]
+						0.5, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["response"] = "Mainspec",
+					["date"] = "27/06/17",
+					["class"] = "SHAMAN",
+					["difficultyID"] = 15,
+					["groupSize"] = 23,
+					["isAwardReason"] = false,
+					["votes"] = 1,
+					["lootWon"] = "|cffa335ee|Hitem:147004::::::::110:577::5:3:3562:1497:3528:::|h[Sea Star of the Depthmother]|h|r",
+					["time"] = "22:44:43",
+					["boss"] = "Mistress Sassz'ine",
+					["responseID"] = 2,
+					["itemReplaced2"] = "|cffff8000|Hitem:144258::::::::110:264:::2:1811:3530:::|h[Velen's Future Sight]|h|r",
+					["itemReplaced1"] = "|cffa335ee|Hitem:128710::::::::110:264::13:3:689:600:679:::|h[Darkmoon Deck: Promises]|h|r",
+				}, -- [4]
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:144406::::::::110:264::6:3:3445:1502:3336:::|h[Vintage Duskwatch Cinch]|h|r",
+					["date"] = "29/06/17",
+					["response"] = "Offspec",
+					["color"] = {
+						0.584313725490196, -- [1]
+						0.368627450980392, -- [2]
+						0.701960784313726, -- [3]
+						1, -- [4]
+					},
+					["class"] = "SHAMAN",
+					["votes"] = 3,
+					["groupSize"] = 24,
+					["isAwardReason"] = false,
+					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:147056::::::::110:577::5:3:3562:1497:3528:::|h[Waistguard of Interminable Unity]|h|r",
+					["time"] = "22:20:52",
+					["boss"] = "Priestess Lunaspyre",
+					["responseID"] = 4,
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["mapID"] = 1676,
+				}, -- [5]
 			},
 			["Sauvagine-Illidan"] = {
 				{
@@ -8872,13 +10242,13 @@ RCLootCouncilLootDB = {
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:140824::::::::110:577::3:3:3514:1472:1813:::|h[Writ of Subjugation]|h|r",
 					["date"] = "31/01/17",
-					["boss"] = "Unknown/Chest",
+					["votes"] = 0,
 					["instance"] = "The Nighthold-Normal",
 					["class"] = "DEMONHUNTER",
-					["difficultyID"] = 14,
-					["response"] = "Need",
 					["isAwardReason"] = false,
-					["votes"] = 0,
+					["response"] = "Need",
+					["difficultyID"] = 14,
+					["boss"] = "Unknown/Chest",
 					["lootWon"] = "|cffa335ee|Hitem:140826::::::::110:258::3:3:3515:1477:1813:::|h[Felstained Jawbone Fragments]|h|r",
 					["color"] = {
 						1, -- [1]
@@ -9133,9 +10503,9 @@ RCLootCouncilLootDB = {
 					["mapID"] = 1530,
 				}, -- [2]
 				{
-					["isAwardReason"] = false,
-					["mapID"] = 1530,
 					["instance"] = "The Nighthold-Heroic",
+					["itemReplaced1"] = "|cffff8000|Hitem:144259::::::::110:64:::2:1811:3530:::|h[Kil'jaeden's Burning Wish]|h|r",
+					["date"] = "18/05/17",
 					["response"] = "BiS",
 					["color"] = {
 						0, -- [1]
@@ -9146,14 +10516,14 @@ RCLootCouncilLootDB = {
 					["class"] = "MAGE",
 					["boss"] = "Star Augur Etraeus",
 					["groupSize"] = 25,
-					["date"] = "18/05/17",
 					["votes"] = 3,
-					["time"] = "22:19:17",
-					["lootWon"] = "|cffa335ee|Hitem:140804::::::::110:577::5:3:3516:1487:3528:::|h[Star Gate]|h|r",
 					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:140804::::::::110:577::5:3:3516:1487:3528:::|h[Star Gate]|h|r",
+					["time"] = "22:19:17",
+					["isAwardReason"] = false,
 					["responseID"] = 1,
 					["itemReplaced2"] = "|cffa335ee|Hitem:140798::::::::110:64::3:3:3514:1472:1813:::|h[Icon of Rot]|h|r",
-					["itemReplaced1"] = "|cffff8000|Hitem:144259::::::::110:64:::2:1811:3530:::|h[Kil'jaeden's Burning Wish]|h|r",
+					["mapID"] = 1530,
 				}, -- [3]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:137314::::::::110:64::34:4:3415:41:1507:1813:::|h[Wristbands of Cursed Torment]|h|r",
@@ -9191,13 +10561,13 @@ RCLootCouncilLootDB = {
 					["response"] = "BiS",
 					["date"] = "16/05/17",
 					["class"] = "DEATHKNIGHT",
-					["difficultyID"] = 16,
-					["groupSize"] = 20,
-					["votes"] = 3,
 					["isAwardReason"] = false,
+					["groupSize"] = 20,
+					["boss"] = "Trilliax",
+					["difficultyID"] = 16,
 					["time"] = "20:30:19",
 					["lootWon"] = "|cffa335ee|Hitem:143578::::::::110:577::6:1:569:::|h[Cloak of the Foreseen Vanquisher]|h|r",
-					["boss"] = "Trilliax",
+					["votes"] = 3,
 					["responseID"] = 1,
 					["instance"] = "The Nighthold-Mythic",
 					["mapID"] = 1530,
@@ -9209,13 +10579,13 @@ RCLootCouncilLootDB = {
 					["response"] = "BiS",
 					["date"] = "18/05/17",
 					["class"] = "DEATHKNIGHT",
-					["votes"] = 2,
+					["difficultyID"] = 15,
 					["groupSize"] = 25,
 					["lootWon"] = "|cffa335ee|Hitem:143567::::::::110:577::5:1:570:::|h[Gauntlets of the Foreseen Vanquisher]|h|r",
-					["isAwardReason"] = false,
-					["time"] = "22:18:19",
 					["boss"] = "Star Augur Etraeus",
-					["difficultyID"] = 15,
+					["time"] = "22:18:19",
+					["isAwardReason"] = false,
+					["votes"] = 2,
 					["responseID"] = 1,
 					["color"] = {
 						0, -- [1]
@@ -9225,6 +10595,78 @@ RCLootCouncilLootDB = {
 					},
 					["itemReplaced1"] = "|cffa335ee|Hitem:134509::::::::110:251::35:3:3536:1552:3337:::|h[Fists of the Legion]|h|r",
 				}, -- [2]
+				{
+					["mapID"] = 1676,
+					["date"] = "06/07/17",
+					["class"] = "DEATHKNIGHT",
+					["groupSize"] = 19,
+					["votes"] = 5,
+					["time"] = "19:50:59",
+					["itemReplaced1"] = "|cffa335ee|Hitem:142126::::::::110:252::35:3:3418:1522:3337:::|h[Helm of Phantasmal Scars]|h|r",
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["response"] = "1st Tier Piece",
+					["tokenRoll"] = true,
+					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:147322::::::::110:577::5:1:570:::|h[Helm of the Foregone Vanquisher]|h|r",
+					["tierToken"] = "HeadSlot",
+					["color"] = {
+						0.5, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["responseID"] = 4,
+					["isAwardReason"] = false,
+					["boss"] = "Atrigan",
+				}, -- [3]
+				{
+					["mapID"] = 1676,
+					["date"] = "06/07/17",
+					["class"] = "DEATHKNIGHT",
+					["groupSize"] = 18,
+					["isAwardReason"] = false,
+					["time"] = "19:51:47",
+					["itemReplaced1"] = "|cffa335ee|Hitem:142126::::::::110:252::35:3:3418:1522:3337:::|h[Helm of Phantasmal Scars]|h|r",
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["response"] = "1st Tier Piece",
+					["tokenRoll"] = true,
+					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:147322::::::::110:577::5:1:570:::|h[Helm of the Foregone Vanquisher]|h|r",
+					["tierToken"] = "HeadSlot",
+					["votes"] = 5,
+					["responseID"] = 4,
+					["color"] = {
+						0.5, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["boss"] = "Atrigan",
+				}, -- [4]
+				{
+					["mapID"] = 1676,
+					["date"] = "06/07/17",
+					["class"] = "DEATHKNIGHT",
+					["groupSize"] = 20,
+					["isAwardReason"] = false,
+					["time"] = "20:09:38",
+					["itemReplaced1"] = "|cffa335ee|Hitem:138352::::::::110:252::5:3:3516:1497:3336:::|h[Dreadwyrm Gauntlets]|h|r",
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["response"] = "2nd Tier Piece",
+					["tierToken"] = "HandsSlot",
+					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:147319::::::::110:577::5:1:570:::|h[Gauntlets of the Foregone Vanquisher]|h|r",
+					["votes"] = 3,
+					["color"] = {
+						1, -- [1]
+						1, -- [2]
+						0.5, -- [3]
+						1, -- [4]
+					},
+					["responseID"] = 2,
+					["tokenRoll"] = true,
+					["boss"] = "Harjatan",
+				}, -- [5]
 			},
 			["Viceversace-Illidan"] = {
 				{
@@ -9239,13 +10681,13 @@ RCLootCouncilLootDB = {
 					["response"] = "BiS",
 					["date"] = "16/05/17",
 					["class"] = "DRUID",
-					["difficultyID"] = 16,
-					["groupSize"] = 20,
-					["votes"] = 4,
 					["isAwardReason"] = false,
+					["groupSize"] = 20,
+					["boss"] = "Trilliax",
+					["difficultyID"] = 16,
 					["time"] = "20:30:14",
 					["lootWon"] = "|cffa335ee|Hitem:143578::::::::110:577::6:1:569:::|h[Cloak of the Foreseen Vanquisher]|h|r",
-					["boss"] = "Trilliax",
+					["votes"] = 4,
 					["responseID"] = 1,
 					["instance"] = "The Nighthold-Mythic",
 					["mapID"] = 1530,
@@ -9256,10 +10698,10 @@ RCLootCouncilLootDB = {
 					["mapID"] = 1530,
 					["instance"] = "The Nighthold-Heroic",
 					["class"] = "SHAMAN",
-					["boss"] = "Chronomatic Anomaly",
-					["response"] = "Offspec",
-					["isAwardReason"] = false,
 					["votes"] = 0,
+					["response"] = "Offspec",
+					["difficultyID"] = 15,
+					["boss"] = "Chronomatic Anomaly",
 					["lootWon"] = "|cffa335ee|Hitem:140831::::::::110:577::5:3:3444:1482:3528:::|h[Suspended Nightwell Droplet]|h|r",
 					["time"] = "19:53:34",
 					["color"] = {
@@ -9269,7 +10711,7 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 2,
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["date"] = "04/05/17",
 				}, -- [1]
 				{
@@ -9319,13 +10761,13 @@ RCLootCouncilLootDB = {
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:140796::::::::110:263::3:3:3514:1477:3336:::|h[Entwined Elemental Foci]|h|r",
 					["instance"] = "The Nighthold-Heroic",
-					["boss"] = "Arcanist Tel'arn",
+					["votes"] = 2,
 					["date"] = "04/05/17",
 					["class"] = "SHAMAN",
-					["difficultyID"] = 15,
-					["response"] = "Mainspec",
 					["isAwardReason"] = false,
-					["votes"] = 2,
+					["response"] = "Mainspec",
+					["difficultyID"] = 15,
+					["boss"] = "Arcanist Tel'arn",
 					["lootWon"] = "|cffa335ee|Hitem:140802::::::::110:577::5:4:3516:42:1487:3528:::|h[Nightblooming Frond]|h|r",
 					["color"] = {
 						0, -- [1]
@@ -10356,10 +11798,10 @@ RCLootCouncilLootDB = {
 					["mapID"] = 1530,
 					["instance"] = "The Nighthold-Heroic",
 					["class"] = "DEATHKNIGHT",
-					["boss"] = "Chronomatic Anomaly",
-					["response"] = "Offspec",
-					["isAwardReason"] = false,
 					["votes"] = 0,
+					["response"] = "Offspec",
+					["difficultyID"] = 15,
+					["boss"] = "Chronomatic Anomaly",
 					["lootWon"] = "|cffa335ee|Hitem:140831::::::::110:258::5:3:3444:1482:1813:::|h[Suspended Nightwell Droplet]|h|r",
 					["time"] = "21:32:14",
 					["color"] = {
@@ -10369,7 +11811,7 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 4,
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["date"] = "28/02/17",
 				}, -- [20]
 			},
@@ -10419,13 +11861,13 @@ RCLootCouncilLootDB = {
 				}, -- [2]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:136776::::::::110:105::33:4:3414:41:1517:3336:::|h[Bjorn's Hunting Strap]|h|r",
-					["isAwardReason"] = false,
+					["boss"] = "Nythendra",
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "DRUID",
-					["votes"] = 4,
+					["difficultyID"] = 15,
 					["response"] = "Mainspec/Need",
 					["time"] = "20:15:03",
-					["boss"] = "Nythendra",
+					["isAwardReason"] = false,
 					["lootWon"] = "|cffa335ee|Hitem:139197::::::::110:258::5:3:1805:1517:3337:::|h[Lifeless Buckled Girdle]|h|r",
 					["date"] = "15/11/16",
 					["color"] = {
@@ -10435,18 +11877,18 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 1,
-					["difficultyID"] = 15,
+					["votes"] = 4,
 					["mapID"] = 1520,
 				}, -- [3]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:139201::::::::110:105::5:3:1805:1492:3336:::|h[Splotched Bloodfur Leggings]|h|r",
-					["votes"] = 0,
+					["boss"] = "Xavius",
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "DRUID",
-					["isAwardReason"] = false,
+					["difficultyID"] = 15,
 					["response"] = "Pass",
 					["lootWon"] = "|cffa335ee|Hitem:139203::::::::110:258::5:3:1805:1492:3336:::|h[Repulsive Leathery Pants]|h|r",
-					["boss"] = "Xavius",
+					["votes"] = 0,
 					["time"] = "21:13:20",
 					["date"] = "22/11/16",
 					["color"] = {
@@ -10456,7 +11898,7 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = "PASS",
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["mapID"] = 1520,
 				}, -- [4]
 				{
@@ -10568,13 +12010,13 @@ RCLootCouncilLootDB = {
 				}, -- [9]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:137427::::::::110:105::35:3:3418:1532:3337:::|h[Corpse Feast Headwrap]|h|r",
-					["votes"] = 4,
+					["boss"] = "Skorpyron",
 					["instance"] = "The Nighthold-Heroic",
 					["class"] = "DRUID",
-					["isAwardReason"] = false,
+					["difficultyID"] = 15,
 					["response"] = "Need",
 					["lootWon"] = "|cffa335ee|Hitem:140901::::::::110:258::5:3:3444:1482:1813:::|h[Vintage Suramar Nobility Hat]|h|r",
-					["boss"] = "Skorpyron",
+					["votes"] = 4,
 					["time"] = "22:44:58",
 					["date"] = "31/01/17",
 					["color"] = {
@@ -10584,18 +12026,18 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 2,
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["mapID"] = 1530,
 				}, -- [10]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:137480::::::::110:105::16:3:3510:1537:3337:::|h[Guileful Intruder Handguards]|h|r",
-					["votes"] = 3,
+					["boss"] = "Chronomatic Anomaly",
 					["instance"] = "The Nighthold-Heroic",
 					["class"] = "DRUID",
-					["isAwardReason"] = false,
+					["difficultyID"] = 15,
 					["response"] = "Minor",
 					["lootWon"] = "|cffa335ee|Hitem:140863::::::::110:258::5:4:3444:41:1482:1813:::|h[Temporally Displaced Gloves]|h|r",
-					["boss"] = "Chronomatic Anomaly",
+					["votes"] = 3,
 					["time"] = "23:00:14",
 					["date"] = "31/01/17",
 					["color"] = {
@@ -10605,7 +12047,7 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 3,
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["mapID"] = 1530,
 				}, -- [11]
 				{
@@ -10828,13 +12270,13 @@ RCLootCouncilLootDB = {
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:138222::130222::::::110:264::5:3:1805:1808:1487:::|h[Vial of Nightmare Fog]|h|r",
 					["instance"] = "The Emerald Nightmare-Heroic",
-					["boss"] = "Ursoc",
+					["votes"] = 2,
 					["date"] = "13/12/16",
 					["class"] = "SHAMAN",
-					["difficultyID"] = 15,
-					["response"] = "Offspec",
 					["isAwardReason"] = false,
-					["votes"] = 2,
+					["response"] = "Offspec",
+					["difficultyID"] = 15,
+					["boss"] = "Ursoc",
 					["time"] = "20:49:26",
 					["color"] = {
 						1, -- [1]
@@ -10875,10 +12317,10 @@ RCLootCouncilLootDB = {
 					["mapID"] = 1530,
 					["instance"] = "The Nighthold-Heroic",
 					["class"] = "PRIEST",
-					["boss"] = "Chronomatic Anomaly",
-					["response"] = "Offline or RCLootCouncil not installed",
-					["isAwardReason"] = false,
 					["votes"] = 0,
+					["response"] = "Offline or RCLootCouncil not installed",
+					["difficultyID"] = 15,
+					["boss"] = "Chronomatic Anomaly",
 					["lootWon"] = "|cffa335ee|Hitem:140848::::::::110:258::5:4:3444:42:1482:1813:::|h[Robes of Fluctuating Energy]|h|r",
 					["color"] = {
 						0.5, -- [1]
@@ -10889,7 +12331,7 @@ RCLootCouncilLootDB = {
 					["date"] = "31/01/17",
 					["responseID"] = "NOTHING",
 					["time"] = "23:00:01",
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 				}, -- [1]
 			},
 			["Wowjayson-Illidan"] = {
@@ -10966,13 +12408,13 @@ RCLootCouncilLootDB = {
 					["response"] = "Mainspec",
 					["date"] = "18/05/17",
 					["class"] = "DRUID",
-					["votes"] = 2,
+					["difficultyID"] = 15,
 					["groupSize"] = 25,
 					["lootWon"] = "|cffa335ee|Hitem:143567::::::::110:577::5:1:570:::|h[Gauntlets of the Foreseen Vanquisher]|h|r",
-					["isAwardReason"] = false,
-					["time"] = "22:20:27",
 					["boss"] = "Star Augur Etraeus",
-					["difficultyID"] = 15,
+					["time"] = "22:20:27",
+					["isAwardReason"] = false,
+					["votes"] = 2,
 					["responseID"] = 2,
 					["color"] = {
 						1, -- [1]
@@ -11051,47 +12493,47 @@ RCLootCouncilLootDB = {
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:138330::::::::110:102::5:3:3516:1487:3528:::|h[Hood of the Astral Warden]|h|r",
 					["mapID"] = 1530,
-					["instance"] = "The Nighthold-Mythic",
-					["date"] = "15/06/17",
-					["class"] = "DRUID",
 					["color"] = {
 						0, -- [1]
 						0.7, -- [2]
 						0.7, -- [3]
 						1, -- [4]
 					},
-					["response"] = "Minor Upgrade",
+					["date"] = "15/06/17",
+					["class"] = "DRUID",
 					["difficultyID"] = 16,
+					["response"] = "Minor Upgrade",
+					["isAwardReason"] = false,
 					["boss"] = "Skorpyron",
 					["time"] = "19:52:04",
 					["lootWon"] = "|cffa335ee|Hitem:140901::::::::110:72::6:4:3445:41:1497:3528:::|h[Vintage Suramar Nobility Hat]|h|r",
 					["votes"] = 0,
 					["responseID"] = 3,
 					["groupSize"] = 20,
-					["isAwardReason"] = false,
+					["instance"] = "The Nighthold-Mythic",
 				}, -- [8]
 				{
-					["mapID"] = 1530,
-					["itemReplaced1"] = "|cffa335ee|Hitem:140827::::::::110:102::5:3:3444:1497:3337:::|h[Manatoxin Gland]|h|r",
-					["isAwardReason"] = false,
-					["groupSize"] = 20,
-					["instance"] = "The Nighthold-Mythic",
-					["class"] = "DRUID",
-					["difficultyID"] = 16,
-					["response"] = "Mainspec/Need",
-					["lootWon"] = "|cffa335ee|Hitem:140812::::::::110:72::6:3:3445:1497:3528:::|h[Soggy Manascrubber Brush]|h|r",
-					["boss"] = "Trilliax",
-					["time"] = "20:15:37",
-					["votes"] = 0,
 					["color"] = {
 						1, -- [1]
 						0.619607843137255, -- [2]
 						0.0431372549019608, -- [3]
 						1, -- [4]
 					},
+					["itemReplaced1"] = "|cffa335ee|Hitem:140827::::::::110:102::5:3:3444:1497:3337:::|h[Manatoxin Gland]|h|r",
+					["instance"] = "The Nighthold-Mythic",
+					["response"] = "Mainspec/Need",
+					["date"] = "15/06/17",
+					["class"] = "DRUID",
+					["difficultyID"] = 16,
+					["groupSize"] = 20,
+					["boss"] = "Trilliax",
+					["votes"] = 0,
+					["lootWon"] = "|cffa335ee|Hitem:140812::::::::110:72::6:3:3445:1497:3528:::|h[Soggy Manascrubber Brush]|h|r",
+					["time"] = "20:15:37",
+					["isAwardReason"] = false,
 					["responseID"] = 1,
 					["itemReplaced2"] = "|cffa335ee|Hitem:140810::::::::110:102::5:3:3516:1497:3336:::|h[Farsight Spiritjewel]|h|r",
-					["date"] = "15/06/17",
+					["mapID"] = 1530,
 				}, -- [9]
 			},
 			["Rippitt-Illidan"] = {
@@ -11249,13 +12691,13 @@ RCLootCouncilLootDB = {
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:139335::130220::::::110:73::5:3:1805:1808:1487:::|h[Grotesque Statuette]|h|r",
 					["instance"] = "Trial of Valor-Heroic",
-					["isAwardReason"] = false,
+					["votes"] = 5,
 					["date"] = "22/11/16",
 					["class"] = "WARRIOR",
-					["difficultyID"] = 15,
-					["response"] = "Need",
 					["boss"] = "Odyn",
-					["votes"] = 5,
+					["response"] = "Need",
+					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["time"] = "22:07:37",
 					["color"] = {
 						1, -- [1]
@@ -11377,13 +12819,13 @@ RCLootCouncilLootDB = {
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:142508::::::::110:73::5:4:3468:607:1507:3337:::|h[Chains of the Valorous]|h|r",
 					["date"] = "31/01/17",
-					["isAwardReason"] = false,
+					["boss"] = "Chronomatic Anomaly",
 					["instance"] = "The Nighthold-Heroic",
 					["class"] = "WARRIOR",
-					["difficultyID"] = 15,
-					["response"] = "Need",
 					["votes"] = 2,
-					["boss"] = "Chronomatic Anomaly",
+					["response"] = "Need",
+					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["time"] = "23:00:08",
 					["color"] = {
 						1, -- [1]
@@ -11398,13 +12840,13 @@ RCLootCouncilLootDB = {
 				}, -- [11]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:141695::::::::110:73::6:2:1806:1502:::|h[Tarnished Dreamkeeper's Gauntlets]|h|r",
-					["votes"] = 1,
+					["boss"] = "Chronomatic Anomaly",
 					["instance"] = "The Nighthold-Heroic",
 					["class"] = "WARRIOR",
-					["isAwardReason"] = false,
+					["difficultyID"] = 15,
 					["response"] = "Minor",
 					["lootWon"] = "|cffa335ee|Hitem:140879::::::::110:258::5:3:3444:1482:1813:::|h[Gauntlets of Fractured Eons]|h|r",
-					["boss"] = "Chronomatic Anomaly",
+					["votes"] = 1,
 					["time"] = "23:00:12",
 					["date"] = "31/01/17",
 					["color"] = {
@@ -11414,7 +12856,7 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 3,
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["mapID"] = 1530,
 				}, -- [12]
 				{
@@ -11805,10 +13247,10 @@ RCLootCouncilLootDB = {
 					["mapID"] = 1520,
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "PRIEST",
-					["isAwardReason"] = false,
-					["response"] = "Pass",
-					["boss"] = "Nythendra",
 					["votes"] = 0,
+					["response"] = "Pass",
+					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["time"] = "20:14:59",
 					["color"] = {
 						0.7, -- [1]
@@ -11819,7 +13261,7 @@ RCLootCouncilLootDB = {
 					["date"] = "15/11/16",
 					["responseID"] = "PASS",
 					["lootWon"] = "|cffa335ee|Hitem:139252::::::::110:258::5:2:1805:1487:::|h[Preserved Worldseed]|h|r",
-					["difficultyID"] = 15,
+					["boss"] = "Nythendra",
 				}, -- [10]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:137404::130220::::::110:258::35:4:3418:1808:1532:3337:::|h[Legwraps of Reverberating Shadows]|h|r",
@@ -11968,13 +13410,13 @@ RCLootCouncilLootDB = {
 				}, -- [17]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:137404::130220::::::110:258::35:4:3418:1808:1532:3337:::|h[Legwraps of Reverberating Shadows]|h|r",
-					["votes"] = 0,
+					["boss"] = "Unknown/Chest",
 					["instance"] = "Trial of Valor-Normal",
 					["class"] = "PRIEST",
-					["isAwardReason"] = true,
+					["difficultyID"] = 14,
 					["response"] = "Disenchant",
 					["lootWon"] = "|cffa335ee|Hitem:142421::::::::110:258::3:2:3467:1477:::|h[Leggings of the Undaunted]|h|r",
-					["boss"] = "Unknown/Chest",
+					["votes"] = 0,
 					["time"] = "22:00:38",
 					["date"] = "15/11/16",
 					["color"] = {
@@ -11984,18 +13426,18 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 1,
-					["difficultyID"] = 14,
+					["isAwardReason"] = true,
 					["mapID"] = 1648,
 				}, -- [18]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:134171::::::::110:258::16:3:3410:1532:3337:::|h[Roggthread Cord]|h|r",
-					["votes"] = 0,
+					["boss"] = "Unknown/Chest",
 					["instance"] = "Trial of Valor-Normal",
 					["class"] = "PRIEST",
-					["isAwardReason"] = true,
+					["difficultyID"] = 14,
 					["response"] = "Disenchant",
 					["lootWon"] = "|cffa335ee|Hitem:142411::::::::110:258::3:3:3467:1482:3336:::|h[Cinch of Light]|h|r",
-					["boss"] = "Unknown/Chest",
+					["votes"] = 0,
 					["time"] = "22:00:44",
 					["date"] = "15/11/16",
 					["color"] = {
@@ -12005,18 +13447,18 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 1,
-					["difficultyID"] = 14,
+					["isAwardReason"] = true,
 					["mapID"] = 1648,
 				}, -- [19]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:139248:5436:::::::110:258::5:2:1805:1487:::|h[Evergreen Vinewrap Drape]|h|r",
-					["votes"] = 0,
+					["boss"] = "Guarm",
 					["instance"] = "Trial of Valor-Normal",
 					["class"] = "PRIEST",
-					["isAwardReason"] = true,
+					["difficultyID"] = 14,
 					["response"] = "Disenchant",
 					["lootWon"] = "|cffa335ee|Hitem:142412::::::::110:258::3:2:3467:1477:::|h[Windwhipped Sailcloth]|h|r",
-					["boss"] = "Guarm",
+					["votes"] = 0,
 					["time"] = "22:17:56",
 					["date"] = "15/11/16",
 					["color"] = {
@@ -12026,18 +13468,18 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 1,
-					["difficultyID"] = 14,
+					["isAwardReason"] = true,
 					["mapID"] = 1648,
 				}, -- [20]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:134171::::::::110:258::16:3:3410:1532:3337:::|h[Roggthread Cord]|h|r",
-					["votes"] = 0,
+					["boss"] = "Helya",
 					["instance"] = "Trial of Valor-Normal",
 					["class"] = "PRIEST",
-					["isAwardReason"] = true,
+					["difficultyID"] = 14,
 					["response"] = "Disenchant",
 					["lootWon"] = "|cffa335ee|Hitem:142416::::::::110:258::3:2:3506:1482:::|h[Strand of Whelk Shells]|h|r",
-					["boss"] = "Helya",
+					["votes"] = 0,
 					["time"] = "22:38:07",
 					["date"] = "15/11/16",
 					["color"] = {
@@ -12047,18 +13489,18 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 1,
-					["difficultyID"] = 14,
+					["isAwardReason"] = true,
 					["mapID"] = 1648,
 				}, -- [21]
 				{
 					["itemReplaced1"] = "|cffff8000|Hitem:132409::::::::110:258:::1:1811:::|h[Anund's Seared Shackles]|h|r",
-					["votes"] = 0,
+					["boss"] = "Ysondre",
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "PRIEST",
-					["isAwardReason"] = true,
+					["difficultyID"] = 15,
 					["response"] = "Disenchant",
 					["lootWon"] = "|cffa335ee|Hitem:138219::::::::110:258::5:2:1805:1487:::|h[Dragonspur Wristguards]|h|r",
-					["boss"] = "Ysondre",
+					["votes"] = 0,
 					["time"] = "20:35:43",
 					["date"] = "22/11/16",
 					["color"] = {
@@ -12068,17 +13510,17 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 1,
-					["difficultyID"] = 15,
+					["isAwardReason"] = true,
 					["mapID"] = 1520,
 				}, -- [22]
 				{
 					["mapID"] = 1520,
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "PRIEST",
-					["boss"] = "Ysondre",
-					["response"] = "Disenchant",
-					["isAwardReason"] = true,
 					["votes"] = 0,
+					["response"] = "Disenchant",
+					["difficultyID"] = 15,
+					["boss"] = "Ysondre",
 					["lootWon"] = "|cffa335ee|Hitem:138227::::::::110:258::5:2:1805:1487:::|h[Entrancing Stone]|h|r",
 					["color"] = {
 						1, -- [1]
@@ -12089,17 +13531,17 @@ RCLootCouncilLootDB = {
 					["date"] = "22/11/16",
 					["responseID"] = 1,
 					["time"] = "20:35:53",
-					["difficultyID"] = 15,
+					["isAwardReason"] = true,
 				}, -- [23]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:137441::::::::110:258::35:3:3418:1532:3337:::|h[Millificent's Turboview Specs]|h|r",
-					["votes"] = 0,
+					["boss"] = "Unknown/Chest",
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "PRIEST",
-					["isAwardReason"] = true,
+					["difficultyID"] = 15,
 					["response"] = "Disenchant",
 					["lootWon"] = "|cffa335ee|Hitem:139231::::::::110:258::5:3:1805:1808:1487:::|h[Crown of Steely Brambles]|h|r",
-					["boss"] = "Unknown/Chest",
+					["votes"] = 0,
 					["time"] = "21:02:02",
 					["date"] = "22/11/16",
 					["color"] = {
@@ -12109,17 +13551,17 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 1,
-					["difficultyID"] = 15,
+					["isAwardReason"] = true,
 					["mapID"] = 1520,
 				}, -- [24]
 				{
 					["mapID"] = 1520,
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "PRIEST",
-					["boss"] = "Unknown/Chest",
-					["response"] = "Disenchant",
-					["isAwardReason"] = true,
 					["votes"] = 0,
+					["response"] = "Disenchant",
+					["difficultyID"] = 15,
+					["boss"] = "Unknown/Chest",
 					["lootWon"] = "|cffa335ee|Hitem:139265::::::::110:258::5:2:1805:1487:::|h[Radiant Dragon Egg]|h|r",
 					["color"] = {
 						1, -- [1]
@@ -12130,17 +13572,17 @@ RCLootCouncilLootDB = {
 					["date"] = "22/11/16",
 					["responseID"] = 1,
 					["time"] = "21:02:21",
-					["difficultyID"] = 15,
+					["isAwardReason"] = true,
 				}, -- [25]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:137441::::::::110:258::35:3:3418:1532:3337:::|h[Millificent's Turboview Specs]|h|r",
-					["votes"] = 0,
+					["boss"] = "Xavius",
 					["instance"] = "The Emerald Nightmare-Heroic",
 					["class"] = "PRIEST",
-					["isAwardReason"] = true,
+					["difficultyID"] = 15,
 					["response"] = "Disenchant",
 					["lootWon"] = "|cffa335ee|Hitem:139189::::::::110:258::5:2:1805:1487:::|h[Hood of Darkened Visions]|h|r",
-					["boss"] = "Xavius",
+					["votes"] = 0,
 					["time"] = "21:12:58",
 					["date"] = "22/11/16",
 					["color"] = {
@@ -12150,7 +13592,7 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 1,
-					["difficultyID"] = 15,
+					["isAwardReason"] = true,
 					["mapID"] = 1520,
 				}, -- [26]
 				{
@@ -12788,13 +14230,13 @@ RCLootCouncilLootDB = {
 				}, -- [57]
 				{
 					["tierToken"] = "BackSlot",
-					["boss"] = "Trilliax",
+					["votes"] = 0,
 					["instance"] = "The Nighthold-Heroic",
 					["class"] = "PRIEST",
-					["isAwardReason"] = false,
+					["difficultyID"] = 15,
 					["response"] = "Candidate is selecting response, please wait",
 					["lootWon"] = "|cffa335ee|Hitem:143577::::::::110:258::5:1:570:::|h[Cloak of the Foreseen Conqueror]|h|r",
-					["votes"] = 0,
+					["boss"] = "Trilliax",
 					["time"] = "23:10:12",
 					["date"] = "31/01/17",
 					["color"] = {
@@ -12804,19 +14246,19 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = "WAIT",
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["mapID"] = 1530,
 				}, -- [58]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:140792::::::::110:258::5:3:3444:1482:1813:::|h[Erratic Metronome]|h|r",
 					["date"] = "31/01/17",
-					["isAwardReason"] = false,
+					["boss"] = "Unknown/Chest",
 					["instance"] = "The Nighthold-Heroic",
 					["class"] = "PRIEST",
-					["difficultyID"] = 15,
-					["response"] = "Minor",
 					["votes"] = 1,
-					["boss"] = "Unknown/Chest",
+					["response"] = "Minor",
+					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["time"] = "23:56:54",
 					["color"] = {
 						0, -- [1]
@@ -13407,13 +14849,13 @@ RCLootCouncilLootDB = {
 					["response"] = "Mainspec",
 					["date"] = "18/05/17",
 					["class"] = "DEMONHUNTER",
-					["isAwardReason"] = false,
-					["groupSize"] = 26,
-					["votes"] = 5,
 					["difficultyID"] = 15,
+					["groupSize"] = 26,
+					["boss"] = "Elisande",
+					["isAwardReason"] = false,
 					["lootWon"] = "|cffa335ee|Hitem:143565::::::::110:577::5:1:570:::|h[Helm of the Foreseen Conqueror]|h|r",
 					["time"] = "21:15:38",
-					["boss"] = "Elisande",
+					["votes"] = 5,
 					["responseID"] = 2,
 					["instance"] = "The Nighthold-Heroic",
 					["mapID"] = 1530,
@@ -13618,13 +15060,13 @@ RCLootCouncilLootDB = {
 				}, -- [8]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:140827::::::::110:63::3:3:3443:1477:3336:::|h[Manatoxin Gland]|h|r",
-					["votes"] = 0,
+					["boss"] = "Skorpyron",
 					["instance"] = "The Nighthold-Heroic",
 					["class"] = "MAGE",
-					["isAwardReason"] = false,
+					["difficultyID"] = 15,
 					["response"] = "Minor",
 					["lootWon"] = "|cffa335ee|Hitem:140827::::::::110:258::5:3:3444:1482:1813:::|h[Manatoxin Gland]|h|r",
-					["boss"] = "Skorpyron",
+					["votes"] = 0,
 					["time"] = "22:44:35",
 					["date"] = "31/01/17",
 					["color"] = {
@@ -13634,7 +15076,7 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 3,
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["mapID"] = 1530,
 				}, -- [9]
 				{
@@ -13796,13 +15238,13 @@ RCLootCouncilLootDB = {
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:139266::::::::110:63::3:3:1807:1492:3337:::|h[Fragment of Eternal Spite]|h|r",
 					["instance"] = "The Emerald Nightmare-Heroic",
-					["isAwardReason"] = false,
+					["votes"] = 3,
 					["date"] = "01/11/16",
 					["class"] = "MAGE",
-					["difficultyID"] = 15,
-					["response"] = "Mainspec/Need",
 					["boss"] = "Il'gynoth",
-					["votes"] = 3,
+					["response"] = "Mainspec/Need",
+					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["lootWon"] = "|cffa335ee|Hitem:139256::::::::110:258::5:2:1805:1487:::|h[Sloshing Core of Hatred]|h|r",
 					["color"] = {
 						0, -- [1]
@@ -13879,13 +15321,13 @@ RCLootCouncilLootDB = {
 				}, -- [4]
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:134217::130219::::::110:63::33:4:3412:1808:1512:1813:::|h[Bonespeaker Gloves]|h|r",
-					["votes"] = 2,
+					["boss"] = "Helya",
 					["instance"] = "Trial of Valor-Normal",
 					["class"] = "MAGE",
-					["isAwardReason"] = false,
+					["difficultyID"] = 14,
 					["response"] = "Mainspec/Need",
 					["lootWon"] = "|cffa335ee|Hitem:142429::::::::110:258::3:2:3506:1482:::|h[Oiled Rigger's Handwraps]|h|r",
-					["boss"] = "Helya",
+					["votes"] = 2,
 					["time"] = "22:38:16",
 					["date"] = "15/11/16",
 					["color"] = {
@@ -13895,7 +15337,7 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["responseID"] = 1,
-					["difficultyID"] = 14,
+					["isAwardReason"] = false,
 					["mapID"] = 1648,
 				}, -- [5]
 				{
@@ -13977,13 +15419,13 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["class"] = "PALADIN",
-					["votes"] = 3,
+					["difficultyID"] = 16,
 					["groupSize"] = 20,
 					["lootWon"] = "|cffa335ee|Hitem:143562::::::::110:577::6:1:569:::|h[Chest of the Foreseen Conqueror]|h|r",
-					["isAwardReason"] = false,
-					["time"] = "20:57:28",
 					["boss"] = "Unknown/Chest",
-					["difficultyID"] = 16,
+					["time"] = "20:57:28",
+					["isAwardReason"] = false,
+					["votes"] = 3,
 					["responseID"] = 1,
 					["itemReplaced1"] = "|cffa335ee|Hitem:138350::::::::110:70::5:3:3516:1492:3336:::|h[Breastplate of the Highlord]|h|r",
 					["mapID"] = 1530,
@@ -14082,13 +15524,13 @@ RCLootCouncilLootDB = {
 				{
 					["itemReplaced1"] = "|cffa335ee|Hitem:142512::::::::110:265::5:3:3468:1522:3337:::|h[Accursed Cuspid]|h|r",
 					["date"] = "11/05/17",
-					["isAwardReason"] = false,
+					["difficultyID"] = 16,
 					["instance"] = "The Nighthold-Mythic",
 					["class"] = "WARLOCK",
-					["boss"] = "Chronomatic Anomaly",
-					["response"] = "Mainspec",
 					["votes"] = 4,
-					["difficultyID"] = 16,
+					["response"] = "Mainspec",
+					["boss"] = "Chronomatic Anomaly",
+					["isAwardReason"] = false,
 					["lootWon"] = "|cffa335ee|Hitem:140821::::::::110:577::6:3:3445:1497:3528:::|h[Precipice of Eternity]|h|r",
 					["color"] = {
 						1, -- [1]
@@ -14157,39 +15599,39 @@ RCLootCouncilLootDB = {
 					["response"] = "Minor Upgrade",
 					["date"] = "18/05/17",
 					["class"] = "WARLOCK",
-					["isAwardReason"] = false,
-					["groupSize"] = 26,
-					["votes"] = 2,
 					["difficultyID"] = 15,
+					["groupSize"] = 26,
+					["boss"] = "Elisande",
+					["isAwardReason"] = false,
 					["lootWon"] = "|cffa335ee|Hitem:143565::::::::110:577::5:1:570:::|h[Helm of the Foreseen Conqueror]|h|r",
 					["time"] = "21:16:30",
-					["boss"] = "Elisande",
+					["votes"] = 2,
 					["responseID"] = 3,
 					["instance"] = "The Nighthold-Heroic",
 					["mapID"] = 1530,
 				}, -- [5]
 				{
-					["boss"] = "Unknown/Chest",
-					["mapID"] = 1530,
 					["instance"] = "The Nighthold-Heroic",
-					["response"] = "BiS",
-					["date"] = "18/05/17",
-					["class"] = "WARLOCK",
-					["votes"] = 4,
-					["groupSize"] = 25,
+					["itemReplaced1"] = "|cffa335ee|Hitem:141482::::::::110:265::3:3:3466:1482:3336:::|h[Unstable Arcanocrystal]|h|r",
 					["color"] = {
 						0, -- [1]
 						1, -- [2]
 						0, -- [3]
 						1, -- [4]
 					},
+					["response"] = "BiS",
+					["date"] = "18/05/17",
+					["class"] = "WARLOCK",
+					["votes"] = 4,
+					["groupSize"] = 25,
 					["isAwardReason"] = false,
-					["time"] = "21:39:02",
-					["lootWon"] = "|cffa335ee|Hitem:140809::::::::110:577::5:3:3517:1492:3528:::|h[Whispers in the Dark]|h|r",
 					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:140809::::::::110:577::5:3:3517:1492:3528:::|h[Whispers in the Dark]|h|r",
+					["time"] = "21:39:02",
+					["boss"] = "Unknown/Chest",
 					["responseID"] = 1,
 					["itemReplaced2"] = "|cffa335ee|Hitem:140809::::::::110:265::3:3:3515:1477:3528:::|h[Whispers in the Dark]|h|r",
-					["itemReplaced1"] = "|cffa335ee|Hitem:141482::::::::110:265::3:3:3466:1482:3336:::|h[Unstable Arcanocrystal]|h|r",
+					["mapID"] = 1530,
 				}, -- [6]
 				{
 					["mapID"] = 1530,
@@ -14198,13 +15640,13 @@ RCLootCouncilLootDB = {
 					["groupSize"] = 25,
 					["instance"] = "The Nighthold-Heroic",
 					["class"] = "WARLOCK",
-					["difficultyID"] = 15,
+					["isAwardReason"] = false,
 					["response"] = "Minor Upgrade",
 					["lootWon"] = "|cffa335ee|Hitem:143562::::::::110:577::5:1:570:::|h[Chest of the Foreseen Conqueror]|h|r",
-					["votes"] = 0,
-					["time"] = "21:51:08",
 					["boss"] = "Unknown/Chest",
-					["isAwardReason"] = false,
+					["time"] = "21:51:08",
+					["votes"] = 0,
+					["difficultyID"] = 15,
 					["responseID"] = 3,
 					["color"] = {
 						0, -- [1]
@@ -14214,6 +15656,52 @@ RCLootCouncilLootDB = {
 					},
 					["itemReplaced1"] = "|cffa335ee|Hitem:138320::130222::::::110:265::5:4:3516:1808:1487:3528:::|h[Finery of Azj'Aqir]|h|r",
 				}, -- [7]
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:138317::::::::110:265::5:3:3516:1492:3336:::|h[Leggings of Azj'Aqir]|h|r",
+					["mapID"] = 1676,
+					["date"] = "27/06/17",
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["class"] = "WARLOCK",
+					["isAwardReason"] = false,
+					["groupSize"] = 21,
+					["time"] = "19:46:42",
+					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:146992::::::::110:577::5:3:3562:1497:3528:::|h[Legwraps of Fused Loathing]|h|r",
+					["color"] = {
+						0, -- [1]
+						0.7, -- [2]
+						0.7, -- [3]
+						1, -- [4]
+					},
+					["votes"] = 2,
+					["responseID"] = 3,
+					["response"] = "Minor Upgrade",
+					["boss"] = "Goroth",
+				}, -- [8]
+				{
+					["mapID"] = 1676,
+					["date"] = "06/07/17",
+					["class"] = "WARLOCK",
+					["groupSize"] = 20,
+					["isAwardReason"] = false,
+					["time"] = "20:25:39",
+					["itemReplaced1"] = "|cffa335ee|Hitem:138317::::::::110:265::5:3:3516:1492:3336:::|h[Leggings of Azj'Aqir]|h|r",
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["response"] = "4th Tier Piece",
+					["tierToken"] = "LegsSlot",
+					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:147326::::::::110:577::5:1:570:::|h[Leggings of the Foregone Conqueror]|h|r",
+					["votes"] = 4,
+					["color"] = {
+						0.1, -- [1]
+						1, -- [2]
+						0.5, -- [3]
+						1, -- [4]
+					},
+					["responseID"] = 1,
+					["tokenRoll"] = true,
+					["boss"] = "Mistress Sassz'ine",
+				}, -- [9]
 			},
 			["Lanféar-Illidan"] = {
 				{
@@ -14289,13 +15777,13 @@ RCLootCouncilLootDB = {
 					["response"] = "BiS",
 					["date"] = "18/05/17",
 					["class"] = "PRIEST",
-					["difficultyID"] = 16,
-					["groupSize"] = 20,
-					["isAwardReason"] = false,
 					["boss"] = "Unknown/Chest",
+					["groupSize"] = 20,
+					["votes"] = 4,
+					["difficultyID"] = 16,
 					["time"] = "20:27:47",
 					["lootWon"] = "|cffa335ee|Hitem:143562::::::::110:577::6:1:569:::|h[Chest of the Foreseen Conqueror]|h|r",
-					["votes"] = 4,
+					["isAwardReason"] = false,
 					["responseID"] = 1,
 					["instance"] = "The Nighthold-Mythic",
 					["color"] = {
@@ -14312,13 +15800,13 @@ RCLootCouncilLootDB = {
 					["response"] = "Minor Upgrade",
 					["date"] = "18/05/17",
 					["class"] = "PRIEST",
-					["votes"] = 2,
+					["difficultyID"] = 15,
 					["groupSize"] = 25,
 					["lootWon"] = "|cffa335ee|Hitem:143563::::::::110:577::5:1:570:::|h[Gauntlets of the Foreseen Conqueror]|h|r",
-					["isAwardReason"] = false,
-					["time"] = "22:19:48",
 					["boss"] = "Star Augur Etraeus",
-					["difficultyID"] = 15,
+					["time"] = "22:19:48",
+					["isAwardReason"] = false,
+					["votes"] = 2,
 					["responseID"] = 3,
 					["color"] = {
 						0, -- [1]
@@ -14329,9 +15817,9 @@ RCLootCouncilLootDB = {
 					["itemReplaced1"] = "|cffa335ee|Hitem:138310::::::::110:257::5:3:3516:1487:3528:::|h[Purifier's Gloves]|h|r",
 				}, -- [5]
 				{
-					["boss"] = "Star Augur Etraeus",
-					["mapID"] = 1530,
 					["instance"] = "The Nighthold-Heroic",
+					["itemReplaced1"] = "|cffa335ee|Hitem:142187::::::::110:256::43:3:3573:1497:3528:::|h[Virtuous Directive]|h|r",
+					["date"] = "13/06/17",
 					["response"] = "Offspec",
 					["color"] = {
 						0.301960784313726, -- [1]
@@ -14342,15 +15830,63 @@ RCLootCouncilLootDB = {
 					["class"] = "PRIEST",
 					["isAwardReason"] = false,
 					["groupSize"] = 19,
-					["date"] = "13/06/17",
 					["votes"] = 0,
-					["time"] = "20:22:33",
-					["lootWon"] = "|cffa335ee|Hitem:140845::::::::110:72::5:3:3516:1487:3528:::|h[Glistening Meteorite Shard]|h|r",
 					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:140845::::::::110:72::5:3:3516:1487:3528:::|h[Glistening Meteorite Shard]|h|r",
+					["time"] = "20:22:33",
+					["boss"] = "Star Augur Etraeus",
 					["responseID"] = 2,
 					["itemReplaced2"] = "|cffa335ee|Hitem:141519::::::::110:256::43:3:3573:1497:3336:::|h[Pillaged Titan Disc]|h|r",
-					["itemReplaced1"] = "|cffa335ee|Hitem:142187::::::::110:256::43:3:3573:1497:3528:::|h[Virtuous Directive]|h|r",
+					["mapID"] = 1530,
 				}, -- [6]
+				{
+					["mapID"] = 1676,
+					["date"] = "29/06/17",
+					["class"] = "PRIEST",
+					["groupSize"] = 21,
+					["boss"] = "Harjatan",
+					["time"] = "19:51:49",
+					["itemReplaced1"] = "|cffa335ee|Hitem:138310::::::::110:257::5:4:3516:40:1487:3528:::|h[Purifier's Gloves]|h|r",
+					["instance"] = "Tomb of Sargeras-Normal",
+					["response"] = "1st Tier Piece",
+					["tokenRoll"] = true,
+					["difficultyID"] = 14,
+					["lootWon"] = "|cffa335ee|Hitem:147320::::::::110:577::3::::|h[Gauntlets of the Foregone Conqueror]|h|r",
+					["tierToken"] = "HandsSlot",
+					["votes"] = 3,
+					["responseID"] = 4,
+					["color"] = {
+						0.5, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["isAwardReason"] = false,
+				}, -- [7]
+				{
+					["tierToken"] = "ChestSlot",
+					["date"] = "06/07/17",
+					["class"] = "PRIEST",
+					["groupSize"] = 18,
+					["isAwardReason"] = false,
+					["time"] = "22:51:25",
+					["itemReplaced1"] = "|cffa335ee|Hitem:138319::::::::110:257::6:3:3518:1502:3528:::|h[Purifier's Cassock]|h|r",
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["response"] = "4th Tier Piece",
+					["mapID"] = 1676,
+					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:147317::::::::110:577::5:1:570:::|h[Chest of the Foregone Conqueror]|h|r",
+					["votes"] = 4,
+					["color"] = {
+						0.1, -- [1]
+						1, -- [2]
+						0.5, -- [3]
+						1, -- [4]
+					},
+					["responseID"] = 1,
+					["tokenRoll"] = true,
+					["boss"] = "Maiden of Vigilance",
+				}, -- [8]
 			},
 			["Salamanderr-Illidan"] = {
 				{
@@ -14403,48 +15939,117 @@ RCLootCouncilLootDB = {
 					["mapID"] = 1530,
 					["itemReplaced1"] = "|cffa335ee|Hitem:138373:5436:::::::110:265::5:3:3516:1487:1813:::|h[Cloak of Azj'Aqir]|h|r",
 					["tierToken"] = "BackSlot",
+					["groupSize"] = 20,
 					["color"] = {
 						1, -- [1]
 						0.619607843137255, -- [2]
 						0.0431372549019608, -- [3]
 						1, -- [4]
 					},
-					["instance"] = "The Nighthold-Mythic",
 					["class"] = "WARLOCK",
-					["response"] = "Mainspec/Need",
-					["groupSize"] = 20,
-					["difficultyID"] = 16,
 					["boss"] = "Trilliax",
+					["response"] = "Mainspec/Need",
+					["isAwardReason"] = false,
+					["difficultyID"] = 16,
 					["lootWon"] = "|cffa335ee|Hitem:143577::::::::110:72::6:1:569:::|h[Cloak of the Foreseen Conqueror]|h|r",
 					["time"] = "20:13:52",
 					["votes"] = 0,
 					["responseID"] = 1,
+					["instance"] = "The Nighthold-Mythic",
 					["date"] = "15/06/17",
-					["isAwardReason"] = false,
 				}, -- [2]
 				{
-					["boss"] = "Krosus",
-					["tierToken"] = "ChestSlot",
-					["instance"] = "The Nighthold-Mythic",
-					["isAwardReason"] = false,
-					["date"] = "15/06/17",
-					["class"] = "WARLOCK",
 					["color"] = {
 						1, -- [1]
 						0.619607843137255, -- [2]
 						0.0431372549019608, -- [3]
 						1, -- [4]
 					},
+					["tierToken"] = "ChestSlot",
+					["date"] = "15/06/17",
+					["response"] = "Mainspec/Need",
+					["instance"] = "The Nighthold-Mythic",
+					["class"] = "WARLOCK",
+					["difficultyID"] = 16,
 					["groupSize"] = 20,
 					["lootWon"] = "|cffa335ee|Hitem:143562::::::::110:72::6:1:569:::|h[Chest of the Foreseen Conqueror]|h|r",
 					["votes"] = 2,
 					["time"] = "21:34:00",
-					["difficultyID"] = 16,
-					["response"] = "Mainspec/Need",
+					["isAwardReason"] = false,
+					["boss"] = "Krosus",
 					["responseID"] = 1,
 					["itemReplaced1"] = "|cffa335ee|Hitem:138320::::::::110:265::5:3:3516:1487:1813:::|h[Finery of Azj'Aqir]|h|r",
 					["mapID"] = 1530,
 				}, -- [3]
+				{
+					["mapID"] = 1676,
+					["itemReplaced1"] = "|cffa335ee|Hitem:140821::::::::110:265::6:3:3445:1497:3528:::|h[Precipice of Eternity]|h|r",
+					["date"] = "27/06/17",
+					["groupSize"] = 21,
+					["color"] = {
+						1, -- [1]
+						0.5, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["class"] = "WARLOCK",
+					["difficultyID"] = 15,
+					["response"] = "Mainspec",
+					["lootWon"] = "|cffa335ee|Hitem:147108::::::::110:577::5:3:3562:1497:3528:::|h[Brand of Relentless Agony]|h|r",
+					["isAwardReason"] = false,
+					["time"] = "19:47:28",
+					["boss"] = "Goroth",
+					["votes"] = 5,
+					["responseID"] = 2,
+					["itemReplaced2"] = "|cffa335ee|Hitem:140821::::::::110:265::5:3:3444:1482:1813:::|h[Precipice of Eternity]|h|r",
+					["instance"] = "Tomb of Sargeras-Heroic",
+				}, -- [4]
+				{
+					["mapID"] = 1676,
+					["date"] = "06/07/17",
+					["class"] = "WARLOCK",
+					["groupSize"] = 19,
+					["votes"] = 4,
+					["time"] = "19:50:54",
+					["itemReplaced1"] = "|cffff8000|Hitem:132394::::::::110:265:::2:3459:3570:::|h[Hood of Eternal Disdain]|h|r",
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["response"] = "1st Tier Piece",
+					["tokenRoll"] = true,
+					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:147323::::::::110:577::5:1:570:::|h[Helm of the Foregone Conqueror]|h|r",
+					["tierToken"] = "HeadSlot",
+					["color"] = {
+						0.5, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["responseID"] = 4,
+					["isAwardReason"] = false,
+					["boss"] = "Atrigan",
+				}, -- [5]
+				{
+					["itemReplaced1"] = "|cffa335ee|Hitem:138323::::::::110:265::5:3:3516:1487:3528:::|h[Pauldrons of Azj'Aqir]|h|r",
+					["mapID"] = 1676,
+					["date"] = "06/07/17",
+					["color"] = {
+						0.584313725490196, -- [1]
+						0.368627450980392, -- [2]
+						0.701960784313726, -- [3]
+						1, -- [4]
+					},
+					["class"] = "WARLOCK",
+					["votes"] = 0,
+					["groupSize"] = 20,
+					["isAwardReason"] = false,
+					["boss"] = "Priestess Lunaspyre",
+					["lootWon"] = "|cffa335ee|Hitem:146997::::::::110:577::5:3:3562:1502:3336:::|h[Shoulderpads of Whispering Twilight]|h|r",
+					["difficultyID"] = 15,
+					["time"] = "20:54:46",
+					["responseID"] = 4,
+					["response"] = "Offspec",
+					["instance"] = "Tomb of Sargeras-Heroic",
+				}, -- [6]
 			},
 			["Swîftmender-Illidan"] = {
 				{
@@ -14503,13 +16108,13 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["class"] = "DRUID",
-					["votes"] = 0,
+					["difficultyID"] = 15,
 					["response"] = "Mainspec/Best in Slot",
 					["time"] = "20:01:06",
-					["boss"] = "Trilliax",
-					["lootWon"] = "|cffa335ee|Hitem:143578::::::::110:72::5:1:570:::|h[Cloak of the Foreseen Vanquisher]|h|r",
 					["isAwardReason"] = false,
-					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:143578::::::::110:72::5:1:570:::|h[Cloak of the Foreseen Vanquisher]|h|r",
+					["boss"] = "Trilliax",
+					["votes"] = 0,
 					["responseID"] = 4,
 					["date"] = "13/06/17",
 					["tierToken"] = "BackSlot",
@@ -14526,13 +16131,13 @@ RCLootCouncilLootDB = {
 						1, -- [4]
 					},
 					["class"] = "DRUID",
-					["boss"] = "Star Augur Etraeus",
-					["groupSize"] = 19,
-					["difficultyID"] = 15,
 					["isAwardReason"] = false,
+					["groupSize"] = 19,
+					["votes"] = 0,
+					["boss"] = "Star Augur Etraeus",
 					["lootWon"] = "|cffa335ee|Hitem:143567::::::::110:72::5:1:570:::|h[Gauntlets of the Foreseen Vanquisher]|h|r",
 					["time"] = "20:23:38",
-					["votes"] = 0,
+					["difficultyID"] = 15,
 					["responseID"] = 4,
 					["instance"] = "The Nighthold-Heroic",
 					["date"] = "13/06/17",
@@ -14540,142 +16145,144 @@ RCLootCouncilLootDB = {
 			},
 			["Furyisthy-Illidan"] = {
 				{
-					["votes"] = 0,
-					["mapID"] = 1530,
 					["instance"] = "The Nighthold-Heroic",
+					["itemReplaced1"] = "|cffa335ee|Hitem:134526:5427:::::::110:577::34:3:3418:1542:3528:::|h[Gnawed Thumb Ring]|h|r",
+					["color"] = {
+						0.945098039215686, -- [1]
+						0.196078431372549, -- [2]
+						0.0549019607843137, -- [3]
+						1, -- [4]
+					},
 					["response"] = "Mainspec/Best in Slot",
 					["date"] = "13/06/17",
 					["class"] = "DEMONHUNTER",
 					["isAwardReason"] = false,
 					["groupSize"] = 19,
-					["color"] = {
-						0.945098039215686, -- [1]
-						0.196078431372549, -- [2]
-						0.0549019607843137, -- [3]
-						1, -- [4]
-					},
 					["boss"] = "Spellblade Aluriel",
-					["time"] = "20:14:03",
-					["lootWon"] = "|cffa335ee|Hitem:140895::::::::110:72::5:3:3516:1487:3528:::|h[Spellblade's Gemmed Signet]|h|r",
 					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:140895::::::::110:72::5:3:3516:1487:3528:::|h[Spellblade's Gemmed Signet]|h|r",
+					["time"] = "20:14:03",
+					["votes"] = 0,
 					["responseID"] = 4,
 					["itemReplaced2"] = "|cffff8000|Hitem:137038:5427:130247::::::110:577:::2:1811:3530:::|h[Anger of the Half-Giants]|h|r",
-					["itemReplaced1"] = "|cffa335ee|Hitem:134526:5427:::::::110:577::34:3:3418:1542:3528:::|h[Gnawed Thumb Ring]|h|r",
-				}, -- [1]
-			},
-			["Madmartigàn-Illidan"] = {
-				{
 					["mapID"] = 1530,
-					["tierToken"] = "HandsSlot",
-					["itemReplaced1"] = "|cffa335ee|Hitem:140879::::::::110:72::5:3:3444:1492:3336:::|h[Gauntlets of Fractured Eons]|h|r",
-					["response"] = "Mainspec/Best in Slot",
-					["color"] = {
-						0.945098039215686, -- [1]
-						0.196078431372549, -- [2]
-						0.0549019607843137, -- [3]
-						1, -- [4]
-					},
-					["class"] = "WARRIOR",
-					["boss"] = "Star Augur Etraeus",
-					["groupSize"] = 19,
-					["difficultyID"] = 15,
-					["isAwardReason"] = false,
-					["lootWon"] = "|cffa335ee|Hitem:143573::::::::110:72::5:1:570:::|h[Gauntlets of the Foreseen Protector]|h|r",
-					["time"] = "20:23:30",
-					["votes"] = 0,
-					["responseID"] = 4,
-					["instance"] = "The Nighthold-Heroic",
-					["date"] = "13/06/17",
 				}, -- [1]
 				{
-					["itemReplaced1"] = "|cffa335ee|Hitem:147752::::::::110:72::3:3:3572:1482:3528:::|h[Pauldrons of the Engulfing Tide]|h|r",
-					["mapID"] = 1530,
-					["date"] = "13/06/17",
+					["mapID"] = 1676,
+					["itemReplaced1"] = "|cffa335ee|Hitem:138376::::::::110:577::6:3:3518:1502:3528:::|h[Tunic of Second Sight]|h|r",
 					["color"] = {
-						0, -- [1]
-						0.7, -- [2]
-						0.7, -- [3]
+						1, -- [1]
+						0.5, -- [2]
+						0, -- [3]
 						1, -- [4]
 					},
-					["class"] = "WARRIOR",
-					["boss"] = "Arcanist Tel'arn",
-					["response"] = "Minor Upgrade",
+					["date"] = "27/06/17",
+					["class"] = "DEMONHUNTER",
 					["difficultyID"] = 15,
+					["groupSize"] = 21,
+					["time"] = "19:47:02",
+					["votes"] = 2,
+					["lootWon"] = "|cffa335ee|Hitem:147027::::::::110:577::5:3:3562:1497:3528:::|h[Spirebreaker Harness]|h|r",
+					["response"] = "Mainspec",
 					["isAwardReason"] = false,
-					["time"] = "20:34:19",
-					["lootWon"] = "|cffa335ee|Hitem:140883::::::::110:72::5:4:3516:42:1497:3336:::|h[Shoulderguard of the Eclipse]|h|r",
-					["votes"] = 0,
-					["responseID"] = 3,
-					["groupSize"] = 18,
-					["instance"] = "The Nighthold-Heroic",
+					["responseID"] = 2,
+					["boss"] = "Goroth",
+					["instance"] = "Tomb of Sargeras-Heroic",
 				}, -- [2]
 				{
-					["itemReplaced1"] = "|cffa335ee|Hitem:139283::::::::110:72::33:3:3418:1557:3337:::|h[Wristbands of Magnificent Splendor]|h|r",
-					["response"] = "Mainspec/Need",
-					["mapID"] = 1530,
+					["mapID"] = 1676,
+					["date"] = "27/06/17",
+					["class"] = "DEMONHUNTER",
+					["groupSize"] = 23,
+					["boss"] = "Mistress Sassz'ine",
+					["time"] = "22:39:45",
+					["itemReplaced1"] = "|cffa335ee|Hitem:147035::::::::110:577::3:3:3561:1487:3336:::|h[Bonespur Studded Legwraps]|h|r",
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["response"] = "2nd Tier Piece",
 					["color"] = {
 						1, -- [1]
-						0.619607843137255, -- [2]
-						0.0431372549019608, -- [3]
+						1, -- [2]
+						0.5, -- [3]
 						1, -- [4]
 					},
-					["class"] = "WARRIOR",
-					["difficultyID"] = 16,
-					["groupSize"] = 20,
-					["lootWon"] = "|cffa335ee|Hitem:140902::::::::110:72::6:3:3445:1497:3528:::|h[Jagged Carapace Wristclamps]|h|r",
+					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:147326::::::::110:577::5:1:570:::|h[Leggings of the Foregone Conqueror]|h|r",
+					["tokenRoll"] = true,
 					["isAwardReason"] = false,
-					["time"] = "19:51:38",
-					["instance"] = "The Nighthold-Mythic",
-					["boss"] = "Skorpyron",
-					["responseID"] = 1,
-					["date"] = "15/06/17",
-					["votes"] = 2,
+					["responseID"] = 2,
+					["votes"] = 4,
+					["tierToken"] = "LegsSlot",
 				}, -- [3]
 				{
-					["mapID"] = 1530,
-					["itemReplaced1"] = "|cffa335ee|Hitem:142166::::::::110:72::43:3:3573:1487:3336:::|h[Ethereal Urn]|h|r",
+					["mapID"] = 1676,
+					["itemReplaced1"] = "|cffa335ee|Hitem:140824::::::::110:577::5:3:3516:1487:3528:::|h[Writ of Subjugation]|h|r",
+					["date"] = "06/07/17",
+					["groupSize"] = 19,
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["class"] = "DEMONHUNTER",
+					["difficultyID"] = 15,
+					["response"] = "BiS",
+					["votes"] = 4,
+					["boss"] = "The Desolate Host",
+					["lootWon"] = "|cffa335ee|Hitem:147086::::::::110:577::5:3:3562:1502:3336:::|h[Befouled Effigy of Elune]|h|r",
+					["time"] = "21:53:10",
 					["isAwardReason"] = false,
-					["groupSize"] = 20,
-					["instance"] = "The Nighthold-Mythic",
-					["class"] = "WARRIOR",
-					["difficultyID"] = 16,
-					["response"] = "Mainspec/Need",
-					["lootWon"] = "|cffa335ee|Hitem:140790::::::::110:72::6:3:3445:1497:3528:::|h[Claw of the Crystalline Scorpid]|h|r",
-					["boss"] = "Skorpyron",
-					["time"] = "19:51:46",
-					["votes"] = 2,
+					["responseID"] = 1,
+					["itemReplaced2"] = "|cffa335ee|Hitem:140824::::::::110:577::5:3:3516:1492:3336:::|h[Writ of Subjugation]|h|r",
 					["color"] = {
-						1, -- [1]
-						0.619607843137255, -- [2]
-						0.0431372549019608, -- [3]
+						0, -- [1]
+						1, -- [2]
+						0, -- [3]
 						1, -- [4]
 					},
-					["responseID"] = 1,
-					["itemReplaced2"] = "|cffff8000|Hitem:144259::::::::110:72:::2:3459:3530:::|h[Kil'jaeden's Burning Wish]|h|r",
-					["date"] = "15/06/17",
 				}, -- [4]
 				{
-					["itemReplaced1"] = "|cffa335ee|Hitem:144522::::::::110:72::8:3:3568:1662:3528:::|h[Battle-Tempered Hilt]|h|r",
-					["boss"] = "Krosus",
-					["response"] = "Mainspec/Need",
-					["date"] = "15/06/17",
-					["class"] = "WARRIOR",
+					["tierToken"] = "BackSlot",
+					["date"] = "06/07/17",
+					["class"] = "DEMONHUNTER",
+					["groupSize"] = 18,
 					["isAwardReason"] = false,
-					["groupSize"] = 20,
+					["time"] = "21:54:51",
+					["itemReplaced1"] = "|cffa335ee|Hitem:138375:5435:::::::110:577::6:3:3518:1502:3528:::|h[Cape of Second Sight]|h|r",
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["response"] = "3rd Tier Piece",
+					["mapID"] = 1676,
+					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:147332::::::::110:577::5:1:570:::|h[Cloak of the Foregone Conqueror]|h|r",
+					["votes"] = 3,
 					["color"] = {
 						1, -- [1]
-						0.619607843137255, -- [2]
-						0.0431372549019608, -- [3]
+						0.5, -- [2]
+						1, -- [3]
 						1, -- [4]
 					},
-					["votes"] = 2,
-					["time"] = "21:33:57",
-					["lootWon"] = "|cffa335ee|Hitem:140816::::::::110:72::6:3:3518:1502:3528:::|h[Fingernail of the Fel Brute]|h|r",
-					["difficultyID"] = 16,
-					["responseID"] = 1,
-					["instance"] = "The Nighthold-Mythic",
-					["mapID"] = 1530,
+					["responseID"] = 3,
+					["tokenRoll"] = true,
+					["boss"] = "The Desolate Host",
 				}, -- [5]
+				{
+					["mapID"] = 1676,
+					["itemReplaced1"] = "|cffa335ee|Hitem:141482::::::::110:577::43:3:3573:1507:3337:::|h[Unstable Arcanocrystal]|h|r",
+					["date"] = "06/07/17",
+					["groupSize"] = 18,
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["class"] = "DEMONHUNTER",
+					["difficultyID"] = 15,
+					["response"] = "Offspec",
+					["votes"] = 0,
+					["boss"] = "Maiden of Vigilance",
+					["lootWon"] = "|cffa335ee|Hitem:147025::::::::110:577::5:3:3562:1497:3528:::|h[Recompiled Guardian Module]|h|r",
+					["time"] = "22:52:24",
+					["isAwardReason"] = false,
+					["responseID"] = 4,
+					["itemReplaced2"] = "|cffa335ee|Hitem:142167::::::::110:577::34:3:3417:1497:3528:::|h[Eye of Command]|h|r",
+					["color"] = {
+						0.584313725490196, -- [1]
+						0.368627450980392, -- [2]
+						0.701960784313726, -- [3]
+						1, -- [4]
+					},
+				}, -- [6]
 			},
 			["Luthanen-Illidan"] = {
 				{
@@ -14701,28 +16308,171 @@ RCLootCouncilLootDB = {
 					["instance"] = "The Nighthold-Heroic",
 				}, -- [1]
 				{
-					["mapID"] = 1530,
-					["itemReplaced1"] = "|cffa335ee|Hitem:133685::::::::110:65::16:3:3418:1542:3528:::|h[Odyn's Boon]|h|r",
-					["isAwardReason"] = false,
-					["groupSize"] = 20,
-					["instance"] = "The Nighthold-Mythic",
-					["class"] = "PALADIN",
-					["difficultyID"] = 16,
-					["response"] = "Minor Upgrade",
-					["lootWon"] = "|cffa335ee|Hitem:140843::::::::110:72::6:3:3445:1497:3528:::|h[Flickering Timespark]|h|r",
-					["boss"] = "Chronomatic Anomaly",
-					["time"] = "20:04:53",
-					["votes"] = 0,
 					["color"] = {
 						0, -- [1]
 						0.7, -- [2]
 						0.7, -- [3]
 						1, -- [4]
 					},
+					["itemReplaced1"] = "|cffa335ee|Hitem:133685::::::::110:65::16:3:3418:1542:3528:::|h[Odyn's Boon]|h|r",
+					["instance"] = "The Nighthold-Mythic",
+					["response"] = "Minor Upgrade",
+					["date"] = "15/06/17",
+					["class"] = "PALADIN",
+					["difficultyID"] = 16,
+					["groupSize"] = 20,
+					["boss"] = "Chronomatic Anomaly",
+					["votes"] = 0,
+					["lootWon"] = "|cffa335ee|Hitem:140843::::::::110:72::6:3:3445:1497:3528:::|h[Flickering Timespark]|h|r",
+					["time"] = "20:04:53",
+					["isAwardReason"] = false,
 					["responseID"] = 3,
 					["itemReplaced2"] = "|cffa335ee|Hitem:140843::::::::110:65::6:3:3445:1497:3528:::|h[Flickering Timespark]|h|r",
-					["date"] = "15/06/17",
+					["mapID"] = 1530,
 				}, -- [2]
+				{
+					["mapID"] = 1676,
+					["date"] = "27/06/17",
+					["class"] = "PALADIN",
+					["groupSize"] = 23,
+					["boss"] = "Atrigan",
+					["time"] = "20:26:01",
+					["itemReplaced1"] = "|cffa335ee|Hitem:138356::::::::110:65::5:3:3516:1502:3337:::|h[Helmet of the Highlord]|h|r",
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["response"] = "Mainspec",
+					["color"] = {
+						1, -- [1]
+						0.5, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["difficultyID"] = 15,
+					["lootWon"] = "|cffa335ee|Hitem:147323::::::::110:577::5:1:570:::|h[Helm of the Foregone Conqueror]|h|r",
+					["tokenRoll"] = false,
+					["isAwardReason"] = false,
+					["responseID"] = 2,
+					["votes"] = 4,
+					["tierToken"] = "HeadSlot",
+				}, -- [3]
+				{
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["mapID"] = 1676,
+					["color"] = {
+						1, -- [1]
+						0.5, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["response"] = "Mainspec",
+					["date"] = "27/06/17",
+					["class"] = "PALADIN",
+					["difficultyID"] = 15,
+					["groupSize"] = 23,
+					["isAwardReason"] = false,
+					["votes"] = 0,
+					["lootWon"] = "|cffa335ee|Hitem:147004::::::::110:577::5:3:3562:1512:3337:::|h[Sea Star of the Depthmother]|h|r",
+					["time"] = "22:44:30",
+					["boss"] = "Mistress Sassz'ine",
+					["responseID"] = 2,
+					["itemReplaced2"] = "|cffa335ee|Hitem:128709::::::::110:65::13:3:689:601:679:::|h[Darkmoon Deck: Hellfire]|h|r",
+					["itemReplaced1"] = "|cffa335ee|Hitem:140803::::::::110:65::5:3:3516:1492:3336:::|h[Etraeus' Celestial Map]|h|r",
+				}, -- [4]
+				{
+					["mapID"] = 1676,
+					["color"] = {
+						1, -- [1]
+						0.5, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["class"] = "PALADIN",
+					["groupSize"] = 23,
+					["boss"] = "The Desolate Host",
+					["time"] = "20:44:52",
+					["itemReplaced1"] = "|cffa335ee|Hitem:142170:5436:::::::110:65::16:3:3415:1507:3336:::|h[Drape of Shame]|h|r",
+					["instance"] = "Tomb of Sargeras-Normal",
+					["response"] = "3rd Tier Piece",
+					["tierToken"] = "BackSlot",
+					["difficultyID"] = 14,
+					["lootWon"] = "|cffa335ee|Hitem:147332::::::::110:577::3::::|h[Cloak of the Foregone Conqueror]|h|r",
+					["date"] = "29/06/17",
+					["tokenRoll"] = true,
+					["responseID"] = 3,
+					["votes"] = 2,
+					["isAwardReason"] = false,
+				}, -- [5]
+				{
+					["tierToken"] = "ChestSlot",
+					["color"] = {
+						0.1, -- [1]
+						1, -- [2]
+						0.5, -- [3]
+						1, -- [4]
+					},
+					["class"] = "PALADIN",
+					["groupSize"] = 23,
+					["boss"] = "Maiden of Vigilance",
+					["time"] = "21:01:55",
+					["itemReplaced1"] = "|cffa335ee|Hitem:138350::::::::110:65::6:3:3518:1502:3528:::|h[Breastplate of the Highlord]|h|r",
+					["instance"] = "Tomb of Sargeras-Normal",
+					["response"] = "4th Tier Piece",
+					["tokenRoll"] = true,
+					["difficultyID"] = 14,
+					["lootWon"] = "|cffa335ee|Hitem:147317::::::::110:577::3::::|h[Chest of the Foregone Conqueror]|h|r",
+					["date"] = "29/06/17",
+					["mapID"] = 1676,
+					["responseID"] = 1,
+					["votes"] = 3,
+					["isAwardReason"] = false,
+				}, -- [6]
+				{
+					["mapID"] = 1676,
+					["itemReplaced1"] = "|cffa335ee|Hitem:140843::::::::110:65::6:3:3445:1497:3528:::|h[Flickering Timespark]|h|r",
+					["date"] = "29/06/17",
+					["groupSize"] = 24,
+					["instance"] = "Tomb of Sargeras-Heroic",
+					["class"] = "PALADIN",
+					["boss"] = "Priestess Lunaspyre",
+					["response"] = "Mainspec",
+					["lootWon"] = "|cffa335ee|Hitem:147097::::::::110:577::5:3:3562:1502:3336:::|h[Blessing of the White Lady]|h|r",
+					["isAwardReason"] = false,
+					["time"] = "22:22:42",
+					["votes"] = 3,
+					["difficultyID"] = 15,
+					["responseID"] = 2,
+					["itemReplaced2"] = "|cffa335ee|Hitem:147096::::::::110:65::5:3:3562:1497:3528:::|h[Inquisition's Master Key]|h|r",
+					["color"] = {
+						1, -- [1]
+						0.5, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [7]
+			},
+			["Colonferal-Illidan"] = {
+				{
+					["color"] = {
+						1, -- [1]
+						0.619607843137255, -- [2]
+						0.0431372549019608, -- [3]
+						1, -- [4]
+					},
+					["itemReplaced1"] = "|cffa335ee|Hitem:140802::::::::110:103::3:3:3514:1472:1813:::|h[Nightblooming Frond]|h|r",
+					["instance"] = "The Nighthold-Mythic",
+					["response"] = "Mainspec/Need",
+					["date"] = "15/06/17",
+					["class"] = "DRUID",
+					["difficultyID"] = 16,
+					["groupSize"] = 20,
+					["boss"] = "Trilliax",
+					["votes"] = 0,
+					["lootWon"] = "|cffa335ee|Hitem:140794::::::::110:72::6:3:3445:1497:3528:::|h[Arcanogolem Digit]|h|r",
+					["time"] = "20:14:10",
+					["isAwardReason"] = false,
+					["responseID"] = 1,
+					["itemReplaced2"] = "|cffa335ee|Hitem:140806::::::::110:103::5:3:3516:1487:1813:::|h[Convergence of Fates]|h|r",
+					["mapID"] = 1530,
+				}, -- [1]
 			},
 			["Syleerae-Illidan"] = {
 				{

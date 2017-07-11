@@ -63,7 +63,7 @@ local difficultyLookupTable = {
 }
 
 function LootHistory:OnEnable()
-	addon:Debug("OnEnable()")
+	addon:Debug("LootHistory:OnEnable()")
 	moreInfo = true
 	db = addon:Getdb()
 	lootDB = addon:GetHistoryDB()
@@ -81,6 +81,7 @@ end
 
 --- Show the LootHistory frame.
 function LootHistory:Show()
+	addon:Debug("LootHistory:Show()")
 	moreInfoData = addon:GetLootDBStatistics()
 	self.frame:Show()
 end
@@ -150,7 +151,7 @@ function LootHistory:BuildData()
 							{value = date.. "-".. i.time or "", args = {time = i.time, date = date},},
 							{DoCellUpdate = self.SetCellGear, args={i.lootWon}},
 							{value = i.lootWon},
-							{DoCellUpdate = self.SetCellResponse, args = {color = i.color, response = i.response, responseID = i.responseID or 0, isAwardReason = i.isAwardReason}},
+							{DoCellUpdate = self.SetCellResponse, args = {color = i.color, response = i.response, responseID = i.responseID or 0, isAwardReason = i.isAwardReason, tokenRoll = i.tokenRoll}},
 							{DoCellUpdate = self.SetCellDelete},
 						}
 					}
@@ -224,10 +225,10 @@ function LootHistory.SetCellResponse(rowFrame, frame, data, cols, row, realrow, 
 	local args = data[realrow].cols[column].args
 	frame.text:SetText(args.response)
 
-	if args.color then -- Never version saves the color with the entry
+	if args.color and type(args.color) == "table" then -- Never version saves the color with the entry
 		frame.text:SetTextColor(unpack(args.color))
 	elseif args.responseID and args.responseID > 0 then -- try to recreate color from ID
-		frame.text:SetTextColor(addon:GetResponseColor(args.responseID))
+		frame.text:SetTextColor(addon:GetResponseColor(args.responseID, args.tokenRoll))
 	else -- default to white
 		frame.text:SetTextColor(1,1,1,1)
 	end
@@ -251,6 +252,10 @@ function LootHistory.SetCellDelete(rowFrame, frame, data, cols, row, realrow, co
 			tremove(lootDB[name], num)
 			tremove(data, realrow)
 			table:SortData()
+			if #lootDB[name] == 0 then -- last entry deleted
+				addon:DebugLog("Last Entry deleted, deleting name: ", name)
+				lootDB[name] = nil
+			end
 		else
 			frame.lastClick = GetTime()
 		end
@@ -607,6 +612,7 @@ end
 
 function LootHistory:UpdateMoreInfo(rowFrame, cellFrame, dat, cols, row, realrow, column, tabel, button, ...)
 	if not dat then return end
+	if not moreInfoData then return addon:Debug("No moreInfoData in UpdateMoreInfo()") end
 	local tip = self.moreInfo -- shortening
 	tip:SetOwner(self.frame, "ANCHOR_RIGHT")
 	local row = dat[realrow]
@@ -659,6 +665,7 @@ function LootHistory:UpdateMoreInfo(rowFrame, cellFrame, dat, cols, row, realrow
 		tip:AddDoubleLine("mapID", data.mapID, 1,1,1, 1,1,1)
 		tip:AddDoubleLine("groupSize", data.groupSize, 1,1,1, 1,1,1)
 		tip:AddDoubleLine("tierToken", data.tierToken, 1,1,1, 1,1,1)
+		tip:AddDoubleLine("tokenRoll", tostring(data.tokenRoll), 1,1,1, 1,1,1)
 		tip:AddLine(" ")
 		tip:AddLine("Total tokens won:")
  		for name, v in pairs(moreInfoData[row.name].totals.tokens) do
@@ -804,11 +811,34 @@ function LootHistory.RightClickMenu(menu, level)
 					entry.response = addon:GetResponseText(i)
 					entry.color = {addon:GetResponseColor(i)}
 					entry.isAwardReason = nil
+					entry.tokenRoll = nil
 					data.response = i
 					data.cols[6].args = {color = entry.color, response = entry.response, responseID = i}
 					LootHistory.frame.st:SortData()
 				end
 				Lib_UIDropDownMenu_AddButton(info, level)
+			end
+
+			if addon.debug then
+				for k,v in pairs(db.responses) do
+					if type(k) ~= "number" and k ~= "tier" then
+						info.text = v.text
+						info.colorCode = "|cff"..addon:RGBToHex(unpack(v.color))
+						info.notCheckable = true
+						info.func = function()
+							addon:Debug("Changing response id @", data.name, "from", data.response, "to", i)
+							local entry = lootDB[data.name][data.num]
+							entry.responseID = k
+							entry.response = addon:GetResponseText(k)
+							entry.color = {addon:GetResponseColor(k)}
+							entry.isAwardReason = nil
+							data.response = k
+							data.cols[6].args = {color = entry.color, response = entry.response, responseID = k}
+							LootHistory.frame.st:SortData()
+						end
+						Lib_UIDropDownMenu_AddButton(info, level)
+					end
+				end
 			end
 
 			info = Lib_UIDropDownMenu_CreateInfo()
@@ -839,10 +869,11 @@ function LootHistory.RightClickMenu(menu, level)
 					local entry = lootDB[data.name][data.num]
 					entry.responseID = k
 					entry.response = v.text
-					entry.color = v.color
+					entry.color = {unpack(v.color)}
 					entry.isAwardReason = nil
+					entry.tokenRoll = true
 					data.response = k
-					data.cols[6].args = {color = entry.color, response = entry.response, responseID = k}
+					data.cols[6].args = {color = entry.color, response = entry.response, responseID = k, tokenRoll = true}
 					LootHistory.frame.st:SortData()
 				end
 				Lib_UIDropDownMenu_AddButton(info, level)
@@ -860,6 +891,7 @@ function LootHistory.RightClickMenu(menu, level)
 					entry.response = v.text
 					entry.color = {unpack(v.color)} -- For some reason it won't just accept v.color (!)
 					entry.isAwardReason = true
+					entry.tokenRoll = nil
 					data.response = i
 					data.cols[6].args = {color = entry.color, response = entry.response, responseID = k}
 					LootHistory.frame.st:SortData()

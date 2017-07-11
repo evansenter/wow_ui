@@ -355,6 +355,8 @@ local blockedFunctions = {
   hash_SlashCmdList = true,
   CreateMacro = true,
   SetBindingMacro = true,
+  GuildDisband = true,
+  GuildUninvite = true,
 }
 
 local overrideFunctions = {
@@ -372,7 +374,7 @@ function WeakAuras.ActivateAuraEnvironment(id, cloneId, state)
     current_aura_env = aura_env_stack[#aura_env_stack] or nil;
   else
     local data = db.displays[id];
-    if data.init_completed then
+    if data.init_started then
       -- Point the current environment to the correct table
       aura_environments[id] = aura_environments[id] or {};
       current_aura_env = aura_environments[id];
@@ -390,6 +392,7 @@ function WeakAuras.ActivateAuraEnvironment(id, cloneId, state)
       tinsert(aura_env_stack, current_aura_env);
       -- Run the init function if supplied
       local actions = data.actions.init;
+      data.init_started = 1;
       if(actions and actions.do_custom and actions.custom) then
         local func = WeakAuras.customActionsFunctions[id]["init"];
         if func then
@@ -397,7 +400,6 @@ function WeakAuras.ActivateAuraEnvironment(id, cloneId, state)
           func();
         end
       end
-      data.init_completed = 1;
     end
     current_aura_env.id = id;
   end
@@ -782,8 +784,10 @@ local function CreateActivateCondition(ret, id, condition, conditionNumber, prop
                 and WeakAuras.customConditionsFunctions[id][conditionNumber].changes[changeNum]) then
               pathToCustomFunction = string.format("WeakAuras.customConditionsFunctions[%q][%s].changes[%s]", id, conditionNumber, changeNum);
             end
-            ret = ret .. "     region:" .. propertyData.action .. "(" .. formatValueForAssignment(propertyData.type, change.value, pathToCustomFunction) .. ")" .. "\n";
-            if (debug) then ret = ret .. "     print('# " .. propertyData.action .. "(" .. formatValueForAssignment(propertyData.type, change.value, pathToCustomFunction) .. "')\n"; end
+            ret = ret .. "     if (not skipActions) then\n";
+            ret = ret .. "       region:" .. propertyData.action .. "(" .. formatValueForAssignment(propertyData.type, change.value, pathToCustomFunction) .. ")" .. "\n";
+            if (debug) then ret = ret .. "       print('# " .. propertyData.action .. "(" .. formatValueForAssignment(propertyData.type, change.value, pathToCustomFunction) .. "')\n"; end
+            ret = ret .. "     end\n"
           end
         end
       end
@@ -889,7 +893,7 @@ function WeakAuras.ConstructConditionFunction(data)
   local ret = "";
   ret = ret .. "local newActiveConditions = {};\n"
   ret = ret .. "local propertyChanges = {}\n;"
-  ret = ret .. "return function(region)\n";
+  ret = ret .. "return function(region, skipActions)\n";
   if (debug) then ret = ret .. "  print('check conditions for:', region.id, region.cloneId)\n"; end
   ret = ret .. "  local id = region.id\n";
   ret = ret .. "  local cloneId = region.cloneId or ''\n";
@@ -1196,13 +1200,13 @@ function WeakAuras.LoadEncounterInitScripts(id)
   end
   if (id) then
     local data = db.displays[id]
-    if (data and data.load.use_encounterid and not data.init_completed and data.actions.init and data.actions.init.do_custom) then
+    if (data and data.load.use_encounterid and not data.init_started and data.actions.init and data.actions.init.do_custom) then
       WeakAuras.ActivateAuraEnvironment(id)
       WeakAuras.ActivateAuraEnvironment(nil)
     end
   else
     for id, data in pairs(db.displays) do
-      if (data.load.use_encounterid and not data.init_completed and data.actions.init and data.actions.init.do_custom) then
+      if (data.load.use_encounterid and not data.init_started and data.actions.init and data.actions.init.do_custom) then
         WeakAuras.ActivateAuraEnvironment(id)
         WeakAuras.ActivateAuraEnvironment(nil)
       end
@@ -2285,7 +2289,7 @@ function WeakAuras.pAdd(data)
       end
     end
 
-    data.init_completed = nil;
+    data.init_started = nil;
     data.load = data.load or {};
     data.actions = data.actions or {};
     data.actions.init = data.actions.init or {};
@@ -3558,67 +3562,6 @@ local function startStopTimers(id, cloneId, triggernum, state)
   end
 end
 
-function WeakAuras.SetProgressValue(region, value, total)
-  region.values.progress = value;
-  region.values.duration = total;
-  region:SetValue(value, total);
-end
-
-function WeakAuras.UpateRegionValues(region)
-  local remaining  = region.expirationTime - GetTime();
-  local duration  = region.duration;
-
-  local remainingStr     = "";
-  if remaining == math.huge then
-    remainingStr     = " ";
-  elseif remaining > 60 then
-    remainingStr     = string.format("%i:", math.floor(remaining / 60));
-    remaining       = remaining % 60;
-    remainingStr     = remainingStr..string.format("%02i", remaining);
-  elseif remaining > 0 then
-    -- remainingStr = remainingStr..string.format("%."..(data.progressPrecision or 1).."f", remaining);
-    if region.progressPrecision == 4 and remaining <= 3 then
-      remainingStr = remainingStr..string.format("%.1f", remaining);
-    elseif region.progressPrecision == 5 and remaining <= 3 then
-      remainingStr = remainingStr..string.format("%.2f", remaining);
-    elseif (region.progressPrecision == 4 or region.progressPrecision == 5) and remaining > 3 then
-      remainingStr = remainingStr..string.format("%d", remaining);
-    else
-      remainingStr = remainingStr..string.format("%."..(region.progressPrecision or 1).."f", remaining);
-    end
-  else
-    remainingStr     = " ";
-  end
-  region.values.progress   = remainingStr;
-
-  -- Format a duration time string
-  local durationStr     = "";
-  if duration > 60 then
-    durationStr     = string.format("%i:", math.floor(duration / 60));
-    duration       = duration % 60;
-    durationStr     = durationStr..string.format("%02i", duration);
-  elseif duration > 0 then
-    -- durationStr = durationStr..string.format("%."..(data.totalPrecision or 1).."f", duration);
-    if region.totalPrecision == 4 and duration <= 3 then
-      durationStr = durationStr..string.format("%.1f", duration);
-    elseif region.totalPrecision == 5 and duration <= 3 then
-      durationStr = durationStr..string.format("%.2f", duration);
-    elseif (region.totalPrecision == 4 or region.totalPrecision == 5) and duration > 3 then
-      durationStr = durationStr..string.format("%d", duration);
-    else
-      durationStr = durationStr..string.format("%."..(region.totalPrecision or 1).."f", duration);
-    end
-  else
-    durationStr     = " ";
-  end
-  region.values.duration   = durationStr;
-end
-
-function WeakAuras.TimerTick(region)
-  WeakAuras.UpateRegionValues(region);
-  region:TimerTick();
-end
-
 local function ApplyStateToRegion(id, region, state)
   region.state = state;
   if(region.SetDurationInfo) then
@@ -3717,15 +3660,15 @@ local function ApplyStatesToRegions(id, triggernum, states)
   -- Show new clones
   local visibleRegion = false;
   for cloneId, state in pairs(states) do
+    local region = WeakAuras.GetRegion(id, cloneId);
     if (state.show) then
       visibleRegion = true;
-      local region = WeakAuras.GetRegion(id, cloneId);
       if (not region.toShow or state.changed or region.state ~= state) then
         ApplyStateToRegion(id, region, state);
       end
-      if (checkConditions[id]) then -- Even if this state has not changed
-        checkConditions[id](region);
-      end
+    end
+    if (checkConditions[id]) then -- Even if this state has not changed
+      checkConditions[id](region);
     end
   end
 
@@ -3814,9 +3757,16 @@ function WeakAuras.UpdatedTriggerState(id)
       if (not activeTriggerState[cloneId] or not activeTriggerState[cloneId].show) then
         clone:Collapse();
       end
+    end
+    -- Show new states
+    ApplyStatesToRegions(id, newActiveTrigger, activeTriggerState);
   end
-  -- Show new states
-  ApplyStatesToRegions(id, newActiveTrigger, activeTriggerState);
+
+  for cloneId, state in pairs(activeTriggerState) do
+    local region = WeakAuras.GetRegion(id, cloneId);
+    if (checkConditions[id]) then
+      checkConditions[id](region, not state.show);
+    end
   end
 
 
@@ -3856,32 +3806,79 @@ function WeakAuras.ContainsPlaceHolders(textStr, toCheck)
   return false;
 end
 
+local function ReplaceValuePlaceHolders(textStr, region, customFunc)
+  local regionValues = region.values;
+  local value;
+  if (textStr == "%c" and customFunc) then
+    WeakAuras.ActivateAuraEnvironment(region.id, region.cloneId, region.state);
+    local value = customFunc(region.expirationTime, region.duration, regionValues.progress, regionValues.duration, regionValues.name, regionValues.icon, regionValues.stacks);
+    WeakAuras.ActivateAuraEnvironment(nil);
+    value = value or "";
+  else
+    local variable = WeakAuras.dynamic_texts[textStr];
+    variable = variable and variable.value;
+    value = variable and regionValues[variable] or "";
+  end
+  return value;
+end
+
 function WeakAuras.ReplacePlaceHolders(textStr, region, customFunc)
   local regionValues = region.values;
   local regionState = region.state;
-  if (regionState and textStr:len() > 2) then
-    for key, value in pairs(regionState) do
-      if (type(value) == "string" or type(value) == "number") then
-        if (not replaceStringCache[key]) then
-          replaceStringCache[key] = "%%" .. key;
-        end
-        textStr = textStr:gsub(replaceStringCache[key], tostring(value) or "");
-      end
-    end
+  if (not regionState and not regionValues) then
+    return;
   end
-  if (regionValues) then
-    for symbol, v in pairs(WeakAuras.dynamic_texts) do
-      if (customFunc and symbol == "%%c") then
 
-        WeakAuras.ActivateAuraEnvironment(region.id, region.cloneId, region.state);
-        local custom = customFunc(region.expirationTime, region.duration, regionValues.progress, regionValues.duration, regionValues.name, regionValues.icon, regionValues.stacks);
-        WeakAuras.ActivateAuraEnvironment(nil);
-        textStr = textStr:gsub(symbol, custom or "");
-      else
-        textStr = textStr:gsub(symbol, regionValues[v.value] or "");
-      end
+  -- We look backwards through the string
+  -- Invariant currentPos - endPos is a ascii "alphabetic" string
+  -- So on finding a "%" we extract  currentPos - endPos and depending
+  -- on how long the string is look it up in regionState or in regionValues
+  -- textStr is in UTF-8 encoding. We assume all state variables are pure alphabetic strings
+  local endPos = textStr:len();
+  if (endPos < 2) then
+    return textStr;
+  end
+
+  if (endPos == 2) then
+    local value = ReplaceValuePlaceHolders(textStr, region, customFunc);
+    if (value) then
+      return tostring(value);
+    else
+      return textStr;
     end
   end
+
+  local currentPos = endPos;
+  -- Look backwards
+  while (currentPos > 0) do
+    local char = string.byte(textStr, currentPos);
+    if (char == 37) then   --%
+      if (endPos - currentPos == 1 and regionValues) then
+        local symbol = string.sub(textStr, currentPos, endPos)
+        local value = ReplaceValuePlaceHolders(symbol, region, customFunc);
+        if (value) then
+          textStr = string.sub(textStr, 1, currentPos - 1) .. value .. string.sub(textStr, endPos + 1);
+        end
+      elseif (endPos > currentPos and regionState) then
+        local symbol = string.sub(textStr, currentPos + 1, endPos);
+        local value = regionState[symbol] and tostring(regionState[symbol]);
+        if (value) then
+          textStr = string.sub(textStr, 1, currentPos - 1) .. value .. string.sub(textStr, endPos + 1);
+        else
+          value = ReplaceValuePlaceHolders(string.sub(textStr, currentPos, currentPos + 1), region, customFunc);
+          value = value or "";
+          textStr = string.sub(textStr, 1, currentPos - 1) .. value .. string.sub(textStr, currentPos + 2);
+        end
+      end
+      endPos = currentPos - 1;
+    elseif (char >= 65 and char <= 90) or (char >= 97 and char <= 122) then
+      -- a-zA-Z character
+    else
+      endPos = currentPos - 1;
+    end
+    currentPos = currentPos - 1;
+  end
+
   textStr = textStr:gsub("\\n", "\n");
   return textStr;
 end

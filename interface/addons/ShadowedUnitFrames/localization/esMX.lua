@@ -311,5 +311,6 @@ L["Total number of active holy power."] = "Número total de poder sagrado activo
 L["Total number of active soul shards."] = "Número total de fragmentos de almas activos."
 L["Whitelist"] = "Lista blanca"
 L["Zone configuration units"] = "Configuración de unidades por zona"
+
 local ShadowUF = select(2, ...)
 ShadowUF.L = setmetatable(L, {__index = ShadowUF.L})

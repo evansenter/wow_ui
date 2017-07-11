@@ -446,8 +446,8 @@ end
 function WeakAuras.CheckTalentByIndex(index)
   local tier = ceil(index / 3)
   local column = (index - 1) % 3 + 1
-  local _, _, _, selected = GetTalentInfo(tier, column, 1)
-  return selected
+  local _, _, _, selected, _, _, _, _, _, _, known  = GetTalentInfo(tier, column, 1)
+  return selected or known;
 end
 
 function WeakAuras.CheckPvpTalentByIndex(index)
@@ -491,6 +491,39 @@ function WeakAuras.CheckCombatLogFlags(flags, flagToCheck)
   elseif (flagToCheck == "NotInGroup") then
     return bit.band(flags, 7) == 0;
   end
+end
+
+function WeakAuras.CheckRaidFlags(flags, flagToCheck)
+  flagToCheck = tonumber(flagToCheck)
+  if not flagToCheck then return end --bailout
+  if flagToCheck == 0 then --no raid mark
+    return bit.band(flags, COMBATLOG_OBJECT_RAIDTARGET_MASK) == 0
+  elseif flagToCheck == 9 then --any raid mark
+    return bit.band(flags, COMBATLOG_OBJECT_RAIDTARGET_MASK) > 0
+  else -- specific raid mark
+    return bit.band(flags, _G['COMBATLOG_OBJECT_RAIDTARGET'..flagToCheck]) > 0
+  end
+end
+
+function WeakAuras.IsSpellKnown(spell, pet)
+  if (pet) then
+    return IsSpellKnown(spell);
+  end
+  return IsPlayerSpell(spell) or IsSpellKnown(spell);
+end
+
+function WeakAuras.UnitPowerDisplayMod(powerType)
+  if (powerType == 7) then
+    return 10;
+  end
+  return 1;
+end
+
+function WeakAuras.UseUnitPowerThirdArg(powerType)
+  if (powerType == 7) then
+    return true;
+  end
+  return nil;
 end
 
 local function valuesForTalentFunction(trigger)
@@ -740,7 +773,7 @@ WeakAuras.load_prototype = {
       name = "spellknown",
       display = L["Spell Known"],
       type = "spell",
-      test = "IsSpellKnown(%s)"
+      test = "WeakAuras.IsSpellKnown(%s)"
     },
     {
       name = "race",
@@ -1008,13 +1041,15 @@ WeakAuras.event_prototypes = {
         local unit = unit or [[%s]];
         local concernedUnit = [[%s]];
         local powerType = %s;
+        local unitPowerType = UnitPowerType(concernedUnit);
+        local powerTypeToCheck = powerType or unitPowerType;
+        local powerThirdArg = WeakAuras.UseUnitPowerThirdArg(powerTypeToCheck);
       ]=];
       ret = ret:format(trigger.unit, trigger.unit, trigger.use_powertype and trigger.powertype or "nil");
       if (trigger.use_powertype and trigger.powertype == 99) then
         ret = ret .. [[
         local UnitPower = UnitStagger;
         local UnitPowerMax = UnitHealthMax;
-        local UnitPowerDisplayMod = function() return nil end;
       ]]
       end
       return ret
@@ -1035,7 +1070,7 @@ WeakAuras.event_prototypes = {
         display = L["Power Type"],
         type = "select",
         values = "power_types_with_stagger",
-        init = "UnitPowerType(concernedUnit)",
+        init = "unitPowerType",
         test = "true",
         store = true,
         conditionType = "select"
@@ -1044,7 +1079,7 @@ WeakAuras.event_prototypes = {
         name = "requirePowerType",
         display = L["Only if Primary"],
         type = "toggle",
-        test = "powertype == powerType",
+        test = "unitPowerType == powerType",
         enable = function(trigger)
           return trigger.use_powertype
         end,
@@ -1053,7 +1088,7 @@ WeakAuras.event_prototypes = {
         name = "power",
         display = L["Power"],
         type = "number",
-        init = "UnitPower(concernedUnit, powerType, true) / (UnitPowerDisplayMod(powerType or powertype) or 1)",
+        init = "UnitPower(concernedUnit, powerType, powerThirdArg) / WeakAuras.UnitPowerDisplayMod(powerTypeToCheck)",
         store = true,
         conditionType = "number"
       },
@@ -1061,7 +1096,7 @@ WeakAuras.event_prototypes = {
         name = "percentpower",
         display = L["Power (%)"],
         type = "number",
-        init = "((UnitPower(concernedUnit, powerType, true) or 0) / math.max(1, UnitPowerMax(concernedUnit, powerType, true))) * 100;",
+        init = "(power or 0) / math.max(1, UnitPowerMax(concernedUnit, powerType, powerThirdArg)) * 100;",
         store = true,
         conditionType = "number"
       },
@@ -1075,14 +1110,21 @@ WeakAuras.event_prototypes = {
       if (powerType == 99) then
         return UnitStagger(trigger.unit), math.max(1, UnitHealthMax(trigger.unit)), "fastUpdate";
       end
-      return UnitPower(trigger.unit, powerType), math.max(1, UnitPowerMax(trigger.unit, powerType)), "fastUpdate";
+      local powerTypeToCheck = trigger.powertype or UnitPowerType(trigger.unit);
+      local pdm = WeakAuras.UnitPowerDisplayMod(powerTypeToCheck);
+      local useThirdArg = WeakAuras.UseUnitPowerThirdArg(powerTypeToCheck)
+
+      return UnitPower(trigger.unit, powerType, useThirdArg) / pdm, math.max(1, UnitPowerMax(trigger.unit, powerType, useThirdArg)) / pdm, "fastUpdate";
     end,
     stacksFunc = function(trigger)
       local powerType = trigger.use_powertype and trigger.powertype or nil;
       if (powerType == 99) then
         return UnitStagger(trigger.unit);
       end
-      return UnitPower(trigger.unit, powerType);
+      local powerTypeToCheck = trigger.powertype or UnitPowerType(trigger.unit);
+      local pdm = WeakAuras.UnitPowerDisplayMod(powerTypeToCheck);
+      local useThirdArg = WeakAuras.UseUnitPowerThirdArg(powerTypeToCheck)
+      return UnitPower(trigger.unit, powerType, useThirdArg) / pdm;
     end,
     automatic = true
   },
@@ -1203,7 +1245,17 @@ WeakAuras.event_prototypes = {
         conditionType = "select",
         conditionTest = "state and state.show and WeakAuras.CheckCombatLogFlags(sourceFlags, '%s')",
       },
-      {}, -- sourceRaidFlags ignored with _ argument
+      {
+        name = "sourceRaidFlags",
+        display = L["Source Raid Mark"],
+        type = "select",
+        values = "combatlog_raid_mark_check_type",
+        init = "arg",
+        store = true,
+        test = "WeakAuras.CheckRaidFlags(sourceRaidFlags,'%s')",
+        conditionType = "select",
+        conditionTest = "state and state.show and WeakAuras.CheckRaidFlags(sourceRaidFlags,'%s')",
+      },
       {
         name = "destGUID",
         init = "arg",
@@ -1234,7 +1286,7 @@ WeakAuras.event_prototypes = {
         store = true,
         conditionType = "string"
       },
-      {
+      { -- destName ignore for SPELL_CAST_START
         enable = function(trigger)
           return (trigger.subeventPrefix == "SPELL" and trigger.subeventSuffix == "_CAST_START");
         end
@@ -1253,12 +1305,30 @@ WeakAuras.event_prototypes = {
           return not (trigger.subeventPrefix == "SPELL" and trigger.subeventSuffix == "_CAST_START");
         end,
       },
-      {
+      {-- destFlags ignore for SPELL_CAST_START
         enable = function(trigger)
           return (trigger.subeventPrefix == "SPELL" and trigger.subeventSuffix == "_CAST_START");
         end,
       },
-      {}, -- destRaidFlags ignored with _ argument
+      {
+        name = "destRaidFlags",
+        display = L["Dest Raid Mark"],
+        type = "select",
+        values = "combatlog_raid_mark_check_type",
+        init = "arg",
+        store = true,
+        test = "WeakAuras.CheckRaidFlags(destRaidFlags,'%s')",
+        conditionType = "select",
+        conditionTest = "state and state.show and WeakAuras.CheckRaidFlags(destRaidFlags,'%s')",
+        enable = function(trigger)
+          return not (trigger.subeventPrefix == "SPELL" and trigger.subeventSuffix == "_CAST_START");
+        end,
+      },
+      { -- destRaidFlags ignore for SPELL_CAST_START
+        enable = function(trigger)
+          return (trigger.subeventPrefix == "SPELL" and trigger.subeventSuffix == "_CAST_START");
+        end
+      },
       {
         name = "spellId",
         display = L["Spell Id"],
@@ -2342,13 +2412,13 @@ WeakAuras.event_prototypes = {
       local ret = [=[
         return function(states, event, id)
         local triggerAddon = %s;
-        local triggerSpellId = %s;
+        local triggerSpellId = %q;
         local triggerText = %s;
         local triggerTextOperator = [[%s]];
       ]=]
 
       ret = ret:format(trigger.use_addon and ('[[' .. (trigger.addon or '') .. ']]') or "nil",
-        trigger.use_spellId and tostring(trigger.spellId) or "nil",
+        trigger.use_spellId and tostring(trigger.spellId) or "",
         trigger.use_text and ('[[' .. (trigger.text or '') .. ']]') or "nil",
         trigger.use_text and trigger.text_operator or ""
       );
@@ -2444,7 +2514,7 @@ WeakAuras.event_prototypes = {
       {
         name = "spellId",
         display = L["Spell Id"], -- Correct?
-        type = "longstring",
+        type = "string",
       },
       {
         name = "text",
@@ -3726,7 +3796,7 @@ WeakAuras.event_prototypes = {
       },
       {
         hidden = true,
-        test = "spellName and IsSpellKnown(spellName, usePet)";
+        test = "spellName and WeakAuras.IsSpellKnown(spellName, usePet)";
       }
     },
     iconFunc = function(trigger)
@@ -3792,35 +3862,35 @@ WeakAuras.event_prototypes = {
 };
 
 WeakAuras.dynamic_texts = {
-  ["%%p"] = {
+  ["%p"] = {
     unescaped = "%p",
     name = L["Progress"],
     value = "progress",
     static = "8.0"
   },
-  ["%%t"] = {
+  ["%t"] = {
     unescaped = "%t",
     name = L["Total"],
     value = "duration",
     static = "12.0"
   },
-  ["%%n"] = {
+  ["%n"] = {
     unescaped = "%n",
     name = L["Name"],
     value = "name"
   },
-  ["%%i"] = {
+  ["%i"] = {
     unescaped = "%i",
     name = L["Icon"],
     value = "icon"
   },
-  ["%%s"] = {
+  ["%s"] = {
     unescaped = "%s",
     name = L["Stacks"],
     value = "stacks",
     static = 1
   },
-  ["%%c"] = {
+  ["%c"] = {
     unescaped = "%c",
     name = L["Custom"],
     value = "custom",

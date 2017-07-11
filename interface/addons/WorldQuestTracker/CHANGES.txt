@@ -1,7 +1,7 @@
-changeset:   145:9bd2ee26a356
-tag:         v7.2.5.145-release
+changeset:   151:470c95ce5b58
+tag:         v7.2.5.151-release
 user:        Tercio
-date:        Sun Jun 18 14:46:35 2017 -0300
-summary:     - Artifact power amount rounded: now showns "10M" instead of "10.0M" or "10.2M".
+date:        Wed Jul 05 13:48:27 2017 -0300
+summary:     - Ticket #456: problem with pet battle quest showing a wrong icon.
 
 

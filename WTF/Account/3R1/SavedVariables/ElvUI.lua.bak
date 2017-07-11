@@ -24,9 +24,9 @@ ElvDB = {
 		},
 		["Illidan"] = {
 			["Cometron"] = 11330625,
-			["Evan"] = 46272594,
-			["Comet"] = 1492973145,
-			["Cometstorm"] = 314232218,
+			["Evan"] = 37563179,
+			["Comet"] = 1520422166,
+			["Cometstorm"] = 161641526,
 			["Combustion"] = 506078957,
 			["Pandatal"] = 404400,
 			["Natal"] = 6615423,
@@ -46,6 +46,11 @@ ElvDB = {
 		["uiScale"] = "0.64",
 		["screenwidth"] = 1919.68,
 		["unitframe"] = {
+			["aurafilters"] = {
+				["Whitelist"] = {
+					["type"] = "Blacklist",
+				},
+			},
 			["buffwatchBackup"] = {
 				["DEATHKNIGHT"] = {
 					[49016] = {
@@ -76,15 +81,15 @@ ElvDB = {
 					},
 					[17] = {
 					},
-					[6788] = {
+					[123258] = {
 					},
 					[33206] = {
 					},
-					[139] = {
-					},
-					[123258] = {
-					},
 					[10060] = {
+					},
+					[6788] = {
+					},
+					[139] = {
 					},
 					[41635] = {
 					},
@@ -138,11 +143,6 @@ ElvDB = {
 					},
 					[148039] = {
 					},
-				},
-			},
-			["aurafilters"] = {
-				["Whitelist"] = {
-					["type"] = "Blacklist",
 				},
 			},
 			["ChannelTicks"] = {
@@ -1867,7 +1867,7 @@ ElvDB = {
 					["hideInCombat"] = true,
 				},
 				["experience"] = {
-					["enable"] = false,
+					["mouseover"] = true,
 					["font"] = "ABF",
 				},
 				["honor"] = {
@@ -3505,6 +3505,7 @@ ElvPrivateDB = {
 			},
 			["general"] = {
 				["chatBubbleFontSize"] = 12,
+				["chatBubbleHideInInstance"] = true,
 				["chatBubbles"] = "nobackdrop",
 				["namefont"] = "ABF",
 				["glossTex"] = "BantoBar",
@@ -3590,17 +3591,17 @@ ElvPrivateDB = {
 			["general"] = {
 				["glossTex"] = "BantoBar",
 				["normTex"] = "BantoBar",
-				["chatBubbleFont"] = "ABF",
 				["minimapbar"] = {
 					["backdrop"] = true,
 					["mouseover"] = true,
 					["buttonSize"] = 24,
 				},
+				["chatBubbles"] = "nobackdrop",
 				["raidmarkerbar"] = {
 					["enable"] = false,
 				},
 				["namefont"] = "ABF",
-				["chatBubbles"] = "nobackdrop",
+				["chatBubbleFont"] = "ABF",
 				["dmgfont"] = "ABF",
 			},
 			["tooltip"] = {
@@ -3609,9 +3610,12 @@ ElvPrivateDB = {
 			["auras"] = {
 				["enable"] = false,
 			},
-			["unitframe"] = {
+			["bags"] = {
 				["enable"] = false,
+			},
+			["unitframe"] = {
 				["disableBlizzard"] = false,
+				["enable"] = false,
 			},
 			["addonskins"] = {
 				["DBMSkin"] = false,
@@ -3625,8 +3629,9 @@ ElvPrivateDB = {
 			["skins"] = {
 				["blizzard"] = {
 					["socket"] = false,
-					["talent"] = false,
 					["losscontrol"] = false,
+					["talent"] = false,
+					["enable"] = false,
 					["encounterjournal"] = false,
 					["garrison"] = false,
 					["spellbook"] = false,

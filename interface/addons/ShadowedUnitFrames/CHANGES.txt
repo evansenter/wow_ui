@@ -1,12 +1,12 @@
-tag a2a35582749c673cb347611f632278d596fa38db v4.1.17
+tag 52f4ef593f61e4b56fea8b2d6ea0d6c0361fab84 v4.1.19
 Author:	Hendrik Leppkes <h.leppkes@gmail.com>
-Date:	Wed Mar 29 09:43:46 2017 +0200
+Date:	Thu Jun 29 15:56:16 2017 +0200
 
-Tag as v4.1.17
+Tag as v4.1.19
 
-commit 3d49caef98e9b6f79734fd45b7559fb3e8e6533a
+commit 48bc8b5fdafa01ce5b162bf1eb8b23cf687d242e
 Author: Hendrik Leppkes <h.leppkes@gmail.com>
-Date:   Wed Mar 29 09:43:15 2017 +0200
+Date:   Thu Jun 29 15:56:00 2017 +0200
 
-    Separate Blizzard cooldown count from OmniCC cooldown count and disable Blizzard by default
+    Fix combo points in "bar" layout
 

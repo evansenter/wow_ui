@@ -913,5 +913,6 @@ L["Your Auras"] = "你的光環"
 L["Your code must be wrapped in a function, for example, if you were to make a tag to return the units name you would do:|n|nfunction(unit, unitOwner)|nreturn UnitName(unitOwner)|nend"] = "你的代碼必須包含在函數中，例如，你要在單位名稱中顯示標記你必須這樣寫::|n|nfunction(unit, unitOwner)|nreturn UnitName(unitOwner)|nend"
 L["Zone Configuration"] = "區域設置"
 L["Zone configuration units"] = "單位地區設定"
+
 local ShadowUF = select(2, ...)
 ShadowUF.L = setmetatable(L, {__index = ShadowUF.L})

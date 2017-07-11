@@ -22,7 +22,7 @@ OmniCC4Config = {
 			["enabled"] = true,
 		}, -- [3]
 	},
-	["version"] = "7.2.0",
+	["version"] = "7.2.1",
 	["groupSettings"] = {
 		["Comet"] = {
 			["enabled"] = true,

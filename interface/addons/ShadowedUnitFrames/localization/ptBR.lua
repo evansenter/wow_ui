@@ -198,5 +198,6 @@ L["Visibility"] = "Visibilidade"
 L["Yellow (>30% HP)"] = "Amarelo (>30% Vida)"
 L["You must enter a number that is 0 or higher, negative numbers are not allowed."] = "Você precisa por um número, 0 ou maior, número negativos não serão aceitos."
 L["Zone Configuration"] = "Configuração de Zona"
+
 local ShadowUF = select(2, ...)
 ShadowUF.L = setmetatable(L, {__index = ShadowUF.L})
