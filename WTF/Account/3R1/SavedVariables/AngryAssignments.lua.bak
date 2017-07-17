@@ -21,6 +21,13 @@ AngryAssign_Pages = {
 		["UpdateId"] = 2444088531,
 		["Contents"] = "Throughput CDs will be called for.\n\n1 - Revival\n2 - Healing Tide\n3 - Tranq\n\nDefensive CDs will be called for\n\n1 - Devo\n2 - Barrier\n3 - Rally\n4 - Amps",
 	},
+	[3834375680] = {
+		["Updated"] = 1500002899,
+		["Name"] = "8Fallen Avatar",
+		["Id"] = 3834375680,
+		["UpdateId"] = 683018418,
+		["Contents"] = "Rupture CDs:\n#1 Tide\n#2 Aura\n#3 Hymn + Rando\n#4 Tranq\n#5 Tide\n#6 Aura + Hymn\n#7 Tranq",
+	},
 	[1529603911] = {
 		["Updated"] = 1425948720,
 		["Name"] = "Flamebender ",
@@ -227,11 +234,11 @@ AngryAssign_Pages = {
 		["Contents"] = "1st Tectonic:\n------------------\nPersonals\n\n2nd Tectonic:\n-------------------\nCexcells + Twin + Bluto (melee smoke) +\nS Link (on ranged) + Scar (Ascen) + \nProc (AG) + Hemo (RC)\n\nMote Phase (with Lust)\n---------------------------------\n1) Fox + Gandalf + Scar (Tide)\n2) NVs + Tonics + Personals\n\n\nFox Order:\nAzimyth - Azpek - Roy - Hockey",
 	},
 	[593718423] = {
-		["Updated"] = 1498614426,
+		["Updated"] = 1499822841,
 		["Name"] = "4Mistress Sassz'ine",
 		["Id"] = 593718423,
-		["UpdateId"] = 3273339858,
-		["Contents"] = "Hydro Shot Grps:\n{diamond}: Bluto / Telgina / Thenex\n{star}: Eklipto / Grimuhs / Nadzeija\n{circle}: Zilas / Dadizzle / Xorn\n\nInk People: Fear / Telgina / Thenex / Nadzieja\n\nPhase 1:\n2nd Hydro Shot: Tide\n\nPhase 2 (70%):\n1st Shot: Tide\n2nd Shot: Aura\n3rd Shot: Hymn\n\nPhase 3 (40%):\n1st Shot: Tranq\n2nd Shot: Tide\n3rd Shot: Aura",
+		["UpdateId"] = 2202879544,
+		["Contents"] = "Hydro Shot Grps:\n\nInk People: Fear / Telgina / Thenex / Nadzieja\n\nPhase 1:\n2nd Hydro Shot: Tide\n\nPhase 2 (70%):\n1st Shot: Tide\n2nd Shot: Aura\n3rd Shot: Hymn\n\nPhase 3 (40%):\n1st Shot: Tranq\n2nd Shot: Tide\n3rd Shot: Aura",
 	},
 	[223793571] = {
 		["Updated"] = 1420677848,
@@ -303,6 +310,8 @@ AngryAssign_State = {
 		["treewidth"] = 175,
 		["fullwidth"] = 666.000061035156,
 	},
+	["locked"] = true,
+	["directionUp"] = false,
 	["display"] = {
 		["y"] = -1.55517578125,
 		["x"] = 9.00002479553223,
@@ -317,8 +326,6 @@ AngryAssign_State = {
 		["left"] = 610,
 		["width"] = 700,
 	},
-	["locked"] = true,
-	["directionUp"] = false,
 }
 AngryAssign_Config = {
 	["backdropColor"] = "00000040",

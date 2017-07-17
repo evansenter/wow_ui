@@ -20,13 +20,6 @@ X: 342
 Y: -86
 W: 128
 H: 64
-Frame: ColorPickerFrame
-FrameLevel: 21
-Anchor: CENTER
-X: 0
-Y: 0
-W: 365
-H: 240
 Frame: ZoneAbilityFrame
 FrameLevel: 2
 Anchor: BOTTOM
@@ -48,3 +41,10 @@ X: 0
 Y: 60
 W: 370
 H: 110
+Frame: ColorPickerFrame
+FrameLevel: 21
+Anchor: CENTER
+X: 0
+Y: 0
+W: 405
+H: 240

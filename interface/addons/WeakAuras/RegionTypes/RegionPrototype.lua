@@ -149,12 +149,74 @@ local function RunCode(self, func)
   end
 end
 
+local function UpdatePosition(self)
+  if (not self.anchorPoint or not self.relativeTo or not self.relativePoint) then
+    return;
+  end
+
+  local xOffset = self.xOffset + (self.xOffsetAnim or 0);
+  local yOffset = self.yOffset + (self.yOffsetAnim or 0);
+  self:SetPoint(self.anchorPoint, self.relativeTo, self.relativePoint, xOffset, yOffset );
+end
+
+local function ResetPosition(self)
+  self.anchorPoint = nil;
+  self.relativeTo = nil;
+  self.relativePoint = nil;
+end
+
+local function SetAnchor(self, anchorPoint, relativeTo, relativePoint)
+  local needsClearPoint = self.anchorPoint ~= anchorPoint or self.relativeTo ~= relativeTo or self.relativePoint ~= relativePoint;
+  self.anchorPoint = anchorPoint;
+  self.relativeTo = relativeTo;
+  self.relativePoint = relativePoint;
+
+  if (needsClearPoint) then
+    self:ClearAllPoints();
+  end
+
+  UpdatePosition(self);
+end
+
+local function SetOffset(self, xOffset, yOffset)
+  if (self.xOffset == xOffset and self.yOffset == yOffset) then
+    return;
+  end
+  self.xOffset = xOffset;
+  self.yOffset = yOffset;
+  UpdatePosition(self);
+end
+
+local function GetXOffset(self)
+  return self.xOffset;
+end
+
+local function GetYOffset(self)
+  return self.yOffset;
+end
+
+local function SetOffsetAnim(self, xOffset, yOffset)
+  if (self.xOffsetAnim == xOffset and self.yOffsetAnim == yOffset) then
+    return;
+  end
+  self.xOffsetAnim = xOffset;
+  self.yOffsetAnim = yOffset;
+  UpdatePosition(self);
+end
+
 function WeakAuras.regionPrototype.create(region)
   region.SoundPlay = SoundPlay;
   region.SoundStop = SoundStop;
   region.SoundRepeatStop = SoundRepeatStop;
   region.SendChat = SendChat;
   region.RunCode = RunCode;
+
+  region.SetAnchor = SetAnchor;
+  region.SetOffset = SetOffset;
+  region.SetOffsetAnim = SetOffsetAnim;
+  region.GetXOffset = GetXOffset;
+  region.GetYOffset = GetYOffset;
+  region.ResetPosition = ResetPosition;
 end
 
 -- SetDurationInfo
@@ -166,6 +228,10 @@ function WeakAuras.regionPrototype.modify(parent, region, data)
 
   region.adjustedMin = hasAdjustedMin and data.adjustedMin and data.adjustedMin > 0 and data.adjustedMin;
   region.adjustedMax = hasAdjustedMax and data.adjustedMax and data.adjustedMax > 0 and data.adjustedMax;
+
+  region:SetOffset(data.xOffset, data.yOffset);
+  region:SetOffsetAnim(0, 0);
+  WeakAuras.AnchorFrame(data, region, parent);
 end
 
 local function SetProgressValue(region, value, total)

@@ -21,6 +21,13 @@ AngryAssign_Pages = {
 		["UpdateId"] = 2444088531,
 		["Contents"] = "Throughput CDs will be called for.\n\n1 - Revival\n2 - Healing Tide\n3 - Tranq\n\nDefensive CDs will be called for\n\n1 - Devo\n2 - Barrier\n3 - Rally\n4 - Amps",
 	},
+	[3834375680] = {
+		["Updated"] = 1500002899,
+		["Name"] = "8Fallen Avatar",
+		["Id"] = 3834375680,
+		["UpdateId"] = 683018418,
+		["Contents"] = "Rupture CDs:\n#1 Tide\n#2 Aura\n#3 Hymn + Rando\n#4 Tranq\n#5 Tide\n#6 Aura + Hymn\n#7 Tranq",
+	},
 	[1529603911] = {
 		["Updated"] = 1425948720,
 		["Name"] = "Flamebender ",
@@ -227,11 +234,11 @@ AngryAssign_Pages = {
 		["Contents"] = "Whirlwind (emp):\n1) (emp) Dj(Tranq) + Hockey + Cexcells\n2) (emp) Twin(Hymn) + Lan(Barrier) + Cexcells + Azpek\n\nShout:\n2) Devo\n4) Devo\n\nRubble:\n2)  Scar  + Tokman + Hemo + Gandalf\n3)  Dj tranq + Bluto (Smoke) + \n4)  Twin + Lanfear + Cexcells + Hockey\n5)  Scar + Tokman + Hemo + Gandalf\n\nQuake\n2) Twin + Captain + NVs \n3) Akroma + HS + personals",
 	},
 	[593718423] = {
-		["Updated"] = 1498614426,
+		["Updated"] = 1499822841,
 		["Name"] = "4Mistress Sassz'ine",
 		["Id"] = 593718423,
-		["UpdateId"] = 3273339858,
-		["Contents"] = "Hydro Shot Grps:\n{diamond}: Bluto / Telgina / Thenex\n{star}: Eklipto / Grimuhs / Nadzeija\n{circle}: Zilas / Dadizzle / Xorn\n\nInk People: Fear / Telgina / Thenex / Nadzieja\n\nPhase 1:\n2nd Hydro Shot: Tide\n\nPhase 2 (70%):\n1st Shot: Tide\n2nd Shot: Aura\n3rd Shot: Hymn\n\nPhase 3 (40%):\n1st Shot: Tranq\n2nd Shot: Tide\n3rd Shot: Aura",
+		["UpdateId"] = 2202879544,
+		["Contents"] = "Hydro Shot Grps:\n\nInk People: Fear / Telgina / Thenex / Nadzieja\n\nPhase 1:\n2nd Hydro Shot: Tide\n\nPhase 2 (70%):\n1st Shot: Tide\n2nd Shot: Aura\n3rd Shot: Hymn\n\nPhase 3 (40%):\n1st Shot: Tranq\n2nd Shot: Tide\n3rd Shot: Aura",
 	},
 	[1312776073] = {
 		["Updated"] = 1422328348,
@@ -293,15 +300,13 @@ AngryAssign_Pages = {
 AngryAssign_Categories = {
 }
 AngryAssign_State = {
-	["directionUp"] = false,
-	["display"] = {
-		["y"] = -1.55517578125,
-		["x"] = 9.00002479553223,
-		["point"] = "TOPLEFT",
-		["scale"] = 1,
-		["hidden"] = false,
-		["width"] = 403.888854980469,
+	["window"] = {
+		["height"] = 499.999969482422,
+		["top"] = 850,
+		["left"] = 610,
+		["width"] = 700,
 	},
+	["locked"] = true,
 	["tree"] = {
 		["groups"] = {
 			["664173253"] = true,
@@ -312,13 +317,15 @@ AngryAssign_State = {
 		["treewidth"] = 175,
 		["selected"] = 3351906713,
 	},
-	["locked"] = true,
-	["window"] = {
-		["height"] = 499.999969482422,
-		["top"] = 850,
-		["left"] = 610,
-		["width"] = 700,
+	["display"] = {
+		["y"] = -1.55517578125,
+		["x"] = 9.00002479553223,
+		["point"] = "TOPLEFT",
+		["scale"] = 1,
+		["hidden"] = false,
+		["width"] = 403.888854980469,
 	},
+	["directionUp"] = false,
 }
 AngryAssign_Config = {
 	["backdropColor"] = "00000040",

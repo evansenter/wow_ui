@@ -151,7 +151,7 @@ SkadaDB = {
 				}, -- [2]
 			},
 			["icon"] = {
-				["minimapPos"] = 183.05770626889,
+				["minimapPos"] = 181.212482882599,
 			},
 			["report"] = {
 				["number"] = 5,
@@ -253,13 +253,14 @@ SkadaDB = {
 				}, -- [1]
 			},
 			["modeclicks"] = {
-				["Deaths"] = 4,
+				["Deaths"] = 5,
 				["Dispels"] = 5,
 				["Damage taken by spell"] = 20,
-				["Healing"] = 90,
+				["Healing"] = 98,
 				["Healing taken"] = 6,
+				["Overhealing"] = 1,
 				["Enemy damage taken"] = 14,
-				["Buff uptimes"] = 6,
+				["Buff uptimes"] = 8,
 				["Interrupts"] = 4,
 				["Damage taken"] = 9,
 				["Total healing"] = 3,

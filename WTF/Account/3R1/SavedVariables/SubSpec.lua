@@ -82,6 +82,48 @@ SubSpecStorage = {
 			},
 		}, -- [2]
 	},
+	["Priest Shadow"] = {
+		{
+			["name"] = "Mythic+",
+			["data"] = {
+				{
+					["id"] = 22312,
+					["name"] = "Twist of Fate",
+					["column"] = 1,
+				}, -- [1]
+				{
+					["id"] = 22316,
+					["name"] = "Body and Soul",
+					["column"] = 2,
+				}, -- [2]
+				{
+					["id"] = 22487,
+					["name"] = "Mind Bomb",
+					["column"] = 1,
+				}, -- [3]
+				{
+					["id"] = 21751,
+					["name"] = "Lingering Insanity",
+					["column"] = 1,
+				}, -- [4]
+				{
+					["id"] = 22310,
+					["name"] = "San'layn",
+					["column"] = 1,
+				}, -- [5]
+				{
+					["id"] = 21720,
+					["name"] = "Mindbender",
+					["column"] = 3,
+				}, -- [6]
+				{
+					["id"] = 21637,
+					["name"] = "Legacy of the Void",
+					["column"] = 1,
+				}, -- [7]
+			},
+		}, -- [1]
+	},
 	["Monk Mistweaver"] = {
 		{
 			["name"] = "Mythic+",

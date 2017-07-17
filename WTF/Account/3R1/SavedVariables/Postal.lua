@@ -27,7 +27,7 @@ Postal3DB = {
 				"Cometstorm|Illidan|Horde|110|MAGE", -- [5]
 				"Comet|Illidan|Horde|110|MONK", -- [6]
 				"Ereinion|Dark Iron|Horde|81|WARLOCK", -- [7]
-				"Evan|Illidan|Horde|102|PRIEST", -- [8]
+				"Evan|Illidan|Horde|110|PRIEST", -- [8]
 				"Metal|Illidan|Horde|100|WARRIOR", -- [9]
 				"Natalan|Dark Iron|Horde|85|SHAMAN", -- [10]
 				"Natalan|Illidan|Horde|86|MAGE", -- [11]

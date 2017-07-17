@@ -47,7 +47,7 @@ VER 3 000000000000004D "GS" "INV_Misc_QuestionMark"
 END
 VER 3 0000000000000050 "HF" "INV_Misc_QuestionMark"
 #showtooltip
-/use [harm][@targettarget,harm][]Holy Fire
+/use [harm][@mouseovertarget,harm][]Holy Fire
 END
 VER 3 0000000000000034 "HS / GHS" "INV_Misc_QuestionMark"
 #showtooltip
