@@ -1,7 +1,7 @@
 VER 3 0000000000000031 "Belt" "INV_MISC_QUESTIONMARK"
 /use 6
 END
-VER 3 000000000000004C "BH" "INV_Misc_QuestionMark"
+VER 3 000000000000004C "BH" "135883"
 #showtooltip
 /use [target=mouseover,help,nodead][]Binding Heal
 END

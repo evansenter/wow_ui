@@ -9,11 +9,15 @@ PawnOptions = {
 		[128868] = {
 			["Relics"] = {
 				{
+					["ItemLevel"] = 36,
 					["Type"] = "Holy",
 				}, -- [1]
 				{
 					["Type"] = "Shadow",
 				}, -- [2]
+				{
+					["Type"] = "Holy",
+				}, -- [3]
 			},
 			["Name"] = "Light's Wrath",
 		},
@@ -27,19 +31,27 @@ PawnOptions = {
 					["ItemLevel"] = 28,
 					["Type"] = "Blood",
 				}, -- [2]
+				{
+					["ItemLevel"] = 42,
+					["Type"] = "Shadow",
+				}, -- [3]
 			},
 			["Name"] = "Xal'atath, Blade of the Black Empire",
 		},
 		[128825] = {
 			["Relics"] = {
 				{
-					["ItemLevel"] = 36,
+					["ItemLevel"] = 46,
 					["Type"] = "Holy",
 				}, -- [1]
 				{
 					["ItemLevel"] = 37,
 					["Type"] = "Life",
 				}, -- [2]
+				{
+					["ItemLevel"] = 42,
+					["Type"] = "Holy",
+				}, -- [3]
 			},
 			["Name"] = "T'uure, Beacon of the Naaru",
 		},

@@ -4,6 +4,7 @@ PawnOptions = {
 	["LastPlayerFullName"] = "Cometstorm-Illidan",
 	["AutoSelectScales"] = true,
 	["UpgradeTracking"] = false,
+	["LastKeybindingsSet"] = 1,
 	["Artifacts"] = {
 		[128820] = {
 			["Relics"] = {
@@ -22,23 +23,6 @@ PawnOptions = {
 			},
 			["Name"] = "Felo'melorn",
 		},
-		[127857] = {
-			["Relics"] = {
-				{
-					["ItemLevel"] = 24,
-					["Type"] = "Arcane",
-				}, -- [1]
-				{
-					["ItemLevel"] = 53,
-					["Type"] = "Frost",
-				}, -- [2]
-				{
-					["ItemLevel"] = 24,
-					["Type"] = "Arcane",
-				}, -- [3]
-			},
-			["Name"] = "Aluneth, Greatstaff of the Magna",
-		},
 		[128862] = {
 			["Relics"] = {
 				{
@@ -56,8 +40,24 @@ PawnOptions = {
 			},
 			["Name"] = "Ebonchill, Greatstaff of Alodi",
 		},
+		[127857] = {
+			["Relics"] = {
+				{
+					["ItemLevel"] = 24,
+					["Type"] = "Arcane",
+				}, -- [1]
+				{
+					["ItemLevel"] = 53,
+					["Type"] = "Frost",
+				}, -- [2]
+				{
+					["ItemLevel"] = 24,
+					["Type"] = "Arcane",
+				}, -- [3]
+			},
+			["Name"] = "Aluneth, Greatstaff of the Magna",
+		},
 	},
-	["LastKeybindingsSet"] = 1,
 }
 PawnMrRobotScaleProviderOptions = {
 	["LastClass"] = "MAGE",

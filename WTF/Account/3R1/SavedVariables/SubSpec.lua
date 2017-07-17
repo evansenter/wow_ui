@@ -82,6 +82,88 @@ SubSpecStorage = {
 			},
 		}, -- [2]
 	},
+	["Monk Windwalker"] = {
+		{
+			["name"] = "ST",
+			["data"] = {
+				{
+					["id"] = 19823,
+					["name"] = "Chi Burst",
+					["column"] = 1,
+				}, -- [1]
+				{
+					["id"] = 19818,
+					["name"] = "Tiger's Lust",
+					["column"] = 2,
+				}, -- [2]
+				{
+					["id"] = 22099,
+					["name"] = "Energizing Elixir",
+					["column"] = 1,
+				}, -- [3]
+				{
+					["id"] = 19995,
+					["name"] = "Leg Sweep",
+					["column"] = 3,
+				}, -- [4]
+				{
+					["id"] = 20174,
+					["name"] = "Healing Elixir",
+					["column"] = 1,
+				}, -- [5]
+				{
+					["id"] = 22103,
+					["name"] = "Hit Combo",
+					["column"] = 3,
+				}, -- [6]
+				{
+					["id"] = 21191,
+					["name"] = "Serenity",
+					["column"] = 3,
+				}, -- [7]
+			},
+		}, -- [1]
+		{
+			["name"] = "AoE",
+			["data"] = {
+				{
+					["id"] = 19823,
+					["name"] = "Chi Burst",
+					["column"] = 1,
+				}, -- [1]
+				{
+					["id"] = 19818,
+					["name"] = "Tiger's Lust",
+					["column"] = 2,
+				}, -- [2]
+				{
+					["id"] = 22099,
+					["name"] = "Energizing Elixir",
+					["column"] = 1,
+				}, -- [3]
+				{
+					["id"] = 19995,
+					["name"] = "Leg Sweep",
+					["column"] = 3,
+				}, -- [4]
+				{
+					["id"] = 20174,
+					["name"] = "Healing Elixir",
+					["column"] = 1,
+				}, -- [5]
+				{
+					["id"] = 22103,
+					["name"] = "Hit Combo",
+					["column"] = 3,
+				}, -- [6]
+				{
+					["id"] = 22105,
+					["name"] = "Whirling Dragon Punch",
+					["column"] = 2,
+				}, -- [7]
+			},
+		}, -- [2]
+	},
 	["Priest Shadow"] = {
 		{
 			["name"] = "Mythic+",
@@ -123,88 +205,6 @@ SubSpecStorage = {
 				}, -- [7]
 			},
 		}, -- [1]
-	},
-	["Monk Mistweaver"] = {
-		{
-			["name"] = "Mythic+",
-			["data"] = {
-				{
-					["id"] = 19823,
-					["name"] = "Chi Burst",
-					["column"] = 1,
-				}, -- [1]
-				{
-					["id"] = 19818,
-					["name"] = "Tiger's Lust",
-					["column"] = 2,
-				}, -- [2]
-				{
-					["id"] = 22166,
-					["name"] = "Mist Wrap",
-					["column"] = 3,
-				}, -- [3]
-				{
-					["id"] = 19995,
-					["name"] = "Leg Sweep",
-					["column"] = 3,
-				}, -- [4]
-				{
-					["id"] = 20174,
-					["name"] = "Healing Elixir",
-					["column"] = 1,
-				}, -- [5]
-				{
-					["id"] = 22217,
-					["name"] = "Invoke Chi-Ji, the Red Crane",
-					["column"] = 2,
-				}, -- [6]
-				{
-					["id"] = 22169,
-					["name"] = "Focused Thunder",
-					["column"] = 2,
-				}, -- [7]
-			},
-		}, -- [1]
-		{
-			["name"] = "Raids",
-			["data"] = {
-				{
-					["id"] = 19823,
-					["name"] = "Chi Burst",
-					["column"] = 1,
-				}, -- [1]
-				{
-					["id"] = 19818,
-					["name"] = "Tiger's Lust",
-					["column"] = 2,
-				}, -- [2]
-				{
-					["id"] = 22166,
-					["name"] = "Mist Wrap",
-					["column"] = 3,
-				}, -- [3]
-				{
-					["id"] = 19995,
-					["name"] = "Leg Sweep",
-					["column"] = 3,
-				}, -- [4]
-				{
-					["id"] = 20174,
-					["name"] = "Healing Elixir",
-					["column"] = 1,
-				}, -- [5]
-				{
-					["id"] = 22093,
-					["name"] = "Refreshing Jade Wind",
-					["column"] = 1,
-				}, -- [6]
-				{
-					["id"] = 22218,
-					["name"] = "Mana Tea",
-					["column"] = 1,
-				}, -- [7]
-			},
-		}, -- [2]
 	},
 	["Mage Fire"] = {
 		{
@@ -410,9 +410,9 @@ SubSpecStorage = {
 			},
 		}, -- [2]
 	},
-	["Monk Windwalker"] = {
+	["Monk Mistweaver"] = {
 		{
-			["name"] = "ST",
+			["name"] = "Mythic+",
 			["data"] = {
 				{
 					["id"] = 19823,
@@ -425,9 +425,9 @@ SubSpecStorage = {
 					["column"] = 2,
 				}, -- [2]
 				{
-					["id"] = 22099,
-					["name"] = "Energizing Elixir",
-					["column"] = 1,
+					["id"] = 22166,
+					["name"] = "Mist Wrap",
+					["column"] = 3,
 				}, -- [3]
 				{
 					["id"] = 19995,
@@ -440,19 +440,19 @@ SubSpecStorage = {
 					["column"] = 1,
 				}, -- [5]
 				{
-					["id"] = 22103,
-					["name"] = "Hit Combo",
-					["column"] = 3,
+					["id"] = 22217,
+					["name"] = "Invoke Chi-Ji, the Red Crane",
+					["column"] = 2,
 				}, -- [6]
 				{
-					["id"] = 21191,
-					["name"] = "Serenity",
-					["column"] = 3,
+					["id"] = 22169,
+					["name"] = "Focused Thunder",
+					["column"] = 2,
 				}, -- [7]
 			},
 		}, -- [1]
 		{
-			["name"] = "AoE",
+			["name"] = "Raids",
 			["data"] = {
 				{
 					["id"] = 19823,
@@ -465,9 +465,9 @@ SubSpecStorage = {
 					["column"] = 2,
 				}, -- [2]
 				{
-					["id"] = 22099,
-					["name"] = "Energizing Elixir",
-					["column"] = 1,
+					["id"] = 22166,
+					["name"] = "Mist Wrap",
+					["column"] = 3,
 				}, -- [3]
 				{
 					["id"] = 19995,
@@ -480,14 +480,14 @@ SubSpecStorage = {
 					["column"] = 1,
 				}, -- [5]
 				{
-					["id"] = 22103,
-					["name"] = "Hit Combo",
-					["column"] = 3,
+					["id"] = 22093,
+					["name"] = "Refreshing Jade Wind",
+					["column"] = 1,
 				}, -- [6]
 				{
-					["id"] = 22105,
-					["name"] = "Whirling Dragon Punch",
-					["column"] = 2,
+					["id"] = 22218,
+					["name"] = "Mana Tea",
+					["column"] = 1,
 				}, -- [7]
 			},
 		}, -- [2]
