@@ -27,7 +27,9 @@ AdiBagsDB = {
 		},
 		["AdiBags_TooltipInfo"] = {
 		},
-		["Equipment"] = {
+		["MoneyFrame"] = {
+		},
+		["DataSource"] = {
 		},
 		["ItemSets"] = {
 		},
@@ -42,20 +44,20 @@ AdiBagsDB = {
 						["Curious Coin"] = false,
 						["Warforged Seal"] = false,
 						["Timewarped Badge"] = false,
-						["Tol Barad Commendation"] = false,
+						["Mogu Rune of Fate"] = false,
 						["Mote of Darkness"] = false,
-						["Ironpaw Token"] = false,
-						["Seal of Tempered Fate"] = false,
+						["Oil"] = false,
+						["Garrison Resources"] = false,
 						["Sightless Eye"] = false,
 						["Timeless Coin"] = false,
 						["Essence of Corrupted Deathwing"] = false,
 						["Apexis Crystal"] = false,
-						["Lesser Charm of Good Fortune"] = false,
 						["Seal of Inevitable Fate"] = false,
-						["Garrison Resources"] = false,
-						["Oil"] = false,
+						["Lesser Charm of Good Fortune"] = false,
+						["Seal of Tempered Fate"] = false,
+						["Ironpaw Token"] = false,
 						["Lingering Soul Fragment"] = false,
-						["Mogu Rune of Fate"] = false,
+						["Tol Barad Commendation"] = false,
 					},
 					["text"] = {
 						["name"] = "ABF",
@@ -64,11 +66,9 @@ AdiBagsDB = {
 				},
 			},
 		},
-		["DataSource"] = {
-		},
 		["Junk"] = {
 		},
-		["MoneyFrame"] = {
+		["Equipment"] = {
 		},
 	},
 	["profileKeys"] = {

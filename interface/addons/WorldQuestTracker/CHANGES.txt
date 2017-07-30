@@ -1,7 +1,7 @@
-changeset:   151:470c95ce5b58
-tag:         v7.2.5.151-release
+changeset:   166:137683a9bc32
+tag:         a7.2.5.166-Alpha
 user:        Tercio
-date:        Wed Jul 05 13:48:27 2017 -0300
-summary:     - Ticket #456: problem with pet battle quest showing a wrong icon.
+date:        Thu Jul 27 11:40:49 2017 -0300
+summary:     - group finder: added a 60 seconds leave options
 
 
