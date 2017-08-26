@@ -33,6 +33,13 @@ MacroToolkitDB = {
 	["global"] = {
 		["ebackups"] = {
 		},
+		["extra"] = {
+			["1001"] = {
+				["body"] = "/stopcasting",
+				["name"] = "Stop Casting",
+				["texture"] = 132094,
+			},
+		},
 		["backups"] = {
 		},
 	},
@@ -51,8 +58,8 @@ MacroToolkitDB = {
 	},
 	["profiles"] = {
 		["Comet - Illidan"] = {
-			["y"] = 395.511505126953,
-			["x"] = 734.044128417969,
+			["y"] = 403.289337158203,
+			["x"] = 760.711120605469,
 			["height"] = 425,
 			["override"] = true,
 			["noskin"] = true,

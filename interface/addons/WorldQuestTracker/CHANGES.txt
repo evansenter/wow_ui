@@ -1,7 +1,7 @@
-changeset:   166:137683a9bc32
-tag:         a7.2.5.166-Alpha
+changeset:   188:f2e843ce050a
+tag:         v7.2.5.188-release
 user:        Tercio
-date:        Thu Jul 27 11:40:49 2017 -0300
-summary:     - group finder: added a 60 seconds leave options
+date:        Mon Aug 21 20:46:45 2017 -0300
+summary:     - Group Finder: middle click on the quest name in the quest tracker should pass the click if the auto open is disabled.
 
 

@@ -6,6 +6,7 @@ bind Q CLICK BT4Button49:LeftButton
 bind E CLICK BT4Button50:LeftButton
 bind X CLICK BT4Button59:LeftButton
 bind Z CLICK BT4Button58:LeftButton
+bind NUMLOCK CLICK MTSB1001:LeftButton
 bind BUTTON4 CLICK BT4Button52:LeftButton
 bind NUMPADDIVIDE NONE
 bind R ACTIONBUTTON10
@@ -53,4 +54,6 @@ bind ] PAWN_COMPARE_RIGHT
 bind \ TOGGLERUN
 bind ALT-V NAMEPLATES
 bind CTRL-B FRIENDNAMEPLATES
+bind CAPSLOCK NONE
+bind , NONE
 modifiedclick NONE AUTOLOOTTOGGLE

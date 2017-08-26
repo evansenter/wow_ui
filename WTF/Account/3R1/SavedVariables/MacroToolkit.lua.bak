@@ -44,15 +44,22 @@ MacroToolkitDB = {
 		["Pandatal - Illidan"] = "Comet - Illidan",
 	},
 	["global"] = {
-		["backups"] = {
-		},
 		["ebackups"] = {
+		},
+		["extra"] = {
+			["1001"] = {
+				["texture"] = 132094,
+				["name"] = "Stop Casting",
+				["body"] = "/stopcasting",
+			},
+		},
+		["backups"] = {
 		},
 	},
 	["profiles"] = {
 		["Comet - Illidan"] = {
-			["y"] = 395.511505126953,
-			["x"] = 734.044128417969,
+			["y"] = 403.289337158203,
+			["x"] = 760.711120605469,
 			["height"] = 425,
 			["override"] = true,
 			["noskin"] = true,

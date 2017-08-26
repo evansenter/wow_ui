@@ -1,6 +1,6 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0209,
+	["LastVersion"] = 2.0211,
 	["LastPlayerFullName"] = "Evan-Illidan",
 	["AutoSelectScales"] = true,
 	["UpgradeTracking"] = false,
@@ -8,7 +8,7 @@ PawnOptions = {
 		[128868] = {
 			["Relics"] = {
 				{
-					["ItemLevel"] = 36,
+					["ItemLevel"] = 45,
 					["Type"] = "Holy",
 				}, -- [1]
 				{
@@ -42,11 +42,11 @@ PawnOptions = {
 		[128825] = {
 			["Relics"] = {
 				{
-					["ItemLevel"] = 46,
+					["ItemLevel"] = 56,
 					["Type"] = "Holy",
 				}, -- [1]
 				{
-					["ItemLevel"] = 46,
+					["ItemLevel"] = 58,
 					["Type"] = "Life",
 				}, -- [2]
 				{

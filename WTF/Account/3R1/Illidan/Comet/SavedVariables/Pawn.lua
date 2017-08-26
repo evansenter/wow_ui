@@ -1,6 +1,6 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0209,
+	["LastVersion"] = 2.0211,
 	["LastPlayerFullName"] = "Comet-Illidan",
 	["AutoSelectScales"] = false,
 	["UpgradeTracking"] = false,
@@ -9,7 +9,7 @@ PawnOptions = {
 		[128940] = {
 			["Relics"] = {
 				{
-					["ItemLevel"] = 55,
+					["ItemLevel"] = 62,
 					["Type"] = "Wind",
 				}, -- [1]
 				{
@@ -47,7 +47,7 @@ PawnOptions = {
 					["Type"] = "Frost",
 				}, -- [1]
 				{
-					["ItemLevel"] = 59,
+					["ItemLevel"] = 64,
 					["Type"] = "Life",
 				}, -- [2]
 				{

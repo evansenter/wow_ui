@@ -308,16 +308,13 @@ MSBTProfiles_SavedVars = {
 		},
 		["Default"] = {
 			["scrollAreas"] = {
-				["Incoming"] = {
-					["stickyDirection"] = "Up",
-					["direction"] = "Up",
-					["offsetX"] = -285,
-					["behavior"] = "MSBT_NORMAL",
-					["animationStyle"] = "Straight",
-					["stickyBehavior"] = "Normal",
-				},
 				["Notification"] = {
 					["offsetY"] = 250,
+				},
+				["Static"] = {
+					["offsetY"] = 120,
+					["direction"] = "Up",
+					["scrollHeight"] = 100,
 				},
 				["Outgoing"] = {
 					["behavior"] = "MSBT_NORMAL",
@@ -325,10 +322,13 @@ MSBTProfiles_SavedVars = {
 					["offsetX"] = 250,
 					["animationStyle"] = "Straight",
 				},
-				["Static"] = {
-					["offsetY"] = 120,
+				["Incoming"] = {
+					["stickyDirection"] = "Up",
 					["direction"] = "Up",
-					["scrollHeight"] = 100,
+					["offsetX"] = -285,
+					["behavior"] = "MSBT_NORMAL",
+					["animationStyle"] = "Straight",
+					["stickyBehavior"] = "Normal",
 				},
 			},
 			["critFontName"] = "ABF",

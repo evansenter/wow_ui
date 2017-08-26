@@ -4,72 +4,48 @@
 local L = LibStub("AceLocale-3.0"):NewLocale("RCLootCouncil", "ptBR")
 if not L then return end
 
---Translation missing 
--- L[" is not active in this raid."] = ""
---Translation missing 
--- L[" you are now the Master Looter and RCLootCouncil is now handling looting."] = ""
---Translation missing 
--- L["&p was awarded with &i for &r!"] = ""
---Translation missing 
--- L["2 Piece"] = ""
---Translation missing 
--- L["2nd Tier Piece"] = ""
---Translation missing 
--- L["4 Piece"] = ""
---Translation missing 
--- L["4th Tier Piece"] = ""
---Translation missing 
--- L["A format to copy/paste to another player."] = ""
---Translation missing 
--- L["A new session has begun, type '/rc open' to open the voting frame."] = ""
---Translation missing 
--- L["A tab delimited output for Excel. Might work with other spreadsheets."] = ""
+L[" is not active in this raid."] = "não está ativo nesta incursão."
+L[" you are now the Master Looter and RCLootCouncil is now handling looting."] = "você é o Mestre do Saque agora e o RCLootCouncil está manuseando a distribuição."
+L["&p was awarded with &i for &r!"] = "&p recebeu a recompensa &i por &r!"
+L["2 Piece"] = "2 Peças"
+L["2nd Tier Piece"] = "2ª Peça do Tier"
+L["4 Piece"] = "4 Peças"
+L["4th Tier Piece"] = "4ª Peça do Tier"
+L["A format to copy/paste to another player."] = "Um formato para copiar e colar para outro jogador."
+L["A new session has begun, type '/rc open' to open the voting frame."] = "Uma nova sessão se iniciou, digite '/rc open' para abrir o quadro de votação."
+L["A tab delimited output for Excel. Might work with other spreadsheets."] = "Saída de abas demarcada para o Excel. Deve funcionar com outras planilhas."
 --Translation missing 
 -- L["A tab delimited output for Excel. Might work with outher spreadsheets."] = ""
---Translation missing 
--- L["Abort"] = ""
---Translation missing 
--- L["Accept Whispers"] = ""
+L["Abort"] = "Abortar"
+L["Accept Whispers"] = "Aceitar Sussuros"
 --Translation missing 
 -- L["accept_whispers_desc"] = ""
---Translation missing 
--- L["Acknowledged as 'response'"] = ""
---Translation missing 
--- L["Active"] = ""
+L["Acknowledged as 'response'"] = "Reconhecido como \" %s \""
+L["Active"] = "Ativo"
 --Translation missing 
 -- L["active_desc"] = ""
---Translation missing 
--- L["add"] = ""
---Translation missing 
--- L["Add Item"] = ""
---Translation missing 
--- L["Add Note"] = ""
---Translation missing 
--- L["Add ranks"] = ""
+L["add"] = "adicionar"
+L["Add Item"] = "Adicionar Item"
+L["Add Note"] = "Adicionar Nota"
+L["Add ranks"] = "Adicionar ranques"
 --Translation missing 
 -- L["Add rolls"] = ""
 --Translation missing 
 -- L["add_ranks_desc"] = ""
 --Translation missing 
 -- L["add_ranks_desc2"] = ""
---Translation missing 
--- L["All items"] = ""
---Translation missing 
--- L["All items has been awarded and  the loot session concluded"] = ""
+L["All items"] = "Todos os itens"
+L["All items has been awarded and  the loot session concluded"] = "Todos os itens foram distribuídos e a sessão de saque concluída"
 --Translation missing 
 -- L["Alt click Looting"] = ""
 --Translation missing 
 -- L["alt_click_looting_desc"] = ""
 --Translation missing 
 -- L["Alternatively, flag the loot as award later."] = ""
---Translation missing 
--- L["Always use RCLootCouncil when I'm Master Looter"] = ""
---Translation missing 
--- L["Always use when leader"] = ""
---Translation missing 
--- L["Announce Awards"] = ""
---Translation missing 
--- L["Announce Considerations"] = ""
+L["Always use RCLootCouncil when I'm Master Looter"] = "Sempre usar RCLootCouncil quando eu for o Mestre do Saque"
+L["Always use when leader"] = "Sempre usar quando eu liderar"
+L["Announce Awards"] = "Anunciar Recompensas"
+L["Announce Considerations"] = "Anunciar Considerações"
 --Translation missing 
 -- L["announce_awards_desc"] = ""
 --Translation missing 
@@ -78,48 +54,28 @@ if not L then return end
 -- L["announce_considerations_desc"] = ""
 --Translation missing 
 -- L["announce_considerations_desc2"] = ""
---Translation missing 
--- L["Announcements"] = ""
---Translation missing 
--- L["Anonymous Voting"] = ""
+L["Announcements"] = "Anúncios"
+L["Anonymous Voting"] = "Votação Anônima"
 --Translation missing 
 -- L["anonymous_voting_desc"] = ""
---Translation missing 
--- L["Appearance"] = ""
---Translation missing 
--- L["Append realm names"] = ""
---Translation missing 
--- L["Are you sure you want to abort?"] = ""
---Translation missing 
--- L["Are you sure you want to give #item to #player?"] = ""
---Translation missing 
--- L["Armor Token"] = ""
---Translation missing 
--- L["Ask me every time I become Master Looter"] = ""
---Translation missing 
--- L["Ask me when leader"] = ""
---Translation missing 
--- L["Auto Award"] = ""
---Translation missing 
--- L["Auto Award to"] = ""
---Translation missing 
--- L["Auto awarded 'item'"] = ""
---Translation missing 
--- L["Auto Close"] = ""
---Translation missing 
--- L["Auto Enable"] = ""
---Translation missing 
--- L["Auto extracted from whisper"] = ""
---Translation missing 
--- L["Auto Loot"] = ""
---Translation missing 
--- L["Auto Open"] = ""
---Translation missing 
--- L["Auto Pass"] = ""
---Translation missing 
--- L["Auto pass BoE"] = ""
---Translation missing 
--- L["Auto Start"] = ""
+L["Appearance"] = "Aparência"
+L["Append realm names"] = "Anexar o nome dos reinos"
+L["Are you sure you want to abort?"] = "Você tem certeza que deseja abortar?"
+L["Are you sure you want to give #item to #player?"] = "Você tem certeza que deseja dar &s para &s?"
+L["Armor Token"] = "Token de Armaduras"
+L["Ask me every time I become Master Looter"] = "Perguntar toda vez que eu me tornar o Mestre do Saque"
+L["Ask me when leader"] = "Perguntar quando eu for o líder"
+L["Auto Award"] = "Premiação Automática"
+L["Auto Award to"] = "Premiação Automática para"
+L["Auto awarded 'item'"] = "%s distribuído automaticamente"
+L["Auto Close"] = "Fechar Automaticamente"
+L["Auto Enable"] = "Habilitar Automaticamente"
+L["Auto extracted from whisper"] = "Extraído automaticamente do sussuro"
+L["Auto Loot"] = "Saque Automático"
+L["Auto Open"] = "Abrir Automaticamente"
+L["Auto Pass"] = "Passar Automaticamente"
+L["Auto pass BoE"] = "Passar Automaticamente Itens Vinculados ao Equipar"
+L["Auto Start"] = "Iniciar Automaticamente"
 --Translation missing 
 -- L["auto_award_desc"] = ""
 --Translation missing 
@@ -138,8 +94,7 @@ if not L then return end
 -- L["auto_pass_desc"] = ""
 --Translation missing 
 -- L["auto_start_desc"] = ""
---Translation missing 
--- L["Autoloot BoE"] = ""
+L["Autoloot BoE"] = "Saque automático para itens Vinculados ao Equipar"
 --Translation missing 
 -- L["autoloot_BoE_desc"] = ""
 --Translation missing 

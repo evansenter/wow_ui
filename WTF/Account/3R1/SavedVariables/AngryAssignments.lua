@@ -29,11 +29,11 @@ AngryAssign_Pages = {
 		["Contents"] = "CDs:\n#1 Tide\n#2 Aura\n#3 Hymn + Rando\n#4 Tranq\n#5 Tide\n#6 Aura + Hymn\n#7 Tranq",
 	},
 	[2659514681] = {
-		["Updated"] = 1501205114,
+		["Updated"] = 1502420164,
 		["Name"] = "kjless",
 		["Id"] = 2659514681,
-		["UpdateId"] = 1016066142,
-		["Contents"] = "P1 – Adds: (1)Revival\nP2 Adds:\n1- (1)Hymn > (2) AW\n2-(1)Revival >\nVEIL: Aura\nP3 Darkness: Link\n\nSoakers:\n(1)Ugly\n(1)Ugly> (2)Thenex\n(1)Telgina>(2)Chess> (3)Eklipto\n\nOrbs:\n(1)Thenex",
+		["UpdateId"] = 514345512,
+		["Contents"] = "P1 – Adds: (1)Revival\nP2 Adds:\n1- (1)Hymn\n2-(1)Revival \nVEIL: Tide\nP3 Darkness: Link + Rando Shout\n\nSoakers:\n(1)Ugly\n(1)Ugly> (2)Thenex\n(1)Telgina>(2)Zilas\n\nOrbs:\n(1)Thenex",
 	},
 	[1529603911] = {
 		["Updated"] = 1425948720,
@@ -78,11 +78,12 @@ AngryAssign_Pages = {
 		["Contents"] = "Shattering Star CDs:\n1st: Tide\n2nd: Hymn\n3rd: Aura\n4th: Revival\n5th: Tide\n6th: Hymn + Revival\n8th: Aura",
 	},
 	[3850854711] = {
-		["Updated"] = 1499042978,
+		["Updated"] = 1503457566,
 		["Name"] = "kj",
 		["Id"] = 3850854711,
-		["UpdateId"] = 37742154,
-		["Contents"] = "1 Thenex\n2 Telgina\n3 Eklipto\n4 Zilas\n5 Grimuhs\n6 Bluto",
+		["UpdateId"] = 3080006347,
+		["Backup"] = "DjSpunky\nLuthrenaaarrr",
+		["Contents"] = "DjSpunky\nLuthrenaaarrr",
 	},
 	[704661539] = {
 		["Updated"] = 1422500486,
@@ -183,13 +184,6 @@ AngryAssign_Pages = {
 		["UpdateId"] = 1068670945,
 		["Contents"] = "{square}: Rein // {diamond}: Ugly\n{triangle}: Coolaid, Dvldoc, Luthanen\n{x}: Dadizzle, Cenzic , Bluto\n{circle}: Colonferal, Aedalina, Dj\n{star}: Lanfear, Wowjayson, Comet\n{skull}: Thenex, Xorn, Zefarion\n{moon}: Grimuhs, Telgina, Fear\n\n1st ADDs: Lanfear / 2nd Slam: Link totem\n2nd ADDs: Comet + DJ / After Orb: Luth + Bluto\nSlam after 6th Orb: DJ(AW) + Vice(Tree)\n3rd ADDs: Lanfear\n4th ADDs: Vice(tranq) / After last ORB: Dj(aw+aura) + Pelli",
 	},
-	[2889932205] = {
-		["Updated"] = 1500428867,
-		["Name"] = "6Desolate Host",
-		["Id"] = 2889932205,
-		["UpdateId"] = 3266744969,
-		["Contents"] = "Phase 2 Sunder/Doom:\n\n1.Revival\n2.Hymn\n3.Aura\n4:Tide",
-	},
 	[533536495] = {
 		["Updated"] = 1426209750,
 		["Name"] = "Gruul",
@@ -197,6 +191,13 @@ AngryAssign_Pages = {
 		["UpdateId"] = 332788069,
 		["Contents"] = "Slice Cooldown Order:\n7: Sikonos AMZ/Personal Cooldowns/Toppies\n9: Hymn/Vamp/Goargrim\n10/Phase2: Revival/Loki \n\nPulls: Comet Pull\n1:{Triangle} Vikid---Sac (Vamp)\n2:{Triangle}  Vikid---Personal\n3:{square}Vikid----Sac (Inno)/Vigilance Goargarim\n4:{diamond}Comet----Personal\n5:{diamond}Comet-- Pain Suppression\n6:{triangle} Comet---Life Cacoon/Barrier\n7:{square} Vikid----Personals\n8:{square} Vikid----Personals/Smoke\n9:{diamond} Vikid--Personals/Guardian Spirit/Fuzzican\nIntermission. Repeat.\nSwap Tank Names for the 2ND PHASE!",
 		["Backup"] = "Slice Cooldown Order:\n8: Hymn/Freed/Toppies\n9: Rev/Vamp/Goargrim\n10: Tranq/Loki \n\nPulls: Comet Pull\n1: {triangle} Vikid---Ironbark\n2:{triangle} Vikid---Personal\n3:{square}Vikid----Sac(inno)\n4:{diamond}Comet----Personal\n5:{diamond}Comet--Sac(Vamp)\n6:{triangle} Comet---Life Cocoon\n7:{square} Vikid----Guardian Spirit\n8:{square} Vikid----Personals\n9:{diamond} Vikid--Personals/Pain Suppression\nIntermission. Repeat.",
+	},
+	[1154863405] = {
+		["Updated"] = 1426038253,
+		["Name"] = "Beastlord ",
+		["Id"] = 1154863405,
+		["UpdateId"] = 302011298,
+		["Contents"] = "Tantrum Healing Cds:\n1: Healing Tide/Toppies\n2: Icon/Rally Mtnk\n3: Freed/Goargrim\n4: Barrier/Toppies/ Revival\n5: Spirit Link/ Icon/ Hymn\nRepeat\n\nRoar Order For Last Phase:\n1: Arsenal\n2. KoV\n3: Lustya\n\nLAST PHASE\nSPIRIT LINK ON MELEE AND TANKS/PERSONALS\nFREED/PALLY DEVOs\nREV and BARRIER\nEverything!\nDEAD",
 	},
 	[20828138] = {
 		["Updated"] = 1424830953,
@@ -282,12 +283,12 @@ AngryAssign_Pages = {
 		["UpdateId"] = 2070059239,
 		["Contents"] = "1. Pelli Weapon\n2. Mizz Weapon\n3. Lanfear Weapon + Eclipto\n4. DJ Weapon + Zilas\n5. DJ  Wings\n6. Lanfear Hymn\n7. Pelli Hym\n8. Harry Tranq+Rando\n9. DJ Aura Mastery",
 	},
-	[1154863405] = {
-		["Updated"] = 1426038253,
-		["Name"] = "Beastlord ",
-		["Id"] = 1154863405,
-		["UpdateId"] = 302011298,
-		["Contents"] = "Tantrum Healing Cds:\n1: Healing Tide/Toppies\n2: Icon/Rally Mtnk\n3: Freed/Goargrim\n4: Barrier/Toppies/ Revival\n5: Spirit Link/ Icon/ Hymn\nRepeat\n\nRoar Order For Last Phase:\n1: Arsenal\n2. KoV\n3: Lustya\n\nLAST PHASE\nSPIRIT LINK ON MELEE AND TANKS/PERSONALS\nFREED/PALLY DEVOs\nREV and BARRIER\nEverything!\nDEAD",
+	[2889932205] = {
+		["Updated"] = 1500428867,
+		["Name"] = "6Desolate Host",
+		["Id"] = 2889932205,
+		["UpdateId"] = 3266744969,
+		["Contents"] = "Phase 2 Sunder/Doom:\n\n1.Revival\n2.Hymn\n3.Aura\n4:Tide",
 	},
 	[3591569453] = {
 		["Updated"] = 1496366330,
@@ -307,23 +308,18 @@ AngryAssign_Pages = {
 AngryAssign_Categories = {
 }
 AngryAssign_State = {
-	["window"] = {
-		["height"] = 499.999969482422,
-		["top"] = 850,
-		["left"] = 610,
-		["width"] = 700,
-	},
-	["locked"] = true,
 	["tree"] = {
 		["groups"] = {
 			["664173253"] = true,
 		},
-		["scrollvalue"] = 5,
+		["scrollvalue"] = 21,
 		["fullwidth"] = 666.000061035156,
 		["treesizable"] = true,
 		["treewidth"] = 175,
-		["selected"] = 3351906713,
+		["selected"] = 3850854711,
 	},
+	["locked"] = true,
+	["directionUp"] = false,
 	["display"] = {
 		["y"] = -1.55517578125,
 		["x"] = 9.00002479553223,
@@ -332,7 +328,12 @@ AngryAssign_State = {
 		["hidden"] = false,
 		["width"] = 403.888854980469,
 	},
-	["directionUp"] = false,
+	["window"] = {
+		["height"] = 499.999969482422,
+		["top"] = 850,
+		["left"] = 610,
+		["width"] = 700,
+	},
 }
 AngryAssign_Config = {
 	["backdropColor"] = "00000040",
