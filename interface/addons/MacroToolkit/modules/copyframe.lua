@@ -217,10 +217,10 @@ function MT:CreateCopyFrame()
 			updateslots(mtcslottext)
 			if MacroToolkitFrame.selectedMacro then
 				mtcnotice:SetFormattedText("%s: |cffffffff%s", L["Macro copied"], name)
-				PlaySoundFile("Sound/Character/footsteps/mFootHugeDirtA.ogg")
+				--PlaySoundFile("Sound/Character/footsteps/mFootHugeDirtA.ogg")
 			else
 				mtcnotice:SetFormattedText("|cffff0000%s", _G.SPELL_FAILED_ERROR)
-				PlaySoundFile("Sound/INTERFACE/igQuestFailed.ogg")
+				--PlaySoundFile("Sound/INTERFACE/igQuestFailed.ogg")
 			end
 		end)
 	
@@ -232,14 +232,16 @@ function MT:CreateCopyFrame()
 			mtcnotice:SetText("")
 			MT:MacroFrameUpdate()
 			MT:Skin(mtcframe)
-			PlaySound("igCharacterInfoOpen")
+			--PlaySound("igCharacterInfoOpen")
+			PlaySound(839)
 		end)
 
 	mtcframe:SetScript("OnHide", 
 		function()
 			MT:MacroFrameUpdate()
 			MacroToolkitFrame:Show()
-			PlaySound("igCharacterInfoClose")
+			--PlaySound("igCharacterInfoClose")
+			PlaySound(840)
 		end)
 
 	return mtcframe

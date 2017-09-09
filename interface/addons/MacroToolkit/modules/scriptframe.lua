@@ -136,7 +136,7 @@ function MT:CreateScriptFrame()
 			local slashname = mtsname:GetText()
 			local func, err = loadstring(luatext, slashname)
 			if err then
-				PlaySoundFile("Sound/INTERFACE/igQuestFailed.ogg")
+				--PlaySoundFile("Sound/INTERFACE/igQuestFailed.ogg")
 				mtsescrollchild:SetText(format("|c%s%s|r\n\n%s", MT.db.profile.errorcolour, err, L["Save failed"]))
 			else
 				table.insert(MT.db.global.custom, {n = MT.newslash, s = luatext})

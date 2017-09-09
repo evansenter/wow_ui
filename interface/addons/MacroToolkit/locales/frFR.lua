@@ -4,6 +4,8 @@ if not L then return end
 
 L["%d of %d characters used"] = "%d de %d personnages utilis\195\169s"
 L["%s is trying to send you a macro. Accept?"] = "%s veut vous envoyer une macro. Accepter ?"
+--Translation missing 
+L["(experimental)"] = "(experimental)"
 L["Ability icons"] = "Ic\195\180ne de capacit\195\169"
 L["Achievement icons"] = "Ic\195\180ne de Haut-Fait"
 L["Add broker"] = "ajouter un afficheur de donn\195\169es"
@@ -31,9 +33,13 @@ L["combat"] = "en combat"
 L["Command already defined elsewhere"] = "Commande d\195\169j\195\160 d\195\169finie ailleur"
 L["Command removed"] = "Commande supprim\195\169e"
 L["Commands"] = "Commandes"
+--Translation missing 
+L["Comments"] = "Comments"
 L["Condition Builder"] = "Constructeur conditionnel"
 L["Conditional execution"] = "Execution conditionnelle"
 L["Conditions"] = true
+--Translation missing 
+L["Control which icons are available to pick for macros"] = "Control which icons are available to pick for macros"
 L["Copy an extended macro from another character"] = "Copier une macro \195\169tendue d'un autre personnage"
 L["Copy Macro"] = "Copier la macro"
 L["ctrl"] = "touche ctrl"
@@ -43,6 +49,8 @@ L["Custom slash command"] = "Commandes slash personnalis\195\169e"
 L["datetime format"] = "%d/%m/%y %H:%M:%S"
 L["dead"] = "mort"
 L["Delete all macros"] = "Supprimer toutes les macros"
+--Translation missing 
+L["Delete all macros on the current tab"] = "Delete all macros on the current tab"
 L["Delete Backup"] = "Supprimer la sauvegarde"
 L["Destroy grey items"] = "D\195\169truire les objets gris"
 L["did you mean"] = "voulez-vous dire"
@@ -56,6 +64,8 @@ L["Do not skin for ElvUI"] = "Ne pas utiliser le skin pour ElvUI"
 L["Editor font"] = "police de caract\195\168re de l'editeur"
 L["Eject passenger"] = "\195\137jecter le passager"
 L["Emotes"] = true
+--Translation missing 
+L["Enable certain types of macro to be called via a data broker addon"] = "Enable certain types of macro to be called via a data broker addon"
 L["Enable data broker"] = "Autoriser l'afficheur de donn\195\169es"
 L["Enable sound effects"] = "Activer les effets sonores"
 L["Enable UI errors"] = "Afficher les erreurs d'interface"
@@ -80,9 +90,15 @@ L["Fonts"] = "police"
 L["Food"] = "Nourriture"
 L["form"] = "forme/posture"
 L["Full width macro editor"] = "\195\169diteur de macro pleine fen\195\170tre"
+--Translation missing 
+L["Go Large"] = "Go Large"
+--Translation missing 
+L["Go Small"] = "Go Small"
 L["group"] = "groupe"
 L["harm"] = "hostile"
 L["help"] = "amical"
+--Translation missing 
+L["Hide 'Macro shortened by n characters' popup"] = "Hide 'Macro shortened by n characters' popup"
 L["Icons"] = "Ic\195\180ne"
 L["indoors"] = "int\195\169rieur"
 L["Insert slot"] = "Ins\195\169rer emplacement"
@@ -103,8 +119,12 @@ L["Macro name font"] = "Police de caract\195\168re du nom de la macro"
 L["Macro shortened by %d character"] = "Macro r\195\169duite de %d caract\195\168re"
 L["Macro shortened by %d characters"] = "Macro r\195\169duite de %d caract\195\168res"
 L["Macro slots available"] = "Emplacements disponibles pour macros"
+--Translation missing 
+L["Macro Toolkit can only handle tooltip commands up to a maximum of 113 characters. Your tooltip will not work as expected unless you shorten it"] = "Macro Toolkit can only handle tooltip commands up to a maximum of 113 characters. Your tooltip will not work as expected unless you shorten it"
 L["Macro Toolkit has found %d orphaned macros. Restore?"] = "Macr ToolKit a trouv\195\169 %d macros orphelines. Les restaurer ?"
 L["Macro Toolkit slash commands"] = "Commandes slash Macro Toolkit"
+--Translation missing 
+L["Make all character specific macros available to all characters"] = "Make all character specific macros available to all characters"
 L["Manage Backups"] = "G\195\169rer les sauvegardes"
 L["MiddleButton"] = "bouton du milieu"
 L["Miscellaneous icons"] = "Ic\195\180ne g\195\169n\195\169rique"
@@ -149,6 +169,8 @@ L["Press the key you wish to bind, or press 'Remove' to unbind the current macro
 L["Print a message"] = "Affichage d'un message"
 L["Print map coordinates"] = "Afficher les coordonn\195\169es de la carte"
 L["Profiles"] = "Profils"
+--Translation missing 
+L["pvptalent"] = "PVP talent"
 L["Question mark icon"] = "Icone de question"
 L["raid"] = "dans votre groupe de raid"
 L["Raid marker"] = "Marqueur de raid"
@@ -167,6 +189,8 @@ L["RightButton"] = "bouton droit"
 L["Save failed"] = "Sauvegarde \195\169chou\195\169e"
 L["Script saved"] = "Script sauvegard\195\169"
 L["Scripts"] = true
+--Translation missing 
+L["Search by spell ID"] = "Search by spell ID"
 L["Sell grey items"] = "Vendre les objets gris"
 L["Set raid target"] = "S\195\169lectionner la cible de raid"
 L["Share with"] = "partager avec "
@@ -177,6 +201,8 @@ L["Size"] = "taille"
 L["spec"] = "sp\195\169cifique"
 L["specific Macro Toolkit user"] = "Utilisateur de Macro ToolKit sp\195\169cifique"
 L["Spell icons"] = "Ic\195\180ne de sort"
+--Translation missing 
+L["Spell ID"] = "Spell ID"
 L["Status of target"] = "Statu de la cible"
 L["stealth"] = "camoufl\195\169"
 L["Summon random favourite mount"] = "invoquer une mascotte favorite"
@@ -188,6 +214,20 @@ L["targetlasttarget"] = "derni\195\168re cible de la cible"
 L["Targets"] = "Cibles"
 L["targettarget"] = "cible de la cible"
 L["Text"] = "Texte"
+--Translation missing 
+L["The following must be unchecked in order to display the drake"] = "The following must be unchecked in order to display the drake"
+--Translation missing 
+L["The following must be unchecked in order to display the faction emblem"] = "The following must be unchecked in order to display the faction emblem"
+--Translation missing 
+L["The following must be unchecked in order to use the macro editor in full width mode"] = "The following must be unchecked in order to use the macro editor in full width mode"
+--Translation missing 
+L["The macro editor height can be increased by dragging the bottom of Macro Toolkit's frame downwards"] = "The macro editor height can be increased by dragging the bottom of Macro Toolkit's frame downwards"
+--Translation missing 
+L["This may impact performance and loading time on low end machines"] = "This may impact performance and loading time on low end machines"
+--Translation missing 
+L["This will enable macro icon names instead of numbers. Uses about 2MB of RAM."] = "This will enable macro icon names instead of numbers. Uses about 2MB of RAM."
+--Translation missing 
+L["This will remove Macro Toolkit's copy of all your character specific Macros. The macros themselves will not be affected."] = "This will remove Macro Toolkit's copy of all your character specific Macros. The macros themselves will not be affected."
 L["Toggle cloak"] = "Changer l'affichage de la cape"
 L["Toggle helm"] = "Changer l'affichage du casque"
 L["Toolkit"] = true
@@ -196,9 +236,14 @@ L["unithasvehicleui"] = "la cible a une interface de v\195\169hicule"
 L["Unknown parameter"] = "param\195\168tre inconnu"
 L["Unknown parameter causes error"] = "param\195\168tre inconnu causant une erreur"
 L["Unmatched"] = "In\195\169gal"
+--Translation missing 
+L["Use icon name lookup library for icon search"] = "Use icon name lookup library for icon search"
 L["Use syntax highlighting"] = "utiliser le surlignage syntaxique"
 L["vehicleui"] = "la cible possede une ui v\195\169hiculaire"
 L["Well Fed"] = "buff 'bien nourri'"
 L["worn"] = "\195\169quip\195\169"
 L["You have no more room for macros!"] = "vous n'avez plus de place pour  de nouvelles macros."
+--Translation missing 
+L["You will need to log into each of your characters with Macro Toolkit enabled to update Macro Toolkit's copy of that character's macros"] = "You will need to log into each of your characters with Macro Toolkit enabled to update Macro Toolkit's copy of that character's macros"
 L["Your macro will be truncated to 255 characters. Are you sure?"] = "Votre macro va \195\170tre tronqu\195\169e\195\160 255 caract\195\168res. \195\138tes-vous s\195\187r ?"
+

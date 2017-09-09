@@ -88,10 +88,10 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 				["INCOMING_DODGE"] = {
-					["colorR"] = 1,
 					["fontSize"] = 26,
-					["colorG"] = 1,
+					["colorR"] = 1,
 					["alwaysSticky"] = true,
+					["colorG"] = 1,
 				},
 				["PET_INCOMING_BLOCK"] = {
 					["disabled"] = true,
@@ -276,10 +276,10 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 				["INCOMING_PARRY"] = {
-					["colorR"] = 1,
 					["fontSize"] = 26,
-					["colorG"] = 1,
+					["colorR"] = 1,
 					["alwaysSticky"] = true,
+					["colorG"] = 1,
 				},
 			},
 			["enableBlizzardDamage"] = false,
@@ -308,19 +308,10 @@ MSBTProfiles_SavedVars = {
 		},
 		["Default"] = {
 			["scrollAreas"] = {
-				["Notification"] = {
-					["offsetY"] = 250,
-				},
 				["Static"] = {
 					["offsetY"] = 120,
 					["direction"] = "Up",
 					["scrollHeight"] = 100,
-				},
-				["Outgoing"] = {
-					["behavior"] = "MSBT_NORMAL",
-					["direction"] = "Up",
-					["offsetX"] = 250,
-					["animationStyle"] = "Straight",
 				},
 				["Incoming"] = {
 					["stickyDirection"] = "Up",
@@ -329,6 +320,15 @@ MSBTProfiles_SavedVars = {
 					["behavior"] = "MSBT_NORMAL",
 					["animationStyle"] = "Straight",
 					["stickyBehavior"] = "Normal",
+				},
+				["Outgoing"] = {
+					["behavior"] = "MSBT_NORMAL",
+					["direction"] = "Up",
+					["offsetX"] = 250,
+					["animationStyle"] = "Straight",
+				},
+				["Notification"] = {
+					["offsetY"] = 250,
 				},
 			},
 			["critFontName"] = "ABF",
@@ -642,10 +642,10 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 				["INCOMING_DODGE"] = {
-					["alwaysSticky"] = true,
-					["colorR"] = 1,
 					["colorG"] = 1,
 					["fontSize"] = 26,
+					["alwaysSticky"] = true,
+					["colorR"] = 1,
 				},
 				["PET_INCOMING_BLOCK"] = {
 					["disabled"] = true,
@@ -830,10 +830,10 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 				["INCOMING_PARRY"] = {
-					["alwaysSticky"] = true,
-					["colorR"] = 1,
 					["colorG"] = 1,
 					["fontSize"] = 26,
+					["alwaysSticky"] = true,
+					["colorR"] = 1,
 				},
 			},
 			["enableBlizzardHealing"] = false,

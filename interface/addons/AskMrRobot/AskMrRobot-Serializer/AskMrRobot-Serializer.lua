@@ -1,7 +1,7 @@
 -- AskMrRobot-Serializer will serialize and communicate character data between users.
 -- This is used primarily to associate character information to logs uploaded to askmrrobot.com.
 
-local MAJOR, MINOR = "AskMrRobot-Serializer", 51
+local MAJOR, MINOR = "AskMrRobot-Serializer", 52
 local Amr, oldminor = LibStub:NewLibrary(MAJOR, MINOR)
 
 if not Amr then return end -- already loaded by something else
@@ -883,12 +883,6 @@ local function readSpecs(ret)
 	end
 end
 
--- TODO: hopefully we can read artifact here when there is an API to get info when the artifact UI is not open
--- get artifact info
-local function readArtifact()
-
-end
-
 -- get currently equipped items, store with currently active spec
 local function readEquippedItems(ret)
     local equippedItems = {};
@@ -947,8 +941,7 @@ function Amr:GetPlayerData()
     ret.Talents = {}
 	readSpecs(ret)
 	
-	ret.Artifacts = {}
-	readArtifact()
+	ret.Artifacts = {}	
 	
 	ret.Equipped = {}
 	readEquippedItems(ret)
@@ -1049,6 +1042,35 @@ local function appendItemsToExport(fields, itemObjects)
     end
 end
 
+local function serializeCrucibleInfo(fields, info, pos, prevPowerId)
+
+	if not info.Powers or not info.Active then 
+		return prevPowerId
+	end
+	
+	local parts = {}
+	
+	if pos < 4 then
+		table.insert(parts, pos)
+	else
+		local relic = Amr.ParseItemLink(info.ItemLink)
+		table.insert(parts, Amr.GetItemUniqueId(relic) or "0")
+	end
+	
+	for i,powerId in ipairs(info.Powers) do
+		table.insert(parts, (powerId - prevPowerId) .. "")
+		prevPowerId = powerId
+	end
+	
+	for i,active in ipairs(info.Active) do
+		table.insert(parts, active and "1" or "0")
+	end
+	
+	table.insert(fields, table.concat(parts, ","))
+	
+	return prevPowerId
+end
+
 -- Serialize just the identity portion of a player (region/realm/name) in the same format used by the full serialization
 function Amr:SerializePlayerIdentity(data)
 	local fields = {}    
@@ -1123,7 +1145,8 @@ function Amr:SerializePlayerData(data, complete)
 			
 			local powerids = {}
 			local powerranks = {}
-			local reliclinks = {}
+			local reliclinks = {}			
+			local crucibleinfos = {}
 			
 			local artifactInfo = data.Artifacts and data.Artifacts[spec]
 			if artifactInfo and artifactInfo.Powers then
@@ -1138,10 +1161,25 @@ function Amr:SerializePlayerData(data, complete)
 					table.insert(reliclinks, Amr.GetItemUniqueId(relic) or "")
 				end
 			end
+			if artifactInfo and artifactInfo.Crucible then
+				local prevPowerId = 0
+				for i = 1,3 do
+					local relicInfo = #artifactInfo.Crucible.Equipped >= i and artifactInfo.Crucible.Equipped[i]
+					if relicInfo then
+						prevPowerId = serializeCrucibleInfo(crucibleinfos, relicInfo, i, prevPowerId)
+					end
+				end
+				for k,relicInfo in pairs(artifactInfo.Crucible.Inventory) do
+					if relicInfo then
+						prevPowerId = serializeCrucibleInfo(crucibleinfos, relicInfo, 4, prevPowerId)
+					end
+				end
+			end
 			
 			table.insert(fields, toCompressedNumberList(powerids))
 			table.insert(fields, table.concat(powerranks, ","))
 			table.insert(fields, table.concat(reliclinks, ","))
+			table.insert(fields, table.concat(crucibleinfos, "/"))
 			
             --table.insert(fields, toCompressedNumberList(data.Glyphs[spec]))
         end

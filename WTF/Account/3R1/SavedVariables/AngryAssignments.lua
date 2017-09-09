@@ -184,20 +184,19 @@ AngryAssign_Pages = {
 		["UpdateId"] = 1068670945,
 		["Contents"] = "{square}: Rein // {diamond}: Ugly\n{triangle}: Coolaid, Dvldoc, Luthanen\n{x}: Dadizzle, Cenzic , Bluto\n{circle}: Colonferal, Aedalina, Dj\n{star}: Lanfear, Wowjayson, Comet\n{skull}: Thenex, Xorn, Zefarion\n{moon}: Grimuhs, Telgina, Fear\n\n1st ADDs: Lanfear / 2nd Slam: Link totem\n2nd ADDs: Comet + DJ / After Orb: Luth + Bluto\nSlam after 6th Orb: DJ(AW) + Vice(Tree)\n3rd ADDs: Lanfear\n4th ADDs: Vice(tranq) / After last ORB: Dj(aw+aura) + Pelli",
 	},
-	[533536495] = {
-		["Updated"] = 1426209750,
-		["Name"] = "Gruul",
-		["Id"] = 533536495,
-		["UpdateId"] = 332788069,
-		["Contents"] = "Slice Cooldown Order:\n7: Sikonos AMZ/Personal Cooldowns/Toppies\n9: Hymn/Vamp/Goargrim\n10/Phase2: Revival/Loki \n\nPulls: Comet Pull\n1:{Triangle} Vikid---Sac (Vamp)\n2:{Triangle}  Vikid---Personal\n3:{square}Vikid----Sac (Inno)/Vigilance Goargarim\n4:{diamond}Comet----Personal\n5:{diamond}Comet-- Pain Suppression\n6:{triangle} Comet---Life Cacoon/Barrier\n7:{square} Vikid----Personals\n8:{square} Vikid----Personals/Smoke\n9:{diamond} Vikid--Personals/Guardian Spirit/Fuzzican\nIntermission. Repeat.\nSwap Tank Names for the 2ND PHASE!",
-		["Backup"] = "Slice Cooldown Order:\n8: Hymn/Freed/Toppies\n9: Rev/Vamp/Goargrim\n10: Tranq/Loki \n\nPulls: Comet Pull\n1: {triangle} Vikid---Ironbark\n2:{triangle} Vikid---Personal\n3:{square}Vikid----Sac(inno)\n4:{diamond}Comet----Personal\n5:{diamond}Comet--Sac(Vamp)\n6:{triangle} Comet---Life Cocoon\n7:{square} Vikid----Guardian Spirit\n8:{square} Vikid----Personals\n9:{diamond} Vikid--Personals/Pain Suppression\nIntermission. Repeat.",
-	},
 	[1154863405] = {
 		["Updated"] = 1426038253,
 		["Name"] = "Beastlord ",
 		["Id"] = 1154863405,
 		["UpdateId"] = 302011298,
 		["Contents"] = "Tantrum Healing Cds:\n1: Healing Tide/Toppies\n2: Icon/Rally Mtnk\n3: Freed/Goargrim\n4: Barrier/Toppies/ Revival\n5: Spirit Link/ Icon/ Hymn\nRepeat\n\nRoar Order For Last Phase:\n1: Arsenal\n2. KoV\n3: Lustya\n\nLAST PHASE\nSPIRIT LINK ON MELEE AND TANKS/PERSONALS\nFREED/PALLY DEVOs\nREV and BARRIER\nEverything!\nDEAD",
+	},
+	[2889932205] = {
+		["Updated"] = 1500428867,
+		["Name"] = "6Desolate Host",
+		["Id"] = 2889932205,
+		["UpdateId"] = 3266744969,
+		["Contents"] = "Phase 2 Sunder/Doom:\n\n1.Revival\n2.Hymn\n3.Aura\n4:Tide",
 	},
 	[20828138] = {
 		["Updated"] = 1424830953,
@@ -283,12 +282,13 @@ AngryAssign_Pages = {
 		["UpdateId"] = 2070059239,
 		["Contents"] = "1. Pelli Weapon\n2. Mizz Weapon\n3. Lanfear Weapon + Eclipto\n4. DJ Weapon + Zilas\n5. DJ  Wings\n6. Lanfear Hymn\n7. Pelli Hym\n8. Harry Tranq+Rando\n9. DJ Aura Mastery",
 	},
-	[2889932205] = {
-		["Updated"] = 1500428867,
-		["Name"] = "6Desolate Host",
-		["Id"] = 2889932205,
-		["UpdateId"] = 3266744969,
-		["Contents"] = "Phase 2 Sunder/Doom:\n\n1.Revival\n2.Hymn\n3.Aura\n4:Tide",
+	[533536495] = {
+		["Updated"] = 1426209750,
+		["Name"] = "Gruul",
+		["Id"] = 533536495,
+		["UpdateId"] = 332788069,
+		["Contents"] = "Slice Cooldown Order:\n7: Sikonos AMZ/Personal Cooldowns/Toppies\n9: Hymn/Vamp/Goargrim\n10/Phase2: Revival/Loki \n\nPulls: Comet Pull\n1:{Triangle} Vikid---Sac (Vamp)\n2:{Triangle}  Vikid---Personal\n3:{square}Vikid----Sac (Inno)/Vigilance Goargarim\n4:{diamond}Comet----Personal\n5:{diamond}Comet-- Pain Suppression\n6:{triangle} Comet---Life Cacoon/Barrier\n7:{square} Vikid----Personals\n8:{square} Vikid----Personals/Smoke\n9:{diamond} Vikid--Personals/Guardian Spirit/Fuzzican\nIntermission. Repeat.\nSwap Tank Names for the 2ND PHASE!",
+		["Backup"] = "Slice Cooldown Order:\n8: Hymn/Freed/Toppies\n9: Rev/Vamp/Goargrim\n10: Tranq/Loki \n\nPulls: Comet Pull\n1: {triangle} Vikid---Ironbark\n2:{triangle} Vikid---Personal\n3:{square}Vikid----Sac(inno)\n4:{diamond}Comet----Personal\n5:{diamond}Comet--Sac(Vamp)\n6:{triangle} Comet---Life Cocoon\n7:{square} Vikid----Guardian Spirit\n8:{square} Vikid----Personals\n9:{diamond} Vikid--Personals/Pain Suppression\nIntermission. Repeat.",
 	},
 	[3591569453] = {
 		["Updated"] = 1496366330,
@@ -308,17 +308,6 @@ AngryAssign_Pages = {
 AngryAssign_Categories = {
 }
 AngryAssign_State = {
-	["tree"] = {
-		["groups"] = {
-			["664173253"] = true,
-		},
-		["scrollvalue"] = 21,
-		["fullwidth"] = 666.000061035156,
-		["treesizable"] = true,
-		["treewidth"] = 175,
-		["selected"] = 3850854711,
-	},
-	["locked"] = true,
 	["directionUp"] = false,
 	["display"] = {
 		["y"] = -1.55517578125,
@@ -328,6 +317,17 @@ AngryAssign_State = {
 		["hidden"] = false,
 		["width"] = 403.888854980469,
 	},
+	["tree"] = {
+		["groups"] = {
+			["664173253"] = true,
+		},
+		["scrollvalue"] = 21,
+		["fullwidth"] = 666.000061035156,
+		["selected"] = 3850854711,
+		["treewidth"] = 175,
+		["treesizable"] = true,
+	},
+	["locked"] = true,
 	["window"] = {
 		["height"] = 499.999969482422,
 		["top"] = 850,

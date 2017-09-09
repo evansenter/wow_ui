@@ -269,6 +269,117 @@ local function scanTalents()
 	Amr.db.char.Talents[specPos] = str
 end
 
+local function scanCrucible()
+	if not Amr.db or not Amr.db.char or not Amr.db.char.Artifacts or not C_ArtifactRelicForgeUI or not C_ArtifactRelicForgeUI.GetSocketedRelicTalents then return end
+
+	local equipped = {}
+	local preview = nil
+	
+	for i = 1,4 do
+		local talents = nil
+		if i == 4 then
+			talents = C_ArtifactRelicForgeUI.GetPreviewRelicTalents()
+			--talents = nil
+		else
+			talents = C_ArtifactRelicForgeUI.GetSocketedRelicTalents(i)
+			
+			--[[
+			if i == 1 then
+				talents = {}
+				table.insert(talents, {
+					powerID = 1739,
+					isChosen = true				
+				})
+				table.insert(talents, {
+					powerID = 1781,
+					isChosen = true				
+				})
+				table.insert(talents, {
+					powerID = 1770,
+					isChosen = false				
+				})
+				table.insert(talents, {
+					powerID = 791,
+					isChosen = false
+				})
+				table.insert(talents, {
+					powerID = 786,
+					isChosen = false				
+				})
+				table.insert(talents, {
+					powerID = 1537,
+					isChosen = false				
+				})
+			end
+			]]
+		end
+		
+		if talents then
+			local obj = {
+				Powers = {},
+				Active = {}
+			}
+			
+			if i == 4 then
+				obj.ItemLink = C_ArtifactRelicForgeUI.GetPreviewRelicItemLink()
+				if not obj.ItemLink then
+					talents = nil
+				else
+					preview = obj
+				end
+			else
+				table.insert(equipped, obj)
+			end
+			
+			if talents then
+				for k,v in ipairs(talents) do
+					table.insert(obj.Powers, v.powerID)
+					table.insert(obj.Active, v.isChosen)
+				end
+			end
+			
+		elseif i ~= 4 then
+			table.insert(equipped, {})
+		end
+	end
+		
+	
+	local itemID = C_ArtifactUI.GetArtifactInfo()	
+	local spec = Amr.ArtifactIdToSpecNumber[itemID]
+	
+	if spec then
+	
+		-- sometimes this event can fire when no crucible data is available, don't overwrite non-blank crucible data with blank crucible data
+		if Amr.db.char.Artifacts[spec] then
+			local oldCrucible = Amr.db.char.Artifacts[spec].Crucible
+			if oldCrucible then
+				if #oldCrucible.Equipped > 0 and oldCrucible.Equipped[1] and not equipped[1] then
+					return
+				end
+			end
+		end
+		
+		local dataz = Amr.db.char.Artifacts[spec]
+		if not dataz then
+			dataz = {}
+			Amr.db.char.Artifacts[spec] = dataz
+		end
+		
+		if not dataz.Crucible then
+			dataz.Crucible = {
+				Equipped = {},
+				Inventory = {}
+			}
+		end		
+		
+		local crucible = dataz.Crucible		
+		crucible.Equipped = equipped
+		if preview then
+			crucible.Inventory[preview.ItemLink] = preview
+		end
+	end
+end
+
 local function scanArtifact()
 	if not Amr.db or not Amr.db.char or not Amr.db.char.Artifacts then return end
 	
@@ -299,11 +410,38 @@ local function scanArtifact()
 	--local spec = GetSpecialization()
 	
 	if spec then
-		Amr.db.char.Artifacts[spec] = {
-			Powers = powerRanks,
-			Relics = relicInfo
-		}
+	
+		-- sometimes this event can fire when no relic data is available, don't overwrite non-blank relic data with blank relic data
+		if Amr.db.char.Artifacts[spec] then
+			local oldRelics = Amr.db.char.Artifacts[spec].Relics
+			if oldRelics then
+				for i = 1,3 do
+					if oldRelics[i] and oldRelics[i] ~= "" and (not relicInfo[i] or relicInfo[i] == "") then
+						relicInfo[i] = oldRelics[i]
+					end
+				end
+			end
+		end
+		
+		local dataz = Amr.db.char.Artifacts[spec]
+		if not dataz then
+			dataz = {}
+			Amr.db.char.Artifacts[spec] = dataz
+		end
+
+		if not dataz.Crucible then
+			dataz.Crucible = {
+				Equipped = {},
+				Inventory = {}
+			}
+		end
+		
+		dataz.Powers = powerRanks
+		dataz.Relics = relicInfo	
+		
 	end
+	
+	--scanCrucible()
 end
 
 -- Returns a data object containing all information about the current player needed for an export:
@@ -344,3 +482,5 @@ Amr:AddEventHandler("VOID_STORAGE_UPDATE", scanVoid)
 
 Amr:AddEventHandler("PLAYER_TALENT_UPDATE", scanTalents)
 Amr:AddEventHandler("ARTIFACT_UPDATE", scanArtifact)
+Amr:AddEventHandler("ARTIFACT_RELIC_FORGE_UPDATE", scanCrucible)
+Amr:AddEventHandler("ARTIFACT_RELIC_FORGE_PREVIEW_RELIC_CHANGED", scanCrucible)

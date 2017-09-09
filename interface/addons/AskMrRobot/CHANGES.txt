@@ -1,7 +1,7 @@
-changeset:   110:5021d5125484
-tag:         v51
+changeset:   112:57c6cac5143c
+tag:         v52
 user:        yellowfive
-date:        Wed Jun 14 21:00:53 2017 -0700
-summary:     Added Tomb of Sargeras to auto-logging.
+date:        Mon Aug 28 19:33:14 2017 -0700
+summary:     7.3 update, preparation for reading crucible.
 
 

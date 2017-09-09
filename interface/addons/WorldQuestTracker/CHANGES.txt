@@ -1,7 +1,7 @@
-changeset:   188:f2e843ce050a
-tag:         v7.2.5.188-release
+changeset:   218:8cee53478c4a
+tag:         v7.3.0.218-RC4
 user:        Tercio
-date:        Mon Aug 21 20:46:45 2017 -0300
-summary:     - Group Finder: middle click on the quest name in the quest tracker should pass the click if the auto open is disabled.
+date:        Mon Sep 04 13:14:30 2017 -0300
+summary:     - Fixed comm spam when selecting and deselecting a rare.
 
 

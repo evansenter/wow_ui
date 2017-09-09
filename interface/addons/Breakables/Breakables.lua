@@ -26,12 +26,14 @@ local AdditionalMillableItems = {
 	124105,
 	124106,
 	128304,
+	151565,
 }
 
 local AdditionalProspectableItems = {
 	-- Legion ore
 	123918,
 	123919,
+	151564,
 }
 
 local MassMilling = {
@@ -50,6 +52,7 @@ local MassMilling = {
 	[124105] = 209662,
 	[124106] = 209664,
 	[128304] = 210116,
+	[151565] = 247861,
 }
 
 local HerbCombineItems = {
@@ -229,7 +232,7 @@ function Breakables:InitLDB()
 
 		if ldbButton then
 			function ldbButton:OnTooltipShow()
-				self:AddLine(L["Breakables"] .. " 1.4.8")
+				self:AddLine(L["Breakables"] .. " 1.4.9.1")
 				self:AddLine(L["Click to open Breakables options."], 1, 1, 1)
 			end
 		end

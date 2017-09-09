@@ -38,3 +38,4 @@ L["Whether or not to hide the action bar if no breakables are present in your ba
 L["Whether or not to hide the breakables bar when you enter combat and show it again when leaving combat."] = "Cacher ou non la barre de Breakables quand vous entrez en combat et la réafficher en en sortant."
 L["You can click on this button to break this item without having to click on the profession button first."] = "Vous pouvez cliquer sur ce bouton pour recycler cet objet sans avoir à cliquer sur le bouton du métier auparavant."
 L["You can right-click on this button to ignore this item. Items can be unignored from the options screen."] = "Vous pouvez ignorer cet objet par clic droit dessus. Les objets peuvent être remis via le panneau des options."
+

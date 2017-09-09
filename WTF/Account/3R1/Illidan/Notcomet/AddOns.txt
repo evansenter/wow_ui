@@ -151,3 +151,5 @@ HandyNotes_LegionTreasures: disabled
 WorldQuestTracker: disabled
 DBM-TrialofValor: disabled
 RCLootCouncil: disabled
+AdiBags: enabled
+AdiBags_Config: enabled

@@ -1,5 +1,6 @@
 
 OmniCC4Config = {
+	["version"] = "7.3",
 	["groups"] = {
 		{
 			["id"] = "Ignore",
@@ -22,24 +23,24 @@ OmniCC4Config = {
 			["enabled"] = true,
 		}, -- [3]
 	},
-	["version"] = "7.2.1",
+	["engine"] = "AniUpdater",
 	["groupSettings"] = {
 		["Comet"] = {
 			["enabled"] = true,
 			["fontFace"] = "Interface\\Addons\\Skada\\media\\fonts\\ABF.ttf",
 			["fontSize"] = 20,
 			["effect"] = "pulse",
-			["minDuration"] = 2,
+			["yOff"] = 0,
 			["minEffectDuration"] = 30,
 			["minSize"] = 0.9,
 			["spiralOpacity"] = 1.00999997742474,
-			["yOff"] = 0,
+			["scaleText"] = true,
 			["xOff"] = 0,
 			["tenthsDuration"] = 0,
 			["fontOutline"] = "OUTLINE",
 			["anchor"] = "CENTER",
 			["mmSSDuration"] = 0,
-			["scaleText"] = true,
+			["minDuration"] = 2,
 			["styles"] = {
 				["seconds"] = {
 					["a"] = 1,
@@ -90,17 +91,17 @@ OmniCC4Config = {
 			["fontFace"] = "Interface\\Addons\\Skada\\fonts\\ABF.ttf",
 			["fontSize"] = 20,
 			["effect"] = "pulse",
-			["minDuration"] = 2,
+			["yOff"] = 0,
 			["minEffectDuration"] = 30,
 			["minSize"] = 0.9,
 			["spiralOpacity"] = 1.00999997742474,
-			["yOff"] = 0,
+			["scaleText"] = true,
 			["xOff"] = 0,
 			["tenthsDuration"] = 0,
 			["fontOutline"] = "OUTLINE",
 			["anchor"] = "CENTER",
 			["mmSSDuration"] = 0,
-			["scaleText"] = true,
+			["minDuration"] = 2,
 			["styles"] = {
 				["seconds"] = {
 					["a"] = 1,
@@ -194,17 +195,17 @@ OmniCC4Config = {
 				},
 			},
 			["effect"] = "pulse",
-			["yOff"] = 0,
+			["scaleText"] = true,
 			["mmSSDuration"] = 0,
 			["anchor"] = "CENTER",
 			["spiralOpacity"] = 1.00999997742474,
-			["scaleText"] = true,
+			["minDuration"] = 2.00000002980232,
 			["xOff"] = 0,
 			["tenthsDuration"] = 0,
 			["fontOutline"] = "OUTLINE",
 			["minSize"] = 0.85,
 			["minEffectDuration"] = 30.0000004470348,
-			["minDuration"] = 2.00000002980232,
+			["yOff"] = 0,
 			["fontSize"] = 22,
 		},
 		["Ignore"] = {
@@ -212,17 +213,17 @@ OmniCC4Config = {
 			["fontFace"] = "Fonts\\FRIZQT__.TTF",
 			["fontSize"] = 18,
 			["effect"] = "pulse",
-			["minDuration"] = 2,
+			["yOff"] = 0,
 			["minEffectDuration"] = 30,
 			["minSize"] = 0.5,
 			["spiralOpacity"] = 1,
-			["yOff"] = 0,
+			["scaleText"] = true,
 			["xOff"] = 0,
 			["tenthsDuration"] = 0,
 			["fontOutline"] = "OUTLINE",
 			["anchor"] = "CENTER",
 			["mmSSDuration"] = 0,
-			["scaleText"] = true,
+			["minDuration"] = 2,
 			["styles"] = {
 				["seconds"] = {
 					["a"] = 1,
@@ -269,5 +270,4 @@ OmniCC4Config = {
 			},
 		},
 	},
-	["engine"] = "AniUpdater",
 }

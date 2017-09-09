@@ -46,7 +46,8 @@ function MT:CreateBindingFrame()
 	frame:SetScript("OnHide",
 		function()
 			frame.outputtext:SetText("")
-			PlaySound("gsTitleOptionExit")
+			--PlaySound("gsTitleOptionExit")
+			PlaySound(799)
 			MacroToolkitFrame:Show()
 		end)
 	frame:RegisterForClicks("AnyUp")
@@ -90,8 +91,8 @@ function MT:CreateBindingFrame()
 	frame.profile.enabled = true
 	frame.profile:SetScript("OnClick",
 		function(this)
-			if this.enabled then PlaySound("igMainMenuOptionCheckBoxOn")
-			else PlaySound("igMainMenuOptionCheckBoxOff") end
+			if this.enabled then PlaySound(856) --PlaySound("igMainMenuOptionCheckBoxOn")
+			else PlaySound(857) end --PlaySound("igMainMenuOptionCheckBoxOff") end
 			if frame.bindingsChanged then StaticPopup_Show("MACROTOOLKIT_CONFIRM_LOSE_BINDING_CHANGES")
 			else MT:ChangeBindingProfile() end
 		end)
@@ -142,7 +143,8 @@ function MT:CreateBindingFrame()
 	frame.unbindbutton:SetPoint("BOTTOMLEFT", 15, 14)
 	frame.unbindbutton:SetScript("OnClick",
 		function()
-			PlaySound("igMainMenuOptionCheckBoxOn")
+			--PlaySound("igMainMenuOptionCheckBoxOn")
+			PlaySound(856)
 			local key1, key2 = GetBindingKey(frame.selected)
 			if key1 then SetBinding(key1, nil) end
 			if key2 then SetBinding(key2, nil) end
@@ -221,7 +223,8 @@ function MT:BindingFrameOnKeyDown(this, key)
 end
 
 function MT:BindingButtonOnClick(this, button)
-	PlaySound("igMainMenuOptionCheckBoxOn")
+	--PlaySound("igMainMenuOptionCheckBoxOn")
+	PlaySound(856)
 	if button == "LeftButton" or button == "RightButton" then
 		if MTB.buttonPressed == this then MTB.outputtext:SetText("")
 		else

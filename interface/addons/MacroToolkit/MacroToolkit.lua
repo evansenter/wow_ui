@@ -145,7 +145,8 @@ function MT:eventHandler(this, event, arg1, ...)
 					if not ChatEdit_InsertLink(link) then assert(activeEditBox:GetName(), "Failed to add tradeskill link") end
 				--else ToggleDropDownMenu(1, nil, TradeSkillLinkDropDown, "TradeSkillLinkFrame", 25, 25) end
 				else ToggleDropDownMenu(1, nil, TradeSkillFrame.LinkToDropDown, TradeSkillFrame.LinkToButton, 25, 25) end
-				PlaySound("igMainMenuOptionCheckBoxOn")
+				--PlaySound("igMainMenuOptionCheckBoxOn")
+				PlaySound(856)
 			end
 			--TradeSkillLinkButton:SetScript("OnClick", btsui_onclick)
 			TradeSkillFrame.LinkToButton:SetScript("OnClick", btsui_onclick)
@@ -447,7 +448,8 @@ function MT:ShowShortened(chars)
 			text = string.format((chars == 1) and L["Macro shortened by %d character"] or L["Macro shortened by %d characters"], chars),
 			button1 = _G.OKAY, timeout = 0, exclusive = 1, whileDead = 1, hideOnEscape = 1}
 		StaticPopup_Show("MACROTOOLKIT_SHORTENED")
-	else PlaySound("igCharacterInfoOpen") end
+	else --PlaySound("igCharacterInfoOpen") end
+		PlaySound(839) end
 end
 
 function MT:SetMacros(account, extra, copy)

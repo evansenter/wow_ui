@@ -1,6 +1,15 @@
---	23:54 04.08.2017
+--	0:12 07.09.2017
 
 --[[
+3890
+* Raid Inspect: added new gems
+* Raid Inspect: added 7.2.5 & 7.3.5 raid achievements
+* Minor fixes
+
+3885
+* 7.3.0 Update
+* Saving log: added options for difficulties
+
 3880
 * Note: added custom Weak Auras event for updating note: "EXRT_NOTE_UPDATE"
 * Fight log: minor fixes (powers gain, report for named mobs (KJ for ex.))
@@ -11,7 +20,7 @@
 ]]
 local GlobalAddonName, ExRT = ...
 
-ExRT.V = 3880
+ExRT.V = 3890
 ExRT.T = "R"
 
 ExRT.OnUpdate = {}		--> таймеры, OnUpdate функции

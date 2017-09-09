@@ -1,8 +1,8 @@
-## Interface: 70200
+## Interface: 70300
 
 ## Title: DMouse
 ## Author: Darcey Lloyd
-## Version: 0.9
+## Version: 0.9.1
 ## Notes: DMouse an animated transparent circles addon to assist with finding where your mouse is in chaotic times.
 ## eMail: Darcey.Lloyd@gmail.com
 ## URL: www.allforthecode.co.uk

@@ -44,9 +44,16 @@ local alphaOffset = 0;
 local xOffset = 0 - (mainContainerSize/2);
 local yOffset = 0 - (mainContainerSize/2);
 
+local inCombat = false;
+local alwaysOn = false;
+
 if ( not DMouseDB ) then 
 	DMouseDB = {};
     DMouseDB["enabled"] = true;
+end
+
+local function playClick()
+	--PlaySound("igMainMenuOption");
 end
 
 
@@ -75,6 +82,28 @@ function init()
     --]]
     --DMouseMainContainer:SetPoint("CENTER",0,0)
     DMouseMainContainer:Show()
+
+
+    -- local f=CreateFrame("Frame");
+    -- local msg;
+    -- f:SetScript("OnEvent",function(self,event)
+    --     if event=="PLAYER_ENTERING_WORLD" then
+    --         msg = "entering the world";
+    --         DEFAULT_CHAT_FRAME:AddMessage(msg);
+    --         inCombat = false;
+    --     elseif event=="PLAYER_REGEN_DISABLED" then
+    --         msg = "entering combat";
+    --         DEFAULT_CHAT_FRAME:AddMessage(msg);
+    --         inCombat = true;
+    --     elseif event=="PLAYER_REGEN_ENABLED" then
+    --         msg = "leaving combat";
+    --         DEFAULT_CHAT_FRAME:AddMessage(msg);
+    --         inCombat = false;
+    --     end
+    -- end)
+    -- f:RegisterEvent("PLAYER_ENTERING_WORLD")
+    -- f:RegisterEvent("PLAYER_REGEN_DISABLED")
+    -- f:RegisterEvent("PLAYER_REGEN_ENABLED")
 
 
 
@@ -136,11 +165,14 @@ function init()
     SLASH_DMouseCOMMAND1 = "/dm";
     
     -- initial state
+    --if (DMouseDB["enabled"] == true and inCombat == true) then
     if (DMouseDB["enabled"] == true) then
         DMouseMainContainer:Show()
     else 
         DMouseMainContainer:Hide()
     end
+    
+    
     
 end
 -- # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
@@ -272,7 +304,7 @@ function DMouseSlashCommandHandler(cmd)
 		dmlog("  /DM off");
 		return;
 	end
-		
+    		
 	if (cmd == "off") then
 		DMouseDB["enabled"] = false;
         if(DMouseMainContainer ~= nil) then

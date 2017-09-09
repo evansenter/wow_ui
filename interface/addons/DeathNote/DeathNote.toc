@@ -1,8 +1,8 @@
-## Interface: 70200
+## Interface: 70300
 ## Title: DeathNote
 ## Notes: Death analysis tool
 ## Author: Slaren
-## Version: 70200.2-release
+## Version: r92
 ## OptionalDeps: LibStub, CallbackHandler-1.0, Ace3
 ## SavedVariables: DeathNoteDB
 ## SavedVariablesPerCharacter: DeathNoteData

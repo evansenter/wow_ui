@@ -12,8 +12,8 @@ BINDING_NAME_AngryAssign_LOCK = "Toggle Lock"
 BINDING_NAME_AngryAssign_DISPLAY = "Toggle Display"
 BINDING_NAME_AngryAssign_OUTPUT = "Output Assignment to Chat"
 
-local AngryAssign_Version = 'v1.8.12'
-local AngryAssign_Timestamp = '20170817052849'
+local AngryAssign_Version = 'v1.9.0'
+local AngryAssign_Timestamp = '20170829215228'
 
 local protocolVersion = 1
 local comPrefix = "AnAss"..protocolVersion
@@ -1433,16 +1433,17 @@ end
 function AngryAssign:UpdateOfficerRank()
 	local currentGuildName = GetGuildInfo('player')
 	local newOfficerGuildRank = 0
-	if currentGuildName then
-		for i = 1, GuildControlGetNumRanks() do
-			GuildControlSetRank(i)
-			if select(4, GuildControlGetRankFlags()) ~= nil then
-				newOfficerGuildRank = i - 1
-			else
-				break
-			end
-		end
-	end
+	-- if currentGuildName then
+	-- 	for i = 1, GuildControlGetNumRanks() do
+	-- 		GuildControlSetRank(i)
+	-- 		if select(4, GuildControlGetRankFlags()) ~= nil then
+	-- 			newOfficerGuildRank = i - 1
+	-- 		else
+	-- 			break
+	-- 		end
+	-- 	end
+	-- end
+	newOfficerGuildRank = 1
 	if newOfficerGuildRank ~= officerGuildRank or currentGuildName ~= guildName then
 		officerGuildRank = newOfficerGuildRank
 		guildName = currentGuildName

@@ -31,9 +31,13 @@ L["Add ranks"] = "Adicionar ranques"
 --Translation missing 
 -- L["Add rolls"] = ""
 --Translation missing 
+-- L["Add Rolls"] = ""
+--Translation missing 
 -- L["add_ranks_desc"] = ""
 --Translation missing 
 -- L["add_ranks_desc2"] = ""
+--Translation missing 
+-- L["add_rolls_desc"] = ""
 L["All items"] = "Todos os itens"
 L["All items has been awarded and  the loot session concluded"] = "Todos os itens foram distribuídos e a sessão de saque concluída"
 --Translation missing 
@@ -216,6 +220,8 @@ L["Autoloot BoE"] = "Saque automático para itens Vinculados ao Equipar"
 --Translation missing 
 -- L["customize_appearance_desc"] = ""
 --Translation missing 
+-- L["Data Received"] = ""
+--Translation missing 
 -- L["Date"] = ""
 --Translation missing 
 -- L["days and x months"] = ""
@@ -234,17 +240,25 @@ L["Autoloot BoE"] = "Saque automático para itens Vinculados ao Equipar"
 --Translation missing 
 -- L["disenchant_desc"] = ""
 --Translation missing 
+-- L["Done syncing"] = ""
+--Translation missing 
 -- L["Double click to delete this entry."] = ""
 --Translation missing 
 -- L["DPS"] = ""
 --Translation missing 
 -- L["Dropped by:"] = ""
 --Translation missing 
+-- L["Edit Entry"] = ""
+--Translation missing 
 -- L["Enable Loot History"] = ""
+--Translation missing 
+-- L["Enable Tier Buttons"] = ""
 --Translation missing 
 -- L["Enable Timeout"] = ""
 --Translation missing 
 -- L["enable_loot_history_desc"] = ""
+--Translation missing 
+-- L["enable_tierbuttons_desc"] = ""
 --Translation missing 
 -- L["enable_timeout_desc"] = ""
 --Translation missing 
@@ -296,6 +310,8 @@ L["Autoloot BoE"] = "Saque automático para itens Vinculados ao Equipar"
 --Translation missing 
 -- L["history"] = ""
 --Translation missing 
+-- L["How to sync"] = ""
+--Translation missing 
 -- L["Ignore List"] = ""
 --Translation missing 
 -- L["Ignore Options"] = ""
@@ -317,6 +333,8 @@ L["Autoloot BoE"] = "Saque automático para itens Vinculados ao Equipar"
 -- L["Item has been awarded"] = ""
 --Translation missing 
 -- L["Item received and added from 'player'"] = ""
+--Translation missing 
+-- L["Item was awarded to"] = ""
 --Translation missing 
 -- L["Item(s) replaced:"] = ""
 --Translation missing 
@@ -396,6 +414,8 @@ L["Autoloot BoE"] = "Saque automático para itens Vinculados ao Equipar"
 --Translation missing 
 -- L["No items to award later registered"] = ""
 --Translation missing 
+-- L["No recipients available"] = ""
+--Translation missing 
 -- L["No session running"] = ""
 --Translation missing 
 -- L["No winners registered"] = ""
@@ -421,6 +441,8 @@ L["Autoloot BoE"] = "Saque automático para itens Vinculados ao Equipar"
 -- L["Now handles looting"] = ""
 --Translation missing 
 -- L["Number of buttons"] = ""
+--Translation missing 
+-- L["Number of raids received loot from:"] = ""
 --Translation missing 
 -- L["Number of reasons"] = ""
 --Translation missing 
@@ -450,15 +472,27 @@ L["Autoloot BoE"] = "Saque automático para itens Vinculados ao Equipar"
 --Translation missing 
 -- L["open_the_loot_history_desc"] = ""
 --Translation missing 
+-- L["Opens the synchronizer"] = ""
+--Translation missing 
 -- L["Other piece"] = ""
 --Translation missing 
 -- L["Party"] = ""
 --Translation missing 
 -- L["Pass"] = ""
 --Translation missing 
+-- L["'player' can't receive 'type'"] = ""
+--Translation missing 
+-- L["'player' declined your sync request"] = ""
+--Translation missing 
 -- L["'player' has asked you to reroll"] = ""
 --Translation missing 
 -- L["'player' has ended the session"] = ""
+--Translation missing 
+-- L["'player' hasn't opened the sync window"] = ""
+--Translation missing 
+-- L["Please wait a few seconds until all data has been synchronized."] = ""
+--Translation missing 
+-- L["Please wait before trying to sync again."] = ""
 --Translation missing 
 -- L["Raid"] = ""
 --Translation missing 
@@ -467,6 +501,8 @@ L["Autoloot BoE"] = "Saque automático para itens Vinculados ao Equipar"
 -- L["Rank"] = ""
 --Translation missing 
 -- L["Raw lua output. Doesn't work well with date selection."] = ""
+--Translation missing 
+-- L["RCLootCouncil - Synchronizer"] = ""
 --Translation missing 
 -- L["RCLootCouncil Loot Frame"] = ""
 --Translation missing 
@@ -483,6 +519,8 @@ L["Autoloot BoE"] = "Saque automático para itens Vinculados ao Equipar"
 -- L["Reason"] = ""
 --Translation missing 
 -- L["reason_desc"] = ""
+--Translation missing 
+-- L["Receiving data..."] = ""
 --Translation missing 
 -- L["Remove All"] = ""
 --Translation missing 
@@ -536,6 +574,8 @@ L["Autoloot BoE"] = "Saque automático para itens Vinculados ao Equipar"
 --Translation missing 
 -- L["send_history_desc"] = ""
 --Translation missing 
+-- L["Sending 'type' to 'player'..."] = ""
+--Translation missing 
 -- L["Sent whisper help to 'player'"] = ""
 --Translation missing 
 -- L["session_error"] = ""
@@ -545,6 +585,8 @@ L["Autoloot BoE"] = "Saque automático para itens Vinculados ao Equipar"
 -- L["Set the text on button 'number'"] = ""
 --Translation missing 
 -- L["Set the whisper keys for button i."] = ""
+--Translation missing 
+-- L["Settings"] = ""
 --Translation missing 
 -- L["Silent Auto Pass"] = ""
 --Translation missing 
@@ -558,6 +600,8 @@ L["Autoloot BoE"] = "Saque automático para itens Vinculados ao Equipar"
 --Translation missing 
 -- L["Something went wrong :'("] = ""
 --Translation missing 
+-- L["Something went wrong during syncing, please try again."] = ""
+--Translation missing 
 -- L["Standard .csv output."] = ""
 --Translation missing 
 -- L["Start"] = ""
@@ -565,6 +609,12 @@ L["Autoloot BoE"] = "Saque automático para itens Vinculados ao Equipar"
 -- L["Status texts"] = ""
 --Translation missing 
 -- L["Successfully imported 'number' entries."] = ""
+--Translation missing 
+-- L["Successfully received 'type' from 'player'"] = ""
+--Translation missing 
+-- L["Sync"] = ""
+--Translation missing 
+-- L["sync_detailed_description"] = ""
 --Translation missing 
 -- L["Tank"] = ""
 --Translation missing 
@@ -600,11 +650,15 @@ L["Autoloot BoE"] = "Saque automático para itens Vinculados ao Equipar"
 --Translation missing 
 -- L["Tier 20"] = ""
 --Translation missing 
+-- L["Tier Buttons and Responses"] = ""
+--Translation missing 
 -- L["Tier Piece that doesn't complete a set"] = ""
 --Translation missing 
 -- L["Tier Tokens ..."] = ""
 --Translation missing 
 -- L["Tier tokens received from here:"] = ""
+--Translation missing 
+-- L["tier_buttons_desc"] = ""
 --Translation missing 
 -- L["tier_token_heroic"] = ""
 --Translation missing 
@@ -617,6 +671,8 @@ L["Autoloot BoE"] = "Saque automático para itens Vinculados ao Equipar"
 -- L["Time left (num seconds)"] = ""
 --Translation missing 
 -- L["Timeout"] = ""
+--Translation missing 
+-- L["To target"] = ""
 --Translation missing 
 -- L["Tokens received"] = ""
 --Translation missing 
@@ -723,6 +779,8 @@ L["Autoloot BoE"] = "Saque automático para itens Vinculados ao Equipar"
 -- L["You haven't selected an award reason to use for disenchanting!"] = ""
 --Translation missing 
 -- L["You haven't set a council! You can edit your council by typing '/rc council'"] = ""
+--Translation missing 
+-- L["You must select a target"] = ""
 --Translation missing 
 -- L["Your note:"] = ""
 --Translation missing 

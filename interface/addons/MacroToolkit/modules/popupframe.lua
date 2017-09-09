@@ -231,7 +231,8 @@ function MT:CreateMTPopup()
 	mtpfcancel:SetScript("OnClick",
 		function()
 			MT:CancelEdit()
-			PlaySound("gsTitleOptionOK")
+			--PlaySound("gsTitleOptionOK")
+			PlaySound(798)
 		end)
 
 	local mtpfok = CreateFrame("Button", "MacroToolkitPopupOk", mtpf, "UIPanelButtonTemplate")
@@ -243,7 +244,8 @@ function MT:CreateMTPopup()
 	mtpf:SetScript("OnShow", 
 		function(this)
 			mtpfedit:SetFocus()
-			PlaySound("igCharacterInfoOpen")
+			--PlaySound("igCharacterInfoOpen")
+			PlaySound(839)
 			--MT:RefreshPlayerSpellIconInfo()
 			--MT:PopupUpdate(mtpf)
 			--MT:PopupOkayUpdate()
@@ -305,7 +307,8 @@ function MT:CreateMTPopup()
 			MacroToolkitConditions:Enable()
 			if #MT.db.global.custom > 0 then MacroToolkitFlyout:Enable() end
 			MacroToolkitCustom:Enable()
-			PlaySound("igCharacterInfoClose")
+			--PlaySound("igCharacterInfoClose")
+			PlaySound(840)
 			local numMacros
 			local numAccountMacros, numCharacterMacros = GetNumMacros()
 			numMacros = (MacroToolkitFrame.macroBase == 0) and numAccountMacros or numCharacterMacros
@@ -334,7 +337,8 @@ function MT:CreateMTPopup()
 			mtpfok:SetSize(125, 22)
 			mtpfgl:SetText(L["Go Small"])
 			MT.gonelarge = true
-			PlaySound("igCharacterInfoOpen")
+			--PlaySound("igCharacterInfoOpen")
+			PlaySound(839)
 		end
 	
 	MT.gosmall =
@@ -353,7 +357,8 @@ function MT:CreateMTPopup()
 			mtpfok:SetSize(78, 22)
 			mtpfgl:SetText(L["Go Large"])
 			MT.gonelarge = nil
-			PlaySound("igCharacterInfoClose")
+			--PlaySound("igCharacterInfoClose")
+			PlaySound(840)
 		end
 	
 	mtpfgl:SetText(L["Go Large"])
@@ -538,7 +543,8 @@ function MT:PopupOkayButtonOnClick()
 		MacroToolkitPopup:Hide()
 		MacroToolkitFrame.selectedMacro = tonumber(index)
 		MT:MacroFrameUpdate()
-		PlaySound("gsTitleOptionOK")
+		--PlaySound("gsTitleOptionOK")
+		PlaySound(798)
 	end
 end
 		

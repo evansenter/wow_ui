@@ -44,6 +44,7 @@ L["Whether or not to hide the action bar if no breakables are present in your ba
 L["Whether or not to hide the breakables bar when you enter combat and show it again when leaving combat."] = true
 L["You can click on this button to break this item without having to click on the profession button first."] = true
 L["You can right-click on this button to ignore this item. Items can be unignored from the options screen."] = true
+
 --[===[@debug@
 L["Welcome"] = [[Thanks for using |cff33ff99Breakables|r! Use |cffffff78/brk|r to open this menu or |cffffff78/breakables|r to access the same options on the command line.
 

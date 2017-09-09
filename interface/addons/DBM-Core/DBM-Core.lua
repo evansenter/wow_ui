@@ -41,9 +41,9 @@
 --  Globals/Default Options  --
 -------------------------------
 DBM = {
-	Revision = tonumber(("$Revision: 16632 $"):sub(12, -3)),
-	DisplayVersion = "7.2.18", -- the string that is shown as version
-	ReleaseRevision = 16632 -- the revision of the latest stable version that is available
+	Revision = tonumber(("$Revision: 16694 $"):sub(12, -3)),
+	DisplayVersion = "7.3.2", -- the string that is shown as version
+	ReleaseRevision = 16694 -- the revision of the latest stable version that is available
 }
 DBM.HighestRelease = DBM.ReleaseRevision --Updated if newer version is detected, used by update nags to reflect critical fixes user is missing on boss pulls
 
@@ -354,8 +354,6 @@ local LastInstanceMapID = -1
 local LastGroupSize = 0
 local LastInstanceType = nil
 local queuedBattlefield = {}
-local loadDelay = nil
-local loadDelay2 = nil
 local noDelay = true
 local watchFrameRestore = false
 local bossHealth = {}
@@ -391,7 +389,6 @@ local fakeBWVersion, fakeBWHash = 69, "f7aadbb"
 local versionQueryString, versionResponseString = "Q^%d^%s", "V^%d^%s"
 
 local enableIcons = true -- set to false when a raid leader or a promoted player has a newer version of DBM
-local guiRequested = false
 
 local bannedMods = { -- a list of "banned" (meaning they are replaced by another mod like DBM-Battlegrounds (replaced by DBM-PvP)) boss mods, these mods will not be loaded by DBM (and they wont show up in the GUI)
 	"DBM-Battlegrounds", --replaced by DBM-PvP
@@ -1092,6 +1089,9 @@ do
 		if IsInGuild() then
 			SendAddonMessage("D4", "GH", "GUILD")
 		end
+		if not savedDifficulty or not difficultyText or not difficultyIndex then--prevent error if savedDifficulty or difficultyText is nil
+			savedDifficulty, difficultyText, difficultyIndex = self:GetCurrentInstanceDifficulty()
+		end
 	end
 
 	-- register a callback that will be executed once the addon is fully loaded (ADDON_LOADED fired, saved vars are available)
@@ -1235,7 +1235,6 @@ do
 				"CHAT_MSG_ADDON",
 				"BN_CHAT_MSG_ADDON",
 				"PLAYER_REGEN_DISABLED",
-				"PLAYER_REGEN_ENABLED",
 				"INSTANCE_ENCOUNTER_ENGAGE_UNIT",
 				"UNIT_TARGETABLE_CHANGED",
 				"UNIT_SPELLCAST_SUCCEEDED boss1 boss2 boss3 boss4 boss5",
@@ -2469,7 +2468,7 @@ do
 		dtext:SetFontObject(ChatFontNormal)
 		dtext:SetPoint("CENTER", decline, "CENTER", 0, 5)
 		dtext:SetText(NO)
-		PlaySound("igMainMenuOpen")--SOUNDKIT.IG_MAINMENU_OPEN (7.3)
+		PlaySound(850)
 	end
 
 	local function linkHook(self, link, string, button, ...)
@@ -2547,11 +2546,6 @@ do
 			return
 		end
 		if not IsAddOnLoaded("DBM-GUI") then
-			if InCombatLockdown() or UnitAffectingCombat("player") or IsFalling() then
-				guiRequested = true
-				self:AddMsg(DBM_CORE_LOAD_GUI_COMBAT)
-				return
-			end
 			local enabled = GetAddOnEnableState(playerName, "DBM-GUI")
 			if enabled == 0 then
 				EnableAddOn("DBM-GUI")
@@ -2567,7 +2561,9 @@ do
 			end
 			tsort(callOnLoad, function(v1, v2) return v1[2] < v2[2] end)
 			for i, v in ipairs(callOnLoad) do v[1]() end
-			collectgarbage("collect")
+			if not InCombatLockdown() and not UnitAffectingCombat("player") and not IsFalling() then--We loaded in combat but still need to avoid garbage collect in combat
+				collectgarbage("collect")
+			end
 		end
 		return DBM_GUI:ShowHide()
 	end
@@ -3584,22 +3580,6 @@ do
 	end
 end
 
-function DBM:PLAYER_REGEN_ENABLED()
-	if IsFalling() then return end--Don't attempt to load off load delay if falling oncombat end, just try next on combat end
-	if loadDelay then
-		self:Debug("loadDelay is activating LoadMod again")
-		self:LoadMod(loadDelay)
-	end
-	if loadDelay2 then
-		self:Debug("loadDelay2 is activating LoadMod again")
-		self:LoadMod(loadDelay2)
-	end
-	if guiRequested and not IsAddOnLoaded("DBM-GUI") then
-		guiRequested = false
-		self:LoadGUI()
-	end
-end
-
 function DBM:UPDATE_BATTLEFIELD_STATUS()
 	for i = 1, 2 do
 		if GetBattlefieldStatus(i) == "confirm" then
@@ -3750,11 +3730,6 @@ function DBM:ScenarioCheck()
 	end
 end
 
-	--In combat and it's not a raid boss. We'll just delay mod load until we leave combat to avoid "script ran to long errors"
-	--This should avoid most load problems (especially in LFR) When zoning in while in combat which causes the mod to fail to load/work correctly
-	--IF we are fighting a boss, we don't have much of a choice but to try and load anyways since script ran too long isn't actually a guarentee.
-	--The main place we should force a mod load in combat is for IsEncounterInProgress because i'm pretty sure blizzard waves "script ran too long" function for a small amount of time after a DC
-	--Outdoor bosses will try to ignore check, if they fail, well, then we need to try and find ways to make the mods that can't load in combat smaller or load faster.
 function DBM:LoadMod(mod, force)
 	if type(mod) ~= "table" then
 		self:Debug("LoadMod failed because mod table not valid")
@@ -3769,18 +3744,6 @@ function DBM:LoadMod(mod, force)
 		end
 		return
 	end
-	if (InCombatLockdown() or UnitAffectingCombat("player") or IsFalling()) and not IsEncounterInProgress() and IsInInstance() and not noDelay then
-		self:Debug("LoadMod delayed do to combat")
-		if not loadDelay then--Prevent duplicate DBM_CORE_LOAD_MOD_COMBAT message.
-			self:AddMsg(DBM_CORE_LOAD_MOD_COMBAT:format(tostring(mod.name)))
-		end
-		if loadDelay and loadDelay ~= mod then--Check if load delay exists, but make sure this isn't a loop of same mod before making a second load delay
-			loadDelay2 = mod
-		else
-			loadDelay = mod
-		end
-		return
-	end
 	if not currentSpecID then
 		self:SetCurrentSpecInfo()
 	end
@@ -3792,7 +3755,6 @@ function DBM:LoadMod(mod, force)
 			self:AddMsg(DBM_CORE_LOAD_MOD_ERROR:format(tostring(mod.name), tostring(_G["ADDON_"..reason or ""])))
 		else
 			self:Debug("LoadAddOn failed and did not give reason")
---			self:AddMsg(DBM_CORE_LOAD_MOD_ERROR:format(tostring(mod.name), DBM_CORE_UNKNOWN)) -- wtf, this should never happen....(but it does happen sometimes if you reload your UI in an instance...)
 		end
 		return false
 	else
@@ -3813,13 +3775,8 @@ function DBM:LoadMod(mod, force)
 				C_TimerAfter(15, function() timerRequestInProgress = false end)
 			end
 		end
-		if not InCombatLockdown() and not UnitAffectingCombat("player") and not IsFalling() then--We loaded in combat because a raid boss was in process, but lets at least delay the garbage collect so at least load mod is half as bad, to do our best to avoid "script ran too long"
+		if not InCombatLockdown() and not UnitAffectingCombat("player") and not IsFalling() then--We loaded in combat but still need to avoid garbage collect in combat
 			collectgarbage("collect")
-		end
-		if loadDelay2 == mod then
-			loadDelay2 = nil
-		elseif loadDelay == mod then
-			loadDelay = nil
 		end
 		return true
 	end
@@ -4415,7 +4372,7 @@ do
 			inspopuptext:SetText(DBM_REQ_INSTANCE_ID_PERMISSION:format(sender, sender))
 			buttonaccept:SetScript("OnClick", function(f) savedSender = nil DBM:Unschedule(autoDecline) accessList[sender] = true syncHandlers["IR"](sender) f:GetParent():Hide() end)
 			buttondecline:SetScript("OnClick", function(f) autoDecline(sender, 1) end)
-			PlaySound("igMainMenuOpen")
+			PlaySound(850)
 			inspopup:Show()
 		end
 
@@ -4456,7 +4413,7 @@ do
 		syncHandlers["GCB"] = function(sender, modId, ver, difficulty)
 			if not DBM.Options.ShowGuildMessages or not difficulty then return end
 			if not ver or not (ver == "2") then return end--Ignore old versions
-			if DBM:AntiSpam(5, "GCB") then
+			if DBM:AntiSpam(10, "GCB") then
 				if IsInInstance() then return end--Simple filter, if you are inside an instance, just filter it, if not in instance, good to go.
 				local bossName = EJ_GetEncounterInfo(modId) or DBM_CORE_UNKNOWN
 				local difficultyName = DBM_CORE_UNKNOWN
@@ -5662,10 +5619,8 @@ do
 							self:AddMsg(DBM_CORE_SCENARIO_STARTED:format(difficultyText..name))
 						else
 							self:AddMsg(DBM_CORE_COMBAT_STARTED:format(difficultyText..name))
-							if difficultyIndex == 14 or difficultyIndex == 15 or difficultyIndex == 16 or difficultyIndex == 33 then--Only send relevant content, not guild beating down lich king or LFR.
-								if InGuildParty() then--Guild Group
-									SendAddonMessage("D4", "GCB\t"..modId.."\t2\t"..difficultyIndex, "GUILD")
-								end
+							if (difficultyIndex == 14 or difficultyIndex == 15 or difficultyIndex == 16) and InGuildParty() then--Only send relevant content, not guild beating down lich king or LFR.
+								SendAddonMessage("D4", "GCB\t"..modId.."\t2\t"..difficultyIndex, "GUILD")
 							end
 						end
 					end
@@ -5811,7 +5766,7 @@ do
 							self:AddMsg(DBM_CORE_SCENARIO_ENDED_AT_LONG:format(difficultyText..name, strFromTime(thisTime), totalPulls - totalKills))
 						else
 							self:AddMsg(DBM_CORE_COMBAT_ENDED_AT_LONG:format(difficultyText..name, wipeHP, strFromTime(thisTime), totalPulls - totalKills))
-							if (difficultyIndex == 14 or difficultyIndex == 15 or difficultyIndex == 16 or difficultyIndex == 33) and InGuildParty() then--Maybe add mythic plus/CM?
+							if (difficultyIndex == 14 or difficultyIndex == 15 or difficultyIndex == 16) and InGuildParty() then--Maybe add mythic plus/CM?
 								SendAddonMessage("D4", "GCE\t"..modId.."\t3\t1\t"..strFromTime(thisTime).."\t"..difficultyIndex.."\t"..wipeHP, "GUILD")
 							end
 						end
@@ -5893,10 +5848,8 @@ do
 							msg = DBM_CORE_SCENARIO_COMPLETE:format(difficultyText..name, strFromTime(thisTime))
 						else
 							msg = DBM_CORE_BOSS_DOWN:format(difficultyText..name, strFromTime(thisTime))
-							if difficultyIndex == 14 or difficultyIndex == 15 or difficultyIndex == 16 or difficultyIndex == 33 then
-								if InGuildParty() then--Guild Group
-									SendAddonMessage("D4", "GCE\t"..modId.."\t3\t0\t"..strFromTime(thisTime).."\t"..difficultyIndex, "GUILD")
-								end
+							if (difficultyIndex == 14 or difficultyIndex == 15 or difficultyIndex == 16) and InGuildParty() then
+								SendAddonMessage("D4", "GCE\t"..modId.."\t3\t0\t"..strFromTime(thisTime).."\t"..difficultyIndex, "GUILD")
 							end
 						end
 					elseif thisTime < (bestTime or mhuge) then
@@ -5904,10 +5857,8 @@ do
 							msg = DBM_CORE_SCENARIO_COMPLETE_NR:format(difficultyText..name, strFromTime(thisTime), strFromTime(bestTime), totalKills)
 						else
 							msg = DBM_CORE_BOSS_DOWN_NR:format(difficultyText..name, strFromTime(thisTime), strFromTime(bestTime), totalKills)
-							if difficultyIndex == 14 or difficultyIndex == 15 or difficultyIndex == 16 or difficultyIndex == 33 then
-								if InGuildParty() then--Guild Group
-									SendAddonMessage("D4", "GCE\t"..modId.."\t3\t0\t"..strFromTime(thisTime).."\t"..difficultyIndex, "GUILD")
-								end
+							if (difficultyIndex == 14 or difficultyIndex == 15 or difficultyIndex == 16) and InGuildParty() then
+								SendAddonMessage("D4", "GCE\t"..modId.."\t3\t0\t"..strFromTime(thisTime).."\t"..difficultyIndex, "GUILD")
 							end
 						end
 					else
@@ -5915,10 +5866,8 @@ do
 							msg = DBM_CORE_SCENARIO_COMPLETE_L:format(difficultyText..name, strFromTime(thisTime), strFromTime(lastTime), strFromTime(bestTime), totalKills)
 						else
 							msg = DBM_CORE_BOSS_DOWN_L:format(difficultyText..name, strFromTime(thisTime), strFromTime(lastTime), strFromTime(bestTime), totalKills)
-							if difficultyIndex == 14 or difficultyIndex == 15 or difficultyIndex == 16 or difficultyIndex == 33 then
-								if InGuildParty() then--Guild Group
-									SendAddonMessage("D4", "GCE\t"..modId.."\t3\t0\t"..strFromTime(thisTime).."\t"..difficultyIndex, "GUILD")
-								end
+							if (difficultyIndex == 14 or difficultyIndex == 15 or difficultyIndex == 16) and InGuildParty() then
+								SendAddonMessage("D4", "GCE\t"..modId.."\t3\t0\t"..strFromTime(thisTime).."\t"..difficultyIndex, "GUILD")
 							end
 						end
 					end
@@ -7206,6 +7155,9 @@ do
 	local iconStrings = {[1] = RAID_TARGET_1, [2] = RAID_TARGET_2, [3] = RAID_TARGET_3, [4] = RAID_TARGET_4, [5] = RAID_TARGET_5, [6] = RAID_TARGET_6, [7] = RAID_TARGET_7, [8] = RAID_TARGET_8,}
 	function bossModPrototype:IconNumToString(number)
 		return iconStrings[number] or number
+	end
+	function bossModPrototype:IconNumToTexture(number)
+		return "|TInterface\\TargetingFrame\\UI-RaidTargetingIcon_"..number..".blp:12:12|t" or number
 	end
 end
 
@@ -9387,6 +9339,12 @@ do
 		if not DBM.Options.DontShowSpecialWarnings and (not self.option or self.mod.Options[self.option]) and not moving and frame then
 			if self.announceType == "taunt" and DBM.Options.FilterTankSpec and not self.mod:IsTank() then return end--Don't tell non tanks to taunt, ever.
 			local argTable = {...}
+			-- add a default parameter for move away warnings
+			if self.announceType == "gtfo" then
+				if #argTable == 0 then
+					argTable[1] = DBM_CORE_BAD
+				end
+			end
 			if #self.combinedtext > 0 then
 				--Throttle spam.
 				if DBM.Options.SWarningAlphabetical then
@@ -9749,6 +9707,10 @@ do
 
 	function bossModPrototype:NewSpecialWarningCast(text, optionDefault, ...)
 		return newSpecialWarning(self, "cast", text, nil, optionDefault, ...)
+	end
+	
+	function bossModPrototype:NewSpecialWarningLookAway(text, optionDefault, ...)
+		return newSpecialWarning(self, "lookaway", text, nil, optionDefault, ...)
 	end
 
 	function bossModPrototype:NewSpecialWarningReflect(text, optionDefault, ...)

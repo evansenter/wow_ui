@@ -3,7 +3,7 @@ Frame: GarrisonLandingPageMinimapButton
 FrameLevel: 6
 Anchor: TOPRIGHT
 X: -2
-Y: -34
+Y: -3
 W: 53
 H: 53
 Frame: ExtraActionBarFrame
@@ -14,7 +14,7 @@ Y: 5
 W: 64
 H: 64
 Frame: ColorPickerFrame
-FrameLevel: 1
+FrameLevel: 21
 Anchor: CENTER
 X: 0
 Y: 0
@@ -37,7 +37,7 @@ H: 32
 Frame: WQGFManualActionsFrame
 FrameLevel: 0
 Anchor: CENTER
-X: 0
-Y: 60
+X: 29
+Y: 64
 W: 370
 H: 110

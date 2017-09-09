@@ -28,7 +28,7 @@ local _borderWidth = 1
 Scripts
 -------------------------------------------------------------------------------]]
 local function buttonOnClick(frame)
-	PlaySound("gsTitleOptionExit")
+	--PlaySound("gsTitleOptionExit")
 	frame.obj:Hide()
 end
 
