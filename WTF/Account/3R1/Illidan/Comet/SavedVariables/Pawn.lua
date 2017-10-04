@@ -1,10 +1,9 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0213,
+	["LastVersion"] = 2.0214,
 	["LastPlayerFullName"] = "Comet-Illidan",
 	["AutoSelectScales"] = false,
 	["UpgradeTracking"] = false,
-	["LastKeybindingsSet"] = 1,
 	["Artifacts"] = {
 		[128940] = {
 			["Relics"] = {
@@ -58,6 +57,7 @@ PawnOptions = {
 			["Name"] = "Sheilun, Staff of the Mists",
 		},
 	},
+	["LastKeybindingsSet"] = 1,
 }
 PawnMrRobotScaleProviderOptions = {
 	["LastClass"] = "MONK",

@@ -12372,14 +12372,22 @@ ShadowedUFDB = {
 					},
 				},
 				["focustarget"] = {
-					["portrait"] = {
-						["type"] = "3D",
-						["alignment"] = "RIGHT",
-						["fullAfter"] = 100,
+					["indicators"] = {
+						["raidTarget"] = {
+							["y"] = 0,
+							["x"] = 0,
+							["anchorTo"] = "$parent",
+							["anchorPoint"] = "C",
+							["size"] = 20,
+						},
+						["class"] = {
+							["y"] = 0,
+							["x"] = 0,
+							["anchorTo"] = "$parent",
+							["anchorPoint"] = "BL",
+							["size"] = 16,
+						},
 						["height"] = 0.5,
-						["fullBefore"] = 0,
-						["order"] = 15,
-						["width"] = 0.22,
 					},
 					["range"] = {
 						["enabled"] = true,
@@ -12483,27 +12491,19 @@ ShadowedUFDB = {
 							["text"] = "[(()afk() )][name]",
 						}, -- [5]
 					},
+					["portrait"] = {
+						["type"] = "3D",
+						["alignment"] = "RIGHT",
+						["fullAfter"] = 100,
+						["height"] = 0.5,
+						["fullBefore"] = 0,
+						["order"] = 15,
+						["width"] = 0.22,
+					},
 					["highlight"] = {
 						["height"] = 0.5,
 						["mouseover"] = false,
 						["size"] = 10,
-					},
-					["indicators"] = {
-						["raidTarget"] = {
-							["y"] = 0,
-							["x"] = 0,
-							["anchorTo"] = "$parent",
-							["anchorPoint"] = "C",
-							["size"] = 20,
-						},
-						["class"] = {
-							["y"] = 0,
-							["x"] = 0,
-							["anchorTo"] = "$parent",
-							["anchorPoint"] = "BL",
-							["size"] = 16,
-						},
-						["height"] = 0.5,
 					},
 				},
 				["pet"] = {
@@ -13035,7 +13035,65 @@ ShadowedUFDB = {
 						["y"] = 8,
 						["size"] = 14,
 					},
-					["height"] = 55,
+					["text"] = {
+						{
+							["text"] = "[(()afk() )][name]",
+							["size"] = 1,
+						}, -- [1]
+						{
+							["text"] = "[( )curhp] -[( )perhp]",
+							["size"] = 1,
+						}, -- [2]
+						{
+							["text"] = "[perpp]",
+						}, -- [3]
+						{
+							["text"] = "[( )curpp]",
+						}, -- [4]
+						{
+							["text"] = "[(()afk() )][name][( ()group())]",
+						}, -- [5]
+						[10] = {
+							["anchorTo"] = "$staggerBar",
+							["text"] = "[monk:abs:stagger]",
+							["width"] = 1,
+							["name"] = "Text",
+						},
+						[11] = {
+							["anchorTo"] = "$runeBar",
+							["width"] = 1,
+							["name"] = "Timer Text",
+							["block"] = true,
+						},
+						[12] = {
+							["anchorTo"] = "$totemBar",
+							["width"] = 1,
+							["default"] = true,
+							["name"] = "Timer Text",
+							["block"] = true,
+						},
+						[13] = {
+							["anchorTo"] = "$staggerBar",
+							["text"] = "[monk:abs:stagger]",
+							["width"] = 1,
+							["default"] = true,
+							["name"] = "Text",
+						},
+						[14] = {
+							["anchorTo"] = "$runeBar",
+							["width"] = 1,
+							["default"] = true,
+							["name"] = "Timer Text",
+							["block"] = true,
+						},
+						[15] = {
+							["anchorTo"] = "$totemBar",
+							["width"] = 1,
+							["default"] = true,
+							["name"] = "Timer Text",
+							["block"] = true,
+						},
+					},
 					["highlight"] = {
 						["height"] = 0.5,
 						["mouseover"] = false,
@@ -13098,71 +13156,13 @@ ShadowedUFDB = {
 						["y"] = 6,
 						["size"] = 12,
 					},
+					["height"] = 55,
+					["width"] = 285,
 					["altPowerBar"] = {
 						["height"] = 0.4,
 						["background"] = true,
 						["order"] = 100,
 						["enabled"] = false,
-					},
-					["width"] = 285,
-					["text"] = {
-						{
-							["text"] = "[(()afk() )][name]",
-							["size"] = 1,
-						}, -- [1]
-						{
-							["text"] = "[( )curhp] -[( )perhp]",
-							["size"] = 1,
-						}, -- [2]
-						{
-							["text"] = "[perpp]",
-						}, -- [3]
-						{
-							["text"] = "[( )curpp]",
-						}, -- [4]
-						{
-							["text"] = "[(()afk() )][name][( ()group())]",
-						}, -- [5]
-						[10] = {
-							["anchorTo"] = "$staggerBar",
-							["text"] = "[monk:abs:stagger]",
-							["width"] = 1,
-							["name"] = "Text",
-						},
-						[11] = {
-							["anchorTo"] = "$runeBar",
-							["width"] = 1,
-							["name"] = "Timer Text",
-							["block"] = true,
-						},
-						[12] = {
-							["anchorTo"] = "$totemBar",
-							["width"] = 1,
-							["default"] = true,
-							["name"] = "Timer Text",
-							["block"] = true,
-						},
-						[13] = {
-							["anchorTo"] = "$staggerBar",
-							["text"] = "[monk:abs:stagger]",
-							["width"] = 1,
-							["default"] = true,
-							["name"] = "Text",
-						},
-						[14] = {
-							["anchorTo"] = "$runeBar",
-							["width"] = 1,
-							["default"] = true,
-							["name"] = "Timer Text",
-							["block"] = true,
-						},
-						[15] = {
-							["anchorTo"] = "$totemBar",
-							["width"] = 1,
-							["default"] = true,
-							["name"] = "Timer Text",
-							["block"] = true,
-						},
 					},
 					["auraIndicators"] = {
 						["height"] = 0.5,

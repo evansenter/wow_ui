@@ -65,6 +65,7 @@ MT.conditions={
 	["bonusbar"]=1,
 	["btn"]=6,
 	["button"]=6,
+	["canexitvehicle"]=0,
 	["channeling"]=0,
 	["channelling"]=0,
 	["combat"]=0,

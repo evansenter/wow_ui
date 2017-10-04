@@ -3,7 +3,7 @@ PawnCommon = {
 	["ShowUpgradesOnTooltips"] = true,
 	["AlignNumbersRight"] = false,
 	["ShowBagUpgradeAdvisor"] = true,
-	["LastVersion"] = 2.0213,
+	["LastVersion"] = 2.0214,
 	["ShowRelicUpgrades"] = true,
 	["ShowValuesForUpgradesOnly"] = false,
 	["Digits"] = 1,
@@ -296,6 +296,9 @@ PawnCommon = {
 		["\"MrRobot\":PRIEST2"] = {
 			["IconTexturePath"] = 237542,
 			["PerCharacterOptions"] = {
+				["Evan-Illidan"] = {
+					["Visible"] = true,
+				},
 			},
 			["Color"] = "ffffff",
 			["LocalizedName"] = "Priest: Holy",
@@ -557,9 +560,6 @@ PawnCommon = {
 		["\"MrRobot\":PRIEST1"] = {
 			["IconTexturePath"] = 135940,
 			["PerCharacterOptions"] = {
-				["Evan-Illidan"] = {
-					["Visible"] = true,
-				},
 			},
 			["Color"] = "ffffff",
 			["LocalizedName"] = "Priest: Discipline",

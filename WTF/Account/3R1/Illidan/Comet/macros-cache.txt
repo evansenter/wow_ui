@@ -55,7 +55,7 @@ VER 3 0100000000000011 "Tier 2 MW" "INV_MISC_QUESTIONMARK"
 END
 VER 3 010000000000001C "Tier 5" "INV_Misc_QuestionMark"
 #showtooltip
-/use [talent:5/1]Healing Elixir;[talent:5/2]Diffuse Magic;[talent:5/3]Dampen Harm
+/use [talent:5/1,nomod]Healing Elixir;[talent:5/2,nomod]Diffuse Magic;[talent:5/3,nomod]Dampen Harm[mod:shift]Fortifying Brew
 END
 VER 3 010000000000001D "Tier 6 MW" "INV_Misc_QuestionMark"
 #showtooltip

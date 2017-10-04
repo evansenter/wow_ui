@@ -1,12 +1,12 @@
-tag 06d6995f36011dde128bd3b25cf31acdcb512a8f v3.2
+tag 45afa74877b62a3f39ec275626d9295c1814bf6f v3.4
 Author:	iceeagle <ciprianmihai.coman@gmail.com>
-Date:	Wed Mar 29 16:00:28 2017 +0300
+Date:	Fri Sep 29 14:23:43 2017 +0300
 
-v3.2
+v3.4
 
-commit b3546456d96ec314ef301b2de31f7da8605a3c87
+commit 7625b211f468330755118855b56bad2637255927
 Author: iceeagle <ciprianmihai.coman@gmail.com>
-Date:   Wed Mar 29 16:00:15 2017 +0300
+Date:   Fri Sep 29 14:23:26 2017 +0300
 
-    update for patch 7.2
+    fix play sound
 

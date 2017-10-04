@@ -230,10 +230,10 @@ function OiLvlPlayer_Update(sw)
 							totalilvl[Value], xupgrade[Value] = OItemAnalysis_CheckILVLGear("player",Value)
 							xname[Value] = itemID
 							if Value == 17 and OTCheckartifactwep(tonumber(itemID)) then
-								if totalilvl[Value] < totalilvl[16] then
+								if totalilvl[Value] and totalilvl[16] and totalilvl[Value] < totalilvl[16] then
 									totalilvl[Value], xupgrade[Value] = totalilvl[16], xupgrade[16]
 								end
-								if totalilvl[Value] > totalilvl[16] then
+								if totalilvl[Value] and totalilvl[16] and totalilvl[Value] > totalilvl[16] then
 									_G[Items[16].."Stock"]:SetText(totalilvl[Value]);
 									_G[Items[16].."Stock"]:SetShadowColor(1,1,1,1);
 									ailvl = ailvl -  totalilvl[16] + totalilvl[Value]

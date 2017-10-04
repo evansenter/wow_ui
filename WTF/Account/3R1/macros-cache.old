@@ -29,6 +29,12 @@ END
 VER 3 0000000000000047 "Deathnote" "Ability_Hunter_MurderofCrows"
 /deathnote
 END
+VER 3 0000000000000061 "DH" "INV_Misc_QuestionMark"
+#showtooltip Divine Hymn
+/use 13
+/use 14
+/cast Divine Hymn
+END
 VER 3 0000000000000055 "EE" "ABILITY_MONK_ENERGIZINGWINE"
 #showtooltip
 /use Energizing Elixir
@@ -68,14 +74,16 @@ VER 3 000000000000005E "Illidan" "1241724"
 END
 VER 3 000000000000005B "Light's Wrath" "INV_Misc_QuestionMark"
 #showtooltip
-/use [harm][@targettarget,harm][]Light's Wrath
+/cast [harm][@targettarget,harm][]Light's Wrath
 END
 VER 3 000000000000005C "LoF" "INV_Misc_QuestionMark"
 #showtooltip
 /use [target=mouseover,help,nodead][]Leap of Faith
 END
 VER 3 0000000000000059 "LoT" "INV_Misc_QuestionMark"
-#showtooltip
+#showtooltip Light of T'uure
+/use 13
+/use 14
 /use [target=mouseover,help,nodead][]Light of T'uure
 END
 VER 3 0000000000000056 "Mana Pot" "INV_Misc_QuestionMark"
@@ -90,6 +98,10 @@ VER 3 0000000000000057 "Mana Tea" "INV_Misc_QuestionMark"
 END
 VER 3 0000000000000051 "Mark Skull" "1325309"
 /run SetRaidTarget("target", 8)
+END
+VER 3 0000000000000060 "Pain Sup" "INV_Misc_QuestionMark"
+#showtooltip
+/use [target=mouseover,help,nodead][]Pain Suppression
 END
 VER 3 000000000000004F "PoM" "INV_Misc_QuestionMark"
 #showtooltip

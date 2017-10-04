@@ -131,26 +131,28 @@ Postal3DB = {
 			},
 		},
 		["Comet - Illidan"] = {
+			["ChatOutput"] = 3,
 			["BlackBook"] = {
 				["recent"] = {
 					"Evan|Illidan|Horde", -- [1]
-					"Cometstorm|Illidan|Horde", -- [2]
-					"Combustion|Illidan|Horde", -- [3]
-					"Biscuitss|Illidan|Horde", -- [4]
-					"Cometron|Illidan|Horde", -- [5]
-					"Metal|Illidan|Horde", -- [6]
-					"Princip-Illidan|Illidan|Horde", -- [7]
-					"Olgheals|Illidan|Horde", -- [8]
-					"Azimyth|Illidan|Horde", -- [9]
-					"Twinspirit|Illidan|Horde", -- [10]
-					"Azpek|Illidan|Horde", -- [11]
-					"Blutarski-Illidan|Illidan|Horde", -- [12]
-					"Spasweezy|Illidan|Horde", -- [13]
-					"Natal|Illidan|Horde", -- [14]
-					"Evannata|Illidan|Horde", -- [15]
-					"Plane|Illidan|Horde", -- [16]
-					"Centromere-Dark Iron|Illidan|Horde", -- [17]
-					"evan|Illidan|Horde", -- [18]
+					"Djpurge-Illidan|Illidan|Horde", -- [2]
+					"Cometstorm|Illidan|Horde", -- [3]
+					"Combustion|Illidan|Horde", -- [4]
+					"Biscuitss|Illidan|Horde", -- [5]
+					"Cometron|Illidan|Horde", -- [6]
+					"Metal|Illidan|Horde", -- [7]
+					"Princip-Illidan|Illidan|Horde", -- [8]
+					"Olgheals|Illidan|Horde", -- [9]
+					"Azimyth|Illidan|Horde", -- [10]
+					"Twinspirit|Illidan|Horde", -- [11]
+					"Azpek|Illidan|Horde", -- [12]
+					"Blutarski-Illidan|Illidan|Horde", -- [13]
+					"Spasweezy|Illidan|Horde", -- [14]
+					"Natal|Illidan|Horde", -- [15]
+					"Evannata|Illidan|Horde", -- [16]
+					"Plane|Illidan|Horde", -- [17]
+					"Centromere-Dark Iron|Illidan|Horde", -- [18]
+					"evan|Illidan|Horde", -- [19]
 				},
 			},
 		},

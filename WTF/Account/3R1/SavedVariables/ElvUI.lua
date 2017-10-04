@@ -21,8 +21,8 @@ ElvDB = {
 		},
 		["Illidan"] = {
 			["Cometron"] = 11330625,
-			["Evan"] = 4478964,
-			["Comet"] = 635146243,
+			["Evan"] = 1591097818,
+			["Comet"] = 83001424,
 			["Cometstorm"] = 161641526,
 			["Combustion"] = 506078957,
 			["Pandatal"] = 404400,
@@ -3520,16 +3520,16 @@ ElvPrivateDB = {
 			},
 			["skins"] = {
 				["blizzard"] = {
-					["lfg"] = false,
+					["talent"] = false,
 					["enable"] = false,
 					["encounterjournal"] = false,
 					["garrison"] = false,
 					["spellbook"] = false,
 					["achievement"] = false,
 					["character"] = false,
-					["auctionhouse"] = false,
+					["lfg"] = false,
 					["quest"] = false,
-					["talent"] = false,
+					["auctionhouse"] = false,
 				},
 			},
 			["cooldown"] = {
@@ -3582,13 +3582,13 @@ ElvPrivateDB = {
 				["normTex"] = "BantoBar",
 				["chatBubbleFont"] = "ABF",
 				["dmgfont"] = "ABF",
-				["chatBubbles"] = "nobackdrop",
-				["namefont"] = "ABF",
 				["minimapbar"] = {
 					["mouseover"] = true,
 					["backdrop"] = true,
 					["buttonSize"] = 24,
 				},
+				["namefont"] = "ABF",
+				["chatBubbles"] = "nobackdrop",
 				["glossTex"] = "BantoBar",
 			},
 			["tooltip"] = {
@@ -3597,9 +3597,12 @@ ElvPrivateDB = {
 			["auras"] = {
 				["enable"] = false,
 			},
-			["unitframe"] = {
+			["bags"] = {
 				["enable"] = false,
+			},
+			["unitframe"] = {
 				["disableBlizzard"] = false,
+				["enable"] = false,
 			},
 			["addonskins"] = {
 				["DBMSkin"] = false,

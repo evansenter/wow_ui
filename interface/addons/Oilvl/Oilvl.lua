@@ -175,7 +175,7 @@ local Oilvltimer = LibStub("AceAddon-3.0"):NewAddon("OilvlTimer", "AceTimer-3.0"
 
 local OILVL = CreateFrame("Frame");
 local oilvlframesw=false;
-local oilvlframedata = {};
+oilvlframedata = {};
 oilvlframedata.guid = {};
 
 oilvlframedata.name = {};
@@ -522,6 +522,19 @@ local function checktrue(...)
 	return not checknil(...)
 end
 
+function _OT(...)
+	local nils = {...}
+	local temp = nils[1]
+	for i = 1, #nils do
+		if type(temp) == "nil" then return false end
+		if i < #nils then
+			if type(temp) == "table" then temp = temp[nils[i+1]] else return false end
+		end
+	end
+	return true
+end
+
+
 function oilvl_link(link)
 	local ChatFrameEditBox = ChatEdit_ChooseBoxForSend()
 	if (not ChatFrameEditBox:IsShown()) then
@@ -670,18 +683,10 @@ function oilvl(unit)
 		if CheckInteractDistance(OILVL_Unit, 1) and CanInspect(OILVL_Unit) then
 			OILVL:RegisterEvent("INSPECT_READY");
 			NotifyInspect(OILVL_Unit);
-			local htex4 = _G[OTCurrent]:CreateTexture()
-			htex4:SetColorTexture(0,1,1,0.5)
-			htex4:SetAllPoints()
-			_G[OTCurrent]:SetNormalTexture(htex4)
 		else
 			OILVL_Unit="";
 			miacount=0;
 			miaunit[1]="";miaunit[2]="";miaunit[3]="";miaunit[4]="";miaunit[5]="";miaunit[6]="";
-			local ntex4 = _G[OTCurrent]:CreateTexture()
-			ntex4:SetColorTexture(0.2,0.2,0.2,0.5)
-			ntex4:SetAllPoints()	
-			_G[OTCurrent]:SetNormalTexture(ntex4)
 			OTCurrent = "";
 			OTCurrent2 = "";
 			OTCurrent3 = "";
@@ -690,8 +695,7 @@ function oilvl(unit)
 end
 	
 -- Get Raid Frame Item Level
-function ORfbIlvl(ounit, ...)
-	local as = {...}
+function ORfbIlvl(ounit)
 	if InspectFrame and InspectFrame:IsShown() then return -1 end
 	if not UnitAffectingCombat("player") and ounit ~= "" then
 		local i=0;
@@ -703,7 +707,8 @@ function ORfbIlvl(ounit, ...)
 			if GetUnitName(OTCurrent2,"") ~= nil then
 				_G[OTCurrent]:SetText(oClassColor(OTCurrent2)..GetUnitName(OTCurrent2,""):gsub("%-.+", ""));
 				oilvlframedata.name[tonumber(ounit)] = GetUnitName(OTCurrent2,""):gsub("%-.+", "");
-				if cfg.oilvlautoscan or as[1] then oilvl(OTCurrent2); end
+				oilvlframedata.ilvl[tonumber(ounit)][1] = ""
+				oilvl(OTCurrent2)
 			end
 		elseif IsInGroup(LE_PARTY_CATEGORY_INSTANCE) then
 			if ounit == "1" or ounit == 1 then
@@ -713,7 +718,8 @@ function ORfbIlvl(ounit, ...)
 				if GetUnitName(OTCurrent2,"") ~= nil then
 					_G[OTCurrent]:SetText(oClassColor(OTCurrent2)..GetUnitName(OTCurrent2,""):gsub("%-.+", ""));
 					oilvlframedata.name[1] = GetUnitName(OTCurrent2,""):gsub("%-.+", "");
-					if cfg.oilvlautoscan or as[1] then oilvl(OTCurrent2); end
+					oilvlframedata.ilvl[1][1] = ""
+					oilvl(OTCurrent2)
 				end
 			else
 				OTCurrent = "OILVLRAIDFRAME"..ounit;
@@ -722,7 +728,8 @@ function ORfbIlvl(ounit, ...)
 				if GetUnitName(OTCurrent2,"") ~= nil then
 					_G[OTCurrent]:SetText(oClassColor(OTCurrent2)..GetUnitName(OTCurrent2,""):gsub("%-.+", ""));
 					oilvlframedata.name[tonumber(ounit)] = GetUnitName(OTCurrent2,""):gsub("%-.+", "");
-					if cfg.oilvlautoscan or as[1] then oilvl(OTCurrent2); end
+					oilvlframedata.ilvl[tonumber(ounit)][1] = ""
+					oilvl(OTCurrent2)
 				end
 			end
 		elseif IsInGroup(LE_PARTY_CATEGORY_HOME) then
@@ -733,7 +740,8 @@ function ORfbIlvl(ounit, ...)
 				if GetUnitName(OTCurrent2,"") ~= nil then
 					_G[OTCurrent]:SetText(oClassColor(OTCurrent2)..GetUnitName(OTCurrent2,""):gsub("%-.+", ""));
 					oilvlframedata.name[1] = GetUnitName(OTCurrent2,""):gsub("%-.+", "");
-					if cfg.oilvlautoscan or as[1] then oilvl(OTCurrent2); end
+					oilvlframedata.ilvl[1][1] = ""
+					oilvl(OTCurrent2)
 				end
 			else
 				OTCurrent = "OILVLRAIDFRAME"..ounit;
@@ -742,7 +750,8 @@ function ORfbIlvl(ounit, ...)
 				if GetUnitName(OTCurrent2,"") ~= nil then
 					_G[OTCurrent]:SetText(oClassColor(OTCurrent2)..GetUnitName(OTCurrent2,""):gsub("%-.+", ""));
 					oilvlframedata.name[tonumber(ounit)] = GetUnitName(OTCurrent2,""):gsub("%-.+", "");
-					if cfg.oilvlautoscan or as[1] then oilvl(OTCurrent2); end
+					oilvlframedata.ilvl[tonumber(ounit)][1] = ""
+					oilvl(OTCurrent2)
 				end
 			end
 		else
@@ -752,7 +761,8 @@ function ORfbIlvl(ounit, ...)
 			if GetUnitName(OTCurrent2,"") ~= nil then
 				_G[OTCurrent]:SetText(oClassColor(OTCurrent2)..GetUnitName(OTCurrent2,""):gsub("%-.+", ""));
 				oilvlframedata.name[1] = GetUnitName(OTCurrent2,""):gsub("%-.+", "");
-				if cfg.oilvlautoscan or as[1] then oilvl(OTCurrent2); end
+				oilvlframedata.ilvl[1][1] = ""
+				oilvl(OTCurrent2)
 			end
 		end
 	end
@@ -816,12 +826,8 @@ function oilvlcheckunknown()
 			if oilvlframedata.name[i] == "Unknown" then
 				oilvlframedata.guid[i] = UnitGUID("raid"..i);
 				oilvlframedata.name[i] = GetUnitName("raid"..i,""):gsub("%-.+", "");
-				if oilvlframedata.gear[i][RING1] and oilvlframedata.gear[i][RING2] then
-					if oilvlframedata.gear[i][RING1][2]:find("ffff8000") or oilvlframedata.gear[i][RING2][2]:find("ffff8000") then
-						_G["OILVLRAIDFRAME"..i]:SetText(oClassColor("raid"..i)..oilvlframedata.name[i].."\n|r|cFFFF8000"..oilvlframedata.ilvl[i][1]);
-					else
-						_G["OILVLRAIDFRAME"..i]:SetText(oClassColor("raid"..i)..oilvlframedata.name[i].."\n|r|cFF00FF00"..oilvlframedata.ilvl[i][1]);
-					end
+				if _OT(oilvlframedata.ilvl,i,4) and oilvlframedata.ilvl[i][4] > 0 then
+					_G["OILVLRAIDFRAME"..i]:SetText(oClassColor("raid"..i)..oilvlframedata.name[i].."\n|r|cFFFF8000"..oilvlframedata.ilvl[i][1]);
 				else
 					_G["OILVLRAIDFRAME"..i]:SetText(oClassColor("raid"..i)..oilvlframedata.name[i].."\n|r|cFF00FF00"..oilvlframedata.ilvl[i][1]);
 				end
@@ -834,12 +840,8 @@ function oilvlcheckunknown()
 			if oilvlframedata.name[i] == "Unknown" then
 				oilvlframedata.guid[i] = UnitGUID("party"..(i-1));
 				oilvlframedata.name[i] = GetUnitName("party"..(i-1),""):gsub("%-.+", "")
-				if oilvlframedata.gear[i][RING1] and oilvlframedata.gear[i][RING2] then
-					if oilvlframedata.gear[i][RING1][2]:find("ffff8000") or oilvlframedata.gear[i][RING2][2]:find("ffff8000") then
-						_G["OILVLRAIDFRAME"..i]:SetText(oClassColor("raid"..i)..oilvlframedata.name[i].."\n|r|cFFFF8000"..oilvlframedata.ilvl[i][1]);
-					else
-						_G["OILVLRAIDFRAME"..i]:SetText(oClassColor("raid"..i)..oilvlframedata.name[i].."\n|r|cFF00FF00"..oilvlframedata.ilvl[i][1]);
-					end
+				if _OT(oilvlframedata.ilvl,i,4) and oilvlframedata.ilvl[i][4] > 0 then
+					_G["OILVLRAIDFRAME"..i]:SetText(oClassColor("raid"..i)..oilvlframedata.name[i].."\n|r|cFFFF8000"..oilvlframedata.ilvl[i][1]);
 				else
 					_G["OILVLRAIDFRAME"..i]:SetText(oClassColor("raid"..i)..oilvlframedata.name[i].."\n|r|cFF00FF00"..oilvlframedata.ilvl[i][1]);
 				end
@@ -852,12 +854,8 @@ function oilvlcheckunknown()
 			if oilvlframedata.name[i] == "Unknown" then
 				oilvlframedata.guid[i] = UnitGUID("party"..(i-1));
 				oilvlframedata.name[i] = GetUnitName("party"..(i-1),""):gsub("%-.+", "")
-				if oilvlframedata.gear[i][RING1] and oilvlframedata.gear[i][RING2] then
-					if oilvlframedata.gear[i][RING1][2]:find("ffff8000") or oilvlframedata.gear[i][RING2][2]:find("ffff8000") then
-						_G["OILVLRAIDFRAME"..i]:SetText(oClassColor("raid"..i)..oilvlframedata.name[i].."\n|r|cFFFF8000"..oilvlframedata.ilvl[i][1]);
-					else
-						_G["OILVLRAIDFRAME"..i]:SetText(oClassColor("raid"..i)..oilvlframedata.name[i].."\n|r|cFF00FF00"..oilvlframedata.ilvl[i][1]);
-					end
+				if _OT(oilvlframedata.ilvl,i,4) and oilvlframedata.ilvl[i][4] > 0 then
+					_G["OILVLRAIDFRAME"..i]:SetText(oClassColor("raid"..i)..oilvlframedata.name[i].."\n|r|cFFFF8000"..oilvlframedata.ilvl[i][1]);
 				else
 					_G["OILVLRAIDFRAME"..i]:SetText(oClassColor("raid"..i)..oilvlframedata.name[i].."\n|r|cFF00FF00"..oilvlframedata.ilvl[i][1]);
 				end
@@ -870,12 +868,12 @@ function oilvlcheckunknown()
 end
 
 function OILVLCheckUpdate()
-	if not UnitAffectingCombat("player") and oilvlframesw then
+	if not UnitAffectingCombat("player") and oilvlframesw and not (InspectFrame and InspectFrame:IsShown()) then
 		oilvlcheckunknown();
 		for i = 1, 40 do
-			if not _G["OILVLRAIDFRAME"..i] then break; end
+			if not _G["OILVLRAIDFRAME"..i] then return 0; end
 			if not _G["OILVLRAIDFRAME"..i]:IsShown() then
-				break;
+				return 0;
 			end
 			local ilvl = oilvlframedata.ilvl[i][1];
 			if ilvl == nil or ilvl == "" then
@@ -883,18 +881,18 @@ function OILVLCheckUpdate()
 					if CheckInteractDistance("raid"..i, 1) and CanInspect("raid"..i) then ORfbIlvl(i); return 0; end
 				elseif IsInGroup(LE_PARTY_CATEGORY_INSTANCE) then
 					if i == 1 then
-						ORfbIlvl(i); return 0;
+						ORfbIlvl(1); return 0;
 					else
 						if CheckInteractDistance("party"..(i-1), 1) and CanInspect("party"..(i-1)) then ORfbIlvl(i); return 0; end
 					end
 				elseif IsInGroup(LE_PARTY_CATEGORY_HOME) then
 					if i == 1 then
-						ORfbIlvl(i); return 0;
+						ORfbIlvl(1); return 0;
 					else
 						if CheckInteractDistance("party"..(i-1), 1) and CanInspect("party"..(i-1)) then ORfbIlvl(i); return 0; end
 					end
 				else
-					ORfbIlvl(1,true); return 0;
+					ORfbIlvl(1); return 0;
 				end
 			end
 		end	
@@ -912,15 +910,10 @@ if not UnitAffectingCombat("player")  and oilvlframesw then
 	for i = 1, 40 do
 		-- reset the color of all frames
 		if not _G["OILVLRAIDFRAME"..i]  then break; end
-		local ntex4 = _G["OILVLRAIDFRAME"..i]:CreateTexture()
-		ntex4:SetColorTexture(0.2,0.2,0.2,0.5)
-		ntex4:SetAllPoints()	
-		_G["OILVLRAIDFRAME"..i]:SetNormalTexture(ntex4)			
-		
 		-- reset data
 		oilvlframedata.guid[i] = "";
 		oilvlframedata.name[i] = "";
-		oilvlframedata.ilvl[i] = {"",false};
+		oilvlframedata.ilvl[i] = {"",otooltip6gearsw,0,0};
 		oilvlframedata.me[i] = "";
 		oilvlframedata.mg[i] = "";
 		oilvlframedata.spec[i] = "";
@@ -1120,7 +1113,7 @@ function OilvlCheckFrame()
 		for i=1,40 do
 			td.guid[i] = "";
 			td.name[i] = "";
-			td.ilvl[i] = {"",false};
+			td.ilvl[i] = {"",otooltip6gearsw};
 			td.me[i] = "";
 			td.mg[i] = "";
 			td.spec[i] = "";
@@ -1128,10 +1121,10 @@ function OilvlCheckFrame()
 			_G["Oilvltier"..i]:SetText("")
 			_G["OilvlUpgrade"..i]:SetText("")
 		end
-		OTCurrent=""; -- current raid frame
-		OTCurrent2=""; -- current unit id
-		OTCurrent3=""; -- current raid frame number
-		OILVL_Unit="";
+		--OTCurrent=""; -- current raid frame
+		--OTCurrent2=""; -- current unit id
+		--OTCurrent3=""; -- current raid frame number
+		--OILVL_Unit="";
 		if IsInRaid() then
 			rnum = GetNumGroupMembers();
 			if rnum < 16 then
@@ -1183,7 +1176,7 @@ function OilvlCheckFrame()
 				_G["OILVLRAIDFRAME"..i]:Hide();
 				oilvlframedata.guid[i] = "";
 				oilvlframedata.name[i] = "";
-				oilvlframedata.ilvl[i]= {"",otooltip6gearsw};
+				oilvlframedata.ilvl[i]= {"",otooltip6gearsw,0,0};
 				oilvlframedata.me[i] = "";
 				oilvlframedata.mg[i] = "";
 				oilvlframedata.spec[i] = "";
@@ -1194,12 +1187,8 @@ function OilvlCheckFrame()
 			NumRole["HEALER"] = 0;
 			for i = 1, rnum do
 				if not _G["OILVLRAIDFRAME"..i] then break; end
-				if td.gear[i][RING1] and td.gear[i][RING2] then
-					if td.gear[i][RING1][2]:find("ffff8000") or td.gear[i][RING2][2]:find("ffff8000") then
-						_G["OILVLRAIDFRAME"..i]:SetText(oClassColor("raid"..i)..td.name[i].."\n|r|cFFFF8000"..td.ilvl[i][1]);
-					else
-						_G["OILVLRAIDFRAME"..i]:SetText(oClassColor("raid"..i)..td.name[i].."\n|r|cFF00FF00"..td.ilvl[i][1]);
-					end
+				if _OT(td.ilvl,i,4) and td.ilvl[i][4] > 0 then
+					_G["OILVLRAIDFRAME"..i]:SetText(oClassColor("raid"..i)..td.name[i].."\n|r|cFFFF8000"..td.ilvl[i][1]);
 				else
 					_G["OILVLRAIDFRAME"..i]:SetText(oClassColor("raid"..i)..td.name[i].."\n|r|cFF00FF00"..td.ilvl[i][1]);
 				end
@@ -1250,7 +1239,7 @@ function OilvlCheckFrame()
 					_G["OILVLRAIDFRAME"..i]:Hide();
 					oilvlframedata.guid[i] = "";
 					oilvlframedata.name[i] = "";
-					oilvlframedata.ilvl[i] = {"",otooltip6gearsw};
+					oilvlframedata.ilvl[i] = {"",otooltip6gearsw,0,0};
 					oilvlframedata.me[i] = "";
 					oilvlframedata.mg[i] = "";
 					oilvlframedata.spec[i] = "";
@@ -1267,12 +1256,8 @@ function OilvlCheckFrame()
 				if UnitIsGroupLeader("player") then	OilvlSetRank(1, 2);	else OilvlSetRank(1, 0); end
 				for i = 2, (rnum+1) do
 					if not _G["OILVLRAIDFRAME"..i]  then break; end
-					if td.gear[i][RING1] and td.gear[i][RING2] then
-						if td.gear[i][RING1][2]:find("ffff8000") or td.gear[i][RING2][2]:find("ffff8000") then
-							_G["OILVLRAIDFRAME"..i]:SetText(oClassColor("party"..(i-1))..td.name[i].."\n|r|cFFFF8000"..td.ilvl[i][1]);
-						else
-							_G["OILVLRAIDFRAME"..i]:SetText(oClassColor("party"..(i-1))..td.name[i].."\n|r|cFF00FF00"..td.ilvl[i][1]);
-						end
+					if _OT(td.ilvl,i,4) and td.ilvl[i][4] > 0 then
+						_G["OILVLRAIDFRAME"..i]:SetText(oClassColor("party"..(i-1))..td.name[i].."\n|r|cFFFF8000"..td.ilvl[i][1]);
 					else
 						_G["OILVLRAIDFRAME"..i]:SetText(oClassColor("party"..(i-1))..td.name[i].."\n|r|cFF00FF00"..td.ilvl[i][1]);
 					end
@@ -1324,7 +1309,7 @@ function OilvlCheckFrame()
 					_G["OILVLRAIDFRAME"..i]:Hide();
 					oilvlframedata.guid[i] = "";
 					oilvlframedata.name[i] = "";
-					oilvlframedata.ilvl[i] = {"",otooltip6gearsw};
+					oilvlframedata.ilvl[i] = {"",otooltip6gearsw,0,0};
 					oilvlframedata.me[i] = "";
 					oilvlframedata.mg[i] = "";
 					oilvlframedata.spec[i] = "";
@@ -1341,12 +1326,8 @@ function OilvlCheckFrame()
 				if UnitIsGroupLeader("player") then	OilvlSetRank(1, 2);	else OilvlSetRank(1, 0); end
 				for i = 2, (rnum+1) do
 					if not _G["OILVLRAIDFRAME"..i]  then break; end
-					if td.gear[i][RING1] and td.gear[i][RING2] then
-						if td.gear[i][RING1][2]:find("ffff8000") or td.gear[i][RING2][2]:find("ffff8000") then
-							_G["OILVLRAIDFRAME"..i]:SetText(oClassColor("party"..(i-1))..td.name[i].."\n|r|cFFFF8000"..td.ilvl[i][1]);
-						else
-							_G["OILVLRAIDFRAME"..i]:SetText(oClassColor("party"..(i-1))..td.name[i].."\n|r|cFF00FF00"..td.ilvl[i][1]);
-						end
+					if _OT(td.ilvl,i,4) and td.ilvl[i][4] > 0 then
+						_G["OILVLRAIDFRAME"..i]:SetText(oClassColor("party"..(i-1))..td.name[i].."\n|r|cFFFF8000"..td.ilvl[i][1]);
 					else
 						_G["OILVLRAIDFRAME"..i]:SetText(oClassColor("party"..(i-1))..td.name[i].."\n|r|cFF00FF00"..td.ilvl[i][1]);
 					end
@@ -1384,7 +1365,7 @@ function OilvlCheckFrame()
 				_G["OILVLRAIDFRAME"..i]:Hide();
 				oilvlframedata.guid[i] = "";
 				oilvlframedata.name[i] = "";
-				oilvlframedata.ilvl[i] = {"",otooltip6gearsw};
+				oilvlframedata.ilvl[i] = {"",otooltip6gearsw,0,0};
 				oilvlframedata.me[i] = "";
 				oilvlframedata.mg[i] = "";
 				oilvlframedata.spec[i] = "";
@@ -1393,7 +1374,7 @@ function OilvlCheckFrame()
 			NumRole["TANK"] = 0;
 			NumRole["DAMAGER"] = 0;
 			NumRole["HEALER"] = 0;
-			if oilvlframedata and oilvlframedata.ilvl and oilvlframedata.ilvl[1] and oilvlframedata.ilvl[1][1] then
+			if _OT(oilvlframedata.ilvl,1,1) and oilvlframedata.ilvl[1][1] then
 				if oilvlframedata.ilvl[1][1] == "" or oilvlframedata.guid[1] ~= UnitGUID("player") then
 					OILVLRAIDFRAME1:SetText(oClassColor("player")..GetUnitName("player",""):gsub("%-.+", ""));
 					OIVLFRAME:SetWidth(400);
@@ -1406,10 +1387,6 @@ function OilvlCheckFrame()
 					oilvlframedata.gear[1] = "";				
 				end
 			end
-			local ntex4 = OILVLRAIDFRAME1:CreateTexture()
-			ntex4:SetColorTexture(0.2,0.2,0.2,0.5)
-			ntex4:SetAllPoints()	
-			OILVLRAIDFRAME1:SetNormalTexture(ntex4)
 			OilvlSetRank(1, 0);
 			OilvlSetRole(1, UnitGroupRolesAssigned("player"));
 			OilvlSetMouseoverTooltips(OILVLRAIDFRAME1, "player");
@@ -1417,7 +1394,7 @@ function OilvlCheckFrame()
 			OilvlUpgrade1:SetText(oilvlCheckUpgrade(1))
 		end	
 	end
-	OTCurrent=""; OTCurrent2=""; OTCurrent3="";
+	--OTCurrent=""; OTCurrent2=""; OTCurrent3="";
 end
 
 function OilvlRPDTimeCheck()
@@ -1586,15 +1563,7 @@ function oilvlcheckrange()
 				end			
 			end
 		end
-		if OTCurrent ~= "" and cfg.oilvlautoscan then
-			local htex4 = _G[OTCurrent]:CreateTexture()
-			htex4:SetColorTexture(0,1,1,0.5)
-			htex4:SetAllPoints()
-			_G[OTCurrent]:SetNormalTexture(htex4)	
-		end
-		if not UnitAffectingCombat("player") and not (InspectFrame and InspectFrame:IsShown()) then
-			OILVLCheckUpdate()
-		end
+		if cfg.oilvlautoscan then OILVLCheckUpdate() end
 		-- Calculate Average Item Level
 		if IsInRaid() or IsInGroup(LE_PARTY_CATEGORY_INSTANCE) or IsInGroup(LE_PARTY_CATEGORY_HOME) then
 			ONumTank:Show(); ONumDPS:Show(); ONumHeal:Show();
@@ -5238,6 +5207,12 @@ function OTgathertil(guid, unitid)
 		end
 		if #cfg.oilvlcache > 100 then cfg.oilvlcache[#cfg.oilvlcache] = nil; end
 	end
+	if OTCurrent3 and OTCurrent3 ~= "" and mia == 0 then
+		oilvlframedata.ilvl[OTCurrent3] = {avgIlvl,otooltip6gearsw,count,legendary};
+		oilvlframedata.me[OTCurrent3] = {missenchant,missHenchant};
+		oilvlframedata.mg[OTCurrent3] = {missgem,missHgem};
+		oilvlframedata.spec[OTCurrent3] = GetInspectSpecialization(unitid);	
+	end	
 	return avgIlvl, mia, missenchant, missgem, missHenchant, missHgem, count, legendary, GetInspectSpecialization(unitid);
 end
 
@@ -5307,29 +5282,41 @@ function oilvlSetABCD(i)
 	oilvlframedata.ilvl[i][1] = ""
 end
 
+local function GetUnitIDbyGuid(guid)
+	if IsInRaid() then
+		rnum = GetNumGroupMembers();
+		for i = 1, rnum do
+			if UnitGUID("raid"..i) == guid then return "OILVLRAIDFRAME"..i, "raid"..i, i end
+		end
+	end
+	if IsInGroup(LE_PARTY_CATEGORY_INSTANCE) then
+		rnum = GetNumGroupMembers(LE_PARTY_CATEGORY_INSTANCE) - 1
+		for i = 1, rnum do
+			if UnitGUID("party"..i) == guid then return "OILVLRAIDFRAME"..(i+1), "party"..i, i+1 end
+		end
+	end
+	if IsInGroup(LE_PARTY_CATEGORY_HOME) then
+		rnum = GetNumGroupMembers(LE_PARTY_CATEGORY_HOME) - 1
+		for i = 1, rnum do
+			if UnitGUID("party"..i) == guid then return "OILVLRAIDFRAME"..(i+1), "party"..i, i+1 end
+		end
+	end
+	if UnitGUID("player") == guid then return "OILVLRAIDFRAME1", "player", 1 end
+	return false,false,false
+end
+
 function oilvlSaveItemLevel(n)
 	if OILVL_Unit ~= "" then
 		if CheckInteractDistance(OILVL_Unit, 1) then
 			local OTilvl, OTmia, missenchant, missgem,  missenchant2, missgem2, count2, legendary2, gspec = OTgathertil(UnitGUID("OILVL_Unit"),OILVL_Unit)
 			if (OTmia == 0 and n > 0) then
 				miacount=0;	miaunit[1]="";miaunit[2]="";miaunit[3]="";miaunit[4]="";miaunit[5]="";miaunit[6]="";
-				local ntex4 = _G[OTCurrent]:CreateTexture()
-				ntex4:SetColorTexture(0.2,0.2,0.2,0.5)
-				ntex4:SetAllPoints()	
-				_G[OTCurrent]:SetNormalTexture(ntex4)
 				_G[OTCurrent]:SetText(oClassColor(OTCurrent2)..GetUnitName(OTCurrent2,""):gsub("%-.+", ""));
 				oilvlframedata.name[OTCurrent3] = GetUnitName(OTCurrent2,""):gsub("%-.+", "");
-				oilvlframedata.me[OTCurrent3] = "";
-				oilvlframedata.mg[OTCurrent3] = "";
-				oilvlframedata.spec[OTCurrent3] = "";
 				if missenchant ~= "" or missgem ~= "" then
 					oilvlframedata.name[OTCurrent3] = "! "..oilvlframedata.name[OTCurrent3]
-					oilvlframedata.me[OTCurrent3] = {missenchant,missenchant2};
-					oilvlframedata.mg[OTCurrent3] = {missgem,missgem2};
 				elseif missenchant2 ~= "" or missgem2 ~= "" then
 					oilvlframedata.name[OTCurrent3] = "~ "..oilvlframedata.name[OTCurrent3]
-					oilvlframedata.me[OTCurrent3] = {missenchant,missenchant2};
-					oilvlframedata.mg[OTCurrent3] = {missgem,missgem2};
 				end
 				if oilvlframedata.name[OTCurrent3] ~= "" then
 				-- check legendary
@@ -5338,9 +5325,6 @@ function oilvlSaveItemLevel(n)
 					else
 						_G[OTCurrent]:SetText(oClassColor(OTCurrent2)..oilvlframedata.name[OTCurrent3].."\n|r|cFF00FF00"..OTilvl);
 					end
-					oilvlframedata.ilvl[OTCurrent3][1] = OTilvl;
-					oilvlframedata.ilvl[OTCurrent3][3] = count2;
-					oilvlframedata.spec[OTCurrent3] = gspec;
 				end
 				_G["Oilvltier"..OTCurrent3]:SetText(oilvlCheckTierBonusSet(OTCurrent3))
 				_G["OilvlUpgrade"..OTCurrent3]:SetText(oilvlCheckUpgrade(OTCurrent3))
@@ -5356,10 +5340,6 @@ function oilvlSaveItemLevel(n)
 					if miaunit[1] == miaunit[2] and miaunit[2] == miaunit[3] and miaunit[3] == miaunit[4] and miaunit[4] == miaunit[5] and miaunit[5] == miaunit[6] then
 						miacount=0;	miaunit[1]="";miaunit[2]="";miaunit[3]="";miaunit[4]="";miaunit[5]="";miaunit[6]="";
 						OILVL_Unit="";
-						local ntex4 = _G[OTCurrent]:CreateTexture()
-						ntex4:SetColorTexture(0.2,0.2,0.2,0.5)
-						ntex4:SetAllPoints()	
-						_G[OTCurrent]:SetNormalTexture(ntex4)
 						if oilvlframedata.name[OTCurrent3] ~= "" then
 							_G[OTCurrent]:SetText(oClassColor(OTCurrent2)..oilvlframedata.name[OTCurrent3].."\n|r|cFFFF0000"..OTilvl);
 							oilvlframedata.ilvl[OTCurrent3][1] = OTilvl;
@@ -5372,12 +5352,6 @@ function oilvlSaveItemLevel(n)
 			end
 		else
 			OILVL_Unit="";
-			if OTCurrent ~= "" then
-				local ntex4 = _G[OTCurrent]:CreateTexture()
-				ntex4:SetColorTexture(0.2,0.2,0.2,0.5)
-				ntex4:SetAllPoints()	
-				_G[OTCurrent]:SetNormalTexture(ntex4)
-			end
 			OTCurrent = "";
 			OTCurrent2 = "";
 			OTCurrent3 = "";
@@ -5387,11 +5361,20 @@ function oilvlSaveItemLevel(n)
 end
 
 local events = {}
-
-function events:INSPECT_READY(...)
-	oilvlSaveItemLevel(0)
-	C_Timer.After(1,function() oilvlSaveItemLevel(0) end)
-	C_Timer.After(2,function() oilvlSaveItemLevel(1) end)
+local LastInspectTime = GetTime()
+function events:INSPECT_READY(guid)
+	local tempoc, tempoc2, tempoc3 = GetUnitIDbyGuid(guid)
+	if GetTime() - LastInspectTime > 1.8 and tempoc and CheckInteractDistance(tempoc2, 1) then
+		OILVL_Unit = tempoc2
+		OTCurrent=tempoc; -- current raid frame
+		OTCurrent2=tempoc2; -- current unit id
+		OTCurrent3=tempoc3; -- current raid frame number
+		oilvlSaveItemLevel(0)
+		C_Timer.After(0.8,function() oilvlSaveItemLevel(0) end)
+		C_Timer.After(1.5,function() oilvlSaveItemLevel(1) end)
+	end
+	--print(guid,GetTime() - LastInspectTime)
+	LastInspectTime = GetTime()
 	-- GameTooltip		
 	if (Omover ==1) and cfg.oilvlms then
 		Omover=0;
@@ -5571,6 +5554,23 @@ function events:RAID_ROSTER_UPDATE(...)
 	end
 end
 
+function events:PLAYER_SPECIALIZATION_CHANGED(...)
+	if not UnitAffectingCombat("player")  then
+		C_Timer.After(0.8,function() 
+			if IsInRaid() then
+				for i=1,40 do
+					if GetRaidRosterInfo(i) == UnitName("player") then
+						oilvlSetABCD(i)
+						break
+					end
+				end	
+			else
+				oilvlSetABCD(1)
+			end
+		end)
+	end
+end
+
 local repeatsw = false;
 local bagupdatesw=false;
 
@@ -5713,12 +5713,6 @@ function events:PLAYER_REGEN_DISABLED(...)
 	otooltip6sw = false
 	
 	OILVL_Unit="";
-	if OTCurrent ~= "" then
-		local ntex4 = _G[OTCurrent]:CreateTexture()
-		ntex4:SetColorTexture(0.2,0.2,0.2,0.5)
-		ntex4:SetAllPoints()	
-		_G[OTCurrent]:SetNormalTexture(ntex4)
-	end
 	OTCurrent = "";
 	OTCurrent2 = "";
 	OTCurrent3 = "";
@@ -5744,12 +5738,6 @@ function events:PLAYER_REGEN_ENABLED(...)
 	oilvlUpdateLDBTooltip()
 	
 	OILVL_Unit="";
-	if OTCurrent ~= "" then
-		local ntex4 = _G[OTCurrent]:CreateTexture()
-		ntex4:SetColorTexture(0.2,0.2,0.2,0.5)
-		ntex4:SetAllPoints()	
-		_G[OTCurrent]:SetNormalTexture(ntex4)
-	end
 	OTCurrent = "";
 	OTCurrent2 = "";
 	OTCurrent3 = "";

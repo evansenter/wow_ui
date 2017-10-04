@@ -52,6 +52,15 @@ DeathNoteDB = {
 		["Ereinion - Dark Iron"] = {
 		},
 		["Comet - Illidan"] = {
+			["searchbox_text"] = "",
+			["max_deaths"] = 75,
+			["display"] = {
+				["y"] = 102.44482421875,
+				["h"] = 621.999938964844,
+				["namelist"] = 2,
+				["w"] = 1013.00024414063,
+				["x"] = 352.388366699219,
+			},
 			["display_filters"] = {
 				["hide_misses"] = true,
 				["debuff_fades"] = false,
@@ -59,15 +68,6 @@ DeathNoteDB = {
 				["debuff_gains"] = false,
 				["buff_gains"] = false,
 			},
-			["max_deaths"] = 75,
-			["display"] = {
-				["y"] = 163.555969238281,
-				["namelist"] = 2,
-				["x"] = 180.166595458984,
-				["w"] = 1013.00042724609,
-				["h"] = 621.999938964844,
-			},
-			["searchbox_text"] = "",
 		},
 		["Evan - Illidan"] = {
 			["searchbox_text"] = "",
