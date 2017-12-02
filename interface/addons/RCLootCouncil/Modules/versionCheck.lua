@@ -3,6 +3,10 @@
 -- @author Potdisc
 -- Create Date : 12/15/2014 8:55:10 PM
 
+--[===[@debug@
+if LibDebug then LibDebug() end
+--@end-debug@]===]
+
 local addon = LibStub("AceAddon-3.0"):GetAddon("RCLootCouncil")
 local RCVersionCheck = addon:NewModule("RCVersionCheck", "AceTimer-3.0", "AceComm-3.0", "AceHook-3.0")
 local ST = LibStub("ScrollingTable")
@@ -16,8 +20,8 @@ function RCVersionCheck:OnInitialize()
 	-- Initialize scrollCols on self so others can change it
 	self.scrollCols = {
 		{ name = "",				width = 20, sortnext = 2,},
-		{ name = L["Name"],		width = 150, },
-		{ name = L["Rank"],		width = 90, comparesort = GuildRankSort},
+		{ name = _G.NAME,		width = 150, },
+		{ name = _G.RANK,		width = 90, comparesort = GuildRankSort},
 		{ name = L["Version"],	width = 140, align = "RIGHT", comparesort = self.VersionSort },
 	}
 end
@@ -70,7 +74,7 @@ function RCVersionCheck:Query(group)
 		for i = 1, GetNumGroupMembers() do
 			local name, _, _, _, _, class, _, online = GetRaidRosterInfo(i)
 			if online then
-				self:AddEntry(name, class, L["Unknown"], L["Waiting for response"])
+				self:AddEntry(name, class, _G.UNKNOWN, L["Waiting for response"])
 			end
 		end
 	end
@@ -140,17 +144,17 @@ function RCVersionCheck:GetFrame()
 	if self.frame then return self.frame end
 	local f = addon:CreateFrame("DefaultRCVersionCheckFrame", "versionCheck", L["RCLootCouncil Version Checker"], 250)
 
-	local b1 = addon:CreateButton(L["Guild"], f.content)
+	local b1 = addon:CreateButton(_G.GUILD, f.content)
 	b1:SetPoint("BOTTOMLEFT", f, "BOTTOMLEFT", 10, 10)
 	b1:SetScript("OnClick", function() self:Query("guild") end)
 	f.guildBtn = b1
 
-	local b2 = addon:CreateButton(L["Group"], f.content)
+	local b2 = addon:CreateButton(_G.GROUP, f.content)
 	b2:SetPoint("LEFT", b1, "RIGHT", 15, 0)
 	b2:SetScript("OnClick", function() self:Query("group") end)
 	f.raidBtn = b2
 
-	local b3 = addon:CreateButton(L["Close"], f.content)
+	local b3 = addon:CreateButton(_G.CLOSE, f.content)
 	b3:SetPoint("BOTTOMRIGHT", f, "BOTTOMRIGHT", -10, 10)
 	b3:SetScript("OnClick", function() self:Disable() end)
 	f.closeBtn = b3

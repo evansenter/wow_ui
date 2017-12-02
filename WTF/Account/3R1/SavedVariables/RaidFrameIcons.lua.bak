@@ -5,8 +5,8 @@ RaidFrameIconsDB = {
 		["Venala - Cho'gall"] = "Venala - Cho'gall",
 		["Cometron - Illidan"] = "Cometron - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
-		["Natal - Illidan"] = "Pandatal - Illidan",
 		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
+		["Natal - Illidan"] = "Pandatal - Illidan",
 		["Natalan - Illidan"] = "Natalan - Illidan",
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Natalan - Dark Iron"] = "Natalan - Dark Iron",
@@ -28,9 +28,9 @@ RaidFrameIconsDB = {
 			["iconPosition"] = "TOPRIGHT",
 			["iconSize"] = 12,
 		},
-		["Natal - Illidan"] = {
-		},
 		["Centromere - Dark Iron"] = {
+		},
+		["Natal - Illidan"] = {
 		},
 		["Natalan - Illidan"] = {
 		},

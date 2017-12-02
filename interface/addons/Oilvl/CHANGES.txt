@@ -1,9 +1,12 @@
 ------------------------------------------------------------------------
-r761 | olzenkhaw | 2017-09-29 18:27:40 -0500 (Fri, 29 Sep 2017) | 1 line
+r796 | olzenkhaw | 2017-12-02 00:46:34 -0600 (Sat, 02 Dec 2017) | 3 lines
 Changed paths:
+   M /trunk/Oilvl.lua
    M /trunk/Oilvl.toc
    M /trunk/OilvlPlayer.lua
 
-v6.7.11 - fix a bug,
+v6.7.28 
+- updated tier 21 sets
+- temp fixed on ilvl of artifact weapon which has +15 item level in nether crucible. Currently there is no way to know the party / raid member has +15 item level increase due to nether crucible. So, the addon just simply +15 on artifact weapon. 
 ------------------------------------------------------------------------
 

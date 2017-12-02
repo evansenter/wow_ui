@@ -24,3 +24,4 @@ cfg.oilvlaltclickroll = true; -- alt click roll
 cfg.oilvlautoscan = true; -- auto scan ilvl
 cfg.oilvlsamefaction = false; -- show ilvl of target for same faction only
 cfg.oilvlbagilvl = true; -- show item level of gear in bag
+cfg.oilvlcolormatchitemrarity = true; -- item level color follow the color of item rarity

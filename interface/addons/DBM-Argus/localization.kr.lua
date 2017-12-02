@@ -15,6 +15,10 @@ L:SetMiscLocalization({
 -----------------------
 L= DBM:GetModLocalization(2013)
 
+L:SetMiscLocalization({
+	Pull				= "네 영혼의 나약함이 보이는구나!"
+})
+
 -----------------------
 -- Sotanathor --
 -----------------------
@@ -29,6 +33,10 @@ L:SetMiscLocalization({
 -----------------------
 L= DBM:GetModLocalization(2011)
 
+L:SetMiscLocalization({
+	Pull				= "새 노리개네? 예쁘기도 하지!"
+})
+
 -----------------------
 -- Matron Folnuna --
 -----------------------
@@ -42,3 +50,7 @@ L:SetMiscLocalization({
 -- Pit Lord Vilemus --
 -----------------------
 L= DBM:GetModLocalization(2015)
+
+L:SetMiscLocalization({
+	Pull				= "온 세계가 지옥불에 탈 것이다!"
+})

@@ -1269,3 +1269,17 @@ Change Log:
 4.43.5
 * Added Legion spells for Argus
 * Added Legion spells for Tomb of Sargeras
+
+4.43.6
+* Added Legion spells for Argus
+* Added Legion spells for Tomb of Sargeras
+
+4.43.7
+* Added Classic spells for Azeroth (world)
+
+4.43.8
+* Added Legion spells for Argus
+* Added Legion spells for Antorus, The Burning Throne
+
+4.43.9
+* Added Legion spells for Antorus, The Burning Throne

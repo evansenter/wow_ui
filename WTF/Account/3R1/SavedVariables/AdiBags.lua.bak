@@ -12,6 +12,7 @@ AdiBagsDB = {
 					["version"] = 3,
 					["overrides"] = {
 						[141446] = "Consumable#Consumable",
+						[142117] = "Quest#Quest",
 					},
 				},
 			},

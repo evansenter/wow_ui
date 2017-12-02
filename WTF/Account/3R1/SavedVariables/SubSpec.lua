@@ -82,88 +82,6 @@ SubSpecStorage = {
 			},
 		}, -- [2]
 	},
-	["Monk Mistweaver"] = {
-		{
-			["name"] = "Mythic+",
-			["data"] = {
-				{
-					["id"] = 19823,
-					["name"] = "Chi Burst",
-					["column"] = 1,
-				}, -- [1]
-				{
-					["id"] = 19818,
-					["name"] = "Tiger's Lust",
-					["column"] = 2,
-				}, -- [2]
-				{
-					["id"] = 22166,
-					["name"] = "Mist Wrap",
-					["column"] = 3,
-				}, -- [3]
-				{
-					["id"] = 19995,
-					["name"] = "Leg Sweep",
-					["column"] = 3,
-				}, -- [4]
-				{
-					["id"] = 20174,
-					["name"] = "Healing Elixir",
-					["column"] = 1,
-				}, -- [5]
-				{
-					["id"] = 22217,
-					["name"] = "Invoke Chi-Ji, the Red Crane",
-					["column"] = 2,
-				}, -- [6]
-				{
-					["id"] = 22169,
-					["name"] = "Focused Thunder",
-					["column"] = 2,
-				}, -- [7]
-			},
-		}, -- [1]
-		{
-			["name"] = "Raids",
-			["data"] = {
-				{
-					["id"] = 19823,
-					["name"] = "Chi Burst",
-					["column"] = 1,
-				}, -- [1]
-				{
-					["id"] = 19818,
-					["name"] = "Tiger's Lust",
-					["column"] = 2,
-				}, -- [2]
-				{
-					["id"] = 22166,
-					["name"] = "Mist Wrap",
-					["column"] = 3,
-				}, -- [3]
-				{
-					["id"] = 19995,
-					["name"] = "Leg Sweep",
-					["column"] = 3,
-				}, -- [4]
-				{
-					["id"] = 20174,
-					["name"] = "Healing Elixir",
-					["column"] = 1,
-				}, -- [5]
-				{
-					["id"] = 22093,
-					["name"] = "Refreshing Jade Wind",
-					["column"] = 1,
-				}, -- [6]
-				{
-					["id"] = 22218,
-					["name"] = "Mana Tea",
-					["column"] = 1,
-				}, -- [7]
-			},
-		}, -- [2]
-	},
 	["Priest Shadow"] = {
 		{
 			["name"] = "Raiding",
@@ -242,6 +160,88 @@ SubSpecStorage = {
 					["id"] = 21978,
 					["name"] = "Shadow Crash",
 					["column"] = 2,
+				}, -- [7]
+			},
+		}, -- [2]
+	},
+	["Monk Mistweaver"] = {
+		{
+			["name"] = "Mythic+",
+			["data"] = {
+				{
+					["id"] = 19823,
+					["name"] = "Chi Burst",
+					["column"] = 1,
+				}, -- [1]
+				{
+					["id"] = 19818,
+					["name"] = "Tiger's Lust",
+					["column"] = 2,
+				}, -- [2]
+				{
+					["id"] = 22166,
+					["name"] = "Mist Wrap",
+					["column"] = 3,
+				}, -- [3]
+				{
+					["id"] = 19995,
+					["name"] = "Leg Sweep",
+					["column"] = 3,
+				}, -- [4]
+				{
+					["id"] = 20174,
+					["name"] = "Healing Elixir",
+					["column"] = 1,
+				}, -- [5]
+				{
+					["id"] = 22217,
+					["name"] = "Invoke Chi-Ji, the Red Crane",
+					["column"] = 2,
+				}, -- [6]
+				{
+					["id"] = 22169,
+					["name"] = "Focused Thunder",
+					["column"] = 2,
+				}, -- [7]
+			},
+		}, -- [1]
+		{
+			["name"] = "Raids",
+			["data"] = {
+				{
+					["id"] = 19823,
+					["name"] = "Chi Burst",
+					["column"] = 1,
+				}, -- [1]
+				{
+					["id"] = 19818,
+					["name"] = "Tiger's Lust",
+					["column"] = 2,
+				}, -- [2]
+				{
+					["id"] = 22168,
+					["name"] = "Lifecycles",
+					["column"] = 1,
+				}, -- [3]
+				{
+					["id"] = 19995,
+					["name"] = "Leg Sweep",
+					["column"] = 3,
+				}, -- [4]
+				{
+					["id"] = 20174,
+					["name"] = "Healing Elixir",
+					["column"] = 1,
+				}, -- [5]
+				{
+					["id"] = 22217,
+					["name"] = "Invoke Chi-Ji, the Red Crane",
+					["column"] = 2,
+				}, -- [6]
+				{
+					["id"] = 22218,
+					["name"] = "Mana Tea",
+					["column"] = 1,
 				}, -- [7]
 			},
 		}, -- [2]

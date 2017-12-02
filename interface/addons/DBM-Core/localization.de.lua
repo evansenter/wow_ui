@@ -20,7 +20,6 @@ DBM_CORE_LOAD_MOD_DISABLED			= "%s ist installiert, aber derzeit nicht aktiviert
 DBM_CORE_LOAD_MOD_DISABLED_PLURAL	= "%s sind installiert, aber derzeit nicht aktiviert. Diese Mods werden nicht geladen, falls du sie nicht aktivierst."
 
 --DBM_CORE_WHATS_NEW
---DBM_CORE_WHATS_NEW_LINK
 
 --Post Patch 7.1
 DBM_CORE_NO_RANGE					= "Das Abstandsradar kann in Instanzen nicht genutzt werden. Es wird stattdessen die alte textbasierte Abstandsanzeige verwendet."
@@ -89,7 +88,6 @@ DBM_CORE_MPROFILE_DELETE_SELF_ERROR	= "Die derzeit genutzten Mod-Einstellungen k
 DBM_CORE_MPROFILE_DELETE_S_ERROR	= "Quelle korrupt. Die Einstellungen wurden nicht oder unvollständig gelöscht. Löschen fehlgeschlagen."
 
 DBM_CORE_NOTE_SHARE_SUCCESS			= "%s hat die Notiz für %s geteilt."
-DBM_CORE_NOTE_SHARE_LINK			= "Hier klicken um die Notiz zu öffnen"
 DBM_CORE_NOTE_SHARE_FAIL			= "%s hat versucht eine Notiz mit dir für %s zu teilen. Ein Mod für diese Fähigkeit ist jedoch nicht installiert oder nicht geladen. Falls du diese Notiz benötigst, solltest du sicherstellen, dass du das entsprechende Mod geladen hast und erneut um Teilung der Notiz bitten."
 
 DBM_CORE_NOTEHEADER					= "Gib deine Notiz für %s hier ein. Umschließe Spielernamen mit >< für Klassenfarben. Trenne Notizen mit '/' bei Alarmen mit mehreren Notizen."
@@ -356,7 +354,7 @@ DBM_CORE_AUTO_SPEC_WARN_TEXTS.switch			= "%s - Ziel wechseln"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.switchcount		= "%s - Ziel wechseln (%%s)"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.gtfo				= "%%s unter dir - lauf raus"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.Adds				= "Adds kommen - Ziel wechseln"
-DBM_CORE_AUTO_SPEC_WARN_TEXTS.Addscustom		= "Adds kommen - %s"
+DBM_CORE_AUTO_SPEC_WARN_TEXTS.Addscustom		= "Adds kommen - %%s"
 
 -- Auto-generated Special Warning Localizations
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.spell 			= "Spezialwarnung für $spell:%s"
@@ -401,7 +399,7 @@ DBM_CORE_AUTO_TIMER_TEXTS.active		= "%s endet"--Buff/Debuff/event on boss
 DBM_CORE_AUTO_TIMER_TEXTS.fades		= "%s schwindet"--Buff/Debuff on players
 DBM_CORE_AUTO_TIMER_TEXTS.ai			= "%s KI"
 DBM_CORE_AUTO_TIMER_TEXTS.cd			= "%s CD"
-DBM_CORE_AUTO_TIMER_TEXTS.cdcount		= "%s CD (%%d)"
+DBM_CORE_AUTO_TIMER_TEXTS.cdcount		= "%s CD (%%s)"
 DBM_CORE_AUTO_TIMER_TEXTS.cdsource	= "%s CD: >%%s<"
 DBM_CORE_AUTO_TIMER_TEXTS.cdspecial	= "Spezialfähigkeit CD"
 DBM_CORE_AUTO_TIMER_TEXTS.next		= "Nächster %s"
@@ -411,7 +409,7 @@ DBM_CORE_AUTO_TIMER_TEXTS.nextspecial	= "Nächste Spezialfähigkeit"
 DBM_CORE_AUTO_TIMER_TEXTS.achievement	= "%s"
 DBM_CORE_AUTO_TIMER_TEXTS.stage		= "Nächste Phase"
 DBM_CORE_AUTO_TIMER_TEXTS.adds		= "Nächste Adds"
-DBM_CORE_AUTO_TIMER_TEXTS.addscustom	= "Nächste Adds (%s)"
+DBM_CORE_AUTO_TIMER_TEXTS.addscustom	= "Nächste Adds (%%s)"
 --DBM_CORE_AUTO_TIMER_TEXTS.roleplay
 
 DBM_CORE_AUTO_TIMER_OPTIONS.target		= "Dauer des Debuffs $spell:%s anzeigen"

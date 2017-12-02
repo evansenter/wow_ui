@@ -1,12 +1,12 @@
-tag aacd5fb55db0c363211634d8e5b9d01633e22c86 7.2.1
-Author:	Alex Shubert <shubert@animatron.com>
-Date:	Sat May 6 00:06:05 2017 +0300
+tag 39de88a2a5c3acc4986dc51bbf84911cacd41afa 7.3.0
+Author:	ashubert <shubert@animatron.com>
+Date:	Tue Nov 21 22:00:19 2017 +0200
 
-7.2.1
+7.3.0
 
-commit 4cd577ebd1cedf3f62471174df7d7f57fdc919cc
-Author: Alex Shubert <shubert@animatron.com>
-Date:   Sat May 6 00:05:17 2017 +0300
+commit dd5700b28d6848485c3f336d361dc373352855f4
+Author: ashubert <shubert@animatron.com>
+Date:   Tue Nov 21 22:00:09 2017 +0200
 
-    upddate libs
+    dropdown fix
 

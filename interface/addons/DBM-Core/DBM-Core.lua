@@ -41,9 +41,9 @@
 --  Globals/Default Options  --
 -------------------------------
 DBM = {
-	Revision = tonumber(("$Revision: 16757 $"):sub(12, -3)),
-	DisplayVersion = "7.3.4", -- the string that is shown as version
-	ReleaseRevision = 16757 -- the revision of the latest stable version that is available
+	Revision = tonumber(("$Revision: 16900 $"):sub(12, -3)),
+	DisplayVersion = "7.3.8", -- the string that is shown as version
+	ReleaseRevision = 16900 -- the revision of the latest stable version that is available
 }
 DBM.HighestRelease = DBM.ReleaseRevision --Updated if newer version is detected, used by update nags to reflect critical fixes user is missing on boss pulls
 
@@ -120,8 +120,7 @@ DBM.DefaultOptions = {
 	WhisperStats = false,
 	DisableStatusWhisper = false,
 	DisableGuildStatus = false,
-	HideBossEmoteFrame = true,
-	SpamBlockBossWhispers = true,
+	HideBossEmoteFrame2 = true,
 	ShowMinimapButton = false,
 	ShowFlashFrame = true,
 	SWarningAlphabetical = true,
@@ -170,7 +169,7 @@ DBM.DefaultOptions = {
 	HPFrameX = -50,
 	HPFrameY = 50,
 	HPFrameMaxEntries = 5,
-	WarningDuration = 4,
+	WarningDuration2 = 1.5,
 	WarningPoint = "CENTER",
 	WarningX = 0,
 	WarningY = 260,
@@ -178,7 +177,7 @@ DBM.DefaultOptions = {
 	WarningFontSize = 20,
 	WarningFontStyle = "None",
 	WarningFontShadow = true,
-	SpecialWarningDuration = 4,
+	SpecialWarningDuration2 = 1.5,
 	SpecialWarningPoint = "CENTER",
 	SpecialWarningX = 0,
 	SpecialWarningY = 75,
@@ -278,7 +277,6 @@ DBM.DefaultOptions = {
 	MoviesSeen = {},
 	MovieFilter = "AfterFirst",
 	LastRevision = 0,
-	FilterSayAndYell = false,
 	DebugMode = false,
 	DebugLevel = 1,
 	RoleSpecAlert = true,
@@ -388,7 +386,7 @@ local UpdateChestTimer
 local breakTimerStart
 local AddMsg
 
-local fakeBWVersion, fakeBWHash = 71, "2b5e795"
+local fakeBWVersion, fakeBWHash = 76, "076e5e7"
 local versionQueryString, versionResponseString = "Q^%d^%s", "V^%d^%s"
 
 local enableIcons = true -- set to false when a raid leader or a promoted player has a newer version of DBM
@@ -2420,112 +2418,6 @@ function DBM:ShowPizzaInfo(id, sender)
 	end
 end
 
-------------------
---  Hyperlinks  --
-------------------
-do
-	local ignore, cancel
-	local popuplevel = 0
-	local function showPopupConfirmIgnore(ignore, cancel)
-		local popup = CreateFrame("Frame", "DBMHyperLinks", UIParent)
-		popup:SetBackdrop({bgFile = "Interface\\DialogFrame\\UI-DialogBox-Background-Dark",
-			edgeFile = "Interface\\DialogFrame\\UI-DialogBox-Border",
-			tile = true, tileSize = 16, edgeSize = 16,
-			insets = {left = 1, right = 1, top = 1, bottom = 1}}
-		)
-		popup:SetSize(500, 80)
-		popup:SetPoint("TOP", UIParent, "TOP", 0, -200)
-		popup:SetFrameStrata("DIALOG")
-		popup:SetFrameLevel(popuplevel)
-		popuplevel = popuplevel + 1
-
-		local text = popup:CreateFontString()
-		text:SetFontObject(ChatFontNormal)
-		text:SetWidth(470)
-		text:SetWordWrap(true)
-		text:SetPoint("TOP", popup, "TOP", 0, -15)
-		text:SetText(DBM_PIZZA_CONFIRM_IGNORE:format(ignore))
-
-		local accept = CreateFrame("Button", nil, popup)
-		accept:SetNormalTexture("Interface\\Buttons\\UI-DialogBox-Button-Up")
-		accept:SetPushedTexture("Interface\\Buttons\\UI-DialogBox-Button-Down")
-		accept:SetHighlightTexture("Interface\\Buttons\\UI-DialogBox-Button-Highlight", "ADD")
-		accept:SetSize(128, 35)
-		accept:SetPoint("BOTTOM", popup, "BOTTOM", -75, 0)
-		accept:SetScript("OnClick", function(f) DBM:AddToPizzaIgnore(ignore) DBM.Bars:CancelBar(cancel) f:GetParent():Hide() end)
-
-		local atext = accept:CreateFontString()
-		atext:SetFontObject(ChatFontNormal)
-		atext:SetPoint("CENTER", accept, "CENTER", 0, 5)
-		atext:SetText(YES)
-
-		local decline = CreateFrame("Button", nil, popup)
-		decline:SetNormalTexture("Interface\\Buttons\\UI-DialogBox-Button-Up")
-		decline:SetPushedTexture("Interface\\Buttons\\UI-DialogBox-Button-Down")
-		decline:SetHighlightTexture("Interface\\Buttons\\UI-DialogBox-Button-Highlight", "ADD")
-		decline:SetSize(128, 35)
-		decline:SetPoint("BOTTOM", popup, "BOTTOM", 75, 0)
-		decline:SetScript("OnClick", function(f) f:GetParent():Hide() end)
-
-		local dtext = decline:CreateFontString()
-		dtext:SetFontObject(ChatFontNormal)
-		dtext:SetPoint("CENTER", decline, "CENTER", 0, 5)
-		dtext:SetText(NO)
-		PlaySound(850)
-	end
-
-	local function linkHook(self, link, string, button, ...)
-		local linkType, arg1, arg2, arg3, arg4, arg5, arg6 = strsplit(":", link)
-		if linkType ~= "DBM" then
-			return
-		end
-		if arg1 == "cancel" then
-			DBM.Bars:CancelBar(link:match("DBM:cancel:(.+):nil$"))
-		elseif arg1 == "ignore" then
-			cancel = link:match("DBM:ignore:(.+):[^%s:]+$")
-			ignore = link:match(":([^:]+)$")
-			showPopupConfirmIgnore(ignore, cancel)
-		elseif arg1 == "update" then
-			DBM:ShowUpdateReminder(arg2, arg3) -- displayVersion, revision
-		elseif arg == "localizersneeded" then
-			DBM:ShowUpdateReminder(nil, nil, DBM_FORUMS_COPY_URL_DIALOG, "https://www.deadlybossmods.com/forum/viewtopic.php?f=3&t=5")
-		elseif arg1 == "forumsnews" then
-			DBM:ShowUpdateReminder(nil, nil, DBM_FORUMS_COPY_URL_DIALOG_NEWS, "https://discord.gg/DF5mffk")
-		elseif arg1 == "forums" then
-			DBM:ShowUpdateReminder(nil, nil, DBM_FORUMS_COPY_URL_DIALOG)
-		elseif arg1 == "showRaidIdResults" then
-			DBM:ShowRaidIDRequestResults()
-		elseif arg1 == "noteshare" then
-			local mod = DBM:GetModByName(arg2 or "")
-			if mod then
-				DBM:ShowNoteEditor(mod, arg3, arg4, arg5, arg6)
-			else--Should not happen, since mod was verified before getting this far, but just in case
-				DBM:Debug("Bad note share, mod not valid")
-			end
-		end
-	end
-
-	DEFAULT_CHAT_FRAME:HookScript("OnHyperlinkClick", linkHook) -- handles the weird case that the default chat frame is not one of the normal chat frames (3rd party chat frames or whatever causes this)
-	local i = 1
-	while _G["ChatFrame" .. i] do
-		if _G["ChatFrame" .. i] ~= DEFAULT_CHAT_FRAME then
-			_G["ChatFrame" .. i]:HookScript("OnHyperlinkClick", linkHook)
-		end
-		i = i + 1
-	end
-end
-
-do
-	local old = ItemRefTooltip.SetHyperlink -- we have to hook this function since the default ChatFrame code assumes that all links except for player and channel links are valid arguments for this function
-	function ItemRefTooltip:SetHyperlink(link, ...)
-		if link and link:sub(0, 4) == "DBM:" then
-			return
-		end
-		return old(self, link, ...)
-	end
-end
-
-
 -----------------
 --  GUI Stuff  --
 -----------------
@@ -3887,7 +3779,7 @@ do
 	
 	syncHandlers["NS"] = function(sender, modid, modvar, text, abilityName)
 		if sender == playerName then return end
-		if DBM.Options.BlockNoteShare or InCombatLockdown() or UnitAffectingCombat("player") or IsFalling() then return end
+		if DBM.Options.BlockNoteShare or InCombatLockdown() or UnitAffectingCombat("player") or IsFalling() or DBM:GetRaidRank(sender) == 0 then return end
 		if IsInGroup(LE_PARTY_CATEGORY_INSTANCE) and IsInInstance() then return end
 		--^^You are in LFR, BG, or LFG. Block note syncs. They shouldn't be sendable, but in case someone edits DBM^^
 		local mod = DBM:GetModByName(modid or "")
@@ -3895,8 +3787,7 @@ do
 		if mod and modvar and text and text ~= "" then
 			if DBM:AntiSpam(5, modvar) then--Don't allow calling same note more than once per 5 seconds
 				DBM:AddMsg(DBM_CORE_NOTE_SHARE_SUCCESS:format(sender, abilityName))
-				--Need to use modid in URL because we cannot insert a mod table into one
-				DBM:AddMsg(("|HDBM:noteshare:%s:%s:%s:%s:%s|h|cff3588ff[%s]"):format(modid, modvar, ability, text, sender, DBM_CORE_NOTE_SHARE_LINK))
+				DBM:ShowNoteEditor(mod, modvar, ability, text, sender)
 			else
 				DBM:Debug(sender.." is attempting to send too many notes so notes are being throttled")
 			end
@@ -5030,11 +4921,19 @@ do
 			else
 				local msg = modid.."\t"..modvar.."\t"..syncText.."\t"..abilityName
 				if IsInRaid() then
-					SendAddonMessage("D4", "NS\t" .. msg, "RAID")
-					DBM:AddMsg(DBM_CORE_NOTESHARED)
+					if DBM:GetRaidRank(playerName) == 0 then
+						DBM:AddMsg(DBM_ERROR_NO_PERMISSION)
+					else
+						SendAddonMessage("D4", "NS\t" .. msg, "RAID")
+						DBM:AddMsg(DBM_CORE_NOTESHARED)
+					end
 				elseif IsInGroup(LE_PARTY_CATEGORY_HOME) then
-					SendAddonMessage("D4", "NS\t" .. msg, "PARTY")
-					DBM:AddMsg(DBM_CORE_NOTESHARED)
+					if DBM:GetRaidRank(playerName) == 0 then
+						DBM:AddMsg(DBM_ERROR_NO_PERMISSION)
+					else
+						SendAddonMessage("D4", "NS\t" .. msg, "PARTY")
+						DBM:AddMsg(DBM_CORE_NOTESHARED)
+					end
 				else--Solo
 					DBM:AddMsg(DBM_CORE_NOTESHAREERRORSOLO)
 				end
@@ -5280,7 +5179,7 @@ do
 				if v.type == type and checkEntry(v.msgs, msg) or v.type == type .. "_regex" and checkExpressionList(v.msgs, msg) then
 					self:StartCombat(v.mod, 0, "MONSTER_MESSAGE")
 				elseif v.type == "combat_" .. type .. "find" and findEntry(v.msgs, msg) or v.type == "combat_" .. type and checkEntry(v.msgs, msg) then
-					if IsInInstance() then--Indoor boss that uses both combat and yell for combat, so in other words (such as hodir), don't require "target" of boss for yell like scanForCombat does for World Bosses
+					if IsInInstance() then--Indoor boss that uses both combat and message for combat, so in other words (such as hodir), don't require "target" of boss for yell like scanForCombat does for World Bosses
 						self:StartCombat(v.mod, 0, "MONSTER_MESSAGE")
 					else--World Boss
 						scanForCombat(v.mod, v.mob, 0)
@@ -5656,6 +5555,9 @@ do
 				end
 			else
 				self:AddMsg(DBM_CORE_COMBAT_STATE_RECOVERED:format(difficultyText..name, strFromTime(delay)))
+				if mod.OnTimerRecovery then
+					mod:OnTimerRecovery()
+				end
 			end
 			if savedDifficulty == "worldboss" and not mod.noWBEsync then
 				if lastBossEngage[modId..playerRealm] and (GetTime() - lastBossEngage[modId..playerRealm] < 30) then return end--Someone else synced in last 10 seconds so don't send out another sync to avoid needless sync spam.
@@ -6520,46 +6422,6 @@ do
 	end
 end
 
--------------------
---  Chat Filter  --
--------------------
-do
-	local function filterOutgoing(self, event, ...)
-		local msg = ...
-		if not msg and self then -- compatibility mode!
-			-- we also check if self exists to prevent a possible freeze if the function is called without arguments at all
-			-- as this would be even worse than the issue with missing whisper messages ;)
-			return filterOutgoing(nil, nil, self, event)
-		end
-		return msg:sub(1, chatPrefix:len()) == chatPrefix or msg:sub(1, chatPrefixShort:len()) == chatPrefixShort, ...
-	end
-
-	local function filterIncoming(self, event, ...)
-		local msg = ...
-		if not msg and self then -- compatibility mode!
-			return filterIncoming(nil, nil, self, event)
-		end
-		if DBM.Options.SpamBlockBossWhispers then
-			return #inCombat > 0 and (msg == "status" or msg:sub(1, chatPrefix:len()) == chatPrefix or msg:sub(1, chatPrefixShort:len()) == chatPrefixShort), ...
-		else
-			return msg == "status" and #inCombat > 0, ...
-		end
-	end
-
-	local function filterSayYell(self, event, ...)
-		return DBM.Options.FilterSayAndYell and #inCombat > 0, ...
-	end
-
-	--This is the source of the taints. As well as function DBM:AddMsg(text, prefix) function
-	--Which is why we embed libchatanims to fix those taints.
-	ChatFrame_AddMessageEventFilter("CHAT_MSG_WHISPER_INFORM", filterOutgoing)
-	ChatFrame_AddMessageEventFilter("CHAT_MSG_BN_WHISPER_INFORM", filterOutgoing)
-	ChatFrame_AddMessageEventFilter("CHAT_MSG_WHISPER", filterIncoming)
-	ChatFrame_AddMessageEventFilter("CHAT_MSG_BN_WHISPER", filterIncoming)
-	ChatFrame_AddMessageEventFilter("CHAT_MSG_SAY", filterSayYell)
-	ChatFrame_AddMessageEventFilter("CHAT_MSG_YELL", filterSayYell)
-end
-
 --This completely unregisteres or registers distruptive events so they don't obstruct combat
 --Toggle is for if we are turning off or on.
 --Custom is for pvp mods to call function without duplication and allowing pvp mods custom toggle.
@@ -6582,7 +6444,7 @@ do
 			if self.Options.HideQuestTooltips then
 				SetCVar("showQuestTrackingTooltips", 0)
 			end
-			if (self.Options.HideBossEmoteFrame or custom) and not testBuild then
+			if (self.Options.HideBossEmoteFrame2 or custom) and not testBuild then
 				DisableEvent(RaidBossEmoteFrame, "RAID_BOSS_EMOTE")
 				DisableEvent(RaidBossEmoteFrame, "RAID_BOSS_WHISPER")
 				DisableEvent(RaidBossEmoteFrame, "CLEAR_BOSS_EMOTES")
@@ -6598,7 +6460,7 @@ do
 			if self.Options.HideQuestTooltips then
 				SetCVar("showQuestTrackingTooltips", 1)
 			end
-			if (self.Options.HideBossEmoteFrame or custom) and not testBuild then
+			if (self.Options.HideBossEmoteFrame2 or custom) and not testBuild then
 				EnableEvent(RaidBossEmoteFrame, "RAID_BOSS_EMOTE")
 				EnableEvent(RaidBossEmoteFrame, "RAID_BOSS_WHISPER")
 				EnableEvent(RaidBossEmoteFrame, "CLEAR_BOSS_EMOTES")
@@ -7497,6 +7359,7 @@ do
 end
 
 do
+	--TODO, depricate this entire function and use infoframe for this instead. Support bars in infoframe?
 	local frame = CreateFrame("Frame", "DBMShields") -- frame for CLEU events, we don't want to run all *_MISSED events through the whole DBM event system...
 
 	local activeShields = {}
@@ -7537,28 +7400,31 @@ do
 		end
 	end)
 
-	local function getShieldHPFunc(info)
+	local function getShieldHPFunc(info, unitID)
 		return function()
+			if unitID then--Passed with unitID, use UnitGetTotalAbsorbs not CLEU and save CPU
+				info.absorbRemaining = UnitGetTotalAbsorbs(unitID)
+			end
 			return mmax(1, floor(info.absorbRemaining / info.maxAbsorb * 100))
 		end
 	end
 
-	function bossModPrototype:ShowShieldHealthBar(guid, name, absorb)
-		self:RemoveShieldHealthBar(guid, name)
-		if #activeShields == 0 then
-			frame:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
-		end
-		local obj = {
-			mod = self.id,
-			name = name,
-			guid = guid,
-			absorbRemaining = absorb,
-			maxAbsorb = absorb,
-		}
-		obj.func = getShieldHPFunc(obj)
-		activeShields[#activeShields + 1] = obj
-		shieldsByGuid[guid] = obj
+	function bossModPrototype:ShowShieldHealthBar(guid, name, absorb, unitID)
 		if DBM.BossHealth:IsShown() then
+			self:RemoveShieldHealthBar(guid, name)
+			if #activeShields == 0 and not unitID then
+				frame:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
+			end
+			local obj = {
+				mod = self.id,
+				name = name,
+				guid = guid,
+				absorbRemaining = absorb,
+				maxAbsorb = absorb,
+			}
+			obj.func = getShieldHPFunc(obj, unitID)
+			activeShields[#activeShields + 1] = obj
+			shieldsByGuid[guid] = obj
 			DBM.BossHealth:AddBoss(obj.func, name)
 		end
 	end
@@ -7589,21 +7455,21 @@ do
 	end
 
 	function bossModPrototype:ShowDamagedHealthBar(guid, name, damage)
-		self:RemoveDamagedHealthBar(guid, name)
-		if #activeShields == 0 then
-			frame:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
-		end
-		local obj = {
-			mod = self.id,
-			name = name,
-			guid = guid,
-			damageRemaining = damage,
-			maxDamage = damage,
-		}
-		obj.func = getDamagedHPFunc(obj)
-		activeShields[#activeShields + 1] = obj
-		shieldsByGuid[guid] = obj
 		if DBM.BossHealth:IsShown() then
+			self:RemoveDamagedHealthBar(guid, name)
+			if #activeShields == 0 then
+				frame:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
+			end
+			local obj = {
+				mod = self.id,
+				name = name,
+				guid = guid,
+				damageRemaining = damage,
+				maxDamage = damage,
+			}
+			obj.func = getDamagedHPFunc(obj)
+			activeShields[#activeShields + 1] = obj
+			shieldsByGuid[guid] = obj
 			DBM.BossHealth:AddBoss(obj.func, name)
 		end
 	end
@@ -7616,21 +7482,21 @@ do
 	end
 
 	function bossModPrototype:ShowAbsorbedHealHealthBar(guid, name, heal)
-		self:RemoveAbsorbedHealHealthBar(guid, name)
-		if #activeShields == 0 then
-			frame:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
-		end
-		local obj = {
-			mod = self.id,
-			name = name,
-			guid = guid,
-			healed = 0,
-			maxHeal = heal,
-		}
-		obj.func = getHealedHPFunc(obj)
-		activeShields[#activeShields + 1] = obj
-		shieldsByGuid[guid] = obj
 		if DBM.BossHealth:IsShown() then
+			self:RemoveAbsorbedHealHealthBar(guid, name)
+			if #activeShields == 0 then
+				frame:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
+			end
+			local obj = {
+				mod = self.id,
+				name = name,
+				guid = guid,
+				healed = 0,
+				maxHeal = heal,
+			}
+			obj.func = getHealedHPFunc(obj)
+			activeShields[#activeShields + 1] = obj
+			shieldsByGuid[guid] = obj
 			DBM.BossHealth:AddBoss(obj.func, name)
 		end
 	end
@@ -7665,11 +7531,12 @@ do
 		["Ranged"] = true,
 		["RangedDps"] = true,
 		["ManaUser"] = true,--Affected by things like mana drains, or mana detonation, etc
-		["SpellCaster"] = true,--Has channeled casts, can be interrupted/spell locked by roars, etc
+		["SpellCaster"] = true,--Has channeled casts, can be interrupted/spell locked by roars, etc, include healers. Use CasterDps if dealing with reflect
+		["CasterDps"] = true,--Ranged dps that uses spells, relevant for spell reflect type abilities that only reflect spells but not ranged physical such as hunters
 		["RaidCooldown"] = true,
 		["RemovePoison"] = true,
 		["RemoveDisease"] = true,
-		["RemoveEnrage"] = true,--Depricated, no one can remove enrage anymore
+		["RemoveEnrage"] = true,--Depricated, no one can remove enrage anymore, returning in classic!
 		["RemoveCurse"] = true,
 		["MagicDispeller"] = true--Buffs on targets, not debuffs on players
 		["HasInterrupt"] = true,--Has an interrupt that is 24 seconds or less CD.
@@ -7682,6 +7549,7 @@ do
 			["RangedDps"] = true,
 			["ManaUser"] = true,
 			["SpellCaster"] = true,
+			["CasterDps"] = true,
 			["MagicDispeller"] = true,
 			["HasInterrupt"] = true,
 		},
@@ -7733,6 +7601,7 @@ do
 			["RangedDps"] = true,
 			["ManaUser"] = true,
 			["SpellCaster"] = true,
+			["CasterDps"] = true,
 			["RemoveCurse"] = true,
 			["RemovePoison"] = true,
 		},
@@ -7794,6 +7663,7 @@ do
 			["Ranged"] = true,
 			["ManaUser"] = true,
 			["SpellCaster"] = true,
+			["CasterDps"] = true,--Iffy
 			["RaidCooldown"] = true,--Power Word: Barrier(Discipline) / Divine Hymn (Holy)
 			["RemoveDisease"] = true,
 			["MagicDispeller"] = true,
@@ -7804,6 +7674,7 @@ do
 			["RangedDps"] = true,
 			["ManaUser"] = true,
 			["SpellCaster"] = true,
+			["CasterDps"] = true,
 			["MagicDispeller"] = true,
 		},
 		[259] = {	--Assassination Rogue
@@ -7819,6 +7690,7 @@ do
 			["RangedDps"] = true,
 			["ManaUser"] = true,
 			["SpellCaster"] = true,
+			["CasterDps"] = true,
 			["RemoveCurse"] = true,
 			["MagicDispeller"] = true,
 			["HasInterrupt"] = true,
@@ -7850,6 +7722,7 @@ do
 			["RangedDps"] = true,
 			["ManaUser"] = true,
 			["SpellCaster"] = true,
+			["CasterDps"] = true,
 		},
 		[268] = {	--Brewmaster Monk
 			["Tank"] = true,
@@ -8296,7 +8169,7 @@ do
 	local font1elapsed, font2elapsed, font3elapsed, moving
 
 	local function fontHide1()
-		local duration = DBM.Options.WarningDuration
+		local duration = DBM.Options.WarningDuration2
 		if font1elapsed > duration * 1.3 then
 			font1u:Hide()
 			font1:Hide()
@@ -8315,7 +8188,7 @@ do
 	end
 
 	local function fontHide2()
-		local duration = DBM.Options.WarningDuration
+		local duration = DBM.Options.WarningDuration2
 		if font2elapsed > duration * 1.3 then
 			font2u:Hide()
 			font2:Hide()
@@ -8334,7 +8207,7 @@ do
 	end
 
 	local function fontHide3()
-		local duration = DBM.Options.WarningDuration
+		local duration = DBM.Options.WarningDuration2
 		if font3elapsed > duration * 1.3 then
 			font3u:Hide()
 			font3:Hide()
@@ -8456,9 +8329,9 @@ do
 				anchorFrame.ticker:Cancel()
 				anchorFrame.ticker = nil
 			end
-			font1elapsed = self.Options.WarningDuration
-			font2elapsed = self.Options.WarningDuration
-			font3elapsed = self.Options.WarningDuration
+			font1elapsed = self.Options.WarningDuration2
+			font2elapsed = self.Options.WarningDuration2
+			font3elapsed = self.Options.WarningDuration2
 			frame:SetFrameStrata("HIGH")
 			self:Unschedule(moveEnd)
 			self.Bars:CancelBar(DBM_CORE_MOVE_WARNING_BAR)
@@ -9197,7 +9070,7 @@ do
 	local font1elapsed, font2elapsed, moving
 
 	local function fontHide1()
-		local duration = DBM.Options.SpecialWarningDuration
+		local duration = DBM.Options.SpecialWarningDuration2
 		if font1elapsed > duration * 1.3 then
 			font1:Hide()
 			if frame.font1ticker then
@@ -9215,7 +9088,7 @@ do
 	end
 
 	local function fontHide2()
-		local duration = DBM.Options.SpecialWarningDuration
+		local duration = DBM.Options.SpecialWarningDuration2
 		if font2elapsed > duration * 1.3 then
 			font2:Hide()
 			if frame.font2ticker then
@@ -9278,8 +9151,8 @@ do
 		local function moveEnd(self)
 			moving = false
 			anchorFrame:Hide()
-			font1elapsed = self.Options.SpecialWarningDuration
-			font2elapsed = self.Options.SpecialWarningDuration
+			font1elapsed = self.Options.SpecialWarningDuration2
+			font2elapsed = self.Options.SpecialWarningDuration2
 			frame:SetFrameStrata("HIGH")
 			self:Unschedule(moveEnd)
 			self.Bars:CancelBar(DBM_CORE_MOVE_SPECIAL_WARNING_BAR)
@@ -9835,7 +9708,7 @@ do
 		self:AddSpecialWarning(DBM_CORE_MOVE_SPECIAL_WARNING_TEXT)
 		frame:SetFrameStrata("TOOLTIP")
 		self:Unschedule(testWarningEnd)
-		self:Schedule(self.Options.SpecialWarningDuration * 1.3, testWarningEnd)
+		self:Schedule(self.Options.SpecialWarningDuration2 * 1.3, testWarningEnd)
 		if number and not noSound then
 			self:PlaySpecialWarningSound(number)
 		end
@@ -10205,9 +10078,9 @@ do
 				colorType = 6
 			end
 		elseif timerType == "roleplay" then
-			icon = type(texture) == "number" and GetSpellTexture(texture) or texture or type(spellId) == "string" and select(4, EJ_GetSectionInfo(string.sub(spellId, 3))) ~= "" and select(4, EJ_GetSectionInfo(string.sub(spellId, 3))) or (type(spellId) == "number" and GetSpellTexture(spellId)) or "Interface\\Icons\\Spell_Nature_WispSplode"
+			icon = type(texture) == "number" and GetSpellTexture(texture) or texture or type(spellId) == "string" and select(4, EJ_GetSectionInfo(string.sub(spellId, 3))) ~= "" and select(4, EJ_GetSectionInfo(string.sub(spellId, 3))) or (type(spellId) == "number" and GetSpellTexture(spellId)) or "Interface\\Icons\\Spell_Holy_BorrowedTime"
 			colorType = 6
-		elseif timerType == "adds" then
+		elseif timerType == "adds" or timerType == "addscustom" then
 			icon = type(texture) == "number" and GetSpellTexture(texture) or texture or type(spellId) == "string" and select(4, EJ_GetSectionInfo(string.sub(spellId, 3))) ~= "" and select(4, EJ_GetSectionInfo(string.sub(spellId, 3))) or (type(spellId) == "number" and GetSpellTexture(spellId)) or "Interface\\Icons\\Spell_Nature_WispSplode"
 			colorType = 1
 		else

@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1744, "DBM-EmeraldNightmare", nil, 768)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 16092 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 16866 $"):sub(12, -3))
 mod:SetCreatureID(106087)
 mod:SetEncounterID(1876)
 mod:SetZone()
@@ -21,7 +21,6 @@ mod:RegisterEventsInCombat(
 )
 
 --TODO, Shimering Feather (212993) also missing from combat log. Will add tracking for this when blizzard revises fight when/if they fix it. If they don't, UNIT_AURA it is!
---TODO, tangled webs warnings/timers if I can find any way to detect it, right now i can't.
 --(ability.id = 212707 or ability.id = 210948 or ability.id = 210547 or ability.id = 215582 or ability.id = 210326 or ability.id = 210308 or ability.id = 218124) and type = "begincast" or (ability.id = 210864 or ability.id = 215443 or ability.id = 218630 or ability.id = 218124) and type = "cast"
 --Spider Form
 local warnSpiderForm				= mod:NewSpellAnnounce(210326, 2)
@@ -40,7 +39,7 @@ local warnViolentWinds				= mod:NewTargetAnnounce(218124, 4)
 --Spider Form
 local specWarnFeedingTime			= mod:NewSpecialWarningSwitch(212364, "-Healer", nil, nil, 1, 2)
 local specWarnVenomousPool			= mod:NewSpecialWarningMove(213124, nil, nil, nil, 1, 2)
-local specWarnWebWrap				= mod:NewSpecialWarningStack(212512, nil, 5)
+local specWarnWebWrap				= mod:NewSpecialWarningStack(212512, nil, 5, nil, nil, 1, 6)
 local specWarnNecroticVenom			= mod:NewSpecialWarningMoveAway(218831, nil, nil, nil, 1, 2)
 local yellNecroticVenom				= mod:NewFadesYell(218831)
 local specWarnWebofPain				= mod:NewSpecialWarning("specWarnWebofPain")--No voice. Tech doesn't really exist yet to filter special warning sounds on generics. Plus how you handle this may differ between groups
@@ -86,6 +85,7 @@ local countdownNecroticVenom		= mod:NewCountdown("AltTwo21", 215443)
 local voiceFeedingTime				= mod:NewVoice(212364, "-Healer")--killmob
 local voiceNecroticVenom			= mod:NewVoice(218831)--runout
 local voiceVenomousPool				= mod:NewVoice(213124)--runaway
+local voiceWebWrap					= mod:NewVoice(212512)--stackhigh
 --Roc Form
 local voiceTwistingShadows			= mod:NewVoice(210864)--runout/runaway
 local voiceGatheringClouds			= mod:NewVoice(212707)--aesoon
@@ -288,6 +288,7 @@ function mod:SPELL_AURA_APPLIED_DOSE(args)
 		local amount = args.amount or 1
 		if amount >= 5 then
 			specWarnWebWrap:Show(amount)
+			voiceWebWrap:Play("stackhigh")
 		end
 	end
 end

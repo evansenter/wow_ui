@@ -3,7 +3,7 @@ Frame: GarrisonLandingPageMinimapButton
 FrameLevel: 6
 Anchor: TOPRIGHT
 X: -2
-Y: -3
+Y: -34
 W: 53
 H: 53
 Frame: ScriptErrorsFrame
@@ -44,8 +44,8 @@ H: 64
 Frame: DBMMinimapButton
 FrameLevel: 3
 Anchor: TOPRIGHT
-X: -138
-Y: -112
+X: -128
+Y: -130
 W: 32
 H: 32
 Frame: PawnUIFrame

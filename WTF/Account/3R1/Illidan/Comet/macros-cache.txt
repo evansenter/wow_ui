@@ -12,8 +12,6 @@ VER 3 0100000000000015 "Enveloping Mist" "INV_MISC_QUESTIONMARK"
 END
 VER 3 0100000000000022 "FoF" "INV_Misc_QuestionMark"
 #showtooltip Fists of Fury
-/use [nochanneling]13
-/use [nochanneling]14
 /use [nochanneling]Fists of Fury
 END
 VER 3 0100000000000013 "Life Cocoon" "INV_MISC_QUESTIONMARK"
@@ -55,7 +53,7 @@ VER 3 0100000000000011 "Tier 2 MW" "INV_MISC_QUESTIONMARK"
 END
 VER 3 010000000000001C "Tier 5" "INV_Misc_QuestionMark"
 #showtooltip
-/use [talent:5/1,nomod]Healing Elixir;[talent:5/2,nomod]Diffuse Magic;[talent:5/3,nomod]Dampen Harm[mod:shift]Fortifying Brew
+/use [talent:5/1,nomod]Healing Elixir;[talent:5/2,nomod]Diffuse Magic;[talent:5/3,nomod]Dampen Harm;[mod:shift]Fortifying Brew
 END
 VER 3 010000000000001D "Tier 6 MW" "INV_Misc_QuestionMark"
 #showtooltip
@@ -71,6 +69,7 @@ VER 3 0100000000000007 "Transcendence" "INV_MISC_QUESTIONMARK"
 END
 VER 3 0100000000000018 "Vivify" "INV_Misc_QuestionMark"
 #showtooltip Vivify
+/use Thunder Focus Tea
 /use [@mouseover,help,nodead][]Vivify
 END
 VER 3 010000000000001E "WDP" "988194"

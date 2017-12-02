@@ -84,8 +84,6 @@ VER 3 000000000000005C "LoF" "INV_Misc_QuestionMark"
 END
 VER 3 0000000000000059 "LoT" "INV_Misc_QuestionMark"
 #showtooltip Light of T'uure
-/use 13
-/use 14
 /use [target=mouseover,help,nodead][]Light of T'uure
 END
 VER 3 0000000000000056 "Mana Pot" "INV_Misc_QuestionMark"
@@ -129,6 +127,18 @@ VER 3 000000000000003C "RSK" "INV_MISC_QUESTIONMARK"
 #showtooltip Rising Sun Kick
 /use [nochanneling]Rising Sun Kick
 END
+VER 3 0000000000000063 "SEF" "INV_Misc_QuestionMark"
+#showtooltip Storm, Earth, and Fire
+/use 13
+/use 14
+/cast Storm, Earth, and Fire
+END
+VER 3 0000000000000043 "Serenity" "INV_Misc_QuestionMark"
+#showtooltip Serenity
+/use 13
+/use 14
+/cast Serenity
+END
 VER 3 0000000000000054 "Sheilun's Gift" "INV_Misc_QuestionMark"
 #showtooltip Sheilun's Gift
 /use [@mouseover,help,nodead][]Sheilun's Gift
@@ -150,10 +160,9 @@ VER 3 0000000000000044 "Tier 3" "INV_Misc_QuestionMark"
 #showtooltip
 /use [talent:3/1]Power Strikes;[talent:3/2]Ascension;[talent:3/3]Chi Brew
 END
-VER 3 0000000000000043 "Tier 7" "INV_Misc_QuestionMark"
+VER 3 0000000000000064 "Tier 5 BM" "INV_Misc_QuestionMark"
 #showtooltip
-/use [talent:7/1]Hurricane Strike;[talent:7/2]Chi Explosion;[talent:7/3]Serenity
-/use 14
+/cast [talent:5/1,nomod]Healing Elixir;[talent:5/2,nomod]Mystic Vitality;[talent:5/3,nomod]Dampen Harm;[mod:shift]Fortifying Brew
 END
 VER 3 000000000000004B "Tier 7 MW" "INV_Misc_QuestionMark"
 #showtooltip
@@ -162,4 +171,10 @@ END
 VER 3 000000000000003E "Tiger Palm" "INV_MISC_QUESTIONMARK"
 #showtooltip Tiger Palm
 /use [nochanneling]Tiger Palm
+END
+VER 3 0000000000000062 "ToD" "INV_Misc_QuestionMark"
+#showtooltip Touch of Death
+/use [nochanneling]13
+/use [nochanneling]14
+/use [nochanneling]Touch of Death
 END

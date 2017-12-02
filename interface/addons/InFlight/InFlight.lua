@@ -236,6 +236,18 @@ local function postTaxiNodeOnButtonEnter(button) -- adds duration info to node t
 			gtt:AddLine(L_duration.."-:--", 0.8, 0.8, 0.8)
 		end
 		gtt:Show()
+	elseif FlightMapFrame then
+		if button.taxiNodeData.type ~= LE_FLIGHT_PATH_TYPE_REACHABLE then return end
+		local ftime = (vars[source] and vars[source][ ShortenName(button.taxiNodeData.name) ]) or GetEstimatedTime(button.taxiNodeData.slotIndex) or 0
+		if ftime > 0 then
+			if GetGuildLevel and GetGuildLevel() >= 21 then
+				ftime = ftime / 1.25
+			end
+			gtt:AddLine(L_duration..FormatTime(ftime), 1, 1, 1)
+		else
+			gtt:AddLine(L_duration.."-:--", 0.8, 0.8, 0.8)
+		end
+		gtt:Show()
 	end
 end
 
@@ -341,7 +353,7 @@ end
 ------------------------------
 function InFlight:InitSource()  -- cache source location and hook tooltips
 ------------------------------
-	if TaxiFrame_ShouldShowOldStyle() then
+	if TaxiFrame_ShouldShowOldStyle() or GetTaxiMapID()==1007 or GetTaxiMapID()==1184 then
 		for i = 1, NumTaxiNodes(), 1 do
 			local tb = _G["TaxiButton"..i]
 			if tb and not tb.inflighted then
@@ -350,6 +362,16 @@ function InFlight:InitSource()  -- cache source location and hook tooltips
 			end
 			if TaxiNodeGetType(i) == "CURRENT" then
 				source = ShortenName(TaxiNodeName(i))
+			end
+		end
+	elseif FlightMapFrame then
+		local tb = FlightMapFrame.pinPools.FlightMap_FlightPointPinTemplate
+		for flightnode in tb:EnumerateActive() do
+			if flightnode then
+				flightnode:HookScript("OnEnter", postTaxiNodeOnButtonEnter)
+			end
+			if flightnode.taxiNodeData.type == LE_FLIGHT_PATH_TYPE_CURRENT then
+				source = ShortenName(flightnode.taxiNodeData.name)
 			end
 		end
 	end

@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(2009, "DBM-AntorusBurningThrone", nil, 946)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 16755 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 16887 $"):sub(12, -3))
 mod:SetCreatureID(124158)--or 124158 or 125692
 mod:SetEncounterID(2082)
 mod:SetZone()
@@ -14,7 +14,7 @@ mod:RegisterCombat("combat")
 
 mod:RegisterEventsInCombat(
 	"SPELL_CAST_START 247376 247923 248068 248070 248254",
-	"SPELL_CAST_SUCCESS 247367 247552 247687 250255",
+	"SPELL_CAST_SUCCESS 247367 247552 247687 250255 254244",
 	"SPELL_AURA_APPLIED 247367 247552 247565 247687 250255 250006",
 	"SPELL_AURA_APPLIED_DOSE 247367 247687 250255 248424",
 	"SPELL_AURA_REMOVED 248233 250135 250006",
@@ -29,6 +29,12 @@ mod:RegisterEventsInCombat(
 --TODO, determine sleep canister counts and add icons as needed
 --TODO, Announe stacks of Gathering Power if relevant
 --TODO, icons on Empowered Pulse Grenades? Have to see live health tuning and whether or not 10 players have them
+--TODO, recheck timers for abilities with SLOWER cds on mythic, to see if also slower on heroic/normal/lfr
+--[[
+(ability.id = 247376 or ability.id = 248068 or ability.id = 247923 or ability.id = 248070 or ability.id = 248254) and type = "begincast"
+ or (ability.id = 247367 or ability.id = 250255 or ability.id = 247552 or ability.id = 247687 or ability.id = 254244) and type = "cast"
+ or (ability.id = 248233 or ability.id = 250135) and (type = "applybuff" or type = "removebuff")
+--]]
 --Stage One: Attack Force
 local warnShocklance					= mod:NewStackAnnounce(247367, 2, nil, "Tank")
 local warnSleepCanister					= mod:NewTargetAnnounce(247552, 2)
@@ -66,9 +72,9 @@ local yellEmpPulseGrenade				= mod:NewYell(248424)
 --Intermission: On Deadly Ground
 
 --Stage One: Attack Force
-local timerShocklanceCD					= mod:NewCDTimer(4.1, 247367, nil, "Tank", nil, 5, nil, DBM_CORE_TANK_ICON)--4.1-5
-local timerSleepCanisterCD				= mod:NewCDTimer(10.7, 247552, nil, nil, nil, 3, nil, DBM_CORE_MAGIC_ICON)--10.9-13.4
-local timerPulseGrenadeCD				= mod:NewCDTimer(16.1, 247376, nil, nil, nil, 3)--17?
+local timerShocklanceCD					= mod:NewCDTimer(4.4, 247367, nil, "Tank", nil, 5, nil, DBM_CORE_TANK_ICON)--4.4-5.1
+local timerSleepCanisterCD				= mod:NewCDTimer(11.3, 247552, nil, nil, nil, 3, nil, DBM_CORE_MAGIC_ICON)--11.3-13.4
+local timerPulseGrenadeCD				= mod:NewCDTimer(17, 247376, nil, nil, nil, 3)--17?
 --Stage Two: Contract to Kill
 local timerSeverCD						= mod:NewCDTimer(7.2, 247687, nil, "Tank", nil, 5, nil, DBM_CORE_TANK_ICON)
 local timerChargedBlastsCD				= mod:NewCDTimer(18.2, 247716, nil, nil, nil, 3)
@@ -80,7 +86,7 @@ local timerShrapnalBlastCD				= mod:NewCDTimer(13.3, 247923, nil, nil, nil, 3)
 --local berserkTimer						= mod:NewBerserkTimer(420)
 
 --Stage One: Attack Force
-local countdownPulseGrenade				= mod:NewCountdown(16.1, 247376)
+local countdownPulseGrenade				= mod:NewCountdown(17, 247376)
 --Stage Two: Contract to Kill
 local countdownChargedBlasts			= mod:NewCountdown("AltTwo18", 247716)
 
@@ -137,10 +143,12 @@ end
 
 function mod:OnCombatStart(delay)
 	self.vb.phase = 1
-	timerShocklanceCD:Start(3.7-delay)--4.4 Mythic
+	timerShocklanceCD:Start(4.2-delay)--4.4 Mythic, 4.3 normal, 4.2 heroic
 	timerSleepCanisterCD:Start(7-delay)
-	timerPulseGrenadeCD:Start(12.3-delay)
-	countdownPulseGrenade:Start(12.3-delay)
+	if not self:IsLFR() then--Don't seem to be in LFR
+		timerPulseGrenadeCD:Start(14.2-delay)--14.2
+		countdownPulseGrenade:Start(14.2-delay)
+	end
 	--berserkTimer:Start(-delay)--7min on heroic at least
 end
 
@@ -156,16 +164,25 @@ end
 function mod:SPELL_CAST_START(args)
 	local spellId = args.spellId
 	if spellId == 247376 or spellId == 248068 then
-		if spellId == 247376 then
+		if spellId == 247376 then--Non Empowered
 			specWarnPulseGrenade:Show()
 			voicePulseGrenade:Play("watchstep")
+			timerPulseGrenadeCD:Start()
+			countdownPulseGrenade:Start()
+		else--Empowered
+			timerPulseGrenadeCD:Start(26)--Empowered have longer cd
+			countdownPulseGrenade:Start(26)
 		end
-		timerPulseGrenadeCD:Start()
-		countdownPulseGrenade:Start()
 	elseif spellId == 247923 or spellId == 248070 then
 		specWarnShrapnalBlast:Show()
 		voiceShrapnalBlast:Play("watchstep")
-		timerShrapnalBlastCD:Start()
+		if self:IsMythic() then
+			timerShrapnalBlastCD:Start(17)
+		elseif spellId == 248070 then--Empowered (p3)
+			timerShrapnalBlastCD:Start(19)--19-23
+		else
+			timerShrapnalBlastCD:Start()--13
+		end
 	elseif spellId == 248254 then
 		specWarnChargedBlastsUnknown:Show()
 		voiceChargedBlasts:Play("farfromline")
@@ -187,8 +204,12 @@ function mod:SPELL_CAST_SUCCESS(args)
 		else--Empowered seems less often
 			timerShocklanceCD:Start(9.7)
 		end
-	elseif spellId == 247552 then
-		timerSleepCanisterCD:Start()
+	elseif spellId == 247552 or spellId == 254244 then
+		if self:IsMythic() then
+			timerSleepCanisterCD:Start(12)
+		else
+			timerSleepCanisterCD:Start()--10.7
+		end
 	elseif spellId == 247687 then
 		timerSeverCD:Start()
 	end
@@ -265,10 +286,10 @@ function mod:SPELL_AURA_REMOVED(args)
 		self.vb.phase = self.vb.phase + 1
 		if self.vb.phase == 2 then
 			warnPhase2:Show()
-			timerSeverCD:Start(6.6)
-			timerChargedBlastsCD:Start(8.7)
-			countdownChargedBlasts:Start(8.7)
-			timerShrapnalBlastCD:Start(12.4)
+			timerSeverCD:Start(6.6)--6.6-8.2
+			timerChargedBlastsCD:Start(8.4)
+			countdownChargedBlasts:Start(8.4)
+			timerShrapnalBlastCD:Start(12)
 		elseif self.vb.phase == 3 then
 			warnPhase3:Show()
 			if self:IsMythic() then
@@ -277,8 +298,8 @@ function mod:SPELL_AURA_REMOVED(args)
 				--timerShrapnalBlastCD:Start(3)--Empowered
 			else
 				timerShocklanceCD:Start(5)--Empowered
-				timerPulseGrenadeCD:Start(6.9)--Empowered
-				countdownPulseGrenade:Start(6.9)
+				timerPulseGrenadeCD:Start(6.3)--Empowered
+				countdownPulseGrenade:Start(6.3)
 				timerShrapnalBlastCD:Start(15.4)--Empowered
 			end
 		elseif self.vb.phase == 4 then--Mythic Only
@@ -289,9 +310,9 @@ function mod:SPELL_AURA_REMOVED(args)
 		elseif self.vb.phase == 5 then--Mythic Only (Identical to non mythic 3?)
 			warnPhase5:Show()
 			timerShocklanceCD:Start(5)--Empowered
-			timerPulseGrenadeCD:Start(7.6)--Empowered
-			countdownPulseGrenade:Start(7.6)
-			timerShrapnalBlastCD:Start(16.2)--Empowered
+			timerPulseGrenadeCD:Start(6.3)--Empowered
+			countdownPulseGrenade:Start(6.3)
+			timerShrapnalBlastCD:Start(15)--Empowered
 		end
 	elseif spellId == 250006 then
 		if args:IsPlayer() then

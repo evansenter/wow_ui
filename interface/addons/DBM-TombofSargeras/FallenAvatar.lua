@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(1873, "DBM-TombofSargeras", nil, 875)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 16749 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 16850 $"):sub(12, -3))
 mod:SetCreatureID(116939)--Maiden of Valor 120437
 mod:SetEncounterID(2038)
 mod:SetZone()
@@ -58,8 +58,8 @@ local specWarnDesolateOther			= mod:NewSpecialWarningTaunt(236494, nil, nil, nil
 ----Maiden of Valor
 local specWarnCorruptedMatrix		= mod:NewSpecialWarningMoveTo(233556, "Tank", nil, nil, 1, 7)
 local specWarnCleansingProtocol		= mod:NewSpecialWarningSwitch(233856, "-Healer", nil, nil, 3, 2)
-local specWarnTaintedEssence		= mod:NewSpecialWarningStack(240728, nil, 4, nil, nil, 1, 6)
-local yellTaintedEssence			= mod:NewShortYell(240728)
+local specWarnTaintedEssence		= mod:NewSpecialWarningStack(240728, nil, 6, nil, nil, 1, 6)
+local yellTaintedEssence			= mod:NewShortFadesYell(240728)
 --Stage Two: An Avatar Awakened
 local specWarnDarkMark				= mod:NewSpecialWarningYouPos(239739, nil, nil, nil, 1, 2)
 local specWarnDarkMarkOther			= mod:NewSpecialWarningMoveTo(239739, nil, nil, nil, 1, 2)
@@ -93,7 +93,7 @@ local countdownDesolate				= mod:NewCountdown("Alt11", 236494, "Tank", nil, 3)--
 local countdownCorruptedMatrix		= mod:NewCountdown("AltTwo40", 233556)
 --Stage Two
 local countdownRuptureRealities		= mod:NewCountdown(60, 239132)
-local countdownDarkMark				= mod:NewCountdown("Alt40", 239739)
+local countdownDarkMark				= mod:NewCountdown("Alt40", 239739, "-Tank", 2)
 local countdownRainofthedDestroyer	= mod:NewCountdown("AltTwo35", 240396)
 
 --Stage One: A Slumber Disturbed
@@ -249,8 +249,8 @@ function mod:OnCombatStart(delay)
 	else
 		showTouchofSarg = false
 	end
-	timerShadowyBladesCD:Start(20.7-delay)
-	self:Schedule(20.7, setabilityStatus, self, 236571, 0)--Shadowy Blades
+	timerShadowyBladesCD:Start(27-delay)
+	self:Schedule(27, setabilityStatus, self, 236571, 0)--Shadowy Blades
 	timerRuptureRealitiesCD:Start(31-delay, 1)--31-37
 	self:Schedule(31, setabilityStatus, self, 239132, 0)--Ruptured Realities
 	if self.Options.InfoFrame then
@@ -278,10 +278,15 @@ function mod:SPELL_CAST_START(args)
 		self.vb.touchCast = self.vb.touchCast + 1
 		specWarnTouchofSargerasGround:Show(self.vb.touchCast)
 		voiceTouchofSargerasGround:Play("helpsoak")
-		timerTouchofSargerasCD:Start(42, self.vb.touchCast+1)--42
 		self:Unschedule(setabilityStatus, self, 239207)--Unschedule for good measure in case next cast start fires before timer expires (in which case have a bad timer)
 		setabilityStatus(self, 239207, 1)--Set on Cooldown
-		self:Schedule(42, setabilityStatus, self, 239207, 0)--Set ready to use when CD expires
+		if self:IsMythic() then
+			timerTouchofSargerasCD:Start(60, self.vb.touchCast+1)--42
+			self:Schedule(60, setabilityStatus, self, 239207, 0)--Set ready to use when CD expires
+		else
+			timerTouchofSargerasCD:Start(42, self.vb.touchCast+1)--42
+			self:Schedule(42, setabilityStatus, self, 239207, 0)--Set ready to use when CD expires
+		end
 	elseif spellId == 239132 or spellId == 235572 then
 		self.vb.realityCount = self.vb.realityCount + 1
 		specWarnRuptureRealities:Show()
@@ -418,7 +423,7 @@ function mod:SPELL_AURA_APPLIED(args)
 	elseif spellId == 240728 then
 		if args:IsPlayer() then
 			local amount = args.amount or 1
-			if amount >= 4 then
+			if amount >= 6 then
 				specWarnTaintedEssence:Show(amount)
 				voiceTaintedEssence:Play("stackhigh")
 				yellTaintedEssence:Yell(amount)
@@ -524,8 +529,13 @@ function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, _, spellGUID)
 			timerShadowyBladesCD:Start(34)
 			self:Schedule(34, setabilityStatus, self, 236571, 0)--Set ready to use when CD expires
 		else
-			timerShadowyBladesCD:Start(30)
-			self:Schedule(30, setabilityStatus, self, 236571, 0)--Set ready to use when CD expires
+			if self:IsMythic() then
+				timerShadowyBladesCD:Start(35)
+				self:Schedule(35, setabilityStatus, self, 236571, 0)--Set ready to use when CD expires
+			else
+				timerShadowyBladesCD:Start(30)
+				self:Schedule(30, setabilityStatus, self, 236571, 0)--Set ready to use when CD expires
+			end
 		end
 		if self.Options.RangeFrame then
 			DBM.RangeCheck:Show(10, nil, nil, nil, nil, 5)

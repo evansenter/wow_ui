@@ -2,9 +2,8 @@
 PawnOptions = {
 	["LastVersion"] = 2.0214,
 	["LastPlayerFullName"] = "Evan-Illidan",
-	["AutoSelectScales"] = true,
+	["AutoSelectScales"] = false,
 	["UpgradeTracking"] = false,
-	["LastKeybindingsSet"] = 1,
 	["Artifacts"] = {
 		[128868] = {
 			["Relics"] = {
@@ -13,11 +12,11 @@ PawnOptions = {
 					["Type"] = "Holy",
 				}, -- [1]
 				{
-					["ItemLevel"] = 58,
+					["ItemLevel"] = 65,
 					["Type"] = "Shadow",
 				}, -- [2]
 				{
-					["ItemLevel"] = 51,
+					["ItemLevel"] = 56,
 					["Type"] = "Holy",
 				}, -- [3]
 			},
@@ -43,21 +42,22 @@ PawnOptions = {
 		[128825] = {
 			["Relics"] = {
 				{
-					["ItemLevel"] = 56,
+					["ItemLevel"] = 68,
 					["Type"] = "Holy",
 				}, -- [1]
 				{
-					["ItemLevel"] = 62,
+					["ItemLevel"] = 71,
 					["Type"] = "Life",
 				}, -- [2]
 				{
-					["ItemLevel"] = 61,
+					["ItemLevel"] = 68,
 					["Type"] = "Holy",
 				}, -- [3]
 			},
 			["Name"] = "T'uure, Beacon of the Naaru",
 		},
 	},
+	["LastKeybindingsSet"] = 1,
 }
 PawnMrRobotScaleProviderOptions = {
 	["LastClass"] = "PRIEST",

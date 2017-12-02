@@ -480,6 +480,15 @@ GTFO.SpellID["247186"] = {
   sound = 3;
 };
 
+GTFO.SpellID["202323"] = {
+  --desc = "Goliath's Bane (Sigurd the Giantslayer)";
+  sound = 3;
+};
+
+GTFO.SpellID["197362"] = {
+  --desc = "Wandering Keg (Chen Stormstout)";
+  sound = 3;
+};
 
 -- ********************
 -- * The Broken Shore *
@@ -2096,6 +2105,12 @@ GTFO.SpellID["251735"] = {
   sound = 3;
 };
 
+GTFO.SpellID["249238"] = {
+  --desc = "Slumber (Slumber Fog)";
+  applicationOnly = true;
+  sound = 1;
+};
+
 
 --- ***************************
 --- * Seat of the Triumvirate *
@@ -2128,3 +2143,107 @@ GTFO.SpellID["246900"] = {
   sound = 3;
   applicationOnly = true;
 };
+
+
+-- *******************************
+-- * Antorus, the Burning Throne *
+-- *******************************
+
+GTFO.SpellID["252112"] = {
+  --desc = "Talon Strike (Legion Talon)";
+  sound = 3;
+};
+
+GTFO.SpellID["244532"] = {
+  --desc = "Fel Bombardment (Garothi Worldbreaker)";
+  sound = 3;
+};
+
+GTFO.SpellID["253543"] = {
+  --desc = "Infernal Bombardment (Legion Devastator)";
+  sound = 3;
+};
+
+GTFO.SpellID["254760"] = {
+  --desc = "Corrupting Maw (Shatug)";
+  sound = 3;
+  tankSound = 0;
+};
+
+GTFO.SpellID["254502"] = {
+  --desc = "Fearsome Leap (Imperator Deconix)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["245121"] = {
+  --desc = "Entropic Blast (Entropic Mine)";
+  sound = 3;
+};
+
+GTFO.SpellID["244892"] = {
+  --desc = "Exploit Weakness (Admiral Svirax)";
+  sound = 3;
+  tankSound = 0;
+};
+
+GTFO.SpellID["243984"] = {
+  --desc = "Collapsing World (Portal Keeper Hasabel)";
+	soundFunction = function() -- Warn only if you get hit more than once
+		if (GTFO_FindEvent("CollapsingWorld")) then
+			return 3;
+		end
+		GTFO_AddEvent("CollapsingWorld", 1);
+		return 0;
+	end
+};
+
+GTFO.SpellID["244001"] = {
+  --desc = "Felstorm Barrage (Portal Keeper Hasabel)";
+  sound = 3;
+};
+
+GTFO.SpellID["249671"] = {
+  --desc = "Bombardment";
+  sound = 3;
+};
+
+GTFO.SpellID["247388"] = {
+  --desc = "Pulse Grenade (Imonar the Soulhunter)";
+  sound = 3;
+};
+
+GTFO.SpellID["247681"] = {
+  --desc = "Pulse Grenade (Imonar the Soulhunter)";
+  sound = 3;
+};
+
+GTFO.SpellID["247641"] = {
+  --desc = "Stasis Trap (Imonar the Soulhunter)";
+  applicationOnly = true;  
+  sound = 3;
+};
+
+GTFO.SpellID["247962"] = {
+  --desc = "Blastwire (Imonar the Soulhunter)";
+  sound = 3;
+};
+
+GTFO.SpellID["247716"] = {
+  --desc = "Charged Blasts (Imonar the Soulhunter)";
+  applicationOnly = true;  
+  sound = 3;
+  test = true;
+};
+
+GTFO.SpellID["254919"] = {
+  --desc = "Forging Strike (Kin'garoth)";
+  sound = 3;
+  tankSound = 0;
+};
+
+GTFO.SpellID["246634"] = {
+  --desc = "Apocalypse Blast (Kin'garoth)";
+  sound = 3;
+};
+

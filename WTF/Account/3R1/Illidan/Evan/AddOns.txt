@@ -178,7 +178,7 @@ SavedInstances: enabled
 SharedMediaAdditionalFonts: enabled
 WoWNotifier: disabled
 DBM-RaidLeadTools: enabled
-ExRT: disabled
+ExRT: enabled
 Hansgar_And_Franzok_Assist: enabled
 Kui_Nameplates: disabled
 Kui_Nameplates_Core_Config: disabled
@@ -233,8 +233,8 @@ Simulationcraft: enabled
 SubSpec: enabled
 Telemancy: enabled
 WorldQuestGroupFinder: enabled
-DBM-AntorusBurningThrone: disabled
-DBM-Argus: disabled
+DBM-AntorusBurningThrone: enabled
+DBM-Argus: enabled
 DBM-TombofSargeras: enabled
 CallbackHandler-1.0: enabled
 Ace3: enabled

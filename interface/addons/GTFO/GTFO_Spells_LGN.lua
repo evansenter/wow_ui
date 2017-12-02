@@ -401,6 +401,11 @@ GTFO.SpellID["234422"] = {
   sound = 2;
 };
 
+GTFO.SpellID["199349"] = {
+  --desc = "Fel Flames";
+  sound = 1;
+};
+
 -- **********
 -- * Mardum *
 -- **********
@@ -1674,6 +1679,11 @@ GTFO.SpellID["243294"] = {
   sound = 1;
 };
 
+GTFO.SpellID["240262"] = {
+  --desc = "Burning (Kil'jaeden)";
+  sound = 1;
+};
+
 
 --- *********
 --- * Argus *
@@ -1753,6 +1763,7 @@ GTFO.SpellID["249263"] = {
 GTFO.SpellID["251901"] = {
   --desc = "Molten Lava";
   sound = 1;
+  tankSound = 0;
 };
 
 GTFO.SpellID["249067"] = {
@@ -1765,7 +1776,40 @@ GTFO.SpellID["248700"] = {
   sound = 1;
 };
 
+GTFO.SpellID["247330"] = {
+  --desc = "Eye Sore";
+  sound = 1;
+};
 
+GTFO.SpellID["247372"] = {
+  --desc = "Phantasm";
+  sound = 1;
+};
+
+GTFO.SpellID["248504"] = {
+  --desc = "Fel Flames";
+  sound = 1;
+};
+
+GTFO.SpellID["253989"] = {
+  --desc = "Kicking Up Dust";
+  sound = 2;
+};
+
+GTFO.SpellID["248770"] = {
+  --desc = "Flame Fissure (Flameweaver Verathix)";
+  sound = 1;
+};
+
+GTFO.SpellID["248759"] = {
+  --desc = "Lava Waves (Flameweaver Verathix)";
+  sound = 1;
+};
+
+GTFO.SpellID["253990"] = {
+  --desc = "Beaming Gaze (Beaming Eye)";
+  sound = 1;
+};
 
 --- ***************************
 --- * Seat of the Triumvirate *
@@ -1784,5 +1828,45 @@ GTFO.SpellID["244906"] = {
 GTFO.SpellID["250820"] = {
   --desc = "Growing Pressure";
   applicationOnly = true;
+  sound = 1;
+};
+
+-- *******************************
+-- * Antorus, the Burning Throne *
+-- *******************************
+
+GTFO.SpellID["245861"] = {
+  --desc = "Searing Rend";
+  sound = 1;
+};
+
+GTFO.SpellID["244590"] = {
+  --desc = "Molten Hot Fel";
+  sound = 1;
+};
+
+GTFO.SpellID["244131"] = {
+  --desc = "Consuming Sphere (Shatug)";
+  sound = 1;
+};
+
+GTFO.SpellID["254403"] = {
+  --desc = "Consuming Sphere (Shatug)";
+  sound = 1;
+};
+
+GTFO.SpellID["253039"] = {
+  --desc = "Bladestorm (Felblade Shocktrooper)";
+  sound = 1;
+  tankSound = 2;
+};
+
+GTFO.SpellID["258021"] = {
+  --desc = "Purging Protocol (Kin'garoth)";
+  sound = 1;
+};
+
+GTFO.SpellID["246840"] = {
+  --desc = "Ruiner (Kin'garoth)";
   sound = 1;
 };

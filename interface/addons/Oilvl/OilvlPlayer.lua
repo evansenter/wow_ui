@@ -226,6 +226,7 @@ function OiLvlPlayer_Update(sw)
 						-- check item level
 						ItemLink = ItemLink:gsub("::",":0:"):gsub("::",":0:")
 						local itemID,enchant,_,_,_,_,_ = ItemLink:match("%a+:(%d+):(%d+):(%d+):(%d+):(%d+):(%d+)");
+						local _, _, quality, _, _,_,_, _, _, _, _ = GetItemInfo(ItemLink)
 						if OItemAnalysis_CheckILVLGear("player",Value) ~= 0 then
 							totalilvl[Value], xupgrade[Value] = OItemAnalysis_CheckILVLGear("player",Value)
 							xname[Value] = itemID
@@ -246,6 +247,11 @@ function OiLvlPlayer_Update(sw)
 								aun = aun + xupgrade[Value]/2
 							else
 								_G[Key.."un" ]:SetText("");
+							end
+							if cfg.oilvlcolormatchitemrarity then
+								Slot:SetTextColor(quality_color[quality][1],quality_color[quality][2],quality_color[quality][3])
+							else
+								Slot:SetTextColor(1,1,0) 
 							end
 							Slot:SetText(totalilvl[Value]);
 							Slot:SetShadowColor(1,1,1,1);
@@ -445,6 +451,12 @@ function OiLvLInspect_Update()
 		--for Key, Value in pairs(InspectItems) do
 			local Key = InspectItems[Value]
 			local ItemLink = GetInventoryItemLink(InspectFrame.unit, Value)
+
+			if ItemLink and (Value == 16 or Value == 17) and ItemLink:find("item::") then
+				ItemLink = GetInventoryItemLink(InspectFrame.unit, Value)
+			end
+
+			
 			local Slot = getglobal(Key.."Stock");
     
 			if Slot and Value ~= 4 then
@@ -542,12 +554,26 @@ function OiLvLInspect_Update()
 					-- check item level
 					ItemLink = ItemLink:gsub("::",":0:"):gsub("::",":0:")
 					local itemID,enchant,_,_,_,_,_ = ItemLink:match("%a+:(%d+):(%d+):(%d+):(%d+):(%d+):(%d+)");
+					local _, _, quality, _, _,_,_, _, _, _, _ = GetItemInfo(ItemLink)
 					if OItemAnalysis_CheckILVLGear("target",Value) ~= 0 then
 						totalilvl[Value], xupgrade[Value] = OItemAnalysis_CheckILVLGear("target",Value)
+						-- temp fix for ilvl in nether crucible
+						if Value == 16 or Value == 17 then
+							local _,itemID,enchant,gem1,gem2,gem3,gem4,suffixID,uniqueID,level,specializationID,upgradeType,instanceDifficultyID,numBonusIDs,restLink = strsplit(":",ItemLink,15)
+							local gemactive = 0
+							if (gem1 and gem1 ~= "") then gemactive = gemactive + 1 end
+							if (gem2 and gem2 ~= "") then gemactive = gemactive + 1 end
+							if (gem3 and gem3 ~= "") then gemactive = gemactive + 1 end
+							totalilvl[Value] = totalilvl[Value] + gemactive*5
+						end
+						---------------------------------------------------------------------
+						
 						xname2[Value] = itemID
 						if Value == 17 and OTCheckartifactwep(tonumber(itemID)) then
 							if totalilvl[Value] < totalilvl[16] then
 								totalilvl[Value], xupgrade[Value] = totalilvl[16], xupgrade[16]
+							else
+								Slot:SetTextColor(1,1,0) 
 							end
 							if totalilvl[Value] > totalilvl[16] then								
 								_G[InspectItems[16].."Stock"]:SetText(totalilvl[Value]);
@@ -562,6 +588,11 @@ function OiLvLInspect_Update()
 							aun = aun + xupgrade[Value]/2
 						else
 							_G[Key.."un2" ]:SetText("");
+						end
+						if cfg.oilvlcolormatchitemrarity then
+							Slot:SetTextColor(quality_color[quality][1],quality_color[quality][2],quality_color[quality][3])
+						else
+							Slot:SetTextColor(1,1,0)
 						end
 						Slot:SetText(totalilvl[Value]);
 						Slot:SetShadowColor(1,1,1,1);

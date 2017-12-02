@@ -1,7 +1,7 @@
-changeset:   112:57c6cac5143c
-tag:         v52
+changeset:   118:5cb881417bbf
+tag:         v55
 user:        yellowfive
-date:        Mon Aug 28 19:33:14 2017 -0700
-summary:     7.3 update, preparation for reading crucible.
+date:        Fri Nov 24 19:46:27 2017 -0800
+summary:     Added Antorus to auto-logging.
 
 

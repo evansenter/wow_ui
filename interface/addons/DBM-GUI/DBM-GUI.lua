@@ -43,7 +43,7 @@
 --
 
 
-local revision =("$Revision: 16725 $"):sub(12, -3)
+local revision =("$Revision: 16855 $"):sub(12, -3)
 local FrameTitle = "DBM_GUI_Option_"	-- all GUI frames get automatically a name FrameTitle..ID
 
 local PanelPrototype = {}
@@ -349,30 +349,6 @@ do
 		GameTooltip:SetPoint("BOTTOMLEFT", nil, "BOTTOMLEFT", x + 5, y + 2)
 	end
 
-	local function onHyperlinkClick(self, data, link)
-		if IsShiftKeyDown() then
-			local msg = link:gsub("|h(.*)|h", "|h[%1]|h")
-			local chatWindow = ChatEdit_GetActiveWindow()
-			if chatWindow then
-				chatWindow:Insert(msg)
-			end
-		elseif not IsShiftKeyDown() then
-			local linkType = strsplit(":", data)
-			if linkType == "http" then
-				local ChatFrameEditBox = ChatEdit_ChooseBoxForSend()
-				if (not ChatFrameEditBox:IsShown()) then
-					ChatEdit_ActivateChat(ChatFrameEditBox)
-				end
-				ChatFrameEditBox:Insert(data)
-				ChatFrameEditBox:HighlightText()
-				return
-			end
-			if cursorInHitBox(self:GetParent()) then
-				self:GetParent():Click()
-			end
-		end
-	end
-
 	local function onHyperlinkEnter(self, data, link)
 		GameTooltip:SetOwner(self, "ANCHOR_NONE") -- I want to anchor BOTTOMLEFT of the tooltip to the cursor... (not BOTTOM as in ANCHOR_CURSOR)
 		local linkType = strsplit(":", data)
@@ -533,7 +509,6 @@ do
 			html = _G[buttonName.."Text"]
 			html:SetFontObject("GameFontNormal")
 			html:SetHyperlinksEnabled(true)
-			html:SetScript("OnHyperlinkClick", onHyperlinkClick)
 			html:SetScript("OnHyperlinkEnter", onHyperlinkEnter)
 			html:SetScript("OnHyperlinkLeave", onHyperlinkLeave)
 			html:SetHeight(25)
@@ -673,7 +648,6 @@ function PanelPrototype:CreateScrollingMessageFrame(width, height, insertmode, f
 	scrollframe:EnableMouse(true)
 	scrollframe:EnableMouseWheel(1)
 
-	scrollframe:SetScript("OnHyperlinkClick", ChatFrame_OnHyperlinkShow)
 	scrollframe:SetScript("OnMouseWheel", function(self, delta)
 		if delta == 1 then
 			self:ScrollUp()
@@ -1521,17 +1495,17 @@ local function CreateOptionsMenu()
 		end
 
 		-- RaidWarn Duration
-		local durationSlider = raidwarnoptions:CreateSlider(L.Warn_Duration, 1, 20, 1, 200)
+		local durationSlider = raidwarnoptions:CreateSlider(L.Warn_Duration, 1, 10, 0.5, 200)
 		durationSlider:SetPoint('TOPLEFT', FontDropDown, "TOPLEFT", 20, -170)
 		do
 			local firstshow = true
 			durationSlider:SetScript("OnShow", function(self)
 				firstshow = true
-				self:SetValue(DBM.Options.WarningDuration)
+				self:SetValue(DBM.Options.WarningDuration2)
 			end)
 			durationSlider:HookScript("OnValueChanged", function(self)
 				if firstshow then firstshow = false return end
-				DBM.Options.WarningDuration = self:GetValue()
+				DBM.Options.WarningDuration2 = self:GetValue()
 				DBM:UpdateWarningOptions()
 				DBM:AddWarning(DBM_CORE_MOVE_WARNING_MESSAGE)
 			end)
@@ -2517,23 +2491,23 @@ local function CreateOptionsMenu()
 				if firstshow then firstshow = false return end
 				DBM.Options.SpecialWarningFontSize2 = self:GetValue()
 				DBM:UpdateSpecialWarningOptions()
-				DBM:ShowTestSpecialWarning()--Pass with no sound, disabling both flash and sound play. This is a font slider so it only needs font
+				--DBM:ShowTestSpecialWarning()--Pass with no sound, disabling both flash and sound play. This is a font slider so it only needs font
 			end)
 		end
 
-		local durationSlider = specArea:CreateSlider(L.Warn_Duration, 1, 20, 1, 150)
+		local durationSlider = specArea:CreateSlider(L.Warn_Duration, 1, 10, 0.5, 150)
 		durationSlider:SetPoint("LEFT", fontSizeSlider, "RIGHT", 20, 0)
 		do
 			local firstshow = true
 			durationSlider:SetScript("OnShow", function(self)
 				firstshow = true
-				self:SetValue(DBM.Options.SpecialWarningDuration)
+				self:SetValue(DBM.Options.SpecialWarningDuration2)
 			end)
 			durationSlider:HookScript("OnValueChanged", function(self)
 				if firstshow then firstshow = false return end
-				DBM.Options.SpecialWarningDuration = self:GetValue()
+				DBM.Options.SpecialWarningDuration2 = self:GetValue()
 				DBM:UpdateSpecialWarningOptions()
-				DBM:ShowTestSpecialWarning()--Pass with no sound, disabling both flash and sound play. This is a duration slider so it only needs font
+				--DBM:ShowTestSpecialWarning()--Pass with no sound, disabling both flash and sound play. This is a duration slider so it only needs font
 			end)
 		end
 
@@ -2692,7 +2666,7 @@ local function CreateOptionsMenu()
 			end)
 		end
 
-		-- SpecialWarn Sound
+		-- SpecialWarn Sound Interface\\AddOns\\DBM-Core\\sounds\\ClassicSupport\\incredible.ogg
 		local Sounds = MixinSharedMedia3("sound", {
 			{	text	= L.NoSound,			value	= "" },
 			{	text	= "Default",			value 	= "Sound\\Spells\\PVPFlagTaken.ogg", 		sound=true },
@@ -2724,7 +2698,7 @@ local function CreateOptionsMenu()
 				if firstshow then firstshow = false return end
 				DBM.Options.SpecialWarningFlashDura1 = self:GetValue()
 				--DBM:UpdateSpecialWarningOptions()
-				DBM:ShowTestSpecialWarning(nil, 1, true)--Pass with flash but no sound
+				--DBM:ShowTestSpecialWarning(nil, 1, true)--Pass with flash but no sound
 			end)
 		end
 
@@ -2740,7 +2714,7 @@ local function CreateOptionsMenu()
 				if firstshow then firstshow = false return end
 				DBM.Options.SpecialWarningFlashAlph1 = self:GetValue()
 				--DBM:UpdateSpecialWarningOptions()
-				DBM:ShowTestSpecialWarning(nil, 1, true)--Pass with flash but no sound
+				--DBM:ShowTestSpecialWarning(nil, 1, true)--Pass with flash but no sound
 			end)
 		end
 
@@ -2763,7 +2737,7 @@ local function CreateOptionsMenu()
 				if firstshow then firstshow = false return end
 				DBM.Options.SpecialWarningFlashDura2 = self:GetValue()
 				--DBM:UpdateSpecialWarningOptions()
-				DBM:ShowTestSpecialWarning(nil, 2, true)--Pass with flash but no sound
+				--DBM:ShowTestSpecialWarning(nil, 2, true)--Pass with flash but no sound
 			end)
 		end
 
@@ -2779,7 +2753,7 @@ local function CreateOptionsMenu()
 				if firstshow then firstshow = false return end
 				DBM.Options.SpecialWarningFlashAlph2 = self:GetValue()
 				--DBM:UpdateSpecialWarningOptions()
-				DBM:ShowTestSpecialWarning(nil, 2, true)--Pass with flash but no sound
+				--DBM:ShowTestSpecialWarning(nil, 2, true)--Pass with flash but no sound
 			end)
 		end
 
@@ -2802,7 +2776,7 @@ local function CreateOptionsMenu()
 				if firstshow then firstshow = false return end
 				DBM.Options.SpecialWarningFlashDura3 = self:GetValue()
 				--DBM:UpdateSpecialWarningOptions()
-				DBM:ShowTestSpecialWarning(nil, 3, true)--Pass with flash but no sound
+				--DBM:ShowTestSpecialWarning(nil, 3, true)--Pass with flash but no sound
 			end)
 		end
 
@@ -2818,7 +2792,7 @@ local function CreateOptionsMenu()
 				if firstshow then firstshow = false return end
 				DBM.Options.SpecialWarningFlashAlph3 = self:GetValue()
 				--DBM:UpdateSpecialWarningOptions()
-				DBM:ShowTestSpecialWarning(nil, 3, true)--Pass with flash but no sound
+				--DBM:ShowTestSpecialWarning(nil, 3, true)--Pass with flash but no sound
 			end)
 		end
 
@@ -2841,7 +2815,7 @@ local function CreateOptionsMenu()
 				if firstshow then firstshow = false return end
 				DBM.Options.SpecialWarningFlashDura4 = self:GetValue()
 				--DBM:UpdateSpecialWarningOptions()
-				DBM:ShowTestSpecialWarning(nil, 4, true)--Pass with flash but no sound
+				--DBM:ShowTestSpecialWarning(nil, 4, true)--Pass with flash but no sound
 			end)
 		end
 
@@ -2857,7 +2831,7 @@ local function CreateOptionsMenu()
 				if firstshow then firstshow = false return end
 				DBM.Options.SpecialWarningFlashAlph4 = self:GetValue()
 				--DBM:UpdateSpecialWarningOptions()
-				DBM:ShowTestSpecialWarning(nil, 4, true)--Pass with flash but no sound
+				--DBM:ShowTestSpecialWarning(nil, 4, true)--Pass with flash but no sound
 			end)
 		end
 		
@@ -2880,7 +2854,7 @@ local function CreateOptionsMenu()
 				if firstshow then firstshow = false return end
 				DBM.Options.SpecialWarningFlashDura5 = self:GetValue()
 				--DBM:UpdateSpecialWarningOptions()
-				DBM:ShowTestSpecialWarning(nil, 5, true)--Pass with flash but no sound
+				--DBM:ShowTestSpecialWarning(nil, 5, true)--Pass with flash but no sound
 			end)
 		end
 
@@ -2896,7 +2870,7 @@ local function CreateOptionsMenu()
 				if firstshow then firstshow = false return end
 				DBM.Options.SpecialWarningFlashAlph5 = self:GetValue()
 				--DBM:UpdateSpecialWarningOptions()
-				DBM:ShowTestSpecialWarning(nil, 5, true)--Pass with flash but no sound
+				--DBM:ShowTestSpecialWarning(nil, 5, true)--Pass with flash but no sound
 			end)
 		end
 
@@ -3419,7 +3393,6 @@ local function CreateOptionsMenu()
 		local spamArea = spamPanel:CreateArea(L.Area_SpamFilter, nil, 170, true)
 		spamArea:CreateCheckButton(L.DontShowFarWarnings, true, nil, "DontShowFarWarnings")
 		spamArea:CreateCheckButton(L.StripServerName, true, nil, "StripServerName")
-		spamArea:CreateCheckButton(L.SpamBlockBossWhispers, true, nil, "SpamBlockBossWhispers")
 
 		local spamSpecArea = spamPanel:CreateArea(L.Area_SpecFilter, nil, 120, true)
 		spamSpecArea:CreateCheckButton(L.FilterTankSpec, true, nil, "FilterTankSpec")
@@ -3450,15 +3423,14 @@ local function CreateOptionsMenu()
 
 	do
 		local hideBlizzPanel = DBM_GUI_Frame:CreateNewPanel(L.Panel_HideBlizzard, "option")
-		local hideBlizzArea = hideBlizzPanel:CreateArea(L.Area_HideBlizzard, nil, 315, true)
-		hideBlizzArea:CreateCheckButton(L.HideBossEmoteFrame, true, nil, "HideBossEmoteFrame")
+		local hideBlizzArea = hideBlizzPanel:CreateArea(L.Area_HideBlizzard, nil, 295, true)
+		hideBlizzArea:CreateCheckButton(L.HideBossEmoteFrame, true, nil, "HideBossEmoteFrame2")
 		hideBlizzArea:CreateCheckButton(L.HideWatchFrame, true, nil, "HideObjectivesFrame")
 		hideBlizzArea:CreateCheckButton(L.HideGarrisonUpdates, true, nil, "HideGarrisonToasts")
 		hideBlizzArea:CreateCheckButton(L.HideGuildChallengeUpdates, true, nil, "HideGuildChallengeUpdates")
 		hideBlizzArea:CreateCheckButton(L.HideQuestTooltips, true, nil, "HideQuestTooltips")
 		hideBlizzArea:CreateCheckButton(L.HideTooltips, true, nil, "HideTooltips")
-		hideBlizzArea:CreateCheckButton(L.DisableSFX, true, nil, "DisableSFX")
-		local filterYell	= hideBlizzArea:CreateCheckButton(L.SpamBlockSayYell, true, nil, "FilterSayAndYell")
+		local DisableSFX	= hideBlizzArea:CreateCheckButton(L.DisableSFX, true, nil, "DisableSFX")
 
 		local movieOptions = {
 			{	text	= L.Disable,	value 	= "Never"},
@@ -3468,7 +3440,7 @@ local function CreateOptionsMenu()
 		local blockMovieDropDown = hideBlizzArea:CreateDropdown(L.DisableCinematics, movieOptions, "DBM", "MovieFilter", function(value)
 			DBM.Options.MovieFilter = value
 		end)
-		blockMovieDropDown:SetPoint("TOPLEFT", filterYell, "TOPLEFT", 0, -40)
+		blockMovieDropDown:SetPoint("TOPLEFT", DisableSFX, "TOPLEFT", 0, -40)
 
 		--hideBlizzArea:AutoSetDimension()
 		hideBlizzPanel:SetMyOwnHeight()
@@ -3837,16 +3809,16 @@ do
 				else
 					top3value3:SetText( stats.challengeBestTime and ("%d:%02d"):format(mfloor(stats.challengeBestTime / 60), stats.challengeBestTime % 60) or "-")
 				end
-			else--Legacy 10/25 raids with heroic difficulty
+			else--Legacy 10/25 raids
 				top1value1:SetText( stats.normalKills )
 				top1value2:SetText( stats.normalPulls - stats.normalKills )
 				top1value3:SetText( stats.normalBestTime and ("%d:%02d"):format(mfloor(stats.normalBestTime / 60), stats.normalBestTime % 60) or "-" )
 				top2value1:SetText( stats.normal25Kills )
 				top2value2:SetText( stats.normal25Pulls - stats.normal25Kills )
 				top2value3:SetText( stats.normal25BestTime and ("%d:%02d"):format(mfloor(stats.normal25BestTime / 60), stats.normal25BestTime % 60) or "-" )
-				top3value1:SetText( stats.lfr25Kills )
-				top3value2:SetText( stats.lfr25Pulls-stats.lfr25Kills )
-				top3value3:SetText( stats.lfr25BestTime and ("%d:%02d"):format(mfloor(stats.lfr25BestTime / 60), stats.lfr25BestTime % 60) or "-" )
+				top3value1:SetText( stats.timewalkerKills )
+				top3value2:SetText( stats.timewalkerPulls-stats.timewalkerKills )
+				top3value3:SetText( stats.timewalkerBestTime and ("%d:%02d"):format(mfloor(stats.timewalkerBestTime / 60), stats.timewalkerBestTime % 60) or "-" )
 				bottom1value1:SetText( stats.heroicKills )
 				bottom1value2:SetText( stats.heroicPulls-stats.heroicKills )
 				bottom1value3:SetText( stats.heroicBestTime and ("%d:%02d"):format(mfloor(stats.heroicBestTime / 60), stats.heroicBestTime % 60) or "-" )
@@ -4514,31 +4486,62 @@ do
 						singleline = singleline + 1
 					end
 				elseif mod.addon.type == "RAID" and mod.addon.noHeroic and not mod.addon.hasMythic then--Early wrath
-					Title:SetPoint("TOPLEFT", area.frame, "TOPLEFT", 10, -10-(L.FontHeight*6*singleline))
-					--Use top1 and top2 area.
-					top1header:SetPoint("TOPLEFT", Title, "BOTTOMLEFT", 20, -5)
-					top1text1:SetPoint("TOPLEFT", top1header, "BOTTOMLEFT", 20, -5)
-					top1text2:SetPoint("TOPLEFT", top1text1, "BOTTOMLEFT", 0, -5)
-					top1text3:SetPoint("TOPLEFT", top1text2, "BOTTOMLEFT", 0, -5)
-					top1value1:SetPoint("TOPLEFT", top1text1, "TOPLEFT", 80, 0)
-					top1value2:SetPoint("TOPLEFT", top1text2, "TOPLEFT", 80, 0)
-					top1value3:SetPoint("TOPLEFT", top1text3, "TOPLEFT", 80, 0)
-					top2header:SetPoint("LEFT", top1header, "LEFT", 220, 0)
-					top2text1:SetPoint("LEFT", top1text1, "LEFT", 220, 0)
-					top2text2:SetPoint("LEFT", top1text2, "LEFT", 220, 0)
-					top2text3:SetPoint("LEFT", top1text3, "LEFT", 220, 0)
-					top2value1:SetPoint("TOPLEFT", top2text1, "TOPLEFT", 80, 0)
-					top2value2:SetPoint("TOPLEFT", top2text2, "TOPLEFT", 80, 0)
-					top2value3:SetPoint("TOPLEFT", top2text3, "TOPLEFT", 80, 0)
-					--Set header text.
-					top1header:SetText(RAID_DIFFICULTY1)
-					top2header:SetText(RAID_DIFFICULTY2)
+					if mod.addon.hasTimeWalker then--Timewalking wrath raid like Ulduar
+						--Use top1 and top2 and top 3 area.
+						--10 Player, 25 Player, TimeWalker
+						top1header:SetPoint("TOPLEFT", Title, "BOTTOMLEFT", 20, -5)
+						top1text1:SetPoint("TOPLEFT", top1header, "BOTTOMLEFT", 20, -5)
+						top1text2:SetPoint("TOPLEFT", top1text1, "BOTTOMLEFT", 0, -5)
+						top1text3:SetPoint("TOPLEFT", top1text2, "BOTTOMLEFT", 0, -5)
+						top1value1:SetPoint("TOPLEFT", top1text1, "TOPLEFT", 80, 0)
+						top1value2:SetPoint("TOPLEFT", top1text2, "TOPLEFT", 80, 0)
+						top1value3:SetPoint("TOPLEFT", top1text3, "TOPLEFT", 80, 0)
+						top2header:SetPoint("LEFT", top1header, "LEFT", 150, 0)
+						top2text1:SetPoint("LEFT", top1text1, "LEFT", 150, 0)
+						top2text2:SetPoint("LEFT", top1text2, "LEFT", 150, 0)
+						top2text3:SetPoint("LEFT", top1text3, "LEFT", 150, 0)
+						top2value1:SetPoint("TOPLEFT", top2text1, "TOPLEFT", 80, 0)
+						top2value2:SetPoint("TOPLEFT", top2text2, "TOPLEFT", 80, 0)
+						top2value3:SetPoint("TOPLEFT", top2text3, "TOPLEFT", 80, 0)
+						top3header:SetPoint("LEFT", top2header, "LEFT", 150, 0)
+						top3text1:SetPoint("LEFT", top2text1, "LEFT", 150, 0)
+						top3text2:SetPoint("LEFT", top2text2, "LEFT", 150, 0)
+						top3text3:SetPoint("LEFT", top2text3, "LEFT", 150, 0)
+						top3value1:SetPoint("TOPLEFT", top3text1, "TOPLEFT", 80, 0)
+						top3value2:SetPoint("TOPLEFT", top3text2, "TOPLEFT", 80, 0)
+						top3value3:SetPoint("TOPLEFT", top3text3, "TOPLEFT", 80, 0)
+						--Set header text.
+						top1header:SetText(RAID_DIFFICULTY1)
+						top2header:SetText(RAID_DIFFICULTY2)
+						top3header:SetText(PLAYER_DIFFICULTY_TIMEWALKER)
+					else
+						--Use top1 and top2 area.
+						--10 Player, 25 Player
+						top1header:SetPoint("TOPLEFT", Title, "BOTTOMLEFT", 20, -5)
+						top1text1:SetPoint("TOPLEFT", top1header, "BOTTOMLEFT", 20, -5)
+						top1text2:SetPoint("TOPLEFT", top1text1, "BOTTOMLEFT", 0, -5)
+						top1text3:SetPoint("TOPLEFT", top1text2, "BOTTOMLEFT", 0, -5)
+						top1value1:SetPoint("TOPLEFT", top1text1, "TOPLEFT", 80, 0)
+						top1value2:SetPoint("TOPLEFT", top1text2, "TOPLEFT", 80, 0)
+						top1value3:SetPoint("TOPLEFT", top1text3, "TOPLEFT", 80, 0)
+						top2header:SetPoint("LEFT", top1header, "LEFT", 220, 0)
+						top2text1:SetPoint("LEFT", top1text1, "LEFT", 220, 0)
+						top2text2:SetPoint("LEFT", top1text2, "LEFT", 220, 0)
+						top2text3:SetPoint("LEFT", top1text3, "LEFT", 220, 0)
+						top2value1:SetPoint("TOPLEFT", top2text1, "TOPLEFT", 80, 0)
+						top2value2:SetPoint("TOPLEFT", top2text2, "TOPLEFT", 80, 0)
+						top2value3:SetPoint("TOPLEFT", top2text3, "TOPLEFT", 80, 0)
+						--Set header text.
+						top1header:SetText(RAID_DIFFICULTY1)
+						top2header:SetText(RAID_DIFFICULTY2)
+					end
 					--Set Dims
+					Title:SetPoint("TOPLEFT", area.frame, "TOPLEFT", 10, -10-(L.FontHeight*6*singleline))
 					area.frame:SetHeight( area.frame:GetHeight() + L.FontHeight*6 )
 					singleline = singleline + 1
-				elseif mod.addon.type == "RAID" and not mod.addon.hasLFR and not mod.addon.hasMythic then--Cata(except DS) and some wrath raids
+				elseif mod.addon.type == "RAID" and not mod.addon.hasLFR and not mod.addon.hasMythic then--Cata(except DS) and some wrath raids (ICC, ToGC)
 					Title:SetPoint("TOPLEFT", area.frame, "TOPLEFT", 10, -10-(L.FontHeight*6*singleline)-(L.FontHeight*10*doubleline))
-					if mod.onlyHeroic then
+					if mod.onlyHeroic then--Sinestra
 						--Use top1, top2 area
 						bottom1header:SetPoint("TOPLEFT", Title, "BOTTOMLEFT", 20, -5)
 						bottom1text1:SetPoint("TOPLEFT", bottom1header, "BOTTOMLEFT", 20, -5)
@@ -4562,8 +4565,9 @@ do
 						--Set Dims
 						area.frame:SetHeight( area.frame:GetHeight() + L.FontHeight*6 )
 						singleline = singleline + 1
-					elseif mod.onlyNormal then
+					elseif mod.onlyNormal then--Used?
 						--Use top1, top2 area
+						--10 Player, 25 Player
 						top1header:SetPoint("TOPLEFT", Title, "BOTTOMLEFT", 20, -5)
 						top1text1:SetPoint("TOPLEFT", top1header, "BOTTOMLEFT", 20, -5)
 						top1text2:SetPoint("TOPLEFT", top1text1, "BOTTOMLEFT", 0, -5)
@@ -4586,6 +4590,7 @@ do
 						singleline = singleline + 1
 					else
 						--Use top1, top2, bottom1 and bottom2 area.
+						--10 Player, 25 Player, 10 Player Heroic, 25 Player Heroic
 						top1header:SetPoint("TOPLEFT", Title, "BOTTOMLEFT", 20, -5)
 						top1text1:SetPoint("TOPLEFT", top1header, "BOTTOMLEFT", 20, -5)
 						top1text2:SetPoint("TOPLEFT", top1text1, "BOTTOMLEFT", 0, -5)

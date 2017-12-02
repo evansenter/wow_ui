@@ -95,7 +95,7 @@ L.Warn_FontType				= "Escolha fonte"
 L.Warn_FontStyle			= "Bandeira de fonte (flags)"
 L.Warn_FontShadow			= "Sombra da fonte"
 L.Warn_FontSize				= "Tamanho da fonte: %d"
-L.Warn_Duration				= "duração do aviso: %d seg"
+L.Warn_Duration				= "duração do aviso: %0.1f seg"
 L.None						= "nada"
 L.Outline					= "Contorno"
 L.ThickOutline				= "Espessura do contorno"
@@ -225,7 +225,6 @@ L.Panel_SpamFilter			= "Filtros Global e de Spam"
 L.Area_SpamFilter			= "Opções do filtro Global"
 L.DontShowFarWarnings		= "Não exibir anúncios/temporizadores para eventos que estão longe"
 L.StripServerName			= "Tira com nome do reino em avisos e temporizadores"
-L.SpamBlockBossWhispers		= "Filtra &lt;DBM&gt; avisos de sussurro enquanto estiver lutando"
 L.BlockVersionUpdateNotice	= "Desabilitar popup de notificação de atualização (Não recomendado)"
 
 
@@ -253,7 +252,6 @@ L.HideGuildChallengeUpdates	= "Esconde o quadro de desafio de guilda durante a l
 L.HideTooltips				= "Esconder as dicas durante as lutas contra os chefes"
 
 L.DisableSFX				= "Desativa o canal de efeitos sonoros durante lutas contra chefes"
-L.SpamBlockSayYell			= "Esconder os anúncios de balões de chat do quadro de chat"
 L.DisableCinematics			= "Esconder as cinematics in-game"
 L.AfterFirst				= "Depois que o vídeo for assistido uma vez"
 

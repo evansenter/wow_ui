@@ -88,7 +88,8 @@ L.InstanceNames = {
 	[1520] = "Emerald Nightmare",
 	[1530] = "Nighthold",
 	[1648] = "Trial of Valor",
-	[1676] = "Tomb of Sargeras"
+	[1676] = "Tomb of Sargeras",
+	[1712] = "Antorus"
 }
 
 L.DifficultyNames = {

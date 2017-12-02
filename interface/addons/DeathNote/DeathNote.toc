@@ -2,7 +2,7 @@
 ## Title: DeathNote
 ## Notes: Death analysis tool
 ## Author: Slaren
-## Version: r94
+## Version: r95
 ## OptionalDeps: LibStub, CallbackHandler-1.0, Ace3
 ## SavedVariables: DeathNoteDB
 ## SavedVariablesPerCharacter: DeathNoteData
