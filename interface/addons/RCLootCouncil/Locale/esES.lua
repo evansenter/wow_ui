@@ -48,6 +48,8 @@ L["alt_click_looting_desc"] = "Activar el clic de ALT para repartir el loot, es 
 L["Alternatively, flag the loot as award later."] = "Alternativamente, marcar el loot para premiar más tarde."
 L["Always use RCLootCouncil when I'm Master Looter"] = "Utilizar siempre RCLootCouncil cuando soy el Maestro Despojador"
 L["Always use when leader"] = "Utilizar siempre cuando sea el lider"
+--Translation missing 
+-- L["always_show_tooltip_howto"] = ""
 L["Announce Awards"] = "Anunciar premios"
 L["Announce Considerations"] = "Anunciar consideraciones"
 --Translation missing 
@@ -94,6 +96,8 @@ L["Auto Enable"] = "Habilitar automaticamente"
 L["Auto Open"] = "Abrir automaticamente"
 L["Auto Pass"] = "Auto pasar"
 L["Auto pass BoE"] = "Auto entregar BoE"
+--Translation missing 
+-- L["Auto Pass Trinkets"] = ""
 L["Auto Start"] = "Inicio automatico"
 L["auto_award_desc"] = "Activa Recompensa Automatica."
 L["auto_award_to_desc"] = "El jugador a recompensar automaticamente. Una lista seleccionable de miembros de la raid aparece si se está en un grupo de raid."
@@ -103,6 +107,8 @@ L["auto_loot_desc"] = "Permite autorepartir  todos los articulos que se ligan al
 L["auto_open_desc"] = "Compruebe en abre automaticamente el marco de la votacion cuando este disponible. El marco de la votacion de lo contrario se puede abrir con /rc open. Nota: Esto requiere el permiso del maestro despojador."
 L["auto_pass_boe_desc"] = "Desmarcar No Permite autorepartir los articulos que se ligan al equipar"
 L["auto_pass_desc"] = "Marque para activar autopasar de articulos que su clase no puede usar."
+--Translation missing 
+-- L["auto_pass_trinket_desc"] = ""
 L["auto_start_desc"] = "Permite el Auto iniciar, es decir, iniciar una sesion con todos los articulos elegibles. La desactivacion mostrara una lista de elementos editable antes de iniciar una sesion."
 --Translation missing 
 -- L["Autoloot all BoE"] = ""
@@ -355,6 +361,8 @@ L["No winners registered"] = "No hay ganadores registrados"
 L["Not announced"] = "No anunciado"
 L["Not cached, please reopen."] = "Nada en cache,por favor vuelva a abrir."
 L["Not Found"] = "No encontrado"
+--Translation missing 
+-- L["Not in your guild"] = ""
 L["Not installed"] = "No instalado"
 L["Notes"] = "Notas"
 L["notes_desc"] = "Posibilita a los candidatos enviar una nota al consejo junto con su tirada."
@@ -418,6 +426,8 @@ L["RCLootCouncil Voting Frame"] = "Ventara de votacion RCLootCouncil"
 --Translation missing 
 -- L["rclootcouncil_trade_add_item_confirm"] = ""
 L["Reannounce ..."] = "Volver anunciar"
+--Translation missing 
+-- L["Reannounced 'item' to 'target'"] = ""
 L["Reason"] = "Motivo"
 L["reason_desc"] = "El motivo de la recompensa a añadir al Historial de Saqueo al repartir automaticamente."
 --Translation missing 
@@ -427,6 +437,8 @@ L["reason_desc"] = "El motivo de la recompensa a añadir al Historial de Saqueo 
 L["Remove All"] = "Eliminar todo"
 L["Remove from consideration"] = "Eliminar consideracion"
 L["remove_all_desc"] = "Eliminar todos los miembros del consejo"
+--Translation missing 
+-- L["Requested rolls for 'item' from 'target'"] = ""
 L["Reset Skin"] = "Reiniciar apariencia"
 L["Reset skins"] = "Reiniciar apariencia"
 L["reset_announce_to_default_desc"] = "Restablecer todas las opciones de aviso por defecto"

@@ -227,8 +227,8 @@ function OiLvlPlayer_Update(sw)
 						ItemLink = ItemLink:gsub("::",":0:"):gsub("::",":0:")
 						local itemID,enchant,_,_,_,_,_ = ItemLink:match("%a+:(%d+):(%d+):(%d+):(%d+):(%d+):(%d+)");
 						local _, _, quality, _, _,_,_, _, _, _, _ = GetItemInfo(ItemLink)
-						if OItemAnalysis_CheckILVLGear("player",Value) ~= 0 then
-							totalilvl[Value], xupgrade[Value] = OItemAnalysis_CheckILVLGear("player",Value)
+						if OItemAnalysis_CheckILVLGear4("player",Value) ~= 0 then
+							totalilvl[Value], xupgrade[Value] = OItemAnalysis_CheckILVLGear4("player",Value)
 							xname[Value] = itemID
 							if Value == 17 and OTCheckartifactwep(tonumber(itemID)) then
 								if totalilvl[Value] and totalilvl[16] and totalilvl[Value] < totalilvl[16] then
@@ -271,7 +271,7 @@ function OiLvlPlayer_Update(sw)
 								end
 							end
 							-- check low enchant
-							if (Value == 2 or Value == 15 or Value == 11 or Value == 12) and enchant ~= "0" and oicb8 and oicb8:GetChecked() then
+							if (Value == 2 or Value == 15 or Value == 11 or Value == 12) and enchant ~= "0" and oilvlbestenchant and oilvlbestenchant:GetChecked() then
 								local function CheckLowEnchant(eID)
 									for mm = 1, #enchantID do 
 										if tonumber(eID) == enchantID[mm] then return false end 
@@ -287,7 +287,7 @@ function OiLvlPlayer_Update(sw)
 								_G[Key.."ge"]:SetText(("|TInterface\\MINIMAP\\TRACKING\\OBJECTICONS:0:0:0:0:256:64:43:53:34:61|t" or "")..L["Not enchanted"]);
 							end
 							-- check no gem
-							if OItemAnalysis_CountEmptySockets("player", Value) > 0 and _G[Key.."ge"] then
+							if OItemAnalysis_CountEmptySockets2("player", Value) > 0 and _G[Key.."ge"] then
 								_G[Key.."ge"]:SetText((_G[Key.."ge"]:GetText() or "").."\n"..("|TInterface\\MINIMAP\\TRACKING\\OBJECTICONS:0:0:0:0:256:64:107:117:34:61|t" or "")..L["Not socketed"]);
 							end
 							-- check gem
@@ -304,7 +304,7 @@ function OiLvlPlayer_Update(sw)
 								end
 							end
 							-- check low gem
-							if gemlink and OItemAnalysisLowGem("player", Value) > 0 and _G[Key.."ge"]:GetText() and oicb8 and oicb8:GetChecked() then
+							if gemlink and OItemAnalysisLowGem("player", Value) > 0 and _G[Key.."ge"]:GetText() and oilvlbestenchant and oilvlbestenchant:GetChecked() then
 								_G[Key.."ge"]:SetText((_G[Key.."ge"]:GetText() or "")..("(|TInterface\\MINIMAP\\TRACKING\\OBJECTICONS:0:0:0:0:256:64:107:117:34:61|t" or "")..L["Low level socketed"]..")");
 							end							
 							-- check relic
@@ -555,8 +555,8 @@ function OiLvLInspect_Update()
 					ItemLink = ItemLink:gsub("::",":0:"):gsub("::",":0:")
 					local itemID,enchant,_,_,_,_,_ = ItemLink:match("%a+:(%d+):(%d+):(%d+):(%d+):(%d+):(%d+)");
 					local _, _, quality, _, _,_,_, _, _, _, _ = GetItemInfo(ItemLink)
-					if OItemAnalysis_CheckILVLGear("target",Value) ~= 0 then
-						totalilvl[Value], xupgrade[Value] = OItemAnalysis_CheckILVLGear("target",Value)
+					if OItemAnalysis_CheckILVLGear4("target",Value) ~= 0 then
+						totalilvl[Value], xupgrade[Value] = OItemAnalysis_CheckILVLGear4("target",Value)
 						-- temp fix for ilvl in nether crucible
 						if Value == 16 or Value == 17 then
 							local _,itemID,enchant,gem1,gem2,gem3,gem4,suffixID,uniqueID,level,specializationID,upgradeType,instanceDifficultyID,numBonusIDs,restLink = strsplit(":",ItemLink,15)
@@ -610,7 +610,7 @@ function OiLvLInspect_Update()
 							end
 						end
 						-- check low enchant
-						if (Value == 2 or Value == 15 or Value == 11 or Value == 12) and enchant ~= "0" and oicb8 and oicb8:GetChecked() then
+						if (Value == 2 or Value == 15 or Value == 11 or Value == 12) and enchant ~= "0" and oilvlbestenchant and oilvlbestenchant:GetChecked() then
 							local function CheckLowEnchant(eID)
 								for mm = 1, #enchantID do 
 									if tonumber(eID) == enchantID[mm] then return false end 
@@ -626,7 +626,7 @@ function OiLvLInspect_Update()
 							_G[Key.."ge2"]:SetText(("|TInterface\\MINIMAP\\TRACKING\\OBJECTICONS:0:0:0:0:256:64:43:53:34:61|t" or "")..L["Not enchanted"]);
 						end
 						-- check no gem
-						if OItemAnalysis_CountEmptySockets("target",Value) > 0 and _G[Key.."ge2"] then
+						if OItemAnalysis_CountEmptySockets2("target",Value) > 0 and _G[Key.."ge2"] then
 							_G[Key.."ge2"]:SetText((_G[Key.."ge2"]:GetText() or "").."\n"..("|TInterface\\MINIMAP\\TRACKING\\OBJECTICONS:0:0:0:0:256:64:107:117:34:61|t" or "")..L["Not socketed"]);
 						end
 						-- check gem
@@ -643,7 +643,7 @@ function OiLvLInspect_Update()
 							end
 						end
 						-- check low gem
-						if gemlink and OItemAnalysisLowGem("target",Value) > 0 and _G[Key.."ge2"]:GetText() and oicb8 and oicb8:GetChecked() then
+						if gemlink and OItemAnalysisLowGem("target",Value) > 0 and _G[Key.."ge2"]:GetText() and oilvlbestenchant and oilvlbestenchant:GetChecked() then
 							_G[Key.."ge2"]:SetText((_G[Key.."ge2"]:GetText() or "")..("(|TInterface\\MINIMAP\\TRACKING\\OBJECTICONS:0:0:0:0:256:64:107:117:34:61|t" or "")..L["Low level socketed"]..")");
 						end	
 						-- check relic

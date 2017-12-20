@@ -1283,3 +1283,14 @@ Change Log:
 
 4.43.9
 * Added Legion spells for Antorus, The Burning Throne
+
+4.44
+* Added Legion spells for Antorus, The Burning Throne
+
+4.44.1
+* Added Legion spells for The Broken Isles (world)
+* Added Legion spells for Antorus, The Burning Throne
+
+4.44.2
+* Added Legion spells for Antorus, The Burning Throne
+

@@ -69,6 +69,8 @@ if not L then return end
 --Translation missing 
 -- L["Always use when leader"] = ""
 --Translation missing 
+-- L["always_show_tooltip_howto"] = ""
+--Translation missing 
 -- L["Announce Awards"] = ""
 --Translation missing 
 -- L["Announce Considerations"] = ""
@@ -137,6 +139,8 @@ if not L then return end
 --Translation missing 
 -- L["Auto pass BoE"] = ""
 --Translation missing 
+-- L["Auto Pass Trinkets"] = ""
+--Translation missing 
 -- L["Auto Start"] = ""
 --Translation missing 
 -- L["auto_award_desc"] = ""
@@ -154,6 +158,8 @@ if not L then return end
 -- L["auto_pass_boe_desc"] = ""
 --Translation missing 
 -- L["auto_pass_desc"] = ""
+--Translation missing 
+-- L["auto_pass_trinket_desc"] = ""
 --Translation missing 
 -- L["auto_start_desc"] = ""
 --Translation missing 
@@ -523,6 +529,8 @@ if not L then return end
 --Translation missing 
 -- L["Not Found"] = ""
 --Translation missing 
+-- L["Not in your guild"] = ""
+--Translation missing 
 -- L["Not installed"] = ""
 --Translation missing 
 -- L["Notes"] = ""
@@ -613,6 +621,8 @@ if not L then return end
 --Translation missing 
 -- L["Reannounce ..."] = ""
 --Translation missing 
+-- L["Reannounced 'item' to 'target'"] = ""
+--Translation missing 
 -- L["Reason"] = ""
 --Translation missing 
 -- L["reason_desc"] = ""
@@ -626,6 +636,8 @@ if not L then return end
 -- L["Remove from consideration"] = ""
 --Translation missing 
 -- L["remove_all_desc"] = ""
+--Translation missing 
+-- L["Requested rolls for 'item' from 'target'"] = ""
 --Translation missing 
 -- L["Reset Skin"] = ""
 --Translation missing 

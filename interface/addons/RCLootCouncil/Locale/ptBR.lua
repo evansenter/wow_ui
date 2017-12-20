@@ -48,6 +48,8 @@ L["All items has been awarded and  the loot session concluded"] = "Todos os iten
 -- L["Alternatively, flag the loot as award later."] = ""
 L["Always use RCLootCouncil when I'm Master Looter"] = "Sempre usar RCLootCouncil quando eu for o Mestre do Saque"
 L["Always use when leader"] = "Sempre usar quando eu liderar"
+--Translation missing 
+-- L["always_show_tooltip_howto"] = ""
 L["Announce Awards"] = "Anunciar Recompensas"
 L["Announce Considerations"] = "Anunciar Considerações"
 --Translation missing 
@@ -97,6 +99,8 @@ L["Auto extracted from whisper"] = "Extraído automaticamente do sussuro"
 L["Auto Open"] = "Abrir Automaticamente"
 L["Auto Pass"] = "Passar Automaticamente"
 L["Auto pass BoE"] = "Passar Automaticamente Itens Vinculados ao Equipar"
+--Translation missing 
+-- L["Auto Pass Trinkets"] = ""
 L["Auto Start"] = "Iniciar Automaticamente"
 --Translation missing 
 -- L["auto_award_desc"] = ""
@@ -114,6 +118,8 @@ L["Auto Start"] = "Iniciar Automaticamente"
 -- L["auto_pass_boe_desc"] = ""
 --Translation missing 
 -- L["auto_pass_desc"] = ""
+--Translation missing 
+-- L["auto_pass_trinket_desc"] = ""
 --Translation missing 
 -- L["auto_start_desc"] = ""
 --Translation missing 
@@ -482,6 +488,8 @@ L["Autoloot BoE"] = "Saque automático para itens Vinculados ao Equipar"
 --Translation missing 
 -- L["Not Found"] = ""
 --Translation missing 
+-- L["Not in your guild"] = ""
+--Translation missing 
 -- L["Not installed"] = ""
 --Translation missing 
 -- L["Notes"] = ""
@@ -572,6 +580,8 @@ L["Autoloot BoE"] = "Saque automático para itens Vinculados ao Equipar"
 --Translation missing 
 -- L["Reannounce ..."] = ""
 --Translation missing 
+-- L["Reannounced 'item' to 'target'"] = ""
+--Translation missing 
 -- L["Reason"] = ""
 --Translation missing 
 -- L["reason_desc"] = ""
@@ -585,6 +595,8 @@ L["Autoloot BoE"] = "Saque automático para itens Vinculados ao Equipar"
 -- L["Remove from consideration"] = ""
 --Translation missing 
 -- L["remove_all_desc"] = ""
+--Translation missing 
+-- L["Requested rolls for 'item' from 'target'"] = ""
 --Translation missing 
 -- L["Reset Skin"] = ""
 --Translation missing 

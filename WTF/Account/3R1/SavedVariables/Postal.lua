@@ -111,7 +111,6 @@ Postal3DB = {
 			},
 		},
 		["Comet - Illidan"] = {
-			["ChatOutput"] = 3,
 			["BlackBook"] = {
 				["recent"] = {
 					"Evan|Illidan|Horde", -- [1]
@@ -135,6 +134,7 @@ Postal3DB = {
 					"evan|Illidan|Horde", -- [19]
 				},
 			},
+			["ChatOutput"] = 3,
 		},
 		["Pandatal - Illidan"] = {
 			["BlackBook"] = {

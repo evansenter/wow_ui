@@ -57,6 +57,8 @@ L["All items has been awarded and  the loot session concluded"] = "Все пре
 L["Always use RCLootCouncil when I'm Master Looter"] = "Всегда использовать RCLootCouncil, если вы назначены ответственным за распределение добычи"
 --Translation missing 
 -- L["Always use when leader"] = ""
+--Translation missing 
+-- L["always_show_tooltip_howto"] = ""
 L["Announce Awards"] = "Анонсировать Врученные предметы"
 --Translation missing 
 -- L["Announce Considerations"] = ""
@@ -118,6 +120,8 @@ L["Auto Award to"] = "Автоматически Вручать"
 --Translation missing 
 -- L["Auto pass BoE"] = ""
 --Translation missing 
+-- L["Auto Pass Trinkets"] = ""
+--Translation missing 
 -- L["Auto Start"] = ""
 L["auto_award_desc"] = "Включить автоматическое распределение"
 L["auto_award_to_desc"] = "Игроки для автоматического распределения. Список игроков для выбора появляется если вы в рейдовой группе."
@@ -133,6 +137,8 @@ L["auto_award_to_desc"] = "Игроки для автоматического р
 -- L["auto_pass_boe_desc"] = ""
 --Translation missing 
 -- L["auto_pass_desc"] = ""
+--Translation missing 
+-- L["auto_pass_trinket_desc"] = ""
 --Translation missing 
 -- L["auto_start_desc"] = ""
 --Translation missing 
@@ -470,6 +476,8 @@ L["Not announced"] = "Не анонсированно"
 --Translation missing 
 -- L["Not Found"] = ""
 --Translation missing 
+-- L["Not in your guild"] = ""
+--Translation missing 
 -- L["Not installed"] = ""
 --Translation missing 
 -- L["Notes"] = ""
@@ -555,6 +563,8 @@ L["open"] = "открыть"
 -- L["rclootcouncil_trade_add_item_confirm"] = ""
 --Translation missing 
 -- L["Reannounce ..."] = ""
+--Translation missing 
+-- L["Reannounced 'item' to 'target'"] = ""
 L["Reason"] = "Причина"
 --Translation missing 
 -- L["reason_desc"] = ""
@@ -568,6 +578,8 @@ L["Reason"] = "Причина"
 -- L["Remove from consideration"] = ""
 --Translation missing 
 -- L["remove_all_desc"] = ""
+--Translation missing 
+-- L["Requested rolls for 'item' from 'target'"] = ""
 --Translation missing 
 -- L["Reset Skin"] = ""
 --Translation missing 

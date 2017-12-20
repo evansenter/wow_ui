@@ -84,8 +84,6 @@ VER 3 000000000000005C "LoF" "INV_Misc_QuestionMark"
 END
 VER 3 0000000000000059 "LoT" "INV_Misc_QuestionMark"
 #showtooltip Light of T'uure
-/use 13
-/use 14
 /use [target=mouseover,help,nodead][]Light of T'uure
 END
 VER 3 0000000000000056 "Mana Pot" "INV_Misc_QuestionMark"

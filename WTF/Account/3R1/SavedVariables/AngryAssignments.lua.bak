@@ -70,13 +70,6 @@ AngryAssign_Pages = {
 		["UpdateId"] = 3815448723,
 		["Contents"] = "Advertising Space for Sale, Contact Kemsa\n\nBy Reading this you just proved it works!",
 	},
-	[2116828623] = {
-		["Updated"] = 1499388534,
-		["Name"] = "3Harjatan",
-		["Id"] = 2116828623,
-		["UpdateId"] = 1106345499,
-		["Contents"] = "Watery Splash Interrupts:\n\n\nDraw In Cds:\n#1: Tide\n#2: Hymn\n#3: Aura + Revival\n#4: Tide + Hymn\n#5: Aura + Revival",
-	},
 	[3602195624] = {
 		["Updated"] = 1510116158,
 		["Name"] = "host",
@@ -84,12 +77,12 @@ AngryAssign_Pages = {
 		["UpdateId"] = 2168981910,
 		["Contents"] = "Corp : Tank A, Tank C, Akroma, Lummi, Thenex, Aramis, Tigo, Dr, crongust, telgina\n\nSpirit : Tank B, DJ, Comet, Lilrip, cenzic, ambro, sinestro, malyner, lycaleon, hex",
 	},
-	[1548764330] = {
-		["Updated"] = 1499387417,
-		["Name"] = "1Goroth",
-		["Id"] = 1548764330,
-		["UpdateId"] = 1191362097,
-		["Contents"] = "Shattering Star CDs:\n1st: Tide\n2nd: Hymn\n3rd: Aura\n4th: Revival\n5th: Tide\n6th: Hymn + Revival\n8th: Aura",
+	[2116828623] = {
+		["Updated"] = 1499388534,
+		["Name"] = "3Harjatan",
+		["Id"] = 2116828623,
+		["UpdateId"] = 1106345499,
+		["Contents"] = "Watery Splash Interrupts:\n\n\nDraw In Cds:\n#1: Tide\n#2: Hymn\n#3: Aura + Revival\n#4: Tide + Hymn\n#5: Aura + Revival",
 	},
 	[1013041089] = {
 		["Updated"] = 1511318316,
@@ -99,13 +92,12 @@ AngryAssign_Pages = {
 		["Backup"] = "Exotica{x}       Lycaleon{circle}\nThenex           Comet\nSinestro            xorn\n\nRein{star}          Ugly{triangle}\nAmBrO                crongust\nfayze                   tigo\nArimis                akroma\n\nlanfear{square}       Telgina{diamond}\nGrim                      lummi\nDJ                         thereign\n\n(5 heals with Comet every other)\nFay / Dj\nLuu / Lan\nComet / Fay\nDj / Luu\nFay / Lan\nLuu / Comet\n...repeat",
 		["Contents"] = "Exotica{x}       Lycaleon{circle}\nThenex           Comet\nSinestro            xorn\n\nRein{star}          Ugly{triangle}\nAmBrO                crongust\nfayze                   tigo\nArimis                akroma\n\nlanfear{square}       Telgina{diamond}\nGrim                      lummi\nDJ                         thereign\n\n(5 heals with Comet every other)\nFay / Dj\nLuu / Lan\nComet / Fay\nDj / Luu\nFay / Lan\nLuu / Comet\n...repeat",
 	},
-	[3850854711] = {
-		["Updated"] = 1503457566,
-		["Name"] = "kj",
-		["Id"] = 3850854711,
-		["UpdateId"] = 3080006347,
-		["Contents"] = "DjSpunky\nLuthrenaaarrr",
-		["Backup"] = "DjSpunky\nLuthrenaaarrr",
+	[1548764330] = {
+		["Updated"] = 1499387417,
+		["Name"] = "1Goroth",
+		["Id"] = 1548764330,
+		["UpdateId"] = 1191362097,
+		["Contents"] = "Shattering Star CDs:\n1st: Tide\n2nd: Hymn\n3rd: Aura\n4th: Revival\n5th: Tide\n6th: Hymn + Revival\n8th: Aura",
 	},
 	[664173253] = {
 		["Updated"] = 1426210323,
@@ -115,6 +107,21 @@ AngryAssign_Pages = {
 		["Contents"] = "Slice Cooldown Order:\n7: Sikonos AMZ/Personal Cooldowns/Toppies\n9: Hymn/Vamp/Goargrim\n10/Phase2: Healing Tide/Loki/Mtnk Rally\n\nPulls: Comet Pull\n1:{triangle} Fuzz---Sac (Vamp)\n2:{diamond} Fuzz---Vigilance Goargarim\n3:{square} Fuzz---Pain Suppression\n4:{triangle} Vikid---Personal\n5:{diamond} Vikid---Life Cacoon\n6:{square} Vikid---Strong Personal\n7:{triangle} Fuzz---Personals\n8:{diamond} Fuzz---Vigilance Mt\n9:{square} Fuzz---Personals/Guardian Spirit/Smoke\nIntermission. Repeat.\nSwap Tank Names for the 2ND PHASE!",
 		["Backup"] = "Slice Cooldown Order:\n7: Sikonos AMZ/Personal Cooldowns/Toppies\n9: Hymn/Vamp/Goargrim\n10/Phase2: Healing Tide/Loki \n\nPulls: Comet Pull\n1:{triangle} Fuzz---Sac (Vamp)\n2:{diamond} Fuzz---Vigilance Goargarim\n3:{square} Fuzz---Sac (Inno)\n4:{triangle} Vikid---Personal\n5:{diamond} Vikid---Pain Suppression\n6:{square} Vikid---Barrier\n7:{triangle} Fuzz---Personals\n8:{diamond} Fuzz---Vigilance Mt\n9:{square} Fuzz---Personals/Guardian Spirit/Smoke\nIntermission. Repeat.\nSwap Tank Names for the 2ND PHASE!",
 	},
+	[3850854711] = {
+		["Updated"] = 1503457566,
+		["Name"] = "kj",
+		["Id"] = 3850854711,
+		["UpdateId"] = 3080006347,
+		["Contents"] = "DjSpunky\nLuthrenaaarrr",
+		["Backup"] = "DjSpunky\nLuthrenaaarrr",
+	},
+	[2820660469] = {
+		["Updated"] = 1507690371,
+		["Name"] = "sister fister mister",
+		["Id"] = 2820660469,
+		["UpdateId"] = 321453981,
+		["Contents"] = "PURPLE - THENEX XORN INCANTATEM \n\nGREEN - BARMAIDZ AKROMA DADIZZLE\n\nRED - REIN AIRIMIS DJ DR\n\nYELLOW - UGLY ZILAS COMET MAVERIK\n\nBLUE - TELGINA DANK GRIMHUS\n\nORANGE - LANFEAR ZEFARION",
+	},
 	[704661539] = {
 		["Updated"] = 1422500486,
 		["Name"] = "butcher",
@@ -122,12 +129,12 @@ AngryAssign_Pages = {
 		["UpdateId"] = 2689420526,
 		["Contents"] = "Healing Cds:\n1) Hymn + Gandalf\n2) Barrier  + Tide (Right before Blue 2nd stack)\n3) Draxxi + Zaebies + Rally (Right before Green 2nd stack)\n4) Spirit Link + Smoke + G2 Healing Tonics (1st stack after 4th bounding cleave)",
 	},
-	[1726481028] = {
-		["Updated"] = 1500424870,
-		["Name"] = "2Demonic Inquisition",
-		["Id"] = 1726481028,
-		["UpdateId"] = 3344635527,
-		["Contents"] = "Fel Squal CDs:\n1st: Tide\n2nd: Hymn\n3rd: Aura\n4th: Tide\n5th: Hymn\n6th: Aura",
+	[2556463330] = {
+		["Updated"] = 1499391796,
+		["Name"] = "5Sisters",
+		["Id"] = 2556463330,
+		["UpdateId"] = 3591586353,
+		["Contents"] = "Moon Cycle:\n1: Revival\n2: Tide\n3: Aura\n4: Hymn\n5: Revival\n6: Tide\n7: Aura\n8: Hymn",
 	},
 	[1125280814] = {
 		["Updated"] = 1422414988,
@@ -150,13 +157,6 @@ AngryAssign_Pages = {
 		["UpdateId"] = 4044664609,
 		["Contents"] = "",
 	},
-	[2820660469] = {
-		["Updated"] = 1507690371,
-		["Name"] = "sister fister mister",
-		["Id"] = 2820660469,
-		["UpdateId"] = 321453981,
-		["Contents"] = "PURPLE - THENEX XORN INCANTATEM \n\nGREEN - BARMAIDZ AKROMA DADIZZLE\n\nRED - REIN AIRIMIS DJ DR\n\nYELLOW - UGLY ZILAS COMET MAVERIK\n\nBLUE - TELGINA DANK GRIMHUS\n\nORANGE - LANFEAR ZEFARION",
-	},
 	[540890002] = {
 		["Updated"] = 1425959449,
 		["Name"] = "Blackhand",
@@ -164,12 +164,12 @@ AngryAssign_Pages = {
 		["UpdateId"] = 3541964023,
 		["Contents"] = "CD 1st Demolition: Barrier on Ranged, Healing Tide, Ascendance, Spirit Link the 3rd Orange.\n\nCD 2nd Demolition: Revival, Divine Hymn\n\nCD Fall: Devo both times, Spirit Link, AMZ",
 	},
-	[2556463330] = {
-		["Updated"] = 1499391796,
-		["Name"] = "5Sisters",
-		["Id"] = 2556463330,
-		["UpdateId"] = 3591586353,
-		["Contents"] = "Moon Cycle:\n1: Revival\n2: Tide\n3: Aura\n4: Hymn\n5: Revival\n6: Tide\n7: Aura\n8: Hymn",
+	[1726481028] = {
+		["Updated"] = 1500424870,
+		["Name"] = "2Demonic Inquisition",
+		["Id"] = 1726481028,
+		["UpdateId"] = 3344635527,
+		["Contents"] = "Fel Squal CDs:\n1st: Tide\n2nd: Hymn\n3rd: Aura\n4th: Tide\n5th: Hymn\n6th: Aura",
 	},
 	[45058146] = {
 		["Updated"] = 1419905154,
@@ -184,6 +184,13 @@ AngryAssign_Pages = {
 		["Id"] = 1312776073,
 		["UpdateId"] = 1842913687,
 		["Contents"] = "1st Tectonic:\n------------------\nPersonals\n\n2nd Tectonic:\n-------------------\nCexcells + Twin + Bluto (melee smoke) +\nS Link (on ranged) + Scar (Ascen) + \nProc (AG) + Hemo (RC)\n\nMote Phase (with Lust)\n---------------------------------\n1) Fox + Gandalf + Scar (Tide)\n2) NVs + Tonics + Personals\n\n\nFox Order:\nAzimyth - Azpek - Roy - Hockey",
+	},
+	[1139106633] = {
+		["Updated"] = 1513735215,
+		["Name"] = "GWB",
+		["Id"] = 1139106633,
+		["UpdateId"] = 3830926183,
+		["Contents"] = "Eradication 1: Fayze Wind Rush, Fayze SLT, Angel Hymn, Crongust Darkness\nEradication 2: Dj Wind Rush, Dj SLT, Evan Hymn, Drkillgrave Darkness\n\nHTT/AM will be used to stabilize in P1/P2 - Make sure they are avaible for your Decimations in P3\n\nP3 Decimation Explosion\n1: Angel Hymn\n2: Evan Hymn\n3: Fayze HTT\n4: DJ HTT\n5: Akroma AM\n\n{Triangle} <-> {Circle} = Ranged\n{Cross} <-> {Square} = Melee",
 	},
 	[2178763242] = {
 		["Updated"] = 1510114164,
@@ -244,7 +251,7 @@ AngryAssign_Pages = {
 		["Contents"] = "1st Phase CDs / 2nd 1st Phase CDs\n1 - Loki Amp / Barrier\n2 - Spirit Link 1 + Mtk Rally / Heavy Tank CD + Toppies Amp\n3 - Vamp Devo / Loki Amp\n4 - Revival / Personals + Vamp Wings\n5 - Vikid AMZ + Ascendance + Toppies Amp / Spirit Link 1 +  Vikid AMZ\n6 - Divine Hymn / Spirit Link 2 + Tighten your ass + Goargrim Rally if up\n7 - Goargrim Rally + Healing Tonic/ Pray you live! + Revival if it is up\n2nd Phase - Lustya Guidance, Princip Smoke Bomb on Melee, Healing Tide\n\nInterrupts\n\n1st Kov\n2nd Mtnk\n3rd Goargrim\n4th Princip\n5th Comet\nRinse and Repeat\n\nMelee: Star --> Diamond --> Square --> Moon\nRanged: Triangle --> Condom --> Far Blue --> Port --> \nStarting Area",
 	},
 	[4155211010] = {
-		["Updated"] = 1511923078,
+		["Updated"] = 1513745997,
 		["Name"] = "Eonar",
 		["Id"] = 4155211010,
 		["UpdateId"] = 3111644924,
@@ -265,19 +272,19 @@ AngryAssign_Pages = {
 		["UpdateId"] = 1068670945,
 		["Contents"] = "{square}: Rein // {diamond}: Ugly\n{triangle}: Coolaid, Dvldoc, Luthanen\n{x}: Dadizzle, Cenzic , Bluto\n{circle}: Colonferal, Aedalina, Dj\n{star}: Lanfear, Wowjayson, Comet\n{skull}: Thenex, Xorn, Zefarion\n{moon}: Grimuhs, Telgina, Fear\n\n1st ADDs: Lanfear / 2nd Slam: Link totem\n2nd ADDs: Comet + DJ / After Orb: Luth + Bluto\nSlam after 6th Orb: DJ(AW) + Vice(Tree)\n3rd ADDs: Lanfear\n4th ADDs: Vice(tranq) / After last ORB: Dj(aw+aura) + Pelli",
 	},
-	[2889932205] = {
-		["Updated"] = 1500428867,
-		["Name"] = "6Desolate Host",
-		["Id"] = 2889932205,
-		["UpdateId"] = 3266744969,
-		["Contents"] = "Phase 2 Sunder/Doom:\n\n1.Revival\n2.Hymn\n3.Aura\n4:Tide",
-	},
 	[1969626899] = {
 		["Updated"] = 1419298420,
 		["Name"] = "Ko'ragh",
 		["Id"] = 1969626899,
 		["UpdateId"] = 2397313823,
 		["Contents"] = "Myth\nCharlie\nAzpek\nHockeyy",
+	},
+	[2889932205] = {
+		["Updated"] = 1500428867,
+		["Name"] = "6Desolate Host",
+		["Id"] = 2889932205,
+		["UpdateId"] = 3266744969,
+		["Contents"] = "Phase 2 Sunder/Doom:\n\n1.Revival\n2.Hymn\n3.Aura\n4:Tide",
 	},
 	[20828138] = {
 		["Updated"] = 1424830953,
@@ -390,16 +397,14 @@ AngryAssign_Pages = {
 AngryAssign_Categories = {
 }
 AngryAssign_State = {
-	["directionUp"] = false,
-	["locked"] = true,
 	["tree"] = {
 		["groups"] = {
 			["664173253"] = true,
 			["4155211010"] = true,
 		},
-		["scrollvalue"] = 14,
+		["scrollvalue"] = 8,
 		["treesizable"] = true,
-		["selected"] = 2563753241,
+		["selected"] = 4155211010,
 		["treewidth"] = 175,
 		["fullwidth"] = 666,
 	},
@@ -408,15 +413,17 @@ AngryAssign_State = {
 		["x"] = -7.66943359375,
 		["point"] = "RIGHT",
 		["scale"] = 1,
-		["hidden"] = true,
+		["hidden"] = false,
 		["width"] = 274.444152832031,
 	},
+	["directionUp"] = false,
 	["window"] = {
 		["height"] = 499.999908447266,
 		["top"] = 900.000183105469,
 		["left"] = 598.333190917969,
 		["width"] = 700.000061035156,
 	},
+	["locked"] = true,
 }
 AngryAssign_Config = {
 	["backdropColor"] = "00000041",

@@ -3,7 +3,7 @@ Frame: GarrisonLandingPageMinimapButton
 FrameLevel: 6
 Anchor: TOPRIGHT
 X: -2
-Y: -34
+Y: -3
 W: 53
 H: 53
 Frame: ExtraActionBarFrame

@@ -70,6 +70,13 @@ AngryAssign_Pages = {
 		["UpdateId"] = 3815448723,
 		["Contents"] = "Advertising Space for Sale, Contact Kemsa\n\nBy Reading this you just proved it works!",
 	},
+	[4226384807] = {
+		["Updated"] = 1512092928,
+		["Name"] = "dogs",
+		["Id"] = 4226384807,
+		["UpdateId"] = 1849306621,
+		["Contents"] = "Healing CD:\nDj/Angel/Lilrip/Fayze/Evan/Luumi",
+	},
 	[2116828623] = {
 		["Updated"] = 1499388534,
 		["Name"] = "3Harjatan",
@@ -77,12 +84,12 @@ AngryAssign_Pages = {
 		["UpdateId"] = 1106345499,
 		["Contents"] = "Watery Splash Interrupts:\n\n\nDraw In Cds:\n#1: Tide\n#2: Hymn\n#3: Aura + Revival\n#4: Tide + Hymn\n#5: Aura + Revival",
 	},
-	[4226384807] = {
-		["Updated"] = 1512092928,
-		["Name"] = "dogs",
-		["Id"] = 4226384807,
-		["UpdateId"] = 1849306621,
-		["Contents"] = "Healing CD:\nDj/Angel/Lilrip/Fayze/Evan/Luumi",
+	[3591569453] = {
+		["Updated"] = 1496366330,
+		["Name"] = "Spell",
+		["Id"] = 3591569453,
+		["UpdateId"] = 390809518,
+		["Contents"] = "1-Frost-@ Add spawn: TRANQ (Vice)\n2-Frost- Adds almost dead: REVIVAL \n3-Fire - Add Spawn: HYMN - PellI\n4-Fire - During Adds: AURA\n\nFEL LASH DANCE:\n1st -TANK SOLO\nMOVE TO SPOT\n2nd(before): DARKNESS + RANDO\n3rd(after): TRANQ (Vice)\nSTART MOVING/STOP MOVING\n4 (after): REVIVAL + HYMN LANFEAR\n5:\n\n\nRight: Grimuhs, Wowjay //Bak: Daddizzle, Vice\n\nLeft Side: Fear, Telgina // Bak: Lan, Thenex\n\n{skull} Telgina, Thenex\n{cross} Dr, Grim\n{square} Aedelina, Wowjayson\n{moon} Fear, Bluto, Semigin\n{triangle} Daddizle, Fury\n{diamond} Zilas, Cenzic",
 	},
 	[1548764330] = {
 		["Updated"] = 1499387417,
@@ -91,12 +98,12 @@ AngryAssign_Pages = {
 		["UpdateId"] = 1191362097,
 		["Contents"] = "Shattering Star CDs:\n1st: Tide\n2nd: Hymn\n3rd: Aura\n4th: Revival\n5th: Tide\n6th: Hymn + Revival\n8th: Aura",
 	},
-	[3591569453] = {
-		["Updated"] = 1496366330,
-		["Name"] = "Spell",
-		["Id"] = 3591569453,
-		["UpdateId"] = 390809518,
-		["Contents"] = "1-Frost-@ Add spawn: TRANQ (Vice)\n2-Frost- Adds almost dead: REVIVAL \n3-Fire - Add Spawn: HYMN - PellI\n4-Fire - During Adds: AURA\n\nFEL LASH DANCE:\n1st -TANK SOLO\nMOVE TO SPOT\n2nd(before): DARKNESS + RANDO\n3rd(after): TRANQ (Vice)\nSTART MOVING/STOP MOVING\n4 (after): REVIVAL + HYMN LANFEAR\n5:\n\n\nRight: Grimuhs, Wowjay //Bak: Daddizzle, Vice\n\nLeft Side: Fear, Telgina // Bak: Lan, Thenex\n\n{skull} Telgina, Thenex\n{cross} Dr, Grim\n{square} Aedelina, Wowjayson\n{moon} Fear, Bluto, Semigin\n{triangle} Daddizle, Fury\n{diamond} Zilas, Cenzic",
+	[681299436] = {
+		["Updated"] = 1500256992,
+		["Name"] = "9Kil'Jaeden",
+		["Id"] = 681299436,
+		["UpdateId"] = 2727454966,
+		["Contents"] = "1 thenex\n2 aedalina\n3 akroma\n4 Xorn\n5 grimuhs\n6 hemo\n7 fury",
 	},
 	[3850854711] = {
 		["Updated"] = 1503457566,
@@ -106,12 +113,12 @@ AngryAssign_Pages = {
 		["Backup"] = "DjSpunky\nLuthrenaaarrr",
 		["Contents"] = "DjSpunky\nLuthrenaaarrr",
 	},
-	[681299436] = {
-		["Updated"] = 1500256992,
-		["Name"] = "9Kil'Jaeden",
-		["Id"] = 681299436,
-		["UpdateId"] = 2727454966,
-		["Contents"] = "1 thenex\n2 aedalina\n3 akroma\n4 Xorn\n5 grimuhs\n6 hemo\n7 fury",
+	[3476819744] = {
+		["Updated"] = 1510882719,
+		["Name"] = "host",
+		["Id"] = 3476819744,
+		["UpdateId"] = 4044664609,
+		["Contents"] = "",
 	},
 	[704661539] = {
 		["Updated"] = 1422500486,
@@ -120,12 +127,12 @@ AngryAssign_Pages = {
 		["UpdateId"] = 2689420526,
 		["Contents"] = "Healing Cds:\n1) Hymn + Gandalf\n2) Barrier  + Tide (Right before Blue 2nd stack)\n3) Draxxi + Zaebies + Rally (Right before Green 2nd stack)\n4) Spirit Link + Smoke + G2 Healing Tonics (1st stack after 4th bounding cleave)",
 	},
-	[2820660469] = {
-		["Updated"] = 1507690371,
-		["Name"] = "sister fister mister",
-		["Id"] = 2820660469,
-		["UpdateId"] = 321453981,
-		["Contents"] = "PURPLE - THENEX XORN INCANTATEM \n\nGREEN - BARMAIDZ AKROMA DADIZZLE\n\nRED - REIN AIRIMIS DJ DR\n\nYELLOW - UGLY ZILAS COMET MAVERIK\n\nBLUE - TELGINA DANK GRIMHUS\n\nORANGE - LANFEAR ZEFARION",
+	[540890002] = {
+		["Updated"] = 1425959449,
+		["Name"] = "Blackhand",
+		["Id"] = 540890002,
+		["UpdateId"] = 3541964023,
+		["Contents"] = "CD 1st Demolition: Barrier on Ranged, Healing Tide, Ascendance, Spirit Link the 3rd Orange.\n\nCD 2nd Demolition: Revival, Divine Hymn\n\nCD Fall: Devo both times, Spirit Link, AMZ",
 	},
 	[1125280814] = {
 		["Updated"] = 1422414988,
@@ -149,13 +156,6 @@ AngryAssign_Pages = {
 		["Backup"] = "Slice Cooldown Order:\n7: Sikonos AMZ/Personal Cooldowns/Toppies\n9: Hymn/Vamp/Goargrim\n10/Phase2: Healing Tide/Loki \n\nPulls: Comet Pull\n1:{triangle} Fuzz---Sac (Vamp)\n2:{diamond} Fuzz---Vigilance Goargarim\n3:{square} Fuzz---Sac (Inno)\n4:{triangle} Vikid---Personal\n5:{diamond} Vikid---Pain Suppression\n6:{square} Vikid---Barrier\n7:{triangle} Fuzz---Personals\n8:{diamond} Fuzz---Vigilance Mt\n9:{square} Fuzz---Personals/Guardian Spirit/Smoke\nIntermission. Repeat.\nSwap Tank Names for the 2ND PHASE!",
 		["Contents"] = "Slice Cooldown Order:\n7: Sikonos AMZ/Personal Cooldowns/Toppies\n9: Hymn/Vamp/Goargrim\n10/Phase2: Healing Tide/Loki/Mtnk Rally\n\nPulls: Comet Pull\n1:{triangle} Fuzz---Sac (Vamp)\n2:{diamond} Fuzz---Vigilance Goargarim\n3:{square} Fuzz---Pain Suppression\n4:{triangle} Vikid---Personal\n5:{diamond} Vikid---Life Cacoon\n6:{square} Vikid---Strong Personal\n7:{triangle} Fuzz---Personals\n8:{diamond} Fuzz---Vigilance Mt\n9:{square} Fuzz---Personals/Guardian Spirit/Smoke\nIntermission. Repeat.\nSwap Tank Names for the 2ND PHASE!",
 	},
-	[540890002] = {
-		["Updated"] = 1425959449,
-		["Name"] = "Blackhand",
-		["Id"] = 540890002,
-		["UpdateId"] = 3541964023,
-		["Contents"] = "CD 1st Demolition: Barrier on Ranged, Healing Tide, Ascendance, Spirit Link the 3rd Orange.\n\nCD 2nd Demolition: Revival, Divine Hymn\n\nCD Fall: Devo both times, Spirit Link, AMZ",
-	},
 	[1726481028] = {
 		["Updated"] = 1500424870,
 		["Name"] = "2Demonic Inquisition",
@@ -163,12 +163,12 @@ AngryAssign_Pages = {
 		["UpdateId"] = 3344635527,
 		["Contents"] = "Fel Squal CDs:\n1st: Tide\n2nd: Hymn\n3rd: Aura\n4th: Tide\n5th: Hymn\n6th: Aura",
 	},
-	[2556463330] = {
-		["Updated"] = 1499391796,
-		["Name"] = "5Sisters",
-		["Id"] = 2556463330,
-		["UpdateId"] = 3591586353,
-		["Contents"] = "Moon Cycle:\n1: Revival\n2: Tide\n3: Aura\n4: Hymn\n5: Revival\n6: Tide\n7: Aura\n8: Hymn",
+	[2820660469] = {
+		["Updated"] = 1507690371,
+		["Name"] = "sister fister mister",
+		["Id"] = 2820660469,
+		["UpdateId"] = 321453981,
+		["Contents"] = "PURPLE - THENEX XORN INCANTATEM \n\nGREEN - BARMAIDZ AKROMA DADIZZLE\n\nRED - REIN AIRIMIS DJ DR\n\nYELLOW - UGLY ZILAS COMET MAVERIK\n\nBLUE - TELGINA DANK GRIMHUS\n\nORANGE - LANFEAR ZEFARION",
 	},
 	[45058146] = {
 		["Updated"] = 1419905154,
@@ -184,6 +184,13 @@ AngryAssign_Pages = {
 		["UpdateId"] = 191581569,
 		["Contents"] = "Whirlwind (emp):\n1) (emp) Dj(Tranq) + Hockey + Cexcells\n2) (emp) Twin(Hymn) + Lan(Barrier) + Cexcells + Azpek\n\nShout:\n2) Devo\n4) Devo\n\nRubble:\n2)  Scar  + Tokman + Hemo + Gandalf\n3)  Dj tranq + Bluto (Smoke) + \n4)  Twin + Lanfear + Cexcells + Hockey\n5)  Scar + Tokman + Hemo + Gandalf\n\nQuake\n2) Twin + Captain + NVs \n3) Akroma + HS + personals",
 	},
+	[1454628185] = {
+		["Updated"] = 1419998164,
+		["Name"] = "SICKSADWORLD1",
+		["Id"] = 1454628185,
+		["UpdateId"] = 1991343803,
+		["Contents"] = "Could a family of ghosts be living in your house, rent free? \n\nFreeloading Familial Phantoms, next, on Sick Sad World.",
+	},
 	[2178763242] = {
 		["Updated"] = 1510114164,
 		["Name"] = "sisters",
@@ -192,12 +199,12 @@ AngryAssign_Pages = {
 		["Backup"] = "{cross} : Thenex - Exotica - sinestro\n\n{circle} : lanfear - hex - akroma\n\n{star} : aramis - Dr - crongust - Reinhart\n\n{triangle} : Ugly - Cenzic  - ambro - tigo\n\n{square} :dretbrez  - malanyr - lummi\n\n{diamond} : lycaleon  - telgina - comet\n\n# (6 heals with Comet every 3)\n# Comet / Hex\n# Lil / Luu\n# Akr / Lan\n# Comet / Hex\n# Lil / Luu\n# Akr / Lan\n# ...repeat\n\n(5 heals with Comet every other)\nComet / Hex\nAkr / Luu\nComet / Lan\nHex / Akr\nComet / Luu\nAkr / Lan\n...repeat",
 		["Contents"] = "{cross} : Thenex - Exotica - sinestro\n\n{circle} : lanfear - hex - akroma\n\n{star} : aramis - Dr - crongust - Reinhart\n\n{triangle} : Ugly - Cenzic  - ambro - tigo\n\n{square} :dretbrez  - malanyr - lummi\n\n{diamond} : lycaleon  - telgina - comet\n\n# (6 heals with Comet every 3)\n# Comet / Hex\n# Lil / Luu\n# Akr / Lan\n# Comet / Hex\n# Lil / Luu\n# Akr / Lan\n# ...repeat\n\n(5 heals with Comet every other)\nComet / Hex\nAkr / Luu\nComet / Lan\nHex / Akr\nComet / Luu\nAkr / Lan\n...repeat",
 	},
-	[1454628185] = {
-		["Updated"] = 1419998164,
-		["Name"] = "SICKSADWORLD1",
-		["Id"] = 1454628185,
-		["UpdateId"] = 1991343803,
-		["Contents"] = "Could a family of ghosts be living in your house, rent free? \n\nFreeloading Familial Phantoms, next, on Sick Sad World.",
+	[1139106633] = {
+		["Updated"] = 1513735215,
+		["Name"] = "GWB",
+		["Id"] = 1139106633,
+		["UpdateId"] = 3830926183,
+		["Contents"] = "Eradication 1: Fayze Wind Rush, Fayze SLT, Angel Hymn, Crongust Darkness\nEradication 2: Dj Wind Rush, Dj SLT, Evan Hymn, Drkillgrave Darkness\n\nHTT/AM will be used to stabilize in P1/P2 - Make sure they are avaible for your Decimations in P3\n\nP3 Decimation Explosion\n1: Angel Hymn\n2: Evan Hymn\n3: Fayze HTT\n4: DJ HTT\n5: Akroma AM\n\n{Triangle} <-> {Circle} = Ranged\n{Cross} <-> {Square} = Melee",
 	},
 	[3329389342] = {
 		["Updated"] = 1508290163,
@@ -242,13 +249,12 @@ AngryAssign_Pages = {
 		["UpdateId"] = 3245528287,
 		["Contents"] = "1st Phase CDs / 2nd 1st Phase CDs\n1 - Loki Amp / Barrier\n2 - Spirit Link 1 + Mtk Rally / Heavy Tank CD + Toppies Amp\n3 - Vamp Devo / Loki Amp\n4 - Revival / Personals + Vamp Wings\n5 - Vikid AMZ + Ascendance + Toppies Amp / Spirit Link 1 +  Vikid AMZ\n6 - Divine Hymn / Spirit Link 2 + Tighten your ass + Goargrim Rally if up\n7 - Goargrim Rally + Healing Tonic/ Pray you live! + Revival if it is up\n2nd Phase - Lustya Guidance, Princip Smoke Bomb on Melee, Healing Tide\n\nInterrupts\n\n1st Kov\n2nd Mtnk\n3rd Goargrim\n4th Princip\n5th Comet\nRinse and Repeat\n\nMelee: Star --> Diamond --> Square --> Moon\nRanged: Triangle --> Condom --> Far Blue --> Port --> \nStarting Area",
 	},
-	[4155211010] = {
-		["Updated"] = 1511923078,
-		["Name"] = "Eonar",
-		["Id"] = 4155211010,
-		["UpdateId"] = 3111644924,
-		["Contents"] = "Mid\nLow\nMid\nHigh\nLow\nMid\nHigh + Bats\nLow\nMid",
-		["Backup"] = "Mid\nLow\nMid\nHigh\nLow\nMid\nHigh + Bats\nLow\nMid",
+	[1154863405] = {
+		["Updated"] = 1426038253,
+		["Name"] = "Beastlord ",
+		["Id"] = 1154863405,
+		["UpdateId"] = 302011298,
+		["Contents"] = "Tantrum Healing Cds:\n1: Healing Tide/Toppies\n2: Icon/Rally Mtnk\n3: Freed/Goargrim\n4: Barrier/Toppies/ Revival\n5: Spirit Link/ Icon/ Hymn\nRepeat\n\nRoar Order For Last Phase:\n1: Arsenal\n2. KoV\n3: Lustya\n\nLAST PHASE\nSPIRIT LINK ON MELEE AND TANKS/PERSONALS\nFREED/PALLY DEVOs\nREV and BARRIER\nEverything!\nDEAD",
 	},
 	[851618830] = {
 		["Updated"] = 1425950978,
@@ -264,13 +270,6 @@ AngryAssign_Pages = {
 		["UpdateId"] = 1068670945,
 		["Contents"] = "{square}: Rein // {diamond}: Ugly\n{triangle}: Coolaid, Dvldoc, Luthanen\n{x}: Dadizzle, Cenzic , Bluto\n{circle}: Colonferal, Aedalina, Dj\n{star}: Lanfear, Wowjayson, Comet\n{skull}: Thenex, Xorn, Zefarion\n{moon}: Grimuhs, Telgina, Fear\n\n1st ADDs: Lanfear / 2nd Slam: Link totem\n2nd ADDs: Comet + DJ / After Orb: Luth + Bluto\nSlam after 6th Orb: DJ(AW) + Vice(Tree)\n3rd ADDs: Lanfear\n4th ADDs: Vice(tranq) / After last ORB: Dj(aw+aura) + Pelli",
 	},
-	[1154863405] = {
-		["Updated"] = 1426038253,
-		["Name"] = "Beastlord ",
-		["Id"] = 1154863405,
-		["UpdateId"] = 302011298,
-		["Contents"] = "Tantrum Healing Cds:\n1: Healing Tide/Toppies\n2: Icon/Rally Mtnk\n3: Freed/Goargrim\n4: Barrier/Toppies/ Revival\n5: Spirit Link/ Icon/ Hymn\nRepeat\n\nRoar Order For Last Phase:\n1: Arsenal\n2. KoV\n3: Lustya\n\nLAST PHASE\nSPIRIT LINK ON MELEE AND TANKS/PERSONALS\nFREED/PALLY DEVOs\nREV and BARRIER\nEverything!\nDEAD",
-	},
 	[2889932205] = {
 		["Updated"] = 1500428867,
 		["Name"] = "6Desolate Host",
@@ -278,20 +277,19 @@ AngryAssign_Pages = {
 		["UpdateId"] = 3266744969,
 		["Contents"] = "Phase 2 Sunder/Doom:\n\n1.Revival\n2.Hymn\n3.Aura\n4:Tide",
 	},
+	[1969626899] = {
+		["Updated"] = 1419298420,
+		["Name"] = "Ko'ragh",
+		["Id"] = 1969626899,
+		["UpdateId"] = 2397313823,
+		["Contents"] = "Myth\nCharlie\nAzpek\nHockeyy",
+	},
 	[20828138] = {
 		["Updated"] = 1424830953,
 		["Name"] = "Furnace",
 		["Id"] = 20828138,
 		["UpdateId"] = 2467529262,
 		["Contents"] = "p2 Cd Rotation:\nBlast#:\n4:tranq\n6:rev\n8:hymn\n10; devo\n12: devo",
-	},
-	[533536495] = {
-		["Updated"] = 1426209750,
-		["Name"] = "Gruul",
-		["Id"] = 533536495,
-		["UpdateId"] = 332788069,
-		["Contents"] = "Slice Cooldown Order:\n7: Sikonos AMZ/Personal Cooldowns/Toppies\n9: Hymn/Vamp/Goargrim\n10/Phase2: Revival/Loki \n\nPulls: Comet Pull\n1:{Triangle} Vikid---Sac (Vamp)\n2:{Triangle}  Vikid---Personal\n3:{square}Vikid----Sac (Inno)/Vigilance Goargarim\n4:{diamond}Comet----Personal\n5:{diamond}Comet-- Pain Suppression\n6:{triangle} Comet---Life Cacoon/Barrier\n7:{square} Vikid----Personals\n8:{square} Vikid----Personals/Smoke\n9:{diamond} Vikid--Personals/Guardian Spirit/Fuzzican\nIntermission. Repeat.\nSwap Tank Names for the 2ND PHASE!",
-		["Backup"] = "Slice Cooldown Order:\n8: Hymn/Freed/Toppies\n9: Rev/Vamp/Goargrim\n10: Tranq/Loki \n\nPulls: Comet Pull\n1: {triangle} Vikid---Ironbark\n2:{triangle} Vikid---Personal\n3:{square}Vikid----Sac(inno)\n4:{diamond}Comet----Personal\n5:{diamond}Comet--Sac(Vamp)\n6:{triangle} Comet---Life Cocoon\n7:{square} Vikid----Guardian Spirit\n8:{square} Vikid----Personals\n9:{diamond} Vikid--Personals/Pain Suppression\nIntermission. Repeat.",
 	},
 	[975215370] = {
 		["Updated"] = 1419911048,
@@ -307,6 +305,14 @@ AngryAssign_Pages = {
 		["UpdateId"] = 702744699,
 		["Contents"] = "Health Levels and Abilities\n100% Smart stompers (appx. 10 sec. after pull)\n85% Plates (will delay for last stomper to go out)\n70% Smart stompers (long phase of them)\n55% Regular stompers with belts moving\n40% Smart stompers (need to quickly transition to this)\n25% Plates\n15% Regular stompers (Lust here)\n\n\n1st Smart Stomper Smoke Bomb\n\n2nd Smart Stomper Healing Tide/ Spirit Link 1/ Loki Amp\n\n3rd Smart Stompers Penelope Hymn/ Spirit Link 2/ Toppies Amp/ Aura Bubble\n\nTill Death aka 4th Stomper for Freed lol - Revival",
 	},
+	[533536495] = {
+		["Updated"] = 1426209750,
+		["Name"] = "Gruul",
+		["Id"] = 533536495,
+		["UpdateId"] = 332788069,
+		["Contents"] = "Slice Cooldown Order:\n7: Sikonos AMZ/Personal Cooldowns/Toppies\n9: Hymn/Vamp/Goargrim\n10/Phase2: Revival/Loki \n\nPulls: Comet Pull\n1:{Triangle} Vikid---Sac (Vamp)\n2:{Triangle}  Vikid---Personal\n3:{square}Vikid----Sac (Inno)/Vigilance Goargarim\n4:{diamond}Comet----Personal\n5:{diamond}Comet-- Pain Suppression\n6:{triangle} Comet---Life Cacoon/Barrier\n7:{square} Vikid----Personals\n8:{square} Vikid----Personals/Smoke\n9:{diamond} Vikid--Personals/Guardian Spirit/Fuzzican\nIntermission. Repeat.\nSwap Tank Names for the 2ND PHASE!",
+		["Backup"] = "Slice Cooldown Order:\n8: Hymn/Freed/Toppies\n9: Rev/Vamp/Goargrim\n10: Tranq/Loki \n\nPulls: Comet Pull\n1: {triangle} Vikid---Ironbark\n2:{triangle} Vikid---Personal\n3:{square}Vikid----Sac(inno)\n4:{diamond}Comet----Personal\n5:{diamond}Comet--Sac(Vamp)\n6:{triangle} Comet---Life Cocoon\n7:{square} Vikid----Guardian Spirit\n8:{square} Vikid----Personals\n9:{diamond} Vikid--Personals/Pain Suppression\nIntermission. Repeat.",
+	},
 	[412556291] = {
 		["Updated"] = 1424913949,
 		["Name"] = "Oregorger",
@@ -314,12 +320,13 @@ AngryAssign_Pages = {
 		["UpdateId"] = 729592596,
 		["Contents"] = "Acid Torrent Healing Rotation\n1:Hymn/Toppies\n2:Vampally/Goargrim\n3:Freed/Mtnk\n4:Tranq/Loki\n\nTransition\nRev/Personals/Tonics",
 	},
-	[1969626899] = {
-		["Updated"] = 1419298420,
-		["Name"] = "Ko'ragh",
-		["Id"] = 1969626899,
-		["UpdateId"] = 2397313823,
-		["Contents"] = "Myth\nCharlie\nAzpek\nHockeyy",
+	[4155211010] = {
+		["Updated"] = 1513745997,
+		["Name"] = "Eonar",
+		["Id"] = 4155211010,
+		["UpdateId"] = 3111644924,
+		["Contents"] = "Mid\nLow\nMid\nHigh\nLow\nMid\nHigh + Bats\nLow\nMid",
+		["Backup"] = "Mid\nLow\nMid\nHigh\nLow\nMid\nHigh + Bats\nLow\nMid",
 	},
 	[593718423] = {
 		["Updated"] = 1499822841,
@@ -364,12 +371,12 @@ AngryAssign_Pages = {
 		["UpdateId"] = 2070059239,
 		["Contents"] = "1. Pelli Weapon\n2. Mizz Weapon\n3. Lanfear Weapon + Eclipto\n4. DJ Weapon + Zilas\n5. DJ  Wings\n6. Lanfear Hymn\n7. Pelli Hym\n8. Harry Tranq+Rando\n9. DJ Aura Mastery",
 	},
-	[3476819744] = {
-		["Updated"] = 1510882719,
-		["Name"] = "host",
-		["Id"] = 3476819744,
-		["UpdateId"] = 4044664609,
-		["Contents"] = "",
+	[2556463330] = {
+		["Updated"] = 1499391796,
+		["Name"] = "5Sisters",
+		["Id"] = 2556463330,
+		["UpdateId"] = 3591586353,
+		["Contents"] = "Moon Cycle:\n1: Revival\n2: Tide\n3: Aura\n4: Hymn\n5: Revival\n6: Tide\n7: Aura\n8: Hymn",
 	},
 	[1013041089] = {
 		["Updated"] = 1511318316,
@@ -390,20 +397,13 @@ AngryAssign_Pages = {
 AngryAssign_Categories = {
 }
 AngryAssign_State = {
-	["window"] = {
-		["height"] = 499.999908447266,
-		["top"] = 900.000183105469,
-		["left"] = 598.333190917969,
-		["width"] = 700.000061035156,
-	},
 	["locked"] = true,
-	["directionUp"] = false,
 	["display"] = {
 		["y"] = 268.944519042969,
 		["x"] = -7.66943359375,
 		["point"] = "RIGHT",
 		["scale"] = 1,
-		["hidden"] = true,
+		["hidden"] = false,
 		["width"] = 274.444152832031,
 	},
 	["tree"] = {
@@ -411,12 +411,19 @@ AngryAssign_State = {
 			["664173253"] = true,
 			["4155211010"] = true,
 		},
-		["scrollvalue"] = 14,
+		["scrollvalue"] = 8,
 		["fullwidth"] = 666,
 		["treesizable"] = true,
 		["treewidth"] = 175,
-		["selected"] = 2563753241,
+		["selected"] = 4155211010,
 	},
+	["window"] = {
+		["height"] = 499.999908447266,
+		["top"] = 900.000183105469,
+		["left"] = 598.333190917969,
+		["width"] = 700.000061035156,
+	},
+	["directionUp"] = false,
 }
 AngryAssign_Config = {
 	["backdropColor"] = "00000041",

@@ -83,6 +83,7 @@ end
 
 function PGF.GetExpressionFromModel()
     local model = PGF.GetModel()
+    if not model then return "true" end
     local exp = "true" -- start with neutral element
     exp = exp .. PGF.GetExpressionFromDifficultyModel(model)
     exp = exp .. PGF.GetExpressionFromIlvlModel(model)
@@ -123,7 +124,7 @@ function PGF.DoFilterSearchResults(results)
     local exp = PGF.GetExpressionFromModel()
     PGF.currentSearchExpression = exp
     local model = PGF.GetModel()
-    if not model.enabled then return false end
+    if not model or not model.enabled then return false end
     if not results or #results == 0 then return false end
     if exp == "true" then return false end -- skip trivial expression
 
@@ -199,9 +200,9 @@ function PGF.DoFilterSearchResults(results)
         env.hfc  = activity == 409 or activity == 410 or activity == 412  -- Hellfire Citadel
         env.en   = activity == 413 or activity == 414 or activity == 468  -- The Emerald Nightmare
         env.nh   = activity == 415 or activity == 416 or activity == 481  -- The Nighthold
-        env.tov  = activity == 456 or activity == 457                     -- Trial of Valor
-        env.tos  = activity == 479 or activity == 478                     -- Tomb of Sargeras
-        env.atbt = activity == 482 or activity == 483                     -- Antorus, the Burning Throne
+        env.tov  = activity == 456 or activity == 457 or activity == 480  -- Trial of Valor
+        env.tos  = activity == 479 or activity == 478 or activity == 492  -- Tomb of Sargeras
+        env.atbt = activity == 482 or activity == 483 or activity == 493  -- Antorus, the Burning Throne
 
         -- dungeons         normal             heroic             mythic            mythic+
         env.eoa  = activity == 425 or activity == 435 or activity == 445 or activity == 459  -- Eye of Azshara

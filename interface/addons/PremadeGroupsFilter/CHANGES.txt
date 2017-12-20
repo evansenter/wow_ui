@@ -1,10 +1,22 @@
-lightweight tag c71b2d0fecb05335b05b04627028217e80c730f0 1.15
+lightweight tag 31468fca8f63745730e40530e907fd7ae8908aec 1.16
 Author:	Bernhard Saumweber <b.saumweber@gmail.com>
-Date:	Sat Sep 2 17:01:11 2017 +0200
+Date:	Thu Dec 14 22:29:43 2017 +0100
 
-commit c71b2d0fecb05335b05b04627028217e80c730f0
+commit 31468fca8f63745730e40530e907fd7ae8908aec
 Author: Bernhard Saumweber <b.saumweber@gmail.com>
-Date:   Sat Sep 2 17:01:11 2017 +0200
+Date:   Thu Dec 14 22:29:43 2017 +0100
 
-    Fixed russian translation not being in toc file and set version to 1.15
+    Added missing mythic modes for ToV, ToS and AtBT
+
+commit 58e9c98bca0b5f0934f048c0dfeeb9e3a9e27311
+Author: Bernhard Saumweber <b.saumweber@gmail.com>
+Date:   Tue Sep 12 00:06:18 2017 +0200
+
+    Skip filtering if we cannot find out which search tab and/or category was used
+
+commit 50c80f0a3402695b99fc8b9adc2f77fa67dc3a97
+Author: Bernhard Saumweber <b.saumweber@gmail.com>
+Date:   Tue Sep 12 00:02:08 2017 +0200
+
+    Set version to next release version: 1.16
 

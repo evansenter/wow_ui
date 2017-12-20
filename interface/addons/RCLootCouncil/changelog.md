@@ -1,3 +1,53 @@
+### v2.7.5
+---
+* It's now (again) possible to see the voting frame while not in the instance.
+
+
+* **Autopass trinkets**
+* Added a new feature which (by default) autopasses trinkets that are not listed for your class in the Dungeon Journal (#314).
+* This can be toggled in the options menu if needed.
+* Note: Trinkets added before Legion are not included in this check.
+
+
+* **Tooltips**
+* Tooltips on the voting frame and loot frame can now be permanently shown.
+* Just double click on the item icon to toggle.
+
+
+###### Bugfixes
+* *Doing reannounce or request rolls could potentially set autopass response in some sessions (#313).*
+* *Attempting to sync with friends or guildmembers on ruRU locale would fail (#317).*
+
+
+### v2.7.4
+---
+Note: This version partially breaks backwards compatibility. All council members needs this version to see player's gear.
+###### Bugfixes
+* *Hopefully fixed disconnect on large raid sizes for real (#313)*
+
+###### Dev
+* **Changed**
+* "lootAck" now contains player gear for all sessions, along with autopasses.
+* Item links in responses have been replaced with itemstrings.
+*  `AutoResponse()` replaced with `SendLootAck` and `DoAutoPasses`.
+
+### v2.7.3
+---
+###### Bugfixes
+* *Fixed a bug causing errors when pressing "Pass". (#315)*
+
+
+### v2.7.2
+---
+* Added filtering for guildranks.
+* Added Sigil of the Dark Titan to the ignore list.
+
+###### Bugfixes
+* *The version checker didn't always sort "Not installed" correctly.*
+* *The "Use RCLootCouncil" popup no longer shows twice for certain settings.*
+* *Added a potential fix for disconnect issues with large raid sizes. (#313)*
+
+
 ### v2.7.1
 ---
 ###### Bugfixes

@@ -117,9 +117,9 @@ function RCLootCouncilML:AddItem(item, baggedEntry, slotIndex, entry)
 		end
 	end
 
-	-- Item isn't properly loaded, so update the data in 1 sec (Should only happen with /rc test)
+	-- Item isn't properly loaded, so update the data next frame (Should only happen with /rc test)
 	if not itemInfo then
-		self:ScheduleTimer("Timer", 1, "AddItem", item, baggedEntry, slotIndex, entry)
+		self:ScheduleTimer("Timer", 0, "AddItem", item, baggedEntry, slotIndex, entry)
 		addon:Debug("Started timer:", "AddItem", "for", item)
 	else
 		addon:SendMessage("RCMLAddItem", item, entry)
@@ -129,13 +129,10 @@ end
 function RCLootCouncilML:GetLootTableForTransmit()
 	local copy = CopyTable(self.lootTable)
 	for k, v in pairs(copy) do
-		if k == "equipLoc" then -- Dont break backward compatibility, generated when received in new version
-			copy[k] = select(4, GetItemInfoInstant(item))
-		elseif k == "typeID" and k == "subTypeID" then -- Generated when received
-			copy[k] = nil
-		elseif k == "baggedEntry" then -- Only ML needs this
-			copy[k] = nil
-		end
+		v["equipLoc"] = select(4, GetItemInfoInstant(v.link))
+		v["typeID"] = nil
+		v["subTypeID"] = nil
+		v["baggedEntry"] = nil -- Only ML needs this.
 	end
 	return copy
 end
@@ -625,23 +622,25 @@ function RCLootCouncilML:OnCommReceived(prefix, serializedMsg, distri, sender)
 
 				addon:ScheduleTimer("SendCommand", 2, sender, "candidates", self.candidates)
 				if self.running then -- Resend lootTable
-					addon:ScheduleTimer("SendCommand", 4, sender, "lootTable", self.lootTable)
+					addon:ScheduleTimer("SendCommand", 4, sender, "lootTable", self:GetLootTableForTransmit())
 					-- v2.2.6 REVIEW For backwards compability we're just sending votingFrame's lootTable
 					-- This is quite redundant and should be removed in the future
-					local table = addon:GetLootTable()
-					-- Remove our own voting data if any
-					for ses, v in ipairs(table) do
-						v.haveVoted = false
-						for _, d in pairs(v.candidates) do
-							d.haveVoted = false
+					if db.observe or addon:IsCouncil(sender) then -- Only send all data to councilmen
+						local table = addon:GetLootTable()
+						-- Remove our own voting data if any
+						for ses, v in ipairs(table) do
+							v.haveVoted = false
+							for _, d in pairs(v.candidates) do
+								d.haveVoted = false
+							end
 						end
+						addon:ScheduleTimer("SendCommand", 5, sender, "reconnectData", table)
 					end
-					addon:ScheduleTimer("SendCommand", 5, sender, "reconnectData", table)
 				end
 				addon:Debug("Responded to reconnect from", sender)
 			elseif command == "lootTable" and addon:UnitIsUnit(sender, addon.playerName) then
 				-- Start a timer to set response as offline/not installed unless we receive an ack
-				self:ScheduleTimer("Timer", 10, "LootSend")
+				self:ScheduleTimer("Timer", 11 + 0.5*#self.lootTable, "LootSend")
 
 			elseif command == "tradable" then -- Raid members send the info of the tradable item he looted.
 				local item = unpack(data)
@@ -773,17 +772,20 @@ function RCLootCouncilML:LootOpened()
 			self:UpdateLootSlots()
 		else -- Otherwise add the loot
 			for i = 1, GetNumLootItems() do
-				local item = GetLootSlotLink(i)
-				if db.altClickLooting then self:ScheduleTimer("HookLootButton", 0.5, i) end -- Delay lootbutton hooking to ensure other addons have had time to build their frames
-				local _, _, quantity, quality = GetLootSlotInfo(i)
-				if self:ShouldAutoAward(item, quality) and quantity > 0 then
-					self:AutoAward(i, item, quality, db.autoAwardTo, db.autoAwardReason, addon.bossName)
+				if addon.lootSlotInfo[i] then
+					local item = addon.lootSlotInfo[i].link -- This can be nil, if this is money(a coin).
+					local quantity = addon.lootSlotInfo[i].quantity
+					local quality = addon.lootSlotInfo[i].quality
+					if db.altClickLooting then self:ScheduleTimer("HookLootButton", 0.5, i) end -- Delay lootbutton hooking to ensure other addons have had time to build their frames
+					if item and self:ShouldAutoAward(item, quality) and quantity > 0 then
+						self:AutoAward(i, item, quality, db.autoAwardTo, db.autoAwardReason, addon.bossName)
 
-				elseif self:CanWeLootItem(item, quality) and quantity > 0 then -- check if our options allows us to loot it
-					self:AddItem(item, false, i)
+					elseif item and self:CanWeLootItem(item, quality) and quantity > 0 then -- check if our options allows us to loot it
+						self:AddItem(item, false, i)
 
-				elseif quantity == 0 then -- it's coin, just loot it
-					LootSlot(i)
+					elseif quantity == 0 then -- it's coin, just loot it
+						LootSlot(i)
+					end
 				end
 			end
 		end
@@ -1352,16 +1354,21 @@ function RCLootCouncilML:TrackAndLogLoot(name, item, responseID, boss, votes, it
 	if reason and not reason.log then return end -- Reason says don't log
 	if not (db.sendHistory or db.enableHistory) then return end -- No reason to do stuff when we won't use it
 	if addon.testMode and not addon.nnp then return end -- We shouldn't track testing awards.
+	local _, link = GetItemInfo(item)
+	local i1,i2
+	if itemReplaced1 then i1 = select(2, GetItemInfo(itemReplaced1)) end
+	if itemReplaced2 then i2 = select(2, GetItemInfo(itemReplaced2)) end
+	if not (link and (i1 or not itemReplaced1) and (i2 or not itemReplaced2)) then return self:ScheduleTimer("TrackAndLogLoot", 0, name, item, responseID, boss, votes, itemReplaced1, itemReplaced2, reason, isToken, tokenRoll, relicRoll, note) end
 	local instanceName, _, difficultyID, difficultyName, _,_,_,mapID, groupSize = GetInstanceInfo()
 	addon:Debug("ML:TrackAndLogLoot()")
-	history_table["lootWon"] 		= item
+	history_table["lootWon"] 		= link
 	history_table["date"] 			= date("%d/%m/%y")
 	history_table["time"] 			= date("%H:%M:%S")
 	history_table["instance"] 		= instanceName.."-"..difficultyName
 	history_table["boss"] 			= boss or _G.UNKNOWN
 	history_table["votes"] 			= votes
-	history_table["itemReplaced1"]= itemReplaced1
-	history_table["itemReplaced2"]= itemReplaced2
+	history_table["itemReplaced1"]= i1
+	history_table["itemReplaced2"]= i2
 	history_table["response"] 		= reason and reason.text or addon:GetResponseText(responseID, tokenRoll, relicRoll)
 	history_table["responseID"] 	= responseID or reason.sort - 400 															-- Changed in v2.0 (reason responseID was 0 pre v2.0)
 	history_table["color"]			= reason and reason.color or {addon:GetResponseColor(responseID, tokenRoll, relicRoll)}	-- New in v2.0

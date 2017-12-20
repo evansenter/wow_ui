@@ -190,10 +190,10 @@ addon.LFRInstances = {
   [1496] = { total=2, base=7, parent=1527, altid=nil, remap={ 1, 2 } }, -- ToS3: Chamber of the Avatar (7/25/17)
   [1497] = { total=1, base=9, parent=1527, altid=nil, remap={ 1 } }, -- ToS4: Deceiver's Fall (8/8/17)
 
-  [1610] = { total=3, base=1, parent=1640, altid=nil, remap={ 1, 2, 3 } }, -- Antorus: Light's Breach
-  [1611] = { total=3, base=4, parent=1640, altid=nil, remap={ 1, 2, 3 } }, -- Antorus: Forbidden Descent
-  [1612] = { total=3, base=7, parent=1640, altid=nil, remap={ 1, 2, 3 } }, -- Antorus: Hope's End
-  [1613] = { total=2, base=10, parent=1640, altid=nil, remap={ 1, 2 } }, -- Antorus: Seat of the Pantheon
+  [1610] = { total=3, base=1, parent=1610, altid=nil, remap={ 1, 2, 3 } }, -- Antorus: Light's Breach
+  [1611] = { total=3, base=4, parent=1610, altid=nil, remap={ 1, 2, 3 } }, -- Antorus: Forbidden Descent
+  [1612] = { total=3, base=7, parent=1610, altid=nil, remap={ 1, 2, 3 } }, -- Antorus: Hope's End
+  [1613] = { total=2, base=10, parent=1610, altid=nil, remap={ 1, 2 } }, -- Antorus: Seat of the Pantheon
 }
 
 local tmp = {}
@@ -2632,7 +2632,7 @@ end
 
 function core:OnInitialize()
   local versionString = GetAddOnMetadata(addonName, "Version")
-  if versionString == "v7.0.11" then
+  if versionString == "v7.0.12" then
     SavedInstances.version = "Dev"
   else
     SavedInstances.version = versionString
