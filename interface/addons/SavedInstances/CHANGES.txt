@@ -1,24 +1,27 @@
-tag 1f676e575e1cb771f04ba80c10f1cf8d182104a9 v7.0.12
+tag b2b5c488c708f7edfcfcecddc124696d570aba64 v7.0.13
 Author:	Benjamin Staneck <staneck@gmail.com>
-Date:	Wed Dec 6 23:48:32 2017 +0100
+Date:	Thu Dec 21 15:17:46 2017 +0100
 
-commit 58546de9aebc9d9bbb1d9212c776c28a0b4eefd8
-Author: chancedj <30790056+chancedj@users.noreply.github.com>
-Date:   Wed Dec 6 17:35:07 2017 -0500
+commit 8ebde998e3bb801156bd9b9da82fd59b5e350d73
+Author: Trid3nt <andytdgibson@gmail.com>
+Date:   Wed Dec 20 12:47:11 2017 +0000
 
-    update parentID from 1640 to 1610
+    Changed wording
+
+commit 0221cf8cce680052969d93a5a2c45ed83f2fda66
+Author: Benjamin Staneck <staneck@gmail.com>
+Date:   Mon Dec 11 10:28:14 2017 +0100
+
+    removed timewalking final boss drops quests as they are not resetting.
     
-    the instanceID is incorrect for the parent.  gotten using the following code:
+    Closes #28
+
+commit e3a2544226f95ededa85e1b42794ea9901198c42
+Author: Trid3nt <andytdgibson@gmail.com>
+Date:   Sun Dec 10 13:46:36 2017 +0000
+
+    Update SavedInstances.lua
     
-        --[[
-        local lfrCount = GetNumRFDungeons();
-        for lfrNdx = 1, lfrCount do
-            local instanceID, _, _, _, _, _, _, _, _, _, _, _, difficulty, _, _, _
-                , _, _, _, instanceName, _ = GetRFDungeonInfo( lfrNdx );
-    
-            if( string.find( instanceName, "Antorus" ) ) then
-                print( "LRFName: ", instanceName, " instanceID: " , instanceID );
-            end;
-        end -- for lfrNdx = 1, lfrCount
-        --]]
+    Changed Parent ID to 1642
+    Added commands to comments section at 142 and 145 to help make it easier in future to troubleshoot.
 

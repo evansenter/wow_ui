@@ -127,12 +127,12 @@ AngryAssign_Pages = {
 		["UpdateId"] = 2689420526,
 		["Contents"] = "Healing Cds:\n1) Hymn + Gandalf\n2) Barrier  + Tide (Right before Blue 2nd stack)\n3) Draxxi + Zaebies + Rally (Right before Green 2nd stack)\n4) Spirit Link + Smoke + G2 Healing Tonics (1st stack after 4th bounding cleave)",
 	},
-	[540890002] = {
-		["Updated"] = 1425959449,
-		["Name"] = "Blackhand",
-		["Id"] = 540890002,
-		["UpdateId"] = 3541964023,
-		["Contents"] = "CD 1st Demolition: Barrier on Ranged, Healing Tide, Ascendance, Spirit Link the 3rd Orange.\n\nCD 2nd Demolition: Revival, Divine Hymn\n\nCD Fall: Devo both times, Spirit Link, AMZ",
+	[1726481028] = {
+		["Updated"] = 1500424870,
+		["Name"] = "2Demonic Inquisition",
+		["Id"] = 1726481028,
+		["UpdateId"] = 3344635527,
+		["Contents"] = "Fel Squal CDs:\n1st: Tide\n2nd: Hymn\n3rd: Aura\n4th: Tide\n5th: Hymn\n6th: Aura",
 	},
 	[1125280814] = {
 		["Updated"] = 1422414988,
@@ -156,19 +156,19 @@ AngryAssign_Pages = {
 		["Backup"] = "Slice Cooldown Order:\n7: Sikonos AMZ/Personal Cooldowns/Toppies\n9: Hymn/Vamp/Goargrim\n10/Phase2: Healing Tide/Loki \n\nPulls: Comet Pull\n1:{triangle} Fuzz---Sac (Vamp)\n2:{diamond} Fuzz---Vigilance Goargarim\n3:{square} Fuzz---Sac (Inno)\n4:{triangle} Vikid---Personal\n5:{diamond} Vikid---Pain Suppression\n6:{square} Vikid---Barrier\n7:{triangle} Fuzz---Personals\n8:{diamond} Fuzz---Vigilance Mt\n9:{square} Fuzz---Personals/Guardian Spirit/Smoke\nIntermission. Repeat.\nSwap Tank Names for the 2ND PHASE!",
 		["Contents"] = "Slice Cooldown Order:\n7: Sikonos AMZ/Personal Cooldowns/Toppies\n9: Hymn/Vamp/Goargrim\n10/Phase2: Healing Tide/Loki/Mtnk Rally\n\nPulls: Comet Pull\n1:{triangle} Fuzz---Sac (Vamp)\n2:{diamond} Fuzz---Vigilance Goargarim\n3:{square} Fuzz---Pain Suppression\n4:{triangle} Vikid---Personal\n5:{diamond} Vikid---Life Cacoon\n6:{square} Vikid---Strong Personal\n7:{triangle} Fuzz---Personals\n8:{diamond} Fuzz---Vigilance Mt\n9:{square} Fuzz---Personals/Guardian Spirit/Smoke\nIntermission. Repeat.\nSwap Tank Names for the 2ND PHASE!",
 	},
-	[1726481028] = {
-		["Updated"] = 1500424870,
-		["Name"] = "2Demonic Inquisition",
-		["Id"] = 1726481028,
-		["UpdateId"] = 3344635527,
-		["Contents"] = "Fel Squal CDs:\n1st: Tide\n2nd: Hymn\n3rd: Aura\n4th: Tide\n5th: Hymn\n6th: Aura",
-	},
 	[2820660469] = {
 		["Updated"] = 1507690371,
 		["Name"] = "sister fister mister",
 		["Id"] = 2820660469,
 		["UpdateId"] = 321453981,
 		["Contents"] = "PURPLE - THENEX XORN INCANTATEM \n\nGREEN - BARMAIDZ AKROMA DADIZZLE\n\nRED - REIN AIRIMIS DJ DR\n\nYELLOW - UGLY ZILAS COMET MAVERIK\n\nBLUE - TELGINA DANK GRIMHUS\n\nORANGE - LANFEAR ZEFARION",
+	},
+	[540890002] = {
+		["Updated"] = 1425959449,
+		["Name"] = "Blackhand",
+		["Id"] = 540890002,
+		["UpdateId"] = 3541964023,
+		["Contents"] = "CD 1st Demolition: Barrier on Ranged, Healing Tide, Ascendance, Spirit Link the 3rd Orange.\n\nCD 2nd Demolition: Revival, Divine Hymn\n\nCD Fall: Devo both times, Spirit Link, AMZ",
 	},
 	[45058146] = {
 		["Updated"] = 1419905154,
@@ -397,7 +397,14 @@ AngryAssign_Pages = {
 AngryAssign_Categories = {
 }
 AngryAssign_State = {
+	["window"] = {
+		["height"] = 499.999908447266,
+		["top"] = 900.000183105469,
+		["left"] = 598.333190917969,
+		["width"] = 700.000061035156,
+	},
 	["locked"] = true,
+	["directionUp"] = false,
 	["display"] = {
 		["y"] = 268.944519042969,
 		["x"] = -7.66943359375,
@@ -417,13 +424,6 @@ AngryAssign_State = {
 		["treewidth"] = 175,
 		["selected"] = 4155211010,
 	},
-	["window"] = {
-		["height"] = 499.999908447266,
-		["top"] = 900.000183105469,
-		["left"] = 598.333190917969,
-		["width"] = 700.000061035156,
-	},
-	["directionUp"] = false,
 }
 AngryAssign_Config = {
 	["backdropColor"] = "00000041",

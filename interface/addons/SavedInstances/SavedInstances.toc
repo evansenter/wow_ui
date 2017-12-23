@@ -1,9 +1,9 @@
 ## Interface: 70300
 ## Title: SavedInstances
 ## Notes: Tracks Raid, Instance, World Boss lockouts for all your characters, daily/weekly quests, currencies, trade cooldowns, and more!
-## Author: chancedj
-## Version: v7.0.12
-## X-ReleaseDate: 2017-12-07T4:35:07Z
+## Author: Trid3nt
+## Version: v7.0.13
+## X-ReleaseDate: 2017-12-20T18:47:11Z
 ## X-License: All Rights Reserved
 ## X-Category: Raid
 ## OptionalDeps: Ace3, CallbackHandler-1.0, LibDataBroker-1.1, LibDBIcon-1.0, LibQTip-1.0
