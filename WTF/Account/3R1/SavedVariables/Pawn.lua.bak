@@ -10,8 +10,6 @@ PawnCommon = {
 	["Debug"] = false,
 	["ColorTooltipBorder"] = true,
 	["ShowTooltipIcons"] = true,
-	["ShowSpecIcons"] = true,
-	["ShowSocketingAdvisor"] = true,
 	["Scales"] = {
 		["\"MrRobot\":HUNTER3"] = {
 			["IconTexturePath"] = 461113,
@@ -425,20 +423,20 @@ PawnCommon = {
 			["SpecID"] = 2,
 			["UnenchantedColor"] = "2f95b0",
 		},
-		["\"MrRobot\":PALADIN3"] = {
-			["IconTexturePath"] = 135873,
+		["\"MrRobot\":WARRIOR1"] = {
+			["IconTexturePath"] = 132355,
 			["PerCharacterOptions"] = {
 			},
-			["Color"] = "f58cba",
-			["ClassID"] = 2,
-			["LocalizedName"] = "Paladin: Retribution",
+			["Color"] = "c79c6e",
+			["ClassID"] = 1,
+			["LocalizedName"] = "Warrior: Arms",
 			["DoNotShow1HUpgrades"] = true,
 			["Role"] = "DAMAGER",
 			["DoNotShow2HUpgrades"] = false,
 			["UpgradesFollowSpecialization"] = true,
 			["Provider"] = "MrRobot",
-			["SpecID"] = 3,
-			["UnenchantedColor"] = "b7698b",
+			["SpecID"] = 1,
+			["UnenchantedColor"] = "957552",
 		},
 		["\"MrRobot\":MAGE1"] = {
 			["IconTexturePath"] = 135932,
@@ -455,20 +453,20 @@ PawnCommon = {
 			["SpecID"] = 1,
 			["UnenchantedColor"] = "2f95b0",
 		},
-		["\"MrRobot\":WARRIOR1"] = {
-			["IconTexturePath"] = 132355,
+		["\"MrRobot\":PALADIN3"] = {
+			["IconTexturePath"] = 135873,
 			["PerCharacterOptions"] = {
 			},
-			["Color"] = "c79c6e",
-			["ClassID"] = 1,
-			["LocalizedName"] = "Warrior: Arms",
+			["Color"] = "f58cba",
+			["ClassID"] = 2,
+			["LocalizedName"] = "Paladin: Retribution",
 			["DoNotShow1HUpgrades"] = true,
 			["Role"] = "DAMAGER",
 			["DoNotShow2HUpgrades"] = false,
 			["UpgradesFollowSpecialization"] = true,
 			["Provider"] = "MrRobot",
-			["SpecID"] = 1,
-			["UnenchantedColor"] = "957552",
+			["SpecID"] = 3,
+			["UnenchantedColor"] = "b7698b",
 		},
 		["\"MrRobot\":WARLOCK2"] = {
 			["IconTexturePath"] = 136172,
@@ -796,6 +794,8 @@ PawnCommon = {
 			["UnenchantedColor"] = "00bf70",
 		},
 	},
+	["ShowSocketingAdvisor"] = true,
+	["ShowSpecIcons"] = true,
 	["ShowItemID"] = false,
 	["ButtonPosition"] = 2,
 	["IgnoreGemsWhileLeveling"] = true,

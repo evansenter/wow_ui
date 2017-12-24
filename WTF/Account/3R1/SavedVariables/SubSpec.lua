@@ -82,88 +82,6 @@ SubSpecStorage = {
 			},
 		}, -- [2]
 	},
-	["Priest Shadow"] = {
-		{
-			["name"] = "Raiding",
-			["data"] = {
-				{
-					["id"] = 22312,
-					["name"] = "Twist of Fate",
-					["column"] = 1,
-				}, -- [1]
-				{
-					["id"] = 22316,
-					["name"] = "Body and Soul",
-					["column"] = 2,
-				}, -- [2]
-				{
-					["id"] = 22487,
-					["name"] = "Mind Bomb",
-					["column"] = 1,
-				}, -- [3]
-				{
-					["id"] = 21751,
-					["name"] = "Lingering Insanity",
-					["column"] = 1,
-				}, -- [4]
-				{
-					["id"] = 22311,
-					["name"] = "Auspicious Spirits",
-					["column"] = 2,
-				}, -- [5]
-				{
-					["id"] = 21720,
-					["name"] = "Mindbender",
-					["column"] = 3,
-				}, -- [6]
-				{
-					["id"] = 21637,
-					["name"] = "Legacy of the Void",
-					["column"] = 1,
-				}, -- [7]
-			},
-		}, -- [1]
-		{
-			["name"] = "Questing",
-			["data"] = {
-				{
-					["id"] = 22312,
-					["name"] = "Twist of Fate",
-					["column"] = 1,
-				}, -- [1]
-				{
-					["id"] = 22316,
-					["name"] = "Body and Soul",
-					["column"] = 2,
-				}, -- [2]
-				{
-					["id"] = 22487,
-					["name"] = "Mind Bomb",
-					["column"] = 1,
-				}, -- [3]
-				{
-					["id"] = 21751,
-					["name"] = "Lingering Insanity",
-					["column"] = 1,
-				}, -- [4]
-				{
-					["id"] = 22311,
-					["name"] = "Auspicious Spirits",
-					["column"] = 2,
-				}, -- [5]
-				{
-					["id"] = 21719,
-					["name"] = "Misery",
-					["column"] = 2,
-				}, -- [6]
-				{
-					["id"] = 21978,
-					["name"] = "Shadow Crash",
-					["column"] = 2,
-				}, -- [7]
-			},
-		}, -- [2]
-	},
 	["Monk Mistweaver"] = {
 		{
 			["name"] = "Mythic+",
@@ -242,6 +160,88 @@ SubSpecStorage = {
 					["id"] = 22218,
 					["name"] = "Mana Tea",
 					["column"] = 1,
+				}, -- [7]
+			},
+		}, -- [2]
+	},
+	["Priest Shadow"] = {
+		{
+			["name"] = "Raiding",
+			["data"] = {
+				{
+					["id"] = 22312,
+					["name"] = "Twist of Fate",
+					["column"] = 1,
+				}, -- [1]
+				{
+					["id"] = 22316,
+					["name"] = "Body and Soul",
+					["column"] = 2,
+				}, -- [2]
+				{
+					["id"] = 22487,
+					["name"] = "Mind Bomb",
+					["column"] = 1,
+				}, -- [3]
+				{
+					["id"] = 21751,
+					["name"] = "Lingering Insanity",
+					["column"] = 1,
+				}, -- [4]
+				{
+					["id"] = 22311,
+					["name"] = "Auspicious Spirits",
+					["column"] = 2,
+				}, -- [5]
+				{
+					["id"] = 21720,
+					["name"] = "Mindbender",
+					["column"] = 3,
+				}, -- [6]
+				{
+					["id"] = 21637,
+					["name"] = "Legacy of the Void",
+					["column"] = 1,
+				}, -- [7]
+			},
+		}, -- [1]
+		{
+			["name"] = "Questing",
+			["data"] = {
+				{
+					["id"] = 22312,
+					["name"] = "Twist of Fate",
+					["column"] = 1,
+				}, -- [1]
+				{
+					["id"] = 22316,
+					["name"] = "Body and Soul",
+					["column"] = 2,
+				}, -- [2]
+				{
+					["id"] = 22487,
+					["name"] = "Mind Bomb",
+					["column"] = 1,
+				}, -- [3]
+				{
+					["id"] = 21751,
+					["name"] = "Lingering Insanity",
+					["column"] = 1,
+				}, -- [4]
+				{
+					["id"] = 22311,
+					["name"] = "Auspicious Spirits",
+					["column"] = 2,
+				}, -- [5]
+				{
+					["id"] = 21719,
+					["name"] = "Misery",
+					["column"] = 2,
+				}, -- [6]
+				{
+					["id"] = 21978,
+					["name"] = "Shadow Crash",
+					["column"] = 2,
 				}, -- [7]
 			},
 		}, -- [2]

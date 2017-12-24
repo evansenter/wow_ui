@@ -1,5 +1,6 @@
 
 OmniCC4Config = {
+	["version"] = "7.3",
 	["groups"] = {
 		{
 			["id"] = "Ignore",
@@ -22,7 +23,7 @@ OmniCC4Config = {
 			["enabled"] = true,
 		}, -- [3]
 	},
-	["version"] = "7.3",
+	["engine"] = "AniUpdater",
 	["groupSettings"] = {
 		["Comet"] = {
 			["enabled"] = true,
@@ -269,5 +270,4 @@ OmniCC4Config = {
 			},
 		},
 	},
-	["engine"] = "AniUpdater",
 }

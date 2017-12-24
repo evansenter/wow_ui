@@ -6,7 +6,7 @@ RaidFrameIconsDB = {
 		["Cometron - Illidan"] = "Cometron - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
 		["Metal - Illidan"] = "Comet - Illidan",
-		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
+		["Natal - Illidan"] = "Pandatal - Illidan",
 		["Natalan - Illidan"] = "Natalan - Illidan",
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Natalan - Dark Iron"] = "Natalan - Dark Iron",
@@ -15,7 +15,7 @@ RaidFrameIconsDB = {
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Pandatal - Illidan"] = "Comet - Illidan",
 		["Evan - Illidan"] = "Comet - Illidan",
-		["Natal - Illidan"] = "Pandatal - Illidan",
+		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
 	},
 	["profiles"] = {
 		["Cometstorm - Illidan"] = {
@@ -30,7 +30,7 @@ RaidFrameIconsDB = {
 		},
 		["Metal - Illidan"] = {
 		},
-		["Centromere - Dark Iron"] = {
+		["Natal - Illidan"] = {
 		},
 		["Natalan - Illidan"] = {
 		},
@@ -53,7 +53,7 @@ RaidFrameIconsDB = {
 		["Evan - Illidan"] = {
 			["iconSize"] = 20,
 		},
-		["Natal - Illidan"] = {
+		["Centromere - Dark Iron"] = {
 		},
 	},
 }

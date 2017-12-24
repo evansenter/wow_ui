@@ -58,8 +58,8 @@ MacroToolkitDB = {
 	},
 	["profiles"] = {
 		["Comet - Illidan"] = {
-			["y"] = 547.733825683594,
-			["x"] = 854.599670410156,
+			["y"] = 547.178283691406,
+			["x"] = 852.932983398438,
 			["height"] = 425,
 			["override"] = true,
 			["noskin"] = true,

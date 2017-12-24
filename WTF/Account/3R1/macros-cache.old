@@ -178,3 +178,8 @@ VER 3 0000000000000062 "ToD" "INV_Misc_QuestionMark"
 /use [nochanneling]14
 /use [nochanneling]Touch of Death
 END
+VER 3 0000000000000065 "Trinkets" "INV_Misc_QuestionMark"
+#showtooltip Velen's Future Sight
+/use 13
+/use [harm][@targettarget,harm][]14
+END

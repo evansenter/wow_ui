@@ -12,11 +12,6 @@ PawnCommon = {
 	["ShowTooltipIcons"] = true,
 	["ShowLootUpgradeAdvisor"] = true,
 	["ShowSocketingAdvisor"] = true,
-	["ShowSpecIcons"] = true,
-	["ShowItemID"] = false,
-	["ButtonPosition"] = 2,
-	["IgnoreGemsWhileLeveling"] = true,
-	["ShowQuestUpgradeAdvisor"] = true,
 	["Scales"] = {
 		["\"MrRobot\":HUNTER3"] = {
 			["IconTexturePath"] = 461113,
@@ -490,20 +485,20 @@ PawnCommon = {
 				["IsShield"] = -1000000,
 			},
 		},
-		["\"MrRobot\":PALADIN3"] = {
-			["IconTexturePath"] = 135873,
+		["\"MrRobot\":WARRIOR1"] = {
+			["IconTexturePath"] = 132355,
 			["PerCharacterOptions"] = {
 			},
-			["Color"] = "f58cba",
-			["LocalizedName"] = "Paladin: Retribution",
-			["ClassID"] = 2,
+			["Color"] = "c79c6e",
+			["LocalizedName"] = "Warrior: Arms",
+			["ClassID"] = 1,
 			["DoNotShow1HUpgrades"] = true,
 			["Role"] = "DAMAGER",
 			["DoNotShow2HUpgrades"] = false,
 			["UpgradesFollowSpecialization"] = true,
 			["Provider"] = "MrRobot",
-			["UnenchantedColor"] = "b7698b",
-			["SpecID"] = 3,
+			["UnenchantedColor"] = "957552",
+			["SpecID"] = 1,
 		},
 		["\"MrRobot\":WARLOCK2"] = {
 			["IconTexturePath"] = 136172,
@@ -710,20 +705,20 @@ PawnCommon = {
 			["UnenchantedColor"] = "0054a6",
 			["SpecID"] = 3,
 		},
-		["\"MrRobot\":WARRIOR1"] = {
-			["IconTexturePath"] = 132355,
+		["\"MrRobot\":PALADIN3"] = {
+			["IconTexturePath"] = 135873,
 			["PerCharacterOptions"] = {
 			},
-			["Color"] = "c79c6e",
-			["LocalizedName"] = "Warrior: Arms",
-			["ClassID"] = 1,
+			["Color"] = "f58cba",
+			["LocalizedName"] = "Paladin: Retribution",
+			["ClassID"] = 2,
 			["DoNotShow1HUpgrades"] = true,
 			["Role"] = "DAMAGER",
 			["DoNotShow2HUpgrades"] = false,
 			["UpgradesFollowSpecialization"] = true,
 			["Provider"] = "MrRobot",
-			["UnenchantedColor"] = "957552",
-			["SpecID"] = 1,
+			["UnenchantedColor"] = "b7698b",
+			["SpecID"] = 3,
 		},
 		["\"MrRobot\":MAGE2"] = {
 			["IconTexturePath"] = 135810,
@@ -801,5 +796,10 @@ PawnCommon = {
 			["SpecID"] = 3,
 		},
 	},
+	["ShowItemID"] = false,
+	["ButtonPosition"] = 2,
+	["IgnoreGemsWhileLeveling"] = true,
+	["ShowQuestUpgradeAdvisor"] = true,
+	["ShowSpecIcons"] = true,
 	["ShownGettingStarted"] = true,
 }

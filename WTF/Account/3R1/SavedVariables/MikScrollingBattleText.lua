@@ -88,10 +88,10 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 				["INCOMING_DODGE"] = {
-					["colorR"] = 1,
 					["fontSize"] = 26,
-					["colorG"] = 1,
+					["colorR"] = 1,
 					["alwaysSticky"] = true,
+					["colorG"] = 1,
 				},
 				["PET_INCOMING_BLOCK"] = {
 					["disabled"] = true,
@@ -276,10 +276,10 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 				["INCOMING_PARRY"] = {
-					["colorR"] = 1,
 					["fontSize"] = 26,
-					["colorG"] = 1,
+					["colorR"] = 1,
 					["alwaysSticky"] = true,
+					["colorG"] = 1,
 				},
 			},
 			["enableBlizzardDamage"] = false,
@@ -642,10 +642,10 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 				["INCOMING_DODGE"] = {
-					["alwaysSticky"] = true,
-					["colorR"] = 1,
 					["colorG"] = 1,
 					["fontSize"] = 26,
+					["alwaysSticky"] = true,
+					["colorR"] = 1,
 				},
 				["PET_INCOMING_BLOCK"] = {
 					["disabled"] = true,
@@ -830,10 +830,10 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 				["INCOMING_PARRY"] = {
-					["alwaysSticky"] = true,
-					["colorR"] = 1,
 					["colorG"] = 1,
 					["fontSize"] = 26,
+					["alwaysSticky"] = true,
+					["colorR"] = 1,
 				},
 			},
 			["enableBlizzardHealing"] = false,

@@ -11,13 +11,11 @@ VER 3 0100000000000015 "Enveloping Mist" "INV_MISC_QUESTIONMARK"
 /use [@mouseover,help,nodead][]Enveloping Mist
 END
 VER 3 0100000000000022 "FoF" "INV_Misc_QuestionMark"
-#showtooltip Fists of Fury
+#showtooltip
 /use [nochanneling]Fists of Fury
 END
 VER 3 0100000000000013 "Life Cocoon" "INV_MISC_QUESTIONMARK"
 #showtooltip Life Cocoon
-/use 13
-/use 14
 /use [@mouseover,help,nodead][]Life Cocoon
 END
 VER 3 0100000000000014 "Renewing Mist" "INV_MISC_QUESTIONMARK"
@@ -51,9 +49,13 @@ VER 3 0100000000000011 "Tier 2 MW" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /use [talent:2/1,nochanneling]Chi Wave;[talent:2/2,@player,nochanneling]Zen Sphere;[talent:2/3,nochanneling]Chi Burst
 END
-VER 3 010000000000001C "Tier 5" "INV_Misc_QuestionMark"
+VER 3 010000000000001C "Tier 5 MW" "INV_Misc_QuestionMark"
 #showtooltip
 /use [talent:5/1,nomod]Healing Elixir;[talent:5/2,nomod]Diffuse Magic;[talent:5/3,nomod]Dampen Harm;[mod:shift]Fortifying Brew
+END
+VER 3 0100000000000023 "Tier 5 WW" "INV_Misc_QuestionMark"
+#showtooltip
+/use [talent:5/1]Healing Elixir;[talent:5/2]Diffuse Magic;[talent:5/3]Dampen Harm
 END
 VER 3 010000000000001D "Tier 6 MW" "INV_Misc_QuestionMark"
 #showtooltip
@@ -62,10 +64,6 @@ END
 VER 3 010000000000001B "Tiger's Lust" "INV_Misc_QuestionMark"
 #showtooltip
 /use [nomod,@mouseover,help,nodead][nomod,@player][nomod][mod:ctrl][mod:alt]Tiger's Lust;[mod:shift]6
-END
-VER 3 0100000000000007 "Transcendence" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/use [nomod]Transcendence: Transfer;[mod:shift][mod:alt]Transcendence
 END
 VER 3 0100000000000018 "Vivify" "INV_Misc_QuestionMark"
 #showtooltip Vivify

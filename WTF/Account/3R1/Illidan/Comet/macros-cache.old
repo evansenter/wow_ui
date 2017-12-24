@@ -69,6 +69,7 @@ VER 3 0100000000000007 "Transcendence" "INV_MISC_QUESTIONMARK"
 END
 VER 3 0100000000000018 "Vivify" "INV_Misc_QuestionMark"
 #showtooltip Vivify
+/use Thunder Focus Tea
 /use [@mouseover,help,nodead][]Vivify
 END
 VER 3 010000000000001E "WDP" "988194"
