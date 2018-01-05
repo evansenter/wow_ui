@@ -1165,7 +1165,12 @@ TidyPlatesHubSettings = {
 		["WidgetAuraTrackDispelFriendly"] = false,
 		["WidgetsTotemIcon"] = false,
 		["FriendlyAlphaSpotlightMode"] = 1,
-		["ScaleIgnoreInactive"] = false,
+		["ColorFriendlyPlayer"] = {
+			["a"] = 0.999997794628143,
+			["b"] = 0.999997794628143,
+			["g"] = 0,
+			["r"] = 0,
+		},
 		["ColorLowHealth"] = {
 			["a"] = 0.999997794628143,
 			["b"] = 0,
@@ -1195,12 +1200,7 @@ TidyPlatesHubSettings = {
 		},
 		["LowHealthThreshold"] = 0.299999982118607,
 		["ScaleSpotlightMode"] = 4,
-		["ColorFriendlyPlayer"] = {
-			["a"] = 0.999997794628143,
-			["b"] = 0.999997794628143,
-			["g"] = 0,
-			["r"] = 0,
-		},
+		["ScaleIgnoreInactive"] = false,
 		["ThreatGlowEnable"] = true,
 		["TextUseBlizzardFont"] = false,
 		["WidgetEliteIndicator"] = false,

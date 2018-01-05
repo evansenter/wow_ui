@@ -8,11 +8,11 @@ SIL_Social = {
 		["Centromere - Dark Iron"] = "Default",
 		["Colton - Dark Iron"] = "Default",
 		["Ereinion - Dark Iron"] = "Default",
-		["Natal - Illidan"] = "Default",
+		["Pandatal - Illidan"] = "Default",
 		["Comet - Illidan"] = "Default",
 		["Plane - Illidan"] = "Default",
 		["Evan - Illidan"] = "Default",
-		["Pandatal - Illidan"] = "Default",
+		["Natal - Illidan"] = "Default",
 	},
 	["global"] = {
 		["chatEvents"] = {

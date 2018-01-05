@@ -82,9 +82,9 @@ SubSpecStorage = {
 			},
 		}, -- [2]
 	},
-	["Monk Windwalker"] = {
+	["Monk Mistweaver"] = {
 		{
-			["name"] = "ST",
+			["name"] = "Mythic+",
 			["data"] = {
 				{
 					["id"] = 19823,
@@ -97,9 +97,9 @@ SubSpecStorage = {
 					["column"] = 2,
 				}, -- [2]
 				{
-					["id"] = 22099,
-					["name"] = "Energizing Elixir",
-					["column"] = 1,
+					["id"] = 22166,
+					["name"] = "Mist Wrap",
+					["column"] = 3,
 				}, -- [3]
 				{
 					["id"] = 19995,
@@ -112,19 +112,19 @@ SubSpecStorage = {
 					["column"] = 1,
 				}, -- [5]
 				{
-					["id"] = 22103,
-					["name"] = "Hit Combo",
-					["column"] = 3,
+					["id"] = 22217,
+					["name"] = "Invoke Chi-Ji, the Red Crane",
+					["column"] = 2,
 				}, -- [6]
 				{
-					["id"] = 21191,
-					["name"] = "Serenity",
-					["column"] = 3,
+					["id"] = 22169,
+					["name"] = "Focused Thunder",
+					["column"] = 2,
 				}, -- [7]
 			},
 		}, -- [1]
 		{
-			["name"] = "AoE",
+			["name"] = "Raids",
 			["data"] = {
 				{
 					["id"] = 19823,
@@ -137,8 +137,8 @@ SubSpecStorage = {
 					["column"] = 2,
 				}, -- [2]
 				{
-					["id"] = 22099,
-					["name"] = "Energizing Elixir",
+					["id"] = 22168,
+					["name"] = "Lifecycles",
 					["column"] = 1,
 				}, -- [3]
 				{
@@ -152,14 +152,14 @@ SubSpecStorage = {
 					["column"] = 1,
 				}, -- [5]
 				{
-					["id"] = 22103,
-					["name"] = "Hit Combo",
-					["column"] = 3,
+					["id"] = 22217,
+					["name"] = "Invoke Chi-Ji, the Red Crane",
+					["column"] = 2,
 				}, -- [6]
 				{
-					["id"] = 22105,
-					["name"] = "Whirling Dragon Punch",
-					["column"] = 2,
+					["id"] = 22218,
+					["name"] = "Mana Tea",
+					["column"] = 1,
 				}, -- [7]
 			},
 		}, -- [2]
@@ -450,9 +450,9 @@ SubSpecStorage = {
 			},
 		}, -- [2]
 	},
-	["Monk Mistweaver"] = {
+	["Monk Windwalker"] = {
 		{
-			["name"] = "Mythic+",
+			["name"] = "ST",
 			["data"] = {
 				{
 					["id"] = 19823,
@@ -465,9 +465,9 @@ SubSpecStorage = {
 					["column"] = 2,
 				}, -- [2]
 				{
-					["id"] = 22166,
-					["name"] = "Mist Wrap",
-					["column"] = 3,
+					["id"] = 22099,
+					["name"] = "Energizing Elixir",
+					["column"] = 1,
 				}, -- [3]
 				{
 					["id"] = 19995,
@@ -480,19 +480,19 @@ SubSpecStorage = {
 					["column"] = 1,
 				}, -- [5]
 				{
-					["id"] = 22217,
-					["name"] = "Invoke Chi-Ji, the Red Crane",
-					["column"] = 2,
+					["id"] = 22103,
+					["name"] = "Hit Combo",
+					["column"] = 3,
 				}, -- [6]
 				{
-					["id"] = 22169,
-					["name"] = "Focused Thunder",
-					["column"] = 2,
+					["id"] = 21191,
+					["name"] = "Serenity",
+					["column"] = 3,
 				}, -- [7]
 			},
 		}, -- [1]
 		{
-			["name"] = "Raids",
+			["name"] = "AoE",
 			["data"] = {
 				{
 					["id"] = 19823,
@@ -505,8 +505,8 @@ SubSpecStorage = {
 					["column"] = 2,
 				}, -- [2]
 				{
-					["id"] = 22168,
-					["name"] = "Lifecycles",
+					["id"] = 22099,
+					["name"] = "Energizing Elixir",
 					["column"] = 1,
 				}, -- [3]
 				{
@@ -520,14 +520,14 @@ SubSpecStorage = {
 					["column"] = 1,
 				}, -- [5]
 				{
-					["id"] = 22217,
-					["name"] = "Invoke Chi-Ji, the Red Crane",
-					["column"] = 2,
+					["id"] = 22103,
+					["name"] = "Hit Combo",
+					["column"] = 3,
 				}, -- [6]
 				{
-					["id"] = 22218,
-					["name"] = "Mana Tea",
-					["column"] = 1,
+					["id"] = 22105,
+					["name"] = "Whirling Dragon Punch",
+					["column"] = 2,
 				}, -- [7]
 			},
 		}, -- [2]

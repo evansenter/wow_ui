@@ -35,10 +35,6 @@ VER 3 0000000000000061 "DH" "INV_Misc_QuestionMark"
 /use 14
 /cast Divine Hymn
 END
-VER 3 0000000000000055 "EE" "ABILITY_MONK_ENERGIZINGWINE"
-#showtooltip
-/use Energizing Elixir
-END
 VER 3 0000000000000058 "Essence Font" "INV_Misc_QuestionMark"
 #showtooltip Essence Font
 /use 13
@@ -145,8 +141,6 @@ VER 3 0000000000000054 "Sheilun's Gift" "INV_Misc_QuestionMark"
 END
 VER 3 0000000000000053 "SotW" "INV_Misc_QuestionMark"
 #showtooltip Strike of the Windlord
-/use [nochanneling]13
-/use [nochanneling]14
 /use [nochanneling]Strike of the Windlord
 END
 VER 3 000000000000005A "SW:P" "INV_Misc_QuestionMark"
@@ -174,8 +168,6 @@ VER 3 000000000000003E "Tiger Palm" "INV_MISC_QUESTIONMARK"
 END
 VER 3 0000000000000062 "ToD" "INV_Misc_QuestionMark"
 #showtooltip Touch of Death
-/use [nochanneling]13
-/use [nochanneling]14
 /use [nochanneling]Touch of Death
 END
 VER 3 0000000000000065 "Trinkets" "INV_Misc_QuestionMark"
