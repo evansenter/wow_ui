@@ -19,6 +19,10 @@ VER 3 0000000000000045 "BoF" "ABILITY_MONK_BREATHOFFIRE"
 /use 14
 /use Breath of Fire
 END
+VER 3 0000000000000066 "Clarity of Will" "1022947"
+#showtooltip
+/use [target=mouseover,help,nodead][]Clarity of Will
+END
 VER 3 000000000000004E "CoH" "INV_Misc_QuestionMark"
 #showtooltip
 /use [target=mouseover,help,nodead][]Circle of Healing

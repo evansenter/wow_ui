@@ -293,5 +293,5 @@ IgnoreMore: enabled
 AshChat: enabled
 WIM: enabled
 LibBabble-Race-3.0: enabled
-Breakables: enabled
+Breakables: disabled
 LibBabble-Inventory-3.0: enabled
