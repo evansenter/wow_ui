@@ -1,9 +1,9 @@
 ------------------------------------------------------------------------
-r808 | olzenkhaw | 2017-12-09 08:18:41 -0600 (Sat, 09 Dec 2017) | 1 line
+r810 | olzenkhaw | 2018-03-03 00:30:51 +0000 (Sat, 03 Mar 2018) | 1 line
 Changed paths:
-   M /trunk/Oilvl.lua
    M /trunk/Oilvl.toc
+   M /trunk/OilvlPlayer.lua
 
-v6.7.34 - fixed Raid Progression Details bugs.
+v6.7.35 - fixed bugs.
 ------------------------------------------------------------------------
 

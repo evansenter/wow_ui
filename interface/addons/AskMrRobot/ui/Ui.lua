@@ -170,7 +170,7 @@ local function createMainWindow()
 	local lblStatus = AceGUI:Create("AmrUiLabel")
 	lblStatus:SetWidth(900)
 	lblStatus:SetFont(Amr.CreateFont("Italic", 12, Amr.Colors.TextTan))
-	lblStatus:SetText("Ask Mr. Robot " .. L.MainStatusText("v" .. GetAddOnMetadata(Amr.ADDON_NAME, "Version"), "http://www.askmrrobot.com/wow/addon"))
+	lblStatus:SetText("Ask Mr. Robot " .. L.MainStatusText("v" .. GetAddOnMetadata(Amr.ADDON_NAME, "Version"), "https://www.askmrrobot.com/wow/addon"))
 	lblStatus:SetJustifyH("CENTER")
 	lblStatus:SetWordWrap(false)
 	lblStatus:SetPoint("TOP", f.content, "BOTTOM")
@@ -191,7 +191,7 @@ local function createMainWindow()
 		{text=L.TabExportText, value="Export"}, 
 		{text=L.TabGearText, value="Gear"}, 
 		{text=L.TabLogText, value="Log"}, 
-		{text=L.TabTeamText, value="Team"},
+		--{text=L.TabTeamText, value="Team"},
 		{text=L.TabOptionsText, value="Options"}
 	})
 	t:SetCallback("OnGroupSelected", onMainTabSelected)

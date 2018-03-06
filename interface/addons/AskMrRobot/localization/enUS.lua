@@ -161,7 +161,7 @@ Export Tab
 ------------------------------------------------------------------------]]
 L.ExportTitle = "Export Instructions"
 L.ExportHelp1 = "1. Copy the text below by pressing Ctrl+C (or Cmd+C on a Mac)"
-L.ExportHelp2 = "2. Go to http://beta.askmrrobot.com/wow/simulator/run and open the character picker"
+L.ExportHelp2 = "2. Go to https://www.askmrrobot.com/wow/gear and open the character picker"
 L.ExportHelp3 = "3. Paste into the textbox under the ADDON section"
 
 L.ExportSplashTitle = "Getting Started"

@@ -253,7 +253,7 @@ local default_config = {
 		tracker_only_currentmap = false,
 		tracker_scale = 1,
 		tracker_show_time = false,
-		use_quest_summary = false,
+		use_quest_summary = true,
 		zone_only_tracked = false,
 		bar_anchor = "bottom",
 		use_old_icons = false,
@@ -2340,7 +2340,9 @@ function WorldQuestTracker.UpdateRareIcons (index, mapID)
 					
 					--widget.Texture:SetTexture ([[Interface\Scenarios\ScenarioIcon-Boss]])
 					widget.TextureCustom:SetTexture ([[Interface\MINIMAP\ObjectIconsAtlas]])
-					widget.TextureCustom:SetTexCoord (423/512, 447/512, 344/512, 367/512)
+					--widget.TextureCustom:SetTexCoord (423/512, 447/512, 344/512, 367/512) --pre 7.3.5
+					widget.TextureCustom:SetTexCoord (413/512, 438/512, 204/512, 228/512) --fix by @HyperAktiveBonusBanane at curse forge, the coords was wrong, the star icon wasn't showing up
+					
 					widget.TextureCustom:SetSize (16, 16)
 					widget.TextureCustom:Show()
 					
@@ -7951,7 +7953,7 @@ hooksecurefunc ("ToggleWorldMap", function (self)
 				
 				local IconSize = 14
 				
-				--all tracker options
+				--all tracker options ~tracker config
 				GameCooltip:AddLine (L["S_MAPBAR_OPTIONSMENU_TRACKERCONFIG"])
 				GameCooltip:AddIcon ([[Interface\AddOns\WorldQuestTracker\media\ArrowGridT]], 1, 1, IconSize, IconSize, 944/1024, 993/1024, 272/1024, 324/1024)
 				
@@ -8001,7 +8003,7 @@ hooksecurefunc ("ToggleWorldMap", function (self)
 					GameCooltip:AddIcon ([[Interface\BUTTONS\UI-AutoCastableOverlay]], 2, 1, 16, 16, .4, .6, .4, .6)
 				end
 				GameCooltip:AddMenu (2, options_on_click, "tracker_is_movable", true)
-				
+				--locked
 				if (WorldQuestTracker.db.profile.tracker_is_movable) then
 					GameCooltip:AddLine (L["S_MAPBAR_OPTIONSMENU_TRACKERMOVABLE_LOCKED"], "", 2)
 				else
@@ -8013,6 +8015,15 @@ hooksecurefunc ("ToggleWorldMap", function (self)
 					GameCooltip:AddIcon ([[Interface\BUTTONS\UI-AutoCastableOverlay]], 2, 1, 16, 16, .4, .6, .4, .6)
 				end
 				GameCooltip:AddMenu (2, options_on_click, "tracker_is_locked", not WorldQuestTracker.db.profile.tracker_is_locked)
+				--reset pos
+				GameCooltip:AddLine ("Reset Position", "", 2)
+				GameCooltip:AddMenu (2, function()
+					options_on_click (_, _, "tracker_is_movable", false)
+					C_Timer.After (0.5, function()
+						options_on_click (_, _, "tracker_is_movable", true)
+						LibWindow.SavePosition (WorldQuestTrackerScreenPanel)
+					end)
+				end)
 				
 				--				
 				GameCooltip:AddLine ("$div", nil, 2, nil, -5, -11)
@@ -8868,9 +8879,6 @@ hooksecurefunc ("ToggleWorldMap", function (self)
 					--print (xp, xpForNextPoint)
 				end
 
-				local str = "|TInterface\\AddOns\\WorldQuestTracker\\media\\icon_artifactpower_blueT:0|t"
-				GameCooltip:AddLine (format (L["S_APOWER_DOWNVALUE"], str), "", 1, "white", _, 10)
-				
 				GameCooltip:AddLine ("", "", 1, "green", _, 10)
 				GameCooltip:AddLine (format (L["S_MAPBAR_RESOURCES_TOOLTIP_TRACKALL"], L["S_QUESTTYPE_ARTIFACTPOWER"]), "", 1, "green", _, 10)
 				GameCooltip:SetOption ("LeftTextHeight", 22)
@@ -8878,9 +8886,7 @@ hooksecurefunc ("ToggleWorldMap", function (self)
 				GameCooltip:Show(self)
 				
 				CooltipOnTop_WhenFullScreen()
-				
---WQT_QUEST_NAMES_AND_ICONS [WQT_QUESTTYPE_GOLD].icon
---WQT_QUEST_NAMES_AND_ICONS [WQT_QUESTTYPE_RESOURCE].icon
+
 			end)
 			
 			local resource_IconsOnLeave = function (self)
@@ -8913,7 +8919,6 @@ hooksecurefunc ("ToggleWorldMap", function (self)
 			
 		else
 			WorldQuestTracker.HideWorldQuestsOnWorldMap()
-			--print ("eh pra hidar...")
 			
 			--is zone map?
 			if (WorldQuestTracker.ZoneHaveWorldQuest (WorldMapFrame.mapID)) then
@@ -9298,13 +9303,10 @@ local GetOrCreateZoneSummaryWidget = function (index)
 	button:SetPoint ("bottomleft", ZoneSumaryFrame, "bottomleft", 0, ((index-1)* (ZoneSumaryFrame.WidgetHeight + 1)) -2)
 	button:SetSize (ZoneSumaryFrame.WidgetWidth, ZoneSumaryFrame.WidgetHeight)
 	button:SetFrameLevel (worldFramePOIs:GetFrameLevel()+1)
-	--button:SetBackdrop (ZoneSumaryFrame.WidgetBackdrop)
-	--button:SetBackdropColor (unpack (ZoneSumaryFrame.WidgetBackdropColor))
 	
 	local buttonIcon = WorldQuestTracker.CreateZoneWidget (index, "WorldQuestTrackerZoneSummaryFrame_WidgetIcon", button)
 	buttonIcon:SetPoint ("left", button, "left", 2, 0)
 	buttonIcon:SetSize (ZoneSumaryFrame.IconSize, ZoneSumaryFrame.IconSize)
-	--buttonIcon:SetFrameStrata ("DIALOG")
 	buttonIcon:SetFrameLevel (worldFramePOIs:GetFrameLevel()+2)
 	button.Icon = buttonIcon
 	
@@ -9508,6 +9510,11 @@ function WorldQuestTracker.SetupZoneSummaryButton (summaryWidget, zoneWidget)
 
 	summaryWidget.BlackBackground:SetAlpha (.4)
 	summaryWidget.Highlight:SetAlpha (.2)
+	
+--	Icon.timeBlipRed:SetAlpha (1)
+--	Icon.timeBlipOrange:SetAlpha (1)
+--	Icon.timeBlipYellow:SetAlpha (1)
+--	Icon.timeBlipGreen:SetAlpha (1)
 	
 	summaryWidget:Show()
 end

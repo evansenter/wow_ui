@@ -1,7 +1,7 @@
 ## Interface: 70300
 ## Title: Ask Mr. Robot
 ## Author: Team Robot, Inc.
-## Version: 55
+## Version: 57
 ## Notes: Gear import/export, combat logging, and more.
 ## URL: www.askmrrobot.com
 ## SavedVariables: AskMrRobotDb3
@@ -21,6 +21,7 @@ Libs\AceGUI-3.0\AceGUI-3.0.xml
 
 localization\enUS.lua
 localization\ruRU.lua
+localization\ptBR.lua
 ##localization\frFR.lua
 ##localization\itIT.lua
 

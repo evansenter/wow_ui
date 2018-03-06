@@ -1,7 +1,7 @@
-changeset:   267:85b0dc5238d4
-tag:         v7.3.2.267-release
+changeset:   275:ed8fa308d9c7
+tag:         v7.3.5.275-release
 user:        Tercio
-date:        Fri Jan 12 11:54:18 2018 -0200
-summary:     - Fixed all pet battles icons which was showing an interrogation mark.
+date:        Mon Feb 26 11:16:54 2018 -0300
+summary:     - Fixed 'template not found' error caused by a newer version of the framework overwriting template tables from other addons.
 
 

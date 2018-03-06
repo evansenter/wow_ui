@@ -1,13 +1,7 @@
-<<<<<<< .mine
-## Interface: 70000
-||||||| .r16
 ﻿## Interface: 70000
-=======
-﻿## Interface: 70300
->>>>>>> .r17
 ## LoadOnDemand: 1
 ## Title: Lib: Window-1.1
-## Version: 1.1.15
+## Version: 1.1.@project-revision@
 ## Notes: A library that handles the basics of "window" style frames
 ## Author: Mikk
 ## eMail: dpsgnome@mail.com

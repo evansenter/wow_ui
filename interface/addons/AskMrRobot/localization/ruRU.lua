@@ -163,7 +163,7 @@ Export Tab
 ------------------------------------------------------------------------]]
 L.ExportTitle = "Инструкции Экспорта"
 L.ExportHelp1 = "1. Скопируйте текст ниже нажав Ctrl+C (или Cmd+C на Mac)"
-L.ExportHelp2 = "2. Перейдите на http://www.askmrrobot.com/wow/player и выберете своего персонажа"
+L.ExportHelp2 = "2. Перейдите на https://www.askmrrobot.com/wow/gear и выберете своего персонажа"
 L.ExportHelp3 = "3. Вставьте это в тектовое поле в разделее ADDON"
 
 L.ExportSplashTitle = "Начало работы"

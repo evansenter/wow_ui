@@ -1,24 +1,22 @@
-tag 99b5abb5a5f4454d0368ec00e03362d6ae5cd1cd v1.8.5
-Author:	Navv <navv1234@gmail.com>
-Date:	Wed Jan 17 06:49:39 2018 +0200
+lightweight tag df729f159abfad4943627229eed572147b63c188 v1.9.1
+Author:	Dave Hendler <sollaires@gmail.com>
+Date:	Tue Jan 30 14:42:35 2018 -0800
 
-v1.8.5
-
-commit 6a9f5edeb8d4d819a4adb3466e5babb52728aba3
+commit df729f159abfad4943627229eed572147b63c188
 Author: Dave Hendler <sollaires@gmail.com>
-Date:   Tue Jan 16 18:07:01 2018 -0800
+Date:   Tue Jan 30 14:42:35 2018 -0800
 
-    Update version
+    Update release version
 
-commit 6a9f5edeb8d4d819a4adb3466e5babb52728aba3
+commit 0498a3f7f1923c5a23104e0129ec810f61935890
 Author: Dave Hendler <sollaires@gmail.com>
-Date:   Tue Jan 16 18:07:01 2018 -0800
+Date:   Tue Jan 30 14:42:24 2018 -0800
 
-    Update version
+    Make spacing more consistent
 
-commit c958d8255901a6bc274ccc6e743c2016b40560d2
+commit 332e6998f217bdd89d129255cfba88f38e126bce
 Author: Dave Hendler <sollaires@gmail.com>
-Date:   Tue Jan 16 18:06:18 2018 -0800
+Date:   Tue Jan 30 14:40:58 2018 -0800
 
-    Fix issue with 7.3.5 - IsUsableItem() now returns false for artifacts so skip this check for now
+    Fix dumb typo of variable name
 

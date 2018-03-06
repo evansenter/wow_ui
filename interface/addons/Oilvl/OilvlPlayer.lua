@@ -440,7 +440,7 @@ local xname2 = {}
 
 function OiLvLInspect_Update()
 	if InspectFrame and not InspectFrame:IsShown() then return -1 end
-	if cfg ~= nil and cfg.oilvlcharilvl and cfg.oilvlcharilvl ~= nil then
+	if cfg ~= nil and cfg.oilvlcharilvl and cfg.oilvlcharilvl ~= nil and InspectFrame and InspectFrame.unit then
 		local n = 0 -- total equipped gear
 		local ailvl = 0 -- average item level
 		local n2 = 0 -- total upgradable gear

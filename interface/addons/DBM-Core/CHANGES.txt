@@ -1,257 +1,89 @@
-tag bd9c436f965725aec83dd1956854df43a4fa852f 7.3.17
+tag 6cb4aae6246f2986323a2cbd368364ea6516e0f1 7.3.23
 Author:	subversion <svn@deadlybossmods.com>
-Date:	Thu Jan 11 23:43:42 2018 +0100
+Date:	Wed Feb 21 22:14:54 2018 +0100
 
-Tagging as 7.3.17
+Tagging as 7.3.23
 
-commit 1f4b300bb972e307eeba3eca1544a2759549ba82
+commit 9b0ba08659b3e8b1beb98d2e25da071a4bdd51a2
 Author: subversion <svn@deadlybossmods.com>
-Date:   Thu Jan 11 23:43:42 2018 +0100
+Date:   Wed Feb 21 22:14:54 2018 +0100
 
-    increment version number to 7.3.17
+    increment version number to 7.3.23
 
-commit bdcb91badcadc65392e92053fb5c2b70bb781443
+commit c810219a66ba40862142a5f99820a392470fea02
 Author: subversion <svn@deadlybossmods.com>
-Date:   Thu Jan 11 23:34:41 2018 +0100
+Date:   Wed Feb 21 08:02:50 2018 +0100
 
-    Omega via svn r17166:
-    Added some missing GTFOs to Coven and Argus
-    Fixed Machinations timer not canceling when all adds dead
-    Improved interrupt warnings on Mythic Coven to a 3 person rotation
-    Cleaned up unused and some comment cleanup.
-    Changed Cosmic Glare warning text
+    Omega via svn r17327:
+    even shorter yells. really trim up the chat space to give most clear but short messages possible
 
-commit 5a71743df001a8c42df254548e24c62e20aa4eb1
+commit 06d15a9359838f669dac68fa2cb4096b1f745b3b
 Author: subversion <svn@deadlybossmods.com>
-Date:   Thu Jan 11 02:13:02 2018 +0100
+Date:   Wed Feb 21 06:54:41 2018 +0100
 
-    Omega via svn r17165:
-    Cleanup timers earlier on Argus Stage 2-3 transition, also, hide info frame for stage 3 non mythic, it?\226?\128?\153s not needed in consteller stage.
+    Omega via svn r17326:
+    Possibly fix gaze timer now showing in P3? can?\226?\128?\153t confirm it?\226?\128?\153s even broken but a user says it is so switching to emote until I can verify P3 still has a UNIT_ event for it
 
-commit cbfaba364dbfb784a5603c17321093c74840a2ee
+commit 745e984f8687f3d7634a9dee4ee92f5fee920832
 Author: subversion <svn@deadlybossmods.com>
-Date:   Wed Jan 10 06:16:07 2018 +0100
+Date:   Wed Feb 21 06:14:43 2018 +0100
 
-    Omega via svn r17164:
-    Test function
+    Omega via svn r17325:
+    Countdown tweaks
 
-commit a90ff4b0c9a2004fbe4d7b0760bc97b3ddf45a2f
+commit 95048fd50408063957a559f18e38f408bd9e7b17
 Author: subversion <svn@deadlybossmods.com>
-Date:   Wed Jan 10 06:10:58 2018 +0100
+Date:   Wed Feb 21 04:32:28 2018 +0100
 
-    Omega via svn r17163:
-    This should probably fix it
+    Omega via svn r17324:
+    Use red text for combo yells
 
-commit cd733c87b2c7f4d0a08fc237e7fb6ce502b6cf22
+commit 96463c329faee86293e874dcda0a81e95907a4d6
 Author: subversion <svn@deadlybossmods.com>
-Date:   Wed Jan 10 05:48:33 2018 +0100
+Date:   Wed Feb 21 04:02:21 2018 +0100
 
-    Omega via svn r17162:
-    temp fix, callbacks still need fixes
+    Omega via svn r17323:
+    Improve tank swap code for argus so it makes sure you taunt at 2-3 stacks if debuff will fade before next scythe, instead of waiting for debuff to fade first. This should fix serious issue where it wasn?\226?\128?\153t warning at 2 stacks on mythic
 
-commit 7f6e8cd34e53533fa20493198e99850c9b55a676
+commit f911c482e8f6f786725a4215dcf20cad8f1dd939
 Author: subversion <svn@deadlybossmods.com>
-Date:   Wed Jan 10 01:44:16 2018 +0100
+Date:   Tue Feb 20 20:17:22 2018 +0100
 
-    Omega via svn r17161:
-    Move this back
+    Omega via svn r17322:
+    version check
 
-commit 071ae212b88c67634663afbd19453cbb415ca418
+commit 64e403e51dfffc41882db4ef17042c48d7cda018
 Author: subversion <svn@deadlybossmods.com>
-Date:   Wed Jan 10 01:37:30 2018 +0100
+Date:   Tue Feb 20 19:49:24 2018 +0100
 
-    Omega via svn r17160:
-    Enable respawn for garothi
+    Omega via svn r17321:
+    Fixed regression that caused sentence of sargeras timers to break in last update
 
-commit 3fca660faf36e456eae0254abf35dc633e9939ca
+commit ddaf34658ff50e13359c294547a2f8f038f56842
 Author: subversion <svn@deadlybossmods.com>
-Date:   Tue Jan 9 21:39:42 2018 +0100
+Date:   Mon Feb 19 22:41:19 2018 +0100
 
-    Omega via svn r17159:
-    update version info
+    Omega via svn r17320:
+    Change this warning to use dungeon journal for non english locals
 
-commit 96fcd2c4023dfc6aeec9f608731a2f23c02f9280
+commit 16c4a3d1281351f119b035d0032d6e90d6d9124e
 Author: subversion <svn@deadlybossmods.com>
-Date:   Tue Jan 9 03:47:42 2018 +0100
+Date:   Fri Feb 16 06:20:37 2018 +0100
 
-    Omega via svn r17158:
-    since i accidentally left it as an icon yell, might as well switch description back
+    Omega via svn r17319:
+    small fix with warning text firing before variable reset.
 
-commit b29abf57ca06cc8b427c332a55cb768ec70bdab3
+commit b9d7f09a5d74acf74fc2993fe392de0420689b76
 Author: subversion <svn@deadlybossmods.com>
-Date:   Mon Jan 8 23:32:20 2018 +0100
+Date:   Thu Feb 15 06:21:20 2018 +0100
 
-    Omega via svn r17157:
-    Timer update callback
+    Omega via svn r17318:
+    timer fixes and new countdown for mythic only
 
-commit 1064ff8236eedd646e291de2cf0466429092543a
+commit 4406eb46353eaf7086e986d168060c323e26a582
 Author: subversion <svn@deadlybossmods.com>
-Date:   Mon Jan 8 23:03:20 2018 +0100
+Date:   Wed Feb 14 23:58:10 2018 +0100
 
-    Omega via svn r17156:
-    swap event order for ENCOUNTER_END so respawn timer shows after mod wipe is called to help WA?\226?\128?\153s
-
-commit b01841319f3248cf02ee47080aa3118d10b25de2
-Author: subversion <svn@deadlybossmods.com>
-Date:   Mon Jan 8 06:54:14 2018 +0100
-
-    Omega via svn r17155:
-    Filter by target/focus for those dog breath countdowns, which also means disabling first ones
-
-commit c2c75c0a50f7871905e0a72c30209de45d0312a6
-Author: subversion <svn@deadlybossmods.com>
-Date:   Mon Jan 8 06:35:29 2018 +0100
-
-    Omega via svn r17154:
-    some cleanup
-
-commit 4ca1b651930a5b4ab83ead3e3c59914ac3a3cd98
-Author: subversion <svn@deadlybossmods.com>
-Date:   Mon Jan 8 05:52:29 2018 +0100
-
-    Omega via svn r17153:
-    Couple more callback spots
-
-commit 847073bc98464be445880b66fc6ad8d83aef03a6
-Author: subversion <svn@deadlybossmods.com>
-Date:   Mon Jan 8 02:38:34 2018 +0100
-
-    Omega via svn r17152:
-    Improve timer callbacks for improved weak auras
-    1. Any remaining timers not firing timer start/stop callbacks, now fire them
-    2. timers that fired start callbacks but not stop when canceled, fixed (such as break and pull)
-    3. New timer type args:
-    a. Utility timers like pull/break now have timer type arg as ?\226?\128?\156utilitytimer?\226?\128?\157
-    b. Extra timers such as LFG prompt have timer type arg as ?\226?\128?\156extratimer?\226?\128?\157
-    c. Pizza/custom timers have timer type arg as ?\226?\128?\156pizzatimer?\226?\128?\157
-
-commit 23cde3a57598ba5f80bed9e93d3bfe3e67fc5efa
-Author: subversion <svn@deadlybossmods.com>
-Date:   Mon Jan 8 00:29:47 2018 +0100
-
-    Omega via svn r17151:
-    This shouldn?\226?\128?\153t show. remove
-
-commit 403931d3e5efed4d92fd9f9dd8ea976fa239ed68
-Author: subversion <svn@deadlybossmods.com>
-Date:   Mon Jan 8 00:17:49 2018 +0100
-
-    Omega via svn r17150:
-    Fix some icon errors
-
-commit 7a4de9d90e2063f9fede7a52ffb94bc0412bba54
-Author: subversion <svn@deadlybossmods.com>
-Date:   Sun Jan 7 05:25:36 2018 +0100
-
-    Omega via svn r17149:
-    Fix that
-
-commit 2272faffef6ece3695219d3085bd63ba9985e212
-Author: subversion <svn@deadlybossmods.com>
-Date:   Sun Jan 7 05:24:35 2018 +0100
-
-    Omega via svn r17148:
-    Pre empt some GUI stuff
-
-commit 6df713134bde5c58480436b81ba6d9d060f83fcb
-Author: subversion <svn@deadlybossmods.com>
-Date:   Sun Jan 7 04:37:52 2018 +0100
-
-    Omega via svn r17147:
-    Little bit of cleanup
-    Disable speed kill timer if current mythic + lower level than our top keystone/best time, since the best time is only stored for highest keystone we?\226?\128?\153ve achieved and is not applicable for lower keystones.
-
-commit 1559b78c6c3e85aff4afef6a46269170fecc4259
-Author: subversion <svn@deadlybossmods.com>
-Date:   Sun Jan 7 03:52:52 2018 +0100
-
-    Omega via svn r17146:
-    Void trap is now a regular announce, downgraded from special warning on Saprish
-
-commit 4c1ff039b269a4557b4ea6a49980e6a7dc73bdee
-Author: subversion <svn@deadlybossmods.com>
-Date:   Sat Jan 6 21:55:17 2018 +0100
-
-    Omega via svn r17145:
-    Re-enable world count, and disable tank one by default instead
-
-commit 2c002513170a411226309db0e2100cc9e53ddaf1
-Author: subversion <svn@deadlybossmods.com>
-Date:   Sat Jan 6 21:52:46 2018 +0100
-
-    Omega via svn r17144:
-    Add countdowns to maws on doggos
-    KR update
-
-commit 267c4e574f537d9fa54a888ee98c59df299c0306
-Author: subversion <svn@deadlybossmods.com>
-Date:   Sat Jan 6 06:45:17 2018 +0100
-
-    Omega via svn r17143:
-    Give this a voice
-
-commit eca1d9a4ddda5f7467bd26838d80b95cf9a171a0
-Author: subversion <svn@deadlybossmods.com>
-Date:   Fri Jan 5 21:56:54 2018 +0100
-
-    Omega via svn r17142:
-    Two bug fixes reported by ?\236?\158?\144?\235?\175?\184/?\237?\140?\140?\236?\152?\164?\236?\166?\136 (?\236?\149?\177)
-
-commit 2f5ad95e3c9ea467a9618015b717a4f7b5a9bbef
-Author: subversion <svn@deadlybossmods.com>
-Date:   Fri Jan 5 14:23:17 2018 +0100
-
-    ultrashining via svn r17141:
-    zhTW update
-
-commit af6c564c7fddb76ab45cf58b9fe30f2f5cf39618
-Author: subversion <svn@deadlybossmods.com>
-Date:   Fri Jan 5 12:34:11 2018 +0100
-
-    Omega via svn r17140:
-    change tank count to 3 instead of 4
-    disable worlds by default. should tone down counting on hasabel some
-
-commit 3f02263c6d5385d9165c35ecc06acb3a6ca7bdce
-Author: subversion <svn@deadlybossmods.com>
-Date:   Fri Jan 5 06:22:09 2018 +0100
-
-    Omega via svn r17139:
-    another protection for good measure
-
-commit 8f22db00ff2fabc00a2fb9288715eb656f7eec36
-Author: subversion <svn@deadlybossmods.com>
-Date:   Fri Jan 5 06:12:34 2018 +0100
-
-    Omega via svn r17138:
-    if bar object doesn?\226?\128?\153t exist when AddTime runs, use Start, like update does
-    Also, don?\226?\128?\153t run at all if bars are disabled
-
-commit d9a040ea59c9c5541da65530da20d6784bb2a131
-Author: subversion <svn@deadlybossmods.com>
-Date:   Fri Jan 5 04:32:33 2018 +0100
-
-    Omega via svn r17137:
-    Fixed a bug where timers would start on wipe on king
-
-commit 6a5a887127a761bf9b9bb1c86ca1e22fb12d484f
-Author: subversion <svn@deadlybossmods.com>
-Date:   Fri Jan 5 03:50:32 2018 +0100
-
-    Omega via svn r17136:
-    Minor tweaks
-
-commit c2b0bf99027a4579d7d9c39e4bbe3bd8f82d362a
-Author: subversion <svn@deadlybossmods.com>
-Date:   Fri Jan 5 02:16:05 2018 +0100
-
-    Omega via svn r17135:
-    Make BW RL happy with sky yells, at least in English
-
-commit 5cb01d1939951a833dcbb817918f12df94cd8011
-Author: subversion <svn@deadlybossmods.com>
-Date:   Fri Jan 5 00:20:08 2018 +0100
-
-    tandanu via svn r17134:
+    tandanu via svn r17317:
     increment alpha version
 

@@ -757,7 +757,6 @@ L["Solid color to use in the indicator, only used if you do not have use aura ic
 L["Sort method"] = "Méthode de tri"
 L["Sort order"] = "Ordre de tri"
 L["Sorting"] = "Tri"
-L["Soul Effigy bar"] = "Barre d'Effigie de l’âme"
 L["Soul Shards"] = "Fragments d'âme"
 L["Soul shards"] = "Fragments d'âme"
 L["Spacing"] = "Espacement"

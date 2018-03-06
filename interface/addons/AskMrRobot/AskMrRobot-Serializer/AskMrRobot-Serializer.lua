@@ -1,7 +1,7 @@
 -- AskMrRobot-Serializer will serialize and communicate character data between users.
 -- This is used primarily to associate character information to logs uploaded to askmrrobot.com.
 
-local MAJOR, MINOR = "AskMrRobot-Serializer", 55
+local MAJOR, MINOR = "AskMrRobot-Serializer", 57
 local Amr, oldminor = LibStub:NewLibrary(MAJOR, MINOR)
 
 if not Amr then return end -- already loaded by something else
@@ -137,7 +137,11 @@ Amr.RaceIds = {
     ["Undead"] = 10,
     ["Goblin"] = 11,
     ["Worgen"] = 12,
-    ["Pandaren"] = 13
+    ["Pandaren"] = 13,
+	["Nightborne"] = 14,
+    ["HighmountainTauren"] = 15,
+    ["VoidElf"] = 16,
+    ["LightforgedDraenei"] = 17
 }
 
 Amr.FactionIds = {

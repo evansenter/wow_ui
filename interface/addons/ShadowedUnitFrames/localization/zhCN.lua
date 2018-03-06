@@ -757,7 +757,6 @@ L["Solid color to use in the indicator, only used if you do not have use aura ic
 L["Sort method"] = "分类方式"
 L["Sort order"] = "分类顺序"
 L["Sorting"] = "分类"
-L["Soul Effigy bar"] = "灵魂雕像条"
 L["Soul Shards"] = "灵魂碎片"
 L["Soul shards"] = "灵魂碎片"
 L["Spacing"] = "距离"

@@ -1,7 +1,7 @@
-changeset:   118:5cb881417bbf
-tag:         v55
+changeset:   122:f1da233629be
+tag:         v57
 user:        yellowfive
-date:        Fri Nov 24 19:46:27 2017 -0800
-summary:     Added Antorus to auto-logging.
+date:        Mon Feb 12 19:33:34 2018 -0800
+summary:     Added portuguese translation. Turned off team optimizer for now.
 
 
