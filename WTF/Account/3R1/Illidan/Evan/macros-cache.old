@@ -24,7 +24,7 @@ VER 3 0100000000000022 "Levitate" "INV_Misc_QuestionMark"
 END
 VER 3 010000000000001B "Mana" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/use [harm][@targettarget,harm][]Shadowfiend
+/cast [harm][@targettarget,harm][]Shadowfiend
 END
 VER 3 0100000000000009 "Penance" "INV_Misc_QuestionMark"
 #showtooltip Penance
@@ -48,7 +48,6 @@ VER 3 0100000000000029 "Purify Disease" "INV_Misc_QuestionMark"
 END
 VER 3 0100000000000023 "PW:R" "INV_Misc_QuestionMark"
 #showtooltip Power Word: Radiance
-/use 14
 /use [target=mouseover,help,nodead][]Power Word: Radiance
 END
 VER 3 0100000000000005 "PW:S" "INV_Misc_QuestionMark"

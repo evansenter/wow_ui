@@ -19,6 +19,9 @@ VER 3 0000000000000045 "BoF" "ABILITY_MONK_BREATHOFFIRE"
 /use 14
 /use Breath of Fire
 END
+VER 3 0000000000000067 "Cancel SoR" "237542"
+/cancelaura Spirit of Redemption
+END
 VER 3 0000000000000066 "Clarity of Will" "1022947"
 #showtooltip
 /use [target=mouseover,help,nodead][]Clarity of Will

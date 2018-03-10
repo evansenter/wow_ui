@@ -1,6 +1,6 @@
 
 PawnOptions = {
-	["LastVersion"] = 2.0217,
+	["LastVersion"] = 2.0218,
 	["LastPlayerFullName"] = "Evan-Illidan",
 	["AutoSelectScales"] = false,
 	["UpgradeTracking"] = false,
@@ -8,7 +8,7 @@ PawnOptions = {
 		[128868] = {
 			["Relics"] = {
 				{
-					["ItemLevel"] = 71,
+					["ItemLevel"] = 74,
 					["Type"] = "Holy",
 				}, -- [1]
 				{
@@ -16,7 +16,7 @@ PawnOptions = {
 					["Type"] = "Shadow",
 				}, -- [2]
 				{
-					["ItemLevel"] = 71,
+					["ItemLevel"] = 80,
 					["Type"] = "Holy",
 				}, -- [3]
 			},
@@ -29,11 +29,11 @@ PawnOptions = {
 					["Type"] = "Shadow",
 				}, -- [1]
 				{
-					["ItemLevel"] = 56,
+					["ItemLevel"] = 61,
 					["Type"] = "Blood",
 				}, -- [2]
 				{
-					["ItemLevel"] = 58,
+					["ItemLevel"] = 78,
 					["Type"] = "Shadow",
 				}, -- [3]
 			},
@@ -46,11 +46,11 @@ PawnOptions = {
 					["Type"] = "Holy",
 				}, -- [1]
 				{
-					["ItemLevel"] = 77,
+					["ItemLevel"] = 80,
 					["Type"] = "Life",
 				}, -- [2]
 				{
-					["ItemLevel"] = 72,
+					["ItemLevel"] = 75,
 					["Type"] = "Holy",
 				}, -- [3]
 			},

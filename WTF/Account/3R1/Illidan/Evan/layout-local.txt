@@ -3,7 +3,7 @@ Frame: GarrisonLandingPageMinimapButton
 FrameLevel: 6
 Anchor: TOPRIGHT
 X: -2
-Y: -3
+Y: -34
 W: 53
 H: 53
 Frame: ColorPickerFrame
@@ -55,10 +55,3 @@ X: -432
 Y: 5
 W: 64
 H: 64
-Frame: DefaultRCLootCouncilFrame
-FrameLevel: 1
-Anchor: CENTER
-X: 178
-Y: 106
-W: 918
-H: 420

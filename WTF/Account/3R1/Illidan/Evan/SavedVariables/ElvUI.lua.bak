@@ -2,449 +2,449 @@
 ElvCharacterDB = {
 	["ChatHistoryLog"] = {
 		{
-			"b/c crongust is now a big part of the team", -- [1]
-			"Akromä-Illidan", -- [2]
-			"", -- [3]
+			"1", -- [1]
+			"Bravery-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Akromä", -- [5]
+			"Bravery", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			12386, -- [11]
-			"Player-57-0656B527", -- [12]
+			9828, -- [11]
+			"Player-57-0A65B7F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaAkromä|r",
-			[51] = 1515989604,
-			[50] = "CHAT_MSG_WHISPER",
+			[52] = "|cffc69b6dBravery|r",
+			[51] = 1520398859,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [1]
 		{
-			"BRO实体团队承接：燃烧王座包团，保证四件套装，保底八件装备，接930/940/950装等提升，代刷橙装，代清日常周常，团本维护！便宜金币，欢迎咨询", -- [1]
-			"Ppvebank-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Ppvebank", -- [5]
+			"Rain of Fel on Psytek", -- [1]
+			"Psytek-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Psytek", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			12388, -- [11]
-			"Player-57-0A9C2A70", -- [12]
+			9837, -- [11]
+			"Player-57-09EC0B56", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffaad372Ppvebank|r",
-			[51] = 1515989610,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cfffff468Psytek|r",
+			[51] = 1520398878,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [2]
 		{
-			" ¥ ¥ ~¥ （佶天鸿美服团进度9/11M接史诗毕业，史诗个人拾取，史诗1-8M抱团（普通英雄抱团毕业个人拾取白菜价）阿古斯击杀所有装备可以指定购买M萨墓包团狗蛋坐骑！", -- [1]
-			"Jthecho-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Jthecho", -- [5]
+			"Rain of Fel on Packapunched", -- [1]
+			"Packapunched-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Packapunched", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			12390, -- [11]
-			"Player-57-0A9BAF0D", -- [12]
+			9838, -- [11]
+			"Player-57-06305628", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cff3fc6eaJthecho|r",
-			[51] = 1515989612,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cff0070ddPackapunched|r",
+			[51] = 1520398878,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [3]
 		{
-			"thanks man I apprecaiate it. you too!", -- [1]
-			"Airimis-Illidan", -- [2]
-			"", -- [3]
+			"Arcane Buildup on Kidsquints", -- [1]
+			"Kidsquints-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Airimis", -- [5]
+			"Kidsquints", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			12392, -- [11]
-			"Player-57-0A5E6F6C", -- [12]
+			9839, -- [11]
+			"Player-57-09836372", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffff468Airimis|r",
-			[51] = 1515989617,
-			[50] = "CHAT_MSG_WHISPER",
+			[52] = "|cff00ff96Kidsquints|r",
+			[51] = 1520398879,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [4]
 		{
-			"Yeah DJ thinks if Ambro leaves Crong will too. I'm not sold.", -- [1]
-			"Akromä-Illidan", -- [2]
-			"", -- [3]
+			"3", -- [1]
+			"Psytek-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Akromä", -- [5]
+			"Psytek", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			12397, -- [11]
-			"Player-57-0656B527", -- [12]
+			9840, -- [11]
+			"Player-57-09EC0B56", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaAkromä|r",
-			[51] = 1515989620,
-			[50] = "CHAT_MSG_WHISPER_INFORM",
+			[52] = "|cfffff468Psytek|r",
+			[51] = 1520398880,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [5]
 		{
-			"and lyca likes us too so tonight for instance i talked with crongust first", -- [1]
-			"Akromä-Illidan", -- [2]
-			"", -- [3]
+			"4", -- [1]
+			"Kidsquints-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Akromä", -- [5]
+			"Kidsquints", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			12399, -- [11]
-			"Player-57-0656B527", -- [12]
+			9841, -- [11]
+			"Player-57-09836372", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaAkromä|r",
-			[51] = 1515989621,
-			[50] = "CHAT_MSG_WHISPER",
+			[52] = "|cff00ff96Kidsquints|r",
+			[51] = 1520398880,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [6]
 		{
-			"BRO实体团队承接：燃烧王座包团，保证四件套装，保底八件装备，接930/940/950装等提升，代刷橙装，代清日常周常，团本维护！便宜金币，欢迎咨询", -- [1]
-			"Ppvebank-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Ppvebank", -- [5]
+			"3", -- [1]
+			"Packapunched-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Packapunched", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			12405, -- [11]
-			"Player-57-0A9C2A70", -- [12]
+			9842, -- [11]
+			"Player-57-06305628", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffaad372Ppvebank|r",
-			[51] = 1515989626,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cff0070ddPackapunched|r",
+			[51] = 1520398880,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [7]
 		{
-			"yeah I thought the exact same", -- [1]
-			"Akromä-Illidan", -- [2]
-			"", -- [3]
+			"Arcane Buildup on Bravery", -- [1]
+			"Bravery-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Akromä", -- [5]
+			"Bravery", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			12406, -- [11]
-			"Player-57-0656B527", -- [12]
+			9843, -- [11]
+			"Player-57-0A65B7F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaAkromä|r",
-			[51] = 1515989630,
-			[50] = "CHAT_MSG_WHISPER",
+			[52] = "|cffc69b6dBravery|r",
+			[51] = 1520398880,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [8]
 		{
-			"^LFW_L", -- [1]
-			"Vna-Illidan", -- [2]
-			"", -- [3]
-			"7. TCForwarder6IIll", -- [4]
-			"Vna", -- [5]
+			"2", -- [1]
+			"Packapunched-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Packapunched", -- [5]
 			"", -- [6]
 			0, -- [7]
-			7, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			12413, -- [11]
-			"Player-57-0A83EDA7", -- [12]
+			9844, -- [11]
+			"Player-57-06305628", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc41e3aVna|r",
-			[51] = 1515989633,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cff0070ddPackapunched|r",
+			[51] = 1520398881,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [9]
 		{
-			"but in past two raids", -- [1]
-			"Akromä-Illidan", -- [2]
-			"", -- [3]
+			"3", -- [1]
+			"Kidsquints-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Akromä", -- [5]
+			"Kidsquints", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			12414, -- [11]
-			"Player-57-0656B527", -- [12]
+			9845, -- [11]
+			"Player-57-09836372", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaAkromä|r",
-			[51] = 1515989635,
-			[50] = "CHAT_MSG_WHISPER",
+			[52] = "|cff00ff96Kidsquints|r",
+			[51] = 1520398881,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [10]
 		{
-			"Yeah let's catch up on it when I have more time :)", -- [1]
-			"Akromä-Illidan", -- [2]
-			"", -- [3]
+			"4", -- [1]
+			"Bravery-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Akromä", -- [5]
+			"Bravery", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			12415, -- [11]
-			"Player-57-0656B527", -- [12]
+			9846, -- [11]
+			"Player-57-0A65B7F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaAkromä|r",
-			[51] = 1515989638,
-			[50] = "CHAT_MSG_WHISPER_INFORM",
+			[52] = "|cffc69b6dBravery|r",
+			[51] = 1520398881,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [11]
 		{
-			"BRO实体团队承接：燃烧王座包团，保证四件套装，保底八件装备，接930/940/950装等提升，代刷橙装，代清日常周常，团本维护！便宜金币，欢迎咨询", -- [1]
-			"Ppvebank-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Ppvebank", -- [5]
+			"1", -- [1]
+			"Packapunched-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Packapunched", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			12419, -- [11]
-			"Player-57-0A9C2A70", -- [12]
+			9847, -- [11]
+			"Player-57-06305628", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffaad372Ppvebank|r",
-			[51] = 1515989642,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cff0070ddPackapunched|r",
+			[51] = 1520398882,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [12]
 		{
-			" ¥ ¥ ~¥ （佶天鸿美服团进度9/11M接史诗毕业，史诗个人拾取，史诗1-8M抱团（普通英雄抱团毕业个人拾取白菜价）阿古斯击杀所有装备可以指定购买M萨墓包团狗蛋坐骑！", -- [1]
-			"Jthecho-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Jthecho", -- [5]
+			"2", -- [1]
+			"Kidsquints-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Kidsquints", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			12420, -- [11]
-			"Player-57-0A9BAF0D", -- [12]
+			9848, -- [11]
+			"Player-57-09836372", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cff3fc6eaJthecho|r",
-			[51] = 1515989642,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cff00ff96Kidsquints|r",
+			[51] = 1520398882,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [13]
 		{
-			"英雄普通燃烧王座团长分配今晚开团---位置特价 --不用等 十五低保来就开--紫狗等各种成就坐骑特卖", -- [1]
-			"Wazdor-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Wazdor", -- [5]
+			"3", -- [1]
+			"Bravery-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Bravery", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			12422, -- [11]
-			"Player-57-0A9C346C", -- [12]
+			9849, -- [11]
+			"Player-57-0A65B7F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffaad372Wazdor|r",
-			[51] = 1515989643,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffc69b6dBravery|r",
+			[51] = 1520398882,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [14]
 		{
-			"I think I figured out stuff ab it more", -- [1]
-			"Akromä-Illidan", -- [2]
-			"", -- [3]
+			"1", -- [1]
+			"Kidsquints-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Akromä", -- [5]
+			"Kidsquints", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			12426, -- [11]
-			"Player-57-0656B527", -- [12]
+			9851, -- [11]
+			"Player-57-09836372", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaAkromä|r",
-			[51] = 1515989648,
-			[50] = "CHAT_MSG_WHISPER",
+			[52] = "|cff00ff96Kidsquints|r",
+			[51] = 1520398883,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [15]
 		{
-			"ALLRIKGHT", -- [1]
-			"Akromä-Illidan", -- [2]
-			"", -- [3]
+			"3", -- [1]
+			"Thenex-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Akromä", -- [5]
+			"Thenex", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			12432, -- [11]
-			"Player-57-0656B527", -- [12]
+			9854, -- [11]
+			"Player-57-066E7878", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaAkromä|r",
-			[51] = 1515989650,
-			[50] = "CHAT_MSG_WHISPER",
+			[52] = "|cff3fc6eaThenex|r",
+			[51] = 1520398892,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [16]
 		{
-			"燃烧王座热卖中，包团毕业低价，15低保，法师塔等，感兴趣联系", -- [1]
-			"Nviesv-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Nviesv", -- [5]
+			"2", -- [1]
+			"Thenex-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Thenex", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			12433, -- [11]
-			"Player-57-0A9C2B62", -- [12]
+			9855, -- [11]
+			"Player-57-066E7878", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dNviesv|r",
-			[51] = 1515989652,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cff3fc6eaThenex|r",
+			[51] = 1520398893,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [17]
 		{
-			"cya bud", -- [1]
-			"Akromä-Illidan", -- [2]
-			"", -- [3]
+			"Rain of Fel on Thereign", -- [1]
+			"Thereign-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Akromä", -- [5]
+			"Thereign", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			12436, -- [11]
-			"Player-57-0656B527", -- [12]
+			9861, -- [11]
+			"Player-57-0A688B07", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaAkromä|r",
-			[51] = 1515989656,
-			[50] = "CHAT_MSG_WHISPER",
+			[52] = "|cffaad372Thereign|r",
+			[51] = 1520398903,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [18]
 		{
-			"Totally, I want to hear your thoughts. Night :)", -- [1]
-			"Akromä-Illidan", -- [2]
-			"", -- [3]
+			"Rain of Fel on Evan", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Akromä", -- [5]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			12437, -- [11]
-			"Player-57-0656B527", -- [12]
+			9862, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaAkromä|r",
-			[51] = 1515989658,
-			[50] = "CHAT_MSG_WHISPER_INFORM",
+			[52] = "|cffffffffEvan|r",
+			[51] = 1520398903,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [19]
 		{
-			"BRO实体团队承接：燃烧王座包团，保证四件套装，保底八件装备，接930/940/950装等提升，代刷橙装，代清日常周常，团本维护！便宜金币，欢迎咨询", -- [1]
-			"Ppvebank-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Ppvebank", -- [5]
+			"3", -- [1]
+			"Thereign-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Thereign", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			12438, -- [11]
-			"Player-57-0A9C2A70", -- [12]
+			9863, -- [11]
+			"Player-57-0A688B07", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffaad372Ppvebank|r",
-			[51] = 1515989658,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffaad372Thereign|r",
+			[51] = 1520398905,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [20]
 		{
-			"inv", -- [1]
+			"3", -- [1]
 			"Evan-Illidan", -- [2]
-			"", -- [3]
+			"Orcish", -- [3]
 			"", -- [4]
 			"Evan", -- [5]
 			"", -- [6]
@@ -452,7 +452,7 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			119, -- [11]
+			9864, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -460,439 +460,43 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1516155465,
-			[50] = "CHAT_MSG_GUILD",
+			[51] = 1520398905,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [21]
 		{
-			"im logging over", -- [1]
-			"Thenexjr-Illidan", -- [2]
-			"", -- [3]
+			"2", -- [1]
+			"Thereign-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Thenexjr", -- [5]
+			"Thereign", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			130, -- [11]
-			"Player-57-09FB5ACE", -- [12]
+			9865, -- [11]
+			"Player-57-0A688B07", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Thenexjr|r",
-			[51] = 1516155473,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffaad372Thereign|r",
+			[51] = 1520398906,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [22]
 		{
-			"Wow", -- [1]
-			"Hex-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Hex", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			141, -- [11]
-			"Player-57-0A61348E", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff0070ddHex|r",
-			[51] = 1516155489,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [23]
-		{
-			"lul", -- [1]
-			"Sineströ-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Sineströ", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			146, -- [11]
-			"Player-57-0A542A47", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff8787edSineströ|r",
-			[51] = 1516155496,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [24]
-		{
-			"it just killed me in the air...", -- [1]
-			"Zefarion-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Zefarion", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			147, -- [11]
-			"Player-57-096BD75A", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3fc6eaZefarion|r",
-			[51] = 1516155496,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [25]
-		{
-			"yes", -- [1]
-			"Cenzic-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Cenzic", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			150, -- [11]
-			"Player-57-07DBF66B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc41e3aCenzic|r",
-			[51] = 1516155500,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [26]
-		{
-			"roflroflroflrofl", -- [1]
-			"Sineströ-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Sineströ", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			151, -- [11]
-			"Player-57-0A542A47", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff8787edSineströ|r",
-			[51] = 1516155502,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [27]
-		{
-			"i am", -- [1]
-			"Drkillgrave-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Drkillgrave", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			152, -- [11]
-			"Player-57-098A9094", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa330c9Drkillgrave|r",
-			[51] = 1516155502,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [28]
-		{
-			"yup", -- [1]
-			"Dadizzle-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Dadizzle", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			153, -- [11]
-			"Player-57-09E7EB37", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffff7c0aDadizzle|r",
-			[51] = 1516155502,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [29]
-		{
-			"frame is poopy on fights", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Grimuhs", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			157, -- [11]
-			"Player-57-06A00AC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1516155508,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [30]
-		{
-			"lagging on lust", -- [1]
-			"Dadizzle-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Dadizzle", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			158, -- [11]
-			"Player-57-09E7EB37", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffff7c0aDadizzle|r",
-			[51] = 1516155508,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [31]
-		{
-			"i have to brb for 3 moinute", -- [1]
-			"Crongusts-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Crongusts", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			161, -- [11]
-			"Player-57-0A88B2FE", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Crongusts|r",
-			[51] = 1516155514,
-			[50] = "CHAT_MSG_OFFICER",
-		}, -- [32]
-		{
-			"owls", -- [1]
-			"Thenex-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Thenex", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			163, -- [11]
-			"Player-57-066E7878", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3fc6eaThenex|r",
-			[51] = 1516155516,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [33]
-		{
-			"prob patch problem", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Grimuhs", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			164, -- [11]
-			"Player-57-06A00AC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1516155518,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [34]
-		{
-			"got a phone call", -- [1]
-			"Crongusts-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Crongusts", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			165, -- [11]
-			"Player-57-0A88B2FE", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Crongusts|r",
-			[51] = 1516155518,
-			[50] = "CHAT_MSG_OFFICER",
-		}, -- [35]
-		{
-			"公会团燃烧王座H包团 还有一坑  还有1个小时开打", -- [1]
-			"Dwkw-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Dwkw", -- [5]
-			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
-			0, -- [10]
-			174, -- [11]
-			"Player-57-0A9D29C5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dDwkw|r",
-			[51] = 1516155543,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [36]
-		{
-			"公会团燃烧王座H包团 还有一坑  还有1个小时开打", -- [1]
-			"Dwkw-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Dwkw", -- [5]
-			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
-			0, -- [10]
-			177, -- [11]
-			"Player-57-0A9D29C5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dDwkw|r",
-			[51] = 1516155550,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [37]
-		{
-			"titties", -- [1]
-			"Thenex-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Thenex", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			181, -- [11]
-			"Player-57-066E7878", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3fc6eaThenex|r",
-			[51] = 1516155568,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [38]
-		{
-			" ¥ ¥ ~¥ （佶天鸿美服团进度10/11M接史诗毕业，史诗1-9M抱团（普通英雄抱团毕业个人拾取白菜价）阿古斯击杀所有装备可以指定购买M萨墓包团狗蛋坐骑阿古斯团队的荣耀！", -- [1]
-			"Poijth-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Poijth", -- [5]
-			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
-			0, -- [10]
-			183, -- [11]
-			"Player-57-0A9CF245", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			true, -- [17]
-			[52] = "|cff3fc6eaPoijth|r",
-			[51] = 1516155575,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [39]
-		{
-			"i am here", -- [1]
-			"Crongusts-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Crongusts", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			195, -- [11]
-			"Player-57-0A88B2FE", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Crongusts|r",
-			[51] = 1516155895,
-			[50] = "CHAT_MSG_OFFICER",
-		}, -- [40]
-		{
-			"^LFW_L", -- [1]
+			"2", -- [1]
 			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"7. TCForwarder6IIll", -- [4]
+			"Orcish", -- [3]
+			"", -- [4]
 			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			7, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			213, -- [11]
+			9866, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -900,123 +504,519 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1516155915,
-			[50] = "CHAT_MSG_CHANNEL",
+			[51] = 1520398906,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [23]
+		{
+			"1", -- [1]
+			"Thereign-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Thereign", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9867, -- [11]
+			"Player-57-0A688B07", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffaad372Thereign|r",
+			[51] = 1520398907,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [24]
+		{
+			"1", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9868, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1520398907,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [25]
+		{
+			"Interrupted Paraxis Inquisitor's |cff71d5ff|Hspell:249126:0|h[Wrack]|h|r!", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9874, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1520398919,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [26]
+		{
+			"Interrupted |cff71d5ff|Hspell:85692:0|h[Doom Bolt]|h|r on Azzal", -- [1]
+			"Bravery-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Bravery", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9878, -- [11]
+			"Player-57-0A65B7F5", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc69b6dBravery|r",
+			[51] = 1520398935,
+			[50] = "CHAT_MSG_RAID",
+		}, -- [27]
+		{
+			"Rain of Fel on Cenzic", -- [1]
+			"Cenzic-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Cenzic", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9884, -- [11]
+			"Player-57-07DBF66B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc41e3aCenzic|r",
+			[51] = 1520398953,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [28]
+		{
+			"Rain of Fel on Evan", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9885, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1520398953,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [29]
+		{
+			"3", -- [1]
+			"Cenzic-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Cenzic", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9886, -- [11]
+			"Player-57-07DBF66B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc41e3aCenzic|r",
+			[51] = 1520398955,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [30]
+		{
+			"3", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9887, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1520398955,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [31]
+		{
+			"2", -- [1]
+			"Cenzic-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Cenzic", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9888, -- [11]
+			"Player-57-07DBF66B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc41e3aCenzic|r",
+			[51] = 1520398956,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [32]
+		{
+			"2", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9889, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1520398956,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [33]
+		{
+			"1", -- [1]
+			"Cenzic-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Cenzic", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9891, -- [11]
+			"Player-57-07DBF66B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc41e3aCenzic|r",
+			[51] = 1520398957,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [34]
+		{
+			"1", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9892, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1520398957,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [35]
+		{
+			"Arcane Buildup on Cenzic", -- [1]
+			"Cenzic-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Cenzic", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9894, -- [11]
+			"Player-57-07DBF66B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc41e3aCenzic|r",
+			[51] = 1520398960,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [36]
+		{
+			"4", -- [1]
+			"Cenzic-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Cenzic", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9895, -- [11]
+			"Player-57-07DBF66B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc41e3aCenzic|r",
+			[51] = 1520398961,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [37]
+		{
+			"3", -- [1]
+			"Cenzic-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Cenzic", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9896, -- [11]
+			"Player-57-07DBF66B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc41e3aCenzic|r",
+			[51] = 1520398962,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [38]
+		{
+			"2", -- [1]
+			"Cenzic-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Cenzic", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9897, -- [11]
+			"Player-57-07DBF66B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc41e3aCenzic|r",
+			[51] = 1520398963,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [39]
+		{
+			"1", -- [1]
+			"Cenzic-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Cenzic", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9898, -- [11]
+			"Player-57-07DBF66B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc41e3aCenzic|r",
+			[51] = 1520398964,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [40]
+		{
+			"Rain of Fel on Evan", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9905, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1520398978,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [41]
 		{
-			"yay Evan", -- [1]
-			"Cenzic-Illidan", -- [2]
-			"", -- [3]
+			"3", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Cenzic", -- [5]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			216, -- [11]
-			"Player-57-07DBF66B", -- [12]
+			9906, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc41e3aCenzic|r",
-			[51] = 1516155924,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffEvan|r",
+			[51] = 1520398980,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [42]
 		{
-			"1900", -- [1]
-			"Dadizzle-Illidan", -- [2]
-			"", -- [3]
+			"2", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Dadizzle", -- [5]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			219, -- [11]
-			"Player-57-09E7EB37", -- [12]
+			9908, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffff7c0aDadizzle|r",
-			[51] = 1516155931,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffEvan|r",
+			[51] = 1520398981,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [43]
 		{
-			"1900", -- [1]
-			"Dadizzle-Illidan", -- [2]
-			"", -- [3]
+			"1", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Dadizzle", -- [5]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			220, -- [11]
-			"Player-57-09E7EB37", -- [12]
+			9910, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffff7c0aDadizzle|r",
-			[51] = 1516155933,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffEvan|r",
+			[51] = 1520398982,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [44]
 		{
-			"cd..", -- [1]
-			"Maûly-Illidan", -- [2]
-			"", -- [3]
+			"Arcane Buildup on Cenzic", -- [1]
+			"Cenzic-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Maûly", -- [5]
+			"Cenzic", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			253, -- [11]
-			"Player-57-0A64C7F1", -- [12]
+			9912, -- [11]
+			"Player-57-07DBF66B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Maûly|r",
-			[51] = 1516156024,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffc41e3aCenzic|r",
+			[51] = 1520398985,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [45]
 		{
-			"lol 10's of times", -- [1]
-			"Telgina-Illidan", -- [2]
-			"", -- [3]
+			"4", -- [1]
+			"Cenzic-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Telgina", -- [5]
+			"Cenzic", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			351, -- [11]
-			"Player-57-08F04525", -- [12]
+			9913, -- [11]
+			"Player-57-07DBF66B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Telgina|r",
-			[51] = 1516156222,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffc41e3aCenzic|r",
+			[51] = 1520398986,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [46]
 		{
-			"shit, forgot not to release Grimuhs", -- [1]
+			"3", -- [1]
 			"Cenzic-Illidan", -- [2]
-			"", -- [3]
+			"Orcish", -- [3]
 			"", -- [4]
 			"Cenzic", -- [5]
 			"", -- [6]
@@ -1024,7 +1024,7 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			361, -- [11]
+			9915, -- [11]
 			"Player-57-07DBF66B", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -1032,13 +1032,13 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffc41e3aCenzic|r",
-			[51] = 1516156234,
-			[50] = "CHAT_MSG_RAID",
+			[51] = 1520398987,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [47]
 		{
-			"I'm a failed rebel", -- [1]
+			"2", -- [1]
 			"Cenzic-Illidan", -- [2]
-			"", -- [3]
+			"Orcish", -- [3]
 			"", -- [4]
 			"Cenzic", -- [5]
 			"", -- [6]
@@ -1046,7 +1046,7 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			368, -- [11]
+			9916, -- [11]
 			"Player-57-07DBF66B", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -1054,55 +1054,187 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffc41e3aCenzic|r",
-			[51] = 1516156242,
-			[50] = "CHAT_MSG_RAID",
+			[51] = 1520398988,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [48]
 		{
-			"oh dang", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
+			"1", -- [1]
+			"Cenzic-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Grimuhs", -- [5]
+			"Cenzic", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			371, -- [11]
-			"Player-57-06A00AC3", -- [12]
+			9917, -- [11]
+			"Player-57-07DBF66B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1516156247,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffc41e3aCenzic|r",
+			[51] = 1520398989,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [49]
 		{
-			"I'm car shopping tonight, not giving my best rebel yell", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
+			"4", -- [1]
+			"Thenex-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Grimuhs", -- [5]
+			"Thenex", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			379, -- [11]
-			"Player-57-06A00AC3", -- [12]
+			9928, -- [11]
+			"Player-57-066E7878", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1516156260,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff3fc6eaThenex|r",
+			[51] = 1520399011,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [50]
 		{
-			"what you getting?", -- [1]
+			"3", -- [1]
+			"Thenex-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Thenex", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9929, -- [11]
+			"Player-57-066E7878", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff3fc6eaThenex|r",
+			[51] = 1520399012,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [51]
+		{
+			"2", -- [1]
+			"Thenex-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Thenex", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9931, -- [11]
+			"Player-57-066E7878", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff3fc6eaThenex|r",
+			[51] = 1520399013,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [52]
+		{
+			"Rain of Fel on Evan", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9940, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1520399028,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [53]
+		{
+			"3", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9943, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1520399030,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [54]
+		{
+			"2", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9945, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1520399031,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [55]
+		{
+			"1", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9946, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1520399032,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [56]
+		{
+			"no on'es close", -- [1]
 			"Cenzic-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
@@ -1112,7 +1244,7 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			393, -- [11]
+			9949, -- [11]
 			"Player-57-07DBF66B", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -1120,583 +1252,231 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffc41e3aCenzic|r",
-			[51] = 1516156273,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [51]
-		{
-			"are you buying me a car?", -- [1]
-			"Zefarion-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Zefarion", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			394, -- [11]
-			"Player-57-096BD75A", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3fc6eaZefarion|r",
-			[51] = 1516156275,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [52]
-		{
-			"dunno", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Grimuhs", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			397, -- [11]
-			"Player-57-06A00AC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1516156276,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [53]
-		{
-			"i can go up", -- [1]
-			"Jammed-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Jammed", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			400, -- [11]
-			"Player-57-09987088", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Jammed|r",
-			[51] = 1516156283,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [54]
-		{
-			"the car I was going to give you died zef", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Grimuhs", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			402, -- [11]
-			"Player-57-06A00AC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1516156284,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [55]
-		{
-			"we have 2 eles", -- [1]
-			"Jammed-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Jammed", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			404, -- [11]
-			"Player-57-09987088", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Jammed|r",
-			[51] = 1516156285,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [56]
-		{
-			"I got a new Traverse", -- [1]
-			"Telgina-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Telgina", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			407, -- [11]
-			"Player-57-08F04525", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffaad372Telgina|r",
-			[51] = 1516156289,
+			[51] = 1520399039,
 			[50] = "CHAT_MSG_RAID",
 		}, -- [57]
 		{
-			"probably a lame one if he does", -- [1]
-			"Thereign-Illidan", -- [2]
-			"", -- [3]
+			"4", -- [1]
+			"Thenex-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Thereign", -- [5]
+			"Thenex", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			408, -- [11]
-			"Player-57-0A688B07", -- [12]
+			9951, -- [11]
+			"Player-57-066E7878", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Thereign|r",
-			[51] = 1516156289,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff3fc6eaThenex|r",
+			[51] = 1520399041,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [58]
 		{
-			":(", -- [1]
-			"Zefarion-Illidan", -- [2]
-			"", -- [3]
+			"3", -- [1]
+			"Thenex-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Zefarion", -- [5]
+			"Thenex", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			410, -- [11]
-			"Player-57-096BD75A", -- [12]
+			9952, -- [11]
+			"Player-57-066E7878", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff3fc6eaZefarion|r",
-			[51] = 1516156290,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff3fc6eaThenex|r",
+			[51] = 1520399042,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [59]
 		{
-			"---Vampiric Blood---", -- [1]
-			"Shietnorunes-Illidan", -- [2]
+			"2", -- [1]
+			"Thenex-Illidan", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Shietnorunes", -- [5]
+			"Thenex", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			545, -- [11]
-			"Player-57-09AA0606", -- [12]
+			9953, -- [11]
+			"Player-57-066E7878", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc41e3aShietnorunes|r",
-			[51] = 1516156487,
-			[50] = "CHAT_MSG_YELL",
+			[52] = "|cff3fc6eaThenex|r",
+			[51] = 1520399043,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [60]
 		{
-			"i am lagging so fucking bad", -- [1]
-			"Crongusts-Illidan", -- [2]
-			"", -- [3]
+			"1", -- [1]
+			"Thenex-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Crongusts", -- [5]
+			"Thenex", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			588, -- [11]
-			"Player-57-0A88B2FE", -- [12]
+			9954, -- [11]
+			"Player-57-066E7878", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Crongusts|r",
-			[51] = 1516156563,
-			[50] = "CHAT_MSG_OFFICER",
+			[52] = "|cff3fc6eaThenex|r",
+			[51] = 1520399044,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [61]
 		{
-			"---Vampiric Blood---", -- [1]
-			"Shietnorunes-Illidan", -- [2]
-			"Orcish", -- [3]
+			"keep going", -- [1]
+			"Cenzic-Illidan", -- [2]
+			"", -- [3]
 			"", -- [4]
-			"Shietnorunes", -- [5]
+			"Cenzic", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			591, -- [11]
-			"Player-57-09AA0606", -- [12]
+			9955, -- [11]
+			"Player-57-07DBF66B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc41e3aShietnorunes|r",
-			[51] = 1516156568,
-			[50] = "CHAT_MSG_YELL",
+			[52] = "|cffc41e3aCenzic|r",
+			[51] = 1520399044,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [62]
 		{
-			"|cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r interrupted!", -- [1]
-			"Jarinia-Illidan", -- [2]
+			"Arcane Buildup on Kidsquints", -- [1]
+			"Kidsquints-Illidan", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Jarinia", -- [5]
+			"Kidsquints", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			604, -- [11]
-			"Player-57-086B5B7A", -- [12]
+			9959, -- [11]
+			"Player-57-09836372", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff3fc6eaJarinia|r",
-			[51] = 1516156595,
+			[52] = "|cff00ff96Kidsquints|r",
+			[51] = 1520399054,
 			[50] = "CHAT_MSG_SAY",
 		}, -- [63]
 		{
-			"sorry all, i had to run out", -- [1]
-			"Sineströ-Illidan", -- [2]
-			"", -- [3]
+			"4", -- [1]
+			"Kidsquints-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Sineströ", -- [5]
+			"Kidsquints", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			625, -- [11]
-			"Player-57-0A542A47", -- [12]
+			9960, -- [11]
+			"Player-57-09836372", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff8787edSineströ|r",
-			[51] = 1516156621,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Kidsquints|r",
+			[51] = 1520399055,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [64]
 		{
-			"i need to relogg", -- [1]
-			"Crongusts-Illidan", -- [2]
-			"", -- [3]
+			"Arcane Buildup on Bravery", -- [1]
+			"Bravery-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Crongusts", -- [5]
+			"Bravery", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			627, -- [11]
-			"Player-57-0A88B2FE", -- [12]
+			9961, -- [11]
+			"Player-57-0A65B7F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Crongusts|r",
-			[51] = 1516156625,
-			[50] = "CHAT_MSG_OFFICER",
+			[52] = "|cffc69b6dBravery|r",
+			[51] = 1520399055,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [65]
 		{
-			"it used to be with orb you could aim where to have it land but its not working", -- [1]
-			"Thenex-Illidan", -- [2]
-			"", -- [3]
+			"3", -- [1]
+			"Kidsquints-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Thenex", -- [5]
+			"Kidsquints", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			637, -- [11]
-			"Player-57-066E7878", -- [12]
+			9962, -- [11]
+			"Player-57-09836372", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff3fc6eaThenex|r",
-			[51] = 1516156646,
-			[50] = "CHAT_MSG_OFFICER",
+			[52] = "|cff00ff96Kidsquints|r",
+			[51] = 1520399056,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [66]
 		{
-			"summons Jeeves! No, really, I hate you all.", -- [1]
-			"Thereign-Illidan", -- [2]
-			"", -- [3]
+			"4", -- [1]
+			"Bravery-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Thereign", -- [5]
+			"Bravery", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			642, -- [11]
-			"Player-57-0A688B07", -- [12]
+			9963, -- [11]
+			"Player-57-0A65B7F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Thereign|r",
-			[51] = 1516156653,
-			[50] = "CHAT_MSG_EMOTE",
+			[52] = "|cffc69b6dBravery|r",
+			[51] = 1520399056,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [67]
 		{
-			"what happned", -- [1]
-			"Akromä-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Akromä", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			643, -- [11]
-			"Player-57-0656B527", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff48cbaAkromä|r",
-			[51] = 1516156656,
-			[50] = "CHAT_MSG_OFFICER",
-		}, -- [68]
-		{
-			"now it just falls off in random direction", -- [1]
-			"Thenex-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Thenex", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			646, -- [11]
-			"Player-57-066E7878", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3fc6eaThenex|r",
-			[51] = 1516156657,
-			[50] = "CHAT_MSG_OFFICER",
-		}, -- [69]
-		{
-			"I'm going to stab Thereign in the fucking neck.", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Evan", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			647, -- [11]
-			"Player-57-0583ABC7", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1516156657,
-			[50] = "CHAT_MSG_OFFICER",
-		}, -- [70]
-		{
-			"whisper him to stfu", -- [1]
-			"Akromä-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Akromä", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			649, -- [11]
-			"Player-57-0656B527", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff48cbaAkromä|r",
-			[51] = 1516156664,
-			[50] = "CHAT_MSG_OFFICER",
-		}, -- [71]
-		{
-			"he listens", -- [1]
-			"Akromä-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Akromä", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			656, -- [11]
-			"Player-57-0656B527", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff48cbaAkromä|r",
-			[51] = 1516156674,
-			[50] = "CHAT_MSG_OFFICER",
-		}, -- [72]
-		{
-			"I'd rather just server mute him, lol", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Evan", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			659, -- [11]
-			"Player-57-0583ABC7", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1516156677,
-			[50] = "CHAT_MSG_OFFICER",
-		}, -- [73]
-		{
-			"We need to stop saying \"its okay its okay\" no its not. I asked Reguv if he wanted to stay with us because I was going to promote him to raider.. he said no. Lets get this fucking ball rolling we are a mythic guild cant fucking finish heroic ", -- [1]
-			"Ambro-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Ambro", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			688, -- [11]
-			"Player-57-0A6F6D6C", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc41e3aAmbro|r",
-			[51] = 1516156726,
-			[50] = "CHAT_MSG_OFFICER",
-		}, -- [74]
-		{
-			"Wow", -- [1]
-			"Hex-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Hex", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			694, -- [11]
-			"Player-57-0A61348E", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff0070ddHex|r",
-			[51] = 1516156746,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [75]
-		{
-			"we might need interrupts more than we need heals", -- [1]
-			"Fayze-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Fayze", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			696, -- [11]
-			"Player-57-057825D0", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff0070ddFayze|r",
-			[51] = 1516156748,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [76]
-		{
-			"^^", -- [1]
-			"Règuvènizer-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Règuvènizer", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			701, -- [11]
-			"Player-57-0A7299D9", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffff7c0aRèguvènizer|r",
-			[51] = 1516156754,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [77]
-		{
-			"Wow", -- [1]
+			"fel lords coming down", -- [1]
 			"Cenzic-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
@@ -1706,7 +1486,7 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			703, -- [11]
+			9964, -- [11]
 			"Player-57-07DBF66B", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -1714,121 +1494,55 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffc41e3aCenzic|r",
-			[51] = 1516156754,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [78]
+			[51] = 1520399056,
+			[50] = "CHAT_MSG_RAID",
+		}, -- [68]
 		{
-			"tunneling dps", -- [1]
-			"Règuvènizer-Illidan", -- [2]
-			"", -- [3]
+			"2", -- [1]
+			"Kidsquints-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Règuvènizer", -- [5]
+			"Kidsquints", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			706, -- [11]
-			"Player-57-0A7299D9", -- [12]
+			9965, -- [11]
+			"Player-57-09836372", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffff7c0aRèguvènizer|r",
-			[51] = 1516156757,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [79]
+			[52] = "|cff00ff96Kidsquints|r",
+			[51] = 1520399057,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [69]
 		{
-			"know your role!", -- [1]
-			"Lycaleon-Illidan", -- [2]
-			"", -- [3]
+			"1", -- [1]
+			"Kidsquints-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Lycaleon", -- [5]
+			"Kidsquints", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			707, -- [11]
-			"Player-57-0A6F7595", -- [12]
+			9968, -- [11]
+			"Player-57-09836372", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffLycaleon|r",
-			[51] = 1516156758,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [80]
+			[52] = "|cff00ff96Kidsquints|r",
+			[51] = 1520399058,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [70]
 		{
-			"._.", -- [1]
-			"Jammed-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Jammed", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			723, -- [11]
-			"Player-57-09987088", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Jammed|r",
-			[51] = 1516156781,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [81]
-		{
-			"?????????", -- [1]
-			"Jammed-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Jammed", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			724, -- [11]
-			"Player-57-09987088", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Jammed|r",
-			[51] = 1516156782,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [82]
-		{
-			"why tf are u switching", -- [1]
-			"Règuvènizer-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Règuvènizer", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			729, -- [11]
-			"Player-57-0A7299D9", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffff7c0aRèguvènizer|r",
-			[51] = 1516156787,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [83]
-		{
-			"|cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r interrupted!", -- [1]
+			"Burning Embers on Jarinia", -- [1]
 			"Jarinia-Illidan", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
@@ -1838,7 +1552,7 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			854, -- [11]
+			9971, -- [11]
 			"Player-57-086B5B7A", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -1846,805 +1560,1003 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cff3fc6eaJarinia|r",
-			[51] = 1516156983,
+			[51] = 1520399063,
 			[50] = "CHAT_MSG_SAY",
+		}, -- [71]
+		{
+			"4", -- [1]
+			"Jarinia-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Jarinia", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9972, -- [11]
+			"Player-57-086B5B7A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff3fc6eaJarinia|r",
+			[51] = 1520399064,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [72]
+		{
+			"3", -- [1]
+			"Jarinia-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Jarinia", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9974, -- [11]
+			"Player-57-086B5B7A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff3fc6eaJarinia|r",
+			[51] = 1520399065,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [73]
+		{
+			"2", -- [1]
+			"Jarinia-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Jarinia", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9975, -- [11]
+			"Player-57-086B5B7A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff3fc6eaJarinia|r",
+			[51] = 1520399066,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [74]
+		{
+			"1", -- [1]
+			"Jarinia-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Jarinia", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9976, -- [11]
+			"Player-57-086B5B7A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff3fc6eaJarinia|r",
+			[51] = 1520399067,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [75]
+		{
+			"Burning Embers on Thenex", -- [1]
+			"Thenex-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Thenex", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9977, -- [11]
+			"Player-57-066E7878", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff3fc6eaThenex|r",
+			[51] = 1520399070,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [76]
+		{
+			"Arcane Buildup on Jayto", -- [1]
+			"Jayto-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Jayto", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9978, -- [11]
+			"Player-57-0A86B1C3", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffff468Jayto|r",
+			[51] = 1520399071,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [77]
+		{
+			"4", -- [1]
+			"Thenex-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Thenex", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9979, -- [11]
+			"Player-57-066E7878", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff3fc6eaThenex|r",
+			[51] = 1520399071,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [78]
+		{
+			"3", -- [1]
+			"Thenex-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Thenex", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9980, -- [11]
+			"Player-57-066E7878", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff3fc6eaThenex|r",
+			[51] = 1520399072,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [79]
+		{
+			"Rain of Fel on Evan", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9984, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1520399078,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [80]
+		{
+			"3", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9985, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1520399080,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [81]
+		{
+			"2", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9986, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1520399081,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [82]
+		{
+			"1", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9987, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1520399082,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [83]
+		{
+			"we're next to each other", -- [1]
+			"Cenzic-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Cenzic", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9989, -- [11]
+			"Player-57-07DBF66B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc41e3aCenzic|r",
+			[51] = 1520399087,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [84]
 		{
-			"---Vampiric Blood---", -- [1]
-			"Shietnorunes-Illidan", -- [2]
-			"Orcish", -- [3]
+			"Interrupted Fel-Infused Destructor's |cff71d5ff|Hspell:246305:0|h[Artillery Strike]|h|r!", -- [1]
+			"Grimuhs-Illidan", -- [2]
+			"", -- [3]
 			"", -- [4]
-			"Shietnorunes", -- [5]
+			"Grimuhs", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			860, -- [11]
-			"Player-57-09AA0606", -- [12]
+			9991, -- [11]
+			"Player-57-06A00AC3", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc41e3aShietnorunes|r",
-			[51] = 1516156990,
-			[50] = "CHAT_MSG_YELL",
+			[52] = "|cffffffffGrimuhs|r",
+			[51] = 1520399098,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [85]
 		{
-			"HOLY FUCK MY GLOVES PROC'D!", -- [1]
-			"Hex-Illidan", -- [2]
+			"Burning Embers on Thenex", -- [1]
+			"Thenex-Illidan", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Hex", -- [5]
+			"Thenex", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			891, -- [11]
-			"Player-57-0A61348E", -- [12]
+			9993, -- [11]
+			"Player-57-066E7878", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddHex|r",
-			[51] = 1516157060,
+			[52] = "|cff3fc6eaThenex|r",
+			[51] = 1520399100,
 			[50] = "CHAT_MSG_SAY",
 		}, -- [86]
 		{
-			"You guys doing heroic rn?", -- [1]
-			"Parsing-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Parsing", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			901, -- [11]
-			"Player-57-0A9979D3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff8787edParsing|r",
-			[51] = 1516157077,
-			[50] = "CHAT_MSG_GUILD",
-		}, -- [87]
-		{
-			"|cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r interrupted!", -- [1]
-			"Jarinia-Illidan", -- [2]
+			"4", -- [1]
+			"Thenex-Illidan", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Jarinia", -- [5]
+			"Thenex", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			907, -- [11]
-			"Player-57-086B5B7A", -- [12]
+			9994, -- [11]
+			"Player-57-066E7878", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff3fc6eaJarinia|r",
-			[51] = 1516157087,
+			[52] = "|cff3fc6eaThenex|r",
+			[51] = 1520399101,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [87]
+		{
+			"3", -- [1]
+			"Thenex-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Thenex", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			9995, -- [11]
+			"Player-57-066E7878", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff3fc6eaThenex|r",
+			[51] = 1520399102,
 			[50] = "CHAT_MSG_SAY",
 		}, -- [88]
 		{
-			"or do you only do mythic", -- [1]
-			"Parsing-Illidan", -- [2]
-			"", -- [3]
+			"2", -- [1]
+			"Thenex-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Parsing", -- [5]
+			"Thenex", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			911, -- [11]
-			"Player-57-0A9979D3", -- [12]
+			9997, -- [11]
+			"Player-57-066E7878", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff8787edParsing|r",
-			[51] = 1516157090,
-			[50] = "CHAT_MSG_GUILD",
+			[52] = "|cff3fc6eaThenex|r",
+			[51] = 1520399103,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [89]
 		{
-			"we're doing her oic right now", -- [1]
-			"Telgina-Illidan", -- [2]
-			"", -- [3]
+			"1", -- [1]
+			"Thenex-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Telgina", -- [5]
+			"Thenex", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			931, -- [11]
-			"Player-57-08F04525", -- [12]
+			9998, -- [11]
+			"Player-57-066E7878", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Telgina|r",
-			[51] = 1516157119,
-			[50] = "CHAT_MSG_GUILD",
+			[52] = "|cff3fc6eaThenex|r",
+			[51] = 1520399104,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [90]
 		{
-			"Can I hop in please?", -- [1]
-			"Parsing-Illidan", -- [2]
-			"", -- [3]
+			"Arcane Buildup on Kidsquints", -- [1]
+			"Kidsquints-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Parsing", -- [5]
+			"Kidsquints", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			945, -- [11]
-			"Player-57-0A9979D3", -- [12]
+			9999, -- [11]
+			"Player-57-09836372", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff8787edParsing|r",
-			[51] = 1516157145,
-			[50] = "CHAT_MSG_GUILD",
+			[52] = "|cff00ff96Kidsquints|r",
+			[51] = 1520399104,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [91]
 		{
-			"sec.. killing boss rn", -- [1]
-			"Telgina-Illidan", -- [2]
-			"", -- [3]
+			"4", -- [1]
+			"Kidsquints-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Telgina", -- [5]
+			"Kidsquints", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			955, -- [11]
-			"Player-57-08F04525", -- [12]
+			10000, -- [11]
+			"Player-57-09836372", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Telgina|r",
-			[51] = 1516157162,
-			[50] = "CHAT_MSG_GUILD",
+			[52] = "|cff00ff96Kidsquints|r",
+			[51] = 1520399105,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [92]
 		{
-			"i am going to go restart my internet", -- [1]
-			"Crongusts-Illidan", -- [2]
-			"", -- [3]
+			"3", -- [1]
+			"Kidsquints-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Crongusts", -- [5]
+			"Kidsquints", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			976, -- [11]
-			"Player-57-0A88B2FE", -- [12]
+			10002, -- [11]
+			"Player-57-09836372", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Crongusts|r",
-			[51] = 1516157193,
-			[50] = "CHAT_MSG_OFFICER",
+			[52] = "|cff00ff96Kidsquints|r",
+			[51] = 1520399106,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [93]
 		{
-			"i am lagging like a bitch", -- [1]
-			"Crongusts-Illidan", -- [2]
-			"", -- [3]
+			"2", -- [1]
+			"Kidsquints-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Crongusts", -- [5]
+			"Kidsquints", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			979, -- [11]
-			"Player-57-0A88B2FE", -- [12]
+			10004, -- [11]
+			"Player-57-09836372", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Crongusts|r",
-			[51] = 1516157198,
-			[50] = "CHAT_MSG_OFFICER",
+			[52] = "|cff00ff96Kidsquints|r",
+			[51] = 1520399107,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [94]
 		{
-			"brb rq takin out my dog", -- [1]
-			"Dadizzle-Illidan", -- [2]
+			"Interrupted |cff71d5ff|Hspell:246305:0|h[Artillery Strike]|h|r on Fel-Infused Destructor", -- [1]
+			"Bravery-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Dadizzle", -- [5]
+			"Bravery", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			990, -- [11]
-			"Player-57-09E7EB37", -- [12]
+			10012, -- [11]
+			"Player-57-0A65B7F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffff7c0aDadizzle|r",
-			[51] = 1516157214,
+			[52] = "|cffc69b6dBravery|r",
+			[51] = 1520399128,
 			[50] = "CHAT_MSG_RAID",
 		}, -- [95]
 		{
-			"sec bio ", -- [1]
-			"Lycaleon-Illidan", -- [2]
-			"", -- [3]
+			"Rain of Fel on Azadmike", -- [1]
+			"Azadmike-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Lycaleon", -- [5]
+			"Azadmike", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			997, -- [11]
-			"Player-57-0A6F7595", -- [12]
+			10013, -- [11]
+			"Player-57-0A9FB88A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffLycaleon|r",
-			[51] = 1516157232,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cfff48cbaAzadmike|r",
+			[51] = 1520399128,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [96]
 		{
-			"brb gotta shave my cat", -- [1]
-			"Thereign-Illidan", -- [2]
-			"", -- [3]
+			"Rain of Fel on Xorn", -- [1]
+			"Xorn-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Thereign", -- [5]
+			"Xorn", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			998, -- [11]
-			"Player-57-0A688B07", -- [12]
+			10014, -- [11]
+			"Player-57-0535020C", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Thereign|r",
-			[51] = 1516157233,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff8787edXorn|r",
+			[51] = 1520399128,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [97]
 		{
-			" Reinv plz", -- [1]
-			"Parsing-Illidan", -- [2]
-			"", -- [3]
+			"Rain of Fel on Packapunched", -- [1]
+			"Packapunched-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Parsing", -- [5]
+			"Packapunched", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1006, -- [11]
-			"Player-57-0A9979D3", -- [12]
+			10015, -- [11]
+			"Player-57-06305628", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff8787edParsing|r",
-			[51] = 1516157244,
-			[50] = "CHAT_MSG_GUILD",
+			[52] = "|cff0070ddPackapunched|r",
+			[51] = 1520399128,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [98]
 		{
-			"break time", -- [1]
-			"Cenzic-Illidan", -- [2]
-			"", -- [3]
+			"Arcane Buildup on Kidsquints", -- [1]
+			"Kidsquints-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Cenzic", -- [5]
+			"Kidsquints", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1018, -- [11]
-			"Player-57-07DBF66B", -- [12]
+			10016, -- [11]
+			"Player-57-09836372", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc41e3aCenzic|r",
-			[51] = 1516157258,
-			[50] = "CHAT_MSG_GUILD",
+			[52] = "|cff00ff96Kidsquints|r",
+			[51] = 1520399129,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [99]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:12292:Player-57-053DD677:1:1:16:18:4294967295:4294967295:4294967295:4294967295|h[Highmountain Tribe]|h|r!", -- [1]
-			"Kaelthaas-Illidan", -- [2]
-			"", -- [3]
+			"Burning Embers on Thenex", -- [1]
+			"Thenex-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Kaelthaas", -- [5]
+			"Thenex", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1028, -- [11]
-			"Player-57-053DD677", -- [12]
+			10017, -- [11]
+			"Player-57-066E7878", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff3fc6eaKaelthaas|r",
-			[51] = 1516157273,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cff3fc6eaThenex|r",
+			[51] = 1520399130,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [100]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:12311:Player-57-053DD677:1:1:16:18:4294967295:4294967295:4294967295:4294967295|h[The Secrets of Ulduar]|h|r!", -- [1]
-			"Kaelthaas-Illidan", -- [2]
-			"", -- [3]
+			"3", -- [1]
+			"Azadmike-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Kaelthaas", -- [5]
+			"Azadmike", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1029, -- [11]
-			"Player-57-053DD677", -- [12]
+			10018, -- [11]
+			"Player-57-0A9FB88A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff3fc6eaKaelthaas|r",
-			[51] = 1516157274,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cfff48cbaAzadmike|r",
+			[51] = 1520399130,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [101]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:12401:Player-57-053DD677:1:1:16:18:4294967295:4294967295:4294967295:4294967295|h[Glory of the Ulduar Raider]|h|r!", -- [1]
-			"Kaelthaas-Illidan", -- [2]
-			"", -- [3]
+			"3", -- [1]
+			"Xorn-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Kaelthaas", -- [5]
+			"Xorn", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1030, -- [11]
-			"Player-57-053DD677", -- [12]
+			10019, -- [11]
+			"Player-57-0535020C", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff3fc6eaKaelthaas|r",
-			[51] = 1516157274,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cff8787edXorn|r",
+			[51] = 1520399130,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [102]
 		{
-			".:Welcome to CrossGambling:. User's Roll - (50000) - Type 1 to Join  (-1 to withdraw)", -- [1]
-			"Telgina-Illidan", -- [2]
-			"", -- [3]
+			"3", -- [1]
+			"Packapunched-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Telgina", -- [5]
+			"Packapunched", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1084, -- [11]
-			"Player-57-08F04525", -- [12]
+			10020, -- [11]
+			"Player-57-06305628", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Telgina|r",
-			[51] = 1516157352,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff0070ddPackapunched|r",
+			[51] = 1520399130,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [103]
 		{
-			"1", -- [1]
-			"Telgina-Illidan", -- [2]
-			"", -- [3]
+			"4", -- [1]
+			"Kidsquints-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Telgina", -- [5]
+			"Kidsquints", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1091, -- [11]
-			"Player-57-08F04525", -- [12]
+			10021, -- [11]
+			"Player-57-09836372", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Telgina|r",
-			[51] = 1516157357,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Kidsquints|r",
+			[51] = 1520399130,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [104]
 		{
-			"Psh.", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
+			"Arcane Buildup on Bravery", -- [1]
+			"Bravery-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Evan", -- [5]
+			"Bravery", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1093, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			10022, -- [11]
+			"Player-57-0A65B7F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1516157358,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffc69b6dBravery|r",
+			[51] = 1520399130,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [105]
 		{
-			"I'm not doing those weak numbers.", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
+			"4", -- [1]
+			"Thenex-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Evan", -- [5]
+			"Thenex", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1102, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			10023, -- [11]
+			"Player-57-066E7878", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1516157363,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff3fc6eaThenex|r",
+			[51] = 1520399131,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [106]
 		{
-			"1", -- [1]
-			"Ambro-Illidan", -- [2]
-			"", -- [3]
+			"2", -- [1]
+			"Azadmike-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Ambro", -- [5]
+			"Azadmike", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1103, -- [11]
-			"Player-57-0A6F6D6C", -- [12]
+			10024, -- [11]
+			"Player-57-0A9FB88A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc41e3aAmbro|r",
-			[51] = 1516157364,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cfff48cbaAzadmike|r",
+			[51] = 1520399131,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [107]
 		{
-			"i onlyh have 100k", -- [1]
-			"Thenex-Illidan", -- [2]
-			"", -- [3]
+			"2", -- [1]
+			"Xorn-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Thenex", -- [5]
+			"Xorn", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1110, -- [11]
-			"Player-57-066E7878", -- [12]
+			10025, -- [11]
+			"Player-57-0535020C", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff3fc6eaThenex|r",
-			[51] = 1516157381,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff8787edXorn|r",
+			[51] = 1520399131,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [108]
 		{
-			"and its not my monewy", -- [1]
-			"Thenex-Illidan", -- [2]
-			"", -- [3]
+			"2", -- [1]
+			"Packapunched-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Thenex", -- [5]
+			"Packapunched", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1114, -- [11]
-			"Player-57-066E7878", -- [12]
+			10026, -- [11]
+			"Player-57-06305628", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff3fc6eaThenex|r",
-			[51] = 1516157393,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff0070ddPackapunched|r",
+			[51] = 1520399131,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [109]
 		{
-			"angel gave ity to me im payting here back", -- [1]
-			"Thenex-Illidan", -- [2]
-			"", -- [3]
+			"3", -- [1]
+			"Kidsquints-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Thenex", -- [5]
+			"Kidsquints", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1119, -- [11]
-			"Player-57-066E7878", -- [12]
+			10027, -- [11]
+			"Player-57-09836372", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff3fc6eaThenex|r",
-			[51] = 1516157406,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Kidsquints|r",
+			[51] = 1520399131,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [110]
 		{
-			"did you sell yourself", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
+			"4", -- [1]
+			"Bravery-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Grimuhs", -- [5]
+			"Bravery", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1125, -- [11]
-			"Player-57-06A00AC3", -- [12]
+			10028, -- [11]
+			"Player-57-0A65B7F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1516157409,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffc69b6dBravery|r",
+			[51] = 1520399131,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [111]
 		{
-			"1", -- [1]
-			"Lycaleon-Illidan", -- [2]
-			"", -- [3]
+			"3", -- [1]
+			"Thenex-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Lycaleon", -- [5]
+			"Thenex", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1130, -- [11]
-			"Player-57-0A6F7595", -- [12]
+			10029, -- [11]
+			"Player-57-066E7878", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffLycaleon|r",
-			[51] = 1516157413,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff3fc6eaThenex|r",
+			[51] = 1520399132,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [112]
 		{
-			"Last Call to join!", -- [1]
-			"Telgina-Illidan", -- [2]
-			"", -- [3]
+			"1", -- [1]
+			"Azadmike-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Telgina", -- [5]
+			"Azadmike", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1132, -- [11]
-			"Player-57-08F04525", -- [12]
+			10030, -- [11]
+			"Player-57-0A9FB88A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Telgina|r",
-			[51] = 1516157415,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cfff48cbaAzadmike|r",
+			[51] = 1520399132,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [113]
 		{
-			"1", -- [1]
-			"Parsing-Illidan", -- [2]
-			"", -- [3]
+			"2", -- [1]
+			"Kidsquints-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Parsing", -- [5]
+			"Kidsquints", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1136, -- [11]
-			"Player-57-0A9979D3", -- [12]
+			10031, -- [11]
+			"Player-57-09836372", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff8787edParsing|r",
-			[51] = 1516157416,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Kidsquints|r",
+			[51] = 1520399132,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [114]
 		{
-			"once i buy a token", -- [1]
-			"Thenex-Illidan", -- [2]
-			"", -- [3]
+			"1", -- [1]
+			"Packapunched-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Thenex", -- [5]
+			"Packapunched", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1137, -- [11]
-			"Player-57-066E7878", -- [12]
+			10032, -- [11]
+			"Player-57-06305628", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff3fc6eaThenex|r",
-			[51] = 1516157416,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff0070ddPackapunched|r",
+			[51] = 1520399132,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [115]
 		{
-			"Roll now!", -- [1]
-			"Telgina-Illidan", -- [2]
-			"", -- [3]
+			"3", -- [1]
+			"Bravery-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Telgina", -- [5]
+			"Bravery", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1140, -- [11]
-			"Player-57-08F04525", -- [12]
+			10033, -- [11]
+			"Player-57-0A65B7F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Telgina|r",
-			[51] = 1516157420,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffc69b6dBravery|r",
+			[51] = 1520399132,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [116]
 		{
-			"1", -- [1]
-			"Sineströ-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Sineströ", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1141, -- [11]
-			"Player-57-0A542A47", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff8787edSineströ|r",
-			[51] = 1516157421,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [117]
-		{
-			" Ambro owes Parsing 17564 gold.", -- [1]
-			"Telgina-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Telgina", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1149, -- [11]
-			"Player-57-08F04525", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffaad372Telgina|r",
-			[51] = 1516157427,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [118]
-		{
-			"is this a break with no timer?", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Grimuhs", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1151, -- [11]
-			"Player-57-06A00AC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1516157429,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [119]
-		{
-			"Why are we breaking so early?", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Evan", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1157, -- [11]
-			"Player-57-0583ABC7", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1516157438,
-			[50] = "CHAT_MSG_OFFICER",
-		}, -- [120]
-		{
-			"and for so long lol", -- [1]
+			"2", -- [1]
 			"Thenex-Illidan", -- [2]
-			"", -- [3]
+			"Orcish", -- [3]
 			"", -- [4]
 			"Thenex", -- [5]
 			"", -- [6]
@@ -2652,7 +2564,7 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1160, -- [11]
+			10034, -- [11]
 			"Player-57-066E7878", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2660,121 +2572,77 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cff3fc6eaThenex|r",
-			[51] = 1516157445,
-			[50] = "CHAT_MSG_OFFICER",
-		}, -- [121]
+			[51] = 1520399133,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [117]
 		{
-			"Killing the next two bosses would be better.", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
+			"2", -- [1]
+			"Bravery-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Evan", -- [5]
+			"Bravery", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1162, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			10035, -- [11]
+			"Player-57-0A65B7F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1516157446,
-			[50] = "CHAT_MSG_OFFICER",
-		}, -- [122]
+			[52] = "|cffc69b6dBravery|r",
+			[51] = 1520399133,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [118]
 		{
-			"lmao", -- [1]
-			"Lycaleon-Illidan", -- [2]
-			"", -- [3]
+			"1", -- [1]
+			"Thenex-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Lycaleon", -- [5]
+			"Thenex", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1163, -- [11]
-			"Player-57-0A6F7595", -- [12]
+			10036, -- [11]
+			"Player-57-066E7878", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffLycaleon|r",
-			[51] = 1516157448,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [123]
+			[52] = "|cff3fc6eaThenex|r",
+			[51] = 1520399134,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [119]
 		{
-			"Oh well.", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
+			"1", -- [1]
+			"Bravery-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Evan", -- [5]
+			"Bravery", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1164, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			10037, -- [11]
+			"Player-57-0A65B7F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1516157449,
-			[50] = "CHAT_MSG_OFFICER",
-		}, -- [124]
+			[52] = "|cffc69b6dBravery|r",
+			[51] = 1520399134,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [120]
 		{
-			"pay up", -- [1]
-			"Cenzic-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Cenzic", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1165, -- [11]
-			"Player-57-07DBF66B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc41e3aCenzic|r",
-			[51] = 1516157456,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [125]
-		{
-			"don't be a bitch", -- [1]
-			"Cenzic-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Cenzic", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1169, -- [11]
-			"Player-57-07DBF66B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc41e3aCenzic|r",
-			[51] = 1516157460,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [126]
-		{
-			".:Welcome to CrossGambling:. User's Roll - (50000) - Type 1 to Join  (-1 to withdraw)", -- [1]
+			"Akroma, will you put the feasts back in the gbank?", -- [1]
 			"Telgina-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
@@ -2784,7 +2652,7 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1170, -- [11]
+			10087, -- [11]
 			"Player-57-08F04525", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2792,31 +2660,163 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffaad372Telgina|r",
-			[51] = 1516157464,
-			[50] = "CHAT_MSG_RAID",
+			[51] = 1520399202,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [121]
+		{
+			"doing", -- [1]
+			"Akromä-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Akromä", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			10097, -- [11]
+			"Player-57-0656B527", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfff48cbaAkromä|r",
+			[51] = 1520399223,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [122]
+		{
+			"mailed u", -- [1]
+			"Akromä-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Akromä", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			10101, -- [11]
+			"Player-57-0656B527", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfff48cbaAkromä|r",
+			[51] = 1520399237,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [123]
+		{
+			"~马上开打 ，燃烧王~座英~雄和史~诗难度装备包团与单买，十五层大秘境低保，法师塔外观，110等级，古尔丹坐骑，950低价装备提升，金币大量，飞行解锁，黑市幻化和坐骑", -- [1]
+			"Babeyfsae-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Babeyfsae", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			10103, -- [11]
+			"Player-57-0ABD9D01", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dBabeyfsae|r",
+			[51] = 1520399240,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [124]
+		{
+			"H王座包团还有贼法德 战猎萨 位置·低价卖   M王座包团 1-11 自己上号 包括985全给 低价卖 金币千万库存 古尔丹坐骑 萨姆包团等", -- [1]
+			"Dwkjhg-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Dwkjhg", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			10104, -- [11]
+			"Player-57-0ABD23A6", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dDwkjhg|r",
+			[51] = 1520399243,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [125]
+		{
+			"~马上开打 ，燃烧王~座英~雄和史~诗难度装备包团与单买，十五层大秘境低保，法师塔外观，110等级，古尔丹坐骑，950低价装备提升，金币大量，飞行解锁，黑市幻化和坐骑", -- [1]
+			"Babeyfsae-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Babeyfsae", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			10107, -- [11]
+			"Player-57-0ABD9D01", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dBabeyfsae|r",
+			[51] = 1520399256,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [126]
+		{
+			"H王座包团还有贼法德 战猎萨 位置·低价卖   M王座包团 1-11 自己上号 包括985全给 低价卖 金币千万库存 古尔丹坐骑 萨姆包团等", -- [1]
+			"Dwkjhg-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Dwkjhg", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			10114, -- [11]
+			"Player-57-0ABD23A6", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dDwkjhg|r",
+			[51] = 1520399263,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [127]
 	},
 	["ChatEditHistory"] = {
-		"/cw Akromä-Illidan Night :)", -- [1]
-		"/cw Airimis-Illidan You did fine, he was just having a snippy night.", -- [2]
-		"/cw Airimis-Illidan :)", -- [3]
-		"/cw Akromä-Illidan Yeah, I'm going to log but the tl;dr on my end is I'm not on board with sitting Rein to save Ugly, and Ambro I'm very on the fence about.", -- [4]
-		"/cw Akromä-Illidan I don't want to make moves with either yet personally, let the dust settle some.", -- [5]
-		"/cw Airimis-Illidan Totally, it happens, I fucked up a ton tonight and he did too. Sucks to be put on the spot like that but you handled it gracefully, and that didn't go unnoticed :)", -- [6]
-		"/cw Akromä-Illidan Yep SGTM.", -- [7]
-		"/cw Airimis-Illidan Have a great night though, see you soon!", -- [8]
-		"/cw Akromä-Illidan Yeah DJ thinks if Ambro leaves Crong will too. I'm not sold.", -- [9]
-		"/cw Akromä-Illidan Yeah let's catch up on it when I have more time :)", -- [10]
-		"/cw Akromä-Illidan Totally, I want to hear your thoughts. Night :)", -- [11]
-		"/wa", -- [12]
-		"/g inv", -- [13]
-		"/o I'm going to stab Thereign in the fucking neck.", -- [14]
-		"/o I'd rather just server mute him, lol", -- [15]
-		"/raid Psh.", -- [16]
-		"/raid I'm not doing those weak numbers.", -- [17]
-		"/o Why are we breaking so early?", -- [18]
-		"/o Killing the next two bosses would be better.", -- [19]
-		"/o Oh well.", -- [20]
+		"/raid #lilrip2018", -- [1]
+		"/cw Zaranà You have a DPS spec?", -- [2]
+		"/cw Zaranà Nope.", -- [3]
+		"/aa", -- [4]
+		"/o Group 1 solo healed *flex*", -- [5]
+		"/o You said group 1 down, group 2 top.", -- [6]
+		"/o So that wasn't you Akroma.", -- [7]
+		"/o You were down with me.", -- [8]
+		"/cw Cenzic-Illidan I tried moving us to that a long time ago.", -- [9]
+		"/raid Most everyone went to the wrong place.", -- [10]
+		"/raid  /roll 250000", -- [11]
+		"/raid 1", -- [12]
+		"/roll 100000", -- [13]
+		"/raid 2250k", -- [14]
+		"/raid 250k", -- [15]
+		"/cw Psytek Wrong group", -- [16]
+		"/raid Naw my extra action was down and ran over from Egypt.", -- [17]
+		"/cw Jarinia-Illidan With how that pull went we need a lot of things.", -- [18]
+		"/cw Djpurge-Illidan Haha that was awesome.", -- [19]
+		"/cw Djpurge-Illidan I'm glad he didn't notice I server muted him.", -- [20]
 	},
 	["BodyGuard"] = {
 		["IsInValidZone"] = true,
