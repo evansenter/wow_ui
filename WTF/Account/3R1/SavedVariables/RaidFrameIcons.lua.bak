@@ -5,17 +5,17 @@ RaidFrameIconsDB = {
 		["Venala - Cho'gall"] = "Venala - Cho'gall",
 		["Cometron - Illidan"] = "Cometron - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
-		["Metal - Illidan"] = "Comet - Illidan",
 		["Natal - Illidan"] = "Pandatal - Illidan",
+		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
 		["Natalan - Illidan"] = "Natalan - Illidan",
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Natalan - Dark Iron"] = "Natalan - Dark Iron",
 		["Ereinion - Dark Iron"] = "Ereinion - Dark Iron",
-		["Plane - Illidan"] = "Pandatal - Illidan",
-		["Comet - Illidan"] = "Comet - Illidan",
 		["Pandatal - Illidan"] = "Comet - Illidan",
+		["Comet - Illidan"] = "Comet - Illidan",
+		["Plane - Illidan"] = "Pandatal - Illidan",
 		["Evan - Illidan"] = "Comet - Illidan",
-		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
+		["Metal - Illidan"] = "Comet - Illidan",
 	},
 	["profiles"] = {
 		["Cometstorm - Illidan"] = {
@@ -28,9 +28,9 @@ RaidFrameIconsDB = {
 			["iconPosition"] = "TOPRIGHT",
 			["iconSize"] = 12,
 		},
-		["Metal - Illidan"] = {
-		},
 		["Natal - Illidan"] = {
+		},
+		["Centromere - Dark Iron"] = {
 		},
 		["Natalan - Illidan"] = {
 		},
@@ -40,20 +40,20 @@ RaidFrameIconsDB = {
 		},
 		["Ereinion - Dark Iron"] = {
 		},
-		["Plane - Illidan"] = {
-		},
-		["Comet - Illidan"] = {
-			["iconSize"] = 12,
-			["iconPosition"] = "TOPRIGHT",
-		},
 		["Pandatal - Illidan"] = {
 			["iconSize"] = 12,
 			["iconPosition"] = "TOPRIGHT",
 		},
+		["Comet - Illidan"] = {
+			["iconPosition"] = "TOPRIGHT",
+			["iconSize"] = 12,
+		},
+		["Plane - Illidan"] = {
+		},
 		["Evan - Illidan"] = {
 			["iconSize"] = 20,
 		},
-		["Centromere - Dark Iron"] = {
+		["Metal - Illidan"] = {
 		},
 	},
 }

@@ -6,6 +6,13 @@ X: -2
 Y: -34
 W: 53
 H: 53
+Frame: ExtraActionBarFrame
+FrameLevel: 2
+Anchor: BOTTOM
+X: -432
+Y: 5
+W: 64
+H: 64
 Frame: ColorPickerFrame
 FrameLevel: 21
 Anchor: CENTER
@@ -48,10 +55,3 @@ X: 29
 Y: 64
 W: 370
 H: 110
-Frame: ExtraActionBarFrame
-FrameLevel: 2
-Anchor: BOTTOM
-X: -432
-Y: 5
-W: 64
-H: 64

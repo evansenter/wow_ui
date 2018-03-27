@@ -51,7 +51,7 @@ END
 VER 3 000000000000002E "Extra Action" "INV_Misc_Herb_Whispervine"
 /click ExtraActionButton1
 END
-VER 3 000000000000005D "Feather" "INV_Misc_QuestionMark"
+VER 3 000000000000005D "Feather" "132307"
 /cast [@player] Angelic Feather
 /stopspelltarget
 END
@@ -107,6 +107,10 @@ VER 3 0000000000000060 "Pain Sup" "INV_Misc_QuestionMark"
 #showtooltip
 /use [target=mouseover,help,nodead][]Pain Suppression
 END
+VER 3 0000000000000068 "Penance Friendly" "INV_Misc_QuestionMark"
+#showtooltip
+/use [target=mouseover,help,nodead][]Penance
+END
 VER 3 000000000000004F "PoM" "INV_Misc_QuestionMark"
 #showtooltip
 /use [target=mouseover,help,nodead][]Prayer of Mending
@@ -153,7 +157,7 @@ VER 3 0000000000000053 "SotW" "INV_Misc_QuestionMark"
 END
 VER 3 000000000000005A "SW:P" "INV_Misc_QuestionMark"
 #showtooltip
-/use [harm][@targettarget,harm][]Shadow Word: Pain
+/use [harm][@mouseovertarget,harm][]Shadow Word: Pain
 END
 VER 3 000000000000002C "Target Focus" "132284"
 /tar focus

@@ -2,821 +2,1283 @@
 ElvCharacterDB = {
 	["ChatHistoryLog"] = {
 		{
-			"need to move flying serpent kick away from my sweep", -- [1]
-			"Drkiller-Illidan", -- [2]
+			"so wall together so dps aoe in bos", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Drkiller", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7709, -- [11]
-			"Player-57-07DB6301", -- [12]
+			853, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Drkiller|r",
-			[51] = 1520570443,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113166,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [1]
 		{
-			"Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r!", -- [1]
-			"Grimuhs-Illidan", -- [2]
+			"Pull in 5 sec.", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Grimuhs", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7711, -- [11]
-			"Player-57-06A00AC3", -- [12]
+			854, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520570445,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113169,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [2]
 		{
-			"Interrupted |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r on Blazing Imp", -- [1]
-			"Bravery-Illidan", -- [2]
+			"Pull in 4 sec.", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Bravery", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7712, -- [11]
-			"Player-57-0A65B7F5", -- [12]
+			855, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc69b6dBravery|r",
-			[51] = 1520570446,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113170,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [3]
 		{
-			"Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r!", -- [1]
-			"Djpurge-Illidan", -- [2]
+			"Pull in 3 sec.", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Djpurge", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7713, -- [11]
-			"Player-57-0626F400", -- [12]
+			856, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddDjpurge|r",
-			[51] = 1520570450,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113171,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [4]
 		{
-			"Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r!", -- [1]
-			"Gliere-Illidan", -- [2]
+			"Pull in 2 sec.", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Gliere", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7714, -- [11]
-			"Player-57-0AB4189E", -- [12]
+			857, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffGliere|r",
-			[51] = 1520570451,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113172,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [5]
 		{
-			"Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r!", -- [1]
-			"Psytek-Illidan", -- [2]
-			"Orcish", -- [3]
+			"Pull in 1 sec.", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
+			"", -- [3]
 			"", -- [4]
-			"Psytek", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7718, -- [11]
-			"Player-57-09EC0B56", -- [12]
+			858, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffff468Psytek|r",
-			[51] = 1520570453,
-			[50] = "CHAT_MSG_SAY",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113173,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [6]
 		{
-			"|cff71d5ff|Hspell:15487:0|h[Silence]|h|r on Blazing Imp ended!", -- [1]
-			"Gliere-Illidan", -- [2]
+			">>> Pull <<<", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Gliere", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7719, -- [11]
-			"Player-57-0AB4189E", -- [12]
+			859, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffGliere|r",
-			[51] = 1520570456,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113174,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [7]
 		{
-			"Interrupted |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r on Blazing Imp", -- [1]
-			"Bravery-Illidan", -- [2]
+			"NO CCC ADD", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Bravery", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7733, -- [11]
-			"Player-57-0A65B7F5", -- [12]
+			869, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc69b6dBravery|r",
-			[51] = 1520570497,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113207,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [8]
 		{
-			"Interrupted |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r on Blazing Imp", -- [1]
-			"Bravery-Illidan", -- [2]
+			"MEN", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Bravery", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7743, -- [11]
-			"Player-57-0A65B7F5", -- [12]
+			872, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc69b6dBravery|r",
-			[51] = 1520570514,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113209,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [9]
 		{
-			"[FIS] Interrupted Lady Dacidion's |cff71d5ff|Hspell:255805:0|h[Unstable Portal]|h|r", -- [1]
-			"Narraku-Illidan", -- [2]
+			"Details! Evan's Death: |cff71d5ff|Hspell:217090:0|h[Ola de magma]|h|r: 3.36M ", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Narraku", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7746, -- [11]
-			"Player-57-0A85896C", -- [12]
+			881, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Narraku|r",
-			[51] = 1520570518,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113243,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [10]
 		{
-			"|cff71d5ff|Hspell:15286:0|h[Vampiric Embrace]|h|r activated!", -- [1]
-			"Gliere-Illidan", -- [2]
+			"Get ready to brez", -- [1]
+			"Evan-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Gliere", -- [5]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7748, -- [11]
-			"Player-57-0AB4189E", -- [12]
+			887, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffGliere|r",
-			[51] = 1520570521,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffEvan|r",
+			[51] = 1522113263,
+			[50] = "CHAT_MSG_PARTY",
 		}, -- [11]
 		{
-			"Interrupted Lady Dacidion's |cff71d5ff|Hspell:255805:0|h[Unstable Portal]|h|r!", -- [1]
-			"Gliere-Illidan", -- [2]
+			"Who used Brez: Eikasia cast |cff71d5ff|Hspell:20484:0|h[Renacer]|h|r!!!", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Gliere", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7756, -- [11]
-			"Player-57-0AB4189E", -- [12]
+			891, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffGliere|r",
-			[51] = 1520570531,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113267,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [12]
 		{
-			"Interrupted |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r on Blazing Imp", -- [1]
-			"Bravery-Illidan", -- [2]
+			"Details! Chî's Death: [Mano a mano]: 10.42M ", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Bravery", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7759, -- [11]
-			"Player-57-0A65B7F5", -- [12]
+			894, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc69b6dBravery|r",
-			[51] = 1520570534,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113278,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [13]
 		{
-			"|cff71d5ff|Hspell:15286:0|h[Vampiric Embrace]|h|r over!", -- [1]
-			"Gliere-Illidan", -- [2]
+			"XCX", -- [1]
+			"Chî-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Gliere", -- [5]
+			"Chî", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7761, -- [11]
-			"Player-57-0AB4189E", -- [12]
+			895, -- [11]
+			"Player-57-09B3C09A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffGliere|r",
-			[51] = 1520570536,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Chî|r",
+			[51] = 1522113281,
+			[50] = "CHAT_MSG_PARTY",
 		}, -- [14]
 		{
-			"[FIS] Interrupted Lady Dacidion's |cff71d5ff|Hspell:255805:0|h[Unstable Portal]|h|r", -- [1]
-			"Narraku-Illidan", -- [2]
+			"CC", -- [1]
+			"Chî-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Narraku", -- [5]
+			"Chî", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7762, -- [11]
-			"Player-57-0A85896C", -- [12]
+			896, -- [11]
+			"Player-57-09B3C09A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Narraku|r",
-			[51] = 1520570537,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Chî|r",
+			[51] = 1522113282,
+			[50] = "CHAT_MSG_PARTY",
 		}, -- [15]
 		{
-			"|cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r interrupted!", -- [1]
-			"Jarinia-Illidan", -- [2]
-			"Orcish", -- [3]
+			"kill the add", -- [1]
+			"Chî-Illidan", -- [2]
+			"", -- [3]
 			"", -- [4]
-			"Jarinia", -- [5]
+			"Chî", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7765, -- [11]
-			"Player-57-086B5B7A", -- [12]
+			897, -- [11]
+			"Player-57-09B3C09A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff3fc6eaJarinia|r",
-			[51] = 1520570540,
-			[50] = "CHAT_MSG_SAY",
+			[52] = "|cff00ff96Chî|r",
+			[51] = 1522113288,
+			[50] = "CHAT_MSG_PARTY",
 		}, -- [16]
 		{
-			"Used Consume Magic", -- [1]
-			"Narraku-Illidan", -- [2]
-			"Orcish", -- [3]
+			"|cff71d5ff|Hspell:77761:0|h[Stampeding Roar]|h|r !!!", -- [1]
+			"Shalandiera-Hellscream", -- [2]
+			"", -- [3]
 			"", -- [4]
-			"Narraku", -- [5]
+			"Shalandiera-Hellscream", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7777, -- [11]
-			"Player-57-0A85896C", -- [12]
+			899, -- [11]
+			"Player-53-00547000", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Narraku|r",
-			[51] = 1520570571,
-			[50] = "CHAT_MSG_SAY",
+			[52] = "|cffff7c0aShalandiera-Hellscream|r",
+			[51] = 1522113290,
+			[50] = "CHAT_MSG_PARTY",
 		}, -- [17]
 		{
-			"[FIS] Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r", -- [1]
-			"Narraku-Illidan", -- [2]
+			"Details! Mixter's Death: |cff71d5ff|Hspell:217090:0|h[Ola de magma]|h|r: 3.54M ", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Narraku", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7778, -- [11]
-			"Player-57-0A85896C", -- [12]
+			904, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Narraku|r",
-			[51] = 1520570571,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113304,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [18]
 		{
-			"Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r!", -- [1]
-			"Grimuhs-Illidan", -- [2]
+			"Details! Shalandiera's Death: |cff71d5ff|Hspell:217090:0|h[Ola de magma]|h|r: 3.29M ", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Grimuhs", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7779, -- [11]
-			"Player-57-06A00AC3", -- [12]
+			906, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520570572,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113305,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [19]
 		{
-			"Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r!", -- [1]
-			"Telgina-Illidan", -- [2]
-			"Orcish", -- [3]
+			"ffs guys", -- [1]
+			"Chî-Illidan", -- [2]
+			"", -- [3]
 			"", -- [4]
-			"Telgina", -- [5]
+			"Chî", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7781, -- [11]
-			"Player-57-08F04525", -- [12]
+			907, -- [11]
+			"Player-57-09B3C09A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Telgina|r",
-			[51] = 1520570576,
-			[50] = "CHAT_MSG_SAY",
+			[52] = "|cff00ff96Chî|r",
+			[51] = 1522113307,
+			[50] = "CHAT_MSG_PARTY",
 		}, -- [20]
 		{
-			"bugged", -- [1]
-			"Cenzic-Illidan", -- [2]
+			"wipe", -- [1]
+			"Chî-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Cenzic", -- [5]
+			"Chî", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7793, -- [11]
-			"Player-57-07DBF66B", -- [12]
+			909, -- [11]
+			"Player-57-09B3C09A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc41e3aCenzic|r",
-			[51] = 1520570597,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Chî|r",
+			[51] = 1522113312,
+			[50] = "CHAT_MSG_PARTY",
 		}, -- [21]
 		{
-			"bugged", -- [1]
-			"Cenzic-Illidan", -- [2]
+			"why not running in wall ", -- [1]
+			"Mixter-Stormrage", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Cenzic", -- [5]
+			"Mixter-Stormrage", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7795, -- [11]
-			"Player-57-07DBF66B", -- [12]
+			911, -- [11]
+			"Player-60-0B6AC95D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc41e3aCenzic|r",
-			[51] = 1520570601,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffaad372Mixter-Stormrage|r",
+			[51] = 1522113319,
+			[50] = "CHAT_MSG_PARTY",
 		}, -- [22]
 		{
-			"Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r!", -- [1]
-			"Gliere-Illidan", -- [2]
-			"Orcish", -- [3]
+			"can you brez a dps", -- [1]
+			"Chî-Illidan", -- [2]
+			"", -- [3]
 			"", -- [4]
-			"Gliere", -- [5]
+			"Chî", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7804, -- [11]
-			"Player-57-0AB4189E", -- [12]
+			913, -- [11]
+			"Player-57-09B3C09A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffGliere|r",
-			[51] = 1520570619,
-			[50] = "CHAT_MSG_SAY",
+			[52] = "|cff00ff96Chî|r",
+			[51] = 1522113332,
+			[50] = "CHAT_MSG_PARTY",
 		}, -- [23]
 		{
-			"Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r!", -- [1]
-			"Gliere-Illidan", -- [2]
+			"Details! Eikasia's Death: |cff71d5ff|Hspell:200732:0|h[Choque de magma]|h|r: 3.43M ", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Gliere", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7805, -- [11]
-			"Player-57-0AB4189E", -- [12]
+			917, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffGliere|r",
-			[51] = 1520570619,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113342,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [24]
 		{
-			"|cff71d5ff|Hspell:15487:0|h[Silence]|h|r on Blazing Imp ended!", -- [1]
-			"Gliere-Illidan", -- [2]
+			"men", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Gliere", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7807, -- [11]
-			"Player-57-0AB4189E", -- [12]
+			918, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffGliere|r",
-			[51] = 1520570623,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113346,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [25]
 		{
-			"Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r!", -- [1]
-			"Psytek-Illidan", -- [2]
-			"Orcish", -- [3]
+			"Details! Evan's Death: [Mano a mano]: 4.52M ", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
+			"", -- [3]
 			"", -- [4]
-			"Psytek", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7819, -- [11]
-			"Player-57-09EC0B56", -- [12]
+			919, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffff468Psytek|r",
-			[51] = 1520570657,
-			[50] = "CHAT_MSG_SAY",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113347,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [26]
 		{
-			"[FIS] Interrupted Lord Eilgar's |cff71d5ff|Hspell:255805:0|h[Unstable Portal]|h|r", -- [1]
-			"Narraku-Illidan", -- [2]
+			"MONK", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Narraku", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7842, -- [11]
-			"Player-57-0A85896C", -- [12]
+			920, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Narraku|r",
-			[51] = 1520570697,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113347,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [27]
 		{
-			"Interrupted |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r on Blazing Imp", -- [1]
-			"Bravery-Illidan", -- [2]
+			"U ARE  IDIOT¡?", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Bravery", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7845, -- [11]
-			"Player-57-0A65B7F5", -- [12]
+			922, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc69b6dBravery|r",
-			[51] = 1520570702,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113350,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [28]
 		{
-			"Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r!", -- [1]
-			"Evan-Illidan", -- [2]
-			"Orcish", -- [3]
+			"NO CCC ADD", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
+			"", -- [3]
 			"", -- [4]
-			"Evan", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7848, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			924, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1520570709,
-			[50] = "CHAT_MSG_SAY",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113354,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [29]
 		{
-			"SPIRIT LINK UP!!! GET SOME BEEF!!!", -- [1]
-			"Djpurge-Illidan", -- [2]
-			"Orcish", -- [3]
+			"HE ", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
+			"", -- [3]
 			"", -- [4]
-			"Djpurge", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7853, -- [11]
-			"Player-57-0626F400", -- [12]
+			925, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddDjpurge|r",
-			[51] = 1520570719,
-			[50] = "CHAT_MSG_SAY",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113355,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [30]
 		{
-			"Used Consume Magic", -- [1]
-			"Narraku-Illidan", -- [2]
-			"Orcish", -- [3]
+			"ONLY RUN", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
+			"", -- [3]
 			"", -- [4]
-			"Narraku", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7857, -- [11]
-			"Player-57-0A85896C", -- [12]
+			926, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Narraku|r",
-			[51] = 1520570721,
-			[50] = "CHAT_MSG_SAY",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113357,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [31]
 		{
-			"that was the kill", -- [1]
-			"Djpurge-Illidan", -- [2]
+			"INTO THE WALL", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Djpurge", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7873, -- [11]
-			"Player-57-0626F400", -- [12]
+			927, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddDjpurge|r",
-			[51] = 1520570739,
-			[50] = "CHAT_MSG_OFFICER",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113361,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [32]
 		{
-			"the beatings will continue", -- [1]
-			"Grimuhs-Illidan", -- [2]
+			"DOnt cc", -- [1]
+			"Mixter-Stormrage", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Grimuhs", -- [5]
+			"Mixter-Stormrage", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7874, -- [11]
-			"Player-57-06A00AC3", -- [12]
+			930, -- [11]
+			"Player-60-0B6AC95D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520570739,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffaad372Mixter-Stormrage|r",
+			[51] = 1522113362,
+			[50] = "CHAT_MSG_PARTY",
 		}, -- [33]
 		{
-			"we need everyone alive", -- [1]
-			"Thenexjr-Illidan", -- [2]
+			"yes use cc mass", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Thenexjr", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7876, -- [11]
-			"Player-57-09FB5ACE", -- [12]
+			931, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Thenexjr|r",
-			[51] = 1520570743,
-			[50] = "CHAT_MSG_OFFICER",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113368,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [34]
 		{
-			"what happened", -- [1]
-			"Akromä-Illidan", -- [2]
+			"i see", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Akromä", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7877, -- [11]
-			"Player-57-0656B527", -- [12]
+			932, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaAkromä|r",
-			[51] = 1520570744,
-			[50] = "CHAT_MSG_OFFICER",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113370,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [35]
 		{
-			"dre was dead", -- [1]
-			"Djpurge-Illidan", -- [2]
+			"menm", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Djpurge", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7880, -- [11]
-			"Player-57-0626F400", -- [12]
+			933, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddDjpurge|r",
-			[51] = 1520570748,
-			[50] = "CHAT_MSG_OFFICER",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113372,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [36]
 		{
-			"missing 2 people down", -- [1]
-			"Thenexjr-Illidan", -- [2]
+			"god this is 17", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Thenexjr", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7882, -- [11]
-			"Player-57-09FB5ACE", -- [12]
+			934, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Thenexjr|r",
-			[51] = 1520570749,
-			[50] = "CHAT_MSG_OFFICER",
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113384,
+			[50] = "CHAT_MSG_PARTY_LEADER",
 		}, -- [37]
 		{
-			"I had a weird freeze in the middle and I'm at 400ms now.", -- [1]
+			"hunter", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Eikasia-Quel'Thalas", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			935, -- [11]
+			"Player-1428-0774DE5D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113394,
+			[50] = "CHAT_MSG_PARTY_LEADER",
+		}, -- [38]
+		{
+			"u no have bl pet men=", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Eikasia-Quel'Thalas", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			936, -- [11]
+			"Player-1428-0774DE5D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113399,
+			[50] = "CHAT_MSG_PARTY_LEADER",
+		}, -- [39]
+		{
+			"?", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Eikasia-Quel'Thalas", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			937, -- [11]
+			"Player-1428-0774DE5D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113401,
+			[50] = "CHAT_MSG_PARTY_LEADER",
+		}, -- [40]
+		{
+			"??", -- [1]
+			"Mixter-Stormrage", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Mixter-Stormrage", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			938, -- [11]
+			"Player-60-0B6AC95D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffaad372Mixter-Stormrage|r",
+			[51] = 1522113403,
+			[50] = "CHAT_MSG_PARTY",
+		}, -- [41]
+		{
+			"yeah ", -- [1]
+			"Mixter-Stormrage", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Mixter-Stormrage", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			939, -- [11]
+			"Player-60-0B6AC95D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffaad372Mixter-Stormrage|r",
+			[51] = 1522113405,
+			[50] = "CHAT_MSG_PARTY",
+		}, -- [42]
+		{
+			"or bl brz", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Eikasia-Quel'Thalas", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			940, -- [11]
+			"Player-1428-0774DE5D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113406,
+			[50] = "CHAT_MSG_PARTY_LEADER",
+		}, -- [43]
+		{
+			"ill lust", -- [1]
+			"Mixter-Stormrage", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Mixter-Stormrage", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			941, -- [11]
+			"Player-60-0B6AC95D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffaad372Mixter-Stormrage|r",
+			[51] = 1522113409,
+			[50] = "CHAT_MSG_PARTY",
+		}, -- [44]
+		{
+			"use brez pet", -- [1]
+			"Chî-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Chî", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			942, -- [11]
+			"Player-57-09B3C09A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff00ff96Chî|r",
+			[51] = 1522113415,
+			[50] = "CHAT_MSG_PARTY",
+		}, -- [45]
+		{
+			"got both ", -- [1]
+			"Mixter-Stormrage", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Mixter-Stormrage", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			943, -- [11]
+			"Player-60-0B6AC95D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffaad372Mixter-Stormrage|r",
+			[51] = 1522113415,
+			[50] = "CHAT_MSG_PARTY",
+		}, -- [46]
+		{
+			"i can lus", -- [1]
+			"Chî-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Chî", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			944, -- [11]
+			"Player-57-09B3C09A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff00ff96Chî|r",
+			[51] = 1522113436,
+			[50] = "CHAT_MSG_PARTY",
+		}, -- [47]
+		{
+			"all can", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Eikasia-Quel'Thalas", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			945, -- [11]
+			"Player-1428-0774DE5D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113441,
+			[50] = "CHAT_MSG_PARTY_LEADER",
+		}, -- [48]
+		{
+			"Who used Brez: Shalandiera-Hellscream cast |cff71d5ff|Hspell:50769:0|h[Revivir]|h|r!!!", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Eikasia-Quel'Thalas", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			946, -- [11]
+			"Player-1428-0774DE5D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113443,
+			[50] = "CHAT_MSG_PARTY_LEADER",
+		}, -- [49]
+		{
+			"but no bl...", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Eikasia-Quel'Thalas", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			947, -- [11]
+			"Player-1428-0774DE5D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113445,
+			[50] = "CHAT_MSG_PARTY_LEADER",
+		}, -- [50]
+		{
+			"ok got lust", -- [1]
+			"Mixter-Stormrage", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Mixter-Stormrage", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			948, -- [11]
+			"Player-60-0B6AC95D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffaad372Mixter-Stormrage|r",
+			[51] = 1522113451,
+			[50] = "CHAT_MSG_PARTY",
+		}, -- [51]
+		{
+			"Pull in 5 sec.", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Eikasia-Quel'Thalas", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			949, -- [11]
+			"Player-1428-0774DE5D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113454,
+			[50] = "CHAT_MSG_PARTY_LEADER",
+		}, -- [52]
+		{
+			"Pull in 4 sec.", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Eikasia-Quel'Thalas", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			950, -- [11]
+			"Player-1428-0774DE5D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113455,
+			[50] = "CHAT_MSG_PARTY_LEADER",
+		}, -- [53]
+		{
+			"Pull in 3 sec.", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Eikasia-Quel'Thalas", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			951, -- [11]
+			"Player-1428-0774DE5D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113456,
+			[50] = "CHAT_MSG_PARTY_LEADER",
+		}, -- [54]
+		{
+			"Pull in 2 sec.", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Eikasia-Quel'Thalas", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			952, -- [11]
+			"Player-1428-0774DE5D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113457,
+			[50] = "CHAT_MSG_PARTY_LEADER",
+		}, -- [55]
+		{
+			"Pull in 1 sec.", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Eikasia-Quel'Thalas", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			953, -- [11]
+			"Player-1428-0774DE5D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113458,
+			[50] = "CHAT_MSG_PARTY_LEADER",
+		}, -- [56]
+		{
+			">>> Pull <<<", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Eikasia-Quel'Thalas", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			955, -- [11]
+			"Player-1428-0774DE5D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113459,
+			[50] = "CHAT_MSG_PARTY_LEADER",
+		}, -- [57]
+		{
+			"....", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Eikasia-Quel'Thalas", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			958, -- [11]
+			"Player-1428-0774DE5D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113471,
+			[50] = "CHAT_MSG_PARTY_LEADER",
+		}, -- [58]
+		{
+			"lol", -- [1]
 			"Evan-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
@@ -826,7 +1288,7 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7884, -- [11]
+			959, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -834,363 +1296,935 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1520570757,
-			[50] = "CHAT_MSG_OFFICER",
-		}, -- [38]
+			[51] = 1522113475,
+			[50] = "CHAT_MSG_PARTY",
+		}, -- [59]
 		{
-			"2 aoe stuns and dps", -- [1]
-			"Thenexjr-Illidan", -- [2]
+			"Everytime", -- [1]
+			"Evan-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Thenexjr", -- [5]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7885, -- [11]
-			"Player-57-09FB5ACE", -- [12]
+			960, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Thenexjr|r",
-			[51] = 1520570758,
-			[50] = "CHAT_MSG_OFFICER",
-		}, -- [39]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1522113477,
+			[50] = "CHAT_MSG_PARTY",
+		}, -- [60]
 		{
-			"lock rocks please", -- [1]
-			"Kidsquints-Illidan", -- [2]
+			"Dodge shit", -- [1]
+			"Evan-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Kidsquints", -- [5]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7887, -- [11]
-			"Player-57-09836372", -- [12]
+			966, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Kidsquints|r",
-			[51] = 1520570761,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [40]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1522113521,
+			[50] = "CHAT_MSG_PARTY",
+		}, -- [61]
 		{
-			"fanx", -- [1]
-			"Kidsquints-Illidan", -- [2]
+			"Ty for invite.", -- [1]
+			"Chî-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Kidsquints", -- [5]
+			"Chî", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7893, -- [11]
-			"Player-57-09836372", -- [12]
+			974, -- [11]
+			"Player-57-09B3C09A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Kidsquints|r",
-			[51] = 1520570769,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [41]
-		{
-			"that was my fault i flying serpent off the edge", -- [1]
-			"Drkiller-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Drkiller", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			7918, -- [11]
-			"Player-57-07DB6301", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Drkiller|r",
-			[51] = 1520570812,
-			[50] = "CHAT_MSG_WHISPER",
-		}, -- [42]
-		{
-			"Lol figured.", -- [1]
-			"Drkiller-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Drkiller", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			7921, -- [11]
-			"Player-57-07DB6301", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Drkiller|r",
-			[51] = 1520570816,
+			[52] = "|cff00ff96Chî|r",
+			[51] = 1522113552,
 			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [43]
+		}, -- [62]
 		{
-			"my amiibo business cards are 1gig", -- [1]
-			"Grimuhs-Illidan", -- [2]
+			"attak", -- [1]
+			"Eikasia-Quel'Thalas", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Grimuhs", -- [5]
+			"Eikasia-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7923, -- [11]
-			"Player-57-06A00AC3", -- [12]
+			976, -- [11]
+			"Player-1428-0774DE5D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520570827,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [44]
+			[52] = "|cffff7c0aEikasia-Quel'Thalas|r",
+			[51] = 1522113559,
+			[50] = "CHAT_MSG_PARTY_LEADER",
+		}, -- [63]
 		{
-			"lmao", -- [1]
-			"Grimuhs-Illidan", -- [2]
+			"np", -- [1]
+			"Chî-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Grimuhs", -- [5]
+			"Chî", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7924, -- [11]
-			"Player-57-06A00AC3", -- [12]
+			978, -- [11]
+			"Player-57-09B3C09A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520570828,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [45]
+			[52] = "|cff00ff96Chî|r",
+			[51] = 1522113574,
+			[50] = "CHAT_MSG_WHISPER",
+		}, -- [64]
 		{
-			"Interrupted Vulcanar's |cff71d5ff|Hspell:244607:0|h[Flames of Xoroth]|h|r!", -- [1]
-			"Grimuhs-Illidan", -- [2]
+			"|cffa335ee|Hitem:134408::::::::110:257::16:4:3536:1808:1602:3336:::|h[Putrid Carapace]|h|r?", -- [1]
+			"Chî-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Grimuhs", -- [5]
+			"Chî", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7955, -- [11]
-			"Player-57-06A00AC3", -- [12]
+			991, -- [11]
+			"Player-57-09B3C09A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520570890,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [46]
+			[52] = "|cff00ff96Chî|r",
+			[51] = 1522113601,
+			[50] = "CHAT_MSG_WHISPER_INFORM",
+		}, -- [65]
 		{
-			"[FIS] Interrupted Vulcanar's |cff71d5ff|Hspell:255805:0|h[Unstable Portal]|h|r", -- [1]
-			"Narraku-Illidan", -- [2]
+			"oh fuck yeah", -- [1]
+			"Chî-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Narraku", -- [5]
+			"Chî", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7959, -- [11]
-			"Player-57-0A85896C", -- [12]
+			995, -- [11]
+			"Player-57-09B3C09A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Narraku|r",
-			[51] = 1520570894,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [47]
+			[52] = "|cff00ff96Chî|r",
+			[51] = 1522113617,
+			[50] = "CHAT_MSG_WHISPER",
+		}, -- [66]
 		{
-			"Interrupted Vulcanar's |cff71d5ff|Hspell:255805:0|h[Unstable Portal]|h|r!", -- [1]
-			"Gliere-Illidan", -- [2]
+			"oh wait", -- [1]
+			"Chî-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Gliere", -- [5]
+			"Chî", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7963, -- [11]
-			"Player-57-0AB4189E", -- [12]
+			996, -- [11]
+			"Player-57-09B3C09A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffGliere|r",
-			[51] = 1520570906,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [48]
+			[52] = "|cff00ff96Chî|r",
+			[51] = 1522113623,
+			[50] = "CHAT_MSG_WHISPER",
+		}, -- [67]
 		{
-			"[FIS] Interrupted Vulcanar's |cff71d5ff|Hspell:255805:0|h[Unstable Portal]|h|r", -- [1]
-			"Narraku-Illidan", -- [2]
+			"ty", -- [1]
+			"Chî-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Narraku", -- [5]
+			"Chî", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7967, -- [11]
-			"Player-57-0A85896C", -- [12]
+			999, -- [11]
+			"Player-57-09B3C09A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Narraku|r",
-			[51] = 1520570911,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [49]
+			[52] = "|cff00ff96Chî|r",
+			[51] = 1522113630,
+			[50] = "CHAT_MSG_WHISPER",
+		}, -- [68]
 		{
-			"Everburning Flames fading in 3", -- [1]
-			"Djpurge-Illidan", -- [2]
+			"H王座包团有贼法德 战猎萨 马上开打 低价处理 M王座1-11包团 特价", -- [1]
+			"Dwerwet-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Dwerwet", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1010, -- [11]
+			"Player-57-0AC639EA", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cff0070ddDwerwet|r",
+			[51] = 1522113653,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [69]
+		{
+			"That was kind of fun, I've never done a 17 before.", -- [1]
+			"Chî-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Chî", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			1029, -- [11]
+			"Player-57-09B3C09A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff00ff96Chî|r",
+			[51] = 1522113674,
+			[50] = "CHAT_MSG_WHISPER_INFORM",
+		}, -- [70]
+		{
+			"H王座包团有贼法德 战猎萨 马上开打 低价处理 M王座1-11包团 特价", -- [1]
+			"Dwerwet-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Dwerwet", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1035, -- [11]
+			"Player-57-0AC639EA", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cff0070ddDwerwet|r",
+			[51] = 1522113683,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [71]
+		{
+			"hi", -- [1]
+			"Vilhunt-Thrall", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Vilhunt-Thrall", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			26, -- [11]
+			"Player-3678-0A617A7C", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffaad372Vilhunt-Thrall|r",
+			[51] = 1522127753,
+			[50] = "CHAT_MSG_RAID",
+		}, -- [72]
+		{
+			"◇◇H和M 难度王座包团单买 特价，大秘境，黑市T3，觉醒精华，新种族20-110，飞行解锁，副本坐骑等，所有业务都做 需要咨询◇◇", -- [1]
+			"Babeygsdwaw-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Babeygsdwaw", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			29, -- [11]
+			"Player-57-0AC6F30B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dBabeygsdwaw|r",
+			[51] = 1522127787,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [73]
+		{
+			"^LFW_L", -- [1]
+			"Evan-Illidan", -- [2]
+			"", -- [3]
+			"7. TCForwarder6IIll", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			7, -- [8]
+			"TCForwarder6IIll", -- [9]
+			0, -- [10]
+			35, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1522127790,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [74]
+		{
+			"Bomb to skull or purple?", -- [1]
+			"Evan-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			40, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1522127863,
+			[50] = "CHAT_MSG_RAID",
+		}, -- [75]
+		{
+			"orange", -- [1]
+			"Dawnofthedon-Ner'zhul", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Dawnofthedon-Ner'zhul", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			42, -- [11]
+			"Player-128-07AAFDFB", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa330c9Dawnofthedon-Ner'zhul|r",
+			[51] = 1522127878,
+			[50] = "CHAT_MSG_RAID",
+		}, -- [76]
+		{
+			"Ah missed it, rgr.", -- [1]
+			"Evan-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			44, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1522127886,
+			[50] = "CHAT_MSG_RAID",
+		}, -- [77]
+		{
+			"yeah big bomb orange, others out", -- [1]
+			"Kagoroth-Ner'zhul", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Kagoroth-Ner'zhul", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			45, -- [11]
+			"Player-128-07DCB4DE", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff00ff96Kagoroth-Ner'zhul|r",
+			[51] = 1522127897,
+			[50] = "CHAT_MSG_RAID_LEADER",
+		}, -- [78]
+		{
+			"big bomb is orange?", -- [1]
+			"Wakeyouup-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Wakeyouup", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			46, -- [11]
+			"Player-57-095FAED3", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa330c9Wakeyouup|r",
+			[51] = 1522127899,
+			[50] = "CHAT_MSG_RAID",
+		}, -- [79]
+		{
+			"ok", -- [1]
+			"Wakeyouup-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Wakeyouup", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			47, -- [11]
+			"Player-57-095FAED3", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa330c9Wakeyouup|r",
+			[51] = 1522127901,
+			[50] = "CHAT_MSG_RAID",
+		}, -- [80]
+		{
+			"ph1 moving right or left?", -- [1]
+			"Wakeyouup-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Wakeyouup", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			48, -- [11]
+			"Player-57-095FAED3", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa330c9Wakeyouup|r",
+			[51] = 1522127910,
+			[50] = "CHAT_MSG_RAID",
+		}, -- [81]
+		{
+			"right", -- [1]
+			"Kagoroth-Ner'zhul", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Kagoroth-Ner'zhul", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			49, -- [11]
+			"Player-128-07DCB4DE", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff00ff96Kagoroth-Ner'zhul|r",
+			[51] = 1522127914,
+			[50] = "CHAT_MSG_RAID_LEADER",
+		}, -- [82]
+		{
+			"don't get greedy, just move when it's targeted", -- [1]
+			"Kagoroth-Ner'zhul", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Kagoroth-Ner'zhul", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			51, -- [11]
+			"Player-128-07DCB4DE", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff00ff96Kagoroth-Ner'zhul|r",
+			[51] = 1522127929,
+			[50] = "CHAT_MSG_RAID_LEADER",
+		}, -- [83]
+		{
+			"everyone's killed it...cept fudge butt", -- [1]
+			"Kagoroth-Ner'zhul", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Kagoroth-Ner'zhul", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			53, -- [11]
+			"Player-128-07DCB4DE", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff00ff96Kagoroth-Ner'zhul|r",
+			[51] = 1522127941,
+			[50] = "CHAT_MSG_RAID_LEADER",
+		}, -- [84]
+		{
+			"he's gonna die", -- [1]
+			"Kagoroth-Ner'zhul", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Kagoroth-Ner'zhul", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			54, -- [11]
+			"Player-128-07DCB4DE", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff00ff96Kagoroth-Ner'zhul|r",
+			[51] = 1522127944,
+			[50] = "CHAT_MSG_RAID_LEADER",
+		}, -- [85]
+		{
+			"we're okay with that", -- [1]
+			"Wildbillee-Ner'zhul", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Wildbillee-Ner'zhul", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			56, -- [11]
+			"Player-128-071753DB", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff00ff96Wildbillee-Ner'zhul|r",
+			[51] = 1522127955,
+			[50] = "CHAT_MSG_RAID",
+		}, -- [86]
+		{
+			"some of you may die", -- [1]
+			"Calaga-Ner'zhul", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Calaga-Ner'zhul", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			57, -- [11]
+			"Player-128-07DCB5D7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff0070ddCalaga-Ner'zhul|r",
+			[51] = 1522127965,
+			[50] = "CHAT_MSG_RAID",
+		}, -- [87]
+		{
+			"but that's a risk im willing to take", -- [1]
+			"Calaga-Ner'zhul", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Calaga-Ner'zhul", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			58, -- [11]
+			"Player-128-07DCB5D7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff0070ddCalaga-Ner'zhul|r",
+			[51] = 1522127970,
+			[50] = "CHAT_MSG_RAID",
+		}, -- [88]
+		{
+			"not okay", -- [1]
+			"Wildbillee-Ner'zhul", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Wildbillee-Ner'zhul", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			59, -- [11]
+			"Player-128-071753DB", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff00ff96Wildbillee-Ner'zhul|r",
+			[51] = 1522127970,
+			[50] = "CHAT_MSG_RAID",
+		}, -- [89]
+		{
+			"I'm not. I'm priority for healing", -- [1]
+			"Fudgebutt-Ner'zhul", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Fudgebutt-Ner'zhul", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			60, -- [11]
+			"Player-128-07D0090F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffff7c0aFudgebutt-Ner'zhul|r",
+			[51] = 1522127973,
+			[50] = "CHAT_MSG_RAID",
+		}, -- [90]
+		{
+			"{rt5} Crit/Mast", -- [1]
+			"Evan-Illidan", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Djpurge", -- [5]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7970, -- [11]
-			"Player-57-0626F400", -- [12]
+			67, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddDjpurge|r",
-			[51] = 1520570920,
+			[52] = "|cffffffffEvan|r",
+			[51] = 1522128000,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [50]
+		}, -- [91]
 		{
-			"Everburning Flames fading in 2", -- [1]
-			"Djpurge-Illidan", -- [2]
+			"Soulblight on Wildbillee", -- [1]
+			"Wildbillee-Ner'zhul", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Djpurge", -- [5]
+			"Wildbillee-Ner'zhul", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7972, -- [11]
-			"Player-57-0626F400", -- [12]
+			108, -- [11]
+			"Player-128-071753DB", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddDjpurge|r",
-			[51] = 1520570921,
+			[52] = "|cff00ff96Wildbillee-Ner'zhul|r",
+			[51] = 1522128080,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [51]
+		}, -- [92]
 		{
-			"Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r!", -- [1]
-			"Djpurge-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Djpurge", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			7973, -- [11]
-			"Player-57-0626F400", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff0070ddDjpurge|r",
-			[51] = 1520570921,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [52]
-		{
-			"Everburning Flames fading in 1", -- [1]
-			"Djpurge-Illidan", -- [2]
+			"4", -- [1]
+			"Wildbillee-Ner'zhul", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Djpurge", -- [5]
+			"Wildbillee-Ner'zhul", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7974, -- [11]
-			"Player-57-0626F400", -- [12]
+			115, -- [11]
+			"Player-128-071753DB", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddDjpurge|r",
-			[51] = 1520570922,
+			[52] = "|cff00ff96Wildbillee-Ner'zhul|r",
+			[51] = 1522128084,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [53]
+		}, -- [93]
 		{
-			"Interrupted |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r on Blazing Imp", -- [1]
-			"Bravery-Illidan", -- [2]
-			"", -- [3]
+			"3", -- [1]
+			"Wildbillee-Ner'zhul", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Bravery", -- [5]
+			"Wildbillee-Ner'zhul", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7978, -- [11]
-			"Player-57-0A65B7F5", -- [12]
+			117, -- [11]
+			"Player-128-071753DB", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc69b6dBravery|r",
-			[51] = 1520570924,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [54]
+			[52] = "|cff00ff96Wildbillee-Ner'zhul|r",
+			[51] = 1522128085,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [94]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:9672:Player-57-09D2DC76:1:3:8:18:4294967295:4294967295:4294967295:4294967295|h[Tons of Toys]|h|r!", -- [1]
+			"{rt5} Crit/Mast", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			124, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1522128105,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [95]
+		{
+			"{rt6} Haste/Vers", -- [1]
+			"Dawnofthedon-Ner'zhul", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Dawnofthedon-Ner'zhul", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			126, -- [11]
+			"Player-128-07AAFDFB", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa330c9Dawnofthedon-Ner'zhul|r",
+			[51] = 1522128105,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [96]
+		{
+			"{rt2}Bomb{rt2}", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			132, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1522128137,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [97]
+		{
+			"{rt2}4", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			137, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1522128148,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [98]
+		{
+			"{rt2}3", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			138, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1522128149,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [99]
+		{
+			"{rt2}2", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			139, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1522128150,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [100]
+		{
+			"{rt2}1", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			140, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1522128151,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [101]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:4892:Player-57-09D2DC76:1:3:26:18:4294967295:4294967295:4294967295:4294967295|h[Eastern Plaguelands Quests]|h|r!", -- [1]
 			"ßrútús-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
@@ -1200,7 +2234,7 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			7982, -- [11]
+			146, -- [11]
 			"Player-57-09D2DC76", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -1208,1615 +2242,581 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffaad372ßrútús|r",
-			[51] = 1520570934,
+			[51] = 1522128172,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [55]
-		{
-			"Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r!", -- [1]
-			"Djpurge-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Djpurge", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			7994, -- [11]
-			"Player-57-0626F400", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff0070ddDjpurge|r",
-			[51] = 1520570973,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [56]
-		{
-			"Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r!", -- [1]
-			"Xorn-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Xorn", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8002, -- [11]
-			"Player-57-0535020C", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff8787edXorn|r",
-			[51] = 1520570998,
-			[50] = "CHAT_MSG_SAY",
-		}, -- [57]
-		{
-			"Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r!", -- [1]
-			"Psytek-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Psytek", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8006, -- [11]
-			"Player-57-09EC0B56", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffff468Psytek|r",
-			[51] = 1520571004,
-			[50] = "CHAT_MSG_SAY",
-		}, -- [58]
-		{
-			"Interrupted |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r on Blazing Imp", -- [1]
-			"Bravery-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Bravery", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8019, -- [11]
-			"Player-57-0A65B7F5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dBravery|r",
-			[51] = 1520571033,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [59]
-		{
-			"|cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r interrupted!", -- [1]
-			"Jarinia-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Jarinia", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8024, -- [11]
-			"Player-57-086B5B7A", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3fc6eaJarinia|r",
-			[51] = 1520571041,
-			[50] = "CHAT_MSG_SAY",
-		}, -- [60]
-		{
-			"[FIS] Interrupted Lady Dacidion's |cff71d5ff|Hspell:255805:0|h[Unstable Portal]|h|r", -- [1]
-			"Narraku-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Narraku", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8029, -- [11]
-			"Player-57-0A85896C", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa330c9Narraku|r",
-			[51] = 1520571053,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [61]
-		{
-			"Interrupted |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r on Blazing Imp", -- [1]
-			"Bravery-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Bravery", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8040, -- [11]
-			"Player-57-0A65B7F5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dBravery|r",
-			[51] = 1520571081,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [62]
-		{
-			"Used Consume Magic", -- [1]
-			"Narraku-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Narraku", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8045, -- [11]
-			"Player-57-0A85896C", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa330c9Narraku|r",
-			[51] = 1520571092,
-			[50] = "CHAT_MSG_SAY",
-		}, -- [63]
-		{
-			"Interrupted |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r on Blazing Imp", -- [1]
-			"Bravery-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Bravery", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8054, -- [11]
-			"Player-57-0A65B7F5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dBravery|r",
-			[51] = 1520571120,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [64]
-		{
-			"Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r!", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Grimuhs", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8056, -- [11]
-			"Player-57-06A00AC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520571127,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [65]
-		{
-			"Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r!", -- [1]
-			"Xorn-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Xorn", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8067, -- [11]
-			"Player-57-0535020C", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff8787edXorn|r",
-			[51] = 1520571155,
-			[50] = "CHAT_MSG_SAY",
-		}, -- [66]
-		{
-			"Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r!", -- [1]
-			"Djpurge-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Djpurge", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8068, -- [11]
-			"Player-57-0626F400", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff0070ddDjpurge|r",
-			[51] = 1520571156,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [67]
-		{
-			"Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r!", -- [1]
-			"Gliere-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Gliere", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8073, -- [11]
-			"Player-57-0AB4189E", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGliere|r",
-			[51] = 1520571163,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [68]
-		{
-			"|cff71d5ff|Hspell:15487:0|h[Silence]|h|r on Blazing Imp ended!", -- [1]
-			"Gliere-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Gliere", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8076, -- [11]
-			"Player-57-0AB4189E", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGliere|r",
-			[51] = 1520571168,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [69]
-		{
-			"SPIRIT LINK UP!!! GET SOME BEEF!!!", -- [1]
-			"Djpurge-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Djpurge", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8080, -- [11]
-			"Player-57-0626F400", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff0070ddDjpurge|r",
-			[51] = 1520571172,
-			[50] = "CHAT_MSG_SAY",
-		}, -- [70]
-		{
-			"Akromä, I choose you!", -- [1]
-			"Cenzic-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Cenzic", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8081, -- [11]
-			"Player-57-07DBF66B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc41e3aCenzic|r",
-			[51] = 1520571173,
-			[50] = "CHAT_MSG_YELL",
-		}, -- [71]
-		{
-			"Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r!", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Grimuhs", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8088, -- [11]
-			"Player-57-06A00AC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520571192,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [72]
-		{
-			"Interrupted |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r on Blazing Imp", -- [1]
-			"Bravery-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Bravery", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8090, -- [11]
-			"Player-57-0A65B7F5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dBravery|r",
-			[51] = 1520571200,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [73]
-		{
-			"[FIS] Interrupted Lord Eilgar's |cff71d5ff|Hspell:255805:0|h[Unstable Portal]|h|r", -- [1]
-			"Narraku-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Narraku", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8100, -- [11]
-			"Player-57-0A85896C", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa330c9Narraku|r",
-			[51] = 1520571221,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [74]
-		{
-			"work call", -- [1]
-			"Cenzic-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Cenzic", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8113, -- [11]
-			"Player-57-07DBF66B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc41e3aCenzic|r",
-			[51] = 1520571260,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [75]
-		{
-			"what happened", -- [1]
-			"Akromä-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Akromä", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8116, -- [11]
-			"Player-57-0656B527", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff48cbaAkromä|r",
-			[51] = 1520571264,
-			[50] = "CHAT_MSG_OFFICER",
-		}, -- [76]
-		{
-			"again", -- [1]
-			"Djpurge-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Djpurge", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8117, -- [11]
-			"Player-57-0626F400", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff0070ddDjpurge|r",
-			[51] = 1520571266,
-			[50] = "CHAT_MSG_OFFICER",
-		}, -- [77]
-		{
-			"famous last pull", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Grimuhs", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8130, -- [11]
-			"Player-57-06A00AC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520571283,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [78]
-		{
-			"let's roll", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Grimuhs", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8132, -- [11]
-			"Player-57-06A00AC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520571284,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [79]
-		{
-			"..._„„„„¸_……………………………..…_¸„„„„_", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Grimuhs", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8133, -- [11]
-			"Player-57-06A00AC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520571287,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [80]
-		{
-			"./'.……¯'*~--„…….…………...„--~*'¯…....….'\\", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Grimuhs", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8134, -- [11]
-			"Player-57-06A00AC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520571287,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [81]
-		{
-			"Ì'ì\\,.…_¸„--~~-„)…………… („-~~--„¸_..….,/ì'Ì", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Grimuhs", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8135, -- [11]
-			"Player-57-06A00AC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520571287,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [82]
-		{
-			".'\\¯\"¯-¸: : : : : ¯\"^-„¸..….¸„-^\"¯ : : : : :¸-¯\"¯/'...", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Grimuhs", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8136, -- [11]
-			"Player-57-06A00AC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520571287,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [83]
-		{
-			"…\"-,„„¸/' : : : : : : : ¸„„-^\"¯ : : : : : : : '\\¸„„,-\"……", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Grimuhs", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8137, -- [11]
-			"Player-57-06A00AC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520571287,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [84]
-		{
-			"**¯¯¯'^^~-„„„----~^*'\"¯ : : : : : : : : : :¸-\"..........", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Grimuhs", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8138, -- [11]
-			"Player-57-06A00AC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520571287,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [85]
-		{
-			".:.:.:.:.„-^\" : : : : : : : : : : : : : : : : :„-\" \"^-„.:.:.:.:.", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Grimuhs", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8139, -- [11]
-			"Player-57-06A00AC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520571287,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [86]
-		{
-			":.:.:.:.:.:.:.:.:.:.: : : : : : : : : : ¸„-^¯:.:.:.:.:.:.:.:.:.:.:", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Grimuhs", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8140, -- [11]
-			"Player-57-06A00AC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520571287,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [87]
-		{
-			".::.:.:.:.:.:.:.:. : : : : : : : ¸„„-^¯ : : : : .:.:.:.:.:.:.:.::.", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Grimuhs", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8141, -- [11]
-			"Player-57-06A00AC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520571287,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [88]
-		{
-			":.' : : '\\ : : : : : : : ;¸„„-~\"¯~-„„¸; : : : : : : : \\' : : '.:", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Grimuhs", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8142, -- [11]
-			"Player-57-06A00AC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520571287,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [89]
-		{
-			":.:.:: :\"-„\"\"***/*'ì¸'¯………………¯'¸ì'*\\***\"\"„-\": ::.:.:", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Grimuhs", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8143, -- [11]
-			"Player-57-06A00AC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520571287,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [90]
-		{
-			":.': : : : :\"-„ : : :\"\\     …………     /\": : : „-\": : : : :'", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Grimuhs", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8144, -- [11]
-			"Player-57-06A00AC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520571287,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [91]
-		{
-			".:.:.: : : : :\" : : : : \\. …………… / : : : : \": : : : :", -- [1]
-			"Grimuhs-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Grimuhs", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8145, -- [11]
-			"Player-57-06A00AC3", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520571287,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [92]
-		{
-			"we have one shot this many times", -- [1]
-			"Thenexjr-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Thenexjr", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8152, -- [11]
-			"Player-57-09FB5ACE", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa330c9Thenexjr|r",
-			[51] = 1520571313,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [93]
-		{
-			"focus up", -- [1]
-			"Thenexjr-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Thenexjr", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8153, -- [11]
-			"Player-57-09FB5ACE", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa330c9Thenexjr|r",
-			[51] = 1520571315,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [94]
-		{
-			"pay attention", -- [1]
-			"Thenexjr-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Thenexjr", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8155, -- [11]
-			"Player-57-09FB5ACE", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa330c9Thenexjr|r",
-			[51] = 1520571322,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [95]
-		{
-			"dont die", -- [1]
-			"Thenexjr-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Thenexjr", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8156, -- [11]
-			"Player-57-09FB5ACE", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa330c9Thenexjr|r",
-			[51] = 1520571327,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [96]
-		{
-			"and fondle your neighbor", -- [1]
-			"Thenexjr-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Thenexjr", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8159, -- [11]
-			"Player-57-09FB5ACE", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa330c9Thenexjr|r",
-			[51] = 1520571338,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [97]
-		{
-			"turns his |Hitem:118427|h|cFFFFFFFF[Autographed Hearthstone Card]|r|h card over, revealing an |cFFa335ee[Epic Hearthstone Card]|r!", -- [1]
-			"Psytek-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Psytek", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8166, -- [11]
-			"Player-57-09EC0B56", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffff468Psytek|r",
-			[51] = 1520571348,
-			[50] = "CHAT_MSG_EMOTE",
-		}, -- [98]
-		{
-			"Interrupted |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r on Blazing Imp", -- [1]
-			"Bravery-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Bravery", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8187, -- [11]
-			"Player-57-0A65B7F5", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dBravery|r",
-			[51] = 1520571410,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [99]
-		{
-			"|cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r interrupted!", -- [1]
-			"Jarinia-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Jarinia", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8191, -- [11]
-			"Player-57-086B5B7A", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3fc6eaJarinia|r",
-			[51] = 1520571420,
-			[50] = "CHAT_MSG_SAY",
-		}, -- [100]
-		{
-			"[FIS] Interrupted Vulcanar's |cff71d5ff|Hspell:255805:0|h[Unstable Portal]|h|r", -- [1]
-			"Narraku-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Narraku", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8194, -- [11]
-			"Player-57-0A85896C", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa330c9Narraku|r",
-			[51] = 1520571430,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [101]
-		{
-			"Interrupted Vulcanar's |cff71d5ff|Hspell:255805:0|h[Unstable Portal]|h|r!", -- [1]
-			"Gliere-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Gliere", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8196, -- [11]
-			"Player-57-0AB4189E", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffGliere|r",
-			[51] = 1520571435,
-			[50] = "CHAT_MSG_RAID",
 		}, -- [102]
 		{
-			"Everburning Flames fading in 3", -- [1]
-			"Djpurge-Illidan", -- [2]
+			"{rt7}Burst{rt7}", -- [1]
+			"Tobiisha-Ner'zhul", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Djpurge", -- [5]
+			"Tobiisha-Ner'zhul", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			8206, -- [11]
-			"Player-57-0626F400", -- [12]
+			162, -- [11]
+			"Player-128-080172DC", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddDjpurge|r",
-			[51] = 1520571454,
+			[52] = "|cffaad372Tobiisha-Ner'zhul|r",
+			[51] = 1522128222,
 			[50] = "CHAT_MSG_SAY",
 		}, -- [103]
 		{
-			"Everburning Flames fading in 2", -- [1]
-			"Djpurge-Illidan", -- [2]
+			"Cosmic Ray on Evan", -- [1]
+			"Evan-Illidan", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Djpurge", -- [5]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			8207, -- [11]
-			"Player-57-0626F400", -- [12]
+			182, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddDjpurge|r",
-			[51] = 1520571455,
+			[52] = "|cffffffffEvan|r",
+			[51] = 1522128318,
 			[50] = "CHAT_MSG_SAY",
 		}, -- [104]
 		{
-			"Everburning Flames fading in 1", -- [1]
-			"Djpurge-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Djpurge", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			8208, -- [11]
-			"Player-57-0626F400", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff0070ddDjpurge|r",
-			[51] = 1520571456,
-			[50] = "CHAT_MSG_SAY",
-		}, -- [105]
-		{
-			"Interrupted |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r on Blazing Imp", -- [1]
-			"Bravery-Illidan", -- [2]
+			"[FIS] Interrupted Constellar Designate's |cff71d5ff|Hspell:252616:0|h[Cosmic Beacon]|h|r", -- [1]
+			"Tobiisha-Ner'zhul", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Bravery", -- [5]
+			"Tobiisha-Ner'zhul", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			8209, -- [11]
-			"Player-57-0A65B7F5", -- [12]
+			183, -- [11]
+			"Player-128-080172DC", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc69b6dBravery|r",
-			[51] = 1520571456,
+			[52] = "|cffaad372Tobiisha-Ner'zhul|r",
+			[51] = 1522128329,
+			[50] = "CHAT_MSG_RAID",
+		}, -- [105]
+		{
+			"Interrupted Constellar Designate's |cff71d5ff|Hspell:252616:0|h[Cosmic Beacon]|h|r!", -- [1]
+			"Tobiisha-Ner'zhul", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Tobiisha-Ner'zhul", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			184, -- [11]
+			"Player-128-080172DC", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffaad372Tobiisha-Ner'zhul|r",
+			[51] = 1522128329,
 			[50] = "CHAT_MSG_RAID",
 		}, -- [106]
 		{
-			"Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r!", -- [1]
-			"Grimuhs-Illidan", -- [2]
+			"tanks", -- [1]
+			"Shizenkami-Hyjal", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Grimuhs", -- [5]
+			"Shizenkami-Hyjal", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			8214, -- [11]
-			"Player-57-06A00AC3", -- [12]
+			185, -- [11]
+			"Player-3661-06DB6637", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520571467,
+			[52] = "|cffff7c0aShizenkami-Hyjal|r",
+			[51] = 1522128330,
 			[50] = "CHAT_MSG_RAID",
 		}, -- [107]
 		{
-			"Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r!", -- [1]
-			"Telgina-Illidan", -- [2]
-			"Orcish", -- [3]
+			"im dying", -- [1]
+			"Shizenkami-Hyjal", -- [2]
+			"", -- [3]
 			"", -- [4]
-			"Telgina", -- [5]
+			"Shizenkami-Hyjal", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			8215, -- [11]
-			"Player-57-08F04525", -- [12]
+			186, -- [11]
+			"Player-3661-06DB6637", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Telgina|r",
-			[51] = 1520571467,
-			[50] = "CHAT_MSG_SAY",
+			[52] = "|cffff7c0aShizenkami-Hyjal|r",
+			[51] = 1522128332,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [108]
 		{
-			"Interrupted |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r on Blazing Imp", -- [1]
-			"Bravery-Illidan", -- [2]
-			"", -- [3]
+			"Cosmic Ray on Evan", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Bravery", -- [5]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			8236, -- [11]
-			"Player-57-0A65B7F5", -- [12]
+			189, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc69b6dBravery|r",
-			[51] = 1520571516,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffEvan|r",
+			[51] = 1522128339,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [109]
 		{
-			"[FIS] Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r", -- [1]
-			"Narraku-Illidan", -- [2]
+			"hard job", -- [1]
+			"Shizenkami-Hyjal", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Narraku", -- [5]
+			"Shizenkami-Hyjal", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			8241, -- [11]
-			"Player-57-0A85896C", -- [12]
+			191, -- [11]
+			"Player-3661-06DB6637", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Narraku|r",
-			[51] = 1520571525,
+			[52] = "|cffff7c0aShizenkami-Hyjal|r",
+			[51] = 1522128350,
 			[50] = "CHAT_MSG_RAID",
 		}, -- [110]
 		{
-			"|cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r interrupted!", -- [1]
-			"Jarinia-Illidan", -- [2]
+			"Cosmic Ray on Sevante", -- [1]
+			"Sevante-Ner'zhul", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Jarinia", -- [5]
+			"Sevante-Ner'zhul", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			8242, -- [11]
-			"Player-57-086B5B7A", -- [12]
+			192, -- [11]
+			"Player-128-07FAEA46", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff3fc6eaJarinia|r",
-			[51] = 1520571527,
+			[52] = "|cfff48cbaSevante-Ner'zhul|r",
+			[51] = 1522128358,
 			[50] = "CHAT_MSG_SAY",
 		}, -- [111]
 		{
-			"Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r!", -- [1]
-			"Telgina-Illidan", -- [2]
+			"Cosmic Ray on Tobiisha", -- [1]
+			"Tobiisha-Ner'zhul", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Telgina", -- [5]
+			"Tobiisha-Ner'zhul", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			8248, -- [11]
-			"Player-57-08F04525", -- [12]
+			194, -- [11]
+			"Player-128-080172DC", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Telgina|r",
-			[51] = 1520571549,
+			[52] = "|cffaad372Tobiisha-Ner'zhul|r",
+			[51] = 1522128378,
 			[50] = "CHAT_MSG_SAY",
 		}, -- [112]
 		{
-			"Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r!", -- [1]
-			"Psytek-Illidan", -- [2]
+			"Cosmic Ray on Chuman", -- [1]
+			"Chuman-Stonemaul", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Psytek", -- [5]
+			"Chuman-Stonemaul", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			8251, -- [11]
-			"Player-57-09EC0B56", -- [12]
+			195, -- [11]
+			"Player-119-05511B52", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffff468Psytek|r",
-			[51] = 1520571552,
+			[52] = "|cff8787edChuman-Stonemaul|r",
+			[51] = 1522128378,
 			[50] = "CHAT_MSG_SAY",
 		}, -- [113]
 		{
-			"Used Consume Magic", -- [1]
-			"Narraku-Illidan", -- [2]
+			"Cosmic Ray on Aahnkll", -- [1]
+			"Aahnkll-Ner'zhul", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Narraku", -- [5]
+			"Aahnkll-Ner'zhul", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			8252, -- [11]
-			"Player-57-0A85896C", -- [12]
+			197, -- [11]
+			"Player-128-05D5C380", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Narraku|r",
-			[51] = 1520571555,
+			[52] = "|cffaad372Aahnkll-Ner'zhul|r",
+			[51] = 1522128398,
 			[50] = "CHAT_MSG_SAY",
 		}, -- [114]
 		{
-			"[FIS] Interrupted Blazing Imp's |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r", -- [1]
-			"Narraku-Illidan", -- [2]
-			"", -- [3]
+			"{rt3}Burst{rt3}", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Narraku", -- [5]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			8254, -- [11]
-			"Player-57-0A85896C", -- [12]
+			221, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Narraku|r",
-			[51] = 1520571555,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffEvan|r",
+			[51] = 1522128528,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [115]
 		{
-			"Interrupted |cff71d5ff|Hspell:244709:0|h[Fiery Detonation]|h|r on Blazing Imp", -- [1]
-			"Bravery-Illidan", -- [2]
-			"", -- [3]
+			"{rt3}4", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Bravery", -- [5]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			8269, -- [11]
-			"Player-57-0A65B7F5", -- [12]
+			224, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc69b6dBravery|r",
-			[51] = 1520571589,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffEvan|r",
+			[51] = 1522128540,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [116]
 		{
-			" 公会燃~烧~王座1-11M包团。史诗指定毕业*H/M包团毕业！装备指定单买！阿古斯*古尔丹坐骑！橙装*觉醒精华代刷。大米刷分*日常维护 ☆", -- [1]
-			"Ylljii-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Ylljii", -- [5]
+			"{rt3}3", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			8292, -- [11]
-			"Player-57-0ABE1ACC", -- [12]
+			225, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cff3fc6eaYlljii|r",
-			[51] = 1520571632,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1522128541,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [117]
 		{
-			"H王座包团还有贼法德 战猎萨 位置·低价卖 服务器晚上9点开打  M王座包团 1-11 自己上号 包括985全给 低价卖 金币千万库存 古尔丹坐骑 萨墓包团等", -- [1]
-			"Dwkjhg-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Dwkjhg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"{rt3}2", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			8294, -- [11]
-			"Player-57-0ABD23A6", -- [12]
+			226, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dDwkjhg|r",
-			[51] = 1520571632,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1522128542,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [118]
 		{
-			"NR 休闲老年团M4  epgp制度磨王座 周56 服务器8-12点诚收各职业 休闲公会 ，冲进度勿扰 希望以开心，出勤稳定为主 ", -- [1]
-			"Babyball-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Babyball", -- [5]
+			"{rt3}1", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			8296, -- [11]
-			"Player-57-093708AD", -- [12]
+			227, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dBabyball|r",
-			[51] = 1520571633,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1522128543,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [119]
 		{
-			"立马安排@★M萨墓H燃烧王座M史诗个人拾取★手工神器送橙装910装等★挑战外观飞行解锁★、1-9/10M包团可直接BIS自己上号体验★2礼拜H急速毕业H包团", -- [1]
-			"Superherode-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Superherode", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"{rt3}Burst{rt3}", -- [1]
+			"Sevante-Ner'zhul", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Sevante-Ner'zhul", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			8308, -- [11]
-			"Player-57-0ABE0051", -- [12]
+			237, -- [11]
+			"Player-128-07FAEA46", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cff8787edSuperherode|r",
-			[51] = 1520571646,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cfff48cbaSevante-Ner'zhul|r",
+			[51] = 1522128609,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [120]
 		{
-			"I will talk with you later", -- [1]
-			"Djpurge-Illidan", -- [2]
+			"sigh", -- [1]
+			"Wakeyouup-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Djpurge", -- [5]
+			"Wakeyouup", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			8315, -- [11]
-			"Player-57-0626F400", -- [12]
+			266, -- [11]
+			"Player-57-095FAED3", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddDjpurge|r",
-			[51] = 1520571648,
-			[50] = "CHAT_MSG_WHISPER",
+			[52] = "|cffa330c9Wakeyouup|r",
+			[51] = 1522128657,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [121]
 		{
-			"H王座包团还有贼法德 战猎萨 位置·低价卖 服务器晚上9点开打  M王座包团 1-11 自己上号 包括985全给 低价卖 金币千万库存 古尔丹坐骑 萨墓包团等", -- [1]
-			"Dwkjhg-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Dwkjhg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
-			0, -- [10]
-			8318, -- [11]
-			"Player-57-0ABD23A6", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dDwkjhg|r",
-			[51] = 1520571653,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [122]
-		{
-			"I'm guessing we're through?", -- [1]
-			"Telgina-Illidan", -- [2]
+			"no item..:(", -- [1]
+			"Wakeyouup-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Telgina", -- [5]
+			"Wakeyouup", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			8320, -- [11]
-			"Player-57-08F04525", -- [12]
+			267, -- [11]
+			"Player-57-095FAED3", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Telgina|r",
-			[51] = 1520571655,
+			[52] = "|cffa330c9Wakeyouup|r",
+			[51] = 1522128660,
+			[50] = "CHAT_MSG_RAID",
+		}, -- [122]
+		{
+			"ty for run", -- [1]
+			"Orphanoracle-Zul'jin", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Orphanoracle-Zul'jin", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			268, -- [11]
+			"Player-61-0B0734E8", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc41e3aOrphanoracle-Zul'jin|r",
+			[51] = 1522128662,
 			[50] = "CHAT_MSG_RAID",
 		}, -- [123]
 		{
-			"I cannot stand this fuck tard grp", -- [1]
-			"Djpurge-Illidan", -- [2]
+			"I was in the wrong talents the whole time, my b. Thanks all the same.", -- [1]
+			"Evan-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Djpurge", -- [5]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			8321, -- [11]
-			"Player-57-0626F400", -- [12]
+			273, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddDjpurge|r",
-			[51] = 1520571655,
-			[50] = "CHAT_MSG_WHISPER",
+			[52] = "|cffffffffEvan|r",
+			[51] = 1522128681,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [124]
 		{
-			"yeah", -- [1]
-			"Grimuhs-Illidan", -- [2]
+			"thanks all", -- [1]
+			"Sevante-Ner'zhul", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Grimuhs", -- [5]
+			"Sevante-Ner'zhul", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			8330, -- [11]
-			"Player-57-06A00AC3", -- [12]
+			275, -- [11]
+			"Player-128-07FAEA46", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffGrimuhs|r",
-			[51] = 1520571660,
+			[52] = "|cfff48cbaSevante-Ner'zhul|r",
+			[51] = 1522128689,
 			[50] = "CHAT_MSG_RAID",
 		}, -- [125]
 		{
-			"H王座包团还有贼法德 战猎萨 位置·低价卖 服务器晚上9点开打  M王座包团 1-11 自己上号 包括985全给 低价卖 金币千万库存 古尔丹坐骑 萨墓包团等", -- [1]
-			"Dwkjhg-Illidan", -- [2]
+			"◇◇H和M 难度王座包团单买 特价，大秘境，黑市T3，觉醒精华，新种族20-110，飞行解锁，副本坐骑等，所有业务都做 需要咨询◇◇", -- [1]
+			"Babeygsdwaw-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Dwkjhg", -- [5]
+			"Babeygsdwaw", -- [5]
 			"DND", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			8341, -- [11]
-			"Player-57-0ABD23A6", -- [12]
+			283, -- [11]
+			"Player-57-0AC6F30B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cffc69b6dDwkjhg|r",
-			[51] = 1520571673,
+			[52] = "|cffc69b6dBabeygsdwaw|r",
+			[51] = 1522128732,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [126]
 		{
-			"立马安排@★M萨墓H燃烧王座M史诗个人拾取★手工神器送橙装910装等★挑战外观飞行解锁★、1-9/10M包团可直接BIS自己上号体验★2礼拜H急速毕业H包团", -- [1]
-			"Superherode-Illidan", -- [2]
+			"◇◇H和M 难度王座包团单买 特价，大秘境，黑市T3，觉醒精华，新种族20-110，飞行解锁，副本坐骑等，所有业务都做 需要咨询◇◇", -- [1]
+			"Babeygsdwaw-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Superherode", -- [5]
+			"Babeygsdwaw", -- [5]
 			"DND", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			8348, -- [11]
-			"Player-57-0ABE0051", -- [12]
+			291, -- [11]
+			"Player-57-0AC6F30B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cff8787edSuperherode|r",
-			[51] = 1520571679,
+			[52] = "|cffc69b6dBabeygsdwaw|r",
+			[51] = 1522128747,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [127]
 	},
 	["ChatEditHistory"] = {
-		"/o Panic", -- [1]
-		"/o Missing a debuff up top?", -- [2]
-		"/s I am a lobster now.", -- [3]
-		"/s I AM THE WALRUS", -- [4]
-		"/s COO COO MFER", -- [5]
-		"/o Can they go in opposite orders?", -- [6]
-		"/o She's not fucking up most of the time, she's coming down with the debuff at like 30% HP and it's 50/50 if I can heal her in time.", -- [7]
-		"/o She's coming down super low, it's really sketchy.", -- [8]
-		"/o That's why I don't want to switch her at this point.", -- [9]
-		"/o It wouldn't buy us anything.", -- [10]
-		"/cw Grimuhs-Illidan New drinking game.", -- [11]
-		"/cw Grimuhs-Illidan Drink everytime they say if something happens one more time, they'll have to replace.", -- [12]
-		"/cw Grimuhs-Illidan Drink the rest of your drink if they actually do.", -- [13]
-		"/cw Grimuhs-Illidan You'll be dead drunk either way.", -- [14]
-		"/cw Grimuhs-Illidan That's why it's the stupidest threat.", -- [15]
-		"/raid We want it to be a challenge :)", -- [16]
-		"/raid Keeps things fresh.", -- [17]
-		"/o I had a weird freeze in the middle and I'm at 400ms now.", -- [18]
-		"/cw Drkiller-Illidan Lol figured.", -- [19]
-		"/cw Djpurge-Illidan Okay.", -- [20]
+		"/p Sorry was in another group before this.", -- [1]
+		"/p Everyone got chow?>", -- [2]
+		"/p Click.", -- [3]
+		"/cw Mixter-Stormrage Yes.", -- [4]
+		"/cw Chî You have any Int flasks?", -- [5]
+		"/cw Chî Ty", -- [6]
+		"/p They're outside.", -- [7]
+		"/p I got you", -- [8]
+		"/p Mana rq", -- [9]
+		"/p Get ready to brez", -- [10]
+		"/p lol", -- [11]
+		"/p Everytime", -- [12]
+		"/p Dodge shit", -- [13]
+		"/cw Chî Ty for invite.", -- [14]
+		"/cw Chî |cffa335ee|Hitem:134408::::::::110:257::16:4:3536:1808:1602:3336:::|h[Putrid Carapace]|h|r?", -- [15]
+		"/trade", -- [16]
+		"/cw Chî-Illidan That was kind of fun, I've never done a 17 before.", -- [17]
+		"/raid Bomb to skull or purple?", -- [18]
+		"/raid Ah missed it, rgr.", -- [19]
+		"/raid I was in the wrong talents the whole time, my b. Thanks all the same.", -- [20]
 	},
 	["BodyGuard"] = {
 		["Active"] = false,
