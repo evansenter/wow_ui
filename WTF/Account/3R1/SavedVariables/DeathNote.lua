@@ -24,10 +24,10 @@ DeathNoteDB = {
 			["display"] = {
 				["y"] = 91.5,
 				["h"] = 681,
-				["x"] = -128.000244140625,
+				["namelist"] = 2,
 				["namelist_width"] = 245.000289916992,
 				["w"] = 775.999877929688,
-				["namelist"] = 2,
+				["x"] = -128.000244140625,
 			},
 		},
 		["Cometron - Illidan"] = {
@@ -39,8 +39,8 @@ DeathNoteDB = {
 		},
 		["Natal - Illidan"] = {
 			["display_filters"] = {
-				["buff_gains"] = false,
 				["buff_fades"] = false,
+				["buff_gains"] = false,
 			},
 			["display"] = {
 				["namelist"] = 2,
@@ -52,30 +52,30 @@ DeathNoteDB = {
 		["Ereinion - Dark Iron"] = {
 		},
 		["Comet - Illidan"] = {
+			["searchbox_text"] = "",
 			["display_filters"] = {
 				["hide_misses"] = true,
-				["debuff_fades"] = false,
-				["buff_fades"] = false,
 				["debuff_gains"] = false,
 				["buff_gains"] = false,
+				["debuff_fades"] = false,
+				["buff_fades"] = false,
 			},
-			["max_deaths"] = 75,
 			["display"] = {
+				["w"] = 1013.00042724609,
 				["y"] = 17.1110534667969,
 				["x"] = 321.277740478516,
-				["h"] = 621.999938964844,
-				["w"] = 1013.00042724609,
 				["namelist"] = 2,
+				["h"] = 621.999938964844,
 			},
-			["searchbox_text"] = "",
+			["max_deaths"] = 75,
 		},
 		["Evan - Illidan"] = {
 			["searchbox_text"] = "",
 			["display"] = {
-				["w"] = 700.000061035156,
-				["y"] = 23.3333282470703,
+				["y"] = 62.2222137451172,
+				["x"] = -543.888778686523,
 				["namelist"] = 2,
-				["x"] = 96.1111755371094,
+				["w"] = 700.000061035156,
 				["h"] = 499.999908447266,
 			},
 		},

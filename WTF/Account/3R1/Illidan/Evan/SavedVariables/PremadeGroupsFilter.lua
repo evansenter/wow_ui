@@ -4,7 +4,7 @@ PremadeGroupsFilterState = {
 		["enabled"] = true,
 		["tanks"] = {
 			["max"] = "",
-			["min"] = "2",
+			["min"] = "1",
 			["act"] = true,
 		},
 		["ilvl"] = {
@@ -31,9 +31,9 @@ PremadeGroupsFilterState = {
 			["act"] = false,
 		},
 		["heals"] = {
-			["max"] = "3",
+			["max"] = "5",
 			["min"] = "",
-			["act"] = true,
+			["act"] = false,
 		},
 		["members"] = {
 			["max"] = "",

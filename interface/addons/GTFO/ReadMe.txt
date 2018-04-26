@@ -1296,3 +1296,17 @@ Change Log:
 
 4.44.3
 * Added Legion spells for Antorus, The Burning Throne
+
+4.44.4
+* Added Legion spells for Antorus, The Burning Throne
+
+4.45
+* Added support for Battle for Azeroth
+* Added BFA spells for Shrine of the Storm
+* Added BFA spells for Waycrest Manor
+* Added BFA spells for Freehold
+
+4.45.1
+* Fixed BFA crash with UnitBuff/UnitDebuff
+
+

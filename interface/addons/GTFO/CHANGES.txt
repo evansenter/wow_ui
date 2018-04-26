@@ -1,13 +1,12 @@
 ------------------------------------------------------------------------
-r382 | Zensunim | 2018-01-26 05:34:12 +0000 (Fri, 26 Jan 2018) | 2 lines
+r393 | Zensunim | 2018-04-21 23:34:40 +0000 (Sat, 21 Apr 2018) | 2 lines
 Changed paths:
    M /trunk/GTFO.lua
    M /trunk/GTFO.toc
-   M /trunk/GTFO_Fail_LGN.lua
-   M /trunk/GTFO_Spells_LGN.lua
+   M /trunk/GTFO_Fail_BFA.lua
    M /trunk/ReadMe.txt
 
-4.44.3
-* Added Legion spells for Antorus, The Burning Throne
+4.45.1
+* Fixed BFA crash with UnitBuff/UnitDebuff
 ------------------------------------------------------------------------
 

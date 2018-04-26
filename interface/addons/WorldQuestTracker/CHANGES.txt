@@ -1,7 +1,7 @@
-changeset:   277:3d3f13fdb898
-tag:         v7.3.5.277-release
+changeset:   281:94638ee59e76
+tag:         v7.3.5.281-release
 user:        Tercio
-date:        Sat Mar 10 10:10:04 2018 -0300
-summary:     - Ticket #628: fullscreen quest summary is overlapping the class hall complete quest button.
+date:        Fri Apr 13 12:26:36 2018 -0300
+summary:     - Fixing the tex coordinate of the icon on pet battle quests.
 
 

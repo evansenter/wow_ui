@@ -1,6 +1,6 @@
 VER 3 010000000000001D "Dispel Magic" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/use [harm][@targettarget,harm][]Dispel Magic
+/use [harm][@mouseovertarget,harm][]Dispel Magic
 END
 VER 3 0100000000000024 "Flash Heal" "INV_Misc_QuestionMark"
 #showtooltip
@@ -24,7 +24,7 @@ VER 3 0100000000000022 "Levitate" "INV_Misc_QuestionMark"
 END
 VER 3 010000000000001B "Mana" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/cast [harm][@targettarget,harm][]Shadowfiend
+/use [harm][@mouseovertarget,harm][]Lightspawn
 END
 VER 3 0100000000000009 "Penance" "INV_Misc_QuestionMark"
 #showtooltip Penance
