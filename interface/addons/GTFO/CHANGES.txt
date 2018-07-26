@@ -1,12 +1,13 @@
 ------------------------------------------------------------------------
-r393 | Zensunim | 2018-04-21 23:34:40 +0000 (Sat, 21 Apr 2018) | 2 lines
+r405 | Zensunim | 2018-07-25 22:45:49 +0000 (Wed, 25 Jul 2018) | 3 lines
 Changed paths:
    M /trunk/GTFO.lua
    M /trunk/GTFO.toc
-   M /trunk/GTFO_Fail_BFA.lua
+   M /trunk/GTFO_Spells_Special.lua
    M /trunk/ReadMe.txt
 
-4.45.1
-* Fixed BFA crash with UnitBuff/UnitDebuff
+4.46.1
+* Added Battle for Azeroth launch event spells (special)
+
 ------------------------------------------------------------------------
 

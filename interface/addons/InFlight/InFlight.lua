@@ -1,11 +1,10 @@
 -- GLOBALS -> LOCAL
 local _G = getfenv(0)
 local InFlight, self = InFlight, InFlight
-local NumTaxiNodes, TaxiNodeGetType, TaxiNodeName, UnitOnTaxi, GetTime = NumTaxiNodes, TaxiNodeGetType, TaxiNodeName, UnitOnTaxi, GetTime
+local NumTaxiNodes, TaxiNodeGetType, TaxiNodeName, GetNumRoutes, UnitOnTaxi, GetTime = NumTaxiNodes, TaxiNodeGetType, TaxiNodeName, GetNumRoutes, UnitOnTaxi, GetTime
 local format, strsub, floor = format, strsub, floor
 local gtt = GameTooltip
 local oldTakeTaxiNode
-local GetGuildLevel = _G.GetGuildLevel
 
 -- LIBRARIES
 local smed = LibStub("LibSharedMedia-3.0")
@@ -18,7 +17,7 @@ local rat, endText  -- cache variables
 local sb, spark, timeText, locText, bord  -- frame elements
 local totalTime, startTime, elapsed, throt = 0, 0, 0, 0  -- throttle vars
 
--- LOCALIZATION 
+-- LOCALIZATION
 local gl = GetLocale()
 local L_destparse = ", (.+)"  -- removes main zone name, leaving only subzone
 local L_duration = "Duration: "
@@ -198,64 +197,87 @@ local function SetToUnknown()  -- setup bar for flights with unknown time
 	endText = "??"
 	spark:Hide()
 end
+
 local function GetEstimatedTime(slot)  -- estimates flight times based on hops
-	local etime, numnodes = 0, NumTaxiNodes()
-	for hop = 1, GetNumRoutes(slot), 1 do
-		local s, sx, sy = nil, floor(100 * TaxiGetSrcX(slot, hop)), floor(100 * TaxiGetSrcY(slot, hop))
-		local d, dx, dy = nil, floor(100 * TaxiGetDestX(slot, hop)), floor(100 * TaxiGetDestY(slot, hop))
-		for i = 1, numnodes, 1 do
-			local ix, iy = TaxiNodePosition(i)
-			ix, iy = floor(100 * ix), floor(100 * iy)
-			if not s and sx == ix and sy == iy then
-				s = ShortenName(TaxiNodeName(i))
+	local numNodes, numRoutes = NumTaxiNodes(), GetNumRoutes(slot)
+	local nodeName = ShortenName(TaxiNodeName(slot))
+	local taxiNodes = {[numRoutes + 1] = nodeName}
+	for hop = 1, numRoutes, 1 do
+		local nodeX, nodeY = floor(100 * TaxiGetSrcX(slot, hop)), floor(100 * TaxiGetSrcY(slot, hop))
+		for i = 1, numNodes, 1 do
+			local iX, iY = TaxiNodePosition(i)
+			iX, iY = floor(100 * iX), floor(100 * iY)
+			if nodeX == iX and nodeY == iY then
+				nodeName = ShortenName(TaxiNodeName(i))
+				taxiNodes[hop] = nodeName
+				break
 			end
-			if not d and dx == ix and dy == iy then
-				d = ShortenName(TaxiNodeName(i))
-			end
-			if s and d then break end
-		end
-		if s and d and vars[s] and vars[s][d] then
-			etime = etime + vars[s][d]
-		else
-			return nil
 		end
 	end
-	return etime
+
+	local etimes = { 0 }
+	local prevNode = {}
+	local nextNode = {}
+	local startNode, destNode = 1, #taxiNodes - 1
+	while startNode and startNode < #taxiNodes do
+		while destNode and destNode > startNode do
+			if vars[taxiNodes[startNode]] then
+				if not etimes[destNode] and vars[taxiNodes[startNode]][taxiNodes[destNode]] then
+					etimes[destNode] = etimes[startNode] + vars[taxiNodes[startNode]][taxiNodes[destNode]]
+					nextNode[startNode] = destNode - 1
+					prevNode[destNode] = startNode
+					startNode = destNode
+					destNode = #taxiNodes
+				else
+					destNode = destNode - 1
+				end
+			else
+				startNode = prevNode[startNode]
+				destNode = nextNode[startNode]
+			end
+		end
+
+		if not etimes[#taxiNodes] then
+			startNode = prevNode[startNode]
+			destNode = nextNode[startNode]
+		end
+	end
+
+	return etimes[#taxiNodes]
 end
-local function postTaxiNodeOnButtonEnter(button) -- adds duration info to node tooltips
-	if TaxiFrame_ShouldShowOldStyle() then
-		local id = button:GetID()
-		if TaxiNodeGetType(id) ~= "REACHABLE" then return end
-		local ftime = (vars[source] and vars[source][ ShortenName(TaxiNodeName(id)) ]) or GetEstimatedTime(id) or 0
-		if ftime > 0 then
-			if GetGuildLevel and GetGuildLevel() >= 21 then
-				ftime = ftime / 1.25
-			end
-			gtt:AddLine(L_duration..FormatTime(ftime), 1, 1, 1)
-		else
-			gtt:AddLine(L_duration.."-:--", 0.8, 0.8, 0.8)
-		end
-		gtt:Show()
-	elseif FlightMapFrame then
-		if button.taxiNodeData.type ~= LE_FLIGHT_PATH_TYPE_REACHABLE then return end
-		local ftime = (vars[source] and vars[source][ ShortenName(button.taxiNodeData.name) ]) or GetEstimatedTime(button.taxiNodeData.slotIndex) or 0
-		if ftime > 0 then
-			if GetGuildLevel and GetGuildLevel() >= 21 then
-				ftime = ftime / 1.25
-			end
-			gtt:AddLine(L_duration..FormatTime(ftime), 1, 1, 1)
-		else
-			gtt:AddLine(L_duration.."-:--", 0.8, 0.8, 0.8)
-		end
-		gtt:Show()
+
+local function postTaxiNodeOnButtonEnter(button) -- adds duration info to taxi node tooltips
+	local id = button:GetID()
+	if TaxiNodeGetType(id) ~= "REACHABLE" then
+		return
 	end
+	local ftime = (vars[source] and vars[source][ ShortenName(TaxiNodeName(id)) ]) or GetEstimatedTime(id) or 0
+	if ftime > 0 then
+		gtt:AddLine(L_duration..FormatTime(ftime), 1, 1, 1)
+	else
+		gtt:AddLine(L_duration.."-:--", 0.8, 0.8, 0.8)
+	end
+	gtt:Show()
+end
+
+local function postFlightNodeOnButtonEnter(button) -- adds duration info to flight node tooltips
+	if button.taxiNodeData.state ~= Enum.FlightPathState.Reachable then
+		return
+	end
+	local ftime = (vars[source] and vars[source][ ShortenName(button.taxiNodeData.name) ]) or GetEstimatedTime(button.taxiNodeData.slotIndex) or 0
+	if ftime > 0 then
+		gtt:AddLine(L_duration..FormatTime(ftime), 1, 1, 1)
+	else
+		gtt:AddLine(L_duration.."-:--", 0.8, 0.8, 0.8)
+	end
+	gtt:Show()
 end
 
 ----------------------------
 function InFlight:LoadBulk()  -- called from InFlight_Load
 ----------------------------
 	InFlightDB = InFlightDB or {}
-	if InFlightDB.profiles then 
+	if InFlightDB.profiles then
 		InFlightDB = InFlightDB.profiles.Default
 		InFlightDB.profiles = nil
 	end
@@ -263,9 +285,11 @@ function InFlight:LoadBulk()  -- called from InFlight_Load
 
 	InFlightVars = InFlightVars or { Alliance = {}, Horde = {}, }  -- flight time data
 	vars = InFlightVars[UnitFactionGroup("player")]
+	
+	local debug = inflightupdate and true or false
 
-	if db.dbinit ~= 35 then
-		db.dbinit = 35
+	if db.dbinit ~= 801 then
+		db.dbinit = 801
 		local function SetDefaults(db, t)  -- set saved variables
 			for k,v in pairs(t) do
 				if type(db[k]) == "table" then
@@ -293,22 +317,62 @@ function InFlight:LoadBulk()  -- called from InFlight_Load
 			totext = " --> ",
 		} )
 		if self.LoadDefaults then  -- updates to default data
-			for faction, t in pairs(self:LoadDefaults()) do
+			local defaults = self:LoadDefaults()
+			for faction, t in pairs(defaults) do
+				local updated, added = 0, 0
 				for source, dt in pairs(t) do
 					InFlightVars[faction][source] = InFlightVars[faction][source] or { }
 					for destination, dtime in pairs(dt) do
-						if type(dtime) == "number" then
-							local vtime = InFlightVars[faction][source][destination]
-							if not vtime or vtime > dtime then
+						if not InFlightVars[faction][source][destination] then
+							added = added + 1
+						end
+
+						-- Always update with default data to avoid data cycle regressions
+						if debug then
+							if not InFlightVars[faction][source][destination] then
 								InFlightVars[faction][source][destination] = dtime
+							elseif InFlightVars[faction][source][destination] ~= dtime then
+								updated = updated + 1
+							end
+						else
+							InFlightVars[faction][source][destination] = dtime
+						end
+					end
+				end
+
+				if updated > 0 then
+					print("|cff00ff00InFlight|r:", faction, "|cff208020-|r", updated, "|cff208020updated flight times.|r")
+				end
+				if added > 0 then
+					print("|cff00ff00InFlight|r:", faction, "|cff208080- added|r", added, "|cff208080new flight times.|r")
+				end
+			end
+
+			local locale = GetLocale()
+			if locale == "enUS" or locale == "enGB" then
+				self:Sanitise(InFlightVars, false, debug)
+
+				for faction, t in pairs(InFlightVars) do
+					local found = 0
+					for source, dt in pairs(t) do
+						for destination, dtime in pairs(dt) do
+							if not defaults[faction][source] or not defaults[faction][source][destination] then
+								found = found + 1
 							end
 						end
+					end
+
+					if found > 0 then
+						print("|cff00ff00InFlight|r:", faction, "|cff208020- found|r", found, "|cff208020unknown flight times.|r")
 					end
 				end
 			end
 		end
 	end
-	self.LoadDefaults = nil
+
+	if not debug then
+		self.LoadDefaults = nil
+	end
 
 	oldTakeTaxiNode = TakeTaxiNode
 	TakeTaxiNode = function(slot)
@@ -320,9 +384,6 @@ function InFlight:LoadBulk()  -- called from InFlight_Load
 		else
 			endTime = GetEstimatedTime(slot)
 		end
-		if endTime and GetGuildLevel and GetGuildLevel() >= 21 then
-			endTime = endTime / 1.25
-		end
 		if db.confirmflight then  -- confirm flight
 			StaticPopupDialogs.INFLIGHTCONFIRM = StaticPopupDialogs.INFLIGHTCONFIRM or {
 				button1 = OKAY, button2 = CANCEL,
@@ -332,8 +393,8 @@ function InFlight:LoadBulk()  -- called from InFlight_Load
 			StaticPopupDialogs.INFLIGHTCONFIRM.text = format(L_confirmpopup, destination, endTime and format(" (%s)", FormatTime(endTime)) or "")
 
 			local dialog = StaticPopup_Show("INFLIGHTCONFIRM")
-			if dialog then 
-				dialog.data = slot 
+			if dialog then
+				dialog.data = slot
 			end
 		else  -- just take the flight
 			self:StartTimer(slot)
@@ -351,9 +412,9 @@ function InFlight:LoadBulk()  -- called from InFlight_Load
 end
 
 ------------------------------
-function InFlight:InitSource()  -- cache source location and hook tooltips
+function InFlight:InitSource(isTaxiMap)  -- cache source location and hook tooltips
 ------------------------------
-	if TaxiFrame_ShouldShowOldStyle() or GetTaxiMapID()==1007 or GetTaxiMapID()==1184 then
+	if isTaxiMap then
 		for i = 1, NumTaxiNodes(), 1 do
 			local tb = _G["TaxiButton"..i]
 			if tb and not tb.inflighted then
@@ -364,13 +425,14 @@ function InFlight:InitSource()  -- cache source location and hook tooltips
 				source = ShortenName(TaxiNodeName(i))
 			end
 		end
-	elseif FlightMapFrame then
+	elseif FlightMapFrame and GetTaxiMapID() ~= 994 then
 		local tb = FlightMapFrame.pinPools.FlightMap_FlightPointPinTemplate
 		for flightnode in tb:EnumerateActive() do
-			if flightnode then
-				flightnode:HookScript("OnEnter", postTaxiNodeOnButtonEnter)
+			if not flightnode.inflighted then
+				flightnode:HookScript("OnEnter", postFlightNodeOnButtonEnter)
+				flightnode.inflighted = true
 			end
-			if flightnode.taxiNodeData.type == LE_FLIGHT_PATH_TYPE_CURRENT then
+			if flightnode.taxiNodeData.state == Enum.FlightPathState.Current then
 				source = ShortenName(flightnode.taxiNodeData.name)
 			end
 		end
@@ -384,6 +446,12 @@ function InFlight:StartTimer(slot)  -- lift off
 	if CanExitVehicle() == 1 then
 		VehicleExit()
 	end
+
+	-- Don't show timer or record times for Argus map
+	if slot and FlightMapFrame and GetTaxiMapID() == 994 then
+		return oldTakeTaxiNode(slot)
+	end
+
 	if not sb then  -- create the timer bar
 		self:CreateBar()
 	end
@@ -405,7 +473,7 @@ function InFlight:StartTimer(slot)  -- lift off
 	self:RegisterEvent("PLAYER_ENTERING_WORLD")
 	self:RegisterEvent("PLAYER_LEAVING_WORLD")
 	self:Show()
-	
+
 	if slot then
 		oldTakeTaxiNode(slot)
 	end
@@ -440,8 +508,8 @@ do  -- timer bar
 		end)
 		sb:RegisterForDrag("LeftButton")
 		sb:SetScript("OnDragStart", function(this) if IsShiftKeyDown() then this:StartMoving() end end)
-		sb:SetScript("OnDragStop", function(this) 
-			this:StopMovingOrSizing() 
+		sb:SetScript("OnDragStop", function(this)
+			this:StopMovingOrSizing()
 			local a,b,c,d,e = this:GetPoint()
 			db.p, db.rp, db.x, db.y = a, c, floor(d + 0.5), floor(e + 0.5)
 		end)
@@ -491,9 +559,6 @@ do  -- timer bar
 			end
 			if not ontaxi then  -- flight ended
 				if not porttaken then
-					if GetGuildLevel and GetGuildLevel() >= 21 then
-						totalTime = totalTime * 1.25
-					end
 					if type(vars) == "table" and type(source) == "string" then
 						vars[source] = vars[source] or { }
 						vars[source][destination] = floor(totalTime + 0.5)
@@ -544,7 +609,7 @@ do  -- timer bar
 
 		sb:SetWidth(db.width)
 		sb:SetHeight(db.height)
-		
+
 		local texture = smed:Fetch("statusbar", db.texture)
 		local inset = (db.border=="Textured" and 2) or 4
 		bdrop.bgFile = texture
@@ -565,12 +630,12 @@ do  -- timer bar
 			SetToUnknown()
 		end
 		spark:SetHeight(db.height*2.4)
-		
+
 		locText:SetFont(smed:Fetch("font", db.font), db.fontsize, db.outline and "OUTLINE" or nil)
 		locText:SetShadowColor(0, 0, 0, db.fontcolor.a)
 		locText:SetShadowOffset(1, -1)
 		locText:SetTextColor(db.fontcolor.r, db.fontcolor.g, db.fontcolor.b, db.fontcolor.a)
-		
+
 		timeText:SetFont(smed:Fetch("font", db.font), db.fontsize, db.outlinetime and "OUTLINE" or nil)
 		timeText:SetShadowColor(0, 0, 0, db.fontcolor.a)
 		timeText:SetShadowOffset(1, -1)
@@ -590,7 +655,7 @@ do  -- timer bar
 			locText:SetJustifyH("CENTER")
 			locText:SetJustifyV("BOTTOM")
 			SetPoints(locText, "TOPLEFT", sb, "TOPLEFT", -24, db.fontsize*2.5, "BOTTOMRIGHT", sb, "TOPRIGHT", 24, (db.border=="None" and 1) or 3)
-		end	
+		end
 		locText:SetFormattedText("%s%s%s", not db.inline and source or "", not db.inline and db.totext or "", destination or "")
 	end
 end
@@ -605,7 +670,7 @@ function InFlight:SetLayout(this)  -- setups the options in the default interfac
 	t1:SetPoint("TOPLEFT", 16, -16)
 	t1:SetText("InFlight")
 	this.tl = t1
-	
+
 	local t2 = this:CreateFontString(nil, "ARTWORK")
 	t2:SetFontObject(GameFontHighlightSmall)
 	t2:SetJustifyH("LEFT")
@@ -871,23 +936,48 @@ end
 function inflightupdate()
 	local updates = {}
 	--for table, updates in pairs(updates) do
-	for faction, t in pairs(updates) do
-		for source, dt in pairs(t) do
-			if not InFlightVars[faction][source] then
-				InFlightVars[faction][source] = dt
-				ChatFrame1:AddMessage("New source: "..faction.." "..source)
-			end
-			for destination, utime in pairs(dt) do
-				if type(utime) == "number" then
-					local vtime = InFlightVars[faction][source][destination]
-					if not vtime or (vtime > utime and vtime > 20) then
-						ChatFrame1:AddMessage("Update time: "..faction.." "..source.." "..destination.." "..utime)
-						InFlightVars[faction][source][destination] = utime
+
+	-- Set allowUpdates to true to update and add new times (for updates based
+	--   on the current default db)
+	-- Set allowUpdates to false to only add new unknown times (use for updates
+	--   not based on current default db to avoid re-adding old/incorrect times)
+	local allowUpdates = false
+
+	-- Phase 1
+	-- Remove update data that is the same as the default data so that it
+	--   doesn't revert times that have already been updated in InFlightVars.
+	-- This means that the default data should NOT be updated between releases
+	--   as this could cause the updated default times to be reverted by update
+	--   data that contains default times from the current release (unless
+	--   allowUpdates is set to false)
+	if self.LoadDefaults then
+		for faction, t in pairs(self:LoadDefaults()) do
+			if updates[faction] then
+				for source, dt in pairs(t) do
+					if updates[faction][source] then
+						for dest, dtime in pairs(dt) do
+							-- Remove times that match the default times
+							if updates[faction][source][dest] == dtime then
+								updates[faction][source][dest] = nil
+							end
+						end
+						if next(updates[faction][source]) == nil then
+							updates[faction][source] = nil
+						end
 					end
+				end
+				if next(updates[faction]) == nil then
+					updates[faction] = nil
 				end
 			end
 		end
 	end
+
+--	updates = InFlightVars	-- uncomment to clean up InFlightVars data (do not run through phase 1)
+
+	-- Phase 2
+	self:Sanitise(updates, allowUpdates, true)
+
 	--end
 end
-]]--
+--]]

@@ -1,9 +1,10 @@
 local mod	= DBM:NewMod("CoSTrash", "DBM-Party-Legion", 7)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 17420 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 17522 $"):sub(12, -3))
 --mod:SetModelID(47785)
 mod:SetZone()
+mod:SetOOCBWComms()
 
 mod.isTrashMod = true
 
@@ -41,22 +42,22 @@ function mod:SPELL_CAST_START(args)
 	elseif spellId == 212031 and self:AntiSpam(2, 2) then
 		specWarnChargedBlast:Show()
 		specWarnChargedBlast:Play("shockwave")
-	elseif spellId == 209485 and self:CheckInterruptFilter(args.sourceGUID) then
+	elseif spellId == 209485 and self:CheckInterruptFilter(args.sourceGUID, false, true) then
 		specWarnDrainMagic:Show(args.sourceName)
 		specWarnDrainMagic:Play("kickcast")
-	elseif spellId == 209410 and self:CheckInterruptFilter(args.sourceGUID) then
+	elseif spellId == 209410 and self:CheckInterruptFilter(args.sourceGUID, false, true) then
 		specWarnNightfallOrb:Show(args.sourceName)
 		specWarnNightfallOrb:Play("kickcast")
-	elseif spellId == 209413 and self:CheckInterruptFilter(args.sourceGUID) then
+	elseif spellId == 209413 and self:CheckInterruptFilter(args.sourceGUID, false, true) then
 		specWarnSuppress:Show(args.sourceName)
 		specWarnSuppress:Play("kickcast")
-	elseif spellId == 211470 and self:CheckInterruptFilter(args.sourceGUID) then
+	elseif spellId == 211470 and self:CheckInterruptFilter(args.sourceGUID, false, true) then
 		specWarnBewitch:Show(args.sourceName)
 		specWarnBewitch:Play("kickcast")
-	elseif spellId == 225100 and self:CheckInterruptFilter(args.sourceGUID) then
+	elseif spellId == 225100 and self:CheckInterruptFilter(args.sourceGUID, false, true) then
 		specWarnChargingStation:Show(args.sourceName)
 		specWarnChargingStation:Play("kickcast")
-	elseif spellId == 211299 and self:CheckInterruptFilter(args.sourceGUID) then
+	elseif spellId == 211299 and self:CheckInterruptFilter(args.sourceGUID, false, true) then
 		specWarnSearingGlare:Show(args.sourceName)
 		specWarnSearingGlare:Play("kickcast")
 	elseif spellId == 211464 then
@@ -228,11 +229,11 @@ do
 				local clue = clues[GetGossipText()]
 				if clue and not hints[clue] then
 					CloseGossip()
-					if IsInGroup(LE_PARTY_CATEGORY_INSTANCE) then
+					--[[if IsInGroup(LE_PARTY_CATEGORY_INSTANCE) then
 						SendChatMessage(hintTranslations[clue], "INSTANCE_CHAT")
 					elseif IsInGroup(LE_PARTY_CATEGORY_HOME) then
 						SendChatMessage(hintTranslations[clue], "PARTY")
-					end
+					end--]]
 					hints[clue] = true
 					self:SendSync("CoS", clue)
 					DBM.InfoFrame:Show(5, "function", updateInfoFrame)

@@ -2,7 +2,7 @@
 ElvCharacterDB = {
 	["ChatHistoryLog"] = {
 		{
-			"^LFW_L", -- [1]
+			"_$127Daemonanima_$WTB Alani slot_$a330c9$", -- [1]
 			"Comet-Illidan", -- [2]
 			"", -- [3]
 			"4. TCForwarder6IIll", -- [4]
@@ -12,7 +12,7 @@ ElvCharacterDB = {
 			4, -- [8]
 			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1401, -- [11]
+			2427, -- [11]
 			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -20,175 +20,175 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cff00ff96Comet|r",
-			[51] = 1524779271,
+			[51] = 1530240762,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [1]
 		{
-			"60% ms decrease is op", -- [1]
-			"Mathayus-Blackrock", -- [2]
+			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
+			"Kmoaz-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Mathayus-Blackrock", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"1. Trade - City", -- [4]
+			"Kmoaz", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1403, -- [11]
-			"Player-10-0B05DAF6", -- [12]
+			2428, -- [11]
+			"Player-57-0AED860F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cff8787edMathayus-Blackrock|r",
-			[51] = 1524779272,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cff0070ddKmoaz|r",
+			[51] = 1530240762,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [2]
 		{
-			"i have it aswell", -- [1]
-			"Krazlok-Frostwolf", -- [2]
+			"_$128Gwouis_$Selling  Mythic +15 for the weekly reward; Argus Heroic raid 11/11 (ML); also  Glory of the Argus Raider to  get[Antoran Gloomhound]  ;Or Guldan mount[Fiendish Hellfire Core]! /Pst_$0070dd$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Krazlok-Frostwolf", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1404, -- [11]
-			"Player-7-0AE30CA2", -- [12]
+			2432, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff8787edKrazlok-Frostwolf|r",
-			[51] = 1524779274,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240775,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [3]
 		{
-			"yeah", -- [1]
-			"Fellazer-Elune", -- [2]
+			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
+			"Kmoaz-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Fellazer-Elune", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"1. Trade - City", -- [4]
+			"Kmoaz", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1405, -- [11]
-			"Player-67-0A9A522D", -- [12]
+			2433, -- [11]
+			"Player-57-0AED860F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa330c9Fellazer-Elune|r",
-			[51] = 1524779277,
-			[50] = "CHAT_MSG_RAID_LEADER",
+			true, -- [17]
+			[52] = "|cff0070ddKmoaz|r",
+			[51] = 1530240793,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [4]
 		{
-			"<DBM> Galactüs has defeated Heroic - Garothi Worldbreaker!", -- [1]
-			"Galactüs-Illidan", -- [2]
+			"_$129Kmoaz_$燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~_$0070dd$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Galactüs", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1406, -- [11]
-			"Player-57-0ACCE655", -- [12]
+			2436, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffff7c0aGalactüs|r",
-			[51] = 1524779278,
-			[50] = "CHAT_MSG_WHISPER",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240793,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [5]
 		{
-			"we're staying at eonar", -- [1]
-			"Fellazer-Elune", -- [2]
+			"_$130Jittyy_$<Big Dumb Guild> has TWO open spots for MYTHIC ARGUS [Shackled Ur'zul] mount runs this coming TUESDAY JULY 3RD! The drop rate goes to 1% soon. Get it now before the price rises more! PST for price and details, GOLD ONLY any server._$c41e3a$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Fellazer-Elune", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1408, -- [11]
-			"Player-67-0A9A522D", -- [12]
+			2441, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Fellazer-Elune|r",
-			[51] = 1524779284,
-			[50] = "CHAT_MSG_RAID_LEADER",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240799,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [6]
 		{
-			":D", -- [1]
-			"Andaravia-Drak'Tharon", -- [2]
+			"_$131Nalanth_$WTB any pets_$a330c9$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Andaravia-Drak'Tharon", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1411, -- [11]
-			"Player-127-080EDF27", -- [12]
+			2444, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Andaravia-Drak'Tharon|r",
-			[51] = 1524779291,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240799,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [7]
 		{
-			"i fell behind cause some demonology lock banished an add i was unloading on", -- [1]
-			"Mathayus-Blackrock", -- [2]
+			"法师塔来单就打  低保  H 王座包团半价出售 100万金币 500RMB ", -- [1]
+			"Hiyuc-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Mathayus-Blackrock", -- [5]
+			"1. Trade - City", -- [4]
+			"Hiyuc", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1412, -- [11]
-			"Player-10-0B05DAF6", -- [12]
+			2445, -- [11]
+			"Player-57-0AED7C95", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cff8787edMathayus-Blackrock|r",
-			[51] = 1524779293,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cffc69b6dHiyuc|r",
+			[51] = 1530240800,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [8]
 		{
-			"2/2/9?", -- [1]
+			"_$132Hiyuc_$法师塔来单就打  低保  H 王座包团半价出售 100万金币 500RMB _$c69b6d$", -- [1]
 			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
+			"4. TCForwarder6IIll", -- [4]
 			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1413, -- [11]
+			2448, -- [11]
 			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -196,1121 +196,1121 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cff00ff96Comet|r",
-			[51] = 1524779302,
-			[50] = "CHAT_MSG_RAID",
+			[51] = 1530240800,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [9]
 		{
-			"Rip", -- [1]
-			"Andaravia-Drak'Tharon", -- [2]
+			"。法师塔绝版先打。王座史诗包团全通=史诗四件套。。H 王座团白菜，，古尔丹。。 击杀阿古斯。法师塔绝版先打、、。15低保 来就打？？ ", -- [1]
+			"Kirtzertdor-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Andaravia-Drak'Tharon", -- [5]
+			"1. Trade - City", -- [4]
+			"Kirtzertdor", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1414, -- [11]
-			"Player-127-080EDF27", -- [12]
+			2449, -- [11]
+			"Player-57-0AED77B8", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Andaravia-Drak'Tharon|r",
-			[51] = 1524779306,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cffaad372Kirtzertdor|r",
+			[51] = 1530240812,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [10]
 		{
-			"lets get more", -- [1]
-			"Mathayus-Blackrock", -- [2]
+			"_$133Kirtzertdor_$。法师塔绝版先打。王座史诗包团全通=史诗四件套。。H 王座团白菜，，古尔丹。。 击杀阿古斯。法师塔绝版先打、、。15低保 来就打？？ _$aad372$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Mathayus-Blackrock", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1415, -- [11]
-			"Player-10-0B05DAF6", -- [12]
+			2452, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff8787edMathayus-Blackrock|r",
-			[51] = 1524779314,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240812,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [11]
 		{
-			"and at least 3-4 healers", -- [1]
-			"Mathayus-Blackrock", -- [2]
+			"H/M燃烧王座包团无竞争 毕业 史诗单买个人拾取!阿古斯和古尔丹坐骑!,泰坦杀手,神选者头衔!", -- [1]
+			"Celestiol-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Mathayus-Blackrock", -- [5]
+			"1. Trade - City", -- [4]
+			"Celestiol", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1416, -- [11]
-			"Player-10-0B05DAF6", -- [12]
+			2453, -- [11]
+			"Player-57-0AED3D51", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cff8787edMathayus-Blackrock|r",
-			[51] = 1524779319,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cff3fc6eaCelestiol|r",
+			[51] = 1530240822,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [12]
 		{
-			"one more healer for this 3 should be more than eough ", -- [1]
-			"Ipoku-Zul'jin", -- [2]
+			"_$134Celestiol_$H/M燃烧王座包团无竞争 毕业 史诗单买个人拾取!阿古斯和古尔丹坐骑!,泰坦杀手,神选者头衔!_$3fc6ea$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Ipoku-Zul'jin", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1417, -- [11]
-			"Player-61-072B838D", -- [12]
+			2456, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffff468Ipoku-Zul'jin|r",
-			[51] = 1524779327,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240822,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [13]
 		{
-			"We don't need 4 healers with 9 DPS.", -- [1]
-			"Comet-Illidan", -- [2]
+			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
+			"Kmoaz-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Comet", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"1. Trade - City", -- [4]
+			"Kmoaz", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1418, -- [11]
-			"Player-57-05DF4D8D", -- [12]
+			2457, -- [11]
+			"Player-57-0AED860F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Comet|r",
-			[51] = 1524779329,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cff0070ddKmoaz|r",
+			[51] = 1530240823,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [14]
 		{
-			"more dps", -- [1]
-			"Mathayus-Blackrock", -- [2]
+			"_$135Aabbccdd_$WTS |cffa335ee|Hitem:68825:::::::2018212736:68:72::::::|h[Amani Dragonhawk]|h|r 1.7M_$c69b6d$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Mathayus-Blackrock", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1419, -- [11]
-			"Player-10-0B05DAF6", -- [12]
+			2461, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff8787edMathayus-Blackrock|r",
-			[51] = 1524779337,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240844,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [15]
 		{
-			"3 should be enough yeah", -- [1]
-			"Azelfafage-Drakkari", -- [2]
+			"_$136Gwouis_$Selling  Mythic +15 for the weekly reward; Argus Heroic raid 11/11 (ML); also  Glory of the Argus Raider to  get[Antoran Gloomhound]  ;Or Guldan mount[Fiendish Hellfire Core]! /Pst_$0070dd$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Azelfafage-Drakkari", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1420, -- [11]
-			"Player-1425-0979A471", -- [12]
+			2465, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Azelfafage-Drakkari|r",
-			[51] = 1524779342,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240844,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [16]
 		{
-			"thats obv", -- [1]
-			"Mathayus-Blackrock", -- [2]
+			"_$137Wobblê_$ <Blitzd> is recruiting all PVP'ers for Rbgs and arenas....come kick it and shit on some noobs_$ff7c0a$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Mathayus-Blackrock", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1421, -- [11]
-			"Player-10-0B05DAF6", -- [12]
+			2469, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff8787edMathayus-Blackrock|r",
-			[51] = 1524779343,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240846,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [17]
 		{
-			"k ", -- [1]
-			"Mathayus-Blackrock", -- [2]
+			"法师塔来单就打  低保  H 王座包团半价出售 100万金币 500RMB ", -- [1]
+			"Hiyuc-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Mathayus-Blackrock", -- [5]
+			"1. Trade - City", -- [4]
+			"Hiyuc", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1422, -- [11]
-			"Player-10-0B05DAF6", -- [12]
+			2470, -- [11]
+			"Player-57-0AED7C95", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cff8787edMathayus-Blackrock|r",
-			[51] = 1524779346,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cffc69b6dHiyuc|r",
+			[51] = 1530240850,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [18]
 		{
-			"well....now we're low on dps xD", -- [1]
-			"Azelfafage-Drakkari", -- [2]
+			"_$138Hiyuc_$法师塔来单就打  低保  H 王座包团半价出售 100万金币 500RMB _$c69b6d$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Azelfafage-Drakkari", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1427, -- [11]
-			"Player-1425-0979A471", -- [12]
+			2473, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Azelfafage-Drakkari|r",
-			[51] = 1524779417,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240851,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [19]
 		{
-			"lol", -- [1]
-			"Ipoku-Zul'jin", -- [2]
+			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
+			"Kmoaz-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Ipoku-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"1. Trade - City", -- [4]
+			"Kmoaz", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1428, -- [11]
-			"Player-61-072B838D", -- [12]
+			2474, -- [11]
+			"Player-57-0AED860F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffff468Ipoku-Zul'jin|r",
-			[51] = 1524779422,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cff0070ddKmoaz|r",
+			[51] = 1530240853,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [20]
 		{
-			"yes lets go 2/4/12", -- [1]
-			"Mathayus-Blackrock", -- [2]
+			"_$139Kmoaz_$燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~_$0070dd$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Mathayus-Blackrock", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1430, -- [11]
-			"Player-10-0B05DAF6", -- [12]
+			2477, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff8787edMathayus-Blackrock|r",
-			[51] = 1524779432,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240853,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [21]
 		{
-			"this is finishing the rest of the raid right no quits?", -- [1]
-			"Andaravia-Drak'Tharon", -- [2]
+			"_$140Daemonanima_$https://i.imgur.com/ulHYjvp.png?fb_$a330c9$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Andaravia-Drak'Tharon", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1431, -- [11]
-			"Player-127-080EDF27", -- [12]
+			2481, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Andaravia-Drak'Tharon|r",
-			[51] = 1524779434,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240877,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [22]
 		{
-			"2/4/15?", -- [1]
-			"Ipoku-Zul'jin", -- [2]
+			"_$141Samster_$wtb |cffa335ee|Hitem:23540::::::::110:577::::::|h[Felsteel Longblade]|h|r pst_$a330c9$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Ipoku-Zul'jin", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1432, -- [11]
-			"Player-61-072B838D", -- [12]
+			2485, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffff468Ipoku-Zul'jin|r",
-			[51] = 1524779435,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240882,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [23]
 		{
-			"summon o run?", -- [1]
-			"Kaeltinvoker-Quel'Thalas", -- [2]
+			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
+			"Kmoaz-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Kaeltinvoker-Quel'Thalas", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"1. Trade - City", -- [4]
+			"Kmoaz", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1433, -- [11]
-			"Player-1428-09674B8F", -- [12]
+			2486, -- [11]
+			"Player-57-0AED860F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff48cbaKaeltinvoker-Quel'Thalas|r",
-			[51] = 1524779442,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cff0070ddKmoaz|r",
+			[51] = 1530240883,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [24]
 		{
-			"oh people will quit for sure", -- [1]
-			"Mathayus-Blackrock", -- [2]
+			"_$142Oneohonecuck_$thats his penis....sent it_$c41e3a$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Mathayus-Blackrock", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1434, -- [11]
-			"Player-10-0B05DAF6", -- [12]
+			2490, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff8787edMathayus-Blackrock|r",
-			[51] = 1524779447,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240885,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [25]
 		{
-			"thanks", -- [1]
-			"Silvery-Illidan", -- [2]
+			"_$143Reldikasa_$Antorus any difficulty 11/11 runs with any loot mode are up for purchase! Possible loot/relic reservation. Offspec piece are rollable. Performed by experienced and adequately geared guild. Runs occur every day._$c69b6d$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Silvery", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1435, -- [11]
-			"Player-57-08DD0EA8", -- [12]
+			2495, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Silvery|r",
-			[51] = 1524779452,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240890,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [26]
 		{
-			"im loosing it ", -- [1]
-			"Lällå-Illidan", -- [2]
+			"H/M燃烧王座包团无竞争 毕业 史诗单买个人拾取!阿古斯和古尔丹坐骑!,泰坦杀手,神选者头衔!", -- [1]
+			"Celestiol-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Lällå", -- [5]
+			"1. Trade - City", -- [4]
+			"Celestiol", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1437, -- [11]
-			"Player-57-09702F9A", -- [12]
+			2496, -- [11]
+			"Player-57-0AED3D51", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa330c9Lällå|r",
-			[51] = 1524779469,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cff3fc6eaCelestiol|r",
+			[51] = 1530240892,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [27]
 		{
-			"thisis like nothing cmon", -- [1]
-			"Lällå-Illidan", -- [2]
+			"_$144Celestiol_$H/M燃烧王座包团无竞争 毕业 史诗单买个人拾取!阿古斯和古尔丹坐骑!,泰坦杀手,神选者头衔!_$3fc6ea$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Lällå", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1438, -- [11]
-			"Player-57-09702F9A", -- [12]
+			2499, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Lällå|r",
-			[51] = 1524779475,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240892,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [28]
 		{
-			"well of course but i mean people gonna stick with it for a bit cuz i really wanna finish this :#", -- [1]
-			"Andaravia-Drak'Tharon", -- [2]
+			"法师塔来单就打  低保  H 王座包团半价出售 100万金币 500RMB ", -- [1]
+			"Hiyuc-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Andaravia-Drak'Tharon", -- [5]
+			"1. Trade - City", -- [4]
+			"Hiyuc", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1440, -- [11]
-			"Player-127-080EDF27", -- [12]
+			2500, -- [11]
+			"Player-57-0AED7C95", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Andaravia-Drak'Tharon|r",
-			[51] = 1524779482,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cffc69b6dHiyuc|r",
+			[51] = 1530240901,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [29]
 		{
-			":3\"", -- [1]
-			"Andaravia-Drak'Tharon", -- [2]
+			"_$145Hiyuc_$法师塔来单就打  低保  H 王座包团半价出售 100万金币 500RMB _$c69b6d$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Andaravia-Drak'Tharon", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1441, -- [11]
-			"Player-127-080EDF27", -- [12]
+			2503, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Andaravia-Drak'Tharon|r",
-			[51] = 1524779484,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240901,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [30]
 		{
-			"follow tanks this time dont be a smart ass", -- [1]
-			"Lällå-Illidan", -- [2]
+			"_$146Twistedfaíth_$i dont care still gonna send it_$c69b6d$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Lällå", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1442, -- [11]
-			"Player-57-09702F9A", -- [12]
+			2507, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Lällå|r",
-			[51] = 1524779484,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240903,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [31]
 		{
-			"this should be free loot", -- [1]
-			"Mathayus-Blackrock", -- [2]
+			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
+			"Kmoaz-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Mathayus-Blackrock", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"1. Trade - City", -- [4]
+			"Kmoaz", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1446, -- [11]
-			"Player-10-0B05DAF6", -- [12]
+			2508, -- [11]
+			"Player-57-0AED860F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cff8787edMathayus-Blackrock|r",
-			[51] = 1524779495,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cff0070ddKmoaz|r",
+			[51] = 1530240913,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [32]
 		{
-			"ok thats good ", -- [1]
-			"Ipoku-Zul'jin", -- [2]
+			"_$147Kmoaz_$燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~_$0070dd$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Ipoku-Zul'jin", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1448, -- [11]
-			"Player-61-072B838D", -- [12]
+			2511, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffff468Ipoku-Zul'jin|r",
-			[51] = 1524779507,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240913,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [33]
 		{
-			"groups assigned to tanks?", -- [1]
-			"Azelfafage-Drakkari", -- [2]
+			"_$148Gwouis_$Selling  Mythic +15 for the weekly reward; Argus Heroic raid 11/11 (ML); also  Glory of the Argus Raider to  get[Antoran Gloomhound]  ;Or Guldan mount[Fiendish Hellfire Core]! /Pst_$0070dd$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Azelfafage-Drakkari", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1450, -- [11]
-			"Player-1425-0979A471", -- [12]
+			2515, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Azelfafage-Drakkari|r",
-			[51] = 1524779522,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240914,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [34]
 		{
-			"omw", -- [1]
-			"Bëercan-Rexxar", -- [2]
+			"_$149Jittyy_$<Big Dumb Guild> has TWO open spots for MYTHIC ARGUS [Shackled Ur'zul] mount runs this coming TUESDAY JULY 3RD! The drop rate goes to 1% soon. Get it now before the price rises more! PST for price and details, GOLD ONLY any server._$c41e3a$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Bëercan-Rexxar", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1451, -- [11]
-			"Player-1151-07652128", -- [12]
+			2519, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Bëercan-Rexxar|r",
-			[51] = 1524779524,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240924,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [35]
 		{
-			"didnt realize u guys wiped...? ", -- [1]
-			"Rokuma-EmeraldDream", -- [2]
+			"_$150Daemonanima_$WTB Alani mount slot_$a330c9$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Rokuma-EmeraldDream", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1452, -- [11]
-			"Player-162-083985B4", -- [12]
+			2525, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Rokuma-EmeraldDream|r",
-			[51] = 1524779527,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240930,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [36]
 		{
-			"sums available or run out?", -- [1]
-			"Målicê-Area52", -- [2]
+			"_$151Scythr_$WTS [Wakening Horror Spaulders][Cyno's Mantle of Sin][Girdle of the Crumbling Sanctum]_$ff7c0a$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Målicê-Area52", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1453, -- [11]
-			"Player-3676-09AEAA95", -- [12]
+			2529, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaMålicê-Area52|r",
-			[51] = 1524779530,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240931,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [37]
 		{
-			"working on it", -- [1]
-			"Fellazer-Elune", -- [2]
+			"^LFW_L", -- [1]
+			"Twokreroll-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Fellazer-Elune", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Twokreroll", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1456, -- [11]
-			"Player-67-0A9A522D", -- [12]
+			2530, -- [11]
+			"Player-57-0AE70B0E", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Fellazer-Elune|r",
-			[51] = 1524779538,
-			[50] = "CHAT_MSG_RAID_LEADER",
+			[52] = "|cffa330c9Twokreroll|r",
+			[51] = 1530240936,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [38]
 		{
-			"group 1/2 with me, 3/4 with lalla", -- [1]
-			"Fellazer-Elune", -- [2]
+			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
+			"Kmoaz-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Fellazer-Elune", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"1. Trade - City", -- [4]
+			"Kmoaz", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1459, -- [11]
-			"Player-67-0A9A522D", -- [12]
+			2533, -- [11]
+			"Player-57-0AED860F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa330c9Fellazer-Elune|r",
-			[51] = 1524779560,
-			[50] = "CHAT_MSG_RAID_LEADER",
+			true, -- [17]
+			[52] = "|cff0070ddKmoaz|r",
+			[51] = 1530240943,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [39]
 		{
-			"group 3/4 star", -- [1]
-			"Azelfafage-Drakkari", -- [2]
+			"法师塔来单就打  低保  H 王座包团半价出售 100万金币 500RMB ", -- [1]
+			"Hiyuc-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Azelfafage-Drakkari", -- [5]
+			"1. Trade - City", -- [4]
+			"Hiyuc", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1460, -- [11]
-			"Player-1425-0979A471", -- [12]
+			2535, -- [11]
+			"Player-57-0AED7C95", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffaad372Azelfafage-Drakkari|r",
-			[51] = 1524779574,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cffc69b6dHiyuc|r",
+			[51] = 1530240952,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [40]
 		{
-			"groups 1/2 gold coin", -- [1]
-			"Azelfafage-Drakkari", -- [2]
+			"_$152Hiyuc_$法师塔来单就打  低保  H 王座包团半价出售 100万金币 500RMB _$c69b6d$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Azelfafage-Drakkari", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1461, -- [11]
-			"Player-1425-0979A471", -- [12]
+			2538, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Azelfafage-Drakkari|r",
-			[51] = 1524779582,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240952,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [41]
 		{
-			"ok", -- [1]
-			"Courovil-Azralon", -- [2]
+			"_$153Snsbeej_$WTS |cffa335ee|Hitem:152413::::::::110:261::4:3:3613:1457:3528:::|h[Felflame Inferno Shoulderpads]|h|r_$fff468$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Courovil-Azralon", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1462, -- [11]
-			"Player-3209-081793C4", -- [12]
+			2542, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaCourovil-Azralon|r",
-			[51] = 1524779587,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240953,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [42]
 		{
-			"ist okay", -- [1]
-			"Kaeltinvoker-Quel'Thalas", -- [2]
+			"_$154Samster_$wtb |cffa335ee|Hitem:23540::::::::110:577::::::|h[Felsteel Longblade]|h|r pst_$a330c9$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Kaeltinvoker-Quel'Thalas", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1465, -- [11]
-			"Player-1428-09674B8F", -- [12]
+			2547, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaKaeltinvoker-Quel'Thalas|r",
-			[51] = 1524779605,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240958,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [43]
 		{
-			"gold coin ?  i thought it was a condom ", -- [1]
-			"Rokuma-EmeraldDream", -- [2]
+			"H/M燃烧王座包团无竞争 毕业 史诗单买个人拾取!阿古斯和古尔丹坐骑!,泰坦杀手,神选者头衔!", -- [1]
+			"Celestiol-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Rokuma-EmeraldDream", -- [5]
+			"1. Trade - City", -- [4]
+			"Celestiol", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1467, -- [11]
-			"Player-162-083985B4", -- [12]
+			2548, -- [11]
+			"Player-57-0AED3D51", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Rokuma-EmeraldDream|r",
-			[51] = 1524779619,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cff3fc6eaCelestiol|r",
+			[51] = 1530240962,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [44]
 		{
-			"malice you commin?", -- [1]
-			"Azelfafage-Drakkari", -- [2]
+			"_$155Celestiol_$H/M燃烧王座包团无竞争 毕业 史诗单买个人拾取!阿古斯和古尔丹坐骑!,泰坦杀手,神选者头衔!_$3fc6ea$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Azelfafage-Drakkari", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1468, -- [11]
-			"Player-1425-0979A471", -- [12]
+			2552, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Azelfafage-Drakkari|r",
-			[51] = 1524779620,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240962,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [45]
 		{
-			"if not here kick", -- [1]
-			"Lällå-Illidan", -- [2]
+			"_$156ßrián_$<Magog Cartel> 11/11h and 3/11m Is recruiting for BFA! In need of several skilled dps and healers to fill out our roster for mythic raiding. Our raid times are 8-10pm Tuesday, Wednesday, and Thursday. If you would like to join or ha_$f48cba$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Lällå", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1469, -- [11]
-			"Player-57-09702F9A", -- [12]
+			2555, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Lällå|r",
-			[51] = 1524779624,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240962,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [46]
 		{
-			"gold condom", -- [1]
-			"Azelfafage-Drakkari", -- [2]
+			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
+			"Kmoaz-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Azelfafage-Drakkari", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"1. Trade - City", -- [4]
+			"Kmoaz", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1470, -- [11]
-			"Player-1425-0979A471", -- [12]
+			2558, -- [11]
+			"Player-57-0AED860F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffaad372Azelfafage-Drakkari|r",
-			[51] = 1524779625,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cff0070ddKmoaz|r",
+			[51] = 1530240973,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [47]
 		{
-			"yea can i get a sum?", -- [1]
-			"Målicê-Area52", -- [2]
+			"_$157Kmoaz_$燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~_$0070dd$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Målicê-Area52", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1471, -- [11]
-			"Player-3676-09AEAA95", -- [12]
+			2561, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaMålicê-Area52|r",
-			[51] = 1524779635,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240973,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [48]
 		{
-			"too much ", -- [1]
-			"Lällå-Illidan", -- [2]
+			"_$158Gwouis_$Selling  Mythic +15 for the weekly reward; Argus Heroic raid 11/11 (ML); also  Glory of the Argus Raider to  get[Antoran Gloomhound]  ;Or Guldan mount[Fiendish Hellfire Core]! /Pst_$0070dd$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Lällå", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1472, -- [11]
-			"Player-57-09702F9A", -- [12]
+			2566, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Lällå|r",
-			[51] = 1524779635,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530240985,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [49]
 		{
-			"or i'm running out", -- [1]
-			"Målicê-Area52", -- [2]
+			"法师塔来单就打  低保  H 王座包团半价出售 100万金币 500RMB ", -- [1]
+			"Hiyuc-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Målicê-Area52", -- [5]
+			"1. Trade - City", -- [4]
+			"Hiyuc", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1473, -- [11]
-			"Player-3676-09AEAA95", -- [12]
+			2568, -- [11]
+			"Player-57-0AED7C95", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff48cbaMålicê-Area52|r",
-			[51] = 1524779635,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cffc69b6dHiyuc|r",
+			[51] = 1530241002,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [50]
 		{
-			"we're trying to summon", -- [1]
-			"Fellazer-Elune", -- [2]
+			"_$159Hiyuc_$法师塔来单就打  低保  H 王座包团半价出售 100万金币 500RMB _$c69b6d$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Fellazer-Elune", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1474, -- [11]
-			"Player-67-0A9A522D", -- [12]
+			2572, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Fellazer-Elune|r",
-			[51] = 1524779635,
-			[50] = "CHAT_MSG_RAID_LEADER",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241002,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [51]
 		{
-			" got it ", -- [1]
-			"Lällå-Illidan", -- [2]
+			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
+			"Kmoaz-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Lällå", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"1. Trade - City", -- [4]
+			"Kmoaz", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1476, -- [11]
-			"Player-57-09702F9A", -- [12]
+			2573, -- [11]
+			"Player-57-0AED860F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa330c9Lällå|r",
-			[51] = 1524779636,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cff0070ddKmoaz|r",
+			[51] = 1530241003,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [52]
 		{
-			"i reloaded", -- [1]
-			"Målicê-Area52", -- [2]
+			"_$160Scythr_$WTS [Wakening Horror Spaulders][Cyno's Mantle of Sin][Girdle of the Crumbling Sanctum]_$ff7c0a$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Målicê-Area52", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1477, -- [11]
-			"Player-3676-09AEAA95", -- [12]
+			2577, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaMålicê-Area52|r",
-			[51] = 1524779638,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241007,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [53]
 		{
-			"didnt see sum", -- [1]
-			"Målicê-Area52", -- [2]
+			"_$161Herpopotamus_$Free M+15 giveaways to followers! Double carries, running with no healer tonight! <twitch.tv/herpftw>_$3fc6ea$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Målicê-Area52", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1479, -- [11]
-			"Player-3676-09AEAA95", -- [12]
+			2581, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaMålicê-Area52|r",
-			[51] = 1524779652,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241019,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [54]
 		{
-			"dude we're summoning", -- [1]
-			"Azelfafage-Drakkari", -- [2]
+			"_$162Cintrine_$<Medieval> is currently recruiting all classes. Our focus is building up for mythic raids and growing our ranks for BFA. We are a core set of friends and chill in disc and run raids and pvp daily on our toons. Whisper for more info_$ff7c0a$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Azelfafage-Drakkari", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1480, -- [11]
-			"Player-1425-0979A471", -- [12]
+			2585, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Azelfafage-Drakkari|r",
-			[51] = 1524779658,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241022,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [55]
 		{
-			"try reloading your ui ", -- [1]
-			"Deadlynewf-BlackDragonflight", -- [2]
+			"_$163Samster_$wtb |cffa335ee|Hitem:23540::::::::110:577::::::|h[Felsteel Longblade]|h|r pst_$a330c9$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Deadlynewf-BlackDragonflight", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1483, -- [11]
-			"Player-74-086325ED", -- [12]
+			2590, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff3fc6eaDeadlynewf-BlackDragonflight|r",
-			[51] = 1524779669,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241032,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [56]
 		{
-			"rcheck?", -- [1]
-			"Azelfafage-Drakkari", -- [2]
+			"H/M燃烧王座包团无竞争 毕业 史诗单买个人拾取!阿古斯和古尔丹坐骑!,泰坦杀手,神选者头衔!", -- [1]
+			"Celestiol-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Azelfafage-Drakkari", -- [5]
+			"1. Trade - City", -- [4]
+			"Celestiol", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1484, -- [11]
-			"Player-1425-0979A471", -- [12]
+			2591, -- [11]
+			"Player-57-0AED3D51", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffaad372Azelfafage-Drakkari|r",
-			[51] = 1524779671,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cff3fc6eaCelestiol|r",
+			[51] = 1530241032,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [57]
 		{
-			"go", -- [1]
-			"Kalitas-Caelestrasz", -- [2]
+			"_$164Celestiol_$H/M燃烧王座包团无竞争 毕业 史诗单买个人拾取!阿古斯和古尔丹坐骑!,泰坦杀手,神选者头衔!_$3fc6ea$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Kalitas-Caelestrasz", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1485, -- [11]
-			"Player-3721-0A2E7584", -- [12]
+			2594, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc41e3aKalitas-Caelestrasz|r",
-			[51] = 1524779674,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241032,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [58]
 		{
-			"stop inv ", -- [1]
-			"Lällå-Illidan", -- [2]
+			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
+			"Kmoaz-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Lällå", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"1. Trade - City", -- [4]
+			"Kmoaz", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1487, -- [11]
-			"Player-57-09702F9A", -- [12]
+			2595, -- [11]
+			"Player-57-0AED860F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa330c9Lällå|r",
-			[51] = 1524779681,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cff0070ddKmoaz|r",
+			[51] = 1530241033,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [59]
 		{
-			"3", -- [1]
+			"_$165Kmoaz_$燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~_$0070dd$", -- [1]
 			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
+			"4. TCForwarder6IIll", -- [4]
 			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1490, -- [11]
+			2598, -- [11]
 			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -1318,21 +1318,21 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cff00ff96Comet|r",
-			[51] = 1524779711,
-			[50] = "CHAT_MSG_RAID",
+			[51] = 1530241033,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [60]
 		{
-			"2", -- [1]
+			"_$166Jittyy_$<Big Dumb Guild> has TWO open spots for MYTHIC ARGUS [Shackled Ur'zul] mount runs this coming TUESDAY JULY 3RD! The drop rate goes to 1% soon. Get it now before the price rises more! PST for price and details, GOLD ONLY any server._$c41e3a$", -- [1]
 			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
+			"4. TCForwarder6IIll", -- [4]
 			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1491, -- [11]
+			2603, -- [11]
 			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -1340,395 +1340,395 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cff00ff96Comet|r",
-			[51] = 1524779712,
-			[50] = "CHAT_MSG_RAID",
+			[51] = 1530241049,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [61]
 		{
-			"I got it.", -- [1]
-			"Comet-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Comet", -- [5]
+			"法师塔来单就打  低保  H 王座包团半价出售 100万金币 500RMB ", -- [1]
+			"Hiyuc-Illidan", -- [2]
+			"", -- [3]
+			"1. Trade - City", -- [4]
+			"Hiyuc", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1492, -- [11]
-			"Player-57-05DF4D8D", -- [12]
+			2604, -- [11]
+			"Player-57-0AED7C95", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Comet|r",
-			[51] = 1524779720,
-			[50] = "CHAT_MSG_SAY",
+			true, -- [17]
+			[52] = "|cffc69b6dHiyuc|r",
+			[51] = 1530241053,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [62]
 		{
-			"|cff71d5ff|Hspell:109248:0|h[Binding Shot]|h|r activated.", -- [1]
-			"Bëercan-Rexxar", -- [2]
+			"_$167Hiyuc_$法师塔来单就打  低保  H 王座包团半价出售 100万金币 500RMB _$c69b6d$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Bëercan-Rexxar", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1494, -- [11]
-			"Player-1151-07652128", -- [12]
+			2608, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Bëercan-Rexxar|r",
-			[51] = 1524779735,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241053,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [63]
 		{
-			"Interrupted Fel-Infused Destructor's |cff71d5ff|Hspell:246305:0|h[Artillery Strike]|h|r ", -- [1]
-			"Bëercan-Rexxar", -- [2]
+			"_$168Gwouis_$Selling  Mythic +15 for the weekly reward; Argus Heroic raid 11/11 (ML); also  Glory of the Argus Raider to  get[Antoran Gloomhound]  ;Or Guldan mount[Fiendish Hellfire Core]! /Pst_$0070dd$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Bëercan-Rexxar", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1514, -- [11]
-			"Player-1151-07652128", -- [12]
+			2612, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Bëercan-Rexxar|r",
-			[51] = 1524779781,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241054,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [64]
 		{
-			"|cff71d5ff|Hspell:109248:0|h[Binding Shot]|h|r activated.", -- [1]
-			"Bëercan-Rexxar", -- [2]
+			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
+			"Kmoaz-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Bëercan-Rexxar", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"1. Trade - City", -- [4]
+			"Kmoaz", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1532, -- [11]
-			"Player-1151-07652128", -- [12]
+			2614, -- [11]
+			"Player-57-0AED860F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffaad372Bëercan-Rexxar|r",
-			[51] = 1524779805,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cff0070ddKmoaz|r",
+			[51] = 1530241063,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [65]
 		{
-			"Interrupted Fel-Infused Destructor's |cff71d5ff|Hspell:246305:0|h[Artillery Strike]|h|r ", -- [1]
-			"Bëercan-Rexxar", -- [2]
+			"。法师塔绝版先打。王座史诗包团全通=史诗四件套。。H 王座团白菜，，古尔丹。。 击杀阿古斯。法师塔绝版先打、、。15低保 来就打？？ ", -- [1]
+			"Kirtzertdor-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Bëercan-Rexxar", -- [5]
+			"1. Trade - City", -- [4]
+			"Kirtzertdor", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1535, -- [11]
-			"Player-1151-07652128", -- [12]
+			2616, -- [11]
+			"Player-57-0AED77B8", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffaad372Bëercan-Rexxar|r",
-			[51] = 1524779829,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cffaad372Kirtzertdor|r",
+			[51] = 1530241072,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [66]
 		{
-			"|cff71d5ff|Hspell:109248:0|h[Binding Shot]|h|r activated.", -- [1]
-			"Bëercan-Rexxar", -- [2]
+			"_$169Kirtzertdor_$。法师塔绝版先打。王座史诗包团全通=史诗四件套。。H 王座团白菜，，古尔丹。。 击杀阿古斯。法师塔绝版先打、、。15低保 来就打？？ _$aad372$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Bëercan-Rexxar", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1545, -- [11]
-			"Player-1151-07652128", -- [12]
+			2619, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Bëercan-Rexxar|r",
-			[51] = 1524779858,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241072,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [67]
 		{
-			"Rain of Fel on Mathayus", -- [1]
-			"Mathayus-Blackrock", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Mathayus-Blackrock", -- [5]
+			"_$170Mhmmtasty_$< Heil Hydra> (HORDE PvP) Join the cause today! Your compliance will be rewarded. Are you ready to become Hydra?_$00ff96$", -- [1]
+			"Comet-Illidan", -- [2]
+			"", -- [3]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1546, -- [11]
-			"Player-10-0B05DAF6", -- [12]
+			2623, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff8787edMathayus-Blackrock|r",
-			[51] = 1524779873,
-			[50] = "CHAT_MSG_SAY",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241074,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [68]
 		{
-			"3", -- [1]
-			"Mathayus-Blackrock", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Mathayus-Blackrock", -- [5]
+			"_$171Moonstrìckên_$DROOD LOOKING FOR 2'S 1700 CR_$8787ed$", -- [1]
+			"Comet-Illidan", -- [2]
+			"", -- [3]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1547, -- [11]
-			"Player-10-0B05DAF6", -- [12]
+			2628, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff8787edMathayus-Blackrock|r",
-			[51] = 1524779875,
-			[50] = "CHAT_MSG_SAY",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241079,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [69]
 		{
-			"2", -- [1]
-			"Mathayus-Blackrock", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Mathayus-Blackrock", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
+			"Kmoaz-Illidan", -- [2]
+			"", -- [3]
+			"1. Trade - City", -- [4]
+			"Kmoaz", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1549, -- [11]
-			"Player-10-0B05DAF6", -- [12]
+			2644, -- [11]
+			"Player-57-0AED860F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cff8787edMathayus-Blackrock|r",
-			[51] = 1524779876,
-			[50] = "CHAT_MSG_SAY",
+			true, -- [17]
+			[52] = "|cff0070ddKmoaz|r",
+			[51] = 1530241093,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [70]
 		{
-			"1", -- [1]
-			"Mathayus-Blackrock", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Mathayus-Blackrock", -- [5]
+			"_$172Kmoaz_$燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~_$0070dd$", -- [1]
+			"Comet-Illidan", -- [2]
+			"", -- [3]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1551, -- [11]
-			"Player-10-0B05DAF6", -- [12]
+			2647, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff8787edMathayus-Blackrock|r",
-			[51] = 1524779877,
-			[50] = "CHAT_MSG_SAY",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241094,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [71]
 		{
-			"Rain of Fel on Killzworkz", -- [1]
-			"Killzworkz-BurningLegion", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Killzworkz-BurningLegion", -- [5]
+			"_$173Samster_$wtb |cffa335ee|Hitem:23540::::::::110:577::::::|h[Felsteel Longblade]|h|rpst_$a330c9$", -- [1]
+			"Comet-Illidan", -- [2]
+			"", -- [3]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1554, -- [11]
-			"Player-1129-0935F9DB", -- [12]
+			2655, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc69b6dKillzworkz-BurningLegion|r",
-			[51] = 1524779893,
-			[50] = "CHAT_MSG_SAY",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241098,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [72]
 		{
-			"Rain of Fel on Comet", -- [1]
-			"Comet-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Comet", -- [5]
+			"H/M燃烧王座包团无竞争 毕业 史诗单买个人拾取!阿古斯和古尔丹坐骑!,泰坦杀手,神选者头衔!", -- [1]
+			"Celestiol-Illidan", -- [2]
+			"", -- [3]
+			"1. Trade - City", -- [4]
+			"Celestiol", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1555, -- [11]
-			"Player-57-05DF4D8D", -- [12]
+			2660, -- [11]
+			"Player-57-0AED3D51", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Comet|r",
-			[51] = 1524779893,
-			[50] = "CHAT_MSG_SAY",
+			true, -- [17]
+			[52] = "|cff3fc6eaCelestiol|r",
+			[51] = 1530241102,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [73]
 		{
-			"3", -- [1]
-			"Killzworkz-BurningLegion", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Killzworkz-BurningLegion", -- [5]
+			"_$174Celestiol_$H/M燃烧王座包团无竞争 毕业 史诗单买个人拾取!阿古斯和古尔丹坐骑!,泰坦杀手,神选者头衔!_$3fc6ea$", -- [1]
+			"Comet-Illidan", -- [2]
+			"", -- [3]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1557, -- [11]
-			"Player-1129-0935F9DB", -- [12]
+			2664, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc69b6dKillzworkz-BurningLegion|r",
-			[51] = 1524779895,
-			[50] = "CHAT_MSG_SAY",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241102,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [74]
 		{
-			"3", -- [1]
-			"Comet-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Comet", -- [5]
+			"法师塔来单就打  低保  H 王座包团半价出售 100万金币 500RMB ", -- [1]
+			"Hiyuc-Illidan", -- [2]
+			"", -- [3]
+			"1. Trade - City", -- [4]
+			"Hiyuc", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1558, -- [11]
-			"Player-57-05DF4D8D", -- [12]
+			2665, -- [11]
+			"Player-57-0AED7C95", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Comet|r",
-			[51] = 1524779895,
-			[50] = "CHAT_MSG_SAY",
+			true, -- [17]
+			[52] = "|cffc69b6dHiyuc|r",
+			[51] = 1530241103,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [75]
 		{
-			"bats!!!", -- [1]
-			"Ipoku-Zul'jin", -- [2]
+			"_$175Hiyuc_$法师塔来单就打  低保  H 王座包团半价出售 100万金币 500RMB _$c69b6d$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Ipoku-Zul'jin", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1560, -- [11]
-			"Player-61-072B838D", -- [12]
+			2669, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffff468Ipoku-Zul'jin|r",
-			[51] = 1524779896,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241104,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [76]
 		{
-			"2", -- [1]
-			"Killzworkz-BurningLegion", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Killzworkz-BurningLegion", -- [5]
+			"_$176Nalanth_$WTB pets_$a330c9$", -- [1]
+			"Comet-Illidan", -- [2]
+			"", -- [3]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1561, -- [11]
-			"Player-1129-0935F9DB", -- [12]
+			2675, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc69b6dKillzworkz-BurningLegion|r",
-			[51] = 1524779896,
-			[50] = "CHAT_MSG_SAY",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241106,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [77]
 		{
-			"2", -- [1]
-			"Comet-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Comet", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
+			"Kmoaz-Illidan", -- [2]
+			"", -- [3]
+			"1. Trade - City", -- [4]
+			"Kmoaz", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1562, -- [11]
-			"Player-57-05DF4D8D", -- [12]
+			2683, -- [11]
+			"Player-57-0AED860F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Comet|r",
-			[51] = 1524779896,
-			[50] = "CHAT_MSG_SAY",
+			true, -- [17]
+			[52] = "|cff0070ddKmoaz|r",
+			[51] = 1530241123,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [78]
 		{
-			"1", -- [1]
+			"_$177Gwouis_$Selling  Mythic +15 for the weekly reward; Argus Heroic raid 11/11 (ML); also  Glory of the Argus Raider to  get[Antoran Gloomhound]  ;Or Guldan mount[Fiendish Hellfire Core]! /Pst_$0070dd$", -- [1]
 			"Comet-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
+			"", -- [3]
+			"4. TCForwarder6IIll", -- [4]
 			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1564, -- [11]
+			2687, -- [11]
 			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -1736,43 +1736,43 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cff00ff96Comet|r",
-			[51] = 1524779897,
-			[50] = "CHAT_MSG_SAY",
+			[51] = 1530241125,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [79]
 		{
-			"1", -- [1]
-			"Killzworkz-BurningLegion", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Killzworkz-BurningLegion", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
+			"Kmoaz-Illidan", -- [2]
+			"", -- [3]
+			"1. Trade - City", -- [4]
+			"Kmoaz", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1566, -- [11]
-			"Player-1129-0935F9DB", -- [12]
+			2688, -- [11]
+			"Player-57-0AED860F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dKillzworkz-BurningLegion|r",
-			[51] = 1524779897,
-			[50] = "CHAT_MSG_SAY",
+			true, -- [17]
+			[52] = "|cff0070ddKmoaz|r",
+			[51] = 1530241153,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [80]
 		{
-			"Rain of Fel on Comet", -- [1]
+			"_$178Kmoaz_$燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~_$0070dd$", -- [1]
 			"Comet-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
+			"", -- [3]
+			"4. TCForwarder6IIll", -- [4]
 			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1568, -- [11]
+			2691, -- [11]
 			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -1780,65 +1780,65 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cff00ff96Comet|r",
-			[51] = 1524779913,
-			[50] = "CHAT_MSG_SAY",
+			[51] = 1530241154,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [81]
 		{
-			"¡Lluvia de vileza en Gwenhan!", -- [1]
-			"Gwenhan-Quel'Thalas", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Gwenhan-Quel'Thalas", -- [5]
+			"_$179Rjd_$||The Evicted II|| is a multi-gaming community that does it all! We are currently Four guilds strong and are looking for new members who are interested in joining a social guild that goes beyond WoW. Join us and be part of an active gam_$ff7c0a$", -- [1]
+			"Comet-Illidan", -- [2]
+			"", -- [3]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1569, -- [11]
-			"Player-1428-09924A1E", -- [12]
+			2696, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff3fc6eaGwenhan-Quel'Thalas|r",
-			[51] = 1524779913,
-			[50] = "CHAT_MSG_SAY",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241169,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [82]
 		{
-			"'BIRDS", -- [1]
-			"Artto-Magtheridon", -- [2]
+			"H/M燃烧王座包团无竞争 毕业 史诗单买个人拾取!阿古斯和古尔丹坐骑!,泰坦杀手,神选者头衔!", -- [1]
+			"Celestiol-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Artto-Magtheridon", -- [5]
+			"1. Trade - City", -- [4]
+			"Celestiol", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1570, -- [11]
-			"Player-78-04B523B2", -- [12]
+			2699, -- [11]
+			"Player-57-0AED3D51", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffff7c0aArtto-Magtheridon|r",
-			[51] = 1524779915,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cff3fc6eaCelestiol|r",
+			[51] = 1530241172,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [83]
 		{
-			"3", -- [1]
+			"_$180Celestiol_$H/M燃烧王座包团无竞争 毕业 史诗单买个人拾取!阿古斯和古尔丹坐骑!,泰坦杀手,神选者头衔!_$3fc6ea$", -- [1]
 			"Comet-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
+			"", -- [3]
+			"4. TCForwarder6IIll", -- [4]
 			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1571, -- [11]
+			2702, -- [11]
 			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -1846,65 +1846,65 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cff00ff96Comet|r",
-			[51] = 1524779915,
-			[50] = "CHAT_MSG_SAY",
+			[51] = 1530241172,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [84]
 		{
-			"3", -- [1]
-			"Gwenhan-Quel'Thalas", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Gwenhan-Quel'Thalas", -- [5]
+			"_$181Jittyy_$<Big Dumb Guild> has TWO open spots for MYTHIC ARGUS [Shackled Ur'zul] mount runs this coming TUESDAY JULY 3RD! The drop rate goes to 1% soon. Get it now before the price rises more! PST for price and details, GOLD ONLY any server._$c41e3a$", -- [1]
+			"Comet-Illidan", -- [2]
+			"", -- [3]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1572, -- [11]
-			"Player-1428-09924A1E", -- [12]
+			2706, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff3fc6eaGwenhan-Quel'Thalas|r",
-			[51] = 1524779915,
-			[50] = "CHAT_MSG_SAY",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241174,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [85]
 		{
-			"BIRDS", -- [1]
-			"Artto-Magtheridon", -- [2]
+			"_$182Rjd_$||The Evicted II|| is a multi-gaming community that does it all! We are currently three guilds strong and are looking for new members who are interested in joining a social guild that goes beyond WoW. Join us and be part of an active ga_$ff7c0a$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Artto-Magtheridon", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1573, -- [11]
-			"Player-78-04B523B2", -- [12]
+			2711, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffff7c0aArtto-Magtheridon|r",
-			[51] = 1524779916,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241178,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [86]
 		{
-			"2", -- [1]
+			"_$183Samster_$wtb |cffa335ee|Hitem:23540::::::::110:577::::::|h[Felsteel Longblade]|h|r_$a330c9$", -- [1]
 			"Comet-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
+			"", -- [3]
+			"4. TCForwarder6IIll", -- [4]
 			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1574, -- [11]
+			2715, -- [11]
 			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -1912,109 +1912,109 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cff00ff96Comet|r",
-			[51] = 1524779916,
-			[50] = "CHAT_MSG_SAY",
+			[51] = 1530241179,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [87]
 		{
-			"2", -- [1]
-			"Gwenhan-Quel'Thalas", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Gwenhan-Quel'Thalas", -- [5]
+			"_$184Nalanth_$WTB battle pets_$a330c9$", -- [1]
+			"Comet-Illidan", -- [2]
+			"", -- [3]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1575, -- [11]
-			"Player-1428-09924A1E", -- [12]
+			2719, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff3fc6eaGwenhan-Quel'Thalas|r",
-			[51] = 1524779916,
-			[50] = "CHAT_MSG_SAY",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241183,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [88]
 		{
-			"1", -- [1]
-			"Comet-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Comet", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
+			"Kmoaz-Illidan", -- [2]
+			"", -- [3]
+			"1. Trade - City", -- [4]
+			"Kmoaz", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1576, -- [11]
-			"Player-57-05DF4D8D", -- [12]
+			2720, -- [11]
+			"Player-57-0AED860F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Comet|r",
-			[51] = 1524779917,
-			[50] = "CHAT_MSG_SAY",
+			true, -- [17]
+			[52] = "|cff0070ddKmoaz|r",
+			[51] = 1530241183,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [89]
 		{
-			"1", -- [1]
-			"Gwenhan-Quel'Thalas", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Gwenhan-Quel'Thalas", -- [5]
+			"_$185Reldikasa_$Antorus any difficulty 11/11 runs with any loot mode are up for purchase! Possible loot/relic reservation. Offspec piece are rollable. Performed by experienced and adequately geared guild. Runs occur every day._$c69b6d$", -- [1]
+			"Comet-Illidan", -- [2]
+			"", -- [3]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1577, -- [11]
-			"Player-1428-09924A1E", -- [12]
+			2724, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff3fc6eaGwenhan-Quel'Thalas|r",
-			[51] = 1524779917,
-			[50] = "CHAT_MSG_SAY",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241190,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [90]
 		{
-			"|cff71d5ff|Hspell:109248:0|h[Binding Shot]|h|r activated.", -- [1]
-			"Bëercan-Rexxar", -- [2]
+			"_$186Gwouis_$Selling  Mythic +15 for the weekly reward; Argus Heroic raid 11/11 (ML); also  Glory of the Argus Raider to  get[Antoran Gloomhound]  ;Or Guldan mount[Fiendish Hellfire Core]! /Pst_$0070dd$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Bëercan-Rexxar", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1579, -- [11]
-			"Player-1151-07652128", -- [12]
+			2729, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Bëercan-Rexxar|r",
-			[51] = 1524779930,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241195,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [91]
 		{
-			"Rain of Fel on Comet", -- [1]
+			"_$187Mozzlegaming_$Are you LF help on TSM3, TSM3 Sniper, Gold Farming, LAC gold farm runs, enough to earn a token with minimal time spent? 70+ mil gold earned.  PST for help!_$c69b6d$", -- [1]
 			"Comet-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
+			"", -- [3]
+			"4. TCForwarder6IIll", -- [4]
 			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1581, -- [11]
+			2735, -- [11]
 			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2022,21 +2022,21 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cff00ff96Comet|r",
-			[51] = 1524779943,
-			[50] = "CHAT_MSG_SAY",
+			[51] = 1530241199,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [92]
 		{
-			"3", -- [1]
+			"_$188Íllidari_$LF Person for|cffffff00|Hachievement:4621:Player-57-09606DD6:0:0:0:-1:0:0:0:0|h[Been Waiting a Long Time for This (25 player)]|h|rwill tip!_$a330c9$", -- [1]
 			"Comet-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
+			"", -- [3]
+			"4. TCForwarder6IIll", -- [4]
 			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1582, -- [11]
+			2739, -- [11]
 			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2044,21 +2044,21 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cff00ff96Comet|r",
-			[51] = 1524779945,
-			[50] = "CHAT_MSG_SAY",
+			[51] = 1530241205,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [93]
 		{
-			"2", -- [1]
+			"_$189Scythr_$WTS [Wakening Horror Spaulders][Cyno's Mantle of Sin][Girdle of the Crumbling Sanctum]_$ff7c0a$", -- [1]
 			"Comet-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
+			"", -- [3]
+			"4. TCForwarder6IIll", -- [4]
 			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1583, -- [11]
+			2744, -- [11]
 			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2066,21 +2066,21 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cff00ff96Comet|r",
-			[51] = 1524779946,
-			[50] = "CHAT_MSG_SAY",
+			[51] = 1530241206,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [94]
 		{
-			"1", -- [1]
+			"_$190Cintrine_$<Medieval> is currently recruiting all classes. Our focus is building up for mythic raids and growing our ranks for BFA. We are a core set of friends and chill in disc and run raids and pvp daily on our toons. Whisper for more info_$ff7c0a$", -- [1]
 			"Comet-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
+			"", -- [3]
+			"4. TCForwarder6IIll", -- [4]
 			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1584, -- [11]
+			2750, -- [11]
 			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2088,153 +2088,153 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cff00ff96Comet|r",
-			[51] = 1524779947,
-			[50] = "CHAT_MSG_SAY",
+			[51] = 1530241212,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [95]
 		{
-			"STOP GARYGOYLES", -- [1]
-			"Azelfafage-Drakkari", -- [2]
+			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
+			"Kmoaz-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Azelfafage-Drakkari", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"1. Trade - City", -- [4]
+			"Kmoaz", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1585, -- [11]
-			"Player-1425-0979A471", -- [12]
+			2751, -- [11]
+			"Player-57-0AED860F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffaad372Azelfafage-Drakkari|r",
-			[51] = 1524779957,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cff0070ddKmoaz|r",
+			[51] = 1530241214,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [96]
 		{
-			"gg", -- [1]
-			"Artto-Magtheridon", -- [2]
+			"_$191Kmoaz_$燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~_$0070dd$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Artto-Magtheridon", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1586, -- [11]
-			"Player-78-04B523B2", -- [12]
+			2754, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffff7c0aArtto-Magtheridon|r",
-			[51] = 1524779961,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241214,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [97]
 		{
-			"Help upper", -- [1]
-			"Andaravia-Drak'Tharon", -- [2]
+			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
+			"Kmoaz-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Andaravia-Drak'Tharon", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"1. Trade - City", -- [4]
+			"Kmoaz", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1587, -- [11]
-			"Player-127-080EDF27", -- [12]
+			2756, -- [11]
+			"Player-57-0AED860F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Andaravia-Drak'Tharon|r",
-			[51] = 1524779964,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cff0070ddKmoaz|r",
+			[51] = 1530241244,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [98]
 		{
-			"get here", -- [1]
-			"Artto-Magtheridon", -- [2]
+			"_$192Samster_$wtb |cffa335ee|Hitem:23540::::::::110:577::::::|h[Felsteel Longblade]|h|r_$a330c9$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Artto-Magtheridon", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1588, -- [11]
-			"Player-78-04B523B2", -- [12]
+			2760, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffff7c0aArtto-Magtheridon|r",
-			[51] = 1524779965,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241247,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [99]
 		{
-			"right of tree", -- [1]
-			"Andaravia-Drak'Tharon", -- [2]
+			"_$193Gwouis_$Selling  Mythic +15 for the weekly reward; Argus Heroic raid 11/11 (ML); also  Glory of the Argus Raider to  get[Antoran Gloomhound]  ;Or Guldan mount[Fiendish Hellfire Core]! /Pst_$0070dd$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Andaravia-Drak'Tharon", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1589, -- [11]
-			"Player-127-080EDF27", -- [12]
+			2764, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Andaravia-Drak'Tharon|r",
-			[51] = 1524779970,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241265,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [100]
 		{
-			"|cff71d5ff|Hspell:109248:0|h[Binding Shot]|h|r activated.", -- [1]
-			"Bëercan-Rexxar", -- [2]
+			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
+			"Kmoaz-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Bëercan-Rexxar", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"1. Trade - City", -- [4]
+			"Kmoaz", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1590, -- [11]
-			"Player-1151-07652128", -- [12]
+			2766, -- [11]
+			"Player-57-0AED860F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffaad372Bëercan-Rexxar|r",
-			[51] = 1524779976,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cff0070ddKmoaz|r",
+			[51] = 1530241274,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [101]
 		{
-			"Rain of Fel on Comet", -- [1]
+			"_$194Kmoaz_$燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~_$0070dd$", -- [1]
 			"Comet-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
+			"", -- [3]
+			"4. TCForwarder6IIll", -- [4]
 			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1593, -- [11]
+			2769, -- [11]
 			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2242,21 +2242,21 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cff00ff96Comet|r",
-			[51] = 1524779988,
-			[50] = "CHAT_MSG_SAY",
+			[51] = 1530241274,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [102]
 		{
-			"3", -- [1]
+			"_$195Herpopotamus_$Free M+15 giveaways to followers! Double carries, running with no healer tonight! <twitch.tv/herpftw>_$3fc6ea$", -- [1]
 			"Comet-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
+			"", -- [3]
+			"4. TCForwarder6IIll", -- [4]
 			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1594, -- [11]
+			2773, -- [11]
 			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2264,21 +2264,21 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cff00ff96Comet|r",
-			[51] = 1524779990,
-			[50] = "CHAT_MSG_SAY",
+			[51] = 1530241278,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [103]
 		{
-			"2", -- [1]
+			"_$196Jittyy_$<Big Dumb Guild> has TWO open spots for MYTHIC ARGUS [Shackled Ur'zul] mount runs this coming TUESDAY JULY 3RD! The drop rate goes to 1% soon. Get it now before the price rises more! PST for price and details, GOLD ONLY any server._$c41e3a$", -- [1]
 			"Comet-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
+			"", -- [3]
+			"4. TCForwarder6IIll", -- [4]
 			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1595, -- [11]
+			2779, -- [11]
 			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2286,197 +2286,153 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cff00ff96Comet|r",
-			[51] = 1524779991,
-			[50] = "CHAT_MSG_SAY",
+			[51] = 1530241299,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [104]
 		{
-			"1", -- [1]
-			"Comet-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Comet", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
+			"Kmoaz-Illidan", -- [2]
+			"", -- [3]
+			"1. Trade - City", -- [4]
+			"Kmoaz", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1596, -- [11]
-			"Player-57-05DF4D8D", -- [12]
+			2780, -- [11]
+			"Player-57-0AED860F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Comet|r",
-			[51] = 1524779992,
-			[50] = "CHAT_MSG_SAY",
+			true, -- [17]
+			[52] = "|cff0070ddKmoaz|r",
+			[51] = 1530241304,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [105]
 		{
-			"more inc at tree", -- [1]
-			"Artto-Magtheridon", -- [2]
+			"_$197Íllidari_$LF help on|cffffff00|Hachievement:4621:Player-57-09606DD6:0:0:0:-1:0:0:0:0|h[Been Waiting a Long Time for This (25 player)]|h|rwill tip_$a330c9$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Artto-Magtheridon", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1598, -- [11]
-			"Player-78-04B523B2", -- [12]
+			2784, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffff7c0aArtto-Magtheridon|r",
-			[51] = 1524779996,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241308,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [106]
 		{
-			"F U ALL", -- [1]
-			"Lällå-Illidan", -- [2]
+			"_$198Scythr_$WTS [Wakening Horror Spaulders][Cyno's Mantle of Sin][Girdle of the Crumbling Sanctum]_$ff7c0a$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Lällå", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1603, -- [11]
-			"Player-57-09702F9A", -- [12]
+			2788, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Lällå|r",
-			[51] = 1524780020,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241315,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [107]
 		{
-			"fllow tank U F noobs", -- [1]
-			"Lällå-Illidan", -- [2]
+			"_$199Mozzlegaming_$Are you LF help on TSM3, TSM3 Sniper, Gold Farming, LAC gold farm runs, enough to earn a token with minimal time spent? 70+ mil gold earned.  PST for help!_$c69b6d$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Lällå", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1605, -- [11]
-			"Player-57-09702F9A", -- [12]
+			2792, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Lällå|r",
-			[51] = 1524780025,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241328,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [108]
 		{
-			"Lolk", -- [1]
-			"Comet-Illidan", -- [2]
+			"^LFW_L", -- [1]
+			"Skullata-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Comet", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Skullata", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1606, -- [11]
-			"Player-57-05DF4D8D", -- [12]
+			2793, -- [11]
+			"Player-57-0A29FA23", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Comet|r",
-			[51] = 1524780032,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffSkullata|r",
+			[51] = 1530241332,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [109]
 		{
-			"That'd be easier if the tanks knew where to go.", -- [1]
-			"Comet-Illidan", -- [2]
+			"。法师塔绝版先打。王座史诗包团全通=史诗四件套。。H 王座团白菜，，古尔丹。。 击杀阿古斯。法师塔绝版先打、、。15低保 来就打？？ ", -- [1]
+			"Kirtzertdor-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Comet", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"1. Trade - City", -- [4]
+			"Kirtzertdor", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1607, -- [11]
-			"Player-57-05DF4D8D", -- [12]
+			2794, -- [11]
+			"Player-57-0AED77B8", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Comet|r",
-			[51] = 1524780039,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cffaad372Kirtzertdor|r",
+			[51] = 1530241332,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [110]
 		{
-			"i did follow me tank lol ", -- [1]
-			"Ipoku-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Ipoku-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1608, -- [11]
-			"Player-61-072B838D", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffff468Ipoku-Zul'jin|r",
-			[51] = 1524780042,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [111]
-		{
-			"1/2 up top now", -- [1]
-			"Fellazer-Elune", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Fellazer", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1610, -- [11]
-			"Player-67-0A9A522D", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa330c9Fellazer-Elune|r",
-			[51] = 1524780044,
-			[50] = "CHAT_MSG_RAID_WARNING",
-		}, -- [112]
-		{
-			"And didn't run around like headless chicken.", -- [1]
+			"_$200Kirtzertdor_$。法师塔绝版先打。王座史诗包团全通=史诗四件套。。H 王座团白菜，，古尔丹。。 击杀阿古斯。法师塔绝版先打、、。15低保 来就打？？ _$aad372$", -- [1]
 			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
+			"4. TCForwarder6IIll", -- [4]
 			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1611, -- [11]
+			2797, -- [11]
 			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2484,339 +2440,383 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cff00ff96Comet|r",
-			[51] = 1524780045,
-			[50] = "CHAT_MSG_RAID",
+			[51] = 1530241332,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [111]
+		{
+			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
+			"Kmoaz-Illidan", -- [2]
+			"", -- [3]
+			"1. Trade - City", -- [4]
+			"Kmoaz", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			2798, -- [11]
+			"Player-57-0AED860F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cff0070ddKmoaz|r",
+			[51] = 1530241334,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [112]
+		{
+			"_$201Kmoaz_$燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~_$0070dd$", -- [1]
+			"Comet-Illidan", -- [2]
+			"", -- [3]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
+			"", -- [6]
+			0, -- [7]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
+			0, -- [10]
+			2801, -- [11]
+			"Player-57-05DF4D8D", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241334,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [113]
 		{
-			"|cff71d5ff|Hspell:109248:0|h[Binding Shot]|h|r activated.", -- [1]
-			"Bëercan-Rexxar", -- [2]
+			"_$202Gwouis_$Selling  Mythic +15 for the weekly reward; Argus Heroic raid 11/11 (ML); also  Glory of the Argus Raider to  get[Antoran Gloomhound]  ;Or Guldan mount[Fiendish Hellfire Core]! /Pst_$0070dd$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Bëercan-Rexxar", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1612, -- [11]
-			"Player-1151-07652128", -- [12]
+			2805, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Bëercan-Rexxar|r",
-			[51] = 1524780052,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241334,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [114]
 		{
-			"Interrupted Fel-Infused Destructor's |cff71d5ff|Hspell:246305:0|h[Artillery Strike]|h|r!", -- [1]
-			"Ribeyé-Firetree", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Ribeyé-Firetree", -- [5]
+			"_$203Herpopotamus_$Free M+15 giveaways to followers! Double carries, running with no healer tonight! <twitch.tv/herpftw>_$3fc6ea$", -- [1]
+			"Comet-Illidan", -- [2]
+			"", -- [3]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1613, -- [11]
-			"Player-127-08127791", -- [12]
+			2810, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffff7c0aRibeyé-Firetree|r",
-			[51] = 1524780064,
-			[50] = "CHAT_MSG_SAY",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241345,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [115]
 		{
-			"Interrupted Fel-Infused Destructor's |cff71d5ff|Hspell:246305:0|h[Artillery Strike]|h|r ", -- [1]
-			"Bëercan-Rexxar", -- [2]
+			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
+			"Kmoaz-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Bëercan-Rexxar", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"1. Trade - City", -- [4]
+			"Kmoaz", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1615, -- [11]
-			"Player-1151-07652128", -- [12]
+			2811, -- [11]
+			"Player-57-0AED860F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffaad372Bëercan-Rexxar|r",
-			[51] = 1524780070,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cff0070ddKmoaz|r",
+			[51] = 1530241364,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [116]
 		{
-			"3/4 mid", -- [1]
-			"Fellazer-Elune", -- [2]
+			"_$204Heypriest_$WTS |cffa335ee|Hitem:97826:::::::371270528:110:256::::::|h[Latent Kor'kron Chestpiece]|h|r pst with offer_$ffffff$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Fellazer", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1616, -- [11]
-			"Player-67-0A9A522D", -- [12]
+			2816, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Fellazer-Elune|r",
-			[51] = 1524780071,
-			[50] = "CHAT_MSG_RAID_WARNING",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241368,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [117]
 		{
-			"bats", -- [1]
-			"Andaravia-Drak'Tharon", -- [2]
+			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
+			"Kmoaz-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Andaravia-Drak'Tharon", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"1. Trade - City", -- [4]
+			"Kmoaz", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1625, -- [11]
-			"Player-127-080EDF27", -- [12]
+			2817, -- [11]
+			"Player-57-0AED860F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Andaravia-Drak'Tharon|r",
-			[51] = 1524780095,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cff0070ddKmoaz|r",
+			[51] = 1530241394,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [118]
 		{
-			"lol", -- [1]
-			"Ipoku-Zul'jin", -- [2]
+			"_$205Kmoaz_$燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~_$0070dd$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Ipoku-Zul'jin", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1626, -- [11]
-			"Player-61-072B838D", -- [12]
+			2820, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffff468Ipoku-Zul'jin|r",
-			[51] = 1524780096,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241394,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [119]
 		{
-			"omg tank", -- [1]
-			"Kaeltinvoker-Quel'Thalas", -- [2]
+			"_$206Gwouis_$Selling  Mythic +15 for the weekly reward; Argus Heroic raid 11/11 (ML); also  Glory of the Argus Raider to  get[Antoran Gloomhound]  ;Or Guldan mount[Fiendish Hellfire Core]! /Pst_$0070dd$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Kaeltinvoker-Quel'Thalas", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1627, -- [11]
-			"Player-1428-09674B8F", -- [12]
+			2824, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaKaeltinvoker-Quel'Thalas|r",
-			[51] = 1524780098,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241405,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [120]
 		{
-			"!!!!", -- [1]
-			"Kaeltinvoker-Quel'Thalas", -- [2]
+			"_$207Quietly_$WTS 11/11 Heroic Antorus (PL with loot trading. Done by |cffffff00|Hachievement:12111:Player-57-0AD67005:1:5:10:18:4294967295:4294967295:4294967295:4294967295|h[Cutting Edge: Argus the Unmaker]|h|r players._$c41e3a$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Kaeltinvoker-Quel'Thalas", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1628, -- [11]
-			"Player-1428-09674B8F", -- [12]
+			2828, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaKaeltinvoker-Quel'Thalas|r",
-			[51] = 1524780099,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241419,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [121]
 		{
-			"F U ", -- [1]
-			"Lällå-Illidan", -- [2]
+			"_$208Jittyy_$<Big Dumb Guild> has TWO open spots for MYTHIC ARGUS [Shackled Ur'zul] mount runs this coming TUESDAY JULY 3RD! The drop rate goes to 1% soon. Get it now before the price rises more! PST for price and details, GOLD ONLY any server._$c41e3a$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Lällå", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1629, -- [11]
-			"Player-57-09702F9A", -- [12]
+			2832, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Lällå|r",
-			[51] = 1524780100,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241424,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [122]
 		{
-			"ARE YOU FUCKING RETARDED", -- [1]
-			"Fellazer-Elune", -- [2]
+			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
+			"Kmoaz-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Fellazer", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"1. Trade - City", -- [4]
+			"Kmoaz", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1631, -- [11]
-			"Player-67-0A9A522D", -- [12]
+			2833, -- [11]
+			"Player-57-0AED860F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa330c9Fellazer-Elune|r",
-			[51] = 1524780104,
-			[50] = "CHAT_MSG_RAID_WARNING",
+			true, -- [17]
+			[52] = "|cff0070ddKmoaz|r",
+			[51] = 1530241424,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [123]
 		{
-			"well the other tank failed ", -- [1]
-			"Ipoku-Zul'jin", -- [2]
+			"_$209Herpopotamus_$Free M+15 giveaways to followers! Double carries, running with no healer tonight! <twitch.tv/herpftw>_$3fc6ea$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Ipoku-Zul'jin", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1632, -- [11]
-			"Player-61-072B838D", -- [12]
+			2837, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffff468Ipoku-Zul'jin|r",
-			[51] = 1524780104,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241429,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [124]
 		{
-			"reatrded", -- [1]
-			"Lällå-Illidan", -- [2]
+			"_$210Mhmmtasty_$< Heil Hydra> (HORDE PvP) Join the cause today! Your compliance will be rewarded. Are you ready to become Hydra?_$00ff96$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Lällå", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1633, -- [11]
-			"Player-57-09702F9A", -- [12]
+			2841, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Lällå|r",
-			[51] = 1524780105,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241442,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [125]
 		{
-			"retard tank", -- [1]
-			"Kaeltinvoker-Quel'Thalas", -- [2]
+			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
+			"Kmoaz-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Kaeltinvoker-Quel'Thalas", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"1. Trade - City", -- [4]
+			"Kmoaz", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			1, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1635, -- [11]
-			"Player-1428-09674B8F", -- [12]
+			2846, -- [11]
+			"Player-57-0AED860F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff48cbaKaeltinvoker-Quel'Thalas|r",
-			[51] = 1524780109,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cff0070ddKmoaz|r",
+			[51] = 1530241454,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [126]
 		{
-			"LIKE FOR FUCKS SAKE", -- [1]
-			"Fellazer-Elune", -- [2]
+			"_$211Kmoaz_$燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~_$0070dd$", -- [1]
+			"Comet-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Fellazer-Elune", -- [5]
+			"4. TCForwarder6IIll", -- [4]
+			"Comet", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			4, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1636, -- [11]
-			"Player-67-0A9A522D", -- [12]
+			2847, -- [11]
+			"Player-57-05DF4D8D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Fellazer-Elune|r",
-			[51] = 1524780110,
-			[50] = "CHAT_MSG_RAID_LEADER",
+			[52] = "|cff00ff96Comet|r",
+			[51] = 1530241454,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [127]
 	},
 	["ChatEditHistory"] = {
-		"/raid My relic damage, so scary.", -- [1]
-		"/raid 2/3/8 is fine let's go.", -- [2]
-		"/raid Kick your garbage heals.", -- [3]
-		"/raid This is a wipe.", -- [4]
-		"/raid Because it's a wipe?", -- [5]
-		"/raid If that wasn't obvious I'm sorry.", -- [6]
-		"/raid Your healers can't handle this and I can't carry this on an alt.", -- [7]
-		"/cw Daliacc-Ragnaros |cffffff00|Hachievement:11999:Player-57-05DF4D8D:1:4:25:18:4294967295:4294967295:4294967295:4294967295|h[Mythic: Varimathras]|h|r", -- [8]
-		"/cw Galactüs |cffffff00|Hachievement:11999:Player-57-05DF4D8D:1:4:25:18:4294967295:4294967295:4294967295:4294967295|h[Mythic: Varimathras]|h|r", -- [9]
-		"/cw Fellazer-Elune |cffffff00|Hachievement:11999:Player-57-05DF4D8D:1:4:25:18:4294967295:4294967295:4294967295:4294967295|h[Mythic: Varimathras]|h|r", -- [10]
-		"/cw Danarg-Azralon |cffffff00|Hachievement:11999:Player-57-05DF4D8D:1:4:25:18:4294967295:4294967295:4294967295:4294967295|h[Mythic: Varimathras]|h|r", -- [11]
-		"/wa", -- [12]
-		"/raid 2/2/9?", -- [13]
-		"/raid We don't need 4 healers with 9 DPS.", -- [14]
-		"/raid 3", -- [15]
-		"/raid 2", -- [16]
-		"/s I got it.", -- [17]
-		"/raid Lolk", -- [18]
-		"/raid That'd be easier if the tanks knew where to go.", -- [19]
-		"/raid And didn't run around like headless chicken.", -- [20]
+		"/raid You want Sword or Blade?", -- [1]
+		"/raid Rofl", -- [2]
+		"/raid The babiest of tanks?", -- [3]
+		"/raid Give me assist.", -- [4]
+		"/raid I'll take boss first.", -- [5]
+		"/cw Keezyo-Illidan Heya buddy.", -- [6]
+		"/cw Keezyo-Illidan Just doing some travel research right now.", -- [7]
+		"/cw Keezyo-Illidan Yeah I don't know who did that.", -- [8]
+		"/cw Keezyo-Illidan Lol", -- [9]
+		"/cw Keezyo-Illidan Figures.", -- [10]
+		"/cw Keezyo-Illidan Probably Priest.", -- [11]
+		"/cw Keezyo-Illidan Haven't looked into it much.", -- [12]
+		"/cw Keezyo-Illidan You see the Discord note and all that?", -- [13]
+		"/cw Keezyo-Illidan Totally.", -- [14]
+		"/cw Keezyo-Illidan Yeah not really a secret.", -- [15]
+		"/cw Keezyo-Illidan What are you going to play?", -- [16]
+		"/cw Keezyo-Illidan Yeah not going to be in a bad sppot.", -- [17]
+		"/cw Keezyo-Illidan I feel like the classic classes are always solid.", -- [18]
+		"/cw Keezyo-Illidan With AoE interrupt going away I might too.", -- [19]
+		"/cw Keezyo-Illidan If they even know it themselves, lol", -- [20]
 	},
 	["BodyGuard"] = {
 		["Active"] = false,

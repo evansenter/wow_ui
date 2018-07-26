@@ -71,6 +71,7 @@ VER 3 0100000000000018 "Vivify" "INV_Misc_QuestionMark"
 /use [@mouseover,help,nodead][]Vivify
 END
 VER 3 010000000000001E "WDP" "988194"
-#showtooltip
+#showtooltip Whirling Dragon Punch
+/use 13
 /use [nochanneling]Whirling Dragon Punch
 END

@@ -285,7 +285,7 @@ MobInfo2: enabled
 MultiTips: enabled
 Outfitter: enabled
 MacroToolkitIcons: enabled
-Bagnon: enabled
+Bagnon: disabled
 Titan: enabled
 SR13-TimeRecord: enabled
 Atlas: disabled

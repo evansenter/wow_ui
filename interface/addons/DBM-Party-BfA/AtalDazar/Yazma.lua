@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(2030, "DBM-Party-BfA", 1, 968)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 17282 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 17522 $"):sub(12, -3))
 mod:SetCreatureID(122968)
 mod:SetEncounterID(2087)
 mod:SetZone()
@@ -53,7 +53,7 @@ function mod:SPELL_CAST_START(args)
 		timerSoulrendCD:Start()
 	elseif spellId == 250096 then
 		timerWrackingPainCD:Start()
-		if self:CheckInterruptFilter(args.sourceGUID) then
+		if self:CheckInterruptFilter(args.sourceGUID, false, true) then
 			specWarnWrackingPain:Show(args.sourceName)
 			specWarnWrackingPain:Play("kickcast")
 		end
@@ -102,7 +102,7 @@ function mod:UNIT_DIED(args)
 	end
 end
 
-function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, _, _, spellId)
+function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, spellId)
 	if spellId == 257939 then
 	end
 end

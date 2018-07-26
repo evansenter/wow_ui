@@ -1,17 +1,3 @@
---[[-------------------------------------------------------------------------------------------------------------
-Master Localization File (English)
-
-Instructions for Translators:
-1. Copy this entire file into a new file in the same folder, named with your locale, e.g. deDE.lua for German.
-2. At the top, replace "enUS" in the first code line with your locale, and change the next parameter from true to false.
-3. Change all the English strings in your file as appropriate.
-
-Note that a couple of the "strings" are functions that are provided variables.  Feel free to modify these
-functions as necessary to output an appropriately worded statement in your language (but don't change the parameters).  
-If you need assistance with the syntax of any used methods like string.format, please contact Team Robot and we will gladly assist you.
----------------------------------------------------------------------------------------------------------------]]
-
--- replace enUS with your locale
 local L = LibStub("AceLocale-3.0"):NewLocale("AskMrRobot", "ptBR", false)
 
 if L then
@@ -148,7 +134,6 @@ end
 L.TabExportText = "Exportar"
 L.TabGearText = "Equipamento"
 L.TabLogText = "Logs"
-L.TabTeamText = "Otimizador de Equipe"
 L.TabOptionsText = "Opções"
 
 L.VersionChatTitle = "Versão do Addon AMR:"
@@ -161,15 +146,13 @@ Export Tab
 ------------------------------------------------------------------------]]
 L.ExportTitle = "Instruções de Exportação"
 L.ExportHelp1 = "1. Copie o texto abaixo pressionando Ctrl+C (ou Cmd+C em um Mac)"
-L.ExportHelp2 = "2. Vá para https://www.askmrrobot.com/wow/gear e clique no seletor de personagem"
+L.ExportHelp2 = "2. Vá para https://www.askmrrobot.com e clique no seletor de personagem"
 L.ExportHelp3 = "3. Cole o texto copiado na caixa de texto da seção ADDON"
 
 L.ExportSplashTitle = "Começando"
 L.ExportSplashSubtitle = "Esta é a primeira vez que você usa a nova versão do addon. Faça o seguinte para inicializar o banco de dados dos seus itens:"
 L.ExportSplash1 = "1. Ative cada um dos seus specs uma vez e equipe seu equipamento atual para cada spec"
-L.ExportSplash2 = "2. Equipe sua arma de artefato para cada spec e abra a tela de artefato"
-L.ExportSplash3 = "3. Abra seu banco e deixe-o aberto por pelo menos dois segundos"
-L.ExportSplash4 = "4. Se você possuir equipamento no cofre etéreo, abra-o e deixe-o aberto por pelo menos dois segundos"
+L.ExportSplash2 = "2. Abra seu banco e deixe-o aberto por pelo menos dois segundos"
 L.ExportSplashClose = "Continuar"
 
 
@@ -288,104 +271,6 @@ L.LogInstructions =
 
 **O addon AMR coleta dados extra no inicio de cada encontro para todos os jogadores na sua raid que estejam com o addon AMR. Não é necessário que outros jogadores liguem seus logs! Eles só precisam ter o addon instalado e ligado. Esses dados são salvos no disco apenas se você sair do WoW ou recarregar sua UI antes de fazer upload.
 ]]
-
-
---[[----------------------------------------------------------------------
-Team Optimizer Tab
-------------------------------------------------------------------------]]
-L.TeamTabLeaderText = "Rankeador de Saque"
-L.TeamTabMemberText = "Membro do Grupo"
-
-L.TeamSplashHeader = "Como você costuma usar o Otimizador de Grupo?"
-L.TeamSplashLeaderLabel = "Eu sou a pessoa que usa o askmrrobot.com para classificar o saque para nosso grupo"
-L.TeamSplashMemberLabel = "Outra pessoa usa o Otimizador de Grupo pra mim"
-
-L.TeamMemberText = "Pegue a pipoca e relaxe, tudo está sendo feito pelos líderes do seu grupo."
-L.TeamMemberShowLootLabel = "Saque em progresso!"
-L.TeamMemberShowLoot = "Mostrar Janela de Saque"
-
-L.TeamButtonVersionText = "Verificar o Addon"
-L.TeamButtonExportRosterText = "Exportar Lista"
-L.TeamButtonExportLootText = "Exportar Saque"
-L.TeamButtonExportClose = "Fechar"
-L.TeamButtonImportRankingsText = "Importar Rankings"
-L.TeamButtonStartLootText = "Iniciar Saque"
-L.TeamButtonResumeLootText = "Resumir Saque"
-
-L.TeamExportVersionLabel = "O Otimizador de Grupo é mais preciso e fácil de usar se todos no seu grupo possuirem o addon do AskMrRobot."
-L.TeamExportRosterLabel = "Faça isso uma vez no início da sua raid para inicializar o Otimizador de Grupo na internet. Se alguém entrar ou sair do seu grupo durante uma raid, aperte novamente 'Import without Reload' na internet para fazer uma atualização rápida apenas desses jogadores."
-L.TeamExportLootLabel = "Exporta todos os espólios do último chefe saqueado e cria um ranking de todos de uma só vez na internet. Os Rankings automaticamente contam como saque vencido nos chefes anteriores ou nos saques extra!"
-L.TeamExportLootLabel2 = "Requer Mestre de Saque"
-L.TeamImportRankingsLabel = "Importar dados de ranking de askmrrobot.com, assim você pode facilmente ver e distribuir o saque no jogo."
-L.TeamStartLootLabel = function(numItems)
-	return numItems .. " itens foram importados."
-end
-
-L.TeamHistoryTitle = "Histórico de Saque"
-L.TeamHistoryNoGroup = "Você não está em um grupo ou raid."
-L.TeamHistoryEmpty = "Nenhum saque foi distribuído ainda."
-
-L.TeamVersionTitle = "Verificação de Versão"
-L.TeamVersionNoGroup = "Você não está em um grupo ou raid.."
-L.TeamVersionGood = "Todos no seu grupo possuem o addon!"
-L.TeamVersionMissing = "NÃO INSTALADO"
-L.TeamVersionOld = "DESATUALIZADO"
-
-L.TeamExportRosterLoading = "Coletando dados dos jogadores, aguarde..."
-
-L.TeamAlertNoGroup = "Você não está em um grupo!"
-L.TeamAlertNoLoot = "Nada foi distribuído via mestre de saque recentemente em seu grupo ou raid!"
-
-L.TeamExportHelp = "Aperte Ctrl+C (ou Cmd+C em um Mac) para copiar o texto abaixo."
-L.TeamExportRosterText = "Em seguida vá para o Team Optimizer no website e cole na caixa de importação das listagens."
-L.TeamExportLootText = "Em seguida vá para o Team Optimizer no website e cole na caixa de importação de saque."
--- note to translators: leave "Team Optimizer" in english in the above two texts because our website is not localized yet
-
-L.TeamImportRankingsHeader = "Aperte Ctrl+V (Cmd+V em um Mac) para colar os dados do website na caixa abaixo."
-
-L.TeamLootOptionNeed = "Necessidade"
-L.TeamLootOptionOff = "Off Spec"
-L.TeamLootOptionGreed = "Ganância"
-L.TeamLootOptionPass = "Passar"
-L.TeamLootOptionDisenchant = "Desencantar"
-
-
---[[----------------------------------------------------------------------
-Loot Window
-------------------------------------------------------------------------]]
-L.LootTitle = "Saque!"
-L.LootEmpty = "Não há saque para distribuir agora!"
-L.LootHelpItems = "Para cada saque..."
-L.LootHelpRanks = "Escolha uma opção:"
-L.LootHelpMaster = "Então mestre de saque:"
-
-L.LootIneligible = "Você não é elegível para este saque."
-
-L.LootRankHeaderRank = "Rank"
-L.LootRankHeaderScore = "Porcentagem de Upgrade"
-L.LootRankHeaderScoreDisenchant = "Jogador"
-
--- note to translators: these column headers should be short, abbreviate if necessary, keep to 5 characters max
-L.LootRankHeaderNeed = "Need"
-L.LootRankHeaderOff = "Off"
-L.LootRankHeaderGreed = "Greed"
-L.LootRankHeaderPass = "Pass"
-L.LootRankHeaderRoll = "Roll"
-
-L.LootRankLabelOff = "spec secundária"
-L.LootRankLabelDisenchant = "desencantador"
-L.LootRankLabelMasterLooter = "mestre de saque"
-L.LootRankLabelNoAddon = "addon não está executando"
-
-L.LootMasterRollText = "Rolar"
-L.LootMasterDisenchantText = "Desencantar/Vender"
-
-L.LootMasterRollLabel = "/roll automático para todos"
-L.LootMasterDisenchantLabel = "marque isso se ninguém deseja este item"
-L.LootMasterGiveLoot = "Entregar Saque"
-L.LootMasterGiveDisenchant = "Entregar para Desencantar/Vender"
-
-L.LootMasterGiveFail = "Ambos o item ou o candidato ao saque não puderam ser encontrados :("
 
 
 --[[----------------------------------------------------------------------

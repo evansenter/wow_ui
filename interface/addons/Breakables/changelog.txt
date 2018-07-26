@@ -1,3 +1,9 @@
+v1.5:
+- Updated TOC for 8.0
+- Added BfA herbs and ore
+- Fixed separate items sometimes showing up as one breakable
+- Added Leystone Lockbox
+
 v1.4.9.1:
 - Added 7.3 herbs and ore
 

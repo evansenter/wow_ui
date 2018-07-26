@@ -1,10 +1,10 @@
-lightweight tag 15565eedcf5f17c619a666b31d16535a3c213d62 v1.5
+lightweight tag ae47baa0ce7b5e08b6e182ea619b26610a65d3c6 v1.6
 Author:	Ketho <sghs17@outlook.com>
-Date:	Wed Sep 20 05:02:30 2017 +0200
+Date:	Fri Jul 20 00:32:45 2018 +0200
 
-commit 15565eedcf5f17c619a666b31d16535a3c213d62
+commit ae47baa0ce7b5e08b6e182ea619b26610a65d3c6
 Author: Ketho <sghs17@outlook.com>
-Date:   Wed Sep 20 05:02:30 2017 +0200
+Date:   Fri Jul 20 00:32:45 2018 +0200
 
     Bump TOC
 

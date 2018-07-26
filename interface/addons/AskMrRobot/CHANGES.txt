@@ -1,7 +1,7 @@
-changeset:   122:f1da233629be
-tag:         v57
+changeset:   133:a0894ffebd15
+tag:         v62
 user:        yellowfive
-date:        Mon Feb 12 19:33:34 2018 -0800
-summary:     Added portuguese translation. Turned off team optimizer for now.
+date:        Wed Jul 25 12:17:24 2018 -0700
+summary:     Bug fixes and tweaks for 8.0.
 
 

@@ -1,0 +1,113 @@
+commit 55475fd35bfb2aceaa94ba8789972217aa2092e4
+Author: Andrew Scott <ascott18@gmail.com>
+Date:   Sun Jul 22 13:48:12 2018 -0700
+
+    TOC bump
+
+commit fac885600193b9e790d3118c7d27373941e3974d
+Author: Andrew Scott <ascott18@gmail.com>
+Date:   Tue Jul 26 23:09:06 2016 +0000
+
+    toc bump to 70000
+    
+    git-svn-id: https://repos.curseforge.com/wow/blizzbuffsfacade/trunk@22 68f43199-ba81-496d-a895-78ea0906a1c5
+
+commit 4889597c4b323497caab3f8cb9edcfed706171f8
+Author: Andrew Scott <ascott18@gmail.com>
+Date:   Mon Jan 12 06:33:02 2015 +0000
+
+    Fixed an issue with stack text appearing below the texture's leve.
+    
+    git-svn-id: https://repos.curseforge.com/wow/blizzbuffsfacade/trunk@20 68f43199-ba81-496d-a895-78ea0906a1c5
+
+commit ad9b9b5c73b8df29dbd3f77e654e9d7b1261a528
+Author: Andrew Scott <ascott18@gmail.com>
+Date:   Tue Oct 14 04:25:17 2014 +0000
+
+    Version bumps for Warlords of Draenor
+    
+    git-svn-id: https://repos.curseforge.com/wow/blizzbuffsfacade/trunk@18 68f43199-ba81-496d-a895-78ea0906a1c5
+
+commit 11301b218500afcb0995fb5e3baf5fdfd382c2e2
+Author: Andrew Scott <ascott18@gmail.com>
+Date:   Sat May 25 18:40:38 2013 +0000
+
+    TOC Bump
+    
+    git-svn-id: https://repos.curseforge.com/wow/blizzbuffsfacade/trunk@17 68f43199-ba81-496d-a895-78ea0906a1c5
+
+commit 7b1f5ca12e34ad1027ca50828dd8e3fac32ccafa
+Author: Andrew Scott <ascott18@gmail.com>
+Date:   Mon Sep 3 22:06:35 2012 +0000
+
+    Version bump
+    
+    git-svn-id: https://repos.curseforge.com/wow/blizzbuffsfacade/trunk@15 68f43199-ba81-496d-a895-78ea0906a1c5
+
+commit a051baeeb7f3660ce3f49af56ed56f8d7c3ae338
+Author: Andrew Scott <ascott18@gmail.com>
+Date:   Wed Dec 28 03:50:07 2011 +0000
+
+    Made Masque a required dep
+    
+    git-svn-id: https://repos.curseforge.com/wow/blizzbuffsfacade/trunk@14 68f43199-ba81-496d-a895-78ea0906a1c5
+
+commit f886c9c1c5abca12b07e1903afade33ac6a0a488
+Author: Andrew Scott <ascott18@gmail.com>
+Date:   Wed Nov 30 01:45:05 2011 +0000
+
+    Renamed to "Masque Skinner: Blizz Buffs"
+    TOC bump
+    Fix: Temp enchant border should now be purple again instead of white.
+    
+    git-svn-id: https://repos.curseforge.com/wow/blizzbuffsfacade/trunk@12 68f43199-ba81-496d-a895-78ea0906a1c5
+
+commit f2cec5e6f9cef95f024bdc6bb19725df388286bb
+Author: Andrew Scott <ascott18@gmail.com>
+Date:   Wed Aug 31 10:25:18 2011 +0000
+
+    Slight rename
+    
+    git-svn-id: https://repos.curseforge.com/wow/blizzbuffsfacade/trunk@10 68f43199-ba81-496d-a895-78ea0906a1c5
+
+commit 34dcb4d3bd7fa813f80f04c333e2f8d63c6ce3e1
+Author: Andrew Scott <ascott18@gmail.com>
+Date:   Mon Aug 15 21:48:44 2011 +0000
+
+    Fixed the fix
+    
+    git-svn-id: https://repos.curseforge.com/wow/blizzbuffsfacade/trunk@8 68f43199-ba81-496d-a895-78ea0906a1c5
+
+commit 35ab4f96d5f3631562d0157aa43a4fe334e60b59
+Author: Andrew Scott <ascott18@gmail.com>
+Date:   Mon Aug 15 21:36:47 2011 +0000
+
+    Fix for Masque r366
+    
+    git-svn-id: https://repos.curseforge.com/wow/blizzbuffsfacade/trunk@6 68f43199-ba81-496d-a895-78ea0906a1c5
+
+commit 6ee001641ddce9714c0276cb9b10f8bdfb32fcd3
+Author: Andrew Scott <ascott18@gmail.com>
+Date:   Tue Jun 14 21:27:44 2011 +0000
+
+    Settings should now properly save when using ButtonFacade.
+    
+    git-svn-id: https://repos.curseforge.com/wow/blizzbuffsfacade/trunk@4 68f43199-ba81-496d-a895-78ea0906a1c5
+
+commit 1ee6c448b0456cda3b103d7488393ff0e855edba
+Author: Andrew Scott <ascott18@gmail.com>
+Date:   Sun May 29 03:27:50 2011 +0000
+
+    Update for Masque
+    Cleaned up the code
+    
+    git-svn-id: https://repos.curseforge.com/wow/blizzbuffsfacade/trunk@2 68f43199-ba81-496d-a895-78ea0906a1c5
+
+commit fd1c8433cf2c9df1f796a8e5a209c138865c31b0
+Author: root <root@68f43199-ba81-496d-a895-78ea0906a1c5>
+Date:   Sun May 29 03:19:27 2011 +0000
+
+    "blizzbuffsfacade/mainline: Initial Import"
+    
+    git-svn-id: https://repos.curseforge.com/wow/blizzbuffsfacade/trunk@1 68f43199-ba81-496d-a895-78ea0906a1c5
+

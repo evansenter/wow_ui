@@ -1,14 +1,14 @@
 local L = LibStub("AceLocale-3.0"):NewLocale("Breakables", "ruRU")
 if not L then return end
 
---Translation missing 
+--[[Translation missing --]]
 L["Are you sure you want to clear the ignore list?"] = "Are you sure you want to clear the ignore list?"
---Translation missing 
+--[[Translation missing --]]
 L["Are you sure you want to remove this item from the ignore list?"] = "Are you sure you want to remove this item from the ignore list?"
 L["Breakables"] = "Breakables"
 L["Button grow direction"] = "Направление роста кнопок"
 L["Button scale"] = "Масштаб кнопки"
---Translation missing 
+--[[Translation missing --]]
 L["Clear ignore list"] = "Clear ignore list"
 L["Click to open Breakables options."] = "Клик - открывает настройки Breakables."
 L["Down"] = "Вниз"
@@ -20,9 +20,9 @@ L["Hide if no breakables"] = "Скрыть если нет предметов"
 L["Hide Tabards"] = "Не показывать гербовую накидку"
 L["Hold shift and left-click to drag the Breakables bar around."] = "Для перемещения панели, удерживайте shift+ЛКМ."
 L["How many breakable buttons to display next to the profession button at maximum"] = "Максимальное количество кнопок, которые будут отображаться рядом с профессией."
---Translation missing 
+--[[Translation missing --]]
 L["Ignore list"] = "Ignore list"
---Translation missing 
+--[[Translation missing --]]
 L["Items that have been right-clicked to exclude from the breakable list. Un-check the box to remove the item from the ignore list."] = "Items that have been right-clicked to exclude from the breakable list. Un-check the box to remove the item from the ignore list."
 L["Left"] = "Влево"
 L["Max number to display"] = "Макс. количество"
@@ -44,6 +44,6 @@ L["Whether or not to hide tabards from the disenchantable items list."] = "По�
 L["Whether or not to hide the action bar if no breakables are present in your bags"] = "Скрывать панель если в вашей сумке отсутствуют предметы для распыления/просеивания/измельчения."
 L["Whether or not to hide the breakables bar when you enter combat and show it again when leaving combat."] = "Скрывать панель при начале боя и отображать при выходе из него."
 L["You can click on this button to break this item without having to click on the profession button first."] = "Вы можете нажать на эту кнопку, чтобы распылить/просеять/измельчить этот предмет без нажатия на кнопку профессии."
---Translation missing 
+--[[Translation missing --]]
 L["You can right-click on this button to ignore this item. Items can be unignored from the options screen."] = "You can right-click on this button to ignore this item. Items can be unignored from the options screen."
 

@@ -37,6 +37,27 @@ local INSTANCE_SAVED, TRANSFER_ABORT_TOO_MANY_INSTANCES, NO_RAID_INSTANCES_SAVED
 
 local ALREADY_LOOTED = ERR_LOOT_GONE:gsub("%(.*%)","")
 
+local UnitAura = UnitAura
+-- Unit Aura functions that return info about the first Aura matching the spellName or spellID given on the unit.
+local SI_GetUnitAura = function(unit, spell, filter)
+    for i = 1, 40 do
+        local name, _, _, _, _, _, _, _, _, spellId = UnitAura(unit, i, filter)
+        if not name then return end
+        if spell == spellId or spell == name then
+            return UnitAura(unit, i, filter)
+        end
+    end
+end
+
+local SI_GetUnitBuff = function(unit, spell, filter)
+    return SI_GetUnitAura(unit, spell, filter)
+end
+
+local SI_GetUnitDebuff = function(unit, spell, filter)
+    filter = filter and filter.."|HARMFUL" or "HARMFUL"
+    return SI_GetUnitAura(unit, spell, filter)
+end
+
 vars.Indicators = {
   ICON_STAR = ICON_LIST[1] .. "16:16:0:0|t",
   ICON_CIRCLE = ICON_LIST[2] .. "16:16:0:0|t",
@@ -264,32 +285,32 @@ addon.WorldBosses = {
 
 local _specialQuests = {
   -- Isle of Thunder
-  [32610] = { zid=928, lid=94221 }, -- Shan'ze Ritual Stone looted
-  [32611] = { zid=928, lid1=95350 },-- Incantation of X looted
-  [32626] = { zid=928, lid=94222 }, -- Key to the Palace of Lei Shen looted
-  [32609] = { zid=928, aid=8104, aline="Left5"  }, -- Trove of the Thunder King (outdoor chest)
+  [32610] = { zid=504, lid=94221 }, -- Shan'ze Ritual Stone looted
+  [32611] = { zid=504, lid1=95350 },-- Incantation of X looted
+  [32626] = { zid=504, lid=94222 }, -- Key to the Palace of Lei Shen looted
+  [32609] = { zid=504, aid=8104, aline="Left5"  }, -- Trove of the Thunder King (outdoor chest)
   -- Timeless Isle
-  [32962] = { zid=951, aid=8743, daily=true },  -- Zarhym
-  [32961] = { zid=951, daily=true },  -- Scary Ghosts and Nice Sprites
-  [32956] = { zid=951, aid=8727, acid=2, aline="Right7" }, -- Blackguard's Jetsam
-  [32957] = { zid=951, aid=8727, acid=1, aline="Left7" },  -- Sunken Treasure
-  [32970] = { zid=951, aid=8727, acid=3, aline="Left8" },  -- Gleaming Treasure Satchel
-  [32968] = { zid=951, aid=8726, acid=2, aline="Right7" }, -- Rope-Bound Treasure Chest
-  [32969] = { zid=951, aid=8726, acid=1, aline="Left7" },  -- Gleaming Treasure Chest
-  [32971] = { zid=951, aid=8726, acid=3, aline="Left8" },  -- Mist-Covered Treasure Chest
+  [32962] = { zid=554, aid=8743, daily=true },  -- Zarhym
+  [32961] = { zid=554, daily=true },  -- Scary Ghosts and Nice Sprites
+  [32956] = { zid=554, aid=8727, acid=2, aline="Right7" }, -- Blackguard's Jetsam
+  [32957] = { zid=554, aid=8727, acid=1, aline="Left7" },  -- Sunken Treasure
+  [32970] = { zid=554, aid=8727, acid=3, aline="Left8" },  -- Gleaming Treasure Satchel
+  [32968] = { zid=554, aid=8726, acid=2, aline="Right7" }, -- Rope-Bound Treasure Chest
+  [32969] = { zid=554, aid=8726, acid=1, aline="Left7" },  -- Gleaming Treasure Chest
+  [32971] = { zid=554, aid=8726, acid=3, aline="Left8" },  -- Mist-Covered Treasure Chest
   -- Garrison
   [37638] = { zone=GARRISON_LOCATION_TOOLTIP, aid=9162 }, -- Bronze Defender
   [37639] = { zone=GARRISON_LOCATION_TOOLTIP, aid=9164 }, -- Silver Defender
   [37640] = { zone=GARRISON_LOCATION_TOOLTIP, aid=9165 }, -- Golden Defender
   [38482] = { zone=GARRISON_LOCATION_TOOLTIP, aid=9826 }, -- Platinum Defender
   -- Tanaan Jungle
-  [39287] = { zid=945, daily=true }, -- Deathtalon
-  [39288] = { zid=945, daily=true }, -- Terrorfist
-  [39289] = { zid=945, daily=true }, -- Doomroller
-  [39290] = { zid=945, daily=true }, -- Vengeance
+  [39287] = { zid=534, daily=true }, -- Deathtalon
+  [39288] = { zid=534, daily=true }, -- Terrorfist
+  [39289] = { zid=534, daily=true }, -- Doomroller
+  [39290] = { zid=534, daily=true }, -- Vengeance
   -- Order Hall
-  [42481] = { zid=1050, daily=true }, -- Warlock: Ritual of Doom
-  [44707] = { zid=1052, daily=true, sid=228651 }, -- Demon Hunter: Twisting Nether
+  [42481] = { zid=717, daily=true }, -- Warlock: Ritual of Doom
+  [44707] = { zid=719, daily=true, sid=228651 }, -- Demon Hunter: Twisting Nether
 }
 
 function addon:specialQuests()
@@ -332,7 +353,7 @@ function addon:specialQuests()
     end
 
     if not qinfo.zone and qinfo.zid then
-      qinfo.zone = GetMapNameByID(qinfo.zid)
+      qinfo.zone = C_Map.GetMapInfo(qinfo.zid).name
     end
   end
 
@@ -384,6 +405,11 @@ local QuestExceptions = {
   -- Pet Battle Dungeons
   [46292] = "Weekly", -- Pet Battle Challenge Dungeon Deadmines
   [45539] = "Weekly", -- Pet Battle Challenge Dungeon Wailing Caverns
+
+  -- Argus
+  [48910] = "Weekly", -- Supplying Krokuun
+  [48911] = "Weekly", -- Void Inoculation
+  [48912] = "Weekly", -- Supplying the Antoran Campaign
 }
 
 local WoDSealQuests = {
@@ -471,7 +497,7 @@ function addon:timedebug()
   chatMsg("time()=%s GetTime()=%s", time(), GetTime())
   chatMsg("Local time: %s local", date("%A %c"))
   chatMsg("GetGameTime: %s:%s server",GetGameTime())
-  chatMsg("CalendarGetDate: %s %s/%s/%s server",CalendarGetDate())
+  chatMsg("C_Calendar.GetDate: %s %s/%s/%s server",C_Calendar.GetDate())
   chatMsg("GetQuestResetTime: %s",SecondsToTime(GetQuestResetTime()))
   chatMsg(date("Daily reset: %a %c local (based on GetQuestResetTime)",time()+GetQuestResetTime()))
   chatMsg("Local to server offset: %d hours",SavedInstances:GetServerOffset())
@@ -890,9 +916,9 @@ end
 -- convert local time -> server time: add this value
 -- convert server time -> local time: subtract this value
 function addon:GetServerOffset()
-  local serverDay = CalendarGetDate() - 1 -- 1-based starts on Sun
+  local serverDate = C_Calendar.GetDate()
+  local serverDay, serverWeekday, serverMonth, serverMinute, serverHour, serverYear = serverDate.monthDay, serverDate.weekday, serverDate.month, serverDate.minute, serverDate.hour, serverDate.year
   local localDay = tonumber(date("%w")) -- 0-based starts on Sun
-  local serverHour, serverMinute = GetGameTime()
   local localHour, localMinute = tonumber(date("%H")), tonumber(date("%M"))
   if serverDay == (localDay + 1)%7 then -- server is a day ahead
     serverHour = serverHour + 24
@@ -990,11 +1016,11 @@ do
   function addon:GetNextDarkmoonResetTime()
     -- Darkmoon faire runs from first Sunday of each month to following Saturday
     -- this function returns an approximate time after the end of the current month's faire
-    local weekday, month, day, year = CalendarGetDate() -- date in server timezone (Sun==1)
-    local firstweekday = select(4,CalendarGetAbsMonth(month, year)) -- (Sun == 1)
+    local monthInfo = C_Calendar.GetMonthInfo();
+    local firstweekday = monthInfo.firstWeekday
     local firstsunday = ((firstweekday == 1) and 1) or (9 - firstweekday)
-    dmf_end.year = year
-    dmf_end.month = month
+    dmf_end.year = monthInfo.year
+    dmf_end.month = monthInfo.month
     dmf_end.day = firstsunday + 7 -- 1 days of "slop"
     -- Unfortunately, DMF boundary ignores daylight savings, and the time of day varies across regions
     -- Report a reset well past end to make sure we don't drop quests early
@@ -1502,6 +1528,7 @@ function addon:UpdateInstanceData()
   local renames = 0
   local merges = 0
   local conflicts = 0
+  local purges = 0
   for instname, inst in pairs(vars.db.Instances) do
     local truename
     if inst.WorldBoss then
@@ -1544,6 +1571,21 @@ function addon:UpdateInstanceData()
         renames = renames + 1
       end
     end
+
+	-- Eliminate duplicate LFR entries from the database (only affects those that were saved previously), to account for Blizzard's lockout changes in 7.3 (see https://github.com/SavedInstances/SavedInstances/issues/89)
+	for key, info in pairs(inst) do -- Check for potential LFR lockout entries
+
+	if key:find(" - ") then -- is a character key
+			for difficulty, entry in pairs(info) do -- Check difficulty for LFR
+				if difficulty == 7 or difficulty == 17 then -- Difficulties 7 and 17 are for (legacy) LFR modes -> Kill them... with fire!
+					debug("Purge LFR lockout entry for " .. truename .. ":" .. instname .. ":" .. key)
+					purges = purges + 1
+					vars.db.Instances[instname][key][difficulty] = nil
+				end
+			end
+		  end
+	end
+
   end
   -- addon.lfdid_to_name = lfdid_to_name
   -- addon.wbid_to_name = wbid_to_name
@@ -1551,8 +1593,7 @@ function addon:UpdateInstanceData()
   vars.config:BuildOptions() -- refresh config table
 
   starttime = debugprofilestop()-starttime
-  debug("UpdateInstanceData(): completed in %.3f ms : %d added, %d renames, %d merges, %d conflicts.",
-    starttime, added, renames, merges, conflicts)
+  debug("UpdateInstanceData(): completed in %.3f ms : %d added, %d renames, %d merges, %d conflicts, %d purges.", starttime, added, renames, merges, conflicts, purges)
   if addon.RefreshPending then
     addon.RefreshPending = nil
     core:Refresh()
@@ -1643,7 +1684,7 @@ function addon:updateSpellTip(spellid)
   vars.db.spelltip = vars.db.spelltip or {}
   vars.db.spelltip[spellid] = vars.db.spelltip[spellid] or {}
   for i=1,20 do
-    local id = select(11,UnitDebuff("player",i))
+    local id = select(10, SI_GetUnitDebuff("player",i))
     if id == spellid then slot = i end
   end
   if slot then
@@ -1731,12 +1772,12 @@ function addon:UpdateToonData()
     RequestTimePlayed()
   end
   t.LFG1 = GetTimeToTime(GetLFGRandomCooldownExpiration()) or t.LFG1
-  t.LFG2 = GetTimeToTime(select(7,UnitDebuff("player",GetSpellInfo(71041)))) or t.LFG2 -- GetLFGDeserterExpiration()
+  t.LFG2 = GetTimeToTime(select(6, SI_GetUnitDebuff("player",GetSpellInfo(71041)))) or t.LFG2 -- GetLFGDeserterExpiration()
   if t.LFG2 then addon:updateSpellTip(71041) end
   addon.pvpdesertids = addon.pvpdesertids or { 26013,   -- BG queue
     194958 } -- Ashran
   for _,id in ipairs(addon.pvpdesertids) do
-    t.pvpdesert = GetTimeToTime(select(7,UnitDebuff("player",GetSpellInfo(id)))) or t.pvpdesert
+    t.pvpdesert = GetTimeToTime(select(6, SI_GetUnitDebuff("player",GetSpellInfo(id)))) or t.pvpdesert
     if t.pvpdesert then addon:updateSpellTip(id) end
     end
     for toon, ti in pairs(vars.db.Toons) do
@@ -1934,15 +1975,7 @@ function addon:QuestIsDarkmoonMonthly()
 end
 
 function addon:GetCurrentMapAreaID()
-  local oldmap = GetCurrentMapAreaID()
-  local oldlvl = GetCurrentMapDungeonLevel()
-  SetMapToCurrentZone()
-  local map = GetCurrentMapAreaID()
-  SetMapByID(oldmap)
-  if oldlvl and oldlvl > 0 then
-    SetDungeonMapLevel(oldlvl)
-  end
-  return map
+  return C_Map.GetBestMapForUnit("player")
 end
 
 local function SI_GetQuestReward()
@@ -2004,7 +2037,7 @@ local function SI_GetQuestReward()
   local qinfo =  { ["Title"] = title, ["Link"] = link,
     ["isDaily"] = isDaily,
     ["Expires"] = expires,
-    ["Zone"] = GetMapNameByID(mapid) }
+    ["Zone"] = C_Map.GetMapInfo(mapid) }
   local scope = t
   if isAccount then
     scope = db
@@ -2108,25 +2141,31 @@ local function ShowQuestTooltip(cell, arg, ...)
       SecondsToTime(reset - time()))
   end
   local ql = {}
+  local zonename
   for id,qi in pairs(t.Quests) do
     if (not isDaily) == (not qi.isDaily) then
-      table.insert(ql,(qi.Zone or "").." # "..id)
+      zonename = qi.Zone and qi.Zone.name or ""
+      table.insert(ql,zonename.." # "..id)
     end
   end
   table.sort(ql)
   for _,e in ipairs(ql) do
     local id = tonumber(e:match("# (%d+)"))
-    local qi = id and t.Quests[id]
+    local qi = t.Quests[id]
     local line = indicatortip:AddLine()
     local link = qi.Link
     if not link then -- sometimes missing the actual link due to races, fake it for display to prevent confusion
       if qi.Title:find("("..LOOT..")") then
         link = qi.Title
-    else
-      link = "\124cffffff00["..(qi.Title or "???").."]\124r"
+      else
+        link = "\124cffffff00["..(qi.Title or "???").."]\124r"
+      end
     end
+    -- Exception: Some quests should not show zone name, such as Blingtron
+    if (id == 31752 or id == 34774 or id == 40753) then
+      zonename = ""
     end
-    indicatortip:SetCell(line,1,(qi.Zone or ""),"LEFT")
+    indicatortip:SetCell(line,1,zonename,"LEFT")
     indicatortip:SetCell(line,2,link,"RIGHT")
   end
   finishIndicator()
@@ -2626,12 +2665,14 @@ function core:toonInit()
 end
 
 function core:OnInitialize()
-  local versionString = GetAddOnMetadata(addonName, "Version")
-  if versionString == "v7.0.13" then
-    SavedInstances.version = "Dev"
-  else
-    SavedInstances.version = versionString
+  local versionString = GetAddOnMetadata(addonName, "version")
+  --[===[@debug@
+  if versionString == "8.0.3" then
+    versionString = "Dev"
   end
+  --@end-debug@]===]
+  SavedInstances.version = versionString
+
   SavedInstancesDB = SavedInstancesDB or vars.defaultDB
   -- begin backwards compatibility
   if not SavedInstancesDB.DBVersion or SavedInstancesDB.DBVersion < 10 then
@@ -2773,7 +2814,7 @@ function core:OnEnable()
     end
   end
   addon.resetDetect:SetScript("OnEvent", addon.HistoryEvent)
-  RegisterAddonMessagePrefix(addonName)
+  C_ChatInfo.RegisterAddonMessagePrefix(addonName)
   addon:HistoryEvent("PLAYER_ENTERING_WORLD") -- update after initial load
   addon:specialQuests()
   core:RefreshMythicKeyInfo()
@@ -2864,7 +2905,10 @@ function core:updateRealmMap()
   end
 end
 
-function core:RefreshMythicKeyInfo()
+function core:RefreshMythicKeyInfo(event)
+
+  if (event ~= "CHALLENGE_MODE_MAPS_UPDATE") then C_MythicPlus.RequestRewards() end -- This event is fired after the rewards data was requested, causing yet another refresh if not checked for
+
   local t = vars.db.Toons[thisToon]
   local _
   t.MythicKey = {}
@@ -2874,8 +2918,8 @@ function core:RefreshMythicKeyInfo()
       if itemID and itemID == 138019 then
         local keyLink = GetContainerItemLink(bagID, invID)
         local KeyInfo = {strsplit(':', keyLink)}
-        local mapID = tonumber(KeyInfo[2])
-        local mapLevel = tonumber(KeyInfo[3])
+        local mapID = tonumber(KeyInfo[3])
+        local mapLevel = tonumber(KeyInfo[4])
         local color
         if KeyInfo[4] == "0" then
           _,_,_,color = GetItemQualityColor(0)
@@ -2911,7 +2955,7 @@ function core:RefreshMythicKeyInfo()
           DEFAULT_CHAT_FRAME:AddMessage(tostring(KeyInfo[20]))
         end
         t.MythicKey.abbrev = KeystoneAbbrev[mapID]
-        t.MythicKey.name = C_ChallengeMode.GetMapInfo(mapID)
+        t.MythicKey.link = C_ChallengeMode.GetMapUIInfo(mapID)
         t.MythicKey.color = color
         t.MythicKey.level = mapLevel
         t.MythicKey.ResetTime = addon:GetNextWeeklyResetTime()
@@ -2920,11 +2964,11 @@ function core:RefreshMythicKeyInfo()
     end
   end
   local MythicMaps = { }
-  C_ChallengeMode.RequestMapInfo()
+  C_MythicPlus.RequestMapInfo()
   MythicMaps = C_ChallengeMode.GetMapTable()
   local bestlevel = 0
   for i = 1, #MythicMaps do
-    local _, _, level = C_ChallengeMode.GetMapPlayerStats(MythicMaps[i]);
+    local _, level = C_MythicPlus.GetWeeklyBestForMap(MythicMaps[i]);
     if level then
       if level > bestlevel then
         bestlevel = level
@@ -2939,13 +2983,13 @@ function core:RefreshMythicKeyInfo()
   t.MythicKeyBest = t.MythicKeyBest or { }
   t.MythicKeyBest.ResetTime = addon:GetNextWeeklyResetTime()
   t.MythicKeyBest.level = bestlevel
-  t.MythicKeyBest.WeeklyReward = C_ChallengeMode.IsWeeklyRewardAvailable()
+  t.MythicKeyBest.WeeklyReward = C_MythicPlus.IsWeeklyRewardAvailable()
 end
 
 function core:RefreshDailyWorldQuestInfo()
   local t = vars.db.Toons[thisToon]
   t.DailyWorldQuest = {}
-  local BountyQuest = GetQuestBountyInfoForMapID(1014)
+  local BountyQuest = GetQuestBountyInfoForMapID(627)
   for BountyIndex, BountyInfo in ipairs(BountyQuest) do
     local title = GetQuestLogTitle(GetQuestLogIndexByID(BountyInfo.questID))
     local timeleft = C_TaskQuest.GetQuestTimeLeftMinutes(BountyInfo.questID)
@@ -3349,7 +3393,7 @@ function core:QuestRefresh(recoverdaily, questcomplete, nextreset, weeklyreset)
               questlist[qid] = { ["Title"] = title, ["Link"] = link,
                 ["isDaily"] = (scope:find("Daily") and true) or nil,
                 ["Expires"] = list.expires,
-                ["Zone"] = GetMapNameByID(mapid) }
+                ["Zone"] = C_Map.GetMapInfo(mapid) }
             end
           end
         end
@@ -3388,22 +3432,24 @@ function core:Refresh(recoverdaily)
     for i = 1, numsaved do
       local name, id, expires, diff, locked, extended, mostsig, raid, players, diffname = GetSavedInstanceInfo(i)
       local truename, instance = addon:LookupInstance(nil, name, raid)
-      if expires and expires > 0 then
-        expires = expires + time()
-      else
-        expires = 0
+      if diff ~= 7 and diff ~= 17 then -- Skip (legacy) LFR entries for this character to prevent writing them to the saved variables (from which they'd be purged after the next reload anyway)
+        if expires and expires > 0 then
+          expires = expires + time()
+        else
+          expires = 0
+        end
+        instance.Raid = instance.Raid or raid
+        instance[thisToon] = instance[thisToon] or temp[truename] or { }
+        local info = instance[thisToon][diff] or {}
+        wipe(info)
+        info.ID = id
+        info.Expires = expires
+        info.Link = GetSavedInstanceChatLink(i)
+        info.Locked = locked
+        info.Extended = extended
+        instance[thisToon][diff] = info
       end
-      instance.Raid = instance.Raid or raid
-      instance[thisToon] = instance[thisToon] or temp[truename] or { }
-      local info = instance[thisToon][diff] or {}
-      wipe(info)
-      info.ID = id
-      info.Expires = expires
-      info.Link = GetSavedInstanceChatLink(i)
-      info.Locked = locked
-      info.Extended = extended
-      instance[thisToon][diff] = info
-    end
+	end
   end
 
   local weeklyreset = addon:GetNextWeeklyResetTime()
@@ -4190,7 +4236,7 @@ function core:ShowTooltip(anchorframe)
     local show = false
     for toon, t in cpairs(vars.db.Toons, true) do
       if t.MythicKey then
-        if t.MythicKey.name then
+        if t.MythicKey.link then
           show = true
           addColumns(columns, toon, tooltip)
         end
@@ -4204,17 +4250,17 @@ function core:ShowTooltip(anchorframe)
     end
     for toon, t in cpairs(vars.db.Toons, true) do
       if t.MythicKey then
-        if t.MythicKey.name then
+        if t.MythicKey.link then
           local col = columns[toon..1]
           if vars.db.Tooltip.AbbreviateKeystone then
             if t.MythicKey.abbrev then
               tooltip:SetCell(show, col, "|c"..t.MythicKey.color..t.MythicKey.abbrev.." ("..t.MythicKey.level..")"..FONTEND, "CENTER",maxcol)
             else
-              local kabbrev = KeystonetoAbbrev[t.MythicKey.name] or t.MythicKey.name
+              local kabbrev = KeystonetoAbbrev[t.MythicKey.link] or t.MythicKey.link
               tooltip:SetCell(show, col, "|c"..t.MythicKey.color..kabbrev.." ("..t.MythicKey.level..")"..FONTEND, "CENTER",maxcol)
             end
           else
-          tooltip:SetCell(show, col, "|c"..t.MythicKey.color..t.MythicKey.name.." ("..t.MythicKey.level..")"..FONTEND, "CENTER",maxcol)
+          tooltip:SetCell(show, col, "|c"..t.MythicKey.color..t.MythicKey.link.." ("..t.MythicKey.level..")"..FONTEND, "CENTER",maxcol)
           end
           tooltip:SetCellScript(show, col, "OnMouseDown", ChatLink, t.MythicKey.link)
         end
@@ -4711,6 +4757,16 @@ local trade_spells = {
   [213256] = "legionxmute", -- Transmute: Meat to Pet
   [213257] = "legionxmute", -- Transmute: Blood of Sargeras
   [247701] = "legionxmute", -- Transmute: Primal Sargerite
+  -- BfA
+  [251832] = "legionxmute", -- Transmute: Expulsom
+  [251314] = "legionxmute", -- Transmute: Cloth to Skins
+  [251822] = "legionxmute", -- Transmute: Fish to Gems
+  [251306] = "legionxmute", -- Transmute: Herbs to Cloth
+  [251305] = "legionxmute", -- Transmute: Herbs to Ore
+  [251808] = "legionxmute", -- Transmute: Meat to Pet
+  [251310] = "legionxmute", -- Transmute: Ore to Cloth
+  [251311] = "legionxmute", -- Transmute: Ore to Gems
+  [251309] = "legionxmute", -- Transmute: Ore to Herbs
 
   -- Enchanting
   [28027] = "sphere", 	-- Prismatic Sphere (2-day shared, 5.2.0 verified)

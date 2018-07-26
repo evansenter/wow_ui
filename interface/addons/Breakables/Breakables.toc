@@ -1,12 +1,12 @@
-## Interface: 70300
+## Interface: 80000
 ## Author: Parnic
 ## Name: Breakables
 ## Title: Breakables |cff7fff7f-Ace3-|r
 ## Notes: Tracks herbs/ore/items that can be broken into component pieces
-## Version: 1.4.9.1 (Revision: e904b2c12f235db740ba3c2dd9d0a334259749eb)
+## Version: 1.5 (Revision: 5ae7a5efb18578c6f8d35eae0c8af74f2a4091dd)
 ## SavedVariables: BreakablesDB
 ## OptionalDeps: Ace3, LibBabble-Inventory-3.0, Masque
-## X-Compatible-With: 70200
+## X-Compatible-With: 70300
 
 #@no-lib-strip@
 embeds.xml

@@ -1,27 +1,12 @@
-tag b2b5c488c708f7edfcfcecddc124696d570aba64 v7.0.13
+lightweight tag 15a07c465bbda88fe205e1bd395fd12fffe76527 8.0.3
 Author:	Benjamin Staneck <staneck@gmail.com>
-Date:	Thu Dec 21 15:17:46 2017 +0100
+Date:	Mon Jul 23 12:37:05 2018 +0200
 
-commit 8ebde998e3bb801156bd9b9da82fd59b5e350d73
-Author: Trid3nt <andytdgibson@gmail.com>
-Date:   Wed Dec 20 12:47:11 2017 +0000
-
-    Changed wording
-
-commit 0221cf8cce680052969d93a5a2c45ed83f2fda66
+commit 15a07c465bbda88fe205e1bd395fd12fffe76527
 Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Mon Dec 11 10:28:14 2017 +0100
+Date:   Mon Jul 23 12:37:05 2018 +0200
 
-    removed timewalking final boss drops quests as they are not resetting.
+    Switch to new mapID for bounty checking
     
-    Closes #28
-
-commit e3a2544226f95ededa85e1b42794ea9901198c42
-Author: Trid3nt <andytdgibson@gmail.com>
-Date:   Sun Dec 10 13:46:36 2017 +0000
-
-    Update SavedInstances.lua
-    
-    Changed Parent ID to 1642
-    Added commands to comments section at 142 and 145 to help make it easier in future to troubleshoot.
+    Fixes #127
 

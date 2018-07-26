@@ -22,6 +22,139 @@ GTFO.SpellID["269560"] = {
   sound = 3;
 };
 
+GTFO.SpellID["262250"] = {
+  --desc = "Blinded by the Light";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["263626"] = {
+  --desc = "Icy Glare (Lady Jaina Proudmoore)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["263874"] = {
+  --desc = "Blizzard (Lady Jaina Proudmoore)";
+  sound = 3;
+};
+
+GTFO.SpellID["264973"] = {
+  --desc = "Frost Barrage (Lady Jaina Proudmoore)";
+  sound = 3;
+};
+
+GTFO.SpellID["276899"] = {
+  --desc = "Tempest Strike (Lord Stormsong)";
+  sound = 3;
+};
+
+GTFO.SpellID["276914"] = {
+  --desc = "Wrath of Storms";
+  sound = 3;
+};
+
+GTFO.SpellID["215705"] = {
+  --desc = "Gasp of Unmaking (Azshj'thul the Drowned)";
+  sound = 3;
+  tankSound = 0;
+};
+
+GTFO.SpellID["270662"] = {
+  --desc = "Boulder (Demolisher)";
+  sound = 3;
+};
+
+GTFO.SpellID["271437"] = {
+  --desc = "Sapper Charge";
+  sound = 3;
+};
+
+GTFO.SpellID["276973"] = {
+  --desc = "Meteor (Champion Lockjaw)";
+  sound = 3;
+};
+
+GTFO.SpellID["276763"] = {
+  --desc = "Lava Storm (Yarsel'ghun)";
+  sound = 3;
+};
+
+GTFO.SpellID["244787"] = {
+  --desc = "Wide Swipe (Crazed Bone Snapper)";
+  sound = 3;
+};
+
+GTFO.SpellID["265481"] = {
+  --desc = "Big Knock Back";
+  sound = 3;
+};
+
+GTFO.SpellID["276262"] = {
+  --desc = "Lightning Storm (Lady Rash'iss)";
+  sound = 3;
+};
+
+GTFO.SpellID["264465"] = {
+  --desc = "Barrel Aged (Barman Bill)";
+  sound = 3;
+};
+
+GTFO.SpellID["264403"] = {
+  --desc = "Hoppy Finish (Barman Bill)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["266288"] = {
+  --desc = "Gnash (Vicious Vicejaw)";
+  sound = 3;
+};
+
+GTFO.SpellID["270460"] = {
+  --desc = "Stone Eruption (Goldenvein)";
+  sound = 3;
+};
+
+GTFO.SpellID["257351"] = {
+  --desc = "Thorned Burst (Rindlewoe)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["277044"] = {
+  --desc = "Tidal Force (Kvaldir Dreadbringer)";
+  sound = 3;
+};
+
+GTFO.SpellID["271713"] = {
+  --desc = "Elemental Slam (Unbound Azerite)";
+  sound = 3;
+  tankSound = 0;
+};
+
+GTFO.SpellID["266288"] = {
+  --desc = "Gnash (Mudsnout Thornback)";
+  sound = 3;
+};
+
+GTFO.SpellID["244882"] = {
+  --desc = "Cracking Blow (Guuru the Mountain-Breaker)";
+  sound = 3;
+};
+
+GTFO.SpellID["277347"] = {
+  --desc = "Whirling Venom (Shipwrecked Strongarm)";
+  sound = 3;
+  applicationOnly = true;
+};
+
+GTFO.SpellID["275823"] = {
+  --desc = "Ground Spike (Duster)";
+  sound = 3;
+};
+
+
 -- ***********************
 -- * Shrine of the Storm *
 -- ***********************
@@ -182,5 +315,201 @@ GTFO.SpellID["257315"] = {
   --desc = "Black Powder Bomb (Harlan Sweete)";
   sound = 3;
   test = true;
+};
+
+-- *************
+-- * Tol Dagor *
+-- *************
+
+GTFO.SpellID["257119"] = {
+  --desc = "Sand Trap (The Sand Queen)";
+  applicationOnly = true;
+  sound = 1;
+};
+
+GTFO.SpellID["257785"] = {
+  --desc = "Flashing Daggers (Jes Howlis)";
+  sound = 3;
+};
+
+GTFO.SpellID["256710"] = {
+  --desc = "Burning Arsenal (nil)";
+  sound = 3;
+};
+
+GTFO.SpellID["256955"] = {
+  --desc = "Cinderflame (Knight Captain Valyri)";
+  sound = 3;
+  test = true; -- Avoidable by tank?
+};
+
+GTFO.SpellID["256976"] = {
+  --desc = "Ignition (Knight Captain Valyri)";
+  sound = 3;
+};
+
+GTFO.SpellID["258917"] = {
+  --desc = "Righteous Flames (Ashvane Priest)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["259711"] = {
+  --desc = "Lockdown (Ashvane Warden)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+-- ****************
+-- * The Underrot *
+-- ****************
+
+GTFO.SpellID["265019"] = {
+  --desc = "Savage Cleave (Chosen Blood Matron)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["265665"] = {
+  --desc = "Foul Sludge (Living Rot)";
+  sound = 3;
+};
+
+GTFO.SpellID["260793"] = {
+  --desc = "Indigestion (Cragmaw the Infested)";
+  sound = 3;
+};
+
+GTFO.SpellID["259720"] = {
+  --desc = "Upheaval (Sporecaller Zancha)";
+  sound = 3;
+};
+
+GTFO.SpellID["273226"] = {
+  --desc = "Decaying Spores (Sporecaller Zancha)";
+  applicationOnly = true;
+  sound = 3;
+  minimumStacks = 3;
+  test = true;
+};
+
+GTFO.SpellID["265511"] = {
+  --desc = "Spirit Drain (Spirit Drain Totem)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["272609"] = {
+  --desc = "Maddening Gaze (Faceless Corruptor)";
+  sound = 3;
+  applicationOnly = true;
+};
+
+-- ************************
+-- * Temple of Sethraliss *
+-- ************************
+
+GTFO.SpellID["273225"] = {
+  --desc = "Volley (Sandswept Marksman)";
+  sound = 3;
+};
+
+GTFO.SpellID["264206"] = {
+  --desc = "Burrow (Merektha)";
+  sound = 3;
+};
+
+GTFO.SpellID["269970"] = {
+  --desc = "Blinding Sand (Merektha)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["267483"] = {
+  --desc = "Loose Sparks (Loose Spark)";
+  sound = 3;
+};
+
+GTFO.SpellID["264763"] = {
+  --desc = "Spark (Static-charged Dervish)";
+  sound = 3;
+};
+
+GTFO.SpellID["272821"] = {
+  --desc = "Call Lightning (Imbued Stormcaller)";
+  sound = 3;
+};
+
+-- ********************
+-- * The MOTHERLODE!! *
+-- ********************
+
+GTFO.SpellID["256137"] = {
+  --desc = "Timed Detonation (Azerite Footbomb)";
+  sound = 3;
+};
+
+GTFO.SpellID["268365"] = {
+  --desc = "Mining Charge";
+  sound = 3;
+};
+
+GTFO.SpellID["271583"] = {
+  --desc = "Black Powder Special";
+  sound = 3;
+};
+
+GTFO.SpellID["263105"] = {
+  --desc = "Blowtorch (Feckless Assistant)";
+  sound = 3;
+  tankSound = 0;
+};
+
+GTFO.SpellID["269092"] = {
+  --desc = "Artillery Barrage (Ordnance Specialist)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["262377"] = {
+  --desc = "Seek and Destroy (Crawler Mine)";
+  applicationOnly = true;
+  sound = 3;
+  tankSound = 0;
+};
+
+-- **************
+-- * Atal'Dazar *
+-- **************
+
+GTFO.SpellID["255558"] = {
+  --desc = "Tainted Blood (Gilded Priestess)";
+  applicationOnly = true;
+  sound = 3;
+  test = true; -- Negating debuff during boss ability?
+};
+
+GTFO.SpellID["255620"] = {
+  --desc = "Festering Eruption (Reanimated Honor Guard)";
+  sound = 3;
+};
+
+GTFO.SpellID["255620"] = {
+  --desc = "Festering Eruption (Reanimated Honor Guard)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["257483"] = {
+  --desc = "Pile of Bones (Rezan)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["255371"] = {
+  --desc = "Terrifying Visage (Rezan)";
+  applicationOnly = true;
+  sound = 3;
+  test = true; -- Bugged?
 };
 

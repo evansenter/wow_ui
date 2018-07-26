@@ -1,5 +1,5 @@
-## Interface: 70300
-## X-Min-Interface: 70300
+## Interface: 80000
+## X-Min-Interface: 80000
 ## Title:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cff69ccf0Uldir|r
 ## Title-koKR:|cffffe00a<|r|cffff7d0aDBM|r|cffffe00a>|r |cff69ccf0울디르|r
 ## Author: MysticalOS
@@ -17,10 +17,15 @@
 ## X-DBM-Mod-MinExpansion: 7
 localization.en.lua
 localization.kr.lua
-Hezrel.lua
+localization.ru.lua
+localization.cn.lua
+localization.es.lua
+Taloc.lua
 Mother.lua
 FetidDevourer.lua
 Zekvhozj.lua
-BloodofGhuun.lua
+Vectis.lua
+Zul.lua
+Mythrax.lua
 Ghuun.lua
 UldirTrash.lua

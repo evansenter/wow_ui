@@ -45,13 +45,13 @@ PremadeGroupsFilterState = {
 		["enabled"] = true,
 		["tanks"] = {
 			["min"] = "1",
-			["max"] = "",
+			["max"] = "1",
 			["act"] = true,
 		},
 		["ilvl"] = {
-			["min"] = "",
+			["min"] = "960",
 			["max"] = "",
-			["act"] = false,
+			["act"] = true,
 		},
 		["dps"] = {
 			["min"] = "",

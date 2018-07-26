@@ -16,8 +16,8 @@ H: 64
 Frame: ItemRefTooltip
 FrameLevel: 1
 Anchor: CENTER
-X: -204
-Y: -218
+X: -411
+Y: 18
 W: 128
 H: 64
 Frame: ColorPickerFrame
@@ -34,13 +34,6 @@ X: -383
 Y: 55
 W: 64
 H: 64
-Frame: AdiBagsAnchor1
-FrameLevel: 1
-Anchor: BOTTOMRIGHT
-X: -32
-Y: 200
-W: 80
-H: 80
 Frame: DBMMinimapButton
 FrameLevel: 3
 Anchor: TOPRIGHT

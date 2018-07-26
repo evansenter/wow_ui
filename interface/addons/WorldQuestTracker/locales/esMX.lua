@@ -9,44 +9,26 @@ L["S_ERROR_NOTLOADEDYET"] = "Esta misión no se ha cargado todavía, por favor e
 L["S_FLYMAP_SHOWTRACKEDONLY"] = "Sólo con seguimiento"
 L["S_FLYMAP_SHOWTRACKEDONLY_DESC"] = "Muestra únicamente misiones que están en seguimiento"
 L["S_FLYMAP_SHOWWORLDQUESTS"] = "Mostrar misiones de mundo"
---[[Translation missing --]]
---[[ L["S_GROUPFINDER_ACTIONS_CANCEL_APPLICATIONS"] = ""--]] 
---[[Translation missing --]]
---[[ L["S_GROUPFINDER_ACTIONS_CANCELING"] = ""--]] 
---[[Translation missing --]]
---[[ L["S_GROUPFINDER_ACTIONS_CREATE"] = ""--]] 
---[[Translation missing --]]
---[[ L["S_GROUPFINDER_ACTIONS_CREATE_DIRECT"] = ""--]] 
---[[Translation missing --]]
---[[ L["S_GROUPFINDER_ACTIONS_LEAVEASK"] = ""--]] 
+L["S_GROUPFINDER_ACTIONS_CANCEL_APPLICATIONS"] = "Clickear para cancelar solicitudes..."
+L["S_GROUPFINDER_ACTIONS_CANCELING"] = "Cancelando..."
+L["S_GROUPFINDER_ACTIONS_CREATE"] = "Grupo no encontrado?, clickear para empezar uno"
+L["S_GROUPFINDER_ACTIONS_CREATE_DIRECT"] = "crear grupo"
+L["S_GROUPFINDER_ACTIONS_LEAVEASK"] = "Salir del grupo?"
 --[[Translation missing --]]
 --[[ L["S_GROUPFINDER_ACTIONS_LEAVINGIN"] = ""--]] 
---[[Translation missing --]]
---[[ L["S_GROUPFINDER_ACTIONS_RETRYSEARCH"] = ""--]] 
---[[Translation missing --]]
---[[ L["S_GROUPFINDER_ACTIONS_SEARCH"] = ""--]] 
---[[Translation missing --]]
---[[ L["S_GROUPFINDER_ACTIONS_SEARCH_RARENPC"] = ""--]] 
---[[Translation missing --]]
---[[ L["S_GROUPFINDER_ACTIONS_SEARCH_TOOLTIP"] = ""--]] 
---[[Translation missing --]]
---[[ L["S_GROUPFINDER_ACTIONS_SEARCHING"] = ""--]] 
---[[Translation missing --]]
---[[ L["S_GROUPFINDER_ACTIONS_SEARCHMORE"] = ""--]] 
---[[Translation missing --]]
---[[ L["S_GROUPFINDER_ACTIONS_SEARCHOTHER"] = ""--]] 
---[[Translation missing --]]
---[[ L["S_GROUPFINDER_ACTIONS_UNAPPLY1"] = ""--]] 
---[[Translation missing --]]
---[[ L["S_GROUPFINDER_ACTIONS_UNLIST"] = ""--]] 
---[[Translation missing --]]
---[[ L["S_GROUPFINDER_ACTIONS_UNLISTING"] = ""--]] 
---[[Translation missing --]]
---[[ L["S_GROUPFINDER_ACTIONS_WAITING"] = ""--]] 
---[[Translation missing --]]
---[[ L["S_GROUPFINDER_AUTOOPEN_RARENPC_TARGETED"] = ""--]] 
---[[Translation missing --]]
---[[ L["S_GROUPFINDER_ENABLED"] = ""--]] 
+L["S_GROUPFINDER_ACTIONS_RETRYSEARCH"] = "Reintentar busqueda"
+L["S_GROUPFINDER_ACTIONS_SEARCH"] = "Clickear para empezar a buscar grupos"
+L["S_GROUPFINDER_ACTIONS_SEARCH_RARENPC"] = "Buscar grupo para matar este Raro"
+L["S_GROUPFINDER_ACTIONS_SEARCH_TOOLTIP"] = "Unirse a un grupo haciendo esta misión"
+L["S_GROUPFINDER_ACTIONS_SEARCHING"] = "Buscando..."
+L["S_GROUPFINDER_ACTIONS_SEARCHMORE"] = "Clickear para buscar más miembros para el grupo"
+L["S_GROUPFINDER_ACTIONS_SEARCHOTHER"] = "Salir y Buscar un grupo diferente?"
+L["S_GROUPFINDER_ACTIONS_UNAPPLY1"] = "Clickear para remover la solicitud así poder crear un grupo nuevo"
+L["S_GROUPFINDER_ACTIONS_UNLIST"] = "Clickear para eliminar el grupo actual de la lista"
+L["S_GROUPFINDER_ACTIONS_UNLISTING"] = "Eliminando de la lista..."
+L["S_GROUPFINDER_ACTIONS_WAITING"] = "Esperando..."
+L["S_GROUPFINDER_AUTOOPEN_RARENPC_TARGETED"] = "Auto Abrir al Seleccionar un Mob Raro"
+L["S_GROUPFINDER_ENABLED"] = "Auto Abrir en Misión de Mundo Nueva"
 --[[Translation missing --]]
 --[[ L["S_GROUPFINDER_INVASION_ENABLED"] = ""--]] 
 --[[Translation missing --]]
@@ -86,9 +68,6 @@ L["S_FLYMAP_SHOWWORLDQUESTS"] = "Mostrar misiones de mundo"
 --[[Translation missing --]]
 --[[ L["S_GROUPFINDER_TUTORIAL1"] = ""--]] 
 L["S_MAPBAR_AUTOWORLDMAP"] = "Auto mapa del mundo"
-L["S_MAPBAR_AUTOWORLDMAP_DESC"] = [=[Estando en Dalaran o Sala de clase, pulsando la tecla 'M' va directamente al mapa de las Islas quebradas.
-
-Doble "M" va al mapa en el que te encuentras actualmente.]=]
 L["S_MAPBAR_FILTER"] = "Filtro"
 L["S_MAPBAR_FILTERMENU_FACTIONOBJECTIVES"] = "Objetivos de facción"
 L["S_MAPBAR_FILTERMENU_FACTIONOBJECTIVES_DESC"] = "Mostrar misiones de facción, incluso si han sido filtradas."
@@ -180,13 +159,7 @@ L["S_SUMMARYPANEL_LIFETIMESTATISTICS_CHARACTER"] = "Estadísticas del personaje"
 L["S_SUMMARYPANEL_OTHERCHARACTERS"] = "Otros personajes"
 L["S_TUTORIAL_AMOUNT"] = "indica la cantidad a recibir"
 L["S_TUTORIAL_CLICKTOTRACK"] = "Clic para seguir una misión."
-L["S_TUTORIAL_CLOSE"] = "Cerrar tutorial"
-L["S_TUTORIAL_FACTIONBOUNTY"] = "indica el conteo de misiones para la facción seleccionada."
-L["S_TUTORIAL_FACTIONBOUNTY_AMOUNTQUESTS"] = "indica cuántas misiones hay en el mapa para la facción seleccionada."
-L["S_TUTORIAL_HOWTOADDTRACKER"] = "Clic izquierdo para seguir una misión. En el seguimiento, puedes hacer |cFFFFFFFFClic derecho|r para quitar el seguimiento."
 L["S_TUTORIAL_PARTY"] = "¡Cuando en un grupo, se muestra una estrella azul, es una misiones que todos los miembros del grupo tienen!"
-L["S_TUTORIAL_RARITY"] = "indica la rareza (común, rara, épica)"
-L["S_TUTORIAL_REWARD"] = "indica la recompensa (equipo, oro, poder de artefacto, recursos, reactivos)"
 L["S_TUTORIAL_TIMELEFT"] = "indica el tiempo que queda (+4 horas, +90 minutos, +30 minutos, menos de 30 minutos)"
 L["S_TUTORIAL_WORLDMAPBUTTON"] = "Este botón lo llevara al mapa de las Islas quebradas."
 L["S_UNKNOWNQUEST"] = "Misión desconocida"

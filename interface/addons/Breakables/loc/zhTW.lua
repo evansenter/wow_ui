@@ -12,7 +12,7 @@ L["Down"] = "向下"
 L["Font size"] = "字體大小"
 L["Hide bar"] = "隱藏快捷列"
 L["Hide during combat"] = "戰鬥期間隱藏助手"
---Translation missing 
+--[[Translation missing --]]
 L["Hide Eq. Mgr items"] = "Hide Eq. Mgr items"
 L["Hide if no breakables"] = "無可拆解物品則不顯示助手"
 L["Hide Tabards"] = "不顯示外袍"

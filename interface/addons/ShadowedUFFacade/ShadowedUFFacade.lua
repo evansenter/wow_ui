@@ -1,4 +1,4 @@
-﻿
+
 local LMB = LibStub("Masque", true) or (LibMasque and LibMasque("Button"))
 if not LMB then return end
 

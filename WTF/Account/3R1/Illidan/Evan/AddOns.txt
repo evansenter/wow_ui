@@ -254,7 +254,7 @@ LibKeyBound-1.0: enabled
 LibDualSpec-1.0: enabled
 LibSink-2.0: enabled
 LibDataBroker-1.1: enabled
-Bagnon: enabled
+Bagnon: disabled
 Titan: enabled
 LibTTScan-1.0: enabled
 SR13-TimeRecord: enabled

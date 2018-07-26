@@ -29,7 +29,7 @@ VER 3 000000000000004E "CoH" "INV_Misc_QuestionMark"
 #showtooltip
 /use [target=mouseover,help,nodead][]Circle of Healing
 END
-VER 3 0000000000000029 "Combat Log" "PASSIVE_MONK_TEACHINGSOFMONASTERY"
+VER 3 0000000000000069 "Combat Log" "134331"
 /combatlog
 END
 VER 3 0000000000000047 "Deathnote" "Ability_Hunter_MurderofCrows"
@@ -58,9 +58,10 @@ VER 3 000000000000002B "Focus" "1029718"
 /focus
 END
 VER 3 000000000000004D "GS" "INV_Misc_QuestionMark"
-#showtooltip
-/use [target=mouseover,help,nodead][]Guardian Spirit
-/use [target=mouseover,help,nodead][]Light of T'uure
+#showtooltip Guardian Spirit
+/stopcasting
+/use [target=mouseover,help,nodead]Guardian Spirit
+/use [target=mouseover,help,nodead]Light of T'uure
 END
 VER 3 0000000000000050 "HF" "INV_Misc_QuestionMark"
 #showtooltip Holy Fire
@@ -78,8 +79,7 @@ VER 3 000000000000005E "Illidan" "1241724"
 END
 VER 3 000000000000005B "Light's Wrath" "INV_Misc_QuestionMark"
 #showtooltip Light's Wrath
-/use 13
-/use 14
+/use Velen's Future Sight
 /cast [harm][@targettarget,harm][]Light's Wrath
 END
 VER 3 000000000000005C "LoF" "INV_Misc_QuestionMark"
@@ -104,7 +104,8 @@ VER 3 0000000000000051 "Mark Skull" "1325309"
 /run SetRaidTarget("target", 8)
 END
 VER 3 0000000000000060 "Pain Sup" "INV_Misc_QuestionMark"
-#showtooltip
+#showtooltip Pain Suppression
+/stopcasting
 /use [target=mouseover,help,nodead][]Pain Suppression
 END
 VER 3 0000000000000068 "Penance Friendly" "INV_Misc_QuestionMark"
@@ -132,7 +133,7 @@ VER 3 0000000000000052 "Roll" "INV_Misc_QuestionMark"
 /use [nomod]Roll
 END
 VER 3 000000000000003C "RSK" "INV_MISC_QUESTIONMARK"
-#showtooltip Rising Sun Kick
+#showtooltip
 /use [nochanneling]Rising Sun Kick
 END
 VER 3 0000000000000063 "SEF" "INV_Misc_QuestionMark"
@@ -158,6 +159,10 @@ END
 VER 3 000000000000005A "SW:P" "INV_Misc_QuestionMark"
 #showtooltip
 /use [harm][@mouseovertarget,harm][]Shadow Word: Pain
+END
+VER 3 000000000000006B "SW:P Shadow" "INV_Misc_QuestionMark"
+#showtooltip
+/use [@mouseover,harm][]Shadow Word: Pain
 END
 VER 3 000000000000002C "Target Focus" "132284"
 /tar focus
@@ -185,4 +190,8 @@ END
 VER 3 0000000000000065 "Trinket" "INV_Misc_QuestionMark"
 #showtooltip
 /use [harm][@mouseovertarget,harm][]14
+END
+VER 3 000000000000006C "VT Shadow" "INV_Misc_QuestionMark"
+#showtooltip
+/use [@mouseover,harm][]Vampiric Touch
 END

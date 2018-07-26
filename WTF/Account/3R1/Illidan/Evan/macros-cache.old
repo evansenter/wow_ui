@@ -48,6 +48,7 @@ VER 3 0100000000000029 "Purify Disease" "INV_Misc_QuestionMark"
 END
 VER 3 0100000000000023 "PW:R" "INV_Misc_QuestionMark"
 #showtooltip Power Word: Radiance
+/use [harm][@mouseovertarget,harm][]Carafe of Searing Light
 /use [target=mouseover,help,nodead][]Power Word: Radiance
 END
 VER 3 0100000000000005 "PW:S" "INV_Misc_QuestionMark"
@@ -59,8 +60,8 @@ VER 3 0100000000000025 "Renew" "INV_Misc_QuestionMark"
 /use [target=mouseover,help,nodead][]Renew
 END
 VER 3 0100000000000021 "Shining Force" "INV_Misc_QuestionMark"
-#showtooltip
-/use [target=mouseover,help,nodead][]Shining Force
+#showtooltip Shining Force
+/use [target=mouseover,help,nodead]Shining Force
 END
 VER 3 0100000000000006 "Smite" "INV_MISC_QUESTIONMARK"
 #showtooltip

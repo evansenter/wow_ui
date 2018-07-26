@@ -28,10 +28,12 @@ function InFlight:ADDON_LOADED(a1)
 	end
 end
 -----------------------------------------
-function InFlight:TAXIMAP_OPENED(_, misc)
+function InFlight:TAXIMAP_OPENED(...)
 -----------------------------------------
-	if LoadInFlight() and not misc then
-		self:InitSource()
+	if LoadInFlight() then
+		local uiMapSystem = ...;
+		local isTaxiMap = uiMapSystem == Enum.UIMapSystem.Taxi
+		self:InitSource(isTaxiMap)
 	end
 end
 
@@ -55,7 +57,7 @@ if GetAddOnEnableState(UnitName("player"), "InFlight") == 2 then  -- maybe this 
 	local sssagossip2 = "I need to intercept"		-- dawnblade reinforcements gossip
 	local thesinloren = "The Sin'loren"				-- The Sin'loren dragonhawk
 	local sinlorengossip = "<Ride the dragonhawk"	-- The Sin'loren gossip
-	local swcity = "Stormwind City"
+	local swcity = "Stormwind"
 	local swharborscenic = "flight around Stormwind Harbor"  -- flight tour around Stormwind Harbor
 	local cavernsoftime = "Caverns of Time"
 	local cavernsentrance = "Please take me"		-- dragon flight at Caverns of Time entrance
@@ -73,8 +75,6 @@ if GetAddOnEnableState(UnitName("player"), "InFlight") == 2 then  -- maybe this 
 	local fin = "Return"
 	local ashenvalesaber = "one of your nightsabers to (.+)."
 	local astranaar, maestrapost = "Astranaar", "Maestra's Post"
-	local darkshoregossip = "like to travel to (.+)."
-	local lordanei, ruinsofmathystra, shatterspearvale, bashalaran = "Lor'danei", "Ruins of Mathystra", "Shatterspear Vale", "Bashal'Aran"
 	local feralasgossip1, feralasgossip2 = "Take me to the battle", "I must return to"
 	local feathermoonstronghold, ruinsoffeathermoon = "Feathermoon Stronghold", "Ruins of Feathermoon"
 	local terrorwinggossip = "head down to the Swamp of Sorrows"
@@ -192,13 +192,11 @@ if GetAddOnEnableState(UnitName("player"), "InFlight") == 2 then  -- maybe this 
 		[argenttournament] = { find = argenttournamentgossip, d = fin, },
 		[astranaar] = { match = ashenvalesaber, },
 		[maestrapost] = { match = ashenvalesaber, },
-		[lordanei] = { match = darkshoregossip, },
 		[feathermoonstronghold] = { find = feralasgossip1, d = ruinsoffeathermoon, }, 
 		[ruinsoffeathermoon] = { find = feralasgossip2, d = feathermoonstronghold, },
 		[terrorwing] = { find = terrorwinggossip, d = bogpaddle, },
 	}
 	t[srharbor] = t[sssa]
-	t[ruinsofmathystra], t[shatterspearvale], t[bashalaran] = t[lordanei], t[lordanei], t[lordanei]
 	end
 
 	---------------------------------

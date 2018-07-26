@@ -1,12 +1,8 @@
-## Interface: 70000
+## Interface: 80000
 ## Title: Masque Skinner: Blizz Buffs
-## Version: 7.0.3
-## Author: Cybeloras of Detheroc/Mal'Ganis
+## Version: 8.0.1
+## Author: Cybeloras of Aerie Peak
 ## Notes: Skins the Blizzard buff and debuff frames with Masque
 ## RequiredDeps: Masque
-## X-Curse-Packaged-Version: 7.0.3
-## X-Curse-Project-Name: Masque Skinner: Blizz Buffs
-## X-Curse-Project-ID: blizzbuffsfacade
-## X-Curse-Repository-ID: wow/blizzbuffsfacade/mainline
 
 BlizzBuffsFacade.lua

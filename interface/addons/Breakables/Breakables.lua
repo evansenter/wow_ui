@@ -5,6 +5,8 @@ local LBF = LibStub("Masque", true)
 
 local lbfGroup
 
+local WowVer = select(4, GetBuildInfo())
+
 local MillingId = 51005
 local MillingItemSubType = babbleInv["Herb"]
 local MillingItemSecondarySubType = babbleInv["Other"]
@@ -27,6 +29,14 @@ local AdditionalMillableItems = {
 	124106,
 	128304,
 	151565,
+	-- BfA herbs
+	152505,
+	152506,
+	152507,
+	152508,
+	152509,
+	152510,
+	152511,
 }
 
 local AdditionalProspectableItems = {
@@ -34,6 +44,10 @@ local AdditionalProspectableItems = {
 	123918,
 	123919,
 	151564,
+	-- BfA ore
+	152512,
+	152513,
+	152579,
 }
 
 local MassMilling = {
@@ -122,6 +136,7 @@ local PickableItems = {
 	68729, -- elementium lockbox
 	88567, -- ghost iron lockbox
 	116920, -- true steel lockbox
+	121331, -- leystone lockbox
 }
 local CanPickLock = false
 
@@ -232,7 +247,7 @@ function Breakables:InitLDB()
 
 		if ldbButton then
 			function ldbButton:OnTooltipShow()
-				self:AddLine(L["Breakables"] .. " 1.4.9.1")
+				self:AddLine(L["Breakables"] .. " 1.5")
 				self:AddLine(L["Click to open Breakables options."], 1, 1, 1)
 			end
 		end
@@ -317,7 +332,7 @@ function Breakables:RegisterEvents()
 
 	self:RegisterEvent("MODIFIER_STATE_CHANGED", "FindBreakables")
 
-	if CanDisenchant then
+	if CanDisenchant and WowVer < 80000 then
 		self:RegisterEvent("TRADE_SKILL_UPDATE", "OnTradeSkillUpdate")
 	end
 
@@ -1211,13 +1226,26 @@ do
 end
 
 function Breakables:IsInEquipmentSet(itemId)
-	for setIdx=1, GetNumEquipmentSets() do
-		local set = GetEquipmentSetInfo(setIdx)
-		local itemArray = GetEquipmentSetItemIDs(set)
+	if WowVer < 80000 then
+		for setIdx=1, GetNumEquipmentSets() do
+			local set = GetEquipmentSetInfo(setIdx)
+			local itemArray = GetEquipmentSetItemIDs(set)
 
-		for i=1, EQUIPPED_LAST do
-			if itemArray[i] and itemArray[i] == itemId then
-				return true
+			for i=1, EQUIPPED_LAST do
+				if itemArray[i] and itemArray[i] == itemId then
+					return true
+				end
+			end
+		end
+	else
+		local sets = C_EquipmentSet.GetEquipmentSetIDs()
+		for k, v in ipairs(sets) do
+			local itemArray = C_EquipmentSet.GetItemIDs(v)
+
+			for i=1, EQUIPPED_LAST do
+				if itemArray[i] and itemArray[i] == itemId then
+					return true
+				end
 			end
 		end
 	end
@@ -1231,10 +1259,8 @@ function Breakables:GetItemIdFromLink(itemLink)
 end
 
 function Breakables:MergeBreakables(foundBreakable, breakableList)
-	local foundItemId = self:GetItemIdFromLink(foundBreakable[IDX_LINK])
 	for n=1,#breakableList do
-		local listItemId = self:GetItemIdFromLink(breakableList[n][IDX_LINK])
-		if foundItemId == listItemId then
+		if foundBreakable[IDX_LINK] == breakableList[n][IDX_LINK] then
 			-- always prefer the larger stack
 			if foundBreakable[IDX_COUNT] > breakableList[n][IDX_COUNT] then
 				breakableList[n][IDX_BAG] = foundBreakable[IDX_BAG]
@@ -1265,6 +1291,11 @@ end
 function Breakables:BreakableIsDisenchantable(itemType, itemLevel, itemRarity, itemLink)
 	for i=1,#DisenchantTypes do
 		if DisenchantTypes[i] == itemType or IsArtifactRelicItem(itemLink) then
+				-- temp hack for bfa until disenchant item level scales are identified
+			if WowVer >= 80000 then
+				return true
+			end
+
 			-- account for WoD and higher no longer needing specific ilvl. numbers from http://wow.gamepedia.com/Item_level
 			if (itemRarity == RARITY_UNCOMMON and itemLevel >= 483)
 				or (itemRarity == RARITY_RARE and itemLevel >= 515)
