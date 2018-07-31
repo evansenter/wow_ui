@@ -15,7 +15,7 @@ VER 3 000000000000003F "Blackout Kick" "INV_MISC_QUESTIONMARK"
 END
 VER 3 0000000000000045 "BoF" "ABILITY_MONK_BREATHOFFIRE"
 #showtooltip Breath of Fire
-/use 13
+/use Kil'Jaeden's Burning Wish
 /use Breath of Fire
 END
 VER 3 0000000000000067 "Cancel SoR" "237542"
@@ -43,8 +43,7 @@ VER 3 0000000000000061 "DH" "INV_Misc_QuestionMark"
 END
 VER 3 0000000000000058 "Essence Font" "INV_Misc_QuestionMark"
 #showtooltip Essence Font
-/use 13
-/use 14
+/use [harm][@mouseovertarget,harm][]Carafe of Searing Light
 /use Essence Font
 END
 VER 3 000000000000002E "Extra Action" "INV_Misc_Herb_Whispervine"

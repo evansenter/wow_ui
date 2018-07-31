@@ -1,33 +1,30 @@
-# [2.6.4](https://github.com/WeakAuras/WeakAuras2/tree/2.6.4) (2018-07-25)
+# [2.6.6](https://github.com/WeakAuras/WeakAuras2/tree/2.6.6) (2018-07-30)
 
-[Full Changelog](https://github.com/WeakAuras/WeakAuras2/compare/2.6.3...2.6.4)
-
-Aigars Bedeicis (1):
-
-- Add Mythic+ Affix load option
+[Full Changelog](https://github.com/WeakAuras/WeakAuras2/compare/2.6.5...2.6.6)
 
 Benjamin Staneck (4):
 
-- update luacheckrc
-- better align search box in options frame
-- Update CONTRIBUTING.md
-- Update CONTRIBUTING.md
+- remove multistrike combatlog event
+- Update bug_report.md
+- Update ISSUE_TEMPLATE.md
+- change translation string
 
-Infus (7):
+Buds (1):
 
-- Fix Toggle Visibility for Unloaded auras not working
-- Fix showing of auras even though the options window was closed already.
-- Fix setting some properties on a multi-selection
-- Fix scrolling being stuck in the Options window
-- Fix slowness for on clicking on "Load"
-- Fix SetParent for some auras
-- Cooldown Progress: Fix Track Charges being active, even it was disabled
+- BuffTrigger: Add a buffed/unbuffed condition
 
-Leon Solis III (1):
+Infus (12):
 
-- Add links to explain force pushing for rebase (#534)
-
-asakawa-k (1):
-
-- Add SetJustifyH/V to the Icon's texts
+- Fix error on loading if trigger[name] is nil
+- Use better names for Power Types for Templates
+- Equipment Set Trigger: Use C_EquipmentSet.GetEquipmentSetIDs
+- Global Conditions: Fix Unload
+- Fix the author line of WeakAurasTemplates
+- Fix bugs in Global Conditions
+- Global Conditions: Move some code to WeakAuras.lua
+- Fix naming
+- Add a alpha option to Icons/Textures
+- Add a dynamic condition for "IsUsableSpell"
+- Global Conditions: In Combat, Has Target
+- Fix Rename/Delete and custom condition functions
 

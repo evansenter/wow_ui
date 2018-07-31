@@ -82,91 +82,9 @@ SubSpecStorage = {
 			},
 		}, -- [2]
 	},
-	["Priest Discipline"] = {
+	["Monk Windwalker"] = {
 		{
-			["name"] = "CoW ToF Progression",
-			["data"] = {
-				{
-					["id"] = 22328,
-					["name"] = "Twist of Fate",
-					["column"] = 1,
-				}, -- [1]
-				{
-					["id"] = 22315,
-					["name"] = "Angelic Feather",
-					["column"] = 1,
-				}, -- [2]
-				{
-					["id"] = 22440,
-					["name"] = "Shining Force",
-					["column"] = 1,
-				}, -- [3]
-				{
-					["id"] = 19769,
-					["name"] = "Shield Discipline",
-					["column"] = 2,
-				}, -- [4]
-				{
-					["id"] = 19765,
-					["name"] = "Clarity of Will",
-					["column"] = 2,
-				}, -- [5]
-				{
-					["id"] = 22161,
-					["name"] = "Purge the Wicked",
-					["column"] = 1,
-				}, -- [6]
-				{
-					["id"] = 22976,
-					["name"] = "Evangelism",
-					["column"] = 3,
-				}, -- [7]
-			},
-		}, -- [1]
-		{
-			["name"] = "Raiding",
-			["data"] = {
-				{
-					["id"] = 19753,
-					["name"] = "Castigation",
-					["column"] = 2,
-				}, -- [1]
-				{
-					["id"] = 22315,
-					["name"] = "Angelic Feather",
-					["column"] = 1,
-				}, -- [2]
-				{
-					["id"] = 22440,
-					["name"] = "Shining Force",
-					["column"] = 1,
-				}, -- [3]
-				{
-					["id"] = 19769,
-					["name"] = "Shield Discipline",
-					["column"] = 2,
-				}, -- [4]
-				{
-					["id"] = 22330,
-					["name"] = "Sanctuary",
-					["column"] = 1,
-				}, -- [5]
-				{
-					["id"] = 22161,
-					["name"] = "Purge the Wicked",
-					["column"] = 1,
-				}, -- [6]
-				{
-					["id"] = 22976,
-					["name"] = "Evangelism",
-					["column"] = 3,
-				}, -- [7]
-			},
-		}, -- [2]
-	},
-	["Monk Mistweaver"] = {
-		{
-			["name"] = "Mythic+",
+			["name"] = "ST",
 			["data"] = {
 				{
 					["id"] = 20185,
@@ -179,8 +97,8 @@ SubSpecStorage = {
 					["column"] = 2,
 				}, -- [2]
 				{
-					["id"] = 22168,
-					["name"] = "Lifecycles",
+					["id"] = 22099,
+					["name"] = "Energizing Elixir",
 					["column"] = 1,
 				}, -- [3]
 				{
@@ -194,19 +112,19 @@ SubSpecStorage = {
 					["column"] = 1,
 				}, -- [5]
 				{
-					["id"] = 22217,
-					["name"] = "Invoke Chi-Ji, the Red Crane",
-					["column"] = 2,
+					["id"] = 22103,
+					["name"] = "Hit Combo",
+					["column"] = 3,
 				}, -- [6]
 				{
-					["id"] = 22169,
-					["name"] = "Focused Thunder",
+					["id"] = 22105,
+					["name"] = "Whirling Dragon Punch",
 					["column"] = 2,
 				}, -- [7]
 			},
 		}, -- [1]
 		{
-			["name"] = "Raids",
+			["name"] = "AoE",
 			["data"] = {
 				{
 					["id"] = 19823,
@@ -219,8 +137,8 @@ SubSpecStorage = {
 					["column"] = 2,
 				}, -- [2]
 				{
-					["id"] = 22168,
-					["name"] = "Lifecycles",
+					["id"] = 22099,
+					["name"] = "Energizing Elixir",
 					["column"] = 1,
 				}, -- [3]
 				{
@@ -234,14 +152,14 @@ SubSpecStorage = {
 					["column"] = 1,
 				}, -- [5]
 				{
-					["id"] = 22217,
-					["name"] = "Invoke Chi-Ji, the Red Crane",
-					["column"] = 2,
+					["id"] = 22103,
+					["name"] = "Hit Combo",
+					["column"] = 3,
 				}, -- [6]
 				{
-					["id"] = 22218,
-					["name"] = "Mana Tea",
-					["column"] = 1,
+					["id"] = 22105,
+					["name"] = "Whirling Dragon Punch",
+					["column"] = 2,
 				}, -- [7]
 			},
 		}, -- [2]
@@ -324,6 +242,88 @@ SubSpecStorage = {
 					["id"] = 21978,
 					["name"] = "Shadow Crash",
 					["column"] = 2,
+				}, -- [7]
+			},
+		}, -- [2]
+	},
+	["Monk Mistweaver"] = {
+		{
+			["name"] = "Mythic+",
+			["data"] = {
+				{
+					["id"] = 20185,
+					["name"] = "Chi Wave",
+					["column"] = 3,
+				}, -- [1]
+				{
+					["id"] = 19818,
+					["name"] = "Tiger's Lust",
+					["column"] = 2,
+				}, -- [2]
+				{
+					["id"] = 22168,
+					["name"] = "Lifecycles",
+					["column"] = 1,
+				}, -- [3]
+				{
+					["id"] = 19995,
+					["name"] = "Leg Sweep",
+					["column"] = 3,
+				}, -- [4]
+				{
+					["id"] = 20174,
+					["name"] = "Healing Elixir",
+					["column"] = 1,
+				}, -- [5]
+				{
+					["id"] = 22217,
+					["name"] = "Invoke Chi-Ji, the Red Crane",
+					["column"] = 2,
+				}, -- [6]
+				{
+					["id"] = 22169,
+					["name"] = "Focused Thunder",
+					["column"] = 2,
+				}, -- [7]
+			},
+		}, -- [1]
+		{
+			["name"] = "Raids",
+			["data"] = {
+				{
+					["id"] = 19823,
+					["name"] = "Chi Burst",
+					["column"] = 1,
+				}, -- [1]
+				{
+					["id"] = 19818,
+					["name"] = "Tiger's Lust",
+					["column"] = 2,
+				}, -- [2]
+				{
+					["id"] = 22168,
+					["name"] = "Lifecycles",
+					["column"] = 1,
+				}, -- [3]
+				{
+					["id"] = 19995,
+					["name"] = "Leg Sweep",
+					["column"] = 3,
+				}, -- [4]
+				{
+					["id"] = 20174,
+					["name"] = "Healing Elixir",
+					["column"] = 1,
+				}, -- [5]
+				{
+					["id"] = 22217,
+					["name"] = "Invoke Chi-Ji, the Red Crane",
+					["column"] = 2,
+				}, -- [6]
+				{
+					["id"] = 22218,
+					["name"] = "Mana Tea",
+					["column"] = 1,
 				}, -- [7]
 			},
 		}, -- [2]
@@ -495,24 +495,24 @@ SubSpecStorage = {
 			["name"] = "Raids",
 			["data"] = {
 				{
-					["id"] = 19754,
+					["id"] = 22312,
 					["name"] = "Enlightenment",
-					["column"] = 3,
+					["column"] = 1,
 				}, -- [1]
 				{
-					["id"] = 22315,
+					["id"] = 19758,
 					["name"] = "Angelic Feather",
-					["column"] = 1,
+					["column"] = 3,
 				}, -- [2]
 				{
-					["id"] = 22562,
-					["name"] = "Afterlife",
-					["column"] = 3,
+					["id"] = 22487,
+					["name"] = "Cosmic Ripple",
+					["column"] = 1,
 				}, -- [3]
 				{
-					["id"] = 21750,
-					["name"] = "Light of the Naaru",
-					["column"] = 1,
+					["id"] = 19761,
+					["name"] = "Shining Force",
+					["column"] = 3,
 				}, -- [4]
 				{
 					["id"] = 22327,
@@ -521,95 +521,95 @@ SubSpecStorage = {
 				}, -- [5]
 				{
 					["id"] = 19767,
-					["name"] = "Divinity",
+					["name"] = "Benediction",
 					["column"] = 1,
 				}, -- [6]
 				{
-					["id"] = 21644,
-					["name"] = "Benediction",
-					["column"] = 2,
+					["id"] = 23145,
+					["name"] = "Holy Word: Salvation",
+					["column"] = 3,
 				}, -- [7]
 			},
 		}, -- [2]
 	},
-	["Monk Windwalker"] = {
+	["Priest Discipline"] = {
 		{
-			["name"] = "ST",
+			["name"] = "CoW ToF Progression",
 			["data"] = {
 				{
-					["id"] = 20185,
-					["name"] = "Chi Wave",
-					["column"] = 3,
+					["id"] = 22328,
+					["name"] = "Twist of Fate",
+					["column"] = 1,
 				}, -- [1]
 				{
-					["id"] = 19818,
-					["name"] = "Tiger's Lust",
-					["column"] = 2,
+					["id"] = 22315,
+					["name"] = "Angelic Feather",
+					["column"] = 1,
 				}, -- [2]
 				{
-					["id"] = 22099,
-					["name"] = "Energizing Elixir",
+					["id"] = 22440,
+					["name"] = "Shining Force",
 					["column"] = 1,
 				}, -- [3]
 				{
-					["id"] = 19995,
-					["name"] = "Leg Sweep",
-					["column"] = 3,
+					["id"] = 19769,
+					["name"] = "Shield Discipline",
+					["column"] = 2,
 				}, -- [4]
 				{
-					["id"] = 20174,
-					["name"] = "Healing Elixir",
-					["column"] = 1,
+					["id"] = 19765,
+					["name"] = "Clarity of Will",
+					["column"] = 2,
 				}, -- [5]
 				{
-					["id"] = 22103,
-					["name"] = "Hit Combo",
-					["column"] = 3,
+					["id"] = 22161,
+					["name"] = "Purge the Wicked",
+					["column"] = 1,
 				}, -- [6]
 				{
-					["id"] = 22105,
-					["name"] = "Whirling Dragon Punch",
-					["column"] = 2,
+					["id"] = 22976,
+					["name"] = "Evangelism",
+					["column"] = 3,
 				}, -- [7]
 			},
 		}, -- [1]
 		{
-			["name"] = "AoE",
+			["name"] = "Raiding",
 			["data"] = {
 				{
-					["id"] = 19823,
-					["name"] = "Chi Burst",
-					["column"] = 1,
+					["id"] = 19753,
+					["name"] = "Castigation",
+					["column"] = 2,
 				}, -- [1]
 				{
-					["id"] = 19818,
-					["name"] = "Tiger's Lust",
-					["column"] = 2,
+					["id"] = 22315,
+					["name"] = "Angelic Feather",
+					["column"] = 1,
 				}, -- [2]
 				{
-					["id"] = 22099,
-					["name"] = "Energizing Elixir",
+					["id"] = 22440,
+					["name"] = "Shining Force",
 					["column"] = 1,
 				}, -- [3]
 				{
-					["id"] = 19995,
-					["name"] = "Leg Sweep",
-					["column"] = 3,
+					["id"] = 19769,
+					["name"] = "Shield Discipline",
+					["column"] = 2,
 				}, -- [4]
 				{
-					["id"] = 20174,
-					["name"] = "Healing Elixir",
+					["id"] = 22330,
+					["name"] = "Sanctuary",
 					["column"] = 1,
 				}, -- [5]
 				{
-					["id"] = 22103,
-					["name"] = "Hit Combo",
-					["column"] = 3,
+					["id"] = 22161,
+					["name"] = "Purge the Wicked",
+					["column"] = 1,
 				}, -- [6]
 				{
-					["id"] = 22105,
-					["name"] = "Whirling Dragon Punch",
-					["column"] = 2,
+					["id"] = 22976,
+					["name"] = "Evangelism",
+					["column"] = 3,
 				}, -- [7]
 			},
 		}, -- [2]

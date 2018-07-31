@@ -164,6 +164,8 @@ Bagnon_Sets = {
 	},
 	["refrigeColor"] = {
 	},
+	["profiles"] = {
+	},
 	["mineColor"] = {
 	},
 	["inscribeColor"] = {
@@ -177,9 +179,5 @@ Bagnon_Sets = {
 	["normalColor"] = {
 	},
 	["enchantColor"] = {
-	},
-	["players"] = {
-		["Illidan"] = {
-		},
 	},
 }

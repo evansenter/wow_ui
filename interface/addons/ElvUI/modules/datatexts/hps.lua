@@ -4,15 +4,15 @@ local DT = E:GetModule('DataTexts')
 --Cache global variables
 --Lua functions
 local time = time
-local select = select
 local max = math.max
 local join = string.join
 --WoW API / Variables
 local UnitGUID = UnitGUID
+local CombatLogGetCurrentEventInfo = CombatLogGetCurrentEventInfo
 
 local events = {SPELL_HEAL = true, SPELL_PERIODIC_HEAL = true}
 local playerID, petID
-local healTotal, lastHealAmount = 0, 0
+local healTotal = 0
 local combatTime = 0
 local timeStamp = 0
 local lastSegment = 0
@@ -23,7 +23,6 @@ local function Reset()
 	timeStamp = 0
 	combatTime = 0
 	healTotal = 0
-	lastHealAmount = 0
 end
 
 local function GetHPS(self)
@@ -36,7 +35,7 @@ local function GetHPS(self)
 	self.text:SetFormattedText(displayString, L["HPS"], E:ShortValue(hps))
 end
 
-local function OnEvent(self, event, ...)
+local function OnEvent(self, event)
 	lastPanel = self
 
 	if event == 'PLAYER_ENTERING_WORLD' then
@@ -48,15 +47,13 @@ local function OnEvent(self, event, ...)
 		end
 		lastSegment = now
 	elseif event == 'COMBAT_LOG_EVENT_UNFILTERED' then
-		if not events[select(2, ...)] then return end
+		local timestamp, Event, _, sourceGUID, _, _, _, _, _, _, _, _, _, _, lastHealAmount, overHeal = CombatLogGetCurrentEventInfo()
+		if not events[Event] then return end
 
-		local id = select(4, ...)
-		if id == playerID or id == petID then
-			if timeStamp == 0 then timeStamp = select(1, ...) end
-			local overHeal = select(16, ...)
+		if sourceGUID == playerID or sourceGUID == petID then
+			if timeStamp == 0 then timeStamp = timestamp end
 			lastSegment = timeStamp
-			combatTime = select(1, ...) - timeStamp
-			lastHealAmount = select(15, ...)
+			combatTime = timestamp - timeStamp
 			healTotal = healTotal + max(0, lastHealAmount - overHeal)
 		end
 	elseif event == "UNIT_PET" then

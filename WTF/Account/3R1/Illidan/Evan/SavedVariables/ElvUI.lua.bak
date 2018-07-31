@@ -2,535 +2,447 @@
 ElvCharacterDB = {
 	["ChatHistoryLog"] = {
 		{
-			"robert", -- [1]
-			"Kamelltotem-Thrall", -- [2]
+			"dont be that mage", -- [1]
+			"Ojim-Mal'Ganis", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Kamelltotem-Thrall", -- [5]
+			"Ojim-Mal'Ganis", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1556, -- [11]
-			"Player-3678-0AE658A2", -- [12]
+			3002, -- [11]
+			"Player-3684-092DE02E", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddKamelltotem-Thrall|r",
-			[51] = 1530416941,
-			[50] = "CHAT_MSG_RAID_LEADER",
+			[52] = "|cffc41e3aOjim-Mal'Ganis|r",
+			[51] = 1530495424,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [1]
 		{
-			"come dead side", -- [1]
-			"Kamelltotem-Thrall", -- [2]
+			"titanforge", -- [1]
+			"Jinz-Zul'jin", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Kamelltotem-Thrall", -- [5]
+			"Jinz-Zul'jin", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1558, -- [11]
-			"Player-3678-0AE658A2", -- [12]
+			3003, -- [11]
+			"Player-61-0B61D4EB", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddKamelltotem-Thrall|r",
-			[51] = 1530416944,
-			[50] = "CHAT_MSG_RAID_LEADER",
+			[52] = "|cffffffffJinz-Zul'jin|r",
+			[51] = 1530495424,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [2]
 		{
-			"click on the spiritual font", -- [1]
-			"Zuujo-EmeraldDream", -- [2]
+			"do not interrupt", -- [1]
+			"Shinmoo-Zul'jin", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Zuujo-EmeraldDream", -- [5]
+			"Shinmoo", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1559, -- [11]
-			"Player-162-09C1DDE5", -- [12]
+			3007, -- [11]
+			"Player-61-0B598EC5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffff7c0aZuujo-EmeraldDream|r",
-			[51] = 1530416961,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aShinmoo-Zul'jin|r",
+			[51] = 1530495438,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [3]
 		{
-			"ooo", -- [1]
-			"Iamma-Firetree", -- [2]
+			"do not interrupt", -- [1]
+			"Shinmoo-Zul'jin", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Iamma-Firetree", -- [5]
+			"Shinmoo", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1565, -- [11]
-			"Player-127-07971AD5", -- [12]
+			3008, -- [11]
+			"Player-61-0B598EC5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Iamma-Firetree|r",
-			[51] = 1530416970,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aShinmoo-Zul'jin|r",
+			[51] = 1530495439,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [4]
 		{
-			"spirit realm?", -- [1]
-			"Iamma-Firetree", -- [2]
+			"kill orbs", -- [1]
+			"Shinmoo-Zul'jin", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Iamma-Firetree", -- [5]
+			"Shinmoo", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1569, -- [11]
-			"Player-127-07971AD5", -- [12]
+			3010, -- [11]
+			"Player-61-0B598EC5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Iamma-Firetree|r",
-			[51] = 1530416979,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aShinmoo-Zul'jin|r",
+			[51] = 1530495454,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [5]
 		{
-			"am i the last airbender?", -- [1]
-			"Iamma-Firetree", -- [2]
+			"kill orbs", -- [1]
+			"Shinmoo-Zul'jin", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Iamma-Firetree", -- [5]
+			"Shinmoo", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1571, -- [11]
-			"Player-127-07971AD5", -- [12]
+			3011, -- [11]
+			"Player-61-0B598EC5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Iamma-Firetree|r",
-			[51] = 1530416982,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aShinmoo-Zul'jin|r",
+			[51] = 1530495454,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [6]
 		{
-			"yea", -- [1]
-			"Kamelltotem-Thrall", -- [2]
-			"", -- [3]
+			"{rt2}Bomb{rt2}", -- [1]
+			"Wuvybo-BurningBlade", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Kamelltotem-Thrall", -- [5]
+			"Wuvybo-BurningBlade", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1572, -- [11]
-			"Player-3678-0AE658A2", -- [12]
+			3017, -- [11]
+			"Player-91-04F96053", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddKamelltotem-Thrall|r",
-			[51] = 1530416982,
-			[50] = "CHAT_MSG_RAID_LEADER",
+			[52] = "|cffff7c0aWuvybo-BurningBlade|r",
+			[51] = 1530495465,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [7]
 		{
-			"lol", -- [1]
-			"Galadien-Stormreaver", -- [2]
+			"|cff71d5ff|Hspell:61336:0|h[Survival Instincts]|h|r activated!", -- [1]
+			"Khaddarxrawr-Hyjal", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Galadien-Stormreaver", -- [5]
+			"Khaddarxrawr-Hyjal", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1575, -- [11]
-			"Player-58-055BE55C", -- [12]
+			3021, -- [11]
+			"Player-3661-06D942C0", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaGaladien-Stormreaver|r",
-			[51] = 1530416987,
+			[52] = "|cffff7c0aKhaddarxrawr-Hyjal|r",
+			[51] = 1530495475,
 			[50] = "CHAT_MSG_RAID",
 		}, -- [8]
 		{
-			"robert get spirit", -- [1]
-			"Kamelltotem-Thrall", -- [2]
+			"bombs go back", -- [1]
+			"Shinmoo-Zul'jin", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Kamelltotem-Thrall", -- [5]
+			"Shinmoo", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1576, -- [11]
-			"Player-3678-0AE658A2", -- [12]
+			3028, -- [11]
+			"Player-61-0B598EC5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddKamelltotem-Thrall|r",
-			[51] = 1530416987,
-			[50] = "CHAT_MSG_RAID_LEADER",
+			[52] = "|cffff7c0aShinmoo-Zul'jin|r",
+			[51] = 1530495479,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [9]
 		{
-			"Pull in 10 sec.", -- [1]
-			"Kamelltotem-Thrall", -- [2]
+			"|cff71d5ff|Hspell:61336:0|h[Survival Instincts]|h|r faded!", -- [1]
+			"Khaddarxrawr-Hyjal", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Kamelltotem", -- [5]
+			"Khaddarxrawr-Hyjal", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1581, -- [11]
-			"Player-3678-0AE658A2", -- [12]
+			3031, -- [11]
+			"Player-3661-06D942C0", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddKamelltotem-Thrall|r",
-			[51] = 1530417009,
-			[50] = "CHAT_MSG_RAID_WARNING",
+			[52] = "|cffff7c0aKhaddarxrawr-Hyjal|r",
+			[51] = 1530495485,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [10]
 		{
-			"Pull in 7 sec.", -- [1]
-			"Kamelltotem-Thrall", -- [2]
+			"lust", -- [1]
+			"Shinmoo-Zul'jin", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Kamelltotem", -- [5]
+			"Shinmoo", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1583, -- [11]
-			"Player-3678-0AE658A2", -- [12]
+			3034, -- [11]
+			"Player-61-0B598EC5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddKamelltotem-Thrall|r",
-			[51] = 1530417012,
+			[52] = "|cffff7c0aShinmoo-Zul'jin|r",
+			[51] = 1530495493,
 			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [11]
 		{
-			"Pull in 5 sec.", -- [1]
-			"Kamelltotem-Thrall", -- [2]
+			"lust", -- [1]
+			"Shinmoo-Zul'jin", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Kamelltotem", -- [5]
+			"Shinmoo", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1584, -- [11]
-			"Player-3678-0AE658A2", -- [12]
+			3036, -- [11]
+			"Player-61-0B598EC5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddKamelltotem-Thrall|r",
-			[51] = 1530417014,
+			[52] = "|cffff7c0aShinmoo-Zul'jin|r",
+			[51] = 1530495493,
 			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [12]
 		{
-			"Pull in 4 sec.", -- [1]
-			"Kamelltotem-Thrall", -- [2]
+			"WhoLusted: Zelan-Hellscream cast |cff71d5ff|Hspell:80353:0|h[Time Warp]|h|r!!!", -- [1]
+			"Khaddarxrawr-Hyjal", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Kamelltotem", -- [5]
+			"Khaddarxrawr-Hyjal", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1585, -- [11]
-			"Player-3678-0AE658A2", -- [12]
+			3039, -- [11]
+			"Player-3661-06D942C0", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddKamelltotem-Thrall|r",
-			[51] = 1530417015,
-			[50] = "CHAT_MSG_RAID_WARNING",
+			[52] = "|cffff7c0aKhaddarxrawr-Hyjal|r",
+			[51] = 1530495497,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [13]
 		{
-			"Pull in 3 sec.", -- [1]
-			"Kamelltotem-Thrall", -- [2]
-			"", -- [3]
+			"{rt3}Burst{rt3}", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Kamelltotem", -- [5]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1586, -- [11]
-			"Player-3678-0AE658A2", -- [12]
+			3044, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddKamelltotem-Thrall|r",
-			[51] = 1530417016,
-			[50] = "CHAT_MSG_RAID_WARNING",
+			[52] = "|cffffffffEvan|r",
+			[51] = 1530495505,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [14]
 		{
-			"Pull in 2 sec.", -- [1]
-			"Kamelltotem-Thrall", -- [2]
+			"ORBS KILL", -- [1]
+			"Shinmoo-Zul'jin", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Kamelltotem", -- [5]
+			"Shinmoo", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1587, -- [11]
-			"Player-3678-0AE658A2", -- [12]
+			3047, -- [11]
+			"Player-61-0B598EC5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddKamelltotem-Thrall|r",
-			[51] = 1530417017,
+			[52] = "|cffff7c0aShinmoo-Zul'jin|r",
+			[51] = 1530495510,
 			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [15]
 		{
-			"Pull in 1 sec.", -- [1]
-			"Kamelltotem-Thrall", -- [2]
+			"ORBS KILL", -- [1]
+			"Shinmoo-Zul'jin", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Kamelltotem", -- [5]
+			"Shinmoo", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1588, -- [11]
-			"Player-3678-0AE658A2", -- [12]
+			3048, -- [11]
+			"Player-61-0B598EC5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddKamelltotem-Thrall|r",
-			[51] = 1530417018,
+			[52] = "|cffff7c0aShinmoo-Zul'jin|r",
+			[51] = 1530495511,
 			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [16]
 		{
-			">>> Pull <<<", -- [1]
-			"Kamelltotem-Thrall", -- [2]
+			"|cff71d5ff|Hspell:61336:0|h[Survival Instincts]|h|r activated!", -- [1]
+			"Khaddarxrawr-Hyjal", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Kamelltotem", -- [5]
+			"Khaddarxrawr-Hyjal", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1590, -- [11]
-			"Player-3678-0AE658A2", -- [12]
+			3050, -- [11]
+			"Player-3661-06D942C0", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddKamelltotem-Thrall|r",
-			[51] = 1530417019,
-			[50] = "CHAT_MSG_RAID_WARNING",
+			[52] = "|cffff7c0aKhaddarxrawr-Hyjal|r",
+			[51] = 1530495512,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [17]
 		{
-			"Interrupted Fallen Priestess's |cff71d5ff|Hspell:235969:0|h[Shattering Scream]|h|r!", -- [1]
-			"Mcmambo-BleedingHollow", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Mcmambo-BleedingHollow", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1620, -- [11]
-			"Player-73-0B06C696", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa330c9Mcmambo-BleedingHollow|r",
-			[51] = 1530417152,
-			[50] = "CHAT_MSG_EMOTE",
-		}, -- [18]
-		{
-			"Interrupted Fallen Priestess's |cff71d5ff|Hspell:236361:0|h[Spirit Chains]|h|r!", -- [1]
-			"Mcmambo-BleedingHollow", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Mcmambo-BleedingHollow", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1637, -- [11]
-			"Player-73-0B06C696", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa330c9Mcmambo-BleedingHollow|r",
-			[51] = 1530417170,
-			[50] = "CHAT_MSG_EMOTE",
-		}, -- [19]
-		{
-			"Soulbind on Swaffy", -- [1]
-			"Swaffy-Illidan", -- [2]
+			"{rt3}4", -- [1]
+			"Evan-Illidan", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
-			"Swaffy", -- [5]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1668, -- [11]
-			"Player-57-0948BE6F", -- [12]
+			3052, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff3fc6eaSwaffy|r",
-			[51] = 1530417226,
+			[52] = "|cffffffffEvan|r",
+			[51] = 1530495516,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [18]
+		{
+			"{rt3}3", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			3053, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1530495517,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [19]
+		{
+			"{rt3}2", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			3054, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1530495518,
 			[50] = "CHAT_MSG_SAY",
 		}, -- [20]
 		{
-			"brez tank", -- [1]
-			"Kamelltotem-Thrall", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Kamelltotem-Thrall", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1674, -- [11]
-			"Player-3678-0AE658A2", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff0070ddKamelltotem-Thrall|r",
-			[51] = 1530417243,
-			[50] = "CHAT_MSG_RAID_LEADER",
-		}, -- [21]
-		{
-			"now", -- [1]
-			"Kamelltotem-Thrall", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Kamelltotem-Thrall", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1676, -- [11]
-			"Player-3678-0AE658A2", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff0070ddKamelltotem-Thrall|r",
-			[51] = 1530417244,
-			[50] = "CHAT_MSG_RAID_LEADER",
-		}, -- [22]
-		{
-			"tank ", -- [1]
-			"Ponjita-Ragnaros", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Ponjita-Ragnaros", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1682, -- [11]
-			"Player-1427-085D0779", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Ponjita-Ragnaros|r",
-			[51] = 1530417246,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [23]
-		{
-			"??", -- [1]
-			"Ponjita-Ragnaros", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Ponjita-Ragnaros", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1683, -- [11]
-			"Player-1427-085D0779", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Ponjita-Ragnaros|r",
-			[51] = 1530417247,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [24]
-		{
-			"Soulbind on Evan", -- [1]
+			"{rt3}1", -- [1]
 			"Evan-Illidan", -- [2]
 			"Orcish", -- [3]
 			"", -- [4]
@@ -540,7 +452,7 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1695, -- [11]
+			3056, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -548,275 +460,363 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1530417265,
+			[51] = 1530495519,
 			[50] = "CHAT_MSG_SAY",
+		}, -- [21]
+		{
+			"|cff71d5ff|Hspell:61336:0|h[Survival Instincts]|h|r faded!", -- [1]
+			"Khaddarxrawr-Hyjal", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Khaddarxrawr-Hyjal", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			3057, -- [11]
+			"Player-3661-06D942C0", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffff7c0aKhaddarxrawr-Hyjal|r",
+			[51] = 1530495522,
+			[50] = "CHAT_MSG_RAID",
+		}, -- [22]
+		{
+			"bombs go back", -- [1]
+			"Shinmoo-Zul'jin", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Shinmoo", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			3060, -- [11]
+			"Player-61-0B598EC5", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffff7c0aShinmoo-Zul'jin|r",
+			[51] = 1530495538,
+			[50] = "CHAT_MSG_RAID_WARNING",
+		}, -- [23]
+		{
+			"bombs", -- [1]
+			"Shinmoo-Zul'jin", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Shinmoo", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			3062, -- [11]
+			"Player-61-0B598EC5", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffff7c0aShinmoo-Zul'jin|r",
+			[51] = 1530495545,
+			[50] = "CHAT_MSG_RAID_WARNING",
+		}, -- [24]
+		{
+			"orbs", -- [1]
+			"Shinmoo-Zul'jin", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Shinmoo", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			3077, -- [11]
+			"Player-61-0B598EC5", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffff7c0aShinmoo-Zul'jin|r",
+			[51] = 1530495566,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [25]
 		{
-			"caladen you know mechanic ?", -- [1]
-			"Ponjita-Ragnaros", -- [2]
+			"bombs", -- [1]
+			"Shinmoo-Zul'jin", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Ponjita-Ragnaros", -- [5]
+			"Shinmoo", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1719, -- [11]
-			"Player-1427-085D0779", -- [12]
+			3078, -- [11]
+			"Player-61-0B598EC5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Ponjita-Ragnaros|r",
-			[51] = 1530417295,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aShinmoo-Zul'jin|r",
+			[51] = 1530495567,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [26]
 		{
-			"gl", -- [1]
-			"Kamelltotem-Thrall", -- [2]
+			"thanks for coming", -- [1]
+			"Shinmoo-Zul'jin", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Kamelltotem-Thrall", -- [5]
+			"Shinmoo-Zul'jin", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1720, -- [11]
-			"Player-3678-0AE658A2", -- [12]
+			3094, -- [11]
+			"Player-61-0B598EC5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddKamelltotem-Thrall|r",
-			[51] = 1530417296,
+			[52] = "|cffff7c0aShinmoo-Zul'jin|r",
+			[51] = 1530495584,
 			[50] = "CHAT_MSG_RAID_LEADER",
 		}, -- [27]
 		{
-			"  ~~ ~~~  ~~ FS~   塔~ 外~观★ ~ 王~ 座~英 雄~ ~ M~包 或 装 备  单 买★ 低 保★装 等~ 提~66O-95O★古 尔 丹~ 坐~骑 ★乘~ 装 精 华★新 种 族2O-11O ★飞 行 成 就 ★幽 ~灵虎~~~~~~★", -- [1]
-			"Qasdferterth-Illidan", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:8930:Player-57-09D2DC76:1:7:30:18:4294967295:4294967295:4294967295:4294967295|h[Ya, We've Got Time...]|h|r!", -- [1]
+			"ßrútús-Illidan", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qasdferterth", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
-			0, -- [10]
-			1740, -- [11]
-			"Player-57-0AEE5905", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQasdferterth|r",
-			[51] = 1530417344,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [28]
-		{
-			"  ~~ ~~~  ~~ FS~   塔~ 外~观★ ~ 王~ 座~英 雄~ ~ M~包 或 装 备  单 买★ 低 保★装 等~ 提~66O-95O★古 尔 丹~ 坐~骑 ★乘~ 装 精 华★新 种 族2O-11O ★飞 行 成 就 ★幽 ~灵虎~~~~~~★", -- [1]
-			"Qasdferterth-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qasdferterth", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
-			0, -- [10]
-			1755, -- [11]
-			"Player-57-0AEE5905", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQasdferterth|r",
-			[51] = 1530417391,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [29]
-		{
-			"^LFW_L", -- [1]
-			"Deathblow-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Deathblow", -- [5]
+			"", -- [4]
+			"ßrútús", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			1758, -- [11]
-			"Player-57-05070C09", -- [12]
+			9, -- [11]
+			"Player-57-09D2DC76", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Deathblow|r",
-			[51] = 1530417403,
+			[52] = "|cffaad372ßrútús|r",
+			[51] = 1533010683,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [28]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:10034:Player-57-07EE2907:1:7:30:18:4294967295:4294967295:4294967295:4294967295|h[Mythic: Hellfire High Council]|h|r!", -- [1]
+			"Gooba-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Gooba", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			36, -- [11]
+			"Player-57-07EE2907", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfff48cbaGooba|r",
+			[51] = 1533010776,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [29]
+		{
+			" 燃烧王座英雄史诗个人拾取！个人拾取10件保底。M 阿古斯,古尔丹坐骑100%拾取!,M阿古斯成就,", -- [1]
+			"Ubjskskde-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Ubjskskde", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			64, -- [11]
+			"Player-57-0AFC9C90", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cff3fc6eaUbjskskde|r",
+			[51] = 1533010911,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [30]
 		{
-			"  ~~ ~~~  ~~ FS~   塔~ 外~观★ ~ 王~ 座~英 雄~ ~ M~包 或 装 备  单 买★ 低 保★装 等~ 提~66O-95O★古 尔 丹~ 坐~骑 ★乘~ 装 精 华★新 种 族2O-11O ★飞 行 成 就 ★幽 ~灵虎~~~~~~★", -- [1]
-			"Qasdferterth-Illidan", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:8929:Player-57-09D2DC76:1:7:30:18:4294967295:4294967295:4294967295:4294967295|h[The Steel Has Been Brought]|h|r!", -- [1]
+			"ßrútús-Illidan", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qasdferterth", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"", -- [4]
+			"ßrútús", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			1769, -- [11]
-			"Player-57-0AEE5905", -- [12]
+			71, -- [11]
+			"Player-57-09D2DC76", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQasdferterth|r",
-			[51] = 1530417434,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffaad372ßrútús|r",
+			[51] = 1533010965,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [31]
 		{
-			"  ~~ ~~~  ~~ FS~   塔~ 外~观★ ~ 王~ 座~英 雄~ ~ M~包 或 装 备  单 买★ 低 保★装 等~ 提~66O-95O★古 尔 丹~ 坐~骑 ★乘~ 装 精 华★新 种 族2O-11O ★飞 行 成 就 ★幽 ~灵虎~~~~~~★", -- [1]
-			"Qasdferterth-Illidan", -- [2]
+			" 燃烧王座英雄史诗个人拾取！个人拾取10件保底。M 阿古斯,古尔丹坐骑100%拾取!,M阿古斯成就,", -- [1]
+			"Ubjskskde-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Qasdferterth", -- [5]
-			"DND", -- [6]
+			"Ubjskskde", -- [5]
+			"", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			1779, -- [11]
-			"Player-57-0AEE5905", -- [12]
+			75, -- [11]
+			"Player-57-0AFC9C90", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cffc69b6dQasdferterth|r",
-			[51] = 1530417479,
+			[52] = "|cff3fc6eaUbjskskde|r",
+			[51] = 1533010981,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [32]
 		{
-			"  ~~ ~~~  ~~ FS~   塔~ 外~观★ ~ 王~ 座~英 雄~ ~ M~包 或 装 备  单 买★ 低 保★装 等~ 提~66O-95O★古 尔 丹~ 坐~骑 ★乘~ 装 精 华★新 种 族2O-11O ★飞 行 成 就 ★幽 ~灵虎~~~~~~★", -- [1]
-			"Qasdferterth-Illidan", -- [2]
+			" 燃烧王座英雄史诗个人拾取！个人拾取10件保底。M 阿古斯,古尔丹坐骑100%拾取!,M阿古斯成就,", -- [1]
+			"Ubjskskde-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Qasdferterth", -- [5]
-			"DND", -- [6]
+			"Ubjskskde", -- [5]
+			"", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			1790, -- [11]
-			"Player-57-0AEE5905", -- [12]
+			96, -- [11]
+			"Player-57-0AFC9C90", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cffc69b6dQasdferterth|r",
-			[51] = 1530417524,
+			[52] = "|cff3fc6eaUbjskskde|r",
+			[51] = 1533011051,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [33]
 		{
-			"  ~~ ~~~  ~~ FS~   塔~ 外~观★ ~ 王~ 座~英 雄~ ~ M~包 或 装 备  单 买★ 低 保★装 等~ 提~66O-95O★古 尔 丹~ 坐~骑 ★乘~ 装 精 华★新 种 族2O-11O ★飞 行 成 就 ★幽 ~灵虎~~~~~~★", -- [1]
-			"Qasdferterth-Illidan", -- [2]
+			" 燃烧王座英雄史诗个人拾取！个人拾取10件保底。M 阿古斯,古尔丹坐骑100%拾取!,M阿古斯成就,", -- [1]
+			"Ubjskskde-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Qasdferterth", -- [5]
-			"DND", -- [6]
+			"Ubjskskde", -- [5]
+			"", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			1805, -- [11]
-			"Player-57-0AEE5905", -- [12]
+			113, -- [11]
+			"Player-57-0AFC9C90", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cffc69b6dQasdferterth|r",
-			[51] = 1530417570,
+			[52] = "|cff3fc6eaUbjskskde|r",
+			[51] = 1533011121,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [34]
 		{
-			"  ~~ ~~~  ~~ FS~   塔~ 外~观★ ~ 王~ 座~英 雄~ ~ M~包 或 装 备  单 买★ 低 保★装 等~ 提~66O-95O★古 尔 丹~ 坐~骑 ★乘~ 装 精 华★新 种 族2O-11O ★飞 行 成 就 ★幽 ~灵虎~~~~~~★", -- [1]
-			"Qasdferterth-Illidan", -- [2]
+			" 燃烧王座英雄史诗个人拾取！个人拾取10件保底。M 阿古斯,古尔丹坐骑100%拾取!,M阿古斯成就,", -- [1]
+			"Ubjskskde-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Qasdferterth", -- [5]
-			"DND", -- [6]
+			"Ubjskskde", -- [5]
+			"", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			1816, -- [11]
-			"Player-57-0AEE5905", -- [12]
+			126, -- [11]
+			"Player-57-0AFC9C90", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cffc69b6dQasdferterth|r",
-			[51] = 1530417614,
+			[52] = "|cff3fc6eaUbjskskde|r",
+			[51] = 1533011191,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [35]
 		{
-			"  ~~ ~~~  ~~ FS~   塔~ 外~观★ ~ 王~ 座~英 雄~ ~ M~包 或 装 备  单 买★ 低 保★装 等~ 提~66O-95O★古 尔 丹~ 坐~骑 ★乘~ 装 精 华★新 种 族2O-11O ★飞 行 成 就 ★幽 ~灵虎~~~~~~★", -- [1]
-			"Qasdferterth-Illidan", -- [2]
+			"summon me back please", -- [1]
+			"Karncama-Barthilas", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qasdferterth", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
-			0, -- [10]
-			1820, -- [11]
-			"Player-57-0AEE5905", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQasdferterth|r",
-			[51] = 1530417659,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [36]
-		{
-			"_$1ßrián_$<Magog Cartel> Is getting ready for BFA! Filling our roster back up for heroic and mythic raid content we're in need of DPS! Raid times are Tuesday, Wednesday, Thursday 8-10 server. If you'd like to join or have questions please messa_$f48cba$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Karncama-Barthilas", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			1991, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			141, -- [11]
+			"Player-3723-0A8CA758", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418387,
+			[52] = "|cfff48cbaKarncama-Barthilas|r",
+			[51] = 1533011260,
+			[50] = "CHAT_MSG_RAID",
+		}, -- [36]
+		{
+			" 燃烧王座英雄史诗个人拾取！个人拾取10件保底。M 阿古斯,古尔丹坐骑100%拾取!,M阿古斯成就,", -- [1]
+			"Ubjskskde-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Ubjskskde", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			142, -- [11]
+			"Player-57-0AFC9C90", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cff3fc6eaUbjskskde|r",
+			[51] = 1533011261,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [37]
 		{
-			"_$2Mozzlegaming_$WTS |cffa335ee|Hitem:90655::::::::1:71::::::|h[Reins of the Thundering Ruby Cloud Serpent]|h|r 30k Alani mount runs - 100% drop. Regular Alani Mount seller / Twitch streamer: www.twitch.tv/mozzletoff #LegitSales!!!!!!!!_$c69b6d$", -- [1]
+			"^LFW_L", -- [1]
 			"Evan-Illidan", -- [2]
 			"", -- [3]
 			"6. TCForwarder6IIll", -- [4]
@@ -826,7 +826,7 @@ ElvCharacterDB = {
 			6, -- [8]
 			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1995, -- [11]
+			153, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -834,131 +834,131 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1530418406,
+			[51] = 1533011304,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [38]
 		{
-			"_$3Mozzlegaming_$last spot!_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
+			"ty", -- [1]
+			"Karncama-Barthilas", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Karncama-Barthilas", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			1999, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			157, -- [11]
+			"Player-3723-0A8CA758", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418406,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfff48cbaKarncama-Barthilas|r",
+			[51] = 1533011314,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [39]
 		{
-			"_$4Drëzze_$*Daily Dubs* looking for active players who enjoy BGs, Arenas RBGs And M+, Casual raiding until BFA. Dont Pay for +15 Carrys Join us .18+ PST for more info or inv. _$0070dd$", -- [1]
-			"Evan-Illidan", -- [2]
+			"ty", -- [1]
+			"Slanky-Dath'Remar", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Slanky-Dath'Remar", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2004, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			161, -- [11]
+			"Player-3726-0A9922FF", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418425,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cff8787edSlanky-Dath'Remar|r",
+			[51] = 1533011345,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [40]
 		{
-			"_$5Geoffi_$WTS +15 Keystone carry sold by 11/11M 4.6k score players PST_$c41e3a$", -- [1]
-			"Evan-Illidan", -- [2]
+			"boss @ skull, bomb @ orange, burst go wherever u want just dun die", -- [1]
+			"Whysofat-Thaurissan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Whysofat", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2007, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			162, -- [11]
+			"Player-3724-0752A96B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418425,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffaad372Whysofat-Thaurissan|r",
+			[51] = 1533011349,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [41]
 		{
-			"_$6Littupdays_$We are ILLIDAN THE REST! A new social/PvP guild for hanging out. Never be homeless again, repairs for all and alts are welcome! PST_$ff7c0a$", -- [1]
-			"Evan-Illidan", -- [2]
+			"mage buff", -- [1]
+			"Edîz-Barthilas", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Edîz-Barthilas", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2012, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			169, -- [11]
+			"Player-3723-0AA1622E", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418440,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffEdîz-Barthilas|r",
+			[51] = 1533011390,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [42]
 		{
-			"_$7Shiven_$anyone need |cffffff00|Hquest:39341:110:110:255|h[Vault of the Wardens: Demon's Bile]|h|r ?_$0070dd$", -- [1]
-			"Evan-Illidan", -- [2]
+			"and food!", -- [1]
+			"Spoonheals-BurningBlade", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Spoonheals-BurningBlade", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2017, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			172, -- [11]
+			"Player-91-09850405", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418458,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffSpoonheals-BurningBlade|r",
+			[51] = 1533011400,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [43]
 		{
-			"_$8Maligore_$WTS |cffa335ee|Hitem:152413::::::::110:64::3:4:3610:40:1472:3528:::|h[Felflame Inferno Shoulderpads]|h|r pst offer_$3fc6ea$", -- [1]
+			"Blight", -- [1]
 			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
+			"Orcish", -- [3]
+			"", -- [4]
 			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2021, -- [11]
+			181, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -966,21 +966,21 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1530418462,
-			[50] = "CHAT_MSG_CHANNEL",
+			[51] = 1533011450,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [44]
 		{
-			"_$9Kayukai_$--WTS herioc Abt <Masterloot or PL >. ？？all ML with 8+ pieces  >-Selling M+15 carry, 970 group afk carry. our key your loot!- -kill argus now!-Mage tower？？_$aad372$", -- [1]
+			"4", -- [1]
 			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
+			"Orcish", -- [3]
+			"", -- [4]
 			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2026, -- [11]
+			186, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -988,43 +988,43 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1530418469,
-			[50] = "CHAT_MSG_CHANNEL",
+			[51] = 1533011454,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [45]
 		{
-			"^LFW_L", -- [1]
-			"Angrylady-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Angrylady", -- [5]
+			"3", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2027, -- [11]
-			"Player-57-05DD64D1", -- [12]
+			189, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc69b6dAngrylady|r",
-			[51] = 1530418483,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffEvan|r",
+			[51] = 1533011455,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [46]
 		{
-			"_$10Chinkonkyoku_$<SoCal Warcraft>Guild 备战BFA招收各类会员，活动时间周2-4晚8-11，全新奔现型公会了解一下？详情可移步NGA招募区或M聊_$aad372$", -- [1]
+			"2", -- [1]
 			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
+			"Orcish", -- [3]
+			"", -- [4]
 			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2031, -- [11]
+			192, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -1032,21 +1032,21 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1530418507,
-			[50] = "CHAT_MSG_CHANNEL",
+			[51] = 1533011456,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [47]
 		{
-			"_$11Geoffi_$WTS +15 Keystone carry sold by 11/11M 4.6k score players PST_$c41e3a$", -- [1]
+			"1", -- [1]
 			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
+			"Orcish", -- [3]
+			"", -- [4]
 			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2035, -- [11]
+			194, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -1054,945 +1054,945 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1530418515,
-			[50] = "CHAT_MSG_CHANNEL",
+			[51] = 1533011457,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [48]
 		{
-			"_$12ßrián_$<Magog Cartel> Is getting ready for BFA! Filling our roster back up for heroic and mythic raid content we're in need of DPS! Raid times are Tuesday, Wednesday, Thursday 8-10 server. If you'd like to join or have questions please mess_$f48cba$", -- [1]
-			"Evan-Illidan", -- [2]
+			"lol", -- [1]
+			"Alexissae-MoonGuard", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Alexissae-MoonGuard", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2041, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			205, -- [11]
+			"Player-3675-082E7BEC", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418543,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Alexissae-MoonGuard|r",
+			[51] = 1533011466,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [49]
 		{
-			"_$13Mozzlegaming_$Are you LF help on TSM3, TSM3 Sniper, Gold Farming, LAC gold farm runs, enough to earn a token with minimal time spent? 70+ mil gold earned.  PST for help!_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
+			"tank afk?", -- [1]
+			"Spoonheals-BurningBlade", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Spoonheals-BurningBlade", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2044, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			210, -- [11]
+			"Player-91-09850405", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418543,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffSpoonheals-BurningBlade|r",
+			[51] = 1533011478,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [50]
 		{
-			"_$14Gotcha_$Any guilds doing guldan mount runs_$fff468$", -- [1]
-			"Evan-Illidan", -- [2]
+			"tanks?", -- [1]
+			"Karncama-Barthilas", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Karncama-Barthilas", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2048, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			231, -- [11]
+			"Player-3723-0A8CA758", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418565,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfff48cbaKarncama-Barthilas|r",
+			[51] = 1533011489,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [51]
 		{
-			"_$15Mozzlegaming_$WTS |cffa335ee|Hitem:90655::::::::1:71::::::|h[Reins of the Thundering Ruby Cloud Serpent]|h|r 30k Alani mount runs - 100% drop. Regular Alani Mount seller / Twitch streamer: www.twitch.tv/mozzletoff #LegitSales!!!!!!!!_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
+			"tank was afk?", -- [1]
+			"Spoonheals-BurningBlade", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Spoonheals-BurningBlade", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2052, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			232, -- [11]
+			"Player-91-09850405", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418577,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffSpoonheals-BurningBlade|r",
+			[51] = 1533011490,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [52]
 		{
-			"_$16Mozzlegaming_$last spot!_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
+			"the heck...", -- [1]
+			"Baerut-BleedingHollow", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Baerut-BleedingHollow", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2056, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			233, -- [11]
+			"Player-73-0B5BD98E", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418578,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffc69b6dBaerut-BleedingHollow|r",
+			[51] = 1533011492,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [53]
 		{
-			"_$17Geoffi_$WTS +15 Keystone carry sold by 11/11M 4.6k score players PST_$c41e3a$", -- [1]
-			"Evan-Illidan", -- [2]
+			"the monk?", -- [1]
+			"Spoonheals-BurningBlade", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Spoonheals-BurningBlade", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2060, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			234, -- [11]
+			"Player-91-09850405", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418602,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffSpoonheals-BurningBlade|r",
+			[51] = 1533011492,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [54]
 		{
-			"_$18ßrián_$<Magog Cartel> Is getting ready for BFA! Filling our roster back up for heroic and mythic raid content we're in need of DPS! Raid times are Tuesday, Wednesday, Thursday 8-10 server. If you'd like to join or have questions please mess_$f48cba$", -- [1]
-			"Evan-Illidan", -- [2]
+			"wipe", -- [1]
+			"Whysofat-Thaurissan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Whysofat", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2064, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			235, -- [11]
+			"Player-3724-0752A96B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418606,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffaad372Whysofat-Thaurissan|r",
+			[51] = 1533011498,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [55]
 		{
-			"_$19Littupdays_$We are ILLIDAN THE REST! A new social/PvP guild for hanging out. Never be homeless again, repairs for all and alts are welcome! PST_$ff7c0a$", -- [1]
-			"Evan-Illidan", -- [2]
+			"wtf is this ?", -- [1]
+			"Bursteado-Quel'Thalas", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Bursteado-Quel'Thalas", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2068, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			237, -- [11]
+			"Player-1428-08AC843F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418619,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfff48cbaBursteado-Quel'Thalas|r",
+			[51] = 1533011501,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [56]
 		{
-			"_$20Tårron_$*Daily Dubs* looking for active players who enjoy BGs, Arenas RBGs And M+, Casual raiding until BFA. Dont Pay for +15 Carrys Join us .18+ PST for more info or inv. _$f48cba$", -- [1]
-			"Evan-Illidan", -- [2]
+			"monk is just AFK or dc'd", -- [1]
+			"Bluesteel-Kil'jaeden", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Bluesteel-Kil'jaeden", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2072, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			241, -- [11]
+			"Player-9-0AF15F4F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418648,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffc41e3aBluesteel-Kil'jaeden|r",
+			[51] = 1533011503,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [57]
 		{
-			"_$21Helldall_$WTS Mythic 15-20 Carries in time by 5.3k raider.io m+ score players for IO Boost, Artifact appeareance, gear (Guaranteed 960+ piece on tuesday) PST for more info GOLD ONLY_$a330c9$", -- [1]
-			"Evan-Illidan", -- [2]
+			"also dont drop blight in melee", -- [1]
+			"Intuitive-Stormrage", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Intuitive-Stormrage", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2076, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			243, -- [11]
+			"Player-60-0B9FA0F3", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418655,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Intuitive-Stormrage|r",
+			[51] = 1533011503,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [58]
 		{
-			"^LFW_L", -- [1]
-			"Daggs-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Daggs", -- [5]
+			"Blight", -- [1]
+			"Whysofat-Thaurissan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Whysofat-Thaurissan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2077, -- [11]
-			"Player-57-0A6251E2", -- [12]
+			245, -- [11]
+			"Player-3724-0752A96B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffff468Daggs|r",
-			[51] = 1530418675,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffaad372Whysofat-Thaurissan|r",
+			[51] = 1533011505,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [59]
 		{
-			"_$22Glowinsticks_$WTB Heoric Tos KJ kill_$a330c9$", -- [1]
-			"Evan-Illidan", -- [2]
+			"monk tank dc?", -- [1]
+			"Spoonheals-BurningBlade", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Spoonheals-BurningBlade", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2081, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			253, -- [11]
+			"Player-91-09850405", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418679,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffSpoonheals-BurningBlade|r",
+			[51] = 1533011518,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [60]
 		{
-			"^LFW_L", -- [1]
-			"Angrylady-Illidan", -- [2]
+			"he was just standing there", -- [1]
+			"Spoonheals-BurningBlade", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Angrylady", -- [5]
+			"", -- [4]
+			"Spoonheals-BurningBlade", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2082, -- [11]
-			"Player-57-05DD64D1", -- [12]
+			257, -- [11]
+			"Player-91-09850405", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc69b6dAngrylady|r",
-			[51] = 1530418683,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffSpoonheals-BurningBlade|r",
+			[51] = 1533011522,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [61]
 		{
-			"_$23Vretko_$LF 3s 2k PUSH im 1945cr ELE LOOKING FOR THAT 2k MOG PLEASE PST_$0070dd$", -- [1]
-			"Evan-Illidan", -- [2]
+			"most prob", -- [1]
+			"Whysofat-Thaurissan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Whysofat-Thaurissan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2086, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			258, -- [11]
+			"Player-3724-0752A96B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418685,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffaad372Whysofat-Thaurissan|r",
+			[51] = 1533011526,
+			[50] = "CHAT_MSG_RAID_LEADER",
 		}, -- [62]
 		{
-			"_$24Rusianpower_$<SOULLES> High Exp  PvP GUILD.We Always Do RBGs/BGs/Arenas/World PvP.Many Pro exp PvP Players From 1700 +exp till 2.6+exp.We are Looking more Active Players to join our RBGs/Arena teams. U can find your Partner for PvP in our Gui_$c41e3a$", -- [1]
-			"Evan-Illidan", -- [2]
+			"he prolly dc", -- [1]
+			"Spoonheals-BurningBlade", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Spoonheals-BurningBlade", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2090, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			263, -- [11]
+			"Player-91-09850405", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418699,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffSpoonheals-BurningBlade|r",
+			[51] = 1533011556,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [63]
 		{
-			"_$25Geoffi_$WTS +15 Keystone carry sold by 11/11M 4.6k score players PST_$c41e3a$", -- [1]
-			"Evan-Illidan", -- [2]
+			"it happens", -- [1]
+			"Spoonheals-BurningBlade", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Spoonheals-BurningBlade", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2094, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			264, -- [11]
+			"Player-91-09850405", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418713,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffSpoonheals-BurningBlade|r",
+			[51] = 1533011559,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [64]
 		{
-			"_$26Kayukai_$--WTS herioc Abt <Masterloot or PL >. ？？all ML with 8+ pieces  >-Selling M+15 carry, 970 group afk carry. our key your loot!- -kill argus now!-Mage tower？？_$aad372$", -- [1]
-			"Evan-Illidan", -- [2]
+			"there it goes", -- [1]
+			"Hurracan-Tanaris", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Hurracan-Tanaris", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2098, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			265, -- [11]
+			"Player-158-07343DDD", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418729,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cff0070ddHurracan-Tanaris|r",
+			[51] = 1533011574,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [65]
 		{
-			"_$27Helldall_$WTS Mythic 15-20 Carries in time by 5.3k raider.io m+ score players for IO Boost, Artifact appeareance, gear (Guaranteed 960+ piece on tuesday) PST for more info GOLD ONLY_$a330c9$", -- [1]
-			"Evan-Illidan", -- [2]
+			"change the Monk to a dps role so it can attract tanks", -- [1]
+			"Hurracan-Tanaris", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Hurracan-Tanaris", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2102, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			284, -- [11]
+			"Player-158-07343DDD", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418731,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cff0070ddHurracan-Tanaris|r",
+			[51] = 1533011666,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [66]
 		{
-			"_$28Geoffi_$WTS +15 Keystone carry sold by 11/11M 4.6k score players PST_$c41e3a$", -- [1]
-			"Evan-Illidan", -- [2]
+			"How long are we waiting cause I missed Argus on my main (Prot Warrior)", -- [1]
+			"Hurracan-Tanaris", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Hurracan-Tanaris", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2106, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			299, -- [11]
+			"Player-158-07343DDD", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418785,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cff0070ddHurracan-Tanaris|r",
+			[51] = 1533011764,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [67]
 		{
-			"_$29Littupdays_$We are ILLIDAN THE REST! A new social/PvP guild for hanging out. Never be homeless again, repairs for all and alts are welcome! PST_$ff7c0a$", -- [1]
-			"Evan-Illidan", -- [2]
+			"till we get a tank?", -- [1]
+			"Whysofat-Thaurissan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Whysofat-Thaurissan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2110, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			301, -- [11]
+			"Player-3724-0752A96B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418800,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffaad372Whysofat-Thaurissan|r",
+			[51] = 1533011783,
+			[50] = "CHAT_MSG_RAID_LEADER",
 		}, -- [68]
 		{
-			"_$30ßrián_$<Magog Cartel> Is getting ready for BFA! Filling our roster back up for heroic and mythic raid content we're in need of DPS! Raid times are Tuesday, Wednesday, Thursday 8-10 server. If you'd like to join or have questions please mess_$f48cba$", -- [1]
-			"Evan-Illidan", -- [2]
+			"Well what are you waiting for??", -- [1]
+			"Intuitive-Stormrage", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Intuitive-Stormrage", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2114, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			302, -- [11]
+			"Player-60-0B9FA0F3", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418801,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Intuitive-Stormrage|r",
+			[51] = 1533011784,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [69]
 		{
-			"_$31Afkimblind_$WTS Heroic Argus only. Gold only. Get your AOTC & |cffa335ee|Hitem:152901::::::::110:581::11::::|h[Kirin Tor Summoning Crystal]|h|r before prepatch, pulling tonight 3 spotsl eft_$a330c9$", -- [1]
-			"Evan-Illidan", -- [2]
+			"lul", -- [1]
+			"Hurracan-Tanaris", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Hurracan-Tanaris", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2118, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			304, -- [11]
+			"Player-158-07343DDD", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418802,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cff0070ddHurracan-Tanaris|r",
+			[51] = 1533011792,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [70]
 		{
-			"_$32Gotcha_$wtb guldan mount_$fff468$", -- [1]
-			"Evan-Illidan", -- [2]
+			"rubs her |Hitem:36863|h|cFFFFFFFF[Decahedral Dwarven Dice]|r|h between her hands and rolls.", -- [1]
+			"Doinitwrong-Ysera", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Doinitwrong-Ysera", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2122, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			307, -- [11]
+			"Player-63-08E30839", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418839,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cff8787edDoinitwrong-Ysera|r",
+			[51] = 1533011817,
+			[50] = "CHAT_MSG_EMOTE",
 		}, -- [71]
 		{
-			"_$33Helldall_$WTS Mythic 15-20 Carries in time by 5.3k raider.io m+ score players for IO Boost, Artifact appeareance, gear (Guaranteed 960+ piece on tuesday) PST for more info GOLD ONLY_$a330c9$", -- [1]
-			"Evan-Illidan", -- [2]
+			"casually tosses her |Hitem:36862|h|cFFFFFFFF[Worn Troll Dice]|r|h.", -- [1]
+			"Doinitwrong-Ysera", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Doinitwrong-Ysera", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2126, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			310, -- [11]
+			"Player-63-08E30839", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418842,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cff8787edDoinitwrong-Ysera|r",
+			[51] = 1533011819,
+			[50] = "CHAT_MSG_EMOTE",
 		}, -- [72]
 		{
-			"_$34Maligore_$WTS |cffa335ee|Hitem:152413::::::::110:64::3:4:3610:40:1472:3528:::|h[Felflame Inferno Shoulderpads]|h|r pst offer_$3fc6ea$", -- [1]
-			"Evan-Illidan", -- [2]
+			"he getting on his tank i assume", -- [1]
+			"Spoonheals-BurningBlade", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Spoonheals-BurningBlade", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2130, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			311, -- [11]
+			"Player-91-09850405", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418853,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffSpoonheals-BurningBlade|r",
+			[51] = 1533011820,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [73]
 		{
-			"_$35Geoffi_$WTS +15 Keystone carry sold by 11/11M 4.6k score players PST_$c41e3a$", -- [1]
-			"Evan-Illidan", -- [2]
+			"casually tosses her |Hitem:63269|h|cFFFFFFFF[Loaded Gnomish Dice]|r|h.", -- [1]
+			"Doinitwrong-Ysera", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Doinitwrong-Ysera", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2134, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			314, -- [11]
+			"Player-63-08E30839", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418856,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cff8787edDoinitwrong-Ysera|r",
+			[51] = 1533011821,
+			[50] = "CHAT_MSG_EMOTE",
 		}, -- [74]
 		{
-			"_$36Shampai_$LFM Mythic 6 need tank and Dps, whisper for inv, Streaming live @healmeshampai via twitch_$0070dd$", -- [1]
-			"Evan-Illidan", -- [2]
+			"summ & buffs", -- [1]
+			"Whysofat-Thaurissan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Whysofat", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2139, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			333, -- [11]
+			"Player-3724-0752A96B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418876,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffaad372Whysofat-Thaurissan|r",
+			[51] = 1533011889,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [75]
 		{
-			"_$37Helldall_$WTS Mythic 15-20 Carries in time by 5.3k raider.io m+ score players for IO Boost, Artifact appeareance, gear (Guaranteed 960+ piece on tuesday) PST for more info GOLD ONLY_$a330c9$", -- [1]
-			"Evan-Illidan", -- [2]
+			"alex", -- [1]
+			"Whysofat-Thaurissan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Whysofat", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2143, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			339, -- [11]
+			"Player-3724-0752A96B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418882,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffaad372Whysofat-Thaurissan|r",
+			[51] = 1533011927,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [76]
 		{
-			"_$38ßrián_$<Magog Cartel> Is getting ready for BFA! Filling our roster back up for heroic and mythic raid content we're in need of DPS! Raid times are Tuesday, Wednesday, Thursday 8-10 server. If you'd like to join or have questions please mess_$f48cba$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Blight", -- [1]
+			"Whysofat-Thaurissan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Whysofat-Thaurissan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2147, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			363, -- [11]
+			"Player-3724-0752A96B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418886,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffaad372Whysofat-Thaurissan|r",
+			[51] = 1533011986,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [77]
 		{
-			"_$39Geoffi_$WTS +15 Keystone carry sold by 11/11M 4.6k score players PST_$c41e3a$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"4", -- [1]
+			"Whysofat-Thaurissan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Whysofat-Thaurissan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2151, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			368, -- [11]
+			"Player-3724-0752A96B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418888,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffaad372Whysofat-Thaurissan|r",
+			[51] = 1533011990,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [78]
 		{
-			"_$40Afkimblind_$WTS Heroic Argus only. Gold only. get your AOTC and |cffa335ee|Hitem:152901::::::::110:581::11::::|h[Kirin Tor Summoning Crystal]|h|r before prepatch. Pulling tonight. 3 spots left_$a330c9$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"3", -- [1]
+			"Whysofat-Thaurissan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Whysofat-Thaurissan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2156, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			370, -- [11]
+			"Player-3724-0752A96B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418896,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffaad372Whysofat-Thaurissan|r",
+			[51] = 1533011990,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [79]
 		{
-			"_$41Qsdfstedfhfg_$  ~~ ~ ~  ~~ FS~   塔~ 外~观★ ~ 王~ 座~英 雄~ ~ M~包 或 装 备  单 买★ 低 保★装 等~ 提~66O-95O★古 尔 丹~ 坐~骑 ★乘~ 装 精 华★新 种 族2O-11O ★飞 行 成 就 ★幽 ~灵虎~~ ~ ~ ~~★_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"2", -- [1]
+			"Whysofat-Thaurissan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Whysofat-Thaurissan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2160, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			371, -- [11]
+			"Player-3724-0752A96B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418902,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffaad372Whysofat-Thaurissan|r",
+			[51] = 1533011992,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [80]
 		{
-			"_$42Korobb_$<Titanforged>  Looking for your new guild for BFA?  <Titanforged> (11/11H 2/11M) is now recruiting raid ready Healers & DPS for Mythic Antorus Progression, Heroic Antorus, M+ Keys, PvP and more! We raid 8-11pm Tues-Thurs server time. _$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"1", -- [1]
+			"Whysofat-Thaurissan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Whysofat-Thaurissan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2164, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			372, -- [11]
+			"Player-3724-0752A96B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418913,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffaad372Whysofat-Thaurissan|r",
+			[51] = 1533011993,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [81]
 		{
-			"_$43Tårron_$*Daily Dubs* looking for active players who enjoy BGs, Arenas RBGs And M+, Casual raiding until BFA. Dont Pay for +15 Carrys Join us .18+ PST for more info or inv. _$f48cba$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Blight", -- [1]
+			"Whysofat-Thaurissan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Whysofat-Thaurissan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2168, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			375, -- [11]
+			"Player-3724-0752A96B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418924,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffaad372Whysofat-Thaurissan|r",
+			[51] = 1533012006,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [82]
 		{
-			"_$44Shampai_$LFM Mythic lvl6 |cffa335ee|Hkeystone:210:6:5:0:0|h[Keystone: Court of Stars (6)]|h|r need tank and Dps, whisper for inv, Streaming live @healmeshampai via twitch_$0070dd$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Qualar", -- [1]
+			"Edîz-Barthilas", -- [2]
+			"Shath'Yar", -- [3]
+			"", -- [4]
+			"Edîz-Barthilas", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2173, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			379, -- [11]
+			"Player-3723-0AA1622E", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418937,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffEdîz-Barthilas|r",
+			[51] = 1533012010,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [83]
 		{
-			"_$45Afkimblind_$WTS Heroic Argus only. Gold only. get your AOTC and |cffa335ee|Hitem:152901::::::::110:581::11::::|h[Kirin Tor Summoning Crystal]|h|r before prepatch. Pulling tonight. 3 spots left_$a330c9$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"4", -- [1]
+			"Whysofat-Thaurissan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Whysofat-Thaurissan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2179, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			380, -- [11]
+			"Player-3724-0752A96B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418958,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffaad372Whysofat-Thaurissan|r",
+			[51] = 1533012010,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [84]
 		{
-			"_$46Geoffi_$WTS +15 Keystone carry sold by 11/11M 4.6k score players PST_$c41e3a$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"3", -- [1]
+			"Whysofat-Thaurissan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Whysofat-Thaurissan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2183, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			381, -- [11]
+			"Player-3724-0752A96B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418960,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffaad372Whysofat-Thaurissan|r",
+			[51] = 1533012011,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [85]
 		{
-			"_$47Littupdays_$We are ILLIDAN THE REST! A new social/PvP guild for hanging out. Never be homeless again, repairs for all and alts are welcome! PST_$ff7c0a$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"2", -- [1]
+			"Whysofat-Thaurissan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Whysofat-Thaurissan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2187, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			385, -- [11]
+			"Player-3724-0752A96B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418980,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffaad372Whysofat-Thaurissan|r",
+			[51] = 1533012012,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [86]
 		{
-			"_$48Ironball_$有没有美西时间的公会要萌新呢~_$fff468$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"{rt5} Crit/Mast", -- [1]
+			"Arcimius-Tanaris", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Arcimius-Tanaris", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2191, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			386, -- [11]
+			"Player-158-0734AF45", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418985,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffc69b6dArcimius-Tanaris|r",
+			[51] = 1533012012,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [87]
 		{
-			"_$49Kokoto_$---WTS |cff71d5ff|Hspell:132036:0|h[Thundering Ruby Cloud Serpent]|h|r 35k----_$3fc6ea$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"1", -- [1]
+			"Whysofat-Thaurissan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Whysofat-Thaurissan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2195, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			389, -- [11]
+			"Player-3724-0752A96B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418986,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffaad372Whysofat-Thaurissan|r",
+			[51] = 1533012013,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [88]
 		{
-			"_$50Helldall_$WTS Mythic 15-20 Carries in time by 5.3k raider.io m+ score players for IO Boost, Artifact appeareance, gear (Guaranteed 960+ piece on tuesday) PST for more info GOLD ONLY_$a330c9$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"I", -- [1]
+			"Edîz-Barthilas", -- [2]
+			"Shath'Yar", -- [3]
+			"", -- [4]
+			"Edîz-Barthilas", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2200, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			391, -- [11]
+			"Player-3723-0AA1622E", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418989,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffEdîz-Barthilas|r",
+			[51] = 1533012014,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [89]
 		{
-			"_$51Kayukai_$--WTS herioc Abt <Masterloot or PL >. ？？all ML with 8+ pieces  >-Selling M+15 carry, 970 group afk carry. our key your loot!- -kill argus now!-Mage tower？？_$aad372$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"I", -- [1]
+			"Edîz-Barthilas", -- [2]
+			"Shath'Yar", -- [3]
+			"", -- [4]
+			"Edîz-Barthilas", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2204, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			393, -- [11]
+			"Player-3723-0AA1622E", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530418989,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffEdîz-Barthilas|r",
+			[51] = 1533012015,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [90]
 		{
-			"_$52Maligore_$WTS |cffa335ee|Hitem:152413::::::::110:64::3:4:3610:40:1472:3528:::|h[Felflame Inferno Shoulderpads]|h|r pst offer_$3fc6ea$", -- [1]
+			"Blight", -- [1]
 			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
+			"Orcish", -- [3]
+			"", -- [4]
 			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2208, -- [11]
+			407, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2000,43 +2000,43 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1530418993,
-			[50] = "CHAT_MSG_CHANNEL",
+			[51] = 1533012035,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [91]
 		{
-			"_$53Shampai_$LFM |cffa335ee|Hkeystone:210:6:5:0:0|h[Keystone: Court of Stars (6)]|h|r need tank and Dps, whisper for inv, Streaming live @healmeshampai via twitch_$0070dd$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Blight", -- [1]
+			"Doinitwrong-Ysera", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Doinitwrong-Ysera", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2213, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			418, -- [11]
+			"Player-63-08E30839", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530419002,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cff8787edDoinitwrong-Ysera|r",
+			[51] = 1533012039,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [92]
 		{
-			"_$54Qsdfstedfhfg_$  ~~ ~ ~  ~~ FS~   塔~ 外~观★ ~ 王~ 座~英 雄~ ~ M~包 或 装 备  单 买★ 低 保★装 等~ 提~66O-95O★古 尔 丹~ 坐~骑 ★乘~ 装 精 华★新 种 族2O-11O ★飞 行 成 就 ★幽 ~灵虎~~ ~ ~ ~~★_$c69b6d$", -- [1]
+			"4", -- [1]
 			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
+			"Orcish", -- [3]
+			"", -- [4]
 			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2217, -- [11]
+			419, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2044,21 +2044,21 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1530419002,
-			[50] = "CHAT_MSG_CHANNEL",
+			[51] = 1533012039,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [93]
 		{
-			"_$55ßrián_$<Magog Cartel> Is getting ready for BFA! Filling our roster back up for heroic and mythic raid content we're in need of DPS! Raid times are Tuesday, Wednesday, Thursday 8-10 server. If you'd like to join or have questions please mess_$f48cba$", -- [1]
+			"3", -- [1]
 			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
+			"Orcish", -- [3]
+			"", -- [4]
 			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2220, -- [11]
+			422, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2066,21 +2066,21 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1530419002,
-			[50] = "CHAT_MSG_CHANNEL",
+			[51] = 1533012040,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [94]
 		{
-			"_$56Geoffi_$WTS +15 Keystone carry sold by 11/11M 4.6k score players PST_$c41e3a$", -- [1]
+			"2", -- [1]
 			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
+			"Orcish", -- [3]
+			"", -- [4]
 			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2224, -- [11]
+			425, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2088,21 +2088,21 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1530419005,
-			[50] = "CHAT_MSG_CHANNEL",
+			[51] = 1533012041,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [95]
 		{
-			"_$57Kokoto_$----WTS |cff71d5ff|Hspell:132036:0|h[Thundering Ruby Cloud Serpent]|h|r 35k---_$3fc6ea$", -- [1]
+			"1", -- [1]
 			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
+			"Orcish", -- [3]
+			"", -- [4]
 			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2228, -- [11]
+			427, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2110,131 +2110,131 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1530419057,
-			[50] = "CHAT_MSG_CHANNEL",
+			[51] = 1533012042,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [96]
 		{
-			"_$58Shampai_$LFM |cffa335ee|Hkeystone:210:6:5:0:0|h[Keystone: Court of Stars (6)]|h|r need tank and Dps, whisper for inv, Streaming live @healmeshampai via twitch_$0070dd$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"4", -- [1]
+			"Doinitwrong-Ysera", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Doinitwrong-Ysera", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2232, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			430, -- [11]
+			"Player-63-08E30839", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530419084,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cff8787edDoinitwrong-Ysera|r",
+			[51] = 1533012043,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [97]
 		{
-			"_$59ßrián_$<Magog Cartel> Is getting ready for BFA! Filling our roster back up for heroic and mythic raid content we're in need of DPS! Raid times are Tuesday, Wednesday, Thursday 8-10 server. If you'd like to join or have questions please mess_$f48cba$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"3", -- [1]
+			"Doinitwrong-Ysera", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Doinitwrong-Ysera", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2236, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			431, -- [11]
+			"Player-63-08E30839", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530419090,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cff8787edDoinitwrong-Ysera|r",
+			[51] = 1533012044,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [98]
 		{
-			"_$60Kulixa_$LF Raiding guild that's chill and that does Heroic / Mythic and that's active during the week preferrably Mon, Wed and Fri - ilvl 964 DH havoc PST_$a330c9$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"2", -- [1]
+			"Doinitwrong-Ysera", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Doinitwrong-Ysera", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2240, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			432, -- [11]
+			"Player-63-08E30839", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530419094,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cff8787edDoinitwrong-Ysera|r",
+			[51] = 1533012045,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [99]
 		{
-			"  ~~ ~ ~  ~~ FS~   塔~ 外~观★ ~ 王~ 座~英 雄~ ~ M~包 或 装 备  单 买★ 低 保★装 等~ 提~66O-95O★古 尔 丹~ 坐~骑 ★乘~ 装 精 华★新 种 族2O-11O ★飞 行 成 就 ★幽 ~灵虎~~ ~ ~ ~~★", -- [1]
-			"Qsdfstedfhfg-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfstedfhfg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"1", -- [1]
+			"Doinitwrong-Ysera", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Doinitwrong-Ysera", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2241, -- [11]
-			"Player-57-0AEE6204", -- [12]
+			433, -- [11]
+			"Player-63-08E30839", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfstedfhfg|r",
-			[51] = 1530419101,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cff8787edDoinitwrong-Ysera|r",
+			[51] = 1533012046,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [100]
 		{
-			"_$61Qsdfstedfhfg_$  ~~ ~ ~  ~~ FS~   塔~ 外~观★ ~ 王~ 座~英 雄~ ~ M~包 或 装 备  单 买★ 低 保★装 等~ 提~66O-95O★古 尔 丹~ 坐~骑 ★乘~ 装 精 华★新 种 族2O-11O ★飞 行 成 就 ★幽 ~灵虎~~ ~ ~ ~~★_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
+			"....", -- [1]
+			"Kundershot-Turalyon", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Kundershot-Turalyon", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2244, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			436, -- [11]
+			"Player-3685-09D6EE05", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530419101,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffaad372Kundershot-Turalyon|r",
+			[51] = 1533012055,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [101]
 		{
-			"_$62Geoffi_$WTS +15 Keystone carry sold by 11/11M 4.6k score players PST_$c41e3a$", -- [1]
+			"{rt2}Bomb{rt2}", -- [1]
 			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
+			"Orcish", -- [3]
+			"", -- [4]
 			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2249, -- [11]
+			467, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2242,21 +2242,21 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1530419105,
-			[50] = "CHAT_MSG_CHANNEL",
+			[51] = 1533012121,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [102]
 		{
-			"_$63Lastbreath_$||The Evicted  || is a multi-gaming community that does it all! We are currently four guilds strong and are looking for new members who are interested in joining a social guild that goes beyond WoW. Join us and be part of an activ_$aad372$", -- [1]
+			"{rt2}4", -- [1]
 			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
+			"Orcish", -- [3]
+			"", -- [4]
 			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2253, -- [11]
+			472, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2264,21 +2264,21 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1530419114,
-			[50] = "CHAT_MSG_CHANNEL",
+			[51] = 1533012132,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [103]
 		{
-			"_$64Shampai_$LFM |cffa335ee|Hkeystone:210:6:5:0:0|h[Keystone: Court of Stars (6)]|h|r need tank and Dps, whisper for inv, Streaming live @healmeshampai via twitch_$0070dd$", -- [1]
+			"{rt2}3", -- [1]
 			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
+			"Orcish", -- [3]
+			"", -- [4]
 			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2257, -- [11]
+			475, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2286,21 +2286,21 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1530419116,
-			[50] = "CHAT_MSG_CHANNEL",
+			[51] = 1533012133,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [104]
 		{
-			"_$65Sarzhi_$[SELLING] M+15 carries! Gives 960 to 985 gear and 120 Wakening Essence from your weekly chest. Sold by 11/11M 975+ raiders. Guaranteed in time._$0070dd$", -- [1]
+			"{rt2}2", -- [1]
 			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
+			"Orcish", -- [3]
+			"", -- [4]
 			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2261, -- [11]
+			476, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2308,21 +2308,21 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1530419117,
-			[50] = "CHAT_MSG_CHANNEL",
+			[51] = 1533012134,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [105]
 		{
-			"_$66Maligore_$WTS |cffa335ee|Hitem:152413::::::::110:64::3:4:3610:40:1472:3528:::|h[Felflame Inferno Shoulderpads]|h|r pst offer_$3fc6ea$", -- [1]
+			"{rt2}1", -- [1]
 			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
+			"Orcish", -- [3]
+			"", -- [4]
 			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2265, -- [11]
+			477, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2330,219 +2330,219 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1530419129,
-			[50] = "CHAT_MSG_CHANNEL",
+			[51] = 1533012135,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [106]
 		{
-			"_$67Helldall_$WTS Mythic 15-20 Carries in time by 5.3k raider.io m+ score players for IO Boost, Artifact appeareance, gear (Guaranteed 960+ piece on tuesday) PST for more info GOLD ONLY_$a330c9$", -- [1]
-			"Evan-Illidan", -- [2]
+			"|cff71d5ff|Hspell:6940:0|h[Blessing of Sacrifice]|h|r cast on You!", -- [1]
+			"Karncama-Barthilas", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Karncama-Barthilas", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2269, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			502, -- [11]
+			"Player-3723-0A8CA758", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530419134,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfff48cbaKarncama-Barthilas|r",
+			[51] = 1533012237,
+			[50] = "CHAT_MSG_WHISPER",
 		}, -- [107]
 		{
-			"_$68Geoffi_$WTS +15 Keystone carry sold by 11/11M 4.6k score players PST_$c41e3a$", -- [1]
-			"Evan-Illidan", -- [2]
+			"|cff71d5ff|Hspell:31821:0|h[Aura Mastery]|h|r activated!", -- [1]
+			"Karncama-Barthilas", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Karncama-Barthilas", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2274, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			504, -- [11]
+			"Player-3723-0A8CA758", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530419153,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfff48cbaKarncama-Barthilas|r",
+			[51] = 1533012240,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [108]
 		{
-			"_$69Kokoto_$---WTS |cff71d5ff|Hspell:132036:0|h[Thundering Ruby Cloud Serpent]|h|r 35k---_$3fc6ea$", -- [1]
-			"Evan-Illidan", -- [2]
+			"|cff71d5ff|Hspell:31821:0|h[Aura Mastery]|h|r faded!", -- [1]
+			"Karncama-Barthilas", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Karncama-Barthilas", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2279, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			507, -- [11]
+			"Player-3723-0A8CA758", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530419159,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfff48cbaKarncama-Barthilas|r",
+			[51] = 1533012248,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [109]
 		{
-			"_$70Littupdays_$We are ILLIDAN THE REST! A new social/PvP guild for hanging out. Never be homeless again, repairs for all and alts are welcome! PST_$ff7c0a$", -- [1]
-			"Evan-Illidan", -- [2]
+			"im going to save BR", -- [1]
+			"Bluesteel-Kil'jaeden", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Bluesteel-Kil'jaeden", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2283, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			513, -- [11]
+			"Player-9-0AF15F4F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530419160,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffc41e3aBluesteel-Kil'jaeden|r",
+			[51] = 1533012262,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [110]
 		{
-			"_$71Purplecream_$<It Shreds> is a new pvp guild recruiting active players for Rated Battlegrounds, who are willing to focus and being able to communicate on discord. We still need all roles. We plan on running rbgs mainly on the weekend and rando_$ff7c0a$", -- [1]
-			"Evan-Illidan", -- [2]
+			"ill do orbs, everyone res", -- [1]
+			"Whysofat-Thaurissan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Whysofat-Thaurissan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2287, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			521, -- [11]
+			"Player-3724-0752A96B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530419160,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffaad372Whysofat-Thaurissan|r",
+			[51] = 1533012303,
+			[50] = "CHAT_MSG_RAID_LEADER",
 		}, -- [111]
 		{
-			"_$72Shampai_$LFM |cffa335ee|Hkeystone:210:6:5:0:0|h[Keystone: Court of Stars (6)]|h|r need tank and Dps, whisper for invh_$0070dd$", -- [1]
-			"Evan-Illidan", -- [2]
+			"lust when TF", -- [1]
+			"Whysofat-Thaurissan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Whysofat-Thaurissan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2291, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			522, -- [11]
+			"Player-3724-0752A96B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530419162,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffaad372Whysofat-Thaurissan|r",
+			[51] = 1533012306,
+			[50] = "CHAT_MSG_RAID_LEADER",
 		}, -- [112]
 		{
-			"_$73Greenlandia_$WTS [Plans: Felsteel Longblade][Guardian Cub][Landro's Lichling][Skullflame Shield]_$aad372$", -- [1]
-			"Evan-Illidan", -- [2]
+			"ranged plz kill orbs", -- [1]
+			"Whysofat-Thaurissan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Whysofat-Thaurissan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2295, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			533, -- [11]
+			"Player-3724-0752A96B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530419178,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffaad372Whysofat-Thaurissan|r",
+			[51] = 1533012328,
+			[50] = "CHAT_MSG_RAID_LEADER",
 		}, -- [113]
 		{
-			"_$74Lastbreath_$||The Evicted II|| is a multi-gaming community that does it all! We are currently three guilds strong and are looking for new members who are interested in joining a social guild that goes beyond WoW. Join us and be part of an act_$aad372$", -- [1]
-			"Evan-Illidan", -- [2]
+			"rebuffs", -- [1]
+			"Whysofat-Thaurissan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Whysofat", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2299, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			537, -- [11]
+			"Player-3724-0752A96B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530419184,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffaad372Whysofat-Thaurissan|r",
+			[51] = 1533012350,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [114]
 		{
-			"_$75Wobblê_$ <Blitzd> is recruiting all PVP'ers for Rbgs and arenas....come kick it and shit on some noobs_$ff7c0a$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"{rt7}Burst{rt7}", -- [1]
+			"Edîz-Barthilas", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Edîz-Barthilas", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2303, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			544, -- [11]
+			"Player-3723-0AA1622E", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530419188,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffEdîz-Barthilas|r",
+			[51] = 1533012368,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [115]
 		{
-			"_$76Wobblê_$LFM 2k xp 1800mmr RBG's w/ discord _$ff7c0a$", -- [1]
+			"{rt2}Bomb{rt2}", -- [1]
 			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
+			"Orcish", -- [3]
+			"", -- [4]
 			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2307, -- [11]
+			547, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2550,21 +2550,21 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1530419188,
-			[50] = "CHAT_MSG_CHANNEL",
+			[51] = 1533012368,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [116]
 		{
-			"_$77Helldall_$WTS Mythic 15-20 Carries in time by 5.3k raider.io m+ score players for IO Boost, Artifact appeareance, gear (Guaranteed 960+ piece on tuesday) PST for more info GOLD ONLY_$a330c9$", -- [1]
+			"{rt2}4", -- [1]
 			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
+			"Orcish", -- [3]
+			"", -- [4]
 			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2311, -- [11]
+			551, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2572,43 +2572,43 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1530419196,
-			[50] = "CHAT_MSG_CHANNEL",
+			[51] = 1533012379,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [117]
 		{
-			"  ~~ ~ ~  ~~ FS~   塔~ 外~观★ ~ 王~ 座~英 雄~ ~ M~包 或 装 备  单 买★ 低 保★装 等~ 提~66O-95O★古 尔 丹~ 坐~骑 ★乘~ 装 精 华★新 种 族2O-11O ★飞 行 成 就 ★幽 ~灵虎~~ ~ ~ ~~★", -- [1]
-			"Qsdfstedfhfg-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfstedfhfg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"{rt2}3", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2312, -- [11]
-			"Player-57-0AEE6204", -- [12]
+			552, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfstedfhfg|r",
-			[51] = 1530419201,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1533012380,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [118]
 		{
-			"_$78Qsdfstedfhfg_$  ~~ ~ ~  ~~ FS~   塔~ 外~观★ ~ 王~ 座~英 雄~ ~ M~包 或 装 备  单 买★ 低 保★装 等~ 提~66O-95O★古 尔 丹~ 坐~骑 ★乘~ 装 精 华★新 种 族2O-11O ★飞 行 成 就 ★幽 ~灵虎~~ ~ ~ ~~★_$c69b6d$", -- [1]
+			"{rt2}2", -- [1]
 			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
+			"Orcish", -- [3]
+			"", -- [4]
 			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2315, -- [11]
+			553, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2616,21 +2616,21 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1530419201,
-			[50] = "CHAT_MSG_CHANNEL",
+			[51] = 1533012381,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [119]
 		{
-			"_$79Geoffi_$WTS +15 Keystone carry sold by 11/11M 4.6k score players PST_$c41e3a$", -- [1]
+			"{rt2}1", -- [1]
 			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
+			"Orcish", -- [3]
+			"", -- [4]
 			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2319, -- [11]
+			557, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2638,185 +2638,185 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1530419203,
-			[50] = "CHAT_MSG_CHANNEL",
+			[51] = 1533012382,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [120]
 		{
-			"_$80Brewperry_$<Free Taco Mafia> is looking for players to explore and crush raiding in BFA! Coming back from a break we are seeking all!  Mythic raiding will be pushed and raid days will be Sat(8:30am-11) & Sun(9am-1:30) eastern time.._$00ff96$", -- [1]
-			"Evan-Illidan", -- [2]
+			"^LFW_L", -- [1]
+			"Soliaa-Illidan", -- [2]
 			"", -- [3]
 			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Soliaa", -- [5]
 			"", -- [6]
 			0, -- [7]
 			6, -- [8]
 			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			2323, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			599, -- [11]
+			"Player-57-0AC34984", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530419209,
+			[52] = "|cffffffffSoliaa|r",
+			[51] = 1533012464,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [121]
 		{
-			"_$81Kokoto_$---WTS |cff71d5ff|Hspell:132036:0|h[Thundering Ruby Cloud Serpent]|h|r 35k---_$3fc6ea$", -- [1]
-			"Evan-Illidan", -- [2]
+			"|cff71d5ff|Hspell:31821:0|h[Aura Mastery]|h|r activated!", -- [1]
+			"Karncama-Barthilas", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Karncama-Barthilas", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2327, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			600, -- [11]
+			"Player-3723-0A8CA758", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530419232,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfff48cbaKarncama-Barthilas|r",
+			[51] = 1533012464,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [122]
 		{
-			"_$82Notfromherk_$WTS |cff0070dd|Hitem:49283::::::::1:71::::::|h[Reins of the Spectral Tiger]|h|r|cffa335ee|Hitem:49284::::::::1:71::::::|h[Reins of the Swift Spectral Tiger]|h|r|cffa335ee|Hitem:79771::::::::1:71::::::|h[Feldrake]|h|r_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
+			"|cff71d5ff|Hspell:31821:0|h[Aura Mastery]|h|r faded!", -- [1]
+			"Karncama-Barthilas", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Karncama-Barthilas", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2331, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			602, -- [11]
+			"Player-3723-0A8CA758", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530419249,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfff48cbaKarncama-Barthilas|r",
+			[51] = 1533012472,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [123]
 		{
-			"_$83Kayukai_$--WTS herioc Abt <Masterloot or PL >. ？？all ML with 8+ pieces  >-Selling M+15 carry, 970 group afk carry. our key your loot!- -kill argus now!-Mage tower？？_$aad372$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"{rt3}Burst{rt3}", -- [1]
+			"Dovendyr-Area52", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Dovendyr-Area52", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2333, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			609, -- [11]
+			"Player-3676-08E2FE2C", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530419251,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfff48cbaDovendyr-Area52|r",
+			[51] = 1533012488,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [124]
 		{
-			"_$84Notfromherk_$WTS [Reins of the Spectral Tiger][Reins of the Swift Spectral Tiger][Feldrake][Magic Rooster Egg]_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
+			"^LFW_L", -- [1]
+			"Soliaa-Illidan", -- [2]
 			"", -- [3]
 			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Soliaa", -- [5]
 			"", -- [6]
 			0, -- [7]
 			6, -- [8]
 			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			2335, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			650, -- [11]
+			"Player-57-0AC34984", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530419256,
+			[52] = "|cffffffffSoliaa|r",
+			[51] = 1533012637,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [125]
 		{
-			"_$85Purplecream_$<It Shreds> is a new pvp guild recruiting active players for Rated Battlegrounds, who are willing to focus and being able to communicate on discord. We still need all roles. We plan on running rbgs mainly on the weekend and rando_$ff7c0a$", -- [1]
-			"Evan-Illidan", -- [2]
+			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
+			"Qwasdassdxcv-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
-			"", -- [6]
-			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			"2. Trade - City", -- [4]
+			"Qwasdassdxcv", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			2337, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			662, -- [11]
+			"Player-57-0AFE7376", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530419261,
+			true, -- [17]
+			[52] = "|cffc69b6dQwasdassdxcv|r",
+			[51] = 1533012742,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [126]
 		{
-			"_$86Offermefirst_$WTS [Blackrock Bulwark] 600k [Bananas] 270k [Hatespark the Tiny] 230k [Pattern: Rich Purple Silk Shirt] 180k_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
+			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
+			"Qwasdassdxcv-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
-			"", -- [6]
-			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			"2. Trade - City", -- [4]
+			"Qwasdassdxcv", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			2339, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			676, -- [11]
+			"Player-57-0AFE7376", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1530419263,
+			true, -- [17]
+			[52] = "|cffc69b6dQwasdassdxcv|r",
+			[51] = 1533012788,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [127]
 	},
 	["ChatEditHistory"] = {
-		"/raid Have the heals tank and let the DK DPS.", -- [1]
-		"/raid Ah fuck that then.", -- [2]
-		"/raid I'd rather have a tank that knows how to do it.", -- [3]
-		"/raid Let's go.", -- [4]
-		"/raid Just pull while he's figuring it out.", -- [5]
-		"/raid This is a tier old weeks before this expansion is irrelevant.", -- [6]
-		"/cw Galadien-Stormreaver You're MS Ret?", -- [7]
-		"/cw Galadien-Stormreaver Just play Ret.", -- [8]
-		"/cw Galadien-Stormreaver We don't need the heals.", -- [9]
-		"/cw Linna-TolBarad You can DPS if you want.", -- [10]
-		"/raid We REALLY don't need more heals.", -- [11]
-		"/raid We can 2/2/21 this.", -- [12]
-		"/raid Get a DPS.", -- [13]
-		"/raid DPS", -- [14]
-		"/raid Does that other tank have any idea what they are doing?", -- [15]
-		"/raid It doesn't feel like it.", -- [16]
-		"/raid Yeah.", -- [17]
-		"/cw Kamelltotem-Thrall He pulls 300k HPS.", -- [18]
-		"/raid Who is tanking up / down?", -- [19]
-		"/raid I'll solo heal down.", -- [20]
+		"/raid Unless it's me.", -- [1]
+		"/raid I'm actually not kidding.", -- [2]
+		"/raid 3 heal is fine as long as people soak.", -- [3]
+		"/raid 2% wipe, don't really need to change anything.", -- [4]
+		"/raid cool cool.", -- [5]
+		"/raid ...", -- [6]
+		"/raid Just wipe it.", -- [7]
+		"/raid The fuck brez tank.", -- [8]
+		"/raid Honestly yeah, it was his fault.", -- [9]
+		"/raid Lust. Oh wait.", -- [10]
+		"/raid Fuckers.", -- [11]
+		"/raid Get me up in a sec.", -- [12]
+		"/raid Now.", -- [13]
+		"/cw Shinmoo-Zul'jin I'm 970+ everything.", -- [14]
+		"/raid Want me heals it looks like?", -- [15]
+		"/raid That's always a mistake.", -- [16]
+		"/raid :)", -- [17]
+		"/raid ^^", -- [18]
+		"/wa", -- [19]
+		"/mac", -- [20]
 	},
 	["BodyGuard"] = {
 		["Active"] = false,

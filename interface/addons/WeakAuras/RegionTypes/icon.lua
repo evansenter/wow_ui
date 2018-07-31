@@ -40,8 +40,10 @@ local default = {
   frameStrata = 1,
   customTextUpdate = "update",
   glow = false,
-  cooldownTextEnabled = true
+  cooldownTextEnabled = true,
 };
+
+WeakAuras.regionPrototype.AddAlphaToDefault(default);
 
 local screenWidth, screenHeight = math.ceil(GetScreenWidth() / 20) * 20, math.ceil(GetScreenHeight() / 20) * 20;
 
@@ -107,10 +109,10 @@ local properties = {
     display = L["Inverse"],
     setter = "SetInverse",
     type = "bool"
-  }
+  },
 };
 
-WeakAuras.regionPrototype.AddProperties(properties);
+WeakAuras.regionPrototype.AddProperties(properties, default);
 
 local function GetProperties(data)
   return properties;
@@ -400,17 +402,10 @@ local function modify(parent, region, data)
     local values = region.values;
     region.UpdateCustomText = function()
       WeakAuras.ActivateAuraEnvironment(region.id, region.cloneId, region.state);
-      local ok, custom = xpcall(customTextFunc, geterrorhandler(), region.expirationTime, region.duration,
-        values.progress, values.duration, values.name, values.icon, values.stacks);
-      if (not ok) then
-        custom = "";
-      end
+      values.custom = {select(2, xpcall(customTextFunc, geterrorhandler(), region.expirationTime, region.duration,
+        values.progress, values.duration, values.name, values.icon, values.stacks))}
       WeakAuras.ActivateAuraEnvironment(nil);
-      custom = WeakAuras.EnsureString(custom);
-      if(custom ~= values.custom) then
-        values.custom = custom;
-        UpdateText();
-      end
+      UpdateText();
     end
     if(data.customTextUpdate == "update") then
       WeakAuras.RegisterCustomTextUpdates(region);
@@ -473,7 +468,12 @@ local function modify(parent, region, data)
     icon:SetAllPoints();
 
     local texWidth = 1 - 0.5 * data.zoom;
-    local aspectRatio = region.keepAspectRatio and width / height or 1;
+    local aspectRatio
+    if (not region.keepAspectRatio or width == 0 or height == 0) then
+      aspectRatio = 1
+    else
+      aspectRatio = width / height;
+    end
 
     local ulx, uly, llx, lly, urx, ury, lrx, lry = GetTexCoord(region, texWidth, aspectRatio)
 

@@ -60,7 +60,6 @@ VER 3 000000000000004D "GS" "INV_Misc_QuestionMark"
 #showtooltip Guardian Spirit
 /stopcasting
 /use [target=mouseover,help,nodead]Guardian Spirit
-/use [target=mouseover,help,nodead]Light of T'uure
 END
 VER 3 0000000000000050 "HF" "INV_Misc_QuestionMark"
 #showtooltip Holy Fire

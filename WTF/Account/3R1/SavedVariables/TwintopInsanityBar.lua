@@ -1,35 +1,20 @@
 
 TwintopInsanityBarSettings = {
-	["hasteApproachingThreshold"] = 135,
-	["version"] = 1,
-	["audio"] = {
-		["s2mDeath"] = {
-			["enabled"] = true,
-			["sound"] = "Interface\\Addons\\TwintopInsanityBar\\wilhelm.ogg",
-			["soundName"] = "Wilhelm Scream (TIB)",
+	["auspiciousSpiritsTracker"] = true,
+	["mindbender"] = {
+		["enabled"] = true,
+		["useNotification"] = {
+			["enabled"] = false,
+			["thresholdStacks"] = 26,
+			["useVoidformStacks"] = false,
 		},
-		["mindbender"] = {
-			["sound"] = "Interface\\Addons\\TwintopInsanityBar\\BoxingArenaSound.ogg",
-			["soundName"] = "Boxing Arena Gong (TIB)",
-		},
-	},
-	["voidEruptionThreshold"] = true,
-	["textures"] = {
-		["passiveBarName"] = "Blizzard",
-		["castingBar"] = "Interface\\TargetingFrame\\UI-StatusBar",
-		["borderName"] = "1 Pixel",
-		["border"] = "Interface\\Tooltips\\UI-Tooltip-Border",
-		["insanityBar"] = "Interface\\TargetingFrame\\UI-StatusBar",
-		["textureLock"] = true,
-		["castingBarName"] = "Blizzard",
-		["insanityBarName"] = "Blizzard",
-		["passiveBar"] = "Interface\\TargetingFrame\\UI-StatusBar",
-		["background"] = "Interface\\Tooltips\\UI-Tooltip-Background",
-		["backgroundName"] = "Blizzard Tooltip",
-		["bar"] = "Interface\\TargetingFrame\\UI-StatusBar",
+		["timeMax"] = 3,
+		["mode"] = "gcd",
+		["swingsMax"] = 4,
+		["gcdsMax"] = 2,
 	},
 	["displayText"] = {
-		["fontFaceLock"] = true,
+		["fontSizeMiddle"] = 18,
 		["fontSizeLock"] = true,
 		["fontSizeRight"] = 18,
 		["right"] = {
@@ -67,9 +52,54 @@ TwintopInsanityBarSettings = {
 			["lingeringInsanityTime"] = true,
 			["lingeringInsanityStacks"] = true,
 		},
-		["fontSizeMiddle"] = 18,
+		["fontFaceLock"] = true,
+	},
+	["ttd"] = {
+		["numEntries"] = 50,
+		["sampleRate"] = 0.2,
+		["refreshRate"] = 0.2,
+		["maxEntries"] = 15,
+	},
+	["hasteThreshold"] = 140,
+	["textures"] = {
+		["passiveBarName"] = "Blizzard",
+		["castingBar"] = "Interface\\TargetingFrame\\UI-StatusBar",
+		["borderName"] = "1 Pixel",
+		["border"] = "Interface\\Tooltips\\UI-Tooltip-Border",
+		["insanityBar"] = "Interface\\TargetingFrame\\UI-StatusBar",
+		["textureLock"] = true,
+		["castingBarName"] = "Blizzard",
+		["insanityBarName"] = "Blizzard",
+		["passiveBar"] = "Interface\\TargetingFrame\\UI-StatusBar",
+		["background"] = "Interface\\Tooltips\\UI-Tooltip-Background",
+		["backgroundName"] = "Blizzard Tooltip",
+		["bar"] = "Interface\\TargetingFrame\\UI-StatusBar",
+	},
+	["audio"] = {
+		["s2mDeath"] = {
+			["enabled"] = true,
+			["sound"] = "Interface\\Addons\\TwintopInsanityBar\\wilhelm.ogg",
+			["soundName"] = "Wilhelm Scream (TIB)",
+		},
+		["mindbender"] = {
+			["sound"] = "Interface\\Addons\\TwintopInsanityBar\\BoxingArenaSound.ogg",
+			["soundName"] = "Boxing Arena Gong (TIB)",
+		},
+	},
+	["voidEruptionThreshold"] = true,
+	["displayBar"] = {
+		["alwaysShow"] = true,
+		["notZeroShow"] = false,
+	},
+	["showSummary"] = false,
+	["version"] = 1,
+	["hasteApproachingThreshold"] = 135,
+	["summary"] = {
+		["show"] = false,
+		["simple"] = false,
 	},
 	["showS2MSummary"] = true,
+	["hastePrecision"] = 2,
 	["colors"] = {
 		["threshold"] = {
 			["mindbender"] = "FFFF11FF",
@@ -102,18 +132,7 @@ TwintopInsanityBarSettings = {
 			["casting"] = "FFFFFFFF",
 		},
 	},
-	["mindbender"] = {
-		["enabled"] = true,
-		["useNotification"] = {
-			["enabled"] = false,
-			["thresholdStacks"] = 26,
-			["useVoidformStacks"] = false,
-		},
-		["timeMax"] = 3,
-		["mode"] = "gcd",
-		["swingsMax"] = 4,
-		["gcdsMax"] = 2,
-	},
+	["thresholdWidth"] = 2,
 	["bar"] = {
 		["xPos"] = 0,
 		["dragAndDrop"] = false,
@@ -122,18 +141,4 @@ TwintopInsanityBarSettings = {
 		["border"] = 4,
 		["width"] = 445,
 	},
-	["showSummary"] = false,
-	["displayBar"] = {
-		["alwaysShow"] = true,
-		["notZeroShow"] = false,
-	},
-	["hastePrecision"] = 2,
-	["ttd"] = {
-		["numEntries"] = 50,
-		["sampleRate"] = 0.2,
-		["refreshRate"] = 0.2,
-		["maxEntries"] = 15,
-	},
-	["auspiciousSpiritsTracker"] = true,
-	["hasteThreshold"] = 140,
 }

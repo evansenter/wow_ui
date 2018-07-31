@@ -19,14 +19,13 @@ local GetCombatRatingBonus = GetCombatRatingBonus
 local GetCVar, SetCVar, GetCVarBool = GetCVar, SetCVar, GetCVarBool
 local GetDodgeChance, GetParryChance = GetDodgeChance, GetParryChance
 local GetFunctionCPUUsage = GetFunctionCPUUsage
-local GetMapNameByID = GetMapNameByID
 local GetSpecialization, GetActiveSpecGroup = GetSpecialization, GetActiveSpecGroup
 local GetSpecializationRole = GetSpecializationRole
 local InCombatLockdown = InCombatLockdown
 local IsAddOnLoaded = IsAddOnLoaded
 local IsInInstance, IsInGroup, IsInRaid = IsInInstance, IsInGroup, IsInRaid
 local RequestBattlefieldScoreData = RequestBattlefieldScoreData
-local SendAddonMessage = SendAddonMessage
+local C_ChatInfo_SendAddonMessage = C_ChatInfo.SendAddonMessage
 local UnitGroupRolesAssigned = UnitGroupRolesAssigned
 local UnitHasVehicleUI = UnitHasVehicleUI
 local GetNumGroupMembers = GetNumGroupMembers
@@ -341,7 +340,7 @@ end
 local function LSMCallback()
 	E:UpdateMedia()
 end
-E.LSM.RegisterCallback(E, "LibSharedMedia_Registered", LSMCallback)
+LSM.RegisterCallback(E, "LibSharedMedia_Registered", LSMCallback)
 
 local MasqueGroupState = {}
 local MasqueGroupToTableElement = {
@@ -373,51 +372,6 @@ if Masque then
 	Masque:Register("ElvUI", MasqueCallback)
 end
 
--- Code taken from LibTourist-3.0 and rewritten to fit our purpose
-local localizedMapNames = {}
-local ZoneIDToContinentName = {
-	[473] = "Outland",
-	[477] = "Outland",
-}
-local MapIdLookupTable = {
-	[466] = "Outland",
-	[473] = "Shadowmoon Valley",
-	[477] = "Nagrand",
-}
-
-local function LocalizeZoneNames()
-	local localizedZoneName
-
-	for mapID, englishName in pairs(MapIdLookupTable) do
-		localizedZoneName = GetMapNameByID(mapID)
-		if localizedZoneName then
-			-- Add combination of English and localized name to lookup table
-			if not localizedMapNames[englishName] then
-				localizedMapNames[englishName] = localizedZoneName
-			end
-		end
-	end
-end
-LocalizeZoneNames()
-
---Add " (Outland)" to the end of zone name for Nagrand and Shadowmoon Valley, if mapID matches Outland continent.
---We can then use this function when we need to compare the players own zone against return values from stuff like GetFriendInfo and GetGuildRosterInfo,
---which adds the " (Outland)" part unlike the GetRealZoneText() API.
-function E:GetZoneText(zoneAreaID)
-	local zoneName = GetMapNameByID(zoneAreaID)
-	local continent = ZoneIDToContinentName[zoneAreaID]
-
-	if continent and continent == "Outland" then
-		if zoneName == localizedMapNames["Nagrand"] or zoneName == "Nagrand"  then
-			zoneName = localizedMapNames["Nagrand"].." ("..localizedMapNames["Outland"]..")"
-		elseif zoneName == localizedMapNames["Shadowmoon Valley"] or zoneName == "Shadowmoon Valley"  then
-			zoneName = localizedMapNames["Shadowmoon Valley"].." ("..localizedMapNames["Outland"]..")"
-		end
-	end
-
-	return zoneName
-end
-
 function E:RequestBGInfo()
 	RequestBattlefieldScoreData()
 end
@@ -431,6 +385,8 @@ end
 
 function E:PLAYER_ENTERING_WORLD()
 	self:CheckRole()
+	self:MapInfo_Update()
+
 	if not self.MediaUpdated then
 		self:UpdateMedia()
 		self.MediaUpdated = true;
@@ -914,9 +870,9 @@ end
 
 function E:SendMessage()
 	if IsInRaid() then
-		SendAddonMessage("ELVUI_VERSIONCHK", E.version, (not IsInRaid(LE_PARTY_CATEGORY_HOME) and IsInRaid(LE_PARTY_CATEGORY_INSTANCE)) and "INSTANCE_CHAT" or "RAID")
+		C_ChatInfo_SendAddonMessage("ELVUI_VERSIONCHK", E.version, (not IsInRaid(LE_PARTY_CATEGORY_HOME) and IsInRaid(LE_PARTY_CATEGORY_INSTANCE)) and "INSTANCE_CHAT" or "RAID")
 	elseif IsInGroup() then
-		SendAddonMessage("ELVUI_VERSIONCHK", E.version, (not IsInGroup(LE_PARTY_CATEGORY_HOME) and IsInGroup(LE_PARTY_CATEGORY_INSTANCE)) and "INSTANCE_CHAT" or "PARTY")
+		C_ChatInfo_SendAddonMessage("ELVUI_VERSIONCHK", E.version, (not IsInGroup(LE_PARTY_CATEGORY_HOME) and IsInGroup(LE_PARTY_CATEGORY_INSTANCE)) and "INSTANCE_CHAT" or "PARTY")
 	end
 
 	if E.SendMSGTimer then
@@ -954,7 +910,7 @@ local function SendRecieve(_, event, prefix, message, _, sender)
 	end
 end
 
-RegisterAddonMessagePrefix('ELVUI_VERSIONCHK')
+C_ChatInfo.RegisterAddonMessagePrefix('ELVUI_VERSIONCHK')
 
 local f = CreateFrame("Frame")
 f:RegisterEvent("GROUP_ROSTER_UPDATE")
@@ -1033,7 +989,7 @@ function E:UpdateAll(ignoreInstall)
 	DataBars:UpdateDataBarDimensions()
 	DataBars:EnableDisable_ExperienceBar()
 	DataBars:EnableDisable_ReputationBar()
-	DataBars:EnableDisable_ArtifactBar()
+	DataBars:EnableDisable_AzeriteBar()
 	DataBars:EnableDisable_HonorBar()
 
 	local T = self:GetModule('Threat')
@@ -1450,6 +1406,24 @@ function E:DBConversions()
 		E.db.auras.debuffs.durationFontSize = fontSize
 		E.db.auras.fontSize = nil
 	end
+
+	--Convert old private cooldown setting to profile setting
+	if E.private.cooldown and (E.private.cooldown.enable ~= nil) then
+		E.db.cooldown.enable = E.private.cooldown.enable
+		E.private.cooldown.enable = nil
+		E.private.cooldown = nil
+	end
+
+	--Convert Nameplate Aura Duration to new Cooldown system
+	if E.db.nameplates.durationFont then
+		E.db.nameplates.cooldown.fonts.font = E.db.nameplates.durationFont
+		E.db.nameplates.cooldown.fonts.fontSize = E.db.nameplates.durationFontSize
+		E.db.nameplates.cooldown.fonts.fontOutline = E.db.nameplates.durationFontOutline
+
+		E.db.nameplates.durationFont = nil
+		E.db.nameplates.durationFontSize = nil
+		E.db.nameplates.durationFontOutline = nil
+	end
 end
 
 local CPU_USAGE = {}
@@ -1492,7 +1466,7 @@ function E:GetTopCPUFunc(msg)
 		return
 	end
 
-	local module, showall, delay, minCalls = msg:match("^([^%s]+)%s*([^%s]*)%s*([^%s]*)%s*(.*)$")
+	local module, showall, delay, minCalls = msg:match("^(%S+)%s*(%S*)%s*(%S*)%s*(.*)$")
 	local checkCore, mod = (not module or module == "") and "E"
 
 	showall = (showall == "true" and true) or false

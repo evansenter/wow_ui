@@ -6,7 +6,6 @@ local DT = E:GetModule('DataTexts')
 local select, unpack, sort, wipe, ceil = select, unpack, table.sort, wipe, math.ceil
 local format, find, join, split = string.format, string.find, string.join, string.split
 --WoW API / Variables
-local GetCurrentMapAreaID = GetCurrentMapAreaID
 local GetDisplayedInviteType = GetDisplayedInviteType
 local GetGuildFactionInfo = GetGuildFactionInfo
 local GetGuildInfo = GetGuildInfo
@@ -269,7 +268,9 @@ local function OnEnter(self, _, noUpdate)
 		end
 
 		info = guildTable[i]
-		if E:GetZoneText(GetCurrentMapAreaID()) == info[4] then zonec = activezone else zonec = inactivezone end
+
+		if E.MapInfo.zoneText and (E.MapInfo.zoneText == info[4]) then zonec = activezone else zonec = inactivezone end
+
 		classc, levelc = (CUSTOM_CLASS_COLORS or RAID_CLASS_COLORS)[info[9]], GetQuestDifficultyColor(info[3])
 
 		if (UnitInParty(info[1]) or UnitInRaid(info[1])) then grouped = 1 else grouped = 2 end
