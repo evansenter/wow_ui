@@ -1,7 +1,3 @@
-VER 3 000000000000005F "Atonement" "458720"
-#showtooltip Atonement
-/use [@player]Plea
-END
 VER 3 0000000000000031 "Belt" "INV_MISC_QUESTIONMARK"
 /use 6
 END
@@ -19,11 +15,7 @@ VER 3 0000000000000045 "BoF" "ABILITY_MONK_BREATHOFFIRE"
 /use Breath of Fire
 END
 VER 3 0000000000000067 "Cancel SoR" "237542"
-/cancelaura Spirit of Redemption
-END
-VER 3 0000000000000066 "Clarity of Will" "1022947"
-#showtooltip
-/use [target=mouseover,help,nodead][]Clarity of Will
+/script local ind=0; for i=1,40 do if UnitAura("player", i)=="Spirit of Redemption" then ind = i end end; CancelUnitBuff("player", ind);
 END
 VER 3 000000000000004E "CoH" "INV_Misc_QuestionMark"
 #showtooltip
@@ -88,9 +80,9 @@ VER 3 0000000000000059 "LoT" "INV_Misc_QuestionMark"
 #showtooltip Light of T'uure
 /use [target=mouseover,help,nodead][]Light of T'uure
 END
-VER 3 0000000000000056 "Mana Pot" "INV_Misc_QuestionMark"
+VER 3 0000000000000056 "Mana" "INV_Misc_QuestionMark"
 #showtooltip
-/use [nomod][mod:ctrl][mod:alt]Leytorrent Potion;[mod:shift]15
+/use [nomod][mod:ctrl][mod:alt]Leytorrent Potion;[mod:shift]Symbol of Hope
 END
 VER 3 0000000000000057 "Mana Tea" "INV_Misc_QuestionMark"
 #showtooltip Mana Tea
@@ -106,7 +98,7 @@ VER 3 0000000000000060 "Pain Sup" "INV_Misc_QuestionMark"
 /stopcasting
 /use [target=mouseover,help,nodead][]Pain Suppression
 END
-VER 3 0000000000000068 "Penance Friendly" "INV_Misc_QuestionMark"
+VER 3 0000000000000068 "Penance Friendly" "135753"
 #showtooltip
 /use [target=mouseover,help,nodead][]Penance
 END
@@ -133,6 +125,12 @@ END
 VER 3 000000000000003C "RSK" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /use [nochanneling]Rising Sun Kick
+END
+VER 3 000000000000006D "Salv." "INV_Misc_QuestionMark"
+#showtooltip Holy Word: Salvation
+/use 13
+/use 14
+/cast Holy Word: Salvation
 END
 VER 3 0000000000000063 "SEF" "INV_Misc_QuestionMark"
 #showtooltip Storm, Earth, and Fire

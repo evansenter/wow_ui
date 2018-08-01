@@ -158,7 +158,7 @@ slashheals
 Community:2070591:1
 END
 
-ZONECHANNELS 1
+ZONECHANNELS 0
 
 END
 

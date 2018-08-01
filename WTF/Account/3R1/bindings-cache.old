@@ -29,6 +29,7 @@ bind SHIFT-B CLICK BT4Button60:LeftButton
 bind SHIFT-SPACE CLICK BT4Button55:LeftButton
 bind PRINTSCREEN NONE
 bind SHIFT-G NONE
+bind SHIFT-C CLICK BT4Button25:LeftButton
 bind SHIFT-9 CLICK BT4Button69:LeftButton
 bind SHIFT-- ACTIONBUTTON6
 bind SHIFT-F CLICK BT4Button71:LeftButton

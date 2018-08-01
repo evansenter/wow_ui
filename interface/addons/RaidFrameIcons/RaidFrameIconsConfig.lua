@@ -1,6 +1,14 @@
-﻿local Defaults = {}
+-- ----------------------------------------------------------------------------
+-- RaidFrameIcons by Szandos
+-- Continued by Soyier
+-- ----------------------------------------------------------------------------
+local RaidFrameIcons = RaidFrameIcons_Global
 
-function CreateDefaults ()
+local Defaults = {}
+local Options = {}
+
+
+function RaidFrameIcons:CreateDefaults ()
 	Defaults.profile = {
 		iconSize = 10,
 		iconPosition = "CENTER",
@@ -8,8 +16,8 @@ function CreateDefaults ()
 	}
 end
 
-local Options = {}
-function CreateOptions ()
+
+function RaidFrameIcons:CreateOptions ()
 	Options = {
 		type = 'group',
 		childGroups = 'tree',
@@ -31,18 +39,18 @@ function CreateOptions ()
 				desc = "Position of the raid icon relative to the frame",
 				order = 20,
 				values = { ["TOPLEFT"] = "Top Left", ["TOP"] = "Top", ["TOPRIGHT"] = "Top Right" ,
-						["LEFT"] = "Left", ["CENTER"] = "Center", ["RIGHT"] = "Right",
-						["BOTTOMLEFT"] = "Bottom Left", ["BOTTOM"] = "Bottom", ["BOTTOMRIGHT"] = "Bottom Right"},
+					["LEFT"] = "Left", ["CENTER"] = "Center", ["RIGHT"] = "Right",
+					["BOTTOMLEFT"] = "Bottom Left", ["BOTTOM"] = "Bottom", ["BOTTOMRIGHT"] = "Bottom Right"},
 			},
 			enabled = {
 				type = "toggle",
 				name = "Enabled",
 				desc = "Enable/Disable indicators",
 				order = 25,
-				set = function(item, value) 
+				set = function(item, value)
 					RaidFrameIcons.db.profile[item[#item]] = value
-					if value == true then 
-						RaidFrameIcons:OnEnable() 
+					if value == true then
+						RaidFrameIcons:OnEnable()
 					else
 						RaidFrameIcons:OnDisable()
 					end
@@ -53,7 +61,7 @@ function CreateOptions ()
 end
 
 local SlashCommands = {
-        type    = "group",
+	type    = "group",
 	args  = {
 		enable = {
 			type = "execute",
@@ -82,22 +90,22 @@ function RaidFrameIcons:ShowConfig()
 end
 
 function RaidFrameIcons:SetupOptions()
- 	-- Set up defaults
-	CreateDefaults()
+	-- Set up defaults
+	RaidFrameIcons:CreateDefaults()
 	self.db = LibStub("AceDB-3.0"):New("RaidFrameIconsDB", Defaults)
-	
+
 	-- Profile handling
 	local profiles = LibStub("AceDBOptions-3.0"):GetOptionsTable(self.db)
-	
+
 	-- Get the config up
-	CreateOptions()
+	RaidFrameIcons:CreateOptions()
 	local config = LibStub("AceConfig-3.0")
 	config:RegisterOptionsTable("Raid Frame Icons", Options)
 	config:RegisterOptionsTable("Raid Frame Icons Profiles", profiles)
-	
+
 	-- Register slash commands
 	config:RegisterOptionsTable("Raid Frame Icons Options", SlashCommands, {"RaidFrameIcons"})
-	
+
 	-- Add to Blizz option pane
 	local dialog = LibStub("AceConfigDialog-3.0")
 	self.optionsFrames = {}

@@ -1,10 +1,15 @@
-﻿## Interface: 70300
+## Interface: 80000
 ## Title: Raid Frame Icons
-
-## Version: 1.18
-## Author: Szandos
 ## Notes: Adds raid icons the standard raid frames
+## Author: Szandos
+## X-Credits-Maintainer: Soyier
+## Version: 1.0
+## DefaultState: enabled
 ## SavedVariables: RaidFrameIconsDB
-embeds.xml
+## X-Email: bwyazel@gmail.com
+
+
+Libs\embeds.xml
+
 RaidFrameIcons.lua
 RaidFrameIconsConfig.lua

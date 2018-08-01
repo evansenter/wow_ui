@@ -1,17 +1,81 @@
-﻿-- ----------------------------------------------------------------------------
--- RaidFrameIcons by Szandos
 -- ----------------------------------------------------------------------------
-RaidFrameIcons = LibStub( "AceAddon-3.0" ):NewAddon( "RaidFrameIcons", "AceEvent-3.0")
+-- RaidFrameIcons by Szandos
+-- Continued by Soyier
+-- ----------------------------------------------------------------------------
+
+RaidFrameIcons_Global = LibStub( "AceAddon-3.0" ):NewAddon( "RaidFrameIcons", "AceEvent-3.0")
+local RaidFrameIcons = RaidFrameIcons_Global
+
 local debug = false
 local icons = {}
 
-function RaidFrameIcons.SetTextureAppearance (frame)
+
+-------------------------------------------------------------------------
+--------------------Start of Functions-----------------------------------
+-------------------------------------------------------------------------
+
+--- **OnInitialize**, which is called directly after the addon is fully loaded.
+--- do init tasks here, like loading the Saved Variables
+--- or setting up slash commands.
+function RaidFrameIcons:OnInitialize()
+
+	-- Set up config pane
+	RaidFrameIcons:SetupOptions()
+	--LoggingChat(1)
+	-- Register callbacks for profile switching
+	RaidFrameIcons.db.RegisterCallback(RaidFrameIcons, "OnProfileChanged", "RefreshConfig")
+	RaidFrameIcons.db.RegisterCallback(RaidFrameIcons, "OnProfileCopied", "RefreshConfig")
+	RaidFrameIcons.db.RegisterCallback(RaidFrameIcons, "OnProfileReset", "RefreshConfig")
+
+
+end
+
+--- **OnEnable** which gets called during the PLAYER_LOGIN event, when most of the data provided by the game is already present.
+--- Do more initialization here, that really enables the use of your addon.
+--- Register Events, Hook functions, Create Frames, Get information from
+--- the game that wasn't available in OnInitialize
+function RaidFrameIcons:OnEnable()
+
+	if RaidFrameIcons.db.profile.enabled then
+		-- Hook raid icon updates
+		RaidFrameIcons:RegisterEvent("RAID_TARGET_UPDATE", "UpdateAllFrames")
+		RaidFrameIcons:RegisterEvent("RAID_ROSTER_UPDATE", "UpdateAllFrames")
+
+		-- Make sure any icons already existing are shown
+		RaidFrameIcons:UpdateAllFrames()
+
+	end
+
+
+end
+
+--- **OnDisable**, which is only called when your addon is manually being disabled.
+--- Unhook, Unregister Events, Hide frames that you created.
+--- You would probably only use an OnDisable if you want to
+--- build a "standby" mode, or be able to toggle modules on/off.
+function RaidFrameIcons:OnDisable()
+
+	-- Unhook raid icon updates
+	RaidFrameIcons:UnregisterAllEvents()
+
+	for frameName in pairs(icons) do
+		icons[frameName].icon = nil
+		icons[frameName].texture:Hide()
+	end
+
+
+end
+
+-------------------------------------------------
+
+
+function RaidFrameIcons:SetTextureAppearance(frame)
 	local pad = 3
 	local pos = RaidFrameIcons.db.profile.iconPosition
 	local frameName = frame:GetName()
 	if not icons[frameName] then return end
 	local tex = icons[frameName].texture
-	
+
 	-- Set position relative to frame
 	tex:ClearAllPoints()
 	if pos == "TOPLEFT" then tex:SetPoint("TOPLEFT", pad, -pad) end
@@ -23,39 +87,39 @@ function RaidFrameIcons.SetTextureAppearance (frame)
 	if pos == "BOTTOMLEFT" then tex:SetPoint("BOTTOMLEFT", pad, pad) end
 	if pos == "BOTTOM" then tex:SetPoint("BOTTOM", 0, pad) end
 	if pos == "BOTTOMRIGHT" then tex:SetPoint("BOTTOMRIGHT", -pad, pad) end
-	
+
 	-- Set the icon size
 	tex:SetWidth(RaidFrameIcons.db.profile.iconSize)
 	tex:SetHeight(RaidFrameIcons.db.profile.iconSize)
 end
 
-function RaidFrameIcons.UpdateIcon(frame)
+function RaidFrameIcons:UpdateIcon(frame)
 	local unit = frame.unit
 	local frameName = frame:GetName()
-	
+
 	-- If fame doesn't point at anything, no need for an icon
 	if not unit then return end
-	RaidFrameIcons:dPrint ("Unit: "..unit)
-	
+
+
 	-- Get icon on unit
 	local icon = GetRaidTargetIndex(unit)
-	
+
 	-- Initialize our storage and create teture
 	if not icons[frameName] then -- No icon on this frame before, need a texture
-		RaidFrameIcons:dPrint ("Creating texture")
+
 		icons[frameName] = {}
 		icons[frameName].texture = frame:CreateTexture(nil, "OVERLAY")
-		RaidFrameIcons.SetTextureAppearance (frame)
+		RaidFrameIcons:SetTextureAppearance(frame)
 	end
-	
+
 	-- Only change icon texture if the icon on the frame actually changed
 	if icon ~= icons[frameName].icon then
 		icons[frameName].icon = icon
-		if icon == nil then 
-			RaidFrameIcons:dPrint ("Icon removed")
+		if icon == nil then
+
 			icons[frameName].texture:Hide()
 		else
-			RaidFrameIcons:dPrint ("Icon: "..icon)
+
 			icons[frameName].texture:SetTexture("Interface\\TargetingFrame\\UI-RaidTargetingIcon_"..icon)
 			icons[frameName].texture:Show()
 		end
@@ -63,55 +127,13 @@ function RaidFrameIcons.UpdateIcon(frame)
 end
 
 function RaidFrameIcons:UpdateAllFrames()
-	self:dPrint ("Raid Icon Changed")
-	CompactRaidFrameContainer_ApplyToFrames(CompactRaidFrameContainer, "normal", RaidFrameIcons.UpdateIcon)
+
+	CompactRaidFrameContainer_ApplyToFrames(CompactRaidFrameContainer, "normal", function(frame) RaidFrameIcons:UpdateIcon(frame) end)
 end
 
 -- Used to update everything that is affected by the configuration
 function RaidFrameIcons:RefreshConfig()
-	self:dPrint ("Refreshing Config")
-	
+
 	-- Set icon size and placement
-	CompactRaidFrameContainer_ApplyToFrames(CompactRaidFrameContainer, "normal", RaidFrameIcons.SetTextureAppearance)
-end
-
-function RaidFrameIcons:OnInitialize()
-	-- Set up config pane
-	self:SetupOptions()
-	--LoggingChat(1)
-	-- Register callbacks for profile switching
-	self.db.RegisterCallback(self, "OnProfileChanged", "RefreshConfig")
-	self.db.RegisterCallback(self, "OnProfileCopied", "RefreshConfig")
-	self.db.RegisterCallback(self, "OnProfileReset", "RefreshConfig")
-	self:dPrint ("Initialized")
-end
-
-function RaidFrameIcons:OnEnable()
-	if self.db.profile.enabled then
-		-- Hook raid icon updates
-		self:RegisterEvent("RAID_TARGET_UPDATE", "UpdateAllFrames")
-		self:RegisterEvent("RAID_ROSTER_UPDATE", "UpdateAllFrames")
-	
-		-- Make sure any icons already existing are shown
-		RaidFrameIcons:UpdateAllFrames()
-		self:dPrint ("Enabled")
-	end
-	--LoggingChat(1)
-end
-
-function RaidFrameIcons:OnDisable()
-	-- Unhook raid icon updates
-	self:UnregisterAllEvents()
-	
-	for frameName in pairs(icons) do
-		icons[frameName].icon = nil
-		icons[frameName].texture:Hide()
-	end
-	self:dPrint ("Disabled")
-end
-
-function RaidFrameIcons:dPrint(s)
-	if debug then
-		DEFAULT_CHAT_FRAME:AddMessage("RaidFrameIcons: ".. tostring(s))
-	end
+	CompactRaidFrameContainer_ApplyToFrames(CompactRaidFrameContainer, "normal", function(frame) RaidFrameIcons:SetTextureAppearance(frame) end)
 end
