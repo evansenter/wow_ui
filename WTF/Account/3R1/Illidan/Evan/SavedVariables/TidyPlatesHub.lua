@@ -1127,7 +1127,7 @@ TidyPlatesHubSettings = {
 		["OpacityFilterLookup"] = {
 		},
 		["WidgetTargetHighlight"] = true,
-		["ScaleStandard"] = 0.75,
+		["ScaleStandard"] = 0.689999997615814,
 		["WidgetAuraTrackDispelFriendly"] = false,
 		["StatusTextRightColor"] = true,
 		["FriendlyAlphaSpotlightMode"] = 1,
@@ -1192,7 +1192,7 @@ TidyPlatesHubSettings = {
 		["FriendlyHeadlineColor"] = "ByClass",
 		["WidgetAuraTrackCurse"] = false,
 		["EnemyHeadlineColor"] = "Default",
-		["ScaleSpotlight"] = 0.840000033378601,
+		["ScaleSpotlight"] = 0.789999961853027,
 		["WidgetsMyDebuff"] = true,
 		["ColorPartyAggro"] = {
 			["a"] = 0.999997794628143,

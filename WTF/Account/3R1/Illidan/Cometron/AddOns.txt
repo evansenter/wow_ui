@@ -120,8 +120,8 @@ WeakAurasModelPaths: disabled
 WeakAurasOptions: disabled
 WeakAurasTemplates: disabled
 WoWNotifier: disabled
-ElvUI_Config: enabled
-ElvUI: enabled
+ElvUI_Config: disabled
+ElvUI: disabled
 BL_Cooldown: disabled
 DBM-Core: disabled
 DBM-DefaultSkin: disabled

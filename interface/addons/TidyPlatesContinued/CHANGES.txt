@@ -1,0 +1,13 @@
+lightweight tag 588f21f6e1f672bef3412ab5e351223b7befbf54 6.19.3
+Author:	Higi <higi@tauri.hu>
+Date:	Thu Aug 2 00:19:08 2018 +0200
+
+commit 588f21f6e1f672bef3412ab5e351223b7befbf54
+Author: Higi <higi@tauri.hu>
+Date:   Thu Aug 2 00:19:08 2018 +0200
+
+    - Tainted issue was caused by creating the nameplate frame for personal resources, because player check was not available at that time yet
+    - Added Blizzlike option for Absorb Bar style
+    - Default profiles for specs are now set correctly when loading addon for the first time
+    - Aura Widget position updated for Grey Theme
+

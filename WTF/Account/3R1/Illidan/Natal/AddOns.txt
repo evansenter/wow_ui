@@ -138,8 +138,8 @@ ShadowedUnitFrames: disabled
 SharedMediaAdditionalFonts: disabled
 Skada: disabled
 WoWNotifier: disabled
-ElvUI_Config: enabled
-ElvUI: enabled
+ElvUI_Config: disabled
+ElvUI: disabled
 DBM-RaidLeadTools: disabled
 DBM-PvP: disabled
 ExRT: disabled

@@ -1,4 +1,4 @@
-TidyPlates: enabled
+TidyPlates: disabled
 Auc-Advanced: disabled
 BittensSpellFlashLibrary: disabled
 BittensSpellFlash_Monk: disabled
@@ -6,10 +6,10 @@ SpellFlash-Priest: disabled
 SpellFlash: disabled
 TidyPlatesHub: enabled
 TidyPlatesWidgets: enabled
-TidyPlates_Graphite: enabled
-TidyPlates_Grey: enabled
-TidyPlates_Neon: enabled
-TidyPlates_Quatre: enabled
+TidyPlates_Graphite: disabled
+TidyPlates_Grey: disabled
+TidyPlates_Neon: disabled
+TidyPlates_Quatre: disabled
 StormEarthAndFire: enabled
 BLTRaidCooldowns: enabled
 ActionBarSaver: disabled

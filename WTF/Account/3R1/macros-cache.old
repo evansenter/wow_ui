@@ -98,7 +98,7 @@ VER 3 0000000000000060 "Pain Sup" "INV_Misc_QuestionMark"
 /stopcasting
 /use [target=mouseover,help,nodead][]Pain Suppression
 END
-VER 3 0000000000000068 "Penance Friendly" "INV_Misc_QuestionMark"
+VER 3 0000000000000068 "Penance Friendly" "135753"
 #showtooltip
 /use [target=mouseover,help,nodead][]Penance
 END

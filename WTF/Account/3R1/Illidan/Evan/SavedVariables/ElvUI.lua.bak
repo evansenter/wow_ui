@@ -2,347 +2,347 @@
 ElvCharacterDB = {
 	["ChatHistoryLog"] = {
 		{
-			"_$203Korobb_$<Titanforged>  Looking for a guild for BFA? (11/11H 2/11M) now recruiting raid ready Healers & DPS for Mythic Antorus Progression, Heroic Antorus, M+ Keys, PvP and more! We raid 8-11pm Tues/Thurs server time.  /w me with your raid xp_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Poison Bomb Proc", -- [1]
+			"Melzzinha-Gallywix", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Melzzinha-Gallywix", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2187, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			481, -- [11]
+			"Player-3234-0A60F909", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094233,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Melzzinha-Gallywix|r",
+			[51] = 1533149614,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [1]
 		{
-			"_$204Hetzart_$<Shattered Purity> Is now looking for more , ( shadow prest , monk boomchicken and a dh tank) to join for BFA! Our raid times are Tues,Thurs,Sun 8:30PM-11:30PM Servertime. If you are intered or would like to know more send me a mess_$fff468$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"3", -- [1]
+			"Intuitive-Stormrage", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Intuitive-Stormrage", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2190, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			483, -- [11]
+			"Player-60-0B9FA0F3", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094239,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Intuitive-Stormrage|r",
+			[51] = 1533149621,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [2]
 		{
-			"_$1Ubjskskde_$ 燃烧王座英雄史诗个人拾取！个人拾取10件保底。M 阿古斯,古尔丹坐骑100%拾取!,M阿古斯成就,_$3fc6ea$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"3", -- [1]
+			"Intuitive-Stormrage", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Intuitive-Stormrage", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2196, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			484, -- [11]
+			"Player-60-0B9FA0F3", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094261,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Intuitive-Stormrage|r",
+			[51] = 1533149622,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [3]
 		{
-			"_$2Qsdfsfxcvxg_$   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"2", -- [1]
+			"Intuitive-Stormrage", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Intuitive-Stormrage", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2198, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			486, -- [11]
+			"Player-60-0B9FA0F3", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094263,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Intuitive-Stormrage|r",
+			[51] = 1533149622,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [4]
 		{
-			"_$3Traea_$WTS|cff1eff00|Hitem:1604::::::::110:269:512::1:3655:60:::|h[Chromatic Sword]|h|r Cheap or Trade_$00ff96$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"2", -- [1]
+			"Intuitive-Stormrage", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Intuitive-Stormrage", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2200, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			487, -- [11]
+			"Player-60-0B9FA0F3", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094266,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Intuitive-Stormrage|r",
+			[51] = 1533149622,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [5]
 		{
-			"_$4Cognewsean_$美服style工作室提供M王座1-11个人拾取,M阿古斯坐骑.游戏类其他各种代练,大量金币出售._$0070dd$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"1", -- [1]
+			"Intuitive-Stormrage", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Intuitive-Stormrage", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2203, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			489, -- [11]
+			"Player-60-0B9FA0F3", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094275,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Intuitive-Stormrage|r",
+			[51] = 1533149623,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [6]
 		{
-			"_$5Mozzlegaming_$Are you LF help on TSM3, TSM3 Sniper, Gold Farming, LAC gold farm runs, enough to earn a token with minimal time spent? 70+ mil gold earned.  PST for help!_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"1", -- [1]
+			"Intuitive-Stormrage", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Intuitive-Stormrage", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2209, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			490, -- [11]
+			"Player-60-0B9FA0F3", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094287,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Intuitive-Stormrage|r",
+			[51] = 1533149623,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [7]
 		{
-			"_$6Zîlês_$<Prevalence> is now recruiting for RBG and general World PVP in BFA, we are in search of any and all PVP driven. We also casually raid. Whisper for invite or additional information. Thank You._$c41e3a$", -- [1]
-			"Evan-Illidan", -- [2]
+			"bres me", -- [1]
+			"Magiifitz-Tichondrius", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Magiifitz", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2211, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			494, -- [11]
+			"Player-11-0B1E1F00", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094294,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cff3fc6eaMagiifitz-Tichondrius|r",
+			[51] = 1533149627,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [8]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"Poison Bomb Proc", -- [1]
+			"Melzzinha-Gallywix", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Melzzinha-Gallywix", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2213, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			495, -- [11]
+			"Player-3234-0A60F909", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533094303,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cfffff468Melzzinha-Gallywix|r",
+			[51] = 1533149629,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [9]
 		{
-			"_$7Qsdfsfxcvxg_$   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
+			"nice u guys, sorry for sucking", -- [1]
+			"Mimino-Maelstrom", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Mimino-Maelstrom", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2214, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			512, -- [11]
+			"Player-163-07EF70E8", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094303,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cff3fc6eaMimino-Maelstrom|r",
+			[51] = 1533149653,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [10]
 		{
-			"_$8Unstaybull_$<Molten Core Swim Teams> is now recruiting for BFA. Centered around PVE/PVP progression, we are seeking mature dedicated players who are interested in clearing end game content quickly after launch. Need all roles- serious and skil_$f48cba$", -- [1]
-			"Evan-Illidan", -- [2]
+			"roll |cffa335ee|Hitem:152064::::::::110:66::5:3:3611:1487:3528:::|h[Band of the Sargerite Smith]|h|r", -- [1]
+			"Goemeow-TwistingNether", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Goemeow-TwistingNether", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2216, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			516, -- [11]
+			"Player-164-09CC2222", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094306,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfff48cbaGoemeow-TwistingNether|r",
+			[51] = 1533149658,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [11]
 		{
-			"_$9Caaääaaäärl_$WTS |cff1eff00|Hitem:1604::::::::110:258:512::1:3655:60:::|h[Chromatic Sword]|h|r cheaper than ah PST_$ffffff$", -- [1]
-			"Evan-Illidan", -- [2]
+			"you guys are rolling to trade it to me right ?", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Fuj", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2218, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			531, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094307,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533149687,
+			[50] = "CHAT_MSG_RAID_LEADER",
 		}, -- [12]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
+			"|cffa335ee|Hitem:152412::::::::110:259::5:3:3611:1487:3528:::|h[Depraved Machinist's Footpads]|h|r roll it", -- [1]
+			"Melzzinha-Gallywix", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"", -- [4]
+			"Melzzinha-Gallywix", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2221, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			533, -- [11]
+			"Player-3234-0A60F909", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533094323,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cfffff468Melzzinha-Gallywix|r",
+			[51] = 1533149692,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [13]
 		{
-			" 燃烧王座英雄史诗个人拾取！个人拾取10件保底。M 阿古斯,古尔丹坐骑100%拾取!,M阿古斯成就,", -- [1]
-			"Ubjskskde-Illidan", -- [2]
+			"lol", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Ubjskskde", -- [5]
+			"", -- [4]
+			"Fuj", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2222, -- [11]
-			"Player-57-0AFC9C90", -- [12]
+			553, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cff3fc6eaUbjskskde|r",
-			[51] = 1533094330,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533149774,
+			[50] = "CHAT_MSG_RAID_LEADER",
 		}, -- [14]
 		{
-			"美服style工作室提供M王座1-11个人拾取,M阿古斯坐骑.游戏类其他各种代练,大量金币出售.", -- [1]
-			"Cognewsean-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Cognewsean", -- [5]
+			"ACTIVATING THE OH SHIT BUTTON ", -- [1]
+			"Superbearcow-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Superbearcow", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2223, -- [11]
-			"Player-57-0A9A35E8", -- [12]
+			554, -- [11]
+			"Player-57-0941658F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cff0070ddCognewsean|r",
-			[51] = 1533094330,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffff7c0aSuperbearcow|r",
+			[51] = 1533149777,
+			[50] = "CHAT_MSG_YELL",
 		}, -- [15]
 		{
-			"_$10Ubjskskde_$ 燃烧王座英雄史诗个人拾取！个人拾取10件保底。M 阿古斯,古尔丹坐骑100%拾取!,M阿古斯成就,_$3fc6ea$", -- [1]
+			"Flames of Reorigination on Evan", -- [1]
 			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
+			"Orcish", -- [3]
+			"", -- [4]
 			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2224, -- [11]
+			556, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -350,1737 +350,1737 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1533094330,
-			[50] = "CHAT_MSG_CHANNEL",
+			[51] = 1533149780,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [16]
 		{
-			"_$11Cognewsean_$美服style工作室提供M王座1-11个人拾取,M阿古斯坐骑.游戏类其他各种代练,大量金币出售._$0070dd$", -- [1]
-			"Evan-Illidan", -- [2]
+			"^LFW_H", -- [1]
+			"Shieldmayden-Illidan", -- [2]
 			"", -- [3]
 			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Shieldmayden", -- [5]
 			"", -- [6]
 			0, -- [7]
 			6, -- [8]
 			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			2225, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			557, -- [11]
+			"Player-57-0AFEE298", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094331,
+			[52] = "|cffc69b6dShieldmayden|r",
+			[51] = 1533149780,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [17]
 		{
-			"_$12Øxidize_$WTS Heroic Argus kill pst_$3fc6ea$", -- [1]
-			"Evan-Illidan", -- [2]
+			"^LFW_H", -- [1]
+			"Shieldmayden-Illidan", -- [2]
 			"", -- [3]
 			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Shieldmayden", -- [5]
 			"", -- [6]
 			0, -- [7]
 			6, -- [8]
 			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			2229, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			558, -- [11]
+			"Player-57-0AFEE298", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094343,
+			[52] = "|cffc69b6dShieldmayden|r",
+			[51] = 1533149780,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [18]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"Flames of Reorigination on Evan", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2230, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			561, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533094343,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1533149791,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [19]
 		{
-			"_$13Qsdfsfxcvxg_$   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
+			"np", -- [1]
+			"Melzzinha-Gallywix", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Melzzinha-Gallywix", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2231, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			569, -- [11]
+			"Player-3234-0A60F909", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094343,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Melzzinha-Gallywix|r",
+			[51] = 1533149826,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [20]
 		{
-			"_$14Zîlês_$<Prevalence> is now recruiting for RBG and general World PVP in BFA, we are in search of any and all PVP driven. We also casually raid. Whisper for invite or additional information. Thank You._$c41e3a$", -- [1]
-			"Evan-Illidan", -- [2]
+			"brb bio", -- [1]
+			"Dexeus-Area52", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Dexeus-Area52", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2240, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			589, -- [11]
+			"Player-3676-06F31990", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094359,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffc69b6dDexeus-Area52|r",
+			[51] = 1533149894,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [21]
 		{
-			"_$15Maniamt_$璀璨星空Starry Heavens 休闲公会 欢迎各种休闲以及8.0副本开荒玩家 需求奶德/奶僧 各种DPS 活动时间暂定周六日下午/晚上 近期有副本活动_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
+			"grabing water", -- [1]
+			"Melzzinha-Gallywix", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Melzzinha-Gallywix", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2242, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			599, -- [11]
+			"Player-3234-0A60F909", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094359,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Melzzinha-Gallywix|r",
+			[51] = 1533149919,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [22]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
+			"has anyone else been getting lag spikes?", -- [1]
+			"Goemeow-TwistingNether", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"", -- [4]
+			"Goemeow-TwistingNether", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2244, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			604, -- [11]
+			"Player-164-09CC2222", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533094363,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cfff48cbaGoemeow-TwistingNether|r",
+			[51] = 1533149953,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [23]
 		{
-			"_$16Samizasdf_$<Humble> has ONE slot for a Mythic Argus Mount TOMORROW! Get |cffa335ee|Hitem:152789::::::::20:253::6:1:3524:::|h[Shackled Ur'zul]|h|r while it's a guaranteed drop, it goes to a 1% drop in 3 weeks! 4m gold, PST for more details._$aad372$", -- [1]
-			"Evan-Illidan", -- [2]
+			"like it takes me close to min to inspect someone", -- [1]
+			"Goemeow-TwistingNether", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Goemeow-TwistingNether", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2246, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			608, -- [11]
+			"Player-164-09CC2222", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094363,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfff48cbaGoemeow-TwistingNether|r",
+			[51] = 1533149965,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [24]
 		{
-			"_$17Caaääaaäärl_$WTS |cff1eff00|Hitem:1604::::::::110:258:512::1:3655:60:::|h[Chromatic Sword]|h|r cheaper than ah PST_$ffffff$", -- [1]
-			"Evan-Illidan", -- [2]
+			"I was @ 250 ms earlier", -- [1]
+			"Scaris-Magtheridon", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Scaris-Magtheridon", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2250, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			612, -- [11]
+			"Player-78-05D38415", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094371,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Scaris-Magtheridon|r",
+			[51] = 1533149975,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [25]
 		{
-			"_$18Traea_$WTS|cff1eff00|Hitem:1604::::::::110:269:512::1:3655:60:::|h[Chromatic Sword]|h|rCheap or Trade_$00ff96$", -- [1]
-			"Evan-Illidan", -- [2]
+			"ouch", -- [1]
+			"Goemeow-TwistingNether", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Goemeow-TwistingNether", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2252, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			614, -- [11]
+			"Player-164-09CC2222", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094376,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfff48cbaGoemeow-TwistingNether|r",
+			[51] = 1533149983,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [26]
 		{
-			"_$19Raïne_$<SSDD> Is a new guild with a core of long time friends. We're currently LF Rdps to fill our semi-hardcore raid roster. Raid times are Tues/Wed 9pm-12am server. Everyone is welcome and has a spot for something here! Pst for more info._$0070dd$", -- [1]
-			"Evan-Illidan", -- [2]
+			"put some marks RL", -- [1]
+			"Melzzinha-Gallywix", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Melzzinha-Gallywix", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2254, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			615, -- [11]
+			"Player-3234-0A60F909", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094378,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Melzzinha-Gallywix|r",
+			[51] = 1533149992,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [27]
 		{
-			"_$20Brawly_$wtb bulk goblin glider kits for cheaper than ah pst_$00ff96$", -- [1]
-			"Evan-Illidan", -- [2]
+			"here", -- [1]
+			"Lionsrage-Kil'jaeden", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Lionsrage-Kil'jaeden", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2256, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			619, -- [11]
+			"Player-9-06F4119E", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094381,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffff7c0aLionsrage-Kil'jaeden|r",
+			[51] = 1533150023,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [28]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
+			"back", -- [1]
+			"Dexeus-Area52", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"", -- [4]
+			"Dexeus-Area52", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2257, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			620, -- [11]
+			"Player-3676-06F31990", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533094383,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffc69b6dDexeus-Area52|r",
+			[51] = 1533150033,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [29]
 		{
-			"_$21Qsdfsfxcvxg_$   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
+			"tanks do you know the spacing?", -- [1]
+			"Magiifitz-Tichondrius", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Magiifitz", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2258, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			623, -- [11]
+			"Player-11-0B1E1F00", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094383,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cff3fc6eaMagiifitz-Tichondrius|r",
+			[51] = 1533150053,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [30]
 		{
-			"_$22Unstaybull_$<Molten Core Swim Teams> is now recruiting for BFA. Centered around PVE/PVP progression, we are seeking mature dedicated players who are interested in clearing end game content quickly after launch. Need all roles- serious and ski_$f48cba$", -- [1]
-			"Evan-Illidan", -- [2]
+			"i wil be next to pally", -- [1]
+			"Moodöw-Tichondrius", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Moodöw-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2260, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			627, -- [11]
+			"Player-11-0A6E4859", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094386,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffa330c9Moodöw-Tichondrius|r",
+			[51] = 1533150071,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [31]
 		{
-			"美服style工作室提供M王座1-11个人拾取,M阿古斯坐骑.游戏类其他各种代练,大量金币出售.", -- [1]
-			"Cognewsean-Illidan", -- [2]
+			"i'll be on side", -- [1]
+			"Goemeow-TwistingNether", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Cognewsean", -- [5]
+			"", -- [4]
+			"Goemeow-TwistingNether", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2261, -- [11]
-			"Player-57-0A9A35E8", -- [12]
+			631, -- [11]
+			"Player-164-09CC2222", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cff0070ddCognewsean|r",
-			[51] = 1533094387,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cfff48cbaGoemeow-TwistingNether|r",
+			[51] = 1533150085,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [32]
 		{
-			"_$23Cognewsean_$美服style工作室提供M王座1-11个人拾取,M阿古斯坐骑.游戏类其他各种代练,大量金币出售._$0070dd$", -- [1]
-			"Evan-Illidan", -- [2]
+			"just tank first", -- [1]
+			"Moodöw-Tichondrius", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Moodöw-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2262, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			633, -- [11]
+			"Player-11-0A6E4859", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094387,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffa330c9Moodöw-Tichondrius|r",
+			[51] = 1533150095,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [33]
 		{
-			"_$24Brawly_$wtb bulk goblin gliders _$00ff96$", -- [1]
-			"Evan-Illidan", -- [2]
+			"lock stones?", -- [1]
+			"Crackajacka-Zul'jin", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Crackajacka-Zul'jin", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2265, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			653, -- [11]
+			"Player-61-0B912705", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094394,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffCrackajacka-Zul'jin|r",
+			[51] = 1533150151,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [34]
 		{
-			"_$25Musclewìzard_$wtb moar queen references _$3fc6ea$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Poison Bomb Proc", -- [1]
+			"Melzzinha-Gallywix", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Melzzinha-Gallywix", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2268, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			664, -- [11]
+			"Player-3234-0A60F909", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094399,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Melzzinha-Gallywix|r",
+			[51] = 1533150177,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [35]
 		{
-			" 燃烧王座英雄史诗个人拾取！个人拾取10件保底。M 阿古斯,古尔丹坐骑100%拾取!,M阿古斯成就,", -- [1]
-			"Ubjskskde-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Ubjskskde", -- [5]
+			"Poison Bomb Proc", -- [1]
+			"Melzzinha-Gallywix", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Melzzinha-Gallywix", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2269, -- [11]
-			"Player-57-0AFC9C90", -- [12]
+			672, -- [11]
+			"Player-3234-0A60F909", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cff3fc6eaUbjskskde|r",
-			[51] = 1533094400,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cfffff468Melzzinha-Gallywix|r",
+			[51] = 1533150186,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [36]
 		{
-			"_$26Ubjskskde_$ 燃烧王座英雄史诗个人拾取！个人拾取10件保底。M 阿古斯,古尔丹坐骑100%拾取!,M阿古斯成就,_$3fc6ea$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Poison Bomb Proc", -- [1]
+			"Melzzinha-Gallywix", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Melzzinha-Gallywix", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2270, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			686, -- [11]
+			"Player-3234-0A60F909", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094401,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Melzzinha-Gallywix|r",
+			[51] = 1533150215,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [37]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"3", -- [1]
+			"Magiifitz-Tichondrius", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Magiifitz-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2272, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			689, -- [11]
+			"Player-11-0B1E1F00", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533094403,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cff3fc6eaMagiifitz-Tichondrius|r",
+			[51] = 1533150218,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [38]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"2", -- [1]
+			"Magiifitz-Tichondrius", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Magiifitz-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2278, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			694, -- [11]
+			"Player-11-0B1E1F00", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533094423,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cff3fc6eaMagiifitz-Tichondrius|r",
+			[51] = 1533150219,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [39]
 		{
-			"_$27Qsdfsfxcvxg_$   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"1", -- [1]
+			"Magiifitz-Tichondrius", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Magiifitz-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2279, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			695, -- [11]
+			"Player-11-0B1E1F00", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094423,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cff3fc6eaMagiifitz-Tichondrius|r",
+			[51] = 1533150220,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [40]
 		{
-			"_$1Ròjó_$***Elevator Boss*** is a new guild created from a core group of friends. Currently we are looking to build a strong raiding mythic guild so we can be ready as we go into new expansion. Schedule is Tue/Wed/Thu 9 PM RT. /w me for more in_$a330c9$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Poison Bomb Proc", -- [1]
+			"Melzzinha-Gallywix", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Melzzinha-Gallywix", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2285, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			704, -- [11]
+			"Player-3234-0A60F909", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094441,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Melzzinha-Gallywix|r",
+			[51] = 1533150232,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [41]
 		{
-			"_$2Qsdfsfxcvxg_$   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Necrotic Embrace 1 on {rt3}Superbearcow{rt3}", -- [1]
+			"Superbearcow-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Superbearcow", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2288, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			718, -- [11]
+			"Player-57-0941658F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094443,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffff7c0aSuperbearcow|r",
+			[51] = 1533150255,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [42]
 		{
-			"_$3Cognewsean_$美服style工作室提供M王座1-11个人拾取,M阿古斯坐骑.游戏类其他各种代练,大量金币出售._$0070dd$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"{rt3}3", -- [1]
+			"Superbearcow-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Superbearcow", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2289, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			720, -- [11]
+			"Player-57-0941658F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094444,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffff7c0aSuperbearcow|r",
+			[51] = 1533150258,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [43]
 		{
-			"_$4Deathchibi_$maybe_$aad372$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"{rt3}2", -- [1]
+			"Superbearcow-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Superbearcow", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2296, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			721, -- [11]
+			"Player-57-0941658F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094458,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffff7c0aSuperbearcow|r",
+			[51] = 1533150259,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [44]
 		{
-			"_$5Agortetanar_$ 王座 个人拾取=, 等级代练。 日常托管。 黑市凤凰飞机头幽灵虎。。成就坐骑。。幽灵虎 魔法公鸡 _$aad372$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"{rt3}1", -- [1]
+			"Superbearcow-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Superbearcow", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2300, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			722, -- [11]
+			"Player-57-0941658F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094470,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffff7c0aSuperbearcow|r",
+			[51] = 1533150260,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [45]
 		{
-			"_$6Ubjskskde_$ 燃烧王座英雄史诗个人拾取！个人拾取10件保底。M 阿古斯,古尔丹坐骑100%拾取!,M阿古斯成就,_$3fc6ea$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Poison Bomb Proc", -- [1]
+			"Melzzinha-Gallywix", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Melzzinha-Gallywix", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2302, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			727, -- [11]
+			"Player-3234-0A60F909", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094471,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Melzzinha-Gallywix|r",
+			[51] = 1533150272,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [46]
 		{
-			"_$7Øxidize_$WTS Heroic Argus kill pst_$3fc6ea$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Poison Bomb Proc", -- [1]
+			"Melzzinha-Gallywix", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Melzzinha-Gallywix", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2304, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			730, -- [11]
+			"Player-3234-0A60F909", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094472,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Melzzinha-Gallywix|r",
+			[51] = 1533150276,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [47]
 		{
-			"_$8Qsdfsfxcvxg_$   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Arilia 中了被标记的猎物", -- [1]
+			"Arilia-Aegwynn", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Arilia-Aegwynn", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2309, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			733, -- [11]
+			"Player-1136-07EB86FF", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094483,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffa330c9Arilia-Aegwynn|r",
+			[51] = 1533150281,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [48]
 		{
-			"_$9Caaääaaäärl_$WTS |cff1eff00|Hitem:1604::::::::110:258:512::1:3655:60:::|h[Chromatic Sword]|h|r cheaper than ah PST_$ffffff$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"3秒", -- [1]
+			"Arilia-Aegwynn", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Arilia-Aegwynn", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2311, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			735, -- [11]
+			"Player-1136-07EB86FF", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094484,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffa330c9Arilia-Aegwynn|r",
+			[51] = 1533150283,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [49]
 		{
-			"_$10Traea_$WTS|cff1eff00|Hitem:1604::::::::110:269:512::1:3655:60:::|h[Chromatic Sword]|h|rCheaper than AH_$00ff96$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"2秒", -- [1]
+			"Arilia-Aegwynn", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Arilia-Aegwynn", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2313, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			736, -- [11]
+			"Player-1136-07EB86FF", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094487,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffa330c9Arilia-Aegwynn|r",
+			[51] = 1533150284,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [50]
 		{
-			"美服style工作室提供M王座1-11个人拾取,M阿古斯坐骑.游戏类其他各种代练,大量金币出售.", -- [1]
-			"Cognewsean-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Cognewsean", -- [5]
+			"1秒", -- [1]
+			"Arilia-Aegwynn", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Arilia-Aegwynn", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2317, -- [11]
-			"Player-57-0A9A35E8", -- [12]
+			738, -- [11]
+			"Player-1136-07EB86FF", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cff0070ddCognewsean|r",
-			[51] = 1533094499,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffa330c9Arilia-Aegwynn|r",
+			[51] = 1533150285,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [51]
 		{
-			"_$11Cognewsean_$美服style工作室提供M王座1-11个人拾取,M阿古斯坐骑.游戏类其他各种代练,大量金币出售._$0070dd$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Marked Prey on Magiifitz", -- [1]
+			"Magiifitz-Tichondrius", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Magiifitz-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2318, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			754, -- [11]
+			"Player-11-0B1E1F00", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094500,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cff3fc6eaMagiifitz-Tichondrius|r",
+			[51] = 1533150314,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [52]
 		{
-			"_$12Drealm_$Beyond the Clouds休闲团，活动两天。为新版本开荒奥迪尔，招收各种职业。我们的要求：人品过关，认真负责，心态平和，出勤稳定。_$ff7c0a$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"ACTIVATING THE OH SHIT BUTTON ", -- [1]
+			"Superbearcow-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Superbearcow", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2320, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			756, -- [11]
+			"Player-57-0941658F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094501,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffff7c0aSuperbearcow|r",
+			[51] = 1533150314,
+			[50] = "CHAT_MSG_YELL",
 		}, -- [53]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"3", -- [1]
+			"Magiifitz-Tichondrius", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Magiifitz-Tichondrius", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2321, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			757, -- [11]
+			"Player-11-0B1E1F00", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533094503,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cff3fc6eaMagiifitz-Tichondrius|r",
+			[51] = 1533150316,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [54]
 		{
-			"_$13Daeneri_$<Booty Pirates> [2/11M] Semi-casual LATE NIGHT raiding guild LF Tank & DPS for BfA! Times Fri/Sun 10pm-1am Server Time (CT). M+, social in Discord, guild events & More! PST for more info! App: goo.gl/Tpmn3C_$ff7c0a$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"2", -- [1]
+			"Magiifitz-Tichondrius", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Magiifitz-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2324, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			758, -- [11]
+			"Player-11-0B1E1F00", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094515,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cff3fc6eaMagiifitz-Tichondrius|r",
+			[51] = 1533150317,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [55]
 		{
-			"_$14Mojodeath_$WTS |cff1eff00|Hitem:1604::::::::110:250:512::1:3655:60:::|h[Chromatic Sword]|h|r Cheaper than what Caaääaaäärl-Illidan and Traea-Illidan are seeling it for_$c41e3a$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"1", -- [1]
+			"Magiifitz-Tichondrius", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Magiifitz-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2327, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			760, -- [11]
+			"Player-11-0B1E1F00", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094521,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cff3fc6eaMagiifitz-Tichondrius|r",
+			[51] = 1533150318,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [56]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"Poison Bomb Proc", -- [1]
+			"Melzzinha-Gallywix", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Melzzinha-Gallywix", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2329, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			768, -- [11]
+			"Player-3234-0A60F909", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533094523,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cfffff468Melzzinha-Gallywix|r",
+			[51] = 1533150330,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [57]
 		{
-			"_$15Qsdfsfxcvxg_$   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Poison Bomb Proc", -- [1]
+			"Melzzinha-Gallywix", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Melzzinha-Gallywix", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2330, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			773, -- [11]
+			"Player-3234-0A60F909", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094523,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Melzzinha-Gallywix|r",
+			[51] = 1533150345,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [58]
 		{
-			"_$16Traea_$WTS|cff1eff00|Hitem:1604::::::::110:269:512::1:3655:60:::|h[Chromatic Sword]|h|r Cheap Or trade!_$00ff96$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Necrotic Embrace 1 on {rt3}Crackajacka{rt3}", -- [1]
+			"Crackajacka-Zul'jin", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Crackajacka-Zul'jin", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2332, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			782, -- [11]
+			"Player-61-0B912705", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094528,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffCrackajacka-Zul'jin|r",
+			[51] = 1533150350,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [59]
 		{
-			"_$17Kineticblade_$<Immolation> is a brand new H/M guild looking to fill it's main roster for BFA! LF Paladin(Holy) and RDPS! Raid times are Thurs-Sat 8pm-12am Sever Time. PM for details!_$a330c9$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"{rt3}3", -- [1]
+			"Crackajacka-Zul'jin", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Crackajacka-Zul'jin", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2335, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			785, -- [11]
+			"Player-61-0B912705", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094533,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffCrackajacka-Zul'jin|r",
+			[51] = 1533150353,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [60]
 		{
-			"_$18Unstaybull_$<Molten Core Swim Teams> is now recruiting for BFA. Centered around PVE/PVP progression, we are seeking mature dedicated players who are interested in clearing end game content quickly after launch. Need all roles- serious and ski_$f48cba$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"{rt3}2", -- [1]
+			"Crackajacka-Zul'jin", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Crackajacka-Zul'jin", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2337, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			786, -- [11]
+			"Player-61-0B912705", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094537,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffCrackajacka-Zul'jin|r",
+			[51] = 1533150354,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [61]
 		{
-			"_$19Omegalully_$they selling for 5g_$ffffff$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"{rt3}1", -- [1]
+			"Crackajacka-Zul'jin", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Crackajacka-Zul'jin", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2339, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			787, -- [11]
+			"Player-61-0B912705", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094539,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffCrackajacka-Zul'jin|r",
+			[51] = 1533150355,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [62]
 		{
-			" 燃烧王座英雄史诗个人拾取！个人拾取10件保底。M 阿古斯,古尔丹坐骑100%拾取!,M阿古斯成就,", -- [1]
-			"Ubjskskde-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Ubjskskde", -- [5]
+			"Poison Bomb Proc", -- [1]
+			"Melzzinha-Gallywix", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Melzzinha-Gallywix", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2340, -- [11]
-			"Player-57-0AFC9C90", -- [12]
+			788, -- [11]
+			"Player-3234-0A60F909", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cff3fc6eaUbjskskde|r",
-			[51] = 1533094540,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cfffff468Melzzinha-Gallywix|r",
+			[51] = 1533150358,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [63]
 		{
-			"_$20Ubjskskde_$ 燃烧王座英雄史诗个人拾取！个人拾取10件保底。M 阿古斯,古尔丹坐骑100%拾取!,M阿古斯成就,_$3fc6ea$", -- [1]
-			"Evan-Illidan", -- [2]
+			"|cffa335ee|Hitem:151942::::::::110:257::5:3:3611:1487:3528:::|h[Cord of Surging Hysteria]|h|r roll", -- [1]
+			"Crackajacka-Zul'jin", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Crackajacka-Zul'jin", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2341, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			805, -- [11]
+			"Player-61-0B912705", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094541,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffCrackajacka-Zul'jin|r",
+			[51] = 1533150382,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [64]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
+			"Another week, another no trinket", -- [1]
+			"Intuitive-Stormrage", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"", -- [4]
+			"Intuitive-Stormrage", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2342, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			807, -- [11]
+			"Player-60-0B9FA0F3", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533094543,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cfffff468Intuitive-Stormrage|r",
+			[51] = 1533150390,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [65]
 		{
-			"_$21Mojodeath_$im seeling it for 4_$c41e3a$", -- [1]
-			"Evan-Illidan", -- [2]
+			"I can", -- [1]
+			"Dexeus-Area52", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Dexeus-Area52", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2345, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			828, -- [11]
+			"Player-3676-06F31990", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094545,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffc69b6dDexeus-Area52|r",
+			[51] = 1533150470,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [66]
 		{
-			"美服style工作室提供M王座1-11个人拾取,M阿古斯坐骑.游戏类其他各种代练,大量金币出售.", -- [1]
-			"Cognewsean-Illidan", -- [2]
+			"going potty real quick", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Cognewsean", -- [5]
+			"", -- [4]
+			"Fuj", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2347, -- [11]
-			"Player-57-0A9A35E8", -- [12]
+			831, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cff0070ddCognewsean|r",
-			[51] = 1533094555,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533150482,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [67]
 		{
-			"_$22Cognewsean_$美服style工作室提供M王座1-11个人拾取,M阿古斯坐骑.游戏类其他各种代练,大量金币出售._$0070dd$", -- [1]
-			"Evan-Illidan", -- [2]
+			"tanks know what you're doin?", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Fuj", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2348, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			852, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094556,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533150611,
+			[50] = "CHAT_MSG_RAID_LEADER",
 		}, -- [68]
 		{
-			"_$23Imarouge_$i beg ur pardon i see it for 1 gold_$3fc6ea$", -- [1]
-			"Evan-Illidan", -- [2]
+			"no worries", -- [1]
+			"Moodöw-Tichondrius", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Moodöw-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2351, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			855, -- [11]
+			"Player-11-0A6E4859", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094563,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffa330c9Moodöw-Tichondrius|r",
+			[51] = 1533150620,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [69]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
+			"YO", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"", -- [4]
+			"Fuj", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2352, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			859, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533094563,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533150660,
+			[50] = "CHAT_MSG_RAID_LEADER",
 		}, -- [70]
 		{
-			"_$24Qsdfsfxcvxg_$   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
+			"TANKS", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Fuj", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2353, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			860, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094563,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533150660,
+			[50] = "CHAT_MSG_RAID_LEADER",
 		}, -- [71]
 		{
-			"_$25Øxidize_$WTS Heroic Argus kill pst_$3fc6ea$", -- [1]
-			"Evan-Illidan", -- [2]
+			"you know what youre doin here?", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Fuj", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2355, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			862, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094565,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533150664,
+			[50] = "CHAT_MSG_RAID_LEADER",
 		}, -- [72]
 		{
-			"_$26Caaääaaäärl_$WTS |cff1eff00|Hitem:1604::::::::110:258:512::1:3655:60:::|h[Chromatic Sword]|h|r cheaper than ah PST_$ffffff$", -- [1]
-			"Evan-Illidan", -- [2]
+			"we said yes", -- [1]
+			"Goemeow-TwistingNether", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Goemeow-TwistingNether", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2358, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			869, -- [11]
+			"Player-164-09CC2222", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094571,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfff48cbaGoemeow-TwistingNether|r",
+			[51] = 1533150685,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [73]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
+			"summonstone", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"", -- [4]
+			"Fuj", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2362, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			883, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533094583,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533150760,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [74]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
+			"oh sorry", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"", -- [4]
+			"Fuj", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2365, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			885, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533094603,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533150760,
+			[50] = "CHAT_MSG_RAID_LEADER",
 		}, -- [75]
 		{
-			"_$27Qsdfsfxcvxg_$   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
+			"tyty", -- [1]
+			"Reddpool-Zul'jin", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Reddpool-Zul'jin", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2366, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			887, -- [11]
+			"Player-61-0B7D0497", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094603,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Reddpool-Zul'jin|r",
+			[51] = 1533150798,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [76]
 		{
-			"_$28Unstaybull_$<Molten Core Swim Teams> is now recruiting for BFA. Centered around PVE/PVP progression, we are seeking mature dedicated players who are interested in clearing end game content quickly after launch. Need all roles- serious and ski_$f48cba$", -- [1]
-			"Evan-Illidan", -- [2]
+			"one more rogue", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Fuj", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2368, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			889, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094606,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533150811,
+			[50] = "CHAT_MSG_RAID_LEADER",
 		}, -- [77]
 		{
-			" 燃烧王座英雄史诗个人拾取！个人拾取10件保底。M 阿古斯,古尔丹坐骑100%拾取!,M阿古斯成就,", -- [1]
-			"Ubjskskde-Illidan", -- [2]
+			"pls dont fail mechanics :)", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Ubjskskde", -- [5]
+			"", -- [4]
+			"Fuj", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2372, -- [11]
-			"Player-57-0AFC9C90", -- [12]
+			890, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cff3fc6eaUbjskskde|r",
-			[51] = 1533094610,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533150834,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [78]
 		{
-			"_$29Ubjskskde_$ 燃烧王座英雄史诗个人拾取！个人拾取10件保底。M 阿古斯,古尔丹坐骑100%拾取!,M阿古斯成就,_$3fc6ea$", -- [1]
-			"Evan-Illidan", -- [2]
+			"rogue power baby", -- [1]
+			"Melzzinha-Gallywix", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Melzzinha-Gallywix", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2373, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			893, -- [11]
+			"Player-3234-0A60F909", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094611,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Melzzinha-Gallywix|r",
+			[51] = 1533150839,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [79]
 		{
-			"美服style工作室提供M王座1-11个人拾取,M阿古斯坐骑.游戏类其他各种代练,大量金币出售.", -- [1]
-			"Cognewsean-Illidan", -- [2]
+			"lightning", -- [1]
+			"Purinn-Illidan", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Cognewsean", -- [5]
+			"", -- [4]
+			"Purinn", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2374, -- [11]
-			"Player-57-0A9A35E8", -- [12]
+			894, -- [11]
+			"Player-57-0AFE27E6", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cff0070ddCognewsean|r",
-			[51] = 1533094612,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffffffffPurinn|r",
+			[51] = 1533150856,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [80]
 		{
-			"_$30Cognewsean_$美服style工作室提供M王座1-11个人拾取,M阿古斯坐骑.游戏类其他各种代练,大量金币出售._$0070dd$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Poison Bomb Proc", -- [1]
+			"Melzzinha-Gallywix", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Melzzinha-Gallywix", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2375, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			928, -- [11]
+			"Player-3234-0A60F909", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094612,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Melzzinha-Gallywix|r",
+			[51] = 1533150945,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [81]
 		{
-			"_$31Imarouge_$chromatic sword is worth nothing now lol_$3fc6ea$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Poison Bomb Proc", -- [1]
+			"Melzzinha-Gallywix", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Melzzinha-Gallywix", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2377, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			933, -- [11]
+			"Player-3234-0A60F909", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094622,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Melzzinha-Gallywix|r",
+			[51] = 1533150967,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [82]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"Poison Bomb Proc", -- [1]
+			"Melzzinha-Gallywix", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Melzzinha-Gallywix", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2379, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			934, -- [11]
+			"Player-3234-0A60F909", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533094623,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cfffff468Melzzinha-Gallywix|r",
+			[51] = 1533150971,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [83]
 		{
-			"_$32Raïne_$<SSDD> Is a new guild with a core of long time friends. We're currently LF Rdps to fill our semi-hardcore raid roster. Raid times are Tues/Wed 9pm-12am server. Everyone is welcome and has a spot for something here! Pst for more info._$0070dd$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Fulminating Pulse fading in 3", -- [1]
+			"Lalock-Stormreaver", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Lalock-Stormreaver", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2380, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			937, -- [11]
+			"Player-58-0A119CA7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094623,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cff8787edLalock-Stormreaver|r",
+			[51] = 1533150985,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [84]
 		{
-			"_$33Caaääaaäärl_$WTS |cff1eff00|Hitem:1604::::::::110:258:512::1:3655:60:::|h[Chromatic Sword]|h|r cheaper than ah PST_$ffffff$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Fulminating Pulse fading in 3", -- [1]
+			"Crackajacka-Zul'jin", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Crackajacka-Zul'jin", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2387, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			938, -- [11]
+			"Player-61-0B912705", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094634,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffCrackajacka-Zul'jin|r",
+			[51] = 1533150985,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [85]
 		{
-			"_$34Øxidize_$WTS Heroic Argus kill pst_$3fc6ea$", -- [1]
-			"Evan-Illidan", -- [2]
+			"clockwise", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Fuj", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2391, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			939, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094638,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533150986,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [86]
 		{
-			"_$35Imarouge_$just like the seahorse-_-_$3fc6ea$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Fulminating Pulse fading in 2", -- [1]
+			"Crackajacka-Zul'jin", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Crackajacka-Zul'jin", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2394, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			940, -- [11]
+			"Player-61-0B912705", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094642,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffCrackajacka-Zul'jin|r",
+			[51] = 1533150986,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [87]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"Fulminating Pulse fading in 2", -- [1]
+			"Lalock-Stormreaver", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Lalock-Stormreaver", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2395, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			941, -- [11]
+			"Player-58-0A119CA7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533094643,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cff8787edLalock-Stormreaver|r",
+			[51] = 1533150986,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [88]
 		{
-			"_$36Qsdfsfxcvxg_$   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Fulminating Pulse fading in 1", -- [1]
+			"Lalock-Stormreaver", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Lalock-Stormreaver", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2396, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			942, -- [11]
+			"Player-58-0A119CA7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094643,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cff8787edLalock-Stormreaver|r",
+			[51] = 1533150987,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [89]
 		{
-			"_$37Traea_$WTS|cff1eff00|Hitem:1604::::::::110:269:512::1:3655:60:::|h[Chromatic Sword]|h|r Cheap!!!_$00ff96$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Fulminating Pulse fading in 1", -- [1]
+			"Crackajacka-Zul'jin", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Crackajacka-Zul'jin", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2399, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			943, -- [11]
+			"Player-61-0B912705", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094651,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffCrackajacka-Zul'jin|r",
+			[51] = 1533150987,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [90]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"Fulminating Pulse fading in 3", -- [1]
+			"Crackajacka-Zul'jin", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Crackajacka-Zul'jin", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2402, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			948, -- [11]
+			"Player-61-0B912705", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533094663,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffffffffCrackajacka-Zul'jin|r",
+			[51] = 1533151027,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [91]
 		{
-			"美服style工作室提供M王座1-11个人拾取,M阿古斯坐骑.游戏类其他各种代练,大量金币出售.", -- [1]
-			"Cognewsean-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Cognewsean", -- [5]
+			"Fulminating Pulse fading in 2", -- [1]
+			"Crackajacka-Zul'jin", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Crackajacka-Zul'jin", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2404, -- [11]
-			"Player-57-0A9A35E8", -- [12]
+			950, -- [11]
+			"Player-61-0B912705", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cff0070ddCognewsean|r",
-			[51] = 1533094668,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffffffffCrackajacka-Zul'jin|r",
+			[51] = 1533151028,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [92]
 		{
-			"_$38Cognewsean_$美服style工作室提供M王座1-11个人拾取,M阿古斯坐骑.游戏类其他各种代练,大量金币出售._$0070dd$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Fulminating Pulse fading in 1", -- [1]
+			"Crackajacka-Zul'jin", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Crackajacka-Zul'jin", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2405, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			952, -- [11]
+			"Player-61-0B912705", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094668,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffffffffCrackajacka-Zul'jin|r",
+			[51] = 1533151029,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [93]
 		{
-			" 燃烧王座英雄史诗个人拾取！个人拾取10件保底。M 阿古斯,古尔丹坐骑100%拾取!,M阿古斯成就,", -- [1]
-			"Ubjskskde-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Ubjskskde", -- [5]
+			"Fulminating Pulse fading in 3", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2407, -- [11]
-			"Player-57-0AFC9C90", -- [12]
+			961, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cff3fc6eaUbjskskde|r",
-			[51] = 1533094680,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1533151067,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [94]
 		{
-			"_$39Ubjskskde_$ 燃烧王座英雄史诗个人拾取！个人拾取10件保底。M 阿古斯,古尔丹坐骑100%拾取!,M阿古斯成就,_$3fc6ea$", -- [1]
+			"Fulminating Pulse fading in 2", -- [1]
 			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
+			"Orcish", -- [3]
+			"", -- [4]
 			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2408, -- [11]
+			964, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2088,703 +2088,637 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1533094681,
-			[50] = "CHAT_MSG_CHANNEL",
+			[51] = 1533151068,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [95]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"Fulminating Pulse fading in 1", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Evan", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2409, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			966, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533094683,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1533151069,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [96]
 		{
-			"_$40Qsdfsfxcvxg_$   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
+			"2 YARDS", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Fuj", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2410, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			970, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094683,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533151082,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [97]
 		{
-			"_$41Jihaka_$<Slumber> HUNTER, ARMS WARRIOR, RET PY  Our guild is made of mythic raiders from Sargeras, BRAND NEW, raided mythic all tiers of Legion hoping to push mythic during BFA. TUES/THURS 7-11 PM EST. PST for info._$aad372$", -- [1]
-			"Evan-Illidan", -- [2]
+			"2 YARDS", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Fuj", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2416, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			971, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094700,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533151083,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [98]
 		{
-			"^LFW_H", -- [1]
-			"Evan-Illidan", -- [2]
+			"2 YARDS", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Fuj", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2419, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			972, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094701,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533151083,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [99]
 		{
-			"^LFW_L", -- [1]
-			"Evan-Illidan", -- [2]
+			"2 YARDS", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Fuj", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2420, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			974, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094701,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533151083,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [100]
 		{
-			"^LFW_H", -- [1]
-			"Evan-Illidan", -- [2]
+			"2 YARDS", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Fuj", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2422, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			975, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094701,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533151083,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [101]
 		{
-			"^LFW_H", -- [1]
-			"Evan-Illidan", -- [2]
+			"2 YARDS", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Fuj", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2426, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			976, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094701,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533151084,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [102]
 		{
-			"^LFW_H", -- [1]
-			"Evan-Illidan", -- [2]
+			"2 YARDS", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Fuj", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2427, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			977, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533094701,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533151085,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [103]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:9546:Player-57-09C39599:1:7:31:18:4294967295:4294967295:4294967295:4294967295|h[Even More Plots]|h|r!", -- [1]
-			"Zedlogic", -- [2]
+			"2 YARDS", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Zedlogic", -- [5]
+			"Fuj", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			2644, -- [11]
-			"Player-57-09C39599", -- [12]
+			978, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffff468Zedlogic|r",
-			[51] = 1533095414,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533151085,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [104]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:12007:Player-57-0583ABC7:1:7:31:18:4294967295:4294967295:4294967295:4294967295|h[Heroic: Seat of the Triumvirate]|h|r!", -- [1]
-			"Evan-Illidan", -- [2]
+			"lemme tank asara this time", -- [1]
+			"Moodöw-Tichondrius", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Evan", -- [5]
+			"Moodöw-Tichondrius", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			2675, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			980, -- [11]
+			"Player-11-0A6E4859", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533095539,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cffa330c9Moodöw-Tichondrius|r",
+			[51] = 1533151091,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [105]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
+			"2 YARDS", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"", -- [4]
+			"Fuj", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2704, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			982, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533095564,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533151095,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [106]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
+			"2 YARDS", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"", -- [4]
+			"Fuj", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2726, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			983, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533095584,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533151096,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [107]
 		{
-			" 燃烧王座英雄史诗个人拾取！个人拾取10件保底。M 阿古斯,古尔丹坐骑100%拾取!,M阿古斯成就,", -- [1]
-			"Ubjskskde-Illidan", -- [2]
+			"2 YARDS", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Ubjskskde", -- [5]
+			"", -- [4]
+			"Fuj", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2735, -- [11]
-			"Player-57-0AFC9C90", -- [12]
+			984, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cff3fc6eaUbjskskde|r",
-			[51] = 1533095591,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533151096,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [108]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
+			"2 YARDS", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"", -- [4]
+			"Fuj", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2750, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			985, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533095604,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533151097,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [109]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"Poison Bomb Proc", -- [1]
+			"Melzzinha-Gallywix", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Melzzinha-Gallywix", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2763, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			993, -- [11]
+			"Player-3234-0A60F909", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533095624,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cfffff468Melzzinha-Gallywix|r",
+			[51] = 1533151137,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [110]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"Poison Bomb Proc", -- [1]
+			"Melzzinha-Gallywix", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Melzzinha-Gallywix", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2780, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			995, -- [11]
+			"Player-3234-0A60F909", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533095644,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cfffff468Melzzinha-Gallywix|r",
+			[51] = 1533151143,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [111]
 		{
-			" 燃烧王座英雄史诗个人拾取！个人拾取10件保底。M 阿古斯,古尔丹坐骑100%拾取!,M阿古斯成就,", -- [1]
-			"Ubjskskde-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Ubjskskde", -- [5]
+			"Poison Bomb Proc", -- [1]
+			"Melzzinha-Gallywix", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Melzzinha-Gallywix", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2793, -- [11]
-			"Player-57-0AFC9C90", -- [12]
+			1000, -- [11]
+			"Player-3234-0A60F909", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cff3fc6eaUbjskskde|r",
-			[51] = 1533095661,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cfffff468Melzzinha-Gallywix|r",
+			[51] = 1533151169,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [112]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"ACTIVATING THE OH SHIT BUTTON ", -- [1]
+			"Superbearcow-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Superbearcow", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2796, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			1006, -- [11]
+			"Player-57-0941658F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533095664,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffff7c0aSuperbearcow|r",
+			[51] = 1533151200,
+			[50] = "CHAT_MSG_YELL",
 		}, -- [113]
 		{
-			"Just testing an addon.", -- [1]
-			"Evan-Illidan", -- [2]
+			"sorry :(", -- [1]
+			"Purinn-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Evan", -- [5]
+			"Purinn", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			63, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			1010, -- [11]
+			"Player-57-0AFE27E6", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533095788,
-			[50] = "CHAT_MSG_PARTY_LEADER",
+			[52] = "|cffffffffPurinn|r",
+			[51] = 1533151230,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [114]
 		{
-			"hey man how ya been long time no talk", -- [1]
-			"Àirimus-Illidan", -- [2]
+			"KILL BOSS", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Àirimus", -- [5]
+			"Fuj", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			66, -- [11]
-			"Player-57-082A723B", -- [12]
+			1019, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffff7c0aÀirimus|r",
-			[51] = 1533095791,
-			[50] = "CHAT_MSG_WHISPER",
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533151274,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [115]
 		{
-			"GONNA TAKE UR JERB", -- [1]
-			"Celestrazaa-Illidan", -- [2]
+			"KILL BOSS", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Celestrazaa", -- [5]
+			"Fuj", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			70, -- [11]
-			"Player-57-0AFF20AA", -- [12]
+			1020, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1533095794,
-			[50] = "CHAT_MSG_PARTY",
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533151275,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [116]
 		{
-			"Heya, doing well!", -- [1]
-			"Àirimus-Illidan", -- [2]
+			"KILL BOSS", -- [1]
+			"Fuj-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Àirimus", -- [5]
+			"Fuj", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			76, -- [11]
-			"Player-57-082A723B", -- [12]
+			1021, -- [11]
+			"Player-57-0A99C80F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffff7c0aÀirimus|r",
-			[51] = 1533095800,
-			[50] = "CHAT_MSG_WHISPER_INFORM",
+			[52] = "|cffff7c0aFuj|r",
+			[51] = 1533151276,
+			[50] = "CHAT_MSG_RAID_WARNING",
 		}, -- [117]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
+			"nice", -- [1]
+			"Melzzinha-Gallywix", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"", -- [4]
+			"Melzzinha-Gallywix", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			80, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			1027, -- [11]
+			"Player-3234-0A60F909", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533095804,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cfffff468Melzzinha-Gallywix|r",
+			[51] = 1533151294,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [118]
 		{
-			"How about yourself?", -- [1]
-			"Àirimus-Illidan", -- [2]
+			"well done", -- [1]
+			"Melzzinha-Gallywix", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Àirimus", -- [5]
+			"Melzzinha-Gallywix", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			82, -- [11]
-			"Player-57-082A723B", -- [12]
+			1033, -- [11]
+			"Player-3234-0A60F909", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffff7c0aÀirimus|r",
-			[51] = 1533095805,
-			[50] = "CHAT_MSG_WHISPER_INFORM",
+			[52] = "|cfffff468Melzzinha-Gallywix|r",
+			[51] = 1533151297,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [119]
 		{
-			"im kidding btw", -- [1]
-			"Celestrazaa-Illidan", -- [2]
+			"Casting RAISE MASS SLUT ARMY", -- [1]
+			"Superbearcow-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Celestrazaa", -- [5]
+			"Superbearcow", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			85, -- [11]
-			"Player-57-0AFF20AA", -- [12]
+			1034, -- [11]
+			"Player-57-0941658F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1533095808,
-			[50] = "CHAT_MSG_PARTY",
+			[52] = "|cffff7c0aSuperbearcow|r",
+			[51] = 1533151302,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [120]
 		{
-			"im just avoiding responsibilies by fucking around on an alt", -- [1]
-			"Celestrazaa-Illidan", -- [2]
+			"brb", -- [1]
+			"Scaris-Magtheridon", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Celestrazaa", -- [5]
+			"Scaris-Magtheridon", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			96, -- [11]
-			"Player-57-0AFF20AA", -- [12]
+			1037, -- [11]
+			"Player-78-05D38415", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1533095820,
-			[50] = "CHAT_MSG_PARTY",
+			[52] = "|cfffff468Scaris-Magtheridon|r",
+			[51] = 1533151312,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [121]
 		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
+			"ty", -- [1]
+			"Arilia-Aegwynn", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"", -- [4]
+			"Arilia-Aegwynn", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			99, -- [11]
-			"Player-57-0AFEF298", -- [12]
+			1039, -- [11]
+			"Player-1136-07EB86FF", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533095824,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffa330c9Arilia-Aegwynn|r",
+			[51] = 1533151314,
+			[50] = "CHAT_MSG_RAID",
 		}, -- [122]
 		{
-			"doing good man, heard you guys did great doing mythic ", -- [1]
-			"Àirimus-Illidan", -- [2]
+			"Heya Evan", -- [1]
+			"Zaranà-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Àirimus", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			104, -- [11]
-			"Player-57-082A723B", -- [12]
+			9, -- [11]
+			"Player-57-0AB066CE", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffff7c0aÀirimus|r",
-			[51] = 1533095830,
-			[50] = "CHAT_MSG_WHISPER",
+			[52] = "|cffffffffZaranà|r",
+			[51] = 1533174330,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [123]
 		{
-			"Thanks :D", -- [1]
-			"Àirimus-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Àirimus", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			112, -- [11]
-			"Player-57-082A723B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffff7c0aÀirimus|r",
-			[51] = 1533095838,
-			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [124]
-		{
-			"Have a nice break?", -- [1]
-			"Àirimus-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Àirimus", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			115, -- [11]
-			"Player-57-082A723B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffff7c0aÀirimus|r",
-			[51] = 1533095842,
-			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [125]
-		{
-			"   王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽  白毛犀牛 所有TCG坐骑现货特价 版本前夕所有代练都有，要的Q", -- [1]
-			"Qsdfsfxcvxg-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qsdfsfxcvxg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
-			0, -- [10]
-			117, -- [11]
-			"Player-57-0AFEF298", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQsdfsfxcvxg|r",
-			[51] = 1533095844,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [126]
-		{
-			"Always pleasant, haha.", -- [1]
+			"Heya!", -- [1]
 			"Evan-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Evan", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			122, -- [11]
+			11, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2792,31 +2726,97 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1533095849,
-			[50] = "CHAT_MSG_PARTY_LEADER",
+			[51] = 1533174434,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [124]
+		{
+			"How was europe", -- [1]
+			"Zaranà-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			12, -- [11]
+			"Player-57-0AB066CE", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffZaranà|r",
+			[51] = 1533174444,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [125]
+		{
+			"Great", -- [1]
+			"Evan-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			16, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1533174461,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [126]
+		{
+			"Nice to not be living out of a suitcase anymore though.", -- [1]
+			"Evan-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			18, -- [11]
+			"Player-57-0583ABC7", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffEvan|r",
+			[51] = 1533174473,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [127]
 	},
 	["ChatEditHistory"] = {
-		"/g I don't think we have any Sham at all actually.", -- [1]
-		"/g Lots of free loot.", -- [2]
-		"/g He's on the fence, and wants to DPS.", -- [3]
-		"/g Which is a scary prospect.", -- [4]
-		"/suf", -- [5]
-		"/mac", -- [6]
-		"/bartender", -- [7]
-		"/wa", -- [8]
-		"/s [WeakAuras: Evan-Illidan - Velen's Future Sight 7.3]", -- [9]
-		"/s [WeakAuras: Evan-Illidan - Shadowfiend 7.3]", -- [10]
-		"/s [WeakAuras: Evan-Illidan - Evangelism 7.3]", -- [11]
-		"/ginvite Celestrazaa", -- [12]
-		"/s [WeakAuras: Evan-Illidan - Purge the Wicked 7.3.5 Target][WeakAuras: Evan-Illidan - Purge the Wicked 7.3.5 ToT]", -- [13]
-		"/g Heya.", -- [14]
-		"/p Just testing an addon.", -- [15]
-		"/cw Àirimus-Illidan Heya, doing well!", -- [16]
-		"/cw Àirimus-Illidan How about yourself?", -- [17]
-		"/cw Àirimus-Illidan Thanks :D", -- [18]
-		"/cw Àirimus-Illidan Have a nice break?", -- [19]
-		"/p Always pleasant, haha.", -- [20]
+		"/cw Àirimus-Illidan Gonna run for a bit though, have to do an errand.", -- [1]
+		"/cw Àirimus-Illidan I'll be on again though, I've been on vacation.", -- [2]
+		"/cw Àirimus-Illidan Working on making sense of Disc 8.0.", -- [3]
+		"/cw Àirimus-Illidan It's just making sense of my UI again.", -- [4]
+		"/cw Àirimus-Illidan And my bars.", -- [5]
+		"/cw Àirimus-Illidan Everything breaks every 2 years.", -- [6]
+		"/cw Àirimus-Illidan Good time to clean up though.", -- [7]
+		"/cw Àirimus-Illidan Yeah fortunately I was gone for the bloodbath, mostly.", -- [8]
+		"/cw Àirimus-Illidan Anyways, catch you later :)", -- [9]
+		"/wa", -- [10]
+		"/mac", -- [11]
+		"/raid Uh there's no split until bats.", -- [12]
+		"/luaerror", -- [13]
+		"/luaerror on", -- [14]
+		"/ec", -- [15]
+		"/luaerror off", -- [16]
+		"/g Heya!", -- [17]
+		"/tp", -- [18]
+		"/g Great", -- [19]
+		"/g Nice to not be living out of a suitcase anymore though.", -- [20]
 	},
 	["BodyGuard"] = {
 		["IsInValidZone"] = true,

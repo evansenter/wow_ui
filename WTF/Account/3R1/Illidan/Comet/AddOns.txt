@@ -55,10 +55,10 @@ WeakAurasModelPaths: disabled
 WeakAurasOptions: disabled
 WeakAurasTutorials: enabled
 WoWDBProfiler: disabled
-ElvUI_Config: enabled
+ElvUI_Config: disabled
 ElvUI_AddOnSkins: disabled
 ElvUI_Raidcooldowns: enabled
-ElvUI: enabled
+ElvUI: disabled
 DBM-Core: disabled
 DBM-DefaultSkin: disabled
 DBM-GUI: disabled

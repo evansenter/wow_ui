@@ -24,10 +24,10 @@ DeathNoteDB = {
 			["display"] = {
 				["y"] = 91.5,
 				["h"] = 681,
-				["x"] = -128.000244140625,
+				["namelist"] = 2,
 				["namelist_width"] = 245.000289916992,
 				["w"] = 775.999877929688,
-				["namelist"] = 2,
+				["x"] = -128.000244140625,
 			},
 		},
 		["Cometron - Illidan"] = {
@@ -39,8 +39,8 @@ DeathNoteDB = {
 		},
 		["Natal - Illidan"] = {
 			["display_filters"] = {
-				["buff_gains"] = false,
 				["buff_fades"] = false,
+				["buff_gains"] = false,
 			},
 			["display"] = {
 				["namelist"] = 2,
@@ -54,13 +54,6 @@ DeathNoteDB = {
 		["Comet - Illidan"] = {
 			["searchbox_text"] = "",
 			["max_deaths"] = 75,
-			["display"] = {
-				["y"] = 17.1110534667969,
-				["h"] = 621.999938964844,
-				["namelist"] = 2,
-				["w"] = 1013.00042724609,
-				["x"] = 321.277740478516,
-			},
 			["display_filters"] = {
 				["hide_misses"] = true,
 				["debuff_fades"] = false,
@@ -68,14 +61,21 @@ DeathNoteDB = {
 				["debuff_gains"] = false,
 				["buff_gains"] = false,
 			},
+			["display"] = {
+				["y"] = 17.1110534667969,
+				["h"] = 621.999938964844,
+				["x"] = 321.277740478516,
+				["w"] = 1013.00042724609,
+				["namelist"] = 2,
+			},
 		},
 		["Evan - Illidan"] = {
 			["searchbox_text"] = "",
 			["display"] = {
 				["w"] = 700.000061035156,
 				["y"] = -46.1109924316406,
-				["h"] = 499.999816894531,
 				["namelist"] = 2,
+				["h"] = 499.999816894531,
 				["x"] = -31.6669616699219,
 			},
 		},

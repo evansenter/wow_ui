@@ -82,8 +82,8 @@ WeakAurasOptions: disabled
 WeakAurasTemplates: disabled
 WorldQuestGroupFinder: disabled
 WorldQuestTracker: disabled
-ElvUI_Config: enabled
-ElvUI: enabled
+ElvUI_Config: disabled
+ElvUI: disabled
 DBM-Core: disabled
 DBM-DefaultSkin: disabled
 DBM-GUI: disabled
