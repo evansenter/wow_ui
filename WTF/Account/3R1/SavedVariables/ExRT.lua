@@ -1548,6 +1548,23 @@ VExRT = {
 				"^2073^15^1533150398^6^0^17^235.80^", -- [1511]
 				"^2073^15^1533150430^6^0^17^235.33^", -- [1512]
 				"^2073^15^1533150876^414^1^18^235.54^Lazyclaw-Vashj", -- [1513]
+				"^2065^2^1533178126^30^1^5^193.04^", -- [1514]
+				"^2066^2^1533178414^19^1^5^230.11^", -- [1515]
+				"^2067^2^1533178498^30^1^5^230.11^", -- [1516]
+				"^2068^2^1533178621^29^1^5^230.11^", -- [1517]
+				"^2070^15^1533605357^421^1^17^234.34^Jomm-Thrall", -- [1518]
+				"^2075^15^1533606281^353^0^18^234.65^Galbatron-Crushridge", -- [1519]
+				"^2075^15^1533607022^369^1^16^234.23^Sunashard-CenarionCircle", -- [1520]
+				"^2082^15^1533607697^304^0^15^234.42^Oztini-Thrall", -- [1521]
+				"^2082^15^1533608093^308^1^15^234.46^", -- [1522]
+				"^2076^15^1533616093^221^1^18^233.93^Brocktopus-Nagrand", -- [1523]
+				"^2074^15^1533616986^224^1^22^234.94^", -- [1524]
+				"^2070^15^1533617859^370^1^21^231.08^Alukura-EmeraldDream", -- [1525]
+				"^2064^15^1533618736^44^0^21^233.07^Girlsvsboys-EmeraldDream", -- [1526]
+				"^2064^15^1533618938^5^0^20^232.73^", -- [1527]
+				"^2064^15^1533619015^218^0^21^233.65^Juteseeker-EmeraldDream", -- [1528]
+				"^2064^15^1533619564^238^0^19^231.61^Kampachi-Bonechewer", -- [1529]
+				"^2064^15^1533620043^328^0^17^231.19^Skjøld-Zul'jin", -- [1530]
 			},
 			["Comet"] = {
 				"^2050^16^1507257128^138^0^20^927.82^Comet", -- [1]
@@ -1906,7 +1923,7 @@ VExRT = {
 			[1790] = "Rokmora",
 			[2052] = "Maiden of Vigilance",
 			[2067] = "Viceroy Nezhar",
-			[1869] = "Talixae Flamewreath",
+			[2068] = "L'ura",
 			[1810] = "Warlord Parjesh",
 			[1814] = "Wrath of Azshara",
 			[2092] = "Argus the Unmaker",
@@ -1922,7 +1939,7 @@ VExRT = {
 			[1838] = "Dresaron",
 			[2054] = "The Desolate Host",
 			[1866] = "Gul'dan",
-			[2070] = "Antoran High Command",
+			[1870] = "Advisor Melandrus",
 			[1811] = "Lady Hatecoil",
 			[1815] = "Tirathon Saltheril",
 			[2008] = "Helya",
@@ -1941,23 +1958,23 @@ VExRT = {
 			[1816] = "Ash'Golm",
 			[1812] = "King Deepbeard",
 			[2088] = "Kin'garoth",
-			[1836] = "Archdruid Glaidalis",
-			[1824] = "Helya",
 			[1962] = "Guarm",
-			[1958] = "Odyn",
+			[1824] = "Helya",
+			[1836] = "Archdruid Glaidalis",
+			[2057] = "Thrashbite the Scornful",
 			[2065] = "Zuraal the Ascended",
 			[2073] = "The Coven of Shivarra",
-			[2057] = "Thrashbite the Scornful",
+			[1958] = "Odyn",
 			[2037] = "Mistress Sassz'ine",
 			[2076] = "Garothi Worldbreaker",
 			[1793] = "Dargrul the Underking",
 			[2050] = "Sisters of the Moon",
-			[1870] = "Advisor Melandrus",
+			[2070] = "Antoran High Command",
 			[2066] = "Saprish",
 			[1872] = "Grand Magistrix Elisande",
 			[1813] = "Serpentrix",
 			[1817] = "Glazer",
-			[2068] = "L'ura",
+			[1869] = "Talixae Flamewreath",
 		},
 	},
 	["InviteTool"] = {
@@ -4694,6 +4711,44 @@ VExRT = {
 			"B250580Fuj1533150443", -- [2718]
 			"1250581Dexeus-Area521533151296", -- [2719]
 			"3250581Mshellyx-Quel'dorei1533151313", -- [2720]
+			"4250541Janevirus-EmeraldDream1533179489", -- [2721]
+			"A250574Joyun-Zangarmarsh1533179923", -- [2722]
+			"9250574Shaeyde-Trollbane1533179924", -- [2723]
+			"4250574Salacakei-Uldum1533179924", -- [2724]
+			"8250574Hyeya-Detheroc1533179926", -- [2725]
+			"4250574Janevirus-EmeraldDream1533179926", -- [2726]
+			"5250574Låstpråyer-ShatteredHalls1533179928", -- [2727]
+			"B250574Cherypretty1533179931", -- [2728]
+			"8250574Lowt-Hyjal1533179931", -- [2729]
+			"3250574Kloa-WyrmrestAccord1533179934", -- [2730]
+			"6250574Wynnbot-Mal'Ganis1533179945", -- [2731]
+			"6250575Wynnbot-Mal'Ganis1533180518", -- [2732]
+			"2250575Deviouzed-Stormreaver1533180520", -- [2733]
+			"4250575Ryumaster-Cho'gall1533180520", -- [2734]
+			"9250575Shaeyde-Trollbane1533180521", -- [2735]
+			"4250575Janevirus-EmeraldDream1533180521", -- [2736]
+			"4250575Salacakei-Uldum1533180522", -- [2737]
+			"B250575Caronax-Zul'jin1533605806", -- [2738]
+			"5250578Micker-ArgentDawn1533608428", -- [2739]
+			"1250578Tarma-Thrall1533608501", -- [2740]
+			"6250541Sickduck-Zul'jin1533616321", -- [2741]
+			"5250541Jopp-EmeraldDream1533616330", -- [2742]
+			"9250541Rytharion-Tichondrius1533616332", -- [2743]
+			"!9151937Rytharion-Tichondrius1533616333:4:3611:1808:1487:3528", -- [2744]
+			"3250541Girlsvsboys-EmeraldDream1533616334", -- [2745]
+			"9250541Brocktopus-Nagrand1533616381", -- [2746]
+			"!9151951Brocktopus-Nagrand1533616382:3:3611:1492:3336", -- [2747]
+			"8250574Lamicus-Malorne1533617216", -- [2748]
+			"3250574Girlsvsboys-EmeraldDream1533617242", -- [2749]
+			"2250574Donnyb-EmeraldDream1533617245", -- [2750]
+			"6250575Sickduck-Zul'jin1533618232", -- [2751]
+			"8250575Bömbs-Dalaran1533618242", -- [2752]
+			"7250575Kampachi-Bonechewer1533618246", -- [2753]
+			"!7152006Kampachi-Bonechewer1533618247:3:3611:1487:3528", -- [2754]
+			"3250575Girlsvsboys-EmeraldDream1533618248", -- [2755]
+			"4250575Grinsbane-Barthilas1533618252", -- [2756]
+			"4250575Sneakyzeus-Turalyon1533618253", -- [2757]
+			"!4152161Grinsbane-Barthilas1533618253:3:3611:1487:3528", -- [2758]
 		},
 	},
 	["ExCD2"] = {
@@ -4707,6 +4762,7 @@ VExRT = {
 			["Oqarrow-Thaurissan"] = 254,
 			["Kronosmx-Ragnaros"] = 577,
 			["Quietspirit-Thrall"] = 264,
+			["Trancegemini-Antonidas"] = 266,
 			["Tguks-Dreadmaul"] = 102,
 			["Jellacee-Skywall"] = 577,
 			["Garbuz-Sargeras"] = 105,
@@ -4714,6 +4770,8 @@ VExRT = {
 			["Olozero-Mal'Ganis"] = 260,
 			["Vonprofits-Zul'jin"] = 257,
 			["Shangela-Tichondrius"] = 250,
+			["Deviouzed-Stormreaver"] = 70,
+			["Toiletbeams-Mal'Ganis"] = 581,
 			["Doffie-Zul'jin"] = 252,
 			["Keltháis-Hyjal"] = 70,
 			["Dagnabitt-KhazModan"] = 253,
@@ -4722,12 +4780,16 @@ VExRT = {
 			["Superbearcow"] = 105,
 			["Dexeus-Area52"] = 72,
 			["Comet"] = 268,
+			["Grinsbane-Barthilas"] = 260,
 			["Destricus-Thrall"] = 577,
 			["Shocruz-Khaz'goroth"] = 259,
 			["Alexissae-MoonGuard"] = 260,
+			["Jopp-EmeraldDream"] = 258,
+			["Tînytîm-Area52"] = 72,
 			["Doinitwrong-Ysera"] = 265,
 			["Sonydigital"] = 72,
 			["Pøe-Detheroc"] = 270,
+			["Girlsvsboys-EmeraldDream"] = 254,
 			["Shádowj-Ragnaros"] = 258,
 			["Takeosan-Detheroc"] = 251,
 			["Solastoid-Mal'Ganis"] = 105,
@@ -4736,6 +4798,7 @@ VExRT = {
 			["Celestrazaa"] = 256,
 			["Landarth-Zuluhed"] = 577,
 			["Kinki"] = 265,
+			["Chelly-Thrall"] = 64,
 			["Bullsseye-Ragnaros"] = 102,
 			["Mohawk-KirinTor"] = 71,
 			["Ðustyleaf"] = 105,
@@ -4745,16 +4808,23 @@ VExRT = {
 			["Vulcanodon-Area52"] = 253,
 			["Gartluz-Proudmoore"] = 102,
 			["Celebi-Deathwing"] = 64,
+			["Rosário-Barthilas"] = 255,
 			["Fatalist"] = 71,
 			["Perkabear"] = 258,
+			["Skjøld-Zul'jin"] = 71,
 			["Liikus-Thrall"] = 250,
+			["Amaxaknight-Thrall"] = 251,
 			["Yourfriend-Mal'Ganis"] = 258,
+			["Ryumaster-Cho'gall"] = 260,
 			["Etcpewd-Mal'Ganis"] = 258,
+			["Bömbs-Dalaran"] = 64,
 			["Doots-Thrall"] = 62,
 			["Dagnarof-Quel'Thalas"] = 62,
 			["Novakaine-Barthilas"] = 64,
 			["Zelan-Hellscream"] = 62,
 			["Immoovable-Silvermoon"] = 73,
+			["Låstpråyer-ShatteredHalls"] = 256,
+			["Brocktopus-Nagrand"] = 267,
 			["Integra-Draka"] = 267,
 			["Erecshin-Zul'jin"] = 70,
 			["Mimiteh-Ysera"] = 103,
@@ -4768,20 +4838,25 @@ VExRT = {
 			["Pandabber-Area52"] = 270,
 			["Jinthaiya-Mal'Ganis"] = 263,
 			["Amnesiia"] = 102,
-			["Gains-Rivendare"] = 259,
+			["Bungy-EmeraldDream"] = 268,
+			["Gains-Rivendare"] = 260,
 			["Málveen-Mal'Ganis"] = 105,
 			["Kidkusu"] = 259,
 			["Fùzbòx-Area52"] = 262,
 			["Strathyn-Alexstrasza"] = 253,
 			["Ralz-Area52"] = 269,
+			["Eightysìx-Arthas"] = 577,
+			["Notedeath-Quel'Thalas"] = 265,
 			["Linna-TolBarad"] = 65,
 			["Sombre-Mal'Ganis"] = 265,
 			["Lightborne-BlackDragonflight"] = 256,
 			["Zoloftt-Mug'thol"] = 267,
+			["Kobu-Khaz'goroth"] = 254,
 			["Ghooligan-Dragonmaw"] = 267,
 			["Mshellyx-Quel'dorei"] = 253,
 			["Frøzen-WyrmrestAccord"] = 63,
 			["Avaricious-Mal'Ganis"] = 260,
+			["Tarma-Thrall"] = 73,
 			["Dovendyr-Area52"] = 65,
 			["Bezz-Barthilas"] = 257,
 			["Shinmoo-Zul'jin"] = 103,
@@ -4809,20 +4884,25 @@ VExRT = {
 			["Canklz-Destromath"] = 257,
 			["Snöw-Silvermoon"] = 267,
 			["Heâvymetal"] = 70,
+			["Taintedøne"] = 258,
 			["Ashofcinder-Silvermoon"] = 66,
 			["Grishnahk"] = 71,
 			["Drekavach-Dreadmaul"] = 103,
 			["Mitsumy-Azralon"] = 103,
 			["Alzer-Uther"] = 253,
 			["Qtoo"] = 262,
+			["Huna"] = 263,
 			["Mendonashojo"] = 70,
 			["Purinn"] = 257,
 			["Lysis-Magtheridon"] = 259,
 			["Grimwow-Area52"] = 251,
+			["Nevvr-Thaurissan"] = 71,
 			["Emozz-Zul'jin"] = 70,
+			["Aaliyahwow"] = 72,
 			["Rokkam-Mal'Ganis"] = 269,
 			["Juviya-Area52"] = 261,
 			["Spankness-Azralon"] = 70,
+			["Twotrapz-Hyjal"] = 253,
 			["Bursteado-Quel'Thalas"] = 70,
 			["Zeddia-Zul'jin"] = 269,
 			["Noktagall-Mal'Ganis"] = 250,
@@ -4831,6 +4911,8 @@ VExRT = {
 			["Yoggy-Hyjal"] = 258,
 			["Pticriss-Sargeras"] = 64,
 			["Ankeos-Azralon"] = 70,
+			["Polski-Blackrock"] = 257,
+			["Kloa-WyrmrestAccord"] = 253,
 			["Lissdred-Quel'Thalas"] = 63,
 			["Snufleupagus-Area52"] = 269,
 			["Kundershot-Turalyon"] = 254,
@@ -4839,137 +4921,193 @@ VExRT = {
 			["Reddpool-Zul'jin"] = 259,
 			["Intuitive-Stormrage"] = 260,
 			["Trexller-Mal'Ganis"] = 577,
+			["Juushiro-Bladefist"] = 65,
 			["Necroharsh-Tichondrius"] = 253,
 			["Mixia"] = 71,
 			["Moar-Shadowmoon"] = 251,
 			["Tinkleprobe-Kil'jaeden"] = 259,
+			["Kracles-Tichondrius"] = 256,
 			["Ponjita-Ragnaros"] = 268,
 			["Sïoki-Azralon"] = 266,
+			["Jadgel-EmeraldDream"] = 72,
+			["Sneakyzeus-Turalyon"] = 261,
+			["Cherypretty"] = 105,
+			["Lamicus-Malorne"] = 63,
+			["Temna-Dragonblight"] = 70,
 			["Brandaryia-Thrall"] = 253,
 			["Azackqt-Turalyon"] = 581,
+			["Sylir-Thrall"] = 270,
+			["Alukura-EmeraldDream"] = 255,
 			["Ashleen-Azralon"] = 257,
-			["Alarìus-MoonGuard"] = 73,
+			["Zakoom-Area52"] = 105,
+			["Valeerå-Thrall"] = 259,
+			["Demonwar"] = 72,
 			["Anexhas-Ragnaros"] = 577,
 			["Wuvybo-BurningBlade"] = 105,
+			["Mallarius-Ragnaros"] = 262,
+			["Donnyb-EmeraldDream"] = 65,
 			["Subtlerogue-Hyjal"] = 260,
 			["Lèdgic-Tichondrius"] = 577,
 			["Kyrya-Azralon"] = 65,
+			["Dugaa-Cho'gall"] = 66,
+			["Traitør-Tichondrius"] = 259,
+			["Scaris-Magtheridon"] = 259,
 			["Sybre-Tichondrius"] = 63,
+			["Karncama-Barthilas"] = 65,
 			["Åres-Quel'Thalas"] = 72,
+			["Mimino-Maelstrom"] = 64,
+			["Hofflerand-Alexstrasza"] = 64,
+			["Truefear-Lothar"] = 266,
+			["Xeryezz-Tichondrius"] = 258,
+			["Everfu-Skywall"] = 268,
+			["Sarcophilia-Thrall"] = 258,
+			["Kredish-Lothar"] = 259,
+			["Rytharion-Tichondrius"] = 265,
 			["Hastrior-Azralon"] = 577,
-			["Fernquist-Kil'jaeden"] = 64,
-			["Minuet-Mal'Ganis"] = 257,
-			["Raygnar-Destromath"] = 577,
-			["Lalock-Stormreaver"] = 265,
 			["Obedari-Ragnaros"] = 577,
+			["Distol-Azralon"] = 104,
+			["Neshandra-Dalaran"] = 62,
+			["Fernquist-Kil'jaeden"] = 64,
+			["Hamjamm"] = 260,
+			["Minuet-Mal'Ganis"] = 257,
+			["Jomm-Thrall"] = 263,
+			["Raygnar-Destromath"] = 577,
+			["Kdsnake-EmeraldDream"] = 581,
+			["Sänctus"] = 257,
+			["Lionsrage-Kil'jaeden"] = 103,
+			["Rédadoru-Quel'Thalas"] = 577,
+			["Gumbot-Hyjal"] = 265,
+			["Lowt-Hyjal"] = 64,
+			["Joyun-Zangarmarsh"] = 270,
+			["Lalock-Stormreaver"] = 265,
+			["Magiifitz-Tichondrius"] = 64,
+			["Jebra-Dragonblight"] = 103,
+			["Shaeyde-Trollbane"] = 267,
+			["Arilia-Aegwynn"] = 577,
+			["Baldeaglejrk-Thrall"] = 259,
+			["Sunashard-CenarionCircle"] = 70,
+			["Escadin-Stormreaver"] = 577,
+			["Syrch-Zul'jin"] = 267,
+			["Mkodiñ-Thrall"] = 268,
 			["Cravingdead-ArgentDawn"] = 265,
+			["Hasavah-Magtheridon"] = 253,
+			["Yungwok-Eitrigg"] = 263,
+			["Skitlzr-Mal'Ganis"] = 259,
+			["Sarsgaard-Ghostlands"] = 267,
+			["Sinthaad-Area52"] = 265,
+			["Matsukaze-Thrall"] = 102,
 			["Allexan-Zul'jin"] = 250,
 			["Galadien-Stormreaver"] = 66,
 			["Kìyarah-Zul'jin"] = 253,
-			["Facebones-Stormrage"] = 64,
-			["Hamjamm"] = 260,
-			["Magiifitz-Tichondrius"] = 64,
-			["Moodöw-Tichondrius"] = 581,
-			["Obsidiån-Silvermoon"] = 253,
-			["Lionsrage-Kil'jaeden"] = 103,
-			["Goemeow-TwistingNether"] = 66,
-			["Melzzinha-Gallywix"] = 259,
-			["Demonwar"] = 72,
-			["Vîl-Mal'Ganis"] = 266,
-			["Arckinoz-Ragnaros"] = 269,
-			["Gumbot-Hyjal"] = 265,
-			["Bríghteyes-Zul'jin"] = 577,
-			["Mallarius-Ragnaros"] = 262,
-			["Tentacruël-Stormrage"] = 263,
-			["Hashrosin-Zul'jin"] = 72,
-			["Jenipher-WyrmrestAccord"] = 577,
-			["Scaris-Magtheridon"] = 259,
-			["Donlogan-Deathwing"] = 263,
-			["Vaikhal-Azralon"] = 265,
-			["Syrch-Zul'jin"] = 267,
-			["Muertenegra-Kil'jaeden"] = 581,
 			["Hitokeri-Kil'jaeden"] = 577,
-			["Volráth-Zul'jin"] = 258,
-			["Hofflerand-Alexstrasza"] = 64,
+			["Moodöw-Tichondrius"] = 581,
+			["Khamûl-Sen'jin"] = 250,
 			["Fllyer-Azralon"] = 254,
-			["Karncama-Barthilas"] = 65,
-			["Spoonheals-BurningBlade"] = 256,
+			["Facebones-Stormrage"] = 64,
+			["Muertenegra-Kil'jaeden"] = 581,
 			["Cöffee-Crushridge"] = 257,
-			["Whysofat-Thaurissan"] = 253,
+			["Melzzinha-Gallywix"] = 259,
+			["Cyahaterz-Area52"] = 259,
+			["Obsidiån-Silvermoon"] = 253,
+			["Kaosknight-Winterhoof"] = 250,
+			["Vîl-Mal'Ganis"] = 266,
+			["Nuknight-Tanaris"] = 250,
+			["Tigros-BleedingHollow"] = 103,
+			["Blubber-EmeraldDream"] = 105,
+			["Arckinoz-Ragnaros"] = 269,
+			["Gonfreecss"] = 253,
+			["Bríghteyes-Zul'jin"] = 577,
+			["Tristine-Lothar"] = 259,
+			["Drnknmstr-BleedingHollow"] = 270,
+			["Hashrosin-Zul'jin"] = 72,
+			["Valiik"] = 261,
+			["Vaikhal-Azralon"] = 265,
+			["Donlogan-Deathwing"] = 263,
+			["Kampachi-Bonechewer"] = 264,
+			["Bárrage-Stormreaver"] = 254,
+			["Rommy-Ragnaros"] = 577,
+			["Volráth-Zul'jin"] = 258,
+			["Thefive-Ragnaros"] = 105,
+			["Oztini-Thrall"] = 254,
+			["Myon-Ragnaros"] = 269,
+			["Macklewar-Hellscream"] = 72,
+			["Spoonheals-BurningBlade"] = 256,
+			["Cinegetica-Ragnaros"] = 581,
+			["Kamelltotem-Thrall"] = 262,
 			["Vikjr-Tichondrius"] = 65,
 			["Ojim-Mal'Ganis"] = 251,
-			["Cyahaterz-Area52"] = 259,
 			["Alduine-Zul'jin"] = 103,
+			["Wynnbot-Mal'Ganis"] = 252,
 			["Whitchblade-Ragnaros"] = 267,
 			["Oteemo-Sargeras"] = 103,
-			["Kaosknight-Winterhoof"] = 250,
-			["Baerut-BleedingHollow"] = 72,
-			["Sänctus"] = 257,
-			["Altezia-Thrall"] = 251,
-			["Nuknight-Tanaris"] = 250,
-			["Gonfreecss"] = 253,
-			["Anthirin-Area52"] = 64,
 			["Demeech-Barthilas"] = 72,
+			["Acalea-TheVentureCo"] = 260,
+			["Hyeya-Detheroc"] = 64,
+			["Altezia-Thrall"] = 251,
+			["Pandarcherus-LaughingSkull"] = 254,
+			["Baerut-BleedingHollow"] = 72,
+			["Anthirin-Area52"] = 64,
+			["Raïne"] = 263,
 			["Edîz-Barthilas"] = 258,
 			["Beldorah-Azralon"] = 65,
-			["Bárrage-Stormreaver"] = 254,
-			["Traitør-Tichondrius"] = 259,
-			["Laurita-BleedingHollow"] = 577,
-			["Xenials-Area52"] = 577,
-			["Myon-Ragnaros"] = 269,
-			["Wat-Hyjal"] = 262,
-			["Pandarcherus-LaughingSkull"] = 254,
-			["Tigros-BleedingHollow"] = 103,
-			["Raïne"] = 263,
-			["Eqsquizitine-BleedingHollow"] = 257,
-			["Cinegetica-Ragnaros"] = 581,
-			["Arilia-Aegwynn"] = 577,
-			["Axn-Barthilas"] = 102,
+			["Whysofat-Thaurissan"] = 253,
+			["Galbatron-Crushridge"] = 253,
 			["Zuujo-EmeraldDream"] = 105,
-			["Kamelltotem-Thrall"] = 262,
-			["Drnknmstr-BleedingHollow"] = 270,
+			["Xenials-Area52"] = 577,
+			["Laurita-BleedingHollow"] = 577,
+			["Wat-Hyjal"] = 262,
 			["Fuj"] = 102,
+			["Nokoko-Winterhoof"] = 103,
+			["Hellhørn-Skullcrusher"] = 72,
+			["Eqsquizitine-BleedingHollow"] = 257,
 			["Borgia-Cenarius"] = 263,
 			["Slanky-Dath'Remar"] = 266,
+			["Axn-Barthilas"] = 102,
+			["Jenipher-WyrmrestAccord"] = 577,
+			["Tentacruël-Stormrage"] = 263,
+			["Jondannyd-Quel'Thalas"] = 577,
+			["Goemeow-TwistingNether"] = 66,
+			["Janevirus-EmeraldDream"] = 259,
+			["Cerina-Area52"] = 64,
 			["Ljusvakt-Hyjal"] = 257,
 			["Crackajacka-Zul'jin"] = 257,
 			["Dellimonk-Mal'Ganis"] = 270,
 			["Sëphïrøth-Azralon"] = 72,
 			["Bombadíl-Azralon"] = 102,
 			["Parachoques-Ragnaros"] = 72,
-			["Cerina-Area52"] = 64,
+			["Kiggz-Arthas"] = 72,
 			["Vixease-Thrall"] = 251,
-			["Mkodiñ-Thrall"] = 268,
+			["Xarathis-Zul'jin"] = 257,
 			["Waax-Dragonmaw"] = 263,
 			["Evillina-Azralon"] = 266,
-			["Escadin-Stormreaver"] = 577,
-			["Jondannyd-Quel'Thalas"] = 577,
-			["Xarathis-Zul'jin"] = 257,
+			["Ofcrrodfarva-Baelgun"] = 577,
+			["Salacakei-Uldum"] = 259,
+			["Crístián-Ragnaros"] = 72,
 			["Opnuris-Ner'zhul"] = 577,
 			["Tenebrouss-Ragnaros"] = 71,
 			["Aoshii-Dalaran"] = 577,
-			["Crístián-Ragnaros"] = 72,
-			["Valentior-Kil'jaeden"] = 64,
-			["Khamûl-Sen'jin"] = 250,
-			["Kdsnake-EmeraldDream"] = 581,
-			["Darkspeaker"] = 577,
 			["Chewoclock-Mal'Ganis"] = 66,
-			["Hellhørn-Skullcrusher"] = 72,
-			["Iljimae-Area52"] = 66,
-			["Thefive-Ragnaros"] = 105,
-			["Skitlzr-Mal'Ganis"] = 259,
-			["Rommy-Ragnaros"] = 577,
+			["Valentior-Kil'jaeden"] = 64,
 			["Grome"] = 262,
 			["Aspian-Azralon"] = 71,
+			["Darkspeaker"] = 577,
+			["Alarìus-MoonGuard"] = 73,
+			["Caronax-Zul'jin"] = 102,
+			["Iljimae-Area52"] = 66,
+			["Rôbert-Tichondrius"] = 103,
+			["Avintos-Tichondrius"] = 66,
+			["Pînk-Tichondrius"] = 105,
+			["Grifflez-Nesingwary"] = 267,
+			["Juteseeker-EmeraldDream"] = 73,
 			["Eteletha-Destromath"] = 70,
 			["Venomiss-Zul'jin"] = 259,
 			["Kurtbarlów-Zul'jin"] = 265,
 			["Surrek-Dalaran"] = 263,
-			["Mimino-Maelstrom"] = 64,
-			["Rôbert-Tichondrius"] = 103,
-			["Avintos-Tichondrius"] = 66,
+			["Micker-ArgentDawn"] = 257,
+			["Machine-Stormreaver"] = 251,
+			["Sickduck-Zul'jin"] = 252,
 			["Midevilbrenn-Silvermoon"] = 577,
-			["Grifflez-Nesingwary"] = 267,
+			["Shockira-BleedingHollow"] = 264,
 		},
 		["userDB"] = {
 			{
@@ -5267,13 +5405,13 @@ VExRT = {
 				"JComet", -- [18]
 				"KIncantatem", -- [19]
 				"BAkromä", -- [20]
-				["eN"] = "Goroth",
-				["k"] = true,
-				["t"] = 1507684413,
 				["eI"] = 2032,
+				["c"] = "Comet-Illidan",
+				["t"] = 1507684413,
+				["eN"] = "Goroth",
 				["d"] = 16,
 				["g"] = 20,
-				["c"] = "Comet-Illidan",
+				["k"] = true,
 			}, -- [1]
 			{
 				"FDrkillbotz", -- [1]
@@ -5296,13 +5434,13 @@ VExRT = {
 				"JComet", -- [18]
 				"ELanféar", -- [19]
 				"BAkromä", -- [20]
-				["k"] = true,
 				["c"] = "Comet-Illidan",
+				["k"] = true,
 				["d"] = 16,
-				["eI"] = 2036,
+				["eN"] = "Harjatan",
 				["t"] = 1507686738,
 				["g"] = 20,
-				["eN"] = "Harjatan",
+				["eI"] = 2036,
 			}, -- [2]
 			{
 				"FDrkillbotz", -- [1]
@@ -5325,13 +5463,13 @@ VExRT = {
 				"JComet", -- [18]
 				"ELanféar", -- [19]
 				"BAkromä", -- [20]
-				["c"] = "Comet-Illidan",
 				["k"] = true,
+				["c"] = "Comet-Illidan",
 				["d"] = 16,
-				["eN"] = "Demonic Inquisition",
+				["eI"] = 2048,
 				["t"] = 1507689677,
 				["g"] = 20,
-				["eI"] = 2048,
+				["eN"] = "Demonic Inquisition",
 			}, -- [3]
 			{
 				"LDrkillgrave", -- [1]
@@ -5349,13 +5487,13 @@ VExRT = {
 				"ISineströ", -- [13]
 				"EEvan", -- [14]
 				"AMaverik", -- [15]
-				["k"] = true,
 				["c"] = "Evan-Illidan",
+				["k"] = true,
 				["d"] = 15,
-				["eI"] = 2052,
+				["eN"] = "Maiden of Vigilance",
 				["t"] = 1507857698,
 				["g"] = 15,
-				["eN"] = "Maiden of Vigilance",
+				["eI"] = 2052,
 			}, -- [4]
 			{
 				"EGrimuhs", -- [1]
@@ -5375,13 +5513,13 @@ VExRT = {
 				"GDjpurge", -- [15]
 				"CVastra-Bloodhoof", -- [16]
 				"HZefarion", -- [17]
-				["c"] = "Evan-Illidan",
 				["k"] = true,
+				["c"] = "Evan-Illidan",
 				["d"] = 15,
-				["eN"] = "Kil'jaeden",
+				["eI"] = 2051,
 				["t"] = 1507865188,
 				["g"] = 17,
-				["eI"] = 2051,
+				["eN"] = "Kil'jaeden",
 			}, -- [5]
 			{
 				"BAkromä", -- [1]
@@ -5404,13 +5542,13 @@ VExRT = {
 				"JComet", -- [18]
 				"ELilrip", -- [19]
 				"IExotica", -- [20]
-				["eI"] = 2032,
-				["k"] = true,
-				["t"] = 1508289691,
 				["eN"] = "Goroth",
+				["c"] = "Comet-Illidan",
+				["t"] = 1508289691,
+				["eI"] = 2032,
 				["d"] = 16,
 				["g"] = 20,
-				["c"] = "Comet-Illidan",
+				["k"] = true,
 			}, -- [6]
 			{
 				"DMakáveli", -- [1]
@@ -5431,13 +5569,13 @@ VExRT = {
 				"CLivepets", -- [16]
 				"EDankwaffles", -- [17]
 				"JComet", -- [18]
-				["k"] = true,
 				["c"] = "Comet-Illidan",
+				["k"] = true,
 				["d"] = 15,
-				["eI"] = 2048,
+				["eN"] = "Demonic Inquisition",
 				["t"] = 1508722284,
 				["g"] = 18,
-				["eN"] = "Demonic Inquisition",
+				["eI"] = 2048,
 			}, -- [7]
 			{
 				"LZilorin", -- [1]
@@ -5458,13 +5596,13 @@ VExRT = {
 				"BAkromä", -- [16]
 				"JComet", -- [17]
 				"ELilrip", -- [18]
-				["c"] = "Comet-Illidan",
 				["k"] = true,
+				["c"] = "Comet-Illidan",
 				["d"] = 15,
-				["eN"] = "Fallen Avatar",
+				["eI"] = 2038,
 				["t"] = 1508893674,
 				["g"] = 18,
-				["eI"] = 2038,
+				["eN"] = "Fallen Avatar",
 			}, -- [8]
 			{
 				"AReinhärt", -- [1]
@@ -5484,13 +5622,13 @@ VExRT = {
 				"IExotica", -- [15]
 				"HDabbski", -- [16]
 				"HThenex", -- [17]
-				["eI"] = 2036,
-				["c"] = "Comet-Illidan",
-				["t"] = 1509065442,
 				["eN"] = "Harjatan",
+				["k"] = true,
+				["t"] = 1509065442,
+				["eI"] = 2036,
 				["d"] = 15,
 				["g"] = 17,
-				["k"] = true,
+				["c"] = "Comet-Illidan",
 			}, -- [9]
 			{
 				"BAkromä", -- [1]
@@ -5513,13 +5651,13 @@ VExRT = {
 				"EDankwaffles", -- [18]
 				"BLuumii", -- [19]
 				"ELanféar", -- [20]
-				["k"] = true,
 				["c"] = "Comet-Illidan",
+				["k"] = true,
 				["d"] = 16,
-				["eN"] = "Sisters of the Moon",
+				["eI"] = 2050,
 				["t"] = 1509074884,
 				["g"] = 20,
-				["eI"] = 2050,
+				["eN"] = "Sisters of the Moon",
 			}, -- [10]
 			{
 				"CLivepets", -- [1]
@@ -5542,13 +5680,13 @@ VExRT = {
 				"GDjpurge", -- [18]
 				"BLuumii", -- [19]
 				"ELanféar", -- [20]
-				["c"] = "Comet-Illidan",
 				["k"] = true,
+				["c"] = "Comet-Illidan",
 				["d"] = 16,
-				["eN"] = "Goroth",
+				["eI"] = 2032,
 				["t"] = 1509672034,
 				["g"] = 20,
-				["eI"] = 2032,
+				["eN"] = "Goroth",
 			}, -- [11]
 			{
 				"FShietnorunes", -- [1]
@@ -5571,13 +5709,13 @@ VExRT = {
 				"GDjpurge", -- [18]
 				"JComet", -- [19]
 				"GDretbreztok", -- [20]
-				["eN"] = "Goroth",
-				["k"] = true,
-				["t"] = 1510106004,
 				["eI"] = 2032,
+				["c"] = "Comet-Illidan",
+				["t"] = 1510106004,
+				["eN"] = "Goroth",
 				["d"] = 16,
 				["g"] = 20,
-				["c"] = "Comet-Illidan",
+				["k"] = true,
 			}, -- [12]
 			{
 				"FShietnorunes", -- [1]
@@ -5600,13 +5738,13 @@ VExRT = {
 				"GDjpurge", -- [18]
 				"JComet", -- [19]
 				"GDretbreztok", -- [20]
-				["k"] = true,
 				["c"] = "Comet-Illidan",
+				["k"] = true,
 				["d"] = 16,
-				["eI"] = 2036,
+				["eN"] = "Harjatan",
 				["t"] = 1510108833,
 				["g"] = 20,
-				["eN"] = "Harjatan",
+				["eI"] = 2036,
 			}, -- [13]
 			{
 				"KUgliestdruid", -- [1]
@@ -5629,13 +5767,13 @@ VExRT = {
 				"BLuumii", -- [18]
 				"ISineströ", -- [19]
 				"FAmbro", -- [20]
-				["eN"] = "Maiden of Vigilance",
-				["k"] = true,
-				["t"] = 1510278550,
 				["eI"] = 2052,
+				["c"] = "Comet-Illidan",
+				["t"] = 1510278550,
+				["eN"] = "Maiden of Vigilance",
 				["d"] = 15,
 				["g"] = 19,
-				["c"] = "Comet-Illidan",
+				["k"] = true,
 			}, -- [14]
 			{
 				"BAkromä", -- [1]
@@ -5658,13 +5796,13 @@ VExRT = {
 				"KDadizzle", -- [18]
 				"ELilrip", -- [19]
 				"KUgliestdruid", -- [20]
-				["k"] = true,
 				["c"] = "Evan-Illidan",
+				["k"] = true,
 				["d"] = 15,
-				["eN"] = "Goroth",
+				["eI"] = 2032,
 				["t"] = 1510710061,
 				["g"] = 19,
-				["eI"] = 2032,
+				["eN"] = "Goroth",
 			}, -- [15]
 			{
 				"KUgliestdruid", -- [1]
@@ -5688,13 +5826,13 @@ VExRT = {
 				"KDadizzle", -- [19]
 				"ELilrip", -- [20]
 				"BShanaar", -- [21]
-				["eI"] = 2038,
-				["c"] = "Evan-Illidan",
-				["t"] = 1510711507,
 				["eN"] = "Fallen Avatar",
+				["k"] = true,
+				["t"] = 1510711507,
+				["eI"] = 2038,
 				["d"] = 15,
 				["g"] = 21,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [16]
 			{
 				"FShietnorunes", -- [1]
@@ -5717,13 +5855,13 @@ VExRT = {
 				"JComet", -- [18]
 				"GDjpurge", -- [19]
 				"ELilrip", -- [20]
-				["c"] = "Comet-Illidan",
 				["k"] = true,
+				["c"] = "Comet-Illidan",
 				["d"] = 16,
-				["eN"] = "Goroth",
+				["eI"] = 2032,
 				["t"] = 1510713877,
 				["g"] = 20,
-				["eI"] = 2032,
+				["eN"] = "Goroth",
 			}, -- [17]
 			{
 				"FShietnorunes", -- [1]
@@ -5746,13 +5884,13 @@ VExRT = {
 				"JComet", -- [18]
 				"GDjpurge", -- [19]
 				"ELilrip", -- [20]
-				["k"] = true,
 				["c"] = "Comet-Illidan",
+				["k"] = true,
 				["d"] = 16,
-				["eI"] = 2036,
+				["eN"] = "Harjatan",
 				["t"] = 1510716242,
 				["g"] = 20,
-				["eN"] = "Harjatan",
+				["eI"] = 2036,
 			}, -- [18]
 			{
 				"FShietnorunes", -- [1]
@@ -5776,13 +5914,13 @@ VExRT = {
 				"GFayze", -- [19]
 				"ELanféar", -- [20]
 				[36] = "HThenex",
-				["c"] = "Evan-Illidan",
 				["k"] = true,
+				["c"] = "Evan-Illidan",
 				["d"] = 16,
-				["eN"] = "Goroth",
+				["eI"] = 2032,
 				["t"] = 1511315331,
 				["g"] = 20,
-				["eI"] = 2032,
+				["eN"] = "Goroth",
 			}, -- [19]
 			{
 				"FShietnorunes", -- [1]
@@ -5838,13 +5976,13 @@ VExRT = {
 				"ELilrip", -- [20]
 				"HThenex", -- [21]
 				"EEvan", -- [22]
-				["k"] = true,
 				["c"] = "Evan-Illidan",
+				["k"] = true,
 				["d"] = 14,
-				["eI"] = 2076,
+				["eN"] = "Garothi Worldbreaker",
 				["t"] = 1511919998,
 				["g"] = 22,
-				["eN"] = "Garothi Worldbreaker",
+				["eI"] = 2076,
 			}, -- [21]
 			{
 				"FShietnorunes", -- [1]
@@ -5906,13 +6044,13 @@ VExRT = {
 				"HThenex", -- [24]
 				"GHex", -- [25]
 				[36] = "EEvan",
-				["c"] = "Comet-Illidan",
 				["k"] = true,
+				["c"] = "Comet-Illidan",
 				["d"] = 14,
-				["eN"] = "Varimathras",
+				["eI"] = 2069,
 				["t"] = 1511929814,
 				["g"] = 25,
-				["eI"] = 2069,
+				["eN"] = "Varimathras",
 			}, -- [23]
 			{
 				"FShietnorunes", -- [1]
@@ -5940,13 +6078,13 @@ VExRT = {
 				"GDjpurge", -- [23]
 				"HThenex", -- [24]
 				"GHex", -- [25]
-				["k"] = true,
 				["c"] = "Evan-Illidan",
+				["k"] = true,
 				["d"] = 14,
-				["eI"] = 2073,
+				["eN"] = "The Coven of Shivarra",
 				["t"] = 1511931338,
 				["g"] = 25,
-				["eN"] = "The Coven of Shivarra",
+				["eI"] = 2073,
 			}, -- [24]
 			{
 				"LCrongust", -- [1]
@@ -5970,13 +6108,13 @@ VExRT = {
 				"ELilrip", -- [19]
 				"EAngelusvitae", -- [20]
 				"EEvan", -- [21]
-				["eI"] = 2076,
-				["c"] = "Evan-Illidan",
-				["t"] = 1512092729,
 				["eN"] = "Garothi Worldbreaker",
+				["k"] = true,
+				["t"] = 1512092729,
+				["eI"] = 2076,
 				["d"] = 15,
 				["g"] = 21,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [25]
 			{
 				"LCrongust", -- [1]
@@ -6001,13 +6139,13 @@ VExRT = {
 				"EEvan", -- [20]
 				"EAngelusvitae", -- [21]
 				"CThereign", -- [22]
-				["c"] = "Evan-Illidan",
 				["k"] = true,
+				["c"] = "Evan-Illidan",
 				["d"] = 15,
-				["eN"] = "Portal Keeper Hasabel",
+				["eI"] = 2064,
 				["t"] = 1512098671,
 				["g"] = 22,
-				["eI"] = 2064,
+				["eN"] = "Portal Keeper Hasabel",
 			}, -- [26]
 			{
 				"FShietnorunes", -- [1]
@@ -6030,13 +6168,13 @@ VExRT = {
 				"GFayze", -- [18]
 				"GDjpurge", -- [19]
 				"EEvan", -- [20]
-				["k"] = true,
 				["c"] = "Evan-Illidan",
+				["k"] = true,
 				["d"] = 16,
-				["eI"] = 2076,
+				["eN"] = "Garothi Worldbreaker",
 				["t"] = 1513740565,
 				["g"] = 20,
-				["eN"] = "Garothi Worldbreaker",
+				["eI"] = 2076,
 			}, -- [27]
 			{
 				"JComet", -- [1]
@@ -6058,13 +6196,13 @@ VExRT = {
 				"GBeätdown-BleedingHollow", -- [17]
 				"GFayze", -- [18]
 				"GDjpurge", -- [19]
-				["eI"] = 2076,
-				["c"] = "Comet-Illidan",
-				["t"] = 1513742106,
 				["eN"] = "Garothi Worldbreaker",
+				["k"] = true,
+				["t"] = 1513742106,
+				["eI"] = 2076,
 				["d"] = 15,
 				["g"] = 19,
-				["k"] = true,
+				["c"] = "Comet-Illidan",
 			}, -- [28]
 			{
 				"JCrongusts", -- [1]
@@ -6084,13 +6222,13 @@ VExRT = {
 				"CTelgina", -- [15]
 				"GDjpurge", -- [16]
 				"EEvan", -- [17]
-				["eI"] = 2076,
-				["c"] = "Evan-Illidan",
-				["t"] = 1514339991,
 				["eN"] = "Garothi Worldbreaker",
+				["k"] = true,
+				["t"] = 1514339991,
+				["eI"] = 2076,
 				["d"] = 15,
 				["g"] = 17,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [29]
 			{
 				"JCrongusts", -- [1]
@@ -6112,13 +6250,13 @@ VExRT = {
 				"GFayze", -- [17]
 				"EEvan", -- [18]
 				"CTelgina", -- [19]
-				["k"] = true,
 				["c"] = "Evan-Illidan",
+				["k"] = true,
 				["d"] = 15,
-				["eI"] = 2076,
+				["eN"] = "Garothi Worldbreaker",
 				["t"] = 1514972791,
 				["g"] = 19,
-				["eN"] = "Garothi Worldbreaker",
+				["eI"] = 2076,
 			}, -- [30]
 			{
 				"JCrongusts", -- [1]
@@ -6140,13 +6278,13 @@ VExRT = {
 				"GFayze", -- [17]
 				"EEvan", -- [18]
 				"CThereign", -- [19]
-				["eI"] = 2082,
-				["c"] = "Evan-Illidan",
-				["t"] = 1514948427,
 				["eN"] = "Imonar the Soulhunter",
+				["k"] = true,
+				["t"] = 1514948427,
+				["eI"] = 2082,
 				["d"] = 15,
 				["g"] = 19,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [31]
 			{
 				"FCenzic", -- [1]
@@ -6169,13 +6307,13 @@ VExRT = {
 				"EAngelusvitae", -- [18]
 				"EEvan", -- [19]
 				"GFayze", -- [20]
-				["k"] = true,
 				["c"] = "Evan-Illidan",
+				["k"] = true,
 				["d"] = 16,
-				["eI"] = 2076,
+				["eN"] = "Garothi Worldbreaker",
 				["t"] = 1515117932,
 				["g"] = 20,
-				["eN"] = "Garothi Worldbreaker",
+				["eI"] = 2076,
 			}, -- [32]
 			{
 				"LCrongust", -- [1]
@@ -6193,13 +6331,13 @@ VExRT = {
 				"CColorita-Area52", -- [13]
 				"HDartherza-Thrall", -- [14]
 				"ERivv", -- [15]
-				["eI"] = 2076,
-				["c"] = "Comet-Illidan",
-				["t"] = 1515381746,
 				["eN"] = "Garothi Worldbreaker",
+				["k"] = true,
+				["t"] = 1515381746,
+				["eI"] = 2076,
 				["d"] = 15,
 				["g"] = 15,
-				["k"] = true,
+				["c"] = "Comet-Illidan",
 			}, -- [33]
 			{
 				"FShietnorunes", -- [1]
@@ -6222,13 +6360,13 @@ VExRT = {
 				"GDjpurge", -- [18]
 				"GFayze", -- [19]
 				"EAngelusvitae", -- [20]
-				["eI"] = 2076,
-				["c"] = "Evan-Illidan",
-				["t"] = 1515549995,
 				["eN"] = "Garothi Worldbreaker",
+				["k"] = true,
+				["t"] = 1515549995,
+				["eI"] = 2076,
 				["d"] = 16,
 				["g"] = 20,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [34]
 			{
 				"BAkromä", -- [1]
@@ -6253,13 +6391,13 @@ VExRT = {
 				"EEvan", -- [20]
 				"CMaûly", -- [21]
 				"EGrimuhs", -- [22]
-				["c"] = "Evan-Illidan",
 				["k"] = true,
+				["c"] = "Evan-Illidan",
 				["d"] = 15,
-				["eI"] = 2076,
+				["eN"] = "Garothi Worldbreaker",
 				["t"] = 1515721697,
 				["g"] = 22,
-				["eN"] = "Garothi Worldbreaker",
+				["eI"] = 2076,
 			}, -- [35]
 			{
 				"BAkromä", -- [1]
@@ -6279,13 +6417,13 @@ VExRT = {
 				"CHearty-Zul'jin", -- [15]
 				"EEvan", -- [16]
 				"BDjdivine", -- [17]
-				["eI"] = 2063,
-				["c"] = "Evan-Illidan",
-				["t"] = 1515987247,
 				["eN"] = "Aggramar",
+				["k"] = true,
+				["t"] = 1515987247,
+				["eI"] = 2063,
 				["d"] = 15,
 				["g"] = 17,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [36]
 			{
 				"LElyyna", -- [1]
@@ -6313,13 +6451,13 @@ VExRT = {
 				"BDjdivine", -- [23]
 				"EEvan", -- [24]
 				"GFayze", -- [25]
-				["k"] = true,
 				["c"] = "Evan-Illidan",
+				["k"] = true,
 				["d"] = 15,
-				["eI"] = 2064,
+				["eN"] = "Portal Keeper Hasabel",
 				["t"] = 1516157169,
 				["g"] = 25,
-				["eN"] = "Portal Keeper Hasabel",
+				["eI"] = 2064,
 			}, -- [37]
 			{
 				"JJammed", -- [1]
@@ -6377,13 +6515,13 @@ VExRT = {
 				"EZaranà", -- [18]
 				"GDjpurge", -- [19]
 				"BLuumii", -- [20]
-				["eN"] = "Garothi Worldbreaker",
-				["c"] = "Evan-Illidan",
-				["t"] = 1520387424,
 				["eI"] = 2076,
+				["k"] = true,
+				["t"] = 1520387424,
+				["eN"] = "Garothi Worldbreaker",
 				["d"] = 16,
 				["g"] = 20,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [39]
 			{
 				"EGrimuhs", -- [1]
@@ -6406,13 +6544,13 @@ VExRT = {
 				"ABravery", -- [18]
 				"DPsytek", -- [19]
 				"DJayto", -- [20]
-				["c"] = "Evan-Illidan",
 				["k"] = true,
+				["c"] = "Evan-Illidan",
 				["d"] = 16,
-				["eN"] = "The Defense of Eonar",
+				["eI"] = 2075,
 				["t"] = 1520563733,
 				["g"] = 20,
-				["eI"] = 2075,
+				["eN"] = "The Defense of Eonar",
 			}, -- [40]
 			{
 				"JKithelle-Zul'jin", -- [1]
@@ -6458,13 +6596,13 @@ VExRT = {
 				"KOxen-Kil'jaeden", -- [16]
 				"HCalik-Draka", -- [17]
 				"BBeenhacked-Durotan", -- [18]
-				["c"] = "Evan-Illidan",
 				["k"] = true,
+				["c"] = "Evan-Illidan",
 				["d"] = 15,
-				["eN"] = "Portal Keeper Hasabel",
+				["eI"] = 2064,
 				["t"] = 1520820377,
 				["g"] = 18,
-				["eI"] = 2064,
+				["eN"] = "Portal Keeper Hasabel",
 			}, -- [42]
 			{
 				"BDjabo-Goldrinn", -- [1]
@@ -6485,13 +6623,13 @@ VExRT = {
 				"GMadamséxy-Barthilas", -- [16]
 				"JGrèener-Mal'Ganis", -- [17]
 				"AVak-Lightning'sBlade", -- [18]
-				["eN"] = "Aggramar",
-				["k"] = true,
-				["t"] = 1520969323,
 				["eI"] = 2063,
+				["c"] = "Evan-Illidan",
+				["t"] = 1520969323,
+				["eN"] = "Aggramar",
 				["d"] = 15,
 				["g"] = 18,
-				["c"] = "Evan-Illidan",
+				["k"] = true,
 			}, -- [43]
 			{
 				"BAkromä", -- [1]
@@ -6514,13 +6652,13 @@ VExRT = {
 				"EQwedlife", -- [18]
 				"EEvan", -- [19]
 				"EZaranà", -- [20]
-				["k"] = true,
 				["c"] = "Evan-Illidan",
+				["k"] = true,
 				["d"] = 16,
-				["eN"] = "Garothi Worldbreaker",
+				["eI"] = 2076,
 				["t"] = 1520988651,
 				["g"] = 20,
-				["eI"] = 2076,
+				["eN"] = "Garothi Worldbreaker",
 			}, -- [44]
 			{
 				"BAkromä", -- [1]
@@ -6543,13 +6681,13 @@ VExRT = {
 				"ISineströ", -- [18]
 				"ABravery", -- [19]
 				"EZaranà", -- [20]
-				["eN"] = "The Defense of Eonar",
-				["c"] = "Evan-Illidan",
-				["t"] = 1520996919,
 				["eI"] = 2075,
+				["k"] = true,
+				["t"] = 1520996919,
+				["eN"] = "The Defense of Eonar",
 				["d"] = 16,
 				["g"] = 20,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [45]
 			{
 				"AReinhärt", -- [1]
@@ -6567,13 +6705,13 @@ VExRT = {
 				"JComet", -- [13]
 				"HXingaling-Thrall", -- [14]
 				"LMeks", -- [15]
-				["eI"] = 2076,
-				["c"] = "Comet-Illidan",
-				["t"] = 1521074973,
 				["eN"] = "Garothi Worldbreaker",
+				["k"] = true,
+				["t"] = 1521074973,
+				["eI"] = 2076,
 				["d"] = 15,
 				["g"] = 15,
-				["k"] = true,
+				["c"] = "Comet-Illidan",
 			}, -- [46]
 			{
 				"AReinhärt", -- [1]
@@ -6590,13 +6728,13 @@ VExRT = {
 				"EEvan", -- [12]
 				"HXingaling-Thrall", -- [13]
 				"LMeks", -- [14]
-				["c"] = "Evan-Illidan",
 				["k"] = true,
+				["c"] = "Evan-Illidan",
 				["d"] = 15,
-				["eN"] = "Felhounds of Sargeras",
+				["eI"] = 2074,
 				["t"] = 1521075743,
 				["g"] = 14,
-				["eI"] = 2074,
+				["eN"] = "Felhounds of Sargeras",
 			}, -- [47]
 			{
 				"BAkromä", -- [1]
@@ -6619,13 +6757,13 @@ VExRT = {
 				"BAaryà", -- [18]
 				"EEvan", -- [19]
 				"BLuumii", -- [20]
-				["eN"] = "Garothi Worldbreaker",
-				["c"] = "Evan-Illidan",
-				["t"] = 1521595159,
 				["eI"] = 2076,
+				["k"] = true,
+				["t"] = 1521595159,
+				["eN"] = "Garothi Worldbreaker",
 				["d"] = 16,
 				["g"] = 20,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [48]
 			{
 				"BAkromä", -- [1]
@@ -6648,13 +6786,13 @@ VExRT = {
 				"EEvan", -- [18]
 				"EQwedlife", -- [19]
 				"BAzadmike", -- [20]
-				["eI"] = 2064,
-				["k"] = true,
-				["t"] = 1521689932,
 				["eN"] = "Portal Keeper Hasabel",
+				["c"] = "Evan-Illidan",
+				["t"] = 1521689932,
+				["eI"] = 2064,
 				["d"] = 16,
 				["g"] = 20,
-				["c"] = "Evan-Illidan",
+				["k"] = true,
 			}, -- [49]
 			{
 				"HHugehur-Blackrock", -- [1]
@@ -6679,13 +6817,13 @@ VExRT = {
 				"IElehaym-Area52", -- [20]
 				"FLightbreakér-Ragnaros", -- [21]
 				"GDefibrilatör-Mal'Ganis", -- [22]
-				["eI"] = 2073,
-				["c"] = "Evan-Illidan",
-				["t"] = 1521740276,
 				["eN"] = "The Coven of Shivarra",
+				["k"] = true,
+				["t"] = 1521740276,
+				["eI"] = 2073,
 				["d"] = 15,
 				["g"] = 22,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [50]
 			{
 				"BAkromä", -- [1]
@@ -6708,13 +6846,13 @@ VExRT = {
 				"EEvan", -- [18]
 				"EQwedlife", -- [19]
 				"BLuumii", -- [20]
-				["eI"] = 2070,
-				["k"] = true,
-				["t"] = 1521768058,
 				["eN"] = "Antoran High Command",
+				["c"] = "Evan-Illidan",
+				["t"] = 1521768058,
+				["eI"] = 2070,
 				["d"] = 16,
 				["g"] = 20,
-				["c"] = "Evan-Illidan",
+				["k"] = true,
 			}, -- [51]
 			{
 				"JKagoroth-Ner'zhul", -- [1]
@@ -6735,13 +6873,13 @@ VExRT = {
 				"GCalaga-Ner'zhul", -- [16]
 				"CVilhunt-Thrall", -- [17]
 				"LWakeyouup", -- [18]
-				["eN"] = "Argus the Unmaker",
-				["c"] = "Evan-Illidan",
-				["t"] = 1522128628,
 				["eI"] = 2092,
+				["k"] = true,
+				["t"] = 1522128628,
+				["eN"] = "Argus the Unmaker",
 				["d"] = 15,
 				["g"] = 18,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [52]
 			{
 				"EEvan", -- [1]
@@ -6763,13 +6901,13 @@ VExRT = {
 				"DShaewolf-Tichondrius", -- [17]
 				"AAdulfkritlr-Tichondrius", -- [18]
 				"KHotstradamus-Tichondrius", -- [19]
-				["eN"] = "Varimathras",
-				["k"] = true,
-				["t"] = 1522210577,
 				["eI"] = 2069,
+				["c"] = "Evan-Illidan",
+				["t"] = 1522210577,
+				["eN"] = "Varimathras",
 				["d"] = 15,
 				["g"] = 19,
-				["c"] = "Evan-Illidan",
+				["k"] = true,
 			}, -- [53]
 			{
 				"EEvan", -- [1]
@@ -6793,13 +6931,13 @@ VExRT = {
 				"GElectrashock-Boulderfist", -- [19]
 				"IDocbombay-BurningLegion", -- [20]
 				"KMufasã-Kil'jaeden", -- [21]
-				["k"] = true,
 				["c"] = "Evan-Illidan",
+				["k"] = true,
 				["d"] = 14,
-				["eI"] = 2063,
+				["eN"] = "Aggramar",
 				["t"] = 1522267004,
 				["g"] = 19,
-				["eN"] = "Aggramar",
+				["eI"] = 2063,
 			}, -- [54]
 			{
 				"BAkromä", -- [1]
@@ -6822,13 +6960,13 @@ VExRT = {
 				"BLuumii", -- [18]
 				"GDjpurge", -- [19]
 				"EEvan", -- [20]
-				["eN"] = "Imonar the Soulhunter",
-				["c"] = "Evan-Illidan",
-				["t"] = 1522293463,
 				["eI"] = 2082,
+				["k"] = true,
+				["t"] = 1522293463,
+				["eN"] = "Imonar the Soulhunter",
 				["d"] = 16,
 				["g"] = 20,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [55]
 			{
 				"KTrukol-Boulderfist", -- [1]
@@ -6849,13 +6987,13 @@ VExRT = {
 				"KRunedfurby-Mal'Ganis", -- [16]
 				"EEvan", -- [17]
 				"JNubitol-Tichondrius", -- [18]
-				["eN"] = "Argus the Unmaker",
-				["k"] = true,
-				["d"] = 15,
 				["eI"] = 2092,
+				["c"] = "Evan-Illidan",
+				["d"] = 15,
+				["eN"] = "Argus the Unmaker",
 				["t"] = 1522352417,
 				["g"] = 14,
-				["c"] = "Evan-Illidan",
+				["k"] = true,
 			}, -- [56]
 			{
 				"KJaystir-Area52", -- [1]
@@ -6873,13 +7011,13 @@ VExRT = {
 				"HArticuño-Mal'Ganis", -- [13]
 				"BClubthecow-Mal'Ganis", -- [14]
 				"EEvan", -- [15]
-				["eI"] = 2075,
-				["c"] = "Evan-Illidan",
-				["t"] = 1522354349,
 				["eN"] = "The Defense of Eonar",
+				["k"] = true,
+				["t"] = 1522354349,
+				["eI"] = 2075,
 				["d"] = 15,
 				["g"] = 15,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [57]
 			{
 				"JXantroth-Zul'jin", -- [1]
@@ -6900,13 +7038,13 @@ VExRT = {
 				"EEvan", -- [16]
 				"BSacriphyss-Zul'jin", -- [17]
 				"LBralynisanna-Area52", -- [18]
-				["eI"] = 2076,
-				["k"] = true,
-				["t"] = 1522358834,
 				["eN"] = "Garothi Worldbreaker",
+				["c"] = "Evan-Illidan",
+				["t"] = 1522358834,
+				["eI"] = 2076,
 				["d"] = 15,
 				["g"] = 18,
-				["c"] = "Evan-Illidan",
+				["k"] = true,
 			}, -- [58]
 			{
 				"JXantroth-Zul'jin", -- [1]
@@ -6951,13 +7089,13 @@ VExRT = {
 				"LIonarina-Doomhammer", -- [13]
 				"EStaffs", -- [14]
 				"AKromar-Doomhammer", -- [15]
-				["eI"] = 2073,
-				["c"] = "Evan-Illidan",
-				["t"] = 1522432583,
 				["eN"] = "The Coven of Shivarra",
+				["k"] = true,
+				["t"] = 1522432583,
+				["eI"] = 2073,
 				["d"] = 14,
 				["g"] = 15,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [60]
 			{
 				"JComet", -- [1]
@@ -6975,13 +7113,13 @@ VExRT = {
 				"LIonarina-Doomhammer", -- [13]
 				"EStaffs", -- [14]
 				"AKromar-Doomhammer", -- [15]
-				["c"] = "Comet-Illidan",
 				["k"] = true,
+				["c"] = "Comet-Illidan",
 				["d"] = 14,
-				["eN"] = "Aggramar",
+				["eI"] = 2063,
 				["t"] = 1522433564,
 				["g"] = 14,
-				["eI"] = 2063,
+				["eN"] = "Aggramar",
 			}, -- [61]
 			{
 				"BTranduil-Azralon", -- [1]
@@ -7004,13 +7142,13 @@ VExRT = {
 				"BSexty-Goldrinn", -- [18]
 				"BJenovas-Goldrinn", -- [19]
 				"IGreygon-Kil'jaeden", -- [20]
-				["k"] = true,
 				["c"] = "Comet-Illidan",
+				["k"] = true,
 				["d"] = 14,
-				["eN"] = "Felhounds of Sargeras",
+				["eI"] = 2074,
 				["t"] = 1522435098,
 				["g"] = 19,
-				["eI"] = 2074,
+				["eN"] = "Felhounds of Sargeras",
 			}, -- [62]
 			{
 				"JWhoflungpu-Nazjatar", -- [1]
@@ -7033,13 +7171,13 @@ VExRT = {
 				"LIcedeman-Arthas", -- [18]
 				"CAztecaa-Trollbane", -- [19]
 				"DKurstobal-BleedingHollow", -- [20]
-				["eN"] = "Felhounds of Sargeras",
-				["c"] = "Comet-Illidan",
-				["t"] = 1522707991,
 				["eI"] = 2074,
+				["k"] = true,
+				["t"] = 1522707991,
+				["eN"] = "Felhounds of Sargeras",
 				["d"] = 15,
 				["g"] = 20,
-				["k"] = true,
+				["c"] = "Comet-Illidan",
 			}, -- [63]
 			{
 				"GEverdie-Azralon", -- [1]
@@ -7062,13 +7200,13 @@ VExRT = {
 				"IRegima-Hyjal", -- [18]
 				"KDuckkyd", -- [19]
 				"HMillionare-Turalyon", -- [20]
-				["eI"] = 2076,
-				["k"] = true,
-				["t"] = 1522734125,
 				["eN"] = "Garothi Worldbreaker",
+				["c"] = "Comet-Illidan",
+				["t"] = 1522734125,
+				["eI"] = 2076,
 				["d"] = 15,
 				["g"] = 20,
-				["c"] = "Comet-Illidan",
+				["k"] = true,
 			}, -- [64]
 			{
 				"KXtill-Ragnaros", -- [1]
@@ -7093,13 +7231,13 @@ VExRT = {
 				"IMérrill-Mal'Ganis", -- [20]
 				"CMsfoxytwo-Mal'Ganis", -- [21]
 				"IMajin-Executus", -- [22]
-				["eI"] = 2092,
-				["k"] = true,
-				["t"] = 1522776561,
 				["eN"] = "Argus the Unmaker",
+				["c"] = "Evan-Illidan",
+				["t"] = 1522776561,
+				["eI"] = 2092,
 				["d"] = 15,
 				["g"] = 22,
-				["c"] = "Evan-Illidan",
+				["k"] = true,
 			}, -- [65]
 			{
 				"BAkromä", -- [1]
@@ -7122,13 +7260,13 @@ VExRT = {
 				"GDjpurge", -- [18]
 				"EEvan", -- [19]
 				"EZaranà", -- [20]
-				["c"] = "Evan-Illidan",
 				["k"] = true,
+				["c"] = "Evan-Illidan",
 				["d"] = 16,
-				["eN"] = "Garothi Worldbreaker",
+				["eI"] = 2076,
 				["t"] = 1523410076,
 				["g"] = 20,
-				["eI"] = 2076,
+				["eN"] = "Garothi Worldbreaker",
 			}, -- [66]
 			{
 				"GSlippryshaft-Mal'Ganis", -- [1]
@@ -7151,13 +7289,13 @@ VExRT = {
 				"KStamina-Dawnbringer", -- [18]
 				"EEvan", -- [19]
 				"GDragonexarch-Barthilas", -- [20]
-				["eN"] = "Argus the Unmaker",
-				["c"] = "Evan-Illidan",
-				["t"] = 1523853672,
 				["eI"] = 2092,
+				["k"] = true,
+				["t"] = 1523853672,
+				["eN"] = "Argus the Unmaker",
 				["d"] = 15,
 				["g"] = 20,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [67]
 			{
 				"JNéxxus-Zul'jin", -- [1]
@@ -7178,13 +7316,13 @@ VExRT = {
 				"HMooky-Kil'jaeden", -- [16]
 				"HSurani-Stormreaver", -- [17]
 				"HNecrothermia-Kil'jaeden", -- [18]
-				["eN"] = "Imonar the Soulhunter",
-				["c"] = "Evan-Illidan",
-				["t"] = 1523855133,
 				["eI"] = 2082,
+				["k"] = true,
+				["t"] = 1523855133,
+				["eN"] = "Imonar the Soulhunter",
 				["d"] = 15,
 				["g"] = 18,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [68]
 			{
 				"KMeherc", -- [1]
@@ -7203,13 +7341,13 @@ VExRT = {
 				"LMegadéàth-BleedingHollow", -- [14]
 				"IUrkzerzkal", -- [15]
 				"EDrfeelguod", -- [16]
-				["c"] = "Evan-Illidan",
 				["k"] = true,
+				["c"] = "Evan-Illidan",
 				["d"] = 14,
-				["eN"] = "Portal Keeper Hasabel",
+				["eI"] = 2064,
 				["t"] = 1523930138,
 				["g"] = 15,
-				["eI"] = 2064,
+				["eN"] = "Portal Keeper Hasabel",
 			}, -- [69]
 			{
 				"KMeherc", -- [1]
@@ -7230,13 +7368,13 @@ VExRT = {
 				"KGonzobear-Zul'jin", -- [16]
 				"EDrfeelguod", -- [17]
 				"ADarquesmash-Thrall", -- [18]
-				["eI"] = 2075,
-				["k"] = true,
-				["t"] = 1523930881,
 				["eN"] = "The Defense of Eonar",
+				["c"] = "Evan-Illidan",
+				["t"] = 1523930881,
+				["eI"] = 2075,
 				["d"] = 14,
 				["g"] = 16,
-				["c"] = "Evan-Illidan",
+				["k"] = true,
 			}, -- [70]
 			{
 				"LTugdh-Thrall", -- [1]
@@ -7266,13 +7404,13 @@ VExRT = {
 				"IFryhoffer-Zul'jin", -- [25]
 				"LNerpzillà-Thrall", -- [26]
 				"AJubeithos-EmeraldDream", -- [27]
-				["c"] = "Evan-Illidan",
 				["k"] = true,
+				["c"] = "Evan-Illidan",
 				["d"] = 14,
-				["eI"] = 2092,
+				["eN"] = "Argus the Unmaker",
 				["t"] = 1523986942,
 				["g"] = 27,
-				["eN"] = "Argus the Unmaker",
+				["eI"] = 2092,
 			}, -- [71]
 			{
 				"BAkromä", -- [1]
@@ -7295,13 +7433,13 @@ VExRT = {
 				"KKeezyo", -- [18]
 				"JZenya", -- [19]
 				"KTrumpfence", -- [20]
-				["k"] = true,
 				["c"] = "Evan-Illidan",
+				["k"] = true,
 				["d"] = 16,
-				["eN"] = "Imonar the Soulhunter",
+				["eI"] = 2082,
 				["t"] = 1524015629,
 				["g"] = 20,
-				["eI"] = 2082,
+				["eN"] = "Imonar the Soulhunter",
 			}, -- [72]
 			{
 				"BAkromä", -- [1]
@@ -7324,13 +7462,13 @@ VExRT = {
 				"LReedex", -- [18]
 				"IDemonfurious", -- [19]
 				"AKemsa", -- [20]
-				["c"] = "Evan-Illidan",
 				["k"] = true,
+				["c"] = "Evan-Illidan",
 				["d"] = 16,
-				["eI"] = 2088,
+				["eN"] = "Kin'garoth",
 				["t"] = 1524109587,
 				["g"] = 20,
-				["eN"] = "Kin'garoth",
+				["eI"] = 2088,
 			}, -- [73]
 			{
 				"AGryffith-BleedingHollow", -- [1]
@@ -7358,13 +7496,13 @@ VExRT = {
 				"BKcaz-Baelgun", -- [23]
 				"LHanakoizumi-Goldrinn", -- [24]
 				"EMagicmarbles-Stormreaver", -- [25]
-				["c"] = "Evan-Illidan",
 				["k"] = true,
+				["c"] = "Evan-Illidan",
 				["d"] = 15,
-				["eI"] = 2092,
+				["eN"] = "Argus the Unmaker",
 				["t"] = 1524534783,
 				["g"] = 25,
-				["eN"] = "Argus the Unmaker",
+				["eI"] = 2092,
 			}, -- [74]
 			{
 				"BAkromä", -- [1]
@@ -7388,13 +7526,13 @@ VExRT = {
 				"KTrumpfence", -- [19]
 				"GDjpurge", -- [20]
 				"EEvan", -- [21]
-				["k"] = true,
 				["c"] = "Evan-Illidan",
+				["k"] = true,
 				["d"] = 16,
-				["eN"] = "Garothi Worldbreaker",
+				["eI"] = 2076,
 				["t"] = 1524618332,
 				["g"] = 20,
-				["eI"] = 2076,
+				["eN"] = "Garothi Worldbreaker",
 			}, -- [75]
 			{
 				"BAkromä", -- [1]
@@ -7419,13 +7557,13 @@ VExRT = {
 				"GDjpurge", -- [20]
 				"AKemsa", -- [21]
 				"JZenya", -- [22]
-				["eN"] = "Imonar the Soulhunter",
-				["c"] = "Evan-Illidan",
-				["t"] = 1524619398,
 				["eI"] = 2082,
+				["k"] = true,
+				["t"] = 1524619398,
+				["eN"] = "Imonar the Soulhunter",
 				["d"] = 16,
 				["g"] = 20,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [76]
 			{
 				"BAkromä", -- [1]
@@ -7448,13 +7586,13 @@ VExRT = {
 				"KKeezyo", -- [18]
 				"EEvan", -- [19]
 				"ABravery", -- [20]
-				["k"] = true,
 				["c"] = "Evan-Illidan",
+				["k"] = true,
 				["d"] = 16,
-				["eN"] = "Varimathras",
+				["eI"] = 2069,
 				["t"] = 1524715545,
 				["g"] = 20,
-				["eI"] = 2069,
+				["eN"] = "Varimathras",
 			}, -- [77]
 			{
 				"FMarxist-Thrall", -- [1]
@@ -7480,13 +7618,13 @@ VExRT = {
 				"GShampuu-Stormrage", -- [21]
 				"EEvan", -- [22]
 				"EAkaycos-Azralon", -- [23]
-				["eI"] = 2092,
-				["c"] = "Evan-Illidan",
-				["t"] = 1524777529,
 				["eN"] = "Argus the Unmaker",
+				["k"] = true,
+				["t"] = 1524777529,
+				["eI"] = 2092,
 				["d"] = 15,
 				["g"] = 23,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [78]
 			{
 				"BAkromä", -- [1]
@@ -7509,13 +7647,13 @@ VExRT = {
 				"KKeezyo", -- [18]
 				"EEvan", -- [19]
 				"GDjpurge", -- [20]
-				["c"] = "Evan-Illidan",
 				["k"] = true,
+				["c"] = "Evan-Illidan",
 				["d"] = 16,
-				["eI"] = 2070,
+				["eN"] = "Antoran High Command",
 				["t"] = 1524792685,
 				["g"] = 20,
-				["eN"] = "Antoran High Command",
+				["eI"] = 2070,
 			}, -- [79]
 			{
 				"KSmokeme-Thrall", -- [1]
@@ -7541,13 +7679,13 @@ VExRT = {
 				"FZombull-Azralon", -- [21]
 				"AKnøckout-Ragnaros", -- [22]
 				"BLahem-Nagrand", -- [23]
-				["c"] = "Comet-Illidan",
 				["k"] = true,
+				["c"] = "Comet-Illidan",
 				["d"] = 15,
-				["eI"] = 2076,
+				["eN"] = "Garothi Worldbreaker",
 				["t"] = 1525137389,
 				["g"] = 23,
-				["eN"] = "Garothi Worldbreaker",
+				["eI"] = 2076,
 			}, -- [80]
 			{
 				"KRenbe-ArgentDawn", -- [1]
@@ -7570,13 +7708,13 @@ VExRT = {
 				"LImainbear-Thrall", -- [18]
 				"FDrekza-Zul'jin", -- [19]
 				"GShnugglebear-Tichondrius", -- [20]
-				["k"] = true,
 				["c"] = "Comet-Illidan",
+				["k"] = true,
 				["d"] = 15,
-				["eN"] = "Imonar the Soulhunter",
+				["eI"] = 2082,
 				["t"] = 1525149268,
 				["g"] = 20,
-				["eI"] = 2082,
+				["eN"] = "Imonar the Soulhunter",
 			}, -- [81]
 			{
 				"BAkromä", -- [1]
@@ -7632,13 +7770,13 @@ VExRT = {
 				"IXorn", -- [18]
 				"LReedex", -- [19]
 				"HJarinia", -- [20]
-				["eN"] = "Kin'garoth",
-				["c"] = "Evan-Illidan",
-				["t"] = 1525315340,
 				["eI"] = 2088,
+				["k"] = true,
+				["t"] = 1525315340,
+				["eN"] = "Kin'garoth",
 				["d"] = 16,
 				["g"] = 20,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [83]
 			{
 				"ADeadwéight-Ner'zhul", -- [1]
@@ -7671,13 +7809,13 @@ VExRT = {
 				"FThéreaper-Ner'zhul", -- [28]
 				"HEdgeworth-Mal'Ganis", -- [29]
 				"CGrøtzul-Hyjal", -- [30]
-				["c"] = "Evan-Illidan",
 				["k"] = true,
+				["c"] = "Evan-Illidan",
 				["d"] = 15,
-				["eI"] = 2092,
+				["eN"] = "Argus the Unmaker",
 				["t"] = 1525757356,
 				["g"] = 29,
-				["eN"] = "Argus the Unmaker",
+				["eI"] = 2092,
 			}, -- [84]
 			{
 				"EVealanthorin-Area52", -- [1]
@@ -7709,13 +7847,13 @@ VExRT = {
 				"ANefiz-Quel'Thalas", -- [27]
 				"FEiloesh-Dalaran", -- [28]
 				"EComalight-BleedingHollow", -- [29]
-				["c"] = "Evan-Illidan",
 				["k"] = true,
+				["c"] = "Evan-Illidan",
 				["d"] = 15,
-				["eI"] = 2074,
+				["eN"] = "Felhounds of Sargeras",
 				["t"] = 1525759390,
 				["g"] = 28,
-				["eN"] = "Felhounds of Sargeras",
+				["eI"] = 2074,
 			}, -- [85]
 			{
 				"BAkromä", -- [1]
@@ -7738,13 +7876,13 @@ VExRT = {
 				"BLuumii", -- [18]
 				"FDjdecay", -- [19]
 				"EZaranà", -- [20]
-				["eI"] = 2069,
-				["k"] = true,
-				["t"] = 1525830479,
 				["eN"] = "Varimathras",
+				["c"] = "Evan-Illidan",
+				["t"] = 1525830479,
+				["eI"] = 2069,
 				["d"] = 16,
 				["g"] = 20,
-				["c"] = "Evan-Illidan",
+				["k"] = true,
 			}, -- [86]
 			{
 				"CHulkbowgan", -- [1]
@@ -7772,13 +7910,13 @@ VExRT = {
 				"IByin-BleedingHollow", -- [23]
 				"CRelaxhontas-Mal'Ganis", -- [24]
 				"ERadu-Ragnaros", -- [25]
-				["k"] = true,
 				["c"] = "Evan-Illidan",
+				["k"] = true,
 				["d"] = 15,
-				["eN"] = "Argus the Unmaker",
+				["eI"] = 2092,
 				["t"] = 1525901627,
 				["g"] = 25,
-				["eI"] = 2092,
+				["eN"] = "Argus the Unmaker",
 			}, -- [87]
 			{
 				"FAphyonsila-MoonGuard", -- [1]
@@ -7801,13 +7939,13 @@ VExRT = {
 				"CXaavasca-Gallywix", -- [18]
 				"IEvofaster-Dalaran", -- [19]
 				"CGongongo-Zul'jin", -- [20]
-				["k"] = true,
 				["c"] = "Evan-Illidan",
+				["k"] = true,
 				["d"] = 15,
-				["eN"] = "Felhounds of Sargeras",
+				["eI"] = 2074,
 				["t"] = 1525902977,
 				["g"] = 20,
-				["eI"] = 2074,
+				["eN"] = "Felhounds of Sargeras",
 			}, -- [88]
 			{
 				"KYoutube", -- [1]
@@ -7839,13 +7977,13 @@ VExRT = {
 				"KWiiki-BleedingHollow", -- [27]
 				"AColyflower-Akama", -- [28]
 				"CFootfoot-BlackDragonflight", -- [29]
-				["eI"] = 2092,
-				["k"] = true,
-				["t"] = 1526265358,
 				["eN"] = "Argus the Unmaker",
+				["c"] = "Evan-Illidan",
+				["t"] = 1526265358,
+				["eI"] = 2092,
 				["d"] = 15,
 				["g"] = 28,
-				["c"] = "Evan-Illidan",
+				["k"] = true,
 			}, -- [89]
 			{
 				"HLanstordrin-Dalaran", -- [1]
@@ -7864,13 +8002,13 @@ VExRT = {
 				"EEvan", -- [14]
 				"HLiastra-BleedingHollow", -- [15]
 				"FTonee-BleedingHollow", -- [16]
-				["eN"] = "Antoran High Command",
-				["k"] = true,
-				["t"] = 1526268348,
 				["eI"] = 2070,
+				["c"] = "Evan-Illidan",
+				["t"] = 1526268348,
+				["eN"] = "Antoran High Command",
 				["d"] = 14,
 				["g"] = 15,
-				["c"] = "Evan-Illidan",
+				["k"] = true,
 			}, -- [90]
 			{
 				"DKappowee-LaughingSkull", -- [1]
@@ -7947,13 +8085,13 @@ VExRT = {
 				"GTaz", -- [18]
 				"GHex", -- [19]
 				"EZaranà", -- [20]
-				["eI"] = 1958,
-				["k"] = true,
-				["t"] = 1526609045,
 				["eN"] = "Odyn",
+				["c"] = "Comet-Illidan",
+				["t"] = 1526609045,
+				["eI"] = 1958,
 				["d"] = 16,
 				["g"] = 20,
-				["c"] = "Comet-Illidan",
+				["k"] = true,
 			}, -- [93]
 			{
 				"BAzadmike", -- [1]
@@ -7975,13 +8113,13 @@ VExRT = {
 				"GTaz", -- [17]
 				"JComet", -- [18]
 				"EZaranà", -- [19]
-				["eN"] = "Grand Magistrix Elisande",
-				["c"] = "Comet-Illidan",
-				["t"] = 1526613548,
 				["eI"] = 1872,
+				["k"] = true,
+				["t"] = 1526613548,
+				["eN"] = "Grand Magistrix Elisande",
 				["d"] = 16,
 				["g"] = 20,
-				["k"] = true,
+				["c"] = "Comet-Illidan",
 			}, -- [94]
 			{
 				"EEvan", -- [1]
@@ -8004,13 +8142,13 @@ VExRT = {
 				"ESaltput-Zul'jin", -- [18]
 				"BMelandrew-Zul'jin", -- [19]
 				"HYearic-BleedingHollow", -- [20]
-				["eN"] = "Argus the Unmaker",
-				["k"] = true,
-				["t"] = 1527198769,
 				["eI"] = 2092,
+				["c"] = "Evan-Illidan",
+				["t"] = 1527198769,
+				["eN"] = "Argus the Unmaker",
 				["d"] = 15,
 				["g"] = 18,
-				["c"] = "Evan-Illidan",
+				["k"] = true,
 			}, -- [95]
 			{
 				"AZahiodah-Thrall", -- [1]
@@ -8039,13 +8177,13 @@ VExRT = {
 				"EEvan", -- [24]
 				nil, -- [25]
 				"KGoldenfoot-Runetotem", -- [26]
-				["eN"] = "Antoran High Command",
-				["c"] = "Evan-Illidan",
-				["t"] = 1527200016,
 				["eI"] = 2070,
+				["k"] = true,
+				["t"] = 1527200016,
+				["eN"] = "Antoran High Command",
 				["d"] = 15,
 				["g"] = 25,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [96]
 			{
 				"FBlutkreig-Tichondrius", -- [1]
@@ -8067,13 +8205,13 @@ VExRT = {
 				"BYoungsavage-Silvermoon", -- [17]
 				"DKuz-Azshara", -- [18]
 				"BClankster-Barthilas", -- [19]
-				["c"] = "Evan-Illidan",
 				["k"] = true,
+				["c"] = "Evan-Illidan",
 				["d"] = 15,
-				["eI"] = 2088,
+				["eN"] = "Kin'garoth",
 				["t"] = 1527567202,
 				["g"] = 19,
-				["eN"] = "Kin'garoth",
+				["eI"] = 2088,
 			}, -- [97]
 			{
 				"GBeercan-Khaz'goroth", -- [1]
@@ -8098,13 +8236,13 @@ VExRT = {
 				"IVellivise-Arthas", -- [20]
 				"CArrowdÿnamic-Dalaran", -- [21]
 				"FChugodfan", -- [22]
-				["eN"] = "The Coven of Shivarra",
-				["k"] = true,
-				["t"] = 1527573030,
 				["eI"] = 2073,
+				["c"] = "Evan-Illidan",
+				["t"] = 1527573030,
+				["eN"] = "The Coven of Shivarra",
 				["d"] = 15,
 				["g"] = 22,
-				["c"] = "Evan-Illidan",
+				["k"] = true,
 			}, -- [98]
 			{
 				"GDruzah-BleedingHollow", -- [1]
@@ -8134,13 +8272,13 @@ VExRT = {
 				"BJyra-Tichondrius", -- [25]
 				"LChajidh-BleedingHollow", -- [26]
 				"ABlackcloud-Ragnaros", -- [27]
-				["k"] = true,
 				["c"] = "Evan-Illidan",
+				["k"] = true,
 				["d"] = 15,
-				["eN"] = "Varimathras",
+				["eI"] = 2069,
 				["t"] = 1527635973,
 				["g"] = 26,
-				["eI"] = 2069,
+				["eN"] = "Varimathras",
 			}, -- [99]
 			{
 				"ACairnë-Azralon", -- [1]
@@ -8173,13 +8311,13 @@ VExRT = {
 				"EEvan", -- [28]
 				"IOgrik-Zul'jin", -- [29]
 				"ISurahn-Area52", -- [30]
-				["k"] = true,
 				["c"] = "Evan-Illidan",
+				["k"] = true,
 				["d"] = 15,
-				["eN"] = "Argus the Unmaker",
+				["eI"] = 2092,
 				["t"] = 1527638465,
 				["g"] = 30,
-				["eI"] = 2092,
+				["eN"] = "Argus the Unmaker",
 			}, -- [100]
 			{
 				"KHilario", -- [1]
@@ -8205,13 +8343,13 @@ VExRT = {
 				"KMusouvv", -- [21]
 				"FWrätth", -- [22]
 				"DJklulrogue-Tichondrius", -- [23]
-				["k"] = true,
 				["c"] = "Evan-Illidan",
+				["k"] = true,
 				["d"] = 15,
-				["eN"] = "Imonar the Soulhunter",
+				["eI"] = 2082,
 				["t"] = 1527639569,
 				["g"] = 23,
-				["eI"] = 2082,
+				["eN"] = "Imonar the Soulhunter",
 			}, -- [101]
 			{
 				"GGarrét-Ragnaros", -- [1]
@@ -8234,13 +8372,13 @@ VExRT = {
 				"ARedbullying-Quel'Thalas", -- [18]
 				"CKurohakai-Quel'Thalas", -- [19]
 				"JAkdóng-Tichondrius", -- [20]
-				["eN"] = "Felhounds of Sargeras",
-				["c"] = "Comet-Illidan",
-				["t"] = 1527654567,
 				["eI"] = 2074,
+				["k"] = true,
+				["t"] = 1527654567,
+				["eN"] = "Felhounds of Sargeras",
 				["d"] = 15,
 				["g"] = 20,
-				["k"] = true,
+				["c"] = "Comet-Illidan",
 			}, -- [102]
 			{
 				"BBindingzz-Barthilas", -- [1]
@@ -8263,13 +8401,13 @@ VExRT = {
 				"IMadyrigbyway-Dalaran", -- [18]
 				"LFivepiggy-Barthilas", -- [19]
 				"FRaiyth-Zuluhed", -- [20]
-				["k"] = true,
 				["c"] = "Comet-Illidan",
+				["k"] = true,
 				["d"] = 15,
-				["eI"] = 2076,
+				["eN"] = "Garothi Worldbreaker",
 				["t"] = 1527666908,
 				["g"] = 20,
-				["eN"] = "Garothi Worldbreaker",
+				["eI"] = 2076,
 			}, -- [103]
 			{
 				"IAcquarian-Azralon", -- [1]
@@ -8290,13 +8428,13 @@ VExRT = {
 				"KCröy-Garrosh", -- [16]
 				"HButansi-Garrosh", -- [17]
 				"GMurimtok-Garrosh", -- [18]
-				["eI"] = 2082,
-				["k"] = true,
-				["t"] = 1527740413,
 				["eN"] = "Imonar the Soulhunter",
+				["c"] = "Comet-Illidan",
+				["t"] = 1527740413,
+				["eI"] = 2082,
 				["d"] = 14,
 				["g"] = 18,
-				["c"] = "Comet-Illidan",
+				["k"] = true,
 			}, -- [104]
 			{
 				"IDarkfrëäk-Zuluhed", -- [1]
@@ -8313,13 +8451,13 @@ VExRT = {
 				"GRyunoire-Tichondrius", -- [12]
 				"GNptrain-Lightning'sBlade", -- [13]
 				"CFaydë-Area52", -- [14]
-				["c"] = "Comet-Illidan",
 				["k"] = true,
+				["c"] = "Comet-Illidan",
 				["d"] = 14,
-				["eN"] = "The Coven of Shivarra",
+				["eI"] = 2073,
 				["t"] = 1527829708,
 				["g"] = 14,
-				["eI"] = 2073,
+				["eN"] = "The Coven of Shivarra",
 			}, -- [105]
 			{
 				"HMagegaris-Ner'zhul", -- [1]
@@ -8342,13 +8480,13 @@ VExRT = {
 				"IRaatzz-Azralon", -- [18]
 				"IJhosué-Ragnaros", -- [19]
 				"APhandrox-Azralon", -- [20]
-				["eN"] = "Argus the Unmaker",
-				["c"] = "Evan-Illidan",
-				["t"] = 1528680305,
 				["eI"] = 2092,
+				["k"] = true,
+				["t"] = 1528680305,
+				["eN"] = "Argus the Unmaker",
 				["d"] = 15,
 				["g"] = 20,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [106]
 			{
 				"FHemogoblîn-Zul'jin", -- [1]
@@ -8371,13 +8509,13 @@ VExRT = {
 				"CShootiecutie-Zul'jin", -- [18]
 				"EEvan", -- [19]
 				"KThefatbull-Zul'jin", -- [20]
-				["eI"] = 2092,
-				["k"] = true,
-				["t"] = 1528955113,
 				["eN"] = "Argus the Unmaker",
+				["c"] = "Evan-Illidan",
+				["t"] = 1528955113,
+				["eI"] = 2092,
 				["d"] = 15,
 				["g"] = 20,
-				["c"] = "Evan-Illidan",
+				["k"] = true,
 			}, -- [107]
 			{
 				"FDjdecay", -- [1]
@@ -8400,13 +8538,13 @@ VExRT = {
 				"EZaranà", -- [18]
 				"ISineströ", -- [19]
 				"EEvan", -- [20]
-				["k"] = true,
 				["c"] = "Evan-Illidan",
+				["k"] = true,
 				["d"] = 16,
-				["eN"] = "Aggramar",
+				["eI"] = 2063,
 				["t"] = 1529036147,
 				["g"] = 20,
-				["eI"] = 2063,
+				["eN"] = "Aggramar",
 			}, -- [108]
 			{
 				"AGhragorr-Tichondrius", -- [1]
@@ -8427,14 +8565,14 @@ VExRT = {
 				"IOmniveganlok", -- [16]
 				"LNathulia-Ragnaros", -- [17]
 				"ILokien-Kil'jaeden", -- [18]
-				[21] = "EEvan",
+				["c"] = "Evan-Illidan",
 				["eN"] = "Antoran High Command",
-				["k"] = true,
+				[21] = "EEvan",
 				["d"] = 15,
 				["eI"] = 2070,
 				["t"] = 1529285549,
 				["g"] = 19,
-				["c"] = "Evan-Illidan",
+				["k"] = true,
 			}, -- [109]
 			{
 				"KSeåwall-Azralon", -- [1]
@@ -8467,13 +8605,13 @@ VExRT = {
 				"ELørdpriest-Azralon", -- [28]
 				"KFenrëal-Dalaran", -- [29]
 				"GEarthlotusup-Hyjal", -- [30]
-				["eN"] = "Argus the Unmaker",
-				["c"] = "Evan-Illidan",
-				["t"] = 1529547488,
 				["eI"] = 2092,
+				["k"] = true,
+				["t"] = 1529547488,
+				["eN"] = "Argus the Unmaker",
 				["d"] = 15,
 				["g"] = 30,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [110]
 			{
 				"FSpeedyocto-Thrall", -- [1]
@@ -8494,13 +8632,13 @@ VExRT = {
 				"HCmage-Thrall", -- [16]
 				"KLowe-Aegwynn", -- [17]
 				"EEvan", -- [18]
-				["eN"] = "Imonar the Soulhunter",
-				["c"] = "Evan-Illidan",
-				["t"] = 1529548124,
 				["eI"] = 2082,
+				["k"] = true,
+				["t"] = 1529548124,
+				["eN"] = "Imonar the Soulhunter",
 				["d"] = 15,
 				["g"] = 18,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [111]
 			{
 				"FSpeedyocto-Thrall", -- [1]
@@ -8521,13 +8659,13 @@ VExRT = {
 				"HCmage-Thrall", -- [16]
 				"KLowe-Aegwynn", -- [17]
 				"EEvan", -- [18]
-				["c"] = "Evan-Illidan",
 				["k"] = true,
+				["c"] = "Evan-Illidan",
 				["d"] = 15,
-				["eI"] = 2088,
+				["eN"] = "Kin'garoth",
 				["t"] = 1529548968,
 				["g"] = 18,
-				["eN"] = "Kin'garoth",
+				["eI"] = 2088,
 			}, -- [112]
 			{
 				"LEmarmimi-Zul'jin", -- [1]
@@ -8553,13 +8691,13 @@ VExRT = {
 				"GZazuu-Barthilas", -- [21]
 				"IFrumplock-Dalaran", -- [22]
 				"EEvan", -- [23]
-				["eN"] = "Antoran High Command",
-				["k"] = true,
-				["t"] = 1529561428,
 				["eI"] = 2070,
+				["c"] = "Evan-Illidan",
+				["t"] = 1529561428,
+				["eN"] = "Antoran High Command",
 				["d"] = 15,
 				["g"] = 22,
-				["c"] = "Evan-Illidan",
+				["k"] = true,
 			}, -- [113]
 			{
 				"LPwntgg-Barthilas", -- [1]
@@ -8592,13 +8730,13 @@ VExRT = {
 				"ATarex-Barthilas", -- [28]
 				"JGulukabi", -- [29]
 				"BHolywho-Barthilas", -- [30]
-				["k"] = true,
 				["c"] = "Evan-Illidan",
+				["k"] = true,
 				["d"] = 15,
-				["eN"] = "Kin'garoth",
+				["eI"] = 2088,
 				["t"] = 1529563884,
 				["g"] = 30,
-				["eI"] = 2088,
+				["eN"] = "Kin'garoth",
 			}, -- [114]
 			{
 				"LPwntgg-Barthilas", -- [1]
@@ -8631,13 +8769,13 @@ VExRT = {
 				"ATarex-Barthilas", -- [28]
 				"JGulukabi", -- [29]
 				"BHolywho-Barthilas", -- [30]
-				["eN"] = "Varimathras",
-				["c"] = "Evan-Illidan",
-				["t"] = 1529564771,
 				["eI"] = 2069,
+				["k"] = true,
+				["t"] = 1529564771,
+				["eN"] = "Varimathras",
 				["d"] = 15,
 				["g"] = 30,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [115]
 			{
 				"EOogawaka-Dalaran", -- [1]
@@ -8658,13 +8796,13 @@ VExRT = {
 				"GHealizz-Kilrogg", -- [16]
 				"KMightytrick-Thrall", -- [17]
 				"BStoutenix-Ragnaros", -- [18]
-				["k"] = true,
 				["c"] = "Evan-Illidan",
+				["k"] = true,
 				["d"] = 15,
-				["eN"] = "Garothi Worldbreaker",
+				["eI"] = 2076,
 				["t"] = 1529889791,
 				["g"] = 18,
-				["eI"] = 2076,
+				["eN"] = "Garothi Worldbreaker",
 			}, -- [116]
 			{
 				"DImyourzaddy-Tichondrius", -- [1]
@@ -8688,13 +8826,13 @@ VExRT = {
 				"GGaroshy-Azralon", -- [19]
 				"EFèlix-Dalaran", -- [20]
 				"EEvan", -- [21]
-				["k"] = true,
 				["c"] = "Evan-Illidan",
+				["k"] = true,
 				["d"] = 15,
-				["eN"] = "Antoran High Command",
+				["eI"] = 2070,
 				["t"] = 1529897776,
 				["g"] = 21,
-				["eI"] = 2070,
+				["eN"] = "Antoran High Command",
 			}, -- [117]
 			{
 				"JNotcole", -- [1]
@@ -8727,13 +8865,13 @@ VExRT = {
 				"AJackaloap-Thrall", -- [28]
 				"LVenomusaurus-Bloodhoof", -- [29]
 				"FBlightgore-ArgentDawn", -- [30]
-				["eN"] = "The Defense of Eonar",
-				["c"] = "Evan-Illidan",
-				["t"] = 1529899699,
 				["eI"] = 2075,
+				["k"] = true,
+				["t"] = 1529899699,
+				["eN"] = "The Defense of Eonar",
 				["d"] = 15,
 				["g"] = 28,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [118]
 			{
 				"JNotcole", -- [1]
@@ -8766,13 +8904,13 @@ VExRT = {
 				"AJackaloap-Thrall", -- [28]
 				"LVenomusaurus-Bloodhoof", -- [29]
 				"FBlightgore-ArgentDawn", -- [30]
-				["c"] = "Comet-Illidan",
 				["k"] = true,
+				["c"] = "Comet-Illidan",
 				["d"] = 15,
-				["eI"] = 2073,
+				["eN"] = "The Coven of Shivarra",
 				["t"] = 1529902927,
 				["g"] = 29,
-				["eN"] = "The Coven of Shivarra",
+				["eI"] = 2073,
 			}, -- [119]
 			{
 				"FBellemonte-MoonGuard", -- [1]
@@ -8793,13 +8931,13 @@ VExRT = {
 				"ERoksana-MoonGuard", -- [16]
 				"GEmu-Lightninghoof", -- [17]
 				"IEllsnarl-Ghostlands", -- [18]
-				["k"] = true,
 				["c"] = "Comet-Illidan",
+				["k"] = true,
 				["d"] = 15,
-				["eN"] = "Garothi Worldbreaker",
+				["eI"] = 2076,
 				["t"] = 1529978298,
 				["g"] = 18,
-				["eI"] = 2076,
+				["eN"] = "Garothi Worldbreaker",
 			}, -- [120]
 			{
 				"EKälï-Azralon", -- [1]
@@ -8820,13 +8958,13 @@ VExRT = {
 				"BKyrya-Azralon", -- [16]
 				"JComet", -- [17]
 				"HCelebi-Deathwing", -- [18]
-				["eI"] = 2082,
-				["k"] = true,
-				["t"] = 1530146683,
 				["eN"] = "Imonar the Soulhunter",
+				["c"] = "Comet-Illidan",
+				["t"] = 1530146683,
+				["eI"] = 2082,
 				["d"] = 15,
 				["g"] = 18,
-				["c"] = "Comet-Illidan",
+				["k"] = true,
 			}, -- [121]
 			{
 				"EYourfriend-Mal'Ganis", -- [1]
@@ -8859,13 +8997,13 @@ VExRT = {
 				"GWaax-Dragonmaw", -- [28]
 				"ACrístián-Ragnaros", -- [29]
 				"GMallarius-Ragnaros", -- [30]
-				["k"] = true,
 				["c"] = "Comet-Illidan",
+				["k"] = true,
 				["d"] = 15,
-				["eI"] = 2092,
+				["eN"] = "Argus the Unmaker",
 				["t"] = 1530238357,
 				["g"] = 30,
-				["eN"] = "Argus the Unmaker",
+				["eI"] = 2092,
 			}, -- [122]
 			{
 				"JPonjita-Ragnaros", -- [1]
@@ -8892,13 +9030,13 @@ VExRT = {
 				"EEvan", -- [22]
 				"BRonann-Ragnaros", -- [23]
 				"CBrandaryia-Thrall", -- [24]
-				["k"] = true,
 				["c"] = "Evan-Illidan",
+				["k"] = true,
 				["d"] = 15,
-				["eI"] = 2048,
+				["eN"] = "Demonic Inquisition",
 				["t"] = 1530414713,
 				["g"] = 20,
-				["eN"] = "Demonic Inquisition",
+				["eI"] = 2048,
 			}, -- [123]
 			{
 				"FNoktagall-Mal'Ganis", -- [1]
@@ -8921,13 +9059,13 @@ VExRT = {
 				"EEtcpewd-Mal'Ganis", -- [18]
 				"GDonlogan-Deathwing", -- [19]
 				"KSolastoid-Mal'Ganis", -- [20]
-				["eI"] = 2051,
-				["c"] = "Evan-Illidan",
-				["t"] = 1530494494,
 				["eN"] = "Kil'jaeden",
+				["k"] = true,
+				["t"] = 1530494494,
+				["eI"] = 2051,
 				["d"] = 15,
 				["g"] = 19,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [124]
 			{
 				"KShinmoo-Zul'jin", -- [1]
@@ -8952,13 +9090,13 @@ VExRT = {
 				"BErecshin-Zul'jin", -- [20]
 				"IGumbot-Hyjal", -- [21]
 				"EJinz-Zul'jin", -- [22]
-				["eN"] = "Argus the Unmaker",
-				["c"] = "Evan-Illidan",
-				["t"] = 1530495578,
 				["eI"] = 2092,
+				["k"] = true,
+				["t"] = 1530495578,
+				["eN"] = "Argus the Unmaker",
 				["d"] = 15,
 				["g"] = 22,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [125]
 			{
 				"DAlexissae-MoonGuard", -- [1]
@@ -8981,13 +9119,13 @@ VExRT = {
 				"BKarncama-Barthilas", -- [18]
 				"EEvan", -- [19]
 				"HFrøzen-WyrmrestAccord", -- [20]
-				["eI"] = 2092,
-				["c"] = "Evan-Illidan",
-				["t"] = 1533012492,
 				["eN"] = "Argus the Unmaker",
+				["k"] = true,
+				["t"] = 1533012492,
+				["eI"] = 2092,
 				["d"] = 15,
 				["g"] = 20,
-				["k"] = true,
+				["c"] = "Evan-Illidan",
 			}, -- [126]
 			{
 				"JPandabber-Area52", -- [1]
@@ -9009,13 +9147,13 @@ VExRT = {
 				"CGonfreecss", -- [17]
 				"ASonydigital", -- [18]
 				"GFùzbòx-Area52", -- [19]
-				["eI"] = 2070,
-				["k"] = true,
-				["t"] = 1533089411,
 				["eN"] = "Antoran High Command",
+				["c"] = "Evan-Illidan",
+				["t"] = 1533089411,
+				["eI"] = 2070,
 				["d"] = 15,
 				["g"] = 19,
-				["c"] = "Evan-Illidan",
+				["k"] = true,
 			}, -- [127]
 			{
 				"HMagiifitz-Tichondrius", -- [1]
@@ -9036,13 +9174,13 @@ VExRT = {
 				"DMelzzinha-Gallywix", -- [16]
 				"EPurinn", -- [17]
 				"EEvan", -- [18]
-				["k"] = true,
 				["c"] = "Evan-Illidan",
+				["k"] = true,
 				["d"] = 15,
-				["eI"] = 2088,
+				["eN"] = "Kin'garoth",
 				["t"] = 1533149640,
 				["g"] = 17,
-				["eN"] = "Kin'garoth",
+				["eI"] = 2088,
 			}, -- [128]
 			{
 				"DScaris-Magtheridon", -- [1]
@@ -9065,14 +9203,97 @@ VExRT = {
 				"ADexeus-Area52", -- [18]
 				"BGoemeow-TwistingNether", -- [19]
 				"KLazyclaw-Vashj", -- [20]
+				["k"] = true,
+				["c"] = "Evan-Illidan",
+				["d"] = 15,
+				["eI"] = 2073,
+				["t"] = 1533151290,
+				["g"] = 18,
+				["eN"] = "The Coven of Shivarra",
+			}, -- [129]
+			{
+				"ATarma-Thrall", -- [1]
+				"EMicker-ArgentDawn", -- [2]
+				"JSylir-Thrall", -- [3]
+				"BDugaa-Cho'gall", -- [4]
+				"KPînk-Tichondrius", -- [5]
+				"BSunashard-CenarionCircle", -- [6]
+				"DBaldeaglejrk-Thrall", -- [7]
+				"GJomm-Thrall", -- [8]
+				"AAaliyahwow", -- [9]
+				"BTemna-Dragonblight", -- [10]
+				"KMatsukaze-Thrall", -- [11]
+				"HChelly-Thrall", -- [12]
+				"COztini-Thrall", -- [13]
+				"ESarcophilia-Thrall", -- [14]
+				"KCaronax-Zul'jin", -- [15]
+				"CGalbatron-Crushridge", -- [16]
+				"EEvan", -- [17]
 				["c"] = "Evan-Illidan",
 				["k"] = true,
 				["d"] = 15,
-				["eN"] = "The Coven of Shivarra",
-				["t"] = 1533151290,
+				["eN"] = "Antoran High Command",
+				["t"] = 1533605778,
+				["g"] = 17,
+				["eI"] = 2070,
+			}, -- [130]
+			{
+				"DValeerå-Thrall", -- [1]
+				"JBungy-EmeraldDream", -- [2]
+				"DGrinsbane-Barthilas", -- [3]
+				"AJuteseeker-EmeraldDream", -- [4]
+				"CAlukura-EmeraldDream", -- [5]
+				"ASkjøld-Zul'jin", -- [6]
+				"ATînytîm-Area52", -- [7]
+				"KNokoko-Winterhoof", -- [8]
+				"FSickduck-Zul'jin", -- [9]
+				"FMachine-Stormreaver", -- [10]
+				"IRytharion-Tichondrius", -- [11]
+				"CGirlsvsboys-EmeraldDream", -- [12]
+				"EJopp-EmeraldDream", -- [13]
+				"IBrocktopus-Nagrand", -- [14]
+				[16] = "GKampachi-Bonechewer",
+				[17] = "KZakoom-Area52",
+				[18] = "BDonnyb-EmeraldDream",
+				[19] = "EEvan",
+				["eN"] = "Garothi Worldbreaker",
+				["k"] = true,
+				["t"] = 1533616314,
+				["eI"] = 2076,
+				["d"] = 15,
 				["g"] = 18,
-				["eI"] = 2073,
-			}, -- [129]
+				["c"] = "Evan-Illidan",
+			}, -- [131]
+			{
+				"DValeerå-Thrall", -- [1]
+				"JBungy-EmeraldDream", -- [2]
+				"DGrinsbane-Barthilas", -- [3]
+				"AJuteseeker-EmeraldDream", -- [4]
+				"CAlukura-EmeraldDream", -- [5]
+				"ASkjøld-Zul'jin", -- [6]
+				"ATînytîm-Area52", -- [7]
+				"DSneakyzeus-Turalyon", -- [8]
+				"FSickduck-Zul'jin", -- [9]
+				"FMachine-Stormreaver", -- [10]
+				"IRytharion-Tichondrius", -- [11]
+				"CGirlsvsboys-EmeraldDream", -- [12]
+				"EJopp-EmeraldDream", -- [13]
+				"AJadgel-EmeraldDream", -- [14]
+				"CTwotrapz-Hyjal", -- [15]
+				"GKampachi-Bonechewer", -- [16]
+				"BDonnyb-EmeraldDream", -- [17]
+				"KBlubber-EmeraldDream", -- [18]
+				"EEvan", -- [19]
+				[21] = "HBömbs-Dalaran",
+				[22] = "GHuna",
+				["d"] = 15,
+				["k"] = true,
+				["c"] = "Evan-Illidan",
+				["eI"] = 2070,
+				["t"] = 1533618229,
+				["g"] = 21,
+				["eN"] = "Antoran High Command",
+			}, -- [132]
 		},
 		["alts"] = {
 		},
@@ -9096,12 +9317,13 @@ VExRT = {
 		},
 	},
 	["Addon"] = {
+		["IconMiniMapHide"] = true,
 		["Version"] = 3930,
+		["IconMiniMapTop"] = -63.348749345638,
 		["PreVersion"] = 3930,
-		["IconMiniMapLeft"] = -80,
 		["Timer"] = 0.1,
 		["Scale"] = 1,
-		["IconMiniMapTop"] = -63.348749345638,
+		["IconMiniMapLeft"] = -80,
 	},
 	["MarksBar"] = {
 		["enabled"] = true,
@@ -9153,23 +9375,6 @@ VExRT = {
 						"6B1E142654180007B020Doublestufed-Gorefiend", -- [12]
 					},
 					["Cometstorm"] = {
-					},
-					["Evan"] = {
-						"^1677^2^1469914689^22^1^5^696.70^", -- [1]
-						"^1688^2^1469914784^28^1^5^696.70^", -- [2]
-						"^1679^2^1469914975^27^1^5^696.70^", -- [3]
-						"^1682^2^1469915076^29^1^5^696.70^", -- [4]
-						"^1749^23^1469915735^33^1^5^713.05^", -- [5]
-						"^1748^23^1469916132^83^1^5^710.52^Nazàrken-Thrall", -- [6]
-						"^1750^23^1469916496^66^1^5^713.05^", -- [7]
-						"^1754^23^1469916620^37^1^5^713.05^", -- [8]
-						"^1653^23^1469920775^77^1^5^706.72^Skraîder-Quel'Thalas", -- [9]
-						"^1655^23^1469921208^78^0^5^709.45^Skraîder-Quel'Thalas", -- [10]
-						"^1655^23^1469921404^100^0^5^709.45^Inaruz-Quel'Thalas", -- [11]
-						"^1653^23^1469922920^49^1^5^714.97^", -- [12]
-						"^1655^23^1469923226^75^1^5^711.39^", -- [13]
-						"^1652^23^1469923485^28^1^5^711.59^", -- [14]
-						"^1654^23^1469923756^39^1^5^711.59^", -- [15]
 					},
 					["Combustion"] = {
 						"^1849^14^1494809036^149^1^18^889.95^", -- [1]
@@ -9274,6 +9479,23 @@ VExRT = {
 						"^1961^8^1496978899^24^0^5^906.31^Combustion", -- [100]
 						"^1961^8^1496979047^159^1^5^906.31^Telgina", -- [101]
 						"^1960^8^1496979605^133^1^5^906.31^Combustion", -- [102]
+					},
+					["Evan"] = {
+						"^1677^2^1469914689^22^1^5^696.70^", -- [1]
+						"^1688^2^1469914784^28^1^5^696.70^", -- [2]
+						"^1679^2^1469914975^27^1^5^696.70^", -- [3]
+						"^1682^2^1469915076^29^1^5^696.70^", -- [4]
+						"^1749^23^1469915735^33^1^5^713.05^", -- [5]
+						"^1748^23^1469916132^83^1^5^710.52^Nazàrken-Thrall", -- [6]
+						"^1750^23^1469916496^66^1^5^713.05^", -- [7]
+						"^1754^23^1469916620^37^1^5^713.05^", -- [8]
+						"^1653^23^1469920775^77^1^5^706.72^Skraîder-Quel'Thalas", -- [9]
+						"^1655^23^1469921208^78^0^5^709.45^Skraîder-Quel'Thalas", -- [10]
+						"^1655^23^1469921404^100^0^5^709.45^Inaruz-Quel'Thalas", -- [11]
+						"^1653^23^1469922920^49^1^5^714.97^", -- [12]
+						"^1655^23^1469923226^75^1^5^711.39^", -- [13]
+						"^1652^23^1469923485^28^1^5^711.59^", -- [14]
+						"^1654^23^1469923756^39^1^5^711.59^", -- [15]
 					},
 					["Pandatal"] = {
 					},
@@ -10495,7 +10717,7 @@ VExRT = {
 					["Zippar"] = 264,
 					["Thenex"] = 63,
 					["Blutarski"] = 261,
-					["Xorn"] = 265,
+					["Seeru-Gundrak"] = 269,
 					["Herrmwarrior-Blackhand"] = 73,
 					["Airimis"] = 259,
 					["Zilorin"] = 577,
@@ -10512,23 +10734,23 @@ VExRT = {
 					["Kabupps-Quel'Thalas"] = 259,
 					["Zewpaloop-Terokkar"] = 577,
 					["Comet"] = 270,
-					["Sineströ"] = 265,
+					["Lenessia-Drakkari"] = 254,
 					["Reya-Akama"] = 266,
 					["Fortvna-Mal'Ganis"] = 250,
 					["Alord-ShadowCouncil"] = 66,
 					["Numbles-Bloodscalp"] = 64,
-					["Drake-Azralon"] = 266,
 					["Corvus-Agamaggan"] = 265,
+					["Drake-Azralon"] = 266,
 					["Kronâr-Executus"] = 262,
 					["Àutumn-EarthenRing"] = 63,
-					["Lenessia-Drakkari"] = 254,
+					["Sineströ"] = 265,
 					["Nazker-Ragnaros"] = 64,
 					["Necromanser-Zul'jin"] = 250,
 					["Dadizzle"] = 102,
 					["Cometstorm"] = 64,
 					["Zefarion"] = 64,
 					["Djdivine"] = 65,
-					["Seeru-Gundrak"] = 269,
+					["Xorn"] = 265,
 					["Akromä"] = 65,
 					["Evan"] = 257,
 				},
@@ -10736,14 +10958,14 @@ VExRT = {
 						"LZilorin", -- [18]
 						"AJimrando", -- [19]
 						"KMizzraym", -- [20]
-						["eN"] = "Trilliax",
-						[31] = "CLivepets",
-						["k"] = true,
-						["t"] = 1493775632,
 						["eI"] = 1867,
+						[31] = "CLivepets",
+						["c"] = "Comet-Illidan",
+						["t"] = 1493775632,
+						["eN"] = "Trilliax",
 						["d"] = 16,
 						["g"] = 20,
-						["c"] = "Comet-Illidan",
+						["k"] = true,
 					}, -- [1]
 					{
 						"BAedalina", -- [1]
@@ -10765,13 +10987,13 @@ VExRT = {
 						"JBeallz", -- [17]
 						"JComet", -- [18]
 						"BDjdivine", -- [19]
-						["c"] = "Comet-Illidan",
 						["k"] = true,
+						["c"] = "Comet-Illidan",
 						["d"] = 15,
-						["eN"] = "Skorpyron",
+						["eI"] = 1849,
 						["t"] = 1493944995,
 						["g"] = 19,
-						["eI"] = 1849,
+						["eN"] = "Skorpyron",
 					}, -- [2]
 					{
 						"FCannibal", -- [1]
@@ -10821,13 +11043,13 @@ VExRT = {
 						"ELanféar", -- [17]
 						"JBeallz", -- [18]
 						"EGrimuhs", -- [19]
-						["c"] = "Comet-Illidan",
 						["k"] = true,
+						["c"] = "Comet-Illidan",
 						["d"] = 15,
-						["eN"] = "Spellblade Aluriel",
+						["eI"] = 1871,
 						["t"] = 1494378988,
 						["g"] = 19,
-						["eI"] = 1871,
+						["eN"] = "Spellblade Aluriel",
 					}, -- [4]
 					{
 						"BDjdivine", -- [1]
@@ -10850,13 +11072,13 @@ VExRT = {
 						"LEklipto", -- [18]
 						"LSemigin", -- [19]
 						"LZilorin", -- [20]
-						["c"] = "Comet-Illidan",
 						["k"] = true,
+						["c"] = "Comet-Illidan",
 						["d"] = 16,
-						["eN"] = "Chronomatic Anomaly",
+						["eI"] = 1865,
 						["t"] = 1494552353,
 						["g"] = 20,
-						["eI"] = 1865,
+						["eN"] = "Chronomatic Anomaly",
 					}, -- [5]
 					{
 						"BTinderon-Nazgrel", -- [1]
@@ -10877,13 +11099,13 @@ VExRT = {
 						"GDjpurge", -- [16]
 						"ETwinspirit-Zul'jin", -- [17]
 						"ELanféar", -- [18]
-						["k"] = true,
 						["c"] = "Combustion-Illidan",
+						["k"] = true,
 						["d"] = 14,
-						["eI"] = 1849,
+						["eN"] = "Skorpyron",
 						["t"] = 1494809185,
 						["g"] = 18,
-						["eN"] = "Skorpyron",
+						["eI"] = 1849,
 					}, -- [6]
 					{
 						"AReinhärt", -- [1]
@@ -10975,13 +11197,13 @@ VExRT = {
 						"EEllegy", -- [24]
 						"JBeallz", -- [25]
 						"KWowjayson", -- [26]
-						["eN"] = "Grand Magistrix Elisande",
-						["k"] = true,
-						["t"] = 1495159967,
 						["eI"] = 1872,
+						["c"] = "Comet-Illidan",
+						["t"] = 1495159967,
+						["eN"] = "Grand Magistrix Elisande",
 						["d"] = 15,
 						["g"] = 26,
-						["c"] = "Comet-Illidan",
+						["k"] = true,
 					}, -- [9]
 					{
 						"AReinhärt", -- [1]
@@ -11010,13 +11232,13 @@ VExRT = {
 						"EEllegy", -- [24]
 						"JBeallz", -- [25]
 						[36] = "JComet",
-						["k"] = true,
 						["c"] = "Combustion-Illidan",
+						["k"] = true,
 						["d"] = 15,
-						["eI"] = 1842,
+						["eN"] = "Krosus",
 						["t"] = 1495162154,
 						["g"] = 25,
-						["eN"] = "Krosus",
+						["eI"] = 1842,
 					}, -- [10]
 					{
 						"IFearmeter", -- [1]
@@ -11033,13 +11255,13 @@ VExRT = {
 						"FDemonjake-Thaurissan", -- [12]
 						"EBlackfaith-Mal'Ganis", -- [13]
 						"HNadzieja", -- [14]
-						["k"] = true,
 						["c"] = "Combustion-Illidan",
+						["k"] = true,
 						["d"] = 15,
-						["eI"] = 1849,
+						["eN"] = "Skorpyron",
 						["t"] = 1495414496,
 						["g"] = 14,
-						["eN"] = "Skorpyron",
+						["eI"] = 1849,
 					}, -- [11]
 					{
 						"FDeathft-Barthilas", -- [1]
@@ -11062,13 +11284,13 @@ VExRT = {
 						"BCosmopolitan-Warsong", -- [18]
 						"EMistikal-Azralon", -- [19]
 						"EValkyrah", -- [20]
-						["eI"] = 1849,
-						["c"] = "Combustion-Illidan",
-						["t"] = 1495416572,
 						["eN"] = "Skorpyron",
+						["k"] = true,
+						["t"] = 1495416572,
+						["eI"] = 1849,
 						["d"] = 14,
 						["g"] = 19,
-						["k"] = true,
+						["c"] = "Combustion-Illidan",
 					}, -- [12]
 					{
 						"FSalamanderr", -- [1]
@@ -11090,13 +11312,13 @@ VExRT = {
 						"BDjdivine", -- [17]
 						"ELanféar", -- [18]
 						"EEllegy", -- [19]
-						["eI"] = 1872,
-						["c"] = "Comet-Illidan",
-						["t"] = 1495586542,
 						["eN"] = "Grand Magistrix Elisande",
+						["k"] = true,
+						["t"] = 1495586542,
+						["eI"] = 1872,
 						["d"] = 15,
 						["g"] = 19,
-						["k"] = true,
+						["c"] = "Comet-Illidan",
 					}, -- [13]
 					{
 						"FSalamanderr", -- [1]
@@ -11118,13 +11340,13 @@ VExRT = {
 						"BDjdivine", -- [17]
 						"ELanféar", -- [18]
 						"EEllegy", -- [19]
-						["c"] = "Combustion-Illidan",
 						["k"] = true,
+						["c"] = "Combustion-Illidan",
 						["d"] = 15,
-						["eN"] = "Spellblade Aluriel",
+						["eI"] = 1871,
 						["t"] = 1495587765,
 						["g"] = 19,
-						["eI"] = 1871,
+						["eN"] = "Spellblade Aluriel",
 					}, -- [14]
 					{
 						"FSalamanderr", -- [1]
@@ -11147,13 +11369,13 @@ VExRT = {
 						"ELanféar", -- [18]
 						"JComet", -- [19]
 						"EEllegy", -- [20]
-						["eN"] = "Skorpyron",
-						["k"] = true,
-						["t"] = 1495591737,
 						["eI"] = 1849,
+						["c"] = "Comet-Illidan",
+						["t"] = 1495591737,
+						["eN"] = "Skorpyron",
 						["d"] = 16,
 						["g"] = 20,
-						["c"] = "Comet-Illidan",
+						["k"] = true,
 					}, -- [15]
 					{
 						"KUgliestdruid", -- [1]
@@ -11236,13 +11458,13 @@ VExRT = {
 						"EAschiera-Khadgar", -- [16]
 						"JBeallz", -- [17]
 						"GDjpurge", -- [18]
-						["eN"] = "Skorpyron",
-						["c"] = "Combustion-Illidan",
-						["t"] = 1496623596,
 						["eI"] = 1849,
+						["k"] = true,
+						["t"] = 1496623596,
+						["eN"] = "Skorpyron",
 						["d"] = 15,
 						["g"] = 18,
-						["k"] = true,
+						["c"] = "Combustion-Illidan",
 					}, -- [18]
 					{
 						"IFearmeter", -- [1]
@@ -11266,13 +11488,13 @@ VExRT = {
 						"ELanféar", -- [19]
 						"EGrimuhs", -- [20]
 						"HZefarion", -- [21]
-						["eI"] = 1842,
-						["k"] = true,
-						["t"] = 1496626419,
 						["eN"] = "Krosus",
+						["c"] = "Combustion-Illidan",
+						["t"] = 1496626419,
+						["eI"] = 1842,
 						["d"] = 15,
 						["g"] = 21,
-						["c"] = "Combustion-Illidan",
+						["k"] = true,
 					}, -- [19]
 					{
 						"IFearmeter", -- [1]
@@ -11297,13 +11519,13 @@ VExRT = {
 						"EGrimuhs", -- [20]
 						"HZefarion", -- [21]
 						"HCombustion", -- [22]
-						["k"] = true,
 						["c"] = "Comet-Illidan",
+						["k"] = true,
 						["d"] = 15,
-						["eN"] = "High Botanist Tel'arn",
+						["eI"] = 1886,
 						["t"] = 1496627889,
 						["g"] = 21,
-						["eI"] = 1886,
+						["eN"] = "High Botanist Tel'arn",
 					}, -- [20]
 					{
 						"IFearmeter", -- [1]
@@ -11328,13 +11550,13 @@ VExRT = {
 						"EGrimuhs", -- [20]
 						"HZefarion", -- [21]
 						"HCombustion", -- [22]
-						["eN"] = "Grand Magistrix Elisande",
-						["c"] = "Combustion-Illidan",
-						["t"] = 1496628699,
 						["eI"] = 1872,
+						["k"] = true,
+						["t"] = 1496628699,
+						["eN"] = "Grand Magistrix Elisande",
 						["d"] = 15,
 						["g"] = 21,
-						["k"] = true,
+						["c"] = "Combustion-Illidan",
 					}, -- [21]
 					{
 						"AJimrando", -- [1]
@@ -11357,13 +11579,13 @@ VExRT = {
 						"JBeallz", -- [18]
 						"IXorn", -- [19]
 						"JComet", -- [20]
-						["eN"] = "Skorpyron",
-						["k"] = true,
-						["t"] = 1496796351,
 						["eI"] = 1849,
+						["c"] = "Comet-Illidan",
+						["t"] = 1496796351,
+						["eN"] = "Skorpyron",
 						["d"] = 16,
 						["g"] = 20,
-						["c"] = "Comet-Illidan",
+						["k"] = true,
 					}, -- [22]
 					{
 						"DBlutarski", -- [1]
@@ -11388,13 +11610,13 @@ VExRT = {
 						"LZilorin", -- [20]
 						"JComet", -- [21]
 						"LFuryisthy", -- [22]
-						["k"] = true,
 						["c"] = "Combustion-Illidan",
+						["k"] = true,
 						["d"] = 16,
-						["eN"] = "Chronomatic Anomaly",
+						["eI"] = 1865,
 						["t"] = 1496797562,
 						["g"] = 20,
-						["eI"] = 1865,
+						["eN"] = "Chronomatic Anomaly",
 					}, -- [23]
 					{
 						"DBlutarski", -- [1]
@@ -11419,13 +11641,13 @@ VExRT = {
 						"BLuthanen", -- [20]
 						"HCombustion", -- [21]
 						"LFuryisthy", -- [22]
-						["eN"] = "Trilliax",
-						["c"] = "Comet-Illidan",
-						["t"] = 1496798559,
 						["eI"] = 1867,
+						["k"] = true,
+						["t"] = 1496798559,
+						["eN"] = "Trilliax",
 						["d"] = 16,
 						["g"] = 20,
-						["k"] = true,
+						["c"] = "Comet-Illidan",
 					}, -- [24]
 					{
 						"KUgliestdruid", -- [1]
@@ -11442,13 +11664,13 @@ VExRT = {
 						"HThenex", -- [12]
 						"CTelgina", -- [13]
 						"HCombustion", -- [14]
-						["k"] = true,
 						["c"] = "Combustion-Illidan",
+						["k"] = true,
 						["d"] = 15,
-						["eI"] = 1872,
+						["eN"] = "Grand Magistrix Elisande",
 						["t"] = 1496969819,
 						["g"] = 14,
-						["eN"] = "Grand Magistrix Elisande",
+						["eI"] = 1872,
 					}, -- [25]
 					{
 						"KUgliestdruid", -- [1]
@@ -11467,13 +11689,13 @@ VExRT = {
 						"LThenexjr", -- [14]
 						"JComet", -- [15]
 						"HCombustion", -- [16]
-						["eI"] = 1867,
-						["c"] = "Comet-Illidan",
-						["t"] = 1496975880,
 						["eN"] = "Trilliax",
+						["k"] = true,
+						["t"] = 1496975880,
+						["eI"] = 1867,
 						["d"] = 15,
 						["g"] = 15,
-						["k"] = true,
+						["c"] = "Comet-Illidan",
 					}, -- [26]
 					{
 						"AReinhärt", -- [1]
@@ -11496,13 +11718,13 @@ VExRT = {
 						"BDjdivine", -- [18]
 						"JComet", -- [19]
 						"EDankwaffles", -- [20]
-						["k"] = true,
 						["c"] = "Comet-Illidan",
+						["k"] = true,
 						["d"] = 16,
-						["eI"] = 2048,
+						["eN"] = "Demonic Inquisition",
 						["t"] = 1507255199,
 						["g"] = 20,
-						["eN"] = "Demonic Inquisition",
+						["eI"] = 2048,
 					}, -- [27]
 				},
 				["alts"] = {
@@ -11642,9 +11864,9 @@ VExRT = {
 					"Futìlíty", -- [22]
 					"Haseoh", -- [23]
 					"Chokune", -- [24]
+					["time"] = 1426739223,
 					["name"] = "Lustya-Illidan",
 					["sync"] = true,
-					["time"] = 1426739223,
 				},
 			},
 			["RaidCheck"] = {

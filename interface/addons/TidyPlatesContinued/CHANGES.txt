@@ -1,13 +1,18 @@
-lightweight tag 588f21f6e1f672bef3412ab5e351223b7befbf54 6.19.3
-Author:	Higi <higi@tauri.hu>
-Date:	Thu Aug 2 00:19:08 2018 +0200
+lightweight tag 05a1863e9d4a0ca3dba2cc89f4d9ea6edb242f15 6.19.8
+Author:	Luxocracy <luxor355@gmail.com>
+Date:	Tue Aug 7 14:23:37 2018 +0200
 
-commit 588f21f6e1f672bef3412ab5e351223b7befbf54
-Author: Higi <higi@tauri.hu>
-Date:   Thu Aug 2 00:19:08 2018 +0200
+commit 05a1863e9d4a0ca3dba2cc89f4d9ea6edb242f15
+Author: Luxocracy <luxor355@gmail.com>
+Date:   Tue Aug 7 14:23:37 2018 +0200
 
-    - Tainted issue was caused by creating the nameplate frame for personal resources, because player check was not available at that time yet
-    - Added Blizzlike option for Absorb Bar style
-    - Default profiles for specs are now set correctly when loading addon for the first time
-    - Aura Widget position updated for Grey Theme
+    Changed event 'NAME_PLATE_UNIT_ADDED'
+    
+    - Altered the way the event 'NAME_PLATE_UNIT_ADDED' was handled as this seems to be the cause of a lot of wierd issues that are hard to reproduce.
+
+commit 9fe3d7e36a5f814ca4ed28cd4394bdbcb7c4ae03
+Author: Higi <higi84@gmail.com>
+Date:   Sat Aug 4 11:29:39 2018 +0200
+
+    Added Classic & Roth Themes
 

@@ -921,17 +921,13 @@ do
 
 	function CoreEvents:NAME_PLATE_UNIT_ADDED(...)
 		local unitid = ...
-
-		-- Personal Display
-		if not UnitIsUnit("player", unitid) then
-			local plate = GetNamePlateForUnit(unitid, issecure());
-			local BlizzardFrame = plate:GetChildren()
-			BlizzardFrame._Show = BlizzardFrame.Show	-- Store this for later
-			BlizzardFrame.Show = BypassFunction			-- Try this to keep the plate from showing up
+		local plate = GetNamePlateForUnit(unitid);
+		
+		-- Ignore if plate is Personal Display
+		if plate and not UnitIsUnit("player", unitid) then
 			plate:GetChildren():Hide()
-			OnShowNameplate(plate, unitid)
-		end
-
+	 		OnShowNameplate(plate, unitid)
+	 	end
 	end
 
 	function CoreEvents:NAME_PLATE_UNIT_REMOVED(...)

@@ -106,10 +106,10 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 				["INCOMING_DODGE"] = {
-					["alwaysSticky"] = true,
-					["colorR"] = 1,
 					["colorG"] = 1,
 					["fontSize"] = 26,
+					["alwaysSticky"] = true,
+					["colorR"] = 1,
 				},
 				["PET_INCOMING_BLOCK"] = {
 					["disabled"] = true,
@@ -294,10 +294,10 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 				["INCOMING_PARRY"] = {
-					["alwaysSticky"] = true,
-					["colorR"] = 1,
 					["colorG"] = 1,
 					["fontSize"] = 26,
+					["alwaysSticky"] = true,
+					["colorR"] = 1,
 				},
 			},
 			["enableBlizzardDamage"] = false,
@@ -311,6 +311,11 @@ MSBTProfiles_SavedVars = {
 			["critFontName"] = "ABF",
 			["enableBlizzardDamage"] = false,
 			["scrollAreas"] = {
+				["Static"] = {
+					["offsetY"] = 120,
+					["scrollHeight"] = 100,
+					["direction"] = "Up",
+				},
 				["Incoming"] = {
 					["stickyDirection"] = "Up",
 					["direction"] = "Up",
@@ -319,19 +324,14 @@ MSBTProfiles_SavedVars = {
 					["animationStyle"] = "Straight",
 					["stickyBehavior"] = "Normal",
 				},
-				["Notification"] = {
-					["offsetY"] = 250,
-				},
 				["Outgoing"] = {
 					["behavior"] = "MSBT_NORMAL",
 					["direction"] = "Up",
 					["offsetX"] = 250,
 					["animationStyle"] = "Straight",
 				},
-				["Static"] = {
-					["offsetY"] = 120,
-					["scrollHeight"] = 100,
-					["direction"] = "Up",
+				["Notification"] = {
+					["offsetY"] = 250,
 				},
 			},
 			["normalFontName"] = "ABF",
@@ -642,10 +642,10 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 				["INCOMING_DODGE"] = {
-					["fontSize"] = 26,
 					["colorR"] = 1,
-					["alwaysSticky"] = true,
+					["fontSize"] = 26,
 					["colorG"] = 1,
+					["alwaysSticky"] = true,
 				},
 				["PET_INCOMING_BLOCK"] = {
 					["disabled"] = true,
@@ -830,10 +830,10 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 				["INCOMING_PARRY"] = {
-					["fontSize"] = 26,
 					["colorR"] = 1,
-					["alwaysSticky"] = true,
+					["fontSize"] = 26,
 					["colorG"] = 1,
+					["alwaysSticky"] = true,
 				},
 			},
 			["scrollAreas"] = {

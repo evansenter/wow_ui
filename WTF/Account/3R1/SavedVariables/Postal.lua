@@ -26,8 +26,8 @@ Postal3DB = {
 		["Venala - Cho'gall"] = "Venala - Cho'gall",
 		["Cometron - Illidan"] = "Cometron - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
-		["Natal - Illidan"] = "Natal - Illidan",
 		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
+		["Natal - Illidan"] = "Natal - Illidan",
 		["Natalan - Illidan"] = "Natalan - Illidan",
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Natalan - Dark Iron"] = "Natalan - Dark Iron",
@@ -61,6 +61,14 @@ Postal3DB = {
 				},
 			},
 		},
+		["Centromere - Dark Iron"] = {
+			["BlackBook"] = {
+				["recent"] = {
+					"Plane-Illidan|Dark Iron|Horde", -- [1]
+					"Comet-Illidan|Dark Iron|Horde", -- [2]
+				},
+			},
+		},
 		["Natal - Illidan"] = {
 			["BlackBook"] = {
 				["recent"] = {
@@ -75,14 +83,6 @@ Postal3DB = {
 					"Deadsolitary|Illidan|Horde", -- [9]
 					"Çahayla|Illidan|Horde", -- [10]
 					"Demiwrath|Illidan|Horde", -- [11]
-				},
-			},
-		},
-		["Centromere - Dark Iron"] = {
-			["BlackBook"] = {
-				["recent"] = {
-					"Plane-Illidan|Dark Iron|Horde", -- [1]
-					"Comet-Illidan|Dark Iron|Horde", -- [2]
 				},
 			},
 		},

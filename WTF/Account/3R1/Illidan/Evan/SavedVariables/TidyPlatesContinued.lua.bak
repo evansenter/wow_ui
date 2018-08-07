@@ -1,14 +1,14 @@
 
 TidyPlatesContOptions = {
-	["PrimaryProfile"] = "Damage",
-	["SecondSpecProfile"] = "Damage",
+	["PrimaryProfile"] = "Healer",
+	["SecondSpecProfile"] = "Healer",
 	["FriendlyAutomation"] = "No Automation",
 	["EnemyAutomation"] = "No Automation",
 	["FourthSpecProfile"] = "Damage",
-	["ThirdSpecProfile"] = "Damage",
+	["ThirdSpecProfile"] = "Healer",
 	["DisableCastBars"] = false,
 	["ActiveTheme"] = "Neon",
 	["ForceBlizzardFont"] = false,
 	["WelcomeShown"] = true,
-	["FirstSpecProfile"] = "Damage",
+	["FirstSpecProfile"] = "Healer",
 }

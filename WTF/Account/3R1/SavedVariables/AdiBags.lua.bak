@@ -1,5 +1,12 @@
 
 AdiBagsDB = {
+	["profileKeys"] = {
+		["Cometstorm - Illidan"] = "Comet - Illidan",
+		["Comet - Illidan"] = "Comet - Illidan",
+		["Combustion - Illidan"] = "Comet - Illidan",
+		["Evan - Illidan"] = "Comet - Illidan",
+		["Plane - Illidan"] = "Default",
+	},
 	["namespaces"] = {
 		["ItemLevel"] = {
 		},
@@ -29,6 +36,10 @@ AdiBagsDB = {
 		["AdiBags_TooltipInfo"] = {
 		},
 		["Equipment"] = {
+		},
+		["DataSource"] = {
+		},
+		["ItemSets"] = {
 		},
 		["CurrencyFrame"] = {
 			["profiles"] = {
@@ -63,21 +74,10 @@ AdiBagsDB = {
 				},
 			},
 		},
-		["DataSource"] = {
-		},
-		["ItemSets"] = {
-		},
 		["Junk"] = {
 		},
 		["MoneyFrame"] = {
 		},
-	},
-	["profileKeys"] = {
-		["Cometstorm - Illidan"] = "Comet - Illidan",
-		["Comet - Illidan"] = "Comet - Illidan",
-		["Combustion - Illidan"] = "Comet - Illidan",
-		["Evan - Illidan"] = "Comet - Illidan",
-		["Plane - Illidan"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

@@ -58,10 +58,10 @@ Quartz3DB = {
 					["texture"] = "ElvUI Norm",
 				},
 				["Comet - Illidan"] = {
-					["w"] = 413,
-					["y"] = 73.0001907348633,
+					["w"] = 438,
+					["y"] = 322,
 					["font"] = "ABF",
-					["x"] = 421,
+					["x"] = 842,
 					["texture"] = "BantoBar",
 				},
 				["Evan - Illidan"] = {
@@ -203,8 +203,8 @@ Quartz3DB = {
 		["Venala - Cho'gall"] = "Default",
 		["Cometron - Illidan"] = "Comet - Illidan",
 		["Combustion - Illidan"] = "Comet - Illidan",
-		["Pandatal - Illidan"] = "Comet - Illidan",
 		["Centromere - Dark Iron"] = "Pandatal - Illidan",
+		["Pandatal - Illidan"] = "Comet - Illidan",
 		["Plane - Illidan"] = "Pandatal - Illidan",
 		["Colton - Dark Iron"] = "Default",
 		["Natalan - Dark Iron"] = "Default",
