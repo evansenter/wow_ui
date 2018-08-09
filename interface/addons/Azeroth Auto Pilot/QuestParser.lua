@@ -4,6 +4,8 @@ AAP_SpecialQ = 0
 AAP_LastSent = 0
 AAP_GroupListSteps = {}
 AAP_GroupListStepsNr = 1
+AAP_ActiveZoneTest = 0
+AAP_ActiveZoneTestOld = 0
 function AAP_IsInGroup()
 	if (IsInGroup(LE_PARTY_CATEGORY_HOME) and AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone] and (AAP_LastSent ~= AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]) and (AAP_InstanceTest() == 0)) then
 		AAP_SendDelay = 1
@@ -1458,8 +1460,122 @@ function AAP_SetQPTT()
 		QNumberLocal = AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]
 	end
 end
-function AAP_ChangeZone()
+function AAP_ZoneChangeTest()
+	AAP_ActiveZoneTest = C_Map.GetBestMapForUnit("player")
 	AAP_CompletedQs = GetQuestsCompleted()
+	local factionz = UnitFactionGroup("player")
+	if (AAP_ActiveZoneTest == 85) then
+		AAP_ActiveZoneTest = 86
+	end
+	if (AAP_ActiveZoneTest == 1161) then
+		AAP_ActiveZoneTest = 895
+	end
+	if (AAP_ActiveZoneTest == 1171) then
+		AAP_ActiveZoneTest = 895
+	end
+	if (AAP_ActiveZoneTest == 1172) then
+		AAP_ActiveZoneTest = 895
+	end
+	if (AAP_ActiveZoneTest == 1165) then
+		AAP_ActiveZoneTest = 862
+	end
+	if (AAP_ActiveZoneTest == 1164) then
+		AAP_ActiveZoneTest = 862
+	end
+	if (AAP_ActiveZoneTest == 1163) then
+		AAP_ActiveZoneTest = 862
+	end
+	if (AAP_ActiveZoneTest == 1173) then
+		AAP_ActiveZoneTest = 862
+	end
+	if (AAP_ActiveZoneTest == 1174) then
+		AAP_ActiveZoneTest = 862
+	end
+	if (AAP_ActiveZoneTest == 1176) then
+		AAP_ActiveZoneTest = 862
+	end
+	if (AAP_ActiveZoneTest == 1177) then
+		AAP_ActiveZoneTest = 862
+	end
+	if (AAP_ActiveZoneTest == 1167) then
+		AAP_ActiveZoneTest = 862
+	end
+	if (AAP_ActiveZoneTest == 1166) then
+		AAP_ActiveZoneTest = 862
+	end
+	if (AAP_ActiveZoneTest == 1169) then
+		AAP_ActiveZoneTest = 876
+	end
+	if (AAP_ActiveZoneTest == 1179) then
+		AAP_ActiveZoneTest = 942
+	end
+	if (AAP_ActiveZoneTest == 1180) then
+		AAP_ActiveZoneTest = 942
+	end
+	if (AAP_ActiveZoneTest == 1181) then
+		AAP_ActiveZoneTest = 942
+	end
+	if (AAP_ActiveZoneTest == 1182) then
+		AAP_ActiveZoneTest = 942
+	end
+
+	if (AAP_ActiveZoneTest) then
+		if (factionz == "Alliance") then
+			AAP_ActiveZoneTest = "A"..AAP_ActiveZoneTest
+			if (AAP_ActiveZoneTest == "A862") then
+			elseif (AAP_ActiveZoneTest == "A942") then
+			elseif (AAP_ActiveZoneTest == "A896") then
+			elseif ((AAP_ActiveQuests[47961] or AAP_CompletedQs[47961] == true) and not AAP_CompletedQs[48622]) then
+				AAP_ActiveZoneTest = "A895-1"
+			elseif ((AAP_ActiveQuests[47962] or AAP_CompletedQs[47962] == true) and not AAP_CompletedQs[51490]) then
+				AAP_ActiveZoneTest = "A895-2"
+			elseif ((AAP_ActiveZoneTest == "A895") and (AAP1[AAP_Realm][AAP_Name]["Zone895D"] == 0) and (AAP_ActiveQuests[47960] or AAP_CompletedQs[47960] == true)) then
+				AAP_ActiveZoneTest = "A895-3"
+			elseif ((AAP_ActiveZoneTest == "A895") and (AAP1[AAP_Realm][AAP_Name]["Zone895D"] == 1) and (AAP_ActiveZonePick == 3)) then
+				AAP_ActiveZoneTest = "A895"
+			elseif ((AAP_ActiveZonePick > 0) and (AAP_ActiveZoneTest == "A895")) then
+				AAP_ActiveZoneTest = "A895-"..AAP_ActiveZonePick
+			elseif ((AAP_ActiveZoneTest == "A895") and (AAP1[AAP_Realm][AAP_Name]["Zone895D"] == 1)) then
+				AAP_ActiveZoneTest = "A895"
+			else
+				if (AllySteps[AAP_ActiveZoneTest]) then
+				else
+					AAP_ActiveZoneTest = 1233123991
+				end
+			end
+		else
+		-- Horde
+			if (AAP_ActiveZoneTest == 1009) then
+				AAP_ActiveZoneTest = 864
+			end
+			if ((AAP_ActiveZoneTest == 86) and ((AAP_ActiveQuests[47439]) or (AAP_ActiveQuests[50963]) or (AAP_ActiveQuests[50617]) or (AAP_ActiveQuests[50808]))) then
+				AAP_ActiveZoneTest = "86-1"
+			elseif ((AAP_ActiveZoneTest == 627) and ((AAP_ActiveQuests[47439]) or (AAP_ActiveQuests[50963]) or (AAP_ActiveQuests[50617]) or (AAP_ActiveQuests[50808]))) then
+				AAP_ActiveZoneTest = "627-1"
+			elseif (AAP_ActiveZoneTest == 864) then
+			elseif (AAP_ActiveZoneTest == 863) then
+			elseif ((AAP_ActiveZonePick == 1) or (AAP_ActiveZonePick == 2)) and (AAP_ActiveZoneTest == 862) then
+				AAP_ActiveZoneTest = "862-"..AAP_ActiveZonePick
+			elseif ((AAP_ActiveZoneTest == 862) and (AAP1[AAP_Realm][AAP_Name]["Zone862D"] == 0) and (AAP_ActiveQuests[47514] or AAP_CompletedQs[47514] == true)) then
+				AAP_ActiveZoneTest = "862-3"
+			elseif ((AAP_ActiveZoneTest == 86) and ((AAP_ActiveQuests[53372]) or AAP_CompletedQs[53372])) then
+				AAP_ActiveZoneTest = "86-2"
+			elseif (AAP_ActiveZoneTest == 862 and AAP1[AAP_Realm][AAP_Name]["Zone862D"] == 1) then
+				AAP_ActiveZoneTest = 862
+				AAP_TestHordeCampaign()
+			elseif (AAP_QuestList[AAP_ActiveZoneTest]) then
+				AAP_TestHordeCampaign()
+			else
+				AAP_ActiveZoneTest = 1233123991
+			end
+		end
+	end
+	if (AAP_ActiveZoneTestOld ~= AAP_ActiveZoneTest) then
+		AAP_ActiveZoneTestOld = AAP_ActiveZoneTest
+		AAP_ChangeZone()
+	end
+end
+function AAP_ChangeZone()
 	if (UnitLevel("player") == 120) then
 		for AAP_index,AAP_value in pairs(AAP_BonusObj) do
 			if (not AAP_CompletedQs[AAP_index]) then
@@ -1524,24 +1640,7 @@ function AAP_ChangeZone()
 	if (AAP_ActiveZone == 1182) then
 		AAP_ActiveZone = 942
 	end
-	if (AAP_ActiveZone == 539) then
-		AAP_ActiveZone = 11337
-	end
-	if (AAP_ActiveZone == 542) then
-		AAP_ActiveZone = 11337
-	end
-	if (AAP_ActiveZone == 535) then
-		AAP_ActiveZone = 11337
-	end
-	if (AAP_ActiveZone == 543) then
-		AAP_ActiveZone = 11337
-	end
-	if (AAP_ActiveZone == 590) then
-		AAP_ActiveZone = 11337
-	end
-	if (AAP_ActiveZone == 525) then
-		AAP_ActiveZone = 11337
-	end
+
 	if (AAP_ActiveZone) then
 		if (factionz == "Alliance") then
 			AAP_ActiveZone = "A"..AAP_ActiveZone
@@ -1778,12 +1877,12 @@ AAP_ParserEventFrame:SetScript("OnEvent", function(self, event, ...)
 		end
 	end
 	if (event=="ZONE_CHANGED" and AAP_DisableAddon == 0) then
-		AAP_ChangeZone()
+		AAP_ZoneChangeTest()
 		AAP_UpdateQuestList()
 	end
 	if (event=="ZONE_CHANGED_NEW_AREA" and AAP_DisableAddon == 0) then
-		AAP_ChangeZone()
-		AAP_UpdateQuestList()
+		AAP_ZoneChangeTest()
+		--AAP_UpdateQuestList()
 	end
 	if (event=="UNIT_QUEST_LOG_CHANGED" and AAP_DisableAddon == 0) then
 	end
@@ -1795,7 +1894,7 @@ AAP_ParserEventFrame:SetScript("OnEvent", function(self, event, ...)
 			AAP_Plus()
 		end
 		AAP_Plus()
-		AAP_ChangeZone()
+		AAP_ZoneChangeTest()
 		if (UnitInParty("player") and AAP1[AAP_Realm][AAP_Name]["Settings"]["AutoShareQ"] == 1) then
 			local i = 0
 			while (GetQuestLogTitle(i+1) ~= nil) do

@@ -4,7 +4,6 @@ PawnOptions = {
 	["LastPlayerFullName"] = "Evan-Illidan",
 	["AutoSelectScales"] = false,
 	["UpgradeTracking"] = false,
-	["LastKeybindingsSet"] = 1,
 	["Artifacts"] = {
 		[128825] = {
 			["Relics"] = {
@@ -41,6 +40,7 @@ PawnOptions = {
 			["Name"] = "Light's Wrath",
 		},
 	},
+	["LastKeybindingsSet"] = 1,
 }
 PawnMrRobotScaleProviderOptions = {
 	["LastClass"] = "PRIEST",

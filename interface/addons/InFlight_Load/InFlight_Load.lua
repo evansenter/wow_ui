@@ -75,8 +75,6 @@ if GetAddOnEnableState(UnitName("player"), "InFlight") == 2 then  -- maybe this 
 	local fin = "Return"
 	local ashenvalesaber = "one of your nightsabers to (.+)."
 	local astranaar, maestrapost = "Astranaar", "Maestra's Post"
-	local feralasgossip1, feralasgossip2 = "Take me to the battle", "I must return to"
-	local feathermoonstronghold, ruinsoffeathermoon = "Feathermoon Stronghold", "Ruins of Feathermoon"
 	local terrorwinggossip = "head down to the Swamp of Sorrows"
 	local terrorwing, bogpaddle = "Terror Wing Path", "Bogpaddle"
 
@@ -180,7 +178,7 @@ if GetAddOnEnableState(UnitName("player"), "InFlight") == 2 then  -- maybe this 
 		[expedition] = { match = hellgossip, },
 		[hellfire] = { match = hellgossip, s = honorpoint },
 		[shatter] = { match = hellgossip, },
-		[skyguard] = { find = blackwind, d = blackwind, }, 
+		[skyguard] = { find = blackwind, d = blackwind, },
 		[blackwind] = { find = skyguard, d = skyguard, },
 		[sssa] = { find = sssagossip, find2 = sssagossip2, s = sssa, d = sssa, s2 = sssa, d2 = thesinloren, },
 		[thesinloren] = { find = sinlorengossip, d = sssa, },
@@ -192,8 +190,6 @@ if GetAddOnEnableState(UnitName("player"), "InFlight") == 2 then  -- maybe this 
 		[argenttournament] = { find = argenttournamentgossip, d = fin, },
 		[astranaar] = { match = ashenvalesaber, },
 		[maestrapost] = { match = ashenvalesaber, },
-		[feathermoonstronghold] = { find = feralasgossip1, d = ruinsoffeathermoon, }, 
-		[ruinsoffeathermoon] = { find = feralasgossip2, d = feathermoonstronghold, },
 		[terrorwing] = { find = terrorwinggossip, d = bogpaddle, },
 	}
 	t[srharbor] = t[sssa]
@@ -202,12 +198,12 @@ if GetAddOnEnableState(UnitName("player"), "InFlight") == 2 then  -- maybe this 
 	---------------------------------
 	function InFlight:SetupInFlight()
 	---------------------------------
-	  	SlashCmdList.INFLIGHT = function()
-	  		if LoadInFlight() then
-	  			self:ShowOptions()
-	  		end
-	  	end
-	   	SLASH_INFLIGHT1 = "/inflight"
+		SlashCmdList.INFLIGHT = function()
+			if LoadInFlight() then
+				self:ShowOptions()
+			end
+		end
+		SLASH_INFLIGHT1 = "/inflight"
 
 		local panel = CreateFrame("Frame")
 		panel.name = "InFlight"
@@ -224,14 +220,14 @@ if GetAddOnEnableState(UnitName("player"), "InFlight") == 2 then  -- maybe this 
 	local strmatch = strmatch
 	hooksecurefunc("GossipTitleButton_OnClick", function(this, button)
 		if this.type ~= "Gossip" then return end
-		
+
 		local subzone = GetMinimapZoneText()
 		local tsz = t[subzone]
 		if not tsz then return end
-		
+
 		local text = this:GetText()
 		if not text or text == "" then return end
-		
+
 		local source, destination
 		if tsz.match then  -- destination is in the text
 			destination = strmatch(text, tsz.match)

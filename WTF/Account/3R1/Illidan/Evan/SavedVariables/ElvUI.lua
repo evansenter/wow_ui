@@ -2,493 +2,537 @@
 ElvCharacterDB = {
 	["ChatHistoryLog"] = {
 		{
-			"lets see ur parse in mythic twotrapz :P", -- [1]
-			"Sickduck-Zul'jin", -- [2]
-			"", -- [3]
+			"Scorching Blaze on Evan", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Sickduck-Zul'jin", -- [5]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			944, -- [11]
-			"Player-61-0AD94E0D", -- [12]
+			4626, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc41e3aSickduck-Zul'jin|r",
-			[51] = 1533618553,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffEvan|r",
+			[51] = 1533699280,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [1]
 		{
-			"https://www.warcraftlogs.com/reports/TvzdrtW6GBbXVLhJ#fight=6&type=damage-done", -- [1]
-			"Twotrapz-Hyjal", -- [2]
-			"", -- [3]
+			"Scorching Blaze on Obe", -- [1]
+			"Obe-Mal'Ganis", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Twotrapz-Hyjal", -- [5]
+			"Obe-Mal'Ganis", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			948, -- [11]
-			"Player-3661-07E65A5F", -- [12]
+			4648, -- [11]
+			"Player-3684-09D61A3A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Twotrapz-Hyjal|r",
-			[51] = 1533618588,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffaad372Obe-Mal'Ganis|r",
+			[51] = 1533699322,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [2]
 		{
-			"summon", -- [1]
-			"Bömbs-Dalaran", -- [2]
-			"", -- [3]
+			"Scorching Blaze on Jarinia", -- [1]
+			"Jarinia-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Bömbs-Dalaran", -- [5]
+			"Jarinia", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			949, -- [11]
-			"Player-3683-08D14C26", -- [12]
+			4649, -- [11]
+			"Player-57-086B5B7A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff3fc6eaBömbs-Dalaran|r",
-			[51] = 1533618591,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cff3fc6eaJarinia|r",
+			[51] = 1533699322,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [3]
 		{
-			"u havent killed all boss but w/e", -- [1]
-			"Sickduck-Zul'jin", -- [2]
-			"", -- [3]
+			"Scorching Blaze on Evan", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Sickduck-Zul'jin", -- [5]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			950, -- [11]
-			"Player-61-0AD94E0D", -- [12]
+			4650, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc41e3aSickduck-Zul'jin|r",
-			[51] = 1533618600,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffEvan|r",
+			[51] = 1533699322,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [4]
 		{
-			"i see some grey and blue", -- [1]
-			"Sickduck-Zul'jin", -- [2]
-			"", -- [3]
+			"Scorching Blaze on Zaranà", -- [1]
+			"Zaranà-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Sickduck-Zul'jin", -- [5]
+			"Zaranà", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			951, -- [11]
-			"Player-61-0AD94E0D", -- [12]
+			4651, -- [11]
+			"Player-57-0AB066CE", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc41e3aSickduck-Zul'jin|r",
-			[51] = 1533618606,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffZaranà|r",
+			[51] = 1533699323,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [5]
 		{
-			"2 purple", -- [1]
-			"Sickduck-Zul'jin", -- [2]
+			"Noct is your guy, right?", -- [1]
+			"Zaranà-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Sickduck-Zul'jin", -- [5]
+			"Zaranà", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			953, -- [11]
-			"Player-61-0AD94E0D", -- [12]
+			4679, -- [11]
+			"Player-57-0AB066CE", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc41e3aSickduck-Zul'jin|r",
-			[51] = 1533618611,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffZaranà|r",
+			[51] = 1533699357,
+			[50] = "CHAT_MSG_WHISPER_INFORM",
 		}, -- [6]
 		{
-			"You're what, 6/11M?", -- [1]
-			"Evan-Illidan", -- [2]
+			"^LFW_H", -- [1]
+			"Tyrabank-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Evan", -- [5]
+			"6. TCForwarder6IIll", -- [4]
+			"Tyrabank", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			6, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			954, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			4683, -- [11]
+			"Player-57-0AF539AE", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533618621,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cfff48cbaTyrabank|r",
+			[51] = 1533699363,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [7]
 		{
-			"Who cares.", -- [1]
-			"Evan-Illidan", -- [2]
+			"yeah", -- [1]
+			"Zaranà-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Evan", -- [5]
+			"Zaranà", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			955, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			4687, -- [11]
+			"Player-57-0AB066CE", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533618624,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffZaranà|r",
+			[51] = 1533699365,
+			[50] = "CHAT_MSG_WHISPER",
 		}, -- [8]
 		{
-			"why would you kill all the bosses for prepatch?", -- [1]
-			"Twotrapz-Hyjal", -- [2]
+			"I really like your tanking this evening.", -- [1]
+			"Noctuaa-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Twotrapz-Hyjal", -- [5]
+			"Noctuaa", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			956, -- [11]
-			"Player-3661-07E65A5F", -- [12]
+			4689, -- [11]
+			"Player-57-0AB0D522", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Twotrapz-Hyjal|r",
-			[51] = 1533618627,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffa330c9Noctuaa|r",
+			[51] = 1533699370,
+			[50] = "CHAT_MSG_WHISPER_INFORM",
 		}, -- [9]
 		{
-			"lol", -- [1]
-			"Twotrapz-Hyjal", -- [2]
+			"Esp. the trash pacing :)", -- [1]
+			"Noctuaa-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Twotrapz-Hyjal", -- [5]
+			"Noctuaa", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			957, -- [11]
-			"Player-3661-07E65A5F", -- [12]
+			4693, -- [11]
+			"Player-57-0AB0D522", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Twotrapz-Hyjal|r",
-			[51] = 1533618627,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffa330c9Noctuaa|r",
+			[51] = 1533699379,
+			[50] = "CHAT_MSG_WHISPER_INFORM",
 		}, -- [10]
 		{
-			"from 6 months ago", -- [1]
-			"Sickduck-Zul'jin", -- [2]
+			"haha gotta set the pace to keep things going. cant waste time on trash ><", -- [1]
+			"Noctuaa-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Sickduck-Zul'jin", -- [5]
+			"Noctuaa", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			958, -- [11]
-			"Player-61-0AD94E0D", -- [12]
+			4716, -- [11]
+			"Player-57-0AB0D522", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc41e3aSickduck-Zul'jin|r",
-			[51] = 1533618629,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffa330c9Noctuaa|r",
+			[51] = 1533699426,
+			[50] = "CHAT_MSG_WHISPER",
 		}, -- [11]
 		{
-			"yeah i was 6/11", -- [1]
-			"Sickduck-Zul'jin", -- [2]
+			"Seriously.", -- [1]
+			"Noctuaa-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Sickduck-Zul'jin", -- [5]
+			"Noctuaa", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			959, -- [11]
-			"Player-61-0AD94E0D", -- [12]
+			4719, -- [11]
+			"Player-57-0AB0D522", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc41e3aSickduck-Zul'jin|r",
-			[51] = 1533618638,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffa330c9Noctuaa|r",
+			[51] = 1533699442,
+			[50] = "CHAT_MSG_WHISPER_INFORM",
 		}, -- [12]
 		{
-			"|cffffff00|Hachievement:11997:Player-61-0AD94E0D:1:2:15:18:4294967295:4294967295:4294967295:4294967295|h[Mythic: Imonar the Soulhunter]|h|r", -- [1]
-			"Sickduck-Zul'jin", -- [2]
+			"then I am working on Jaggen and Obe to transfer over, lol", -- [1]
+			"Zaranà-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Sickduck-Zul'jin", -- [5]
+			"Zaranà", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			960, -- [11]
-			"Player-61-0AD94E0D", -- [12]
+			4722, -- [11]
+			"Player-57-0AB066CE", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc41e3aSickduck-Zul'jin|r",
-			[51] = 1533618649,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffZaranà|r",
+			[51] = 1533699447,
+			[50] = "CHAT_MSG_WHISPER",
 		}, -- [13]
 		{
-			"I mean youre so good", -- [1]
-			"Twotrapz-Hyjal", -- [2]
+			"if we want them", -- [1]
+			"Zaranà-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Twotrapz-Hyjal", -- [5]
+			"Zaranà", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			961, -- [11]
-			"Player-3661-07E65A5F", -- [12]
+			4725, -- [11]
+			"Player-57-0AB066CE", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Twotrapz-Hyjal|r",
-			[51] = 1533618653,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffZaranà|r",
+			[51] = 1533699454,
+			[50] = "CHAT_MSG_WHISPER",
 		}, -- [14]
 		{
-			"you cant even look at logs correctly", -- [1]
-			"Twotrapz-Hyjal", -- [2]
+			"_$31Pjsidijehjr_$ 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,_$ffffff$", -- [1]
+			"Tyrabank-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Twotrapz-Hyjal", -- [5]
+			"6. TCForwarder6IIll", -- [4]
+			"Tyrabank", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			6, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			962, -- [11]
-			"Player-3661-07E65A5F", -- [12]
+			4745, -- [11]
+			"Player-57-0AF539AE", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Twotrapz-Hyjal|r",
-			[51] = 1533618657,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cfff48cbaTyrabank|r",
+			[51] = 1533699503,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [15]
 		{
-			"good god make out already", -- [1]
-			"Bömbs-Dalaran", -- [2]
-			"", -- [3]
+			"3", -- [1]
+			"Brún-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Bömbs-Dalaran", -- [5]
+			"Brún", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			964, -- [11]
-			"Player-3683-08D14C26", -- [12]
+			4773, -- [11]
+			"Player-57-0620C65F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff3fc6eaBömbs-Dalaran|r",
-			[51] = 1533618670,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aBrún|r",
+			[51] = 1533699549,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [16]
 		{
-			"https://www.warcraftlogs.com/character/us/hyjal/twotrapz", -- [1]
-			"Sickduck-Zul'jin", -- [2]
-			"", -- [3]
+			"2", -- [1]
+			"Brún-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Sickduck-Zul'jin", -- [5]
+			"Brún", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			965, -- [11]
-			"Player-61-0AD94E0D", -- [12]
+			4777, -- [11]
+			"Player-57-0620C65F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc41e3aSickduck-Zul'jin|r",
-			[51] = 1533618670,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aBrún|r",
+			[51] = 1533699550,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [17]
 		{
-			"those arent ur logs", -- [1]
-			"Sickduck-Zul'jin", -- [2]
-			"", -- [3]
+			"1", -- [1]
+			"Brún-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Sickduck-Zul'jin", -- [5]
+			"Brún", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			967, -- [11]
-			"Player-61-0AD94E0D", -- [12]
+			4781, -- [11]
+			"Player-57-0620C65F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc41e3aSickduck-Zul'jin|r",
-			[51] = 1533618680,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffff7c0aBrún|r",
+			[51] = 1533699551,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [18]
 		{
-			"??", -- [1]
-			"Sickduck-Zul'jin", -- [2]
-			"", -- [3]
+			"3", -- [1]
+			"Sureno-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Sickduck-Zul'jin", -- [5]
+			"Sureno", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			968, -- [11]
-			"Player-61-0AD94E0D", -- [12]
+			4786, -- [11]
+			"Player-57-05A3FE00", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc41e3aSickduck-Zul'jin|r",
-			[51] = 1533618681,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cfff48cbaSureno|r",
+			[51] = 1533699553,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [19]
 		{
-			"melee to portals", -- [1]
-			"Bungy-EmeraldDream", -- [2]
-			"", -- [3]
+			"1", -- [1]
+			"Sureno-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Bungy", -- [5]
+			"Sureno", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			969, -- [11]
-			"Player-162-0996E212", -- [12]
+			4787, -- [11]
+			"Player-57-05A3FE00", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Bungy-EmeraldDream|r",
-			[51] = 1533618682,
-			[50] = "CHAT_MSG_RAID_WARNING",
+			[52] = "|cfff48cbaSureno|r",
+			[51] = 1533699555,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [20]
 		{
-			"prepatch logs my dude", -- [1]
-			"Twotrapz-Hyjal", -- [2]
-			"", -- [3]
+			"3", -- [1]
+			"Zaranà-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Twotrapz-Hyjal", -- [5]
+			"Zaranà", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			970, -- [11]
-			"Player-3661-07E65A5F", -- [12]
+			4807, -- [11]
+			"Player-57-0AB066CE", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Twotrapz-Hyjal|r",
-			[51] = 1533618691,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffZaranà|r",
+			[51] = 1533699573,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [21]
 		{
-			"evan stay down", -- [1]
-			"Bungy-EmeraldDream", -- [2]
-			"", -- [3]
+			"2", -- [1]
+			"Zaranà-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Bungy-EmeraldDream", -- [5]
+			"Zaranà", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			971, -- [11]
-			"Player-162-0996E212", -- [12]
+			4811, -- [11]
+			"Player-57-0AB066CE", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Bungy-EmeraldDream|r",
-			[51] = 1533618700,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffZaranà|r",
+			[51] = 1533699574,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [22]
 		{
-			"kk", -- [1]
-			"Evan-Illidan", -- [2]
+			"1", -- [1]
+			"Zaranà-Illidan", -- [2]
+			"Orcish", -- [3]
+			"", -- [4]
+			"Zaranà", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			4812, -- [11]
+			"Player-57-0AB066CE", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffZaranà|r",
+			[51] = 1533699575,
+			[50] = "CHAT_MSG_SAY",
+		}, -- [23]
+		{
+			"_$57Rickaroni_$WTS |cff0070dd|Hitem:129956::::::::110:577::13::::|h[Leather Love Seat]|h|r 6k_$a330c9$", -- [1]
+			"Tyrabank-Illidan", -- [2]
 			"", -- [3]
+			"6. TCForwarder6IIll", -- [4]
+			"Tyrabank", -- [5]
+			"", -- [6]
+			0, -- [7]
+			6, -- [8]
+			"TCForwarder6IIll", -- [9]
+			0, -- [10]
+			4837, -- [11]
+			"Player-57-0AF539AE", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfff48cbaTyrabank|r",
+			[51] = 1533699620,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [24]
+		{
+			"{rt2}Bomb{rt2}", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
 			"Evan", -- [5]
 			"", -- [6]
@@ -496,7 +540,7 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			972, -- [11]
+			4874, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -504,2324 +548,2285 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1533618709,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [23]
-		{
-			"yikes", -- [1]
-			"Twotrapz-Hyjal", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Twotrapz-Hyjal", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			973, -- [11]
-			"Player-3661-07E65A5F", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffaad372Twotrapz-Hyjal|r",
-			[51] = 1533618711,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [24]
-		{
-			"26 on imonar", -- [1]
-			"Twotrapz-Hyjal", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Twotrapz-Hyjal", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			974, -- [11]
-			"Player-3661-07E65A5F", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffaad372Twotrapz-Hyjal|r",
-			[51] = 1533618714,
-			[50] = "CHAT_MSG_RAID",
+			[51] = 1533699666,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [25]
 		{
-			"no orange parses", -- [1]
-			"Twotrapz-Hyjal", -- [2]
-			"", -- [3]
+			"{rt2}4", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Twotrapz-Hyjal", -- [5]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			975, -- [11]
-			"Player-3661-07E65A5F", -- [12]
+			4882, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Twotrapz-Hyjal|r",
-			[51] = 1533618722,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffEvan|r",
+			[51] = 1533699677,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [26]
 		{
-			"i did 1 kill xD", -- [1]
-			"Sickduck-Zul'jin", -- [2]
-			"", -- [3]
+			"{rt2}3", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Sickduck-Zul'jin", -- [5]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			976, -- [11]
-			"Player-61-0AD94E0D", -- [12]
+			4884, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc41e3aSickduck-Zul'jin|r",
-			[51] = 1533618722,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffEvan|r",
+			[51] = 1533699678,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [27]
 		{
-			"yikes", -- [1]
-			"Twotrapz-Hyjal", -- [2]
-			"", -- [3]
+			"{rt2}2", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Twotrapz-Hyjal", -- [5]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			977, -- [11]
-			"Player-3661-07E65A5F", -- [12]
+			4885, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Twotrapz-Hyjal|r",
-			[51] = 1533618724,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffEvan|r",
+			[51] = 1533699679,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [28]
 		{
-			"shows 3 on logs", -- [1]
-			"Twotrapz-Hyjal", -- [2]
-			"", -- [3]
+			"{rt2}1", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Twotrapz-Hyjal", -- [5]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			978, -- [11]
-			"Player-3661-07E65A5F", -- [12]
+			4886, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Twotrapz-Hyjal|r",
-			[51] = 1533618727,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffEvan|r",
+			[51] = 1533699680,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [29]
 		{
-			"but ok", -- [1]
-			"Twotrapz-Hyjal", -- [2]
+			"Lol Rein again.", -- [1]
+			"Evan-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Twotrapz-Hyjal", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			979, -- [11]
-			"Player-3661-07E65A5F", -- [12]
+			4894, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Twotrapz-Hyjal|r",
-			[51] = 1533618727,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffEvan|r",
+			[51] = 1533699696,
+			[50] = "CHAT_MSG_OFFICER",
 		}, -- [30]
 		{
-			"this is a boosted character 4 me", -- [1]
-			"Donnyb-EmeraldDream", -- [2]
+			"Funny.", -- [1]
+			"Evan-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Donnyb-EmeraldDream", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			980, -- [11]
-			"Player-162-09A2171F", -- [12]
+			4896, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaDonnyb-EmeraldDream|r",
-			[51] = 1533618735,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffEvan|r",
+			[51] = 1533699698,
+			[50] = "CHAT_MSG_OFFICER",
 		}, -- [31]
 		{
-			"never done a raid once", -- [1]
-			"Donnyb-EmeraldDream", -- [2]
+			"^LFW_L", -- [1]
+			"Soliaa-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Donnyb-EmeraldDream", -- [5]
+			"6. TCForwarder6IIll", -- [4]
+			"Soliaa", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			6, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			982, -- [11]
-			"Player-162-09A2171F", -- [12]
+			4953, -- [11]
+			"Player-57-0AC34984", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaDonnyb-EmeraldDream|r",
-			[51] = 1533618737,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffSoliaa|r",
+			[51] = 1533699803,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [32]
 		{
-			"LMAO ", -- [1]
-			"Skjøld-Zul'jin", -- [2]
+			"_$102Qwdfsdxcvxcv_$   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本_$c69b6d$", -- [1]
+			"Tyrabank-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Skjøld-Zul'jin", -- [5]
+			"6. TCForwarder6IIll", -- [4]
+			"Tyrabank", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			6, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			992, -- [11]
-			"Player-61-0B3BC22B", -- [12]
+			4955, -- [11]
+			"Player-57-0AF539AE", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc69b6dSkjøld-Zul'jin|r",
-			[51] = 1533618777,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cfff48cbaTyrabank|r",
+			[51] = 1533699810,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [33]
 		{
-			"the interrupts", -- [1]
-			"Skjøld-Zul'jin", -- [2]
+			"_$132Pjsidijehjr_$ 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,_$ffffff$", -- [1]
+			"Tyrabank-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Skjøld-Zul'jin", -- [5]
+			"6. TCForwarder6IIll", -- [4]
+			"Tyrabank", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			6, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			994, -- [11]
-			"Player-61-0B3BC22B", -- [12]
+			5021, -- [11]
+			"Player-57-0AF539AE", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc69b6dSkjøld-Zul'jin|r",
-			[51] = 1533618783,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cfff48cbaTyrabank|r",
+			[51] = 1533699924,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [34]
 		{
-			"imps?", -- [1]
-			"Bungy-EmeraldDream", -- [2]
-			"", -- [3]
+			"{rt2}Bomb{rt2}", -- [1]
+			"Evan-Illidan", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Bungy-EmeraldDream", -- [5]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			995, -- [11]
-			"Player-162-0996E212", -- [12]
+			5044, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Bungy-EmeraldDream|r",
-			[51] = 1533618783,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffffffffEvan|r",
+			[51] = 1533699952,
+			[50] = "CHAT_MSG_SAY",
 		}, -- [35]
 		{
-			"so.. imps?", -- [1]
-			"Huna-Illidan", -- [2]
+			"_$154Pjsidijehjr_$ 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,_$ffffff$", -- [1]
+			"Tyrabank-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Huna", -- [5]
+			"6. TCForwarder6IIll", -- [4]
+			"Tyrabank", -- [5]
 			"", -- [6]
 			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			6, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			996, -- [11]
-			"Player-57-0A5E7079", -- [12]
+			5085, -- [11]
+			"Player-57-0AF539AE", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddHuna|r",
-			[51] = 1533618786,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cfff48cbaTyrabank|r",
+			[51] = 1533699994,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [36]
 		{
-			"<3", -- [1]
-			"Huna-Illidan", -- [2]
+			"thanks for having me missed you dudes", -- [1]
+			"Airimis", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Huna", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			997, -- [11]
-			"Player-57-0A5E7079", -- [12]
+			5118, -- [11]
+			"Player-57-0AFBE2FE", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddHuna|r",
-			[51] = 1533618788,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cfffff468Airimis|r",
+			[51] = 1533700034,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [37]
 		{
-			"lol", -- [1]
-			"Jopp-EmeraldDream", -- [2]
+			"tyty", -- [1]
+			"Sureno-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Jopp-EmeraldDream", -- [5]
+			"Sureno", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1000, -- [11]
-			"Player-162-09C9FACE", -- [12]
+			5128, -- [11]
+			"Player-57-05A3FE00", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffJopp-EmeraldDream|r",
-			[51] = 1533618797,
+			[52] = "|cfff48cbaSureno|r",
+			[51] = 1533700043,
 			[50] = "CHAT_MSG_RAID",
 		}, -- [38]
 		{
-			"i guess we have like 2 range", -- [1]
-			"Bungy-EmeraldDream", -- [2]
+			"thanks for the run", -- [1]
+			"Chromogranin-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Bungy-EmeraldDream", -- [5]
+			"Chromogranin", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1001, -- [11]
-			"Player-162-0996E212", -- [12]
+			5129, -- [11]
+			"Player-57-0AA18B8F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Bungy-EmeraldDream|r",
-			[51] = 1533618813,
+			[52] = "|cfff48cbaChromogranin|r",
+			[51] = 1533700043,
 			[50] = "CHAT_MSG_RAID",
 		}, -- [39]
 		{
-			"lol", -- [1]
-			"Skjøld-Zul'jin", -- [2]
+			"ty for the invite", -- [1]
+			"Capzieloth-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Skjøld-Zul'jin", -- [5]
+			"Capzieloth", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1002, -- [11]
-			"Player-61-0B3BC22B", -- [12]
+			5146, -- [11]
+			"Player-57-065E246A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc69b6dSkjøld-Zul'jin|r",
-			[51] = 1533618818,
+			[52] = "|cffc69b6dCapzieloth|r",
+			[51] = 1533700062,
 			[50] = "CHAT_MSG_RAID",
 		}, -- [40]
 		{
-			"if you like to aoe stay down", -- [1]
-			"Bungy-EmeraldDream", -- [2]
+			"Hold on one sec.", -- [1]
+			"Noctuaa-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Bungy", -- [5]
+			"Noctuaa", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1003, -- [11]
-			"Player-162-0996E212", -- [12]
+			5224, -- [11]
+			"Player-57-0AB0D522", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Bungy-EmeraldDream|r",
-			[51] = 1533618838,
-			[50] = "CHAT_MSG_RAID_WARNING",
+			[52] = "|cffa330c9Noctuaa|r",
+			[51] = 1533700115,
+			[50] = "CHAT_MSG_WHISPER_INFORM",
 		}, -- [41]
 		{
-			"lol", -- [1]
-			"Bungy-EmeraldDream", -- [2]
+			"alright", -- [1]
+			"Noctuaa-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Bungy-EmeraldDream", -- [5]
+			"Noctuaa", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1004, -- [11]
-			"Player-162-0996E212", -- [12]
+			5278, -- [11]
+			"Player-57-0AB0D522", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Bungy-EmeraldDream|r",
-			[51] = 1533618843,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffa330c9Noctuaa|r",
+			[51] = 1533700140,
+			[50] = "CHAT_MSG_WHISPER",
 		}, -- [42]
 		{
-			"lul", -- [1]
-			"Skjøld-Zul'jin", -- [2]
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加战网Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Skjøld-Zul'jin", -- [5]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1005, -- [11]
-			"Player-61-0B3BC22B", -- [12]
+			5304, -- [11]
+			"Player-57-0989886F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dSkjøld-Zul'jin|r",
-			[51] = 1533618844,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533700155,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [43]
 		{
-			"everyone is going to stay down", -- [1]
-			"Twotrapz-Hyjal", -- [2]
-			"", -- [3]
+			"You guys did solid.", -- [1]
+			"Obe-Mal'Ganis", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Twotrapz-Hyjal", -- [5]
+			"Obe-Mal'Ganis", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1006, -- [11]
-			"Player-3661-07E65A5F", -- [12]
+			5328, -- [11]
+			"Player-3684-09D61A3A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Twotrapz-Hyjal|r",
-			[51] = 1533618848,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffaad372Obe-Mal'Ganis|r",
+			[51] = 1533700168,
+			[50] = "CHAT_MSG_WHISPER_INFORM",
 		}, -- [44]
 		{
-			"...", -- [1]
-			"Bungy-EmeraldDream", -- [2]
-			"", -- [3]
+			"You guys did solid.", -- [1]
+			"Jaggen-Mal'Ganis", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Bungy-EmeraldDream", -- [5]
+			"Jaggen-Mal'Ganis", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1007, -- [11]
-			"Player-162-0996E212", -- [12]
+			5333, -- [11]
+			"Player-3684-096C7F9A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Bungy-EmeraldDream|r",
-			[51] = 1533618859,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffc69b6dJaggen-Mal'Ganis|r",
+			[51] = 1533700171,
+			[50] = "CHAT_MSG_WHISPER_INFORM",
 		}, -- [45]
 		{
-			"and intrrupt/stun the adds on the main floor too pls :)", -- [1]
-			"Huna-Illidan", -- [2]
+			"《H S公会》，为备战BFA招收各路强力玩家，欢迎各种新人老人，活动时间每周234，有兴趣的密", -- [1]
+			"Ezanna-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Huna", -- [5]
+			"2. Trade - City", -- [4]
+			"Ezanna", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1008, -- [11]
-			"Player-57-0A5E7079", -- [12]
+			5380, -- [11]
+			"Player-57-0AE9D702", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cff0070ddHuna|r",
-			[51] = 1533618865,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cffc69b6dEzanna|r",
+			[51] = 1533700200,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [46]
 		{
-			"i will go up", -- [1]
-			"Huna-Illidan", -- [2]
+			" 金币，100万=110刀=750人民币，现货秒发，要货Q", -- [1]
+			"Bekkage-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Huna", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"2. Trade - City", -- [4]
+			"Bekkage", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1009, -- [11]
-			"Player-57-0A5E7079", -- [12]
+			5384, -- [11]
+			"Player-57-0B03E2F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cff0070ddHuna|r",
-			[51] = 1533618869,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cfffff468Bekkage|r",
+			[51] = 1533700201,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [47]
 		{
-			"if you're a virgin stay down", -- [1]
-			"Skjøld-Zul'jin", -- [2]
+			"sry my dmg was shit. mm is trash. I've been playing surv but u guys seemed like u needed a ranged :)", -- [1]
+			"Obe-Mal'Ganis", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Skjøld-Zul'jin", -- [5]
+			"Obe-Mal'Ganis", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1010, -- [11]
-			"Player-61-0B3BC22B", -- [12]
+			5390, -- [11]
+			"Player-3684-09D61A3A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc69b6dSkjøld-Zul'jin|r",
-			[51] = 1533618869,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffaad372Obe-Mal'Ganis|r",
+			[51] = 1533700202,
+			[50] = "CHAT_MSG_WHISPER",
 		}, -- [48]
 		{
-			"im down", -- [1]
-			"Juteseeker-EmeraldDream", -- [2]
+			"thanks it was a really good run", -- [1]
+			"Jaggen-Mal'Ganis", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Juteseeker-EmeraldDream", -- [5]
+			"Jaggen-Mal'Ganis", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1013, -- [11]
-			"Player-162-09CB931B", -- [12]
+			5391, -- [11]
+			"Player-3684-096C7F9A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc69b6dJuteseeker-EmeraldDream|r",
-			[51] = 1533618875,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffc69b6dJaggen-Mal'Ganis|r",
+			[51] = 1533700202,
+			[50] = "CHAT_MSG_WHISPER",
 		}, -- [49]
 		{
-			"hell yeah brother", -- [1]
-			"Bömbs-Dalaran", -- [2]
+			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,", -- [1]
+			"Pjsidijehjr-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Bömbs-Dalaran", -- [5]
+			"2. Trade - City", -- [4]
+			"Pjsidijehjr", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1014, -- [11]
-			"Player-3683-08D14C26", -- [12]
+			5392, -- [11]
+			"Player-57-0B03827B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3fc6eaBömbs-Dalaran|r",
-			[51] = 1533618880,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cffffffffPjsidijehjr|r",
+			[51] = 1533700203,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [50]
 		{
-			"with honestly have no shot", -- [1]
-			"Twotrapz-Hyjal", -- [2]
-			"", -- [3]
+			"Except for Agg, it was fun.", -- [1]
+			"Jaggen-Mal'Ganis", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Twotrapz-Hyjal", -- [5]
+			"Jaggen-Mal'Ganis", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1015, -- [11]
-			"Player-3661-07E65A5F", -- [12]
+			5410, -- [11]
+			"Player-3684-096C7F9A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Twotrapz-Hyjal|r",
-			[51] = 1533618884,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffc69b6dJaggen-Mal'Ganis|r",
+			[51] = 1533700213,
+			[50] = "CHAT_MSG_WHISPER_INFORM",
 		}, -- [51]
 		{
-			"ill go up", -- [1]
-			"Machine-Stormreaver", -- [2]
-			"", -- [3]
+			"It's nice to see people snap down too though.", -- [1]
+			"Jaggen-Mal'Ganis", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Machine-Stormreaver", -- [5]
+			"Jaggen-Mal'Ganis", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1016, -- [11]
-			"Player-58-0AF36AAD", -- [12]
+			5420, -- [11]
+			"Player-3684-096C7F9A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc41e3aMachine-Stormreaver|r",
-			[51] = 1533618886,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffc69b6dJaggen-Mal'Ganis|r",
+			[51] = 1533700219,
+			[50] = "CHAT_MSG_WHISPER_INFORM",
 		}, -- [52]
 		{
-			"our best player left", -- [1]
-			"Twotrapz-Hyjal", -- [2]
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Twotrapz-Hyjal", -- [5]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1017, -- [11]
-			"Player-3661-07E65A5F", -- [12]
+			5444, -- [11]
+			"Player-57-0989886F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffaad372Twotrapz-Hyjal|r",
-			[51] = 1533618887,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533700232,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [53]
 		{
-			"lol you guys bullied sickduck out of the group", -- [1]
-			"Bungy-EmeraldDream", -- [2]
+			"yep agg is probably the hardest boss on heroic imo", -- [1]
+			"Jaggen-Mal'Ganis", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Bungy-EmeraldDream", -- [5]
+			"Jaggen-Mal'Ganis", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1018, -- [11]
-			"Player-162-0996E212", -- [12]
+			5467, -- [11]
+			"Player-3684-096C7F9A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff00ff96Bungy-EmeraldDream|r",
-			[51] = 1533618890,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffc69b6dJaggen-Mal'Ganis|r",
+			[51] = 1533700240,
+			[50] = "CHAT_MSG_WHISPER",
 		}, -- [54]
 		{
-			"i miss him :[", -- [1]
-			"Juteseeker-EmeraldDream", -- [2]
-			"", -- [3]
+			"You did fine, it's all silly pre-patch.", -- [1]
+			"Obe-Mal'Ganis", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Juteseeker-EmeraldDream", -- [5]
+			"Obe-Mal'Ganis", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1019, -- [11]
-			"Player-162-09CB931B", -- [12]
+			5470, -- [11]
+			"Player-3684-09D61A3A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc69b6dJuteseeker-EmeraldDream|r",
-			[51] = 1533618893,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffaad372Obe-Mal'Ganis|r",
+			[51] = 1533700243,
+			[50] = "CHAT_MSG_WHISPER_INFORM",
 		}, -- [55]
 		{
-			"lol", -- [1]
-			"Machine-Stormreaver", -- [2]
-			"", -- [3]
+			"Fun to see mechanics.", -- [1]
+			"Obe-Mal'Ganis", -- [2]
+			"Orcish", -- [3]
 			"", -- [4]
-			"Machine-Stormreaver", -- [5]
+			"Obe-Mal'Ganis", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			1020, -- [11]
-			"Player-58-0AF36AAD", -- [12]
+			5478, -- [11]
+			"Player-3684-09D61A3A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc41e3aMachine-Stormreaver|r",
-			[51] = 1533618894,
-			[50] = "CHAT_MSG_RAID",
+			[52] = "|cffaad372Obe-Mal'Ganis|r",
+			[51] = 1533700247,
+			[50] = "CHAT_MSG_WHISPER_INFORM",
 		}, -- [56]
 		{
-			"wondere if he would have gone up", -- [1]
-			"Skjøld-Zul'jin", -- [2]
+			"《H S公会》，为备战BFA招收各路强力玩家，欢迎各种新人老人，活动时间每周234，有兴趣的密", -- [1]
+			"Ezanna-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Skjøld-Zul'jin", -- [5]
+			"2. Trade - City", -- [4]
+			"Ezanna", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1021, -- [11]
-			"Player-61-0B3BC22B", -- [12]
+			5506, -- [11]
+			"Player-57-0AE9D702", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dSkjøld-Zul'jin|r",
-			[51] = 1533618907,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cffc69b6dEzanna|r",
+			[51] = 1533700260,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [57]
 		{
-			"who was that?", -- [1]
-			"Huna-Illidan", -- [2]
+			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,", -- [1]
+			"Pjsidijehjr-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Huna", -- [5]
+			"2. Trade - City", -- [4]
+			"Pjsidijehjr", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1022, -- [11]
-			"Player-57-0A5E7079", -- [12]
+			5533, -- [11]
+			"Player-57-0B03827B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cff0070ddHuna|r",
-			[51] = 1533618909,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cffffffffPjsidijehjr|r",
+			[51] = 1533700273,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [58]
 		{
-			"I miss him already", -- [1]
-			"Twotrapz-Hyjal", -- [2]
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Twotrapz-Hyjal", -- [5]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1024, -- [11]
-			"Player-3661-07E65A5F", -- [12]
+			5539, -- [11]
+			"Player-57-0989886F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffaad372Twotrapz-Hyjal|r",
-			[51] = 1533618914,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533700278,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [59]
 		{
-			"my bf", -- [1]
-			"Bömbs-Dalaran", -- [2]
+			" 金币，100万=110刀=750人民币，现货秒发，要货Q", -- [1]
+			"Bekkage-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Bömbs-Dalaran", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"2. Trade - City", -- [4]
+			"Bekkage", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1025, -- [11]
-			"Player-3683-08D14C26", -- [12]
+			5568, -- [11]
+			"Player-57-0B03E2F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3fc6eaBömbs-Dalaran|r",
-			[51] = 1533618915,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cfffff468Bekkage|r",
+			[51] = 1533700293,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [60]
 		{
-			"lmao that io", -- [1]
-			"Jopp-EmeraldDream", -- [2]
+			"《H S公会》，为备战BFA招收各路强力玩家，欢迎各种新人老人，活动时间每周234，有兴趣的密", -- [1]
+			"Ezanna-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Jopp-EmeraldDream", -- [5]
+			"2. Trade - City", -- [4]
+			"Ezanna", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1026, -- [11]
-			"Player-162-09C9FACE", -- [12]
+			5600, -- [11]
+			"Player-57-0AE9D702", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffJopp-EmeraldDream|r",
-			[51] = 1533618924,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cffc69b6dEzanna|r",
+			[51] = 1533700320,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [61]
 		{
-			"i dunno i did more dps than him every fight cept hc cause i died and much lower ilvl", -- [1]
-			"Machine-Stormreaver", -- [2]
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Machine-Stormreaver", -- [5]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1027, -- [11]
-			"Player-58-0AF36AAD", -- [12]
+			5602, -- [11]
+			"Player-57-0989886F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc41e3aMachine-Stormreaver|r",
-			[51] = 1533618932,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533700323,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [62]
 		{
-			"frost op", -- [1]
-			"Skjøld-Zul'jin", -- [2]
+			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,", -- [1]
+			"Pjsidijehjr-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Skjøld-Zul'jin", -- [5]
+			"2. Trade - City", -- [4]
+			"Pjsidijehjr", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1029, -- [11]
-			"Player-61-0B3BC22B", -- [12]
+			5617, -- [11]
+			"Player-57-0B03827B", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dSkjøld-Zul'jin|r",
-			[51] = 1533618943,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cffffffffPjsidijehjr|r",
+			[51] = 1533700344,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [63]
 		{
-			"doe", -- [1]
-			"Skjøld-Zul'jin", -- [2]
+			"(SELLING) (GOLD ONLY) 11/11M Top US raiders are selling Heroic Argus kills every 30 minutes! Come get your Violet Spellwing, legendary ring, and pantheon trinket! LAST WEEK TO GET IT! PST for more info!", -- [1]
+			"Renspriest-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Skjøld-Zul'jin", -- [5]
+			"2. Trade - City", -- [4]
+			"Renspriest", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1030, -- [11]
-			"Player-61-0B3BC22B", -- [12]
+			5623, -- [11]
+			"Player-57-0AD8030A", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dSkjøld-Zul'jin|r",
-			[51] = 1533618944,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cffffffffRenspriest|r",
+			[51] = 1533700354,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [64]
 		{
-			"frost is broke", -- [1]
-			"Skjøld-Zul'jin", -- [2]
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Skjøld-Zul'jin", -- [5]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1032, -- [11]
-			"Player-61-0B3BC22B", -- [12]
+			5636, -- [11]
+			"Player-57-0989886F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dSkjøld-Zul'jin|r",
-			[51] = 1533618972,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533700369,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [65]
 		{
-			"bop me dad", -- [1]
-			"Juteseeker-EmeraldDream", -- [2]
+			"《H S公会》，为备战BFA招收各路强力玩家，欢迎各种新人老人，活动时间每周234，有兴趣的密", -- [1]
+			"Ezanna-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Juteseeker-EmeraldDream", -- [5]
+			"2. Trade - City", -- [4]
+			"Ezanna", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1037, -- [11]
-			"Player-162-09CB931B", -- [12]
+			5642, -- [11]
+			"Player-57-0AE9D702", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dJuteseeker-EmeraldDream|r",
-			[51] = 1533619013,
-			[50] = "CHAT_MSG_RAID",
+			true, -- [17]
+			[52] = "|cffc69b6dEzanna|r",
+			[51] = 1533700380,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [66]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:5750:Player-57-0B01F918:1:8:6:18:4294967295:4294967295:4294967295:4294967295|h[Tunnel Vision]|h|r!", -- [1]
-			"Rambel-Illidan", -- [2]
+			" 金币，100万=110刀=750人民币，现货秒发，要货Q", -- [1]
+			"Bekkage-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Rambel", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"2. Trade - City", -- [4]
+			"Bekkage", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1048, -- [11]
-			"Player-57-0B01F918", -- [12]
+			5644, -- [11]
+			"Player-57-0B03E2F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dRambel|r",
-			[51] = 1533619100,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			true, -- [17]
+			[52] = "|cfffff468Bekkage|r",
+			[51] = 1533700384,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [67]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:5858:Player-57-0B01F918:1:8:6:18:4294967295:4294967295:4294967295:4294967295|h[Bear-ly Made It]|h|r!", -- [1]
-			"Rambel-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Rambel", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1049, -- [11]
-			"Player-57-0B01F918", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dRambel|r",
-			[51] = 1533619100,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [68]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:5769:Player-57-0B01F918:1:8:6:18:4294967295:4294967295:4294967295:4294967295|h[Heroic: Zul'Aman]|h|r!", -- [1]
-			"Rambel-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Rambel", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1059, -- [11]
-			"Player-57-0B01F918", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dRambel|r",
-			[51] = 1533619189,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [69]
-		{
-			"pretty good guid", -- [1]
-			"Amaxaknight-Thrall", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Amaxaknight-Thrall", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1063, -- [11]
-			"Player-3678-0A8A1A35", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc41e3aAmaxaknight-Thrall|r",
-			[51] = 1533619217,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [70]
-		{
-			"Just wipe.", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Evan", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1064, -- [11]
-			"Player-57-0583ABC7", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533619217,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [71]
-		{
-			"Wasting time.", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Evan", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1065, -- [11]
-			"Player-57-0583ABC7", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533619219,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [72]
-		{
-			"wipe it", -- [1]
-			"Jopp-EmeraldDream", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Jopp-EmeraldDream", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1067, -- [11]
-			"Player-162-09C9FACE", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffJopp-EmeraldDream|r",
-			[51] = 1533619221,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [73]
-		{
-			"too many up", -- [1]
-			"Bungy-EmeraldDream", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Bungy-EmeraldDream", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1069, -- [11]
-			"Player-162-0996E212", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Bungy-EmeraldDream|r",
-			[51] = 1533619227,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [74]
-		{
-			"amax dont be like that", -- [1]
-			"Jopp-EmeraldDream", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Jopp-EmeraldDream", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1070, -- [11]
-			"Player-162-09C9FACE", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffJopp-EmeraldDream|r",
-			[51] = 1533619229,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [75]
-		{
-			"so those adds huh", -- [1]
-			"Donnyb-EmeraldDream", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Donnyb-EmeraldDream", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1072, -- [11]
-			"Player-162-09A2171F", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff48cbaDonnyb-EmeraldDream|r",
-			[51] = 1533619232,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [76]
-		{
-			"I said all virgins down", -- [1]
-			"Skjøld-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Skjøld-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1077, -- [11]
-			"Player-61-0B3BC22B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dSkjøld-Zul'jin|r",
-			[51] = 1533619239,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [77]
-		{
-			"lmao", -- [1]
-			"Jopp-EmeraldDream", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Jopp-EmeraldDream", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1078, -- [11]
-			"Player-162-09C9FACE", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffJopp-EmeraldDream|r",
-			[51] = 1533619247,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [78]
-		{
-			"i stayed down dude", -- [1]
-			"Juteseeker-EmeraldDream", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Juteseeker-EmeraldDream", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1079, -- [11]
-			"Player-162-09CB931B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dJuteseeker-EmeraldDream|r",
-			[51] = 1533619252,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [79]
-		{
-			"that guy dig too big anyway", -- [1]
-			"Jopp-EmeraldDream", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Jopp-EmeraldDream", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1081, -- [11]
-			"Player-162-09C9FACE", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffJopp-EmeraldDream|r",
-			[51] = 1533619253,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [80]
-		{
-			"All our Big dicks", -- [1]
-			"Rytharion-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Rytharion-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1083, -- [11]
-			"Player-11-07FA4A11", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff8787edRytharion-Tichondrius|r",
-			[51] = 1533619272,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [81]
-		{
-			"dont stress on those haters we got it", -- [1]
-			"Jopp-EmeraldDream", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Jopp-EmeraldDream", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1084, -- [11]
-			"Player-162-09C9FACE", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffJopp-EmeraldDream|r",
-			[51] = 1533619272,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [82]
-		{
-			"lmao", -- [1]
-			"Skjøld-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Skjøld-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1085, -- [11]
-			"Player-61-0B3BC22B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dSkjøld-Zul'jin|r",
-			[51] = 1533619280,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [83]
-		{
-			"All those filthy huge and erect cowboy dicks", -- [1]
-			"Rytharion-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Rytharion-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1086, -- [11]
-			"Player-11-07FA4A11", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff8787edRytharion-Tichondrius|r",
-			[51] = 1533619285,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [84]
-		{
-			"i wish i was a cowboy dick", -- [1]
-			"Juteseeker-EmeraldDream", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Juteseeker-EmeraldDream", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1087, -- [11]
-			"Player-162-09CB931B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dJuteseeker-EmeraldDream|r",
-			[51] = 1533619295,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [85]
-		{
-			"i wish i was a cowboy's dick", -- [1]
-			"Skjøld-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Skjøld-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1088, -- [11]
-			"Player-61-0B3BC22B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dSkjøld-Zul'jin|r",
-			[51] = 1533619308,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [86]
-		{
-			"wait", -- [1]
-			"Skjøld-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Skjøld-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1089, -- [11]
-			"Player-61-0B3BC22B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dSkjøld-Zul'jin|r",
-			[51] = 1533619311,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [87]
-		{
-			"sounds like a lot of syphilis", -- [1]
-			"Donnyb-EmeraldDream", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Donnyb-EmeraldDream", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1090, -- [11]
-			"Player-162-09A2171F", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff48cbaDonnyb-EmeraldDream|r",
-			[51] = 1533619328,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [88]
-		{
-			"brokedick mountain", -- [1]
-			"Skjøld-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Skjøld-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1092, -- [11]
-			"Player-61-0B3BC22B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dSkjøld-Zul'jin|r",
-			[51] = 1533619349,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [89]
-		{
-			"maybe use prydaz", -- [1]
-			"Skjøld-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Skjøld-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1094, -- [11]
-			"Player-61-0B3BC22B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dSkjøld-Zul'jin|r",
-			[51] = 1533619391,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [90]
-		{
-			"idk", -- [1]
-			"Skjøld-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Skjøld-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1095, -- [11]
-			"Player-61-0B3BC22B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dSkjøld-Zul'jin|r",
-			[51] = 1533619405,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [91]
-		{
-			"p", -- [1]
-			"Donnyb-EmeraldDream", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Donnyb-EmeraldDream", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1096, -- [11]
-			"Player-162-09A2171F", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff48cbaDonnyb-EmeraldDream|r",
-			[51] = 1533619411,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [92]
-		{
-			"well i died cause no tank went to portal", -- [1]
-			"Machine-Stormreaver", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Machine-Stormreaver", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1129, -- [11]
-			"Player-58-0AF36AAD", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc41e3aMachine-Stormreaver|r",
-			[51] = 1533619758,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [93]
-		{
-			"rip", -- [1]
-			"Machine-Stormreaver", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Machine-Stormreaver", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1130, -- [11]
-			"Player-58-0AF36AAD", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc41e3aMachine-Stormreaver|r",
-			[51] = 1533619759,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [94]
-		{
-			"iw as ded", -- [1]
-			"Juteseeker-EmeraldDream", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Juteseeker-EmeraldDream", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1133, -- [11]
-			"Player-162-09CB931B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dJuteseeker-EmeraldDream|r",
-			[51] = 1533619768,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [95]
-		{
-			"he was ded", -- [1]
-			"Skjøld-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Skjøld-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1136, -- [11]
-			"Player-61-0B3BC22B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dSkjøld-Zul'jin|r",
-			[51] = 1533619773,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [96]
-		{
-			"i didnt realize a tank was down", -- [1]
-			"Machine-Stormreaver", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Machine-Stormreaver", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1137, -- [11]
-			"Player-58-0AF36AAD", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc41e3aMachine-Stormreaver|r",
-			[51] = 1533619780,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [97]
-		{
-			"my lor", -- [1]
-			"Donnyb-EmeraldDream", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Donnyb-EmeraldDream", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1139, -- [11]
-			"Player-162-09A2171F", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff48cbaDonnyb-EmeraldDream|r",
-			[51] = 1533619791,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [98]
-		{
-			"I tanked boss :c", -- [1]
-			"Skjøld-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Skjøld-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1142, -- [11]
-			"Player-61-0B3BC22B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dSkjøld-Zul'jin|r",
-			[51] = 1533619793,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [99]
-		{
-			"sorry guys - i think i'm just too tired to do this. ty for having me, and gl to you", -- [1]
-			"Huna-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Huna", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1150, -- [11]
-			"Player-57-0A5E7079", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff0070ddHuna|r",
-			[51] = 1533619807,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [100]
-		{
-			"hello. omw", -- [1]
-			"Eightysìx-Arthas", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Eightysìx-Arthas", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1154, -- [11]
-			"Player-69-0AEF98EA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffa330c9Eightysìx-Arthas|r",
-			[51] = 1533619882,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [101]
-		{
-			"boom", -- [1]
-			"Skjøld-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Skjøld-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1181, -- [11]
-			"Player-61-0B3BC22B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dSkjøld-Zul'jin|r",
-			[51] = 1533620290,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [102]
-		{
-			"Freezing Trap on Blazing Imp removed by Manaeater (Alukura-EmeraldDream)'s |cff71d5ff|Hspell:259277:0|h[Kill Command]|h|r", -- [1]
-			"Machine-Stormreaver", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Machine-Stormreaver", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1182, -- [11]
-			"Player-58-0AF36AAD", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc41e3aMachine-Stormreaver|r",
-			[51] = 1533620291,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [103]
-		{
-			"Freezing Trap on Blazing Imp removed by Rytharion-Tichondrius's |cff71d5ff|Hspell:205246:0|h[Phantom Singularity]|h|r", -- [1]
-			"Machine-Stormreaver", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Machine-Stormreaver", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1188, -- [11]
-			"Player-58-0AF36AAD", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc41e3aMachine-Stormreaver|r",
-			[51] = 1533620337,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [104]
-		{
-			"pk is too much brain now", -- [1]
-			"Skjøld-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Skjøld-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1200, -- [11]
-			"Player-61-0B3BC22B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dSkjøld-Zul'jin|r",
-			[51] = 1533620403,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [105]
-		{
-			"x(", -- [1]
-			"Jopp-EmeraldDream", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Jopp-EmeraldDream", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1201, -- [11]
-			"Player-162-09C9FACE", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffJopp-EmeraldDream|r",
-			[51] = 1533620411,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [106]
-		{
-			"and I litterally heroic suicided on last pull", -- [1]
-			"Skjøld-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Skjøld-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1205, -- [11]
-			"Player-61-0B3BC22B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dSkjøld-Zul'jin|r",
-			[51] = 1533620434,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [107]
-		{
-			":)", -- [1]
-			"Skjøld-Zul'jin", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Skjøld-Zul'jin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			1206, -- [11]
-			"Player-61-0B3BC22B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc69b6dSkjøld-Zul'jin|r",
-			[51] = 1533620436,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [108]
-		{
-			"^LFW_H", -- [1]
-			"Evan-Illidan", -- [2]
+			"^LFW_L", -- [1]
+			"Soliaa-Illidan", -- [2]
 			"", -- [3]
 			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"Soliaa", -- [5]
 			"", -- [6]
 			0, -- [7]
 			6, -- [8]
 			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1215, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			5673, -- [11]
+			"Player-57-0AC34984", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533620553,
+			[52] = "|cffffffffSoliaa|r",
+			[51] = 1533700413,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [68]
+		{
+			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,", -- [1]
+			"Pjsidijehjr-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Pjsidijehjr", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5674, -- [11]
+			"Player-57-0B03827B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffffffffPjsidijehjr|r",
+			[51] = 1533700413,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [69]
+		{
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5676, -- [11]
+			"Player-57-0989886F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533700415,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [70]
+		{
+			"《H S公会》，为备战BFA招收各路强力玩家，欢迎各种新人老人，活动时间每周234，有兴趣的密", -- [1]
+			"Ezanna-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Ezanna", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5693, -- [11]
+			"Player-57-0AE9D702", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dEzanna|r",
+			[51] = 1533700440,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [71]
+		{
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5706, -- [11]
+			"Player-57-0989886F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533700460,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [72]
+		{
+			" 金币，100万=110刀=750人民币，现货秒发，要货Q", -- [1]
+			"Bekkage-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Bekkage", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5712, -- [11]
+			"Player-57-0B03E2F5", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffff468Bekkage|r",
+			[51] = 1533700475,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [73]
+		{
+			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,", -- [1]
+			"Pjsidijehjr-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Pjsidijehjr", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5721, -- [11]
+			"Player-57-0B03827B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffffffffPjsidijehjr|r",
+			[51] = 1533700483,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [74]
+		{
+			"《H S公会》，为备战BFA招收各路强力玩家，欢迎各种新人老人，活动时间每周234，有兴趣的密", -- [1]
+			"Ezanna-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Ezanna", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5735, -- [11]
+			"Player-57-0AE9D702", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dEzanna|r",
+			[51] = 1533700500,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [75]
+		{
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5742, -- [11]
+			"Player-57-0989886F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533700506,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [76]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:9:Player-57-0AFF20AA:1:8:7:18:4294967295:4294967295:4294967295:4294967295|h[Level 40]|h|r!", -- [1]
+			"Celestrazaa-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Celestrazaa", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			5756, -- [11]
+			"Player-57-0AFF20AA", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffCelestrazaa|r",
+			[51] = 1533700534,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [77]
+		{
+			"^LFW_L", -- [1]
+			"Angrylady-Illidan", -- [2]
+			"", -- [3]
+			"6. TCForwarder6IIll", -- [4]
+			"Angrylady", -- [5]
+			"", -- [6]
+			0, -- [7]
+			6, -- [8]
+			"TCForwarder6IIll", -- [9]
+			0, -- [10]
+			5763, -- [11]
+			"Player-57-05DD64D1", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc69b6dAngrylady|r",
+			[51] = 1533700540,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [78]
+		{
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5768, -- [11]
+			"Player-57-0989886F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533700552,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [79]
+		{
+			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,", -- [1]
+			"Pjsidijehjr-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Pjsidijehjr", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5772, -- [11]
+			"Player-57-0B03827B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffffffffPjsidijehjr|r",
+			[51] = 1533700553,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [80]
+		{
+			"《H S公会》，为备战BFA招收各路强力玩家，欢迎各种新人老人，活动时间每周234，有兴趣的密", -- [1]
+			"Ezanna-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Ezanna", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5775, -- [11]
+			"Player-57-0AE9D702", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dEzanna|r",
+			[51] = 1533700560,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [81]
+		{
+			" 金币，100万=110刀=750人民币，现货秒发，要货Q", -- [1]
+			"Bekkage-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Bekkage", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5777, -- [11]
+			"Player-57-0B03E2F5", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffff468Bekkage|r",
+			[51] = 1533700566,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [82]
+		{
+			"so akroma quit?", -- [1]
+			"|Kf79|k0000|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			5780, -- [11]
+			false, -- [12]
+			79, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffff468zero|r",
+			[51] = 1533700569,
+			[50] = "CHAT_MSG_BN_WHISPER",
+			[53] = "zero",
+		}, -- [83]
+		{
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5799, -- [11]
+			"Player-57-0989886F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533700598,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [84]
+		{
+			"《H S公会》，为备战BFA招收各路强力玩家，欢迎各种新人老人，活动时间每周234，有兴趣的密", -- [1]
+			"Ezanna-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Ezanna", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5817, -- [11]
+			"Player-57-0AE9D702", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dEzanna|r",
+			[51] = 1533700620,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [85]
+		{
+			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,", -- [1]
+			"Pjsidijehjr-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Pjsidijehjr", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5820, -- [11]
+			"Player-57-0B03827B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffffffffPjsidijehjr|r",
+			[51] = 1533700624,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [86]
+		{
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5829, -- [11]
+			"Player-57-0989886F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533700643,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [87]
+		{
+			"《H S公会》，为备战BFA招收各路强力玩家，欢迎各种新人老人，活动时间每周234，有兴趣的密", -- [1]
+			"Ezanna-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Ezanna", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5860, -- [11]
+			"Player-57-0AE9D702", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dEzanna|r",
+			[51] = 1533700680,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [88]
+		{
+			"_$321Ezanna_$《H S公会》，为备战BFA招收各路强力玩家，欢迎各种新人老人，活动时间每周234，有兴趣的密_$c69b6d$", -- [1]
+			"Tyrabank-Illidan", -- [2]
+			"", -- [3]
+			"6. TCForwarder6IIll", -- [4]
+			"Tyrabank", -- [5]
+			"", -- [6]
+			0, -- [7]
+			6, -- [8]
+			"TCForwarder6IIll", -- [9]
+			0, -- [10]
+			5861, -- [11]
+			"Player-57-0AF539AE", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfff48cbaTyrabank|r",
+			[51] = 1533700680,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [89]
+		{
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5866, -- [11]
+			"Player-57-0989886F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533700689,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [90]
+		{
+			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,", -- [1]
+			"Pjsidijehjr-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Pjsidijehjr", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5871, -- [11]
+			"Player-57-0B03827B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffffffffPjsidijehjr|r",
+			[51] = 1533700693,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [91]
+		{
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5899, -- [11]
+			"Player-57-0989886F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533700735,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [92]
+		{
+			" 金币，100万=103刀=700人民币，现货秒发，要货Q", -- [1]
+			"Bekkage-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Bekkage", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5909, -- [11]
+			"Player-57-0B03E2F5", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffff468Bekkage|r",
+			[51] = 1533700749,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [93]
+		{
+			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,", -- [1]
+			"Pjsidijehjr-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Pjsidijehjr", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5923, -- [11]
+			"Player-57-0B03827B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffffffffPjsidijehjr|r",
+			[51] = 1533700763,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [94]
+		{
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5942, -- [11]
+			"Player-57-0989886F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533700781,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [95]
+		{
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5984, -- [11]
+			"Player-57-0989886F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533700826,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [96]
+		{
+			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,", -- [1]
+			"Pjsidijehjr-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Pjsidijehjr", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5988, -- [11]
+			"Player-57-0B03827B", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffffffffPjsidijehjr|r",
+			[51] = 1533700833,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [97]
+		{
+			" 金币，100万=103刀=700人民币，现货秒发，要货Q", -- [1]
+			"Bekkage-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Bekkage", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			5996, -- [11]
+			"Player-57-0B03E2F5", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffff468Bekkage|r",
+			[51] = 1533700841,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [98]
+		{
+			"but if you guys dont mind id love to join up after i lvl to 120", -- [1]
+			"Jaggen-Mal'Ganis", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Jaggen-Mal'Ganis", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			6018, -- [11]
+			"Player-3684-096C7F9A", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc69b6dJaggen-Mal'Ganis|r",
+			[51] = 1533700869,
+			[50] = "CHAT_MSG_WHISPER",
+		}, -- [99]
+		{
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			6019, -- [11]
+			"Player-57-0989886F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533700872,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [100]
+		{
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			6042, -- [11]
+			"Player-57-0989886F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533700918,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [101]
+		{
+			" 金币，100万=103刀=700人民币，现货秒发，要货Q", -- [1]
+			"Bekkage-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Bekkage", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			6048, -- [11]
+			"Player-57-0B03E2F5", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffff468Bekkage|r",
+			[51] = 1533700932,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [102]
+		{
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			6059, -- [11]
+			"Player-57-0989886F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533700964,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [103]
+		{
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			6082, -- [11]
+			"Player-57-0989886F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533701009,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [104]
+		{
+			" 金币，100万=103刀=700人民币，现货秒发，要货Q", -- [1]
+			"Bekkage-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Bekkage", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			6086, -- [11]
+			"Player-57-0B03E2F5", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffff468Bekkage|r",
+			[51] = 1533701024,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [105]
+		{
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			6093, -- [11]
+			"Player-57-0989886F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533701055,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [106]
+		{
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			6113, -- [11]
+			"Player-57-0989886F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533701101,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [107]
+		{
+			" 金币，100万=103刀=700人民币，现货秒发，要货Q", -- [1]
+			"Bekkage-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Bekkage", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			6124, -- [11]
+			"Player-57-0B03E2F5", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffff468Bekkage|r",
+			[51] = 1533701115,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [108]
+		{
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			6136, -- [11]
+			"Player-57-0989886F", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533701146,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [109]
 		{
-			"_$6Floydmea_$Im looking for some guy which can buy me a character faction and realm change .i have a great offer .pst me to find out what it is._$c69b6d$", -- [1]
-			"Nicehat-Illidan", -- [2]
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Nicehat", -- [5]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
 			"", -- [6]
-			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1269, -- [11]
-			"Player-57-0A31A873", -- [12]
+			6158, -- [11]
+			"Player-57-0989886F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cfffff468Nicehat|r",
-			[51] = 1533620726,
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533701192,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [110]
 		{
-			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置！,", -- [1]
-			"Curdgfgr-Illidan", -- [2]
+			" 金币，100万=103刀=700人民币，现货秒发，要货Q", -- [1]
+			"Bekkage-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Curdgfgr", -- [5]
-			"", -- [6]
+			"Bekkage", -- [5]
+			"DND", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			1272, -- [11]
-			"Player-57-0B007A37", -- [12]
+			6174, -- [11]
+			"Player-57-0B03E2F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cff3fc6eaCurdgfgr|r",
-			[51] = 1533620752,
+			[52] = "|cfffff468Bekkage|r",
+			[51] = 1533701207,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [111]
 		{
-			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
-			"Qzdfsdfgdrty-Illidan", -- [2]
+			"^LFW_L", -- [1]
+			"Soliaa-Illidan", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Qzdfsdfgdrty", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			"6. TCForwarder6IIll", -- [4]
+			"Soliaa", -- [5]
+			"", -- [6]
+			0, -- [7]
+			6, -- [8]
+			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			1274, -- [11]
-			"Player-57-0B0372F3", -- [12]
+			6190, -- [11]
+			"Player-57-0AC34984", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dQzdfsdfgdrty|r",
-			[51] = 1533620754,
+			false, -- [17]
+			[52] = "|cffffffffSoliaa|r",
+			[51] = 1533701231,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [112]
 		{
-			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
-			"Qzdfsdfgdrty-Illidan", -- [2]
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Qzdfsdfgdrty", -- [5]
-			"DND", -- [6]
+			"Shangtouorz", -- [5]
+			"", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			1283, -- [11]
-			"Player-57-0B0372F3", -- [12]
+			6195, -- [11]
+			"Player-57-0989886F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cffc69b6dQzdfsdfgdrty|r",
-			[51] = 1533620799,
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533701238,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [113]
 		{
-			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置！,", -- [1]
-			"Curdgfgr-Illidan", -- [2]
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Curdgfgr", -- [5]
+			"Shangtouorz", -- [5]
 			"", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			1285, -- [11]
-			"Player-57-0B007A37", -- [12]
+			6215, -- [11]
+			"Player-57-0989886F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cff3fc6eaCurdgfgr|r",
-			[51] = 1533620823,
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533701284,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [114]
 		{
-			"^LFW_J", -- [1]
-			"Evan-Illidan", -- [2]
+			" 金币，100万=103刀=700人民币，现货秒发，要货Q", -- [1]
+			"Bekkage-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
-			"", -- [6]
-			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			"2. Trade - City", -- [4]
+			"Bekkage", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1291, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			6228, -- [11]
+			"Player-57-0B03E2F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533620837,
+			true, -- [17]
+			[52] = "|cfffff468Bekkage|r",
+			[51] = 1533701298,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [115]
 		{
-			"^LFW_J", -- [1]
-			"Evan-Illidan", -- [2]
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
 			"", -- [6]
-			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1296, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			6242, -- [11]
+			"Player-57-0989886F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533620838,
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533701329,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [116]
 		{
-			"^LFW_J", -- [1]
-			"Evan-Illidan", -- [2]
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
 			"", -- [6]
-			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1297, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			6267, -- [11]
+			"Player-57-0989886F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533620838,
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533701375,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [117]
 		{
-			"^LFW_J", -- [1]
-			"Evan-Illidan", -- [2]
+			" 金币，100万=103刀=700人民币，现货秒发，要货Q", -- [1]
+			"Bekkage-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
-			"", -- [6]
-			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			"2. Trade - City", -- [4]
+			"Bekkage", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1298, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			6277, -- [11]
+			"Player-57-0B03E2F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533620838,
+			true, -- [17]
+			[52] = "|cfffff468Bekkage|r",
+			[51] = 1533701390,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [118]
 		{
-			"_$1Maxterchief_$US 16 guild Infinity selling Mythic Argus mount |cff71d5ff|Hspell:243651:0|h[Shackled Ur'zul]|h|r, last chance before BFA! PST for more information_$aad372$", -- [1]
-			"Evan-Illidan", -- [2]
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"2. Trade - City", -- [4]
+			"Shangtouorz", -- [5]
 			"", -- [6]
-			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1301, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			6297, -- [11]
+			"Player-57-0989886F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533620842,
+			true, -- [17]
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533701421,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [119]
 		{
-			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
-			"Qzdfsdfgdrty-Illidan", -- [2]
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Qzdfsdfgdrty", -- [5]
-			"DND", -- [6]
+			"Shangtouorz", -- [5]
+			"", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			1302, -- [11]
-			"Player-57-0B0372F3", -- [12]
+			6318, -- [11]
+			"Player-57-0989886F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cffc69b6dQzdfsdfgdrty|r",
-			[51] = 1533620844,
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533701467,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [120]
 		{
-			"_$2Qzdfsdfgdrty_$   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
+			"We'll see.", -- [1]
+			"|Kf79|k0000|k", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			1303, -- [11]
-			"Player-57-0583ABC7", -- [12]
-			0, -- [13]
+			6323, -- [11]
+			false, -- [12]
+			79, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533620844,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cffff7c0azero|r",
+			[51] = 1533701473,
+			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
+			[53] = "zero",
 		}, -- [121]
 		{
-			"_$3Floydmea_$Im looking for some guy which can buy me a character faction and realm change .i have a great offer .pst me to find out what it is._$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
-			"", -- [6]
-			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
-			0, -- [10]
-			1305, -- [11]
-			"Player-57-0583ABC7", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533620856,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [122]
-		{
-			"_$4Xionyus_$<Hard in the Paint> US28 has one more available Mythic Argus mount before BFA. Tomorrow @ 11pm Eastern. PST for more info!_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
-			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
-			"", -- [6]
-			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
-			0, -- [10]
-			1307, -- [11]
-			"Player-57-0583ABC7", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533620857,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [123]
-		{
-			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
-			"Qzdfsdfgdrty-Illidan", -- [2]
+			" 金币，100万=103刀=700人民币，现货秒发，要货Q", -- [1]
+			"Bekkage-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Qzdfsdfgdrty", -- [5]
+			"Bekkage", -- [5]
 			"DND", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			1310, -- [11]
-			"Player-57-0B0372F3", -- [12]
+			6326, -- [11]
+			"Player-57-0B03E2F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cffc69b6dQzdfsdfgdrty|r",
-			[51] = 1533620889,
+			[52] = "|cfffff468Bekkage|r",
+			[51] = 1533701482,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [124]
+		}, -- [122]
 		{
-			"_$5Qzdfsdfgdrty_$   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前_$c69b6d$", -- [1]
-			"Evan-Illidan", -- [2]
+			"As far as raid leading, that's my turf again.", -- [1]
+			"|Kf79|k0000|k", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			1311, -- [11]
-			"Player-57-0583ABC7", -- [12]
-			0, -- [13]
+			6333, -- [11]
+			false, -- [12]
+			79, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533620889,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [125]
+			[52] = "|cffff7c0azero|r",
+			[51] = 1533701490,
+			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
+			[53] = "zero",
+		}, -- [123]
 		{
-			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置！,", -- [1]
-			"Curdgfgr-Illidan", -- [2]
+			"Which I'm very happy about.", -- [1]
+			"|Kf79|k0000|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			6336, -- [11]
+			false, -- [12]
+			79, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffff7c0azero|r",
+			[51] = 1533701496,
+			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
+			[53] = "zero",
+		}, -- [124]
+		{
+			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
+			"Shangtouorz-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Curdgfgr", -- [5]
+			"Shangtouorz", -- [5]
 			"", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			1312, -- [11]
-			"Player-57-0B007A37", -- [12]
+			6372, -- [11]
+			"Player-57-0989886F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cff3fc6eaCurdgfgr|r",
-			[51] = 1533620893,
+			[52] = "|cffff7c0aShangtouorz|r",
+			[51] = 1533701563,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [126]
+		}, -- [125]
 		{
-			"_$6Curdgfgr_$ 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置！,_$3fc6ea$", -- [1]
-			"Evan-Illidan", -- [2]
+			" 金币，100万=103刀=700人民币，现货秒发，要货Q", -- [1]
+			"Bekkage-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
-			"", -- [6]
-			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			"2. Trade - City", -- [4]
+			"Bekkage", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			1313, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			6389, -- [11]
+			"Player-57-0B03E2F5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533620893,
+			true, -- [17]
+			[52] = "|cfffff468Bekkage|r",
+			[51] = 1533701573,
 			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [126]
+		{
+			"good to hear man. i always felt the raid went better when you lead", -- [1]
+			"|Kf79|k0000|k", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			6403, -- [11]
+			false, -- [12]
+			79, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffff7c0azero|r",
+			[51] = 1533701582,
+			[50] = "CHAT_MSG_BN_WHISPER",
+			[53] = "zero",
 		}, -- [127]
 	},
 	["ChatEditHistory"] = {
-		"/g It takes forever.", -- [1]
-		"/raid Up top.", -- [2]
-		"/raid Free casting.", -- [3]
-		"/raid Sweet tanking.", -- [4]
-		"/mac", -- [5]
-		"/dbm", -- [6]
-		"/cw Kampachi-Bonechewer No problem.", -- [7]
-		"/cw Kampachi-Bonechewer Graphics drivers crashed.", -- [8]
-		"/wa", -- [9]
-		"/raid 4 is fine.", -- [10]
-		"/raid I can go Holy and carry.", -- [11]
-		"/raid Lol", -- [12]
-		"/raid Lol that rez at the end.", -- [13]
-		"/raid Funny.", -- [14]
-		"/raid Just get DPS :)", -- [15]
-		"/raid You're what, 6/11M?", -- [16]
-		"/raid Who cares.", -- [17]
-		"/raid kk", -- [18]
-		"/raid Just wipe.", -- [19]
-		"/raid Wasting time.", -- [20]
+		"/cw Kapex-Illidan Hit me up whenever.", -- [1]
+		"/raid Lol", -- [2]
+		"/raid That's fine.", -- [3]
+		"/cw Zaranà Noct is your guy, right?", -- [4]
+		"/cw Noctuaa I really like your tanking this evening.", -- [5]
+		"/cw Noctuaa-Illidan Esp. the trash pacing :)", -- [6]
+		"/cw Noctuaa-Illidan Seriously.", -- [7]
+		"/o Lol Rein again.", -- [8]
+		"/o Funny.", -- [9]
+		"/cw Noctuaa Hold on one sec.", -- [10]
+		"/cw Obe-Mal'Ganis You guys did solid.", -- [11]
+		"/cw Jaggen-Mal'Ganis You guys did solid.", -- [12]
+		"/cw Jaggen-Mal'Ganis Except for Agg, it was fun.", -- [13]
+		"/cw Jaggen-Mal'Ganis It's nice to see people snap down too though.", -- [14]
+		"/cw Obe-Mal'Ganis You did fine, it's all silly pre-patch.", -- [15]
+		"/cw Obe-Mal'Ganis Fun to see mechanics.", -- [16]
+		"/cw Jaggen-Mal'Ganis Yeah that sounds great.", -- [17]
+		" We'll see.", -- [18]
+		" As far as raid leading, that's my turf again.", -- [19]
+		" Which I'm very happy about.", -- [20]
 	},
 	["BodyGuard"] = {
-		["IsInValidZone"] = true,
-		["MaxHealth"] = 0,
-		["Health"] = 0,
 		["Active"] = false,
+		["Health"] = 0,
+		["MaxHealth"] = 0,
+		["IsInValidZone"] = true,
 	},
 }

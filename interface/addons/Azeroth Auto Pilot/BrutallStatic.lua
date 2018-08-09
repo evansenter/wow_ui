@@ -10,6 +10,7 @@ AAP.BrutallCC.BrutallFrame:SetPoint("CENTER", UIParent, "CENTER", 0, 0)
 AAP.BrutallCC.Timer = 0
 AAP.BrutallCC.TargetTimer = 0
 
+
 function AAP_BrutallShoFunc(AAPCID)
 	local Wheight = 0
 	if (AAP.BrutallCC.BrutalCCList[AAPCID]["Interruptable"]) then
@@ -439,7 +440,7 @@ AAP.BrutallCC.BrutallFrame.FS1:SetPoint("TOPLEFT",AAP.BrutallCC.BrutallFrame.Fra
 AAP.BrutallCC.BrutallFrame.FS1:SetWidth(120)
 AAP.BrutallCC.BrutallFrame.FS1:SetHeight(38)
 AAP.BrutallCC.BrutallFrame.FS1:SetJustifyH("LEFT")
-AAP.BrutallCC.BrutallFrame.FS1:SetFont(AAP_Font, 16)
+AAP.BrutallCC.BrutallFrame.FS1:SetFontObject("GameFontNormalSmall")
 AAP.BrutallCC.BrutallFrame.FS1:SetText("Interruptable")
 AAP.BrutallCC.BrutallFrame.FS1:SetTextColor(0, 1, 0)
 
@@ -449,7 +450,7 @@ AAP.BrutallCC.BrutallFrame.FS2:SetPoint("TOPLEFT",AAP.BrutallCC.BrutallFrame.Fra
 AAP.BrutallCC.BrutallFrame.FS2:SetWidth(120)
 AAP.BrutallCC.BrutallFrame.FS2:SetHeight(38)
 AAP.BrutallCC.BrutallFrame.FS2:SetJustifyH("LEFT")
-AAP.BrutallCC.BrutallFrame.FS2:SetFont(AAP_Font, 16)
+AAP.BrutallCC.BrutallFrame.FS2:SetFontObject("GameFontNormalSmall")
 AAP.BrutallCC.BrutallFrame.FS2:SetText("Stunnable")
 AAP.BrutallCC.BrutallFrame.FS2:SetTextColor(0, 1, 0)
 
@@ -459,7 +460,7 @@ AAP.BrutallCC.BrutallFrame.FS3:SetPoint("TOPLEFT",AAP.BrutallCC.BrutallFrame.Fra
 AAP.BrutallCC.BrutallFrame.FS3:SetWidth(120)
 AAP.BrutallCC.BrutallFrame.FS3:SetHeight(38)
 AAP.BrutallCC.BrutallFrame.FS3:SetJustifyH("LEFT")
-AAP.BrutallCC.BrutallFrame.FS3:SetFont(AAP_Font, 16)
+AAP.BrutallCC.BrutallFrame.FS3:SetFontObject("GameFontNormalSmall")
 AAP.BrutallCC.BrutallFrame.FS3:SetText("Fearable")
 AAP.BrutallCC.BrutallFrame.FS3:SetTextColor(0, 1, 0)
 
@@ -503,7 +504,7 @@ AAP.BrutallCC.BrutallFrame.FS4:SetPoint("LEFT",AAP.BrutallCC.BrutallFrame.FrameN
 AAP.BrutallCC.BrutallFrame.FS4:SetWidth(170)
 AAP.BrutallCC.BrutallFrame.FS4:SetHeight(20)
 AAP.BrutallCC.BrutallFrame.FS4:SetJustifyH("LEFT")
-AAP.BrutallCC.BrutallFrame.FS4:SetFont(AAP_Font, 16)
+AAP.BrutallCC.BrutallFrame.FS4:SetFontObject("GameFontNormalSmall")
 AAP.BrutallCC.BrutallFrame.FS4:SetText("Mob Name")
 AAP.BrutallCC.BrutallFrame.FS4:SetTextColor(1, 1, 0)
 AAP.BrutallCC.BrutallFrame.FrameName:Hide()

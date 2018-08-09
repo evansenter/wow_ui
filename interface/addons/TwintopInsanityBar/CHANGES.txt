@@ -1,16 +1,10 @@
-lightweight tag ae63f138301feaf3c8916049424fde07062eb37c 8.0.1.10-release
+lightweight tag 34da8ff7207cc8a2712d1fb4224d6153635dcc95 8.0.1.12-release
 Author:	David C. Uhrig <david@twintop-tahoe.com>
-Date:	Tue Jul 24 20:36:00 2018 -0700
+Date:	Wed Aug 8 19:37:46 2018 -0700
 
-commit ae63f138301feaf3c8916049424fde07062eb37c
+commit 34da8ff7207cc8a2712d1fb4224d6153635dcc95
 Author: David C. Uhrig <david@twintop-tahoe.com>
-Date:   Tue Jul 24 20:36:00 2018 -0700
+Date:   Wed Aug 8 19:37:46 2018 -0700
 
-    -Fix problem with color selector border texture.
-    -Adjust settings structure for summary display.
-    -Comment out old S2M summary hooks for now.
-    -Remove Dispersion Stacks from PrintVoidformSummary for now.
-    -Adjust layout of Simple Voidform option in UI.
-    -Change offset variable names for the settings window.
-    -Increase accuracy of the threshold line for entering Voidform (still not pixel perfect :( ).
+    Remove debug printing.
 

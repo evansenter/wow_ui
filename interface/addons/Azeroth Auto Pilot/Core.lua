@@ -44,8 +44,6 @@ AAP_GearIlvlList = {}
 AAP_ButtonCDCounter = {}
 AAP_AfkTable = {}
 AAP_CompletedQs = GetQuestsCompleted()
-AAP_FontUrl = "Interface\\AddOns\\Azeroth Auto Pilot\\Font\\"
-AAP_Font = AAP_FontUrl.."LiberationSans-Regular.TTF"
 AAP_img = "Interface\\AddOns\\Azeroth Auto Pilot\\img\\"
 AAP_zones = "Interface\\AddOns\\Azeroth Auto Pilot\\Zones\\"
 
@@ -60,18 +58,20 @@ function AAP_UpdateILVLGear()
 		if (itemLink) then
 			local _, _, _, _, _, _, _, _, SpotName = GetItemInfo(itemLink)
 			local ilvl = GetDetailedItemLevelInfo(itemLink)
-			if (SpotName == "INVTYPE_WEAPONOFFHAND") then
-				SpotName = "INVTYPE_WEAPON"
-			end
-			if (SpotName == "INVTYPE_WEAPONMAINHAND") then
-				SpotName = "INVTYPE_WEAPON"
-			end
-			if (AAP_GearIlvlList[SpotName]) then
-				if (AAP_GearIlvlList[SpotName] > ilvl) then
+			if (SpotName and ilvl) then
+				if (SpotName == "INVTYPE_WEAPONOFFHAND") then
+					SpotName = "INVTYPE_WEAPON"
+				end
+				if (SpotName == "INVTYPE_WEAPONMAINHAND") then
+					SpotName = "INVTYPE_WEAPON"
+				end
+				if (AAP_GearIlvlList[SpotName]) then
+					if (AAP_GearIlvlList[SpotName] > ilvl) then
+						AAP_GearIlvlList[SpotName] = ilvl
+					end
+				else
 					AAP_GearIlvlList[SpotName] = ilvl
 				end
-			else
-				AAP_GearIlvlList[SpotName] = ilvl
 			end
 		end
 	end
@@ -376,7 +376,7 @@ AAP_ArrowFrame.arrow = AAP_ArrowFrame:CreateTexture(nil, "OVERLAY")
 AAP_ArrowFrame.arrow:SetTexture("Interface\\Addons\\Azeroth Auto Pilot\\Img\\Arrow.blp")
 AAP_ArrowFrame.arrow:SetAllPoints()
 AAP_ArrowFrame.distance = AAP_ArrowFrame:CreateFontString("ARTWORK", "ChatFontNormal")
-AAP_ArrowFrame.distance:SetFont(AAP_Font, 10)
+AAP_ArrowFrame.distance:SetFontObject("GameFontNormalSmall")
 AAP_ArrowFrame.distance:SetPoint("TOP", AAP_ArrowFrame, "BOTTOM", 0, 0)
 AAP_ArrowFrame:Hide()
 AAP_ArrowFrame:SetScript("OnMouseDown", function(self, button)
@@ -399,8 +399,8 @@ AAP_ArrowFrame:SetScript("OnHide", function(self)
 end)
 
 AAP_AfkFrame = CreateFrame("frame", "AAP_AFkFrames", UIParent)
-AAP_AfkFrame:SetWidth(150)
-AAP_AfkFrame:SetHeight(50)
+AAP_AfkFrame:SetWidth(120)
+AAP_AfkFrame:SetHeight(40)
 AAP_AfkFrame:SetPoint("CENTER", UIParent, "CENTER",0,150)
 AAP_AfkFrame:EnableMouse(true)
 AAP_AfkFrame:SetMovable(true)
@@ -438,7 +438,7 @@ AAP_RideFrame.arrow = AAP_RideFrame:CreateTexture(nil, "OVERLAY")
 AAP_RideFrame.arrow:SetTexture("Interface/Icons/achievement_doublerainbow.blp")
 AAP_RideFrame.arrow:SetAllPoints()
 AAP_RideFrame.distance = AAP_RideFrame:CreateFontString("ARTWORK", "ChatFontNormal")
-AAP_RideFrame.distance:SetFont(AAP_Font, 10)
+AAP_RideFrame.distance:SetFontObject("GameFontNormalSmall")
 AAP_RideFrame.distance:SetPoint("TOP", AAP_RideFrame, "BOTTOM", 0, 0)
 AAP_RideFrame:Hide()
 AAP_RideFrame:SetScript("OnMouseDown", function(self, button)
@@ -462,9 +462,7 @@ end)
 AAP_RideFrame.Fontstring = AAP_RideFrame:CreateFontString("CLaSettingsFS2212","OVERLAY", "ChatFontNormal")
 AAP_RideFrame.Fontstring:SetParent(AAP_RideFrame)
 AAP_RideFrame.Fontstring:SetPoint("CENTER", AAP_RideFrame, "CENTER", 0, 0)
-AAP_RideFrame.Fontstring:SetWidth(143)
-AAP_RideFrame.Fontstring:SetHeight(14)
-AAP_RideFrame.Fontstring:SetFont(AAP_Font, 28)
+AAP_RideFrame.Fontstring:SetFontObject("GameFontNormalSmall")
 AAP_RideFrame.Fontstring:SetText("testaaaaaaaaaaaaaaaaaaaaaaaaaa")
 AAP_RideFrame.Fontstring:SetJustifyH("CENTER")
 AAP_RideFrame.Fontstring:SetTextColor(1, 1, 0)
@@ -472,9 +470,7 @@ AAP_RideFrame.Fontstring:SetTextColor(1, 1, 0)
 AAP_RideFrame.Fontstring2 = AAP_RideFrame:CreateFontString("CLaSettingsFS21212","OVERLAY", "ChatFontNormal")
 AAP_RideFrame.Fontstring2:SetParent(AAP_RideFrame)
 AAP_RideFrame.Fontstring2:SetPoint("CENTER", AAP_RideFrame, "CENTER", 0, -35)
-AAP_RideFrame.Fontstring2:SetWidth(143)
-AAP_RideFrame.Fontstring2:SetHeight(14)
-AAP_RideFrame.Fontstring2:SetFont(AAP_Font, 24)
+AAP_RideFrame.Fontstring2:SetFontObject("GameFontNormalSmall")
 AAP_RideFrame.Fontstring2:SetText("x")
 AAP_RideFrame.Fontstring2:SetJustifyH("CENTER")
 AAP_RideFrame.Fontstring2:SetTextColor(1, 1, 0)
@@ -483,16 +479,14 @@ AAP_RideFrame.Fontstring2:SetTextColor(1, 1, 0)
 AAP_AfkFrame.Fontstring = AAP_AfkFrame:CreateFontString("AAPAFkFont","ARTWORK", "ChatFontNormal")
 AAP_AfkFrame.Fontstring:SetParent(AAP_AfkFrame)
 AAP_AfkFrame.Fontstring:SetPoint("LEFT", AAP_AfkFrame, "LEFT", 10, 0)
-AAP_AfkFrame.Fontstring:SetWidth(150)
-AAP_AfkFrame.Fontstring:SetHeight(34)
-AAP_AfkFrame.Fontstring:SetFont(AAP_Font, 20)
+AAP_AfkFrame.Fontstring:SetFontObject("GameFontNormalLarge")
 AAP_AfkFrame.Fontstring:SetText("AFK:")
 AAP_AfkFrame.Fontstring:SetJustifyH("LEFT")
 AAP_AfkFrame.Fontstring:SetTextColor(1, 1, 0)
 AAP_AfkFrame:Hide()
 
 AAP_ArrowFrame.Button = CreateFrame("Button", "AAP_ArrowActiveButton", AAP_ArrowFrame)
-AAP_ArrowFrame.Button:SetWidth(55)
+AAP_ArrowFrame.Button:SetWidth(85)
 AAP_ArrowFrame.Button:SetHeight(17)
 AAP_ArrowFrame.Button:SetPoint("BOTTOM", AAP_ArrowFrame, "BOTTOM", 0, -30)
 AAP_ArrowFrame.Button:SetScript("OnMouseDown", function(self, button)
@@ -513,9 +507,8 @@ AAP_ArrowFrame.Button:SetBackdrop( {
 AAP_ArrowFrame.Fontstring = AAP_ArrowFrame:CreateFontString("CLSettingsFS2212","ARTWORK", "ChatFontNormal")
 AAP_ArrowFrame.Fontstring:SetParent(AAP_ArrowFrame.Button)
 AAP_ArrowFrame.Fontstring:SetPoint("CENTER", AAP_ArrowFrame.Button, "CENTER", 0, 0)
-AAP_ArrowFrame.Fontstring:SetWidth(55)
-AAP_ArrowFrame.Fontstring:SetHeight(14)
-AAP_ArrowFrame.Fontstring:SetFont(AAP_Font, 6)
+
+AAP_ArrowFrame.Fontstring:SetFontObject("GameFontNormalSmall")
 AAP_ArrowFrame.Fontstring:SetText("Skip waypoint")
 AAP_ArrowFrame.Fontstring:SetTextColor(1, 1, 0)
 AAP_ArrowFrame.Button:Hide()
@@ -1103,7 +1096,7 @@ AAP_CoreEventFrame:SetScript("OnEvent", function(self, event, ...)
 			AAP_QuestDelayUpdTimer.anim:SetDuration(6)
 			AAP_QuestDelayUpdTimer:SetLooping("REPEAT")
 			AAP_QuestDelayUpdTimer:SetScript("OnLoop", function(self, event, ...)
-				AAP_ChangeZone()
+				AAP_ZoneChangeTest()
 				AAP_UpdateQuestList()
 				AAP_QuestDelayUpdTimer:Stop()
 			end)
@@ -1324,13 +1317,14 @@ AAP_CoreEventFrame:SetScript("OnEvent", function(self, event, ...)
 				AAP_CreateMacro()
 				AAP_UpdateILVLGear()
 				AAP_ArrowEventLoadinT:Stop()
+				AAP_ZoneChangeTest()
 			end)
 			AAP_ArrowEventLoadinT:Play()
 
-
+			AAP_UpdateILVLGear()
 			AAP_MakeGroupList()
 			AAP_UpdateQuestList()
-			AAP_ChangeZone()
+			AAP_ZoneChangeTest()
 			AAP_Reset = 0
 			AAP_UpdateQuestList()
 			AAP_QuestDelayUpdTimer:Play()
@@ -1400,7 +1394,7 @@ end
 			end
 		end
 	elseif (event=="QUEST_DETAIL" and AAP_DisableAddon == 0) then
-		if (GetQuestID() and (AAP1[AAP_Realm][AAP_Name]["Settings"]["AutoAccept"] == 1) and (not IsControlKeyDown()) and (GetQuestID() ~= 50476) and (GetQuestID() ~= 52058)) then
+		if (GetQuestID() and (AAP1[AAP_Realm][AAP_Name]["Settings"]["AutoAccept"] == 1) and (not IsControlKeyDown()) and (GetQuestID() ~= 50476) and (GetQuestID() ~= 52058) and (53372 ~= GetQuestID())) then
 			AAP_QuestAcceptTimer:Play()
 		end
 	end

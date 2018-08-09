@@ -1,18 +1,16 @@
-lightweight tag 05a1863e9d4a0ca3dba2cc89f4d9ea6edb242f15 6.19.8
-Author:	Luxocracy <luxor355@gmail.com>
-Date:	Tue Aug 7 14:23:37 2018 +0200
+lightweight tag 159f97acc15a40c9fe54c22ae0914e66579e8ca9 6.19.9
+Author:	GitHub <noreply@github.com>
+Date:	Wed Aug 8 11:20:42 2018 +0200
 
-commit 05a1863e9d4a0ca3dba2cc89f4d9ea6edb242f15
-Author: Luxocracy <luxor355@gmail.com>
-Date:   Tue Aug 7 14:23:37 2018 +0200
+commit 20e993f188ebf41318cb1ad563efa4f69fffdab6
+Author: ja0b <11311685+ja0b@users.noreply.github.com>
+Date:   Wed Aug 8 01:12:49 2018 +0200
 
-    Changed event 'NAME_PLATE_UNIT_ADDED'
-    
-    - Altered the way the event 'NAME_PLATE_UNIT_ADDED' was handled as this seems to be the cause of a lot of wierd issues that are hard to reproduce.
+    Adding "Tidy Plates: Renaitre" theme --> https://wow.curseforge.com/projects/tidy-plates-continued/issues/3
 
-commit 9fe3d7e36a5f814ca4ed28cd4394bdbcb7c4ae03
-Author: Higi <higi84@gmail.com>
-Date:   Sat Aug 4 11:29:39 2018 +0200
+commit 20e993f188ebf41318cb1ad563efa4f69fffdab6
+Author: ja0b <11311685+ja0b@users.noreply.github.com>
+Date:   Wed Aug 8 01:12:49 2018 +0200
 
-    Added Classic & Roth Themes
+    Adding "Tidy Plates: Renaitre" theme --> https://wow.curseforge.com/projects/tidy-plates-continued/issues/3
 

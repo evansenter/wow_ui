@@ -7,7 +7,7 @@ AAP_panel.title = CreateFrame("SimpleHTML",nil,AAP.AAP_panel)
 AAP_panel.title:SetWidth(500)
 AAP_panel.title:SetHeight(20)
 AAP_panel.title:SetPoint("TOPLEFT", AAP.AAP_panel, 0,-30)
-AAP_panel.title:SetFont(AAP_Font, 18,"OUTLINE")
+AAP_panel.title:SetFontObject("GameFontHighlightLarge")
 AAP_panel.title:SetText("Azeroth Auto Pilot - v" .. AAP_Version)
 AAP_ImportI = 0
 
@@ -80,7 +80,7 @@ function LoadOptionsFrame()
 	AAP.OptionsFrame.FontString1:SetPoint("TOP",AAP.OptionsFrame.MainFrame,"TOP",0,0)
 	AAP.OptionsFrame.FontString1:SetWidth(240)
 	AAP.OptionsFrame.FontString1:SetHeight(20)
-	AAP.OptionsFrame.FontString1:SetFont(AAP_Font, 16,"OUTLINE")
+	AAP.OptionsFrame.FontString1:SetFontObject("GameFontHighlightLarge")
 	AAP.OptionsFrame.FontString1:SetText("Azeroth Auto Pilot - v" .. AAP_Version)
 	AAP.OptionsFrame.FontString1:SetTextColor(1, 1, 0)
 
