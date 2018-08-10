@@ -22,8 +22,8 @@ DBM_AutoInvite_Settings = {
 	["promote_rank"] = 3,
 	["promote_all"] = false,
 	["other"] = false,
-	["lastaoerank"] = 5,
 	["guildmates"] = true,
+	["lastaoerank"] = 5,
 }
 DBM_DKP_System_Settings = {
 	["boss_event"] = false,
@@ -51,9 +51,9 @@ DBM_Standby_Settings = {
 	["log"] = {
 	},
 	["send_whisper"] = false,
-	["sb_times"] = {
-	},
 	["sb_users"] = {
+	},
+	["sb_times"] = {
 	},
 	["history"] = {
 	},

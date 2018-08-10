@@ -435,12 +435,12 @@ function AAP_Pickup()
 			AAP_Reset = 0
 			AAP_Plus()
 		end
-	elseif (AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]]["QuestLineSkip"] and Zdedaap == 0 and AAP1[AAP_Realm][AAP_Name]["QlineSkip"][AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]]["QuestLineSkip"]] and AAP1[AAP_Realm][AAP_Name]["QlineSkip"][AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]]["QuestLineSkip"]] == 0) then
+	elseif (AAP_Quests and AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]]["QuestLineSkip"] and Zdedaap == 0 and AAP1[AAP_Realm][AAP_Name]["QlineSkip"][AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]]["QuestLineSkip"]] and AAP1[AAP_Realm][AAP_Name]["QlineSkip"][AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]]["QuestLineSkip"]] == 0) then
 		QNumberLocal = 0
 		AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone] = AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone] + 1
 		AAP_Reset = 0
 		AAP_Plus()
-	elseif (AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]]["GroupTask"] and Zdedaap == 0) then
+	elseif (AAP_Quests and AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]]["GroupTask"] and Zdedaap == 0) then
 		if (AAP1[AAP_Realm][AAP_Name]["WantedQuestList"][AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]]["GroupTask"]] and AAP1[AAP_Realm][AAP_Name]["WantedQuestList"][AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]]["GroupTask"]] == 0) then
 			QNumberLocal = 0
 			AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone] = AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone] + 1

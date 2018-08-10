@@ -380,7 +380,7 @@ AAP_ArrowFrame.distance:SetFontObject("GameFontNormalSmall")
 AAP_ArrowFrame.distance:SetPoint("TOP", AAP_ArrowFrame, "BOTTOM", 0, 0)
 AAP_ArrowFrame:Hide()
 AAP_ArrowFrame:SetScript("OnMouseDown", function(self, button)
-	if button == "LeftButton" and not AAP_ArrowFrameM.isMoving then
+	if button == "LeftButton" and not AAP_ArrowFrameM.isMoving and AAP1[AAP_Realm][AAP_Name]["Settings"]["LockArrow"] == 0 then
 		AAP_ArrowFrameM:StartMoving();
 		AAP_ArrowFrameM.isMoving = true;
 	end
@@ -389,12 +389,18 @@ AAP_ArrowFrame:SetScript("OnMouseUp", function(self, button)
 	if button == "LeftButton" and AAP_ArrowFrameM.isMoving then
 		AAP_ArrowFrameM:StopMovingOrSizing();
 		AAP_ArrowFrameM.isMoving = false;
+		AAP1[AAP_Realm][AAP_Name]["Settings"]["arrowleft"] = AAP_ArrowFrameM:GetLeft()
+		AAP1[AAP_Realm][AAP_Name]["Settings"]["arrowtop"] = AAP_ArrowFrameM:GetTop() - GetScreenHeight()
+		AAP_ArrowFrameM:SetPoint("TOPLEFT", UIParent, "TOPLEFT", AAP1[AAP_Realm][AAP_Name]["Settings"]["arrowleft"], AAP1[AAP_Realm][AAP_Name]["Settings"]["arrowtop"])
 	end
 end)
 AAP_ArrowFrame:SetScript("OnHide", function(self)
 	if ( AAP_ArrowFrameM.isMoving ) then
 		AAP_ArrowFrameM:StopMovingOrSizing();
 		AAP_ArrowFrameM.isMoving = false;
+		AAP1[AAP_Realm][AAP_Name]["Settings"]["arrowleft"] = AAP_ArrowFrameM:GetLeft()
+		AAP1[AAP_Realm][AAP_Name]["Settings"]["arrowtop"] = AAP_ArrowFrameM:GetTop() - GetScreenHeight()
+		AAP_ArrowFrameM:SetPoint("TOPLEFT", UIParent, "TOPLEFT", AAP1[AAP_Realm][AAP_Name]["Settings"]["arrowleft"], AAP1[AAP_Realm][AAP_Name]["Settings"]["arrowtop"])
 	end
 end)
 
@@ -835,6 +841,9 @@ AAP_CoreEventFrame:SetScript("OnEvent", function(self, event, ...)
 				AAP1[AAP_Realm][AAP_Name]["Settings"]["alpha"] = 1
 				AAP1[AAP_Realm][AAP_Name]["Settings"]["arrowleft"] = GetScreenWidth() / 2.05
 				AAP1[AAP_Realm][AAP_Name]["Settings"]["arrowtop"] = -(GetScreenHeight() / 1.5)
+			end
+			if (not AAP1[AAP_Realm][AAP_Name]["Settings"]["LockArrow"]) then
+				AAP1[AAP_Realm][AAP_Name]["Settings"]["LockArrow"] = 0
 			end
 			if (not AAP1[AAP_Realm][AAP_Name]["Settings"]["BannerScale"]) then
 				AAP1[AAP_Realm][AAP_Name]["Settings"]["BannerScale"] = UIParent:GetScale()

@@ -242,8 +242,39 @@ function LoadOptionsFrame()
 		end
 	end)
 
+	AAP.OptionsFrame.CheckButton8 = CreateFrame("CheckButton", "CLxCheckButton8", AAP.OptionsFrame.MainFrame, "ChatConfigCheckButtonTemplate");
+	AAP.OptionsFrame.CheckButton8:SetPoint("TOPLEFT", AAP.OptionsFrame.MainFrame, "TOPLEFT", 10, -230)
+	if (AAP1[AAP_Realm][AAP_Name]["Settings"]["Lock"] == 0) then
+		AAP.OptionsFrame.CheckButton8:SetChecked(false)
+	else
+		AAP.OptionsFrame.CheckButton8:SetChecked(true)
+	end
+	getglobal(AAP.OptionsFrame.CheckButton8:GetName() .. 'Text'):SetText(": "..AAP_Locals["Lock QuestList"])
+	getglobal(AAP.OptionsFrame.CheckButton8:GetName() .. 'Text'):SetTextColor(1, 1, 1)
+	AAP.OptionsFrame.CheckButton8:SetScript("OnClick", function()
+		if (AAP.OptionsFrame.CheckButton8:GetChecked() == true) then
+			AAP1[AAP_Realm][AAP_Name]["Settings"]["Lock"] = 1
+		else
+			AAP1[AAP_Realm][AAP_Name]["Settings"]["Lock"] = 0
+		end
+	end)
 
-
+	AAP.OptionsFrame.CheckButton9 = CreateFrame("CheckButton", "CLxCheckButton9", AAP.OptionsFrame.MainFrame, "ChatConfigCheckButtonTemplate");
+	AAP.OptionsFrame.CheckButton9:SetPoint("TOPLEFT", AAP.OptionsFrame.MainFrame, "TOPLEFT", 10, -250)
+	if (AAP1[AAP_Realm][AAP_Name]["Settings"]["LockArrow"] == 0) then
+		AAP.OptionsFrame.CheckButton9:SetChecked(false)
+	else
+		AAP.OptionsFrame.CheckButton9:SetChecked(true)
+	end
+	getglobal(AAP.OptionsFrame.CheckButton9:GetName() .. 'Text'):SetText(": "..AAP_Locals["Lock Arrow"])
+	getglobal(AAP.OptionsFrame.CheckButton9:GetName() .. 'Text'):SetTextColor(1, 1, 1)
+	AAP.OptionsFrame.CheckButton9:SetScript("OnClick", function()
+		if (AAP.OptionsFrame.CheckButton9:GetChecked() == true) then
+			AAP1[AAP_Realm][AAP_Name]["Settings"]["LockArrow"] = 1
+		else
+			AAP1[AAP_Realm][AAP_Name]["Settings"]["LockArrow"] = 0
+		end
+	end)
 
 
 	AAP.OptionsFrame.Slider1 = CreateFrame("Slider", "AAP_SettingsSlider1",AAP.OptionsFrame.MainFrame, "OptionsSliderTemplate")

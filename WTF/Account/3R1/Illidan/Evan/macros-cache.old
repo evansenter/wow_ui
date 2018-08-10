@@ -59,7 +59,7 @@ VER 3 0100000000000025 "Renew" "INV_Misc_QuestionMark"
 #showtooltip
 /use [target=mouseover,help,nodead][]Renew
 END
-VER 3 0100000000000021 "Shining Force" "INV_Misc_QuestionMark"
+VER 3 0100000000000021 "Shining Force" "571554"
 #showtooltip Shining Force
 /use [target=mouseover,help,nodead]Shining Force
 END

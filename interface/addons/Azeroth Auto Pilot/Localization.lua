@@ -61,9 +61,11 @@ AAP_Locals = {
 	["Extracaravans"] = "Don't need to use the extra action button",
 	["dotsexpire"] = "Let dots on you expire before clicking altar",
 	["Banneronstuff"] = "Use Banner on Corpses",
-	["GetSaurolistBuff"] = "There is clickable buffs all over the zone.",
+	["GetSaurolistBuff"] = "There are clickable buffs all over the zone.",
 	["Fixed Quest"] = "If they haven't fixed quest, leave quest at Rokor",
 	["WarModeOff"] = "Turn On WarMode!",
+	["Lock QuestList"] = "Lock QuestList Window",
+	["Lock Arrow"] = "Lock Arrow Window",
 }
 AAP_Locals["zhTW"] = {
 	["Accept Quest"] = "接受任務",

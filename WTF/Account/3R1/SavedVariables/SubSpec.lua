@@ -251,39 +251,39 @@ SubSpecStorage = {
 			["name"] = "Questing",
 			["data"] = {
 				{
-					["id"] = 22312,
-					["name"] = "Twist of Fate",
-					["column"] = 1,
+					["id"] = 22314,
+					["name"] = "Shadow Word: Void",
+					["column"] = 3,
 				}, -- [1]
 				{
-					["id"] = 22325,
-					["name"] = "Mania",
+					["id"] = 22315,
+					["name"] = "Body and Soul",
 					["column"] = 1,
 				}, -- [2]
 				{
-					["id"] = 22487,
-					["name"] = "Mind Bomb",
-					["column"] = 1,
+					["id"] = 23126,
+					["name"] = "Misery",
+					["column"] = 2,
 				}, -- [3]
 				{
-					["id"] = 21751,
-					["name"] = "Lingering Insanity",
+					["id"] = 23137,
+					["name"] = "Last Word",
 					["column"] = 1,
 				}, -- [4]
 				{
-					["id"] = 22311,
-					["name"] = "Auspicious Spirits",
-					["column"] = 2,
+					["id"] = 21755,
+					["name"] = "Shadow Crash",
+					["column"] = 3,
 				}, -- [5]
 				{
 					["id"] = 21719,
-					["name"] = "Misery",
+					["name"] = "Mindbender",
 					["column"] = 2,
 				}, -- [6]
 				{
-					["id"] = 21978,
-					["name"] = "Shadow Crash",
-					["column"] = 2,
+					["id"] = 21637,
+					["name"] = "Legacy of the Void",
+					["column"] = 1,
 				}, -- [7]
 			},
 		}, -- [2]

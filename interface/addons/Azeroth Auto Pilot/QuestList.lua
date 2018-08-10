@@ -35,7 +35,7 @@ function AAP_MakeGroupList()
 			tile = true, tileSize = 10, edgeSize = 10, insets = { left = 2, right = 2, top = 2, bottom = 2 }
 		});
 		AAP.PartyList.PartyFrames[CLi]:SetScript("OnMouseDown", function(self, button)
-			if button == "LeftButton" then
+			if button == "LeftButton" and AAP1[AAP_Realm][AAP_Name]["Settings"]["Lock"] == 0 then
 				AAP.PartyList.PartyFrame:StartMoving();
 				AAP.PartyList.PartyFrame.isMoving = true;
 			end
@@ -82,7 +82,7 @@ function AAP_MakeGroupList()
 			tile = true, tileSize = 10, edgeSize = 10, insets = { left = 2, right = 2, top = 2, bottom = 2 }
 		});
 		AAP.PartyList.PartyFrames2[CLi]:SetScript("OnMouseDown", function(self, button)
-			if button == "LeftButton" then
+			if button == "LeftButton" and AAP1[AAP_Realm][AAP_Name]["Settings"]["Lock"] == 0 then
 				AAP.PartyList.PartyFrame:StartMoving();
 				AAP.PartyList.PartyFrame.isMoving = true;
 			end

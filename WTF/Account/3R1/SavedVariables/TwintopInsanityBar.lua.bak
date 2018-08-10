@@ -92,13 +92,13 @@ TwintopInsanityBarSettings = {
 		["notZeroShow"] = false,
 	},
 	["showS2MSummary"] = true,
-	["version"] = 1,
+	["showSummary"] = false,
 	["hasteApproachingThreshold"] = 135,
 	["summary"] = {
 		["show"] = false,
 		["simple"] = false,
 	},
-	["showSummary"] = false,
+	["version"] = 1,
 	["hastePrecision"] = 2,
 	["colors"] = {
 		["threshold"] = {

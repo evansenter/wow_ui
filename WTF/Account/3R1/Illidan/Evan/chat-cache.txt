@@ -1,4 +1,4 @@
-VERSION 5
+VERSION 6
 
 ADDEDVERSION 21
 
@@ -8,7 +8,6 @@ Trade 0 2 0
 LocalDefense 0 3 0
 LookingForGroup 0 4 0
 slashheals 1 5 0
-Community:2070591:1 0 7 1
 END
 
 ZONECHANNELS 0
@@ -155,10 +154,9 @@ END
 CHANNELS
 LookingForGroup
 slashheals
-Community:2070591:1
 END
 
-ZONECHANNELS 0
+ZONECHANNELS 2097155
 
 END
 
@@ -183,7 +181,6 @@ COMBAT_MISC_INFO
 END
 
 CHANNELS
-Community:2070591:1
 END
 
 ZONECHANNELS 0
@@ -304,7 +301,6 @@ END
 
 CHANNELS
 slashheals
-Community:2070591:1
 END
 
 ZONECHANNELS 0

@@ -12,72 +12,6 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			4626, -- [11]
-			"Player-57-0583ABC7", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1533699280,
-			[50] = "CHAT_MSG_SAY",
-		}, -- [1]
-		{
-			"Scorching Blaze on Obe", -- [1]
-			"Obe-Mal'Ganis", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Obe-Mal'Ganis", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			4648, -- [11]
-			"Player-3684-09D61A3A", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffaad372Obe-Mal'Ganis|r",
-			[51] = 1533699322,
-			[50] = "CHAT_MSG_SAY",
-		}, -- [2]
-		{
-			"Scorching Blaze on Jarinia", -- [1]
-			"Jarinia-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Jarinia", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			4649, -- [11]
-			"Player-57-086B5B7A", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff3fc6eaJarinia|r",
-			[51] = 1533699322,
-			[50] = "CHAT_MSG_SAY",
-		}, -- [3]
-		{
-			"Scorching Blaze on Evan", -- [1]
-			"Evan-Illidan", -- [2]
-			"Orcish", -- [3]
-			"", -- [4]
-			"Evan", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
 			4650, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
@@ -88,7 +22,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffEvan|r",
 			[51] = 1533699322,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [4]
+		}, -- [1]
 		{
 			"Scorching Blaze on Zaranà", -- [1]
 			"Zaranà-Illidan", -- [2]
@@ -110,7 +44,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffZaranà|r",
 			[51] = 1533699323,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [5]
+		}, -- [2]
 		{
 			"Noct is your guy, right?", -- [1]
 			"Zaranà-Illidan", -- [2]
@@ -132,7 +66,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffZaranà|r",
 			[51] = 1533699357,
 			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [6]
+		}, -- [3]
 		{
 			"^LFW_H", -- [1]
 			"Tyrabank-Illidan", -- [2]
@@ -154,7 +88,7 @@ ElvCharacterDB = {
 			[52] = "|cfff48cbaTyrabank|r",
 			[51] = 1533699363,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [7]
+		}, -- [4]
 		{
 			"yeah", -- [1]
 			"Zaranà-Illidan", -- [2]
@@ -176,7 +110,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffZaranà|r",
 			[51] = 1533699365,
 			[50] = "CHAT_MSG_WHISPER",
-		}, -- [8]
+		}, -- [5]
 		{
 			"I really like your tanking this evening.", -- [1]
 			"Noctuaa-Illidan", -- [2]
@@ -198,7 +132,7 @@ ElvCharacterDB = {
 			[52] = "|cffa330c9Noctuaa|r",
 			[51] = 1533699370,
 			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [9]
+		}, -- [6]
 		{
 			"Esp. the trash pacing :)", -- [1]
 			"Noctuaa-Illidan", -- [2]
@@ -220,7 +154,7 @@ ElvCharacterDB = {
 			[52] = "|cffa330c9Noctuaa|r",
 			[51] = 1533699379,
 			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [10]
+		}, -- [7]
 		{
 			"haha gotta set the pace to keep things going. cant waste time on trash ><", -- [1]
 			"Noctuaa-Illidan", -- [2]
@@ -242,7 +176,7 @@ ElvCharacterDB = {
 			[52] = "|cffa330c9Noctuaa|r",
 			[51] = 1533699426,
 			[50] = "CHAT_MSG_WHISPER",
-		}, -- [11]
+		}, -- [8]
 		{
 			"Seriously.", -- [1]
 			"Noctuaa-Illidan", -- [2]
@@ -264,7 +198,7 @@ ElvCharacterDB = {
 			[52] = "|cffa330c9Noctuaa|r",
 			[51] = 1533699442,
 			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [12]
+		}, -- [9]
 		{
 			"then I am working on Jaggen and Obe to transfer over, lol", -- [1]
 			"Zaranà-Illidan", -- [2]
@@ -286,7 +220,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffZaranà|r",
 			[51] = 1533699447,
 			[50] = "CHAT_MSG_WHISPER",
-		}, -- [13]
+		}, -- [10]
 		{
 			"if we want them", -- [1]
 			"Zaranà-Illidan", -- [2]
@@ -308,7 +242,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffZaranà|r",
 			[51] = 1533699454,
 			[50] = "CHAT_MSG_WHISPER",
-		}, -- [14]
+		}, -- [11]
 		{
 			"_$31Pjsidijehjr_$ 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,_$ffffff$", -- [1]
 			"Tyrabank-Illidan", -- [2]
@@ -330,7 +264,7 @@ ElvCharacterDB = {
 			[52] = "|cfff48cbaTyrabank|r",
 			[51] = 1533699503,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [15]
+		}, -- [12]
 		{
 			"3", -- [1]
 			"Brún-Illidan", -- [2]
@@ -352,7 +286,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aBrún|r",
 			[51] = 1533699549,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [16]
+		}, -- [13]
 		{
 			"2", -- [1]
 			"Brún-Illidan", -- [2]
@@ -374,7 +308,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aBrún|r",
 			[51] = 1533699550,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [17]
+		}, -- [14]
 		{
 			"1", -- [1]
 			"Brún-Illidan", -- [2]
@@ -396,7 +330,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aBrún|r",
 			[51] = 1533699551,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [18]
+		}, -- [15]
 		{
 			"3", -- [1]
 			"Sureno-Illidan", -- [2]
@@ -418,7 +352,7 @@ ElvCharacterDB = {
 			[52] = "|cfff48cbaSureno|r",
 			[51] = 1533699553,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [19]
+		}, -- [16]
 		{
 			"1", -- [1]
 			"Sureno-Illidan", -- [2]
@@ -440,7 +374,7 @@ ElvCharacterDB = {
 			[52] = "|cfff48cbaSureno|r",
 			[51] = 1533699555,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [20]
+		}, -- [17]
 		{
 			"3", -- [1]
 			"Zaranà-Illidan", -- [2]
@@ -462,7 +396,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffZaranà|r",
 			[51] = 1533699573,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [21]
+		}, -- [18]
 		{
 			"2", -- [1]
 			"Zaranà-Illidan", -- [2]
@@ -484,7 +418,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffZaranà|r",
 			[51] = 1533699574,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [22]
+		}, -- [19]
 		{
 			"1", -- [1]
 			"Zaranà-Illidan", -- [2]
@@ -506,7 +440,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffZaranà|r",
 			[51] = 1533699575,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [23]
+		}, -- [20]
 		{
 			"_$57Rickaroni_$WTS |cff0070dd|Hitem:129956::::::::110:577::13::::|h[Leather Love Seat]|h|r 6k_$a330c9$", -- [1]
 			"Tyrabank-Illidan", -- [2]
@@ -528,7 +462,7 @@ ElvCharacterDB = {
 			[52] = "|cfff48cbaTyrabank|r",
 			[51] = 1533699620,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [24]
+		}, -- [21]
 		{
 			"{rt2}Bomb{rt2}", -- [1]
 			"Evan-Illidan", -- [2]
@@ -550,7 +484,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffEvan|r",
 			[51] = 1533699666,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [25]
+		}, -- [22]
 		{
 			"{rt2}4", -- [1]
 			"Evan-Illidan", -- [2]
@@ -572,7 +506,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffEvan|r",
 			[51] = 1533699677,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [26]
+		}, -- [23]
 		{
 			"{rt2}3", -- [1]
 			"Evan-Illidan", -- [2]
@@ -594,7 +528,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffEvan|r",
 			[51] = 1533699678,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [27]
+		}, -- [24]
 		{
 			"{rt2}2", -- [1]
 			"Evan-Illidan", -- [2]
@@ -616,7 +550,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffEvan|r",
 			[51] = 1533699679,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [28]
+		}, -- [25]
 		{
 			"{rt2}1", -- [1]
 			"Evan-Illidan", -- [2]
@@ -638,7 +572,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffEvan|r",
 			[51] = 1533699680,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [29]
+		}, -- [26]
 		{
 			"Lol Rein again.", -- [1]
 			"Evan-Illidan", -- [2]
@@ -660,7 +594,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffEvan|r",
 			[51] = 1533699696,
 			[50] = "CHAT_MSG_OFFICER",
-		}, -- [30]
+		}, -- [27]
 		{
 			"Funny.", -- [1]
 			"Evan-Illidan", -- [2]
@@ -682,7 +616,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffEvan|r",
 			[51] = 1533699698,
 			[50] = "CHAT_MSG_OFFICER",
-		}, -- [31]
+		}, -- [28]
 		{
 			"^LFW_L", -- [1]
 			"Soliaa-Illidan", -- [2]
@@ -704,7 +638,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffSoliaa|r",
 			[51] = 1533699803,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [32]
+		}, -- [29]
 		{
 			"_$102Qwdfsdxcvxcv_$   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本_$c69b6d$", -- [1]
 			"Tyrabank-Illidan", -- [2]
@@ -726,7 +660,7 @@ ElvCharacterDB = {
 			[52] = "|cfff48cbaTyrabank|r",
 			[51] = 1533699810,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [33]
+		}, -- [30]
 		{
 			"_$132Pjsidijehjr_$ 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,_$ffffff$", -- [1]
 			"Tyrabank-Illidan", -- [2]
@@ -748,7 +682,7 @@ ElvCharacterDB = {
 			[52] = "|cfff48cbaTyrabank|r",
 			[51] = 1533699924,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [34]
+		}, -- [31]
 		{
 			"{rt2}Bomb{rt2}", -- [1]
 			"Evan-Illidan", -- [2]
@@ -770,7 +704,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffEvan|r",
 			[51] = 1533699952,
 			[50] = "CHAT_MSG_SAY",
-		}, -- [35]
+		}, -- [32]
 		{
 			"_$154Pjsidijehjr_$ 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,_$ffffff$", -- [1]
 			"Tyrabank-Illidan", -- [2]
@@ -792,7 +726,7 @@ ElvCharacterDB = {
 			[52] = "|cfff48cbaTyrabank|r",
 			[51] = 1533699994,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [36]
+		}, -- [33]
 		{
 			"thanks for having me missed you dudes", -- [1]
 			"Airimis", -- [2]
@@ -814,7 +748,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Airimis|r",
 			[51] = 1533700034,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [37]
+		}, -- [34]
 		{
 			"tyty", -- [1]
 			"Sureno-Illidan", -- [2]
@@ -836,7 +770,7 @@ ElvCharacterDB = {
 			[52] = "|cfff48cbaSureno|r",
 			[51] = 1533700043,
 			[50] = "CHAT_MSG_RAID",
-		}, -- [38]
+		}, -- [35]
 		{
 			"thanks for the run", -- [1]
 			"Chromogranin-Illidan", -- [2]
@@ -858,7 +792,7 @@ ElvCharacterDB = {
 			[52] = "|cfff48cbaChromogranin|r",
 			[51] = 1533700043,
 			[50] = "CHAT_MSG_RAID",
-		}, -- [39]
+		}, -- [36]
 		{
 			"ty for the invite", -- [1]
 			"Capzieloth-Illidan", -- [2]
@@ -880,7 +814,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dCapzieloth|r",
 			[51] = 1533700062,
 			[50] = "CHAT_MSG_RAID",
-		}, -- [40]
+		}, -- [37]
 		{
 			"Hold on one sec.", -- [1]
 			"Noctuaa-Illidan", -- [2]
@@ -902,7 +836,7 @@ ElvCharacterDB = {
 			[52] = "|cffa330c9Noctuaa|r",
 			[51] = 1533700115,
 			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [41]
+		}, -- [38]
 		{
 			"alright", -- [1]
 			"Noctuaa-Illidan", -- [2]
@@ -924,7 +858,7 @@ ElvCharacterDB = {
 			[52] = "|cffa330c9Noctuaa|r",
 			[51] = 1533700140,
 			[50] = "CHAT_MSG_WHISPER",
-		}, -- [42]
+		}, -- [39]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加战网Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -946,7 +880,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533700155,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [43]
+		}, -- [40]
 		{
 			"You guys did solid.", -- [1]
 			"Obe-Mal'Ganis", -- [2]
@@ -968,7 +902,7 @@ ElvCharacterDB = {
 			[52] = "|cffaad372Obe-Mal'Ganis|r",
 			[51] = 1533700168,
 			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [44]
+		}, -- [41]
 		{
 			"You guys did solid.", -- [1]
 			"Jaggen-Mal'Ganis", -- [2]
@@ -990,7 +924,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dJaggen-Mal'Ganis|r",
 			[51] = 1533700171,
 			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [45]
+		}, -- [42]
 		{
 			"《H S公会》，为备战BFA招收各路强力玩家，欢迎各种新人老人，活动时间每周234，有兴趣的密", -- [1]
 			"Ezanna-Illidan", -- [2]
@@ -1012,7 +946,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dEzanna|r",
 			[51] = 1533700200,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [46]
+		}, -- [43]
 		{
 			" 金币，100万=110刀=750人民币，现货秒发，要货Q", -- [1]
 			"Bekkage-Illidan", -- [2]
@@ -1034,7 +968,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bekkage|r",
 			[51] = 1533700201,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [47]
+		}, -- [44]
 		{
 			"sry my dmg was shit. mm is trash. I've been playing surv but u guys seemed like u needed a ranged :)", -- [1]
 			"Obe-Mal'Ganis", -- [2]
@@ -1056,7 +990,7 @@ ElvCharacterDB = {
 			[52] = "|cffaad372Obe-Mal'Ganis|r",
 			[51] = 1533700202,
 			[50] = "CHAT_MSG_WHISPER",
-		}, -- [48]
+		}, -- [45]
 		{
 			"thanks it was a really good run", -- [1]
 			"Jaggen-Mal'Ganis", -- [2]
@@ -1078,7 +1012,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dJaggen-Mal'Ganis|r",
 			[51] = 1533700202,
 			[50] = "CHAT_MSG_WHISPER",
-		}, -- [49]
+		}, -- [46]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,", -- [1]
 			"Pjsidijehjr-Illidan", -- [2]
@@ -1100,7 +1034,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPjsidijehjr|r",
 			[51] = 1533700203,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [50]
+		}, -- [47]
 		{
 			"Except for Agg, it was fun.", -- [1]
 			"Jaggen-Mal'Ganis", -- [2]
@@ -1122,7 +1056,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dJaggen-Mal'Ganis|r",
 			[51] = 1533700213,
 			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [51]
+		}, -- [48]
 		{
 			"It's nice to see people snap down too though.", -- [1]
 			"Jaggen-Mal'Ganis", -- [2]
@@ -1144,7 +1078,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dJaggen-Mal'Ganis|r",
 			[51] = 1533700219,
 			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [52]
+		}, -- [49]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -1166,7 +1100,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533700232,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [53]
+		}, -- [50]
 		{
 			"yep agg is probably the hardest boss on heroic imo", -- [1]
 			"Jaggen-Mal'Ganis", -- [2]
@@ -1188,7 +1122,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dJaggen-Mal'Ganis|r",
 			[51] = 1533700240,
 			[50] = "CHAT_MSG_WHISPER",
-		}, -- [54]
+		}, -- [51]
 		{
 			"You did fine, it's all silly pre-patch.", -- [1]
 			"Obe-Mal'Ganis", -- [2]
@@ -1210,7 +1144,7 @@ ElvCharacterDB = {
 			[52] = "|cffaad372Obe-Mal'Ganis|r",
 			[51] = 1533700243,
 			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [55]
+		}, -- [52]
 		{
 			"Fun to see mechanics.", -- [1]
 			"Obe-Mal'Ganis", -- [2]
@@ -1232,7 +1166,7 @@ ElvCharacterDB = {
 			[52] = "|cffaad372Obe-Mal'Ganis|r",
 			[51] = 1533700247,
 			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [56]
+		}, -- [53]
 		{
 			"《H S公会》，为备战BFA招收各路强力玩家，欢迎各种新人老人，活动时间每周234，有兴趣的密", -- [1]
 			"Ezanna-Illidan", -- [2]
@@ -1254,7 +1188,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dEzanna|r",
 			[51] = 1533700260,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [57]
+		}, -- [54]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,", -- [1]
 			"Pjsidijehjr-Illidan", -- [2]
@@ -1276,7 +1210,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPjsidijehjr|r",
 			[51] = 1533700273,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [58]
+		}, -- [55]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -1298,7 +1232,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533700278,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [59]
+		}, -- [56]
 		{
 			" 金币，100万=110刀=750人民币，现货秒发，要货Q", -- [1]
 			"Bekkage-Illidan", -- [2]
@@ -1320,7 +1254,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bekkage|r",
 			[51] = 1533700293,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [60]
+		}, -- [57]
 		{
 			"《H S公会》，为备战BFA招收各路强力玩家，欢迎各种新人老人，活动时间每周234，有兴趣的密", -- [1]
 			"Ezanna-Illidan", -- [2]
@@ -1342,7 +1276,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dEzanna|r",
 			[51] = 1533700320,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [61]
+		}, -- [58]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -1364,7 +1298,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533700323,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [62]
+		}, -- [59]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,", -- [1]
 			"Pjsidijehjr-Illidan", -- [2]
@@ -1386,7 +1320,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPjsidijehjr|r",
 			[51] = 1533700344,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [63]
+		}, -- [60]
 		{
 			"(SELLING) (GOLD ONLY) 11/11M Top US raiders are selling Heroic Argus kills every 30 minutes! Come get your Violet Spellwing, legendary ring, and pantheon trinket! LAST WEEK TO GET IT! PST for more info!", -- [1]
 			"Renspriest-Illidan", -- [2]
@@ -1408,7 +1342,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffRenspriest|r",
 			[51] = 1533700354,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [64]
+		}, -- [61]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -1430,7 +1364,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533700369,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [65]
+		}, -- [62]
 		{
 			"《H S公会》，为备战BFA招收各路强力玩家，欢迎各种新人老人，活动时间每周234，有兴趣的密", -- [1]
 			"Ezanna-Illidan", -- [2]
@@ -1452,7 +1386,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dEzanna|r",
 			[51] = 1533700380,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [66]
+		}, -- [63]
 		{
 			" 金币，100万=110刀=750人民币，现货秒发，要货Q", -- [1]
 			"Bekkage-Illidan", -- [2]
@@ -1474,7 +1408,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bekkage|r",
 			[51] = 1533700384,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [67]
+		}, -- [64]
 		{
 			"^LFW_L", -- [1]
 			"Soliaa-Illidan", -- [2]
@@ -1496,7 +1430,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffSoliaa|r",
 			[51] = 1533700413,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [68]
+		}, -- [65]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,", -- [1]
 			"Pjsidijehjr-Illidan", -- [2]
@@ -1518,7 +1452,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPjsidijehjr|r",
 			[51] = 1533700413,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [69]
+		}, -- [66]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -1540,7 +1474,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533700415,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [70]
+		}, -- [67]
 		{
 			"《H S公会》，为备战BFA招收各路强力玩家，欢迎各种新人老人，活动时间每周234，有兴趣的密", -- [1]
 			"Ezanna-Illidan", -- [2]
@@ -1562,7 +1496,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dEzanna|r",
 			[51] = 1533700440,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [71]
+		}, -- [68]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -1584,7 +1518,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533700460,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [72]
+		}, -- [69]
 		{
 			" 金币，100万=110刀=750人民币，现货秒发，要货Q", -- [1]
 			"Bekkage-Illidan", -- [2]
@@ -1606,7 +1540,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bekkage|r",
 			[51] = 1533700475,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [73]
+		}, -- [70]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,", -- [1]
 			"Pjsidijehjr-Illidan", -- [2]
@@ -1628,7 +1562,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPjsidijehjr|r",
 			[51] = 1533700483,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [74]
+		}, -- [71]
 		{
 			"《H S公会》，为备战BFA招收各路强力玩家，欢迎各种新人老人，活动时间每周234，有兴趣的密", -- [1]
 			"Ezanna-Illidan", -- [2]
@@ -1650,7 +1584,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dEzanna|r",
 			[51] = 1533700500,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [75]
+		}, -- [72]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -1672,7 +1606,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533700506,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [76]
+		}, -- [73]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:9:Player-57-0AFF20AA:1:8:7:18:4294967295:4294967295:4294967295:4294967295|h[Level 40]|h|r!", -- [1]
 			"Celestrazaa-Illidan", -- [2]
@@ -1694,7 +1628,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffCelestrazaa|r",
 			[51] = 1533700534,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [77]
+		}, -- [74]
 		{
 			"^LFW_L", -- [1]
 			"Angrylady-Illidan", -- [2]
@@ -1716,7 +1650,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dAngrylady|r",
 			[51] = 1533700540,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [78]
+		}, -- [75]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -1738,7 +1672,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533700552,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [79]
+		}, -- [76]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,", -- [1]
 			"Pjsidijehjr-Illidan", -- [2]
@@ -1760,7 +1694,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPjsidijehjr|r",
 			[51] = 1533700553,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [80]
+		}, -- [77]
 		{
 			"《H S公会》，为备战BFA招收各路强力玩家，欢迎各种新人老人，活动时间每周234，有兴趣的密", -- [1]
 			"Ezanna-Illidan", -- [2]
@@ -1782,7 +1716,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dEzanna|r",
 			[51] = 1533700560,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [81]
+		}, -- [78]
 		{
 			" 金币，100万=110刀=750人民币，现货秒发，要货Q", -- [1]
 			"Bekkage-Illidan", -- [2]
@@ -1804,7 +1738,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bekkage|r",
 			[51] = 1533700566,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [82]
+		}, -- [79]
 		{
 			"so akroma quit?", -- [1]
 			"|Kf79|k0000|k", -- [2]
@@ -1827,7 +1761,7 @@ ElvCharacterDB = {
 			[51] = 1533700569,
 			[50] = "CHAT_MSG_BN_WHISPER",
 			[53] = "zero",
-		}, -- [83]
+		}, -- [80]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -1849,7 +1783,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533700598,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [84]
+		}, -- [81]
 		{
 			"《H S公会》，为备战BFA招收各路强力玩家，欢迎各种新人老人，活动时间每周234，有兴趣的密", -- [1]
 			"Ezanna-Illidan", -- [2]
@@ -1871,7 +1805,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dEzanna|r",
 			[51] = 1533700620,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [85]
+		}, -- [82]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,", -- [1]
 			"Pjsidijehjr-Illidan", -- [2]
@@ -1893,7 +1827,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPjsidijehjr|r",
 			[51] = 1533700624,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [86]
+		}, -- [83]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -1915,7 +1849,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533700643,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [87]
+		}, -- [84]
 		{
 			"《H S公会》，为备战BFA招收各路强力玩家，欢迎各种新人老人，活动时间每周234，有兴趣的密", -- [1]
 			"Ezanna-Illidan", -- [2]
@@ -1937,7 +1871,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dEzanna|r",
 			[51] = 1533700680,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [88]
+		}, -- [85]
 		{
 			"_$321Ezanna_$《H S公会》，为备战BFA招收各路强力玩家，欢迎各种新人老人，活动时间每周234，有兴趣的密_$c69b6d$", -- [1]
 			"Tyrabank-Illidan", -- [2]
@@ -1959,7 +1893,7 @@ ElvCharacterDB = {
 			[52] = "|cfff48cbaTyrabank|r",
 			[51] = 1533700680,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [89]
+		}, -- [86]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -1981,7 +1915,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533700689,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [90]
+		}, -- [87]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,", -- [1]
 			"Pjsidijehjr-Illidan", -- [2]
@@ -2003,7 +1937,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPjsidijehjr|r",
 			[51] = 1533700693,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [91]
+		}, -- [88]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -2025,7 +1959,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533700735,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [92]
+		}, -- [89]
 		{
 			" 金币，100万=103刀=700人民币，现货秒发，要货Q", -- [1]
 			"Bekkage-Illidan", -- [2]
@@ -2047,7 +1981,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bekkage|r",
 			[51] = 1533700749,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [93]
+		}, -- [90]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,", -- [1]
 			"Pjsidijehjr-Illidan", -- [2]
@@ -2069,7 +2003,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPjsidijehjr|r",
 			[51] = 1533700763,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [94]
+		}, -- [91]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -2091,7 +2025,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533700781,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [95]
+		}, -- [92]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -2113,7 +2047,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533700826,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [96]
+		}, -- [93]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置8.0  110-120等级 版本毕业！,", -- [1]
 			"Pjsidijehjr-Illidan", -- [2]
@@ -2135,7 +2069,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffPjsidijehjr|r",
 			[51] = 1533700833,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [97]
+		}, -- [94]
 		{
 			" 金币，100万=103刀=700人民币，现货秒发，要货Q", -- [1]
 			"Bekkage-Illidan", -- [2]
@@ -2157,7 +2091,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bekkage|r",
 			[51] = 1533700841,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [98]
+		}, -- [95]
 		{
 			"but if you guys dont mind id love to join up after i lvl to 120", -- [1]
 			"Jaggen-Mal'Ganis", -- [2]
@@ -2179,7 +2113,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dJaggen-Mal'Ganis|r",
 			[51] = 1533700869,
 			[50] = "CHAT_MSG_WHISPER",
-		}, -- [99]
+		}, -- [96]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -2201,7 +2135,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533700872,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [100]
+		}, -- [97]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -2223,7 +2157,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533700918,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [101]
+		}, -- [98]
 		{
 			" 金币，100万=103刀=700人民币，现货秒发，要货Q", -- [1]
 			"Bekkage-Illidan", -- [2]
@@ -2245,7 +2179,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bekkage|r",
 			[51] = 1533700932,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [102]
+		}, -- [99]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -2267,7 +2201,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533700964,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [103]
+		}, -- [100]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -2289,7 +2223,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533701009,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [104]
+		}, -- [101]
 		{
 			" 金币，100万=103刀=700人民币，现货秒发，要货Q", -- [1]
 			"Bekkage-Illidan", -- [2]
@@ -2311,7 +2245,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bekkage|r",
 			[51] = 1533701024,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [105]
+		}, -- [102]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -2333,7 +2267,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533701055,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [106]
+		}, -- [103]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -2355,7 +2289,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533701101,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [107]
+		}, -- [104]
 		{
 			" 金币，100万=103刀=700人民币，现货秒发，要货Q", -- [1]
 			"Bekkage-Illidan", -- [2]
@@ -2377,7 +2311,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bekkage|r",
 			[51] = 1533701115,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [108]
+		}, -- [105]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -2399,7 +2333,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533701146,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [109]
+		}, -- [106]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -2421,7 +2355,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533701192,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [110]
+		}, -- [107]
 		{
 			" 金币，100万=103刀=700人民币，现货秒发，要货Q", -- [1]
 			"Bekkage-Illidan", -- [2]
@@ -2443,7 +2377,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bekkage|r",
 			[51] = 1533701207,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [111]
+		}, -- [108]
 		{
 			"^LFW_L", -- [1]
 			"Soliaa-Illidan", -- [2]
@@ -2465,7 +2399,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffSoliaa|r",
 			[51] = 1533701231,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [112]
+		}, -- [109]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -2487,7 +2421,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533701238,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [113]
+		}, -- [110]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -2509,7 +2443,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533701284,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [114]
+		}, -- [111]
 		{
 			" 金币，100万=103刀=700人民币，现货秒发，要货Q", -- [1]
 			"Bekkage-Illidan", -- [2]
@@ -2531,7 +2465,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bekkage|r",
 			[51] = 1533701298,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [115]
+		}, -- [112]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -2553,7 +2487,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533701329,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [116]
+		}, -- [113]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -2575,7 +2509,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533701375,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [117]
+		}, -- [114]
 		{
 			" 金币，100万=103刀=700人民币，现货秒发，要货Q", -- [1]
 			"Bekkage-Illidan", -- [2]
@@ -2597,7 +2531,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bekkage|r",
 			[51] = 1533701390,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [118]
+		}, -- [115]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -2619,7 +2553,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533701421,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [119]
+		}, -- [116]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -2641,7 +2575,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533701467,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [120]
+		}, -- [117]
 		{
 			"We'll see.", -- [1]
 			"|Kf79|k0000|k", -- [2]
@@ -2664,7 +2598,7 @@ ElvCharacterDB = {
 			[51] = 1533701473,
 			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
 			[53] = "zero",
-		}, -- [121]
+		}, -- [118]
 		{
 			" 金币，100万=103刀=700人民币，现货秒发，要货Q", -- [1]
 			"Bekkage-Illidan", -- [2]
@@ -2686,7 +2620,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bekkage|r",
 			[51] = 1533701482,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [122]
+		}, -- [119]
 		{
 			"As far as raid leading, that's my turf again.", -- [1]
 			"|Kf79|k0000|k", -- [2]
@@ -2709,7 +2643,7 @@ ElvCharacterDB = {
 			[51] = 1533701490,
 			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
 			[53] = "zero",
-		}, -- [123]
+		}, -- [120]
 		{
 			"Which I'm very happy about.", -- [1]
 			"|Kf79|k0000|k", -- [2]
@@ -2732,7 +2666,7 @@ ElvCharacterDB = {
 			[51] = 1533701496,
 			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
 			[53] = "zero",
-		}, -- [124]
+		}, -- [121]
 		{
 			"One punch招募5M队友，为8.0版本高级钥匙团作准备，休闲部落招新指引，主要招收，休闲玩家及5M玩家，欢迎各大学生党，工作党，没时间肝党的加入，8.0组织小规模团本活动。加Emperor#11687", -- [1]
 			"Shangtouorz-Illidan", -- [2]
@@ -2754,7 +2688,7 @@ ElvCharacterDB = {
 			[52] = "|cffff7c0aShangtouorz|r",
 			[51] = 1533701563,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [125]
+		}, -- [122]
 		{
 			" 金币，100万=103刀=700人民币，现货秒发，要货Q", -- [1]
 			"Bekkage-Illidan", -- [2]
@@ -2776,7 +2710,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bekkage|r",
 			[51] = 1533701573,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [126]
+		}, -- [123]
 		{
 			"good to hear man. i always felt the raid went better when you lead", -- [1]
 			"|Kf79|k0000|k", -- [2]
@@ -2799,6 +2733,72 @@ ElvCharacterDB = {
 			[51] = 1533701582,
 			[50] = "CHAT_MSG_BN_WHISPER",
 			[53] = "zero",
+		}, -- [124]
+		{
+			"ALL IN (M 11/11) 一周双团(周中, 周末) 招收各路人才,公会活动效率,气氛轻松,并有大密老司机，PVP战神带你游玩各个领域。活动成员要求稳定有责任心，欢迎打扰。详情可查看NGA,魔兽美服论坛等。", -- [1]
+			"Darkenrose-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Darkenrose", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			246, -- [11]
+			"Player-57-0A381E33", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfffff468Darkenrose|r",
+			[51] = 1533849064,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [125]
+		{
+			"Selling M+ 15 carry! Last week to get your achievement/225+ pieces and 240 piece! Get a headstart for BFA! Gold Only!旦", -- [1]
+			"Fareohp-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Fareohp", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			274, -- [11]
+			"Player-57-0AF9890C", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfff48cbaFareohp|r",
+			[51] = 1533849346,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [126]
+		{
+			"Selling M+ 15 carry! Last week to get your achievement/225+ pieces and 240 piece! Get a headstart for BFA! Gold Only!旦", -- [1]
+			"Fareohp-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Fareohp", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			323, -- [11]
+			"Player-57-0AF9890C", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cfff48cbaFareohp|r",
+			[51] = 1533849628,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [127]
 	},
 	["ChatEditHistory"] = {
