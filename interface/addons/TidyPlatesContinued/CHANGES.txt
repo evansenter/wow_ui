@@ -1,29 +1,31 @@
-lightweight tag ce6a4490a9741f238114e2d3a70558f014edc249 6.19.13
+lightweight tag 32d26bf48e7bf27e7cf762afa3d0d643ac56470e 6.20
 Author:	Luxocracy <luxor355@gmail.com>
-Date:	Sun Aug 12 10:08:18 2018 +0200
+Date:	Mon Aug 13 09:28:26 2018 +0200
 
-commit ce6a4490a9741f238114e2d3a70558f014edc249
+commit 32d26bf48e7bf27e7cf762afa3d0d643ac56470e
 Author: Luxocracy <luxor355@gmail.com>
-Date:   Sun Aug 12 10:08:18 2018 +0200
+Date:   Mon Aug 13 09:28:26 2018 +0200
 
-    Fixed nameplates appearing twice when closing the hub menu
+    Made all themes compatible with QuestWidget
     
-    - Fixed nameplates appearing twice when closing the hub menu by pressing cancel.
+    - Made all themes compatible with QuestWidget
+    - Changed the style of the quest indicator
 
-commit f926c7170a16b2e2487e41f5c613f59c54720937
+commit 76a96dedd036961d7a9c9fda37f73c00ec0fd978
 Author: Luxocracy <luxor355@gmail.com>
-Date:   Sat Aug 11 16:11:26 2018 +0200
+Date:   Sun Aug 12 22:19:04 2018 +0200
 
-    Fixed changing themes causing issues with the absorb bars position
+    Adjusted QuestWidget position on Quatre Theme
     
-    - Fixed an issue with the positioning the absorb bar being incorrect after swapping between a theme with vertical healthbars and one with horizontal healthbars
+    - Forgot to add this in last commit...
 
-commit c8e4d6724ca6bdf0e9c02ccc1da4685d007a0eab
+commit 12d7285a4506fa2b2ddc2b6451060ab9dee7c1b6
 Author: Luxocracy <luxor355@gmail.com>
-Date:   Sat Aug 11 15:48:16 2018 +0200
+Date:   Sun Aug 12 22:17:14 2018 +0200
 
-    Fixed the absorb texture being strecthed/compressed in vertical mode
+    Added a new widget named QuestWidget
     
-    - Fixed the absorb bars texture getting stretched/compressed rather than clipped in vertical mode.
-    - Cleaned up some code
+    - Added a new widget named QuestWidget.
+    - This widget should show an indication on any unit that is part of your quest. (Requires "ShowQuestTrackingTooltips" to be enabled, might force this on when this is enabled)
+    - Still need to add support for this to the other themes.
 

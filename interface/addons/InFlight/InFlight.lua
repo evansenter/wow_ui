@@ -314,8 +314,8 @@ function InFlight:LoadBulk()  -- called from InFlight_Load
 	InFlightVars = InFlightVars or { Alliance = {}, Horde = {}, }  -- flight time data
 	vars = InFlightVars[UnitFactionGroup("player")]
 
-	if db.dbinit ~= 802 or debug then
-		db.dbinit = 802
+	if db.dbinit ~= 803 or debug then
+		db.dbinit = 803
 		local function SetDefaults(db, t)  -- set saved variables
 			for k, v in pairs(t) do
 				if type(db[k]) == "table" then
@@ -483,7 +483,7 @@ function InFlight:StartTimer(slot)  -- lift off
 	if not sb then  -- create the timer bar
 		self:CreateBar()
 	end
-	locText:SetFormattedText("%s%s%s", not db.inline and source or "", not db.inline and db.totext or "", destination or "")
+	locText:SetFormattedText("%s %s %s", not db.inline and source or "", not db.inline and db.totext or "", destination or "")
 	if endTime then  -- start the timers and setup statusbar
 		sb:SetMinMaxValues(0, endTime)
 		sb:SetValue(db.fill and 0 or endTime)

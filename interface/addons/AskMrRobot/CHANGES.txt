@@ -1,7 +1,7 @@
-changeset:   133:a0894ffebd15
-tag:         v62
+changeset:   135:57be71eccc0a
+tag:         v63
 user:        yellowfive
-date:        Wed Jul 25 12:17:24 2018 -0700
-summary:     Bug fixes and tweaks for 8.0.
+date:        Sun Aug 12 23:36:17 2018 -0700
+summary:     Small azerite gear fix.
 
 

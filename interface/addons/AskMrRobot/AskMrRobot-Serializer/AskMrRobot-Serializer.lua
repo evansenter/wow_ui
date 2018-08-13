@@ -1,6 +1,6 @@
 -- AskMrRobot-Serializer will serialize and communicate character data between users.
 
-local MAJOR, MINOR = "AskMrRobot-Serializer", 62
+local MAJOR, MINOR = "AskMrRobot-Serializer", 63
 local Amr, oldminor = LibStub:NewLibrary(MAJOR, MINOR)
 
 if not Amr then return end -- already loaded by something else
@@ -140,7 +140,9 @@ Amr.RaceIds = {
 	["Nightborne"] = 14,
     ["HighmountainTauren"] = 15,
     ["VoidElf"] = 16,
-    ["LightforgedDraenei"] = 17
+	["LightforgedDraenei"] = 17,
+	["DarkIronDwarf"] = 18,
+	["MagharOrc"] = 19
 }
 
 Amr.FactionIds = {
@@ -253,12 +255,16 @@ function Amr.ParseItemLink(itemLink)
     return item
 end
 
-function Amr.GetItemUniqueId(item, noUpgrade)
+local AZERITE_EMPOWERED_BONUS_ID = 4775
+
+function Amr.GetItemUniqueId(item, noUpgrade, noAzeriteEmpoweredBonusId)
     if not item then return "" end
     local ret = item.id .. ""
     if item.bonusIds then
-        for i = 1, #item.bonusIds do
-            ret = ret .. "b" .. item.bonusIds[i]
+		for i = 1, #item.bonusIds do
+			if not noAzeriteEmpoweredBonusId or item.bonusIds[i] ~= AZERITE_EMPOWERED_BONUS_ID then
+				ret = ret .. "b" .. item.bonusIds[i]
+			end
         end
     end
     if item.suffixId ~= 0 then

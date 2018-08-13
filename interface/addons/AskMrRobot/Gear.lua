@@ -18,7 +18,7 @@ local function countItemDifferences(item1, item2)
 	end
 	
     -- different versions of same item (id + bonus ids + suffix + drop level, constitutes a different physical drop)
-    if Amr.GetItemUniqueId(item1, true) ~= Amr.GetItemUniqueId(item2, true) then
+    if Amr.GetItemUniqueId(item1, true, true) ~= Amr.GetItemUniqueId(item2, true, true) then
 		return 1000
     end
     
@@ -257,7 +257,7 @@ local function renderGear(spec, container)
 			
 			-- see if item is currently equipped, is false if don't have any item for that slot (e.g. OH for a 2-hander)
 			local isEquipped = false			
-			if equippedItem and optimalItem and Amr.GetItemUniqueId(equippedItem) == Amr.GetItemUniqueId(optimalItem) then
+			if equippedItem and optimalItem and Amr.GetItemUniqueId(equippedItem, false, true) == Amr.GetItemUniqueId(optimalItem, false, true) then
 				isEquipped = true
 			end
 
@@ -328,7 +328,7 @@ local function renderGear(spec, container)
 					local azt = optimalItem.azerite or {}
 					for i,spellId in ipairs(azt) do
 						if spellId and spellId ~= 0 then
-							local equippedAzt = equippedItem and equippedItem.azerite or {}
+							local equippedAzt = matchItem and matchItem.azerite or {}
 							local isPowerActive = Amr.Contains(equippedAzt, spellId)
 
 							local socketBorder, socketIcon = createSocketWidget(panelMods, prevSocket or lblItem, prevSocket, isPowerActive)
@@ -366,7 +366,7 @@ local function renderGear(spec, container)
 				-- enchant
 				if optimalItem.enchantId and optimalItem.enchantId ~= 0 then
 					local isEnchantEquipped = matchItem and matchItem.enchantId and matchItem.enchantId == optimalItem.enchantId
-					
+
 					local lblEnchant = AceGUI:Create("AmrUiLabel")
 					panelMods:AddChild(lblEnchant)
 					lblEnchant:SetPoint("TOPLEFT", lblItem.frame, "TOPRIGHT", 130, 0)

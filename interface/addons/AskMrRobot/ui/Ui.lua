@@ -364,7 +364,7 @@ function Amr:Reset()
 	if not self:IsEnabled() then return end
 	
 	Amr:Hide()
-	Amr:HideLootWindow()
+	--Amr:HideLootWindow()
 	Amr:HideShopWindow()
 	Amr.db.profile.options.uiScale = 1
 	Amr.db.profile.window = {}
@@ -389,8 +389,10 @@ function Amr:SetItemTooltip(obj, itemLink, anchor, x, y)
 	obj:SetUserData("ttItemLink", itemLink)
 	obj:SetCallback("OnEnter", function(widget)
 		local tooltipLink = widget:GetUserData("ttItemLink")
-		GameTooltip:SetOwner(widget.frame, anchor and anchor or "ANCHOR_CURSOR", x, y)
-		GameTooltip:SetHyperlink(tooltipLink)
+		if tooltipLink then
+			GameTooltip:SetOwner(widget.frame, anchor and anchor or "ANCHOR_CURSOR", x, y)
+			GameTooltip:SetHyperlink(tooltipLink)
+		end
 	end)
 	obj:SetCallback("OnLeave", function(widget)
 		GameTooltip:Hide()
@@ -401,8 +403,10 @@ function Amr:SetSpellTooltip(obj, spellId, anchor, x, y)
 	obj:SetUserData("ttSpellId", spellId)
 	obj:SetCallback("OnEnter", function(widget)
 		local ttSpellId = widget:GetUserData("ttSpellId")
-		GameTooltip:SetOwner(widget.frame, anchor and anchor or "ANCHOR_CURSOR", x, y)
-		GameTooltip:SetSpellByID(ttSpellId)
+		if ttSpellId then
+			GameTooltip:SetOwner(widget.frame, anchor and anchor or "ANCHOR_CURSOR", x, y)
+			GameTooltip:SetSpellByID(ttSpellId)
+		end
 	end)
 	obj:SetCallback("OnLeave", function(widget)
 		GameTooltip:Hide()
