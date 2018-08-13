@@ -187,7 +187,7 @@ MasterPlan: disabled
 MasterPlanA: disabled
 nRange: disabled
 OregorgerTracker: enabled
-Pawn: enabled
+Pawn: disabled
 SharedMedia: enabled
 SimpleILevel: enabled
 SimpleILevel_Group: enabled
@@ -216,7 +216,7 @@ MacroToolkitIcons: enabled
 Atlas: disabled
 Atlas_Legion: disabled
 HandyNotes_LegionTreasures: enabled
-WorldQuestTracker: enabled
+WorldQuestTracker: disabled
 DBM-TrialofValor: enabled
 RCLootCouncil: enabled
 AdiBags: enabled
@@ -232,7 +232,7 @@ PremadeGroupsFilter: enabled
 Simulationcraft: disabled
 SubSpec: enabled
 Telemancy: disabled
-WorldQuestGroupFinder: enabled
+WorldQuestGroupFinder: disabled
 DBM-AntorusBurningThrone: enabled
 DBM-Argus: enabled
 DBM-TombofSargeras: enabled

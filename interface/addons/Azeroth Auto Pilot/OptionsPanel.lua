@@ -45,7 +45,7 @@ function LoadOptionsFrame()
 	AAP.OptionsFrame = {}
 	AAP.OptionsFrame.MainFrame = CreateFrame("frame", "AAP_OptionsMainFrame",  UIParent)
 	AAP.OptionsFrame.MainFrame:SetWidth(450)
-	AAP.OptionsFrame.MainFrame:SetHeight(320)
+	AAP.OptionsFrame.MainFrame:SetHeight(360)
 	AAP.OptionsFrame.MainFrame:SetFrameStrata("MEDIUM")
 	AAP.OptionsFrame.MainFrame:SetPoint("CENTER",  UIParent, "CENTER",0,0)
 	AAP.OptionsFrame.MainFrame:SetMovable(true)
@@ -273,6 +273,40 @@ function LoadOptionsFrame()
 			AAP1[AAP_Realm][AAP_Name]["Settings"]["LockArrow"] = 1
 		else
 			AAP1[AAP_Realm][AAP_Name]["Settings"]["LockArrow"] = 0
+		end
+	end)
+
+	AAP.OptionsFrame.CheckButton13 = CreateFrame("CheckButton", "CLxCheckButton13", AAP.OptionsFrame.MainFrame, "ChatConfigCheckButtonTemplate");
+	AAP.OptionsFrame.CheckButton13:SetPoint("TOPLEFT", AAP.OptionsFrame.MainFrame, "TOPLEFT", 10, -275)
+	if (AAP1[AAP_Realm][AAP_Name]["Settings"]["ShowArrow"] == 0) then
+		AAP.OptionsFrame.CheckButton13:SetChecked(false)
+	else
+		AAP.OptionsFrame.CheckButton13:SetChecked(true)
+	end
+	getglobal(AAP.OptionsFrame.CheckButton13:GetName() .. 'Text'):SetText(": "..AAP_Locals["Show Arrow"])
+	getglobal(AAP.OptionsFrame.CheckButton13:GetName() .. 'Text'):SetTextColor(1, 1, 1)
+	AAP.OptionsFrame.CheckButton13:SetScript("OnClick", function()
+		if (AAP.OptionsFrame.CheckButton13:GetChecked() == true) then
+			AAP1[AAP_Realm][AAP_Name]["Settings"]["ShowArrow"] = 1
+		else
+			AAP1[AAP_Realm][AAP_Name]["Settings"]["ShowArrow"] = 0
+		end
+	end)
+
+	AAP.OptionsFrame.CheckButton14 = CreateFrame("CheckButton", "CLxCheckButton14", AAP.OptionsFrame.MainFrame, "ChatConfigCheckButtonTemplate");
+	AAP.OptionsFrame.CheckButton14:SetPoint("TOPLEFT", AAP.OptionsFrame.MainFrame, "TOPLEFT", 10, -295)
+	if (AAP1[AAP_Realm][AAP_Name]["Settings"]["ShowQList"] == 0) then
+		AAP.OptionsFrame.CheckButton14:SetChecked(false)
+	else
+		AAP.OptionsFrame.CheckButton14:SetChecked(true)
+	end
+	getglobal(AAP.OptionsFrame.CheckButton14:GetName() .. 'Text'):SetText(": "..AAP_Locals["Show QuestList"])
+	getglobal(AAP.OptionsFrame.CheckButton14:GetName() .. 'Text'):SetTextColor(1, 1, 1)
+	AAP.OptionsFrame.CheckButton14:SetScript("OnClick", function()
+		if (AAP.OptionsFrame.CheckButton14:GetChecked() == true) then
+			AAP1[AAP_Realm][AAP_Name]["Settings"]["ShowQList"] = 1
+		else
+			AAP1[AAP_Realm][AAP_Name]["Settings"]["ShowQList"] = 0
 		end
 	end)
 

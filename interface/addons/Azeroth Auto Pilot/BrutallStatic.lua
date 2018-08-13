@@ -529,6 +529,7 @@ AAP.BrutallCC.BrutallEvents:SetScript("OnEvent", function(self, event, ...)
 						AAP_BrutallShoFunc(tonumber(npc_id))
 						AAP.BrutallCC.BrutallFrame.FrameName:Show()
 						AAP.BrutallCC.BrutallFrame.Frame:Show()
+						AAP_BrutallTimer1:Play()
 					end
 				end
 			end
@@ -547,6 +548,7 @@ AAP.BrutallCC.BrutallEvents:SetScript("OnEvent", function(self, event, ...)
 						AAP.BrutallCC.Timer = 0
 						AAP.BrutallCC.BrutallFrame.FrameName:Hide()
 						AAP.BrutallCC.BrutallFrame.Frame:Hide()
+						AAP_BrutallTimer1:Stop()
 					else
 						AAP.BrutallCC.Timer = AAP.BrutallCC.Timer - 1
 					end
@@ -576,6 +578,7 @@ AAP.BrutallCC.BrutallEvents:SetScript("OnEvent", function(self, event, ...)
 						AAP_BrutallShoFunc(tonumber(npc_id))
 						AAP.BrutallCC.BrutallFrame.FrameName:Show()
 						AAP.BrutallCC.BrutallFrame.Frame:Show()
+						AAP_BrutallTimer1:Play()
 					end
 				else
 					AAP.BrutallCC.TargetTimer = 0

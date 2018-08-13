@@ -243,6 +243,9 @@ function AAP_UpdateQuestList()
 		end
 		AAP.QuestList.QuestFrames["FS"..CLi]["Button"]:Hide()
 	end
+	if (AAP1[AAP_Realm][AAP_Name]["Settings"]["ShowQList"] == 0) then
+		return
+	end
 	local i = 1
 	local ars = -1
 	if (AAP_SettingsOpen == 1) then
@@ -285,8 +288,18 @@ function AAP_UpdateQuestList()
 		AAP.QuestList.QuestFrames[AAP_NRFS]:Show()
 	end
 	if (AAP1 and AAP1[AAP_Realm] and AAP1[AAP_Realm][AAP_Name] and AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone] and AAP_InstanceTest() == 0 and AAP_SettingsOpen == 0) then
+		local factionz = UnitFactionGroup("player")
+		if ((UnitLevel("player") > 117) and (not AAP_CompletedQs[51770]) and (factionz ~= "Alliance")) then
+			AAP.QuestList.Warcamp:Show()
+		else
+			AAP.QuestList.Warcamp:Hide()
+		end
+
 		if (AAP_Quests and AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]] and AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]]["SearchBags"]) then
 
+		end
+		if (AAP_Quests and AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]] and AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]]["ClearZP"]) then
+			AAP_ActiveZonePick = 0
 		end
 		if (AAP_Quests and AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]] and AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]]["ExtraLine"]) then
 			local AAPExtralk = AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]]["ExtraLine"]
@@ -370,6 +383,15 @@ function AAP_UpdateQuestList()
 			end
 			if (AAPExtralk == 26) then
 				AAP.QuestList.QuestFrames["FS"..AAP_NRFS]:SetText(AAP_Locals["Fixed Quest"])
+			end
+			if (AAPExtralk == 27) then
+				AAP.QuestList.QuestFrames["FS"..AAP_NRFS]:SetText(AAP_Locals["Talk to Princess Talanji"])
+			end
+			if (AAPExtralk == 28) then
+				AAP.QuestList.QuestFrames["FS"..AAP_NRFS]:SetText(AAP_Locals["Zone Complete"])
+			end
+			if (AAPExtralk == 29) then
+				AAP.QuestList.QuestFrames["FS"..AAP_NRFS]:SetText(AAP_Locals["Missing quest"])
 			end
 			local aapwidth = AAP.QuestList.QuestFrames["FS"..AAP_NRFS]:GetStringWidth()
 			if (aapwidth and aapwidth > 400) then
@@ -751,7 +773,7 @@ function AAP_UpdateQuestList()
 			local AAP_NRFS = AAP_QH_GetFS("1234567-1")
 			ars = ars + 1
 			AAP.QuestList.QuestFrames[AAP_NRFS]:SetPoint("BOTTOMLEFT", AAP.QuestList.ListFrame, "BOTTOMLEFT",0,-((ars * 38)+ars))
-			AAP.QuestList.QuestFrames["FS"..AAP_NRFS]:SetText("Pick Zone")
+			AAP.QuestList.QuestFrames["FS"..AAP_NRFS]:SetText(AAP_Locals["Pick Zone"])
 			local aapwidth = AAP.QuestList.QuestFrames["FS"..AAP_NRFS]:GetStringWidth()
 			if (aapwidth and aapwidth > 400) then
 				AAP.QuestList.QuestFrames[AAP_NRFS]:SetWidth(aapwidth+10)
@@ -881,7 +903,7 @@ function AAP_UpdateQuestList()
 			if (not AAP_ActiveQuests[questID]["Obj"]) then
 				AAP_ActiveQuests[questID]["Obj"] = {}
 			end
-			if ( not isHeader) then
+			if (not isHeader) then
 				AAP_ActiveQuests[questID]["Title"] = questTitle
 				AAP_ActiveQuests[questID]["Comp"] = isComplete
 				AAP_ActiveQuests[questID]["NrObj"] = numObjectives
@@ -928,7 +950,7 @@ function AAP_UpdateQuestList()
 						AAP_ActiveQuests[questID]["Obj"][h]["text"] = text
 					end
 					local AAP_NRFS = AAP_QH_GetFS(questID .."-"..h)
-					if (AAP_NRFS and finished ~= 1 and AAP_CheckQP(questID, h) == 1) then
+					if (AAP_NRFS and finished ~= 1 and AAP_CheckQP(questID, h) == 1 and questID ~= 46930) then
 						if (not AAP1[AAP_Realm][AAP_Name]["SkippedBonusObj"][questID]) then
 							ars = ars + 1
 							AAP.QuestList.QuestFrames[AAP_NRFS]:SetPoint("BOTTOMLEFT", AAP.QuestList.ListFrame, "BOTTOMLEFT",0,-((ars * 38)+ars))
@@ -979,7 +1001,7 @@ function AAP_UpdateQuestList()
 	end
 	if (AAP1 and AAP1[AAP_Realm] and AAP1[AAP_Realm][AAP_Name] and AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]) then
 		if (AAP_Quests and AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]] and AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]]["DroppableQuest"] and AAP_Check_Droppable() == 1) then
-			local AAP_NRFS = AAP_QH_GetFS(AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]]["DroppableQuest"]["Qid"] .."-1")
+			local AAP_NRFS = AAP_QH_GetFS(AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]]["DroppableQuest"]["Qid"] .."-11")
 			ars = ars + 1
 			AAP.QuestList.QuestFrames[AAP_NRFS]:SetPoint("BOTTOMLEFT", AAP.QuestList.ListFrame, "BOTTOMLEFT",0,-((ars * 38)+ars))
 			AAP.QuestList.QuestFrames["FS"..AAP_NRFS]:SetText("[".. ars+1 .."] "..AAP_CheckMobid(AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]]["DroppableQuest"]["MobId"]).."s drops quest")
@@ -1022,7 +1044,7 @@ function AAP_UpdateQuestList()
 							AAP.QuestList.QuestFrames["FS"..AAP_NRFS]["Button"]:Hide()
 						end
 					end
-				elseif (not AAP_BonusCrap[AAP_index] and (AAP_index < 100000) and (not AAP_CompletedQs[AAP_index])) then
+				elseif (not AAP_BonusCrap[AAP_index] and (AAP_index < 100000) and (not AAP_CompletedQs[AAP_index]) and (not AAP_Quests[AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]]["DroppableQuest"])) then
 						local AAP_NRFS = AAP_QH_GetFS(AAP_index .."-"..1)
 						ars = ars + 1
 						AAP.QuestList.QuestFrames[AAP_NRFS]:SetPoint("BOTTOMLEFT", AAP.QuestList.ListFrame, "BOTTOMLEFT",0,-((ars * 38)+ars))
@@ -1041,7 +1063,7 @@ function AAP_UpdateQuestList()
 							AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone] = AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone] + 2
 							AAP_Reset = 0
 							AAP_Plus()
-							AAP_UpdateQuestList()
+							AAP_UPDQListV = AAP_UPDQListV2
 						end
 				end
 			end
@@ -1140,7 +1162,7 @@ AAP_QH_EventFrame:SetScript("OnEvent", function(self, event, ...)
 		AAP_Updatedelay.anim:SetDuration(0.5)
 		AAP_Updatedelay:SetLooping("REPEAT")
 		AAP_Updatedelay:SetScript("OnLoop", function(self, event, ...)
-			AAP_UpdateQuestList()
+			AAP_UPDQListV = AAP_UPDQListV2
 			AAP_Updatedelay:Stop()
 		end)
 		AAP_Updatedelay2 = AAP_QH_EventFrame:CreateAnimationGroup()
@@ -1148,13 +1170,13 @@ AAP_QH_EventFrame:SetScript("OnEvent", function(self, event, ...)
 		AAP_Updatedelay2.anim:SetDuration(3)
 		AAP_Updatedelay2:SetLooping("REPEAT")
 		AAP_Updatedelay2:SetScript("OnLoop", function(self, event, ...)
-			AAP_UpdateQuestList()
+			AAP_UPDQListV = AAP_UPDQListV2
 			AAP_Updatedelay2:Stop()
 		end)
-		AAP_UpdateQuestList()
+		AAP_UPDQListV = AAP_UPDQListV2
 	end
 	if (event=="PLAYER_ENTERING_WORLD" and AAP_DisableAddon == 0) then
-		AAP_UpdateQuestList()
+		AAP_UPDQListV = AAP_UPDQListV2
 	end
 	if (event=="UPDATE_MOUSEOVER_UNIT" and AAP_DisableAddon == 0) then
 		if (AAP1 and AAP1[AAP_Realm] and AAP1[AAP_Realm][AAP_Name] and AAP1[AAP_Realm][AAP_Name][AAP_ActiveZone]) then
@@ -1172,12 +1194,12 @@ AAP_QH_EventFrame:SetScript("OnEvent", function(self, event, ...)
 		end
 	end
 	if (event=="UNIT_QUEST_LOG_CHANGED" and AAP_DisableAddon == 0) then
-		AAP_UpdateQuestList()
+		AAP_UPDQListV = AAP_UPDQListV2
 	end
 
 	if (event=="QUEST_ACCEPTED" and AAP_DisableAddon == 0) then
 		local arg1, arg2, arg3, arg4, arg5 = ...;
-		AAP_UpdateQuestList()
+		AAP_UPDQListV = AAP_UPDQListV2
 		AAP_Updatedelay:Play()
 		AAP_Updatedelay2:Play()
 		if (arg2 and AAP_ActiveQuests and AAP_ActiveQuests[arg2]) then
@@ -1187,8 +1209,9 @@ AAP_QH_EventFrame:SetScript("OnEvent", function(self, event, ...)
 	if (event=="QUEST_REMOVED" and AAP_DisableAddon == 0) then
 		local arg1, arg2, arg3, arg4, arg5 = ...;
 		if (arg1) then
+			AAP_ActiveQuests[arg1] = nil
 			AAP_CompletedQs[arg1] = true
-			AAP_UpdateQuestList()
+			AAP_UPDQListV = AAP_UPDQListV2
 		end
 	end
 end)

@@ -19,6 +19,7 @@ AAP_Zone864 = {
 			},
 		}, -- [18]
 		{
+			["ClearZP"] = 1,
 			["ExtraLine"] = 20,
 			["Trigger"] = {
 				["y"] = 2673.6,
@@ -3940,6 +3941,7 @@ AAP_Zone864 = {
 
 --------------------------
 		{
+			["ExtraLine"] = 29,
 			["QuestLineSkip"] = 50818,
 			["PickUp"] = {
 				48332, -- [1]
@@ -5417,6 +5419,7 @@ AAP_Zone864 = {
 
 ----------- zDone
 		{
+			["ExtraLine"] = 28,
 			["UseDalaHS"] = 50703,
 			["TT"] = {
 				["y"] = 1950.9,

@@ -1,24 +1,16 @@
-lightweight tag cb45aa5bb51a3a3378379613ac1e164fe73fa26c 1.17
+lightweight tag 3790ff6c38da0683ce7c604c66c129106768d581 1.19
 Author:	Bernhard Saumweber <b.saumweber@gmail.com>
-Date:	Tue Dec 26 13:55:19 2017 +0100
+Date:	Sat Aug 11 22:42:36 2018 +0200
 
-commit cb45aa5bb51a3a3378379613ac1e164fe73fa26c
-Author: peti446 <peti446@users.noreply.github.com>
-Date:   Tue Dec 26 12:55:19 2017 +0000
-
-    Added Spanish localization (#9)
-    
-    * Create esES.lua: Spanish translation
-    * Update esES.lua
-    * fixed space error
-    * Added Spanish Localization
-    * Removed MX
-    * Changed place so it actually loads now
-    * Update esES.lua
-
-commit 2a1f08ed83fd791fdabb1f744ac469d7f5bbb070
+commit 3790ff6c38da0683ce7c604c66c129106768d581
 Author: Bernhard Saumweber <b.saumweber@gmail.com>
-Date:   Thu Dec 14 22:31:28 2017 +0100
+Date:   Sat Aug 11 22:42:36 2018 +0200
 
-    Set version to next release version: 1.17
+    Set version to 1.19
+
+commit 0623eb4ab58a1142e0c012969b7c261ec502f316
+Author: Bernhard Saumweber <b.saumweber@gmail.com>
+Date:   Sat Aug 11 22:42:08 2018 +0200
+
+    Provide a better error message if there is still one of the keywords name, comment or findnumber present
 

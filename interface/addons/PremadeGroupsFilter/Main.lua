@@ -131,9 +131,11 @@ function PGF.DoFilterSearchResults(results)
     -- loop backwards through the results list so we can remove elements from the table
     for idx = #results, 1, -1 do
         local resultID = results[idx]
-        local _, activity, name, comment, voiceChat, iLvl, honorLevel, age,
-              numBNetFriends, numCharFriends, numGuildMates, _, leaderName,
-              numMembers = C_LFGList.GetSearchResultInfo(resultID)
+        local id, activity, name, comment, voiceChat, iLvl, honorLevel, age,
+              numBNetFriends, numCharFriends, numGuildMates, isDelisted, leaderName,
+              numMembers, isAutoAccept, questID = C_LFGList.GetSearchResultInfo(resultID)
+        -- /dump select(3, C_LFGList.GetSearchResultInfo(select(2, C_LFGList.GetSearchResults())[1]))
+        -- name and comment are now protected strings like "|Ks1969|k0000000000000000|k" which can only be printed
         local defeatedBossNames = C_LFGList.GetSearchResultEncounterInfo(resultID)
         local memberCounts = C_LFGList.GetSearchResultMemberCounts(resultID)
         local numGroupDefeated, numPlayerDefeated, maxBosses,
@@ -145,9 +147,7 @@ function PGF.DoFilterSearchResults(results)
 
         local env = {}
         env.activity = activity
-        env.name = name:lower()
         env.activityname = avName:lower()
-        env.comment = comment:lower()
         env.leader = leaderName and leaderName:lower() or ""
         env.age = math.floor(age / 60) -- age in minutes
         env.voice = voiceChat and voiceChat ~= ""
@@ -178,6 +178,8 @@ function PGF.DoFilterSearchResults(results)
         env.minlvl = avMinLevel
         env.categoryid = avCategoryID
         env.groupid = avGroupID
+        env.autoinv = isAutoAccept
+        env.questid = questID
 
         for i = 1, numMembers do
             local role, class = C_LFGList.GetSearchResultMemberInfo(resultID, i);
@@ -203,6 +205,7 @@ function PGF.DoFilterSearchResults(results)
         env.tov  = activity == 456 or activity == 457 or activity == 480  -- Trial of Valor
         env.tos  = activity == 479 or activity == 478 or activity == 492  -- Tomb of Sargeras
         env.atbt = activity == 482 or activity == 483 or activity == 493  -- Antorus, the Burning Throne
+        env.uldir= activity == 494 or activity == 495 or activity == 496  -- Uldir
 
         -- dungeons         normal             heroic             mythic            mythic+
         env.eoa  = activity == 425 or activity == 435 or activity == 445 or activity == 459  -- Eye of Azshara
@@ -223,15 +226,24 @@ function PGF.DoFilterSearchResults(results)
         env.coen =                    activity == 474 or activity == 475 or activity == 476  -- Cathedral of Eternal Night
         env.sott =                    activity == 484 or activity == 485 or activity == 486  -- Seat of the Triumvirate
 
-        local numbers = PGF.String_ExtractNumbers(name .. " " .. comment)
-        env.findnumber = function (min, max)
-            for _, v in ipairs(numbers) do
-                if (not min or v >= min) and (not max or v <= max) then
-                    return true
-                end
-            end
-            return false
-        end
+        env.ad   = activity == 501 or activity == 500 or activity == 499 or activity == 502  -- Atal'Dazar
+                or activity == 543
+        env.tosl = activity == 503 or activity == 505                    or activity == 504  -- Temple of Sethraliss
+                or activity == 542
+        env.tur  = activity == 506 or activity == 508                    or activity == 507  -- The Underrot
+                or activity == 541
+        env.tml  = activity == 509 or activity == 511                    or activity == 510  -- The MOTHERLODE
+                or activity == 540
+        env.kr   = activity == 512 or activity == 515 or activity == 513 or activity == 514  -- Kings' Rest
+        env.fh   = activity == 516 or activity == 519 or activity == 517 or activity == 518  -- Freehold
+                or activity == 539
+        env.sots = activity == 520 or activity == 523 or activity == 521 or activity == 522  -- Shrine of the Storm
+                or activity == 538
+        env.td   = activity == 524 or activity == 527 or activity == 525 or activity == 526  -- Tol Dagor
+                or activity == 537
+        env.wm   = activity == 528 or activity == 531 or activity == 529 or activity == 530  -- Waycrest Manor
+                or activity == 536
+        env.sob  = activity == 532 or activity == 535 or activity == 533 or activity == 534  -- Siege of Boralus
 
         setmetatable(env, { __index = function(table, key) return 0 end }) -- set non-initialized values to 0
         if PGF.DoesPassThroughFilter(env, exp) then

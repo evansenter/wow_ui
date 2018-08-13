@@ -64,18 +64,9 @@ VER 3 0000000000000034 "HS / GHS" "INV_Misc_QuestionMark"
 #showtooltip
 /use [nomod][mod:ctrl]Hearthstone;[mod:shift]Dalaran Hearthstone;[mod:alt]Flight Master's Whistle;
 END
-VER 3 000000000000005E "Illidan" "1241724"
-/target Lord Illidan Stormrage
-/run if (UnitName("target") == "Lord Illidan Stormrage" and CheckInteractDistance("target", 3)) then Minimap:PingLocation(0,0) end
-/targetlasttarget
-END
 VER 3 000000000000005C "LoF" "INV_Misc_QuestionMark"
 #showtooltip
 /use [target=mouseover,help,nodead][]Leap of Faith
-END
-VER 3 0000000000000056 "Mana" "INV_Misc_QuestionMark"
-#showtooltip
-/use [nomod][mod:ctrl][mod:alt]Leytorrent Potion;[mod:shift]Symbol of Hope
 END
 VER 3 0000000000000057 "Mana Tea" "INV_Misc_QuestionMark"
 #showtooltip Mana Tea

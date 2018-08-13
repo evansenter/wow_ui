@@ -1,7 +1,3 @@
-VER 3 010000000000001D "Dispel Magic" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/use [harm][@mouseovertarget,harm][]Dispel Magic
-END
 VER 3 0100000000000024 "Flash Heal" "INV_Misc_QuestionMark"
 #showtooltip
 /use [target=mouseover,help,nodead][]Flash Heal
@@ -40,7 +36,7 @@ VER 3 0100000000000015 "Purify" "INV_MISC_QUESTIONMARK"
 END
 VER 3 0100000000000029 "Purify Disease" "INV_Misc_QuestionMark"
 #showtooltip
-/use [harm][@targettarget,harm][]Purify Disease
+/use [target=mouseover,help,nodead][]Purify Disease
 END
 VER 3 0100000000000023 "PW:R" "INV_Misc_QuestionMark"
 #showtooltip Power Word: Radiance

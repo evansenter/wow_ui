@@ -29,6 +29,12 @@ TidyPlatesContHubMenus.AbsorbModes = {
 				{ text = "Overlay" } ,
 			}
 
+TidyPlatesContHubDefaults.WidgetAbsorbUnits = 1
+TidyPlatesContHubMenus.AbsorbUnits = {
+				{ text = "Target Only"} ,
+				{ text = "All Units" } ,
+			}
+
 TidyPlatesContHubDefaults.WidgetsDebuffStyle = 1
 TidyPlatesContHubMenus.DebuffStyles = {
 				{ text = "Wide",  } ,
@@ -219,6 +225,7 @@ local function InitWidget( widgetName, extended, config, createFunction, enabled
 		--[[ Data from Themes passed to parent ]] --
 		if config.h ~= nil then extended.widgetParent._height = config.h end
 		if config.h ~= nil then extended.widgetParent._width = config.w end
+		if config.o ~= nil then extended.widgetParent._orientation = config.o else extended.widgetParent._orientation = "HORIZONTAL" end
 
 		if widget then
 			if widget.UpdateConfig then widget:UpdateConfig() end
@@ -310,9 +317,9 @@ local function OnVariableChange(vars)
 	else TidyPlatesContWidgets:DisableAuraWatcher() end
 	
 	if LocalVars.WidgetAbsorbIndicator then
-		TidyPlatesContWidgets.SetAbsorbType(LocalVars.WidgetAbsorbMode)
+		TidyPlatesContWidgets.SetAbsorbType(LocalVars.WidgetAbsorbMode, LocalVars.WidgetAbsorbUnits)
 	end
-	
+
 	if LocalVars.WidgetsComboPoints then
 		TidyPlatesContWidgets.SetComboPointsStyle(LocalVars.WidgetsComboPointsStyle);
 	end

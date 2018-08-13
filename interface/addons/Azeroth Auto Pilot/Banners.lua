@@ -270,6 +270,7 @@ function AAP_BannerRange()
 	if (IsInInstance() ~= false) then
 		return
 	end
+	local BannnerOnlinechk = 0
 	local d_y, d_x = UnitPosition("player")
 	local CheckSetR = 0
 	if (AAP.Banners.Range.P2.X and AAP.Banners.Range.P2.Y) then
@@ -283,7 +284,10 @@ function AAP_BannerRange()
 			AAP.Banners.BannersFrame["FrameFSs1"]:SetText(distance.."y")
 		else
 			AAP.Banners.BannersFrame["FrameFSs1"]:SetText("")
+			AAP.Banners.Range.P2.X = nil
+			AAP.Banners.Range.P2.Y = nil
 		end
+		BannnerOnlinechk = 1
 	else
 		AAP.Banners.BannersFrame["FrameFSs1"]:SetText("")
 	end
@@ -298,7 +302,10 @@ function AAP_BannerRange()
 			AAP.Banners.BannersFrame["FrameFSs2"]:SetText(distance.."y")
 		else
 			AAP.Banners.BannersFrame["FrameFSs2"]:SetText("")
+			AAP.Banners.Range.P3.X = nil
+			AAP.Banners.Range.P3.Y = nil
 		end
+		BannnerOnlinechk = 1
 	else
 		AAP.Banners.BannersFrame["FrameFSs2"]:SetText("")
 	end
@@ -313,7 +320,10 @@ function AAP_BannerRange()
 			AAP.Banners.BannersFrame["FrameFSs3"]:SetText(distance.."y")
 		else
 			AAP.Banners.BannersFrame["FrameFSs3"]:SetText("")
+			AAP.Banners.Range.P4.X = nil
+			AAP.Banners.Range.P4.Y = nil
 		end
+		BannnerOnlinechk = 1
 	else
 		AAP.Banners.BannersFrame["FrameFSs3"]:SetText("")
 	end
@@ -328,7 +338,10 @@ function AAP_BannerRange()
 			AAP.Banners.BannersFrame["FrameFSs4"]:SetText(distance.."y")
 		else
 			AAP.Banners.BannersFrame["FrameFSs4"]:SetText("")
+			AAP.Banners.Range.P5.X = nil
+			AAP.Banners.Range.P5.Y = nil
 		end
+		BannnerOnlinechk = 1
 	else
 		AAP.Banners.BannersFrame["FrameFSs4"]:SetText("")
 	end
@@ -346,7 +359,12 @@ function AAP_BannerRange()
 		if (distance > 0) then
 			AAP.Banners.BannersFrame.FrameFS2:SetText(distance.."y")
 			CheckSetR = 1
+		else
+			AAP.Banners.BannersFrame.B1:SetText("")
+			AAP.Banners.Range.P1.B1.X = nil
+			AAP.Banners.Range.P1.B1.Y = nil
 		end
+		BannnerOnlinechk = 1
 	else
 		AAP.Banners.BannersFrame.B1:SetText("")
 	end
@@ -360,7 +378,12 @@ function AAP_BannerRange()
 		if (distance > 0 and CheckSetR == 0) then
 			AAP.Banners.BannersFrame.FrameFS2:SetText(distance.."y")
 			CheckSetR = 1
+		else
+			AAP.Banners.BannersFrame.B2:SetText("")
+			AAP.Banners.Range.P1.B2.X = nil
+			AAP.Banners.Range.P1.B2.Y = nil
 		end
+		BannnerOnlinechk = 1
 	else
 		AAP.Banners.BannersFrame.B2:SetText("")
 	end
@@ -374,12 +397,20 @@ function AAP_BannerRange()
 		if (distance > 0 and CheckSetR == 0) then
 			AAP.Banners.BannersFrame.FrameFS2:SetText(distance.."y")
 			CheckSetR = 1
+		else
+			AAP.Banners.BannersFrame.B3:SetText("")
+			AAP.Banners.Range.P1.B3.X = nil
+			AAP.Banners.Range.P1.B3.Y = nil
 		end
+		BannnerOnlinechk = 1
 	else
 		AAP.Banners.BannersFrame.B3:SetText("")
 	end
 	if (CheckSetR == 0) then
 		AAP.Banners.BannersFrame.FrameFS2:SetText("")
+	end
+	if (BannnerOnlinechk == 0) then
+		AAP_BannerUpdRangeTimer:Stop()
 	end
 end
 function AAP_BannerCountDown()
@@ -542,7 +573,9 @@ function AAP_BannerSetCD()
 				AAP.Banners.BannersFrame.B1CD:SetCooldown(GetTime(), AAPTB1)
 				AAP.Banners.BannersFrame.B2CD:SetCooldown(GetTime(), AAPTB2)
 				AAP.Banners.BannersFrame.B3CD:SetCooldown(GetTime(), AAPTB3)
-				AAP.Banners.BannersFrame:Show()
+				if (not InCombatLockdown()) then
+					AAP.Banners.BannersFrame:Show()
+				end
 			end
 end
 AAP.Banners.BannersEvents = CreateFrame("Frame")
@@ -580,9 +613,13 @@ AAP.Banners.BannersEvents:SetScript("OnEvent", function(self, event, ...)
 			end)
 			AAP_BannerUpdRangeTimer:Play()
 			if (AAP1[AAP_Realm][AAP_Name]["Settings"]["BannerShow"] == 1) then
-				AAP.Banners.BannersFrame.Frame:Show()
+				if (not InCombatLockdown()) then
+					AAP.Banners.BannersFrame.Frame:Show()
+				end
 			else
-				AAP.Banners.BannersFrame.Frame:Hide()
+				if (not InCombatLockdown()) then
+					AAP.Banners.BannersFrame.Frame:Hide()
+				end
 			end
 		end
 	end
@@ -956,6 +993,7 @@ AAP.Banners.BannersEvents:SetScript("OnEvent", function(self, event, ...)
 					end
 
 				end
+				AAP_BannerUpdRangeTimer:Play()
 			end
 		end
 	end
@@ -1016,7 +1054,9 @@ AAP.Banners.BannersEvents:SetScript("OnEvent", function(self, event, ...)
 			if (AAPTB3 == 0 or AAPTB3 < 120) then
 				AAP.Banners.BannersFrame.B3CD:SetCooldown(GetTime(), 120)
 			end
-			AAP.Banners.BannersFrame:Show()
+			if (not InCombatLockdown()) then
+				AAP.Banners.BannersFrame:Show()
+			end
 			AAP.Banners.Range.P1.B1.X = d_x
 			AAP.Banners.Range.P1.B1.Y = d_y
 			AAP.Banners.Range.P1.B1.T = 600
@@ -1034,7 +1074,9 @@ AAP.Banners.BannersEvents:SetScript("OnEvent", function(self, event, ...)
 			if (AAPTB3 == 0 or AAPTB3 < 120) then
 				AAP.Banners.BannersFrame.B3CD:SetCooldown(GetTime(), 120)
 			end
-			AAP.Banners.BannersFrame:Show()
+			if (not InCombatLockdown()) then
+				AAP.Banners.BannersFrame:Show()
+			end
 			AAP.Banners.Range.P1.B2.X = d_x
 			AAP.Banners.Range.P1.B2.Y = d_y
 			AAP.Banners.Range.P1.B2.T = 600
@@ -1052,11 +1094,14 @@ AAP.Banners.BannersEvents:SetScript("OnEvent", function(self, event, ...)
 				AAP.Banners.BannersFrame.B2CD:SetCooldown(GetTime(), 120)
 			end
 			AAP.Banners.BannersFrame.B3CD:SetCooldown(GetTime(), 600)
-			AAP.Banners.BannersFrame:Show()
+			if (not InCombatLockdown()) then
+				AAP.Banners.BannersFrame:Show()
+			end
 			AAP.Banners.Range.P1.B3.X = d_x
 			AAP.Banners.Range.P1.B3.Y = d_y
 			AAP.Banners.Range.P1.B3.T = 600
 			C_ChatInfo.SendAddonMessage("AAPChatBanner", "3Z"..d_x.."Z"..d_y, "PARTY")
 		end
+		AAP_BannerUpdRangeTimer:Play()
 	end
 end)

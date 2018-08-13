@@ -86,6 +86,7 @@ AAP_Zone862 = {
 			},
 		}, -- [1]
 		{
+			["ClearZP"] = 1,
 			["TaxiNr"] = 5,
 			["UseFlightPath"] = 50835,
 			["PosX"] = 58.4,

@@ -1,13 +1,29 @@
-lightweight tag c2ed56ab9cd25fa1026b08d791510f2c9d8286a9 6.19.11
+lightweight tag ce6a4490a9741f238114e2d3a70558f014edc249 6.19.13
 Author:	Luxocracy <luxor355@gmail.com>
-Date:	Thu Aug 9 20:56:22 2018 +0200
+Date:	Sun Aug 12 10:08:18 2018 +0200
 
-commit c2ed56ab9cd25fa1026b08d791510f2c9d8286a9
+commit ce6a4490a9741f238114e2d3a70558f014edc249
 Author: Luxocracy <luxor355@gmail.com>
-Date:   Thu Aug 9 20:56:22 2018 +0200
+Date:   Sun Aug 12 10:08:18 2018 +0200
 
-    Fixed Monk Chi not being displated properly
+    Fixed nameplates appearing twice when closing the hub menu
     
-    - Fixed Monk Chi not displaying properly when using the talent 'Ascension'
-    - Fixed Paladin Holy Power not displaying properly for Blizzlike theme
+    - Fixed nameplates appearing twice when closing the hub menu by pressing cancel.
+
+commit f926c7170a16b2e2487e41f5c613f59c54720937
+Author: Luxocracy <luxor355@gmail.com>
+Date:   Sat Aug 11 16:11:26 2018 +0200
+
+    Fixed changing themes causing issues with the absorb bars position
+    
+    - Fixed an issue with the positioning the absorb bar being incorrect after swapping between a theme with vertical healthbars and one with horizontal healthbars
+
+commit c8e4d6724ca6bdf0e9c02ccc1da4685d007a0eab
+Author: Luxocracy <luxor355@gmail.com>
+Date:   Sat Aug 11 15:48:16 2018 +0200
+
+    Fixed the absorb texture being strecthed/compressed in vertical mode
+    
+    - Fixed the absorb bars texture getting stretched/compressed rather than clipped in vertical mode.
+    - Cleaned up some code
 
