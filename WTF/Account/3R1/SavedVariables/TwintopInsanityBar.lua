@@ -91,8 +91,8 @@ TwintopInsanityBarSettings = {
 		["alwaysShow"] = false,
 		["notZeroShow"] = true,
 	},
-	["showS2MSummary"] = true,
 	["showSummary"] = false,
+	["showS2MSummary"] = true,
 	["hasteApproachingThreshold"] = 135,
 	["summary"] = {
 		["show"] = false,

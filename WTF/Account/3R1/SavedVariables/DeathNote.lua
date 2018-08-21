@@ -60,7 +60,6 @@ DeathNoteDB = {
 				["buff_gains"] = false,
 			},
 			["max_deaths"] = 75,
-			["searchbox_text"] = "",
 			["display"] = {
 				["y"] = 17.1110534667969,
 				["namelist"] = 2,
@@ -68,6 +67,7 @@ DeathNoteDB = {
 				["w"] = 1013.00042724609,
 				["x"] = 321.277740478516,
 			},
+			["searchbox_text"] = "",
 		},
 		["Evan - Illidan"] = {
 			["searchbox_text"] = "",

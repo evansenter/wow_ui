@@ -916,6 +916,7 @@ TidyPlatesContHubSettings = {
 		["StatusTextRight"] = 7,
 		["StyleFriendlyBarsOnPlayers"] = true,
 		["FrameVerticalPosition"] = 0.699999988079071,
+		["WidgetQuestIcon"] = false,
 		["WidgetsDebuffTrackList"] = "My Rake\nMy Rip\nMy Moonfire\nAll 339\nMy Regrowth\nMy Rejuvenation\nNot Facepalm Bolt",
 		["StatusTextCenterColor"] = true,
 		["ColorFriendlyNameMode"] = 1,

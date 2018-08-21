@@ -2,1261 +2,931 @@
 ElvCharacterDB = {
 	["ChatHistoryLog"] = {
 		{
-			"where did u hear about that, thats a strange thing to hear", -- [1]
-			"Celestrazaa-Illidan", -- [2]
+			"  ￥ ~ ￥  ~特价5H或5M毕业~主线全清和声望IIO-I2O（装等提升至325+5H能排毕业） （装等提升至340+ 5M毕业）（vip套餐装等提升至355+ 对应PT团本）（至尊VIP H团本毕业装等 370+）低保 5H或5M毕业特价", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			2437, -- [11]
-			"Player-57-0AFF20AA", -- [12]
+			782, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120514,
-			[50] = "CHAT_MSG_WHISPER",
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792415,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [1]
 		{
-			"_$437Sureptitious_$<Suspects>  (T/W/Th 9p-12a  CST) is recruiting punctual competent players who are pushing mythic content for the tier for our competetive raid roster in BFA. PST w/ experience for more info. We are looking for 1 tank and rest p_$f48cba$", -- [1]
-			"Evan-Illidan", -- [2]
+			"   ￥~ ￥ ~ 特价5H或5M毕业~主线和声望IIO-I2O（装等提升至325+5H能排毕业）装等提升至340+ 5M毕业）（vip套餐装等提升至355+ ）幽灵虎等TCG坐骑特价 低保   IIO—I2O快速练级 （琻 比秒发）5H或5M毕业特", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
-			"", -- [6]
-			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			2439, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			822, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1534120515,
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792438,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [2]
 		{
-			"About Keez?", -- [1]
-			"Celestrazaa-Illidan", -- [2]
+			"  ￥ ~ ￥  ~特价5H或5M毕业~主线全清和声望IIO-I2O（装等提升至325+5H能排毕业） （装等提升至340+ 5M毕业）（vip套餐装等提升至355+ 对应PT团本）（至尊VIP H团本毕业装等 370+）低保 5H或5M毕业特价", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			2441, -- [11]
-			"Player-57-0AFF20AA", -- [12]
+			862, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120522,
-			[50] = "CHAT_MSG_WHISPER_INFORM",
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792461,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [3]
 		{
-			"_$438Mullets_$WTB |cffffffff|Hitem:124437::::::::110:64::::::|h[Shal'dorei Silk]|h|r_$3fc6ea$", -- [1]
-			"Evan-Illidan", -- [2]
+			"   ￥~ ￥ ~ 特价5H或5M毕业~主线和声望IIO-I2O（装等提升至325+5H能排毕业）装等提升至340+ 5M毕业）（vip套餐装等提升至355+ ）幽灵虎等TCG坐骑特价 低保   IIO—I2O快速练级 （琻 比秒发）5H或5M毕业特", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
-			"", -- [6]
-			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			2445, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			870, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1534120525,
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792484,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [4]
 		{
-			"yeah", -- [1]
-			"Celestrazaa-Illidan", -- [2]
+			"  ￥ ~ ￥  ~特价5H或5M毕业~主线全清和声望IIO-I2O（装等提升至325+5H能排毕业） （装等提升至340+ 5M毕业）（vip套餐装等提升至355+ 对应PT团本）（至尊VIP H团本毕业装等 370+）低保 5H或5M毕业特价", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			2446, -- [11]
-			"Player-57-0AFF20AA", -- [12]
+			891, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120526,
-			[50] = "CHAT_MSG_WHISPER",
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792507,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [5]
 		{
-			"_$439Chorks_$does anyone here speak poirtugeuese_$0070dd$", -- [1]
-			"Evan-Illidan", -- [2]
+			"   ￥~ ￥ ~ 特价5H或5M毕业~主线和声望IIO-I2O（装等提升至325+5H能排毕业）装等提升至340+ 5M毕业）（vip套餐装等提升至355+ ）幽灵虎等TCG坐骑特价 低保   IIO—I2O快速练级 （琻 比秒发）5H或5M毕业特", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
-			"", -- [6]
-			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			2449, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			906, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1534120531,
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792530,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [6]
 		{
-			"Need 1 tanks and 1 healer", -- [1]
-			"Vanixa-Illidan", -- [2]
+			"  ￥ ~ ￥  ~特价5H或5M毕业~主线全清和声望IIO-I2O（装等提升至325+5H能排毕业） （装等提升至340+ 5M毕业）（vip套餐装等提升至355+ 对应PT团本）（至尊VIP H团本毕业装等 370+）低保 5H或5M毕业特价", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Vanixa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			2451, -- [11]
-			"Player-57-0AEF2667", -- [12]
+			919, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc41e3aVanixa|r",
-			[51] = 1534120532,
-			[50] = "CHAT_MSG_RAID_LEADER",
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792553,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [7]
 		{
-			"I think it was Jar or something.", -- [1]
-			"Celestrazaa-Illidan", -- [2]
+			"   ￥~ ￥ ~ 特价5H或5M毕业~主线和声望IIO-I2O（装等提升至325+5H能排毕业）装等提升至340+ 5M毕业）（vip套餐装等提升至355+ ）幽灵虎等TCG坐骑特价 低保   IIO—I2O快速练级 （琻 比秒发）5H或5M毕业特", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			2452, -- [11]
-			"Player-57-0AFF20AA", -- [12]
+			929, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120533,
-			[50] = "CHAT_MSG_WHISPER_INFORM",
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792576,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [8]
 		{
-			"_$440Reconsiderz_$WTS  |cff0070dd|Hitem:128319::::::::110:259::31::::|h[Void-Shrouded Satchel]|h|r! Get your |cff00ccff|Hitem:128318::::::::110:259::::::|h[Touch of the Void]|h|r for leveling!_$ffffff$", -- [1]
-			"Evan-Illidan", -- [2]
+			"  ￥ ~ ￥  ~特价5H或5M毕业~主线全清和声望IIO-I2O（装等提升至325+5H能排毕业） （装等提升至340+ 5M毕业）（vip套餐装等提升至355+ 对应PT团本）（至尊VIP H团本毕业装等 370+）低保 5H或5M毕业特价", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
-			"", -- [6]
-			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			2454, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			943, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1534120533,
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792599,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [9]
 		{
-			" 110-120 快速代练 12小时完成   310/325/340装等提升 5H/5M毕业 专业技能提升 金币 奥迪尔普通/英雄包团和毕业等", -- [1]
-			"Hjyeg-Illidan", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:12557:Player-57-082C9C48:1:8:20:18:4294967295:4294967295:4294967295:4294967295|h[Explore Drustvar]|h|r!", -- [1]
+			"Qwedlife-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Qwedlife", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			948, -- [11]
+			"Player-57-082C9C48", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffQwedlife|r",
+			[51] = 1534792604,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [10]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:12988:Player-57-082C9C48:1:8:20:18:4294967295:4294967295:4294967295:4294967295|h[Battle for Azeroth Explorer]|h|r!", -- [1]
+			"Qwedlife-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Qwedlife", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			949, -- [11]
+			"Player-57-082C9C48", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffffffffQwedlife|r",
+			[51] = 1534792604,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+		}, -- [11]
+		{
+			"   ￥~ ￥ ~ 特价5H或5M毕业~主线和声望IIO-I2O（装等提升至325+5H能排毕业）装等提升至340+ 5M毕业）（vip套餐装等提升至355+ ）幽灵虎等TCG坐骑特价 低保   IIO—I2O快速练级 （琻 比秒发）5H或5M毕业特", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Hjyeg", -- [5]
+			"Qwzxcsdfsgxx", -- [5]
 			"DND", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			2455, -- [11]
-			"Player-57-0B05E519", -- [12]
+			964, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cffc69b6dHjyeg|r",
-			[51] = 1534120535,
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792622,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [10]
-		{
-			"lol weird", -- [1]
-			"Celestrazaa-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2458, -- [11]
-			"Player-57-0AFF20AA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120545,
-			[50] = "CHAT_MSG_WHISPER",
-		}, -- [11]
-		{
-			"He does love his gossip.", -- [1]
-			"Celestrazaa-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2460, -- [11]
-			"Player-57-0AFF20AA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120550,
-			[50] = "CHAT_MSG_WHISPER_INFORM",
 		}, -- [12]
 		{
-			"i can go back to heal?", -- [1]
-			"Textrano-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Textrano-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2461, -- [11]
-			"Player-11-0772B68B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffTextrano-Tichondrius|r",
-			[51] = 1534120553,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [13]
-		{
-			"doesnt seem much for gossip", -- [1]
-			"Celestrazaa-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2463, -- [11]
-			"Player-57-0AFF20AA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120559,
-			[50] = "CHAT_MSG_WHISPER",
-		}, -- [14]
-		{
-			"Sure.", -- [1]
-			"Vanixa-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Vanixa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2464, -- [11]
-			"Player-57-0AEF2667", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffc41e3aVanixa|r",
-			[51] = 1534120559,
-			[50] = "CHAT_MSG_RAID_LEADER",
-		}, -- [15]
-		{
-			"ty ty", -- [1]
-			"Textrano-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Textrano-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2466, -- [11]
-			"Player-11-0772B68B", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffTextrano-Tichondrius|r",
-			[51] = 1534120566,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [16]
-		{
-			"seems boring rofl", -- [1]
-			"Celestrazaa-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2471, -- [11]
-			"Player-57-0AFF20AA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120574,
-			[50] = "CHAT_MSG_WHISPER",
-		}, -- [17]
-		{
-			"\"i totally just followed someone on their public social media page  .... wooo!\"", -- [1]
-			"Celestrazaa-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2487, -- [11]
-			"Player-57-0AFF20AA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120596,
-			[50] = "CHAT_MSG_WHISPER",
-		}, -- [18]
-		{
-			"诚信养鲲，多年良心经营，零封号记录，某反带练人士唯一指定带练，可找大公会担保。现预售头三天等级，限三个名额，欢迎关注！", -- [1]
-			"Yangkundaxia-Illidan", -- [2]
+			"  ￥ ~ ￥  ~特价5H或5M毕业~主线全清和声望IIO-I2O（装等提升至325+5H能排毕业） （装等提升至340+ 5M毕业）（vip套餐装等提升至355+ 对应PT团本）（至尊VIP H团本毕业装等 370+）低保 5H或5M毕业特价", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Yangkundaxia", -- [5]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			976, -- [11]
+			"Player-57-0B0CE373", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792645,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [13]
+		{
+			"Hotel Transylvania 公会双团为备战新版本招募各天赋治疗/DPS。活动时间：主力团2456服务器7-11点；午夜团周456服务器凌晨12-3。要求时间稳定，态度认真。也欢迎各路暴雪全家桶玩家来玩。", -- [1]
+			"Shmily-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Shmily", -- [5]
 			"", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			2490, -- [11]
-			"Player-57-0B076B5D", -- [12]
+			982, -- [11]
+			"Player-57-0AF4B1C8", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cff0070ddYangkundaxia|r",
-			[51] = 1534120598,
+			[52] = "|cffc41e3aShmily|r",
+			[51] = 1534792661,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [14]
+		{
+			"Hotel Transylvania 公会双团为备战新版本招募各天赋治疗/DPS。活动时间：主力团2456服务器7-11点；午夜团周456服务器凌晨12-3。要求时间稳定，态度认真。也欢迎各路暴雪全家桶玩家来玩。", -- [1]
+			"Shmily-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Shmily", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			983, -- [11]
+			"Player-57-0AF4B1C8", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc41e3aShmily|r",
+			[51] = 1534792661,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [15]
+		{
+			"   ￥~ ￥ ~ 特价5H或5M毕业~主线和声望IIO-I2O（装等提升至325+5H能排毕业）装等提升至340+ 5M毕业）（vip套餐装等提升至355+ ）幽灵虎等TCG坐骑特价 低保   IIO—I2O快速练级 （琻 比秒发）5H或5M毕业特", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			989, -- [11]
+			"Player-57-0B0CE373", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792668,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [16]
+		{
+			"  ￥ ~ ￥  ~特价5H或5M毕业~主线全清和声望IIO-I2O（装等提升至325+5H能排毕业） （装等提升至340+ 5M毕业）（vip套餐装等提升至355+ 对应PT团本）（至尊VIP H团本毕业装等 370+）低保 5H或5M毕业特价", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1014, -- [11]
+			"Player-57-0B0CE373", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792691,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [17]
+		{
+			"   ￥~ ￥ ~ 特价5H或5M毕业~主线和声望IIO-I2O（装等提升至325+5H能排毕业）装等提升至340+ 5M毕业）（vip套餐装等提升至355+ ）幽灵虎等TCG坐骑特价 低保   IIO—I2O快速练级 （琻 比秒发）5H或5M毕业特", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1034, -- [11]
+			"Player-57-0B0CE373", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792714,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [18]
+		{
+			" Lost Dynasty休闲团招收各职业开荒成员，性感女装团长在线喊麦。活动时间：周五周六服务器时间19-23点。", -- [1]
+			"Acuteangle-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Acuteangle", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1036, -- [11]
+			"Player-57-08E15124", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cff3fc6eaAcuteangle|r",
+			[51] = 1534792719,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [19]
 		{
-			" 110-120 快速代练 12小时完成   310/325/340装等提升 5H/5M毕业 专业技能提升 金币 奥迪尔普通/英雄包团和毕业等", -- [1]
-			"Hjyeg-Illidan", -- [2]
+			"  ￥ ~ ￥  ~特价5H或5M毕业~主线全清和声望IIO-I2O（装等提升至325+5H能排毕业） （装等提升至340+ 5M毕业）（vip套餐装等提升至355+ 对应PT团本）（至尊VIP H团本毕业装等 370+）低保 5H或5M毕业特价", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Hjyeg", -- [5]
+			"Qwzxcsdfsgxx", -- [5]
 			"DND", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			2507, -- [11]
-			"Player-57-0B05E519", -- [12]
+			1046, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cffc69b6dHjyeg|r",
-			[51] = 1534120627,
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792737,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [20]
 		{
-			"诚信养鲲，多年良心经营，零封号记录，某反带练人士唯一指定带练，可找大公会担保。现预售头三天等级，限三个名额，欢迎关注！", -- [1]
-			"Yangkundaxia-Illidan", -- [2]
+			"   ￥~ ￥ ~ 特价5H或5M毕业~主线和声望IIO-I2O（装等提升至325+5H能排毕业）装等提升至340+ 5M毕业）（vip套餐装等提升至355+ ）幽灵虎等TCG坐骑特价 低保   IIO—I2O快速练级 （琻 比秒发）5H或5M毕业特", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Yangkundaxia", -- [5]
-			"", -- [6]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			2520, -- [11]
-			"Player-57-0B076B5D", -- [12]
+			1068, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cff0070ddYangkundaxia|r",
-			[51] = 1534120655,
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792760,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [21]
 		{
-			" 110-120 快速代练 12小时完成   310/325/340装等提升 5H/5M毕业 专业技能提升 金币 奥迪尔普通/英雄包团和毕业等", -- [1]
-			"Hjyeg-Illidan", -- [2]
+			"  ￥ ~ ￥  ~特价5H或5M毕业~主线全清和声望IIO-I2O（装等提升至325+5H能排毕业） （装等提升至340+ 5M毕业）（vip套餐装等提升至355+ 对应PT团本）（至尊VIP H团本毕业装等 370+）低保 5H或5M毕业特价", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Hjyeg", -- [5]
+			"Qwzxcsdfsgxx", -- [5]
 			"DND", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			2521, -- [11]
-			"Player-57-0B05E519", -- [12]
+			1077, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cffc69b6dHjyeg|r",
-			[51] = 1534120658,
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792783,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [22]
 		{
-			"I think it's more \"omg we raid with a girl that does videogame related costume stuffffffff\"", -- [1]
-			"Celestrazaa-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2526, -- [11]
-			"Player-57-0AFF20AA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120665,
-			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [23]
-		{
-			"lol oh well", -- [1]
-			"Celestrazaa-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2534, -- [11]
-			"Player-57-0AFF20AA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120671,
-			[50] = "CHAT_MSG_WHISPER",
-		}, -- [24]
-		{
-			"Slow news day.", -- [1]
-			"Celestrazaa-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2536, -- [11]
-			"Player-57-0AFF20AA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120675,
-			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [25]
-		{
-			"as long as they dont know where i work or what i do for a liing", -- [1]
-			"Celestrazaa-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2538, -- [11]
-			"Player-57-0AFF20AA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120678,
-			[50] = "CHAT_MSG_WHISPER",
-		}, -- [26]
-		{
-			"诚信养鲲，多年良心经营，零封号记录，某反带练人士唯一指定带练，可找大公会担保。现预售头三天等级，限三个名额，欢迎关注！", -- [1]
-			"Yangkundaxia-Illidan", -- [2]
+			"   ￥~ ￥ ~ 特价5H或5M毕业~主线和声望IIO-I2O（装等提升至325+5H能排毕业）装等提升至340+ 5M毕业）（vip套餐装等提升至355+ ）幽灵虎等TCG坐骑特价 低保   IIO—I2O快速练级 （琻 比秒发）5H或5M毕业特", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Yangkundaxia", -- [5]
-			"", -- [6]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			2541, -- [11]
-			"Player-57-0B076B5D", -- [12]
+			1091, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cff0070ddYangkundaxia|r",
-			[51] = 1534120681,
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792806,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [23]
+		{
+			"  ￥ ~ ￥  ~特价5H或5M毕业~主线全清和声望IIO-I2O（装等提升至325+5H能排毕业） （装等提升至340+ 5M毕业）（vip套餐装等提升至355+ 对应PT团本）（至尊VIP H团本毕业装等 370+）低保 5H或5M毕业特价", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1103, -- [11]
+			"Player-57-0B0CE373", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792829,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [24]
+		{
+			"   ￥~ ￥ ~ 特价5H或5M毕业~主线和声望IIO-I2O（装等提升至325+5H能排毕业）装等提升至340+ 5M毕业）（vip套餐装等提升至355+ ）幽灵虎等TCG坐骑特价 低保   IIO—I2O快速练级 （琻 比秒发）5H或5M毕业特", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1121, -- [11]
+			"Player-57-0B0CE373", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792852,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [25]
+		{
+			"  ￥ ~ ￥  ~特价5H或5M毕业~主线全清和声望IIO-I2O（装等提升至325+5H能排毕业） （装等提升至340+ 5M毕业）（vip套餐装等提升至355+ 对应PT团本）（至尊VIP H团本毕业装等 370+）低保 5H或5M毕业特价", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1136, -- [11]
+			"Player-57-0B0CE373", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792876,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [26]
+		{
+			"   ￥~ ￥ ~ 特价5H或5M毕业~主线和声望IIO-I2O（装等提升至325+5H能排毕业）装等提升至340+ 5M毕业）（vip套餐装等提升至355+ ）幽灵虎等TCG坐骑特价 低保   IIO—I2O快速练级 （琻 比秒发）5H或5M毕业特", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1156, -- [11]
+			"Player-57-0B0CE373", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792899,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [27]
 		{
-			"living*", -- [1]
-			"Celestrazaa-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2545, -- [11]
-			"Player-57-0AFF20AA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120685,
-			[50] = "CHAT_MSG_WHISPER",
-		}, -- [28]
-		{
-			"or where i live", -- [1]
-			"Celestrazaa-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2547, -- [11]
-			"Player-57-0AFF20AA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120688,
-			[50] = "CHAT_MSG_WHISPER",
-		}, -- [29]
-		{
-			" 110-120 快速代练 12小时完成   310/325/340装等提升 5H/5M毕业 专业技能提升 金币 奥迪尔普通/英雄包团和毕业等", -- [1]
-			"Hjyeg-Illidan", -- [2]
+			"WTS |cffa335ee|Hitem:159128::::::::120:577::13::::|h[Darkmoon Deck: Blockades]|h|r|cffa335ee|Hitem:159127::::::::120:577::13::::|h[Darkmoon Deck: Tides]|h|r|cffa335ee|Hitem:159126::::::::120:577::13::::|h[Darkmoon Deck: Squalls]|h|r|cffa335ee|Hitem:159125::::::::120:577::13::::|h[Darkmoon Deck: Fathoms]|h|r PST FOR PRICES. TONS IN STOCK", -- [1]
+			"Squatflex", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Hjyeg", -- [5]
+			"Squatflex", -- [5]
 			"DND", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			2548, -- [11]
-			"Player-57-0B05E519", -- [12]
+			1164, -- [11]
+			"Player-57-0AEC0654", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cffc69b6dHjyeg|r",
-			[51] = 1534120688,
+			[52] = "|cffa330c9Squatflex|r",
+			[51] = 1534792914,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [28]
+		{
+			" Lost Dynasty休闲团招收各职业开荒成员，性感女装团长在线喊麦。活动时间：周五周六服务器时间19-23点。", -- [1]
+			"Acuteangle-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Acuteangle", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1171, -- [11]
+			"Player-57-08E15124", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cff3fc6eaAcuteangle|r",
+			[51] = 1534792921,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [29]
+		{
+			"  ￥ ~ ￥  ~特价5H或5M毕业~主线全清和声望IIO-I2O（装等提升至325+5H能排毕业） （装等提升至340+ 5M毕业）（vip套餐装等提升至355+ 对应PT团本）（至尊VIP H团本毕业装等 370+）低保 5H或5M毕业特价", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1172, -- [11]
+			"Player-57-0B0CE373", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792921,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [30]
 		{
-			"shit like that", -- [1]
-			"Celestrazaa-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2551, -- [11]
-			"Player-57-0AFF20AA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120689,
-			[50] = "CHAT_MSG_WHISPER",
-		}, -- [31]
-		{
-			"Lol isn't it banking or something?", -- [1]
-			"Celestrazaa-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2562, -- [11]
-			"Player-57-0AFF20AA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120718,
-			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [32]
-		{
-			" 110-120 快速代练 12小时完成   310/325/340装等提升 5H/5M毕业 专业技能提升 金币 奥迪尔普通/英雄包团和毕业等", -- [1]
-			"Hjyeg-Illidan", -- [2]
+			"   ￥~ ￥ ~ 特价5H或5M毕业~主线和声望IIO-I2O（装等提升至325+5H能排毕业）装等提升至340+ 5M毕业）（vip套餐装等提升至355+ ）幽灵虎等TCG坐骑特价 低保   IIO—I2O快速练级 （琻 比秒发）5H或5M毕业特", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Hjyeg", -- [5]
+			"Qwzxcsdfsgxx", -- [5]
 			"DND", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			2564, -- [11]
-			"Player-57-0B05E519", -- [12]
+			1184, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cffc69b6dHjyeg|r",
-			[51] = 1534120719,
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792944,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [31]
+		{
+			"  ￥ ~ ￥  ~特价5H或5M毕业~主线全清和声望IIO-I2O（装等提升至325+5H能排毕业） （装等提升至340+ 5M毕业）（vip套餐装等提升至355+ 对应PT团本）（至尊VIP H团本毕业装等 370+）低保 5H或5M毕业特价", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1200, -- [11]
+			"Player-57-0B0CE373", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792967,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [32]
+		{
+			"   ￥~ ￥ ~ 特价5H或5M毕业~主线和声望IIO-I2O（装等提升至325+5H能排毕业）装等提升至340+ 5M毕业）（vip套餐装等提升至355+ ）幽灵虎等TCG坐骑特价 低保   IIO—I2O快速练级 （琻 比秒发）5H或5M毕业特", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1227, -- [11]
+			"Player-57-0B0CE373", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534792990,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [33]
 		{
-			"I'll try to keep it off your guild note, if I can resist.", -- [1]
-			"Celestrazaa-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2570, -- [11]
-			"Player-57-0AFF20AA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120730,
-			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [34]
-		{
-			"Frostwolves[霜狼]公会重组，欢迎各位有实力者和休闲玩家加入。谢绝结党营私，倚老卖老等不良风气。共建和谐友爱的新家园！", -- [1]
-			"Sweetcookie-Illidan", -- [2]
+			" Lost Dynasty休闲团招收各职业开荒成员，性感女装团长在线喊麦。活动时间：周五周六服务器时间19-23点。", -- [1]
+			"Acuteangle-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Sweetcookie", -- [5]
+			"Acuteangle", -- [5]
 			"", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			2572, -- [11]
-			"Player-57-08E38995", -- [12]
+			1231, -- [11]
+			"Player-57-08E15124", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cff00ff96Sweetcookie|r",
-			[51] = 1534120735,
+			[52] = "|cff3fc6eaAcuteangle|r",
+			[51] = 1534792998,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [34]
+		{
+			"  ￥ ~ ￥  ~特价5H或5M毕业~主线全清和声望IIO-I2O（装等提升至325+5H能排毕业） （装等提升至340+ 5M毕业）（vip套餐装等提升至355+ 对应PT团本）（至尊VIP H团本毕业装等 370+）低保 5H或5M毕业特价", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1242, -- [11]
+			"Player-57-0B0CE373", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534793013,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [35]
 		{
-			" 110-120 快速代练 12小时完成   310/325/340装等提升 5H/5M毕业 专业技能提升 金币 奥迪尔普通/英雄包团和毕业等", -- [1]
-			"Hjyeg-Illidan", -- [2]
+			"   ￥~ ￥ ~ 特价5H或5M毕业~主线和声望IIO-I2O（装等提升至325+5H能排毕业）装等提升至340+ 5M毕业）（vip套餐装等提升至355+ ）幽灵虎等TCG坐骑特价 低保   IIO—I2O快速练级 （琻 比秒发）5H或5M毕业特", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Hjyeg", -- [5]
+			"Qwzxcsdfsgxx", -- [5]
 			"DND", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			2577, -- [11]
-			"Player-57-0B05E519", -- [12]
+			1267, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cffc69b6dHjyeg|r",
-			[51] = 1534120749,
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534793036,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [36]
 		{
-			"nah i quit that jon", -- [1]
-			"Celestrazaa-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2587, -- [11]
-			"Player-57-0AFF20AA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120775,
-			[50] = "CHAT_MSG_WHISPER",
-		}, -- [37]
-		{
-			"job*", -- [1]
-			"Celestrazaa-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2589, -- [11]
-			"Player-57-0AFF20AA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120776,
-			[50] = "CHAT_MSG_WHISPER",
-		}, -- [38]
-		{
-			" 110-120 快速代练 12小时完成   310/325/340装等提升 5H/5M毕业 专业技能提升 金币 奥迪尔普通/英雄包团和毕业等", -- [1]
-			"Hjyeg-Illidan", -- [2]
+			"  ￥ ~ ￥  ~特价5H或5M毕业~主线全清和声望IIO-I2O（装等提升至325+5H能排毕业） （装等提升至340+ 5M毕业）（vip套餐装等提升至355+ 对应PT团本）（至尊VIP H团本毕业装等 370+）低保 5H或5M毕业特价", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Hjyeg", -- [5]
+			"Qwzxcsdfsgxx", -- [5]
 			"DND", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			2592, -- [11]
-			"Player-57-0B05E519", -- [12]
+			1283, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cffc69b6dHjyeg|r",
-			[51] = 1534120780,
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534793059,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [37]
+		{
+			"   ￥~ ￥ ~ 特价5H或5M毕业~主线和声望IIO-I2O（装等提升至325+5H能排毕业）装等提升至340+ 5M毕业）（vip套餐装等提升至355+ ）幽灵虎等TCG坐骑特价 低保   IIO—I2O快速练级 （琻 比秒发）5H或5M毕业特", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1313, -- [11]
+			"Player-57-0B0CE373", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534793082,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [38]
+		{
+			"  ￥ ~ ￥  ~特价5H或5M毕业~主线全清和声望IIO-I2O（装等提升至325+5H能排毕业） （装等提升至340+ 5M毕业）（vip套餐装等提升至355+ 对应PT团本）（至尊VIP H团本毕业装等 370+）低保 5H或5M毕业特价", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1335, -- [11]
+			"Player-57-0B0CE373", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534793105,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [39]
 		{
-			"Ahh you weren't really happy there, right?", -- [1]
-			"Celestrazaa-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2597, -- [11]
-			"Player-57-0AFF20AA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120792,
-			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [40]
-		{
-			"Hopefully for the best.", -- [1]
-			"Celestrazaa-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2600, -- [11]
-			"Player-57-0AFF20AA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120797,
-			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [41]
-		{
-			" 110-120 快速代练 12小时完成   310/325/340装等提升 5H/5M毕业 专业技能提升 金币 奥迪尔普通/英雄包团和毕业等", -- [1]
-			"Hjyeg-Illidan", -- [2]
+			"   ￥~ ￥ ~ 特价5H或5M毕业~主线和声望IIO-I2O（装等提升至325+5H能排毕业）装等提升至340+ 5M毕业）（vip套餐装等提升至355+ ）幽灵虎等TCG坐骑特价 低保   IIO—I2O快速练级 （琻 比秒发）5H或5M毕业特", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Hjyeg", -- [5]
+			"Qwzxcsdfsgxx", -- [5]
 			"DND", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			2609, -- [11]
-			"Player-57-0B05E519", -- [12]
+			1360, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cffc69b6dHjyeg|r",
-			[51] = 1534120810,
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534793128,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [40]
+		{
+			"  ￥ ~ ￥  ~特价5H或5M毕业~主线全清和声望IIO-I2O（装等提升至325+5H能排毕业） （装等提升至340+ 5M毕业）（vip套餐装等提升至355+ 对应PT团本）（至尊VIP H团本毕业装等 370+）低保 5H或5M毕业特价", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1374, -- [11]
+			"Player-57-0B0CE373", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534793151,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [41]
+		{
+			"   ￥~ ￥ ~ 特价5H或5M毕业~主线和声望IIO-I2O（装等提升至325+5H能排毕业）装等提升至340+ 5M毕业）（vip套餐装等提升至355+ ）幽灵虎等TCG坐骑特价 低保   IIO—I2O快速练级 （琻 比秒发）5H或5M毕业特", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1385, -- [11]
+			"Player-57-0B0CE373", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534793174,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [42]
 		{
-			"Frostwolves[霜狼]公会重组，欢迎各位有实力者和休闲玩家加入。谢绝结党营私，倚老卖老等不良风气。共建和谐友爱的新家园！", -- [1]
-			"Sweetcookie-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Sweetcookie", -- [5]
-			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
-			0, -- [10]
-			2612, -- [11]
-			"Player-57-08E38995", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			true, -- [17]
-			[52] = "|cff00ff96Sweetcookie|r",
-			[51] = 1534120818,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [43]
-		{
-			"nah i mean the job was boring as fuck but paid well for what i considered mindless", -- [1]
-			"Celestrazaa-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2613, -- [11]
-			"Player-57-0AFF20AA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120820,
-			[50] = "CHAT_MSG_WHISPER",
-		}, -- [44]
-		{
-			"news leaked tho that they were looking to sell", -- [1]
-			"Celestrazaa-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2617, -- [11]
-			"Player-57-0AFF20AA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120834,
-			[50] = "CHAT_MSG_WHISPER",
-		}, -- [45]
-		{
-			"so i jumped ship", -- [1]
-			"Celestrazaa-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2620, -- [11]
-			"Player-57-0AFF20AA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120837,
-			[50] = "CHAT_MSG_WHISPER",
-		}, -- [46]
-		{
-			" 110-120 快速代练 12小时完成   310/325/340装等提升 5H/5M毕业 专业技能提升 金币 奥迪尔普通/英雄包团和毕业等", -- [1]
-			"Hjyeg-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Hjyeg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
-			0, -- [10]
-			2621, -- [11]
-			"Player-57-0B05E519", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dHjyeg|r",
-			[51] = 1534120841,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [47]
-		{
-			"诚信养鲲，多年良心经营，零封号记录，某反带练人士唯一指定带练，可找大公会担保。现预售头三天等级，限三个名额，欢迎关注！", -- [1]
-			"Yangkundaxia-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Yangkundaxia", -- [5]
-			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
-			0, -- [10]
-			2629, -- [11]
-			"Player-57-0B076B5D", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			true, -- [17]
-			[52] = "|cff0070ddYangkundaxia|r",
-			[51] = 1534120848,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [48]
-		{
-			" 110-120 快速代练 12小时完成   310/325/340装等提升 5H/5M毕业 专业技能提升 金币 奥迪尔普通/英雄包团和毕业等", -- [1]
-			"Hjyeg-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Hjyeg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
-			0, -- [10]
-			2638, -- [11]
-			"Player-57-0B05E519", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dHjyeg|r",
-			[51] = 1534120872,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [49]
-		{
-			"Makes sense if the sale would have been shitty for you.", -- [1]
-			"Celestrazaa-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Celestrazaa", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2640, -- [11]
-			"Player-57-0AFF20AA", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534120877,
-			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [50]
-		{
-			"Frostwolves[霜狼]公会重组，欢迎各位有实力者和休闲玩家加入。谢绝结党营私，倚老卖老等不良风气。共建和谐友爱的新家园！", -- [1]
-			"Sweetcookie-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Sweetcookie", -- [5]
-			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
-			0, -- [10]
-			2641, -- [11]
-			"Player-57-08E38995", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			true, -- [17]
-			[52] = "|cff00ff96Sweetcookie|r",
-			[51] = 1534120877,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [51]
-		{
-			" 110-120 快速代练 12小时完成   310/325/340装等提升 5H/5M毕业 专业技能提升 金币 奥迪尔普通/英雄包团和毕业等", -- [1]
-			"Hjyeg-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Hjyeg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
-			0, -- [10]
-			2652, -- [11]
-			"Player-57-0B05E519", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dHjyeg|r",
-			[51] = 1534120902,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [52]
-		{
-			" 110-120 快速代练 12小时完成   310/325/340装等提升 5H/5M毕业 专业技能提升 金币 奥迪尔普通/英雄包团和毕业等", -- [1]
-			"Hjyeg-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Hjyeg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
-			0, -- [10]
-			2666, -- [11]
-			"Player-57-0B05E519", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dHjyeg|r",
-			[51] = 1534120933,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [53]
-		{
-			" 110-120 快速代练 12小时完成   310/325/340装等提升 5H/5M毕业 专业技能提升 金币 奥迪尔普通/英雄包团和毕业等", -- [1]
-			"Hjyeg-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Hjyeg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
-			0, -- [10]
-			2678, -- [11]
-			"Player-57-0B05E519", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dHjyeg|r",
-			[51] = 1534120963,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [54]
-		{
-			"诚信养鲲，多年良心经营，零封号记录，某反带练人士唯一指定带练，可找大公会担保。现预售头三天等级，限三个名额，欢迎关注！", -- [1]
-			"Yangkundaxia-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Yangkundaxia", -- [5]
-			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
-			0, -- [10]
-			2680, -- [11]
-			"Player-57-0B076B5D", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			true, -- [17]
-			[52] = "|cff0070ddYangkundaxia|r",
-			[51] = 1534120968,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [55]
-		{
-			"how come i m here ", -- [1]
-			"Priestbang-Tichondrius", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Priestbang-Tichondrius", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			2683, -- [11]
-			"Player-11-0B180650", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffPriestbang-Tichondrius|r",
-			[51] = 1534120972,
-			[50] = "CHAT_MSG_RAID",
-		}, -- [56]
-		{
-			" 110-120 快速代练 12小时完成   310/325/340装等提升 5H/5M毕业 专业技能提升 金币 奥迪尔普通/英雄包团和毕业等", -- [1]
-			"Hjyeg-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Hjyeg", -- [5]
-			"DND", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
-			0, -- [10]
-			2695, -- [11]
-			"Player-57-0B05E519", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			true, -- [17]
-			[52] = "|cffc69b6dHjyeg|r",
-			[51] = 1534120994,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [57]
-		{
-			"21 hours 16 minutes", -- [1]
+			"Is there anyone on right now who has unlocked Siege but still hasnt run it yet?", -- [1]
 			"Rambel-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
@@ -1266,7 +936,7 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			2709, -- [11]
+			1390, -- [11]
 			"Player-57-0B01F918", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -1274,34 +944,386 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffc69b6dRambel|r",
-			[51] = 1534121009,
+			[51] = 1534793185,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [58]
+		}, -- [43]
 		{
-			" 110-120 快速代练 12小时完成   310/325/340装等提升 5H/5M毕业 专业技能提升 金币 奥迪尔普通/英雄包团和毕业等", -- [1]
-			"Hjyeg-Illidan", -- [2]
+			"working on it on my lock", -- [1]
+			"Vaerys-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			1397, -- [11]
+			"Player-57-09662871", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa330c9Vaerys|r",
+			[51] = 1534793196,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [44]
+		{
+			"  ￥ ~ ￥  ~特价5H或5M毕业~主线全清和声望IIO-I2O（装等提升至325+5H能排毕业） （装等提升至340+ 5M毕业）（vip套餐装等提升至355+ 对应PT团本）（至尊VIP H团本毕业装等 370+）低保 5H或5M毕业特价", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Hjyeg", -- [5]
+			"Qwzxcsdfsgxx", -- [5]
 			"DND", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			2726, -- [11]
-			"Player-57-0B05E519", -- [12]
+			1399, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cffc69b6dHjyeg|r",
-			[51] = 1534121024,
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534793197,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [45]
+		{
+			"not sure if I'll get it before tomorrow", -- [1]
+			"Vaerys-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			1402, -- [11]
+			"Player-57-09662871", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa330c9Vaerys|r",
+			[51] = 1534793214,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [46]
+		{
+			"im still a couple thousand repaway", -- [1]
+			"Donnybrook-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			1404, -- [11]
+			"Player-57-08B61F60", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffaad372Donnybrook|r",
+			[51] = 1534793216,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [47]
+		{
+			"   ￥~ ￥ ~ 特价5H或5M毕业~主线和声望IIO-I2O（装等提升至325+5H能排毕业）装等提升至340+ 5M毕业）（vip套餐装等提升至355+ ）幽灵虎等TCG坐骑特价 低保   IIO—I2O快速练级 （琻 比秒发）5H或5M毕业特", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1408, -- [11]
+			"Player-57-0B0CE373", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534793220,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [48]
+		{
+			"do you get rep for doing the questline?", -- [1]
+			"Vaerys-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			1411, -- [11]
+			"Player-57-09662871", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa330c9Vaerys|r",
+			[51] = 1534793231,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [49]
+		{
+			"I got lucky today with emisarry quests, not sure i would have unlocked it today otherwise", -- [1]
+			"Rambel-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			1413, -- [11]
+			"Player-57-0B01F918", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffc69b6dRambel|r",
+			[51] = 1534793234,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [50]
+		{
+			"  ￥ ~ ￥  ~特价5H或5M毕业~主线全清和声望IIO-I2O（装等提升至325+5H能排毕业） （装等提升至340+ 5M毕业）（vip套餐装等提升至355+ 对应PT团本）（至尊VIP H团本毕业装等 370+）低保 5H或5M毕业特价", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1418, -- [11]
+			"Player-57-0B0CE373", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534793243,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [51]
+		{
+			"oh ya ill get some from that, should unlock it today", -- [1]
+			"Donnybrook-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			1421, -- [11]
+			"Player-57-08B61F60", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffaad372Donnybrook|r",
+			[51] = 1534793246,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [52]
+		{
+			"Hotel Transylvania 公会双团为备战新版本招募各天赋治疗/DPS。活动时间：主力团2456服务器7-11点；午夜团周456服务器凌晨12-3。要求时间稳定，态度认真。也欢迎各路暴雪全家桶玩家来玩。", -- [1]
+			"Shmily-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Shmily", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1422, -- [11]
+			"Player-57-0AF4B1C8", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc41e3aShmily|r",
+			[51] = 1534793252,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [53]
+		{
+			"cause ", -- [1]
+			"Vaerys-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			1424, -- [11]
+			"Player-57-09662871", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa330c9Vaerys|r",
+			[51] = 1534793253,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [54]
+		{
+			"I'm a few thousand off, but I have to finish the weekly", -- [1]
+			"Vaerys-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			1427, -- [11]
+			"Player-57-09662871", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa330c9Vaerys|r",
+			[51] = 1534793263,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [55]
+		{
+			"   ￥~ ￥ ~ 特价5H或5M毕业~主线和声望IIO-I2O（装等提升至325+5H能排毕业）装等提升至340+ 5M毕业）（vip套餐装等提升至355+ ）幽灵虎等TCG坐骑特价 低保   IIO—I2O快速练级 （琻 比秒发）5H或5M毕业特", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1429, -- [11]
+			"Player-57-0B0CE373", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534793266,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [56]
+		{
+			"and I'm not very far in the chain", -- [1]
+			"Vaerys-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			1436, -- [11]
+			"Player-57-09662871", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa330c9Vaerys|r",
+			[51] = 1534793274,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [57]
+		{
+			"  ￥ ~ ￥  ~特价5H或5M毕业~主线全清和声望IIO-I2O（装等提升至325+5H能排毕业） （装等提升至340+ 5M毕业）（vip套餐装等提升至355+ 对应PT团本）（至尊VIP H团本毕业装等 370+）低保 5H或5M毕业特价", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1443, -- [11]
+			"Player-57-0B0CE373", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534793289,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [58]
+		{
+			"WTS |cffa335ee|Hitem:163959::::::::120:256::54:2:1472:4786:::|h[Self-Rotating Dagger of Xing]|h|r", -- [1]
+			"Sàcerdos-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Sàcerdos", -- [5]
+			"", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1447, -- [11]
+			"Player-57-0724EF4C", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffffffffSàcerdos|r",
+			[51] = 1534793296,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [59]
 		{
-			"hype intensifys", -- [1]
-			"Rambel", -- [2]
+			"   ￥~ ￥ ~ 特价5H或5M毕业~主线和声望IIO-I2O（装等提升至325+5H能排毕业）装等提升至340+ 5M毕业）（vip套餐装等提升至355+ ）幽灵虎等TCG坐骑特价 低保   IIO—I2O快速练级 （琻 比秒发）5H或5M毕业特", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
+			"", -- [3]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
+			0, -- [10]
+			1457, -- [11]
+			"Player-57-0B0CE373", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534793312,
+			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [60]
+		{
+			"oh its a turtle game", -- [1]
+			"Donnybrook-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
 			"", -- [5]
@@ -1310,439 +1332,416 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			2737, -- [11]
-			"Player-57-0B01F918", -- [12]
+			1462, -- [11]
+			"Player-57-08B61F60", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffc69b6dRambel|r",
-			[51] = 1534121040,
+			[52] = "|cffaad372Donnybrook|r",
+			[51] = 1534793321,
 			[50] = "CHAT_MSG_GUILD",
-		}, -- [60]
-		{
-			"诚信养鲲，多年良心经营，零封号记录，某反带练人士唯一指定带练，可找大公会担保。现预售头三天等级，限三个名额，欢迎关注！", -- [1]
-			"Yangkundaxia-Illidan", -- [2]
-			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Yangkundaxia", -- [5]
-			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
-			0, -- [10]
-			2746, -- [11]
-			"Player-57-0B076B5D", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			true, -- [17]
-			[52] = "|cff0070ddYangkundaxia|r",
-			[51] = 1534121047,
-			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [61]
 		{
-			" 110-120 快速代练 12小时完成   310/325/340装等提升 5H/5M毕业 专业技能提升 金币 奥迪尔普通/英雄包团和毕业等", -- [1]
-			"Hjyeg-Illidan", -- [2]
+			"  ￥ ~ ￥  ~特价5H或5M毕业~主线全清和声望IIO-I2O（装等提升至325+5H能排毕业） （装等提升至340+ 5M毕业）（vip套餐装等提升至355+ 对应PT团本）（至尊VIP H团本毕业装等 370+）低保 5H或5M毕业特价", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Hjyeg", -- [5]
+			"Qwzxcsdfsgxx", -- [5]
 			"DND", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			2751, -- [11]
-			"Player-57-0B05E519", -- [12]
+			1466, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cffc69b6dHjyeg|r",
-			[51] = 1534121055,
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534793335,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [62]
 		{
-			" 110-120 快速代练 12小时完成   310/325/340装等提升 5H/5M毕业 专业技能提升 金币 奥迪尔普通/英雄包团和毕业等", -- [1]
-			"Hjyeg-Illidan", -- [2]
+			"   ￥~ ￥ ~ 特价5H或5M毕业~主线和声望IIO-I2O（装等提升至325+5H能排毕业）装等提升至340+ 5M毕业）（vip套餐装等提升至355+ ）幽灵虎等TCG坐骑特价 低保   IIO—I2O快速练级 （琻 比秒发）5H或5M毕业特", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Hjyeg", -- [5]
+			"Qwzxcsdfsgxx", -- [5]
 			"DND", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			2779, -- [11]
-			"Player-57-0B05E519", -- [12]
+			1472, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cffc69b6dHjyeg|r",
-			[51] = 1534121085,
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534793358,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [63]
 		{
-			" 110-120 快速代练 12小时完成   310/325/340装等提升 5H/5M毕业 专业技能提升 金币 奥迪尔普通/英雄包团和毕业等", -- [1]
-			"Hjyeg-Illidan", -- [2]
+			"  ￥ ~ ￥  ~特价5H或5M毕业~主线全清和声望IIO-I2O（装等提升至325+5H能排毕业） （装等提升至340+ 5M毕业）（vip套餐装等提升至355+ 对应PT团本）（至尊VIP H团本毕业装等 370+）低保 5H或5M毕业特价", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Hjyeg", -- [5]
+			"Qwzxcsdfsgxx", -- [5]
 			"DND", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			2795, -- [11]
-			"Player-57-0B05E519", -- [12]
+			1488, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cffc69b6dHjyeg|r",
-			[51] = 1534121116,
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534793381,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [64]
 		{
-			"诚信养鲲，多年良心经营，零封号记录，某反带练人士唯一指定带练，可找大公会担保。现预售头三天等级，限三个名额，欢迎关注！", -- [1]
-			"Yangkundaxia-Illidan", -- [2]
+			"Beyond the Clouds休闲团，活动两天。为新版本开荒奥迪尔，招收远程和治疗。我们的要求：人品过关，认真负责，心态平和，出勤稳定。", -- [1]
+			"Newraven-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Yangkundaxia", -- [5]
+			"Newraven", -- [5]
 			"", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			2799, -- [11]
-			"Player-57-0B076B5D", -- [12]
+			1500, -- [11]
+			"Player-57-0A29B4BC", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cff0070ddYangkundaxia|r",
-			[51] = 1534121121,
+			[52] = "|cff8787edNewraven|r",
+			[51] = 1534793403,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [65]
 		{
-			"诚信养鲲，多年良心经营，零封号记录，某反带练人士唯一指定带练，可找大公会担保。现预售头三天等级，限三个名额，欢迎关注！", -- [1]
-			"Yangkundaxia-Illidan", -- [2]
+			"   ￥~ ￥ ~ 特价5H或5M毕业~主线和声望IIO-I2O（装等提升至325+5H能排毕业）装等提升至340+ 5M毕业）（vip套餐装等提升至355+ ）幽灵虎等TCG坐骑特价 低保   IIO—I2O快速练级 （琻 比秒发）5H或5M毕业特", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Yangkundaxia", -- [5]
-			"", -- [6]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			2849, -- [11]
-			"Player-57-0B076B5D", -- [12]
+			1501, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cff0070ddYangkundaxia|r",
-			[51] = 1534121232,
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534793404,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [66]
 		{
-			"诚信养鲲，多年良心经营，零封号记录，某反带练人士唯一指定带练，可找大公会担保。现预售头三天等级，限三个名额，欢迎关注！", -- [1]
-			"Yangkundaxia-Illidan", -- [2]
+			"  ￥ ~ ￥  ~特价5H或5M毕业~主线全清和声望IIO-I2O（装等提升至325+5H能排毕业） （装等提升至340+ 5M毕业）（vip套餐装等提升至355+ 对应PT团本）（至尊VIP H团本毕业装等 370+）低保 5H或5M毕业特价", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Yangkundaxia", -- [5]
-			"", -- [6]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			2859, -- [11]
-			"Player-57-0B076B5D", -- [12]
+			1512, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cff0070ddYangkundaxia|r",
-			[51] = 1534121259,
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534793427,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [67]
 		{
-			"诚信养鲲，多年良心经营，零封号记录，某反带练人士唯一指定带练，可找大公会担保。现预售头三天等级，限三个名额，欢迎关注！", -- [1]
-			"Yangkundaxia-Illidan", -- [2]
+			"Hotel Transylvania 公会双团为备战新版本招募各天赋治疗/DPS。活动时间：主力团2456服务器7-11点；午夜团周456服务器凌晨12-3。要求时间稳定，态度认真。也欢迎各路暴雪全家桶玩家来玩。", -- [1]
+			"Shmily-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Yangkundaxia", -- [5]
+			"Shmily", -- [5]
 			"", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			2873, -- [11]
-			"Player-57-0B076B5D", -- [12]
+			1531, -- [11]
+			"Player-57-0AF4B1C8", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cff0070ddYangkundaxia|r",
-			[51] = 1534121295,
+			[52] = "|cffc41e3aShmily|r",
+			[51] = 1534793447,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [68]
 		{
-			"^LFW_L", -- [1]
-			"Evan-Illidan", -- [2]
+			"   ￥~ ￥ ~ 特价5H或5M毕业~主线和声望IIO-I2O（装等提升至325+5H能排毕业）装等提升至340+ 5M毕业）（vip套餐装等提升至355+ ）幽灵虎等TCG坐骑特价 低保   IIO—I2O快速练级 （琻 比秒发）5H或5M毕业特", -- [1]
+			"Qwzxcsdfsgxx-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
-			"", -- [6]
-			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			"2. Trade - City", -- [4]
+			"Qwzxcsdfsgxx", -- [5]
+			"DND", -- [6]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			2943, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			1534, -- [11]
+			"Player-57-0B0CE373", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1534121438,
+			true, -- [17]
+			[52] = "|cffc69b6dQwzxcsdfsgxx|r",
+			[51] = 1534793450,
 			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [69]
 		{
-			"ALL IN (M 11/11) 一周双团(周中, 周末) 招收各路人才,公会活动效率,气氛轻松,并有大密老司机，PVP战神带你游玩各个领域。活动成员要求稳定有责任心，欢迎打扰。详情可查看NGA,魔兽美服论坛等。", -- [1]
-			"Darkenrose-Illidan", -- [2]
+			"At this point I would say it looks like Thenex isnt playing", -- [1]
+			"Corsus-Illidan", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Darkenrose", -- [5]
+			"", -- [4]
+			"", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2955, -- [11]
-			"Player-57-0A381E33", -- [12]
+			41, -- [11]
+			"Player-57-077E406D", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cfffff468Darkenrose|r",
-			[51] = 1534121465,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cff00ff96Corsus|r",
+			[51] = 1534816387,
+			[50] = "CHAT_MSG_OFFICER",
 		}, -- [70]
 		{
-			"^LFW_L", -- [1]
-			"Evan-Illidan", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:1795:Player-57-039B6396:1:8:20:18:4294967295:4294967295:4294967295:4294967295|h[Lunch Lady]|h|r!", -- [1]
+			"Hiddersin-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"Hiddersin", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			2959, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			58, -- [11]
+			"Player-57-039B6396", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1534121471,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfff48cbaHiddersin|r",
+			[51] = 1534816419,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [71]
 		{
-			"comet buddy you there", -- [1]
-			"|Kf37|k00000000|k", -- [2]
+			"WTS|cffa335ee|Hitem:163958::::::::120:260::54:2:1472:4786:::|h[Freezie's Bubble Popper]|h|r|cffa335ee|Hitem:163956::::::::120:260::54:2:1472:4786:::|h[Treiya's Shining Pillar]|h|r", -- [1]
+			"Shadowblood-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"", -- [5]
+			"2. Trade - City", -- [4]
+			"Shadowblood", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			3053, -- [11]
-			false, -- [12]
-			38, -- [13]
+			61, -- [11]
+			"Player-57-075C9F8A", -- [12]
+			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff48cbatwin1010|r",
-			[51] = 1534121842,
-			[50] = "CHAT_MSG_BN_WHISPER",
-			[53] = "twin1010",
+			true, -- [17]
+			[52] = "|cfffff468Shadowblood|r",
+			[51] = 1534816426,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [72]
 		{
-			"诚信养鲲，多年良心经营，零封号记录，某反带练人士唯一指定带练，可找大公会担保。现预售头三天等级，限三个名额，欢迎关注！", -- [1]
-			"Yangkundaxia-Illidan", -- [2]
+			"|cff0070dd|Hitem:161599::::::::120:260:512:19:1:4776:120:::|h[Mechano-Cat Claw]|h|r", -- [1]
+			"Derperino-Illidan", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Yangkundaxia", -- [5]
+			"", -- [4]
+			"", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			3102, -- [11]
-			"Player-57-0B076B5D", -- [12]
+			69, -- [11]
+			"Player-57-04B2C61C", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cff0070ddYangkundaxia|r",
-			[51] = 1534121939,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cfffff468Derperino|r",
+			[51] = 1534816435,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [73]
 		{
-			"Hey dude,  can i get a invite for my Druid?", -- [1]
-			"Ramblez", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:12504:Player-57-0AEE4919:1:8:20:18:4294967295:4294967295:4294967295:4294967295|h[The Temple of Sethraliss]|h|r!", -- [1]
+			"Rambles-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Ramblez", -- [5]
+			"Rambles", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3160, -- [11]
-			"Player-57-0AEE3A62", -- [12]
+			82, -- [11]
+			"Player-57-0AEE4919", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffff7c0aRamblez|r",
-			[51] = 1534122056,
-			[50] = "CHAT_MSG_WHISPER",
+			[52] = "|cff3fc6eaRambles|r",
+			[51] = 1534816463,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [74]
 		{
-			"Sure.", -- [1]
-			"Ramblez-Illidan", -- [2]
+			"when u dps world quests faster in guardian than in cat form :(", -- [1]
+			"Brún-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Ramblez", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3162, -- [11]
-			"Player-57-0AEE3A62", -- [12]
+			154, -- [11]
+			"Player-57-0620C65F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffff7c0aRamblez|r",
-			[51] = 1534122061,
-			[50] = "CHAT_MSG_WHISPER_INFORM",
+			[52] = "|cffff7c0aBrún|r",
+			[51] = 1534816570,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [75]
 		{
-			"Who dis?", -- [1]
-			"Ramblez-Illidan", -- [2]
+			"ikr", -- [1]
+			"Lykân-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Ramblez", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3169, -- [11]
-			"Player-57-0AEE3A62", -- [12]
+			166, -- [11]
+			"Player-57-0AAD4208", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffff7c0aRamblez|r",
-			[51] = 1534122076,
-			[50] = "CHAT_MSG_WHISPER_INFORM",
+			[52] = "|cffff7c0aLykân|r",
+			[51] = 1534816586,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [76]
 		{
-			"Rambel.", -- [1]
-			"Ramblez-Illidan", -- [2]
+			"feel so underpowered", -- [1]
+			"Lykân-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Ramblez", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3171, -- [11]
-			"Player-57-0AEE3A62", -- [12]
+			175, -- [11]
+			"Player-57-0AAD4208", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffff7c0aRamblez|r",
-			[51] = 1534122085,
-			[50] = "CHAT_MSG_WHISPER",
+			[52] = "|cffff7c0aLykân|r",
+			[51] = 1534816599,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [77]
 		{
-			"Ah duh.", -- [1]
-			"Ramblez-Illidan", -- [2]
+			"WTS BFA Greens", -- [1]
+			"Aviani-Illidan", -- [2]
 			"", -- [3]
-			"", -- [4]
-			"Ramblez", -- [5]
+			"2. Trade - City", -- [4]
+			"Aviani", -- [5]
 			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
+			2, -- [7]
+			2, -- [8]
+			"Trade - City", -- [9]
 			0, -- [10]
-			3174, -- [11]
-			"Player-57-0AEE3A62", -- [12]
+			238, -- [11]
+			"Player-57-055B38D4", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			false, -- [17]
-			[52] = "|cffff7c0aRamblez|r",
-			[51] = 1534122090,
-			[50] = "CHAT_MSG_WHISPER_INFORM",
+			true, -- [17]
+			[52] = "|cfff48cbaAviani|r",
+			[51] = 1534816654,
+			[50] = "CHAT_MSG_CHANNEL",
 		}, -- [78]
 		{
-			"Clever naming.", -- [1]
-			"Ramblez-Illidan", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:12504:Player-57-0953D054:1:8:20:18:4294967295:4294967295:4294967295:4294967295|h[The Temple of Sethraliss]|h|r!", -- [1]
+			"Zibear-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Ramblez", -- [5]
+			"Zibear", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3176, -- [11]
-			"Player-57-0AEE3A62", -- [12]
+			265, -- [11]
+			"Player-57-0953D054", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffff7c0aRamblez|r",
-			[51] = 1534122093,
-			[50] = "CHAT_MSG_WHISPER_INFORM",
+			[52] = "|cffff7c0aZibear|r",
+			[51] = 1534816683,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [79]
 		{
-			"Kinda.", -- [1]
-			"|Kf37|k00000000|k", -- [2]
+			"looking for 1 to do some heroic expeditions", -- [1]
+			"Malvano-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
 			"", -- [5]
@@ -1751,21 +1750,20 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3178, -- [11]
-			false, -- [12]
-			38, -- [13]
+			269, -- [11]
+			"Player-57-0850F701", -- [12]
+			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffffffftwin1010|r",
-			[51] = 1534122097,
-			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
-			[53] = "twin1010",
+			[52] = "|cffff7c0aMalvano|r",
+			[51] = 1534816696,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [80]
 		{
-			"what are you weak auras looking like thoses days ?", -- [1]
-			"|Kf37|k00000000|k", -- [2]
+			"need to do like 5 real quick", -- [1]
+			"Malvano-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
 			"", -- [5]
@@ -1774,43 +1772,42 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3189, -- [11]
-			false, -- [12]
-			38, -- [13]
+			275, -- [11]
+			"Player-57-0850F701", -- [12]
+			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffffffftwin1010|r",
-			[51] = 1534122126,
-			[50] = "CHAT_MSG_BN_WHISPER",
-			[53] = "twin1010",
+			[52] = "|cffff7c0aMalvano|r",
+			[51] = 1534816701,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [81]
 		{
-			"美服style工作室预售8.0奥迪尔团本H/M 毕业,版本毕业.开荒位置出售.手工110-120级.大量金币.", -- [1]
-			"Cognewsean-Illidan", -- [2]
+			"i thought it wasn't worth doing on heroic", -- [1]
+			"Brún-Illidan", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Cognewsean", -- [5]
+			"", -- [4]
+			"", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			3191, -- [11]
-			"Player-57-0A9A35E8", -- [12]
+			278, -- [11]
+			"Player-57-0620C65F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cff0070ddCognewsean|r",
-			[51] = 1534122131,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffff7c0aBrún|r",
+			[51] = 1534816708,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [82]
 		{
-			"Fantastic.", -- [1]
-			"|Kf37|k00000000|k", -- [2]
+			"can do mythic as well", -- [1]
+			"Malvano-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
 			"", -- [5]
@@ -1819,43 +1816,42 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3193, -- [11]
-			false, -- [12]
-			38, -- [13]
+			281, -- [11]
+			"Player-57-0850F701", -- [12]
+			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffffffftwin1010|r",
-			[51] = 1534122135,
-			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
-			[53] = "twin1010",
+			[52] = "|cffff7c0aMalvano|r",
+			[51] = 1534816717,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [83]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:6475:Player-57-0ACE4D4D:1:8:12:18:4294967295:4294967295:4294967295:4294967295|h[Cleaning Up]|h|r!", -- [1]
-			"Moralkant-Illidan", -- [2]
+			"just need to hit the 40k", -- [1]
+			"Malvano-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Moralkant", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3194, -- [11]
-			"Player-57-0ACE4D4D", -- [12]
+			286, -- [11]
+			"Player-57-0850F701", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffa330c9Moralkant|r",
-			[51] = 1534122136,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cffff7c0aMalvano|r",
+			[51] = 1534816723,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [84]
 		{
-			"Obviously.", -- [1]
-			"|Kf37|k00000000|k", -- [2]
+			"right i heard the rewards for antying above normal aren't really worth it", -- [1]
+			"Brún-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
 			"", -- [5]
@@ -1864,21 +1860,20 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3195, -- [11]
-			false, -- [12]
-			38, -- [13]
+			288, -- [11]
+			"Player-57-0620C65F", -- [12]
+			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffffffftwin1010|r",
-			[51] = 1534122137,
-			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
-			[53] = "twin1010",
+			[52] = "|cffff7c0aBrún|r",
+			[51] = 1534816727,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [85]
 		{
-			":D", -- [1]
-			"|Kf37|k00000000|k", -- [2]
+			"ahh", -- [1]
+			"Malvano-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
 			"", -- [5]
@@ -1887,21 +1882,20 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3200, -- [11]
-			false, -- [12]
-			38, -- [13]
+			291, -- [11]
+			"Player-57-0850F701", -- [12]
+			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffffffftwin1010|r",
-			[51] = 1534122147,
-			[50] = "CHAT_MSG_BN_WHISPER",
-			[53] = "twin1010",
+			[52] = "|cffff7c0aMalvano|r",
+			[51] = 1534816740,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [86]
 		{
-			"got any good disc weak aura like you made for me in MOP ?", -- [1]
-			"|Kf37|k00000000|k", -- [2]
+			"if you're trying to do 5 fast it's better to do on normal i heard", -- [1]
+			"Brún-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
 			"", -- [5]
@@ -1910,43 +1904,42 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3205, -- [11]
-			false, -- [12]
-			38, -- [13]
+			303, -- [11]
+			"Player-57-0620C65F", -- [12]
+			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffffffftwin1010|r",
-			[51] = 1534122161,
-			[50] = "CHAT_MSG_BN_WHISPER",
-			[53] = "twin1010",
+			[52] = "|cffff7c0aBrún|r",
+			[51] = 1534816757,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [87]
 		{
-			"^LFW_L", -- [1]
-			"Evan-Illidan", -- [2]
+			"So when does this warmode actually become useful? besides PVE exp and more talents?", -- [1]
+			"Roivon-Illidan", -- [2]
 			"", -- [3]
-			"6. TCForwarder6IIll", -- [4]
-			"Evan", -- [5]
+			"", -- [4]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
-			6, -- [8]
-			"TCForwarder6IIll", -- [9]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			3210, -- [11]
-			"Player-57-0583ABC7", -- [12]
+			325, -- [11]
+			"Player-57-06866492", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffEvan|r",
-			[51] = 1534122162,
-			[50] = "CHAT_MSG_CHANNEL",
+			[52] = "|cfffff468Roivon|r",
+			[51] = 1534816790,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [88]
 		{
-			"Yeah I have all 3 Priest specs.", -- [1]
-			"|Kf37|k00000000|k", -- [2]
+			"I've yet to see a single alliance", -- [1]
+			"Roivon-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
 			"", -- [5]
@@ -1955,21 +1948,20 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3213, -- [11]
-			false, -- [12]
-			38, -- [13]
+			339, -- [11]
+			"Player-57-06866492", -- [12]
+			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffffffftwin1010|r",
-			[51] = 1534122184,
-			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
-			[53] = "twin1010",
+			[52] = "|cfffff468Roivon|r",
+			[51] = 1534816812,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [89]
 		{
-			"could i see them man ?", -- [1]
-			"|Kf37|k00000000|k", -- [2]
+			"doing world quests on kul tiras", -- [1]
+			"Malvano-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
 			"", -- [5]
@@ -1978,21 +1970,20 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3228, -- [11]
-			false, -- [12]
-			38, -- [13]
+			356, -- [11]
+			"Player-57-0850F701", -- [12]
+			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffffffftwin1010|r",
-			[51] = 1534122227,
-			[50] = "CHAT_MSG_BN_WHISPER",
-			[53] = "twin1010",
+			[52] = "|cffff7c0aMalvano|r",
+			[51] = 1534816841,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [90]
 		{
-			"a pic or something ?", -- [1]
-			"|Kf37|k00000000|k", -- [2]
+			"yeah do world quests on Kul Tiras", -- [1]
+			"Brún-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
 			"", -- [5]
@@ -2001,43 +1992,42 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3233, -- [11]
-			false, -- [12]
-			38, -- [13]
+			366, -- [11]
+			"Player-57-0620C65F", -- [12]
+			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffffffftwin1010|r",
-			[51] = 1534122236,
-			[50] = "CHAT_MSG_BN_WHISPER",
-			[53] = "twin1010",
+			[52] = "|cffff7c0aBrún|r",
+			[51] = 1534816852,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [91]
 		{
-			"美服style工作室预售8.0奥迪尔团本H/M 毕业,版本毕业.开荒位置出售.手工110-120级.大量金币.", -- [1]
-			"Cognewsean-Illidan", -- [2]
+			"you'll see em then", -- [1]
+			"Brún-Illidan", -- [2]
 			"", -- [3]
-			"2. Trade - City", -- [4]
-			"Cognewsean", -- [5]
+			"", -- [4]
+			"", -- [5]
 			"", -- [6]
-			2, -- [7]
-			2, -- [8]
-			"Trade - City", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			3236, -- [11]
-			"Player-57-0A9A35E8", -- [12]
+			368, -- [11]
+			"Player-57-0620C65F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "|cff0070ddCognewsean|r",
-			[51] = 1534122243,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cffff7c0aBrún|r",
+			[51] = 1534816854,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [92]
 		{
-			"brb", -- [1]
-			"|Kf37|k00000000|k", -- [2]
+			"How to fix instance not found bug", -- [1]
+			"Jammed-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
 			"", -- [5]
@@ -2046,21 +2036,20 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3247, -- [11]
-			false, -- [12]
-			38, -- [13]
+			386, -- [11]
+			"Player-57-09987088", -- [12]
+			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffffffftwin1010|r",
-			[51] = 1534122268,
-			[50] = "CHAT_MSG_BN_WHISPER",
-			[53] = "twin1010",
+			[52] = "|cff00ff96Jammed|r",
+			[51] = 1534816872,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [93]
 		{
-			"Easier to just send them.", -- [1]
-			"|Kf37|k00000000|k", -- [2]
+			"Trying to leave a dungeon?", -- [1]
+			"Thelindra-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
 			"", -- [5]
@@ -2069,218 +2058,193 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3251, -- [11]
-			false, -- [12]
-			38, -- [13]
+			397, -- [11]
+			"Player-57-0967D0A5", -- [12]
+			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffffffftwin1010|r",
-			[51] = 1534122270,
-			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
-			[53] = "twin1010",
+			[52] = "|cffa330c9Thelindra|r",
+			[51] = 1534816883,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [94]
 		{
-			"美服style工作室预售8.0奥迪尔团本H/M 毕业,版本毕业.开荒位置出售.手工110-120级.大量金币.", -- [1]
-			"Cognewsean-Illidan", -- [2]
+			"flight whistle", -- [1]
+			"Nadzieja-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			403, -- [11]
+			"Player-57-0A08BEB4", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff3fc6eaNadzieja|r",
+			[51] = 1534816897,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [95]
+		{
+			"trying to enter dungeon, expedition, even kultiras wont work", -- [1]
+			"Jammed-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			405, -- [11]
+			"Player-57-09987088", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff00ff96Jammed|r",
+			[51] = 1534816898,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [96]
+		{
+			"ah. I was just stuck in a dungeon and had to use the character stuck button", -- [1]
+			"Thelindra-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			431, -- [11]
+			"Player-57-0967D0A5", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cffa330c9Thelindra|r",
+			[51] = 1534816928,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [97]
+		{
+			"WTS |cffa335ee|Hitem:163966::::::::120:256::54:2:1472:4786:::|h[Miss Miggi's Towering Spire]|h|r 250K ", -- [1]
+			"Meinnug-Illidan", -- [2]
 			"", -- [3]
 			"2. Trade - City", -- [4]
-			"Cognewsean", -- [5]
+			"Meinnug", -- [5]
 			"", -- [6]
 			2, -- [7]
 			2, -- [8]
 			"Trade - City", -- [9]
 			0, -- [10]
-			3259, -- [11]
-			"Player-57-0A9A35E8", -- [12]
+			444, -- [11]
+			"Player-57-0ACF499F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			true, -- [17]
-			[52] = "|cff0070ddCognewsean|r",
-			[51] = 1534122299,
+			[52] = "|cffffffffMeinnug|r",
+			[51] = 1534816951,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [95]
-		{
-			"we cross server or i say sure", -- [1]
-			"|Kf37|k00000000|k", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			3265, -- [11]
-			false, -- [12]
-			38, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff48cbatwin1010|r",
-			[51] = 1534122315,
-			[50] = "CHAT_MSG_BN_WHISPER",
-			[53] = "twin1010",
-		}, -- [96]
-		{
-			"[WeakAuras: Evan-Illidan - Atonement Target Count Large][WeakAuras: Evan-Illidan - Evangelism 7.3][WeakAuras: Evan-Illidan - Halo 8.0][WeakAuras: Evan-Illidan - Penance 7.3]", -- [1]
-			"|Kf37|k00000000|k", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			3268, -- [11]
-			false, -- [12]
-			38, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff48cbatwin1010|r",
-			[51] = 1534122320,
-			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
-			[53] = "twin1010",
-		}, -- [97]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:12313:Player-57-0AA18B8F:1:8:12:18:4294967295:4294967295:4294967295:4294967295|h[Unbroken]|h|r!", -- [1]
-			"Chromogranin-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Chromogranin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			3270, -- [11]
-			"Player-57-0AA18B8F", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff48cbaChromogranin|r",
-			[51] = 1534122326,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [98]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:12316:Player-57-0AA18B8F:1:8:12:18:4294967295:4294967295:4294967295:4294967295|h[Shutout]|h|r!", -- [1]
-			"Chromogranin-Illidan", -- [2]
+			"ahaha", -- [1]
+			"Brún-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Chromogranin", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3271, -- [11]
-			"Player-57-0AA18B8F", -- [12]
+			515, -- [11]
+			"Player-57-0620C65F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaChromogranin|r",
-			[51] = 1534122326,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cffff7c0aBrún|r",
+			[51] = 1534817054,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [99]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:12317:Player-57-0AA18B8F:1:8:12:18:4294967295:4294967295:4294967295:4294967295|h[Orbital Bombardment]|h|r!", -- [1]
-			"Chromogranin-Illidan", -- [2]
+			"yeah i'm stuck in Kul Tiras", -- [1]
+			"Brún-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Chromogranin", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3272, -- [11]
-			"Player-57-0AA18B8F", -- [12]
+			517, -- [11]
+			"Player-57-0620C65F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaChromogranin|r",
-			[51] = 1534122326,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cffff7c0aBrún|r",
+			[51] = 1534817057,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [100]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:12318:Player-57-0AA18B8F:1:8:12:18:4294967295:4294967295:4294967295:4294967295|h[Orbital Devastation]|h|r!", -- [1]
-			"Chromogranin-Illidan", -- [2]
+			"tried hearthing to Zandalar and it dumped me back here", -- [1]
+			"Brún-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Chromogranin", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3273, -- [11]
-			"Player-57-0AA18B8F", -- [12]
+			528, -- [11]
+			"Player-57-0620C65F", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaChromogranin|r",
-			[51] = 1534122326,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cffff7c0aBrún|r",
+			[51] = 1534817065,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [101]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:12319:Player-57-0AA18B8F:1:8:12:18:4294967295:4294967295:4294967295:4294967295|h[Nuked from Orbit]|h|r!", -- [1]
-			"Chromogranin-Illidan", -- [2]
+			"reloading fixed for me", -- [1]
+			"Saesenthesis-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Chromogranin", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3274, -- [11]
-			"Player-57-0AA18B8F", -- [12]
+			534, -- [11]
+			"Player-57-0AFD5954", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaChromogranin|r",
-			[51] = 1534122326,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cfffff468Saesenthesis|r",
+			[51] = 1534817079,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [102]
-		{
-			"%s has earned the achievement |cffffff00|Hachievement:12320:Player-57-0AA18B8F:1:8:12:18:4294967295:4294967295:4294967295:4294967295|h[Orbit-uary]|h|r!", -- [1]
-			"Chromogranin-Illidan", -- [2]
-			"", -- [3]
-			"", -- [4]
-			"Chromogranin", -- [5]
-			"", -- [6]
-			0, -- [7]
-			0, -- [8]
-			"", -- [9]
-			0, -- [10]
-			3275, -- [11]
-			"Player-57-0AA18B8F", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cfff48cbaChromogranin|r",
-			[51] = 1534122326,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [103]
 		{
 			"^LFW_L", -- [1]
 			"Evan-Illidan", -- [2]
@@ -2292,7 +2256,7 @@ ElvCharacterDB = {
 			6, -- [8]
 			"TCForwarder6IIll", -- [9]
 			0, -- [10]
-			3282, -- [11]
+			540, -- [11]
 			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
@@ -2300,12 +2264,34 @@ ElvCharacterDB = {
 			false, -- [16]
 			false, -- [17]
 			[52] = "|cffffffffEvan|r",
-			[51] = 1534122327,
+			[51] = 1534817085,
 			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [103]
+		{
+			"o fuck ya bud 330 ilvl", -- [1]
+			"Derperino-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			541, -- [11]
+			"Player-57-04B2C61C", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffff468Derperino|r",
+			[51] = 1534817097,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [104]
 		{
-			"Oh does that not work?", -- [1]
-			"|Kf37|k00000000|k", -- [2]
+			"^ I was able to get to Zan but now im stuck here again", -- [1]
+			"Yopizz-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
 			"", -- [5]
@@ -2314,21 +2300,20 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3284, -- [11]
-			false, -- [12]
-			38, -- [13]
+			542, -- [11]
+			"Player-57-0AF57A4F", -- [12]
+			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "twin1010",
-			[51] = 1534122328,
-			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
-			[53] = "twin1010",
+			[52] = "|cff3fc6eaYopizz|r",
+			[51] = 1534817109,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [105]
 		{
-			"Ping me on Discord.", -- [1]
-			"|Kf37|k00000000|k", -- [2]
+			"nope, still fucked", -- [1]
+			"Brún-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
 			"", -- [5]
@@ -2337,21 +2322,20 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3311, -- [11]
-			false, -- [12]
-			38, -- [13]
+			546, -- [11]
+			"Player-57-0620C65F", -- [12]
+			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffff468twin1010|r",
-			[51] = 1534122389,
-			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
-			[53] = "twin1010",
+			[52] = "|cffff7c0aBrún|r",
+			[51] = 1534817158,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [106]
 		{
-			"Comet#1167", -- [1]
-			"|Kf37|k00000000|k", -- [2]
+			"somethings fucky", -- [1]
+			"Nadzieja-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
 			"", -- [5]
@@ -2360,131 +2344,130 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3314, -- [11]
-			false, -- [12]
-			38, -- [13]
+			559, -- [11]
+			"Player-57-0A08BEB4", -- [12]
+			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffff468twin1010|r",
-			[51] = 1534122399,
-			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
-			[53] = "twin1010",
+			[52] = "|cff3fc6eaNadzieja|r",
+			[51] = 1534817238,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [107]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:12326:Player-57-0AA18B8F:1:8:12:18:4294967295:4294967295:4294967295:4294967295|h[Nerf Engineering]|h|r!", -- [1]
-			"Chromogranin-Illidan", -- [2]
+			"is it everywhere?", -- [1]
+			"Barmonkz-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Chromogranin", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3322, -- [11]
-			"Player-57-0AA18B8F", -- [12]
+			561, -- [11]
+			"Player-57-0A1A714E", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaChromogranin|r",
-			[51] = 1534122459,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cff00ff96Barmonkz|r",
+			[51] = 1534817254,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [108]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:12328:Player-57-0AA18B8F:1:8:12:18:4294967295:4294967295:4294967295:4294967295|h[Nerf Gravity Bombs]|h|r!", -- [1]
-			"Chromogranin-Illidan", -- [2]
+			"I'm in Org, what about you guys?", -- [1]
+			"Barmonkz-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Chromogranin", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3323, -- [11]
-			"Player-57-0AA18B8F", -- [12]
+			563, -- [11]
+			"Player-57-0A1A714E", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaChromogranin|r",
-			[51] = 1534122459,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cff00ff96Barmonkz|r",
+			[51] = 1534817264,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [109]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:12329:Player-57-0AA18B8F:1:8:12:18:4294967295:4294967295:4294967295:4294967295|h[Must Deconstruct Faster]|h|r!", -- [1]
-			"Chromogranin-Illidan", -- [2]
+			"drustvar", -- [1]
+			"Nadzieja-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Chromogranin", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3324, -- [11]
-			"Player-57-0AA18B8F", -- [12]
+			566, -- [11]
+			"Player-57-0A08BEB4", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaChromogranin|r",
-			[51] = 1534122459,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cff3fc6eaNadzieja|r",
+			[51] = 1534817285,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [110]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:12330:Player-57-0AA18B8F:1:8:12:18:4294967295:4294967295:4294967295:4294967295|h[Heartbreaker]|h|r!", -- [1]
-			"Chromogranin-Illidan", -- [2]
+			"damn it blizz..", -- [1]
+			"Barmonkz-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Chromogranin", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3325, -- [11]
-			"Player-57-0AA18B8F", -- [12]
+			569, -- [11]
+			"Player-57-0A1A714E", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaChromogranin|r",
-			[51] = 1534122459,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cff00ff96Barmonkz|r",
+			[51] = 1534817297,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [111]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:12339:Player-57-0AA18B8F:1:8:12:18:4294967295:4294967295:4294967295:4294967295|h[If Looks Could Kill]|h|r!", -- [1]
-			"Chromogranin-Illidan", -- [2]
+			"well fuck I'll be on later", -- [1]
+			"Barmonkz-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Chromogranin", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3339, -- [11]
-			"Player-57-0AA18B8F", -- [12]
+			572, -- [11]
+			"Player-57-0A1A714E", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfff48cbaChromogranin|r",
-			[51] = 1534122533,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cff00ff96Barmonkz|r",
+			[51] = 1534817305,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [112]
 		{
-			"https://1drv.ms/u/s!AlIT74utinFYkwiZpF5c1HXYY7we", -- [1]
-			"|Kf37|k00000000|k", -- [2]
+			"im at the great seal", -- [1]
+			"Spasweezy-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
 			"", -- [5]
@@ -2493,21 +2476,20 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3342, -- [11]
-			false, -- [12]
-			38, -- [13]
+			577, -- [11]
+			"Player-57-0617174C", -- [12]
+			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffffffftwin1010|r",
-			[51] = 1534122550,
-			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
-			[53] = "twin1010",
+			[52] = "|cff8787edSpasweezy|r",
+			[51] = 1534817321,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [113]
 		{
-			"damn thoses are nice", -- [1]
-			"|Kf37|k00000000|k", -- [2]
+			"this shit working again?", -- [1]
+			"Spasweezy-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
 			"", -- [5]
@@ -2516,21 +2498,20 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3357, -- [11]
-			false, -- [12]
-			38, -- [13]
+			579, -- [11]
+			"Player-57-0617174C", -- [12]
+			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffffffftwin1010|r",
-			[51] = 1534122590,
-			[50] = "CHAT_MSG_BN_WHISPER",
-			[53] = "twin1010",
+			[52] = "|cff8787edSpasweezy|r",
+			[51] = 1534817339,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [114]
 		{
-			"Thanks.", -- [1]
-			"|Kf37|k00000000|k", -- [2]
+			"no", -- [1]
+			"Nadzieja-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
 			"", -- [5]
@@ -2539,88 +2520,86 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3360, -- [11]
-			false, -- [12]
-			38, -- [13]
+			580, -- [11]
+			"Player-57-0A08BEB4", -- [12]
+			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffffffftwin1010|r",
-			[51] = 1534122615,
-			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
-			[53] = "twin1010",
+			[52] = "|cff3fc6eaNadzieja|r",
+			[51] = 1534817345,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [115]
 		{
-			"|cffffff00Zoram'gar Outpost is under attack!|r", -- [1]
-			"", -- [2]
+			"haha", -- [1]
+			"Nadzieja-Illidan", -- [2]
 			"", -- [3]
-			"3. LocalDefense - Ashenvale", -- [4]
+			"", -- [4]
 			"", -- [5]
 			"", -- [6]
-			22, -- [7]
-			3, -- [8]
-			"LocalDefense - Ashenvale", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			3379, -- [11]
-			false, -- [12]
+			582, -- [11]
+			"Player-57-0A08BEB4", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "",
-			[51] = 1534122692,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cff3fc6eaNadzieja|r",
+			[51] = 1534817347,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [116]
 		{
-			"|cffffff00Zoram'gar Outpost is under attack!|r", -- [1]
-			"", -- [2]
+			"nope, can't even log out", -- [1]
+			"Barmonkz-Illidan", -- [2]
 			"", -- [3]
-			"3. LocalDefense - Ashenvale", -- [4]
+			"", -- [4]
 			"", -- [5]
 			"", -- [6]
-			22, -- [7]
-			3, -- [8]
-			"LocalDefense - Ashenvale", -- [9]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
 			0, -- [10]
-			3401, -- [11]
-			false, -- [12]
+			583, -- [11]
+			"Player-57-0A1A714E", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
-			true, -- [17]
-			[52] = "",
-			[51] = 1534122759,
-			[50] = "CHAT_MSG_CHANNEL",
+			false, -- [17]
+			[52] = "|cff00ff96Barmonkz|r",
+			[51] = 1534817349,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [117]
 		{
-			"In practice they look more like https://1drv.ms/u/s!AlIT74utinFYkwqyQJEXzxvcqu6Q", -- [1]
-			"|Kf37|k00000000|k", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:12847:Player-57-0AFD5954:1:8:20:18:4294967295:4294967295:4294967295:4294967295|h[Siege of Boralus]|h|r!", -- [1]
+			"Saesenthesis-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"", -- [5]
+			"Saesenthesis", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3402, -- [11]
-			false, -- [12]
-			38, -- [13]
+			618, -- [11]
+			"Player-57-0AFD5954", -- [12]
+			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffffffftwin1010|r",
-			[51] = 1534122760,
-			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
-			[53] = "twin1010",
+			[52] = "|cfffff468Saesenthesis|r",
+			[51] = 1534817510,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [118]
 		{
-			"could i log over to illidan and get thoses from you man ?", -- [1]
-			"|Kf37|k00000000|k", -- [2]
+			"is today's shit turned in in silithus?", -- [1]
+			"Bravery-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
 			"", -- [5]
@@ -2629,43 +2608,42 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3474, -- [11]
-			false, -- [12]
-			38, -- [13]
+			619, -- [11]
+			"Player-57-0A65B7F5", -- [12]
+			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffffffftwin1010|r",
-			[51] = 1534123079,
-			[50] = "CHAT_MSG_BN_WHISPER",
-			[53] = "twin1010",
+			[52] = "|cffc69b6dBravery|r",
+			[51] = 1534817511,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [119]
 		{
-			"You know you missed me", -- [1]
-			"Ræign-Illidan", -- [2]
+			"Classic evan", -- [1]
+			"Twilightt-Spinebreaker", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"", -- [5]
+			"Twilightt-Spinebreaker", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3481, -- [11]
-			"Player-57-0A688B07", -- [12]
+			621, -- [11]
+			"Player-159-09159B56", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffaad372Ræign|r",
-			[51] = 1534123093,
-			[50] = "CHAT_MSG_GUILD",
+			[52] = "|cff8787edTwilightt-Spinebreaker|r",
+			[51] = 1534817519,
+			[50] = "CHAT_MSG_INSTANCE_CHAT",
 		}, -- [120]
 		{
-			"ayyy", -- [1]
-			"Celestrazaa-Illidan", -- [2]
+			"near the dock", -- [1]
+			"Saesenthesis-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
 			"", -- [5]
@@ -2674,43 +2652,42 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3490, -- [11]
-			"Player-57-0AFF20AA", -- [12]
+			626, -- [11]
+			"Player-57-0AFD5954", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534123119,
+			[52] = "|cfffff468Saesenthesis|r",
+			[51] = 1534817528,
 			[50] = "CHAT_MSG_GUILD",
 		}, -- [121]
 		{
-			"because ones are not that great", -- [1]
-			"|Kf37|k00000000|k", -- [2]
+			"sec", -- [1]
+			"Lambskinu-Gorefiend", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"", -- [5]
+			"Lambskinu-Gorefiend", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3491, -- [11]
-			false, -- [12]
-			38, -- [13]
+			628, -- [11]
+			"Player-159-06DEFAC8", -- [12]
+			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffffffftwin1010|r",
-			[51] = 1534123119,
-			[50] = "CHAT_MSG_BN_WHISPER",
-			[53] = "twin1010",
+			[52] = "|cffff7c0aLambskinu-Gorefiend|r",
+			[51] = 1534817539,
+			[50] = "CHAT_MSG_INSTANCE_CHAT",
 		}, -- [122]
 		{
-			"Yeah I gotta run, ping me later.", -- [1]
-			"|Kf37|k00000000|k", -- [2]
+			"lol i randomly got dumped off my flight path", -- [1]
+			"Luumii-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
 			"", -- [5]
@@ -2719,128 +2696,127 @@ ElvCharacterDB = {
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3500, -- [11]
-			false, -- [12]
-			38, -- [13]
+			629, -- [11]
+			"Player-57-0A48024D", -- [12]
+			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cfffffffftwin1010|r",
-			[51] = 1534123150,
-			[50] = "CHAT_MSG_BN_WHISPER_INFORM",
-			[53] = "twin1010",
+			[52] = "|cfff48cbaLuumii|r",
+			[51] = 1534817548,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [123]
 		{
-			"anyway sorry got caught up in dungeon", -- [1]
-			"Celestrazaa-Illidan", -- [2]
+			"%s has earned the achievement |cffffff00|Hachievement:12559:Player-57-0967D0A5:1:8:20:18:4294967295:4294967295:4294967295:4294967295|h[Explore Zuldazar]|h|r!", -- [1]
+			"Thelindra-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Celestrazaa", -- [5]
+			"Thelindra", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3503, -- [11]
-			"Player-57-0AFF20AA", -- [12]
+			645, -- [11]
+			"Player-57-0967D0A5", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534123167,
-			[50] = "CHAT_MSG_WHISPER",
+			[52] = "|cffa330c9Thelindra|r",
+			[51] = 1534817593,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [124]
 		{
-			"u still workin the same gig ", -- [1]
-			"Celestrazaa-Illidan", -- [2]
+			"yeah looks like all the same servers that were effected on day 1 of launch are being effected again", -- [1]
+			"Nadzieja-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Celestrazaa", -- [5]
+			"", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3508, -- [11]
-			"Player-57-0AFF20AA", -- [12]
+			654, -- [11]
+			"Player-57-0A08BEB4", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534123192,
-			[50] = "CHAT_MSG_WHISPER",
+			[52] = "|cff3fc6eaNadzieja|r",
+			[51] = 1534817614,
+			[50] = "CHAT_MSG_GUILD",
 		}, -- [125]
 		{
-			"??", -- [1]
-			"Celestrazaa-Illidan", -- [2]
+			"Illidan is bugged.", -- [1]
+			"Evan-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Celestrazaa", -- [5]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			3509, -- [11]
-			"Player-57-0AFF20AA", -- [12]
+			655, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cffffffffCelestrazaa|r",
-			[51] = 1534123194,
-			[50] = "CHAT_MSG_WHISPER",
+			[52] = "|cffffffffEvan|r",
+			[51] = 1534817618,
+			[50] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
 		}, -- [126]
 		{
-			"%s has earned the achievement |cffffff00|Hachievement:1252:Player-57-0A102353:1:8:12:18:4294967295:4294967295:4294967295:4294967295|h[Supreme Defender]|h|r!", -- [1]
-			"Nikolos-Illidan", -- [2]
+			"Can't zone in, gl.", -- [1]
+			"Evan-Illidan", -- [2]
 			"", -- [3]
 			"", -- [4]
-			"Nikolos", -- [5]
+			"Evan", -- [5]
 			"", -- [6]
 			0, -- [7]
 			0, -- [8]
 			"", -- [9]
 			0, -- [10]
-			117, -- [11]
-			"Player-57-0A102353", -- [12]
+			656, -- [11]
+			"Player-57-0583ABC7", -- [12]
 			0, -- [13]
 			false, -- [14]
 			false, -- [15]
 			false, -- [16]
 			false, -- [17]
-			[52] = "|cff0070ddNikolos|r",
-			[51] = 1534136250,
-			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
+			[52] = "|cffffffffEvan|r",
+			[51] = 1534817621,
+			[50] = "CHAT_MSG_INSTANCE_CHAT_LEADER",
 		}, -- [127]
 	},
 	["ChatEditHistory"] = {
-		"/cw Celestrazaa-Illidan Makes sense if the sale would have been shitty for you.", -- [1]
-		"/cw Ramblez Sure.", -- [2]
-		"/ginvite ramblez", -- [3]
-		"/cw Ramblez Who dis?", -- [4]
-		"/cw Ramblez Ah duh.", -- [5]
-		"/cw Ramblez Clever naming.", -- [6]
-		" Kinda.", -- [7]
-		" Fantastic.", -- [8]
-		" Obviously.", -- [9]
-		" Yeah I have all 3 Priest specs.", -- [10]
-		"/wa", -- [11]
-		" Easier to just send them.", -- [12]
-		" [WeakAuras: Evan-Illidan - Atonement Target Count Large][WeakAuras: Evan-Illidan - Evangelism 7.3][WeakAuras: Evan-Illidan - Halo 8.0][WeakAuras: Evan-Illidan - Penance 7.3]", -- [13]
-		" Oh does that not work?", -- [14]
-		" Ping me on Discord.", -- [15]
-		" Comet#1167", -- [16]
-		" https://1drv.ms/u/s!AlIT74utinFYkwiZpF5c1HXYY7we", -- [17]
-		" Thanks.", -- [18]
-		" In practice they look more like https://1drv.ms/u/s!AlIT74utinFYkwqyQJEXzxvcqu6Q", -- [19]
-		" Yeah I gotta run, ping me later.", -- [20]
+		"/g Haha better than is always dangerous to say.", -- [1]
+		"/g Nope, I use nano", -- [2]
+		"/g Never can get out of emacs.", -- [3]
+		"/g These days I like a heavy IDE.", -- [4]
+		"/g Yeah I use IntelliJ and its variants.", -- [5]
+		"/g I like IntelliJ because it's pretty.", -- [6]
+		"/g Yeah we're not on Git.", -- [7]
+		"/g But I believe it.", -- [8]
+		"/g Yeah I mean Git is majorly overkill for a lot of stuff.", -- [9]
+		"/g It just doesn't work with our size.", -- [10]
+		"/g We need a monolithic head.", -- [11]
+		"/g That's also the year it was developed, ironically :)", -- [12]
+		"/i Ty", -- [13]
+		"/i Ty all.", -- [14]
+		"/i Wow this is so fun.", -- [15]
+		"/g lol", -- [16]
+		"/g I can't get any 325 stuff to drop.", -- [17]
+		"/g I have 3 different 325 chests.", -- [18]
+		"/i Illidan is bugged.", -- [19]
+		"/i Can't zone in, gl.", -- [20]
 	},
 	["BodyGuard"] = {
 		["Active"] = false,

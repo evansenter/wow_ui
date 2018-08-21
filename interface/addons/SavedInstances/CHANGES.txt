@@ -1,12 +1,14 @@
-lightweight tag 15a07c465bbda88fe205e1bd395fd12fffe76527 8.0.3
+tag 5fda57750b8446421efe5b9b010053cb9610efac 8.0.5
 Author:	Benjamin Staneck <staneck@gmail.com>
-Date:	Mon Jul 23 12:37:05 2018 +0200
+Date:	Wed Aug 15 14:52:09 2018 +0200
 
-commit 15a07c465bbda88fe205e1bd395fd12fffe76527
+Tag 8.0.5
+
+commit 1960beee0e8108ce1cf49e315f947f130b205890
 Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Mon Jul 23 12:37:05 2018 +0200
+Date:   Wed Aug 15 14:51:09 2018 +0200
 
-    Switch to new mapID for bounty checking
+    add BfA currencies
     
-    Fixes #127
+    Fixes #152
 

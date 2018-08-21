@@ -30,8 +30,6 @@ AdiBagsDB = {
 		},
 		["Equipment"] = {
 		},
-		["DataSource"] = {
-		},
 		["ItemSets"] = {
 		},
 		["CurrencyFrame"] = {
@@ -67,6 +65,8 @@ AdiBagsDB = {
 				},
 			},
 		},
+		["DataSource"] = {
+		},
 		["Junk"] = {
 		},
 		["MoneyFrame"] = {
@@ -74,6 +74,7 @@ AdiBagsDB = {
 	},
 	["profileKeys"] = {
 		["Cometstorm - Illidan"] = "Comet - Illidan",
+		["Ereinion - Dark Iron"] = "Default",
 		["Comet - Illidan"] = "Comet - Illidan",
 		["Combustion - Illidan"] = "Comet - Illidan",
 		["Evan - Illidan"] = "Comet - Illidan",

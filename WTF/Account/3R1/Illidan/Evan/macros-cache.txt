@@ -59,6 +59,10 @@ VER 3 0100000000000006 "Smite" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /use [harm][@mouseovertarget,harm][]Smite
 END
+VER 3 010000000000002A "Tier 6 Disc" "INV_Misc_QuestionMark"
+#showtooltip
+/cast [talent:6/1]Purge the Wicked;[talent:6/2]Divine Star;[talent:6/3]Halo
+END
 VER 3 0100000000000020 "Void Eruption" "INV_Misc_QuestionMark"
 #showtooltip Void Eruption
 /use 13

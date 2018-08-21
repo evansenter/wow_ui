@@ -2,50 +2,6 @@
 ElvCharacterDB = {
 	["ChatHistoryLog"] = {
 		{
-			"_$161Herpopotamus_$Free M+15 giveaways to followers! Double carries, running with no healer tonight! <twitch.tv/herpftw>_$3fc6ea$", -- [1]
-			"Comet-Illidan", -- [2]
-			"", -- [3]
-			"4. TCForwarder6IIll", -- [4]
-			"Comet", -- [5]
-			"", -- [6]
-			0, -- [7]
-			4, -- [8]
-			"TCForwarder6IIll", -- [9]
-			0, -- [10]
-			2581, -- [11]
-			"Player-57-05DF4D8D", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Comet|r",
-			[51] = 1530241019,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [1]
-		{
-			"_$162Cintrine_$<Medieval> is currently recruiting all classes. Our focus is building up for mythic raids and growing our ranks for BFA. We are a core set of friends and chill in disc and run raids and pvp daily on our toons. Whisper for more info_$ff7c0a$", -- [1]
-			"Comet-Illidan", -- [2]
-			"", -- [3]
-			"4. TCForwarder6IIll", -- [4]
-			"Comet", -- [5]
-			"", -- [6]
-			0, -- [7]
-			4, -- [8]
-			"TCForwarder6IIll", -- [9]
-			0, -- [10]
-			2585, -- [11]
-			"Player-57-05DF4D8D", -- [12]
-			0, -- [13]
-			false, -- [14]
-			false, -- [15]
-			false, -- [16]
-			false, -- [17]
-			[52] = "|cff00ff96Comet|r",
-			[51] = 1530241022,
-			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [2]
-		{
 			"_$163Samster_$wtb |cffa335ee|Hitem:23540::::::::110:577::::::|h[Felsteel Longblade]|h|r pst_$a330c9$", -- [1]
 			"Comet-Illidan", -- [2]
 			"", -- [3]
@@ -66,7 +22,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241032,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [3]
+		}, -- [1]
 		{
 			"H/M燃烧王座包团无竞争 毕业 史诗单买个人拾取!阿古斯和古尔丹坐骑!,泰坦杀手,神选者头衔!", -- [1]
 			"Celestiol-Illidan", -- [2]
@@ -88,7 +44,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaCelestiol|r",
 			[51] = 1530241032,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [4]
+		}, -- [2]
 		{
 			"_$164Celestiol_$H/M燃烧王座包团无竞争 毕业 史诗单买个人拾取!阿古斯和古尔丹坐骑!,泰坦杀手,神选者头衔!_$3fc6ea$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -110,7 +66,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241032,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [5]
+		}, -- [3]
 		{
 			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
 			"Kmoaz-Illidan", -- [2]
@@ -132,7 +88,7 @@ ElvCharacterDB = {
 			[52] = "|cff0070ddKmoaz|r",
 			[51] = 1530241033,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [6]
+		}, -- [4]
 		{
 			"_$165Kmoaz_$燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~_$0070dd$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -154,7 +110,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241033,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [7]
+		}, -- [5]
 		{
 			"_$166Jittyy_$<Big Dumb Guild> has TWO open spots for MYTHIC ARGUS [Shackled Ur'zul] mount runs this coming TUESDAY JULY 3RD! The drop rate goes to 1% soon. Get it now before the price rises more! PST for price and details, GOLD ONLY any server._$c41e3a$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -176,7 +132,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241049,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [8]
+		}, -- [6]
 		{
 			"法师塔来单就打  低保  H 王座包团半价出售 100万金币 500RMB ", -- [1]
 			"Hiyuc-Illidan", -- [2]
@@ -198,7 +154,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dHiyuc|r",
 			[51] = 1530241053,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [9]
+		}, -- [7]
 		{
 			"_$167Hiyuc_$法师塔来单就打  低保  H 王座包团半价出售 100万金币 500RMB _$c69b6d$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -220,7 +176,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241053,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [10]
+		}, -- [8]
 		{
 			"_$168Gwouis_$Selling  Mythic +15 for the weekly reward; Argus Heroic raid 11/11 (ML); also  Glory of the Argus Raider to  get[Antoran Gloomhound]  ;Or Guldan mount[Fiendish Hellfire Core]! /Pst_$0070dd$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -242,7 +198,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241054,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [11]
+		}, -- [9]
 		{
 			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
 			"Kmoaz-Illidan", -- [2]
@@ -264,7 +220,7 @@ ElvCharacterDB = {
 			[52] = "|cff0070ddKmoaz|r",
 			[51] = 1530241063,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [12]
+		}, -- [10]
 		{
 			"。法师塔绝版先打。王座史诗包团全通=史诗四件套。。H 王座团白菜，，古尔丹。。 击杀阿古斯。法师塔绝版先打、、。15低保 来就打？？ ", -- [1]
 			"Kirtzertdor-Illidan", -- [2]
@@ -286,7 +242,7 @@ ElvCharacterDB = {
 			[52] = "|cffaad372Kirtzertdor|r",
 			[51] = 1530241072,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [13]
+		}, -- [11]
 		{
 			"_$169Kirtzertdor_$。法师塔绝版先打。王座史诗包团全通=史诗四件套。。H 王座团白菜，，古尔丹。。 击杀阿古斯。法师塔绝版先打、、。15低保 来就打？？ _$aad372$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -308,7 +264,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241072,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [14]
+		}, -- [12]
 		{
 			"_$170Mhmmtasty_$< Heil Hydra> (HORDE PvP) Join the cause today! Your compliance will be rewarded. Are you ready to become Hydra?_$00ff96$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -330,7 +286,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241074,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [15]
+		}, -- [13]
 		{
 			"_$171Moonstrìckên_$DROOD LOOKING FOR 2'S 1700 CR_$8787ed$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -352,7 +308,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241079,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [16]
+		}, -- [14]
 		{
 			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
 			"Kmoaz-Illidan", -- [2]
@@ -374,7 +330,7 @@ ElvCharacterDB = {
 			[52] = "|cff0070ddKmoaz|r",
 			[51] = 1530241093,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [17]
+		}, -- [15]
 		{
 			"_$172Kmoaz_$燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~_$0070dd$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -396,7 +352,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241094,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [18]
+		}, -- [16]
 		{
 			"_$173Samster_$wtb |cffa335ee|Hitem:23540::::::::110:577::::::|h[Felsteel Longblade]|h|rpst_$a330c9$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -418,7 +374,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241098,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [19]
+		}, -- [17]
 		{
 			"H/M燃烧王座包团无竞争 毕业 史诗单买个人拾取!阿古斯和古尔丹坐骑!,泰坦杀手,神选者头衔!", -- [1]
 			"Celestiol-Illidan", -- [2]
@@ -440,7 +396,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaCelestiol|r",
 			[51] = 1530241102,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [20]
+		}, -- [18]
 		{
 			"_$174Celestiol_$H/M燃烧王座包团无竞争 毕业 史诗单买个人拾取!阿古斯和古尔丹坐骑!,泰坦杀手,神选者头衔!_$3fc6ea$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -462,7 +418,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241102,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [21]
+		}, -- [19]
 		{
 			"法师塔来单就打  低保  H 王座包团半价出售 100万金币 500RMB ", -- [1]
 			"Hiyuc-Illidan", -- [2]
@@ -484,7 +440,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dHiyuc|r",
 			[51] = 1530241103,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [22]
+		}, -- [20]
 		{
 			"_$175Hiyuc_$法师塔来单就打  低保  H 王座包团半价出售 100万金币 500RMB _$c69b6d$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -506,7 +462,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241104,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [23]
+		}, -- [21]
 		{
 			"_$176Nalanth_$WTB pets_$a330c9$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -528,7 +484,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241106,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [24]
+		}, -- [22]
 		{
 			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
 			"Kmoaz-Illidan", -- [2]
@@ -550,7 +506,7 @@ ElvCharacterDB = {
 			[52] = "|cff0070ddKmoaz|r",
 			[51] = 1530241123,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [25]
+		}, -- [23]
 		{
 			"_$177Gwouis_$Selling  Mythic +15 for the weekly reward; Argus Heroic raid 11/11 (ML); also  Glory of the Argus Raider to  get[Antoran Gloomhound]  ;Or Guldan mount[Fiendish Hellfire Core]! /Pst_$0070dd$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -572,7 +528,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241125,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [26]
+		}, -- [24]
 		{
 			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
 			"Kmoaz-Illidan", -- [2]
@@ -594,7 +550,7 @@ ElvCharacterDB = {
 			[52] = "|cff0070ddKmoaz|r",
 			[51] = 1530241153,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [27]
+		}, -- [25]
 		{
 			"_$178Kmoaz_$燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~_$0070dd$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -616,7 +572,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241154,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [28]
+		}, -- [26]
 		{
 			"_$179Rjd_$||The Evicted II|| is a multi-gaming community that does it all! We are currently Four guilds strong and are looking for new members who are interested in joining a social guild that goes beyond WoW. Join us and be part of an active gam_$ff7c0a$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -638,7 +594,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241169,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [29]
+		}, -- [27]
 		{
 			"H/M燃烧王座包团无竞争 毕业 史诗单买个人拾取!阿古斯和古尔丹坐骑!,泰坦杀手,神选者头衔!", -- [1]
 			"Celestiol-Illidan", -- [2]
@@ -660,7 +616,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaCelestiol|r",
 			[51] = 1530241172,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [30]
+		}, -- [28]
 		{
 			"_$180Celestiol_$H/M燃烧王座包团无竞争 毕业 史诗单买个人拾取!阿古斯和古尔丹坐骑!,泰坦杀手,神选者头衔!_$3fc6ea$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -682,7 +638,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241172,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [31]
+		}, -- [29]
 		{
 			"_$181Jittyy_$<Big Dumb Guild> has TWO open spots for MYTHIC ARGUS [Shackled Ur'zul] mount runs this coming TUESDAY JULY 3RD! The drop rate goes to 1% soon. Get it now before the price rises more! PST for price and details, GOLD ONLY any server._$c41e3a$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -704,7 +660,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241174,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [32]
+		}, -- [30]
 		{
 			"_$182Rjd_$||The Evicted II|| is a multi-gaming community that does it all! We are currently three guilds strong and are looking for new members who are interested in joining a social guild that goes beyond WoW. Join us and be part of an active ga_$ff7c0a$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -726,7 +682,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241178,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [33]
+		}, -- [31]
 		{
 			"_$183Samster_$wtb |cffa335ee|Hitem:23540::::::::110:577::::::|h[Felsteel Longblade]|h|r_$a330c9$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -748,7 +704,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241179,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [34]
+		}, -- [32]
 		{
 			"_$184Nalanth_$WTB battle pets_$a330c9$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -770,7 +726,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241183,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [35]
+		}, -- [33]
 		{
 			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
 			"Kmoaz-Illidan", -- [2]
@@ -792,7 +748,7 @@ ElvCharacterDB = {
 			[52] = "|cff0070ddKmoaz|r",
 			[51] = 1530241183,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [36]
+		}, -- [34]
 		{
 			"_$185Reldikasa_$Antorus any difficulty 11/11 runs with any loot mode are up for purchase! Possible loot/relic reservation. Offspec piece are rollable. Performed by experienced and adequately geared guild. Runs occur every day._$c69b6d$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -814,7 +770,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241190,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [37]
+		}, -- [35]
 		{
 			"_$186Gwouis_$Selling  Mythic +15 for the weekly reward; Argus Heroic raid 11/11 (ML); also  Glory of the Argus Raider to  get[Antoran Gloomhound]  ;Or Guldan mount[Fiendish Hellfire Core]! /Pst_$0070dd$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -836,7 +792,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241195,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [38]
+		}, -- [36]
 		{
 			"_$187Mozzlegaming_$Are you LF help on TSM3, TSM3 Sniper, Gold Farming, LAC gold farm runs, enough to earn a token with minimal time spent? 70+ mil gold earned.  PST for help!_$c69b6d$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -858,7 +814,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241199,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [39]
+		}, -- [37]
 		{
 			"_$188Íllidari_$LF Person for|cffffff00|Hachievement:4621:Player-57-09606DD6:0:0:0:-1:0:0:0:0|h[Been Waiting a Long Time for This (25 player)]|h|rwill tip!_$a330c9$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -880,7 +836,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241205,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [40]
+		}, -- [38]
 		{
 			"_$189Scythr_$WTS [Wakening Horror Spaulders][Cyno's Mantle of Sin][Girdle of the Crumbling Sanctum]_$ff7c0a$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -902,7 +858,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241206,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [41]
+		}, -- [39]
 		{
 			"_$190Cintrine_$<Medieval> is currently recruiting all classes. Our focus is building up for mythic raids and growing our ranks for BFA. We are a core set of friends and chill in disc and run raids and pvp daily on our toons. Whisper for more info_$ff7c0a$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -924,7 +880,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241212,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [42]
+		}, -- [40]
 		{
 			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
 			"Kmoaz-Illidan", -- [2]
@@ -946,7 +902,7 @@ ElvCharacterDB = {
 			[52] = "|cff0070ddKmoaz|r",
 			[51] = 1530241214,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [43]
+		}, -- [41]
 		{
 			"_$191Kmoaz_$燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~_$0070dd$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -968,7 +924,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241214,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [44]
+		}, -- [42]
 		{
 			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
 			"Kmoaz-Illidan", -- [2]
@@ -990,7 +946,7 @@ ElvCharacterDB = {
 			[52] = "|cff0070ddKmoaz|r",
 			[51] = 1530241244,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [45]
+		}, -- [43]
 		{
 			"_$192Samster_$wtb |cffa335ee|Hitem:23540::::::::110:577::::::|h[Felsteel Longblade]|h|r_$a330c9$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -1012,7 +968,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241247,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [46]
+		}, -- [44]
 		{
 			"_$193Gwouis_$Selling  Mythic +15 for the weekly reward; Argus Heroic raid 11/11 (ML); also  Glory of the Argus Raider to  get[Antoran Gloomhound]  ;Or Guldan mount[Fiendish Hellfire Core]! /Pst_$0070dd$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -1034,7 +990,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241265,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [47]
+		}, -- [45]
 		{
 			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
 			"Kmoaz-Illidan", -- [2]
@@ -1056,7 +1012,7 @@ ElvCharacterDB = {
 			[52] = "|cff0070ddKmoaz|r",
 			[51] = 1530241274,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [48]
+		}, -- [46]
 		{
 			"_$194Kmoaz_$燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~_$0070dd$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -1078,7 +1034,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241274,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [49]
+		}, -- [47]
 		{
 			"_$195Herpopotamus_$Free M+15 giveaways to followers! Double carries, running with no healer tonight! <twitch.tv/herpftw>_$3fc6ea$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -1100,7 +1056,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241278,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [50]
+		}, -- [48]
 		{
 			"_$196Jittyy_$<Big Dumb Guild> has TWO open spots for MYTHIC ARGUS [Shackled Ur'zul] mount runs this coming TUESDAY JULY 3RD! The drop rate goes to 1% soon. Get it now before the price rises more! PST for price and details, GOLD ONLY any server._$c41e3a$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -1122,7 +1078,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241299,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [51]
+		}, -- [49]
 		{
 			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
 			"Kmoaz-Illidan", -- [2]
@@ -1144,7 +1100,7 @@ ElvCharacterDB = {
 			[52] = "|cff0070ddKmoaz|r",
 			[51] = 1530241304,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [52]
+		}, -- [50]
 		{
 			"_$197Íllidari_$LF help on|cffffff00|Hachievement:4621:Player-57-09606DD6:0:0:0:-1:0:0:0:0|h[Been Waiting a Long Time for This (25 player)]|h|rwill tip_$a330c9$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -1166,7 +1122,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241308,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [53]
+		}, -- [51]
 		{
 			"_$198Scythr_$WTS [Wakening Horror Spaulders][Cyno's Mantle of Sin][Girdle of the Crumbling Sanctum]_$ff7c0a$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -1188,7 +1144,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241315,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [54]
+		}, -- [52]
 		{
 			"_$199Mozzlegaming_$Are you LF help on TSM3, TSM3 Sniper, Gold Farming, LAC gold farm runs, enough to earn a token with minimal time spent? 70+ mil gold earned.  PST for help!_$c69b6d$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -1210,7 +1166,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241328,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [55]
+		}, -- [53]
 		{
 			"^LFW_L", -- [1]
 			"Skullata-Illidan", -- [2]
@@ -1232,7 +1188,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffSkullata|r",
 			[51] = 1530241332,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [56]
+		}, -- [54]
 		{
 			"。法师塔绝版先打。王座史诗包团全通=史诗四件套。。H 王座团白菜，，古尔丹。。 击杀阿古斯。法师塔绝版先打、、。15低保 来就打？？ ", -- [1]
 			"Kirtzertdor-Illidan", -- [2]
@@ -1254,7 +1210,7 @@ ElvCharacterDB = {
 			[52] = "|cffaad372Kirtzertdor|r",
 			[51] = 1530241332,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [57]
+		}, -- [55]
 		{
 			"_$200Kirtzertdor_$。法师塔绝版先打。王座史诗包团全通=史诗四件套。。H 王座团白菜，，古尔丹。。 击杀阿古斯。法师塔绝版先打、、。15低保 来就打？？ _$aad372$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -1276,7 +1232,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241332,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [58]
+		}, -- [56]
 		{
 			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
 			"Kmoaz-Illidan", -- [2]
@@ -1298,7 +1254,7 @@ ElvCharacterDB = {
 			[52] = "|cff0070ddKmoaz|r",
 			[51] = 1530241334,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [59]
+		}, -- [57]
 		{
 			"_$201Kmoaz_$燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~_$0070dd$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -1320,7 +1276,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241334,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [60]
+		}, -- [58]
 		{
 			"_$202Gwouis_$Selling  Mythic +15 for the weekly reward; Argus Heroic raid 11/11 (ML); also  Glory of the Argus Raider to  get[Antoran Gloomhound]  ;Or Guldan mount[Fiendish Hellfire Core]! /Pst_$0070dd$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -1342,7 +1298,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241334,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [61]
+		}, -- [59]
 		{
 			"_$203Herpopotamus_$Free M+15 giveaways to followers! Double carries, running with no healer tonight! <twitch.tv/herpftw>_$3fc6ea$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -1364,7 +1320,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241345,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [62]
+		}, -- [60]
 		{
 			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
 			"Kmoaz-Illidan", -- [2]
@@ -1386,7 +1342,7 @@ ElvCharacterDB = {
 			[52] = "|cff0070ddKmoaz|r",
 			[51] = 1530241364,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [63]
+		}, -- [61]
 		{
 			"_$204Heypriest_$WTS |cffa335ee|Hitem:97826:::::::371270528:110:256::::::|h[Latent Kor'kron Chestpiece]|h|r pst with offer_$ffffff$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -1408,7 +1364,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241368,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [64]
+		}, -- [62]
 		{
 			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
 			"Kmoaz-Illidan", -- [2]
@@ -1430,7 +1386,7 @@ ElvCharacterDB = {
 			[52] = "|cff0070ddKmoaz|r",
 			[51] = 1530241394,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [65]
+		}, -- [63]
 		{
 			"_$205Kmoaz_$燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~_$0070dd$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -1452,7 +1408,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241394,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [66]
+		}, -- [64]
 		{
 			"_$206Gwouis_$Selling  Mythic +15 for the weekly reward; Argus Heroic raid 11/11 (ML); also  Glory of the Argus Raider to  get[Antoran Gloomhound]  ;Or Guldan mount[Fiendish Hellfire Core]! /Pst_$0070dd$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -1474,7 +1430,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241405,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [67]
+		}, -- [65]
 		{
 			"_$207Quietly_$WTS 11/11 Heroic Antorus (PL with loot trading. Done by |cffffff00|Hachievement:12111:Player-57-0AD67005:1:5:10:18:4294967295:4294967295:4294967295:4294967295|h[Cutting Edge: Argus the Unmaker]|h|r players._$c41e3a$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -1496,7 +1452,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241419,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [68]
+		}, -- [66]
 		{
 			"_$208Jittyy_$<Big Dumb Guild> has TWO open spots for MYTHIC ARGUS [Shackled Ur'zul] mount runs this coming TUESDAY JULY 3RD! The drop rate goes to 1% soon. Get it now before the price rises more! PST for price and details, GOLD ONLY any server._$c41e3a$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -1518,7 +1474,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241424,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [69]
+		}, -- [67]
 		{
 			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
 			"Kmoaz-Illidan", -- [2]
@@ -1540,7 +1496,7 @@ ElvCharacterDB = {
 			[52] = "|cff0070ddKmoaz|r",
 			[51] = 1530241424,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [70]
+		}, -- [68]
 		{
 			"_$209Herpopotamus_$Free M+15 giveaways to followers! Double carries, running with no healer tonight! <twitch.tv/herpftw>_$3fc6ea$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -1562,7 +1518,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241429,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [71]
+		}, -- [69]
 		{
 			"_$210Mhmmtasty_$< Heil Hydra> (HORDE PvP) Join the cause today! Your compliance will be rewarded. Are you ready to become Hydra?_$00ff96$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -1584,7 +1540,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241442,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [72]
+		}, -- [70]
 		{
 			"燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~", -- [1]
 			"Kmoaz-Illidan", -- [2]
@@ -1606,7 +1562,7 @@ ElvCharacterDB = {
 			[52] = "|cff0070ddKmoaz|r",
 			[51] = 1530241454,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [73]
+		}, -- [71]
 		{
 			"_$211Kmoaz_$燃烧王座英雄包团-最少8件装备--包4件套 ，M王座包团**低 保*FS塔外观**古尔丹坐骑**装 等 提 升-950 *新 种 族20-110**飞 行 成 就* 觉醒精华~~_$0070dd$", -- [1]
 			"Comet-Illidan", -- [2]
@@ -1628,7 +1584,7 @@ ElvCharacterDB = {
 			[52] = "|cff00ff96Comet|r",
 			[51] = 1530241454,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [74]
+		}, -- [72]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置！,", -- [1]
 			"Curdgfgr-Illidan", -- [2]
@@ -1650,7 +1606,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaCurdgfgr|r",
 			[51] = 1533609448,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [75]
+		}, -- [73]
 		{
 			"do we need a tank?", -- [1]
 			"Bleedingkant-Illidan", -- [2]
@@ -1672,7 +1628,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bleedingkant|r",
 			[51] = 1533609473,
 			[50] = "CHAT_MSG_WHISPER",
-		}, -- [76]
+		}, -- [74]
 		{
 			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
 			"Qasdsdfsdfxz-Illidan", -- [2]
@@ -1694,7 +1650,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dQasdsdfsdfxz|r",
 			[51] = 1533609482,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [77]
+		}, -- [75]
 		{
 			"Yeah, likely.", -- [1]
 			"Bleedingkant-Illidan", -- [2]
@@ -1716,7 +1672,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bleedingkant|r",
 			[51] = 1533609498,
 			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [78]
+		}, -- [76]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置！,", -- [1]
 			"Curdgfgr-Illidan", -- [2]
@@ -1738,7 +1694,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaCurdgfgr|r",
 			[51] = 1533609518,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [79]
+		}, -- [77]
 		{
 			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
 			"Qasdsdfsdfxz-Illidan", -- [2]
@@ -1760,7 +1716,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dQasdsdfsdfxz|r",
 			[51] = 1533609527,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [80]
+		}, -- [78]
 		{
 			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
 			"Qasdsdfsdfxz-Illidan", -- [2]
@@ -1782,7 +1738,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dQasdsdfsdfxz|r",
 			[51] = 1533609572,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [81]
+		}, -- [79]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置！,", -- [1]
 			"Curdgfgr-Illidan", -- [2]
@@ -1804,7 +1760,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaCurdgfgr|r",
 			[51] = 1533609588,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [82]
+		}, -- [80]
 		{
 			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
 			"Qasdsdfsdfxz-Illidan", -- [2]
@@ -1826,7 +1782,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dQasdsdfsdfxz|r",
 			[51] = 1533609617,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [83]
+		}, -- [81]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置！,", -- [1]
 			"Curdgfgr-Illidan", -- [2]
@@ -1848,7 +1804,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaCurdgfgr|r",
 			[51] = 1533609658,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [84]
+		}, -- [82]
 		{
 			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
 			"Qasdsdfsdfxz-Illidan", -- [2]
@@ -1870,7 +1826,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dQasdsdfsdfxz|r",
 			[51] = 1533609662,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [85]
+		}, -- [83]
 		{
 			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
 			"Qasdsdfsdfxz-Illidan", -- [2]
@@ -1892,7 +1848,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dQasdsdfsdfxz|r",
 			[51] = 1533609707,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [86]
+		}, -- [84]
 		{
 			"A tank from my last guild rerolled and came here. Im talking with him to see if he wants in. He's played all tanks, has all tanks. ", -- [1]
 			"Bleedingkant-Illidan", -- [2]
@@ -1914,7 +1870,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bleedingkant|r",
 			[51] = 1533609717,
 			[50] = "CHAT_MSG_WHISPER",
-		}, -- [87]
+		}, -- [85]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置！,", -- [1]
 			"Curdgfgr-Illidan", -- [2]
@@ -1936,7 +1892,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaCurdgfgr|r",
 			[51] = 1533609728,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [88]
+		}, -- [86]
 		{
 			"Ah yeah, we'd definitely be interested in trying them out.", -- [1]
 			"Bleedingkant-Illidan", -- [2]
@@ -1958,7 +1914,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bleedingkant|r",
 			[51] = 1533609736,
 			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [89]
+		}, -- [87]
 		{
 			"We'll do a H tomorrow most likely.", -- [1]
 			"Bleedingkant-Illidan", -- [2]
@@ -1980,7 +1936,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bleedingkant|r",
 			[51] = 1533609743,
 			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [90]
+		}, -- [88]
 		{
 			"sikanda", -- [1]
 			"Bleedingkant-Illidan", -- [2]
@@ -2002,7 +1958,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bleedingkant|r",
 			[51] = 1533609744,
 			[50] = "CHAT_MSG_WHISPER",
-		}, -- [91]
+		}, -- [89]
 		{
 			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
 			"Qasdsdfsdfxz-Illidan", -- [2]
@@ -2024,7 +1980,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dQasdsdfsdfxz|r",
 			[51] = 1533609752,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [92]
+		}, -- [90]
 		{
 			"is his \"main\"", -- [1]
 			"Bleedingkant-Illidan", -- [2]
@@ -2046,7 +2002,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bleedingkant|r",
 			[51] = 1533609753,
 			[50] = "CHAT_MSG_WHISPER",
-		}, -- [93]
+		}, -- [91]
 		{
 			"Mkay.", -- [1]
 			"Bleedingkant-Illidan", -- [2]
@@ -2068,7 +2024,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bleedingkant|r",
 			[51] = 1533609763,
 			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [94]
+		}, -- [92]
 		{
 			"I say that because he is pretty good with them all ", -- [1]
 			"Bleedingkant-Illidan", -- [2]
@@ -2090,7 +2046,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bleedingkant|r",
 			[51] = 1533609785,
 			[50] = "CHAT_MSG_WHISPER",
-		}, -- [95]
+		}, -- [93]
 		{
 			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
 			"Qasdsdfsdfxz-Illidan", -- [2]
@@ -2112,7 +2068,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dQasdsdfsdfxz|r",
 			[51] = 1533609797,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [96]
+		}, -- [94]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置！,", -- [1]
 			"Curdgfgr-Illidan", -- [2]
@@ -2134,7 +2090,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaCurdgfgr|r",
 			[51] = 1533609798,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [97]
+		}, -- [95]
 		{
 			"Yeah that flexibility is super nice.", -- [1]
 			"Bleedingkant-Illidan", -- [2]
@@ -2156,7 +2112,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bleedingkant|r",
 			[51] = 1533609807,
 			[50] = "CHAT_MSG_WHISPER_INFORM",
-		}, -- [98]
+		}, -- [96]
 		{
 			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
 			"Qasdsdfsdfxz-Illidan", -- [2]
@@ -2178,7 +2134,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dQasdsdfsdfxz|r",
 			[51] = 1533609842,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [99]
+		}, -- [97]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置！,", -- [1]
 			"Curdgfgr-Illidan", -- [2]
@@ -2200,7 +2156,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaCurdgfgr|r",
 			[51] = 1533609869,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [100]
+		}, -- [98]
 		{
 			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
 			"Qasdsdfsdfxz-Illidan", -- [2]
@@ -2222,7 +2178,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dQasdsdfsdfxz|r",
 			[51] = 1533609887,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [101]
+		}, -- [99]
 		{
 			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
 			"Qasdsdfsdfxz-Illidan", -- [2]
@@ -2244,7 +2200,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dQasdsdfsdfxz|r",
 			[51] = 1533609932,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [102]
+		}, -- [100]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置！,", -- [1]
 			"Curdgfgr-Illidan", -- [2]
@@ -2266,7 +2222,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaCurdgfgr|r",
 			[51] = 1533609939,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [103]
+		}, -- [101]
 		{
 			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
 			"Qasdsdfsdfxz-Illidan", -- [2]
@@ -2288,7 +2244,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dQasdsdfsdfxz|r",
 			[51] = 1533609977,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [104]
+		}, -- [102]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置！,", -- [1]
 			"Curdgfgr-Illidan", -- [2]
@@ -2310,7 +2266,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaCurdgfgr|r",
 			[51] = 1533610009,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [105]
+		}, -- [103]
 		{
 			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
 			"Qasdsdfsdfxz-Illidan", -- [2]
@@ -2332,7 +2288,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dQasdsdfsdfxz|r",
 			[51] = 1533610022,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [106]
+		}, -- [104]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:637:Player-57-0AFF20AA:1:8:6:18:4294967295:4294967295:4294967295:4294967295|h[Scarlet Monastery]|h|r!", -- [1]
 			"Celestrazaa-Illidan", -- [2]
@@ -2354,7 +2310,7 @@ ElvCharacterDB = {
 			[52] = "|cffffffffCelestrazaa|r",
 			[51] = 1533610026,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [107]
+		}, -- [105]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:8468:Player-57-0ADEA28A:1:8:6:18:4294967295:4294967295:4294967295:4294967295|h[Mythic: Galakras]|h|r!", -- [1]
 			"Bleedingkant-Illidan", -- [2]
@@ -2376,7 +2332,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bleedingkant|r",
 			[51] = 1533610045,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [108]
+		}, -- [106]
 		{
 			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
 			"Qasdsdfsdfxz-Illidan", -- [2]
@@ -2398,7 +2354,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dQasdsdfsdfxz|r",
 			[51] = 1533610067,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [109]
+		}, -- [107]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置！,", -- [1]
 			"Curdgfgr-Illidan", -- [2]
@@ -2420,7 +2376,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaCurdgfgr|r",
 			[51] = 1533610079,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [110]
+		}, -- [108]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:4610:Player-57-0B01F918:1:8:6:18:4294967295:4294967295:4294967295:4294967295|h[Boned (25 player)]|h|r!", -- [1]
 			"Rambel-Illidan", -- [2]
@@ -2442,7 +2398,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dRambel|r",
 			[51] = 1533610086,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [111]
+		}, -- [109]
 		{
 			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
 			"Qasdsdfsdfxz-Illidan", -- [2]
@@ -2464,7 +2420,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dQasdsdfsdfxz|r",
 			[51] = 1533610112,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [112]
+		}, -- [110]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置！,", -- [1]
 			"Curdgfgr-Illidan", -- [2]
@@ -2486,7 +2442,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaCurdgfgr|r",
 			[51] = 1533610149,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [113]
+		}, -- [111]
 		{
 			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
 			"Qasdsdfsdfxz-Illidan", -- [2]
@@ -2508,7 +2464,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dQasdsdfsdfxz|r",
 			[51] = 1533610157,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [114]
+		}, -- [112]
 		{
 			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
 			"Qasdsdfsdfxz-Illidan", -- [2]
@@ -2530,7 +2486,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dQasdsdfsdfxz|r",
 			[51] = 1533610202,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [115]
+		}, -- [113]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置！,", -- [1]
 			"Curdgfgr-Illidan", -- [2]
@@ -2552,7 +2508,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaCurdgfgr|r",
 			[51] = 1533610219,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [116]
+		}, -- [114]
 		{
 			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
 			"Qasdsdfsdfxz-Illidan", -- [2]
@@ -2574,7 +2530,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dQasdsdfsdfxz|r",
 			[51] = 1533610247,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [117]
+		}, -- [115]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置！,", -- [1]
 			"Curdgfgr-Illidan", -- [2]
@@ -2596,7 +2552,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaCurdgfgr|r",
 			[51] = 1533610289,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [118]
+		}, -- [116]
 		{
 			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
 			"Qasdsdfsdfxz-Illidan", -- [2]
@@ -2618,7 +2574,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dQasdsdfsdfxz|r",
 			[51] = 1533610292,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [119]
+		}, -- [117]
 		{
 			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
 			"Qasdsdfsdfxz-Illidan", -- [2]
@@ -2640,7 +2596,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dQasdsdfsdfxz|r",
 			[51] = 1533610337,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [120]
+		}, -- [118]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置！,", -- [1]
 			"Curdgfgr-Illidan", -- [2]
@@ -2662,7 +2618,7 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaCurdgfgr|r",
 			[51] = 1533610359,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [121]
+		}, -- [119]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:4612:Player-57-0B01F918:1:8:6:18:4294967295:4294967295:4294967295:4294967295|h[I'm on a Boat (25 player)]|h|r!", -- [1]
 			"Rambel-Illidan", -- [2]
@@ -2684,7 +2640,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dRambel|r",
 			[51] = 1533610360,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [122]
+		}, -- [120]
 		{
 			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
 			"Qasdsdfsdfxz-Illidan", -- [2]
@@ -2706,7 +2662,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dQasdsdfsdfxz|r",
 			[51] = 1533610382,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [123]
+		}, -- [121]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:9674:Player-57-0A9711CF:1:8:6:18:4294967295:4294967295:4294967295:4294967295|h[I Want More Talador]|h|r!", -- [1]
 			"Drfury-Illidan", -- [2]
@@ -2728,7 +2684,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dDrfury|r",
 			[51] = 1533610402,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [124]
+		}, -- [122]
 		{
 			"%s has earned the achievement |cffffff00|Hachievement:8469:Player-57-0ADEA28A:1:8:6:18:4294967295:4294967295:4294967295:4294967295|h[Mythic: Iron Juggernaut]|h|r!", -- [1]
 			"Bleedingkant-Illidan", -- [2]
@@ -2750,7 +2706,7 @@ ElvCharacterDB = {
 			[52] = "|cfffff468Bleedingkant|r",
 			[51] = 1533610411,
 			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
-		}, -- [125]
+		}, -- [123]
 		{
 			"   预售110-120级快速练 王。。座。。个。。人。。拾。。取 -。。-低。。保。。古尔丹+阿古斯坐 骑。.--飞 行 成 就 。幽灵虎  幽灵马 公鸡 角鹰兽所有TCG坐骑现货特价 版本前夕所有代练都有，", -- [1]
 			"Qasdsdfsdfxz-Illidan", -- [2]
@@ -2772,7 +2728,7 @@ ElvCharacterDB = {
 			[52] = "|cffc69b6dQasdsdfsdfxz|r",
 			[51] = 1533610427,
 			[50] = "CHAT_MSG_CHANNEL",
-		}, -- [126]
+		}, -- [124]
 		{
 			" 燃烧王座英雄史诗包团 10件保底，阿古斯 古尔丹坐骑最后一周2个特价位置！,", -- [1]
 			"Curdgfgr-Illidan", -- [2]
@@ -2794,6 +2750,50 @@ ElvCharacterDB = {
 			[52] = "|cff3fc6eaCurdgfgr|r",
 			[51] = 1533610429,
 			[50] = "CHAT_MSG_CHANNEL",
+		}, -- [125]
+		{
+			"|cffffff00|Hachievement:12989:Player-57-0AFD5954:0:0:0:-1:0:0:0:0|h[Battle for Azeroth Pathfinder, Part One]|h|r", -- [1]
+			"Saesenthesis-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			77, -- [11]
+			"Player-57-0AFD5954", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cfffff468Saesenthesis|r",
+			[51] = 1534297269,
+			[50] = "CHAT_MSG_GUILD",
+		}, -- [126]
+		{
+			"%s has earned the achievement |cffffff00|Hachievement:12561:Player-57-053D9B82:1:8:14:18:4294967295:4294967295:4294967295:4294967295|h[Explore Nazmir]|h|r!", -- [1]
+			"Milyvanily-Illidan", -- [2]
+			"", -- [3]
+			"", -- [4]
+			"Milyvanily", -- [5]
+			"", -- [6]
+			0, -- [7]
+			0, -- [8]
+			"", -- [9]
+			0, -- [10]
+			116, -- [11]
+			"Player-57-053D9B82", -- [12]
+			0, -- [13]
+			false, -- [14]
+			false, -- [15]
+			false, -- [16]
+			false, -- [17]
+			[52] = "|cff8787edMilyvanily|r",
+			[51] = 1534297357,
+			[50] = "CHAT_MSG_GUILD_ACHIEVEMENT",
 		}, -- [127]
 	},
 	["ChatEditHistory"] = {

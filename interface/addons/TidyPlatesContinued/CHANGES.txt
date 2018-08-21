@@ -1,31 +1,12 @@
-lightweight tag 32d26bf48e7bf27e7cf762afa3d0d643ac56470e 6.20
+lightweight tag 285d26c0187ce2b1eda5bba9629c24926391fb26 6.20.1
 Author:	Luxocracy <luxor355@gmail.com>
-Date:	Mon Aug 13 09:28:26 2018 +0200
+Date:	Tue Aug 14 19:30:23 2018 +0200
 
-commit 32d26bf48e7bf27e7cf762afa3d0d643ac56470e
+commit 285d26c0187ce2b1eda5bba9629c24926391fb26
 Author: Luxocracy <luxor355@gmail.com>
-Date:   Mon Aug 13 09:28:26 2018 +0200
+Date:   Tue Aug 14 19:30:23 2018 +0200
 
-    Made all themes compatible with QuestWidget
+    Fixed an error
     
-    - Made all themes compatible with QuestWidget
-    - Changed the style of the quest indicator
-
-commit 76a96dedd036961d7a9c9fda37f73c00ec0fd978
-Author: Luxocracy <luxor355@gmail.com>
-Date:   Sun Aug 12 22:19:04 2018 +0200
-
-    Adjusted QuestWidget position on Quatre Theme
-    
-    - Forgot to add this in last commit...
-
-commit 12d7285a4506fa2b2ddc2b6451060ab9dee7c1b6
-Author: Luxocracy <luxor355@gmail.com>
-Date:   Sun Aug 12 22:17:14 2018 +0200
-
-    Added a new widget named QuestWidget
-    
-    - Added a new widget named QuestWidget.
-    - This widget should show an indication on any unit that is part of your quest. (Requires "ShowQuestTrackingTooltips" to be enabled, might force this on when this is enabled)
-    - Still need to add support for this to the other themes.
+    - Fixed a reported error where if the GetChildren function returns no children would cause the Hide function to create an error.
 

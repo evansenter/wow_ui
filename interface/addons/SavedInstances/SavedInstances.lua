@@ -155,6 +155,11 @@ local currency = {
   1501, -- Writhing Essence
   1508, -- Veiled Argunite
   1533, -- Wakening Essence
+  1565, -- Rich Azerite Fragment
+  1710, -- Seafarer's Dubloon
+  1580, -- Seal of Wartorn Fate
+  1560, -- War Resources
+  1587, -- War Supplies
 }
 addon.currency = currency
 
@@ -2667,7 +2672,7 @@ end
 function core:OnInitialize()
   local versionString = GetAddOnMetadata(addonName, "version")
   --[===[@debug@
-  if versionString == "8.0.3" then
+  if versionString == "8.0.5" then
     versionString = "Dev"
   end
   --@end-debug@]===]
@@ -2989,7 +2994,7 @@ end
 function core:RefreshDailyWorldQuestInfo()
   local t = vars.db.Toons[thisToon]
   t.DailyWorldQuest = {}
-  local BountyQuest = GetQuestBountyInfoForMapID(627)
+  local BountyQuest = GetQuestBountyInfoForMapID(876)
   for BountyIndex, BountyInfo in ipairs(BountyQuest) do
     local title = GetQuestLogTitle(GetQuestLogIndexByID(BountyInfo.questID))
     local timeleft = C_TaskQuest.GetQuestTimeLeftMinutes(BountyInfo.questID)
@@ -3127,7 +3132,7 @@ local function doExplicitReset(instancemsg, failed)
   local reportchan = addon:InGroup()
   if reportchan then
     if not failed then
-      SendAddonMessage(addonName, "GENERATION_ADVANCE", reportchan)
+      C_ChatInfo.SendAddonMessage(addonName, "GENERATION_ADVANCE", reportchan)
     end
     if vars.db.Tooltip.ReportResets then
       local msg = instancemsg or RESET_INSTANCES

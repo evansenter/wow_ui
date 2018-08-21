@@ -10,7 +10,7 @@ Postal3DB = {
 				"Cometstorm|Illidan|Horde|110|MAGE", -- [5]
 				"Comet|Illidan|Horde|110|MONK", -- [6]
 				"Ereinion|Dark Iron|Horde|81|WARLOCK", -- [7]
-				"Evan|Illidan|Horde|110|PRIEST", -- [8]
+				"Evan|Illidan|Horde|120|PRIEST", -- [8]
 				"Metal|Illidan|Horde|100|WARRIOR", -- [9]
 				"Natalan|Dark Iron|Horde|85|SHAMAN", -- [10]
 				"Natalan|Illidan|Horde|86|MAGE", -- [11]
@@ -26,8 +26,8 @@ Postal3DB = {
 		["Venala - Cho'gall"] = "Venala - Cho'gall",
 		["Cometron - Illidan"] = "Cometron - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
-		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
 		["Natal - Illidan"] = "Natal - Illidan",
+		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
 		["Natalan - Illidan"] = "Natalan - Illidan",
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Natalan - Dark Iron"] = "Natalan - Dark Iron",
@@ -61,14 +61,6 @@ Postal3DB = {
 				},
 			},
 		},
-		["Centromere - Dark Iron"] = {
-			["BlackBook"] = {
-				["recent"] = {
-					"Plane-Illidan|Dark Iron|Horde", -- [1]
-					"Comet-Illidan|Dark Iron|Horde", -- [2]
-				},
-			},
-		},
 		["Natal - Illidan"] = {
 			["BlackBook"] = {
 				["recent"] = {
@@ -83,6 +75,14 @@ Postal3DB = {
 					"Deadsolitary|Illidan|Horde", -- [9]
 					"Çahayla|Illidan|Horde", -- [10]
 					"Demiwrath|Illidan|Horde", -- [11]
+				},
+			},
+		},
+		["Centromere - Dark Iron"] = {
+			["BlackBook"] = {
+				["recent"] = {
+					"Plane-Illidan|Dark Iron|Horde", -- [1]
+					"Comet-Illidan|Dark Iron|Horde", -- [2]
 				},
 			},
 		},

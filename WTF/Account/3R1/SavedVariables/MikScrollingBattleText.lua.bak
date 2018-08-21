@@ -88,10 +88,10 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 				["INCOMING_DODGE"] = {
-					["fontSize"] = 26,
 					["colorR"] = 1,
-					["alwaysSticky"] = true,
+					["fontSize"] = 26,
 					["colorG"] = 1,
+					["alwaysSticky"] = true,
 				},
 				["PET_INCOMING_BLOCK"] = {
 					["disabled"] = true,
@@ -276,10 +276,10 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 				["INCOMING_PARRY"] = {
-					["fontSize"] = 26,
 					["colorR"] = 1,
-					["alwaysSticky"] = true,
+					["fontSize"] = 26,
 					["colorG"] = 1,
+					["alwaysSticky"] = true,
 				},
 			},
 			["enableBlizzardDamage"] = false,
@@ -308,6 +308,11 @@ MSBTProfiles_SavedVars = {
 		},
 		["Default"] = {
 			["scrollAreas"] = {
+				["Static"] = {
+					["offsetY"] = 120,
+					["direction"] = "Up",
+					["scrollHeight"] = 100,
+				},
 				["Incoming"] = {
 					["stickyDirection"] = "Up",
 					["direction"] = "Up",
@@ -316,19 +321,14 @@ MSBTProfiles_SavedVars = {
 					["animationStyle"] = "Straight",
 					["stickyBehavior"] = "Normal",
 				},
-				["Notification"] = {
-					["offsetY"] = 250,
-				},
 				["Outgoing"] = {
 					["behavior"] = "MSBT_NORMAL",
 					["direction"] = "Up",
 					["offsetX"] = 250,
 					["animationStyle"] = "Straight",
 				},
-				["Static"] = {
-					["offsetY"] = 120,
-					["direction"] = "Up",
-					["scrollHeight"] = 100,
+				["Notification"] = {
+					["offsetY"] = 250,
 				},
 			},
 			["critFontName"] = "ABF",
@@ -642,10 +642,10 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 				["INCOMING_DODGE"] = {
-					["colorG"] = 1,
-					["fontSize"] = 26,
 					["alwaysSticky"] = true,
 					["colorR"] = 1,
+					["colorG"] = 1,
+					["fontSize"] = 26,
 				},
 				["PET_INCOMING_BLOCK"] = {
 					["disabled"] = true,
@@ -830,10 +830,10 @@ MSBTProfiles_SavedVars = {
 					["disabled"] = true,
 				},
 				["INCOMING_PARRY"] = {
-					["colorG"] = 1,
-					["fontSize"] = 26,
 					["alwaysSticky"] = true,
 					["colorR"] = 1,
+					["colorG"] = 1,
+					["fontSize"] = 26,
 				},
 			},
 			["enableBlizzardHealing"] = false,

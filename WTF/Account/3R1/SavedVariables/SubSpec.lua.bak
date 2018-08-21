@@ -266,9 +266,9 @@ SubSpecStorage = {
 					["column"] = 2,
 				}, -- [3]
 				{
-					["id"] = 23137,
-					["name"] = "Last Word",
-					["column"] = 1,
+					["id"] = 21752,
+					["name"] = "Psychic Horror",
+					["column"] = 3,
 				}, -- [4]
 				{
 					["id"] = 21755,
@@ -281,9 +281,9 @@ SubSpecStorage = {
 					["column"] = 2,
 				}, -- [6]
 				{
-					["id"] = 21637,
-					["name"] = "Legacy of the Void",
-					["column"] = 1,
+					["id"] = 21978,
+					["name"] = "Dark Ascension",
+					["column"] = 2,
 				}, -- [7]
 			},
 		}, -- [2]

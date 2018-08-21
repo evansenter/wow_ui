@@ -149,7 +149,7 @@ DeathNote: enabled
 epgp: disabled
 epgp_lootmaster: disabled
 epgp_lootmaster_ml: disabled
-ErrorFilter: enabled
+ErrorFilter: disabled
 GarrisonMissionManager: disabled
 GTFO: enabled
 HandyNotes: enabled
@@ -216,9 +216,9 @@ MacroToolkitIcons: enabled
 Atlas: disabled
 Atlas_Legion: disabled
 HandyNotes_LegionTreasures: enabled
-WorldQuestTracker: disabled
+WorldQuestTracker: enabled
 DBM-TrialofValor: enabled
-RCLootCouncil: enabled
+RCLootCouncil: disabled
 AdiBags: enabled
 AdiBags_Config: enabled
 AdvancedInterfaceOptions: disabled
@@ -232,7 +232,7 @@ PremadeGroupsFilter: enabled
 Simulationcraft: disabled
 SubSpec: enabled
 Telemancy: disabled
-WorldQuestGroupFinder: disabled
+WorldQuestGroupFinder: enabled
 DBM-AntorusBurningThrone: enabled
 DBM-Argus: enabled
 DBM-TombofSargeras: enabled
@@ -307,3 +307,4 @@ DBM-Uldir: enabled
 HereBeDragons: enabled
 LibUIDropDownMenu: enabled
 LibRangeCheck-2.0: enabled
+Azeroth Auto Pilot: disabled
