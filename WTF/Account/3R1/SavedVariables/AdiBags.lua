@@ -28,7 +28,11 @@ AdiBagsDB = {
 		},
 		["AdiBags_TooltipInfo"] = {
 		},
-		["MoneyFrame"] = {
+		["Equipment"] = {
+		},
+		["DataSource"] = {
+		},
+		["ItemSets"] = {
 		},
 		["CurrencyFrame"] = {
 			["profiles"] = {
@@ -41,20 +45,20 @@ AdiBagsDB = {
 						["Curious Coin"] = false,
 						["Warforged Seal"] = false,
 						["Timewarped Badge"] = false,
-						["Mogu Rune of Fate"] = false,
+						["Tol Barad Commendation"] = false,
 						["Mote of Darkness"] = false,
-						["Oil"] = false,
-						["Garrison Resources"] = false,
+						["Ironpaw Token"] = false,
+						["Seal of Tempered Fate"] = false,
 						["Sightless Eye"] = false,
 						["Timeless Coin"] = false,
 						["Essence of Corrupted Deathwing"] = false,
 						["Apexis Crystal"] = false,
-						["Seal of Inevitable Fate"] = false,
 						["Lesser Charm of Good Fortune"] = false,
-						["Seal of Tempered Fate"] = false,
-						["Ironpaw Token"] = false,
+						["Seal of Inevitable Fate"] = false,
+						["Garrison Resources"] = false,
+						["Oil"] = false,
 						["Lingering Soul Fragment"] = false,
-						["Tol Barad Commendation"] = false,
+						["Mogu Rune of Fate"] = false,
 					},
 					["text"] = {
 						["name"] = "ABF",
@@ -63,22 +67,18 @@ AdiBagsDB = {
 				},
 			},
 		},
-		["DataSource"] = {
-		},
-		["ItemSets"] = {
-		},
 		["Junk"] = {
 		},
-		["Equipment"] = {
+		["MoneyFrame"] = {
 		},
 	},
 	["profileKeys"] = {
 		["Cometstorm - Illidan"] = "Comet - Illidan",
 		["Ereinion - Dark Iron"] = "Default",
 		["Comet - Illidan"] = "Comet - Illidan",
-		["Plane - Illidan"] = "Default",
-		["Evan - Illidan"] = "Comet - Illidan",
 		["Combustion - Illidan"] = "Comet - Illidan",
+		["Evan - Illidan"] = "Comet - Illidan",
+		["Plane - Illidan"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

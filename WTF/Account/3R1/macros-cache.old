@@ -1,6 +1,6 @@
 VER 3 000000000000006E "AAP_MACRO" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/use Ticker's Rocket Launcher
+/use Goblin-Engineered Hand Cannon
 END
 VER 3 0000000000000031 "Belt" "INV_MISC_QUESTIONMARK"
 /use 6

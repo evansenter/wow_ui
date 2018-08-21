@@ -85,7 +85,7 @@ VER 3 0000000000000060 "Pain Sup" "INV_Misc_QuestionMark"
 END
 VER 3 0000000000000068 "Penance Friendly" "135930"
 #showtooltip
-/use [target=mouseover,help,nodead][]Penance
+/use [@mouseover,help,nodead][]Penance
 END
 VER 3 000000000000004F "PoM" "INV_Misc_QuestionMark"
 #showtooltip
@@ -139,7 +139,7 @@ VER 3 0000000000000053 "SotW" "INV_Misc_QuestionMark"
 END
 VER 3 000000000000005A "SW:P" "INV_Misc_QuestionMark"
 #showtooltip
-/use [harm][@mouseovertarget,harm][]Shadow Word: Pain
+/use [@mouseover,harm][harm][@mouseovertarget,harm][]Shadow Word: Pain
 END
 VER 3 000000000000006B "SW:P Shadow" "INV_Misc_QuestionMark"
 #showtooltip
