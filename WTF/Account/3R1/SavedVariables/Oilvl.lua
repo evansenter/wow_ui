@@ -680,28 +680,15 @@ Oilvl_Settings = {
 			}, -- [4]
 		}, -- [4]
 	},
-	["oilvlaltclickroll"] = true,
+	["oilvlminimapicon"] = false,
 	["raidmenuid"] = 1,
-	["oilvltn"] = false,
-	["frame"] = {
-		[0] = nil --[[ skipped userdata ]],
-		["cancel"] = nil --[[ skipped inline function ]],
-		["name"] = "O Item Level (OiLvL)",
-		["CheckButton"] = {
-			[0] = nil --[[ skipped userdata ]],
-			["Text"] = {
-				[0] = nil --[[ skipped userdata ]],
-			},
-		},
-		["refresh"] = nil --[[ skipped inline function ]],
-		["okay"] = nil --[[ skipped inline function ]],
-		["default"] = nil --[[ skipped inline function ]],
-	},
+	["oilvlcolormatchitemrarity"] = true,
+	["oilvlrpdetails"] = true,
 	["oilvlcache"] = {
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Evan",
-			["otime"] = 1535240477,
+			["otime"] = 1535240855,
 			["oclass"] = "|cFFFFFFFFPriest",
 			["oilvl"] = 329.8,
 			["ogear"] = {
@@ -871,9 +858,6 @@ Oilvl_Settings = {
 		{
 			["orealm"] = "Ner'zhul",
 			["oname"] = "Twistedspawn",
-			["otime"] = 1535240276,
-			["oclass"] = "|cFF9482C9Warlock",
-			["oilvl"] = 340.8,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -1037,13 +1021,13 @@ Oilvl_Settings = {
 					163966, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFF9482C9Warlock",
+			["oilvl"] = 340.8,
+			["otime"] = 1535240276,
 		}, -- [2]
 		{
 			["orealm"] = "Mal'Ganis",
 			["oname"] = "Ruhdemption",
-			["otime"] = 1535240270,
-			["oclass"] = "|cFFFFFFFFPriest",
-			["oilvl"] = 343.1,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -1207,13 +1191,13 @@ Oilvl_Settings = {
 					159129, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFFFFFFFPriest",
+			["oilvl"] = 343.1,
+			["otime"] = 1535240270,
 		}, -- [3]
 		{
 			["orealm"] = "Draka",
 			["oname"] = "Elitedk",
-			["otime"] = 1535240246,
-			["oclass"] = "|cFFC41F3BDeath Knight",
-			["oilvl"] = 325.4,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -1377,13 +1361,13 @@ Oilvl_Settings = {
 					160950, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFC41F3BDeath Knight",
+			["oilvl"] = 325.4,
+			["otime"] = 1535240246,
 		}, -- [4]
 		{
 			["orealm"] = "Tichondrius",
 			["oname"] = "Hoiss",
-			["otime"] = 1535240235,
-			["oclass"] = "|cFF69CCF0Mage",
-			["oilvl"] = 345.4,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -1547,13 +1531,13 @@ Oilvl_Settings = {
 					159669, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFF69CCF0Mage",
+			["oilvl"] = 345.4,
+			["otime"] = 1535240235,
 		}, -- [5]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Madgamer",
-			["otime"] = 1535240093,
-			["oclass"] = "|cFFC41F3BDeath Knight",
-			["oilvl"] = 345.1,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -1717,13 +1701,13 @@ Oilvl_Settings = {
 					163955, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFC41F3BDeath Knight",
+			["oilvl"] = 345.1,
+			["otime"] = 1535240093,
 		}, -- [6]
 		{
 			["orealm"] = "Kargath",
 			["oname"] = "Mortuus",
-			["otime"] = 1535239990,
-			["oclass"] = "|cFF69CCF0Mage",
-			["oilvl"] = 289.9,
 			["ogear"] = {
 				{
 					300, -- [1]
@@ -1887,13 +1871,13 @@ Oilvl_Settings = {
 					158972, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFF69CCF0Mage",
+			["oilvl"] = 289.9,
+			["otime"] = 1535239990,
 		}, -- [7]
 		{
 			["orealm"] = "Firetree",
 			["oname"] = "Eruedraith",
-			["otime"] = 1535239781,
-			["oclass"] = "|cFFFFF569Rogue",
-			["oilvl"] = 340.6,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -2057,13 +2041,13 @@ Oilvl_Settings = {
 					159659, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFFFF569Rogue",
+			["oilvl"] = 340.6,
+			["otime"] = 1535239781,
 		}, -- [8]
 		{
 			["orealm"] = "Area52",
 			["oname"] = "Afrifoonk",
-			["otime"] = 1535239756,
-			["oclass"] = "|cFFABD473Hunter",
-			["oilvl"] = 346.4,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -2227,10 +2211,16 @@ Oilvl_Settings = {
 					163969, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFABD473Hunter",
+			["oilvl"] = 346.4,
+			["otime"] = 1535239756,
 		}, -- [9]
 		{
 			["orealm"] = "Barthilas",
 			["oname"] = "Gigamonka",
+			["otime"] = 1535161242,
+			["oclass"] = "|cFF69CCF0Mage",
+			["oilvl"] = 320.3,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -2394,13 +2384,13 @@ Oilvl_Settings = {
 					153640, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFF69CCF0Mage",
-			["oilvl"] = 320.3,
-			["otime"] = 1535161242,
 		}, -- [10]
 		{
 			["orealm"] = "Kil'jaeden",
 			["oname"] = "Jamalx",
+			["otime"] = 1535161238,
+			["oclass"] = "|cFFFFFFFFPriest",
+			["oilvl"] = 335.6,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -2564,13 +2554,13 @@ Oilvl_Settings = {
 					159668, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFFFFFFFPriest",
-			["oilvl"] = 335.6,
-			["otime"] = 1535161238,
 		}, -- [11]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Redexx",
+			["otime"] = 1535157422,
+			["oclass"] = "|cFF0070DEShaman",
+			["oilvl"] = 323.2,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -2734,13 +2724,13 @@ Oilvl_Settings = {
 					155425, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFF0070DEShaman",
-			["oilvl"] = 323.2,
-			["otime"] = 1535157422,
 		}, -- [12]
 		{
 			["orealm"] = "Balnazzar",
 			["oname"] = "Joshua",
+			["otime"] = 1535157373,
+			["oclass"] = "|cFFF58CBAPaladin",
+			["oilvl"] = 324.8,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -2904,13 +2894,13 @@ Oilvl_Settings = {
 					159851, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFF58CBAPaladin",
-			["oilvl"] = 324.8,
-			["otime"] = 1535157373,
 		}, -- [13]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Lifetäker",
+			["otime"] = 1535157303,
+			["oclass"] = "|cFF9482C9Warlock",
+			["oilvl"] = 322.1,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -3074,13 +3064,13 @@ Oilvl_Settings = {
 					158667, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFF9482C9Warlock",
-			["oilvl"] = 322.1,
-			["otime"] = 1535157303,
 		}, -- [14]
 		{
 			["orealm"] = "",
 			["oname"] = "Ishaar",
+			["otime"] = 1535156125,
+			["oclass"] = "|cFF69CCF0Mage",
+			["oilvl"] = 324.9,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -3244,16 +3234,10 @@ Oilvl_Settings = {
 					159668, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFF69CCF0Mage",
-			["oilvl"] = 324.9,
-			["otime"] = 1535156125,
 		}, -- [15]
 		{
 			["orealm"] = "EmeraldDream",
 			["oname"] = "Vanghøul",
-			["otime"] = 1535080201,
-			["oclass"] = "|cFFC41F3BDeath Knight",
-			["oilvl"] = 341.5,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -3417,13 +3401,13 @@ Oilvl_Settings = {
 					159634, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFC41F3BDeath Knight",
+			["oilvl"] = 341.5,
+			["otime"] = 1535080201,
 		}, -- [16]
 		{
 			["orealm"] = "EmeraldDream",
 			["oname"] = "Whackers",
-			["otime"] = 1535080146,
-			["oclass"] = "|cFFFF7D0ADruid",
-			["oilvl"] = 342,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -3587,13 +3571,13 @@ Oilvl_Settings = {
 					158322, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFFF7D0ADruid",
+			["oilvl"] = 342,
+			["otime"] = 1535080146,
 		}, -- [17]
 		{
 			["orealm"] = "EmeraldDream",
 			["oname"] = "Jothor",
-			["otime"] = 1535080141,
-			["oclass"] = "|cFFF58CBAPaladin",
-			["oilvl"] = 337.3,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -3757,13 +3741,13 @@ Oilvl_Settings = {
 					160950, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFF58CBAPaladin",
+			["oilvl"] = 337.3,
+			["otime"] = 1535080141,
 		}, -- [18]
 		{
 			["orealm"] = "Stormreaver",
 			["oname"] = "Hydramatic",
-			["otime"] = 1535080107,
-			["oclass"] = "|cFFABD473Hunter",
-			["oilvl"] = 343.4,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -3927,13 +3911,13 @@ Oilvl_Settings = {
 					159655, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFABD473Hunter",
+			["oilvl"] = 343.4,
+			["otime"] = 1535080107,
 		}, -- [19]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Fatherk",
-			["otime"] = 1535078750,
-			["oclass"] = "|cFFFFF569Rogue",
-			["oilvl"] = 341.4,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -4097,13 +4081,13 @@ Oilvl_Settings = {
 					158108, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFFFF569Rogue",
+			["oilvl"] = 341.4,
+			["otime"] = 1535078750,
 		}, -- [20]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Rabbids",
-			["otime"] = 1535078706,
-			["oclass"] = "|cFFC41F3BDeath Knight",
-			["oilvl"] = 344.4,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -4267,13 +4251,13 @@ Oilvl_Settings = {
 					158373, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFC41F3BDeath Knight",
+			["oilvl"] = 344.4,
+			["otime"] = 1535078706,
 		}, -- [21]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Ashox",
-			["otime"] = 1535078697,
-			["oclass"] = "|cFFFF7D0ADruid",
-			["oilvl"] = 332.6,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -4437,13 +4421,13 @@ Oilvl_Settings = {
 					159129, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFFF7D0ADruid",
+			["oilvl"] = 332.6,
+			["otime"] = 1535078697,
 		}, -- [22]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Mslittlecola",
-			["otime"] = 1535078690,
-			["oclass"] = "|cFFC41F3BDeath Knight",
-			["oilvl"] = 340.1,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -4607,13 +4591,13 @@ Oilvl_Settings = {
 					159654, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFC41F3BDeath Knight",
+			["oilvl"] = 340.1,
+			["otime"] = 1535078690,
 		}, -- [23]
 		{
 			["orealm"] = "Ursin",
 			["oname"] = "Sytilac",
-			["otime"] = 1535076900,
-			["oclass"] = "|cFFABD473Hunter",
-			["oilvl"] = 336.7,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -4777,13 +4761,13 @@ Oilvl_Settings = {
 					163969, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFABD473Hunter",
+			["oilvl"] = 336.7,
+			["otime"] = 1535076900,
 		}, -- [24]
 		{
 			["orealm"] = "Ursin",
 			["oname"] = "Halissa",
-			["otime"] = 1535076846,
-			["oclass"] = "|cFFABD473Hunter",
-			["oilvl"] = 315.3,
 			["ogear"] = {
 				{
 					310, -- [1]
@@ -4947,13 +4931,13 @@ Oilvl_Settings = {
 					159114, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFABD473Hunter",
+			["oilvl"] = 315.3,
+			["otime"] = 1535076846,
 		}, -- [25]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Osamma",
-			["otime"] = 1535076840,
-			["oclass"] = "|cFFC79C6EWarrior",
-			["oilvl"] = 310.1,
 			["ogear"] = {
 				{
 					310, -- [1]
@@ -5117,13 +5101,13 @@ Oilvl_Settings = {
 					159086, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFC79C6EWarrior",
+			["oilvl"] = 310.1,
+			["otime"] = 1535076840,
 		}, -- [26]
 		{
 			["orealm"] = "Khaz'goroth",
 			["oname"] = "Katjia",
-			["otime"] = 1535076827,
-			["oclass"] = "|cFFFF7D0ADruid",
-			["oilvl"] = 343.4,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -5287,13 +5271,13 @@ Oilvl_Settings = {
 					158370, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFFF7D0ADruid",
+			["oilvl"] = 343.4,
+			["otime"] = 1535076827,
 		}, -- [27]
 		{
 			["orealm"] = "Ragnaros",
 			["oname"] = "Seele",
-			["otime"] = 1535076484,
-			["oclass"] = "|cFFC79C6EWarrior",
-			["oilvl"] = 330.9,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -5457,13 +5441,13 @@ Oilvl_Settings = {
 					160950, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFC79C6EWarrior",
+			["oilvl"] = 330.9,
+			["otime"] = 1535076484,
 		}, -- [28]
 		{
 			["orealm"] = "BleedingHollow",
 			["oname"] = "Cireese",
-			["otime"] = 1535075660,
-			["oclass"] = "|cFFFFFFFFPriest",
-			["oilvl"] = 299.4,
 			["ogear"] = {
 				{
 					285, -- [1]
@@ -5627,13 +5611,13 @@ Oilvl_Settings = {
 					155375, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFFFFFFFPriest",
+			["oilvl"] = 299.4,
+			["otime"] = 1535075660,
 		}, -- [29]
 		{
 			["orealm"] = "Kel'Thuzad",
 			["oname"] = "Hystis",
-			["otime"] = 1535075653,
-			["oclass"] = "|cFFC41F3BDeath Knight",
-			["oilvl"] = 204.4,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -5705,15 +5689,15 @@ Oilvl_Settings = {
 					0, -- [7]
 					158151, -- [8]
 				},
-				[15] = {
-					335, -- [1]
-					"|cffa335ee|Hitem:158159:0:153711:0:0:0:0:0:120:258:0:27:4:4803:4802:1527:4783:0:0:|h[Boralus Sailor's Cloak]|h|r", -- [2]
-					0, -- [3]
-					0, -- [4]
+				[9] = {
+					340, -- [1]
+					"|cffa335ee|Hitem:160212:0:0:0:0:0:0:0:120:258:0:23:3:4779:1512:4786:0:0:|h[Shadowshroud Vambraces]|h|r", -- [2]
+					1, -- [3]
+					1, -- [4]
 					1, -- [5]
 					1, -- [6]
 					0, -- [7]
-					158159, -- [8]
+					160212, -- [8]
 				},
 				[5] = {
 					325, -- [1]
@@ -5725,24 +5709,24 @@ Oilvl_Settings = {
 					0, -- [7]
 					157926, -- [8]
 				},
-				[9] = {
-					340, -- [1]
-					"|cffa335ee|Hitem:160212:0:0:0:0:0:0:0:120:258:0:23:3:4779:1512:4786:0:0:|h[Shadowshroud Vambraces]|h|r", -- [2]
-					1, -- [3]
-					1, -- [4]
+				[15] = {
+					335, -- [1]
+					"|cffa335ee|Hitem:158159:0:153711:0:0:0:0:0:120:258:0:27:4:4803:4802:1527:4783:0:0:|h[Boralus Sailor's Cloak]|h|r", -- [2]
+					0, -- [3]
+					0, -- [4]
 					1, -- [5]
 					1, -- [6]
 					0, -- [7]
-					160212, -- [8]
+					158159, -- [8]
 				},
 			},
+			["oclass"] = "|cFFC41F3BDeath Knight",
+			["oilvl"] = 204.4,
+			["otime"] = 1535075653,
 		}, -- [30]
 		{
 			["orealm"] = "TheVentureCo",
 			["oname"] = "Docroe",
-			["otime"] = 1535075561,
-			["oclass"] = "|cFFFF7D0ADruid",
-			["oilvl"] = 313.7,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -5906,10 +5890,16 @@ Oilvl_Settings = {
 					159118, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFFF7D0ADruid",
+			["oilvl"] = 313.7,
+			["otime"] = 1535075561,
 		}, -- [31]
 		{
 			["orealm"] = "Mal'Ganis",
 			["oname"] = "Taleron",
+			["otime"] = 1534997383,
+			["oclass"] = "|cFF69CCF0Mage",
+			["oilvl"] = 337,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -6073,13 +6063,13 @@ Oilvl_Settings = {
 					159129, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFF69CCF0Mage",
-			["oilvl"] = 337,
-			["otime"] = 1534997383,
 		}, -- [32]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Dërail",
+			["otime"] = 1534994591,
+			["oclass"] = "|cFF00FF96Monk",
+			["oilvl"] = 328.9,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -6243,13 +6233,13 @@ Oilvl_Settings = {
 					155344, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFF00FF96Monk",
-			["oilvl"] = 328.9,
-			["otime"] = 1534994591,
 		}, -- [33]
 		{
 			["orealm"] = "BurningLegion",
 			["oname"] = "Zâvon",
+			["otime"] = 1534994567,
+			["oclass"] = "|cFFFFF569Rogue",
+			["oilvl"] = 331.4,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -6413,13 +6403,13 @@ Oilvl_Settings = {
 					160033, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFFFF569Rogue",
-			["oilvl"] = 331.4,
-			["otime"] = 1534994567,
 		}, -- [34]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Ulrix",
+			["otime"] = 1534994559,
+			["oclass"] = "|cFFC79C6EWarrior",
+			["oilvl"] = 333.4,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -6583,13 +6573,13 @@ Oilvl_Settings = {
 					159664, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFC79C6EWarrior",
-			["oilvl"] = 333.4,
-			["otime"] = 1534994559,
 		}, -- [35]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Slâde",
+			["otime"] = 1534994512,
+			["oclass"] = "|cFFFFFFFFPriest",
+			["oilvl"] = 326.3,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -6753,13 +6743,13 @@ Oilvl_Settings = {
 					159129, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFFFFFFFPriest",
-			["oilvl"] = 326.3,
-			["otime"] = 1534994512,
 		}, -- [36]
 		{
 			["orealm"] = "",
 			["oname"] = "Ulrix",
+			["otime"] = 1534994405,
+			["oclass"] = "|cFFC79C6EWarrior",
+			["oilvl"] = 292.5,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -6905,13 +6895,13 @@ Oilvl_Settings = {
 					159664, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFC79C6EWarrior",
-			["oilvl"] = 292.5,
-			["otime"] = 1534994405,
 		}, -- [37]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Thelindra",
+			["otime"] = 1534993370,
+			["oclass"] = "|cFFA330C9Demon Hunter",
+			["oilvl"] = 332.7,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -7075,13 +7065,13 @@ Oilvl_Settings = {
 					160980, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFA330C9Demon Hunter",
-			["oilvl"] = 332.7,
-			["otime"] = 1534993370,
 		}, -- [38]
 		{
 			["orealm"] = "Tichondrius",
 			["oname"] = "Elysius",
+			["otime"] = 1534993326,
+			["oclass"] = "|cFFFF7D0ADruid",
+			["oilvl"] = 335.5,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -7245,13 +7235,13 @@ Oilvl_Settings = {
 					159655, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFFF7D0ADruid",
-			["oilvl"] = 335.5,
-			["otime"] = 1534993326,
 		}, -- [39]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Drkillgrave",
+			["otime"] = 1534993262,
+			["oclass"] = "|cFFA330C9Demon Hunter",
+			["oilvl"] = 319.8,
 			["ogear"] = {
 				{
 					300, -- [1]
@@ -7415,13 +7405,13 @@ Oilvl_Settings = {
 					160028, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFA330C9Demon Hunter",
-			["oilvl"] = 319.8,
-			["otime"] = 1534993262,
 		}, -- [40]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Sureno",
+			["otime"] = 1534993224,
+			["oclass"] = "|cFFF58CBAPaladin",
+			["oilvl"] = 340.9,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -7585,13 +7575,13 @@ Oilvl_Settings = {
 					163967, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFF58CBAPaladin",
-			["oilvl"] = 340.9,
-			["otime"] = 1534993224,
 		}, -- [41]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Vguardians",
+			["otime"] = 1534993030,
+			["oclass"] = "|cFF9482C9Warlock",
+			["oilvl"] = 339.2,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -7755,13 +7745,13 @@ Oilvl_Settings = {
 					159668, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFF9482C9Warlock",
-			["oilvl"] = 339.2,
-			["otime"] = 1534993030,
 		}, -- [42]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Skímásk",
+			["otime"] = 1534991277,
+			["oclass"] = "|cFFFFF569Rogue",
+			["oilvl"] = 317.3,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -7925,13 +7915,13 @@ Oilvl_Settings = {
 					158323, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFFFF569Rogue",
-			["oilvl"] = 317.3,
-			["otime"] = 1534991277,
 		}, -- [43]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Silentmonk",
+			["otime"] = 1534991187,
+			["oclass"] = "|cFF00FF96Monk",
+			["oilvl"] = 316.9,
 			["ogear"] = {
 				{
 					310, -- [1]
@@ -8095,13 +8085,13 @@ Oilvl_Settings = {
 					154162, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFF00FF96Monk",
-			["oilvl"] = 316.9,
-			["otime"] = 1534991187,
 		}, -- [44]
 		{
 			["orealm"] = "Zuluhed",
 			["oname"] = "Omèga",
+			["otime"] = 1534991077,
+			["oclass"] = "|cFFF58CBAPaladin",
+			["oilvl"] = 316.8,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -8265,13 +8255,13 @@ Oilvl_Settings = {
 					161167, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFF58CBAPaladin",
-			["oilvl"] = 316.8,
-			["otime"] = 1534991077,
 		}, -- [45]
 		{
 			["orealm"] = "",
 			["oname"] = "Drkillgrave",
+			["otime"] = 1534990847,
+			["oclass"] = "|cFFA330C9Demon Hunter",
+			["oilvl"] = 242.1,
 			["ogear"] = {
 				{
 					300, -- [1]
@@ -8397,13 +8387,13 @@ Oilvl_Settings = {
 					159289, -- [8]
 				}, -- [15]
 			},
-			["oclass"] = "|cFFA330C9Demon Hunter",
-			["oilvl"] = 242.1,
-			["otime"] = 1534990847,
 		}, -- [46]
 		{
 			["orealm"] = "Ragnaros",
 			["oname"] = "Dardz",
+			["otime"] = 1534989933,
+			["oclass"] = "|cFFFF7D0ADruid",
+			["oilvl"] = 309.7,
 			["ogear"] = {
 				{
 					310, -- [1]
@@ -8567,13 +8557,13 @@ Oilvl_Settings = {
 					160032, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFFF7D0ADruid",
-			["oilvl"] = 309.7,
-			["otime"] = 1534989933,
 		}, -- [47]
 		{
 			["orealm"] = "Tichondrius",
 			["oname"] = "Whazowski",
+			["otime"] = 1534989924,
+			["oclass"] = "|cFF9482C9Warlock",
+			["oilvl"] = 294.9,
 			["ogear"] = {
 				{
 					300, -- [1]
@@ -8737,13 +8727,13 @@ Oilvl_Settings = {
 					158667, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFF9482C9Warlock",
-			["oilvl"] = 294.9,
-			["otime"] = 1534989924,
 		}, -- [48]
 		{
 			["orealm"] = "Proudmoore",
 			["oname"] = "Bbvademon",
+			["otime"] = 1534989922,
+			["oclass"] = "|cFFA330C9Demon Hunter",
+			["oilvl"] = 172.3,
 			["ogear"] = {
 				{
 					310, -- [1]
@@ -8836,13 +8826,13 @@ Oilvl_Settings = {
 					157885, -- [8]
 				},
 			},
-			["oclass"] = "|cFFA330C9Demon Hunter",
-			["oilvl"] = 172.3,
-			["otime"] = 1534989922,
 		}, -- [49]
 		{
 			["orealm"] = "Ragnaros",
 			["oname"] = "Chíllz",
+			["otime"] = 1534989761,
+			["oclass"] = "|cFF69CCF0Mage",
+			["oilvl"] = 339.4,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -9006,13 +8996,13 @@ Oilvl_Settings = {
 					159129, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFF69CCF0Mage",
-			["oilvl"] = 339.4,
-			["otime"] = 1534989761,
 		}, -- [50]
 		{
 			["orealm"] = "Draenor",
 			["oname"] = "Vacasagrada",
+			["otime"] = 1534989744,
+			["oclass"] = "|cFFF58CBAPaladin",
+			["oilvl"] = 308.7,
 			["ogear"] = {
 				{
 					310, -- [1]
@@ -9176,13 +9166,13 @@ Oilvl_Settings = {
 					160950, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFF58CBAPaladin",
-			["oilvl"] = 308.7,
-			["otime"] = 1534989744,
 		}, -- [51]
 		{
 			["orealm"] = "Hyjal",
 			["oname"] = "Bubbléoseven",
+			["otime"] = 1534989656,
+			["oclass"] = "|cFFF58CBAPaladin",
+			["oilvl"] = 315.3,
 			["ogear"] = {
 				{
 					300, -- [1]
@@ -9346,13 +9336,13 @@ Oilvl_Settings = {
 					160950, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFF58CBAPaladin",
-			["oilvl"] = 315.3,
-			["otime"] = 1534989656,
 		}, -- [52]
 		{
 			["orealm"] = "Turalyon",
 			["oname"] = "Akalic",
+			["otime"] = 1534989635,
+			["oclass"] = "|cFFF58CBAPaladin",
+			["oilvl"] = 337,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -9516,13 +9506,13 @@ Oilvl_Settings = {
 					160950, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFF58CBAPaladin",
-			["oilvl"] = 337,
-			["otime"] = 1534989635,
 		}, -- [53]
 		{
 			["orealm"] = "Ragnaros",
 			["oname"] = "Nãnõ",
+			["otime"] = 1534989575,
+			["oclass"] = "|cFF0070DEShaman",
+			["oilvl"] = 337.4,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -9686,16 +9676,10 @@ Oilvl_Settings = {
 					159661, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFF0070DEShaman",
-			["oilvl"] = 337.4,
-			["otime"] = 1534989575,
 		}, -- [54]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Davec",
-			["otime"] = 1534989211,
-			["oclass"] = "|cFFFFFFFFPriest",
-			["oilvl"] = 334.9,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -9859,13 +9843,13 @@ Oilvl_Settings = {
 					158371, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFFFFFFFPriest",
+			["oilvl"] = 334.9,
+			["otime"] = 1534989211,
 		}, -- [55]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Bucknakedd",
-			["otime"] = 1534989204,
-			["oclass"] = "|cFFFF7D0ADruid",
-			["oilvl"] = 323.9,
 			["ogear"] = {
 				{
 					310, -- [1]
@@ -10029,13 +10013,13 @@ Oilvl_Settings = {
 					158371, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFFF7D0ADruid",
+			["oilvl"] = 323.9,
+			["otime"] = 1534989204,
 		}, -- [56]
 		{
 			["orealm"] = "",
 			["oname"] = "Davec",
-			["otime"] = 1534989120,
-			["oclass"] = "|cFFFFFFFFPriest",
-			["oilvl"] = 271.8,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -10171,13 +10155,13 @@ Oilvl_Settings = {
 					158371, -- [8]
 				},
 			},
+			["oclass"] = "|cFFFFFFFFPriest",
+			["oilvl"] = 271.8,
+			["otime"] = 1534989120,
 		}, -- [57]
 		{
 			["orealm"] = "BleedingHollow",
 			["oname"] = "Spreadinedge",
-			["otime"] = 1534988880,
-			["oclass"] = "|cFFC41F3BDeath Knight",
-			["oilvl"] = 344.5,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -10341,13 +10325,13 @@ Oilvl_Settings = {
 					158109, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFC41F3BDeath Knight",
+			["oilvl"] = 344.5,
+			["otime"] = 1534988880,
 		}, -- [58]
 		{
 			["orealm"] = "Azralon",
 			["oname"] = "Spankness",
-			["otime"] = 1534988838,
-			["oclass"] = "|cFFF58CBAPaladin",
-			["oilvl"] = 303.3,
 			["ogear"] = {
 				{
 					300, -- [1]
@@ -10511,13 +10495,13 @@ Oilvl_Settings = {
 					159086, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFF58CBAPaladin",
+			["oilvl"] = 303.3,
+			["otime"] = 1534988838,
 		}, -- [59]
 		{
 			["orealm"] = "KirinTor",
 			["oname"] = "Deathcong",
-			["otime"] = 1534988832,
-			["oclass"] = "|cFFF58CBAPaladin",
-			["oilvl"] = 342.9,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -10681,13 +10665,13 @@ Oilvl_Settings = {
 					159654, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFF58CBAPaladin",
+			["oilvl"] = 342.9,
+			["otime"] = 1534988832,
 		}, -- [60]
 		{
 			["orealm"] = "Arthas",
 			["oname"] = "Verypretty",
-			["otime"] = 1534988820,
-			["oclass"] = "|cFFFFFFFFPriest",
-			["oilvl"] = 343.4,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -10851,13 +10835,13 @@ Oilvl_Settings = {
 					159667, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFFFFFFFPriest",
+			["oilvl"] = 343.4,
+			["otime"] = 1534988820,
 		}, -- [61]
 		{
 			["orealm"] = "Quel'Thalas",
 			["oname"] = "Fordinr",
-			["otime"] = 1534907328,
-			["oclass"] = "|cFFF58CBAPaladin",
-			["oilvl"] = 314.9,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -11021,13 +11005,13 @@ Oilvl_Settings = {
 					159806, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFF58CBAPaladin",
+			["oilvl"] = 314.9,
+			["otime"] = 1534907328,
 		}, -- [62]
 		{
 			["orealm"] = "Durotan",
 			["oname"] = "Danifilth",
-			["otime"] = 1534906992,
-			["oclass"] = "|cFFFFF569Rogue",
-			["oilvl"] = 329.9,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -11191,13 +11175,13 @@ Oilvl_Settings = {
 					158108, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFFFF569Rogue",
+			["oilvl"] = 329.9,
+			["otime"] = 1534906992,
 		}, -- [63]
 		{
 			["orealm"] = "Ysera",
 			["oname"] = "Yazlok",
-			["otime"] = 1534906988,
-			["oclass"] = "|cFFFF7D0ADruid",
-			["oilvl"] = 308.7,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -11361,13 +11345,13 @@ Oilvl_Settings = {
 					159118, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFFF7D0ADruid",
+			["oilvl"] = 308.7,
+			["otime"] = 1534906988,
 		}, -- [64]
 		{
 			["orealm"] = "Ysera",
 			["oname"] = "Daedrian",
-			["otime"] = 1534906987,
-			["oclass"] = "|cFFF58CBAPaladin",
-			["oilvl"] = 310,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -11531,13 +11515,13 @@ Oilvl_Settings = {
 					159855, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFF58CBAPaladin",
+			["oilvl"] = 310,
+			["otime"] = 1534906987,
 		}, -- [65]
 		{
 			["orealm"] = "Ysera",
 			["oname"] = "Kayliria",
-			["otime"] = 1534906980,
-			["oclass"] = "|cFFA330C9Demon Hunter",
-			["oilvl"] = 314.9,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -11701,13 +11685,13 @@ Oilvl_Settings = {
 					159659, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFA330C9Demon Hunter",
+			["oilvl"] = 314.9,
+			["otime"] = 1534906980,
 		}, -- [66]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Frakencherry",
-			["otime"] = 1534905152,
-			["oclass"] = "|cFF9482C9Warlock",
-			["oilvl"] = 313.4,
 			["ogear"] = {
 				{
 					315, -- [1]
@@ -11871,13 +11855,13 @@ Oilvl_Settings = {
 					159118, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFF9482C9Warlock",
+			["oilvl"] = 313.4,
+			["otime"] = 1534905152,
 		}, -- [67]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Doublestuffd",
-			["otime"] = 1534904938,
-			["oclass"] = "|cFFC79C6EWarrior",
-			["oilvl"] = 330,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -12041,13 +12025,13 @@ Oilvl_Settings = {
 					159851, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFC79C6EWarrior",
+			["oilvl"] = 330,
+			["otime"] = 1534904938,
 		}, -- [68]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Younggreg",
-			["otime"] = 1534904904,
-			["oclass"] = "|cFFC41F3BDeath Knight",
-			["oilvl"] = 311.7,
 			["ogear"] = {
 				{
 					310, -- [1]
@@ -12211,13 +12195,13 @@ Oilvl_Settings = {
 					155444, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFC41F3BDeath Knight",
+			["oilvl"] = 311.7,
+			["otime"] = 1534904904,
 		}, -- [69]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Folsome",
-			["otime"] = 1534904807,
-			["oclass"] = "|cFFABD473Hunter",
-			["oilvl"] = 333,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -12381,13 +12365,13 @@ Oilvl_Settings = {
 					158112, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFABD473Hunter",
+			["oilvl"] = 333,
+			["otime"] = 1534904807,
 		}, -- [70]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Redmirage",
-			["otime"] = 1534904728,
-			["oclass"] = "|cFFFF7D0ADruid",
-			["oilvl"] = 314.1,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -12551,13 +12535,13 @@ Oilvl_Settings = {
 					159823, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFFF7D0ADruid",
+			["oilvl"] = 314.1,
+			["otime"] = 1534904728,
 		}, -- [71]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Sancre",
-			["otime"] = 1534902895,
-			["oclass"] = "|cFF69CCF0Mage",
-			["oilvl"] = 317.3,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -12721,13 +12705,13 @@ Oilvl_Settings = {
 					155302, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFF69CCF0Mage",
+			["oilvl"] = 317.3,
+			["otime"] = 1534902895,
 		}, -- [72]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Nobackissues",
-			["otime"] = 1534900992,
-			["oclass"] = "|cFFC79C6EWarrior",
-			["oilvl"] = 313.8,
 			["ogear"] = {
 				{
 					295, -- [1]
@@ -12891,13 +12875,13 @@ Oilvl_Settings = {
 					160950, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFC79C6EWarrior",
+			["oilvl"] = 313.8,
+			["otime"] = 1534900992,
 		}, -- [73]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Dèädpool",
-			["otime"] = 1534900970,
-			["oclass"] = "|cFF9482C9Warlock",
-			["oilvl"] = 314.5,
 			["ogear"] = {
 				{
 					310, -- [1]
@@ -13061,13 +13045,13 @@ Oilvl_Settings = {
 					153640, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFF9482C9Warlock",
+			["oilvl"] = 314.5,
+			["otime"] = 1534900970,
 		}, -- [74]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Nôòne",
-			["otime"] = 1534900965,
-			["oclass"] = "|cFFA330C9Demon Hunter",
-			["oilvl"] = 324.1,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -13231,13 +13215,13 @@ Oilvl_Settings = {
 					160110, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFA330C9Demon Hunter",
+			["oilvl"] = 324.1,
+			["otime"] = 1534900965,
 		}, -- [75]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Walgreens",
-			["otime"] = 1534900958,
-			["oclass"] = "|cFFFF7D0ADruid",
-			["oilvl"] = 315.6,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -13401,17 +13385,23 @@ Oilvl_Settings = {
 					158322, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFFF7D0ADruid",
+			["oilvl"] = 315.6,
+			["otime"] = 1534900958,
 		}, -- [76]
 		{
 			["orealm"] = "Thrall",
 			["oname"] = "Darkweaver",
-			["oclass"] = "|cFFA330C9Demon Hunter",
-			["oilvl"] = 339.3,
 			["otime"] = 1534835893,
+			["oilvl"] = 339.3,
+			["oclass"] = "|cFFA330C9Demon Hunter",
 		}, -- [77]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Smackemup",
+			["otime"] = 1534833853,
+			["oclass"] = "|cFFA330C9Demon Hunter",
+			["oilvl"] = 312.2,
 			["ogear"] = {
 				{
 					300, -- [1]
@@ -13575,13 +13565,13 @@ Oilvl_Settings = {
 					160449, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFA330C9Demon Hunter",
-			["oilvl"] = 312.2,
-			["otime"] = 1534833853,
 		}, -- [78]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Leviosuhdude",
+			["otime"] = 1534833482,
+			["oclass"] = "|cFFFFF569Rogue",
+			["oilvl"] = 314.6,
 			["ogear"] = {
 				{
 					315, -- [1]
@@ -13745,13 +13735,13 @@ Oilvl_Settings = {
 					159937, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFFFF569Rogue",
-			["oilvl"] = 314.6,
-			["otime"] = 1534833482,
 		}, -- [79]
 		{
 			["orealm"] = "Thrall",
 			["oname"] = "Hemptress",
+			["otime"] = 1534833452,
+			["oclass"] = "|cFFF58CBAPaladin",
+			["oilvl"] = 330.1,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -13915,13 +13905,13 @@ Oilvl_Settings = {
 					161167, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFF58CBAPaladin",
-			["oilvl"] = 330.1,
-			["otime"] = 1534833452,
 		}, -- [80]
 		{
 			["orealm"] = "Mal'Ganis",
 			["oname"] = "Scrtchypubes",
+			["otime"] = 1534833434,
+			["oclass"] = "|cFF69CCF0Mage",
+			["oilvl"] = 311.7,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -14085,13 +14075,13 @@ Oilvl_Settings = {
 					158322, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFF69CCF0Mage",
-			["oilvl"] = 311.7,
-			["otime"] = 1534833434,
 		}, -- [81]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Ptolemylol",
+			["otime"] = 1534833432,
+			["oclass"] = "|cFFFF7D0ADruid",
+			["oilvl"] = 317.1,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -14255,13 +14245,13 @@ Oilvl_Settings = {
 					159940, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFFF7D0ADruid",
-			["oilvl"] = 317.1,
-			["otime"] = 1534833432,
 		}, -- [82]
 		{
 			["orealm"] = "Arathor",
 			["oname"] = "Ruunicus",
+			["otime"] = 1534832213,
+			["oclass"] = "|cFFC41F3BDeath Knight",
+			["oilvl"] = 322.5,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -14425,13 +14415,13 @@ Oilvl_Settings = {
 					163965, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFC41F3BDeath Knight",
-			["oilvl"] = 322.5,
-			["otime"] = 1534832213,
 		}, -- [83]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Çhillidan",
+			["otime"] = 1534832174,
+			["oclass"] = "|cFF69CCF0Mage",
+			["oilvl"] = 337.4,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -14595,13 +14585,13 @@ Oilvl_Settings = {
 					159129, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFF69CCF0Mage",
-			["oilvl"] = 337.4,
-			["otime"] = 1534832174,
 		}, -- [84]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Sôrc",
+			["otime"] = 1534832145,
+			["oclass"] = "|cFF69CCF0Mage",
+			["oilvl"] = 338.3,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -14765,13 +14755,13 @@ Oilvl_Settings = {
 					158371, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFF69CCF0Mage",
-			["oilvl"] = 338.3,
-			["otime"] = 1534832145,
 		}, -- [85]
 		{
 			["orealm"] = "DemonSoul",
 			["oname"] = "Dragon",
+			["otime"] = 1534832069,
+			["oclass"] = "|cFFA330C9Demon Hunter",
+			["oilvl"] = 341.4,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -14935,13 +14925,13 @@ Oilvl_Settings = {
 					159659, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFA330C9Demon Hunter",
-			["oilvl"] = 341.4,
-			["otime"] = 1534832069,
 		}, -- [86]
 		{
 			["orealm"] = "Nemesis",
 			["oname"] = "Expoo",
+			["otime"] = 1534790458,
+			["oclass"] = "|cFFA330C9Demon Hunter",
+			["oilvl"] = 308,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -15105,13 +15095,13 @@ Oilvl_Settings = {
 					159105, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFA330C9Demon Hunter",
-			["oilvl"] = 308,
-			["otime"] = 1534790458,
 		}, -- [87]
 		{
 			["orealm"] = "Nemesis",
 			["oname"] = "Ødynn",
+			["otime"] = 1534790449,
+			["oclass"] = "|cFFC79C6EWarrior",
+			["oilvl"] = 313.4,
 			["ogear"] = {
 				{
 					310, -- [1]
@@ -15275,13 +15265,13 @@ Oilvl_Settings = {
 					160950, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFC79C6EWarrior",
-			["oilvl"] = 313.4,
-			["otime"] = 1534790449,
 		}, -- [88]
 		{
 			["orealm"] = "Nemesis",
 			["oname"] = "Wildhorse",
+			["otime"] = 1534790401,
+			["oclass"] = "|cFFC41F3BDeath Knight",
+			["oilvl"] = 307.3,
 			["ogear"] = {
 				{
 					295, -- [1]
@@ -15445,13 +15435,13 @@ Oilvl_Settings = {
 					159122, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFC41F3BDeath Knight",
-			["oilvl"] = 307.3,
-			["otime"] = 1534790401,
 		}, -- [89]
 		{
 			["orealm"] = "Nemesis",
 			["oname"] = "Eubolosefuma",
+			["otime"] = 1534790386,
+			["oclass"] = "|cFF00FF96Monk",
+			["oilvl"] = 316.3,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -15615,16 +15605,10 @@ Oilvl_Settings = {
 					159661, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFF00FF96Monk",
-			["oilvl"] = 316.3,
-			["otime"] = 1534790386,
 		}, -- [90]
 		{
 			["orealm"] = "Balnazzar",
 			["oname"] = "Amshadar",
-			["otime"] = 1534752117,
-			["oclass"] = "|cFFABD473Hunter",
-			["oilvl"] = 321,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -15788,13 +15772,13 @@ Oilvl_Settings = {
 					158112, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFABD473Hunter",
+			["oilvl"] = 321,
+			["otime"] = 1534752117,
 		}, -- [91]
 		{
 			["orealm"] = "Warsong",
 			["oname"] = "Zank",
-			["otime"] = 1534751948,
-			["oclass"] = "|cFF69CCF0Mage",
-			["oilvl"] = 313.3,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -15958,13 +15942,13 @@ Oilvl_Settings = {
 					159636, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFF69CCF0Mage",
+			["oilvl"] = 313.3,
+			["otime"] = 1534751948,
 		}, -- [92]
 		{
 			["orealm"] = "ArgentDawn",
 			["oname"] = "Truong",
-			["otime"] = 1534751898,
-			["oclass"] = "|cFFF58CBAPaladin",
-			["oilvl"] = 319.8,
 			["ogear"] = {
 				{
 					310, -- [1]
@@ -16128,13 +16112,13 @@ Oilvl_Settings = {
 					155374, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFFF58CBAPaladin",
+			["oilvl"] = 319.8,
+			["otime"] = 1534751898,
 		}, -- [93]
 		{
 			["orealm"] = "Quel'Thalas",
 			["oname"] = "Bromacia",
-			["otime"] = 1534751888,
-			["oclass"] = "|cFF00FF96Monk",
-			["oilvl"] = 313.1,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -16298,10 +16282,16 @@ Oilvl_Settings = {
 					159084, -- [8]
 				}, -- [17]
 			},
+			["oclass"] = "|cFF00FF96Monk",
+			["oilvl"] = 313.1,
+			["otime"] = 1534751888,
 		}, -- [94]
 		{
 			["orealm"] = "Barthilas",
 			["oname"] = "Æstormshadow",
+			["otime"] = 1534741900,
+			["oclass"] = "|cFFC41F3BDeath Knight",
+			["oilvl"] = 338.1,
 			["ogear"] = {
 				{
 					340, -- [1]
@@ -16465,13 +16455,13 @@ Oilvl_Settings = {
 					159654, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFC41F3BDeath Knight",
-			["oilvl"] = 338.1,
-			["otime"] = 1534741900,
 		}, -- [95]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Daylirn",
+			["otime"] = 1534741893,
+			["oclass"] = "|cFFFF7D0ADruid",
+			["oilvl"] = 312.5,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -16635,13 +16625,13 @@ Oilvl_Settings = {
 					159858, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFFF7D0ADruid",
-			["oilvl"] = 312.5,
-			["otime"] = 1534741893,
 		}, -- [96]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Përcy",
+			["otime"] = 1534741888,
+			["oclass"] = "|cFFF58CBAPaladin",
+			["oilvl"] = 308.8,
 			["ogear"] = {
 				{
 					325, -- [1]
@@ -16805,13 +16795,13 @@ Oilvl_Settings = {
 					155300, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFF58CBAPaladin",
-			["oilvl"] = 308.8,
-			["otime"] = 1534741888,
 		}, -- [97]
 		{
 			["orealm"] = "Saurfang",
 			["oname"] = "Visceralz",
+			["otime"] = 1534741879,
+			["oclass"] = "|cFFF58CBAPaladin",
+			["oilvl"] = 311.8,
 			["ogear"] = {
 				{
 					310, -- [1]
@@ -16975,13 +16965,13 @@ Oilvl_Settings = {
 					159855, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFF58CBAPaladin",
-			["oilvl"] = 311.8,
-			["otime"] = 1534741879,
 		}, -- [98]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Megotcucked",
+			["otime"] = 1534735214,
+			["oclass"] = "|cFF00FF96Monk",
+			["oilvl"] = 283.9,
 			["ogear"] = {
 				{
 					295, -- [1]
@@ -17145,13 +17135,13 @@ Oilvl_Settings = {
 					159084, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFF00FF96Monk",
-			["oilvl"] = 283.9,
-			["otime"] = 1534735214,
 		}, -- [99]
 		{
 			["orealm"] = "Illidan",
 			["oname"] = "Brún",
+			["otime"] = 1534735178,
+			["oclass"] = "|cFFFF7D0ADruid",
+			["oilvl"] = 306.8,
 			["ogear"] = {
 				{
 					310, -- [1]
@@ -17315,9 +17305,6 @@ Oilvl_Settings = {
 					160032, -- [8]
 				}, -- [17]
 			},
-			["oclass"] = "|cFFFF7D0ADruid",
-			["oilvl"] = 306.8,
-			["otime"] = 1534735178,
 		}, -- [100]
 	},
 	["oilvlframeP"] = "TOPLEFT",
@@ -17335,7 +17322,20 @@ Oilvl_Settings = {
 	["oilvltov"] = false,
 	["oilvlframeX"] = 22,
 	["oilvlun"] = true,
-	["oilvlrpdetails"] = true,
-	["oilvlcolormatchitemrarity"] = true,
-	["oilvlminimapicon"] = false,
+	["frame"] = {
+		[0] = nil --[[ skipped userdata ]],
+		["cancel"] = nil --[[ skipped inline function ]],
+		["name"] = "O Item Level (OiLvL)",
+		["CheckButton"] = {
+			[0] = nil --[[ skipped userdata ]],
+			["Text"] = {
+				[0] = nil --[[ skipped userdata ]],
+			},
+		},
+		["refresh"] = nil --[[ skipped inline function ]],
+		["okay"] = nil --[[ skipped inline function ]],
+		["default"] = nil --[[ skipped inline function ]],
+	},
+	["oilvltn"] = false,
+	["oilvlaltclickroll"] = true,
 }

@@ -1,4 +1,11 @@
 Version: 1
+Frame: ExtraActionBarFrame
+FrameLevel: 2
+Anchor: CENTER
+X: -435
+Y: -277
+W: 64
+H: 64
 Frame: ColorPickerFrame
 FrameLevel: 1
 Anchor: CENTER
@@ -7,13 +14,6 @@ Y: 0
 W: 365
 H: 240
 Frame: ZoneAbilityFrame
-FrameLevel: 2
-Anchor: CENTER
-X: -435
-Y: -277
-W: 64
-H: 64
-Frame: ExtraActionBarFrame
 FrameLevel: 2
 Anchor: CENTER
 X: -435

@@ -2819,9 +2819,9 @@ ElvCharacterDB = {
 		"/o Yeah I'll chat with them either later today or tomorrow, have to go to the grocery store right now.", -- [20]
 	},
 	["BodyGuard"] = {
-		["IsInValidZone"] = true,
-		["MaxHealth"] = 0,
-		["Health"] = 0,
 		["Active"] = false,
+		["Health"] = 0,
+		["MaxHealth"] = 0,
+		["IsInValidZone"] = true,
 	},
 }
