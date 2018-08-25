@@ -87,18 +87,19 @@ TwintopInsanityBarSettings = {
 		},
 	},
 	["voidEruptionThreshold"] = true,
+	["dataRefreshRate"] = 5,
 	["displayBar"] = {
 		["alwaysShow"] = false,
 		["notZeroShow"] = true,
 	},
-	["version"] = 1,
+	["showS2MSummary"] = true,
 	["showSummary"] = false,
-	["hasteApproachingThreshold"] = 135,
+	["version"] = 1,
 	["summary"] = {
 		["show"] = false,
 		["simple"] = false,
 	},
-	["showS2MSummary"] = true,
+	["hasteApproachingThreshold"] = 135,
 	["hastePrecision"] = 2,
 	["colors"] = {
 		["threshold"] = {

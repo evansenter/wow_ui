@@ -1,10 +1,12 @@
-lightweight tag 34da8ff7207cc8a2712d1fb4224d6153635dcc95 8.0.1.12-release
-Author:	David C. Uhrig <david@twintop-tahoe.com>
-Date:	Wed Aug 8 19:37:46 2018 -0700
+lightweight tag 1230ccaff23aef5efce74595eee4d80ae62de05b 8.0.1.13-release
+Author:	GitHub <noreply@github.com>
+Date:	Tue Aug 21 13:02:25 2018 -0700
 
-commit 34da8ff7207cc8a2712d1fb4224d6153635dcc95
+commit 1230ccaff23aef5efce74595eee4d80ae62de05b
 Author: David C. Uhrig <david@twintop-tahoe.com>
-Date:   Wed Aug 8 19:37:46 2018 -0700
+Date:   Tue Aug 21 13:02:25 2018 -0700
 
-    Remove debug printing.
+    Add files via upload
+    
+    Fix problem with bar not functioning properly when switching specs.
 

@@ -1,16 +1,16 @@
-lightweight tag 3790ff6c38da0683ce7c604c66c129106768d581 1.19
+lightweight tag f08c8e13105fe27f1a0f893ac3b3f090c3f5bdd7 1.20
 Author:	Bernhard Saumweber <b.saumweber@gmail.com>
-Date:	Sat Aug 11 22:42:36 2018 +0200
+Date:	Wed Aug 22 22:54:11 2018 +0200
 
-commit 3790ff6c38da0683ce7c604c66c129106768d581
+commit f08c8e13105fe27f1a0f893ac3b3f090c3f5bdd7
 Author: Bernhard Saumweber <b.saumweber@gmail.com>
-Date:   Sat Aug 11 22:42:36 2018 +0200
+Date:   Wed Aug 22 22:54:11 2018 +0200
 
-    Set version to 1.19
+    Fixed keywords kr, sob, tml, tosl, tur by adding missing activity IDs
 
-commit 0623eb4ab58a1142e0c012969b7c261ec502f316
+commit 2846e9a45be2c35959cf06667c847e9524e418cc
 Author: Bernhard Saumweber <b.saumweber@gmail.com>
-Date:   Sat Aug 11 22:42:08 2018 +0200
+Date:   Sat Aug 11 22:45:57 2018 +0200
 
-    Provide a better error message if there is still one of the keywords name, comment or findnumber present
+    Set version to next release version: 1.20
 

@@ -39,8 +39,12 @@ VER 3 0100000000000029 "Purify Disease" "INV_Misc_QuestionMark"
 /use [target=mouseover,help,nodead][]Purify Disease
 END
 VER 3 0100000000000023 "PW:R" "INV_Misc_QuestionMark"
-#showtooltip Power Word: Radiance
+#showtooltip
 /use [@mouseover,help,nodead][]Power Word: Radiance
+END
+VER 3 010000000000002B "PW:S" "INV_Misc_QuestionMark"
+#showtooltip
+/use [@mouseover,harm][harm][@mouseovertarget,harm][]Power Word: Solace
 END
 VER 3 0100000000000005 "PW:S" "INV_Misc_QuestionMark"
 #showtooltip
@@ -50,8 +54,12 @@ VER 3 0100000000000025 "Renew" "INV_Misc_QuestionMark"
 #showtooltip
 /use [target=mouseover,help,nodead][]Renew
 END
+VER 3 0100000000000020 "Shadow Covenant" "INV_Misc_QuestionMark"
+#showtooltip
+/use [@mouseover,help,nodead][]Shadow Covenant
+END
 VER 3 0100000000000021 "Shining Force" "571554"
-#showtooltip Shining Force
+#showtooltip
 /use [@mouseover,help,nodead]Shining Force
 END
 VER 3 0100000000000006 "Smite" "INV_MISC_QUESTIONMARK"
@@ -61,10 +69,4 @@ END
 VER 3 010000000000002A "Tier 6 Disc" "INV_Misc_QuestionMark"
 #showtooltip
 /cast [talent:6/1]Purge the Wicked;[talent:6/2]Divine Star;[talent:6/3]Halo
-END
-VER 3 0100000000000020 "Void Eruption" "INV_Misc_QuestionMark"
-#showtooltip Void Eruption
-/use 13
-/use 14
-/use Void Eruption
 END

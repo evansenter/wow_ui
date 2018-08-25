@@ -232,7 +232,7 @@ PremadeGroupsFilter: enabled
 Simulationcraft: disabled
 SubSpec: enabled
 Telemancy: disabled
-WorldQuestGroupFinder: enabled
+WorldQuestGroupFinder: disabled
 DBM-AntorusBurningThrone: enabled
 DBM-Argus: enabled
 DBM-TombofSargeras: enabled

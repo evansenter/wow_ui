@@ -10,6 +10,13 @@ MADB = {
 			["name"] = "default",
 			["frames"] = {
 				["ExtraActionBarFrame"] = {
+					["orgPos"] = {
+						"TOPLEFT", -- [1]
+						"BT4BarExtraActionBar", -- [2]
+						"TOPLEFT", -- [3]
+						0, -- [4]
+						0, -- [5]
+					},
 					["name"] = "ExtraActionBarFrame",
 					["pos"] = {
 						"TOPLEFT", -- [1]
@@ -20,6 +27,13 @@ MADB = {
 					},
 				},
 				["ZoneAbilityFrame"] = {
+					["orgPos"] = {
+						"TOPLEFT", -- [1]
+						"BT4BarZoneAbilityBar", -- [2]
+						"TOPLEFT", -- [3]
+						0, -- [4]
+						0, -- [5]
+					},
 					["name"] = "ZoneAbilityFrame",
 					["pos"] = {
 						"BOTTOM", -- [1]
@@ -32,8 +46,8 @@ MADB = {
 			},
 		},
 	},
-	["closeGUIOnEscape"] = false,
-	["playSound"] = false,
-	["noBags"] = false,
 	["frameListRows"] = 18,
+	["noBags"] = false,
+	["playSound"] = false,
+	["closeGUIOnEscape"] = false,
 }
