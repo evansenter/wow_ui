@@ -203,6 +203,82 @@ GTFO.SpellID["275243"] = {
   sound = 3;
 };
 
+GTFO.SpellID["271805"] = {
+  --desc = "Rez'okun's Rake (Captain Rez'okun)";
+  sound = 3;
+};
+
+GTFO.SpellID["259669"] = {
+  --desc = "Slowed by Snow";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["278177"] = {
+  --desc = "Trample (Evergrove Keeper)";
+  sound = 3;
+};
+
+GTFO.SpellID["257880"] = {
+  --desc = "Aquabomb (Deepsea Tidecrusher)";
+  sound = 3;
+};
+
+GTFO.SpellID["270814"] = {
+  --desc = "Hydro Eruption (Deepsea Tidecrusher)";
+  sound = 3;
+};
+
+GTFO.SpellID["265721"] = {
+  --desc = "Web Spray (Ironweb Weaver)";
+  sound = 3;
+  applicationOnly = true;
+};
+
+GTFO.SpellID["261735"] = {
+  --desc = "Scouring Sand (Ghost of the Deep)";
+  sound = 3;
+  applicationOnly = true;
+};
+
+GTFO.SpellID["274904"] = {
+  --desc = "Reality Tear (Warbringer Yenajz)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["277632"] = {
+  --desc = "Demolisher Cannon (Doom's Howl Turret)";
+  sound = 3;
+};
+
+GTFO.SpellID["271163"] = {
+  --desc = "Shattering Pulse (Doom's Howl)";
+  sound = 3;
+  tankSound = 0;
+};
+
+GTFO.SpellID["264687"] = {
+  --desc = "Unleashed Justice (Echo of Myzrael)";
+  sound = 3;
+};
+
+GTFO.SpellID["269794"] = {
+  --desc = "Throw Boulder (Fozruk)";
+  sound = 3;
+};
+
+GTFO.SpellID["278120"] = {
+  --desc = "Star Shower (Ragebeak)";
+  sound = 3;
+};
+
+GTFO.SpellID["269680"] = {
+  --desc = "Entanglement (Branchlord Aldrus)";
+  applicationOnly = true;
+  sound = 3;
+};
+
 
 -- ***********************
 -- * Shrine of the Storm *
@@ -283,7 +359,7 @@ GTFO.SpellID["264476"] = {
 GTFO.SpellID["271174"] = {
   --desc = "Retch (Pallid Gorger)";
   sound = 3;
-  test = true;
+  tankSound = 0;
 };
 
 GTFO.SpellID["264923"] = {
@@ -306,6 +382,12 @@ GTFO.SpellID["265372"] = {
   --desc = "Shadow Cleave (Enthralled Guard)";
   sound = 3;
   tankSound = 0;
+};
+
+GTFO.SpellID["265352"] = {
+  --desc = "Toad Blight (Blight Toad)";
+  applicationOnly = true;
+  sound = 3;
 };
 
 -- ************
@@ -393,7 +475,7 @@ GTFO.SpellID["257902"] = {
 GTFO.SpellID["257119"] = {
   --desc = "Sand Trap (The Sand Queen)";
   applicationOnly = true;
-  sound = 1;
+  sound = 3;
 };
 
 GTFO.SpellID["257785"] = {
@@ -426,6 +508,11 @@ GTFO.SpellID["258917"] = {
 GTFO.SpellID["259711"] = {
   --desc = "Lockdown (Ashvane Warden)";
   applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["258634"] = {
+  --desc = "Fuselighter (Ashvane Flamecaster)";
   sound = 3;
 };
 
@@ -484,6 +571,12 @@ GTFO.SpellID["273475"] = {
 -- * Temple of Sethraliss *
 -- ************************
 
+GTFO.SpellID["272657"] = {
+  --desc = "Noxious Breath (Scaled Krolusk Rider)";
+  sound = 3;
+  applicationOnly = true;
+};
+
 GTFO.SpellID["273225"] = {
   --desc = "Volley (Sandswept Marksman)";
   sound = 3;
@@ -513,6 +606,12 @@ GTFO.SpellID["264763"] = {
 GTFO.SpellID["272821"] = {
   --desc = "Call Lightning (Imbued Stormcaller)";
   sound = 3;
+};
+
+GTFO.SpellID["255741"] = {
+  --desc = "Cleave (Scaled Krolusk Rider)";
+  sound = 3;
+  tankSound = 0;
 };
 
 -- ********************
@@ -588,6 +687,12 @@ GTFO.SpellID["255371"] = {
   test = true; -- Bugged?
 };
 
+GTFO.SpellID["258986"] = {
+  --desc = "Stink Bomb (Shadowblade Razi)";
+  applicationOnly = true;
+  sound = 3;
+};
+
 -- ***************
 -- * King's Rest *
 -- ***************
@@ -602,13 +707,44 @@ GTFO.SpellID["255371"] = {
 -- * Siege of Boralus *
 -- ********************
 
--- TODO: Gore Crash (Chopper Redhook) -- Avoidable?  Different spell IDs for Knockback vs. non-knockback?
+GTFO.SpellID["256866"] = {
+  --desc = "Iron Ambush (Riptide Shredder)";
+  sound = 3;
+  applicationOnly = true;
+};
+
+GTFO.SpellID["272426"] = {
+  --desc = "Sighted Artillery";
+  sound = 3;
+};
+
+GTFO.SpellID["274942"] = {
+  --desc = "Banana Rampage";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["272713"] = {
+  --desc = "Crushing Slam (Bilge Rat Demolisher)";
+  sound = 3;
+};
+
+GTFO.SpellID["277535"] = {
+  --desc = "Viq'Goth's Wrath (Viq'Goth)";
+  sound = 3;
+};
+
 -- TODO: Cannon Barrage (Chopper Redhook) -- Avoidable?
 -- TODO: Heavy Slash (Irontide Cleaver) -- Non-Tank only? Avoidable?
 -- TODO: Clear the Deck (Dread Captain Lockwood) -- Non-Tank only? Avoidable?
 -- TODO: Crimson Swipe (Ashvane Deckhand) -- Non-Tank only? Avoidable?
 -- TODO: Broadside (Ashvane Cannoneer) -- Avoidable?
--- TODO: Crashing Tide (Hadal Darkfathom) -- Avoidable?
+
+GTFO.SpellID["261565"] = {
+  --desc = "Crashing Tide (Hadal Darkfathom)";
+  sound = 3;
+  tankSound = 0;
+};
 
 GTFO.SpellID["257883"] = {
   --desc = "Break Water (Hadal Darkfathom)";
@@ -616,19 +752,54 @@ GTFO.SpellID["257883"] = {
   test = true;
 };
 
--- TODO: Eradication (Viq'Goth) -- Avoidable?
--- TODO: Slam (Demolishing Terror) -- Avoidable?
+GTFO.SpellID["276042"] = {
+  --desc = "Tidal Surge";
+  sound = 3;
+};
 
+-- TODO: Eradication (Viq'Goth) -- Avoidable?
+
+GTFO.SpellID["269266"] = {
+  --desc = "Slam (Demolishing Terror)";
+  sound = 3;
+};
 
 -- *********
 -- * Uldir *
 -- *********
 
--- TODO: Retrieve Cudgel (Taloc) -- Charge attack, avoidable?
--- TODO: Sanguine Static (Taloc) -- Line attack, avoidable?
+GTFO.SpellID["271885"] = {
+  --desc = "Retrieve Cudgel (Taloc)";
+  sound = 3;
+};
+
+GTFO.SpellID["272582"] = {
+  --desc = "Sanguine Static (Taloc)";
+  sound = 3;
+};
+
 -- TODO: Hardened Arteries (Taloc) -- Explosion, avoidable?
+
+GTFO.SpellID["267803"] = {
+  --desc = "Purifying Flame (MOTHER)";
+  sound = 3;
+};
+
+GTFO.SpellID["267787"] = {
+  --desc = "Sanitizing Strike (MOTHER)";
+  applicationOnly = true;
+  sound = 3;
+  tankSound = 0;
+};
+
+GTFO.SpellID["277794"] = {
+  --desc = "Paw Swipe (Malformed Lion)";
+  applicationOnly = true;
+  sound = 3;
+  tankSound = 0;
+};
+
 -- TODO: Spreading Epidemic (MOTHER) -- What does this do?
--- TODO: Sanitizing Strike (MOTHER) -- For tanks only, stack tracking
 -- TODO: Rotting Regurgitation (Fetid Devourer) -- Avoidable?
 -- TODO: Surging Darkness (Zek'voz) -- Avoidable for big pools? Different spell IDs for pool damage vs. incidental
 -- TODO: Void Lash (Zek'voz) -- For tanks only, stack tracking, fail at 100% reduction
@@ -636,9 +807,6 @@ GTFO.SpellID["257883"] = {
 -- TODO: Void Wall (Zek'voz) -- Mythic only - Avoidable?
 -- TODO: Blood Geyser (Vectis) -- What is this?
 -- TODO: Pit of Despair (Zul) -- Avoidable? 
--- TODO: Bloody Cleave (Nazmani Crusher) -- For tanks only, cleave
--- TODO: Essence Shear (Mythrax the Unraveler) -- For tanks only?
--- TODO: Obliteration Blast (Mythrax the Unraveler) 
 -- TODO: Virulent Corruption (G'huun)
 -- TODO: Dark Bargain (G'huun)
 -- TODO: Tendrils of Corruption (G'huun) -- Mythic only
@@ -646,5 +814,53 @@ GTFO.SpellID["257883"] = {
 -- TODO: Gaze of G'huun (G'huun)
 -- TODO: Explosive Corruption (G'huun) -- If standing too close to a player that's infected, not for the infected
 
+GTFO.SpellID["277545"] = {
+  --desc = "Shadow Crash (C'Thraxxi Breaker)";
+  sound = 3;
+};
 
+GTFO.SpellID["277810"] = {
+  --desc = "Congealed Plague (Nazmani Defiler)";
+  sound = 3;
+};
 
+GTFO.SpellID["277813"] = {
+  --desc = "Blood Ritual (Speaker Obara)";
+  sound = 3;
+};
+
+GTFO.SpellID["278933"] = {
+  --desc = "Bursting Surge";
+  sound = 3;
+};
+
+GTFO.SpellID["278890"] = {
+  --desc = "Violent Hemorrhage (Nazmani Veinsplitter)";
+  applicationOnly = true;
+  sound = 3;
+};
+
+GTFO.SpellID["274358"] = {
+  --desc = "Rupturing Blood (Zul)";
+  applicationOnly = true;
+  sound = 3;
+  tankSound = 0;
+};
+
+GTFO.SpellID["273316"] = {
+  --desc = "Bloody Cleave (Nazmani Crusher)";
+  sound = 3;
+  tankSound = 0;
+};
+
+GTFO.SpellID["273554"] = {
+  --desc = "Obliteration Blast (Mythrax the Unraveler)";
+  sound = 3;
+  negatingDebuffSpellID = 272407;  -- Oblivion Sphere
+};
+
+GTFO.SpellID["273282"] = {
+  --desc = "Essence Shear (Mythrax the Unraveler)";
+  sound = 3;
+  tankSound = 0;
+};

@@ -24,11 +24,13 @@ function mod:UpdateHonor(event, unit)
 	if event == "PLAYER_FLAGS_CHANGED" and unit ~= "player" then return end
 
 	local bar = self.honorBar
-	local showHonor = UnitLevel("player") >= MAX_PLAYER_LEVEL
+	local showHonor = true
 
 	if (self.db.honor.hideInCombat and (event == "PLAYER_REGEN_DISABLED" or InCombatLockdown())) then
 		showHonor = false
 	elseif (self.db.honor.hideOutsidePvP and not UnitIsPVP("player")) then
+		showHonor = false
+	elseif (self.db.honor.hideBelowMaxLevel and UnitLevel("player") < MAX_PLAYER_LEVEL) then
 		showHonor = false
 	end
 
@@ -98,7 +100,7 @@ function mod:HonorBar_OnEnter()
 end
 
 function mod:HonorBar_OnClick()
-	ToggleTalentFrame(3) --3 is PvP
+	TogglePVPUI()
 end
 
 function mod:UpdateHonorDimensions()

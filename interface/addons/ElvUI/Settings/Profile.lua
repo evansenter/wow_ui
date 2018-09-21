@@ -22,6 +22,18 @@ P['general'] = {
 	['afk'] = true,
 	['numberPrefixStyle'] = 'ENGLISH',
 	['decimalLength'] = 1,
+	['altPowerBar'] = {
+		['enable'] = true,
+		['width'] = 250,
+		['height'] = 20,
+		['font'] = 'PT Sans Narrow',
+		['fontSize'] = 12,
+		['fontOutline'] = 'OUTLINE',
+		['statusBar'] = 'ElvUI Norm',
+		['textFormat'] = 'NAMECURMAX',
+		['statusBarColorGradient'] = false,
+		['statusBarColor'] = { r = 0.2, g = 0.4, b = 0.8 },
+	},
 
 	['fontSize'] = 12,
 	['font'] = 'PT Sans Narrow',
@@ -169,6 +181,7 @@ P['databars'] = {
 		['hideInVehicle'] = false,
 		['hideInCombat'] = false,
 		['hideOutsidePvP'] = false,
+		['hideBelowMaxLevel'] = false,
 	},
 	['azerite'] = {
 		['enable'] = true,
@@ -198,6 +211,7 @@ P['bags'] = {
 	['moneyCoins'] = true,
 	['junkIcon'] = false,
 	['upgradeIcon'] = true,
+	['newItemGlow'] = true,
 	['ignoredItems'] = {},
 	['itemLevel'] = true,
 	['itemLevelThreshold'] = 1,
@@ -212,6 +226,7 @@ P['bags'] = {
 	['clearSearchOnClose'] = false,
 	['disableBagSort'] = false,
 	['disableBankSort'] = false,
+	['strata'] = 'HIGH',
 	['cooldown'] = {
 		['threshold'] = 4,
 		['override'] = false,
@@ -276,6 +291,9 @@ P['nameplates'] = {
 	['targetGlow'] = 'style2',
 	['glowColor'] = { r = 77/255, g = 179/255, b = 255/255, a = 1 },
 	['nameColoredGlow'] = false,
+	['cutawayHealth'] = false,
+	['cutawayHealthLength'] = 0.3,
+	['cutawayHealthFadeOutTime'] = 0.6,
 	['alwaysShowTargetHealth'] = true,
 	['cooldown'] = {
 		['threshold'] = 4,
@@ -402,6 +420,7 @@ P['nameplates'] = {
 				['enable'] = true,
 				['numAuras'] = 4,
 				['baseHeight'] = 18,
+				["widthOverride"] = 0,
 				['filters'] = {
 					['minDuration'] = 0,
 					['maxDuration'] = 300,
@@ -412,6 +431,7 @@ P['nameplates'] = {
 				['enable'] = true,
 				['numAuras'] = 4,
 				['baseHeight'] = 18,
+				["widthOverride"] = 0,
 				['filters'] = {
 					['minDuration'] = 0,
 					['maxDuration'] = 0,
@@ -466,6 +486,7 @@ P['nameplates'] = {
 				['enable'] = true,
 				['numAuras'] = 4,
 				['baseHeight'] = 18,
+				["widthOverride"] = 0,
 				['filters'] = {
 					['minDuration'] = 0,
 					['maxDuration'] = 0,
@@ -476,6 +497,7 @@ P['nameplates'] = {
 				['enable'] = true,
 				['numAuras'] = 4,
 				['baseHeight'] = 18,
+				["widthOverride"] = 0,
 				['filters'] = {
 					['minDuration'] = 0,
 					['maxDuration'] = 0,
@@ -531,6 +553,8 @@ P['nameplates'] = {
 			['buffs'] = {
 				['enable'] = true,
 				['numAuras'] = 4,
+				["baseHeight"] = 18,
+				["widthOverride"] = 0,
 				['filters'] = {
 					['minDuration'] = 0,
 					['maxDuration'] = 0,
@@ -541,6 +565,7 @@ P['nameplates'] = {
 				['enable'] = true,
 				['numAuras'] = 4,
 				['baseHeight'] = 18,
+				["widthOverride"] = 0,
 				['filters'] = {
 					['minDuration'] = 0,
 					['maxDuration'] = 0,
@@ -597,6 +622,7 @@ P['nameplates'] = {
 				['enable'] = true,
 				['numAuras'] = 4,
 				['baseHeight'] = 18,
+				["widthOverride"] = 0,
 				['filters'] = {
 					['minDuration'] = 0,
 					['maxDuration'] = 300,
@@ -607,6 +633,7 @@ P['nameplates'] = {
 				['enable'] = true,
 				['numAuras'] = 4,
 				['baseHeight'] = 18,
+				["widthOverride"] = 0,
 				['filters'] = {
 					['minDuration'] = 0,
 					['maxDuration'] = 0,
@@ -660,6 +687,7 @@ P['nameplates'] = {
 				['enable'] = true,
 				['numAuras'] = 4,
 				['baseHeight'] = 18,
+				["widthOverride"] = 0,
 				['filters'] = {
 					['minDuration'] = 0,
 					['maxDuration'] = 0,
@@ -670,6 +698,7 @@ P['nameplates'] = {
 				['enable'] = true,
 				['numAuras'] = 4,
 				['baseHeight'] = 18,
+				["widthOverride"] = 0,
 				['filters'] = {
 					['minDuration'] = 0,
 					['maxDuration'] = 0,
@@ -728,6 +757,7 @@ P['nameplates'] = {
 				['enable'] = true,
 				['numAuras'] = 4,
 				['baseHeight'] = 18,
+				["widthOverride"] = 0,
 				['filters'] = {
 					['minDuration'] = 0,
 					['maxDuration'] = 0,
@@ -738,6 +768,7 @@ P['nameplates'] = {
 				['enable'] = true,
 				['numAuras'] = 4,
 				['baseHeight'] = 18,
+				["widthOverride"] = 0,
 				['filters'] = {
 					['minDuration'] = 0,
 					['maxDuration'] = 0,
@@ -865,6 +896,7 @@ P['chat'] = {
 	['tabFontOutline'] = 'NONE',
 	['copyChatLines'] = false,
 	['useBTagName'] = false,
+	["panelColor"] = {r = .06,g = .06,b = .06, a = 0.8},
 }
 
 --Datatexts
@@ -878,7 +910,7 @@ P['datatexts'] = {
 		['LeftChatDataPanel'] = {
 			['left'] = 'Talent/Loot Specialization',
 			['middle'] = 'Durability',
-			['right'] = 'Orderhall',
+			['right'] = 'BfA Missions',
 		},
 		['RightChatDataPanel'] = {
 			['left'] = 'System',
@@ -1367,6 +1399,13 @@ P['unitframe'] = {
 				['xOffset'] = 0,
 				['yOffset'] = 0,
 				['attachTextTo'] = 'Health',
+			},
+			['phaseIndicator'] = {
+				['enable'] = true,
+				['anchorPoint'] = 'CENTER',
+				['xOffset'] = 0,
+				['yOffset'] = 0,
+				['scale'] = 0.8,
 			},
 			['pvpIcon'] = {
 				['enable'] = false,
@@ -2318,6 +2357,13 @@ P['unitframe'] = {
 				['yOffset'] = 0,
 				['xOffset'] = 0,
 			},
+			['phaseIndicator'] = {
+				['enable'] = true,
+				['anchorPoint'] = 'CENTER',
+				['xOffset'] = 0,
+				['yOffset'] = 0,
+				['scale'] = 0.8,
+			},
 			['portrait'] = {
 				['enable'] = false,
 				['width'] = 45,
@@ -2391,6 +2437,21 @@ P['unitframe'] = {
 					['yOffset'] = 2,
 					['color'] = {r = 1, g = 0.9, b = 0, a = 1}
 				},
+			},
+			['castbar'] = {
+				['enable'] = false,
+				['width'] = 256,
+				['height'] = 18,
+				['icon'] = true,
+				['format'] = 'REMAINING',
+				['spark'] = true,
+				['iconSize'] = 32,
+				['iconAttached'] = true,
+				['insideInfoPanel'] = true,
+				['iconAttachedTo'] = 'Frame',
+				['iconPosition'] = 'LEFT',
+				['iconXOffset'] = -10,
+				['iconYOffset'] = 0,
 			},
 			['roleIcon'] = {
 				['enable'] = true,
@@ -2627,6 +2688,13 @@ P['unitframe'] = {
 				['xOffset'] = 0,
 				['yOffset'] = 0,
 			},
+			['phaseIndicator'] = {
+				['enable'] = true,
+				['anchorPoint'] = 'CENTER',
+				['xOffset'] = 0,
+				['yOffset'] = 0,
+				['scale'] = 0.8,
+			},
 		},
 		['raid40'] = {
 			['enable'] = true,
@@ -2793,6 +2861,13 @@ P['unitframe'] = {
 				['attachToObject'] = 'Frame',
 				['xOffset'] = 0,
 				['yOffset'] = 0,
+			},
+			['phaseIndicator'] = {
+				['enable'] = true,
+				['anchorPoint'] = 'CENTER',
+				['xOffset'] = 0,
+				['yOffset'] = 0,
+				['scale'] = 0.8,
 			},
 		},
 		['raidpet'] = {
@@ -3123,6 +3198,7 @@ P['actionbar'] = {
 	['macrotext'] = false,
 	['hotkeytext'] = true,
 
+	['useRangeColorText'] = false,
 	['noRangeColor'] = { r = 0.8, g = 0.1, b = 0.1 },
 	['noPowerColor'] = { r = 0.5, g = 0.5, b = 1 },
 	['usableColor'] = { r = 1, g = 1, b = 1 },

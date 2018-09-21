@@ -7,7 +7,7 @@ if not L then return end
 L["INCOMPATIBLE_ADDON"] = "插件 %s 不相容于 ElvUI 的 %s 模组, 请停用不相容的插件, 或停用模组."
 
 --*_MSG locales
-L["LOGIN_MSG"] = "欢迎使用 %sElvUI|r %s%s|r 版, 请输入/ec进入设定介面. 如需技术支持,请至 https://www.tukui.org"
+L["LOGIN_MSG"] = "Welcome to %sElvUI|r version %s%s|r, type /ec to access the in-game configuration menu. If you are in need of technical support you can visit us at https://www.tukui.org or join our Discord: https://discord.gg/xFWcfgE"
 
 --ActionBars
 L["Binding"] = "绑定"
@@ -43,6 +43,7 @@ L["Show/Hide Reagents"] = "显示/隐藏材料"
 L["Sort Tab"] = "选项排列" --Not used, yet?
 L["Temporary Move"] = '移动背包'
 L["Toggle Bags"] = "背包开关"
+L["Vendor Grays"] = "出售灰色物品"
 L["Vendor / Delete Grays"] = "出售/删除灰色物品"
 
 --Chat
@@ -77,6 +78,7 @@ L["Arena"] = "竞技场"
 L["AVD: "] = "免伤: "
 L["Avoidance Breakdown"] = "免伤统计"
 L["Bandwidth"] = "带宽"
+L["BfA Missions"] = "BfA战役"
 L["Building(s) Report:"] = "建筑报告:"
 L["Character: "] = "角色: "
 L["Chest"] = "胸"
@@ -167,6 +169,7 @@ L["CVars Set"] = "参数设定"
 L["CVars"] = "参数"
 L["Dark"] = "黑暗"
 L["Disable"] = "禁用"
+L["Discord"] = "Discord"
 L["ElvUI Installation"] = "安装 ElvUI"
 L["Finished"] = "完成"
 L["Grid Size:"] = "网格尺寸:"
@@ -230,12 +233,13 @@ L["Left Click:"] = "鼠标左键:"
 L["Raid Menu"] = "团队菜单"
 L["Remaining:"] = "剩余:"
 L["Rested:"] = "休息:"
-L["Toggle Chat Buttons"] = true --layout\layout.lua
+L["Toggle Chat Buttons"] = "开关聊天按钮" --layout\layout.lua
 L["Toggle Chat Frame"] = "开关聊天框架"
 L["Toggle Configuration"] = "设置开关"
 L["AP:"] = "神器能量:" -- Artifact Power
 L["XP:"] = "经验:"
 L["You don't have permission to mark targets."] = "你没有标记目标的权限"
+L["Voice Overlay"] = "语音界面"
 
 --Movers
 L["Alternative Power"] = "特殊能量条"
@@ -295,6 +299,8 @@ L["Target Powerbar"] = "目标能量条"
 L["TargetTarget Frame"] = "目标的目标框架"
 L["TargetTargetTarget Frame"] = "目标的目标的目标框架"
 L["Tooltip"] = "鼠标提示"
+L["UIWidgetBelowMinimapContainer"] = true
+L["UIWidgetTopContainer"] = true
 L["Vehicle Seat Frame"] = "载具座位框"
 L["Zone Ability"] = "区域技能"
 L["DESC_MOVERCONFIG"] = [=[解除框架移动锁定. 现在可以移动它们, 移好后请点击「锁定」.

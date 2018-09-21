@@ -7,7 +7,7 @@ if not L then return end
 L["INCOMPATIBLE_ADDON"] = "The addon %s is not compatible with ElvUI's %s module. Please select either the addon or the ElvUI module to disable."
 
 --*_MSG locales
-L["LOGIN_MSG"] = "Bienvenido a %sElvUI|r versión %s%s|r, escribe /ec para acceder al menú de configuración. Si necesitas ayuda o soporte técnico puedes visitarnos en https://www.tukui.org"
+L["LOGIN_MSG"] = "Welcome to %sElvUI|r version %s%s|r, type /ec to access the in-game configuration menu. If you are in need of technical support you can visit us at https://www.tukui.org or join our Discord: https://discord.gg/xFWcfgE"
 
 --ActionBars
 L["Binding"] = "Controles"
@@ -43,6 +43,7 @@ L["Show/Hide Reagents"] = "Mostrar/Ocultar Componentes"
 L["Sort Tab"] = "Ordenar Pestaña"
 L["Temporary Move"] = "Movimiento Temporal"
 L["Toggle Bags"] = "Mostrar/Ocultar Bolsas"
+L["Vendor Grays"] = "Vender Objetos Grises"
 L["Vendor / Delete Grays"] = true
 
 --Chat
@@ -77,6 +78,7 @@ L["Arena"] = true
 L["AVD: "] = "EVA: "
 L["Avoidance Breakdown"] = "Desglose de Evasión"
 L["Bandwidth"] = "Ancho de Banda"
+L["BfA Missions"] = true
 L["Building(s) Report:"] = "Informe de Edificio(s)"
 L["Character: "] = "Personaje: "
 L["Chest"] = "Pecho"
@@ -167,6 +169,7 @@ L["CVars Set"] = "CVars Configuradas"
 L["CVars"] = "CVars"
 L["Dark"] = "Oscuro"
 L["Disable"] = "Desactivar"
+L["Discord"] = true
 L["ElvUI Installation"] = "Instalación de ElvUI"
 L["Finished"] = "Terminado"
 L["Grid Size:"] = "Tamaño de la Rejilla:"
@@ -236,6 +239,7 @@ L["Toggle Configuration"] = "Mostrar/Ocultar Configuración"
 L["AP:"] = true -- Artifact Power
 L["XP:"] = "XP:"
 L["You don't have permission to mark targets."] = "No tienes permiso para marcar objetivos."
+L["Voice Overlay"] = true
 
 --Movers
 L["Alternative Power"] = "Poder Alternativo"
@@ -295,6 +299,8 @@ L["Target Powerbar"] = "Barra de Poder del Objetivo"
 L["TargetTarget Frame"] = "Marco de Objetivo de Objetivo"
 L["TargetTargetTarget Frame"] = "Marco del Objetivo del Objetivo del Objetivo"
 L["Tooltip"] = "Descripción Emergente"
+L["UIWidgetBelowMinimapContainer"] = true
+L["UIWidgetTopContainer"] = true
 L["Vehicle Seat Frame"] = "Marco del Asiento del Vehículo"
 L["Zone Ability"] = true
 L["DESC_MOVERCONFIG"] = [=[Fijadores desbloqueados. Muévelos ahora y haz click en Bloquear cuando termines.

@@ -71,11 +71,7 @@ L.StatsShort = {
 }
 
 L.InstanceNames = {
-	[1520] = "Pesadelo Esmeralda",
-	[1530] = "Baluarte da Noite",
-	[1648] = "Provação da Bravura",
-	[1676] = "Tumba de Sargeras",
-	[1712] = "Antorus"
+	[1861] = "Uldir"
 }
 
 L.DifficultyNames = {

@@ -7,7 +7,7 @@ if not L then return end
 L["INCOMPATIBLE_ADDON"] = "Аддон %s не совместим с модулем %s ElvUI. Пожалуйста, выберите отключить ли несовместимый аддон или модуль."
 
 --*_MSG locales
-L["LOGIN_MSG"] = "Добро пожаловать в %sElvUI|r версии %s%s|r, наберите /ec для доступа в меню настроек. Если Вам нужна техническая поддержка, посетите наш форум на https://www.tukui.org"
+L["LOGIN_MSG"] = "Добро пожаловать в %sElvUI|r версии %s%s|r, наберите /ec для доступа в меню настроек. Если Вам нужна техническая поддержка, посетите наш форум на https://www.tukui.org или присоединяйтесь к серверу Discord: https://discord.gg/xFWcfgE"
 
 --ActionBars
 L["Binding"] = "Назначение"
@@ -43,6 +43,7 @@ L["Show/Hide Reagents"] = "Показать/скрыть материалы"
 L["Sort Tab"] = "Сортировать вкладки" --Not used, yet?
 L["Temporary Move"] = "Временное перемещение"
 L["Toggle Bags"] = "Показать сумки"
+L["Vendor Grays"] = "Продавать серые предметы"
 L["Vendor / Delete Grays"] = "Продать/удалить серые предметы"
 
 --Chat
@@ -77,6 +78,7 @@ L["Arena"] = "Арена"
 L["AVD: "] = "Защита: "
 L["Avoidance Breakdown"] = "Распределение защиты"
 L["Bandwidth"] = "Канал"
+L["BfA Missions"] = "Миссии BfA"
 L["Building(s) Report:"] = "Отчет зданий:"
 L["Character: "] = "Персонаж: "
 L["Chest"] = "Грудь"
@@ -167,6 +169,7 @@ L["CVars Set"] = "Настройки сброшены"
 L["CVars"] = "Настройки игры"
 L["Dark"] = "Темная"
 L["Disable"] = "Выключить"
+L["Discord"] = true
 L["ElvUI Installation"] = "Установка ElvUI"
 L["Finished"] = "Завершить"
 L["Grid Size:"] = "Размер сетки"
@@ -230,12 +233,13 @@ L["Left Click:"] = "ЛКМ:" --layout\layout.lua
 L["Raid Menu"] = "Рейдовое меню"
 L["Remaining:"] = "Осталось:"
 L["Rested:"] = "Бодрость:"
-L["Toggle Chat Buttons"] = true --layout\layout.lua
+L["Toggle Chat Buttons"] = "Показать/скрыть кнопки чата" --layout\layout.lua
 L["Toggle Chat Frame"] = "Показать/скрыть чат" --layout\layout.lua
 L["Toggle Configuration"] = "Конфигурация" --layout\layout.lua
 L["AP:"] = "СА:" -- Artifact Power
 L["XP:"] = "Опыт:"
 L["You don't have permission to mark targets."] = "У вас нет разрешения на установку меток"
+L["Voice Overlay"] = "Индикатор голоса"
 
 --Movers
 L["Alternative Power"] = "Альтернативный ресурс"
@@ -295,6 +299,8 @@ L["Target Powerbar"] = "Полоса ресурса цели"
 L["TargetTarget Frame"] = "Цель цели" --Also used in UnitFrames
 L["TargetTargetTarget Frame"] = "Цель цели цели"
 L["Tooltip"] = "Подсказка"
+L["UIWidgetBelowMinimapContainer"] = "Виджет миникарты"
+L["UIWidgetTopContainer"] = "Верхний виджет"
 L["Vehicle Seat Frame"] = "Техника"
 L["Zone Ability"] = "Способность зоны"
 L["DESC_MOVERCONFIG"] = [=[Блокировка отключена. Передвиньте фреймы и нажмите 'Закрепить', когда закончите.
@@ -323,7 +329,7 @@ L["Binds Saved"] = "Назначения сохранены"
 L["Confused.. Try Again!"] = "Что за?.. Попробуйте еще раз!"
 L["No gray items to delete."] = "Нет предметов серого качества для удаления."
 L["The spell '%s' has been added to the Blacklist unitframe aura filter."] = 'Заклинание "%s" было добавлено в фильтр "Blacklist" аур рамок юнитов.'
-L["This setting caused a conflicting anchor point, where '%s' would be attached to itself. Please check your anchor points. Setting '%s' to be attached to '%s'."] = "Эта опция вызвала конфликт точек фиксации, в результате которого \"%s\" крепится к самому себе. Пожалуйста, проверье настройки точек фиксации. \"%s\" будет прикреплено к \"%s\"."
+L["This setting caused a conflicting anchor point, where '%s' would be attached to itself. Please check your anchor points. Setting '%s' to be attached to '%s'."] = "Эта опция вызвала конфликт точек фиксации, в результате которого \"%s\" крепится к самому себе. Пожалуйста, проверьте настройки точек фиксации. \"%s\" будет прикреплено к \"%s\"."
 L["Vendored gray items for: %s"] = "Проданы серые предметы на сумму: %s"
 L["You don't have enough money to repair."] = "У вас недостаточно денег для ремонта."
 L["You must be at a vendor."] = "Вы должны находиться у торговца"
@@ -336,7 +342,7 @@ L["A setting you have changed will change an option for this character only. Thi
 L["Accepting this will reset the UnitFrame settings for %s. Are you sure?"] = "Приняв это вы сбросите настройки для %s. Вы уверены?"
 L["Accepting this will reset your Filter Priority lists for all auras on NamePlates. Are you sure?"] = "Приняв это вы сбросите ваши списки приоритетов для всех аур на индикаторах здоровья. Вы уверены?"
 L["Accepting this will reset your Filter Priority lists for all auras on UnitFrames. Are you sure?"] = "Приняв это вы сбросите ваши списки приоритетов для всех аур на рамках юнитов. Вы уверены?"
-L["Are you sure you want to apply this font to all ElvUI elements?"] = "Вы уверены, что хоттите применить этот шрифт ко всем элементам ElvUI?"
+L["Are you sure you want to apply this font to all ElvUI elements?"] = "Вы уверены, что хотите применить этот шрифт ко всем элементам ElvUI?"
 L["Are you sure you want to disband the group?"] = "Вы уверены, что хотите распустить группу?"
 L["Are you sure you want to reset all the settings on this profile?"] = "Вы уверены, что хотите сбросить все настройки для этого профиля?"
 L["Are you sure you want to reset every mover back to it's default position?"] = "Вы уверены, что хотите сбросить все фиксаторы на позиции по умолчанию?"

@@ -311,7 +311,7 @@ local function renderGear(spec, container)
 						lblEquipped:SetText(isEquipped and "E" or "")
 					end
 
-					lblItem:SetFont(Amr.CreateFont(isEquipped and "Regular" or "Bold", isEquipped and 14 or 15, Amr.Colors.Qualities[q]))				
+					lblItem:SetFont(Amr.CreateFont(isEquipped and "Regular" or "Bold", isEquipped and 14 or 15, Amr.Colors.Qualities[q] or Amr.Colors.White))
 					lblItem:SetText(gameItem:GetItemName())
 					lblIlvl:SetText(gameItem:GetCurrentItemLevel())
 					Amr:SetItemTooltip(lblItem, gameItem:GetItemLink(), "ANCHOR_TOPRIGHT")
@@ -614,8 +614,8 @@ local function onEquipGearSetComplete()
     -- for some reason, the slot is treated as blank if you try to ignore once on the first load of the equipment manager
  
     -- clear any currently ignored slots
-    C_EquipmentSet.ClearIgnoredSlotsForSave()
-    C_EquipmentSet.ClearIgnoredSlotsForSave()
+    --C_EquipmentSet.ClearIgnoredSlotsForSave()
+    --C_EquipmentSet.ClearIgnoredSlotsForSave()
  
     -- ignore shirt and tabard
     C_EquipmentSet.IgnoreSlotForSave(INVSLOT_BODY) -- shirt

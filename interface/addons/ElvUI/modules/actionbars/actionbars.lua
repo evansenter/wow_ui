@@ -269,9 +269,9 @@ function AB:PositionAndSizeBar(barName)
 
 				if newstate == 1 then
 					if(HasVehicleActionBar()) then
-						bar:SetAttribute("state", 12)
-						bar:ChildUpdate("state", 12)
-						self:GetFrameRef("MainMenuBarArtFrame"):SetAttribute("actionpage", 12) --Update MainMenuBarArtFrame too. See http://www.tukui.org/forums/topic.php?id=35332
+						bar:SetAttribute("state", GetVehicleBarIndex()) -- This should update the bar correctly for King's Rest now.
+						bar:ChildUpdate("state", GetVehicleBarIndex())
+						self:GetFrameRef("MainMenuBarArtFrame"):SetAttribute("actionpage", GetVehicleBarIndex()) --Update MainMenuBarArtFrame too.
 					else
 						if HasTempShapeshiftActionBar() and self:GetAttribute("hasTempBar") then
 							ParsedText = GetTempShapeshiftBarIndex() or ParsedText
@@ -678,9 +678,11 @@ function AB:StyleButton(button, noBackdrop, useMasque)
 		shine:SetAllPoints()
 	end
 
-	if self.db.hotkeytext then
+	if self.db.hotkeytext or self.db.useRangeColorText then
 		hotkey:FontTemplate(LSM:Fetch("font", self.db.font), self.db.fontSize, self.db.fontOutline)
-		hotkey:SetTextColor(color.r, color.g, color.b)
+		if button.config and (button.config.outOfRangeColoring ~= "hotkey") then
+			button.HotKey:SetTextColor(color.r, color.g, color.b)
+		end
 	end
 
 	--Extra Action Button
@@ -841,7 +843,13 @@ function AB:DisableBlizzard()
 
 	MainMenuBar:EnableMouse(false)
 	MainMenuBar:SetAlpha(0)
+	MainMenuBar:SetScale(0.00001)
 
+	MicroButtonAndBagsBar:SetScale(0.00001)
+	MicroButtonAndBagsBar:EnableMouse(false)
+
+	-- This can taint
+	--[[
 	for i=1, MainMenuBar:GetNumChildren() do
 		local child = select(i, MainMenuBar:GetChildren())
 		if child then
@@ -850,6 +858,7 @@ function AB:DisableBlizzard()
 			child:SetParent(UIHider)
 		end
 	end
+	]]
 
 	MainMenuBarArtFrame:UnregisterEvent("ACTIONBAR_PAGE_CHANGED")
 	MainMenuBarArtFrame:UnregisterEvent("ADDON_LOADED")
@@ -940,6 +949,7 @@ function AB:UpdateButtonConfig(bar, buttonName)
 	bar.buttonConfig.hideElements.hotkey = not self.db.hotkeytext
 	bar.buttonConfig.showGrid = self.db["bar"..bar.id].showGrid
 	bar.buttonConfig.clickOnDown = self.db.keyDown
+	bar.buttonConfig.outOfRangeColoring = (self.db.useRangeColorText and 'hotkey') or 'button'
 	SetModifiedClick("PICKUPACTION", self.db.movementModifier)
 	bar.buttonConfig.colors.range = E:GetColorTable(self.db.noRangeColor)
 	bar.buttonConfig.colors.mana = E:GetColorTable(self.db.noPowerColor)
@@ -1157,7 +1167,9 @@ local color
 function AB:LAB_ButtonUpdate(button)
 	color = AB.db.fontColor
 	button.Count:SetTextColor(color.r, color.g, color.b)
-	button.HotKey:SetTextColor(color.r, color.g, color.b)
+	if button.config and (button.config.outOfRangeColoring ~= "hotkey") then
+		button.HotKey:SetTextColor(color.r, color.g, color.b)
+	end
 end
 LAB.RegisterCallback(AB, "OnButtonUpdate", AB.LAB_ButtonUpdate)
 

@@ -106,6 +106,12 @@ local function initializeDb()
 				hasSomeLogging = true
 			end
 		end
+	end	
+
+	for k,v in pairs(Amr.db.profile.Logging.Auto) do
+		if not Amr.IsSupportedInstanceId(k) then
+			Amr.db.profile.Logging.Auto[k] = nil
+		end		
 	end
 	
 	if hasSomeLogging then		

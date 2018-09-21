@@ -96,6 +96,8 @@ function mod:CheckFilter(name, caster, spellID, isFriend, isPlayer, isUnit, isBo
 				return true
 			elseif filterName == 'Dispellable' and canDispell and allowDuration then
 				return true
+			elseif filterName == 'notDispellable' and (not canDispell) and allowDuration then
+				return true
 			elseif filterName == 'CastByNPC' and (not casterIsPlayer) and allowDuration then
 				return true
 			elseif filterName == 'CastByPlayers' and casterIsPlayer and allowDuration then
@@ -105,6 +107,10 @@ function mod:CheckFilter(name, caster, spellID, isFriend, isPlayer, isUnit, isBo
 			elseif filterName == 'blockNoDuration' and noDuration then
 				return false
 			elseif filterName == 'blockNonPersonal' and (not isPlayer) then
+				return false
+			elseif filterName == 'blockDispellable' and canDispell then
+				return false
+			elseif filterName == 'blockNotDispellable' and (not canDispell) then
 				return false
 			end
 		end
@@ -260,7 +266,7 @@ end
 function mod:Auras_SizeChanged(width)
 	local numAuras = #self.icons
 	for i=1, numAuras do
-		self.icons[i]:SetWidth(((width - (mod.mult*numAuras)) / numAuras) - (E.private.general.pixelPerfect and 0 or 3))
+		self.icons[i]:SetWidth(self.db.widthOverride > 0 and self.db.widthOverride or (((width - (mod.mult*numAuras)) / numAuras) - (E.private.general.pixelPerfect and 0 or 3)))
 		self.icons[i]:SetHeight((self.db.baseHeight or 18) * (self:GetParent().HealthBar.currentScale or 1))
 	end
 	self:SetHeight((self.db.baseHeight or 18) * (self:GetParent().HealthBar.currentScale or 1))

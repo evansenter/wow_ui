@@ -7,7 +7,7 @@ if not L then return end
 L["INCOMPATIBLE_ADDON"] = "The addon %s is not compatible with ElvUI's %s module. Please select either the addon or the ElvUI module to disable."
 
 --*_MSG locales
-L["LOGIN_MSG"] = "Bem vindo à versão %s%s|r da %sElvUI|r, escreva /ec para acessar o menu de configuração em jogo. Se precisar de suporte técnico visite-nos no site https://www.tukui.org"
+L["LOGIN_MSG"] = "Welcome to %sElvUI|r version %s%s|r, type /ec to access the in-game configuration menu. If you are in need of technical support you can visit us at https://www.tukui.org or join our Discord: https://discord.gg/xFWcfgE"
 
 --ActionBars
 L["Binding"] = "Ligações"
@@ -43,6 +43,7 @@ L["Show/Hide Reagents"] = true
 L["Sort Tab"] = "Aba de Organização"
 L["Temporary Move"] = "Mover Temporariamente"
 L["Toggle Bags"] = "Mostrar/Ocultar Bolsas"
+L["Vendor Grays"] = "Vender Itens Cinzentos"
 L["Vendor / Delete Grays"] = true
 
 --Chat
@@ -77,6 +78,7 @@ L["Arena"] = true
 L["AVD: "] = "AVD: "
 L["Avoidance Breakdown"] = "Separação de Anulação"
 L["Bandwidth"] = "Largura de Banda"
+L["BfA Missions"] = true
 L["Building(s) Report:"] = true
 L["Character: "] = "Personagem: "
 L["Chest"] = "Torso"
@@ -167,6 +169,7 @@ L["CVars Set"] = "CVars configuradas"
 L["CVars"] = "CVars"
 L["Dark"] = "Escuro"
 L["Disable"] = "Desativar"
+L["Discord"] = true
 L["ElvUI Installation"] = "Instalação do ElvUI"
 L["Finished"] = "Terminado"
 L["Grid Size:"] = "Tamanho da Grade"
@@ -236,6 +239,7 @@ L["Toggle Configuration"] = "Mostrar/Ocultar Modo de Configuração"
 L["AP:"] = true -- Artifact Power
 L["XP:"] = "XP:"
 L["You don't have permission to mark targets."] = "Você não tem permissão para marcar alvos."
+L["Voice Overlay"] = true
 
 --Movers
 L["Alternative Power"] = "Recurso Alternativo"
@@ -295,6 +299,8 @@ L["Target Powerbar"] = true
 L["TargetTarget Frame"] = "Quadro do Alvo do Alvo"
 L["TargetTargetTarget Frame"] = true
 L["Tooltip"] = "Tooltip"
+L["UIWidgetBelowMinimapContainer"] = true
+L["UIWidgetTopContainer"] = true
 L["Vehicle Seat Frame"] = "Quadro de Assento de Veículo"
 L["Zone Ability"] = true
 L["DESC_MOVERCONFIG"] = [=[Movedores destravados. Mova-os agora e clique Travar quando acabar.

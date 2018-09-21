@@ -121,31 +121,7 @@ function mod:CheckArenaHealers()
 	end
 end
 
-local namePlateDriverEvents = {
-	--"NAME_PLATE_CREATED", -- Leave this on always to prevent errors
-	"FORBIDDEN_NAME_PLATE_CREATED",
-	"NAME_PLATE_UNIT_ADDED",
-	"FORBIDDEN_NAME_PLATE_UNIT_ADDED",
-	"NAME_PLATE_UNIT_REMOVED",
-	"FORBIDDEN_NAME_PLATE_UNIT_REMOVED",
-	"PLAYER_TARGET_CHANGED",
-	"DISPLAY_SIZE_CHANGED",
-	"UNIT_AURA",
-	"VARIABLES_LOADED",
-	"CVAR_UPDATE",
-	"RAID_TARGET_UPDATE",
-	"UNIT_FACTION"
-}
-
-function mod:ToggleNamePlateDriverEvents(lockedInstance)
-	for _, event in pairs(namePlateDriverEvents) do
-		if lockedInstance then
-			NamePlateDriverFrame:RegisterEvent(event)
-		else
-			NamePlateDriverFrame:UnregisterEvent(event)
-		end
-	end
-
+function mod:LockdownInstancePlateCVars(lockedInstance)
 	if lockedInstance then
 		E:LockCVar("nameplateShowDebuffsOnFriendly", false)
 	else
@@ -167,7 +143,7 @@ function mod:PLAYER_ENTERING_WORLD()
 	local lockedInstance = instanceType and not (instanceType == "none" or instanceType == "pvp" or instanceType == "arena")
 
 	if not self.db.hideBlizzardPlates then
-		self:ToggleNamePlateDriverEvents(lockedInstance)
+		self:LockdownInstancePlateCVars(lockedInstance)
 	end
 
 	if inInstance and (instanceType == 'pvp') and self.db.units.ENEMY_PLAYER.markHealers then
@@ -345,6 +321,7 @@ function mod:SetTargetFrame(frame)
 			frame.HealthBar.r, frame.HealthBar.g, frame.HealthBar.b = nil, nil, nil
 			frame.CastBar:Hide()
 			self:ConfigureElement_HealthBar(frame)
+			self:ConfigureElement_CutawayHealth(frame)
 			self:ConfigureElement_PowerBar(frame)
 			self:ConfigureElement_CastBar(frame)
 			self:ConfigureElement_Glow(frame)
@@ -485,6 +462,7 @@ function mod:NAME_PLATE_UNIT_ADDED(_, unit, frame)
 
 	if(self.db.units[frame.unitFrame.UnitType].healthbar.enable or self.db.displayStyle ~= "ALL") then
 		self:ConfigureElement_HealthBar(frame.unitFrame)
+		self:ConfigureElement_CutawayHealth(frame.unitFrame)
 		self:ConfigureElement_PowerBar(frame.unitFrame)
 		self:ConfigureElement_CastBar(frame.unitFrame)
 		self:ConfigureElement_Glow(frame.unitFrame)
@@ -749,6 +727,7 @@ function mod:NAME_PLATE_CREATED(_, frame)
 	frame.unitFrame.plateID = plateID
 
 	frame.unitFrame.HealthBar = self:ConstructElement_HealthBar(frame.unitFrame)
+	frame.unitFrame.CutawayHealth = self:ConstructElement_CutawayHealth(frame.unitFrame)
 	frame.unitFrame.PowerBar = self:ConstructElement_PowerBar(frame.unitFrame)
 	frame.unitFrame.Level = self:ConstructElement_Level(frame.unitFrame)
 	frame.unitFrame.Name = self:ConstructElement_Name(frame.unitFrame)
@@ -1228,6 +1207,7 @@ function mod:Initialize()
 	self.ClassBar = NamePlateDriverFrame.nameplateBar
 	if(self.ClassBar) then
 		self.ClassBar:SetScale(1.35)
+		self.ClassBar:EnableMouse(false)
 	end
 	hooksecurefunc(NamePlateDriverFrame, "SetClassNameplateBar", mod.SetClassNameplateBar)
 

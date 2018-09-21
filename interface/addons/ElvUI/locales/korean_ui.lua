@@ -7,7 +7,7 @@ if not L then return end
 L["INCOMPATIBLE_ADDON"] = "%s 애드온의 기능이 ElvUI의 %s 모듈과 상충됩니다. 그 애드온을 쓰지 않거나 ElvUI의 기능을 사용해제하세요."
 
 --*_MSG locales
-L["LOGIN_MSG"] = "%sElvUI|r 버전 %s%s|r 을 사용해 주셔서 감사합니다. /ec 를 입력하면 설정창을 열 수 있습니다. 궁금한 점이나 기술지원은 https://www.tukui.org 에서 해결하세요"
+L["LOGIN_MSG"] = "Welcome to %sElvUI|r version %s%s|r, type /ec to access the in-game configuration menu. If you are in need of technical support you can visit us at https://www.tukui.org or join our Discord: https://discord.gg/xFWcfgE"
 
 --ActionBars
 L["Binding"] = " "
@@ -43,6 +43,7 @@ L["Show/Hide Reagents"] = "재료은행 표시"
 L["Sort Tab"] = "탭 정렬" --Not used, yet?
 L["Temporary Move"] = "임시 이동"
 L["Toggle Bags"] = "가방슬롯 보기"
+L["Vendor Grays"] = "잡동사니 자동판매"
 L["Vendor / Delete Grays"] = "잡템 자동판매/삭제"
 
 --Chat
@@ -77,6 +78,7 @@ L["Arena"] = "투기장"
 L["AVD: "] = "방어율: "
 L["Avoidance Breakdown"] = "방어율 목록"
 L["Bandwidth"] = "대역폭"
+L["BfA Missions"] = "격아 임무"
 L["Building(s) Report:"] = "건축 보고서"
 L["Character: "] = "캐릭터:"
 L["Chest"] = "가슴"
@@ -167,6 +169,7 @@ L["CVars Set"] = "CVars 설정"
 L["CVars"] = "게임 인터페이스 설정(CVars)"
 L["Dark"] = "어두운 느낌"
 L["Disable"] = "비활성화"
+L["Discord"] = true
 L["ElvUI Installation"] = "ElvUI 설치"
 L["Finished"] = "마침"
 L["Grid Size:"] = "격자 크기 :"
@@ -236,6 +239,7 @@ L["Toggle Configuration"] = "ElvUI 설정창 열기"
 L["AP:"] = "유물력" -- Artifact Power
 L["XP:"] = "경험치:"
 L["You don't have permission to mark targets."] = "레이드 아이콘을 지정할 권한이 없습니다."
+L["Voice Overlay"] = "음성 오버레이"
 
 --Movers
 L["Alternative Power"] = "특수상황 진행 바"
@@ -295,6 +299,8 @@ L["Target Powerbar"] = "대상 자원바"
 L["TargetTarget Frame"] = "대상의대상 프레임"
 L["TargetTargetTarget Frame"] = "대상의대상의대상 프레임"
 L["Tooltip"] = "툴팁"
+L["UIWidgetBelowMinimapContainer"] = true
+L["UIWidgetTopContainer"] = true
 L["Vehicle Seat Frame"] = "차량 좌석 프레임"
 L["Zone Ability"] = "지역 특수 능력"
 L["DESC_MOVERCONFIG"] = [=[프레임을 드래그로 원하는 위치로 이동시키세요.|n[잠금] 버튼을 누르면 이동모드가 종료됩니다.

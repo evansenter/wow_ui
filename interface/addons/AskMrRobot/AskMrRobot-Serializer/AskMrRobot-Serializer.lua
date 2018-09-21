@@ -1,6 +1,6 @@
 -- AskMrRobot-Serializer will serialize and communicate character data between users.
 
-local MAJOR, MINOR = "AskMrRobot-Serializer", 63
+local MAJOR, MINOR = "AskMrRobot-Serializer", 64
 local Amr, oldminor = LibStub:NewLibrary(MAJOR, MINOR)
 
 if not Amr then return end -- already loaded by something else
@@ -152,20 +152,12 @@ Amr.FactionIds = {
 }
 
 Amr.InstanceIds = {
-	EmeraldNightmare = 1520,
-	Nighthold = 1530,
-	TrialOfValor = 1648,
-	TombOfSargeras = 1676,
-	Antorus = 1712
+	Uldir = 1861
 }
 
 -- instances that AskMrRobot currently supports logging for
 Amr.SupportedInstanceIds = {
-	[1520] = true,
-	[1530] = true,
-	[1648] = true,
-	[1676] = true,
-	[1712] = true
+	[1861] = true
 }
 
 

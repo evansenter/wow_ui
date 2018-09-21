@@ -20,7 +20,7 @@ local function createDifficultyCheckBox(instanceId, difficultyId)
 end
 
 -- render a group of controls for auto-logging of a raid zone
-local function renderAutoLogSection(instanceId, container)
+local function renderAutoLogSection(instanceId, container, i, autoLbls, autoChks)
 	_autoChecks[instanceId] = {}
 	
 	local lbl = AceGUI:Create("AmrUiLabel")
@@ -29,10 +29,18 @@ local function renderAutoLogSection(instanceId, container)
 	lbl:SetText(L.InstanceNames[instanceId])
 	lbl:SetFont(Amr.CreateFont("Regular", 20, Amr.Colors.White))
 	
+	if i == 1 then
+		lbl:SetPoint("TOPLEFT", _chkAutoAll.frame, "BOTTOMLEFT", -1, -15)
+	elseif i % 2 == 0 then
+		lbl:SetPoint("TOPLEFT", autoLbls[i - 1].frame, "TOPRIGHT", 40, 0)
+	else
+		lbl:SetPoint("TOPLEFT", autoChks[i - 2].frame, "BOTTOMLEFT", 0, -30)
+	end
+
 	local line = AceGUI:Create("AmrUiPanel")
+	container:AddChild(line)
 	line:SetHeight(1)
 	line:SetBackgroundColor(Amr.Colors.White)
-	container:AddChild(line)
 	line:SetPoint("TOPLEFT", lbl.frame, "BOTTOMLEFT", 1, -7)
 	line:SetPoint("TOPRIGHT", lbl.frame, "BOTTOMRIGHT", 0, -7)
 	
@@ -43,7 +51,7 @@ local function renderAutoLogSection(instanceId, container)
 	local chkNormal = createDifficultyCheckBox(instanceId, Amr.Difficulties.Normal)
 	container:AddChild(chkNormal)
 	chkNormal:SetPoint("TOPLEFT", line.frame, "BOTTOMLEFT", 0, -30)
-	
+
 	-- find the widest of mythic/normal
 	local w = math.max(chkMythic:GetWidth(), chkNormal:GetWidth())
 	
@@ -54,7 +62,7 @@ local function renderAutoLogSection(instanceId, container)
 	local chkLfr = createDifficultyCheckBox(instanceId, Amr.Difficulties.Lfr)
 	container:AddChild(chkLfr)
 	chkLfr:SetPoint("TOPLEFT", line.frame, "BOTTOMLEFT", w + 20, -30)
-	
+		
 	return lbl, chkNormal
 end
 
@@ -179,14 +187,7 @@ function Amr:RenderTabLog(container)
 	local autoLbls = {}
 	local autoChks = {}
 	for i, instanceId in ipairs(Amr.InstanceIdsOrdered) do
-		local autoLbl, autoChk = renderAutoLogSection(instanceId, container)
-		if i == 1 then
-			autoLbl:SetPoint("TOPLEFT", _chkAutoAll.frame, "BOTTOMLEFT", -1, -15)
-		elseif i % 2 == 0 then
-			autoLbl:SetPoint("TOPLEFT", autoLbls[i - 1].frame, "TOPRIGHT", 40, 0)
-		else
-			autoLbl:SetPoint("TOPLEFT", autoChks[i - 2].frame, "BOTTOMLEFT", 0, -30)
-		end
+		local autoLbl, autoChk = renderAutoLogSection(instanceId, container, i, autoLbls, autoChks)		
 		
 		table.insert(autoLbls, autoLbl)
 		table.insert(autoChks, autoChk)
@@ -294,8 +295,10 @@ local function updateAutoLogging(force, noWait)
 	Amr.db.char.Logging.LastZone = zone
 	Amr.db.char.Logging.LastDiff = difficultyId
 
-	if not Amr.db.profile.Logging.Auto[tonumber(instanceId)] then
-		Amr.db.profile.Logging.Auto[tonumber(instanceId)] = {}
+	if Amr.IsSupportedInstanceId(instanceId) then
+		if not Amr.db.profile.Logging.Auto[tonumber(instanceId)] then
+			Amr.db.profile.Logging.Auto[tonumber(instanceId)] = {}
+		end
 	end
 	
 	if Amr.IsSupportedInstanceId(instanceId) and Amr.db.profile.Logging.Auto[tonumber(instanceId)][tonumber(difficultyId)] then
@@ -626,7 +629,7 @@ local function logPlayerExtraData()
 end
 
 function Amr:InitializeCombatLog()
-	--updateAutoLogging()
+	updateAutoLogging()
 end
 
 Amr:AddEventHandler("UPDATE_INSTANCE_INFO", updateAutoLogging)

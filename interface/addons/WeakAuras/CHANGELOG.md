@@ -1,16 +1,17 @@
-# [2.7.2](https://github.com/WeakAuras/WeakAuras2/tree/2.7.2) (2018-08-13)
+# [2.7.10](https://github.com/WeakAuras/WeakAuras2/tree/2.7.10) (2018-09-16)
 
-[Full Changelog](https://github.com/WeakAuras/WeakAuras2/compare/2.7.1...2.7.2)
+[Full Changelog](https://github.com/WeakAuras/WeakAuras2/compare/2.7.9...2.7.10)
 
-Infus (5):
+## Highlights
 
-- Don't run the tsu trigger function to decide CanHaveTooltip
-- Fix fallback code for disabled region plugins
-- Fix Conditions being unable to set width/height
-- Fix for masque skinning of buttons not in a group
-- Fix framelevel of first aura in a group
+ * Bugfix update for last release
 
-Zinoh (1):
+* NOTE: Update requires a game restart! 
 
-- Let Masque Skin the Glow (#645)
+## Commits
+
+Buds (2):
+
+- templates: fix 2 wrong spellids
+- may fix migration error
 

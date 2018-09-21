@@ -41,9 +41,9 @@
 --  Globals/Default Options  --
 -------------------------------
 DBM = {
-	Revision = tonumber(("$Revision: 17719 $"):sub(12, -3)),
-	DisplayVersion = "8.0.4", -- the string that is shown as version
-	ReleaseRevision = 17719 -- the revision of the latest stable version that is available
+	Revision = tonumber(("$Revision: 17892 $"):sub(12, -3)),
+	DisplayVersion = "8.0.10", -- the string that is shown as version
+	ReleaseRevision = 17892 -- the revision of the latest stable version that is available
 }
 DBM.HighestRelease = DBM.ReleaseRevision --Updated if newer version is detected, used by update nags to reflect critical fixes user is missing on boss pulls
 
@@ -105,6 +105,7 @@ DBM.DefaultOptions = {
 	EventSoundWipe = "None",
 	EventSoundEngage = "",
 	EventSoundMusic = "None",
+	EventSoundTurle = "None",
 	EventSoundDungeonBGM = "None",
 	EventSoundMusicCombined = false,
 	EventDungMusicMythicFilter = true,
@@ -138,7 +139,7 @@ DBM.DefaultOptions = {
 	FilterInterrupt2 = "TandFandBossCooldown",
 	FilterInterruptNoteName = false,
 	FilterDispel = true,
-	FilterTrashWarnings = false,
+	FilterTrashWarnings2 = true,
 	--FilterSelfHud = true,
 	AutologBosses = false,
 	AdvancedAutologBosses = false,
@@ -250,6 +251,7 @@ DBM.DefaultOptions = {
 	HelpMessageVersion = 3,
 	MoviesSeen = {},
 	MovieFilter = "AfterFirst",
+	BonusFilter = "Never",
 	LastRevision = 0,
 	DebugMode = false,
 	DebugLevel = 1,
@@ -287,11 +289,17 @@ DBM.Victory = {
 DBM.Defeat = {
 	{text = "None",value  = "None"},
 	{text = "Random",value  = "Random"},
-	{text = "Kologarn: You Fail",value = "Sound\\Creature\\Kologarn\\UR_Kologarn_Slay02.ogg", length=4},
 	{text = "Alizabal: Incompetent Raiders",value = "Sound\\Creature\\ALIZABAL\\VO_BH_ALIZABAL_RESET_01.ogg", length=4},
+	{text = "Bwonsamdi: Over Your Head",value = "Sound\\Creature\\bwonsamdi\\vo_801_bwonsamdi_35_m.ogg", length=4},
+	{text = "Bwonsamdi: Pour Little Thing",value = "Sound\\Creature\\bwonsamdi\\vo_801_bwonsamdi_37_m.ogg", length=4},
+	{text = "Bwonsamdi: Impressive Death",value = "Sound\\Creature\\bwonsamdi\\vo_801_bwonsamdi_38_m.ogg", length=4},
+	{text = "Bwonsamdi: All That Armor",value = "Sound\\Creature\\bwonsamdi\\vo_801_bwonsamdi_50_m.ogg", length=4},
+	{text = "Kologarn: You Fail",value = "Sound\\Creature\\Kologarn\\UR_Kologarn_Slay02.ogg", length=4},
 	{text = "Hodir: Tragic",value = "Sound\\Creature\\Hodir\\UR_Hodir_Slay01.ogg", length=4},
 	{text = "Thorim: Failures",value = "Sound\\Creature\\Thorim\\UR_Thorim_P1Wipe01.ogg", length=4},
 	{text = "Valithria: Failures",value = "Sound\\Creature\\ValithriaDreamwalker\\IC_Valithria_Berserk01.ogg", length=4},
+	{text = "Yogg-Saron: Laugh",value = "Sound\\Creature\\YoggSaron\\UR_YoggSaron_Slay01.ogg", length=4},
+	--{text = "Scrollsage Nola: Cycle",value = "Sound\\Creature\\Thorim\\UR_Thorim_P1Wipe01.ogg", length=4},--When someone gives me the correct sound path (not media ID), this will be added
 }
 DBM.Music = {--Contains all music media, period
 	{text = "None",value  = "None"},
@@ -403,7 +411,7 @@ local AddMsg
 local delayedFunction
 local dataBroker
 
-local fakeBWVersion, fakeBWHash = 104, "1585351"
+local fakeBWVersion, fakeBWHash = 111, "61869dc"
 local versionQueryString, versionResponseString = "Q^%d^%s", "V^%d^%s"
 
 local enableIcons = true -- set to false when a raid leader or a promoted player has a newer version of DBM
@@ -1353,11 +1361,12 @@ do
 				"UPDATE_BATTLEFIELD_STATUS",
 				"PLAY_MOVIE",
 				"CINEMATIC_START",
-				--"PLAYER_LEVEL_UP",--PLAYER_LEVEL_CHANGED
+				"PLAYER_LEVEL_CHANGED",
 				"PLAYER_SPECIALIZATION_CHANGED",
 				"PARTY_INVITE_REQUEST",
 				"LOADING_SCREEN_DISABLED",
-				"SCENARIO_COMPLETED"
+				"SCENARIO_COMPLETED",
+				"UPDATE_VEHICLE_ACTIONBAR"
 			)
 			if RolePollPopup:IsEventRegistered("ROLE_POLL_BEGIN") then
 				RolePollPopup:UnregisterEvent("ROLE_POLL_BEGIN")
@@ -3293,7 +3302,7 @@ function DBM:SpecChanged(force)
 	end
 end
 
-function DBM:PLAYER_LEVEL_UP()
+function DBM:PLAYER_LEVEL_CHANGED()
 	playerLevel = UnitLevel("player")
 	if playerLevel < 15 and playerLevel > 9 then
 		self:PLAYER_SPECIALIZATION_CHANGED()
@@ -3749,6 +3758,44 @@ function DBM:SCENARIO_COMPLETED()
 	end
 end
 
+do
+	local function delayedVehicleCheck(self)
+		if self.Options.turtlePlaying and not HasVehicleActionBar() then
+			DBM:TransitionToDungeonBGM(false, true)
+			return
+		end
+		if self:GetCIDFromGUID(UnitGUID("pet")) == 138172 then
+			fireEvent("DBM_MusicStart", "Turtle")
+			if not self.Options.tempMusicSetting then
+				self.Options.tempMusicSetting = tonumber(GetCVar("Sound_EnableMusic"))
+				if self.Options.tempMusicSetting == 0 then
+					SetCVar("Sound_EnableMusic", 1)
+				else
+					self.Options.tempMusicSetting = nil--Don't actually need it
+				end
+			end
+			local path = "MISSING"
+			if self.Options.EventSoundTurle == "Random" then
+				local usedTable = self.Options.EventSoundMusicCombined and DBM.Music or DBM.BattleMusic
+				local random = fastrandom(3, #usedTable)
+				path = usedTable[random].value
+			else
+				path = self.Options.EventSoundTurle
+			end
+			PlayMusic(path)
+			self.Options.turtlePlaying = true
+			DBM:Debug("Starting turtle music with file: "..path)
+		end
+	end
+
+	function DBM:UPDATE_VEHICLE_ACTIONBAR()
+		if self.Options.EventSoundTurle and self.Options.EventSoundTurle ~= "None" and self.Options.EventSoundTurle ~= "" then
+			self:Unschedule(delayedVehicleCheck)
+			self:Schedule(1, delayedVehicleCheck, self)
+		end
+	end
+end
+
 --------------------------------
 --  Load Boss Mods on Demand  --
 --------------------------------
@@ -3785,9 +3832,10 @@ do
 				self.Options.tempMusicSetting = nil
 				DBM:Debug("Restoring Sound_EnableMusic CVAR")
 			end
-			if self.Options.musicPlaying then--Primarily so DBM doesn't call StopMusic unless DBM is one that started it. We don't want to screw with other addons
+			if self.Options.musicPlaying or self.Options.turtlePlaying then--Primarily so DBM doesn't call StopMusic unless DBM is one that started it. We don't want to screw with other addons
 				StopMusic()
 				self.Options.musicPlaying = nil
+				self.Options.turtlePlaying = nil
 				DBM:Debug("Stopping music")
 			end
 			fireEvent("DBM_MusicStop", "ZoneOrCombatEndTransition")
@@ -3819,8 +3867,9 @@ do
 	end
 	local function SecondaryLoadCheck(self)
 		local _, instanceType, difficulty, _, _, _, _, mapID, instanceGroupSize = GetInstanceInfo()
-		if not savedDifficulty then
-			savedDifficulty, difficultyText = self:GetCurrentInstanceDifficulty()
+		local currentDifficulty, currentDifficultyText = self:GetCurrentInstanceDifficulty()
+		if currentDifficulty ~= savedDifficulty then
+			savedDifficulty, difficultyText = currentDifficulty, currentDifficultyText
 		end
 		self:Debug("Instance Check fired with mapID "..mapID.." and difficulty "..difficulty, 2)
 		if LastInstanceMapID == mapID then
@@ -6273,7 +6322,7 @@ do
 	local autoTLog = false
 	
 	local function isCurrentContent()
-		if LastInstanceMapID == 1520 or LastInstanceMapID == 1530 or LastInstanceMapID == 1220 or LastInstanceMapID == 1648 or LastInstanceMapID == 1676 or LastInstanceMapID == 1712 then--Legion
+		if LastInstanceMapID == 1861 then--BfA
 			return true
 		end
 		return false
@@ -7125,6 +7174,59 @@ do
 	end
 end
 
+-------------------
+--  Bonus Filter --
+-------------------
+do
+	local bonusTimeStamp = 0
+	local bonusRollForce = false
+	local warFrontMaps = {
+		[14] = true, -- Arathi Highlands
+	}
+	local function hideBonusRoll(self)
+		bonusTimeStamp = GetTime()
+		BonusRollFrame:Hide()
+		self:AddMsg(DBM_CORE_BONUS_SKIPPED)
+	end
+	local function showBonusRoll(self)
+		if (GetTime() - bonusTimeStamp) < 180 then--3 min timer still active
+			BonusRollFrame:Show()
+			BonusRollFrame:Show()
+			bonusTimeStamp = 0--Reset to 0, because you can't call frame back more than once, once you pass it's over
+		else--Out of Time
+			self:AddMsg(DBM_CORE_BONUS_EXPIRED)
+		end
+	end
+	SLASH_DBMBONUS1 = "/dbmbonusroll"
+	SlashCmdList["DBMBONUS"] = function(msg)
+		bonusRollForce = true
+		showBonusRoll(DBM)
+	end
+	--TODO, see where timewalking ilvl fits into filters
+	--Couldn't get any of events to work so have to hook the show script directly
+	BonusRollFrame:HookScript("OnShow", function(self, event, ...)
+		if bonusRollForce then
+			bonusRollForce = false
+			return
+		end
+		DBM:Debug("BonusRollFrame OnShow fired", 2)
+		if DBM.Options.BonusFilter == "Never" then return end
+		local _, _, difficultyId, _, _, _, _, mapID = GetInstanceInfo()
+		local localMapID = C_Map.GetBestMapForUnit("player") or 0
+		local keystoneLevel = C_ChallengeMode.GetActiveKeystoneInfo() or 0
+		DBM:Unschedule(hideBonusRoll)
+		if DBM.Options.BonusFilter == "TrivialContent" and (difficultyId == 1 or difficultyId == 2) then--Basically anything below 340 ilvl (normal/heroic dungeons)
+			hideBonusRoll(DBM)
+		elseif DBM.Options.BonusFilter == "NormalRaider" and (difficultyId == 17 or difficultyId == 23 or (difficultyId == 8 and keystoneLevel < 5)) then--Basically, anything below 355 (normal/heroic/mythic dungeons lower than 5, LFR
+			hideBonusRoll(DBM)
+		elseif DBM.Options.BonusFilter == "HeroicRaider" and (difficultyId == 14 or difficultyId == 17 or difficultyId == 23 or (difficultyId == 8 and keystoneLevel < 10) or (difficultyId == 0 and not warFrontMaps[localMapID])) then--Basically, anything below 370 (normal/heroic/mythic dungeons lower than 10, LFR/Normal Raids
+			hideBonusRoll(DBM)
+		elseif DBM.Options.BonusFilter == "MythicRaider" and (difficultyId == 14 or difficultyId == 15 or difficultyId == 17 or difficultyId == 23 or difficultyId == 8 or difficultyId == 0) then--Basically, anything below 385 (ANY dungeon, LFR/Normal/Heroic Raids
+			hideBonusRoll(DBM)
+		end
+	end)
+end
+
 ----------------------------
 --  Boss Mod Constructor  --
 ----------------------------
@@ -7398,17 +7500,21 @@ function bossModPrototype:IsTrivial(level)
 	return false
 end
 
-function bossModPrototype:IsValidWarning(sourceGUID)
-	for uId in DBM:GetGroupMembers() do
-		local target = uId.."target"
-		if UnitExists(target) and UnitGUID(target) == sourceGUID and UnitAffectingCombat(target) then return true end
+function bossModPrototype:IsValidWarning(sourceGUID, customunitID)
+	if customunitID then
+		if UnitExists(customunitID) and UnitGUID(customunitID) == sourceGUID and UnitAffectingCombat(customunitID) then return true end
+	else
+		for uId in DBM:GetGroupMembers() do
+			local target = uId.."target"
+			if UnitExists(target) and UnitGUID(target) == sourceGUID and UnitAffectingCombat(target) then return true end
+		end
 	end
 	return false
 end
 
 --Skip param is used when CheckInterruptFilter is actually being used for a simpe target/focus check and nothing more.
 --checkCooldown should never be passed with skip or COUNT interrupt warnings. It should be passed with any other interrupt filter
-function bossModPrototype:CheckInterruptFilter(sourceGUID, skip, checkCooldown)
+function bossModPrototype:CheckInterruptFilter(sourceGUID, skip, checkCooldown, ignoreTandF)
 	if DBM.Options.FilterInterrupt2 == "None" and not skip then return true end--use doesn't want to use interrupt filter, always return true
 	--Pummel, Mind Freeze, Counterspell, Kick, Skull Bash, Rebuke, Silence, Wind Shear, Disrupt, Solar Beam
 	local InterruptAvailable = true
@@ -7419,7 +7525,7 @@ function bossModPrototype:CheckInterruptFilter(sourceGUID, skip, checkCooldown)
 	if requireCooldown and ((GetSpellCooldown(6552)) ~= 0 or (GetSpellCooldown(47528)) ~= 0 or (GetSpellCooldown(2139)) ~= 0 or (GetSpellCooldown(1766)) ~= 0 or (GetSpellCooldown(106839)) ~= 0 or (GetSpellCooldown(96231)) ~= 0 or (GetSpellCooldown(15487)) ~= 0 or (GetSpellCooldown(57994)) ~= 0 or (GetSpellCooldown(183752)) ~= 0 or (GetSpellCooldown(78675)) ~= 0) then
 		InterruptAvailable = false--checkCooldown check requested and player has no spell that can interrupt available
 	end
-	if InterruptAvailable and (UnitGUID("target") == sourceGUID or UnitGUID("focus") == sourceGUID) then
+	if InterruptAvailable and (ignoreTandF or UnitGUID("target") == sourceGUID or UnitGUID("focus") == sourceGUID) then
 		return true
 	end
 	return false
@@ -7930,7 +8036,14 @@ do
 			["HasInterrupt"] = true,
 			["RemoveEnrage"] = true,
 		},
-		[255] = {	--Survival Hunter (Legion)
+		[254] = {	--Markmanship Hunter Hunter
+			["Dps"] = true,
+			["Ranged"] = true,
+			["RangedDps"] = true,
+			["Physical"] = true,
+			["HasInterrupt"] = true,
+		},
+		[255] = {	--Survival Hunter (Legion+)
 			["Dps"] = true,
 			["Melee"] = true,
 			["MeleeDps"] = true,
@@ -8052,7 +8165,6 @@ do
 	specRoleTable[64] = specRoleTable[62]--Fire Mage same as arcane
 	specRoleTable[72] = specRoleTable[71]--Fury Warrior same as Arms
 	specRoleTable[252] = specRoleTable[251]--Unholy DK same as frost
-	specRoleTable[254] = specRoleTable[253]--Markmanship Hunter same as beast
 	specRoleTable[257] = specRoleTable[256]--Holy Priest same as disc
 	specRoleTable[260] = specRoleTable[259]--Combat Rogue same as Assassination
 	specRoleTable[261] = specRoleTable[259]--Subtlety Rogue same as Assassination
@@ -8946,8 +9058,8 @@ do
 		return newAnnounce(self, "you", spellId, color or 1, ...)
 	end
 
-	function bossModPrototype:NewTargetNoFilterAnnounce(spellId, color, icon, optionDefault, optionName, castTime, preWarnTime, noSound, noFilter)
-		return newAnnounce(self, "target", spellId, color or 3, icon, optionDefault, optionName, castTime, preWarnTime, noSound, true)
+	function bossModPrototype:NewTargetNoFilterAnnounce(spellId, color, icon, optionDefault, optionName, castTime, preWarnTime, soundOption, noFilter)
+		return newAnnounce(self, "target", spellId, color or 3, icon, optionDefault, optionName, castTime, preWarnTime, soundOption, true)
 	end
 	
 	function bossModPrototype:NewTargetAnnounce(spellId, color, ...)
@@ -8986,46 +9098,42 @@ do
 		return newAnnounce(self, "stack", spellId, color or 2, ...)
 	end
 
-	function bossModPrototype:NewCastAnnounce(spellId, color, castTime, icon, optionDefault, optionName, noArg, noSound)
+	function bossModPrototype:NewCastAnnounce(spellId, color, castTime, icon, optionDefault, optionName, noArg, soundOption)
 		local optionVersion
 		if type(optionName) == "number" then
 			optionVersion = optionName
 			optionName = nil
 		end
-		if type(spellId) == "string" and spellId:match("OptionVersion") then--LEGACY hack, remove when new DBM core and other mods released
-			print("NewCastAnnounce is using OptionVersion and this is depricated for "..color)
-			return
-		end
-		return newAnnounce(self, "cast", spellId, color or 3, icon, optionDefault, optionName, castTime, nil, noSound)
+		return newAnnounce(self, "cast", spellId, color or 3, icon, optionDefault, optionName, castTime, nil, soundOption)
 	end
 
 	function bossModPrototype:NewSoonAnnounce(spellId, color, ...)
-		return newAnnounce(self, "soon", spellId, color or 1, ...)
+		return newAnnounce(self, "soon", spellId, color or 2, ...)
+	end
+	
+	function bossModPrototype:NewSoonCountAnnounce(spellId, color, ...)
+		return newAnnounce(self, "sooncount", spellId, color or 2, ...)
 	end
 
-	function bossModPrototype:NewPreWarnAnnounce(spellId, time, color, icon, optionDefault, optionName, noArg, noSound)
+	function bossModPrototype:NewPreWarnAnnounce(spellId, time, color, icon, optionDefault, optionName, noArg, soundOption)
 		local optionVersion
 		if type(optionName) == "number" then
 			optionVersion = optionName
 			optionName = nil
 		end
-		if type(spellId) == "string" and spellId:match("OptionVersion") then--LEGACY hack, remove when new DBM core and other mods released
-			print("NewCastAnnounce is using OptionVersion and this is depricated for "..color)
-			return
-		end
-		return newAnnounce(self, "prewarn", spellId, color or 1, icon, optionDefault, optionName, nil, time, noSound)
+		return newAnnounce(self, "prewarn", spellId, color or 2, icon, optionDefault, optionName, nil, time, soundOption)
 	end
 
 	function bossModPrototype:NewPhaseAnnounce(stage, color, icon, ...)
-		return newAnnounce(self, "stage", stage, color or 1, icon or "Interface\\Icons\\Spell_Nature_WispSplode", ...)
+		return newAnnounce(self, "stage", stage, color or 2, icon or "Interface\\Icons\\Spell_Nature_WispSplode", ...)
 	end
 
 	function bossModPrototype:NewPhaseChangeAnnounce(color, icon, ...)
-		return newAnnounce(self, "stagechange", 0, color or 1, icon or "Interface\\Icons\\Spell_Nature_WispSplode", ...)
+		return newAnnounce(self, "stagechange", 0, color or 2, icon or "Interface\\Icons\\Spell_Nature_WispSplode", ...)
 	end
 
 	function bossModPrototype:NewPrePhaseAnnounce(stage, color, icon, ...)
-		return newAnnounce(self, "prestage", stage, color or 1, icon or "Interface\\Icons\\Spell_Nature_WispSplode", ...)
+		return newAnnounce(self, "prestage", stage, color or 2, icon or "Interface\\Icons\\Spell_Nature_WispSplode", ...)
 	end
 end
 
@@ -9161,12 +9269,12 @@ do
 	end
 
 	function countdownProtoType:Start(timer, count)
+		if DBM.Options.DontPlayCountdowns then return end
 		if not self.option or self.mod.Options[self.option] then
 			timer = timer or self.timer or 10
 			timer = timer < 2 and self.timer or timer
 			count = count or self.count or 5
 			if timer <= count then count = floor(timer) end
-			if DBM.Options.DontPlayCountdowns then return end
 			if not path1 or not path2 or not path3 then
 				DBM:Debug("Voice cache not built at time of countdownProtoType:Start. On fly caching.", 3)
 				DBM:BuildVoiceCountdownCache()
@@ -9207,6 +9315,7 @@ do
 	countdownProtoType.Show = countdownProtoType.Start
 
 	function countdownProtoType:Schedule(t)
+		if DBM.Options.DontPlayCountdowns then return end
 		return schedule(t, self.Start, self.mod, self)
 	end
 
@@ -9219,10 +9328,6 @@ do
 	local function newCountdown(self, countdownType, timer, spellId, optionDefault, optionName, count, textDisabled, altVoice)
 		if not spellId and not optionName then
 			print("NewCountdown: you must provide either spellId or optionName", 2)
-			return
-		end
-		if type(timer) == "string" and timer:match("OptionVersion") then
-			print("OptionVersion depricated for newCountdown :"..optionDefault)
 			return
 		end
 		local optionVersion
@@ -9603,11 +9708,12 @@ do
 
 	function specialWarningPrototype:Show(...)
 		if not DBM.Options.DontShowSpecialWarnings and not DBM.Options.DontShowSpecialWarningText and (not self.option or self.mod.Options[self.option]) and not moving and frame then
-			if self.mod:IsEasyDungeon() and self.mod.isTrashMod and DBM.Options.FilterTrashWarnings then return end
+			if self.mod:IsEasyDungeon() and self.mod.isTrashMod and DBM.Options.FilterTrashWarnings2 then return end
 			if self.announceType == "taunt" and DBM.Options.FilterTankSpec and not self.mod:IsTank() then return end--Don't tell non tanks to taunt, ever.
 			local argTable = {...}
 			-- add a default parameter for move away warnings
 			if self.announceType == "gtfo" then
+				if DBM:UnitDebuff("player", 27827) then return end--Don't tell a priest in spirit of redemption form to GTFO, they can't, and they don't take damage from it anyhow
 				if #argTable == 0 then
 					argTable[1] = DBM_CORE_BAD
 				end
@@ -9722,7 +9828,7 @@ do
 	function specialWarningPrototype:CombinedShow(delay, ...)
 		if DBM.Options.DontShowSpecialWarnings or DBM.Options.DontShowSpecialWarningText then return end
 		if self.option and not self.mod.Options[self.option] then return end
-		if self.mod:IsEasyDungeon() and self.mod.isTrashMod and DBM.Options.FilterTrashWarnings then return end
+		if self.mod:IsEasyDungeon() and self.mod.isTrashMod and DBM.Options.FilterTrashWarnings2 then return end
 		local argTable = {...}
 		for i = 1, #argTable do
 			if type(argTable[i]) == "string" then
@@ -9760,7 +9866,7 @@ do
 		local always = DBM.Options.AlwaysPlayVoice
 		local voice = DBM.Options.ChosenVoicePack
 		if voice == "None" then return end
-		if self.mod:IsEasyDungeon() and self.mod.isTrashMod and DBM.Options.FilterTrashWarnings then return end
+		if self.mod:IsEasyDungeon() and self.mod.isTrashMod and DBM.Options.FilterTrashWarnings2 then return end
 		if not DBM.Options.DontShowSpecialWarnings and (not self.option or self.mod.Options[self.option]) or always then
 			--Filter tank specific voice alerts for non tanks if tank filter enabled
 			--But still allow AlwaysPlayVoice to play as well.
@@ -9950,6 +10056,14 @@ do
 		return newSpecialWarning(self, "move", text, nil, optionDefault, ...)
 	end
 	
+	function bossModPrototype:NewSpecialWarningKeepMove(text, optionDefault, ...)
+		return newSpecialWarning(self, "keepmove", text, nil, optionDefault, ...)
+	end
+
+	function bossModPrototype:NewSpecialWarningStopMove(text, optionDefault, ...)
+		return newSpecialWarning(self, "stopmove", text, nil, optionDefault, ...)
+	end
+	
 	function bossModPrototype:NewSpecialWarningGTFO(text, optionDefault, ...)
 		return newSpecialWarning(self, "gtfo", text, nil, optionDefault, ...)
 	end
@@ -9964,6 +10078,10 @@ do
 	
 	function bossModPrototype:NewSpecialWarningMoveAway(text, optionDefault, ...)
 		return newSpecialWarning(self, "moveaway", text, nil, optionDefault, ...)
+	end
+	
+	function bossModPrototype:NewSpecialWarningMoveAwayCount(text, optionDefault, ...)
+		return newSpecialWarning(self, "moveawaycount", text, nil, optionDefault, ...)
 	end
 	
 	function bossModPrototype:NewSpecialWarningMoveTo(text, optionDefault, ...)
@@ -9993,11 +10111,12 @@ do
 	function bossModPrototype:NewSpecialWarningCount(text, optionDefault, ...)
 		return newSpecialWarning(self, "count", text, nil, optionDefault, ...)
 	end
+	
+	function bossModPrototype:NewSpecialWarningSoonCount(text, optionDefault, ...)
+		return newSpecialWarning(self, "sooncount", text, nil, optionDefault, ...)
+	end
 
 	function bossModPrototype:NewSpecialWarningStack(text, optionDefault, stacks, ...)
-		if type(text) == "string" and text:match("OptionVersion") then
-			print("NewSpecialWarning: you must provide remove optionversion hack for "..optionDefault)
-		end
 		return newSpecialWarning(self, "stack", text, stacks, optionDefault, ...)
 	end
 
@@ -10018,9 +10137,6 @@ do
 	end
 
 	function bossModPrototype:NewSpecialWarningPreWarn(text, optionDefault, time, ...)
-		if type(text) == "string" and text:match("OptionVersion") then
-			print("NewSpecialWarning: you must provide remove optionversion hack for "..optionDefault)
-		end
 		return newSpecialWarning(self, "prewarn", text, time, optionDefault, ...)
 	end
 

@@ -14,6 +14,7 @@ local GetSpecialization = GetSpecialization
 local GetSpecializationInfo = GetSpecializationInfo
 local GetSpecializationSpells = GetSpecializationSpells
 local GetSpellTexture = GetSpellTexture
+local C_SpecializationInfo_GetPvpTalentSlotInfo = C_SpecializationInfo.GetPvpTalentSlotInfo
 --Global variables that we don't cache, list them here for mikk's FindGlobals script
 -- GLOBALS: MAX_PVP_TALENT_TIERS, MAX_PVP_TALENT_COLUMNS, SPEC_SPELLS_DISPLAY
 -- GLOBALS: MAX_TALENT_TIERS, NUM_TALENT_COLUMNS, PlayerSpecTab1, PlayerSpecTab2
@@ -84,7 +85,7 @@ local function LoadSkin()
 	PlayerTalentFrameSpecializationSpellScrollFrameScrollChild.Seperator:SetColorTexture(1, 1, 1)
 	PlayerTalentFrameSpecializationSpellScrollFrameScrollChild.Seperator:SetAlpha(0.2)
 
-	for i=1, 2 do
+	for i = 1, 2 do
 		local tab = _G['PlayerSpecTab'..i]
 		_G['PlayerSpecTab'..i..'Background']:Kill()
 
@@ -117,6 +118,7 @@ local function LoadSkin()
 		_G["PlayerTalentFrameTalentsTalentRow"..i.."Bg"]:Hide()
 		row:DisableDrawLayer("BORDER")
 		row:StripTextures()
+		row.GlowFrame:Kill()
 
 		row.TopLine:Point("TOP", 0, 4)
 		row.BottomLine:Point("BOTTOM", 0, -4)
@@ -135,9 +137,17 @@ local function LoadSkin()
 
 			bu.bg = CreateFrame("Frame", nil, bu)
 			bu.bg:CreateBackdrop("Overlay")
-			bu.bg:SetFrameLevel(bu:GetFrameLevel() -2)
+			bu.bg:SetFrameLevel(bu:GetFrameLevel() - 2)
 			bu.bg:Point("TOPLEFT", 15, -1)
 			bu.bg:Point("BOTTOMRIGHT", -10, 1)
+			bu.bg.backdrop:SetBackdropBorderColor(unpack(E["media"].rgbvaluecolor))
+
+			bu.GlowFrame.TopGlowLine = bu.bg.backdrop
+			bu.GlowFrame.TopGlowLine:Hide()
+			bu.GlowFrame.BottomGlowLine:Kill()
+
+			bu.GlowFrame:HookScript('OnShow', function(self) self.TopGlowLine:Show() bu.bg.backdrop:Show() end)
+			bu.GlowFrame:HookScript('OnHide', function(self) self.TopGlowLine:Hide() bu.bg.backdrop:Hide() end)
 
 			bu.bg.SelectedTexture = bu.bg:CreateTexture(nil, 'ARTWORK')
 			bu.bg.SelectedTexture:Point("TOPLEFT", bu, "TOPLEFT", 15, -1)
@@ -192,23 +202,22 @@ local function LoadSkin()
 	hooksecurefunc("PlayerTalentFrame_UpdateSpecFrame", function(self, spec)
 		local playerTalentSpec = GetSpecialization(nil, self.isPet, PlayerSpecTab2:GetChecked() and 2 or 1)
 		local shownSpec = spec or playerTalentSpec or 1
-		local numSpecs = GetNumSpecializations(nil, self.isPet);
-
+		local numSpecs = GetNumSpecializations(nil, self.isPet)
 		local id, _, _, icon = GetSpecializationInfo(shownSpec, nil, self.isPet)
 		local scrollChild = self.spellsScroll.child
 		scrollChild.specIcon:SetTexture(icon)
 
+		local index = 1
 		local bonuses
-		local bonusesIncrement = 1;
+		local bonusesIncrement = 1
 		if self.isPet then
 			bonuses = {GetSpecializationSpells(shownSpec, nil, self.isPet, true)}
-			bonusesIncrement = 2;
+			bonusesIncrement = 2
 		else
 			bonuses = C_SpecializationInfo_GetSpellsDisplay(id)
 		end
 
 		if bonuses then
-			local index = 1
 			for i = 1, #bonuses, bonusesIncrement do
 				local frame = scrollChild["abilityButton"..index]
 				if frame then
@@ -219,11 +228,9 @@ local function LoadSkin()
 
 					if not frame.reskinned then
 						frame.reskinned = true
-						frame:Size(30, 30)
 						frame.ring:Hide()
-						frame:SetTemplate("Default")
-						frame.icon:SetTexCoord(0.1, 0.9, 0.1, 0.9)
-						frame.icon:SetInside()
+						frame.icon:SetTexCoord(unpack(E.TexCoords))
+						frame.icon:SetSize(40, 40)
 					end
 				end
 				index = index + 1
@@ -330,38 +337,39 @@ local function LoadSkin()
 		end
 	end
 
-	-- PVP Talents
-	local function SkinPvpTalentSlots(button)
-		button._elvUIBG = S:CropIcon(button.Texture, button)
-		button.Texture:SetTexture([[Interface\Icons\INV_Misc_QuestionMark]])
-		button.Arrow:SetPoint("LEFT", button.Texture, "RIGHT", 5, 0)
-		button.Arrow:SetSize(26, 13)
-		button.Border:Hide()
-
-		button:SetSize(button:GetSize())
-		button.Texture:SetSize(32, 32)
-		button.TalentName:SetPoint("TOP", button, "BOTTOM", 0, 0)
-	end
-
-	local function SkinPvpTalentTrinketSlot(button)
-		SkinPvpTalentSlots(button)
-		button.Texture:SetTexture([[Interface\Icons\INV_Jewelry_Trinket_04]])
-		button.Texture:SetSize(48, 48)
-		button.Arrow:SetSize(26, 13)
-	end
-
-	local PvpTalentFrame = PlayerTalentFrameTalents.PvpTalentFrame
+	local PvpTalentFrame = _G["PlayerTalentFrameTalents"].PvpTalentFrame
 	PvpTalentFrame:StripTextures()
 
-	PvpTalentFrame.Swords:SetSize(72, 67)
-	PvpTalentFrame.Orb:Hide()
-	PvpTalentFrame.Ring:Hide()
+	for _, button in pairs(PvpTalentFrame.Slots) do
+		button:CreateBackdrop()
+		button.backdrop:SetOutside(button.Texture)
 
-	-- Skin the PvP Icons
-	SkinPvpTalentTrinketSlot(PvpTalentFrame.TrinketSlot)
-	SkinPvpTalentSlots(PvpTalentFrame.TalentSlot1)
-	SkinPvpTalentSlots(PvpTalentFrame.TalentSlot2)
-	SkinPvpTalentSlots(PvpTalentFrame.TalentSlot3)
+		button.Arrow:SetAlpha(0)
+		button.Border:Hide()
+
+		hooksecurefunc(button, "Update", function(self)
+			local slotInfo = C_SpecializationInfo_GetPvpTalentSlotInfo(self.slotIndex);
+			if (not slotInfo) then
+				return;
+			end
+
+			if (slotInfo.enabled) then
+				S:HandleTexture(self.Texture)
+				if (not slotInfo.selectedTalentID) then
+					self.Texture:SetTexture([[Interface\Icons\INV_Misc_QuestionMark]])
+					self.backdrop:SetBackdropBorderColor(0, 1, 0, 1)
+				else
+					self.backdrop:SetBackdropBorderColor(unpack(E["media"].bordercolor))
+				end
+			else
+				self.Texture:SetTexture([[Interface\PetBattles\PetBattle-LockIcon]])
+				self.Texture:SetTexCoord(0, 1, 0, 1)
+				self.Texture:SetDesaturated(true)
+				self.Texture:Show()
+				self.backdrop:SetBackdropBorderColor(1, 0, 0, 1)
+			end
+		end)
+	end
 
 	PvpTalentFrame.TalentList:StripTextures()
 	PvpTalentFrame.TalentList:CreateBackdrop("Transparent")
@@ -397,6 +405,10 @@ local function LoadSkin()
 	PvpTalentFrame.Swords:SetPoint("BOTTOM", 0, 30)
 	PvpTalentFrame.Label:SetPoint("BOTTOM", 0, 104)
 	PvpTalentFrame.InvisibleWarmodeButton:SetAllPoints(PvpTalentFrame.Swords)
+
+	PvpTalentFrame.Swords:SetSize(72, 67)
+	PvpTalentFrame.Orb:Hide()
+	PvpTalentFrame.Ring:Hide()
 
 	PvpTalentFrame.TrinketSlot:SetPoint("TOP", 0, -16)
 	PvpTalentFrame.TalentSlot1:SetPoint("TOP", PvpTalentFrame.TrinketSlot, "BOTTOM", 0, -16)

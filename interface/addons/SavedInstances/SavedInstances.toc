@@ -2,8 +2,8 @@
 ## Title: SavedInstances
 ## Notes: Tracks Raid, Instance, World Boss lockouts for all your characters, daily/weekly quests, currencies, trade cooldowns, and more!
 ## Author: Benjamin Staneck
-## Version: 8.0.5
-## X-ReleaseDate: 2018-08-15T12:51:09Z
+## Version: 8.0.6
+## X-ReleaseDate: 2018-09-19T12:34:55Z
 ## X-License: All Rights Reserved
 ## X-Category: Raid
 ## OptionalDeps: Ace3, CallbackHandler-1.0, LibDataBroker-1.1, LibDBIcon-1.0, LibQTip-1.0
@@ -32,5 +32,13 @@ Libs\LibDBIcon-1.0\LibDBIcon-1.0.lua
 
 locale.lua
 
+Core.lua
+Tradeskills.lua
+LFR.lua
+Emissary.lua
+WorldBosses.lua
+Currency.lua
+MythicPlus.lua
 SavedInstances.lua
+
 config.lua

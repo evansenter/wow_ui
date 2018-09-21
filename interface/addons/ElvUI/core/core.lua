@@ -46,6 +46,7 @@ local UnitFactionGroup = UnitFactionGroup
 -- GLOBALS: CUSTOM_CLASS_COLORS, ElvDB
 
 --Constants
+E.title = format("|cfffe7b2c%s |r", "ElvUI")
 E.myfaction, E.myLocalizedFaction = UnitFactionGroup("player");
 E.myLocalizedClass, E.myclass, E.myClassID = UnitClass("player");
 E.myLocalizedRace, E.myrace = UnitRace("player");
@@ -58,6 +59,7 @@ E.resolution = ({GetScreenResolutions()})[GetCurrentResolution()] or GetCVar("gx
 E.screenwidth, E.screenheight = GetPhysicalScreenSize();
 E.isMacClient = IsMacClient();
 E.LSM = LSM;
+E.NewSign = "|TInterface\\OptionsFrame\\UI-OptionsFrame-NewFeatureIcon:14:14|t" -- not used by ElvUI yet, but plugins like BenikUI and MerathilisUI use it.
 
 --Tables
 E["media"] = {};
@@ -113,6 +115,9 @@ E.DispelClasses = {
 		['Magic'] = false,
 		['Disease'] = true,
 		['Poison'] = true
+	},
+	['MAGE'] = {
+		['Curse'] = true
 	}
 }
 
@@ -873,6 +878,8 @@ function E:SendMessage()
 		C_ChatInfo_SendAddonMessage("ELVUI_VERSIONCHK", E.version, (not IsInRaid(LE_PARTY_CATEGORY_HOME) and IsInRaid(LE_PARTY_CATEGORY_INSTANCE)) and "INSTANCE_CHAT" or "RAID")
 	elseif IsInGroup() then
 		C_ChatInfo_SendAddonMessage("ELVUI_VERSIONCHK", E.version, (not IsInGroup(LE_PARTY_CATEGORY_HOME) and IsInGroup(LE_PARTY_CATEGORY_INSTANCE)) and "INSTANCE_CHAT" or "PARTY")
+	elseif IsInGuild() then
+		C_ChatInfo_SendAddonMessage("ELVUI_VERSIONCHK", E.version, "GUILD")
 	end
 
 	if E.SendMSGTimer then
@@ -1424,6 +1431,12 @@ function E:DBConversions()
 		E.db.nameplates.durationFontSize = nil
 		E.db.nameplates.durationFontOutline = nil
 	end
+	
+	if not E.db.chat.panelColorConverted then
+		local color = E.db.general.backdropfadecolor
+		E.db.chat.panelColor = {r = color.r, g = color.g, b = color.b, a = color.a}
+		E.db.chat.panelColorConverted = true
+	end
 end
 
 local CPU_USAGE = {}
@@ -1628,4 +1641,6 @@ function E:Initialize(loginFrame)
 			end
 		end)
 	end
+
+	DisableAddOn("ElvUI_EverySecondCounts")
 end

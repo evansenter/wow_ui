@@ -7,7 +7,7 @@ if not L then return end
 L["INCOMPATIBLE_ADDON"] = "The addon %s is not compatible with ElvUI's %s module. Please select either the addon or the ElvUI module to disable."
 
 --*_MSG locales
-L["LOGIN_MSG"] = "Welcome to %sElvUI|r version %s%s|r, type /ec to access the in-game configuration menu. If you are in need of technical support you can visit us at https://www.tukui.org"
+L["LOGIN_MSG"] = "Welcome to %sElvUI|r version %s%s|r, type /ec to access the in-game configuration menu. If you are in need of technical support you can visit us at https://www.tukui.org or join our Discord: https://discord.gg/xFWcfgE"
 
 --ActionBars
 L["Binding"] = true
@@ -43,6 +43,7 @@ L["Show/Hide Reagents"] = true
 L["Sort Tab"] = true --Not used, yet?
 L["Temporary Move"] = true
 L["Toggle Bags"] = true
+L["Vendor Grays"] = true
 L["Vendor / Delete Grays"] = true
 
 --Chat
@@ -77,6 +78,7 @@ L["Arena"] = true
 L["AVD: "] = true
 L["Avoidance Breakdown"] = true
 L["Bandwidth"] = true
+L["BfA Missions"] = true
 L["Building(s) Report:"] = true
 L["Character: "] = true
 L["Chest"] = true
@@ -167,6 +169,7 @@ L["CVars Set"] = true
 L["CVars"] = true
 L["Dark"] = true
 L["Disable"] = true
+L["Discord"] = true
 L["ElvUI Installation"] = true
 L["Finished"] = true
 L["Grid Size:"] = true
@@ -236,6 +239,7 @@ L["Toggle Configuration"] = true --layout\layout.lua
 L["AP:"] = true -- Artifact Power
 L["XP:"] = true
 L["You don't have permission to mark targets."] = true
+L["Voice Overlay"] = true
 
 --Movers
 L["Alternative Power"] = true
@@ -295,6 +299,8 @@ L["Target Powerbar"] = true
 L["TargetTarget Frame"] = true --Also used in UnitFrames
 L["TargetTargetTarget Frame"] = true --Also used in UnitFrames
 L["Tooltip"] = true
+L["UIWidgetBelowMinimapContainer"] = true
+L["UIWidgetTopContainer"] = true
 L["Vehicle Seat Frame"] = true
 L["Zone Ability"] = true
 L["DESC_MOVERCONFIG"] = [=[Movers unlocked. Move them now and click Lock when you are done.

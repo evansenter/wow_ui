@@ -7,7 +7,7 @@ if not L then return end
 L["INCOMPATIBLE_ADDON"] = "Das Addon %s ist nicht mit dem ElvUI %s Modul kompatibel. Bitte deaktiviere entweder das Addon oder deaktiviere das ElvUI Modul."
 
 --*_MSG locales
-L["LOGIN_MSG"] = "Willkommen zu %sElvUI|r Version %s%s|r, Tippe /ec um das Konfigurationsmenü aufzurufen. Für technische Hilfe, besuche das Supportforum unter https://www.tukui.org"
+L["LOGIN_MSG"] = "Willkommen zu %sElvUI|r Version %s%s|r, Tippe /ec um das Konfigurationsmenü aufzurufen. Für technische Hilfe, besuche das Supportforum unter https://www.tukui.org oder trete unserem Discord bei: https://discord.gg/xFWcfgE"
 
 --ActionBars
 L["Binding"] = "Belegung"
@@ -43,6 +43,7 @@ L["Show/Hide Reagents"] = "Reagenzien anzeigen/ausblenden"
 L["Sort Tab"] = "Tab sortieren" --Not used, yet?
 L["Temporary Move"] = "Temporäres Bewegen"
 L["Toggle Bags"] = "Taschen umschalten"
+L["Vendor Grays"] = "Graue Gegenstände verkaufen"
 L["Vendor / Delete Grays"] = "Verkaufe / Lösche graue Gegenstände"
 
 --Chat
@@ -77,6 +78,7 @@ L["Arena"] = "Arena"
 L["AVD: "] = "AVD: "
 L["Avoidance Breakdown"] = "Vermeidung Aufgliederung"
 L["Bandwidth"] = "Bandbreite"
+L["BfA Missions"] = "BfA Missionen"
 L["Building(s) Report:"] = "Gebäude Bericht:"
 L["Character: "] = "Charakter: "
 L["Chest"] = "Brust"
@@ -167,6 +169,7 @@ L["CVars Set"] = "CVars gesetzt"
 L["CVars"] = "CVars"
 L["Dark"] = "Dunkel"
 L["Disable"] = "Deaktivieren"
+L["Discord"] = true -- No need to translate
 L["ElvUI Installation"] = "ElvUI Installation"
 L["Finished"] = "Beendet"
 L["Grid Size:"] = "Rastergröße:"
@@ -236,6 +239,7 @@ L["Toggle Configuration"] = "Konfiguration an-/ausschalten" --layout\layout.lua
 L["AP:"] = true -- No need to translate (Artifact Power)
 L["XP:"] = "EP:"
 L["You don't have permission to mark targets."] = "Du hast keine Rechte um ein Ziel zu markieren."
+L["Voice Overlay"] = true -- No need to translate
 
 --Movers
 L["Alternative Power"] = "Alternative Energie"
@@ -296,6 +300,8 @@ L["TargetTarget Frame"] = "Ziel des Ziels Fenster" --Also used in UnitFrames
 L["TargetTargetTarget Frame"] = "Ziel des Ziels des Ziels Fenster"
 L["Tooltip"] = "Tooltip"
 L["Vehicle Seat Frame"] = "Fahrzeugfenster"
+L["UIWidgetBelowMinimapContainer"] = true
+L["UIWidgetTopContainer"] = true
 L["Zone Ability"] = "Zonen Fähigkeit"
 L["DESC_MOVERCONFIG"] = [=[Ankerpunkte entriegelt. Bewege die Ankerpunkte und klicke 'sperren', wenn du fertig bist.
 

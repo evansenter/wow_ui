@@ -1,67 +1,13 @@
 ------------------------------------------------------------------------
-r415 | Zensunim | 2018-08-25 21:54:39 +0000 (Sat, 25 Aug 2018) | 7 lines
+r425 | Zensunim | 2018-09-14 06:54:46 +0000 (Fri, 14 Sep 2018) | 2 lines
 Changed paths:
    M /trunk/GTFO.lua
    M /trunk/GTFO.toc
-   M /trunk/GTFO_FF_BFA.lua
    M /trunk/GTFO_Fail_BFA.lua
    M /trunk/GTFO_Spells_BFA.lua
    M /trunk/ReadMe.txt
 
-4.46.3
-* Added Battle for Azeroth spells (world)
+4.46.7
 * Added BFA spells for Uldir
-* Added BFA spells for King's Rest
-* Added BFA spells for Siege of Boralus
-* Added BFA spells for Freehold
-* Added BFA spells for The Underrot
-------------------------------------------------------------------------
-r414 | Zensunim | 2018-08-25 20:19:46 +0000 (Sat, 25 Aug 2018) | 2 lines
-Changed paths:
-   M /trunk/GTFO_Fail_BFA.lua
-   M /trunk/GTFO_Spells_BFA.lua
-
-* Added Battle for Azeroth spells (world)
-
-------------------------------------------------------------------------
-r413 | Zensunim | 2018-08-22 17:26:20 +0000 (Wed, 22 Aug 2018) | 4 lines
-Changed paths:
-   M /trunk/GTFO_Fail_BFA.lua
-   M /trunk/GTFO_Spells_BFA.lua
-   M /trunk/ReadMe.txt
-
-* Added Battle for Azeroth spells (world)
-* Added BFA spells for Freehold
-* Added BFA spells for The Underrot
-
-------------------------------------------------------------------------
-r412 | Zensunim | 2018-08-20 05:04:25 +0000 (Mon, 20 Aug 2018) | 1 line
-Changed paths:
-   M /trunk/GTFO_Fail_BFA.lua
-
-* Added Battle for Azeroth spells (world)
-------------------------------------------------------------------------
-r411 | Zensunim | 2018-08-20 04:27:49 +0000 (Mon, 20 Aug 2018) | 1 line
-Changed paths:
-   M /trunk/GTFO_Fail_BFA.lua
-   M /trunk/GTFO_Spells_BFA.lua
-
-* Added Battle for Azeroth spells (world)
-------------------------------------------------------------------------
-r410 | Zensunim | 2018-08-20 02:52:18 +0000 (Mon, 20 Aug 2018) | 1 line
-Changed paths:
-   M /trunk/GTFO_Fail_BFA.lua
-   M /trunk/GTFO_Spells_BFA.lua
-
-* Added Battle for Azeroth spells (world)
-------------------------------------------------------------------------
-r409 | Zensunim | 2018-08-17 03:16:40 +0000 (Fri, 17 Aug 2018) | 1 line
-Changed paths:
-   M /trunk/GTFO.lua
-   M /trunk/GTFO.toc
-   M /trunk/GTFO_Fail_BFA.lua
-   M /trunk/ReadMe.txt
-
-* Added Battle for Azeroth spells (world)
 ------------------------------------------------------------------------
 

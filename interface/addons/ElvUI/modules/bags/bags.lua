@@ -21,6 +21,7 @@ local CreateFrame = CreateFrame
 local C_NewItems_IsNewItem = C_NewItems.IsNewItem
 local C_NewItems_RemoveNewItem = C_NewItems.RemoveNewItem
 local C_Timer_After = C_Timer.After
+local C_AzeriteEmpoweredItem_IsAzeriteEmpoweredItemByID = C_AzeriteEmpoweredItem.IsAzeriteEmpoweredItemByID
 local DeleteCursorItem = DeleteCursorItem
 local DepositReagentBank = DepositReagentBank
 local GetBackpackCurrencyInfo = GetBackpackCurrencyInfo
@@ -420,7 +421,7 @@ end
 
 function B:NewItemGlowSlotSwitch(slot, show)
 	if slot and slot.newItemGlow then
-		if show then
+		if show and E.db.bags.newItemGlow then
 			slot.newItemGlow:Show()
 			E:Flash(slot.newItemGlow, 0.5, true)
 		else
@@ -454,6 +455,10 @@ function B:UpdateSlot(bagID, slotID)
 	slot:Show();
 	if(slot.questIcon) then
 		slot.questIcon:Hide();
+	end
+	
+	if(slot.Azerite) then
+		slot.Azerite:Hide();
 	end
 
 	if (slot.JunkIcon) then
@@ -514,6 +519,7 @@ function B:UpdateSlot(bagID, slotID)
 			slot.newItemGlow:SetVertexColor(r, g, b);
 			slot:SetBackdropBorderColor(r, g, b);
 			slot.ignoreBorderColors = true
+			if slot.Azerite and C_AzeriteEmpoweredItem_IsAzeriteEmpoweredItemByID(clink) then slot.Azerite:Show() end
 		elseif B.AssignmentColors[assignedBag] then
 			local rr, gg, bb = unpack(B.AssignmentColors[assignedBag])
 			slot.newItemGlow:SetVertexColor(rr, gg, bb)
@@ -869,14 +875,14 @@ function B:Layout(isBank)
 
 					if not(f.Bags[bagID][slotID].questIcon) then
 						f.Bags[bagID][slotID].questIcon = _G[f.Bags[bagID][slotID]:GetName()..'IconQuestTexture'] or _G[f.Bags[bagID][slotID]:GetName()].IconQuestTexture
-						f.Bags[bagID][slotID].questIcon:SetTexture("Interface\\AddOns\\ElvUI\\media\\textures\\bagQuestIcon.tga");
+						f.Bags[bagID][slotID].questIcon:SetTexture("Interface\\AddOns\\ElvUI\\media\\textures\\bagQuestIcon");
 						f.Bags[bagID][slotID].questIcon:SetTexCoord(0,1,0,1);
 						f.Bags[bagID][slotID].questIcon:SetInside();
 						f.Bags[bagID][slotID].questIcon:Hide();
 					end
 
 					if f.Bags[bagID][slotID].UpgradeIcon then
-						f.Bags[bagID][slotID].UpgradeIcon:SetTexture("Interface\\AddOns\\ElvUI\\media\\textures\\bagUpgradeIcon.tga");
+						f.Bags[bagID][slotID].UpgradeIcon:SetTexture("Interface\\AddOns\\ElvUI\\media\\textures\\bagUpgradeIcon");
 						f.Bags[bagID][slotID].UpgradeIcon:SetTexCoord(0,1,0,1);
 						f.Bags[bagID][slotID].UpgradeIcon:SetInside();
 						f.Bags[bagID][slotID].UpgradeIcon:Hide();
@@ -889,6 +895,14 @@ function B:Layout(isBank)
 						JunkIcon:Point("TOPLEFT", 1, 0)
 						JunkIcon:Hide()
 						f.Bags[bagID][slotID].JunkIcon = JunkIcon
+					end
+
+					if not f.Bags[bagID][slotID].Azerite then
+						f.Bags[bagID][slotID].Azerite = f.Bags[bagID][slotID]:CreateTexture(nil, "OVERLAY")
+						f.Bags[bagID][slotID].Azerite:SetAtlas("AzeriteIconFrame")
+						f.Bags[bagID][slotID].Azerite:SetTexCoord(0,1,0,1);
+						f.Bags[bagID][slotID].Azerite:SetInside();
+						f.Bags[bagID][slotID].Azerite:Hide();
 					end
 
 					f.Bags[bagID][slotID].iconTexture = _G[f.Bags[bagID][slotID]:GetName()..'IconTexture'];
@@ -913,7 +927,7 @@ function B:Layout(isBank)
 					if not f.Bags[bagID][slotID].newItemGlow then
 						local newItemGlow = f.Bags[bagID][slotID]:CreateTexture(nil, "OVERLAY")
 						newItemGlow:SetInside()
-						newItemGlow:SetTexture("Interface\\AddOns\\ElvUI\\media\\textures\\bagNewItemGlow.tga")
+						newItemGlow:SetTexture("Interface\\AddOns\\ElvUI\\media\\textures\\bagNewItemGlow")
 						newItemGlow:Hide()
 						f.Bags[bagID][slotID].newItemGlow = newItemGlow
 						f.Bags[bagID][slotID]:HookScript("OnEnter", hideNewItemGlow)
@@ -1007,7 +1021,7 @@ function B:Layout(isBank)
 				if not f.reagentFrame.slots[i].newItemGlow then
 					local newItemGlow = f.reagentFrame.slots[i]:CreateTexture(nil, "OVERLAY")
 					newItemGlow:SetInside()
-					newItemGlow:SetTexture("Interface\\AddOns\\ElvUI\\media\\textures\\bagNewItemGlow.tga")
+					newItemGlow:SetTexture("Interface\\AddOns\\ElvUI\\media\\textures\\bagNewItemGlow")
 					newItemGlow:Hide()
 					f.reagentFrame.slots[i].newItemGlow = newItemGlow
 					f.reagentFrame.slots[i]:HookScript("OnEnter", hideNewItemGlow)
@@ -1316,9 +1330,11 @@ function B:VendorGrayCheck()
 end
 
 function B:ContructContainerFrame(name, isBank)
+	local strata = E.db.bags.strata or 'HIGH'
+
 	local f = CreateFrame('Button', name, E.UIParent);
 	f:SetTemplate('Transparent');
-	f:SetFrameStrata('HIGH');
+	f:SetFrameStrata(strata);
 	f.UpdateSlot = B.UpdateSlot;
 	f.UpdateAllSlots = B.UpdateAllSlots;
 	f.UpdateBagSlots = B.UpdateBagSlots;

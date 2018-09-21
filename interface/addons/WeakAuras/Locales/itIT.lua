@@ -15,8 +15,6 @@ L["!="] = "!="
 --[[Translation missing --]]
 L["%s - %i. Trigger"] = "%s - %i. Trigger"
 --[[Translation missing --]]
-L["%s - 1. Trigger"] = "%s - 1. Trigger"
---[[Translation missing --]]
 L["%s - Alpha Animation"] = "%s - Alpha Animation"
 --[[Translation missing --]]
 L["%s - Color Animation"] = "%s - Color Animation"
@@ -66,6 +64,8 @@ L["%s total auras"] = "%s total auras"
 L["%s Trigger Function"] = "%s Trigger Function"
 --[[Translation missing --]]
 L["%s Untrigger Function"] = "%s Untrigger Function"
+--[[Translation missing --]]
+L["|cff9900ffWeakAuras EXPERIMENTAL Profiling Data:|r"] = "|cff9900ffWeakAuras EXPERIMENTAL Profiling Data:|r"
 L["<"] = "<"
 L["<="] = "<="
 L["="] = "="
@@ -86,6 +86,8 @@ L["25 Man Raid"] = "Incursione da 25 giocatori"
 --[[Translation missing --]]
 L["40 Man Raid"] = "40 Man Raid"
 L["5 Man Dungeon"] = "Spedizione da 5 giocatori"
+--[[Translation missing --]]
+L["A WeakAura just tried to use a forbidden function but has been blocked from doing so. Please check your auras!"] = "A WeakAura just tried to use a forbidden function but has been blocked from doing so. Please check your auras!"
 L["Absorb"] = "Assorbimento"
 --[[Translation missing --]]
 L["Absorb Display"] = "Absorb Display"
@@ -390,8 +392,6 @@ L["Event"] = "Event"
 L["Event(s)"] = "Event(s)"
 --[[Translation missing --]]
 L["Every Frame"] = "Every Frame"
---[[Translation missing --]]
-L["EXPERIMENTAL Profiling Data:"] = "EXPERIMENTAL Profiling Data:"
 --[[Translation missing --]]
 L["Extend Outside"] = "Extend Outside"
 --[[Translation missing --]]
