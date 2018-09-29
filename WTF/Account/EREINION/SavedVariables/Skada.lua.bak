@@ -1,0 +1,26 @@
+
+SkadaDB = {
+	["namespaces"] = {
+		["LibDualSpec-1.0"] = {
+		},
+	},
+	["profileKeys"] = {
+		["Elani - Uther"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["windows"] = {
+				{
+					["y"] = -88.8887634277344,
+					["point"] = "RIGHT",
+					["x"] = -247.77783203125,
+				}, -- [1]
+			},
+			["versions"] = {
+				["1.6.3"] = true,
+				["1.6.4"] = true,
+				["1.6.7"] = true,
+			},
+		},
+	},
+}

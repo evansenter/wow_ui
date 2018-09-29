@@ -530,12 +530,7 @@ TidyPlatesContHubSettings = {
 		["WidgetAuraTrackDispelFriendly"] = false,
 		["StyleEnemyBarsOnNPC"] = true,
 		["FriendlyAlphaSpotlightMode"] = "None",
-		["ColorFriendlyPlayer"] = {
-			["a"] = 0.999997794628143,
-			["r"] = 0,
-			["g"] = 0,
-			["b"] = 0.999997794628143,
-		},
+		["ScaleIgnoreInactive"] = false,
 		["StatusTextCenter"] = 5,
 		["ColorPartyAggroGlow"] = true,
 		["UnitSpotlightList"] = "",
@@ -564,7 +559,12 @@ TidyPlatesContHubSettings = {
 		},
 		["WidgetsDebuff"] = true,
 		["WidgetEliteIndicator"] = true,
-		["ScaleIgnoreInactive"] = false,
+		["ColorFriendlyPlayer"] = {
+			["a"] = 0.999997794628143,
+			["r"] = 0,
+			["g"] = 0,
+			["b"] = 0.999997794628143,
+		},
 		["FocusAsTarget"] = false,
 		["UseGlobalSet"] = false,
 		["ColorThreatTransition"] = {

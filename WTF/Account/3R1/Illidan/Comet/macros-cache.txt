@@ -14,6 +14,10 @@ VER 3 0100000000000022 "FoF" "INV_Misc_QuestionMark"
 #showtooltip
 /use [nochanneling]Fists of Fury
 END
+VER 3 0100000000000024 "FotWT" "INV_Misc_QuestionMark"
+#showtooltip
+/use [nochanneling]Fist of the White Tiger
+END
 VER 3 0100000000000013 "Life Cocoon" "INV_MISC_QUESTIONMARK"
 #showtooltip Life Cocoon
 /use [@mouseover,help,nodead][]Life Cocoon
@@ -27,10 +31,6 @@ VER 3 0100000000000020 "RJW" "ABILITY_MONK_RUSHINGJADEWIND"
 #showtooltip
 /use [nochanneling]Rushing Jade Wind
 END
-VER 3 010000000000001A "SCK" "INV_Misc_QuestionMark"
-#showtooltip
-/use [nochanneling]Spinning Crane Kick
-END
 VER 3 0100000000000021 "Statue Taunt" "INV_Misc_QuestionMark"
 #showtooltip Provoke
 /target Black Ox Statue
@@ -43,7 +43,7 @@ VER 3 0100000000000017 "Tier 1 MW" "INV_MISC_QUESTIONMARK"
 END
 VER 3 010000000000001F "Tier 1 WW/BM" "INV_Misc_QuestionMark"
 #showtooltip
-/use [talent:1/1,nochanneling]Chi Burst;[talent:1/2,nochanneling];Eye of the Tiger[talent:1/3,nochanneling]Chi Wave
+/use [talent:1/1,nochanneling]Eye of the Tiger;[talent:1/2,nochanneling];Chi Wave[talent:1/3,nochanneling]Chi Burst;
 END
 VER 3 0100000000000011 "Tier 2 MW" "INV_MISC_QUESTIONMARK"
 #showtooltip
@@ -55,11 +55,11 @@ VER 3 010000000000001C "Tier 5 MW" "INV_Misc_QuestionMark"
 END
 VER 3 0100000000000023 "Tier 5 WW" "INV_Misc_QuestionMark"
 #showtooltip
-/use [talent:5/1]Healing Elixir;[talent:5/2]Diffuse Magic;[talent:5/3]Dampen Harm
+/use [talent:5/1]Inner Strength;[talent:5/2]Diffuse Magic;[talent:5/3]Dampen Harm
 END
 VER 3 010000000000001D "Tier 6 MW" "INV_Misc_QuestionMark"
 #showtooltip
-/use [talent:6/1]Refreshing Jade Wind;[talent:6/2]Invoke Chi-Ji, the Red Crane;[talent:6/3]Summon Jade Serpent Statue
+/use [talent:6/1]Hit Combo;[talent:6/2]Invoke Chi-Ji, the Red Crane;[talent:6/3]Summon Jade Serpent Statue
 END
 VER 3 010000000000001B "Tiger's Lust" "INV_Misc_QuestionMark"
 #showtooltip
@@ -72,6 +72,6 @@ VER 3 0100000000000018 "Vivify" "INV_Misc_QuestionMark"
 END
 VER 3 010000000000001E "WDP" "988194"
 #showtooltip Whirling Dragon Punch
-/use 13
+/use Kil'Jaeden's Burning Wish
 /use [nochanneling]Whirling Dragon Punch
 END

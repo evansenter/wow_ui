@@ -1,5 +1,13 @@
 
 AdiBagsDB = {
+	["profileKeys"] = {
+		["Cometstorm - Illidan"] = "Comet - Illidan",
+		["Ereinion - Dark Iron"] = "Default",
+		["Comet - Illidan"] = "Comet - Illidan",
+		["Combustion - Illidan"] = "Comet - Illidan",
+		["Evan - Illidan"] = "Comet - Illidan",
+		["Plane - Illidan"] = "Default",
+	},
 	["namespaces"] = {
 		["ItemLevel"] = {
 		},
@@ -11,7 +19,7 @@ AdiBagsDB = {
 				["Comet - Illidan"] = {
 					["version"] = 3,
 					["overrides"] = {
-						[141446] = "Consumable#Consumable",
+						[141446] = "Equipment#Armor",
 						[142117] = "Quest#Quest",
 					},
 				},
@@ -28,7 +36,7 @@ AdiBagsDB = {
 		},
 		["AdiBags_TooltipInfo"] = {
 		},
-		["MoneyFrame"] = {
+		["Equipment"] = {
 		},
 		["CurrencyFrame"] = {
 			["profiles"] = {
@@ -36,25 +44,32 @@ AdiBagsDB = {
 					["shown"] = {
 						["Mark of the World Tree"] = false,
 						["Elder Charm of Good Fortune"] = false,
+						["Nethershard"] = false,
 						["Valor"] = false,
 						["Illustrious Jewelcrafter's Token"] = false,
 						["Curious Coin"] = false,
+						["Order Resources"] = false,
+						["Veiled Argunite"] = false,
 						["Warforged Seal"] = false,
+						["Wakening Essence"] = false,
+						["Seal of Broken Fate"] = false,
 						["Timewarped Badge"] = false,
 						["Mogu Rune of Fate"] = false,
+						["Ancient Mana"] = false,
+						["Tol Barad Commendation"] = false,
 						["Mote of Darkness"] = false,
-						["Oil"] = false,
-						["Garrison Resources"] = false,
+						["Ironpaw Token"] = false,
+						["Seal of Tempered Fate"] = false,
 						["Sightless Eye"] = false,
 						["Timeless Coin"] = false,
 						["Essence of Corrupted Deathwing"] = false,
 						["Apexis Crystal"] = false,
-						["Seal of Inevitable Fate"] = false,
 						["Lesser Charm of Good Fortune"] = false,
-						["Seal of Tempered Fate"] = false,
-						["Ironpaw Token"] = false,
+						["Seal of Inevitable Fate"] = false,
+						["Garrison Resources"] = false,
+						["Oil"] = false,
 						["Lingering Soul Fragment"] = false,
-						["Tol Barad Commendation"] = false,
+						["Legionfall War Supplies"] = false,
 					},
 					["text"] = {
 						["name"] = "ABF",
@@ -69,16 +84,8 @@ AdiBagsDB = {
 		},
 		["Junk"] = {
 		},
-		["Equipment"] = {
+		["MoneyFrame"] = {
 		},
-	},
-	["profileKeys"] = {
-		["Cometstorm - Illidan"] = "Comet - Illidan",
-		["Ereinion - Dark Iron"] = "Default",
-		["Comet - Illidan"] = "Comet - Illidan",
-		["Plane - Illidan"] = "Default",
-		["Evan - Illidan"] = "Comet - Illidan",
-		["Combustion - Illidan"] = "Comet - Illidan",
 	},
 	["profiles"] = {
 		["Default"] = {

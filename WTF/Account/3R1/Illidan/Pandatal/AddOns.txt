@@ -241,3 +241,20 @@ DBM-Azeroth-BfA: disabled
 DBM-Party-BfA: disabled
 DBM-TombofSargeras: disabled
 DBM-Uldir: disabled
+Azeroth Auto Pilot: disabled
+HandyNotes_BattleForAzerothTreasures: disabled
+TidyPlatesContinued: disabled
+TidyPlatesContinuedHub: disabled
+TidyPlatesContinuedWidgets: disabled
+TidyPlatesContinued_Alvara: disabled
+TidyPlatesContinued_Graphite: disabled
+TidyPlatesContinued_Grey: disabled
+TidyPlatesContinued_Neon: disabled
+TidyPlatesContinued_Quatre: disabled
+TidyPlatesContinued_Roth: disabled
+TidyPlatesContinued_Slim_Horizontal: disabled
+TidyPlatesContinued_Slim_Vertical: disabled
+TidyPlatesContinued_BlizzardPlates: disabled
+TidyPlatesContinued_ClassicPlates: disabled
+TidyPlatesContinued_Simple: disabled
+TidyPlatesContinued_Renaitre: disabled

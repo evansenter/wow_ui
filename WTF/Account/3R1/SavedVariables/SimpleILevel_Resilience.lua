@@ -6,7 +6,7 @@ SIL_ResilSettings = {
 		["Cometron - Illidan"] = "Default",
 		["Combustion - Illidan"] = "Default",
 		["Ereinion - Dark Iron"] = "Default",
-		["Evan - Illidan"] = "Default",
 		["Pandatal - Illidan"] = "Default",
+		["Evan - Illidan"] = "Default",
 	},
 }

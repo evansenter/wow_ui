@@ -1477,6 +1477,12 @@ AAP_CoreEventFrame:SetScript("OnEvent", function(self, event, ...)
 			AAP.LoadOptionsFrame()
 		end
 	elseif (event=="QUEST_GREETING" and AAP_DisableAddon == 0) then
+		if (UnitGUID("target") and string.find(UnitGUID("target"), "(.*)-(.*)")) then
+			local type, zero, server_id, instance_id, zone_uid, npc_id, spawn_uid = strsplit("-",UnitGUID("target"))
+			if (npc_id and ((tonumber(npc_id) == 141584) or (tonumber(npc_id) == 142063))) then
+				return
+			end
+		end
 		local numAvailableQuests = 0;
 		local numActiveQuests = 0;
 		local lastActiveQuest = 0
@@ -1514,6 +1520,12 @@ AAP_CoreEventFrame:SetScript("OnEvent", function(self, event, ...)
 			end
 		end
 	elseif (event=="GOSSIP_SHOW" and AAP_DisableAddon == 0) then
+		if (UnitGUID("target") and string.find(UnitGUID("target"), "(.*)-(.*)")) then
+			local type, zero, server_id, instance_id, zone_uid, npc_id, spawn_uid = strsplit("-",UnitGUID("target"))
+			if (npc_id and ((tonumber(npc_id) == 141584) or (tonumber(npc_id) == 142063))) then
+				return
+			end
+		end
 		local arg1, arg2, arg3, arg4 = ...;
 		local ActiveQuests = {GetGossipActiveQuests()}
 		local ActiveQNr = GetNumGossipActiveQuests()
@@ -1536,11 +1548,23 @@ AAP_CoreEventFrame:SetScript("OnEvent", function(self, event, ...)
 			end
 		end
 	elseif (event=="QUEST_DETAIL" and AAP_DisableAddon == 0) then
+		if (UnitGUID("target") and string.find(UnitGUID("target"), "(.*)-(.*)")) then
+			local type, zero, server_id, instance_id, zone_uid, npc_id, spawn_uid = strsplit("-",UnitGUID("target"))
+			if (npc_id and ((tonumber(npc_id) == 141584) or (tonumber(npc_id) == 142063))) then
+				return
+			end
+		end
 		if (GetQuestID() and (AAP1[AAP.Realm][AAP.Name]["Settings"]["AutoAccept"] == 1) and (not IsControlKeyDown()) and (GetQuestID() ~= 50476) and (GetQuestID() ~= 52058) and (53372 ~= GetQuestID()) and (52946 ~= GetQuestID())) then
 			AAP_QuestAcceptTimer:Play()
 		end
 	end
 	if (event=="QUEST_PROGRESS" and AAP_DisableAddon == 0) then
+		if (UnitGUID("target") and string.find(UnitGUID("target"), "(.*)-(.*)")) then
+			local type, zero, server_id, instance_id, zone_uid, npc_id, spawn_uid = strsplit("-",UnitGUID("target"))
+			if (npc_id and ((tonumber(npc_id) == 141584) or (tonumber(npc_id) == 142063))) then
+				return
+			end
+		end
 		if (AAP1[AAP.Realm][AAP.Name]["Settings"]["AutoHandIn"] == 1 and not IsControlKeyDown()) then
 			AAP_QuestAcceptTimer4:Play()
 		end
@@ -1591,6 +1615,12 @@ AAP_CoreEventFrame:SetScript("OnEvent", function(self, event, ...)
 		end
 	end
 	if (event=="QUEST_COMPLETE") then
+		if (UnitGUID("target") and string.find(UnitGUID("target"), "(.*)-(.*)")) then
+			local type, zero, server_id, instance_id, zone_uid, npc_id, spawn_uid = strsplit("-",UnitGUID("target"))
+			if (npc_id and ((tonumber(npc_id) == 141584) or (tonumber(npc_id) == 142063))) then
+				return
+			end
+		end
 		if (GetNumQuestChoices() > 1 and AAP_DisableAddon == 0) then
 			if (AAP1[AAP.Realm][AAP.Name]["Settings"]["AutoHandInChoice"] == 1) then
 				local AAPTempGearList = {}
@@ -1632,6 +1662,12 @@ AAP_CoreEventFrame:SetScript("OnEvent", function(self, event, ...)
 				print("AAP: Save Quest for Release!")
 				CloseQuest()
 			elseif (AAP1[AAP.Realm][AAP.Name]["Settings"]["AutoHandIn"] == 1 and not IsControlKeyDown() and AAP_DisableAddon == 0) then
+				if (UnitGUID("target") and string.find(UnitGUID("target"), "(.*)-(.*)")) then
+					local type, zero, server_id, instance_id, zone_uid, npc_id, spawn_uid = strsplit("-",UnitGUID("target"))
+					if (npc_id and ((tonumber(npc_id) == 141584) or (tonumber(npc_id) == 142063))) then
+						return
+					end
+			end
 				AAP_QuestAcceptTimer3:Play()
 			end
 		end

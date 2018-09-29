@@ -107,7 +107,7 @@ AddonUsage: enabled
 AngryAssignments: enabled
 epgp_lootmaster: disabled
 epgp_lootmaster_ml: disabled
-ErrorFilter: enabled
+ErrorFilter: disabled
 GTFO: enabled
 LibSharedMedia-3.0: enabled
 SharedMedia: enabled
@@ -351,3 +351,13 @@ TidyPlatesContHubKR: enabled
 TidyPlatesContHubRU: enabled
 TidyPlatesContHubCN: enabled
 TidyPlatesContHubTW: enabled
+Azeroth Auto Pilot: disabled
+HandyNotes_BattleForAzerothTreasures: enabled
+TidyPlatesContinued_Alvara: enabled
+TidyPlatesContinued_Roth: enabled
+TidyPlatesContinued_Slim_Horizontal: enabled
+TidyPlatesContinued_Slim_Vertical: enabled
+TidyPlatesContinued_ClassicPlates: enabled
+TidyPlatesContinued_Simple: enabled
+TidyPlatesContinued_Renaitre: enabled
+ElvUI_EverySecondCounts: disabled

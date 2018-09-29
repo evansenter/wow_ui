@@ -14,14 +14,14 @@ MacroToolkitDB = {
 			},
 		},
 		["Evan - Illidan"] = {
+			["wodupgrade"] = true,
 			["extended"] = {
 				["122"] = {
 					["name"] = "Penance",
 					["icon"] = "237545",
-					["body"] = "#showtooltip\n/use [@mouseover,harm][harm][@mouseovertarget,harm]Penance\n",
+					["body"] = "#showtooltip\n/use [@mouseover,harm,nodead][harm,nodead][@mouseovertarget,harm,nodead]Penance\n",
 				},
 			},
-			["lastbackup"] = "Mar 22 11:31:25",
 			["backups"] = {
 				{
 					["m"] = {
@@ -252,24 +252,11 @@ MacroToolkitDB = {
 					["n"] = "Backup",
 				}, -- [2]
 			},
-			["wodupgrade"] = true,
+			["lastbackup"] = "Mar 22 11:31:25",
 		},
 		["Combustion - Illidan"] = {
 			["backups"] = {
 			},
-		},
-	},
-	["global"] = {
-		["ebackups"] = {
-		},
-		["extra"] = {
-			["1001"] = {
-				["body"] = "/stopcasting",
-				["name"] = "Stop Casting",
-				["texture"] = 132094,
-			},
-		},
-		["backups"] = {
 		},
 	},
 	["profileKeys"] = {
@@ -281,14 +268,27 @@ MacroToolkitDB = {
 		["Colton - Dark Iron"] = "profile",
 		["Ereinion - Dark Iron"] = "profile",
 		["Comet - Illidan"] = "Comet - Illidan",
-		["Pandatal - Illidan"] = "Comet - Illidan",
-		["Evan - Illidan"] = "Comet - Illidan",
 		["Combustion - Illidan"] = "Comet - Illidan",
+		["Evan - Illidan"] = "Comet - Illidan",
+		["Pandatal - Illidan"] = "Comet - Illidan",
+	},
+	["global"] = {
+		["ebackups"] = {
+		},
+		["extra"] = {
+			["1001"] = {
+				["texture"] = 132094,
+				["name"] = "Stop Casting",
+				["body"] = "/stopcasting",
+			},
+		},
+		["backups"] = {
+		},
 	},
 	["profiles"] = {
 		["Comet - Illidan"] = {
-			["y"] = 341.622467041016,
-			["x"] = 908.487670898438,
+			["y"] = 275.511566162109,
+			["x"] = 462.376495361328,
 			["height"] = 425.000030517578,
 			["override"] = true,
 			["noskin"] = true,
@@ -298,8 +298,8 @@ MacroToolkitDB = {
 				["edsize"] = 12,
 				["mfont"] = "ABF",
 				["mifont"] = "ABF",
-				["errsize"] = 12,
 				["misize"] = 12,
+				["errsize"] = 12,
 				["errfont"] = "ABF",
 			},
 		},
@@ -308,16 +308,16 @@ MacroToolkitDB = {
 		["profile"] = {
 			["y"] = 486.99951171875,
 			["x"] = 1045.39929199219,
+			["override"] = true,
 			["fonts"] = {
 				["edfont"] = "ABF",
 				["edsize"] = 12,
 				["mfont"] = "ABF",
 				["mifont"] = "ABF",
-				["misize"] = 12,
 				["errsize"] = 12,
+				["misize"] = 12,
 				["errfont"] = "ABF",
 			},
-			["override"] = true,
 		},
 	},
 }

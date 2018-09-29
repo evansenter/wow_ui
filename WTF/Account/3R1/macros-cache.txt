@@ -1,6 +1,6 @@
-VER 3 000000000000006E "AAP_MACRO" "INV_MISC_QUESTIONMARK"
+VER 3 0000000000000072 "AAP_MACRO" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/use Goblin-Engineered Hand Cannon
+/click ExtraActionButton1
 END
 VER 3 0000000000000031 "Belt" "INV_MISC_QUESTIONMARK"
 /use 6
@@ -34,8 +34,8 @@ VER 3 0000000000000061 "DH" "INV_Misc_QuestionMark"
 /cast Divine Hymn
 END
 VER 3 000000000000006F "Discord" "458228"
-/i Join https://discord.gg/HXaxyF3
 /p Join https://discord.gg/HXaxyF3
+/raid Join https://discord.gg/HXaxyF3
 END
 VER 3 0000000000000070 "Dispel Magic" "INV_Misc_QuestionMark"
 #showtooltip
@@ -62,9 +62,8 @@ VER 3 000000000000004D "GS" "INV_Misc_QuestionMark"
 /use [target=mouseover,help,nodead]Guardian Spirit
 END
 VER 3 0000000000000050 "HF" "INV_Misc_QuestionMark"
-#showtooltip Holy Fire
-/use [harm][@mouseovertarget,harm][]12
-/use [harm][@mouseovertarget,harm][]Holy Fire
+#showtooltip
+/use [@mouseover,harm,nodead][harm,nodead][@mouseovertarget,harm,nodead][] Holy Fire
 END
 VER 3 0000000000000034 "HS / GHS" "INV_Misc_QuestionMark"
 #showtooltip
@@ -108,24 +107,17 @@ VER 3 0000000000000026 "Ready?" "INV_Gizmo_01"
 /i Ready check
 /readycheck
 END
-VER 3 0000000000000052 "Roll" "INV_Misc_QuestionMark"
-#showtooltip Roll
-/use [nomod]Roll
-END
 VER 3 000000000000003C "RSK" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /use [nochanneling]Rising Sun Kick
 END
-VER 3 000000000000006D "Salv." "INV_Misc_QuestionMark"
-#showtooltip Holy Word: Salvation
-/use 13
-/use 14
-/cast Holy Word: Salvation
+VER 3 0000000000000071 "Schism" "463285"
+#showtooltip
+/use [@mouseover,harm][harm][@mouseovertarget,harm][]Schism
 END
 VER 3 0000000000000063 "SEF" "INV_Misc_QuestionMark"
 #showtooltip Storm, Earth, and Fire
-/use 13
-/use 14
+/use Kil'Jaeden's Burning Wish
 /cast Storm, Earth, and Fire
 END
 VER 3 0000000000000043 "Serenity" "INV_Misc_QuestionMark"
@@ -144,7 +136,7 @@ VER 3 0000000000000053 "SotW" "INV_Misc_QuestionMark"
 END
 VER 3 000000000000005A "SW:P" "INV_Misc_QuestionMark"
 #showtooltip
-/use [@mouseover,harm][harm][@mouseovertarget,harm][]Shadow Word: Pain
+/use [@mouseover,harm,nodead][harm,nodead][@mouseovertarget,harm,nodead][]Shadow Word: Pain
 END
 VER 3 000000000000006B "SW:P Shadow" "INV_Misc_QuestionMark"
 #showtooltip
@@ -161,6 +153,18 @@ VER 3 0000000000000064 "Tier 5 BM" "INV_Misc_QuestionMark"
 #showtooltip
 /cast [talent:5/1,nomod]Healing Elixir;[talent:5/2,nomod]Mystic Vitality;[talent:5/3,nomod]Dampen Harm;[mod:shift]Fortifying Brew
 END
+VER 3 0000000000000073 "Tier 6 Holy" "1445240"
+#showtooltip
+/cast [talent:6/1]Benediction;[talent:6/2]Divine Star;[talent:6/3]Halo
+END
+VER 3 0000000000000074 "Tier 6 WW" "INV_Misc_QuestionMark"
+#showtooltip
+/use [talent:6/1,nochanneling]Hit Combo;[talent:6/2,nochanneling]Rushing Jade Wind;[talent:6/3,nochanneling]Invoke Xuen, the White Tiger
+END
+VER 3 000000000000006D "Tier 7 Holy" "INV_Misc_QuestionMark"
+#showtooltip
+/use [talent:7/2]Apotheosis;[talent:7/3]Holy Word: Salvation
+END
 VER 3 000000000000004B "Tier 7 MW" "INV_Misc_QuestionMark"
 #showtooltip
 /use [talent:7/1]Breath of the Serpent;[talent:7/2]Chi Explosion;[talent:7/3]Pool of Mists
@@ -170,7 +174,7 @@ VER 3 000000000000003E "Tiger Palm" "INV_MISC_QUESTIONMARK"
 /use [nochanneling]Tiger Palm
 END
 VER 3 0000000000000062 "ToD" "INV_Misc_QuestionMark"
-#showtooltip Touch of Death
+#showtooltip
 /use [nochanneling]Touch of Death
 END
 VER 3 0000000000000065 "Trinket" "INV_Misc_QuestionMark"
