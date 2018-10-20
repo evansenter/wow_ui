@@ -249,14 +249,14 @@ SubSpecStorage = {
 			["name"] = "Raids",
 			["data"] = {
 				{
-					["id"] = 19823,
+					["id"] = 20185,
 					["name"] = "Chi Burst",
-					["column"] = 1,
+					["column"] = 3,
 				}, -- [1]
 				{
-					["id"] = 19818,
+					["id"] = 19302,
 					["name"] = "Tiger's Lust",
-					["column"] = 2,
+					["column"] = 3,
 				}, -- [2]
 				{
 					["id"] = 22168,
@@ -265,22 +265,22 @@ SubSpecStorage = {
 				}, -- [3]
 				{
 					["id"] = 19995,
-					["name"] = "Leg Sweep",
+					["name"] = "Ring of Peace",
 					["column"] = 3,
 				}, -- [4]
 				{
-					["id"] = 20174,
-					["name"] = "Healing Elixir",
-					["column"] = 1,
+					["id"] = 20175,
+					["name"] = "Dampen Harm",
+					["column"] = 3,
 				}, -- [5]
 				{
-					["id"] = 22217,
+					["id"] = 22214,
 					["name"] = "Invoke Chi-Ji, the Red Crane",
-					["column"] = 2,
+					["column"] = 3,
 				}, -- [6]
 				{
 					["id"] = 22218,
-					["name"] = "Mana Tea",
+					["name"] = "Focused Thunder",
 					["column"] = 1,
 				}, -- [7]
 			},

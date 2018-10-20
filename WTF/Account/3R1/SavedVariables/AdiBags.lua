@@ -30,8 +30,6 @@ AdiBagsDB = {
 		},
 		["MoneyFrame"] = {
 		},
-		["DataSource"] = {
-		},
 		["ItemSets"] = {
 		},
 		["CurrencyFrame"] = {
@@ -73,6 +71,8 @@ AdiBagsDB = {
 					},
 				},
 			},
+		},
+		["DataSource"] = {
 		},
 		["Junk"] = {
 		},

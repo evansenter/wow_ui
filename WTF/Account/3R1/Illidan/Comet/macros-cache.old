@@ -27,10 +27,6 @@ VER 3 0100000000000014 "Renewing Mist" "INV_MISC_QUESTIONMARK"
 /use Thunder Focus Tea
 /use [@mouseover,help,nodead][]Renewing Mist
 END
-VER 3 0100000000000020 "RJW" "ABILITY_MONK_RUSHINGJADEWIND"
-#showtooltip
-/use [nochanneling]Rushing Jade Wind
-END
 VER 3 0100000000000021 "Statue Taunt" "INV_Misc_QuestionMark"
 #showtooltip Provoke
 /target Black Ox Statue
@@ -39,7 +35,7 @@ VER 3 0100000000000021 "Statue Taunt" "INV_Misc_QuestionMark"
 END
 VER 3 0100000000000017 "Tier 1 MW" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/use [talent:1/1]Chi Burst;[talent:1/2,@mouseover,help,nodead]Zen Pulse;[talent:1/2]Zen Pulse;[talent:1/3,@mouseover,help,nodead]Chi Wave;[talent:1/3]Chi Wave
+/use [talent:1/1]Mist Wrap;[talent:1/2]Zen Pulse;[talent:1/2,@mouseover,help,nodead]Chi Wave;[talent:1/2]Chi Wave;[talend:1/3]Chi Burst
 END
 VER 3 010000000000001F "Tier 1 WW/BM" "INV_Misc_QuestionMark"
 #showtooltip
@@ -53,13 +49,17 @@ VER 3 010000000000001C "Tier 5 MW" "INV_Misc_QuestionMark"
 #showtooltip
 /use [talent:5/1,nomod]Healing Elixir;[talent:5/2,nomod]Diffuse Magic;[talent:5/3,nomod]Dampen Harm;[mod:shift]Fortifying Brew
 END
-VER 3 0100000000000023 "Tier 5 WW" "660248"
+VER 3 0100000000000023 "Tier 5 WW" "INV_Misc_QuestionMark"
 #showtooltip
 /use [talent:5/1]Inner Strength;[talent:5/2]Diffuse Magic;[talent:5/3]Dampen Harm
 END
+VER 3 0100000000000020 "Tier 6 BrM" "INV_Misc_QuestionMark"
+#showtooltip
+/use [talent:6/1,nochanneling]Special Delivery;[talent:6/2,nochanneling]Rushing Jade Wind;[talent:6/3,nochanneling]Invoke Niuzao, the Black Ox
+END
 VER 3 010000000000001D "Tier 6 MW" "INV_Misc_QuestionMark"
 #showtooltip
-/use [talent:6/1]Hit Combo;[talent:6/2]Invoke Chi-Ji, the Red Crane;[talent:6/3]Summon Jade Serpent Statue
+/use [talent:6/1]Summon Jade Serpent Statue;[talent:6/2]Refreshing Jade Wind;[talent:6/3]Invoke Chi-Ji, the Red Crane
 END
 VER 3 010000000000001B "Tiger's Lust" "INV_Misc_QuestionMark"
 #showtooltip

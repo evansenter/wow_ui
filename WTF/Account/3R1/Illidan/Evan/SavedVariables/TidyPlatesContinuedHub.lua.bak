@@ -296,7 +296,7 @@ TidyPlatesContHubSettings = {
 	},
 	["HubPanelSettingsHealer"] = {
 		["TextShowOnlyOnActive"] = false,
-		["TextShowOnlyOnTargets"] = false,
+		["TextShowOnlyOnTargets"] = true,
 		["ColorFriendlyBarMode"] = 1,
 		["FrameBarWidth"] = 1,
 		["UnitSpotlightLookup"] = {
@@ -378,8 +378,8 @@ TidyPlatesContHubSettings = {
 			["g"] = 0.999997794628143,
 			["b"] = 0.199999555945396,
 		},
-		["StyleHeadlineMiniMobs"] = false,
-		["FriendlyStatusTextMode"] = "HealthFunctionApprox",
+		["StyleHeadlineMiniMobs"] = true,
+		["FriendlyStatusTextMode"] = "HealthFunctionNone",
 		["WidgetsDebuffPriority"] = {
 			["339"] = 4,
 			["Facepalm Bolt"] = 7,
@@ -394,9 +394,9 @@ TidyPlatesContHubSettings = {
 		["WidgetAbsorbIndicator"] = false,
 		["ColorHealthBarMode"] = 3,
 		["StyleFriendlyBarsOnActive"] = true,
-		["FriendlyBarColorMode"] = "ByClass",
+		["FriendlyBarColorMode"] = "ByReaction",
 		["StyleHeadlineOutOfCombat"] = false,
-		["HeadlineEnemySubtext"] = "RoleGuildLevel",
+		["HeadlineEnemySubtext"] = "None",
 		["ColorHostileNPC"] = {
 			["a"] = 0.999997794628143,
 			["r"] = 0.999997794628143,
@@ -438,7 +438,7 @@ TidyPlatesContHubSettings = {
 			["g"] = 0.752939522266388,
 			["b"] = 0.76470422744751,
 		},
-		["StyleHeadlineNeutral"] = false,
+		["StyleHeadlineNeutral"] = true,
 		["OpacityFilterNeutralUnits"] = false,
 		["TextColorFriendlyNPC"] = {
 			["a"] = 0.999997794628143,
@@ -530,7 +530,12 @@ TidyPlatesContHubSettings = {
 		["WidgetAuraTrackDispelFriendly"] = false,
 		["StyleEnemyBarsOnNPC"] = true,
 		["FriendlyAlphaSpotlightMode"] = "None",
-		["ScaleIgnoreInactive"] = false,
+		["ColorFriendlyPlayer"] = {
+			["a"] = 0.999997794628143,
+			["r"] = 0,
+			["g"] = 0,
+			["b"] = 0.999997794628143,
+		},
 		["StatusTextCenter"] = 5,
 		["ColorPartyAggroGlow"] = true,
 		["UnitSpotlightList"] = "",
@@ -559,12 +564,7 @@ TidyPlatesContHubSettings = {
 		},
 		["WidgetsDebuff"] = true,
 		["WidgetEliteIndicator"] = true,
-		["ColorFriendlyPlayer"] = {
-			["a"] = 0.999997794628143,
-			["r"] = 0,
-			["g"] = 0,
-			["b"] = 0.999997794628143,
-		},
+		["ScaleIgnoreInactive"] = false,
 		["FocusAsTarget"] = false,
 		["UseGlobalSet"] = false,
 		["ColorThreatTransition"] = {
@@ -575,7 +575,7 @@ TidyPlatesContHubSettings = {
 		},
 		["FriendlyHeadlineColor"] = "ByReaction",
 		["WidgetsEnableExternal"] = true,
-		["EnemyHeadlineColor"] = "ByReaction",
+		["EnemyHeadlineColor"] = "ByElite",
 		["ScaleSpotlight"] = 0.840000033378601,
 		["WidgetsMyDebuff"] = true,
 		["OpacityFilterLookup"] = {

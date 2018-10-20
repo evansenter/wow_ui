@@ -7,7 +7,7 @@ bind E CLICK BT4Button50:LeftButton
 bind X CLICK BT4Button59:LeftButton
 bind Z CLICK BT4Button58:LeftButton
 bind NUMLOCK CLICK MTSB1001:LeftButton
-bind BUTTON4 CLICK BT4Button38:LeftButton
+bind BUTTON4 CLICK BT4Button42:LeftButton
 bind NUMPADDIVIDE NONE
 bind R ACTIONBUTTON10
 bind SHIFT-R CLICK BT4Button70:LeftButton
@@ -31,7 +31,7 @@ bind SHIFT-SPACE CLICK BT4Button55:LeftButton
 bind PRINTSCREEN NONE
 bind CTRL-B NONE
 bind SHIFT-G NONE
-bind SHIFT-C CLICK BT4Button26:LeftButton
+bind SHIFT-C CLICK BT4Button39:LeftButton
 bind T CLICK BT4Button51:LeftButton
 bind SHIFT-9 CLICK BT4Button69:LeftButton
 bind SHIFT-- ACTIONBUTTON6
@@ -46,8 +46,8 @@ bind BUTTON5 CLICK BT4Button56:LeftButton
 bind SHIFT-BUTTON5 CLICK BT4Button57:LeftButton
 bind ALT-SPACE NONE
 bind ` TOGGLEAUTORUN
-bind SHIFT-` CLICK BT4Button25:LeftButton
-bind SHIFT-BUTTON4 CLICK BT4Button37:LeftButton
+bind SHIFT-` CLICK BT4Button40:LeftButton
+bind SHIFT-BUTTON4 CLICK BT4Button41:LeftButton
 bind ALT-1 NONE
 bind ALT-2 NONE
 bind ALT-UP NONE
@@ -58,4 +58,6 @@ bind \ TOGGLERUN
 bind ALT-V NAMEPLATES
 bind CAPSLOCK NONE
 bind , NONE
+bind SHIFT-A STRAFELEFT
+bind SHIFT-D STRAFERIGHT
 modifiedclick NONE AUTOLOOTTOGGLE

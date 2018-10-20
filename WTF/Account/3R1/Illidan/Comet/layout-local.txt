@@ -6,6 +6,13 @@ X: -435
 Y: -277
 W: 64
 H: 64
+Frame: ItemRefTooltip
+FrameLevel: 1
+Anchor: CENTER
+X: -440
+Y: -51
+W: 128
+H: 64
 Frame: ColorPickerFrame
 FrameLevel: 21
 Anchor: CENTER

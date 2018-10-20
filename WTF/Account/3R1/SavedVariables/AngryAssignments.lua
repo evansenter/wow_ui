@@ -382,6 +382,20 @@ AngryAssign_Pages = {
 		["Backup"] = "{triangle}: Redexx, Zarana, Qwed\n{diamond}: Hidder, Evan, Luumii",
 		["Contents"] = "{triangle}: Redexx, Zarana, Qwed\n{diamond}: Hidder, Evan, Luumii",
 	},
+	[1125280814] = {
+		["Updated"] = 1422414988,
+		["Name"] = "twin 5 heal new healers",
+		["Id"] = 1125280814,
+		["UpdateId"] = 3148356357,
+		["Contents"] = "Whirlwind (emp):\n1) (emp) Draxxi + Hockey + Cexcells\n2) (emp) Twin(Hymn) + Lan(Barrier) + Cexcells + Azpek\n\nShout:\n2) Akroma\n3) Draxxi\n4) Akroma\n5) Draxxi\n\nRubble:\n2)  Comet  + Zaebies + Hemo + Gandalf\n3)  Draxxi + Bluto (Smoke) + \n4)  Twin + Lanfear + Cexcells + Hockey\n5)  Comet + Zaebies + Hemo + Gandalf\n\nQuake\n2) Twin +  + NVs \n3) Akroma +Tonics + personals",
+	},
+	[1763909478] = {
+		["Updated"] = 1421207437,
+		["Name"] = "Brakenspore",
+		["Id"] = 1763909478,
+		["UpdateId"] = 906432904,
+		["Contents"] = "Infesting Spores Order:\n1) Akroma + Devo + Smoke + Eklypto + Cex\n2) Tranq + SLink + Gandalf\n3) Tide + Akroma + Cannibal + \n4) Hymn + Barrier\n5)Akroma + Devo + Smoke + Eklypto + Cex\n6) Tranq + Link + Gandalf\n7) Tide + Akroma + Cannibal + \n8) Hymn + Barrier\n\nRoar Order:\nDj - Brun - Redpaws - Crime",
+	},
 	[2563753241] = {
 		["Updated"] = 1516155060,
 		["Name"] = "High Command",
@@ -389,6 +403,13 @@ AngryAssign_Pages = {
 		["UpdateId"] = 188904191,
 		["Contents"] = "Pods:\n1: Telfina/Ambro\n2:Cenzic/Sinestro\n3: Hex/Crongust\n\nDJ\nAngel\nFay\nLuumi\nEvan\nLil",
 		["Backup"] = "Pods:\n1: Xorn/Ambro\n2:Thenex/Akroma\n3: Hex/Crongust\n\nDJ\nAngel\nFay\nLuumi\nEvan\nLil",
+	},
+	[223793571] = {
+		["Updated"] = 1420677848,
+		["Name"] = "Twins 5 heal",
+		["Id"] = 223793571,
+		["UpdateId"] = 191581569,
+		["Contents"] = "Whirlwind (emp):\n1) (emp) Dj(Tranq) + Hockey + Cexcells\n2) (emp) Twin(Hymn) + Lan(Barrier) + Cexcells + Azpek\n\nShout:\n2) Devo\n4) Devo\n\nRubble:\n2)  Scar  + Tokman + Hemo + Gandalf\n3)  Dj tranq + Bluto (Smoke) + \n4)  Twin + Lanfear + Cexcells + Hockey\n5)  Scar + Tokman + Hemo + Gandalf\n\nQuake\n2) Twin + Captain + NVs \n3) Akroma + HS + personals",
 	},
 	[3329389342] = {
 		["Updated"] = 1508290163,
@@ -398,12 +419,12 @@ AngryAssign_Pages = {
 		["Contents"] = "Blue -> Red eggs\n\nHealing CD during Frigid Blows\n1: Comet / Dank\n2: Lil / Akroma\n3: Comet / Luu\n4: Everything else",
 		["Backup"] = "Blue -> Red eggs\n\nHealing CD during Frigid Blows\n1: Comet / Dank\n2: Lil / Akroma\n3: Comet / Luu\n4: Everything else",
 	},
-	[1763909478] = {
-		["Updated"] = 1421207437,
-		["Name"] = "Brakenspore",
-		["Id"] = 1763909478,
-		["UpdateId"] = 906432904,
-		["Contents"] = "Infesting Spores Order:\n1) Akroma + Devo + Smoke + Eklypto + Cex\n2) Tranq + SLink + Gandalf\n3) Tide + Akroma + Cannibal + \n4) Hymn + Barrier\n5)Akroma + Devo + Smoke + Eklypto + Cex\n6) Tranq + Link + Gandalf\n7) Tide + Akroma + Cannibal + \n8) Hymn + Barrier\n\nRoar Order:\nDj - Brun - Redpaws - Crime",
+	[567041713] = {
+		["Updated"] = 1425949442,
+		["Name"] = "Kromog",
+		["Id"] = 567041713,
+		["UpdateId"] = 2444088531,
+		["Contents"] = "Throughput CDs will be called for.\n\n1 - Revival\n2 - Healing Tide\n3 - Tranq\n\nDefensive CDs will be called for\n\n1 - Devo\n2 - Barrier\n3 - Rally\n4 - Amps",
 	},
 	[1454628185] = {
 		["Updated"] = 1419998164,
@@ -411,27 +432,6 @@ AngryAssign_Pages = {
 		["Id"] = 1454628185,
 		["UpdateId"] = 1991343803,
 		["Contents"] = "Could a family of ghosts be living in your house, rent free? \n\nFreeloading Familial Phantoms, next, on Sick Sad World.",
-	},
-	[223793571] = {
-		["Updated"] = 1420677848,
-		["Name"] = "Twins 5 heal",
-		["Id"] = 223793571,
-		["UpdateId"] = 191581569,
-		["Contents"] = "Whirlwind (emp):\n1) (emp) Dj(Tranq) + Hockey + Cexcells\n2) (emp) Twin(Hymn) + Lan(Barrier) + Cexcells + Azpek\n\nShout:\n2) Devo\n4) Devo\n\nRubble:\n2)  Scar  + Tokman + Hemo + Gandalf\n3)  Dj tranq + Bluto (Smoke) + \n4)  Twin + Lanfear + Cexcells + Hockey\n5)  Scar + Tokman + Hemo + Gandalf\n\nQuake\n2) Twin + Captain + NVs \n3) Akroma + HS + personals",
-	},
-	[2869139716] = {
-		["Updated"] = 1522812525,
-		["Name"] = "Bridgeboi",
-		["Id"] = 2869139716,
-		["UpdateId"] = 662333292,
-		["Contents"] = "Bridge 1:\nLuumi (wings+ha)\nDj (tide)\n\n\nSTACK & POP::\nDj (slink) + Luumi(aura) + Evan (hymn)\nDarkness + Bravery(shout)\n\nBridge 2:\nZenya (revival)\nMike (Tranq)",
-	},
-	[1125280814] = {
-		["Updated"] = 1422414988,
-		["Name"] = "twin 5 heal new healers",
-		["Id"] = 1125280814,
-		["UpdateId"] = 3148356357,
-		["Contents"] = "Whirlwind (emp):\n1) (emp) Draxxi + Hockey + Cexcells\n2) (emp) Twin(Hymn) + Lan(Barrier) + Cexcells + Azpek\n\nShout:\n2) Akroma\n3) Draxxi\n4) Akroma\n5) Draxxi\n\nRubble:\n2)  Comet  + Zaebies + Hemo + Gandalf\n3)  Draxxi + Bluto (Smoke) + \n4)  Twin + Lanfear + Cexcells + Hockey\n5)  Comet + Zaebies + Hemo + Gandalf\n\nQuake\n2) Twin +  + NVs \n3) Akroma +Tonics + personals",
 	},
 	[1420409201] = {
 		["Updated"] = 1515554413,
@@ -447,6 +447,14 @@ AngryAssign_Pages = {
 		["Id"] = 975215370,
 		["UpdateId"] = 1973538154,
 		["Contents"] = "Pulverize:\n1) Lanfear (Barrier) + DJ Tree\n2) Hemo (Rally) + Scar\n3) Bluto (Smoke Bomb) + Akroma Devo (for Enfeabling)\n4) Lanfear (Barrier) + Emp whirling 2 CDs\n5) Hemo (Rally) + Scar\n\nQuake:\n1) Akroma + NVs + Tokman\n2) Twin + AG + Gandalf + Azpek\n3) Akroma + NVs + Tokman\n4) DJ Tree + AG + Gandalf\n5) Akroma + NVs + Tokman\n\nEmpowered Whirlwing:\n1) Hockey + DJ Tranq\n2) Hockey + DJ Tranq\n3) Azpek + Twin",
+	},
+	[4074737409] = {
+		["Updated"] = 1539750205,
+		["Name"] = "ghuun",
+		["Id"] = 4074737409,
+		["UpdateId"] = 3890136018,
+		["Contents"] = "Group 1: azzinara\nGroup 2: felimbued\nGroup 3: misho\nGroup 4: grundle/laserz\nGroup 5: seksay/tendo\ngroup 6: pinpus/xorn",
+		["Backup"] = "Group 1: azzinara\nGroup 2: felimbued\nGroup 3: misho\nGroup 4: grundle/laserz\nGroup 5: seksay/tendo\ngroup 6: pinpus/xorn",
 	},
 	[2556463330] = {
 		["Updated"] = 1499391796,
@@ -469,6 +477,20 @@ AngryAssign_Pages = {
 		["UpdateId"] = 3266744969,
 		["Contents"] = "Phase 2 Sunder/Doom:\n\n1.Revival\n2.Hymn\n3.Aura\n4:Tide",
 	},
+	[2869139716] = {
+		["Updated"] = 1522812525,
+		["Name"] = "Bridgeboi",
+		["Id"] = 2869139716,
+		["UpdateId"] = 662333292,
+		["Contents"] = "Bridge 1:\nLuumi (wings+ha)\nDj (tide)\n\n\nSTACK & POP::\nDj (slink) + Luumi(aura) + Evan (hymn)\nDarkness + Bravery(shout)\n\nBridge 2:\nZenya (revival)\nMike (Tranq)",
+	},
+	[1677668184] = {
+		["Updated"] = 1426735431,
+		["Name"] = "Mythic Kromog",
+		["Id"] = 1677668184,
+		["UpdateId"] = 2738418159,
+		["Contents"] = "Stone Breath 1: NVs\nStone Breath 2: Aura Barrier / Toppies Amp\nGrasping 1: Devo Vamp / Iconjure Amp\nStone Breath 3: HTT + SLT/ Goargrim Rally\nPillars 1: Personals/ Double Fox\nStone Breath 4: Buklau Revival\nStone Breath 5: Divine Hymn + NVs\nGrasping 2: Personals / Toppies Amp\nStone Breath 6: Aura Barrier / Iconjure Amp\nStone Breath 7: Devo Vamp\nStone Breath 8: HTT + SLT/ Goargrim Rlly\nPillars 2: Personals/ Double Fox\nGrasping 3: Buklau Revival\nStone Breath 9: Divine Hymn + NVs\nStone Breath 10: Aurs Barrier/ Toppies Amp\nStone Breath 11: HTT + SLT\nStone Breath 12: Goargrim Rally/ Iconjure Amp\nPillars 3: Personals/ Double Fox\nGrasping 4: Buklau Revival\n\n1st Fox: Chok\n2nd Fox: Cups\n3rd Fox: Haseoh",
+	},
 	[836809314] = {
 		["Updated"] = 1418272376,
 		["Name"] = "Add Space",
@@ -484,19 +506,19 @@ AngryAssign_Pages = {
 		["Backup"] = "Bloods > Hexer > Crusher > Crawgs (on boss)",
 		["Contents"] = "Bloods > Hexer > Crusher > Crawgs (on boss)",
 	},
-	[1677668184] = {
-		["Updated"] = 1426735431,
-		["Name"] = "Mythic Kromog",
-		["Id"] = 1677668184,
-		["UpdateId"] = 2738418159,
-		["Contents"] = "Stone Breath 1: NVs\nStone Breath 2: Aura Barrier / Toppies Amp\nGrasping 1: Devo Vamp / Iconjure Amp\nStone Breath 3: HTT + SLT/ Goargrim Rally\nPillars 1: Personals/ Double Fox\nStone Breath 4: Buklau Revival\nStone Breath 5: Divine Hymn + NVs\nGrasping 2: Personals / Toppies Amp\nStone Breath 6: Aura Barrier / Iconjure Amp\nStone Breath 7: Devo Vamp\nStone Breath 8: HTT + SLT/ Goargrim Rlly\nPillars 2: Personals/ Double Fox\nGrasping 3: Buklau Revival\nStone Breath 9: Divine Hymn + NVs\nStone Breath 10: Aurs Barrier/ Toppies Amp\nStone Breath 11: HTT + SLT\nStone Breath 12: Goargrim Rally/ Iconjure Amp\nPillars 3: Personals/ Double Fox\nGrasping 4: Buklau Revival\n\n1st Fox: Chok\n2nd Fox: Cups\n3rd Fox: Haseoh",
+	[2350168987] = {
+		["Updated"] = 1529463441,
+		["Name"] = "dwa",
+		["Id"] = 2350168987,
+		["UpdateId"] = 1485664869,
+		["Contents"] = "",
 	},
-	[567041713] = {
-		["Updated"] = 1425949442,
-		["Name"] = "Kromog",
-		["Id"] = 567041713,
-		["UpdateId"] = 2444088531,
-		["Contents"] = "Throughput CDs will be called for.\n\n1 - Revival\n2 - Healing Tide\n3 - Tranq\n\nDefensive CDs will be called for\n\n1 - Devo\n2 - Barrier\n3 - Rally\n4 - Amps",
+	[3710085816] = {
+		["Updated"] = 1539831180,
+		["Name"] = "zek",
+		["Id"] = 3710085816,
+		["UpdateId"] = 4192758255,
+		["Contents"] = "Orb Shifty//demon/zarea/tendo//fel/grundle/azzinara\nimmunity Pinpus/",
 	},
 	[1548764330] = {
 		["Updated"] = 1499387417,
@@ -505,18 +527,17 @@ AngryAssign_Pages = {
 		["UpdateId"] = 1191362097,
 		["Contents"] = "Shattering Star CDs:\n1st: Tide\n2nd: Hymn\n3rd: Aura\n4th: Revival\n5th: Tide\n6th: Hymn + Revival\n8th: Aura",
 	},
-	[2350168987] = {
-		["Updated"] = 1529463441,
-		["Name"] = "dwa",
-		["Id"] = 2350168987,
-		["UpdateId"] = 1485664869,
-		["Contents"] = "",
+	[838466774] = {
+		["Updated"] = 1539829610,
+		["Name"] = "mother",
+		["Id"] = 838466774,
+		["UpdateId"] = 3374566836,
+		["Contents"] = "Group1:comet/rigg/azzinara/alamman/shifty\ngroup2:azu/grundle/xert/diablo\ngroup3:huna/wallah/demon\nGroup4:felimbued/brun/pinpus\nGroup5:Vincent/Zarea/tendo\nGroup6: misho/hidder",
 	},
 }
 AngryAssign_Categories = {
 }
 AngryAssign_State = {
-	["locked"] = true,
 	["display"] = {
 		["y"] = 268.944519042969,
 		["x"] = -7.66943359375,
@@ -525,6 +546,7 @@ AngryAssign_State = {
 		["hidden"] = false,
 		["width"] = 274.444152832031,
 	},
+	["locked"] = true,
 	["window"] = {
 		["height"] = 499.999908447266,
 		["top"] = 900.000183105469,
@@ -539,9 +561,9 @@ AngryAssign_State = {
 			["1314599294"] = true,
 			["211601068"] = true,
 		},
-		["scrollvalue"] = 44,
+		["scrollvalue"] = 51,
+		["selected"] = 4074737409,
 		["treesizable"] = true,
-		["selected"] = 211601068,
 		["treewidth"] = 175,
 		["fullwidth"] = 666.000244140625,
 	},

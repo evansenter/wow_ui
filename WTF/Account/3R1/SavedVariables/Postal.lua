@@ -26,8 +26,8 @@ Postal3DB = {
 		["Venala - Cho'gall"] = "Venala - Cho'gall",
 		["Cometron - Illidan"] = "Cometron - Illidan",
 		["Combustion - Illidan"] = "Combustion - Illidan",
-		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
 		["Natal - Illidan"] = "Natal - Illidan",
+		["Centromere - Dark Iron"] = "Centromere - Dark Iron",
 		["Natalan - Illidan"] = "Natalan - Illidan",
 		["Colton - Dark Iron"] = "Colton - Dark Iron",
 		["Natalan - Dark Iron"] = "Natalan - Dark Iron",
@@ -61,14 +61,6 @@ Postal3DB = {
 				},
 			},
 		},
-		["Centromere - Dark Iron"] = {
-			["BlackBook"] = {
-				["recent"] = {
-					"Plane-Illidan|Dark Iron|Horde", -- [1]
-					"Comet-Illidan|Dark Iron|Horde", -- [2]
-				},
-			},
-		},
 		["Natal - Illidan"] = {
 			["BlackBook"] = {
 				["recent"] = {
@@ -83,6 +75,14 @@ Postal3DB = {
 					"Deadsolitary|Illidan|Horde", -- [9]
 					"Çahayla|Illidan|Horde", -- [10]
 					"Demiwrath|Illidan|Horde", -- [11]
+				},
+			},
+		},
+		["Centromere - Dark Iron"] = {
+			["BlackBook"] = {
+				["recent"] = {
+					"Plane-Illidan|Dark Iron|Horde", -- [1]
+					"Comet-Illidan|Dark Iron|Horde", -- [2]
 				},
 			},
 		},
@@ -134,24 +134,25 @@ Postal3DB = {
 			["BlackBook"] = {
 				["recent"] = {
 					"Evan|Illidan|Horde", -- [1]
-					"Djpurge-Illidan|Illidan|Horde", -- [2]
-					"Cometstorm|Illidan|Horde", -- [3]
-					"Combustion|Illidan|Horde", -- [4]
-					"Biscuitss|Illidan|Horde", -- [5]
-					"Cometron|Illidan|Horde", -- [6]
-					"Metal|Illidan|Horde", -- [7]
-					"Princip-Illidan|Illidan|Horde", -- [8]
-					"Olgheals|Illidan|Horde", -- [9]
-					"Azimyth|Illidan|Horde", -- [10]
-					"Twinspirit|Illidan|Horde", -- [11]
-					"Azpek|Illidan|Horde", -- [12]
-					"Blutarski-Illidan|Illidan|Horde", -- [13]
-					"Spasweezy|Illidan|Horde", -- [14]
-					"Natal|Illidan|Horde", -- [15]
-					"Evannata|Illidan|Horde", -- [16]
-					"Plane|Illidan|Horde", -- [17]
-					"Centromere-Dark Iron|Illidan|Horde", -- [18]
-					"evan|Illidan|Horde", -- [19]
+					"Azumaru-Illidan|Illidan|Horde", -- [2]
+					"Djpurge-Illidan|Illidan|Horde", -- [3]
+					"Cometstorm|Illidan|Horde", -- [4]
+					"Combustion|Illidan|Horde", -- [5]
+					"Biscuitss|Illidan|Horde", -- [6]
+					"Cometron|Illidan|Horde", -- [7]
+					"Metal|Illidan|Horde", -- [8]
+					"Princip-Illidan|Illidan|Horde", -- [9]
+					"Olgheals|Illidan|Horde", -- [10]
+					"Azimyth|Illidan|Horde", -- [11]
+					"Twinspirit|Illidan|Horde", -- [12]
+					"Azpek|Illidan|Horde", -- [13]
+					"Blutarski-Illidan|Illidan|Horde", -- [14]
+					"Spasweezy|Illidan|Horde", -- [15]
+					"Natal|Illidan|Horde", -- [16]
+					"Evannata|Illidan|Horde", -- [17]
+					"Plane|Illidan|Horde", -- [18]
+					"Centromere-Dark Iron|Illidan|Horde", -- [19]
+					"evan|Illidan|Horde", -- [20]
 				},
 			},
 			["ChatOutput"] = 3,

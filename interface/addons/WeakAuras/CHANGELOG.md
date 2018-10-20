@@ -1,17 +1,18 @@
-# [2.7.10](https://github.com/WeakAuras/WeakAuras2/tree/2.7.10) (2018-09-16)
+# [2.8.1](https://github.com/WeakAuras/WeakAuras2/tree/2.8.1) (2018-10-02)
 
-[Full Changelog](https://github.com/WeakAuras/WeakAuras2/compare/2.7.9...2.7.10)
+[Full Changelog](https://github.com/WeakAuras/WeakAuras2/compare/2.8.0...2.8.1)
 
 ## Highlights
 
- * Bugfix update for last release
-
-* NOTE: Update requires a game restart! 
+ We fixed a bug where conditions were not properly resetting when auras got unloaded. 
 
 ## Commits
 
-Buds (2):
+Causese (1):
 
-- templates: fix 2 wrong spellids
-- may fix migration error
+- fixed a trait that is no longer a buff on player
+
+Infus (1):
+
+- Fix Conditions not resetting on unloading auras
 

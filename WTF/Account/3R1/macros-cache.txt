@@ -1,25 +1,20 @@
-VER 3 0000000000000072 "AAP_MACRO" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/click ExtraActionButton1
-END
-VER 3 0000000000000031 "Belt" "INV_MISC_QUESTIONMARK"
+VER 3 0000000000000031 "Belt" "132493"
 /use 6
 END
 VER 3 000000000000004C "BH" "135883"
 #showtooltip
 /use [target=mouseover,help,nodead][]Binding Heal
 END
-VER 3 000000000000003F "Blackout Kick" "INV_MISC_QUESTIONMARK"
-#showtooltip Blackout Kick
+VER 3 0000000000000072 "Blackout Kick" "INV_Misc_QuestionMark"
+#showtooltip
 /use [nochanneling]Blackout Kick
-END
-VER 3 0000000000000045 "BoF" "ABILITY_MONK_BREATHOFFIRE"
-#showtooltip Breath of Fire
-/use Kil'Jaeden's Burning Wish
-/use Breath of Fire
 END
 VER 3 0000000000000067 "Cancel SoR" "237542"
 /script local ind=0; for i=1,40 do if UnitAura("player", i)=="Spirit of Redemption" then ind = i end end; CancelUnitBuff("player", ind);
+END
+VER 3 0000000000000030 "Cloak" "1305157"
+#showtooltip
+/use 15
 END
 VER 3 0000000000000069 "Combat Log" "134331"
 /combatlog
@@ -73,12 +68,6 @@ VER 3 000000000000005C "LoF" "INV_Misc_QuestionMark"
 #showtooltip
 /use [target=mouseover,help,nodead][]Leap of Faith
 END
-VER 3 0000000000000057 "Mana Tea" "INV_Misc_QuestionMark"
-#showtooltip Mana Tea
-/use 13
-/use [harm][@mouseovertarget,harm][]14
-/use Mana Tea
-END
 VER 3 0000000000000051 "Mark Skull" "1325309"
 /run SetRaidTarget("target", 8)
 END
@@ -94,10 +83,6 @@ END
 VER 3 000000000000004F "PoM" "INV_Misc_QuestionMark"
 #showtooltip
 /use [target=mouseover,help,nodead][]Prayer of Mending
-END
-VER 3 0000000000000030 "Pot / Cloak" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/use [nomod][mod:ctrl][mod:alt]Potion of Prolonged Power;[mod:shift]15
 END
 VER 3 0000000000000027 "Pull" "INV_Gizmo_RocketBootExtreme"
 /i DBM Pull
