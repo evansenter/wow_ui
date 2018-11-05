@@ -4,9 +4,8 @@
 --[[ TODOs/Notes
 	Things marked with "todo"
 		- IDEA Change popups so they only hide on award/probably add the error message to it.
-
-		- "Moveable" rows in buttons/responses options.
-		- Changeable chatwindow output. 
+		- Trade status in TradeUI
+		- Changeable chatwindow output.
 
 	Backwards compability breaks:
 		- Remove equipLoc, subType, texture from lootTable. They can all be created with GetItemInfoInstant()
@@ -611,13 +610,7 @@ function RCLootCouncil:ChatCommand(msg)
 	elseif input == "add" or input == string.lower(_G.ADD) then
 		if not args[1] or args[1] == "" then return self:ChatCommand("help") end
 		if self.isMasterLooter then
-			local links = args
-			if args[1]:find("|h") then -- Only split links if we have at least one
-			 	links = self:SplitItemLinks(args) -- Split item links to allow user to enter links without space
-			end
-			for _,v in ipairs(links) do
-			self:GetActiveModule("masterlooter"):AddUserItem(v, self.playerName)
-			end
+			self:ChatCmdAdd(args)
 		else
 			self:Print(L["You cannot use this command without being the Master Looter"])
 		end
@@ -1077,7 +1070,7 @@ function RCLootCouncil:OnCommReceived(prefix, serializedMsg, distri, sender)
 				self.lootStatus[guid].num = self.lootStatus[guid].num + 1
 				self.lootStatus[guid].candidates[self:UnitName(sender)] = true
 				if self:IsCouncil(self.playerName) then -- Only councilmen has the voting frame
-					--self:GetActiveModule("votingframe"):UpdateLootStatus()
+					self:GetActiveModule("votingframe"):UpdateLootStatus()
 				end
 
 			elseif command == "fakeLoot" then
@@ -1087,7 +1080,7 @@ function RCLootCouncil:OnCommReceived(prefix, serializedMsg, distri, sender)
 				self.lootStatus[guid].num = self.lootStatus[guid].num + 1
 				self.lootStatus[guid].fake[self:UnitName(sender)] = link
 				if self:IsCouncil(self.playerName) then
-					--self:GetActiveModule("votingframe"):UpdateLootStatus()
+					self:GetActiveModule("votingframe"):UpdateLootStatus()
 				end
 			end
 		else
@@ -1174,6 +1167,29 @@ function RCLootCouncil:OnMLDBReceived(mldb)
 	if not self.mldb.buttons.default then self.mldb.buttons.default = {} end
 	setmetatable(self.mldb.buttons.default, { __index = self.defaults.profile.buttons.default,})
 	-- self.mldb = mldb
+end
+
+function RCLootCouncil:ChatCmdAdd(args)
+	if not args[1] or args[1] == "" then return end -- We need at least 1 arg
+	local owner
+	-- See if one of the args is a owner
+	if not args[1]:find("|") and type(args[1]) ~= "number" then
+		-- First arg is neither an item or a item id, see if it's someone in our group
+		owner = self:UnitName(args[1])
+		if not (owner and owner ~= "" and self.candidates[owner]) then
+			self:Print(format(L["chat_cmd_add_invalid_owner"], owner))
+			return
+		end
+		tremove(args, 1)
+	end
+	-- Now handle the links
+	local links = args
+	if args[1]:find("|h") then -- Only split links if we have at least one
+		links = self:SplitItemLinks(args) -- Split item links to allow user to enter links without space
+	end
+	for _,v in ipairs(links) do
+		self:GetActiveModule("masterlooter"):AddUserItem(v, owner or self.playerName)
+	end
 end
 
 -- if fullTest, add items in the encounterJournal to the test items.

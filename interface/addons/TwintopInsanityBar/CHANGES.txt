@@ -1,12 +1,10 @@
-lightweight tag 1230ccaff23aef5efce74595eee4d80ae62de05b 8.0.1.13-release
-Author:	GitHub <noreply@github.com>
-Date:	Tue Aug 21 13:02:25 2018 -0700
+lightweight tag 1c14559888b0645f847e6631e9e2c00b839d4857 8.0.1.14-release
+Author:	David C. Uhrig <david@twintop-tahoe.com>
+Date:	Wed Oct 24 22:16:40 2018 +1100
 
-commit 1230ccaff23aef5efce74595eee4d80ae62de05b
+commit 1c14559888b0645f847e6631e9e2c00b839d4857
 Author: David C. Uhrig <david@twintop-tahoe.com>
-Date:   Tue Aug 21 13:02:25 2018 -0700
+Date:   Wed Oct 24 22:16:40 2018 +1100
 
-    Add files via upload
-    
-    Fix problem with bar not functioning properly when switching specs.
+    Implement rate limiter hack on UpdateInsanityBar() to address FPS problems for now.
 

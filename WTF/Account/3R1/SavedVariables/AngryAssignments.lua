@@ -449,11 +449,11 @@ AngryAssign_Pages = {
 		["Contents"] = "Pulverize:\n1) Lanfear (Barrier) + DJ Tree\n2) Hemo (Rally) + Scar\n3) Bluto (Smoke Bomb) + Akroma Devo (for Enfeabling)\n4) Lanfear (Barrier) + Emp whirling 2 CDs\n5) Hemo (Rally) + Scar\n\nQuake:\n1) Akroma + NVs + Tokman\n2) Twin + AG + Gandalf + Azpek\n3) Akroma + NVs + Tokman\n4) DJ Tree + AG + Gandalf\n5) Akroma + NVs + Tokman\n\nEmpowered Whirlwing:\n1) Hockey + DJ Tranq\n2) Hockey + DJ Tranq\n3) Azpek + Twin",
 	},
 	[4074737409] = {
-		["Updated"] = 1539750205,
+		["Updated"] = 1540958848,
 		["Name"] = "ghuun",
 		["Id"] = 4074737409,
-		["UpdateId"] = 3890136018,
-		["Contents"] = "Group 1: azzinara\nGroup 2: felimbued\nGroup 3: misho\nGroup 4: grundle/laserz\nGroup 5: seksay/tendo\ngroup 6: pinpus/xorn",
+		["UpdateId"] = 4076117433,
+		["Contents"] = "Group 1: azzinara/rigge\nGroup 2: felimbued/broiled\nGroup 3: Comet\nGroup 4: ala/tyrann\nGroup 5: Lezbehones\ngroup 6: pinpus/sloane",
 		["Backup"] = "Group 1: azzinara\nGroup 2: felimbued\nGroup 3: misho\nGroup 4: grundle/laserz\nGroup 5: seksay/tendo\ngroup 6: pinpus/xorn",
 	},
 	[2556463330] = {
@@ -528,11 +528,11 @@ AngryAssign_Pages = {
 		["Contents"] = "Shattering Star CDs:\n1st: Tide\n2nd: Hymn\n3rd: Aura\n4th: Revival\n5th: Tide\n6th: Hymn + Revival\n8th: Aura",
 	},
 	[838466774] = {
-		["Updated"] = 1539829610,
+		["Updated"] = 1540434335,
 		["Name"] = "mother",
 		["Id"] = 838466774,
-		["UpdateId"] = 3374566836,
-		["Contents"] = "Group1:comet/rigg/azzinara/alamman/shifty\ngroup2:azu/grundle/xert/diablo\ngroup3:huna/wallah/demon\nGroup4:felimbued/brun/pinpus\nGroup5:Vincent/Zarea/tendo\nGroup6: misho/hidder",
+		["UpdateId"] = 3845141522,
+		["Contents"] = "Group1:comet/rigg/azzinara/alamman/tyrann\ngroup2:azu/grundle/xert/shifty\ngroup3:huna/torkk/thorelf\nGroup4:felimbued/lezbe/pinpus\nGroup5:Vincent/Zarea/ssquid\nGroup6: misho/lightenn",
 	},
 }
 AngryAssign_Categories = {
@@ -553,6 +553,7 @@ AngryAssign_State = {
 		["left"] = 598.333312988281,
 		["width"] = 700.000183105469,
 	},
+	["directionUp"] = false,
 	["tree"] = {
 		["groups"] = {
 			["664173253"] = true,
@@ -567,7 +568,6 @@ AngryAssign_State = {
 		["treewidth"] = 175,
 		["fullwidth"] = 666.000244140625,
 	},
-	["directionUp"] = false,
 }
 AngryAssign_Config = {
 	["backdropColor"] = "00000041",

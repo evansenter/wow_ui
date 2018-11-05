@@ -161,6 +161,8 @@ L["channel_desc"] = "El canal para enviar el mensaje."
 --[[ L["Chat print"] = ""--]] 
 L["chat tVersion string"] = "|cFF87CEFARCLootCouncil |cFFFFFFFFversion |cFFFFA500 %s - %s"
 L["chat version String"] = "|cFF87CEFARCLootCouncil |cFFFFFFFFversion |cFFFFA500 %s"
+--[[Translation missing --]]
+--[[ L["chat_cmd_add_invalid_owner"] = ""--]] 
 L["chat_commands_add"] = "Añade un objeto al cuadro de sesion"
 L["chat_commands_award"] = "Empieza una sesion con los objetos conseguidos en tu inventario."
 L["chat_commands_config"] = "Abre las opciones de interfaz"

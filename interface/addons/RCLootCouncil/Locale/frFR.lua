@@ -167,6 +167,8 @@ L["channel_desc"] = "Le canal dans lequel sera envoyé le message."
 L["chat tVersion string"] = "|cFF87CEFARCLootCouncil |cFFFFFFFFversion |cFFFFA500 %s - %s"
 L["chat version String"] = "|cFF87CEFARCLootCouncil |cFFFFFFFFversion |cFFFFA500 %s"
 --[[Translation missing --]]
+--[[ L["chat_cmd_add_invalid_owner"] = ""--]] 
+--[[Translation missing --]]
 --[[ L["chat_commands_add"] = ""--]] 
 --[[Translation missing --]]
 --[[ L["chat_commands_award"] = ""--]] 

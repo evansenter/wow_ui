@@ -41,7 +41,8 @@ L:SetOptionLocalization({
 })
 
 L:SetMiscLocalization({
-
+	Bulwark =	"Bulwark",
+	Hand	=	"Hand"
 })
 
 ---------------------------
@@ -58,6 +59,10 @@ L= DBM:GetModLocalization(2332)
 --  King Rastakhan (Alliance) --
 ---------------------------
 L= DBM:GetModLocalization(2335)
+
+L:SetOptionLocalization({
+	AnnounceAlternatePhase	= "Show general warnings for phase you aren't in as well (timers will always be shown regardless of this option)"
+})
 
 ---------------------------
 --  Sea Priest Blockade (Both) --

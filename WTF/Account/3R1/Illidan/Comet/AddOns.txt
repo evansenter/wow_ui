@@ -37,7 +37,7 @@ RaidFrameIcons: enabled
 RaidFrameIndicators: enabled
 ReckonersProMending: disabled
 ReforgeLite: disabled
-Skada: enabled
+Skada: disabled
 SkadaCC: disabled
 SkadaDamageTaken: disabled
 SkadaDamage: disabled
@@ -301,7 +301,7 @@ Telemancy: enabled
 TellMeWhen: disabled
 TellMeWhen_Options: disabled
 Oilvl: enabled
-Simulationcraft: disabled
+Simulationcraft: enabled
 WorldQuestGroupFinder: enabled
 ReagentBanker: enabled
 AdiBags: enabled
@@ -361,3 +361,8 @@ TidyPlatesContinued_ClassicPlates: enabled
 TidyPlatesContinued_Simple: enabled
 TidyPlatesContinued_Renaitre: enabled
 ElvUI_EverySecondCounts: disabled
+LibRealmInfo: enabled
+Details: enabled
+NickTag-1.0: enabled
+LibGroupInSpecT-1.1: enabled
+LibGraph-2.0: enabled

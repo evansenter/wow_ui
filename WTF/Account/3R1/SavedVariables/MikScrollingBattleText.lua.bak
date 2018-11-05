@@ -308,6 +308,11 @@ MSBTProfiles_SavedVars = {
 		},
 		["Default"] = {
 			["scrollAreas"] = {
+				["Static"] = {
+					["offsetY"] = 120,
+					["direction"] = "Up",
+					["scrollHeight"] = 100,
+				},
 				["Incoming"] = {
 					["stickyDirection"] = "Up",
 					["direction"] = "Up",
@@ -316,19 +321,14 @@ MSBTProfiles_SavedVars = {
 					["animationStyle"] = "Straight",
 					["stickyBehavior"] = "Normal",
 				},
-				["Notification"] = {
-					["offsetY"] = 250,
-				},
 				["Outgoing"] = {
 					["behavior"] = "MSBT_NORMAL",
 					["direction"] = "Up",
 					["offsetX"] = 250,
 					["animationStyle"] = "Straight",
 				},
-				["Static"] = {
-					["offsetY"] = 120,
-					["direction"] = "Up",
-					["scrollHeight"] = 100,
+				["Notification"] = {
+					["offsetY"] = 250,
 				},
 			},
 			["critFontName"] = "ABF",
@@ -553,7 +553,7 @@ MSBTProfiles_SavedVars = {
 			["creationVersion"] = "5.7.125",
 		},
 		["Comet"] = {
-			["critFontName"] = "ABF",
+			["critFontName"] = "Arial Narrow",
 			["enableBlizzardDamage"] = false,
 			["creationVersion"] = "5.7.125",
 			["critFontSize"] = 20,
@@ -837,6 +837,8 @@ MSBTProfiles_SavedVars = {
 				},
 			},
 			["enableBlizzardHealing"] = false,
+			["normalFontAlpha"] = 75,
+			["normalFontName"] = "Arial Narrow",
 			["scrollAreas"] = {
 				["Incoming"] = {
 					["stickyDirection"] = "Up",
@@ -856,9 +858,7 @@ MSBTProfiles_SavedVars = {
 					["offsetY"] = 175,
 				},
 			},
-			["normalFontName"] = "ABF",
-			["normalFontAlpha"] = 90,
-			["normalFontSize"] = 16,
+			["normalFontSize"] = 14,
 		},
 	},
 }

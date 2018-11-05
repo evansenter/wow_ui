@@ -144,6 +144,8 @@ L["channel_desc"] = "要发送消息的频道。"
 --[[ L["Chat print"] = ""--]] 
 L["chat tVersion string"] = "|cFF87CEFARCLootCouncil |cFFFFFFFF版本 |cFFFFA500 %s - %s"
 L["chat version String"] = "|cFF87CEFARCLootCouncil |cFFFFFFFF版本 |cFFFFA500 %s"
+--[[Translation missing --]]
+--[[ L["chat_cmd_add_invalid_owner"] = ""--]] 
 L["chat_commands_add"] = "将一个物品加入分配"
 L["chat_commands_award"] = "开始分配你之前稍后分配的物品。"
 L["chat_commands_config"] = "打开设置界面"

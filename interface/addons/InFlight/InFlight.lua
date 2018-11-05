@@ -14,7 +14,7 @@ local smed = LibStub("LibSharedMedia-3.0")
 local debug = InFlight.debug
 local Print, PrintD = InFlight.Print, InFlight.PrintD
 local vars, db  -- addon
-local source, destination, endTime  -- location data
+local taxiSrc, taxiDst, endTime  -- location data
 local porttaken, takeoff, inworld, ontaxi  -- flags
 local ratio, endText  -- cache variables
 local sb, spark, timeText, locText, bord  -- frame elements
@@ -29,6 +29,7 @@ local L_tooltipoption3 = " <Right-click> for options."
 local L_confirmpopup = "Take flight to |cffffff00%s%s|r?"
 local L_BarOptions = "Bar Options"
 local L_FillUp = "Fill Up"
+local L_ShowSpark = "Show spark"
 local L_Texture = "Texture"
 local L_Width = "Width"
 local L_Height = "Height"
@@ -42,6 +43,7 @@ local L_CompactMode = "Compact Mode"
 local L_ToText = "\"To\" Text"
 local L_Font = "Font"
 local L_FontColor = "Font Color"
+local L_ShowChat = "Chat Messages"
 local L_ConfirmFlight = "Confirm Flight"
 if gl == "enUS" then
 	-- do nada and skip ifelse chain
@@ -225,32 +227,32 @@ local function GetEstimatedTime(slot)  -- estimates flight times based on hops
 	local etimes = { 0 }
 	local prevNode = {}
 	local nextNode = {}
-	local startNode, destNode = 1, #taxiNodes - 1
-	PrintD("|cff208080New Route:|r", taxiNodes[startNode], "|cff208020to|r", taxiNodes[destNode + 1])
-	while startNode and startNode < #taxiNodes do
-		while destNode and destNode > startNode do
-			PrintD("|cff208080Node:|r", taxiNodes[startNode], "|cff208020to|r", taxiNodes[destNode])
-			if vars[taxiNodes[startNode]] then
-				if not etimes[destNode] and vars[taxiNodes[startNode]][taxiNodes[destNode]] then
-					etimes[destNode] = etimes[startNode] + vars[taxiNodes[startNode]][taxiNodes[destNode]]
-					PrintD(taxiNodes[destNode], "time:", FormatTime(etimes[startNode]), "+", FormatTime(vars[taxiNodes[startNode]][taxiNodes[destNode]]), "=", FormatTime(etimes[destNode]))
-					nextNode[startNode] = destNode - 1
-					prevNode[destNode] = startNode
-					startNode = destNode
-					destNode = #taxiNodes
+	local srcNode, dstNode = 1, #taxiNodes - 1
+	PrintD("|cff208080New Route:|r", taxiNodes[srcNode], "|cff208020to|r", taxiNodes[dstNode + 1])
+	while srcNode and srcNode < #taxiNodes do
+		while dstNode and dstNode > srcNode do
+			PrintD("|cff208080Node:|r", taxiNodes[srcNode], "|cff208020to|r", taxiNodes[dstNode])
+			if vars[taxiNodes[srcNode]] then
+				if not etimes[dstNode] and vars[taxiNodes[srcNode]][taxiNodes[dstNode]] then
+					etimes[dstNode] = etimes[srcNode] + vars[taxiNodes[srcNode]][taxiNodes[dstNode]]
+					PrintD(taxiNodes[dstNode], "time:", FormatTime(etimes[srcNode]), "+", FormatTime(vars[taxiNodes[srcNode]][taxiNodes[dstNode]]), "=", FormatTime(etimes[dstNode]))
+					nextNode[srcNode] = dstNode - 1
+					prevNode[dstNode] = srcNode
+					srcNode = dstNode
+					dstNode = #taxiNodes
 				else
-					destNode = destNode - 1
+					dstNode = dstNode - 1
 				end
 			else
-				startNode = prevNode[startNode]
-				destNode = nextNode[startNode]
+				srcNode = prevNode[srcNode]
+				dstNode = nextNode[srcNode]
 			end
 		end
 
 		if not etimes[#taxiNodes] then
 			PrintD("..")
-			startNode = prevNode[startNode]
-			destNode = nextNode[startNode]
+			srcNode = prevNode[srcNode]
+			dstNode = nextNode[srcNode]
 		end
 	end
 
@@ -263,7 +265,7 @@ local function postTaxiNodeOnButtonEnter(button) -- adds duration info to taxi n
 	if TaxiNodeGetType(id) ~= "REACHABLE" then
 		return
 	end
-	local ftime = (vars[source] and vars[source][ ShortenName(TaxiNodeName(id)) ]) or GetEstimatedTime(id) or 0
+	local ftime = (vars[taxiSrc] and vars[taxiSrc][ShortenName(TaxiNodeName(id))]) or GetEstimatedTime(id) or 0
 	if ftime > 0 then
 		gtt:AddLine(L_duration..FormatTime(ftime), 1, 1, 1)
 	else
@@ -276,7 +278,7 @@ local function postFlightNodeOnButtonEnter(button) -- adds duration info to flig
 	if button.taxiNodeData.state ~= Enum.FlightPathState.Reachable then
 		return
 	end
-	local ftime = (vars[source] and vars[source][ ShortenName(button.taxiNodeData.name) ]) or GetEstimatedTime(button.taxiNodeData.slotIndex) or 0
+	local ftime = (vars[taxiSrc] and vars[taxiSrc][ShortenName(button.taxiNodeData.name)]) or GetEstimatedTime(button.taxiNodeData.slotIndex) or 0
 	if ftime > 0 then
 		gtt:AddLine(L_duration..FormatTime(ftime), 1, 1, 1)
 	else
@@ -296,7 +298,7 @@ Print = InFlight.Print
 function InFlight.PrintD(...)  -- debug print
 -----------------------------
 	if debug then
-		Print(...)
+		print("|cff00ff40In|cff00aaffFlight|r:", ...)
 	end
 end
 PrintD = InFlight.PrintD
@@ -314,8 +316,8 @@ function InFlight:LoadBulk()  -- called from InFlight_Load
 	InFlightVars = InFlightVars or { Alliance = {}, Horde = {}, }  -- flight time data
 	vars = InFlightVars[UnitFactionGroup("player")]
 
-	if db.dbinit ~= 803 or debug then
-		db.dbinit = 803
+	if db.dbinit ~= 805 or debug then
+		db.dbinit = 805
 		local function SetDefaults(db, t)  -- set saved variables
 			for k, v in pairs(t) do
 				if type(db[k]) == "table" then
@@ -327,6 +329,7 @@ function InFlight:LoadBulk()  -- called from InFlight_Load
 		end
 		SetDefaults(db, {
 			fill = true,
+			spark = true,
 			border = "Blizzard Dialog",
 			height = 14,
 			width = 230,
@@ -339,32 +342,37 @@ function InFlight:LoadBulk()  -- called from InFlight_Load
 			backcolor = { r = 0.1, g = 0.1, b = 0.1, a = 0.6, },
 			fontcolor = { r = 1.0, g = 1.0, b = 1.0, a = 1.0, },
 			totext = "-->",
+			chatlog = true,
 		} )
 
+		db.totext = strtrim(db.totext)
+		db.upload = nil
+
 		-- updates to default data
+		Print("Default data updated.")
 		local defaults = self:LoadDefaults()
 		for faction, t in pairs(defaults) do
 			local updated, added = 0, 0
-			for source, dt in pairs(t) do
-				InFlightVars[faction][source] = InFlightVars[faction][source] or { }
-				for destination, dtime in pairs(dt) do
-					if not InFlightVars[faction][source][destination] then
+			for src, dt in pairs(t) do
+				InFlightVars[faction][src] = InFlightVars[faction][src] or { }
+				for dst, dtime in pairs(dt) do
+					if not InFlightVars[faction][src][dst] then
 						added = added + 1
 					end
 
 					-- Always update with default data to avoid data cycle regressions
 					if debug then
-						if not InFlightVars[faction][source][destination] then
-							InFlightVars[faction][source][destination] = dtime
+						if not InFlightVars[faction][src][dst] then
+							InFlightVars[faction][src][dst] = dtime
 						else
-							local utime = InFlightVars[faction][source][destination]
+							local utime = InFlightVars[faction][src][dst]
 							if utime > dtime + 5 or utime < dtime - 5 then
 								updated = updated + 1
-								PrintD(faction, "|cff208020-|r", source, db.totext, destination, "|cff208020updated:|r", FormatTime(dtime), "|cff208020to|r", FormatTime(utime))
+								PrintD(faction, "|cff208020-|r", src, db.totext, dst, "|cff208020updated:|r", FormatTime(dtime), "|cff208020to|r", FormatTime(utime))
 							end
 						end
 					else
-						InFlightVars[faction][source][destination] = dtime
+						InFlightVars[faction][src][dst] = dtime
 					end
 				end
 			end
@@ -376,26 +384,32 @@ function InFlight:LoadBulk()  -- called from InFlight_Load
 				Print(faction, "|cff208080- added|r", added, "|cff208080new flight times.|r")
 			end
 		end
+	end
 
+	-- check every 2 weeks if there are new flight times found
+	if not db.upload or db.upload < time() then
 		local locale = GetLocale()
 		if locale == "enUS" or locale == "enGB" then
+			local defaults = self:LoadDefaults()
 			self:Sanitise(InFlightVars, false)
-
 			for faction, t in pairs(InFlightVars) do
 				local found = 0
-				for source, dt in pairs(t) do
-					for destination, dtime in pairs(dt) do
-						if not defaults[faction][source] or not defaults[faction][source][destination] then
+				for src, dt in pairs(t) do
+					for dst, dtime in pairs(dt) do
+						if not defaults[faction][src] or not defaults[faction][src][dst] then
 							found = found + 1
+							PrintD(faction, "|cff208020-|r", src, db.totext, dst, "|cff208020found:|r", FormatTime(dtime))
 						end
 					end
 				end
 
 				if found > 0 then
-					Print(faction, "|cff208020- found|r", found, "|cff208020unknown flight times.|r")
+					Print(faction, "|cff208020- found|r", found, "|cff208020flight times available to contribute.|r")
 				end
 			end
 		end
+
+		db.upload = time() + 1209600
 	end
 
 	if not debug then
@@ -405,10 +419,10 @@ function InFlight:LoadBulk()  -- called from InFlight_Load
 	oldTakeTaxiNode = TakeTaxiNode
 	TakeTaxiNode = function(slot)
 		if TaxiNodeGetType(slot) ~= "REACHABLE" then return end
-		destination = ShortenName(TaxiNodeName(slot))
-		local t = vars[source]
-		if t and t[destination] and t[destination] > 0 then  -- saved variables lookup
-			endTime = t[destination]
+		taxiDst = ShortenName(TaxiNodeName(slot))
+		local t = vars[taxiSrc]
+		if t and t[taxiDst] and t[taxiDst] > 0 then  -- saved variables lookup
+			endTime = t[taxiDst]
 		else
 			endTime = GetEstimatedTime(slot)
 		end
@@ -418,7 +432,7 @@ function InFlight:LoadBulk()  -- called from InFlight_Load
 				OnAccept = function(this, data) InFlight:StartTimer(data) end,
 				timeout = 0, exclusive = 1, hideOnEscape = 1,
 			}
-			StaticPopupDialogs.INFLIGHTCONFIRM.text = format(L_confirmpopup, destination, endTime and format(" (%s)", FormatTime(endTime)) or "")
+			StaticPopupDialogs.INFLIGHTCONFIRM.text = format(L_confirmpopup, taxiDst, endTime and format(" (%s)", FormatTime(endTime)) or "")
 
 			local dialog = StaticPopup_Show("INFLIGHTCONFIRM")
 			if dialog then
@@ -439,9 +453,9 @@ function InFlight:LoadBulk()  -- called from InFlight_Load
 	self.LoadBulk = nil
 end
 
-------------------------------
+---------------------------------------
 function InFlight:InitSource(isTaxiMap)  -- cache source location and hook tooltips
-------------------------------
+---------------------------------------
 	if isTaxiMap then
 		for i = 1, NumTaxiNodes(), 1 do
 			local tb = _G["TaxiButton"..i]
@@ -450,7 +464,7 @@ function InFlight:InitSource(isTaxiMap)  -- cache source location and hook toolt
 				tb.inflighted = true
 			end
 			if TaxiNodeGetType(i) == "CURRENT" then
-				source = ShortenName(TaxiNodeName(i))
+				taxiSrc = ShortenName(TaxiNodeName(i))
 			end
 		end
 	elseif FlightMapFrame and GetTaxiMapID() ~= 994 then
@@ -461,7 +475,7 @@ function InFlight:InitSource(isTaxiMap)  -- cache source location and hook toolt
 				flightnode.inflighted = true
 			end
 			if flightnode.taxiNodeData.state == Enum.FlightPathState.Current then
-				source = ShortenName(flightnode.taxiNodeData.name)
+				taxiSrc = ShortenName(flightnode.taxiNodeData.name)
 			end
 		end
 	end
@@ -480,41 +494,45 @@ function InFlight:StartTimer(slot)  -- lift off
 		return oldTakeTaxiNode(slot)
 	end
 
-	if not sb then  -- create the timer bar
+	-- create the timer bar
+	if not sb then
 		self:CreateBar()
 	end
-	locText:SetFormattedText("%s %s %s", not db.inline and source or "", not db.inline and db.totext or "", destination or "")
-	if endTime then  -- start the timers and setup statusbar
+
+	-- start the timers and setup statusbar
+	if endTime then
 		sb:SetMinMaxValues(0, endTime)
 		sb:SetValue(db.fill and 0 or endTime)
-		sb:SetStatusBarColor(db.barcolor.r, db.barcolor.g, db.barcolor.b, db.barcolor.a)
-		spark:Show()
-		ratio = sb:GetWidth() / endTime
 		endText = FormatTime(endTime)
 	else
 		SetToUnknown()
 	end
+
+	InFlight:UpdateLook()
+	FormatTime(0, timeText)
 	sb:Show()
+	self:Show()
+
 	porttaken = nil
 	elapsed, totalTime, startTime = 0, 0, GetTime()
 	takeoff, inworld = true, true
 	throt = min(0.2, (endTime or 50) * 0.004)  -- increases updates for short flights
+
 	self:RegisterEvent("PLAYER_CONTROL_GAINED")
 	self:RegisterEvent("PLAYER_ENTERING_WORLD")
 	self:RegisterEvent("PLAYER_LEAVING_WORLD")
-	self:Show()
 
 	if slot then
 		oldTakeTaxiNode(slot)
 	end
 end
 
----------------------------------------
-function InFlight:StartMiscFlight(s, d)  -- called from InFlight_Load for special flights
----------------------------------------
+-------------------------------------------
+function InFlight:StartMiscFlight(src, dst)  -- called from InFlight_Load for special flights
+-------------------------------------------
 	self:TAXIMAP_OPENED(nil, true)
-	endTime = vars[s] and vars[s][d]
-	source, destination = s, d
+	endTime = vars[src] and vars[src][dst]
+	taxiSrc, taxiDst = src, dst
 	self:StartTimer()
 end
 
@@ -552,7 +570,6 @@ do  -- timer bar
 			gtt:Show()
 		end)
 		sb:SetScript("OnLeave", function() gtt:Hide() end)
-		sb:SetMinMaxValues(0, 1)
 
 		timeText = sb:CreateFontString(nil, "OVERLAY")
 		locText = sb:CreateFontString(nil, "OVERLAY")
@@ -565,8 +582,6 @@ do  -- timer bar
 		bord = CreateFrame("Frame", nil, sb)  -- border/background
 		SetPoints(bord, "TOPLEFT", sb, "TOPLEFT", -5, 5, "BOTTOMRIGHT", sb, "BOTTOMRIGHT", 5, -5)
 		bord:SetFrameStrata("LOW")
-
-		InFlight:UpdateLook()
 
 		local function onupdate(this, a1)
 			elapsed = elapsed + a1
@@ -589,18 +604,20 @@ do  -- timer bar
 			if not ontaxi then  -- flight ended
 				PrintD("|cff208080porttaken -|r", porttaken)
 				if not porttaken then
-					if type(vars) == "table" and type(source) == "string" then
-						vars[source] = vars[source] or { }
-						local oldTime = vars[source][destination]
+					if type(vars) == "table" and type(taxiSrc) == "string" then
+						vars[taxiSrc] = vars[taxiSrc] or { }
+						local oldTime = vars[taxiSrc][taxiDst]
 						local newTime = floor(totalTime + 0.5)
-						if not oldTime then
-							Print(source, db.totext, destination, "|cff208080added flight time:|r", FormatTime(newTime))
-						elseif newTime > oldTime + 5 or newTime < oldTime - 5 then
-							Print(source, db.totext, destination, "|cff208080updated flight time:|r", FormatTime(oldTime), "|cff208080to|r", FormatTime(newTime))
-						else
-							PrintD(source, db.totext, destination, "|cff208080updated flight time:|r", FormatTime(oldTime), "|cff208080to|r", FormatTime(newTime))
+						if db.chatlog then
+							if not oldTime then
+								Print(taxiSrc, db.totext, taxiDst, "|cff208080added flight time:|r", FormatTime(newTime))
+							elseif newTime > oldTime + 5 or newTime < oldTime - 5 then
+								Print(taxiSrc, db.totext, taxiDst, "|cff208080updated flight time:|r", FormatTime(oldTime), "|cff208080to|r", FormatTime(newTime))
+							else
+								PrintD(taxiSrc, db.totext, taxiDst, "|cff208080updated flight time:|r", FormatTime(oldTime), "|cff208080to|r", FormatTime(newTime))
+							end
 						end
-						vars[source][destination] = newTime
+						vars[taxiSrc][taxiDst] = newTime
 					end
 				end
 				endTime = nil
@@ -627,12 +644,15 @@ do  -- timer bar
 				FormatTime(totalTime, timeText)
 			end
 		end
+
 		function self:PLAYER_LEAVING_WORLD()
 			inworld = nil
 		end
+
 		function self:PLAYER_ENTERING_WORLD()
 			inworld = true
 		end
+
 		function self:PLAYER_CONTROL_GAINED()
 			if not inworld then return end
 			if self:IsShown() then
@@ -643,9 +663,11 @@ do  -- timer bar
 			self:UnregisterEvent("PLAYER_LEAVING_WORLD")
 			self:UnregisterEvent("PLAYER_CONTROL_GAINED")
 		end
+
 		self:SetScript("OnUpdate", onupdate)
 		self.CreateBar = nil
 	end
+
 	------------------------------
 	function InFlight:UpdateLook()
 	------------------------------
@@ -667,13 +689,18 @@ do  -- timer bar
 			sb:GetStatusBarTexture():SetHorizTile(false)
 			sb:GetStatusBarTexture():SetVertTile(false)
 		end
+		spark:SetHeight(db.height * 2.4)
 		if endTime then  -- in case we're in flight
 			ratio = db.width / endTime
 			sb:SetStatusBarColor(db.barcolor.r, db.barcolor.g, db.barcolor.b, db.barcolor.a)
+			if db.spark then
+				spark:Show()
+			else
+				spark:Hide()
+			end
 		else
 			SetToUnknown()
 		end
-		spark:SetHeight(db.height*2.4)
 
 		locText:SetFont(smed:Fetch("font", db.font), db.fontsize, db.outline and "OUTLINE" or nil)
 		locText:SetShadowColor(0, 0, 0, db.fontcolor.a)
@@ -692,6 +719,7 @@ do  -- timer bar
 			locText:SetJustifyH("LEFT")
 			locText:SetJustifyV("CENTER")
 			SetPoints(locText, "LEFT", sb, "LEFT", 4, 0, "RIGHT", timeText, "LEFT", -2, 0)
+			locText:SetText(taxiDst or "??")
 		else
 			timeText:SetJustifyH("CENTER")
 			timeText:SetJustifyV("CENTER")
@@ -699,8 +727,8 @@ do  -- timer bar
 			locText:SetJustifyH("CENTER")
 			locText:SetJustifyV("BOTTOM")
 			SetPoints(locText, "TOPLEFT", sb, "TOPLEFT", -24, db.fontsize*2.5, "BOTTOMRIGHT", sb, "TOPRIGHT", 24, (db.border=="None" and 1) or 3)
+			locText:SetFormattedText("%s %s %s", taxiSrc or "??", db.totext, taxiDst or "??")
 		end
-		locText:SetFormattedText("%s %s %s", not db.inline and source or "", not db.inline and db.totext or "", destination or "")
 	end
 end
 
@@ -937,6 +965,7 @@ function InFlight.ShowOptions()
 				local sub = UIDROPDOWNMENU_MENU_VALUE
 				if sub == "frame" then
 					AddToggle(lvl, L_FillUp, "fill")
+					AddToggle(lvl, L_ShowSpark, "spark")
 					AddList(lvl, L_Texture, "texture")
 					AddList(lvl, L_Width, "width")
 					AddList(lvl, L_Height, "height")
@@ -953,6 +982,7 @@ function InFlight.ShowOptions()
 					AddColor(lvl, L_FontColor, "fontcolor")
 					AddToggle(lvl, "Outline Info", "outline")
 					AddToggle(lvl, "Outline Time", "outlinetime")
+					AddToggle(lvl, L_ShowChat, "chatlog")
 				elseif sub == "other" then
 					AddToggle(lvl, L_ConfirmFlight, "confirmflight")
 					AddToggle(lvl, _G.CHARACTER.." ".._G.SAVE, "perchar")
@@ -977,15 +1007,15 @@ function InFlight.ShowOptions()
 end
 
 if debug then
-	function inflightupdate()
+	function inflightupdate(timeUpdatesAllowed)
 		local updates = {}
 		--for table, updates in pairs(updates) do
 
-		-- Set allowUpdates to true to update and add new times (for updates based
+		-- Set updateExistingTimes to true to update and add new times (for updates based
 		--   on the current default db)
-		-- Set allowUpdates to false to only add new unknown times (use for updates
+		-- Set updateExistingTimes to false to only add new unknown times (use for updates
 		--   not based on current default db to avoid re-adding old/incorrect times)
-		local allowUpdates = false
+		local updateExistingTimes = timeUpdatesAllowed or false
 
 		-- Phase 1
 		-- Remove update data that is the same as the default data so that it
@@ -993,32 +1023,31 @@ if debug then
 		-- This means that the default data should NOT be updated between releases
 		--   as this could cause the updated default times to be reverted by update
 		--   data that contains default times from the current release (unless
-		--   allowUpdates is set to false)
+		--   updateExistingTimes is set to false)
 		for faction, t in pairs(self:LoadDefaults()) do
 			if updates[faction] then
-				for source, dt in pairs(t) do
-					if updates[faction][source] then
-						for dest, dtime in pairs(dt) do
+				for src, dt in pairs(t) do
+					if updates[faction][src] then
+						for dst, dtime in pairs(dt) do
 							-- Remove times that match the default times
-							if updates[faction][source][dest] == dtime then
-								updates[faction][source][dest] = nil
+							if updates[faction][src][dst] == dtime then
+								updates[faction][src][dst] = nil
 							end
 						end
-						if next(updates[faction][source]) == nil then
-							updates[faction][source] = nil
+						if next(updates[faction][src]) == nil then
+							updates[faction][src] = nil
 						end
 					end
 				end
 				if next(updates[faction]) == nil then
 					updates[faction] = nil
+					PrintD(faction, "|cff208020-|r No time updates found. All times equal to defaults.")
 				end
 			end
 		end
 
-	--	updates = InFlightVars	-- uncomment to clean up InFlightVars data (do not run through phase 1)
-
 		-- Phase 2
-		self:Sanitise(updates, allowUpdates, true)
+		self:Sanitise(updates, updateExistingTimes)
 
 		--end
 	end

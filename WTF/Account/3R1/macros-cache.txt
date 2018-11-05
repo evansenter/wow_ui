@@ -29,8 +29,7 @@ VER 3 0000000000000061 "DH" "INV_Misc_QuestionMark"
 /cast Divine Hymn
 END
 VER 3 000000000000006F "Discord" "458228"
-/p Join https://discord.gg/HXaxyF3
-/raid Join https://discord.gg/HXaxyF3
+/raid Join https://discord.gg/TvA6hcf
 END
 VER 3 0000000000000070 "Dispel Magic" "INV_Misc_QuestionMark"
 #showtooltip

@@ -37,7 +37,7 @@ RaidFrameIcons: enabled
 RaidFrameIndicators: enabled
 ReckonersProMending: disabled
 ReforgeLite: disabled
-Skada: enabled
+Skada: disabled
 SkadaCC: enabled
 SkadaDamageTaken: enabled
 SkadaDamage: enabled

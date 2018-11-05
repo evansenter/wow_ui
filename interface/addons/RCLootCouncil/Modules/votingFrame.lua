@@ -823,13 +823,13 @@ function RCVotingFrame:GetFrame()
 	f.rollResult = rf
 
 	-- Loot Status
-	-- f.lootStatus = addon.UI:New("Text", f.content, " ")
-	-- f.lootStatus:SetTextColor(1,1,1,1) -- White for now
-	-- f.lootStatus:SetHeight(20)
-	-- f.lootStatus:SetWidth(150)
-	-- f.lootStatus:SetPoint("RIGHT", rf, "LEFT", -10, 0)
-	-- f.lootStatus:SetScript("OnLeave", addon.Utils.HideTooltip)
-	-- f.lootStatus.text:SetJustifyH("RIGHT")
+	f.lootStatus = addon.UI:New("Text", f.content, " ")
+	f.lootStatus:SetTextColor(1,1,1,1) -- White for now
+	f.lootStatus:SetHeight(20)
+	f.lootStatus:SetWidth(150)
+	f.lootStatus:SetPoint("RIGHT", rf, "LEFT", -10, 0)
+	f.lootStatus:SetScript("OnLeave", addon.Utils.HideTooltip)
+	f.lootStatus.text:SetJustifyH("RIGHT")
 
 	-- Award string
 	local awdstr = f.content:CreateFontString(nil, "OVERLAY", "GameFontNormal")
@@ -1639,8 +1639,8 @@ do
 				end
 			elseif value == "CHANGE_RESPONSE" and entry.special == value then
 				local v;
-				for i = 1, db.buttons.default.numButtons do
-					v = db.responses.default[i]
+				for i = 1, addon:GetNumButtons(lootTable[session].equipLoc) do
+					v = addon:GetResponse(lootTable[session].equipLoc, i)
 					info.text = v.text
 					info.colorCode = "|cff"..addon:RGBToHex(unpack(v.color))
 					info.notCheckable = true

@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(2337, "DBM-ZuldazarRaid", 3, 1176)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 18010 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 18041 $"):sub(12, -3))
 mod:SetCreatureID(146251, 146253, 146256)--Sister Katherine 146251, Brother Joseph 146253, Laminaria 146256
 mod:SetEncounterID(2280)
 --mod:DisableESCombatDetection()
@@ -21,8 +21,8 @@ mod:RegisterEventsInCombat(
 	"SPELL_AURA_REFRESH 285000 285382",
 	"SPELL_AURA_APPLIED_DOSE 285000 285382",
 	"SPELL_AURA_REMOVED 286558 285000 285382 285350 285426",
-	"SPELL_PERIODIC_DAMAGE 285075",
-	"SPELL_PERIODIC_MISSED 285075",
+--	"SPELL_PERIODIC_DAMAGE 285075",
+--	"SPELL_PERIODIC_MISSED 285075",
 	"UNIT_DIED"
 --	"UNIT_SPELLCAST_SUCCEEDED boss1"
 )
@@ -41,17 +41,17 @@ mod:RegisterEventsInCombat(
 local warnTranslocate					= mod:NewTargetNoFilterAnnounce(284393, 2)
 ----Sister Katherine
 local warnCracklingLightning			= mod:NewCastAnnounce(284106, 3)
-local warnKelpWrapped					= mod:NewStackAnnounce(285000, 2, nil, "Tank")
 ----Brother Joseph
 local warnTemptingSong					= mod:NewTargetAnnounce(284405, 2)
 --Stage Two: Laminaria
+local warnKelpWrapped					= mod:NewStackAnnounce(285000, 2, nil, "Tank")
 local warnStormsWail					= mod:NewTargetNoFilterAnnounce(285350, 3)
 
 --Stage One: Storm the Ships
 ----General
 local specWarnTidalShroud				= mod:NewSpecialWarningSwitch(286558, nil, nil, nil, 3, 2)
 local specWarnTidalEmpowerment			= mod:NewSpecialWarningInterrupt(284765, "HasInterrupt", nil, nil, 1, 2)
-local specWarnGTFO						= mod:NewSpecialWarningGTFO(285075, nil, nil, nil, 1, 2)
+--local specWarnGTFO						= mod:NewSpecialWarningGTFO(285075, false, nil, 2, 1, 8)
 ----Sister Katherine
 local specWarnVoltaicFlash				= mod:NewSpecialWarningDodge(284262, nil, nil, nil, 2, 2)
 --local yellDarkRevolation				= mod:NewPosYell(273365)
@@ -123,7 +123,7 @@ function mod:OnCombatStart(delay)
 	end
 	if self.Options.InfoFrame then
 		DBM.InfoFrame:SetHeader(DBM_CORE_INFOFRAME_POWER)
-		DBM.InfoFrame:Show(4, "enemypower", 2)
+		DBM.InfoFrame:Show(4, "enemypower", 1, 10)
 	end
 end
 
@@ -142,17 +142,23 @@ end
 function mod:SPELL_CAST_START(args)
 	local spellId = args.spellId
 	if spellId == 284262 then
-		specWarnVoltaicFlash:Show()
-		specWarnVoltaicFlash:Play("farfromline")
+		if self:CheckTankDistance(args.sourceGUID, 43) then
+			specWarnVoltaicFlash:Show()
+			specWarnVoltaicFlash:Play("watchorb")
+		end
 		timerVoltaicFlashCD:Start()
 	elseif spellId == 284106 then
-		warnCracklingLightning:Show()
+		if self:CheckTankDistance(args.sourceGUID, 43) then
+			warnCracklingLightning:Show()
+		end
 		timerCracklingLightningCD:Start()
 	elseif spellId == 284393 then
 		warnTranslocate:Show(args.sourceName)
 	elseif spellId == 284383 then
-		specWarnSeasTemptation:Show()
-		specWarnSeasTemptation:Play("killmob")
+		if self:CheckTankDistance(args.sourceGUID, 43) then
+			specWarnSeasTemptation:Show()
+			specWarnSeasTemptation:Play("killmob")
+		end
 		timerSeasTemptationCD:Start()
 	elseif spellId == 285118 then
 		specWarnSeaSwell:Show()
@@ -169,8 +175,10 @@ function mod:SPELL_CAST_START(args)
 		specWarnIreoftheDeep:Play("gathershare")
 		timerIreoftheDeepCD:Start()
 	elseif spellId == 284362 then
-		specWarnSeaStorm:Show()
-		specWarnSeaStorm:Play("watchstep")
+		if self:CheckTankDistance(args.sourceGUID, 43) then
+			specWarnSeaStorm:Show()
+			specWarnSeaStorm:Play("watchstep")
+		end
 		timerSeaStormCD:Start()
 	end
 end
@@ -216,7 +224,7 @@ function mod:SPELL_AURA_APPLIED(args)
 		if self.Options.InfoFrame and self.vb.shieldsActive == 1 then--Only trigger on first shield going up, info frame itself should scan all bosses automatically
 			for i = 1, 3 do
 				local bossUnitID = "boss"..i
-				if UnitGUID(bossUnitID) == args.sourceGUID then--Identify correct unit ID
+				if UnitGUID(bossUnitID) == args.destGUID then--Identify casting unit ID
 					DBM.InfoFrame:SetHeader(args.spellName)
 					DBM.InfoFrame:Show(2, "enemyabsorb", nil, UnitGetTotalAbsorbs(bossUnitID))
 					break
@@ -278,13 +286,15 @@ function mod:SPELL_AURA_REMOVED(args)
 	end
 end
 
+--[[
 function mod:SPELL_PERIODIC_DAMAGE(_, _, _, _, destGUID, _, _, _, spellId, spellName)
 	if spellId == 285075 and destGUID == UnitGUID("player") and self:AntiSpam(2, 4) then
 		specWarnGTFO:Show(spellName)
-		specWarnGTFO:Play("runaway")
+		specWarnGTFO:Play("watchfeet")
 	end
 end
 mod.SPELL_PERIODIC_MISSED = mod.SPELL_PERIODIC_DAMAGE
+--]]
 
 function mod:UNIT_DIED(args)
 	local cid = self:GetCIDFromGUID(args.destGUID)

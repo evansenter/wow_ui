@@ -145,6 +145,8 @@ L["channel_desc"] = "Der Kanal, in den die Nachricht gesendet wird."
 --[[ L["Chat print"] = ""--]] 
 L["chat tVersion string"] = "|cFF87CEFARCLootCouncil |cFFFFFFFFVersion |cFFFFA500 %s - %s"
 L["chat version String"] = "|cFF87CEFARCLootCouncil |cFFFFFFFFVersion |cFFFFA500 %s"
+--[[Translation missing --]]
+--[[ L["chat_cmd_add_invalid_owner"] = ""--]] 
 L["chat_commands_add"] = "Gegenstand zur Sitzung hinzufügen"
 L["chat_commands_award"] = [=[Sitzung mit geplünderten Gegenständen aus dem Inventar starten
 ]=]

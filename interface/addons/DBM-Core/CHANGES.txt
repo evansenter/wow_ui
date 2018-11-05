@@ -1,130 +1,23 @@
-Changes since tag 8.0.13
+Changes since tag 8.0.15
 
-commit ad92dc1765486fa92e730d7dd3320ebd35daa54c
+commit 3cf4f74d397956322fbd1404a57e0ec17397bf34
 Author: subversion <svn@deadlybossmods.com>
-Date:   Sat Oct 20 09:25:31 2018 +0200
+Date:   Sat Nov 3 21:33:56 2018 +0100
 
-    Omega via svn r18016:
-    CN update
+    Omega via svn r18061:
+    Fix some bigwigs sync bugs
 
-commit bf87b8a82e95af30ac9cef10d33a4298a28d43b4
+commit 1082dbe8e88352c733c0f56bd324541b19b32a54
 Author: subversion <svn@deadlybossmods.com>
-Date:   Sat Oct 20 07:45:13 2018 +0200
+Date:   Fri Nov 2 17:37:50 2018 +0100
 
-    Omega via svn r18015:
-    Update Conclave of the chosen from testing
+    Omega via svn r18060:
+    Don?\226?\128?\153t spam warn irontide on cast, if cast is repeatedly interrupted, warn if it actually applies only
 
-commit 74ba6a96c9abd06357531046a8823f18eb4e25f5
+commit 84d8bffd67f41b1e1f3e37d8ab58a28338097a64
 Author: subversion <svn@deadlybossmods.com>
-Date:   Fri Oct 19 22:45:09 2018 +0200
+Date:   Fri Nov 2 03:11:54 2018 +0100
 
-    Omega via svn r18014:
-    more fixes
-
-commit c32fbcaeb24477cc1fa8f76a3dcc4f18bcf62c9d
-Author: subversion <svn@deadlybossmods.com>
-Date:   Fri Oct 19 22:35:18 2018 +0200
-
-    Omega via svn r18013:
-    and fine tune tank swaps
-
-commit cfba8975631717652c5f6ee1bd2712569f9e2908
-Author: subversion <svn@deadlybossmods.com>
-Date:   Fri Oct 19 22:30:09 2018 +0200
-
-    Omega via svn r18012:
-    fix paku?\226?\128?\153s wrath
-
-commit a6494aa216be183e90e3294193e7a1ca968e04e1
-Author: subversion <svn@deadlybossmods.com>
-Date:   Fri Oct 19 02:23:10 2018 +0200
-
-    Omega via svn r18011:
-    Fix error in last
-
-commit e18f92c1eed8fd6a999113e93576303e53fec827
-Author: subversion <svn@deadlybossmods.com>
-Date:   Fri Oct 19 02:14:33 2018 +0200
-
-    Omega via svn r18010:
-    Update to stormwall thanks to good videoing and good drycoded AI mod in video to feed me data despite losing logs
-    Also, made AI timer code even smarter by handling condition where first timer of fight can be shorter than a previous pull. DBM now now more aggressively try to learn newer shorter timers even for firsts.
-
-commit c86fd1083b9cdaa76cf4a9c3a82905957615a2c3
-Author: subversion <svn@deadlybossmods.com>
-Date:   Fri Oct 19 00:55:45 2018 +0200
-
-    Omega via svn r18009:
-    Updates to Duo to fix many items not in combat log as well as add a few helpful things like ember icons
-
-commit b33a1f5f9559422981b814da77ae5ce0c2ce9608
-Author: subversion <svn@deadlybossmods.com>
-Date:   Thu Oct 18 22:37:27 2018 +0200
-
-    Omega via svn r18008:
-    Fix CIDs
-
-commit 68babfb758d5fbcbcd92d89a81cbe03a25306488
-Author: subversion <svn@deadlybossmods.com>
-Date:   Thu Oct 18 12:13:05 2018 +0200
-
-    ultrashining via svn r18007:
-    zhTW update
-
-commit 36e2dc56f2e22ca2d81ba7f0858d5a73ffc82808
-Author: subversion <svn@deadlybossmods.com>
-Date:   Thu Oct 18 07:42:32 2018 +0200
-
-    Omega via svn r18006:
-    Conclave of the chosen drycode
-
-commit 8d31132cfbc3d8ae1f47260a178ea69ef809082a
-Author: subversion <svn@deadlybossmods.com>
-Date:   Thu Oct 18 05:03:07 2018 +0200
-
-    Omega via svn r18005:
-    Some renames
-
-commit af48d247fae38a0a811a021ee67179425ac3eebc
-Author: subversion <svn@deadlybossmods.com>
-Date:   Thu Oct 18 05:01:27 2018 +0200
-
-    Omega via svn r18004:
-    Also, antispam dark purpose
-
-commit d9ebad9711986ef31cafbe670a5538d033b55eaf
-Author: subversion <svn@deadlybossmods.com>
-Date:   Thu Oct 18 04:45:09 2018 +0200
-
-    Omega via svn r18003:
-    Fix infoframe for showing matrix targets if there are 2, (why does no one report these bugs)
-
-commit 0c6a2b6e678612095ec0c570158e0a083c032909
-Author: subversion <svn@deadlybossmods.com>
-Date:   Thu Oct 18 04:35:28 2018 +0200
-
-    Omega via svn r18002:
-    Teasure Guardian drycode
-
-commit bc6deb93105dd079ea51c6bd5d32a9d31967aae3
-Author: subversion <svn@deadlybossmods.com>
-Date:   Wed Oct 17 07:51:54 2018 +0200
-
-    Omega via svn r18001:
-    Push blockade drycode
-
-commit 385c1a6575f286d3e6d306386c7ae163c63a93d9
-Author: subversion <svn@deadlybossmods.com>
-Date:   Wed Oct 17 03:38:04 2018 +0200
-
-    Omega via svn r18000:
-    Duo drycode
-    Also, since it was required by now two mods in zuldazar raid, DBM-Nameplate now supports auto hide if a duration is specified. Useful when using nameplate auras for SPELL_CAST_START events
-
-commit 1a0519debec677becbc10cbed9ca984fbf080fcf
-Author: subversion <svn@deadlybossmods.com>
-Date:   Tue Oct 16 23:40:28 2018 +0200
-
-    tandanu via svn r17999:
-    increment alpha version
+    Omega via svn r18059:
+    Inc Alpha
 

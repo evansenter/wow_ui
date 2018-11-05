@@ -963,7 +963,7 @@ TidyPlatesContHubSettings = {
 			["g"] = 0.999997794628143,
 			["b"] = 0.199999555945396,
 		},
-		["StyleHeadlineMiniMobs"] = true,
+		["StyleHeadlineMiniMobs"] = false,
 		["HeadlineFriendlyColor"] = 4,
 		["WidgetsDebuffPriority"] = {
 			["339"] = 4,
