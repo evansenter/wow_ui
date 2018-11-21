@@ -42,7 +42,8 @@ local _icon = LibStub("LibDBIcon-1.0")
 local function initializeDb()
 
 	local defaults = {
-		char = {			
+		char = {
+			LastVersion = 0,           -- used to clean out old stuff	
 			FirstUse = true,           -- true if this is first time use, gets cleared after seeing the export help splash window
 			Talents = {},              -- for each spec, selected talents
 			Equipped = {},             -- for each spec, slot id to item info
@@ -50,7 +51,7 @@ local function initializeDb()
 			BankItems = {},            -- list of item info for bank
 			BagItemsAndCounts = {},    -- used mainly for the shopping list
 			BankItemsAndCounts = {},   -- used mainly for the shopping list			
-			GearSets = {},             -- imported gear sets
+			GearSetups = {},           -- imported gear sets
 			ExtraEnchantData = {},     -- enchant id to enchant display information and material information
 			Logging = {                -- character logging settings
 				Enabled = false,       -- whether logging is currently on or not
@@ -77,7 +78,7 @@ local function initializeDb()
 		},
 		global = {
 			Region = nil,              -- region that this user is in, all characters on the same account should be the same region
-			Shopping = {},             -- shopping list data stored globally for access on any character
+			Shopping2 = {},            -- shopping list data stored globally for access on any character
 			Logging = {                -- a lot of log data is stored globally for simplicity, can only be raiding with one character at a time
 				Wipes = {},            -- times that a wipe was called
 				PlayerData = {},       -- player data gathered at fight start
@@ -122,6 +123,18 @@ local function initializeDb()
 		end
 	end
 	
+	-- upgrade old gear set info to new format
+	if Amr.db.char.GearSets then
+		Amr.db.char.GearSets = nil
+	end
+
+	if not Amr.db.char.GearSetups then
+		Amr.db.char.GearSetups = {}
+	end
+
+	if Amr.db.global.Shopping then
+		Amr.db.global.Shopping = nil
+	end
 	
 	Amr.db.RegisterCallback(Amr, "OnProfileChanged", "RefreshConfig")
 	Amr.db.RegisterCallback(Amr, "OnProfileCopied", "RefreshConfig")
@@ -137,11 +150,34 @@ function Amr:OnInitialize()
 	_icon:Register(Amr.ADDON_NAME, _amrLDB, self.db.profile.minimap)	
 
 	-- listen for inter-addon communication
-	self:RegisterComm(Amr.ChatPrefix, "OnCommReceived")	
+	self:RegisterComm(Amr.ChatPrefix, "OnCommReceived")
 end
 
 local _enteredWorld = false
 local _pendingInit = false
+
+-- upgrade some stuff from old to new formats
+local function upgradeFromOld()
+
+	local currentVersion = tonumber(GetAddOnMetadata(Amr.ADDON_NAME, "Version"))
+	if Amr.db.char.LastVersion < 65 then
+
+		if not Amr.db.profile.options.disableEm then
+			for i = 1,GetNumSpecializations() do
+				local _, specName = GetSpecializationInfo(i)
+				if specName then
+					local setid = C_EquipmentSet.GetEquipmentSetID("AMR " .. specName)
+					if setid then
+						C_EquipmentSet.DeleteEquipmentSet(setid)
+					end
+				end
+			end
+		end
+		
+	end
+	Amr.db.char.LastVersion = currentVersion
+
+end
 
 local function finishInitialize()
 
@@ -155,6 +191,8 @@ local function finishInitialize()
 		Amr:InitializeGear()
 		Amr:InitializeExport()
 		Amr:InitializeCombatLog()
+
+		upgradeFromOld()
 	end)
 end
 

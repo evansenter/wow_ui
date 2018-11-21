@@ -274,9 +274,9 @@ SubSpecStorage = {
 					["column"] = 3,
 				}, -- [5]
 				{
-					["id"] = 22101,
-					["name"] = "Refreshing Jade Wind",
-					["column"] = 2,
+					["id"] = 22214,
+					["name"] = "Invoke Chi-Ji, the Red Crane",
+					["column"] = 3,
 				}, -- [6]
 				{
 					["id"] = 22169,
@@ -285,6 +285,46 @@ SubSpecStorage = {
 				}, -- [7]
 			},
 		}, -- [2]
+		{
+			["name"] = "Fistweaving",
+			["data"] = {
+				{
+					["id"] = 20185,
+					["name"] = "Chi Burst",
+					["column"] = 3,
+				}, -- [1]
+				{
+					["id"] = 19302,
+					["name"] = "Tiger's Lust",
+					["column"] = 3,
+				}, -- [2]
+				{
+					["id"] = 22167,
+					["name"] = "Spirit of the Crane",
+					["column"] = 2,
+				}, -- [3]
+				{
+					["id"] = 19995,
+					["name"] = "Ring of Peace",
+					["column"] = 3,
+				}, -- [4]
+				{
+					["id"] = 20175,
+					["name"] = "Dampen Harm",
+					["column"] = 3,
+				}, -- [5]
+				{
+					["id"] = 22214,
+					["name"] = "Invoke Chi-Ji, the Red Crane",
+					["column"] = 3,
+				}, -- [6]
+				{
+					["id"] = 22170,
+					["name"] = "Rising Mist",
+					["column"] = 3,
+				}, -- [7]
+			},
+		}, -- [3]
 	},
 	["Monk Brewmaster"] = {
 		{
@@ -306,9 +346,9 @@ SubSpecStorage = {
 					["column"] = 3,
 				}, -- [3]
 				{
-					["id"] = 19995,
-					["name"] = "Ring of Peace",
-					["column"] = 3,
+					["id"] = 19994,
+					["name"] = "Summon Black Ox Statue",
+					["column"] = 2,
 				}, -- [4]
 				{
 					["id"] = 20174,

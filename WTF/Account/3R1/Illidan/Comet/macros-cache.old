@@ -2,10 +2,6 @@ VER 3 0100000000000001 "Detox" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /use [@mouseover,help,nodead][]Detox
 END
-VER 3 010000000000000F "Effuse" "INV_MISC_QUESTIONMARK"
-#showtooltip Effuse
-/use [@mouseover,help,nodead][]Effuse
-END
 VER 3 0100000000000015 "Enveloping Mist" "INV_MISC_QUESTIONMARK"
 #showtooltip Enveloping Mist
 /use [@mouseover,help,nodead][]Enveloping Mist
@@ -20,12 +16,17 @@ VER 3 0100000000000024 "FotWT" "INV_Misc_QuestionMark"
 END
 VER 3 0100000000000013 "Life Cocoon" "INV_MISC_QUESTIONMARK"
 #showtooltip Life Cocoon
+/use Inoculating Extract
 /use [@mouseover,help,nodead][]Life Cocoon
 END
 VER 3 0100000000000014 "Renewing Mist" "INV_MISC_QUESTIONMARK"
 #showtooltip Renewing Mist
 /use Thunder Focus Tea
 /use [@mouseover,help,nodead][]Renewing Mist
+END
+VER 3 010000000000000F "SM" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [@mouseover,help,nodead][]Soothing Mist
 END
 VER 3 0100000000000021 "Statue Taunt" "INV_Misc_QuestionMark"
 #showtooltip Provoke
@@ -49,7 +50,7 @@ VER 3 010000000000001C "Tier 5 MW" "INV_Misc_QuestionMark"
 #showtooltip
 /use [talent:5/1,nomod]Healing Elixir;[talent:5/2,nomod]Diffuse Magic;[talent:5/3,nomod]Dampen Harm;[mod:shift]Fortifying Brew
 END
-VER 3 0100000000000023 "Tier 5 WW" "INV_Misc_QuestionMark"
+VER 3 0100000000000023 "Tier 5 WW" "1381295"
 #showtooltip
 /use [talent:5/1]Inner Strength;[talent:5/2]Diffuse Magic;[talent:5/3]Dampen Harm
 END
@@ -61,7 +62,7 @@ VER 3 010000000000001D "Tier 6 MW" "INV_Misc_QuestionMark"
 #showtooltip
 /use [talent:6/1]Summon Jade Serpent Statue;[talent:6/2]Refreshing Jade Wind;[talent:6/3]Invoke Chi-Ji, the Red Crane
 END
-VER 3 010000000000001B "Tiger's Lust" "INV_Misc_QuestionMark"
+VER 3 010000000000001B "Tiger's Lust" "132493"
 #showtooltip
 /use [nomod,@mouseover,help,nodead][nomod,@player][nomod][mod:ctrl][mod:alt]Tiger's Lust;[mod:shift]6
 END

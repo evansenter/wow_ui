@@ -2,8 +2,23 @@ local Amr = LibStub("AceAddon-3.0"):GetAddon("AskMrRobot")
 local L = LibStub("AceLocale-3.0"):GetLocale("AskMrRobot", true)
 local AceGUI = LibStub("AceGUI-3.0")
 
-local _gearTabs
-local _activeTab
+local _cboSetups
+local _panelGear
+local _activeSetupId
+
+local function getSetupById(id)
+	if not id then
+		id = _activeSetupId
+	end
+	local setup
+	for i,s in ipairs(Amr.db.char.GearSetups) do
+		if s.Id == id then
+			setup = s
+			break
+		end
+	end
+	return setup
+end
 
 -- Returns a number indicating how different two items are (0 means the same, higher means more different)
 local function countItemDifferences(item1, item2)
@@ -188,10 +203,25 @@ local function createSocketWidget(panelMods, prevWidget, prevIsSocket, isEquippe
 	return socketBorder, socketIcon
 end
 
-local function renderGear(spec, container)
+local function renderGear(setupId, container)
+
+	-- release all children that were previously rendered, we gonna redo it now
+	container:ReleaseChildren()
 
 	local player = Amr:ExportCharacter()
-	local gear = Amr.db.char.GearSets[spec]
+
+	local gear
+	local spec
+	local setupIndex
+	for i, setup in ipairs(Amr.db.char.GearSetups) do
+		if setup.Id == setupId then
+			setupIndex = i
+			gear = setup.Gear
+			spec = setup.SpecSlot
+			break
+		end
+	end
+
 	local equipped = player.Equipped[player.ActiveSpec]
 		
 	if not gear then
@@ -236,7 +266,7 @@ local function renderGear(spec, container)
 		btnEquip:SetWidth(300)
 		btnEquip:SetHeight(26)
 		btnEquip:SetCallback("OnClick", function(widget)
-			Amr:EquipGearSet(spec)			
+			Amr:EquipGearSet(setupIndex)
 		end)
 		panelGear:AddChild(btnEquip)
 		btnEquip:SetPoint("LEFT", icon.frame, "RIGHT", 40, 0)
@@ -392,14 +422,43 @@ local function renderGear(spec, container)
 	end
 end
 
-local function onGearTabSelected(container, event, group)
-	container:ReleaseChildren()
-	_activeTab = group
-	renderGear(tonumber(group), container)
+local function onSetupChange(widget, eventName, value)
+	_activeSetupId = value
+	renderGear(_activeSetupId, _panelGear)
 end
 
 local function onImportClick(widget)
 	Amr:ShowImportWindow()
+end
+
+function Amr:PickFirstSetupForSpec()
+	local specSlot = GetSpecialization()
+	for i, setup in ipairs(Amr.db.char.GearSetups) do
+		if setup.SpecSlot == specSlot then
+			_activeSetupId = setup.Id
+			break
+		end
+	end
+end
+
+function Amr:GetActiveSetupId()
+	return _activeSetupId
+end
+
+function Amr:SetActiveSetupId(setupId)
+	_activeSetupId = setupId
+end
+
+function Amr:GetActiveSetupLabel()
+	if not _activeSetupId then
+		return nil
+	end
+	local setup = getSetupById(_activeSetupId)
+	if not setup then
+		return nil
+	else
+		return setup.Label
+	end
 end
 
 -- renders the main UI for the Gear tab
@@ -446,23 +505,17 @@ function Amr:RenderTabGear(container)
 	lbl2:SetFont(Amr.CreateFont("Italic", 12, Amr.Colors.Text))
 	lbl2:SetPoint("TOP", lbl.frame, "BOTTOM", 10, -5)
 	
-	local t =  AceGUI:Create("AmrUiTabGroup")
-	t:SetLayout("None")
+	_cboSetups = AceGUI:Create("AmrUiDropDown")
+	_cboSetups:SetWidth(300)	
+	container:AddChild(_cboSetups)
+	_cboSetups:SetPoint("TOPLEFT", container.content, "TOPLEFT", 150, -27.5)
 	
-	local tabz = {}
-	for pos = 1, 4 do
-        local specId = GetSpecializationInfo(pos)
-        if specId then
-            table.insert(tabz, { text = L.SpecsShort[Amr.SpecIds[specId]], value = pos .. "", style = "bold" })
-        end
-	end
-	
-	t:SetTabs(tabz)
-	t:SetCallback("OnGroupSelected", onGearTabSelected)
-	container:AddChild(t)	
-	t:SetPoint("TOPLEFT", container.content, "TOPLEFT", 144, -30)
-	t:SetPoint("BOTTOMRIGHT", container.content, "BOTTOMRIGHT")
-	_gearTabs = t;
+	_panelGear = AceGUI:Create("AmrUiPanel")
+	_panelGear:SetLayout("None")
+	_panelGear:SetBackgroundColor(Amr.Colors.Bg)
+	container:AddChild(_panelGear)
+	_panelGear:SetPoint("TOPLEFT", container.content, "TOPLEFT", 144, -58)
+	_panelGear:SetPoint("BOTTOMRIGHT", container.content, "BOTTOMRIGHT")
 	
 	local btnShop = AceGUI:Create("AmrUiButton")
 	btnShop:SetText(L.GearButtonShop)
@@ -473,31 +526,45 @@ function Amr:RenderTabGear(container)
 	btnShop:SetCallback("OnClick", function(widget) Amr:ShowShopWindow() end)
 	container:AddChild(btnShop)
 	btnShop:SetPoint("TOPRIGHT", container.content, "TOPRIGHT", -20, -25)
-	
-	if not _activeTab then
-		_activeTab = tostring(GetSpecialization())
+
+	-- pick a default tab based on player's current spec if none is already specified
+	if not _activeSetupId then
+		Amr:PickFirstSetupForSpec()
 	end
-	
-	t:SelectTab(_activeTab)
+
+	Amr:RefreshGearDisplay()
+
+	-- set event on dropdown after UI has been initially rendered
+	_cboSetups:SetCallback("OnChange", onSetupChange)
 end
 
--- do cleanup when the gear tab is released
 function Amr:ReleaseTabGear()
-	_gearTabs = nil
-end
-
--- show and update the gear tab for the specified spec
-function Amr:ShowGearTab(spec)
-	if not _gearTabs then return end
-	
-	_activeTab = tostring(spec)
-	_gearTabs:SelectTab(_activeTab)
+	_cboSetups = nil
+	_panelGear = nil
 end
 
 -- refresh display of the current gear tab
-function Amr:RefreshGearTab()
-	if not _gearTabs then return end
-	_gearTabs:SelectTab(_activeTab)
+function Amr:RefreshGearDisplay()
+
+	if not _panelGear then
+		return
+	end
+
+	-- fill the gear setup picker
+	local setupList = {}
+	for i, setup in ipairs(Amr.db.char.GearSetups) do
+		table.insert(setupList, { text = setup.Label, value = setup.Id })
+	end
+	_cboSetups:SetItems(setupList)
+
+	-- set selected value
+	local prev = _activeSetupId
+	_cboSetups:SelectItem(_activeSetupId)
+
+	if prev == _activeSetupId then
+		-- selecting will trigger the change event if it changed; if it didn't change, do a render now
+		renderGear(_activeSetupId, _panelGear)
+	end
 end
 
 
@@ -604,24 +671,12 @@ local function findCurrentGearOpItem()
 	return bestItem, bestDiff, bestLink
 end
 
--- on completion, create an equipment manager set if desired
-local function onEquipGearSetComplete()
-	if Amr.db.profile.options.disableEm then return end
-	
-	-- create an equipment manager set
+local function createAmrEquipmentSet()
 
-	-- note: ignore slots and/or saveset need to be called twice
-    -- for some reason, the slot is treated as blank if you try to ignore once on the first load of the equipment manager
- 
-    -- clear any currently ignored slots
-    --C_EquipmentSet.ClearIgnoredSlotsForSave()
-    --C_EquipmentSet.ClearIgnoredSlotsForSave()
- 
-    -- ignore shirt and tabard
+	-- clear any currently ignored slots, ignore shirt and tabard
+    C_EquipmentSet.ClearIgnoredSlotsForSave()
     C_EquipmentSet.IgnoreSlotForSave(INVSLOT_BODY) -- shirt
     C_EquipmentSet.IgnoreSlotForSave(INVSLOT_TABARD)
-    C_EquipmentSet.IgnoreSlotForSave(INVSLOT_BODY) -- shirt
-	C_EquipmentSet.IgnoreSlotForSave(INVSLOT_TABARD)
 		
 	-- for now use icon of the spec
 	local _, specName, _, setIcon = GetSpecializationInfo(GetSpecialization())
@@ -639,13 +694,27 @@ local function onEquipGearSetComplete()
 	end
 	]]
 
-	local setname = "AMR " .. specName
+	local setup = getSetupById(_activeSetupId)
+	local setname = setup.Label -- "AMR " .. specName
 	local setid = C_EquipmentSet.GetEquipmentSetID(setname)
 	if setid then
 		C_EquipmentSet.SaveEquipmentSet(setid, setIcon)
 	else
 		C_EquipmentSet.CreateEquipmentSet(setname, setIcon)
 	end
+end
+
+-- on completion, create an equipment manager set if desired
+local function onEquipGearSetComplete()
+	if Amr.db.profile.options.disableEm then return end
+	
+	-- create an equipment manager set
+	createAmrEquipmentSet()
+
+	-- need to call it twice because on first load the WoW equipment manager just doesn't work
+	Amr.Wait(1, function()
+		createAmrEquipmentSet()
+	end)
 end
 
 -- stop any currently in-progress gear swapping operation and clean up
@@ -657,13 +726,13 @@ local function disposeGearOp()
 	_gearOpWaiting = nil
 
 	-- make sure the gear tab is still in sync
-	Amr:RefreshGearTab()
+	Amr:RefreshGearDisplay()
 end
 
 -- initialize a gear op to start running it
-local function initializeGearOp(op, spec, pos)
+local function initializeGearOp(op, setupId, pos)
 	op.pos = pos
-	op.spec = spec
+	op.setupId = setupId
 
 	-- fill the remaining slot list and set the starting slot
 	op.nextSlot = nil
@@ -790,7 +859,7 @@ end
 function nextGearOp()
 	if not _currentGearOp then return end
 
-	local spec = _currentGearOp.spec
+	local setupId = _currentGearOp.setupId
 	local pos = _currentGearOp.pos
 	local passes = _gearOpPasses	
 
@@ -817,14 +886,14 @@ function nextGearOp()
 			_currentGearOp = _pendingGearOps[pos + 1]
 			if _currentGearOp then
 				-- we have another op, do it
-				initializeGearOp(_currentGearOp, spec, pos + 1)
+				initializeGearOp(_currentGearOp, setupId, pos + 1)
 				processCurrentGearOp()
 			else
 				-- we are done
 				disposeGearOp()
 
 				-- this will check if not all items were swapped, and either finish up, try again, or abort if have tried too many times
-				beginEquipGearSet(spec, passes + 1)
+				beginEquipGearSet(setupId, passes + 1)
 			end
 		end
 	else
@@ -907,15 +976,19 @@ local _ohFirst = {
     [36] = true -- WarriorProtection
 }
 
-function beginEquipGearSet(spec, passes)
+function beginEquipGearSet(setupId, passes)
 
-	local gear = Amr.db.char.GearSets[spec]
-	if not gear then 
+	local setup = getSetupById(setupId)
+	
+	if not setup or not setup.Gear then 
 		Amr:Print(L.GearEquipErrorEmpty)
 		return
 	end
 
-	-- ensure all our stored data is up to date
+	local gear = setup.Gear
+	local spec = setup.SpecSlot
+
+	-- ensure all our stored data is up to date	
 	local player = Amr:ExportCharacter()
 	local doOhFirst = _ohFirst[player.Specs[spec]]
 
@@ -1060,7 +1133,7 @@ function beginEquipGearSet(spec, passes)
 
 			_gearOpPasses = passes
 			_currentGearOp = _pendingGearOps[1]
-			initializeGearOp(_currentGearOp, spec, 1)
+			initializeGearOp(_currentGearOp, setupId, 1)
 
 			processCurrentGearOp()
 		else
@@ -1079,40 +1152,65 @@ local function onActiveTalentGroupChanged()
 	local waitingSpec = _waitingForSpec
 	_waitingForSpec = 0
 	
+	-- when spec changes, change active setup to first one for this spec (does nothing if they have no setups for this spec)
+	if _activeSetupId then
+		local currentSetup = getSetupById(_activeSetupId)
+		if currentSetup.SpecSlot ~= currentSpec then
+			Amr:PickFirstSetupForSpec()
+		end
+	end
+
 	if currentSpec == waitingSpec or auto then
 		-- spec is what we want, now equip the gear but after a short delay because the game auto-swaps artifact weapons
 		Amr.Wait(2, function()
-			beginEquipGearSet(GetSpecialization(), 0)
+			beginEquipGearSet(_activeSetupId, 0)
 		end)
 	end
 end
 
 -- activate the specified spec and then equip the saved gear set
-function Amr:EquipGearSet(spec)
+function Amr:EquipGearSet(setupIndex)
 	
-	-- if no argument, then cycle spec
-	if not spec then
-		spec = GetSpecialization() + 1
+	-- if no argument, then cycle
+	if not setupIndex then
+		if not _activeSetupId then
+			Amr:PickFirstSetupForSpec()
+		end
+		for i,setup in ipairs(Amr.db.char.GearSetups) do
+			if setup.Id == _activeSetupId then
+				setupIndex = i
+				break
+			end
+		end
+		if not setupIndex then
+			setupIndex = 1
+		else
+			setupIndex = setupIndex + 1
+		end
 	end
 
-	-- allow some flexibility in the arguments
-	if spec == "1" or spec == "2" or spec == "3" or spec == "4" then spec = tonumber(spec) end
+	setupIndex = tonumber(setupIndex)
 
-	local specId = GetSpecializationInfo(spec)
-	if not specId then spec = 1 end
-	
+	if setupIndex > #Amr.db.char.GearSetups then
+		setupIndex = 1
+	end
+
 	if UnitAffectingCombat("player") then
 		Amr:Print(L.GearEquipErrorCombat)
 		return
 	end
 	
+	_activeSetupId = Amr.db.char.GearSetups[setupIndex].Id
+	Amr:RefreshGearDisplay()
+
+	local setup = Amr.db.char.GearSetups[setupIndex]
 	local currentSpec = GetSpecialization()
-	if currentSpec ~= spec then
-		_waitingForSpec = spec
-		SetSpecialization(spec)
+	if currentSpec ~= setup.SpecSlot then
+		_waitingForSpec = setup.SpecSlot
+		SetSpecialization(setup.SpecSlot)
 	else
 		-- spec is what we want, now equip the gear
-		beginEquipGearSet(currentSpec, 0)
+		beginEquipGearSet(_activeSetupId, 0)
 	end
 end
 
@@ -1138,7 +1236,7 @@ function Amr:InitializeGear()
 		-- don't update during a gear operation, wait until it is totally finished
 		if _pendingGearOps then return end
 
-		Amr:RefreshGearTab()
+		Amr:RefreshGearDisplay()
 	end)
 
 	Amr:AddEventHandler("ITEM_UNLOCKED", handleItemUnlocked)

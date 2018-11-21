@@ -2,10 +2,10 @@ local Amr = LibStub("AceAddon-3.0"):GetAddon("AskMrRobot")
 local L = LibStub("AceLocale-3.0"):GetLocale("AskMrRobot", true)
 
 -- min import version that we will read from the website
-Amr.MIN_IMPORT_VERSION = 58
+Amr.MIN_IMPORT_VERSION = 65
 
 -- min addon version that we will support for inter-addon communication
-Amr.MIN_ADDON_VERSION = 58
+Amr.MIN_ADDON_VERSION = 65
 
 -- import some constants from the serializer for convenience
 Amr.ChatPrefix = Amr.Serializer.ChatPrefix

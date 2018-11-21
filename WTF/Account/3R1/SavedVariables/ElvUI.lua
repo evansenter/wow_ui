@@ -16,24 +16,9 @@ ElvDB = {
 		["Metal - Illidan"] = "Comet - Illidan",
 	},
 	["gold"] = {
-		["Dark Iron"] = {
-			["Colton"] = 7241299,
-			["Natalan"] = 6615513,
-			["Ereinion"] = 1978176,
-		},
 		["Illidan"] = {
-			["Cometron"] = 11330625,
-			["Evan"] = 45499343,
-			["Comet"] = 22985784,
-			["Cometstorm"] = 161641526,
-			["Combustion"] = 506078957,
-			["Pandatal"] = 404400,
-			["Natal"] = 6615423,
-			["Natalan"] = 19768910,
-			["Metal"] = 25524979,
-		},
-		["Cho'gall"] = {
-			["Venala"] = 43850,
+			["Comet"] = 454753660,
+			["Evan"] = 29826187,
 		},
 	},
 	["namespaces"] = {
@@ -2436,7 +2421,7 @@ ElvDB = {
 						["middle"] = "Talent/Loot Specialization",
 					},
 				},
-				["font"] = "ABF",
+				["font"] = "Arial Narrow",
 				["actionbar1"] = false,
 			},
 			["actionbar"] = {
@@ -3659,20 +3644,20 @@ ElvPrivateDB = {
 			},
 			["general"] = {
 				["chatBubbleFontSize"] = 12,
+				["chatBubbles"] = "backdrop_noborder",
+				["raidmarkerbar"] = {
+					["enable"] = false,
+				},
+				["namefont"] = "ABF",
+				["normTex"] = "BantoBar",
+				["glossTex"] = "BantoBar",
+				["chatBubbleName"] = true,
+				["chatBubbleFont"] = "ABF",
 				["minimapbar"] = {
 					["mouseover"] = true,
 					["backdrop"] = true,
 					["buttonSize"] = 24,
 				},
-				["raidmarkerbar"] = {
-					["enable"] = false,
-				},
-				["chatBubbleName"] = true,
-				["normTex"] = "BantoBar",
-				["glossTex"] = "BantoBar",
-				["namefont"] = "ABF",
-				["chatBubbleFont"] = "ABF",
-				["chatBubbles"] = "backdrop_noborder",
 				["dmgfont"] = "ABF",
 			},
 			["tooltip"] = {
@@ -3682,8 +3667,8 @@ ElvPrivateDB = {
 				["enable"] = false,
 			},
 			["unitframe"] = {
-				["enable"] = false,
 				["disableBlizzard"] = false,
+				["enable"] = false,
 			},
 			["addonskins"] = {
 				["DBMSkin"] = false,

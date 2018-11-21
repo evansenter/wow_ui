@@ -4,7 +4,7 @@
 ## Notes-zhTW: InFlight 的載入器
 ## Notes-zhCN: 显示各地飞行点
 ## Author: TotalPackage
-## Version: 8.0.005
+## Version: 8.0.006
 
 ## X-Category: Interface Enhancements
 

@@ -1,10 +1,10 @@
-lightweight tag 1c14559888b0645f847e6631e9e2c00b839d4857 8.0.1.14-release
-Author:	David C. Uhrig <david@twintop-tahoe.com>
-Date:	Wed Oct 24 22:16:40 2018 +1100
+lightweight tag 74e7b7fc64e63c0a3930b9350a53824ef4d19ef4 8.0.1.15-release
+Author:	GitHub <noreply@github.com>
+Date:	Sun Nov 11 15:32:19 2018 +1100
 
-commit 1c14559888b0645f847e6631e9e2c00b839d4857
+commit 74e7b7fc64e63c0a3930b9350a53824ef4d19ef4
 Author: David C. Uhrig <david@twintop-tahoe.com>
-Date:   Wed Oct 24 22:16:40 2018 +1100
+Date:   Sun Nov 11 15:32:19 2018 +1100
 
-    Implement rate limiter hack on UpdateInsanityBar() to address FPS problems for now.
+    Update version
 

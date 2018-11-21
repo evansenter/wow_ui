@@ -1,7 +1,7 @@
-changeset:   137:6dc0e8e9f960
-tag:         v64
+changeset:   143:55823e37403b
+tag:         v67
 user:        yellowfive
-date:        Mon Sep 03 19:19:38 2018 -0700
-summary:     uldir for auto-logging
+date:        Thu Nov 08 21:21:10 2018 -0800
+summary:     Updated pt-BR translation, bug fixes.
 
 

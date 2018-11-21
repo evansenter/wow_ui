@@ -12,8 +12,8 @@ BINDING_NAME_AngryAssign_LOCK = "Toggle Lock"
 BINDING_NAME_AngryAssign_DISPLAY = "Toggle Display"
 BINDING_NAME_AngryAssign_OUTPUT = "Output Assignment to Chat"
 
-local AngryAssign_Version = 'v1.11.2'
-local AngryAssign_Timestamp = '20181018222822'
+local AngryAssign_Version = 'v1.11.3'
+local AngryAssign_Timestamp = '20181117155158'
 
 local protocolVersion = 1
 local comPrefix = "AnAss"..protocolVersion
@@ -2515,6 +2515,9 @@ function AngryAssign:OnEnable()
 
 	self:RegisterEvent("PLAYER_REGEN_DISABLED")
 	self:RegisterEvent("PLAYER_GUILD_UPDATE")
+	self:RegisterEvent("GUILD_ROSTER_UPDATE")
+
+	GuildRoster()
 
 	LSM.RegisterCallback(self, "LibSharedMedia_Registered", "UpdateMedia")
 	LSM.RegisterCallback(self, "LibSharedMedia_SetGlobal", "UpdateMedia")
@@ -2580,9 +2583,6 @@ function AngryAssign:AfterEnable()
 	self:RegisterEvent("PARTY_LEADER_CHANGED")
 	self:RegisterEvent("GROUP_JOINED")
 	self:RegisterEvent("GROUP_ROSTER_UPDATE")
-	self:RegisterEvent("GUILD_ROSTER_UPDATE")
-
-	GuildRoster()
 
 	self:SendRequestDisplay()
 	self:UpdateDisplayedIfNewGroup()

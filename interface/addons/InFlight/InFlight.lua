@@ -191,14 +191,19 @@ local function FormatTime(secs, f)  -- simple time format
 	end
 	f:SetFormattedText("%d:%02d / %s", secs / 60, secs % 60, endText)
 end
+
 local function ShortenName(name)  -- shorten name to lighten saved vars and display
 	return gsub(name, L_destparse, "")
 end
+
 local function SetPoints(f, lp, lrt, lrp, lx, ly, rp, rrt, rrp, rx, ry)
 	f:ClearAllPoints()
 	f:SetPoint(lp, lrt, lrp, lx, ly)
-	if rp then f:SetPoint(rp, rrt, rrp, rx, ry) end
+	if rp then
+		f:SetPoint(rp, rrt, rrp, rx, ry)
+	end
 end
+
 local function SetToUnknown()  -- setup bar for flights with unknown time
 	sb:SetMinMaxValues(0, 1)
 	sb:SetValue(1)
@@ -316,8 +321,8 @@ function InFlight:LoadBulk()  -- called from InFlight_Load
 	InFlightVars = InFlightVars or { Alliance = {}, Horde = {}, }  -- flight time data
 	vars = InFlightVars[UnitFactionGroup("player")]
 
-	if db.dbinit ~= 805 or debug then
-		db.dbinit = 805
+	if db.dbinit ~= 806 or debug then
+		db.dbinit = 806
 		local function SetDefaults(db, t)  -- set saved variables
 			for k, v in pairs(t) do
 				if type(db[k]) == "table" then
@@ -418,7 +423,10 @@ function InFlight:LoadBulk()  -- called from InFlight_Load
 
 	oldTakeTaxiNode = TakeTaxiNode
 	TakeTaxiNode = function(slot)
-		if TaxiNodeGetType(slot) ~= "REACHABLE" then return end
+		if TaxiNodeGetType(slot) ~= "REACHABLE" then
+			return
+		end
+
 		taxiDst = ShortenName(TaxiNodeName(slot))
 		local t = vars[taxiSrc]
 		if t and t[taxiDst] and t[taxiDst] > 0 then  -- saved variables lookup
@@ -426,6 +434,7 @@ function InFlight:LoadBulk()  -- called from InFlight_Load
 		else
 			endTime = GetEstimatedTime(slot)
 		end
+
 		if db.confirmflight then  -- confirm flight
 			StaticPopupDialogs.INFLIGHTCONFIRM = StaticPopupDialogs.INFLIGHTCONFIRM or {
 				button1 = OKAY, button2 = CANCEL,
@@ -530,7 +539,7 @@ end
 -------------------------------------------
 function InFlight:StartMiscFlight(src, dst)  -- called from InFlight_Load for special flights
 -------------------------------------------
-	self:TAXIMAP_OPENED(nil, true)
+	self:TAXIMAP_OPENED()
 	endTime = vars[src] and vars[src][dst]
 	taxiSrc, taxiDst = src, dst
 	self:StartTimer()
@@ -555,7 +564,11 @@ do  -- timer bar
 			end
 		end)
 		sb:RegisterForDrag("LeftButton")
-		sb:SetScript("OnDragStart", function(this) if IsShiftKeyDown() then this:StartMoving() end end)
+		sb:SetScript("OnDragStart", function(this)
+			if IsShiftKeyDown() then
+				this:StartMoving()
+			end
+		end)
 		sb:SetScript("OnDragStop", function(this)
 			this:StopMovingOrSizing()
 			local a,b,c,d,e = this:GetPoint()
@@ -575,6 +588,7 @@ do  -- timer bar
 		locText = sb:CreateFontString(nil, "OVERLAY")
 
 		spark = sb:CreateTexture(nil, "OVERLAY")
+		spark:Hide()
 		spark:SetTexture("Interface\\CastingBar\\UI-CastingBar-Spark")
 		spark:SetWidth(16)
 		spark:SetBlendMode("ADD")
@@ -585,7 +599,10 @@ do  -- timer bar
 
 		local function onupdate(this, a1)
 			elapsed = elapsed + a1
-			if elapsed < throt then return end
+			if elapsed < throt then
+				return
+			end
+
 			totalTime = GetTime() - startTime
 			elapsed = 0
 
@@ -594,13 +611,17 @@ do  -- timer bar
 					takeoff, ontaxi = nil, true
 					elapsed, totalTime, startTime = throt - 0.01, 0, GetTime()
 				elseif totalTime > 5 then
+					sb:Hide()
 					this:Hide()
 				end
+
 				return
 			end
+
 			if not UnitOnTaxi("player") then  -- event bug fix
 				ontaxi = nil
 			end
+
 			if not ontaxi then  -- flight ended
 				PrintD("|cff208080porttaken -|r", porttaken)
 				if not porttaken then
@@ -617,14 +638,18 @@ do  -- timer bar
 								PrintD(taxiSrc, db.totext, taxiDst, "|cff208080updated flight time:|r", FormatTime(oldTime), "|cff208080to|r", FormatTime(newTime))
 							end
 						end
+
 						vars[taxiSrc][taxiDst] = newTime
 					end
 				end
+
 				endTime = nil
 				sb:Hide()
 				this:Hide()
+
 				return
 			end
+
 			if endTime then  -- update statusbar if destination time is known
 				if totalTime - 2 > endTime then   -- in case the flight is longer than expected
 					SetToUnknown()
@@ -636,6 +661,7 @@ do  -- timer bar
 					elseif value < 0 then
 						value = 0
 					end
+
 					sb:SetValue(value)
 					spark:SetPoint("CENTER", sb, "LEFT", value * ratio, 0)
 					FormatTime(value, timeText)
@@ -654,11 +680,15 @@ do  -- timer bar
 		end
 
 		function self:PLAYER_CONTROL_GAINED()
-			if not inworld then return end
+			if not inworld then
+				return
+			end
+
 			if self:IsShown() then
 				ontaxi = nil
 				onupdate(self, 3)
 			end
+
 			self:UnregisterEvent("PLAYER_ENTERING_WORLD")
 			self:UnregisterEvent("PLAYER_LEAVING_WORLD")
 			self:UnregisterEvent("PLAYER_CONTROL_GAINED")
@@ -671,7 +701,9 @@ do  -- timer bar
 	------------------------------
 	function InFlight:UpdateLook()
 	------------------------------
-		if not sb then return end
+		if not sb then
+			return
+		end
 
 		sb:SetWidth(db.width)
 		sb:SetHeight(db.height)
@@ -689,6 +721,7 @@ do  -- timer bar
 			sb:GetStatusBarTexture():SetHorizTile(false)
 			sb:GetStatusBarTexture():SetVertTile(false)
 		end
+
 		spark:SetHeight(db.height * 2.4)
 		if endTime then  -- in case we're in flight
 			ratio = db.width / endTime
@@ -753,6 +786,7 @@ function InFlight:SetLayout(this)  -- setups the options in the default interfac
 	local function GetInfo(field)
 		return GetAddOnMetadata("InFlight", field) or "N/A"
 	end
+
 	t2:SetFormattedText("Notes: %s\nAuthor: %s\nVersion: %s", GetInfo("Notes"), GetInfo("Author"), GetInfo("Version"))
 
 	local b = CreateFrame("Button", nil, this, "UIPanelButtonTemplate")
@@ -780,6 +814,7 @@ function InFlight.ShowOptions()
 				_G[b:GetName().."Check"]:Hide()
 			end
 		end
+
 		hooksecurefunc("ToggleDropDownMenu", function(...) lastb = select(8, ...) end)
 		local function Exec(b, k, value)
 			HideCheck(b)
@@ -818,6 +853,7 @@ function InFlight.ShowOptions()
 				else
 					offsetvalue, offsetcount = value, off
 				end
+
 				local tb = _G[gsub(lastb:GetName(), "ExpandArrow", "")]
 				CloseDropDownMenus(b:GetParent():GetID())
 				ToggleDropDownMenu(b:GetParent():GetID(), tb.value, nil, nil, nil, nil, tb.menuList, tb)
@@ -826,8 +862,12 @@ function InFlight.ShowOptions()
 				ReloadUI()
 			end
 		end
+
 		local function Set(b, k)
-			if not k then return end
+			if not k then
+				return
+			end
+
 			db[k] = not db[k]
 			if k == "perchar" then
 				if db[k] then
@@ -837,8 +877,10 @@ function InFlight.ShowOptions()
 				end
 				ReloadUI()
 			end
+
 			InFlight:UpdateLook()
 		end
+
 		local function SetSelect(b, a1)
 			db[a1] = tonumber(b.value) or b.value
 			local level, num = strmatch(b:GetName(), "DropDownList(%d+)Button(%d+)")
@@ -849,11 +891,16 @@ function InFlight.ShowOptions()
 					b[i == num and "Show" or "Hide"](b)
 				end
 			end
+
 			InFlight:UpdateLook()
 		end
+
 		local function SetColor(a1)
 			local dbc = db[UIDROPDOWNMENU_MENU_VALUE]
-			if not dbc then return end
+			if not dbc then
+				return
+			end
+
 			if a1 then
 				local pv = ColorPickerFrame.previousValues
 				dbc.r, dbc.g, dbc.b, dbc.a = pv.r, pv.g, pv.b, 1 - pv.opacity
@@ -861,14 +908,17 @@ function InFlight.ShowOptions()
 				dbc.r, dbc.g, dbc.b = ColorPickerFrame:GetColorRGB()
 				dbc.a = 1 - OpacitySliderFrame:GetValue()
 			end
+
 			InFlight:UpdateLook()
 		end
+
 		local function AddButton(lvl, text, keepshown)
 			info.text = text
 			info.keepShownOnClick = keepshown
 			UIDropDownMenu_AddButton(info, lvl)
 			wipe(info)
 		end
+
 		local function AddToggle(lvl, text, value)
 			info.arg1 = value
 			info.func = Set
@@ -876,6 +926,7 @@ function InFlight.ShowOptions()
 			info.isNotRadio = true
 			AddButton(lvl, text, 1)
 		end
+
 		local function AddExecute(lvl, text, arg1, arg2)
 			info.arg1 = arg1
 			info.arg2 = arg2
@@ -883,9 +934,13 @@ function InFlight.ShowOptions()
 			info.notCheckable = 1
 			AddButton(lvl, text, 1)
 		end
+
 		local function AddColor(lvl, text, value)
 			local dbc = db[value]
-			if not dbc then return end
+			if not dbc then
+				return
+			end
+
 			info.hasColorSwatch = true
 			info.hasOpacity = 1
 			info.r, info.g, info.b, info.opacity = dbc.r, dbc.g, dbc.b, 1 - dbc.a
@@ -895,6 +950,7 @@ function InFlight.ShowOptions()
 			info.func = UIDropDownMenuButton_OpenColorPicker
 			AddButton(lvl, text, nil)
 		end
+
 		local function AddList(lvl, text, value)
 			info.value = value
 			info.hasArrow = true
@@ -902,6 +958,7 @@ function InFlight.ShowOptions()
 			info.notCheckable = 1
 			AddButton(lvl, text, 1)
 		end
+
 		local function AddSelect(lvl, text, arg1, value)
 			info.arg1 = arg1
 			info.func = SetSelect
@@ -913,8 +970,10 @@ function InFlight.ShowOptions()
 			else
 				info.checked = (db[arg1] == value)
 			end
+
 			AddButton(lvl, text, 1)
 		end
+
 		local function AddFakeSlider(lvl, value, minv, maxv, step, tbl)
 			local cvalue = 0
 			local dbv = db[value]
@@ -928,6 +987,7 @@ function InFlight.ShowOptions()
 			else
 				cvalue = dbv or ((maxv - minv) / 2)
 			end
+
 			local adj = (offsetvalue == value and offsetcount) or 0
 			local starti = max(minv, cvalue - (7 - adj) * step)
 			local endi = min(maxv, cvalue + (8 + adj) * step)
@@ -936,9 +996,11 @@ function InFlight.ShowOptions()
 			elseif endi == maxv then
 				starti = max(minv, endi - 16 * step)
 			end
+
 			if starti > minv then
 				AddExecute(lvl, "--", "less", value)
 			end
+
 			if tbl then
 				for i = starti, endi, step do
 					AddSelect(lvl, tbl[i], value, tbl[i])
@@ -949,10 +1011,12 @@ function InFlight.ShowOptions()
 					AddSelect(lvl, format(fstring, i), value, i)
 				end
 			end
+
 			if endi < maxv then
 				AddExecute(lvl, "++", "more", value)
 			end
 		end
+
 		InFlightDD.initialize = function(self, lvl)
 			if lvl == 1 then
 				info.isTitle = true
@@ -1003,13 +1067,14 @@ function InFlight.ShowOptions()
 			end
 		end
 	end
+
 	ToggleDropDownMenu(1, nil, InFlightDD, "cursor")
 end
 
 if debug then
 	function inflightupdate(timeUpdatesAllowed)
 		local updates = {}
-		--for table, updates in pairs(updates) do
+		for table, updates in pairs(updates) do
 
 		-- Set updateExistingTimes to true to update and add new times (for updates based
 		--   on the current default db)
@@ -1049,6 +1114,6 @@ if debug then
 		-- Phase 2
 		self:Sanitise(updates, updateExistingTimes)
 
-		--end
+		end
 	end
 end

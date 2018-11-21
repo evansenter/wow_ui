@@ -14,7 +14,7 @@ local function onImportOkClick(widget)
 		_txtImport:SetFocus(true)
 	else
 		Amr:HideCover()
-		Amr:RefreshGearTab()
+		Amr:RefreshGearDisplay()
 	end
 end
 
@@ -124,7 +124,7 @@ end
 --
 -- Import a character, returning nil on success, otherwise an error message, import result stored in the db.
 --
-function Amr:ImportCharacter(data, isTest)
+function Amr:ImportCharacter(data, isTest, isChild)
 
     -- make sure all data is up to date before importing and get a local copy of player's current state
     local currentPlayerData = self:ExportCharacter()
@@ -133,16 +133,38 @@ function Amr:ImportCharacter(data, isTest)
         return L.ImportErrorEmpty
     end
 	
-	-- if multiple specs are included in the data, parse each individually, then quit
+	-- if multiple setups are included in the data, parse each individually, then quit
 	local specParts = { strsplit("\n", data) }
-	if #specParts > 1 then
-		for i = 1, #specParts do
-			local err = self:ImportCharacter(specParts[i], isTest)
-			if err ~= nil then
-				return err
-			end
-		end
-		return	
+    if #specParts > 1 then
+        -- clear out any previously-imported BiB setups when importing new ones (non-BiB will always be imported one at a time)
+        for i = #Amr.db.char.GearSetups, 1, -1 do
+            if Amr.db.char.GearSetups[i].IsBib then
+                table.remove(Amr.db.char.GearSetups, i)
+            end
+        end
+
+        for i = 1, #specParts do
+            if specParts[i] ~= "_bib_" then
+                local err = self:ImportCharacter(specParts[i], isTest, true)
+                if err ~= nil then
+                    return err
+                end
+            end
+        end
+        
+        -- ensure that all BiB setups are sorted to the top
+        local nonBib = {}
+        for i = #Amr.db.char.GearSetups, 1, -1 do
+            if not Amr.db.char.GearSetups[i].IsBib then
+                table.insert(nonBib, Amr.db.char.GearSetups[i])
+                table.remove(Amr.db.char.GearSetups, i)
+            end
+        end
+        for i, setup in ipairs(nonBib) do
+            table.insert(Amr.db.char.GearSetups, setup)
+        end
+
+        return
 	end
     
     local data1 = { strsplit("$", data) }
@@ -302,9 +324,13 @@ function Amr:ImportCharacter(data, isTest)
         end
     end
     
-    -- now read any extra display information
+    -- extra information contains setup id, display label, then extra enchant info        
     parts = { strsplit("@", data1[3]) }
-    for i = 1, #parts do
+
+    local setupId = parts[2]
+    local setupName = parts[3]
+
+    for i = 4, #parts do
         local infoParts = { strsplit("\\", parts[i]) }
         
         if infoParts[1] == "e" then
@@ -344,7 +370,37 @@ function Amr:ImportCharacter(data, isTest)
         end              
     else
         -- we have succeeded, record the result
-		Amr.db.char.GearSets[specSlot] = importData
+        local result = {
+            IsBib = string.sub(setupId, 1, 3) ~= "AMR",
+            SpecSlot = tonumber(specSlot),
+            Id = setupId,
+            Label = setupName,
+            Gear = importData
+        }
+
+        if not result.IsBib then
+            -- replace if this setup already exists
+            local key = -1
+            for i,setup in ipairs(Amr.db.char.GearSetups) do
+                if setup.Id == result.Id then
+                    key = i
+                    break
+                end
+            end
+
+            if key ~= -1 then
+                Amr.db.char.GearSetups[key] = result
+            else
+                table.insert(Amr.db.char.GearSetups, result)
+            end
+            
+            if not isChild then
+                -- if doing a single import of a setup, make it active
+                Amr:SetActiveSetupId(setupId)
+            end
+        else
+            table.insert(Amr.db.char.GearSetups, result)
+        end
 
         for k,v in pairs(enchantInfo) do
             Amr.db.char.ExtraEnchantData[k] = v    

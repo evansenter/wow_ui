@@ -13442,14 +13442,10 @@ ShadowedUFDB = {
 					},
 				},
 				["focustarget"] = {
-					["portrait"] = {
-						["type"] = "3D",
-						["alignment"] = "RIGHT",
-						["fullAfter"] = 100,
+					["highlight"] = {
 						["height"] = 0.5,
-						["fullBefore"] = 0,
-						["order"] = 15,
-						["width"] = 0.22,
+						["mouseover"] = false,
+						["size"] = 10,
 					},
 					["range"] = {
 						["enabled"] = true,
@@ -13549,11 +13545,6 @@ ShadowedUFDB = {
 						["order"] = 0,
 					},
 					["height"] = 35,
-					["highlight"] = {
-						["height"] = 0.5,
-						["mouseover"] = false,
-						["size"] = 10,
-					},
 					["indicators"] = {
 						["raidTarget"] = {
 							["y"] = 0,
@@ -13570,6 +13561,15 @@ ShadowedUFDB = {
 							["size"] = 16,
 						},
 						["height"] = 0.5,
+					},
+					["portrait"] = {
+						["type"] = "3D",
+						["alignment"] = "RIGHT",
+						["fullAfter"] = 100,
+						["height"] = 0.5,
+						["fullBefore"] = 0,
+						["order"] = 15,
+						["width"] = 0.22,
 					},
 					["fader"] = {
 						["inactiveAlpha"] = 0.5,

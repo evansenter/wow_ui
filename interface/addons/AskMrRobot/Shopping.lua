@@ -5,7 +5,7 @@ local AceGUI = LibStub("AceGUI-3.0")
 local _frameShop
 local _panelContent
 local _cboPlayers
-local _selectedPlayer
+local _selectedSetup
 
 local _specs = {
 	[1] = true,
@@ -14,10 +14,6 @@ local _specs = {
 	[4] = true,
 }
 
-local _chk1
-local _chk2
-local _chk3
-local _chk4
 local _isAhOpen = false
 
 local function incrementTableItem(tbl, key, inc)
@@ -28,10 +24,6 @@ local function onShopFrameClose(widget)
 	AceGUI:Release(widget)
 	_frameShop = nil
 	_cboPlayers = nil
-	_chk1 = nil
-	_chk2 = nil
-	_chk3 = nil
-	_chk4 = nil
 	_panelContent = nil
 end
 
@@ -41,7 +33,7 @@ function Amr:HideShopWindow()
 end
 
 local function onPlayerChange(widget, eventName, value)
-	_selectedPlayer = value
+	_selectedSetup = value
 	Amr:RefreshShoppingUi()
 end
 
@@ -95,36 +87,11 @@ function Amr:ShowShopWindow()
 		_frameShop:AddChild(_cboPlayers)
 		_cboPlayers:SetPoint("TOPLEFT", _frameShop.content, "TOPLEFT", 0, -30)
 		
-		-- spec pickers
-		_chk1 = AceGUI:Create("AmrUiCheckBox")
-		_chk1:SetUserData("spec", 1)
-		_chk1:SetCallback("OnClick", onSpecClick)
-		_frameShop:AddChild(_chk1)
-		_chk1:SetPoint("TOPLEFT", _cboPlayers.frame, "BOTTOMLEFT", 0, -20)
-		
-		_chk2 = AceGUI:Create("AmrUiCheckBox")
-		_chk2:SetUserData("spec", 2)
-		_chk2:SetCallback("OnClick", onSpecClick)
-		_frameShop:AddChild(_chk2)
-		_chk2:SetPoint("LEFT", _chk1.frame, "RIGHT", 30, 0)
-		
-		_chk3 = AceGUI:Create("AmrUiCheckBox")
-		_chk3:SetUserData("spec", 3)
-		_chk3:SetCallback("OnClick", onSpecClick)
-		_frameShop:AddChild(_chk3)
-		_chk3:SetPoint("LEFT", _chk2.frame, "RIGHT", 30, 0)
-		
-		_chk4 = AceGUI:Create("AmrUiCheckBox")
-		_chk4:SetUserData("spec", 4)
-		_chk4:SetCallback("OnClick", onSpecClick)
-		_frameShop:AddChild(_chk4)
-		_chk4:SetPoint("LEFT", _chk3.frame, "RIGHT", 30, 0)
-		
 		_panelContent = AceGUI:Create("AmrUiPanel")
 		_panelContent:SetLayout("None")
 		_panelContent:SetTransparent()
 		_frameShop:AddChild(_panelContent)
-		_panelContent:SetPoint("TOPLEFT", _chk1.frame, "BOTTOMLEFT", 0, -10)
+		_panelContent:SetPoint("TOPLEFT", _cboPlayers.frame, "BOTTOMLEFT", 0, -10)
 		_panelContent:SetPoint("BOTTOMRIGHT", _frameShop.content, "BOTTOMRIGHT")
 		
 		-- update shopping list data
@@ -133,21 +100,55 @@ function Amr:ShowShopWindow()
 		
 		-- fill player list	
 		local playerList = {}
-		for name, data in pairs(Amr.db.global.Shopping) do
-			table.insert(playerList, { text = name, value = name })
+		local firstData = nil	
+		for name, v in pairs(Amr.db.global.Shopping2) do
+			for setupName, data in pairs(v.setups) do
+				table.insert(playerList, { text = name .. " " .. setupName, value = name .. "@" .. setupName })
+				if not firstData then
+					firstData = name .. "@" .. setupName
+				end
+			end
 		end	
 		_cboPlayers:SetItems(playerList)
 		
 		-- set default selected player
-		if not _selectedPlayer then
-			_selectedPlayer = player.Name .. "-" .. player.Realm
-		end	
-		_cboPlayers:SelectItem(_selectedPlayer)
+		local playerData = Amr.db.global.Shopping2[player.Name .. "-" .. player.Realm]
+		if playerData and playerData.setups then
+			_selectedSetup = Amr:GetActiveSetupLabel()
+			if not _selectedSetup then
+				Amr:PickFirstSetupForSpec()
+				_selectedSetup = Amr:GetActiveSetupLabel()
+			end
+			if _selectedSetup and not playerData.setups[_selectedSetup] then					
+				_selectedSetup = nil
+			else
+				_selectedSetup = player.Name .. "-" .. player.Realm .. "@" .. _selectedSetup
+			end
+		end
+		
+		if not _selectedSetup then
+			if playerData and playerData.setups then
+				for k,v in pairs(playerData.setups) do
+					_selectedSetup = player.Name .. "-" .. player.Realm .. "@" .. k
+					break
+				end
+			else
+				_selectedSetup = firstData
+			end
+		end
+		_cboPlayers:SelectItem(_selectedSetup)
 		
 		Amr:RefreshShoppingUi()
 		
 		-- set event on dropdown after UI has been initially rendered
 		_cboPlayers:SetCallback("OnChange", onPlayerChange)
+
+		-- set a timer to refresh a bit after opening b/c sometimes some item info isn't available
+		Amr.Wait(2, function()
+			if _frameShop then
+				Amr:RefreshShoppingUi()
+			end
+		end)
 	else
 		_frameShop:Show()
 		Amr:RefreshShoppingUi()
@@ -270,20 +271,12 @@ end
 
 function Amr:RefreshShoppingUi()
 
-	local posToCheck = { _chk1, _chk2, _chk3, _chk4 }
-	local chk
-	
-	-- reset spec checkboxes
-	for specPos = 1,4 do
-		chk = posToCheck[specPos]
-		chk:SetVisible(false)
-		chk:SetChecked(false)
-	end
-		
 	-- clear out any previous data
 	_panelContent:ReleaseChildren()
 	
-	local data = Amr.db.global.Shopping[_selectedPlayer]
+	local parts = { strsplit("@", _selectedSetup) }
+
+	local data = Amr.db.global.Shopping2[parts[1]].setups[parts[2]]
 	if not data then		
 		_panelContent:SetLayout("None")
 		
@@ -298,48 +291,32 @@ function Amr:RefreshShoppingUi()
 		local hasStuff = false
 		local visited = {}
 		
-		for specPos = 1,4 do
-			-- set labels on checkboxes
-			if data.specs[specPos] and data.specs[specPos] ~= 0 then
-				chk = posToCheck[specPos]
-				chk:SetText(L.SpecsShort[data.specs[specPos]])
-				chk:SetVisible(true)
-				chk:SetChecked(_specs[specPos])
-				
-				-- gather up all stuff for checked specs
-				if _specs[specPos] then
-					hasStuff = true
-					
-					for inventoryId, stuff in pairs(data.stuff[specPos]) do
-						if not visited[inventoryId] then
-							if stuff.gems then
-								for itemId, count in pairs(stuff.gems) do
-									incrementTableItem(allStuff.gems, itemId, count)
-								end
-							end
-							
-							if stuff.enchants then
-								for itemId, count in pairs(stuff.enchants) do
-									incrementTableItem(allStuff.enchants, itemId, count)
-								end
-							end
-							
-							if stuff.materials then
-								for itemId, count in pairs(stuff.materials) do
-									incrementTableItem(allStuff.materials, itemId, count)
-								end
-							end
-						
-							-- make sure not to count the same physical item twice
-							if inventoryId ~= -1 then
-								visited[inventoryId] = true
-							end
-						end
+		for inventoryId, stuff in pairs(data) do
+			hasStuff = true
+			if not visited[inventoryId] then
+				if stuff.gems then
+					for itemId, count in pairs(stuff.gems) do
+						incrementTableItem(allStuff.gems, itemId, count)
 					end
 				end
 				
-			end
+				if stuff.enchants then
+					for itemId, count in pairs(stuff.enchants) do
+						incrementTableItem(allStuff.enchants, itemId, count)
+					end
+				end
+				
+				if stuff.materials then
+					for itemId, count in pairs(stuff.materials) do
+						incrementTableItem(allStuff.materials, itemId, count)
+					end
+				end
 			
+				-- make sure not to count the same physical item twice
+				if inventoryId ~= -1 then
+					visited[inventoryId] = true
+				end
+			end
 		end
 		
 		if hasStuff then		
@@ -419,24 +396,21 @@ local function getShoppingData(player, gear)
 	return ret
 end
 
--- look at both gear sets and find stuff that a player needs to acquire to gem/enchant their gear
+-- look at all gear sets and find stuff that a player needs to acquire to gem/enchant their gear for each setup
 function Amr:UpdateShoppingData(player)
 
 	local required = {
-		stuff = {},
-		specs = player.Specs
+		setups = {}
 	}
-	
-	for i, spec in ipairs(required.specs) do
-		local gear = Amr.db.char.GearSets[i]
+
+	for i, setup in ipairs(Amr.db.char.GearSetups) do
+		local gear = setup.Gear
 		if gear then
-			required.stuff[i] = getShoppingData(player, gear)
-		else
-			required.stuff[i] = {}
+			required.setups[setup.Label] = getShoppingData(player, gear)
 		end
 	end
-	
-	Amr.db.global.Shopping[player.Name .. "-" .. player.Realm] = required
+
+	Amr.db.global.Shopping2[player.Name .. "-" .. player.Realm] = required
 end
 
 Amr:AddEventHandler("AUCTION_HOUSE_SHOW", function() 

@@ -16,6 +16,7 @@ VER 3 0100000000000024 "FotWT" "INV_Misc_QuestionMark"
 END
 VER 3 0100000000000013 "Life Cocoon" "INV_MISC_QUESTIONMARK"
 #showtooltip Life Cocoon
+/use Inoculating Extract
 /use [@mouseover,help,nodead][]Life Cocoon
 END
 VER 3 0100000000000014 "Renewing Mist" "INV_MISC_QUESTIONMARK"
@@ -45,13 +46,9 @@ VER 3 0100000000000011 "Tier 2 MW" "INV_MISC_QUESTIONMARK"
 #showtooltip
 /use [talent:2/1,nochanneling]Chi Wave;[talent:2/2,@player,nochanneling]Zen Sphere;[talent:2/3,nochanneling]Chi Burst
 END
-VER 3 010000000000001C "Tier 5 MW" "INV_Misc_QuestionMark"
+VER 3 0100000000000023 "Tier 5 MW" "606548"
 #showtooltip
-/use [talent:5/1,nomod]Healing Elixir;[talent:5/2,nomod]Diffuse Magic;[talent:5/3,nomod]Dampen Harm;[mod:shift]Fortifying Brew
-END
-VER 3 0100000000000023 "Tier 5 WW" "1381295"
-#showtooltip
-/use [talent:5/1]Inner Strength;[talent:5/2]Diffuse Magic;[talent:5/3]Dampen Harm
+/use [talent:5/1]Healing Elixir;[talent:5/2]Diffuse Magic;[talent:5/3]Dampen Harm
 END
 VER 3 0100000000000020 "Tier 6 BrM" "INV_Misc_QuestionMark"
 #showtooltip
