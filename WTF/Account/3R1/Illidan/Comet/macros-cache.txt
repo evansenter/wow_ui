@@ -16,6 +16,7 @@ VER 3 0100000000000024 "FotWT" "INV_Misc_QuestionMark"
 END
 VER 3 0100000000000013 "Life Cocoon" "INV_MISC_QUESTIONMARK"
 #showtooltip Life Cocoon
+/stopcasting
 /use Inoculating Extract
 /use [@mouseover,help,nodead][]Life Cocoon
 END

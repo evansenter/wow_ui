@@ -1,148 +1,5 @@
 
 EncounterDetailsDB = {
-	["emotes"] = {
-		{
-			{
-				34.2699999999604, -- [1]
-				"A Waste Disposal units opens, forming a Mutated Mass!", -- [2]
-				"Fetid Devourer", -- [3]
-				1, -- [4]
-			}, -- [1]
-			{
-				40.2449999999953, -- [1]
-				"|TInterface\\Icons\\SPELL_DEATHVORTEX:20|tFetid Devourer prepares to unleash |cFFFF0000|Hspell:262291|h[Rotting Regurgitation]|h|r!", -- [2]
-				"Fetid Devourer", -- [3]
-				1, -- [4]
-			}, -- [2]
-			{
-				44.2569999999832, -- [1]
-				"Waste Disposal Units open, forming Corruption Corpuscles!", -- [2]
-				"Fetid Devourer", -- [3]
-				1, -- [4]
-			}, -- [3]
-			{
-				86.3789999999572, -- [1]
-				"|TInterface\\Icons\\SPELL_DEATHVORTEX:20|tFetid Devourer prepares to unleash |cFFFF0000|Hspell:262291|h[Rotting Regurgitation]|h|r!", -- [2]
-				"Fetid Devourer", -- [3]
-				1, -- [4]
-			}, -- [4]
-			{
-				109.239000000001, -- [1]
-				"A Waste Disposal units opens, forming a Mutated Mass!", -- [2]
-				"Fetid Devourer", -- [3]
-				1, -- [4]
-			}, -- [5]
-			{
-				119.135999999999, -- [1]
-				"|TInterface\\Icons\\SPELL_DEATHVORTEX:20|tFetid Devourer prepares to unleash |cFFFF0000|Hspell:262291|h[Rotting Regurgitation]|h|r!", -- [2]
-				"Fetid Devourer", -- [3]
-				1, -- [4]
-			}, -- [6]
-			{
-				119.135999999999, -- [1]
-				"Waste Disposal Units open, forming Corruption Corpuscles!", -- [2]
-				"Fetid Devourer", -- [3]
-				1, -- [4]
-			}, -- [7]
-			["boss"] = "Fetid Devourer",
-		}, -- [1]
-		{
-			{
-				34.7449999999953, -- [1]
-				"A Waste Disposal units opens, forming a Mutated Mass!", -- [2]
-				"Fetid Devourer", -- [3]
-				1, -- [4]
-			}, -- [1]
-			{
-				41.935999999987, -- [1]
-				"|TInterface\\Icons\\SPELL_DEATHVORTEX:20|tFetid Devourer prepares to unleash |cFFFF0000|Hspell:262291|h[Rotting Regurgitation]|h|r!", -- [2]
-				"Fetid Devourer", -- [3]
-				1, -- [4]
-			}, -- [2]
-			{
-				44.7370000000228, -- [1]
-				"Waste Disposal Units open, forming Corruption Corpuscles!", -- [2]
-				"Fetid Devourer", -- [3]
-				1, -- [4]
-			}, -- [3]
-			{
-				89.3250000000117, -- [1]
-				"|TInterface\\Icons\\SPELL_DEATHVORTEX:20|tFetid Devourer prepares to unleash |cFFFF0000|Hspell:262291|h[Rotting Regurgitation]|h|r!", -- [2]
-				"Fetid Devourer", -- [3]
-				1, -- [4]
-			}, -- [4]
-			{
-				109.777000000002, -- [1]
-				"A Waste Disposal units opens, forming a Mutated Mass!", -- [2]
-				"Fetid Devourer", -- [3]
-				1, -- [4]
-			}, -- [5]
-			{
-				119.84600000002, -- [1]
-				"Waste Disposal Units open, forming Corruption Corpuscles!", -- [2]
-				"Fetid Devourer", -- [3]
-				1, -- [4]
-			}, -- [6]
-			{
-				123.767999999982, -- [1]
-				"|TInterface\\Icons\\SPELL_DEATHVORTEX:20|tFetid Devourer prepares to unleash |cFFFF0000|Hspell:262291|h[Rotting Regurgitation]|h|r!", -- [2]
-				"Fetid Devourer", -- [3]
-				1, -- [4]
-			}, -- [7]
-			{
-				162.204000000027, -- [1]
-				"|TInterface\\Icons\\SPELL_DEATHVORTEX:20|tFetid Devourer prepares to unleash |cFFFF0000|Hspell:262291|h[Rotting Regurgitation]|h|r!", -- [2]
-				"Fetid Devourer", -- [3]
-				1, -- [4]
-			}, -- [8]
-			["boss"] = "Fetid Devourer",
-		}, -- [2]
-		{
-			{
-				35.1820000000298, -- [1]
-				"A Waste Disposal units opens, forming a Mutated Mass!", -- [2]
-				"Fetid Devourer", -- [3]
-				1, -- [4]
-			}, -- [1]
-			{
-				41.399000000034, -- [1]
-				"|TInterface\\Icons\\SPELL_DEATHVORTEX:20|tFetid Devourer prepares to unleash |cFFFF0000|Hspell:262291|h[Rotting Regurgitation]|h|r!", -- [2]
-				"Fetid Devourer", -- [3]
-				1, -- [4]
-			}, -- [2]
-			{
-				45.2210000000196, -- [1]
-				"Waste Disposal Units open, forming Corruption Corpuscles!", -- [2]
-				"Fetid Devourer", -- [3]
-				1, -- [4]
-			}, -- [3]
-			{
-				88.8080000000191, -- [1]
-				"|TInterface\\Icons\\SPELL_DEATHVORTEX:20|tFetid Devourer prepares to unleash |cFFFF0000|Hspell:262291|h[Rotting Regurgitation]|h|r!", -- [2]
-				"Fetid Devourer", -- [3]
-				1, -- [4]
-			}, -- [4]
-			{
-				110.184999999998, -- [1]
-				"A Waste Disposal units opens, forming a Mutated Mass!", -- [2]
-				"Fetid Devourer", -- [3]
-				1, -- [4]
-			}, -- [5]
-			{
-				120.215000000026, -- [1]
-				"Waste Disposal Units open, forming Corruption Corpuscles!", -- [2]
-				"Fetid Devourer", -- [3]
-				1, -- [4]
-			}, -- [6]
-			{
-				122.722000000009, -- [1]
-				"|TInterface\\Icons\\SPELL_DEATHVORTEX:20|tFetid Devourer prepares to unleash |cFFFF0000|Hspell:262291|h[Rotting Regurgitation]|h|r!", -- [2]
-				"Fetid Devourer", -- [3]
-				1, -- [4]
-			}, -- [7]
-			["boss"] = "Fetid Devourer",
-		}, -- [3]
-	},
 	["encounter_spells"] = {
 		[269279] = {
 			["school"] = 1,
@@ -591,8 +448,8 @@ EncounterDetailsDB = {
 		[55078] = {
 			["school"] = 32,
 			["token"] = {
-				["SPELL_HEAL"] = true,
 				["SPELL_PERIODIC_DAMAGE"] = true,
+				["SPELL_HEAL"] = true,
 			},
 			["source"] = "Rune Weapon",
 		},
@@ -770,8 +627,8 @@ EncounterDetailsDB = {
 		[205179] = {
 			["school"] = 32,
 			["token"] = {
-				["SPELL_PERIODIC_DAMAGE"] = true,
 				["SPELL_HEAL"] = true,
+				["SPELL_PERIODIC_DAMAGE"] = true,
 			},
 			["source"] = "Zarea",
 		},
@@ -853,8 +710,8 @@ EncounterDetailsDB = {
 		[205246] = {
 			["school"] = 32,
 			["token"] = {
-				["SPELL_PERIODIC_DAMAGE"] = true,
 				["SPELL_PERIODIC_HEAL"] = true,
+				["SPELL_PERIODIC_DAMAGE"] = true,
 			},
 			["source"] = "Zarea",
 		},
@@ -1746,11 +1603,12 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Sløane",
 		},
-		[267803] = {
-			["school"] = 4,
+		[276094] = {
+			["school"] = 1,
 			["token"] = {
-				["SPELL_DAMAGE"] = true,
+				["SPELL_HEAL"] = true,
 			},
+			["source"] = "Nazmani Bloodhexer",
 		},
 		[263503] = {
 			["school"] = 64,
@@ -1767,14 +1625,14 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Taloc",
 		},
-		[271864] = {
+		[277775] = {
 			["school"] = 1,
 			["type"] = "BUFF",
 			["token"] = {
 				["SPELL_AURA_APPLIED"] = true,
 				["SPELL_CAST_SUCCESS"] = true,
 			},
-			["source"] = "Taloc",
+			["source"] = "Malformed Raptor",
 		},
 		[275129] = {
 			["school"] = 40,
@@ -1792,13 +1650,12 @@ EncounterDetailsDB = {
 			},
 			["source"] = "G'huun",
 		},
-		[267325] = {
-			["school"] = 32,
-			["type"] = "BUFF",
+		[30153] = {
+			["school"] = 1,
 			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
+				["SPELL_DAMAGE"] = true,
 			},
-			["source"] = "Racor-ScarletCrusade",
+			["source"] = "Felguard",
 		},
 		[266948] = {
 			["school"] = 32,
@@ -1810,8 +1667,8 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Vectis",
 		},
-		[10444] = {
-			["school"] = 4,
+		[273324] = {
+			["school"] = 8,
 			["token"] = {
 				["SPELL_DAMAGE"] = true,
 			},
@@ -1824,13 +1681,15 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Felimbued",
 		},
-		[281744] = {
-			["school"] = 1,
+		[265217] = {
+			["school"] = 32,
 			["type"] = "BUFF",
 			["token"] = {
 				["SPELL_AURA_APPLIED"] = true,
+				["SPELL_CAST_START"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
 			},
-			["source"] = "Racor-ScarletCrusade",
+			["source"] = "Vectis",
 		},
 		[268954] = {
 			["school"] = 8,
@@ -1840,10 +1699,11 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Tyrannous",
 		},
-		[268429] = {
-			["school"] = 4,
+		[273323] = {
+			["school"] = 8,
+			["type"] = "BUFF",
 			["token"] = {
-				["SPELL_PERIODIC_DAMAGE"] = true,
+				["SPELL_AURA_APPLIED"] = true,
 			},
 			["source"] = "Racor-ScarletCrusade",
 		},
@@ -1854,14 +1714,11 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Shinyazumaru",
 		},
-		[272409] = {
+		[273554] = {
 			["school"] = 32,
-			["type"] = "BUFF",
 			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
-				["SPELL_CAST_SUCCESS"] = true,
+				["SPELL_DAMAGE"] = true,
 			},
-			["source"] = "Oblivion Sphere",
 		},
 		[201633] = {
 			["school"] = 2,
@@ -1896,19 +1753,22 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Cudgel of Gore",
 		},
-		[124280] = {
-			["school"] = 8,
-			["token"] = {
-				["SPELL_PERIODIC_DAMAGE"] = true,
-			},
-			["source"] = "Lezbehonest",
-		},
-		[48181] = {
-			["school"] = 32,
+		[7268] = {
+			["school"] = 64,
 			["token"] = {
 				["SPELL_DAMAGE"] = true,
 			},
-			["source"] = "Xertzertzak",
+			["source"] = "Pinpus",
+		},
+		[265237] = {
+			["school"] = 1,
+			["type"] = "DEBUFF",
+			["token"] = {
+				["SPELL_AURA_APPLIED"] = true,
+				["SPELL_DAMAGE"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
+			},
+			["source"] = "Zek'voz",
 		},
 		[281444] = {
 			["school"] = 64,
@@ -1917,12 +1777,13 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Reorigination Drive",
 		},
-		[270481] = {
-			["school"] = 36,
+		[268899] = {
+			["school"] = 1,
+			["type"] = "BUFF",
 			["token"] = {
-				["SPELL_DAMAGE"] = true,
+				["SPELL_AURA_APPLIED"] = true,
 			},
-			["source"] = "Demonic Tyrant",
+			["source"] = "Xertzertzak",
 		},
 		[271729] = {
 			["school"] = 1,
@@ -1931,14 +1792,12 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Taloc",
 		},
-		[265662] = {
+		[233498] = {
 			["school"] = 32,
-			["type"] = "DEBUFF",
 			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
-				["SPELL_HEAL"] = true,
+				["SPELL_PERIODIC_DAMAGE"] = true,
 			},
-			["source"] = "Zek'voz",
+			["source"] = "Zarea",
 		},
 		[279660] = {
 			["school"] = 32,
@@ -1948,12 +1807,14 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Viral Contagion",
 		},
-		[90361] = {
-			["school"] = 8,
+		[273316] = {
+			["school"] = 1,
 			["token"] = {
-				["SPELL_PERIODIC_HEAL"] = true,
+				["SPELL_CAST_START"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
+				["SPELL_DAMAGE"] = true,
 			},
-			["source"] = "Spirit Beast",
+			["source"] = "Nazmani Crusher",
 		},
 		[265809] = {
 			["school"] = 1,
@@ -1968,84 +1829,31 @@ EncounterDetailsDB = {
 				["SPELL_DAMAGE"] = true,
 			},
 		},
-		[196608] = {
-			["school"] = 8,
+		[271099] = {
+			["school"] = 1,
 			["token"] = {
-				["SPELL_PERIODIC_HEAL"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
+			},
+			["source"] = "Zek'voz",
+		},
+		[232670] = {
+			["school"] = 32,
+			["token"] = {
+				["SPELL_DAMAGE"] = true,
+			},
+			["source"] = "Zarea",
+		},
+		[279662] = {
+			["school"] = 32,
+			["type"] = "DEBUFF",
+			["token"] = {
+				["SPELL_AURA_APPLIED"] = true,
 				["SPELL_PERIODIC_DAMAGE"] = true,
 			},
-			["source"] = "Misho",
+			["source"] = "Viral Contagion",
 		},
-		[139] = {
-			["school"] = 2,
-			["token"] = {
-				["SPELL_PERIODIC_HEAL"] = true,
-			},
-			["source"] = "Azumaru",
-		},
-		[267462] = {
-			["school"] = 40,
-			["token"] = {
-				["SPELL_CAST_START"] = true,
-				["SPELL_CAST_SUCCESS"] = true,
-				["SPELL_DAMAGE"] = true,
-			},
-			["source"] = "Blightspreader Tendril",
-		},
-		[267242] = {
-			["school"] = 8,
-			["token"] = {
-				["SPELL_CAST_START"] = true,
-				["SPELL_CAST_SUCCESS"] = true,
-				["SPELL_DAMAGE"] = true,
-			},
-			["source"] = "Vectis",
-		},
-		[269691] = {
-			["school"] = 32,
-			["type"] = "DEBUFF",
-			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
-				["SPELL_HEAL"] = true,
-			},
-			["source"] = "G'huun",
-		},
-		[265127] = {
-			["school"] = 8,
-			["type"] = "DEBUFF",
-			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
-			},
-			["source"] = "Vectis",
-		},
-		[267787] = {
-			["school"] = 4,
-			["type"] = "DEBUFF",
-			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
-				["SPELL_CAST_START"] = true,
-				["SPELL_CAST_SUCCESS"] = true,
-				["SPELL_DAMAGE"] = true,
-			},
-			["source"] = "MOTHER",
-		},
-		[45242] = {
-			["school"] = 2,
-			["type"] = "BUFF",
-			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
-			},
-			["source"] = "Shinyazumaru",
-		},
-		[265209] = {
-			["school"] = 32,
-			["token"] = {
-				["SPELL_CAST_SUCCESS"] = true,
-			},
-			["source"] = "Vectis",
-		},
-		[262292] = {
-			["school"] = 8,
+		[262277] = {
+			["school"] = 1,
 			["token"] = {
 				["SPELL_CAST_START"] = true,
 				["SPELL_CAST_SUCCESS"] = true,
@@ -2053,12 +1861,67 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Fetid Devourer",
 		},
-		[271728] = {
+		[277799] = {
 			["school"] = 1,
+			["type"] = "BUFF",
 			["token"] = {
+				["SPELL_AURA_APPLIED"] = true,
+				["SPELL_CAST_START"] = true,
 				["SPELL_CAST_SUCCESS"] = true,
 			},
-			["source"] = "Taloc",
+			["source"] = "Malformed Lion",
+		},
+		[277800] = {
+			["school"] = 1,
+			["type"] = "DEBUFF",
+			["token"] = {
+				["SPELL_AURA_APPLIED"] = true,
+				["SPELL_CAST_START"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
+				["SPELL_DAMAGE"] = true,
+			},
+			["source"] = "Malformed Vulture",
+		},
+		[277794] = {
+			["school"] = 1,
+			["type"] = "DEBUFF",
+			["token"] = {
+				["SPELL_DAMAGE"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
+				["SPELL_AURA_APPLIED"] = true,
+				["SPELL_PERIODIC_DAMAGE"] = true,
+				["SPELL_CAST_START"] = true,
+			},
+			["source"] = "Malformed Lion",
+		},
+		[114942] = {
+			["school"] = 8,
+			["token"] = {
+				["SPELL_HEAL"] = true,
+			},
+			["source"] = "Healing Tide Totem",
+		},
+		[265451] = {
+			["school"] = 32,
+			["token"] = {
+				["SPELL_DAMAGE"] = true,
+			},
+		},
+		[148187] = {
+			["school"] = 1,
+			["token"] = {
+				["SPELL_DAMAGE"] = true,
+			},
+			["source"] = "Misho",
+		},
+		[263307] = {
+			["school"] = 32,
+			["token"] = {
+				["SPELL_CAST_START"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
+				["SPELL_DAMAGE"] = true,
+			},
+			["source"] = "Gibbering Horror",
 		},
 		[269936] = {
 			["school"] = 32,
@@ -2085,13 +1948,6 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Nazmani Bloodhexer",
 		},
-		[124255] = {
-			["school"] = 1,
-			["token"] = {
-				["SPELL_PERIODIC_DAMAGE"] = true,
-			},
-			["source"] = "Misho",
-		},
 		[272584] = {
 			["school"] = 1,
 			["type"] = "BUFF",
@@ -2100,6 +1956,17 @@ EncounterDetailsDB = {
 				["SPELL_CAST_SUCCESS"] = true,
 			},
 			["source"] = "Volatile Droplet",
+		},
+		[262364] = {
+			["school"] = 1,
+			["type"] = "BUFF",
+			["token"] = {
+				["SPELL_AURA_APPLIED"] = true,
+				["SPELL_CAST_START"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
+				["SPELL_PERIODIC_HEAL"] = true,
+			},
+			["source"] = "Corruption Corpuscle",
 		},
 		[274396] = {
 			["school"] = 32,
@@ -2118,45 +1985,44 @@ EncounterDetailsDB = {
 				["SPELL_AURA_APPLIED"] = true,
 			},
 		},
-		[41425] = {
-			["school"] = 16,
-			["type"] = "DEBUFF",
-			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
-			},
-			["source"] = "Pinpus",
-		},
-		[278155] = {
+		[278143] = {
 			["school"] = 1,
 			["type"] = "BUFF",
 			["token"] = {
 				["SPELL_AURA_APPLIED"] = true,
 			},
-			["source"] = "Huna",
+			["source"] = "Azzinara",
+		},
+		[275084] = {
+			["school"] = 32,
+			["token"] = {
+				["SPELL_DAMAGE"] = true,
+			},
 		},
 		[98021] = {
 			["school"] = 8,
 			["token"] = {
-				["SPELL_DAMAGE"] = true,
 				["SPELL_HEAL"] = true,
+				["SPELL_DAMAGE"] = true,
 			},
 			["source"] = "Spirit Link Totem",
 		},
-		[273434] = {
-			["school"] = 32,
-			["type"] = "DEBUFF",
-			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
-			},
-		},
-		[272586] = {
+		[123725] = {
 			["school"] = 4,
+			["token"] = {
+				["SPELL_PERIODIC_DAMAGE"] = true,
+			},
+			["source"] = "Misho",
+		},
+		[273810] = {
+			["school"] = 32,
 			["type"] = "BUFF",
 			["token"] = {
 				["SPELL_AURA_APPLIED"] = true,
-				["SPELL_DAMAGE"] = true,
+				["SPELL_CAST_START"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
 			},
-			["source"] = "Volatile Droplet",
+			["source"] = "Mythrax the Unraveler",
 		},
 		[274119] = {
 			["school"] = 1,
@@ -2166,12 +2032,12 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Zul",
 		},
-		[145109] = {
-			["school"] = 8,
+		[274192] = {
+			["school"] = 1,
 			["token"] = {
-				["SPELL_HEAL"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
 			},
-			["source"] = "Shiftycents",
+			["source"] = "Purifying Flame",
 		},
 		[225080] = {
 			["school"] = 1,
@@ -2181,14 +2047,15 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Racor-ScarletCrusade",
 		},
-		[270288] = {
-			["school"] = 1,
-			["type"] = "BUFF",
+		[265178] = {
+			["school"] = 8,
+			["type"] = "DEBUFF",
 			["token"] = {
 				["SPELL_AURA_APPLIED"] = true,
+				["SPELL_PERIODIC_DAMAGE"] = true,
 				["SPELL_CAST_SUCCESS"] = true,
 			},
-			["source"] = "Blood Storm",
+			["source"] = "Vectis",
 		},
 		[216521] = {
 			["school"] = 8,
@@ -2205,69 +2072,20 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Volatile Droplet",
 		},
-		[265178] = {
-			["school"] = 8,
-			["type"] = "DEBUFF",
+		[270288] = {
+			["school"] = 1,
+			["type"] = "BUFF",
 			["token"] = {
 				["SPELL_AURA_APPLIED"] = true,
-				["SPELL_PERIODIC_DAMAGE"] = true,
 				["SPELL_CAST_SUCCESS"] = true,
 			},
-			["source"] = "Vectis",
+			["source"] = "Blood Storm",
 		},
 		[267350] = {
 			["school"] = 32,
 			["token"] = {
 				["SPELL_DAMAGE"] = true,
 			},
-		},
-		[262115] = {
-			["school"] = 1,
-			["token"] = {
-				["SPELL_PERIODIC_DAMAGE"] = true,
-			},
-			["source"] = "Tyrannous",
-		},
-		[272146] = {
-			["school"] = 32,
-			["type"] = "DEBUFF",
-			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
-			},
-		},
-		[271519] = {
-			["school"] = 1,
-			["token"] = {
-				["SPELL_CAST_SUCCESS"] = true,
-			},
-			["source"] = "Taloc",
-		},
-		[270117] = {
-			["school"] = 1,
-			["token"] = {
-				["SPELL_HEAL"] = true,
-			},
-			["source"] = "Huna",
-		},
-		[274577] = {
-			["school"] = 40,
-			["token"] = {
-				["SPELL_DAMAGE"] = true,
-			},
-			["source"] = "G'huun",
-		},
-		[278150] = {
-			["school"] = 32,
-			["token"] = {
-				["SPELL_DAMAGE"] = true,
-			},
-		},
-		[145110] = {
-			["school"] = 8,
-			["token"] = {
-				["SPELL_HEAL"] = true,
-			},
-			["source"] = "Daruyatu",
 		},
 		[276190] = {
 			["school"] = 1,
@@ -2276,6 +2094,54 @@ EncounterDetailsDB = {
 				["SPELL_AURA_APPLIED"] = true,
 			},
 			["source"] = "Azzinara",
+		},
+		[272146] = {
+			["school"] = 32,
+			["type"] = "DEBUFF",
+			["token"] = {
+				["SPELL_AURA_APPLIED"] = true,
+			},
+		},
+		[278150] = {
+			["school"] = 32,
+			["token"] = {
+				["SPELL_DAMAGE"] = true,
+			},
+		},
+		[274577] = {
+			["school"] = 40,
+			["token"] = {
+				["SPELL_DAMAGE"] = true,
+			},
+			["source"] = "G'huun",
+		},
+		[270117] = {
+			["school"] = 1,
+			["token"] = {
+				["SPELL_HEAL"] = true,
+			},
+			["source"] = "Huna",
+		},
+		[271519] = {
+			["school"] = 1,
+			["token"] = {
+				["SPELL_CAST_SUCCESS"] = true,
+			},
+			["source"] = "Taloc",
+		},
+		[145110] = {
+			["school"] = 8,
+			["token"] = {
+				["SPELL_HEAL"] = true,
+			},
+			["source"] = "Daruyatu",
+		},
+		[262115] = {
+			["school"] = 1,
+			["token"] = {
+				["SPELL_PERIODIC_DAMAGE"] = true,
+			},
+			["source"] = "Tyrannous",
 		},
 		[262370] = {
 			["school"] = 1,
@@ -2286,29 +2152,28 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Fetid Devourer",
 		},
-		[274192] = {
-			["school"] = 1,
+		[145109] = {
+			["school"] = 8,
 			["token"] = {
-				["SPELL_CAST_SUCCESS"] = true,
+				["SPELL_HEAL"] = true,
 			},
-			["source"] = "Purifying Flame",
+			["source"] = "Shiftycents",
 		},
-		[273810] = {
-			["school"] = 32,
+		[272586] = {
+			["school"] = 4,
 			["type"] = "BUFF",
 			["token"] = {
 				["SPELL_AURA_APPLIED"] = true,
-				["SPELL_CAST_START"] = true,
-				["SPELL_CAST_SUCCESS"] = true,
+				["SPELL_DAMAGE"] = true,
 			},
-			["source"] = "Mythrax the Unraveler",
+			["source"] = "Volatile Droplet",
 		},
-		[123725] = {
-			["school"] = 4,
+		[273434] = {
+			["school"] = 32,
+			["type"] = "DEBUFF",
 			["token"] = {
-				["SPELL_PERIODIC_DAMAGE"] = true,
+				["SPELL_AURA_APPLIED"] = true,
 			},
-			["source"] = "Misho",
 		},
 		[266459] = {
 			["school"] = 32,
@@ -2317,19 +2182,21 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Vectis",
 		},
-		[275084] = {
-			["school"] = 32,
-			["token"] = {
-				["SPELL_DAMAGE"] = true,
-			},
-		},
-		[278143] = {
+		[278155] = {
 			["school"] = 1,
 			["type"] = "BUFF",
 			["token"] = {
 				["SPELL_AURA_APPLIED"] = true,
 			},
-			["source"] = "Azzinara",
+			["source"] = "Huna",
+		},
+		[41425] = {
+			["school"] = 16,
+			["type"] = "DEBUFF",
+			["token"] = {
+				["SPELL_AURA_APPLIED"] = true,
+			},
+			["source"] = "Pinpus",
 		},
 		[268887] = {
 			["school"] = 1,
@@ -2339,16 +2206,12 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Azzinara",
 		},
-		[262364] = {
+		[124255] = {
 			["school"] = 1,
-			["type"] = "BUFF",
 			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
-				["SPELL_CAST_START"] = true,
-				["SPELL_CAST_SUCCESS"] = true,
-				["SPELL_PERIODIC_HEAL"] = true,
+				["SPELL_PERIODIC_DAMAGE"] = true,
 			},
-			["source"] = "Corruption Corpuscle",
+			["source"] = "Misho",
 		},
 		[266077] = {
 			["school"] = 32,
@@ -2369,70 +2232,15 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Zul",
 		},
-		[263307] = {
-			["school"] = 32,
-			["token"] = {
-				["SPELL_CAST_START"] = true,
-				["SPELL_CAST_SUCCESS"] = true,
-				["SPELL_DAMAGE"] = true,
-			},
-			["source"] = "Gibbering Horror",
-		},
-		[148187] = {
+		[271728] = {
 			["school"] = 1,
 			["token"] = {
-				["SPELL_DAMAGE"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
 			},
-			["source"] = "Misho",
+			["source"] = "Taloc",
 		},
-		[265451] = {
-			["school"] = 32,
-			["token"] = {
-				["SPELL_DAMAGE"] = true,
-			},
-		},
-		[114942] = {
+		[262292] = {
 			["school"] = 8,
-			["token"] = {
-				["SPELL_HEAL"] = true,
-			},
-			["source"] = "Healing Tide Totem",
-		},
-		[277794] = {
-			["school"] = 1,
-			["type"] = "DEBUFF",
-			["token"] = {
-				["SPELL_DAMAGE"] = true,
-				["SPELL_CAST_SUCCESS"] = true,
-				["SPELL_AURA_APPLIED"] = true,
-				["SPELL_PERIODIC_DAMAGE"] = true,
-				["SPELL_CAST_START"] = true,
-			},
-			["source"] = "Malformed Lion",
-		},
-		[277800] = {
-			["school"] = 1,
-			["type"] = "DEBUFF",
-			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
-				["SPELL_CAST_START"] = true,
-				["SPELL_CAST_SUCCESS"] = true,
-				["SPELL_DAMAGE"] = true,
-			},
-			["source"] = "Malformed Vulture",
-		},
-		[277799] = {
-			["school"] = 1,
-			["type"] = "BUFF",
-			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
-				["SPELL_CAST_START"] = true,
-				["SPELL_CAST_SUCCESS"] = true,
-			},
-			["source"] = "Malformed Lion",
-		},
-		[262277] = {
-			["school"] = 1,
 			["token"] = {
 				["SPELL_CAST_START"] = true,
 				["SPELL_CAST_SUCCESS"] = true,
@@ -2440,45 +2248,96 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Fetid Devourer",
 		},
-		[279662] = {
+		[265209] = {
+			["school"] = 32,
+			["token"] = {
+				["SPELL_CAST_SUCCESS"] = true,
+			},
+			["source"] = "Vectis",
+		},
+		[45242] = {
+			["school"] = 2,
+			["type"] = "BUFF",
+			["token"] = {
+				["SPELL_AURA_APPLIED"] = true,
+			},
+			["source"] = "Shinyazumaru",
+		},
+		[267787] = {
+			["school"] = 4,
+			["type"] = "DEBUFF",
+			["token"] = {
+				["SPELL_AURA_APPLIED"] = true,
+				["SPELL_CAST_START"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
+				["SPELL_DAMAGE"] = true,
+			},
+			["source"] = "MOTHER",
+		},
+		[265127] = {
+			["school"] = 8,
+			["type"] = "DEBUFF",
+			["token"] = {
+				["SPELL_AURA_APPLIED"] = true,
+			},
+			["source"] = "Vectis",
+		},
+		[269691] = {
 			["school"] = 32,
 			["type"] = "DEBUFF",
 			["token"] = {
 				["SPELL_AURA_APPLIED"] = true,
-				["SPELL_PERIODIC_DAMAGE"] = true,
-			},
-			["source"] = "Viral Contagion",
-		},
-		[232670] = {
-			["school"] = 32,
-			["token"] = {
-				["SPELL_DAMAGE"] = true,
-			},
-			["source"] = "Zarea",
-		},
-		[271099] = {
-			["school"] = 1,
-			["token"] = {
-				["SPELL_CAST_SUCCESS"] = true,
-			},
-			["source"] = "Zek'voz",
-		},
-		[63106] = {
-			["school"] = 32,
-			["token"] = {
-				["SPELL_PERIODIC_DAMAGE"] = true,
 				["SPELL_HEAL"] = true,
 			},
-			["source"] = "Xertzertzak",
+			["source"] = "G'huun",
 		},
-		[273316] = {
-			["school"] = 1,
+		[267242] = {
+			["school"] = 8,
 			["token"] = {
 				["SPELL_CAST_START"] = true,
 				["SPELL_CAST_SUCCESS"] = true,
 				["SPELL_DAMAGE"] = true,
 			},
-			["source"] = "Nazmani Crusher",
+			["source"] = "Vectis",
+		},
+		[267462] = {
+			["school"] = 40,
+			["token"] = {
+				["SPELL_CAST_START"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
+				["SPELL_DAMAGE"] = true,
+			},
+			["source"] = "Blightspreader Tendril",
+		},
+		[139] = {
+			["school"] = 2,
+			["token"] = {
+				["SPELL_PERIODIC_HEAL"] = true,
+			},
+			["source"] = "Azumaru",
+		},
+		[196608] = {
+			["school"] = 8,
+			["token"] = {
+				["SPELL_PERIODIC_DAMAGE"] = true,
+				["SPELL_PERIODIC_HEAL"] = true,
+			},
+			["source"] = "Misho",
+		},
+		[63106] = {
+			["school"] = 32,
+			["token"] = {
+				["SPELL_HEAL"] = true,
+				["SPELL_PERIODIC_DAMAGE"] = true,
+			},
+			["source"] = "Xertzertzak",
+		},
+		[90361] = {
+			["school"] = 8,
+			["token"] = {
+				["SPELL_PERIODIC_HEAL"] = true,
+			},
+			["source"] = "Spirit Beast",
 		},
 		[267997] = {
 			["school"] = 8,
@@ -2487,12 +2346,14 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Vilefiend",
 		},
-		[233498] = {
+		[265662] = {
 			["school"] = 32,
+			["type"] = "DEBUFF",
 			["token"] = {
-				["SPELL_PERIODIC_DAMAGE"] = true,
+				["SPELL_AURA_APPLIED"] = true,
+				["SPELL_HEAL"] = true,
 			},
-			["source"] = "Zarea",
+			["source"] = "Zek'voz",
 		},
 		[273363] = {
 			["school"] = 32,
@@ -2501,13 +2362,12 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Pool of Darkness",
 		},
-		[268899] = {
-			["school"] = 1,
-			["type"] = "BUFF",
+		[270481] = {
+			["school"] = 36,
 			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
+				["SPELL_DAMAGE"] = true,
 			},
-			["source"] = "Xertzertzak",
+			["source"] = "Demonic Tyrant",
 		},
 		[278218] = {
 			["school"] = 32,
@@ -2516,22 +2376,19 @@ EncounterDetailsDB = {
 				["SPELL_AURA_APPLIED"] = true,
 			},
 		},
-		[265237] = {
-			["school"] = 1,
-			["type"] = "DEBUFF",
+		[48181] = {
+			["school"] = 32,
 			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
 				["SPELL_DAMAGE"] = true,
-				["SPELL_CAST_SUCCESS"] = true,
 			},
-			["source"] = "Zek'voz",
+			["source"] = "Xertzertzak",
 		},
-		[7268] = {
-			["school"] = 64,
+		[124280] = {
+			["school"] = 8,
 			["token"] = {
-				["SPELL_DAMAGE"] = true,
+				["SPELL_PERIODIC_DAMAGE"] = true,
 			},
-			["source"] = "Pinpus",
+			["source"] = "Lezbehonest",
 		},
 		[268893] = {
 			["school"] = 1,
@@ -2550,11 +2407,14 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Fetid Devourer",
 		},
-		[273554] = {
+		[272409] = {
 			["school"] = 32,
+			["type"] = "BUFF",
 			["token"] = {
-				["SPELL_DAMAGE"] = true,
+				["SPELL_AURA_APPLIED"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
 			},
+			["source"] = "Oblivion Sphere",
 		},
 		[273365] = {
 			["school"] = 32,
@@ -2565,11 +2425,10 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Zul",
 		},
-		[273323] = {
-			["school"] = 8,
-			["type"] = "BUFF",
+		[268429] = {
+			["school"] = 4,
 			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
+				["SPELL_PERIODIC_DAMAGE"] = true,
 			},
 			["source"] = "Racor-ScarletCrusade",
 		},
@@ -2581,18 +2440,16 @@ EncounterDetailsDB = {
 			},
 			["source"] = "Nerubian Voidweaver",
 		},
-		[265217] = {
-			["school"] = 32,
+		[281744] = {
+			["school"] = 1,
 			["type"] = "BUFF",
 			["token"] = {
 				["SPELL_AURA_APPLIED"] = true,
-				["SPELL_CAST_START"] = true,
-				["SPELL_CAST_SUCCESS"] = true,
 			},
-			["source"] = "Vectis",
+			["source"] = "Racor-ScarletCrusade",
 		},
-		[273324] = {
-			["school"] = 8,
+		[10444] = {
+			["school"] = 4,
 			["token"] = {
 				["SPELL_DAMAGE"] = true,
 			},
@@ -2604,28 +2461,171 @@ EncounterDetailsDB = {
 				["SPELL_DAMAGE"] = true,
 			},
 		},
-		[30153] = {
-			["school"] = 1,
+		[267325] = {
+			["school"] = 32,
+			["type"] = "BUFF",
 			["token"] = {
-				["SPELL_DAMAGE"] = true,
+				["SPELL_AURA_APPLIED"] = true,
 			},
-			["source"] = "Felguard",
+			["source"] = "Racor-ScarletCrusade",
 		},
-		[277775] = {
+		[271864] = {
 			["school"] = 1,
 			["type"] = "BUFF",
 			["token"] = {
 				["SPELL_AURA_APPLIED"] = true,
 				["SPELL_CAST_SUCCESS"] = true,
 			},
-			["source"] = "Malformed Raptor",
+			["source"] = "Taloc",
 		},
-		[276094] = {
-			["school"] = 1,
+		[267803] = {
+			["school"] = 4,
 			["token"] = {
-				["SPELL_HEAL"] = true,
+				["SPELL_DAMAGE"] = true,
 			},
-			["source"] = "Nazmani Bloodhexer",
 		},
+	},
+	["emotes"] = {
+		{
+			{
+				34.2699999999604, -- [1]
+				"A Waste Disposal units opens, forming a Mutated Mass!", -- [2]
+				"Fetid Devourer", -- [3]
+				1, -- [4]
+			}, -- [1]
+			{
+				40.2449999999953, -- [1]
+				"|TInterface\\Icons\\SPELL_DEATHVORTEX:20|tFetid Devourer prepares to unleash |cFFFF0000|Hspell:262291|h[Rotting Regurgitation]|h|r!", -- [2]
+				"Fetid Devourer", -- [3]
+				1, -- [4]
+			}, -- [2]
+			{
+				44.2569999999832, -- [1]
+				"Waste Disposal Units open, forming Corruption Corpuscles!", -- [2]
+				"Fetid Devourer", -- [3]
+				1, -- [4]
+			}, -- [3]
+			{
+				86.3789999999572, -- [1]
+				"|TInterface\\Icons\\SPELL_DEATHVORTEX:20|tFetid Devourer prepares to unleash |cFFFF0000|Hspell:262291|h[Rotting Regurgitation]|h|r!", -- [2]
+				"Fetid Devourer", -- [3]
+				1, -- [4]
+			}, -- [4]
+			{
+				109.239000000001, -- [1]
+				"A Waste Disposal units opens, forming a Mutated Mass!", -- [2]
+				"Fetid Devourer", -- [3]
+				1, -- [4]
+			}, -- [5]
+			{
+				119.135999999999, -- [1]
+				"|TInterface\\Icons\\SPELL_DEATHVORTEX:20|tFetid Devourer prepares to unleash |cFFFF0000|Hspell:262291|h[Rotting Regurgitation]|h|r!", -- [2]
+				"Fetid Devourer", -- [3]
+				1, -- [4]
+			}, -- [6]
+			{
+				119.135999999999, -- [1]
+				"Waste Disposal Units open, forming Corruption Corpuscles!", -- [2]
+				"Fetid Devourer", -- [3]
+				1, -- [4]
+			}, -- [7]
+			["boss"] = "Fetid Devourer",
+		}, -- [1]
+		{
+			{
+				34.7449999999953, -- [1]
+				"A Waste Disposal units opens, forming a Mutated Mass!", -- [2]
+				"Fetid Devourer", -- [3]
+				1, -- [4]
+			}, -- [1]
+			{
+				41.935999999987, -- [1]
+				"|TInterface\\Icons\\SPELL_DEATHVORTEX:20|tFetid Devourer prepares to unleash |cFFFF0000|Hspell:262291|h[Rotting Regurgitation]|h|r!", -- [2]
+				"Fetid Devourer", -- [3]
+				1, -- [4]
+			}, -- [2]
+			{
+				44.7370000000228, -- [1]
+				"Waste Disposal Units open, forming Corruption Corpuscles!", -- [2]
+				"Fetid Devourer", -- [3]
+				1, -- [4]
+			}, -- [3]
+			{
+				89.3250000000117, -- [1]
+				"|TInterface\\Icons\\SPELL_DEATHVORTEX:20|tFetid Devourer prepares to unleash |cFFFF0000|Hspell:262291|h[Rotting Regurgitation]|h|r!", -- [2]
+				"Fetid Devourer", -- [3]
+				1, -- [4]
+			}, -- [4]
+			{
+				109.777000000002, -- [1]
+				"A Waste Disposal units opens, forming a Mutated Mass!", -- [2]
+				"Fetid Devourer", -- [3]
+				1, -- [4]
+			}, -- [5]
+			{
+				119.84600000002, -- [1]
+				"Waste Disposal Units open, forming Corruption Corpuscles!", -- [2]
+				"Fetid Devourer", -- [3]
+				1, -- [4]
+			}, -- [6]
+			{
+				123.767999999982, -- [1]
+				"|TInterface\\Icons\\SPELL_DEATHVORTEX:20|tFetid Devourer prepares to unleash |cFFFF0000|Hspell:262291|h[Rotting Regurgitation]|h|r!", -- [2]
+				"Fetid Devourer", -- [3]
+				1, -- [4]
+			}, -- [7]
+			{
+				162.204000000027, -- [1]
+				"|TInterface\\Icons\\SPELL_DEATHVORTEX:20|tFetid Devourer prepares to unleash |cFFFF0000|Hspell:262291|h[Rotting Regurgitation]|h|r!", -- [2]
+				"Fetid Devourer", -- [3]
+				1, -- [4]
+			}, -- [8]
+			["boss"] = "Fetid Devourer",
+		}, -- [2]
+		{
+			{
+				35.1820000000298, -- [1]
+				"A Waste Disposal units opens, forming a Mutated Mass!", -- [2]
+				"Fetid Devourer", -- [3]
+				1, -- [4]
+			}, -- [1]
+			{
+				41.399000000034, -- [1]
+				"|TInterface\\Icons\\SPELL_DEATHVORTEX:20|tFetid Devourer prepares to unleash |cFFFF0000|Hspell:262291|h[Rotting Regurgitation]|h|r!", -- [2]
+				"Fetid Devourer", -- [3]
+				1, -- [4]
+			}, -- [2]
+			{
+				45.2210000000196, -- [1]
+				"Waste Disposal Units open, forming Corruption Corpuscles!", -- [2]
+				"Fetid Devourer", -- [3]
+				1, -- [4]
+			}, -- [3]
+			{
+				88.8080000000191, -- [1]
+				"|TInterface\\Icons\\SPELL_DEATHVORTEX:20|tFetid Devourer prepares to unleash |cFFFF0000|Hspell:262291|h[Rotting Regurgitation]|h|r!", -- [2]
+				"Fetid Devourer", -- [3]
+				1, -- [4]
+			}, -- [4]
+			{
+				110.184999999998, -- [1]
+				"A Waste Disposal units opens, forming a Mutated Mass!", -- [2]
+				"Fetid Devourer", -- [3]
+				1, -- [4]
+			}, -- [5]
+			{
+				120.215000000026, -- [1]
+				"Waste Disposal Units open, forming Corruption Corpuscles!", -- [2]
+				"Fetid Devourer", -- [3]
+				1, -- [4]
+			}, -- [6]
+			{
+				122.722000000009, -- [1]
+				"|TInterface\\Icons\\SPELL_DEATHVORTEX:20|tFetid Devourer prepares to unleash |cFFFF0000|Hspell:262291|h[Rotting Regurgitation]|h|r!", -- [2]
+				"Fetid Devourer", -- [3]
+				1, -- [4]
+			}, -- [7]
+			["boss"] = "Fetid Devourer",
+		}, -- [3]
 	},
 }

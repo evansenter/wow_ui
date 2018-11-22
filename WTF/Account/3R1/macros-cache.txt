@@ -104,6 +104,7 @@ VER 3 000000000000003C "RSK" "INV_MISC_QUESTIONMARK"
 END
 VER 3 0000000000000075 "RSK MW" "INV_Misc_QuestionMark"
 #showtooltip Rising Sun Kick
+/stopmacro [channeling:Essence Font]
 /use Thunder Focus Tea
 /use Rising Sun Kick
 END

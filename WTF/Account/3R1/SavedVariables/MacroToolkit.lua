@@ -14,7 +14,14 @@ MacroToolkitDB = {
 			},
 		},
 		["Evan - Illidan"] = {
-			["lastbackup"] = "Mar 22 11:31:25",
+			["wodupgrade"] = true,
+			["extended"] = {
+				["122"] = {
+					["icon"] = "237545",
+					["name"] = "Penance",
+					["body"] = "#showtooltip\n/use [@mouseover,harm,nodead][harm,nodead][@mouseovertarget,harm,nodead]Penance\n",
+				},
+			},
 			["backups"] = {
 				{
 					["m"] = {
@@ -245,18 +252,24 @@ MacroToolkitDB = {
 					["n"] = "Backup",
 				}, -- [2]
 			},
-			["extended"] = {
-				["122"] = {
-					["name"] = "Penance",
-					["icon"] = "237545",
-					["body"] = "#showtooltip\n/use [@mouseover,harm,nodead][harm,nodead][@mouseovertarget,harm,nodead]Penance\n",
-				},
-			},
-			["wodupgrade"] = true,
+			["lastbackup"] = "Mar 22 11:31:25",
 		},
 		["Combustion - Illidan"] = {
 			["backups"] = {
 			},
+		},
+	},
+	["global"] = {
+		["ebackups"] = {
+		},
+		["extra"] = {
+			["1001"] = {
+				["body"] = "/stopcasting",
+				["name"] = "Stop Casting",
+				["texture"] = 132094,
+			},
+		},
+		["backups"] = {
 		},
 	},
 	["profileKeys"] = {
@@ -268,22 +281,9 @@ MacroToolkitDB = {
 		["Colton - Dark Iron"] = "profile",
 		["Ereinion - Dark Iron"] = "profile",
 		["Comet - Illidan"] = "Comet - Illidan",
-		["Combustion - Illidan"] = "Comet - Illidan",
-		["Evan - Illidan"] = "Comet - Illidan",
 		["Pandatal - Illidan"] = "Comet - Illidan",
-	},
-	["global"] = {
-		["ebackups"] = {
-		},
-		["extra"] = {
-			["1001"] = {
-				["texture"] = 132094,
-				["name"] = "Stop Casting",
-				["body"] = "/stopcasting",
-			},
-		},
-		["backups"] = {
-		},
+		["Evan - Illidan"] = "Comet - Illidan",
+		["Combustion - Illidan"] = "Comet - Illidan",
 	},
 	["profiles"] = {
 		["Comet - Illidan"] = {
@@ -298,8 +298,8 @@ MacroToolkitDB = {
 				["edsize"] = 12,
 				["mfont"] = "ABF",
 				["mifont"] = "ABF",
-				["misize"] = 12,
 				["errsize"] = 12,
+				["misize"] = 12,
 				["errfont"] = "ABF",
 			},
 		},
@@ -308,16 +308,16 @@ MacroToolkitDB = {
 		["profile"] = {
 			["y"] = 486.99951171875,
 			["x"] = 1045.39929199219,
-			["override"] = true,
 			["fonts"] = {
 				["edfont"] = "ABF",
 				["edsize"] = 12,
 				["mfont"] = "ABF",
 				["mifont"] = "ABF",
-				["errsize"] = 12,
 				["misize"] = 12,
+				["errsize"] = 12,
 				["errfont"] = "ABF",
 			},
+			["override"] = true,
 		},
 	},
 }
