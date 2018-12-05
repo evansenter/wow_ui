@@ -1,22 +1,12 @@
-lightweight tag 7c49c02adfb5343cb355badf2bf0677d97e6d5b1 7.4.1
-Author:	GitHub <noreply@github.com>
-Date:	Thu Nov 1 16:24:24 2018 -0400
+tag 35cc5db228e1456c471c0580ff3841e4ec46b898 7.4.2
+Author:	Alex Shubert <alex.shubert@gmail.com>
+Date:	Wed Nov 28 21:55:57 2018 -0500
 
-commit e2d3f8436225516b5205983a8ab507473549d2c4
-Author: Alex Shubert <lure@users.noreply.github.com>
-Date:   Thu Nov 1 16:21:24 2018 -0400
+7.4.2
 
-    Update IgnoredNPC.lua
+commit baf86eeeacff9e5bb51b6bab5e026c267cd47fe7
+Author: Alex Shubert <alex.shubert@gmail.com>
+Date:   Wed Nov 28 21:55:31 2018 -0500
 
-commit e2d3f8436225516b5205983a8ab507473549d2c4
-Author: Alex Shubert <lure@users.noreply.github.com>
-Date:   Thu Nov 1 16:21:24 2018 -0400
-
-    Update IgnoredNPC.lua
-
-commit 318772d3945e3c88e38e7640ffea7bdc28cb32f1
-Author: Nikolas Xexenis (Home) <nikolasx@gmail.com>
-Date:   Tue Jul 17 19:14:56 2018 +1000
-
-    Updated for 8.0
+    ignore seals of fate
 

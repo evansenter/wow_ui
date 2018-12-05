@@ -1,5 +1,87 @@
 
 SubSpecStorage = {
+	["Mage Frost"] = {
+		{
+			["name"] = "ST",
+			["data"] = {
+				{
+					["id"] = 22460,
+					["name"] = "Lonely Winter",
+					["column"] = 2,
+				}, -- [1]
+				{
+					["id"] = 22903,
+					["name"] = "Ice Floes",
+					["column"] = 2,
+				}, -- [2]
+				{
+					["id"] = 22447,
+					["name"] = "Incanter's Flow",
+					["column"] = 3,
+				}, -- [3]
+				{
+					["id"] = 22469,
+					["name"] = "Splitting Ice",
+					["column"] = 3,
+				}, -- [4]
+				{
+					["id"] = 22471,
+					["name"] = "Ice Ward",
+					["column"] = 3,
+				}, -- [5]
+				{
+					["id"] = 22449,
+					["name"] = "Unstable Magic",
+					["column"] = 2,
+				}, -- [6]
+				{
+					["id"] = 21632,
+					["name"] = "Thermal Void",
+					["column"] = 1,
+				}, -- [7]
+			},
+		}, -- [1]
+		{
+			["name"] = "AoE",
+			["data"] = {
+				{
+					["id"] = 22460,
+					["name"] = "Lonely Winter",
+					["column"] = 2,
+				}, -- [1]
+				{
+					["id"] = 22903,
+					["name"] = "Ice Floes",
+					["column"] = 2,
+				}, -- [2]
+				{
+					["id"] = 22447,
+					["name"] = "Incanter's Flow",
+					["column"] = 3,
+				}, -- [3]
+				{
+					["id"] = 22469,
+					["name"] = "Splitting Ice",
+					["column"] = 3,
+				}, -- [4]
+				{
+					["id"] = 22471,
+					["name"] = "Ice Ward",
+					["column"] = 3,
+				}, -- [5]
+				{
+					["id"] = 22473,
+					["name"] = "Arctic Gale",
+					["column"] = 3,
+				}, -- [6]
+				{
+					["id"] = 21632,
+					["name"] = "Thermal Void",
+					["column"] = 1,
+				}, -- [7]
+			},
+		}, -- [2]
+	},
 	["Monk Windwalker"] = {
 		{
 			["name"] = "ST",
@@ -81,128 +163,6 @@ SubSpecStorage = {
 				}, -- [7]
 			},
 		}, -- [2]
-	},
-	["Priest Discipline"] = {
-		{
-			["name"] = "Raiding",
-			["data"] = {
-				{
-					["id"] = 22313,
-					["name"] = "Twist of Fate",
-					["column"] = 2,
-				}, -- [1]
-				{
-					["id"] = 19758,
-					["name"] = "Angelic Feather",
-					["column"] = 3,
-				}, -- [2]
-				{
-					["id"] = 19755,
-					["name"] = "Power Word: Solace",
-					["column"] = 3,
-				}, -- [3]
-				{
-					["id"] = 19761,
-					["name"] = "Shining Force",
-					["column"] = 3,
-				}, -- [4]
-				{
-					["id"] = 22330,
-					["name"] = "Sins of the Many",
-					["column"] = 1,
-				}, -- [5]
-				{
-					["id"] = 19763,
-					["name"] = "Halo",
-					["column"] = 3,
-				}, -- [6]
-				{
-					["id"] = 22976,
-					["name"] = "Evangelism",
-					["column"] = 3,
-				}, -- [7]
-			},
-		}, -- [1]
-		{
-			["name"] = "Dungeons",
-			["data"] = {
-				{
-					["id"] = 22313,
-					["name"] = "Twist of Fate",
-					["column"] = 2,
-				}, -- [1]
-				{
-					["id"] = 19758,
-					["name"] = "Angelic Feather",
-					["column"] = 3,
-				}, -- [2]
-				{
-					["id"] = 22094,
-					["name"] = "Mindbender",
-					["column"] = 2,
-				}, -- [3]
-				{
-					["id"] = 19761,
-					["name"] = "Shining Force",
-					["column"] = 3,
-				}, -- [4]
-				{
-					["id"] = 19766,
-					["name"] = "Shadow Covenant",
-					["column"] = 3,
-				}, -- [5]
-				{
-					["id"] = 19760,
-					["name"] = "Divine Star",
-					["column"] = 2,
-				}, -- [6]
-				{
-					["id"] = 22976,
-					["name"] = "Evangelism",
-					["column"] = 3,
-				}, -- [7]
-			},
-		}, -- [2]
-		{
-			["name"] = "Questing",
-			["data"] = {
-				{
-					["id"] = 22313,
-					["name"] = "Twist of Fate",
-					["column"] = 2,
-				}, -- [1]
-				{
-					["id"] = 19758,
-					["name"] = "Angelic Feather",
-					["column"] = 3,
-				}, -- [2]
-				{
-					["id"] = 22094,
-					["name"] = "Mindbender",
-					["column"] = 2,
-				}, -- [3]
-				{
-					["id"] = 19761,
-					["name"] = "Shining Force",
-					["column"] = 3,
-				}, -- [4]
-				{
-					["id"] = 22330,
-					["name"] = "Sins of the Many",
-					["column"] = 1,
-				}, -- [5]
-				{
-					["id"] = 19760,
-					["name"] = "Divine Star",
-					["column"] = 2,
-				}, -- [6]
-				{
-					["id"] = 22976,
-					["name"] = "Evangelism",
-					["column"] = 3,
-				}, -- [7]
-			},
-		}, -- [3]
 	},
 	["Priest Shadow"] = {
 		{
@@ -370,7 +330,7 @@ SubSpecStorage = {
 			},
 		}, -- [1]
 		{
-			["name"] = "Raids",
+			["name"] = "Tanksitting",
 			["data"] = {
 				{
 					["id"] = 20185,
@@ -398,9 +358,9 @@ SubSpecStorage = {
 					["column"] = 3,
 				}, -- [5]
 				{
-					["id"] = 22214,
-					["name"] = "Invoke Chi-Ji, the Red Crane",
-					["column"] = 3,
+					["id"] = 23107,
+					["name"] = "Summon Jade Serpent Statue",
+					["column"] = 1,
 				}, -- [6]
 				{
 					["id"] = 22169,
@@ -438,9 +398,9 @@ SubSpecStorage = {
 					["column"] = 3,
 				}, -- [5]
 				{
-					["id"] = 22214,
-					["name"] = "Invoke Chi-Ji, the Red Crane",
-					["column"] = 3,
+					["id"] = 23107,
+					["name"] = "Summon Jade Serpent Statue",
+					["column"] = 1,
 				}, -- [6]
 				{
 					["id"] = 22170,
@@ -654,86 +614,126 @@ SubSpecStorage = {
 			},
 		}, -- [2]
 	},
-	["Mage Frost"] = {
+	["Priest Discipline"] = {
 		{
-			["name"] = "ST",
+			["name"] = "Raiding",
 			["data"] = {
 				{
-					["id"] = 22460,
-					["name"] = "Lonely Winter",
+					["id"] = 22313,
+					["name"] = "Twist of Fate",
 					["column"] = 2,
 				}, -- [1]
 				{
-					["id"] = 22903,
-					["name"] = "Ice Floes",
-					["column"] = 2,
+					["id"] = 19758,
+					["name"] = "Angelic Feather",
+					["column"] = 3,
 				}, -- [2]
 				{
-					["id"] = 22447,
-					["name"] = "Incanter's Flow",
+					["id"] = 19755,
+					["name"] = "Power Word: Solace",
 					["column"] = 3,
 				}, -- [3]
 				{
-					["id"] = 22469,
-					["name"] = "Splitting Ice",
+					["id"] = 19761,
+					["name"] = "Shining Force",
 					["column"] = 3,
 				}, -- [4]
 				{
-					["id"] = 22471,
-					["name"] = "Ice Ward",
-					["column"] = 3,
+					["id"] = 22330,
+					["name"] = "Sins of the Many",
+					["column"] = 1,
 				}, -- [5]
 				{
-					["id"] = 22449,
-					["name"] = "Unstable Magic",
-					["column"] = 2,
+					["id"] = 19763,
+					["name"] = "Halo",
+					["column"] = 3,
 				}, -- [6]
 				{
-					["id"] = 21632,
-					["name"] = "Thermal Void",
-					["column"] = 1,
+					["id"] = 22976,
+					["name"] = "Evangelism",
+					["column"] = 3,
 				}, -- [7]
 			},
 		}, -- [1]
 		{
-			["name"] = "AoE",
+			["name"] = "Dungeons",
 			["data"] = {
 				{
-					["id"] = 22460,
-					["name"] = "Lonely Winter",
+					["id"] = 22313,
+					["name"] = "Twist of Fate",
 					["column"] = 2,
 				}, -- [1]
 				{
-					["id"] = 22903,
-					["name"] = "Ice Floes",
-					["column"] = 2,
+					["id"] = 19758,
+					["name"] = "Angelic Feather",
+					["column"] = 3,
 				}, -- [2]
 				{
-					["id"] = 22447,
-					["name"] = "Incanter's Flow",
-					["column"] = 3,
+					["id"] = 22094,
+					["name"] = "Mindbender",
+					["column"] = 2,
 				}, -- [3]
 				{
-					["id"] = 22469,
-					["name"] = "Splitting Ice",
+					["id"] = 19761,
+					["name"] = "Shining Force",
 					["column"] = 3,
 				}, -- [4]
 				{
-					["id"] = 22471,
-					["name"] = "Ice Ward",
+					["id"] = 19766,
+					["name"] = "Shadow Covenant",
 					["column"] = 3,
 				}, -- [5]
 				{
-					["id"] = 22473,
-					["name"] = "Arctic Gale",
-					["column"] = 3,
+					["id"] = 19760,
+					["name"] = "Divine Star",
+					["column"] = 2,
 				}, -- [6]
 				{
-					["id"] = 21632,
-					["name"] = "Thermal Void",
-					["column"] = 1,
+					["id"] = 22976,
+					["name"] = "Evangelism",
+					["column"] = 3,
 				}, -- [7]
 			},
 		}, -- [2]
+		{
+			["name"] = "Questing",
+			["data"] = {
+				{
+					["id"] = 22313,
+					["name"] = "Twist of Fate",
+					["column"] = 2,
+				}, -- [1]
+				{
+					["id"] = 19758,
+					["name"] = "Angelic Feather",
+					["column"] = 3,
+				}, -- [2]
+				{
+					["id"] = 22094,
+					["name"] = "Mindbender",
+					["column"] = 2,
+				}, -- [3]
+				{
+					["id"] = 19761,
+					["name"] = "Shining Force",
+					["column"] = 3,
+				}, -- [4]
+				{
+					["id"] = 22330,
+					["name"] = "Sins of the Many",
+					["column"] = 1,
+				}, -- [5]
+				{
+					["id"] = 19760,
+					["name"] = "Divine Star",
+					["column"] = 2,
+				}, -- [6]
+				{
+					["id"] = 22976,
+					["name"] = "Evangelism",
+					["column"] = 3,
+				}, -- [7]
+			},
+		}, -- [3]
 	},
 }

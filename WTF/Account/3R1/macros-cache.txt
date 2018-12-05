@@ -80,7 +80,7 @@ END
 VER 3 0000000000000060 "Pain Sup" "INV_Misc_QuestionMark"
 #showtooltip Pain Suppression
 /stopcasting
-/use [target=mouseover,help,nodead][]Pain Suppression
+/use [target=mouseover,help,nodead]Pain Suppression
 END
 VER 3 0000000000000068 "Penance Friendly" "135930"
 #showtooltip
@@ -104,6 +104,7 @@ VER 3 000000000000003C "RSK" "INV_MISC_QUESTIONMARK"
 END
 VER 3 0000000000000075 "RSK MW" "INV_Misc_QuestionMark"
 #showtooltip Rising Sun Kick
+/stopmacro [channeling:Essence Font]
 /use Thunder Focus Tea
 /use Rising Sun Kick
 END

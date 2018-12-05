@@ -14,6 +14,7 @@ bind SHIFT-R CLICK BT4Button70:LeftButton
 bind 0 NONE
 bind - NONE
 bind = NONE
+bind CTRL-7 CLICK BT4Button28:LeftButton
 bind SHIFT-1 CLICK BT4Button61:LeftButton
 bind SHIFT-2 CLICK BT4Button62:LeftButton
 bind SHIFT-3 CLICK BT4Button63:LeftButton
@@ -60,4 +61,5 @@ bind CAPSLOCK NONE
 bind , NONE
 bind SHIFT-A STRAFELEFT
 bind SHIFT-D STRAFERIGHT
+bind CTRL-SPACE CLICK BT4Button29:LeftButton
 modifiedclick NONE AUTOLOOTTOGGLE

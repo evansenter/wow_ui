@@ -31,6 +31,9 @@ END
 VER 3 000000000000006F "Discord" "458228"
 /raid Join https://discord.gg/TvA6hcf
 END
+VER 3 0000000000000076 "Dismiss Statue" "310733"
+/click TotemFrameTotem1 RightButton
+END
 VER 3 0000000000000070 "Dispel Magic" "INV_Misc_QuestionMark"
 #showtooltip
 /use [@mouseover,harm][harm][@mouseovertarget,harm][]Dispel Magic
@@ -101,6 +104,7 @@ VER 3 000000000000003C "RSK" "INV_MISC_QUESTIONMARK"
 END
 VER 3 0000000000000075 "RSK MW" "INV_Misc_QuestionMark"
 #showtooltip Rising Sun Kick
+/stopmacro [channeling:Essence Font]
 /use Thunder Focus Tea
 /use Rising Sun Kick
 END
@@ -122,10 +126,6 @@ END
 VER 3 0000000000000053 "SotW" "INV_Misc_QuestionMark"
 #showtooltip Strike of the Windlord
 /use [nochanneling]Strike of the Windlord
-END
-VER 3 0000000000000076 "Statue" "INV_Misc_QuestionMark"
-#showtooltip Summon Black Ox Statue
-/use [mod:ctrl]
 END
 VER 3 000000000000005A "SW:P" "INV_Misc_QuestionMark"
 #showtooltip

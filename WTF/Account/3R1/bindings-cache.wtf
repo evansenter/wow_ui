@@ -14,6 +14,7 @@ bind SHIFT-R CLICK BT4Button70:LeftButton
 bind 0 NONE
 bind - NONE
 bind = NONE
+bind CTRL-7 CLICK BT4Button28:LeftButton
 bind SHIFT-1 CLICK BT4Button61:LeftButton
 bind SHIFT-2 CLICK BT4Button62:LeftButton
 bind SHIFT-3 CLICK BT4Button63:LeftButton
@@ -44,7 +45,7 @@ bind ALT-3 NONE
 bind SHIFT-BUTTON3 NONE
 bind BUTTON5 CLICK BT4Button56:LeftButton
 bind SHIFT-BUTTON5 CLICK BT4Button57:LeftButton
-bind ALT-SPACE NONE
+bind ALT-SPACE CLICK BT4Button26:LeftButton
 bind ` TOGGLEAUTORUN
 bind SHIFT-` CLICK BT4Button40:LeftButton
 bind SHIFT-BUTTON4 CLICK BT4Button41:LeftButton

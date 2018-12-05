@@ -30,8 +30,6 @@ AdiBagsDB = {
 		},
 		["Equipment"] = {
 		},
-		["ItemSets"] = {
-		},
 		["CurrencyFrame"] = {
 			["profiles"] = {
 				["Comet - Illidan"] = {
@@ -73,6 +71,8 @@ AdiBagsDB = {
 			},
 		},
 		["DataSource"] = {
+		},
+		["ItemSets"] = {
 		},
 		["Junk"] = {
 		},

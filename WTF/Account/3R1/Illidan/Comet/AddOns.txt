@@ -366,3 +366,4 @@ Details: enabled
 NickTag-1.0: enabled
 LibGroupInSpecT-1.1: enabled
 LibGraph-2.0: enabled
+PersonalLootHelper: enabled
