@@ -1,4 +1,0 @@
-
-DMouseDB = {
-	["enabled"] = false,
-}

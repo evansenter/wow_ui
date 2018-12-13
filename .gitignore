@@ -1,6 +1,6 @@
 /*
 !.gitignore
-!interface/
-!WTF/
-!Fonts/
-WTF/Config.wtf
+!_retail_/interface/
+!_retail_/WTF/
+!_retail_/Fonts/
+_retail_/WTF/Config.wtf

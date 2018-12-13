@@ -1,2 +1,0 @@
-
-DBMPvP_SavedVars = nil
