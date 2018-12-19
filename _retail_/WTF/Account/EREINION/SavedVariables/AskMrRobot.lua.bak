@@ -1,0 +1,34 @@
+
+AskMrRobotDb4 = {
+	["char"] = {
+		["Elani - Uther"] = {
+			["Talents"] = {
+				"0000000", -- [1]
+			},
+			["Logging"] = {
+				["LastZone"] = "Eastern Kingdoms",
+				["LastDiff"] = 0,
+			},
+		},
+	},
+	["global"] = {
+		["Region"] = "US",
+	},
+	["profileKeys"] = {
+		["Elani - Uther"] = "Elani - Uther",
+	},
+	["profiles"] = {
+		["Elani - Uther"] = {
+			["Logging"] = {
+				["Auto"] = {
+					[1861] = {
+						[14] = false,
+						[16] = false,
+						[17] = false,
+						[15] = false,
+					},
+				},
+			},
+		},
+	},
+}

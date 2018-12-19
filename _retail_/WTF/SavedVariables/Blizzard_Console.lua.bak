@@ -1,0 +1,5519 @@
+
+Blizzard_Console_SavedVars = {
+	["version"] = 3,
+	["height"] = 300.000061035156,
+	["messageHistory"] = {
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [1]
+		{
+			"Sorting particles normally.", -- [1]
+			0, -- [2]
+		}, -- [2]
+		{
+			"Multithreaded rendering enabled.", -- [1]
+			0, -- [2]
+		}, -- [3]
+		{
+			"Multithreaded BeginDraw enabled.", -- [1]
+			0, -- [2]
+		}, -- [4]
+		{
+			"Multithread shadows changed to 1.", -- [1]
+			0, -- [2]
+		}, -- [5]
+		{
+			"Multithreaded prepass enabled.", -- [1]
+			0, -- [2]
+		}, -- [6]
+		{
+			"Multithreaded opaque pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [7]
+		{
+			"Multithreaded alpha M2 pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [8]
+		{
+			"Multithreaded opaque WMO pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [9]
+		{
+			"Water detail changed to 2", -- [1]
+			0, -- [2]
+		}, -- [10]
+		{
+			"Ripple detail changed to 1", -- [1]
+			0, -- [2]
+		}, -- [11]
+		{
+			"Reflection mode changed to 0", -- [1]
+			0, -- [2]
+		}, -- [12]
+		{
+			"Reflection downscale changed to 0", -- [1]
+			0, -- [2]
+		}, -- [13]
+		{
+			"Sunshafts quality changed to 2", -- [1]
+			0, -- [2]
+		}, -- [14]
+		{
+			"Refraction mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [15]
+		{
+			"Enabling BSP node cache (first time - starting up)", -- [1]
+			0, -- [2]
+		}, -- [16]
+		{
+			"Alpha map bit depth set to 8bit on restart.", -- [1]
+			0, -- [2]
+		}, -- [17]
+		{
+			"Volume fog enabled.", -- [1]
+			0, -- [2]
+		}, -- [18]
+		{
+			"Projected textures enabled.", -- [1]
+			0, -- [2]
+		}, -- [19]
+		{
+			"Shadow mode changed to 2 - 3 band dynamic shadows, 2048", -- [1]
+			0, -- [2]
+		}, -- [20]
+		{
+			"Shadow texture size changed to 2048.", -- [1]
+			0, -- [2]
+		}, -- [21]
+		{
+			"Soft shadows changed to 0.", -- [1]
+			0, -- [2]
+		}, -- [22]
+		{
+			"SSAO mode set to 3", -- [1]
+			0, -- [2]
+		}, -- [23]
+		{
+			"Depth Based Opacity Enabled", -- [1]
+			0, -- [2]
+		}, -- [24]
+		{
+			"SkyCloudLOD set to 3", -- [1]
+			0, -- [2]
+		}, -- [25]
+		{
+			"Texture filtering mode updated. Pending GxRestart", -- [1]
+			0, -- [2]
+		}, -- [26]
+		{
+			"Terrain mip level changed to 0.", -- [1]
+			0, -- [2]
+		}, -- [27]
+		{
+			"Outline mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [28]
+		{
+			"LightBuffer mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [29]
+		{
+			"Physics interaction level changed to 1", -- [1]
+			0, -- [2]
+		}, -- [30]
+		{
+			"Render scale changed to 1", -- [1]
+			0, -- [2]
+		}, -- [31]
+		{
+			"Resample quality changed to 0", -- [1]
+			0, -- [2]
+		}, -- [32]
+		{
+			"MSAA disabled", -- [1]
+			0, -- [2]
+		}, -- [33]
+		{
+			"MSAA for alpha-test enabled.", -- [1]
+			0, -- [2]
+		}, -- [34]
+		{
+			"Component texture lod changed to 0", -- [1]
+			0, -- [2]
+		}, -- [35]
+		{
+			"Component texture lod changed to 0", -- [1]
+			0, -- [2]
+		}, -- [36]
+		{
+			"World preload object sort enabled.", -- [1]
+			0, -- [2]
+		}, -- [37]
+		{
+			"World load object sort enabled.", -- [1]
+			0, -- [2]
+		}, -- [38]
+		{
+			"World preload non critical enabled.", -- [1]
+			0, -- [2]
+		}, -- [39]
+		{
+			"World preload high res textures enabled.", -- [1]
+			0, -- [2]
+		}, -- [40]
+		{
+			"FFX: Anti Aliasing Mode disabled", -- [1]
+			0, -- [2]
+		}, -- [41]
+		{
+			"FFX: Color Blind Test Mode Disabled", -- [1]
+			0, -- [2]
+		}, -- [42]
+		{
+			"Full memory crash dump disabled", -- [1]
+			0, -- [2]
+		}, -- [43]
+		{
+			"Error display disabled", -- [1]
+			0, -- [2]
+		}, -- [44]
+		{
+			"Error display shown", -- [1]
+			0, -- [2]
+		}, -- [45]
+		{
+			"Displaying errors through fatal errors", -- [1]
+			0, -- [2]
+		}, -- [46]
+		{
+			"Displaying errors through fatal errors", -- [1]
+			0, -- [2]
+		}, -- [47]
+		{
+			"Now filtering: all messages", -- [1]
+			0, -- [2]
+		}, -- [48]
+		{
+			"CVar 'Sound_AmbienceHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [49]
+		{
+			"CVar 'Sound_AllyPlayerHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [50]
+		{
+			"CVar 'Sound_EnemyPlayerHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [51]
+		{
+			"CVar 'Sound_NPCHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [52]
+		{
+			"[GlueLogin] Starting loginlauncherPortal=\"us.actual.battle.net\" loginPortal=\"us.actual.battle.net:1119\"", -- [1]
+			0, -- [2]
+		}, -- [53]
+		{
+			"[GlueLogin] Resetting", -- [1]
+			0, -- [2]
+		}, -- [54]
+		{
+			"[IBN_Login] Initializing", -- [1]
+			0, -- [2]
+		}, -- [55]
+		{
+			"[IBN_Login] Attempting logonhost=\"us.actual.battle.net\" port=\"1119\"", -- [1]
+			0, -- [2]
+		}, -- [56]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [57]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [58]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [59]
+		{
+			"[GlueLogin] Logon complete.", -- [1]
+			0, -- [2]
+		}, -- [60]
+		{
+			"[GlueLogin] Waiting for realm list.", -- [1]
+			0, -- [2]
+		}, -- [61]
+		{
+			"[IBN_Login] Requesting realm list ticket", -- [1]
+			0, -- [2]
+		}, -- [62]
+		{
+			"[IBN_Login] Received realm list ticketcode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [63]
+		{
+			"[GlueLogin] Waiting for realm list.", -- [1]
+			0, -- [2]
+		}, -- [64]
+		{
+			"[IBN_Login] Received sub region listcode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [65]
+		{
+			"[IBN_Login] Requesting last played charsnumSubRegions=\"4\"", -- [1]
+			0, -- [2]
+		}, -- [66]
+		{
+			"[GlueLogin] Realm list ready.", -- [1]
+			0, -- [2]
+		}, -- [67]
+		{
+			"[IBN_Login] Joining realmsubRegion=\"1-101-89\" realmAddress=\"1-4-7\"", -- [1]
+			0, -- [2]
+		}, -- [68]
+		{
+			"[IBN_Login] OnRealmJoincode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [69]
+		{
+			"NetClient::HandleConnect()\n", -- [1]
+			0, -- [2]
+		}, -- [70]
+		{
+			"[GlueLogin] Received AuthedToWoWresult=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [71]
+		{
+			"Got new connection 2", -- [1]
+			0, -- [2]
+		}, -- [72]
+		{
+			"[IBN_Login] Front disconnectingconnectionId=\"1\"", -- [1]
+			0, -- [2]
+		}, -- [73]
+		{
+			"[GlueLogin] Disconnecting from authentication server.", -- [1]
+			0, -- [2]
+		}, -- [74]
+		{
+			"[IBN_BackInterface] Session with Battle.net established.", -- [1]
+			0, -- [2]
+		}, -- [75]
+		{
+			"[IBN_Login] Front disconnectedconnectionId=\"1\" result=\"( code=\"ERROR_NETWORK_MODULE_SOCKET_CLOSED (1016)\" localizedMessage=\"\" debugMessage=\"\")\"", -- [1]
+			0, -- [2]
+		}, -- [76]
+		{
+			"[GlueLogin] Disconnected from authentication server.", -- [1]
+			0, -- [2]
+		}, -- [77]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [78]
+		{
+			"Game table failed consistency check: ChallengeModeHealth. rows: 50, expectedRows: 51, columns: 1, expectedColumns: 1\n", -- [1]
+			3, -- [2]
+		}, -- [79]
+		{
+			"Game table failed consistency check: ChallengeModeDamage. rows: 50, expectedRows: 51, columns: 1, expectedColumns: 1\n", -- [1]
+			3, -- [2]
+		}, -- [80]
+		{
+			"Got new connection 3", -- [1]
+			0, -- [2]
+		}, -- [81]
+		{
+			"Proficiency in item class 2 set to 0x0000000080", -- [1]
+			0, -- [2]
+		}, -- [82]
+		{
+			"Proficiency in item class 2 set to 0x0000000081", -- [1]
+			0, -- [2]
+		}, -- [83]
+		{
+			"Proficiency in item class 2 set to 0x0000000091", -- [1]
+			0, -- [2]
+		}, -- [84]
+		{
+			"Proficiency in item class 2 set to 0x0000000491", -- [1]
+			0, -- [2]
+		}, -- [85]
+		{
+			"Proficiency in item class 4 set to 0x0000000021", -- [1]
+			0, -- [2]
+		}, -- [86]
+		{
+			"Proficiency in item class 2 set to 0x0000004491", -- [1]
+			0, -- [2]
+		}, -- [87]
+		{
+			"Proficiency in item class 2 set to 0x00000044d1", -- [1]
+			0, -- [2]
+		}, -- [88]
+		{
+			"Proficiency in item class 2 set to 0x00001044d1", -- [1]
+			0, -- [2]
+		}, -- [89]
+		{
+			"Proficiency in item class 4 set to 0x0000000025", -- [1]
+			0, -- [2]
+		}, -- [90]
+		{
+			"Proficiency in item class 4 set to 0x0000000027", -- [1]
+			0, -- [2]
+		}, -- [91]
+		{
+			"Proficiency in item class 2 set to 0x00001064d1", -- [1]
+			0, -- [2]
+		}, -- [92]
+		{
+			"Proficiency in item class 2 set to 0x00001064d1", -- [1]
+			0, -- [2]
+		}, -- [93]
+		{
+			"Proficiency in item class 4 set to 0x0000000027", -- [1]
+			0, -- [2]
+		}, -- [94]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [95]
+		{
+			"Time set to 12/18/2018 (Tue) 8:58", -- [1]
+			0, -- [2]
+		}, -- [96]
+		{
+			"Gamespeed set from 0.017 to 0.017", -- [1]
+			0, -- [2]
+		}, -- [97]
+		{
+			"Time played:", -- [1]
+			0, -- [2]
+		}, -- [98]
+		{
+			"Total: 119d 9h 45m 44s", -- [1]
+			0, -- [2]
+		}, -- [99]
+		{
+			"Level: 5d 16h 1m 15s", -- [1]
+			0, -- [2]
+		}, -- [100]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [101]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [102]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [103]
+		{
+			"DBCache::CancelCallback ignored", -- [1]
+			0, -- [2]
+		}, -- [104]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [105]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [106]
+		{
+			"Sorting particles normally.", -- [1]
+			0, -- [2]
+		}, -- [107]
+		{
+			"Multithreaded rendering enabled.", -- [1]
+			0, -- [2]
+		}, -- [108]
+		{
+			"Multithreaded BeginDraw enabled.", -- [1]
+			0, -- [2]
+		}, -- [109]
+		{
+			"Multithread shadows changed to 1.", -- [1]
+			0, -- [2]
+		}, -- [110]
+		{
+			"Multithreaded prepass enabled.", -- [1]
+			0, -- [2]
+		}, -- [111]
+		{
+			"Multithreaded opaque pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [112]
+		{
+			"Multithreaded alpha M2 pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [113]
+		{
+			"Multithreaded opaque WMO pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [114]
+		{
+			"Water detail changed to 2", -- [1]
+			0, -- [2]
+		}, -- [115]
+		{
+			"Ripple detail changed to 1", -- [1]
+			0, -- [2]
+		}, -- [116]
+		{
+			"Reflection mode changed to 0", -- [1]
+			0, -- [2]
+		}, -- [117]
+		{
+			"Reflection downscale changed to 0", -- [1]
+			0, -- [2]
+		}, -- [118]
+		{
+			"Sunshafts quality changed to 2", -- [1]
+			0, -- [2]
+		}, -- [119]
+		{
+			"Refraction mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [120]
+		{
+			"Enabling BSP node cache (first time - starting up)", -- [1]
+			0, -- [2]
+		}, -- [121]
+		{
+			"Alpha map bit depth set to 8bit on restart.", -- [1]
+			0, -- [2]
+		}, -- [122]
+		{
+			"Volume fog enabled.", -- [1]
+			0, -- [2]
+		}, -- [123]
+		{
+			"Projected textures enabled.", -- [1]
+			0, -- [2]
+		}, -- [124]
+		{
+			"Shadow mode changed to 2 - 3 band dynamic shadows, 2048", -- [1]
+			0, -- [2]
+		}, -- [125]
+		{
+			"Shadow texture size changed to 2048.", -- [1]
+			0, -- [2]
+		}, -- [126]
+		{
+			"Soft shadows changed to 0.", -- [1]
+			0, -- [2]
+		}, -- [127]
+		{
+			"SSAO mode set to 3", -- [1]
+			0, -- [2]
+		}, -- [128]
+		{
+			"Depth Based Opacity Enabled", -- [1]
+			0, -- [2]
+		}, -- [129]
+		{
+			"SkyCloudLOD set to 3", -- [1]
+			0, -- [2]
+		}, -- [130]
+		{
+			"Texture filtering mode updated. Pending GxRestart", -- [1]
+			0, -- [2]
+		}, -- [131]
+		{
+			"Terrain mip level changed to 0.", -- [1]
+			0, -- [2]
+		}, -- [132]
+		{
+			"Outline mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [133]
+		{
+			"LightBuffer mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [134]
+		{
+			"Physics interaction level changed to 1", -- [1]
+			0, -- [2]
+		}, -- [135]
+		{
+			"Render scale changed to 1", -- [1]
+			0, -- [2]
+		}, -- [136]
+		{
+			"Resample quality changed to 0", -- [1]
+			0, -- [2]
+		}, -- [137]
+		{
+			"MSAA disabled", -- [1]
+			0, -- [2]
+		}, -- [138]
+		{
+			"MSAA for alpha-test enabled.", -- [1]
+			0, -- [2]
+		}, -- [139]
+		{
+			"Component texture lod changed to 0", -- [1]
+			0, -- [2]
+		}, -- [140]
+		{
+			"Component texture lod changed to 0", -- [1]
+			0, -- [2]
+		}, -- [141]
+		{
+			"World preload object sort enabled.", -- [1]
+			0, -- [2]
+		}, -- [142]
+		{
+			"World load object sort enabled.", -- [1]
+			0, -- [2]
+		}, -- [143]
+		{
+			"World preload non critical enabled.", -- [1]
+			0, -- [2]
+		}, -- [144]
+		{
+			"World preload high res textures enabled.", -- [1]
+			0, -- [2]
+		}, -- [145]
+		{
+			"FFX: Anti Aliasing Mode disabled", -- [1]
+			0, -- [2]
+		}, -- [146]
+		{
+			"FFX: Color Blind Test Mode Disabled", -- [1]
+			0, -- [2]
+		}, -- [147]
+		{
+			"Full memory crash dump disabled", -- [1]
+			0, -- [2]
+		}, -- [148]
+		{
+			"Error display disabled", -- [1]
+			0, -- [2]
+		}, -- [149]
+		{
+			"Error display shown", -- [1]
+			0, -- [2]
+		}, -- [150]
+		{
+			"Displaying errors through fatal errors", -- [1]
+			0, -- [2]
+		}, -- [151]
+		{
+			"Displaying errors through fatal errors", -- [1]
+			0, -- [2]
+		}, -- [152]
+		{
+			"Now filtering: all messages", -- [1]
+			0, -- [2]
+		}, -- [153]
+		{
+			"CVar 'Sound_AmbienceHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [154]
+		{
+			"CVar 'Sound_AllyPlayerHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [155]
+		{
+			"CVar 'Sound_EnemyPlayerHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [156]
+		{
+			"CVar 'Sound_NPCHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [157]
+		{
+			"[GlueLogin] Starting loginlauncherPortal=\"us.actual.battle.net\" loginPortal=\"us.actual.battle.net:1119\"", -- [1]
+			0, -- [2]
+		}, -- [158]
+		{
+			"[GlueLogin] Resetting", -- [1]
+			0, -- [2]
+		}, -- [159]
+		{
+			"[IBN_Login] Initializing", -- [1]
+			0, -- [2]
+		}, -- [160]
+		{
+			"[IBN_Login] Attempting logonhost=\"us.actual.battle.net\" port=\"1119\"", -- [1]
+			0, -- [2]
+		}, -- [161]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [162]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [163]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [164]
+		{
+			"[GlueLogin] Logon complete.", -- [1]
+			0, -- [2]
+		}, -- [165]
+		{
+			"[GlueLogin] Waiting for realm list.", -- [1]
+			0, -- [2]
+		}, -- [166]
+		{
+			"[IBN_Login] Requesting realm list ticket", -- [1]
+			0, -- [2]
+		}, -- [167]
+		{
+			"[IBN_Login] Received realm list ticketcode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [168]
+		{
+			"[GlueLogin] Waiting for realm list.", -- [1]
+			0, -- [2]
+		}, -- [169]
+		{
+			"[IBN_Login] Received sub region listcode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [170]
+		{
+			"[IBN_Login] Requesting last played charsnumSubRegions=\"4\"", -- [1]
+			0, -- [2]
+		}, -- [171]
+		{
+			"[GlueLogin] Realm list ready.", -- [1]
+			0, -- [2]
+		}, -- [172]
+		{
+			"[IBN_Login] Joining realmsubRegion=\"1-101-89\" realmAddress=\"1-4-7\"", -- [1]
+			0, -- [2]
+		}, -- [173]
+		{
+			"[IBN_Login] OnRealmJoincode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [174]
+		{
+			"NetClient::HandleConnect()\n", -- [1]
+			0, -- [2]
+		}, -- [175]
+		{
+			"[GlueLogin] Received AuthedToWoWresult=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [176]
+		{
+			"[IBN_Login] Front disconnectingconnectionId=\"1\"", -- [1]
+			0, -- [2]
+		}, -- [177]
+		{
+			"[GlueLogin] Disconnecting from authentication server.", -- [1]
+			0, -- [2]
+		}, -- [178]
+		{
+			"[IBN_BackInterface] Session with Battle.net established.", -- [1]
+			0, -- [2]
+		}, -- [179]
+		{
+			"[IBN_Login] Front disconnectedconnectionId=\"1\" result=\"( code=\"ERROR_NETWORK_MODULE_SOCKET_CLOSED (1016)\" localizedMessage=\"\" debugMessage=\"\")\"", -- [1]
+			0, -- [2]
+		}, -- [180]
+		{
+			"[GlueLogin] Disconnected from authentication server.", -- [1]
+			0, -- [2]
+		}, -- [181]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [182]
+		{
+			"Game table failed consistency check: ChallengeModeHealth. rows: 50, expectedRows: 51, columns: 1, expectedColumns: 1\n", -- [1]
+			3, -- [2]
+		}, -- [183]
+		{
+			"Game table failed consistency check: ChallengeModeDamage. rows: 50, expectedRows: 51, columns: 1, expectedColumns: 1\n", -- [1]
+			3, -- [2]
+		}, -- [184]
+		{
+			"Got new connection 3", -- [1]
+			0, -- [2]
+		}, -- [185]
+		{
+			"Proficiency in item class 2 set to 0x0000000080", -- [1]
+			0, -- [2]
+		}, -- [186]
+		{
+			"Proficiency in item class 2 set to 0x0000000081", -- [1]
+			0, -- [2]
+		}, -- [187]
+		{
+			"Proficiency in item class 2 set to 0x0000000091", -- [1]
+			0, -- [2]
+		}, -- [188]
+		{
+			"Proficiency in item class 2 set to 0x0000000491", -- [1]
+			0, -- [2]
+		}, -- [189]
+		{
+			"Proficiency in item class 4 set to 0x0000000021", -- [1]
+			0, -- [2]
+		}, -- [190]
+		{
+			"Proficiency in item class 2 set to 0x0000004491", -- [1]
+			0, -- [2]
+		}, -- [191]
+		{
+			"Proficiency in item class 2 set to 0x00000044d1", -- [1]
+			0, -- [2]
+		}, -- [192]
+		{
+			"Proficiency in item class 2 set to 0x00001044d1", -- [1]
+			0, -- [2]
+		}, -- [193]
+		{
+			"Proficiency in item class 4 set to 0x0000000025", -- [1]
+			0, -- [2]
+		}, -- [194]
+		{
+			"Proficiency in item class 4 set to 0x0000000027", -- [1]
+			0, -- [2]
+		}, -- [195]
+		{
+			"Proficiency in item class 2 set to 0x00001064d1", -- [1]
+			0, -- [2]
+		}, -- [196]
+		{
+			"Proficiency in item class 2 set to 0x00001064d1", -- [1]
+			0, -- [2]
+		}, -- [197]
+		{
+			"Proficiency in item class 4 set to 0x0000000027", -- [1]
+			0, -- [2]
+		}, -- [198]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [199]
+		{
+			"Time set to 12/18/2018 (Tue) 17:57", -- [1]
+			0, -- [2]
+		}, -- [200]
+		{
+			"Gamespeed set from 0.017 to 0.017", -- [1]
+			0, -- [2]
+		}, -- [201]
+		{
+			"Time played:", -- [1]
+			0, -- [2]
+		}, -- [202]
+		{
+			"Total: 119d 9h 51m 34s", -- [1]
+			0, -- [2]
+		}, -- [203]
+		{
+			"Level: 5d 16h 7m 5s", -- [1]
+			0, -- [2]
+		}, -- [204]
+		{
+			"World transfer pending...", -- [1]
+			0, -- [2]
+		}, -- [205]
+		{
+			"Got new connection 3", -- [1]
+			0, -- [2]
+		}, -- [206]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [207]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [208]
+		{
+			"Failed to set SpellClutter callback on graphicsQuality CVar - using default of 30.0", -- [1]
+			0, -- [2]
+		}, -- [209]
+		{
+			"Failed to set SpellClutter callback on RAIDgraphicsQuality CVar - using default of 30.0", -- [1]
+			0, -- [2]
+		}, -- [210]
+		{
+			"Time played:", -- [1]
+			0, -- [2]
+		}, -- [211]
+		{
+			"Total: 119d 10h 35m 34s", -- [1]
+			0, -- [2]
+		}, -- [212]
+		{
+			"Level: 5d 16h 51m 5s", -- [1]
+			0, -- [2]
+		}, -- [213]
+		{
+			"MSAA for alpha-test disabled.", -- [1]
+			0, -- [2]
+		}, -- [214]
+		{
+			"Physics interaction level changed to 2", -- [1]
+			0, -- [2]
+		}, -- [215]
+		{
+			"Terrain mip level changed to 0.", -- [1]
+			0, -- [2]
+		}, -- [216]
+		{
+			"Component texture lod changed to 0", -- [1]
+			0, -- [2]
+		}, -- [217]
+		{
+			"Texture filtering mode updated. Pending GxRestart", -- [1]
+			0, -- [2]
+		}, -- [218]
+		{
+			"Projected textures enabled.", -- [1]
+			0, -- [2]
+		}, -- [219]
+		{
+			"Shadow mode changed to 1 - Precomputed terrain shadows, 2 band unit shadows, 2048", -- [1]
+			0, -- [2]
+		}, -- [220]
+		{
+			"Shadow texture size changed to 1024.", -- [1]
+			0, -- [2]
+		}, -- [221]
+		{
+			"Soft shadows changed to 0.", -- [1]
+			0, -- [2]
+		}, -- [222]
+		{
+			"Water detail changed to 2", -- [1]
+			0, -- [2]
+		}, -- [223]
+		{
+			"Reflection mode changed to 0", -- [1]
+			0, -- [2]
+		}, -- [224]
+		{
+			"Ripple detail changed to 1", -- [1]
+			0, -- [2]
+		}, -- [225]
+		{
+			"Sunshafts quality changed to 1", -- [1]
+			0, -- [2]
+		}, -- [226]
+		{
+			"SSAO mode set to 2", -- [1]
+			0, -- [2]
+		}, -- [227]
+		{
+			"Refraction mode changed to 1", -- [1]
+			0, -- [2]
+		}, -- [228]
+		{
+			"Depth Based Opacity Enabled", -- [1]
+			0, -- [2]
+		}, -- [229]
+		{
+			"LightBuffer mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [230]
+		{
+			"Outline mode changed to 1", -- [1]
+			0, -- [2]
+		}, -- [231]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [232]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [233]
+		{
+			"Sorting particles normally.", -- [1]
+			0, -- [2]
+		}, -- [234]
+		{
+			"Multithreaded rendering enabled.", -- [1]
+			0, -- [2]
+		}, -- [235]
+		{
+			"Multithreaded BeginDraw enabled.", -- [1]
+			0, -- [2]
+		}, -- [236]
+		{
+			"Multithread shadows changed to 1.", -- [1]
+			0, -- [2]
+		}, -- [237]
+		{
+			"Multithreaded prepass enabled.", -- [1]
+			0, -- [2]
+		}, -- [238]
+		{
+			"Multithreaded opaque pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [239]
+		{
+			"Multithreaded alpha M2 pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [240]
+		{
+			"Multithreaded opaque WMO pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [241]
+		{
+			"Water detail changed to 2", -- [1]
+			0, -- [2]
+		}, -- [242]
+		{
+			"Ripple detail changed to 1", -- [1]
+			0, -- [2]
+		}, -- [243]
+		{
+			"Reflection mode changed to 0", -- [1]
+			0, -- [2]
+		}, -- [244]
+		{
+			"Reflection downscale changed to 0", -- [1]
+			0, -- [2]
+		}, -- [245]
+		{
+			"Sunshafts quality changed to 1", -- [1]
+			0, -- [2]
+		}, -- [246]
+		{
+			"Refraction mode changed to 1", -- [1]
+			0, -- [2]
+		}, -- [247]
+		{
+			"Enabling BSP node cache (first time - starting up)", -- [1]
+			0, -- [2]
+		}, -- [248]
+		{
+			"Alpha map bit depth set to 8bit on restart.", -- [1]
+			0, -- [2]
+		}, -- [249]
+		{
+			"Volume fog enabled.", -- [1]
+			0, -- [2]
+		}, -- [250]
+		{
+			"Projected textures enabled.", -- [1]
+			0, -- [2]
+		}, -- [251]
+		{
+			"Shadow mode changed to 1 - Precomputed terrain shadows, 2 band unit shadows, 2048", -- [1]
+			0, -- [2]
+		}, -- [252]
+		{
+			"Shadow texture size changed to 1024.", -- [1]
+			0, -- [2]
+		}, -- [253]
+		{
+			"Soft shadows changed to 0.", -- [1]
+			0, -- [2]
+		}, -- [254]
+		{
+			"SSAO mode set to 2", -- [1]
+			0, -- [2]
+		}, -- [255]
+		{
+			"Depth Based Opacity Enabled", -- [1]
+			0, -- [2]
+		}, -- [256]
+		{
+			"SkyCloudLOD set to 3", -- [1]
+			0, -- [2]
+		}, -- [257]
+		{
+			"Texture filtering mode updated. Pending GxRestart", -- [1]
+			0, -- [2]
+		}, -- [258]
+		{
+			"Terrain mip level changed to 0.", -- [1]
+			0, -- [2]
+		}, -- [259]
+		{
+			"Outline mode changed to 1", -- [1]
+			0, -- [2]
+		}, -- [260]
+		{
+			"LightBuffer mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [261]
+		{
+			"Physics interaction level changed to 2", -- [1]
+			0, -- [2]
+		}, -- [262]
+		{
+			"Render scale changed to 1", -- [1]
+			0, -- [2]
+		}, -- [263]
+		{
+			"Resample quality changed to 0", -- [1]
+			0, -- [2]
+		}, -- [264]
+		{
+			"MSAA disabled", -- [1]
+			0, -- [2]
+		}, -- [265]
+		{
+			"MSAA for alpha-test disabled.", -- [1]
+			0, -- [2]
+		}, -- [266]
+		{
+			"Component texture lod changed to 0", -- [1]
+			0, -- [2]
+		}, -- [267]
+		{
+			"Component texture lod changed to 0", -- [1]
+			0, -- [2]
+		}, -- [268]
+		{
+			"World preload object sort enabled.", -- [1]
+			0, -- [2]
+		}, -- [269]
+		{
+			"World load object sort enabled.", -- [1]
+			0, -- [2]
+		}, -- [270]
+		{
+			"World preload non critical enabled.", -- [1]
+			0, -- [2]
+		}, -- [271]
+		{
+			"World preload high res textures enabled.", -- [1]
+			0, -- [2]
+		}, -- [272]
+		{
+			"FFX: Anti Aliasing Mode disabled", -- [1]
+			0, -- [2]
+		}, -- [273]
+		{
+			"FFX: Color Blind Test Mode Disabled", -- [1]
+			0, -- [2]
+		}, -- [274]
+		{
+			"Full memory crash dump disabled", -- [1]
+			0, -- [2]
+		}, -- [275]
+		{
+			"Error display disabled", -- [1]
+			0, -- [2]
+		}, -- [276]
+		{
+			"Error display shown", -- [1]
+			0, -- [2]
+		}, -- [277]
+		{
+			"Displaying errors through fatal errors", -- [1]
+			0, -- [2]
+		}, -- [278]
+		{
+			"Displaying errors through fatal errors", -- [1]
+			0, -- [2]
+		}, -- [279]
+		{
+			"Now filtering: all messages", -- [1]
+			0, -- [2]
+		}, -- [280]
+		{
+			"CVar 'Sound_AmbienceHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [281]
+		{
+			"CVar 'Sound_AllyPlayerHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [282]
+		{
+			"CVar 'Sound_EnemyPlayerHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [283]
+		{
+			"CVar 'Sound_NPCHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [284]
+		{
+			"[GlueLogin] Starting loginlauncherPortal=\"us.actual.battle.net\" loginPortal=\"us.actual.battle.net:1119\"", -- [1]
+			0, -- [2]
+		}, -- [285]
+		{
+			"[GlueLogin] Resetting", -- [1]
+			0, -- [2]
+		}, -- [286]
+		{
+			"[IBN_Login] Initializing", -- [1]
+			0, -- [2]
+		}, -- [287]
+		{
+			"[IBN_Login] Attempting logonhost=\"us.actual.battle.net\" port=\"1119\"", -- [1]
+			0, -- [2]
+		}, -- [288]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [289]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [290]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [291]
+		{
+			"[GlueLogin] Logon complete.", -- [1]
+			0, -- [2]
+		}, -- [292]
+		{
+			"[GlueLogin] Waiting for realm list.", -- [1]
+			0, -- [2]
+		}, -- [293]
+		{
+			"[IBN_Login] Requesting realm list ticket", -- [1]
+			0, -- [2]
+		}, -- [294]
+		{
+			"[IBN_Login] Received realm list ticketcode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [295]
+		{
+			"[GlueLogin] Waiting for realm list.", -- [1]
+			0, -- [2]
+		}, -- [296]
+		{
+			"[IBN_Login] Received sub region listcode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [297]
+		{
+			"[IBN_Login] Requesting last played charsnumSubRegions=\"4\"", -- [1]
+			0, -- [2]
+		}, -- [298]
+		{
+			"[GlueLogin] Realm list ready.", -- [1]
+			0, -- [2]
+		}, -- [299]
+		{
+			"[IBN_Login] Joining realmsubRegion=\"1-101-89\" realmAddress=\"1-4-7\"", -- [1]
+			0, -- [2]
+		}, -- [300]
+		{
+			"[IBN_Login] OnRealmJoincode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [301]
+		{
+			"NetClient::HandleConnect()\n", -- [1]
+			0, -- [2]
+		}, -- [302]
+		{
+			"[GlueLogin] Received AuthedToWoWresult=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [303]
+		{
+			"[IBN_Login] Front disconnectingconnectionId=\"1\"", -- [1]
+			0, -- [2]
+		}, -- [304]
+		{
+			"[GlueLogin] Disconnecting from authentication server.", -- [1]
+			0, -- [2]
+		}, -- [305]
+		{
+			"[IBN_BackInterface] Session with Battle.net established.", -- [1]
+			0, -- [2]
+		}, -- [306]
+		{
+			"[IBN_Login] Front disconnectedconnectionId=\"1\" result=\"( code=\"ERROR_NETWORK_MODULE_SOCKET_CLOSED (1016)\" localizedMessage=\"\" debugMessage=\"\")\"", -- [1]
+			0, -- [2]
+		}, -- [307]
+		{
+			"[GlueLogin] Disconnected from authentication server.", -- [1]
+			0, -- [2]
+		}, -- [308]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [309]
+		{
+			"Game table failed consistency check: ChallengeModeHealth. rows: 50, expectedRows: 51, columns: 1, expectedColumns: 1\n", -- [1]
+			3, -- [2]
+		}, -- [310]
+		{
+			"Game table failed consistency check: ChallengeModeDamage. rows: 50, expectedRows: 51, columns: 1, expectedColumns: 1\n", -- [1]
+			3, -- [2]
+		}, -- [311]
+		{
+			"Got new connection 3", -- [1]
+			0, -- [2]
+		}, -- [312]
+		{
+			"Proficiency in item class 2 set to 0x00001064d1", -- [1]
+			0, -- [2]
+		}, -- [313]
+		{
+			"Proficiency in item class 4 set to 0x0000000027", -- [1]
+			0, -- [2]
+		}, -- [314]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [315]
+		{
+			"Time set to 12/18/2018 (Tue) 19:22", -- [1]
+			0, -- [2]
+		}, -- [316]
+		{
+			"Gamespeed set from 0.017 to 0.017", -- [1]
+			0, -- [2]
+		}, -- [317]
+		{
+			"Time played:", -- [1]
+			0, -- [2]
+		}, -- [318]
+		{
+			"Total: 119d 11h 15m 49s", -- [1]
+			0, -- [2]
+		}, -- [319]
+		{
+			"Level: 5d 17h 31m 20s", -- [1]
+			0, -- [2]
+		}, -- [320]
+		{
+			"Projected textures disabled.", -- [1]
+			0, -- [2]
+		}, -- [321]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [322]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [323]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [324]
+		{
+			"Sorting particles normally.", -- [1]
+			0, -- [2]
+		}, -- [325]
+		{
+			"Multithreaded rendering enabled.", -- [1]
+			0, -- [2]
+		}, -- [326]
+		{
+			"Multithreaded BeginDraw enabled.", -- [1]
+			0, -- [2]
+		}, -- [327]
+		{
+			"Multithread shadows changed to 1.", -- [1]
+			0, -- [2]
+		}, -- [328]
+		{
+			"Multithreaded prepass enabled.", -- [1]
+			0, -- [2]
+		}, -- [329]
+		{
+			"Multithreaded opaque pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [330]
+		{
+			"Multithreaded alpha M2 pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [331]
+		{
+			"Multithreaded opaque WMO pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [332]
+		{
+			"Water detail changed to 2", -- [1]
+			0, -- [2]
+		}, -- [333]
+		{
+			"Ripple detail changed to 1", -- [1]
+			0, -- [2]
+		}, -- [334]
+		{
+			"Reflection mode changed to 0", -- [1]
+			0, -- [2]
+		}, -- [335]
+		{
+			"Reflection downscale changed to 0", -- [1]
+			0, -- [2]
+		}, -- [336]
+		{
+			"Sunshafts quality changed to 1", -- [1]
+			0, -- [2]
+		}, -- [337]
+		{
+			"Refraction mode changed to 1", -- [1]
+			0, -- [2]
+		}, -- [338]
+		{
+			"Enabling BSP node cache (first time - starting up)", -- [1]
+			0, -- [2]
+		}, -- [339]
+		{
+			"Alpha map bit depth set to 8bit on restart.", -- [1]
+			0, -- [2]
+		}, -- [340]
+		{
+			"Volume fog enabled.", -- [1]
+			0, -- [2]
+		}, -- [341]
+		{
+			"Projected textures disabled.", -- [1]
+			0, -- [2]
+		}, -- [342]
+		{
+			"Shadow mode changed to 1 - Precomputed terrain shadows, 2 band unit shadows, 2048", -- [1]
+			0, -- [2]
+		}, -- [343]
+		{
+			"Shadow texture size changed to 1024.", -- [1]
+			0, -- [2]
+		}, -- [344]
+		{
+			"Soft shadows changed to 0.", -- [1]
+			0, -- [2]
+		}, -- [345]
+		{
+			"SSAO mode set to 2", -- [1]
+			0, -- [2]
+		}, -- [346]
+		{
+			"Depth Based Opacity Enabled", -- [1]
+			0, -- [2]
+		}, -- [347]
+		{
+			"SkyCloudLOD set to 3", -- [1]
+			0, -- [2]
+		}, -- [348]
+		{
+			"Texture filtering mode updated. Pending GxRestart", -- [1]
+			0, -- [2]
+		}, -- [349]
+		{
+			"Terrain mip level changed to 0.", -- [1]
+			0, -- [2]
+		}, -- [350]
+		{
+			"Outline mode changed to 1", -- [1]
+			0, -- [2]
+		}, -- [351]
+		{
+			"LightBuffer mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [352]
+		{
+			"Physics interaction level changed to 2", -- [1]
+			0, -- [2]
+		}, -- [353]
+		{
+			"Render scale changed to 1", -- [1]
+			0, -- [2]
+		}, -- [354]
+		{
+			"Resample quality changed to 0", -- [1]
+			0, -- [2]
+		}, -- [355]
+		{
+			"MSAA disabled", -- [1]
+			0, -- [2]
+		}, -- [356]
+		{
+			"MSAA for alpha-test disabled.", -- [1]
+			0, -- [2]
+		}, -- [357]
+		{
+			"Component texture lod changed to 0", -- [1]
+			0, -- [2]
+		}, -- [358]
+		{
+			"Component texture lod changed to 0", -- [1]
+			0, -- [2]
+		}, -- [359]
+		{
+			"World preload object sort enabled.", -- [1]
+			0, -- [2]
+		}, -- [360]
+		{
+			"World load object sort enabled.", -- [1]
+			0, -- [2]
+		}, -- [361]
+		{
+			"World preload non critical enabled.", -- [1]
+			0, -- [2]
+		}, -- [362]
+		{
+			"World preload high res textures enabled.", -- [1]
+			0, -- [2]
+		}, -- [363]
+		{
+			"FFX: Anti Aliasing Mode disabled", -- [1]
+			0, -- [2]
+		}, -- [364]
+		{
+			"FFX: Color Blind Test Mode Disabled", -- [1]
+			0, -- [2]
+		}, -- [365]
+		{
+			"Full memory crash dump disabled", -- [1]
+			0, -- [2]
+		}, -- [366]
+		{
+			"Error display disabled", -- [1]
+			0, -- [2]
+		}, -- [367]
+		{
+			"Error display shown", -- [1]
+			0, -- [2]
+		}, -- [368]
+		{
+			"Displaying errors through fatal errors", -- [1]
+			0, -- [2]
+		}, -- [369]
+		{
+			"Displaying errors through fatal errors", -- [1]
+			0, -- [2]
+		}, -- [370]
+		{
+			"Now filtering: all messages", -- [1]
+			0, -- [2]
+		}, -- [371]
+		{
+			"CVar 'Sound_AmbienceHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [372]
+		{
+			"CVar 'Sound_AllyPlayerHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [373]
+		{
+			"CVar 'Sound_EnemyPlayerHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [374]
+		{
+			"CVar 'Sound_NPCHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [375]
+		{
+			"[GlueLogin] Starting loginlauncherPortal=\"us.actual.battle.net\" loginPortal=\"us.actual.battle.net:1119\"", -- [1]
+			0, -- [2]
+		}, -- [376]
+		{
+			"[GlueLogin] Resetting", -- [1]
+			0, -- [2]
+		}, -- [377]
+		{
+			"[IBN_Login] Initializing", -- [1]
+			0, -- [2]
+		}, -- [378]
+		{
+			"[IBN_Login] Attempting logonhost=\"us.actual.battle.net\" port=\"1119\"", -- [1]
+			0, -- [2]
+		}, -- [379]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [380]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [381]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [382]
+		{
+			"[GlueLogin] Logon complete.", -- [1]
+			0, -- [2]
+		}, -- [383]
+		{
+			"[GlueLogin] Waiting for realm list.", -- [1]
+			0, -- [2]
+		}, -- [384]
+		{
+			"[IBN_Login] Requesting realm list ticket", -- [1]
+			0, -- [2]
+		}, -- [385]
+		{
+			"[IBN_Login] Received realm list ticketcode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [386]
+		{
+			"[GlueLogin] Waiting for realm list.", -- [1]
+			0, -- [2]
+		}, -- [387]
+		{
+			"[IBN_Login] Received sub region listcode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [388]
+		{
+			"[IBN_Login] Requesting last played charsnumSubRegions=\"4\"", -- [1]
+			0, -- [2]
+		}, -- [389]
+		{
+			"[GlueLogin] Realm list ready.", -- [1]
+			0, -- [2]
+		}, -- [390]
+		{
+			"[IBN_Login] Joining realmsubRegion=\"1-101-89\" realmAddress=\"1-4-7\"", -- [1]
+			0, -- [2]
+		}, -- [391]
+		{
+			"[IBN_Login] OnRealmJoincode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [392]
+		{
+			"NetClient::HandleConnect()\n", -- [1]
+			0, -- [2]
+		}, -- [393]
+		{
+			"[GlueLogin] Received AuthedToWoWresult=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [394]
+		{
+			"Got new connection 2", -- [1]
+			0, -- [2]
+		}, -- [395]
+		{
+			"[IBN_Login] Front disconnectingconnectionId=\"1\"", -- [1]
+			0, -- [2]
+		}, -- [396]
+		{
+			"[GlueLogin] Disconnecting from authentication server.", -- [1]
+			0, -- [2]
+		}, -- [397]
+		{
+			"[IBN_BackInterface] Session with Battle.net established.", -- [1]
+			0, -- [2]
+		}, -- [398]
+		{
+			"[IBN_Login] Front disconnectedconnectionId=\"1\" result=\"( code=\"ERROR_NETWORK_MODULE_SOCKET_CLOSED (1016)\" localizedMessage=\"\" debugMessage=\"\")\"", -- [1]
+			0, -- [2]
+		}, -- [399]
+		{
+			"[GlueLogin] Disconnected from authentication server.", -- [1]
+			0, -- [2]
+		}, -- [400]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [401]
+		{
+			"Game table failed consistency check: ChallengeModeHealth. rows: 50, expectedRows: 51, columns: 1, expectedColumns: 1\n", -- [1]
+			3, -- [2]
+		}, -- [402]
+		{
+			"Game table failed consistency check: ChallengeModeDamage. rows: 50, expectedRows: 51, columns: 1, expectedColumns: 1\n", -- [1]
+			3, -- [2]
+		}, -- [403]
+		{
+			"Got new connection 3", -- [1]
+			0, -- [2]
+		}, -- [404]
+		{
+			"Proficiency in item class 2 set to 0x00001064d1", -- [1]
+			0, -- [2]
+		}, -- [405]
+		{
+			"Proficiency in item class 4 set to 0x0000000027", -- [1]
+			0, -- [2]
+		}, -- [406]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [407]
+		{
+			"Time set to 12/18/2018 (Tue) 20:27", -- [1]
+			0, -- [2]
+		}, -- [408]
+		{
+			"Gamespeed set from 0.017 to 0.017", -- [1]
+			0, -- [2]
+		}, -- [409]
+		{
+			"Time played:", -- [1]
+			0, -- [2]
+		}, -- [410]
+		{
+			"Total: 119d 12h 20m 50s", -- [1]
+			0, -- [2]
+		}, -- [411]
+		{
+			"Level: 5d 18h 36m 21s", -- [1]
+			0, -- [2]
+		}, -- [412]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [413]
+		{
+			"Failed to set SpellClutter callback on graphicsQuality CVar - using default of 30.0", -- [1]
+			0, -- [2]
+		}, -- [414]
+		{
+			"Failed to set SpellClutter callback on RAIDgraphicsQuality CVar - using default of 30.0", -- [1]
+			0, -- [2]
+		}, -- [415]
+		{
+			"Time played:", -- [1]
+			0, -- [2]
+		}, -- [416]
+		{
+			"Total: 119d 12h 33m 34s", -- [1]
+			0, -- [2]
+		}, -- [417]
+		{
+			"Level: 5d 18h 49m 5s", -- [1]
+			0, -- [2]
+		}, -- [418]
+		{
+			"GxApi set pending client restart", -- [1]
+			0, -- [2]
+		}, -- [419]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [420]
+		{
+			"Failed to set SpellClutter callback on graphicsQuality CVar - using default of 30.0", -- [1]
+			0, -- [2]
+		}, -- [421]
+		{
+			"Failed to set SpellClutter callback on RAIDgraphicsQuality CVar - using default of 30.0", -- [1]
+			0, -- [2]
+		}, -- [422]
+		{
+			"Time played:", -- [1]
+			0, -- [2]
+		}, -- [423]
+		{
+			"Total: 119d 12h 45m 5s", -- [1]
+			0, -- [2]
+		}, -- [424]
+		{
+			"Level: 5d 19h 0m 36s", -- [1]
+			0, -- [2]
+		}, -- [425]
+		{
+			"GxApi set pending client restart", -- [1]
+			0, -- [2]
+		}, -- [426]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [427]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [428]
+		{
+			"set pending client restart", -- [1]
+			0, -- [2]
+		}, -- [429]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [430]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [431]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [432]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [433]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [434]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [435]
+		{
+			"Refraction mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [436]
+		{
+			"Depth Based Opacity Enabled", -- [1]
+			0, -- [2]
+		}, -- [437]
+		{
+			"LightBuffer mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [438]
+		{
+			"Water detail changed to 2", -- [1]
+			0, -- [2]
+		}, -- [439]
+		{
+			"Reflection mode changed to 0", -- [1]
+			0, -- [2]
+		}, -- [440]
+		{
+			"Ripple detail changed to 1", -- [1]
+			0, -- [2]
+		}, -- [441]
+		{
+			"Outline mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [442]
+		{
+			"Projected textures enabled.", -- [1]
+			0, -- [2]
+		}, -- [443]
+		{
+			"SSAO mode set to 3", -- [1]
+			0, -- [2]
+		}, -- [444]
+		{
+			"Shadow mode changed to 2 - 3 band dynamic shadows, 2048", -- [1]
+			0, -- [2]
+		}, -- [445]
+		{
+			"Shadow texture size changed to 2048.", -- [1]
+			0, -- [2]
+		}, -- [446]
+		{
+			"Soft shadows changed to 0.", -- [1]
+			0, -- [2]
+		}, -- [447]
+		{
+			"Sunshafts quality changed to 2", -- [1]
+			0, -- [2]
+		}, -- [448]
+		{
+			"Texture filtering mode updated. Pending GxRestart", -- [1]
+			0, -- [2]
+		}, -- [449]
+		{
+			"Terrain mip level changed to 0.", -- [1]
+			0, -- [2]
+		}, -- [450]
+		{
+			"Component texture lod changed to 0", -- [1]
+			0, -- [2]
+		}, -- [451]
+		{
+			"Render scale changed to 1", -- [1]
+			0, -- [2]
+		}, -- [452]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [453]
+		{
+			"Sorting particles normally.", -- [1]
+			0, -- [2]
+		}, -- [454]
+		{
+			"Multithreaded rendering enabled.", -- [1]
+			0, -- [2]
+		}, -- [455]
+		{
+			"Multithreaded BeginDraw enabled.", -- [1]
+			0, -- [2]
+		}, -- [456]
+		{
+			"Multithread shadows changed to 1.", -- [1]
+			0, -- [2]
+		}, -- [457]
+		{
+			"Multithreaded prepass enabled.", -- [1]
+			0, -- [2]
+		}, -- [458]
+		{
+			"Multithreaded opaque pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [459]
+		{
+			"Multithreaded alpha M2 pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [460]
+		{
+			"Multithreaded opaque WMO pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [461]
+		{
+			"Water detail changed to 3", -- [1]
+			0, -- [2]
+		}, -- [462]
+		{
+			"Ripple detail changed to 2", -- [1]
+			0, -- [2]
+		}, -- [463]
+		{
+			"Reflection mode changed to 3", -- [1]
+			0, -- [2]
+		}, -- [464]
+		{
+			"Reflection downscale changed to 0", -- [1]
+			0, -- [2]
+		}, -- [465]
+		{
+			"Sunshafts quality changed to 2", -- [1]
+			0, -- [2]
+		}, -- [466]
+		{
+			"Refraction mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [467]
+		{
+			"Enabling BSP node cache (first time - starting up)", -- [1]
+			0, -- [2]
+		}, -- [468]
+		{
+			"Alpha map bit depth set to 8bit on restart.", -- [1]
+			0, -- [2]
+		}, -- [469]
+		{
+			"Volume fog enabled.", -- [1]
+			0, -- [2]
+		}, -- [470]
+		{
+			"Projected textures enabled.", -- [1]
+			0, -- [2]
+		}, -- [471]
+		{
+			"Shadow mode changed to 3 - 4 band dynamic shadows, 2048", -- [1]
+			0, -- [2]
+		}, -- [472]
+		{
+			"Shadow texture size changed to 2048.", -- [1]
+			0, -- [2]
+		}, -- [473]
+		{
+			"Soft shadows changed to 1.", -- [1]
+			0, -- [2]
+		}, -- [474]
+		{
+			"SSAO mode set to 4", -- [1]
+			0, -- [2]
+		}, -- [475]
+		{
+			"Depth Based Opacity Enabled", -- [1]
+			0, -- [2]
+		}, -- [476]
+		{
+			"SkyCloudLOD set to 3", -- [1]
+			0, -- [2]
+		}, -- [477]
+		{
+			"Texture filtering mode updated. Pending GxRestart", -- [1]
+			0, -- [2]
+		}, -- [478]
+		{
+			"Terrain mip level changed to 0.", -- [1]
+			0, -- [2]
+		}, -- [479]
+		{
+			"Outline mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [480]
+		{
+			"LightBuffer mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [481]
+		{
+			"Physics interaction level changed to 2", -- [1]
+			0, -- [2]
+		}, -- [482]
+		{
+			"Render scale changed to 1", -- [1]
+			0, -- [2]
+		}, -- [483]
+		{
+			"Resample quality changed to 1", -- [1]
+			0, -- [2]
+		}, -- [484]
+		{
+			"MSAA set to 4 color samples, 4 coverage samples", -- [1]
+			0, -- [2]
+		}, -- [485]
+		{
+			"MSAA for alpha-test enabled.", -- [1]
+			0, -- [2]
+		}, -- [486]
+		{
+			"Component texture lod changed to 0", -- [1]
+			0, -- [2]
+		}, -- [487]
+		{
+			"Component texture lod changed to 0", -- [1]
+			0, -- [2]
+		}, -- [488]
+		{
+			"World preload object sort enabled.", -- [1]
+			0, -- [2]
+		}, -- [489]
+		{
+			"World load object sort enabled.", -- [1]
+			0, -- [2]
+		}, -- [490]
+		{
+			"World preload non critical enabled.", -- [1]
+			0, -- [2]
+		}, -- [491]
+		{
+			"World preload high res textures enabled.", -- [1]
+			0, -- [2]
+		}, -- [492]
+		{
+			"FFX: Anti Aliasing Mode disabled", -- [1]
+			0, -- [2]
+		}, -- [493]
+		{
+			"FFX: Color Blind Test Mode Disabled", -- [1]
+			0, -- [2]
+		}, -- [494]
+		{
+			"Full memory crash dump disabled", -- [1]
+			0, -- [2]
+		}, -- [495]
+		{
+			"Error display disabled", -- [1]
+			0, -- [2]
+		}, -- [496]
+		{
+			"Error display shown", -- [1]
+			0, -- [2]
+		}, -- [497]
+		{
+			"Displaying errors through fatal errors", -- [1]
+			0, -- [2]
+		}, -- [498]
+		{
+			"Displaying errors through fatal errors", -- [1]
+			0, -- [2]
+		}, -- [499]
+		{
+			"Now filtering: all messages", -- [1]
+			0, -- [2]
+		}, -- [500]
+		{
+			"CVar 'Sound_AmbienceHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [501]
+		{
+			"CVar 'Sound_AllyPlayerHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [502]
+		{
+			"CVar 'Sound_EnemyPlayerHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [503]
+		{
+			"CVar 'Sound_NPCHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [504]
+		{
+			"[GlueLogin] Starting loginlauncherPortal=\"us.actual.battle.net\" loginPortal=\"us.actual.battle.net:1119\"", -- [1]
+			0, -- [2]
+		}, -- [505]
+		{
+			"[GlueLogin] Resetting", -- [1]
+			0, -- [2]
+		}, -- [506]
+		{
+			"[IBN_Login] Initializing", -- [1]
+			0, -- [2]
+		}, -- [507]
+		{
+			"[IBN_Login] Attempting logonhost=\"us.actual.battle.net\" port=\"1119\"", -- [1]
+			0, -- [2]
+		}, -- [508]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [509]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [510]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [511]
+		{
+			"[GlueLogin] Logon complete.", -- [1]
+			0, -- [2]
+		}, -- [512]
+		{
+			"[GlueLogin] Waiting for realm list.", -- [1]
+			0, -- [2]
+		}, -- [513]
+		{
+			"[IBN_Login] Requesting realm list ticket", -- [1]
+			0, -- [2]
+		}, -- [514]
+		{
+			"[IBN_Login] Received realm list ticketcode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [515]
+		{
+			"[GlueLogin] Waiting for realm list.", -- [1]
+			0, -- [2]
+		}, -- [516]
+		{
+			"[IBN_Login] Received sub region listcode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [517]
+		{
+			"[IBN_Login] Requesting last played charsnumSubRegions=\"4\"", -- [1]
+			0, -- [2]
+		}, -- [518]
+		{
+			"[GlueLogin] Realm list ready.", -- [1]
+			0, -- [2]
+		}, -- [519]
+		{
+			"[IBN_Login] Joining realmsubRegion=\"1-101-89\" realmAddress=\"1-4-7\"", -- [1]
+			0, -- [2]
+		}, -- [520]
+		{
+			"[IBN_Login] OnRealmJoincode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [521]
+		{
+			"NetClient::HandleConnect()\n", -- [1]
+			0, -- [2]
+		}, -- [522]
+		{
+			"[GlueLogin] Received AuthedToWoWresult=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [523]
+		{
+			"[IBN_Login] Front disconnectingconnectionId=\"1\"", -- [1]
+			0, -- [2]
+		}, -- [524]
+		{
+			"[GlueLogin] Disconnecting from authentication server.", -- [1]
+			0, -- [2]
+		}, -- [525]
+		{
+			"[IBN_BackInterface] Session with Battle.net established.", -- [1]
+			0, -- [2]
+		}, -- [526]
+		{
+			"Got new connection 2", -- [1]
+			0, -- [2]
+		}, -- [527]
+		{
+			"[IBN_Login] Front disconnectedconnectionId=\"1\" result=\"( code=\"ERROR_NETWORK_MODULE_SOCKET_CLOSED (1016)\" localizedMessage=\"\" debugMessage=\"\")\"", -- [1]
+			0, -- [2]
+		}, -- [528]
+		{
+			"[GlueLogin] Disconnected from authentication server.", -- [1]
+			0, -- [2]
+		}, -- [529]
+		{
+			"Outline mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [530]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [531]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [532]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [533]
+		{
+			"MSAA disabled", -- [1]
+			0, -- [2]
+		}, -- [534]
+		{
+			"FFX: Anti Aliasing Mode disabled", -- [1]
+			0, -- [2]
+		}, -- [535]
+		{
+			"MSAA for alpha-test enabled.", -- [1]
+			0, -- [2]
+		}, -- [536]
+		{
+			"Resample quality changed to 0", -- [1]
+			0, -- [2]
+		}, -- [537]
+		{
+			"GxApi set pending client restart", -- [1]
+			0, -- [2]
+		}, -- [538]
+		{
+			"Physics interaction level changed to 1", -- [1]
+			0, -- [2]
+		}, -- [539]
+		{
+			"GxApi set pending client restart", -- [1]
+			0, -- [2]
+		}, -- [540]
+		{
+			"MSAA for alpha-test disabled.", -- [1]
+			0, -- [2]
+		}, -- [541]
+		{
+			"Physics interaction level changed to 2", -- [1]
+			0, -- [2]
+		}, -- [542]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [543]
+		{
+			"Sorting particles normally.", -- [1]
+			0, -- [2]
+		}, -- [544]
+		{
+			"Multithreaded rendering enabled.", -- [1]
+			0, -- [2]
+		}, -- [545]
+		{
+			"Multithreaded BeginDraw enabled.", -- [1]
+			0, -- [2]
+		}, -- [546]
+		{
+			"Multithread shadows changed to 1.", -- [1]
+			0, -- [2]
+		}, -- [547]
+		{
+			"Multithreaded prepass enabled.", -- [1]
+			0, -- [2]
+		}, -- [548]
+		{
+			"Multithreaded opaque pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [549]
+		{
+			"Multithreaded alpha M2 pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [550]
+		{
+			"Multithreaded opaque WMO pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [551]
+		{
+			"Water detail changed to 3", -- [1]
+			0, -- [2]
+		}, -- [552]
+		{
+			"Ripple detail changed to 2", -- [1]
+			0, -- [2]
+		}, -- [553]
+		{
+			"Reflection mode changed to 3", -- [1]
+			0, -- [2]
+		}, -- [554]
+		{
+			"Reflection downscale changed to 0", -- [1]
+			0, -- [2]
+		}, -- [555]
+		{
+			"Sunshafts quality changed to 2", -- [1]
+			0, -- [2]
+		}, -- [556]
+		{
+			"Refraction mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [557]
+		{
+			"Enabling BSP node cache (first time - starting up)", -- [1]
+			0, -- [2]
+		}, -- [558]
+		{
+			"Alpha map bit depth set to 8bit on restart.", -- [1]
+			0, -- [2]
+		}, -- [559]
+		{
+			"Volume fog enabled.", -- [1]
+			0, -- [2]
+		}, -- [560]
+		{
+			"Projected textures enabled.", -- [1]
+			0, -- [2]
+		}, -- [561]
+		{
+			"Shadow mode changed to 3 - 4 band dynamic shadows, 2048", -- [1]
+			0, -- [2]
+		}, -- [562]
+		{
+			"Shadow texture size changed to 2048.", -- [1]
+			0, -- [2]
+		}, -- [563]
+		{
+			"Soft shadows changed to 1.", -- [1]
+			0, -- [2]
+		}, -- [564]
+		{
+			"SSAO mode set to 4", -- [1]
+			0, -- [2]
+		}, -- [565]
+		{
+			"Depth Based Opacity Enabled", -- [1]
+			0, -- [2]
+		}, -- [566]
+		{
+			"SkyCloudLOD set to 3", -- [1]
+			0, -- [2]
+		}, -- [567]
+		{
+			"Texture filtering mode updated. Pending GxRestart", -- [1]
+			0, -- [2]
+		}, -- [568]
+		{
+			"Terrain mip level changed to 0.", -- [1]
+			0, -- [2]
+		}, -- [569]
+		{
+			"Outline mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [570]
+		{
+			"LightBuffer mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [571]
+		{
+			"Physics interaction level changed to 2", -- [1]
+			0, -- [2]
+		}, -- [572]
+		{
+			"Render scale changed to 1", -- [1]
+			0, -- [2]
+		}, -- [573]
+		{
+			"Resample quality changed to 0", -- [1]
+			0, -- [2]
+		}, -- [574]
+		{
+			"MSAA disabled", -- [1]
+			0, -- [2]
+		}, -- [575]
+		{
+			"MSAA for alpha-test disabled.", -- [1]
+			0, -- [2]
+		}, -- [576]
+		{
+			"Component texture lod changed to 0", -- [1]
+			0, -- [2]
+		}, -- [577]
+		{
+			"Component texture lod changed to 0", -- [1]
+			0, -- [2]
+		}, -- [578]
+		{
+			"World preload object sort enabled.", -- [1]
+			0, -- [2]
+		}, -- [579]
+		{
+			"World load object sort enabled.", -- [1]
+			0, -- [2]
+		}, -- [580]
+		{
+			"World preload non critical enabled.", -- [1]
+			0, -- [2]
+		}, -- [581]
+		{
+			"World preload high res textures enabled.", -- [1]
+			0, -- [2]
+		}, -- [582]
+		{
+			"FFX: Anti Aliasing Mode disabled", -- [1]
+			0, -- [2]
+		}, -- [583]
+		{
+			"FFX: Color Blind Test Mode Disabled", -- [1]
+			0, -- [2]
+		}, -- [584]
+		{
+			"Full memory crash dump disabled", -- [1]
+			0, -- [2]
+		}, -- [585]
+		{
+			"Error display disabled", -- [1]
+			0, -- [2]
+		}, -- [586]
+		{
+			"Error display shown", -- [1]
+			0, -- [2]
+		}, -- [587]
+		{
+			"Displaying errors through fatal errors", -- [1]
+			0, -- [2]
+		}, -- [588]
+		{
+			"Displaying errors through fatal errors", -- [1]
+			0, -- [2]
+		}, -- [589]
+		{
+			"Now filtering: all messages", -- [1]
+			0, -- [2]
+		}, -- [590]
+		{
+			"CVar 'Sound_AmbienceHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [591]
+		{
+			"CVar 'Sound_AllyPlayerHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [592]
+		{
+			"CVar 'Sound_EnemyPlayerHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [593]
+		{
+			"CVar 'Sound_NPCHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [594]
+		{
+			"[GlueLogin] Starting loginlauncherPortal=\"us.actual.battle.net\" loginPortal=\"us.actual.battle.net:1119\"", -- [1]
+			0, -- [2]
+		}, -- [595]
+		{
+			"[GlueLogin] Resetting", -- [1]
+			0, -- [2]
+		}, -- [596]
+		{
+			"[IBN_Login] Initializing", -- [1]
+			0, -- [2]
+		}, -- [597]
+		{
+			"[IBN_Login] Attempting logonhost=\"us.actual.battle.net\" port=\"1119\"", -- [1]
+			0, -- [2]
+		}, -- [598]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [599]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [600]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [601]
+		{
+			"[GlueLogin] Logon complete.", -- [1]
+			0, -- [2]
+		}, -- [602]
+		{
+			"[GlueLogin] Waiting for realm list.", -- [1]
+			0, -- [2]
+		}, -- [603]
+		{
+			"[IBN_Login] Requesting realm list ticket", -- [1]
+			0, -- [2]
+		}, -- [604]
+		{
+			"[IBN_Login] Received realm list ticketcode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [605]
+		{
+			"[GlueLogin] Waiting for realm list.", -- [1]
+			0, -- [2]
+		}, -- [606]
+		{
+			"[IBN_Login] Received sub region listcode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [607]
+		{
+			"[IBN_Login] Requesting last played charsnumSubRegions=\"4\"", -- [1]
+			0, -- [2]
+		}, -- [608]
+		{
+			"[GlueLogin] Realm list ready.", -- [1]
+			0, -- [2]
+		}, -- [609]
+		{
+			"[IBN_Login] Joining realmsubRegion=\"1-101-89\" realmAddress=\"1-4-7\"", -- [1]
+			0, -- [2]
+		}, -- [610]
+		{
+			"[IBN_Login] OnRealmJoincode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [611]
+		{
+			"NetClient::HandleConnect()\n", -- [1]
+			0, -- [2]
+		}, -- [612]
+		{
+			"[GlueLogin] Received AuthedToWoWresult=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [613]
+		{
+			"Got new connection 2", -- [1]
+			0, -- [2]
+		}, -- [614]
+		{
+			"[IBN_Login] Front disconnectingconnectionId=\"1\"", -- [1]
+			0, -- [2]
+		}, -- [615]
+		{
+			"[GlueLogin] Disconnecting from authentication server.", -- [1]
+			0, -- [2]
+		}, -- [616]
+		{
+			"[IBN_BackInterface] Session with Battle.net established.", -- [1]
+			0, -- [2]
+		}, -- [617]
+		{
+			"[IBN_Login] Front disconnectedconnectionId=\"1\" result=\"( code=\"ERROR_NETWORK_MODULE_SOCKET_CLOSED (1016)\" localizedMessage=\"\" debugMessage=\"\")\"", -- [1]
+			0, -- [2]
+		}, -- [618]
+		{
+			"[GlueLogin] Disconnected from authentication server.", -- [1]
+			0, -- [2]
+		}, -- [619]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [620]
+		{
+			"Game table failed consistency check: ChallengeModeHealth. rows: 50, expectedRows: 51, columns: 1, expectedColumns: 1\n", -- [1]
+			3, -- [2]
+		}, -- [621]
+		{
+			"Game table failed consistency check: ChallengeModeDamage. rows: 50, expectedRows: 51, columns: 1, expectedColumns: 1\n", -- [1]
+			3, -- [2]
+		}, -- [622]
+		{
+			"Got new connection 3", -- [1]
+			0, -- [2]
+		}, -- [623]
+		{
+			"Proficiency in item class 2 set to 0x0000000080", -- [1]
+			0, -- [2]
+		}, -- [624]
+		{
+			"Proficiency in item class 2 set to 0x0000000081", -- [1]
+			0, -- [2]
+		}, -- [625]
+		{
+			"Proficiency in item class 2 set to 0x0000000091", -- [1]
+			0, -- [2]
+		}, -- [626]
+		{
+			"Proficiency in item class 2 set to 0x0000000491", -- [1]
+			0, -- [2]
+		}, -- [627]
+		{
+			"Proficiency in item class 4 set to 0x0000000021", -- [1]
+			0, -- [2]
+		}, -- [628]
+		{
+			"Proficiency in item class 2 set to 0x0000004491", -- [1]
+			0, -- [2]
+		}, -- [629]
+		{
+			"Proficiency in item class 2 set to 0x00000044d1", -- [1]
+			0, -- [2]
+		}, -- [630]
+		{
+			"Proficiency in item class 2 set to 0x00001044d1", -- [1]
+			0, -- [2]
+		}, -- [631]
+		{
+			"Proficiency in item class 4 set to 0x0000000025", -- [1]
+			0, -- [2]
+		}, -- [632]
+		{
+			"Proficiency in item class 4 set to 0x0000000027", -- [1]
+			0, -- [2]
+		}, -- [633]
+		{
+			"Proficiency in item class 2 set to 0x00001064d1", -- [1]
+			0, -- [2]
+		}, -- [634]
+		{
+			"Proficiency in item class 2 set to 0x00001064d1", -- [1]
+			0, -- [2]
+		}, -- [635]
+		{
+			"Proficiency in item class 4 set to 0x0000000027", -- [1]
+			0, -- [2]
+		}, -- [636]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [637]
+		{
+			"Time set to 12/18/2018 (Tue) 21:08", -- [1]
+			0, -- [2]
+		}, -- [638]
+		{
+			"Gamespeed set from 0.017 to 0.017", -- [1]
+			0, -- [2]
+		}, -- [639]
+		{
+			"Time played:", -- [1]
+			0, -- [2]
+		}, -- [640]
+		{
+			"Total: 119d 12h 59m 19s", -- [1]
+			0, -- [2]
+		}, -- [641]
+		{
+			"Level: 5d 19h 14m 50s", -- [1]
+			0, -- [2]
+		}, -- [642]
+		{
+			"World transfer pending...", -- [1]
+			0, -- [2]
+		}, -- [643]
+		{
+			"Got new connection 3", -- [1]
+			0, -- [2]
+		}, -- [644]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [645]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [646]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [647]
+		{
+			"GxApi set pending client restart", -- [1]
+			0, -- [2]
+		}, -- [648]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [649]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [650]
+		{
+			"set pending client restart", -- [1]
+			0, -- [2]
+		}, -- [651]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [652]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [653]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [654]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [655]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [656]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [657]
+		{
+			"Refraction mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [658]
+		{
+			"Depth Based Opacity Enabled", -- [1]
+			0, -- [2]
+		}, -- [659]
+		{
+			"LightBuffer mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [660]
+		{
+			"Water detail changed to 2", -- [1]
+			0, -- [2]
+		}, -- [661]
+		{
+			"Reflection mode changed to 0", -- [1]
+			0, -- [2]
+		}, -- [662]
+		{
+			"Ripple detail changed to 1", -- [1]
+			0, -- [2]
+		}, -- [663]
+		{
+			"Outline mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [664]
+		{
+			"Projected textures enabled.", -- [1]
+			0, -- [2]
+		}, -- [665]
+		{
+			"SSAO mode set to 3", -- [1]
+			0, -- [2]
+		}, -- [666]
+		{
+			"Shadow mode changed to 2 - 3 band dynamic shadows, 2048", -- [1]
+			0, -- [2]
+		}, -- [667]
+		{
+			"Shadow texture size changed to 2048.", -- [1]
+			0, -- [2]
+		}, -- [668]
+		{
+			"Soft shadows changed to 0.", -- [1]
+			0, -- [2]
+		}, -- [669]
+		{
+			"Sunshafts quality changed to 2", -- [1]
+			0, -- [2]
+		}, -- [670]
+		{
+			"Texture filtering mode updated. Pending GxRestart", -- [1]
+			0, -- [2]
+		}, -- [671]
+		{
+			"Terrain mip level changed to 0.", -- [1]
+			0, -- [2]
+		}, -- [672]
+		{
+			"Component texture lod changed to 0", -- [1]
+			0, -- [2]
+		}, -- [673]
+		{
+			"Render scale changed to 1", -- [1]
+			0, -- [2]
+		}, -- [674]
+		{
+			"Terrain mip level changed to 0.", -- [1]
+			0, -- [2]
+		}, -- [675]
+		{
+			"Component texture lod changed to 0", -- [1]
+			0, -- [2]
+		}, -- [676]
+		{
+			"Texture filtering mode updated. Pending GxRestart", -- [1]
+			0, -- [2]
+		}, -- [677]
+		{
+			"Projected textures enabled.", -- [1]
+			0, -- [2]
+		}, -- [678]
+		{
+			"Shadow mode changed to 3 - 4 band dynamic shadows, 2048", -- [1]
+			0, -- [2]
+		}, -- [679]
+		{
+			"Shadow texture size changed to 2048.", -- [1]
+			0, -- [2]
+		}, -- [680]
+		{
+			"Soft shadows changed to 1.", -- [1]
+			0, -- [2]
+		}, -- [681]
+		{
+			"Water detail changed to 3", -- [1]
+			0, -- [2]
+		}, -- [682]
+		{
+			"Reflection mode changed to 3", -- [1]
+			0, -- [2]
+		}, -- [683]
+		{
+			"Ripple detail changed to 2", -- [1]
+			0, -- [2]
+		}, -- [684]
+		{
+			"Sunshafts quality changed to 2", -- [1]
+			0, -- [2]
+		}, -- [685]
+		{
+			"SSAO mode set to 4", -- [1]
+			0, -- [2]
+		}, -- [686]
+		{
+			"Refraction mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [687]
+		{
+			"Depth Based Opacity Enabled", -- [1]
+			0, -- [2]
+		}, -- [688]
+		{
+			"LightBuffer mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [689]
+		{
+			"Outline mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [690]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [691]
+		{
+			"Shadow mode changed to 2 - 3 band dynamic shadows, 2048", -- [1]
+			0, -- [2]
+		}, -- [692]
+		{
+			"Shadow texture size changed to 2048.", -- [1]
+			0, -- [2]
+		}, -- [693]
+		{
+			"Soft shadows changed to 0.", -- [1]
+			0, -- [2]
+		}, -- [694]
+		{
+			"Shadow mode changed to 2 - 3 band dynamic shadows, 2048", -- [1]
+			0, -- [2]
+		}, -- [695]
+		{
+			"Shadow texture size changed to 2048.", -- [1]
+			0, -- [2]
+		}, -- [696]
+		{
+			"Soft shadows changed to 1.", -- [1]
+			0, -- [2]
+		}, -- [697]
+		{
+			"Water detail changed to 2", -- [1]
+			0, -- [2]
+		}, -- [698]
+		{
+			"Reflection mode changed to 0", -- [1]
+			0, -- [2]
+		}, -- [699]
+		{
+			"Ripple detail changed to 1", -- [1]
+			0, -- [2]
+		}, -- [700]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [701]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [702]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [703]
+		{
+			"Failed to set SpellClutter callback on graphicsQuality CVar - using default of 30.0", -- [1]
+			0, -- [2]
+		}, -- [704]
+		{
+			"Failed to set SpellClutter callback on RAIDgraphicsQuality CVar - using default of 30.0", -- [1]
+			0, -- [2]
+		}, -- [705]
+		{
+			"Time played:", -- [1]
+			0, -- [2]
+		}, -- [706]
+		{
+			"Total: 119d 13h 11m 27s", -- [1]
+			0, -- [2]
+		}, -- [707]
+		{
+			"Level: 5d 19h 26m 58s", -- [1]
+			0, -- [2]
+		}, -- [708]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [709]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [710]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [711]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [712]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [713]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [714]
+		{
+			"Sorting particles normally.", -- [1]
+			0, -- [2]
+		}, -- [715]
+		{
+			"Multithreaded rendering enabled.", -- [1]
+			0, -- [2]
+		}, -- [716]
+		{
+			"Multithreaded BeginDraw enabled.", -- [1]
+			0, -- [2]
+		}, -- [717]
+		{
+			"Multithread shadows changed to 1.", -- [1]
+			0, -- [2]
+		}, -- [718]
+		{
+			"Multithreaded prepass enabled.", -- [1]
+			0, -- [2]
+		}, -- [719]
+		{
+			"Multithreaded opaque pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [720]
+		{
+			"Multithreaded alpha M2 pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [721]
+		{
+			"Multithreaded opaque WMO pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [722]
+		{
+			"Water detail changed to 2", -- [1]
+			0, -- [2]
+		}, -- [723]
+		{
+			"Ripple detail changed to 1", -- [1]
+			0, -- [2]
+		}, -- [724]
+		{
+			"Reflection mode changed to 0", -- [1]
+			0, -- [2]
+		}, -- [725]
+		{
+			"Reflection downscale changed to 0", -- [1]
+			0, -- [2]
+		}, -- [726]
+		{
+			"Sunshafts quality changed to 2", -- [1]
+			0, -- [2]
+		}, -- [727]
+		{
+			"Refraction mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [728]
+		{
+			"Enabling BSP node cache (first time - starting up)", -- [1]
+			0, -- [2]
+		}, -- [729]
+		{
+			"Alpha map bit depth set to 8bit on restart.", -- [1]
+			0, -- [2]
+		}, -- [730]
+		{
+			"Volume fog enabled.", -- [1]
+			0, -- [2]
+		}, -- [731]
+		{
+			"Projected textures enabled.", -- [1]
+			0, -- [2]
+		}, -- [732]
+		{
+			"Shadow mode changed to 2 - 3 band dynamic shadows, 2048", -- [1]
+			0, -- [2]
+		}, -- [733]
+		{
+			"Shadow texture size changed to 2048.", -- [1]
+			0, -- [2]
+		}, -- [734]
+		{
+			"Soft shadows changed to 1.", -- [1]
+			0, -- [2]
+		}, -- [735]
+		{
+			"SSAO mode set to 4", -- [1]
+			0, -- [2]
+		}, -- [736]
+		{
+			"Depth Based Opacity Enabled", -- [1]
+			0, -- [2]
+		}, -- [737]
+		{
+			"SkyCloudLOD set to 3", -- [1]
+			0, -- [2]
+		}, -- [738]
+		{
+			"Texture filtering mode updated. Pending GxRestart", -- [1]
+			0, -- [2]
+		}, -- [739]
+		{
+			"Terrain mip level changed to 0.", -- [1]
+			0, -- [2]
+		}, -- [740]
+		{
+			"Outline mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [741]
+		{
+			"LightBuffer mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [742]
+		{
+			"Physics interaction level changed to 2", -- [1]
+			0, -- [2]
+		}, -- [743]
+		{
+			"Render scale changed to 1", -- [1]
+			0, -- [2]
+		}, -- [744]
+		{
+			"Resample quality changed to 0", -- [1]
+			0, -- [2]
+		}, -- [745]
+		{
+			"MSAA disabled", -- [1]
+			0, -- [2]
+		}, -- [746]
+		{
+			"MSAA for alpha-test disabled.", -- [1]
+			0, -- [2]
+		}, -- [747]
+		{
+			"Component texture lod changed to 0", -- [1]
+			0, -- [2]
+		}, -- [748]
+		{
+			"Component texture lod changed to 0", -- [1]
+			0, -- [2]
+		}, -- [749]
+		{
+			"World preload object sort enabled.", -- [1]
+			0, -- [2]
+		}, -- [750]
+		{
+			"World load object sort enabled.", -- [1]
+			0, -- [2]
+		}, -- [751]
+		{
+			"World preload non critical enabled.", -- [1]
+			0, -- [2]
+		}, -- [752]
+		{
+			"World preload high res textures enabled.", -- [1]
+			0, -- [2]
+		}, -- [753]
+		{
+			"FFX: Anti Aliasing Mode disabled", -- [1]
+			0, -- [2]
+		}, -- [754]
+		{
+			"FFX: Color Blind Test Mode Disabled", -- [1]
+			0, -- [2]
+		}, -- [755]
+		{
+			"Full memory crash dump disabled", -- [1]
+			0, -- [2]
+		}, -- [756]
+		{
+			"Error display disabled", -- [1]
+			0, -- [2]
+		}, -- [757]
+		{
+			"Error display shown", -- [1]
+			0, -- [2]
+		}, -- [758]
+		{
+			"Displaying errors through fatal errors", -- [1]
+			0, -- [2]
+		}, -- [759]
+		{
+			"Displaying errors through fatal errors", -- [1]
+			0, -- [2]
+		}, -- [760]
+		{
+			"Now filtering: all messages", -- [1]
+			0, -- [2]
+		}, -- [761]
+		{
+			"CVar 'Sound_AmbienceHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [762]
+		{
+			"CVar 'Sound_AllyPlayerHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [763]
+		{
+			"CVar 'Sound_EnemyPlayerHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [764]
+		{
+			"CVar 'Sound_NPCHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [765]
+		{
+			"[GlueLogin] Starting loginlauncherPortal=\"us.actual.battle.net\" loginPortal=\"us.actual.battle.net:1119\"", -- [1]
+			0, -- [2]
+		}, -- [766]
+		{
+			"[GlueLogin] Resetting", -- [1]
+			0, -- [2]
+		}, -- [767]
+		{
+			"[IBN_Login] Initializing", -- [1]
+			0, -- [2]
+		}, -- [768]
+		{
+			"[IBN_Login] Attempting logonhost=\"us.actual.battle.net\" port=\"1119\"", -- [1]
+			0, -- [2]
+		}, -- [769]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [770]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [771]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [772]
+		{
+			"[GlueLogin] Logon complete.", -- [1]
+			0, -- [2]
+		}, -- [773]
+		{
+			"[GlueLogin] Waiting for realm list.", -- [1]
+			0, -- [2]
+		}, -- [774]
+		{
+			"[IBN_Login] Requesting realm list ticket", -- [1]
+			0, -- [2]
+		}, -- [775]
+		{
+			"[IBN_Login] Received realm list ticketcode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [776]
+		{
+			"[GlueLogin] Waiting for realm list.", -- [1]
+			0, -- [2]
+		}, -- [777]
+		{
+			"[IBN_Login] Received sub region listcode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [778]
+		{
+			"[IBN_Login] Requesting last played charsnumSubRegions=\"4\"", -- [1]
+			0, -- [2]
+		}, -- [779]
+		{
+			"[GlueLogin] Realm list ready.", -- [1]
+			0, -- [2]
+		}, -- [780]
+		{
+			"[IBN_Login] Joining realmsubRegion=\"1-101-89\" realmAddress=\"1-4-7\"", -- [1]
+			0, -- [2]
+		}, -- [781]
+		{
+			"[IBN_Login] OnRealmJoincode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [782]
+		{
+			"NetClient::HandleConnect()\n", -- [1]
+			0, -- [2]
+		}, -- [783]
+		{
+			"[GlueLogin] Received AuthedToWoWresult=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [784]
+		{
+			"[IBN_Login] Front disconnectingconnectionId=\"1\"", -- [1]
+			0, -- [2]
+		}, -- [785]
+		{
+			"[GlueLogin] Disconnecting from authentication server.", -- [1]
+			0, -- [2]
+		}, -- [786]
+		{
+			"[IBN_BackInterface] Session with Battle.net established.", -- [1]
+			0, -- [2]
+		}, -- [787]
+		{
+			"[IBN_Login] Front disconnectedconnectionId=\"1\" result=\"( code=\"ERROR_NETWORK_MODULE_SOCKET_CLOSED (1016)\" localizedMessage=\"\" debugMessage=\"\")\"", -- [1]
+			0, -- [2]
+		}, -- [788]
+		{
+			"[GlueLogin] Disconnected from authentication server.", -- [1]
+			0, -- [2]
+		}, -- [789]
+		{
+			"GxApi set pending client restart", -- [1]
+			0, -- [2]
+		}, -- [790]
+		{
+			"Shadow mode changed to 3 - 4 band dynamic shadows, 2048", -- [1]
+			0, -- [2]
+		}, -- [791]
+		{
+			"Shadow texture size changed to 2048.", -- [1]
+			0, -- [2]
+		}, -- [792]
+		{
+			"Soft shadows changed to 1.", -- [1]
+			0, -- [2]
+		}, -- [793]
+		{
+			"set pending gxRestart", -- [1]
+			0, -- [2]
+		}, -- [794]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [795]
+		{
+			"Sorting particles normally.", -- [1]
+			0, -- [2]
+		}, -- [796]
+		{
+			"Multithreaded rendering enabled.", -- [1]
+			0, -- [2]
+		}, -- [797]
+		{
+			"Multithreaded BeginDraw enabled.", -- [1]
+			0, -- [2]
+		}, -- [798]
+		{
+			"Multithread shadows changed to 1.", -- [1]
+			0, -- [2]
+		}, -- [799]
+		{
+			"Multithreaded prepass enabled.", -- [1]
+			0, -- [2]
+		}, -- [800]
+		{
+			"Multithreaded opaque pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [801]
+		{
+			"Multithreaded alpha M2 pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [802]
+		{
+			"Multithreaded opaque WMO pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [803]
+		{
+			"Water detail changed to 2", -- [1]
+			0, -- [2]
+		}, -- [804]
+		{
+			"Ripple detail changed to 1", -- [1]
+			0, -- [2]
+		}, -- [805]
+		{
+			"Reflection mode changed to 0", -- [1]
+			0, -- [2]
+		}, -- [806]
+		{
+			"Reflection downscale changed to 0", -- [1]
+			0, -- [2]
+		}, -- [807]
+		{
+			"Sunshafts quality changed to 2", -- [1]
+			0, -- [2]
+		}, -- [808]
+		{
+			"Refraction mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [809]
+		{
+			"Enabling BSP node cache (first time - starting up)", -- [1]
+			0, -- [2]
+		}, -- [810]
+		{
+			"Alpha map bit depth set to 8bit on restart.", -- [1]
+			0, -- [2]
+		}, -- [811]
+		{
+			"Volume fog enabled.", -- [1]
+			0, -- [2]
+		}, -- [812]
+		{
+			"Projected textures enabled.", -- [1]
+			0, -- [2]
+		}, -- [813]
+		{
+			"Shadow mode changed to 3 - 4 band dynamic shadows, 2048", -- [1]
+			0, -- [2]
+		}, -- [814]
+		{
+			"Shadow texture size changed to 2048.", -- [1]
+			0, -- [2]
+		}, -- [815]
+		{
+			"Soft shadows changed to 1.", -- [1]
+			0, -- [2]
+		}, -- [816]
+		{
+			"SSAO mode set to 4", -- [1]
+			0, -- [2]
+		}, -- [817]
+		{
+			"Depth Based Opacity Enabled", -- [1]
+			0, -- [2]
+		}, -- [818]
+		{
+			"SkyCloudLOD set to 3", -- [1]
+			0, -- [2]
+		}, -- [819]
+		{
+			"Texture filtering mode updated. Pending GxRestart", -- [1]
+			0, -- [2]
+		}, -- [820]
+		{
+			"Terrain mip level changed to 0.", -- [1]
+			0, -- [2]
+		}, -- [821]
+		{
+			"Outline mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [822]
+		{
+			"LightBuffer mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [823]
+		{
+			"Physics interaction level changed to 2", -- [1]
+			0, -- [2]
+		}, -- [824]
+		{
+			"Render scale changed to 1", -- [1]
+			0, -- [2]
+		}, -- [825]
+		{
+			"Resample quality changed to 0", -- [1]
+			0, -- [2]
+		}, -- [826]
+		{
+			"MSAA disabled", -- [1]
+			0, -- [2]
+		}, -- [827]
+		{
+			"MSAA for alpha-test disabled.", -- [1]
+			0, -- [2]
+		}, -- [828]
+		{
+			"Component texture lod changed to 0", -- [1]
+			0, -- [2]
+		}, -- [829]
+		{
+			"Component texture lod changed to 0", -- [1]
+			0, -- [2]
+		}, -- [830]
+		{
+			"World preload object sort enabled.", -- [1]
+			0, -- [2]
+		}, -- [831]
+		{
+			"World load object sort enabled.", -- [1]
+			0, -- [2]
+		}, -- [832]
+		{
+			"World preload non critical enabled.", -- [1]
+			0, -- [2]
+		}, -- [833]
+		{
+			"World preload high res textures enabled.", -- [1]
+			0, -- [2]
+		}, -- [834]
+		{
+			"FFX: Anti Aliasing Mode disabled", -- [1]
+			0, -- [2]
+		}, -- [835]
+		{
+			"FFX: Color Blind Test Mode Disabled", -- [1]
+			0, -- [2]
+		}, -- [836]
+		{
+			"Full memory crash dump disabled", -- [1]
+			0, -- [2]
+		}, -- [837]
+		{
+			"Error display disabled", -- [1]
+			0, -- [2]
+		}, -- [838]
+		{
+			"Error display shown", -- [1]
+			0, -- [2]
+		}, -- [839]
+		{
+			"Displaying errors through fatal errors", -- [1]
+			0, -- [2]
+		}, -- [840]
+		{
+			"Displaying errors through fatal errors", -- [1]
+			0, -- [2]
+		}, -- [841]
+		{
+			"Now filtering: all messages", -- [1]
+			0, -- [2]
+		}, -- [842]
+		{
+			"CVar 'Sound_AmbienceHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [843]
+		{
+			"CVar 'Sound_AllyPlayerHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [844]
+		{
+			"CVar 'Sound_EnemyPlayerHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [845]
+		{
+			"CVar 'Sound_NPCHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [846]
+		{
+			"[GlueLogin] Starting loginlauncherPortal=\"us.actual.battle.net\" loginPortal=\"us.actual.battle.net:1119\"", -- [1]
+			0, -- [2]
+		}, -- [847]
+		{
+			"[GlueLogin] Resetting", -- [1]
+			0, -- [2]
+		}, -- [848]
+		{
+			"[IBN_Login] Initializing", -- [1]
+			0, -- [2]
+		}, -- [849]
+		{
+			"[IBN_Login] Attempting logonhost=\"us.actual.battle.net\" port=\"1119\"", -- [1]
+			0, -- [2]
+		}, -- [850]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [851]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [852]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [853]
+		{
+			"[GlueLogin] Logon complete.", -- [1]
+			0, -- [2]
+		}, -- [854]
+		{
+			"[GlueLogin] Waiting for realm list.", -- [1]
+			0, -- [2]
+		}, -- [855]
+		{
+			"[IBN_Login] Requesting realm list ticket", -- [1]
+			0, -- [2]
+		}, -- [856]
+		{
+			"[IBN_Login] Received realm list ticketcode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [857]
+		{
+			"[GlueLogin] Waiting for realm list.", -- [1]
+			0, -- [2]
+		}, -- [858]
+		{
+			"[IBN_Login] Received sub region listcode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [859]
+		{
+			"[IBN_Login] Requesting last played charsnumSubRegions=\"4\"", -- [1]
+			0, -- [2]
+		}, -- [860]
+		{
+			"[GlueLogin] Realm list ready.", -- [1]
+			0, -- [2]
+		}, -- [861]
+		{
+			"[IBN_Login] Joining realmsubRegion=\"1-101-89\" realmAddress=\"1-4-7\"", -- [1]
+			0, -- [2]
+		}, -- [862]
+		{
+			"[IBN_Login] OnRealmJoincode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [863]
+		{
+			"NetClient::HandleConnect()\n", -- [1]
+			0, -- [2]
+		}, -- [864]
+		{
+			"[GlueLogin] Received AuthedToWoWresult=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [865]
+		{
+			"Got new connection 2", -- [1]
+			0, -- [2]
+		}, -- [866]
+		{
+			"[IBN_Login] Front disconnectingconnectionId=\"1\"", -- [1]
+			0, -- [2]
+		}, -- [867]
+		{
+			"[GlueLogin] Disconnecting from authentication server.", -- [1]
+			0, -- [2]
+		}, -- [868]
+		{
+			"[IBN_BackInterface] Session with Battle.net established.", -- [1]
+			0, -- [2]
+		}, -- [869]
+		{
+			"[IBN_Login] Front disconnectedconnectionId=\"1\" result=\"( code=\"ERROR_NETWORK_MODULE_SOCKET_CLOSED (1016)\" localizedMessage=\"\" debugMessage=\"\")\"", -- [1]
+			0, -- [2]
+		}, -- [870]
+		{
+			"[GlueLogin] Disconnected from authentication server.", -- [1]
+			0, -- [2]
+		}, -- [871]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [872]
+		{
+			"Game table failed consistency check: ChallengeModeHealth. rows: 50, expectedRows: 51, columns: 1, expectedColumns: 1\n", -- [1]
+			3, -- [2]
+		}, -- [873]
+		{
+			"Game table failed consistency check: ChallengeModeDamage. rows: 50, expectedRows: 51, columns: 1, expectedColumns: 1\n", -- [1]
+			3, -- [2]
+		}, -- [874]
+		{
+			"Got new connection 3", -- [1]
+			0, -- [2]
+		}, -- [875]
+		{
+			"Proficiency in item class 2 set to 0x0000000080", -- [1]
+			0, -- [2]
+		}, -- [876]
+		{
+			"Proficiency in item class 2 set to 0x0000000081", -- [1]
+			0, -- [2]
+		}, -- [877]
+		{
+			"Proficiency in item class 2 set to 0x0000000091", -- [1]
+			0, -- [2]
+		}, -- [878]
+		{
+			"Proficiency in item class 2 set to 0x0000000491", -- [1]
+			0, -- [2]
+		}, -- [879]
+		{
+			"Proficiency in item class 4 set to 0x0000000021", -- [1]
+			0, -- [2]
+		}, -- [880]
+		{
+			"Proficiency in item class 2 set to 0x0000004491", -- [1]
+			0, -- [2]
+		}, -- [881]
+		{
+			"Proficiency in item class 2 set to 0x00000044d1", -- [1]
+			0, -- [2]
+		}, -- [882]
+		{
+			"Proficiency in item class 2 set to 0x00001044d1", -- [1]
+			0, -- [2]
+		}, -- [883]
+		{
+			"Proficiency in item class 4 set to 0x0000000025", -- [1]
+			0, -- [2]
+		}, -- [884]
+		{
+			"Proficiency in item class 4 set to 0x0000000027", -- [1]
+			0, -- [2]
+		}, -- [885]
+		{
+			"Proficiency in item class 2 set to 0x00001064d1", -- [1]
+			0, -- [2]
+		}, -- [886]
+		{
+			"Proficiency in item class 2 set to 0x00001064d1", -- [1]
+			0, -- [2]
+		}, -- [887]
+		{
+			"Proficiency in item class 4 set to 0x0000000027", -- [1]
+			0, -- [2]
+		}, -- [888]
+		{
+			"Weather changed to 2, intensity 1.000000\n", -- [1]
+			0, -- [2]
+		}, -- [889]
+		{
+			"Time set to 12/18/2018 (Tue) 21:30", -- [1]
+			0, -- [2]
+		}, -- [890]
+		{
+			"Gamespeed set from 0.017 to 0.017", -- [1]
+			0, -- [2]
+		}, -- [891]
+		{
+			"Time played:", -- [1]
+			0, -- [2]
+		}, -- [892]
+		{
+			"Total: 119d 13h 17m 16s", -- [1]
+			0, -- [2]
+		}, -- [893]
+		{
+			"Level: 5d 19h 32m 47s", -- [1]
+			0, -- [2]
+		}, -- [894]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [895]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [896]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [897]
+		{
+			"Sorting particles normally.", -- [1]
+			0, -- [2]
+		}, -- [898]
+		{
+			"Multithreaded rendering enabled.", -- [1]
+			0, -- [2]
+		}, -- [899]
+		{
+			"Multithreaded BeginDraw enabled.", -- [1]
+			0, -- [2]
+		}, -- [900]
+		{
+			"Multithread shadows changed to 1.", -- [1]
+			0, -- [2]
+		}, -- [901]
+		{
+			"Multithreaded prepass enabled.", -- [1]
+			0, -- [2]
+		}, -- [902]
+		{
+			"Multithreaded opaque pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [903]
+		{
+			"Multithreaded alpha M2 pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [904]
+		{
+			"Multithreaded opaque WMO pass enabled.", -- [1]
+			0, -- [2]
+		}, -- [905]
+		{
+			"Water detail changed to 2", -- [1]
+			0, -- [2]
+		}, -- [906]
+		{
+			"Ripple detail changed to 1", -- [1]
+			0, -- [2]
+		}, -- [907]
+		{
+			"Reflection mode changed to 0", -- [1]
+			0, -- [2]
+		}, -- [908]
+		{
+			"Reflection downscale changed to 0", -- [1]
+			0, -- [2]
+		}, -- [909]
+		{
+			"Sunshafts quality changed to 2", -- [1]
+			0, -- [2]
+		}, -- [910]
+		{
+			"Refraction mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [911]
+		{
+			"Enabling BSP node cache (first time - starting up)", -- [1]
+			0, -- [2]
+		}, -- [912]
+		{
+			"Alpha map bit depth set to 8bit on restart.", -- [1]
+			0, -- [2]
+		}, -- [913]
+		{
+			"Volume fog enabled.", -- [1]
+			0, -- [2]
+		}, -- [914]
+		{
+			"Projected textures enabled.", -- [1]
+			0, -- [2]
+		}, -- [915]
+		{
+			"Shadow mode changed to 3 - 4 band dynamic shadows, 2048", -- [1]
+			0, -- [2]
+		}, -- [916]
+		{
+			"Shadow texture size changed to 2048.", -- [1]
+			0, -- [2]
+		}, -- [917]
+		{
+			"Soft shadows changed to 1.", -- [1]
+			0, -- [2]
+		}, -- [918]
+		{
+			"SSAO mode set to 4", -- [1]
+			0, -- [2]
+		}, -- [919]
+		{
+			"Depth Based Opacity Enabled", -- [1]
+			0, -- [2]
+		}, -- [920]
+		{
+			"SkyCloudLOD set to 3", -- [1]
+			0, -- [2]
+		}, -- [921]
+		{
+			"Texture filtering mode updated. Pending GxRestart", -- [1]
+			0, -- [2]
+		}, -- [922]
+		{
+			"Terrain mip level changed to 0.", -- [1]
+			0, -- [2]
+		}, -- [923]
+		{
+			"Outline mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [924]
+		{
+			"LightBuffer mode changed to 2", -- [1]
+			0, -- [2]
+		}, -- [925]
+		{
+			"Physics interaction level changed to 2", -- [1]
+			0, -- [2]
+		}, -- [926]
+		{
+			"Render scale changed to 1", -- [1]
+			0, -- [2]
+		}, -- [927]
+		{
+			"Resample quality changed to 0", -- [1]
+			0, -- [2]
+		}, -- [928]
+		{
+			"MSAA disabled", -- [1]
+			0, -- [2]
+		}, -- [929]
+		{
+			"MSAA for alpha-test disabled.", -- [1]
+			0, -- [2]
+		}, -- [930]
+		{
+			"Component texture lod changed to 0", -- [1]
+			0, -- [2]
+		}, -- [931]
+		{
+			"Component texture lod changed to 0", -- [1]
+			0, -- [2]
+		}, -- [932]
+		{
+			"World preload object sort enabled.", -- [1]
+			0, -- [2]
+		}, -- [933]
+		{
+			"World load object sort enabled.", -- [1]
+			0, -- [2]
+		}, -- [934]
+		{
+			"World preload non critical enabled.", -- [1]
+			0, -- [2]
+		}, -- [935]
+		{
+			"World preload high res textures enabled.", -- [1]
+			0, -- [2]
+		}, -- [936]
+		{
+			"FFX: Anti Aliasing Mode disabled", -- [1]
+			0, -- [2]
+		}, -- [937]
+		{
+			"FFX: Color Blind Test Mode Disabled", -- [1]
+			0, -- [2]
+		}, -- [938]
+		{
+			"Full memory crash dump disabled", -- [1]
+			0, -- [2]
+		}, -- [939]
+		{
+			"Error display disabled", -- [1]
+			0, -- [2]
+		}, -- [940]
+		{
+			"Error display shown", -- [1]
+			0, -- [2]
+		}, -- [941]
+		{
+			"Displaying errors through fatal errors", -- [1]
+			0, -- [2]
+		}, -- [942]
+		{
+			"Displaying errors through fatal errors", -- [1]
+			0, -- [2]
+		}, -- [943]
+		{
+			"Now filtering: all messages", -- [1]
+			0, -- [2]
+		}, -- [944]
+		{
+			"CVar 'Sound_AmbienceHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [945]
+		{
+			"CVar 'Sound_AllyPlayerHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [946]
+		{
+			"CVar 'Sound_EnemyPlayerHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [947]
+		{
+			"CVar 'Sound_NPCHighpassDSPCutoff' failed validation for its initial value.", -- [1]
+			0, -- [2]
+		}, -- [948]
+		{
+			"[GlueLogin] Starting loginlauncherPortal=\"us.actual.battle.net\" loginPortal=\"us.actual.battle.net:1119\"", -- [1]
+			0, -- [2]
+		}, -- [949]
+		{
+			"[GlueLogin] Resetting", -- [1]
+			0, -- [2]
+		}, -- [950]
+		{
+			"[IBN_Login] Initializing", -- [1]
+			0, -- [2]
+		}, -- [951]
+		{
+			"[IBN_Login] Attempting logonhost=\"us.actual.battle.net\" port=\"1119\"", -- [1]
+			0, -- [2]
+		}, -- [952]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [953]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [954]
+		{
+			"[GlueLogin] Waiting for server response.", -- [1]
+			0, -- [2]
+		}, -- [955]
+		{
+			"[GlueLogin] Logon complete.", -- [1]
+			0, -- [2]
+		}, -- [956]
+		{
+			"[GlueLogin] Waiting for realm list.", -- [1]
+			0, -- [2]
+		}, -- [957]
+		{
+			"[IBN_Login] Requesting realm list ticket", -- [1]
+			0, -- [2]
+		}, -- [958]
+		{
+			"[IBN_Login] Received realm list ticketcode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [959]
+		{
+			"[GlueLogin] Waiting for realm list.", -- [1]
+			0, -- [2]
+		}, -- [960]
+		{
+			"[IBN_Login] Received sub region listcode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [961]
+		{
+			"[IBN_Login] Requesting last played charsnumSubRegions=\"4\"", -- [1]
+			0, -- [2]
+		}, -- [962]
+		{
+			"[GlueLogin] Realm list ready.", -- [1]
+			0, -- [2]
+		}, -- [963]
+		{
+			"[IBN_Login] Joining realmsubRegion=\"1-101-89\" realmAddress=\"1-4-7\"", -- [1]
+			0, -- [2]
+		}, -- [964]
+		{
+			"[IBN_Login] OnRealmJoincode=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [965]
+		{
+			"NetClient::HandleConnect()\n", -- [1]
+			0, -- [2]
+		}, -- [966]
+		{
+			"[GlueLogin] Received AuthedToWoWresult=\"ERROR_OK (0)\"", -- [1]
+			0, -- [2]
+		}, -- [967]
+		{
+			"Got new connection 2", -- [1]
+			0, -- [2]
+		}, -- [968]
+		{
+			"[IBN_Login] Front disconnectingconnectionId=\"1\"", -- [1]
+			0, -- [2]
+		}, -- [969]
+		{
+			"[GlueLogin] Disconnecting from authentication server.", -- [1]
+			0, -- [2]
+		}, -- [970]
+		{
+			"[IBN_BackInterface] Session with Battle.net established.", -- [1]
+			0, -- [2]
+		}, -- [971]
+		{
+			"[IBN_Login] Front disconnectedconnectionId=\"1\" result=\"( code=\"ERROR_NETWORK_MODULE_SOCKET_CLOSED (1016)\" localizedMessage=\"\" debugMessage=\"\")\"", -- [1]
+			0, -- [2]
+		}, -- [972]
+		{
+			"[GlueLogin] Disconnected from authentication server.", -- [1]
+			0, -- [2]
+		}, -- [973]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [974]
+		{
+			"Game table failed consistency check: ChallengeModeHealth. rows: 50, expectedRows: 51, columns: 1, expectedColumns: 1\n", -- [1]
+			3, -- [2]
+		}, -- [975]
+		{
+			"Game table failed consistency check: ChallengeModeDamage. rows: 50, expectedRows: 51, columns: 1, expectedColumns: 1\n", -- [1]
+			3, -- [2]
+		}, -- [976]
+		{
+			"Got new connection 3", -- [1]
+			0, -- [2]
+		}, -- [977]
+		{
+			"Proficiency in item class 2 set to 0x0000000080", -- [1]
+			0, -- [2]
+		}, -- [978]
+		{
+			"Proficiency in item class 2 set to 0x0000000081", -- [1]
+			0, -- [2]
+		}, -- [979]
+		{
+			"Proficiency in item class 2 set to 0x0000000091", -- [1]
+			0, -- [2]
+		}, -- [980]
+		{
+			"Proficiency in item class 2 set to 0x0000000491", -- [1]
+			0, -- [2]
+		}, -- [981]
+		{
+			"Proficiency in item class 4 set to 0x0000000021", -- [1]
+			0, -- [2]
+		}, -- [982]
+		{
+			"Proficiency in item class 2 set to 0x0000004491", -- [1]
+			0, -- [2]
+		}, -- [983]
+		{
+			"Proficiency in item class 2 set to 0x00000044d1", -- [1]
+			0, -- [2]
+		}, -- [984]
+		{
+			"Proficiency in item class 2 set to 0x00001044d1", -- [1]
+			0, -- [2]
+		}, -- [985]
+		{
+			"Proficiency in item class 4 set to 0x0000000025", -- [1]
+			0, -- [2]
+		}, -- [986]
+		{
+			"Proficiency in item class 4 set to 0x0000000027", -- [1]
+			0, -- [2]
+		}, -- [987]
+		{
+			"Proficiency in item class 2 set to 0x00001064d1", -- [1]
+			0, -- [2]
+		}, -- [988]
+		{
+			"Proficiency in item class 2 set to 0x00001064d1", -- [1]
+			0, -- [2]
+		}, -- [989]
+		{
+			"Proficiency in item class 4 set to 0x0000000027", -- [1]
+			0, -- [2]
+		}, -- [990]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [991]
+		{
+			"Time set to 12/18/2018 (Tue) 22:04", -- [1]
+			0, -- [2]
+		}, -- [992]
+		{
+			"Gamespeed set from 0.017 to 0.017", -- [1]
+			0, -- [2]
+		}, -- [993]
+		{
+			"Time played:", -- [1]
+			0, -- [2]
+		}, -- [994]
+		{
+			"Total: 119d 13h 22m 28s", -- [1]
+			0, -- [2]
+		}, -- [995]
+		{
+			"Level: 5d 19h 37m 59s", -- [1]
+			0, -- [2]
+		}, -- [996]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [997]
+		{
+			"Got new connection 3", -- [1]
+			0, -- [2]
+		}, -- [998]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [999]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [1000]
+		{
+			"-------------------------------------------------- Previous Session --------------------------------------------------", -- [1]
+			0, -- [2]
+		}, -- [1001]
+		{
+			"Attempted to register existing command: ShowObjUsage\n", -- [1]
+			0, -- [2]
+		}, -- [1002]
+		{
+			"Attempted to register existing command: SetDifficulty\n", -- [1]
+			0, -- [2]
+		}, -- [1003]
+		{
+			"Failed to set SpellClutter callback on graphicsQuality CVar - using default of 30.0", -- [1]
+			0, -- [2]
+		}, -- [1004]
+		{
+			"Failed to set SpellClutter callback on RAIDgraphicsQuality CVar - using default of 30.0", -- [1]
+			0, -- [2]
+		}, -- [1005]
+		{
+			"Got new connection 3", -- [1]
+			0, -- [2]
+		}, -- [1006]
+		{
+			"Proficiency in item class 2 set to 0x0000000080", -- [1]
+			0, -- [2]
+		}, -- [1007]
+		{
+			"Proficiency in item class 2 set to 0x0000000081", -- [1]
+			0, -- [2]
+		}, -- [1008]
+		{
+			"Proficiency in item class 2 set to 0x0000000091", -- [1]
+			0, -- [2]
+		}, -- [1009]
+		{
+			"Proficiency in item class 2 set to 0x0000000491", -- [1]
+			0, -- [2]
+		}, -- [1010]
+		{
+			"Proficiency in item class 4 set to 0x0000000021", -- [1]
+			0, -- [2]
+		}, -- [1011]
+		{
+			"Proficiency in item class 2 set to 0x0000004491", -- [1]
+			0, -- [2]
+		}, -- [1012]
+		{
+			"Proficiency in item class 2 set to 0x00000044d1", -- [1]
+			0, -- [2]
+		}, -- [1013]
+		{
+			"Proficiency in item class 2 set to 0x00001044d1", -- [1]
+			0, -- [2]
+		}, -- [1014]
+		{
+			"Proficiency in item class 4 set to 0x0000000025", -- [1]
+			0, -- [2]
+		}, -- [1015]
+		{
+			"Proficiency in item class 4 set to 0x0000000027", -- [1]
+			0, -- [2]
+		}, -- [1016]
+		{
+			"Proficiency in item class 2 set to 0x00001064d1", -- [1]
+			0, -- [2]
+		}, -- [1017]
+		{
+			"Proficiency in item class 2 set to 0x00001064d1", -- [1]
+			0, -- [2]
+		}, -- [1018]
+		{
+			"Proficiency in item class 4 set to 0x0000000027", -- [1]
+			0, -- [2]
+		}, -- [1019]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [1020]
+		{
+			"Time set to 12/18/2018 (Tue) 23:02", -- [1]
+			0, -- [2]
+		}, -- [1021]
+		{
+			"Gamespeed set from 0.017 to 0.017", -- [1]
+			0, -- [2]
+		}, -- [1022]
+		{
+			"Time played:", -- [1]
+			0, -- [2]
+		}, -- [1023]
+		{
+			"Total: 119d 14h 16m 43s", -- [1]
+			0, -- [2]
+		}, -- [1024]
+		{
+			"Level: 5d 20h 32m 14s", -- [1]
+			0, -- [2]
+		}, -- [1025]
+		{
+			"World transfer pending...", -- [1]
+			0, -- [2]
+		}, -- [1026]
+		{
+			"Got new connection 3", -- [1]
+			0, -- [2]
+		}, -- [1027]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [1028]
+		{
+			"World transfer pending...", -- [1]
+			0, -- [2]
+		}, -- [1029]
+		{
+			"Got new connection 3", -- [1]
+			0, -- [2]
+		}, -- [1030]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [1031]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [1032]
+		{
+			"Skill 755 increased from 300 to 0", -- [1]
+			0, -- [2]
+		}, -- [1033]
+		{
+			"Skill 2518 increased from 57 to 0", -- [1]
+			0, -- [2]
+		}, -- [1034]
+		{
+			"Skill 2519 increased from 100 to 0", -- [1]
+			0, -- [2]
+		}, -- [1035]
+		{
+			"Skill 2520 increased from 75 to 0", -- [1]
+			0, -- [2]
+		}, -- [1036]
+		{
+			"Skill 2521 increased from 75 to 0", -- [1]
+			0, -- [2]
+		}, -- [1037]
+		{
+			"Skill 2522 increased from 75 to 0", -- [1]
+			0, -- [2]
+		}, -- [1038]
+		{
+			"Skill 2523 increased from 75 to 0", -- [1]
+			0, -- [2]
+		}, -- [1039]
+		{
+			"Skill 2524 increased from 300 to 0", -- [1]
+			0, -- [2]
+		}, -- [1040]
+		{
+			"Skill 171 increased from 0 to 1", -- [1]
+			0, -- [2]
+		}, -- [1041]
+		{
+			"Skill 2485 increased from 0 to 1", -- [1]
+			0, -- [2]
+		}, -- [1042]
+		{
+			"Skill 2479 increased from 0 to 1", -- [1]
+			0, -- [2]
+		}, -- [1043]
+		{
+			"World transfer pending...", -- [1]
+			0, -- [2]
+		}, -- [1044]
+		{
+			"Got new connection 3", -- [1]
+			0, -- [2]
+		}, -- [1045]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [1046]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [1047]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [1048]
+		{
+			"Skill 2499 increased from 0 to 1", -- [1]
+			0, -- [2]
+		}, -- [1049]
+		{
+			"Trainer service 286647 unavailable", -- [1]
+			0, -- [2]
+		}, -- [1050]
+		{
+			"Skill 2478 increased from 0 to 1", -- [1]
+			0, -- [2]
+		}, -- [1051]
+		{
+			"Trainer service 252388 unavailable", -- [1]
+			0, -- [2]
+		}, -- [1052]
+		{
+			"Skill 171 increased from 1 to 2", -- [1]
+			0, -- [2]
+		}, -- [1053]
+		{
+			"Skill 2478 increased from 1 to 2", -- [1]
+			0, -- [2]
+		}, -- [1054]
+		{
+			"Skill 171 increased from 2 to 3", -- [1]
+			0, -- [2]
+		}, -- [1055]
+		{
+			"Skill 2478 increased from 2 to 3", -- [1]
+			0, -- [2]
+		}, -- [1056]
+		{
+			"Skill 171 increased from 3 to 4", -- [1]
+			0, -- [2]
+		}, -- [1057]
+		{
+			"Skill 2478 increased from 3 to 4", -- [1]
+			0, -- [2]
+		}, -- [1058]
+		{
+			"Skill 171 increased from 4 to 5", -- [1]
+			0, -- [2]
+		}, -- [1059]
+		{
+			"Skill 2478 increased from 4 to 5", -- [1]
+			0, -- [2]
+		}, -- [1060]
+		{
+			"Skill 171 increased from 5 to 6", -- [1]
+			0, -- [2]
+		}, -- [1061]
+		{
+			"Skill 2478 increased from 5 to 6", -- [1]
+			0, -- [2]
+		}, -- [1062]
+		{
+			"Skill 171 increased from 6 to 7", -- [1]
+			0, -- [2]
+		}, -- [1063]
+		{
+			"Skill 2478 increased from 6 to 7", -- [1]
+			0, -- [2]
+		}, -- [1064]
+		{
+			"Skill 171 increased from 7 to 8", -- [1]
+			0, -- [2]
+		}, -- [1065]
+		{
+			"Skill 2478 increased from 7 to 8", -- [1]
+			0, -- [2]
+		}, -- [1066]
+		{
+			"Skill 171 increased from 8 to 9", -- [1]
+			0, -- [2]
+		}, -- [1067]
+		{
+			"Skill 2478 increased from 8 to 9", -- [1]
+			0, -- [2]
+		}, -- [1068]
+		{
+			"Skill 171 increased from 9 to 10", -- [1]
+			0, -- [2]
+		}, -- [1069]
+		{
+			"Skill 2478 increased from 9 to 10", -- [1]
+			0, -- [2]
+		}, -- [1070]
+		{
+			"Skill 171 increased from 10 to 11", -- [1]
+			0, -- [2]
+		}, -- [1071]
+		{
+			"Skill 2478 increased from 10 to 11", -- [1]
+			0, -- [2]
+		}, -- [1072]
+		{
+			"Skill 171 increased from 11 to 12", -- [1]
+			0, -- [2]
+		}, -- [1073]
+		{
+			"Skill 2478 increased from 11 to 12", -- [1]
+			0, -- [2]
+		}, -- [1074]
+		{
+			"Skill 171 increased from 12 to 13", -- [1]
+			0, -- [2]
+		}, -- [1075]
+		{
+			"Skill 2478 increased from 12 to 13", -- [1]
+			0, -- [2]
+		}, -- [1076]
+		{
+			"Skill 171 increased from 13 to 14", -- [1]
+			0, -- [2]
+		}, -- [1077]
+		{
+			"Skill 2478 increased from 13 to 14", -- [1]
+			0, -- [2]
+		}, -- [1078]
+		{
+			"Skill 171 increased from 14 to 15", -- [1]
+			0, -- [2]
+		}, -- [1079]
+		{
+			"Skill 2478 increased from 14 to 15", -- [1]
+			0, -- [2]
+		}, -- [1080]
+		{
+			"Skill 171 increased from 15 to 16", -- [1]
+			0, -- [2]
+		}, -- [1081]
+		{
+			"Skill 2478 increased from 15 to 16", -- [1]
+			0, -- [2]
+		}, -- [1082]
+		{
+			"Skill 171 increased from 16 to 17", -- [1]
+			0, -- [2]
+		}, -- [1083]
+		{
+			"Skill 2478 increased from 16 to 17", -- [1]
+			0, -- [2]
+		}, -- [1084]
+		{
+			"Skill 171 increased from 17 to 18", -- [1]
+			0, -- [2]
+		}, -- [1085]
+		{
+			"Skill 2478 increased from 17 to 18", -- [1]
+			0, -- [2]
+		}, -- [1086]
+		{
+			"Skill 171 increased from 18 to 19", -- [1]
+			0, -- [2]
+		}, -- [1087]
+		{
+			"Skill 2478 increased from 18 to 19", -- [1]
+			0, -- [2]
+		}, -- [1088]
+		{
+			"Skill 171 increased from 19 to 20", -- [1]
+			0, -- [2]
+		}, -- [1089]
+		{
+			"Skill 2478 increased from 19 to 20", -- [1]
+			0, -- [2]
+		}, -- [1090]
+		{
+			"Skill 171 increased from 20 to 21", -- [1]
+			0, -- [2]
+		}, -- [1091]
+		{
+			"Skill 2478 increased from 20 to 21", -- [1]
+			0, -- [2]
+		}, -- [1092]
+		{
+			"Skill 171 increased from 21 to 22", -- [1]
+			0, -- [2]
+		}, -- [1093]
+		{
+			"Skill 2478 increased from 21 to 22", -- [1]
+			0, -- [2]
+		}, -- [1094]
+		{
+			"Skill 171 increased from 22 to 23", -- [1]
+			0, -- [2]
+		}, -- [1095]
+		{
+			"Skill 2478 increased from 22 to 23", -- [1]
+			0, -- [2]
+		}, -- [1096]
+		{
+			"Skill 171 increased from 23 to 24", -- [1]
+			0, -- [2]
+		}, -- [1097]
+		{
+			"Skill 2478 increased from 23 to 24", -- [1]
+			0, -- [2]
+		}, -- [1098]
+		{
+			"Skill 171 increased from 24 to 25", -- [1]
+			0, -- [2]
+		}, -- [1099]
+		{
+			"Skill 2478 increased from 24 to 25", -- [1]
+			0, -- [2]
+		}, -- [1100]
+		{
+			"Skill 171 increased from 25 to 26", -- [1]
+			0, -- [2]
+		}, -- [1101]
+		{
+			"Skill 2478 increased from 25 to 26", -- [1]
+			0, -- [2]
+		}, -- [1102]
+		{
+			"Skill 171 increased from 26 to 27", -- [1]
+			0, -- [2]
+		}, -- [1103]
+		{
+			"Skill 2478 increased from 26 to 27", -- [1]
+			0, -- [2]
+		}, -- [1104]
+		{
+			"Skill 171 increased from 27 to 28", -- [1]
+			0, -- [2]
+		}, -- [1105]
+		{
+			"Skill 2478 increased from 27 to 28", -- [1]
+			0, -- [2]
+		}, -- [1106]
+		{
+			"Skill 171 increased from 28 to 29", -- [1]
+			0, -- [2]
+		}, -- [1107]
+		{
+			"Skill 2478 increased from 28 to 29", -- [1]
+			0, -- [2]
+		}, -- [1108]
+		{
+			"Skill 171 increased from 29 to 30", -- [1]
+			0, -- [2]
+		}, -- [1109]
+		{
+			"Skill 2478 increased from 29 to 30", -- [1]
+			0, -- [2]
+		}, -- [1110]
+		{
+			"Skill 171 increased from 30 to 31", -- [1]
+			0, -- [2]
+		}, -- [1111]
+		{
+			"Skill 2478 increased from 30 to 31", -- [1]
+			0, -- [2]
+		}, -- [1112]
+		{
+			"Skill 171 increased from 31 to 32", -- [1]
+			0, -- [2]
+		}, -- [1113]
+		{
+			"Skill 2478 increased from 31 to 32", -- [1]
+			0, -- [2]
+		}, -- [1114]
+		{
+			"Skill 171 increased from 32 to 33", -- [1]
+			0, -- [2]
+		}, -- [1115]
+		{
+			"Skill 2478 increased from 32 to 33", -- [1]
+			0, -- [2]
+		}, -- [1116]
+		{
+			"Skill 171 increased from 33 to 34", -- [1]
+			0, -- [2]
+		}, -- [1117]
+		{
+			"Skill 2478 increased from 33 to 34", -- [1]
+			0, -- [2]
+		}, -- [1118]
+		{
+			"Skill 171 increased from 34 to 35", -- [1]
+			0, -- [2]
+		}, -- [1119]
+		{
+			"Skill 2478 increased from 34 to 35", -- [1]
+			0, -- [2]
+		}, -- [1120]
+		{
+			"Skill 171 increased from 35 to 36", -- [1]
+			0, -- [2]
+		}, -- [1121]
+		{
+			"Skill 2478 increased from 35 to 36", -- [1]
+			0, -- [2]
+		}, -- [1122]
+		{
+			"Skill 171 increased from 36 to 37", -- [1]
+			0, -- [2]
+		}, -- [1123]
+		{
+			"Skill 2478 increased from 36 to 37", -- [1]
+			0, -- [2]
+		}, -- [1124]
+		{
+			"Trainer service 252391 unavailable", -- [1]
+			0, -- [2]
+		}, -- [1125]
+		{
+			"Skill 171 increased from 37 to 38", -- [1]
+			0, -- [2]
+		}, -- [1126]
+		{
+			"Skill 2478 increased from 37 to 38", -- [1]
+			0, -- [2]
+		}, -- [1127]
+		{
+			"Skill 171 increased from 38 to 39", -- [1]
+			0, -- [2]
+		}, -- [1128]
+		{
+			"Skill 2478 increased from 38 to 39", -- [1]
+			0, -- [2]
+		}, -- [1129]
+		{
+			"Skill 171 increased from 39 to 40", -- [1]
+			0, -- [2]
+		}, -- [1130]
+		{
+			"Skill 2478 increased from 39 to 40", -- [1]
+			0, -- [2]
+		}, -- [1131]
+		{
+			"Trainer service 252341 unavailable", -- [1]
+			0, -- [2]
+		}, -- [1132]
+		{
+			"Trainer service 252337 unavailable", -- [1]
+			0, -- [2]
+		}, -- [1133]
+		{
+			"Skill 171 increased from 40 to 41", -- [1]
+			0, -- [2]
+		}, -- [1134]
+		{
+			"Skill 2478 increased from 40 to 41", -- [1]
+			0, -- [2]
+		}, -- [1135]
+		{
+			"Skill 171 increased from 41 to 42", -- [1]
+			0, -- [2]
+		}, -- [1136]
+		{
+			"Skill 2478 increased from 41 to 42", -- [1]
+			0, -- [2]
+		}, -- [1137]
+		{
+			"Skill 171 increased from 42 to 43", -- [1]
+			0, -- [2]
+		}, -- [1138]
+		{
+			"Skill 2478 increased from 42 to 43", -- [1]
+			0, -- [2]
+		}, -- [1139]
+		{
+			"Skill 171 increased from 43 to 44", -- [1]
+			0, -- [2]
+		}, -- [1140]
+		{
+			"Skill 2478 increased from 43 to 44", -- [1]
+			0, -- [2]
+		}, -- [1141]
+		{
+			"Skill 171 increased from 44 to 45", -- [1]
+			0, -- [2]
+		}, -- [1142]
+		{
+			"Skill 2478 increased from 44 to 45", -- [1]
+			0, -- [2]
+		}, -- [1143]
+		{
+			"Skill 171 increased from 45 to 46", -- [1]
+			0, -- [2]
+		}, -- [1144]
+		{
+			"Skill 2478 increased from 45 to 46", -- [1]
+			0, -- [2]
+		}, -- [1145]
+		{
+			"Skill 171 increased from 46 to 47", -- [1]
+			0, -- [2]
+		}, -- [1146]
+		{
+			"Skill 2478 increased from 46 to 47", -- [1]
+			0, -- [2]
+		}, -- [1147]
+		{
+			"Skill 171 increased from 47 to 48", -- [1]
+			0, -- [2]
+		}, -- [1148]
+		{
+			"Skill 2478 increased from 47 to 48", -- [1]
+			0, -- [2]
+		}, -- [1149]
+		{
+			"Skill 171 increased from 48 to 49", -- [1]
+			0, -- [2]
+		}, -- [1150]
+		{
+			"Skill 2478 increased from 48 to 49", -- [1]
+			0, -- [2]
+		}, -- [1151]
+		{
+			"Skill 171 increased from 49 to 50", -- [1]
+			0, -- [2]
+		}, -- [1152]
+		{
+			"Skill 2478 increased from 49 to 50", -- [1]
+			0, -- [2]
+		}, -- [1153]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [1154]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [1155]
+		{
+			"Got new connection 3", -- [1]
+			0, -- [2]
+		}, -- [1156]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [1157]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [1158]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [1159]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [1160]
+		{
+			"Got new connection 3", -- [1]
+			0, -- [2]
+		}, -- [1161]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [1162]
+		{
+			"Skill 171 increased from 50 to 51", -- [1]
+			0, -- [2]
+		}, -- [1163]
+		{
+			"Skill 2478 increased from 50 to 51", -- [1]
+			0, -- [2]
+		}, -- [1164]
+		{
+			"Skill 171 increased from 51 to 52", -- [1]
+			0, -- [2]
+		}, -- [1165]
+		{
+			"Skill 2478 increased from 51 to 52", -- [1]
+			0, -- [2]
+		}, -- [1166]
+		{
+			"Skill 171 increased from 52 to 53", -- [1]
+			0, -- [2]
+		}, -- [1167]
+		{
+			"Skill 2478 increased from 52 to 53", -- [1]
+			0, -- [2]
+		}, -- [1168]
+		{
+			"Skill 171 increased from 53 to 54", -- [1]
+			0, -- [2]
+		}, -- [1169]
+		{
+			"Skill 2478 increased from 53 to 54", -- [1]
+			0, -- [2]
+		}, -- [1170]
+		{
+			"Skill 171 increased from 54 to 55", -- [1]
+			0, -- [2]
+		}, -- [1171]
+		{
+			"Skill 2478 increased from 54 to 55", -- [1]
+			0, -- [2]
+		}, -- [1172]
+		{
+			"Skill 171 increased from 55 to 56", -- [1]
+			0, -- [2]
+		}, -- [1173]
+		{
+			"Skill 2478 increased from 55 to 56", -- [1]
+			0, -- [2]
+		}, -- [1174]
+		{
+			"Skill 171 increased from 56 to 57", -- [1]
+			0, -- [2]
+		}, -- [1175]
+		{
+			"Skill 2478 increased from 56 to 57", -- [1]
+			0, -- [2]
+		}, -- [1176]
+		{
+			"Skill 171 increased from 57 to 58", -- [1]
+			0, -- [2]
+		}, -- [1177]
+		{
+			"Skill 2478 increased from 57 to 58", -- [1]
+			0, -- [2]
+		}, -- [1178]
+		{
+			"Skill 171 increased from 58 to 59", -- [1]
+			0, -- [2]
+		}, -- [1179]
+		{
+			"Skill 2478 increased from 58 to 59", -- [1]
+			0, -- [2]
+		}, -- [1180]
+		{
+			"Skill 171 increased from 59 to 60", -- [1]
+			0, -- [2]
+		}, -- [1181]
+		{
+			"Skill 2478 increased from 59 to 60", -- [1]
+			0, -- [2]
+		}, -- [1182]
+		{
+			"Skill 171 increased from 60 to 61", -- [1]
+			0, -- [2]
+		}, -- [1183]
+		{
+			"Skill 2478 increased from 60 to 61", -- [1]
+			0, -- [2]
+		}, -- [1184]
+		{
+			"Skill 171 increased from 61 to 62", -- [1]
+			0, -- [2]
+		}, -- [1185]
+		{
+			"Skill 2478 increased from 61 to 62", -- [1]
+			0, -- [2]
+		}, -- [1186]
+		{
+			"Skill 171 increased from 62 to 63", -- [1]
+			0, -- [2]
+		}, -- [1187]
+		{
+			"Skill 2478 increased from 62 to 63", -- [1]
+			0, -- [2]
+		}, -- [1188]
+		{
+			"Skill 171 increased from 63 to 64", -- [1]
+			0, -- [2]
+		}, -- [1189]
+		{
+			"Skill 2478 increased from 63 to 64", -- [1]
+			0, -- [2]
+		}, -- [1190]
+		{
+			"Skill 171 increased from 64 to 65", -- [1]
+			0, -- [2]
+		}, -- [1191]
+		{
+			"Skill 2478 increased from 64 to 65", -- [1]
+			0, -- [2]
+		}, -- [1192]
+		{
+			"Skill 171 increased from 65 to 66", -- [1]
+			0, -- [2]
+		}, -- [1193]
+		{
+			"Skill 2478 increased from 65 to 66", -- [1]
+			0, -- [2]
+		}, -- [1194]
+		{
+			"Skill 171 increased from 66 to 67", -- [1]
+			0, -- [2]
+		}, -- [1195]
+		{
+			"Skill 2478 increased from 66 to 67", -- [1]
+			0, -- [2]
+		}, -- [1196]
+		{
+			"Skill 171 increased from 67 to 68", -- [1]
+			0, -- [2]
+		}, -- [1197]
+		{
+			"Skill 2478 increased from 67 to 68", -- [1]
+			0, -- [2]
+		}, -- [1198]
+		{
+			"Skill 171 increased from 68 to 69", -- [1]
+			0, -- [2]
+		}, -- [1199]
+		{
+			"Skill 2478 increased from 68 to 69", -- [1]
+			0, -- [2]
+		}, -- [1200]
+		{
+			"Skill 171 increased from 69 to 70", -- [1]
+			0, -- [2]
+		}, -- [1201]
+		{
+			"Skill 2478 increased from 69 to 70", -- [1]
+			0, -- [2]
+		}, -- [1202]
+		{
+			"Skill 171 increased from 70 to 71", -- [1]
+			0, -- [2]
+		}, -- [1203]
+		{
+			"Skill 2478 increased from 70 to 71", -- [1]
+			0, -- [2]
+		}, -- [1204]
+		{
+			"Skill 171 increased from 71 to 72", -- [1]
+			0, -- [2]
+		}, -- [1205]
+		{
+			"Skill 2478 increased from 71 to 72", -- [1]
+			0, -- [2]
+		}, -- [1206]
+		{
+			"Skill 171 increased from 72 to 73", -- [1]
+			0, -- [2]
+		}, -- [1207]
+		{
+			"Skill 2478 increased from 72 to 73", -- [1]
+			0, -- [2]
+		}, -- [1208]
+		{
+			"Skill 171 increased from 73 to 74", -- [1]
+			0, -- [2]
+		}, -- [1209]
+		{
+			"Skill 2478 increased from 73 to 74", -- [1]
+			0, -- [2]
+		}, -- [1210]
+		{
+			"Skill 171 increased from 74 to 75", -- [1]
+			0, -- [2]
+		}, -- [1211]
+		{
+			"Skill 2478 increased from 74 to 75", -- [1]
+			0, -- [2]
+		}, -- [1212]
+		{
+			"World transfer pending...", -- [1]
+			0, -- [2]
+		}, -- [1213]
+		{
+			"Got new connection 3", -- [1]
+			0, -- [2]
+		}, -- [1214]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [1215]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [1216]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [1217]
+		{
+			"Trainer service 251305 unavailable", -- [1]
+			0, -- [2]
+		}, -- [1218]
+		{
+			"Trainer service 251311 unavailable", -- [1]
+			0, -- [2]
+		}, -- [1219]
+		{
+			"Trainer service 252392 unavailable", -- [1]
+			0, -- [2]
+		}, -- [1220]
+		{
+			"Trainer service 252342 unavailable", -- [1]
+			0, -- [2]
+		}, -- [1221]
+		{
+			"Trainer service 252369 unavailable", -- [1]
+			0, -- [2]
+		}, -- [1222]
+		{
+			"Skill 171 increased from 75 to 76", -- [1]
+			0, -- [2]
+		}, -- [1223]
+		{
+			"Skill 2478 increased from 75 to 76", -- [1]
+			0, -- [2]
+		}, -- [1224]
+		{
+			"Skill 171 increased from 76 to 77", -- [1]
+			0, -- [2]
+		}, -- [1225]
+		{
+			"Skill 2478 increased from 76 to 77", -- [1]
+			0, -- [2]
+		}, -- [1226]
+		{
+			"Skill 171 increased from 77 to 78", -- [1]
+			0, -- [2]
+		}, -- [1227]
+		{
+			"Skill 2478 increased from 77 to 78", -- [1]
+			0, -- [2]
+		}, -- [1228]
+		{
+			"Skill 171 increased from 78 to 79", -- [1]
+			0, -- [2]
+		}, -- [1229]
+		{
+			"Skill 2478 increased from 78 to 79", -- [1]
+			0, -- [2]
+		}, -- [1230]
+		{
+			"Skill 171 increased from 79 to 80", -- [1]
+			0, -- [2]
+		}, -- [1231]
+		{
+			"Skill 2478 increased from 79 to 80", -- [1]
+			0, -- [2]
+		}, -- [1232]
+		{
+			"Skill 171 increased from 80 to 81", -- [1]
+			0, -- [2]
+		}, -- [1233]
+		{
+			"Skill 2478 increased from 80 to 81", -- [1]
+			0, -- [2]
+		}, -- [1234]
+		{
+			"Skill 171 increased from 81 to 82", -- [1]
+			0, -- [2]
+		}, -- [1235]
+		{
+			"Skill 2478 increased from 81 to 82", -- [1]
+			0, -- [2]
+		}, -- [1236]
+		{
+			"Skill 171 increased from 82 to 83", -- [1]
+			0, -- [2]
+		}, -- [1237]
+		{
+			"Skill 2478 increased from 82 to 83", -- [1]
+			0, -- [2]
+		}, -- [1238]
+		{
+			"Skill 171 increased from 83 to 84", -- [1]
+			0, -- [2]
+		}, -- [1239]
+		{
+			"Skill 2478 increased from 83 to 84", -- [1]
+			0, -- [2]
+		}, -- [1240]
+		{
+			"Skill 171 increased from 84 to 85", -- [1]
+			0, -- [2]
+		}, -- [1241]
+		{
+			"Skill 2478 increased from 84 to 85", -- [1]
+			0, -- [2]
+		}, -- [1242]
+		{
+			"Skill 171 increased from 85 to 86", -- [1]
+			0, -- [2]
+		}, -- [1243]
+		{
+			"Skill 2478 increased from 85 to 86", -- [1]
+			0, -- [2]
+		}, -- [1244]
+		{
+			"Skill 171 increased from 86 to 87", -- [1]
+			0, -- [2]
+		}, -- [1245]
+		{
+			"Skill 2478 increased from 86 to 87", -- [1]
+			0, -- [2]
+		}, -- [1246]
+		{
+			"Skill 171 increased from 87 to 88", -- [1]
+			0, -- [2]
+		}, -- [1247]
+		{
+			"Skill 2478 increased from 87 to 88", -- [1]
+			0, -- [2]
+		}, -- [1248]
+		{
+			"Skill 171 increased from 88 to 89", -- [1]
+			0, -- [2]
+		}, -- [1249]
+		{
+			"Skill 2478 increased from 88 to 89", -- [1]
+			0, -- [2]
+		}, -- [1250]
+		{
+			"Skill 171 increased from 89 to 90", -- [1]
+			0, -- [2]
+		}, -- [1251]
+		{
+			"Skill 2478 increased from 89 to 90", -- [1]
+			0, -- [2]
+		}, -- [1252]
+		{
+			"Skill 171 increased from 90 to 91", -- [1]
+			0, -- [2]
+		}, -- [1253]
+		{
+			"Skill 2478 increased from 90 to 91", -- [1]
+			0, -- [2]
+		}, -- [1254]
+		{
+			"Skill 171 increased from 91 to 92", -- [1]
+			0, -- [2]
+		}, -- [1255]
+		{
+			"Skill 2478 increased from 91 to 92", -- [1]
+			0, -- [2]
+		}, -- [1256]
+		{
+			"Skill 171 increased from 92 to 93", -- [1]
+			0, -- [2]
+		}, -- [1257]
+		{
+			"Skill 2478 increased from 92 to 93", -- [1]
+			0, -- [2]
+		}, -- [1258]
+		{
+			"Skill 171 increased from 93 to 94", -- [1]
+			0, -- [2]
+		}, -- [1259]
+		{
+			"Skill 2478 increased from 93 to 94", -- [1]
+			0, -- [2]
+		}, -- [1260]
+		{
+			"Skill 171 increased from 94 to 95", -- [1]
+			0, -- [2]
+		}, -- [1261]
+		{
+			"Skill 2478 increased from 94 to 95", -- [1]
+			0, -- [2]
+		}, -- [1262]
+		{
+			"Skill 171 increased from 95 to 96", -- [1]
+			0, -- [2]
+		}, -- [1263]
+		{
+			"Skill 2478 increased from 95 to 96", -- [1]
+			0, -- [2]
+		}, -- [1264]
+		{
+			"Skill 171 increased from 96 to 97", -- [1]
+			0, -- [2]
+		}, -- [1265]
+		{
+			"Skill 2478 increased from 96 to 97", -- [1]
+			0, -- [2]
+		}, -- [1266]
+		{
+			"Skill 171 increased from 97 to 98", -- [1]
+			0, -- [2]
+		}, -- [1267]
+		{
+			"Skill 2478 increased from 97 to 98", -- [1]
+			0, -- [2]
+		}, -- [1268]
+		{
+			"Skill 171 increased from 98 to 99", -- [1]
+			0, -- [2]
+		}, -- [1269]
+		{
+			"Skill 2478 increased from 98 to 99", -- [1]
+			0, -- [2]
+		}, -- [1270]
+		{
+			"Skill 171 increased from 99 to 100", -- [1]
+			0, -- [2]
+		}, -- [1271]
+		{
+			"Skill 2478 increased from 99 to 100", -- [1]
+			0, -- [2]
+		}, -- [1272]
+		{
+			"Skill 171 increased from 100 to 101", -- [1]
+			0, -- [2]
+		}, -- [1273]
+		{
+			"Skill 2478 increased from 100 to 101", -- [1]
+			0, -- [2]
+		}, -- [1274]
+		{
+			"Skill 171 increased from 101 to 102", -- [1]
+			0, -- [2]
+		}, -- [1275]
+		{
+			"Skill 2478 increased from 101 to 102", -- [1]
+			0, -- [2]
+		}, -- [1276]
+		{
+			"Skill 171 increased from 102 to 103", -- [1]
+			0, -- [2]
+		}, -- [1277]
+		{
+			"Skill 2478 increased from 102 to 103", -- [1]
+			0, -- [2]
+		}, -- [1278]
+		{
+			"Skill 171 increased from 103 to 104", -- [1]
+			0, -- [2]
+		}, -- [1279]
+		{
+			"Skill 2478 increased from 103 to 104", -- [1]
+			0, -- [2]
+		}, -- [1280]
+		{
+			"Skill 171 increased from 104 to 105", -- [1]
+			0, -- [2]
+		}, -- [1281]
+		{
+			"Skill 2478 increased from 104 to 105", -- [1]
+			0, -- [2]
+		}, -- [1282]
+		{
+			"Skill 171 increased from 105 to 106", -- [1]
+			0, -- [2]
+		}, -- [1283]
+		{
+			"Skill 2478 increased from 105 to 106", -- [1]
+			0, -- [2]
+		}, -- [1284]
+		{
+			"Skill 171 increased from 106 to 107", -- [1]
+			0, -- [2]
+		}, -- [1285]
+		{
+			"Skill 2478 increased from 106 to 107", -- [1]
+			0, -- [2]
+		}, -- [1286]
+		{
+			"Skill 171 increased from 107 to 108", -- [1]
+			0, -- [2]
+		}, -- [1287]
+		{
+			"Skill 2478 increased from 107 to 108", -- [1]
+			0, -- [2]
+		}, -- [1288]
+		{
+			"Skill 171 increased from 108 to 109", -- [1]
+			0, -- [2]
+		}, -- [1289]
+		{
+			"Skill 2478 increased from 108 to 109", -- [1]
+			0, -- [2]
+		}, -- [1290]
+		{
+			"Skill 171 increased from 109 to 110", -- [1]
+			0, -- [2]
+		}, -- [1291]
+		{
+			"Skill 2478 increased from 109 to 110", -- [1]
+			0, -- [2]
+		}, -- [1292]
+		{
+			"Skill 171 increased from 110 to 111", -- [1]
+			0, -- [2]
+		}, -- [1293]
+		{
+			"Skill 2478 increased from 110 to 111", -- [1]
+			0, -- [2]
+		}, -- [1294]
+		{
+			"Skill 171 increased from 111 to 112", -- [1]
+			0, -- [2]
+		}, -- [1295]
+		{
+			"Skill 2478 increased from 111 to 112", -- [1]
+			0, -- [2]
+		}, -- [1296]
+		{
+			"Skill 171 increased from 112 to 113", -- [1]
+			0, -- [2]
+		}, -- [1297]
+		{
+			"Skill 2478 increased from 112 to 113", -- [1]
+			0, -- [2]
+		}, -- [1298]
+		{
+			"Skill 171 increased from 113 to 114", -- [1]
+			0, -- [2]
+		}, -- [1299]
+		{
+			"Skill 2478 increased from 113 to 114", -- [1]
+			0, -- [2]
+		}, -- [1300]
+		{
+			"Skill 171 increased from 114 to 115", -- [1]
+			0, -- [2]
+		}, -- [1301]
+		{
+			"Skill 2478 increased from 114 to 115", -- [1]
+			0, -- [2]
+		}, -- [1302]
+		{
+			"Trainer service 252376 unavailable", -- [1]
+			0, -- [2]
+		}, -- [1303]
+		{
+			"Trainer service 252379 unavailable", -- [1]
+			0, -- [2]
+		}, -- [1304]
+		{
+			"Trainer service 252351 unavailable", -- [1]
+			0, -- [2]
+		}, -- [1305]
+		{
+			"Trainer service 252354 unavailable", -- [1]
+			0, -- [2]
+		}, -- [1306]
+		{
+			"Skill 171 increased from 115 to 116", -- [1]
+			0, -- [2]
+		}, -- [1307]
+		{
+			"Skill 2478 increased from 115 to 116", -- [1]
+			0, -- [2]
+		}, -- [1308]
+		{
+			"Skill 171 increased from 116 to 117", -- [1]
+			0, -- [2]
+		}, -- [1309]
+		{
+			"Skill 2478 increased from 116 to 117", -- [1]
+			0, -- [2]
+		}, -- [1310]
+		{
+			"Skill 171 increased from 117 to 118", -- [1]
+			0, -- [2]
+		}, -- [1311]
+		{
+			"Skill 2478 increased from 117 to 118", -- [1]
+			0, -- [2]
+		}, -- [1312]
+		{
+			"Skill 171 increased from 118 to 119", -- [1]
+			0, -- [2]
+		}, -- [1313]
+		{
+			"Skill 2478 increased from 118 to 119", -- [1]
+			0, -- [2]
+		}, -- [1314]
+		{
+			"Skill 171 increased from 119 to 120", -- [1]
+			0, -- [2]
+		}, -- [1315]
+		{
+			"Skill 2478 increased from 119 to 120", -- [1]
+			0, -- [2]
+		}, -- [1316]
+		{
+			"Skill 171 increased from 120 to 121", -- [1]
+			0, -- [2]
+		}, -- [1317]
+		{
+			"Skill 2478 increased from 120 to 121", -- [1]
+			0, -- [2]
+		}, -- [1318]
+		{
+			"Skill 171 increased from 121 to 122", -- [1]
+			0, -- [2]
+		}, -- [1319]
+		{
+			"Skill 2478 increased from 121 to 122", -- [1]
+			0, -- [2]
+		}, -- [1320]
+		{
+			"Skill 171 increased from 122 to 123", -- [1]
+			0, -- [2]
+		}, -- [1321]
+		{
+			"Skill 2478 increased from 122 to 123", -- [1]
+			0, -- [2]
+		}, -- [1322]
+		{
+			"Skill 171 increased from 123 to 124", -- [1]
+			0, -- [2]
+		}, -- [1323]
+		{
+			"Skill 2478 increased from 123 to 124", -- [1]
+			0, -- [2]
+		}, -- [1324]
+		{
+			"Skill 171 increased from 124 to 125", -- [1]
+			0, -- [2]
+		}, -- [1325]
+		{
+			"Skill 2478 increased from 124 to 125", -- [1]
+			0, -- [2]
+		}, -- [1326]
+		{
+			"Skill 171 increased from 125 to 126", -- [1]
+			0, -- [2]
+		}, -- [1327]
+		{
+			"Skill 2478 increased from 125 to 126", -- [1]
+			0, -- [2]
+		}, -- [1328]
+		{
+			"Skill 171 increased from 126 to 127", -- [1]
+			0, -- [2]
+		}, -- [1329]
+		{
+			"Skill 2478 increased from 126 to 127", -- [1]
+			0, -- [2]
+		}, -- [1330]
+		{
+			"Skill 171 increased from 127 to 128", -- [1]
+			0, -- [2]
+		}, -- [1331]
+		{
+			"Skill 2478 increased from 127 to 128", -- [1]
+			0, -- [2]
+		}, -- [1332]
+		{
+			"Skill 171 increased from 128 to 129", -- [1]
+			0, -- [2]
+		}, -- [1333]
+		{
+			"Skill 2478 increased from 128 to 129", -- [1]
+			0, -- [2]
+		}, -- [1334]
+		{
+			"Skill 171 increased from 129 to 130", -- [1]
+			0, -- [2]
+		}, -- [1335]
+		{
+			"Skill 2478 increased from 129 to 130", -- [1]
+			0, -- [2]
+		}, -- [1336]
+		{
+			"Skill 171 increased from 130 to 131", -- [1]
+			0, -- [2]
+		}, -- [1337]
+		{
+			"Skill 2478 increased from 130 to 131", -- [1]
+			0, -- [2]
+		}, -- [1338]
+		{
+			"Skill 171 increased from 131 to 132", -- [1]
+			0, -- [2]
+		}, -- [1339]
+		{
+			"Skill 2478 increased from 131 to 132", -- [1]
+			0, -- [2]
+		}, -- [1340]
+		{
+			"Skill 171 increased from 132 to 133", -- [1]
+			0, -- [2]
+		}, -- [1341]
+		{
+			"Skill 2478 increased from 132 to 133", -- [1]
+			0, -- [2]
+		}, -- [1342]
+		{
+			"Skill 171 increased from 133 to 134", -- [1]
+			0, -- [2]
+		}, -- [1343]
+		{
+			"Skill 2478 increased from 133 to 134", -- [1]
+			0, -- [2]
+		}, -- [1344]
+		{
+			"Skill 171 increased from 134 to 135", -- [1]
+			0, -- [2]
+		}, -- [1345]
+		{
+			"Skill 2478 increased from 134 to 135", -- [1]
+			0, -- [2]
+		}, -- [1346]
+		{
+			"Skill 171 increased from 135 to 136", -- [1]
+			0, -- [2]
+		}, -- [1347]
+		{
+			"Skill 2478 increased from 135 to 136", -- [1]
+			0, -- [2]
+		}, -- [1348]
+		{
+			"Skill 171 increased from 136 to 137", -- [1]
+			0, -- [2]
+		}, -- [1349]
+		{
+			"Skill 2478 increased from 136 to 137", -- [1]
+			0, -- [2]
+		}, -- [1350]
+		{
+			"Skill 171 increased from 137 to 138", -- [1]
+			0, -- [2]
+		}, -- [1351]
+		{
+			"Skill 2478 increased from 137 to 138", -- [1]
+			0, -- [2]
+		}, -- [1352]
+		{
+			"Skill 171 increased from 138 to 139", -- [1]
+			0, -- [2]
+		}, -- [1353]
+		{
+			"Skill 2478 increased from 138 to 139", -- [1]
+			0, -- [2]
+		}, -- [1354]
+		{
+			"Skill 171 increased from 139 to 140", -- [1]
+			0, -- [2]
+		}, -- [1355]
+		{
+			"Skill 2478 increased from 139 to 140", -- [1]
+			0, -- [2]
+		}, -- [1356]
+		{
+			"Skill 171 increased from 140 to 141", -- [1]
+			0, -- [2]
+		}, -- [1357]
+		{
+			"Skill 2478 increased from 140 to 141", -- [1]
+			0, -- [2]
+		}, -- [1358]
+		{
+			"Skill 171 increased from 141 to 142", -- [1]
+			0, -- [2]
+		}, -- [1359]
+		{
+			"Skill 2478 increased from 141 to 142", -- [1]
+			0, -- [2]
+		}, -- [1360]
+		{
+			"Skill 171 increased from 142 to 143", -- [1]
+			0, -- [2]
+		}, -- [1361]
+		{
+			"Skill 2478 increased from 142 to 143", -- [1]
+			0, -- [2]
+		}, -- [1362]
+		{
+			"Skill 171 increased from 143 to 144", -- [1]
+			0, -- [2]
+		}, -- [1363]
+		{
+			"Skill 2478 increased from 143 to 144", -- [1]
+			0, -- [2]
+		}, -- [1364]
+		{
+			"Skill 171 increased from 144 to 145", -- [1]
+			0, -- [2]
+		}, -- [1365]
+		{
+			"Skill 2478 increased from 144 to 145", -- [1]
+			0, -- [2]
+		}, -- [1366]
+		{
+			"Skill 171 increased from 145 to 146", -- [1]
+			0, -- [2]
+		}, -- [1367]
+		{
+			"Skill 2478 increased from 145 to 146", -- [1]
+			0, -- [2]
+		}, -- [1368]
+		{
+			"Skill 171 increased from 146 to 147", -- [1]
+			0, -- [2]
+		}, -- [1369]
+		{
+			"Skill 2478 increased from 146 to 147", -- [1]
+			0, -- [2]
+		}, -- [1370]
+		{
+			"Skill 171 increased from 147 to 148", -- [1]
+			0, -- [2]
+		}, -- [1371]
+		{
+			"Skill 2478 increased from 147 to 148", -- [1]
+			0, -- [2]
+		}, -- [1372]
+		{
+			"Skill 171 increased from 148 to 149", -- [1]
+			0, -- [2]
+		}, -- [1373]
+		{
+			"Skill 2478 increased from 148 to 149", -- [1]
+			0, -- [2]
+		}, -- [1374]
+		{
+			"Skill 171 increased from 149 to 150", -- [1]
+			0, -- [2]
+		}, -- [1375]
+		{
+			"Skill 2478 increased from 149 to 150", -- [1]
+			0, -- [2]
+		}, -- [1376]
+		{
+			"Weather changed to 1, intensity 0.000000\n", -- [1]
+			0, -- [2]
+		}, -- [1377]
+	},
+	["isShown"] = false,
+	["fontHeight"] = 14,
+	["commandHistory"] = {
+	},
+}

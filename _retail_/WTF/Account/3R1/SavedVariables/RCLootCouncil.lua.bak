@@ -1,0 +1,3018 @@
+
+RCLootCouncilDB = {
+	["profileKeys"] = {
+		["Comet - Illidan"] = "Default",
+	},
+	["global"] = {
+		["locale"] = "enUS",
+		["log"] = {
+			"20:28:32 - UpdatePlayersData()", -- [1]
+			"20:28:35 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [2]
+			"20:29:56 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [3]
+			"20:29:56 - UpdatePlayersData()", -- [4]
+			"20:31:06 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [5]
+			"20:32:13 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [6]
+			"20:32:13 - UpdatePlayersData()", -- [7]
+			"20:32:13 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [8]
+			"20:32:13 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [9]
+			"20:32:13 - UpdatePlayersData()", -- [10]
+			"20:32:16 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [11]
+			"20:33:28 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [12]
+			"20:33:28 - UpdatePlayersData()", -- [13]
+			"20:34:42 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [14]
+			"20:35:35 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [15]
+			"20:35:35 - UpdatePlayersData()", -- [16]
+			"20:35:35 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [17]
+			"20:35:35 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [18]
+			"20:35:35 - UpdatePlayersData()", -- [19]
+			"20:35:38 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [20]
+			"20:37:35 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [21]
+			"20:37:35 - UpdatePlayersData()", -- [22]
+			"20:38:39 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [23]
+			"20:39:56 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [24]
+			"20:39:56 - UpdatePlayersData()", -- [25]
+			"20:39:56 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [26]
+			"20:39:56 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [27]
+			"20:39:56 - UpdatePlayersData()", -- [28]
+			"20:39:59 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [29]
+			"20:40:49 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [30]
+			"20:40:49 - UpdatePlayersData()", -- [31]
+			"20:42:12 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [32]
+			"20:43:41 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [33]
+			"20:43:41 - UpdatePlayersData()", -- [34]
+			"20:43:41 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [35]
+			"20:43:41 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [36]
+			"20:43:41 - UpdatePlayersData()", -- [37]
+			"20:43:44 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [38]
+			"20:44:50 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [39]
+			"20:44:50 - UpdatePlayersData()", -- [40]
+			"20:46:07 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [41]
+			"20:47:46 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [42]
+			"20:47:46 - UpdatePlayersData()", -- [43]
+			"20:47:46 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [44]
+			"20:47:46 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [45]
+			"20:47:46 - UpdatePlayersData()", -- [46]
+			"20:47:49 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [47]
+			"20:49:39 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [48]
+			"20:49:39 - UpdatePlayersData()", -- [49]
+			"20:51:01 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [50]
+			"20:52:05 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [51]
+			"20:52:05 - UpdatePlayersData()", -- [52]
+			"20:52:05 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [53]
+			"20:52:05 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [54]
+			"20:52:05 - UpdatePlayersData()", -- [55]
+			"20:52:08 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [56]
+			"20:52:35 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [57]
+			"20:52:35 - UpdatePlayersData()", -- [58]
+			"20:53:58 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [59]
+			"20:54:59 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [60]
+			"20:54:59 - UpdatePlayersData()", -- [61]
+			"20:54:59 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [62]
+			"20:54:59 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [63]
+			"20:54:59 - UpdatePlayersData()", -- [64]
+			"20:55:01 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [65]
+			"20:55:50 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [66]
+			"20:55:50 - UpdatePlayersData()", -- [67]
+			"20:56:58 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [68]
+			"20:57:53 - Event: (PLAYER_ENTERING_WORLD) (false) (false)", -- [69]
+			"20:57:53 - GetML()", -- [70]
+			"21:01:29 - Event: (GROUP_LEFT) (1) (Party-57-000020FA1F28)", -- [71]
+			"21:01:29 - GetML()", -- [72]
+			"21:09:16 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Exotica) (distri:) (GUILD)", -- [73]
+			"21:10:09 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Bromsi) (distri:) (GUILD)", -- [74]
+			"21:50:58 - Event: (PARTY_LEADER_CHANGED)", -- [75]
+			"21:50:58 - GetML()", -- [76]
+			"21:50:58 - Resetting council as we have a new ML!", -- [77]
+			"21:50:58 - MasterLooter =  (Comet-Illidan)", -- [78]
+			"21:50:58 - GetCouncilInGroup (Comet-Illidan)", -- [79]
+			"21:50:58 - ML:NewML (Comet-Illidan)", -- [80]
+			"21:50:58 - UpdateMLdb", -- [81]
+			"21:50:58 - OnMLDBReceived", -- [82]
+			"21:50:58 - UpdateGroup (true)", -- [83]
+			"21:50:58 - ML:AddCandidate (Comet-Illidan) (MONK) (DAMAGER) (nil) (nil) (nil) (nil) (nil)", -- [84]
+			"21:50:58 - GetCouncilInGroup (Comet-Illidan)", -- [85]
+			"21:50:59 - Comm received:^1^SplayerInfoRequest^T^t^^ (from:) (Comet) (distri:) (PARTY)", -- [86]
+			"21:50:59 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sresponses^T^Sdefault^T^t^t^SmultiVote^B^Sbuttons^T^Sdefault^T^t^t^SnumButtons^N3^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [87]
+			"21:50:59 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sresponses^T^Sdefault^T^t^t^SmultiVote^B^Sbuttons^T^Sdefault^T^t^t^SnumButtons^N3^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [88]
+			"21:50:59 - Comm received:^1^Scandidates^T^N1^T^SComet-Illidan^T^Srole^SDAMAGER^Sclass^SMONK^Srank^S^t^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [89]
+			"21:50:59 - Comm received:^1^Scouncil^T^N1^T^N1^SComet-Illidan^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [90]
+			"21:50:59 - true = (IsCouncil) (Comet-Illidan)", -- [91]
+			"21:50:59 - GetLootDBStatistics()", -- [92]
+			"21:50:59 - GetGuildRankNum()", -- [93]
+			"21:50:59 - RCVotingFrame (enabled)", -- [94]
+			"21:50:59 - Comm received:^1^SplayerInfo^T^N1^SComet-Illidan^N2^SMONK^N3^SDAMAGER^N4^STrial^N6^N0^N7^N376^N8^N270^t^^ (from:) (Comet) (distri:) (WHISPER)", -- [95]
+			"21:50:59 - ML:AddCandidate (Comet-Illidan) (MONK) (DAMAGER) (Trial) (nil) (0) (376) (270)", -- [96]
+			"21:51:02 - Event: (LOOT_READY) (true)", -- [97]
+			"21:51:02 - Event: (LOOT_OPENED) (true)", -- [98]
+			"21:51:02 - Event: (LOOT_READY) (true)", -- [99]
+			"21:51:05 - Event: (LOOT_READY) (true)", -- [100]
+			"21:51:06 - Event: (LOOT_OPENED) (true)", -- [101]
+			"21:51:06 - Event: (LOOT_READY) (true)", -- [102]
+			"21:51:09 - Comm received:^1^Scouncil^T^N1^T^N1^SComet-Illidan^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [103]
+			"21:51:09 - true = (IsCouncil) (Comet-Illidan)", -- [104]
+			"21:51:09 - Comm received:^1^Scandidates^T^N1^T^SComet-Illidan^T^Srole^SDAMAGER^SspecID^N270^Senchant_lvl^N0^Sclass^SMONK^Srank^STrial^t^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [105]
+			"21:51:12 - Event: (LOOT_READY) (true)", -- [106]
+			"21:51:12 - Event: (LOOT_OPENED) (true)", -- [107]
+			"21:51:12 - Event: (LOOT_READY) (true)", -- [108]
+			"21:51:13 - Timer MLdb_check passed", -- [109]
+			"21:51:16 - Event: (LOOT_READY) (true)", -- [110]
+			"21:51:16 - Event: (LOOT_OPENED) (true)", -- [111]
+			"21:51:16 - Event: (LOOT_READY) (true)", -- [112]
+			"21:51:23 - Event: (LOOT_READY) (true)", -- [113]
+			"21:51:23 - Event: (LOOT_OPENED) (true)", -- [114]
+			"21:51:23 - Event: (LOOT_READY) (true)", -- [115]
+			"21:51:29 - Event: (LOOT_READY) (true)", -- [116]
+			"21:51:29 - Event: (LOOT_OPENED) (true)", -- [117]
+			"21:51:29 - Event: (LOOT_READY) (true)", -- [118]
+			"21:51:34 - Event: (LOOT_READY) (true)", -- [119]
+			"21:51:34 - Event: (LOOT_OPENED) (true)", -- [120]
+			"21:51:34 - Event: (LOOT_READY) (true)", -- [121]
+			"21:51:40 - Event: (LOOT_READY) (true)", -- [122]
+			"21:51:40 - Event: (LOOT_OPENED) (true)", -- [123]
+			"21:51:40 - Event: (LOOT_READY) (true)", -- [124]
+			"21:51:53 - ML event (PLAYER_REGEN_ENABLED)", -- [125]
+			"21:51:53 - Event: (LOOT_READY) (true)", -- [126]
+			"21:51:53 - Event: (LOOT_OPENED) (true)", -- [127]
+			"21:51:53 - Event: (LOOT_READY) (true)", -- [128]
+			"21:52:00 - Event: (LOOT_READY) (true)", -- [129]
+			"21:52:00 - Event: (LOOT_OPENED) (true)", -- [130]
+			"21:52:00 - Event: (LOOT_READY) (true)", -- [131]
+			"21:52:06 - Event: (LOOT_READY) (true)", -- [132]
+			"21:52:06 - Event: (LOOT_OPENED) (true)", -- [133]
+			"21:52:06 - Event: (LOOT_READY) (true)", -- [134]
+			"21:52:13 - Event: (LOOT_READY) (true)", -- [135]
+			"21:52:13 - Event: (LOOT_OPENED) (true)", -- [136]
+			"21:52:13 - Event: (LOOT_READY) (true)", -- [137]
+			"21:52:35 - Event: (LOOT_READY) (true)", -- [138]
+			"21:52:35 - Event: (LOOT_OPENED) (true)", -- [139]
+			"21:52:35 - Event: (LOOT_READY) (true)", -- [140]
+			"21:52:57 - ML event (PLAYER_REGEN_ENABLED)", -- [141]
+			"21:53:27 - ML event (PLAYER_REGEN_ENABLED)", -- [142]
+			"21:53:54 - ML event (PLAYER_REGEN_ENABLED)", -- [143]
+			"21:53:54 - Event: (LOOT_READY) (true)", -- [144]
+			"21:53:55 - Event: (LOOT_OPENED) (true)", -- [145]
+			"21:53:55 - Event: (LOOT_READY) (true)", -- [146]
+			"21:54:31 - ML event (PLAYER_REGEN_ENABLED)", -- [147]
+			"21:54:42 - Event: (LOOT_READY) (true)", -- [148]
+			"21:54:42 - Event: (LOOT_OPENED) (true)", -- [149]
+			"21:54:42 - Event: (LOOT_READY) (true)", -- [150]
+			"21:55:31 - ML event (PLAYER_REGEN_ENABLED)", -- [151]
+			"21:55:37 - Event: (LOOT_READY) (true)", -- [152]
+			"21:55:38 - Event: (LOOT_OPENED) (true)", -- [153]
+			"21:55:38 - Event: (LOOT_READY) (true)", -- [154]
+			"21:56:30 - ML event (PLAYER_REGEN_ENABLED)", -- [155]
+			"21:57:29 - Event: (LOOT_READY) (true)", -- [156]
+			"21:57:29 - Event: (LOOT_OPENED) (true)", -- [157]
+			"21:57:29 - Event: (LOOT_READY) (true)", -- [158]
+			"21:57:29 - ML event (PLAYER_REGEN_ENABLED)", -- [159]
+			"21:58:14 - ML event (PLAYER_REGEN_ENABLED)", -- [160]
+			"21:58:18 - ML event (PLAYER_REGEN_ENABLED)", -- [161]
+			"21:58:53 - Event: (LOOT_READY) (true)", -- [162]
+			"21:58:53 - ML event (PLAYER_REGEN_ENABLED)", -- [163]
+			"21:58:53 - Event: (LOOT_OPENED) (true)", -- [164]
+			"21:58:53 - Event: (LOOT_READY) (true)", -- [165]
+			"21:59:22 - ML event (PLAYER_REGEN_ENABLED)", -- [166]
+			"21:59:33 - ML event (PLAYER_REGEN_ENABLED)", -- [167]
+			"21:59:53 - ML event (PLAYER_REGEN_ENABLED)", -- [168]
+			"22:00:15 - ML event (PLAYER_REGEN_ENABLED)", -- [169]
+			"22:00:36 - ML event (PLAYER_REGEN_ENABLED)", -- [170]
+			"22:00:47 - Event: (GROUP_LEFT) (1) (Party-57-000020FAC692)", -- [171]
+			"22:00:47 - GetML()", -- [172]
+			"22:00:47 - Stop handling loot", -- [173]
+			"22:00:47 - ML Disabled", -- [174]
+			"22:00:47 - Comm received:^1^SStopHandleLoot^T^t^^ (from:) (Comet) (distri:) (WHISPER)", -- [175]
+			"22:01:09 - Event: (PARTY_LEADER_CHANGED)", -- [176]
+			"22:01:09 - GetML()", -- [177]
+			"22:01:09 - Resetting council as we have a new ML!", -- [178]
+			"22:01:09 - MasterLooter =  (Murkya-Kil'jaeden)", -- [179]
+			"22:01:10 - VotingFrame:Update() without lootTable!!", -- [180]
+			"22:01:12 - Event: (PARTY_LEADER_CHANGED)", -- [181]
+			"22:01:12 - GetML()", -- [182]
+			"22:01:12 - Resetting council as we have a new ML!", -- [183]
+			"22:01:12 - MasterLooter =  (Comet-Illidan)", -- [184]
+			"22:01:12 - GetCouncilInGroup (Comet-Illidan)", -- [185]
+			"22:01:12 - ML:NewML (Comet-Illidan)", -- [186]
+			"22:01:12 - UpdateMLdb", -- [187]
+			"22:01:12 - OnMLDBReceived", -- [188]
+			"22:01:12 - UpdateGroup (true)", -- [189]
+			"22:01:12 - ML:AddCandidate (Comet-Illidan) (MONK) (DAMAGER) (nil) (nil) (nil) (nil) (nil)", -- [190]
+			"22:01:12 - GetCouncilInGroup (Comet-Illidan)", -- [191]
+			"22:01:12 - Comm received:^1^SplayerInfoRequest^T^t^^ (from:) (Comet) (distri:) (PARTY)", -- [192]
+			"22:01:12 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sresponses^T^Sdefault^T^t^t^SmultiVote^B^Sbuttons^T^Sdefault^T^t^t^SnumButtons^N3^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [193]
+			"22:01:12 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sresponses^T^Sdefault^T^t^t^SmultiVote^B^Sbuttons^T^Sdefault^T^t^t^SnumButtons^N3^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [194]
+			"22:01:12 - Comm received:^1^Scandidates^T^N1^T^SComet-Illidan^T^Srole^SDAMAGER^Sclass^SMONK^Srank^S^t^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [195]
+			"22:01:12 - Comm received:^1^Scouncil^T^N1^T^N1^SComet-Illidan^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [196]
+			"22:01:12 - true = (IsCouncil) (Comet-Illidan)", -- [197]
+			"22:01:13 - Comm received:^1^SplayerInfo^T^N1^SComet-Illidan^N2^SMONK^N3^SDAMAGER^N4^STrial^N6^N0^N7^N376^N8^N270^t^^ (from:) (Comet) (distri:) (WHISPER)", -- [198]
+			"22:01:13 - ML:AddCandidate (Comet-Illidan) (MONK) (DAMAGER) (Trial) (nil) (0) (376) (270)", -- [199]
+			"22:01:22 - Comm received:^1^Scouncil^T^N1^T^N1^SComet-Illidan^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [200]
+			"22:01:22 - true = (IsCouncil) (Comet-Illidan)", -- [201]
+			"22:01:22 - Comm received:^1^Scandidates^T^N1^T^SComet-Illidan^T^Srole^SDAMAGER^SspecID^N270^Senchant_lvl^N0^Sclass^SMONK^Srank^STrial^t^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [202]
+			"22:01:24 - Timer MLdb_check passed", -- [203]
+			"22:01:27 - Timer MLdb_check passed", -- [204]
+			"22:01:43 - Event: (LOOT_READY) (true)", -- [205]
+			"22:01:43 - Event: (LOOT_OPENED) (true)", -- [206]
+			"22:01:43 - Event: (LOOT_READY) (true)", -- [207]
+			"22:01:49 - ML event (PLAYER_REGEN_ENABLED)", -- [208]
+			"22:02:02 - ML event (PLAYER_REGEN_ENABLED)", -- [209]
+			"22:03:29 - ML event (PLAYER_REGEN_ENABLED)", -- [210]
+			"22:03:29 - Event: (LOOT_READY) (true)", -- [211]
+			"22:03:29 - Event: (LOOT_OPENED) (true)", -- [212]
+			"22:03:29 - Event: (LOOT_READY) (true)", -- [213]
+			"22:03:47 - ML event (PLAYER_REGEN_ENABLED)", -- [214]
+			"22:03:49 - Event: (LOOT_READY) (true)", -- [215]
+			"22:03:49 - Event: (LOOT_OPENED) (true)", -- [216]
+			"22:03:49 - Event: (LOOT_READY) (true)", -- [217]
+			"22:03:53 - VotingFrame:Update() without lootTable!!", -- [218]
+			"22:03:56 - VotingFrame:Update() without lootTable!!", -- [219]
+			"22:04:02 - UpdateGroup (table: 0000028A4DA6CF70)", -- [220]
+			"22:04:02 - ML:AddCandidate (Dubricus-Illidan) (PRIEST) (DAMAGER) (nil) (nil) (nil) (nil) (nil)", -- [221]
+			"22:04:02 - GetCouncilInGroup (Comet-Illidan)", -- [222]
+			"22:04:02 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sresponses^T^Sdefault^T^t^t^SmultiVote^B^Sbuttons^T^Sdefault^T^t^t^SnumButtons^N3^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [223]
+			"22:04:02 - Comm received:^1^Scandidates^T^N1^T^SComet-Illidan^T^Srole^SDAMAGER^SspecID^N270^Senchant_lvl^N0^Sclass^SMONK^Srank^STrial^t^SDubricus-Illidan^T^Srole^SDAMAGER^Sclass^SPRIEST^Srank^S^t^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [224]
+			"22:04:15 - ML event (PLAYER_REGEN_ENABLED)", -- [225]
+			"22:04:16 - Event: (LOOT_READY) (true)", -- [226]
+			"22:04:16 - Event: (LOOT_OPENED) (true)", -- [227]
+			"22:04:16 - Event: (LOOT_READY) (true)", -- [228]
+			"22:04:31 - Event: (GROUP_LEFT) (1) (Party-9-000027D81754)", -- [229]
+			"22:04:31 - GetML()", -- [230]
+			"22:04:31 - Stop handling loot", -- [231]
+			"22:04:31 - ML Disabled", -- [232]
+			"22:04:32 - Comm received:^1^SStopHandleLoot^T^t^^ (from:) (Comet) (distri:) (WHISPER)", -- [233]
+			"22:06:14 - VotingFrame:Update() without lootTable!!", -- [234]
+			"22:08:05 - Event: (PARTY_LEADER_CHANGED)", -- [235]
+			"22:08:05 - GetML()", -- [236]
+			"22:08:05 - Resetting council as we have a new ML!", -- [237]
+			"22:08:05 - MasterLooter =  (Comet-Illidan)", -- [238]
+			"22:08:05 - GetCouncilInGroup (Comet-Illidan)", -- [239]
+			"22:08:05 - ML:NewML (Comet-Illidan)", -- [240]
+			"22:08:05 - UpdateMLdb", -- [241]
+			"22:08:05 - OnMLDBReceived", -- [242]
+			"22:08:05 - UpdateGroup (true)", -- [243]
+			"22:08:05 - ML:AddCandidate (Comet-Illidan) (MONK) (DAMAGER) (nil) (nil) (nil) (nil) (nil)", -- [244]
+			"22:08:05 - GetCouncilInGroup (Comet-Illidan)", -- [245]
+			"22:08:05 - Comm received:^1^SplayerInfoRequest^T^t^^ (from:) (Comet) (distri:) (PARTY)", -- [246]
+			"22:08:05 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sresponses^T^Sdefault^T^t^t^SmultiVote^B^Sbuttons^T^Sdefault^T^t^t^SnumButtons^N3^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [247]
+			"22:08:05 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sresponses^T^Sdefault^T^t^t^SmultiVote^B^Sbuttons^T^Sdefault^T^t^t^SnumButtons^N3^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [248]
+			"22:08:05 - Comm received:^1^Scandidates^T^N1^T^SComet-Illidan^T^Srole^SDAMAGER^Sclass^SMONK^Srank^S^t^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [249]
+			"22:08:05 - Comm received:^1^Scouncil^T^N1^T^N1^SComet-Illidan^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [250]
+			"22:08:05 - true = (IsCouncil) (Comet-Illidan)", -- [251]
+			"22:08:05 - Comm received:^1^SplayerInfo^T^N1^SComet-Illidan^N2^SMONK^N3^SDAMAGER^N4^STrial^N6^N0^N7^N376^N8^N270^t^^ (from:) (Comet) (distri:) (WHISPER)", -- [252]
+			"22:08:05 - ML:AddCandidate (Comet-Illidan) (MONK) (DAMAGER) (Trial) (nil) (0) (376) (270)", -- [253]
+			"22:08:15 - Comm received:^1^Scouncil^T^N1^T^N1^SComet-Illidan^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [254]
+			"22:08:15 - true = (IsCouncil) (Comet-Illidan)", -- [255]
+			"22:08:15 - Comm received:^1^Scandidates^T^N1^T^SComet-Illidan^T^Srole^SDAMAGER^SspecID^N270^Senchant_lvl^N0^Sclass^SMONK^Srank^STrial^t^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [256]
+			"22:08:20 - Timer MLdb_check passed", -- [257]
+			"22:08:23 - VotingFrame:Update() without lootTable!!", -- [258]
+			"22:08:32 - UpdateGroup (table: 0000028A4DA6CF70)", -- [259]
+			"22:08:32 - ML:AddCandidate (Jabutin-Khaz'goroth) (SHAMAN) (HEALER) (nil) (nil) (nil) (nil) (nil)", -- [260]
+			"22:08:32 - GetCouncilInGroup (Comet-Illidan)", -- [261]
+			"22:08:32 - Comm received:^1^Sxrealm^T^N1^SJabutin-Khaz'goroth^N2^SplayerInfoRequest^t^^ (from:) (Comet) (distri:) (PARTY)", -- [262]
+			"22:08:32 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sresponses^T^Sdefault^T^t^t^SmultiVote^B^Sbuttons^T^Sdefault^T^t^t^SnumButtons^N3^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [263]
+			"22:08:32 - Comm received:^1^Scandidates^T^N1^T^SComet-Illidan^T^Srole^SDAMAGER^SspecID^N270^Senchant_lvl^N0^Sclass^SMONK^Srank^STrial^t^SJabutin-Khaz'goroth^T^Srole^SHEALER^Sclass^SSHAMAN^Srank^S^t^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [264]
+			"22:08:39 - Event: (LOOT_READY) (true)", -- [265]
+			"22:08:39 - ML event (PLAYER_REGEN_ENABLED)", -- [266]
+			"22:08:39 - Event: (LOOT_OPENED) (true)", -- [267]
+			"22:08:39 - Event: (LOOT_READY) (true)", -- [268]
+			"22:08:57 - ML event (PLAYER_REGEN_ENABLED)", -- [269]
+			"22:08:57 - Event: (LOOT_READY) (true)", -- [270]
+			"22:08:58 - Event: (LOOT_OPENED) (true)", -- [271]
+			"22:08:58 - Event: (LOOT_READY) (true)", -- [272]
+			"22:09:02 - VotingFrame:Update() without lootTable!!", -- [273]
+			"22:09:18 - VotingFrame:Update() without lootTable!!", -- [274]
+			"22:09:31 - Event: (LOOT_READY) (true)", -- [275]
+			"22:09:32 - ML event (PLAYER_REGEN_ENABLED)", -- [276]
+			"22:09:32 - Event: (LOOT_OPENED) (true)", -- [277]
+			"22:09:32 - Event: (LOOT_READY) (true)", -- [278]
+			"22:09:42 - UpdateGroup (table: 0000028A4DA6CF70)", -- [279]
+			"22:09:42 - ML:RemoveCandidate (Jabutin-Khaz'goroth)", -- [280]
+			"22:09:42 - GetCouncilInGroup (Comet-Illidan)", -- [281]
+			"22:09:43 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sresponses^T^Sdefault^T^t^t^SmultiVote^B^Sbuttons^T^Sdefault^T^t^t^SnumButtons^N3^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [282]
+			"22:09:43 - Comm received:^1^Scandidates^T^N1^T^SComet-Illidan^T^Srole^SDAMAGER^SspecID^N270^Senchant_lvl^N0^Sclass^SMONK^Srank^STrial^t^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [283]
+			"22:10:16 - Event: (LOOT_READY) (true)", -- [284]
+			"22:10:16 - ML event (PLAYER_REGEN_ENABLED)", -- [285]
+			"22:10:16 - Event: (LOOT_OPENED) (true)", -- [286]
+			"22:10:16 - Event: (LOOT_READY) (true)", -- [287]
+			"22:10:34 - ML event (PLAYER_REGEN_ENABLED)", -- [288]
+			"22:10:34 - Event: (LOOT_READY) (true)", -- [289]
+			"22:10:35 - Event: (LOOT_OPENED) (true)", -- [290]
+			"22:10:35 - Event: (LOOT_READY) (true)", -- [291]
+			"22:10:45 - VotingFrame:Update() without lootTable!!", -- [292]
+			"22:10:52 - VotingFrame:Update() without lootTable!!", -- [293]
+			"22:11:00 - ML event (PLAYER_REGEN_ENABLED)", -- [294]
+			"22:11:24 - ML event (PLAYER_REGEN_ENABLED)", -- [295]
+			"22:11:25 - Event: (LOOT_READY) (true)", -- [296]
+			"22:11:26 - Event: (LOOT_OPENED) (true)", -- [297]
+			"22:11:26 - Event: (LOOT_READY) (true)", -- [298]
+			"22:11:46 - ML event (PLAYER_REGEN_ENABLED)", -- [299]
+			"22:13:27 - Event: (LOOT_READY) (true)", -- [300]
+			"22:13:27 - Event: (LOOT_OPENED) (true)", -- [301]
+			"22:13:27 - Event: (LOOT_READY) (true)", -- [302]
+			"22:13:33 - ML event (PLAYER_REGEN_ENABLED)", -- [303]
+			"22:14:02 - Event: (GROUP_LEFT) (1) (Party-57-000020FACF32)", -- [304]
+			"22:14:02 - GetML()", -- [305]
+			"22:14:02 - Stop handling loot", -- [306]
+			"22:14:02 - ML Disabled", -- [307]
+			"22:14:02 - Comm received:^1^SStopHandleLoot^T^t^^ (from:) (Comet) (distri:) (WHISPER)", -- [308]
+			"22:17:18 - Event: (PARTY_LEADER_CHANGED)", -- [309]
+			"22:17:18 - GetML()", -- [310]
+			"22:17:18 - Resetting council as we have a new ML!", -- [311]
+			"22:17:18 - MasterLooter =  (Comet-Illidan)", -- [312]
+			"22:17:18 - GetCouncilInGroup (Comet-Illidan)", -- [313]
+			"22:17:18 - ML:NewML (Comet-Illidan)", -- [314]
+			"22:17:18 - UpdateMLdb", -- [315]
+			"22:17:18 - OnMLDBReceived", -- [316]
+			"22:17:18 - UpdateGroup (true)", -- [317]
+			"22:17:18 - ML:AddCandidate (Comet-Illidan) (MONK) (DAMAGER) (nil) (nil) (nil) (nil) (nil)", -- [318]
+			"22:17:18 - GetCouncilInGroup (Comet-Illidan)", -- [319]
+			"22:17:19 - Comm received:^1^SplayerInfoRequest^T^t^^ (from:) (Comet) (distri:) (PARTY)", -- [320]
+			"22:17:19 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sresponses^T^Sdefault^T^t^t^SmultiVote^B^Sbuttons^T^Sdefault^T^t^t^SnumButtons^N3^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [321]
+			"22:17:19 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sresponses^T^Sdefault^T^t^t^SmultiVote^B^Sbuttons^T^Sdefault^T^t^t^SnumButtons^N3^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [322]
+			"22:17:19 - Comm received:^1^Scandidates^T^N1^T^SComet-Illidan^T^Srole^SDAMAGER^Sclass^SMONK^Srank^S^t^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [323]
+			"22:17:19 - Comm received:^1^Scouncil^T^N1^T^N1^SComet-Illidan^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [324]
+			"22:17:19 - true = (IsCouncil) (Comet-Illidan)", -- [325]
+			"22:17:19 - Comm received:^1^SplayerInfo^T^N1^SComet-Illidan^N2^SMONK^N3^SDAMAGER^N4^STrial^N6^N0^N7^N376^N8^N270^t^^ (from:) (Comet) (distri:) (WHISPER)", -- [326]
+			"22:17:19 - ML:AddCandidate (Comet-Illidan) (MONK) (DAMAGER) (Trial) (nil) (0) (376) (270)", -- [327]
+			"22:17:29 - Comm received:^1^Scouncil^T^N1^T^N1^SComet-Illidan^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [328]
+			"22:17:29 - true = (IsCouncil) (Comet-Illidan)", -- [329]
+			"22:17:29 - Comm received:^1^Scandidates^T^N1^T^SComet-Illidan^T^Srole^SDAMAGER^SspecID^N270^Senchant_lvl^N0^Sclass^SMONK^Srank^STrial^t^t^t^^ (from:) (Comet) (distri:) (PARTY)", -- [330]
+			"22:17:33 - Timer MLdb_check passed", -- [331]
+			"22:18:05 - ML event (PLAYER_REGEN_ENABLED)", -- [332]
+			"22:18:06 - Event: (LOOT_READY) (true)", -- [333]
+			"22:18:06 - Event: (LOOT_OPENED) (true)", -- [334]
+			"22:18:06 - Event: (LOOT_READY) (true)", -- [335]
+			"22:18:39 - ML event (PLAYER_REGEN_ENABLED)", -- [336]
+			"22:19:33 - ML event (PLAYER_REGEN_ENABLED)", -- [337]
+			"22:19:34 - Event: (LOOT_READY) (true)", -- [338]
+			"22:19:34 - Event: (LOOT_OPENED) (true)", -- [339]
+			"22:19:34 - Event: (LOOT_READY) (true)", -- [340]
+			"22:20:38 - Event: (PLAYER_ENTERING_WORLD) (false) (false)", -- [341]
+			"22:20:38 - GetML()", -- [342]
+			"22:20:39 - VotingFrame:Update() without lootTable!!", -- [343]
+			"12/09/18", -- [344]
+			"22:21:48 - Logged In", -- [345]
+			"22:21:48 - ML initialized!", -- [346]
+			"22:21:48 - TradeUI enabled", -- [347]
+			"22:21:58 - Comet-Illidan (2.9.4) (nil)", -- [348]
+			"22:21:58 - ActivateSkin (bfa)", -- [349]
+			"22:22:00 - Event: (PLAYER_ENTERING_WORLD) (true) (false)", -- [350]
+			"22:22:00 - GetML()", -- [351]
+			"22:22:00 - UpdatePlayersData()", -- [352]
+			"22:22:02 - GetPlayersGuildRank()", -- [353]
+			"22:22:02 - Found Guild Rank: Trial", -- [354]
+			"22:22:02 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [355]
+			"22:27:05 - Event: (PLAYER_ENTERING_WORLD) (false) (false)", -- [356]
+			"22:27:05 - GetML()", -- [357]
+			"22:34:36 - Event: (LOOT_READY) (true)", -- [358]
+			"22:34:36 - Event: (LOOT_OPENED) (true)", -- [359]
+			"22:34:36 - Event: (LOOT_READY) (true)", -- [360]
+			"22:35:43 - Event: (LOOT_READY) (true)", -- [361]
+			"22:35:43 - Event: (LOOT_OPENED) (true)", -- [362]
+			"22:35:43 - Event: (LOOT_READY) (true)", -- [363]
+			"22:37:32 - Event: (LOOT_READY) (true)", -- [364]
+			"22:37:32 - Event: (LOOT_OPENED) (true)", -- [365]
+			"22:37:32 - Event: (LOOT_READY) (true)", -- [366]
+			"22:38:31 - Event: (LOOT_READY) (true)", -- [367]
+			"22:38:31 - Event: (LOOT_OPENED) (true)", -- [368]
+			"22:38:31 - Event: (LOOT_READY) (true)", -- [369]
+			"22:39:00 - Event: (LOOT_READY) (true)", -- [370]
+			"22:39:00 - Event: (LOOT_OPENED) (true)", -- [371]
+			"22:39:00 - Event: (LOOT_READY) (true)", -- [372]
+			"22:40:32 - Event: (LOOT_READY) (true)", -- [373]
+			"22:40:32 - Event: (LOOT_OPENED) (true)", -- [374]
+			"22:40:32 - Event: (LOOT_READY) (true)", -- [375]
+			"22:40:50 - Event: (LOOT_READY) (true)", -- [376]
+			"22:40:50 - Event: (LOOT_OPENED) (true)", -- [377]
+			"22:40:50 - Event: (LOOT_READY) (true)", -- [378]
+			"22:47:55 - Event: (LOOT_READY) (true)", -- [379]
+			"22:47:56 - Event: (LOOT_OPENED) (true)", -- [380]
+			"22:47:56 - Event: (LOOT_READY) (true)", -- [381]
+			"22:55:53 - Event: (PARTY_LEADER_CHANGED)", -- [382]
+			"22:55:53 - GetML()", -- [383]
+			"22:55:53 - Resetting council as we have a new ML!", -- [384]
+			"22:55:53 - MasterLooter =  (Cojeburra-Tichondrius)", -- [385]
+			"22:55:56 - Event: (LOOT_OPENED) (true)", -- [386]
+			"22:56:08 - Timer MLdb_check passed", -- [387]
+			"22:56:08 - Comm received:^1^Sxrealm^T^N1^SCojeburra-Tichondrius^N2^SMLdb_request^t^^ (from:) (Comet) (distri:) (PARTY)", -- [388]
+			"22:56:08 - Comm received:^1^Sxrealm^T^N1^SCojeburra-Tichondrius^N2^Scouncil_request^t^^ (from:) (Comet) (distri:) (PARTY)", -- [389]
+			"22:56:10 - Event: (LOOT_READY) (true)", -- [390]
+			"22:56:11 - Event: (LOOT_OPENED) (true)", -- [391]
+			"22:56:11 - Event: (LOOT_READY) (true)", -- [392]
+			"22:56:28 - Event: (GROUP_LEFT) (1) (Party-1427-000024F8CBC8)", -- [393]
+			"22:56:28 - GetML()", -- [394]
+			"22:57:12 - Event: (LOOT_READY) (true)", -- [395]
+			"22:57:13 - Event: (LOOT_OPENED) (true)", -- [396]
+			"22:57:13 - Event: (LOOT_READY) (true)", -- [397]
+			"22:58:04 - Event: (LOOT_READY) (true)", -- [398]
+			"22:58:04 - Event: (LOOT_OPENED) (true)", -- [399]
+			"22:58:04 - Event: (LOOT_READY) (true)", -- [400]
+			"22:58:30 - Event: (LOOT_READY) (true)", -- [401]
+			"22:58:31 - Event: (LOOT_OPENED) (true)", -- [402]
+			"22:58:31 - Event: (LOOT_READY) (true)", -- [403]
+			"22:59:09 - Event: (LOOT_READY) (true)", -- [404]
+			"22:59:09 - Event: (LOOT_OPENED) (true)", -- [405]
+			"22:59:09 - Event: (LOOT_READY) (true)", -- [406]
+			"22:59:35 - Event: (PLAYER_ENTERING_WORLD) (false) (false)", -- [407]
+			"22:59:35 - GetML()", -- [408]
+			"23:05:31 - Event: (LOOT_READY) (true)", -- [409]
+			"23:05:31 - Event: (LOOT_OPENED) (true)", -- [410]
+			"23:05:31 - Event: (LOOT_READY) (true)", -- [411]
+			"23:05:50 - Event: (LOOT_READY) (true)", -- [412]
+			"23:05:50 - Event: (LOOT_OPENED) (true)", -- [413]
+			"23:05:50 - Event: (LOOT_READY) (true)", -- [414]
+			"23:06:08 - Event: (LOOT_READY) (true)", -- [415]
+			"23:06:08 - Event: (LOOT_OPENED) (true)", -- [416]
+			"23:06:08 - Event: (LOOT_READY) (true)", -- [417]
+			"23:06:29 - Event: (LOOT_READY) (true)", -- [418]
+			"23:06:30 - Event: (LOOT_OPENED) (true)", -- [419]
+			"23:06:30 - Event: (LOOT_READY) (true)", -- [420]
+			"23:06:54 - Event: (LOOT_READY) (true)", -- [421]
+			"23:06:54 - Event: (LOOT_OPENED) (true)", -- [422]
+			"23:06:54 - Event: (LOOT_READY) (true)", -- [423]
+			"23:10:25 - Event: (PLAYER_ENTERING_WORLD) (false) (false)", -- [424]
+			"23:10:25 - GetML()", -- [425]
+			"23:11:25 - Event: (PLAYER_ENTERING_WORLD) (false) (false)", -- [426]
+			"23:11:25 - GetML()", -- [427]
+			"23:16:15 - Event: (PARTY_LEADER_CHANGED)", -- [428]
+			"23:16:15 - GetML()", -- [429]
+			"23:16:15 - Unknown ML", -- [430]
+			"23:16:15 - GetML()", -- [431]
+			"23:16:15 - Resetting council as we have a new ML!", -- [432]
+			"23:16:15 - MasterLooter =  (Onefireball-Illidan)", -- [433]
+			"23:16:30 - Timer MLdb_check passed", -- [434]
+			"23:16:34 - Event: (RAID_INSTANCE_WELCOME) (Uldir (Heroic)) (114205) (0) (0)", -- [435]
+			"23:16:36 - Event: (PLAYER_ENTERING_WORLD) (false) (false)", -- [436]
+			"23:16:36 - GetML()", -- [437]
+			"23:17:00 - Event: (ENCOUNTER_START) (2135) (Mythrax) (15) (16)", -- [438]
+			"23:17:00 - UpdatePlayersData()", -- [439]
+			"23:17:04 - Event: (ENCOUNTER_END) (2135) (Mythrax) (15) (16) (0)", -- [440]
+			"23:19:11 - Event: (ENCOUNTER_START) (2135) (Mythrax) (15) (18)", -- [441]
+			"23:19:11 - UpdatePlayersData()", -- [442]
+			"23:25:31 - Event: (ENCOUNTER_END) (2135) (Mythrax) (15) (18) (1)", -- [443]
+			"23:25:34 - Event: (LOOT_READY) (true)", -- [444]
+			"23:25:34 - Adding to self.lootSlotInfo (1) (nil) (1) (Vehicle-0-3886-1861-26392-134546-00000E1315) (630001)", -- [445]
+			"23:25:34 - Event: (LOOT_OPENED) (true)", -- [446]
+			"23:25:34 - Event: (LOOT_READY) (true)", -- [447]
+			"23:25:34 - Adding to self.lootSlotInfo (1) (nil) (1) (Vehicle-0-3886-1861-26392-134546-00000E1315) (630001)", -- [448]
+			"23:25:35 - OnLootSlotCleared() (1) (nil) (1)", -- [449]
+			"23:25:35 - Event: (LOOT_CLOSED)", -- [450]
+			"23:25:35 - Comm received:^1^Slooted^T^N1^S134546^t^^ (from:) (Comet) (distri:) (RAID)", -- [451]
+			"23:25:35 - false = (IsCouncil) (Comet-Illidan)", -- [452]
+			"23:25:41 - Event: (ENCOUNTER_LOOT_RECEIVED) (2135) (163596) (|cffa335ee|Hitem:163596::::::::120:270::5:3:4823:1492:4786:::|h[Cowl of Dark Portents]|h|r) (1) (Redmoobre-Tichondrius) (ROGUE)", -- [453]
+			"23:25:41 - Event: (ENCOUNTER_LOOT_RECEIVED) (2135) (160696) (|cffa335ee|Hitem:160696::::::::120:270::5:3:4799:1492:4786:::|h[Codex of Imminent Ruin]|h|r) (1) (Holycure) (PRIEST)", -- [454]
+			"23:25:43 - Event: (ENCOUNTER_LOOT_RECEIVED) (2135) (160656) (|cffa335ee|Hitem:160656::::::::120:270::5:4:4799:1808:1492:4786:::|h[Twitching Tentacle of Xalzaix]|h|r) (1) (Stardawn-Nagrand) (MAGE)", -- [455]
+			"23:25:50 - Event: (ENCOUNTER_LOOT_RECEIVED) (2135) (160614) (|cffa335ee|Hitem:160614::::::::120:270::5:3:4823:1492:4786:::|h[Robes of the Unraveler]|h|r) (1) (Saltedyu) (PRIEST)", -- [456]
+			"23:26:46 - Event: (GROUP_LEFT) (1) (Party-57-0000210384B2)", -- [457]
+			"23:26:46 - GetML()", -- [458]
+			"23:27:06 - Event: (PLAYER_ENTERING_WORLD) (false) (false)", -- [459]
+			"23:27:06 - GetML()", -- [460]
+			"12/11/18", -- [461]
+			"17:58:50 - Logged In", -- [462]
+			"17:58:50 - ML initialized!", -- [463]
+			"17:58:50 - TradeUI enabled", -- [464]
+			"17:59:02 - Comet-Illidan (2.9.4) (nil)", -- [465]
+			"17:59:02 - ActivateSkin (bfa)", -- [466]
+			"17:59:02 - Event: (PLAYER_ENTERING_WORLD) (true) (false)", -- [467]
+			"17:59:02 - GetML()", -- [468]
+			"17:59:02 - UpdatePlayersData()", -- [469]
+			"17:59:04 - GetPlayersGuildRank()", -- [470]
+			"17:59:04 - Found Guild Rank: Trial", -- [471]
+			"17:59:04 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [472]
+			"17:59:10 - Event: (PARTY_LEADER_CHANGED)", -- [473]
+			"17:59:10 - GetML()", -- [474]
+			"17:59:10 - Resetting council as we have a new ML!", -- [475]
+			"17:59:10 - MasterLooter =  (Ouro-Illidan)", -- [476]
+			"17:59:25 - Timer MLdb_check passed", -- [477]
+			"17:59:39 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Bromsi) (distri:) (GUILD)", -- [478]
+			"18:00:25 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Raycharlezz) (distri:) (GUILD)", -- [479]
+			"18:03:41 - Event: (RAID_INSTANCE_WELCOME) (Uldir (Mythic)) (564978) (0) (0)", -- [480]
+			"18:03:41 - Event: (PLAYER_ENTERING_WORLD) (false) (false)", -- [481]
+			"18:03:41 - GetML()", -- [482]
+			"18:03:45 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [483]
+			"18:03:45 - UpdatePlayersData()", -- [484]
+			"18:03:45 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [485]
+			"18:03:45 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [486]
+			"18:03:45 - UpdatePlayersData()", -- [487]
+			"18:03:47 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [488]
+			"18:04:45 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [489]
+			"18:04:45 - UpdatePlayersData()", -- [490]
+			"18:04:45 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [491]
+			"18:04:45 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [492]
+			"18:04:45 - UpdatePlayersData()", -- [493]
+			"18:04:47 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [494]
+			"12/11/18", -- [495]
+			"18:06:55 - Logged In", -- [496]
+			"18:06:55 - ML initialized!", -- [497]
+			"18:06:55 - TradeUI enabled", -- [498]
+			"18:06:59 - Comet-Illidan (2.9.4) (nil)", -- [499]
+			"18:06:59 - ActivateSkin (bfa)", -- [500]
+			"18:06:59 - Event: (PLAYER_ENTERING_WORLD) (true) (false)", -- [501]
+			"18:06:59 - GetML()", -- [502]
+			"18:06:59 - UpdatePlayersData()", -- [503]
+			"18:07:00 - Event: (PARTY_LEADER_CHANGED)", -- [504]
+			"18:07:00 - GetML()", -- [505]
+			"18:07:00 - Unknown ML", -- [506]
+			"18:07:02 - GetPlayersGuildRank()", -- [507]
+			"18:07:02 - Found Guild Rank: Trial", -- [508]
+			"18:07:02 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [509]
+			"18:07:03 - GetML()", -- [510]
+			"18:07:03 - Resetting council as we have a new ML!", -- [511]
+			"18:07:03 - MasterLooter =  (Ouro-Illidan)", -- [512]
+			"18:07:17 - Timer MLdb_check passed", -- [513]
+			"18:11:16 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Jwal) (distri:) (GUILD)", -- [514]
+			"18:11:59 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [515]
+			"18:11:59 - UpdatePlayersData()", -- [516]
+			"18:11:59 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [517]
+			"18:11:59 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [518]
+			"18:11:59 - UpdatePlayersData()", -- [519]
+			"18:12:02 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [520]
+			"18:15:48 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [521]
+			"18:15:48 - UpdatePlayersData()", -- [522]
+			"18:17:16 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [523]
+			"18:18:02 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [524]
+			"18:18:02 - UpdatePlayersData()", -- [525]
+			"18:18:36 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [526]
+			"18:19:20 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [527]
+			"18:19:20 - UpdatePlayersData()", -- [528]
+			"18:19:20 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [529]
+			"18:19:20 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [530]
+			"18:19:20 - UpdatePlayersData()", -- [531]
+			"18:19:22 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [532]
+			"18:20:10 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [533]
+			"18:20:10 - UpdatePlayersData()", -- [534]
+			"18:20:10 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [535]
+			"18:20:10 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [536]
+			"18:20:10 - UpdatePlayersData()", -- [537]
+			"18:20:13 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [538]
+			"18:21:22 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [539]
+			"18:21:22 - UpdatePlayersData()", -- [540]
+			"18:23:10 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [541]
+			"18:24:52 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [542]
+			"18:24:52 - UpdatePlayersData()", -- [543]
+			"18:24:53 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [544]
+			"18:24:53 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [545]
+			"18:24:53 - UpdatePlayersData()", -- [546]
+			"18:24:55 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [547]
+			"18:26:37 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [548]
+			"18:26:37 - UpdatePlayersData()", -- [549]
+			"18:27:51 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [550]
+			"18:29:25 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [551]
+			"18:29:25 - UpdatePlayersData()", -- [552]
+			"18:29:25 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [553]
+			"18:29:26 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [554]
+			"18:29:26 - UpdatePlayersData()", -- [555]
+			"18:29:28 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [556]
+			"18:31:28 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [557]
+			"18:31:28 - UpdatePlayersData()", -- [558]
+			"18:32:42 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [559]
+			"18:33:57 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [560]
+			"18:33:57 - UpdatePlayersData()", -- [561]
+			"18:33:57 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [562]
+			"18:33:57 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [563]
+			"18:33:57 - UpdatePlayersData()", -- [564]
+			"18:33:59 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [565]
+			"18:35:12 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [566]
+			"18:35:12 - UpdatePlayersData()", -- [567]
+			"18:36:50 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [568]
+			"18:38:07 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [569]
+			"18:38:07 - UpdatePlayersData()", -- [570]
+			"18:38:07 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [571]
+			"18:38:07 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [572]
+			"18:38:07 - UpdatePlayersData()", -- [573]
+			"18:38:11 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [574]
+			"18:38:37 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [575]
+			"18:38:37 - UpdatePlayersData()", -- [576]
+			"18:39:16 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [577]
+			"18:39:51 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [578]
+			"18:39:51 - UpdatePlayersData()", -- [579]
+			"18:39:51 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [580]
+			"18:39:51 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [581]
+			"18:39:51 - UpdatePlayersData()", -- [582]
+			"18:39:53 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [583]
+			"18:40:50 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [584]
+			"18:40:50 - UpdatePlayersData()", -- [585]
+			"18:41:58 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [586]
+			"18:43:21 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [587]
+			"18:43:21 - UpdatePlayersData()", -- [588]
+			"18:43:21 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [589]
+			"18:43:21 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [590]
+			"18:43:21 - UpdatePlayersData()", -- [591]
+			"18:43:23 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [592]
+			"18:45:30 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [593]
+			"18:45:30 - UpdatePlayersData()", -- [594]
+			"18:47:17 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [595]
+			"18:48:21 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [596]
+			"18:48:21 - UpdatePlayersData()", -- [597]
+			"18:48:22 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [598]
+			"18:48:22 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [599]
+			"18:48:22 - UpdatePlayersData()", -- [600]
+			"18:48:24 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [601]
+			"18:49:24 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [602]
+			"18:49:24 - UpdatePlayersData()", -- [603]
+			"18:50:46 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [604]
+			"18:51:59 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [605]
+			"18:51:59 - UpdatePlayersData()", -- [606]
+			"18:51:59 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [607]
+			"18:51:59 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [608]
+			"18:51:59 - UpdatePlayersData()", -- [609]
+			"18:52:01 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [610]
+			"18:53:34 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [611]
+			"18:53:34 - UpdatePlayersData()", -- [612]
+			"18:55:37 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [613]
+			"18:56:48 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [614]
+			"18:56:48 - UpdatePlayersData()", -- [615]
+			"18:56:48 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [616]
+			"18:56:48 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [617]
+			"18:56:48 - UpdatePlayersData()", -- [618]
+			"18:56:51 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [619]
+			"18:58:48 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [620]
+			"18:58:48 - UpdatePlayersData()", -- [621]
+			"19:00:08 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [622]
+			"19:01:40 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [623]
+			"19:01:40 - UpdatePlayersData()", -- [624]
+			"19:01:40 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [625]
+			"19:01:40 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [626]
+			"19:01:40 - UpdatePlayersData()", -- [627]
+			"19:01:44 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [628]
+			"19:02:39 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [629]
+			"19:02:39 - UpdatePlayersData()", -- [630]
+			"19:04:31 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [631]
+			"19:05:40 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [632]
+			"19:05:40 - UpdatePlayersData()", -- [633]
+			"19:05:40 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [634]
+			"19:05:40 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [635]
+			"19:05:40 - UpdatePlayersData()", -- [636]
+			"19:05:42 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [637]
+			"19:07:05 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [638]
+			"19:07:05 - UpdatePlayersData()", -- [639]
+			"19:08:41 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [640]
+			"19:09:39 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [641]
+			"19:09:39 - UpdatePlayersData()", -- [642]
+			"19:09:39 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [643]
+			"19:09:39 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [644]
+			"19:09:39 - UpdatePlayersData()", -- [645]
+			"19:09:42 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [646]
+			"19:11:08 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [647]
+			"19:11:08 - UpdatePlayersData()", -- [648]
+			"19:12:37 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [649]
+			"19:14:02 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Jwal) (distri:) (GUILD)", -- [650]
+			"19:14:11 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [651]
+			"19:14:11 - UpdatePlayersData()", -- [652]
+			"19:14:11 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [653]
+			"19:14:11 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [654]
+			"19:14:11 - UpdatePlayersData()", -- [655]
+			"19:14:13 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [656]
+			"19:15:13 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [657]
+			"19:15:13 - UpdatePlayersData()", -- [658]
+			"19:16:45 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [659]
+			"19:18:10 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [660]
+			"19:18:10 - UpdatePlayersData()", -- [661]
+			"19:18:10 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [662]
+			"19:18:10 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [663]
+			"19:18:10 - UpdatePlayersData()", -- [664]
+			"19:18:13 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [665]
+			"19:21:37 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [666]
+			"19:21:37 - UpdatePlayersData()", -- [667]
+			"19:23:13 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [668]
+			"19:24:14 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [669]
+			"19:24:14 - UpdatePlayersData()", -- [670]
+			"19:24:14 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [671]
+			"19:24:14 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [672]
+			"19:24:14 - UpdatePlayersData()", -- [673]
+			"19:24:17 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [674]
+			"19:26:04 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [675]
+			"19:26:04 - UpdatePlayersData()", -- [676]
+			"19:27:58 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [677]
+			"19:30:43 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [678]
+			"19:30:43 - UpdatePlayersData()", -- [679]
+			"19:30:43 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [680]
+			"19:30:43 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [681]
+			"19:30:43 - UpdatePlayersData()", -- [682]
+			"19:30:45 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [683]
+			"19:32:20 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [684]
+			"19:32:20 - UpdatePlayersData()", -- [685]
+			"19:33:47 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [686]
+			"19:35:41 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [687]
+			"19:35:41 - UpdatePlayersData()", -- [688]
+			"19:35:41 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [689]
+			"19:35:41 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [690]
+			"19:35:41 - UpdatePlayersData()", -- [691]
+			"19:35:43 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [692]
+			"19:36:42 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [693]
+			"19:36:42 - UpdatePlayersData()", -- [694]
+			"19:38:29 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [695]
+			"19:40:28 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [696]
+			"19:40:28 - UpdatePlayersData()", -- [697]
+			"19:40:28 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [698]
+			"19:40:28 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [699]
+			"19:40:28 - UpdatePlayersData()", -- [700]
+			"19:40:32 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [701]
+			"19:41:43 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [702]
+			"19:41:43 - UpdatePlayersData()", -- [703]
+			"19:43:36 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [704]
+			"19:46:00 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [705]
+			"19:46:00 - UpdatePlayersData()", -- [706]
+			"19:46:00 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [707]
+			"19:46:00 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [708]
+			"19:46:00 - UpdatePlayersData()", -- [709]
+			"19:46:02 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [710]
+			"19:47:09 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [711]
+			"19:47:09 - UpdatePlayersData()", -- [712]
+			"19:48:56 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [713]
+			"19:50:10 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [714]
+			"19:50:10 - UpdatePlayersData()", -- [715]
+			"19:50:10 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [716]
+			"19:50:10 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [717]
+			"19:50:10 - UpdatePlayersData()", -- [718]
+			"19:50:12 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [719]
+			"19:50:34 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Bromsi) (distri:) (GUILD)", -- [720]
+			"19:51:35 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [721]
+			"19:51:35 - UpdatePlayersData()", -- [722]
+			"19:53:17 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [723]
+			"19:55:19 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [724]
+			"19:55:19 - UpdatePlayersData()", -- [725]
+			"19:55:19 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [726]
+			"19:55:19 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [727]
+			"19:55:19 - UpdatePlayersData()", -- [728]
+			"19:55:22 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [729]
+			"19:56:29 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [730]
+			"19:56:29 - UpdatePlayersData()", -- [731]
+			"19:57:51 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [732]
+			"20:02:33 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Exotica) (distri:) (GUILD)", -- [733]
+			"20:03:59 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Dog) (distri:) (GUILD)", -- [734]
+			"20:05:31 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Raycharlezz) (distri:) (GUILD)", -- [735]
+			"20:07:15 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Dog) (distri:) (GUILD)", -- [736]
+			"20:08:06 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Toomuchswag) (distri:) (GUILD)", -- [737]
+			"20:09:29 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Exotica) (distri:) (GUILD)", -- [738]
+			"20:16:52 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [739]
+			"20:16:52 - UpdatePlayersData()", -- [740]
+			"20:16:52 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [741]
+			"20:16:52 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [742]
+			"20:16:52 - UpdatePlayersData()", -- [743]
+			"20:16:55 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [744]
+			"20:18:14 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [745]
+			"20:18:14 - UpdatePlayersData()", -- [746]
+			"20:19:36 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [747]
+			"20:22:12 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [748]
+			"20:22:12 - UpdatePlayersData()", -- [749]
+			"20:22:12 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [750]
+			"20:22:12 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [751]
+			"20:22:12 - UpdatePlayersData()", -- [752]
+			"20:22:14 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [753]
+			"20:23:14 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [754]
+			"20:23:14 - UpdatePlayersData()", -- [755]
+			"20:24:39 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [756]
+			"20:25:58 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [757]
+			"20:25:58 - UpdatePlayersData()", -- [758]
+			"20:26:30 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [759]
+			"20:27:24 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [760]
+			"20:27:24 - UpdatePlayersData()", -- [761]
+			"20:27:24 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [762]
+			"20:27:24 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [763]
+			"20:27:24 - UpdatePlayersData()", -- [764]
+			"20:27:26 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [765]
+			"20:29:11 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [766]
+			"20:29:11 - UpdatePlayersData()", -- [767]
+			"20:31:02 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [768]
+			"20:31:54 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [769]
+			"20:31:54 - UpdatePlayersData()", -- [770]
+			"20:31:54 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [771]
+			"20:31:54 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [772]
+			"20:31:54 - UpdatePlayersData()", -- [773]
+			"20:31:57 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [774]
+			"20:33:34 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [775]
+			"20:33:34 - UpdatePlayersData()", -- [776]
+			"20:33:34 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [777]
+			"20:33:34 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [778]
+			"20:33:34 - UpdatePlayersData()", -- [779]
+			"20:33:37 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [780]
+			"20:34:27 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [781]
+			"20:34:27 - UpdatePlayersData()", -- [782]
+			"20:36:10 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [783]
+			"20:37:46 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [784]
+			"20:37:46 - UpdatePlayersData()", -- [785]
+			"20:37:46 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [786]
+			"20:37:46 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [787]
+			"20:37:46 - UpdatePlayersData()", -- [788]
+			"20:37:48 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [789]
+			"20:39:17 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [790]
+			"20:39:17 - UpdatePlayersData()", -- [791]
+			"20:40:41 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [792]
+			"20:42:05 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [793]
+			"20:42:05 - UpdatePlayersData()", -- [794]
+			"20:42:05 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [795]
+			"20:42:05 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [796]
+			"20:42:05 - UpdatePlayersData()", -- [797]
+			"20:42:08 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [798]
+			"20:42:50 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [799]
+			"20:42:50 - UpdatePlayersData()", -- [800]
+			"20:43:47 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [801]
+			"20:44:40 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [802]
+			"20:44:40 - UpdatePlayersData()", -- [803]
+			"20:44:40 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [804]
+			"20:44:40 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [805]
+			"20:44:40 - UpdatePlayersData()", -- [806]
+			"20:44:42 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [807]
+			"20:45:48 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [808]
+			"20:45:48 - UpdatePlayersData()", -- [809]
+			"20:47:00 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [810]
+			"20:47:54 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [811]
+			"20:47:54 - UpdatePlayersData()", -- [812]
+			"20:47:54 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [813]
+			"20:47:54 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [814]
+			"20:47:54 - UpdatePlayersData()", -- [815]
+			"20:47:56 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [816]
+			"20:48:40 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [817]
+			"20:48:40 - UpdatePlayersData()", -- [818]
+			"20:50:02 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [819]
+			"20:51:50 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [820]
+			"20:51:50 - UpdatePlayersData()", -- [821]
+			"20:51:50 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [822]
+			"20:51:50 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [823]
+			"20:51:50 - UpdatePlayersData()", -- [824]
+			"20:51:53 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [825]
+			"20:52:46 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [826]
+			"20:52:46 - UpdatePlayersData()", -- [827]
+			"20:55:28 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [828]
+			"20:56:31 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [829]
+			"20:56:31 - UpdatePlayersData()", -- [830]
+			"20:56:31 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [831]
+			"20:56:31 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [832]
+			"20:56:31 - UpdatePlayersData()", -- [833]
+			"20:56:34 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [834]
+			"20:57:39 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [835]
+			"20:57:39 - UpdatePlayersData()", -- [836]
+			"20:59:03 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [837]
+			"21:00:23 - Event: (PLAYER_ENTERING_WORLD) (false) (false)", -- [838]
+			"21:00:23 - GetML()", -- [839]
+			"21:01:25 - Event: (PARTY_LEADER_CHANGED)", -- [840]
+			"21:01:25 - GetML()", -- [841]
+			"21:01:25 - Resetting council as we have a new ML!", -- [842]
+			"21:01:25 - MasterLooter =  (Papapound-Illidan)", -- [843]
+			"21:01:40 - Timer MLdb_check passed", -- [844]
+			"21:02:19 - Event: (GROUP_LEFT) (1) (Party-57-0000210794F9)", -- [845]
+			"21:02:19 - GetML()", -- [846]
+			"12/12/18", -- [847]
+			"17:46:12 - Logged In", -- [848]
+			"17:46:12 - ML initialized!", -- [849]
+			"17:46:12 - TradeUI enabled", -- [850]
+			"17:46:23 - Comet-Illidan (2.9.4) (nil)", -- [851]
+			"17:46:23 - ActivateSkin (bfa)", -- [852]
+			"17:46:24 - Event: (PLAYER_ENTERING_WORLD) (true) (false)", -- [853]
+			"17:46:24 - GetML()", -- [854]
+			"17:46:24 - UpdatePlayersData()", -- [855]
+			"17:46:27 - GetPlayersGuildRank()", -- [856]
+			"17:46:27 - Found Guild Rank: Trial", -- [857]
+			"17:46:27 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [858]
+			"17:47:38 - Event: (PARTY_LEADER_CHANGED)", -- [859]
+			"17:47:38 - GetML()", -- [860]
+			"17:47:38 - Resetting council as we have a new ML!", -- [861]
+			"17:47:38 - MasterLooter =  (Ouro-Illidan)", -- [862]
+			"17:47:53 - Timer MLdb_check passed", -- [863]
+			"17:49:24 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Exotica) (distri:) (GUILD)", -- [864]
+			"18:01:13 - Event: (RAID_INSTANCE_WELCOME) (Uldir (Mythic)) (478726) (1) (0)", -- [865]
+			"18:01:14 - Event: (PLAYER_ENTERING_WORLD) (false) (false)", -- [866]
+			"18:01:14 - GetML()", -- [867]
+			"18:09:28 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [868]
+			"18:09:28 - UpdatePlayersData()", -- [869]
+			"18:09:28 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [870]
+			"18:09:28 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [871]
+			"18:09:28 - UpdatePlayersData()", -- [872]
+			"18:09:30 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [873]
+			"18:12:00 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [874]
+			"18:12:00 - UpdatePlayersData()", -- [875]
+			"18:13:31 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [876]
+			"18:13:48 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Bromsi) (distri:) (GUILD)", -- [877]
+			"18:15:07 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [878]
+			"18:15:07 - UpdatePlayersData()", -- [879]
+			"18:15:07 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [880]
+			"18:15:07 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [881]
+			"18:15:07 - UpdatePlayersData()", -- [882]
+			"18:15:11 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [883]
+			"18:16:46 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [884]
+			"18:16:46 - UpdatePlayersData()", -- [885]
+			"18:18:25 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [886]
+			"18:19:28 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [887]
+			"18:19:28 - UpdatePlayersData()", -- [888]
+			"18:19:28 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [889]
+			"18:19:28 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [890]
+			"18:19:28 - UpdatePlayersData()", -- [891]
+			"18:19:30 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [892]
+			"18:21:09 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [893]
+			"18:21:09 - UpdatePlayersData()", -- [894]
+			"18:23:50 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [895]
+			"18:24:59 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [896]
+			"18:24:59 - UpdatePlayersData()", -- [897]
+			"18:24:59 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [898]
+			"18:24:59 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [899]
+			"18:24:59 - UpdatePlayersData()", -- [900]
+			"18:25:02 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [901]
+			"18:26:13 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [902]
+			"18:26:13 - UpdatePlayersData()", -- [903]
+			"18:27:45 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [904]
+			"18:30:02 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [905]
+			"18:30:02 - UpdatePlayersData()", -- [906]
+			"18:30:02 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [907]
+			"18:30:02 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [908]
+			"18:30:02 - UpdatePlayersData()", -- [909]
+			"18:30:06 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [910]
+			"18:30:33 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [911]
+			"18:30:33 - UpdatePlayersData()", -- [912]
+			"18:31:12 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [913]
+			"18:32:12 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [914]
+			"18:32:12 - UpdatePlayersData()", -- [915]
+			"18:32:42 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [916]
+			"18:33:27 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [917]
+			"18:33:27 - UpdatePlayersData()", -- [918]
+			"18:33:27 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [919]
+			"18:33:27 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [920]
+			"18:33:27 - UpdatePlayersData()", -- [921]
+			"18:33:30 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [922]
+			"18:34:29 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [923]
+			"18:34:29 - UpdatePlayersData()", -- [924]
+			"18:36:28 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [925]
+			"18:37:12 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [926]
+			"18:37:12 - UpdatePlayersData()", -- [927]
+			"18:37:12 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [928]
+			"18:37:12 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [929]
+			"18:37:12 - UpdatePlayersData()", -- [930]
+			"18:37:14 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [931]
+			"18:38:19 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [932]
+			"18:38:19 - UpdatePlayersData()", -- [933]
+			"18:41:53 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [934]
+			"18:42:49 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [935]
+			"18:42:49 - UpdatePlayersData()", -- [936]
+			"12/12/18", -- [937]
+			"18:43:33 - Logged In", -- [938]
+			"18:43:33 - ML initialized!", -- [939]
+			"18:43:33 - TradeUI enabled", -- [940]
+			"18:43:36 - Comet-Illidan (2.9.4) (nil)", -- [941]
+			"18:43:36 - ActivateSkin (bfa)", -- [942]
+			"18:43:39 - Event: (PLAYER_ENTERING_WORLD) (true) (false)", -- [943]
+			"18:43:39 - GetML()", -- [944]
+			"18:43:39 - UpdatePlayersData()", -- [945]
+			"18:43:39 - Event: (PARTY_LEADER_CHANGED)", -- [946]
+			"18:43:39 - GetML()", -- [947]
+			"18:43:39 - Unknown ML", -- [948]
+			"18:43:42 - GetPlayersGuildRank()", -- [949]
+			"18:43:42 - Found Guild Rank: Trial", -- [950]
+			"18:43:42 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [951]
+			"18:43:42 - GetML()", -- [952]
+			"18:43:42 - Resetting council as we have a new ML!", -- [953]
+			"18:43:42 - MasterLooter =  (Ouro-Illidan)", -- [954]
+			"18:43:57 - Timer MLdb_check passed", -- [955]
+			"18:46:58 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [956]
+			"18:46:58 - UpdatePlayersData()", -- [957]
+			"18:46:59 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [958]
+			"18:46:59 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [959]
+			"18:46:59 - UpdatePlayersData()", -- [960]
+			"18:47:01 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [961]
+			"18:48:07 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [962]
+			"18:48:07 - UpdatePlayersData()", -- [963]
+			"18:52:03 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [964]
+			"12/12/18", -- [965]
+			"18:53:11 - Logged In", -- [966]
+			"18:53:11 - ML initialized!", -- [967]
+			"18:53:11 - TradeUI enabled", -- [968]
+			"18:53:15 - Comet-Illidan (2.9.4) (nil)", -- [969]
+			"18:53:15 - ActivateSkin (bfa)", -- [970]
+			"18:53:18 - Event: (PLAYER_ENTERING_WORLD) (true) (false)", -- [971]
+			"18:53:18 - GetML()", -- [972]
+			"18:53:18 - UpdatePlayersData()", -- [973]
+			"18:53:18 - GetPlayersGuildRank()", -- [974]
+			"18:53:18 - GetPlayersGuildRank()", -- [975]
+			"18:53:18 - Event: (PARTY_LEADER_CHANGED)", -- [976]
+			"18:53:18 - GetML()", -- [977]
+			"18:53:18 - Unknown ML", -- [978]
+			"18:53:21 - GetPlayersGuildRank()", -- [979]
+			"18:53:21 - Found Guild Rank: Trial", -- [980]
+			"18:53:21 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [981]
+			"18:53:21 - GetML()", -- [982]
+			"18:53:21 - Resetting council as we have a new ML!", -- [983]
+			"18:53:21 - MasterLooter =  (Ouro-Illidan)", -- [984]
+			"18:53:36 - Timer MLdb_check passed", -- [985]
+			"18:57:22 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [986]
+			"18:57:22 - UpdatePlayersData()", -- [987]
+			"18:57:22 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [988]
+			"18:57:22 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [989]
+			"18:57:22 - UpdatePlayersData()", -- [990]
+			"18:57:24 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [991]
+			"18:58:45 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [992]
+			"18:58:45 - UpdatePlayersData()", -- [993]
+			"19:00:53 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [994]
+			"19:02:34 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Raycharlezz) (distri:) (GUILD)", -- [995]
+			"19:02:55 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [996]
+			"19:02:55 - UpdatePlayersData()", -- [997]
+			"19:04:45 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [998]
+			"19:05:56 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [999]
+			"19:05:56 - UpdatePlayersData()", -- [1000]
+			"19:05:56 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1001]
+			"19:05:56 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1002]
+			"19:05:56 - UpdatePlayersData()", -- [1003]
+			"19:05:59 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1004]
+			"19:07:23 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1005]
+			"19:07:23 - UpdatePlayersData()", -- [1006]
+			"19:11:05 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1007]
+			"19:11:05 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1008]
+			"19:11:05 - UpdatePlayersData()", -- [1009]
+			"19:11:08 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1010]
+			"19:13:28 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1011]
+			"19:13:28 - UpdatePlayersData()", -- [1012]
+			"19:13:28 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1013]
+			"19:13:28 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1014]
+			"19:13:28 - UpdatePlayersData()", -- [1015]
+			"19:13:31 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1016]
+			"19:14:47 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1017]
+			"19:14:47 - UpdatePlayersData()", -- [1018]
+			"19:16:24 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1019]
+			"19:17:21 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1020]
+			"19:17:21 - UpdatePlayersData()", -- [1021]
+			"19:17:22 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1022]
+			"19:17:22 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1023]
+			"19:17:22 - UpdatePlayersData()", -- [1024]
+			"19:17:24 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1025]
+			"19:19:10 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1026]
+			"19:19:10 - UpdatePlayersData()", -- [1027]
+			"19:20:56 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1028]
+			"19:21:58 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1029]
+			"19:21:58 - UpdatePlayersData()", -- [1030]
+			"19:21:58 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1031]
+			"19:21:58 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1032]
+			"19:21:58 - UpdatePlayersData()", -- [1033]
+			"19:22:02 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1034]
+			"19:23:14 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1035]
+			"19:23:14 - UpdatePlayersData()", -- [1036]
+			"19:24:58 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1037]
+			"19:26:35 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1038]
+			"19:26:35 - UpdatePlayersData()", -- [1039]
+			"19:26:35 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1040]
+			"19:26:35 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1041]
+			"19:26:35 - UpdatePlayersData()", -- [1042]
+			"19:26:37 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1043]
+			"19:28:04 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1044]
+			"19:28:04 - UpdatePlayersData()", -- [1045]
+			"19:29:50 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1046]
+			"19:31:39 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1047]
+			"19:31:39 - UpdatePlayersData()", -- [1048]
+			"19:31:39 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1049]
+			"19:31:39 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1050]
+			"19:31:39 - UpdatePlayersData()", -- [1051]
+			"19:31:42 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1052]
+			"19:32:40 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1053]
+			"19:32:40 - UpdatePlayersData()", -- [1054]
+			"19:32:40 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1055]
+			"19:32:40 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1056]
+			"19:32:40 - UpdatePlayersData()", -- [1057]
+			"19:32:42 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1058]
+			"19:34:26 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1059]
+			"19:34:26 - UpdatePlayersData()", -- [1060]
+			"19:36:03 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1061]
+			"19:36:55 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1062]
+			"19:36:55 - UpdatePlayersData()", -- [1063]
+			"19:36:56 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1064]
+			"19:36:56 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1065]
+			"19:36:56 - UpdatePlayersData()", -- [1066]
+			"19:36:59 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1067]
+			"19:38:07 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1068]
+			"19:38:07 - UpdatePlayersData()", -- [1069]
+			"19:42:17 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1070]
+			"19:43:13 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1071]
+			"19:43:13 - UpdatePlayersData()", -- [1072]
+			"19:43:13 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1073]
+			"19:43:13 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1074]
+			"19:43:13 - UpdatePlayersData()", -- [1075]
+			"19:43:15 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1076]
+			"19:45:56 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1077]
+			"19:45:56 - UpdatePlayersData()", -- [1078]
+			"19:47:54 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1079]
+			"19:48:55 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1080]
+			"19:48:55 - UpdatePlayersData()", -- [1081]
+			"19:48:55 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1082]
+			"19:48:55 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1083]
+			"19:48:55 - UpdatePlayersData()", -- [1084]
+			"19:48:56 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Dog) (distri:) (GUILD)", -- [1085]
+			"19:48:58 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1086]
+			"19:49:40 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1087]
+			"19:49:40 - UpdatePlayersData()", -- [1088]
+			"19:49:40 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1089]
+			"19:49:40 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1090]
+			"19:49:40 - UpdatePlayersData()", -- [1091]
+			"19:49:43 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1092]
+			"19:50:42 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1093]
+			"19:50:42 - UpdatePlayersData()", -- [1094]
+			"19:52:10 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1095]
+			"19:53:13 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1096]
+			"19:53:13 - UpdatePlayersData()", -- [1097]
+			"19:53:13 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1098]
+			"19:53:13 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1099]
+			"19:53:13 - UpdatePlayersData()", -- [1100]
+			"19:53:16 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1101]
+			"19:54:33 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1102]
+			"19:54:33 - UpdatePlayersData()", -- [1103]
+			"19:56:38 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1104]
+			"12/12/18", -- [1105]
+			"20:02:54 - Logged In", -- [1106]
+			"20:02:54 - ML initialized!", -- [1107]
+			"20:02:54 - TradeUI enabled", -- [1108]
+			"20:02:58 - Comet-Illidan (2.9.4) (nil)", -- [1109]
+			"20:02:58 - ActivateSkin (bfa)", -- [1110]
+			"20:03:01 - Event: (PLAYER_ENTERING_WORLD) (true) (false)", -- [1111]
+			"20:03:01 - GetML()", -- [1112]
+			"20:03:01 - UpdatePlayersData()", -- [1113]
+			"20:03:04 - GetPlayersGuildRank()", -- [1114]
+			"20:03:04 - Found Guild Rank: Trial", -- [1115]
+			"20:03:04 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1116]
+			"20:03:04 - Event: (PARTY_LEADER_CHANGED)", -- [1117]
+			"20:03:04 - GetML()", -- [1118]
+			"20:03:04 - Resetting council as we have a new ML!", -- [1119]
+			"20:03:04 - MasterLooter =  (Ouro-Illidan)", -- [1120]
+			"12/12/18", -- [1121]
+			"20:04:44 - Logged In", -- [1122]
+			"20:04:44 - ML initialized!", -- [1123]
+			"20:04:44 - TradeUI enabled", -- [1124]
+			"20:04:48 - Comet-Illidan (2.9.4) (nil)", -- [1125]
+			"20:04:48 - ActivateSkin (bfa)", -- [1126]
+			"20:04:51 - Event: (PLAYER_ENTERING_WORLD) (true) (false)", -- [1127]
+			"20:04:51 - GetML()", -- [1128]
+			"20:04:51 - UpdatePlayersData()", -- [1129]
+			"20:04:54 - GetPlayersGuildRank()", -- [1130]
+			"20:04:54 - Found Guild Rank: Trial", -- [1131]
+			"20:04:54 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1132]
+			"20:04:54 - Event: (PARTY_LEADER_CHANGED)", -- [1133]
+			"20:04:54 - GetML()", -- [1134]
+			"20:04:54 - Resetting council as we have a new ML!", -- [1135]
+			"20:04:54 - MasterLooter =  (Ouro-Illidan)", -- [1136]
+			"20:05:09 - Timer MLdb_check passed", -- [1137]
+			"20:07:28 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1138]
+			"20:07:28 - UpdatePlayersData()", -- [1139]
+			"20:07:28 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1140]
+			"20:07:28 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1141]
+			"20:07:28 - UpdatePlayersData()", -- [1142]
+			"20:07:31 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1143]
+			"20:08:09 - TradeUI: Traded item(s) to (Ouro-Illidan)", -- [1144]
+			"20:08:09 - TradeUI:Show() (nil)", -- [1145]
+			"20:08:09 - TradeUI:Hide()", -- [1146]
+			"20:12:53 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1147]
+			"20:12:53 - UpdatePlayersData()", -- [1148]
+			"20:15:12 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1149]
+			"20:15:49 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1150]
+			"20:15:49 - UpdatePlayersData()", -- [1151]
+			"20:15:49 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1152]
+			"20:15:49 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1153]
+			"20:15:49 - UpdatePlayersData()", -- [1154]
+			"20:15:52 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1155]
+			"20:16:51 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1156]
+			"20:16:51 - UpdatePlayersData()", -- [1157]
+			"20:20:09 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1158]
+			"20:21:28 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1159]
+			"20:21:28 - UpdatePlayersData()", -- [1160]
+			"20:21:28 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1161]
+			"20:21:28 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1162]
+			"20:21:28 - UpdatePlayersData()", -- [1163]
+			"20:21:31 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1164]
+			"20:22:30 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1165]
+			"20:22:30 - UpdatePlayersData()", -- [1166]
+			"20:24:47 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1167]
+			"20:24:47 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1168]
+			"20:24:47 - UpdatePlayersData()", -- [1169]
+			"20:24:50 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1170]
+			"20:26:21 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1171]
+			"20:26:21 - UpdatePlayersData()", -- [1172]
+			"20:26:49 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1173]
+			"20:27:23 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1174]
+			"20:27:23 - UpdatePlayersData()", -- [1175]
+			"20:27:49 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1176]
+			"20:29:19 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1177]
+			"20:29:19 - UpdatePlayersData()", -- [1178]
+			"20:29:19 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1179]
+			"20:29:19 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1180]
+			"20:29:19 - UpdatePlayersData()", -- [1181]
+			"20:29:21 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1182]
+			"20:30:34 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1183]
+			"20:30:34 - UpdatePlayersData()", -- [1184]
+			"20:34:25 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1185]
+			"20:34:25 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1186]
+			"20:34:25 - UpdatePlayersData()", -- [1187]
+			"20:34:28 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1188]
+			"20:35:08 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1189]
+			"20:35:08 - UpdatePlayersData()", -- [1190]
+			"20:35:08 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1191]
+			"20:35:08 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1192]
+			"20:35:08 - UpdatePlayersData()", -- [1193]
+			"20:35:11 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1194]
+			"20:37:26 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1195]
+			"20:37:26 - UpdatePlayersData()", -- [1196]
+			"20:38:37 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1197]
+			"20:39:11 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1198]
+			"20:39:11 - UpdatePlayersData()", -- [1199]
+			"20:39:11 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1200]
+			"20:39:11 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1201]
+			"20:39:11 - UpdatePlayersData()", -- [1202]
+			"20:39:13 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1203]
+			"20:40:04 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1204]
+			"20:40:04 - UpdatePlayersData()", -- [1205]
+			"20:41:19 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1206]
+			"20:42:13 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1207]
+			"20:42:13 - UpdatePlayersData()", -- [1208]
+			"20:42:13 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1209]
+			"20:42:13 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1210]
+			"20:42:13 - UpdatePlayersData()", -- [1211]
+			"20:42:16 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1212]
+			"20:43:11 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1213]
+			"20:43:11 - UpdatePlayersData()", -- [1214]
+			"20:46:44 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1215]
+			"20:46:44 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1216]
+			"20:46:44 - UpdatePlayersData()", -- [1217]
+			"20:46:46 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1218]
+			"20:48:37 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1219]
+			"20:48:37 - UpdatePlayersData()", -- [1220]
+			"20:52:01 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1221]
+			"20:52:01 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1222]
+			"20:52:01 - UpdatePlayersData()", -- [1223]
+			"20:52:03 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1224]
+			"20:52:03 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1225]
+			"20:52:03 - UpdatePlayersData()", -- [1226]
+			"20:52:05 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1227]
+			"20:54:34 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1228]
+			"20:54:34 - UpdatePlayersData()", -- [1229]
+			"20:56:48 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1230]
+			"20:57:19 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1231]
+			"20:57:19 - UpdatePlayersData()", -- [1232]
+			"20:57:45 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1233]
+			"20:58:21 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1234]
+			"20:58:21 - UpdatePlayersData()", -- [1235]
+			"20:58:21 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1236]
+			"20:58:21 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1237]
+			"20:58:21 - UpdatePlayersData()", -- [1238]
+			"20:58:24 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1239]
+			"20:59:28 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1240]
+			"20:59:28 - UpdatePlayersData()", -- [1241]
+			"21:01:40 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1242]
+			"21:02:13 - Event: (PLAYER_ENTERING_WORLD) (false) (false)", -- [1243]
+			"21:02:13 - GetML()", -- [1244]
+			"21:02:45 - Event: (GROUP_LEFT) (1) (Party-57-0000210AEE24)", -- [1245]
+			"21:02:45 - GetML()", -- [1246]
+			"21:04:46 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Toomuchswag) (distri:) (GUILD)", -- [1247]
+			"12/16/18", -- [1248]
+			"16:51:15 - Logged In", -- [1249]
+			"16:51:15 - ML initialized!", -- [1250]
+			"16:51:15 - TradeUI enabled", -- [1251]
+			"16:51:24 - Comet-Illidan (2.9.4) (nil)", -- [1252]
+			"16:51:24 - ActivateSkin (bfa)", -- [1253]
+			"16:51:27 - Event: (PLAYER_ENTERING_WORLD) (true) (false)", -- [1254]
+			"16:51:27 - GetML()", -- [1255]
+			"16:51:27 - UpdatePlayersData()", -- [1256]
+			"16:51:30 - GetPlayersGuildRank()", -- [1257]
+			"16:51:30 - Found Guild Rank: Trial", -- [1258]
+			"16:51:30 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1259]
+			"16:54:53 - Event: (PARTY_LEADER_CHANGED)", -- [1260]
+			"16:54:53 - GetML()", -- [1261]
+			"16:54:53 - Unknown ML", -- [1262]
+			"16:54:54 - GetML()", -- [1263]
+			"16:54:54 - Resetting council as we have a new ML!", -- [1264]
+			"16:54:54 - MasterLooter =  (Nunbart-Kil'jaeden)", -- [1265]
+			"16:55:08 - Timer MLdb_check passed", -- [1266]
+			"16:55:09 - Comm received:^1^Sxrealm^T^N1^SNunbart-Kil'jaeden^N2^SMLdb_request^t^^ (from:) (Comet) (distri:) (RAID)", -- [1267]
+			"16:55:09 - Comm received:^1^Sxrealm^T^N1^SNunbart-Kil'jaeden^N2^Scouncil_request^t^^ (from:) (Comet) (distri:) (RAID)", -- [1268]
+			"16:55:50 - Comm received:^1^Sxrealm^T^N1^SNunbart-Kil'jaeden^N2^SMLdb_request^t^^ (from:) (Fousto-Thrall) (distri:) (RAID)", -- [1269]
+			"16:55:50 - Comm received:^1^Sxrealm^T^N1^SNunbart-Kil'jaeden^N2^Scouncil_request^t^^ (from:) (Fousto-Thrall) (distri:) (RAID)", -- [1270]
+			"16:59:02 - Event: (RAID_INSTANCE_WELCOME) (Uldir (Heroic)) (136857) (0) (0)", -- [1271]
+			"16:59:02 - Event: (PLAYER_ENTERING_WORLD) (false) (false)", -- [1272]
+			"16:59:02 - GetML()", -- [1273]
+			"17:00:12 - Event: (ENCOUNTER_START) (2135) (Mythrax) (15) (20)", -- [1274]
+			"17:00:12 - UpdatePlayersData()", -- [1275]
+			"17:06:22 - Event: (ENCOUNTER_END) (2135) (Mythrax) (15) (20) (1)", -- [1276]
+			"17:06:24 - Comm received:^1^Slooted^T^N1^S134546^t^^ (from:) (Fkzul-Kil'jaeden) (distri:) (RAID)", -- [1277]
+			"17:06:24 - false = (IsCouncil) (Comet-Illidan)", -- [1278]
+			"17:06:25 - Event: (ENCOUNTER_LOOT_RECEIVED) (2135) (160692) (|cffa335ee|Hitem:160692::::::::120:269::5:4:4799:41:1497:4783:::|h[Luminous Edge of Virtue]|h|r) (1) (Tributin-Area52) (PALADIN)", -- [1279]
+			"17:06:25 - Comm received:^1^Slooted^T^N1^S134546^t^^ (from:) (Tributin-Area52) (distri:) (RAID)", -- [1280]
+			"17:06:25 - false = (IsCouncil) (Comet-Illidan)", -- [1281]
+			"17:06:25 - Comm received:^1^Slooted^T^N1^S134546^t^^ (from:) (Shystuff-Kil'jaeden) (distri:) (RAID)", -- [1282]
+			"17:06:25 - false = (IsCouncil) (Comet-Illidan)", -- [1283]
+			"17:06:25 - Event: (LOOT_READY) (true)", -- [1284]
+			"17:06:25 - Adding to self.lootSlotInfo (1) (nil) (1) (Vehicle-0-3022-1861-21034-134546-000016F36D) (590616)", -- [1285]
+			"17:06:25 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Famemonstér) (distri:) (GUILD)", -- [1286]
+			"17:06:25 - Event: (LOOT_OPENED) (true)", -- [1287]
+			"17:06:25 - Event: (LOOT_READY) (true)", -- [1288]
+			"17:06:25 - Adding to self.lootSlotInfo (1) (nil) (1) (Vehicle-0-3022-1861-21034-134546-000016F36D) (590616)", -- [1289]
+			"17:06:26 - Event: (ENCOUNTER_LOOT_RECEIVED) (2135) (160646) (|cffa335ee|Hitem:160646::::::::120:269::5:3:4799:1492:4786:::|h[Band of Certain Annihilation]|h|r) (1) (Bubb-TheForgottenCoast) (ROGUE)", -- [1290]
+			"17:06:26 - OnLootSlotCleared() (1) (nil) (1)", -- [1291]
+			"17:06:26 - Event: (LOOT_CLOSED)", -- [1292]
+			"17:06:26 - Comm received:^1^Slooted^T^N1^S134546^t^^ (from:) (Comet) (distri:) (RAID)", -- [1293]
+			"17:06:26 - false = (IsCouncil) (Comet-Illidan)", -- [1294]
+			"17:06:27 - Comm received:^1^Snot_tradeable^T^N1^S|cffa335ee|Hitem:160692::::::::120:70::5:4:4799:41:1497:4783:::|h[Luminous~`Edge~`of~`Virtue]|h|r^N2^S134546^t^^ (from:) (Tributin-Area52) (distri:) (RAID)", -- [1295]
+			"17:06:27 - Comm received:^1^Slooted^T^N1^S134546^t^^ (from:) (Psylidan-Kil'jaeden) (distri:) (RAID)", -- [1296]
+			"17:06:27 - false = (IsCouncil) (Comet-Illidan)", -- [1297]
+			"17:06:27 - Event: (ENCOUNTER_LOOT_RECEIVED) (2135) (160725) (|cffa335ee|Hitem:160725::::::::120:269::5:4:4823:1492:4786:5398:::|h[C'thraxxi General's Hauberk]|h|r) (1) (Zappiiboii-Mal'Ganis) (SHAMAN)", -- [1298]
+			"17:06:29 - Comm received:^1^Slooted^T^N1^S134546^t^^ (from:) (Eosan) (distri:) (RAID)", -- [1299]
+			"17:06:29 - false = (IsCouncil) (Comet-Illidan)", -- [1300]
+			"17:06:30 - Event: (ENCOUNTER_LOOT_RECEIVED) (2135) (160646) (|cffa335ee|Hitem:160646::::::::120:269::5:4:4799:41:1492:4786:::|h[Band of Certain Annihilation]|h|r) (1) (Ancientsfury-Tichondrius) (DRUID)", -- [1301]
+			"17:06:30 - Event: (ENCOUNTER_LOOT_RECEIVED) (2135) (160656) (|cffa335ee|Hitem:160656::::::::120:269::5:4:4799:1808:1492:4786:::|h[Twitching Tentacle of Xalzaix]|h|r) (1) (Sakiko-Kil'jaeden) (WARLOCK)", -- [1302]
+			"17:10:04 - Event: (PARTY_LEADER_CHANGED)", -- [1303]
+			"17:10:04 - GetML()", -- [1304]
+			"17:10:04 - Resetting council as we have a new ML!", -- [1305]
+			"17:10:04 - MasterLooter =  (Psylidan-Kil'jaeden)", -- [1306]
+			"17:10:04 - Comm received:^1^SplayerInfoRequest^T^t^^ (from:) (Psylidan-Kil'jaeden) (distri:) (RAID)", -- [1307]
+			"17:10:04 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sresponses^T^Sdefault^T^t^t^SmultiVote^B^Sbuttons^T^Sdefault^T^t^t^SnumButtons^N3^t^t^^ (from:) (Psylidan-Kil'jaeden) (distri:) (RAID)", -- [1308]
+			"17:10:04 - OnMLDBReceived", -- [1309]
+			"17:10:04 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sresponses^T^Sdefault^T^t^t^SmultiVote^B^Sbuttons^T^Sdefault^T^t^t^SnumButtons^N3^t^t^^ (from:) (Psylidan-Kil'jaeden) (distri:) (RAID)", -- [1310]
+			"17:10:04 - OnMLDBReceived", -- [1311]
+			"17:10:04 - Comm received:^1^Scandidates^T^N1^T^SBubb-TheForgottenCoast^T^Srole^SDAMAGER^Sclass^SROGUE^Srank^S^t^SIshtana-Tanaris^T^Srole^SHEALER^Sclass^SPRIEST^Srank^S^t^SPsylidan-Kil'jaeden^T^Srole^SDAMAGER^Sclass^SDEMONHUNTER^Srank^S^t^SComet-Illidan^T^Srole^SHEALER^Sclass^SMONK^Srank^S^t^SRagknaros-Ragnaros^T^Srole^SDAMAGER^Sclass^SPALADIN^Srank^S^t^SZappiiboii-Mal'Ganis^T^Srole^SDAMAGER^Sclass^SSHAMAN^Srank^S^t^SSakiko-Kil'jaeden^T^Srole^SDAMAGER^Sclass^SWARLOCK^Srank^S^t^t^t^^ (from:) (Psylidan-Kil'jaeden) (distri:) (RAID)", -- [1312]
+			"17:10:04 - Comm received:^1^Scouncil^T^N1^T^N1^SPsylidan-Kil'jaeden^t^t^^ (from:) (Psylidan-Kil'jaeden) (distri:) (RAID)", -- [1313]
+			"17:10:04 - false = (IsCouncil) (Comet-Illidan)", -- [1314]
+			"17:10:05 - Comm received:^1^Sxrealm^T^N1^SPsylidan-Kil'jaeden^N2^SplayerInfo^N3^SComet-Illidan^N4^SMONK^N5^SHEALER^N6^STrial^N8^N0^N9^N380.1875^N10^N269^t^^ (from:) (Comet) (distri:) (RAID)", -- [1315]
+			"17:10:14 - Comm received:^1^Scouncil^T^N1^T^N1^SPsylidan-Kil'jaeden^t^t^^ (from:) (Psylidan-Kil'jaeden) (distri:) (RAID)", -- [1316]
+			"17:10:14 - false = (IsCouncil) (Comet-Illidan)", -- [1317]
+			"17:10:14 - Comm received:^1^Scandidates^T^N1^T^SBubb-TheForgottenCoast^T^Srole^SDAMAGER^Sclass^SROGUE^Srank^S^t^SIshtana-Tanaris^T^Srole^SHEALER^Sclass^SPRIEST^Srank^S^t^SPsylidan-Kil'jaeden^T^Srole^SDAMAGER^SspecID^N577^Senchant_lvl^N0^Sclass^SDEMONHUNTER^Srank^SMember^t^SComet-Illidan^T^Srole^SHEALER^SspecID^N269^Senchant_lvl^N0^Sclass^SMONK^Srank^STrial^t^SRagknaros-Ragnaros^T^Srole^SDAMAGER^Sclass^SPALADIN^Srank^S^t^SZappiiboii-Mal'Ganis^T^Srole^SDAMAGER^Sclass^SSHAMAN^Srank^S^t^SSakiko-Kil'jaeden^T^Srole^SDAMAGER^Sclass^SWARLOCK^Srank^S^t^t^t^^ (from:) (Psylidan-Kil'jaeden) (distri:) (RAID)", -- [1318]
+			"17:10:18 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sresponses^T^Sdefault^T^t^t^SmultiVote^B^Sbuttons^T^Sdefault^T^t^t^SnumButtons^N3^t^t^^ (from:) (Psylidan-Kil'jaeden) (distri:) (RAID)", -- [1319]
+			"17:10:18 - OnMLDBReceived", -- [1320]
+			"17:10:18 - Comm received:^1^Scandidates^T^N1^T^SBubb-TheForgottenCoast^T^Srole^SDAMAGER^Sclass^SROGUE^Srank^S^t^SIshtana-Tanaris^T^Srole^SHEALER^Sclass^SPRIEST^Srank^S^t^SPsylidan-Kil'jaeden^T^Srole^SDAMAGER^SspecID^N577^Senchant_lvl^N0^Sclass^SDEMONHUNTER^Srank^SMember^t^SComet-Illidan^T^Srole^SHEALER^SspecID^N269^Senchant_lvl^N0^Sclass^SMONK^Srank^STrial^t^SRagknaros-Ragnaros^T^Srole^SDAMAGER^Sclass^SPALADIN^Srank^S^t^SZappiiboii-Mal'Ganis^T^Srole^SDAMAGER^Sclass^SSHAMAN^Srank^S^t^t^t^^ (from:) (Psylidan-Kil'jaeden) (distri:) (RAID)", -- [1321]
+			"17:10:19 - Timer MLdb_check passed", -- [1322]
+			"17:10:28 - Comm received:^1^SMLdb^T^N1^T^SallowNotes^B^Stimeout^N60^SselfVote^B^Sresponses^T^Sdefault^T^t^t^SmultiVote^B^Sbuttons^T^Sdefault^T^t^t^SnumButtons^N3^t^t^^ (from:) (Psylidan-Kil'jaeden) (distri:) (RAID)", -- [1323]
+			"17:10:28 - OnMLDBReceived", -- [1324]
+			"17:10:28 - Comm received:^1^Scandidates^T^N1^T^SBubb-TheForgottenCoast^T^Srole^SDAMAGER^Sclass^SROGUE^Srank^S^t^SPsylidan-Kil'jaeden^T^Srole^SDAMAGER^SspecID^N577^Senchant_lvl^N0^Sclass^SDEMONHUNTER^Srank^SMember^t^SComet-Illidan^T^Srole^SHEALER^SspecID^N269^Senchant_lvl^N0^Sclass^SMONK^Srank^STrial^t^SZappiiboii-Mal'Ganis^T^Srole^SDAMAGER^Sclass^SSHAMAN^Srank^S^t^t^t^^ (from:) (Psylidan-Kil'jaeden) (distri:) (RAID)", -- [1325]
+			"17:10:40 - Event: (PLAYER_ENTERING_WORLD) (false) (false)", -- [1326]
+			"17:10:40 - GetML()", -- [1327]
+			"17:10:51 - Event: (GROUP_LEFT) (1) (Party-9-000027EDF678)", -- [1328]
+			"17:10:51 - GetML()", -- [1329]
+			"17:14:51 - Event: (PARTY_LEADER_CHANGED)", -- [1330]
+			"17:14:51 - GetML()", -- [1331]
+			"17:14:51 - Unknown ML", -- [1332]
+			"17:14:52 - GetML()", -- [1333]
+			"17:14:52 - Resetting council as we have a new ML!", -- [1334]
+			"17:14:52 - MasterLooter =  (Bromasta-BleedingHollow)", -- [1335]
+			"17:15:07 - Timer MLdb_check passed", -- [1336]
+			"17:15:07 - Comm received:^1^Sxrealm^T^N1^SBromasta-BleedingHollow^N2^Scouncil_request^t^^ (from:) (Comet) (distri:) (PARTY)", -- [1337]
+			"17:16:11 - Event: (LOOT_READY) (true)", -- [1338]
+			"17:16:11 - Event: (LOOT_OPENED) (true)", -- [1339]
+			"17:16:11 - Event: (LOOT_READY) (true)", -- [1340]
+			"17:17:13 - Event: (LOOT_READY) (true)", -- [1341]
+			"17:17:13 - Event: (LOOT_OPENED) (true)", -- [1342]
+			"17:17:13 - Event: (LOOT_READY) (true)", -- [1343]
+			"17:19:47 - Event: (LOOT_READY) (true)", -- [1344]
+			"17:19:48 - Event: (LOOT_OPENED) (true)", -- [1345]
+			"17:19:48 - Event: (LOOT_READY) (true)", -- [1346]
+			"17:21:30 - Event: (LOOT_READY) (true)", -- [1347]
+			"17:21:30 - Event: (LOOT_OPENED) (true)", -- [1348]
+			"17:21:30 - Event: (LOOT_READY) (true)", -- [1349]
+			"17:26:08 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Famemonstér) (distri:) (GUILD)", -- [1350]
+			"17:26:29 - Event: (RAID_INSTANCE_WELCOME) (Temple of Sethraliss (Mythic)) (135210) (0) (0)", -- [1351]
+			"17:26:30 - Event: (PLAYER_ENTERING_WORLD) (false) (false)", -- [1352]
+			"17:26:30 - GetML()", -- [1353]
+			"17:32:13 - Event: (ENCOUNTER_START) (2124) (Adderis and Aspix) (8) (5)", -- [1354]
+			"17:32:13 - UpdatePlayersData()", -- [1355]
+			"17:34:06 - Event: (ENCOUNTER_END) (2124) (Adderis and Aspix) (8) (5) (1)", -- [1356]
+			"17:41:58 - Event: (ENCOUNTER_START) (2125) (Merektha) (8) (5)", -- [1357]
+			"17:41:58 - UpdatePlayersData()", -- [1358]
+			"17:44:04 - Event: (ENCOUNTER_END) (2125) (Merektha) (8) (5) (1)", -- [1359]
+			"17:48:29 - Event: (ENCOUNTER_START) (2126) (Galvazzt) (8) (5)", -- [1360]
+			"17:48:29 - UpdatePlayersData()", -- [1361]
+			"17:49:59 - Event: (ENCOUNTER_END) (2126) (Galvazzt) (8) (5) (1)", -- [1362]
+			"17:55:43 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Raycharlezz) (distri:) (GUILD)", -- [1363]
+			"17:59:16 - Event: (ENCOUNTER_START) (2127) (Avatar of Sethraliss) (8) (5)", -- [1364]
+			"17:59:16 - UpdatePlayersData()", -- [1365]
+			"18:02:41 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Raycharlezz) (distri:) (GUILD)", -- [1366]
+			"18:03:08 - Event: (ENCOUNTER_END) (2127) (Avatar of Sethraliss) (8) (5) (1)", -- [1367]
+			"18:03:27 - Event: (LOOT_READY) (true)", -- [1368]
+			"18:03:27 - Adding to self.lootSlotInfo (1) (|cffa335ee|Hitem:158923::::::::120:269:4063232:::247:8:10:5:14:::|h[Mythic Keystone]|h|r) (4) (GameObject-0-3779-1877-29878-290758-00001703DD) (1)", -- [1369]
+			"18:03:27 - Adding to self.lootSlotInfo (3) (|cff0070dd|Hcurrency:1553:270|h[Glowing Azerite Crystal]|h|r) (6) (GameObject-0-3779-1877-29878-290758-00001703DD) (270)", -- [1370]
+			"18:03:27 - Event: (LOOT_OPENED) (true)", -- [1371]
+			"18:03:27 - Event: (LOOT_READY) (true)", -- [1372]
+			"18:03:27 - Adding to self.lootSlotInfo (1) (|cffa335ee|Hitem:158923::::::::120:269:4063232:::247:8:10:5:14:::|h[Mythic Keystone]|h|r) (4) (GameObject-0-3779-1877-29878-290758-00001703DD) (1)", -- [1373]
+			"18:03:27 - Adding to self.lootSlotInfo (3) (|cff0070dd|Hcurrency:1553:270|h[Glowing Azerite Crystal]|h|r) (6) (GameObject-0-3779-1877-29878-290758-00001703DD) (270)", -- [1374]
+			"18:03:28 - OnLootSlotCleared() (1) (|cffa335ee|Hitem:158923::::::::120:269:4063232:::247:8:10:5:14:::|h[Mythic Keystone]|h|r) (4)", -- [1375]
+			"18:03:28 - Event: (ENCOUNTER_LOOT_RECEIVED) (2127) (158923) (|cffa335ee|Hitem:158923::::::::120:269:4063232:::247:8:10:5:14:::|h[Mythic Keystone]|h|r) (1) (Comet) (MONK)", -- [1376]
+			"18:03:28 - OnLootSlotCleared() (3) (|cff0070dd|Hcurrency:1553:270|h[Glowing Azerite Crystal]|h|r) (6)", -- [1377]
+			"18:03:28 - Event: (LOOT_CLOSED)", -- [1378]
+			"18:03:28 - Comm received:^1^Slooted^T^N1^S290758^t^^ (from:) (Comet) (distri:) (PARTY)", -- [1379]
+			"18:03:28 - false = (IsCouncil) (Comet-Illidan)", -- [1380]
+			"18:03:29 - Event: (ENCOUNTER_LOOT_RECEIVED) (2127) (159337) (|cffa335ee|Hitem:159337::::::::120:269::16:4:5009:42:1537:4786:::|h[Grips of Electrified Defense]|h|r) (1) (Primalex-BleedingHollow) (DEMONHUNTER)", -- [1381]
+			"18:03:30 - Event: (ENCOUNTER_LOOT_RECEIVED) (2127) (159263) (|cffa335ee|Hitem:159263::::::::120:269::16:3:5009:1537:4786:::|h[Bindings of the Slithering Current]|h|r) (1) (Darkendangél) (PRIEST)", -- [1382]
+			"18:03:30 - UpdateAndSendRecentTradableItem: Didn't find item on try  (1)", -- [1383]
+			"18:03:30 - UpdateAndSendRecentTradableItem: Didn't find item on try  (1)", -- [1384]
+			"18:03:31 - UpdateAndSendRecentTradableItem: Didn't find item on try  (2)", -- [1385]
+			"18:03:31 - UpdateAndSendRecentTradableItem: Didn't find item on try  (2)", -- [1386]
+			"18:03:32 - UpdateAndSendRecentTradableItem: Didn't find item on try  (3)", -- [1387]
+			"18:03:32 - UpdateAndSendRecentTradableItem: Didn't find item on try  (3)", -- [1388]
+			"18:03:33 - Error - UpdateAndSendRecentTradableItem (|cffa335ee|Hitem:158923::::::::120:269:4063232:::247:8:10:5:14:::|h[Mythic Keystone]|h|r) (not found in bags)", -- [1389]
+			"18:03:33 - Error - UpdateAndSendRecentTradableItem (|cff0070dd|Hcurrency:1553:270|h[Glowing Azerite Crystal]|h|r) (not found in bags)", -- [1390]
+			"18:03:39 - Event: (ENCOUNTER_LOOT_RECEIVED) (2127) (162544) (|cffa335ee|Hitem:162544::::::::120:269::16:3:5009:1537:4786:::|h[Jade Ophidian Band]|h|r) (1) (Kolacoke-BleedingHollow) (ROGUE)", -- [1391]
+			"18:04:05 - Event: (PLAYER_ENTERING_WORLD) (false) (false)", -- [1392]
+			"18:04:05 - GetML()", -- [1393]
+			"18:04:16 - Event: (GROUP_LEFT) (1) (Party-73-00002EF3EFB1)", -- [1394]
+			"18:04:16 - GetML()", -- [1395]
+			"18:05:34 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Dhdog) (distri:) (GUILD)", -- [1396]
+			"18:19:56 - Event: (LOOT_READY) (true)", -- [1397]
+			"18:19:56 - Event: (LOOT_OPENED) (true)", -- [1398]
+			"18:19:56 - Event: (LOOT_READY) (true)", -- [1399]
+			"18:20:50 - Event: (LOOT_READY) (true)", -- [1400]
+			"18:20:50 - Event: (LOOT_OPENED) (true)", -- [1401]
+			"18:20:50 - Event: (LOOT_READY) (true)", -- [1402]
+			"18:29:47 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Famemonstér) (distri:) (GUILD)", -- [1403]
+			"18:31:00 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Famemonstér) (distri:) (GUILD)", -- [1404]
+			"12/16/18", -- [1405]
+			"21:04:55 - Logged In", -- [1406]
+			"21:04:55 - ML initialized!", -- [1407]
+			"21:04:55 - TradeUI enabled", -- [1408]
+			"21:05:03 - Comet-Illidan (2.9.4) (nil)", -- [1409]
+			"21:05:03 - ActivateSkin (bfa)", -- [1410]
+			"21:05:03 - Event: (PLAYER_ENTERING_WORLD) (true) (false)", -- [1411]
+			"21:05:03 - GetML()", -- [1412]
+			"21:05:03 - UpdatePlayersData()", -- [1413]
+			"21:05:06 - GetPlayersGuildRank()", -- [1414]
+			"21:05:06 - Found Guild Rank: Trial", -- [1415]
+			"21:05:06 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1416]
+			"21:20:24 - Event: (PARTY_LEADER_CHANGED)", -- [1417]
+			"21:20:24 - GetML()", -- [1418]
+			"21:20:24 - Unknown ML", -- [1419]
+			"21:20:24 - GetML()", -- [1420]
+			"21:20:24 - Resetting council as we have a new ML!", -- [1421]
+			"21:20:24 - MasterLooter =  (Meraxx-Kil'jaeden)", -- [1422]
+			"21:20:39 - Timer MLdb_check passed", -- [1423]
+			"21:20:40 - Comm received:^1^Sxrealm^T^N1^SMeraxx-Kil'jaeden^N2^SMLdb_request^t^^ (from:) (Comet) (distri:) (PARTY)", -- [1424]
+			"21:20:40 - Comm received:^1^Sxrealm^T^N1^SMeraxx-Kil'jaeden^N2^Scouncil_request^t^^ (from:) (Comet) (distri:) (PARTY)", -- [1425]
+			"21:24:06 - Event: (PLAYER_ENTERING_WORLD) (false) (false)", -- [1426]
+			"21:24:06 - GetML()", -- [1427]
+			"21:25:05 - Event: (RAID_INSTANCE_WELCOME) (Temple of Sethraliss (Mythic)) (120894) (0) (0)", -- [1428]
+			"21:25:06 - Event: (PLAYER_ENTERING_WORLD) (false) (false)", -- [1429]
+			"21:25:06 - GetML()", -- [1430]
+			"21:30:41 - Event: (ENCOUNTER_START) (2124) (Adderis and Aspix) (8) (5)", -- [1431]
+			"21:30:41 - UpdatePlayersData()", -- [1432]
+			"21:31:58 - Event: (ENCOUNTER_END) (2124) (Adderis and Aspix) (8) (5) (1)", -- [1433]
+			"21:40:39 - Event: (ENCOUNTER_START) (2125) (Merektha) (8) (5)", -- [1434]
+			"21:40:39 - UpdatePlayersData()", -- [1435]
+			"21:42:42 - Event: (ENCOUNTER_END) (2125) (Merektha) (8) (5) (1)", -- [1436]
+			"21:45:28 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Bromzbi) (distri:) (GUILD)", -- [1437]
+			"21:47:43 - Event: (ENCOUNTER_START) (2126) (Galvazzt) (8) (5)", -- [1438]
+			"21:47:43 - UpdatePlayersData()", -- [1439]
+			"21:48:45 - Event: (ENCOUNTER_END) (2126) (Galvazzt) (8) (5) (1)", -- [1440]
+			"21:56:10 - Event: (ENCOUNTER_START) (2127) (Avatar of Sethraliss) (8) (5)", -- [1441]
+			"21:56:10 - UpdatePlayersData()", -- [1442]
+			"21:58:55 - Event: (ENCOUNTER_END) (2127) (Avatar of Sethraliss) (8) (5) (1)", -- [1443]
+			"21:59:05 - Event: (ENCOUNTER_LOOT_RECEIVED) (2127) (158369) (|cffa335ee|Hitem:158369::::::::120:270::16:3:5010:1542:4786:::|h[Galvanized Stormcrusher]|h|r) (1) (Aa-Saurfang) (SHAMAN)", -- [1444]
+			"21:59:07 - Event: (ENCOUNTER_LOOT_RECEIVED) (2127) (162544) (|cffa335ee|Hitem:162544::::::::120:270::16:3:5010:1542:4786:::|h[Jade Ophidian Band]|h|r) (1) (Tetheala-Kil'jaeden) (PALADIN)", -- [1445]
+			"21:59:07 - Event: (LOOT_READY) (true)", -- [1446]
+			"21:59:07 - Adding to self.lootSlotInfo (2) (|cffa335ee|Hitem:158368::::::::120:270::16:4:5010:42:1542:4786:::|h[Fangs of Intertwined Essence]|h|r) (4) (GameObject-0-3136-1877-3078-290758-0000173B21) (1)", -- [1447]
+			"21:59:07 - Adding to self.lootSlotInfo (3) (|cff0070dd|Hcurrency:1553:280|h[Glowing Azerite Crystal]|h|r) (6) (GameObject-0-3136-1877-3078-290758-0000173B21) (280)", -- [1448]
+			"21:59:07 - Event: (LOOT_OPENED) (true)", -- [1449]
+			"21:59:07 - Event: (LOOT_READY) (true)", -- [1450]
+			"21:59:07 - Adding to self.lootSlotInfo (2) (|cffa335ee|Hitem:158368::::::::120:270::16:4:5010:42:1542:4786:::|h[Fangs of Intertwined Essence]|h|r) (4) (GameObject-0-3136-1877-3078-290758-0000173B21) (1)", -- [1451]
+			"21:59:07 - Adding to self.lootSlotInfo (3) (|cff0070dd|Hcurrency:1553:280|h[Glowing Azerite Crystal]|h|r) (6) (GameObject-0-3136-1877-3078-290758-0000173B21) (280)", -- [1452]
+			"21:59:08 - OnLootSlotCleared() (2) (|cffa335ee|Hitem:158368::::::::120:270::16:4:5010:42:1542:4786:::|h[Fangs of Intertwined Essence]|h|r) (4)", -- [1453]
+			"21:59:08 - OnLootSlotCleared() (3) (|cff0070dd|Hcurrency:1553:280|h[Glowing Azerite Crystal]|h|r) (6)", -- [1454]
+			"21:59:08 - Event: (LOOT_CLOSED)", -- [1455]
+			"21:59:08 - Event: (ENCOUNTER_LOOT_RECEIVED) (2127) (158368) (|cffa335ee|Hitem:158368::::::::120:270::16:4:5010:42:1542:4786:::|h[Fangs of Intertwined Essence]|h|r) (1) (Comet) (MONK)", -- [1456]
+			"21:59:09 - Comm received:^1^Slooted^T^N1^S290758^t^^ (from:) (Comet) (distri:) (PARTY)", -- [1457]
+			"21:59:09 - false = (IsCouncil) (Comet-Illidan)", -- [1458]
+			"21:59:10 - UpdateAndSendRecentTradableItem: Didn't find item on try  (1)", -- [1459]
+			"21:59:10 - Comm received:^1^Stradable^T^N1^S|cffa335ee|Hitem:158368::::::::120:270::16:4:5010:42:1542:4786:::|h[Fangs~`of~`Intertwined~`Essence]|h|r^N2^S290758^t^^ (from:) (Comet) (distri:) (PARTY)", -- [1460]
+			"21:59:11 - UpdateAndSendRecentTradableItem: Didn't find item on try  (2)", -- [1461]
+			"21:59:12 - UpdateAndSendRecentTradableItem: Didn't find item on try  (3)", -- [1462]
+			"21:59:13 - Error - UpdateAndSendRecentTradableItem (|cff0070dd|Hcurrency:1553:280|h[Glowing Azerite Crystal]|h|r) (not found in bags)", -- [1463]
+			"22:00:15 - Event: (GROUP_LEFT) (1) (Party-9-000027EEDC90)", -- [1464]
+			"22:00:15 - GetML()", -- [1465]
+			"22:00:30 - Event: (PLAYER_ENTERING_WORLD) (false) (false)", -- [1466]
+			"22:00:30 - GetML()", -- [1467]
+			"22:02:24 - Comm received:^1^SverTest^T^N1^S2.9.3^t^^ (from:) (Kggs) (distri:) (GUILD)", -- [1468]
+			"22:12:48 - Event: (PARTY_LEADER_CHANGED)", -- [1469]
+			"22:12:48 - GetML()", -- [1470]
+			"22:12:53 - Event: (PLAYER_ENTERING_WORLD) (false) (false)", -- [1471]
+			"22:12:53 - GetML()", -- [1472]
+			"22:16:07 - Comm received:^1^Slooted^T^N1^S127049^t^^ (from:) (Chernebog-Tichondrius) (distri:) (INSTANCE_CHAT)", -- [1473]
+			"22:16:07 - false = (IsCouncil) (Comet-Illidan)", -- [1474]
+			"22:16:41 - Comm received:^1^Slooted^T^N1^S127048^t^^ (from:) (Chernebog-Tichondrius) (distri:) (INSTANCE_CHAT)", -- [1475]
+			"22:16:41 - false = (IsCouncil) (Comet-Illidan)", -- [1476]
+			"22:16:54 - Comm received:^1^Slooted^T^N1^S127048^t^^ (from:) (Chernebog-Tichondrius) (distri:) (INSTANCE_CHAT)", -- [1477]
+			"22:16:54 - false = (IsCouncil) (Comet-Illidan)", -- [1478]
+			"22:17:13 - Comm received:^1^Slooted^T^N1^S127048^t^^ (from:) (Huntzx-Caelestrasz) (distri:) (INSTANCE_CHAT)", -- [1479]
+			"22:17:13 - false = (IsCouncil) (Comet-Illidan)", -- [1480]
+			"22:17:20 - Event: (LOOT_READY) (true)", -- [1481]
+			"22:17:20 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1541:22|h[Iron]|h|r) (1) (Creature-0-3019-1876-15130-127048-0000173E3B) (5) (Creature-0-3019-1876-15130-127048-0000173E39) (4) (Creature-0-3019-1876-15130-127048-0000973E39) (6) (Creature-0-3019-1876-15130-127048-0002173E39) (4) (Creature-0-3019-1876-15130-127049-0000173E3A) (3)", -- [1482]
+			"22:17:20 - Event: (LOOT_OPENED) (true)", -- [1483]
+			"22:17:20 - Event: (LOOT_READY) (true)", -- [1484]
+			"22:17:20 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1541:22|h[Iron]|h|r) (1) (Creature-0-3019-1876-15130-127048-0000173E3B) (5) (Creature-0-3019-1876-15130-127048-0000173E39) (4) (Creature-0-3019-1876-15130-127048-0000973E39) (6) (Creature-0-3019-1876-15130-127048-0002173E39) (4) (Creature-0-3019-1876-15130-127049-0000173E3A) (3)", -- [1485]
+			"22:17:20 - Comm received:^1^Slooted^T^N1^S127049^t^^ (from:) (Huntzx-Caelestrasz) (distri:) (INSTANCE_CHAT)", -- [1486]
+			"22:17:20 - false = (IsCouncil) (Comet-Illidan)", -- [1487]
+			"22:17:20 - OnLootSlotCleared() (1) (|cffffffff|Hcurrency:1541:22|h[Iron]|h|r) (1)", -- [1488]
+			"22:17:20 - Event: (LOOT_CLOSED)", -- [1489]
+			"22:17:21 - Comm received:^1^Slooted^T^N1^S127048^t^^ (from:) (Comet) (distri:) (INSTANCE_CHAT)", -- [1490]
+			"22:17:21 - false = (IsCouncil) (Comet-Illidan)", -- [1491]
+			"22:17:31 - Comm received:^1^Slooted^T^N1^S127048^t^^ (from:) (Huntzx-Caelestrasz) (distri:) (INSTANCE_CHAT)", -- [1492]
+			"22:17:31 - false = (IsCouncil) (Comet-Illidan)", -- [1493]
+			"22:17:34 - Event: (LOOT_READY) (true)", -- [1494]
+			"22:17:34 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1541:9|h[Iron]|h|r) (1) (Creature-0-3019-1876-15130-127048-0005173E39) (5) (Creature-0-3019-1876-15130-127049-0002973E39) (4)", -- [1495]
+			"22:17:34 - Event: (LOOT_OPENED) (true)", -- [1496]
+			"22:17:34 - Event: (LOOT_READY) (true)", -- [1497]
+			"22:17:34 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1541:9|h[Iron]|h|r) (1) (Creature-0-3019-1876-15130-127048-0005173E39) (5) (Creature-0-3019-1876-15130-127049-0002973E39) (4)", -- [1498]
+			"22:17:35 - OnLootSlotCleared() (1) (|cffffffff|Hcurrency:1541:9|h[Iron]|h|r) (1)", -- [1499]
+			"22:17:35 - Event: (LOOT_CLOSED)", -- [1500]
+			"22:17:35 - Comm received:^1^Slooted^T^N1^S127048^t^^ (from:) (Comet) (distri:) (INSTANCE_CHAT)", -- [1501]
+			"22:17:35 - false = (IsCouncil) (Comet-Illidan)", -- [1502]
+			"22:17:38 - Comm received:^1^Slooted^T^N1^S127049^t^^ (from:) (Chernebog-Tichondrius) (distri:) (INSTANCE_CHAT)", -- [1503]
+			"22:17:38 - false = (IsCouncil) (Comet-Illidan)", -- [1504]
+			"22:17:42 - Event: (LOOT_READY) (true)", -- [1505]
+			"22:17:42 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1541:3|h[Iron]|h|r) (1) (Creature-0-3019-1876-15130-127048-0004173E39) (3)", -- [1506]
+			"22:17:43 - Event: (LOOT_OPENED) (true)", -- [1507]
+			"22:17:43 - Event: (LOOT_READY) (true)", -- [1508]
+			"22:17:43 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1541:3|h[Iron]|h|r) (1) (Creature-0-3019-1876-15130-127048-0004173E39) (3)", -- [1509]
+			"22:17:43 - OnLootSlotCleared() (1) (|cffffffff|Hcurrency:1541:3|h[Iron]|h|r) (1)", -- [1510]
+			"22:17:43 - Event: (LOOT_CLOSED)", -- [1511]
+			"22:17:43 - Comm received:^1^Slooted^T^N1^S127048^t^^ (from:) (Comet) (distri:) (INSTANCE_CHAT)", -- [1512]
+			"22:17:43 - false = (IsCouncil) (Comet-Illidan)", -- [1513]
+			"22:17:53 - Comm received:^1^Slooted^T^N1^S127049^t^^ (from:) (Chernebog-Tichondrius) (distri:) (INSTANCE_CHAT)", -- [1514]
+			"22:17:53 - false = (IsCouncil) (Comet-Illidan)", -- [1515]
+			"22:17:55 - Event: (LOOT_READY) (true)", -- [1516]
+			"22:17:55 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1541:6|h[Iron]|h|r) (1) (Creature-0-3019-1876-15130-127048-0000173F85) (6)", -- [1517]
+			"22:17:56 - Event: (LOOT_OPENED) (true)", -- [1518]
+			"22:17:56 - Event: (LOOT_READY) (true)", -- [1519]
+			"22:17:56 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1541:6|h[Iron]|h|r) (1) (Creature-0-3019-1876-15130-127048-0000173F85) (6)", -- [1520]
+			"22:17:56 - OnLootSlotCleared() (1) (|cffffffff|Hcurrency:1541:6|h[Iron]|h|r) (1)", -- [1521]
+			"22:17:56 - Event: (LOOT_CLOSED)", -- [1522]
+			"22:17:56 - Comm received:^1^Slooted^T^N1^S127048^t^^ (from:) (Comet) (distri:) (INSTANCE_CHAT)", -- [1523]
+			"22:17:56 - false = (IsCouncil) (Comet-Illidan)", -- [1524]
+			"22:18:03 - Event: (LOOT_READY) (true)", -- [1525]
+			"22:18:03 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1541:5|h[Iron]|h|r) (1) (Creature-0-3019-1876-15130-127049-0000173F92) (5)", -- [1526]
+			"22:18:04 - Event: (LOOT_OPENED) (true)", -- [1527]
+			"22:18:04 - Event: (LOOT_READY) (true)", -- [1528]
+			"22:18:04 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1541:5|h[Iron]|h|r) (1) (Creature-0-3019-1876-15130-127049-0000173F92) (5)", -- [1529]
+			"22:18:04 - OnLootSlotCleared() (1) (|cffffffff|Hcurrency:1541:5|h[Iron]|h|r) (1)", -- [1530]
+			"22:18:04 - Event: (LOOT_CLOSED)", -- [1531]
+			"22:18:04 - Comm received:^1^Slooted^T^N1^S127049^t^^ (from:) (Comet) (distri:) (INSTANCE_CHAT)", -- [1532]
+			"22:18:04 - false = (IsCouncil) (Comet-Illidan)", -- [1533]
+			"22:18:09 - Comm received:^1^Slooted^T^N1^S127049^t^^ (from:) (Chernebog-Tichondrius) (distri:) (INSTANCE_CHAT)", -- [1534]
+			"22:18:09 - false = (IsCouncil) (Comet-Illidan)", -- [1535]
+			"22:18:15 - Event: (LOOT_READY) (true)", -- [1536]
+			"22:18:15 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1541:7|h[Iron]|h|r) (1) (Creature-0-3019-1876-15130-127049-0000973E3A) (3) (Creature-0-3019-1876-15130-127048-0002973E3A) (4)", -- [1537]
+			"22:18:15 - Event: (LOOT_OPENED) (true)", -- [1538]
+			"22:18:15 - Event: (LOOT_READY) (true)", -- [1539]
+			"22:18:15 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1541:7|h[Iron]|h|r) (1) (Creature-0-3019-1876-15130-127049-0000973E3A) (3) (Creature-0-3019-1876-15130-127048-0002973E3A) (4)", -- [1540]
+			"22:18:16 - OnLootSlotCleared() (1) (|cffffffff|Hcurrency:1541:7|h[Iron]|h|r) (1)", -- [1541]
+			"22:18:16 - Event: (LOOT_CLOSED)", -- [1542]
+			"22:18:16 - Comm received:^1^Slooted^T^N1^S127049^t^^ (from:) (Comet) (distri:) (INSTANCE_CHAT)", -- [1543]
+			"22:18:16 - false = (IsCouncil) (Comet-Illidan)", -- [1544]
+			"22:18:17 - Comm received:^1^Slooted^T^N1^S287184^t^^ (from:) (Chernebog-Tichondrius) (distri:) (INSTANCE_CHAT)", -- [1545]
+			"22:18:17 - false = (IsCouncil) (Comet-Illidan)", -- [1546]
+			"22:18:25 - Event: (LOOT_READY) (true)", -- [1547]
+			"22:18:25 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1541:6|h[Iron]|h|r) (1) (Creature-0-3019-1876-15130-127048-0002173E3A) (6)", -- [1548]
+			"22:18:26 - Event: (LOOT_OPENED) (true)", -- [1549]
+			"22:18:26 - Event: (LOOT_READY) (true)", -- [1550]
+			"22:18:26 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1541:6|h[Iron]|h|r) (1) (Creature-0-3019-1876-15130-127048-0002173E3A) (6)", -- [1551]
+			"22:18:26 - OnLootSlotCleared() (1) (|cffffffff|Hcurrency:1541:6|h[Iron]|h|r) (1)", -- [1552]
+			"22:18:26 - Event: (LOOT_CLOSED)", -- [1553]
+			"22:18:26 - Comm received:^1^Slooted^T^N1^S127048^t^^ (from:) (Comet) (distri:) (INSTANCE_CHAT)", -- [1554]
+			"22:18:26 - false = (IsCouncil) (Comet-Illidan)", -- [1555]
+			"22:18:32 - Comm received:^1^Slooted^T^N1^S127049^t^^ (from:) (Chernebog-Tichondrius) (distri:) (INSTANCE_CHAT)", -- [1556]
+			"22:18:32 - false = (IsCouncil) (Comet-Illidan)", -- [1557]
+			"22:18:38 - Event: (LOOT_READY) (true)", -- [1558]
+			"22:18:38 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1541:5|h[Iron]|h|r) (1) (Creature-0-3019-1876-15130-127048-0001973E3A) (5)", -- [1559]
+			"22:18:39 - Event: (LOOT_OPENED) (true)", -- [1560]
+			"22:18:39 - Event: (LOOT_READY) (true)", -- [1561]
+			"22:18:39 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1541:5|h[Iron]|h|r) (1) (Creature-0-3019-1876-15130-127048-0001973E3A) (5)", -- [1562]
+			"22:18:39 - OnLootSlotCleared() (1) (|cffffffff|Hcurrency:1541:5|h[Iron]|h|r) (1)", -- [1563]
+			"22:18:39 - Event: (LOOT_CLOSED)", -- [1564]
+			"22:18:39 - Comm received:^1^Slooted^T^N1^S127048^t^^ (from:) (Comet) (distri:) (INSTANCE_CHAT)", -- [1565]
+			"22:18:39 - false = (IsCouncil) (Comet-Illidan)", -- [1566]
+			"22:20:38 - Event: (LOOT_READY) (true)", -- [1567]
+			"22:20:38 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1540:3|h[Wood]|h|r) (1) (GameObject-0-3019-1876-15130-278150-0000173FF5) (3)", -- [1568]
+			"22:20:38 - Event: (LOOT_OPENED) (true)", -- [1569]
+			"22:20:38 - Event: (LOOT_READY) (true)", -- [1570]
+			"22:20:38 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1540:3|h[Wood]|h|r) (1) (GameObject-0-3019-1876-15130-278150-0000173FF5) (3)", -- [1571]
+			"22:20:38 - OnLootSlotCleared() (1) (|cffffffff|Hcurrency:1540:3|h[Wood]|h|r) (1)", -- [1572]
+			"22:20:38 - Event: (LOOT_CLOSED)", -- [1573]
+			"22:20:38 - Comm received:^1^Slooted^T^N1^S278150^t^^ (from:) (Comet) (distri:) (INSTANCE_CHAT)", -- [1574]
+			"22:20:38 - false = (IsCouncil) (Comet-Illidan)", -- [1575]
+			"22:20:40 - Event: (LOOT_READY) (true)", -- [1576]
+			"22:20:40 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1540:5|h[Wood]|h|r) (1) (GameObject-0-3019-1876-15130-278150-0000173FE2) (5)", -- [1577]
+			"22:20:41 - Event: (LOOT_OPENED) (true)", -- [1578]
+			"22:20:41 - Event: (LOOT_READY) (true)", -- [1579]
+			"22:20:41 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1540:5|h[Wood]|h|r) (1) (GameObject-0-3019-1876-15130-278150-0000173FE2) (5)", -- [1580]
+			"22:20:41 - OnLootSlotCleared() (1) (|cffffffff|Hcurrency:1540:5|h[Wood]|h|r) (1)", -- [1581]
+			"22:20:41 - Event: (LOOT_CLOSED)", -- [1582]
+			"22:20:41 - Comm received:^1^Slooted^T^N1^S278150^t^^ (from:) (Comet) (distri:) (INSTANCE_CHAT)", -- [1583]
+			"22:20:41 - false = (IsCouncil) (Comet-Illidan)", -- [1584]
+			"22:20:50 - Event: (LOOT_READY) (true)", -- [1585]
+			"22:20:50 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1540:3|h[Wood]|h|r) (1) (GameObject-0-3019-1876-15130-278150-0000174005) (3)", -- [1586]
+			"22:20:50 - Event: (LOOT_OPENED) (true)", -- [1587]
+			"22:20:50 - Event: (LOOT_READY) (true)", -- [1588]
+			"22:20:50 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1540:3|h[Wood]|h|r) (1) (GameObject-0-3019-1876-15130-278150-0000174005) (3)", -- [1589]
+			"22:20:50 - OnLootSlotCleared() (1) (|cffffffff|Hcurrency:1540:3|h[Wood]|h|r) (1)", -- [1590]
+			"22:20:50 - Event: (LOOT_CLOSED)", -- [1591]
+			"22:20:50 - Comm received:^1^Slooted^T^N1^S278150^t^^ (from:) (Comet) (distri:) (INSTANCE_CHAT)", -- [1592]
+			"22:20:50 - false = (IsCouncil) (Comet-Illidan)", -- [1593]
+			"22:20:52 - Event: (LOOT_READY) (true)", -- [1594]
+			"22:20:52 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1540:3|h[Wood]|h|r) (1) (GameObject-0-3019-1876-15130-278150-0000974005) (3)", -- [1595]
+			"22:20:52 - Event: (LOOT_OPENED) (true)", -- [1596]
+			"22:20:52 - Event: (LOOT_READY) (true)", -- [1597]
+			"22:20:52 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1540:3|h[Wood]|h|r) (1) (GameObject-0-3019-1876-15130-278150-0000974005) (3)", -- [1598]
+			"22:20:52 - OnLootSlotCleared() (1) (|cffffffff|Hcurrency:1540:3|h[Wood]|h|r) (1)", -- [1599]
+			"22:20:52 - Event: (LOOT_CLOSED)", -- [1600]
+			"22:20:53 - Comm received:^1^Slooted^T^N1^S278150^t^^ (from:) (Comet) (distri:) (INSTANCE_CHAT)", -- [1601]
+			"22:20:53 - false = (IsCouncil) (Comet-Illidan)", -- [1602]
+			"22:21:03 - Event: (LOOT_READY) (true)", -- [1603]
+			"22:21:03 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1540:5|h[Wood]|h|r) (1) (GameObject-0-3019-1876-15130-278150-0000174009) (5)", -- [1604]
+			"22:21:03 - Event: (LOOT_OPENED) (true)", -- [1605]
+			"22:21:03 - Event: (LOOT_READY) (true)", -- [1606]
+			"22:21:03 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1540:5|h[Wood]|h|r) (1) (GameObject-0-3019-1876-15130-278150-0000174009) (5)", -- [1607]
+			"22:21:04 - OnLootSlotCleared() (1) (|cffffffff|Hcurrency:1540:5|h[Wood]|h|r) (1)", -- [1608]
+			"22:21:04 - Event: (LOOT_CLOSED)", -- [1609]
+			"22:21:04 - Comm received:^1^Slooted^T^N1^S278150^t^^ (from:) (Comet) (distri:) (INSTANCE_CHAT)", -- [1610]
+			"22:21:04 - false = (IsCouncil) (Comet-Illidan)", -- [1611]
+			"22:21:11 - Event: (LOOT_READY) (true)", -- [1612]
+			"22:21:11 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1540:3|h[Wood]|h|r) (1) (GameObject-0-3019-1876-15130-278150-000017404C) (3)", -- [1613]
+			"22:21:11 - Event: (LOOT_OPENED) (true)", -- [1614]
+			"22:21:11 - Event: (LOOT_READY) (true)", -- [1615]
+			"22:21:11 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1540:3|h[Wood]|h|r) (1) (GameObject-0-3019-1876-15130-278150-000017404C) (3)", -- [1616]
+			"22:21:12 - OnLootSlotCleared() (1) (|cffffffff|Hcurrency:1540:3|h[Wood]|h|r) (1)", -- [1617]
+			"22:21:12 - Event: (LOOT_CLOSED)", -- [1618]
+			"22:21:12 - Comm received:^1^Slooted^T^N1^S278150^t^^ (from:) (Comet) (distri:) (INSTANCE_CHAT)", -- [1619]
+			"22:21:12 - false = (IsCouncil) (Comet-Illidan)", -- [1620]
+			"22:21:20 - Event: (LOOT_READY) (true)", -- [1621]
+			"22:21:20 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1540:5|h[Wood]|h|r) (1) (GameObject-0-3019-1876-15130-278150-0000174055) (5)", -- [1622]
+			"22:21:20 - Event: (LOOT_OPENED) (true)", -- [1623]
+			"22:21:20 - Event: (LOOT_READY) (true)", -- [1624]
+			"22:21:20 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1540:5|h[Wood]|h|r) (1) (GameObject-0-3019-1876-15130-278150-0000174055) (5)", -- [1625]
+			"22:21:20 - OnLootSlotCleared() (1) (|cffffffff|Hcurrency:1540:5|h[Wood]|h|r) (1)", -- [1626]
+			"22:21:20 - Event: (LOOT_CLOSED)", -- [1627]
+			"22:21:21 - Comm received:^1^Slooted^T^N1^S278150^t^^ (from:) (Comet) (distri:) (INSTANCE_CHAT)", -- [1628]
+			"22:21:21 - false = (IsCouncil) (Comet-Illidan)", -- [1629]
+			"22:22:08 - Event: (LOOT_READY) (true)", -- [1630]
+			"22:22:08 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1540:3|h[Wood]|h|r) (1) (GameObject-0-3019-1876-15130-278150-000017403B) (3)", -- [1631]
+			"22:22:08 - Event: (LOOT_OPENED) (true)", -- [1632]
+			"22:22:08 - Event: (LOOT_READY) (true)", -- [1633]
+			"22:22:08 - Adding to self.lootSlotInfo (1) (|cffffffff|Hcurrency:1540:3|h[Wood]|h|r) (1) (GameObject-0-3019-1876-15130-278150-000017403B) (3)", -- [1634]
+			"22:22:08 - OnLootSlotCleared() (1) (|cffffffff|Hcurrency:1540:3|h[Wood]|h|r) (1)", -- [1635]
+			"22:22:08 - Event: (LOOT_CLOSED)", -- [1636]
+			"22:22:09 - Comm received:^1^Slooted^T^N1^S278150^t^^ (from:) (Comet) (distri:) (INSTANCE_CHAT)", -- [1637]
+			"22:22:09 - false = (IsCouncil) (Comet-Illidan)", -- [1638]
+			"22:30:48 - Comm received:^1^Slooted^T^N1^S278150^t^^ (from:) (Chernebog-Tichondrius) (distri:) (INSTANCE_CHAT)", -- [1639]
+			"22:30:48 - false = (IsCouncil) (Comet-Illidan)", -- [1640]
+			"22:31:09 - Comm received:^1^Slooted^T^N1^S278150^t^^ (from:) (Chernebog-Tichondrius) (distri:) (INSTANCE_CHAT)", -- [1641]
+			"22:31:09 - false = (IsCouncil) (Comet-Illidan)", -- [1642]
+			"22:31:11 - Comm received:^1^Slooted^T^N1^S278150^t^^ (from:) (Chernebog-Tichondrius) (distri:) (INSTANCE_CHAT)", -- [1643]
+			"22:31:11 - false = (IsCouncil) (Comet-Illidan)", -- [1644]
+			"22:31:39 - Comm received:^1^Slooted^T^N1^S278150^t^^ (from:) (Chernebog-Tichondrius) (distri:) (INSTANCE_CHAT)", -- [1645]
+			"22:31:39 - false = (IsCouncil) (Comet-Illidan)", -- [1646]
+			"22:32:31 - Comm received:^1^Slooted^T^N1^S278150^t^^ (from:) (Chernebog-Tichondrius) (distri:) (INSTANCE_CHAT)", -- [1647]
+			"22:32:31 - false = (IsCouncil) (Comet-Illidan)", -- [1648]
+			"22:39:24 - Event: (GROUP_LEFT) (2) (Party-3017-0000303E86D5)", -- [1649]
+			"22:39:24 - GetML()", -- [1650]
+			"22:39:30 - Event: (PLAYER_ENTERING_WORLD) (false) (false)", -- [1651]
+			"22:39:30 - GetML()", -- [1652]
+			"22:45:12 - Event: (PARTY_LEADER_CHANGED)", -- [1653]
+			"22:45:12 - GetML()", -- [1654]
+			"22:45:12 - Unknown ML", -- [1655]
+			"22:45:13 - GetML()", -- [1656]
+			"22:45:13 - Resetting council as we have a new ML!", -- [1657]
+			"22:45:13 - MasterLooter =  (Alerono-Thrall)", -- [1658]
+			"22:45:28 - Timer MLdb_check passed", -- [1659]
+			"22:45:28 - Comm received:^1^Sxrealm^T^N1^SAlerono-Thrall^N2^SMLdb_request^t^^ (from:) (Comet) (distri:) (RAID)", -- [1660]
+			"22:45:28 - Comm received:^1^Sxrealm^T^N1^SAlerono-Thrall^N2^Scouncil_request^t^^ (from:) (Comet) (distri:) (RAID)", -- [1661]
+			"22:48:16 - Event: (GROUP_LEFT) (1) (Party-3678-000021197E7E)", -- [1662]
+			"22:48:16 - GetML()", -- [1663]
+			"22:49:54 - Event: (PARTY_LEADER_CHANGED)", -- [1664]
+			"22:49:54 - GetML()", -- [1665]
+			"22:49:54 - Unknown ML", -- [1666]
+			"22:49:54 - GetML()", -- [1667]
+			"22:49:54 - Resetting council as we have a new ML!", -- [1668]
+			"22:49:54 - MasterLooter =  (Monächus-Kil'jaeden)", -- [1669]
+			"22:50:09 - Timer MLdb_check passed", -- [1670]
+			"22:50:09 - Comm received:^1^Sxrealm^T^N1^SMonächus-Kil'jaeden^N2^SMLdb_request^t^^ (from:) (Comet) (distri:) (RAID)", -- [1671]
+			"22:50:09 - Comm received:^1^Sxrealm^T^N1^SMonächus-Kil'jaeden^N2^Scouncil_request^t^^ (from:) (Comet) (distri:) (RAID)", -- [1672]
+			"22:50:54 - Event: (RAID_INSTANCE_WELCOME) (Uldir (Heroic)) (115745) (1) (0)", -- [1673]
+			"22:50:55 - Event: (PLAYER_ENTERING_WORLD) (false) (false)", -- [1674]
+			"22:50:55 - GetML()", -- [1675]
+			"22:58:22 - Event: (ENCOUNTER_START) (2122) (G'huun) (15) (15)", -- [1676]
+			"22:58:22 - UpdatePlayersData()", -- [1677]
+			"23:05:28 - Event: (ENCOUNTER_END) (2122) (G'huun) (15) (15) (0)", -- [1678]
+			"12/16/18", -- [1679]
+			"23:11:02 - Logged In", -- [1680]
+			"23:11:02 - ML initialized!", -- [1681]
+			"23:11:02 - TradeUI enabled", -- [1682]
+			"23:11:03 - Comet-Illidan (2.9.4) (nil)", -- [1683]
+			"23:11:03 - ActivateSkin (bfa)", -- [1684]
+			"23:11:06 - Event: (PLAYER_ENTERING_WORLD) (false) (true)", -- [1685]
+			"23:11:06 - GetML()", -- [1686]
+			"23:11:06 - Resetting council as we have a new ML!", -- [1687]
+			"23:11:06 - MasterLooter =  (Monächus-Kil'jaeden)", -- [1688]
+			"23:11:06 - Player relog...", -- [1689]
+			"23:11:06 - UpdatePlayersData()", -- [1690]
+			"23:11:08 - GetPlayersGuildRank()", -- [1691]
+			"23:11:08 - Found Guild Rank: Trial", -- [1692]
+			"23:11:09 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1693]
+			"23:11:09 - Comm received:^1^Sxrealm^T^N1^SMonächus-Kil'jaeden^N2^SplayerInfo^N3^SComet-Illidan^N4^SMONK^N5^SHEALER^N6^STrial^N8^N0^N9^N381.125^t^^ (from:) (Comet) (distri:) (RAID)", -- [1694]
+			"23:11:09 - Comm received:^1^Sxrealm^T^N1^SMonächus-Kil'jaeden^N2^Sreconnect^t^^ (from:) (Comet) (distri:) (RAID)", -- [1695]
+			"23:11:12 - Timer MLdb_check passed", -- [1696]
+			"23:11:13 - Comm received:^1^Sxrealm^T^N1^SMonächus-Kil'jaeden^N2^SMLdb_request^t^^ (from:) (Comet) (distri:) (RAID)", -- [1697]
+			"23:11:13 - Comm received:^1^Sxrealm^T^N1^SMonächus-Kil'jaeden^N2^Scouncil_request^t^^ (from:) (Comet) (distri:) (RAID)", -- [1698]
+			"23:11:59 - Event: (ENCOUNTER_START) (2122) (G'huun) (15) (16)", -- [1699]
+			"23:11:59 - UpdatePlayersData()", -- [1700]
+			"23:16:53 - Event: (ENCOUNTER_END) (2122) (G'huun) (15) (16) (0)", -- [1701]
+			"23:19:33 - Event: (ENCOUNTER_START) (2122) (G'huun) (15) (16)", -- [1702]
+			"23:19:33 - UpdatePlayersData()", -- [1703]
+			"23:25:07 - Event: (ENCOUNTER_END) (2122) (G'huun) (15) (16) (0)", -- [1704]
+			"23:27:07 - Event: (ENCOUNTER_START) (2122) (G'huun) (15) (16)", -- [1705]
+			"23:27:07 - UpdatePlayersData()", -- [1706]
+			"23:34:00 - Event: (ENCOUNTER_END) (2122) (G'huun) (15) (16) (0)", -- [1707]
+			"23:34:35 - Event: (PLAYER_ENTERING_WORLD) (false) (false)", -- [1708]
+			"23:34:35 - GetML()", -- [1709]
+			"23:34:50 - Event: (GROUP_LEFT) (1) (Party-9-000027EF1576)", -- [1710]
+			"23:34:50 - GetML()", -- [1711]
+			"12/18/18", -- [1712]
+			"08:59:23 - Logged In", -- [1713]
+			"08:59:23 - ML initialized!", -- [1714]
+			"08:59:23 - TradeUI enabled", -- [1715]
+			"08:59:32 - Comet-Illidan (2.9.4) (nil)", -- [1716]
+			"08:59:32 - ActivateSkin (bfa)", -- [1717]
+			"08:59:35 - Event: (PLAYER_ENTERING_WORLD) (true) (false)", -- [1718]
+			"08:59:35 - GetML()", -- [1719]
+			"08:59:35 - UpdatePlayersData()", -- [1720]
+			"08:59:38 - GetPlayersGuildRank()", -- [1721]
+			"08:59:38 - Found Guild Rank: Trial", -- [1722]
+			"08:59:38 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1723]
+			"09:01:00 - Event: (LOOT_READY) (true)", -- [1724]
+			"09:01:00 - Event: (LOOT_OPENED) (true)", -- [1725]
+			"09:01:00 - Event: (LOOT_READY) (true)", -- [1726]
+			"09:01:00 - Event: (ENCOUNTER_LOOT_RECEIVED) (0) (159652) (|cffa335ee|Hitem:159652::::::::120:270::35:3:5010:1552:4786:::|h[Leaxa's Thought-Piercer]|h|r) (1) (Comet) (MONK)", -- [1727]
+			"09:01:01 - Event: (ENCOUNTER_LOOT_RECEIVED) (0) (158923) (|cffa335ee|Hitem:158923::::::::120:270:4063232:::246:9:9:6:4:::|h[Mythic Keystone]|h|r) (1) (Comet) (MONK)", -- [1728]
+			"12/18/18", -- [1729]
+			"17:58:06 - Logged In", -- [1730]
+			"17:58:06 - ML initialized!", -- [1731]
+			"17:58:06 - TradeUI enabled", -- [1732]
+			"17:58:15 - Comet-Illidan (2.9.4) (nil)", -- [1733]
+			"17:58:15 - ActivateSkin (bfa)", -- [1734]
+			"17:58:17 - Event: (PLAYER_ENTERING_WORLD) (true) (false)", -- [1735]
+			"17:58:17 - GetML()", -- [1736]
+			"17:58:17 - UpdatePlayersData()", -- [1737]
+			"17:58:20 - GetPlayersGuildRank()", -- [1738]
+			"17:58:20 - Found Guild Rank: Trial", -- [1739]
+			"17:58:20 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1740]
+			"17:58:20 - Event: (PARTY_LEADER_CHANGED)", -- [1741]
+			"17:58:20 - GetML()", -- [1742]
+			"17:58:20 - Resetting council as we have a new ML!", -- [1743]
+			"17:58:20 - MasterLooter =  (Ouro-Illidan)", -- [1744]
+			"17:58:35 - Timer MLdb_check passed", -- [1745]
+			"17:58:47 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Kggs) (distri:) (GUILD)", -- [1746]
+			"17:59:58 - Event: (RAID_INSTANCE_WELCOME) (Uldir (Mythic)) (565201) (0) (0)", -- [1747]
+			"17:59:58 - Event: (PLAYER_ENTERING_WORLD) (false) (false)", -- [1748]
+			"17:59:58 - GetML()", -- [1749]
+			"18:01:56 - TradeUI: Traded item(s) to (Ouro-Illidan)", -- [1750]
+			"18:01:56 - TradeUI:Show() (nil)", -- [1751]
+			"18:01:56 - TradeUI:Hide()", -- [1752]
+			"18:07:21 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1753]
+			"18:07:21 - UpdatePlayersData()", -- [1754]
+			"18:07:21 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1755]
+			"18:07:21 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1756]
+			"18:07:21 - UpdatePlayersData()", -- [1757]
+			"18:07:23 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1758]
+			"18:09:31 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1759]
+			"18:09:31 - UpdatePlayersData()", -- [1760]
+			"18:10:42 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1761]
+			"18:10:42 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1762]
+			"18:10:42 - UpdatePlayersData()", -- [1763]
+			"18:10:44 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1764]
+			"18:11:34 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1765]
+			"18:11:34 - UpdatePlayersData()", -- [1766]
+			"18:11:34 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1767]
+			"18:11:34 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1768]
+			"18:11:34 - UpdatePlayersData()", -- [1769]
+			"18:11:36 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1770]
+			"18:12:58 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1771]
+			"18:12:58 - UpdatePlayersData()", -- [1772]
+			"18:14:23 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1773]
+			"18:15:15 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1774]
+			"18:15:15 - UpdatePlayersData()", -- [1775]
+			"18:15:15 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1776]
+			"18:15:15 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1777]
+			"18:15:15 - UpdatePlayersData()", -- [1778]
+			"18:15:17 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1779]
+			"18:16:14 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1780]
+			"18:16:14 - UpdatePlayersData()", -- [1781]
+			"18:19:12 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1782]
+			"18:20:08 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1783]
+			"18:20:08 - UpdatePlayersData()", -- [1784]
+			"18:20:08 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1785]
+			"18:20:08 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1786]
+			"18:20:08 - UpdatePlayersData()", -- [1787]
+			"18:20:11 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1788]
+			"18:21:06 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1789]
+			"18:21:06 - UpdatePlayersData()", -- [1790]
+			"18:23:06 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1791]
+			"18:23:55 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1792]
+			"18:23:55 - UpdatePlayersData()", -- [1793]
+			"18:23:55 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1794]
+			"18:23:55 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1795]
+			"18:23:55 - UpdatePlayersData()", -- [1796]
+			"18:23:57 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1797]
+			"18:25:04 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1798]
+			"18:25:04 - UpdatePlayersData()", -- [1799]
+			"18:27:09 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1800]
+			"18:27:37 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Kggs) (distri:) (GUILD)", -- [1801]
+			"18:28:07 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1802]
+			"18:28:07 - UpdatePlayersData()", -- [1803]
+			"18:28:07 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1804]
+			"18:28:07 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1805]
+			"18:28:07 - UpdatePlayersData()", -- [1806]
+			"18:28:10 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1807]
+			"18:30:13 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1808]
+			"18:30:13 - UpdatePlayersData()", -- [1809]
+			"18:33:47 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1810]
+			"18:35:55 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1811]
+			"18:35:55 - UpdatePlayersData()", -- [1812]
+			"18:40:29 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1813]
+			"18:40:33 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1814]
+			"18:40:33 - UpdatePlayersData()", -- [1815]
+			"18:40:34 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1816]
+			"18:40:35 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1817]
+			"18:40:35 - UpdatePlayersData()", -- [1818]
+			"12/18/18", -- [1819]
+			"18:42:13 - Logged In", -- [1820]
+			"18:42:13 - ML initialized!", -- [1821]
+			"18:42:13 - TradeUI enabled", -- [1822]
+			"18:42:15 - Comet-Illidan (2.9.4) (nil)", -- [1823]
+			"18:42:15 - ActivateSkin (bfa)", -- [1824]
+			"18:42:18 - Event: (PLAYER_ENTERING_WORLD) (false) (true)", -- [1825]
+			"18:42:18 - GetML()", -- [1826]
+			"18:42:18 - Resetting council as we have a new ML!", -- [1827]
+			"18:42:18 - MasterLooter =  (Ouro-Illidan)", -- [1828]
+			"18:42:18 - Player relog...", -- [1829]
+			"18:42:18 - UpdatePlayersData()", -- [1830]
+			"18:42:20 - GetPlayersGuildRank()", -- [1831]
+			"18:42:20 - Found Guild Rank: Trial", -- [1832]
+			"18:42:20 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1833]
+			"18:42:25 - Timer MLdb_check passed", -- [1834]
+			"18:48:05 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1835]
+			"18:49:12 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1836]
+			"18:49:12 - UpdatePlayersData()", -- [1837]
+			"18:49:12 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1838]
+			"18:49:12 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1839]
+			"18:49:12 - UpdatePlayersData()", -- [1840]
+			"18:49:14 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1841]
+			"18:51:28 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1842]
+			"18:51:28 - UpdatePlayersData()", -- [1843]
+			"18:52:28 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Kggs) (distri:) (GUILD)", -- [1844]
+			"18:53:59 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1845]
+			"18:54:01 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1846]
+			"18:54:01 - UpdatePlayersData()", -- [1847]
+			"18:54:02 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1848]
+			"18:54:03 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1849]
+			"18:54:03 - UpdatePlayersData()", -- [1850]
+			"18:54:04 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1851]
+			"18:55:01 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1852]
+			"18:55:01 - UpdatePlayersData()", -- [1853]
+			"18:55:01 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1854]
+			"18:55:02 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1855]
+			"18:55:02 - UpdatePlayersData()", -- [1856]
+			"18:55:04 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1857]
+			"18:56:05 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1858]
+			"18:56:05 - UpdatePlayersData()", -- [1859]
+			"18:58:23 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1860]
+			"18:59:32 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1861]
+			"18:59:32 - UpdatePlayersData()", -- [1862]
+			"18:59:32 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1863]
+			"18:59:33 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1864]
+			"18:59:33 - UpdatePlayersData()", -- [1865]
+			"18:59:35 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1866]
+			"19:00:31 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1867]
+			"19:00:31 - UpdatePlayersData()", -- [1868]
+			"19:02:14 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1869]
+			"19:02:48 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1870]
+			"19:02:48 - UpdatePlayersData()", -- [1871]
+			"19:02:48 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1872]
+			"19:02:48 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1873]
+			"19:02:48 - UpdatePlayersData()", -- [1874]
+			"19:02:51 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1875]
+			"19:05:08 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1876]
+			"19:05:08 - UpdatePlayersData()", -- [1877]
+			"19:07:10 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1878]
+			"19:07:48 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1879]
+			"19:07:48 - UpdatePlayersData()", -- [1880]
+			"19:07:48 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1881]
+			"19:07:48 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1882]
+			"19:07:48 - UpdatePlayersData()", -- [1883]
+			"19:07:51 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1884]
+			"19:09:54 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1885]
+			"19:09:54 - UpdatePlayersData()", -- [1886]
+			"19:12:49 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1887]
+			"19:13:30 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1888]
+			"19:13:30 - UpdatePlayersData()", -- [1889]
+			"19:13:31 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1890]
+			"19:13:31 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1891]
+			"19:13:31 - UpdatePlayersData()", -- [1892]
+			"19:13:33 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1893]
+			"19:15:03 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1894]
+			"19:15:03 - UpdatePlayersData()", -- [1895]
+			"19:19:57 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1896]
+			"12/18/18", -- [1897]
+			"19:22:26 - Logged In", -- [1898]
+			"19:22:26 - ML initialized!", -- [1899]
+			"19:22:26 - TradeUI enabled", -- [1900]
+			"19:22:29 - Comet-Illidan (2.9.4) (nil)", -- [1901]
+			"19:22:29 - ActivateSkin (bfa)", -- [1902]
+			"19:22:32 - Event: (PLAYER_ENTERING_WORLD) (true) (false)", -- [1903]
+			"19:22:32 - GetML()", -- [1904]
+			"19:22:32 - UpdatePlayersData()", -- [1905]
+			"19:22:32 - Event: (PARTY_LEADER_CHANGED)", -- [1906]
+			"19:22:32 - GetML()", -- [1907]
+			"19:22:32 - Unknown ML", -- [1908]
+			"19:22:35 - GetPlayersGuildRank()", -- [1909]
+			"19:22:35 - Found Guild Rank: Trial", -- [1910]
+			"19:22:35 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [1911]
+			"19:22:35 - GetML()", -- [1912]
+			"19:22:35 - Resetting council as we have a new ML!", -- [1913]
+			"19:22:35 - MasterLooter =  (Ouro-Illidan)", -- [1914]
+			"19:22:50 - Timer MLdb_check passed", -- [1915]
+			"19:24:49 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1916]
+			"19:24:49 - UpdatePlayersData()", -- [1917]
+			"19:26:01 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1918]
+			"19:26:39 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1919]
+			"19:26:39 - UpdatePlayersData()", -- [1920]
+			"19:26:39 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1921]
+			"19:26:39 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1922]
+			"19:26:39 - UpdatePlayersData()", -- [1923]
+			"19:26:42 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1924]
+			"19:28:02 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1925]
+			"19:28:02 - UpdatePlayersData()", -- [1926]
+			"19:29:56 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1927]
+			"19:30:43 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1928]
+			"19:30:43 - UpdatePlayersData()", -- [1929]
+			"19:30:43 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1930]
+			"19:30:43 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1931]
+			"19:30:43 - UpdatePlayersData()", -- [1932]
+			"19:30:46 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1933]
+			"19:31:45 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1934]
+			"19:31:45 - UpdatePlayersData()", -- [1935]
+			"19:34:20 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1936]
+			"19:35:35 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1937]
+			"19:35:35 - UpdatePlayersData()", -- [1938]
+			"19:35:35 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1939]
+			"19:35:35 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1940]
+			"19:35:35 - UpdatePlayersData()", -- [1941]
+			"19:35:38 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1942]
+			"19:37:19 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1943]
+			"19:37:19 - UpdatePlayersData()", -- [1944]
+			"19:40:12 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1945]
+			"19:43:17 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Exotica) (distri:) (GUILD)", -- [1946]
+			"19:55:58 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1947]
+			"19:55:58 - UpdatePlayersData()", -- [1948]
+			"19:55:58 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1949]
+			"19:55:58 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1950]
+			"19:55:58 - UpdatePlayersData()", -- [1951]
+			"19:56:00 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1952]
+			"19:57:50 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1953]
+			"19:57:50 - UpdatePlayersData()", -- [1954]
+			"20:00:16 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1955]
+			"20:01:11 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1956]
+			"20:01:11 - UpdatePlayersData()", -- [1957]
+			"20:01:11 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1958]
+			"20:01:11 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1959]
+			"20:01:11 - UpdatePlayersData()", -- [1960]
+			"20:01:13 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1961]
+			"20:02:46 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1962]
+			"20:02:46 - UpdatePlayersData()", -- [1963]
+			"20:05:50 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1964]
+			"20:05:50 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1965]
+			"20:05:50 - UpdatePlayersData()", -- [1966]
+			"20:05:53 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1967]
+			"20:07:18 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1968]
+			"20:07:18 - UpdatePlayersData()", -- [1969]
+			"20:10:44 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1970]
+			"20:11:47 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1971]
+			"20:11:47 - UpdatePlayersData()", -- [1972]
+			"20:11:47 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1973]
+			"20:11:47 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1974]
+			"20:11:47 - UpdatePlayersData()", -- [1975]
+			"20:11:50 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1976]
+			"20:12:40 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1977]
+			"20:12:40 - UpdatePlayersData()", -- [1978]
+			"20:18:25 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1979]
+			"20:19:24 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1980]
+			"20:19:24 - UpdatePlayersData()", -- [1981]
+			"20:19:24 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1982]
+			"20:19:24 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1983]
+			"20:19:24 - UpdatePlayersData()", -- [1984]
+			"20:19:26 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1985]
+			"20:21:57 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1986]
+			"20:21:57 - UpdatePlayersData()", -- [1987]
+			"20:24:55 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1988]
+			"20:25:31 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1989]
+			"20:25:31 - UpdatePlayersData()", -- [1990]
+			"20:25:31 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1991]
+			"20:25:31 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [1992]
+			"20:25:31 - UpdatePlayersData()", -- [1993]
+			"20:25:33 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [1994]
+			"12/18/18", -- [1995]
+			"20:27:27 - Logged In", -- [1996]
+			"20:27:27 - ML initialized!", -- [1997]
+			"20:27:27 - TradeUI enabled", -- [1998]
+			"20:27:30 - Comet-Illidan (2.9.4) (nil)", -- [1999]
+			"20:27:30 - ActivateSkin (bfa)", -- [2000]
+			"20:27:34 - Event: (PLAYER_ENTERING_WORLD) (true) (false)", -- [2001]
+			"20:27:34 - GetML()", -- [2002]
+			"20:27:34 - UpdatePlayersData()", -- [2003]
+			"20:27:34 - Event: (PARTY_LEADER_CHANGED)", -- [2004]
+			"20:27:34 - GetML()", -- [2005]
+			"20:27:34 - Unknown ML", -- [2006]
+			"20:27:37 - GetPlayersGuildRank()", -- [2007]
+			"20:27:37 - Found Guild Rank: Trial", -- [2008]
+			"20:27:37 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [2009]
+			"20:27:37 - GetML()", -- [2010]
+			"20:27:37 - Resetting council as we have a new ML!", -- [2011]
+			"20:27:37 - MasterLooter =  (Ouro-Illidan)", -- [2012]
+			"20:27:51 - Timer MLdb_check passed", -- [2013]
+			"20:27:58 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [2014]
+			"20:27:58 - UpdatePlayersData()", -- [2015]
+			"20:33:16 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [2016]
+			"20:33:17 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [2017]
+			"20:33:17 - UpdatePlayersData()", -- [2018]
+			"20:33:18 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [2019]
+			"20:34:31 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [2020]
+			"20:34:31 - UpdatePlayersData()", -- [2021]
+			"20:34:31 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [2022]
+			"20:34:31 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [2023]
+			"20:34:31 - UpdatePlayersData()", -- [2024]
+			"20:34:33 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [2025]
+			"20:37:16 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [2026]
+			"20:37:16 - UpdatePlayersData()", -- [2027]
+			"20:39:22 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [2028]
+			"20:39:22 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [2029]
+			"20:39:22 - UpdatePlayersData()", -- [2030]
+			"20:39:24 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [2031]
+			"12/18/18", -- [2032]
+			"20:40:14 - Logged In", -- [2033]
+			"20:40:14 - ML initialized!", -- [2034]
+			"20:40:14 - TradeUI enabled", -- [2035]
+			"20:40:16 - Comet-Illidan (2.9.4) (nil)", -- [2036]
+			"20:40:16 - ActivateSkin (bfa)", -- [2037]
+			"20:40:19 - Event: (PLAYER_ENTERING_WORLD) (false) (true)", -- [2038]
+			"20:40:19 - GetML()", -- [2039]
+			"20:40:19 - Resetting council as we have a new ML!", -- [2040]
+			"20:40:19 - MasterLooter =  (Ouro-Illidan)", -- [2041]
+			"20:40:19 - Player relog...", -- [2042]
+			"20:40:19 - UpdatePlayersData()", -- [2043]
+			"20:40:21 - GetPlayersGuildRank()", -- [2044]
+			"20:40:21 - Found Guild Rank: Trial", -- [2045]
+			"20:40:21 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [2046]
+			"20:40:26 - Timer MLdb_check passed", -- [2047]
+			"20:40:42 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [2048]
+			"20:40:42 - UpdatePlayersData()", -- [2049]
+			"20:44:37 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [2050]
+			"20:45:39 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [2051]
+			"20:45:39 - UpdatePlayersData()", -- [2052]
+			"20:45:39 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [2053]
+			"20:45:39 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [2054]
+			"20:45:39 - UpdatePlayersData()", -- [2055]
+			"20:45:41 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [2056]
+			"20:46:26 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [2057]
+			"20:46:26 - UpdatePlayersData()", -- [2058]
+			"12/18/18", -- [2059]
+			"20:51:47 - Logged In", -- [2060]
+			"20:51:47 - ML initialized!", -- [2061]
+			"20:51:47 - TradeUI enabled", -- [2062]
+			"20:51:48 - Comet-Illidan (2.9.4) (nil)", -- [2063]
+			"20:51:48 - ActivateSkin (bfa)", -- [2064]
+			"20:51:51 - Event: (PLAYER_ENTERING_WORLD) (false) (true)", -- [2065]
+			"20:51:51 - GetML()", -- [2066]
+			"20:51:51 - Resetting council as we have a new ML!", -- [2067]
+			"20:51:51 - MasterLooter =  (Ouro-Illidan)", -- [2068]
+			"20:51:51 - Player relog...", -- [2069]
+			"20:51:51 - UpdatePlayersData()", -- [2070]
+			"20:51:51 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [2071]
+			"20:51:51 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [2072]
+			"20:51:51 - UpdatePlayersData()", -- [2073]
+			"20:51:51 - GetPlayersGuildRank()", -- [2074]
+			"20:51:51 - Found Guild Rank: Trial", -- [2075]
+			"20:51:51 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [2076]
+			"20:51:52 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Comet) (distri:) (GUILD)", -- [2077]
+			"20:51:59 - Timer MLdb_check passed", -- [2078]
+			"20:53:43 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [2079]
+			"20:53:43 - UpdatePlayersData()", -- [2080]
+			"20:53:43 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [2081]
+			"20:53:43 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [2082]
+			"20:53:43 - UpdatePlayersData()", -- [2083]
+			"20:53:46 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [2084]
+			"20:54:35 - Event: (ENCOUNTER_START) (2122) (G'huun) (16) (20)", -- [2085]
+			"20:54:35 - UpdatePlayersData()", -- [2086]
+			"21:00:03 - Event: (ENCOUNTER_END) (2122) (G'huun) (16) (20) (0)", -- [2087]
+			"21:03:26 - Comm received:^1^SverTest^T^N1^S2.9.4^t^^ (from:) (Famemonstér) (distri:) (GUILD)", -- [2088]
+			"21:03:50 - Comm received:^1^SverTest^T^N1^S2.9.5^t^^ (from:) (Cuckly) (distri:) (GUILD)", -- [2089]
+		},
+		["version"] = "2.9.4",
+		["verTestCandidates"] = {
+			["Laniaria-Illidan"] = "2.9.5-nil: - Comet-Illidan",
+			["Raycharlezz-Illidan"] = "2.9.5-nil: - Comet-Illidan",
+			["Exotica-Illidan"] = "2.9.4-nil: - Comet-Illidan",
+			["Kggs-Illidan"] = "2.9.4-nil: - Comet-Illidan",
+			["Comet-Illidan"] = "2.9.4-nil: - Comet-Illidan",
+			["Dog-Illidan"] = "2.9.4-nil: - Comet-Illidan",
+			["Bromsi-Illidan"] = "2.9.4-nil: - Comet-Illidan",
+			["Famemonstér-Illidan"] = "2.9.4-nil: - Comet-Illidan",
+		},
+	},
+	["profiles"] = {
+		["Default"] = {
+			["UI"] = {
+				["tradeui"] = {
+					["bgColor"] = {
+						0.55, -- [1]
+						0.84, -- [2]
+						1, -- [3]
+					},
+					["borderColor"] = {
+						0.62, -- [1]
+						0.86, -- [2]
+						0.87, -- [3]
+						0.85, -- [4]
+					},
+					["background"] = "Blizzard Garrison Background 3",
+					["border"] = "Blizzard Dialog",
+				},
+				["lootframe"] = {
+					["bgColor"] = {
+						0.55, -- [1]
+						0.84, -- [2]
+						1, -- [3]
+					},
+					["borderColor"] = {
+						0.62, -- [1]
+						0.86, -- [2]
+						0.87, -- [3]
+						0.85, -- [4]
+					},
+					["background"] = "Blizzard Garrison Background 3",
+					["border"] = "Blizzard Dialog",
+				},
+				["default"] = {
+					["bgColor"] = {
+						0.55, -- [1]
+						0.84, -- [2]
+						1, -- [3]
+					},
+					["borderColor"] = {
+						0.62, -- [1]
+						0.86, -- [2]
+						0.87, -- [3]
+						0.85, -- [4]
+					},
+					["background"] = "Blizzard Garrison Background 3",
+					["border"] = "Blizzard Dialog",
+				},
+			},
+		},
+	},
+}
+RCLootCouncilLootDB = {
+	["profileKeys"] = {
+		["Comet - Illidan"] = "Comet - Illidan",
+	},
+	["factionrealm"] = {
+		["Horde - Illidan"] = {
+			["Torkk-Illidan"] = {
+				{
+					["mapID"] = 1861,
+					["instance"] = "Uldir-Heroic",
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["class"] = "HUNTER",
+					["groupSize"] = 19,
+					["response"] = "Personal Loot - Non tradeable",
+					["time"] = "22:38:50",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160716::::::::120:102::5:4:4799:1808:1492:4786:::|h[Blighted Anima Greaves]|h|r",
+					["boss"] = "Vectis",
+					["difficultyID"] = 15,
+					["responseID"] = "PL",
+					["id"] = "1540366730-1",
+					["date"] = "23/10/18",
+				}, -- [1]
+			},
+			["Adiablogodd-Illidan"] = {
+				{
+					["mapID"] = 1861,
+					["date"] = "17/10/18",
+					["instance"] = "Uldir-Mythic",
+					["class"] = "DEMONHUNTER",
+					["groupSize"] = 20,
+					["response"] = "Personal Loot - Non tradeable",
+					["time"] = "22:38:46",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160681::::::::120:102::6:3:4800:1507:4786:::|h[Glaive of the Keepers]|h|r",
+					["boss"] = "MOTHER",
+					["difficultyID"] = 16,
+					["responseID"] = "PL",
+					["id"] = "1539848326-3",
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [1]
+			},
+			["Alamman-Illidan"] = {
+				{
+					["mapID"] = 1861,
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["date"] = "09/10/18",
+					["class"] = "PALADIN",
+					["id"] = "1539172245-0",
+					["groupSize"] = 19,
+					["lootWon"] = "|cffa335ee|Hitem:160723::::::::120:581::5:3:4799:1492:4786:::|h[Imperious Vambraces]|h|r",
+					["isAwardReason"] = false,
+					["time"] = "20:50:45",
+					["difficultyID"] = 15,
+					["boss"] = "Zul",
+					["responseID"] = "PL",
+					["response"] = "Personal Loot - Non tradeable",
+					["instance"] = "Uldir-Heroic",
+				}, -- [1]
+				{
+					["id"] = "1540369767-4",
+					["mapID"] = 1861,
+					["date"] = "23/10/18",
+					["groupSize"] = 20,
+					["color"] = {
+						1, -- [1]
+						1, -- [2]
+						1, -- [3]
+						1, -- [4]
+					},
+					["class"] = "PALADIN",
+					["isAwardReason"] = true,
+					["response"] = "Banking",
+					["boss"] = "Mythrax",
+					["votes"] = 0,
+					["lootWon"] = "|cffa335ee|Hitem:160686::::::::120:102::5:3:4799:1492:4786:::|h[Voror, Gleaming Blade of the Stalwart]|h|r",
+					["time"] = "23:29:27",
+					["difficultyID"] = 15,
+					["responseID"] = 5,
+					["instance"] = "Uldir-Heroic",
+					["itemReplaced1"] = "|cffa335ee|Hitem:160679:5963:::::::120:102::5:3:4799:1492:4786:::|h[Khor, Hammer of the Corrupted]|h|r",
+				}, -- [2]
+			},
+			["Misho-Illidan"] = {
+				{
+					["mapID"] = 1861,
+					["instance"] = "Uldir-Heroic",
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["class"] = "MONK",
+					["groupSize"] = 19,
+					["response"] = "Personal Loot - Non tradeable",
+					["time"] = "22:40:12",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160682::::::::120:102::5:3:4799:1492:4786:::|h[Mother's Twin Gaze]|h|r",
+					["boss"] = "Vectis",
+					["difficultyID"] = 15,
+					["responseID"] = "PL",
+					["id"] = "1540366812-3",
+					["date"] = "23/10/18",
+				}, -- [1]
+			},
+			["Záldorn-Illidan"] = {
+				{
+					["mapID"] = 1861,
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["date"] = "10/10/18",
+					["class"] = "DEATHKNIGHT",
+					["response"] = "Personal Loot - Non tradeable",
+					["groupSize"] = 20,
+					["time"] = "22:27:13",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160679::::::::120:250::6:4:4800:1808:1512:4783:::|h[Khor, Hammer of the Corrupted]|h|r",
+					["boss"] = "Taloc",
+					["difficultyID"] = 16,
+					["responseID"] = "PL",
+					["id"] = "1539242833-0",
+					["instance"] = "Uldir-Mythic",
+				}, -- [1]
+			},
+			["Huna-Illidan"] = {
+				{
+					["mapID"] = 1861,
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["date"] = "10/10/18",
+					["class"] = "SHAMAN",
+					["response"] = "Personal Loot - Non tradeable",
+					["groupSize"] = 20,
+					["time"] = "22:44:33",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160632::::::::120:250::6:3:4824:1507:4786:::|h[Flame-Sterilized Spaulders]|h|r",
+					["boss"] = "MOTHER",
+					["difficultyID"] = 16,
+					["responseID"] = "PL",
+					["id"] = "1539243873-2",
+					["instance"] = "Uldir-Mythic",
+				}, -- [1]
+				{
+					["mapID"] = 1861,
+					["date"] = "24/10/18",
+					["instance"] = "Uldir-Mythic",
+					["class"] = "SHAMAN",
+					["id"] = "1540451846-2",
+					["response"] = "Personal Loot - Non tradeable",
+					["lootWon"] = "|cffa335ee|Hitem:160631::::::::120:102::6:3:4800:1507:4786:::|h[Legguards of Coalescing Plasma]|h|r",
+					["isAwardReason"] = false,
+					["time"] = "22:17:26",
+					["difficultyID"] = 16,
+					["boss"] = "Taloc",
+					["responseID"] = "PL",
+					["groupSize"] = 20,
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [2]
+			},
+			["Pinpus-Illidan"] = {
+				{
+					["mapID"] = 1861,
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["date"] = "10/10/18",
+					["class"] = "MAGE",
+					["response"] = "Personal Loot - Non tradeable",
+					["groupSize"] = 20,
+					["time"] = "22:27:17",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160680::::::::120:250::6:3:4800:1507:4786:::|h[Titanspark Animator]|h|r",
+					["boss"] = "Taloc",
+					["difficultyID"] = 16,
+					["responseID"] = "PL",
+					["id"] = "1539242837-2",
+					["instance"] = "Uldir-Mythic",
+				}, -- [1]
+			},
+			["Comet-Illidan"] = {
+				{
+					["mapID"] = 1861,
+					["instance"] = "Uldir-Heroic",
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["class"] = "MONK",
+					["response"] = "Personal Loot - Non tradeable",
+					["groupSize"] = 24,
+					["time"] = "01:02:30",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160729::::::::120:102::5:4:4799:40:1497:4783:::|h[Striders of the Putrescent Path]|h|r",
+					["boss"] = "G'huun",
+					["difficultyID"] = 15,
+					["responseID"] = "PL",
+					["id"] = "1539770550-6",
+					["date"] = "17/10/18",
+				}, -- [1]
+				{
+					["mapID"] = 1861,
+					["instance"] = "Uldir-Heroic",
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["class"] = "MONK",
+					["groupSize"] = 19,
+					["response"] = "Personal Loot - Non tradeable",
+					["time"] = "22:38:51",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160649::::::::120:102::5:3:4799:1492:4786:::|h[Inoculating Extract]|h|r",
+					["boss"] = "Vectis",
+					["difficultyID"] = 15,
+					["responseID"] = "PL",
+					["id"] = "1540366731-2",
+					["date"] = "23/10/18",
+				}, -- [2]
+			},
+			["Azumaru-Illidan"] = {
+				{
+					["mapID"] = 1861,
+					["date"] = "24/10/18",
+					["instance"] = "Uldir-Mythic",
+					["class"] = "PRIEST",
+					["id"] = "1540452851-4",
+					["response"] = "Personal Loot - Non tradeable",
+					["lootWon"] = "|cffa335ee|Hitem:160695::::::::120:102::6:3:4800:1507:4786:::|h[Uldir Subject Manifest]|h|r",
+					["isAwardReason"] = false,
+					["time"] = "22:34:11",
+					["difficultyID"] = 16,
+					["boss"] = "MOTHER",
+					["responseID"] = "PL",
+					["groupSize"] = 20,
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [1]
+			},
+			["Zarea-Illidan"] = {
+				{
+					["mapID"] = 1861,
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["date"] = "09/10/18",
+					["class"] = "WARLOCK",
+					["id"] = "1539173884-1",
+					["groupSize"] = 19,
+					["lootWon"] = "|cffa335ee|Hitem:160614::::::::120:581::5:3:4823:1492:4786:::|h[Robes of the Unraveler]|h|r",
+					["isAwardReason"] = false,
+					["time"] = "21:18:04",
+					["difficultyID"] = 15,
+					["boss"] = "Mythrax",
+					["responseID"] = "PL",
+					["response"] = "Personal Loot - Non tradeable",
+					["instance"] = "Uldir-Heroic",
+				}, -- [1]
+				{
+					["mapID"] = 1861,
+					["date"] = "17/10/18",
+					["instance"] = "Uldir-Mythic",
+					["class"] = "WARLOCK",
+					["groupSize"] = 20,
+					["response"] = "Personal Loot - Non tradeable",
+					["time"] = "22:22:42",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160651::::::::120:102::6:3:4800:1507:4786:::|h[Vigilant's Bloodshaper]|h|r",
+					["boss"] = "Taloc",
+					["difficultyID"] = 16,
+					["responseID"] = "PL",
+					["id"] = "1539847362-2",
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [2]
+				{
+					["mapID"] = 1861,
+					["date"] = "24/10/18",
+					["instance"] = "Uldir-Mythic",
+					["class"] = "WARLOCK",
+					["id"] = "1540452851-3",
+					["response"] = "Personal Loot - Non tradeable",
+					["lootWon"] = "|cffa335ee|Hitem:160695::::::::120:102::6:3:4800:1507:4786:::|h[Uldir Subject Manifest]|h|r",
+					["isAwardReason"] = false,
+					["time"] = "22:34:11",
+					["difficultyID"] = 16,
+					["boss"] = "MOTHER",
+					["responseID"] = "PL",
+					["groupSize"] = 20,
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [3]
+				{
+					["mapID"] = 1861,
+					["date"] = "30/10/18",
+					["instance"] = "Uldir-Heroic",
+					["class"] = "WARLOCK",
+					["id"] = "1540985083-2",
+					["groupSize"] = 16,
+					["lootWon"] = "|cffa335ee|Hitem:160642::::::::120:577::5:4:4799:40:1497:4783:::|h[Cloak of Rippling Whispers]|h|r",
+					["isAwardReason"] = false,
+					["time"] = "20:24:43",
+					["difficultyID"] = 15,
+					["boss"] = "Zul",
+					["responseID"] = "PL",
+					["response"] = "Personal Loot - Non tradeable",
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [4]
+			},
+			["Tendó-Illidan"] = {
+				{
+					["mapID"] = 1861,
+					["instance"] = "Uldir-Heroic",
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["class"] = "HUNTER",
+					["response"] = "Personal Loot - Non tradeable",
+					["groupSize"] = 24,
+					["time"] = "23:45:58",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160724::::::::120:102::5:3:4799:1492:4786:::|h[Cincture of Profane Deeds]|h|r",
+					["boss"] = "Zul",
+					["difficultyID"] = 15,
+					["responseID"] = "PL",
+					["id"] = "1539765958-3",
+					["date"] = "16/10/18",
+				}, -- [1]
+				{
+					["mapID"] = 1861,
+					["date"] = "17/10/18",
+					["instance"] = "Uldir-Mythic",
+					["class"] = "HUNTER",
+					["groupSize"] = 20,
+					["response"] = "Personal Loot - Non tradeable",
+					["time"] = "22:22:36",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160652::::::::120:102::6:4:4800:41:1507:4786:::|h[Construct Overcharger]|h|r",
+					["boss"] = "Taloc",
+					["difficultyID"] = 16,
+					["responseID"] = "PL",
+					["id"] = "1539847356-0",
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [2]
+			},
+			["Lezbehonest-Illidan"] = {
+				{
+					["mapID"] = 1861,
+					["date"] = "24/10/18",
+					["instance"] = "Uldir-Heroic",
+					["class"] = "MONK",
+					["response"] = "Personal Loot - Non tradeable",
+					["groupSize"] = 19,
+					["time"] = "00:29:53",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160729::::::::120:102::5:3:4799:1497:4783:::|h[Striders of the Putrescent Path]|h|r",
+					["boss"] = "G'huun",
+					["difficultyID"] = 15,
+					["responseID"] = "PL",
+					["id"] = "1540373393-5",
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [1]
+				{
+					["mapID"] = 1861,
+					["date"] = "30/10/18",
+					["instance"] = "Uldir-Heroic",
+					["class"] = "MONK",
+					["id"] = "1540985064-1",
+					["groupSize"] = 16,
+					["lootWon"] = "|cffa335ee|Hitem:160720::::::::120:577::5:3:4799:1512:4784:::|h[Armbands of Sacrosanct Acts]|h|r",
+					["isAwardReason"] = false,
+					["time"] = "20:24:24",
+					["difficultyID"] = 15,
+					["boss"] = "Zul",
+					["responseID"] = "PL",
+					["response"] = "Personal Loot - Non tradeable",
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [2]
+			},
+			["Hiddersin-Illidan"] = {
+				{
+					["mapID"] = 1861,
+					["date"] = "10/10/18",
+					["class"] = "PALADIN",
+					["groupSize"] = 20,
+					["boss"] = "MOTHER",
+					["time"] = "22:49:35",
+					["itemReplaced1"] = "|cffa335ee|Hitem:158362:5942:::::::120:250::16:3:5010:1542:4786:::|h[Lord Waycrest's Signet]|h|r",
+					["instance"] = "Uldir-Mythic",
+					["response"] = "BiS",
+					["votes"] = 0,
+					["difficultyID"] = 16,
+					["lootWon"] = "|cffa335ee|Hitem:160645::::::::120:250::6:4:4800:41:1512:4783:::|h[Rot-Scour Ring]|h|r",
+					["id"] = "1539244175-3",
+					["color"] = {
+						0, -- [1]
+						1, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["responseID"] = 1,
+					["itemReplaced2"] = "|cffa335ee|Hitem:159461:5942:::::::120:250::16:3:5009:1537:4786:::|h[Band of the Ancient Dredger]|h|r",
+					["isAwardReason"] = false,
+				}, -- [1]
+				{
+					["mapID"] = 1861,
+					["instance"] = "Uldir-Heroic",
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["class"] = "PALADIN",
+					["response"] = "Personal Loot - Non tradeable",
+					["groupSize"] = 24,
+					["time"] = "23:45:58",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160642::::::::120:102::5:3:4799:1492:4786:::|h[Cloak of Rippling Whispers]|h|r",
+					["boss"] = "Zul",
+					["difficultyID"] = 15,
+					["responseID"] = "PL",
+					["id"] = "1539765958-4",
+					["date"] = "16/10/18",
+				}, -- [2]
+			},
+			["Demonfurious-Illidan"] = {
+				{
+					["mapID"] = 1861,
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["date"] = "10/10/18",
+					["class"] = "WARLOCK",
+					["response"] = "Personal Loot - Non tradeable",
+					["groupSize"] = 20,
+					["time"] = "22:44:33",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160695::::::::120:250::6:3:4800:1507:4786:::|h[Uldir Subject Manifest]|h|r",
+					["boss"] = "MOTHER",
+					["difficultyID"] = 16,
+					["responseID"] = "PL",
+					["id"] = "1539243873-1",
+					["instance"] = "Uldir-Mythic",
+				}, -- [1]
+			},
+			["Felimbued-Illidan"] = {
+				{
+					["mapID"] = 1861,
+					["date"] = "17/10/18",
+					["instance"] = "Uldir-Mythic",
+					["class"] = "DEMONHUNTER",
+					["groupSize"] = 20,
+					["response"] = "Personal Loot - Non tradeable",
+					["time"] = "22:38:54",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160645::::::::120:102::6:4:4800:1808:1507:4786:::|h[Rot-Scour Ring]|h|r",
+					["boss"] = "MOTHER",
+					["difficultyID"] = 16,
+					["responseID"] = "PL",
+					["id"] = "1539848334-4",
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [1]
+				{
+					["mapID"] = 1861,
+					["date"] = "24/10/18",
+					["instance"] = "Uldir-Mythic",
+					["class"] = "DEMONHUNTER",
+					["id"] = "1540451840-1",
+					["response"] = "Personal Loot - Non tradeable",
+					["lootWon"] = "|cffa335ee|Hitem:160622::::::::120:102::6:3:4800:1517:4783:::|h[Bloodstorm Buckle]|h|r",
+					["isAwardReason"] = false,
+					["time"] = "22:17:20",
+					["difficultyID"] = 16,
+					["boss"] = "Taloc",
+					["responseID"] = "PL",
+					["groupSize"] = 20,
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [2]
+			},
+			["Grundlesauce-Illidan"] = {
+				{
+					["mapID"] = 1861,
+					["date"] = "16/10/18",
+					["instance"] = "Uldir-Heroic",
+					["class"] = "PALADIN",
+					["id"] = "1539763236-0",
+					["response"] = "Personal Loot - Non tradeable",
+					["lootWon"] = "|cffa335ee|Hitem:160655::::::::120:102::5:3:4799:1497:4783:::|h[Syringe of Bloodborne Infirmity]|h|r",
+					["isAwardReason"] = false,
+					["time"] = "23:00:36",
+					["difficultyID"] = 15,
+					["boss"] = "Vectis",
+					["responseID"] = "PL",
+					["groupSize"] = 24,
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [1]
+				{
+					["mapID"] = 1861,
+					["instance"] = "Uldir-Heroic",
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["class"] = "PALADIN",
+					["response"] = "Personal Loot - Non tradeable",
+					["groupSize"] = 24,
+					["time"] = "23:25:22",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160647::::::::120:102::5:3:4799:1502:4783:::|h[Ring of the Infinite Void]|h|r",
+					["boss"] = "Zek'voz",
+					["difficultyID"] = 15,
+					["responseID"] = "PL",
+					["id"] = "1539764722-1",
+					["date"] = "16/10/18",
+				}, -- [2]
+				{
+					["mapID"] = 1861,
+					["date"] = "17/10/18",
+					["instance"] = "Uldir-Mythic",
+					["class"] = "PALADIN",
+					["groupSize"] = 20,
+					["response"] = "Personal Loot - Non tradeable",
+					["time"] = "22:39:00",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160645::::::::120:102::6:3:4800:1507:4786:::|h[Rot-Scour Ring]|h|r",
+					["boss"] = "MOTHER",
+					["difficultyID"] = 16,
+					["responseID"] = "PL",
+					["id"] = "1539848340-5",
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [3]
+				{
+					["mapID"] = 1861,
+					["date"] = "24/10/18",
+					["instance"] = "Uldir-Mythic",
+					["class"] = "PALADIN",
+					["id"] = "1540451840-0",
+					["response"] = "Personal Loot - Non tradeable",
+					["lootWon"] = "|cffa335ee|Hitem:160639::::::::120:102::6:3:4800:1512:4783:::|h[Greaves of Unending Vigil]|h|r",
+					["isAwardReason"] = false,
+					["time"] = "22:17:20",
+					["difficultyID"] = 16,
+					["boss"] = "Taloc",
+					["responseID"] = "PL",
+					["groupSize"] = 20,
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [4]
+			},
+			["Shiftycents-Illidan"] = {
+				{
+					["mapID"] = 1861,
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["date"] = "10/10/18",
+					["class"] = "DRUID",
+					["response"] = "Personal Loot - Non tradeable",
+					["groupSize"] = 20,
+					["time"] = "22:27:17",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160651::::::::120:250::6:3:4800:1507:4786:::|h[Vigilant's Bloodshaper]|h|r",
+					["boss"] = "Taloc",
+					["difficultyID"] = 16,
+					["responseID"] = "PL",
+					["id"] = "1539242837-3",
+					["instance"] = "Uldir-Mythic",
+				}, -- [1]
+				{
+					["mapID"] = 1861,
+					["date"] = "17/10/18",
+					["instance"] = "Uldir-Mythic",
+					["class"] = "DRUID",
+					["groupSize"] = 20,
+					["response"] = "Personal Loot - Non tradeable",
+					["time"] = "22:22:38",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160618::::::::120:102::6:3:4800:1517:4783:::|h[Gloves of Descending Madness]|h|r",
+					["boss"] = "Taloc",
+					["difficultyID"] = 16,
+					["responseID"] = "PL",
+					["id"] = "1539847358-1",
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [2]
+				{
+					["mapID"] = 1861,
+					["instance"] = "Uldir-Heroic",
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["class"] = "DRUID",
+					["groupSize"] = 19,
+					["response"] = "Personal Loot - Non tradeable",
+					["time"] = "22:27:07",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160689::::::::120:102::5:3:4799:1492:4786:::|h[Regurgitated Purifier's Flamestaff]|h|r",
+					["boss"] = "Fetid Devourer",
+					["difficultyID"] = 15,
+					["responseID"] = "PL",
+					["id"] = "1540366027-0",
+					["date"] = "23/10/18",
+				}, -- [3]
+			},
+			["Riggie-Illidan"] = {
+				{
+					["mapID"] = 1861,
+					["instance"] = "Uldir-Heroic",
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["class"] = "MONK",
+					["response"] = "Personal Loot - Non tradeable",
+					["groupSize"] = 24,
+					["time"] = "23:25:27",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160624::::::::120:102::5:3:4799:1497:4783:::|h[Quarantine Protocol Treads]|h|r",
+					["boss"] = "Zek'voz",
+					["difficultyID"] = 15,
+					["responseID"] = "PL",
+					["id"] = "1539764727-2",
+					["date"] = "16/10/18",
+				}, -- [1]
+				{
+					["mapID"] = 1861,
+					["date"] = "30/10/18",
+					["instance"] = "Uldir-Heroic",
+					["class"] = "MONK",
+					["id"] = "1540982949-0",
+					["groupSize"] = 17,
+					["lootWon"] = "|cffa335ee|Hitem:160649::::::::120:577::5:3:4799:1507:4784:::|h[Inoculating Extract]|h|r",
+					["isAwardReason"] = false,
+					["time"] = "19:49:09",
+					["difficultyID"] = 15,
+					["boss"] = "Vectis",
+					["responseID"] = "PL",
+					["response"] = "Personal Loot - Non tradeable",
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+				}, -- [2]
+			},
+			["Azzinara-Illidan"] = {
+				{
+					["mapID"] = 1861,
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["date"] = "10/10/18",
+					["class"] = "DEMONHUNTER",
+					["response"] = "Personal Loot - Non tradeable",
+					["groupSize"] = 20,
+					["time"] = "22:44:25",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160681::::::::120:250::6:4:4800:1808:1512:4783:::|h[Glaive of the Keepers]|h|r",
+					["boss"] = "MOTHER",
+					["difficultyID"] = 16,
+					["responseID"] = "PL",
+					["id"] = "1539243865-0",
+					["instance"] = "Uldir-Mythic",
+				}, -- [1]
+			},
+			["Wallahbro-Illidan"] = {
+				{
+					["mapID"] = 1861,
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["date"] = "10/10/18",
+					["class"] = "WARRIOR",
+					["response"] = "Personal Loot - Non tradeable",
+					["groupSize"] = 20,
+					["time"] = "22:27:20",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160639::::::::120:250::6:3:4800:1507:4786:::|h[Greaves of Unending Vigil]|h|r",
+					["boss"] = "Taloc",
+					["difficultyID"] = 16,
+					["responseID"] = "PL",
+					["id"] = "1539242840-4",
+					["instance"] = "Uldir-Mythic",
+				}, -- [1]
+			},
+			["Shinyazumaru-Illidan"] = {
+				{
+					["mapID"] = 1861,
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["date"] = "10/10/18",
+					["class"] = "PRIEST",
+					["response"] = "Personal Loot - Non tradeable",
+					["groupSize"] = 20,
+					["time"] = "22:27:16",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160714::::::::120:250::6:3:4800:1507:4786:::|h[Volatile Walkers]|h|r",
+					["boss"] = "Taloc",
+					["difficultyID"] = 16,
+					["responseID"] = "PL",
+					["id"] = "1539242836-1",
+					["instance"] = "Uldir-Mythic",
+				}, -- [1]
+			},
+			["Harlotquinn-Illidan"] = {
+				{
+					["mapID"] = 1861,
+					["instance"] = "Uldir-Heroic",
+					["color"] = {
+						1, -- [1]
+						0.6, -- [2]
+						0, -- [3]
+						1, -- [4]
+					},
+					["class"] = "ROGUE",
+					["response"] = "Personal Loot - Non tradeable",
+					["groupSize"] = 24,
+					["time"] = "23:46:17",
+					["isAwardReason"] = false,
+					["lootWon"] = "|cffa335ee|Hitem:160642::::::::120:102::5:4:4799:1808:1497:4783:::|h[Cloak of Rippling Whispers]|h|r",
+					["boss"] = "Zul",
+					["difficultyID"] = 15,
+					["responseID"] = "PL",
+					["id"] = "1539765977-5",
+					["date"] = "16/10/18",
+				}, -- [1]
+			},
+		},
+	},
+}

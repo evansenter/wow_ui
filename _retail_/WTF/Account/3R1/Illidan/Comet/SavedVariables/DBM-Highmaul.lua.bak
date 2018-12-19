@@ -1,0 +1,3 @@
+
+DBMHighmaul_SavedVars = nil
+DBMHighmaul_SavedStats = nil

@@ -1,0 +1,39 @@
+
+Omen3DB = {
+	["profileKeys"] = {
+		["Pandatal - Illidan"] = "Pandatal - Illidan",
+	},
+	["profiles"] = {
+		["Pandatal - Illidan"] = {
+			["PositionW"] = 412.9997369096378,
+			["PositionH"] = 134.00006283804,
+			["VGrip2"] = 237.4749255052686,
+			["PositionY"] = 321.0000689531513,
+			["Locked"] = true,
+			["Background"] = {
+				["Color"] = {
+					["a"] = 0.5,
+					["r"] = 0,
+					["g"] = 0,
+					["b"] = 0,
+				},
+				["Texture"] = "Solid",
+			},
+			["Shown"] = true,
+			["PositionX"] = 1503.500118471495,
+			["MinimapIcon"] = {
+				["hide"] = true,
+			},
+			["VGrip1"] = 175.5249449386768,
+			["TitleBar"] = {
+				["Font"] = "ElvUI Font",
+			},
+			["Bar"] = {
+				["FontSize"] = 12,
+				["Texture"] = "Aluminium",
+				["Font"] = "Arial Narrow",
+				["Height"] = 14,
+			},
+		},
+	},
+}

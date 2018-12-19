@@ -1,6 +1,12 @@
-/*
-!.gitignore
-!_retail_/interface/
-!_retail_/WTF/
-!_retail_/Fonts/
+.build.info
+.curseclient
+.patch.result
+.product.db
+Data/
+Launcher.db
+World of Warcraft Launcher.exe
+_retail_/*
+!_retail_/Interface
+!_retail_/Fonts
+!_retail_/WTF
 _retail_/WTF/Config.wtf

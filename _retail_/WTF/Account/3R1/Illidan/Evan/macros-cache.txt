@@ -1,0 +1,72 @@
+VER 3 0100000000000024 "Flash Heal" "INV_Misc_QuestionMark"
+#showtooltip
+/use [@mouseover,help,nodead][]Flash Heal
+END
+VER 3 0100000000000026 "Heal" "INV_Misc_QuestionMark"
+#showtooltip
+/use [target=mouseover,help,nodead][]Heal
+END
+VER 3 0100000000000007 "HW:C" "INV_Misc_QuestionMark"
+#showtooltip
+/use [@mouseover,harm,nodead][harm,nodead][@mouseovertarget,harm,nodead][]Holy Word: Chastise
+END
+VER 3 0100000000000027 "HW:S" "INV_Misc_QuestionMark"
+#showtooltip
+/use [target=mouseover,help,nodead][]Holy Word: Serenity
+END
+VER 3 0100000000000022 "Levitate" "INV_Misc_QuestionMark"
+#showtooltip
+/use [@mouseover,nodead,help][nodead,help][@player]Levitate
+END
+VER 3 010000000000001B "Mana" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [@mouseover,harm,nodead][harm,nodead][@mouseovertarget,harm,nodead][]Lightspawn
+END
+VER 3 0100000000000009 "Penance" "INV_Misc_QuestionMark"
+#showtooltip Penance
+/click [btn:1]MTSB122 LeftButton;[btn:2]MTSB122 RightButton;[btn:3]MTSB122 MiddleButton;[btn:4]MTSB122 Button4;[btn:5]MTSB122 Button5
+END
+VER 3 0100000000000028 "PoH" "INV_Misc_QuestionMark"
+#showtooltip
+/use [target=mouseover,help,nodead][]Prayer of Healing
+END
+VER 3 0100000000000015 "Purify" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [target=mouseover,exists][help][target=player] Purify
+END
+VER 3 0100000000000029 "Purify Disease" "INV_Misc_QuestionMark"
+#showtooltip
+/use [target=mouseover,help,nodead][]Purify Disease
+END
+VER 3 0100000000000023 "PW:R" "INV_Misc_QuestionMark"
+#showtooltip
+/use [@mouseover,help,nodead][]Power Word: Radiance
+END
+VER 3 010000000000002B "PW:S" "612968"
+#showtooltip
+/use [@mouseover,harm,nodead][harm,nodead][@mouseovertarget,harm,nodead][]Power Word: Solace
+END
+VER 3 0100000000000005 "PW:S" "INV_Misc_QuestionMark"
+#showtooltip
+/use [@mouseover,help,nodead][]Power Word: Shield
+END
+VER 3 0100000000000025 "Renew" "INV_Misc_QuestionMark"
+#showtooltip
+/use [target=mouseover,help,nodead][]Renew
+END
+VER 3 0100000000000020 "Shadow Covenant" "136200"
+#showtooltip
+/use [@mouseover,help,nodead][]Shadow Covenant
+END
+VER 3 0100000000000021 "Shining Force" "571554"
+#showtooltip
+/use [@mouseover,help,nodead]Shining Force
+END
+VER 3 0100000000000006 "Smite" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [@mouseover,harm,nodead][harm,nodead][@mouseovertarget,harm,nodead][]Smite
+END
+VER 3 010000000000002A "Tier 6 Disc" "INV_Misc_QuestionMark"
+#showtooltip
+/cast [talent:6/1]Purge the Wicked;[talent:6/2]Divine Star;[talent:6/3]Halo
+END
