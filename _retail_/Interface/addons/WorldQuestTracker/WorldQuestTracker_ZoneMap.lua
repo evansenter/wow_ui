@@ -148,6 +148,7 @@ function WorldQuestTracker.CreateZoneWidget (index, name, parent, pinTemplate) -
 	button.highlight:SetTexture ([[Interface\AddOns\WorldQuestTracker\media\highlight_circleT]])
 	button.highlight:SetPoint ("center")
 	button.highlight:SetSize (16, 16)
+	button.highlight:SetAlpha (0.35)
 	button.highlight:Hide()
 	
 	button.IsTrackingGlow = supportFrame:CreateTexture(button:GetName() .. "IsTrackingGlow", "BACKGROUND", -6)
@@ -172,15 +173,15 @@ function WorldQuestTracker.CreateZoneWidget (index, name, parent, pinTemplate) -
 	button.Shadow:SetTexture ([[Interface\PETBATTLES\BattleBar-AbilityBadge-Neutral]])
 	button.Shadow:SetAlpha (1)
 	
-	
 	--create the on enter/leave scale mini animation
 	
 		--animations
 		local animaSettings = {
-			scaleZone = 0.12, --used when the widget is placed in a zone map
-			scaleWorld = 0.12, --used when the widget is placed in the world
-			speed = 0.1,
+			scaleZone = 0.10, --used when the widget is placed in a zone map
+			scaleWorld = 0.10, --used when the widget is placed in the world
+			speed = WQT_ANIMATION_SPEED,
 		}
+		
 		do 
 			button.OnEnterAnimation = DF:CreateAnimationHub (button, function() end, function() end)
 			local anim = WorldQuestTracker:CreateAnimation (button.OnEnterAnimation, "Scale", 1, animaSettings.speed, 1, 1, animaSettings.scaleZone, animaSettings.scaleZone, "center", 0, 0)
@@ -198,6 +199,11 @@ function WorldQuestTracker.CreateZoneWidget (index, name, parent, pinTemplate) -
 			button:SetFrameLevel (button.OriginalFrameLevel + 50)
 		
 			if (self.OnEnterAnimation) then
+			
+				if (not WorldQuestTracker.db.profile.hoverover_animations) then
+					return
+				end
+			
 				if (self.OnLeaveAnimation:IsPlaying()) then
 					self.OnLeaveAnimation:Stop()
 				end
@@ -221,13 +227,20 @@ function WorldQuestTracker.CreateZoneWidget (index, name, parent, pinTemplate) -
 		end)
 		
 		button:HookScript ("OnLeave", function (self)
+		
+			if (button.OriginalFrameLevel) then
+				button:SetFrameLevel (button.OriginalFrameLevel)
+			end		
+		
 			if (self.OnLeaveAnimation) then
+				if (not WorldQuestTracker.db.profile.hoverover_animations) then
+					return
+				end
+			
 				if (self.OnEnterAnimation:IsPlaying()) then
 					self.OnEnterAnimation:Stop()
 				end
 				
-				button:SetFrameLevel (button.OriginalFrameLevel)
-			
 				local currentScale = self.ModifiedScale
 				local originalScale = self.OriginalScale
 				
@@ -310,7 +323,7 @@ function WorldQuestTracker.CreateZoneWidget (index, name, parent, pinTemplate) -
 	button.rareSerpent = supportFrame:CreateTexture (button:GetName() .. "RareSerpent", "OVERLAY")
 	button.rareSerpent:SetWidth (34 * 1.1)
 	button.rareSerpent:SetHeight (34 * 1.1)
-	button.rareSerpent:SetPoint ("CENTER", 1, 0)
+	button.rareSerpent:SetPoint ("CENTER", 1, -1)
 	
 	-- � a sombra da serpente no fundo, pode ser na cor azul ou roxa
 	button.rareGlow = supportFrame:CreateTexture (nil, "background")
@@ -330,13 +343,6 @@ function WorldQuestTracker.CreateZoneWidget (index, name, parent, pinTemplate) -
 	button.circleBorder:SetTexture ([[Interface\AddOns\WorldQuestTracker\media\border_zone_browT]])
 	button.circleBorder:SetTexCoord (0, 1, 0, 1)
 	--problema das quests de profiss�o com verde era a circleBorder
-	
-	button.glassTransparence = supportFrame:CreateTexture (nil, "OVERLAY", 1)
-	button.glassTransparence:SetTexture ([[Interface\AddOns\WorldQuestTracker\media\icon_transparency_overlay]])
-	button.glassTransparence:SetPoint ("topleft", button, "topleft", -1, 1)
-	button.glassTransparence:SetPoint ("bottomright", button, "bottomright", 1, -1)
-	button.glassTransparence:SetAlpha (.5)
-	button.glassTransparence:Hide()
 	
 	--borda quadrada
 	button.squareBorder = supportFrame:CreateTexture (nil, "OVERLAY", 1)
@@ -415,16 +421,16 @@ function WorldQuestTracker.CreateZoneWidget (index, name, parent, pinTemplate) -
 	
 	local bountyRingPadding = 5
 	local bountyRing = supportFrame:CreateTexture (nil, "overlay")
-	bountyRing:SetPoint ("topleft", supportFrame, "topleft", -1.5, 1.5)
-	bountyRing:SetPoint ("bottomright", supportFrame, "bottomright", 1.5, -1.5)
+	bountyRing:SetPoint ("topleft", supportFrame, "topleft", -2.5, 2.5)
+	bountyRing:SetPoint ("bottomright", supportFrame, "bottomright", 2.5, -2.5)
 	bountyRing:SetAtlas ("worldquest-emissary-ring")
-	bountyRing:SetAlpha (0.6)
+	bountyRing:SetAlpha (0.22)
 	bountyRing:Hide()
 	button.BountyRing = bountyRing
 	
 	local criteriaAnimation = DF:CreateAnimationHub (criteriaFrame)
-	DF:CreateAnimation (criteriaAnimation, "Scale", 1, .15, 1, 1, 1.1, 1.1)
-	DF:CreateAnimation (criteriaAnimation, "Scale", 2, .15, 1.2, 1.2, 1, 1)
+	DF:CreateAnimation (criteriaAnimation, "Scale", 1, .10, 1, 1, 1.1, 1.1)
+	DF:CreateAnimation (criteriaAnimation, "Scale", 2, .10, 1.2, 1.2, 1, 1)
 	criteriaAnimation.LastPlay = 0
 	button.CriteriaAnimation = criteriaAnimation
 	
@@ -433,7 +439,6 @@ function WorldQuestTracker.CreateZoneWidget (index, name, parent, pinTemplate) -
 	button.IsTrackingGlow:SetDrawLayer ("BACKGROUND", -6)
 	button.Glow:SetDrawLayer ("BACKGROUND", -6)
 	button.Texture:SetDrawLayer ("BACKGROUND", -5)
-	button.glassTransparence:SetDrawLayer ("BACKGROUND", -4)
 
 	button.IsTrackingRareGlow:SetDrawLayer ("overlay", 0)
 	button.circleBorder:SetDrawLayer ("overlay", 1)
@@ -976,13 +981,13 @@ function WorldQuestTracker.SetupWorldQuestButton (self, worldQuestType, rarity, 
 		if (worldQuestType == LE_QUEST_TAG_TYPE_PVP or worldQuestType == LE_QUEST_TAG_TYPE_FACTION_ASSAULT) then
 			self.questTypeBlip:Show()
 			self.questTypeBlip:SetTexture ([[Interface\PVPFrame\Icon-Combat]])
-			self.questTypeBlip:SetTexCoord (0, 1, 0, 1)
+			self.questTypeBlip:SetTexCoord (.05, .95, .05, .95)
 			self.questTypeBlip:SetAlpha (1)
 			
 		elseif (worldQuestType == LE_QUEST_TAG_TYPE_PET_BATTLE) then
 			self.questTypeBlip:Show()
-			self.questTypeBlip:SetTexture ([[Interface\MINIMAP\ObjectIconsAtlas]])
-			self.questTypeBlip:SetTexCoord (unpack (WorldQuestTracker.MapData.QuestTypeIcons [WQT_QUESTTYPE_PETBATTLE].coords)) -- left right    top botton  --7.3.5
+			self.questTypeBlip:SetTexture (WorldQuestTracker.MapData.QuestTypeIcons [WQT_QUESTTYPE_PETBATTLE].icon)
+			self.questTypeBlip:SetTexCoord (unpack (WorldQuestTracker.MapData.QuestTypeIcons [WQT_QUESTTYPE_PETBATTLE].coords))
 			self.questTypeBlip:SetAlpha (1)
 			
 		elseif (worldQuestType == LE_QUEST_TAG_TYPE_PROFESSION) then
@@ -1022,7 +1027,7 @@ function WorldQuestTracker.SetupWorldQuestButton (self, worldQuestType, rarity, 
 				self.QuestType = QUESTTYPE_GOLD
 				self.Amount = goldReward
 				
-				WorldQuestTracker.UpdateBorder (self, rarity, worldQuestType, mapID, self.isCriteria)
+				WorldQuestTracker.UpdateBorder (self, rarity, worldQuestType, mapID, self.isCriteria, isElite)
 				okay = true
 			end
 			
@@ -1056,7 +1061,7 @@ function WorldQuestTracker.SetupWorldQuestButton (self, worldQuestType, rarity, 
 						self.flagText:SetText (numRewardItems)
 					end
 					
-					WorldQuestTracker.UpdateBorder (self, rarity, worldQuestType, mapID, self.isCriteria)
+					WorldQuestTracker.UpdateBorder (self, rarity, worldQuestType, mapID, self.isCriteria, isElite)
 					
 					if (self:GetHighlightTexture()) then
 						self:GetHighlightTexture():SetTexture ([[Interface\Store\store-item-highlight]])
@@ -1120,7 +1125,7 @@ function WorldQuestTracker.SetupWorldQuestButton (self, worldQuestType, rarity, 
 
 				--self.circleBorder:Show()
 				
-				WorldQuestTracker.UpdateBorder (self, rarity, worldQuestType, mapID, self.isCriteria)
+				WorldQuestTracker.UpdateBorder (self, rarity, worldQuestType, mapID, self.isCriteria, isElite)
 				okay = true
 			end
 			

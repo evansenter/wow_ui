@@ -1,114 +1,68 @@
-lightweight tag 9778a0f5e610f2adfc2c72209817b884ce12f8c1 8.0.6
+tag d98675dbb72fb17dfed9fc03f7ef0cfd77f0dd18 8.0.7
 Author:	Benjamin Staneck <staneck@gmail.com>
-Date:	Wed Sep 19 14:34:55 2018 +0200
+Date:	Fri Dec 14 03:42:43 2018 +0100
 
-commit 9778a0f5e610f2adfc2c72209817b884ce12f8c1
+commit 241e8f8350157e5ba56ba8bc4563e70cb43ac90d
 Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Wed Sep 19 14:34:55 2018 +0200
+Date:   Fri Dec 14 03:42:26 2018 +0100
 
-    change emissary checking to the BfA quests
+    Update TOC for Patch 8.1
 
-commit 1be80fc1a53dcc3fd4dad6d8cc0cbcf3244f66a9
+commit d11c94c3073ca98a5321dfbd8287b7b98b723740
 Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Wed Sep 19 14:34:34 2018 +0200
+Date:   Fri Dec 14 03:20:06 2018 +0100
 
-    fix Uldir LFR ids
-
-commit 36927f44d84bce6bb9b3904d15b9994106ea6728
-Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Wed Sep 19 12:26:42 2018 +0200
-
-    move emissary to its own file
-
-commit 294abcaa05bb005242a57cd495b0fa1d55f7066c
-Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Wed Sep 19 02:36:46 2018 +0200
-
-    Remove MoP farm tracking
-
-commit 0b3f3f8d9ef5ec81e9c1c17c312e2e582fc2f7ad
-Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Wed Sep 19 01:35:25 2018 +0200
-
-    rename the sv variable
+    add Transmute: Herbs to Anchors
     
-    it was currently juggled around which was unneeded
+    Fixes #188
 
-commit d90116517aa60e91123c99fd64efc61851a325b0
+commit 2b81d3dff6de1305d3e13848e75389a2ce9a5a09
 Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Wed Sep 19 01:21:52 2018 +0200
+Date:   Fri Dec 14 03:18:53 2018 +0100
 
-    move tradeskills to their own file
-
-commit 1f9e32a54d737b0f42d001f59c38948c145466ad
-Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Tue Sep 18 04:21:19 2018 +0200
-
-    move lfr into its own file
-
-commit d5fef71d4e2bd8ab4adfac95fc00778887079939
-Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Mon Sep 17 23:11:07 2018 +0200
-
-    slim down core
-
-commit 57fb9a792e4251b89110c1aca2326768a19f394a
-Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Mon Sep 17 23:10:35 2018 +0200
-
-    move LFR into its own file
-
-commit 6686ac778e4455c684031e8a1a6866b63d30ff78
-Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Mon Sep 17 18:29:36 2018 +0200
-
-    move out currencies and mythic plus
-
-commit c49f371f124875711636735f7138e51c70f9731e
-Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Mon Sep 17 17:58:22 2018 +0200
-
-    worldbosses: cleanup
-
-commit db905161f19ff3c579135d74896c635f49032355
-Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Mon Sep 17 17:52:09 2018 +0200
-
-    move world bosses to another file part2
-
-commit 30a8eff2d65ff3938c5ef42de24cbe10be2ffb3b
-Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Mon Sep 17 17:50:13 2018 +0200
-
-    move world bosses to their own file
-
-commit 4012f929703e4922c7717525ac8a8ec114d7a2e2
-Author: LiangYuxuan <lyx@lyx.es>
-Date:   Tue Sep 11 14:05:21 2018 +0800
-
-    Add Support for Uldir LFR & Fix some
+    add 8.1 currencies
     
-    Add Support for Uldir LFR and make a workaround on AI Test - Arathi Basin (dungeonID 1661) showing in BfA Raid.
-    
-    For LFR entries ignoring changes, see [#164](https://github.com/SavedInstances/SavedInstances/issues/164).
+    Closes #187
 
-commit 1edca632e5792bc0a4e86eace03c3fc8a636d9b9
-Author: LiangYuxuan <lyx@lyx.es>
-Date:   Tue Sep 11 13:09:30 2018 +0800
+commit 4bebabe634f5161bc4357b488ee04af80c5d000e
+Author: Benjamin Staneck <staneck@gmail.com>
+Date:   Tue Sep 25 18:09:45 2018 +0200
 
-    Add Support for Seal of Wartorn Fate
+    add new files to locale scraper
 
-commit 7d7d1ba6b08fc16a93fae25700e6acefa13b396e
-Author: LiangYuxuan <lyx@lyx.es>
-Date:   Tue Sep 11 01:15:45 2018 +0800
+commit f7a31dacf34c620fdfe86e3e6241f08a23a2694e
+Author: Benjamin Staneck <staneck@gmail.com>
+Date:   Sat Sep 22 18:42:05 2018 +0200
 
-    Add BfA World Bosses
+    cleanup a few things
 
-commit 0b084a00da963a7795216b7ebfed2d2c217b8f86
-Author: Alex <21291741+Eiltherune@users.noreply.github.com>
-Date:   Thu Sep 6 18:15:19 2018 -0400
+commit 4e25ab484f9265c3820d948a96eff3b3303c066b
+Author: Benjamin Staneck <staneck@gmail.com>
+Date:   Sat Sep 22 18:41:06 2018 +0200
 
-    Update keystones for BfA
-    
-    Fixed itemID for BfA keystone, and updated dungeon abbreviation mapping
+    move more content from core to mythicplus
+
+commit 98bc36cbf6080364e32cc9faa7cefd4f0448c0dd
+Author: Benjamin Staneck <staneck@gmail.com>
+Date:   Fri Sep 21 16:40:04 2018 +0200
+
+    move more currency related stuff into its own file
+
+commit e49a1397159a6f6794ce532ed8b6244993105dc0
+Author: Benjamin Staneck <staneck@gmail.com>
+Date:   Fri Sep 21 16:39:23 2018 +0200
+
+    move scantt to core
+
+commit 208c63029c8400001dc428fbd0e012c7a21607c9
+Author: Benjamin Staneck <staneck@gmail.com>
+Date:   Fri Sep 21 16:36:49 2018 +0200
+
+    move quests to their own file
+
+commit 3950175d359dbfb5b7e78941af29caf86b2defc5
+Author: Benjamin Staneck <staneck@gmail.com>
+Date:   Wed Sep 19 19:30:38 2018 +0200
+
+    lfr: fix another uldir id
 

@@ -1,5 +1,23 @@
-changeset:   760:ea42ccffcad1
+changeset:   763:1ae1f6b5a2c7
 tag:         tip
+user:        Tercioo
+date:        Mon Dec 17 08:14:11 2018 -0200
+summary:     - ToC and libraries update.
+
+
+changeset:   762:a2d25472f076
+user:        Tercioo
+date:        Tue Dec 11 11:23:05 2018 -0200
+summary:     - Fixed East Asian myriads showing a giganting non formated number in the total bar DPS.
+
+
+changeset:   761:914618091b2c
+user:        Tercioo
+date:        Mon Dec 03 17:25:35 2018 -0200
+summary:     - Fixed East Asian myriads showing a giganting non formated number in the total bar DPS.
+
+
+changeset:   760:ea42ccffcad1
 user:        Tercioo
 date:        Fri Nov 23 19:31:40 2018 -0200
 summary:     - Framwork update for timeline plugin.

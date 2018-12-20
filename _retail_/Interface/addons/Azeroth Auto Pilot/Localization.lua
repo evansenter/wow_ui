@@ -53,6 +53,7 @@ AAP_Locals = {
 	["AutoVendor"] = "Auto Sell Gray items",
 	["AutoRepair"] = "Auto Repair",
 	["ShowGroup"] = "Show Group Progress",
+	["ShowBlobs"] = "Show Green blobs on minimap",
 	["AutoShareQ"] = "Auto Share Quests",
 	["BannerShow"] = "Show Banner CDS",
 	["BannerScale"] = "BannerWindow Scale:",

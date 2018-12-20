@@ -1,7 +1,7 @@
-changeset:   145:df1596b1a744
-tag:         v68
+changeset:   147:16d4f6a82fc6
+tag:         v69
 user:        yellowfive
-date:        Sun Dec 09 22:53:08 2018 -0800
-summary:     Tweak for handling duplicate azerite items.
+date:        Mon Dec 17 20:25:49 2018 -0800
+summary:     Bumped interface version for 8.1.
 
 

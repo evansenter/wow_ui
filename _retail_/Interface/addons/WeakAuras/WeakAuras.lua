@@ -1,4 +1,4 @@
-local internalVersion = 9;
+local internalVersion = 10;
 
 -- WoW APIs
 local GetTalentInfo, IsAddOnLoaded, InCombatLockdown = GetTalentInfo, IsAddOnLoaded, InCombatLockdown
@@ -40,6 +40,7 @@ local L = WeakAuras.L
 -- luacheck: globals NamePlateDriverFrame CombatText_AddMessage COMBAT_TEXT_SCROLL_FUNCTION C_Map
 -- luacheck: globals Lerp Saturate KuiNameplatesPlayerAnchor KuiNameplatesCore ElvUIPlayerNamePlateAnchor GTFO C_SpecializationInfo
 
+local loginQueue = {}
 local queueshowooc;
 
 function WeakAuras.InternalVersion()
@@ -48,7 +49,10 @@ end
 
 function WeakAuras.LoadOptions(msg)
   if not(IsAddOnLoaded("WeakAurasOptions")) then
-    if InCombatLockdown() then
+    if not WeakAuras.IsLoginFinished() then
+      prettyPrint(L["Options will finish loading after the login process has completed."])
+      loginQueue[#loginQueue + 1] = WeakAuras.OpenOptions
+    elseif InCombatLockdown() then
       -- inform the user and queue ooc
       prettyPrint(L["Options will finish loading after combat ends."])
       queueshowooc = msg or "";
@@ -1317,6 +1321,59 @@ Broker_WeakAuras = LDB:NewDataObject("WeakAuras", {
   iconB = 1
 });
 
+local loginThread = coroutine.create(function()
+  WeakAuras.Pause();
+  local toAdd = {};
+  for id, data in pairs(db.displays) do
+    if(id ~= data.id) then
+      print("|cFF8800FFWeakAuras|r detected a corrupt entry in WeakAuras saved displays - '"..tostring(id).."' vs '"..tostring(data.id).."'" );
+      data.id = id;
+    end
+    tinsert(toAdd, data);
+  end
+  coroutine.yield();
+
+  WeakAuras.AddMany(toAdd);
+  coroutine.yield();
+  WeakAuras.AddManyFromAddons(from_files);
+  WeakAuras.RegisterDisplay = WeakAuras.AddFromAddon;
+  coroutine.yield();
+  WeakAuras.ResolveCollisions(function() registeredFromAddons = true; end);
+  coroutine.yield();
+
+  for _, triggerSystem in pairs(triggerSystems) do
+    if (triggerSystem.AllAdded) then
+      triggerSystem.AllAdded();
+      coroutine.yield();
+    end
+  end
+
+  -- check in case of a disconnect during an encounter.
+  if (db.CurrentEncounter) then
+    WeakAuras.CheckForPreviousEncounter()
+  end
+  coroutine.yield();
+  WeakAuras.RegisterLoadEvents();
+  WeakAuras.Resume();
+  coroutine.yield();
+
+  local nextCallback = loginQueue[1];
+  while nextCallback do
+    tremove(loginQueue, 1);
+    if type(nextCallback) == 'table' then
+      nextCallback[1](unpack(nextCallback[2]))
+    else
+      nextCallback()
+    end
+    coroutine.yield();
+    nextCallback = loginQueue[1];
+  end
+end)
+
+function WeakAuras.IsLoginFinished()
+  return coroutine.status(loginThread) == 'dead'
+end
+
 local frame = CreateFrame("FRAME", "WeakAurasFrame", UIParent);
 WeakAuras.frames["WeakAuras Main Frame"] = frame;
 frame:SetAllPoints(UIParent);
@@ -1355,50 +1412,51 @@ loadedFrame:SetScript("OnEvent", function(self, event, addon)
       LDBIcon:Register("WeakAuras", Broker_WeakAuras, db.minimap);
     end
   elseif(event == "PLAYER_LOGIN") then
-    local toAdd = {};
-    for id, data in pairs(db.displays) do
-      if(id ~= data.id) then
-        print("|cFF8800FFWeakAuras|r detected a corrupt entry in WeakAuras saved displays - '"..tostring(id).."' vs '"..tostring(data.id).."'" );
-        data.id = id;
-      end
-      tinsert(toAdd, data);
+    local startTime = debugprofilestop()
+    local finishTime = debugprofilestop()
+    -- hard limit seems to be 19 seconds. We'll do 15 for now.
+    while coroutine.status(loginThread) ~= 'dead' and finishTime - startTime < 15000 do
+      coroutine.resume(loginThread)
+      finishTime = debugprofilestop()
     end
-    WeakAuras.AddMany(toAdd);
-    WeakAuras.AddManyFromAddons(from_files);
-    WeakAuras.RegisterDisplay = WeakAuras.AddFromAddon;
-
-    WeakAuras.ResolveCollisions(function() registeredFromAddons = true; end);
-
-    for _, triggerSystem in pairs(triggerSystems) do
-      if (triggerSystem.AllAdded) then
-        triggerSystem.AllAdded();
-      end
+    if coroutine.status(loginThread) ~= 'dead' then
+      WeakAuras.dynFrame:AddAction('login', loginThread)
     end
-    -- check in case of a disconnect during an encounter.
-    if (db.CurrentEncounter) then
-      WeakAuras.CheckForPreviousEncounter()
-    end
-
-    WeakAuras.RegisterLoadEvents();
-    WeakAuras.Resume();
-  elseif(event == "PLAYER_ENTERING_WORLD") then
-    -- Schedule events that need to be handled some time after login
-    timer:ScheduleTimer(function() squelch_actions = false; end, db.login_squelch_time);      -- No sounds while loading
-    WeakAuras.CreateTalentCache() -- It seems that GetTalentInfo might give info about whatever class was previously being played, until PLAYER_ENTERING_WORLD
-    WeakAuras.UpdateCurrentInstanceType();
-  elseif(event == "PLAYER_PVP_TALENT_UPDATE") then
-    WeakAuras.CreatePvPTalentCache();
   elseif(event == "LOADING_SCREEN_ENABLED") then
     in_loading_screen = true;
   elseif(event == "LOADING_SCREEN_DISABLED") then
     in_loading_screen = false;
-  elseif(event == "ACTIVE_TALENT_GROUP_CHANGED") then
-    WeakAuras.CreateTalentCache();
-  elseif(event == "PLAYER_REGEN_ENABLED") then
-    if (queueshowooc) then
-      WeakAuras.OpenOptions(queueshowooc)
-      queueshowooc = nil
-      WeakAuras.frames["Addon Initialization Handler"]:UnregisterEvent("PLAYER_REGEN_ENABLED")
+  else
+    local callback
+    if(event == "PLAYER_ENTERING_WORLD") then
+      -- Schedule events that need to be handled some time after login
+      local now = GetTime()
+      callback = function()
+        local elapsed = GetTime() - now
+        local remainingSquelch = db.login_squelch_time - elapsed
+        if remainingSquelch > 0 then
+          timer:ScheduleTimer(function() squelch_actions = false; end, remainingSquelch);      -- No sounds while loading
+        end
+        WeakAuras.CreateTalentCache() -- It seems that GetTalentInfo might give info about whatever class was previously being played, until PLAYER_ENTERING_WORLD
+        WeakAuras.UpdateCurrentInstanceType();
+      end
+    elseif(event == "PLAYER_PVP_TALENT_UPDATE") then
+      callback = WeakAuras.CreatePvPTalentCache;
+    elseif(event == "ACTIVE_TALENT_GROUP_CHANGED") then
+      callback = WeakAuras.CreateTalentCache;
+    elseif(event == "PLAYER_REGEN_ENABLED") then
+      callback = function()
+        if (queueshowooc) then
+          WeakAuras.OpenOptions(queueshowooc)
+          queueshowooc = nil
+          WeakAuras.frames["Addon Initialization Handler"]:UnregisterEvent("PLAYER_REGEN_ENABLED")
+        end
+      end
+    end
+    if WeakAuras.IsLoginFinished() then
+      callback()
+    else
+      loginQueue[#loginQueue + 1] = callback
     end
   end
 end);
@@ -1541,7 +1599,8 @@ function WeakAuras.CreateEncounterTable(encounter_id)
   return WeakAuras.CurrentEncounter
 end
 
-function WeakAuras.LoadEncounterInitScripts(id)
+local encounterScriptsDeferred = {}
+local function LoadEncounterInitScriptsImpl(id)
   if (WeakAuras.currentInstanceType ~= "raid") then
     return
   end
@@ -1551,6 +1610,7 @@ function WeakAuras.LoadEncounterInitScripts(id)
       WeakAuras.ActivateAuraEnvironment(id)
       WeakAuras.ActivateAuraEnvironment(nil)
     end
+    encounterScriptsDeferred[id] = nil
   else
     for id, data in pairs(db.displays) do
       if (data.load.use_encounterid and not WeakAuras.IsEnvironmentInitialized(id) and data.actions.init and data.actions.init.do_custom) then
@@ -1559,6 +1619,18 @@ function WeakAuras.LoadEncounterInitScripts(id)
       end
     end
   end
+end
+
+function WeakAuras.LoadEncounterInitScripts(id)
+  if not WeakAuras.IsLoginFinished() then
+    if encounterScriptsDeferred[id] then
+      return
+    end
+    loginQueue[#loginQueue + 1] = {LoadEncounterInitScriptsImpl, {id}}
+    encounterScriptsDeferred[id] = true
+    return
+  end
+  LoadEncounterInitScriptsImpl(id)
 end
 
 function WeakAuras.UpdateCurrentInstanceType(instanceType)
@@ -1580,7 +1652,7 @@ end
 
 local toLoad = {}
 local toUnload = {};
-function WeakAuras.ScanForLoads(self, event, arg1, ...)
+local function scanForLoadsImpl(self, event, arg1, ...)
   if (WeakAuras.IsOptionsProcessingPaused()) then
     return;
   end
@@ -1722,6 +1794,13 @@ function WeakAuras.ScanForLoads(self, event, arg1, ...)
   wipe(toUnload)
 end
 
+function WeakAuras.ScanForLoads(self, event, arg1, ...)
+  if not WeakAuras.IsLoginFinished() then
+    return
+  end
+  scanForLoadsImpl(self, event, arg1, ...)
+end
+
 local loadFrame = CreateFrame("FRAME");
 WeakAuras.loadFrame = loadFrame;
 WeakAuras.frames["Display Load Handling"] = loadFrame;
@@ -1777,7 +1856,7 @@ end
 
 function WeakAuras.ReloadAll()
   WeakAuras.UnloadAll();
-  WeakAuras.ScanForLoads();
+  scanForLoadsImpl();
 end
 
 function WeakAuras.UnloadAll()
@@ -2643,7 +2722,7 @@ function WeakAuras.Modernize(data)
   -- Version 8 was introduced in September 2018
   -- Changes are in PreAdd
 
-  -- Version 9 was introduced in September 2019
+  -- Version 9 was introduced in September 2018
   if data.internalVersion < 9 then
     local function repairCheck(check)
       if check and check.variable == "buffed" then
@@ -2669,6 +2748,21 @@ function WeakAuras.Modernize(data)
     for _, condition in pairs(data.conditions) do
       repairCheck(condition.check);
       recurseRepairChecks(condition.check.checks);
+    end
+  end
+
+  -- Version 10 was introduced in December 2018
+  if data.internalVersion < 10 then
+    data.uid = data.uid or WeakAuras.GenerateUniqueID()
+    if not data.version and data.url and data.url ~= "" then
+      local slug, version = data.url:match("wago.io/([^/]+)/([0-9]+)")
+      if not slug and not version then
+        slug = data.url:match("wago.io/([^/]+)$")
+        version = 1
+      end
+      if slug then
+        data.version = version
+      end
     end
   end
 
@@ -2729,54 +2823,52 @@ function WeakAuras.SyncParentChildRelationships(silent)
 end
 
 function WeakAuras.AddMany(table)
-  local f = coroutine.create(function()
-    local idtable = {};
-    for _, data in ipairs(table) do
-      idtable[data.id] = data;
-    end
-    local loaded = {};
-    local function load(id, depends)
-      local data = idtable[id];
-      if(data.parent) then
-        if(idtable[data.parent]) then
-          if(tContains(depends, data.parent)) then
-            error("Circular dependency in WeakAuras.AddMany between "..table.concat(depends, ", "));
-          else
-            if not(loaded[data.parent]) then
-              local dependsOut = {};
-              for i,v in pairs(depends) do
-                dependsOut[i] = v;
-              end
-              tinsert(dependsOut, data.parent);
-              load(data.parent, dependsOut);
-            end
-          end
+  local idtable = {};
+  for _, data in ipairs(table) do
+    idtable[data.id] = data;
+  end
+  local loaded = {};
+  local function load(id, depends)
+    local data = idtable[id];
+    if(data.parent) then
+      if(idtable[data.parent]) then
+        if(tContains(depends, data.parent)) then
+          error("Circular dependency in WeakAuras.AddMany between "..table.concat(depends, ", "));
         else
-          data.parent = nil;
+          if not(loaded[data.parent]) then
+            local dependsOut = {};
+            for i,v in pairs(depends) do
+              dependsOut[i] = v;
+            end
+            tinsert(dependsOut, data.parent);
+            load(data.parent, dependsOut);
+          end
         end
-      end
-      if not(loaded[id]) then
-        WeakAuras.Add(data);
-        loaded[id] = true;
-      end
-    end
-    local groups = {}
-    for id, data in pairs(idtable) do
-      load(id, {});
-      if data.regionType == "dynamicgroup" or data.regionType == "group" then
-        groups[data] = true
-      end
-    end
-    for data in pairs(groups) do
-      if data.type == "dynamicgroup" then
-        regions[data.id].region:ControlChildren()
       else
-        WeakAuras.Add(data)
+        data.parent = nil;
       end
-      coroutine.yield()
     end
-  end)
-  WeakAuras.dynFrame:AddAction("addmany", f)
+    if not(loaded[id]) then
+      WeakAuras.Add(data);
+      coroutine.yield();
+      loaded[id] = true;
+    end
+  end
+  local groups = {}
+  for id, data in pairs(idtable) do
+    load(id, {});
+    if data.regionType == "dynamicgroup" or data.regionType == "group" then
+      groups[data] = true
+    end
+  end
+  for data in pairs(groups) do
+    if data.type == "dynamicgroup" then
+      regions[data.id].region:ControlChildren()
+    else
+      WeakAuras.Add(data)
+    end
+    coroutine.yield();
+  end
 end
 
 local function validateUserConfig(data)
@@ -3097,11 +3189,16 @@ function WeakAuras.SetRegion(data, cloneId)
         if((not regions[id]) or (not regions[id].region) or regions[id].regionType ~= regionType) then
           region = regionTypes[regionType].create(frame, data);
           region.regionType = regionType;
-          region.toShow = true;
           regions[id] = {
             regionType = regionType,
             region = region
           };
+          if regionType ~= "dynamicgroup" and regionType ~= "group" then
+            region.toShow = false
+            region:Hide()
+          else
+            region.toShow = true
+          end
         else
           region = regions[id].region;
         end
@@ -3118,8 +3215,8 @@ function WeakAuras.SetRegion(data, cloneId)
           data.parent = nil;
         end
       end
-
-      local anim_cancelled = WeakAuras.CancelAnimation(region, true, true, true, true, true);
+      local loginFinished = WeakAuras.IsLoginFinished();
+      local anim_cancelled = loginFinished and WeakAuras.CancelAnimation(region, true, true, true, true, true);
 
       regionTypes[regionType].modify(parent, region, data);
       WeakAuras.regionPrototype.AddSetDurationInfo(region);
@@ -3144,7 +3241,6 @@ function WeakAuras.SetRegion(data, cloneId)
       if(cloneId) then
         clonePool[regionType] = clonePool[regionType] or {};
       end
-
       if(anim_cancelled) then
         WeakAuras.Animate("display", data, "main", data.animation.main, region, false, nil, true, cloneId);
       end
@@ -4101,6 +4197,7 @@ end
 do
   local customTextUpdateFrame;
   local updateRegions = {};
+  local initRequested = false
 
   local function DoCustomTextUpdates()
     WeakAuras.StartProfileSystem("custom text - every frame update");
@@ -4118,12 +4215,26 @@ do
     WeakAuras.StopProfileSystem("custom text - every frame update");
   end
 
-  function WeakAuras.InitCustomTextUpdates()
+  local function InitCustomTextUpdatesImpl()
     if not(customTextUpdateFrame) then
       customTextUpdateFrame = CreateFrame("frame");
       customTextUpdateFrame:SetScript("OnUpdate", DoCustomTextUpdates);
     end
   end
+
+  function WeakAuras.InitCustomTextUpdates()
+    if not WeakAuras.IsLoginFinished() then
+      if initRequested then
+        return
+      end
+      loginQueue[#loginQueue] = InitCustomTextUpdatesImpl
+      initRequested = true
+      return
+    end
+    InitCustomTextUpdatesImpl()
+  end
+
+
 
   function WeakAuras.RegisterCustomTextUpdates(region)
     WeakAuras.InitCustomTextUpdates();
@@ -5121,7 +5232,7 @@ local function ensurePRDFrame()
       elseif (ElvUIPlayerNamePlateAnchor) then
         personalRessourceDisplayFrame:Attach(ElvUIPlayerNamePlateAnchor, ElvUIPlayerNamePlateAnchor, ElvUIPlayerNamePlateAnchor);
       else
-        personalRessourceDisplayFrame:Attach(frame, frame.UnitFrame.healthBar, NamePlateDriverFrame.nameplateManaBar);
+        personalRessourceDisplayFrame:Attach(frame, frame.UnitFrame.healthBar, NamePlateDriverFrame.classNamePlatePowerBar);
       end
     else
       personalRessourceDisplayFrame:Detach();
@@ -5145,7 +5256,7 @@ local function ensurePRDFrame()
           elseif (ElvUIPlayerNamePlateAnchor) then
             personalRessourceDisplayFrame:Attach(ElvUIPlayerNamePlateAnchor, ElvUIPlayerNamePlateAnchor, ElvUIPlayerNamePlateAnchor);
           else
-            personalRessourceDisplayFrame:Attach(frame, frame.UnitFrame.healthBar, NamePlateDriverFrame.nameplateManaBar);
+            personalRessourceDisplayFrame:Attach(frame, frame.UnitFrame.healthBar, NamePlateDriverFrame.classNamePlatePowerBar);
           end
           personalRessourceDisplayFrame:Show();
           db.personalRessourceDisplayFrame = db.personalRessourceDisplayFrame or {};

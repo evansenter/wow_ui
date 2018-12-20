@@ -334,11 +334,11 @@ AngryAssign_Pages = {
 		["Backup"] = "{triangle}: Redexx, Zarana, Qwed\n{diamond}: Hidder, Evan, Luumii",
 	},
 	[947221404] = {
-		["Updated"] = 1545184638,
+		["Updated"] = 1545270717,
 		["Name"] = "G'huun",
 		["Id"] = 947221404,
-		["UpdateId"] = 656902306,
-		["Contents"] = "Team 1\nL - Comet || R - Lan\nTeam 2\nL - Bromsi,TBV || R - Boody, Sauce\nTeam 3 \nL - Papa || R - Mebrick\nTeam 4 \nL - Ouro, Gateboi || R - Dog, Exo\nTeam 5\nL - Shen, || R - Ray\n\nGrp 1: North\nGrp 2: West\nGrp 3: South\nGrp 4: East\n\nFeast 3 - Team 4\n\np1\nexplosive corruptions\n1 (0:15) - lumi ac\n2 (1:00) - Dgen revival\nblast (1:30) - initiate hymn + barrier\n\np2\nchatters \nadd 1, 2nd chatter (~2:45) - Lumi am  (before it casts) + Comet revival\nps on Bubby\nbeam blast (~3:45) - Luumi ac + Shadowfiend\n\np3\nchatter (~5:00)\nadd 1, 2nd chatter - Dgen Revival\nblast - initiate hymn\ncollapse - rally, darkness, Barrier\n\np4\nLumi ac\nshadowfiend\nDan Salv\nlumi am\ninitiate hymn\nRevival\nRevival\nWhatever else",
+		["UpdateId"] = 775354204,
+		["Contents"] = "Team 1\nL - Comet || R - Lan\nTeam 2\nL - Bromsi,TBV || R - Boody, Sauce\nTeam 3 \nL - Mebrick, Dgen || R - Papa\nTeam 4 \nL - Kahl, Gateboi || R - Dog, Tent\nTeam 5\nL - Shen, || R - Ray\n\nGrp 1: Diamond\nGrp 2: X\nGrp 3: Square\nGrp 4: Triangle\n\nFeast 1 - everyone \nFeast 2 - everyone || Feast then boil soak\nFeast 3 - Team 4 || Boil Soak then feast\nFeast 4 - everyone || Boil Soak then feast\n\np1\nexplosive corruptions\n1 (0:15) - lumi ac\n2 (1:00) - Tranq\nblast (1:30) - initiate hymn + barrier\n\np2\nchatters \nadd 1, 2nd chatter (~2:45) - Lumi am  (before it casts) + Comet revival\nps on Bubby\nbeam blast (~3:45) - Luumi ac + Shadowfiend\n\np3\nchatter (~5:00)\nadd 1, 2nd chatter - Dgen Tranq\nblast - initiate hymn\ncollapse - Barrier, Rally/Darkness\n\np4\nLumi ac\nshadowfiend\nDan Salv\nlumi am\ninitiate hymn\nRevival\nRevival\nWhatever else",
 	},
 	[1415908480] = {
 		["Updated"] = 1524795469,
@@ -587,6 +587,15 @@ AngryAssign_Pages = {
 AngryAssign_Categories = {
 }
 AngryAssign_State = {
+	["directionUp"] = false,
+	["display"] = {
+		["y"] = -244.999877929688,
+		["x"] = -46.558349609375,
+		["point"] = "TOPRIGHT",
+		["scale"] = 1,
+		["hidden"] = false,
+		["width"] = 274.444152832031,
+	},
 	["tree"] = {
 		["groups"] = {
 			["664173253"] = true,
@@ -601,21 +610,12 @@ AngryAssign_State = {
 		["treewidth"] = 175,
 		["treesizable"] = true,
 	},
-	["display"] = {
-		["y"] = -244.999877929688,
-		["x"] = -46.558349609375,
-		["point"] = "TOPRIGHT",
-		["scale"] = 1,
-		["hidden"] = false,
-		["width"] = 274.444152832031,
-	},
 	["window"] = {
 		["height"] = 499.999908447266,
 		["top"] = 900.000183105469,
 		["left"] = 598.333312988281,
 		["width"] = 700.000183105469,
 	},
-	["directionUp"] = false,
 	["locked"] = true,
 }
 AngryAssign_Config = {

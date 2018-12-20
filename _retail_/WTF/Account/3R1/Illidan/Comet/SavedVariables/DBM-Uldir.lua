@@ -124,7 +124,7 @@ DBMUldir_SavedStats = {
 		["normal25Kills"] = 0,
 		["heroicPulls"] = 40,
 		["timewalkerKills"] = 0,
-		["mythicPulls"] = 104,
+		["mythicPulls"] = 129,
 		["challengePulls"] = 0,
 	},
 	["2168"] = {

@@ -1,10 +1,10 @@
-lightweight tag 7a28881de2e8d0499369c0a9b636dc6f50a95e3e 8.1.0.0-release
-Author:	GitHub <noreply@github.com>
-Date:	Tue Dec 11 14:21:39 2018 +1100
+lightweight tag c08e54c3ce4b9525912cdefb93c7c7a659cd653a 8.1.0.1-release
+Author:	David C. Uhrig <david@twintop-tahoe.com>
+Date:	Thu Dec 13 19:39:49 2018 +1100
 
-commit 7a28881de2e8d0499369c0a9b636dc6f50a95e3e
+commit c08e54c3ce4b9525912cdefb93c7c7a659cd653a
 Author: David C. Uhrig <david@twintop-tahoe.com>
-Date:   Tue Dec 11 14:21:39 2018 +1100
+Date:   Thu Dec 13 19:39:49 2018 +1100
 
-    Fix clickthrough regressions
+    Tweak clickthrough
 

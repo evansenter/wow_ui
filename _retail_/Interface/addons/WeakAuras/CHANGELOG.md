@@ -1,23 +1,41 @@
-# [2.10.4](https://github.com/WeakAuras/WeakAuras2/tree/2.10.4) (2018-12-11)
+# [2.10.11](https://github.com/WeakAuras/WeakAuras2/tree/2.10.11) (2018-12-18)
 
-[Full Changelog](https://github.com/WeakAuras/WeakAuras2/compare/2.10.3...2.10.4)
+[Full Changelog](https://github.com/WeakAuras/WeakAuras2/compare/2.10.10...2.10.11)
 
 ## Highlights
 
- Quick fix for problems on 8.1 and update templates for 8.1 
+ Bugfixes! 
 
 ## Commits
 
-Causese (1):
+InfusOnWoW (8):
 
-- Updated Azerite Traits for 8.1 (#1009)
+- Rewrite mount check for Status/Conditions trigger
+- Fix smooth progress bar behaviour with inverse
+- Make Dynamic Groups Hybrid Checkboxes single column again
+- Fix SetRegion hiding groups
+- Remove the chat filterFunc for guild chat
+- Print a error message on trying to share a aura via guild chat
+- Remove SetWidth workarounds for texts
+- Fix isStealable check for BuffTrigger 2
 
-Stanzilla (1):
+emptyrivers (3):
 
-- update PR template text (#1008)
+- Teach SetRegion to create regions initially hidden
+- remove duplicated function
+- guarantee uid on all auras
 
-emptyrivers (2):
+mrbuds (11):
 
-- coroutine-i-fy WeakAuras.AddMany
-- Prepare for collapsible groups (#1002)
+- make RefreshGroupUpdateIcon iterate only on its children
+- template: fix aura active = glow when trigger use Show On = Aura Found
+- BuffTrigger2 "ownOnly" also match pet as source
+- fix Call Lightning template
+- Icon region: use cooldownSwipe for spells with charges
+- fix migration error
+- match companion data with uid instead of url moved update matching to HasUpdate()
+- check that WeakAurasCompanion is loaded before RefreshGroupUpdateIcon
+- add skipWagoUpdate & ignoreWagoUpdate to WeakAuras.internal_fields
+- move version from wago url to it's own field and bump internalVersion
+- add an indicator on Groups to show if there is an update from Wago in his childs
 

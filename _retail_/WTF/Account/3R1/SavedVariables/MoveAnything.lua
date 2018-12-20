@@ -43,6 +43,24 @@ MADB = {
 						290.555450439453, -- [5]
 					},
 				},
+				["PlayerBuffsMover"] = {
+					["orgPos"] = {
+						"TOPRIGHT", -- [1]
+						"UIParent", -- [2]
+						"TOPRIGHT", -- [3]
+						-205, -- [4]
+						-13, -- [5]
+					},
+					["name"] = "PlayerBuffsMover",
+					["hidden"] = true,
+					["pos"] = {
+						"TOPRIGHT", -- [1]
+						"UIParent", -- [2]
+						"TOPRIGHT", -- [3]
+						-205.000122070313, -- [4]
+						-13, -- [5]
+					},
+				},
 			},
 		},
 	},

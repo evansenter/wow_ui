@@ -169,6 +169,11 @@ function WorldQuestTracker.PlayTick (tickType)
 end
 
 local onenter_scale_animation = function (self, scale)
+
+	if (not WorldQuestTracker.db.profile.hoverover_animations) then
+		return
+	end
+
 	if (self.OnLeaveAnimation:IsPlaying()) then
 		self.OnLeaveAnimation:Stop()
 	end
@@ -181,6 +186,11 @@ local onenter_scale_animation = function (self, scale)
 end
 
 local onleave_scale_animation = function (self, scale)
+
+	if (not WorldQuestTracker.db.profile.hoverover_animations) then
+		return
+	end
+	
 	if (self.OnEnterAnimation:IsPlaying()) then
 		self.OnEnterAnimation:Stop()
 	end
@@ -218,7 +228,7 @@ local questButton_OnEnter = function (self)
 		end
 		
 		if (self.OnEnterAnimation) then
-			onenter_scale_animation (self, 0.1)
+			onenter_scale_animation (self, self.OnEnterAnimationScaleDiff or WQT_ANIMATION_SPEED)
 			--[=[ scale adjacents squares
 			local widgetAnchorID = self.WidgetAnchorID
 			if (widgetAnchorID) then
@@ -320,7 +330,7 @@ end
 
 --local worldSquareBackdrop = {edgeFile = [[Interface\Buttons\WHITE8X8]], edgeSize = 1.5, bgFile = "Interface\\Tooltips\\UI-Tooltip-Background", tile = true, tileSize = 16}
 --local worldSquareBackdrop = {edgeFile = [[Interface\Buttons\WHITE8X8]], edgeSize = 1.5, bgFile = [[Interface\DialogFrame\UI-DialogBox-Background-Dark]], tile = true, tileSize = 16}
-local worldSquareBackdrop = {edgeFile = [[Interface\Buttons\WHITE8X8]], edgeSize = 1, bgFile = [[Interface\TARGETINGFRAME\UI-TargetingFrame-LevelBackground]], tile = true, tileSize = 16}
+local worldSquareBackdrop = {edgeFile = [[Interface\Buttons\WHITE8X8]], edgeSize = 1.2, bgFile = [[Interface\TARGETINGFRAME\UI-TargetingFrame-LevelBackground]], tile = true, tileSize = 16}
 
 --cria uma square widget no world map ~world ~createworld ~createworldwidget
 --index and name are only for the glogal name
@@ -416,8 +426,8 @@ local create_worldmap_square = function (mapName, index, parent)
 	
 		--animations
 		local animaSettings = {
-			scaleMax = 1.2,
-			speed = 0.1,
+			scaleMax = 1.1,
+			speed = WQT_ANIMATION_SPEED,
 		}
 		do 
 			button.OnEnterAnimation = DF:CreateAnimationHub (button, function() end, function() end)
@@ -432,6 +442,8 @@ local create_worldmap_square = function (mapName, index, parent)
 			--anim:SetSmoothing ("IN_OUT")
 			anim:SetSmoothing ("IN")
 			button.OnLeaveAnimation.ScaleAnimation = anim
+			
+			button.OnEnterAnimationScaleDiff = WQT_ANIMATION_SPEED
 		end
 		
 	WorldQuestTracker.CreateStartTrackingAnimation (button, nil, 5)
@@ -579,9 +591,10 @@ local create_worldmap_square = function (mapName, index, parent)
 	button.timeBlipGreen:SetVertexColor (1, 1, 1)
 	button.timeBlipGreen:SetAlpha (.6)	
 	
-	button.questTypeBlip = button:CreateTexture (nil, "OVERLAY", 2)
+	button.questTypeBlip = button:CreateTexture (nil, "OVERLAY")
 	button.questTypeBlip:SetPoint ("topright", button, "topright", 2, 4)
 	button.questTypeBlip:SetSize (12, 12)
+	button.questTypeBlip:SetDrawLayer ("overlay", 4)
 	
 	local amountText = button:CreateFontString (nil, "overlay", "GameFontNormal", 1)
 	amountText:SetPoint ("bottom", button, "bottom", 1, -10)
@@ -982,6 +995,13 @@ function WorldQuestTracker.UpdateWorldWidget (widget, questID, numObjectives, ma
 	
 	widget.amountBackground:SetWidth (32)
 	
+	--check if the rare star background exists on this widget, it is created at run time
+	--[=[ -the extra backdrop glow for the rare star has been removed, it isn't fit well after using the blue border again
+	if (widget.questTypeBlip.RareBackground) then
+		widget.questTypeBlip.RareBackground:Hide()
+	end
+	--]=]
+	
 	if (worldQuestType == LE_QUEST_TAG_TYPE_PVP) then
 		widget.questTypeBlip:Show()
 		widget.questTypeBlip:SetTexture ([[Interface\PVPFrame\Icon-Combat]])
@@ -990,8 +1010,9 @@ function WorldQuestTracker.UpdateWorldWidget (widget, questID, numObjectives, ma
 		
 	elseif (worldQuestType == LE_QUEST_TAG_TYPE_PET_BATTLE) then
 		widget.questTypeBlip:Show()
-		widget.questTypeBlip:SetTexture ([[Interface\MINIMAP\ObjectIconsAtlas]])
-		widget.questTypeBlip:SetTexCoord (unpack (WorldQuestTracker.MapData.QuestTypeIcons [WQT_QUESTTYPE_PETBATTLE].coords)) -- left right    top botton  --7.3.5
+		--widget.questTypeBlip:SetTexture ([[Interface\MINIMAP\ObjectIconsAtlas]])
+		widget.questTypeBlip:SetTexture (WorldQuestTracker.MapData.QuestTypeIcons [WQT_QUESTTYPE_PETBATTLE].icon)
+		widget.questTypeBlip:SetTexCoord (unpack (WorldQuestTracker.MapData.QuestTypeIcons [WQT_QUESTTYPE_PETBATTLE].coords))
 		widget.questTypeBlip:SetAlpha (.98)
 		
 	elseif (worldQuestType == LE_QUEST_TAG_TYPE_DUNGEON) then
@@ -1004,7 +1025,19 @@ function WorldQuestTracker.UpdateWorldWidget (widget, questID, numObjectives, ma
 		widget.questTypeBlip:Show()
 		widget.questTypeBlip:SetTexture ([[Interface\AddOns\WorldQuestTracker\media\icon_star]])
 		widget.questTypeBlip:SetTexCoord (6/32, 26/32, 5/32, 27/32)
-		widget.questTypeBlip:SetAlpha (.89)
+		widget.questTypeBlip:SetAlpha (.834)
+		
+		--create the rare glow at run time
+		--[=[
+		if (not widget.questTypeBlip.RareBackground) then
+			widget.questTypeBlip.RareBackground = widget:CreateTexture (nil, "overlay")
+			widget.questTypeBlip.RareBackground:SetDrawLayer ("overlay", 5)
+			widget.questTypeBlip.RareBackground:SetPoint ("topright", widget.questTypeBlip, "topright", -3, -5)
+			widget.questTypeBlip.RareBackground:SetTexture ([[Interface\AddOns\WorldQuestTracker\media\icon_star_background]])
+		else
+			widget.questTypeBlip.RareBackground:Show()
+		end
+		--]=]
 		
 	elseif (worldQuestType == LE_QUEST_TAG_TYPE_FACTION_ASSAULT) then --LE_QUEST_TAG_TYPE_INVASION (legion)
 		if (UnitFactionGroup("player") == "Alliance") then
@@ -1608,7 +1641,7 @@ local lazyUpdateFunc = function (self, deltaTime)
 		
 		--if framerate is low, update more quests at the same time
 		local frameRate = GetFramerate()
-		local amountToUpdate = 1
+		local amountToUpdate = 2 + (not WorldQuestTracker.db.profile.hoverover_animations and 5 or 0)
 		
 		if (frameRate < 20) then
 			amountToUpdate = amountToUpdate + 3

@@ -94,14 +94,7 @@ TwintopInsanityBarSettings = {
 	},
 	["thresholdWidth"] = 1,
 	["showS2MSummary"] = true,
-	["summary"] = {
-		["show"] = false,
-		["simple"] = false,
-	},
 	["version"] = 1,
-	["hasteApproachingThreshold"] = 135,
-	["hastePrecision"] = 2,
-	["showSummary"] = false,
 	["colors"] = {
 		["threshold"] = {
 			["mindbender"] = "FFFF11FF",
@@ -134,6 +127,13 @@ TwintopInsanityBarSettings = {
 			["passive"] = "FFDF00FF",
 		},
 	},
+	["hasteApproachingThreshold"] = 135,
+	["hastePrecision"] = 2,
+	["summary"] = {
+		["show"] = false,
+		["simple"] = false,
+	},
+	["showSummary"] = false,
 	["bar"] = {
 		["xPos"] = 0,
 		["dragAndDrop"] = false,

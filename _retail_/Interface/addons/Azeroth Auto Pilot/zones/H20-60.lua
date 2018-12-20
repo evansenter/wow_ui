@@ -1,5 +1,5 @@
 if (AAP.Faction == "Horde") then
-AAP.QuestStepList2060 = {
+AAP.QuestStepList2062 = {
 ---- Orgrimmar ----
 	["1-MagharOrc"] = {
 		{
@@ -813,6 +813,9 @@ AAP.QuestStepList2060 = {
 ---- Undercity ----
 	["90-20Silverpine"] = {
 		{
+			["LeaveQuests"] = {
+				14190,
+			},
 			["Trigger"] = {
 				["y"] = 1760.5,
 				["x"] = 160.4,
@@ -1143,6 +1146,11 @@ AAP.QuestStepList2060 = {
 			},
 		}, -- [1]
 		{
+			["LeaveQuests"] = {
+				28489,
+				28643,
+				28485,
+			},
 			["Done"] = {
 				26931, -- [1]
 			},
@@ -1554,8 +1562,8 @@ AAP.QuestStepList2060 = {
 			},
 			["Range"] = 0.61,
 			["TT"] = {
-				["y"] = 1804.9,
-				["x"] = -1221.5,
+				["y"] = 1782.5,
+				["x"] = -1250.9,
 			},
 		}, -- [4]
 		{
@@ -7491,6 +7499,7 @@ AAP.QuestStepList2060 = {
 				["y"] = 1054.2,
 				["x"] = 1520.9,
 			},
+			["Name"] = "Forsaken High Command, Silverpine Forest",
 			["UseFlightPath"] = 27096,
 			["PosX"] = 42.1,
 			["PosY"] = 35.9,
@@ -8108,6 +8117,7 @@ AAP.QuestStepList2060 = {
 				["x"] = 1313.8,
 			},
 			["UseFlightPath"] = 27476,
+			["Name"] = "The Sepulcher, Silverpine Forest",
 			["PosX"] = 40.8,
 			["PosY"] = 39.4,
 			["ETA"] = 42,
@@ -8202,6 +8212,7 @@ AAP.QuestStepList2060 = {
 			["UseFlightPath"] = 27484,
 			["PosX"] = 41.3,
 			["PosY"] = 41.5,
+			["Name"] = "The Forsaken Front, Silverpine Forest",
 			["ETA"] = 29,
 		}, -- [1]
 		{
@@ -8616,6 +8627,36 @@ AAP.QuestStepList2060 = {
 	},
 ---- Hillsbrad Foothills ----
 	["25-20-63"] = {
+		{
+			["Trigger"] = {
+				["y"] = 422,
+				["x"] = 115,
+			},
+			["Qpart"] = {
+				[27483] = {
+					["1"] = "1",
+				},
+				[27478] = {
+					["1"] = "1",
+				},
+			},
+			["Range"] = 1000.69,
+			["TT"] = {
+				["y"] = 422,
+				["x"] = 115,
+			},
+		}, -- [1]
+		{
+			["ExtraLine"] = 49,
+			["Done"] = {
+				27483, -- [1]
+				27478, -- [2]
+			},
+			["TT"] = {
+				["y"] = 294.2,
+				["x"] = 377.6,
+			},
+		}, -- [1]
 		{
 			["Done"] = {
 				28089, -- [2]
@@ -9690,6 +9731,11 @@ AAP.QuestStepList2060 = {
 					["1"] = "1",
 				},
 			},
+			["Fillers"] = {
+				[28355] = {
+					["1"] = "1",
+				},
+			},
 			["Range"] = 32.98,
 			["TT"] = {
 				["y"] = -918.7,
@@ -9969,15 +10015,6 @@ AAP.QuestStepList2060 = {
 				["x"] = -902.5,
 			},
 		}, -- [13]
-		{
-			["PickUp"] = {
-				14065, -- [1]
-			},
-			["TT"] = {
-				["y"] = -50.7,
-				["x"] = -879.7,
-			},
-		}, -- [14]
 		{
 			["Trigger"] = {
 				["y"] = -12.2,
@@ -10685,42 +10722,6 @@ AAP.QuestStepList2060 = {
 				["x"] = -317.5,
 			},
 		}, -- [13]
-		{
-			["Trigger"] = {
-				["y"] = -196.7,
-				["x"] = -370.4,
-			},
-			["CRange"] = 28620,
-			["Range"] = 25.99,
-			["TT"] = {
-				["y"] = -196.7,
-				["x"] = -370.4,
-			},
-		}, -- [14]
-		{
-			["Trigger"] = {
-				["y"] = -244.2,
-				["x"] = -330.2,
-			},
-			["CRange"] = 28620,
-			["Range"] = 18.19,
-			["TT"] = {
-				["y"] = -244.2,
-				["x"] = -330.2,
-			},
-		}, -- [15]
-		{
-			["Trigger"] = {
-				["y"] = -278.4,
-				["x"] = -413.4,
-			},
-			["CRange"] = 28620,
-			["Range"] = 23.1,
-			["TT"] = {
-				["y"] = -278.4,
-				["x"] = -413.4,
-			},
-		}, -- [16]
 -------------------------------------------
 		{
 			["Qpart"] = {
@@ -10872,6 +10873,7 @@ AAP.QuestStepList2060 = {
 				["x"] = -1048.1,
 			},
 			["UseFlightPath"] = 28487,
+			["Name"] = "Tarren Mill, Hillsbrad",
 			["PosX"] = 46.7,
 			["PosY"] = 41.2,
 			["ETA"] = 25,
@@ -13386,8 +13388,11 @@ AAP.QuestStepList2060 = {
 	},	
 ------------------------------------------------------
 }
-for AAP_index,AAP_value in pairs(AAP.QuestStepList2060) do
+AAP3 = {}
+AAP3["LeaveQuest"] = {}
+AAP3["LeaveQuest"]["LeaveQuest"] = {}
+for AAP_index,AAP_value in pairs(AAP.QuestStepList2062) do
 	AAP.QuestStepList[AAP_index] = AAP_value
 end
-AAP.QuestStepList2060 = nil
+AAP.QuestStepList2062 = nil
 end

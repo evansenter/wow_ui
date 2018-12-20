@@ -1,127 +1,5 @@
 
 SubSpecStorage = {
-	["Priest Discipline"] = {
-		{
-			["name"] = "Raiding",
-			["data"] = {
-				{
-					["id"] = 22313,
-					["name"] = "Twist of Fate",
-					["column"] = 2,
-				}, -- [1]
-				{
-					["id"] = 19758,
-					["name"] = "Angelic Feather",
-					["column"] = 3,
-				}, -- [2]
-				{
-					["id"] = 19755,
-					["name"] = "Power Word: Solace",
-					["column"] = 3,
-				}, -- [3]
-				{
-					["id"] = 19761,
-					["name"] = "Shining Force",
-					["column"] = 3,
-				}, -- [4]
-				{
-					["id"] = 22330,
-					["name"] = "Sins of the Many",
-					["column"] = 1,
-				}, -- [5]
-				{
-					["id"] = 19763,
-					["name"] = "Halo",
-					["column"] = 3,
-				}, -- [6]
-				{
-					["id"] = 22976,
-					["name"] = "Evangelism",
-					["column"] = 3,
-				}, -- [7]
-			},
-		}, -- [1]
-		{
-			["name"] = "Dungeons",
-			["data"] = {
-				{
-					["id"] = 22313,
-					["name"] = "Twist of Fate",
-					["column"] = 2,
-				}, -- [1]
-				{
-					["id"] = 19758,
-					["name"] = "Angelic Feather",
-					["column"] = 3,
-				}, -- [2]
-				{
-					["id"] = 22094,
-					["name"] = "Mindbender",
-					["column"] = 2,
-				}, -- [3]
-				{
-					["id"] = 19761,
-					["name"] = "Shining Force",
-					["column"] = 3,
-				}, -- [4]
-				{
-					["id"] = 19766,
-					["name"] = "Shadow Covenant",
-					["column"] = 3,
-				}, -- [5]
-				{
-					["id"] = 19760,
-					["name"] = "Divine Star",
-					["column"] = 2,
-				}, -- [6]
-				{
-					["id"] = 22976,
-					["name"] = "Evangelism",
-					["column"] = 3,
-				}, -- [7]
-			},
-		}, -- [2]
-		{
-			["name"] = "Questing",
-			["data"] = {
-				{
-					["id"] = 22313,
-					["name"] = "Twist of Fate",
-					["column"] = 2,
-				}, -- [1]
-				{
-					["id"] = 19758,
-					["name"] = "Angelic Feather",
-					["column"] = 3,
-				}, -- [2]
-				{
-					["id"] = 22094,
-					["name"] = "Mindbender",
-					["column"] = 2,
-				}, -- [3]
-				{
-					["id"] = 19761,
-					["name"] = "Shining Force",
-					["column"] = 3,
-				}, -- [4]
-				{
-					["id"] = 22330,
-					["name"] = "Sins of the Many",
-					["column"] = 1,
-				}, -- [5]
-				{
-					["id"] = 19760,
-					["name"] = "Divine Star",
-					["column"] = 2,
-				}, -- [6]
-				{
-					["id"] = 22976,
-					["name"] = "Evangelism",
-					["column"] = 3,
-				}, -- [7]
-			},
-		}, -- [3]
-	},
 	["Mage Frost"] = {
 		{
 			["name"] = "ST",
@@ -200,6 +78,88 @@ SubSpecStorage = {
 					["id"] = 21632,
 					["name"] = "Thermal Void",
 					["column"] = 1,
+				}, -- [7]
+			},
+		}, -- [2]
+	},
+	["Monk Windwalker"] = {
+		{
+			["name"] = "ST",
+			["data"] = {
+				{
+					["id"] = 20185,
+					["name"] = "Chi Burst",
+					["column"] = 3,
+				}, -- [1]
+				{
+					["id"] = 19302,
+					["name"] = "Tiger's Lust",
+					["column"] = 3,
+				}, -- [2]
+				{
+					["id"] = 19771,
+					["name"] = "Fist of the White Tiger",
+					["column"] = 2,
+				}, -- [3]
+				{
+					["id"] = 19995,
+					["name"] = "Ring of Peace",
+					["column"] = 3,
+				}, -- [4]
+				{
+					["id"] = 20175,
+					["name"] = "Dampen Harm",
+					["column"] = 3,
+				}, -- [5]
+				{
+					["id"] = 22102,
+					["name"] = "Invoke Xuen, the White Tiger",
+					["column"] = 3,
+				}, -- [6]
+				{
+					["id"] = 22105,
+					["name"] = "Whirling Dragon Punch",
+					["column"] = 2,
+				}, -- [7]
+			},
+		}, -- [1]
+		{
+			["name"] = "AoE",
+			["data"] = {
+				{
+					["id"] = 20185,
+					["name"] = "Chi Burst",
+					["column"] = 3,
+				}, -- [1]
+				{
+					["id"] = 19302,
+					["name"] = "Tiger's Lust",
+					["column"] = 3,
+				}, -- [2]
+				{
+					["id"] = 19771,
+					["name"] = "Fist of the White Tiger",
+					["column"] = 2,
+				}, -- [3]
+				{
+					["id"] = 23364,
+					["name"] = "Good Karma",
+					["column"] = 2,
+				}, -- [4]
+				{
+					["id"] = 23258,
+					["name"] = "Inner Strength",
+					["column"] = 1,
+				}, -- [5]
+				{
+					["id"] = 23122,
+					["name"] = "Rushing Jade Wind",
+					["column"] = 2,
+				}, -- [6]
+				{
+					["id"] = 22105,
+					["name"] = "Whirling Dragon Punch",
+					["column"] = 2,
 				}, -- [7]
 			},
 		}, -- [2]
@@ -654,86 +614,126 @@ SubSpecStorage = {
 			},
 		}, -- [2]
 	},
-	["Monk Windwalker"] = {
+	["Priest Discipline"] = {
 		{
-			["name"] = "ST",
+			["name"] = "Raiding",
 			["data"] = {
 				{
-					["id"] = 20185,
-					["name"] = "Chi Burst",
-					["column"] = 3,
+					["id"] = 22313,
+					["name"] = "Twist of Fate",
+					["column"] = 2,
 				}, -- [1]
 				{
-					["id"] = 19302,
-					["name"] = "Tiger's Lust",
+					["id"] = 19758,
+					["name"] = "Angelic Feather",
 					["column"] = 3,
 				}, -- [2]
 				{
-					["id"] = 19771,
-					["name"] = "Fist of the White Tiger",
-					["column"] = 2,
+					["id"] = 19755,
+					["name"] = "Power Word: Solace",
+					["column"] = 3,
 				}, -- [3]
 				{
-					["id"] = 19995,
-					["name"] = "Ring of Peace",
+					["id"] = 19761,
+					["name"] = "Shining Force",
 					["column"] = 3,
 				}, -- [4]
 				{
-					["id"] = 20175,
-					["name"] = "Dampen Harm",
-					["column"] = 3,
+					["id"] = 22330,
+					["name"] = "Sins of the Many",
+					["column"] = 1,
 				}, -- [5]
 				{
-					["id"] = 22102,
-					["name"] = "Invoke Xuen, the White Tiger",
+					["id"] = 19763,
+					["name"] = "Halo",
 					["column"] = 3,
 				}, -- [6]
 				{
-					["id"] = 22105,
-					["name"] = "Whirling Dragon Punch",
-					["column"] = 2,
+					["id"] = 22976,
+					["name"] = "Evangelism",
+					["column"] = 3,
 				}, -- [7]
 			},
 		}, -- [1]
 		{
-			["name"] = "AoE",
+			["name"] = "Dungeons",
 			["data"] = {
 				{
-					["id"] = 20185,
-					["name"] = "Chi Burst",
-					["column"] = 3,
+					["id"] = 22313,
+					["name"] = "Twist of Fate",
+					["column"] = 2,
 				}, -- [1]
 				{
-					["id"] = 19302,
-					["name"] = "Tiger's Lust",
+					["id"] = 19758,
+					["name"] = "Angelic Feather",
 					["column"] = 3,
 				}, -- [2]
 				{
-					["id"] = 19771,
-					["name"] = "Fist of the White Tiger",
+					["id"] = 22094,
+					["name"] = "Mindbender",
 					["column"] = 2,
 				}, -- [3]
 				{
-					["id"] = 23364,
-					["name"] = "Good Karma",
-					["column"] = 2,
+					["id"] = 19761,
+					["name"] = "Shining Force",
+					["column"] = 3,
 				}, -- [4]
 				{
-					["id"] = 23258,
-					["name"] = "Inner Strength",
-					["column"] = 1,
+					["id"] = 19766,
+					["name"] = "Shadow Covenant",
+					["column"] = 3,
 				}, -- [5]
 				{
-					["id"] = 23122,
-					["name"] = "Rushing Jade Wind",
+					["id"] = 19760,
+					["name"] = "Divine Star",
 					["column"] = 2,
 				}, -- [6]
 				{
-					["id"] = 22105,
-					["name"] = "Whirling Dragon Punch",
-					["column"] = 2,
+					["id"] = 22976,
+					["name"] = "Evangelism",
+					["column"] = 3,
 				}, -- [7]
 			},
 		}, -- [2]
+		{
+			["name"] = "Questing",
+			["data"] = {
+				{
+					["id"] = 22313,
+					["name"] = "Twist of Fate",
+					["column"] = 2,
+				}, -- [1]
+				{
+					["id"] = 19758,
+					["name"] = "Angelic Feather",
+					["column"] = 3,
+				}, -- [2]
+				{
+					["id"] = 22094,
+					["name"] = "Mindbender",
+					["column"] = 2,
+				}, -- [3]
+				{
+					["id"] = 19761,
+					["name"] = "Shining Force",
+					["column"] = 3,
+				}, -- [4]
+				{
+					["id"] = 22330,
+					["name"] = "Sins of the Many",
+					["column"] = 1,
+				}, -- [5]
+				{
+					["id"] = 19760,
+					["name"] = "Divine Star",
+					["column"] = 2,
+				}, -- [6]
+				{
+					["id"] = 22976,
+					["name"] = "Evangelism",
+					["column"] = 3,
+				}, -- [7]
+			},
+		}, -- [3]
 	},
 }

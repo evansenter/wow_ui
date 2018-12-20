@@ -93,7 +93,6 @@ TwintopInsanityBarSettings = {
 		["notZeroShow"] = true,
 	},
 	["thresholdWidth"] = 1,
-	["version"] = 1,
 	["colors"] = {
 		["threshold"] = {
 			["under"] = "40ffffff",
@@ -127,12 +126,13 @@ TwintopInsanityBarSettings = {
 		},
 	},
 	["showSummary"] = false,
-	["hasteApproachingThreshold"] = 135,
-	["hastePrecision"] = 2,
 	["summary"] = {
 		["show"] = false,
 		["simple"] = false,
 	},
+	["hasteApproachingThreshold"] = 135,
+	["hastePrecision"] = 2,
+	["version"] = 1,
 	["showS2MSummary"] = true,
 	["bar"] = {
 		["xPos"] = 0,
