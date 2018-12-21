@@ -311,6 +311,11 @@ MSBTProfiles_SavedVars = {
 			["critFontName"] = "ABF",
 			["enableBlizzardDamage"] = false,
 			["scrollAreas"] = {
+				["Static"] = {
+					["offsetY"] = 120,
+					["scrollHeight"] = 100,
+					["direction"] = "Up",
+				},
 				["Incoming"] = {
 					["stickyDirection"] = "Up",
 					["direction"] = "Up",
@@ -319,19 +324,14 @@ MSBTProfiles_SavedVars = {
 					["animationStyle"] = "Straight",
 					["stickyBehavior"] = "Normal",
 				},
-				["Notification"] = {
-					["offsetY"] = 250,
-				},
 				["Outgoing"] = {
 					["behavior"] = "MSBT_NORMAL",
 					["direction"] = "Up",
 					["offsetX"] = 250,
 					["animationStyle"] = "Straight",
 				},
-				["Static"] = {
-					["offsetY"] = 120,
-					["scrollHeight"] = 100,
-					["direction"] = "Up",
+				["Notification"] = {
+					["offsetY"] = 250,
 				},
 			},
 			["normalFontName"] = "ABF",

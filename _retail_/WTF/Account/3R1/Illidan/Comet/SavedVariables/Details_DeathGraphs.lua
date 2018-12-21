@@ -205,17 +205,17 @@ DeathGraphsDBDeaths = {
 				["name"] = "Jollygrnbolt-LaughingSkull",
 				["class"] = "WARLOCK",
 			},
-			["Papapound"] = {
-				["name"] = "Papapound",
-				["class"] = "MONK",
+			["Faedra-Kil'jaeden"] = {
 				["overall"] = {
 				},
 				["deaths"] = {
 				},
+				["name"] = "Faedra-Kil'jaeden",
+				["class"] = "PRIEST",
 			},
-			["Wobbyfischer"] = {
-				["name"] = "Wobbyfischer",
-				["class"] = "WARRIOR",
+			["Papapound"] = {
+				["name"] = "Papapound",
+				["class"] = "MONK",
 				["overall"] = {
 				},
 				["deaths"] = {
@@ -245,13 +245,13 @@ DeathGraphsDBDeaths = {
 				["name"] = "Xanatis-Turalyon",
 				["class"] = "WARLOCK",
 			},
-			["Faedra-Kil'jaeden"] = {
+			["Wobbyfischer"] = {
+				["name"] = "Wobbyfischer",
+				["class"] = "WARRIOR",
 				["overall"] = {
 				},
 				["deaths"] = {
 				},
-				["name"] = "Faedra-Kil'jaeden",
-				["class"] = "PRIEST",
 			},
 			["Sonofalich"] = {
 				["name"] = "Sonofalich",
@@ -1770,13 +1770,13 @@ DeathGraphsDBDeaths = {
 		["id"] = 2168,
 		["diff"] = 16,
 		["player_db"] = {
-			["Grundlesauce"] = {
+			["Tawwxic"] = {
+				["name"] = "Tawwxic",
+				["class"] = "ROGUE",
 				["overall"] = {
 				},
 				["deaths"] = {
 				},
-				["name"] = "Grundlesauce",
-				["class"] = "PALADIN",
 			},
 			["Huna"] = {
 				["overall"] = {
@@ -1794,13 +1794,13 @@ DeathGraphsDBDeaths = {
 				["deaths"] = {
 				},
 			},
-			["Tawwxic"] = {
-				["name"] = "Tawwxic",
-				["class"] = "ROGUE",
+			["Alamman"] = {
 				["overall"] = {
 				},
 				["deaths"] = {
 				},
+				["name"] = "Alamman",
+				["class"] = "PALADIN",
 			},
 			["Tyrannous"] = {
 				["overall"] = {
@@ -1882,12 +1882,12 @@ DeathGraphsDBDeaths = {
 				["name"] = "Shiftycents",
 				["class"] = "DRUID",
 			},
-			["Alamman"] = {
+			["Grundlesauce"] = {
 				["overall"] = {
 				},
 				["deaths"] = {
 				},
-				["name"] = "Alamman",
+				["name"] = "Grundlesauce",
 				["class"] = "PALADIN",
 			},
 			["Saucerorr"] = {
@@ -4108,19 +4108,24 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "PRIEST",
 			},
+			["Comet"] = {
+				["encounters"] = 11,
+				["points"] = 1090,
+				["class"] = "MONK",
+				["deaths"] = {
+					{
+						2, -- [1]
+						124.756, -- [2]
+						"Melee |cFFFF333333,362|r", -- [3]
+					}, -- [1]
+				},
+			},
 			["Chriscool"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
 				},
 				["class"] = "ROGUE",
-			},
-			["Zarea"] = {
-				["encounters"] = 2,
-				["points"] = 200,
-				["class"] = "WARLOCK",
-				["deaths"] = {
-				},
 			},
 			["Pinpus"] = {
 				["encounters"] = 2,
@@ -4188,16 +4193,11 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "WARRIOR",
 			},
-			["Comet"] = {
-				["encounters"] = 11,
-				["points"] = 1090,
-				["class"] = "MONK",
+			["Zarea"] = {
+				["encounters"] = 2,
+				["points"] = 200,
+				["class"] = "WARLOCK",
 				["deaths"] = {
-					{
-						2, -- [1]
-						124.756, -- [2]
-						"Melee |cFFFF333333,362|r", -- [3]
-					}, -- [1]
 				},
 			},
 			["Shinyazumaru"] = {
@@ -7797,12 +7797,12 @@ DeathGraphsDBEndurance = {
 					}, -- [1]
 				},
 			},
-			["Shenanìgans"] = {
-				["encounters"] = 4,
-				["points"] = 400,
-				["class"] = "DEMONHUNTER",
+			["Riggie"] = {
+				["encounters"] = 2,
+				["points"] = 200,
 				["deaths"] = {
 				},
+				["class"] = "MONK",
 			},
 			["Raycharlezz"] = {
 				["encounters"] = 4,
@@ -7823,12 +7823,12 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "MONK",
 			},
-			["Riggie"] = {
+			["Azumaru"] = {
 				["encounters"] = 2,
 				["points"] = 200,
 				["deaths"] = {
 				},
-				["class"] = "MONK",
+				["class"] = "PRIEST",
 			},
 			["Chriscool"] = {
 				["encounters"] = 4,
@@ -7993,12 +7993,12 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "SHAMAN",
 			},
-			["Azumaru"] = {
-				["encounters"] = 2,
-				["points"] = 200,
+			["Shenanìgans"] = {
+				["encounters"] = 4,
+				["points"] = 400,
+				["class"] = "DEMONHUNTER",
 				["deaths"] = {
 				},
-				["class"] = "PRIEST",
 			},
 			["Thoralf"] = {
 				["encounters"] = 2,
@@ -13883,19 +13883,19 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "MONK",
 			},
+			["Nerdsmasher"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["class"] = "PALADIN",
+				["deaths"] = {
+				},
+			},
 			["Phatal-Bloodscalp"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
 				},
 				["class"] = "PALADIN",
-			},
-			["Tent"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["class"] = "PRIEST",
-				["deaths"] = {
-				},
 			},
 			["Dianwa"] = {
 				["encounters"] = 1,
@@ -14276,10 +14276,10 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "DEATHKNIGHT",
 			},
-			["Nerdsmasher"] = {
+			["Tent"] = {
 				["encounters"] = 1,
 				["points"] = 100,
-				["class"] = "PALADIN",
+				["class"] = "PRIEST",
 				["deaths"] = {
 				},
 			},
@@ -14606,19 +14606,29 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "PRIEST",
 			},
+			["Raycharlezz"] = {
+				["encounters"] = 20,
+				["points"] = 1980,
+				["deaths"] = {
+					{
+						11, -- [1]
+						109.822999999975, -- [2]
+						"Putrid Paroxysm (DoT) |cFFFF333375,197|r", -- [3]
+					}, -- [1]
+					{
+						3, -- [1]
+						257.88, -- [2]
+						"Rotting Regurgitation |cFFFF3333159,756|r", -- [3]
+					}, -- [2]
+				},
+				["class"] = "DEMONHUNTER",
+			},
 			["Itàchii"] = {
 				["encounters"] = 6,
 				["points"] = 600,
 				["class"] = "DRUID",
 				["deaths"] = {
 				},
-			},
-			["Laniaria"] = {
-				["encounters"] = 20,
-				["points"] = 2000,
-				["deaths"] = {
-				},
-				["class"] = "DEMONHUNTER",
 			},
 			["Comet"] = {
 				["encounters"] = 26,
@@ -14960,20 +14970,10 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "PRIEST",
 			},
-			["Raycharlezz"] = {
+			["Laniaria"] = {
 				["encounters"] = 20,
-				["points"] = 1980,
+				["points"] = 2000,
 				["deaths"] = {
-					{
-						11, -- [1]
-						109.822999999975, -- [2]
-						"Putrid Paroxysm (DoT) |cFFFF333375,197|r", -- [3]
-					}, -- [1]
-					{
-						3, -- [1]
-						257.88, -- [2]
-						"Rotting Regurgitation |cFFFF3333159,756|r", -- [3]
-					}, -- [2]
 				},
 				["class"] = "DEMONHUNTER",
 			},
@@ -15263,19 +15263,19 @@ DeathGraphsDBEndurance = {
 					}, -- [2]
 				},
 			},
+			["Nerdsmasher"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["class"] = "PALADIN",
+				["deaths"] = {
+				},
+			},
 			["Phatal-Bloodscalp"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
 				},
 				["class"] = "PALADIN",
-			},
-			["Tent"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["class"] = "PRIEST",
-				["deaths"] = {
-				},
 			},
 			["Dianwa"] = {
 				["encounters"] = 2,
@@ -15671,10 +15671,10 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "DEATHKNIGHT",
 			},
-			["Nerdsmasher"] = {
+			["Tent"] = {
 				["encounters"] = 1,
 				["points"] = 100,
-				["class"] = "PALADIN",
+				["class"] = "PRIEST",
 				["deaths"] = {
 				},
 			},
@@ -24810,10 +24810,8 @@ DeathGraphsDBGraph = {
 			[180] = {
 				1545187229, -- [1]
 			},
-			[215] = {
-				1545273941, -- [1]
-				1545362451, -- [2]
-				1545365098, -- [3]
+			[357] = {
+				1545368475, -- [1]
 			},
 			[186] = {
 				1544670665, -- [1]
@@ -24829,7 +24827,7 @@ DeathGraphsDBGraph = {
 				1544676721, -- [1]
 				1545362451, -- [2]
 			},
-			[357] = {
+			[353] = {
 				1545368475, -- [1]
 			},
 			[196] = {
@@ -24892,8 +24890,8 @@ DeathGraphsDBGraph = {
 			[327] = {
 				1545280170, -- [1]
 			},
-			[452] = {
-				1545365684, -- [1]
+			[227] = {
+				1544672537, -- [1]
 			},
 			[232] = {
 				1545361006, -- [1]
@@ -24904,24 +24902,21 @@ DeathGraphsDBGraph = {
 			[470] = {
 				1545365684, -- [1]
 			},
-			[227] = {
-				1544672537, -- [1]
+			[325] = {
+				1545367705, -- [1]
 			},
 			[225] = {
 				1544675665, -- [1]
 				1544675665, -- [2]
 			},
-			[353] = {
-				1545368475, -- [1]
-			},
 			[243] = {
 				1545361006, -- [1]
 			},
-			[363] = {
-				1545366462, -- [1]
-			},
 			[418] = {
 				1545361835, -- [1]
+			},
+			[363] = {
+				1545366462, -- [1]
 			},
 			[212] = {
 				1545361006, -- [1]
@@ -24929,6 +24924,9 @@ DeathGraphsDBGraph = {
 			[428] = {
 				1545363706, -- [1]
 				1545366462, -- [2]
+			},
+			[301] = {
+				1545193996, -- [1]
 			},
 			[258] = {
 				1545359202, -- [1]
@@ -24960,16 +24958,17 @@ DeathGraphsDBGraph = {
 			[284] = {
 				1545189597, -- [1]
 			},
-			[326] = {
-				1545274517, -- [1]
-				1545281079, -- [2]
+			[296] = {
+				1545273335, -- [1]
+				1545367705, -- [2]
 			},
 			[147] = {
 				1544668913, -- [1]
 			},
-			[296] = {
-				1545273335, -- [1]
-				1545367705, -- [2]
+			[423] = {
+				1545361835, -- [1]
+				1545361835, -- [2]
+				1545363706, -- [3]
 			},
 			[427] = {
 				1545366462, -- [1]
@@ -25058,10 +25057,9 @@ DeathGraphsDBGraph = {
 			[277] = {
 				1545279647, -- [1]
 			},
-			[423] = {
-				1545361835, -- [1]
-				1545361835, -- [2]
-				1545363706, -- [3]
+			[326] = {
+				1545274517, -- [1]
+				1545281079, -- [2]
 			},
 			[412] = {
 				1545363706, -- [1]
@@ -25078,8 +25076,10 @@ DeathGraphsDBGraph = {
 				1544669523, -- [2]
 				1544669523, -- [3]
 			},
-			[301] = {
-				1545193996, -- [1]
+			[215] = {
+				1545273941, -- [1]
+				1545362451, -- [2]
+				1545365098, -- [3]
 			},
 			[217] = {
 				1545362451, -- [1]
@@ -25102,8 +25102,8 @@ DeathGraphsDBGraph = {
 				1544674512, -- [1]
 				1545186429, -- [2]
 			},
-			[325] = {
-				1545367705, -- [1]
+			[452] = {
+				1545365684, -- [1]
 			},
 			[229] = {
 				1545193105, -- [1]
@@ -26087,8 +26087,8 @@ DeathGraphsDBGraph = {
 			[193] = {
 				1540439171, -- [1]
 			},
-			[121] = {
-				1540438498, -- [1]
+			[61] = {
+				1540436916, -- [1]
 			},
 			[98] = {
 				1540436733, -- [1]
@@ -26101,19 +26101,20 @@ DeathGraphsDBGraph = {
 				1540435774, -- [5]
 				1540436733, -- [6]
 			},
-			[61] = {
-				1540436916, -- [1]
+			[350] = {
+				1543980683, -- [1]
 			},
 			[319] = {
 				1542768260, -- [1]
+			},
+			[58] = {
+				1540437214, -- [1]
+				1540438498, -- [2]
 			},
 			[115] = {
 				1540437214, -- [1]
 				1540437462, -- [2]
 				1540438809, -- [3]
-			},
-			[326] = {
-				1543980683, -- [1]
 			},
 			[37] = {
 				1540438809, -- [1]
@@ -26199,15 +26200,14 @@ DeathGraphsDBGraph = {
 			[73] = {
 				1540436733, -- [1]
 			},
-			[58] = {
-				1540437214, -- [1]
-				1540438498, -- [2]
+			[326] = {
+				1543980683, -- [1]
 			},
 			[40] = {
 				1540436733, -- [1]
 			},
-			[350] = {
-				1543980683, -- [1]
+			[121] = {
+				1540438498, -- [1]
 			},
 			[351] = {
 				1542768260, -- [1]
@@ -26255,9 +26255,8 @@ DeathGraphsDBGraph = {
 			[110] = {
 				1544063695, -- [1]
 			},
-			[97] = {
-				1543381365, -- [1]
-				1543458734, -- [2]
+			[192] = {
+				1543459758, -- [1]
 			},
 			[152] = {
 				1543379759, -- [1]
@@ -26319,9 +26318,8 @@ DeathGraphsDBGraph = {
 			[81] = {
 				1543459245, -- [1]
 			},
-			[129] = {
-				1544064108, -- [1]
-				1544064108, -- [2]
+			[49] = {
+				1544063443, -- [1]
 			},
 			[143] = {
 				1543459030, -- [1]
@@ -26431,8 +26429,9 @@ DeathGraphsDBGraph = {
 			[175] = {
 				1544063695, -- [1]
 			},
-			[49] = {
-				1544063443, -- [1]
+			[129] = {
+				1544064108, -- [1]
+				1544064108, -- [2]
 			},
 			[176] = {
 				1544063695, -- [1]
@@ -26443,8 +26442,9 @@ DeathGraphsDBGraph = {
 			[177] = {
 				1544063695, -- [1]
 			},
-			[192] = {
-				1543459758, -- [1]
+			[97] = {
+				1543381365, -- [1]
+				1543458734, -- [2]
 			},
 			[178] = {
 				1543380539, -- [1]
@@ -27328,13 +27328,13 @@ DeathGraphsDBGraph = {
 			[170] = {
 				1542614722, -- [1]
 			},
-			[117] = {
-				1542615231, -- [1]
-			},
 			[102] = {
 				1540950807, -- [1]
 			},
 			[241] = {
+				1542615231, -- [1]
+			},
+			[117] = {
 				1542615231, -- [1]
 			},
 			[174] = {
@@ -27363,13 +27363,13 @@ DeathGraphsDBGraph = {
 			[389] = {
 				1542616605, -- [1]
 			},
-			[198] = {
+			[54] = {
 				1543892361, -- [1]
 			},
 			[60] = {
 				1542616605, -- [1]
 			},
-			[336] = {
+			[198] = {
 				1543892361, -- [1]
 			},
 			[295] = {
@@ -27378,7 +27378,7 @@ DeathGraphsDBGraph = {
 			[317] = {
 				1543892361, -- [1]
 			},
-			[54] = {
+			[336] = {
 				1543892361, -- [1]
 			},
 		},

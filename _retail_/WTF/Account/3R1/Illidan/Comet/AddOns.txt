@@ -204,7 +204,7 @@ MogIt_Ranged: disabled
 MogIt_TwoHanded: disabled
 MogIt_Accessories: disabled
 MoveAnything: enabled
-SavedInstances: disabled
+SavedInstances: enabled
 WoWNotifier: disabled
 DBM-RaidLeadTools: enabled
 Kui_Nameplates: disabled
@@ -309,8 +309,8 @@ AdiBags_Config: enabled
 AdvancedInterfaceOptions: disabled
 CQuestCounter: enabled
 DMouse: enabled
-InFlight: disabled
-InFlight_Load: disabled
+InFlight: enabled
+InFlight_Load: enabled
 InstancePortals: disabled
 PremadeGroupsFilter: disabled
 DBM-TombofSargeras: enabled
