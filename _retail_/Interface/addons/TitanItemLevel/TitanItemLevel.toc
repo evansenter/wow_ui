@@ -1,0 +1,8 @@
+## Interface: 80000
+## Title: Titan Panel [|cffeda55fItem Level|r] |cff00aa001.0.0.80000|r by InvisiBill
+## Notes: Titan Panel plugin that shows your average Item Level.
+## Author: InvisiBill
+## Version: 1.0.0.80000
+## Dependencies: Titan
+## X-Child-Of: Titan
+TitanItemLevel.xml

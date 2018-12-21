@@ -473,6 +473,8 @@ local function AAP_PrintQStep()
 			StepP = "Treasure"
 		elseif (steps["UseDalaHS"]) then
 			StepP = "UseDalaHS"
+		elseif (steps["UseGarrisonHS"]) then
+			StepP = "UseGarrisonHS"
 		elseif (steps["ZoneDone"]) then
 			StepP = "ZoneDone"
 		end
@@ -543,6 +545,19 @@ local function AAP_PrintQStep()
 			LineNr = LineNr + 1
 			AAP.Dinged90nr = LineNr
 			AAP.QuestList.QuestFrames["FS"..LineNr]:SetText("** Time for Draenor! (hearthstone)")
+			AAP.QuestList.QuestFrames[LineNr]:Show()
+			AAP.QuestList.QuestFrames["FS"..LineNr]["Button"]:Hide()
+			local aapwidth = AAP.QuestList.QuestFrames["FS"..LineNr]:GetStringWidth()
+			if (aapwidth and aapwidth > 400) then
+				AAP.QuestList.QuestFrames[LineNr]:SetWidth(aapwidth+10)
+			else
+				AAP.QuestList.QuestFrames[LineNr]:SetWidth(410)
+			end
+		end
+		if (AAP.Dinged100 == 1) then
+			LineNr = LineNr + 1
+			AAP.Dinged100nr = LineNr
+			AAP.QuestList.QuestFrames["FS"..LineNr]:SetText("** Time for Legion! (hearthstone)")
 			AAP.QuestList.QuestFrames[LineNr]:Show()
 			AAP.QuestList.QuestFrames["FS"..LineNr]["Button"]:Hide()
 			local aapwidth = AAP.QuestList.QuestFrames["FS"..LineNr]:GetStringWidth()
@@ -933,6 +948,9 @@ local function AAP_PrintQStep()
 			if (AAPExtralk == 90) then
 				AAP.QuestList.QuestFrames["FS"..LineNr]:SetText("** Dismiss pets and pick up a miner (don't mount), and run and deliver miner")
 			end
+			if (AAPExtralk == 91) then
+				AAP.QuestList.QuestFrames["FS"..LineNr]:SetText("** Use Portal to Blasted Lands")
+			end
 			AAP.QuestList.QuestFrames["FS"..LineNr]["Button"]:Hide()
 			AAP.QuestList.QuestFrames[LineNr]:Show()
 			local aapwidth = AAP.QuestList.QuestFrames["FS"..LineNr]:GetStringWidth()
@@ -1209,6 +1227,32 @@ local function AAP_PrintQStep()
 					AAP.QuestList.QuestFrames["FS"..LineNr]["Button"]:Show()
 				end
 			end
+		elseif (StepP == "UseGarrisonHS") then
+			if (IsQuestFlaggedCompleted(steps["UseGarrisonHS"])) then
+				AAP1[AAP.Realm][AAP.Name][AAP.ActiveMap] = AAP1[AAP.Realm][AAP.Name][AAP.ActiveMap] + 1
+				AAP.BookingList["PrintQStep"] = 1
+			else
+				if (AAP1[AAP.Realm][AAP.Name]["Settings"]["ShowQList"] == 1) then
+					LineNr = LineNr + 1
+					AAP.QuestList.QuestFrames["FS"..LineNr]:SetText(AAP_Locals["UseGarrisonHS"])
+					AAP.QuestList.QuestFrames[LineNr]:Show()
+					AAP.QuestList.QuestFrames["FS"..LineNr]["Button"]:Hide()
+					print("a1")
+					if (steps["Button"] and steps["Button"][tostring(steps["UseGarrisonHS"])]) then
+						if (not AAP.SetButtonVar) then
+							AAP.SetButtonVar = {}
+						end
+						AAP.SetButtonVar[tostring(steps["UseGarrisonHS"])] = LineNr
+					end
+					local aapwidth = AAP.QuestList.QuestFrames["FS"..LineNr]:GetStringWidth()
+					if (aapwidth and aapwidth > 400) then
+						AAP.QuestList.QuestFrames[LineNr]:SetWidth(aapwidth+10)
+					else
+						AAP.QuestList.QuestFrames[LineNr]:SetWidth(410)
+					end
+					AAP.QuestList.QuestFrames["FS"..LineNr]["Button"]:Show()
+				end
+			end
 		elseif (StepP == "ZonePick") then
 			if (AAP1[AAP.Realm][AAP.Name]["Settings"]["ShowQList"] == 1) then
 				LineNr = LineNr + 1
@@ -1476,7 +1520,7 @@ function AAP.SetButton()
 	if (CurStep and AAP.ActiveMap and AAP.QuestStepList and AAP.QuestStepList[AAP.ActiveMap] and AAP.QuestStepList[AAP.ActiveMap][CurStep]) then
 		steps = AAP.QuestStepList[AAP.ActiveMap][CurStep]
 	end
-	if (steps and steps["Button"] or (AAP.Dinged60 == 1 and AAP.Dinged60nr > 0) or (AAP.Dinged80 == 1 and AAP.Dinged80nr > 0) or (AAP.Dinged90 == 1 and AAP.Dinged90nr > 0)) then
+	if (steps and steps["Button"] or (AAP.Dinged60 == 1 and AAP.Dinged60nr > 0) or (AAP.Dinged80 == 1 and AAP.Dinged80nr > 0) or (AAP.Dinged90 == 1 and AAP.Dinged90nr > 0) or (AAP.Dinged100 == 1 and AAP.Dinged100nr > 0)) then
 		if (not InCombatLockdown()) then
 			if (AAP.SetButtonVar) then
 				if (AAP1["Debug"]) then
@@ -1490,7 +1534,7 @@ function AAP.SetButton()
 						if (AAP1["Debug"]) then
 							print(AAP_index)
 						end
-						if (AAP_index2 == AAP_index or steps["UseHS"]) then
+						if (AAP_index2 == AAP_index or steps["UseHS"] or steps["UseGarrisonHS"]) then
 							local CL_Items, itemLink, clt3, clt4, clt5, clt6, clt7, clt8, clt9, CL_ItemTex = GetItemInfo(AAP_value)
 							if (CL_Items and string.sub(CL_Items, 1, 1) and CL_ItemTex) then
 								HideVar[AAP_value2] = AAP_value2
@@ -1657,6 +1701,44 @@ function AAP.SetButton()
 						end
 					end
 				end
+				if (AAP.Dinged100 == 1 and AAP.Dinged100nr > 0) then
+					local CL_Items, clt2, clt3, clt4, clt5, clt6, clt7, clt8, clt9, CL_ItemTex = GetItemInfo(6948)
+					if (CL_Items and string.sub(CL_Items, 1, 1) and CL_ItemTex) then
+						HideVar[AAP.Dinged100nr] = AAP.Dinged100nr
+						AAP.ButtonList[123451234] = AAP.Dinged100nr
+						AAP.QuestList2["BF"..AAP.Dinged100nr]["AAP_Buttonptex"]:SetTexture(CL_ItemTex)
+						AAP.QuestList2["BF"..AAP.Dinged100nr]["AAP_Buttonntex"]:SetTexture(CL_ItemTex)
+						AAP.QuestList2["BF"..AAP.Dinged100nr]["AAP_Button"]:SetNormalTexture(CL_ItemTex)
+						AAP.QuestList2["BF"..AAP.Dinged100nr]["AAP_Button"]:SetText("")
+						AAP.QuestList2["BF"..AAP.Dinged100nr]["AAP_Button"]:SetAttribute("type", "item");
+						AAP.QuestList2["BF"..AAP.Dinged100nr]["AAP_Button"]:SetAttribute("item", "item:6948");
+						AAP.QuestList2["BF"..AAP.Dinged100nr]:Show()
+						AAP.QuestList2["BF"..AAP.Dinged100nr]["AAP_Button"]:SetScript("OnEnter", function(self) GameTooltip:SetOwner(self, "ANCHOR_CURSOR"); GameTooltip:SetItemByID(6948); GameTooltip:Show() end)
+						AAP.QuestList2["BF"..AAP.Dinged100nr]["AAP_Button"]:SetScript("OnLeave", function(self) GameTooltip:Hide() end)
+						local Topz = AAP1[AAP.Realm][AAP.Name]["Settings"]["left"]
+						local Topz2 = AAP1[AAP.Realm][AAP.Name]["Settings"]["top"]
+						AAP.QuestList20:SetPoint("TOPLEFT", UIParent, "TOPLEFT", Topz, Topz2)
+						AAP.QuestList2["BF"..AAP.Dinged100nr]:SetPoint("BOTTOMLEFT", AAP.QuestList21, "BOTTOMLEFT",0,-((AAP.Dinged100nr * 38)+AAP.Dinged100nr))
+						if (not AAP.ButtonVisual) then
+							AAP.ButtonVisual = {}
+						end
+						AAP.ButtonVisual[AAP.Dinged100nr] = AAP.Dinged100nr
+						local isFound, macroSlot = AAP.MacroFinder()
+						if isFound and macroSlot then
+							if (steps and steps["SpecialDubbleMacro"]) then
+								if (not AAP.DubbleMacro[1]) then
+									AAP.DubbleMacro[1] = CL_Items
+								elseif (AAP.DubbleMacro and AAP.DubbleMacro[1] and not AAP.DubbleMacro[2]) then
+									AAP.DubbleMacro[2] = CL_Items
+								end
+							else
+								AAP.DubbleMacro = nil
+								AAP.DubbleMacro = {}
+							end
+							AAP.MacroUpdater(macroSlot, CL_Items)
+						end
+					end
+				end
 			else
 				if (steps and not steps["Button"]) then
 					for i=1, 10 do
@@ -1742,6 +1824,35 @@ function AAP.SetButton()
 							AAP.ButtonVisual = {}
 						end
 						AAP.ButtonVisual[AAP.Dinged90nr] = AAP.Dinged90nr
+						local isFound, macroSlot = AAP.MacroFinder()
+						if isFound and macroSlot then
+							AAP.DubbleMacro = nil
+							AAP.DubbleMacro = {}
+							AAP.MacroUpdater(macroSlot, CL_Items)
+						end
+					end
+				end
+				if (AAP.Dinged100 == 1 and AAP.Dinged100nr > 0) then
+					local CL_Items, clt2, clt3, clt4, clt5, clt6, clt7, clt8, clt9, CL_ItemTex = GetItemInfo(6948)
+					if (CL_Items and string.sub(CL_Items, 1, 1) and CL_ItemTex) then
+						AAP.ButtonList[123451234] = AAP.Dinged100nr
+						AAP.QuestList2["BF"..AAP.Dinged100nr]["AAP_Buttonptex"]:SetTexture(CL_ItemTex)
+						AAP.QuestList2["BF"..AAP.Dinged100nr]["AAP_Buttonntex"]:SetTexture(CL_ItemTex)
+						AAP.QuestList2["BF"..AAP.Dinged100nr]["AAP_Button"]:SetNormalTexture(CL_ItemTex)
+						AAP.QuestList2["BF"..AAP.Dinged100nr]["AAP_Button"]:SetText("")
+						AAP.QuestList2["BF"..AAP.Dinged100nr]["AAP_Button"]:SetAttribute("type", "item");
+						AAP.QuestList2["BF"..AAP.Dinged100nr]["AAP_Button"]:SetAttribute("item", "item:6948");
+						AAP.QuestList2["BF"..AAP.Dinged100nr]:Show()
+						AAP.QuestList2["BF"..AAP.Dinged100nr]["AAP_Button"]:SetScript("OnEnter", function(self) GameTooltip:SetOwner(self, "ANCHOR_CURSOR"); GameTooltip:SetItemByID(6948); GameTooltip:Show() end)
+						AAP.QuestList2["BF"..AAP.Dinged100nr]["AAP_Button"]:SetScript("OnLeave", function(self) GameTooltip:Hide() end)
+						local Topz = AAP1[AAP.Realm][AAP.Name]["Settings"]["left"]
+						local Topz2 = AAP1[AAP.Realm][AAP.Name]["Settings"]["top"]
+						AAP.QuestList20:SetPoint("TOPLEFT", UIParent, "TOPLEFT", Topz, Topz2)
+						AAP.QuestList2["BF"..AAP.Dinged100nr]:SetPoint("BOTTOMLEFT", AAP.QuestList21, "BOTTOMLEFT",0,-((AAP.Dinged100nr * 38)+AAP.Dinged100nr))
+						if (not AAP.ButtonVisual) then
+							AAP.ButtonVisual = {}
+						end
+						AAP.ButtonVisual[AAP.Dinged100nr] = AAP.Dinged100nr
 						local isFound, macroSlot = AAP.MacroFinder()
 						if isFound and macroSlot then
 							AAP.DubbleMacro = nil
@@ -2050,6 +2161,7 @@ local function AAP_UpdateMapId()
 	local levelcheck = 0
 	local levelcheck80 = 0
 	local levelcheck90 = 0
+	local levelcheck100 = 0
 	AAP.Level = UnitLevel("player")
 	AAP.ActiveMap = C_Map.GetBestMapForUnit("player")
 	local currentMapId, TOP_MOST = C_Map.GetBestMapForUnit('player'), true
@@ -2122,11 +2234,23 @@ local function AAP_UpdateMapId()
 	if (AAP.ActiveMap == 18 and AAP.Level > 79 and AAP.Level < 90) then
 		AAP.ActiveMap = "18-80-90"
 	end
+	if (AAP.ActiveMap == 18 and AAP.Level > 89 and AAP.Level < 100) then
+		AAP.ActiveMap = "18-90-100"
+	end
+	if (AAP.ActiveMap == 18 and AAP.Level > 99 and AAP.Level < 110) then
+		AAP.ActiveMap = "18-100-110"
+	end
 	if (AAP.ActiveMap == 1 and AAP.Level > 59 and AAP.Level < 80) then
 		AAP.ActiveMap = "1-60to80"
 	end
 	if (AAP.ActiveMap == 1 and AAP.Level > 79 and AAP.Level < 90) then
 		AAP.ActiveMap = "1-80to90"
+	end
+	if (AAP.ActiveMap == 1 and AAP.Level > 89 and AAP.Level < 100) then
+		AAP.ActiveMap = "1-90to100"
+	end
+	if (AAP.ActiveMap == 1 and AAP.Level > 99 and AAP.Level < 110) then
+		AAP.ActiveMap = "1-100to110"
 	end
 	if (AAP.Faction == "Horde" and AAP.ActiveMap == 22 and AAP.Level > 19 and AAP.Level < 63) then
 		AAP.ActiveMap = "22-20-63"
@@ -2249,6 +2373,51 @@ local function AAP_UpdateMapId()
 			levelcheck90 = 1
 		end
 	end
+	if (AAP.ActiveMap == 17 and AAP.Level > 89 and AAP.Level < 103) then
+		AAP.ActiveMap = "17-90-100"
+	end
+	if (AAP.ActiveMap == 578 and AAP.Level > 89 and AAP.Level < 103) then
+		AAP.ActiveMap = "578-90-100"
+		if (AAP.Level >	99) then
+			levelcheck100 = 1
+		end
+	end
+	if (AAP.ActiveMap == 577 and AAP.Level > 89 and AAP.Level < 103) then
+		AAP.ActiveMap = "577-90-100"
+		if (AAP.Level >	99) then
+			levelcheck100 = 1
+		end
+	end
+	if (AAP.ActiveMap == 525 and AAP.Level > 89 and AAP.Level < 103) then
+		AAP.ActiveMap = "525-90-100"
+		if (AAP.Level >	99) then
+			levelcheck100 = 1
+		end
+	end
+	if (AAP.ActiveMap == 543 and AAP.Level > 89 and AAP.Level < 103) then
+		AAP.ActiveMap = "543-90-100"
+		if (AAP.Level >	99) then
+			levelcheck100 = 1
+		end
+	end
+	if (AAP.ActiveMap == 535 and AAP.Level > 89 and AAP.Level < 103) then
+		AAP.ActiveMap = "535-90-100"
+		if (AAP.Level >	99) then
+			levelcheck100 = 1
+		end
+	end
+	if (AAP.ActiveMap == 582 and AAP.Level > 89 and AAP.Level < 103) then
+		AAP.ActiveMap = "582-90-100"
+		if (AAP.Level >	99) then
+			levelcheck100 = 1
+		end
+	end
+	if (AAP.ActiveMap == 539 and AAP.Level > 89 and AAP.Level < 103) then
+		AAP.ActiveMap = "539-90-100"
+		if (AAP.Level >	99) then
+			levelcheck100 = 1
+		end
+	end
 
 
 	
@@ -2336,6 +2505,11 @@ local function AAP_UpdateMapId()
 		AAP.Dinged90 = 1
 	else
 		AAP.Dinged90 = 0
+	end
+	if (levelcheck100 == 1) then
+		AAP.Dinged100 = 1
+	else
+		AAP.Dinged100 = 0
 	end
 	
 	if (not AAP1[AAP.Realm][AAP.Name][AAP.ActiveMap]) then
@@ -2819,6 +2993,19 @@ AAP_QH_EventFrame:SetScript("OnEvent", function(self, event, ...)
 			steps = AAP.QuestStepList[AAP.ActiveMap][CurStep]
 		end
 		local choiceID, questionText, numOptions = GetQuestChoiceInfo()
+		if (numOptions and numOptions > 1 and steps and steps["LumberYard"]) then
+			local CLi
+			for CLi = 1, numOptions do
+				local optionID, buttonText, description, artFile = GetQuestChoiceOptionInfo(CLi)
+				if (steps["LumberYard"] == optionID) then
+					SendQuestChoiceResponse(GetQuestChoiceOptionInfo(CLi))
+					AAP1[AAP.Realm][AAP.Name][AAP.ActiveMap] = AAP1[AAP.Realm][AAP.Name][AAP.ActiveMap] + 1
+					AAP.BookingList["UpdateQuest"] = 1
+					AAP.BookingList["PrintQStep"] = 1
+					break
+				end
+			end
+		end
 		if (numOptions and numOptions > 1 and steps and steps["PickUpSpecial"]) then
 			local CLi
 			for CLi = 1, numOptions do
@@ -3132,6 +3319,16 @@ AAP_QH_EventFrame:SetScript("OnEvent", function(self, event, ...)
 	end
 	if (event=="UNIT_SPELLCAST_START") then
 		local arg1, arg2, arg3, arg4, arg5 = ...;
+		if ((arg1 == "player") and (arg3 == 171253)) then
+			local CurStep = AAP1[AAP.Realm][AAP.Name][AAP.ActiveMap]
+			local steps
+			if (CurStep and AAP.QuestStepList and AAP.QuestStepList[AAP.ActiveMap]) then
+				steps = AAP.QuestStepList[AAP.ActiveMap][CurStep]
+			end
+			if (steps and steps["UseGarrisonHS"]) then
+				AAP1[AAP.Realm][AAP.Name][AAP.ActiveMap] = AAP1[AAP.Realm][AAP.Name][AAP.ActiveMap] + 1
+			end		
+		end
 		if ((arg1 == "player") and (arg3 == 222695)) then
 			local CurStep = AAP1[AAP.Realm][AAP.Name][AAP.ActiveMap]
 			local steps

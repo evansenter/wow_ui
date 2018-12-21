@@ -1,68 +1,58 @@
-tag d98675dbb72fb17dfed9fc03f7ef0cfd77f0dd18 8.0.7
+tag 0c0c476cf045e4a7ce58bd8304116376ede3d364 8.0.8
 Author:	Benjamin Staneck <staneck@gmail.com>
-Date:	Fri Dec 14 03:42:43 2018 +0100
+Date:	Thu Dec 20 23:22:29 2018 +0100
 
-commit 241e8f8350157e5ba56ba8bc4563e70cb43ac90d
-Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Fri Dec 14 03:42:26 2018 +0100
+commit 508dfb48f7bf1667fafe27ae8981ea0f88b625a4
+Author: LiangYuxuan <lyx@lyx.es>
+Date:   Tue Dec 18 15:58:57 2018 +0800
 
-    Update TOC for Patch 8.1
+    Update Weekend Event Quest
 
-commit d11c94c3073ca98a5321dfbd8287b7b98b723740
-Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Fri Dec 14 03:20:06 2018 +0100
+commit a3ad885a8439ef039add120c085df20fda7c686a
+Author: LiangYuxuan <lyx@lyx.es>
+Date:   Tue Dec 18 13:13:24 2018 +0800
 
-    add Transmute: Herbs to Anchors
-    
-    Fixes #188
+    Remove Track Farm Option
 
-commit 2b81d3dff6de1305d3e13848e75389a2ce9a5a09
-Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Fri Dec 14 03:18:53 2018 +0100
+commit d103b975bac5ff6637169ea13edf3be4c8f532f2
+Author: LiangYuxuan <lyx@lyx.es>
+Date:   Tue Dec 18 10:59:42 2018 +0800
 
-    add 8.1 currencies
-    
-    Closes #187
+    Fix Repeatable Argus Quest and Add Island Expeditions Weekly Quest
 
-commit 4bebabe634f5161bc4357b488ee04af80c5d000e
-Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Tue Sep 25 18:09:45 2018 +0200
+commit 3feee956552af0fd6de1629f73499f1e537ddc4a
+Author: LiangYuxuan <lyx@lyx.es>
+Date:   Mon Dec 17 19:50:17 2018 +0800
 
-    add new files to locale scraper
+    show both factions emissay name
 
-commit f7a31dacf34c620fdfe86e3e6241f08a23a2694e
-Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Sat Sep 22 18:42:05 2018 +0200
+commit 184078158c2d4453bc4166c5ee56e2bcc07b137d
+Author: LiangYuxuan <lyx@lyx.es>
+Date:   Mon Dec 17 13:59:05 2018 +0800
 
-    cleanup a few things
+    Add Horde Darkshore Warfront Quest
 
-commit 4e25ab484f9265c3820d948a96eff3b3303c066b
-Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Sat Sep 22 18:41:06 2018 +0200
+commit 6aeaaff14e99ebc81097991db93655845bdc78e0
+Author: LiangYuxuan <lyx@lyx.es>
+Date:   Mon Dec 17 01:56:48 2018 +0800
 
-    move more content from core to mythicplus
+    Add Warfront, Pet Battle Challenge Quest and Fix Quest Tooltip
 
-commit 98bc36cbf6080364e32cc9faa7cefd4f0448c0dd
-Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Fri Sep 21 16:40:04 2018 +0200
+commit 3815bc2945827049a7ba991e845b809bc01b09d9
+Author: LiangYuxuan <lyx@lyx.es>
+Date:   Sun Dec 16 00:43:43 2018 +0800
 
-    move more currency related stuff into its own file
+    Fix Transmute Locale
 
-commit e49a1397159a6f6794ce532ed8b6244993105dc0
-Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Fri Sep 21 16:39:23 2018 +0200
+commit c543464070b4272c9232b82f800472ad7a14fb87
+Author: LiangYuxuan <lyx@lyx.es>
+Date:   Sun Dec 16 00:40:46 2018 +0800
 
-    move scantt to core
+    Add New Raids LFR and Darkshore World Bosses
 
-commit 208c63029c8400001dc428fbd0e012c7a21607c9
-Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Fri Sep 21 16:36:49 2018 +0200
+commit 5a38419536c29a4985fd7d16d7e835f453a8918c
+Author: LiangYuxuan <lyx@lyx.es>
+Date:   Sun Dec 16 00:30:08 2018 +0800
 
-    move quests to their own file
-
-commit 3950175d359dbfb5b7e78941af29caf86b2defc5
-Author: Benjamin Staneck <staneck@gmail.com>
-Date:   Wed Sep 19 19:30:38 2018 +0200
-
-    lfr: fix another uldir id
+    Fix Mythic+ Weekly Best
 

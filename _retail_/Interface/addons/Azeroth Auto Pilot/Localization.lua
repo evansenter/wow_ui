@@ -13,6 +13,7 @@ AAP_Locals = {
 	["Travel to"] = "Travel to",
 	["Turn in Quest"] = "Turn in Quest",
 	["Use Hearthstone"] = "Use Hearthstone",
+	["UseGarrisonHS"] = "Use Garrison Hearthstone",
 	["Use Item"] = "Use Item",
 	["Suggested Players"] = "Suggested Players",
 	["Skipped cutscene"] = "Skip cutscene",

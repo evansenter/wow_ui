@@ -4,68 +4,47 @@ local SubQuestId = 0
 local SubQuestName = 0
 local ScrollMod = 0
 function AAP.Testa()
-	AAP3 = nil
-	AAP3 = {}
-	AAP3["LeaveQuests"] = {}
-	AAP3["LeaveQuests"]["LeaveQuests"] = {}
-	AAP3["LeaveQuests"]["LeaveQuests"]["LeaveQuests"] = {}
-	for AAP_index,AAP_value in pairs(AAP.QuestStepList["114-60-83"]) do
-		if (AAP.QuestStepList["114-60-83"][AAP_index] and AAP.QuestStepList["114-60-83"][AAP_index]["PickUp"]) then
-			for AAP_index2,AAP_value2 in pairs(AAP.QuestStepList["114-60-83"][AAP_index]["PickUp"]) do
-				tinsert(AAP3["LeaveQuests"]["LeaveQuests"]["LeaveQuests"], AAP_value2)
+	AAPHFiller2 = nil
+	AAPHFiller2 = {}
+	AAPHFiller2["LeaveQuests"] = {}
+	AAPHFiller2["LeaveQuests"]["LeaveQuests"] = {}
+	AAPHFiller2["LeaveQuests"]["LeaveQuests"]["LeaveQuests"] = {}
+	for AAP_index,AAP_value in pairs(AAP.QuestStepList["18-80-90"]) do
+		if (AAP.QuestStepList["18-80-90"][AAP_index] and AAP.QuestStepList["18-80-90"][AAP_index]["PickUp"]) then
+			for AAP_index2,AAP_value2 in pairs(AAP.QuestStepList["18-80-90"][AAP_index]["PickUp"]) do
+				tinsert(AAPHFiller2["LeaveQuests"]["LeaveQuests"]["LeaveQuests"], AAP_value2)
 			end
 		end
 	end
-	for AAP_index,AAP_value in pairs(AAP.QuestStepList["127-60-83"]) do
-		if (AAP.QuestStepList["127-60-83"][AAP_index] and AAP.QuestStepList["127-60-83"][AAP_index]["PickUp"]) then
-			for AAP_index2,AAP_value2 in pairs(AAP.QuestStepList["127-60-83"][AAP_index]["PickUp"]) do
-				tinsert(AAP3["LeaveQuests"]["LeaveQuests"]["LeaveQuests"], AAP_value2)
+	for AAP_index,AAP_value in pairs(AAP.QuestStepList["198-80-93"]) do
+		if (AAP.QuestStepList["198-80-93"][AAP_index] and AAP.QuestStepList["198-80-93"][AAP_index]["PickUp"]) then
+			for AAP_index2,AAP_value2 in pairs(AAP.QuestStepList["198-80-93"][AAP_index]["PickUp"]) do
+				tinsert(AAPHFiller2["LeaveQuests"]["LeaveQuests"]["LeaveQuests"], AAP_value2)
 			end
 		end
 	end
-	for AAP_index,AAP_value in pairs(AAP.QuestStepList["115-60-83"]) do
-		if (AAP.QuestStepList["115-60-83"][AAP_index] and AAP.QuestStepList["115-60-83"][AAP_index]["PickUp"]) then
-			for AAP_index2,AAP_value2 in pairs(AAP.QuestStepList["115-60-83"][AAP_index]["PickUp"]) do
-				tinsert(AAP3["LeaveQuests"]["LeaveQuests"]["LeaveQuests"], AAP_value2)
+	for AAP_index,AAP_value in pairs(AAP.QuestStepList["371-80-93"]) do
+		if (AAP.QuestStepList["371-80-93"][AAP_index] and AAP.QuestStepList["371-80-93"][AAP_index]["PickUp"]) then
+			for AAP_index2,AAP_value2 in pairs(AAP.QuestStepList["371-80-93"][AAP_index]["PickUp"]) do
+				tinsert(AAPHFiller2["LeaveQuests"]["LeaveQuests"]["LeaveQuests"], AAP_value2)
 			end
 		end
 	end
-	for AAP_index,AAP_value in pairs(AAP.QuestStepList["116-60-83"]) do
-		if (AAP.QuestStepList["116-60-83"][AAP_index] and AAP.QuestStepList["116-60-83"][AAP_index]["PickUp"]) then
-			for AAP_index2,AAP_value2 in pairs(AAP.QuestStepList["116-60-83"][AAP_index]["PickUp"]) do
-				tinsert(AAP3["LeaveQuests"]["LeaveQuests"]["LeaveQuests"], AAP_value2)
+	for AAP_index,AAP_value in pairs(AAP.QuestStepList["433-80-93"]) do
+		if (AAP.QuestStepList["433-80-93"][AAP_index] and AAP.QuestStepList["433-80-93"][AAP_index]["PickUp"]) then
+			for AAP_index2,AAP_value2 in pairs(AAP.QuestStepList["433-80-93"][AAP_index]["PickUp"]) do
+				tinsert(AAPHFiller2["LeaveQuests"]["LeaveQuests"]["LeaveQuests"], AAP_value2)
 			end
 		end
 	end
-	for AAP_index,AAP_value in pairs(AAP.QuestStepList["121-60-83"]) do
-		if (AAP.QuestStepList["121-60-83"][AAP_index] and AAP.QuestStepList["121-60-83"][AAP_index]["PickUp"]) then
-			for AAP_index2,AAP_value2 in pairs(AAP.QuestStepList["121-60-83"][AAP_index]["PickUp"]) do
-				tinsert(AAP3["LeaveQuests"]["LeaveQuests"]["LeaveQuests"], AAP_value2)
+	for AAP_index,AAP_value in pairs(AAP.QuestStepList["379-80-93"]) do
+		if (AAP.QuestStepList["379-80-93"][AAP_index] and AAP.QuestStepList["379-80-93"][AAP_index]["PickUp"]) then
+			for AAP_index2,AAP_value2 in pairs(AAP.QuestStepList["379-80-93"][AAP_index]["PickUp"]) do
+				tinsert(AAPHFiller2["LeaveQuests"]["LeaveQuests"]["LeaveQuests"], AAP_value2)
 			end
 		end
 	end
 
-	for AAP_index,AAP_value in pairs(AAP.QuestStepList["102-60-83"]) do
-		if (AAP.QuestStepList["102-60-83"][AAP_index] and AAP.QuestStepList["102-60-83"][AAP_index]["PickUp"]) then
-			for AAP_index2,AAP_value2 in pairs(AAP.QuestStepList["102-60-83"][AAP_index]["PickUp"]) do
-				tinsert(AAP3["LeaveQuests"]["LeaveQuests"]["LeaveQuests"], AAP_value2)
-			end
-		end
-	end
-	for AAP_index,AAP_value in pairs(AAP.QuestStepList["108-60-83"]) do
-		if (AAP.QuestStepList["108-60-83"][AAP_index] and AAP.QuestStepList["108-60-83"][AAP_index]["PickUp"]) then
-			for AAP_index2,AAP_value2 in pairs(AAP.QuestStepList["108-60-83"][AAP_index]["PickUp"]) do
-				tinsert(AAP3["LeaveQuests"]["LeaveQuests"]["LeaveQuests"], AAP_value2)
-			end
-		end
-	end
-	for AAP_index,AAP_value in pairs(AAP.QuestStepList["107-60-83"]) do
-		if (AAP.QuestStepList["107-60-83"][AAP_index] and AAP.QuestStepList["107-60-83"][AAP_index]["PickUp"]) then
-			for AAP_index2,AAP_value2 in pairs(AAP.QuestStepList["107-60-83"][AAP_index]["PickUp"]) do
-				tinsert(AAP3["LeaveQuests"]["LeaveQuests"]["LeaveQuests"], AAP_value2)
-			end
-		end
-	end
 end
 function AAP.ZoneQuestOrderList()
 	AAP.ZoneQuestOrder = CreateFrame("frame", "AAPQOrderList", UIParent)
@@ -489,7 +468,7 @@ function AAP.UpdateZoneQuestOrderList(AAPmod)
 						for AAP_index2,AAP_value2 in pairs(AAP_value) do
 							Total = Total + 1
 							local qid = AAP_index.."-"..AAP_index2
-							if (IsQuestFlaggedCompleted(AAP_index) or ((UnitLevel("player") == 120) and AAP_BonusObj[AAP_index]) or AAP1[AAP.Realm][AAP.Name]["BonusSkips"][AAP_index]) then
+							if (IsQuestFlaggedCompleted(AAP_index) or ((UnitLevel("player") == 120) and AAP_BonusObj and AAP_BonusObj[AAP_index]) or AAP1[AAP.Realm][AAP.Name]["BonusSkips"][AAP_index]) then
 								Flagged = Flagged + 1
 							elseif (AAP.ActiveQuests[qid] and AAP.ActiveQuests[qid] == "C") then
 								Flagged = Flagged + 1
