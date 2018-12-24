@@ -1,0 +1,8 @@
+## Interface: 80000
+## Title: Masque Skinner: Blizz Buffs
+## Version: 8.0.1
+## Author: Cybeloras of Aerie Peak
+## Notes: Skins the Blizzard buff and debuff frames with Masque
+## RequiredDeps: Masque
+
+BlizzBuffsFacade.lua

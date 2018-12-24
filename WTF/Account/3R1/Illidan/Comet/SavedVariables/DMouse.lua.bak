@@ -1,0 +1,4 @@
+
+DMouseDB = {
+	["enabled"] = false,
+}

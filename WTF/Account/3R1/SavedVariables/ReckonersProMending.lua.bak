@@ -1,0 +1,10 @@
+
+ReckonersProMendingDB = {
+	["profileKeys"] = {
+		["Pandatal - Illidan"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

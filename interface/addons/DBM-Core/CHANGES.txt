@@ -1,0 +1,280 @@
+Changes since tag 8.0.15
+
+commit 38121c1ba974a13f4f923c71e6a73b4f7ffee41b
+Author: subversion <svn@deadlybossmods.com>
+Date:   Tue Nov 20 20:42:36 2018 +0100
+
+    Omega via svn r18097:
+    Minor timer tweaks
+
+commit 7d0b8d5fb3e2d4e038336350ae37568d2c7fddb9
+Author: subversion <svn@deadlybossmods.com>
+Date:   Tue Nov 20 05:41:41 2018 +0100
+
+    Omega via svn r18096:
+    Restore this
+
+commit 0d09b56a49ee5697ef577765e8298c7efbb39f9b
+Author: subversion <svn@deadlybossmods.com>
+Date:   Tue Nov 20 05:24:31 2018 +0100
+
+    Omega via svn r18095:
+    Push the Jaina P2 stuff and fix spellID for stacking debuff
+
+commit 40116c44b5253e793439d269993961f51c2e5561
+Author: subversion <svn@deadlybossmods.com>
+Date:   Mon Nov 19 14:35:41 2018 +0100
+
+    ultrashining via svn r18094:
+    zhTW update
+
+commit d34d180aca5b9f74b90c3eb10fe05254dbbe84cb
+Author: subversion <svn@deadlybossmods.com>
+Date:   Sat Nov 17 06:33:28 2018 +0100
+
+    Omega via svn r18093:
+    Update P1 Opulence timers to update for both mini bosses when they transition rooms
+    Fixed crush not warning for bulkwark, which now has it?\226?\128?\153s own spellID
+
+commit 2f2dc20ba34ccffdbbfcbbffa9d6b8ee33fde060
+Author: subversion <svn@deadlybossmods.com>
+Date:   Fri Nov 16 21:25:47 2018 +0100
+
+    Omega via svn r18092:
+    Couple pull timer fixes for LFR and normal to not start timers for modes that don?\226?\128?\153t have them
+
+commit affc50d5a7dd908f370b15d89bc78d8576b9ae1a
+Author: subversion <svn@deadlybossmods.com>
+Date:   Fri Nov 16 21:22:42 2018 +0100
+
+    Omega via svn r18091:
+    Some last minute mythic updates to Opu
+
+commit 4736c6e36f81f29a40068293753d1b7ca64e70ef
+Author: subversion <svn@deadlybossmods.com>
+Date:   Fri Nov 16 06:10:45 2018 +0100
+
+    Omega via svn r18090:
+    Far from done, but some preliminary jaina fixups
+
+commit ac43cdfe768d98e0aad3b509dfa78a1a23d3a8f4
+Author: subversion <svn@deadlybossmods.com>
+Date:   Thu Nov 15 23:21:26 2018 +0100
+
+    Omega via svn r18089:
+    Couple quick fixes
+
+commit 13ab4067f008029073d5208db6a407ef747f84ef
+Author: subversion <svn@deadlybossmods.com>
+Date:   Thu Nov 15 22:51:30 2018 +0100
+
+    Omega via svn r18088:
+    Actually, do to combat log range, it?\226?\128?\153s not possible to FULLy fix absorb frame, so that feature has to be removed
+
+commit 4daa5c1e823852701a5fc1703670ad980f4cb265
+Author: subversion <svn@deadlybossmods.com>
+Date:   Thu Nov 15 22:43:22 2018 +0100
+
+    Omega via svn r18087:
+    Fix info frame not detecting shield dropping do to boss being out of CLEU range by using syncs.
+    Hopefully also fix bug with power tracker
+
+commit 456cb977fe033912a5f0c4af97a8a6d370b938e8
+Author: subversion <svn@deadlybossmods.com>
+Date:   Thu Nov 15 07:22:26 2018 +0100
+
+    Omega via svn r18086:
+    Jaina Drycode.
+
+commit d8497f537c20804d8630b55a99e2646329fcb32c
+Author: subversion <svn@deadlybossmods.com>
+Date:   Mon Nov 12 00:50:40 2018 +0100
+
+    Omega via svn r18085:
+    Possibly fix lua error
+
+commit 8b331dbe12e91244ffb2a48acd8fbf11500ed75d
+Author: subversion <svn@deadlybossmods.com>
+Date:   Sat Nov 10 08:37:10 2018 +0100
+
+    Omega via svn r18084:
+    CN update
+
+commit d64bdda1bfce4498c1e50309491b2a98669822b6
+Author: subversion <svn@deadlybossmods.com>
+Date:   Sat Nov 10 06:16:29 2018 +0100
+
+    Omega via svn r18083:
+    Update jadefire Masters slightly from mythic testing
+
+commit ea59d753bb0dcdda46ee843b844913a9f4044d7e
+Author: subversion <svn@deadlybossmods.com>
+Date:   Sat Nov 10 00:37:49 2018 +0100
+
+    Omega via svn r18082:
+    Remove useless timer/warning, doesn?\226?\128?\153t work that way anymore. seems to be hidden persistent aura now
+
+commit 3f324b494c9d78cf15e9d8f7e0c2d8184106b441
+Author: subversion <svn@deadlybossmods.com>
+Date:   Fri Nov 9 23:59:33 2018 +0100
+
+    Omega via svn r18081:
+    Updated Grong timers
+
+commit 9fab3e5e2be54b633ac803a621fd3c25a0fbd7f9
+Author: subversion <svn@deadlybossmods.com>
+Date:   Fri Nov 9 23:18:57 2018 +0100
+
+    Omega via svn r18080:
+    Increase P1 data slightly
+
+commit 962cb79aacf14f7962f45841b17f7dc4da2a2ba0
+Author: subversion <svn@deadlybossmods.com>
+Date:   Fri Nov 9 23:13:20 2018 +0100
+
+    Omega via svn r18079:
+    Push total timer refactor for mekkatorque to support fact each difficulty has own sequences
+    renamed some spells
+
+commit ef8a49ff616d4711e7c2ad0b004d1160bc473d97
+Author: subversion <svn@deadlybossmods.com>
+Date:   Fri Nov 9 05:34:19 2018 +0100
+
+    Omega via svn r18078:
+    remove auto hiding/showing code since I can?\226?\128?\153t get it working and don?\226?\128?\153t know why. maybe now at least it?\226?\128?\153ll stay on screen
+
+commit 19d93e24deb3e5c856fee5ff22d934da8b17fbb3
+Author: subversion <svn@deadlybossmods.com>
+Date:   Fri Nov 9 03:44:35 2018 +0100
+
+    Omega via svn r18077:
+    Hate that have to use yells for this, but updated Bwonsamdi?\226?\128?\153s Wrath
+
+commit 5d74cf0f48d315fe428f44b117c26cb42abddfe4
+Author: subversion <svn@deadlybossmods.com>
+Date:   Thu Nov 8 23:50:35 2018 +0100
+
+    Omega via svn r18076:
+    And fix lua error
+
+commit 117dfd89ef396cc51cbfcb78f2e1c02af7358a89
+Author: subversion <svn@deadlybossmods.com>
+Date:   Thu Nov 8 23:24:58 2018 +0100
+
+    Omega via svn r18075:
+    Add instant dispel warning for curse if it lands on a tank
+    turned off general curse announce by default
+
+commit 580b82f378f3a76d440fe7caf44200749c3c4cbe
+Author: subversion <svn@deadlybossmods.com>
+Date:   Thu Nov 8 23:12:00 2018 +0100
+
+    Omega via svn r18074:
+    Patch mythic paku?\226?\128?\153s wrath, which comes every 60 seconds, not every 70
+
+commit f47d9f3be78648e567827014a0ad9c1c278ebaa7
+Author: subversion <svn@deadlybossmods.com>
+Date:   Thu Nov 8 22:30:36 2018 +0100
+
+    Omega via svn r18073:
+    Change infoframe display to not show ?\226?\128?\156main?\226?\128?\157 for main power, just show power number. alt power will still say ALT
+
+commit 946b917f20d08cd25ea7a3c805b37eb26899dc0d
+Author: subversion <svn@deadlybossmods.com>
+Date:   Thu Nov 8 22:28:25 2018 +0100
+
+    Omega via svn r18072:
+    Don?\226?\128?\153t hide after shield, restore power
+
+commit a80f16cd6c10bccb8068cc2f2bb2b25cbc090dbe
+Author: subversion <svn@deadlybossmods.com>
+Date:   Thu Nov 8 22:11:50 2018 +0100
+
+    Omega via svn r18071:
+    Fix alliance CIds
+
+commit 454c4fad8177feb13134a62e9ae86889e3c4bc45
+Author: subversion <svn@deadlybossmods.com>
+Date:   Thu Nov 8 07:41:13 2018 +0100
+
+    Omega via svn r18070:
+    Kr Update
+
+commit dc75380b10b006765d22f4094c4f6cbf514b7e4a
+Author: subversion <svn@deadlybossmods.com>
+Date:   Wed Nov 7 09:41:25 2018 +0100
+
+    Omega via svn r18069:
+    Fix mod title
+
+commit 2789ea17196ab706333fb98cbeab19d01693e11e
+Author: subversion <svn@deadlybossmods.com>
+Date:   Wed Nov 7 08:20:52 2018 +0100
+
+    Omega via svn r18068:
+    Make this warning an everybody warning
+
+commit 3a9c68c9e549d3a38820fe21f5fe506bc67d7ba9
+Author: subversion <svn@deadlybossmods.com>
+Date:   Wed Nov 7 05:53:00 2018 +0100
+
+    Omega via svn r18067:
+    Fix another minor bug with timer text
+
+commit 72a880d42538b9d0484fe7b34e3f51b1890611b8
+Author: subversion <svn@deadlybossmods.com>
+Date:   Wed Nov 7 05:36:51 2018 +0100
+
+    Omega via svn r18066:
+    Try to fix inforame on mythrax randomly vanishing an reappearing
+
+commit 378b195ba7e29d3d5b4a232908075217a04afb04
+Author: subversion <svn@deadlybossmods.com>
+Date:   Wed Nov 7 05:17:56 2018 +0100
+
+    Omega via svn r18065:
+    Another rename
+
+commit a127420fdc78d90d921e7511400d6de802aa94ae
+Author: subversion <svn@deadlybossmods.com>
+Date:   Wed Nov 7 01:12:22 2018 +0100
+
+    Omega via svn r18064:
+    Rename to common names
+
+commit de446cca27911e50e6f315a2a1ed3abf31a0fb1f
+Author: subversion <svn@deadlybossmods.com>
+Date:   Tue Nov 6 03:40:28 2018 +0100
+
+    Omega via svn r18063:
+    Some soulbound Goliath bug fixes
+    Several timer fixes/improvements across the board for Kings Rest
+
+commit c6f3f52d0cbb2f0f938ede38f49581a7e70bccbc
+Author: subversion <svn@deadlybossmods.com>
+Date:   Tue Nov 6 02:08:15 2018 +0100
+
+    Omega via svn r18062:
+    Made automatic handling of showQuestTrackingTooltips cvar more robust to accidentally not getting restored in rare cases.
+
+commit 3cf4f74d397956322fbd1404a57e0ec17397bf34
+Author: subversion <svn@deadlybossmods.com>
+Date:   Sat Nov 3 21:33:56 2018 +0100
+
+    Omega via svn r18061:
+    Fix some bigwigs sync bugs
+
+commit 1082dbe8e88352c733c0f56bd324541b19b32a54
+Author: subversion <svn@deadlybossmods.com>
+Date:   Fri Nov 2 17:37:50 2018 +0100
+
+    Omega via svn r18060:
+    Don?\226?\128?\153t spam warn irontide on cast, if cast is repeatedly interrupted, warn if it actually applies only
+
+commit 84d8bffd67f41b1e1f3e37d8ab58a28338097a64
+Author: subversion <svn@deadlybossmods.com>
+Date:   Fri Nov 2 03:11:54 2018 +0100
+
+    Omega via svn r18059:
+    Inc Alpha
+

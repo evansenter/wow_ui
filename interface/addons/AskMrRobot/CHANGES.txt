@@ -1,0 +1,7 @@
+changeset:   143:55823e37403b
+tag:         v67
+user:        yellowfive
+date:        Thu Nov 08 21:21:10 2018 -0800
+summary:     Updated pt-BR translation, bug fixes.
+
+

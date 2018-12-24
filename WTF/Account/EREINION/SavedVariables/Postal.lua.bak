@@ -1,0 +1,17 @@
+
+Postal3DB = {
+	["global"] = {
+		["BlackBook"] = {
+			["alts"] = {
+				"Elani|Uther|Alliance|61|WARLOCK", -- [1]
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Elani - Uther"] = "Elani - Uther",
+	},
+	["profiles"] = {
+		["Elani - Uther"] = {
+		},
+	},
+}
