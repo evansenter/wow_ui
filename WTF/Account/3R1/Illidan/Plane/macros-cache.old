@@ -1,5 +1,0 @@
-VER 3 0100000000000001 "SP&D_macro" "INV_Misc_QuestionMark"
-#showtooltip Soothe 
-/stopcasting
-/cast [btn:1,@target] Soothe; [btn:2,@focus] Soothe
-END
