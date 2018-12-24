@@ -420,10 +420,10 @@ local function AAP_CreateQuestList()
 	for CLi = 1, 20 do
 	
 		AAP["Icons"][CLi] = CreateFrame("Frame",nil,UIParent)
-		AAP["Icons"][CLi]:SetFrameStrata("BACKGROUND")
+		AAP["Icons"][CLi]:SetFrameStrata("HIGH")
 		AAP["Icons"][CLi]:SetWidth(5) -- Set these to whatever height/width is needed 
 		AAP["Icons"][CLi]:SetHeight(5) -- for your Texture
-		local t = 	AAP["Icons"][CLi]:CreateTexture(nil,"BACKGROUND")
+		local t = 	AAP["Icons"][CLi]:CreateTexture(nil,"HIGH")
 		t:SetTexture("Interface\\Addons\\Azeroth Auto Pilot\\Img\\Icon.blp")
 		t:SetAllPoints(AAP["Icons"][CLi])
 		AAP["Icons"][CLi].texture = t

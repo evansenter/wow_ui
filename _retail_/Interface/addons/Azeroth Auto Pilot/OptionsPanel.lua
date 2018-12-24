@@ -756,6 +756,7 @@ function AAP.LoadOptionsFrame()
 	AAP.OptionsFrame.Button4:SetPushedTexture(AAP.OptionsFrame.Button4ptex)
 	AAP.OptionsFrame["Button4"]:SetScript("OnClick", function(self, arg1)
 		AAP.UpdateZoneQuestOrderList("LoadIn")
+		AAP1[AAP.Realm][AAP.Name]["Settings"]["ShowQuestListOrder"] = 1
 		AAP.ZoneQuestOrder:Show()
 	end)
 

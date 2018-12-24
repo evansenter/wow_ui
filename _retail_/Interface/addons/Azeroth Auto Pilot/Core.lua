@@ -361,6 +361,14 @@ AAP.CoreEventFrame:SetScript("OnEvent", function(self, event, ...)
 				AAP1[AAP.Realm][AAP.Name]["Settings"]["arrowleft"] = GetScreenWidth() / 2.05
 				AAP1[AAP.Realm][AAP.Name]["Settings"]["arrowtop"] = -(GetScreenHeight() / 1.5)
 			end
+			if (not AAP1[AAP.Realm][AAP.Name]["Settings"]["ShowQuestListOrder"]) then
+				AAP1[AAP.Realm][AAP.Name]["Settings"]["ShowQuestListOrder"] = 1
+			end
+			if (AAP1[AAP.Realm][AAP.Name]["Settings"]["ShowQuestListOrder"] == 1) then
+				AAP.ZoneQuestOrder:Show()
+			else
+				AAP.ZoneQuestOrder:Hide()
+			end
 			if (not AAP1[AAP.Realm][AAP.Name]["Settings"]["ShowBlobs"]) then
 				AAP1[AAP.Realm][AAP.Name]["Settings"]["ShowBlobs"] = 1
 			end
