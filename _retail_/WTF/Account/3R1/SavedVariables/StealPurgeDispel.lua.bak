@@ -1,0 +1,70 @@
+
+SPD_data = {
+	["char"] = {
+		["Combustion - Illidan"] = {
+			["macro"] = {
+				["enabled"] = false,
+				["editBox"] = "#showtooltip Spellsteal \n/stopcasting\n/cast [btn:1,@target] Spellsteal; [btn:2,@focus] Spellsteal",
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Combustion - Illidan"] = "Combustion - Illidan",
+	},
+	["profiles"] = {
+		["Combustion - Illidan"] = {
+			["general"] = {
+				["sounds"] = {
+					["enabled"] = false,
+				},
+			},
+			["layout"] = {
+				["title"] = {
+					["target"] = {
+						["height"] = 18,
+					},
+					["focus"] = {
+						["height"] = 18,
+					},
+				},
+				["bar"] = {
+					["texture"] = "ElvUI Norm",
+					["focus"] = {
+						["extraSize"] = 3.3,
+						["height"] = 18,
+						["width"] = 103,
+					},
+					["target"] = {
+						["extraSize"] = 3.3,
+						["width"] = 103,
+						["height"] = 18,
+					},
+					["displayType"] = 3,
+				},
+				["anchor"] = {
+					["target"] = {
+						["point"] = "BOTTOMLEFT",
+						["ycd"] = 2.559999942779541,
+						["xcd"] = 869.1199805736542,
+					},
+					["focus"] = {
+						["point"] = "BOTTOMLEFT",
+						["ycd"] = 2.559999942779541,
+						["xcd"] = 756.1599830985069,
+					},
+				},
+				["texts"] = {
+					["font"] = "ABF",
+				},
+			},
+			["dispelBtn"] = {
+				["target"] = {
+					["anchor"] = {
+						["ycd"] = 434.0000293618432,
+						["xcd"] = 76.15999829769135,
+					},
+				},
+			},
+		},
+	},
+}

@@ -1,0 +1,644 @@
+
+Bartender4DB = {
+	["namespaces"] = {
+		["ActionBars"] = {
+			["profiles"] = {
+				["Comet - Illidan"] = {
+					["actionbars"] = {
+						{
+							["version"] = 3,
+							["padding"] = 6,
+							["position"] = {
+								["x"] = -510,
+								["point"] = "BOTTOM",
+								["y"] = 41.75,
+							},
+						}, -- [1]
+						{
+							["enabled"] = false,
+							["version"] = 3,
+							["position"] = {
+								["x"] = -231.5000915527344,
+								["point"] = "CENTER",
+								["y"] = -227.4999847412109,
+							},
+						}, -- [2]
+						{
+							["rows"] = 12,
+							["version"] = 3,
+							["position"] = {
+								["x"] = -82,
+								["point"] = "BOTTOMRIGHT",
+								["y"] = 610,
+							},
+							["padding"] = 5,
+						}, -- [3]
+						{
+							["rows"] = 12,
+							["version"] = 3,
+							["position"] = {
+								["x"] = -42,
+								["point"] = "BOTTOMRIGHT",
+								["y"] = 610,
+							},
+							["padding"] = 5,
+						}, -- [4]
+						{
+							["version"] = 3,
+							["position"] = {
+								["x"] = 3,
+								["point"] = "BOTTOM",
+								["y"] = 102,
+							},
+							["padding"] = 6,
+						}, -- [5]
+						{
+							["version"] = 3,
+							["position"] = {
+								["x"] = -510,
+								["point"] = "BOTTOM",
+								["y"] = 102,
+							},
+							["padding"] = 6,
+						}, -- [6]
+						{
+						}, -- [7]
+						{
+						}, -- [8]
+						[10] = {
+						},
+					},
+				},
+				["Illidan"] = {
+					["actionbars"] = {
+						{
+							["version"] = 3,
+							["padding"] = 6,
+							["position"] = {
+								["x"] = -510,
+								["point"] = "BOTTOM",
+								["y"] = 41.75,
+							},
+						}, -- [1]
+						{
+							["enabled"] = false,
+							["version"] = 3,
+							["position"] = {
+								["x"] = -231.5000915527344,
+								["point"] = "CENTER",
+								["y"] = -227.4999847412109,
+							},
+						}, -- [2]
+						{
+							["rows"] = 12,
+							["version"] = 3,
+							["position"] = {
+								["x"] = -82,
+								["point"] = "BOTTOMRIGHT",
+								["y"] = 610,
+							},
+							["padding"] = 5,
+						}, -- [3]
+						{
+							["rows"] = 12,
+							["version"] = 3,
+							["position"] = {
+								["x"] = -42,
+								["point"] = "BOTTOMRIGHT",
+								["y"] = 610,
+							},
+							["padding"] = 5,
+						}, -- [4]
+						{
+							["version"] = 3,
+							["position"] = {
+								["x"] = 3,
+								["point"] = "BOTTOM",
+								["y"] = 102,
+							},
+							["padding"] = 6,
+						}, -- [5]
+						{
+							["version"] = 3,
+							["position"] = {
+								["x"] = -510,
+								["point"] = "BOTTOM",
+								["y"] = 102,
+							},
+							["padding"] = 6,
+						}, -- [6]
+						{
+						}, -- [7]
+						{
+						}, -- [8]
+						[10] = {
+						},
+					},
+				},
+				["Default"] = {
+					["actionbars"] = {
+						{
+							["version"] = 3,
+							["padding"] = 6,
+							["position"] = {
+								["x"] = -510,
+								["point"] = "BOTTOM",
+								["y"] = 41.75,
+							},
+						}, -- [1]
+						{
+							["enabled"] = false,
+							["version"] = 3,
+							["position"] = {
+								["x"] = -231.5000915527344,
+								["point"] = "CENTER",
+								["y"] = -227.4999847412109,
+							},
+						}, -- [2]
+						{
+							["rows"] = 12,
+							["version"] = 3,
+							["position"] = {
+								["x"] = -82,
+								["point"] = "BOTTOMRIGHT",
+								["y"] = 610,
+							},
+							["padding"] = 5,
+						}, -- [3]
+						{
+							["rows"] = 12,
+							["version"] = 3,
+							["position"] = {
+								["x"] = -42,
+								["point"] = "BOTTOMRIGHT",
+								["y"] = 610,
+							},
+							["padding"] = 5,
+						}, -- [4]
+						{
+							["version"] = 3,
+							["position"] = {
+								["x"] = 3,
+								["point"] = "BOTTOM",
+								["y"] = 102,
+							},
+							["padding"] = 6,
+						}, -- [5]
+						{
+							["version"] = 3,
+							["position"] = {
+								["x"] = -510,
+								["point"] = "BOTTOM",
+								["y"] = 102,
+							},
+							["padding"] = 6,
+						}, -- [6]
+						{
+						}, -- [7]
+						{
+						}, -- [8]
+						[10] = {
+						},
+					},
+				},
+				["MONK"] = {
+					["actionbars"] = {
+						{
+							["version"] = 3,
+							["padding"] = 6,
+							["position"] = {
+								["x"] = -510,
+								["point"] = "BOTTOM",
+								["y"] = 41.75,
+							},
+						}, -- [1]
+						{
+							["enabled"] = false,
+							["version"] = 3,
+							["position"] = {
+								["x"] = -231.5000915527344,
+								["point"] = "CENTER",
+								["y"] = -227.4999847412109,
+							},
+						}, -- [2]
+						{
+							["rows"] = 12,
+							["version"] = 3,
+							["position"] = {
+								["x"] = -82,
+								["point"] = "BOTTOMRIGHT",
+								["y"] = 610,
+							},
+							["padding"] = 5,
+						}, -- [3]
+						{
+							["rows"] = 12,
+							["version"] = 3,
+							["position"] = {
+								["x"] = -42,
+								["point"] = "BOTTOMRIGHT",
+								["y"] = 610,
+							},
+							["padding"] = 5,
+						}, -- [4]
+						{
+							["version"] = 3,
+							["position"] = {
+								["x"] = 3,
+								["point"] = "BOTTOM",
+								["y"] = 102,
+							},
+							["padding"] = 6,
+						}, -- [5]
+						{
+							["version"] = 3,
+							["position"] = {
+								["x"] = -510,
+								["point"] = "BOTTOM",
+								["y"] = 102,
+							},
+							["padding"] = 6,
+						}, -- [6]
+						{
+						}, -- [7]
+						{
+						}, -- [8]
+						[10] = {
+						},
+					},
+				},
+			},
+		},
+		["LibDualSpec-1.0"] = {
+		},
+		["ExtraActionBar"] = {
+			["profiles"] = {
+				["Comet - Illidan"] = {
+					["position"] = {
+						["x"] = -31.49996948242188,
+						["point"] = "BOTTOM",
+						["y"] = 223,
+					},
+					["version"] = 3,
+				},
+				["Illidan"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = -31.49996948242188,
+						["point"] = "BOTTOM",
+						["y"] = 223,
+					},
+				},
+				["Default"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = -31.49996948242188,
+						["point"] = "BOTTOM",
+						["y"] = 223,
+					},
+				},
+				["MONK"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = -31.49996948242188,
+						["point"] = "BOTTOM",
+						["y"] = 223,
+					},
+				},
+			},
+		},
+		["MicroMenu"] = {
+			["profiles"] = {
+				["Comet - Illidan"] = {
+					["position"] = {
+						["x"] = 37.5,
+						["point"] = "BOTTOM",
+						["scale"] = 1,
+						["y"] = 41.75,
+					},
+					["version"] = 3,
+				},
+				["Illidan"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = 37.5,
+						["point"] = "BOTTOM",
+						["scale"] = 1,
+						["y"] = 41.75,
+					},
+				},
+				["Default"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = 37.5,
+						["point"] = "BOTTOM",
+						["scale"] = 1,
+						["y"] = 41.75,
+					},
+				},
+				["MONK"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = 37.5,
+						["point"] = "BOTTOM",
+						["scale"] = 1,
+						["y"] = 41.75,
+					},
+				},
+			},
+		},
+		["XPBar"] = {
+			["profiles"] = {
+				["Comet - Illidan"] = {
+					["enabled"] = true,
+					["version"] = 3,
+					["position"] = {
+						["x"] = -516,
+						["point"] = "BOTTOM",
+						["y"] = 57,
+					},
+				},
+				["Illidan"] = {
+					["enabled"] = true,
+					["version"] = 3,
+					["position"] = {
+						["x"] = -516,
+						["point"] = "BOTTOM",
+						["y"] = 57,
+					},
+				},
+				["Default"] = {
+					["enabled"] = true,
+					["version"] = 3,
+					["position"] = {
+						["x"] = -516,
+						["point"] = "BOTTOM",
+						["y"] = 57,
+					},
+				},
+				["MONK"] = {
+					["enabled"] = true,
+					["version"] = 3,
+					["position"] = {
+						["x"] = -516,
+						["point"] = "BOTTOM",
+						["y"] = 57,
+					},
+				},
+			},
+		},
+		["BlizzardArt"] = {
+			["profiles"] = {
+				["Comet - Illidan"] = {
+					["enabled"] = true,
+					["position"] = {
+						["x"] = -512,
+						["point"] = "BOTTOM",
+						["y"] = 47,
+					},
+					["version"] = 3,
+				},
+				["Illidan"] = {
+					["enabled"] = true,
+					["version"] = 3,
+					["position"] = {
+						["x"] = -512,
+						["point"] = "BOTTOM",
+						["y"] = 47,
+					},
+				},
+				["Default"] = {
+					["enabled"] = true,
+					["version"] = 3,
+					["position"] = {
+						["x"] = -512,
+						["point"] = "BOTTOM",
+						["y"] = 47,
+					},
+				},
+				["MONK"] = {
+					["enabled"] = true,
+					["version"] = 3,
+					["position"] = {
+						["x"] = -512,
+						["point"] = "BOTTOM",
+						["y"] = 47,
+					},
+				},
+			},
+		},
+		["BagBar"] = {
+			["profiles"] = {
+				["Comet - Illidan"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = 345,
+						["point"] = "BOTTOM",
+						["y"] = 38.5,
+					},
+				},
+				["Illidan"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = 345,
+						["point"] = "BOTTOM",
+						["y"] = 38.5,
+					},
+				},
+				["Default"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = 345,
+						["point"] = "BOTTOM",
+						["y"] = 38.5,
+					},
+				},
+				["MONK"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = 345,
+						["point"] = "BOTTOM",
+						["y"] = 38.5,
+					},
+				},
+			},
+		},
+		["StanceBar"] = {
+			["profiles"] = {
+				["Comet - Illidan"] = {
+					["position"] = {
+						["x"] = -460,
+						["point"] = "BOTTOM",
+						["scale"] = 1,
+						["y"] = 135,
+					},
+					["version"] = 3,
+				},
+				["Illidan"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = -460,
+						["point"] = "BOTTOM",
+						["scale"] = 1,
+						["y"] = 135,
+					},
+				},
+				["Default"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = -460,
+						["point"] = "BOTTOM",
+						["scale"] = 1,
+						["y"] = 135,
+					},
+				},
+				["MONK"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = -460,
+						["point"] = "BOTTOM",
+						["scale"] = 1,
+						["y"] = 135,
+					},
+				},
+			},
+		},
+		["Vehicle"] = {
+			["profiles"] = {
+				["Comet - Illidan"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = 99.50006103515625,
+						["point"] = "CENTER",
+						["y"] = 47.49993896484375,
+					},
+				},
+				["Illidan"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = 99.50006103515625,
+						["point"] = "CENTER",
+						["y"] = 47.49993896484375,
+					},
+				},
+				["Default"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = 99.50006103515625,
+						["point"] = "CENTER",
+						["y"] = 47.49993896484375,
+					},
+				},
+				["MONK"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = 99.50006103515625,
+						["point"] = "CENTER",
+						["y"] = 47.49993896484375,
+					},
+				},
+			},
+		},
+		["PetBar"] = {
+			["profiles"] = {
+				["Comet - Illidan"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = -120,
+						["point"] = "BOTTOM",
+						["y"] = 135,
+					},
+				},
+				["Illidan"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = -120,
+						["point"] = "BOTTOM",
+						["y"] = 135,
+					},
+				},
+				["Default"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = -120,
+						["point"] = "BOTTOM",
+						["y"] = 135,
+					},
+				},
+				["MONK"] = {
+					["version"] = 3,
+					["position"] = {
+						["x"] = -120,
+						["point"] = "BOTTOM",
+						["y"] = 135,
+					},
+				},
+			},
+		},
+		["RepBar"] = {
+			["profiles"] = {
+				["Comet - Illidan"] = {
+					["enabled"] = true,
+					["version"] = 3,
+					["position"] = {
+						["x"] = -516,
+						["point"] = "BOTTOM",
+						["y"] = 65,
+					},
+				},
+				["Illidan"] = {
+					["enabled"] = true,
+					["version"] = 3,
+					["position"] = {
+						["x"] = -516,
+						["point"] = "BOTTOM",
+						["y"] = 65,
+					},
+				},
+				["Default"] = {
+					["enabled"] = true,
+					["version"] = 3,
+					["position"] = {
+						["x"] = -516,
+						["point"] = "BOTTOM",
+						["y"] = 65,
+					},
+				},
+				["MONK"] = {
+					["enabled"] = true,
+					["version"] = 3,
+					["position"] = {
+						["x"] = -516,
+						["point"] = "BOTTOM",
+						["y"] = 65,
+					},
+				},
+			},
+		},
+	},
+	["profileKeys"] = {
+		["Comet - Illidan"] = "Comet - Illidan",
+	},
+	["profiles"] = {
+		["Comet - Illidan"] = {
+			["focuscastmodifier"] = false,
+			["blizzardVehicle"] = true,
+			["outofrange"] = "hotkey",
+		},
+		["Illidan"] = {
+			["focuscastmodifier"] = false,
+			["blizzardVehicle"] = true,
+			["outofrange"] = "hotkey",
+		},
+		["Default"] = {
+			["focuscastmodifier"] = false,
+			["blizzardVehicle"] = true,
+			["outofrange"] = "hotkey",
+		},
+		["MONK"] = {
+			["focuscastmodifier"] = false,
+			["blizzardVehicle"] = true,
+			["outofrange"] = "hotkey",
+		},
+	},
+}

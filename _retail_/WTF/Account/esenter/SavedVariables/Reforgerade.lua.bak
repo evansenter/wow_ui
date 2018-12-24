@@ -1,0 +1,11 @@
+
+ReforgeradeSavedVariables = {
+	["EventHandlers"] = {
+		["ReforgeWindowOpen"] = "Show Reforgerade",
+		["TextPasted"] = "Update Reforgerade window",
+		["ReforgeradeShow"] = "Update Reforgerade window",
+		["ReforgeFinished"] = "Close Reforgerade",
+		["ReforgeWindowClosed"] = "Close Reforgerade",
+		["ReforgeradeClosed"] = "Clear Reforgerade",
+	},
+}

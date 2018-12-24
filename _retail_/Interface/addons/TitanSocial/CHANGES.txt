@@ -1,0 +1,12 @@
+lightweight tag 018bac58863fdebe42a898437597cd05df241719 8.0.2
+Author:	Josh Worden <solocommand@gmail.com>
+Date:	Wed Nov 7 19:36:09 2018 -0600
+
+commit 018bac58863fdebe42a898437597cd05df241719
+Author: Josh Worden <solocommand@gmail.com>
+Date:   Wed Nov 7 19:36:09 2018 -0600
+
+    Fix for guild right-click
+    
+    Blizz made significant changes with the introduction of the communities, and unfortunately some of the unit frame dialogs were among it. For now, fake the right-click menu by pretending we are showing the right-click options for a friend instead of a guild member.
+

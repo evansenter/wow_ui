@@ -1,0 +1,12 @@
+tag 44c08d92efcc444e91c6709f4d67381c8ea17e12 v1.9.13
+Author:	Talyrius <contact@talyrius.net>
+Date:	Sun Dec 23 13:41:49 2018 -0800
+
+Tagging as v1.9.13.
+
+commit b7c202d4e82ee4d8d4f936b76a6d0455336e9539
+Author: Talyrius <contact@talyrius.net>
+Date:   Sun Dec 23 13:40:06 2018 -0800
+
+    Update .pkgmeta again (Oops!).
+

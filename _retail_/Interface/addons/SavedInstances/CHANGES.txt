@@ -1,0 +1,58 @@
+tag 0c0c476cf045e4a7ce58bd8304116376ede3d364 8.0.8
+Author:	Benjamin Staneck <staneck@gmail.com>
+Date:	Thu Dec 20 23:22:29 2018 +0100
+
+commit 508dfb48f7bf1667fafe27ae8981ea0f88b625a4
+Author: LiangYuxuan <lyx@lyx.es>
+Date:   Tue Dec 18 15:58:57 2018 +0800
+
+    Update Weekend Event Quest
+
+commit a3ad885a8439ef039add120c085df20fda7c686a
+Author: LiangYuxuan <lyx@lyx.es>
+Date:   Tue Dec 18 13:13:24 2018 +0800
+
+    Remove Track Farm Option
+
+commit d103b975bac5ff6637169ea13edf3be4c8f532f2
+Author: LiangYuxuan <lyx@lyx.es>
+Date:   Tue Dec 18 10:59:42 2018 +0800
+
+    Fix Repeatable Argus Quest and Add Island Expeditions Weekly Quest
+
+commit 3feee956552af0fd6de1629f73499f1e537ddc4a
+Author: LiangYuxuan <lyx@lyx.es>
+Date:   Mon Dec 17 19:50:17 2018 +0800
+
+    show both factions emissay name
+
+commit 184078158c2d4453bc4166c5ee56e2bcc07b137d
+Author: LiangYuxuan <lyx@lyx.es>
+Date:   Mon Dec 17 13:59:05 2018 +0800
+
+    Add Horde Darkshore Warfront Quest
+
+commit 6aeaaff14e99ebc81097991db93655845bdc78e0
+Author: LiangYuxuan <lyx@lyx.es>
+Date:   Mon Dec 17 01:56:48 2018 +0800
+
+    Add Warfront, Pet Battle Challenge Quest and Fix Quest Tooltip
+
+commit 3815bc2945827049a7ba991e845b809bc01b09d9
+Author: LiangYuxuan <lyx@lyx.es>
+Date:   Sun Dec 16 00:43:43 2018 +0800
+
+    Fix Transmute Locale
+
+commit c543464070b4272c9232b82f800472ad7a14fb87
+Author: LiangYuxuan <lyx@lyx.es>
+Date:   Sun Dec 16 00:40:46 2018 +0800
+
+    Add New Raids LFR and Darkshore World Bosses
+
+commit 5a38419536c29a4985fd7d16d7e835f453a8918c
+Author: LiangYuxuan <lyx@lyx.es>
+Date:   Sun Dec 16 00:30:08 2018 +0800
+
+    Fix Mythic+ Weekly Best
+
