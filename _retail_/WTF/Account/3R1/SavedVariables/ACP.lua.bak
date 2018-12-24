@@ -546,8 +546,8 @@ ACP_Data = {
 		}, -- [6]
 	},
 	["collapsed"] = {
-		["OmniCC"] = true,
 		["BigWigs"] = true,
+		["OmniCC"] = true,
 	},
 	["ProtectedAddons"] = {
 		["ACP"] = true,

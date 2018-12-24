@@ -1,7 +1,7 @@
 SET autoLootDefault "1"
 SET displaySpellActivationOverlays "0"
 SET autoQuestPopUps "v##$"
-SET trackedQuests "v):,)/>):c"
+SET trackedQuests "v)/>):,):c"
 SET hardTrackedQuests "v"
 SET trackedWorldQuests "v"
 SET hardTrackedWorldQuests "v"

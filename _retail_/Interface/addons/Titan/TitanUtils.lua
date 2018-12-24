@@ -1892,7 +1892,9 @@ function TitanDebug(debug_message, debug_type)
 		..dtype
 		..TitanUtils_GetGreenText(debug_message)
 
-	_G["DEFAULT_CHAT_FRAME"]:AddMessage(msg)
+	if TitanAllGetVar("Silenced") then
+		_G["DEFAULT_CHAT_FRAME"]:AddMessage(msg)
+	end
 --	Debug_array(msg)
 	--date("%m/%d/%y %H:%M:%S")
 end

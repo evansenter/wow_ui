@@ -268,7 +268,7 @@ OUT: top_bottom - Frame is at top or bottom, expecting Titan constant for top or
 --]]
 local function MoveFrame(frame_ptr, start_y, top_bottom, force)
 	local frame = _G[frame_ptr]
-	local adj = false
+
 	if frame and (frame:IsUserPlaced() 
 			or frame.MALockPointHook  -- Allow MoveAnything to be used w/o error
 		)
@@ -278,9 +278,22 @@ local function MoveFrame(frame_ptr, start_y, top_bottom, force)
 		if DoAdjust(top_bottom, force) and frame:IsShown() then
 			local y = TitanMovable_GetPanelYOffset(top_bottom) + (start_y or 0) -- includes scale adjustment
 			local point, relativeTo, relativePoint, xOfs, yOfs = frame:GetPoint()
-			frame:ClearAllPoints();		
-			frame:SetPoint(point, relativeTo:GetName(), relativePoint, xOfs, y)
-			adj = true
+			-- check for nil which will cause an error
+			if point and relativeTo and relativePoint and xOfs then -- do not care about yOfs
+				-- should be safe...
+				frame:ClearAllPoints();		
+				frame:SetPoint(point, relativeTo:GetName(), relativePoint, xOfs, y)
+			else
+				-- do not proceed
+--[[
+				TitanDebug ("MoveFrame nil :"
+					.."point:"..tostring(point)
+					.."relativeTo:"..tostring(relativeTo)
+					.."relativePoint:"..tostring(relativePoint)
+					.."xOfs:"..tostring(xOfs)
+					)
+--]]
+			end
 		else
 			--[[
 			Some frames such as the ticket frame may not be visible or even created
@@ -289,6 +302,7 @@ local function MoveFrame(frame_ptr, start_y, top_bottom, force)
 	end
 end
 
+xx_xOfs = 0
 --[[ local
 NAME: MoveMenuFrame
 DESC: Adjust the MainMenuBar frame. Needed because :GetPoint does NOT work. This is modeled after MoveFrame to keep it similar.
@@ -312,6 +326,9 @@ local function MoveMenuFrame(frame_ptr, start_y, top_bottom, force)
 		elseif ( StatusTrackingBarManager:GetNumberVisibleBars() == 1 ) then
 			yOffset = yOffset + 14;
 		end
+		xOfs = TitanPanelGetVar("MainMenuBarXAdj")
+
+--[[
 		-- This is a hack because GetPoint on MainMenuBar often returns all nil
 		-- If the scale is is around .85 or higher the bag menu overlaps the main menu
 		local fscale = tonumber(GetCVar("uiScale"))
@@ -322,6 +339,7 @@ local function MoveMenuFrame(frame_ptr, start_y, top_bottom, force)
 			-- Slide the menu bar left depending on scaling to allow bag menu room
 			xOfs = xadj * 6 * -1
 		end
+--]]
 --		frame:ClearAllPoints();		
 --		frame:SetPoint("BOTTOM", "UIParent", "BOTTOM", xOfs, yOffset);
 		SetPosition(frame, "BOTTOM", "UIParent", "BOTTOM", xOfs, yOffset)

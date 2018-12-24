@@ -165,6 +165,10 @@ L["TITAN_PANEL_MENU_PLUGIN_RESET_DESC"] = "Refresh Plugin Text and Position";
 L["TITAN_PANEL_MENU_SILENT_LOAD"] = "Silent Load";
 L["TITAN_PANEL_MENU_HIDE_ORDERHALL"] = "Hide Order Hall Command Bar";
 
+L["TITAN_PANEL_MAIN_MENU_BAR"] = "Main Menu Bar Adjustment";
+L["TITAN_PANEL_MAIN_MENU_BAR_ADJ"] = "<  Horizontal Adjustment  >";
+L["TITAN_PANEL_MAIN_MENU_BAR_ADJ_DESC"] = "Adjust Main Menu Bar left or right";
+
 -- localization strings for AceConfigDialog-3.0
 L["TITAN_ABOUT_VERSION"] = "Version";
 L["TITAN_ABOUT_AUTHOR"] = "Author";

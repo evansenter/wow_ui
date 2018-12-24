@@ -276,6 +276,7 @@ TITAN_PANEL_SAVED_VARIABLES = {
 	AuxBar2_Hide = false,
 	AuxBar2_Transparency = 0.7,
 	AuxBar2_Align = TITAN_PANEL_BUTTONS_ALIGN_LEFT,
+	MainMenuBarXAdj = 0,
 };
 
 --[[ Titan

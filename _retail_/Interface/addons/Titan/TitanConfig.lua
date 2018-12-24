@@ -908,6 +908,23 @@ local optionsAuxBars = {
 			get = function() return TitanPanelGetVar("BagAdjust") end,
 			set = function() TitanPanelToggleVar("BagAdjust"); end,
 		},
+		confdesc4 = {
+			order = 400,
+			type = "header",
+			name = L["TITAN_PANEL_MAIN_MENU_BAR"],
+		},
+		mainMenuBarAdj = {
+			name = L["TITAN_PANEL_MAIN_MENU_BAR_ADJ"],
+			desc = L["TITAN_PANEL_MAIN_MENU_BAR_ADJ_DESC"],
+			order = 410, type = "range", width = "full",
+			min = -200, max = 200, step = 1,
+			get = function() return TitanPanelGetVar("MainMenuBarXAdj") end,
+			set = function(_, a)
+				TitanPanelSetVar("MainMenuBarXAdj", a);
+				-- Adjust frame positions
+				TitanPanel_AdjustFrames(TITAN_PANEL_PLACE_BOTH, true)
+			end,
+		},
 	}
 }
 -------------
