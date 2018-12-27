@@ -28,7 +28,7 @@ AdiBagsDB = {
 		},
 		["AdiBags_TooltipInfo"] = {
 		},
-		["Equipment"] = {
+		["MoneyFrame"] = {
 		},
 		["ItemSets"] = {
 		},
@@ -48,20 +48,20 @@ AdiBagsDB = {
 						["Seal of Broken Fate"] = false,
 						["Mogu Rune of Fate"] = false,
 						["Timewarped Badge"] = false,
-						["Ancient Mana"] = false,
-						["Tol Barad Commendation"] = false,
-						["Mote of Darkness"] = false,
-						["Ironpaw Token"] = false,
+						["Oil"] = false,
+						["Garrison Resources"] = false,
+						["Seal of Inevitable Fate"] = false,
+						["Lesser Charm of Good Fortune"] = false,
 						["Seal of Tempered Fate"] = false,
-						["Wakening Essence"] = false,
-						["Sightless Eye"] = false,
 						["Timeless Coin"] = false,
+						["Sightless Eye"] = false,
+						["Wakening Essence"] = false,
 						["Essence of Corrupted Deathwing"] = false,
 						["Apexis Crystal"] = false,
-						["Lesser Charm of Good Fortune"] = false,
-						["Seal of Inevitable Fate"] = false,
-						["Garrison Resources"] = false,
-						["Oil"] = false,
+						["Ironpaw Token"] = false,
+						["Mote of Darkness"] = false,
+						["Tol Barad Commendation"] = false,
+						["Ancient Mana"] = false,
 						["Lingering Soul Fragment"] = false,
 						["Legionfall War Supplies"] = false,
 					},
@@ -76,16 +76,16 @@ AdiBagsDB = {
 		},
 		["Junk"] = {
 		},
-		["MoneyFrame"] = {
+		["Equipment"] = {
 		},
 	},
 	["profileKeys"] = {
 		["Cometstorm - Illidan"] = "Comet - Illidan",
 		["Ereinion - Dark Iron"] = "Default",
 		["Comet - Illidan"] = "Comet - Illidan",
-		["Combustion - Illidan"] = "Comet - Illidan",
-		["Evan - Illidan"] = "Comet - Illidan",
 		["Plane - Illidan"] = "Default",
+		["Evan - Illidan"] = "Comet - Illidan",
+		["Combustion - Illidan"] = "Comet - Illidan",
 	},
 	["profiles"] = {
 		["Default"] = {

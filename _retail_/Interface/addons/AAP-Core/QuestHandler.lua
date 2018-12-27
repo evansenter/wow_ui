@@ -30,6 +30,9 @@ local AAP_BonusObj = {
 	[38343] = 1,
 	[38939] = 1,
 	[39998] = 1,
+	[38374] = 1,
+	[39119] = 1,
+	[9785] = 1,
 ---- Duskwood ----
 	[26623] = 1,
 ---- Hillsbrad Foothills ----
@@ -997,6 +1000,12 @@ local function AAP_PrintQStep()
 			end
 			if (AAPExtralk == 96) then
 				AAP.QuestList.QuestFrames["FS"..LineNr]:SetText("** Talk to Dread-Rider Cullen")
+			end
+			if (AAPExtralk == 97) then
+				AAP.QuestList.QuestFrames["FS"..LineNr]:SetText("** Talk to Recruiter Lee to skip to Dalaran")
+			end
+			if (AAPExtralk == 98) then
+				AAP.QuestList.QuestFrames["FS"..LineNr]:SetText("** Talk to Ensign Ward")
 			end
 			AAP.QuestList.QuestFrames["FS"..LineNr]["Button"]:Hide()
 			AAP.QuestList.QuestFrames[LineNr]:Show()
@@ -2288,9 +2297,6 @@ local function AAP_UpdateMapId()
 	if ((AAP.ActiveMap == "A23" or AAP.ActiveMap == 23) and AAP.Class[3] == 6 and IsQuestFlaggedCompleted(13189) == false) then
 		AAP.ActiveMap = "DK23"
 	end
-	if (AAP.ActiveMap == "A630") then
-		AAP.ActiveMap = 630
-	end
 	if (AAP.ActiveMap == 1 and (AAP.ActiveQuests[53372] or IsQuestFlaggedCompleted(53372) == true)) then
 		AAP.ActiveMap = "1-110"
 	end
@@ -2895,41 +2901,62 @@ local function AAP_UpdateMapId()
 ---- WoD - Alliance ------------
 	if (AAP.Faction == "Alliance" and AAP.Level > 89 and AAP.Level < 100) then
 		if (AAP.ActiveMap == "A84") then
+			if (IsAddOnLoaded("AAP-WoD") == false) then
+				LoadAddOn("AAP-WoD")
+			end
 			AAP.ActiveMap = "A84-90-100"
 		end
 	end
 	if (AAP.Level > 89 and AAP.Level < 103) then
 		if (AAP.ActiveMap == "A17") then
+			if (IsAddOnLoaded("AAP-WoD") == false) then
+				LoadAddOn("AAP-WoD")
+			end
 			AAP.ActiveMap = "A17-90-100"
 			if (AAP.Level >	99) then
 				levelcheck100 = 1
 			end
 		end
 		if (AAP.ActiveMap == "A578") then
+			if (IsAddOnLoaded("AAP-WoD") == false) then
+				LoadAddOn("AAP-WoD")
+			end
 			AAP.ActiveMap = "A578-90-100"
 			if (AAP.Level >	99) then
 				levelcheck100 = 1
 			end
 		end
 		if (AAP.ActiveMap == "A577") then
+			if (IsAddOnLoaded("AAP-WoD") == false) then
+				LoadAddOn("AAP-WoD")
+			end
 			AAP.ActiveMap = "A577-90-100"
 			if (AAP.Level >	99) then
 				levelcheck100 = 1
 			end
 		end
 		if (AAP.ActiveMap == "A539") then
+			if (IsAddOnLoaded("AAP-WoD") == false) then
+				LoadAddOn("AAP-WoD")
+			end
 			AAP.ActiveMap = "A539-90-100"
 			if (AAP.Level >	99) then
 				levelcheck100 = 1
 			end
 		end
 		if (AAP.ActiveMap == "A543") then
+			if (IsAddOnLoaded("AAP-WoD") == false) then
+				LoadAddOn("AAP-WoD")
+			end
 			AAP.ActiveMap = "A543-90-100"
 			if (AAP.Level >	99) then
 				levelcheck100 = 1
 			end
 		end
 		if (AAP.ActiveMap == "A535") then
+			if (IsAddOnLoaded("AAP-WoD") == false) then
+				LoadAddOn("AAP-WoD")
+			end
 			AAP.ActiveMap = "A535-90-100"
 			if (AAP.Level >	99) then
 				levelcheck100 = 1
@@ -3000,16 +3027,79 @@ local function AAP_UpdateMapId()
 		end
 	end
 --------------------------------
+---- Legion - Alliance ---------
+	if (AAP.Faction == "Alliance" and AAP.Level > 99 and AAP.Level < 110) then
+		if (AAP.ActiveMap == "A84") then
+			if (IsAddOnLoaded("AAP-Legion") == false) then
+				LoadAddOn("AAP-Legion")
+			end
+			if (AAP.ActiveQuests[40519] or AAP.ActiveQuests[42782]) then
+				AAP.ActiveMap = "A84-100-110"
+			end
+		end
+	end
+	if (AAP.Faction == "Alliance" and AAP.Level > 99 and AAP.Level < 113) then
+		if (AAP.ActiveMap == "A634") then
+			if (IsAddOnLoaded("AAP-Legion") == false) then
+				LoadAddOn("AAP-Legion")
+			end
+			AAP.ActiveMap = "A634-100-110"
+			if (AAP.Level >	109) then
+				levelcheck110 = 1
+			end
+		end
+		if (AAP.ActiveMap == "A630") then
+			if (IsAddOnLoaded("AAP-Legion") == false) then
+				LoadAddOn("AAP-Legion")
+			end
+			AAP.ActiveMap = "A630-100-110"
+			if (AAP.Level >	109) then
+				levelcheck110 = 1
+			end
+		end
+		if (AAP.ActiveMap == "A641") then
+			if (IsAddOnLoaded("AAP-Legion") == false) then
+				LoadAddOn("AAP-Legion")
+			end
+			AAP.ActiveMap = "A641-100-110"
+			if (AAP.Level >	109) then
+				levelcheck110 = 1
+			end
+		end
+		if (AAP.ActiveMap == "A76") then
+			if (IsAddOnLoaded("AAP-Legion") == false) then
+				LoadAddOn("AAP-Legion")
+			end
+			AAP.ActiveMap = "A76-100-110"
+			if (AAP.Level >	109) then
+				levelcheck110 = 1
+			end
+		end
+		if (AAP.ActiveMap == "A650") then
+			if (IsAddOnLoaded("AAP-Legion") == false) then
+				LoadAddOn("AAP-Legion")
+			end
+			AAP.ActiveMap = "A650-100-110"
+			if (AAP.Level >	109) then
+				levelcheck110 = 1
+			end
+		end
+	end
+--------------------------------
+---- BFA - Alliance ------------
+	if (AAP.Faction == "Alliance" and AAP.Level > 109 and AAP.Level < 120) then
+		if (AAP.ActiveMap == "A84") then
+			AAP.ActiveMap = "A84-110-120"
+		end
+		if (AAP.ActiveMap == "A249") then
+			AAP.ActiveMap = "A249-110-120"
+		end
+		if (AAP.ActiveMap == "A81") then
+			AAP.ActiveMap = "A81-110-120"
+		end
+	end
 
-
-
-	
-	
-
-
-	
-
-
+--------------------------------
 	if (AAP.ActiveMap == 627 and AAP.Level > 109) then
 		-- Dala to ogri
 		AAP.ActiveMap = "627-110"
@@ -3794,18 +3884,18 @@ AAP_QH_EventFrame:SetScript("OnEvent", function(self, event, ...)
 	end
 	if (event=="TAXIMAP_OPENED") then
 	
-	--local CLi
-	--AAPHFiller4 = nil
-	--AAPHFiller4 = {}
-	--for CLi = 1, NumTaxiNodes() do
-	--	local aapx,aapy = TaxiNodePosition(CLi)
-	--	aapx = (floor(aapx * 1000)/10)
-	--	aapy = (floor(aapy * 1000)/10)
-	--	if (TaxiNodeGetType(CLi) == "REACHABLE") then
-	--	AAPHFiller4["A"..CLi] = TaxiNodeName(CLi).."-X:"..aapx.."-Y:"..aapy
-	--		print(CLi .. "-" .. TaxiNodeName(CLi).."-X:"..aapx.."-Y:"..aapy.." Status: "..TaxiNodeGetType(CLi))
-	--	end
-	--end
+	local CLi
+	AAPHFiller4 = nil
+	AAPHFiller4 = {}
+	for CLi = 1, NumTaxiNodes() do
+		local aapx,aapy = TaxiNodePosition(CLi)
+		aapx = (floor(aapx * 1000)/10)
+		aapy = (floor(aapy * 1000)/10)
+		if (TaxiNodeGetType(CLi) == "REACHABLE") then
+		AAPHFiller4["A"..CLi] = TaxiNodeName(CLi).."-X:"..aapx.."-Y:"..aapy
+			print(CLi .. "-" .. TaxiNodeName(CLi).."-X:"..aapx.."-Y:"..aapy.." Status: "..TaxiNodeGetType(CLi))
+		end
+	end
 	
 	
 	
