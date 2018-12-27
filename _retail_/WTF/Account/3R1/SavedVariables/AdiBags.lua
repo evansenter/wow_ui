@@ -28,9 +28,7 @@ AdiBagsDB = {
 		},
 		["AdiBags_TooltipInfo"] = {
 		},
-		["MoneyFrame"] = {
-		},
-		["DataSource"] = {
+		["Equipment"] = {
 		},
 		["ItemSets"] = {
 		},
@@ -50,20 +48,20 @@ AdiBagsDB = {
 						["Seal of Broken Fate"] = false,
 						["Mogu Rune of Fate"] = false,
 						["Timewarped Badge"] = false,
-						["Oil"] = false,
-						["Garrison Resources"] = false,
-						["Seal of Inevitable Fate"] = false,
-						["Lesser Charm of Good Fortune"] = false,
+						["Ancient Mana"] = false,
+						["Tol Barad Commendation"] = false,
+						["Mote of Darkness"] = false,
+						["Ironpaw Token"] = false,
 						["Seal of Tempered Fate"] = false,
-						["Timeless Coin"] = false,
-						["Sightless Eye"] = false,
 						["Wakening Essence"] = false,
+						["Sightless Eye"] = false,
+						["Timeless Coin"] = false,
 						["Essence of Corrupted Deathwing"] = false,
 						["Apexis Crystal"] = false,
-						["Ironpaw Token"] = false,
-						["Mote of Darkness"] = false,
-						["Tol Barad Commendation"] = false,
-						["Ancient Mana"] = false,
+						["Lesser Charm of Good Fortune"] = false,
+						["Seal of Inevitable Fate"] = false,
+						["Garrison Resources"] = false,
+						["Oil"] = false,
 						["Lingering Soul Fragment"] = false,
 						["Legionfall War Supplies"] = false,
 					},
@@ -74,18 +72,20 @@ AdiBagsDB = {
 				},
 			},
 		},
+		["DataSource"] = {
+		},
 		["Junk"] = {
 		},
-		["Equipment"] = {
+		["MoneyFrame"] = {
 		},
 	},
 	["profileKeys"] = {
 		["Cometstorm - Illidan"] = "Comet - Illidan",
 		["Ereinion - Dark Iron"] = "Default",
 		["Comet - Illidan"] = "Comet - Illidan",
-		["Plane - Illidan"] = "Default",
-		["Evan - Illidan"] = "Comet - Illidan",
 		["Combustion - Illidan"] = "Comet - Illidan",
+		["Evan - Illidan"] = "Comet - Illidan",
+		["Plane - Illidan"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {
@@ -118,30 +118,24 @@ AdiBagsDB = {
 					nil, -- [3]
 					0.75, -- [4]
 				},
-				["BackpackColor"] = {
-					nil, -- [1]
-					nil, -- [2]
-					nil, -- [3]
-					0.754109442234039, -- [4]
-				},
 				["BankColor"] = {
 					nil, -- [1]
 					nil, -- [2]
 					0.501960784313726, -- [3]
 					0.75, -- [4]
 				},
-				["border"] = "None",
+				["border"] = "Details BarBorder 1",
 				["insets"] = 0,
 			},
 			["bagFont"] = {
-				["name"] = "ABF",
+				["name"] = "Arial Narrow",
 			},
 			["compactLayout"] = true,
 			["rightClickConfig"] = false,
 			["autoDeposit"] = true,
-			["qualityOpacity"] = 0.75,
+			["qualityOpacity"] = 0.5,
 			["sectionFont"] = {
-				["name"] = "ABF",
+				["name"] = "Arial Narrow",
 			},
 		},
 	},

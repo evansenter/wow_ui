@@ -19,8 +19,10 @@ local StyleDefault = {}
 
 -- [[
 StyleDefault.hitbox = {
-	width = 300,
-	height = 100,
+	width = 125,
+	height = 36,
+	x = 0,
+	y = -1,
 }
 
 --]]
@@ -254,6 +256,7 @@ WidgetConfig.RangeWidget = { anchor = "CENTER" , x = 0 ,y = VerticalAdjustment +
 WidgetConfig.DebuffWidget = { anchor = "TOP" , x = 15 ,y = VerticalAdjustment + 33 }
 WidgetConfig.AbsorbWidget =	{ anchor="LEFT", x = 1, y = 4, w = 98, h = 20 }
 WidgetConfig.QuestWidget = { anchor = "LEFT" , x = -12,y = VerticalAdjustment + 16 }
+WidgetConfig.ThreatPercentageWidget = { anchor = "RIGHT" , x = 14,y = VerticalAdjustment + 7 }
 
 
 WidgetConfig._meta = true		-- tells the parser to ignore this table; ie. don't convert to "style" template

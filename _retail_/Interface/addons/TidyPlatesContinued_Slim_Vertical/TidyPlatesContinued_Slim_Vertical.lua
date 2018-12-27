@@ -25,8 +25,10 @@ local Theme = {}
 local DefaultStyle = {}
 
 DefaultStyle.hitbox = {
-	width = 40,
-	height = 75,
+	width = 30,
+	height = 46,
+	x = 0,
+	y = 14,
 }
 
 DefaultStyle.highlight = {
@@ -111,10 +113,19 @@ DefaultStyle.raidicon = {
 
 DefaultStyle.eliteicon = {
 	texture =                    ArtworkPath.."Slim_EliteIcon",
-	width = 14,
-	height = 14,
-	x = 0,
-	y = VerticalAdjustment - 12,
+	width = 10,
+	height = 10,
+	x = -6,
+	y = VerticalAdjustment - 15,
+	anchor = "CENTER",
+	show = true,
+}
+
+DefaultStyle.skullicon = {
+	width = 10,
+	height = 10,
+	x = -6,
+	y = VerticalAdjustment - 15,
 	anchor = "CENTER",
 	show = true,
 }
@@ -247,6 +258,7 @@ WidgetConfig.DebuffWidget = { anchor = "CENTER" , x = 15 ,y = VerticalAdjustment
 --end
 WidgetConfig.AbsorbWidget =	{ anchor="BOTTOM", x = 0 , y = VerticalAdjustment + 5, h = 35, w = 14, o = "VERTICAL", }
 WidgetConfig.QuestWidget = { anchor = "CENTER" , x = -8,y = VerticalAdjustment - 10 }
+WidgetConfig.ThreatPercentageWidget = { anchor = "TOP" , x = 4,y = VerticalAdjustment + 6 }
 
 WidgetConfig._meta = true		-- tells the parser to ignore this table; ie. don't convert to "style" template
 Theme.WidgetConfig = WidgetConfig

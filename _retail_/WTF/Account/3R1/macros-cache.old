@@ -40,7 +40,7 @@ VER 3 0000000000000070 "Dispel Magic" "INV_Misc_QuestionMark"
 END
 VER 3 0000000000000058 "Essence Font" "INV_Misc_QuestionMark"
 #showtooltip Essence Font
-/use [harm][@mouseovertarget,harm][]Carafe of Searing Light
+/use Fangs of Intertwined Essence
 /use Essence Font
 END
 VER 3 000000000000002E "Extra Action" "INV_Misc_Herb_Whispervine"

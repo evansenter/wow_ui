@@ -255,9 +255,11 @@
             </Frames>
     </Frame>
 
+    <Script file="libs\LibButtonGlow-1.0\LibStub\LibStub.lua"/>
+    <Script file="libs\LibButtonGlow-1.0\LibButtonGlow-1.0.lua"/>
 	<Script file="TidyPlatesStatusbar.lua"/>
+    <Script file="TidyPlatesUtility.lua"/>
 	<Script file="TidyPlatesCore.lua"/>
-	<Script file="TidyPlatesUtility.lua"/>
 	<Script file="TidyPlatesTemplate.lua"/>
 	<Script file="TidyPlatesParser.lua"/>
 	<Script file="TidyPlatesPanel.lua"/>

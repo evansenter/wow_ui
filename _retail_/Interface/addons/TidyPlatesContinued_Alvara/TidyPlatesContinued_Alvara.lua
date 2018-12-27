@@ -8,6 +8,12 @@ if NonLatinLocales[GetLocale()] == true then font = STANDARD_TEXT_FONT end
 local Theme = {}
 local Alvara = {}
 
+Alvara.hitbox = {
+	width = 120,
+	height = 30,
+	x = 0,
+	y = -4,
+}
 Alvara.frame = {
 	width = 128,
 	height = 16,
@@ -28,18 +34,34 @@ Alvara.threatcolor = {
 }
 Alvara.healthborder = {
 	texture = path.."\\Shade",
-	glowtexture = path.."\\Highlight",
-	elitetexture = path.."\\ShadeElite",
-	width = 128,
-	height = 16,
+	--glowtexture = path.."\\Highlight",
+	--elitetexture = path.."\\ShadeElite",
+	width = 92,
+	height = 8,
 	x = 0,
 	y = 0,
 	anchor = "CENTER",
 }
+Alvara.eliteicon = {
+	texture = path.."\\EliteIcon",
+	width = 10,
+	height = 10,
+	x = -43,
+	y = -4,
+	anchor = "CENTER",
+	show = true,
+}
+Alvara.skullicon = {
+	width = 12,
+	height = 12,
+	x = -43,
+	y = -4,
+	anchor = "CENTER",
+}
 Alvara.healthbar = {
 	texture = path.."\\Statusbar",
-	width = 128,
-	height = 16,
+	width = 92,
+	height = 8,
 	x = 0,
 	y = 0,
 	anchor = "CENTER",
@@ -65,7 +87,7 @@ Alvara.castborder = {
 Alvara.name = {
 	typeface = font,
 	size = 10,
-	width = 80,
+	width = 128,
 	height = 10,
 	x = 18,
 	y = 10,
@@ -86,19 +108,26 @@ Alvara.level = {
 	vertical = "TOP",
 	shadow = true,
 }
-Alvara.dangerskull = {
-	width = 12,
-	height = 12,
-	x = 0,
-	y = 0,
-	anchor = "RIGHT",
-}
 Alvara.spellicon = {
 	width = 12,
 	height = 12,
-	x = 0,
+	x = 5,
 	y = 0,
 	anchor = "LEFT",
+}
+Alvara.spelltext = {
+	typeface = font,
+	size = 8,
+	height = 12,
+	width = 180,
+	x = 0,
+	y = -6,
+	align = "CENTER",
+	anchor = "TOP",
+	vertical = "BOTTOM",
+	shadow = true,
+	flags = "NONE",
+	show = true,
 }
 Alvara.raidicon = {
 	width = 12,
@@ -125,6 +154,15 @@ Alvara.options = {
 	showSpecialText = true,
 	showDangerSkull = true,
 	showspellIcon = true,
+}
+Alvara.customtext = {
+	typeface = font,
+	width = 90,
+	x = -3,
+	y = 1.5,
+	align = "CENTER",
+	shadow = false,
+	show = true,
 }
 
 local CopyTable = TidyPlatesContUtility.copyTable
@@ -160,6 +198,7 @@ WidgetConfig.RangeWidget = { anchor = "CENTER" , x = 0 ,y = 0 }
 WidgetConfig.DebuffWidget = { anchor = "TOP" , x = 19 ,y = 35 }
 WidgetConfig.AbsorbWidget =	{ anchor="LEFT", x = 10, y = -2, w = 100, h = 8 }
 WidgetConfig.QuestWidget = { anchor = "LEFT" , x = 5,y = 3 }
+WidgetConfig.ThreatPercentageWidget = { anchor = "RIGHT" , x = -2,y = -10 }
 
 WidgetConfig._meta = true		-- tells the parser to ignore this table; ie. don't convert to "style" template
 Theme.WidgetConfig = WidgetConfig

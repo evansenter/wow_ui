@@ -8,6 +8,13 @@ if NonLatinLocales[GetLocale()] == true then font = STANDARD_TEXT_FONT end
 local Theme = {}
 local SimpleBar = {}
 
+SimpleBar.hitbox = {
+	width = 135,
+	height = 30,
+	x = 0,
+	y = -8,
+}
+
 SimpleBar.healthborder = {
 	texture 				= path.."\\empty.tga",
 	width = 10,
@@ -157,6 +164,17 @@ SimpleBar.raidicon = {
 	show = true,
 }
 
+SimpleBar.customtext = {
+	typeface = font,
+	width = 90,
+	x = -3,
+	y = -2,
+	align = "CENTER",
+	shadow = false,
+	show = true,
+}
+
+
 local CopyTable = TidyPlatesContUtility.copyTable
 
 -- No Bar
@@ -189,6 +207,7 @@ WidgetConfig.RangeWidget = { anchor = "CENTER" , x = 0 ,y = 0 }
 WidgetConfig.DebuffWidget = { anchor = "TOP" , x = 15 ,y = 28 }
 WidgetConfig.AbsorbWidget =	{ anchor="LEFT", x = 1, y = -2, w = 100, h = 8 }
 WidgetConfig.QuestWidget = { anchor = "LEFT" , x = -18,y = 0 }
+WidgetConfig.ThreatPercentageWidget = { anchor = "RIGHT" , x = 14,y = -9 }
 
 
 WidgetConfig._meta = true		-- tells the parser to ignore this table; ie. don't convert to "style" template

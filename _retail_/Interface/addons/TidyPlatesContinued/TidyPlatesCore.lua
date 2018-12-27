@@ -5,6 +5,8 @@
 ---------------------------------------------------------------------------------------------------------------------
 local addonName, TidyPlatesContInternal = ...
 local TidyPlatesContCore = CreateFrame("Frame", nil, WorldFrame)
+local FrequentHealthUpdate = true
+local GetPetOwner = TidyPlatesContUtility.GetPetOwner
 TidyPlatesCont = {}
 
 -- Local References
@@ -14,10 +16,14 @@ local select, pairs, tostring  = select, pairs, tostring 			    -- Local functio
 local CreateTidyPlatesContStatusbar = CreateTidyPlatesContStatusbar			    -- Local function copy
 local WorldFrame, UIParent = WorldFrame, UIParent
 local GetNamePlateForUnit = C_NamePlate.GetNamePlateForUnit
+local SetNamePlateFriendlySize = C_NamePlate.SetNamePlateFriendlySize
+local SetNamePlateEnemySize = C_NamePlate.SetNamePlateEnemySize
+local RaidClassColors = CUSTOM_CLASS_COLORS or RAID_CLASS_COLORS
 
 -- Internal Data
 local Plates, PlatesVisible, PlatesFading, GUID = {}, {}, {}, {}	            	-- Plate Lists
 local PlatesByUnit = {}
+local PlatesByGUID = {}
 local nameplate, extended, bars, regions, visual, carrier, plateid			    	-- Temp/Local References
 local unit, unitcache, style, stylename, unitchanged				    			-- Temp/Local References
 local numChildren = -1                                                              -- Cache the current number of plates
@@ -25,6 +31,8 @@ local activetheme = {}                                                          
 local InCombat, HasTarget, HasMouseover = false, false, false					    -- Player State Data
 local EnableFadeIn = true
 local ShowCastBars = true
+local ShowIntCast = true
+local ShowIntWhoCast = true
 local EMPTY_TEXTURE = "Interface\\Addons\\TidyPlatesContinued\\Media\\Empty"
 local ResetPlates, UpdateAll = false, false
 local OverrideFonts = false
@@ -78,6 +86,25 @@ local OnNewNameplate
 local OnUpdate
 local OnNewNameplate
 local ForEachPlate
+
+-- UpdateNameplateSize
+local function UpdateNameplateSize(plate)
+	local scaleStandard = activetheme.SetScale()
+	local clickableWidth, clickableHeight = TidyPlatesContPanel.GetClickableArea()
+	local hitbox = {
+		width = activetheme.Default.hitbox.width * scaleStandard * clickableWidth,
+		height = activetheme.Default.hitbox.height * scaleStandard * clickableHeight,
+		x = (activetheme.Default.hitbox.x*-1) * scaleStandard,
+		y = (activetheme.Default.hitbox.y*-1) * scaleStandard,
+	}
+
+	if not InCombatLockdown() then
+		SetNamePlateEnemySize(hitbox.width, hitbox.height) -- Clickable area of the nameplate
+		SetNamePlateFriendlySize(hitbox.width, hitbox.height) -- Clickable area of the nameplate
+	end
+
+	plate.carrier:SetPoint("CENTER", plate, "CENTER", hitbox.x, hitbox.y)	-- Offset
+end
 
 -- UpdateReferences
 local function UpdateReferences(plate)
@@ -164,9 +191,9 @@ do
 	-- ApplyPlateExtesion
 	function OnNewNameplate(plate, plateid)
 
-        -- Tidy Plates Frame
-        --------------------------------
-        local bars, regions = {}, {}
+    -- Tidy Plates Frame
+    --------------------------------
+    local bars, regions = {}, {}
 		local carrier
 		local frameName = "TidyPlatesContCarrier"..numChildren
 
@@ -176,7 +203,7 @@ do
 		plate.carrier = carrier
 		plate.extended = extended
 
-        -- Add Graphical Elements
+    -- Add Graphical Elements
 		local visual = {}
 		-- Status Bars
 		local healthbar = CreateTidyPlatesContStatusbar(extended)
@@ -250,6 +277,8 @@ do
 		extended.stylename = ""
 
 		carrier:SetPoint("CENTER", plate, "CENTER")
+
+		UpdateNameplateSize(plate)
 	end
 
 end
@@ -332,7 +361,7 @@ do
 
 	-- OnShowNameplate
 	function OnShowNameplate(plate, unitid)
-
+		local unitGUID = UnitGUID(unitid)
 		-- or unitid = plate.namePlateUnitToken
 		UpdateReferences(plate)
 
@@ -340,6 +369,7 @@ do
 
 		PlatesVisible[plate] = unitid
 		PlatesByUnit[unitid] = plate
+		if unitGUID then PlatesByGUID[unitGUID] = plate end
 
 		unit.frame = extended
 		unit.alpha = 0
@@ -381,6 +411,7 @@ do
 
 	-- OnHideNameplate
 	function OnHideNameplate(plate, unitid)
+		local unitGUID = UnitGUID(unitid)
 		--plate.extended:Hide()
 		plate.carrier:Hide()
 
@@ -390,6 +421,7 @@ do
 
 		PlatesVisible[plate] = nil
 		PlatesByUnit[unitid] = nil
+		if unitGUID then PlatesByGUID[unitGUID] = nil end
 
 		visual.castbar:Hide()
 		visual.castbar:SetScript("OnUpdate", nil)
@@ -410,10 +442,11 @@ do
 		unitid = PlatesVisible[plate]
 		UpdateReferences(plate)
 
-		UpdateUnitIdentity(unitid)
+		UpdateUnitIdentity(plate, unitid)
 		UpdateUnitContext(plate, unitid)
 		ProcessUnitChanges()
 		OnUpdateCastMidway(plate, unitid)
+
 	end
 
 	-- OnHealthUpdate
@@ -433,6 +466,7 @@ do
 		extended.stylename = ""
 		unitid = PlatesVisible[plate]
 
+		UpdateNameplateSize(plate)
 		OnShowNameplate(plate, unitid)
 	end
 
@@ -497,8 +531,7 @@ do
 	-- UpdateUnitIdentity: Updates Low-volatility Unit Data
 	-- (This is essentially static data)
 	--------------------------------------------------------
-	function UpdateUnitIdentity(unitid)
-
+	function UpdateUnitIdentity(plate, unitid)
 		unit.unitid = unitid
 		unit.name = UnitName(unitid)
 		unit.pvpname = UnitPVPName(unitid)
@@ -521,6 +554,7 @@ do
 			unit.class = ""
 			unit.type = "NPC"
 		end
+		
 	end
 
 
@@ -672,7 +706,8 @@ do
 	-- UpdateIndicator_EliteIcon: Updates the border overlay art and threat glow to Elite or Non-Elite art
 	function UpdateIndicator_EliteIcon()
 		threatborder = visual.threatborder
-		if unit.isElite and style.eliteicon.show then visual.eliteicon:Show() else visual.eliteicon:Hide() end
+		if (unit.isElite or unit.isRare) and not unit.isBoss and style.eliteicon.show then visual.eliteicon:Show() else visual.eliteicon:Hide() end
+		visual.eliteicon:SetDesaturated(unit.isRare) -- Desaturate if rare elite
 	end
 
 
@@ -695,9 +730,9 @@ do
 	function UpdateIndicator_Standard()
 		if IsPlateShown(nameplate) then
 			if unitcache.name ~= unit.name then UpdateIndicator_Name() end
-			if unitcache.level ~= unit.level then UpdateIndicator_Level() end
+			if unitcache.level ~= unit.level or unitcache.isBoss ~= unit.isBoss then UpdateIndicator_Level() end
 			UpdateIndicator_RaidIcon()
-			if unitcache.isElite ~= unit.isElite then UpdateIndicator_EliteIcon() end
+			if unitcache.isElite ~= unit.isElite or unitcache.isRare ~= unit.isRare then UpdateIndicator_EliteIcon() end
 		end
 	end
 
@@ -799,8 +834,14 @@ do
 		if isTradeSkill then return end
 
 		unit.isCasting = true
+		unit.interrupted = false
+		unit.interruptLogged = false
 		unit.spellIsShielded = notInterruptible
 		unit.spellInterruptible = not unit.spellIsShielded
+
+		-- Clear registered events incase they weren't
+		castBar:SetScript("OnEvent", nil)
+		castBar:UnregisterEvent("COMBAT_LOG_EVENT_UNFILTERED");
 
 		visual.spelltext:SetText(text)
 		visual.spellicon:SetTexture(texture)
@@ -828,19 +869,100 @@ do
 
 	end
 
+	function fade(intervals, duration, delay, onUpdate, onDone, timer, stop)
+		if not timer then timer = 0 end
+
+		local interval = duration/intervals
+		timer = timer+interval
+
+		if duration > timer then
+			if timer > delay then onUpdate() end
+			C_Timer.After(interval, function() fade(intervals, duration, delay, onUpdate, onDone, timer) end)
+		else onDone() end
+	end
+
+	-- OnInterruptedCasting
+	function OnInterruptedCast(plate, sourceGUID, sourceName, destGUID)
+		UpdateReferences(plate)
+
+		local function setSpellText()
+			local spellString, color
+			local eventText = "Interrupted"
+
+			if sourceGUID and sourceGUID ~= "" and ShowIntWhoCast then
+				local _, engClass = GetPlayerInfoByGUID(sourceGUID)
+				if RaidClassColors[engClass] then color = RaidClassColors[engClass].colorStr end
+			end
+
+			if sourceName and color then
+				spellString = eventText.." |c"..color.."("..sourceName..")"
+			else
+				spellString = eventText
+			end	
+
+			visual.spelltext:SetText(spellString)
+		end
+
+		-- Main function
+		if unit.interrupted and type and sourceGUID and sourceName and destGUID then
+			setSpellText()
+		else
+			if unit.interrupted or not ShowIntCast then return end --not extended:IsShown() or 
+
+			unit.interrupted = true
+			unit.isCasting = false
+
+			local castBar = extended.visual.castbar
+			local _unit = unit -- Store this reference as the unit might have change once the fade function uses it.
+
+			castBar:Show()
+
+			if activetheme.SetCastbarColor then
+				r, g, b, a = activetheme.SetCastbarColor(unit)
+				if not (r and g and b and a) then return end
+			end
+			castBar:SetStatusBarColor(r, g, b)
+			castBar:SetMinMaxValues(1, 1)
+
+			setSpellText()
+
+			-- Fade out the castbar
+			local alpha, ticks, duration, delay = 1, 25, 2, 0.8
+			local perTick = alpha/(ticks-(delay/(duration/ticks)))
+			local stopFade = false
+			fade(ticks, duration, delay, function()
+				alpha = alpha - perTick
+				if not _unit.isCasting and not stopFade then
+					castBar:SetAlpha(alpha)
+				else
+					stopFade = true
+				end
+			end, function()
+				if not _unit.isCasting and not stopFade then
+					_unit.interrupted = false
+					castBar:Hide()
+
+					--UpdateIndicator_CustomScaleText()
+					--UpdateIndicator_CustomAlpha()
+				end
+			end)
+
+			castBar:SetScript("OnUpdate", nil)
+		end
+	end
 
 	-- OnHideCastbar
 	function OnStopCasting(plate)
-
 		UpdateReferences(plate)
 
-		if not extended:IsShown() then return end
+		if not extended:IsShown() or unit.interrupted then return end
 		local castBar = extended.visual.castbar
 
 		castBar:Hide()
 		castBar:SetScript("OnUpdate", nil)
 
 		unit.isCasting = false
+		unit.interrupted = false
 		UpdateIndicator_CustomScaleText()
 		UpdateIndicator_CustomAlpha()
 	end
@@ -900,6 +1022,17 @@ do
 		end
 	 end
 
+	 -- Update spell that was interrupted/cancelled
+	 local function UnitSpellcastInterrupted(...)
+	 	local event, unitid = ...
+
+	 	if UnitIsUnit("player", unitid) or not ShowCastBars then return end
+
+	 	local plate = GetNamePlateForUnit(unitid)
+
+	 	if plate and not plate.extended.unit.interrupted then OnInterruptedCast(plate) end
+	 end
+
 
 	local CoreEvents = {}
 
@@ -912,6 +1045,15 @@ do
 	----------------------------------------
 	function CoreEvents:PLAYER_ENTERING_WORLD()
 		TidyPlatesContCore:SetScript("OnUpdate", OnUpdate);
+	end
+
+	function CoreEvents:UNIT_NAME_UPDATE(...)
+		local unitid = ...
+		local plate = GetNamePlateForUnit(unitid);
+		
+		if plate then
+			SetUpdateMe(plate)
+		end
 	end
 
 	function CoreEvents:NAME_PLATE_CREATED(...)
@@ -943,7 +1085,16 @@ do
 		SetUpdateAll()
 	end
 
+	function CoreEvents:UNIT_HEALTH(...)
+		if FrequentHealthUpdate then return end
+		local unitid = ...
+		local plate = PlatesByUnit[unitid]
+
+		if plate then OnHealthUpdate(plate) end
+	end
+
 	function CoreEvents:UNIT_HEALTH_FREQUENT(...)
+		if not FrequentHealthUpdate then return end
 		local unitid = ...
 		local plate = PlatesByUnit[unitid]
 
@@ -1010,11 +1161,37 @@ do
 		if UnitIsUnit("player", unitid) or not ShowCastBars then return end
 
 		local plate = GetNamePlateForUnit(unitid)
-
 		if plate then
 			OnStopCasting(plate)
 		end
 	end
+
+	function CoreEvents:COMBAT_LOG_EVENT_UNFILTERED(...)
+		if not ShowIntCast then return end
+		local _,type,_,sourceGUID,sourceName,_,_,destGUID = CombatLogGetCurrentEventInfo()
+
+		-- With "SPELL_AURA_APPLIED" we are looking for stuns etc. that were applied.
+		-- As the "SPELL_INTERRUPT" event doesn't get logged for those types of interrupts, but does trigger a "UNIT_SPELLCAST_INTERRUPTED" event.
+		-- "SPELL_CAST_FAILED" is for when the unit themselves interrupt the cast.
+		if type == "SPELL_INTERRUPT" or type == "SPELL_AURA_APPLIED" or type == "SPELL_CAST_FAILED" then
+			local plate = PlatesByGUID[destGUID]
+
+			if plate then
+				if (type == "SPELL_AURA_APPLIED" or type == "SPELL_CAST_FAILED") and (not plate.extended.unit.interrupted or plate.extended.unit.interruptLogged) then return end
+				local unitType = strsplit("-", sourceGUID)
+				-- If a pet interrupted, we need to change the source from the pet to the owner
+				if unitType == "Pet" then
+						sourceGUID, sourceName = GetPetOwner(sourceName)
+				end
+
+				plate.extended.unit.interruptLogged = true
+				OnInterruptedCast(plate, sourceGUID, sourceName, destGUID)
+			end
+		end
+	end
+
+	CoreEvents.UNIT_SPELLCAST_INTERRUPTED = UnitSpellcastInterrupted
+	--CoreEvents.UNIT_SPELLCAST_FAILED = UnitSpellcastInterrupted
 
 	CoreEvents.UNIT_SPELLCAST_DELAYED = UnitSpellcastMidway
 	CoreEvents.UNIT_SPELLCAST_CHANNEL_UPDATE = UnitSpellcastMidway
@@ -1157,7 +1334,7 @@ do
 			SetFontGroupObject(object, objectstyle)
 		end
 		-- Hide Stuff
-		if not unit.isElite then visual.eliteicon:Hide() end
+		if not unit.isElite and not unit.isRare then visual.eliteicon:Hide() end
 		if not unit.isBoss then visual.skullicon:Hide() end
 
 		if not unit.isTarget then visual.target:Hide() end
@@ -1214,6 +1391,9 @@ end
 --------------------------------------------------------------------------------------------------------------
 function TidyPlatesCont:DisableCastBars() ShowCastBars = false end
 function TidyPlatesCont:EnableCastBars() ShowCastBars = true end
+
+function TidyPlatesCont:ToggleInterruptedCastbars(showIntCast, showIntWhoCast) ShowIntCast = showIntCast; ShowIntWhoCast = showIntWhoCast end
+function TidyPlatesCont:SetHealthUpdateMethod(useFrequent) FrequentHealthUpdate = useFrequent end
 
 function TidyPlatesCont:ForceUpdate() ForEachPlate(OnResetNameplate) end
 function TidyPlatesCont:ResetWidgets() ForEachPlate(OnResetWidgets) end

@@ -23,6 +23,7 @@ local WidgetLib = TidyPlatesContWidgets
 local valueToString = TidyPlatesContUtility.abbrevNumber
 
 local MergeProfileValues = TidyPlatesContHubHelpers.MergeProfileValues
+local UpdateCVars = TidyPlatesContHubHelpers.UpdateCVars
 
 local EnableTankWatch = TidyPlatesContWidgets.EnableTankWatch
 local DisableTankWatch = TidyPlatesContWidgets.DisableTankWatch
@@ -43,8 +44,16 @@ local function IsOffTanked(unit)
 
 	local unitid = unit.unitid
 	if unitid then
-		local targetOf = unitid.."target"
-		local targetIsTank = UnitIsUnit(targetOf, "pet") or ("TANK" ==  UnitGroupRolesAssigned(targetOf))
+		local targetOf = unitid.."target"	
+		local targetGUID = UnitGUID(targetOf)
+		local targetIsGuardian = false
+
+		if targetGUID then
+			targetGUID = select(6, strsplit("-", UnitGUID(targetOf)))
+			targetIsGuardian = targetGUID == "61146" or targetGUID == "103822" or targetGUID == "61056" or targetGUID == "95072" -- Black Ox Statue(61146), Treant(103822), Primal Earth Elemental(61056), Greater Earth Elemental(95072)
+		end
+		
+		local targetIsTank = UnitIsUnit(targetOf, "pet") or targetIsGuardian or ("TANK" ==  UnitGroupRolesAssigned(targetOf))
 
 		--if LocalVars.EnableOffTankHighlight and IsEnemyTanked(unit) then
 		if LocalVars.EnableOffTankHighlight and targetIsTank then
@@ -86,7 +95,7 @@ local PaleBlue = {r = 0, g = 130/255, b = 225/255,}
 local PaleBlueText = {r = 194/255, g = 253/255, b = 1,}
 local DarkRed = {r = .9, g = 0.08, b = .08,}
 
-local RaidClassColors = RAID_CLASS_COLORS
+local RaidClassColors = CUSTOM_CLASS_COLORS or RAID_CLASS_COLORS
 
 ------------------------------------------------------------------------------------
 
@@ -141,7 +150,7 @@ local function CallbackUpdate()
 end
 
 local function EnableWatchers()
-	if LocalVars.WidgetsDebuffStyle == 2 then TidyPlatesContWidgets.UseSquareDebuffIcon() else TidyPlatesContWidgets.UseWideDebuffIcon()end
+	if LocalVars.WidgetDebuffStyle == 2 then TidyPlatesContWidgets.UseSquareDebuffIcon() else TidyPlatesContWidgets.UseWideDebuffIcon()end
 	--TidyPlatesContUtility:EnableGroupWatcher()
 	TidyPlatesContUtility:EnableHealerTrack()
 	--TidyPlatesContWidgets:EnableTankWatch()
@@ -220,7 +229,7 @@ local function ApplyStyleCustomization(style, defaults)
 end
 
 
-local function ApplyProfileSettings(theme, ...)
+local function ApplyProfileSettings(theme, source, ...)
 	-- When nil is passed, the theme is being deactivated
 	if not theme then return end
 
@@ -239,6 +248,11 @@ local function ApplyProfileSettings(theme, ...)
 	EnableWatchers()
 	ApplyStyleCustomization(theme["Default"], theme["DefaultBackup"])
 	ApplyFontCustomization(theme["NameOnly"], theme["NameOnlyBackup"])
+
+	-- Set Space Between Buffs & Debuffs
+	TidyPlatesContWidgets.SetSpacerSlots(math.ceil(LocalVars.SpacerSlots))
+
+	TidyPlatesCont:ToggleInterruptedCastbars(LocalVars.IntCastEnable, LocalVars.IntCastWhoEnable)
 
 	TidyPlatesCont:ForceUpdate()
 	RaidClassColors = CUSTOM_CLASS_COLORS or RAID_CLASS_COLORS
@@ -283,6 +297,7 @@ end
 local function ApplyHubFunctions(theme)
 	theme.SetNameColor = TidyPlatesContHubFunctions.SetNameColor
 	theme.SetScale = TidyPlatesContHubFunctions.SetScale
+	theme.GetClickableArea = TidyPlatesContHubFunctions.GetClickableArea
 	theme.SetAlpha = TidyPlatesContHubFunctions.SetAlpha
 	theme.SetHealthbarColor = TidyPlatesContHubFunctions.SetHealthbarColor
 	theme.SetThreatColor = TidyPlatesContHubFunctions.SetThreatColor

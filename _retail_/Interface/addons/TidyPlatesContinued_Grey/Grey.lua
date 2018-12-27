@@ -20,7 +20,12 @@ if NonLatinLocales[GetLocale()] == true then font = STANDARD_TEXT_FONT end
 
 local StyleDefault = {}
 
-StyleDefault.hitbox = { width = 140, height = 35, }
+StyleDefault.hitbox = {
+	width = 130,
+	height = 40,
+	x = 0,
+	y = 0,
+}
 
 StyleDefault.highlight = {
 	texture =					defaultArtPath.."\\Highlight",
@@ -41,10 +46,18 @@ StyleDefault.eliteicon = {
 	texture = defaultArtPath.."\\EliteIcon",
 	width = 14,
 	height = 14,
-	x = -51,
-	y = 17,
+	x = -45,
+	y = 22+nameplate_verticalOffset,
 	anchor = "CENTER",
 	show = true,
+}
+
+StyleDefault.skullicon = {
+	width = 14,
+	height = 14,
+	x = -45,
+	y = 22+nameplate_verticalOffset,
+	anchor = "CENTER",
 }
 
 StyleDefault.target = {
@@ -188,14 +201,6 @@ StyleDefault.raidicon = {
 	--show = false,
 }
 
-StyleDefault.skullicon = {
-	width = 14,
-	height = 14,
-	x = 44,
-	y = 8+nameplate_verticalOffset,
-	anchor = "CENTER",
-}
-
 StyleDefault.frame = {
 	width = 101,
 	height = 45,
@@ -254,6 +259,7 @@ WidgetConfig.DebuffWidget = { anchor = "CENTER" , x = 15 ,y = 28 }
 WidgetConfig.AbsorbWidget =	{ anchor="TOP", x = -1 , y = 5, w = 100, h = 25 }
 WidgetConfig.DebuffWidgetPlus = { anchor = "CENTER" , x = 15 ,y = 40 }
 WidgetConfig.QuestWidget = { anchor = "LEFT" , x = -14,y = 10 }
+WidgetConfig.ThreatPercentageWidget = { anchor = "RIGHT" , x = 12,y = 24 }
 
 WidgetConfig._meta = true		-- tells the parser to ignore this table; ie. don't convert to "style" template
 Theme.WidgetConfig = WidgetConfig

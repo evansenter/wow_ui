@@ -757,7 +757,7 @@ TidyPlatesContHubSettings = {
 		["WidgetsMyBuff"] = false,
 		["ClassEnemyIcon"] = false,
 		["UnitSpotlightOpacity"] = 1,
-		["OpacityFiltered"] = 0,
+		["OpacitySpotlight"] = 0.849999964237213,
 		["OpacityTarget"] = 1,
 		["FriendlyStatusTextMode"] = "HealthFunctionNone",
 		["ColorAttackingOtherTank"] = {
@@ -886,7 +886,7 @@ TidyPlatesContHubSettings = {
 		},
 		["ScaleCastingSpotlight"] = false,
 		["StyleFriendlyBarsOnNPC"] = false,
-		["OpacitySpotlight"] = 0.849999964237213,
+		["OpacityFiltered"] = 0,
 		["TextUseBlizzardFont"] = false,
 	},
 	["HubPanelSettingsDamage"] = {
@@ -1054,7 +1054,7 @@ TidyPlatesContHubSettings = {
 		["WidgetsMyBuff"] = false,
 		["ClassEnemyIcon"] = false,
 		["UnitSpotlightOpacity"] = 1,
-		["OpacityFiltered"] = 0,
+		["OpacitySpotlight"] = 0.849999964237213,
 		["OpacityTarget"] = 1,
 		["FriendlyStatusTextMode"] = "HealthFunctionNone",
 		["ColorAttackingOtherTank"] = {
@@ -1183,7 +1183,7 @@ TidyPlatesContHubSettings = {
 		},
 		["ScaleCastingSpotlight"] = false,
 		["StyleFriendlyBarsOnNPC"] = false,
-		["OpacitySpotlight"] = 0.849999964237213,
+		["OpacityFiltered"] = 0,
 		["TextUseBlizzardFont"] = false,
 	},
 }

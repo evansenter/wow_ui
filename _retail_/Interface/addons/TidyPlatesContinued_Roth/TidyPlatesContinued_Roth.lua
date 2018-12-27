@@ -17,9 +17,11 @@ if NonLatinLocales[GetLocale()] == true then font = STANDARD_TEXT_FONT end
 local Theme = {}
 local StyleDefault = {}
 
-StyleDefault.hitbox = { 
-	width = 128, 
-	height = 64, 
+StyleDefault.hitbox = {
+	width = 140,
+	height = 34,
+	x = 6,
+	y = -1,
 }
 
 StyleDefault.frame = {
@@ -249,6 +251,7 @@ WidgetConfig.RangeWidget = { anchor = "BOTTOM", x = 0 ,y = 0 }
 WidgetConfig.DebuffWidget = { anchor = "TOP" , x = 17 ,y = 20 }
 WidgetConfig.AbsorbWidget =	{ anchor="CENTER", x = 5 , y = 5, w = 105, h = 12}
 WidgetConfig.QuestWidget = { anchor = "LEFT" , x = 4,y = 5 }
+WidgetConfig.ThreatPercentageWidget = { anchor = "RIGHT" , x = 8,y = VerticalAdjustment - 18 }
 --if (UnitClassBase("player") == "Druid") or (UnitClassBase("player") == "Rogue") then
 	--WidgetConfig.DebuffWidgetPlus = { anchor = "CENTER" , x = 15 ,y = VerticalAdjustment + 24 }
 --end

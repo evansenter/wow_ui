@@ -7,9 +7,17 @@ local art = "Interface\\Addons\\TidyPlatesContinuedWidgets\\QuestWidget\\QuestIn
 local function UpdateQuestWidget(self, unit, showFriendly)
 	if unit and unit.type == "NPC" then
 		local questName, questObjective = GetUnitQuestInfo(unit)
-		if questObjective or questName then
+		local questProgress, questTotal
+		local isDungeon = IsInInstance()
+
+		if questObjective then
+			questProgress, questTotal = string.match(questObjective, "([0-9]+)\/([0-9]+)")
+			questProgress = tonumber(questProgress)
+			questTotal = tonumber(questTotal)
+		end
+
+		if (questName and not (questProgress and questTotal) and not isDungeon) or (questProgress and questTotal and questProgress < questTotal and not isDungeon) then
 			self.Icon:SetTexture(art)
-			-- self.Icon:SetTexCoord(0,1,0,1)
 			self:Show()
 		else
 			self:Hide()
@@ -29,3 +37,5 @@ local function CreateQuestWidget(parent)
 end
 
 TidyPlatesContWidgets.CreateQuestWidget = CreateQuestWidget
+
+

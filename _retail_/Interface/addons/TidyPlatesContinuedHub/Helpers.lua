@@ -25,9 +25,19 @@ local function GetPanelValues(panel, targetTable)
 	-- Update with values
 	if panel and targetTable then
 		local index
+		targetTable["Theme"] = TidyPlatesCont:GetThemeName() -- Store active theme
+
 		for index in pairs(targetTable) do
 			if panel[index] then
-				targetTable[index] = panel[index]:GetValue()
+				local value = panel[index]:GetValue()
+				if tonumber(value) ~= nil then
+					if panel[index].isActual then
+						value = panel[index].ceil(value)	-- Use slider rounding method
+					else
+						value = math.ceil(value*100-0.5)/100	-- Round to 2 decimals
+					end
+				end
+				targetTable[index] = value
 			end
 		end
 	end
@@ -73,6 +83,7 @@ end
 
 
 local function ConvertDebuffListTable(source, target, order)
+	if source == nil then return end
 	local temp = ListToTable(strsplit("\n", source))
 	target = wipe(target)
 	if order then order = wipe(order) end
@@ -102,6 +113,21 @@ local function ConvertDebuffListTable(source, target, order)
 
 end
 
+local function ConvertColorListTable(source, target)
+	if source == nil then return end
+	--local temp = ListToTable(strsplit("\n", source))
+	local temp = {strsplit("\n", source)}
+	target = wipe(target)
+
+	for index = 1, #temp do
+		if temp[index] then
+			local hex, str = select(3, string.find(temp[index], "(#%x+)[%s%p]*(.*)"))
+			--local str = temp[index]
+			if hex and str then target[str] = hex end
+		end
+	end
+end
+
 local function AddHubFunction(functionTable, menuTable, functionPointer, functionDescription, functionKey )
 	if functionTable then
 		functionTable[functionKey or (#functionTable+1)] = functionPointer
@@ -114,12 +140,14 @@ end
 
 TidyPlatesContHubHelpers = {}
 TidyPlatesContHubHelpers.CallForStyleUpdate = CallForStyleUpdate
+TidyPlatesContHubHelpers.UpdateCVars = UpdateCVars
 TidyPlatesContHubHelpers.GetPanelValues = GetPanelValues
 TidyPlatesContHubHelpers.SetPanelValues = SetPanelValues
 TidyPlatesContHubHelpers.MergeProfileValues = MergeProfileValues
 TidyPlatesContHubHelpers.ListToTable = ListToTable
 TidyPlatesContHubHelpers.ConvertStringToTable = ConvertStringToTable
 TidyPlatesContHubHelpers.ConvertDebuffListTable = ConvertDebuffListTable
+TidyPlatesContHubHelpers.ConvertColorListTable = ConvertColorListTable
 TidyPlatesContHubHelpers.AddHubFunction = AddHubFunction
 
 

@@ -43,10 +43,10 @@ local function QuickSetPoints(frame, columnFrame, neighborFrame, xOffset, yOffse
 		frame:SetPoint("LEFT", columnFrame, "LEFT", LeftOffset, 0)
 end
 
-local function CreateQuickSlider(name, label, ... ) --, neighborFrame, xOffset, yOffset)
+local function CreateQuickSlider(name, label, mode, width, ... ) --, neighborFrame, xOffset, yOffset)
 		local columnFrame = ...
-		local frame = PanelHelpers:CreateSliderFrame(name, columnFrame, label, .5, 0, 1, .1)
-		frame:SetWidth(250)
+		local frame = PanelHelpers:CreateSliderFrame(name, columnFrame, label, .5, 0, 1, .1, mode)
+		frame:SetWidth(width or 250)
 		--frame.Label:SetFont("FONTS/ARIALN.TTF", 14)
 		-- Margins	-- Bottom/Left are negative
 		frame.Margins = { Left = 12, Right = 8, Top = 20, Bottom = 13,}
@@ -80,19 +80,32 @@ local function CreateQuickSlider(name, label, ... ) --, neighborFrame, xOffset, 
 		slider:SetMinMaxValues(minimum, maximum)
 		slider:SetValueStep(increment)
 		slider:SetValue(value)
+
+		if slider.isActual then
+			local multiplier = 1
+			if increment < 1 and increment >= .1 then multiplier = 10 elseif increment < .1 then multiplier = 100 end
+			slider.ceil = function(v) return ceil(v*multiplier-.5)/multiplier end
+			
+			slider.Low:SetText(minimum)
+			slider.High:SetText(maximum)
+		else
+			slider.Low:SetText(tostring(minimum*100).."%")
+			slider.High:SetText(tostring(maximum*100).."%")
+		end
 	end
 
-	local function CreateQuickEditbox(name, ...)
+	local function CreateQuickEditbox(name, width, height, ...)
 		local columnFrame = ...
 		local frame = CreateFrame("ScrollFrame", name, columnFrame, "UIPanelScrollFrameTemplate")
 		frame.BorderFrame = CreateFrame("Frame", nil, frame )
 		local EditBox = CreateFrame("EditBox", nil, frame)
 		-- Margins	-- Bottom/Left are supposed to be negative
 		frame.Margins = {Left = 4, Right = 24, Top = 8, Bottom = 8, }
+		width, height = width or 150, height or 100
 
 		-- Frame Size
-		frame:SetWidth(165)
-		frame:SetHeight(125)
+		frame:SetWidth(width+15)
+		frame:SetHeight(height+25)
 		-- Border
 		frame.BorderFrame:SetPoint("TOPLEFT", 0, 5)
 		frame.BorderFrame:SetPoint("BOTTOMRIGHT", 3, -5)
@@ -107,8 +120,8 @@ local function CreateQuickSlider(name, label, ... ) --, neighborFrame, xOffset, 
 
 		EditBox:SetPoint("TOPLEFT")
 		EditBox:SetPoint("BOTTOMLEFT")
-		EditBox:SetHeight(100)
-		EditBox:SetWidth(150)
+		EditBox:SetHeight(height)
+		EditBox:SetWidth(width)
 		EditBox:SetMultiLine(true)
 
 		EditBox:SetFrameLevel(frame:GetFrameLevel()-1)
@@ -134,9 +147,9 @@ local function CreateQuickSlider(name, label, ... ) --, neighborFrame, xOffset, 
 		return frame, frame
 	end
 
-	local function CreateQuickColorbox(name, label, ...)
+	local function CreateQuickColorbox(name, label, onOkay, ...)
 		local columnFrame = ...
-		local frame = PanelHelpers:CreateColorBox(name, columnFrame, label, 0, .5, 1, 1)
+		local frame = PanelHelpers:CreateColorBox(name, columnFrame, label, onOkay, 0, .5, 1, 1)
 		-- Margins	-- Bottom/Left are supposed to be negative
 		frame.Margins = { Left = 5, Right = 100, Top = 3, Bottom = 2,}
 		-- Set Positions
@@ -152,7 +165,11 @@ local function CreateQuickSlider(name, label, ... ) --, neighborFrame, xOffset, 
 
 		local frame = PanelHelpers:CreateDropdownFrame(name, columnFrame, dropdownTable, initialValue, label)		--- ADD the new valueMethod  (2 for Token)
 		-- Margins	-- Bottom/Left are supposed to be negative
-		frame.Margins = { Left = -12, Right = 2, Top = 22, Bottom = 0,}
+		if label == "" then
+			frame.Margins = { Left = -16, Right = 0, Top = 1, Bottom = 0,}
+		else
+			frame.Margins = { Left = -12, Right = 2, Top = 22, Bottom = 0,}
+		end
 		-- Set Positions
 		QuickSetPoints(frame, ...)
 		-- Set Feedback Function
@@ -768,3 +785,4 @@ end
 TidyPlatesContHubRapidPanel.CreateInterfacePanel = CreateInterfacePanel
 TidyPlatesContHubRapidPanel.CreateVariableSet = CreateVariableSet
 
+TidyPlatesContUtility.GetCacheSet = GetCacheSet

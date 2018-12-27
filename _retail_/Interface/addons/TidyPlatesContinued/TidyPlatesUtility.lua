@@ -101,10 +101,57 @@ local function valueToString(value)
     end
 end
 
+-- Hex conversion functions
+local function HexToRGB(hex)
+    hex = hex:gsub("#","")
+		
+		-- Incase of shorthand hex
+    if string.len(hex) == 3 then
+    	str = "";
+    	for i=1,3 do str = str..hex:sub(i,i)..hex:sub(i,i) end
+    	hex = str
+    end
+
+    return {
+    	r = tonumber("0x"..hex:sub(1,2))/255,
+    	g = tonumber("0x"..hex:sub(3,4))/255,
+    	b = tonumber("0x"..hex:sub(5,6))/255
+    }
+end
+
+local function RGBToHex(r,g,b)
+	local hexadecimal = '#'
+	local rgb = {r*255,g*255,b*255}
+
+	for key, value in pairs(rgb) do
+		local hex = ''
+
+		while(value > 0)do
+			local index = math.fmod(value, 16) + 1
+			value = math.floor(value / 16)
+			hex = string.sub('0123456789ABCDEF', index, index) .. hex			
+		end
+
+		if(string.len(hex) == 0)then
+			hex = '00'
+
+		elseif(string.len(hex) == 1)then
+			hex = '0' .. hex
+		end
+
+		hexadecimal = hexadecimal .. hex
+	end
+
+	return hexadecimal
+end
+
+
 TidyPlatesContUtility.abbrevNumber = valueToString
 TidyPlatesContUtility.copyTable = copytable
 TidyPlatesContUtility.mergeTable = mergetable
 TidyPlatesContUtility.updateTable = updatetable
+TidyPlatesContUtility.HexToRGB = HexToRGB
+TidyPlatesContUtility.RGBToHex = RGBToHex
 
 ------------------------------------------
 -- GameTooltipScanner
@@ -161,7 +208,19 @@ local function GetUnitSubtitle(unit)
 
 end
 
+local function GetPetOwner(petName)
+	TooltipScanner:ClearLines()
+	TooltipScanner:SetUnit(petName)
+	local ownerText = _G[ScannerName.."TextLeft2"]:GetText()
+	if not ownerText then return nil, nil end
+	local owner, _ = string.split("'",ownerText)
+	local ownerGUID = UnitGUID(string.split("-",owner))
+
+	return ownerGUID, owner -- This is the pet's owner
+end
+
 TidyPlatesContUtility.GetUnitSubtitle = GetUnitSubtitle
+TidyPlatesContUtility.GetPetOwner = GetPetOwner
 
 ------------------------------------------
 -- Quest Info
@@ -238,16 +297,72 @@ TidyPlatesContUtility.GetFriendlyThreat = GetFriendlyThreat
 
 do
 
-	local function GetRelativeThreat(enemyUnitid)		-- 'enemyUnitid' is a target/enemy
-		if not UnitExists(enemyUnitid) then return end
+	-- local function GetRelativeThreat(enemyUnitid)		-- 'enemyUnitid' is a target/enemy
+	-- 	if not UnitExists(enemyUnitid) then return end
 
-		local allyUnitid, allyThreat = nil, 0
-		local playerIsTanking, playerSituation, playerThreat = UnitDetailedThreatSituation("player", enemyUnitid)
-		if not playerThreat then return end
+	-- 	local allyUnitid, allyThreat = nil, 0
+	-- 	local playerIsTanking, playerSituation, playerThreat = UnitDetailedThreatSituation("player", enemyUnitid)
+	-- 	if not playerThreat then return end
+
+	-- 	-- Get Group Type
+	-- 	local evalUnitid, evalIndex, evalThreat
+	-- 	local groupType, size, startAt = nil, nil, 1
+	-- 	if UnitInRaid("player") then
+	-- 		groupType = "raid"
+	-- 		groupSize = TidyPlatesContUtility:GetNumRaidMembers()
+	-- 		startAt = 2
+	-- 	elseif UnitInParty("player") then
+	-- 		groupType = "party"
+	-- 		groupSize = TidyPlatesContUtility:GetNumPartyMembers()
+	-- 	else groupType = nil end
+
+	-- 	-- Cycle through Group, picking highest threat holder
+	-- 	if groupType then
+	-- 		for allyIndex = startAt, groupSize do
+	-- 			evalUnitid = groupType..allyIndex
+	-- 			evalThreat = select(3, UnitDetailedThreatSituation(evalUnitid, enemyUnitid))
+	-- 			if evalThreat and evalThreat > allyThreat then
+	-- 				allyThreat = evalThreat
+	-- 				allyUnitid = evalUnitid
+	-- 			end
+	-- 		end
+	-- 	end
+
+	-- 	-- Request Pet Threat (if possible)
+	-- 	if HasPetUI() and UnitExists("pet") then
+	-- 		evalThreat = select(3, UnitDetailedThreatSituation("pet", enemyUnitid)) or 0
+	-- 		if evalThreat > allyThreat then
+	-- 			allyThreat = evalThreat
+	-- 			allyUnitid = "pet"
+	-- 		end
+	-- 	end
+
+	-- 	--[[
+	-- 	if playerIsTanking and allyThreat then
+	-- 		return 100 - tonumber(allyThreat or 0), true
+	-- 	elseif allyThreat and allyUnitid then
+	-- 		return 100 - playerThreat, false
+	-- 	end
+	-- 	--]]
+	-- 	-- [[
+	-- 	-- Return the appropriate value
+	-- 	if playerThreat and allyThreat and allyUnitid then
+	-- 		if playerThreat >= 100 then 	-- The enemy is attacking you. You are tanking. 	Returns: 1. Your threat, plus your lead over the next highest person, 2. Your Unitid (since you're tanking)
+	-- 			return tonumber(playerThreat + (100-allyThreat)), "player"
+	-- 		else 	-- The enemy is not attacking you.  Returns: 1. Your scaled threat percent, 2. Who is On Top
+	-- 			return tonumber(playerThreat), allyUnitid
+	-- 		end
+	-- 	end
+	-- 	--]]
+	-- end
+
+	local function GetGroupThreatLeader(enemyUnitid)
+		-- tempUnitid, tempThreat
+		local friendlyUnitid, friendlyThreatval = nil, 0
+		local tempUnitid, tempThreat
+		local groupType, groupSize, startAt = nil, nil, 1
 
 		-- Get Group Type
-		local evalUnitid, evalIndex, evalThreat
-		local groupType, size, startAt = nil, nil, 1
 		if UnitInRaid("player") then
 			groupType = "raid"
 			groupSize = TidyPlatesContUtility:GetNumRaidMembers()
@@ -255,46 +370,52 @@ do
 		elseif UnitInParty("player") then
 			groupType = "party"
 			groupSize = TidyPlatesContUtility:GetNumPartyMembers()
-		else groupType = nil end
+		else
+			groupType = nil
+		end
 
-		-- Cycle through Group, picking highest threat holder
+		-- Cycle through Party/Raid, picking highest threat holder
 		if groupType then
 			for allyIndex = startAt, groupSize do
-				evalUnitid = groupType..allyIndex
-				evalThreat = select(3, UnitDetailedThreatSituation(evalUnitid, enemyUnitid))
-				if evalThreat and evalThreat > allyThreat then
-					allyThreat = evalThreat
-					allyUnitid = evalUnitid
+				tempUnitid = groupType..allyIndex
+				tempThreat = select(3, UnitDetailedThreatSituation(tempUnitid, enemyUnitid))
+				if tempThreat and tempThreat > friendlyThreatval then
+					friendlyThreatval = tempThreat
+					friendlyUnitid = tempUnitid
 				end
 			end
 		end
 
 		-- Request Pet Threat (if possible)
 		if HasPetUI() and UnitExists("pet") then
-			evalThreat = select(3, UnitDetailedThreatSituation("pet", enemyUnitid)) or 0
-			if evalThreat > allyThreat then
-				allyThreat = evalThreat
-				allyUnitid = "pet"
+			tempThreat = select(3, UnitDetailedThreatSituation("pet", enemyUnitid)) or 0
+			if tempThreat > friendlyThreatval then
+				friendlyThreatval = tempThreat
+				friendlyUnitid = "pet"
 			end
 		end
 
-		--[[
-		if playerIsTanking and allyThreat then
-			return 100 - tonumber(allyThreat or 0), true
-		elseif allyThreat and allyUnitid then
-			return 100 - playerThreat, false
-		end
-		--]]
-		-- [[
+		return friendlyUnitid, friendlyThreatval
+
+	end
+
+	local function GetRelativeThreat(enemyUnitid)		-- 'enemyUnitid' is a target/enemy
+		if not UnitExists(enemyUnitid) then return end
+		
+		local playerIsTanking, playerSituation, playerThreat = UnitDetailedThreatSituation("player", enemyUnitid)
+		if not playerThreat then return end
+
+		local friendlyUnitid, friendlyThreat = GetGroupThreatLeader(enemyUnitid)
+
 		-- Return the appropriate value
-		if playerThreat and allyThreat and allyUnitid then
+		if playerThreat and friendlyThreat and friendlyUnitid then
 			if playerThreat >= 100 then 	-- The enemy is attacking you. You are tanking. 	Returns: 1. Your threat, plus your lead over the next highest person, 2. Your Unitid (since you're tanking)
-				return tonumber(playerThreat + (100-allyThreat)), "player"
+				return tonumber(playerThreat + (100-friendlyThreat)), "player"
 			else 	-- The enemy is not attacking you.  Returns: 1. Your scaled threat percent, 2. Who is On Top
-				return tonumber(playerThreat), allyUnitid
+				return tonumber(playerThreat), friendlyUnitid
 			end
 		end
-		--]]
+
 	end
 
 	TidyPlatesContUtility.GetRelativeThreat = GetRelativeThreat
@@ -394,9 +515,57 @@ local function CreateRadioButtons(self, reference, parent, numberOfButtons, defa
 	return radioButtonSet
 end
 
-local function CreateSliderFrame(self, reference, parent, label, val, minval, maxval, step, mode)
+--local function CreateSliderFrame(self, reference, parent, label, val, minval, maxval, step, mode)
+--	local slider = CreateFrame("Slider", reference, parent, 'OptionsSliderTemplate')
+--	slider:SetWidth(100)
+--	slider:SetHeight(15)
+--	--
+--	slider:SetMinMaxValues(minval or 0, maxval or 1)
+--	slider:SetValueStep(step or .1)
+--	slider:SetValue(val or .5)
+--	slider:SetOrientation("HORIZONTAL")
+--	slider:Enable()
+--	-- Labels
+--	slider.Label = slider:CreateFontString(nil, 'ARTWORK', 'GameFontNormal')
+--	slider.Label:SetPoint("TOPLEFT", -5, 18)
+--	slider.Low = _G[reference.."Low"]
+--	slider.High = _G[reference.."High"]
+--	slider.Label:SetText(label or "")
+
+--	-- Value
+--	slider.Value = slider:CreateFontString(nil, 'ARTWORK', 'GameFontWhite')
+--	slider.Value:SetPoint("BOTTOM", 0, -10)
+--	slider.Value:SetWidth(50)
+
+--	--slider.Value
+--	if mode and mode == "ACTUAL" then
+--		slider.Value:SetText(tostring(ceil(val)))
+--		slider:SetScript("OnValueChanged", function()
+--			local v = tostring(ceil(slider:GetValue()-0.5))
+--			slider.Value:SetText(v)
+--		end)
+--		slider.Low:SetText(ceil((minval or 0)-0.5))
+--		slider.High:SetText(ceil((maxval or 1)-0.5))
+--		slider.isActual = true
+--	else
+--		slider.Value:SetText(tostring(ceil(100*(val or .5)-0.5)))
+--		slider:SetScript("OnValueChanged", function()
+--			slider.Value:SetText(tostring(ceil(100*slider:GetValue()-0.5)).."%")
+--		end)
+--		slider.Low:SetText(ceil((minval or 0)*100-0.5).."%")
+--		slider.High:SetText(ceil((maxval or 1)*100-0.5).."%")
+--		slider.isActual = false
+--	end
+
+--	--slider.tooltipText = "Slider"
+--	return slider
+--end
+
+local function CreateSliderFrame(self, reference, parent, label, val, minval, maxval, step, mode, width)
+	local value, multiplier, minimum, maximum, current
 	local slider = CreateFrame("Slider", reference, parent, 'OptionsSliderTemplate')
-	slider:SetWidth(100)
+
+	slider:SetWidth(width or 100)
 	slider:SetHeight(15)
 	--
 	slider:SetMinMaxValues(minval or 0, maxval or 1)
@@ -415,23 +584,31 @@ local function CreateSliderFrame(self, reference, parent, label, val, minval, ma
 	slider.Value = slider:CreateFontString(nil, 'ARTWORK', 'GameFontWhite')
 	slider.Value:SetPoint("BOTTOM", 0, -10)
 	slider.Value:SetWidth(50)
-	--slider.Value
-	if mode and mode == "ACTUAL" then
-		slider.Value:SetText(tostring(ceil(val)))
-		slider:SetScript("OnValueChanged", function()
-			local v = tostring(ceil(slider:GetValue()))
-			slider.Value:SetText(v)
-		end)
-		slider.Low:SetText(ceil(minval or 0))
-		slider.High:SetText(ceil(maxval or 1))
+
+	slider.isActual = (mode and mode == "ACTUAL")
+
+	if slider.isActual then
+		local multiplier = 1
+		if step < 1 and step >= .1 then multiplier = 10 elseif step < .1 then multiplier = 100 end
+		slider.ceil = function(v) return ceil(v*multiplier-.5)/multiplier end
+		minimum = minval or 0
+		maximum = maxval or 1
+		current = val or .5
 	else
-		slider.Value:SetText(tostring(ceil(100*(val or .5))))
-		slider:SetScript("OnValueChanged", function()
-			slider.Value:SetText(tostring(ceil(100*slider:GetValue())).."%")
-		end)
-		slider.Low:SetText(ceil((minval or 0)*100).."%")
-		slider.High:SetText(ceil((maxval or 1)*100).."%")
+		slider.ceil = function(v) return ceil(v*100-.5) end
+		minimum = tostring((minval or 0)*100).."%"
+		maximum = tostring((maxval or 1)*100).."%"
+		current = tostring(slider.ceil((val or .5))).."%"
 	end
+
+	slider.Low:SetText(minimum)
+	slider.High:SetText(maximum)
+	slider.Value:SetText(current)
+	slider:SetScript("OnValueChanged", function()
+		local ext = "%"
+		if slider.isActual then ext = "" end
+		slider.Value:SetText(tostring(slider.ceil(slider:GetValue())..ext))
+	end)
 
 	--slider.tooltipText = "Slider"
 	return slider
@@ -665,10 +842,10 @@ do
 		end
 	end
 
-	local function ShowColorPicker(frame)
+	local function ShowColorPicker(frame, onOkay)
 		local r,g,b,a = frame:GetBackdropColor()
 		workingFrame = frame
-		ColorPickerFrame.func, ColorPickerFrame.opacityFunc, ColorPickerFrame.cancelFunc = 	ChangeColor, ChangeColor, ChangeColor;
+		ColorPickerFrame.func, ColorPickerFrame.opacityFunc, ColorPickerFrame.cancelFunc = 	ChangeColor, function() if onOkay and not ColorPickerFrame:IsShown() then onOkay(RGBToHex(ColorPickerFrame:GetColorRGB())) end; ChangeColor() end, ChangeColor;
 		ColorPickerFrame.startingval  = {r,g,b,a}
 		ColorPickerFrame:SetColorRGB(r,g,b);
 		ColorPickerFrame.hasOpacity = true
@@ -678,7 +855,7 @@ do
 		ColorPickerFrame:Hide(); ColorPickerFrame:Show(); -- Need to activate the OnShow handler.
 	end
 
-	function CreateColorBox(self, reference, parent, label, r, g, b, a)
+	function CreateColorBox(self, reference, parent, label, onOkay, r, g, b, a)
 		local colorbox = CreateFrame("Button", reference, parent)
 		colorbox:SetWidth(24)
 		colorbox:SetHeight(24)
@@ -687,7 +864,7 @@ do
 												tile = false, tileSize = 16, edgeSize = 8,
 												insets = { left = 1, right = 1, top = 1, bottom = 1 }});
 		colorbox:SetBackdropColor(r, g, b, a);
-		colorbox:SetScript("OnClick",function() ShowColorPicker(colorbox) end)
+		colorbox:SetScript("OnClick",function() ShowColorPicker(colorbox, onOkay) end)
 		--
 		colorbox.Label = colorbox:CreateFontString(nil, 'ARTWORK', 'GameFontWhiteSmall')
 		colorbox.Label:SetPoint("TOPLEFT", colorbox, "TOPRIGHT", 4, -7)

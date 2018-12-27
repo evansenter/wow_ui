@@ -26,6 +26,13 @@ if NonLatinLocales[GetLocale()] == true then font = STANDARD_TEXT_FONT end
 local Theme = {}
 local StyleDefault = {}
 
+StyleDefault.hitbox = {
+	width = 130,
+	height = 30,
+	x = 0,
+	y = 6,
+}
+
 StyleDefault.highlight = {
 	texture =					ArtworkPath.."Neon_Highlight",
 }
@@ -178,7 +185,7 @@ StyleDefault.skullicon = {
 	texture = ArtworkPath.."Skull_Icon_White",
 	width = 13,
 	height = 13,
-	x = -32,
+	x = -44,
 	y = VerticalAdjustment + 5.5,
 	anchor = "CENTER",
 	show = true,
@@ -355,6 +362,7 @@ WidgetConfig.DebuffWidget = { anchor = "CENTER" , x = 15 ,y = VerticalAdjustment
 WidgetConfig.AbsorbWidget =	{ anchor="LEFT", x = 0 , y = VerticalAdjustment +1, w = 100, h = 12 }
 WidgetConfig.DebuffWidgetPlus = { anchor = "CENTER" , x = 15 ,y = VerticalAdjustment + 24 }
 WidgetConfig.QuestWidget = { anchor = "LEFT" , x = -12,y = VerticalAdjustment + 2}
+WidgetConfig.ThreatPercentageWidget = { anchor = "RIGHT" , x = 13,y = VerticalAdjustment + 9 }
 
 WidgetConfig._meta = true		-- tells the parser to ignore this table; ie. don't convert to "style" template
 Theme.WidgetConfig = WidgetConfig

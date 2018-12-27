@@ -7,7 +7,7 @@ local LocalVars = TidyPlatesContHubDefaults
 ------------------------------------------------------------------
 -- Color Definitions
 ------------------------------------------------------------------
-local RaidClassColors = RAID_CLASS_COLORS
+local RaidClassColors = CUSTOM_CLASS_COLORS or RAID_CLASS_COLORS
 
 local RaidIconColors = {
 	["STAR"] = {r = 251/255, g = 240/255, b = 85/255,},
@@ -31,6 +31,7 @@ local GetFriendlyThreat = TidyPlatesContUtility.GetFriendlyThreat
 local IsFriend = TidyPlatesContUtility.IsFriend
 local IsHealer = TidyPlatesContUtility.IsHealer
 local IsGuildmate = TidyPlatesContUtility.IsGuildmate
+local HexToRGB = TidyPlatesContUtility.HexToRGB
 
 local IsOffTanked = TidyPlatesContHubFunctions.IsOffTanked
 local IsTankingAuraActive = TidyPlatesContWidgets.IsPlayerTank
@@ -198,6 +199,42 @@ AddHubFunction(FriendlyBarFunctions, TidyPlatesContHubMenus.FriendlyBarModes, Co
 
 
 ------------------
+local function CustomColorDelegate(unit)
+	-- Functions is a bit messy because it attempts to use the order of items as a priority...
+	local color, aura, threshold, current, lowest
+	local health = (unit.health/unit.healthmax)*100
+
+	if TidyPlatesContWidgets.AuraCache then aura = TidyPlatesContWidgets.AuraCache[unit.unitid] end
+
+	local temp = {strsplit("\n", LocalVars.CustomColorList)}
+	for index=1, #temp do
+		local key = select(3, string.find(temp[index], "#%x+[%s%p]*(.*)"))
+		
+		if key then
+			--Custom Color by Unit Name
+			if not color and key == unit.name and unit.type ~= "PLAYER" then
+				color = HexToRGB(LocalVars.CustomColorLookup[unit.name]); break
+
+		--Custom Color by Buff/Debuff
+			elseif not color and aura and aura[key] then
+				color = HexToRGB(LocalVars.CustomColorLookup[key]); break
+
+		-- Custom Color by Unit Threshold
+			else
+				current = tonumber((strmatch(key, "(.*)(%%)")))
+				if current and (not lowest or lowest > current) and health <= current then
+					lowest = current
+					threshold = key
+				end
+				if threshold then color = HexToRGB(LocalVars.CustomColorLookup[threshold]) end
+			end
+		end
+	end
+
+	return color
+end
+
+
 local function HealthColorDelegate(unit)
 
 	local color, class
@@ -211,6 +248,9 @@ local function HealthColorDelegate(unit)
 	elseif unit.isTapped then
 		color = LocalVars.ColorTapped
 	end
+
+	-- Custom Color
+	if not color then color = CustomColorDelegate(unit) end
 
 	-- Color Mode / Color Spotlight
 	if not color then
@@ -244,7 +284,9 @@ end
 ------------------------------------------------------------------------------
 local function CastBarDelegate(unit)
 	local color, alpha
-	if unit.spellInterruptible then
+	if unit.interrupted then
+		color = LocalVars.ColorIntpellCast
+	elseif unit.spellInterruptible then
 		color = LocalVars.ColorNormalSpellCast
 	else color = LocalVars.ColorUnIntpellCast end
 
@@ -285,23 +327,23 @@ local function WarningBorderFunctionByEnemyHealer(unit)
 	end
 end
 
--- "By Threat (High) Damage"
-local function WarningBorderFunctionByThreatDamage(unit)
-	if InCombatLockdown and unit.reaction ~= "FRIENDLY" and unit.type == "NPC" then
-		if unit.threatValue > 0 then
-			return ColorFunctionDamage(unit)
-		end
-	end
-end
+---- "By Threat (High) Damage"
+--local function WarningBorderFunctionByThreatDamage(unit)
+--	if InCombatLockdown and unit.reaction ~= "FRIENDLY" and unit.type == "NPC" then
+--		if unit.threatValue > 0 then
+--			return ColorFunctionDamage(unit)
+--		end
+--	end
+--end
 
--- "By Threat (Low) Tank"
-local function WarningBorderFunctionByThreatTank(unit)
-	if InCombatLockdown() and unit.reaction ~= "FRIENDLY" and unit.type == "NPC" then
-		if unit.threatValue < 3 then
-			if IsOffTanked(unit) then return else	return ColorFunctionRawTank(unit) end
-		end
-	end
-end
+---- "By Threat (Low) Tank"
+--local function WarningBorderFunctionByThreatTank(unit)
+--	if InCombatLockdown() and unit.reaction ~= "FRIENDLY" and unit.type == "NPC" then
+--		if unit.threatValue < 3 then
+--			if IsOffTanked(unit) then return else	return ColorFunctionRawTank(unit) end
+--		end
+--	end
+--end
 
 
 -- Warning Glow (Auto Detect)
@@ -311,7 +353,7 @@ local function WarningBorderFunctionByThreat(unit)
 
 		if (LocalVars.ThreatWarningMode == "Auto" and IsTankingAuraActive())
 			or LocalVars.ThreatWarningMode == "Tank" then
-				if IsOffTanked(unit) then return
+				if not unit.isInCombat or IsOffTanked(unit) then return
 				elseif unit.threatValue == 2 then return LocalVars.ColorThreatTransition
 				elseif unit.threatValue < 2 then return LocalVars.ColorThreatWarning	end
 		elseif unit.threatValue > 0 then return ColorFunctionDamage(unit) end

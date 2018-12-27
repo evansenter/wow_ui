@@ -49,9 +49,9 @@ HandyNotes_DraenorTreasures: disabled
 Hansgar_And_Franzok_Assist: enabled
 Hermes: disabled
 Hermes-UI: disabled
-Kui_Nameplates: disabled
-Kui_Nameplates_Core_Config: disabled
-Kui_Nameplates_Core: disabled
+Kui_Nameplates: enabled
+Kui_Nameplates_Core_Config: enabled
+Kui_Nameplates_Core: enabled
 Kui_Nameplates_Extras: disabled
 LibChatAnims: disabled
 LibStub: disabled

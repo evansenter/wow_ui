@@ -1,87 +1,5 @@
 
 SubSpecStorage = {
-	["Mage Frost"] = {
-		{
-			["name"] = "ST",
-			["data"] = {
-				{
-					["id"] = 22460,
-					["name"] = "Lonely Winter",
-					["column"] = 2,
-				}, -- [1]
-				{
-					["id"] = 22903,
-					["name"] = "Ice Floes",
-					["column"] = 2,
-				}, -- [2]
-				{
-					["id"] = 22447,
-					["name"] = "Incanter's Flow",
-					["column"] = 3,
-				}, -- [3]
-				{
-					["id"] = 22469,
-					["name"] = "Splitting Ice",
-					["column"] = 3,
-				}, -- [4]
-				{
-					["id"] = 22471,
-					["name"] = "Ice Ward",
-					["column"] = 3,
-				}, -- [5]
-				{
-					["id"] = 22449,
-					["name"] = "Unstable Magic",
-					["column"] = 2,
-				}, -- [6]
-				{
-					["id"] = 21632,
-					["name"] = "Thermal Void",
-					["column"] = 1,
-				}, -- [7]
-			},
-		}, -- [1]
-		{
-			["name"] = "AoE",
-			["data"] = {
-				{
-					["id"] = 22460,
-					["name"] = "Lonely Winter",
-					["column"] = 2,
-				}, -- [1]
-				{
-					["id"] = 22903,
-					["name"] = "Ice Floes",
-					["column"] = 2,
-				}, -- [2]
-				{
-					["id"] = 22447,
-					["name"] = "Incanter's Flow",
-					["column"] = 3,
-				}, -- [3]
-				{
-					["id"] = 22469,
-					["name"] = "Splitting Ice",
-					["column"] = 3,
-				}, -- [4]
-				{
-					["id"] = 22471,
-					["name"] = "Ice Ward",
-					["column"] = 3,
-				}, -- [5]
-				{
-					["id"] = 22473,
-					["name"] = "Arctic Gale",
-					["column"] = 3,
-				}, -- [6]
-				{
-					["id"] = 21632,
-					["name"] = "Thermal Void",
-					["column"] = 1,
-				}, -- [7]
-			},
-		}, -- [2]
-	},
 	["Monk Windwalker"] = {
 		{
 			["name"] = "ST",
@@ -92,9 +10,9 @@ SubSpecStorage = {
 					["column"] = 3,
 				}, -- [1]
 				{
-					["id"] = 19302,
-					["name"] = "Tiger's Lust",
-					["column"] = 3,
+					["id"] = 19818,
+					["name"] = "Chi Torpedo",
+					["column"] = 2,
 				}, -- [2]
 				{
 					["id"] = 19771,
@@ -160,6 +78,292 @@ SubSpecStorage = {
 					["id"] = 22105,
 					["name"] = "Whirling Dragon Punch",
 					["column"] = 2,
+				}, -- [7]
+			},
+		}, -- [2]
+	},
+	["Priest Discipline"] = {
+		{
+			["name"] = "Raiding",
+			["data"] = {
+				{
+					["id"] = 22313,
+					["name"] = "Twist of Fate",
+					["column"] = 2,
+				}, -- [1]
+				{
+					["id"] = 19758,
+					["name"] = "Angelic Feather",
+					["column"] = 3,
+				}, -- [2]
+				{
+					["id"] = 19755,
+					["name"] = "Power Word: Solace",
+					["column"] = 3,
+				}, -- [3]
+				{
+					["id"] = 19761,
+					["name"] = "Shining Force",
+					["column"] = 3,
+				}, -- [4]
+				{
+					["id"] = 22330,
+					["name"] = "Sins of the Many",
+					["column"] = 1,
+				}, -- [5]
+				{
+					["id"] = 19763,
+					["name"] = "Halo",
+					["column"] = 3,
+				}, -- [6]
+				{
+					["id"] = 22976,
+					["name"] = "Evangelism",
+					["column"] = 3,
+				}, -- [7]
+			},
+		}, -- [1]
+		{
+			["name"] = "Dungeons",
+			["data"] = {
+				{
+					["id"] = 22313,
+					["name"] = "Twist of Fate",
+					["column"] = 2,
+				}, -- [1]
+				{
+					["id"] = 19758,
+					["name"] = "Angelic Feather",
+					["column"] = 3,
+				}, -- [2]
+				{
+					["id"] = 22094,
+					["name"] = "Mindbender",
+					["column"] = 2,
+				}, -- [3]
+				{
+					["id"] = 19761,
+					["name"] = "Shining Force",
+					["column"] = 3,
+				}, -- [4]
+				{
+					["id"] = 19766,
+					["name"] = "Shadow Covenant",
+					["column"] = 3,
+				}, -- [5]
+				{
+					["id"] = 19760,
+					["name"] = "Divine Star",
+					["column"] = 2,
+				}, -- [6]
+				{
+					["id"] = 22976,
+					["name"] = "Evangelism",
+					["column"] = 3,
+				}, -- [7]
+			},
+		}, -- [2]
+		{
+			["name"] = "Questing",
+			["data"] = {
+				{
+					["id"] = 22313,
+					["name"] = "Twist of Fate",
+					["column"] = 2,
+				}, -- [1]
+				{
+					["id"] = 19758,
+					["name"] = "Angelic Feather",
+					["column"] = 3,
+				}, -- [2]
+				{
+					["id"] = 22094,
+					["name"] = "Mindbender",
+					["column"] = 2,
+				}, -- [3]
+				{
+					["id"] = 19761,
+					["name"] = "Shining Force",
+					["column"] = 3,
+				}, -- [4]
+				{
+					["id"] = 22330,
+					["name"] = "Sins of the Many",
+					["column"] = 1,
+				}, -- [5]
+				{
+					["id"] = 19760,
+					["name"] = "Divine Star",
+					["column"] = 2,
+				}, -- [6]
+				{
+					["id"] = 22976,
+					["name"] = "Evangelism",
+					["column"] = 3,
+				}, -- [7]
+			},
+		}, -- [3]
+	},
+	["Priest Shadow"] = {
+		{
+			["name"] = "ST",
+			["data"] = {
+				{
+					["id"] = 22328,
+					["name"] = "Fortress of the Mind",
+					["column"] = 1,
+				}, -- [1]
+				{
+					["id"] = 22315,
+					["name"] = "Body and Soul",
+					["column"] = 1,
+				}, -- [2]
+				{
+					["id"] = 23125,
+					["name"] = "Twist of Fate",
+					["column"] = 1,
+				}, -- [3]
+				{
+					["id"] = 23137,
+					["name"] = "Last Word",
+					["column"] = 1,
+				}, -- [4]
+				{
+					["id"] = 22311,
+					["name"] = "Shadow Word: Death",
+					["column"] = 2,
+				}, -- [5]
+				{
+					["id"] = 21719,
+					["name"] = "Mindbender",
+					["column"] = 2,
+				}, -- [6]
+				{
+					["id"] = 21978,
+					["name"] = "Dark Ascension",
+					["column"] = 2,
+				}, -- [7]
+			},
+		}, -- [1]
+		{
+			["name"] = "AoE / Questing",
+			["data"] = {
+				{
+					["id"] = 22314,
+					["name"] = "Shadow Word: Void",
+					["column"] = 3,
+				}, -- [1]
+				{
+					["id"] = 22315,
+					["name"] = "Body and Soul",
+					["column"] = 1,
+				}, -- [2]
+				{
+					["id"] = 23126,
+					["name"] = "Misery",
+					["column"] = 2,
+				}, -- [3]
+				{
+					["id"] = 21752,
+					["name"] = "Psychic Horror",
+					["column"] = 3,
+				}, -- [4]
+				{
+					["id"] = 21755,
+					["name"] = "Shadow Crash",
+					["column"] = 3,
+				}, -- [5]
+				{
+					["id"] = 21719,
+					["name"] = "Mindbender",
+					["column"] = 2,
+				}, -- [6]
+				{
+					["id"] = 21978,
+					["name"] = "Dark Ascension",
+					["column"] = 2,
+				}, -- [7]
+			},
+		}, -- [2]
+	},
+	["Monk Brewmaster"] = {
+		{
+			["name"] = "ST",
+			["data"] = {
+				{
+					["id"] = 23106,
+					["name"] = "Eye of the Tiger",
+					["column"] = 1,
+				}, -- [1]
+				{
+					["id"] = 19302,
+					["name"] = "Tiger's Lust",
+					["column"] = 3,
+				}, -- [2]
+				{
+					["id"] = 19992,
+					["name"] = "Black Ox Brew",
+					["column"] = 3,
+				}, -- [3]
+				{
+					["id"] = 19994,
+					["name"] = "Summon Black Ox Statue",
+					["column"] = 2,
+				}, -- [4]
+				{
+					["id"] = 20174,
+					["name"] = "Bob and Weave",
+					["column"] = 1,
+				}, -- [5]
+				{
+					["id"] = 22103,
+					["name"] = "Invoke Niuzao, the Black Ox",
+					["column"] = 3,
+				}, -- [6]
+				{
+					["id"] = 22106,
+					["name"] = "High Tolerance",
+					["column"] = 1,
+				}, -- [7]
+			},
+		}, -- [1]
+		{
+			["name"] = "Mythic+",
+			["data"] = {
+				{
+					["id"] = 23106,
+					["name"] = "Eye of the Tiger",
+					["column"] = 1,
+				}, -- [1]
+				{
+					["id"] = 19818,
+					["name"] = "Chi Torpedo",
+					["column"] = 2,
+				}, -- [2]
+				{
+					["id"] = 19992,
+					["name"] = "Black Ox Brew",
+					["column"] = 3,
+				}, -- [3]
+				{
+					["id"] = 19995,
+					["name"] = "Ring of Peace",
+					["column"] = 3,
+				}, -- [4]
+				{
+					["id"] = 20174,
+					["name"] = "Bob and Weave",
+					["column"] = 1,
+				}, -- [5]
+				{
+					["id"] = 20184,
+					["name"] = "Rushing Jade Wind",
+					["column"] = 2,
+				}, -- [6]
+				{
+					["id"] = 22106,
+					["name"] = "High Tolerance",
+					["column"] = 1,
 				}, -- [7]
 			},
 		}, -- [2]
@@ -285,130 +489,6 @@ SubSpecStorage = {
 				}, -- [7]
 			},
 		}, -- [3]
-	},
-	["Monk Brewmaster"] = {
-		{
-			["name"] = "ST",
-			["data"] = {
-				{
-					["id"] = 23106,
-					["name"] = "Eye of the Tiger",
-					["column"] = 1,
-				}, -- [1]
-				{
-					["id"] = 19302,
-					["name"] = "Tiger's Lust",
-					["column"] = 3,
-				}, -- [2]
-				{
-					["id"] = 19992,
-					["name"] = "Black Ox Brew",
-					["column"] = 3,
-				}, -- [3]
-				{
-					["id"] = 19994,
-					["name"] = "Summon Black Ox Statue",
-					["column"] = 2,
-				}, -- [4]
-				{
-					["id"] = 20174,
-					["name"] = "Bob and Weave",
-					["column"] = 1,
-				}, -- [5]
-				{
-					["id"] = 22103,
-					["name"] = "Invoke Niuzao, the Black Ox",
-					["column"] = 3,
-				}, -- [6]
-				{
-					["id"] = 22106,
-					["name"] = "High Tolerance",
-					["column"] = 1,
-				}, -- [7]
-			},
-		}, -- [1]
-	},
-	["Priest Shadow"] = {
-		{
-			["name"] = "ST",
-			["data"] = {
-				{
-					["id"] = 22328,
-					["name"] = "Fortress of the Mind",
-					["column"] = 1,
-				}, -- [1]
-				{
-					["id"] = 22315,
-					["name"] = "Body and Soul",
-					["column"] = 1,
-				}, -- [2]
-				{
-					["id"] = 23125,
-					["name"] = "Twist of Fate",
-					["column"] = 1,
-				}, -- [3]
-				{
-					["id"] = 23137,
-					["name"] = "Last Word",
-					["column"] = 1,
-				}, -- [4]
-				{
-					["id"] = 22311,
-					["name"] = "Shadow Word: Death",
-					["column"] = 2,
-				}, -- [5]
-				{
-					["id"] = 21719,
-					["name"] = "Mindbender",
-					["column"] = 2,
-				}, -- [6]
-				{
-					["id"] = 21978,
-					["name"] = "Dark Ascension",
-					["column"] = 2,
-				}, -- [7]
-			},
-		}, -- [1]
-		{
-			["name"] = "AoE / Questing",
-			["data"] = {
-				{
-					["id"] = 22314,
-					["name"] = "Shadow Word: Void",
-					["column"] = 3,
-				}, -- [1]
-				{
-					["id"] = 22315,
-					["name"] = "Body and Soul",
-					["column"] = 1,
-				}, -- [2]
-				{
-					["id"] = 23126,
-					["name"] = "Misery",
-					["column"] = 2,
-				}, -- [3]
-				{
-					["id"] = 21752,
-					["name"] = "Psychic Horror",
-					["column"] = 3,
-				}, -- [4]
-				{
-					["id"] = 21755,
-					["name"] = "Shadow Crash",
-					["column"] = 3,
-				}, -- [5]
-				{
-					["id"] = 21719,
-					["name"] = "Mindbender",
-					["column"] = 2,
-				}, -- [6]
-				{
-					["id"] = 21978,
-					["name"] = "Dark Ascension",
-					["column"] = 2,
-				}, -- [7]
-			},
-		}, -- [2]
 	},
 	["Mage Fire"] = {
 		{
@@ -614,126 +694,86 @@ SubSpecStorage = {
 			},
 		}, -- [2]
 	},
-	["Priest Discipline"] = {
+	["Mage Frost"] = {
 		{
-			["name"] = "Raiding",
+			["name"] = "ST",
 			["data"] = {
 				{
-					["id"] = 22313,
-					["name"] = "Twist of Fate",
+					["id"] = 22460,
+					["name"] = "Lonely Winter",
 					["column"] = 2,
 				}, -- [1]
 				{
-					["id"] = 19758,
-					["name"] = "Angelic Feather",
-					["column"] = 3,
+					["id"] = 22903,
+					["name"] = "Ice Floes",
+					["column"] = 2,
 				}, -- [2]
 				{
-					["id"] = 19755,
-					["name"] = "Power Word: Solace",
+					["id"] = 22447,
+					["name"] = "Incanter's Flow",
 					["column"] = 3,
 				}, -- [3]
 				{
-					["id"] = 19761,
-					["name"] = "Shining Force",
+					["id"] = 22469,
+					["name"] = "Splitting Ice",
 					["column"] = 3,
 				}, -- [4]
 				{
-					["id"] = 22330,
-					["name"] = "Sins of the Many",
-					["column"] = 1,
+					["id"] = 22471,
+					["name"] = "Ice Ward",
+					["column"] = 3,
 				}, -- [5]
 				{
-					["id"] = 19763,
-					["name"] = "Halo",
-					["column"] = 3,
+					["id"] = 22449,
+					["name"] = "Unstable Magic",
+					["column"] = 2,
 				}, -- [6]
 				{
-					["id"] = 22976,
-					["name"] = "Evangelism",
-					["column"] = 3,
+					["id"] = 21632,
+					["name"] = "Thermal Void",
+					["column"] = 1,
 				}, -- [7]
 			},
 		}, -- [1]
 		{
-			["name"] = "Dungeons",
+			["name"] = "AoE",
 			["data"] = {
 				{
-					["id"] = 22313,
-					["name"] = "Twist of Fate",
+					["id"] = 22460,
+					["name"] = "Lonely Winter",
 					["column"] = 2,
 				}, -- [1]
 				{
-					["id"] = 19758,
-					["name"] = "Angelic Feather",
-					["column"] = 3,
+					["id"] = 22903,
+					["name"] = "Ice Floes",
+					["column"] = 2,
 				}, -- [2]
 				{
-					["id"] = 22094,
-					["name"] = "Mindbender",
-					["column"] = 2,
+					["id"] = 22447,
+					["name"] = "Incanter's Flow",
+					["column"] = 3,
 				}, -- [3]
 				{
-					["id"] = 19761,
-					["name"] = "Shining Force",
+					["id"] = 22469,
+					["name"] = "Splitting Ice",
 					["column"] = 3,
 				}, -- [4]
 				{
-					["id"] = 19766,
-					["name"] = "Shadow Covenant",
+					["id"] = 22471,
+					["name"] = "Ice Ward",
 					["column"] = 3,
 				}, -- [5]
 				{
-					["id"] = 19760,
-					["name"] = "Divine Star",
-					["column"] = 2,
+					["id"] = 22473,
+					["name"] = "Arctic Gale",
+					["column"] = 3,
 				}, -- [6]
 				{
-					["id"] = 22976,
-					["name"] = "Evangelism",
-					["column"] = 3,
+					["id"] = 21632,
+					["name"] = "Thermal Void",
+					["column"] = 1,
 				}, -- [7]
 			},
 		}, -- [2]
-		{
-			["name"] = "Questing",
-			["data"] = {
-				{
-					["id"] = 22313,
-					["name"] = "Twist of Fate",
-					["column"] = 2,
-				}, -- [1]
-				{
-					["id"] = 19758,
-					["name"] = "Angelic Feather",
-					["column"] = 3,
-				}, -- [2]
-				{
-					["id"] = 22094,
-					["name"] = "Mindbender",
-					["column"] = 2,
-				}, -- [3]
-				{
-					["id"] = 19761,
-					["name"] = "Shining Force",
-					["column"] = 3,
-				}, -- [4]
-				{
-					["id"] = 22330,
-					["name"] = "Sins of the Many",
-					["column"] = 1,
-				}, -- [5]
-				{
-					["id"] = 19760,
-					["name"] = "Divine Star",
-					["column"] = 2,
-				}, -- [6]
-				{
-					["id"] = 22976,
-					["name"] = "Evangelism",
-					["column"] = 3,
-				}, -- [7]
-			},
-		}, -- [3]
 	},
 }
