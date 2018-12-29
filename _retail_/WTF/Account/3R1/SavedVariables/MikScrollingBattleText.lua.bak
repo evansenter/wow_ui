@@ -308,11 +308,6 @@ MSBTProfiles_SavedVars = {
 		},
 		["Default"] = {
 			["scrollAreas"] = {
-				["Static"] = {
-					["offsetY"] = 120,
-					["direction"] = "Up",
-					["scrollHeight"] = 100,
-				},
 				["Incoming"] = {
 					["stickyDirection"] = "Up",
 					["direction"] = "Up",
@@ -321,14 +316,19 @@ MSBTProfiles_SavedVars = {
 					["animationStyle"] = "Straight",
 					["stickyBehavior"] = "Normal",
 				},
+				["Notification"] = {
+					["offsetY"] = 250,
+				},
 				["Outgoing"] = {
 					["behavior"] = "MSBT_NORMAL",
 					["direction"] = "Up",
 					["offsetX"] = 250,
 					["animationStyle"] = "Straight",
 				},
-				["Notification"] = {
-					["offsetY"] = 250,
+				["Static"] = {
+					["offsetY"] = 120,
+					["direction"] = "Up",
+					["scrollHeight"] = 100,
 				},
 			},
 			["critFontName"] = "ABF",
@@ -556,7 +556,36 @@ MSBTProfiles_SavedVars = {
 			["critFontName"] = "Arial Narrow",
 			["enableBlizzardDamage"] = false,
 			["creationVersion"] = "5.7.125",
+			["overkill"] = {
+				["disabled"] = false,
+			},
 			["critFontSize"] = 20,
+			["normalFontAlpha"] = 75,
+			["soundsDisabled"] = true,
+			["enableBlizzardHealing"] = false,
+			["scrollAreas"] = {
+				["Outgoing"] = {
+					["behavior"] = "MSBT_NORMAL",
+					["direction"] = "Up",
+					["offsetX"] = 210,
+					["animationStyle"] = "Straight",
+				},
+				["Static"] = {
+					["offsetY"] = -200,
+				},
+				["Notification"] = {
+					["offsetY"] = 175,
+				},
+				["Incoming"] = {
+					["stickyDirection"] = "Up",
+					["direction"] = "Up",
+					["offsetX"] = -250,
+					["behavior"] = "MSBT_NORMAL",
+					["animationStyle"] = "Straight",
+					["stickyBehavior"] = "Normal",
+				},
+			},
+			["normalFontName"] = "Arial Narrow",
 			["events"] = {
 				["PET_INCOMING_SPELL_DAMAGE"] = {
 					["disabled"] = true,
@@ -575,13 +604,7 @@ MSBTProfiles_SavedVars = {
 				["OUTGOING_MISS"] = {
 					["disabled"] = true,
 				},
-				["PET_INCOMING_IMMUNE"] = {
-					["disabled"] = true,
-				},
 				["PET_OUTGOING_SPELL_DEFLECT"] = {
-					["disabled"] = true,
-				},
-				["PET_INCOMING_PARRY"] = {
 					["disabled"] = true,
 				},
 				["PET_INCOMING_SPELL_MISS"] = {
@@ -605,10 +628,7 @@ MSBTProfiles_SavedVars = {
 				["INCOMING_SPELL_MISS"] = {
 					["disabled"] = true,
 				},
-				["PET_OUTGOING_EVADE"] = {
-					["disabled"] = true,
-				},
-				["PET_INCOMING_SPELL_DODGE"] = {
+				["PET_OUTGOING_DAMAGE"] = {
 					["disabled"] = true,
 				},
 				["PET_OUTGOING_BLOCK"] = {
@@ -626,19 +646,10 @@ MSBTProfiles_SavedVars = {
 				["PET_OUTGOING_SPELL_RESIST"] = {
 					["disabled"] = true,
 				},
-				["PET_OUTGOING_SPELL_IMMUNE"] = {
-					["disabled"] = true,
-				},
-				["PET_INCOMING_SPELL_IMMUNE"] = {
-					["disabled"] = true,
-				},
 				["INCOMING_ABSORB"] = {
 					["disabled"] = true,
 				},
 				["PET_INCOMING_SPELL_DOT"] = {
-					["disabled"] = true,
-				},
-				["PET_OUTGOING_SPELL_PARRY"] = {
 					["disabled"] = true,
 				},
 				["INCOMING_DODGE"] = {
@@ -662,9 +673,6 @@ MSBTProfiles_SavedVars = {
 				["PET_OUTGOING_DEFLECT"] = {
 					["disabled"] = true,
 				},
-				["PET_OUTGOING_SPELL_BLOCK"] = {
-					["disabled"] = true,
-				},
 				["PET_OUTGOING_SPELL_DAMAGE_SHIELD"] = {
 					["disabled"] = true,
 				},
@@ -680,22 +688,7 @@ MSBTProfiles_SavedVars = {
 				["PET_OUTGOING_HOT"] = {
 					["disabled"] = true,
 				},
-				["PET_INCOMING_DODGE"] = {
-					["disabled"] = true,
-				},
-				["NOTIFICATION_PET_COOLDOWN"] = {
-					["disabled"] = true,
-				},
 				["OUTGOING_SPELL_DAMAGE"] = {
-					["disabled"] = true,
-				},
-				["PET_OUTGOING_SPELL_DODGE"] = {
-					["disabled"] = true,
-				},
-				["PET_INCOMING_ABSORB"] = {
-					["disabled"] = true,
-				},
-				["PET_OUTGOING_DAMAGE"] = {
 					["disabled"] = true,
 				},
 				["OUTGOING_DAMAGE"] = {
@@ -709,7 +702,31 @@ MSBTProfiles_SavedVars = {
 					["colorG"] = 0.501960784313726,
 					["colorB"] = 0,
 				},
-				["PET_OUTGOING_DODGE"] = {
+				["PET_INCOMING_SPELL_RESIST"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_EXPERIENCE_GAIN"] = {
+					["disabled"] = false,
+				},
+				["NOTIFICATION_PET_COOLDOWN"] = {
+					["disabled"] = true,
+				},
+				["OUTGOING_ABSORB"] = {
+					["disabled"] = true,
+				},
+				["PET_OUTGOING_MISS"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_DAMAGE"] = {
+					["disabled"] = true,
+				},
+				["PET_INCOMING_ABSORB"] = {
+					["disabled"] = true,
+				},
+				["NOTIFICATION_NPC_KILLING_BLOW"] = {
+					["disabled"] = false,
+				},
+				["INCOMING_SPELL_BLOCK"] = {
 					["disabled"] = true,
 				},
 				["OUTGOING_SPELL_DEFLECT"] = {
@@ -718,55 +735,28 @@ MSBTProfiles_SavedVars = {
 				["INCOMING_SPELL_RESIST"] = {
 					["disabled"] = true,
 				},
-				["PET_OUTGOING_MISS"] = {
-					["disabled"] = true,
-				},
-				["OUTGOING_ABSORB"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_SPELL_DAMAGE_SHIELD"] = {
-					["disabled"] = true,
-				},
-				["PET_INCOMING_DAMAGE"] = {
-					["disabled"] = true,
-				},
-				["OUTGOING_SPELL_REFLECT"] = {
-					["disabled"] = true,
-				},
-				["INCOMING_SPELL_BLOCK"] = {
-					["disabled"] = true,
-				},
-				["PET_OUTGOING_DISPEL"] = {
-					["disabled"] = true,
-				},
-				["PET_OUTGOING_IMMUNE"] = {
-					["disabled"] = true,
-				},
-				["PET_INCOMING_SPELL_ABSORB"] = {
-					["disabled"] = true,
-				},
 				["OUTGOING_SPELL_DAMAGE_CRIT"] = {
 					["fontSize"] = 32,
 				},
 				["PET_OUTGOING_SPELL_DOT"] = {
 					["disabled"] = true,
 				},
-				["PET_INCOMING_SPELL_RESIST"] = {
+				["INCOMING_SPELL_DAMAGE_SHIELD"] = {
 					["disabled"] = true,
 				},
-				["PET_INCOMING_SPELL_BLOCK"] = {
+				["OUTGOING_SPELL_REFLECT"] = {
 					["disabled"] = true,
 				},
 				["INCOMING_MISS"] = {
 					["disabled"] = true,
 				},
-				["OUTGOING_SPELL_BLOCK"] = {
+				["PET_INCOMING_SPELL_ABSORB"] = {
 					["disabled"] = true,
 				},
-				["INCOMING_HEAL_CRIT"] = {
-					["fontSize"] = false,
+				["OUTGOING_SPELL_RESIST"] = {
+					["disabled"] = true,
 				},
-				["OUTGOING_SPELL_MISS"] = {
+				["INCOMING_HOT"] = {
 					["disabled"] = true,
 				},
 				["OUTGOING_SPELL_INTERRUPT"] = {
@@ -781,13 +771,13 @@ MSBTProfiles_SavedVars = {
 				["INCOMING_SPELL_INTERRUPT"] = {
 					["disabled"] = true,
 				},
-				["INCOMING_HOT"] = {
+				["PET_INCOMING_SPELL_BLOCK"] = {
 					["disabled"] = true,
 				},
-				["INCOMING_SPELL_DOT"] = {
+				["OUTGOING_SPELL_BLOCK"] = {
 					["disabled"] = true,
 				},
-				["PET_INCOMING_SPELL_PARRY"] = {
+				["OUTGOING_SPELL_MISS"] = {
 					["disabled"] = true,
 				},
 				["OUTGOING_HOT"] = {
@@ -796,10 +786,10 @@ MSBTProfiles_SavedVars = {
 				["OUTGOING_BLOCK"] = {
 					["disabled"] = true,
 				},
-				["OUTGOING_DISPEL"] = {
-					["disabled"] = true,
+				["INCOMING_HEAL_CRIT"] = {
+					["fontSize"] = false,
 				},
-				["INCOMING_DAMAGE"] = {
+				["INCOMING_SPELL_DOT"] = {
 					["disabled"] = true,
 				},
 				["OUTGOING_SPELL_DAMAGE_SHIELD"] = {
@@ -814,7 +804,7 @@ MSBTProfiles_SavedVars = {
 				["OUTGOING_DEFLECT"] = {
 					["disabled"] = true,
 				},
-				["PET_OUTGOING_PARRY"] = {
+				["INCOMING_DAMAGE"] = {
 					["disabled"] = true,
 				},
 				["PET_INCOMING_HOT"] = {
@@ -826,7 +816,7 @@ MSBTProfiles_SavedVars = {
 				["OUTGOING_SPELL_DOT"] = {
 					["disabled"] = true,
 				},
-				["PET_OUTGOING_SPELL_EVADE"] = {
+				["PET_OUTGOING_SPELL_BLOCK"] = {
 					["disabled"] = true,
 				},
 				["INCOMING_PARRY"] = {
@@ -834,28 +824,6 @@ MSBTProfiles_SavedVars = {
 					["colorR"] = 1,
 					["colorG"] = 1,
 					["fontSize"] = 26,
-				},
-			},
-			["enableBlizzardHealing"] = false,
-			["normalFontAlpha"] = 75,
-			["normalFontName"] = "Arial Narrow",
-			["scrollAreas"] = {
-				["Incoming"] = {
-					["stickyDirection"] = "Up",
-					["direction"] = "Up",
-					["offsetX"] = -250,
-					["stickyBehavior"] = "Normal",
-					["animationStyle"] = "Straight",
-					["behavior"] = "MSBT_NORMAL",
-				},
-				["Outgoing"] = {
-					["behavior"] = "MSBT_NORMAL",
-					["direction"] = "Up",
-					["offsetX"] = 210,
-					["animationStyle"] = "Straight",
-				},
-				["Notification"] = {
-					["offsetY"] = 175,
 				},
 			},
 			["normalFontSize"] = 14,

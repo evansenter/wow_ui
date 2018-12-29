@@ -1,87 +1,5 @@
 
 SubSpecStorage = {
-	["Monk Windwalker"] = {
-		{
-			["name"] = "ST",
-			["data"] = {
-				{
-					["id"] = 20185,
-					["name"] = "Chi Burst",
-					["column"] = 3,
-				}, -- [1]
-				{
-					["id"] = 19818,
-					["name"] = "Chi Torpedo",
-					["column"] = 2,
-				}, -- [2]
-				{
-					["id"] = 19771,
-					["name"] = "Fist of the White Tiger",
-					["column"] = 2,
-				}, -- [3]
-				{
-					["id"] = 19995,
-					["name"] = "Ring of Peace",
-					["column"] = 3,
-				}, -- [4]
-				{
-					["id"] = 20175,
-					["name"] = "Dampen Harm",
-					["column"] = 3,
-				}, -- [5]
-				{
-					["id"] = 22102,
-					["name"] = "Invoke Xuen, the White Tiger",
-					["column"] = 3,
-				}, -- [6]
-				{
-					["id"] = 22105,
-					["name"] = "Whirling Dragon Punch",
-					["column"] = 2,
-				}, -- [7]
-			},
-		}, -- [1]
-		{
-			["name"] = "AoE",
-			["data"] = {
-				{
-					["id"] = 20185,
-					["name"] = "Chi Burst",
-					["column"] = 3,
-				}, -- [1]
-				{
-					["id"] = 19302,
-					["name"] = "Tiger's Lust",
-					["column"] = 3,
-				}, -- [2]
-				{
-					["id"] = 19771,
-					["name"] = "Fist of the White Tiger",
-					["column"] = 2,
-				}, -- [3]
-				{
-					["id"] = 23364,
-					["name"] = "Good Karma",
-					["column"] = 2,
-				}, -- [4]
-				{
-					["id"] = 23258,
-					["name"] = "Inner Strength",
-					["column"] = 1,
-				}, -- [5]
-				{
-					["id"] = 23122,
-					["name"] = "Rushing Jade Wind",
-					["column"] = 2,
-				}, -- [6]
-				{
-					["id"] = 22105,
-					["name"] = "Whirling Dragon Punch",
-					["column"] = 2,
-				}, -- [7]
-			},
-		}, -- [2]
-	},
 	["Priest Discipline"] = {
 		{
 			["name"] = "Raiding",
@@ -203,6 +121,88 @@ SubSpecStorage = {
 				}, -- [7]
 			},
 		}, -- [3]
+	},
+	["Mage Frost"] = {
+		{
+			["name"] = "ST",
+			["data"] = {
+				{
+					["id"] = 22460,
+					["name"] = "Lonely Winter",
+					["column"] = 2,
+				}, -- [1]
+				{
+					["id"] = 22903,
+					["name"] = "Ice Floes",
+					["column"] = 2,
+				}, -- [2]
+				{
+					["id"] = 22447,
+					["name"] = "Incanter's Flow",
+					["column"] = 3,
+				}, -- [3]
+				{
+					["id"] = 22469,
+					["name"] = "Splitting Ice",
+					["column"] = 3,
+				}, -- [4]
+				{
+					["id"] = 22471,
+					["name"] = "Ice Ward",
+					["column"] = 3,
+				}, -- [5]
+				{
+					["id"] = 22449,
+					["name"] = "Unstable Magic",
+					["column"] = 2,
+				}, -- [6]
+				{
+					["id"] = 21632,
+					["name"] = "Thermal Void",
+					["column"] = 1,
+				}, -- [7]
+			},
+		}, -- [1]
+		{
+			["name"] = "AoE",
+			["data"] = {
+				{
+					["id"] = 22460,
+					["name"] = "Lonely Winter",
+					["column"] = 2,
+				}, -- [1]
+				{
+					["id"] = 22903,
+					["name"] = "Ice Floes",
+					["column"] = 2,
+				}, -- [2]
+				{
+					["id"] = 22447,
+					["name"] = "Incanter's Flow",
+					["column"] = 3,
+				}, -- [3]
+				{
+					["id"] = 22469,
+					["name"] = "Splitting Ice",
+					["column"] = 3,
+				}, -- [4]
+				{
+					["id"] = 22471,
+					["name"] = "Ice Ward",
+					["column"] = 3,
+				}, -- [5]
+				{
+					["id"] = 22473,
+					["name"] = "Arctic Gale",
+					["column"] = 3,
+				}, -- [6]
+				{
+					["id"] = 21632,
+					["name"] = "Thermal Void",
+					["column"] = 1,
+				}, -- [7]
+			},
+		}, -- [2]
 	},
 	["Monk Mistweaver"] = {
 		{
@@ -694,44 +694,44 @@ SubSpecStorage = {
 			},
 		}, -- [2]
 	},
-	["Mage Frost"] = {
+	["Monk Windwalker"] = {
 		{
 			["name"] = "ST",
 			["data"] = {
 				{
-					["id"] = 22460,
-					["name"] = "Lonely Winter",
-					["column"] = 2,
+					["id"] = 20185,
+					["name"] = "Chi Burst",
+					["column"] = 3,
 				}, -- [1]
 				{
-					["id"] = 22903,
-					["name"] = "Ice Floes",
+					["id"] = 19818,
+					["name"] = "Chi Torpedo",
 					["column"] = 2,
 				}, -- [2]
 				{
-					["id"] = 22447,
-					["name"] = "Incanter's Flow",
-					["column"] = 3,
+					["id"] = 19771,
+					["name"] = "Fist of the White Tiger",
+					["column"] = 2,
 				}, -- [3]
 				{
-					["id"] = 22469,
-					["name"] = "Splitting Ice",
+					["id"] = 19995,
+					["name"] = "Ring of Peace",
 					["column"] = 3,
 				}, -- [4]
 				{
-					["id"] = 22471,
-					["name"] = "Ice Ward",
+					["id"] = 20175,
+					["name"] = "Dampen Harm",
 					["column"] = 3,
 				}, -- [5]
 				{
-					["id"] = 22449,
-					["name"] = "Unstable Magic",
-					["column"] = 2,
+					["id"] = 22102,
+					["name"] = "Invoke Xuen, the White Tiger",
+					["column"] = 3,
 				}, -- [6]
 				{
-					["id"] = 21632,
-					["name"] = "Thermal Void",
-					["column"] = 1,
+					["id"] = 22105,
+					["name"] = "Whirling Dragon Punch",
+					["column"] = 2,
 				}, -- [7]
 			},
 		}, -- [1]
@@ -739,39 +739,39 @@ SubSpecStorage = {
 			["name"] = "AoE",
 			["data"] = {
 				{
-					["id"] = 22460,
-					["name"] = "Lonely Winter",
-					["column"] = 2,
+					["id"] = 20185,
+					["name"] = "Chi Burst",
+					["column"] = 3,
 				}, -- [1]
 				{
-					["id"] = 22903,
-					["name"] = "Ice Floes",
-					["column"] = 2,
+					["id"] = 19302,
+					["name"] = "Tiger's Lust",
+					["column"] = 3,
 				}, -- [2]
 				{
-					["id"] = 22447,
-					["name"] = "Incanter's Flow",
-					["column"] = 3,
+					["id"] = 19771,
+					["name"] = "Fist of the White Tiger",
+					["column"] = 2,
 				}, -- [3]
 				{
-					["id"] = 22469,
-					["name"] = "Splitting Ice",
-					["column"] = 3,
+					["id"] = 23364,
+					["name"] = "Good Karma",
+					["column"] = 2,
 				}, -- [4]
 				{
-					["id"] = 22471,
-					["name"] = "Ice Ward",
-					["column"] = 3,
+					["id"] = 23258,
+					["name"] = "Inner Strength",
+					["column"] = 1,
 				}, -- [5]
 				{
-					["id"] = 22473,
-					["name"] = "Arctic Gale",
-					["column"] = 3,
+					["id"] = 23122,
+					["name"] = "Rushing Jade Wind",
+					["column"] = 2,
 				}, -- [6]
 				{
-					["id"] = 21632,
-					["name"] = "Thermal Void",
-					["column"] = 1,
+					["id"] = 22105,
+					["name"] = "Whirling Dragon Punch",
+					["column"] = 2,
 				}, -- [7]
 			},
 		}, -- [2]

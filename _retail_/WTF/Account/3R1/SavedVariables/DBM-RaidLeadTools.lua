@@ -16,13 +16,14 @@ DBM_AutoInvite_Settings = {
 	["promote_names"] = {
 	},
 	["keywords"] = {
-		"owls", -- [1]
+		"invite", -- [1]
+		"inv", -- [2]
 	},
 	["friends"] = true,
-	["promote_rank"] = 3,
+	["promote_rank"] = 0,
 	["promote_all"] = false,
 	["other"] = false,
-	["lastaoerank"] = 5,
+	["lastaoerank"] = 0,
 	["guildmates"] = true,
 }
 DBM_DKP_System_Settings = {

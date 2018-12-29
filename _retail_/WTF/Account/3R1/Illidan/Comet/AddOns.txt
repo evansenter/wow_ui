@@ -103,7 +103,7 @@ Paste: disabled
 Malkorok: enabled
 _NPCScan.Overlay: disabled
 _NPCScan: disabled
-AddonUsage: enabled
+AddonUsage: disabled
 AngryAssignments: enabled
 epgp_lootmaster: disabled
 epgp_lootmaster_ml: disabled

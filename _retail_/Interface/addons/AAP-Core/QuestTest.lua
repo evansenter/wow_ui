@@ -334,6 +334,9 @@ function AAP.AddQuestNameFrame(CLi)
 		AAP.ZoneQuestOrder["OrderNameFS"][CLi]:SetTextColor(1, 1, 0)
 end
 function AAP.UpdateZoneQuestOrderList(AAPmod)
+	if (not AAPQuestNames) then
+		AAPQuestNames = {}
+	end
 	local CurStep = AAP1[AAP.Realm][AAP.Name][AAP.ActiveMap]
 	local steps
 	if (CurStep and AAP.ActiveMap and AAP.QuestStepList and AAP.QuestStepList[AAP.ActiveMap] and AAP.QuestStepList[AAP.ActiveMap][CurStep]) then
@@ -442,34 +445,37 @@ function AAP.UpdateZoneQuestOrderList(AAPmod)
 							if (Pos > 26) then
 								break
 							end
-							SubQuestId = SubQuestId + 1
-							if (not AAP.ZoneQuestOrder["Order1iD"][SubQuestId]) then
-								AAP.AddQuestIdFrame(SubQuestId)
-							end
-							AAP.ZoneQuestOrder["Order1iDFS"][SubQuestId]:SetText(theqid)
-							AAP.ZoneQuestOrder["Order1iDFS"][SubQuestId]:SetTextColor(1, 1, 0)
-							Pos = Pos + 1
-							AAP.ZoneQuestOrder["Order1iD"][SubQuestId]:SetPoint("TOPLEFT", AAP.ZoneQuestOrder, "TOPLEFT",65,-((16*Pos)-11))
-							AAP.ZoneQuestOrder["Order1iD"][SubQuestId]:Show()
-							if (AAPQuestNames[theqid] and AAPQuestNames[theqid] ~= 1) then
-								SubQuestName = SubQuestName + 1
-								if (not AAP.ZoneQuestOrder["OrderName"][SubQuestName]) then
-									AAP.AddQuestNameFrame(SubQuestName)
-									AAP.ZoneQuestOrder["OrderName"][SubQuestName]:SetPoint("TOPLEFT", AAP.ZoneQuestOrder, "TOPLEFT",120,-((16*Pos)-11))
-									AAP.ZoneQuestOrder["OrderName"][SubQuestName]:Show()
-									AAP.ZoneQuestOrder["OrderNameFS"][SubQuestName]:SetText(AAPQuestNames[theqid])
-									AAP.ZoneQuestOrder["OrderNameFS"][SubQuestName]:SetWidth(250)
-									AAP.ZoneQuestOrder["OrderNameFS"][SubQuestName]:SetWidth(AAP.ZoneQuestOrder["OrderNameFS"][SubQuestName]:GetStringWidth()+10)
-									AAP.ZoneQuestOrder["OrderName"][SubQuestName]:SetWidth(AAP.ZoneQuestOrder["OrderNameFS"][SubQuestName]:GetStringWidth()+10)
-									AAP.ZoneQuestOrder["OrderNameFS"][SubQuestName]:SetTextColor(1, 1, 0)
-								else
-									AAP.ZoneQuestOrder["OrderName"][SubQuestName]:SetPoint("TOPLEFT", AAP.ZoneQuestOrder, "TOPLEFT",120,-((16*Pos)-11))
-									AAP.ZoneQuestOrder["OrderName"][SubQuestName]:Show()
-									AAP.ZoneQuestOrder["OrderNameFS"][SubQuestName]:SetText(AAPQuestNames[theqid])
-									AAP.ZoneQuestOrder["OrderNameFS"][SubQuestName]:SetWidth(250)
-									AAP.ZoneQuestOrder["OrderNameFS"][SubQuestName]:SetWidth(AAP.ZoneQuestOrder["OrderNameFS"][SubQuestName]:GetStringWidth()+10)
-									AAP.ZoneQuestOrder["OrderName"][SubQuestName]:SetWidth(AAP.ZoneQuestOrder["OrderNameFS"][SubQuestName]:GetStringWidth()+10)
-									AAP.ZoneQuestOrder["OrderNameFS"][SubQuestName]:SetTextColor(1, 1, 0)
+							if (IsQuestFlaggedCompleted(theqid) or AAP.ActiveQuests[theqid]) then
+							else
+								SubQuestId = SubQuestId + 1
+								if (not AAP.ZoneQuestOrder["Order1iD"][SubQuestId]) then
+									AAP.AddQuestIdFrame(SubQuestId)
+								end
+								AAP.ZoneQuestOrder["Order1iDFS"][SubQuestId]:SetText(theqid)
+								AAP.ZoneQuestOrder["Order1iDFS"][SubQuestId]:SetTextColor(1, 1, 0)
+								Pos = Pos + 1
+								AAP.ZoneQuestOrder["Order1iD"][SubQuestId]:SetPoint("TOPLEFT", AAP.ZoneQuestOrder, "TOPLEFT",65,-((16*Pos)-11))
+								AAP.ZoneQuestOrder["Order1iD"][SubQuestId]:Show()
+								if (AAPQuestNames[theqid] and AAPQuestNames[theqid] ~= 1) then
+									SubQuestName = SubQuestName + 1
+									if (not AAP.ZoneQuestOrder["OrderName"][SubQuestName]) then
+										AAP.AddQuestNameFrame(SubQuestName)
+										AAP.ZoneQuestOrder["OrderName"][SubQuestName]:SetPoint("TOPLEFT", AAP.ZoneQuestOrder, "TOPLEFT",120,-((16*Pos)-11))
+										AAP.ZoneQuestOrder["OrderName"][SubQuestName]:Show()
+										AAP.ZoneQuestOrder["OrderNameFS"][SubQuestName]:SetText(AAPQuestNames[theqid])
+										AAP.ZoneQuestOrder["OrderNameFS"][SubQuestName]:SetWidth(250)
+										AAP.ZoneQuestOrder["OrderNameFS"][SubQuestName]:SetWidth(AAP.ZoneQuestOrder["OrderNameFS"][SubQuestName]:GetStringWidth()+10)
+										AAP.ZoneQuestOrder["OrderName"][SubQuestName]:SetWidth(AAP.ZoneQuestOrder["OrderNameFS"][SubQuestName]:GetStringWidth()+10)
+										AAP.ZoneQuestOrder["OrderNameFS"][SubQuestName]:SetTextColor(1, 1, 0)
+									else
+										AAP.ZoneQuestOrder["OrderName"][SubQuestName]:SetPoint("TOPLEFT", AAP.ZoneQuestOrder, "TOPLEFT",120,-((16*Pos)-11))
+										AAP.ZoneQuestOrder["OrderName"][SubQuestName]:Show()
+										AAP.ZoneQuestOrder["OrderNameFS"][SubQuestName]:SetText(AAPQuestNames[theqid])
+										AAP.ZoneQuestOrder["OrderNameFS"][SubQuestName]:SetWidth(250)
+										AAP.ZoneQuestOrder["OrderNameFS"][SubQuestName]:SetWidth(AAP.ZoneQuestOrder["OrderNameFS"][SubQuestName]:GetStringWidth()+10)
+										AAP.ZoneQuestOrder["OrderName"][SubQuestName]:SetWidth(AAP.ZoneQuestOrder["OrderNameFS"][SubQuestName]:GetStringWidth()+10)
+										AAP.ZoneQuestOrder["OrderNameFS"][SubQuestName]:SetTextColor(1, 1, 0)
+									end
 								end
 							end
 						end

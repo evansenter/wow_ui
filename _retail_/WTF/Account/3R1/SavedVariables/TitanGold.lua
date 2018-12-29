@@ -3,6 +3,6 @@ GoldSave = {
 	["Comet_Illidan::Horde"] = {
 		["show"] = true,
 		["name"] = "Comet",
-		["gold"] = 97681814,
+		["gold"] = 99692899,
 	},
 }

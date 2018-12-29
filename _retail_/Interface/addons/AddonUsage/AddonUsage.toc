@@ -1,0 +1,7 @@
+## Interface: 80000
+## Title: Addon Usage
+## Notes: Displays the memory and cpu usage of your addons
+## Author: Gello
+## Version 3.0.5
+## SavedVariables: AddonUsageSettings
+AddonUsage.xml

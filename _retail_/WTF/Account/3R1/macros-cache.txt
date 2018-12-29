@@ -69,10 +69,6 @@ VER 3 0000000000000034 "HS / GHS" "INV_Misc_QuestionMark"
 #showtooltip
 /use [nomod][mod:ctrl]Hearthstone;[mod:shift]Dalaran Hearthstone;[mod:alt]Flight Master's Whistle;
 END
-VER 3 0000000000000054 "Inoc. Trinket" "INV_Misc_QuestionMark"
-#showtooltip Inoculating Extract
-/use [@mouseover,help,nodead][]Inoculating Extract
-END
 VER 3 000000000000005C "LoF" "INV_Misc_QuestionMark"
 #showtooltip
 /use [target=mouseover,help,nodead][]Leap of Faith
@@ -172,10 +168,6 @@ END
 VER 3 0000000000000062 "ToD" "INV_Misc_QuestionMark"
 #showtooltip
 /use [nochanneling]Touch of Death
-END
-VER 3 0000000000000065 "Trinket" "INV_Misc_QuestionMark"
-#showtooltip
-/use [harm][@mouseovertarget,harm][]14
 END
 VER 3 000000000000006C "VT Shadow" "INV_Misc_QuestionMark"
 #showtooltip

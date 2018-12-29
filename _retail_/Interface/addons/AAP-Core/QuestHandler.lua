@@ -5,6 +5,7 @@ local AAP_AntiTaxiLoop = 0
 local Updateblock = 0
 local HBDP = LibStub("HereBeDragons-Pins-2.0")
 local HBD = LibStub("HereBeDragons-2.0")
+local AAPWhereToGo
 AAP.HBDP = HBDP
 AAP.HBD = HBD
 local AAP_BonusObj = {
@@ -261,6 +262,13 @@ AAP.DubbleMacro = {}
 AAP.ButtonList = {}
 AAP.SetButtonVar = nil
 AAP.ButtonVisual = nil
+local function AAP_SendGroup()
+	if (IsInGroup(LE_PARTY_CATEGORY_HOME) and AAP1[AAP.Realm][AAP.Name][AAP.ActiveMap] and (AAP.LastSent ~= AAP1[AAP.Realm][AAP.Name][AAP.ActiveMap]) and (IsInInstance() == false)) then
+	
+		C_ChatInfo.SendAddonMessage("AAPChat", AAP1[AAP.Realm][AAP.Name][AAP.ActiveMap], "PARTY");
+		AAP.LastSent = AAP1[AAP.Realm][AAP.Name][AAP.ActiveMap]
+	end
+end
 local function AAP_CheckZoneSteps()
 	if (AAP.ActiveMap and AAP1 and AAP1[AAP.Realm] and AAP1[AAP.Realm][AAP.Name] and AAP1[AAP.Realm][AAP.Name][AAP.ActiveMap] and AAP.QuestStepList and AAP.QuestStepList[AAP.ActiveMap] and IsInInstance() == false) then
 		if (not AAP1[AAP.Realm][AAP.Name]["CountedZoneSteps"]) then
@@ -406,6 +414,7 @@ local function AAP_PrintQStep()
 	if (AAP1["Debug"]) then
 		print("AAP_PrintQStep() Step:".. CurStep)
 	end
+	AAP_SendGroup()
 	if (AAP.SettingsOpen == 1) then
 		if (AAP1[AAP.Realm][AAP.Name]["Settings"]["ShowQList"] == 0) then
 			return
@@ -1007,6 +1016,15 @@ local function AAP_PrintQStep()
 			if (AAPExtralk == 98) then
 				AAP.QuestList.QuestFrames["FS"..LineNr]:SetText("** Talk to Ensign Ward")
 			end
+			if (AAPExtralk == 99) then
+				AAP.QuestList.QuestFrames["FS"..LineNr]:SetText("** talk to Bilgewater Rocket-jockey")
+			end
+			if (AAPExtralk == 100) then
+				AAP.QuestList.QuestFrames["FS"..LineNr]:SetText("** Loot Cages and deliver back to Subject Nine (Don't mount)")
+			end
+			if (AAPExtralk == 101) then
+				AAP.QuestList.QuestFrames["FS"..LineNr]:SetText("** Pull Handle and Follow Core (put out fires on Labgoblin)")
+			end
 			AAP.QuestList.QuestFrames["FS"..LineNr]["Button"]:Hide()
 			AAP.QuestList.QuestFrames[LineNr]:Show()
 			local aapwidth = AAP.QuestList.QuestFrames["FS"..LineNr]:GetStringWidth()
@@ -1114,7 +1132,7 @@ local function AAP_PrintQStep()
 			for h=1, getn(IdList) do
 				local theqid = IdList[h]
 				Total = Total + 1
-				if (not AAP.ActiveQuests[theqid]) then
+				if (not AAP.ActiveQuests[theqid] and IsQuestFlaggedCompleted(theqid) == false) then
 					NrLeft = NrLeft + 1
 				end
 				if (IsQuestFlaggedCompleted(theqid) or AAP.ActiveQuests[theqid]) then
@@ -1610,6 +1628,25 @@ local function AAP_PrintQStep()
 		if (AAP.ZoneQuestOrder:IsShown() == true) then
 			AAP.UpdateZoneQuestOrderList("LoadIn")
 		end
+	elseif (AAPWhereToGo and AAP1[AAP.Realm][AAP.Name]["Settings"]["ShowQList"] == 1) then
+		LineNr = LineNr + 1
+		AAP.QuestList.QuestFrames["FS"..LineNr]:SetText("** AAP: GoTo ".. AAPWhereToGo)
+		AAP.QuestList.QuestFrames[LineNr]:Show()
+		AAP.QuestList.QuestFrames["FS"..LineNr]["Button"]:Hide()
+		local aapwidth = AAP.QuestList.QuestFrames["FS"..LineNr]:GetStringWidth()
+		if (aapwidth and aapwidth > 400) then
+			AAP.QuestList.QuestFrames[LineNr]:SetWidth(aapwidth+10)
+		else
+			AAP.QuestList.QuestFrames[LineNr]:SetWidth(410)
+		end
+	end
+end
+function AAP.TrimPlayerServer(CLPName)
+	if (string.find(CLPName, "(.*)-(.*)")) then
+		local _, _, CL_First, CL_Rest = string.find(CLPName, "(.*)-(.*)")
+		return CL_First
+	else
+		return CLPName
 	end
 end
 function AAP.SetButton()
@@ -2274,41 +2311,18 @@ local function AAP_UpdateMapId()
 	if (AAP.Faction == "Alliance") then
 		AAP.ActiveMap = "A"..AAP.ActiveMap
 	end
-	if (AAP.ActiveMap == "A895") then
-		if ((AAP.ActiveQuests[47961] or IsQuestFlaggedCompleted(47961) == true) and not IsQuestFlaggedCompleted(48622)) then
-			AAP.ActiveMap = "A895-1"
-		elseif ((AAP.ActiveQuests[47962] or IsQuestFlaggedCompleted(47962) == true) and not IsQuestFlaggedCompleted(51490)) then
-			AAP.ActiveMap = "A895-2"
-		elseif ((AAP.ActiveQuests[47960] or IsQuestFlaggedCompleted(47960) == true) and not IsQuestFlaggedCompleted(50972)) then
-			AAP.ActiveMap = "A895-3"
-		end
-	end
-	if (AAP.ActiveMap == 862) then
-		if ((AAP.ActiveQuests[47514] or IsQuestFlaggedCompleted(47514) == true) and IsQuestFlaggedCompleted(50963) == false) then
-			AAP.ActiveMap = "862-3"
-		elseif ((AAP.ActiveQuests[47513] or IsQuestFlaggedCompleted(47513) == true) and IsQuestFlaggedCompleted(47315) == false) then
-			AAP.ActiveMap = "862-1"
-		elseif ((AAP.ActiveQuests[47512] or IsQuestFlaggedCompleted(47512) == true) and IsQuestFlaggedCompleted(47105) == false) then
-			AAP.ActiveMap = "862-2"
-		elseif (IsQuestFlaggedCompleted(47105) == true and IsQuestFlaggedCompleted(47315) == true and IsQuestFlaggedCompleted(50963) == true) then
-			AAP1[AAP.Realm][AAP.Name]["HordeD"] = 1
-		end
-	end
+
+
 	if ((AAP.ActiveMap == "A23" or AAP.ActiveMap == 23) and AAP.Class[3] == 6 and IsQuestFlaggedCompleted(13189) == false) then
 		AAP.ActiveMap = "DK23"
 	end
-	if (AAP.ActiveMap == 1 and (AAP.ActiveQuests[53372] or IsQuestFlaggedCompleted(53372) == true)) then
-		AAP.ActiveMap = "1-110"
-	end
-
-
-	
-
 
 
 
 	
-	
+
+
+	local AAPZoneActiveCheck = 0
 --------------------------------
 ---- Vanilla - Horde -----------
 	if (AAP.Faction == "Horde" and AAP.Level == 20) then
@@ -2316,16 +2330,19 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Vanilla") == false) then
 				LoadAddOn("AAP-Vanilla")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "1-MagharOrc"
 		elseif (AAP.ActiveMap == 1 and AAP.Race == "HighmountainTauren") then
 			if (IsAddOnLoaded("AAP-Vanilla") == false) then
 				LoadAddOn("AAP-Vanilla")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "1-HighmountainTauren"
 		elseif (AAP.ActiveMap == 1 and AAP.Race == "Nightborne") then
 			if (IsAddOnLoaded("AAP-Vanilla") == false) then
 				LoadAddOn("AAP-Vanilla")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "1-Nightborne"
 		end
 	end
@@ -2334,12 +2351,14 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Vanilla") == false) then
 				LoadAddOn("AAP-Vanilla")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "1-20-60"
 		end
 		if (AAP.ActiveMap == 76) then
 			if (IsAddOnLoaded("AAP-Vanilla") == false) then
 				LoadAddOn("AAP-Vanilla")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "76-20-60"
 		end
 		
@@ -2347,12 +2366,14 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Vanilla") == false) then
 				LoadAddOn("AAP-Vanilla")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "90-20Silverpine"
 		end
 		if (AAP.ActiveMap == 18) then
 			if (IsAddOnLoaded("AAP-Vanilla") == false) then
 				LoadAddOn("AAP-Vanilla")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "18-20Silverpine"
 		end
 	end
@@ -2361,6 +2382,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Vanilla") == false) then
 				LoadAddOn("AAP-Vanilla")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "22-20-63"
 			if (AAP.Level >	59) then
 				levelcheck = 1
@@ -2370,6 +2392,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Vanilla") == false) then
 				LoadAddOn("AAP-Vanilla")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "23-20-63"
 			if (AAP.Level >	59) then
 				levelcheck = 1
@@ -2379,6 +2402,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Vanilla") == false) then
 				LoadAddOn("AAP-Vanilla")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "217-20-63"
 			if (AAP.Level >	59) then
 				levelcheck = 1
@@ -2388,6 +2412,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Vanilla") == false) then
 				LoadAddOn("AAP-Vanilla")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "21-20-63"
 			if (AAP.Level >	59) then
 				levelcheck = 1
@@ -2397,6 +2422,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Vanilla") == false) then
 				LoadAddOn("AAP-Vanilla")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "25-20-63"
 			if (AAP.Level >	59) then
 				levelcheck = 1
@@ -2406,11 +2432,40 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Vanilla") == false) then
 				LoadAddOn("AAP-Vanilla")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "224-20-63"
 			if (AAP.Level >	59) then
 				levelcheck = 1
 			end
 		end
+	end
+	if (AAPZoneActiveCheck == 0 and IsInInstance() == false and AAP.Faction == "Horde" and AAP.Level > 19 and AAP.Level < 60) then
+		if (IsQuestFlaggedCompleted(14118) == false) then
+			AAPWhereToGo = "Orgrimmar"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(14258) == false) then
+			AAPWhereToGo = "Azshara"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(27290) == true and IsQuestFlaggedCompleted(27438) == false) then
+			AAPWhereToGo = "Ruins of Gilneas"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(27548) == false) then
+			AAPWhereToGo = "Silverpine Forest"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(28616) == false) then
+			AAPWhereToGo = "Hillsbrad Foothills"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(26955) == false) then
+			AAPWhereToGo = "Western Plaguelands"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(27527) == false) then
+			AAPWhereToGo = "Eastern Plaguelands"
+			AAP.BookingList["PrintQStep"] = 1
+		else
+			AAPWhereToGo = nil
+		end
+	elseif (AAPZoneActiveCheck == 1) then
+		AAPWhereToGo = nil
 	end
 --------------------------------
 ---- Vanilla - Alliance --------
@@ -2419,6 +2474,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Vanilla") == false) then
 				LoadAddOn("AAP-Vanilla")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A830-20"
 		end
 	end
@@ -2427,12 +2483,14 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Vanilla") == false) then
 				LoadAddOn("AAP-Vanilla")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A84-LF-20"
 		end
 		if (AAP.ActiveMap == "A37" and (IsQuestFlaggedCompleted(26504) == false) and (IsQuestFlaggedCompleted(26726) == false)) then
 			if (IsAddOnLoaded("AAP-Vanilla") == false) then
 				LoadAddOn("AAP-Vanilla")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A37-20"
 		end
 	end
@@ -2441,6 +2499,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Vanilla") == false) then
 				LoadAddOn("AAP-Vanilla")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A49-20-63"
 			if (AAP.Level >	59) then
 				levelcheck = 1
@@ -2450,6 +2509,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Vanilla") == false) then
 				LoadAddOn("AAP-Vanilla")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A47-20-63"
 			if (AAP.Level >	59) then
 				levelcheck = 1
@@ -2459,6 +2519,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Vanilla") == false) then
 				LoadAddOn("AAP-Vanilla")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A224-20-63"
 			if (AAP.Level >	59) then
 				levelcheck = 1
@@ -2468,6 +2529,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Vanilla") == false) then
 				LoadAddOn("AAP-Vanilla")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A22-20-63"
 			if (AAP.Level >	59) then
 				levelcheck = 1
@@ -2477,6 +2539,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Vanilla") == false) then
 				LoadAddOn("AAP-Vanilla")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A23-20-63"
 			if (AAP.Level >	59) then
 				levelcheck = 1
@@ -2486,6 +2549,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Vanilla") == false) then
 				LoadAddOn("AAP-Vanilla")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A48-20-63"
 			if (AAP.Level >	59) then
 				levelcheck = 1
@@ -2495,6 +2559,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Vanilla") == false) then
 				LoadAddOn("AAP-Vanilla")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A56-20-63"
 			if (AAP.Level >	59) then
 				levelcheck = 1
@@ -2504,11 +2569,39 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Vanilla") == false) then
 				LoadAddOn("AAP-Vanilla")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A14-20-63"
 			if (AAP.Level >	59) then
 				levelcheck = 1
 			end
 		end
+	end
+	if (AAPZoneActiveCheck == 0 and IsInInstance() == false and AAP.Faction == "Alliance" and AAP.Level > 19 and AAP.Level < 60) then
+		if (IsQuestFlaggedCompleted(26504) == false) then
+			AAPWhereToGo = "Stormwind"
+		elseif (IsQuestFlaggedCompleted(26726) == false) then
+			AAPWhereToGo = "Redridge Mountains"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(26727) == false) then
+			AAPWhereToGo = "Duskwood"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(28749) == false) then
+			AAPWhereToGo = "Northern Stranglethorn"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(26955) == false) then
+			AAPWhereToGo = "Western Plaguelands"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(26137) == false) then
+			AAPWhereToGo = "Loch Modan"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(26139) == false) then
+			AAPWhereToGo = "Wetlands"
+			AAP.BookingList["PrintQStep"] = 1
+		else
+			AAPWhereToGo = nil
+		end
+	elseif (AAPZoneActiveCheck == 1) then
+		AAPWhereToGo = nil
 	end
 --------------------------------
 ---- TBC - WotLK - Horde -------
@@ -2517,12 +2610,14 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-TBC-WotLK") == false) then
 				LoadAddOn("AAP-TBC-WotLK")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "1-60to80"
 		end
 		if (AAP.ActiveMap == 18) then
 			if (IsAddOnLoaded("AAP-TBC-WotLK") == false) then
 				LoadAddOn("AAP-TBC-WotLK")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "18-60-80"
 		end
 	end
@@ -2531,6 +2626,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-TBC-WotLK") == false) then
 				LoadAddOn("AAP-TBC-WotLK")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "114-60-83"
 			if (AAP.Level >	79) then
 				levelcheck80 = 1
@@ -2540,6 +2636,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-TBC-WotLK") == false) then
 				LoadAddOn("AAP-TBC-WotLK")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "127-60-83"
 			if (AAP.Level >	79) then
 				levelcheck80 = 1
@@ -2549,6 +2646,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-TBC-WotLK") == false) then
 				LoadAddOn("AAP-TBC-WotLK")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "115-60-83"
 			if (AAP.Level >	79) then
 				levelcheck80 = 1
@@ -2558,6 +2656,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-TBC-WotLK") == false) then
 				LoadAddOn("AAP-TBC-WotLK")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "116-60-83"
 			if (AAP.Level >	79) then
 				levelcheck80 = 1
@@ -2567,6 +2666,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-TBC-WotLK") == false) then
 				LoadAddOn("AAP-TBC-WotLK")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "121-60-83"
 			if (AAP.Level >	79) then
 				levelcheck80 = 1
@@ -2576,6 +2676,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-TBC-WotLK") == false) then
 				LoadAddOn("AAP-TBC-WotLK")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "100-60-83"
 			if (AAP.Level >	79) then
 				levelcheck80 = 1
@@ -2585,6 +2686,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-TBC-WotLK") == false) then
 				LoadAddOn("AAP-TBC-WotLK")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "102-60-83"
 			if (AAP.Level >	79) then
 				levelcheck80 = 1
@@ -2594,6 +2696,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-TBC-WotLK") == false) then
 				LoadAddOn("AAP-TBC-WotLK")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "108-60-83"
 			if (AAP.Level >	79) then
 				levelcheck80 = 1
@@ -2603,11 +2706,46 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-TBC-WotLK") == false) then
 				LoadAddOn("AAP-TBC-WotLK")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "107-60-83"
 			if (AAP.Level >	79) then
 				levelcheck80 = 1
 			end
 		end
+	end
+	if (AAPZoneActiveCheck == 0 and IsInInstance() == false and AAP.Faction == "Horde" and AAP.Level > 59 and AAP.Level < 80) then
+		if (IsQuestFlaggedCompleted(11585) == false) then
+			AAPWhereToGo = "Orgrimmar"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(12859) == true and IsQuestFlaggedCompleted(9785) == false) then
+			AAPWhereToGo = "Orgrimmar"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(11907) == false) then
+			AAPWhereToGo = "Borean Tundra"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(11991) == false) then
+			AAPWhereToGo = "Dragonblight"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(12802) == false) then
+			AAPWhereToGo = "Gryzzly Hills"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(12859) == false) then
+			AAPWhereToGo = "Zul'Drak"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(10096) == false) then
+			AAPWhereToGo = "Zangarmarsh"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(9888) == true and IsQuestFlaggedCompleted(9890) == false) then
+			AAPWhereToGo = "Terokkar Forest"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(9852) == false) then
+			AAPWhereToGo = "Nagrand"
+			AAP.BookingList["PrintQStep"] = 1
+		else
+			AAPWhereToGo = nil
+		end
+	elseif (AAPZoneActiveCheck == 1) then
+		AAPWhereToGo = nil
 	end
 --------------------------------
 ---- TBC - WotLK - Alliance ----
@@ -2616,6 +2754,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-TBC-WotLK") == false) then
 				LoadAddOn("AAP-TBC-WotLK")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A84-Flight-Northrend"
 		end
 	end
@@ -2624,6 +2763,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-TBC-WotLK") == false) then
 				LoadAddOn("AAP-TBC-WotLK")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A114-60-83"
 			if (AAP.Level >	79) then
 				levelcheck80 = 1
@@ -2633,6 +2773,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-TBC-WotLK") == false) then
 				LoadAddOn("AAP-TBC-WotLK")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A115-60-83"
 			if (AAP.Level >	79) then
 				levelcheck80 = 1
@@ -2642,6 +2783,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-TBC-WotLK") == false) then
 				LoadAddOn("AAP-TBC-WotLK")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A127-60-83"
 			if (AAP.Level >	79) then
 				levelcheck80 = 1
@@ -2651,6 +2793,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-TBC-WotLK") == false) then
 				LoadAddOn("AAP-TBC-WotLK")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A116-60-83"
 			if (AAP.Level >	79) then
 				levelcheck80 = 1
@@ -2660,6 +2803,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-TBC-WotLK") == false) then
 				LoadAddOn("AAP-TBC-WotLK")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A121-60-83"
 			if (AAP.Level >	79) then
 				levelcheck80 = 1
@@ -2669,6 +2813,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-TBC-WotLK") == false) then
 				LoadAddOn("AAP-TBC-WotLK")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A100-60-83"
 			if (AAP.Level >	79) then
 				levelcheck80 = 1
@@ -2678,11 +2823,40 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-TBC-WotLK") == false) then
 				LoadAddOn("AAP-TBC-WotLK")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A102-60-83"
 			if (AAP.Level >	79) then
 				levelcheck80 = 1
 			end
 		end
+	end
+	if (AAPZoneActiveCheck == 0 and IsInInstance() == false and AAP.Faction == "Alliance" and AAP.Level > 59 and AAP.Level < 80) then
+		if (IsQuestFlaggedCompleted(11672) == false) then
+			AAPWhereToGo = "Stormwind"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(11672) == true and IsQuestFlaggedCompleted(9747) == false) then
+			AAPWhereToGo = "Stormwind"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(12157) == false) then
+			AAPWhereToGo = "Borean Tundra"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(12511) == false) then
+			AAPWhereToGo = "Dragonblight"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(12802) == false) then
+			AAPWhereToGo = "Grizzly Hills"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(12859) == false) then
+			AAPWhereToGo = "Zul'Drak"
+			AAP.BookingList["PrintQStep"] = 1
+		elseif (IsQuestFlaggedCompleted(9780) == false) then
+			AAPWhereToGo = "Zangarmarsh"
+			AAP.BookingList["PrintQStep"] = 1
+		else
+			AAPWhereToGo = nil
+		end
+	elseif (AAPZoneActiveCheck == 1) then
+		AAPWhereToGo = nil
 	end
 --------------------------------
 ---- Cata - MoP - Horde --------
@@ -2691,18 +2865,21 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Cata-MoP") == false) then
 				LoadAddOn("AAP-Cata-MoP")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "1-80to90"
 		end
 		if (AAP.ActiveMap == 18) then
 			if (IsAddOnLoaded("AAP-Cata-MoP") == false) then
 				LoadAddOn("AAP-Cata-MoP")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "18-80-90"
 		end
 		if (AAP.ActiveMap == 12) then
 			if (IsAddOnLoaded("AAP-Cata-MoP") == false) then
 				LoadAddOn("AAP-Cata-MoP")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "12-80-90"
 		end
 	end
@@ -2711,6 +2888,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Cata-MoP") == false) then
 				LoadAddOn("AAP-Cata-MoP")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "198-80-93"
 			if (AAP.Level >	89) then
 				levelcheck90 = 1
@@ -2720,6 +2898,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Cata-MoP") == false) then
 				LoadAddOn("AAP-Cata-MoP")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "371-80-93"
 			if (AAP.Level >	89) then
 				levelcheck90 = 1
@@ -2729,6 +2908,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Cata-MoP") == false) then
 				LoadAddOn("AAP-Cata-MoP")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "433-80-93"
 			if (AAP.Level >	89) then
 				levelcheck90 = 1
@@ -2738,11 +2918,29 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Cata-MoP") == false) then
 				LoadAddOn("AAP-Cata-MoP")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "379-80-93"
 			if (AAP.Level >	89) then
 				levelcheck90 = 1
 			end
 		end
+	end
+	if (AAPZoneActiveCheck == 0 and IsInInstance() == false and AAP.Faction == "Horde" and AAP.Level > 79 and AAP.Level < 90) then
+		if (IsQuestFlaggedCompleted(25460) == false) then
+			AAPWhereToGo = "Orgrimmar"
+		elseif (IsQuestFlaggedCompleted(25928) == true and IsQuestFlaggedCompleted(31853) == false) then
+			AAPWhereToGo = "Orgrimmar"
+		elseif (IsQuestFlaggedCompleted(25928) == false) then
+			AAPWhereToGo = "Mount Hyjal"
+		elseif (IsQuestFlaggedCompleted(29971) == false) then
+			AAPWhereToGo = "The Jade Forest"
+		elseif (IsQuestFlaggedCompleted(30692) == false) then
+			AAPWhereToGo = "Kun-Lai Summit"
+		else
+			AAPWhereToGo = nil
+		end
+	elseif (AAPZoneActiveCheck == 1) then
+		AAPWhereToGo = nil
 	end
 --------------------------------
 ---- Cata - MoP - Alliance -----
@@ -2751,6 +2949,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Cata-MoP") == false) then
 				LoadAddOn("AAP-Cata-MoP")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A84-80-90"
 		end
 	end
@@ -2759,6 +2958,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Cata-MoP") == false) then
 				LoadAddOn("AAP-Cata-MoP")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A198-80-93"
 			if (AAP.Level >	89) then
 				levelcheck90 = 1
@@ -2768,6 +2968,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Cata-MoP") == false) then
 				LoadAddOn("AAP-Cata-MoP")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A13-80-93"
 			if (AAP.Level >	89) then
 				levelcheck90 = 1
@@ -2777,6 +2978,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Cata-MoP") == false) then
 				LoadAddOn("AAP-Cata-MoP")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A371-80-93"
 			if (AAP.Level >	89) then
 				levelcheck90 = 1
@@ -2786,6 +2988,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Cata-MoP") == false) then
 				LoadAddOn("AAP-Cata-MoP")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A433-80-93"
 			if (AAP.Level >	89) then
 				levelcheck90 = 1
@@ -2795,6 +2998,7 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Cata-MoP") == false) then
 				LoadAddOn("AAP-Cata-MoP")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A379-80-93"
 			if (AAP.Level >	89) then
 				levelcheck90 = 1
@@ -2804,11 +3008,31 @@ local function AAP_UpdateMapId()
 			if (IsAddOnLoaded("AAP-Cata-MoP") == false) then
 				LoadAddOn("AAP-Cata-MoP")
 			end
+			AAPZoneActiveCheck = 1
 			AAP.ActiveMap = "A388-80-93"
 			if (AAP.Level >	89) then
 				levelcheck90 = 1
 			end
 		end
+	end
+	if (AAPZoneActiveCheck == 0 and IsInInstance() == false and AAP.Faction == "Alliance" and AAP.Level > 79 and AAP.Level < 90) then
+		if (IsQuestFlaggedCompleted(25370) == false) then
+			AAPWhereToGo = "Stormwind"
+		elseif (IsQuestFlaggedCompleted(25928) == true and IsQuestFlaggedCompleted(29548) == false) then
+			AAPWhereToGo = "Stormwind"
+		elseif (IsQuestFlaggedCompleted(25928) == false) then
+			AAPWhereToGo = "Mount Hyjal"
+		elseif (IsQuestFlaggedCompleted(29587) == false) then
+			AAPWhereToGo = "The Jade Forest"
+		elseif (IsQuestFlaggedCompleted(31695) == false) then
+			AAPWhereToGo = "Kun-Lai Summit"
+		elseif (IsQuestFlaggedCompleted(30891) == false) then
+			AAPWhereToGo = "Townlong Steppes"
+		else
+			AAPWhereToGo = nil
+		end
+	elseif (AAPZoneActiveCheck == 1) then
+		AAPWhereToGo = nil
 	end
 --------------------------------
 ---- WoD - Horde ---------------
@@ -3086,24 +3310,224 @@ local function AAP_UpdateMapId()
 		end
 	end
 --------------------------------
+---- BFA - Horde ---------------
+	if (AAP.Faction == "Horde" and AAP.Level > 109 and AAP.Level < 120) then
+		if (AAP.ActiveMap == 627) then
+			if (IsAddOnLoaded("AAP-BfA") == false) then
+				LoadAddOn("AAP-BfA")
+			end
+			AAP.ActiveMap = "627-110"
+		end
+		if (AAP.ActiveMap == 81) then
+			if (IsAddOnLoaded("AAP-BfA") == false) then
+				LoadAddOn("AAP-BfA")
+			end
+			AAP.ActiveMap = "81-110"
+		end
+		if (AAP.ActiveMap == 249) then
+			if (IsAddOnLoaded("AAP-BfA") == false) then
+				LoadAddOn("AAP-BfA")
+			end
+			AAP.ActiveMap = "249-110"
+		end
+		if (AAP.ActiveMap == 1 and (AAP.ActiveQuests[53372] or IsQuestFlaggedCompleted(53372) == true)) then
+			if (IsAddOnLoaded("AAP-BfA") == false) then
+				LoadAddOn("AAP-BfA")
+			end
+			AAP.ActiveMap = "1-110"
+		end
+	end
+	if (AAP.Faction == "Horde" and AAP.Level > 109 and AAP.Level < 123) then
+		if (AAP.ActiveMap == 862) then
+			if ((AAP.ActiveQuests[47514] or IsQuestFlaggedCompleted(47514) == true) and IsQuestFlaggedCompleted(50963) == false) then
+				if (IsAddOnLoaded("AAP-BfA") == false) then
+					LoadAddOn("AAP-BfA")
+				end
+				AAP.ActiveMap = "862-110-120-3"
+			elseif ((AAP.ActiveQuests[47513] or IsQuestFlaggedCompleted(47513) == true) and IsQuestFlaggedCompleted(47315) == false) then
+				if (IsAddOnLoaded("AAP-BfA") == false) then
+					LoadAddOn("AAP-BfA")
+				end
+				AAP.ActiveMap = "862-110-120-1"
+			elseif ((AAP.ActiveQuests[47512] or IsQuestFlaggedCompleted(47512) == true) and IsQuestFlaggedCompleted(47105) == false) then
+				if (IsAddOnLoaded("AAP-BfA") == false) then
+					LoadAddOn("AAP-BfA")
+				end
+				AAP.ActiveMap = "862-110-120-2"
+			elseif (IsQuestFlaggedCompleted(47105) == true and IsQuestFlaggedCompleted(47315) == true and IsQuestFlaggedCompleted(50963) == true) then
+				AAP1[AAP.Realm][AAP.Name]["HordeD"] = 1
+				AAP.ActiveMap = "862-99"
+			else
+				if (IsAddOnLoaded("AAP-BfA") == false) then
+					LoadAddOn("AAP-BfA")
+				end
+				AAP.ActiveMap = "862-110-120"
+			end
+		end
+		if (AAP.ActiveMap == 863) then
+			if (IsQuestFlaggedCompleted(50808)) then
+				AAP.ActiveMap = "863-99"
+			else
+				if (IsAddOnLoaded("AAP-BfA") == false) then
+					LoadAddOn("AAP-BfA")
+				end
+				AAP.ActiveMap = "863-110-120"
+			end
+		end
+		if (AAP.ActiveMap == 864) then
+			if (IsQuestFlaggedCompleted(50703)) then
+				AAP.ActiveMap = "864-99"
+			else
+				if (IsAddOnLoaded("AAP-BfA") == false) then
+					LoadAddOn("AAP-BfA")
+				end
+				AAP.ActiveMap = "864-110-120"
+			end
+		end
+		if (AAP.ActiveMap == 895) then
+			if (IsQuestFlaggedCompleted(51984)) then
+				AAP.ActiveMap = "895-99"
+			else
+				if (IsAddOnLoaded("AAP-BfA") == false) then
+					LoadAddOn("AAP-BfA")
+				end
+				AAP.ActiveMap = "895-110-120"
+			end
+		end
+		if (AAP.ActiveMap == 896) then
+			if (IsQuestFlaggedCompleted(51985)) then
+				AAP.ActiveMap = "896-99"
+			else
+				if (IsAddOnLoaded("AAP-BfA") == false) then
+					LoadAddOn("AAP-BfA")
+				end
+				AAP.ActiveMap = "896-110-120"
+			end
+		end
+		if (AAP.ActiveMap == 942) then
+			if (IsQuestFlaggedCompleted(51986)) then
+				AAP.ActiveMap = "942-99"
+			else
+				if (IsAddOnLoaded("AAP-BfA") == false) then
+					LoadAddOn("AAP-BfA")
+				end
+				AAP.ActiveMap = "942-110-120"
+			end
+		end
+	end
+--------------------------------
 ---- BFA - Alliance ------------
 	if (AAP.Faction == "Alliance" and AAP.Level > 109 and AAP.Level < 120) then
 		if (AAP.ActiveMap == "A84") then
+			if (IsAddOnLoaded("AAP-BfA") == false) then
+				LoadAddOn("AAP-BfA")
+			end
 			AAP.ActiveMap = "A84-110-120"
 		end
 		if (AAP.ActiveMap == "A249") then
+			if (IsAddOnLoaded("AAP-BfA") == false) then
+				LoadAddOn("AAP-BfA")
+			end
 			AAP.ActiveMap = "A249-110-120"
 		end
 		if (AAP.ActiveMap == "A81") then
+			if (IsAddOnLoaded("AAP-BfA") == false) then
+				LoadAddOn("AAP-BfA")
+			end
 			AAP.ActiveMap = "A81-110-120"
 		end
 	end
-
---------------------------------
-	if (AAP.ActiveMap == 627 and AAP.Level > 109) then
-		-- Dala to ogri
-		AAP.ActiveMap = "627-110"
+	if (AAP.Faction == "Alliance" and AAP.Level > 109 and AAP.Level < 123) then
+		if (AAP.ActiveMap == "A895") then
+			if ((AAP.ActiveQuests[47961] or IsQuestFlaggedCompleted(47961) == true) and not IsQuestFlaggedCompleted(48622)) then
+				if (IsAddOnLoaded("AAP-BfA") == false) then
+					LoadAddOn("AAP-BfA")
+				end
+				AAP.ActiveMap = "A895-110-120-1"
+			elseif ((AAP.ActiveQuests[47962] or IsQuestFlaggedCompleted(47962) == true) and not IsQuestFlaggedCompleted(51490)) then
+				if (IsAddOnLoaded("AAP-BfA") == false) then
+					LoadAddOn("AAP-BfA")
+				end
+				AAP.ActiveMap = "A895-110-120-2"
+			elseif ((AAP.ActiveQuests[47960] or IsQuestFlaggedCompleted(47960) == true) and not IsQuestFlaggedCompleted(50972)) then
+				if (IsAddOnLoaded("AAP-BfA") == false) then
+					LoadAddOn("AAP-BfA")
+				end
+				AAP.ActiveMap = "A895-110-120-3"
+			else
+				if (IsQuestFlaggedCompleted(48622) and IsQuestFlaggedCompleted(51490) and IsQuestFlaggedCompleted(50972)) then
+					AAP.ActiveMap = "A895-99"
+				else
+					if (IsAddOnLoaded("AAP-BfA") == false) then
+						LoadAddOn("AAP-BfA")
+					end
+					AAP.ActiveMap = "A895-110-120"
+				end
+			end
+		end
+		if (AAP.ActiveMap == "A942") then
+			if (IsQuestFlaggedCompleted(49908)) then
+				AAP.ActiveMap = "A942-99"
+			else
+				if (IsAddOnLoaded("AAP-BfA") == false) then
+					LoadAddOn("AAP-BfA")
+				end
+				AAP.ActiveMap = "A942-110-120"
+			end
+		end
+		if (AAP.ActiveMap == "A876") then
+			if (IsQuestFlaggedCompleted(47098)) then
+				AAP.ActiveMap = "A876-99"
+			else
+				if (IsAddOnLoaded("AAP-BfA") == false) then
+					LoadAddOn("AAP-BfA")
+				end
+				AAP.ActiveMap = "A876-110-120"
+			end
+		end
+		if (AAP.ActiveMap == "A863") then
+			if (IsQuestFlaggedCompleted(51967)) then
+				AAP.ActiveMap = "A863-99"
+			else
+				if (IsAddOnLoaded("AAP-BfA") == false) then
+					LoadAddOn("AAP-BfA")
+				end
+				AAP.ActiveMap = "A863-110-120"
+			end
+		end
+		if (AAP.ActiveMap == "A862") then
+			if (IsQuestFlaggedCompleted(51968)) then
+				AAP.ActiveMap = "A862-99"
+			else
+				if (IsAddOnLoaded("AAP-BfA") == false) then
+					LoadAddOn("AAP-BfA")
+				end
+				AAP.ActiveMap = "A862-110-120"
+			end
+		end
+		if (AAP.ActiveMap == "A864") then
+			if (IsQuestFlaggedCompleted(51969)) then
+				AAP.ActiveMap = "A864-99"
+			else
+				if (IsAddOnLoaded("AAP-BfA") == false) then
+					LoadAddOn("AAP-BfA")
+				end
+				AAP.ActiveMap = "A864-110-120"
+			end
+		end
+		if (AAP.ActiveMap == "A896") then
+			if (IsQuestFlaggedCompleted(50639)) then
+				AAP.ActiveMap = "A896-99"
+			else
+				if (IsAddOnLoaded("AAP-BfA") == false) then
+					LoadAddOn("AAP-BfA")
+				end
+				AAP.ActiveMap = "A896-110-120"
+			end
+		end
 	end
+--------------------------------
+
 	
 	--levelcheck = 1
 	if (levelcheck == 1) then
@@ -3496,18 +3920,12 @@ local function AAP_InstanceTest()
 		return 0
 	end
 end
-local function AAP_SendGroup()
-	if (IsInGroup(LE_PARTY_CATEGORY_HOME) and AAP1[AAP.Realm][AAP.Name][AAP.ActiveMap] and (AAP.LastSent ~= AAP1[AAP.Realm][AAP.Name][AAP.ActiveMap]) and (AAP_InstanceTest() == 0)) then
-		C_ChatInfo.SendAddonMessage("AAPChat", AAP1[AAP.Realm][AAP.Name][AAP.ActiveMap], "PARTY");
-		AAP.LastSent = AAP1[AAP.Realm][AAP.Name][AAP.ActiveMap]
-	end
-end
 function AAP.GroupListingFunc(AAP_StepStuffs, AAP_GListName)
 	if (not AAP.GroupListSteps[1]) then
 		AAP.GroupListSteps[1] = {}
 		AAP.GroupListStepsNr = 1
 	end
-	AAP.GroupListSteps[1]["Step"] = AAP1[AAP.Realm][AAP.Name][AAP.ActiveMap]
+	AAP.GroupListSteps[1]["Step"] = AAP_StepStuffs
 	AAP.GroupListSteps[1]["Name"] = AAP.Name
 	if (AAP_GListName ~= AAP.Name) then
 		local AAPNews = 0
@@ -3538,7 +3956,7 @@ function AAP.RepaintGroups()
 			AAP.GroupListSteps[1] = {}
 			AAP.GroupListStepsNr = 1
 		end
-		AAP.GroupListSteps[1]["Step"] = AAP1[AAP.Realm][AAP.Name][AAP.ActiveZone]
+		AAP.GroupListSteps[1]["Step"] = AAP1[AAP.Realm][AAP.Name][AAP.ActiveMap]
 		AAP.GroupListSteps[1]["Name"] = AAP.Name
 		local CLi
 		for CLi = 1, 5 do
@@ -3630,9 +4048,9 @@ AAP_QH_EventFrame:SetScript("OnEvent", function(self, event, ...)
 	if (event=="PLAYER_REGEN_DISABLED") then
 		AAP.InCombat = 1
 	end
-	if (event=="CHAT_MSG_ADDON" and AAP_DisableAddon == 0) then
+	if (event=="CHAT_MSG_ADDON") then
 		local arg1, arg2, arg3, arg4 = ...;
-		if (arg1 == "AAPChat") then
+		if (arg1 == "AAPChat" and arg3 == "PARTY") then
 			AAP.GroupListingFunc(tonumber(arg2), AAP.TrimPlayerServer(arg4))
 		end
 	end
@@ -3884,18 +4302,18 @@ AAP_QH_EventFrame:SetScript("OnEvent", function(self, event, ...)
 	end
 	if (event=="TAXIMAP_OPENED") then
 	
-	local CLi
-	AAPHFiller4 = nil
-	AAPHFiller4 = {}
-	for CLi = 1, NumTaxiNodes() do
-		local aapx,aapy = TaxiNodePosition(CLi)
-		aapx = (floor(aapx * 1000)/10)
-		aapy = (floor(aapy * 1000)/10)
-		if (TaxiNodeGetType(CLi) == "REACHABLE") then
-		AAPHFiller4["A"..CLi] = TaxiNodeName(CLi).."-X:"..aapx.."-Y:"..aapy
-			print(CLi .. "-" .. TaxiNodeName(CLi).."-X:"..aapx.."-Y:"..aapy.." Status: "..TaxiNodeGetType(CLi))
-		end
-	end
+	--local CLi
+	--AAPHFiller4 = nil
+	--AAPHFiller4 = {}
+	--for CLi = 1, NumTaxiNodes() do
+	--	local aapx,aapy = TaxiNodePosition(CLi)
+	--	aapx = (floor(aapx * 1000)/10)
+	--	aapy = (floor(aapy * 1000)/10)
+	--	if (TaxiNodeGetType(CLi) == "REACHABLE") then
+	--	AAPHFiller4["A"..CLi] = TaxiNodeName(CLi).."-X:"..aapx.."-Y:"..aapy
+	--		print(CLi .. "-" .. TaxiNodeName(CLi).."-X:"..aapx.."-Y:"..aapy.." Status: "..TaxiNodeGetType(CLi))
+	--	end
+	--end
 	
 	
 	

@@ -14,6 +14,14 @@ DeathGraphsDBDeaths = {
 				["name"] = "Qrq-Kil'jaeden",
 				["class"] = "MONK",
 			},
+			["Rukard-Azralon"] = {
+				["name"] = "Rukard-Azralon",
+				["class"] = "DRUID",
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+			},
 			["Marejoana-Azralon"] = {
 				["class"] = "MAGE",
 				["deaths"] = {
@@ -86,6 +94,14 @@ DeathGraphsDBDeaths = {
 				["overall"] = {
 				},
 			},
+			["Monkcane"] = {
+				["name"] = "Monkcane",
+				["class"] = "MONK",
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+			},
 			["Onefireball"] = {
 				["overall"] = {
 				},
@@ -93,6 +109,14 @@ DeathGraphsDBDeaths = {
 				},
 				["name"] = "Onefireball",
 				["class"] = "WARRIOR",
+			},
+			["Velocity-AeriePeak"] = {
+				["name"] = "Velocity-AeriePeak",
+				["class"] = "DEMONHUNTER",
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
 			},
 			["Liruzal"] = {
 				["overall"] = {
@@ -118,6 +142,22 @@ DeathGraphsDBDeaths = {
 				},
 				["name"] = "Bïrd-Azralon",
 			},
+			["Sonofalich"] = {
+				["name"] = "Sonofalich",
+				["class"] = "DEATHKNIGHT",
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+			},
+			["Bladeé-Ragnaros"] = {
+				["name"] = "Bladeé-Ragnaros",
+				["class"] = "HUNTER",
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+			},
 			["Ubrickxd"] = {
 				["name"] = "Ubrickxd",
 				["class"] = "WARLOCK",
@@ -142,6 +182,46 @@ DeathGraphsDBDeaths = {
 				["deaths"] = {
 				},
 			},
+			["Zilzag"] = {
+				["name"] = "Zilzag",
+				["class"] = "DRUID",
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+			},
+			["Hyphyness-Sargeras"] = {
+				["name"] = "Hyphyness-Sargeras",
+				["class"] = "HUNTER",
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+			},
+			["Skepticzero-Tichondrius"] = {
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+				["name"] = "Skepticzero-Tichondrius",
+				["class"] = "SHAMAN",
+			},
+			["Xisaman"] = {
+				["class"] = "SHAMAN",
+				["deaths"] = {
+				},
+				["overall"] = {
+				},
+				["name"] = "Xisaman",
+			},
+			["Ajora"] = {
+				["name"] = "Ajora",
+				["class"] = "DEATHKNIGHT",
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+			},
 			["Xerosoulz-Tichondrius"] = {
 				["overall"] = {
 				},
@@ -158,53 +238,13 @@ DeathGraphsDBDeaths = {
 				["deaths"] = {
 				},
 			},
-			["Comet"] = {
-				["name"] = "Comet",
-				["class"] = "MONK",
+			["Jollygrnbolt-LaughingSkull"] = {
 				["overall"] = {
 				},
 				["deaths"] = {
 				},
-			},
-			["Satãzão-Goldrinn"] = {
-				["class"] = "DEMONHUNTER",
-				["deaths"] = {
-				},
-				["overall"] = {
-				},
-				["name"] = "Satãzão-Goldrinn",
-			},
-			["Harrybridges-Area52"] = {
-				["overall"] = {
-				},
-				["deaths"] = {
-				},
-				["name"] = "Harrybridges-Area52",
+				["name"] = "Jollygrnbolt-LaughingSkull",
 				["class"] = "WARLOCK",
-			},
-			["Talux-Tichondrius"] = {
-				["class"] = "SHAMAN",
-				["deaths"] = {
-				},
-				["overall"] = {
-				},
-				["name"] = "Talux-Tichondrius",
-			},
-			["Winterlich-ShadowCouncil"] = {
-				["overall"] = {
-				},
-				["deaths"] = {
-				},
-				["name"] = "Winterlich-ShadowCouncil",
-				["class"] = "DEATHKNIGHT",
-			},
-			["Cindysbaby-Fenris"] = {
-				["class"] = "ROGUE",
-				["deaths"] = {
-				},
-				["overall"] = {
-				},
-				["name"] = "Cindysbaby-Fenris",
 			},
 			["Hìkari-Mal'Ganis"] = {
 				["class"] = "PALADIN",
@@ -214,49 +254,9 @@ DeathGraphsDBDeaths = {
 				},
 				["name"] = "Hìkari-Mal'Ganis",
 			},
-			["Seåwall-Azralon"] = {
-				["class"] = "DRUID",
-				["deaths"] = {
-				},
-				["overall"] = {
-				},
-				["name"] = "Seåwall-Azralon",
-			},
-			["Skepticzero-Tichondrius"] = {
-				["overall"] = {
-				},
-				["deaths"] = {
-				},
-				["name"] = "Skepticzero-Tichondrius",
+			["Arodaxic"] = {
+				["name"] = "Arodaxic",
 				["class"] = "SHAMAN",
-			},
-			["Kahltraps"] = {
-				["name"] = "Kahltraps",
-				["class"] = "HUNTER",
-				["overall"] = {
-				},
-				["deaths"] = {
-				},
-			},
-			["Xisaman"] = {
-				["class"] = "SHAMAN",
-				["deaths"] = {
-				},
-				["overall"] = {
-				},
-				["name"] = "Xisaman",
-			},
-			["Vanillasheek-Kil'jaeden"] = {
-				["overall"] = {
-				},
-				["deaths"] = {
-				},
-				["name"] = "Vanillasheek-Kil'jaeden",
-				["class"] = "DEMONHUNTER",
-			},
-			["Ajora"] = {
-				["name"] = "Ajora",
-				["class"] = "DEATHKNIGHT",
 				["overall"] = {
 				},
 				["deaths"] = {
@@ -270,6 +270,14 @@ DeathGraphsDBDeaths = {
 				["deaths"] = {
 				},
 			},
+			["Winterlich-ShadowCouncil"] = {
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+				["name"] = "Winterlich-ShadowCouncil",
+				["class"] = "DEATHKNIGHT",
+			},
 			["Cheeriøs-Tichondrius"] = {
 				["deaths"] = {
 				},
@@ -277,13 +285,21 @@ DeathGraphsDBDeaths = {
 				},
 				["name"] = "Cheeriøs-Tichondrius",
 			},
-			["Jollygrnbolt-LaughingSkull"] = {
+			["Melme-Thrall"] = {
+				["name"] = "Melme-Thrall",
+				["class"] = "PRIEST",
 				["overall"] = {
 				},
 				["deaths"] = {
 				},
-				["name"] = "Jollygrnbolt-LaughingSkull",
-				["class"] = "WARLOCK",
+			},
+			["Seåwall-Azralon"] = {
+				["class"] = "DRUID",
+				["deaths"] = {
+				},
+				["overall"] = {
+				},
+				["name"] = "Seåwall-Azralon",
 			},
 			["Wobbyfischer"] = {
 				["name"] = "Wobbyfischer",
@@ -292,6 +308,70 @@ DeathGraphsDBDeaths = {
 				},
 				["deaths"] = {
 				},
+			},
+			["Kahltraps"] = {
+				["name"] = "Kahltraps",
+				["class"] = "HUNTER",
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+			},
+			["Talux-Tichondrius"] = {
+				["class"] = "SHAMAN",
+				["deaths"] = {
+				},
+				["overall"] = {
+				},
+				["name"] = "Talux-Tichondrius",
+			},
+			["Vanillasheek-Kil'jaeden"] = {
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+				["name"] = "Vanillasheek-Kil'jaeden",
+				["class"] = "DEMONHUNTER",
+			},
+			["Harrybridges-Area52"] = {
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+				["name"] = "Harrybridges-Area52",
+				["class"] = "WARLOCK",
+			},
+			["Satãzão-Goldrinn"] = {
+				["class"] = "DEMONHUNTER",
+				["deaths"] = {
+				},
+				["overall"] = {
+				},
+				["name"] = "Satãzão-Goldrinn",
+			},
+			["Berserkèr-Akama"] = {
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+				["name"] = "Berserkèr-Akama",
+				["class"] = "WARRIOR",
+			},
+			["Killjo-Zul'jin"] = {
+				["name"] = "Killjo-Zul'jin",
+				["class"] = "PALADIN",
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+			},
+			["Cindysbaby-Fenris"] = {
+				["class"] = "ROGUE",
+				["deaths"] = {
+				},
+				["overall"] = {
+				},
+				["name"] = "Cindysbaby-Fenris",
 			},
 			["Faedra-Kil'jaeden"] = {
 				["overall"] = {
@@ -317,13 +397,13 @@ DeathGraphsDBDeaths = {
 				["name"] = "Dulameng-Barthilas",
 				["class"] = "MONK",
 			},
-			["Berserkèr-Akama"] = {
+			["Comet"] = {
+				["name"] = "Comet",
+				["class"] = "MONK",
 				["overall"] = {
 				},
 				["deaths"] = {
 				},
-				["name"] = "Berserkèr-Akama",
-				["class"] = "WARRIOR",
 			},
 			["Zeudan-Quel'Thalas"] = {
 				["class"] = "MONK",
@@ -333,9 +413,9 @@ DeathGraphsDBDeaths = {
 				},
 				["name"] = "Zeudan-Quel'Thalas",
 			},
-			["Sonofalich"] = {
-				["name"] = "Sonofalich",
-				["class"] = "DEATHKNIGHT",
+			["Manacookies-Area52"] = {
+				["name"] = "Manacookies-Area52",
+				["class"] = "MAGE",
 				["overall"] = {
 				},
 				["deaths"] = {
@@ -1850,13 +1930,13 @@ DeathGraphsDBDeaths = {
 		["id"] = 2168,
 		["diff"] = 16,
 		["player_db"] = {
-			["Alamman"] = {
+			["Tawwxic"] = {
+				["name"] = "Tawwxic",
+				["class"] = "ROGUE",
 				["overall"] = {
 				},
 				["deaths"] = {
 				},
-				["name"] = "Alamman",
-				["class"] = "PALADIN",
 			},
 			["Huna"] = {
 				["overall"] = {
@@ -1874,12 +1954,12 @@ DeathGraphsDBDeaths = {
 				["deaths"] = {
 				},
 			},
-			["Grundlesauce"] = {
+			["Alamman"] = {
 				["overall"] = {
 				},
 				["deaths"] = {
 				},
-				["name"] = "Grundlesauce",
+				["name"] = "Alamman",
 				["class"] = "PALADIN",
 			},
 			["Tyrannous"] = {
@@ -1962,13 +2042,13 @@ DeathGraphsDBDeaths = {
 				["name"] = "Shiftycents",
 				["class"] = "DRUID",
 			},
-			["Tawwxic"] = {
-				["name"] = "Tawwxic",
-				["class"] = "ROGUE",
+			["Grundlesauce"] = {
 				["overall"] = {
 				},
 				["deaths"] = {
 				},
+				["name"] = "Grundlesauce",
+				["class"] = "PALADIN",
 			},
 			["Saucerorr"] = {
 				["deaths"] = {
@@ -2087,14 +2167,6 @@ DeathGraphsDBDeaths = {
 				["name"] = "Jaymagic",
 				["class"] = "MAGE",
 			},
-			["Yung-Lightning'sBlade"] = {
-				["deaths"] = {
-				},
-				["class"] = "WARRIOR",
-				["name"] = "Yung-Lightning'sBlade",
-				["overall"] = {
-				},
-			},
 			["Qinbaijiang"] = {
 				["overall"] = {
 				},
@@ -2102,6 +2174,14 @@ DeathGraphsDBDeaths = {
 				},
 				["name"] = "Qinbaijiang",
 				["class"] = "PALADIN",
+			},
+			["Yung-Lightning'sBlade"] = {
+				["deaths"] = {
+				},
+				["class"] = "WARRIOR",
+				["name"] = "Yung-Lightning'sBlade",
+				["overall"] = {
+				},
 			},
 			["Phatal-Bloodscalp"] = {
 				["name"] = "Phatal-Bloodscalp",
@@ -2127,14 +2207,6 @@ DeathGraphsDBDeaths = {
 				["deaths"] = {
 				},
 			},
-			["Ubrickxd"] = {
-				["name"] = "Ubrickxd",
-				["class"] = "WARLOCK",
-				["overall"] = {
-				},
-				["deaths"] = {
-				},
-			},
 			["Raycharlezz"] = {
 				["overall"] = {
 				},
@@ -2142,14 +2214,6 @@ DeathGraphsDBDeaths = {
 				},
 				["name"] = "Raycharlezz",
 				["class"] = "DEMONHUNTER",
-			},
-			["Pinpus"] = {
-				["deaths"] = {
-				},
-				["class"] = "MAGE",
-				["name"] = "Pinpus",
-				["overall"] = {
-				},
 			},
 			["Drlighter"] = {
 				["overall"] = {
@@ -2159,13 +2223,13 @@ DeathGraphsDBDeaths = {
 				["name"] = "Drlighter",
 				["class"] = "DEATHKNIGHT",
 			},
-			["Steit-Ragnaros"] = {
+			["Ubrickxd"] = {
+				["name"] = "Ubrickxd",
+				["class"] = "WARLOCK",
 				["overall"] = {
 				},
 				["deaths"] = {
 				},
-				["name"] = "Steit-Ragnaros",
-				["class"] = "PALADIN",
 			},
 			["Chriscool"] = {
 				["overall"] = {
@@ -2175,9 +2239,41 @@ DeathGraphsDBDeaths = {
 				["name"] = "Chriscool",
 				["class"] = "ROGUE",
 			},
+			["Pinpus"] = {
+				["deaths"] = {
+				},
+				["class"] = "MAGE",
+				["name"] = "Pinpus",
+				["overall"] = {
+				},
+			},
 			["Wobbyfischer"] = {
 				["name"] = "Wobbyfischer",
 				["class"] = "WARRIOR",
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+			},
+			["Steit-Ragnaros"] = {
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+				["name"] = "Steit-Ragnaros",
+				["class"] = "PALADIN",
+			},
+			["Deuzbag-BlackDragonflight"] = {
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+				["name"] = "Deuzbag-BlackDragonflight",
+				["class"] = "ROGUE",
+			},
+			["Brezei"] = {
+				["name"] = "Brezei",
+				["class"] = "DRUID",
 				["overall"] = {
 				},
 				["deaths"] = {
@@ -2223,36 +2319,12 @@ DeathGraphsDBDeaths = {
 				["name"] = "Eusysteb-Mal'Ganis",
 				["class"] = "WARLOCK",
 			},
-			["Deuzbag-BlackDragonflight"] = {
+			["Arodaxic"] = {
+				["name"] = "Arodaxic",
+				["class"] = "SHAMAN",
 				["overall"] = {
 				},
 				["deaths"] = {
-				},
-				["name"] = "Deuzbag-BlackDragonflight",
-				["class"] = "ROGUE",
-			},
-			["Brezei"] = {
-				["name"] = "Brezei",
-				["class"] = "DRUID",
-				["overall"] = {
-				},
-				["deaths"] = {
-				},
-			},
-			["Challengerly"] = {
-				["overall"] = {
-				},
-				["deaths"] = {
-				},
-				["name"] = "Challengerly",
-				["class"] = "DEMONHUNTER",
-			},
-			["Misho"] = {
-				["deaths"] = {
-				},
-				["class"] = "MONK",
-				["name"] = "Misho",
-				["overall"] = {
 				},
 			},
 			["Papapound"] = {
@@ -2263,6 +2335,22 @@ DeathGraphsDBDeaths = {
 				["deaths"] = {
 				},
 			},
+			["Druantis-Stormreaver"] = {
+				["name"] = "Druantis-Stormreaver",
+				["class"] = "DRUID",
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+			},
+			["Misho"] = {
+				["deaths"] = {
+				},
+				["class"] = "MONK",
+				["name"] = "Misho",
+				["overall"] = {
+				},
+			},
 			["Azzinara"] = {
 				["deaths"] = {
 				},
@@ -2271,13 +2359,13 @@ DeathGraphsDBDeaths = {
 				["overall"] = {
 				},
 			},
-			["Kekojones-Zul'jin"] = {
-				["name"] = "Kekojones-Zul'jin",
-				["class"] = "WARRIOR",
+			["Skeli-Hyjal"] = {
 				["overall"] = {
 				},
 				["deaths"] = {
 				},
+				["name"] = "Skeli-Hyjal",
+				["class"] = "MAGE",
 			},
 			["Rorrek-Mal'Ganis"] = {
 				["overall"] = {
@@ -2303,6 +2391,14 @@ DeathGraphsDBDeaths = {
 				["deaths"] = {
 				},
 			},
+			["Kekojones-Zul'jin"] = {
+				["name"] = "Kekojones-Zul'jin",
+				["class"] = "WARRIOR",
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+			},
 			["Raisenpope-Stormreaver"] = {
 				["overall"] = {
 				},
@@ -2311,14 +2407,6 @@ DeathGraphsDBDeaths = {
 				["name"] = "Raisenpope-Stormreaver",
 				["class"] = "PRIEST",
 			},
-			["Skeli-Hyjal"] = {
-				["overall"] = {
-				},
-				["deaths"] = {
-				},
-				["name"] = "Skeli-Hyjal",
-				["class"] = "MAGE",
-			},
 			["Zarea"] = {
 				["deaths"] = {
 				},
@@ -2326,6 +2414,14 @@ DeathGraphsDBDeaths = {
 				["name"] = "Zarea",
 				["overall"] = {
 				},
+			},
+			["Challengerly"] = {
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+				["name"] = "Challengerly",
+				["class"] = "DEMONHUNTER",
 			},
 			["Robstatus"] = {
 				["name"] = "Robstatus",
@@ -3845,14 +3941,6 @@ DeathGraphsDBDeaths = {
 				["overall"] = {
 				},
 			},
-			["Dellerine"] = {
-				["overall"] = {
-				},
-				["deaths"] = {
-				},
-				["name"] = "Dellerine",
-				["class"] = "WARLOCK",
-			},
 			["Xerosoulz-Tichondrius"] = {
 				["class"] = "WARLOCK",
 				["deaths"] = {
@@ -3861,12 +3949,68 @@ DeathGraphsDBDeaths = {
 				},
 				["name"] = "Xerosoulz-Tichondrius",
 			},
+			["Rorrek-Mal'Ganis"] = {
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+				["name"] = "Rorrek-Mal'Ganis",
+				["class"] = "ROGUE",
+			},
+			["Pietui-Barthilas"] = {
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+				["name"] = "Pietui-Barthilas",
+				["class"] = "DEATHKNIGHT",
+			},
 			["Mushasi"] = {
 				["deaths"] = {
 				},
 				["class"] = "MONK",
 				["name"] = "Mushasi",
 				["overall"] = {
+				},
+			},
+			["Neldo-Area52"] = {
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+				["name"] = "Neldo-Area52",
+				["class"] = "HUNTER",
+			},
+			["Deydralia"] = {
+				["deaths"] = {
+				},
+				["class"] = "DEATHKNIGHT",
+				["name"] = "Deydralia",
+				["overall"] = {
+				},
+			},
+			["Sarvis-Tichondrius"] = {
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+				["name"] = "Sarvis-Tichondrius",
+				["class"] = "PRIEST",
+			},
+			["Dellerine"] = {
+				["overall"] = {
+				},
+				["deaths"] = {
+				},
+				["name"] = "Dellerine",
+				["class"] = "WARLOCK",
+			},
+			["Seryth-Silvermoon"] = {
+				["name"] = "Seryth-Silvermoon",
+				["class"] = "MAGE",
+				["overall"] = {
+				},
+				["deaths"] = {
 				},
 			},
 			["Zdabbinn"] = {
@@ -3893,14 +4037,6 @@ DeathGraphsDBDeaths = {
 				["name"] = "Vokari",
 				["class"] = "PRIEST",
 			},
-			["Comet"] = {
-				["deaths"] = {
-				},
-				["class"] = "MONK",
-				["name"] = "Comet",
-				["overall"] = {
-				},
-			},
 			["Skeli-Hyjal"] = {
 				["overall"] = {
 				},
@@ -3908,14 +4044,6 @@ DeathGraphsDBDeaths = {
 				},
 				["name"] = "Skeli-Hyjal",
 				["class"] = "MAGE",
-			},
-			["Pietui-Barthilas"] = {
-				["overall"] = {
-				},
-				["deaths"] = {
-				},
-				["name"] = "Pietui-Barthilas",
-				["class"] = "DEATHKNIGHT",
 			},
 			["Drlighter"] = {
 				["overall"] = {
@@ -3925,14 +4053,6 @@ DeathGraphsDBDeaths = {
 				["name"] = "Drlighter",
 				["class"] = "DEATHKNIGHT",
 			},
-			["Neldo-Area52"] = {
-				["overall"] = {
-				},
-				["deaths"] = {
-				},
-				["name"] = "Neldo-Area52",
-				["class"] = "HUNTER",
-			},
 			["Øzhuntr-Azralon"] = {
 				["overall"] = {
 				},
@@ -3941,29 +4061,13 @@ DeathGraphsDBDeaths = {
 				["name"] = "Øzhuntr-Azralon",
 				["class"] = "HUNTER",
 			},
-			["Sarvis-Tichondrius"] = {
-				["overall"] = {
-				},
+			["Comet"] = {
 				["deaths"] = {
 				},
-				["name"] = "Sarvis-Tichondrius",
-				["class"] = "PRIEST",
-			},
-			["Deydralia"] = {
-				["deaths"] = {
-				},
-				["class"] = "DEATHKNIGHT",
-				["name"] = "Deydralia",
+				["class"] = "MONK",
+				["name"] = "Comet",
 				["overall"] = {
 				},
-			},
-			["Rorrek-Mal'Ganis"] = {
-				["overall"] = {
-				},
-				["deaths"] = {
-				},
-				["name"] = "Rorrek-Mal'Ganis",
-				["class"] = "ROGUE",
 			},
 		},
 		["boss_table"] = {
@@ -4176,6 +4280,18 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 			},
+			["Velocity-AeriePeak"] = {
+				["encounters"] = 1,
+				["points"] = 90,
+				["deaths"] = {
+					{
+						2, -- [1]
+						102.582, -- [2]
+						"Crashing Oblivion |cFFFF333318,182|r", -- [3]
+					}, -- [1]
+				},
+				["class"] = "DEMONHUNTER",
+			},
 			["Bubb-TheForgottenCoast"] = {
 				["encounters"] = 1,
 				["points"] = 100,
@@ -4236,8 +4352,8 @@ DeathGraphsDBEndurance = {
 				["class"] = "WARRIOR",
 			},
 			["Comet"] = {
-				["encounters"] = 12,
-				["points"] = 1190,
+				["encounters"] = 13,
+				["points"] = 1290,
 				["class"] = "MONK",
 				["deaths"] = {
 					{
@@ -4260,6 +4376,13 @@ DeathGraphsDBEndurance = {
 				["class"] = "PRIEST",
 				["deaths"] = {
 				},
+			},
+			["Druantis-Stormreaver"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "DRUID",
 			},
 			["Misho"] = {
 				["encounters"] = 1,
@@ -4317,6 +4440,25 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 			},
+			["Bladeé-Ragnaros"] = {
+				["encounters"] = 1,
+				["points"] = 90,
+				["deaths"] = {
+					{
+						2, -- [1]
+						270.145999999999, -- [2]
+						"Essence Shear |cFFFF333386,620|r", -- [3]
+					}, -- [1]
+				},
+				["class"] = "HUNTER",
+			},
+			["Rukard-Azralon"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "DRUID",
+			},
 			["Toomuchswag"] = {
 				["encounters"] = 4,
 				["points"] = 400,
@@ -4330,6 +4472,13 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 				["class"] = "MAGE",
+			},
+			["Skoody-Magtheridon"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "SHAMAN",
 			},
 			["Shabidh"] = {
 				["encounters"] = 1,
@@ -4472,6 +4621,13 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "DRUID",
 			},
+			["Manacookies-Area52"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "MAGE",
+			},
 			["Sakiko-Kil'jaeden"] = {
 				["encounters"] = 1,
 				["points"] = 100,
@@ -4599,6 +4755,13 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "ROGUE",
 			},
+			["Peäches-Trollbane"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "SHAMAN",
+			},
 			["Winterlich-ShadowCouncil"] = {
 				["encounters"] = 3,
 				["points"] = 300,
@@ -4612,6 +4775,13 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 				["class"] = "MONK",
+			},
+			["Melme-Thrall"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "PRIEST",
 			},
 			["Kahltraps"] = {
 				["encounters"] = 3,
@@ -4634,9 +4804,30 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "PRIEST",
 			},
+			["Cajalote-Azralon"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["class"] = "WARLOCK",
+				["deaths"] = {
+				},
+			},
+			["Cyanti"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "WARLOCK",
+			},
 			["Panicmage-Cho'gall"] = {
 				["encounters"] = 1,
 				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "MAGE",
+			},
+			["Saucerorr"] = {
+				["encounters"] = 3,
+				["points"] = 300,
 				["deaths"] = {
 				},
 				["class"] = "MAGE",
@@ -4654,6 +4845,13 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 				["class"] = "PRIEST",
+			},
+			["Zeudan-Quel'Thalas"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["class"] = "MONK",
+				["deaths"] = {
+				},
 			},
 			["Riggie"] = {
 				["encounters"] = 2,
@@ -4688,6 +4886,18 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "PRIEST",
 			},
+			["Hyphyness-Sargeras"] = {
+				["encounters"] = 1,
+				["points"] = 90,
+				["deaths"] = {
+					{
+						2, -- [1]
+						269.894, -- [2]
+						"Void Volley |cFFFF33336,762|r", -- [3]
+					}, -- [1]
+				},
+				["class"] = "HUNTER",
+			},
 			["Gateboi"] = {
 				["encounters"] = 1,
 				["points"] = 100,
@@ -4695,102 +4905,10 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "WARLOCK",
 			},
-			["Tent"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "PRIEST",
-			},
-			["Cajalote-Azralon"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["class"] = "WARLOCK",
-				["deaths"] = {
-				},
-			},
-			["Milmortes-Azralon"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["class"] = "DEATHKNIGHT",
-				["deaths"] = {
-				},
-			},
-			["Saucerorr"] = {
-				["encounters"] = 3,
-				["points"] = 300,
-				["deaths"] = {
-				},
-				["class"] = "MAGE",
-			},
-			["Râyel-BleedingHollow"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "MAGE",
-			},
-			["Zeudan-Quel'Thalas"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["class"] = "MONK",
-				["deaths"] = {
-				},
-			},
-			["Oleivia-Kil'jaeden"] = {
-				["encounters"] = 3,
-				["points"] = 280,
-				["deaths"] = {
-					{
-						1, -- [1]
-						121.679999999999, -- [2]
-						"Essence Shear |cFFFF333319,993|r", -- [3]
-					}, -- [1]
-					{
-						3, -- [1]
-						320.995000000001, -- [2]
-						"Mind Flay |cFFFF33338,597|r", -- [3]
-					}, -- [2]
-				},
-				["class"] = "PRIEST",
-			},
-			["Ancientsfury-Tichondrius"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "DRUID",
-			},
-			["Imfamousglad"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "DEATHKNIGHT",
-			},
-			["Guccidk-Turalyon"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "DEATHKNIGHT",
-			},
 			["Sonofalich"] = {
 				["encounters"] = 4,
 				["points"] = 400,
 				["deaths"] = {
-				},
-				["class"] = "DEATHKNIGHT",
-			},
-			["Hikbi-Area52"] = {
-				["encounters"] = 3,
-				["points"] = 290,
-				["deaths"] = {
-					{
-						3, -- [1]
-						169.231000000001, -- [2]
-						"Obliteration Beam (DoT) |cFFFF33331,162|r", -- [3]
-					}, -- [1]
 				},
 				["class"] = "DEATHKNIGHT",
 			},
@@ -4800,6 +4918,13 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 				["class"] = "MAGE",
+			},
+			["Fofo"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "MONK",
 			},
 			["Hìkari-Mal'Ganis"] = {
 				["encounters"] = 1,
@@ -4813,12 +4938,122 @@ DeathGraphsDBEndurance = {
 					}, -- [1]
 				},
 			},
-			["Xisaman"] = {
+			["Tent"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "PRIEST",
+			},
+			["Zaràki-Area52"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "WARRIOR",
+			},
+			["Monkzb"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "MONK",
+			},
+			["Neonripperux-Tichondrius"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["class"] = "PALADIN",
+				["deaths"] = {
+				},
+			},
+			["Talux-Tichondrius"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["class"] = "SHAMAN",
 				["deaths"] = {
 				},
+			},
+			["Râyel-BleedingHollow"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "MAGE",
+			},
+			["Shiftycents"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["class"] = "DRUID",
+				["deaths"] = {
+				},
+			},
+			["Monkcane"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "MONK",
+			},
+			["Ancientsfury-Tichondrius"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "DRUID",
+			},
+			["Sakia-Azralon"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["class"] = "MONK",
+				["deaths"] = {
+				},
+			},
+			["Guccidk-Turalyon"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "DEATHKNIGHT",
+			},
+			["Azumaru"] = {
+				["encounters"] = 2,
+				["points"] = 200,
+				["class"] = "PRIEST",
+				["deaths"] = {
+				},
+			},
+			["Hikbi-Area52"] = {
+				["encounters"] = 3,
+				["points"] = 290,
+				["deaths"] = {
+					{
+						3, -- [1]
+						169.231000000001, -- [2]
+						"Obliteration Beam (DoT) |cFFFF33331,162|r", -- [3]
+					}, -- [1]
+				},
+				["class"] = "DEATHKNIGHT",
+			},
+			["Imdabest"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "MAGE",
+			},
+			["Shinyazumaru"] = {
+				["encounters"] = 2,
+				["points"] = 200,
+				["class"] = "PRIEST",
+				["deaths"] = {
+				},
+			},
+			["Phatal-Bloodscalp"] = {
+				["encounters"] = 3,
+				["points"] = 300,
+				["deaths"] = {
+				},
+				["class"] = "PALADIN",
 			},
 			["Onefireball"] = {
 				["encounters"] = 1,
@@ -4839,17 +5074,12 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "ROGUE",
 			},
-			["Liruzal"] = {
+			["Aipetikos-Bonechewer"] = {
 				["encounters"] = 1,
-				["points"] = 90,
+				["points"] = 100,
 				["deaths"] = {
-					{
-						3, -- [1]
-						95.3070000000298, -- [2]
-						"Oblivion Veil |cFFFF333321,456|r", -- [3]
-					}, -- [1]
 				},
-				["class"] = "DEATHKNIGHT",
+				["class"] = "PALADIN",
 			},
 			["Sløane"] = {
 				["encounters"] = 2,
@@ -4865,19 +5095,24 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 			},
-			["Phatal-Bloodscalp"] = {
-				["encounters"] = 3,
-				["points"] = 300,
-				["deaths"] = {
-				},
-				["class"] = "PALADIN",
-			},
-			["Monkzb"] = {
+			["Xalephion-Zul'jin"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
 				},
-				["class"] = "MONK",
+				["class"] = "WARRIOR",
+			},
+			["Xne"] = {
+				["encounters"] = 1,
+				["points"] = 90,
+				["class"] = "HUNTER",
+				["deaths"] = {
+					{
+						1, -- [1]
+						318.386999999988, -- [2]
+						"Mind Flay |cFFFF33333,965|r", -- [3]
+					}, -- [1]
+				},
 			},
 			["Ubrickxd"] = {
 				["encounters"] = 3,
@@ -4910,12 +5145,12 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "DRUID",
 			},
-			["Neonripperux-Tichondrius"] = {
+			["Zilzag"] = {
 				["encounters"] = 1,
 				["points"] = 100,
-				["class"] = "PALADIN",
 				["deaths"] = {
 				},
+				["class"] = "DRUID",
 			},
 			["Stabssu-Kil'jaeden"] = {
 				["encounters"] = 1,
@@ -4931,55 +5166,6 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "DRUID",
 			},
-			["Talux-Tichondrius"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["class"] = "SHAMAN",
-				["deaths"] = {
-				},
-			},
-			["Shiftycents"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["class"] = "DRUID",
-				["deaths"] = {
-				},
-			},
-			["Zarea"] = {
-				["encounters"] = 2,
-				["points"] = 200,
-				["class"] = "WARLOCK",
-				["deaths"] = {
-				},
-			},
-			["Azumaru"] = {
-				["encounters"] = 2,
-				["points"] = 200,
-				["class"] = "PRIEST",
-				["deaths"] = {
-				},
-			},
-			["Imdabest"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "MAGE",
-			},
-			["Eusysteb-Mal'Ganis"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "WARLOCK",
-			},
-			["Shinyazumaru"] = {
-				["encounters"] = 2,
-				["points"] = 200,
-				["class"] = "PRIEST",
-				["deaths"] = {
-				},
-			},
 			["Papapound"] = {
 				["encounters"] = 3,
 				["points"] = 300,
@@ -4987,38 +5173,19 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "MONK",
 			},
-			["Xalephion-Zul'jin"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "WARRIOR",
-			},
-			["Xne"] = {
-				["encounters"] = 1,
-				["points"] = 90,
-				["class"] = "HUNTER",
-				["deaths"] = {
-					{
-						1, -- [1]
-						318.386999999988, -- [2]
-						"Mind Flay |cFFFF33333,965|r", -- [3]
-					}, -- [1]
-				},
-			},
-			["Cypraeidae"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["class"] = "SHAMAN",
-				["deaths"] = {
-				},
-			},
 			["Volv"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
 				},
 				["class"] = "DEATHKNIGHT",
+			},
+			["Zarea"] = {
+				["encounters"] = 2,
+				["points"] = 200,
+				["class"] = "WARLOCK",
+				["deaths"] = {
+				},
 			},
 			["Dulameng-Barthilas"] = {
 				["encounters"] = 3,
@@ -5039,12 +5206,12 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 			},
-			["Lumidtc-Mal'Ganis"] = {
+			["Eusysteb-Mal'Ganis"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
 				},
-				["class"] = "MAGE",
+				["class"] = "WARLOCK",
 			},
 			["Mebigboom"] = {
 				["encounters"] = 3,
@@ -5084,17 +5251,29 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "PALADIN",
 			},
-			["Zaràki-Area52"] = {
+			["Cypraeidae"] = {
 				["encounters"] = 1,
 				["points"] = 100,
+				["class"] = "SHAMAN",
 				["deaths"] = {
 				},
-				["class"] = "WARRIOR",
 			},
-			["Lezbehonest"] = {
-				["encounters"] = 2,
-				["points"] = 200,
-				["class"] = "MONK",
+			["Liruzal"] = {
+				["encounters"] = 1,
+				["points"] = 90,
+				["deaths"] = {
+					{
+						3, -- [1]
+						95.3070000000298, -- [2]
+						"Oblivion Veil |cFFFF333321,456|r", -- [3]
+					}, -- [1]
+				},
+				["class"] = "DEATHKNIGHT",
+			},
+			["Xisaman"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["class"] = "SHAMAN",
 				["deaths"] = {
 				},
 			},
@@ -5105,9 +5284,9 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 			},
-			["Sharksz"] = {
-				["encounters"] = 3,
-				["points"] = 300,
+			["Lumidtc-Mal'Ganis"] = {
+				["encounters"] = 1,
+				["points"] = 100,
 				["deaths"] = {
 				},
 				["class"] = "MAGE",
@@ -5118,6 +5297,72 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 				["class"] = "SHAMAN",
+			},
+			["Imfamousglad"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "DEATHKNIGHT",
+			},
+			["Oleivia-Kil'jaeden"] = {
+				["encounters"] = 3,
+				["points"] = 280,
+				["deaths"] = {
+					{
+						1, -- [1]
+						121.679999999999, -- [2]
+						"Essence Shear |cFFFF333319,993|r", -- [3]
+					}, -- [1]
+					{
+						3, -- [1]
+						320.995000000001, -- [2]
+						"Mind Flay |cFFFF33338,597|r", -- [3]
+					}, -- [2]
+				},
+				["class"] = "PRIEST",
+			},
+			["Yaxx-Thrall"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "DEATHKNIGHT",
+			},
+			["Killjo-Zul'jin"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "PALADIN",
+			},
+			["Lezbehonest"] = {
+				["encounters"] = 2,
+				["points"] = 200,
+				["class"] = "MONK",
+				["deaths"] = {
+				},
+			},
+			["Nötillidan"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "DEMONHUNTER",
+			},
+			["Sharksz"] = {
+				["encounters"] = 3,
+				["points"] = 300,
+				["deaths"] = {
+				},
+				["class"] = "MAGE",
+			},
+			["Bromsi"] = {
+				["encounters"] = 3,
+				["points"] = 300,
+				["deaths"] = {
+				},
+				["class"] = "ROGUE",
 			},
 			["Fkzul-Kil'jaeden"] = {
 				["encounters"] = 1,
@@ -5133,26 +5378,26 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "DEATHKNIGHT",
 			},
-			["Fofo"] = {
+			["Arodaxic"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
 				},
-				["class"] = "MONK",
+				["class"] = "SHAMAN",
 			},
-			["Sakia-Azralon"] = {
+			["Haìley-Ragnaros"] = {
 				["encounters"] = 1,
 				["points"] = 100,
-				["class"] = "MONK",
 				["deaths"] = {
 				},
+				["class"] = "PRIEST",
 			},
-			["Bromsi"] = {
-				["encounters"] = 3,
-				["points"] = 300,
+			["Milmortes-Azralon"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["class"] = "DEATHKNIGHT",
 				["deaths"] = {
 				},
-				["class"] = "ROGUE",
 			},
 		},
 		["boss_table"] = {
@@ -8060,12 +8305,12 @@ DeathGraphsDBEndurance = {
 					}, -- [1]
 				},
 			},
-			["Azumaru"] = {
+			["Riggie"] = {
 				["encounters"] = 2,
 				["points"] = 200,
 				["deaths"] = {
 				},
-				["class"] = "PRIEST",
+				["class"] = "MONK",
 			},
 			["Raycharlezz"] = {
 				["encounters"] = 4,
@@ -8086,12 +8331,12 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "MONK",
 			},
-			["Shenanìgans"] = {
-				["encounters"] = 4,
-				["points"] = 400,
-				["class"] = "DEMONHUNTER",
+			["Azumaru"] = {
+				["encounters"] = 2,
+				["points"] = 200,
 				["deaths"] = {
 				},
+				["class"] = "PRIEST",
 			},
 			["Chriscool"] = {
 				["encounters"] = 4,
@@ -8256,12 +8501,12 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "SHAMAN",
 			},
-			["Riggie"] = {
-				["encounters"] = 2,
-				["points"] = 200,
+			["Shenanìgans"] = {
+				["encounters"] = 4,
+				["points"] = 400,
+				["class"] = "DEMONHUNTER",
 				["deaths"] = {
 				},
-				["class"] = "MONK",
 			},
 			["Thoralf"] = {
 				["encounters"] = 2,
@@ -11239,6 +11484,13 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "WARLOCK",
 			},
+			["Corvinax-Azralon"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "SHAMAN",
+			},
 			["Tyrannous"] = {
 				["encounters"] = 3,
 				["points"] = 300,
@@ -11328,8 +11580,8 @@ DeathGraphsDBEndurance = {
 				["class"] = "DEMONHUNTER",
 			},
 			["Comet"] = {
-				["encounters"] = 11,
-				["points"] = 1030,
+				["encounters"] = 12,
+				["points"] = 1120,
 				["class"] = "MONK",
 				["deaths"] = {
 					{
@@ -11367,7 +11619,31 @@ DeathGraphsDBEndurance = {
 						143.552000000142, -- [2]
 						"Rupturing Blood |cFFFF333381,276|r", -- [3]
 					}, -- [7]
+					{
+						1, -- [1]
+						145.035, -- [2]
+						"Rupturing Blood |cFFFF333360,008|r", -- [3]
+					}, -- [8]
 				},
+			},
+			["Peäches-Trollbane"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "SHAMAN",
+			},
+			["Arodaxic"] = {
+				["encounters"] = 1,
+				["points"] = 90,
+				["deaths"] = {
+					{
+						1, -- [1]
+						100.26, -- [2]
+						"Dark Revelation |cFFFF333325,204|r", -- [3]
+					}, -- [1]
+				},
+				["class"] = "SHAMAN",
 			},
 			["Challengerly"] = {
 				["encounters"] = 3,
@@ -11394,6 +11670,13 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 				["class"] = "WARRIOR",
+			},
+			["Cyanti"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "WARLOCK",
 			},
 			["Kahltraps"] = {
 				["encounters"] = 3,
@@ -11423,6 +11706,37 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "PRIEST",
 			},
+			["Tawwxic"] = {
+				["encounters"] = 2,
+				["points"] = 200,
+				["deaths"] = {
+				},
+				["class"] = "ROGUE",
+			},
+			["Azzinara"] = {
+				["encounters"] = 3,
+				["points"] = 290,
+				["class"] = "DEMONHUNTER",
+				["deaths"] = {
+					{
+						3, -- [1]
+						157.352999999945, -- [2]
+						"Erupting Darkness |cFFFF333310,052|r", -- [3]
+					}, -- [1]
+				},
+			},
+			["Mebigboom"] = {
+				["encounters"] = 3,
+				["points"] = 290,
+				["deaths"] = {
+					{
+						3, -- [1]
+						146.546000000089, -- [2]
+						"Bloodshard |cFFFF333332,185|r", -- [3]
+					}, -- [1]
+				},
+				["class"] = "WARLOCK",
+			},
 			["Deuzbag-BlackDragonflight"] = {
 				["encounters"] = 2,
 				["points"] = 200,
@@ -11430,12 +11744,38 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "ROGUE",
 			},
+			["Skeli-Hyjal"] = {
+				["encounters"] = 3,
+				["points"] = 300,
+				["deaths"] = {
+				},
+				["class"] = "MAGE",
+			},
+			["Dianwa"] = {
+				["encounters"] = 3,
+				["points"] = 300,
+				["deaths"] = {
+				},
+				["class"] = "PRIEST",
+			},
 			["Boodyclap"] = {
 				["encounters"] = 2,
 				["points"] = 200,
 				["deaths"] = {
 				},
 				["class"] = "PRIEST",
+			},
+			["Ajora"] = {
+				["encounters"] = 5,
+				["points"] = 490,
+				["deaths"] = {
+					{
+						2, -- [1]
+						130.698000000091, -- [2]
+						"Melee |cFFFF333331,511|r", -- [3]
+					}, -- [1]
+				},
+				["class"] = "DEATHKNIGHT",
 			},
 			["Xertzertzak"] = {
 				["encounters"] = 3,
@@ -11458,17 +11798,38 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 			},
-			["Mebigboom"] = {
-				["encounters"] = 3,
-				["points"] = 290,
+			["Whitebtw"] = {
+				["encounters"] = 2,
+				["points"] = 200,
+				["deaths"] = {
+				},
+				["class"] = "PRIEST",
+			},
+			["Bladeé-Ragnaros"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "HUNTER",
+			},
+			["Shinyazumaru"] = {
+				["encounters"] = 2,
+				["points"] = 190,
+				["class"] = "PRIEST",
 				["deaths"] = {
 					{
 						3, -- [1]
-						146.546000000089, -- [2]
-						"Bloodshard |cFFFF333332,185|r", -- [3]
+						178.492999999959, -- [2]
+						"Deathwish |cFFFF33332,976|r", -- [3]
 					}, -- [1]
 				},
-				["class"] = "WARLOCK",
+			},
+			["Rukard-Azralon"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "DRUID",
 			},
 			["Toomuchswag"] = {
 				["encounters"] = 5,
@@ -11484,6 +11845,20 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "PALADIN",
 			},
+			["Zaràki-Area52"] = {
+				["encounters"] = 2,
+				["points"] = 200,
+				["deaths"] = {
+				},
+				["class"] = "WARRIOR",
+			},
+			["Ihatemondays"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "HUNTER",
+			},
 			["Xne"] = {
 				["encounters"] = 2,
 				["points"] = 190,
@@ -11496,12 +11871,47 @@ DeathGraphsDBEndurance = {
 					}, -- [1]
 				},
 			},
+			["Skoody-Magtheridon"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "SHAMAN",
+			},
 			["Caijidh"] = {
 				["encounters"] = 3,
 				["points"] = 300,
 				["deaths"] = {
 				},
 				["class"] = "DEMONHUNTER",
+			},
+			["Zarea"] = {
+				["encounters"] = 3,
+				["points"] = 300,
+				["class"] = "WARLOCK",
+				["deaths"] = {
+				},
+			},
+			["Crohan-Tichondrius"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["class"] = "DEMONHUNTER",
+				["deaths"] = {
+				},
+			},
+			["Broìled"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "ROGUE",
+			},
+			["Monkcane"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "MONK",
 			},
 			["Alamman"] = {
 				["encounters"] = 3,
@@ -11515,12 +11925,31 @@ DeathGraphsDBEndurance = {
 					}, -- [1]
 				},
 			},
-			["Sonofalich"] = {
+			["Velocity-AeriePeak"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "DEMONHUNTER",
+			},
+			["Wobbyfischer"] = {
+				["encounters"] = 3,
+				["points"] = 290,
+				["deaths"] = {
+					{
+						3, -- [1]
+						125.199000000022, -- [2]
+						"Environment (Falling) |cFFFF3333179,956|r", -- [3]
+					}, -- [1]
+				},
+				["class"] = "WARRIOR",
+			},
+			["Bromsi"] = {
 				["encounters"] = 3,
 				["points"] = 300,
 				["deaths"] = {
 				},
-				["class"] = "DEATHKNIGHT",
+				["class"] = "ROGUE",
 			},
 			["Daruyatu"] = {
 				["encounters"] = 1,
@@ -11560,12 +11989,17 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "MAGE",
 			},
-			["Pietui-Barthilas"] = {
+			["Initiate"] = {
 				["encounters"] = 3,
-				["points"] = 300,
+				["points"] = 290,
 				["deaths"] = {
+					{
+						2, -- [1]
+						104.790999999968, -- [2]
+						"Shadow Barrage |cFFFF333336,869|r", -- [3]
+					}, -- [1]
 				},
-				["class"] = "DEATHKNIGHT",
+				["class"] = "PRIEST",
 			},
 			["Invisidog"] = {
 				["encounters"] = 5,
@@ -11574,17 +12008,12 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "ROGUE",
 			},
-			["Azzinara"] = {
-				["encounters"] = 3,
-				["points"] = 290,
-				["class"] = "DEMONHUNTER",
+			["Aipetikos-Bonechewer"] = {
+				["encounters"] = 1,
+				["points"] = 100,
 				["deaths"] = {
-					{
-						3, -- [1]
-						157.352999999945, -- [2]
-						"Erupting Darkness |cFFFF333310,052|r", -- [3]
-					}, -- [1]
 				},
+				["class"] = "PALADIN",
 			},
 			["Sløane"] = {
 				["encounters"] = 3,
@@ -11593,19 +12022,24 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 			},
-			["Panicmage-Cho'gall"] = {
+			["Rorrek-Mal'Ganis"] = {
+				["encounters"] = 2,
+				["points"] = 190,
+				["deaths"] = {
+					{
+						2, -- [1]
+						129.650999999954, -- [2]
+						"Bloody Cleave |cFFFF3333131,683|r", -- [3]
+					}, -- [1]
+				},
+				["class"] = "ROGUE",
+			},
+			["Clutchboom"] = {
 				["encounters"] = 2,
 				["points"] = 200,
 				["deaths"] = {
 				},
-				["class"] = "MAGE",
-			},
-			["Skeli-Hyjal"] = {
-				["encounters"] = 3,
-				["points"] = 300,
-				["deaths"] = {
-				},
-				["class"] = "MAGE",
+				["class"] = "DRUID",
 			},
 			["Tyeis-Tichondrius"] = {
 				["encounters"] = 2,
@@ -11650,12 +12084,12 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "DRUID",
 			},
-			["Dianwa"] = {
-				["encounters"] = 3,
-				["points"] = 300,
+			["Zilzag"] = {
+				["encounters"] = 1,
+				["points"] = 100,
 				["deaths"] = {
 				},
-				["class"] = "PRIEST",
+				["class"] = "DRUID",
 			},
 			["Steit-Ragnaros"] = {
 				["encounters"] = 2,
@@ -11663,148 +12097,6 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 				["class"] = "PALADIN",
-			},
-			["Ajora"] = {
-				["encounters"] = 5,
-				["points"] = 490,
-				["deaths"] = {
-					{
-						2, -- [1]
-						130.698000000091, -- [2]
-						"Melee |cFFFF333331,511|r", -- [3]
-					}, -- [1]
-				},
-				["class"] = "DEATHKNIGHT",
-			},
-			["Shinyazumaru"] = {
-				["encounters"] = 2,
-				["points"] = 190,
-				["class"] = "PRIEST",
-				["deaths"] = {
-					{
-						3, -- [1]
-						178.492999999959, -- [2]
-						"Deathwish |cFFFF33332,976|r", -- [3]
-					}, -- [1]
-				},
-			},
-			["Hamgurgler-Cho'gall"] = {
-				["encounters"] = 2,
-				["points"] = 200,
-				["deaths"] = {
-				},
-				["class"] = "HUNTER",
-			},
-			["Kekojones-Zul'jin"] = {
-				["encounters"] = 3,
-				["points"] = 300,
-				["deaths"] = {
-				},
-				["class"] = "WARRIOR",
-			},
-			["Lunariz-Barthilas"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["class"] = "PALADIN",
-				["deaths"] = {
-				},
-			},
-			["Riggie"] = {
-				["encounters"] = 3,
-				["points"] = 300,
-				["class"] = "MONK",
-				["deaths"] = {
-				},
-			},
-			["Eusysteb-Mal'Ganis"] = {
-				["encounters"] = 2,
-				["points"] = 190,
-				["deaths"] = {
-					{
-						3, -- [1]
-						155.198000000091, -- [2]
-						"Bloodshard |cFFFF333340,088|r", -- [3]
-					}, -- [1]
-				},
-				["class"] = "WARLOCK",
-			},
-			["Zarea"] = {
-				["encounters"] = 3,
-				["points"] = 300,
-				["class"] = "WARLOCK",
-				["deaths"] = {
-				},
-			},
-			["Crohan-Tichondrius"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["class"] = "DEMONHUNTER",
-				["deaths"] = {
-				},
-			},
-			["Broìled"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "ROGUE",
-			},
-			["Racor-ScarletCrusade"] = {
-				["encounters"] = 3,
-				["points"] = 300,
-				["deaths"] = {
-				},
-				["class"] = "SHAMAN",
-			},
-			["Rorrek-Mal'Ganis"] = {
-				["encounters"] = 2,
-				["points"] = 190,
-				["deaths"] = {
-					{
-						2, -- [1]
-						129.650999999954, -- [2]
-						"Bloody Cleave |cFFFF3333131,683|r", -- [3]
-					}, -- [1]
-				},
-				["class"] = "ROGUE",
-			},
-			["Wobbyfischer"] = {
-				["encounters"] = 3,
-				["points"] = 290,
-				["deaths"] = {
-					{
-						3, -- [1]
-						125.199000000022, -- [2]
-						"Environment (Falling) |cFFFF3333179,956|r", -- [3]
-					}, -- [1]
-				},
-				["class"] = "WARRIOR",
-			},
-			["Bromsi"] = {
-				["encounters"] = 3,
-				["points"] = 300,
-				["deaths"] = {
-				},
-				["class"] = "ROGUE",
-			},
-			["Initiate"] = {
-				["encounters"] = 3,
-				["points"] = 290,
-				["deaths"] = {
-					{
-						2, -- [1]
-						104.790999999968, -- [2]
-						"Shadow Barrage |cFFFF333336,869|r", -- [3]
-					}, -- [1]
-				},
-				["class"] = "PRIEST",
-			},
-			["Lumidtc-Mal'Ganis"] = {
-				["encounters"] = 2,
-				["points"] = 200,
-				["deaths"] = {
-				},
-				["class"] = "MAGE",
 			},
 			["Chriscool"] = {
 				["encounters"] = 2,
@@ -11832,6 +12124,20 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 			},
+			["Kekojones-Zul'jin"] = {
+				["encounters"] = 3,
+				["points"] = 300,
+				["deaths"] = {
+				},
+				["class"] = "WARRIOR",
+			},
+			["Lunariz-Barthilas"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["class"] = "PALADIN",
+				["deaths"] = {
+				},
+			},
 			["Supakrazi"] = {
 				["encounters"] = 3,
 				["points"] = 300,
@@ -11839,12 +12145,120 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "SHAMAN",
 			},
-			["Zaràki-Area52"] = {
+			["Eusysteb-Mal'Ganis"] = {
+				["encounters"] = 2,
+				["points"] = 190,
+				["deaths"] = {
+					{
+						3, -- [1]
+						155.198000000091, -- [2]
+						"Bloodshard |cFFFF333340,088|r", -- [3]
+					}, -- [1]
+				},
+				["class"] = "WARLOCK",
+			},
+			["Hamgurgler-Cho'gall"] = {
 				["encounters"] = 2,
 				["points"] = 200,
 				["deaths"] = {
 				},
-				["class"] = "WARRIOR",
+				["class"] = "HUNTER",
+			},
+			["Papapound"] = {
+				["encounters"] = 3,
+				["points"] = 300,
+				["deaths"] = {
+				},
+				["class"] = "MONK",
+			},
+			["Melme-Thrall"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "PRIEST",
+			},
+			["Racor-ScarletCrusade"] = {
+				["encounters"] = 3,
+				["points"] = 300,
+				["deaths"] = {
+				},
+				["class"] = "SHAMAN",
+			},
+			["Panicmage-Cho'gall"] = {
+				["encounters"] = 2,
+				["points"] = 200,
+				["deaths"] = {
+				},
+				["class"] = "MAGE",
+			},
+			["Pietui-Barthilas"] = {
+				["encounters"] = 3,
+				["points"] = 300,
+				["deaths"] = {
+				},
+				["class"] = "DEATHKNIGHT",
+			},
+			["Sonofalich"] = {
+				["encounters"] = 3,
+				["points"] = 300,
+				["deaths"] = {
+				},
+				["class"] = "DEATHKNIGHT",
+			},
+			["Druantis-Stormreaver"] = {
+				["encounters"] = 1,
+				["points"] = 90,
+				["deaths"] = {
+					{
+						1, -- [1]
+						130.227000000001, -- [2]
+						"Corrupted Blood (DoT) |cFFFF33333,159|r", -- [3]
+					}, -- [1]
+				},
+				["class"] = "DRUID",
+			},
+			["Lumidtc-Mal'Ganis"] = {
+				["encounters"] = 2,
+				["points"] = 200,
+				["deaths"] = {
+				},
+				["class"] = "MAGE",
+			},
+			["Riggie"] = {
+				["encounters"] = 3,
+				["points"] = 300,
+				["class"] = "MONK",
+				["deaths"] = {
+				},
+			},
+			["Recksaw-Area52"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "PALADIN",
+			},
+			["Killjo-Zul'jin"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "PALADIN",
+			},
+			["Yaxx-Thrall"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "DEATHKNIGHT",
+			},
+			["Dantegra-Area52"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "WARLOCK",
 			},
 			["Lezbehonest"] = {
 				["encounters"] = 3,
@@ -11853,12 +12267,12 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 			},
-			["Papapound"] = {
-				["encounters"] = 3,
-				["points"] = 300,
+			["Nötillidan"] = {
+				["encounters"] = 1,
+				["points"] = 100,
 				["deaths"] = {
 				},
-				["class"] = "MONK",
+				["class"] = "DEMONHUNTER",
 			},
 			["Sharksz"] = {
 				["encounters"] = 3,
@@ -11874,12 +12288,12 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "DEATHKNIGHT",
 			},
-			["Clutchboom"] = {
-				["encounters"] = 2,
-				["points"] = 200,
+			["Hyphyness-Sargeras"] = {
+				["encounters"] = 1,
+				["points"] = 100,
 				["deaths"] = {
 				},
-				["class"] = "DRUID",
+				["class"] = "HUNTER",
 			},
 			["Azumaru"] = {
 				["encounters"] = 3,
@@ -11888,19 +12302,19 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 			},
-			["Whitebtw"] = {
-				["encounters"] = 2,
-				["points"] = 200,
+			["Manacookies-Area52"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "MAGE",
+			},
+			["Haìley-Ragnaros"] = {
+				["encounters"] = 1,
+				["points"] = 100,
 				["deaths"] = {
 				},
 				["class"] = "PRIEST",
-			},
-			["Tawwxic"] = {
-				["encounters"] = 2,
-				["points"] = 200,
-				["deaths"] = {
-				},
-				["class"] = "ROGUE",
 			},
 			["Qinbaijiang"] = {
 				["encounters"] = 3,
@@ -14146,19 +14560,19 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "MONK",
 			},
-			["Tent"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["class"] = "PRIEST",
-				["deaths"] = {
-				},
-			},
 			["Nerdsmasher"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["class"] = "PALADIN",
 				["deaths"] = {
 				},
+			},
+			["Phatal-Bloodscalp"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "PALADIN",
 			},
 			["Dianwa"] = {
 				["encounters"] = 1,
@@ -14539,12 +14953,12 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "DEATHKNIGHT",
 			},
-			["Phatal-Bloodscalp"] = {
+			["Tent"] = {
 				["encounters"] = 1,
 				["points"] = 100,
+				["class"] = "PRIEST",
 				["deaths"] = {
 				},
-				["class"] = "PALADIN",
 			},
 			["Azumaru"] = {
 				["encounters"] = 1,
@@ -14869,13 +15283,6 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "PRIEST",
 			},
-			["Laniaria"] = {
-				["encounters"] = 20,
-				["points"] = 2000,
-				["deaths"] = {
-				},
-				["class"] = "DEMONHUNTER",
-			},
 			["Raycharlezz"] = {
 				["encounters"] = 20,
 				["points"] = 1980,
@@ -14892,6 +15299,13 @@ DeathGraphsDBEndurance = {
 					}, -- [2]
 				},
 				["class"] = "DEMONHUNTER",
+			},
+			["Itàchii"] = {
+				["encounters"] = 6,
+				["points"] = 600,
+				["class"] = "DRUID",
+				["deaths"] = {
+				},
 			},
 			["Comet"] = {
 				["encounters"] = 26,
@@ -15233,12 +15647,12 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "PRIEST",
 			},
-			["Itàchii"] = {
-				["encounters"] = 6,
-				["points"] = 600,
-				["class"] = "DRUID",
+			["Laniaria"] = {
+				["encounters"] = 20,
+				["points"] = 2000,
 				["deaths"] = {
 				},
+				["class"] = "DEMONHUNTER",
 			},
 			["Bromsi"] = {
 				["encounters"] = 20,
@@ -15371,6 +15785,13 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 			},
+			["Velocity-AeriePeak"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "DEMONHUNTER",
+			},
 			["Pinpus"] = {
 				["encounters"] = 1,
 				["points"] = 100,
@@ -15378,12 +15799,38 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "MAGE",
 			},
+			["Dellerine"] = {
+				["encounters"] = 2,
+				["points"] = 190,
+				["deaths"] = {
+					{
+						1, -- [1]
+						137.853999999992, -- [2]
+						"Omega Vector |cFFFF33339,195|r", -- [3]
+					}, -- [1]
+				},
+				["class"] = "WARLOCK",
+			},
+			["Chriscool"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["class"] = "ROGUE",
+				["deaths"] = {
+				},
+			},
 			["Thebigvalue"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["class"] = "DRUID",
 				["deaths"] = {
 				},
+			},
+			["Hyphyness-Sargeras"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "HUNTER",
 			},
 			["Imfamousglad"] = {
 				["encounters"] = 1,
@@ -15404,6 +15851,13 @@ DeathGraphsDBEndurance = {
 					}, -- [1]
 				},
 			},
+			["Mebigboom"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "WARLOCK",
+			},
 			["Zarea"] = {
 				["encounters"] = 1,
 				["points"] = 100,
@@ -15411,12 +15865,66 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "WARLOCK",
 			},
+			["Initiate"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "PRIEST",
+			},
+			["Dianwa"] = {
+				["encounters"] = 2,
+				["points"] = 200,
+				["deaths"] = {
+				},
+				["class"] = "PRIEST",
+			},
+			["Ajora"] = {
+				["encounters"] = 2,
+				["points"] = 200,
+				["deaths"] = {
+				},
+				["class"] = "DEATHKNIGHT",
+			},
 			["Challengerly"] = {
 				["encounters"] = 2,
 				["points"] = 200,
 				["deaths"] = {
 				},
 				["class"] = "DEMONHUNTER",
+			},
+			["Skeli-Hyjal"] = {
+				["encounters"] = 2,
+				["points"] = 190,
+				["deaths"] = {
+					{
+						1, -- [1]
+						141.451000000001, -- [2]
+						"Omega Vector |cFFFF333310,598|r", -- [3]
+					}, -- [1]
+				},
+				["class"] = "MAGE",
+			},
+			["Melme-Thrall"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "PRIEST",
+			},
+			["Lezbehonest"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "MONK",
+			},
+			["Noknight"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["class"] = "WARLOCK",
+				["deaths"] = {
+				},
 			},
 			["Sarvis-Tichondrius"] = {
 				["encounters"] = 2,
@@ -15439,38 +15947,29 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "ROGUE",
 			},
-			["Panicmage-Cho'gall"] = {
+			["Reversehots"] = {
 				["encounters"] = 1,
-				["points"] = 100,
-				["class"] = "MAGE",
-				["deaths"] = {
-				},
-			},
-			["Boodyclap"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["class"] = "PRIEST",
-				["deaths"] = {
-				},
-			},
-			["Xertzertzak"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
+				["points"] = 90,
 				["class"] = "WARLOCK",
+				["deaths"] = {
+					{
+						1, -- [1]
+						112.641999999993, -- [2]
+						"Omega Vector |cFFFF333315,125|r", -- [3]
+					}, -- [1]
+				},
 			},
-			["Kahltraps"] = {
-				["encounters"] = 1,
-				["points"] = 100,
+			["Rorrek-Mal'Ganis"] = {
+				["encounters"] = 2,
+				["points"] = 200,
 				["deaths"] = {
 				},
-				["class"] = "HUNTER",
+				["class"] = "ROGUE",
 			},
-			["Haosen"] = {
+			["Illidelf-Mal'Ganis"] = {
 				["encounters"] = 1,
 				["points"] = 100,
-				["class"] = "ROGUE",
+				["class"] = "DEMONHUNTER",
 				["deaths"] = {
 				},
 			},
@@ -15481,12 +15980,75 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 			},
+			["Panicmage-Cho'gall"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["class"] = "MAGE",
+				["deaths"] = {
+				},
+			},
 			["Bullballs-Korgath"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["class"] = "PALADIN",
 				["deaths"] = {
 				},
+			},
+			["Azzinara"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "DEMONHUNTER",
+			},
+			["Boodyclap"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["class"] = "PRIEST",
+				["deaths"] = {
+				},
+			},
+			["Nafarious-Hyjal"] = {
+				["encounters"] = 2,
+				["points"] = 200,
+				["deaths"] = {
+				},
+				["class"] = "DEMONHUNTER",
+			},
+			["Xertzertzak"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "WARLOCK",
+			},
+			["Deydralia"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["class"] = "DEATHKNIGHT",
+				["deaths"] = {
+				},
+			},
+			["Gigataur-Cho'gall"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["class"] = "PALADIN",
+				["deaths"] = {
+				},
+			},
+			["Haosen"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["class"] = "ROGUE",
+				["deaths"] = {
+				},
+			},
+			["Bladeé-Ragnaros"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "HUNTER",
 			},
 			["Gateboi"] = {
 				["encounters"] = 1,
@@ -15495,12 +16057,12 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 			},
-			["Chriscool"] = {
+			["Rukard-Azralon"] = {
 				["encounters"] = 1,
 				["points"] = 100,
-				["class"] = "ROGUE",
 				["deaths"] = {
 				},
+				["class"] = "DRUID",
 			},
 			["Toomuchswag"] = {
 				["encounters"] = 2,
@@ -15509,29 +16071,19 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "ROGUE",
 			},
-			["Comet"] = {
-				["encounters"] = 6,
-				["points"] = 580,
-				["class"] = "MONK",
+			["Zeedoink-Zul'jin"] = {
+				["encounters"] = 2,
+				["points"] = 200,
 				["deaths"] = {
-					{
-						1, -- [1]
-						126.979999999981, -- [2]
-						"Plague Bomb |cFFFF333310,156|r", -- [3]
-					}, -- [1]
-					{
-						2, -- [1]
-						246.069000000018, -- [2]
-						"Omega Vector |cFFFF333320,332|r", -- [3]
-					}, -- [2]
 				},
+				["class"] = "WARLOCK",
 			},
-			["Tent"] = {
+			["Riggie"] = {
 				["encounters"] = 1,
 				["points"] = 100,
-				["class"] = "PRIEST",
 				["deaths"] = {
 				},
+				["class"] = "MONK",
 			},
 			["Nerdsmasher"] = {
 				["encounters"] = 1,
@@ -15540,19 +16092,19 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 			},
-			["Dianwa"] = {
-				["encounters"] = 2,
-				["points"] = 200,
+			["Bromsi"] = {
+				["encounters"] = 1,
+				["points"] = 100,
 				["deaths"] = {
 				},
-				["class"] = "PRIEST",
+				["class"] = "ROGUE",
 			},
-			["Ajora"] = {
-				["encounters"] = 2,
-				["points"] = 200,
+			["Skoody-Magtheridon"] = {
+				["encounters"] = 1,
+				["points"] = 100,
 				["deaths"] = {
 				},
-				["class"] = "DEATHKNIGHT",
+				["class"] = "SHAMAN",
 			},
 			["Lostcauz"] = {
 				["encounters"] = 1,
@@ -15561,24 +16113,19 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 			},
-			["Leeche-Tichondrius"] = {
-				["encounters"] = 2,
-				["points"] = 200,
+			["Aithas-Hyjal"] = {
+				["encounters"] = 1,
+				["points"] = 100,
 				["deaths"] = {
 				},
-				["class"] = "PRIEST",
+				["class"] = "MONK",
 			},
-			["Skeli-Hyjal"] = {
-				["encounters"] = 2,
-				["points"] = 190,
+			["Absurdbird"] = {
+				["encounters"] = 1,
+				["points"] = 100,
 				["deaths"] = {
-					{
-						1, -- [1]
-						141.451000000001, -- [2]
-						"Omega Vector |cFFFF333310,598|r", -- [3]
-					}, -- [1]
 				},
-				["class"] = "MAGE",
+				["class"] = "DRUID",
 			},
 			["Neldo-Area52"] = {
 				["encounters"] = 2,
@@ -15587,7 +16134,7 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "HUNTER",
 			},
-			["Lezbehonest"] = {
+			["Monkcane"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
@@ -15608,19 +16155,19 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 			},
-			["Bromsi"] = {
+			["Liruzal"] = {
 				["encounters"] = 1,
 				["points"] = 100,
+				["class"] = "DEATHKNIGHT",
 				["deaths"] = {
 				},
-				["class"] = "ROGUE",
 			},
-			["Absurdbird"] = {
+			["Szemòn"] = {
 				["encounters"] = 1,
 				["points"] = 100,
+				["class"] = "ROGUE",
 				["deaths"] = {
 				},
-				["class"] = "DRUID",
 			},
 			["Daruyatu"] = {
 				["encounters"] = 1,
@@ -15674,12 +16221,12 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "ROGUE",
 			},
-			["Liruzal"] = {
+			["Aipetikos-Bonechewer"] = {
 				["encounters"] = 1,
 				["points"] = 100,
-				["class"] = "DEATHKNIGHT",
 				["deaths"] = {
 				},
+				["class"] = "PALADIN",
 			},
 			["Sløane"] = {
 				["encounters"] = 1,
@@ -15688,19 +16235,19 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "MONK",
 			},
-			["Rorrek-Mal'Ganis"] = {
-				["encounters"] = 2,
-				["points"] = 200,
-				["deaths"] = {
-				},
-				["class"] = "ROGUE",
-			},
-			["Imdabest"] = {
+			["Ubrickxd"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
 				},
-				["class"] = "MAGE",
+				["class"] = "WARLOCK",
+			},
+			["Tent"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["class"] = "PRIEST",
+				["deaths"] = {
+				},
 			},
 			["Øzhuntr-Azralon"] = {
 				["encounters"] = 2,
@@ -15709,12 +16256,12 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "HUNTER",
 			},
-			["Ubrickxd"] = {
+			["Deathbatto-Lethon"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
 				},
-				["class"] = "WARLOCK",
+				["class"] = "DEATHKNIGHT",
 			},
 			["Hamgurgler-Cho'gall"] = {
 				["encounters"] = 1,
@@ -15730,16 +16277,30 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "DRUID",
 			},
-			["Initiate"] = {
+			["Zilzag"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
 				},
-				["class"] = "PRIEST",
+				["class"] = "DRUID",
 			},
 			["Broìled"] = {
 				["encounters"] = 1,
 				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "ROGUE",
+			},
+			["Phatal-Bloodscalp"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "PALADIN",
+			},
+			["Tyeis-Tichondrius"] = {
+				["encounters"] = 2,
+				["points"] = 200,
 				["deaths"] = {
 				},
 				["class"] = "ROGUE",
@@ -15751,26 +16312,12 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 			},
-			["Azzinara"] = {
+			["Imdabest"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
 				},
-				["class"] = "DEMONHUNTER",
-			},
-			["Nafarious-Hyjal"] = {
-				["encounters"] = 2,
-				["points"] = 200,
-				["deaths"] = {
-				},
-				["class"] = "DEMONHUNTER",
-			},
-			["Deydralia"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["class"] = "DEATHKNIGHT",
-				["deaths"] = {
-				},
+				["class"] = "MAGE",
 			},
 			["Supakrazi"] = {
 				["encounters"] = 1,
@@ -15779,12 +16326,12 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "SHAMAN",
 			},
-			["Gigataur-Cho'gall"] = {
+			["Wobbyfischer"] = {
 				["encounters"] = 1,
 				["points"] = 100,
-				["class"] = "PALADIN",
 				["deaths"] = {
 				},
+				["class"] = "WARRIOR",
 			},
 			["Eusysteb-Mal'Ganis"] = {
 				["encounters"] = 1,
@@ -15807,26 +16354,26 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 			},
-			["Zeedoink-Zul'jin"] = {
-				["encounters"] = 2,
-				["points"] = 200,
-				["deaths"] = {
-				},
-				["class"] = "WARLOCK",
-			},
-			["Riggie"] = {
+			["Papapound"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
 				},
 				["class"] = "MONK",
 			},
-			["Szemòn"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["class"] = "ROGUE",
+			["Leeche-Tichondrius"] = {
+				["encounters"] = 2,
+				["points"] = 200,
 				["deaths"] = {
 				},
+				["class"] = "PRIEST",
+			},
+			["Kahltraps"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "HUNTER",
 			},
 			["Toerings"] = {
 				["encounters"] = 1,
@@ -15842,12 +16389,22 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 			},
-			["Tyeis-Tichondrius"] = {
-				["encounters"] = 2,
-				["points"] = 200,
+			["Comet"] = {
+				["encounters"] = 7,
+				["points"] = 680,
+				["class"] = "MONK",
 				["deaths"] = {
+					{
+						1, -- [1]
+						126.979999999981, -- [2]
+						"Plague Bomb |cFFFF333310,156|r", -- [3]
+					}, -- [1]
+					{
+						2, -- [1]
+						246.069000000018, -- [2]
+						"Omega Vector |cFFFF333320,332|r", -- [3]
+					}, -- [2]
 				},
-				["class"] = "ROGUE",
 			},
 			["Lumidtc-Mal'Ganis"] = {
 				["encounters"] = 1,
@@ -15856,50 +16413,45 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 			},
-			["Dellerine"] = {
-				["encounters"] = 2,
-				["points"] = 190,
-				["deaths"] = {
-					{
-						1, -- [1]
-						137.853999999992, -- [2]
-						"Omega Vector |cFFFF33339,195|r", -- [3]
-					}, -- [1]
-				},
-				["class"] = "WARLOCK",
-			},
-			["Illidelf-Mal'Ganis"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["class"] = "DEMONHUNTER",
-				["deaths"] = {
-				},
-			},
-			["Wobbyfischer"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "WARRIOR",
-			},
-			["Reversehots"] = {
+			["Seryth-Silvermoon"] = {
 				["encounters"] = 1,
 				["points"] = 90,
-				["class"] = "WARLOCK",
 				["deaths"] = {
 					{
 						1, -- [1]
-						112.641999999993, -- [2]
-						"Omega Vector |cFFFF333315,125|r", -- [3]
+						261.287999999999, -- [2]
+						"Omega Vector |cFFFF333320,527|r", -- [3]
 					}, -- [1]
 				},
+				["class"] = "MAGE",
 			},
-			["Noknight"] = {
+			["Traegue-Area52"] = {
 				["encounters"] = 1,
 				["points"] = 100,
-				["class"] = "WARLOCK",
 				["deaths"] = {
 				},
+				["class"] = "ROGUE",
+			},
+			["Robstatus"] = {
+				["encounters"] = 2,
+				["points"] = 200,
+				["deaths"] = {
+				},
+				["class"] = "DEATHKNIGHT",
+			},
+			["Yaxx-Thrall"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "DEATHKNIGHT",
+			},
+			["Killjo-Zul'jin"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "PALADIN",
 			},
 			["Ovrdue-Thrall"] = {
 				["encounters"] = 2,
@@ -15908,12 +16460,12 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "SHAMAN",
 			},
-			["Papapound"] = {
+			["Nötillidan"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
 				},
-				["class"] = "MONK",
+				["class"] = "DEMONHUNTER",
 			},
 			["Sharksz"] = {
 				["encounters"] = 1,
@@ -15934,12 +16486,12 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "DEATHKNIGHT",
 			},
-			["Phatal-Bloodscalp"] = {
+			["Manïa-Mal'Ganis"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
 				},
-				["class"] = "PALADIN",
+				["class"] = "MONK",
 			},
 			["Azumaru"] = {
 				["encounters"] = 1,
@@ -15948,19 +16500,19 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "PRIEST",
 			},
-			["Mebigboom"] = {
+			["Manacookies-Area52"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
 				},
-				["class"] = "WARLOCK",
+				["class"] = "MAGE",
 			},
-			["Robstatus"] = {
-				["encounters"] = 2,
-				["points"] = 200,
+			["Haìley-Ragnaros"] = {
+				["encounters"] = 1,
+				["points"] = 100,
 				["deaths"] = {
 				},
-				["class"] = "DEATHKNIGHT",
+				["class"] = "PRIEST",
 			},
 			["Qinbaijiang"] = {
 				["encounters"] = 2,
@@ -16080,6 +16632,13 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "DEATHKNIGHT",
 			},
+			["Velocity-AeriePeak"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "DEMONHUNTER",
+			},
 			["Pinpus"] = {
 				["encounters"] = 1,
 				["points"] = 100,
@@ -16109,8 +16668,8 @@ DeathGraphsDBEndurance = {
 				["class"] = "WARLOCK",
 			},
 			["Comet"] = {
-				["encounters"] = 4,
-				["points"] = 400,
+				["encounters"] = 5,
+				["points"] = 500,
 				["deaths"] = {
 				},
 				["class"] = "MONK",
@@ -16128,6 +16687,13 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 				["class"] = "WARRIOR",
+			},
+			["Melme-Thrall"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "PRIEST",
 			},
 			["Kahltraps"] = {
 				["encounters"] = 1,
@@ -16183,12 +16749,26 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "WARLOCK",
 			},
+			["Bladeé-Ragnaros"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "HUNTER",
+			},
 			["Gateboi"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
 				},
 				["class"] = "WARLOCK",
+			},
+			["Rukard-Azralon"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "DRUID",
 			},
 			["Toomuchswag"] = {
 				["encounters"] = 2,
@@ -16197,12 +16777,66 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "ROGUE",
 			},
+			["Rorrek-Mal'Ganis"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "ROGUE",
+			},
+			["Zeedoink-Zul'jin"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "WARLOCK",
+			},
 			["Phatal-Bloodscalp"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
 				},
 				["class"] = "PALADIN",
+			},
+			["Whitebtw"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "PRIEST",
+			},
+			["Skoody-Magtheridon"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "SHAMAN",
+			},
+			["Yozafist-Barthilas"] = {
+				["encounters"] = 1,
+				["points"] = 90,
+				["deaths"] = {
+					{
+						1, -- [1]
+						60.710000000021, -- [2]
+						"Void Lash |cFFFF333397,529|r", -- [3]
+					}, -- [1]
+				},
+				["class"] = "SHAMAN",
+			},
+			["Riggie"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "MONK",
+			},
+			["Drlighter"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "DEATHKNIGHT",
 			},
 			["Neldo-Area52"] = {
 				["encounters"] = 1,
@@ -16211,12 +16845,45 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "HUNTER",
 			},
+			["Monkcane"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "MONK",
+			},
 			["Alamman"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
 				},
 				["class"] = "PALADIN",
+			},
+			["Sharksz"] = {
+				["encounters"] = 1,
+				["points"] = 90,
+				["deaths"] = {
+					{
+						2, -- [1]
+						295.969000000041, -- [2]
+						"Mongoose Bite |cFFFF3333955|r", -- [3]
+					}, -- [1]
+				},
+				["class"] = "MAGE",
+			},
+			["Skeli-Hyjal"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "MAGE",
+			},
+			["Ovrdue-Thrall"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "SHAMAN",
 			},
 			["Daruyatu"] = {
 				["encounters"] = 1,
@@ -16232,12 +16899,26 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "WARLOCK",
 			},
+			["Dantegra-Area52"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "WARLOCK",
+			},
 			["Kekojones-Zul'jin"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
 				},
 				["class"] = "WARRIOR",
+			},
+			["Azzinara"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "DEMONHUNTER",
 			},
 			["Invisidog"] = {
 				["encounters"] = 2,
@@ -16251,12 +16932,12 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "ROGUE",
 			},
-			["Asayo"] = {
+			["Aipetikos-Bonechewer"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
 				},
-				["class"] = "HUNTER",
+				["class"] = "PALADIN",
 			},
 			["Sløane"] = {
 				["encounters"] = 1,
@@ -16264,175 +16945,6 @@ DeathGraphsDBEndurance = {
 				["deaths"] = {
 				},
 				["class"] = "MONK",
-			},
-			["Tyeis-Tichondrius"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "ROGUE",
-			},
-			["Ubrickxd"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "WARLOCK",
-			},
-			["Imdabest"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "MAGE",
-			},
-			["Brezei"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "DRUID",
-			},
-			["Zeedoink-Zul'jin"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "WARLOCK",
-			},
-			["Broìled"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "ROGUE",
-			},
-			["Rorrek-Mal'Ganis"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "ROGUE",
-			},
-			["Yozafist-Barthilas"] = {
-				["encounters"] = 1,
-				["points"] = 90,
-				["deaths"] = {
-					{
-						1, -- [1]
-						60.710000000021, -- [2]
-						"Void Lash |cFFFF333397,529|r", -- [3]
-					}, -- [1]
-				},
-				["class"] = "SHAMAN",
-			},
-			["Chriscool"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "ROGUE",
-			},
-			["Riggie"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "MONK",
-			},
-			["Supakrazi"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "SHAMAN",
-			},
-			["Drlighter"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "DEATHKNIGHT",
-			},
-			["Eusysteb-Mal'Ganis"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "WARLOCK",
-			},
-			["Sharksz"] = {
-				["encounters"] = 1,
-				["points"] = 90,
-				["deaths"] = {
-					{
-						2, -- [1]
-						295.969000000041, -- [2]
-						"Mongoose Bite |cFFFF3333955|r", -- [3]
-					}, -- [1]
-				},
-				["class"] = "MAGE",
-			},
-			["Gigataur-Cho'gall"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "PALADIN",
-			},
-			["Skeli-Hyjal"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "MAGE",
-			},
-			["Racor-ScarletCrusade"] = {
-				["encounters"] = 1,
-				["points"] = 90,
-				["deaths"] = {
-					{
-						1, -- [1]
-						389.479999999981, -- [2]
-						"Howling Blast (Main Target) |cFFFF33331,024|r", -- [3]
-					}, -- [1]
-				},
-				["class"] = "SHAMAN",
-			},
-			["Ovrdue-Thrall"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "SHAMAN",
-			},
-			["Azzinara"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "DEMONHUNTER",
-			},
-			["Nafarious-Hyjal"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "DEMONHUNTER",
-			},
-			["Wobbyfischer"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "WARRIOR",
-			},
-			["Lumidtc-Mal'Ganis"] = {
-				["encounters"] = 1,
-				["points"] = 100,
-				["deaths"] = {
-				},
-				["class"] = "MAGE",
 			},
 			["Zarea"] = {
 				["encounters"] = 1,
@@ -16448,12 +16960,68 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "WARLOCK",
 			},
-			["Initiate"] = {
+			["Tyeis-Tichondrius"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "ROGUE",
+			},
+			["Deathbatto-Lethon"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "DEATHKNIGHT",
+			},
+			["Imdabest"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "MAGE",
+			},
+			["Brezei"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "DRUID",
+			},
+			["Zilzag"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "DRUID",
+			},
+			["Broìled"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "ROGUE",
+			},
+			["Convect-Stormreaver"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "WARLOCK",
+			},
+			["Tent"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
 				},
 				["class"] = "PRIEST",
+			},
+			["Chriscool"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "ROGUE",
 			},
 			["Hamgurgler-Cho'gall"] = {
 				["encounters"] = 1,
@@ -16462,12 +17030,129 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "HUNTER",
 			},
+			["Supakrazi"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "SHAMAN",
+			},
+			["Initiate"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "PRIEST",
+			},
+			["Eusysteb-Mal'Ganis"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "WARLOCK",
+			},
 			["Bromsi"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
 				},
 				["class"] = "ROGUE",
+			},
+			["Gigataur-Cho'gall"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "PALADIN",
+			},
+			["Asayo"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "HUNTER",
+			},
+			["Racor-ScarletCrusade"] = {
+				["encounters"] = 1,
+				["points"] = 90,
+				["deaths"] = {
+					{
+						1, -- [1]
+						389.479999999981, -- [2]
+						"Howling Blast (Main Target) |cFFFF33331,024|r", -- [3]
+					}, -- [1]
+				},
+				["class"] = "SHAMAN",
+			},
+			["Papapound"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "MONK",
+			},
+			["Recksaw-Area52"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "PALADIN",
+			},
+			["Nafarious-Hyjal"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "DEMONHUNTER",
+			},
+			["Robstatus"] = {
+				["encounters"] = 2,
+				["points"] = 200,
+				["deaths"] = {
+				},
+				["class"] = "DEATHKNIGHT",
+			},
+			["Lumidtc-Mal'Ganis"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "MAGE",
+			},
+			["Seryth-Silvermoon"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "MAGE",
+			},
+			["Ubrickxd"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "WARLOCK",
+			},
+			["Nötillidan"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "DEMONHUNTER",
+			},
+			["Yaxx-Thrall"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "DEATHKNIGHT",
+			},
+			["Killjo-Zul'jin"] = {
+				["encounters"] = 1,
+				["points"] = 100,
+				["deaths"] = {
+				},
+				["class"] = "PALADIN",
 			},
 			["Lezbehonest"] = {
 				["encounters"] = 1,
@@ -16476,12 +17161,12 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "MONK",
 			},
-			["Papapound"] = {
+			["Wobbyfischer"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
 				},
-				["class"] = "MONK",
+				["class"] = "WARRIOR",
 			},
 			["Ajora"] = {
 				["encounters"] = 2,
@@ -16502,12 +17187,12 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "PRIEST",
 			},
-			["Robstatus"] = {
-				["encounters"] = 2,
-				["points"] = 200,
+			["Hyphyness-Sargeras"] = {
+				["encounters"] = 1,
+				["points"] = 100,
 				["deaths"] = {
 				},
-				["class"] = "DEATHKNIGHT",
+				["class"] = "HUNTER",
 			},
 			["Azumaru"] = {
 				["encounters"] = 1,
@@ -16516,14 +17201,14 @@ DeathGraphsDBEndurance = {
 				},
 				["class"] = "PRIEST",
 			},
-			["Tent"] = {
+			["Manacookies-Area52"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
 				},
-				["class"] = "PRIEST",
+				["class"] = "MAGE",
 			},
-			["Whitebtw"] = {
+			["Haìley-Ragnaros"] = {
 				["encounters"] = 1,
 				["points"] = 100,
 				["deaths"] = {
@@ -16544,393 +17229,396 @@ DeathGraphsDBCurrent = {
 	{
 		["deaths"] = {
 			{
-				["maxhealth"] = 138899,
-				["timeofdeath"] = 271.281000000017,
-				["name"] = "Satãzão-Goldrinn",
+				["maxhealth"] = 111653,
+				["timeofdeath"] = 102.582,
+				["name"] = "Velocity-AeriePeak",
+				["time"] = 1546039058.749,
+				["class"] = "DEMONHUNTER",
+				["timestring"] = "1m 42s",
 				["events"] = {
 					{
-						true, -- [1]
-						278150, -- [2]
-						1202, -- [3]
-						1545788566.371, -- [4]
-						123973, -- [5]
+						4, -- [1]
+						272146, -- [2]
+						23, -- [3]
+						1546039049.606, -- [4]
+						52479, -- [5]
 						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
+						false, -- [7]
+						false, -- [8]
 						false, -- [9]
-						-1, -- [10]
+						false, -- [10]
 					}, -- [1]
 					{
-						false, -- [1]
-						61295, -- [2]
-						1841, -- [3]
-						1545788567.004, -- [4]
-						125814, -- [5]
-						"Talux-Tichondrius", -- [6]
-						nil, -- [7]
-						0, -- [8]
+						4, -- [1]
+						272146, -- [2]
+						24, -- [3]
+						1546039049.606, -- [4]
+						52479, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
 						false, -- [9]
-						-1, -- [10]
+						false, -- [10]
 					}, -- [2]
 					{
-						false, -- [1]
-						275499, -- [2]
-						1140, -- [3]
-						1545788567.004, -- [4]
-						126954, -- [5]
-						"Healing Stream Totem <Talux-Tichondrius>", -- [6]
-						nil, -- [7]
-						0, -- [8]
+						4, -- [1]
+						272146, -- [2]
+						25, -- [3]
+						1546039049.606, -- [4]
+						52479, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
 						false, -- [9]
-						-1, -- [10]
+						false, -- [10]
 					}, -- [3]
 					{
-						true, -- [1]
-						278150, -- [2]
-						1201, -- [3]
-						1545788567.378, -- [4]
-						125753, -- [5]
+						4, -- [1]
+						272146, -- [2]
+						26, -- [3]
+						1546039049.606, -- [4]
+						52479, -- [5]
 						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
+						false, -- [7]
+						false, -- [8]
 						false, -- [9]
-						-1, -- [10]
+						false, -- [10]
 					}, -- [4]
 					{
-						false, -- [1]
-						191840, -- [2]
-						317, -- [3]
-						1545788567.909, -- [4]
-						126070, -- [5]
-						"Sakia-Azralon", -- [6]
-						nil, -- [7]
-						0, -- [8]
+						4, -- [1]
+						272146, -- [2]
+						27, -- [3]
+						1546039049.606, -- [4]
+						52479, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
 						false, -- [9]
-						-1, -- [10]
+						false, -- [10]
 					}, -- [5]
 					{
-						true, -- [1]
-						278150, -- [2]
-						1202, -- [3]
-						1545788568.374, -- [4]
-						124868, -- [5]
+						4, -- [1]
+						272146, -- [2]
+						28, -- [3]
+						1546039049.606, -- [4]
+						52479, -- [5]
 						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
+						false, -- [7]
+						false, -- [8]
 						false, -- [9]
-						-1, -- [10]
+						false, -- [10]
 					}, -- [6]
 					{
 						true, -- [1]
-						276863, -- [2]
-						21357, -- [3]
-						1545788568.785, -- [4]
-						103511, -- [5]
-						"[*] Crashing Oblivion", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [7]
-					{
-						true, -- [1]
-						272543, -- [2]
-						13345, -- [3]
-						1545788569.067, -- [4]
-						90166, -- [5]
-						"[*] Imminent Ruin", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [8]
-					{
-						true, -- [1]
-						272543, -- [2]
-						13345, -- [3]
-						1545788569.067, -- [4]
-						76821, -- [5]
-						"[*] Imminent Ruin", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [9]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1201, -- [3]
-						1545788569.395, -- [4]
-						75620, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [10]
-					{
-						false, -- [1]
-						61295, -- [2]
-						2152, -- [3]
-						1545788569.684, -- [4]
-						77772, -- [5]
-						"Talux-Tichondrius", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [11]
-					{
-						false, -- [1]
-						191840, -- [2]
-						318, -- [3]
-						1545788569.713, -- [4]
-						78090, -- [5]
-						"Sakia-Azralon", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [12]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1202, -- [3]
-						1545788570.377, -- [4]
-						76888, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [13]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1202, -- [3]
-						1545788571.379, -- [4]
-						75686, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [14]
-					{
-						false, -- [1]
-						191840, -- [2]
-						318, -- [3]
-						1545788571.527, -- [4]
-						76004, -- [5]
-						"Sakia-Azralon", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [15]
-					{
-						false, -- [1]
-						61295, -- [2]
-						2150, -- [3]
-						1545788572.373, -- [4]
-						78154, -- [5]
-						"Talux-Tichondrius", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [16]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1202, -- [3]
-						1545788572.373, -- [4]
-						76952, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [17]
-					{
-						false, -- [1]
-						191840, -- [2]
-						635, -- [3]
-						1545788573.325, -- [4]
-						77587, -- [5]
-						"Sakia-Azralon", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [18]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1202, -- [3]
-						1545788573.417, -- [4]
-						76385, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [19]
-					{
-						4, -- [1]
-						272146, -- [2]
-						3, -- [3]
-						1545788573.417, -- [4]
-						76385, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [20]
-					{
-						4, -- [1]
-						272146, -- [2]
-						4, -- [3]
-						1545788573.417, -- [4]
-						76385, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [21]
-					{
-						4, -- [1]
-						272146, -- [2]
-						5, -- [3]
-						1545788573.417, -- [4]
-						76385, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [22]
-					{
-						4, -- [1]
-						272146, -- [2]
-						6, -- [3]
-						1545788573.417, -- [4]
-						76385, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [23]
-					{
-						4, -- [1]
-						272146, -- [2]
-						7, -- [3]
-						1545788573.417, -- [4]
-						76385, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [24]
-					{
-						4, -- [1]
-						272146, -- [2]
-						8, -- [3]
-						1545788573.417, -- [4]
-						76385, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [25]
-					{
-						4, -- [1]
-						272146, -- [2]
-						9, -- [3]
-						1545788573.417, -- [4]
-						76385, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [26]
-					{
-						4, -- [1]
-						272146, -- [2]
-						10, -- [3]
-						1545788573.417, -- [4]
-						76385, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [27]
-					{
-						4, -- [1]
-						272146, -- [2]
-						11, -- [3]
-						1545788573.417, -- [4]
-						76385, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [28]
-					{
-						4, -- [1]
-						272146, -- [2]
-						12, -- [3]
-						1545788573.417, -- [4]
-						76385, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [29]
-					{
-						true, -- [1]
 						273811, -- [2]
-						26664, -- [3]
-						1545788573.417, -- [4]
-						49721, -- [5]
+						27306, -- [3]
+						1546039049.606, -- [4]
+						25173, -- [5]
 						"[*] Xalzaix's Awakening", -- [6]
 						nil, -- [7]
 						32, -- [8]
 						false, -- [9]
 						-1, -- [10]
-					}, -- [30]
-					{
-						false, -- [1]
-						61295, -- [2]
-						1629, -- [3]
-						1545788574.247, -- [4]
-						43550, -- [5]
-						"Talux-Tichondrius", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [31]
+					}, -- [7]
 					{
 						true, -- [1]
 						278150, -- [2]
-						1201, -- [3]
-						1545788574.37, -- [4]
-						42349, -- [5]
+						1230, -- [3]
+						1546039050.229, -- [4]
+						17543, -- [5]
 						"[*] Annihilation", -- [6]
 						nil, -- [7]
 						32, -- [8]
 						false, -- [9]
 						-1, -- [10]
+					}, -- [8]
+					{
+						false, -- [1]
+						774, -- [2]
+						2368, -- [3]
+						1546039050.982, -- [4]
+						19911, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [9]
+					{
+						false, -- [1]
+						274436, -- [2]
+						287, -- [3]
+						1546039050.998, -- [4]
+						20198, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [10]
+					{
+						false, -- [1]
+						269108, -- [2]
+						4461, -- [3]
+						1546039051.013, -- [4]
+						24659, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [11]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1231, -- [3]
+						1546039051.204, -- [4]
+						1634, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [12]
+					{
+						false, -- [1]
+						143924, -- [2]
+						127, -- [3]
+						1546039051.383, -- [4]
+						1761, -- [5]
+						"Velocity-AeriePeak", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [13]
+					{
+						false, -- [1]
+						1064, -- [2]
+						18464, -- [3]
+						1546039051.7, -- [4]
+						20319, -- [5]
+						"Peäches-Trollbane", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [14]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1230, -- [3]
+						1546039052.214, -- [4]
+						19610, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [15]
+					{
+						false, -- [1]
+						143924, -- [2]
+						638, -- [3]
+						1546039052.593, -- [4]
+						20248, -- [5]
+						"Velocity-AeriePeak", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [16]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1231, -- [3]
+						1546039053.215, -- [4]
+						19017, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [17]
+					{
+						false, -- [1]
+						270117, -- [2]
+						3607, -- [3]
+						1546039053.229, -- [4]
+						22624, -- [5]
+						"Velocity-AeriePeak", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [18]
+					{
+						false, -- [1]
+						774, -- [2]
+						2369, -- [3]
+						1546039053.671, -- [4]
+						24993, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [19]
+					{
+						false, -- [1]
+						274436, -- [2]
+						287, -- [3]
+						1546039053.689, -- [4]
+						25280, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [20]
+					{
+						false, -- [1]
+						143924, -- [2]
+						7818, -- [3]
+						1546039053.806, -- [4]
+						33098, -- [5]
+						"Velocity-AeriePeak", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [21]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1231, -- [3]
+						1546039054.214, -- [4]
+						9995, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [22]
+					{
+						false, -- [1]
+						143924, -- [2]
+						5765, -- [3]
+						1546039055.023, -- [4]
+						16009, -- [5]
+						"Velocity-AeriePeak", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [23]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1231, -- [3]
+						1546039055.216, -- [4]
+						14778, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [24]
+					{
+						false, -- [1]
+						774, -- [2]
+						2188, -- [3]
+						1546039056.176, -- [4]
+						17356, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [25]
+					{
+						false, -- [1]
+						274436, -- [2]
+						288, -- [3]
+						1546039056.176, -- [4]
+						17644, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [26]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1230, -- [3]
+						1546039056.213, -- [4]
+						16414, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [27]
+					{
+						false, -- [1]
+						143924, -- [2]
+						1419, -- [3]
+						1546039056.238, -- [4]
+						17833, -- [5]
+						"Velocity-AeriePeak", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [28]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1230, -- [3]
+						1546039057.209, -- [4]
+						16603, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [29]
+					{
+						false, -- [1]
+						143924, -- [2]
+						2810, -- [3]
+						1546039057.877, -- [4]
+						19413, -- [5]
+						"Velocity-AeriePeak", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [30]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1231, -- [3]
+						1546039058.198, -- [4]
+						18182, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [31]
+					{
+						true, -- [1]
+						276863, -- [2]
+						18182, -- [3]
+						1546039058.729, -- [4]
+						1, -- [5]
+						"[*] Crashing Oblivion", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						3689, -- [10]
 					}, -- [32]
 					{
 						3, -- [1]
@@ -16938,24 +17626,24 @@ DeathGraphsDBCurrent = {
 						0, -- [3]
 						0, -- [4]
 						0, -- [5]
-						"Satãzão-Goldrinn", -- [6]
+						"Velocity-AeriePeak", -- [6]
 					}, -- [33]
 				},
-				["class"] = "DEMONHUNTER",
-				["timestring"] = "4m 31s",
-				["time"] = 1545788574.544,
 			}, -- [1]
 			{
-				["maxhealth"] = 134605,
-				["timeofdeath"] = 288.672000000021,
-				["name"] = "Seåwall-Azralon",
+				["maxhealth"] = 153560,
+				["timeofdeath"] = 269.894,
+				["name"] = "Hyphyness-Sargeras",
+				["time"] = 1546039226.061,
+				["class"] = "HUNTER",
+				["timestring"] = "4m 29s",
 				["events"] = {
 					{
 						true, -- [1]
 						278150, -- [2]
-						1278, -- [3]
-						1545788580.813, -- [4]
-						75564, -- [5]
+						1365, -- [3]
+						1546039215.218, -- [4]
+						19260, -- [5]
 						"[*] Annihilation", -- [6]
 						nil, -- [7]
 						32, -- [8]
@@ -16963,204 +17651,204 @@ DeathGraphsDBCurrent = {
 						-1, -- [10]
 					}, -- [1]
 					{
-						false, -- [1]
-						61295, -- [2]
-						1978, -- [3]
-						1545788581.081, -- [4]
-						77542, -- [5]
-						"Talux-Tichondrius", -- [6]
+						true, -- [1]
+						164815, -- [2]
+						1415, -- [3]
+						1546039215.585, -- [4]
+						19260, -- [5]
+						"Druantis-Stormreaver", -- [6]
 						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
+						8, -- [8]
+						true, -- [9]
+						-1, -- [10]
 					}, -- [2]
 					{
-						false, -- [1]
-						77489, -- [2]
-						4849, -- [3]
-						1545788581.253, -- [4]
-						82391, -- [5]
-						"Sanhiz-Ragnaros", -- [6]
+						true, -- [1]
+						164812, -- [2]
+						2196, -- [3]
+						1546039215.948, -- [4]
+						24168, -- [5]
+						"Druantis-Stormreaver", -- [6]
 						nil, -- [7]
+						64, -- [8]
+						true, -- [9]
+						-1, -- [10]
+					}, -- [3]
+					{
+						false, -- [1]
+						269279, -- [2]
+						1365, -- [3]
+						1546039216.227, -- [4]
+						24168, -- [5]
+						"Hyphyness-Sargeras", -- [6]
+						true, -- [7]
 						0, -- [8]
 						false, -- [9]
-						false, -- [10]
-					}, -- [3]
+						-1, -- [10]
+					}, -- [4]
 					{
 						true, -- [1]
 						278150, -- [2]
-						1277, -- [3]
-						1545788581.837, -- [4]
-						81114, -- [5]
+						1365, -- [3]
+						1546039216.227, -- [4]
+						24168, -- [5]
 						"[*] Annihilation", -- [6]
 						nil, -- [7]
 						32, -- [8]
 						false, -- [9]
 						-1, -- [10]
-					}, -- [4]
-					{
-						false, -- [1]
-						119611, -- [2]
-						3019, -- [3]
-						1545788581.837, -- [4]
-						84133, -- [5]
-						"Ppoisonmilk", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
 					}, -- [5]
 					{
 						false, -- [1]
-						119611, -- [2]
-						305, -- [3]
-						1545788581.997, -- [4]
-						84438, -- [5]
-						"Ppoisonmilk", -- [6]
-						nil, -- [7]
+						269279, -- [2]
+						1416, -- [3]
+						1546039216.996, -- [4]
+						24168, -- [5]
+						"Hyphyness-Sargeras", -- [6]
+						true, -- [7]
 						0, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [6]
 					{
 						true, -- [1]
-						276863, -- [2]
-						22707, -- [3]
-						1545788582.166, -- [4]
-						61731, -- [5]
-						"[*] Crashing Oblivion", -- [6]
+						164815, -- [2]
+						1416, -- [3]
+						1546039216.996, -- [4]
+						24168, -- [5]
+						"Druantis-Stormreaver", -- [6]
 						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
+						8, -- [8]
+						true, -- [9]
 						-1, -- [10]
 					}, -- [7]
 					{
-						true, -- [1]
-						278150, -- [2]
-						1277, -- [3]
-						1545788582.834, -- [4]
-						60454, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
+						false, -- [1]
+						269279, -- [2]
+						1365, -- [3]
+						1546039217.223, -- [4]
+						24168, -- [5]
+						"Hyphyness-Sargeras", -- [6]
+						true, -- [7]
+						0, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [8]
 					{
-						false, -- [1]
-						139, -- [2]
-						4718, -- [3]
-						1545788583.315, -- [4]
-						65172, -- [5]
-						"Sanhiz-Ragnaros", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [9]
-					{
-						false, -- [1]
-						61295, -- [2]
-						1784, -- [3]
-						1545788583.336, -- [4]
-						66956, -- [5]
-						"Talux-Tichondrius", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [10]
-					{
 						true, -- [1]
 						278150, -- [2]
-						1278, -- [3]
-						1545788583.826, -- [4]
-						65678, -- [5]
+						1365, -- [3]
+						1546039217.223, -- [4]
+						24168, -- [5]
 						"[*] Annihilation", -- [6]
 						nil, -- [7]
 						32, -- [8]
 						false, -- [9]
 						-1, -- [10]
+					}, -- [9]
+					{
+						true, -- [1]
+						164812, -- [2]
+						1464, -- [3]
+						1546039217.343, -- [4]
+						24682, -- [5]
+						"Druantis-Stormreaver", -- [6]
+						nil, -- [7]
+						64, -- [8]
+						true, -- [9]
+						-1, -- [10]
+					}, -- [10]
+					{
+						false, -- [1]
+						269279, -- [2]
+						1346, -- [3]
+						1546039218.227, -- [4]
+						37160, -- [5]
+						"Hyphyness-Sargeras", -- [6]
+						true, -- [7]
+						0, -- [8]
+						false, -- [9]
+						false, -- [10]
 					}, -- [11]
 					{
 						true, -- [1]
 						278150, -- [2]
-						1278, -- [3]
-						1545788584.812, -- [4]
-						64400, -- [5]
+						1365, -- [3]
+						1546039218.227, -- [4]
+						37141, -- [5]
 						"[*] Annihilation", -- [6]
-						nil, -- [7]
+						1346, -- [7]
 						32, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [12]
 					{
 						true, -- [1]
+						164815, -- [2]
+						1415, -- [3]
+						1546039218.405, -- [4]
+						35726, -- [5]
+						"Druantis-Stormreaver", -- [6]
+						nil, -- [7]
+						8, -- [8]
+						true, -- [9]
+						-1, -- [10]
+					}, -- [13]
+					{
+						true, -- [1]
+						164812, -- [2]
+						1464, -- [3]
+						1546039218.758, -- [4]
+						34262, -- [5]
+						"Druantis-Stormreaver", -- [6]
+						nil, -- [7]
+						64, -- [8]
+						true, -- [9]
+						-1, -- [10]
+					}, -- [14]
+					{
+						true, -- [1]
 						278150, -- [2]
-						1277, -- [3]
-						1545788585.83, -- [4]
-						63123, -- [5]
+						1365, -- [3]
+						1546039219.207, -- [4]
+						32897, -- [5]
 						"[*] Annihilation", -- [6]
 						nil, -- [7]
 						32, -- [8]
 						false, -- [9]
 						-1, -- [10]
-					}, -- [13]
-					{
-						false, -- [1]
-						139, -- [2]
-						4719, -- [3]
-						1545788586.085, -- [4]
-						67842, -- [5]
-						"Sanhiz-Ragnaros", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [14]
-					{
-						false, -- [1]
-						280707, -- [2]
-						1047, -- [3]
-						1545788586.253, -- [4]
-						68889, -- [5]
-						"Hìkari-Mal'Ganis", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
 					}, -- [15]
 					{
-						4, -- [1]
-						274113, -- [2]
-						1, -- [3]
-						1545788586.532, -- [4]
-						68889, -- [5]
-						"[*] Obliteration Beam", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
+						true, -- [1]
+						164815, -- [2]
+						1415, -- [3]
+						1546039219.818, -- [4]
+						31482, -- [5]
+						"Druantis-Stormreaver", -- [6]
+						nil, -- [7]
+						8, -- [8]
+						true, -- [9]
+						-1, -- [10]
 					}, -- [16]
 					{
-						4, -- [1]
-						272146, -- [2]
-						9, -- [3]
-						1545788586.532, -- [4]
-						68889, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
+						true, -- [1]
+						164812, -- [2]
+						1463, -- [3]
+						1546039220.165, -- [4]
+						30719, -- [5]
+						"Druantis-Stormreaver", -- [6]
+						nil, -- [7]
+						64, -- [8]
+						true, -- [9]
+						-1, -- [10]
 					}, -- [17]
 					{
 						true, -- [1]
-						274113, -- [2]
-						13649, -- [3]
-						1545788586.532, -- [4]
-						55240, -- [5]
-						"[*] Obliteration Beam", -- [6]
+						278150, -- [2]
+						1365, -- [3]
+						1546039220.214, -- [4]
+						29354, -- [5]
+						"[*] Annihilation", -- [6]
 						nil, -- [7]
 						32, -- [8]
 						false, -- [9]
@@ -17169,9 +17857,9 @@ DeathGraphsDBCurrent = {
 					{
 						true, -- [1]
 						278150, -- [2]
-						1277, -- [3]
-						1545788586.82, -- [4]
-						53213, -- [5]
+						1364, -- [3]
+						1546039221.221, -- [4]
+						27990, -- [5]
 						"[*] Annihilation", -- [6]
 						nil, -- [7]
 						32, -- [8]
@@ -17179,108 +17867,108 @@ DeathGraphsDBCurrent = {
 						-1, -- [10]
 					}, -- [19]
 					{
-						4, -- [1]
-						272146, -- [2]
-						10, -- [3]
-						1545788586.872, -- [4]
-						53213, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
+						true, -- [1]
+						164815, -- [2]
+						1299, -- [3]
+						1546039221.237, -- [4]
+						26691, -- [5]
+						"Druantis-Stormreaver", -- [6]
+						nil, -- [7]
+						8, -- [8]
+						true, -- [9]
+						-1, -- [10]
 					}, -- [20]
 					{
 						true, -- [1]
-						274113, -- [2]
-						13649, -- [3]
-						1545788586.872, -- [4]
-						39564, -- [5]
-						"[*] Obliteration Beam", -- [6]
+						164812, -- [2]
+						1222, -- [3]
+						1546039221.597, -- [4]
+						25469, -- [5]
+						"Druantis-Stormreaver", -- [6]
 						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
+						64, -- [8]
+						true, -- [9]
 						-1, -- [10]
 					}, -- [21]
 					{
-						false, -- [1]
-						139, -- [2]
-						924, -- [3]
-						1545788587.171, -- [4]
-						39903, -- [5]
-						"Sanhiz-Ragnaros", -- [6]
+						true, -- [1]
+						278150, -- [2]
+						1365, -- [3]
+						1546039222.221, -- [4]
+						24448, -- [5]
+						"[*] Annihilation", -- [6]
 						nil, -- [7]
-						0, -- [8]
+						32, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [22]
 					{
-						4, -- [1]
-						272146, -- [2]
-						11, -- [3]
-						1545788587.207, -- [4]
-						39903, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
+						false, -- [1]
+						52042, -- [2]
+						10611, -- [3]
+						1546039222.36, -- [4]
+						35059, -- [5]
+						"Healing Stream Totem <Skoody-Magtheridon>", -- [6]
+						nil, -- [7]
+						0, -- [8]
 						false, -- [9]
-						false, -- [10]
+						-1, -- [10]
 					}, -- [23]
 					{
 						true, -- [1]
-						274113, -- [2]
-						13650, -- [3]
-						1545788587.207, -- [4]
-						26253, -- [5]
-						"[*] Obliteration Beam", -- [6]
+						164815, -- [2]
+						1300, -- [3]
+						1546039222.75, -- [4]
+						33759, -- [5]
+						"Druantis-Stormreaver", -- [6]
 						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
+						8, -- [8]
+						true, -- [9]
 						-1, -- [10]
 					}, -- [24]
 					{
-						4, -- [1]
-						272146, -- [2]
-						12, -- [3]
-						1545788587.529, -- [4]
-						25809, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
+						false, -- [1]
+						280707, -- [2]
+						1075, -- [3]
+						1546039223.059, -- [4]
+						35522, -- [5]
+						"Skoody-Magtheridon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						true, -- [9]
+						-1, -- [10]
 					}, -- [25]
 					{
 						true, -- [1]
-						274113, -- [2]
-						13650, -- [3]
-						1545788587.529, -- [4]
-						12159, -- [5]
-						"[*] Obliteration Beam", -- [6]
+						164812, -- [2]
+						1222, -- [3]
+						1546039223.105, -- [4]
+						34300, -- [5]
+						"Druantis-Stormreaver", -- [6]
 						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
+						64, -- [8]
+						true, -- [9]
 						-1, -- [10]
 					}, -- [26]
 					{
 						true, -- [1]
-						278150, -- [2]
-						1278, -- [3]
-						1545788587.816, -- [4]
-						10590, -- [5]
-						"[*] Annihilation", -- [6]
+						164815, -- [2]
+						1299, -- [3]
+						1546039224.257, -- [4]
+						33292, -- [5]
+						"Druantis-Stormreaver", -- [6]
 						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
+						8, -- [8]
+						true, -- [9]
 						-1, -- [10]
 					}, -- [27]
 					{
 						true, -- [1]
-						278150, -- [2]
-						1278, -- [3]
-						1545788588.817, -- [4]
-						9312, -- [5]
-						"[*] Annihilation", -- [6]
+						276863, -- [2]
+						24263, -- [3]
+						1546039224.323, -- [4]
+						9029, -- [5]
+						"[*] Crashing Oblivion", -- [6]
 						nil, -- [7]
 						32, -- [8]
 						false, -- [9]
@@ -17288,889 +17976,77 @@ DeathGraphsDBCurrent = {
 					}, -- [28]
 					{
 						true, -- [1]
-						278150, -- [2]
-						1278, -- [3]
-						1545788589.82, -- [4]
-						8034, -- [5]
-						"[*] Annihilation", -- [6]
+						164812, -- [2]
+						1222, -- [3]
+						1546039224.608, -- [4]
+						7807, -- [5]
+						"Druantis-Stormreaver", -- [6]
 						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
+						64, -- [8]
+						true, -- [9]
 						-1, -- [10]
 					}, -- [29]
 					{
-						true, -- [1]
-						278150, -- [2]
-						1277, -- [3]
-						1545788590.828, -- [4]
-						6757, -- [5]
-						"[*] Annihilation", -- [6]
+						false, -- [1]
+						157982, -- [2]
+						254, -- [3]
+						1546039225.63, -- [4]
+						8061, -- [5]
+						"Zilzag", -- [6]
 						nil, -- [7]
-						32, -- [8]
+						0, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [30]
 					{
 						true, -- [1]
-						278150, -- [2]
-						1277, -- [3]
-						1545788591.824, -- [4]
-						5480, -- [5]
-						"[*] Annihilation", -- [6]
+						164815, -- [2]
+						1299, -- [3]
+						1546039225.763, -- [4]
+						6762, -- [5]
+						"Druantis-Stormreaver", -- [6]
 						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
+						8, -- [8]
+						true, -- [9]
 						-1, -- [10]
 					}, -- [31]
 					{
 						true, -- [1]
 						276894, -- [2]
-						5480, -- [3]
-						1545788591.935, -- [4]
+						6762, -- [3]
+						1546039226.061, -- [4]
 						1, -- [5]
 						"N'raqi Destroyer", -- [6]
 						nil, -- [7]
 						32, -- [8]
 						false, -- [9]
-						21768, -- [10]
+						45645, -- [10]
 					}, -- [32]
 					{
 						3, -- [1]
-						22812, -- [2]
+						109304, -- [2]
 						1, -- [3]
-						1545788526.161, -- [4]
+						1546039153.29, -- [4]
 						0, -- [5]
-						"Seåwall-Azralon", -- [6]
+						"Hyphyness-Sargeras", -- [6]
 					}, -- [33]
 				},
-				["class"] = "DRUID",
-				["timestring"] = "4m 48s",
-				["time"] = 1545788591.935,
 			}, -- [2]
 			{
-				["maxhealth"] = 160673,
-				["timeofdeath"] = 292.514000000025,
-				["name"] = "Hìkari-Mal'Ganis",
+				["maxhealth"] = 121488,
+				["timeofdeath"] = 270.145999999999,
+				["name"] = "Bladeé-Ragnaros",
+				["time"] = 1546039226.313,
+				["class"] = "HUNTER",
+				["timestring"] = "4m 30s",
 				["events"] = {
-					{
-						2, -- [1]
-						95750, -- [2]
-						1, -- [3]
-						1545788603.52, -- [4]
-						0, -- [5]
-						"Bïrd-Azralon", -- [6]
-					}, -- [1]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1279, -- [3]
-						1545788594.069, -- [4]
-						131545, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [2]
-					{
-						false, -- [1]
-						81751, -- [2]
-						1079, -- [3]
-						1545788594.23, -- [4]
-						132624, -- [5]
-						"Merekat", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [3]
-					{
-						true, -- [1]
-						1, -- [2]
-						22603, -- [3]
-						1545788594.246, -- [4]
-						132624, -- [5]
-						"N'raqi Destroyer", -- [6]
-						nil, -- [7]
-						1, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [4]
-					{
-						false, -- [1]
-						143924, -- [2]
-						36, -- [3]
-						1545788594.282, -- [4]
-						110057, -- [5]
-						"Hìkari-Mal'Ganis", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [5]
-					{
-						4, -- [1]
-						272146, -- [2]
-						10, -- [3]
-						1545788594.544, -- [4]
-						110057, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [6]
-					{
-						4, -- [1]
-						272146, -- [2]
-						11, -- [3]
-						1545788594.544, -- [4]
-						110057, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [7]
-					{
-						4, -- [1]
-						272146, -- [2]
-						12, -- [3]
-						1545788594.544, -- [4]
-						110057, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [8]
-					{
-						4, -- [1]
-						272146, -- [2]
-						13, -- [3]
-						1545788594.544, -- [4]
-						110057, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [9]
-					{
-						4, -- [1]
-						272146, -- [2]
-						14, -- [3]
-						1545788594.544, -- [4]
-						110057, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [10]
-					{
-						4, -- [1]
-						272146, -- [2]
-						15, -- [3]
-						1545788594.544, -- [4]
-						110057, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [11]
-					{
-						4, -- [1]
-						272146, -- [2]
-						16, -- [3]
-						1545788594.565, -- [4]
-						110057, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [12]
-					{
-						4, -- [1]
-						272146, -- [2]
-						17, -- [3]
-						1545788594.565, -- [4]
-						110057, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [13]
-					{
-						4, -- [1]
-						272146, -- [2]
-						18, -- [3]
-						1545788594.565, -- [4]
-						110057, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [14]
-					{
-						4, -- [1]
-						272146, -- [2]
-						19, -- [3]
-						1545788594.565, -- [4]
-						110057, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [15]
-					{
-						4, -- [1]
-						272146, -- [2]
-						20, -- [3]
-						1545788594.565, -- [4]
-						110057, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [16]
-					{
-						4, -- [1]
-						272146, -- [2]
-						21, -- [3]
-						1545788594.565, -- [4]
-						110057, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [17]
-					{
-						4, -- [1]
-						272146, -- [2]
-						22, -- [3]
-						1545788594.565, -- [4]
-						110057, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [18]
-					{
-						4, -- [1]
-						272146, -- [2]
-						23, -- [3]
-						1545788594.565, -- [4]
-						110057, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [19]
-					{
-						4, -- [1]
-						272146, -- [2]
-						24, -- [3]
-						1545788594.565, -- [4]
-						110057, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [20]
-					{
-						4, -- [1]
-						272146, -- [2]
-						25, -- [3]
-						1545788594.565, -- [4]
-						110057, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [21]
-					{
-						4, -- [1]
-						272146, -- [2]
-						26, -- [3]
-						1545788594.565, -- [4]
-						110057, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [22]
-					{
-						4, -- [1]
-						272146, -- [2]
-						27, -- [3]
-						1545788594.565, -- [4]
-						110057, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [23]
-					{
-						4, -- [1]
-						272146, -- [2]
-						28, -- [3]
-						1545788594.565, -- [4]
-						110057, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [24]
-					{
-						4, -- [1]
-						272146, -- [2]
-						29, -- [3]
-						1545788594.565, -- [4]
-						110057, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [25]
-					{
-						4, -- [1]
-						274693, -- [2]
-						1, -- [3]
-						1545788594.565, -- [4]
-						110057, -- [5]
-						"N'raqi Destroyer", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [26]
-					{
-						true, -- [1]
-						273282, -- [2]
-						55844, -- [3]
-						1545788594.565, -- [4]
-						54213, -- [5]
-						"N'raqi Destroyer", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [27]
-					{
-						true, -- [1]
-						276863, -- [2]
-						22743, -- [3]
-						1545788594.697, -- [4]
-						7270, -- [5]
-						"[*] Crashing Oblivion", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [28]
-					{
-						false, -- [1]
-						152261, -- [2]
-						542, -- [3]
-						1545788595.074, -- [4]
-						7270, -- [5]
-						"Hìkari-Mal'Ganis", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [29]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1279, -- [3]
-						1545788595.074, -- [4]
-						6533, -- [5]
-						"[*] Annihilation", -- [6]
-						542, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [30]
 					{
 						false, -- [1]
 						61295, -- [2]
-						2600, -- [3]
-						1545788595.285, -- [4]
-						9133, -- [5]
-						"Talux-Tichondrius", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [31]
-					{
-						false, -- [1]
-						143924, -- [2]
-						323, -- [3]
-						1545788595.498, -- [4]
-						9456, -- [5]
-						"Hìkari-Mal'Ganis", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [32]
-					{
-						true, -- [1]
-						1, -- [2]
-						9456, -- [3]
-						1545788595.738, -- [4]
-						9456, -- [5]
-						"N'raqi Destroyer", -- [6]
-						nil, -- [7]
-						1, -- [8]
-						false, -- [9]
-						11309, -- [10]
-					}, -- [33]
-					{
-						3, -- [1]
-						86659, -- [2]
-						1, -- [3]
-						1545788579.055, -- [4]
-						0, -- [5]
-						"Hìkari-Mal'Ganis", -- [6]
-					}, -- [34]
-				},
-				["class"] = "PALADIN",
-				["timestring"] = "4m 52s",
-				["time"] = 1545788595.777,
-			}, -- [3]
-			{
-				["maxhealth"] = 140579,
-				["timeofdeath"] = 306.087999999989,
-				["name"] = "Xisaman",
-				["events"] = {
-					{
-						true, -- [1]
-						278150, -- [2]
-						1206, -- [3]
-						1545788600.878, -- [4]
-						83535, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [1]
-					{
-						true, -- [1]
-						274019, -- [2]
-						9499, -- [3]
-						1545788601.395, -- [4]
-						74036, -- [5]
-						"Vision of Madness <[*] Visions of Madness>", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [2]
-					{
-						false, -- [1]
-						191840, -- [2]
-						317, -- [3]
-						1545788601.52, -- [4]
-						74353, -- [5]
-						"Sakia-Azralon", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [3]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1340, -- [3]
-						1545788601.873, -- [4]
-						73013, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [4]
-					{
-						false, -- [1]
-						191840, -- [2]
-						7279, -- [3]
-						1545788602.377, -- [4]
-						80465, -- [5]
-						"Ppoisonmilk", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [5]
-					{
-						true, -- [1]
-						274019, -- [2]
-						9499, -- [3]
-						1545788602.398, -- [4]
-						70966, -- [5]
-						"Vision of Madness <[*] Visions of Madness>", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [6]
-					{
-						true, -- [1]
-						274019, -- [2]
-						3800, -- [3]
-						1545788602.788, -- [4]
-						67166, -- [5]
-						"Vision of Madness <[*] Visions of Madness>", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [7]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1340, -- [3]
-						1545788602.867, -- [4]
-						65826, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [8]
-					{
-						false, -- [1]
-						31616, -- [2]
-						30924, -- [3]
-						1545788603.198, -- [4]
-						96750, -- [5]
-						"Xisaman", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [9]
-					{
-						true, -- [1]
-						276894, -- [2]
-						28586, -- [3]
-						1545788603.198, -- [4]
-						68164, -- [5]
-						"N'raqi Destroyer", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [10]
-					{
-						false, -- [1]
-						191840, -- [2]
-						318, -- [3]
-						1545788603.321, -- [4]
-						68482, -- [5]
-						"Sakia-Azralon", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [11]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1340, -- [3]
-						1545788603.88, -- [4]
-						67142, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [12]
-					{
-						false, -- [1]
-						191840, -- [2]
-						647, -- [3]
-						1545788604.151, -- [4]
-						67960, -- [5]
-						"Ppoisonmilk", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [13]
-					{
-						false, -- [1]
-						280707, -- [2]
-						2985, -- [3]
-						1545788604.842, -- [4]
-						70945, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [14]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1340, -- [3]
-						1545788604.874, -- [4]
-						69605, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [15]
-					{
-						false, -- [1]
-						191840, -- [2]
-						317, -- [3]
-						1545788605.128, -- [4]
-						69922, -- [5]
-						"Sakia-Azralon", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [16]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1340, -- [3]
-						1545788605.867, -- [4]
-						68582, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [17]
-					{
-						false, -- [1]
-						191840, -- [2]
-						323, -- [3]
-						1545788605.916, -- [4]
-						68905, -- [5]
-						"Ppoisonmilk", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [18]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1340, -- [3]
-						1545788606.885, -- [4]
-						20094, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [19]
-					{
-						false, -- [1]
-						191840, -- [2]
-						317, -- [3]
-						1545788606.936, -- [4]
-						20411, -- [5]
-						"Sakia-Azralon", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [20]
-					{
-						false, -- [1]
-						191840, -- [2]
-						324, -- [3]
-						1545788607.53, -- [4]
-						20735, -- [5]
-						"Ppoisonmilk", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [21]
-					{
-						4, -- [1]
-						274019, -- [2]
-						1, -- [3]
-						1545788607.681, -- [4]
-						20735, -- [5]
-						"Vision of Madness", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [22]
-					{
-						false, -- [1]
-						269279, -- [2]
-						1340, -- [3]
-						1545788607.876, -- [4]
-						20735, -- [5]
-						"Xisaman", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [23]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1340, -- [3]
-						1545788607.876, -- [4]
-						20735, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [24]
-					{
-						false, -- [1]
-						191840, -- [2]
-						200, -- [3]
-						1545788608.082, -- [4]
-						21107, -- [5]
-						"Sakia-Azralon", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [25]
-					{
-						false, -- [1]
-						269279, -- [2]
-						9498, -- [3]
-						1545788608.686, -- [4]
-						21107, -- [5]
-						"Xisaman", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [26]
-					{
-						true, -- [1]
-						274019, -- [2]
-						9498, -- [3]
-						1545788608.686, -- [4]
-						21107, -- [5]
-						"Vision of Madness <[*] Visions of Madness> <[*] Visions of Madness>", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [27]
-					{
-						false, -- [1]
-						269279, -- [2]
-						1340, -- [3]
-						1545788608.896, -- [4]
-						21107, -- [5]
-						"Xisaman", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [28]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1340, -- [3]
-						1545788608.896, -- [4]
-						21107, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [29]
-					{
-						false, -- [1]
-						191840, -- [2]
-						324, -- [3]
-						1545788609.083, -- [4]
-						21431, -- [5]
-						"Ppoisonmilk", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [30]
-					{
-						false, -- [1]
-						269279, -- [2]
-						176, -- [3]
-						1545788609.279, -- [4]
-						21431, -- [5]
-						"Xisaman", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [31]
-					{
-						true, -- [1]
-						276894, -- [2]
-						21607, -- [3]
-						1545788609.305, -- [4]
-						1, -- [5]
-						"N'raqi Destroyer", -- [6]
-						176, -- [7]
-						32, -- [8]
-						false, -- [9]
-						6979, -- [10]
-					}, -- [32]
-					{
-						3, -- [1]
-						108271, -- [2]
-						1, -- [3]
-						1545788570.059, -- [4]
-						0, -- [5]
-						"Xisaman", -- [6]
-					}, -- [33]
-				},
-				["class"] = "SHAMAN",
-				["timestring"] = "5m 6s",
-				["time"] = 1545788609.351,
-			}, -- [4]
-			{
-				["maxhealth"] = 136300,
-				["timeofdeath"] = 306.185999999987,
-				["name"] = "Cindysbaby-Fenris",
-				["events"] = {
-					{
-						false, -- [1]
-						139, -- [2]
-						2741, -- [3]
-						1545788577.744, -- [4]
-						54355, -- [5]
-						"Sanhiz-Ragnaros", -- [6]
+						1704, -- [3]
+						1546039214.365, -- [4]
+						133167, -- [5]
+						"Skoody-Magtheridon", -- [6]
 						nil, -- [7]
 						0, -- [8]
 						false, -- [9]
@@ -18178,58 +18054,58 @@ DeathGraphsDBCurrent = {
 					}, -- [1]
 					{
 						false, -- [1]
-						77489, -- [2]
-						4002, -- [3]
-						1545788578.258, -- [4]
-						58357, -- [5]
-						"Sanhiz-Ragnaros", -- [6]
+						61295, -- [2]
+						1668, -- [3]
+						1546039216.951, -- [4]
+						139743, -- [5]
+						"Skoody-Magtheridon", -- [6]
 						nil, -- [7]
 						0, -- [8]
 						false, -- [9]
-						-1, -- [10]
+						false, -- [10]
 					}, -- [2]
 					{
 						false, -- [1]
-						139, -- [2]
-						2742, -- [3]
-						1545788580.523, -- [4]
-						61099, -- [5]
-						"Sanhiz-Ragnaros", -- [6]
+						52042, -- [2]
+						7629, -- [3]
+						1546039220.627, -- [4]
+						162569, -- [5]
+						"Healing Stream Totem <Skoody-Magtheridon>", -- [6]
 						nil, -- [7]
 						0, -- [8]
 						false, -- [9]
-						-1, -- [10]
+						false, -- [10]
 					}, -- [3]
 					{
 						false, -- [1]
-						77489, -- [2]
-						4001, -- [3]
-						1545788581.253, -- [4]
-						65100, -- [5]
-						"Sanhiz-Ragnaros", -- [6]
+						157982, -- [2]
+						5295, -- [3]
+						1546039221.091, -- [4]
+						167040, -- [5]
+						"Zilzag", -- [6]
 						nil, -- [7]
 						0, -- [8]
 						false, -- [9]
-						-1, -- [10]
+						false, -- [10]
 					}, -- [4]
 					{
 						false, -- [1]
-						127802, -- [2]
-						1683, -- [3]
-						1545788581.617, -- [4]
-						66783, -- [5]
-						"Cindysbaby-Fenris", -- [6]
+						197997, -- [2]
+						12924, -- [3]
+						1546039223.243, -- [4]
+						167040, -- [5]
+						"Skoody-Magtheridon", -- [6]
 						nil, -- [7]
 						0, -- [8]
 						false, -- [9]
-						-1, -- [10]
+						false, -- [10]
 					}, -- [5]
 					{
 						true, -- [1]
 						276863, -- [2]
-						23659, -- [3]
-						1545788582.166, -- [4]
-						43124, -- [5]
+						24050, -- [3]
+						1546039224.323, -- [4]
+						142990, -- [5]
 						"[*] Crashing Oblivion", -- [6]
 						nil, -- [7]
 						32, -- [8]
@@ -18237,792 +18113,12 @@ DeathGraphsDBCurrent = {
 						-1, -- [10]
 					}, -- [6]
 					{
-						false, -- [1]
-						139, -- [2]
-						4718, -- [3]
-						1545788583.299, -- [4]
-						47842, -- [5]
-						"Sanhiz-Ragnaros", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [7]
-					{
-						false, -- [1]
-						280707, -- [2]
-						1047, -- [3]
-						1545788585.938, -- [4]
-						48889, -- [5]
-						"Hìkari-Mal'Ganis", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [8]
-					{
-						false, -- [1]
-						139, -- [2]
-						4719, -- [3]
-						1545788586.085, -- [4]
-						53608, -- [5]
-						"Sanhiz-Ragnaros", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [9]
-					{
-						false, -- [1]
-						139, -- [2]
-						924, -- [3]
-						1545788587.171, -- [4]
-						54532, -- [5]
-						"Sanhiz-Ragnaros", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [10]
-					{
 						true, -- [1]
 						276894, -- [2]
-						28391, -- [3]
-						1545788591.651, -- [4]
-						26141, -- [5]
+						51946, -- [3]
+						1546039224.427, -- [4]
+						91044, -- [5]
 						"N'raqi Destroyer", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [11]
-					{
-						true, -- [1]
-						276863, -- [2]
-						23659, -- [3]
-						1545788594.697, -- [4]
-						2482, -- [5]
-						"[*] Crashing Oblivion", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [12]
-					{
-						false, -- [1]
-						276146, -- [2]
-						542, -- [3]
-						1545788597.349, -- [4]
-						3024, -- [5]
-						"Talux-Tichondrius", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [13]
-					{
-						false, -- [1]
-						185311, -- [2]
-						7496, -- [3]
-						1545788598.16, -- [4]
-						10520, -- [5]
-						"Cindysbaby-Fenris", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [14]
-					{
-						1, -- [1]
-						31224, -- [2]
-						1, -- [3]
-						1545788598.321, -- [4]
-						10520, -- [5]
-						"Cindysbaby-Fenris", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [15]
-					{
-						false, -- [1]
-						185311, -- [2]
-						7496, -- [3]
-						1545788599.184, -- [4]
-						18016, -- [5]
-						"Cindysbaby-Fenris", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [16]
-					{
-						false, -- [1]
-						185311, -- [2]
-						7496, -- [3]
-						1545788600.161, -- [4]
-						25512, -- [5]
-						"Cindysbaby-Fenris", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [17]
-					{
-						false, -- [1]
-						185311, -- [2]
-						7496, -- [3]
-						1545788601.161, -- [4]
-						33008, -- [5]
-						"Cindysbaby-Fenris", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [18]
-					{
-						false, -- [1]
-						185311, -- [2]
-						7496, -- [3]
-						1545788602.144, -- [4]
-						40504, -- [5]
-						"Cindysbaby-Fenris", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [19]
-					{
-						false, -- [1]
-						185311, -- [2]
-						7496, -- [3]
-						1545788603.159, -- [4]
-						48000, -- [5]
-						"Cindysbaby-Fenris", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [20]
-					{
-						4, -- [1]
-						274019, -- [2]
-						1, -- [3]
-						1545788604.038, -- [4]
-						48000, -- [5]
-						"Vision of Madness", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [21]
-					{
-						false, -- [1]
-						269279, -- [2]
-						9433, -- [3]
-						1545788605.044, -- [4]
-						48000, -- [5]
-						"Cindysbaby-Fenris", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [22]
-					{
-						true, -- [1]
-						274019, -- [2]
-						9433, -- [3]
-						1545788605.044, -- [4]
-						48000, -- [5]
-						"Vision of Madness <[*] Visions of Madness> <[*] Visions of Madness>", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [23]
-					{
-						false, -- [1]
-						269279, -- [2]
-						9434, -- [3]
-						1545788606.049, -- [4]
-						48000, -- [5]
-						"Cindysbaby-Fenris", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [24]
-					{
-						true, -- [1]
-						274019, -- [2]
-						9434, -- [3]
-						1545788606.049, -- [4]
-						48000, -- [5]
-						"Vision of Madness <[*] Visions of Madness> <[*] Visions of Madness>", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [25]
-					{
-						false, -- [1]
-						269279, -- [2]
-						2409, -- [3]
-						1545788606.081, -- [4]
-						48000, -- [5]
-						"Cindysbaby-Fenris", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [26]
-					{
-						false, -- [1]
-						31230, -- [2]
-						9434, -- [3]
-						1545788607.047, -- [4]
-						3089, -- [5]
-						"Cindysbaby-Fenris", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [27]
-					{
-						true, -- [1]
-						274019, -- [2]
-						9434, -- [3]
-						1545788607.047, -- [4]
-						3089, -- [5]
-						"Vision of Madness <[*] Visions of Madness> <[*] Visions of Madness>", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [28]
-					{
-						false, -- [1]
-						31230, -- [2]
-						24132, -- [3]
-						1545788609.436, -- [4]
-						3089, -- [5]
-						"Cindysbaby-Fenris", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [29]
-					{
-						true, -- [1]
-						276894, -- [2]
-						27221, -- [3]
-						1545788609.449, -- [4]
-						1, -- [5]
-						"N'raqi Destroyer", -- [6]
-						24132, -- [7]
-						32, -- [8]
-						false, -- [9]
-						1170, -- [10]
-					}, -- [30]
-					{
-						3, -- [1]
-						31224, -- [2]
-						1, -- [3]
-						1545788598.321, -- [4]
-						0, -- [5]
-						"Cindysbaby-Fenris", -- [6]
-					}, -- [31]
-				},
-				["class"] = "ROGUE",
-				["timestring"] = "5m 6s",
-				["time"] = 1545788609.449,
-			}, -- [5]
-			{
-				["maxhealth"] = 99418,
-				["timeofdeath"] = 307.309000000008,
-				["name"] = "Faithbounty",
-				["events"] = {
-					{
-						true, -- [1]
-						278150, -- [2]
-						1190, -- [3]
-						1545788600.003, -- [4]
-						68028, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [1]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1189, -- [3]
-						1545788601.02, -- [4]
-						66839, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [2]
-					{
-						false, -- [1]
-						143924, -- [2]
-						364, -- [3]
-						1545788601.19, -- [4]
-						67203, -- [5]
-						"Faithbounty", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [3]
-					{
-						true, -- [1]
-						34914, -- [2]
-						1947, -- [3]
-						1545788601.67, -- [4]
-						65256, -- [5]
-						"Sølimøes-Azralon", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						true, -- [9]
-						-1, -- [10]
-					}, -- [4]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1190, -- [3]
-						1545788602.008, -- [4]
-						64066, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [5]
-					{
-						false, -- [1]
-						270117, -- [2]
-						3839, -- [3]
-						1545788602.034, -- [4]
-						67905, -- [5]
-						"Faithbounty", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [6]
-					{
-						false, -- [1]
-						143924, -- [2]
-						854, -- [3]
-						1545788602.398, -- [4]
-						68759, -- [5]
-						"Faithbounty", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [7]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1190, -- [3]
-						1545788603.017, -- [4]
-						67569, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [8]
-					{
-						true, -- [1]
-						276894, -- [2]
-						25380, -- [3]
-						1545788603.297, -- [4]
-						42189, -- [5]
-						"N'raqi Destroyer", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [9]
-					{
-						false, -- [1]
-						143924, -- [2]
-						831, -- [3]
-						1545788604.038, -- [4]
-						43020, -- [5]
-						"Faithbounty", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						true, -- [9]
-						-1, -- [10]
-					}, -- [10]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1145, -- [3]
-						1545788604.038, -- [4]
-						41875, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [11]
-					{
-						false, -- [1]
-						280707, -- [2]
-						2128, -- [3]
-						1545788604.184, -- [4]
-						44003, -- [5]
-						"Ppoisonmilk", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [12]
-					{
-						false, -- [1]
-						280707, -- [2]
-						2984, -- [3]
-						1545788604.207, -- [4]
-						46987, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						true, -- [9]
-						-1, -- [10]
-					}, -- [13]
-					{
-						true, -- [1]
-						34914, -- [2]
-						2214, -- [3]
-						1545788604.317, -- [4]
-						44773, -- [5]
-						"Sølimøes-Azralon", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						true, -- [9]
-						-1, -- [10]
-					}, -- [14]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1154, -- [3]
-						1545788605.018, -- [4]
-						43619, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [15]
-					{
-						false, -- [1]
-						276146, -- [2]
-						511, -- [3]
-						1545788605.085, -- [4]
-						44130, -- [5]
-						"Sakia-Azralon", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [16]
-					{
-						false, -- [1]
-						143924, -- [2]
-						1589, -- [3]
-						1545788605.287, -- [4]
-						45719, -- [5]
-						"Faithbounty", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [17]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1154, -- [3]
-						1545788606.008, -- [4]
-						44565, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [18]
-					{
-						false, -- [1]
-						143924, -- [2]
-						273, -- [3]
-						1545788606.483, -- [4]
-						24322, -- [5]
-						"Faithbounty", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						true, -- [9]
-						-1, -- [10]
-					}, -- [19]
-					{
-						true, -- [1]
-						34914, -- [2]
-						1818, -- [3]
-						1545788606.483, -- [4]
-						22504, -- [5]
-						"Sølimøes-Azralon", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						true, -- [9]
-						-1, -- [10]
-					}, -- [20]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1145, -- [3]
-						1545788607.004, -- [4]
-						1007, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [21]
-					{
-						false, -- [1]
-						143924, -- [2]
-						1263, -- [3]
-						1545788607.681, -- [4]
-						2270, -- [5]
-						"Faithbounty", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						true, -- [9]
-						-1, -- [10]
-					}, -- [22]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1190, -- [3]
-						1545788608.031, -- [4]
-						1080, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [23]
-					{
-						false, -- [1]
-						270117, -- [2]
-						3839, -- [3]
-						1545788608.031, -- [4]
-						4919, -- [5]
-						"Faithbounty", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [24]
-					{
-						false, -- [1]
-						143924, -- [2]
-						436, -- [3]
-						1545788608.896, -- [4]
-						5355, -- [5]
-						"Faithbounty", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [25]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1190, -- [3]
-						1545788609.009, -- [4]
-						4165, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [26]
-					{
-						false, -- [1]
-						276146, -- [2]
-						746, -- [3]
-						1545788609.631, -- [4]
-						4911, -- [5]
-						"Sakia-Azralon", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [27]
-					{
-						4, -- [1]
-						274019, -- [2]
-						1, -- [3]
-						1545788609.698, -- [4]
-						4911, -- [5]
-						"Vision of Madness", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [28]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1190, -- [3]
-						1545788610.01, -- [4]
-						3721, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [29]
-					{
-						false, -- [1]
-						143924, -- [2]
-						876, -- [3]
-						1545788610.098, -- [4]
-						4597, -- [5]
-						"Faithbounty", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						true, -- [9]
-						-1, -- [10]
-					}, -- [30]
-					{
-						false, -- [1]
-						280707, -- [2]
-						1064, -- [3]
-						1545788610.335, -- [4]
-						5661, -- [5]
-						"Ppoisonmilk", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						true, -- [9]
-						-1, -- [10]
-					}, -- [31]
-					{
-						true, -- [1]
-						276894, -- [2]
-						5661, -- [3]
-						1545788610.553, -- [4]
-						1, -- [5]
-						"N'raqi Destroyer", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						19719, -- [10]
-					}, -- [32]
-					{
-						3, -- [1]
-						0, -- [2]
-						0, -- [3]
-						0, -- [4]
-						0, -- [5]
-						"Faithbounty", -- [6]
-					}, -- [33]
-				},
-				["class"] = "DEMONHUNTER",
-				["timestring"] = "5m 7s",
-				["time"] = 1545788610.572,
-			}, -- [6]
-			{
-				["maxhealth"] = 126666,
-				["timeofdeath"] = 309.677000000025,
-				["name"] = "Talux-Tichondrius",
-				["events"] = {
-					{
-						false, -- [1]
-						191840, -- [2]
-						400, -- [3]
-						1545788605.81, -- [4]
-						74337, -- [5]
-						"Sakia-Azralon", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [1]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1322, -- [3]
-						1545788605.916, -- [4]
-						73015, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [2]
-					{
-						false, -- [1]
-						61295, -- [2]
-						2201, -- [3]
-						1545788606.289, -- [4]
-						51725, -- [5]
-						"Talux-Tichondrius", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [3]
-					{
-						false, -- [1]
-						143924, -- [2]
-						481, -- [3]
-						1545788606.483, -- [4]
-						52206, -- [5]
-						"Talux-Tichondrius", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [4]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1321, -- [3]
-						1545788606.901, -- [4]
-						27394, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [5]
-					{
-						false, -- [1]
-						280205, -- [2]
-						10728, -- [3]
-						1545788607.586, -- [4]
-						38122, -- [5]
-						"Talux-Tichondrius", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [6]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1255, -- [3]
-						1545788607.898, -- [4]
-						36867, -- [5]
-						"[*] Annihilation", -- [6]
 						nil, -- [7]
 						32, -- [8]
 						false, -- [9]
@@ -19030,1243 +18126,37 @@ DeathGraphsDBCurrent = {
 					}, -- [7]
 					{
 						false, -- [1]
-						143924, -- [2]
-						17, -- [3]
-						1545788608.068, -- [4]
-						36884, -- [5]
-						"Talux-Tichondrius", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [8]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1321, -- [3]
-						1545788608.917, -- [4]
-						35563, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [9]
-					{
-						false, -- [1]
-						61295, -- [2]
-						2325, -- [3]
-						1545788608.97, -- [4]
-						37888, -- [5]
-						"Talux-Tichondrius", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [10]
-					{
-						false, -- [1]
-						143924, -- [2]
-						220, -- [3]
-						1545788609.324, -- [4]
-						38108, -- [5]
-						"Talux-Tichondrius", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [11]
-					{
-						4, -- [1]
-						274019, -- [2]
-						1, -- [3]
-						1545788609.698, -- [4]
-						38108, -- [5]
-						"Vision of Madness", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [12]
-					{
-						4, -- [1]
-						274019, -- [2]
-						1, -- [3]
-						1545788609.698, -- [4]
-						38108, -- [5]
-						"Vision of Madness", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [13]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1322, -- [3]
-						1545788609.908, -- [4]
-						36786, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [14]
-					{
-						false, -- [1]
-						270117, -- [2]
-						3842, -- [3]
-						1545788609.929, -- [4]
-						40628, -- [5]
-						"Talux-Tichondrius", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [15]
-					{
-						false, -- [1]
-						31616, -- [2]
-						24770, -- [3]
-						1545788610.117, -- [4]
-						65398, -- [5]
-						"Talux-Tichondrius", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [16]
-					{
-						true, -- [1]
-						276894, -- [2]
-						28188, -- [3]
-						1545788610.117, -- [4]
-						37210, -- [5]
-						"N'raqi Destroyer", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [17]
-					{
-						false, -- [1]
-						280205, -- [2]
-						5169, -- [3]
-						1545788610.449, -- [4]
-						43224, -- [5]
-						"Talux-Tichondrius", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [18]
-					{
-						false, -- [1]
-						143924, -- [2]
-						16, -- [3]
-						1545788610.492, -- [4]
-						43240, -- [5]
-						"Talux-Tichondrius", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [19]
-					{
-						false, -- [1]
-						269279, -- [2]
-						8898, -- [3]
-						1545788610.703, -- [4]
-						43240, -- [5]
-						"Talux-Tichondrius", -- [6]
-						true, -- [7]
-						0, -- [8]
-						true, -- [9]
-						-1, -- [10]
-					}, -- [20]
-					{
-						true, -- [1]
-						274019, -- [2]
-						8898, -- [3]
-						1545788610.703, -- [4]
-						43240, -- [5]
-						"Vision of Madness <[*] Visions of Madness> <[*] Visions of Madness>", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [21]
-					{
-						false, -- [1]
-						269279, -- [2]
-						3772, -- [3]
-						1545788610.703, -- [4]
-						43240, -- [5]
-						"Talux-Tichondrius", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [22]
-					{
-						true, -- [1]
-						274019, -- [2]
-						8898, -- [3]
-						1545788610.703, -- [4]
-						38114, -- [5]
-						"Vision of Madness <[*] Visions of Madness>", -- [6]
-						3772, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [23]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1255, -- [3]
-						1545788610.9, -- [4]
-						36859, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [24]
-					{
-						false, -- [1]
-						61295, -- [2]
-						2321, -- [3]
-						1545788611.663, -- [4]
-						39180, -- [5]
-						"Talux-Tichondrius", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [25]
-					{
-						false, -- [1]
-						143924, -- [2]
-						57, -- [3]
-						1545788611.708, -- [4]
-						39237, -- [5]
-						"Talux-Tichondrius", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [26]
-					{
-						true, -- [1]
-						274019, -- [2]
-						9366, -- [3]
-						1545788611.708, -- [4]
-						29871, -- [5]
-						"Vision of Madness <[*] Visions of Madness>", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [27]
-					{
-						true, -- [1]
-						274019, -- [2]
-						9366, -- [3]
-						1545788611.708, -- [4]
-						20505, -- [5]
-						"Vision of Madness <[*] Visions of Madness>", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [28]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1321, -- [3]
-						1545788611.912, -- [4]
-						19184, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [29]
-					{
-						true, -- [1]
-						274019, -- [2]
-						9367, -- [3]
-						1545788612.728, -- [4]
-						9817, -- [5]
-						"Vision of Madness <[*] Visions of Madness>", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [30]
-					{
-						true, -- [1]
-						274019, -- [2]
-						9367, -- [3]
-						1545788612.728, -- [4]
-						450, -- [5]
-						"Vision of Madness <[*] Visions of Madness>", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [31]
-					{
-						true, -- [1]
-						278150, -- [2]
-						450, -- [3]
-						1545788612.923, -- [4]
-						1, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						871, -- [10]
-					}, -- [32]
-					{
-						3, -- [1]
-						108271, -- [2]
-						1, -- [3]
-						1545788554.512, -- [4]
-						0, -- [5]
-						"Talux-Tichondrius", -- [6]
-					}, -- [33]
-				},
-				["class"] = "SHAMAN",
-				["timestring"] = "5m 9s",
-				["time"] = 1545788612.94,
-			}, -- [7]
-			{
-				["maxhealth"] = 138225,
-				["timeofdeath"] = 310.320000000007,
-				["name"] = "Marejoana-Azralon",
-				["events"] = {
-					{
-						false, -- [1]
-						119611, -- [2]
-						3019, -- [3]
-						1545788607.681, -- [4]
-						56405, -- [5]
-						"Ppoisonmilk", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [1]
-					{
-						false, -- [1]
-						191840, -- [2]
-						200, -- [3]
-						1545788607.779, -- [4]
-						56605, -- [5]
-						"Sakia-Azralon", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [2]
-					{
-						false, -- [1]
-						143924, -- [2]
-						66, -- [3]
-						1545788608.496, -- [4]
-						56671, -- [5]
-						"Marejoana-Azralon", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [3]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1368, -- [3]
-						1545788608.536, -- [4]
-						55303, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [4]
-					{
-						false, -- [1]
-						191840, -- [2]
-						324, -- [3]
-						1545788608.78, -- [4]
-						55627, -- [5]
-						"Ppoisonmilk", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [5]
-					{
-						false, -- [1]
-						119611, -- [2]
-						1510, -- [3]
-						1545788609.24, -- [4]
-						57137, -- [5]
-						"Ppoisonmilk", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [6]
-					{
-						false, -- [1]
-						116670, -- [2]
-						7549, -- [3]
-						1545788609.392, -- [4]
-						64686, -- [5]
-						"Ppoisonmilk", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [7]
-					{
-						false, -- [1]
-						235450, -- [2]
-						1163, -- [3]
-						1545788609.549, -- [4]
-						64686, -- [5]
-						"Marejoana-Azralon", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [8]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1163, -- [3]
-						1545788609.549, -- [4]
-						64686, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [9]
-					{
-						false, -- [1]
-						235450, -- [2]
-						24814, -- [3]
-						1545788609.829, -- [4]
-						64860, -- [5]
-						"Marejoana-Azralon", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [10]
-					{
-						true, -- [1]
-						276894, -- [2]
-						24814, -- [3]
-						1545788609.829, -- [4]
-						64860, -- [5]
-						"N'raqi Destroyer", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [11]
-					{
-						false, -- [1]
-						191840, -- [2]
-						324, -- [3]
-						1545788610.335, -- [4]
-						65184, -- [5]
-						"Ppoisonmilk", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [12]
-					{
-						false, -- [1]
-						235450, -- [2]
-						1163, -- [3]
-						1545788610.572, -- [4]
-						65184, -- [5]
-						"Marejoana-Azralon", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [13]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1163, -- [3]
-						1545788610.572, -- [4]
-						65184, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [14]
-					{
-						false, -- [1]
-						77489, -- [2]
-						706, -- [3]
-						1545788610.572, -- [4]
-						65890, -- [5]
-						"Sanhiz-Ragnaros", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [15]
-					{
-						4, -- [1]
-						274113, -- [2]
-						1, -- [3]
-						1545788610.572, -- [4]
-						65890, -- [5]
-						"[*] Obliteration Beam", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [16]
-					{
-						4, -- [1]
-						272146, -- [2]
-						3, -- [3]
-						1545788610.572, -- [4]
-						65890, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [17]
-					{
-						false, -- [1]
-						235450, -- [2]
-						4663, -- [3]
-						1545788610.615, -- [4]
-						65890, -- [5]
-						"Marejoana-Azralon", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [18]
-					{
-						true, -- [1]
-						274113, -- [2]
-						12430, -- [3]
-						1545788610.615, -- [4]
-						58123, -- [5]
-						"[*] Obliteration Beam", -- [6]
-						4663, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [19]
-					{
-						false, -- [1]
-						119611, -- [2]
-						3019, -- [3]
-						1545788610.778, -- [4]
-						60469, -- [5]
-						"Ppoisonmilk", -- [6]
+						1064, -- [2]
+						13959, -- [3]
+						1546039224.468, -- [4]
+						105003, -- [5]
+						"Skoody-Magtheridon", -- [6]
 						nil, -- [7]
 						0, -- [8]
 						false, -- [9]
 						false, -- [10]
-					}, -- [20]
-					{
-						4, -- [1]
-						272146, -- [2]
-						4, -- [3]
-						1545788610.922, -- [4]
-						60469, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [21]
-					{
-						true, -- [1]
-						274113, -- [2]
-						14624, -- [3]
-						1545788610.922, -- [4]
-						45845, -- [5]
-						"[*] Obliteration Beam", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [22]
-					{
-						4, -- [1]
-						272146, -- [2]
-						5, -- [3]
-						1545788611.245, -- [4]
-						45221, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [23]
-					{
-						true, -- [1]
-						274113, -- [2]
-						14624, -- [3]
-						1545788611.245, -- [4]
-						30597, -- [5]
-						"[*] Obliteration Beam", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [24]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1369, -- [3]
-						1545788611.539, -- [4]
-						28757, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [25]
-					{
-						false, -- [1]
-						191840, -- [2]
-						323, -- [3]
-						1545788611.897, -- [4]
-						29249, -- [5]
-						"Ppoisonmilk", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [26]
-					{
-						false, -- [1]
-						119611, -- [2]
-						1510, -- [3]
-						1545788612.351, -- [4]
-						30759, -- [5]
-						"Ppoisonmilk", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [27]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1368, -- [3]
-						1545788612.535, -- [4]
-						29459, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [28]
-					{
-						false, -- [1]
-						143924, -- [2]
-						35, -- [3]
-						1545788612.923, -- [4]
-						29494, -- [5]
-						"Marejoana-Azralon", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [29]
-					{
-						true, -- [1]
-						276894, -- [2]
-						29193, -- [3]
-						1545788613.194, -- [4]
-						301, -- [5]
-						"N'raqi Destroyer", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [30]
-					{
-						false, -- [1]
-						191840, -- [2]
-						323, -- [3]
-						1545788613.456, -- [4]
-						624, -- [5]
-						"Ppoisonmilk", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [31]
-					{
-						true, -- [1]
-						278150, -- [2]
-						624, -- [3]
-						1545788613.57, -- [4]
-						1, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						745, -- [10]
-					}, -- [32]
-					{
-						3, -- [1]
-						0, -- [2]
-						0, -- [3]
-						0, -- [4]
-						0, -- [5]
-						"Marejoana-Azralon", -- [6]
-					}, -- [33]
-				},
-				["class"] = "MAGE",
-				["timestring"] = "5m 10s",
-				["time"] = 1545788613.583,
-			}, -- [8]
-			{
-				["maxhealth"] = 59458,
-				["timeofdeath"] = 320.717000000004,
-				["name"] = "Zeudan-Quel'Thalas",
-				["events"] = {
-					{
-						4, -- [1]
-						274019, -- [2]
-						1, -- [3]
-						1545788616.95, -- [4]
-						60537, -- [5]
-						"Vision of Madness", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [1]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1182, -- [3]
-						1545788617.151, -- [4]
-						59355, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [2]
-					{
-						false, -- [1]
-						191840, -- [2]
-						323, -- [3]
-						1545788617.848, -- [4]
-						59678, -- [5]
-						"Ppoisonmilk", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [3]
-					{
-						false, -- [1]
-						270674, -- [2]
-						17925, -- [3]
-						1545788617.961, -- [4]
-						73379, -- [5]
-						"Zeudan-Quel'Thalas", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [4]
-					{
-						true, -- [1]
-						274019, -- [2]
-						8376, -- [3]
-						1545788617.961, -- [4]
-						65003, -- [5]
-						"Vision of Madness <[*] Visions of Madness>", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [5]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1182, -- [3]
-						1545788618.149, -- [4]
-						63821, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [6]
-					{
-						true, -- [1]
-						274019, -- [2]
-						8911, -- [3]
-						1545788618.958, -- [4]
-						57308, -- [5]
-						"Vision of Madness <[*] Visions of Madness>", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [7]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1257, -- [3]
-						1545788619.151, -- [4]
-						56051, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
 					}, -- [8]
 					{
 						false, -- [1]
-						77489, -- [2]
-						2446, -- [3]
-						1545788619.212, -- [4]
-						58497, -- [5]
-						"Sanhiz-Ragnaros", -- [6]
+						157982, -- [2]
+						583, -- [3]
+						1546039225.885, -- [4]
+						105586, -- [5]
+						"Zilzag", -- [6]
 						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [9]
-					{
-						false, -- [1]
-						191840, -- [2]
-						323, -- [3]
-						1545788619.468, -- [4]
-						58820, -- [5]
-						"Ppoisonmilk", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [10]
-					{
-						false, -- [1]
-						130654, -- [2]
-						5391, -- [3]
-						1545788619.633, -- [4]
-						64211, -- [5]
-						"Zeudan-Quel'Thalas", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [11]
-					{
-						true, -- [1]
-						274019, -- [2]
-						8911, -- [3]
-						1545788619.961, -- [4]
-						55300, -- [5]
-						"Vision of Madness <[*] Visions of Madness>", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [12]
-					{
-						false, -- [1]
-						270117, -- [2]
-						4816, -- [3]
-						1545788619.975, -- [4]
-						60116, -- [5]
-						"Zeudan-Quel'Thalas", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						true, -- [9]
-						-1, -- [10]
-					}, -- [13]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1257, -- [3]
-						1545788620.145, -- [4]
-						58859, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [14]
-					{
-						false, -- [1]
-						596, -- [2]
-						7450, -- [3]
-						1545788620.967, -- [4]
-						66309, -- [5]
-						"Sanhiz-Ragnaros", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [15]
-					{
-						false, -- [1]
-						243241, -- [2]
-						3576, -- [3]
-						1545788620.967, -- [4]
-						69885, -- [5]
-						"Sanhiz-Ragnaros", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [16]
-					{
-						false, -- [1]
-						191840, -- [2]
-						323, -- [3]
-						1545788621.07, -- [4]
-						70208, -- [5]
-						"Ppoisonmilk", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [17]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1207, -- [3]
-						1545788621.136, -- [4]
-						69001, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [18]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1206, -- [3]
-						1545788622.152, -- [4]
-						67795, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [19]
-					{
-						4, -- [1]
-						274113, -- [2]
-						1, -- [3]
-						1545788622.584, -- [4]
-						67795, -- [5]
-						"[*] Obliteration Beam", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [20]
-					{
-						4, -- [1]
-						272146, -- [2]
-						55, -- [3]
-						1545788622.584, -- [4]
-						67795, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [21]
-					{
-						true, -- [1]
-						274113, -- [2]
-						12897, -- [3]
-						1545788622.584, -- [4]
-						54898, -- [5]
-						"[*] Obliteration Beam", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [22]
-					{
-						false, -- [1]
-						191840, -- [2]
-						409, -- [3]
-						1545788622.654, -- [4]
-						53832, -- [5]
-						"Ppoisonmilk", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						true, -- [9]
-						-1, -- [10]
-					}, -- [23]
-					{
-						4, -- [1]
-						272146, -- [2]
-						56, -- [3]
-						1545788622.923, -- [4]
-						53832, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [24]
-					{
-						true, -- [1]
-						274113, -- [2]
-						12897, -- [3]
-						1545788622.923, -- [4]
-						40935, -- [5]
-						"[*] Obliteration Beam", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [25]
-					{
-						true, -- [1]
-						278150, -- [2]
-						1207, -- [3]
-						1545788623.139, -- [4]
-						38531, -- [5]
-						"[*] Annihilation", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [26]
-					{
-						4, -- [1]
-						272146, -- [2]
-						57, -- [3]
-						1545788623.245, -- [4]
-						38531, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [27]
-					{
-						true, -- [1]
-						274113, -- [2]
-						12897, -- [3]
-						1545788623.245, -- [4]
-						25634, -- [5]
-						"[*] Obliteration Beam", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [28]
-					{
-						4, -- [1]
-						272146, -- [2]
-						58, -- [3]
-						1545788623.578, -- [4]
-						24758, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [29]
-					{
-						true, -- [1]
-						274113, -- [2]
-						12897, -- [3]
-						1545788623.578, -- [4]
-						11861, -- [5]
-						"[*] Obliteration Beam", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [30]
-					{
-						4, -- [1]
-						272146, -- [2]
-						59, -- [3]
-						1545788623.905, -- [4]
-						11284, -- [5]
-						"[*] Annihilation", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [31]
-					{
-						true, -- [1]
-						274113, -- [2]
-						11015, -- [3]
-						1545788623.955, -- [4]
-						1, -- [5]
-						"[*] Obliteration Beam", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						1882, -- [10]
-					}, -- [32]
-					{
-						3, -- [1]
-						0, -- [2]
-						0, -- [3]
-						0, -- [4]
-						0, -- [5]
-						"Zeudan-Quel'Thalas", -- [6]
-					}, -- [33]
-				},
-				["class"] = "MONK",
-				["timestring"] = "5m 20s",
-				["time"] = 1545788623.98,
-			}, -- [9]
-			{
-				["maxhealth"] = 155097,
-				["timeofdeath"] = 332.706000000006,
-				["name"] = "Bïrd-Azralon",
-				["events"] = {
-					{
-						true, -- [1]
-						274019, -- [2]
-						9682, -- [3]
-						1545788633.59, -- [4]
-						64497, -- [5]
-						"Vision of Madness <[*] Visions of Madness>", -- [6]
-						2005, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [1]
-					{
-						false, -- [1]
-						108366, -- [2]
-						0, -- [3]
-						1545788633.612, -- [4]
-						64497, -- [5]
-						"Bïrd-Azralon", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [2]
-					{
-						false, -- [1]
-						114083, -- [2]
-						292, -- [3]
-						1545788633.866, -- [4]
-						64789, -- [5]
-						"Talux-Tichondrius", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [3]
-					{
-						false, -- [1]
-						280707, -- [2]
-						1047, -- [3]
-						1545788634.216, -- [4]
-						65836, -- [5]
-						"Hìkari-Mal'Ganis", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [4]
-					{
-						false, -- [1]
-						77489, -- [2]
-						1964, -- [3]
-						1545788634.384, -- [4]
-						67800, -- [5]
-						"Sanhiz-Ragnaros", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [5]
-					{
-						false, -- [1]
-						77220, -- [2]
-						1069, -- [3]
-						1545788634.58, -- [4]
-						67800, -- [5]
-						"Bïrd-Azralon", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [6]
-					{
-						false, -- [1]
-						108366, -- [2]
-						1347, -- [3]
-						1545788634.58, -- [4]
-						67800, -- [5]
-						"Bïrd-Azralon", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [7]
-					{
-						true, -- [1]
-						274019, -- [2]
-						9682, -- [3]
-						1545788634.58, -- [4]
-						60534, -- [5]
-						"Vision of Madness <[*] Visions of Madness>", -- [6]
-						2416, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [8]
-					{
-						false, -- [1]
-						108366, -- [2]
-						0, -- [3]
-						1545788634.58, -- [4]
-						60534, -- [5]
-						"Bïrd-Azralon", -- [6]
-						true, -- [7]
 						0, -- [8]
 						false, -- [9]
 						false, -- [10]
 					}, -- [9]
 					{
-						4, -- [1]
-						274113, -- [2]
-						1, -- [3]
-						1545788634.604, -- [4]
-						60534, -- [5]
-						"[*] Obliteration Beam", -- [6]
-						false, -- [7]
-						false, -- [8]
+						false, -- [1]
+						48438, -- [2]
+						2702, -- [3]
+						1546039226.209, -- [4]
+						108288, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
 						false, -- [9]
 						false, -- [10]
 					}, -- [10]
@@ -20274,44 +18164,44 @@ DeathGraphsDBCurrent = {
 						4, -- [1]
 						272146, -- [2]
 						1, -- [3]
-						1545788634.604, -- [4]
-						60534, -- [5]
+						1546039226.262, -- [4]
+						108288, -- [5]
 						"[*] Annihilation", -- [6]
 						false, -- [7]
 						false, -- [8]
 						false, -- [9]
 						false, -- [10]
 					}, -- [11]
-					{
-						false, -- [1]
-						77220, -- [2]
-						1339, -- [3]
-						1545788634.604, -- [4]
-						60534, -- [5]
-						"Bïrd-Azralon", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [12]
-					{
-						true, -- [1]
-						274113, -- [2]
-						14597, -- [3]
-						1545788634.604, -- [4]
-						47276, -- [5]
-						"[*] Obliteration Beam", -- [6]
-						1339, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [13]
 					{
 						4, -- [1]
 						272146, -- [2]
 						2, -- [3]
-						1545788634.939, -- [4]
-						46670, -- [5]
+						1546039226.262, -- [4]
+						108288, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [12]
+					{
+						4, -- [1]
+						272146, -- [2]
+						3, -- [3]
+						1546039226.262, -- [4]
+						108288, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [13]
+					{
+						4, -- [1]
+						272146, -- [2]
+						4, -- [3]
+						1546039226.262, -- [4]
+						108288, -- [5]
 						"[*] Annihilation", -- [6]
 						false, -- [7]
 						false, -- [8]
@@ -20319,36 +18209,36 @@ DeathGraphsDBCurrent = {
 						false, -- [10]
 					}, -- [14]
 					{
-						false, -- [1]
-						77220, -- [2]
-						1166, -- [3]
-						1545788634.939, -- [4]
-						46670, -- [5]
-						"Bïrd-Azralon", -- [6]
-						true, -- [7]
-						0, -- [8]
+						4, -- [1]
+						272146, -- [2]
+						5, -- [3]
+						1546039226.262, -- [4]
+						108288, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
 						false, -- [9]
-						-1, -- [10]
+						false, -- [10]
 					}, -- [15]
 					{
-						true, -- [1]
-						274113, -- [2]
-						14597, -- [3]
-						1545788634.939, -- [4]
-						33239, -- [5]
-						"[*] Obliteration Beam", -- [6]
-						1166, -- [7]
-						32, -- [8]
+						4, -- [1]
+						272146, -- [2]
+						6, -- [3]
+						1546039226.262, -- [4]
+						108288, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
 						false, -- [9]
-						-1, -- [10]
+						false, -- [10]
 					}, -- [16]
 					{
 						4, -- [1]
-						274019, -- [2]
-						1, -- [3]
-						1545788635.236, -- [4]
-						32767, -- [5]
-						"Vision of Madness", -- [6]
+						272146, -- [2]
+						7, -- [3]
+						1546039226.262, -- [4]
+						108288, -- [5]
+						"[*] Annihilation", -- [6]
 						false, -- [7]
 						false, -- [8]
 						false, -- [9]
@@ -20356,11 +18246,11 @@ DeathGraphsDBCurrent = {
 					}, -- [17]
 					{
 						4, -- [1]
-						274019, -- [2]
-						1, -- [3]
-						1545788635.236, -- [4]
-						32767, -- [5]
-						"Vision of Madness", -- [6]
+						272146, -- [2]
+						8, -- [3]
+						1546039226.262, -- [4]
+						108288, -- [5]
+						"[*] Annihilation", -- [6]
 						false, -- [7]
 						false, -- [8]
 						false, -- [9]
@@ -20369,9 +18259,9 @@ DeathGraphsDBCurrent = {
 					{
 						4, -- [1]
 						272146, -- [2]
-						3, -- [3]
-						1545788635.268, -- [4]
-						32767, -- [5]
+						9, -- [3]
+						1546039226.262, -- [4]
+						108288, -- [5]
 						"[*] Annihilation", -- [6]
 						false, -- [7]
 						false, -- [8]
@@ -20379,35 +18269,35 @@ DeathGraphsDBCurrent = {
 						false, -- [10]
 					}, -- [19]
 					{
-						false, -- [1]
-						77220, -- [2]
-						958, -- [3]
-						1545788635.268, -- [4]
-						32767, -- [5]
-						"Bïrd-Azralon", -- [6]
-						true, -- [7]
-						0, -- [8]
-						true, -- [9]
-						-1, -- [10]
+						4, -- [1]
+						272146, -- [2]
+						10, -- [3]
+						1546039226.262, -- [4]
+						108288, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
 					}, -- [20]
 					{
-						true, -- [1]
-						274113, -- [2]
-						14597, -- [3]
-						1545788635.268, -- [4]
-						19128, -- [5]
-						"[*] Obliteration Beam", -- [6]
-						958, -- [7]
-						32, -- [8]
+						4, -- [1]
+						272146, -- [2]
+						11, -- [3]
+						1546039226.262, -- [4]
+						108288, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
 						false, -- [9]
-						-1, -- [10]
+						false, -- [10]
 					}, -- [21]
 					{
 						4, -- [1]
 						272146, -- [2]
-						4, -- [3]
-						1545788635.567, -- [4]
-						18793, -- [5]
+						12, -- [3]
+						1546039226.262, -- [4]
+						108288, -- [5]
 						"[*] Annihilation", -- [6]
 						false, -- [7]
 						false, -- [8]
@@ -20415,95 +18305,95 @@ DeathGraphsDBCurrent = {
 						false, -- [10]
 					}, -- [22]
 					{
-						false, -- [1]
-						77220, -- [2]
-						888, -- [3]
-						1545788635.567, -- [4]
-						18793, -- [5]
-						"Bïrd-Azralon", -- [6]
-						true, -- [7]
-						0, -- [8]
-						true, -- [9]
-						-1, -- [10]
+						4, -- [1]
+						272146, -- [2]
+						13, -- [3]
+						1546039226.262, -- [4]
+						108288, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
 					}, -- [23]
 					{
-						false, -- [1]
-						108366, -- [2]
-						1070, -- [3]
-						1545788635.567, -- [4]
-						18793, -- [5]
-						"Bïrd-Azralon", -- [6]
-						true, -- [7]
-						0, -- [8]
+						4, -- [1]
+						272146, -- [2]
+						14, -- [3]
+						1546039226.262, -- [4]
+						108288, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
 						false, -- [9]
-						-1, -- [10]
+						false, -- [10]
 					}, -- [24]
 					{
-						true, -- [1]
-						274113, -- [2]
-						14597, -- [3]
-						1545788635.567, -- [4]
-						6154, -- [5]
-						"[*] Obliteration Beam", -- [6]
-						1958, -- [7]
-						32, -- [8]
+						4, -- [1]
+						272146, -- [2]
+						15, -- [3]
+						1546039226.262, -- [4]
+						108288, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
 						false, -- [9]
-						-1, -- [10]
+						false, -- [10]
 					}, -- [25]
 					{
-						false, -- [1]
-						108366, -- [2]
-						0, -- [3]
-						1545788635.588, -- [4]
-						5960, -- [5]
-						"Bïrd-Azralon", -- [6]
-						true, -- [7]
-						0, -- [8]
+						4, -- [1]
+						272146, -- [2]
+						16, -- [3]
+						1546039226.262, -- [4]
+						108288, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
 						false, -- [9]
-						-1, -- [10]
+						false, -- [10]
 					}, -- [26]
 					{
-						false, -- [1]
-						77220, -- [2]
-						80, -- [3]
-						1545788635.604, -- [4]
-						5960, -- [5]
-						"Bïrd-Azralon", -- [6]
-						true, -- [7]
-						0, -- [8]
-						true, -- [9]
-						-1, -- [10]
+						4, -- [1]
+						272146, -- [2]
+						17, -- [3]
+						1546039226.262, -- [4]
+						108288, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
 					}, -- [27]
 					{
-						true, -- [1]
-						278150, -- [2]
-						1366, -- [3]
-						1545788635.604, -- [4]
-						4674, -- [5]
+						4, -- [1]
+						272146, -- [2]
+						18, -- [3]
+						1546039226.262, -- [4]
+						108288, -- [5]
 						"[*] Annihilation", -- [6]
-						80, -- [7]
-						32, -- [8]
+						false, -- [7]
+						false, -- [8]
 						false, -- [9]
-						-1, -- [10]
+						false, -- [10]
 					}, -- [28]
 					{
-						false, -- [1]
-						114083, -- [2]
-						1455, -- [3]
-						1545788635.864, -- [4]
-						6129, -- [5]
-						"Talux-Tichondrius", -- [6]
-						nil, -- [7]
-						0, -- [8]
+						4, -- [1]
+						272146, -- [2]
+						19, -- [3]
+						1546039226.262, -- [4]
+						108288, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
 						false, -- [9]
-						-1, -- [10]
+						false, -- [10]
 					}, -- [29]
 					{
 						4, -- [1]
 						272146, -- [2]
-						5, -- [3]
-						1545788635.916, -- [4]
-						6129, -- [5]
+						20, -- [3]
+						1546039226.262, -- [4]
+						108288, -- [5]
 						"[*] Annihilation", -- [6]
 						false, -- [7]
 						false, -- [8]
@@ -20511,41 +18401,2868 @@ DeathGraphsDBCurrent = {
 						false, -- [10]
 					}, -- [30]
 					{
+						4, -- [1]
+						274693, -- [2]
+						1, -- [3]
+						1546039226.262, -- [4]
+						86620, -- [5]
+						"N'raqi Destroyer", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [31]
+					{
+						true, -- [1]
+						273282, -- [2]
+						86620, -- [3]
+						1546039226.313, -- [4]
+						1, -- [5]
+						"N'raqi Destroyer", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						21604, -- [10]
+					}, -- [32]
+					{
+						3, -- [1]
+						186265, -- [2]
+						1, -- [3]
+						1546039200.956, -- [4]
+						0, -- [5]
+						"Bladeé-Ragnaros", -- [6]
+					}, -- [33]
+				},
+			}, -- [3]
+			{
+				["maxhealth"] = 136022,
+				["timeofdeath"] = 271.302,
+				["name"] = "Arodaxic",
+				["time"] = 1546039227.469,
+				["class"] = "SHAMAN",
+				["timestring"] = "4m 31s",
+				["events"] = {
+					{
+						true, -- [1]
+						274113, -- [2]
+						13849, -- [3]
+						1546039218.683, -- [4]
+						73112, -- [5]
+						"[*] Obliteration Beam", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [1]
+					{
+						4, -- [1]
+						272146, -- [2]
+						20, -- [3]
+						1546039219.026, -- [4]
+						72051, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [2]
+					{
+						true, -- [1]
+						274113, -- [2]
+						13848, -- [3]
+						1546039219.026, -- [4]
+						58203, -- [5]
+						"[*] Obliteration Beam", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [3]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1295, -- [3]
+						1546039219.192, -- [4]
+						56181, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [4]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1296, -- [3]
+						1546039220.214, -- [4]
+						63053, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [5]
+					{
 						false, -- [1]
-						77220, -- [2]
-						1030, -- [3]
-						1545788635.916, -- [4]
-						6129, -- [5]
-						"Bïrd-Azralon", -- [6]
+						157982, -- [2]
+						5296, -- [3]
+						1546039221.091, -- [4]
+						68511, -- [5]
+						"Zilzag", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [6]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1296, -- [3]
+						1546039221.207, -- [4]
+						67215, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [7]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1295, -- [3]
+						1546039222.207, -- [4]
+						68655, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [8]
+					{
+						false, -- [1]
+						280707, -- [2]
+						1074, -- [3]
+						1546039222.858, -- [4]
+						69729, -- [5]
+						"Skoody-Magtheridon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [9]
+					{
+						false, -- [1]
+						73921, -- [2]
+						4089, -- [3]
+						1546039223.124, -- [4]
+						73982, -- [5]
+						"Skoody-Magtheridon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [10]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1295, -- [3]
+						1546039223.198, -- [4]
+						72687, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [11]
+					{
+						false, -- [1]
+						52042, -- [2]
+						4626, -- [3]
+						1546039224.1, -- [4]
+						78075, -- [5]
+						"Healing Stream Totem <Skoody-Magtheridon>", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [12]
+					{
+						false, -- [1]
+						269279, -- [2]
+						1296, -- [3]
+						1546039224.211, -- [4]
+						78075, -- [5]
+						"Arodaxic", -- [6]
 						true, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [13]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1296, -- [3]
+						1546039224.211, -- [4]
+						78075, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [14]
+					{
+						false, -- [1]
+						269279, -- [2]
+						13745, -- [3]
+						1546039224.323, -- [4]
+						78075, -- [5]
+						"Arodaxic", -- [6]
+						true, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [15]
+					{
+						true, -- [1]
+						276863, -- [2]
+						23038, -- [3]
+						1546039224.323, -- [4]
+						68782, -- [5]
+						"[*] Crashing Oblivion", -- [6]
+						13745, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [16]
+					{
+						false, -- [1]
+						270117, -- [2]
+						5265, -- [3]
+						1546039224.364, -- [4]
+						74047, -- [5]
+						"Arodaxic", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [17]
+					{
+						false, -- [1]
+						1064, -- [2]
+						6948, -- [3]
+						1546039224.468, -- [4]
+						80995, -- [5]
+						"Skoody-Magtheridon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [18]
+					{
+						false, -- [1]
+						31616, -- [2]
+						29923, -- [3]
+						1546039224.828, -- [4]
+						112942, -- [5]
+						"Arodaxic", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [19]
+					{
+						true, -- [1]
+						276894, -- [2]
+						49762, -- [3]
+						1546039224.828, -- [4]
+						63180, -- [5]
+						"N'raqi Destroyer", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [20]
+					{
+						false, -- [1]
+						73921, -- [2]
+						2415, -- [3]
+						1546039224.873, -- [4]
+						65595, -- [5]
+						"Skoody-Magtheridon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [21]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1296, -- [3]
+						1546039225.198, -- [4]
+						64465, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [22]
+					{
+						false, -- [1]
+						272260, -- [2]
+						359, -- [3]
+						1546039225.418, -- [4]
+						64824, -- [5]
+						"Skoody-Magtheridon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [23]
+					{
+						false, -- [1]
+						157982, -- [2]
+						582, -- [3]
+						1546039225.885, -- [4]
+						65406, -- [5]
+						"Zilzag", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [24]
+					{
+						true, -- [1]
+						1, -- [2]
+						47623, -- [3]
+						1546039225.948, -- [4]
+						65406, -- [5]
+						"N'raqi Destroyer", -- [6]
+						nil, -- [7]
+						1, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [25]
+					{
+						false, -- [1]
+						73921, -- [2]
+						4119, -- [3]
+						1546039226.183, -- [4]
+						21902, -- [5]
+						"Skoody-Magtheridon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [26]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1296, -- [3]
+						1546039226.195, -- [4]
+						20606, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [27]
+					{
+						false, -- [1]
+						48438, -- [2]
+						2703, -- [3]
+						1546039226.209, -- [4]
+						23309, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [28]
+					{
+						false, -- [1]
+						48438, -- [2]
+						2557, -- [3]
+						1546039227.102, -- [4]
+						25866, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [29]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1296, -- [3]
+						1546039227.2, -- [4]
+						24737, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [30]
+					{
+						false, -- [1]
+						272260, -- [2]
+						359, -- [3]
+						1546039227.424, -- [4]
+						25096, -- [5]
+						"Skoody-Magtheridon", -- [6]
+						nil, -- [7]
 						0, -- [8]
 						false, -- [9]
 						false, -- [10]
 					}, -- [31]
 					{
 						true, -- [1]
-						274113, -- [2]
-						7095, -- [3]
-						1545788635.951, -- [4]
-						1, -- [5]
-						"[*] Obliteration Beam", -- [6]
-						1030, -- [7]
-						32, -- [8]
+						1, -- [2]
+						25096, -- [3]
+						1546039227.439, -- [4]
+						25096, -- [5]
+						"N'raqi Destroyer", -- [6]
+						nil, -- [7]
+						1, -- [8]
 						false, -- [9]
-						7502, -- [10]
+						41206, -- [10]
 					}, -- [32]
 					{
 						3, -- [1]
-						104773, -- [2]
+						108271, -- [2]
 						1, -- [3]
-						1545788615.012, -- [4]
+						1546039178.328, -- [4]
 						0, -- [5]
-						"Bïrd-Azralon", -- [6]
+						"Arodaxic", -- [6]
 					}, -- [33]
 				},
-				["class"] = "WARLOCK",
-				["timestring"] = "5m 32s",
-				["time"] = 1545788635.969,
+			}, -- [4]
+			{
+				["maxhealth"] = 108950,
+				["timeofdeath"] = 273.333999999999,
+				["name"] = "Melme-Thrall",
+				["time"] = 1546039229.501,
+				["class"] = "PRIEST",
+				["timestring"] = "4m 33s",
+				["events"] = {
+					{
+						false, -- [1]
+						143924, -- [2]
+						187, -- [3]
+						1546039228.761, -- [4]
+						50211, -- [5]
+						"Melme-Thrall", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [1]
+					{
+						false, -- [1]
+						34914, -- [2]
+						331, -- [3]
+						1546039228.793, -- [4]
+						50542, -- [5]
+						"Melme-Thrall", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [2]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1354, -- [3]
+						1546039228.883, -- [4]
+						49188, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [3]
+					{
+						false, -- [1]
+						270117, -- [2]
+						4772, -- [3]
+						1546039228.896, -- [4]
+						53960, -- [5]
+						"Melme-Thrall", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [4]
+					{
+						false, -- [1]
+						280707, -- [2]
+						2332, -- [3]
+						1546039228.896, -- [4]
+						56292, -- [5]
+						"Skoody-Magtheridon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [5]
+					{
+						false, -- [1]
+						8936, -- [2]
+						1119, -- [3]
+						1546039228.972, -- [4]
+						57411, -- [5]
+						"Zilzag", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [6]
+					{
+						false, -- [1]
+						8936, -- [2]
+						828, -- [3]
+						1546039229.017, -- [4]
+						58239, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [7]
+					{
+						false, -- [1]
+						157982, -- [2]
+						395, -- [3]
+						1546039229.118, -- [4]
+						58634, -- [5]
+						"Zilzag", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [8]
+					{
+						false, -- [1]
+						34914, -- [2]
+						291, -- [3]
+						1546039229.186, -- [4]
+						58925, -- [5]
+						"Melme-Thrall", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [9]
+					{
+						false, -- [1]
+						33763, -- [2]
+						1491, -- [3]
+						1546039229.286, -- [4]
+						60416, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [10]
+					{
+						4, -- [1]
+						272146, -- [2]
+						13, -- [3]
+						1546039229.39, -- [4]
+						60416, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [11]
+					{
+						4, -- [1]
+						272146, -- [2]
+						14, -- [3]
+						1546039229.39, -- [4]
+						60416, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [12]
+					{
+						4, -- [1]
+						272146, -- [2]
+						15, -- [3]
+						1546039229.39, -- [4]
+						60416, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [13]
+					{
+						4, -- [1]
+						272146, -- [2]
+						16, -- [3]
+						1546039229.39, -- [4]
+						60416, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [14]
+					{
+						4, -- [1]
+						272146, -- [2]
+						17, -- [3]
+						1546039229.39, -- [4]
+						60416, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [15]
+					{
+						4, -- [1]
+						272146, -- [2]
+						18, -- [3]
+						1546039229.39, -- [4]
+						60416, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [16]
+					{
+						4, -- [1]
+						272146, -- [2]
+						19, -- [3]
+						1546039229.39, -- [4]
+						60416, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [17]
+					{
+						4, -- [1]
+						272146, -- [2]
+						20, -- [3]
+						1546039229.39, -- [4]
+						60416, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [18]
+					{
+						4, -- [1]
+						272146, -- [2]
+						21, -- [3]
+						1546039229.39, -- [4]
+						60416, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [19]
+					{
+						4, -- [1]
+						272146, -- [2]
+						22, -- [3]
+						1546039229.39, -- [4]
+						60416, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [20]
+					{
+						4, -- [1]
+						272146, -- [2]
+						23, -- [3]
+						1546039229.39, -- [4]
+						60416, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [21]
+					{
+						4, -- [1]
+						272146, -- [2]
+						24, -- [3]
+						1546039229.39, -- [4]
+						60416, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [22]
+					{
+						4, -- [1]
+						272146, -- [2]
+						25, -- [3]
+						1546039229.414, -- [4]
+						60416, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [23]
+					{
+						4, -- [1]
+						272146, -- [2]
+						26, -- [3]
+						1546039229.414, -- [4]
+						60416, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [24]
+					{
+						4, -- [1]
+						272146, -- [2]
+						27, -- [3]
+						1546039229.414, -- [4]
+						60416, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [25]
+					{
+						4, -- [1]
+						272146, -- [2]
+						28, -- [3]
+						1546039229.414, -- [4]
+						60416, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [26]
+					{
+						4, -- [1]
+						272146, -- [2]
+						29, -- [3]
+						1546039229.414, -- [4]
+						60416, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [27]
+					{
+						4, -- [1]
+						272146, -- [2]
+						30, -- [3]
+						1546039229.414, -- [4]
+						60416, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [28]
+					{
+						4, -- [1]
+						272146, -- [2]
+						31, -- [3]
+						1546039229.414, -- [4]
+						60416, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [29]
+					{
+						4, -- [1]
+						272146, -- [2]
+						32, -- [3]
+						1546039229.414, -- [4]
+						60416, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [30]
+					{
+						4, -- [1]
+						274693, -- [2]
+						1, -- [3]
+						1546039229.455, -- [4]
+						60416, -- [5]
+						"N'raqi Destroyer", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [31]
+					{
+						true, -- [1]
+						273282, -- [2]
+						46676, -- [3]
+						1546039229.501, -- [4]
+						1, -- [5]
+						"N'raqi Destroyer", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						61673, -- [10]
+					}, -- [32]
+					{
+						3, -- [1]
+						0, -- [2]
+						0, -- [3]
+						0, -- [4]
+						0, -- [5]
+						"Melme-Thrall", -- [6]
+					}, -- [33]
+				},
+			}, -- [5]
+			{
+				["maxhealth"] = 107870,
+				["timeofdeath"] = 273.333999999999,
+				["name"] = "Zilzag",
+				["time"] = 1546039229.501,
+				["class"] = "DRUID",
+				["timestring"] = "4m 33s",
+				["events"] = {
+					{
+						2, -- [1]
+						61999, -- [2]
+						1, -- [3]
+						1546039233.336, -- [4]
+						0, -- [5]
+						"Yaxx-Thrall", -- [6]
+					}, -- [1]
+					{
+						false, -- [1]
+						48438, -- [2]
+						2557, -- [3]
+						1546039227.102, -- [4]
+						103702, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						true, -- [9]
+						-1, -- [10]
+					}, -- [2]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1362, -- [3]
+						1546039227.258, -- [4]
+						102340, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [3]
+					{
+						false, -- [1]
+						157982, -- [2]
+						582, -- [3]
+						1546039227.886, -- [4]
+						102922, -- [5]
+						"Zilzag", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [4]
+					{
+						false, -- [1]
+						48438, -- [2]
+						2410, -- [3]
+						1546039227.999, -- [4]
+						105332, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						true, -- [9]
+						-1, -- [10]
+					}, -- [5]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1362, -- [3]
+						1546039228.252, -- [4]
+						103970, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [6]
+					{
+						false, -- [1]
+						145109, -- [2]
+						4549, -- [3]
+						1546039228.761, -- [4]
+						108519, -- [5]
+						"Zilzag", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [7]
+					{
+						false, -- [1]
+						774, -- [2]
+						2676, -- [3]
+						1546039228.777, -- [4]
+						111195, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [8]
+					{
+						false, -- [1]
+						48438, -- [2]
+						2555, -- [3]
+						1546039228.912, -- [4]
+						113750, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [9]
+					{
+						false, -- [1]
+						157982, -- [2]
+						352, -- [3]
+						1546039229.092, -- [4]
+						114102, -- [5]
+						"Zilzag", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [10]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1362, -- [3]
+						1546039229.265, -- [4]
+						112740, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [11]
+					{
+						4, -- [1]
+						272146, -- [2]
+						9, -- [3]
+						1546039229.414, -- [4]
+						112740, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [12]
+					{
+						4, -- [1]
+						272146, -- [2]
+						10, -- [3]
+						1546039229.414, -- [4]
+						112740, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [13]
+					{
+						4, -- [1]
+						272146, -- [2]
+						11, -- [3]
+						1546039229.414, -- [4]
+						112740, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [14]
+					{
+						4, -- [1]
+						272146, -- [2]
+						12, -- [3]
+						1546039229.414, -- [4]
+						112740, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [15]
+					{
+						4, -- [1]
+						272146, -- [2]
+						13, -- [3]
+						1546039229.414, -- [4]
+						112740, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [16]
+					{
+						4, -- [1]
+						272146, -- [2]
+						14, -- [3]
+						1546039229.414, -- [4]
+						112740, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [17]
+					{
+						4, -- [1]
+						272146, -- [2]
+						15, -- [3]
+						1546039229.414, -- [4]
+						112740, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [18]
+					{
+						4, -- [1]
+						272146, -- [2]
+						16, -- [3]
+						1546039229.414, -- [4]
+						112740, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [19]
+					{
+						4, -- [1]
+						272146, -- [2]
+						17, -- [3]
+						1546039229.414, -- [4]
+						112740, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [20]
+					{
+						4, -- [1]
+						272146, -- [2]
+						18, -- [3]
+						1546039229.414, -- [4]
+						112740, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [21]
+					{
+						4, -- [1]
+						272146, -- [2]
+						19, -- [3]
+						1546039229.414, -- [4]
+						112740, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [22]
+					{
+						4, -- [1]
+						272146, -- [2]
+						20, -- [3]
+						1546039229.414, -- [4]
+						112740, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [23]
+					{
+						4, -- [1]
+						272146, -- [2]
+						21, -- [3]
+						1546039229.414, -- [4]
+						112740, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [24]
+					{
+						4, -- [1]
+						272146, -- [2]
+						22, -- [3]
+						1546039229.414, -- [4]
+						112740, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [25]
+					{
+						4, -- [1]
+						272146, -- [2]
+						23, -- [3]
+						1546039229.414, -- [4]
+						112740, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [26]
+					{
+						4, -- [1]
+						272146, -- [2]
+						24, -- [3]
+						1546039229.414, -- [4]
+						112740, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [27]
+					{
+						4, -- [1]
+						272146, -- [2]
+						25, -- [3]
+						1546039229.414, -- [4]
+						112740, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [28]
+					{
+						4, -- [1]
+						272146, -- [2]
+						26, -- [3]
+						1546039229.414, -- [4]
+						112740, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [29]
+					{
+						4, -- [1]
+						272146, -- [2]
+						27, -- [3]
+						1546039229.455, -- [4]
+						112740, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [30]
+					{
+						4, -- [1]
+						272146, -- [2]
+						28, -- [3]
+						1546039229.455, -- [4]
+						112740, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [31]
+					{
+						4, -- [1]
+						274693, -- [2]
+						1, -- [3]
+						1546039229.455, -- [4]
+						112740, -- [5]
+						"N'raqi Destroyer", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [32]
+					{
+						true, -- [1]
+						273282, -- [2]
+						88220, -- [3]
+						1546039229.455, -- [4]
+						6462, -- [5]
+						"N'raqi Destroyer", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						18058, -- [10]
+					}, -- [33]
+					{
+						3, -- [1]
+						33891, -- [2]
+						1, -- [3]
+						1546039184.382, -- [4]
+						0, -- [5]
+						"Zilzag", -- [6]
+					}, -- [34]
+				},
+			}, -- [6]
+			{
+				["maxhealth"] = 125600,
+				["timeofdeath"] = 273.442999999999,
+				["name"] = "Rukard-Azralon",
+				["time"] = 1546039229.61,
+				["class"] = "DRUID",
+				["timestring"] = "4m 33s",
+				["events"] = {
+					{
+						2, -- [1]
+						61999, -- [2]
+						1, -- [3]
+						1546039234.086, -- [4]
+						0, -- [5]
+						"Yaxx-Thrall", -- [6]
+					}, -- [1]
+					{
+						true, -- [1]
+						276863, -- [2]
+						22485, -- [3]
+						1546039224.323, -- [4]
+						164511, -- [5]
+						"[*] Crashing Oblivion", -- [6]
+						14296, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [2]
+					{
+						true, -- [1]
+						276894, -- [2]
+						48566, -- [3]
+						1546039224.799, -- [4]
+						115945, -- [5]
+						"N'raqi Destroyer", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [3]
+					{
+						false, -- [1]
+						145109, -- [2]
+						7797, -- [3]
+						1546039225.016, -- [4]
+						123742, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [4]
+					{
+						false, -- [1]
+						157982, -- [2]
+						1189, -- [3]
+						1546039225.903, -- [4]
+						124931, -- [5]
+						"Zilzag", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [5]
+					{
+						false, -- [1]
+						274436, -- [2]
+						288, -- [3]
+						1546039226.209, -- [4]
+						125219, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [6]
+					{
+						false, -- [1]
+						774, -- [2]
+						2342, -- [3]
+						1546039226.209, -- [4]
+						127561, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [7]
+					{
+						false, -- [1]
+						157982, -- [2]
+						582, -- [3]
+						1546039227.886, -- [4]
+						128143, -- [5]
+						"Zilzag", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [8]
+					{
+						false, -- [1]
+						145109, -- [2]
+						7797, -- [3]
+						1546039229.017, -- [4]
+						135940, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [9]
+					{
+						false, -- [1]
+						157982, -- [2]
+						350, -- [3]
+						1546039229.092, -- [4]
+						136290, -- [5]
+						"Zilzag", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [10]
+					{
+						4, -- [1]
+						272146, -- [2]
+						1, -- [3]
+						1546039229.455, -- [4]
+						136290, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [11]
+					{
+						4, -- [1]
+						272146, -- [2]
+						2, -- [3]
+						1546039229.455, -- [4]
+						136290, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [12]
+					{
+						4, -- [1]
+						272146, -- [2]
+						3, -- [3]
+						1546039229.455, -- [4]
+						136290, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [13]
+					{
+						4, -- [1]
+						272146, -- [2]
+						4, -- [3]
+						1546039229.455, -- [4]
+						136290, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [14]
+					{
+						4, -- [1]
+						272146, -- [2]
+						5, -- [3]
+						1546039229.455, -- [4]
+						136290, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [15]
+					{
+						4, -- [1]
+						272146, -- [2]
+						6, -- [3]
+						1546039229.455, -- [4]
+						136290, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [16]
+					{
+						4, -- [1]
+						272146, -- [2]
+						7, -- [3]
+						1546039229.455, -- [4]
+						136290, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [17]
+					{
+						4, -- [1]
+						272146, -- [2]
+						8, -- [3]
+						1546039229.455, -- [4]
+						136290, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [18]
+					{
+						4, -- [1]
+						272146, -- [2]
+						9, -- [3]
+						1546039229.455, -- [4]
+						136290, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [19]
+					{
+						4, -- [1]
+						272146, -- [2]
+						10, -- [3]
+						1546039229.455, -- [4]
+						136290, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [20]
+					{
+						4, -- [1]
+						272146, -- [2]
+						11, -- [3]
+						1546039229.455, -- [4]
+						136290, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [21]
+					{
+						4, -- [1]
+						272146, -- [2]
+						12, -- [3]
+						1546039229.455, -- [4]
+						136290, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [22]
+					{
+						4, -- [1]
+						272146, -- [2]
+						13, -- [3]
+						1546039229.455, -- [4]
+						136290, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [23]
+					{
+						4, -- [1]
+						272146, -- [2]
+						14, -- [3]
+						1546039229.455, -- [4]
+						136290, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [24]
+					{
+						4, -- [1]
+						272146, -- [2]
+						15, -- [3]
+						1546039229.455, -- [4]
+						136290, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [25]
+					{
+						4, -- [1]
+						272146, -- [2]
+						16, -- [3]
+						1546039229.455, -- [4]
+						136290, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [26]
+					{
+						4, -- [1]
+						272146, -- [2]
+						17, -- [3]
+						1546039229.455, -- [4]
+						136290, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [27]
+					{
+						4, -- [1]
+						272146, -- [2]
+						18, -- [3]
+						1546039229.455, -- [4]
+						136290, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [28]
+					{
+						4, -- [1]
+						272146, -- [2]
+						19, -- [3]
+						1546039229.455, -- [4]
+						136290, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [29]
+					{
+						4, -- [1]
+						272146, -- [2]
+						20, -- [3]
+						1546039229.455, -- [4]
+						136290, -- [5]
+						"[*] Annihilation", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [30]
+					{
+						4, -- [1]
+						274693, -- [2]
+						1, -- [3]
+						1546039229.455, -- [4]
+						136290, -- [5]
+						"N'raqi Destroyer", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [31]
+					{
+						true, -- [1]
+						273282, -- [2]
+						101182, -- [3]
+						1546039229.455, -- [4]
+						35108, -- [5]
+						"N'raqi Destroyer", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [32]
+					{
+						true, -- [1]
+						1, -- [2]
+						7848, -- [3]
+						1546039229.581, -- [4]
+						7848, -- [5]
+						"N'raqi Destroyer", -- [6]
+						nil, -- [7]
+						1, -- [8]
+						false, -- [9]
+						35336, -- [10]
+					}, -- [33]
+					{
+						3, -- [1]
+						22812, -- [2]
+						1, -- [3]
+						1546039166.554, -- [4]
+						0, -- [5]
+						"Rukard-Azralon", -- [6]
+					}, -- [34]
+				},
+			}, -- [7]
+			{
+				["maxhealth"] = 153076,
+				["timeofdeath"] = 277.236999999999,
+				["name"] = "Monkcane",
+				["time"] = 1546039233.404,
+				["class"] = "MONK",
+				["timestring"] = "4m 37s",
+				["events"] = {
+					{
+						false, -- [1]
+						48438, -- [2]
+						2555, -- [3]
+						1546039228.912, -- [4]
+						97880, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [1]
+					{
+						false, -- [1]
+						269279, -- [2]
+						1316, -- [3]
+						1546039228.929, -- [4]
+						97880, -- [5]
+						"Monkcane", -- [6]
+						true, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [2]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1316, -- [3]
+						1546039228.929, -- [4]
+						97880, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [3]
+					{
+						false, -- [1]
+						774, -- [2]
+						2675, -- [3]
+						1546039229.047, -- [4]
+						100555, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [4]
+					{
+						false, -- [1]
+						157982, -- [2]
+						352, -- [3]
+						1546039229.092, -- [4]
+						100907, -- [5]
+						"Zilzag", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [5]
+					{
+						false, -- [1]
+						143924, -- [2]
+						34, -- [3]
+						1546039229.186, -- [4]
+						100941, -- [5]
+						"Monkcane", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [6]
+					{
+						false, -- [1]
+						48438, -- [2]
+						2172, -- [3]
+						1546039229.806, -- [4]
+						103113, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [7]
+					{
+						false, -- [1]
+						269279, -- [2]
+						1315, -- [3]
+						1546039229.929, -- [4]
+						103113, -- [5]
+						"Monkcane", -- [6]
+						true, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [8]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1315, -- [3]
+						1546039229.929, -- [4]
+						103113, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [9]
+					{
+						false, -- [1]
+						269279, -- [2]
+						23382, -- [3]
+						1546039230.135, -- [4]
+						103113, -- [5]
+						"Monkcane", -- [6]
+						true, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [10]
+					{
+						true, -- [1]
+						276863, -- [2]
+						23382, -- [3]
+						1546039230.135, -- [4]
+						103113, -- [5]
+						"[*] Crashing Oblivion", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [11]
+					{
+						4, -- [1]
+						274019, -- [2]
+						1, -- [3]
+						1546039230.403, -- [4]
+						103113, -- [5]
+						"Vision of Madness", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [12]
+					{
+						false, -- [1]
+						143924, -- [2]
+						13, -- [3]
+						1546039230.403, -- [4]
+						103126, -- [5]
+						"Monkcane", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [13]
+					{
+						false, -- [1]
+						48438, -- [2]
+						2022, -- [3]
+						1546039230.706, -- [4]
+						105148, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [14]
+					{
+						4, -- [1]
+						274019, -- [2]
+						1, -- [3]
+						1546039230.798, -- [4]
+						105148, -- [5]
+						"Vision of Madness", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [15]
+					{
+						false, -- [1]
+						269279, -- [2]
+						1315, -- [3]
+						1546039230.934, -- [4]
+						105148, -- [5]
+						"Monkcane", -- [6]
+						true, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [16]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1315, -- [3]
+						1546039230.934, -- [4]
+						105148, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [17]
+					{
+						false, -- [1]
+						269279, -- [2]
+						9323, -- [3]
+						1546039231.397, -- [4]
+						105148, -- [5]
+						"Monkcane", -- [6]
+						true, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [18]
+					{
+						true, -- [1]
+						274019, -- [2]
+						9323, -- [3]
+						1546039231.397, -- [4]
+						105148, -- [5]
+						"Vision of Madness <[*] Visions of Madness>", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [19]
+					{
+						false, -- [1]
+						143924, -- [2]
+						184, -- [3]
+						1546039231.611, -- [4]
+						105332, -- [5]
+						"Monkcane", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [20]
+					{
+						false, -- [1]
+						48438, -- [2]
+						1873, -- [3]
+						1546039231.611, -- [4]
+						107205, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [21]
+					{
+						false, -- [1]
+						774, -- [2]
+						2432, -- [3]
+						1546039231.751, -- [4]
+						109637, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [22]
+					{
+						false, -- [1]
+						269279, -- [2]
+						3565, -- [3]
+						1546039231.822, -- [4]
+						109637, -- [5]
+						"Monkcane", -- [6]
+						true, -- [7]
+						0, -- [8]
+						true, -- [9]
+						-1, -- [10]
+					}, -- [23]
+					{
+						true, -- [1]
+						274019, -- [2]
+						9323, -- [3]
+						1546039231.822, -- [4]
+						103879, -- [5]
+						"Vision of Madness <[*] Visions of Madness>", -- [6]
+						3565, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [24]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1315, -- [3]
+						1546039231.933, -- [4]
+						102564, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [25]
+					{
+						false, -- [1]
+						48438, -- [2]
+						1366, -- [3]
+						1546039232.306, -- [4]
+						103930, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [26]
+					{
+						true, -- [1]
+						274019, -- [2]
+						9323, -- [3]
+						1546039232.402, -- [4]
+						94607, -- [5]
+						"Vision of Madness <[*] Visions of Madness>", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [27]
+					{
+						true, -- [1]
+						276894, -- [2]
+						50502, -- [3]
+						1546039232.813, -- [4]
+						44105, -- [5]
+						"N'raqi Destroyer", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [28]
+					{
+						true, -- [1]
+						274019, -- [2]
+						9323, -- [3]
+						1546039232.813, -- [4]
+						34782, -- [5]
+						"Vision of Madness <[*] Visions of Madness>", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [29]
+					{
+						false, -- [1]
+						143924, -- [2]
+						188, -- [3]
+						1546039232.83, -- [4]
+						34970, -- [5]
+						"Monkcane", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [30]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1316, -- [3]
+						1546039232.921, -- [4]
+						33654, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [31]
+					{
+						true, -- [1]
+						276894, -- [2]
+						33654, -- [3]
+						1546039233.404, -- [4]
+						1, -- [5]
+						"N'raqi Destroyer", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						16849, -- [10]
+					}, -- [32]
+					{
+						3, -- [1]
+						122783, -- [2]
+						1, -- [3]
+						1546039182.101, -- [4]
+						0, -- [5]
+						"Monkcane", -- [6]
+					}, -- [33]
+				},
+			}, -- [8]
+			{
+				["maxhealth"] = 157878,
+				["timeofdeath"] = 277.344999999999,
+				["name"] = "Killjo-Zul'jin",
+				["time"] = 1546039233.512,
+				["class"] = "PALADIN",
+				["timestring"] = "4m 37s",
+				["events"] = {
+					{
+						true, -- [1]
+						278150, -- [2]
+						1329, -- [3]
+						1546039223.183, -- [4]
+						97943, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [1]
+					{
+						false, -- [1]
+						203538, -- [2]
+						1329, -- [3]
+						1546039224.18, -- [4]
+						100638, -- [5]
+						"Killjo-Zul'jin", -- [6]
+						true, -- [7]
+						0, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [2]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1329, -- [3]
+						1546039224.18, -- [4]
+						100638, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [3]
+					{
+						false, -- [1]
+						203538, -- [2]
+						4779, -- [3]
+						1546039224.323, -- [4]
+						100638, -- [5]
+						"Killjo-Zul'jin", -- [6]
+						true, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [4]
+					{
+						true, -- [1]
+						276863, -- [2]
+						23631, -- [3]
+						1546039224.323, -- [4]
+						81786, -- [5]
+						"[*] Crashing Oblivion", -- [6]
+						4779, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [5]
+					{
+						false, -- [1]
+						52042, -- [2]
+						4932, -- [3]
+						1546039225.016, -- [4]
+						86718, -- [5]
+						"Healing Stream Totem <Peäches-Trollbane>", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [6]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1329, -- [3]
+						1546039225.185, -- [4]
+						85389, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [7]
+					{
+						false, -- [1]
+						157982, -- [2]
+						583, -- [3]
+						1546039225.885, -- [4]
+						85972, -- [5]
+						"Zilzag", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [8]
+					{
+						false, -- [1]
+						77472, -- [2]
+						23607, -- [3]
+						1546039226.112, -- [4]
+						109579, -- [5]
+						"Peäches-Trollbane", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [9]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1329, -- [3]
+						1546039226.183, -- [4]
+						108250, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [10]
+					{
+						true, -- [1]
+						276894, -- [2]
+						51041, -- [3]
+						1546039226.781, -- [4]
+						57209, -- [5]
+						"N'raqi Destroyer", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [11]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1330, -- [3]
+						1546039227.177, -- [4]
+						55879, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [12]
+					{
+						false, -- [1]
+						52042, -- [2]
+						4973, -- [3]
+						1546039227.587, -- [4]
+						60852, -- [5]
+						"Healing Stream Totem <Skoody-Magtheridon>", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [13]
+					{
+						false, -- [1]
+						157982, -- [2]
+						583, -- [3]
+						1546039227.886, -- [4]
+						61435, -- [5]
+						"Zilzag", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [14]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1329, -- [3]
+						1546039228.177, -- [4]
+						60106, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [15]
+					{
+						false, -- [1]
+						270117, -- [2]
+						4388, -- [3]
+						1546039228.191, -- [4]
+						64494, -- [5]
+						"Killjo-Zul'jin", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [16]
+					{
+						false, -- [1]
+						280707, -- [2]
+						2332, -- [3]
+						1546039228.252, -- [4]
+						66826, -- [5]
+						"Skoody-Magtheridon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [17]
+					{
+						false, -- [1]
+						157982, -- [2]
+						352, -- [3]
+						1546039229.092, -- [4]
+						67178, -- [5]
+						"Zilzag", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [18]
+					{
+						false, -- [1]
+						274395, -- [2]
+						1329, -- [3]
+						1546039229.186, -- [4]
+						67178, -- [5]
+						"Aipetikos-Bonechewer", -- [6]
+						true, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [19]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1329, -- [3]
+						1546039229.186, -- [4]
+						67178, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [20]
+					{
+						false, -- [1]
+						143924, -- [2]
+						7, -- [3]
+						1546039229.186, -- [4]
+						67185, -- [5]
+						"Killjo-Zul'jin", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [21]
+					{
+						false, -- [1]
+						274395, -- [2]
+						5695, -- [3]
+						1546039230.135, -- [4]
+						67185, -- [5]
+						"Aipetikos-Bonechewer", -- [6]
+						true, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [22]
+					{
+						false, -- [1]
+						203538, -- [2]
+						6108, -- [3]
+						1546039230.135, -- [4]
+						67185, -- [5]
+						"Killjo-Zul'jin", -- [6]
+						true, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [23]
+					{
+						true, -- [1]
+						278150, -- [2]
+						930, -- [3]
+						1546039230.188, -- [4]
+						61517, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [24]
+					{
+						false, -- [1]
+						143924, -- [2]
+						70, -- [3]
+						1546039230.403, -- [4]
+						61587, -- [5]
+						"Killjo-Zul'jin", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [25]
+					{
+						true, -- [1]
+						278150, -- [2]
+						931, -- [3]
+						1546039231.167, -- [4]
+						60656, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [26]
+					{
+						false, -- [1]
+						143924, -- [2]
+						233, -- [3]
+						1546039231.611, -- [4]
+						60889, -- [5]
+						"Killjo-Zul'jin", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [27]
+					{
+						true, -- [1]
+						278150, -- [2]
+						930, -- [3]
+						1546039232.168, -- [4]
+						59959, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [28]
+					{
+						false, -- [1]
+						143924, -- [2]
+						22, -- [3]
+						1546039232.83, -- [4]
+						59981, -- [5]
+						"Killjo-Zul'jin", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [29]
+					{
+						true, -- [1]
+						276894, -- [2]
+						35729, -- [3]
+						1546039232.982, -- [4]
+						24252, -- [5]
+						"N'raqi Destroyer", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [30]
+					{
+						true, -- [1]
+						278150, -- [2]
+						931, -- [3]
+						1546039233.175, -- [4]
+						23321, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [31]
+					{
+						true, -- [1]
+						276894, -- [2]
+						23321, -- [3]
+						1546039233.512, -- [4]
+						1, -- [5]
+						"N'raqi Destroyer", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						12407, -- [10]
+					}, -- [32]
+					{
+						3, -- [1]
+						642, -- [2]
+						1, -- [3]
+						1546039198.539, -- [4]
+						0, -- [5]
+						"Killjo-Zul'jin", -- [6]
+					}, -- [33]
+				},
+			}, -- [9]
+			{
+				["maxhealth"] = 142335,
+				["timeofdeath"] = 277.418,
+				["name"] = "Manacookies-Area52",
+				["time"] = 1546039233.585,
+				["class"] = "MAGE",
+				["timestring"] = "4m 37s",
+				["events"] = {
+					{
+						true, -- [1]
+						278150, -- [2]
+						1355, -- [3]
+						1546039225.185, -- [4]
+						53967, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [1]
+					{
+						false, -- [1]
+						288126, -- [2]
+						1432, -- [3]
+						1546039225.554, -- [4]
+						55399, -- [5]
+						"Manacookies-Area52", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [2]
+					{
+						false, -- [1]
+						774, -- [2]
+						2444, -- [3]
+						1546039225.645, -- [4]
+						57843, -- [5]
+						"Zilzag", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [3]
+					{
+						false, -- [1]
+						157982, -- [2]
+						652, -- [3]
+						1546039225.903, -- [4]
+						58495, -- [5]
+						"Zilzag", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [4]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1355, -- [3]
+						1546039226.195, -- [4]
+						57140, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [5]
+					{
+						false, -- [1]
+						48438, -- [2]
+						2702, -- [3]
+						1546039226.209, -- [4]
+						59842, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [6]
+					{
+						false, -- [1]
+						774, -- [2]
+						631, -- [3]
+						1546039226.313, -- [4]
+						60473, -- [5]
+						"Zilzag", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [7]
+					{
+						false, -- [1]
+						288126, -- [2]
+						1432, -- [3]
+						1546039226.888, -- [4]
+						61905, -- [5]
+						"Manacookies-Area52", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [8]
+					{
+						false, -- [1]
+						48438, -- [2]
+						2556, -- [3]
+						1546039227.102, -- [4]
+						64461, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [9]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1356, -- [3]
+						1546039227.189, -- [4]
+						63105, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [10]
+					{
+						false, -- [1]
+						157982, -- [2]
+						583, -- [3]
+						1546039227.9, -- [4]
+						63688, -- [5]
+						"Zilzag", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [11]
+					{
+						false, -- [1]
+						48438, -- [2]
+						2410, -- [3]
+						1546039227.999, -- [4]
+						66098, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [12]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1356, -- [3]
+						1546039228.191, -- [4]
+						64742, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [13]
+					{
+						false, -- [1]
+						280707, -- [2]
+						1165, -- [3]
+						1546039228.844, -- [4]
+						65907, -- [5]
+						"Skoody-Magtheridon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [14]
+					{
+						false, -- [1]
+						48438, -- [2]
+						2263, -- [3]
+						1546039228.912, -- [4]
+						68170, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [15]
+					{
+						false, -- [1]
+						157982, -- [2]
+						351, -- [3]
+						1546039229.092, -- [4]
+						68521, -- [5]
+						"Zilzag", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [16]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1356, -- [3]
+						1546039229.206, -- [4]
+						67165, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [17]
+					{
+						false, -- [1]
+						48438, -- [2]
+						1924, -- [3]
+						1546039229.806, -- [4]
+						69089, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [18]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1356, -- [3]
+						1546039230.188, -- [4]
+						43634, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [19]
+					{
+						false, -- [1]
+						48438, -- [2]
+						3653, -- [3]
+						1546039230.706, -- [4]
+						48195, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [20]
+					{
+						false, -- [1]
+						11426, -- [2]
+						1355, -- [3]
+						1546039231.196, -- [4]
+						48195, -- [5]
+						"Manacookies-Area52", -- [6]
+						true, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [21]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1355, -- [3]
+						1546039231.196, -- [4]
+						48195, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [22]
+					{
+						false, -- [1]
+						48438, -- [2]
+						3382, -- [3]
+						1546039231.611, -- [4]
+						51577, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [23]
+					{
+						false, -- [1]
+						11426, -- [2]
+						1355, -- [3]
+						1546039232.196, -- [4]
+						51577, -- [5]
+						"Manacookies-Area52", -- [6]
+						true, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [24]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1355, -- [3]
+						1546039232.196, -- [4]
+						51577, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [25]
+					{
+						false, -- [1]
+						48438, -- [2]
+						1209, -- [3]
+						1546039232.306, -- [4]
+						52786, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [26]
+					{
+						false, -- [1]
+						11426, -- [2]
+						1355, -- [3]
+						1546039233.194, -- [4]
+						52786, -- [5]
+						"Manacookies-Area52", -- [6]
+						true, -- [7]
+						0, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [27]
+					{
+						true, -- [1]
+						278150, -- [2]
+						1355, -- [3]
+						1546039233.194, -- [4]
+						52786, -- [5]
+						"[*] Annihilation", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [28]
+					{
+						false, -- [1]
+						11426, -- [2]
+						31501, -- [3]
+						1546039233.425, -- [4]
+						52786, -- [5]
+						"Manacookies-Area52", -- [6]
+						true, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [29]
+					{
+						true, -- [1]
+						276894, -- [2]
+						52052, -- [3]
+						1546039233.425, -- [4]
+						32235, -- [5]
+						"N'raqi Destroyer", -- [6]
+						31501, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [30]
+					{
+						false, -- [1]
+						11426, -- [2]
+						0, -- [3]
+						1546039233.425, -- [4]
+						32235, -- [5]
+						"Manacookies-Area52", -- [6]
+						true, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [31]
+					{
+						true, -- [1]
+						276894, -- [2]
+						32235, -- [3]
+						1546039233.574, -- [4]
+						1, -- [5]
+						"N'raqi Destroyer", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						19817, -- [10]
+					}, -- [32]
+					{
+						3, -- [1]
+						45438, -- [2]
+						1, -- [3]
+						1546039063.885, -- [4]
+						0, -- [5]
+						"Manacookies-Area52", -- [6]
+					}, -- [33]
+				},
 			}, -- [10]
 		},
 		["bossname"] = "Mythrax",
@@ -20556,520 +21273,438 @@ DeathGraphsDBCurrent = {
 			0.5, -- [4]
 			"Interface\\AddOns\\Details\\images\\raid\\UldirRaid_BossFaces", -- [5]
 		},
-		["date"] = 432798.166,
-		["timeelapsed"] = 512.608999999997,
+		["date"] = 14638.231,
+		["timeelapsed"] = 292.003999999999,
 	}, -- [1]
 	{
 		["deaths"] = {
 			{
-				["maxhealth"] = 166140,
-				["timeofdeath"] = 289.161999999998,
-				["name"] = "Shenanìgans",
-				["time"] = 1545368280.61,
-				["class"] = "DEMONHUNTER",
-				["timestring"] = "4m 49s",
+				["maxhealth"] = 165880,
+				["timeofdeath"] = 100.26,
+				["name"] = "Arodaxic",
+				["time"] = 1546038699.818,
+				["class"] = "SHAMAN",
+				["timestring"] = "1m 40s",
 				["events"] = {
 					{
-						2, -- [1]
-						95750, -- [2]
-						1, -- [3]
-						1545368288.285, -- [4]
-						0, -- [5]
-						"Gateboi", -- [6]
+						false, -- [1]
+						157982, -- [2]
+						5500, -- [3]
+						1546038668.146, -- [4]
+						170709, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						false, -- [9]
+						-1, -- [10]
 					}, -- [1]
 					{
-						true, -- [1]
-						263334, -- [2]
-						6127, -- [3]
-						1545368261.825, -- [4]
-						176584, -- [5]
-						"G'huun", -- [6]
+						false, -- [1]
+						157982, -- [2]
+						535, -- [3]
+						1546038668.521, -- [4]
+						171448, -- [5]
+						"Rukard-Azralon", -- [6]
 						nil, -- [7]
-						40, -- [8]
+						0, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [2]
 					{
 						false, -- [1]
-						77489, -- [2]
-						625, -- [3]
-						1545368262.47, -- [4]
-						177209, -- [5]
-						"Initiate", -- [6]
+						774, -- [2]
+						2472, -- [3]
+						1546038668.592, -- [4]
+						173920, -- [5]
+						"Rukard-Azralon", -- [6]
 						nil, -- [7]
 						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
 					}, -- [3]
 					{
 						false, -- [1]
-						191840, -- [2]
-						5052, -- [3]
-						1545368262.754, -- [4]
-						182261, -- [5]
-						"Dgen", -- [6]
+						157982, -- [2]
+						4869, -- [3]
+						1546038669.928, -- [4]
+						178789, -- [5]
+						"Rukard-Azralon", -- [6]
 						nil, -- [7]
 						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
 					}, -- [4]
 					{
 						false, -- [1]
-						269279, -- [2]
-						6070, -- [3]
-						1545368263.33, -- [4]
-						182261, -- [5]
-						"Shenanìgans", -- [6]
-						true, -- [7]
+						157982, -- [2]
+						632, -- [3]
+						1546038670.531, -- [4]
+						179622, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
 						0, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [5]
 					{
-						true, -- [1]
-						263334, -- [2]
-						6070, -- [3]
-						1545368263.33, -- [4]
-						182261, -- [5]
-						"G'huun", -- [6]
+						false, -- [1]
+						157982, -- [2]
+						632, -- [3]
+						1546038672.534, -- [4]
+						180458, -- [5]
+						"Rukard-Azralon", -- [6]
 						nil, -- [7]
-						40, -- [8]
+						0, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [6]
 					{
 						false, -- [1]
-						191840, -- [2]
-						799, -- [3]
-						1545368264.53, -- [4]
-						182740, -- [5]
-						"Dgen", -- [6]
+						145110, -- [2]
+						7143, -- [3]
+						1546038673.026, -- [4]
+						182460, -- [5]
+						"Rukard-Azralon", -- [6]
 						nil, -- [7]
 						0, -- [8]
 						false, -- [9]
-						false, -- [10]
+						-1, -- [10]
 					}, -- [7]
 					{
 						false, -- [1]
-						269279, -- [2]
-						6096, -- [3]
-						1545368264.827, -- [4]
-						182740, -- [5]
-						"Shenanìgans", -- [6]
-						true, -- [7]
+						157982, -- [2]
+						632, -- [3]
+						1546038674.522, -- [4]
+						182460, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
 						0, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [8]
 					{
-						true, -- [1]
-						263334, -- [2]
-						6096, -- [3]
-						1545368264.849, -- [4]
-						182740, -- [5]
-						"G'huun", -- [6]
+						false, -- [1]
+						157982, -- [2]
+						631, -- [3]
+						1546038676.523, -- [4]
+						182460, -- [5]
+						"Rukard-Azralon", -- [6]
 						nil, -- [7]
-						40, -- [8]
+						0, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [9]
 					{
 						false, -- [1]
-						77489, -- [2]
-						625, -- [3]
-						1545368265.463, -- [4]
-						182740, -- [5]
-						"Initiate", -- [6]
+						157982, -- [2]
+						446, -- [3]
+						1546038677.97, -- [4]
+						182460, -- [5]
+						"Rukard-Azralon", -- [6]
 						nil, -- [7]
 						0, -- [8]
 						false, -- [9]
-						false, -- [10]
+						-1, -- [10]
 					}, -- [10]
 					{
 						false, -- [1]
 						269279, -- [2]
-						6052, -- [3]
-						1545368266.349, -- [4]
-						182740, -- [5]
-						"Shenanìgans", -- [6]
+						14603, -- [3]
+						1546038689.696, -- [4]
+						182460, -- [5]
+						"Arodaxic", -- [6]
 						true, -- [7]
 						0, -- [8]
 						false, -- [9]
-						-1, -- [10]
+						false, -- [10]
 					}, -- [11]
 					{
 						true, -- [1]
-						263334, -- [2]
-						6052, -- [3]
-						1545368266.349, -- [4]
-						182740, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
+						273359, -- [2]
+						35742, -- [3]
+						1546038689.696, -- [4]
+						161321, -- [5]
+						"Zul", -- [6]
+						14603, -- [7]
+						32, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [12]
 					{
-						false, -- [1]
-						191840, -- [2]
-						399, -- [3]
-						1545368266.349, -- [4]
-						182740, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [13]
-					{
-						false, -- [1]
-						269279, -- [2]
-						6164, -- [3]
-						1545368267.827, -- [4]
-						182740, -- [5]
-						"Shenanìgans", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [14]
-					{
-						true, -- [1]
-						263334, -- [2]
-						6164, -- [3]
-						1545368267.827, -- [4]
-						182740, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [15]
-					{
-						false, -- [1]
-						191840, -- [2]
-						400, -- [3]
-						1545368268.199, -- [4]
-						182740, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [16]
-					{
 						4, -- [1]
-						277007, -- [2]
+						273359, -- [2]
 						1, -- [3]
-						1545368268.388, -- [4]
-						182740, -- [5]
-						"Bursting Boil", -- [6]
+						1546038689.696, -- [4]
+						161321, -- [5]
+						"Zul", -- [6]
 						false, -- [7]
 						false, -- [8]
 						false, -- [9]
 						false, -- [10]
+					}, -- [13]
+					{
+						false, -- [1]
+						270117, -- [2]
+						5112, -- [3]
+						1546038689.708, -- [4]
+						166433, -- [5]
+						"Arodaxic", -- [6]
+						nil, -- [7]
+						0, -- [8]
+					}, -- [14]
+					{
+						4, -- [1]
+						273365, -- [2]
+						1, -- [3]
+						1546038689.729, -- [4]
+						166433, -- [5]
+						"Zul", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [15]
+					{
+						true, -- [1]
+						273359, -- [2]
+						17578, -- [3]
+						1546038691.689, -- [4]
+						149057, -- [5]
+						"Zul", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
+						-1, -- [10]
+					}, -- [16]
+					{
+						false, -- [1]
+						52042, -- [2]
+						7449, -- [3]
+						1546038691.962, -- [4]
+						156506, -- [5]
+						"Healing Stream Totem <Peäches-Trollbane>", -- [6]
+						nil, -- [7]
+						0, -- [8]
 					}, -- [17]
 					{
 						false, -- [1]
-						269279, -- [2]
-						11879, -- [3]
-						1545368268.388, -- [4]
-						182740, -- [5]
-						"Shenanìgans", -- [6]
-						true, -- [7]
+						145110, -- [2]
+						6489, -- [3]
+						1546038693.026, -- [4]
+						163198, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
 						0, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [18]
 					{
 						true, -- [1]
-						277094, -- [2]
-						11879, -- [3]
-						1545368268.388, -- [4]
-						182740, -- [5]
-						"[*] Bursting Boil", -- [6]
+						273359, -- [2]
+						17578, -- [3]
+						1546038693.707, -- [4]
+						145620, -- [5]
+						"Zul", -- [6]
 						nil, -- [7]
 						32, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [19]
 					{
-						false, -- [1]
-						269279, -- [2]
-						6731, -- [3]
-						1545368268.388, -- [4]
-						182740, -- [5]
-						"Shenanìgans", -- [6]
-						true, -- [7]
-						0, -- [8]
+						true, -- [1]
+						273359, -- [2]
+						17578, -- [3]
+						1546038695.716, -- [4]
+						128246, -- [5]
+						"Zul", -- [6]
+						nil, -- [7]
+						32, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [20]
 					{
-						true, -- [1]
-						277094, -- [2]
-						11879, -- [3]
-						1545368268.388, -- [4]
-						177592, -- [5]
-						"[*] Bursting Boil", -- [6]
-						6731, -- [7]
-						32, -- [8]
+						false, -- [1]
+						270117, -- [2]
+						5112, -- [3]
+						1546038695.716, -- [4]
+						133358, -- [5]
+						"Arodaxic", -- [6]
+						nil, -- [7]
+						0, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [21]
 					{
 						4, -- [1]
-						277007, -- [2]
-						2, -- [3]
-						1545368268.767, -- [4]
-						177592, -- [5]
-						"Bursting Boil", -- [6]
+						274195, -- [2]
+						1, -- [3]
+						1546038697.588, -- [4]
+						133562, -- [5]
+						"[*] Corrupted Blood", -- [6]
 						false, -- [7]
 						false, -- [8]
 						false, -- [9]
 						false, -- [10]
 					}, -- [22]
 					{
-						4, -- [1]
-						269691, -- [2]
-						1, -- [3]
-						1545368268.894, -- [4]
-						177592, -- [5]
-						"G'huun", -- [6]
-						false, -- [7]
-						false, -- [8]
+						true, -- [1]
+						273359, -- [2]
+						17577, -- [3]
+						1546038697.693, -- [4]
+						115985, -- [5]
+						"Zul", -- [6]
+						nil, -- [7]
+						32, -- [8]
 						false, -- [9]
-						false, -- [10]
+						-1, -- [10]
 					}, -- [23]
 					{
-						false, -- [1]
-						269691, -- [2]
-						182740, -- [3]
-						1545368268.894, -- [4]
-						182740, -- [5]
-						"G'huun", -- [6]
+						true, -- [1]
+						274195, -- [2]
+						3094, -- [3]
+						1546038699.595, -- [4]
+						113094, -- [5]
+						"[*] Corrupted Blood", -- [6]
 						nil, -- [7]
-						0, -- [8]
+						32, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [24]
 					{
 						true, -- [1]
-						263334, -- [2]
-						6318, -- [3]
-						1545368269.314, -- [4]
-						176422, -- [5]
-						"G'huun", -- [6]
+						273359, -- [2]
+						17577, -- [3]
+						1546038699.703, -- [4]
+						95517, -- [5]
+						"Zul", -- [6]
 						nil, -- [7]
-						40, -- [8]
+						32, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [25]
 					{
 						true, -- [1]
-						263334, -- [2]
-						6155, -- [3]
-						1545368270.828, -- [4]
-						156134, -- [5]
-						"G'huun", -- [6]
+						273438, -- [2]
+						70313, -- [3]
+						1546038699.773, -- [4]
+						25204, -- [5]
+						"[*] Dark Revelation", -- [6]
 						nil, -- [7]
-						40, -- [8]
+						32, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [26]
 					{
 						true, -- [1]
-						263334, -- [2]
-						6731, -- [3]
-						1545368272.341, -- [4]
-						146619, -- [5]
-						"G'huun", -- [6]
+						273438, -- [2]
+						25204, -- [3]
+						1546038699.818, -- [4]
+						1, -- [5]
+						"[*] Dark Revelation", -- [6]
 						nil, -- [7]
-						40, -- [8]
+						32, -- [8]
 						false, -- [9]
-						-1, -- [10]
+						16502, -- [10]
 					}, -- [27]
 					{
-						true, -- [1]
-						263334, -- [2]
-						6509, -- [3]
-						1545368273.811, -- [4]
-						134747, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [28]
-					{
-						true, -- [1]
-						263334, -- [2]
-						6573, -- [3]
-						1545368275.318, -- [4]
-						117896, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [29]
-					{
-						true, -- [1]
-						263334, -- [2]
-						6644, -- [3]
-						1545368276.836, -- [4]
-						80326, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [30]
-					{
-						true, -- [1]
-						263334, -- [2]
-						6708, -- [3]
-						1545368278.312, -- [4]
-						62523, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [31]
-					{
-						true, -- [1]
-						263334, -- [2]
-						6588, -- [3]
-						1545368279.862, -- [4]
-						19619, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [32]
-					{
-						true, -- [1]
-						199547, -- [2]
-						626, -- [3]
-						1545368280.61, -- [4]
-						1, -- [5]
-						"Raycharlezz", -- [6]
-						nil, -- [7]
-						127, -- [8]
-						true, -- [9]
-						16830, -- [10]
-					}, -- [33]
-					{
 						3, -- [1]
-						196555, -- [2]
-						1, -- [3]
-						1545368126.62, -- [4]
+						0, -- [2]
+						0, -- [3]
+						0, -- [4]
 						0, -- [5]
-						"Shenanìgans", -- [6]
-					}, -- [34]
+						"Arodaxic", -- [6]
+					}, -- [28]
 				},
 			}, -- [1]
 			{
-				["maxhealth"] = 158780,
-				["timeofdeath"] = 353.069,
-				["name"] = "Tentacled",
-				["time"] = 1545368344.517,
-				["class"] = "WARLOCK",
-				["timestring"] = "5m 53s",
+				["maxhealth"] = 167000,
+				["timeofdeath"] = 130.227000000001,
+				["name"] = "Druantis-Stormreaver",
+				["time"] = 1546038729.785,
+				["class"] = "DRUID",
+				["timestring"] = "2m 10s",
 				["events"] = {
 					{
-						true, -- [1]
-						263326, -- [2]
-						3997, -- [3]
-						1545368339.87, -- [4]
-						55585, -- [5]
-						"[*] Undulating Mass", -- [6]
-						580, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
+						false, -- [1]
+						774, -- [2]
+						2675, -- [3]
+						1546038720.593, -- [4]
+						183700, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
 					}, -- [1]
 					{
 						false, -- [1]
-						108366, -- [2]
-						0, -- [3]
-						1545368339.87, -- [4]
-						55585, -- [5]
-						"Tentacled", -- [6]
-						true, -- [7]
+						48438, -- [2]
+						1461, -- [3]
+						1546038720.704, -- [4]
+						183700, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
 						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
 					}, -- [2]
 					{
-						true, -- [1]
-						111400, -- [2]
-						5983, -- [3]
-						1545368339.889, -- [4]
-						49602, -- [5]
-						"Tentacled", -- [6]
-						nil, -- [7]
-						1, -- [8]
-						true, -- [9]
-						-1, -- [10]
+						4, -- [1]
+						274271, -- [2]
+						1, -- [3]
+						1546038720.911, -- [4]
+						183700, -- [5]
+						"Zul", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
 					}, -- [3]
 					{
-						false, -- [1]
-						77220, -- [2]
-						204, -- [3]
-						1545368340.098, -- [4]
-						49602, -- [5]
-						"Tentacled", -- [6]
-						true, -- [7]
-						0, -- [8]
-						true, -- [9]
+						true, -- [1]
+						274195, -- [2]
+						3159, -- [3]
+						1546038721.611, -- [4]
+						180541, -- [5]
+						"[*] Corrupted Blood", -- [6]
+						nil, -- [7]
+						32, -- [8]
+						false, -- [9]
 						-1, -- [10]
 					}, -- [4]
 					{
-						true, -- [1]
-						263334, -- [2]
-						3524, -- [3]
-						1545368340.098, -- [4]
-						46282, -- [5]
-						"G'huun", -- [6]
-						204, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
+						false, -- [1]
+						48438, -- [2]
+						1365, -- [3]
+						1546038721.611, -- [4]
+						181906, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
 					}, -- [5]
 					{
-						1, -- [1]
-						104773, -- [2]
-						1, -- [3]
-						1545368340.792, -- [4]
-						46282, -- [5]
-						"Tentacled", -- [6]
-						true, -- [7]
+						false, -- [1]
+						143924, -- [2]
+						332, -- [3]
+						1546038722.114, -- [4]
+						182238, -- [5]
+						"Druantis-Stormreaver", -- [6]
+						nil, -- [7]
 						0, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [6]
 					{
-						true, -- [1]
-						111400, -- [2]
-						5983, -- [3]
-						1545368340.87, -- [4]
-						40299, -- [5]
-						"Tentacled", -- [6]
+						false, -- [1]
+						48438, -- [2]
+						1271, -- [3]
+						1546038722.499, -- [4]
+						183509, -- [5]
+						"Rukard-Azralon", -- [6]
 						nil, -- [7]
-						1, -- [8]
-						true, -- [9]
+						0, -- [8]
+						false, -- [9]
 						-1, -- [10]
 					}, -- [7]
 					{
 						false, -- [1]
-						127802, -- [2]
-						2096, -- [3]
-						1545368341.218, -- [4]
-						42395, -- [5]
-						"Tentacled", -- [6]
+						145109, -- [2]
+						5511, -- [3]
+						1546038722.73, -- [4]
+						183700, -- [5]
+						"Druantis-Stormreaver", -- [6]
 						nil, -- [7]
 						0, -- [8]
 						false, -- [9]
@@ -21077,377 +21712,365 @@ DeathGraphsDBCurrent = {
 					}, -- [8]
 					{
 						false, -- [1]
-						77220, -- [2]
-						167, -- [3]
-						1545368341.247, -- [4]
-						42395, -- [5]
-						"Tentacled", -- [6]
-						true, -- [7]
+						774, -- [2]
+						2676, -- [3]
+						1546038723.289, -- [4]
+						183700, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
 						0, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [9]
 					{
 						false, -- [1]
-						108366, -- [2]
-						172, -- [3]
-						1545368341.247, -- [4]
-						42395, -- [5]
-						"Tentacled", -- [6]
-						true, -- [7]
+						48438, -- [2]
+						2401, -- [3]
+						1546038723.395, -- [4]
+						183700, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
 						0, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [10]
 					{
-						true, -- [1]
-						267660, -- [2]
-						1664, -- [3]
-						1545368341.247, -- [4]
-						41070, -- [5]
-						"[*] Unclean Contagion", -- [6]
-						339, -- [7]
-						40, -- [8]
+						false, -- [1]
+						269279, -- [2]
+						3159, -- [3]
+						1546038723.587, -- [4]
+						183700, -- [5]
+						"Druantis-Stormreaver", -- [6]
+						true, -- [7]
+						0, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [11]
 					{
-						false, -- [1]
-						108366, -- [2]
-						0, -- [3]
-						1545368341.247, -- [4]
-						41070, -- [5]
-						"Tentacled", -- [6]
-						true, -- [7]
-						0, -- [8]
+						true, -- [1]
+						274195, -- [2]
+						3159, -- [3]
+						1546038723.587, -- [4]
+						183700, -- [5]
+						"[*] Corrupted Blood", -- [6]
+						nil, -- [7]
+						32, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [12]
 					{
 						false, -- [1]
-						77220, -- [2]
-						169, -- [3]
-						1545368341.373, -- [4]
-						41070, -- [5]
-						"Tentacled", -- [6]
-						true, -- [7]
+						48438, -- [2]
+						859, -- [3]
+						1546038724.107, -- [4]
+						183700, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
 						0, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [13]
 					{
 						false, -- [1]
-						108366, -- [2]
-						848, -- [3]
-						1545368341.373, -- [4]
-						41070, -- [5]
-						"Tentacled", -- [6]
+						269279, -- [2]
+						10903, -- [3]
+						1546038724.379, -- [4]
+						183700, -- [5]
+						"Druantis-Stormreaver", -- [6]
 						true, -- [7]
 						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
 					}, -- [14]
 					{
 						true, -- [1]
-						263326, -- [2]
-						2394, -- [3]
-						1545368341.373, -- [4]
-						39693, -- [5]
-						"[*] Undulating Mass", -- [6]
-						1017, -- [7]
-						40, -- [8]
+						275991, -- [2]
+						12374, -- [3]
+						1546038724.379, -- [4]
+						182229, -- [5]
+						"[*] Deathwish", -- [6]
+						10903, -- [7]
+						32, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [15]
 					{
 						false, -- [1]
-						77220, -- [2]
-						186, -- [3]
-						1545368341.576, -- [4]
-						39693, -- [5]
-						"Tentacled", -- [6]
-						true, -- [7]
+						143924, -- [2]
+						166, -- [3]
+						1546038724.572, -- [4]
+						182395, -- [5]
+						"Druantis-Stormreaver", -- [6]
+						nil, -- [7]
 						0, -- [8]
-						true, -- [9]
-						-1, -- [10]
 					}, -- [16]
 					{
-						true, -- [1]
-						263334, -- [2]
-						2161, -- [3]
-						1545368341.576, -- [4]
-						37718, -- [5]
-						"G'huun", -- [6]
-						186, -- [7]
-						40, -- [8]
+						false, -- [1]
+						276146, -- [2]
+						1071, -- [3]
+						1546038725.447, -- [4]
+						183672, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [17]
 					{
 						true, -- [1]
-						111400, -- [2]
-						5982, -- [3]
-						1545368341.862, -- [4]
-						31736, -- [5]
-						"Tentacled", -- [6]
+						274195, -- [2]
+						3159, -- [3]
+						1546038725.602, -- [4]
+						180513, -- [5]
+						"[*] Corrupted Blood", -- [6]
 						nil, -- [7]
-						1, -- [8]
-						true, -- [9]
+						32, -- [8]
+						false, -- [9]
 						-1, -- [10]
 					}, -- [18]
 					{
-						true, -- [1]
-						111400, -- [2]
-						5983, -- [3]
-						1545368342.88, -- [4]
-						25753, -- [5]
-						"Tentacled", -- [6]
+						false, -- [1]
+						143924, -- [2]
+						422, -- [3]
+						1546038725.778, -- [4]
+						180935, -- [5]
+						"Druantis-Stormreaver", -- [6]
 						nil, -- [7]
-						1, -- [8]
-						true, -- [9]
+						0, -- [8]
+						false, -- [9]
 						-1, -- [10]
 					}, -- [19]
 					{
 						false, -- [1]
-						77220, -- [2]
-						169, -- [3]
-						1545368342.88, -- [4]
-						25753, -- [5]
-						"Tentacled", -- [6]
-						true, -- [7]
+						774, -- [2]
+						2368, -- [3]
+						1546038725.998, -- [4]
+						183303, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
 						0, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [20]
 					{
 						false, -- [1]
-						108366, -- [2]
-						252, -- [3]
-						1545368342.88, -- [4]
-						25753, -- [5]
-						"Tentacled", -- [6]
-						true, -- [7]
+						274436, -- [2]
+						287, -- [3]
+						1546038725.998, -- [4]
+						183590, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
 						0, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [21]
 					{
 						true, -- [1]
-						263326, -- [2]
-						2395, -- [3]
-						1545368342.88, -- [4]
-						23779, -- [5]
-						"[*] Undulating Mass", -- [6]
-						421, -- [7]
-						40, -- [8]
+						275991, -- [2]
+						41820, -- [3]
+						1546038726.189, -- [4]
+						141770, -- [5]
+						"[*] Deathwish", -- [6]
+						nil, -- [7]
+						32, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [22]
 					{
 						false, -- [1]
-						108366, -- [2]
-						0, -- [3]
-						1545368342.88, -- [4]
-						23779, -- [5]
-						"Tentacled", -- [6]
-						true, -- [7]
+						143924, -- [2]
+						25, -- [3]
+						1546038726.977, -- [4]
+						141795, -- [5]
+						"Druantis-Stormreaver", -- [6]
+						nil, -- [7]
 						0, -- [8]
-						true, -- [9]
-						-1, -- [10]
 					}, -- [23]
 					{
-						false, -- [1]
-						77220, -- [2]
-						192, -- [3]
-						1545368343.086, -- [4]
-						23779, -- [5]
-						"Tentacled", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [24]
-					{
 						true, -- [1]
-						263334, -- [2]
-						2201, -- [3]
-						1545368343.086, -- [4]
-						21770, -- [5]
-						"G'huun", -- [6]
-						192, -- [7]
-						40, -- [8]
+						274195, -- [2]
+						3159, -- [3]
+						1546038727.593, -- [4]
+						138840, -- [5]
+						"[*] Corrupted Blood", -- [6]
+						nil, -- [7]
+						32, -- [8]
 						false, -- [9]
 						-1, -- [10]
+					}, -- [24]
+					{
+						false, -- [1]
+						145109, -- [2]
+						5511, -- [3]
+						1546038727.722, -- [4]
+						144351, -- [5]
+						"Druantis-Stormreaver", -- [6]
+						nil, -- [7]
+						0, -- [8]
 					}, -- [25]
 					{
 						false, -- [1]
-						77220, -- [2]
-						176, -- [3]
-						1545368343.242, -- [4]
-						21770, -- [5]
-						"Tentacled", -- [6]
-						true, -- [7]
+						143924, -- [2]
+						127, -- [3]
+						1546038728.207, -- [4]
+						144478, -- [5]
+						"Druantis-Stormreaver", -- [6]
+						nil, -- [7]
 						0, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [26]
 					{
-						true, -- [1]
-						267660, -- [2]
-						1651, -- [3]
-						1545368343.242, -- [4]
-						20295, -- [5]
-						"[*] Unclean Contagion", -- [6]
-						176, -- [7]
-						40, -- [8]
+						false, -- [1]
+						774, -- [2]
+						2369, -- [3]
+						1546038728.697, -- [4]
+						146847, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [27]
 					{
-						true, -- [1]
-						111400, -- [2]
-						5983, -- [3]
-						1545368343.869, -- [4]
-						14312, -- [5]
-						"Tentacled", -- [6]
+						false, -- [1]
+						274436, -- [2]
+						587, -- [3]
+						1546038728.697, -- [4]
+						147434, -- [5]
+						"Rukard-Azralon", -- [6]
 						nil, -- [7]
-						1, -- [8]
-						true, -- [9]
+						0, -- [8]
+						false, -- [9]
 						-1, -- [10]
 					}, -- [28]
 					{
+						4, -- [1]
+						269936, -- [2]
+						1, -- [3]
+						1546038729.02, -- [4]
+						147434, -- [5]
+						"Minion of Zul", -- [6]
+						false, -- [7]
+						false, -- [8]
+						false, -- [9]
+						false, -- [10]
+					}, -- [29]
+					{
 						true, -- [1]
 						3, -- [2]
-						6198, -- [3]
-						1545368344.44, -- [4]
-						8114, -- [5]
+						118992, -- [3]
+						1546038729.356, -- [4]
+						28442, -- [5]
 						"Environment (Falling)", -- [6]
 						nil, -- [7]
 						3, -- [8]
 						false, -- [9]
 						-1, -- [10]
-					}, -- [29]
-					{
-						false, -- [1]
-						77220, -- [2]
-						2688, -- [3]
-						1545368344.482, -- [4]
-						8114, -- [5]
-						"Tentacled", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
 					}, -- [30]
 					{
 						false, -- [1]
-						108366, -- [2]
-						1153, -- [3]
-						1545368344.482, -- [4]
-						8114, -- [5]
-						"Tentacled", -- [6]
-						true, -- [7]
+						143924, -- [2]
+						112, -- [3]
+						1546038729.414, -- [4]
+						28758, -- [5]
+						"Druantis-Stormreaver", -- [6]
+						nil, -- [7]
 						0, -- [8]
 						false, -- [9]
-						-1, -- [10]
+						false, -- [10]
 					}, -- [31]
 					{
 						true, -- [1]
-						263503, -- [2]
-						11955, -- [3]
-						1545368344.482, -- [4]
-						1, -- [5]
-						"Reorigination Drive", -- [6]
-						3841, -- [7]
-						64, -- [8]
+						274195, -- [2]
+						3159, -- [3]
+						1546038729.596, -- [4]
+						25599, -- [5]
+						"[*] Corrupted Blood", -- [6]
+						nil, -- [7]
+						32, -- [8]
 						false, -- [9]
-						19316, -- [10]
+						-1, -- [10]
 					}, -- [32]
 					{
 						3, -- [1]
-						104773, -- [2]
-						1, -- [3]
-						1545368340.792, -- [4]
+						0, -- [2]
+						0, -- [3]
+						0, -- [4]
 						0, -- [5]
-						"Tentacled", -- [6]
+						"Druantis-Stormreaver", -- [6]
 					}, -- [33]
 				},
 			}, -- [2]
 			{
-				["maxhealth"] = 165520,
-				["timeofdeath"] = 357.359999999999,
-				["name"] = "Mebrick",
-				["time"] = 1545368348.808,
-				["class"] = "WARRIOR",
-				["timestring"] = "5m 57s",
+				["maxhealth"] = 221920,
+				["timeofdeath"] = 145.035,
+				["name"] = "Comet",
+				["time"] = 1546038744.593,
+				["class"] = "MONK",
+				["timestring"] = "2m 25s",
 				["events"] = {
 					{
-						false, -- [1]
-						191840, -- [2]
-						474, -- [3]
-						1545368329.46, -- [4]
-						182060, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
+						2, -- [1]
+						61999, -- [2]
+						1, -- [3]
+						1546038749.259, -- [4]
+						0, -- [5]
+						"Yaxx-Thrall", -- [6]
 					}, -- [1]
 					{
-						true, -- [1]
-						277092, -- [2]
-						4835, -- [3]
-						1545368329.732, -- [4]
-						177225, -- [5]
-						"[*] Bursting Boil", -- [6]
-						nil, -- [7]
-						32, -- [8]
+						4, -- [1]
+						274358, -- [2]
+						4, -- [3]
+						1546038740.743, -- [4]
+						86021, -- [5]
+						"Zul", -- [6]
+						false, -- [7]
+						false, -- [8]
 						false, -- [9]
-						-1, -- [10]
+						false, -- [10]
 					}, -- [2]
 					{
 						false, -- [1]
-						198533, -- [2]
-						2175, -- [3]
-						1545368329.897, -- [4]
-						179400, -- [5]
-						"Jade Serpent Statue <Comet>", -- [6]
-						nil, -- [7]
+						278159, -- [2]
+						3331, -- [3]
+						1546038740.82, -- [4]
+						86021, -- [5]
+						"Comet", -- [6]
+						true, -- [7]
 						0, -- [8]
-						false, -- [9]
+						true, -- [9]
 						-1, -- [10]
 					}, -- [3]
 					{
-						false, -- [1]
-						191840, -- [2]
-						816, -- [3]
-						1545368330.377, -- [4]
-						180216, -- [5]
+						true, -- [1]
+						124255, -- [2]
+						3331, -- [3]
+						1546038740.82, -- [4]
+						82690, -- [5]
 						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
+						3331, -- [7]
+						1, -- [8]
+						true, -- [9]
 						-1, -- [10]
 					}, -- [4]
 					{
-						true, -- [1]
-						277094, -- [2]
-						13700, -- [3]
-						1545368330.536, -- [4]
-						166516, -- [5]
-						"[*] Bursting Boil", -- [6]
+						false, -- [1]
+						216521, -- [2]
+						9242, -- [3]
+						1546038740.82, -- [4]
+						91932, -- [5]
+						"Comet", -- [6]
 						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
+						0, -- [8]
+						true, -- [9]
 						-1, -- [10]
 					}, -- [5]
 					{
 						false, -- [1]
-						198533, -- [2]
-						4350, -- [3]
-						1545368330.806, -- [4]
-						170866, -- [5]
-						"Jade Serpent Statue <Comet>", -- [6]
+						280052, -- [2]
+						14218, -- [3]
+						1546038740.848, -- [4]
+						106150, -- [5]
+						"Peäches-Trollbane", -- [6]
 						nil, -- [7]
 						0, -- [8]
 						false, -- [9]
@@ -21455,3151 +22078,349 @@ DeathGraphsDBCurrent = {
 					}, -- [6]
 					{
 						false, -- [1]
-						77489, -- [2]
-						1277, -- [3]
-						1545368331.146, -- [4]
-						172143, -- [5]
-						"Initiate", -- [6]
+						196608, -- [2]
+						660, -- [3]
+						1546038741.143, -- [4]
+						106810, -- [5]
+						"Comet", -- [6]
 						nil, -- [7]
 						0, -- [8]
-						false, -- [9]
+						true, -- [9]
 						-1, -- [10]
 					}, -- [7]
 					{
 						false, -- [1]
-						191840, -- [2]
-						946, -- [3]
-						1545368331.287, -- [4]
-						173089, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
+						278159, -- [2]
+						3331, -- [3]
+						1546038741.308, -- [4]
+						106810, -- [5]
+						"Comet", -- [6]
+						true, -- [7]
 						0, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [8]
 					{
 						true, -- [1]
-						263307, -- [2]
-						28696, -- [3]
-						1545368331.307, -- [4]
-						144393, -- [5]
-						"Gibbering Horror", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
+						124255, -- [2]
+						3331, -- [3]
+						1546038741.308, -- [4]
+						103479, -- [5]
+						"Comet", -- [6]
+						3331, -- [7]
+						1, -- [8]
+						true, -- [9]
 						-1, -- [10]
 					}, -- [9]
 					{
-						4, -- [1]
-						277007, -- [2]
-						2, -- [3]
-						1545368331.339, -- [4]
-						144393, -- [5]
-						"Bursting Boil", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
+						false, -- [1]
+						278159, -- [2]
+						891, -- [3]
+						1546038741.59, -- [4]
+						103479, -- [5]
+						"Comet", -- [6]
+						true, -- [7]
+						0, -- [8]
+						true, -- [9]
+						-1, -- [10]
 					}, -- [10]
 					{
-						false, -- [1]
-						198533, -- [2]
-						4350, -- [3]
-						1545368331.723, -- [4]
-						148743, -- [5]
-						"Jade Serpent Statue <Comet>", -- [6]
-						nil, -- [7]
-						0, -- [8]
+						true, -- [1]
+						274195, -- [2]
+						892, -- [3]
+						1546038741.59, -- [4]
+						102587, -- [5]
+						"[*] Corrupted Blood", -- [6]
+						1629, -- [7]
+						32, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [11]
 					{
-						4, -- [1]
-						269691, -- [2]
-						1, -- [3]
-						1545368331.761, -- [4]
-						148743, -- [5]
-						"G'huun", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
+						false, -- [1]
+						278159, -- [2]
+						1544, -- [3]
+						1546038741.812, -- [4]
+						102587, -- [5]
+						"Comet", -- [6]
+						true, -- [7]
+						0, -- [8]
+						true, -- [9]
+						-1, -- [10]
 					}, -- [12]
 					{
-						false, -- [1]
-						269691, -- [2]
-						182060, -- [3]
-						1545368331.761, -- [4]
-						182060, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
+						true, -- [1]
+						124255, -- [2]
+						1545, -- [3]
+						1546038741.812, -- [4]
+						101042, -- [5]
+						"Comet", -- [6]
+						1544, -- [7]
+						1, -- [8]
+						true, -- [9]
 						-1, -- [10]
 					}, -- [13]
 					{
-						true, -- [1]
-						277092, -- [2]
-						4835, -- [3]
-						1545368331.761, -- [4]
-						177225, -- [5]
-						"[*] Bursting Boil", -- [6]
-						nil, -- [7]
-						32, -- [8]
+						false, -- [1]
+						278159, -- [2]
+						1544, -- [3]
+						1546038742.299, -- [4]
+						101042, -- [5]
+						"Comet", -- [6]
+						true, -- [7]
+						0, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [14]
 					{
 						true, -- [1]
-						118459, -- [2]
-						1149, -- [3]
-						1545368334.862, -- [4]
-						178640, -- [5]
-						"Gondria <Dog>", -- [6]
-						nil, -- [7]
+						124255, -- [2]
+						1545, -- [3]
+						1546038742.299, -- [4]
+						99497, -- [5]
+						"Comet", -- [6]
+						1544, -- [7]
 						1, -- [8]
-						false, -- [9]
+						true, -- [9]
 						-1, -- [10]
 					}, -- [15]
 					{
-						true, -- [1]
-						1, -- [2]
-						1532, -- [3]
-						1545368339.527, -- [4]
-						161613, -- [5]
-						"Gondria <Dog> <Dog>", -- [6]
-						nil, -- [7]
-						1, -- [8]
-						false, -- [9]
+						false, -- [1]
+						278159, -- [2]
+						10275, -- [3]
+						1546038742.539, -- [4]
+						99497, -- [5]
+						"Comet", -- [6]
+						true, -- [7]
+						0, -- [8]
+						true, -- [9]
 						-1, -- [10]
 					}, -- [16]
 					{
 						true, -- [1]
-						118459, -- [2]
-						8178, -- [3]
-						1545368340.792, -- [4]
-						161613, -- [5]
-						"Gondria <Dog> <Dog>", -- [6]
-						nil, -- [7]
+						274358, -- [2]
+						54516, -- [3]
+						1546038742.539, -- [4]
+						44981, -- [5]
+						"Zul", -- [6]
+						35092, -- [7]
 						1, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [17]
 					{
-						true, -- [1]
-						118459, -- [2]
-						1150, -- [3]
-						1545368340.989, -- [4]
-						161613, -- [5]
-						"Gondria <Dog> <Dog>", -- [6]
+						false, -- [1]
+						216521, -- [2]
+						1763, -- [3]
+						1546038742.539, -- [4]
+						46744, -- [5]
+						"Comet", -- [6]
 						nil, -- [7]
-						1, -- [8]
-						false, -- [9]
+						0, -- [8]
+						true, -- [9]
 						-1, -- [10]
 					}, -- [18]
 					{
-						4, -- [1]
-						115804, -- [2]
-						1, -- [3]
-						1545368342.334, -- [4]
-						160345, -- [5]
-						"Papapound", -- [6]
-						false, -- [7]
-						false, -- [8]
+						false, -- [1]
+						48438, -- [2]
+						2712, -- [3]
+						1546038742.539, -- [4]
+						49456, -- [5]
+						"Rukard-Azralon", -- [6]
+						nil, -- [7]
+						0, -- [8]
 						false, -- [9]
-						false, -- [10]
+						-1, -- [10]
 					}, -- [19]
 					{
 						true, -- [1]
-						185099, -- [2]
-						6686, -- [3]
-						1545368342.334, -- [4]
-						153659, -- [5]
-						"Papapound <Papapound>", -- [6]
+						124255, -- [2]
+						3806, -- [3]
+						1546038742.814, -- [4]
+						45650, -- [5]
+						"Comet", -- [6]
 						nil, -- [7]
 						1, -- [8]
-						false, -- [9]
+						true, -- [9]
 						-1, -- [10]
 					}, -- [20]
 					{
-						true, -- [1]
-						118459, -- [2]
-						2299, -- [3]
-						1545368342.413, -- [4]
-						151360, -- [5]
-						"Gondria <Dog>", -- [6]
+						false, -- [1]
+						216521, -- [2]
+						4839, -- [3]
+						1546038743.009, -- [4]
+						50489, -- [5]
+						"Comet", -- [6]
 						nil, -- [7]
-						1, -- [8]
+						0, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [21]
 					{
-						true, -- [1]
-						118459, -- [2]
-						8178, -- [3]
-						1545368344.329, -- [4]
-						151360, -- [5]
-						"Gondria <Dog> <Dog>", -- [6]
+						false, -- [1]
+						197997, -- [2]
+						7444, -- [3]
+						1546038743.038, -- [4]
+						57933, -- [5]
+						"Peäches-Trollbane", -- [6]
 						nil, -- [7]
-						1, -- [8]
+						0, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [22]
 					{
-						true, -- [1]
-						117418, -- [2]
-						1650, -- [3]
-						1545368344.44, -- [4]
-						151360, -- [5]
-						"Papapound <Papapound> <Papapound>", -- [6]
+						false, -- [1]
+						196608, -- [2]
+						656, -- [3]
+						1546038743.141, -- [4]
+						58589, -- [5]
+						"Comet", -- [6]
 						nil, -- [7]
-						1, -- [8]
-						false, -- [9]
+						0, -- [8]
+						true, -- [9]
 						-1, -- [10]
 					}, -- [23]
 					{
-						true, -- [1]
-						263503, -- [2]
-						55523, -- [3]
-						1545368344.44, -- [4]
-						113407, -- [5]
-						"Reorigination Drive", -- [6]
-						17570, -- [7]
-						64, -- [8]
-						false, -- [9]
+						false, -- [1]
+						216521, -- [2]
+						2958, -- [3]
+						1546038743.194, -- [4]
+						61547, -- [5]
+						"Comet", -- [6]
+						nil, -- [7]
+						0, -- [8]
+						true, -- [9]
 						-1, -- [10]
 					}, -- [24]
 					{
-						4, -- [1]
-						113746, -- [2]
-						1, -- [3]
-						1545368344.517, -- [4]
-						113407, -- [5]
-						"Papapound", -- [6]
-						false, -- [7]
-						false, -- [8]
+						false, -- [1]
+						61295, -- [2]
+						4551, -- [3]
+						1546038743.194, -- [4]
+						66098, -- [5]
+						"Peäches-Trollbane", -- [6]
+						nil, -- [7]
+						0, -- [8]
 						false, -- [9]
-						false, -- [10]
+						-1, -- [10]
 					}, -- [25]
 					{
 						true, -- [1]
-						117418, -- [2]
-						1733, -- [3]
-						1545368345.201, -- [4]
-						111077, -- [5]
-						"Papapound <Papapound>", -- [6]
+						124255, -- [2]
+						3806, -- [3]
+						1546038743.305, -- [4]
+						62292, -- [5]
+						"Comet", -- [6]
 						nil, -- [7]
 						1, -- [8]
-						false, -- [9]
+						true, -- [9]
 						-1, -- [10]
 					}, -- [26]
 					{
-						true, -- [1]
-						118459, -- [2]
-						1207, -- [3]
-						1545368345.906, -- [4]
-						94140, -- [5]
-						"Gondria <Dog>", -- [6]
+						false, -- [1]
+						48438, -- [2]
+						2575, -- [3]
+						1546038743.383, -- [4]
+						64867, -- [5]
+						"Rukard-Azralon", -- [6]
 						nil, -- [7]
-						1, -- [8]
-						false, -- [9]
+						0, -- [8]
+						true, -- [9]
 						-1, -- [10]
 					}, -- [27]
 					{
 						true, -- [1]
-						117418, -- [2]
-						1733, -- [3]
-						1545368345.973, -- [4]
-						90311, -- [5]
-						"Papapound <Papapound>", -- [6]
-						nil, -- [7]
-						1, -- [8]
+						274195, -- [2]
+						1784, -- [3]
+						1546038743.597, -- [4]
+						63083, -- [5]
+						"[*] Corrupted Blood", -- [6]
+						737, -- [7]
+						32, -- [8]
 						false, -- [9]
 						-1, -- [10]
 					}, -- [28]
 					{
 						true, -- [1]
-						118459, -- [2]
-						4293, -- [3]
-						1545368347.479, -- [4]
-						54439, -- [5]
-						"Gondria <Dog>", -- [6]
+						124255, -- [2]
+						3541, -- [3]
+						1546038743.8, -- [4]
+						59542, -- [5]
+						"Comet", -- [6]
 						nil, -- [7]
 						1, -- [8]
-						false, -- [9]
+						true, -- [9]
 						-1, -- [10]
 					}, -- [29]
 					{
-						true, -- [1]
-						118459, -- [2]
-						2414, -- [3]
-						1545368347.722, -- [4]
-						34602, -- [5]
-						"Gondria <Dog>", -- [6]
+						false, -- [1]
+						216521, -- [2]
+						1579, -- [3]
+						1546038744.292, -- [4]
+						61121, -- [5]
+						"Comet", -- [6]
 						nil, -- [7]
-						1, -- [8]
-						false, -- [9]
+						0, -- [8]
+						true, -- [9]
 						-1, -- [10]
 					}, -- [30]
 					{
-						true, -- [1]
-						100780, -- [2]
-						985, -- [3]
-						1545368348.535, -- [4]
-						17408, -- [5]
-						"Papapound <Papapound>", -- [6]
+						false, -- [1]
+						48438, -- [2]
+						2428, -- [3]
+						1546038744.292, -- [4]
+						63549, -- [5]
+						"Rukard-Azralon", -- [6]
 						nil, -- [7]
-						1, -- [8]
-						false, -- [9]
+						0, -- [8]
+						true, -- [9]
 						-1, -- [10]
 					}, -- [31]
 					{
 						true, -- [1]
-						197835, -- [2]
-						80, -- [3]
-						1545368348.776, -- [4]
-						1, -- [5]
-						"Tawwxic", -- [6]
+						124255, -- [2]
+						3541, -- [3]
+						1546038744.292, -- [4]
+						60008, -- [5]
+						"Comet", -- [6]
 						nil, -- [7]
 						1, -- [8]
 						true, -- [9]
-						1620, -- [10]
+						-1, -- [10]
 					}, -- [32]
 					{
-						3, -- [1]
-						118038, -- [2]
-						1, -- [3]
-						1545368265.541, -- [4]
-						0, -- [5]
-						"Mebrick", -- [6]
+						true, -- [1]
+						274358, -- [2]
+						60008, -- [3]
+						1546038744.557, -- [4]
+						1, -- [5]
+						"Zul", -- [6]
+						24782, -- [7]
+						1, -- [8]
+						false, -- [9]
+						4818, -- [10]
 					}, -- [33]
+					{
+						3, -- [1]
+						115203, -- [2]
+						1, -- [3]
+						1546038701.622, -- [4]
+						0, -- [5]
+						"Comet", -- [6]
+					}, -- [34]
 				},
 			}, -- [3]
-			{
-				["maxhealth"] = 165840,
-				["timeofdeath"] = 358.603999999999,
-				["name"] = "Kggs",
-				["time"] = 1545368350.052,
-				["class"] = "DRUID",
-				["timestring"] = "5m 58s",
-				["events"] = {
-					{
-						false, -- [1]
-						77489, -- [2]
-						3874, -- [3]
-						1545368324.222, -- [4]
-						182420, -- [5]
-						"Initiate", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [1]
-					{
-						false, -- [1]
-						191840, -- [2]
-						278, -- [3]
-						1545368324.52, -- [4]
-						182420, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [2]
-					{
-						false, -- [1]
-						191840, -- [2]
-						10116, -- [3]
-						1545368325.193, -- [4]
-						182420, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [3]
-					{
-						false, -- [1]
-						191840, -- [2]
-						473, -- [3]
-						1545368325.622, -- [4]
-						182420, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [4]
-					{
-						false, -- [1]
-						269279, -- [2]
-						3783, -- [3]
-						1545368325.746, -- [4]
-						182420, -- [5]
-						"Kggs", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [5]
-					{
-						true, -- [1]
-						277092, -- [2]
-						3783, -- [3]
-						1545368325.746, -- [4]
-						182420, -- [5]
-						"[*] Bursting Boil", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [6]
-					{
-						false, -- [1]
-						191840, -- [2]
-						815, -- [3]
-						1545368327.044, -- [4]
-						182420, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [7]
-					{
-						false, -- [1]
-						191840, -- [2]
-						473, -- [3]
-						1545368327.455, -- [4]
-						182420, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [8]
-					{
-						false, -- [1]
-						269279, -- [2]
-						4728, -- [3]
-						1545368327.738, -- [4]
-						182420, -- [5]
-						"Kggs", -- [6]
-						true, -- [7]
-						0, -- [8]
-						true, -- [9]
-						-1, -- [10]
-					}, -- [9]
-					{
-						true, -- [1]
-						277092, -- [2]
-						4728, -- [3]
-						1545368327.738, -- [4]
-						182420, -- [5]
-						"[*] Bursting Boil", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [10]
-					{
-						false, -- [1]
-						191840, -- [2]
-						408, -- [3]
-						1545368328.883, -- [4]
-						182420, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [11]
-					{
-						false, -- [1]
-						267537, -- [2]
-						1779, -- [3]
-						1545368328.883, -- [4]
-						182420, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [12]
-					{
-						false, -- [1]
-						191840, -- [2]
-						946, -- [3]
-						1545368329.287, -- [4]
-						182420, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [13]
-					{
-						false, -- [1]
-						269279, -- [2]
-						4728, -- [3]
-						1545368329.732, -- [4]
-						182420, -- [5]
-						"Kggs", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [14]
-					{
-						true, -- [1]
-						277092, -- [2]
-						4728, -- [3]
-						1545368329.732, -- [4]
-						182420, -- [5]
-						"[*] Bursting Boil", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [15]
-					{
-						false, -- [1]
-						269279, -- [2]
-						13397, -- [3]
-						1545368330.518, -- [4]
-						182420, -- [5]
-						"Kggs", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [16]
-					{
-						true, -- [1]
-						277094, -- [2]
-						13397, -- [3]
-						1545368330.518, -- [4]
-						182420, -- [5]
-						"[*] Bursting Boil", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [17]
-					{
-						false, -- [1]
-						191840, -- [2]
-						407, -- [3]
-						1545368330.704, -- [4]
-						182420, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [18]
-					{
-						false, -- [1]
-						267537, -- [2]
-						1779, -- [3]
-						1545368330.717, -- [4]
-						182420, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [19]
-					{
-						false, -- [1]
-						191840, -- [2]
-						473, -- [3]
-						1545368331.121, -- [4]
-						182420, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [20]
-					{
-						4, -- [1]
-						277007, -- [2]
-						2, -- [3]
-						1545368331.121, -- [4]
-						182420, -- [5]
-						"Bursting Boil", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [21]
-					{
-						4, -- [1]
-						269691, -- [2]
-						1, -- [3]
-						1545368331.246, -- [4]
-						182420, -- [5]
-						"G'huun", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [22]
-					{
-						false, -- [1]
-						269691, -- [2]
-						182420, -- [3]
-						1545368331.246, -- [4]
-						182420, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [23]
-					{
-						true, -- [1]
-						263503, -- [2]
-						54248, -- [3]
-						1545368344.44, -- [4]
-						119101, -- [5]
-						"Reorigination Drive", -- [6]
-						nil, -- [7]
-						64, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [24]
-					{
-						true, -- [1]
-						1, -- [2]
-						394, -- [3]
-						1545368344.972, -- [4]
-						116935, -- [5]
-						"Bloodworm <Bubbyfischer>", -- [6]
-						nil, -- [7]
-						1, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [25]
-					{
-						true, -- [1]
-						1, -- [2]
-						394, -- [3]
-						1545368345.807, -- [4]
-						91661, -- [5]
-						"Bloodworm <Bubbyfischer>", -- [6]
-						nil, -- [7]
-						1, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [26]
-					{
-						true, -- [1]
-						1, -- [2]
-						394, -- [3]
-						1545368346.677, -- [4]
-						80357, -- [5]
-						"Bloodworm <Bubbyfischer>", -- [6]
-						nil, -- [7]
-						1, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [27]
-					{
-						true, -- [1]
-						1, -- [2]
-						394, -- [3]
-						1545368347.557, -- [4]
-						75553, -- [5]
-						"Bloodworm <Bubbyfischer>", -- [6]
-						nil, -- [7]
-						1, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [28]
-					{
-						true, -- [1]
-						1, -- [2]
-						394, -- [3]
-						1545368348.421, -- [4]
-						66911, -- [5]
-						"Bloodworm <Bubbyfischer>", -- [6]
-						nil, -- [7]
-						1, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [29]
-					{
-						true, -- [1]
-						100780, -- [2]
-						893, -- [3]
-						1545368348.865, -- [4]
-						56821, -- [5]
-						"Papapound <Papapound>", -- [6]
-						nil, -- [7]
-						1, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [30]
-					{
-						true, -- [1]
-						1, -- [2]
-						395, -- [3]
-						1545368349.303, -- [4]
-						37019, -- [5]
-						"Bloodworm <Bubbyfischer>", -- [6]
-						nil, -- [7]
-						1, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [31]
-					{
-						true, -- [1]
-						1, -- [2]
-						394, -- [3]
-						1545368349.763, -- [4]
-						11881, -- [5]
-						"Bloodworm <Bubbyfischer>", -- [6]
-						nil, -- [7]
-						1, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [32]
-					{
-						3, -- [1]
-						22812, -- [2]
-						1, -- [3]
-						1545368313.872, -- [4]
-						0, -- [5]
-						"Kggs", -- [6]
-					}, -- [33]
-				},
-			}, -- [4]
-			{
-				["maxhealth"] = 163480,
-				["timeofdeath"] = 420.625,
-				["name"] = "Breaktheicee",
-				["time"] = 1545368412.073,
-				["class"] = "MAGE",
-				["timestring"] = "7m 0s",
-				["events"] = {
-					{
-						false, -- [1]
-						124682, -- [2]
-						9788, -- [3]
-						1545368407.196, -- [4]
-						179820, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [1]
-					{
-						false, -- [1]
-						77489, -- [2]
-						1179, -- [3]
-						1545368407.256, -- [4]
-						179820, -- [5]
-						"Initiate", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [2]
-					{
-						true, -- [1]
-						263334, -- [2]
-						9901, -- [3]
-						1545368407.859, -- [4]
-						169919, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [3]
-					{
-						false, -- [1]
-						124682, -- [2]
-						3701, -- [3]
-						1545368407.878, -- [4]
-						173620, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [4]
-					{
-						false, -- [1]
-						198533, -- [2]
-						2175, -- [3]
-						1545368407.955, -- [4]
-						175795, -- [5]
-						"Jade Serpent Statue <Comet>", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [5]
-					{
-						false, -- [1]
-						81751, -- [2]
-						877, -- [3]
-						1545368408.088, -- [4]
-						176672, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [6]
-					{
-						false, -- [1]
-						198533, -- [2]
-						2175, -- [3]
-						1545368408.824, -- [4]
-						178847, -- [5]
-						"Jade Serpent Statue <Comet>", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [7]
-					{
-						false, -- [1]
-						191840, -- [2]
-						408, -- [3]
-						1545368408.881, -- [4]
-						179255, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [8]
-					{
-						4, -- [1]
-						263227, -- [2]
-						4, -- [3]
-						1545368409.041, -- [4]
-						179455, -- [5]
-						"G'huun", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [9]
-					{
-						true, -- [1]
-						270428, -- [2]
-						18153, -- [3]
-						1545368409.041, -- [4]
-						161302, -- [5]
-						"[*] Wave of Corruption", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [10]
-					{
-						false, -- [1]
-						81751, -- [2]
-						877, -- [3]
-						1545368409.368, -- [4]
-						162179, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [11]
-					{
-						true, -- [1]
-						263334, -- [2]
-						12920, -- [3]
-						1545368409.399, -- [4]
-						149259, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [12]
-					{
-						false, -- [1]
-						81751, -- [2]
-						3935, -- [3]
-						1545368409.445, -- [4]
-						153194, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [13]
-					{
-						false, -- [1]
-						198533, -- [2]
-						2175, -- [3]
-						1545368409.697, -- [4]
-						155369, -- [5]
-						"Jade Serpent Statue <Comet>", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						true, -- [9]
-						-1, -- [10]
-					}, -- [14]
-					{
-						false, -- [1]
-						81751, -- [2]
-						3935, -- [3]
-						1545368410.047, -- [4]
-						159304, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [15]
-					{
-						false, -- [1]
-						191840, -- [2]
-						662, -- [3]
-						1545368410.324, -- [4]
-						159966, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [16]
-					{
-						false, -- [1]
-						280707, -- [2]
-						1353, -- [3]
-						1545368410.419, -- [4]
-						161319, -- [5]
-						"Bubbyfischer", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [17]
-					{
-						false, -- [1]
-						198533, -- [2]
-						4350, -- [3]
-						1545368410.557, -- [4]
-						165669, -- [5]
-						"Jade Serpent Statue <Comet>", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [18]
-					{
-						false, -- [1]
-						81751, -- [2]
-						876, -- [3]
-						1545368410.679, -- [4]
-						166545, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [19]
-					{
-						false, -- [1]
-						81751, -- [2]
-						3935, -- [3]
-						1545368410.722, -- [4]
-						170480, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [20]
-					{
-						true, -- [1]
-						263334, -- [2]
-						13445, -- [3]
-						1545368410.861, -- [4]
-						157035, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [21]
-					{
-						false, -- [1]
-						94472, -- [2]
-						7491, -- [3]
-						1545368411.034, -- [4]
-						164526, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [22]
-					{
-						false, -- [1]
-						183811, -- [2]
-						1546, -- [3]
-						1545368411.451, -- [4]
-						166272, -- [5]
-						"Luumii", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [23]
-					{
-						false, -- [1]
-						198533, -- [2]
-						2175, -- [3]
-						1545368411.451, -- [4]
-						168447, -- [5]
-						"Jade Serpent Statue <Comet>", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [24]
-					{
-						false, -- [1]
-						183811, -- [2]
-						770, -- [3]
-						1545368411.561, -- [4]
-						169217, -- [5]
-						"Luumii", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [25]
-					{
-						true, -- [1]
-						274577, -- [2]
-						126542, -- [3]
-						1545368411.67, -- [4]
-						42675, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [26]
-					{
-						false, -- [1]
-						191840, -- [2]
-						5058, -- [3]
-						1545368411.807, -- [4]
-						47733, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [27]
-					{
-						false, -- [1]
-						183811, -- [2]
-						1540, -- [3]
-						1545368411.925, -- [4]
-						49273, -- [5]
-						"Luumii", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [28]
-					{
-						false, -- [1]
-						81751, -- [2]
-						876, -- [3]
-						1545368411.925, -- [4]
-						50149, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [29]
-					{
-						false, -- [1]
-						81751, -- [2]
-						3745, -- [3]
-						1545368412.001, -- [4]
-						53894, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [30]
-					{
-						false, -- [1]
-						208771, -- [2]
-						6251, -- [3]
-						1545368412.043, -- [4]
-						53894, -- [5]
-						"Boodyclap", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [31]
-					{
-						true, -- [1]
-						274577, -- [2]
-						60145, -- [3]
-						1545368412.043, -- [4]
-						1, -- [5]
-						"G'huun", -- [6]
-						6251, -- [7]
-						40, -- [8]
-						false, -- [9]
-						61527, -- [10]
-					}, -- [32]
-					{
-						3, -- [1]
-						0, -- [2]
-						0, -- [3]
-						0, -- [4]
-						0, -- [5]
-						"Breaktheicee", -- [6]
-					}, -- [33]
-				},
-			}, -- [5]
-			{
-				["maxhealth"] = 162900,
-				["timeofdeath"] = 450.382,
-				["name"] = "Luumii",
-				["time"] = 1545368441.83,
-				["class"] = "PALADIN",
-				["timestring"] = "7m 30s",
-				["events"] = {
-					{
-						true, -- [1]
-						263334, -- [2]
-						10986, -- [3]
-						1545368435.752, -- [4]
-						168194, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [1]
-					{
-						false, -- [1]
-						81751, -- [2]
-						9535, -- [3]
-						1545368436.005, -- [4]
-						177729, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [2]
-					{
-						4, -- [1]
-						267700, -- [2]
-						1, -- [3]
-						1545368436.605, -- [4]
-						177729, -- [5]
-						"G'huun", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [3]
-					{
-						false, -- [1]
-						81751, -- [2]
-						1385, -- [3]
-						1545368436.671, -- [4]
-						179114, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [4]
-					{
-						false, -- [1]
-						94472, -- [2]
-						6841, -- [3]
-						1545368436.718, -- [4]
-						179180, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [5]
-					{
-						false, -- [1]
-						191840, -- [2]
-						408, -- [3]
-						1545368436.953, -- [4]
-						179180, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [6]
-					{
-						true, -- [1]
-						277092, -- [2]
-						4794, -- [3]
-						1545368436.971, -- [4]
-						174386, -- [5]
-						"[*] Bursting Boil", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [7]
-					{
-						true, -- [1]
-						263334, -- [2]
-						10876, -- [3]
-						1545368437.268, -- [4]
-						163510, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [8]
-					{
-						false, -- [1]
-						119611, -- [2]
-						2265, -- [3]
-						1545368437.367, -- [4]
-						165775, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [9]
-					{
-						false, -- [1]
-						81751, -- [2]
-						4146, -- [3]
-						1545368437.388, -- [4]
-						169921, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [10]
-					{
-						false, -- [1]
-						120692, -- [2]
-						10653, -- [3]
-						1545368437.86, -- [4]
-						179180, -- [5]
-						"Initiate", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [11]
-					{
-						false, -- [1]
-						77489, -- [2]
-						2486, -- [3]
-						1545368438.08, -- [4]
-						179180, -- [5]
-						"Initiate", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [12]
-					{
-						false, -- [1]
-						191840, -- [2]
-						816, -- [3]
-						1545368438.325, -- [4]
-						179180, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [13]
-					{
-						true, -- [1]
-						263334, -- [2]
-						10804, -- [3]
-						1545368438.764, -- [4]
-						168376, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [14]
-					{
-						false, -- [1]
-						119611, -- [2]
-						2265, -- [3]
-						1545368438.764, -- [4]
-						170641, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [15]
-					{
-						true, -- [1]
-						277092, -- [2]
-						4795, -- [3]
-						1545368438.957, -- [4]
-						165846, -- [5]
-						"[*] Bursting Boil", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [16]
-					{
-						4, -- [1]
-						276834, -- [2]
-						1, -- [3]
-						1545368439.471, -- [4]
-						165846, -- [5]
-						"[*] Arcing Discharge", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [17]
-					{
-						false, -- [1]
-						191840, -- [2]
-						408, -- [3]
-						1545368439.746, -- [4]
-						166254, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [18]
-					{
-						false, -- [1]
-						119611, -- [2]
-						4531, -- [3]
-						1545368440.177, -- [4]
-						170785, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [19]
-					{
-						false, -- [1]
-						270674, -- [2]
-						17525, -- [3]
-						1545368440.271, -- [4]
-						179180, -- [5]
-						"Luumii", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [20]
-					{
-						true, -- [1]
-						263334, -- [2]
-						10651, -- [3]
-						1545368440.271, -- [4]
-						168529, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [21]
-					{
-						false, -- [1]
-						210291, -- [2]
-						2310, -- [3]
-						1545368440.271, -- [4]
-						170839, -- [5]
-						"Luumii", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [22]
-					{
-						true, -- [1]
-						277092, -- [2]
-						4795, -- [3]
-						1545368440.971, -- [4]
-						166044, -- [5]
-						"[*] Bursting Boil", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [23]
-					{
-						false, -- [1]
-						270674, -- [2]
-						8762, -- [3]
-						1545368440.971, -- [4]
-						174806, -- [5]
-						"Luumii", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [24]
-					{
-						true, -- [1]
-						276834, -- [2]
-						31715, -- [3]
-						1545368440.971, -- [4]
-						143091, -- [5]
-						"[*] Arcing Discharge", -- [6]
-						nil, -- [7]
-						64, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [25]
-					{
-						false, -- [1]
-						77489, -- [2]
-						2485, -- [3]
-						1545368441.111, -- [4]
-						145576, -- [5]
-						"Initiate", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [26]
-					{
-						false, -- [1]
-						191840, -- [2]
-						408, -- [3]
-						1545368441.141, -- [4]
-						145984, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [27]
-					{
-						false, -- [1]
-						119611, -- [2]
-						2277, -- [3]
-						1545368441.59, -- [4]
-						148261, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [28]
-					{
-						true, -- [1]
-						263334, -- [2]
-						10764, -- [3]
-						1545368441.76, -- [4]
-						137497, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [29]
-					{
-						4, -- [1]
-						263227, -- [2]
-						4, -- [3]
-						1545368441.781, -- [4]
-						137497, -- [5]
-						"G'huun", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [30]
-					{
-						true, -- [1]
-						270428, -- [2]
-						20171, -- [3]
-						1545368441.781, -- [4]
-						117326, -- [5]
-						"[*] Wave of Corruption", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [31]
-					{
-						true, -- [1]
-						274577, -- [2]
-						117326, -- [3]
-						1545368441.83, -- [4]
-						1, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						16913, -- [10]
-					}, -- [32]
-					{
-						3, -- [1]
-						642, -- [2]
-						1, -- [3]
-						1545368382.01, -- [4]
-						0, -- [5]
-						"Luumii", -- [6]
-					}, -- [33]
-				},
-			}, -- [6]
-			{
-				["maxhealth"] = 166940,
-				["timeofdeath"] = 450.460999999999,
-				["name"] = "Boodyclap",
-				["time"] = 1545368441.909,
-				["class"] = "PRIEST",
-				["timestring"] = "7m 30s",
-				["events"] = {
-					{
-						false, -- [1]
-						81751, -- [2]
-						1227, -- [3]
-						1545368431.244, -- [4]
-						183620, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [1]
-					{
-						false, -- [1]
-						81751, -- [2]
-						3030, -- [3]
-						1545368431.608, -- [4]
-						183620, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [2]
-					{
-						true, -- [1]
-						263334, -- [2]
-						10844, -- [3]
-						1545368431.631, -- [4]
-						172776, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [3]
-					{
-						false, -- [1]
-						191840, -- [2]
-						985, -- [3]
-						1545368432.451, -- [4]
-						173761, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [4]
-					{
-						false, -- [1]
-						94472, -- [2]
-						2453, -- [3]
-						1545368432.584, -- [4]
-						176214, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [5]
-					{
-						false, -- [1]
-						81751, -- [2]
-						3030, -- [3]
-						1545368432.636, -- [4]
-						179244, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [6]
-					{
-						true, -- [1]
-						263334, -- [2]
-						10927, -- [3]
-						1545368433.117, -- [4]
-						168317, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [7]
-					{
-						false, -- [1]
-						191840, -- [2]
-						5000, -- [3]
-						1545368433.151, -- [4]
-						173317, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [8]
-					{
-						false, -- [1]
-						81751, -- [2]
-						5243, -- [3]
-						1545368433.423, -- [4]
-						178560, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [9]
-					{
-						false, -- [1]
-						94472, -- [2]
-						6841, -- [3]
-						1545368433.643, -- [4]
-						183620, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [10]
-					{
-						false, -- [1]
-						191840, -- [2]
-						464, -- [3]
-						1545368433.891, -- [4]
-						183620, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [11]
-					{
-						false, -- [1]
-						81751, -- [2]
-						1385, -- [3]
-						1545368433.914, -- [4]
-						183620, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [12]
-					{
-						false, -- [1]
-						81751, -- [2]
-						5918, -- [3]
-						1545368434.44, -- [4]
-						183620, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [13]
-					{
-						true, -- [1]
-						263334, -- [2]
-						10617, -- [3]
-						1545368434.642, -- [4]
-						173003, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [14]
-					{
-						false, -- [1]
-						81751, -- [2]
-						3421, -- [3]
-						1545368434.658, -- [4]
-						176424, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [15]
-					{
-						false, -- [1]
-						81751, -- [2]
-						1385, -- [3]
-						1545368435.298, -- [4]
-						177809, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [16]
-					{
-						false, -- [1]
-						191840, -- [2]
-						463, -- [3]
-						1545368435.298, -- [4]
-						178272, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [17]
-					{
-						false, -- [1]
-						94472, -- [2]
-						11836, -- [3]
-						1545368435.472, -- [4]
-						183620, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [18]
-					{
-						false, -- [1]
-						94472, -- [2]
-						6841, -- [3]
-						1545368435.669, -- [4]
-						183620, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [19]
-					{
-						false, -- [1]
-						81751, -- [2]
-						9534, -- [3]
-						1545368435.973, -- [4]
-						183620, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [20]
-					{
-						true, -- [1]
-						263334, -- [2]
-						10980, -- [3]
-						1545368436.144, -- [4]
-						172640, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [21]
-					{
-						4, -- [1]
-						267700, -- [2]
-						1, -- [3]
-						1545368436.605, -- [4]
-						172640, -- [5]
-						"G'huun", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [22]
-					{
-						false, -- [1]
-						81751, -- [2]
-						1385, -- [3]
-						1545368436.641, -- [4]
-						174025, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [23]
-					{
-						false, -- [1]
-						191840, -- [2]
-						485, -- [3]
-						1545368436.695, -- [4]
-						174510, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [24]
-					{
-						true, -- [1]
-						263334, -- [2]
-						10907, -- [3]
-						1545368437.647, -- [4]
-						163603, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [25]
-					{
-						false, -- [1]
-						191840, -- [2]
-						971, -- [3]
-						1545368438.117, -- [4]
-						164574, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [26]
-					{
-						true, -- [1]
-						263334, -- [2]
-						10910, -- [3]
-						1545368439.147, -- [4]
-						153664, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [27]
-					{
-						false, -- [1]
-						191840, -- [2]
-						486, -- [3]
-						1545368439.532, -- [4]
-						154150, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [28]
-					{
-						true, -- [1]
-						263334, -- [2]
-						10638, -- [3]
-						1545368440.638, -- [4]
-						143512, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [29]
-					{
-						false, -- [1]
-						191840, -- [2]
-						485, -- [3]
-						1545368440.922, -- [4]
-						143997, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [30]
-					{
-						true, -- [1]
-						274577, -- [2]
-						134466, -- [3]
-						1545368441.781, -- [4]
-						9531, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [31]
-					{
-						true, -- [1]
-						274577, -- [2]
-						9531, -- [3]
-						1545368441.88, -- [4]
-						1, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						128837, -- [10]
-					}, -- [32]
-					{
-						3, -- [1]
-						0, -- [2]
-						0, -- [3]
-						0, -- [4]
-						0, -- [5]
-						"Boodyclap", -- [6]
-					}, -- [33]
-				},
-			}, -- [7]
-			{
-				["maxhealth"] = 166140,
-				["timeofdeath"] = 451.468999999999,
-				["name"] = "Shenanìgans",
-				["time"] = 1545368442.917,
-				["class"] = "DEMONHUNTER",
-				["timestring"] = "7m 31s",
-				["events"] = {
-					{
-						true, -- [1]
-						263334, -- [2]
-						11373, -- [3]
-						1545368435.339, -- [4]
-						171367, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [1]
-					{
-						false, -- [1]
-						143924, -- [2]
-						3481, -- [3]
-						1545368435.406, -- [4]
-						174848, -- [5]
-						"Shenanìgans", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [2]
-					{
-						false, -- [1]
-						94472, -- [2]
-						11836, -- [3]
-						1545368435.472, -- [4]
-						182740, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [3]
-					{
-						false, -- [1]
-						94472, -- [2]
-						6841, -- [3]
-						1545368435.687, -- [4]
-						182740, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [4]
-					{
-						false, -- [1]
-						81751, -- [2]
-						9534, -- [3]
-						1545368436.005, -- [4]
-						182740, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [5]
-					{
-						false, -- [1]
-						191840, -- [2]
-						816, -- [3]
-						1545368436.173, -- [4]
-						182740, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [6]
-					{
-						4, -- [1]
-						270287, -- [2]
-						1, -- [3]
-						1545368436.272, -- [4]
-						182740, -- [5]
-						"[*] Blighted Ground", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [7]
-					{
-						false, -- [1]
-						191840, -- [2]
-						486, -- [3]
-						1545368436.338, -- [4]
-						182740, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [8]
-					{
-						false, -- [1]
-						81751, -- [2]
-						1385, -- [3]
-						1545368436.671, -- [4]
-						182740, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [9]
-					{
-						false, -- [1]
-						94472, -- [2]
-						6841, -- [3]
-						1545368436.718, -- [4]
-						182740, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [10]
-					{
-						true, -- [1]
-						263334, -- [2]
-						11621, -- [3]
-						1545368436.833, -- [4]
-						171119, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [11]
-					{
-						false, -- [1]
-						81751, -- [2]
-						4145, -- [3]
-						1545368437.388, -- [4]
-						175264, -- [5]
-						"Boodyclap", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [12]
-					{
-						false, -- [1]
-						191840, -- [2]
-						408, -- [3]
-						1545368437.514, -- [4]
-						175672, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [13]
-					{
-						false, -- [1]
-						191840, -- [2]
-						485, -- [3]
-						1545368437.741, -- [4]
-						176157, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [14]
-					{
-						false, -- [1]
-						120692, -- [2]
-						10653, -- [3]
-						1545368437.835, -- [4]
-						182740, -- [5]
-						"Initiate", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [15]
-					{
-						true, -- [1]
-						263334, -- [2]
-						11657, -- [3]
-						1545368438.325, -- [4]
-						171083, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [16]
-					{
-						false, -- [1]
-						191840, -- [2]
-						407, -- [3]
-						1545368438.883, -- [4]
-						171490, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [17]
-					{
-						false, -- [1]
-						191840, -- [2]
-						486, -- [3]
-						1545368439.189, -- [4]
-						171976, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [18]
-					{
-						true, -- [1]
-						263334, -- [2]
-						11425, -- [3]
-						1545368439.842, -- [4]
-						160551, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [19]
-					{
-						false, -- [1]
-						191840, -- [2]
-						408, -- [3]
-						1545368440.288, -- [4]
-						160959, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [20]
-					{
-						false, -- [1]
-						191840, -- [2]
-						486, -- [3]
-						1545368440.569, -- [4]
-						161445, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [21]
-					{
-						4, -- [1]
-						270287, -- [2]
-						1, -- [3]
-						1545368440.722, -- [4]
-						161445, -- [5]
-						"[*] Blighted Ground", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [22]
-					{
-						false, -- [1]
-						77489, -- [2]
-						1472, -- [3]
-						1545368440.856, -- [4]
-						162917, -- [5]
-						"Initiate", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [23]
-					{
-						true, -- [1]
-						263334, -- [2]
-						12103, -- [3]
-						1545368441.335, -- [4]
-						150814, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [24]
-					{
-						4, -- [1]
-						263227, -- [2]
-						5, -- [3]
-						1545368441.625, -- [4]
-						150814, -- [5]
-						"G'huun", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [25]
-					{
-						true, -- [1]
-						270428, -- [2]
-						16445, -- [3]
-						1545368441.625, -- [4]
-						134369, -- [5]
-						"[*] Wave of Corruption", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [26]
-					{
-						false, -- [1]
-						191840, -- [2]
-						407, -- [3]
-						1545368441.691, -- [4]
-						134776, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [27]
-					{
-						false, -- [1]
-						191840, -- [2]
-						487, -- [3]
-						1545368441.987, -- [4]
-						135263, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [28]
-					{
-						false, -- [1]
-						269279, -- [2]
-						48644, -- [3]
-						1545368442.642, -- [4]
-						135263, -- [5]
-						"Shenanìgans", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [29]
-					{
-						true, -- [1]
-						274577, -- [2]
-						117549, -- [3]
-						1545368442.642, -- [4]
-						66358, -- [5]
-						"G'huun", -- [6]
-						48644, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [30]
-					{
-						true, -- [1]
-						263334, -- [2]
-						16067, -- [3]
-						1545368442.835, -- [4]
-						50291, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [31]
-					{
-						true, -- [1]
-						274577, -- [2]
-						50291, -- [3]
-						1545368442.901, -- [4]
-						1, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						69694, -- [10]
-					}, -- [32]
-					{
-						3, -- [1]
-						196555, -- [2]
-						1, -- [3]
-						1545368333.751, -- [4]
-						0, -- [5]
-						"Shenanìgans", -- [6]
-					}, -- [33]
-				},
-			}, -- [8]
-			{
-				["maxhealth"] = 172180,
-				["timeofdeath"] = 469.982,
-				["name"] = "Gateboi",
-				["time"] = 1545368461.43,
-				["class"] = "WARLOCK",
-				["timestring"] = "7m 49s",
-				["events"] = {
-					{
-						false, -- [1]
-						143924, -- [2]
-						256, -- [3]
-						1545368455.318, -- [4]
-						45099, -- [5]
-						"Gateboi", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [1]
-					{
-						false, -- [1]
-						108366, -- [2]
-						888, -- [3]
-						1545368455.403, -- [4]
-						45099, -- [5]
-						"Gateboi", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [2]
-					{
-						false, -- [1]
-						269279, -- [2]
-						13759, -- [3]
-						1545368455.403, -- [4]
-						45099, -- [5]
-						"Gateboi", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [3]
-					{
-						true, -- [1]
-						263334, -- [2]
-						14647, -- [3]
-						1545368455.403, -- [4]
-						45099, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [4]
-					{
-						false, -- [1]
-						108366, -- [2]
-						0, -- [3]
-						1545368455.403, -- [4]
-						45099, -- [5]
-						"Gateboi", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [5]
-					{
-						false, -- [1]
-						205179, -- [2]
-						1042, -- [3]
-						1545368455.747, -- [4]
-						46141, -- [5]
-						"Gateboi", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [6]
-					{
-						false, -- [1]
-						143924, -- [2]
-						458, -- [3]
-						1545368456.519, -- [4]
-						46811, -- [5]
-						"Gateboi", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [7]
-					{
-						false, -- [1]
-						108366, -- [2]
-						2319, -- [3]
-						1545368456.9, -- [4]
-						46811, -- [5]
-						"Gateboi", -- [6]
-						true, -- [7]
-						0, -- [8]
-						true, -- [9]
-						-1, -- [10]
-					}, -- [8]
-					{
-						false, -- [1]
-						269279, -- [2]
-						3874, -- [3]
-						1545368456.9, -- [4]
-						46811, -- [5]
-						"Gateboi", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [9]
-					{
-						true, -- [1]
-						263334, -- [2]
-						14154, -- [3]
-						1545368456.9, -- [4]
-						38850, -- [5]
-						"G'huun", -- [6]
-						6193, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [10]
-					{
-						false, -- [1]
-						270117, -- [2]
-						4415, -- [3]
-						1545368456.917, -- [4]
-						43265, -- [5]
-						"Gateboi", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [11]
-					{
-						false, -- [1]
-						63106, -- [2]
-						833, -- [3]
-						1545368456.955, -- [4]
-						44098, -- [5]
-						"Gateboi", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [12]
-					{
-						false, -- [1]
-						205179, -- [2]
-						1042, -- [3]
-						1545368456.977, -- [4]
-						45140, -- [5]
-						"Gateboi", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [13]
-					{
-						false, -- [1]
-						143924, -- [2]
-						236, -- [3]
-						1545368457.75, -- [4]
-						45376, -- [5]
-						"Gateboi", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [14]
-					{
-						false, -- [1]
-						205179, -- [2]
-						947, -- [3]
-						1545368458.152, -- [4]
-						46534, -- [5]
-						"Gateboi", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						true, -- [9]
-						-1, -- [10]
-					}, -- [15]
-					{
-						false, -- [1]
-						108366, -- [2]
-						1676, -- [3]
-						1545368458.394, -- [4]
-						46534, -- [5]
-						"Gateboi", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [16]
-					{
-						true, -- [1]
-						263334, -- [2]
-						14054, -- [3]
-						1545368458.394, -- [4]
-						34156, -- [5]
-						"G'huun", -- [6]
-						1676, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [17]
-					{
-						false, -- [1]
-						108366, -- [2]
-						0, -- [3]
-						1545368458.394, -- [4]
-						34156, -- [5]
-						"Gateboi", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [18]
-					{
-						false, -- [1]
-						63106, -- [2]
-						1515, -- [3]
-						1545368458.737, -- [4]
-						35671, -- [5]
-						"Gateboi", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [19]
-					{
-						false, -- [1]
-						143924, -- [2]
-						493, -- [3]
-						1545368458.955, -- [4]
-						36164, -- [5]
-						"Gateboi", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						true, -- [9]
-						-1, -- [10]
-					}, -- [20]
-					{
-						false, -- [1]
-						205179, -- [2]
-						947, -- [3]
-						1545368459.384, -- [4]
-						37111, -- [5]
-						"Gateboi", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [21]
-					{
-						false, -- [1]
-						108366, -- [2]
-						1895, -- [3]
-						1545368459.909, -- [4]
-						37111, -- [5]
-						"Gateboi", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [22]
-					{
-						true, -- [1]
-						263334, -- [2]
-						14231, -- [3]
-						1545368459.909, -- [4]
-						24775, -- [5]
-						"G'huun", -- [6]
-						1895, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [23]
-					{
-						false, -- [1]
-						143924, -- [2]
-						177, -- [3]
-						1545368460.157, -- [4]
-						25163, -- [5]
-						"Gateboi", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [24]
-					{
-						false, -- [1]
-						205179, -- [2]
-						861, -- [3]
-						1545368460.549, -- [4]
-						26024, -- [5]
-						"Gateboi", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [25]
-					{
-						false, -- [1]
-						63106, -- [2]
-						689, -- [3]
-						1545368460.584, -- [4]
-						26713, -- [5]
-						"Gateboi", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [26]
-					{
-						4, -- [1]
-						263227, -- [2]
-						5, -- [3]
-						1545368460.584, -- [4]
-						26713, -- [5]
-						"G'huun", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [27]
-					{
-						true, -- [1]
-						270428, -- [2]
-						20063, -- [3]
-						1545368460.584, -- [4]
-						6650, -- [5]
-						"[*] Wave of Corruption", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [28]
-					{
-						false, -- [1]
-						143924, -- [2]
-						183, -- [3]
-						1545368461.391, -- [4]
-						6833, -- [5]
-						"Gateboi", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [29]
-					{
-						false, -- [1]
-						108366, -- [2]
-						1135, -- [3]
-						1545368461.409, -- [4]
-						6833, -- [5]
-						"Gateboi", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [30]
-					{
-						false, -- [1]
-						108366, -- [2]
-						0, -- [3]
-						1545368461.409, -- [4]
-						6833, -- [5]
-						"Gateboi", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [31]
-					{
-						true, -- [1]
-						263334, -- [2]
-						7968, -- [3]
-						1545368461.409, -- [4]
-						1, -- [5]
-						"G'huun", -- [6]
-						1135, -- [7]
-						40, -- [8]
-						false, -- [9]
-						9744, -- [10]
-					}, -- [32]
-					{
-						3, -- [1]
-						104773, -- [2]
-						1, -- [3]
-						1545368347.479, -- [4]
-						0, -- [5]
-						"Gateboi", -- [6]
-					}, -- [33]
-				},
-			}, -- [9]
-			{
-				["maxhealth"] = 159840,
-				["timeofdeath"] = 470.561,
-				["name"] = "Dog",
-				["time"] = 1545368462.009,
-				["class"] = "HUNTER",
-				["timestring"] = "7m 50s",
-				["events"] = {
-					{
-						false, -- [1]
-						119611, -- [2]
-						3955, -- [3]
-						1545368450.37, -- [4]
-						189006, -- [5]
-						"Dgen", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [1]
-					{
-						false, -- [1]
-						198533, -- [2]
-						2175, -- [3]
-						1545368450.487, -- [4]
-						189006, -- [5]
-						"Jade Serpent Statue <Comet>", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [2]
-					{
-						true, -- [1]
-						263334, -- [2]
-						14025, -- [3]
-						1545368450.513, -- [4]
-						174981, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [3]
-					{
-						false, -- [1]
-						191840, -- [2]
-						408, -- [3]
-						1545368451.079, -- [4]
-						175389, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [4]
-					{
-						true, -- [1]
-						277092, -- [2]
-						4788, -- [3]
-						1545368451.383, -- [4]
-						170601, -- [5]
-						"[*] Bursting Boil", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [5]
-					{
-						false, -- [1]
-						280707, -- [2]
-						1466, -- [3]
-						1545368451.658, -- [4]
-						172067, -- [5]
-						"Laniaria", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [6]
-					{
-						true, -- [1]
-						263334, -- [2]
-						14459, -- [3]
-						1545368452.015, -- [4]
-						157608, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [7]
-					{
-						false, -- [1]
-						191840, -- [2]
-						815, -- [3]
-						1545368452.473, -- [4]
-						158635, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [8]
-					{
-						true, -- [1]
-						277092, -- [2]
-						4789, -- [3]
-						1545368453.377, -- [4]
-						153846, -- [5]
-						"[*] Bursting Boil", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [9]
-					{
-						true, -- [1]
-						263334, -- [2]
-						14064, -- [3]
-						1545368453.508, -- [4]
-						139782, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [10]
-					{
-						false, -- [1]
-						191840, -- [2]
-						816, -- [3]
-						1545368453.888, -- [4]
-						140598, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [11]
-					{
-						true, -- [1]
-						263334, -- [2]
-						14391, -- [3]
-						1545368455.04, -- [4]
-						126401, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [12]
-					{
-						false, -- [1]
-						191840, -- [2]
-						815, -- [3]
-						1545368455.29, -- [4]
-						127216, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [13]
-					{
-						false, -- [1]
-						269279, -- [2]
-						4789, -- [3]
-						1545368455.36, -- [4]
-						127216, -- [5]
-						"Dog", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [14]
-					{
-						true, -- [1]
-						277092, -- [2]
-						4789, -- [3]
-						1545368455.36, -- [4]
-						127216, -- [5]
-						"[*] Bursting Boil", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [15]
-					{
-						false, -- [1]
-						269279, -- [2]
-						9694, -- [3]
-						1545368456.519, -- [4]
-						127418, -- [5]
-						"Dog", -- [6]
-						true, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [16]
-					{
-						true, -- [1]
-						263334, -- [2]
-						14494, -- [3]
-						1545368456.519, -- [4]
-						122618, -- [5]
-						"G'huun", -- [6]
-						9694, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [17]
-					{
-						false, -- [1]
-						191840, -- [2]
-						815, -- [3]
-						1545368456.681, -- [4]
-						123433, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [18]
-					{
-						true, -- [1]
-						277092, -- [2]
-						4788, -- [3]
-						1545368457.424, -- [4]
-						118645, -- [5]
-						"[*] Bursting Boil", -- [6]
-						nil, -- [7]
-						32, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [19]
-					{
-						true, -- [1]
-						263334, -- [2]
-						14218, -- [3]
-						1545368458.01, -- [4]
-						104427, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [20]
-					{
-						false, -- [1]
-						191840, -- [2]
-						408, -- [3]
-						1545368458.106, -- [4]
-						104835, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [21]
-					{
-						4, -- [1]
-						267700, -- [2]
-						1, -- [3]
-						1545368458.517, -- [4]
-						105046, -- [5]
-						"G'huun", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [22]
-					{
-						4, -- [1]
-						276834, -- [2]
-						1, -- [3]
-						1545368458.955, -- [4]
-						105046, -- [5]
-						"[*] Arcing Discharge", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [23]
-					{
-						false, -- [1]
-						191840, -- [2]
-						816, -- [3]
-						1545368459.514, -- [4]
-						105853, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [24]
-					{
-						true, -- [1]
-						263334, -- [2]
-						14140, -- [3]
-						1545368459.514, -- [4]
-						91713, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [25]
-					{
-						4, -- [1]
-						263227, -- [2]
-						5, -- [3]
-						1545368460.141, -- [4]
-						91713, -- [5]
-						"G'huun", -- [6]
-						false, -- [7]
-						false, -- [8]
-						false, -- [9]
-						false, -- [10]
-					}, -- [26]
-					{
-						true, -- [1]
-						270428, -- [2]
-						20013, -- [3]
-						1545368460.141, -- [4]
-						71700, -- [5]
-						"[*] Wave of Corruption", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [27]
-					{
-						true, -- [1]
-						276834, -- [2]
-						31995, -- [3]
-						1545368460.454, -- [4]
-						39916, -- [5]
-						"[*] Arcing Discharge", -- [6]
-						nil, -- [7]
-						64, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [28]
-					{
-						false, -- [1]
-						191840, -- [2]
-						408, -- [3]
-						1545368460.92, -- [4]
-						40324, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [29]
-					{
-						true, -- [1]
-						263334, -- [2]
-						17517, -- [3]
-						1545368461.026, -- [4]
-						22807, -- [5]
-						"G'huun", -- [6]
-						nil, -- [7]
-						40, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [30]
-					{
-						false, -- [1]
-						191840, -- [2]
-						331, -- [3]
-						1545368461.717, -- [4]
-						23138, -- [5]
-						"Comet", -- [6]
-						nil, -- [7]
-						0, -- [8]
-						false, -- [9]
-						-1, -- [10]
-					}, -- [31]
-					{
-						true, -- [1]
-						276834, -- [2]
-						23138, -- [3]
-						1545368461.977, -- [4]
-						1, -- [5]
-						"[*] Arcing Discharge", -- [6]
-						nil, -- [7]
-						64, -- [8]
-						false, -- [9]
-						8857, -- [10]
-					}, -- [32]
-					{
-						3, -- [1]
-						186265, -- [2]
-						1, -- [3]
-						1545368377.6, -- [4]
-						0, -- [5]
-						"Dog", -- [6]
-					}, -- [33]
-				},
-			}, -- [10]
 		},
-		["bossname"] = "G'huun",
+		["bossname"] = "Zul",
 		["bossicon"] = {
-			0.75, -- [1]
-			1, -- [2]
+			0.25, -- [1]
+			0.5, -- [2]
 			0.25, -- [3]
 			0.5, -- [4]
 			"Interface\\AddOns\\Details\\images\\raid\\UldirRaid_BossFaces", -- [5]
 		},
-		["date"] = 12457.309,
-		["timeelapsed"] = 484.097000000002,
+		["date"] = 14173.043,
+		["timeelapsed"] = 183.447,
 	}, -- [2]
 }
 DeathGraphsDBGraph = {
@@ -24608,15 +22429,27 @@ DeathGraphsDBGraph = {
 			[324] = {
 				1543894148, -- [1]
 			},
+			[270] = {
+				1546039248, -- [1]
+			},
 			[236] = {
 				1543289789, -- [1]
 				1543289789, -- [2]
+			},
+			[68] = {
+				1543289406, -- [1]
+				1543289406, -- [2]
+				1543289406, -- [3]
+				1543289406, -- [4]
 			},
 			[124] = {
 				1545204324, -- [1]
 			},
 			[95] = {
 				1543894148, -- [1]
+			},
+			[288] = {
+				1545788816, -- [1]
 			},
 			[18] = {
 				1540351694, -- [1]
@@ -24627,20 +22460,20 @@ DeathGraphsDBGraph = {
 			[365] = {
 				1545204902, -- [1]
 			},
+			[320] = {
+				1545204902, -- [1]
+			},
 			[210] = {
 				1543289789, -- [1]
 			},
-			[68] = {
-				1543289406, -- [1]
-				1543289406, -- [2]
-				1543289406, -- [3]
-				1543289406, -- [4]
+			[211] = {
+				1544426731, -- [1]
 			},
-			[288] = {
-				1545788816, -- [1]
+			[273] = {
+				1546039248, -- [1]
 			},
-			[271] = {
-				1545788816, -- [1]
+			[100] = {
+				1540351694, -- [1]
 			},
 			[133] = {
 				1545204324, -- [1]
@@ -24648,7 +22481,7 @@ DeathGraphsDBGraph = {
 			[137] = {
 				1543289789, -- [1]
 			},
-			[100] = {
+			[318] = {
 				1540351694, -- [1]
 			},
 			[121] = {
@@ -24670,11 +22503,11 @@ DeathGraphsDBGraph = {
 			[134] = {
 				1545204324, -- [1]
 			},
+			[102] = {
+				1546039248, -- [1]
+			},
 			[169] = {
 				1545204902, -- [1]
-			},
-			[318] = {
-				1540351694, -- [1]
 			},
 			[106] = {
 				1545204013, -- [1]
@@ -24683,16 +22516,17 @@ DeathGraphsDBGraph = {
 			[292] = {
 				1545788816, -- [1]
 			},
-			[211] = {
-				1544426731, -- [1]
-			},
-			[320] = {
-				1545204902, -- [1]
+			[269] = {
+				1546039248, -- [1]
 			},
 			[126] = {
 				1545204013, -- [1]
 				1545204013, -- [2]
 				1545204324, -- [3]
+			},
+			[271] = {
+				1545788816, -- [1]
+				1546039248, -- [2]
 			},
 		},
 		["spells"] = {
@@ -25458,8 +23292,8 @@ DeathGraphsDBGraph = {
 			[327] = {
 				1545280170, -- [1]
 			},
-			[325] = {
-				1545367705, -- [1]
+			[227] = {
+				1544672537, -- [1]
 			},
 			[232] = {
 				1545361006, -- [1]
@@ -25470,8 +23304,8 @@ DeathGraphsDBGraph = {
 			[470] = {
 				1545365684, -- [1]
 			},
-			[452] = {
-				1545365684, -- [1]
+			[325] = {
+				1545367705, -- [1]
 			},
 			[225] = {
 				1544675665, -- [1]
@@ -25489,13 +23323,12 @@ DeathGraphsDBGraph = {
 			[212] = {
 				1545361006, -- [1]
 			},
+			[428] = {
+				1545363706, -- [1]
+				1545366462, -- [2]
+			},
 			[301] = {
 				1545193996, -- [1]
-			},
-			[215] = {
-				1545273941, -- [1]
-				1545362451, -- [2]
-				1545365098, -- [3]
 			},
 			[258] = {
 				1545359202, -- [1]
@@ -25645,9 +23478,10 @@ DeathGraphsDBGraph = {
 				1544669523, -- [2]
 				1544669523, -- [3]
 			},
-			[428] = {
-				1545363706, -- [1]
-				1545366462, -- [2]
+			[215] = {
+				1545273941, -- [1]
+				1545362451, -- [2]
+				1545365098, -- [3]
 			},
 			[217] = {
 				1545362451, -- [1]
@@ -25670,8 +23504,8 @@ DeathGraphsDBGraph = {
 				1544674512, -- [1]
 				1545186429, -- [2]
 			},
-			[227] = {
-				1544672537, -- [1]
+			[452] = {
+				1545365684, -- [1]
 			},
 			[229] = {
 				1545193105, -- [1]
@@ -25759,6 +23593,7 @@ DeathGraphsDBGraph = {
 			},
 			[130] = {
 				1543893208, -- [1]
+				1546038783, -- [2]
 			},
 			[131] = {
 				1542619611, -- [1]
@@ -25777,6 +23612,9 @@ DeathGraphsDBGraph = {
 			[166] = {
 				1542618762, -- [1]
 				1542618762, -- [2]
+			},
+			[100] = {
+				1546038783, -- [1]
 			},
 			[167] = {
 				1540351026, -- [1]
@@ -25798,8 +23636,11 @@ DeathGraphsDBGraph = {
 				1542618444, -- [1]
 				1542618444, -- [2]
 			},
-			[104] = {
+			[147] = {
 				1543288289, -- [1]
+			},
+			[143] = {
+				1543893496, -- [1]
 			},
 			[175] = {
 				1543893496, -- [1]
@@ -25807,11 +23648,11 @@ DeathGraphsDBGraph = {
 			[144] = {
 				1542618444, -- [1]
 			},
-			[147] = {
-				1543288289, -- [1]
-			},
-			[143] = {
+			[155] = {
 				1543893496, -- [1]
+			},
+			[145] = {
+				1546038783, -- [1]
 			},
 			[246] = {
 				1540956252, -- [1]
@@ -25826,8 +23667,8 @@ DeathGraphsDBGraph = {
 				1540350723, -- [2]
 				1543288289, -- [3]
 			},
-			[155] = {
-				1543893496, -- [1]
+			[104] = {
+				1543288289, -- [1]
 			},
 		},
 		["spells"] = {
@@ -26655,8 +24496,8 @@ DeathGraphsDBGraph = {
 			[193] = {
 				1540439171, -- [1]
 			},
-			[350] = {
-				1543980683, -- [1]
+			[61] = {
+				1540436916, -- [1]
 			},
 			[98] = {
 				1540436733, -- [1]
@@ -26669,18 +24510,20 @@ DeathGraphsDBGraph = {
 				1540435774, -- [5]
 				1540436733, -- [6]
 			},
-			[121] = {
-				1540438498, -- [1]
+			[350] = {
+				1543980683, -- [1]
 			},
 			[319] = {
 				1542768260, -- [1]
 			},
-			[326] = {
-				1543980683, -- [1]
-			},
 			[58] = {
 				1540437214, -- [1]
 				1540438498, -- [2]
+			},
+			[115] = {
+				1540437214, -- [1]
+				1540437462, -- [2]
+				1540438809, -- [3]
 			},
 			[37] = {
 				1540438809, -- [1]
@@ -26766,16 +24609,14 @@ DeathGraphsDBGraph = {
 			[73] = {
 				1540436733, -- [1]
 			},
-			[115] = {
-				1540437214, -- [1]
-				1540437462, -- [2]
-				1540438809, -- [3]
+			[326] = {
+				1543980683, -- [1]
 			},
 			[40] = {
 				1540436733, -- [1]
 			},
-			[61] = {
-				1540436916, -- [1]
+			[121] = {
+				1540438498, -- [1]
 			},
 			[351] = {
 				1542768260, -- [1]
@@ -27886,15 +25727,21 @@ DeathGraphsDBGraph = {
 			[279] = {
 				1540950807, -- [1]
 			},
+			[141] = {
+				1542614722, -- [1]
+			},
 			[112] = {
 				1540950807, -- [1]
 				1542614722, -- [2]
 			},
-			[141] = {
-				1542614722, -- [1]
-			},
 			[170] = {
 				1542614722, -- [1]
+			},
+			[246] = {
+				1542615231, -- [1]
+			},
+			[102] = {
+				1540950807, -- [1]
 			},
 			[241] = {
 				1542615231, -- [1]
@@ -27902,20 +25749,17 @@ DeathGraphsDBGraph = {
 			[117] = {
 				1542615231, -- [1]
 			},
-			[102] = {
-				1540950807, -- [1]
-			},
 			[174] = {
 				1540950807, -- [1]
 			},
 			[137] = {
 				1542614722, -- [1]
 			},
-			[246] = {
-				1542615231, -- [1]
-			},
 			[252] = {
 				1542615231, -- [1]
+			},
+			[261] = {
+				1546036629, -- [1]
 			},
 		},
 		["spells"] = {
@@ -27931,13 +25775,13 @@ DeathGraphsDBGraph = {
 			[389] = {
 				1542616605, -- [1]
 			},
-			[336] = {
+			[54] = {
 				1543892361, -- [1]
 			},
 			[60] = {
 				1542616605, -- [1]
 			},
-			[54] = {
+			[198] = {
 				1543892361, -- [1]
 			},
 			[295] = {
@@ -27946,7 +25790,7 @@ DeathGraphsDBGraph = {
 			[317] = {
 				1543892361, -- [1]
 			},
-			[198] = {
+			[336] = {
 				1543892361, -- [1]
 			},
 		},
