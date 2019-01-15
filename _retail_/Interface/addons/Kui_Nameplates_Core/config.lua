@@ -39,6 +39,8 @@ local default_config = {
     target_glow_colour = { .3, .7, 1, .8 },
     mouseover_glow = false,
     mouseover_glow_colour = { .3, .7, 1, .5 },
+    mouseover_highlight = true, -- NEX
+    mouseover_highlight_opacity = .4, -- NEX
     frame_glow_size = 8,
     target_arrows = false,
     target_arrows_size = 28,
@@ -98,7 +100,6 @@ local default_config = {
     name_text = true,
     level_text = false,
     health_text = false,
-    text_vertical_offset = 0,
     name_vertical_offset = -2,
     bot_vertical_offset = -3,
 
@@ -170,6 +171,8 @@ local default_config = {
     auras_offset = 15,
     auras_decimal_threshold = 2, -- NEX
     auras_highlight_other = true, -- NEX
+    auras_cd_size = 0,
+    auras_count_size = 0,
 
     castbar_enable = true,
     castbar_colour = {.75,.75,.9},
@@ -228,8 +231,23 @@ local default_config = {
     cvar_max_distance = GetCVarDefault('nameplateMaxDistance'),
     cvar_clamp_top = GetCVarDefault('nameplateOtherTopInset'),
     cvar_clamp_bottom = GetCVarDefault('nameplateOtherBottomInset'),
+    cvar_self_clamp_top = GetCVarDefault('nameplateSelfTopInset'),
+    cvar_self_clamp_bottom = GetCVarDefault('nameplateSelfBottomInset'),
     cvar_overlap_v = GetCVarDefault('nameplateOverlapV'),
     cvar_disable_scale = true,
+    cvar_disable_alpha = true,
+    cvar_self_alpha = 1,
+    cvar_occluded_mult = GetCVarDefault('nameplateOccludedAlphaMult'),
+
+    -- point+offset variables
+    auras_cd_point_x = 1,
+    auras_cd_point_y = 1,
+    auras_cd_offset_x = -4.5,
+    auras_cd_offset_y = 3.5,
+    auras_count_point_x = 3,
+    auras_count_point_y = 3,
+    auras_count_offset_x = 5.5,
+    auras_count_offset_y = -2.5,
 }
 -- local functions #############################################################
 local function Scale(v)
@@ -363,7 +381,6 @@ configChanged.fade_avoid_mouseover = configChangedFadeRule
 local function configChangedTextOffset()
     core:configChangedTextOffset()
 end
-configChanged.text_vertical_offset = configChangedTextOffset
 configChanged.name_vertical_offset = configChangedTextOffset
 configChanged.bot_vertical_offset = configChangedTextOffset
 
@@ -506,6 +523,16 @@ configChanged.auras_purge_opposite = configChangedAuras
 configChanged.auras_side = configChangedAuras
 configChanged.auras_offset = configChangedAuras
 configChanged.auras_decimal_threshold = configChangedAuras
+configChanged.auras_cd_size = configChangedAuras
+configChanged.auras_count_size = configChangedAuras
+configChanged.auras_cd_point_x = configChangedAuras
+configChanged.auras_cd_point_y = configChangedAuras
+configChanged.auras_cd_offset_x = configChangedAuras
+configChanged.auras_cd_offset_y = configChangedAuras
+configChanged.auras_count_point_x = configChangedAuras
+configChanged.auras_count_point_y = configChangedAuras
+configChanged.auras_count_offset_x = configChangedAuras
+configChanged.auras_count_offset_y = configChangedAuras
 
 local function configChangedCastBar()
     core:SetCastBarConfig()
@@ -659,16 +686,46 @@ local function UpdateCVars()
     SetCVar('nameplateLargeTopInset',core.profile.cvar_clamp_top)
     SetCVar('nameplateOtherBottomInset',core.profile.cvar_clamp_bottom)
     SetCVar('nameplateLargeBottomInset',core.profile.cvar_clamp_bottom)
+    SetCVar('nameplateSelfTopInset',core.profile.cvar_self_clamp_top)
+    SetCVar('nameplateSelfBottomInset',core.profile.cvar_self_clamp_bottom)
     SetCVar('nameplateOverlapV',core.profile.cvar_overlap_v)
+
+    SetCVar('nameplateOccludedAlphaMult',core.profile.cvar_occluded_mult)
+    SetCVar('nameplateSelfAlpha',core.profile.cvar_self_alpha)
 
     if core.profile.cvar_disable_scale then
         SetCVar('nameplateMinScale',1)
         SetCVar('nameplateMaxScale',1)
-    elseif GetCVar('nameplateMinScale') == '1' and GetCVar('nameplateMaxScale') == '1' then
+        SetCVar('nameplateLargerScale',1)
+        SetCVar('nameplateSelectedScale',1)
+        SetCVar('nameplateSelfScale',1)
+    elseif GetCVar('nameplateMinScale') == '1' and
+           GetCVar('nameplateMaxScale') == '1' and
+           GetCVar('nameplateLargerScale') == '1' and
+           GetCVar('nameplateSelectedScale') == '1' and
+           GetCVar('nameplateSelfScale') == '1'
+    then
         -- reset to defaults if the current values match ours,
         -- since i haven't provided a way to set them directly.
         SetCVar('nameplateMinScale',GetCVarDefault('nameplateMinScale'))
         SetCVar('nameplateMaxScale',GetCVarDefault('nameplateMaxScale'))
+        SetCVar('nameplateLargerScale',GetCVarDefault('nameplateLargerScale'))
+        SetCVar('nameplateSelectedScale',GetCVarDefault('nameplateSelectedScale'))
+        SetCVar('nameplateSelfScale',GetCVarDefault('nameplateSelfScale'))
+    end
+
+    if core.profile.cvar_disable_alpha then
+        SetCVar('nameplateMinAlpha',1)
+        SetCVar('nameplateMaxAlpha',1)
+        SetCVar('nameplateSelectedAlpha',1)
+    elseif GetCVar('nameplateMinAlpha') == '1' and
+           GetCVar('nameplateMaxAlpha') == '1' and
+           GetCVar('nameplateSelectedAlpha') == '1'
+    then
+        -- reset to defaults
+        SetCVar('nameplateMinAlpha',GetCVarDefault('nameplateMinAlpha'))
+        SetCVar('nameplateMaxAlpha',GetCVarDefault('nameplateMaxAlpha'))
+        SetCVar('nameplateSelectedAlpha',GetCVarDefault('nameplateSelectedAlpha'))
     end
 end
 local function configChangedCVar()
@@ -692,8 +749,13 @@ configChanged.cvar_personal_show_target = configChangedCVar
 configChanged.cvar_max_distance = configChangedCVar
 configChanged.cvar_clamp_top = configChangedCVar
 configChanged.cvar_clamp_bottom = configChangedCVar
+configChanged.cvar_self_clamp_top = configChangedCVar
+configChanged.cvar_self_clamp_bottom = configChangedCVar
 configChanged.cvar_overlap_v = configChangedCVar
 configChanged.cvar_disable_scale = configChangedCVar
+configChanged.cvar_disable_alpha = configChangedCVar
+configChanged.cvar_self_alpha = configChangedCVar
+configChanged.cvar_occluded_mult = configChangedCVar
 
 function configChanged.global_scale(v)
     configChanged.frame_glow_size(core.profile.frame_glow_size)
@@ -765,6 +827,40 @@ configLoaded.use_blizzard_personal = configChanged.use_blizzard_personal
 configLoaded.bossmod_enable = configChanged.bossmod_enable
 
 -- init config #################################################################
+function core:ConfigChanged(config,k,v)
+    self.profile = config:GetConfig()
+    self:SetLocals()
+
+    if k then
+        -- call affected key's configChanged function
+        if configChanged[k] then
+            configChanged[k](v)
+        end
+    else
+        -- profile changed;
+        -- run all configChanged functions, skipping duplicates
+        local called = {}
+        for k,f in pairs(configChanged) do
+            if not called[f] then
+                called[f] = true
+                f(core.profile[k])
+            end
+        end
+    end
+
+    if addon.debug and addon.debug_config then
+        kui.print(self:GetActiveProfile())
+    end
+
+    for i,f in addon:Frames() do
+        -- hide and re-show frames
+        if f:IsShown() then
+            local unit = f.unit
+            f.handler:OnHide() -- (this clears f.unit)
+            f.handler:OnUnitAdded(unit)
+        end
+    end
+end
 function core:InitialiseConfig()
     if KuiNameplatesCoreSaved then
         -- XXX 2.15>2.16 health display transition
@@ -816,35 +912,7 @@ function core:InitialiseConfig()
     self.config = kc:Initialise('KuiNameplatesCore',default_config)
     self.profile = self.config:GetConfig()
 
-    self.config:RegisterConfigChanged(function(self,k,v)
-        core.profile = self:GetConfig()
-        core:SetLocals()
-
-        if k then
-            -- call affected listener
-            if configChanged[k] then
-                configChanged[k](v)
-            end
-        else
-            -- profile changed; call all listeners
-            for k,f in pairs(configChanged) do
-                f(core.profile[k])
-            end
-        end
-
-        if addon.debug and addon.debug_config then
-            kui.print(self:GetActiveProfile())
-        end
-
-        for i,f in addon:Frames() do
-            -- hide and re-show frames
-            if f:IsShown() then
-                local unit = f.unit
-                f.handler:OnHide() -- (this clears f.unit)
-                f.handler:OnUnitAdded(unit)
-            end
-        end
-    end)
+    self.config:RegisterConfigChanged(self,'ConfigChanged')
 
     -- update config locals in create.lua
     self:SetLocals()

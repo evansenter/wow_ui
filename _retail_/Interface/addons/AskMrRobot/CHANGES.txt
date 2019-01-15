@@ -1,7 +1,7 @@
-changeset:   147:16d4f6a82fc6
-tag:         v69
+changeset:   151:bdf1b0c98882
+tag:         v71
 user:        yellowfive
-date:        Mon Dec 17 20:25:49 2018 -0800
-summary:     Bumped interface version for 8.1.
+date:        Thu Jan 03 13:34:56 2019 -0800
+summary:     bug fix to gear display
 
 

@@ -9,12 +9,12 @@ local _G = getfenv(0);
 local TITAN_LOCATION_ID = "Location";
 local OFFSET_X = 0.0022  --  0.0022;
 local OFFSET_Y = -0.0262  --  -0.0262;
-local cachedX = 0
-local cachedY = 0
+local cachedX = 0;
+local cachedY = 0;
 local updateTable = {TITAN_LOCATION_ID, TITAN_PANEL_UPDATE_BUTTON};
 -- ******************************** Variables *******************************
-local L = LibStub("AceLocale-3.0"):GetLocale("Titan", true)
-local AceTimer = LibStub("AceTimer-3.0")
+local L = LibStub("AceLocale-3.0"):GetLocale("Titan", true);
+local AceTimer = LibStub("AceTimer-3.0");
 local LocationTimer = nil;
 -- ******************************** Functions *******************************
 
@@ -186,9 +186,7 @@ end
 -- **************************************************************************
 function TitanPanelLocationButton_OnEvent(self, event, ...)
 	if event == "PLAYER_ENTERING_WORLD" then
-		if not TitanGetVar(TITAN_LOCATION_ID, "ShowLocOnMiniMap") and MinimapBorderTop and MinimapBorderTop:IsShown() then
-			TitanPanelLocationButton_LocOnMiniMap()
-		end
+		TitanPanelLocationButton_LocOnMiniMap()
 	end
 	if TitanGetVar(TITAN_LOCATION_ID, "UpdateWorldmap") then
 		local mapID = C_Map.GetBestMapForUnit("player")

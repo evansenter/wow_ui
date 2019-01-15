@@ -14,6 +14,7 @@ bind SHIFT-R CLICK BT4Button70:LeftButton
 bind 0 NONE
 bind - NONE
 bind = NONE
+bind CTRL-6 CLICK BT4Button32:LeftButton
 bind CTRL-7 CLICK BT4Button28:LeftButton
 bind SHIFT-1 CLICK BT4Button61:LeftButton
 bind SHIFT-2 CLICK BT4Button62:LeftButton

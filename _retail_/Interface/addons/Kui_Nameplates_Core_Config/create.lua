@@ -8,7 +8,7 @@ version:SetTextColor(.5,.5,.5)
 version:SetPoint('TOPRIGHT',-12,-10)
 version:SetText(string.format(
     L.titles.version,
-    'KuiNameplates','Kesava','2.18.2'
+    'KuiNameplates','Kesava','2.19'
 ))
 
 opt:Initialise()
@@ -42,6 +42,7 @@ function general:Initialise()
     local target_glow_colour = self:CreateColourPicker('target_glow_colour')
     local mouseover_glow = self:CreateCheckBox('mouseover_glow')
     local mouseover_glow_colour = self:CreateColourPicker('mouseover_glow_colour')
+    local mouseover_highlight = self:CreateCheckBox('mouseover_highlight')
     local target_arrows = self:CreateCheckBox('target_arrows')
     local target_arrows_size = self:CreateSlider('target_arrows_size',20,60)
 
@@ -67,7 +68,8 @@ function general:Initialise()
     target_glow_colour:SetPoint('LEFT',target_glow,'RIGHT',194,0)
     mouseover_glow:SetPoint('TOPLEFT',target_glow,'BOTTOMLEFT')
     mouseover_glow_colour:SetPoint('LEFT',mouseover_glow,'RIGHT',194,0)
-    glow_as_shadow:SetPoint('TOPLEFT',mouseover_glow,'BOTTOMLEFT')
+    mouseover_highlight:SetPoint('TOPLEFT',mouseover_glow,'BOTTOMLEFT')
+    glow_as_shadow:SetPoint('TOPLEFT',mouseover_highlight,'BOTTOMLEFT')
     target_arrows:SetPoint('TOPLEFT',glow_as_shadow,'BOTTOMLEFT',0,-20)
     target_arrows_size:SetPoint('LEFT',target_arrows,'RIGHT',184,0)
 
@@ -76,10 +78,10 @@ function general:Initialise()
     local clickthrough_friend = self:CreateCheckBox('clickthrough_friend')
     local clickthrough_enemy = self:CreateCheckBox('clickthrough_enemy')
 
-    clickthrough_sep:SetPoint('TOP',0,-280)
-    clickthrough_self:SetPoint('TOPLEFT',10,-290)
-    clickthrough_friend:SetPoint('TOPLEFT',(10+155),-290)
-    clickthrough_enemy:SetPoint('TOPLEFT',(10+155*2),-290)
+    clickthrough_sep:SetPoint('TOP',0,-305)
+    clickthrough_self:SetPoint('TOPLEFT',10,-320)
+    clickthrough_friend:SetPoint('TOPLEFT',(10+155),-320)
+    clickthrough_enemy:SetPoint('TOPLEFT',(10+155*2),-320)
 end
 -- fade rules popup ############################################################
 function fade_rules:Initialise()
@@ -242,7 +244,6 @@ function text:Initialise()
     local hidenamesCheck = self:CreateCheckBox('hide_names',true)
     local level_text = self:CreateCheckBox('level_text')
     local health_text = self:CreateCheckBox('health_text')
-    local text_vertical_offset = self:CreateSlider('text_vertical_offset',-20,20)
     local name_vertical_offset = self:CreateSlider('name_vertical_offset',-20,20)
     local bot_vertical_offset = self:CreateSlider('bot_vertical_offset',-20,20)
 
@@ -254,10 +255,6 @@ function text:Initialise()
         L.titles.dd_font_style_monochrome,
     }
 
-    text_vertical_offset:SetWidth(120)
-    name_vertical_offset:SetWidth(120)
-    bot_vertical_offset:SetWidth(120)
-
     bot_vertical_offset.enabled = function(p) return p.level_text or p.health_text end
 
     font_face:SetPoint('TOPLEFT',10,-10)
@@ -266,11 +263,10 @@ function text:Initialise()
     font_size_normal:SetPoint('TOPLEFT',10,-70)
     font_size_small:SetPoint('LEFT',font_size_normal,'RIGHT',20,0)
 
-    text_vertical_offset:SetPoint('TOPLEFT',font_size_normal,'BOTTOMLEFT',0,-30)
-    name_vertical_offset:SetPoint('LEFT',text_vertical_offset,'RIGHT',20,0)
+    name_vertical_offset:SetPoint('TOPLEFT',font_size_normal,'BOTTOMLEFT',0,-30)
     bot_vertical_offset:SetPoint('LEFT',name_vertical_offset,'RIGHT',20,0)
 
-    name_text:SetPoint('TOPLEFT',text_vertical_offset,'BOTTOMLEFT',0,-20)
+    name_text:SetPoint('TOPLEFT',name_vertical_offset,'BOTTOMLEFT',0,-20)
     hidenamesCheck:SetPoint('TOPLEFT',name_text,'BOTTOMLEFT',10,0)
 
     level_text:SetPoint('LEFT',name_text,'RIGHT',190,0)
@@ -386,7 +382,7 @@ function nameonly:Initialise()
     local guild_text_players = self:CreateCheckBox('guild_text_players')
     local title_text_players = self:CreateCheckBox('title_text_players')
     local vis_sep = self:CreateSeparator('nameonly_visibility_sep')
-    local text_sep = self:CreateSeparator('nameonly_text_sep')
+    local text_sep = self:CreateSeparator('nameonly_text_sep','text')
 
     nameonly_no_font_style.enabled = function(p) return p.nameonly end
     nameonly_health_colour.enabled = nameonly_no_font_style.enabled
@@ -487,16 +483,12 @@ function auras:Initialise()
     local auras_show_all_self = self:CreateCheckBox('auras_show_all_self')
     local auras_hide_all_other = self:CreateCheckBox('auras_hide_all_other')
     local auras_time_threshold = self:CreateSlider('auras_time_threshold',-1,180)
-    local colour_short = self:CreateColourPicker('auras_colour_short')
-    local colour_medium = self:CreateColourPicker('auras_colour_medium')
-    local colour_long = self:CreateColourPicker('auras_colour_long')
 
     auras_sort.SelectTable = {
         L.titles.dd_auras_sort_index,
         L.titles.dd_auras_sort_time,
     }
 
-    colour_short:SetWidth(135)
 
     local auras_kslc_hint = self:CreateFontString(nil,'ARTWORK','GameFontHighlight')
     auras_kslc_hint:SetTextColor(.7,.7,.7)
@@ -511,7 +503,7 @@ function auras:Initialise()
     local side = self:CreateDropDown('auras_side')
     local purge_opposite = self:CreateCheckBox('auras_purge_opposite',true)
     local offset = self:CreateSlider('auras_offset',-1,30)
-    side.SelectTable = {'Top','Bottom'} -- TODO l11n
+    side.SelectTable = {'Top','Bottom'} -- TODO l10n
 
     purge_size.enabled = function(p) return p.auras_show_purge end
     purge_opposite.enabled = function(p) return p.auras_show_purge end
@@ -530,16 +522,68 @@ function auras:Initialise()
     auras_icons_sep:SetPoint('TOP',auras_kslc_hint,'BOTTOM',0,-35)
     auras_pulsate:SetPoint('TOPLEFT',auras_icons_sep,'BOTTOMLEFT',0,-10)
     auras_centre:SetPoint('LEFT',auras_pulsate,'RIGHT',190,0)
-    colour_short:SetPoint('TOPLEFT',auras_pulsate,'BOTTOMLEFT',4,0)
-    colour_medium:SetPoint('LEFT',colour_short,'RIGHT')
-    colour_long:SetPoint('LEFT',colour_medium,'RIGHT')
-    side:SetPoint('TOPLEFT',colour_short,'BOTTOMLEFT',-4,-10)
+    side:SetPoint('TOPLEFT',auras_pulsate,'BOTTOMLEFT',-4,-10)
     purge_opposite:SetPoint('TOPLEFT',side,'BOTTOMLEFT',10,0)
     offset:SetPoint('LEFT',side,'RIGHT',10,0)
-    auras_icon_normal_size:SetPoint('TOPLEFT',auras_icons_sep,0,-170)
+    auras_icon_normal_size:SetPoint('TOPLEFT',auras_icons_sep,0,-130)
     auras_icon_minus_size:SetPoint('LEFT',auras_icon_normal_size,'RIGHT',20,0)
     auras_icon_squareness:SetPoint('TOPLEFT',auras_icon_normal_size,'BOTTOMLEFT',0,-30)
     purge_size:SetPoint('LEFT',auras_icon_squareness,'RIGHT',20,0)
+
+    local auras_text_sep = self:CreateSeparator('auras_text_sep','text')
+    local auras_cd_size = self:CreateSlider('auras_cd_size',0,20,nil,'font_size')
+    local auras_count_size = self:CreateSlider('auras_count_size',0,20,nil,'font_size')
+    local colour_short = self:CreateColourPicker('auras_colour_short')
+    local colour_medium = self:CreateColourPicker('auras_colour_medium')
+    local colour_long = self:CreateColourPicker('auras_colour_long')
+    local auras_cd_text_sep = self:CreateSeparator('auras_cd_text_sep')
+    local auras_count_text_sep = self:CreateSeparator('auras_count_text_sep')
+
+    local auras_cd_point_x = self:CreateDropDown('auras_cd_point_x','point_x')
+    local auras_cd_point_y = self:CreateDropDown('auras_cd_point_y','point_y')
+    local auras_cd_offset_x = self:CreateSlider('auras_cd_offset_x',-20,20,nil,'offset_x')
+    local auras_cd_offset_y = self:CreateSlider('auras_cd_offset_y',-20,20,nil,'offset_y')
+    local auras_count_point_x = self:CreateDropDown('auras_count_point_x','point_x')
+    local auras_count_point_y = self:CreateDropDown('auras_count_point_y','point_y')
+    local auras_count_offset_x = self:CreateSlider('auras_count_offset_x',-20,20,nil,'offset_x')
+    local auras_count_offset_y = self:CreateSlider('auras_count_offset_y',-20,20,nil,'offset_y')
+
+    local point_x_SelectTable = { 'LEFT', 'CENTER', 'RIGHT' }
+    local point_y_SelectTable = { 'TOP', 'CENTER', 'BOTTOM' }
+
+    auras_cd_point_x.SelectTable = point_x_SelectTable
+    auras_cd_point_y.SelectTable = point_y_SelectTable
+    auras_count_point_x.SelectTable = point_x_SelectTable
+    auras_count_point_y.SelectTable = point_y_SelectTable
+
+    colour_short:SetWidth(135)
+    auras_cd_point_x:SetWidth(95)
+    auras_cd_point_y:SetWidth(95)
+    auras_count_point_x:SetWidth(95)
+    auras_count_point_y:SetWidth(95)
+
+    auras_text_sep:SetPoint('TOP',0,-460)
+    colour_short:SetPoint('TOPLEFT',auras_text_sep,'BOTTOMLEFT',4,-15)
+    colour_medium:SetPoint('LEFT',colour_short,'RIGHT')
+    colour_long:SetPoint('LEFT',colour_medium,'RIGHT')
+
+    auras_cd_text_sep:SetWidth(190)
+    auras_count_text_sep:SetWidth(190)
+    auras_cd_text_sep:SetPoint('TOPLEFT',10,-540)
+    auras_count_text_sep:SetPoint('LEFT',auras_cd_text_sep,210,0)
+
+    auras_cd_size:SetPoint('TOPLEFT',colour_short,'BOTTOMLEFT',-4,-60)
+    auras_count_size:SetPoint('LEFT',auras_cd_size,'RIGHT',20,0)
+
+    auras_cd_point_x:SetPoint('TOPLEFT',auras_cd_size,'BOTTOMLEFT',0,-20)
+    auras_cd_point_y:SetPoint('LEFT',auras_cd_point_x,'RIGHT')
+    auras_cd_offset_x:SetPoint('TOPLEFT',auras_cd_point_x,'BOTTOMLEFT',0,-15)
+    auras_cd_offset_y:SetPoint('TOPLEFT',auras_cd_offset_x,'BOTTOMLEFT',0,-30)
+
+    auras_count_point_x:SetPoint('TOPLEFT',auras_count_size,'BOTTOMLEFT',0,-20)
+    auras_count_point_y:SetPoint('LEFT',auras_count_point_x,'RIGHT')
+    auras_count_offset_x:SetPoint('TOPLEFT',auras_count_point_x,'BOTTOMLEFT',0,-15)
+    auras_count_offset_y:SetPoint('TOPLEFT',auras_count_offset_x,'BOTTOMLEFT',0,-30)
 end
 -- cast bars ###################################################################
 function castbars:Initialise()
@@ -727,52 +771,79 @@ function cvars:Initialise()
     local enable = self:CreateCheckBox('cvar_enable')
     -- nameplateShowFriendlyNPCs
     local sfn = self:CreateCheckBox('cvar_show_friendly_npcs')
+    sfn.enabled = function(p) return p.cvar_enable end
     -- nameplateShowOnlyNames
     local no = self:CreateCheckBox('cvar_name_only')
+    no.enabled  = sfn.enabled
     -- nameplate{Min,Max}Scale
     local ds = self:CreateCheckBox('cvar_disable_scale')
+    ds.enabled  = sfn.enabled
     -- nameplatePersonalShowAlways
     local psa = self:CreateCheckBox('cvar_personal_show_always')
+    psa.enabled = sfn.enabled
     -- nameplatePersonalShowInCombat
     local psc = self:CreateCheckBox('cvar_personal_show_combat')
+    psc.enabled = sfn.enabled
     -- nameplatePersonalShowWithTarget
     local pst = self:CreateCheckBox('cvar_personal_show_target')
+    pst.enabled = sfn.enabled
     -- nameplateMaxDistance
     local md = self:CreateSlider('cvar_max_distance',5,100)
     md:SetValueStep(5)
+    md.enabled  = sfn.enabled
     -- nameplate{Other,Large}TopInset
     local ct = self:CreateSlider('cvar_clamp_top',-.1,.5)
     ct:SetValueStep(.01)
+    ct.enabled  = sfn.enabled
     -- nameplate{Other,Large}BottomInset
     local cb = self:CreateSlider('cvar_clamp_bottom',-.1,.5)
     cb:SetValueStep(.01)
+    cb.enabled  = sfn.enabled
+    -- nameplateSelfTopInset
+    local self_clamp_top = self:CreateSlider('cvar_self_clamp_top',-.1,.5)
+    self_clamp_top:SetValueStep(.01)
+    self_clamp_top.enabled = sfn.enabled
+    -- nameplateSelfBottomInset
+    local self_clamp_bottom = self:CreateSlider('cvar_self_clamp_bottom',-.1,.5)
+    self_clamp_bottom:SetValueStep(.01)
+    self_clamp_bottom.enabled = sfn.enabled
     -- nameplateOverlapV
     local ov = self:CreateSlider('cvar_overlap_v',0,5)
     ov:SetValueStep(.1)
-
-    sfn.enabled = function(p) return p.cvar_enable end
-    no.enabled  = sfn.enabled
-    ds.enabled  = sfn.enabled
-    psa.enabled = sfn.enabled
-    psc.enabled = sfn.enabled
-    pst.enabled = sfn.enabled
-    md.enabled  = sfn.enabled
-    ct.enabled  = sfn.enabled
-    cb.enabled  = sfn.enabled
     ov.enabled  = sfn.enabled
+    -- nameplate{Min,Max,Selected}Alpha
+    local disable_alpha = self:CreateCheckBox('cvar_disable_alpha')
+    disable_alpha.enabled = sfn.enabled
+    -- nameplateSelfAlpha
+    local self_alpha = self:CreateSlider('cvar_self_alpha',0,1)
+    self_alpha:SetWidth(120)
+    self_alpha:SetValueStep(.05)
+    self_alpha.enabled = sfn.enabled
+    -- nameplateOccludedAlphaMult
+    local occluded_mult = self:CreateSlider('cvar_occluded_mult',0,1)
+    occluded_mult:SetWidth(120)
+    occluded_mult:SetValueStep(.05)
+    occluded_mult.enabled = sfn.enabled
 
     enable:SetPoint('TOPLEFT',10,-10)
 
     sfn:SetPoint('TOPLEFT',enable,'BOTTOMLEFT',0,-10)
     no:SetPoint('TOPLEFT',sfn,'BOTTOMLEFT')
     ds:SetPoint('TOPLEFT',no,'BOTTOMLEFT')
+    disable_alpha:SetPoint('TOPLEFT',ds,'BOTTOMLEFT')
 
-    psa:SetPoint('TOPLEFT',ds,'BOTTOMLEFT',0,-10)
+    self_alpha:SetPoint('TOPLEFT',83,-170)
+    occluded_mult:SetPoint('LEFT',self_alpha,'RIGHT',14,0)
+
+    psa:SetPoint('TOPLEFT',disable_alpha,'BOTTOMLEFT',0,-65)
     psc:SetPoint('TOPLEFT',psa,'BOTTOMLEFT',0,0)
     pst:SetPoint('TOPLEFT',psc,'BOTTOMLEFT',0,0)
 
-    md:SetPoint('TOPLEFT',10,-245)
+    md:SetPoint('TOPLEFT',10,-330)
     ov:SetPoint('LEFT',md,'RIGHT',20,0)
-    ct:SetPoint('TOPLEFT',10,-295)
-    cb:SetPoint('LEFT',ct,'RIGHT',20,0)
+    ct:SetPoint('TOPLEFT',md,'BOTTOMLEFT',0,-35)
+    cb:SetPoint('TOPLEFT',ov,'BOTTOMLEFT',0,-35)
+    self_clamp_top:SetPoint('TOPLEFT',ct,'BOTTOMLEFT',0,-35)
+    self_clamp_bottom:SetPoint('TOPLEFT',cb,'BOTTOMLEFT',0,-35)
+
 end

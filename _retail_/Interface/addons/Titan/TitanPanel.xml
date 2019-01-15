@@ -35,10 +35,12 @@
 			</Anchors>
 		</ButtonText>
 		-->
+		<!-- Removed on 20181229 to deal with the new LibUIDropDownMenu
 		<Frames>
 			<Frame name="$parentRightClickMenu" inherits="L_UIDropDownMenuTemplate" hidden="true">
 			</Frame>
 		</Frames>
+		-->
 	</Button>
 
 	<!--

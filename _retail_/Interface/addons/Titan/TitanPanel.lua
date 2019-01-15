@@ -1770,8 +1770,8 @@ local function TitanPanel_MainMenu()
 	info.checked = glob --TitanAllGetVar("GlobalProfileUse")
 	info.keepShownOnClick = nil
 	L_UIDropDownMenu_AddButton(info, L_UIDROPDOWNMENU_MENU_LEVEL);
-	
-	--local player, server = TitanUtils_ParseName(TitanAllGetVar("GlobalProfileName"))
+--[[
+	local player, server = TitanUtils_ParseName(TitanAllGetVar("GlobalProfileName"))
 	info = {};
 	info.notCheckable = true
 	info.text = "   "..TitanUtils_GetGreenText(server)
@@ -1783,7 +1783,7 @@ local function TitanPanel_MainMenu()
 	info.text = "      "..TitanUtils_GetGreenText(player)
 	info.value = "player";
 	L_UIDropDownMenu_AddButton(info);
-
+--]]
 end
 
 --[[ local

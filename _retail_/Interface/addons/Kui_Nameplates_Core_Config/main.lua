@@ -106,7 +106,7 @@ function SlashCmdList.KUINAMEPLATESCORE(msg)
         end
 
         d:AddText(format('%s %d.%d%s%s%s%s',
-            '2.18.2',knp.MAJOR,knp.MINOR,
+            '2.19',knp.MAJOR,knp.MINOR,
             debug,custom,barauras,extras))
 
         d:AddText(KuiNameplatesCore.config.csv)
@@ -134,8 +134,9 @@ function SlashCmdList.KUINAMEPLATESCORE(msg)
         local k,v = strmatch(msg,'^set (.-)%s+(.-)%s*$')
         if not k or not v then
             knp:ui_print('Set config key to value. Usage: /knp set config_key value')
-            print('    Boolean: true, false. Colours: r,g,b{,a} (0.0 - 1.0).')
-            print('    Enter nil for value to reset a key to default.')
+            print('    Boolean: true, false. Colours: r,g,b[,a] (0.0 - 1.0).')
+            print('    Enter "nil" for value to reset a key to default.')
+            print('    Example: /knp set frame_width 132')
             return
         end
 
@@ -185,6 +186,18 @@ function SlashCmdList.KUINAMEPLATESCORE(msg)
 
         KuiNameplatesCore.config:SetKey(k,v)
         return
+    elseif strfind(msg,'^locale') then
+        -- set locale and reload ui
+        local new_locale = strmatch(msg,'^locale (.-)%s*$')
+        if not new_locale then
+            knp:ui_print('Switch KNP\'s config language. Usage: /knp locale new_locale')
+            print('    Enter "nil" for new_locale to reset to default.')
+            return
+        end
+        if new_locale == 'nil' then new_locale = nil end
+        KuiNameplatesCoreSaved.LOCALE = new_locale
+        ReloadUI()
+        return
     elseif msg == 'which' then
         local t = C_NamePlate.GetNamePlateForUnit('target')
         if not t then return end
@@ -229,10 +242,12 @@ do
     local L = {}
     local L_enGB = {}
     function opt:Locale(region)
+        -- for translations; initialise locale table
         assert(type(region) == 'string')
         if region == 'enGB' then
+            -- always populate enGB
             return L_enGB
-        elseif region == GetLocale() then
+        elseif region == (KuiNameplatesCoreSaved.LOCALE or GetLocale()) then
             return L
         end
     end
@@ -243,6 +258,9 @@ do
         else
             -- mixin missing translations from enGB
             for namespace,translations in pairs(L_enGB) do
+                if not L[namespace] then
+                    L[namespace] = {}
+                end
                 for key,value in pairs(translations) do
                     if not L[namespace][key] then
                         L[namespace][key] = value

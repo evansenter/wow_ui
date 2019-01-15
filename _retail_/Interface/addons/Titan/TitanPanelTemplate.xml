@@ -2,10 +2,12 @@
 ..\FrameXML\UI.xsd">
 	<Script file="TitanPanelTemplate.lua" />
 	<Button name="TitanPanelButtonTemplate" hidden="true" movable="true" virtual="true">
+		<!-- Removed on 20181229 to deal with the new LibUIDropDownMenu
 		<Frames>
 			<Frame name="$parentRightClickMenu" inherits="L_UIDropDownMenuTemplate" id="1" hidden="true">
 			</Frame>
 		</Frames>
+		-->
 		<Scripts>
 			<OnLoad>
 				TitanPanelButton_OnLoad(self);
@@ -25,10 +27,12 @@
 		</Scripts>
 	</Button>
 	<Button name="TitanPanelChildButtonTemplate" hidden="true" virtual="true">
+		<!-- Removed on 20181229 to deal with the new LibUIDropDownMenu
 		<Frames>
 			<Frame name="$parentRightClickMenu" inherits="L_UIDropDownMenuTemplate" id="1" hidden="true">
 			</Frame>
 		</Frames>
+		-->
 		<Scripts>
 			<OnLoad>
 				TitanPanelButton_OnLoad(self, true);

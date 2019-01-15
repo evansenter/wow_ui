@@ -1,5 +1,11 @@
-changeset:   763:1ae1f6b5a2c7
+changeset:   764:e68d261c6a61
 tag:         tip
+user:        Tercioo
+date:        Mon Dec 31 11:06:00 2018 -0200
+summary:     - Fixed Event Tracker tool broken on 8.1 patch.
+
+
+changeset:   763:1ae1f6b5a2c7
 user:        Tercioo
 date:        Mon Dec 17 08:14:11 2018 -0200
 summary:     - ToC and libraries update.

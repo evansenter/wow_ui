@@ -9,6 +9,13 @@ local TITAN_PERFORMANCE_ID = "Performance";
 local TITAN_PERF_FRAME_SHOW_TIME = 0.5;
 local updateTable = {TITAN_PERFORMANCE_ID, TITAN_PANEL_UPDATE_ALL};
 
+-- The LibUIDropDownMenu lib is used over the Blizzard frame
+local drop_down = "L_DropDownList" 
+
+local APP_MIN = 1
+local APP_MAX = 40
+
+
 local TITAN_FPS_THRESHOLD_TABLE = {
 	Values = { 20, 30 },
 	Colors = { RED_FONT_COLOR, NORMAL_FONT_COLOR, GREEN_FONT_COLOR },
@@ -31,7 +38,17 @@ local L = LibStub("AceLocale-3.0"):GetLocale("Titan", true)
 local AceTimer = LibStub("AceTimer-3.0")
 local PerfTimer = nil;
 -- ******************************** Functions *******************************
-
+local function CalcAppNum(val)
+	local new_val = 1 -- always monitor at least one
+	
+	if val == nil or val < APP_MIN then
+		-- keep the default min
+	else
+		-- return a value adjusted for the min
+		new_val = (APP_MAX + APP_MIN) - TitanUtils_Round(val)
+	end
+	return new_val
+end
 -- **************************************************************************
 -- NAME : TitanPanelPerformanceButton_OnLoad()
 -- DESC : Registers the plugin upon it loading
@@ -703,20 +720,27 @@ function TitanPanelPerfControlSlider_OnShow(self)
 	_G[self:GetName().."Text"]:SetText(TitanGetVar(TITAN_PERFORMANCE_ID, "NumOfAddons"));
 	_G[self:GetName().."High"]:SetText(L["TITAN_PERFORMANCE_CONTROL_LOW"]);
 	_G[self:GetName().."Low"]:SetText(L["TITAN_PERFORMANCE_CONTROL_HIGH"]);
-	self:SetMinMaxValues(1, 40);
+	self:SetMinMaxValues(APP_MIN, APP_MAX);
 	self:SetValueStep(1);
-	self:SetValue(41 - TitanGetVar(TITAN_PERFORMANCE_ID, "NumOfAddons"));
+	self:SetValue(CalcAppNum(TitanGetVar(TITAN_PERFORMANCE_ID, "NumOfAddons")));
+--	self:SetValue((TitanGetVar(TITAN_PERFORMANCE_ID, "NumOfAddons")));
 	TitanPanelPerfControlFrame:SetBackdropColor(0, 0, 0, 1)
+TitanDebug("Slider_OnShow:"
+.." : "..(self:GetValue() or "?")
+.." : "..(self:GetValueStep() or "?")
+);
 
+	local scale = _G[drop_down.."1"]:GetScale()
+	local drop_arrow = drop_down.."2Button4ExpandArrow"
 	TitanPanelPerfControlFrame:ClearAllPoints();
-	TitanPanelPerfControlFrame:SetPoint("LEFT", "DropDownList2Button4ExpandArrow","RIGHT", 9/DropDownList2Button4ExpandArrow:GetScale(),0);
+	TitanPanelPerfControlFrame:SetPoint("LEFT", drop_arrow,"RIGHT", 9/scale,0);
 	local offscreenX, offscreenY = TitanUtils_GetOffscreen(TitanPanelPerfControlFrame);
 	if offscreenX == -1 or offscreenX == 0 then
 		TitanPanelPerfControlFrame:ClearAllPoints();
-		TitanPanelPerfControlFrame:SetPoint("LEFT", "DropDownList2Button4ExpandArrow","RIGHT", 9/DropDownList2Button4ExpandArrow:GetScale(),0);
+		TitanPanelPerfControlFrame:SetPoint("LEFT", drop_arrow,"RIGHT", 9/scale,0);
 	else
 		TitanPanelPerfControlFrame:ClearAllPoints();
-		TitanPanelPerfControlFrame:SetPoint("RIGHT", "DropDownList2","LEFT", 3/DropDownList2Button4ExpandArrow:GetScale(),0);
+		TitanPanelPerfControlFrame:SetPoint("RIGHT", drop_down.."2","LEFT", 3/scale,0);
 	end
 end
 
@@ -726,8 +750,14 @@ end
 -- VARS : arg1 = positive or negative change to apply
 -- **************************************************************************
 function TitanPanelPerfControlSlider_OnValueChanged(self, a1)
-	_G[self:GetName().."Text"]:SetText(41 - self:GetValue());
-
+	local val = CalcAppNum(self:GetValue()) -- grab new value
+	
+TitanDebug("Slider_OnValueChanged:"
+.." : "..(self:GetValue() or "?")
+.." : "..(val or "?")
+);
+	_G[self:GetName().."Text"]:SetText(val);
+--[[
 	if a1 == -1 then
 		self:SetValue(self:GetValue() + 1);
 	end
@@ -735,8 +765,8 @@ function TitanPanelPerfControlSlider_OnValueChanged(self, a1)
 	if a1 == 1 then
 		self:SetValue(self:GetValue() - 1);
 	end
-
-	TitanSetVar(TITAN_PERFORMANCE_ID, "NumOfAddons", 41 - self:GetValue());
+--]]
+	TitanSetVar(TITAN_PERFORMANCE_ID, "NumOfAddons", val);
 
 	local i;
 	topAddOns = {};
@@ -762,7 +792,7 @@ function TitanPanelPerfControlSlider_OnValueChanged(self, a1)
 
 	-- Update GameTooltip
 	if (self.tooltipText) then
-		self.tooltipText = TitanOptionSlider_TooltipText(L["TITAN_PERFORMANCE_CONTROL_TOOLTIP"], 41 - self:GetValue());
+		self.tooltipText = TitanOptionSlider_TooltipText(L["TITAN_PERFORMANCE_CONTROL_TOOLTIP"], val);
 		GameTooltip:SetText(self.tooltipText, nil, nil, nil, nil, 1);
 	end
 end
@@ -783,7 +813,9 @@ end
 -- VARS : elapsed = <research>
 -- **************************************************************************
 function TitanPanelPerfControlFrame_OnUpdate(self, elapsed)
-	if not MouseIsOver(_G["TitanPanelPerfControlFrame"]) and not MouseIsOver (_G["DropDownList2Button4"]) and not MouseIsOver (_G["DropDownList2Button4ExpandArrow"]) then
+	if not MouseIsOver(_G["TitanPanelPerfControlFrame"]) 
+	and not MouseIsOver (_G[drop_down.."2Button4"]) 
+	and not MouseIsOver (_G[drop_down.."2Button4ExpandArrow"]) then
 		TitanUtils_CheckFrameCounting(self, elapsed);
 	end
 end

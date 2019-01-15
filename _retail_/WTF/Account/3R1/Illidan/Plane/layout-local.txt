@@ -13,3 +13,10 @@ X: 0
 Y: 0
 W: 365
 H: 200
+Frame: PLH_LootedItemsFrame
+FrameLevel: 1
+Anchor: CENTER
+X: 162
+Y: -143
+W: 400
+H: 140

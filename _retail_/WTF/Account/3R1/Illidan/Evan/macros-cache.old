@@ -24,7 +24,7 @@ VER 3 010000000000001B "Mana" "INV_MISC_QUESTIONMARK"
 END
 VER 3 0100000000000009 "Penance" "INV_Misc_QuestionMark"
 #showtooltip Penance
-/click [btn:1]MTSB122 LeftButton;[btn:2]MTSB122 RightButton;[btn:3]MTSB122 MiddleButton;[btn:4]MTSB122 Button4;[btn:5]MTSB122 Button5
+/use [@mouseover,harm,nodead][harm,nodead][@mouseovertarget,harm,nodead][]Penance
 END
 VER 3 0100000000000028 "PoH" "INV_Misc_QuestionMark"
 #showtooltip

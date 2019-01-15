@@ -28,9 +28,7 @@ AdiBagsDB = {
 		},
 		["AdiBags_TooltipInfo"] = {
 		},
-		["MoneyFrame"] = {
-		},
-		["DataSource"] = {
+		["Equipment"] = {
 		},
 		["ItemSets"] = {
 		},
@@ -42,28 +40,30 @@ AdiBagsDB = {
 						["Elder Charm of Good Fortune"] = false,
 						["Nethershard"] = false,
 						["Valor"] = false,
+						["Seafarer's Dubloon"] = false,
 						["Illustrious Jewelcrafter's Token"] = false,
 						["Curious Coin"] = false,
 						["Order Resources"] = false,
 						["Veiled Argunite"] = false,
 						["Warforged Seal"] = false,
+						["Honorbound Service Medal"] = false,
 						["Seal of Broken Fate"] = false,
 						["Mogu Rune of Fate"] = false,
 						["Timewarped Badge"] = false,
-						["Oil"] = false,
-						["Garrison Resources"] = false,
-						["Seal of Inevitable Fate"] = false,
-						["Lesser Charm of Good Fortune"] = false,
+						["Ancient Mana"] = false,
+						["Tol Barad Commendation"] = false,
+						["Mote of Darkness"] = false,
+						["Ironpaw Token"] = false,
 						["Seal of Tempered Fate"] = false,
-						["Timeless Coin"] = false,
-						["Sightless Eye"] = false,
 						["Wakening Essence"] = false,
+						["Sightless Eye"] = false,
+						["Timeless Coin"] = false,
 						["Essence of Corrupted Deathwing"] = false,
 						["Apexis Crystal"] = false,
-						["Ironpaw Token"] = false,
-						["Mote of Darkness"] = false,
-						["Tol Barad Commendation"] = false,
-						["Ancient Mana"] = false,
+						["Lesser Charm of Good Fortune"] = false,
+						["Seal of Inevitable Fate"] = false,
+						["Garrison Resources"] = false,
+						["Oil"] = false,
 						["Lingering Soul Fragment"] = false,
 						["Legionfall War Supplies"] = false,
 					},
@@ -74,18 +74,20 @@ AdiBagsDB = {
 				},
 			},
 		},
+		["DataSource"] = {
+		},
 		["Junk"] = {
 		},
-		["Equipment"] = {
+		["MoneyFrame"] = {
 		},
 	},
 	["profileKeys"] = {
 		["Cometstorm - Illidan"] = "Comet - Illidan",
 		["Ereinion - Dark Iron"] = "Default",
 		["Comet - Illidan"] = "Comet - Illidan",
-		["Plane - Illidan"] = "Default",
-		["Evan - Illidan"] = "Comet - Illidan",
 		["Combustion - Illidan"] = "Comet - Illidan",
+		["Evan - Illidan"] = "Comet - Illidan",
+		["Plane - Illidan"] = "Default",
 	},
 	["profiles"] = {
 		["Default"] = {

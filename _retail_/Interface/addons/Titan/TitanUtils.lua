@@ -16,6 +16,8 @@ local _G = getfenv(0);
 local L = LibStub("AceLocale-3.0"):GetLocale(TITAN_ID, true)
 local media = LibStub("LibSharedMedia-3.0")
 
+-- The LibUIDropDownMenu lib is used over the Blizzard frame
+local drop_down_1 = "L_DropDownList1" 
 --
 -- The routines labeled API are useable by addon developers
 --
@@ -334,6 +336,22 @@ function TitanUtils_Max(a, b)
 	if (a and b) then
 		return TitanUtils_Ternary((a > b), a, b);
 ---		return ( a > b ) and a or b
+	end
+end
+
+--[[ API
+NAME: TitanUtils_Round
+DESC: Return the nearest integer
+VAR: v - a value
+OUT: 
+- value of nearest integer
+--]]
+function TitanUtils_Round(v)
+	local f = math.floor(v)
+	if v == f then 
+		return f
+	else 
+		return math.floor(v + 0.5)
 	end
 end
 
@@ -1184,6 +1202,12 @@ function TitanUtils_PluginToRegister(self, isChildButton)
 		plugin_type = "",
 		notes = notes,
 	}
+	
+	--[[ For updated menu lib (Dec 2018)
+	Old way was to use the XML file to declare the frame, now it needs to be in Lua
+	<Frame name="$parentRightClickMenu" inherits="L_UIDropDownMenuTemplate" id="1" hidden="true"></Frame>
+	--]]
+	local f = L_Create_UIDropDownMenu(self:GetName().."RightClickMenu", self)
 end
 
 --[[ Titan
@@ -1453,8 +1477,8 @@ VAR:  None
 OUT:  None
 --]]
 function TitanUtils_CloseRightClickMenu()
-	if (DropDownList1:IsVisible()) then
-		DropDownList1:Hide();
+	if (_G["DropDownList1"]:IsVisible()) then
+		_G["DropDownList1"]:Hide();
 	end
 end
 
@@ -1470,7 +1494,7 @@ OUT:
 --]]
 local function TitanRightClick_UIScale()
 	-- take UI Scale into consideration
-	local listFrame = _G["DropDownList1"];
+	local listFrame = _G[drop_down_1];
 	local listframeScale = listFrame:GetScale();
 
 	local uiScale;
@@ -1593,20 +1617,6 @@ function TitanPanelRightClickMenu_Toggle(self, isChildButton)
 	x, y, scale = TitanRightClick_UIScale()
 
 	L_ToggleDropDownMenu(1, nil, menu, frame, TitanUtils_Max(x - 40, 0), 0, nil, self);
---[[ was not used...
-	local listFrame = _G["DropDownList"..L_UIDROPDOWNMENU_MENU_LEVEL];
-	local offscreenX, offscreenY = TitanUtils_GetOffscreen(listFrame);
-
-	if offscreenX == 1 then
-		if position == TITAN_PANEL_PLACE_TOP then
-			listFrame:ClearAllPoints();
-			listFrame:SetPoint("TOPRIGHT", frame, "BOTTOMLEFT", x, 0);
-		else
-			listFrame:ClearAllPoints();
-			listFrame:SetPoint("BOTTOMRIGHT", frame, "TOPLEFT", x, 0);
-		end
-	end
---]]
 end
 
 --[[ Titan
@@ -1637,7 +1647,19 @@ function TitanPanelDisplayRightClickMenu_Toggle(self, isChildButton)
 	local x, y, scale
 	local menu
 
-	menu = _G[frame.."RightClickMenu"];
+	-- Per updated menu lib LibUIDropDownMenu Dec 2018
+	-- This could have been done in some initialize code but here it can react 
+	-- better to future Titan frame code changes
+	desired_frame = frame.."RightClickMenu"
+	if _G[desired_frame] then
+		-- all is good - frame exists
+	else
+		-- need to create the frame
+		-- The _G is needed but it is explicit & shows what needs to done
+		_G[desired_frame] = L_Create_UIDropDownMenu(desired_frame, self)
+	end
+	menu = _G[desired_frame];
+	
 	-- Initialize the DropDown Menu if not already initialized
 	TitanDisplayRightClickMenu_OnLoad(menu, "TitanPanelRightClickMenu_PrepareBarMenu")
 
@@ -1652,20 +1674,6 @@ function TitanPanelDisplayRightClickMenu_Toggle(self, isChildButton)
 	x, y, scale = TitanRightClick_UIScale()
 
 	L_ToggleDropDownMenu(1, nil, menu, frame, TitanUtils_Max(x - 40, 0), 0, nil, self)
-
---[[ was not used...
-	local listFrame = _G["DropDownList"..L_UIDROPDOWNMENU_MENU_LEVEL];
-	local offscreenX, offscreenY = TitanUtils_GetOffscreen(listFrame);
-	if offscreenX == 1 then
-		if position == TITAN_PANEL_PLACE_TOP then
-			listFrame:ClearAllPoints();
-			listFrame:SetPoint("TOPRIGHT", frame, "BOTTOMLEFT", x, 0);
-		else
-			listFrame:ClearAllPoints();
-			listFrame:SetPoint("BOTTOMRIGHT", frame, "TOPLEFT", x, 0);
-		end
-	end
---]]
 end
 
 --[[ Titan
@@ -1676,7 +1684,7 @@ OUT:
 - true (IsVisible) or false
 --]]
 function TitanPanelRightClickMenu_IsVisible()
-	return _G["DropDownList1"]:IsVisible();
+	return _G[drop_down_1]:IsVisible();
 end
 
 --[[ Titan
@@ -1686,8 +1694,8 @@ VAR:  None
 OUT:  None
 --]]
 function TitanPanelRightClickMenu_Close()
-	if _G["DropDownList1"]:IsVisible() then
-		_G["DropDownList1"]:Hide()
+	if _G[drop_down_1]:IsVisible() then
+		_G[drop_down_1]:Hide()
 	end
 end
 
@@ -1892,7 +1900,7 @@ function TitanDebug(debug_message, debug_type)
 		..dtype
 		..TitanUtils_GetGreenText(debug_message)
 
-	if TitanAllGetVar("Silenced") then
+	if not TitanAllGetVar("Silenced") then
 		_G["DEFAULT_CHAT_FRAME"]:AddMessage(msg)
 	end
 --	Debug_array(msg)

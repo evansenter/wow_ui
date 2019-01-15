@@ -5,9 +5,9 @@ SubSpecStorage = {
 			["name"] = "Raiding",
 			["data"] = {
 				{
-					["id"] = 22313,
-					["name"] = "Twist of Fate",
-					["column"] = 2,
+					["id"] = 22329,
+					["name"] = "Schism",
+					["column"] = 3,
 				}, -- [1]
 				{
 					["id"] = 19758,
@@ -229,9 +229,9 @@ SubSpecStorage = {
 					["column"] = 3,
 				}, -- [4]
 				{
-					["id"] = 20175,
-					["name"] = "Dampen Harm",
-					["column"] = 3,
+					["id"] = 20173,
+					["name"] = "Diffuse Magic",
+					["column"] = 2,
 				}, -- [5]
 				{
 					["id"] = 23107,
@@ -294,9 +294,9 @@ SubSpecStorage = {
 					["column"] = 3,
 				}, -- [1]
 				{
-					["id"] = 19302,
-					["name"] = "Tiger's Lust",
-					["column"] = 3,
+					["id"] = 19818,
+					["name"] = "Chi Torpedo",
+					["column"] = 2,
 				}, -- [2]
 				{
 					["id"] = 22167,
@@ -309,9 +309,9 @@ SubSpecStorage = {
 					["column"] = 3,
 				}, -- [4]
 				{
-					["id"] = 20175,
-					["name"] = "Dampen Harm",
-					["column"] = 3,
+					["id"] = 20173,
+					["name"] = "Diffuse Magic",
+					["column"] = 2,
 				}, -- [5]
 				{
 					["id"] = 23107,

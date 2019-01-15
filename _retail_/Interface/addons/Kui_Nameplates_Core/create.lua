@@ -59,15 +59,20 @@ local UnitIsPlayer,UnitShouldDisplayName,
 local KUI_MEDIA = 'interface/addons/kui_media/'
 local MEDIA = 'interface/addons/kui_nameplates_core/media/'
 
+-- global enum tables (XXX used by auras only at the moment)
+local POINT_X_ASSOC = { 'LEFT', 'CENTER', 'RIGHT' }
+local POINT_Y_ASSOC = { 'TOP', 'CENTER', 'BOTTOM' }
+
 local FRAME_WIDTH,FRAME_HEIGHT,FRAME_WIDTH_MINUS,FRAME_HEIGHT_MINUS,
       FRAME_WIDTH_PERSONAL,FRAME_HEIGHT_PERSONAL,POWER_BAR_HEIGHT,
       FONT,FONT_STYLE,FONT_SHADOW,FONT_SIZE_NORMAL,
-      FONT_SIZE_SMALL,TEXT_VERTICAL_OFFSET,NAME_VERTICAL_OFFSET,
+      FONT_SIZE_SMALL,NAME_VERTICAL_OFFSET,
       BOT_VERTICAL_OFFSET,BAR_TEXTURE,BAR_ANIMATION,
       SHOW_HEALTH_TEXT,SHOW_NAME_TEXT,SHOW_ARENA_ID,GUILD_TEXT_NPCS,
       GUILD_TEXT_PLAYERS,TITLE_TEXT_PLAYERS,HEALTH_TEXT_FRIEND_MAX,
       HEALTH_TEXT_FRIEND_DMG,HEALTH_TEXT_HOSTILE_MAX,HEALTH_TEXT_HOSTILE_DMG,
-      HIDE_NAMES,GLOBAL_SCALE,FRAME_VERTICAL_OFFSET
+      HIDE_NAMES,GLOBAL_SCALE,FRAME_VERTICAL_OFFSET,
+      MOUSEOVER_HIGHLIGHT,HIGHLIGHT_OPACITY
 
 local FADE_UNTRACKED,FADE_AVOID_NAMEONLY,FADE_AVOID_MOUSEOVER,
       FADE_AVOID_TRACKED,FADE_AVOID_COMBAT,FADE_AVOID_CASTING
@@ -163,7 +168,8 @@ local function UpdateFontObject(object)
     if not object then return end
     object:SetFont(
         FONT,
-        object.fontobject_small and FONT_SIZE_SMALL or FONT_SIZE_NORMAL,
+        object.fontobject_size or (object.fontobject_small and
+         FONT_SIZE_SMALL or FONT_SIZE_NORMAL),
         not object.fontobject_no_style and FONT_STYLE or nil
     )
 
@@ -189,6 +195,18 @@ local function Scale(v)
 end
 local function ScaleTextOffset(v)
     return floor(Scale(v)) - .5
+end
+local function ResolvePointPair(x,y)
+    -- convert x/y to single point
+    if x == 2 and y == 2 then
+        return 'CENTER'
+    elseif x == 2 then
+        return POINT_Y_ASSOC[y]
+    elseif y == 2 then
+        return POINT_X_ASSOC[x]
+    else
+        return POINT_Y_ASSOC[y]..POINT_X_ASSOC[x]
+    end
 end
 -- config functions ############################################################
 do
@@ -219,6 +237,8 @@ do
         TARGET_GLOW_COLOUR = self.profile.target_glow_colour
         MOUSEOVER_GLOW = self.profile.mouseover_glow
         MOUSEOVER_GLOW_COLOUR = self.profile.mouseover_glow_colour
+        MOUSEOVER_HIGHLIGHT = self.profile.mouseover_highlight
+        HIGHLIGHT_OPACITY = self.profile.mouseover_highlight_opacity
         GLOW_AS_SHADOW = self.profile.glow_as_shadow
 
         THREAT_BRACKETS = self.profile.threat_brackets
@@ -236,9 +256,8 @@ do
         FRAME_GLOW_SIZE = Scale(self.profile.frame_glow_size)
         FRAME_GLOW_THREAT = self.profile.frame_glow_threat
 
-        TEXT_VERTICAL_OFFSET = self.profile.text_vertical_offset
-        NAME_VERTICAL_OFFSET = ScaleTextOffset(TEXT_VERTICAL_OFFSET+self.profile.name_vertical_offset)
-        BOT_VERTICAL_OFFSET = ScaleTextOffset(TEXT_VERTICAL_OFFSET+self.profile.bot_vertical_offset)
+        NAME_VERTICAL_OFFSET = ScaleTextOffset(self.profile.name_vertical_offset)
+        BOT_VERTICAL_OFFSET = ScaleTextOffset(self.profile.bot_vertical_offset)
 
         FONT_STYLE = FONT_STYLE_ASSOC[self.profile.font_style]
         FONT_SHADOW = self.profile.font_style == 3 or self.profile.font_style == 4
@@ -307,36 +326,26 @@ function core:configChangedTextOffset()
         if f.Auras and f.Auras.frames then
             -- update aura text
             for _,frame in pairs(f.Auras.frames) do
-                if frame.__core then
-                    for _,button in ipairs(frame.buttons) do
-                        self.Auras_PostCreateAuraButton(frame,button)
-                    end
+                for _,button in ipairs(frame.buttons) do
+                    self.Auras_PostCreateAuraButton(frame,button)
                 end
             end
         end
     end
 end
-do
-    function core.AurasButton_SetFont(button)
-        UpdateFontObject(button.cd)
-        UpdateFontObject(button.count)
-    end
-    function core:configChangedFontOption()
-        -- update font objects
-        for i,f in addon:Frames() do
-            UpdateFontObject(f.NameText)
-            UpdateFontObject(f.GuildText)
-            UpdateFontObject(f.SpellName)
-            UpdateFontObject(f.HealthText)
-            UpdateFontObject(f.LevelText)
+function core:configChangedFontOption()
+    -- update font objects
+    for i,f in addon:Frames() do
+        UpdateFontObject(f.NameText)
+        UpdateFontObject(f.GuildText)
+        UpdateFontObject(f.SpellName)
+        UpdateFontObject(f.HealthText)
+        UpdateFontObject(f.LevelText)
 
-            if f.Auras and f.Auras.frames then
-                for _,frame in pairs(f.Auras.frames) do
-                    if frame.__core then
-                        for _,button in ipairs(frame.buttons) do
-                            self.AurasButton_SetFont(button)
-                        end
-                    end
+        if f.Auras and f.Auras.frames then
+            for _,frame in pairs(f.Auras.frames) do
+                for _,button in ipairs(frame.buttons) do
+                    self.AurasButton_SetFont(button)
                 end
             end
         end
@@ -388,25 +397,18 @@ end
 local function UpdateFrameSize(f)
     -- set frame size and position
     if f.state.minus then
-        f:SetSize(FRAME_WIDTH_MINUS+10,FRAME_HEIGHT_MINUS+20)
-        f.bg:SetSize(FRAME_WIDTH_MINUS,FRAME_HEIGHT_MINUS)
+        f:SetSize(FRAME_WIDTH_MINUS,FRAME_HEIGHT_MINUS)
     elseif f.state.personal then
-        f:SetSize(FRAME_WIDTH_PERSONAL+10,FRAME_HEIGHT_PERSONAL+20)
-        f.bg:SetSize(FRAME_WIDTH_PERSONAL,FRAME_HEIGHT_PERSONAL)
+        f:SetSize(FRAME_WIDTH_PERSONAL,FRAME_HEIGHT_PERSONAL)
     else
-        f:SetSize(FRAME_WIDTH+10,FRAME_HEIGHT+20)
-        f.bg:SetSize(FRAME_WIDTH,FRAME_HEIGHT)
+        f:SetSize(FRAME_WIDTH,FRAME_HEIGHT)
     end
 
     if f.state.no_name and not f.state.personal then
-        f.bg:SetHeight(FRAME_HEIGHT_MINUS)
+        f:SetHeight(FRAME_HEIGHT_MINUS)
     end
 
-    -- calculate point to remain pixel-perfect
-    f.x = floor((f:GetWidth() / 2) - (f.bg:GetWidth() / 2))
-    f.y = floor((f:GetHeight() / 2) - (f.bg:GetHeight() / 2))
-
-    f.bg:SetPoint('BOTTOMLEFT',f.x,f.y + FRAME_VERTICAL_OFFSET)
+    f:SetPoint('CENTER',0,FRAME_VERTICAL_OFFSET)
 
     f:UpdateMainBars()
     f:SpellIconSetWidth()
@@ -416,6 +418,11 @@ function core:CreateBackground(f)
     local bg = f:CreateTexture(nil,'BACKGROUND',nil,1)
     bg:SetTexture(kui.m.t.solid)
     bg:SetVertexColor(0,0,0,.9)
+    bg:SetAllPoints(f)
+
+    -- in UpdateFrameSize,
+    -- we override the frame position + size to use it as the background
+    f:ClearAllPoints()
 
     f.bg = bg
     f.UpdateFrameSize = UpdateFrameSize
@@ -423,7 +430,19 @@ end
 -- highlight ###################################################################
 do
     local function UpdateHighlight(f)
-        -- run functions which depend on f.state.highlight
+        if MOUSEOVER_HIGHLIGHT then
+            if not f.Highlight then
+                core:CreateHighlight(f)
+            end
+
+            f.Highlight:SetVertexColor(1,1,1,HIGHLIGHT_OPACITY)
+            f.handler:EnableElement('Highlight')
+        elseif f.Highlight and f.elements.Highlight then
+            f.handler:DisableElement('Highlight')
+        end
+
+        -- functions which depend on f.state.glow from Highlight
+        -- (which is set regardless of the element being enabled)
         if MOUSEOVER_GLOW then
             f:UpdateFrameGlow()
         end
@@ -431,15 +450,16 @@ do
             plugin_fading:UpdateFrame(f)
         end
     end
-    function core:CreateHighlight(f) -- Always created
+    function core:CreateHighlight(f)
+        f.UpdateHighlight = UpdateHighlight
+
+        if not MOUSEOVER_HIGHLIGHT then return end
+
         local highlight = f.HealthBar:CreateTexture(nil,'ARTWORK',nil,2)
         highlight:SetTexture(BAR_TEXTURE)
         highlight:SetAllPoints(f.HealthBar)
-        highlight:SetVertexColor(1,1,1,.4)
         highlight:SetBlendMode('ADD')
         highlight:Hide()
-
-        f.UpdateHighlight = UpdateHighlight
 
         f.handler:RegisterElement('Highlight',highlight)
     end
@@ -714,7 +734,7 @@ do
             f.LevelText:ClearAllPoints()
 
             if f.state.no_name then
-                f.LevelText:SetPoint('LEFT',2,TEXT_VERTICAL_OFFSET)
+                f.LevelText:SetPoint('LEFT',2,0)
             else
                 f.LevelText:SetPoint('BOTTOMLEFT',2,BOT_VERTICAL_OFFSET)
             end
@@ -781,7 +801,7 @@ do
             f.HealthText:ClearAllPoints()
 
             if f.state.no_name then
-                f.HealthText:SetPoint('RIGHT',-2,TEXT_VERTICAL_OFFSET)
+                f.HealthText:SetPoint('RIGHT',-2,0)
             else
                 f.HealthText:SetPoint('BOTTOMRIGHT',-2,BOT_VERTICAL_OFFSET)
             end
@@ -1180,7 +1200,7 @@ do
     end
     local function UpdateSpellNamePosition(f)
         if not f.SpellName then return end
-        f.SpellName:SetPoint('TOP',f.CastBar,'BOTTOM',0,CASTBAR_NAME_VERTICAL_OFFSET+TEXT_VERTICAL_OFFSET)
+        f.SpellName:SetPoint('TOP',f.CastBar,'BOTTOM',0,CASTBAR_NAME_VERTICAL_OFFSET)
     end
     local function UpdateCastbarSize(f)
         -- called by CreateCastBar, SetCastBarConfig
@@ -1451,7 +1471,13 @@ do
           AURAS_HIDE_ALL_OTHER,AURAS_PURGE_SIZE,AURAS_SHOW_PURGE,AURAS_SIDE,
           AURAS_OFFSET,AURAS_POINT_S,AURAS_POINT_R,PURGE_POINT_S,PURGE_POINT_R,
           PURGE_OFFSET,AURAS_Y_SPACING,AURAS_TIMER_THRESHOLD,
-          AURAS_PURGE_OPPOSITE,AURAS_HIGHLIGHT_OTHER
+          AURAS_PURGE_OPPOSITE,AURAS_HIGHLIGHT_OTHER,
+          AURAS_CD_SIZE,AURAS_COUNT_SIZE
+
+    local AURAS_CD_POINT_X,AURAS_CD_POINT_Y,
+          AURAS_CD_OFFSET_X,AURAS_CD_OFFSET_Y,
+          AURAS_COUNT_POINT_X,AURAS_COUNT_POINT_Y,
+          AURAS_COUNT_OFFSET_X,AURAS_COUNT_OFFSET_Y
 
     local function AuraFrame_UpdateFrameSize(self,to_size)
         -- frame width changes depending on icon size, needs to be correct if
@@ -1590,13 +1616,22 @@ do
     -- callbacks
     function core.Auras_PostCreateAuraButton(frame,button)
         -- move text to obey our settings
-        button.cd:ClearAllPoints()
-        button.cd:SetPoint('TOPLEFT',-4,3+TEXT_VERTICAL_OFFSET)
         button.cd.fontobject_shadow = true
+        button.cd:ClearAllPoints()
+        button.cd:SetPoint(
+            ResolvePointPair(AURAS_CD_POINT_X,AURAS_CD_POINT_Y),
+            AURAS_CD_OFFSET_X, AURAS_CD_OFFSET_Y
+        )
+        button.cd:SetJustifyH(POINT_X_ASSOC[AURAS_CD_POINT_X])
 
-        button.count:ClearAllPoints()
-        button.count:SetPoint('BOTTOMRIGHT',5,-2+TEXT_VERTICAL_OFFSET)
         button.count.fontobject_shadow = true
+        button.count.fontobject_small = true
+        button.count:ClearAllPoints()
+        button.count:SetPoint(
+            ResolvePointPair(AURAS_COUNT_POINT_X,AURAS_COUNT_POINT_Y),
+            AURAS_COUNT_OFFSET_X, AURAS_COUNT_OFFSET_Y
+        )
+        button.count:SetJustifyH(POINT_X_ASSOC[AURAS_COUNT_POINT_X])
 
         if frame.__core and not button.hl then
             -- create owner highlight
@@ -1679,6 +1714,13 @@ do
         -- process as normal
         return
     end
+    function core.AurasButton_SetFont(button)
+        button.cd.fontobject_size = AURAS_CD_SIZE > 0 and AURAS_CD_SIZE
+        UpdateFontObject(button.cd)
+
+        button.count.fontobject_size = AURAS_COUNT_SIZE > 0 and AURAS_COUNT_SIZE
+        UpdateFontObject(button.count)
+    end
 
     -- config changed
     function core:SetAurasConfig()
@@ -1697,6 +1739,18 @@ do
         AURAS_PURGE_OPPOSITE = self.profile.auras_purge_opposite
         AURAS_CENTRE = self.profile.auras_centre
         AURAS_HIGHLIGHT_OTHER = self.profile.auras_highlight_other
+
+        AURAS_CD_SIZE = self.profile.auras_cd_size
+        AURAS_COUNT_SIZE = self.profile.auras_count_size
+
+        AURAS_CD_POINT_X = self.profile.auras_cd_point_x
+        AURAS_CD_POINT_Y = self.profile.auras_cd_point_y
+        AURAS_CD_OFFSET_X = self.profile.auras_cd_offset_x
+        AURAS_CD_OFFSET_Y = self.profile.auras_cd_offset_y
+        AURAS_COUNT_POINT_X = self.profile.auras_count_point_x
+        AURAS_COUNT_POINT_Y = self.profile.auras_count_point_y
+        AURAS_COUNT_OFFSET_X = self.profile.auras_count_offset_x
+        AURAS_COUNT_OFFSET_Y = self.profile.auras_count_offset_y
 
         if AURAS_TIMER_THRESHOLD < 0 then
             AURAS_TIMER_THRESHOLD = nil
@@ -1757,6 +1811,13 @@ do
                     cp.centred = AURAS_CENTRE
                     cp.__width = nil
                     cp:SetSort(self.profile.auras_sort)
+                end
+
+                -- update all buttons
+                for _,auraframe in pairs(f.Auras.frames) do
+                    for _,button in ipairs(auraframe.buttons) do
+                        self.Auras_PostCreateAuraButton(auraframe,button)
+                    end
                 end
             end
         end

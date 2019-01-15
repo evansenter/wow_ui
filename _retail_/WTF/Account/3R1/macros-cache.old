@@ -27,8 +27,6 @@ VER 3 0000000000000047 "Deathnote" "Ability_Hunter_MurderofCrows"
 END
 VER 3 0000000000000061 "DH" "INV_Misc_QuestionMark"
 #showtooltip Divine Hymn
-/use 13
-/use 14
 /cast Divine Hymn
 END
 VER 3 000000000000006F "Discord" "458228"
@@ -59,6 +57,7 @@ END
 VER 3 000000000000004D "GS" "INV_Misc_QuestionMark"
 #showtooltip Guardian Spirit
 /stopcasting
+/use [target=mouseover,help,nodead]Inoculating Extract
 /use [target=mouseover,help,nodead]Guardian Spirit
 END
 VER 3 0000000000000050 "HF" "INV_Misc_QuestionMark"
@@ -68,10 +67,6 @@ END
 VER 3 0000000000000034 "HS / GHS" "INV_Misc_QuestionMark"
 #showtooltip
 /use [nomod][mod:ctrl]Hearthstone;[mod:shift]Dalaran Hearthstone;[mod:alt]Flight Master's Whistle;
-END
-VER 3 0000000000000054 "Inoc. Trinket" "INV_Misc_QuestionMark"
-#showtooltip Inoculating Extract
-/use [@mouseover,help,nodead][]Inoculating Extract
 END
 VER 3 000000000000005C "LoF" "INV_Misc_QuestionMark"
 #showtooltip
@@ -113,7 +108,7 @@ VER 3 0000000000000075 "RSK MW" "INV_Misc_QuestionMark"
 END
 VER 3 0000000000000071 "Schism" "463285"
 #showtooltip
-/use [@mouseover,harm][harm][@mouseovertarget,harm][]Schism
+/use [@mouseover,harm,nodead][harm,nodead][@mouseovertarget,harm,nodead][]Schism
 END
 VER 3 0000000000000063 "SEF" "INV_Misc_QuestionMark"
 #showtooltip Storm, Earth, and Fire
@@ -173,9 +168,9 @@ VER 3 0000000000000062 "ToD" "INV_Misc_QuestionMark"
 #showtooltip
 /use [nochanneling]Touch of Death
 END
-VER 3 0000000000000065 "Trinket" "INV_Misc_QuestionMark"
+VER 3 0000000000000078 "Trinket" "INV_MISC_QUESTIONMARK"
 #showtooltip
-/use [harm][@mouseovertarget,harm][]14
+/use [target=mouseover,help,nodead][]Inoculating Extract
 END
 VER 3 000000000000006C "VT Shadow" "INV_Misc_QuestionMark"
 #showtooltip

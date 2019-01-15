@@ -1,7 +1,7 @@
 local L = LibStub("AceLocale-3.0"):NewLocale("Details", "zhCN") 
 if not L then return end 
 
-L["ABILITY_ID"] = "技能ID"
+L["ABILITY_ID"] = "技能 ID"
 L["STRING_"] = ""
 L["STRING_ABSORBED"] = "吸收"
 L["STRING_ACTORFRAME_NOTHING"] = "没有报告"
@@ -354,7 +354,7 @@ L["STRING_MINITUTORIAL_WINDOWS2"] = [=[窗口已被锁定。
 L["STRING_MIRROR_IMAGE"] = "镜像"
 L["STRING_MISS"] = "未命中"
 L["STRING_MODE_ALL"] = "所有的"
-L["STRING_MODE_GROUP"] = "队伍 & 团队"
+L["STRING_MODE_GROUP"] = "标准"
 L["STRING_MODE_OPENFORGE"] = "监控生成"
 L["STRING_MODE_PLUGINS"] = "插件"
 L["STRING_MODE_RAID"] = "插件: 团队"
@@ -495,10 +495,8 @@ L["STRING_OPTIONS_BARS_CUSTOM_TEXTURE_DESC"] = [=[
 
  |cFFFFFF00重要提示|r: 图片必须为256x32像素。]=]
 L["STRING_OPTIONS_BARS_DESC"] = "这些选项控制计量条的外观。"
---[[Translation missing --]]
---[[ L["STRING_OPTIONS_BARSORT"] = ""--]] 
---[[Translation missing --]]
---[[ L["STRING_OPTIONS_BARSORT_DESC"] = ""--]] 
+L["STRING_OPTIONS_BARSORT"] = "排序顺序"
+L["STRING_OPTIONS_BARSORT_DESC"] = "根据升序或降序排序"
 L["STRING_OPTIONS_BARSTART"] = "Bar Start After Icon"
 L["STRING_OPTIONS_BARSTART_DESC"] = [=[禁用时顶部纹理开始在图标的左边而不是右边
 
@@ -506,13 +504,12 @@ L["STRING_OPTIONS_BARSTART_DESC"] = [=[禁用时顶部纹理开始在图标的�
 L["STRING_OPTIONS_BARUR_ANCHOR"] = "快速更新:"
 L["STRING_OPTIONS_BARUR_DESC"] = "当启用时，DPS和HPS值的更新只比平常快一点。"
 L["STRING_OPTIONS_BG_ALL_ALLY"] = "全部显示"
---[[Translation missing --]]
---[[ L["STRING_OPTIONS_BG_ALL_ALLY_DESC"] = ""--]] 
+L["STRING_OPTIONS_BG_ALL_ALLY_DESC"] = [=[启用时，在分组模式下敌对玩家的数据也会显示。
+
+cFFFFFF00注意|r：下次进入战斗时此改动才会生效。]=]
 L["STRING_OPTIONS_BG_ANCHOR"] = "战场："
---[[Translation missing --]]
---[[ L["STRING_OPTIONS_BG_UNIQUE_SEGMENT"] = ""--]] 
---[[Translation missing --]]
---[[ L["STRING_OPTIONS_BG_UNIQUE_SEGMENT_DESC"] = ""--]] 
+L["STRING_OPTIONS_BG_UNIQUE_SEGMENT"] = "独立分段"
+L["STRING_OPTIONS_BG_UNIQUE_SEGMENT_DESC"] = "每个分段都是截取的每次战斗的数据。"
 L["STRING_OPTIONS_CAURAS"] = "采集光环"
 L["STRING_OPTIONS_CAURAS_DESC"] = [=[启用捕获：
 
@@ -806,10 +803,8 @@ L["STRING_OPTIONS_MENUS_SHADOW_DESC"] = "所有按键增加了一个薄的阴影
 L["STRING_OPTIONS_MENUS_SPACEMENT"] = "间距"
 L["STRING_OPTIONS_MENUS_SPACEMENT_DESC"] = "控制按钮之间的距离。"
 L["STRING_OPTIONS_MICRODISPLAY_ANCHOR"] = "微型显示："
---[[Translation missing --]]
---[[ L["STRING_OPTIONS_MICRODISPLAY_LOCK"] = ""--]] 
---[[Translation missing --]]
---[[ L["STRING_OPTIONS_MICRODISPLAY_LOCK_DESC"] = ""--]] 
+L["STRING_OPTIONS_MICRODISPLAY_LOCK"] = "锁定微缩视图"
+L["STRING_OPTIONS_MICRODISPLAY_LOCK_DESC"] = "锁定后，它们将不再相应鼠标移动上去或是点击的操作。"
 L["STRING_OPTIONS_MICRODISPLAYS_DROPDOWN_TOOLTIP"] = "选择要显示在这一侧的微型展示。"
 L["STRING_OPTIONS_MICRODISPLAYS_OPTION_TOOLTIP"] = "设置配置为这款微展示。"
 L["STRING_OPTIONS_MICRODISPLAYS_SHOWHIDE_TOOLTIP"] = "显示或隐藏此微展示"
@@ -1095,8 +1090,7 @@ L["STRING_OPTIONS_SKIN_ELVUI_BUTTON3_DESC"] = [=[修改 tooltip's:
 L["STRING_OPTIONS_SKIN_EXTRA_OPTIONS_ANCHOR"] = "皮肤选项："
 L["STRING_OPTIONS_SKIN_LOADED"] = "皮肤成功加载。"
 L["STRING_OPTIONS_SKIN_PRESETS_ANCHOR"] = "保存皮肤："
---[[Translation missing --]]
---[[ L["STRING_OPTIONS_SKIN_PRESETSCONFIG_ANCHOR"] = ""--]] 
+L["STRING_OPTIONS_SKIN_PRESETSCONFIG_ANCHOR"] = "管理保存的自定义皮肤："
 L["STRING_OPTIONS_SKIN_REMOVED"] = "删除皮肤。"
 L["STRING_OPTIONS_SKIN_RESET_TOOLTIP"] = "重置提示边框"
 L["STRING_OPTIONS_SKIN_RESET_TOOLTIP_DESC"] = "设置提示的边框颜色和纹理为默认值。"
@@ -1263,8 +1257,7 @@ L["STRING_OPTIONS_TOOLTIPS_MAXIMIZE3"] = "Only Shift Block"
 L["STRING_OPTIONS_TOOLTIPS_MAXIMIZE4"] = "Only Ctrl Block"
 L["STRING_OPTIONS_TOOLTIPS_MAXIMIZE5"] = "Only Alt Block"
 L["STRING_OPTIONS_TOOLTIPS_MENU_WALLP"] = "编辑选单外观"
---[[Translation missing --]]
---[[ L["STRING_OPTIONS_TOOLTIPS_MENU_WALLP_DESC"] = ""--]] 
+L["STRING_OPTIONS_TOOLTIPS_MENU_WALLP_DESC"] = "修改标题栏菜单背景图的缩放比例。"
 L["STRING_OPTIONS_TOOLTIPS_OFFSETX"] = "Distance X"
 L["STRING_OPTIONS_TOOLTIPS_OFFSETX_DESC"] = "How far horizontally the tooltip is placed from its anchor."
 L["STRING_OPTIONS_TOOLTIPS_OFFSETY"] = "Distance Y"
@@ -1274,10 +1267,8 @@ L["STRING_OPTIONS_TOOLTIPS_SHOWAMT_DESC"] = "Shows a number indicating how many 
 L["STRING_OPTIONS_TOOLTIPS_TITLE"] = "工具提示"
 L["STRING_OPTIONS_TOOLTIPS_TITLE_DESC"] = "这些选项用来调整工具提示的外观。"
 L["STRING_OPTIONS_TOTALBAR_ANCHOR"] = "Total Bar:"
---[[Translation missing --]]
---[[ L["STRING_OPTIONS_TRASH_SUPPRESSION"] = ""--]] 
---[[Translation missing --]]
---[[ L["STRING_OPTIONS_TRASH_SUPPRESSION_DESC"] = ""--]] 
+L["STRING_OPTIONS_TRASH_SUPPRESSION"] = "垃圾回收"
+L["STRING_OPTIONS_TRASH_SUPPRESSION_DESC"] = "|cFFFFFF00X|r 秒后，自动切换到显示可回收分段（|cFFFFFF00只在遭遇首领并失败后|r）。"
 L["STRING_OPTIONS_WALLPAPER_ALPHA"] = "Alpha:"
 L["STRING_OPTIONS_WALLPAPER_ANCHOR"] = "Wallpaper Selection:"
 L["STRING_OPTIONS_WALLPAPER_BLUE"] = "Blue:"
@@ -1367,12 +1358,9 @@ L["STRING_OPTIONS_WP_GROUP"] = "类别"
 L["STRING_OPTIONS_WP_GROUP_DESC"] = "Select the image group."
 L["STRING_OPTIONS_WP_GROUP2"] = "壁纸"
 L["STRING_OPTIONS_WP_GROUP2_DESC"] = "这将被用作墙纸的图像。"
---[[Translation missing --]]
---[[ L["STRING_OPTIONSMENU_AUTOMATIC"] = ""--]] 
---[[Translation missing --]]
---[[ L["STRING_OPTIONSMENU_AUTOMATIC_TITLE"] = ""--]] 
---[[Translation missing --]]
---[[ L["STRING_OPTIONSMENU_AUTOMATIC_TITLE_DESC"] = ""--]] 
+L["STRING_OPTIONSMENU_AUTOMATIC"] = "窗口：自动"
+L["STRING_OPTIONSMENU_AUTOMATIC_TITLE"] = "窗口自动化设置"
+L["STRING_OPTIONSMENU_AUTOMATIC_TITLE_DESC"] = "这些设置用于控制窗口的自动行为，例如自动隐藏和自动开启。"
 L["STRING_OPTIONSMENU_COMBAT"] = "战斗"
 L["STRING_OPTIONSMENU_DATACHART"] = "图标数据"
 L["STRING_OPTIONSMENU_DATACOLLECT"] = "数据采集"
@@ -1391,8 +1379,7 @@ L["STRING_OPTIONSMENU_ROWSETTINGS"] = "行: 设置"
 L["STRING_OPTIONSMENU_ROWTEXTS"] = "行: 文本"
 L["STRING_OPTIONSMENU_SKIN"] = "皮肤选择"
 L["STRING_OPTIONSMENU_SPELLS"] = "法术定制"
---[[Translation missing --]]
---[[ L["STRING_OPTIONSMENU_SPELLS_CONSOLIDATE"] = ""--]] 
+L["STRING_OPTIONSMENU_SPELLS_CONSOLIDATE"] = "合并拥有相同名称的普通法术"
 L["STRING_OPTIONSMENU_TITLETEXT"] = "标题栏：文本"
 L["STRING_OPTIONSMENU_TOOLTIP"] = "提示"
 L["STRING_OPTIONSMENU_WALLPAPER"] = "壁纸"
@@ -1439,11 +1426,9 @@ L["STRING_PLUGINOPTIONS_TEXTALIGN_Y"] = "Text Align Y"
 L["STRING_PLUGINOPTIONS_TEXTCOLOR"] = "文本颜色"
 L["STRING_PLUGINOPTIONS_TEXTSIZE"] = "字体大小"
 L["STRING_PLUGINOPTIONS_TEXTSTYLE"] = "文本样式"
---[[Translation missing --]]
---[[ L["STRING_QUERY_INSPECT"] = ""--]] 
+L["STRING_QUERY_INSPECT"] = "获取天赋和装备等级。"
 L["STRING_QUERY_INSPECT_FAIL1"] = "在战斗中无法查询。"
---[[Translation missing --]]
---[[ L["STRING_QUERY_INSPECT_REFRESH"] = ""--]] 
+L["STRING_QUERY_INSPECT_REFRESH"] = "需要刷新"
 L["STRING_RAID_WIDE"] = "[*] raid wide cooldown"
 L["STRING_RAIDCHECK_PLUGIN_DESC"] = "当在一个团队副本中时，在Details!的标题栏上会出现一个图标显示合剂，食物，药水的使用。"
 L["STRING_RAIDCHECK_PLUGIN_NAME"] = "Raid 检查"
@@ -1491,8 +1476,7 @@ L["STRING_RIGHTCLICK_CLOSE_LARGE"] = "单击鼠标右键可关闭此窗口。"
 L["STRING_RIGHTCLICK_CLOSE_MEDIUM"] = "用鼠标右键单击关闭该窗口。"
 L["STRING_RIGHTCLICK_CLOSE_SHORT"] = "右键单击关闭。"
 L["STRING_RIGHTCLICK_TYPEVALUE"] = "右键单击输入值"
---[[Translation missing --]]
---[[ L["STRING_SCORE_BEST"] = ""--]] 
+L["STRING_SCORE_BEST"] = "你得到了 |cFFFFFF00%s|r 分，这是你的最佳得分，恭喜！"
 L["STRING_SCORE_NOTBEST"] = "你获得了 |cFFFFFF00%s|r，你的最好成绩是 |cFFFFFF00%s|r ，在 %s 装等 %d "
 L["STRING_SEE_BELOW"] = "见下文"
 L["STRING_SEGMENT"] = "片段"
@@ -1504,23 +1488,16 @@ L["STRING_SEGMENT_OVERALL"] = "总体数据"
 L["STRING_SEGMENT_START"] = "开始"
 L["STRING_SEGMENT_TRASH"] = "垃圾清理"
 L["STRING_SEGMENTS"] = "段落"
---[[Translation missing --]]
---[[ L["STRING_SEGMENTS_LIST_BOSS"] = ""--]] 
---[[Translation missing --]]
---[[ L["STRING_SEGMENTS_LIST_COMBATTIME"] = ""--]] 
---[[Translation missing --]]
---[[ L["STRING_SEGMENTS_LIST_OVERALL"] = ""--]] 
---[[Translation missing --]]
---[[ L["STRING_SEGMENTS_LIST_TIMEINCOMBAT"] = ""--]] 
---[[Translation missing --]]
---[[ L["STRING_SEGMENTS_LIST_TOTALTIME"] = ""--]] 
---[[Translation missing --]]
---[[ L["STRING_SEGMENTS_LIST_TRASH"] = ""--]] 
+L["STRING_SEGMENTS_LIST_BOSS"] = "首领战斗"
+L["STRING_SEGMENTS_LIST_COMBATTIME"] = "战斗时长"
+L["STRING_SEGMENTS_LIST_OVERALL"] = "总体"
+L["STRING_SEGMENTS_LIST_TIMEINCOMBAT"] = "处于战斗中的时长"
+L["STRING_SEGMENTS_LIST_TOTALTIME"] = "总时长"
+L["STRING_SEGMENTS_LIST_TRASH"] = "可回收"
 L["STRING_SHIELD_HEAL"] = "盾治疗"
 L["STRING_SHIELD_OVERHEAL"] = "盾过量治疗"
 L["STRING_SHORTCUT_RIGHTCLICK"] = "右键点击关闭"
---[[Translation missing --]]
---[[ L["STRING_SLASH_API_DESC"] = ""--]] 
+L["STRING_SLASH_API_DESC"] = "打开 API 面白来创建插件，自定义显示和光环等内容。"
 L["STRING_SLASH_CAPTURE_DESC"] = "打开或关闭数据的全部捕获。"
 L["STRING_SLASH_CAPTUREOFF"] = "关闭所有数据采集。"
 L["STRING_SLASH_CAPTUREON"] = "打开所有数据采集。"
@@ -1544,8 +1521,7 @@ L["STRING_SLASH_SHOW"] = "显示"
 L["STRING_SLASH_SHOW_ALIAS1"] = "打开"
 L["STRING_SLASH_SHOWHIDETOGGLE_DESC"] = "all windows if <window number> isn't passed."
 L["STRING_SLASH_TOGGLE"] = "切换"
---[[Translation missing --]]
---[[ L["STRING_SLASH_WIPE"] = ""--]] 
+L["STRING_SLASH_WIPE"] = "团灭"
 L["STRING_SLASH_WIPECONFIG"] = "重新安装"
 L["STRING_SLASH_WIPECONFIG_CONFIRM"] = "单击继续安装"
 L["STRING_SLASH_WIPECONFIG_DESC"] = "设置所有配置为默认设置，如果Details!不能正常工作。"
@@ -1573,16 +1549,14 @@ L["STRING_TOP_TO_BOTTOM"] = "从高到低"
 L["STRING_TOTAL"] = "总"
 L["STRING_TRANSLATE_LANGUAGE"] = "帮助翻译 Details!"
 L["STRING_TUTORIAL_FULLY_DELETE_WINDOW"] = "你关闭了一个窗口，你可以随时重新打开它。完全删除一个窗口请前往 选项 -> 窗口：一般设置 -> 删除。"
---[[Translation missing --]]
---[[ L["STRING_TUTORIAL_OVERALL1"] = ""--]] 
+L["STRING_TUTORIAL_OVERALL1"] = "调整设置面板的总体数据设置 > PvE/PvP"
 L["STRING_UNKNOW"] = "未知"
 L["STRING_UNKNOWSPELL"] = "未知法术"
 L["STRING_UNLOCK"] = [=[Ungroup windows
  in this button]=]
 L["STRING_UNLOCK_WINDOW"] = "解锁"
 L["STRING_UPTADING"] = "更新中"
---[[Translation missing --]]
---[[ L["STRING_VERSION_AVAILABLE"] = ""--]] 
+L["STRING_VERSION_AVAILABLE"] = "有新版本可用，请从 Twitch 或 Curse 上下载。"
 L["STRING_VERSION_UPDATE"] = "新版本：有什么改变？ 点击这里"
 L["STRING_VOIDZONE_TOOLTIP"] = "伤害和时间:"
 L["STRING_WAITPLUGIN"] = [=[等待
@@ -1680,7 +1654,6 @@ L["STRING_WINDOW1ATACH_DESC"] = "创建一个群组窗口, 拖动 #2 到 窗口 
 L["STRING_WIPE_ALERT"] = "团长命令：清除数据！"
 L["STRING_WIPE_ERROR1"] = "已经发送了一个清除指令。"
 L["STRING_WIPE_ERROR2"] = "不在团队中。"
---[[Translation missing --]]
---[[ L["STRING_WIPE_ERROR3"] = ""--]] 
+L["STRING_WIPE_ERROR3"] = "无法停止遇敌。"
 L["STRING_YES"] = "YES"
 
