@@ -3,7 +3,6 @@
 -- By Kesava at curse.com
 -- All rights reserved
 --------------------------------------------------------------------------------
-local folder,ns=...
 local kui = LibStub('Kui-1.0')
 local kc = LibStub('KuiConfig-1.0')
 local LSM = LibStub('LibSharedMedia-3.0')
@@ -39,7 +38,7 @@ local default_config = {
     target_glow_colour = { .3, .7, 1, .8 },
     mouseover_glow = false,
     mouseover_glow_colour = { .3, .7, 1, .5 },
-    mouseover_highlight = true, -- NEX
+    mouseover_highlight = true,
     mouseover_highlight_opacity = .4, -- NEX
     frame_glow_size = 8,
     target_arrows = false,
@@ -146,12 +145,14 @@ local default_config = {
     frame_height_minus = 8,
     frame_width_personal = 132,
     frame_height_personal = 13,
-    castbar_height = 6,
     powerbar_height = 3,
     global_scale = 1,
 
     auras_enabled = true,
     auras_on_personal = true,
+    auras_on_friends = true, -- NEX
+    auras_on_enemies = true, -- NEX
+    auras_on_minus = true, -- NEX
     auras_pulsate = true,
     auras_centre = true,
     auras_sort = 2,
@@ -171,6 +172,7 @@ local default_config = {
     auras_offset = 15,
     auras_decimal_threshold = 2, -- NEX
     auras_highlight_other = true, -- NEX
+    auras_per_row = 5, -- NEX
     auras_cd_size = 0,
     auras_count_size = 0,
 
@@ -188,6 +190,14 @@ local default_config = {
     castbar_animate_change_colour = true,
     castbar_name_vertical_offset = -1,
     castbar_spacing = 1, -- NEX
+    castbar_height = 6,
+    castbar_detach = false,
+    castbar_detach_height = 18,
+    castbar_detach_width = 36,
+    castbar_detach_offset = 5,
+    castbar_detach_combine = true,
+    castbar_detach_nameonly = false, -- nex
+    castbar_icon_side = 1,
 
     tank_mode = true,
     tankmode_force_enable = false,
@@ -198,6 +208,8 @@ local default_config = {
     tankmode_tank_colour = { 0, 1, 0 },
     tankmode_trans_colour = { 1, 1, 0 },
     tankmode_other_colour = { .6, 0, 1 },
+    tankmode_tank_glow_colour = { .9, 0, 0, .6 },
+    tankmode_trans_glow_colour = { .9, .5, 0, .6 },
 
     classpowers_enable = true,
     classpowers_on_target = true,
@@ -217,9 +229,9 @@ local default_config = {
 
     bossmod_enable = true,
     bossmod_control_visibility = true,
-    bossmod_icon_size = 40,
+    bossmod_icon_size = 32,
     bossmod_x_offset = 0,
-    bossmod_y_offset = 30,
+    bossmod_y_offset = 35,
     bossmod_clickthrough = false,
 
     cvar_enable = false,
@@ -228,38 +240,38 @@ local default_config = {
     cvar_personal_show_always = GetCVarDefault('nameplatePersonalShowAlways')=="1",
     cvar_personal_show_combat = GetCVarDefault('nameplatePersonalShowInCombat')=="1",
     cvar_personal_show_target = GetCVarDefault('nameplatePersonalShowWithTarget')=="1",
-    cvar_max_distance = GetCVarDefault('nameplateMaxDistance'),
-    cvar_clamp_top = GetCVarDefault('nameplateOtherTopInset'),
-    cvar_clamp_bottom = GetCVarDefault('nameplateOtherBottomInset'),
-    cvar_self_clamp_top = GetCVarDefault('nameplateSelfTopInset'),
-    cvar_self_clamp_bottom = GetCVarDefault('nameplateSelfBottomInset'),
-    cvar_overlap_v = GetCVarDefault('nameplateOverlapV'),
+    cvar_max_distance = tonumber(GetCVarDefault('nameplateMaxDistance')),
+    cvar_clamp_top = tonumber(GetCVarDefault('nameplateOtherTopInset')),
+    cvar_clamp_bottom = tonumber(GetCVarDefault('nameplateOtherBottomInset')),
+    cvar_self_clamp_top = tonumber(GetCVarDefault('nameplateSelfTopInset')),
+    cvar_self_clamp_bottom = tonumber(GetCVarDefault('nameplateSelfBottomInset')),
+    cvar_overlap_v = tonumber(GetCVarDefault('nameplateOverlapV')),
     cvar_disable_scale = true,
     cvar_disable_alpha = true,
     cvar_self_alpha = 1,
-    cvar_occluded_mult = GetCVarDefault('nameplateOccludedAlphaMult'),
+    cvar_occluded_mult = tonumber(GetCVarDefault('nameplateOccludedAlphaMult')),
 
     -- point+offset variables
     auras_cd_point_x = 1,
     auras_cd_point_y = 1,
-    auras_cd_offset_x = -4.5,
-    auras_cd_offset_y = 3.5,
+    auras_cd_offset_x = -4,
+    auras_cd_offset_y = 3,
     auras_count_point_x = 3,
     auras_count_point_y = 3,
-    auras_count_offset_x = 5.5,
-    auras_count_offset_y = -2.5,
+    auras_count_offset_x = 5,
+    auras_count_offset_y = -2,
 }
 -- local functions #############################################################
+local GLOBAL_SCALE
 local function Scale(v)
-    if not tonumber(core.profile.global_scale) or
-       core.profile.global_scale == 1
-    then
+    if not tonumber(GLOBAL_SCALE) or GLOBAL_SCALE == 1 then
         return v
     else
-        return floor((v*core.profile.global_scale)+.5)
+        return floor((v*GLOBAL_SCALE)+.5)
     end
 end
 local function UpdateClickboxSize()
+    if kui.CLASSIC then return end -- XXX functions exist, but break display
     local o_width = (Scale(core.profile.frame_width) * addon.uiscale) + 10
     local o_height = (Scale(core.profile.frame_height) * addon.uiscale) + 20
 
@@ -353,7 +365,7 @@ end
 configChanged.combat_hostile = configChangedCombatAction
 configChanged.combat_friendly = configChangedCombatAction
 
-local function configChangedFadeRule(v,on_load)
+local function configChangedFadeRule(_,on_load)
     local plugin = addon:GetPlugin('Fading')
     if not on_load then
         -- don't reset on the configLoaded call
@@ -438,16 +450,21 @@ configChanged.absorb_striped = configChangedAbsorb
 configChanged.colour_absorb = configChangedAbsorb
 
 local function configChangedTankColour()
-    local ele = addon:GetPlugin('TankMode')
-    ele.colours = {
+    addon:GetPlugin('TankMode').colours = {
         core.profile.tankmode_tank_colour,
         core.profile.tankmode_trans_colour,
-        core.profile.tankmode_other_colour
+        core.profile.tankmode_other_colour,
+    }
+    addon:GetPlugin('Threat').colours = {
+        core.profile.tankmode_tank_glow_colour,
+        core.profile.tankmode_trans_glow_colour,
     }
 end
 configChanged.tankmode_tank_colour = configChangedTankColour
 configChanged.tankmode_trans_colour = configChangedTankColour
 configChanged.tankmode_other_colour = configChangedTankColour
+configChanged.tankmode_tank_glow_colour = configChangedTankColour
+configChanged.tankmode_trans_glow_colour = configChangedTankColour
 
 local function configChangedFrameSize()
     core:configChangedFrameSize()
@@ -512,6 +529,9 @@ configChanged.auras_icon_normal_size = configChangedAuras
 configChanged.auras_icon_minus_size = configChangedAuras
 configChanged.auras_icon_squareness = configChangedAuras
 configChanged.auras_on_personal = configChangedAuras
+configChanged.auras_on_friends = configChangedAuras
+configChanged.auras_on_enemies = configChangedAuras
+configChanged.auras_on_minus = configChangedAuras
 configChanged.auras_show_all_self = configChangedAuras
 configChanged.auras_hide_all_other = configChangedAuras
 configChanged.auras_colour_short = configChangedAuras
@@ -523,6 +543,8 @@ configChanged.auras_purge_opposite = configChangedAuras
 configChanged.auras_side = configChangedAuras
 configChanged.auras_offset = configChangedAuras
 configChanged.auras_decimal_threshold = configChangedAuras
+configChanged.auras_highlight_other = configChangedAuras
+configChanged.auras_per_row = configChangedAuras
 configChanged.auras_cd_size = configChangedAuras
 configChanged.auras_count_size = configChangedAuras
 configChanged.auras_cd_point_x = configChangedAuras
@@ -545,16 +567,22 @@ function configChanged.castbar_enable(v)
     end
     configChangedCastBar()
 end
-configChanged.castbar_height = configChangedCastBar
 configChanged.castbar_colour = configChangedCastBar
 configChanged.castbar_unin_colour = configChangedCastBar
 configChanged.castbar_icon = configChangedCastBar
 configChanged.castbar_name = configChangedCastBar
 configChanged.castbar_shield = configChangedCastBar
-configChanged.castbar_name_vertical_offset = configChangedCastBar
 configChanged.castbar_animate = configChangedCastBar
 configChanged.castbar_animate_change_colour = configChangedCastBar
+configChanged.castbar_name_vertical_offset = configChangedCastBar
 configChanged.castbar_spacing = configChangedCastBar
+configChanged.castbar_height = configChangedCastBar
+configChanged.castbar_detach = configChangedCastBar
+configChanged.castbar_detach_height = configChangedCastBar
+configChanged.castbar_detach_width = configChangedCastBar
+configChanged.castbar_detach_offset = configChangedCastBar
+configChanged.castbar_detach_combine = configChangedCastBar
+configChanged.castbar_icon_side = configChangedCastBar
 
 function configChanged.classpowers_enable(v)
     if v then
@@ -564,6 +592,7 @@ function configChanged.classpowers_enable(v)
     end
 end
 local function configChangedClassPowers()
+    if not core.ClassPowers then return end
     core.ClassPowers.on_target = core.profile.classpowers_on_target
     core.ClassPowers.icon_size = core.profile.classpowers_size
     core.ClassPowers.bar_width = core.profile.classpowers_bar_width
@@ -576,6 +605,8 @@ configChanged.classpowers_bar_width = configChangedClassPowers
 configChanged.classpowers_bar_height = configChangedClassPowers
 
 local function configChangedClassPowersColour()
+    if not core.ClassPowers then return end
+
     local class = select(2,UnitClass('player'))
     if core.profile['classpowers_colour_'..strlower(class)] then
         core.ClassPowers.colours[class] =  core.profile['classpowers_colour_'..strlower(class)]
@@ -609,7 +640,7 @@ end
 function configChanged.execute_colour(v)
     addon:GetPlugin('Execute').colour = v
 end
-function configChanged.execute_percent(v)
+function configChanged.execute_percent()
     if core.profile.execute_auto then
         -- revert to automatic
         addon:GetPlugin('Execute'):SetExecuteRange()
@@ -619,8 +650,8 @@ function configChanged.execute_percent(v)
 end
 configChanged.execute_auto = configChanged.execute_percent
 
-function configChanged.frame_glow_size(v)
-    for k,f in addon:Frames() do
+function configChanged.frame_glow_size()
+    for _,f in addon:Frames() do
         f:UpdateFrameGlowSize()
 
         if type(f.UpdateNameOnlyGlowSize) == 'function' then
@@ -757,7 +788,8 @@ configChanged.cvar_disable_alpha = configChangedCVar
 configChanged.cvar_self_alpha = configChangedCVar
 configChanged.cvar_occluded_mult = configChangedCVar
 
-function configChanged.global_scale(v)
+function configChanged.global_scale()
+    GLOBAL_SCALE = core.profile.global_scale
     configChanged.frame_glow_size(core.profile.frame_glow_size)
     configChanged.state_icons()
     configChangedCastBar()
@@ -840,10 +872,10 @@ function core:ConfigChanged(config,k,v)
         -- profile changed;
         -- run all configChanged functions, skipping duplicates
         local called = {}
-        for k,f in pairs(configChanged) do
-            if not called[f] then
-                called[f] = true
-                f(core.profile[k])
+        for func_name,func in pairs(configChanged) do
+            if not called[func] then
+                called[func] = true
+                func(core.profile[func_name])
             end
         end
     end
@@ -852,7 +884,7 @@ function core:ConfigChanged(config,k,v)
         kui.print(self:GetActiveProfile())
     end
 
-    for i,f in addon:Frames() do
+    for _,f in addon:Frames() do
         -- hide and re-show frames
         if f:IsShown() then
             local unit = f.unit
@@ -872,7 +904,7 @@ function core:InitialiseConfig()
                 if not v then return end
                 KuiNameplatesCoreSaved.profiles[n][k] = v == 5 and 1 or v + 1
             end
-            for n,p in pairs(KuiNameplatesCoreSaved.profiles) do
+            for n,_ in pairs(KuiNameplatesCoreSaved.profiles) do
                 for _,k in next,{
                     'health_text_friend_max',
                     'health_text_friend_dmg',
@@ -914,7 +946,7 @@ function core:InitialiseConfig()
 
     self.config:RegisterConfigChanged(self,'ConfigChanged')
 
-    -- update config locals in create.lua
+    -- initialise config locals in create.lua
     self:SetLocals()
 
     -- run config loaded functions
@@ -953,7 +985,7 @@ function cc:QueueConfigChanged(name)
 end
 function cc:PLAYER_REGEN_ENABLED()
     -- pop queued functions
-    for i,f_tbl in ipairs(self.queue) do
+    for _,f_tbl in ipairs(self.queue) do
         if type(f_tbl[1]) == 'function' then
             f_tbl[1](unpack(f_tbl[2]))
         end

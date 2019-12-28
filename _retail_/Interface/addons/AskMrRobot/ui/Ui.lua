@@ -123,6 +123,7 @@ AceGUI:RegisterLayout("None", function(content, children)
 	end
 end)
 
+
 local _mainFrame = nil
 local _mainTabs = nil
 local _mainCover = nil
@@ -370,6 +371,7 @@ function Amr:Reset()
 	Amr.db.profile.window = {}
 	Amr.db.profile.lootWindow = {}
 	Amr.db.profile.shopWindow = {}
+	Amr.db.profile.junkWindow = {}
 end
 
 -- show the UI if not shown already, and select the specified tab

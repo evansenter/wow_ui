@@ -2,7 +2,7 @@
 -- @author: Potdisc
 -- 14/07/2017
 
-local addon = LibStub("AceAddon-3.0"):GetAddon("RCLootCouncil")
+local _,addon = ...
 local LibDialog = LibStub("LibDialog-1.0")
 local L = LibStub("AceLocale-3.0"):GetLocale("RCLootCouncil")
 local AG = LibStub("AceGUI-3.0")
@@ -175,8 +175,8 @@ function sync:GetSyncTargetOptions()
       if isOnline then addNameToList(ret, addon:UnitName(name), class) end
    end
    -- friends
-   for i = 1, GetNumFriends() do
-      name, _, class, _, isOnline = GetFriendInfo(i)
+   for i = 1, C_FriendList.GetNumOnlineFriends() do
+      name, _, class, _, isOnline = C_FriendList.GetFriendInfoByIndex(i)
       if isOnline then addNameToList(ret, titleCaseName(name), class) end
    end
    -- guildmembers

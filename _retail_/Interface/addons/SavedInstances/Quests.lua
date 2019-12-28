@@ -1,6 +1,17 @@
-local addonName, addon = ...
-local QuestsModule = LibStub("AceAddon-3.0"):GetAddon(addonName):NewModule("Quests")
-local scantt = addon.scantt
+local _, addon = ...
+local QuestsModule = addon.core:NewModule("Quests")
+local L = addon.L
+
+-- Lua functions
+local pairs, strtrim = pairs, strtrim
+local _G = _G
+
+-- WoW API / Variables
+local C_Map_GetMapInfo = C_Map.GetMapInfo
+local GetAchievementCriteriaInfo = GetAchievementCriteriaInfo
+local GetItemInfo = GetItemInfo
+local GetSpellInfo = GetSpellInfo
+local LOOT = LOOT
 
 local _specialQuests = {
   -- Isle of Thunder
@@ -34,6 +45,14 @@ local _specialQuests = {
   -- Order Hall
   [42481] = { zid=717, daily=true }, -- Warlock: Ritual of Doom
   [44707] = { zid=719, daily=true, sid=228651 }, -- Demon Hunter: Twisting Nether
+
+  -- Mechagon
+  [57081] = { name=L["Mechanized Chest"] }, -- Mechanized Chest
+
+  -- Old Vanilla Bosses during Anniversary Event
+  [47461] = { daily=true, name=L["Lord Kazzak"] },          -- Lord Kazzak
+  [47462] = { daily=true, name=L["Azuregos"] },             -- Azuregos
+  [47463] = { daily=true, name=L["Dragon of Nightmare"] },  -- Dragon of Nightmare
 }
 
 function addon:specialQuests()
@@ -56,9 +75,9 @@ function addon:specialQuests()
         qinfo.name = l:gsub("%p$","")
       end
     elseif not qinfo.name and qinfo.aid then
-      scantt:SetOwner(UIParent,"ANCHOR_NONE")
-      scantt:SetAchievementByID(qinfo.aid)
-      local l = _G[scantt:GetName().."Text"..(qinfo.aline or "Left1")]
+      addon.scantt:SetOwner(_G.UIParent,"ANCHOR_NONE")
+      addon.scantt:SetAchievementByID(qinfo.aid)
+      local l = _G[addon.scantt:GetName().."Text"..(qinfo.aline or "Left1")]
       l = l and l:GetText()
       if l then
         qinfo.name = l:gsub("%p$","")
@@ -76,7 +95,7 @@ function addon:specialQuests()
     end
 
     if not qinfo.zone and qinfo.zid then
-      qinfo.zone = C_Map.GetMapInfo(qinfo.zid)
+      qinfo.zone = C_Map_GetMapInfo(qinfo.zid)
     end
   end
 
@@ -84,12 +103,19 @@ function addon:specialQuests()
 end
 
 local QuestExceptions = {
-  -- some quests are misidentified in scope
-  [7905]  = "Regular", -- Darkmoon Faire referral -- old addon versions misidentified this as monthly
-  [7926]  = "Regular", -- Darkmoon Faire referral
-  [37819] = "Regular", -- Darkmoon Faire races referral
+  -- Expansion
+  -- MoP
+  [32640] = "Weekly", -- Champions of the Thunder King
+  [32641] = "Weekly", -- Champions of the Thunder King
+  [32718] = "Regular", -- Mogu Runes of Fate -- ticket 142: outdated quest flag still shows up
+  [32719] = "Regular", -- Mogu Runes of Fate
+  [33133] = "Regular", -- Warforged Seals outdated quests, no longer weekly
+  [33134] = "Regular", -- Warforged Seals
+  [33338] = "Weekly", -- Empowering the Hourglass
+  [33334] = "Weekly", -- Strong Enough to Survive
 
-  -- order hall quests that old addon versions misidentified as weekly (fixed in r548/7.0.8)
+  -- LEG
+  -- Order Hall
   [44226] = "Regular", -- Order Hall: DH
   [44235] = "Regular", -- Order Hall: Druid
   [44236] = "Regular", -- Order Hall: Druid?
@@ -100,26 +126,6 @@ local QuestExceptions = {
   [44230] = "Regular", -- Order Hall: Priest
   [44204] = "Regular", -- Order Hall: Rogue
   [44205] = "Regular", -- Order Hall: Shaman
-
-  [31752] = "AccountDaily", -- Blingtron
-  [34774] = "AccountDaily", -- Blingtron 5000
-  [40753] = "AccountDaily", -- Blingtron 6000
-
-  -- also pre-populate a few important quests
-  [32640] = "Weekly",  -- Champions of the Thunder King
-  [32641] = "Weekly",  -- Champions of the Thunder King
-  [32718] = "Regular",  -- Mogu Runes of Fate -- ticket 142: outdated quest flag still shows up
-  [32719] = "Regular",  -- Mogu Runes of Fate
-  [33133] = "Regular",  -- Warforged Seals outdated quests, no longer weekly
-  [33134] = "Regular",  -- Warforged Seals
-  [33338] = "Weekly",  -- Empowering the Hourglass
-  [33334] = "Weekly",  -- Strong Enough to Survive
-
-  -- Pet Battle Dungeons
-  [46292] = "AccountWeekly", -- Pet Battle Challenge Dungeon Deadmines
-  [45539] = "AccountWeekly", -- Pet Battle Challenge Dungeon Wailing Caverns
-  [54186] = "AccountWeekly", -- Pet Battle Challenge Dungeon Gnomeregan
-
   -- Argus
   [48910] = "Weekly", -- Supplying Krokuun
   [48911] = "Weekly", -- Void Inoculation
@@ -128,15 +134,57 @@ local QuestExceptions = {
   [48635] = "Regular", -- More Void Inoculation
   [48636] = "Regular", -- Fueling the Antoran Campaign
 
-  -- Island Expeditions
-  [53435] = "Weekly", -- Azerite for the Horde
-  [53436] = "Weekly", -- Azerite for the Alliance
+  -- BfA
+  -- Island Expeditions (Moved to Progress.lua)
+  [53435] = "Regular", -- Azerite for the Horde
+  [53436] = "Regular", -- Azerite for the Alliance
+  -- Warfront (Moved to Warfront.lua)
+  [53414] = "Regular", -- Stromgarde Alliance
+  [53416] = "Regular", -- Stromgarde Horde
+  [53992] = "Regular", -- Darkshore Alliance
+  [53955] = "Regular", -- Darkshore Horde
+  -- Call to Arms: Weekly World PvP Quest
+  [52944] = "Weekly", -- Call to Arms: Drustvar (Alliance)
+  [52958] = "Weekly", -- Call to Arms: Drustvar (Horde)
+  [52949] = "Weekly", -- Call to Arms: Nazmir (Alliance)
+  [52954] = "Weekly", -- Call to Arms: Nazmir (Horde)
+  [52782] = "Weekly", -- Call to Arms: Stormsong Valley (Alliance)
+  [52957] = "Weekly", -- Call to Arms: Stormsong Valley (Horde)
+  [52948] = "Weekly", -- Call to Arms: Tiragarde Sound (Alliance)
+  [52956] = "Weekly", -- Call to Arms: Tiragarde Sound (Horde)
+  [52950] = "Weekly", -- Call to Arms: Vol'dun (Alliance)
+  [52953] = "Weekly", -- Call to Arms: Vol'dun (Horde)
+  [52951] = "Weekly", -- Call to Arms: Zuldazar (Alliance)
+  [52952] = "Weekly", -- Call to Arms: Zuldazar (Horde)
+  -- Nazjatar
+  [55121] = "Weekly", -- The Laboratory of Mardivas
+  [56969] = "Weekly", -- Ancient Reefwalker Bark
+  [56648] = "Weekly", -- Call to Arms: Nazjatar (Alliance)
+  [56148] = "Weekly", -- Call to Arms: Nazjatar (Horde)
+  [56050] = "Weekly", -- PvP Event: Battle for Nazjatar
+  -- Mechagon
+  [56116] = "Regular", -- Even More Recycling
+  [56649] = "Weekly", -- Call to Arms: Mechagon (Alliance)
+  [56650] = "Weekly", -- Call to Arms: Mechagon (Horde)
 
-  -- Warfront
-  [53414] = "Weekly", -- Stromgarde Alliance
-  [53416] = "Weekly", -- Stromgarde Horde
-  [53992] = "Weekly", -- Darkshore Alliance
-  [53955] = "Weekly", -- Darkshore Horde
+  -- General
+  -- Darkmoon Faire
+  [7905]  = "Regular", -- Darkmoon Faire referral -- old addon versions misidentified this as monthly
+  [7926]  = "Regular", -- Darkmoon Faire referral
+  [37819] = "Regular", -- Darkmoon Faire races referral
+
+  -- Blingtron
+  -- update `ShowQuestTooltip` in SavedInstances.lua when updating Blingtron quest list
+  [31752] = "AccountDaily", -- Blingtron 4000
+  [34774] = "AccountDaily", -- Blingtron 5000
+  [40753] = "AccountDaily", -- Blingtron 6000
+  [56042] = "AccountDaily", -- Blingtron 7000
+
+  -- Pet Battle Dungeons
+  [45539] = "AccountWeekly", -- Pet Battle Challenge: Wailing Caverns
+  [46292] = "AccountWeekly", -- Pet Battle Challenge: Deadmines
+  [54186] = "AccountWeekly", -- Pet Battle Challenge: Gnomeregan
+  [56492] = "AccountWeekly", -- Pet Battle Challenge: Stratholme
 
   -- Weekend Event
   [53030] = "Weekly", -- The World Awaits - World Quests
@@ -144,6 +192,7 @@ local QuestExceptions = {
   [53033] = "Weekly", -- A Frozen Path Through Time - WLK Timewalking
   [53034] = "Weekly", -- A Shattered Path Through Time - CTM Timewalking
   [53035] = "Weekly", -- A Shattered Path Through Time - MOP Timewalking
+  [54995] = "Weekly", -- A Savage Path Through Time - WOD Timewalking
   [53036] = "Weekly", -- A Call to Battle - Battlegrounds
   [53037] = "Weekly", -- Emissary of War - Mythic Dungeons
   [53038] = "AccountWeekly", -- The Very Best - PvP Pet Battles
@@ -152,15 +201,15 @@ local QuestExceptions = {
 addon.QuestExceptions = QuestExceptions
 
 -- Timewalking Dungeon final boss drops
--- to find eventID, select the event in calendar and use the command below
--- /run local i = C_Calendar.GetEventIndex() local e = C_Calendar.GetDayEvent(i.offsetMonths, i.monthDay, i.eventIndex) print(e.eventID)
--- [questID] = eventID
+-- [questID] = LFDID,
 local TimewalkingItemQuest = {
-  [40168] = 623, -- The Swirling Vial - TBC Timewalking
-  [40173] = 617, -- The Unstable Prism - WLK Timewalking
-  [40786] = 629, -- The Smoldering Ember - CTM Timewalking - Horde
-  [40787] = 629, -- The Smoldering Ember - CTM Timewalking - Alliance
-  [45563] = 654, -- The Shrouded Coin - MOP Timewalking
+  [40168] = 744,  -- The Swirling Vial - TBC Timewalking
+  [40173] = 995,  -- The Unstable Prism - WLK Timewalking
+  [40786] = 1146, -- The Smoldering Ember - CTM Timewalking - Horde
+  [40787] = 1146, -- The Smoldering Ember - CTM Timewalking - Alliance
+  [45563] = 1453, -- The Shrouded Coin - MOP Timewalking
+  [55498] = 1971, -- The Shimmering Crystal - WOD Timewalking - Alliance
+  [55499] = 1971, -- The Shimmering Crystal - WOD Timewalking - Horde
 }
 for questID, tbl in pairs(TimewalkingItemQuest) do
   QuestExceptions[questID] = "Weekly"

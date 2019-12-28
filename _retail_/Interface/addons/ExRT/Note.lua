@@ -8,6 +8,11 @@ local ELib,L = ExRT.lib,ExRT.L
 local GetTime, CombatLogGetCurrentEventInfo = GetTime, CombatLogGetCurrentEventInfo
 local string_gsub, strsplit, tonumber, format = string.gsub, strsplit, tonumber, format
 
+local GetSpecialization = GetSpecialization
+if ExRT.isClassic then
+	GetSpecialization = ExRT.NULLfunc
+end
+
 module.db.iconsList = {
 	"|TInterface\\TargetingFrame\\UI-RaidTargetingIcon_1:0|t",
 	"|TInterface\\TargetingFrame\\UI-RaidTargetingIcon_2:0|t",
@@ -45,6 +50,12 @@ module.db.otherIconsList = {
 	--{"{D}","|TInterface\\LFGFrame\\UI-LFG-ICON-PORTRAITROLES:16:16:0:0:64:64:20:39:22:41|t","Interface\\LFGFrame\\UI-LFG-ICON-ROLES",0.26171875,0.5234375,0.26171875,0.5234375},
 }
 
+if ExRT.isClassic then
+	tremove(module.db.otherIconsList,12)
+	tremove(module.db.otherIconsList,10)
+	tremove(module.db.otherIconsList,6)
+end
+
 module.db.iconsLocalizatedNames = {
 	L.raidtargeticon1,L.raidtargeticon2,L.raidtargeticon3,L.raidtargeticon4,L.raidtargeticon5,L.raidtargeticon6,L.raidtargeticon7,L.raidtargeticon8,
 }
@@ -61,8 +72,9 @@ local frameStrataList = {"BACKGROUND","LOW","MEDIUM","HIGH","DIALOG","FULLSCREEN
 module.db.msgindex = -1
 module.db.lasttext = ""
 
-module.db.encounter_time_p = {}
-
+module.db.encounter_time_p = {}	--phases
+module.db.encounter_time_c = {}	--custom
+module.db.encounter_id = {}
 
 local function GSUB_Icon(spellID)
 	spellID = tonumber(spellID)
@@ -92,12 +104,31 @@ local function GSUB_Player(list,msg)
 	end
 end
 
+local function GSUB_Encounter(list,msg)
+	list = {strsplit(",",list)}
+	local found = false
+	for i=1,#list do
+		list[i] = list[i]:gsub("|c........",""):gsub("|r",""):lower()
+		if module.db.encounter_id[ list[i] ] then
+			found = true
+			break
+		end
+	end
+
+	if found then
+		return msg
+	else
+		return ""
+	end
+end
+
 --[[
 formats:
 {time:75}
 {time:1:15}
 {time:2:30,p2}	--start on phase 2, works only with bigwigs
 {time:0:30,SCC:17:2}	--start on combat log event. format "event:spellID:counter", events: SCC (SPELL_CAST_SUCCESS), SCS (SPELL_CAST_START), SAA (SPELL_AURA_APPLIED), SAR (SPELL_AURA_REMOVED)
+{time:0:30,e,customevent}	--start on ExRT.F.Note_Timer(customevent) function or "/rt note starttimer customevent" 
 ]]
 local function GSUB_Time(t,msg)
 	local lineTime
@@ -137,6 +168,17 @@ local function GSUB_Time(t,msg)
 		phaseText = "P"..phase.." "
 	end
 
+	if type(t)=='string' then
+		local custom_event = t:match(",e,(.+)")
+		if custom_event then
+			t = module.db.encounter_time_c[custom_event]
+			if not t then
+				return "|cffffed88"..format("%d:%02d|r ",floor(lineTime/60),lineTime % 60)..msg.."\n"
+			end
+			currTime = GetTime() - t
+		end
+	end
+
 	if currTime > lineTime then
 		return "|cff555555"..msg:gsub("|c........",""):gsub("|r","").."|r\n"
 	elseif lineTime - currTime <= 10 then
@@ -155,6 +197,8 @@ local function txtWithIcons(t)
 		t = t..(t~="" and t~=" " and "\n" or "").."{self}"
 	end
 	t = string_gsub(t,"{self}",VExRT.Note.SelfText or "")
+
+	t = string_gsub(t,"{[Ee]:([^}]+)}(.-){/[Ee]}",GSUB_Encounter)
 
 	for i=1,8 do
 		t = string_gsub(t,module.db.iconsLocalizatedNames[i],module.db.iconsList[i])
@@ -199,13 +243,22 @@ local IsUpdateNoteByEncounterFromMe = nil
 function module.options:Load()
 	self:CreateTilte()
 
-	module.db.otherIconsAdditionalList = {
-		31821,62618,97462,98008,115310,64843,740,265202,108280,204150,31884,196718,15286,64901,0,
+	module.db.otherIconsAdditionalList = ExRT.isClassic and {} or {
+		31821,62618,97462,98008,115310,64843,740,265202,108280,204150,31884,196718,15286,64901,47536,246287,0,
 		47788,33206,6940,102342,114030,1022,116849,633,204018,207399,0,
 		2825,32182,80353,0,
 		106898,192077,46968,119381,179057,192058,30283,0,
-		29166,32375,114018,108199,49576,47536,0,
+		29166,32375,114018,108199,49576,0,
 		--"Interface\\Icons\\inv_60legendary_ring1c","Interface\\Icons\\inv_60legendary_ring1b","Interface\\Icons\\inv_60legendary_ring1a",0,
+		0,
+		295705,295791,300705,300961,300698,294847,300962,295421,300957,295704,295601,295795,300701,294726,295850,294711,295346,294715,295138,295332,295807,295348,295796,0,
+		301930,298424,298595,301180,292279,292133,292167,292084,292205,305094,292138,292307,292127,292247,0,
+		296894,296673,295916,296449,304951,296746,296389,296701,296462,296421,296566,0,
+		296650,297333,296752,297206,302779,296693,302836,296555,296944,296725,298054,0,
+		298526,296698,296691,298156,298164,298242,298103,304280,295825,295779,295818,298430,300244,295161,298548,295766,300308,298459,0,
+		297325,299914,300395,301829,301807,301947,300088,301832,300546,296850,297586,297656,303306,299563,304409,297564,296704,297585,303188,0,
+		301068,300635,295249,292963,292971,295444,300133,303818,301117,294515,299616,299708,300584,295173,296084,293509,303832,304733,304709,302593,295099,292565,294652,298192,295999,292996,0,
+		300478,303644,299250,302999,297912,299251,299094,299252,299253,299254,300074,298531,300626,299178,300076,300848,303825,300518,298014,300807,301518,300879,300866,298787,298425,298756,299276,301424,303980,297371,300743,297907,304475,298569,298018,300428,303657,297372,300492,297972,297937,299255,299890,300205,297934,298121,298021,0,
 		0,
 		283933,284468,284469,288298,287469,283579,283587,287439,283572,288292,283650,283637,284449,284488,283628,284578,283626,282113,283662,287419,283955,284459,284436,284474,0,
 		282181,289412,285654,282082,285671,281936,285658,282247,289292,283069,289556,285875,282380,281938,283078,282243,282215,282379,282179,285660,282010,290574,285994,0,
@@ -231,11 +284,12 @@ function module.options:Load()
 	Script for autoicons:
 	
 	/run function F(eID)local f=select(4,EJ_GetEncounterInfoByIndex(eID))repeat local I=C_EncounterJournal.GetSectionInfo(f)local O=I and (I.headerType == 3)if O then f=I.siblingSectionID end until not O return f end
-	/run function C(f) local I=C_EncounterJournal.GetSectionInfo(f) if I.firstChildSectionID then C(I.firstChildSectionID)end if I.spellID and I.spellID~=0 then L[I.spellID]=true end if I.siblingSectionID then C(I.siblingSectionID) end end
-	/run for i=1,9 do L={} local f=F(i) C(f)local s="" for q,w in pairs(L)do s=s..q.."," end print(s..'0,') end
+	/run function C(f) local I=C_EncounterJournal.GetSectionInfo(f) if I.firstChildSectionID then C(I.firstChildSectionID)end if I.spellID and I.spellID~=0 and P(I.spellID) then L[I.spellID]=true end if I.siblingSectionID then C(I.siblingSectionID) end end
+	/run function P(s)local i=GetSpellTexture(s)if not U[i]then U[i]=1 return true end end for i=1,8 do L,U={},{} local f=F(i) C(f)local s="" for q,w in pairs(L)do s=s..q.."," end print(s..'0,')JJBox(s..'0,') end
 	]]
 	
-	module.db.encountersList = {
+	module.db.encountersList = ExRT.isClassic and {} or {
+		{1512,2298,2305,2289,2304,2303,2311,2293,2299},
 		{L.S_ZoneT23Storms,2269,2273},
 		{1358,2265,2263,2284,2266,2285,2271,2268,2272,2276,2280,2281},
 		{1148,2144,2141,2136,2134,2128,2145,2135,2122},
@@ -607,6 +661,9 @@ function module.options:Load()
 				}
 			end
 		end
+	end
+	if ExRT.isClassic then
+		self.autoLoadDropdown:Hide()
 	end
 
 	local IsFormattingOn = VExRT.Note.OptionsFormatting
@@ -982,7 +1039,7 @@ function module.options:Load()
 		self.lastUpdate:SetText( L.NoteLastUpdate..": "..VExRT.Note.LastUpdateName.." ("..date("%H:%M:%S %d.%m.%Y",VExRT.Note.LastUpdateTime)..")" )
 	end
 
-	self.chkEnable = ELib:Check(self,L.senable,VExRT.Note.enabled):Point(560+130,-26):Tooltip('/rt note'):Size(18,18):OnClick(function(self) 
+	self.chkEnable = ELib:Check(self,L.senable,VExRT.Note.enabled):Point(560+130,-26):Tooltip("/rt note|n/rt n"):Size(18,18):OnClick(function(self) 
 		if self:GetChecked() then
 			module:Enable()
 		else
@@ -1250,6 +1307,14 @@ module.frame:SetScript("OnSizeChanged", function (self, width, height)
 end)
 module.frame:Hide() 
 
+ELib:FixPreloadFont(module.frame,function() 
+	if VExRT then
+		module.frame.text:SetFont(GameFontWhite:GetFont(),11)
+		module.frame:UpdateFont() 
+		return true
+	end
+end)
+
 function module.frame:UpdateFont()
 	local font = VExRT and VExRT.Note and VExRT.Note.FontName or ExRT.F.defFont
 	local size = VExRT and VExRT.Note and VExRT.Note.FontSize or 12
@@ -1481,6 +1546,10 @@ function module:addonMessage(sender, prefix, ...)
 				end
 			end
 		end
+
+	elseif prefix == "multiline_timer_sync" then
+		local name = ...
+		ExRT.F.Note_Timer(name)	
 	end 
 end 
 
@@ -1765,45 +1834,58 @@ do
 	end
 
 
-	function module.main:ENCOUNTER_START()
-		if not (VExRT.Note.Text1 or ""):find("{time:([0-9:]+[^{}]*)}") then
-			return
-		end
-		module:RegisterTimer()
-		module.db.encounter_time = GetTime()
-		module.db.encounter_time_p[1] = module.db.encounter_time
-		module.frame:UpdateText()
-		BossPhasesBossmod()
-
-		if (VExRT.Note.Text1 or ""):find("{time:([0-9:]+,S[^{}]*)}") then
-			wipe(module.db.encounter_counters.SCC)
-			wipe(module.db.encounter_counters.SCS)
-			wipe(module.db.encounter_counters.SAA)
-			wipe(module.db.encounter_counters.SAR)
-			local anyEvent
-			string_gsub(VExRT.Note.Text1,"{time:[0-9:]+,(S[^{}]*)}",function(str)
-				local event,spellID,count = strsplit(":",str)
-				if tonumber(count or "") and tonumber(spellID or "") and event and module.db.encounter_counters[event] then
-					anyEvent = true
-					module.db.encounter_counters[event][tonumber(spellID)] = 0
-				end
-			end)
-			if anyEvent then
-				wipe(module.db.encounter_counters_time)
-				module:RegisterEvents("COMBAT_LOG_EVENT_UNFILTERED")
+	function module.main:ENCOUNTER_START(encounterID, encounterName, difficultyID, groupSize)
+		local updateTextReq
+		local noteText = (VExRT.Note.Text1 or "")..(VExRT.Note.SelfText or "")
+		if encounterID and encounterName then
+			module.db.encounter_id[tostring(encounterID)] = true
+			module.db.encounter_id[encounterName] = true
+			if noteText:find("{[Ee]:([^}]+)}.-{/[Ee]}") then
+				updateTextReq = true
 			end
+		end
+		if noteText:find("{time:([0-9:]+[^{}]*)}") then
+			wipe(module.db.encounter_time_c)
+			module:RegisterTimer()
+			module.db.encounter_time = GetTime()
+			module.db.encounter_time_p[1] = module.db.encounter_time
+			updateTextReq = true
+			BossPhasesBossmod()
+	
+			if noteText:find("{time:([0-9:]+,S[^{}]*)}") then
+				wipe(module.db.encounter_counters.SCC)
+				wipe(module.db.encounter_counters.SCS)
+				wipe(module.db.encounter_counters.SAA)
+				wipe(module.db.encounter_counters.SAR)
+				local anyEvent
+				string_gsub(noteText,"{time:[0-9:]+,(S[^{}]*)}",function(str)
+					local event,spellID,count = strsplit(":",str)
+					if tonumber(count or "") and tonumber(spellID or "") and event and module.db.encounter_counters[event] then
+						anyEvent = true
+						module.db.encounter_counters[event][tonumber(spellID)] = 0
+					end
+				end)
+				if anyEvent then
+					wipe(module.db.encounter_counters_time)
+					module:RegisterEvents("COMBAT_LOG_EVENT_UNFILTERED")
+				end
+			end
+		end
+		if updateTextReq then
+			module.frame:UpdateText()
 		end
 	end
 	function module.main:ENCOUNTER_END()
-		if not (VExRT.Note.Text1 or ""):find("{time:([0-9:]+[^{}]*)}") then
-			return
+		wipe(module.db.encounter_id)
+		if ((VExRT.Note.Text1 or "")..(VExRT.Note.SelfText or "")):find("{time:([0-9:]+[^{}]*)}") then
+			module:UnregisterTimer()
+			module.db.encounter_time = nil
+			wipe(module.db.encounter_time_p)
+			wipe(module.db.encounter_time_c)
+	
+			module:UnregisterEvents("COMBAT_LOG_EVENT_UNFILTERED")
 		end
-		module:UnregisterTimer()
-		module.db.encounter_time = nil
-		wipe(module.db.encounter_time_p)
 		module.frame:UpdateText()
-
-		module:UnregisterEvents("COMBAT_LOG_EVENT_UNFILTERED")
 	end
 	local tmr = 0
 	function module:timer(elapsed)
@@ -1847,10 +1929,26 @@ do
 		end
 	end
 
+
+	function ExRT.F.Note_Timer(name)
+		if not name then
+			return
+		end
+		if not module.db.encounter_time then
+			module.main:ENCOUNTER_START()
+		end
+		module.db.encounter_time_c[name] = GetTime()
+	end
+	function ExRT.F.Note_SyncTimer(name)
+		if not name then
+			return
+		end
+		ExRT.F.SendExMsg("multiline_timer_sync",name)
+	end
 end
 
 function module:slash(arg)
-	if arg == "note" then
+	if arg == "note" or arg == "n" then
 		if VExRT.Note.enabled then 
 			module:Disable()
 		else
@@ -1863,6 +1961,16 @@ function module:slash(arg)
 			module.main:ENCOUNTER_END()
 		else
 			module.main:ENCOUNTER_START()
+		end
+	elseif arg and arg:find("^note starttimer ") then
+		local timer = arg:match("^note starttimer (.-)$")
+		if timer then
+			ExRT.F.Note_Timer(timer)
+		end
+	elseif arg and arg:find("^note synctimer ") then
+		local timer = arg:match("^note synctimer (.-)$")
+		if timer then
+			ExRT.F.Note_SyncTimer(timer)
 		end
 	end
 end

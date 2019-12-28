@@ -1,5 +1,5 @@
-local addonVersion = "8.1.0.1"
-local addonReleaseDate = "December 13, 2018"
+local addonVersion = "8.2.5.0"
+local addonReleaseDate = "December 18, 2019"
 local barContainerFrame = CreateFrame("Frame", "TwintopInsanityBarFrame", UIParent)
 local insanityFrame = CreateFrame("StatusBar", nil, barContainerFrame)
 local castingFrame = CreateFrame("StatusBar", nil, barContainerFrame)
@@ -15,6 +15,8 @@ passiveFrame.threshold = CreateFrame("Frame", nil, passiveFrame)
 leftTextFrame.font = leftTextFrame:CreateFontString(nil, "BACKGROUND")
 middleTextFrame.font = middleTextFrame:CreateFontString(nil, "BACKGROUND")
 rightTextFrame.font = rightTextFrame:CreateFontString(nil, "BACKGROUND")
+
+local barTextCache = {}
 
 local targetsTimerFrame = CreateFrame("Frame")
 targetsTimerFrame.sinceLastUpdate = 0
@@ -130,6 +132,11 @@ local spells = {
 		name = "",
 		icon = ""
 	},
+	darkAscension = {
+		id = 280711,
+		name = "",
+		icon = ""
+	},
 	shadowWordPain = {
 		id = 589,
 		icon = "",
@@ -214,14 +221,22 @@ local spells = {
 		icon = "",
 		insanity = 6,
 		fotm = false
+	},
+	memoryOfLucidDreams = {
+		id = 299374,
+		name = "",
+		isActive = false,
+		modifier = 2.0
 	}
 }
 
 local function TableLength(T)
 	local count = 0
-	local _
-	for _ in pairs(T) do
-		count = count + 1
+	if T ~= nil then
+		local _
+		for _ in pairs(T) do
+			count = count + 1
+		end
 	end
 	return count
 end
@@ -274,7 +289,8 @@ local snapshotData = {
 		s2m = {
 			startTime = nil,
 			active = false
-		}
+		},
+		playedCue = false
 	},
 	targetData = {
 		ttdIsActive = false,
@@ -316,7 +332,21 @@ addonData.libs.SharedMedia = LibStub:GetLibrary("LibSharedMedia-3.0")
 addonData.libs.SharedMedia:Register("sound", "Wilhelm Scream (TIB)", "Interface\\Addons\\TwintopInsanityBar\\wilhelm.ogg")
 addonData.libs.SharedMedia:Register("sound", "Boxing Arena Gong (TIB)", "Interface\\Addons\\TwintopInsanityBar\\BoxingArenaSound.ogg")
 
-local function IsNumeric( data )
+local sanityCheckValues = {
+	barMaxWidth = 0,
+	barMinWidth = 0,
+	barMaxHeight = 0,
+	barMinHeight = 0
+}
+
+local function UpdateSanityCheckValues()
+	sanityCheckValues.barMaxWidth = math.floor(GetScreenWidth())
+	sanityCheckValues.barMinWidth = math.max(math.ceil(settings.bar.border * 8), 120)	
+	sanityCheckValues.barMaxHeight = math.floor(GetScreenHeight())
+	sanityCheckValues.barMinHeight = math.max(math.ceil(settings.bar.border * 8), 1)
+end
+
+local function IsNumeric(data)
     if type(data) == "number" then
         return true
     elseif type(data) ~= "string" then
@@ -385,10 +415,10 @@ local function GetRGBAFromString(s, normalize)
     local _b = 0
     
     if not (s == nil) then        
-        _a = tonumber(string.sub(s, 1, 2), 16)
-        _r = tonumber(string.sub(s, 3, 4), 16)
-        _g = tonumber(string.sub(s, 5, 6), 16)
-        _b = tonumber(string.sub(s, 7, 8), 16)        
+        _a = min(255, tonumber(string.sub(s, 1, 2), 16))
+        _r = min(255, tonumber(string.sub(s, 3, 4), 16))
+        _g = min(255, tonumber(string.sub(s, 5, 6), 16))
+        _b = min(255, tonumber(string.sub(s, 7, 8), 16))
     end
     
 	if normalize then
@@ -555,9 +585,18 @@ local function LoadDefaultSettings()
 				sound="Interface\\Addons\\TwintopInsanityBar\\wilhelm.ogg",
 				soundName="Wilhelm Scream (TIB)"
 			},
+			vfReady={
+				enabled=false,
+				sound="Interface\\Addons\\TwintopInsanityBar\\BoxingArenaSound.ogg",
+				soundName="Boxing Arena Gong (TIB)"
+			},
 			mindbender={
 				sound="Interface\\Addons\\TwintopInsanityBar\\BoxingArenaSound.ogg",
 				soundName="Boxing Arena Gong (TIB)"
+			},
+			channel={
+				name="Master",
+				channel="Master"
 			}
 		},
 		textures={
@@ -572,6 +611,10 @@ local function LoadDefaultSettings()
 			castingBar="Interface\\TargetingFrame\\UI-StatusBar",
 			castingBarName="Blizzard",
 			textureLock=true
+		},
+		strata={
+			level="BACKGROUND",
+			name="Background"
 		}
 	}
 
@@ -781,49 +824,69 @@ end
 local function HideInsanityBar()
 	local affectingCombat = UnitAffectingCombat("player")
 
-	if (not affectingCombat) and (
-		(not settings.displayBar.alwaysShow) and (
-			(not settings.displayBar.notZeroShow) or
-			(settings.displayBar.notZeroShow and snapshotData.insanity == 0))) then
+	if (not affectingCombat) and
+		(not UnitInVehicle("player")) and (
+			(not settings.displayBar.alwaysShow) and (
+				(not settings.displayBar.notZeroShow) or
+				(settings.displayBar.notZeroShow and snapshotData.insanity == 0)
+			)
+		 ) then
 		barContainerFrame:Hide()	
 	else
 		barContainerFrame:Show()	
 	end
 end
 
+local function UpdateBarPosition(xOfs, yOfs)
+	if IsNumeric(xOfs) and IsNumeric(yOfs) then
+		if xOfs < math.ceil(-sanityCheckValues.barMaxWidth/2) then
+			xOfs = math.ceil(-sanityCheckValues.barMaxWidth/2)
+		elseif xOfs > math.floor(sanityCheckValues.barMaxWidth/2) then
+			xOfs = math.floor(sanityCheckValues.barMaxWidth/2)
+		end
+
+		if yOfs < math.ceil(-sanityCheckValues.barMaxHeight/2) then
+			yOfs = math.ceil(-sanityCheckValues.barMaxHeight/2)
+		elseif yOfs > math.floor(sanityCheckValues.barMaxHeight/2) then
+			yOfs = math.floor(sanityCheckValues.barMaxHeight/2)
+		end
+
+
+		interfaceSettingsFrame.controls.horizontal:SetValue(xOfs)
+		interfaceSettingsFrame.controls.horizontal.EditBox:SetText(RoundTo(xOfs, 0))
+		interfaceSettingsFrame.controls.vertical:SetValue(yOfs)
+		interfaceSettingsFrame.controls.vertical.EditBox:SetText(RoundTo(yOfs, 0))	
+	end
+end
+
 local function CaptureBarPosition()
 	local point, relativeTo, relativePoint, xOfs, yOfs = barContainerFrame:GetPoint()
-	local maxWidth = math.floor(GetScreenWidth())
-	local maxHeight = math.floor(GetScreenHeight())
 
 	if relativePoint == "CENTER" then
 		--No action needed.
 	elseif relativePoint == "TOP" then
-		yOfs = ((maxHeight/2) + yOfs - (settings.bar.height/2))
+		yOfs = ((sanityCheckValues.barMaxHeight/2) + yOfs - (settings.bar.height/2))
 	elseif relativePoint == "TOPRIGHT" then
-		xOfs = ((maxWidth/2) + xOfs - (settings.bar.width/2))
-		yOfs = ((maxHeight/2) + yOfs - (settings.bar.height/2))
+		xOfs = ((sanityCheckValues.barMaxWidth/2) + xOfs - (settings.bar.width/2))
+		yOfs = ((sanityCheckValues.barMaxHeight/2) + yOfs - (settings.bar.height/2))
 	elseif relativePoint == "RIGHT" then
-		xOfs = ((maxWidth/2) + xOfs - (settings.bar.width/2))
+		xOfs = ((sanityCheckValues.barMaxWidth/2) + xOfs - (settings.bar.width/2))
 	elseif relativePoint == "BOTTOMRIGHT" then
-		xOfs = ((maxWidth/2) + xOfs - (settings.bar.width/2))
-		yOfs = -((maxHeight/2) - yOfs - (settings.bar.height/2))
+		xOfs = ((sanityCheckValues.barMaxWidth/2) + xOfs - (settings.bar.width/2))
+		yOfs = -((sanityCheckValues.barMaxHeight/2) - yOfs - (settings.bar.height/2))
 	elseif relativePoint == "BOTTOM" then
-		yOfs = -((maxHeight/2) - yOfs - (settings.bar.height/2))
+		yOfs = -((sanityCheckValues.barMaxHeight/2) - yOfs - (settings.bar.height/2))
 	elseif relativePoint == "BOTTOMLEFT" then
-		xOfs = -((maxWidth/2) - xOfs - (settings.bar.width/2))
-		yOfs = -((maxHeight/2) - yOfs - (settings.bar.height/2))
+		xOfs = -((sanityCheckValues.barMaxWidth/2) - xOfs - (settings.bar.width/2))
+		yOfs = -((sanityCheckValues.barMaxHeight/2) - yOfs - (settings.bar.height/2))
 	elseif relativePoint == "LEFT" then				
-		xOfs = -((maxWidth/2) - xOfs - (settings.bar.width/2))
+		xOfs = -((sanityCheckValues.barMaxWidth/2) - xOfs - (settings.bar.width/2))
 	elseif relativePoint == "TOPLEFT" then
-		xOfs = -((maxWidth/2) - xOfs - (settings.bar.width/2))
-		yOfs = ((maxHeight/2) + yOfs - (settings.bar.height/2))
+		xOfs = -((sanityCheckValues.barMaxWidth/2) - xOfs - (settings.bar.width/2))
+		yOfs = ((sanityCheckValues.barMaxHeight/2) + yOfs - (settings.bar.height/2))
 	end
-				
-	interfaceSettingsFrame.controls.horizontal:SetValue(xOfs)
-	interfaceSettingsFrame.controls.horizontal.EditBox:SetText(RoundTo(xOfs, 0))
-	interfaceSettingsFrame.controls.vertical:SetValue(yOfs)
-	interfaceSettingsFrame.controls.vertical.EditBox:SetText(RoundTo(yOfs, 0))	
+
+	UpdateBarPosition(xOfs, yOfs)
 end
 
 local function ConstructInsanityBar()
@@ -840,7 +903,7 @@ local function ConstructInsanityBar()
 	barContainerFrame:SetBackdropColor(GetRGBAFromString(settings.colors.bar.background, true))
 	barContainerFrame:SetWidth(settings.bar.width)
 	barContainerFrame:SetHeight(settings.bar.height)
-	barContainerFrame:SetFrameStrata("BACKGROUND")
+	barContainerFrame:SetFrameStrata(settings.strata.level)
 	barContainerFrame:SetFrameLevel(0)
 
 	barContainerFrame:SetScript("OnMouseDown", function(self, button)
@@ -887,7 +950,7 @@ local function ConstructInsanityBar()
 	barBorderFrame:SetBackdropBorderColor(GetRGBAFromString(settings.colors.bar.border, true))
 	barBorderFrame:SetWidth(settings.bar.width)
 	barBorderFrame:SetHeight(settings.bar.height)
-	barBorderFrame:SetFrameStrata("BACKGROUND")
+	--barBorderFrame:SetFrameStrata(settings.strata.level)
 	barBorderFrame:SetFrameLevel(126)
 
 
@@ -898,15 +961,15 @@ local function ConstructInsanityBar()
 	insanityFrame:SetPoint("RIGHT", barContainerFrame, "RIGHT", 0, 0)
 	insanityFrame:SetStatusBarTexture(settings.textures.insanityBar)
 	insanityFrame:SetStatusBarColor(GetRGBAFromString(settings.colors.bar.base))
-	insanityFrame:SetFrameStrata("BACKGROUND")
+	--insanityFrame:SetFrameStrata(ettings.strata.level)
 	insanityFrame:SetFrameLevel(125)
 	
 	insanityFrame.threshold:SetWidth(settings.thresholdWidth)
 	insanityFrame.threshold:SetHeight(settings.bar.height)
-	insanityFrame.threshold.texture = insanityFrame.threshold:CreateTexture(nil, "BACKGROUND")
+	insanityFrame.threshold.texture = insanityFrame.threshold:CreateTexture(nil, settings.strata.level)
 	insanityFrame.threshold.texture:SetAllPoints(insanityFrame.threshold)
 	insanityFrame.threshold.texture:SetColorTexture(GetRGBAFromString(settings.colors.threshold.under, true))
-	insanityFrame.threshold:SetFrameStrata("BACKGROUND")
+	--insanityFrame.threshold:SetFrameStrata(settings.strata.level)
 	insanityFrame.threshold:SetFrameLevel(128)
 	insanityFrame.threshold:Show()
 	
@@ -917,7 +980,7 @@ local function ConstructInsanityBar()
 	castingFrame:SetPoint("RIGHT", barContainerFrame, "RIGHT", 0, 0)
 	castingFrame:SetStatusBarTexture(settings.textures.castingBar)
 	castingFrame:SetStatusBarColor(GetRGBAFromString(settings.colors.bar.casting))
-	castingFrame:SetFrameStrata("BACKGROUND")
+	--castingFrame:SetFrameStrata(settings.strata.level)
 	castingFrame:SetFrameLevel(90)
 	
 	passiveFrame:Show()
@@ -927,15 +990,15 @@ local function ConstructInsanityBar()
 	passiveFrame:SetPoint("RIGHT", barContainerFrame, "RIGHT", 0, 0)
 	passiveFrame:SetStatusBarTexture(settings.textures.passiveBar)
 	passiveFrame:SetStatusBarColor(GetRGBAFromString(settings.colors.bar.passive))
-	passiveFrame:SetFrameStrata("BACKGROUND")
+	--passiveFrame:SetFrameStrata(settings.strata.level)
 	passiveFrame:SetFrameLevel(80)
 	
 	passiveFrame.threshold:SetWidth(settings.thresholdWidth)
 	passiveFrame.threshold:SetHeight(settings.bar.height)
-	passiveFrame.threshold.texture = passiveFrame.threshold:CreateTexture(nil, "BACKGROUND")
+	passiveFrame.threshold.texture = passiveFrame.threshold:CreateTexture(nil, settings.strata.level)
 	passiveFrame.threshold.texture:SetAllPoints(passiveFrame.threshold)
 	passiveFrame.threshold.texture:SetColorTexture(GetRGBAFromString(settings.colors.threshold.mindbender, true))
-	passiveFrame.threshold:SetFrameStrata("BACKGROUND")
+	--passiveFrame.threshold:SetFrameStrata(settings.strata.level)
 	passiveFrame.threshold:SetFrameLevel(127)
 	passiveFrame.threshold:Show()
 	
@@ -943,7 +1006,7 @@ local function ConstructInsanityBar()
 	leftTextFrame:SetWidth(settings.bar.width)
 	leftTextFrame:SetHeight(settings.bar.height * 3.5)
 	leftTextFrame:SetPoint("LEFT", barContainerFrame, "LEFT", 2, 0)
-	leftTextFrame:SetFrameStrata("BACKGROUND")
+	--leftTextFrame:SetFrameStrata(settings.strata.level)
 	leftTextFrame:SetFrameLevel(129)
 	leftTextFrame.font:SetPoint("LEFT", 0, 0)
 	leftTextFrame.font:SetTextColor(255/255, 255/255, 255/255, 1.0)
@@ -955,7 +1018,7 @@ local function ConstructInsanityBar()
 	middleTextFrame:SetWidth(settings.bar.width)
 	middleTextFrame:SetHeight(settings.bar.height * 3.5)
 	middleTextFrame:SetPoint("CENTER", barContainerFrame, "CENTER", 0, 0)
-	middleTextFrame:SetFrameStrata("BACKGROUND")
+	--middleTextFrame:SetFrameStrata(settings.strata.level)
 	middleTextFrame:SetFrameLevel(129)
 	middleTextFrame.font:SetPoint("CENTER", 0, 0)
 	middleTextFrame.font:SetTextColor(255/255, 255/255, 255/255, 1.0)
@@ -967,7 +1030,7 @@ local function ConstructInsanityBar()
 	rightTextFrame:SetWidth(settings.bar.width)
 	rightTextFrame:SetHeight(settings.bar.height * 3.5)
 	rightTextFrame:SetPoint("RIGHT", barContainerFrame, "RIGHT", 0, 0)
-	rightTextFrame:SetFrameStrata("BACKGROUND")
+	--rightTextFrame:SetFrameStrata(settings.strata.level)
 	rightTextFrame:SetFrameLevel(129)
 	rightTextFrame.font:SetPoint("RIGHT", 0, 0)
 	rightTextFrame.font:SetTextColor(255/255, 255/255, 255/255, 1.0)
@@ -1191,7 +1254,7 @@ local function ConvertColorDecimalToHex(r, g, b, a)
 		_a = "00"
 	else
 		_a = string.format("%x", math.ceil(a * 255))
-		if string.len(_a) == 1 then
+		if string.len(_a) == 1 then	
 			_a = _a .. _a
 		end
 	end
@@ -1214,13 +1277,13 @@ local function BuildColorPicker(parent, description, settingsEntry, sizeTotal, s
 	f:SetSize(sizeFrame, sizeFrame)
 	f:SetPoint("TOPLEFT", posX, posY)
 	f:SetBackdrop({edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border", tile = true, tileSize=4, edgeSize=12})
-	f.Texture = f:CreateTexture(nil, "BACKGROUND")
+	f.Texture = f:CreateTexture(nil, settings.strata.level)
 	f.Texture:ClearAllPoints()
 	f.Texture:SetPoint("TOPLEFT", 4, -4)
 	f.Texture:SetPoint("BOTTOMRIGHT", -4, 4)
 	f.Texture:SetColorTexture(GetRGBAFromString(settingsEntry, true))
     f:EnableMouse(true)
-	f.Font = f:CreateFontString(nil, "BACKGROUND")
+	f.Font = f:CreateFontString(nil, settings.strata.level)
 	f.Font:SetPoint("LEFT", f, "RIGHT", 10, 0)
 	f.Font:SetFontObject(GameFontHighlight)
 	f.Font:SetText(description)
@@ -1237,7 +1300,7 @@ local function BuildSectionHeader(parent, title, posX, posY)
 	f:SetPoint("TOPLEFT", posX, posY)
 	f:SetWidth(500)
 	f:SetHeight(30)
-	f.font = f:CreateFontString(nil, "BACKGROUND")
+	f.font = f:CreateFontString(nil, settings.strata.level)
 	f.font:SetFontObject(GameFontNormalLarge)
 	f.font:SetPoint("LEFT", f, "LEFT")
     f.font:SetSize(0, 14)
@@ -1254,7 +1317,7 @@ local function BuildDisplayTextHelpEntry(parent, var, desc, posX, posY, offset, 
 	f:SetPoint("TOPLEFT", posX, posY)
 	f:SetWidth(offset)
 	f:SetHeight(20)
-	f.font = f:CreateFontString(nil, "BACKGROUND")
+	f.font = f:CreateFontString(nil, settings.strata.level)
 	f.font:SetFontObject(GameFontNormalSmall)
 	f.font:SetPoint("LEFT", f, "LEFT")
     f.font:SetSize(0, 14)
@@ -1269,7 +1332,7 @@ local function BuildDisplayTextHelpEntry(parent, var, desc, posX, posY, offset, 
 	fd:SetPoint("TOPLEFT", posX+offset+10, posY)
 	fd:SetWidth(width)
 	fd:SetHeight(20)
-	fd.font = fd:CreateFontString(nil, "BACKGROUND")
+	fd.font = fd:CreateFontString(nil, settings.strata.level)
 	fd.font:SetFontObject(GameFontHighlightSmall)
 	fd.font:SetPoint("LEFT", fd, "LEFT")
     fd.font:SetSize(0, 14)
@@ -1291,16 +1354,12 @@ local function ConstructOptionsPanel()
 	local xOffset2 = 275
 	
 	local yOffset60 = 60
-	local yOffset400 = 30
+	local yOffset30 = 30
 	local yOffset40 = 40
+	local yOffset30 = 30
 	local yOffset20 = 20
 	local yOffset15 = 15
-
-	local maxWidth = math.floor(GetScreenWidth())
-	local minWidth = math.max(math.ceil(settings.bar.border * 8), 120)
-	
-	local maxHeight = math.floor(GetScreenHeight())
-	local minHeight = math.max(math.ceil(settings.bar.border * 8), 1)
+	local yOffset10 = 10
 	local barWidth = 250
 	local barHeight = 20
 	local title = ""
@@ -1490,7 +1549,7 @@ local function ConstructOptionsPanel()
 	
 	yCoord = yCoord - yOffset40
 	title = "Bar Width"
-	controls.width = BuildSlider(parent, title, minWidth, maxWidth, settings.bar.width, 1, 2,
+	controls.width = BuildSlider(parent, title, sanityCheckValues.barMinWidth, sanityCheckValues.barMaxWidth, settings.bar.width, 1, 2,
 								 barWidth, barHeight, xCoord+xPadding2, yCoord)
 	controls.width:SetScript("OnValueChanged", function(self, value)
 		local min, max = self:GetMinMaxValues()
@@ -1513,7 +1572,7 @@ local function ConstructOptionsPanel()
 	end)
 
 	title = "Bar Height"
-	controls.height = BuildSlider(parent, title, minHeight, maxHeight, settings.bar.height, 1, 2,
+	controls.height = BuildSlider(parent, title, sanityCheckValues.barMinHeight, sanityCheckValues.barMaxHeight, settings.bar.height, 1, 2,
 									barWidth, barHeight, xCoord2, yCoord)
 	controls.height:SetScript("OnValueChanged", function(self, value)
 		local min, max = self:GetMinMaxValues()
@@ -1541,7 +1600,7 @@ local function ConstructOptionsPanel()
 
 	title = "Bar Horizontal Position"
 	yCoord = yCoord - yOffset60
-	controls.horizontal = BuildSlider(parent, title, math.ceil(-maxWidth/2), math.floor(maxWidth/2), settings.bar.xPos, 1, 2,
+	controls.horizontal = BuildSlider(parent, title, math.ceil(-sanityCheckValues.barMaxWidth/2), math.floor(sanityCheckValues.barMaxWidth/2), settings.bar.xPos, 1, 2,
 								  barWidth, barHeight, xCoord+xPadding2, yCoord)
 	controls.horizontal:SetScript("OnValueChanged", function(self, value)
 		local min, max = self:GetMinMaxValues()
@@ -1558,7 +1617,7 @@ local function ConstructOptionsPanel()
 	end)
 
 	title = "Bar Vertical Position"
-	controls.vertical = BuildSlider(parent, title, math.ceil(-maxHeight/2), math.ceil(maxHeight/2), settings.bar.yPos, 1, 2,
+	controls.vertical = BuildSlider(parent, title, math.ceil(-sanityCheckValues.barMaxHeight/2), math.floor(sanityCheckValues.barMaxHeight/2), settings.bar.yPos, 1, 2,
 								  barWidth, barHeight, xCoord2, yCoord)
 	controls.vertical:SetScript("OnValueChanged", function(self, value)
 		local min, max = self:GetMinMaxValues()
@@ -1606,9 +1665,9 @@ local function ConstructOptionsPanel()
 
 		local minBarWidth = math.max(settings.bar.border*2, 120)
 		local minBarHeight = math.max(settings.bar.border*2, 1)
-		controls.height:SetMinMaxValues(minBarHeight, maxHeight)
+		controls.height:SetMinMaxValues(minBarHeight, sanityCheckValues.barMaxHeight)
 		controls.height.MinLabel:SetText(minBarHeight)
-		controls.width:SetMinMaxValues(minBarWidth, maxWidth)
+		controls.width:SetMinMaxValues(minBarWidth, sanityCheckValues.barMaxWidth)
 		controls.width.MinLabel:SetText(minBarWidth)
 	end)
 
@@ -1652,7 +1711,7 @@ local function ConstructOptionsPanel()
 	controls.dropDown.insanityBarTexture = CreateFrame("FRAME", "TIBInsanityBarTexture", parent, "UIDropDownMenuTemplate")
 	controls.dropDown.insanityBarTexture.label = BuildSectionHeader(parent, "Main Bar Texture", xCoord+xPadding, yCoord)
 	controls.dropDown.insanityBarTexture.label.font:SetFontObject(GameFontNormal)
-	controls.dropDown.insanityBarTexture:SetPoint("TOPLEFT", xCoord+xPadding, yCoord-yOffset400)
+	controls.dropDown.insanityBarTexture:SetPoint("TOPLEFT", xCoord+xPadding, yCoord-yOffset30)
 	UIDropDownMenu_SetWidth(controls.dropDown.insanityBarTexture, 250)
 	UIDropDownMenu_SetText(controls.dropDown.insanityBarTexture, settings.textures.insanityBarName)
 	UIDropDownMenu_JustifyText(controls.dropDown.insanityBarTexture, "LEFT")
@@ -1690,7 +1749,7 @@ local function ConstructOptionsPanel()
 		end
 	end)
 
-	-- Implement the function to change the favoriteNumber
+	-- Implement the function to change the texture
 	function controls.dropDown.insanityBarTexture:SetValue(newValue, newName)
 		settings.textures.insanityBar = newValue
 		settings.textures.insanityBarName = newName
@@ -1713,7 +1772,7 @@ local function ConstructOptionsPanel()
 	controls.dropDown.castingBarTexture = CreateFrame("FRAME", "TIBCastBarTexture", parent, "UIDropDownMenuTemplate")
 	controls.dropDown.castingBarTexture.label = BuildSectionHeader(parent, "Casting Bar Texture", xCoord2-20, yCoord)
 	controls.dropDown.castingBarTexture.label.font:SetFontObject(GameFontNormal)
-	controls.dropDown.castingBarTexture:SetPoint("TOPLEFT", xCoord2-30, yCoord-yOffset400)
+	controls.dropDown.castingBarTexture:SetPoint("TOPLEFT", xCoord2-30, yCoord-yOffset30)
 	UIDropDownMenu_SetWidth(controls.dropDown.castingBarTexture, 250)
 	UIDropDownMenu_SetText(controls.dropDown.castingBarTexture, settings.textures.castingBarName)
 	UIDropDownMenu_JustifyText(controls.dropDown.castingBarTexture, "LEFT")
@@ -1751,7 +1810,7 @@ local function ConstructOptionsPanel()
 		end
 	end)
 
-	-- Implement the function to change the favoriteNumber
+	-- Implement the function to change the texture
 	function controls.dropDown.castingBarTexture:SetValue(newValue, newName)
 		settings.textures.castingBar = newValue
 		settings.textures.castingBarName = newName
@@ -1776,7 +1835,7 @@ local function ConstructOptionsPanel()
 	controls.dropDown.passiveBarTexture = CreateFrame("FRAME", "TIBPassiveBarTexture", parent, "UIDropDownMenuTemplate")
 	controls.dropDown.passiveBarTexture.label = BuildSectionHeader(parent, "Passive Bar Texture", xCoord+xPadding, yCoord)
 	controls.dropDown.passiveBarTexture.label.font:SetFontObject(GameFontNormal)
-	controls.dropDown.passiveBarTexture:SetPoint("TOPLEFT", xCoord+xPadding, yCoord-yOffset400)
+	controls.dropDown.passiveBarTexture:SetPoint("TOPLEFT", xCoord+xPadding, yCoord-yOffset30)
 	UIDropDownMenu_SetWidth(controls.dropDown.passiveBarTexture, 250)
 	UIDropDownMenu_SetText(controls.dropDown.passiveBarTexture, settings.textures.passiveBarName)
 	UIDropDownMenu_JustifyText(controls.dropDown.passiveBarTexture, "LEFT")
@@ -1814,7 +1873,7 @@ local function ConstructOptionsPanel()
 		end
 	end)
 
-	-- Implement the function to change the favoriteNumber
+	-- Implement the function to change the texture
 	function controls.dropDown.passiveBarTexture:SetValue(newValue, newName)
 		settings.textures.passiveBar = newValue
 		settings.textures.passiveBarName = newName
@@ -1860,7 +1919,7 @@ local function ConstructOptionsPanel()
 	controls.dropDown.borderTexture = CreateFrame("FRAME", "TIBBorderTexture", parent, "UIDropDownMenuTemplate")
 	controls.dropDown.borderTexture.label = BuildSectionHeader(parent, "Border Texture", xCoord+xPadding, yCoord)
 	controls.dropDown.borderTexture.label.font:SetFontObject(GameFontNormal)
-	controls.dropDown.borderTexture:SetPoint("TOPLEFT", xCoord+xPadding, yCoord-yOffset400)
+	controls.dropDown.borderTexture:SetPoint("TOPLEFT", xCoord+xPadding, yCoord-yOffset30)
 	UIDropDownMenu_SetWidth(controls.dropDown.borderTexture, 250)
 	UIDropDownMenu_SetText(controls.dropDown.borderTexture, settings.textures.borderName)
 	UIDropDownMenu_JustifyText(controls.dropDown.borderTexture, "LEFT")
@@ -1898,7 +1957,7 @@ local function ConstructOptionsPanel()
 		end
 	end)
 
-	-- Implement the function to change the favoriteNumber
+	-- Implement the function to change the texture
 	function controls.dropDown.borderTexture:SetValue(newValue, newName)
 		settings.textures.border = newValue
 		settings.textures.borderName = newName
@@ -1922,7 +1981,7 @@ local function ConstructOptionsPanel()
 	controls.dropDown.backgroundTexture = CreateFrame("FRAME", "TIBBackgroundTexture", parent, "UIDropDownMenuTemplate")
 	controls.dropDown.backgroundTexture.label = BuildSectionHeader(parent, "Background (Empty Bar) Texture", xCoord2-20, yCoord)
 	controls.dropDown.backgroundTexture.label.font:SetFontObject(GameFontNormal)
-	controls.dropDown.backgroundTexture:SetPoint("TOPLEFT", xCoord2-30, yCoord-yOffset400)
+	controls.dropDown.backgroundTexture:SetPoint("TOPLEFT", xCoord2-30, yCoord-yOffset30)
 	UIDropDownMenu_SetWidth(controls.dropDown.backgroundTexture, 250)
 	UIDropDownMenu_SetText(controls.dropDown.backgroundTexture, settings.textures.backgroundName)
 	UIDropDownMenu_JustifyText(controls.dropDown.backgroundTexture, "LEFT")
@@ -1960,7 +2019,7 @@ local function ConstructOptionsPanel()
 		end
 	end)
 
-	-- Implement the function to change the favoriteNumber
+	-- Implement the function to change the texture
 	function controls.dropDown.backgroundTexture:SetValue(newValue, newName)
 		settings.textures.background = newValue
 		settings.textures.backgroundName = newName
@@ -2067,7 +2126,7 @@ local function ConstructOptionsPanel()
 	controls.checkBoxes.flashEnabled = CreateFrame("CheckButton", "TIBCB1_5", parent, "ChatConfigCheckButtonTemplate")
 	f = controls.checkBoxes.flashEnabled
 	f:SetPoint("TOPLEFT", xCoord2, yCoord)
-	getglobal(f:GetName() .. 'Text'):SetText("Flash Bar when Void Eruption Usable")
+	getglobal(f:GetName() .. 'Text'):SetText("Flash Bar when Void Eruption is Usable")
 	f.tooltip = "This will flash the bar when Void Eruption can be cast."
 	f:SetChecked(settings.colors.bar.flashEnabled)
 	f:SetScript("OnClick", function(self, ...)
@@ -2091,7 +2150,7 @@ local function ConstructOptionsPanel()
 
 	controls.barColorsSection = BuildSectionHeader(parent, "Bar Colors", xCoord+xPadding, yCoord)
 
-	yCoord = yCoord - yOffset400
+	yCoord = yCoord - yOffset30
 	controls.colors.base = BuildColorPicker(parent, "Insanity while not in Voidform", settings.colors.bar.base, 250, 25, xCoord+xPadding*2, yCoord)
 	f = controls.colors.base
 	f.recolorTexture = function(color)
@@ -2134,7 +2193,7 @@ local function ConstructOptionsPanel()
 		end
 	end)
 
-	yCoord = yCoord - yOffset400
+	yCoord = yCoord - yOffset30
 	controls.colors.enterVoidform = BuildColorPicker(parent, "Insanity when you can cast Void Eruption", settings.colors.bar.enterVoidform, 250, 25, xCoord+xPadding*2, yCoord)
 	f = controls.colors.enterVoidform
 	f.recolorTexture = function(color)
@@ -2166,6 +2225,7 @@ local function ConstructOptionsPanel()
 			r, g, b = ColorPickerFrame:GetColorRGB()
 			a = OpacitySliderFrame:GetValue()
 		end
+
 		controls.colors.border.Texture:SetColorTexture(r, g, b, a)
 		settings.colors.bar.border = ConvertColorDecimalToHex(r, g, b, a)
 		barBorderFrame:SetBackdropBorderColor(r, g, b, a)
@@ -2177,7 +2237,7 @@ local function ConstructOptionsPanel()
 		end
 	end)
 
-	yCoord = yCoord - yOffset400
+	yCoord = yCoord - yOffset30
 	controls.colors.casting = BuildColorPicker(parent, "Insanity from hardcasting spells", settings.colors.bar.casting, 250, 25, xCoord+xPadding*2, yCoord)
 	f = controls.colors.casting
 	f.recolorTexture = function(color)
@@ -2190,8 +2250,8 @@ local function ConstructOptionsPanel()
 		end
 
 		controls.colors.casting.Texture:SetColorTexture(r, g, b, a)
-		castingFrame:SetStatusBarColor(r, g, b, a)
 		settings.colors.bar.casting = ConvertColorDecimalToHex(r, g, b, a)
+		castingFrame:SetStatusBarColor(r, g, b, a)
 	end
 	f:SetScript("OnMouseDown", function(self, button, ...)
 		if button == "LeftButton" then
@@ -2222,7 +2282,7 @@ local function ConstructOptionsPanel()
 		end
 	end)
 
-	yCoord = yCoord - yOffset400
+	yCoord = yCoord - yOffset30
 	controls.colors.thresholdUnder = BuildColorPicker(parent, "Under min. req. Insanity to cast Void Eruption Threshold Line", settings.colors.threshold.under, 260, 25, xCoord+xPadding*2, yCoord)
 	f = controls.colors.thresholdUnder
 	f.recolorTexture = function(color)
@@ -2265,7 +2325,7 @@ local function ConstructOptionsPanel()
 		end
 	end)
 
-	yCoord = yCoord - yOffset400
+	yCoord = yCoord - yOffset30
 	controls.colors.thresholdOver = BuildColorPicker(parent, "Over min. req. Insanity to cast Void Eruption Threshold Line", settings.colors.threshold.over, 250, 25, xCoord+xPadding*2, yCoord)
 	f = controls.colors.thresholdOver
 	f.recolorTexture = function(color)
@@ -2317,13 +2377,13 @@ local function ConstructOptionsPanel()
 
 	controls.textDisplaySection = BuildSectionHeader(parent, "Font Face", xCoord+xPadding, yCoord)
 
-	yCoord = yCoord - yOffset400
+	yCoord = yCoord - yOffset30
 	
 	-- Create the dropdown, and configure its appearance
 	controls.dropDown.fontLeft = CreateFrame("FRAME", "TIBFontLeft", parent, "UIDropDownMenuTemplate")
 	controls.dropDown.fontLeft.label = BuildSectionHeader(parent, "Left Bar Font Face", xCoord+xPadding, yCoord)
 	controls.dropDown.fontLeft.label.font:SetFontObject(GameFontNormal)
-	controls.dropDown.fontLeft:SetPoint("TOPLEFT", xCoord+xPadding, yCoord-yOffset400)
+	controls.dropDown.fontLeft:SetPoint("TOPLEFT", xCoord+xPadding, yCoord-yOffset30)
 	UIDropDownMenu_SetWidth(controls.dropDown.fontLeft, 250)
 	UIDropDownMenu_SetText(controls.dropDown.fontLeft, settings.displayText.left.fontFaceName)
 	UIDropDownMenu_JustifyText(controls.dropDown.fontLeft, "LEFT")
@@ -2385,7 +2445,7 @@ local function ConstructOptionsPanel()
 	controls.dropDown.fontMiddle = CreateFrame("FRAME", "TIBfFontMiddle", parent, "UIDropDownMenuTemplate")
 	controls.dropDown.fontMiddle.label = BuildSectionHeader(parent, "Middle Bar Font Face", xCoord2-20, yCoord)
 	controls.dropDown.fontMiddle.label.font:SetFontObject(GameFontNormal)
-	controls.dropDown.fontMiddle:SetPoint("TOPLEFT", xCoord2-30, yCoord-yOffset400)
+	controls.dropDown.fontMiddle:SetPoint("TOPLEFT", xCoord2-30, yCoord-yOffset30)
 	UIDropDownMenu_SetWidth(controls.dropDown.fontMiddle, 250)
 	UIDropDownMenu_SetText(controls.dropDown.fontMiddle, settings.displayText.middle.fontFaceName)
 	UIDropDownMenu_JustifyText(controls.dropDown.fontMiddle, "LEFT")
@@ -2449,7 +2509,7 @@ local function ConstructOptionsPanel()
 	controls.dropDown.fontRight = CreateFrame("FRAME", "TIBFontRight", parent, "UIDropDownMenuTemplate")
 	controls.dropDown.fontRight.label = BuildSectionHeader(parent, "Right Bar Font Face", xCoord+xPadding, yCoord)
 	controls.dropDown.fontRight.label.font:SetFontObject(GameFontNormal)
-	controls.dropDown.fontRight:SetPoint("TOPLEFT", xCoord+xPadding, yCoord-yOffset400)
+	controls.dropDown.fontRight:SetPoint("TOPLEFT", xCoord+xPadding, yCoord-yOffset30)
 	UIDropDownMenu_SetWidth(controls.dropDown.fontRight, 250)
 	UIDropDownMenu_SetText(controls.dropDown.fontRight, settings.displayText.right.fontFaceName)
 	UIDropDownMenu_JustifyText(controls.dropDown.fontRight, "LEFT")
@@ -2862,7 +2922,7 @@ local function ConstructOptionsPanel()
 
 	controls.textCustomSection = BuildSectionHeader(parent, "Bar Display Text Customization", xCoord+xPadding, yCoord)
 
-	yCoord = yCoord - yOffset400
+	yCoord = yCoord - yOffset30
 	controls.labels.outVoidform = CreateFrame("Frame", nil, parent)
 	f = controls.labels.outVoidform
 	f:ClearAllPoints()
@@ -2914,6 +2974,7 @@ local function ConstructOptionsPanel()
 	f = controls.textbox.voidformOutLeft
 	f:SetScript("OnTextChanged", function(self, input)
 		settings.displayText.left.outVoidformText = self:GetText()
+		barTextCache = {}
 		IsTtdActive()
 	end)
 
@@ -2922,10 +2983,11 @@ local function ConstructOptionsPanel()
 	f = controls.textbox.voidformInLeft
 	f:SetScript("OnTextChanged", function(self, input)
 		settings.displayText.left.inVoidformText = self:GetText()
+		barTextCache = {}
 		IsTtdActive()
 	end)
 
-	yCoord = yCoord - yOffset400
+	yCoord = yCoord - yOffset30
 	controls.labels.inVoidform = CreateFrame("Frame", nil, parent)
 	f = controls.labels.inVoidform
 	f:ClearAllPoints()
@@ -2946,6 +3008,7 @@ local function ConstructOptionsPanel()
 	f = controls.textbox.voidformOutMiddle
 	f:SetScript("OnTextChanged", function(self, input)
 		settings.displayText.middle.outVoidformText = self:GetText()
+		barTextCache = {}
 		IsTtdActive()
 	end)
 
@@ -2954,10 +3017,11 @@ local function ConstructOptionsPanel()
 	f = controls.textbox.voidformInMiddle
 	f:SetScript("OnTextChanged", function(self, input)
 		settings.displayText.middle.inVoidformText = self:GetText()
+		barTextCache = {}
 		IsTtdActive()
 	end)
 
-	yCoord = yCoord - yOffset400
+	yCoord = yCoord - yOffset30
 	controls.labels.inVoidform = CreateFrame("Frame", nil, parent)
 	f = controls.labels.inVoidform
 	f:ClearAllPoints()
@@ -2978,6 +3042,7 @@ local function ConstructOptionsPanel()
 	f = controls.textbox.voidformOutRight
 	f:SetScript("OnTextChanged", function(self, input)
 		settings.displayText.right.outVoidformText = self:GetText()
+		barTextCache = {}
 		IsTtdActive()
 	end)
 
@@ -2986,10 +3051,11 @@ local function ConstructOptionsPanel()
 	f = controls.textbox.voidformInRight
 	f:SetScript("OnTextChanged", function(self, input)
 		settings.displayText.right.inVoidformText = self:GetText()
+		barTextCache = {}
 		IsTtdActive()
 	end)
 
-	yCoord = yCoord - yOffset400
+	yCoord = yCoord - yOffset30
 	controls.labels.instructionsVar = CreateFrame("Frame", nil, parent)
 	f = controls.labels.instructionsVar
 	f:ClearAllPoints()
@@ -3058,7 +3124,7 @@ local function ConstructOptionsPanel()
 	yCoord = yCoord - yOffset15
 	controls.labels.newlineVar = BuildDisplayTextHelpEntry(parent, "||n", "Insert a Newline", xCoord, yCoord, 85, 200)
 	-----	
-	yCoord = yCoord - yOffset400
+	yCoord = yCoord - yOffset30
 	controls.labels.instructions2Var = CreateFrame("Frame", nil, parent)
 	f = controls.labels.instructions2Var
 	f:ClearAllPoints()
@@ -3075,7 +3141,7 @@ local function ConstructOptionsPanel()
 	f.font:SetText("For icons use #ICONVARIABLENAME")
 
 	yCoord = yCoord - yOffset15
-	controls.labels.swpIconVar = BuildDisplayTextHelpEntry(parent, "#casting", "The icon of the Insanity Generating Spell you are currently hardcasting", xCoord, yCoord, 85, 500)
+	controls.labels.castingIconVar = BuildDisplayTextHelpEntry(parent, "#casting", "The icon of the Insanity Generating Spell you are currently hardcasting", xCoord, yCoord, 85, 500)
 
 	yCoord = yCoord - yOffset15
 	controls.labels.swpIconVar = BuildDisplayTextHelpEntry(parent, "#swp", spells.shadowWordPain.icon .. " Shadow Word: Pain", xCoord, yCoord, 85, 200)
@@ -3087,22 +3153,22 @@ local function ConstructOptionsPanel()
 
 	yCoord = yCoord - yOffset15
 	controls.labels.vfIconVar = BuildDisplayTextHelpEntry(parent, "#vf", spells.voidform.icon .. " Voidform", xCoord, yCoord, 85, 200)
-	controls.labels.vtIconVar = BuildDisplayTextHelpEntry(parent, "#li", spells.lingeringInsanity.icon .. " Lingering Insanity", xCoord2-70, yCoord, 130, 225)
+	controls.labels.liIconVar = BuildDisplayTextHelpEntry(parent, "#li", spells.lingeringInsanity.icon .. " Lingering Insanity", xCoord2-70, yCoord, 130, 225)
 
 	yCoord = yCoord - yOffset15
-	controls.labels.mfIconVar = BuildDisplayTextHelpEntry(parent, "#mb", spells.mindBlast.icon .. " Mind Blast", xCoord, yCoord, 85, 200)
-	controls.labels.mbIconVar = BuildDisplayTextHelpEntry(parent, "#mf", spells.mindFlay.icon .. " Mind Flay", xCoord2-70, yCoord, 130, 225)
+	controls.labels.mbIconVar = BuildDisplayTextHelpEntry(parent, "#mb", spells.mindBlast.icon .. " Mind Blast", xCoord, yCoord, 85, 200)
+	controls.labels.mfIconVar = BuildDisplayTextHelpEntry(parent, "#mf", spells.mindFlay.icon .. " Mind Flay", xCoord2-70, yCoord, 130, 225)
 
 	yCoord = yCoord - yOffset15
-	controls.labels.mfIconVar = BuildDisplayTextHelpEntry(parent, "#svw", spells.shadowWordVoid.icon .. " Shadow Word: Void", xCoord, yCoord, 85, 200)
-	controls.labels.mbIconVar = BuildDisplayTextHelpEntry(parent, "#ms", spells.mindSear.icon .. " Mind Sear", xCoord2-70, yCoord, 130, 225)
+	controls.labels.swvIconVar = BuildDisplayTextHelpEntry(parent, "#svw", spells.shadowWordVoid.icon .. " Shadow Word: Void", xCoord, yCoord, 85, 200)
+	controls.labels.msIconVar = BuildDisplayTextHelpEntry(parent, "#ms", spells.mindSear.icon .. " Mind Sear", xCoord2-70, yCoord, 130, 225)
 
 	yCoord = yCoord - yOffset15
-	controls.labels.mfIconVar = BuildDisplayTextHelpEntry(parent, "#dv", spells.darkVoid.icon .. " Dark Void", xCoord, yCoord, 85, 200)
-	controls.labels.mbIconVar = BuildDisplayTextHelpEntry(parent, "#voit", spells.voidTorrent.icon .. " Void Torrent", xCoord2-70, yCoord, 130, 225)
+	controls.labels.dvIconVar = BuildDisplayTextHelpEntry(parent, "#dv", spells.darkVoid.icon .. " Dark Void", xCoord, yCoord, 85, 200)
+	controls.labels.voitIconVar = BuildDisplayTextHelpEntry(parent, "#voit", spells.voidTorrent.icon .. " Void Torrent", xCoord2-70, yCoord, 130, 225)
 
 	yCoord = yCoord - yOffset15
-	controls.labels.mfIconVar = BuildDisplayTextHelpEntry(parent, "#md", spells.massDispel.icon .. " Mass Dispel", xCoord, yCoord, 85, 200)
+	controls.labels.mdIconVar = BuildDisplayTextHelpEntry(parent, "#md", spells.massDispel.icon .. " Mass Dispel", xCoord, yCoord, 85, 200)
 	--controls.labels.mbIconVar = BuildDisplayTextHelpEntry(parent, "#mf", spells.mindFlay.icon .. " Mind Flay", xCoord2-70, yCoord, 130, 225)
 	---------------------------
 
@@ -3111,89 +3177,22 @@ local function ConstructOptionsPanel()
 
 	controls.textSection = BuildSectionHeader(parent, "Passive Options", xCoord+xPadding, yCoord)
 
-	yCoord = yCoord - yOffset400
+	yCoord = yCoord - yOffset30
 	controls.checkBoxes.s2mDeath = CreateFrame("CheckButton", "TIBCB3_2", parent, "ChatConfigCheckButtonTemplate")
 	f = controls.checkBoxes.s2mDeath
 	f:SetPoint("TOPLEFT", xCoord+xPadding*2, yCoord)
-	getglobal(f:GetName() .. 'Text'):SetText("Play Wilhelm Scream when S2M Ends")
-	f.tooltip = "When you (almost) die, horribly, after Surrender to Madness ends, play the infamous Wilhelm Scream to make you feel a bit better."
+	getglobal(f:GetName() .. 'Text'):SetText("Play Audio When S2M Ends")
+	f.tooltip = "When you (almost) die, horribly, after Surrender to Madness ends, play the infamous Wilhelm Scream (or another sound) to make you feel a bit better."
 	f:SetChecked(settings.audio.s2mDeath.enabled)
 	f:SetScript("OnClick", function(self, ...)
 		settings.audio.s2mDeath.enabled = self:GetChecked()
-	end)
-
-	--TODO: Move this setting, and "Report Voidform Stacks Only", to "Advanced Configuration"
-	controls.checkBoxes.showSummary = CreateFrame("CheckButton", "TIBCB3_3", parent, "ChatConfigCheckButtonTemplate")
-	f = controls.checkBoxes.showSummary
-	f:SetPoint("TOPLEFT", xCoord2, yCoord)
-	getglobal(f:GetName() .. 'Text'):SetText("Show Voidform Summary")
-	f.tooltip = "Shows a summary in chat of your last Voidform including total duration, total stacks, final drain rate, and stacks gained while channeling Void Torrent."
-	f:SetChecked(settings.summary.enabled)
-	f:SetScript("OnClick", function(self, ...)
-		settings.summary.enabled = self:GetChecked()
-		if settings.summary.enabled == false then	-- Toggle checkbox for simpleSummary
-			controls.checkBoxes.simpleSummary:Hide()
-		else
-			controls.checkBoxes.simpleSummary:Show()
-		end
-	end)
-
-	yCoord = yCoord - yOffset20
-
-	--TODO: Move this setting, and "Show Voidform Summary", to "Advanced Configuration"
-	controls.checkBoxes.simpleSummary = CreateFrame("CheckButton", "TIBCB3_4", parent, "ChatConfigCheckButtonTemplate")
-	f = controls.checkBoxes.simpleSummary
-	f:SetPoint("TOPLEFT", xCoord2+10, yCoord)
-	getglobal(f:GetName() .. 'Text'):SetText("Report Voidform Stacks Only")
-	f.tooltip = "Simplifies the Voidform summary to only display total stacks."
-	if settings.summary.enabled == false then	-- Hide on initial load if showSummary is off
-		f:Hide()
-	end
-	f:SetChecked(settings.summary.simple)
-	f:SetScript("OnClick", function(self, ...)
-		settings.summary.simple = self:GetChecked()
-	end)
-	
-	--[[
-	controls.checkBoxes.showS2MSummary = CreateFrame("CheckButton", "TIBCB3_4", parent, "ChatConfigCheckButtonTemplate")
-	f = controls.checkBoxes.showS2MSummary
-	f:SetPoint("TOPLEFT", xCoord2, yCoord)
-	getglobal(f:GetName() .. 'Text'):SetText("Show Surrender to Madness Summary")
-	f.tooltip = "Shows a summary in chat of your last Surrender to Madness, including total duration of S2M, total duration of Voidform, total stacks, final drain rate, and stacks gained while channeling Void Torrent."
-	f:SetChecked(settings.showS2MSummary)
-	f:SetScript("OnClick", function(self, ...)
-		settings.showS2MSummary = self:GetChecked()
-	end)
-	]]--
-
-	yCoord = yCoord - yOffset40
-	controls.colors.passive = BuildColorPicker(parent, "Insanity from Auspicious Spirits and Shadowfiend swings", settings.colors.bar.passive, 250, 25, xCoord+xPadding*2, yCoord)
-	f = controls.colors.passive
-	f.recolorTexture = function(color)
-		local r, g, b, a
-		if color then
-			r, g, b, a = unpack(color)
-		else
-			r, g, b = ColorPickerFrame:GetColorRGB()
-			a = OpacitySliderFrame:GetValue()
-		end
-		
-		controls.colors.passive.Texture:SetColorTexture(r, g, b, a)
-		passiveFrame:SetStatusBarColor(r, g, b, a)
-		settings.colors.bar.passive = ConvertColorDecimalToHex(r, g, b, a)
-	end
-	f:SetScript("OnMouseDown", function(self, button, ...)
-		if button == "LeftButton" then
-			local r, g, b, a = GetRGBAFromString(settings.colors.bar.passive, true)
-			ShowColorPicker(r, g, b, a, self.recolorTexture)
-		end
-	end)
+	end)	
 		
 	-- Create the dropdown, and configure its appearance
 	controls.dropDown.s2mAudio = CreateFrame("FRAME", "TIBS2MDeathAudio", parent, "UIDropDownMenuTemplate")
-	controls.dropDown.s2mAudio.label = BuildSectionHeader(parent, "Surrender to Madness Ending Audio", xCoord2-20, yCoord+20)
-	controls.dropDown.s2mAudio.label.font:SetFontObject(GameFontNormal)
-	controls.dropDown.s2mAudio:SetPoint("TOPLEFT", xCoord2-30, yCoord-yOffset400+20)
+	--controls.dropDown.s2mAudio.label = BuildSectionHeader(parent, "Surrender to Madness Ending Audio", xCoord+xPadding, yCoord+20)
+	--controls.dropDown.s2mAudio.label.font:SetFontObject(GameFontNormal)
+	controls.dropDown.s2mAudio:SetPoint("TOPLEFT", xCoord+xPadding+10, yCoord-yOffset30+10)
 	UIDropDownMenu_SetWidth(controls.dropDown.s2mAudio, 250)
 	UIDropDownMenu_SetText(controls.dropDown.s2mAudio, settings.audio.s2mDeath.soundName)
 	UIDropDownMenu_JustifyText(controls.dropDown.s2mAudio, "LEFT")
@@ -3230,20 +3229,148 @@ local function ConstructOptionsPanel()
 		end
 	end)
 
-	-- Implement the function to change the favoriteNumber
+	-- Implement the function to change the audio
 	function controls.dropDown.s2mAudio:SetValue(newValue, newName)
 		settings.audio.s2mDeath.sound = newValue
 		settings.audio.s2mDeath.soundName = newName
 		UIDropDownMenu_SetText(controls.dropDown.s2mAudio, newName)
 		CloseDropDownMenus()
-		PlaySoundFile(settings.audio.s2mDeath.sound, "Master")
+		PlaySoundFile(settings.audio.s2mDeath.sound, settings.audio.channel.channel)
 	end
 
-	yCoord = yCoord - yOffset400
+
+	controls.checkBoxes.vfReady = CreateFrame("CheckButton", "TIBCB3_3", parent, "ChatConfigCheckButtonTemplate")
+	f = controls.checkBoxes.vfReady
+	f:SetPoint("TOPLEFT", xCoord2, yCoord)
+	getglobal(f:GetName() .. 'Text'):SetText("Play Audio Cue When Void Eruption is Usable")
+	f.tooltip = "Play an audio cue when Void Eruption can be cast."
+	f:SetChecked(settings.audio.vfReady.enabled)
+	f:SetScript("OnClick", function(self, ...)
+		settings.audio.vfReady.enabled = self:GetChecked()
+	end)	
+		
+	-- Create the dropdown, and configure its appearance
+	controls.dropDown.vfReadyAudio = CreateFrame("FRAME", "TIBVFReadyAudio", parent, "UIDropDownMenuTemplate")
+	--controls.dropDown.s2mAudio.label = BuildSectionHeader(parent, "Surrender to Madness Ending Audio", xCoord+xPadding, yCoord+20)
+	--controls.dropDown.s2mAudio.label.font:SetFontObject(GameFontNormal)
+	controls.dropDown.vfReadyAudio:SetPoint("TOPLEFT", xCoord2, yCoord-yOffset30+10)
+	UIDropDownMenu_SetWidth(controls.dropDown.vfReadyAudio, 250)
+	UIDropDownMenu_SetText(controls.dropDown.vfReadyAudio, settings.audio.vfReady.soundName)
+	UIDropDownMenu_JustifyText(controls.dropDown.vfReadyAudio, "LEFT")
+
+	-- Create and bind the initialization function to the dropdown menu
+	UIDropDownMenu_Initialize(controls.dropDown.vfReadyAudio, function(self, level, menuList)
+		local entries = 25
+		local info = UIDropDownMenu_CreateInfo()
+		local sounds = addonData.libs.SharedMedia:HashTable("sound")
+		local soundsList = addonData.libs.SharedMedia:List("sound")
+		if (level or 1) == 1 or menuList == nil then
+			local menus = math.ceil(TableLength(sounds) / entries)
+			for i=0, menus-1 do
+				info.hasArrow = true
+				info.notCheckable = true
+				info.text = "Sounds " .. i+1
+				info.menuList = i
+				UIDropDownMenu_AddButton(info)
+			end
+		else
+			local start = entries * menuList
+
+			for k, v in pairs(soundsList) do
+				if k > start and k <= start + entries then
+					info.text = v
+					info.value = sounds[v]
+					info.checked = sounds[v] == settings.audio.vfReady.sound
+					info.func = self.SetValue			
+					info.arg1 = sounds[v]
+					info.arg2 = v
+					UIDropDownMenu_AddButton(info, level)
+				end
+			end
+		end
+	end)
+
+	-- Implement the function to change the audio
+	function controls.dropDown.vfReadyAudio:SetValue(newValue, newName)
+		settings.audio.vfReady.sound = newValue
+		settings.audio.vfReady.soundName = newName
+		UIDropDownMenu_SetText(controls.dropDown.vfReadyAudio, newName)
+		CloseDropDownMenus()
+		PlaySoundFile(settings.audio.vfReady.sound, settings.audio.channel.channel)
+	end
+
+	--[[
+	controls.checkBoxes.showS2MSummary = CreateFrame("CheckButton", "TIBCB3_4", parent, "ChatConfigCheckButtonTemplate")
+	f = controls.checkBoxes.showS2MSummary
+	f:SetPoint("TOPLEFT", xCoord2, yCoord)
+	getglobal(f:GetName() .. 'Text'):SetText("Show Surrender to Madness Summary")
+	f.tooltip = "Shows a summary in chat of your last Surrender to Madness, including total duration of S2M, total duration of Voidform, total stacks, final drain rate, and stacks gained while channeling Void Torrent."
+	f:SetChecked(settings.showS2MSummary)
+	f:SetScript("OnClick", function(self, ...)
+		settings.showS2MSummary = self:GetChecked()
+	end)
+	]]--
+
+	yCoord = yCoord - yOffset60
+	controls.colors.passive = BuildColorPicker(parent, "Insanity from Auspicious Spirits and Shadowfiend swings", settings.colors.bar.passive, 250, 25, xCoord+xPadding*2, yCoord)
+	f = controls.colors.passive
+	f.recolorTexture = function(color)
+		local r, g, b, a
+		if color then
+			r, g, b, a = unpack(color)
+		else
+			r, g, b = ColorPickerFrame:GetColorRGB()
+			a = OpacitySliderFrame:GetValue()
+		end
+		
+		controls.colors.passive.Texture:SetColorTexture(r, g, b, a)
+		passiveFrame:SetStatusBarColor(r, g, b, a)
+		settings.colors.bar.passive = ConvertColorDecimalToHex(r, g, b, a)
+	end
+	f:SetScript("OnMouseDown", function(self, button, ...)
+		if button == "LeftButton" then
+			local r, g, b, a = GetRGBAFromString(settings.colors.bar.passive, true)
+			ShowColorPicker(r, g, b, a, self.recolorTexture)
+		end
+	end)
+
+	--TODO: Move this setting, and "Report Voidform Stacks Only", to "Advanced Configuration"
+	controls.checkBoxes.showSummary = CreateFrame("CheckButton", "TIBCB3_4", parent, "ChatConfigCheckButtonTemplate")
+	f = controls.checkBoxes.showSummary
+	f:SetPoint("TOPLEFT", xCoord2, yCoord)
+	getglobal(f:GetName() .. 'Text'):SetText("Show Voidform Summary")
+	f.tooltip = "Shows a summary in chat of your last Voidform including total duration, total stacks, final drain rate, and stacks gained while channeling Void Torrent."
+	f:SetChecked(settings.summary.enabled)
+	f:SetScript("OnClick", function(self, ...)
+		settings.summary.enabled = self:GetChecked()
+		if settings.summary.enabled == false then	-- Toggle checkbox for simpleSummary
+			controls.checkBoxes.simpleSummary:Hide()
+		else
+			controls.checkBoxes.simpleSummary:Show()
+		end
+	end)
+
+	yCoord = yCoord - yOffset20
+
+	--TODO: Move this setting, and "Show Voidform Summary", to "Advanced Configuration"
+	controls.checkBoxes.simpleSummary = CreateFrame("CheckButton", "TIBCB3_5", parent, "ChatConfigCheckButtonTemplate")
+	f = controls.checkBoxes.simpleSummary
+	f:SetPoint("TOPLEFT", xCoord2+10, yCoord)
+	getglobal(f:GetName() .. 'Text'):SetText("Report Voidform Stacks Only")
+	f.tooltip = "Simplifies the Voidform summary to only display total stacks."
+	if settings.summary.enabled == false then	-- Hide on initial load if showSummary is off
+		f:Hide()
+	end
+	f:SetChecked(settings.summary.simple)
+	f:SetScript("OnClick", function(self, ...)
+		settings.summary.simple = self:GetChecked()
+	end)
+
+	yCoord = yCoord - yOffset10
 	controls.textSection = BuildSectionHeader(parent, "Auspicious Spirits Tracking", xCoord+xPadding, yCoord)
 
-	yCoord = yCoord - yOffset400
-	controls.checkBoxes.as = CreateFrame("CheckButton", "TIBCB3_5", parent, "ChatConfigCheckButtonTemplate")
+	yCoord = yCoord - yOffset30
+	controls.checkBoxes.as = CreateFrame("CheckButton", "TIBCB3_6", parent, "ChatConfigCheckButtonTemplate")
 	f = controls.checkBoxes.as
 	f:SetPoint("TOPLEFT", xCoord+xPadding*2, yCoord)
 	getglobal(f:GetName() .. 'Text'):SetText("Track Auspicious Spirits")
@@ -3262,11 +3389,11 @@ local function ConstructOptionsPanel()
 		snapshotData.auspiciousSpirits.tracker = {}
 	end)
 
-	yCoord = yCoord - yOffset400
+	yCoord = yCoord - yOffset30
 	controls.textSection = BuildSectionHeader(parent, "Shadowfiend (+ Mindbender) Tracking", xCoord+xPadding, yCoord)
 
-	yCoord = yCoord - yOffset400	
-	controls.checkBoxes.mindbender = CreateFrame("CheckButton", "TIBCB3_6", parent, "ChatConfigCheckButtonTemplate")
+	yCoord = yCoord - yOffset30	
+	controls.checkBoxes.mindbender = CreateFrame("CheckButton", "TIBCB3_7", parent, "ChatConfigCheckButtonTemplate")
 	f = controls.checkBoxes.mindbender
 	f:SetPoint("TOPLEFT", xCoord+xPadding*2, yCoord)
 	getglobal(f:GetName() .. 'Text'):SetText("Track Shadowfiend Insanity Gain")
@@ -3299,7 +3426,7 @@ local function ConstructOptionsPanel()
 	end)
 
 	yCoord = yCoord - yOffset60	
-	controls.checkBoxes.mindbenderModeGCDs = CreateFrame("CheckButton", "TIBRB3_7", parent, "UIRadioButtonTemplate")
+	controls.checkBoxes.mindbenderModeGCDs = CreateFrame("CheckButton", "TIBRB3_8", parent, "UIRadioButtonTemplate")
 	f = controls.checkBoxes.mindbenderModeGCDs
 	f:SetPoint("TOPLEFT", xCoord+xPadding*2, yCoord)
 	getglobal(f:GetName() .. 'Text'):SetText("Insanity from GCDs remaining")
@@ -3332,7 +3459,7 @@ local function ConstructOptionsPanel()
 
 
 	yCoord = yCoord - yOffset60	
-	controls.checkBoxes.mindbenderModeSwings = CreateFrame("CheckButton", "TIBRB3_8", parent, "UIRadioButtonTemplate")
+	controls.checkBoxes.mindbenderModeSwings = CreateFrame("CheckButton", "TIBRB3_9", parent, "UIRadioButtonTemplate")
 	f = controls.checkBoxes.mindbenderModeSwings
 	f:SetPoint("TOPLEFT", xCoord+xPadding*2, yCoord)
 	getglobal(f:GetName() .. 'Text'):SetText("Insanity from Swings remaining")
@@ -3364,7 +3491,7 @@ local function ConstructOptionsPanel()
 	end)
 
 	yCoord = yCoord - yOffset60	
-	controls.checkBoxes.mindbenderModeTime = CreateFrame("CheckButton", "TIBRB3_9", parent, "UIRadioButtonTemplate")
+	controls.checkBoxes.mindbenderModeTime = CreateFrame("CheckButton", "TIBRB3_10", parent, "UIRadioButtonTemplate")
 	f = controls.checkBoxes.mindbenderModeTime
 	f:SetPoint("TOPLEFT", xCoord+xPadding*2, yCoord)
 	getglobal(f:GetName() .. 'Text'):SetText("Insanity from Time remaining")
@@ -3397,7 +3524,7 @@ local function ConstructOptionsPanel()
 	end)
 
 	yCoord = yCoord - yOffset60	
-	controls.checkBoxes.mindbenderAudio = CreateFrame("CheckButton", "TIBCB3_10", parent, "ChatConfigCheckButtonTemplate")
+	controls.checkBoxes.mindbenderAudio = CreateFrame("CheckButton", "TIBCB3_11", parent, "ChatConfigCheckButtonTemplate")
 	f = controls.checkBoxes.mindbenderAudio
 	f:SetPoint("TOPLEFT", xCoord+xPadding*2, yCoord)
 	getglobal(f:GetName() .. 'Text'):SetText("Play Audio Cue to use Shadowfiend")
@@ -3412,7 +3539,7 @@ local function ConstructOptionsPanel()
 		end
 	end)
 
-	controls.checkBoxes.mindbenderAudioStacks = CreateFrame("CheckButton", "TIBCB3_11", parent, "ChatConfigCheckButtonTemplate")
+	controls.checkBoxes.mindbenderAudioStacks = CreateFrame("CheckButton", "TIBCB3_12", parent, "ChatConfigCheckButtonTemplate")
 	f = controls.checkBoxes.mindbenderAudioStacks
 	f:SetPoint("TOPLEFT", xCoord+xPadding*2, yCoord-20)
 	getglobal(f:GetName() .. 'Text'):SetText("Use Voidform Stacks instead of Drain Stacks")
@@ -3443,7 +3570,7 @@ local function ConstructOptionsPanel()
 	controls.dropDown.mindbenderAudio = CreateFrame("FRAME", "TIBMindbenderAudio", parent, "UIDropDownMenuTemplate")
 	controls.dropDown.mindbenderAudio.label = BuildSectionHeader(parent, "Mindbender Ready Audio", xCoord+xPadding, yCoord)
 	controls.dropDown.mindbenderAudio.label.font:SetFontObject(GameFontNormal)
-	controls.dropDown.mindbenderAudio:SetPoint("TOPLEFT", xCoord+xPadding, yCoord-yOffset400)
+	controls.dropDown.mindbenderAudio:SetPoint("TOPLEFT", xCoord+xPadding, yCoord-yOffset30)
 	UIDropDownMenu_SetWidth(controls.dropDown.mindbenderAudio, 250)
 	UIDropDownMenu_SetText(controls.dropDown.mindbenderAudio, settings.audio.mindbender.soundName)
 	UIDropDownMenu_JustifyText(controls.dropDown.mindbenderAudio, "LEFT")
@@ -3480,13 +3607,13 @@ local function ConstructOptionsPanel()
 		end
 	end)
 
-	-- Implement the function to change the favoriteNumber
+	-- Implement the function to change the audio
 	function controls.dropDown.mindbenderAudio:SetValue(newValue, newName)
 		settings.audio.mindbender.sound = newValue
 		settings.audio.mindbender.soundName = newName
 		UIDropDownMenu_SetText(controls.dropDown.mindbenderAudio, newName)
 		CloseDropDownMenus()
-		PlaySoundFile(settings.audio.mindbender.sound, "Master")
+		PlaySoundFile(settings.audio.mindbender.sound, settings.audio.channel.channel)
 	end
 
 	------------------------------------------------
@@ -3552,6 +3679,113 @@ local function ConstructOptionsPanel()
 		settings.dataRefreshRate = value
 	end)
 	
+	yCoord = yCoord - yOffset40
+	controls.textSection = BuildSectionHeader(parent, "Frame Strata", xCoord+xPadding, yCoord)
+
+	yCoord = yCoord - yOffset30
+	
+	-- Create the dropdown, and configure its appearance
+	controls.dropDown.strata = CreateFrame("FRAME", "TIBFrameStrata", parent, "UIDropDownMenuTemplate")
+	controls.dropDown.strata.label = BuildSectionHeader(parent, "Frame Strata Level To Draw Bar On", xCoord+xPadding, yCoord)
+	controls.dropDown.strata.label.font:SetFontObject(GameFontNormal)
+	controls.dropDown.strata:SetPoint("TOPLEFT", xCoord+xPadding, yCoord-yOffset30)
+	UIDropDownMenu_SetWidth(controls.dropDown.strata, 250)
+	UIDropDownMenu_SetText(controls.dropDown.strata, settings.strata.name)
+	UIDropDownMenu_JustifyText(controls.dropDown.strata, "LEFT")
+
+	-- Create and bind the initialization function to the dropdown menu
+	UIDropDownMenu_Initialize(controls.dropDown.strata, function(self, level, menuList)
+		local entries = 25
+		local info = UIDropDownMenu_CreateInfo()
+		local strata = {}
+		strata["Background"] = "BACKGROUND"
+		strata["Low"] = "LOW"
+		strata["Medium"] = "MEDIUM"
+		strata["High"] = "HIGH"
+		strata["Dialog"] = "DIALOG"
+		strata["Fullscreen"] = "FULLSCREEN"
+		strata["Fullscreen Dialog"] = "FULLSCREEN_DIALOG"		
+		strata["Tooltip"] = "TOOLTIP"
+		local strataList = {
+			"Background",
+			"Low",
+			"Medium",
+			"High",
+			"Dialog",
+			"Fullscreen",
+			"Fullscreen Dialog",
+			"Tooltip"
+		}
+
+		for k, v in pairs(strataList) do
+			info.text = v
+			info.value = strata[v]
+			info.checked = strata[v] == settings.strata.level
+			info.func = self.SetValue			
+			info.arg1 = strata[v]
+			info.arg2 = v
+			UIDropDownMenu_AddButton(info, level)
+		end
+	end)
+
+	-- Implement the function to change the texture
+	function controls.dropDown.strata:SetValue(newValue, newName)
+		settings.strata.level = newValue
+		settings.strata.name = newName
+		barContainerFrame:SetFrameStrata(settings.strata.level)
+		UIDropDownMenu_SetText(controls.dropDown.strata, newName)
+		CloseDropDownMenus()
+	end
+
+
+	
+	yCoord = yCoord - yOffset60
+	controls.textSection = BuildSectionHeader(parent, "Audio Channel", xCoord+xPadding, yCoord)
+
+	yCoord = yCoord - yOffset30
+	
+	-- Create the dropdown, and configure its appearance
+	controls.dropDown.audioChannel = CreateFrame("FRAME", "TIBFrameAudioChannel", parent, "UIDropDownMenuTemplate")
+	controls.dropDown.audioChannel.label = BuildSectionHeader(parent, "Audio Channel To Use", xCoord+xPadding, yCoord)
+	controls.dropDown.audioChannel.label.font:SetFontObject(GameFontNormal)
+	controls.dropDown.audioChannel:SetPoint("TOPLEFT", xCoord+xPadding, yCoord-yOffset30)
+	UIDropDownMenu_SetWidth(controls.dropDown.audioChannel, 250)
+	UIDropDownMenu_SetText(controls.dropDown.audioChannel, settings.audio.channel.name)
+	UIDropDownMenu_JustifyText(controls.dropDown.audioChannel, "LEFT")
+
+	-- Create and bind the initialization function to the dropdown menu
+	UIDropDownMenu_Initialize(controls.dropDown.audioChannel, function(self, level, menuList)
+		local entries = 25
+		local info = UIDropDownMenu_CreateInfo()
+		local channel = {}
+		channel["Master"] = "Master"
+		channel["SFX"] = "SFX"
+		channel["Music"] = "Music"
+		channel["Ambience"] = "Ambience"
+		channel["Dialog"] = "Dialog"
+
+		for k, v in pairs(channel) do
+			info.text = v
+			info.value = channel[v]
+			info.checked = channel[v] == settings.audio.channel.channel
+			info.func = self.SetValue			
+			info.arg1 = channel[v]
+			info.arg2 = v
+			UIDropDownMenu_AddButton(info, level)
+		end
+	end)
+
+	-- Implement the function to change the texture
+	function controls.dropDown.audioChannel:SetValue(newValue, newName)
+		settings.audio.channel.channel = newValue
+		settings.audio.channel.name = newName
+		UIDropDownMenu_SetText(controls.dropDown.audioChannel, newName)
+		CloseDropDownMenus()
+	end
+
+
+	-------------------
+
 	interfaceSettingsFrame.controls = controls
 	
 end
@@ -3638,12 +3872,14 @@ local function CalculateInsanityGain(insanity, fotm)
 		modifier = modifier * characterData.talents.fotm.modifier
 	end
 	
-	if spells.s2m.isActive then
-		modifier = modifier * spells.s2m.modifier
-	elseif spells.s2m.isDebuffActive then
-		modified = 0
+	if spells.memoryOfLucidDreams.isActive then
+		modifier = modifier * spells.memoryOfLucidDreams.modifier
 	end
 
+	if spells.s2m.isActive then
+		modifier = modifier * spells.s2m.modifier
+	end
+	
 	if spells.s2m.isDebuffActive then
 		modifier = modifier * spells.s2m.modifierDebuff
 	end
@@ -3799,6 +4035,195 @@ local function RemoveInvalidVariablesFromBarText(input)
 	return returnText
 end
 
+local barTextVariables = {
+	icons = {
+		{ variable = "#as" },
+		{ variable = "#auspiciousSpirits" },
+		{ variable = "#sa" },
+		{ variable = "#shadowyApparition" },
+		{ variable = "#mb" },
+		{ variable = "#mindBlast" },
+		{ variable = "#mf" },
+		{ variable = "#mindFlay" },
+		{ variable = "#ms" },
+		{ variable = "#mindSear" },
+		{ variable = "#mindbender" },
+		{ variable = "#shadowfiend" },
+		{ variable = "#vf" },
+		{ variable = "#voidform" },
+		{ variable = "#lingeringInsanity" },
+		{ variable = "#li" },
+		{ variable = "#vt" },
+		{ variable = "#vampiricTouch" },
+		{ variable = "#swp" },
+		{ variable = "#shadowWordPain" },
+		{ variable = "#dv" },
+		{ variable = "#darkVoid" },
+		{ variable = "#md" },
+		{ variable = "#massDispel" },
+		{ variable = "#casting" }
+	},
+	values = {
+		{ variable = "$haste", color = false },
+		{ variable = "$crit", color = false },
+		{ variable = "$mastery", color = false },
+		{ variable = "$gcd", color = false },
+		{ variable = "$swpCount", color = false },
+		{ variable = "$vtCount", color = false },
+		{ variable = "$vfIncoming", color = false },
+		{ variable = "$vfStacks", color = false },
+		{ variable = "$liStacks", color = false },
+		{ variable = "$liTime", color = false },
+		{ variable = "$vfDrainStacks", color = false },
+		{ variable = "$vfDrain", color = false },
+		{ variable = "$vfTime", color = false },
+		{ variable = "$insanityPlusCasting", color = false },
+		{ variable = "$insanityPlusPassive", color = false },
+		{ variable = "$insanityTotal", color = false },   
+		{ variable = "$insanity", color = false },
+		{ variable = "$casting", color = false },
+		{ variable = "$passive", color = false },
+		{ variable = "$mbInsanity", color = false },
+		{ variable = "$mbGcds", color = false },
+		{ variable = "$mbSwings", color = false },
+		{ variable = "$mbTime", color = false },
+		{ variable = "$asCount", color = false },
+		{ variable = "$asInsanity", color = false },
+		{ variable = "$ttd", color = false }
+	},
+	pipe = {
+		{ variable = "||n" },
+		{ variable = "||c" },
+		{ variable = "||r" }
+	},
+	percent = {
+		{ variable = "%%" }
+	}
+}
+
+local function AddToBarTextCache(input)
+	local iconEntries = TableLength(barTextVariables.icons)		
+	local valueEntries = TableLength(barTextVariables.values)	
+	local pipeEntries = TableLength(barTextVariables.pipe)	
+	local percentEntries = TableLength(barTextVariables.percent)
+	local returnText = ""
+	local returnVariables = {}
+	local p = 0
+	local infinity = 0
+	while p <= string.len(input) and infinity < 20 do
+		infinity = infinity + 1
+		local a, b, c, a1, b1, c1
+		local match = false
+		a, a1 = string.find(input, "#", p)
+		b, b1 = string.find(input, "%$", p)
+		c, c1 = string.find(input, "|", p)
+		d, d1 = string.find(input, "%%", p)
+		if a ~= nil and (b == nil or a < b) and (c == nil or a < c) and (d == nil or a < d) then
+			for x = 1, iconEntries do
+				local len = string.len(barTextVariables.icons[x].variable)
+				z, z1 = string.find(input, barTextVariables.icons[x].variable, a-1)
+				if z ~= nil and z == a then
+					match = true
+					if p ~= a then
+						returnText = returnText .. string.sub(input, p, a-1)
+					end
+
+					returnText = returnText .. "%s"
+					table.insert(returnVariables, barTextVariables.icons[x].variable)
+
+					p = z1 + 1
+					break
+				end
+			end
+		elseif b ~= nil and (c == nil or b < c) and (d == nil or b < d) then
+			for x = 1, valueEntries do
+				local len = string.len(barTextVariables.values[x].variable)
+				z, z1 = string.find(input, barTextVariables.values[x].variable, b-1)
+				if z ~= nil and z == b then
+					match = true
+					if p ~= b then
+						returnText = returnText .. string.sub(input, p, b-1)
+					end
+
+					returnText = returnText .. "%s"
+					table.insert(returnVariables, barTextVariables.values[x].variable)
+
+					if barTextVariables.values[x].color == true then
+						returnText = returnText .. "%s"
+						table.insert(returnVariables, "color")
+					end
+					
+					p = z1 + 1
+					break
+				end
+			end
+		elseif c ~= nil and (d == nil or c < d) then
+			for x = 1, pipeEntries do
+				local len = string.len(barTextVariables.pipe[x].variable)
+				z, z1 = string.find(input, barTextVariables.pipe[x].variable, c-1)
+				if z ~= nil and z == c then
+					match = true
+					if p ~= c then
+						returnText = returnText .. string.sub(input, p, c-1)
+					end
+
+					returnText = returnText .. "%s"
+					table.insert(returnVariables, barTextVariables.pipe[x].variable)
+					p = z1 + 1
+				end
+			end
+		elseif d ~= nil then
+			for x = 1, percentEntries do
+				local len = string.len(barTextVariables.percent[x].variable)
+				z, z1 = string.find(input, barTextVariables.percent[x].variable, d-1)
+				if z ~= nil and z == d then
+					match = true
+					if p ~= d then
+						returnText = returnText .. string.sub(input, p, d-1)
+					end
+
+					returnText = returnText .. "%s"
+					table.insert(returnVariables, barTextVariables.percent[x].variable)
+					
+					p = z1 + 1
+					break
+				end
+			end
+		else
+			returnText = returnText .. string.sub(input, p, -1)
+			p = string.len(input) + 1
+			match = true
+		end
+
+		if match == false then
+			returnText = returnText .. string.sub(input, p+1, p+1)
+			p = p + 1
+		end
+	end
+	
+	local barTextCacheEntry = {}
+	barTextCacheEntry.cleanedText = input
+	barTextCacheEntry.stringFormat = returnText
+	barTextCacheEntry.variables = returnVariables
+
+	table.insert(barTextCache, barTextCacheEntry)	
+	return barTextCacheEntry
+end
+
+local function GetFromBarTextCache(barText)
+	local entries = TableLength(barTextCache)
+	
+	if entries > 0 then
+		for x = 1, entries do
+			if barTextCache[x].cleanedText == barText then
+				return barTextCache[x]
+			end
+		end	
+	end
+
+	return AddToBarTextCache(barText)
+end
+
 local function BarText()
 	--$crit
 	local critPercent = string.format("%." .. settings.hastePrecision .. "f", RoundTo(snapshotData.crit, settings.hastePrecision))
@@ -3830,7 +4255,7 @@ local function BarText()
 	end
 	local gcd = string.format("%.2f", _gcd)
 
-	local hastePercent = string.format("|c%s%." .. settings.hastePrecision .. "f%%|c%s", _hasteColor, snapshotData.haste, settings.colors.text.left)
+	local hastePercent = string.format("|c%s%." .. settings.hastePrecision .. "f|c%s", _hasteColor, snapshotData.haste, settings.colors.text.left)
 	--$vfStacks
 	local voidformStacks = string.format("%.0f", math.min(snapshotData.voidform.totalStacks, 100))
 	--$vfIncoming
@@ -3855,11 +4280,11 @@ local function BarText()
 	local voidformDrainAmount = string.format("%.1f", snapshotData.voidform.currentDrainRate)
 	--$vfTime
 	local voidformDrainTime = string.format("%.1f", snapshotData.voidform.remainingTime)
-	
+
 	----------
 
 	--$insanity
-	local currentInsanity = string.format("|c%s%.0f%%|r", settings.colors.text.currentInsanity, snapshotData.insanity)
+	local currentInsanity = string.format("|c%s%.0f|r", settings.colors.text.currentInsanity, snapshotData.insanity)
 	--$casting
 	local castingInsanity = string.format("|c%s%.0f|r", settings.colors.text.castingInsanity, snapshotData.casting.insanityFinal)
 	if snapshotData.casting.insanityFinal > 0 and characterData.talents.fotm.isSelected then        
@@ -3913,86 +4338,6 @@ local function BarText()
 	local castingIcon = snapshotData.casting.icon or ""
 	----------------------------
 
-	local returnText = {}
-	returnText[0] = {}
-	returnText[1] = {}
-	returnText[2] = {}
-	if snapshotData.voidform.totalStacks > 0 then
-		returnText[0].text = settings.displayText.left.inVoidformText
-		returnText[1].text = settings.displayText.middle.inVoidformText
-		returnText[2].text = settings.displayText.right.inVoidformText
-	else
-		returnText[0].text = settings.displayText.left.outVoidformText
-		returnText[1].text = settings.displayText.middle.outVoidformText
-		returnText[2].text = settings.displayText.right.outVoidformText
-	end
-
-	returnText[0].color = string.format("|c%s", settings.colors.text.left)
-	returnText[1].color = string.format("|c%s", settings.colors.text.middle)
-	returnText[2].color = string.format("|c%s", settings.colors.text.right)
-
-	for x = 0, 2 do
-		-- Prep
-		returnText[x].text = RemoveInvalidVariablesFromBarText(returnText[x].text)
-		returnText[x].text = returnText[x].color .. returnText[x].text
-		returnText[x].text = string.gsub(returnText[x].text, "||n", string.format("\n") .. returnText[x].color)
-
-		-- Icons
-		returnText[x].text = string.gsub(returnText[x].text, "#casting", castingIcon)		
-		returnText[x].text = string.gsub(returnText[x].text, "#as", spells.auspiciousSpirits.icon)		
-		returnText[x].text = string.gsub(returnText[x].text, "#auspiciousSpirits", spells.auspiciousSpirits.icon)
-		returnText[x].text = string.gsub(returnText[x].text, "#sa", spells.shadowyApparition.icon)
-		returnText[x].text = string.gsub(returnText[x].text, "#shadowyApparition", spells.shadowyApparition.icon)
-		returnText[x].text = string.gsub(returnText[x].text, "#mb", spells.mindBlast.icon)
-		returnText[x].text = string.gsub(returnText[x].text, "#mindBlast", spells.mindBlast.icon)
-		returnText[x].text = string.gsub(returnText[x].text, "#mf", spells.mindFlay.icon)
-		returnText[x].text = string.gsub(returnText[x].text, "#mindFlay", spells.mindFlay.icon)
-		returnText[x].text = string.gsub(returnText[x].text, "#ms", spells.mindSear.icon)
-		returnText[x].text = string.gsub(returnText[x].text, "#mindSear", spells.mindSear.icon)
-		returnText[x].text = string.gsub(returnText[x].text, "#mindbender", spells.mindbender.icon)
-		returnText[x].text = string.gsub(returnText[x].text, "#shadowfiend", spells.mindbender.icon)
-		returnText[x].text = string.gsub(returnText[x].text, "#vf", spells.voidform.icon)
-		returnText[x].text = string.gsub(returnText[x].text, "#voidform", spells.voidform.icon)
-		returnText[x].text = string.gsub(returnText[x].text, "#li", spells.lingeringInsanity.icon)
-		returnText[x].text = string.gsub(returnText[x].text, "#lingeringInsanity", spells.lingeringInsanity.icon)
-		returnText[x].text = string.gsub(returnText[x].text, "#vt", spells.vampiricTouch.icon)
-		returnText[x].text = string.gsub(returnText[x].text, "#vampiricTouch", spells.vampiricTouch.icon)
-		returnText[x].text = string.gsub(returnText[x].text, "#swp", spells.shadowWordPain.icon)
-		returnText[x].text = string.gsub(returnText[x].text, "#shadowWordPain", spells.shadowWordPain.icon)
-		returnText[x].text = string.gsub(returnText[x].text, "#dv", spells.darkVoid.icon)
-		returnText[x].text = string.gsub(returnText[x].text, "#darkVoid", spells.darkVoid.icon)
-		returnText[x].text = string.gsub(returnText[x].text, "#md", spells.massDispel.icon)
-		returnText[x].text = string.gsub(returnText[x].text, "#massDispel", spells.massDispel.icon)
-
-		-- Values
-		returnText[x].text = string.gsub(returnText[x].text, "$haste", hastePercent .. returnText[x].color)
-		returnText[x].text = string.gsub(returnText[x].text, "$crit", critPercent .. returnText[x].color)		
-		returnText[x].text = string.gsub(returnText[x].text, "$mastery", masteryPercent .. returnText[x].color)
-		returnText[x].text = string.gsub(returnText[x].text, "$gcd", gcd)
-		returnText[x].text = string.gsub(returnText[x].text, "$swpCount", shadowWordPainCount)
-		returnText[x].text = string.gsub(returnText[x].text, "$vtCount", vampiricTouchCount)
-		returnText[x].text = string.gsub(returnText[x].text, "$vfIncoming", voidformStacksIncoming)
-		returnText[x].text = string.gsub(returnText[x].text, "$vfStacks", voidformStacks)
-		returnText[x].text = string.gsub(returnText[x].text, "$liStacks", lingeringInsanityStacks)
-		returnText[x].text = string.gsub(returnText[x].text, "$liTime", lingeringInsanityTime)
-		returnText[x].text = string.gsub(returnText[x].text, "$vfDrainStacks", voidformDrainStacks)
-		returnText[x].text = string.gsub(returnText[x].text, "$vfDrain", voidformDrainAmount)
-		returnText[x].text = string.gsub(returnText[x].text, "$vfTime", voidformDrainTime)
-		returnText[x].text = string.gsub(returnText[x].text, "$insanityPlusCasting", insanityPlusCasting .. returnText[x].color)
-		returnText[x].text = string.gsub(returnText[x].text, "$insanityPlusPassive", insanityPlusPassive .. returnText[x].color)
-		returnText[x].text = string.gsub(returnText[x].text, "$insanityTotal", insanityTotal .. returnText[x].color)
-		returnText[x].text = string.gsub(returnText[x].text, "$insanity", currentInsanity .. returnText[x].color)
-		returnText[x].text = string.gsub(returnText[x].text, "$casting", castingInsanity .. returnText[x].color)
-		returnText[x].text = string.gsub(returnText[x].text, "$passive", passiveInsanity .. returnText[x].color)		
-		returnText[x].text = string.gsub(returnText[x].text, "$mbInsanity", mbInsanity)
-		returnText[x].text = string.gsub(returnText[x].text, "$mbGcds", mbGcds)
-		returnText[x].text = string.gsub(returnText[x].text, "$mbSwings", mbSwings)
-		returnText[x].text = string.gsub(returnText[x].text, "$mbTime", mbTime)
-		returnText[x].text = string.gsub(returnText[x].text, "$asCount", asCount)
-		returnText[x].text = string.gsub(returnText[x].text, "$asInsanity", asInsanity)
-		returnText[x].text = string.gsub(returnText[x].text, "$ttd", ttd .. returnText[x].color)
-	end
-
 	Global_TwintopInsanityBar = {
 		ttd = ttd or "--",
 		voidform = {
@@ -4026,6 +4371,105 @@ local function BarText()
 			time = snapshotData.mindbender.remaining.time or 0
 		}
 	}
+
+	local lookup = {}
+	lookup["#as"] = spells.auspiciousSpirits.icon
+	lookup["#auspiciousSpirits"] = spells.auspiciousSpirits.icon
+	lookup["#sa"] = spells.shadowyApparition.icon
+	lookup["#shadowyApparition"] = spells.shadowyApparition.icon
+	lookup["#mb"] = spells.mindBlast.icon
+	lookup["#mindBlast"] = spells.mindBlast.icon
+	lookup["#mf"] = spells.mindFlay.icon
+	lookup["#mindFlay"] = spells.mindFlay.icon
+	lookup["#ms"] = spells.mindSear.icon
+	lookup["#mindSear"] = spells.mindSear.icon
+	lookup["#mindbender"] = spells.mindbender.icon
+	lookup["#shadowfiend"] = spells.mindbender.icon
+	lookup["#vf"] = spells.voidform.icon
+	lookup["#voidform"] = spells.voidform.icon
+	lookup["#lingeringInsanity"] = spells.lingeringInsanity.icon
+	lookup["#li"] = spells.lingeringInsanity.icon
+	lookup["#vt"] = spells.vampiricTouch.icon
+	lookup["#vampiricTouch"] = spells.vampiricTouch.icon
+	lookup["#swp"] = spells.shadowWordPain.icon
+	lookup["#shadowWordPain"] = spells.shadowWordPain.icon
+	lookup["#dv"] = spells.darkVoid.icon
+	lookup["#darkVoid"] = spells.darkVoid.icon
+	lookup["#md"] = spells.massDispel.icon
+	lookup["#massDispel"] = spells.massDispel.icon
+	lookup["#casting"] = castingIcon
+	lookup["$haste"] = hastePercent
+	lookup["$crit"] = critPercent
+	lookup["$mastery"] = masteryPercent
+	lookup["$gcd"] = gcd
+	lookup["$swpCount"] = shadowWordPainCount
+	lookup["$vtCount"] = vampiricTouchCount
+	lookup["$vfIncoming"] = voidformStacksIncoming
+	lookup["$vfStacks"] = voidformStacks
+	lookup["$liStacks"] = lingeringInsanityStacks
+	lookup["$liTime"] = lingeringInsanityTime
+	lookup["$vfDrainStacks"] = voidformDrainStacks
+	lookup["$vfDrain"] = voidformDrainAmount
+	lookup["$vfTime"] = voidformDrainTime
+	lookup["$insanityPlusCasting"] = insanityPlusCasting
+	lookup["$insanityPlusPassive"] = insanityPlusPassive
+	lookup["$insanityTotal"] = insanityTotal
+	lookup["$insanity"] = currentInsanity
+	lookup["$casting"] = castingInsanity
+	lookup["$passive"] = passiveInsanity
+	lookup["$mbInsanity"] = mbInsanity 
+	lookup["$mbGcds"] = mbGcds
+	lookup["$mbSwings"] = mbSwings
+	lookup["$mbTime"] = mbTime
+	lookup["$asCount"] = asCount
+	lookup["$asInsanity"] = asInsanity
+	lookup["$ttd"] = ttd
+	lookup["||n"] = string.format("\n")
+	lookup["||c"] = string.format("%s", "|c")
+	lookup["||r"] = string.format("%s", "|r")
+	lookup["%%"] = "%"
+
+	local returnText = {}
+	returnText[0] = {}
+	returnText[1] = {}
+	returnText[2] = {}
+	if snapshotData.voidform.totalStacks > 0 then
+		returnText[0].text = settings.displayText.left.inVoidformText
+		returnText[1].text = settings.displayText.middle.inVoidformText
+		returnText[2].text = settings.displayText.right.inVoidformText
+	else
+		returnText[0].text = settings.displayText.left.outVoidformText
+		returnText[1].text = settings.displayText.middle.outVoidformText
+		returnText[2].text = settings.displayText.right.outVoidformText
+	end
+
+	returnText[0].color = string.format("|c%s", settings.colors.text.left)
+	returnText[1].color = string.format("|c%s", settings.colors.text.middle)
+	returnText[2].color = string.format("|c%s", settings.colors.text.right)
+
+	for x = 0, 2 do
+		lookup["color"] = returnText[x].color
+		returnText[x].text = RemoveInvalidVariablesFromBarText(returnText[x].text)
+		
+		local cache = GetFromBarTextCache(returnText[x].text)
+		local mapping = {}
+		local cachedTextVariableLength = TableLength(cache.variables)
+		
+		if cachedTextVariableLength > 0 then
+			for y = 1, cachedTextVariableLength do
+				table.insert(mapping, lookup[cache.variables[y]])
+			end
+		end
+
+		if TableLength(mapping) > 0 then	
+			returnText[x].text = string.format(cache.stringFormat, unpack(mapping))
+		elseif string.len(cache.stringFormat) > 0 then
+			returnText[x].text = cache.stringFormat
+		else
+			returnText[x].text = ""
+		end
+		returnText[x].text = string.format("%s%s", returnText[x].color, returnText[x].text)	
+	end
 
 	return returnText[0].text, returnText[1].text, returnText[2].text
 end
@@ -4232,21 +4676,33 @@ local function UpdateSnapshot()
 	spells.s2m.isDebuffActive = select(10, FindDebuffById(spells.s2m.debuffId))
 	snapshotData.haste = UnitSpellHaste("player")
 	snapshotData.crit = GetCritChance("player")
-	snapshotData.mastery = GetMastery("player")
+	snapshotData.mastery = GetMasteryEffect("player")
 	snapshotData.insanity = UnitPower("player", SPELL_POWER_INSANITY)
 	LingeringInsanityValues()
 	UpdateMindbenderValues()
 end
 
+local function TryUpdateText(frame, text)	
+	frame.font:SetText(text)
+end
+
 local function UpdateInsanityBar()
 	UpdateSnapshot()
-	leftText, middleText, rightText = BarText()	
-	leftTextFrame.font:SetText(leftText)
-	middleTextFrame.font:SetText(middleText)
-	rightTextFrame.font:SetText(rightText)
+	leftText, middleText, rightText = BarText()
+	
+	if not pcall(TryUpdateText, leftTextFrame, leftText) then
+		leftTextFrame.font:SetFont("Fonts\\FRIZQT__.TTF", settings.displayText.left.fontSize, "OUTLINE")
+	end
+
+	if not pcall(TryUpdateText, middleTextFrame, middleText) then
+		middleTextFrame.font:SetFont("Fonts\\FRIZQT__.TTF", settings.displayText.middle.fontSize, "OUTLINE")
+	end
+
+	if not pcall(TryUpdateText, rightTextFrame, rightText) then
+		rightTextFrame.font:SetFont("Fonts\\FRIZQT__.TTF", settings.displayText.right.fontSize, "OUTLINE")
+	end
 
 	if barContainerFrame:IsShown() then
-
 		if snapshotData.insanity == 0 then
 			HideInsanityBar()
 		end
@@ -4301,10 +4757,16 @@ local function UpdateInsanityBar()
 				else
 					barContainerFrame:SetAlpha(1.0)
 				end
+
+				if settings.audio.vfReady.enabled and snapshotData.voidform.playedCue == false then
+					snapshotData.voidform.playedCue = true
+					PlaySoundFile(settings.audio.vfReady.sound, settings.audio.channel.channel)
+				end
 			else
 				insanityFrame.threshold.texture:SetColorTexture(GetRGBAFromString(settings.colors.threshold.under, true))
 				insanityFrame:SetStatusBarColor(GetRGBAFromString(settings.colors.bar.base, true))
 				barContainerFrame:SetAlpha(1.0)
+				snapshotData.voidform.playedCue = false
 			end
 		end
 	end
@@ -4463,10 +4925,10 @@ function mindbenderAudioCueFrame:onUpdate(sinceLastUpdate)
 	if self.sinceLastUpdate >= 0.05 then -- in seconds	
 		if self.sinceLastPlay >= 0.75 and not snapshotData.mindbender.isActive then -- in seconds
 			if settings.mindbender.useNotification.useVoidformStacks == true and not snapshotData.mindbender.onCooldown and snapshotData.voidform.totalStacks >= settings.mindbender.useNotification.thresholdStacks then
-				PlaySoundFile(settings.audio.mindbender.sound, "Master", false)
+				PlaySoundFile(settings.audio.mindbender.sound, settings.audio.channel.channel, false)
 				self.sinceLastPlay = 0
 			elseif settings.mindbender.useNotification.useVoidformStacks == false and not snapshotData.mindbender.onCooldown and snapshotData.voidform.drainStacks >= settings.mindbender.useNotification.thresholdStacks then
-				PlaySoundFile(settings.audio.mindbender.sound, "Master", false)
+				PlaySoundFile(settings.audio.mindbender.sound, settings.audio.channel.channel, false)
 				self.sinceLastPlay = 0
 			end
 		end
@@ -4521,7 +4983,9 @@ barContainerFrame:SetScript("OnEvent", function(self, event, ...)
 		end
 		
 		if sourceGUID == characterData.guid then  
-            if spellId == spells.voidform.id then
+			if spellId == spells.darkAscension.id then				
+				snapshotData.voidform.playedCue = true
+			elseif spellId == spells.voidform.id then
                 if type == "SPELL_AURA_APPLIED" then -- Entered Voidform                    
 					snapshotData.voidform.previousStackTime = currentTime
                     snapshotData.voidform.drainStacks = 1
@@ -4623,6 +5087,12 @@ barContainerFrame:SetScript("OnEvent", function(self, event, ...)
 					ResetCastingSnapshotData()
 					triggerUpdate = true
 				end
+			elseif spellId == spells.memoryOfLucidDreams.id then
+				if type == "SPELL_AURA_APPLIED" then -- Gained buff
+					spells.memoryOfLucidDreams.isActive = true
+				elseif type == "SPELL_AURA_REMOVED" then -- Lost buff
+					spells.memoryOfLucidDreams.isActive = false                   
+                end
 			end
 		end
 		
@@ -4640,7 +5110,7 @@ barContainerFrame:SetScript("OnEvent", function(self, event, ...)
 		
 		if s2mDeath then
 			if settings.audio.s2mDeath.enabled then
-				PlaySoundFile(settings.audio.s2mDeath.sound, "Master")
+				PlaySoundFile(settings.audio.s2mDeath.sound, settings.audio.channel.channel)
 			end
 			
 			--[[
@@ -4696,6 +5166,7 @@ insanityFrame:SetScript("OnEvent", function(self, event, arg1, ...)
 				if TwintopInsanityBarSettings then
 					settings = MergeSettings(settings,TwintopInsanityBarSettings)
 				end
+				UpdateSanityCheckValues()
 				IsTtdActive()
 				FillSpellData()
 				ConstructInsanityBar()
@@ -4835,6 +5306,9 @@ function SlashCmdList.TWINTOP(msg)
 		end
 	elseif cmd == "fill" then
 		FillSpellData()
+	elseif cmd == "move" then
+		local x, y = ParseCmdString(subcmd)
+		UpdateBarPosition(tonumber(x), tonumber(y))
  	else
 		InterfaceOptionsFrame_OpenToCategory(interfaceSettingsFrame.panel)
 	end

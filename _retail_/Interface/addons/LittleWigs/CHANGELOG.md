@@ -1,18 +1,8 @@
 # LittleWigs
 
-## [v8.1.0](https://github.com/BigWigsMods/LittleWigs/tree/v8.1.0) (2019-01-03)
-[Full Changelog](https://github.com/BigWigsMods/LittleWigs/compare/v8.0.28...v8.1.0)
+## [v8.2.15](https://github.com/BigWigsMods/LittleWigs/tree/v8.2.15) (2019-12-05)
+[Full Changelog](https://github.com/BigWigsMods/LittleWigs/compare/v8.2.14...v8.2.15)
 
-- Update option files  
+- BfA/Freehold/Captains: Fix initial timers being started too early (#489)  
+- BfA/SiegeOfBoralus/Viqgoth: Stop Demolishing timer when Gripping dies  
 - bump toc  
-- BfA/TempleOfSethraliss/AdderisAspix: Add Lightning Shield marking (#410)  
-- BfA: December 14th hotfixes (#411)  
-- BfA/TheMotherlode/Trash: Various improvements (#402)  
-- BfA/TempleOfSethraliss: Add Trash module (#406)  
-- BfA/TempleOfSethraliss/AdderisAspix: Timer improvements (#407)  
-- BfA/KingsRest: Uncommented locales.xml (#408)  
-- TBC/TheBotanica/WarpSplinter: Fix spell ID for "Heal". (#409)  
-- BfA/Freehold/Captains: Change brew warnings to _SUCCESS to make it easier to identify which to soak  
-- BfA/TheMotherlode: Boss improvements (#404)  
-- update zhCN. (#405)  
-- Update zhTW/zhCN (#403)  

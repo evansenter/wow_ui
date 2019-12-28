@@ -14,6 +14,7 @@ The user can turn turn on / off the adjusting of all top frames or all bottom fr
 -- Locals
 local _G = getfenv(0);
 local InCombatLockdown = _G.InCombatLockdown;
+local hooks_done = false;
 
 local move_count = 0
 --[[ Titan
@@ -180,7 +181,7 @@ function TitanMovable_GetPanelYOffset(framePosition) -- used by other addons
 	end
 	local scale = TitanPanelGetVar("Scale")
 	-- return the requested offset
-	-- 0 will be returned if the user has not bars showing
+	-- 0 will be returned if the user has no bars showing
 	-- or the scale is not valid
 	if scale and framePosition then
 		if framePosition == TITAN_PANEL_PLACE_TOP then
@@ -230,32 +231,97 @@ DESC: Adjust a given frame with the passed in values.
 VAR: frame - Text string of the frame name
 VAR: ... - list of frame position info
 NOTE: 
-Swiped from Vrul on wowinterface forum
+Swiped & modified from Vrul on wowinterface forum (https://www.wowinterface.com/forums/showthread.php?t=56519)
 
 The table UIPARENT_MANAGED_FRAME_POSITIONS does not hold all Blizzard frames.
 It is cleared for each frame in case the frame is in or might be in the table in the future.
+
+Titan does not control the frames as other addons so we honor a user placed frame
 :NOTE
 --]]
 local function SetPosition(frame, ...)
+	local function UserMovable(frame)
+		local fname = frame:GetName()
+		local res = false
+		-- user may move these frames via the UI
+		if (fname == 'PlayerFrame' or fname == 'TargetFrame')
+		then
+			res = true 
+		else
+			res = false
+		end
+	end
     if type(frame) == 'string' then
         UIPARENT_MANAGED_FRAME_POSITIONS[frame] = nil
         frame = _G[frame]
     end
     if type(frame) == 'table' and type(frame.IsObjectType) == 'function' and frame:IsObjectType('Frame') then
-        local name = frame:GetName()
-        if name then
-            UIPARENT_MANAGED_FRAME_POSITIONS[name] = nil
+		if UserMovable(frame) then
+			-- Back off if the user has moved them via the UI
+		else
+			local name = frame:GetName()
+			-- Titan does not set in case the user needs to 
+			if name then
+				UIPARENT_MANAGED_FRAME_POSITIONS[name] = nil
+			end
         end
+
         frame:SetMovable(true)          -- allow frame to move
-        frame:SetUserPlaced(true)       -- tell Blizzard to back off
-        frame:SetDontSavePosition(true) 
-        frame:SetAttribute('ignoreFramePositionManager', true)
-        frame.ignoreFramePositionManager = true
+-- Titan honors a user placed frame so we don't need this
+--        frame:SetUserPlaced(true)       -- tell Blizzard to back off
+-- Since Titan adjusts rather than controls some frames, 
+-- Titan does not need to set these
+--        frame:SetDontSavePosition(true) 
+--        frame:SetAttribute('ignoreFramePositionManager', true)
+--        frame.ignoreFramePositionManager = true
         if ... then
             frame:ClearAllPoints()
             frame:SetPoint(...)
         end
-        frame:SetMovable(false)         -- lock frame from moving
+		-- Need to add in case user (not an addon) wants to move this frames
+		if UserMovable(frame) then
+			-- do nothing
+		else
+			frame:SetMovable(false)         -- lock frame from moving
+		end
+    end
+end
+
+--[[ local
+NAME: CheckConflicts
+DESC: Check for other addons that control UI elements. Tell Titan to back off the frames the addon controls or can control.
+VAR: <none>
+NOTE: 
+This is messy routine because the internals of each addon must be known to check for the frames that are controlled.
+Some addons use different names where Titan uses the Blizzard frame names
+:NOTE
+--]]
+local function CheckConflicts()
+	local addon = "Bartender4"
+	if (IsAddOnLoaded(addon)) then -- user has enabled
+--		TitanDebug (addon.." active : Titan will not adjust frames that "..addon.." could control")
+		-- Check would be : BT4Bar<BT bar name>.config.enabled to check if the frame exists and if it is enabled in BT4
+		TitanMovable_AddonAdjust("MainMenuBar", true)
+		TitanMovable_AddonAdjust("MicroButtonAndBagsBar", true)
+		TitanMovable_AddonAdjust("MultiBarRight", true)
+		TitanMovable_AddonAdjust("ExtraActionBarFrame", true)
+		TitanMovable_AddonAdjust("OverrideActionBar", true) -- not sure about this one...
+    end
+	addon = "ElvUI"
+	if (IsAddOnLoaded(addon)) then -- user has enabled
+--		TitanDebug (addon.." active : Titan will not adjust frames that "..addon.." could control")
+		-- ElvUI controls the whole UI
+		TitanMovable_AddonAdjust("PlayerFrame", true)
+		TitanMovable_AddonAdjust("TargetFrame", true)
+		TitanMovable_AddonAdjust("PartyMemberFrame1", true)
+		TitanMovable_AddonAdjust("TicketStatusFrame", true)
+		TitanMovable_AddonAdjust("BuffFrame", true)
+		TitanMovable_AddonAdjust("MinimapCluster", true)
+		TitanMovable_AddonAdjust("MultiBarRight", true)
+		TitanMovable_AddonAdjust("OverrideActionBar", true)
+		TitanMovable_AddonAdjust("MicroButtonAndBagsBar", true)
+		TitanMovable_AddonAdjust("MainMenuBar", true)
+		TitanMovable_AddonAdjust("ExtraActionBarFrame", true)
     end
 end
 
@@ -269,8 +335,8 @@ OUT: top_bottom - Frame is at top or bottom, expecting Titan constant for top or
 local function MoveFrame(frame_ptr, start_y, top_bottom, force)
 	local frame = _G[frame_ptr]
 
-	if frame and (frame:IsUserPlaced() 
-			or frame.MALockPointHook  -- Allow MoveAnything to be used w/o error
+	if frame and (frame:IsUserPlaced() or
+			frame.MALockPointHook  -- Allow MoveAnything to be used w/o error
 		)
 	then
 		-- skip this frame
@@ -281,14 +347,28 @@ local function MoveFrame(frame_ptr, start_y, top_bottom, force)
 			-- check for nil which will cause an error
 			if point and relativeTo and relativePoint and xOfs then -- do not care about yOfs
 				-- should be safe...
-				frame:ClearAllPoints();		
-				frame:SetPoint(point, relativeTo:GetName(), relativePoint, xOfs, y)
+--				frame:ClearAllPoints();		
+--				frame:SetPoint(point, relativeTo:GetName(), relativePoint, xOfs, y)
+--[[
+				if frame == ExtraActionBarFrame then
+				TitanDebug ("MoveFrame :"
+					.." "..tostring(frame:GetName())
+					.." point:"..tostring(point)
+					.." relativeTo:"..tostring(relativeTo:GetName())
+					.." relativePoint:"..tostring(relativePoint)
+					.." xOfs:"..tostring(xOfs)
+					.." y:"..tostring(y)
+					)
+				end
+--]]
+				SetPosition(frame, point, relativeTo:GetName(), relativePoint, xOfs, y)
 			else
 				-- do not proceed
 --[[
 				TitanDebug ("MoveFrame nil :"
+					.." "..tostring(frame:GetName())
 					.."point:"..tostring(point)
-					.."relativeTo:"..tostring(relativeTo)
+					.."relativeTo:"..tostring(relativeTo:GetName())
 					.."relativePoint:"..tostring(relativePoint)
 					.."xOfs:"..tostring(xOfs)
 					)
@@ -298,14 +378,21 @@ local function MoveFrame(frame_ptr, start_y, top_bottom, force)
 			--[[
 			Some frames such as the ticket frame may not be visible or even created
 			--]]
+--[[
+				TitanDebug ("MoveFrame no adj :"
+					.." "..tostring(frame:GetName())
+					.." adj: "..tostring(DoAdjust(top_bottom, force))
+					.." shown: "..tostring(frame:IsShown())
+					)
+--]]
 		end
 	end
 end
 
-xx_xOfs = 0
 --[[ local
 NAME: MoveMenuFrame
-DESC: Adjust the MainMenuBar frame. Needed because :GetPoint does NOT work. This is modeled after MoveFrame to keep it similar.
+DESC: Adjust the MainMenuBar frame. Needed because :GetPoint does NOT always work for MainMenuBar. 
+This is modeled after MoveFrame to keep it similar.
 Titan sets the IsUserPlaced for the MainMenuBar frame so Titan needs to adjust.
 VAR: frame_ptr - Text string of the frame name
 VAR: start_y - Any offset due to the specific frame
@@ -328,20 +415,6 @@ local function MoveMenuFrame(frame_ptr, start_y, top_bottom, force)
 		end
 		xOfs = TitanPanelGetVar("MainMenuBarXAdj")
 
---[[
-		-- This is a hack because GetPoint on MainMenuBar often returns all nil
-		-- If the scale is is around .85 or higher the bag menu overlaps the main menu
-		local fscale = tonumber(GetCVar("uiScale"))
-		local xadj = (fscale * 100) - 85
-		if xadj <= 0 then
-			xOfs = 0
-		else
-			-- Slide the menu bar left depending on scaling to allow bag menu room
-			xOfs = xadj * 6 * -1
-		end
---]]
---		frame:ClearAllPoints();		
---		frame:SetPoint("BOTTOM", "UIParent", "BOTTOM", xOfs, yOffset);
 		SetPosition(frame, "BOTTOM", "UIParent", "BOTTOM", xOfs, yOffset)
 		adj = true
 	else
@@ -454,6 +527,17 @@ local function Titan_ContainerFrames_Relocate()
 	end
 end
 
+local function has_pet_bar()
+	local hasPetBar = false
+	if ( ( PetActionBarFrame and PetActionBarFrame:IsShown() ) or ( StanceBarFrame and StanceBarFrame:IsShown() ) or
+		 ( MultiCastActionBarFrame and MultiCastActionBarFrame:IsShown() ) or ( PossessBarFrame and PossessBarFrame:IsShown() ) or
+		 ( MainMenuBarVehicleLeaveButton and MainMenuBarVehicleLeaveButton:IsShown() ) ) then
+--		tinsert(yOffsetFrames, "pet");
+		hasPetBar = true;
+	end
+	return hasPetBar
+end
+
 --[[ local
 NAME: MData table
 DESC: MData is a local table that holds each frame Titan may need to adjust. It controls the offsets needed to make room for the Titan bar(s).
@@ -474,7 +558,7 @@ local MData = {
 		move = function (force) MoveFrame("TargetFrame", 0, TITAN_PANEL_PLACE_TOP, force) end, 
 		addonAdj = false, },
 	[3] = {frameName = "PartyMemberFrame1", 
-		move = function (force) MoveFrame("PartyMemberFrame1", 20, TITAN_PANEL_PLACE_TOP, force) end, 
+		move = function (force) MoveFrame("PartyMemberFrame1", 0, TITAN_PANEL_PLACE_TOP, force) end, 
 		addonAdj = false, },
 	[4] = {frameName = "TicketStatusFrame", 
 		move = function (force) MoveFrame("TicketStatusFrame", 0, TITAN_PANEL_PLACE_TOP, force) end, 
@@ -517,6 +601,50 @@ local MData = {
 	[10] = {frameName = "MainMenuBar", -- MainMenuBar
 		move = function (force) 
 			MoveMenuFrame("MainMenuBar", 0, TITAN_PANEL_PLACE_BOTTOM, force) end, 
+		addonAdj = false, },
+	[11] = {frameName = "ExtraActionBarFrame",
+		move = function (force)
+			-- Only spend cycles if the frame is shown.
+			if ExtraActionBarFrame
+			and ExtraActionBarFrame:IsShown() then
+				-- Need to calc Y because Y depends on what else is shown
+				--[=[ UIParent
+				Look at UIParent.lua for logic (UIParent_ManageFramePosition)
+				--]=]
+				local actionBarOffset = 45;
+				local menuBarTop = 55;
+				local overrideActionBarTop = 40;
+				local petBattleTop = 60;
+				
+				local yOfs = 18 -- FramePositionDelegate:UIParentManageFramePositions
+				if MainMenuBar and MainMenuBar:IsShown() then
+					yOfs = yOfs + menuBarTop
+				end
+				if (MultiBarBottomLeft and MultiBarBottomLeft:IsShown())
+				or (MultiBarBottomRight and MultiBarBottomRight:IsShown())
+				then
+					yOfs = yOfs + actionBarOffset
+				end
+				if (has_pet_bar())
+				and (MultiBarBottomRight and MultiBarBottomRight:IsShown())
+				then
+					yOfs = yOfs + petBattleTop
+				end
+--[[
+TitanDebug ("MData ExtraActionBarFrame :"
+	.." yOfs:"..tostring(yOfs)
+	)
+--]]
+				MoveFrame("ExtraActionBarFrame", yOfs, TITAN_PANEL_PLACE_BOTTOM, force)
+			end
+			end,
+		addonAdj = false, },
+--[=[
+--]=]
+--[[
+	[12] = {frameName = "OrderHallCommandBar",
+		move = function (force) 
+			MoveFrame("OrderHallCommandBar", 0, TITAN_PANEL_PLACE_TOP, force) end, 
 		addonAdj = false, },
 --]]
 }
@@ -564,6 +692,7 @@ OUT: None
 --]]
 local function TitanMovableFrame_MoveFrames(force)
 	local move_count = 0 -- debug
+	local str = "" -- debug
 	--[[
 	Setting the MainMenuBar as user placed is needed because in 8.0.0 Blizzard changed something in the 
 	way they controlled the frame. With Titan panel and bottom bars enabled the MainMenuBar
@@ -632,7 +761,9 @@ function TitanPanel_AdjustFrames(force)
 	local f = force or false -- do not require the parameter
 
 	-- Adjust frame positions top and bottom based on user choices
-	TitanMovableFrame_MoveFrames(f)
+	if hooks_done then
+		TitanMovableFrame_MoveFrames(f)
+	end
 end
 
 --[[ Titan
@@ -705,6 +836,11 @@ function TitanMovable_SecureFrames()
 		TitanPanelAce:SecureHook("VideoOptionsFrameOkay_OnClick", Titan_AdjustUIScale) -- VideoOptionsFrame.lua
 		TitanPanelAce:SecureHook(VideoOptionsFrame, "Hide", Titan_AdjustUIScale) -- VideoOptionsFrame.xml
 	end
+	
+	-- Check for other addons that control UI frames. Tell Titan to back off of the frames these addons could control
+	CheckConflicts()
+	
+	hooks_done = true
 end
 function TitanMovable_Unhook_SecureFrames()
 --[[

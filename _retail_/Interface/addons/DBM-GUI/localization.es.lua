@@ -15,32 +15,32 @@ L.OTabBosses	= "Jefes"
 L.TabCategory_Options	 	= "Opciones generales"
 L.TabCategory_OTHER    		= "Otros módulos"
 
-L.BossModLoaded 	= "Estadísticas de %s"
-L.BossModLoad_now 	= [[Este módulo no está cargado. 
-Se cargará al entrar en la estancia. 
+L.BossModLoaded 			= "Estadísticas de %s"
+L.BossModLoad_now 			= [[Este módulo no está cargado.
+Se cargará al entrar en la estancia.
 También puedes hacer clic en el botón para cargar el módulo manualmente.]]
 
-L.PosX = 'Posición X'
-L.PosY = 'Posición Y'
+L.PosX 						= 'Posición X'
+L.PosY 						= 'Posición Y'
 
-L.MoveMe 		= 'Posición'
-L.Button_OK 		= 'Aceptar'
-L.Button_Cancel 	= 'Cancelar'
-L.Button_LoadMod 	= 'Cargar módulo'
-L.Mod_Enabled		= "Habilitar módulo"
-L.Mod_Reset		= "Cargar opciones por defecto"
-L.Reset 		= "Restaurar"
+L.MoveMe 					= 'Posición'
+L.Button_OK 				= 'Aceptar'
+L.Button_Cancel 			= 'Cancelar'
+L.Button_LoadMod 			= 'Cargar módulo'
+L.Mod_Enabled				= "Habilitar módulo"
+L.Mod_Reset					= "Cargar opciones por defecto"
+L.Reset 					= "Restaurar"
 
-L.NoSound		= "Sin sonido"
+L.NoSound					= "Sin sonido"
 
-L.IconsInUse	= "Iconos usados por este módulo"
+L.IconsInUse				= "Iconos usados por este módulo"
 
 -- Tab: Boss Statistics
-L.BossStatistics	= "Estadísticas"
-L.Statistic_Kills	= "Victorias:"
-L.Statistic_Wipes	= "Derrotas:"
+L.BossStatistics			= "Estadísticas"
+L.Statistic_Kills			= "Victorias:"
+L.Statistic_Wipes			= "Derrotas:"
 L.Statistic_Incompletes		= "Inacabados:"--For scenarios, TODO, figure out a clean way to replace any Statistic_Wipes with Statistic_Incompletes for scenario mods
-L.Statistic_BestKill	= "Mejor victoria:"
+L.Statistic_BestKill		= "Mejor victoria:"
 L.Statistic_BestRank		= "Mejor nivel:"--Maybe not get used, not sure yet, localize anyways
 
 -- Tab: General Core Options
@@ -69,7 +69,7 @@ L.RaidWarnColor_1 			= "Color 1"
 L.RaidWarnColor_2 			= "Color 2"
 L.RaidWarnColor_3		 	= "Color 3"
 L.RaidWarnColor_4 			= "Color 4"
-L.InfoRaidWarning			= [[Puedes especificar la posición y colores del marco de avisos de banda. 
+L.InfoRaidWarning			= [[Puedes especificar la posición y colores del marco de avisos de banda.
 Este marco se usa para mensajes como "Jugador X afectado por Y".]]
 L.ColorResetted 			= "Se ha reiniciado la configuración de colores de este campo."
 L.ShowWarningsInChat 		= "Mostrar avisos en el chat"
@@ -102,7 +102,6 @@ L.ShowGuildMessages 		= "Mostrar mensajes de inicio de encuentro, victoria y der
 L.ShowGuildMessagesPlus		= "Mostrar también mensajes de inicio, victoria y derrota de Mítica+ de grupos de hermandad (requiere que la opción anterior esté activada)"
 L.WhisperMessages			= "Opciones de susurros"
 L.AutoRespond 				= "Responder automáticamente a susurros en encuentro"
-L.EnableStatus 				= "Responder automáticamente a susurros de 'estado'"
 L.WhisperStats 				= "Incluir estadísticas de victoria y derrota en las respuestas automáticas a susurros"
 L.DisableStatusWhisper 		= "Desactivar susurros automáticos de estado de encuentro del grupo o banda para todos los jugadores (requiere ser el líder). Solo se aplica a bandas en dificultad normal, heroica y mítica, y a mazmorras de piedra angular."
 L.DisableGuildStatus 		= "Desactivar mensajes de hermandad de estado de encuentro del grupo o banda para todos los jugadores (requiere ser el líder)."
@@ -155,6 +154,7 @@ L.ExpandUpwards				= "Expandir arriba"
 L.FillUpBars				= "Rellenar"
 L.ClickThrough				= "Deshabilitar clic en barras"
 L.Bar_Decimal				= "Mostrar decimales bajo: %d s"
+L.Bar_Alpha					= "Transparencia de barra: %0.1f"
 L.Bar_DBMOnly				= "Estas opciones solo funcionan con el estilo de barras DBM"
 L.Bar_EnlargeTime			= "Agrandar barras bajo tiempo: %d s"
 L.Bar_EnlargePercent		= "Agrandar barras bajo %%: %0.1f%%"
@@ -164,6 +164,9 @@ L.BarSort					= "Ordenar por tiempo restante"
 L.BarColorByType			= "Color por tipo"
 L.BarInlineIcons			= "Iconos en barras"
 L.ShortTimerText			= "Texto de temporizador breve"
+L.KeepBar					= "Mantener hasta que se lance la habilidad"
+L.KeepBar2					= "(siempre que el módulo lo permita)"
+L.FadeBar					= "Desteñir barras de habilidades lejanas"
 
 -- Tab: Spec Warn Frame
 L.Panel_SpecWarnFrame		= "Avisos especiales"
@@ -221,7 +224,6 @@ L.EventWipeSound			= "Sonido de derrota de encuentro"
 L.EventEngageSound			= "Sonido de inicio de encuentro"
 L.EventDungeonMusic			= "Música de fondo en mazmorras y bandas"
 L.EventEngageMusic			= "Música de fondo en encuentros"
-L.EventTurtleMusic			= "Música de fondo en 'Cabeza de playa'"
 L.Area_EventSoundsExtras	= "Opciones de sonidos de eventos"
 L.EventMusicCombined		= "Mostrar toda la selección de música (escribe /reload en el chat para que esta opción surta efecto)"
 L.Area_EventSoundsFilters	= "Filtros de sonidos de evento"
@@ -265,17 +267,17 @@ L.FilterInterrupts2			= "Si no es tu objetivo o foco (siempre) o no puedes inter
 L.FilterInterrupts3			= "Si no es tu objetivo o foco (siempre) o no puedes interrumpir (todos los enemigos)"
 L.FilterInterruptNoteName	= "Ocultar avisos de facultades interrumpibles con orden de interrupciones si el aviso no contiene tu nombre en la nota"
 L.FilterDispels				= "Ocular avisos de facultades disipables si tu disipación no está disponible"
+L.FilterTrashWarnings		= "Ocultar todos los avisos de enemigos menores en mazmorras normales y heroicas"
 L.FilterSelfHud				= "Excluirte de los indicadores (los indicadores de distancia no te tendrán en cuenta)"
 
 L.Area_PullTimer			= "Opciones de filtros de inicio de encuentro, descanso, combate y personalizados"
 L.DontShowPTNoID			= "Ocultar temporizadores de inicio de encuentro que se inicien en zonas distintas"
 L.DontShowPT				= "Ocultar barras de temporizadores de inicio de encuentro y descanso"
 L.DontShowPTText			= "Ocultar anuncios de temporizadores de inicio de encuentro y descanso"
-L.DontPlayPTCountdown		= "Desactivar sonidos de cuenta atrás de temporizadores de inicio de encuentro, descanso, combate y personalizados"
 L.DontShowPTCountdownText	= "Ocultar texto de cuenta atrás de temporizadores de inicio de encuentro, descanso, combate y personalizados"
+L.DontPlayPTCountdown		= "Desactivar sonidos de cuenta atrás de temporizadores de inicio de encuentro, descanso, combate y personalizados"
 L.PT_Threshold				= "Ocultar temporizadores por encima de: %d s"
 
--- Tab: Blizzard Disable & Hide
 L.Panel_HideBlizzard		= "Interfaz y funciones de Blizzard"
 L.Area_HideBlizzard			= "Opciones de interfaz y funciones de Blizzard"
 L.HideBossEmoteFrame		= "Ocultar avisos de encuentro de mazmorra y banda"
@@ -286,17 +288,12 @@ L.HideQuestTooltips			= "Ocultar objetivos de misión en en descripciones emerge
 L.HideTooltips				= "Ocultar por completo las descripciones emergentes en encuentros"
 L.DisableSFX				= "Desactivar el canal de efectos de sonido en encuentros"
 L.DisableCinematics			= "Saltar cinemáticas automáticamente"
-L.AfterFirst				= "Tras ver la cinemática por primera vez"
+L.OnlyFight					= "Solo en combate, tras haber visto la cinemática por primera vez"
+L.AfterFirst				= "Tras haber visto la cinemática por primera vez"
 L.Always					= ALWAYS
 L.CombatOnly				= "En combate"
 L.RaidCombat				= "En combate (solo en jefes)"
-L.HideBonusHeader			= "Ocultar ventana de tirada bonus en"
-L.TrivialContent			= "Mazmorras no míticas (<340)"--Basically anything below 340
-L.NormalRaider				= "LFR y mazmorras míticas inferiores a +5 (<355)"--Basically, anything below 355
-L.HeroicRaider				= "Bandas inferiores a heroico, mazmorras míticas inferiores a +10 y jefes de mundo (<370)"--Basically anything below 370
-L.MythicRaider				= "Todo lo inferior a banda mítica (<385)"--Basically anything below 385
 
--- Tab: Extra Features
 L.Panel_ExtraFeatures		= "Funciones adicionales"
 --
 L.Area_ChatAlerts			= "Opciones de alertas de texto"
@@ -319,7 +316,7 @@ L.ShowQueuePop				= "Mostrar temporizador para eltiempo restante para aceptar av
 L.Area_AutoLogging			= "Opciones del registro automático"
 L.AutologBosses				= "Registrar encuentros automáticamente con el registro de combate de Blizzard (usa '/dbm pull' antes de iniciar un encuentro para comenzar a grabar antes, de forma que tenga en cuenta la toma de pociones y otras acciones)"
 L.AdvancedAutologBosses		= "Registrar encuentros automáticamente con Transcriptor"
-L.LogOnlyRaidBosses			= "Registrar solo encuentros de jefe de banda de la expansión actual (excluye el buscador de bandas)"
+L.LogOnlyNonTrivial			= "Registrar solo encuentros de jefe de banda de la expansión actual (excluye el buscador de bandas)"
 --
 L.Area_3rdParty				= "Opciones de addons de terceros"
 L.ShowBBOnCombatStart		= "Realizar comprobación de beneficios de Big Brother al iniciar un encuentro"

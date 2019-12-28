@@ -2,7 +2,7 @@
 -- Diablohu(diablohudream@gmail.com)
 -- yleaf(yaroot@gmail.com)
 -- Mini Dragon(projecteurs@gmail.com)
--- Last update: 2018/11/11
+-- Last update: 2019/02/22
 
 if GetLocale() ~= "zhCN" then return end
 
@@ -26,7 +26,6 @@ DBM_COPY_URL_DIALOG					= "复制网址"
 --Post Patch 7.1
 DBM_CORE_NO_RANGE					= "距离雷达在副本中无法使用，该功能会使用文本代替"
 DBM_CORE_NO_ARROW					= "箭头在副本中无法使用"
-DBM_CORE_ARROW_SUMMONED				= "DBM箭头被启用了. 如果不是你启用的, 说明有一个第三方插件调用了DBM箭头."
 DBM_CORE_NO_HUD						= "HUDMap 在副本中无法使用"
 
 DBM_CORE_DYNAMIC_DIFFICULTY_CLUMP	= "由于玩家数量不足，DBM 无法开启动态距离检测。"
@@ -136,6 +135,10 @@ DBM_CORE_OPTION_CATEGORY_WARNINGS_OTHER	= "目标警报"
 DBM_CORE_OPTION_CATEGORY_WARNINGS_ROLE	= "角色警报"
 DBM_CORE_OPTION_CATEGORY_MISC		= "其它"
 DBM_CORE_OPTION_CATEGORY_SOUNDS		= "声音"
+DBM_CORE_OPTION_CATEGORY_DROPDOWNS		= "下拉"
+DBM_CORE_OPTION_CATEGORY_YELLS			= "大喊"
+DBM_CORE_OPTION_CATEGORY_NAMEPLATES		= "姓名版"
+DBM_CORE_OPTION_CATEGORY_ICONS			= "图标"
 
 DBM_CORE_AUTO_RESPONDED						= "已自动回复."
 DBM_CORE_STATUS_WHISPER						= "%s：%s，%d/%d存活"
@@ -164,11 +167,12 @@ DBM_CORE_VOICE_MISSING				= "DBM找不到你当前选择的语音包。语音包
 DBM_CORE_VOICE_DISABLED				= "你安装了语音包但是没有启动它。请在选项中的语音报警菜单中开启语音包。如果不需要语音报警请卸载语音包。"
 DBM_CORE_VOICE_COUNT_MISSING		= "在 %d 语音包中找不到倒计时语音。倒计时已恢复为默认值"
 
-DBM_CORE_UPDATEREMINDER_HEADER			= "您的DBM版本已过期。\n您可以在Curse/Twitch, WOWI, 或者deadlybossmods.com下载到新版本：%s（r%d）。如果您使用整合包，请使用更新器更新。"
+DBM_CORE_UPDATEREMINDER_HEADER			= "您的DBM版本已过期。\n您可以在Curse/Twitch, WOWI, 或者deadlybossmods.com下载到新版本：%s（%s）。如果您使用整合包，请使用更新器更新。"
 DBM_CORE_UPDATEREMINDER_HEADER_ALPHA	= "您正在使用的Alpha DBM 版本已至少落后主干%d个版本。\n 我们建议使用Alpha版本的用户时刻追随主干更新，否则请切换到正式发行版。Alpha版的版本检查会比正式发行版严格。"
 DBM_CORE_UPDATEREMINDER_FOOTER			= "按下 " .. (IsMacClient() and "Cmd-C" or "Ctrl-C")  ..  "复制下载地址到剪切板。"
 DBM_CORE_UPDATEREMINDER_FOOTER_GENERIC	= "按下 " .. (IsMacClient() and "Cmd-C" or "Ctrl-C")  ..  "复制链接到剪切板。"
-DBM_CORE_UPDATEREMINDER_DISABLE			= "警告：你的DBM已经过期太久，它已被强制禁用，直到你更新。这是为了确保它不会导致你或其他团队成员出错。"
+--DBM_CORE_UPDATEREMINDER_DISABLE			= "警告：你的DBM已经过期太久，它已被强制禁用，直到你更新。这是为了确保它不会导致你或其他团队成员出错。"
+DBM_CORE_UPDATEREMINDER_NODISABLE		= "警告：你的DBM已经过期太久，此消息过了某些指标后不能被禁用，直到你更新。"
 DBM_CORE_UPDATEREMINDER_HOTFIX			= "你的DBM版本会在这首领战斗中有问题。最新版的DBM已经修复了这个问题。"
 DBM_CORE_UPDATEREMINDER_HOTFIX_ALPHA	= "你的DBM版本会在这首领战斗中有问题。最新版的DBM（或Alpha版本）已经修复了这个问题。"
 DBM_CORE_UPDATEREMINDER_MAJORPATCH		= "你的DBM已经过期,它已被禁用,直到你更新.这是为了确保它不会导致你或其他团队成员出错.这次更新是一个非常重要的补丁,请确保你得到的是最新版."
@@ -190,6 +194,9 @@ DBM_PIZZA_ERROR_USAGE				= "命令：/dbm [broadcast] timer <时间（秒）> <�
 DBM_CORE_MINIMAP_TOOLTIP_FOOTER		= "Shift+拖动 / 右键拖动：拖动\nAlt+Shift+拖动：自由拖动"
 
 DBM_CORE_RANGECHECK_HEADER			= "距离监视（%d码）"
+DBM_CORE_RANGECHECK_HEADERT			= "距离监视 (%d码-%d人)"
+DBM_CORE_RANGECHECK_RHEADER			= "反向距离监视 (%d码)"
+DBM_CORE_RANGECHECK_RHEADERT		= "反向距离监视 (%d码-%d人)"
 DBM_CORE_RANGECHECK_SETRANGE		= "设置距离"
 DBM_CORE_RANGECHECK_SETTHRESHOLD	= "设置玩家数量阈值"
 DBM_CORE_RANGECHECK_SOUNDS			= "音效"
@@ -203,8 +210,10 @@ DBM_CORE_RANGECHECK_OPTION_FRAMES	= "框体"
 DBM_CORE_RANGECHECK_OPTION_RADAR	= "显示距离雷达框体"
 DBM_CORE_RANGECHECK_OPTION_TEXT		= "显示文本框体"
 DBM_CORE_RANGECHECK_OPTION_BOTH		= "同时显示距离雷达框体和文本框体"
-DBM_CORE_RANGERADAR_HEADER			= "距离%d码 玩家%d人"
+DBM_CORE_RANGERADAR_HEADER			= "距离%d码 %d人"
+DBM_CORE_RANGERADAR_RHEADER			= "反向距离%码 %d人"
 DBM_CORE_RANGERADAR_IN_RANGE_TEXT	= "%d人在监视距离内（%d码）"
+DBM_CORE_RANGECHECK_IN_RANGE_TEXT	= "%d人在监视距离内"
 DBM_CORE_RANGERADAR_IN_RANGE_TEXTONE= "%s (%0.1f码)"--One target
 
 DBM_CORE_INFOFRAME_SHOW_SELF		= "总是显示你的能量"		-- Always show your own power value even if you are below the threshold
@@ -212,6 +221,7 @@ DBM_CORE_INFOFRAME_SETLINES			= "设置最大行数"
 DBM_CORE_INFOFRAME_LINESDEFAULT		= "由模组设置"
 DBM_CORE_INFOFRAME_LINES_TO			= "%d行"
 DBM_CORE_INFOFRAME_POWER			= "能量"
+DBM_CORE_INFOFRAME_AGGRO			= "仇恨"
 DBM_CORE_INFOFRAME_MAIN				= "主能量:"--Main power
 DBM_CORE_INFOFRAME_ALT				= "次能量:"--Alternate Power
 
@@ -243,11 +253,9 @@ DBM_CORE_TIMER_USAGE	= {
 	"DBM计时器可用命令:",
 	"-----------------",
 	"/dbm timer <秒> <文本>: 启动一个<文本>为名称，长度为<秒>的计时器。",
-	"/dbm ctimer <秒> <文本>: 启动一个<文本>为名称，长度为<秒>的倒计时计时器。",
 	"/dbm ltimer <秒> <文本>: 启动一个<文本>为名称，长度为<秒>的循环计时器。",
-	"/dbm cltimer <秒> <文本>: 启动一个<文本>为名称，长度为<秒>的循环倒计时计时器。",
 	"('Broadcast' 在 'timer' 前会向所有团队成员发送这个计时器(需要队长或助理权限)。",
-	"/dbm timer endloop: 停止所有的 ltimer（循环计时器） 和 cltimer（循环倒计时计时器）."
+	"/dbm timer endloop: 停止所有的 ltimer（循环计时器）."
 }
 
 DBM_ERROR_NO_PERMISSION				= "权限不足。需要队长或助理权限。"
@@ -306,6 +314,7 @@ DBM_CORE_ACHIEVEMENT_TIMER_SPEED_KILL = "成就：限时击杀"
 -- Auto-generated Warning Localizations
 DBM_CORE_AUTO_ANNOUNCE_TEXTS.you				= "你中了%s"
 DBM_CORE_AUTO_ANNOUNCE_TEXTS.target				= "%s -> >%%s<"
+DBM_CORE_AUTO_ANNOUNCE_TEXTS.targetsource		= ">%%s< 施放 %s -> >%%s<"
 DBM_CORE_AUTO_ANNOUNCE_TEXTS.targetcount		= "%s (%%s) -> >%%s<"
 DBM_CORE_AUTO_ANNOUNCE_TEXTS.spell				= "%s"
 DBM_CORE_AUTO_ANNOUNCE_TEXTS.ends 				= "%s 结束"
@@ -314,16 +323,17 @@ DBM_CORE_AUTO_ANNOUNCE_TEXTS.fades				= "%s 消失"
 DBM_CORE_AUTO_ANNOUNCE_TEXTS.adds				= "%s剩余：%%d"
 DBM_CORE_AUTO_ANNOUNCE_TEXTS.cast				= "正在施放 %s：%.1f秒"
 DBM_CORE_AUTO_ANNOUNCE_TEXTS.soon				= "即将 %s"
-DBM_CORE_AUTO_ANNOUNCE_TEXTS.sooncount			= "即将%s (%%s)"
+DBM_CORE_AUTO_ANNOUNCE_TEXTS.sooncount			= "即将 %s (%%s)"
 DBM_CORE_AUTO_ANNOUNCE_TEXTS.prewarn			= "%2$s后 %1$s"
+DBM_CORE_AUTO_ANNOUNCE_TEXTS.bait				= "%s 即将到来 - 快引诱"
 DBM_CORE_AUTO_ANNOUNCE_TEXTS.stage				= "第%s阶段"
 DBM_CORE_AUTO_ANNOUNCE_TEXTS.prestage			= "第%s阶段 即将到来"
 DBM_CORE_AUTO_ANNOUNCE_TEXTS.count				= "%s (%%s)"
 DBM_CORE_AUTO_ANNOUNCE_TEXTS.stack				= "%s -> >%%s< (%%d)"
 
-local prewarnOption			= "预警：$spell:%s"
 DBM_CORE_AUTO_ANNOUNCE_OPTIONS.you				= "警报：中了%s时"
 DBM_CORE_AUTO_ANNOUNCE_OPTIONS.target			= "警报：$spell:%s的目标"
+DBM_CORE_AUTO_ANNOUNCE_OPTIONS.targetsource		= "警报：$spell:%s的目标(带来源)"
 DBM_CORE_AUTO_ANNOUNCE_OPTIONS.targetcount		= "警报：$spell:%s的目标(带计数)"
 DBM_CORE_AUTO_ANNOUNCE_OPTIONS.spell			= "警报：$spell:%s"
 DBM_CORE_AUTO_ANNOUNCE_OPTIONS.ends				= "警报：$spell:%s结束"
@@ -331,9 +341,10 @@ DBM_CORE_AUTO_ANNOUNCE_OPTIONS.endtarget		= "警报：$spell:%s结束"
 DBM_CORE_AUTO_ANNOUNCE_OPTIONS.fades			= "警报：$spell:%s消失"
 DBM_CORE_AUTO_ANNOUNCE_OPTIONS.adds				= "警报：$spell:%s剩余数量"
 DBM_CORE_AUTO_ANNOUNCE_OPTIONS.cast				= "警报：$spell:%s的施放"
-DBM_CORE_AUTO_ANNOUNCE_OPTIONS.soon				= prewarnOption
-DBM_CORE_AUTO_ANNOUNCE_OPTIONS.sooncount		= prewarnOption
-DBM_CORE_AUTO_ANNOUNCE_OPTIONS.prewarn			= prewarnOption
+DBM_CORE_AUTO_ANNOUNCE_OPTIONS.soon				= "预警：$spell:%s"
+DBM_CORE_AUTO_ANNOUNCE_OPTIONS.sooncount		= "预警：$spell:%s(带计数)"
+DBM_CORE_AUTO_ANNOUNCE_OPTIONS.prewarn			= "预警：$spell:%s"
+DBM_CORE_AUTO_ANNOUNCE_OPTIONS.bait				= "预警: $spell:%s需要引诱"
 DBM_CORE_AUTO_ANNOUNCE_OPTIONS.stage			= "警报：第%s阶段"
 DBM_CORE_AUTO_ANNOUNCE_OPTIONS.stagechange		= "警报：阶段转换"
 DBM_CORE_AUTO_ANNOUNCE_OPTIONS.prestage			= "预警：第%s阶段"
@@ -346,6 +357,7 @@ DBM_CORE_AUTO_SPEC_WARN_TEXTS.fades				= "%s 消失"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.soon				= "%s 即将到来"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.sooncount			= "%s (%%s) 即将到来"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.prewarn			= "%s 于 %s"
+DBM_CORE_AUTO_SPEC_WARN_TEXTS.bait				= "%s 即将到来 - 快引诱"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.dispel			= ">%%s<中了%s - 快驱散"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.interrupt			= "%s - 快打断"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.interruptcount	= "%s - 快打断 (%%d)"
@@ -378,8 +390,8 @@ DBM_CORE_AUTO_SPEC_WARN_TEXTS.stack				= "你叠加了%%d层%s"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.switch			= "%s - 转换目标"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.switchcount		= "%s - 转换目标 (%%s)"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.gtfo				= "注意%%s - 快躲开"
-DBM_CORE_AUTO_SPEC_WARN_TEXTS.Adds				= "小怪出现 - 转换目标"
-DBM_CORE_AUTO_SPEC_WARN_TEXTS.Addscustom		= "小怪出现 - %%s"
+DBM_CORE_AUTO_SPEC_WARN_TEXTS.adds				= "小怪出现 - 转换目标"
+DBM_CORE_AUTO_SPEC_WARN_TEXTS.addscustom		= "小怪出现 - %%s"
 DBM_CORE_AUTO_SPEC_WARN_TEXTS.targetchange		= "更换目标 - 请选择 %%s"
 
 -- Auto-generated Special Warning Localizations
@@ -389,6 +401,7 @@ DBM_CORE_AUTO_SPEC_WARN_OPTIONS.fades			= "特殊警报：$spell:%s消失"
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.soon			= "特殊警报：$spell:%s即将到来"
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.sooncount		= "特殊警报：$spell:%s即将到来(带计数)"
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.prewarn 		= "特殊警报：%s秒前预警$spell:%s"
+DBM_CORE_AUTO_SPEC_WARN_OPTIONS.bait			= "特殊警报: $spell:%s需要引诱"
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.dispel			= "特殊警报：需要驱散或偷取$spell:%s"
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.interrupt		= "特殊警报：需要打断$spell:%s"
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.interruptcount	= "特殊警报：需要打断$spell:%s(带计数)"
@@ -422,8 +435,8 @@ DBM_CORE_AUTO_SPEC_WARN_OPTIONS.stackcount		= "特殊警报：当叠加了>=%d�
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.switch 			= "特殊警报：针对$spell:%s需要转换目标"
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.switchcount		= "特殊警报：针对$spell:%s需要转换目标(带计数)"
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.gtfo			= "特殊警报：需要躲开地上的有害技能"
-DBM_CORE_AUTO_SPEC_WARN_OPTIONS.Adds			= "特殊警报：需要攻击小怪"
-DBM_CORE_AUTO_SPEC_WARN_OPTIONS.Addscustom		= "特殊警报：小怪(自定义)"
+DBM_CORE_AUTO_SPEC_WARN_OPTIONS.adds			= "特殊警报：需要攻击小怪"
+DBM_CORE_AUTO_SPEC_WARN_OPTIONS.addscustom		= "特殊警报：小怪(自定义)"
 DBM_CORE_AUTO_SPEC_WARN_OPTIONS.targetchange	= "特殊警报：需要立刻切换目标时"
 
 -- Auto-generated Timer Localizations
@@ -474,13 +487,6 @@ DBM_CORE_AUTO_ICONS_OPTION_TEXT2			= "为$spell:%s添加团队标记"
 DBM_CORE_AUTO_ARROW_OPTION_TEXT				= "为$spell:%s的目标添加箭头"
 DBM_CORE_AUTO_ARROW_OPTION_TEXT2			= "为$spell:%s的目标添加远离箭头"
 DBM_CORE_AUTO_ARROW_OPTION_TEXT3			= "为$spell:%s的目标添加前往指定位置的箭头"
-DBM_CORE_AUTO_VOICE_OPTION_TEXT				= "为技能$spell:%s提供语音包警报"
-DBM_CORE_AUTO_VOICE2_OPTION_TEXT			= "为阶段转换提供语音包警报"
-DBM_CORE_AUTO_VOICE3_OPTION_TEXT			= "为下一波小怪提供语音包警报"
-DBM_CORE_AUTO_VOICE4_OPTION_TEXT			= "为踩了不该踩的东西提供语音警报"
-DBM_CORE_AUTO_COUNTDOWN_OPTION_TEXT			= "倒计时：$spell:%s的冷却时间倒计时"
-DBM_CORE_AUTO_COUNTDOWN_OPTION_TEXT2		= "倒计时：$spell:%s消失时"
-DBM_CORE_AUTO_COUNTOUT_OPTION_TEXT			= "倒计时：$spell:%s的持续时间正计时"
 --
 DBM_CORE_AUTO_YELL_OPTION_TEXT.shortyell	= "当你受到$spell:%s影响时大喊"
 DBM_CORE_AUTO_YELL_OPTION_TEXT.yell			= "当你受到$spell:%s影响时大喊（带名字）"

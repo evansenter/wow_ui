@@ -76,7 +76,7 @@ _detalhes.EncounterDetailsTempWindow = function (EncounterDetails)
 	
 	local build_options_panel = function()
 	
-		local options_frame = EncounterDetails:CreatePluginOptionsFrame ("EncounterDetailsOptionsWindow", "Encounter Details Options", 2)
+		local options_frame = EncounterDetails:CreatePluginOptionsFrame ("EncounterDetailsOptionsWindow", "Encounter Breakdown Options", 2)
 		
 		-- 1 = only when inside a raid map
 		-- 2 = only when in raid group
@@ -132,7 +132,7 @@ _detalhes.EncounterDetailsTempWindow = function (EncounterDetails)
 				type = "toggle",
 				get = function() return EncounterDetails.db.hide_on_combat end,
 				set = function (self, fixedparam, value) EncounterDetails.db.hide_on_combat = value end,
-				desc = "Encounter Details window automatically close when you enter in combat.",
+				desc = "Encounter Breakdown window automatically close when you enter in combat.",
 				name = "Hide on Combat"
 			},
 			{
@@ -251,7 +251,7 @@ _detalhes.EncounterDetailsTempWindow = function (EncounterDetails)
 	function EncounterDetails:JB_AtualizaContainer (container, amt, barras_total)
 		barras_total = barras_total or 6
 		if (amt >= barras_total and container.ultimo ~= amt) then
-			local tamanho = 17*amt
+			local tamanho = (EncounterDetails.Frame.DefaultBarHeight + 1) * amt
 			container:SetHeight (tamanho)
 			container.window.slider:Update()
 			container.window.ultimo = amt
@@ -1227,6 +1227,11 @@ _detalhes.EncounterDetailsTempWindow = function (EncounterDetails)
 		
 		elseif (to == "spellsauras") then 
 		
+			_detalhes:SetTutorialCVar ("ENCOUNTER_BREAKDOWN_SPELLAURAS", true)
+			if (EncounterDetails.Frame.buttonSwitchSpellsAuras.AntsFrame) then
+				EncounterDetails.Frame.buttonSwitchSpellsAuras.AntsFrame:Hide()
+			end
+		
 			hide_Summary()
 			
 			BossFrame.raidbackground:Show()
@@ -1262,7 +1267,12 @@ _detalhes.EncounterDetailsTempWindow = function (EncounterDetails)
 			BossFrame.buttonSwitchSpellsAuras:SetTemplate (DetailsFrameWork:GetTemplate ("button", "DETAILS_PLUGIN_BUTTONSELECTED_TEMPLATE"))
 		
 		elseif (to == "emotes") then 
-
+		
+			_detalhes:SetTutorialCVar ("ENCOUNTER_BREAKDOWN_EMOTES", true)
+			if (EncounterDetails.Frame.buttonSwitchBossEmotes.AntsFrame) then
+				EncounterDetails.Frame.buttonSwitchBossEmotes.AntsFrame:Hide()
+			end
+			
 			--hide boss frames
 			for _, frame in _ipairs (BossFrame.Widgets) do 
 				frame:Hide()
@@ -1302,6 +1312,11 @@ _detalhes.EncounterDetailsTempWindow = function (EncounterDetails)
 		
 		elseif (to == "phases") then 
 		
+			_detalhes:SetTutorialCVar ("ENCOUNTER_BREAKDOWN_PHASES", true)
+			if (EncounterDetails.Frame.buttonSwitchPhases.AntsFrame) then
+				EncounterDetails.Frame.buttonSwitchPhases.AntsFrame:Hide()
+			end
+			
 			hide_Summary()
 			hide_Graph()
 			hide_Emote()
@@ -1314,6 +1329,11 @@ _detalhes.EncounterDetailsTempWindow = function (EncounterDetails)
 			BossFrame.buttonSwitchPhases:SetTemplate (DetailsFrameWork:GetTemplate ("button", "DETAILS_PLUGIN_BUTTONSELECTED_TEMPLATE"))
 		
 		elseif (to == "graph") then 
+			
+			_detalhes:SetTutorialCVar ("ENCOUNTER_BREAKDOWN_CHART", true)
+			if (EncounterDetails.Frame.buttonSwitchGraphic.AntsFrame) then
+				EncounterDetails.Frame.buttonSwitchGraphic.AntsFrame:Hide()
+			end
 			
 			EncounterDetails:BuildDpsGraphic()
 			if (not _G.DetailsRaidDpsGraph) then
@@ -2074,7 +2094,6 @@ _detalhes.EncounterDetailsTempWindow = function (EncounterDetails)
 							local spellname, _, spellicon = _GetSpellInfo (spell)
 							tinsert (t, {label = spellname, value = {timer_table [2], spellname, spellIcon or spellicon, timer_table.id, timer_table [7]}, icon = spellIcon or spellicon, onclick = on_select_dbm_bar})
 						else
-							--local title, description, depth, abilityIcon, displayInfo, siblingID, nextSectionID, filteredByDifficulty, link, startsOpen, flag1, flag2, flag3, flag4 = EJ_GetSectionInfo (spell)
 							local title, description, depth, abilityIcon, displayInfo, siblingID, nextSectionID, filteredByDifficulty, link, startsOpen, flag1, flag2, flag3, flag4 = C_EncounterJournal.GetSectionInfo (spell)
 							tinsert (t, {label = title, value = {timer_table [2], title, spellIcon or abilityIcon, timer_table.id, timer_table [7]}, icon = spellIcon or abilityIcon, onclick = on_select_dbm_bar})
 						end
@@ -2102,7 +2121,6 @@ _detalhes.EncounterDetailsTempWindow = function (EncounterDetails)
 							local spellname = timer_table [2]:gsub (" %(.%)", "")
 							tinsert (t, {label = spellname, value = {timer_table [2], spellname, timer_table [5], timer_table.id}, icon = timer_table [5], onclick = on_select_bw_bar})
 						elseif (int_spell < 0) then
-							--local title, description, depth, abilityIcon, displayInfo, siblingID, nextSectionID, filteredByDifficulty, link, startsOpen, flag1, flag2, flag3, flag4 = EJ_GetSectionInfo (abs (int_spell))
 							local title, description, depth, abilityIcon, displayInfo, siblingID, nextSectionID, filteredByDifficulty, link, startsOpen, flag1, flag2, flag3, flag4 = C_EncounterJournal.GetSectionInfo (abs (int_spell))
 							tinsert (t, {label = title, value = {timer_table [2], title, timer_table [5] or abilityIcon, timer_table.id}, icon = timer_table [5] or abilityIcon, onclick = on_select_bw_bar})
 						else
@@ -2635,7 +2653,7 @@ end
 		BossFrame.MacroEditBox = DetailsFrameWork:CreateTextEntry (frame, function()end, 300, 20)
 		BossFrame.MacroEditBox:SetPoint ("left", options, "right", 10, 0)
 		BossFrame.MacroEditBox:SetAlpha (0.5)
-		BossFrame.MacroEditBox:SetText ("/run Details:OpenPlugin ('Encounter Details')")
+		BossFrame.MacroEditBox:SetText ("/run Details:OpenPlugin ('Encounter Breakdown')")
 		BossFrame.MacroEditBox:SetTemplate (DetailsFrameWork:GetTemplate ("button", "DETAILS_PLUGIN_BUTTON_TEMPLATE"))
 		BossFrame.MacroEditBox:SetSize (360, 20)
 		

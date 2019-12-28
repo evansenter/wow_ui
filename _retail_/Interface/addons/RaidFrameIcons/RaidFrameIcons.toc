@@ -1,9 +1,9 @@
-## Interface: 80000
+## Interface: 80205
 ## Title: Raid Frame Icons
 ## Notes: Adds raid icons the standard raid frames
 ## Author: Szandos
 ## X-Credits-Maintainer: Soyier
-## Version: 1.0
+## Version: 1.0.6
 ## DefaultState: enabled
 ## SavedVariables: RaidFrameIconsDB
 ## X-Email: bwyazel@gmail.com

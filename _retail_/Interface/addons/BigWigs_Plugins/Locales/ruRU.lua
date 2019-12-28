@@ -23,10 +23,6 @@ L.blockEmotes = "Скрыть эмоции посередине экрана"
 L.blockEmotesDesc = [=[Некоторые боссы показывают текст для определенных способностей. Эти сообщения и слишком длинные и избыточные. Мы стараемся предоставлять более подходящие сообщения, которые не вмешиваются в ваш геймплей и не говорят вам что конкретно вы должны делать.
 
 Обратите внимание: Эмоции босса всегда будут доступны в чате, если вы захотите их прочитать.]=]
-L.blockGarrison = "Скрыть уведомления гарнизона"
-L.blockGarrisonDesc = [=[Всплывающие сообщения гарнизона показывают в основном уведомление о выполнении соратником задания.
-
-Эти уведомления могут скрыть важные части вашего интерфейса в течении боя с боссом, поэтому мы рекомендуем скрыть их.]=]
 L.blockGuildChallenge = "Скрыть уведомления о гильдейских испытаниях"
 L.blockGuildChallengeDesc = [=[Гильдейские испытания в основном показывают информацию, когда группа людей в вашей гильдии завершает прохождение подземелья в героическом режиме или в режиме испытаний.
 
@@ -273,25 +269,43 @@ L.emphasizeMultiplier = "Множитель Размера"
 L.emphasizeMultiplierDesc = "Если Вы отмените перемещение увеличенных полос к своему якорю, эта опция будет просто определять, насколько будут увеличиваться полосы по отношению к нормальным."
 L.iconPosition = "Позиция Иконки"
 L.iconPositionDesc = "Выберите, где на полосе будет находиться иконка."
---L.visibleBarLimit = "Visible bar limit"
---L.visibleBarLimitDesc = "Set the maximum amount of bars that are visible at the same time."
+L.visibleBarLimit = "Лимит отображаемых полос"
+L.visibleBarLimitDesc = "Установить максимальное количество полос, отображаемых единовременно."
+--L.textDesc = "Whether to show or hide the text displayed on the bars."
+
+-----------------------------------------------------------------------
+-- BossBlock.lua
+--
+
+--L.disableSfx = "Disable sound effects"
+--L.disableSfxDesc = "The 'Sound Effects' option in WoW's sound options will be turned off, then turned back on when the boss encounter is over. This can help you focus on warning sounds from BigWigs."
+--L.blockTooltipQuests = "Block tooltip quest objectives"
+--L.blockTooltipQuestsDesc = "When you need to kill a boss for a quest, it will usually show as '0/1 complete' in the tooltip when you place your mouse over the boss. This will be hidden whilst in combat with that boss to prevent the tooltip growing very large."
+--L.blockFollowerMission = "Скрыть уведомления гарнизона" -- Rename to follower mission
+--L.blockFollowerMissionDesc = "Всплывающие сообщения гарнизона показывают в основном уведомление о выполнении соратником задания.\n\nЭти уведомления могут скрыть важные части вашего интерфейса в течении боя с боссом, поэтому мы рекомендуем скрыть их."
+--L.blockObjectiveTracker = "Hide quest tracker"
+--L.blockObjectiveTrackerDesc = "The quest objective tracker will be hidden during a boss encounter to clear up screen space.\n\nThis will NOT happen if you are in a mythic+ or are tracking an achievement."
+
+L.subzone_grand_bazaar = "Большой базар" -- Battle of Dazar'alor raid (Battle for Azeroth)
+L.subzone_port_of_zandalar = "Порт Зандалара" -- Battle of Dazar'alor raid (Battle for Azeroth)
+--L.subzone_eastern_transept = "Eastern Transept" -- Auchindoun dungeon (Warlords of Draenor)
 
 -----------------------------------------------------------------------
 -- Colors.lua
 --
 
---L.red = "Red"
---L.redDesc = "General encounter warnings."
---L.blue = "Blue"
---L.blueDesc = "Warnings for things that affect you directly such as a debuff being applied to you."
---L.orange = "Orange"
---L.yellow = "Yellow"
---L.green = "Green"
---L.greenDesc = "Warnings for good things that happen such as a debuff being removed from you."
---L.cyan = "Cyan"
---L.cyanDesc = "Warnings for encounter status changes such as advancing to the next stage."
---L.purple = "Purple"
---L.purpleDesc = "Warnings for tank specific abilities such as stacks of a tank debuff."
+L.red = "Красный"
+L.redDesc = "Общие оповещения боя."
+L.blue = "Синий"
+L.blueDesc = "Оповещение событий, касающихся непосредственно Вас, например, наложение дебаффа."
+L.orange = "Оранжевый"
+L.yellow = "Желтый"
+L.green = "Зеленый"
+L.greenDesc = "Оповещение хороших событий, например, снятие дебаффа с Вас."
+L.cyan = "Циановый"
+L.cyanDesc = "Оповещение о изменении статуса боя, например, переход на следующую фазу."
+L.purple = "Фиолетовый"
+L.purpleDesc = "Оповещение о способностях только для танков, например, стаки дебаффа на танке."
 
 -----------------------------------------------------------------------
 -- InfoBox.lua

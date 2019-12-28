@@ -19,6 +19,10 @@ VER 3 0000000000000030 "Cloak" "1305157"
 #showtooltip
 /use 15
 END
+VER 3 0000000000000079 "CoH" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/use [target=mouseover,help,nodead][]Circle of Healing
+END
 VER 3 0000000000000069 "Combat Log" "134331"
 /combatlog
 END

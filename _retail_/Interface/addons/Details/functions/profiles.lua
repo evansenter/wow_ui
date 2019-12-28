@@ -1246,6 +1246,9 @@ local default_player_data = {
 			last_difficulty = 15,
 			last_raid = "",
 		},
+		
+	--> death panel buttons
+		on_death_menu = true,
 }
 
 _detalhes.default_player_data = default_player_data
@@ -1268,6 +1271,9 @@ local default_global_data = {
 		realm_sync = true,
 		spell_school_cache = {},
 		global_plugin_database = {},
+		
+	--> death log
+		show_totalhitdamage_on_overkill = false,
 		
 	--> switch tables
 		switchSaved = {slots = 4, table = {
@@ -1380,7 +1386,13 @@ local default_global_data = {
 			damage_taken_shadow = true,
 			damage_taken_anchor = {side = 7, x = 0, y = 0},
 			
-		}
+		},
+	
+	--> dungeon information - can be accessed by plugins and third party mods
+		dungeon_data = {},
+	
+	--> raid information - can be accessed by plugins and third party mods
+		raid_data = {},
 }
 
 _detalhes.default_global_data = default_global_data
@@ -1467,11 +1479,15 @@ function _detalhes:UpdateState_CurrentMythicDungeonRun (stillOngoing, segmentID,
 end
 
 function _detalhes:RestoreState_CurrentMythicDungeonRun()
+
+	--no need to check for mythic+ if the user is playing on classic wow
+	if (DetailsFramework.IsClassicWow()) then
+		return
+	end
+
 	local savedTable = _detalhes.mythic_dungeon_currentsaved
 	local mythicLevel = C_ChallengeMode.GetActiveKeystoneInfo()
 	local zoneName, _, _, _, _, _, _, currentZoneID = GetInstanceInfo()
-	
-	--local ejID = EJ_GetCurrentInstance() --removed on 8.0
 	
 	local mapID =  C_Map.GetBestMapForUnit ("player")
 	
@@ -1482,7 +1498,7 @@ function _detalhes:RestoreState_CurrentMythicDungeonRun()
 	local ejID = 0
 	
 	if (mapID) then
-		ejID = EJ_GetInstanceForMap (mapID) or 0
+		ejID = DetailsFramework.EncounterJournal.EJ_GetInstanceForMap (mapID) or 0
 	end
 
 	--> is there a saved state for the dungeon?

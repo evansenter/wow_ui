@@ -4,7 +4,6 @@ VER 3 0100000000000001 "Detox" "INV_MISC_QUESTIONMARK"
 END
 VER 3 0100000000000015 "Enveloping Mist" "INV_MISC_QUESTIONMARK"
 #showtooltip Enveloping Mist
-/use Thunder Focus Tea
 /use [@mouseover,help,nodead][]Enveloping Mist
 END
 VER 3 0100000000000022 "FoF" "627606"
@@ -19,6 +18,11 @@ VER 3 0100000000000013 "Life Cocoon" "INV_MISC_QUESTIONMARK"
 #showtooltip Life Cocoon
 /use Inoculating Extract
 /use [@mouseover,help,nodead]Life Cocoon
+END
+VER 3 0100000000000026 "Mana Tea" "INV_Misc_QuestionMark"
+#showtooltip Mana Tea
+/use Fangs of Intertwined Essence
+/use Mana Tea
 END
 VER 3 0100000000000014 "Renewing Mist" "INV_MISC_QUESTIONMARK"
 #showtooltip Renewing Mist
@@ -69,6 +73,7 @@ VER 3 0100000000000018 "Vivify" "INV_Misc_QuestionMark"
 /use [@mouseover,help,nodead][]Vivify
 END
 VER 3 010000000000001E "WDP" "988194"
-#showtooltip
+#showtooltip Whirling Dragon Punch
+/use Invocation of Yu'lon
 /use [nochanneling]Whirling Dragon Punch
 END

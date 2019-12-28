@@ -85,7 +85,10 @@ L.StatsShort = {
 }
 
 L.InstanceNames = {
-    [1861] = "Uldir"
+    [1861] = "Uldir",
+    [2070] = "Dazar'alor",
+    [2096] = "Crucible of Storms",
+    [2164] = "The Eternal Palace"
 }
 
 L.DifficultyNames = {
@@ -175,6 +178,7 @@ L.GearBlank2 = "Go to askmrrobot.com to optimize your gear, then use the Import 
 L.GearButtonEquip = function(spec)
 	return string.format("Activate %s Spec and Equip Gear", spec)
 end
+L.GearButtonJunk = "Show Junk List"
 L.GearButtonShop = "Show Shopping List"
 
 L.GearEquipErrorCombat = "Cannot change spec/gear while in combat!"
@@ -221,6 +225,25 @@ L.ImportErrorFaction = "It looks your faction may have changed.  Please go the w
 L.ImportErrorLevel = "It looks your level may have changed.  Please go the website and re-optimize."
 
 L.ImportOverwolfWait = "Performing Best in Bags optimization.  Please do not press Escape or close the addon until it has completed!"
+
+
+--[[----------------------------------------------------------------------
+Junk List
+------------------------------------------------------------------------]]
+L.JunkTitle = "Junk List"
+L.JunkEmpty = "You have no junk items"
+L.JunkScrap = "Click an item to add to the scrapper"
+L.JunkVendor = "Click an item to sell"
+L.JunkDisenchant = "Click an item to disenchant"
+L.JunkBankText = function(count)
+	return count .. " junk items are not in your bags"
+end
+L.JunkMissingText = function(count)
+    return "Warning! " .. count .. " junk items could not be found"
+end
+L.JunkButtonBank = "Retrieve from Bank"
+L.JunkOutOfSync = "An item in your junk list could not be found. Try opening your bank for a few seconds, then export to the website, then import again."
+L.JunkItemNotFound = "That item could not be found in your bags. Try closing and opening the Junk List to refresh it."
 
 
 --[[----------------------------------------------------------------------
@@ -293,6 +316,9 @@ L.OptionsHideMinimapDesc = "The minimap icon is for convenience, all actions can
 
 L.OptionsAutoGearName = "Automatically equip gear on spec change"
 L.OptionsAutoGearDesc = "Whenever you change spec (via the in-game UI, another addon, etc.), your imported AMR gear sets (on the Gear tab) will be automatically equipped."
+
+L.OptionsJunkVendorName = "Automatically show junk list at vendors and scrapper"
+L.OptionsJunkVendorDesc = "Whenever you open the scrapper or a vendor, automatically show the junk list window if your list is not empty."
 
 L.OptionsShopAhName = "Automatically show shopping list at auction house"
 L.OptionsShopAhDesc = "Whenever you open the auction house, automatically show the shopping list window.  You can click on items in the shopping list to quickly search for them in the auction house."

@@ -212,3 +212,6 @@ TidyPlatesContinued_ClassicPlates: disabled
 TidyPlatesContinued_Simple: disabled
 TidyPlatesContinued_Renaitre: disabled
 Details: enabled
+BigWigs_Core: enabled
+BigWigs_Options: enabled
+BigWigs_Plugins: enabled

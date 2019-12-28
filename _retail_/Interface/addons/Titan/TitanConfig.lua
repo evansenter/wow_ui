@@ -74,7 +74,7 @@ local function TitanPanel_TicketReload()
 		button1 = ACCEPT,
 		button2 = CANCEL,
 		OnAccept = function(self)
-			TitanPanelBarButton_ToggleScreenAdjust()
+			TitanPanelToggleVar("TicketAdjust");
 			ReloadUI();
 			end,	
 		showAlert = 1,

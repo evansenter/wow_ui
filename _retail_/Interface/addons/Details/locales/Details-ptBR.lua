@@ -1,7 +1,7 @@
 local L = LibStub("AceLocale-3.0"):NewLocale("Details", "ptBR") 
 if not L then return end 
 
-L["ABILITY_ID"] = "id da habilidade"
+L["ABILITY_ID"] = "Id da Habilidade"
 L["STRING_"] = ""
 L["STRING_ABSORBED"] = "Absorvido"
 L["STRING_ACTORFRAME_NOTHING"] = "oops, não há nada para reportar :("
@@ -89,7 +89,7 @@ L["STRING_CREATEAURA"] = "Criar Aura"
 L["STRING_CRITICAL_HITS"] = "Golpes Críticos"
 L["STRING_CRITICAL_ONLY"] = "critico"
 L["STRING_CURRENT"] = "Atual"
-L["STRING_CURRENTFIGHT"] = "Luta Atual"
+L["STRING_CURRENTFIGHT"] = "Segmento Atual"
 L["STRING_CUSTOM_ACTIVITY_ALL"] = "Tempo em Atividade"
 L["STRING_CUSTOM_ACTIVITY_ALL_DESC"] = "Mostra o tempo em atividade de cada membro no grupo de raide."
 L["STRING_CUSTOM_ACTIVITY_DPS"] = "Tempo de Atividade: Dano"
@@ -1129,12 +1129,6 @@ L["STRING_OPTIONS_SPELL_NOTFOUND"] = "Magia não encontrada."
 L["STRING_OPTIONS_SPELL_REMOVE"] = "Remover"
 L["STRING_OPTIONS_SPELL_RESET"] = "Resetar"
 L["STRING_OPTIONS_SPELL_SPELLID"] = "ID da Magia"
-L["STRING_OPTIONS_SPELL_SPELLID_DESC"] = [=[A ID é o número único para identificar uma magia dentro do jogo. Há várias formas de obtê-lo:
-
-- Na janela de detalhes do jogador, segure o botão SHIFT e passe o mouse sobre uma barra de uma habilidade.
-- Digite o nome da habilidade no campo do ID, uma lista será mostrada em um tooltip.
-- Páginas na internet da comunidade do WoW, na maioria deles o id da habilidade esta junto ao link do site.
-- Navegando no bloco abaixo:]=]
 L["STRING_OPTIONS_STRETCH"] = "Âncora do botão de esticar"
 L["STRING_OPTIONS_STRETCH_DESC"] = [=[Altera a posição da alça de esticar.
 
@@ -1170,6 +1164,10 @@ L["STRING_OPTIONS_TEXT_LOUTILINE"] = "Sombra do Texto Esquerdo"
 L["STRING_OPTIONS_TEXT_LOUTILINE_DESC"] = "Quando ativado o texto esquerdo ganhara um efeito de sombra ao seu redor."
 L["STRING_OPTIONS_TEXT_LPOSITION"] = "Mostrar Número"
 L["STRING_OPTIONS_TEXT_LPOSITION_DESC"] = "Mostra o número da colocação do jogador ao lado esquerdo do seu nome."
+--[[Translation missing --]]
+--[[ L["STRING_OPTIONS_TEXT_LTRANSLIT"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["STRING_OPTIONS_TEXT_LTRANSLIT_DESC"] = ""--]] 
 L["STRING_OPTIONS_TEXT_RIGHT_ANCHOR"] = "Texto a Direita:"
 L["STRING_OPTIONS_TEXT_ROUTILINE_DESC"] = "Quando ativado o texto da direita ganhara um efeito de sombra ao seu redor."
 L["STRING_OPTIONS_TEXT_ROWICONS_ANCHOR"] = "Ícones:"
@@ -1508,6 +1506,8 @@ L["STRING_SEGMENTS_LIST_OVERALL"] = "tudo"
 L["STRING_SEGMENTS_LIST_TIMEINCOMBAT"] = "Tempo em Combate"
 L["STRING_SEGMENTS_LIST_TOTALTIME"] = "Tempo Total"
 L["STRING_SEGMENTS_LIST_TRASH"] = "trash"
+--[[Translation missing --]]
+--[[ L["STRING_SEGMENTS_LIST_WASTED_TIME"] = ""--]] 
 L["STRING_SHIELD_HEAL"] = "Prevenido"
 L["STRING_SHIELD_OVERHEAL"] = "Desperdiçado"
 L["STRING_SHORTCUT_RIGHTCLICK"] = "Menu de Atalho (botão direito para fechar)"
@@ -1575,8 +1575,7 @@ L["STRING_UNLOCK"] = [=[Separe as janelas
 neste botão]=]
 L["STRING_UNLOCK_WINDOW"] = "destravar"
 L["STRING_UPTADING"] = "atualizando"
---[[Translation missing --]]
---[[ L["STRING_VERSION_AVAILABLE"] = ""--]] 
+L["STRING_VERSION_AVAILABLE"] = "uma nova versão está disponível. Baixe pelo aplicativo da Twitch ou pelo site da Curse."
 L["STRING_VERSION_UPDATE"] = "nova versão: clique para ver o que mudou"
 L["STRING_VOIDZONE_TOOLTIP"] = "Dano e tempo:"
 L["STRING_WAITPLUGIN"] = [=[esperando por

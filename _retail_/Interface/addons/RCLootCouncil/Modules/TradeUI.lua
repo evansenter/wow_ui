@@ -3,7 +3,7 @@
 -- @author Potdisc
 -- Create Date : 28/5/2018 16:48:38
 
-local addon = LibStub("AceAddon-3.0"):GetAddon("RCLootCouncil")
+local _,addon = ...
 local TradeUI = addon:NewModule("RCTradeUI", "AceComm-3.0", "AceEvent-3.0", "AceTimer-3.0")
 addon.TradeUI = TradeUI -- Shorthand for easier access
 local ST = LibStub("ScrollingTable")
@@ -81,7 +81,7 @@ function TradeUI:Update(forceShow)
             {DoCellUpdate = self.SetCellItemIcon},
             {value = v.link},
             {value = "-->"},
-            {value = addon.Ambiguate(v.args.recipient), color = addon:GetClassColor(addon.candidates[v.args.recipient] and addon.candidates[v.args.recipient].class or "nothing")},
+            {value = v.args.recipient and addon.Ambiguate(v.args.recipient) or "Unknown", color = addon:GetClassColor(addon.candidates[v.args.recipient] and addon.candidates[v.args.recipient].class or "nothing")},
             {value = _G.TRADE, color = self.GetTradeLabelColor, colorargs = {self, v.args.recipient},},
          }
       }
@@ -98,8 +98,17 @@ function TradeUI:OnCommReceived(prefix, serializedMsg, distri, sender)
          local session, winner, trader = unpack(data)
          if addon:UnitIsUnit(trader, "player") then
             -- We should give our item to 'winner'
-            if not addon:UnitIsUnit(winner, "player") or (addon.testMode or addon.nnp) then -- Don't add ourself unless we're testing
-               addon.ItemStorage:StoreItem(addon:GetLootTable()[session].link, "to_trade", {recipient = winner})
+            local Item = addon.ItemStorage:GetItem(addon:GetLootTable()[session].link) -- Update our temp item
+            if Item then
+               Item.type = "to_trade"
+               Item.args.recipient = winner
+            else
+               Item = addon.ItemStorage:New(addon:GetLootTable()[session].link, "to_trade", {recipient = winner}):Store()
+            end
+            -- Don't add ourself unless we're testing
+            -- but do add/update the item first, in case it's a reaward to ourself
+            if addon:UnitIsUnit(winner, "player") and not (addon.testMode or addon.nnp) then
+               addon.ItemStorage:RemoveItem(Item)
             end
             self:Show()
          end
@@ -108,9 +117,11 @@ function TradeUI:OnCommReceived(prefix, serializedMsg, distri, sender)
 end
 
 function TradeUI:CheckTimeRemaining()
-   -- This will handle all items in ItemStorage, not just to_trade.
-   -- It might as well since it's always runnning, although I might change that if need be.
    local Items = addon.ItemStorage:GetAllItemsLessTimeRemaining(TIME_REMAINING_WARNING)
+   -- Filter for items with "to_trade" and "award_later"
+   Items = tFilter(Items, function(item)
+      return item.type == "to_trade" or item.type == "award_later"
+    end, true)
    if #Items > 0 then
       addon:Print(format(L["time_remaining_warning"], TIME_REMAINING_WARNING/60))
       for i, Item in pairs(Items) do
@@ -163,15 +174,15 @@ end
 function TradeUI:OnEvent_UI_INFO_MESSAGE (event, ...)
    if select(1, ...) == _G.LE_GAME_ERR_TRADE_COMPLETE then -- Trade complete. Remove items from db.baggedItems if traded to winners
       addon:Debug("TradeUI: Traded item(s) to", self.tradeTarget)
-      -- TODO This records every single item we trade - modify to only do stuff with items we are actively handling
       for _, link in ipairs(self.tradeItems) do
          local Item = addon.ItemStorage:GetItem(link)
-         if Item and addon:UnitIsUnit(self.tradeTarget, Item.args.recipient) then
-            -- REVIEW This check is probably redundant, but currently TRADE_ACCEPT_UPDATE just adds all traded items, not just those we track
-            addon:SendCommand("group", "trade_complete", link, self.tradeTarget, addon.playerName)
-         elseif Item and not addon:UnitIsUnit(self.tradeTarget, Item.args.recipient) then
-            -- Player trades the item to someone else than the winner
-            addon:SendCommand("group", "trade_WrongWinner", link, self.tradeTarget, addon.playerName, Item.args.recipient)
+         if Item and Item.type and Item.type == "to_trade" then
+            if addon:UnitIsUnit(self.tradeTarget, Item.args.recipient) then
+               addon:SendCommand("group", "trade_complete", link, self.tradeTarget, addon.playerName)
+            elseif Item.args.recipient and not addon:UnitIsUnit(self.tradeTarget, Item.args.recipient) then
+               -- Player trades the item to someone else than the winner
+               addon:SendCommand("group", "trade_WrongWinner", link, self.tradeTarget, addon.playerName, Item.args.recipient)
+            end
          end
          addon.ItemStorage:RemoveItem(link)
       end

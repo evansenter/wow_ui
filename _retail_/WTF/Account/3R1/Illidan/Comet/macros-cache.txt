@@ -16,7 +16,6 @@ VER 3 0100000000000024 "FotWT" "INV_Misc_QuestionMark"
 END
 VER 3 0100000000000013 "Life Cocoon" "INV_MISC_QUESTIONMARK"
 #showtooltip Life Cocoon
-/use Inoculating Extract
 /use [@mouseover,help,nodead]Life Cocoon
 END
 VER 3 0100000000000026 "Mana Tea" "INV_Misc_QuestionMark"
@@ -73,6 +72,7 @@ VER 3 0100000000000018 "Vivify" "INV_Misc_QuestionMark"
 /use [@mouseover,help,nodead][]Vivify
 END
 VER 3 010000000000001E "WDP" "988194"
-#showtooltip
+#showtooltip Whirling Dragon Punch
+/use [nochanneling]Invocation of Yu'lon
 /use [nochanneling]Whirling Dragon Punch
 END

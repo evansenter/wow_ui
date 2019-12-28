@@ -1,7 +1,10 @@
-changeset:   355:c37fa80041f3
-tag:         v8.1.0.355
-user:        Tercioo
-date:        Mon Jan 07 20:36:45 2019 -0200
-summary:     - Fixed LFG auto invite inviting people that has applied to your group when you aren't the group leader.
+lightweight tag 62ac776f9b4438ba151d63e1fb53044b360ebc04 v8.2.5.387
+Author:	Tercio Jose <terciob19@hotmail.com>
+Date:	Mon Dec 23 08:16:55 2019 -0300
 
+commit 62ac776f9b4438ba151d63e1fb53044b360ebc04
+Author: Tercio Jose <terciob19@hotmail.com>
+Date:   Mon Dec 23 08:16:55 2019 -0300
+
+    Fixed faction quest reward preview not hiding when disabling emissary quest info
 

@@ -5,8 +5,6 @@
 
 RaidFrameIcons_Global = LibStub( "AceAddon-3.0" ):NewAddon( "RaidFrameIcons", "AceEvent-3.0")
 local RaidFrameIcons = RaidFrameIcons_Global
-
-local debug = false
 local icons = {}
 
 

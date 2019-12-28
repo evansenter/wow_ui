@@ -1,10 +1,10 @@
-lightweight tag c08e54c3ce4b9525912cdefb93c7c7a659cd653a 8.1.0.1-release
+lightweight tag 3d202027cdf6a44be3021b1c011260cde65e1dd6 8.2.5.0-release
 Author:	David C. Uhrig <david@twintop-tahoe.com>
-Date:	Thu Dec 13 19:39:49 2018 +1100
+Date:	Wed Dec 18 22:08:21 2019 +1100
 
-commit c08e54c3ce4b9525912cdefb93c7c7a659cd653a
+commit 3d202027cdf6a44be3021b1c011260cde65e1dd6
 Author: David C. Uhrig <david@twintop-tahoe.com>
-Date:   Thu Dec 13 19:39:49 2018 +1100
+Date:   Wed Dec 18 22:08:21 2019 +1100
 
-    Tweak clickthrough
+    Implement #5
 

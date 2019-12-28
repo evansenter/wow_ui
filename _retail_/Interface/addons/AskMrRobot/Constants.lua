@@ -2,7 +2,7 @@ local Amr = LibStub("AceAddon-3.0"):GetAddon("AskMrRobot")
 local L = LibStub("AceLocale-3.0"):GetLocale("AskMrRobot", true)
 
 -- min import version that we will read from the website
-Amr.MIN_IMPORT_VERSION = 65
+Amr.MIN_IMPORT_VERSION = 77
 
 -- min addon version that we will support for inter-addon communication
 Amr.MIN_ADDON_VERSION = 65
@@ -25,6 +25,8 @@ Amr.IsSupportedInstance = Amr.Serializer.IsSupportedInstance
 --Amr.GetItemLevel = Amr.Serializer.GetItemLevel
 Amr.GetItemUniqueId = Amr.Serializer.GetItemUniqueId
 Amr.ReadAzeritePowers = Amr.Serializer.ReadAzeritePowers
+Amr.ProfessionSkillLineToName = Amr.Serializer.ProfessionSkillLineToName
+
 
 -- map of slot ID to display text
 Amr.SlotDisplayText = {
@@ -105,7 +107,7 @@ Amr.SpecIcons = {
 }
 
 -- instance IDs ordered in preferred display order
-Amr.InstanceIdsOrdered = { 1861 }
+Amr.InstanceIdsOrdered = { 1861, 2070, 2096, 2164 }
 
 Amr.Difficulties = {
 	Lfr = 17,

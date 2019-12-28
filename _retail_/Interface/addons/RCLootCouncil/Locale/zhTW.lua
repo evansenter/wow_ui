@@ -13,6 +13,8 @@ L["A tab delimited output for Excel. Might work with other spreadsheets."] = "�
 L["Abort"] = "中止"
 L["Accept Whispers"] = "接受密語"
 L["accept_whispers_desc"] = "允許玩家密語他們當前的物品給你，以添加到分配界面。"
+--[[Translation missing --]]
+--[[ L["Accepted imports: 'Player Export' and 'CSV'"] = ""--]] 
 L["Active"] = "啓用"
 L["active_desc"] = "取消勾選以禁用RCLootCouncil。當你在團隊中但沒參與副本活動時這很有用。備注：此選項在每次登出時重置。"
 L["Add Item"] = "添加物品"
@@ -36,12 +38,16 @@ L["All unawarded items"] = "所有未分配物品"
 L["Alt click Looting"] = "Alt+左鍵分配"
 L["alt_click_looting_desc"] = "啟用Alt+左鍵分配。使用Alt+左鍵點擊物品以開始分配。"
 L["Alternatively, flag the loot as award later."] = "另外，標記該物品為稍后分配。"
+--[[Translation missing --]]
+--[[ L["Always show owner"] = ""--]] 
 L["Always use RCLootCouncil with Personal Loot"] = "個人拾取時總是使用RCLootCouncil"
 L["always_show_tooltip_howto"] = "雙擊切換是否總顯示tooltip"
 L["Announce Awards"] = "通知分配"
 L["Announce Considerations"] = "通知考慮的物品"
 L["announce_&i_desc"] = "|cfffcd400 &i|r: 物品連結"
 L["announce_&l_desc"] = "|cfffcd400 &l|r: 物品等級"
+--[[Translation missing --]]
+--[[ L["announce_&m_desc"] = ""--]] 
 L["announce_&n_desc"] = "|cfffcd400 &n|r: 擲骰結果，如果有的話。"
 L["announce_&o_desc"] = "|cfffcd400 &o|r: 裝備擁有人， 如果適用。"
 L["announce_&p_desc"] = "|cfffcd400 &p|r: 獲得物品的玩家名稱"
@@ -203,12 +209,20 @@ L["enable_timeout_desc"] = "點選啟動拾取視窗超時功能"
 L["Enter your note:"] = "輸入你的筆記："
 L["EQdkp-Plus XML output, tailored for Enjin import."] = "EQdkp-Plus XML輸出，適用於Enjin輸入。"
 L["error_test_as_non_leader"] = "你無法在隊伍中以非隊長的身分啟動測試"
+--[[Translation missing --]]
+--[[ L["Everybody is up to date."] = ""--]] 
 L["Everyone have voted"] = "所有投票成員都已投票"
 L["Export"] = "輸出"
+--[[Translation missing --]]
+--[[ L["Fake Loot"] = ""--]] 
 L["Following items were registered in the award later list:"] = "以下物品已被稍后分配列表登記："
 L["Following winners was registered:"] = "下個贏家已登記："
+--[[Translation missing --]]
+--[[ L["Found the following outdated versions"] = ""--]] 
 L["Frame options"] = "框架選項"
 L["Free"] = "自由拾取"
+--[[Translation missing --]]
+--[[ L["Full Bags"] = ""--]] 
 L["g1"] = "1"
 L["g2"] = "2"
 L["Gave the item to you for distribution."] = "將物品給你分配。"
@@ -227,7 +241,15 @@ L["ignore_input_desc"] = "輸入一個物品ID 將其添加至忽略列表, RCLo
 L["ignore_input_usage"] = "只接受物品ID(數字)"
 L["ignore_list_desc"] = "物品已被RCLootCouncil忽略，點擊物品來移除。"
 L["ignore_options_desc"] = "控制RCLootCouncil忽略的物品。 如果添加的物品未找到，請切到其他介面, 然後返回，這樣你就可以看到了。"
+--[[Translation missing --]]
+--[[ L["Import aborted"] = ""--]] 
 L["import_desc"] = "將數據粘貼於此。隻顯示前2500個字符以避免游戲卡頓。"
+--[[Translation missing --]]
+--[[ L["import_malformed"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["import_malformed_header"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["import_not_supported"] = ""--]] 
 L["Invalid selection"] = "無效選擇"
 L["Item"] = "物品"
 L["'Item' is added to the award later list."] = "%s被加入到了稍后分配列表了。"
@@ -245,12 +267,16 @@ L["log_desc"] = "啓用拾取歷史記錄"
 L["Loot announced, waiting for answer"] = "拾取已發送，正在等待回應"
 L["Loot Everything"] = "拾取全部"
 L["Loot History"] = "拾取歷史"
+--[[Translation missing --]]
+--[[ L["Loot Status"] = ""--]] 
 L["Loot won:"] = "獲得裝備:"
 L["loot_everything_desc"] = "啓用自動拾取非裝備物品(坐騎、兌換物)"
 L["loot_history_desc"] = [=[RCLootCouncil 將自動記錄分配相關訊息
 原始數據儲存於".../SavedVariables/RCLootCouncil.lua" 
 
 注意: 非分裝者只能記錄來自分裝者發送的數據]=]
+--[[Translation missing --]]
+--[[ L["Looted"] = ""--]] 
 L["Looted by:"] = "拾取人: "
 L["Looting options"] = "拾取選項"
 L["Lower Quality Limit"] = "最低品質"
@@ -264,6 +290,8 @@ L["Message for each item"] = "每件物品的信息"
 L["message_desc"] = "訊息已發送至所選頻道"
 L["Minimize in combat"] = "戰鬥中最小化"
 L["Minor Upgrade"] = "小提升"
+--[[Translation missing --]]
+--[[ L["Missing votes from:"] = ""--]] 
 L["ML sees voting"] = "分裝者可見投票"
 L["ml_sees_voting_desc"] = "允許分裝者查看投票詳情"
 L["module_tVersion_outdated_msg"] = "最新模塊 %s 的測試版本為: %s"
@@ -315,7 +343,11 @@ L["opt_addButton_desc"] = "對選擇部位增加新的按鈕群組"
 --[[Translation missing --]]
 --[[ L["opt_autoTrade_desc"] = ""--]] 
 --[[Translation missing --]]
+--[[ L["opt_award_later_desc"] = ""--]] 
+--[[Translation missing --]]
 --[[ L["opt_buttonsGroup_desc"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["opt_chatFrameName_desc"] = ""--]] 
 L["opt_deleteDate_confirm"] = "你確定你要將比選項舊的紀錄刪除嗎? 刪除後無法復原。"
 L["opt_deleteDate_desc"] = "刪除所有比選項中的天數舊的紀錄。"
 L["opt_deleteName_confirm"] = "你確定你要刪除所有 %s 的紀錄嗎? 刪除後無法復原。"
@@ -326,6 +358,10 @@ L["opt_deleteName_confirm"] = "你確定你要刪除所有 %s 的紀錄嗎? 刪�
 --[[Translation missing --]]
 --[[ L["opt_deletePatch_desc"] = ""--]] 
 --[[Translation missing --]]
+--[[ L["opt_deleteRaid_confirm"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["opt_deleteRaid_desc"] = ""--]] 
+--[[Translation missing --]]
 --[[ L["opt_moreButtons_desc"] = ""--]] 
 --[[Translation missing --]]
 --[[ L["opt_printCompletedTrade_Desc"] = ""--]] 
@@ -334,6 +370,8 @@ L["opt_deleteName_confirm"] = "你確定你要刪除所有 %s 的紀錄嗎? 刪�
 --[[Translation missing --]]
 --[[ L["opt_rejectTrade_Desc"] = ""--]] 
 L["opt_rejectTrade_Name"] = "允許保留裝備"
+--[[Translation missing --]]
+--[[ L["Original Owner"] = ""--]] 
 L["Out of instance"] = "不在副本內"
 --[[Translation missing --]]
 --[[ L["Patch"] = ""--]] 
@@ -393,7 +431,11 @@ L["save_skin_desc"] = "輸入外觀名稱並點「確定」存取外觀。註解
 L["Self Vote"] = "自我投票"
 L["self_vote_desc"] = "允許投票者投給他自己"
 L["Send History"] = "發送歷史"
+--[[Translation missing --]]
+--[[ L["Send to Guild"] = ""--]] 
 L["send_history_desc"] = "發送數據給隊伍中所有成員。只有你是分裝者RCLootCouncil 才會發送數據"
+--[[Translation missing --]]
+--[[ L["send_to_guild_desc"] = ""--]] 
 L["Sending 'type' to 'player'..."] = "寄送%s給%s..."
 L["Sent whisper help to 'player'"] = "發送密語幫助給%s"
 L["session_error"] = "出現了一些錯誤 - 請重新分配"
@@ -480,6 +522,8 @@ L["Unawarded"] = "未分配"
 L["Unguilded"] = "無公會"
 L["Unknown date"] = "日期不明"
 L["Unknown/Chest"] = "未知"
+--[[Translation missing --]]
+--[[ L["Unlooted"] = ""--]] 
 L["Unvote"] = "未投票"
 L["Upper Quality Limit"] = "最高品質"
 L["upper_quality_limit_desc"] = "選擇自動分配時物品的最高品質"

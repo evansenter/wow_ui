@@ -125,3 +125,6 @@ Details: enabled
 Kui_Nameplates: enabled
 Kui_Nameplates_Core_Config: enabled
 Kui_Nameplates_Core: enabled
+BigWigs_Core: enabled
+BigWigs_Options: enabled
+BigWigs_Plugins: enabled

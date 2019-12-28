@@ -27,11 +27,11 @@ local function onTextEnterPressed(widget)
 	if _panelCover then
 		_panelCover:SetVisible(false)
 	end
-	
-	-- do an import if the data starts and ends with a dollar sign
-	local txt = _txtImport:GetText()
+    
+	-- do an import if the data starts with a dollar sign
+    local txt = _txtImport:GetText()
 	local txtLen = string.len(txt)
-	if txtLen > 2 and string.sub(txt, 1, 1) == '$' then	
+    if txtLen > 6 and (string.sub(txt, 1, 1) == '$' or string.sub(txt, 1, 5) == "_bib_" or string.sub(txt, 1, 6) == "_junk_") then
 		onImportOkClick()
 	end
 	
@@ -122,6 +122,143 @@ end
 ----------------------------------------------------------------------------
 
 --
+-- Helper to parse a list of items in the standard item list format.
+--
+local function parseItemList(parts, startPos, endToken, hasSlot)
+
+    local importData = {}
+
+    local prevItemId = 0
+    local prevGemId = 0
+    local prevEnchantId = 0
+    local prevUpgradeId = 0
+    local prevBonusId = 0
+    local prevLevel = 0
+    local prevAzeriteId = 0
+    local digits = {
+        ["-"] = true,
+        ["0"] = true,
+        ["1"] = true,
+        ["2"] = true,
+        ["3"] = true,
+        ["4"] = true,
+        ["5"] = true,
+        ["6"] = true,
+        ["7"] = true,
+        ["8"] = true,
+        ["9"] = true,
+    }
+    for i = startPos, #parts do
+        local itemString = parts[i]
+        if itemString == endToken then
+            break
+        elseif itemString ~= "" and itemString ~= "_" then
+            local tokens = {}
+            local bonusIds = {}
+            local azerite = {}
+            local hasBonuses = false
+            local hasAzerites = false
+            local token = ""
+            local prop = "i"
+            local tokenComplete = false
+            for j = 1, string.len(itemString) do
+                local c = string.sub(itemString, j, j)
+                if digits[c] == nil then
+                    tokenComplete = true
+                else
+                    token = token .. c
+                end
+                
+                if tokenComplete or j == string.len(itemString) then
+                    local val = tonumber(token)
+                    if prop == "i" then
+                        val = val + prevItemId
+                        prevItemId = val
+                    elseif prop == "u" then
+                        val = val + prevUpgradeId
+                        prevUpgradeId = val
+					elseif prop == "v" then
+						val = val + prevLevel
+						prevLevel = val
+                    elseif prop == "b" then
+                        val = val + prevBonusId
+                        prevBonusId = val
+                    elseif prop == "x" or prop == "y" or prop == "z" then
+                        val = val + prevGemId
+                        prevGemId = val
+                    elseif prop == "e" then
+                        val = val + prevEnchantId
+                        prevEnchantId = val
+                    elseif prop == "a" then
+                        val = val + prevAzeriteId
+                        prevAzeriteId = val
+                    end
+                    
+                    if prop == "b" then
+                        table.insert(bonusIds, val)
+                        hasBonuses = true
+                    elseif prop == "a" then
+                        table.insert(azerite, val)
+                        hasAzerites = true
+                    else
+                        tokens[prop] = val
+                    end
+                    
+                    token = ""
+                    tokenComplete = false
+                    
+                    -- we have moved on to the next token
+                    prop = c
+                end
+            end
+            
+            local obj = {}
+
+            if hasSlot then
+                importData[tonumber(tokens["s"])] = obj
+            else
+                table.insert(importData, obj)
+            end
+
+            obj.id = tokens["i"]
+            obj.suffixId = tokens["f"] or 0
+            obj.upgradeId = tokens["u"] or 0
+			obj.level = tokens["v"] or 0
+            obj.enchantId = tokens["e"] or 0
+			obj.inventoryId = tokens["t"] or 0
+            
+            obj.gemIds = {}
+            table.insert(obj.gemIds, tokens["x"] or 0)
+            table.insert(obj.gemIds, tokens["y"] or 0)
+            table.insert(obj.gemIds, tokens["z"] or 0)
+            table.insert(obj.gemIds, 0)
+            
+            if hasBonuses then
+                obj.bonusIds = bonusIds
+            end
+            
+            if hasAzerites then
+                obj.azerite = azerite
+            end
+        end
+    end
+
+    return importData
+end
+
+local function parseEssenceList(essenceString)
+    local ret = {}
+
+    local parts = { strsplit("_", essenceString) }
+    for i = 1, #parts do
+        local essence = { strsplit(".", parts[i]) }
+        table.insert(ret, { tonumber(essence[0]), tonumber(essence[1]), tonumber(essence[2]) })
+    end
+
+    return ret
+end
+
+--
 -- Import a character, returning nil on success, otherwise an error message, import result stored in the db.
 --
 function Amr:ImportCharacter(data, isTest, isChild)
@@ -132,10 +269,15 @@ function Amr:ImportCharacter(data, isTest, isChild)
     if data == nil or string.len(data) == 0 then
         return L.ImportErrorEmpty
     end
-	
+    
 	-- if multiple setups are included in the data, parse each individually, then quit
-	local specParts = { strsplit("\n", data) }
-    if #specParts > 1 then
+    local specParts = { strsplit("\n", data) }
+    
+    if #specParts > 1 and specParts[1] == "_junk_" then
+        -- if the string starts with "_junk_" then it is the junk list
+        return Amr:ImportJunkList(specParts[2], currentPlayerData)
+
+    elseif #specParts > 1 then
         -- clear out any previously-imported BiB setups when importing new ones (non-BiB will always be imported one at a time)
         for i = #Amr.db.char.GearSetups, 1, -1 do
             if Amr.db.char.GearSetups[i].IsBib then
@@ -212,123 +354,17 @@ function Amr:ImportCharacter(data, isTest, isChild)
     
     -- if we make it this far, the data is valid, so read item information
 	local specSlot = tonumber(parts[11])
-	
-    local importData = {}
-    local enchantInfo = {}
     
-    local prevItemId = 0
-    local prevGemId = 0
-    local prevEnchantId = 0
-    local prevUpgradeId = 0
-    local prevBonusId = 0
-    local prevLevel = 0
-    local prevAzeriteId = 0
-    local digits = {
-        ["-"] = true,
-        ["0"] = true,
-        ["1"] = true,
-        ["2"] = true,
-        ["3"] = true,
-        ["4"] = true,
-        ["5"] = true,
-        ["6"] = true,
-        ["7"] = true,
-        ["8"] = true,
-        ["9"] = true,
-    }
-    for i = 16, #parts do
-        local itemString = parts[i]
-        if itemString ~= "" and itemString ~= "_" then
-            local tokens = {}
-            local bonusIds = {}
-            local azerite = {}
-            local hasBonuses = false
-            local hasAzerites = false
-            local token = ""
-            local prop = "i"
-            local tokenComplete = false
-            for j = 1, string.len(itemString) do
-                local c = string.sub(itemString, j, j)
-                if digits[c] == nil then
-                    tokenComplete = true
-                else
-                    token = token .. c
-                end
-                
-                if tokenComplete or j == string.len(itemString) then
-                    local val = tonumber(token)
-                    if prop == "i" then
-                        val = val + prevItemId
-                        prevItemId = val
-                    elseif prop == "u" then
-                        val = val + prevUpgradeId
-                        prevUpgradeId = val
-					elseif prop == "v" then
-						val = val + prevLevel
-						prevLevel = val
-                    elseif prop == "b" then
-                        val = val + prevBonusId
-                        prevBonusId = val
-                    elseif prop == "x" or prop == "y" or prop == "z" then
-                        val = val + prevGemId
-                        prevGemId = val
-                    elseif prop == "e" then
-                        val = val + prevEnchantId
-                        prevEnchantId = val
-                    elseif prop == "a" then
-                        val = val + prevAzeriteId
-                        prevAzeriteId = val
-                    end
-                    
-                    if prop == "b" then
-                        table.insert(bonusIds, val)
-                        hasBonuses = true
-                    elseif prop == "a" then
-                        table.insert(azerite, val)
-                        hasAzerites = true
-                    else
-                        tokens[prop] = val
-                    end
-                    
-                    token = ""
-                    tokenComplete = false
-                    
-                    -- we have moved on to the next token
-                    prop = c
-                end
-            end
-            
-            local obj = {}
-            importData[tonumber(tokens["s"])] = obj
-            
-            obj.id = tokens["i"]
-            obj.suffixId = tokens["f"] or 0
-            obj.upgradeId = tokens["u"] or 0
-			obj.level = tokens["v"] or 0
-            obj.enchantId = tokens["e"] or 0
-			obj.inventoryId = tokens["t"] or 0
-            
-            obj.gemIds = {}
-            table.insert(obj.gemIds, tokens["x"] or 0)
-            table.insert(obj.gemIds, tokens["y"] or 0)
-            table.insert(obj.gemIds, tokens["z"] or 0)
-            table.insert(obj.gemIds, 0)
-            
-            if hasBonuses then
-                obj.bonusIds = bonusIds
-            end
-            
-            if hasAzerites then
-                obj.azerite = azerite
-            end
-        end
-    end
+    local essences = parseEssenceList(parts[15])
+
+    local importData = parseItemList(parts, 17, "n/a", true)
     
     -- extra information contains setup id, display label, then extra enchant info        
     parts = { strsplit("@", data1[3]) }
 
     local setupId = parts[2]
     local setupName = parts[3]
+    local enchantInfo = {}
 
     for i = 4, #parts do
         local infoParts = { strsplit("\\", parts[i]) }
@@ -375,7 +411,8 @@ function Amr:ImportCharacter(data, isTest, isChild)
             SpecSlot = tonumber(specSlot),
             Id = setupId,
             Label = setupName,
-            Gear = importData
+            Gear = importData,
+            Essences = essences
         }
 
         if not result.IsBib then
@@ -409,4 +446,96 @@ function Amr:ImportCharacter(data, isTest, isChild)
 		-- also update shopping list after import
 		Amr:UpdateShoppingData(currentPlayerData)
     end
+end
+
+--
+-- Import a list of items that are junk.
+--
+function Amr:ImportJunkList(data, currentPlayerData)
+
+    local data1 = { strsplit("$", data) }
+    if #data1 ~= 3 then
+        return L.ImportErrorFormat
+    end
+    
+    local parts = { strsplit(";", data1[2]) }
+    
+    -- require a minimum version
+    local ver = tonumber(parts[1])
+    if ver < Amr.MIN_IMPORT_VERSION then
+        return L.ImportErrorVersion
+    end
+
+    -- require name match
+    local region = parts[2]
+    local realm = parts[3]
+    local name = parts[4]
+    if name ~= currentPlayerData.Name then
+        local importPlayerName = name .. " (" .. realm .. ")"
+        local you = currentPlayerData.Name .. " (" .. currentPlayerData.Realm .. ")"
+        return L.ImportErrorChar(importPlayerName, you)
+    end
+
+    local keepStartPos = 0
+    local junkStartPos = 0
+    for i = 5, #parts do
+        local partString = parts[i]
+        if partString == ".k" then
+            keepStartPos = i + 1
+        elseif partString == ".d" then
+            junkStartPos = i + 1
+        end
+    end
+
+    Amr.db.char.JunkData = {}
+
+    -- Keep is a lookup by unique id
+    local keep = parseItemList(parts, keepStartPos, ".d", false)
+    Amr.db.char.JunkData.Keep = {}
+    for i = 1, #keep do
+        local uniqueId = Amr.GetItemUniqueId(keep[i])
+        Amr.db.char.JunkData.Keep[uniqueId] = keep[i]
+    end
+
+    -- Junk is a simple list of items to discard, in the desired display order
+    Amr.db.char.JunkData.Junk = parseItemList(parts, junkStartPos, "n/a", false)
+
+    -- extra information contains extra enchant info  
+    if #data1 >= 3 then      
+        parts = { strsplit("@", data1[3]) }
+
+        local enchantInfo = {}
+
+        for i = 2, #parts do
+            local infoParts = { strsplit("\\", parts[i]) }
+            
+            if infoParts[1] == "e" then
+            
+                local enchObj = {}
+                enchObj.id = tonumber(infoParts[2])
+                enchObj.itemId = tonumber(infoParts[3])
+                enchObj.spellId = tonumber(infoParts[4])
+                enchObj.text = string.gsub(infoParts[5], "_(%a+)_", function(s) return L.StatsShort[s] end)
+                
+                local mats = infoParts[6]
+                if string.len(mats) > 0 then
+                    enchObj.materials = {}
+                    mats = { strsplit(",", mats) }
+                    for j = 1, #mats do
+                        local kv = { strsplit("=", mats[j]) }
+                        enchObj.materials[tonumber(kv[1])] = tonumber(kv[2])
+                    end
+                end
+                
+                enchantInfo[enchObj.id] = enchObj            
+            end
+        end
+
+        for k,v in pairs(enchantInfo) do
+            Amr.db.char.ExtraEnchantData[k] = v    
+        end
+    end
+
+    -- show the junk window after a successful junk import
+    Amr:ShowJunkWindow()
 end

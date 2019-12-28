@@ -9,20 +9,22 @@ local BagBarMod = Bartender4:NewModule("BagBar", "AceHook-3.0")
 
 -- fetch upvalues
 local ButtonBar = Bartender4.ButtonBar.prototype
-local LBF = LibStub("LibButtonFacade", true)
 local Masque = LibStub("Masque", true)
 
 local _G = _G
 local next, pairs, setmetatable = next, pairs, setmetatable
 local table_insert, table_remove = table.insert, table.remove
 
--- GLOBALS: UIParent, MainMenuBarBackpackButton, CharacterBag0Slot, CharacterBag1Slot, CharacterBag2Slot, CharacterBag3Slot
+local WoWClassic = select(4, GetBuildInfo()) < 20000
+
+-- GLOBALS: UIParent, MainMenuBarBackpackButton, CharacterBag0Slot, CharacterBag1Slot, CharacterBag2Slot, CharacterBag3Slot, KeyRingButton
 
 -- create prototype information
 local BagBar = setmetatable({}, {__index = ButtonBar})
 
 local defaults = { profile = Bartender4:Merge({
 	enabled = true,
+	keyring = true,
 	onebag = false,
 	visibility = {
 		possess = false,
@@ -66,8 +68,13 @@ local function clearSetPoint(btn, ...)
 	btn:SetPoint(...)
 end
 
+if WoWClassic then
+BagBar.button_width = 37
+BagBar.button_height = 37
+else
 BagBar.button_width = 30
 BagBar.button_height = 30
+end
 BagBarMod.button_count = 5
 function BagBar:FeedButtons()
 	local count = 1
@@ -77,17 +84,21 @@ function BagBar:FeedButtons()
 			btn:Hide()
 			btn:SetParent(UIParent)
 			btn:ClearSetPoint("CENTER")
-			if btn.MasqueButtonData then
-				local group = self.MasqueGroup
-				group:RemoveButton(btn)
-			end
-			if btn.LBFButtonData then
-				local group = self.LBFGroup
-				group:RemoveButton(btn)
+
+			if not WoWClassic or btn ~= KeyRingButton then
+				if btn.MasqueButtonData then
+					local group = self.MasqueGroup
+					group:RemoveButton(btn)
+				end
 			end
 		end
 	else
 		self.buttons = {}
+	end
+
+	if WoWClassic and self.config.keyring then
+		table_insert(self.buttons, KeyRingButton)
+		count = count + 1
 	end
 
 	if not self.config.onebag then
@@ -103,26 +114,19 @@ function BagBar:FeedButtons()
 	for i,v in pairs(self.buttons) do
 		v:SetParent(self)
 		v:Show()
-		v:SetNormalTexture("")
+		if not WoWClassic or v ~= KeyRingButton then
+			v:SetNormalTexture("")
 
-		if Masque then
-			local group = self.MasqueGroup
-			if not v.MasqueButtonData then
-				v.MasqueButtonData = {
-					Button = v,
-					Icon = _G[v:GetName() .. "IconTexture"],
-				}
+			if Masque then
+				local group = self.MasqueGroup
+				if not v.MasqueButtonData then
+					v.MasqueButtonData = {
+						Button = v,
+						Icon = _G[v:GetName() .. "IconTexture"],
+					}
+				end
+				group:AddButton(v, v.MasqueButtonData)
 			end
-			group:AddButton(v, v.MasqueButtonData)
-		elseif LBF then
-			local group = self.LBFGroup
-			if not v.LBFButtonData then
-				v.LBFButtonData = {
-					Button = v,
-					Icon = _G[v:GetName() .. "IconTexture"],
-				}
-			end
-			group:AddButton(v, v.LBFButtonData)
 		end
 
 		v.ClearSetPoint = clearSetPoint

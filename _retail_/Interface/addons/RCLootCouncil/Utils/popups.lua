@@ -2,7 +2,7 @@
 -- @author: Potdisc
 -- 14/07/2017
 
-local addon = LibStub("AceAddon-3.0"):GetAddon("RCLootCouncil")
+local _,addon = ...
 local LibDialog = LibStub("LibDialog-1.0")
 local L = LibStub("AceLocale-3.0"):GetLocale("RCLootCouncil")
 
@@ -16,7 +16,7 @@ LibDialog:Register("RCLOOTCOUNCIL_CONFIRM_USAGE", {
       {
          text = _G.YES,
          on_click = function()
-            addon:DebugLog("Player confirmed usage, Personal Loot")
+            addon:DebugLog("Player confirmed usage")
             addon:StartHandleLoot("personalloot")
          end,
       },
@@ -183,4 +183,32 @@ LibDialog:Register("RCLOOTCOUNCIL_KEEP_ITEM", {
    hide_on_escape = true,
    show_while_dead = true,
    no_close_button = true,
+})
+
+---------------- History ------------------------------
+LibDialog:Register("RCLOOTCOUNCIL_IMPORT_OVERWRITE", {
+   text = "init",
+   -- args: count: num overwrites, OnYesCallback: function Executes the overwrite import.
+   on_show = function (self, data)
+      self.text:SetText(string.format("This import will overwrite %d existing history entries.\nDo you want to continue?", data.count))
+   end,
+   on_cancel = function (self, data)
+      data.OnNoCallback()
+   end,
+   buttons = {
+      {
+         text = _G.YES,
+         on_click = function (self, data)
+            data.OnYesCallback()
+         end,
+      },
+      {
+         text = _G.NO,
+         on_click = function (self, data)
+            data.OnNoCallback()
+         end
+      }
+   },
+   hide_on_escape = true,
+   show_while_dead = true,
 })

@@ -66,6 +66,10 @@ L["S_MAPBAR_OPTIONSMENU_EQUIPMENTICONS"] = "Ícones de equipamentos"
 L["S_MAPBAR_OPTIONSMENU_QUESTTRACKER"] = "Habilitar Listagem de Missões"
 L["S_MAPBAR_OPTIONSMENU_REFRESH"] = "Recarregar"
 L["S_MAPBAR_OPTIONSMENU_SOUNDENABLED"] = "Habilitar som"
+--[[Translation missing --]]
+--[[ L["S_MAPBAR_OPTIONSMENU_STATUSBAR_ONDISABLE"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["S_MAPBAR_OPTIONSMENU_STATUSBAR_VISIBILITY"] = ""--]] 
 L["S_MAPBAR_OPTIONSMENU_STATUSBARANCHOR"] = "Ancorar ao topo"
 L["S_MAPBAR_OPTIONSMENU_TOMTOM_WPPERSISTENT"] = "Ponto persistente"
 L["S_MAPBAR_OPTIONSMENU_TRACKER_CURRENTZONE"] = "Apenas zona atual"
@@ -86,16 +90,12 @@ L["S_MAPBAR_SORTORDER_TIMELEFTPRIORITY_OPTION"] = "Menos De %d Horas"
 L["S_MAPBAR_SORTORDER_TIMELEFTPRIORITY_SHOWTEXT"] = "Texto do Tempo Restante"
 L["S_MAPBAR_SORTORDER_TIMELEFTPRIORITY_SORTBYTIME"] = "Ordem por Tempo"
 L["S_MAPBAR_SORTORDER_TIMELEFTPRIORITY_TITLE"] = "Tempo Restante"
-L["S_MAPBAR_SUMMARY"] = "Sumário"
 L["S_MAPBAR_SUMMARYMENU_ACCOUNTWIDE"] = "Na Conta"
-L["S_MAPBAR_SUMMARYMENU_MOREINFO"] = "botão esquerdo: mostrar mais"
-L["S_MAPBAR_SUMMARYMENU_NOATTENTION"] = [=[Nenhuma quest sendo rastreadas nos seus demais personagens
-tem menos de 2 horas de tempo restante.]=]
-L["S_MAPBAR_SUMMARYMENU_REQUIREATTENTION"] = "Requer Atenção"
-L["S_MAPBAR_SUMMARYMENU_TODAYREWARDS"] = "Conquistas de Hoje"
-L["S_MAPFRAME_ALIGN_CENTER"] = "centro"
-L["S_MAPFRAME_ALIGN_DESC"] = "|cFF22FF22Clique|r para alternar o alinhamento da janela do mapa do centro para a esquerda e da esquerda para o centro da sua tela."
-L["S_MAPFRAME_ALIGN_LEFT"] = "esquerda"
+L["S_OPTIONS_ACCESSIBILITY"] = "Acessibilidade"
+--[[Translation missing --]]
+--[[ L["S_OPTIONS_ACCESSIBILITY_EXTRATRACKERMARK"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["S_OPTIONS_ACCESSIBILITY_SHOWBOUNTYRING"] = ""--]] 
 --[[Translation missing --]]
 --[[ L["S_OPTIONS_ANIMATIONS"] = ""--]] 
 L["S_OPTIONS_MAPFRAME_ALIGN"] = "Janela do Mapa Centralizada"
@@ -164,20 +164,19 @@ L["S_SUMMARYPANEL_LIFETIMESTATISTICS_CHARACTER"] = "Estatísticas do Personagem"
 L["S_SUMMARYPANEL_OTHERCHARACTERS"] = "Outros Personagems"
 L["S_TUTORIAL_AMOUNT"] = "indica a quantidade a receber"
 L["S_TUTORIAL_CLICKTOTRACK"] = "Clique para rastrear a missão."
---[[Translation missing --]]
---[[ L["S_TUTORIAL_MAPALIGN"] = ""--]] 
 L["S_TUTORIAL_PARTY"] = "Quando estiver em grupo, uma estrela azul é mostrada em missões em que todos do grupo estão!"
+L["S_TUTORIAL_STATISTICS_BUTTON"] = "Clique aqui para ver as estatísticas e salvar uma lista de missões noutros personagens."
 L["S_TUTORIAL_TIMELEFT"] = "indica o tempo restante (+4 horas, +90 minutos, +30 minutos, menos de 30 minutos)."
 --[[Translation missing --]]
 --[[ L["S_TUTORIAL_WORLDBUTTONS"] = ""--]] 
 L["S_TUTORIAL_WORLDMAPBUTTON"] = "Este botão mostra o mapa das Ilhas Partidas."
 L["S_UNKNOWNQUEST"] = "Missão desconhecida"
+L["S_WHATSNEW"] = "O que tem de novo?"
 --[[Translation missing --]]
 --[[ L["S_WORLDBUTTONS_SHOW_NONE"] = ""--]] 
 --[[Translation missing --]]
 --[[ L["S_WORLDBUTTONS_SHOW_TYPE"] = ""--]] 
---[[Translation missing --]]
---[[ L["S_WORLDBUTTONS_SHOW_ZONE"] = ""--]] 
+L["S_WORLDBUTTONS_SHOW_ZONE"] = "Ordenar por Zona"
 --[[Translation missing --]]
 --[[ L["S_WORLDBUTTONS_TOGGLE_QUESTS"] = ""--]] 
 L["S_WORLDMAP_QUESTLOCATIONS"] = "Mostrar local da quest"

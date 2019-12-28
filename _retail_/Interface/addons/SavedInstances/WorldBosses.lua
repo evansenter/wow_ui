@@ -1,5 +1,5 @@
-local addonName, addon = ...
-local WorldBosses = LibStub("AceAddon-3.0"):GetAddon(addonName):NewModule("WorldBosses")
+local _, addon = ...
+local WorldBosses = addon.core:NewModule("WorldBosses")
 local L = addon.L
 
   -- encounter index is embedded in the Hjournal hyperlink
@@ -52,15 +52,19 @@ addon.WorldBosses = {
   [2198] = { quest=52166, expansion=7, level=120 }, -- Warbringer Yenajz
   [2210] = { quest=52196, expansion=7, level=120 }, -- Dunegorger Kraulok
   -- Arathi Highlands
-  [2212] = { quest=52848, expansion=7, level=120 }, -- The Lion's Roar
-  [2213] = { quest=52847, expansion=7, level=120 }, -- Doom's Howl
+  [2212] = { quest=52848, expansion=7, level=120, remove=true }, -- The Lion's Roar
+  [2213] = { quest=52847, expansion=7, level=120, remove=true }, -- Doom's Howl
   -- Darkshore
-  [2329] = { quest=54896, expansion=7, level=120 }, -- Ivus the Forest Lord
-  [2345] = { quest=54895, expansion=7, level=120 }, -- Ivus the Decayed
+  [2329] = { quest=54896, expansion=7, level=120, remove=true }, -- Ivus the Forest Lord
+  [2345] = { quest=54895, expansion=7, level=120, remove=true }, -- Ivus the Decayed
+  -- Nazjatar
+  [2362] = { quest=56057, expansion=7, level=120 }, -- Ulmath, the Soulbinder
+  [2363] = { quest=56056, expansion=7, level=120 }, -- Wekemara
 
   -- bosses with no EJ entry (eid is a placeholder)
   [9001] = { quest=38276, name=GARRISON_LOCATION_TOOLTIP.." "..BOSS, expansion=5, level=100 },
-  [9002] = { quest=47461, name="Lord Kazzak", expansion=6, level=110},          -- Lord Kazzak (13th Anniversary)
-  [9003] = { quest=47462, name="Azuregos", expansion=6, level=110},             -- Azuregos (13th Anniversary)
-  [9004] = { quest=47463, name="Dragon of Nightmare", expansion=6, level=110},  -- Dragon of Nightmare (13th Anniversary)
+  -- Old Vanilla Bosses during Anniversary Event
+  [9002] = { quest=47461, name=L["Lord Kazzak"], expansion=7, level=120, remove=true },          -- Lord Kazzak
+  [9003] = { quest=47462, name=L["Azuregos"], expansion=7, level=120, remove=true },             -- Azuregos
+  [9004] = { quest=47463, name=L["Dragon of Nightmare"], expansion=7, level=120, remove=true },  -- Dragon of Nightmare
 }

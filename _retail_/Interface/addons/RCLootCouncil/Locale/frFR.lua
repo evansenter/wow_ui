@@ -13,6 +13,8 @@ L["A tab delimited output for Excel. Might work with other spreadsheets."] = "Fo
 L["Abort"] = "Annuler"
 L["Accept Whispers"] = "Autoriser les chuchotements"
 L["accept_whispers_desc"] = "Permet aux joueurs de vous chuchoter leur(s) objet(s) équipé(s) pour qu'il(s) soit(-ent) ajouté à la fenêtre de vote."
+--[[Translation missing --]]
+--[[ L["Accepted imports: 'Player Export' and 'CSV'"] = ""--]] 
 L["Active"] = "Activé"
 L["active_desc"] = "Décocher pour désactiver RCLootCouncil. Cette option est utile si vous faites partie d'un groupe de raid, mais que vous n'y participez pas. Remarque : cette option est réinitialisée après chaque déconnexion."
 L["Add Item"] = "Ajouter un objet"
@@ -40,6 +42,8 @@ L["Alt click Looting"] = "Butin en Alt-clic"
 L["alt_click_looting_desc"] = "Active le butin en Alt-clic, c.-à-d. qu'une session sera lancée en laissant appuyer le bouton Alt et en cliquant (clic gauche) avec la souris sur un objet."
 L["Alternatively, flag the loot as award later."] = "Sinon, désigner le butin comme devant être attribué plus tard."
 --[[Translation missing --]]
+--[[ L["Always show owner"] = ""--]] 
+--[[Translation missing --]]
 --[[ L["Always use RCLootCouncil with Personal Loot"] = ""--]] 
 --[[Translation missing --]]
 --[[ L["always_show_tooltip_howto"] = ""--]] 
@@ -49,6 +53,8 @@ L["Announce Considerations"] = "Annoncer les objets en examen"
 --[[ L["announce_&i_desc"] = ""--]] 
 --[[Translation missing --]]
 --[[ L["announce_&l_desc"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["announce_&m_desc"] = ""--]] 
 --[[Translation missing --]]
 --[[ L["announce_&n_desc"] = ""--]] 
 --[[Translation missing --]]
@@ -251,14 +257,22 @@ L["Enter your note:"] = "Saisissez votre note"
 L["EQdkp-Plus XML output, tailored for Enjin import."] = "Exporter en EQdkp-Plus XML, adapté pour être importé sur Enjin."
 --[[Translation missing --]]
 --[[ L["error_test_as_non_leader"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["Everybody is up to date."] = ""--]] 
 L["Everyone have voted"] = "Tout le monde a voté"
 L["Export"] = "Exporter"
+--[[Translation missing --]]
+--[[ L["Fake Loot"] = ""--]] 
 --[[Translation missing --]]
 --[[ L["Following items were registered in the award later list:"] = ""--]] 
 L["Following winners was registered:"] = "Les vainqueurs suivants ont été répertoriés :"
 --[[Translation missing --]]
+--[[ L["Found the following outdated versions"] = ""--]] 
+--[[Translation missing --]]
 --[[ L["Frame options"] = ""--]] 
 L["Free"] = "Gratuit"
+--[[Translation missing --]]
+--[[ L["Full Bags"] = ""--]] 
 L["g1"] = true
 L["g2"] = true
 --[[Translation missing --]]
@@ -281,7 +295,15 @@ L["ignore_input_usage"] = "Cette fonction n'accepte que l'ID des objets (numéro
 L["ignore_list_desc"] = "Objets ignorés par RCLootCouncil. Cliquez sur un objet pour le retirer de la liste."
 L["ignore_options_desc"] = "Gérez quels objets devraient être ignorés par RCLootCouncil. Si vous ajoutez un objet qui n'a pas été mis en cache, vous devez changer d'onglet puis revenir dans celui-ci pour que vous puissiez voir l'objet en question apparaître dans la liste."
 --[[Translation missing --]]
+--[[ L["Import aborted"] = ""--]] 
+--[[Translation missing --]]
 --[[ L["import_desc"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["import_malformed"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["import_malformed_header"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["import_not_supported"] = ""--]] 
 --[[Translation missing --]]
 --[[ L["Invalid selection"] = ""--]] 
 L["Item"] = "Objet"
@@ -305,11 +327,15 @@ L["log_desc"] = "Active le répertoriage dans l'historique du butin."
 L["Loot announced, waiting for answer"] = "Butin divulgué, en attente d'une réponse"
 L["Loot Everything"] = "Tout fouiller"
 L["Loot History"] = "Historique du butin"
+--[[Translation missing --]]
+--[[ L["Loot Status"] = ""--]] 
 L["Loot won:"] = "Butin remporté :"
 L["loot_everything_desc"] = "Active la fouille automatique des non-objets (p. ex. les montures, les jetons de sets de tier)"
 L["loot_history_desc"] = [=[RCLootCouncil enregistre automatiquement les informations pertinentes durant les sessions.
 Les données brutes sont enregistrées dans le fichier ".../SavedVariables/RCLootCouncil.lua".
 Remarque : les joueurs autres que le maître du butin peuvent uniquement enregistrer les données qui leur sont envoyées par ce dernier.]=]
+--[[Translation missing --]]
+--[[ L["Looted"] = ""--]] 
 --[[Translation missing --]]
 --[[ L["Looted by:"] = ""--]] 
 L["Looting options"] = "Paramètres de fouille"
@@ -327,6 +353,8 @@ L["Message"] = true
 L["message_desc"] = "Message à envoyer au canal prédéfini."
 L["Minimize in combat"] = "Minimiser en combat"
 L["Minor Upgrade"] = "Légère amél."
+--[[Translation missing --]]
+--[[ L["Missing votes from:"] = ""--]] 
 L["ML sees voting"] = "MdB voit les votes"
 L["ml_sees_voting_desc"] = "Permet au maître du butin de voir qui a voté pour qui."
 --[[Translation missing --]]
@@ -392,7 +420,11 @@ L["open_the_loot_history_desc"] = "Cliquer pour ouvrir l'historique du butin."
 --[[Translation missing --]]
 --[[ L["opt_autoTrade_desc"] = ""--]] 
 --[[Translation missing --]]
+--[[ L["opt_award_later_desc"] = ""--]] 
+--[[Translation missing --]]
 --[[ L["opt_buttonsGroup_desc"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["opt_chatFrameName_desc"] = ""--]] 
 --[[Translation missing --]]
 --[[ L["opt_deleteDate_confirm"] = ""--]] 
 --[[Translation missing --]]
@@ -406,6 +438,10 @@ L["open_the_loot_history_desc"] = "Cliquer pour ouvrir l'historique du butin."
 --[[Translation missing --]]
 --[[ L["opt_deletePatch_desc"] = ""--]] 
 --[[Translation missing --]]
+--[[ L["opt_deleteRaid_confirm"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["opt_deleteRaid_desc"] = ""--]] 
+--[[Translation missing --]]
 --[[ L["opt_moreButtons_desc"] = ""--]] 
 --[[Translation missing --]]
 --[[ L["opt_printCompletedTrade_Desc"] = ""--]] 
@@ -415,6 +451,8 @@ L["open_the_loot_history_desc"] = "Cliquer pour ouvrir l'historique du butin."
 --[[ L["opt_rejectTrade_Desc"] = ""--]] 
 --[[Translation missing --]]
 --[[ L["opt_rejectTrade_Name"] = ""--]] 
+--[[Translation missing --]]
+--[[ L["Original Owner"] = ""--]] 
 --[[Translation missing --]]
 --[[ L["Out of instance"] = ""--]] 
 --[[Translation missing --]]
@@ -502,7 +540,11 @@ L["save_skin_desc"] = "Donnez un nom à votre apparence puis appuyez sur \"Okay\
 L["Self Vote"] = "Vote pour soi"
 L["self_vote_desc"] = "Permet aux votants de voter pour eux."
 L["Send History"] = "Envoyer l'historique"
+--[[Translation missing --]]
+--[[ L["Send to Guild"] = ""--]] 
 L["send_history_desc"] = "Envoyer les données à tous les membres du raid, que vous enregistriez vous-même les données ou non. RCLootCouncil n'enverra de données que si vous êtes le maître du butin."
+--[[Translation missing --]]
+--[[ L["send_to_guild_desc"] = ""--]] 
 --[[Translation missing --]]
 --[[ L["Sending 'type' to 'player'..."] = ""--]] 
 L["Sent whisper help to 'player'"] = "Chuchotement d'aide envoyé à %s"
@@ -617,6 +659,8 @@ L["Unable to give out loot without the loot window open."] = "Impossible d'attri
 L["Unguilded"] = "Sans guilde"
 L["Unknown date"] = "Date inconnue"
 L["Unknown/Chest"] = "Inconnu / Plastron"
+--[[Translation missing --]]
+--[[ L["Unlooted"] = ""--]] 
 L["Unvote"] = "Annuler"
 L["Upper Quality Limit"] = "Seuil supérieur de qualité"
 L["upper_quality_limit_desc"] = [=[Déterminez le seuil supérieur de qualité des objets qui seront automatiquement attribués (cette qualité est comprise).
@@ -635,7 +679,7 @@ L["Voters"] = "Votants"
 L["Votes"] = true
 L["Voting options"] = "Paramètres de vote"
 L["Waiting for response"] = "En attente d'une réponse"
-L["whisper_guide"] = "[RCLootCouncil] : numéro réponse [objet1] [objet2]. Numéro : numéro de l'objet que vous désirez. Réponse : un des mots-clef prédéfinis. Insérez le lien de(s) l'objet(s) en question (numéro) dans la fenêtre de discussion en ajoutant le mot-clef adéquat. Par exemple : en tapant '1 cupidité [objet1]', vous auriez choisi cupidité pour l'objet numéro 1."
+L["whisper_guide"] = "[RCLootCouncil] : numéro réponse [objet1] [objet2]. Insérez le lien de votre(vos) objet(s) que l'item (numéro) remplacerait. (réponse) étant un mot clef de la liste ci-dessous. Par exemple: '1 cupidité [objet1]'"
 L["whisper_guide2"] = "[RCLootCouncil] : vous recevrez un message de confirmation si vous avez été ajouté à la session."
 L["whisper_help"] = [=[Les membres du raid peuvent utiliser le système de chuchotement si un joueur n'a pas installé cet add-on.
 En chuchotant 'rchelp' au maître du butin, ils verront s'afficher un guide en plus d'une liste de mots-clef, qui peuvent être modifiés dans l'onglet 'Boutons et réponses'.

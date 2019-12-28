@@ -1,3 +1,5 @@
+if not WeakAuras.IsCorrectVersion() then return end
+
 -- Lua APIs
 local pairs, type = pairs, type
 local loadstring = loadstring
@@ -243,11 +245,12 @@ local function ConstructTextEditor(frame)
     end
   end);
 
-  function group.Open(self, data, path, enclose, multipath, reloadOptions)
+  function group.Open(self, data, path, enclose, multipath, reloadOptions, setOnParent)
     self.data = data;
     self.path = path;
     self.multipath = multipath;
     self.reloadOptions = reloadOptions;
+    self.setOnParent = setOnParent;
     if(frame.window == "texture") then
       frame.texturePicker:CancelClose();
     elseif(frame.window == "icon") then
@@ -284,26 +287,28 @@ local function ConstructTextEditor(frame)
       end
       self.oldOnTextChanged(...);
     end);
-    if(data.controlledChildren) then
+    if(data.controlledChildren and not setOnParent) then
       local singleText;
       local sameTexts = true;
       local combinedText = "";
       for index, childId in pairs(data.controlledChildren) do
         local childData = WeakAuras.GetData(childId);
         local text = valueFromPath(childData, multipath and path[childId] or path);
-        if not(singleText) then
-          singleText = text;
-        else
-          if not(singleText == text) then
-            sameTexts = false;
+        if text then
+          if not(singleText) then
+            singleText = text;
+          else
+            if not(singleText == text) then
+              sameTexts = false;
+            end
           end
-        end
-        if not(combinedText == "") then
-          combinedText = combinedText.."\n\n";
-        end
+          if not(combinedText == "") then
+            combinedText = combinedText.."\n\n";
+          end
 
-        combinedText = combinedText.. L["-- Do not remove this comment, it is part of this trigger: "] .. childId .. "\n";
-        combinedText = combinedText..(text or "");
+          combinedText = combinedText.. L["-- Do not remove this comment, it is part of this trigger: "] .. childId .. "\n";
+          combinedText = combinedText..(text or "");
+        end
       end
       if(sameTexts) then
         editor:SetText(singleText or "");
@@ -360,7 +365,7 @@ local function ConstructTextEditor(frame)
   end
 
   function group.Close(self)
-    if(self.data.controlledChildren) then
+    if(self.data.controlledChildren and not self.setOnParent) then
       local textById = editor.combinedText and extractTexts(editor:GetText(), self.data.controlledChildren);
       for index, childId in pairs(self.data.controlledChildren) do
         local text = editor.combinedText and (textById[childId] or "") or editor:GetText();

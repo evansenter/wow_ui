@@ -3,8 +3,8 @@
 -- @author Potdisc
 -- Create Date : 1/20/2015 3:48:38 AM
 
-local addon = LibStub("AceAddon-3.0"):GetAddon("RCLootCouncil")
-local RCSessionFrame = addon:NewModule("RCSessionFrame", "AceTimer-3.0")
+local _,addon = ...
+local RCSessionFrame = addon:NewModule("RCSessionFrame", "AceTimer-3.0", "AceEvent-3.0")
 local ST = LibStub("ScrollingTable")
 local L = LibStub("AceLocale-3.0"):GetLocale("RCLootCouncil")
 
@@ -33,13 +33,16 @@ end
 
 function RCSessionFrame:OnEnable()
 	addon:Debug("RCSessionFrame", "enabled")
+	self:RegisterMessage("RCLootStatusReceived", "UpdateLootStatus")
 	ml = addon:GetActiveModule("masterlooter")
 end
 
 function RCSessionFrame:OnDisable()
 	self.frame:Hide()
 	self.frame.rows = {}
+	self:UnregisterMessage("RCLootStatusReceived")
 	awardLater = false
+	addon:DebugLog("RCSessionFrame", "disabled")
 end
 
 function RCSessionFrame:Show(data, disableAwardLater)
@@ -50,6 +53,16 @@ function RCSessionFrame:Show(data, disableAwardLater)
 	self.frame = self:GetFrame()
 	self.frame:Show()
 	scheduledToShowAgain = false
+
+	if disableAwardLater then
+		self.frame.toggle:Disable()
+		getglobal(self.frame.toggle:GetName().."Text"):SetTextColor(0.7, 0.7, 0.7)
+		awardLater = false
+	else
+		awardLater = addon:Getdb().awardLater
+		self.frame.toggle:Enable()
+		getglobal(self.frame.toggle:GetName().."Text"):SetTextColor(1, 1, 1)
+	end
 
 	if data then
 		loadingItems = false
@@ -62,14 +75,6 @@ function RCSessionFrame:Show(data, disableAwardLater)
 		self:ExtractData(data)
 		self.frame.st:SetData(self.frame.rows)
 		self:Update()
-	end
-	if disableAwardLater then
-		self.frame.toggle:Disable()
-		getglobal(self.frame.toggle:GetName().."Text"):SetTextColor(0.7, 0.7, 0.7)
-		awardLater = false
-	else
-		self.frame.toggle:Enable()
-		getglobal(self.frame.toggle:GetName().."Text"):SetTextColor(1, 1, 1)
 	end
 end
 
@@ -113,6 +118,20 @@ function RCSessionFrame:Update()
 	else
 		self.frame.startBtn:SetText(_G.START)
 	end
+end
+
+function RCSessionFrame:UpdateLootStatus ()
+	if not self.frame then return end
+	local status, list = addon:GetLootStatusData()
+	self.frame.lootStatus:SetText(status)
+	self.frame.lootStatus:SetScript("OnEnter", function()
+		GameTooltip:SetOwner(self.frame.lootStatus, "ANCHOR_RIGHT")
+		GameTooltip:AddLine(L["Loot Status"])
+		for _, v in ipairs(list) do
+			GameTooltip:AddDoubleLine(addon:GetUnitClassColoredName(v.name), v.text)
+		end
+		GameTooltip:Show()
+	end)
 end
 
 function RCSessionFrame:DeleteItem(session, row)
@@ -197,7 +216,7 @@ function RCSessionFrame:GetFrame()
 			if not addon.candidates[addon.playerName] or #addon.council == 0 then
 				addon:Print(L["Please wait a few seconds until all data has been synchronized."])
 				return addon:Debug("Data wasn't ready", addon.candidates[addon.playerName], #addon.council)
-			elseif InCombatLockdown() then
+			elseif InCombatLockdown() and not addon.db.profile.skipCombatLockdown then
 				return addon:Print(L["You can't start a loot session while in combat."])
 			--elseif ml.running then
 				--return addon:Print(L["You're already running a session."])
@@ -217,6 +236,16 @@ function RCSessionFrame:GetFrame()
 		self:Disable()
 	end)
 	f.closeBtn = b2
+
+	-- Loot Status
+	f.lootStatus = addon.UI:New("Text", f.content, " ")
+	f.lootStatus:SetTextColor(1,1,1,1) -- White for now
+	f.lootStatus:SetHeight(20)
+	f.lootStatus:SetWidth(75)
+	-- f.lootStatus:SetPoint("BOTTOMRIGHT", f, "BOTTOMRIGHT", -10, 14)
+	f.lootStatus:SetPoint("LEFT", f.closeBtn, "RIGHT", 13, 1)
+	f.lootStatus:SetScript("OnLeave", addon.Utils.HideTooltip)
+	f.lootStatus.text:SetJustifyH("LEFT")
 
 	local st = ST:CreateST(self.scrollCols, 5, ROW_HEIGHT, nil, f.content)
 	st.frame:SetPoint("TOPLEFT",f,"TOPLEFT",10,-20)

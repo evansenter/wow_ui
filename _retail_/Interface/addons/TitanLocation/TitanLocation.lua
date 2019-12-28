@@ -1,7 +1,7 @@
 -- **************************************************************************
 -- * TitanLocation.lua
 -- *
--- * By: TitanMod, Dark Imakuni, Adsertor and the Titan Development Team
+-- * By: TitanMod, Dark Imakuni, Adsertor and the Titan Panel Development Team
 -- **************************************************************************
 
 -- ******************************** Constants *******************************
@@ -68,10 +68,10 @@ end
 -- DESC : Display button when plugin is visible
 -- **************************************************************************
 function TitanPanelLocationButton_OnShow()
-	local mapID = C_Map.GetBestMapForUnit("player");
-	if mapID ~= nil then
-    	WorldMapFrame:SetMapID(mapID);
-	end
+	--local mapID = C_Map.GetBestMapForUnit("player");
+	--if mapID ~= nil then
+    --	WorldMapFrame:SetMapID(mapID);
+	--end
 	TitanPanelLocation_HandleUpdater();
 end
 
@@ -114,6 +114,7 @@ function TitanPanelLocationButton_GetButtonText(id)
 	if (TitanGetVar(TITAN_LOCATION_ID, "ShowZoneText")) then
 		if (TitanUtils_ToString(button.subZoneText) == '') then
 			if (button.zoneText == '') then
+				local _
 				_, _, button.zoneText = C_Map.GetMapInfo(C_Map.GetBestMapUnit("player"));
 			end
 			locationText = TitanUtils_ToString(button.zoneText)..' '..locationText;
@@ -186,17 +187,25 @@ end
 -- **************************************************************************
 function TitanPanelLocationButton_OnEvent(self, event, ...)
 	if event == "PLAYER_ENTERING_WORLD" then
-		TitanPanelLocationButton_LocOnMiniMap()
+		if not TitanGetVar(TITAN_LOCATION_ID, "ShowLocOnMiniMap") and MinimapBorderTop and MinimapBorderTop:IsShown() then
+			TitanPanelLocationButton_LocOnMiniMap()
+		end
 	end
+--[[
 	if TitanGetVar(TITAN_LOCATION_ID, "UpdateWorldmap") then
 		local mapID = C_Map.GetBestMapForUnit("player")
 		if mapID ~= nil then
     		WorldMapFrame:SetMapID(mapID);
 		end
 	end
+--]]
 	TitanPanelLocationButton_UpdateZoneInfo(self);
 	TitanPanelPluginHandle_OnUpdate(updateTable);
 	TitanPanelLocation_HandleUpdater();
+	if TitanGetVar(TITAN_LOCATION_ID, "ShowLocOnMiniMap") and MinimapBorderTop:IsShown() then
+		if not MinimapZoneTextButton:IsShown() then MinimapZoneTextButton:Show() end
+		if not MiniMapWorldMapButton:IsShown() then MiniMapWorldMapButton:Show() end
+	end
 end
 
 -- function to throttle down unnecessary updates
@@ -228,6 +237,7 @@ function TitanPanelLocationButton_OnClick(self, button)
 		if (IsShiftKeyDown()) then
 			local activeWindow = ChatEdit_GetActiveWindow();
 			if ( activeWindow ) then
+				local message;
 				if (TitanGetVar(TITAN_LOCATION_ID, "CoordsFormat1")) then
 					message = TitanUtils_ToString(self.zoneText).." "..
 					format(L["TITAN_LOCATION_FORMAT"], 100 * self.px, 100 * self.py);
@@ -447,6 +457,7 @@ function TitanMapFrame_OnUpdate(self, elapsed)
 
 	-- Determine the text to show for player coords
 
+		local cursorLocationText, playerLocationText;
 		self.px, self.py = TitanPanelGetPlayerMapPosition();
 		if self.px == nil then self.px = 0 end
 		if self.py == nil then self.py = 0 end
@@ -466,7 +477,6 @@ function TitanMapFrame_OnUpdate(self, elapsed)
 	-- Determine the text to show for cursor coords
 
 		-- calc cursor position on the map
-		local cursorLocationText, playerLocationText;
 		local x, y = GetCursorPosition();
 		--[[if WorldMapFrame:IsMaximized() then
 			x, y = WorldMapFrame:GetNormalizedCursorPosition();

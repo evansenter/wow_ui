@@ -18,7 +18,7 @@ local _GetChannelName = GetChannelName --> wow api locals
 local _UnitExists = UnitExists --> wow api locals
 local _UnitName = UnitName --> wow api locals
 local _UnitIsPlayer = UnitIsPlayer --> wow api locals
-local _UnitGroupRolesAssigned = UnitGroupRolesAssigned --> wow api locals
+local _UnitGroupRolesAssigned = DetailsFramework.UnitGroupRolesAssigned --> wow api locals
 
 local _detalhes = 		_G._detalhes
 local gump = 			_detalhes.gump
@@ -329,7 +329,6 @@ end
 			self.sub_atributo_last = table_deepcopy (config.sub_atributo_last)
 			self.isLocked = config.isLocked
 			self.last_raid_plugin = config.last_raid_plugin
-			
 		end
 	end
 
@@ -578,7 +577,7 @@ end
 		end
 		
 		if (not self.iniciada) then
-			self:RestauraJanela (self.meu_id)
+			self:RestauraJanela (self.meu_id) --parece que esta chamando o ativar instance denovo...
 		else
 			_detalhes.opened_windows = _detalhes.opened_windows+1
 		end
@@ -714,7 +713,7 @@ end
 	end
 
 	function _detalhes:CriarInstancia (_, id)
-		
+
 		if (id and _type (id) == "boolean") then
 			
 			if (#_detalhes.tabela_instancias >= _detalhes.instances_amount) then
@@ -1285,19 +1284,6 @@ end
 			
 		--> setup default wallpaper
 			new_instance.wallpaper.texture = "Interface\\AddOns\\Details\\images\\background"
-			--[[ 7.1.5 isn't sending the background on the 5� return value ~cleanup
-			local spec = GetSpecialization()
-			if (spec) then
-				local id, name, description, icon, _background, role = GetSpecializationInfo (spec)
-				if (_background) then
-					local bg = "Interface\\TALENTFRAME\\" .. _background
-					if (new_instance.wallpaper) then
-						new_instance.wallpaper.texture = bg
-						new_instance.wallpaper.texcoord = {0, 1, 0, 0.703125}
-					end
-				end
-			end
-			--]]
 		
 		--> finish
 			return new_instance
@@ -1316,19 +1302,7 @@ end
 			new_instance:ResetInstanceConfig()
 			--> setup default wallpaper
 			new_instance.wallpaper.texture = "Interface\\AddOns\\Details\\images\\background"
-			--[[ 7.1.5 isn't sending the background on the 5� return value ~cleanup
-			local spec = GetSpecialization()
-			if (spec) then
-				local id, name, description, icon, _background, role = GetSpecializationInfo (spec)
-				if (_background) then
-					local bg = "Interface\\TALENTFRAME\\" .. _background
-					if (new_instance.wallpaper) then
-						new_instance.wallpaper.texture = bg
-						new_instance.wallpaper.texcoord = {0, 1, 0, 0.703125}
-					end
-				end
-			end
-			--]]
+
 		--> internal stuff
 			new_instance.barras = {} --container que ir� armazenar todas as barras
 			new_instance.barraS = {nil, nil} --de x at� x s�o as barras que est�o sendo mostradas na tela
@@ -1453,10 +1427,10 @@ end
 --> ao reiniciar o addon esta fun��o � rodada para recriar a janela da inst�ncia
 --> search key: ~restaura ~inicio ~start
 function _detalhes:RestauraJanela (index, temp, load_only)
-		
+
 	--> load
 		self:LoadInstanceConfig()
-		
+
 	--> reset internal stuff
 		self.sub_atributo_last = self.sub_atributo_last or {1, 1, 1, 1, 1}
 		self.rolagem = false
@@ -1476,8 +1450,9 @@ function _detalhes:RestauraJanela (index, temp, load_only)
 		self.last_modo = self.last_modo or modo_grupo
 		self.cached_bar_width = self.cached_bar_width or 0
 		self.row_height = self.row_info.height + self.row_info.space.between
-		
+
 	--> create frames
+		local isLocked = self.isLocked
 		local _baseframe, _bgframe, _bgframe_display, _scrollframe = gump:CriaJanelaPrincipal (self.meu_id, self)
 		self.baseframe = _baseframe
 		self.bgframe = _bgframe
@@ -1486,6 +1461,8 @@ function _detalhes:RestauraJanela (index, temp, load_only)
 		_baseframe:EnableMouseWheel (false)
 		self.alturaAntiga = _baseframe:GetHeight()
 		
+		--self.isLocked = isLocked --window isn't locked when just created it
+
 	--> change the attribute
 		_detalhes:TrocaTabela (self, self.segmento, self.atributo, self.sub_atributo, true) --> passando true no 5� valor para a fun��o ignorar a checagem de valores iguais
 	
@@ -1493,13 +1470,13 @@ function _detalhes:RestauraJanela (index, temp, load_only)
 		if (self.wallpaper.enabled) then
 			self:InstanceWallpaper (true)
 		end
-		
+
 	--> set the color of this instance window
 		self:InstanceColor (self.color)
 		
 	--> scrollbar
 		self:EsconderScrollBar (true)
-	
+
 	--> check snaps
 		self.snap = self.snap or {}
 
@@ -2634,6 +2611,9 @@ end
 function _detalhes:ChangeIcon (icon)
 	
 	local skin = _detalhes.skins [self.skin]
+	if (not skin) then
+		skin = _detalhes.skins [_detalhes.default_skin_to_use]
+	end
 	
 	if (not self.hide_icon) then
 		if (skin.icon_on_top) then
@@ -2700,6 +2680,15 @@ function _detalhes:ChangeIcon (icon)
 			self.baseframe.cabecalho.atributo_icon:ClearAllPoints()
 			if (self.menu_attribute_string) then
 				self.baseframe.cabecalho.atributo_icon:SetPoint ("right", self.menu_attribute_string.widget, "left", -4, -1)
+			end
+			
+			if (skin.attribute_icon_anchor) then
+				self.baseframe.cabecalho.atributo_icon:ClearAllPoints()
+				self.baseframe.cabecalho.atributo_icon:SetPoint ("topleft", self.baseframe.cabecalho.ball_point, "topleft", skin.attribute_icon_anchor[1], skin.attribute_icon_anchor[2])
+			end
+			
+			if (skin.attribute_icon_size) then
+				self.baseframe.cabecalho.atributo_icon:SetSize (unpack (skin.attribute_icon_size))
 			end
 
 		--	local icon_anchor = skin.icon_anchor_main
@@ -3531,3 +3520,5 @@ function _detalhes:envia_relatorio (linhas, custom)
 	end
 	
 end
+
+-- enda elsef

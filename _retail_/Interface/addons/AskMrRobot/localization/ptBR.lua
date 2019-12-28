@@ -71,7 +71,10 @@ L.StatsShort = {
 }
 
 L.InstanceNames = {
-	[1861] = "Uldir"
+    [1861] = "Uldir",
+    [2070] = "Dazar'alor",
+    [2096] = "Crucible of Storms",
+    [2164] = "The Eternal Palace"
 }
 
 L.DifficultyNames = {
@@ -161,6 +164,7 @@ L.GearBlank2 = "Vá para askmrrobot.com para otimizar seu equipamento, então us
 L.GearButtonEquip = function(spec)
 	return string.format("Ativar Spec %s e Usar Equipamento", spec)
 end
+L.GearButtonJunk = "Mostrar Lista de Junk"
 L.GearButtonShop = "Mostrar Lista de Compras"
 
 L.GearEquipErrorCombat = "Impossível trocar spec/equipamento em combate!"
@@ -207,6 +211,25 @@ L.ImportErrorFaction = "Parece que sua facção mudou. Por favor vá ao website 
 L.ImportErrorLevel = "Parece que seu nível mudou. Por favor vá ao website e otimize novamente."
 
 L.ImportOverwolfWait = "Executando otimização Melhor nas Bolsas. Por favor não aperte ESC ou feche o addon até que ele tenha completado!"
+
+
+--[[----------------------------------------------------------------------
+Junk List
+------------------------------------------------------------------------]]
+L.JunkTitle = "Junk List"
+L.JunkEmpty = "You have no junk items"
+L.JunkScrap = "Click an item to add to the scrapper"
+L.JunkVendor = "Click an item to sell"
+L.JunkDisenchant = "Click an item to disenchant"
+L.JunkBankText = function(count)
+	return count .. " junk items are not in your bags"
+end
+L.JunkMissingText = function(count)
+    return "Warning! " .. count .. " junk items could not be found"
+end
+L.JunkButtonBank = "Retrieve from Bank"
+L.JunkOutOfSync = "An item in your junk list could not be found. Try opening your bank for a few seconds, then export to the website, then import again."
+L.JunkItemNotFound = "That item could not be found in your bags. Try closing and opening the Junk List to refresh it."
 
 
 --[[----------------------------------------------------------------------
@@ -279,6 +302,9 @@ L.OptionsHideMinimapDesc = "O ícone do minimapa é apenas para conveniência. T
 
 L.OptionsAutoGearName = "Trocar equipamento automaticamente ao trocar de spec"
 L.OptionsAutoGearDesc = "Sempre que trocar a spec (via UI no jogo, outro addon, etc.), suas listas de equipamentos importadas (na guia Equipamento) serão equipadas automaticamente."
+
+L.OptionsJunkVendorName = "Automatically show junk list at vendors and scrapper"
+L.OptionsJunkVendorDesc = "Whenever you open the scrapper or a vendor, automatically show the junk list window if your list is not empty."
 
 L.OptionsShopAhName = "Mostrar automaticamente a lista de compras na casa de leilões"
 L.OptionsShopAhDesc = "Sempre que você abrir a casa de leilões, automaticamente será mostrada a janela da lista de compras. Você pode clicar nos itens da lista de compras para procurar rapidamente por eles na casa de leilões."

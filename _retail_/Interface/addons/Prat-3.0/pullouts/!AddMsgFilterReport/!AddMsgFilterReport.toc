@@ -1,4 +1,4 @@
-## Interface: 80100
+﻿## Interface: 80205
 ## Author: Sylvanaar
 ## X-License: GPLv3
 

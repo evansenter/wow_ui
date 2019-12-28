@@ -10,10 +10,14 @@ BINDING_HEADER_AngryAssign = "Angry Assignments"
 BINDING_NAME_AngryAssign_WINDOW = "Toggle Window"
 BINDING_NAME_AngryAssign_LOCK = "Toggle Lock"
 BINDING_NAME_AngryAssign_DISPLAY = "Toggle Display"
+BINDING_NAME_AngryAssign_SHOW_DISPLAY = "Show Display"
+BINDING_NAME_AngryAssign_HIDE_DISPLAY = "Hide Display"
 BINDING_NAME_AngryAssign_OUTPUT = "Output Assignment to Chat"
 
-local AngryAssign_Version = 'v1.11.4'
-local AngryAssign_Timestamp = '20181117155158'
+local AngryAssign_Version = 'v1.12.1'
+local AngryAssign_Timestamp = '20191117163742'
+
+local isClassic = (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC)
 
 local protocolVersion = 1
 local comPrefix = "AnAss"..protocolVersion
@@ -168,9 +172,9 @@ function AngryAssign:SendOutMessage(data, channel, target)
 	if not channel then
 		if IsInGroup(LE_PARTY_CATEGORY_INSTANCE) or IsInRaid(LE_PARTY_CATEGORY_INSTANCE) then
 			channel = "INSTANCE_CHAT"
-		elseif IsInRaid() then
+		elseif IsInRaid(LE_PARTY_CATEGORY_HOME) then
 			channel = "RAID"
-		elseif IsInGroup() then
+		elseif IsInGroup(LE_PARTY_CATEGORY_HOME) then
 			channel = "PARTY"
 		end
 	end
@@ -863,6 +867,7 @@ function AngryAssign:CreateWindow()
 	window.frame:SetMinResize(700, 400)
 	window.frame:SetFrameStrata("HIGH")
 	window.frame:SetFrameLevel(1)
+	window.frame:SetClampedToScreen(true)
 	tinsert(UISpecialFrames, "AngryAssign_Window")
 
 	local tree = AceGUI:Create("AngryTreeGroup")
@@ -1449,13 +1454,15 @@ end
 function AngryAssign:UpdateOfficerRank()
 	guildOfficerNames = {}
 
-	local clubId, streamId = C_Club.GetGuildClubId(), nil
-	local memberIds = CommunitiesUtil.GetMemberIdsSortedByName(clubId, streamId)
-	local allMemberList = CommunitiesUtil.GetMemberInfo(clubId, memberIds)
+	if C_Club and C_Club.GetGuildClubId then
+		local clubId, streamId = C_Club.GetGuildClubId(), nil
+		local memberIds = CommunitiesUtil.GetMemberIdsSortedByName(clubId, streamId)
+		local allMemberList = CommunitiesUtil.GetMemberInfo(clubId, memberIds)
 
-	for _, memberInfo in ipairs(allMemberList) do
-		if memberInfo.name and (memberInfo.role == Enum.ClubRoleIdentifier.Owner or memberInfo.role == Enum.ClubRoleIdentifier.Leader or memberInfo.role == Enum.ClubRoleIdentifier.Moderator) then
-			guildOfficerNames[EnsureUnitFullName(memberInfo.name)] = true
+		for _, memberInfo in ipairs(allMemberList) do
+			if memberInfo.name and (memberInfo.role == Enum.ClubRoleIdentifier.Owner or memberInfo.role == Enum.ClubRoleIdentifier.Leader or memberInfo.role == Enum.ClubRoleIdentifier.Moderator) then
+				guildOfficerNames[EnsureUnitFullName(memberInfo.name)] = true
+			end
 		end
 	end
 
@@ -1559,6 +1566,14 @@ end
 
 function AngryAssign_ToggleDisplay()
 	AngryAssign:ToggleDisplay()
+end
+
+function AngryAssign_ShowDisplay()
+	AngryAssign:ShowDisplay()
+end
+
+function AngryAssign_HideDisplay()
+	AngryAssign:HideDisplay()
 end
 
 function AngryAssign:ShowDisplay()
@@ -1903,7 +1918,7 @@ function AngryAssign:UpdateDisplayed()
 				return select(5, EJ_GetEncounterInfo(id))
 			end)
 			:gsub(ci_pattern('{journal%s+(%d+)}'), function(id)
-				return select(9, EJ_GetSectionInfo(id))
+				return C_EncounterJournal.GetSectionInfo(id) and C_EncounterJournal.GetSectionInfo(id).link
 			end)
 			:gsub(ci_pattern('{star}'), "{rt1}")
 			:gsub(ci_pattern('{circle}'), "{rt2}")
@@ -1971,7 +1986,7 @@ function AngryAssign:OutputDisplayed(id)
 	if not id then id = AngryAssign_State.displayed end
 	local page = AngryAssign_Pages[ id ]
 	local channel
-	if IsInGroup(LE_PARTY_CATEGORY_INSTANCE) or IsInRaid(LE_PARTY_CATEGORY_INSTANCE) then
+	if not isClassic and (IsInGroup(LE_PARTY_CATEGORY_INSTANCE) or IsInRaid(LE_PARTY_CATEGORY_INSTANCE)) then
 		channel = "INSTANCE_CHAT"
 	elseif IsInRaid() then
 		channel = "RAID"
@@ -2010,7 +2025,7 @@ function AngryAssign:OutputDisplayed(id)
 				return select(5, EJ_GetEncounterInfo(id))
 			end)
 			:gsub(ci_pattern('{journal%s+(%d+)}'), function(id)
-				return select(9, EJ_GetSectionInfo(id))
+				return C_EncounterJournal.GetSectionInfo(id) and C_EncounterJournal.GetSectionInfo(id).link
 			end)
 			:gsub(ci_pattern('{star}'), "{rt1}")
 			:gsub(ci_pattern('{circle}'), "{rt2}")
@@ -2526,7 +2541,7 @@ end
 
 function AngryAssign:PARTY_LEADER_CHANGED()
 	self:PermissionsUpdated()
-	if AngryAssign_State.displayed and not self:IsGuildRaid() then self:ClearDisplayed() end
+	if AngryAssign_State.displayed and not (self:IsGuildRaid() or self:IsValidRaid()) then self:ClearDisplayed() end
 end
 
 function AngryAssign:PARTY_CONVERTED_TO_RAID()
@@ -2565,10 +2580,10 @@ end
 
 function AngryAssign:GUILD_ROSTER_UPDATE(...)
 	local canRequestRosterUpdate = ...
+	self:ResetOfficerRank()
 	if canRequestRosterUpdate then
 		GuildRoster()
 	end
-	self:ResetOfficerRank()
 end
 
 function AngryAssign:AfterEnable()

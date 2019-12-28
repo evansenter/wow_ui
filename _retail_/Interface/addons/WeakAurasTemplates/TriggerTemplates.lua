@@ -1,3 +1,5 @@
+if WeakAuras.IsClassic() then return end
+
 -- Special layout for the New Aura Trigger template page
 
 local AceGUI = LibStub("AceGUI-3.0");
@@ -101,6 +103,10 @@ local checks = {
     variable = "buffed",
     value = 0,
   },
+  duration = {
+    variable = "show",
+    value = 1,
+  },
   onCooldown = {
     variable = "onCooldown",
     value = 1,
@@ -182,6 +188,16 @@ local function isBuffedGlow(conditions, trigger, regionType)
   end
 end
 
+local function isDurationGlow(conditions, trigger, regionType)
+  if regionType == "icon" then
+    tinsert(conditions, buildCondition(trigger, checks.duration, {changes("inverse", regionType), changes("glow", regionType), changes("white", regionType)}));
+  elseif regionType == "aurabar" or regionType == "progresstexture" then
+    tinsert(conditions, buildCondition(trigger, checks.duration, {changes("inverse", regionType), changes("yellow", regionType)}));
+  else
+    tinsert(conditions, buildCondition(trigger, checks.duration, {changes("yellow", regionType)}));
+  end
+end
+
 local function isBuffedGlowAuraAlways(conditions, trigger, regionType)
   if regionType == "icon" then
     tinsert(conditions, buildCondition(trigger, checks.buffedAuraAlways, {changes("inverse", regionType), changes("glow", regionType), changes("white", regionType)}));
@@ -239,8 +255,19 @@ local function createBuffTrigger(triggers, position, item, buffShowOn, isBuff)
       unitExists = false,
     }
   };
+
+  if triggers[position].trigger.unit == "multi" and buffShowOn == "showOnActive"  then
+    local trigger = triggers[position].trigger
+    trigger.useGroup_count = true
+    trigger.group_countOperator =  ">="
+    trigger.group_count = "1"
+  end
+
   if (item.spellIds) then
-    WeakAuras.DeepCopy(item.spellIds, triggers[position].trigger.spellIds);
+    triggers[position].trigger.auranames = {}
+    for index, spell in ipairs(item.spellIds) do
+      triggers[position].trigger.auranames[index] = tostring(spell)
+    end
   end
   if (item.fullscan) then
     triggers[position].trigger.use_spellId = true;
@@ -253,6 +280,22 @@ local function createBuffTrigger(triggers, position, item, buffShowOn, isBuff)
   if (item.unit == "multi") then
     triggers[position].trigger.spellId = item.buffId or item.spell;
   end
+end
+
+local function createDurationTrigger(triggers, position, item)
+  triggers[position] = {
+    trigger = {
+      type = "event",
+      event = "Combat Log",
+      subeventSuffix = "_CAST_SUCCESS",
+      use_sourceUnit = true,
+      sourceUnit = item.unit or "player",
+      use_spellId = true,
+      spellId = tostring(item.spell),
+      unevent = "timed",
+      duration = tostring(item.duration),
+    }
+  };
 end
 
 local function createTotemTrigger(triggers, position, item)
@@ -347,6 +390,11 @@ local function createOverlayGlowTrigger(triggers, position, item)
       spellName = item.spell,
     }
   };
+end
+
+local function createAbilityAndDurationTrigger(triggers, item)
+  createDurationTrigger(triggers, 1, item);
+  createAbilityTrigger(triggers, 2, item, "showAlways");
 end
 
 local function createAbilityAndBuffTrigger(triggers, item)
@@ -458,7 +506,20 @@ local function subTypesFor(item, regionType)
         end,
         data = { cooldownSwipe = false, cooldownEdge = true },
       });
-      if (item.buff) then
+      if (item.duration) then
+        tinsert(types, {
+          icon = icon.glow,
+          title = L["Charge and Duration Tracking"],
+          description = L["Tracks the charge and the duration of spell, highlight while the spell is active, blue on insufficient resources."],
+          createTriggers = createAbilityAndDurationTrigger,
+          createConditions = function(conditions, item, regionType)
+            insufficientResourcesBlue(conditions, 2, regionType);
+            hasChargesGrey(conditions, 2, regionType);
+            isDurationGlow(conditions, 1, regionType);
+          end,
+          data = { cooldownSwipe = false, cooldownEdge = true },
+        });
+      elseif (item.buff) then
         tinsert(types, {
           icon = icon.glow,
           title = L["Charge and Buff Tracking"],
@@ -589,7 +650,47 @@ local function subTypesFor(item, regionType)
           isOnCdGrey(conditions, 1, regionType);
         end,
       });
-      if (item.buff) then
+      if (item.duration) then
+        tinsert(types, {
+          icon = icon.glow,
+          title = L["Show Cooldown and Duration"],
+          description = L["Highlight while spell is active."],
+          createTriggers = createAbilityAndDurationTrigger,
+          createConditions = function(conditions, item, regionType)
+            insufficientResourcesBlue(conditions, 2, regionType);
+            isOnCdGrey(conditions, 2, regionType);
+            isDurationGlow(conditions, 1, regionType);
+          end,
+          data = { cooldownSwipe = false, cooldownEdge = true },
+        });
+        if (item.usable) then
+          tinsert(types, {
+            icon = icon.glow,
+            title = L["Show Cooldown and Duration and Check Usable"],
+            description = L["Highlight while active."],
+            createTriggers = createAbilityAndDurationTrigger,
+            createConditions = function(conditions, item, regionType)
+              isNotUsableBlue(conditions, 2, regionType);
+              isOnCdGrey(conditions, 2, regionType);
+              isDurationGlow(conditions, 1, regionType);
+            end,
+          });
+        end
+        if (item.requiresTarget) then
+          tinsert(types, {
+            icon = icon.target,
+            title = L["Show Cooldown and Duration and Check for Target"],
+            description = L["Highlight while active, red when out of range."],
+            createTriggers = createAbilityAndDurationTrigger,
+            createConditions = function(conditions, item, regionType)
+              insufficientResourcesBlue(conditions, 2, regionType);
+              isOnCdGrey(conditions, 2, regionType);
+              isSpellNotInRangeRed(conditions, 2, regionType);
+              isDurationGlow(conditions, 1, regionType);
+            end,
+          });
+        end
+      elseif (item.buff) then
         tinsert(types, {
           icon = icon.glow,
           title = L["Show Cooldown and Buff"],
@@ -1223,7 +1324,7 @@ function WeakAuras.CreateTemplateView(frame)
     group:SetFullWidth(true);
     local subTypes = subTypesFor(item, newView.data.regionType);
     local subTypesButtons = {}
-    local firstButton = true;
+    local lastButton
     for k, subType in pairs(subTypes) do
       local button = AceGUI:Create("WeakAurasNewButton");
       subTypesButtons[k] = button;
@@ -1266,10 +1367,13 @@ function WeakAuras.CreateTemplateView(frame)
           WeakAuras.NewAura(newView.data, newView.data.regionType, newView.targetId);
         end
       end);
-      if newView.batchStep and firstButton then
+      if newView.batchStep then
         button.frame:LockHighlight();
         newView.choosenItemBatchSubType[item] = subType;
-        firstButton = false;
+        if lastButton then
+          lastButton.frame:UnlockHighlight();
+        end
+        lastButton = button
       end
       group:AddChild(button);
     end
@@ -1297,7 +1401,9 @@ function WeakAuras.CreateTemplateView(frame)
   -- Creates a button + flyout (if the button is selected) for one section
   local function createTriggerButtons(templates, selectedItem, fullWidth)
     for k, section in ipairs(templates) do
-      createTriggerButton(section, selectedItem, fullWidth);
+      if section.args and next(section.args) then
+        createTriggerButton(section, selectedItem, fullWidth);
+      end
     end
   end
 
@@ -1437,10 +1543,11 @@ function WeakAuras.CreateTemplateView(frame)
       local classSelector = createDropdown("class", WeakAuras.class_types);
       newViewScroll:AddChild(classSelector);
 
-      local specSelector = createDropdown("spec", WeakAuras.spec_types_specific[newView.class]);
-      newViewScroll:AddChild(specSelector);
-      newViewScroll:AddChild(createSpacer());
-
+      if not WeakAuras.IsClassic() then
+        local specSelector = createDropdown("spec", WeakAuras.spec_types_specific[newView.class]);
+        newViewScroll:AddChild(specSelector);
+        newViewScroll:AddChild(createSpacer());
+      end
       if (WeakAuras.triggerTemplates.class[newView.class] and WeakAuras.triggerTemplates.class[newView.class][newView.spec]) then
         createTriggerButtons(WeakAuras.triggerTemplates.class[newView.class][newView.spec], selectedItem);
       end
@@ -1451,20 +1558,22 @@ function WeakAuras.CreateTemplateView(frame)
       createTriggerButton(WeakAuras.triggerTemplates.general, selectedItem);
 
       -- Items
-      local itemHeader = AceGUI:Create("Heading");
-      itemHeader:SetFullWidth(true);
-      newViewScroll:AddChild(itemHeader);
-      local itemTypes = {};
-      for _, section in pairs(WeakAuras.triggerTemplates.items) do
-        tinsert(itemTypes, section.title);
-      end
-      newView.item = newView.item or 1;
-      local itemSelector = createDropdown("item", itemTypes);
-      newViewScroll:AddChild(itemSelector);
-      newViewScroll:AddChild(createSpacer());
-      if (WeakAuras.triggerTemplates.items[newView.item]) then
-        local group = createTriggerFlyout(WeakAuras.triggerTemplates.items[newView.item].args, true);
-        newViewScroll:AddChild(group);
+      if not WeakAuras.IsClassic() then
+        local itemHeader = AceGUI:Create("Heading");
+        itemHeader:SetFullWidth(true);
+        newViewScroll:AddChild(itemHeader);
+        local itemTypes = {};
+        for _, section in pairs(WeakAuras.triggerTemplates.items) do
+          tinsert(itemTypes, section.title);
+        end
+        newView.item = newView.item or 1;
+        local itemSelector = createDropdown("item", itemTypes);
+        newViewScroll:AddChild(itemSelector);
+        newViewScroll:AddChild(createSpacer());
+        if (WeakAuras.triggerTemplates.items[newView.item]) then
+          local group = createTriggerFlyout(WeakAuras.triggerTemplates.items[newView.item].args, true);
+          newViewScroll:AddChild(group);
+        end
       end
 
       -- Race
@@ -1509,7 +1618,7 @@ function WeakAuras.CreateTemplateView(frame)
   local batchModeLabelString = batchModeLabel:CreateFontString(nil, "ARTWORK");
   batchModeLabelString:SetFont(STANDARD_TEXT_FONT, 10); -- "OUTLINE"
   batchModeLabelString:SetTextColor(1,1,1,1);
-  batchModeLabelString:SetText(WeakAuras.newFeatureString .. L["Hold CTRL to create multiple auras at once"]);
+  batchModeLabelString:SetText(L["Hold CTRL to create multiple auras at once"]);
   batchModeLabelString:SetJustifyH("LEFT")
   batchModeLabelString:SetAllPoints(batchModeLabel);
   batchModeLabel:SetPoint("BOTTOMLEFT", 10, -23);
@@ -1622,8 +1731,13 @@ function WeakAuras.CreateTemplateView(frame)
       newView.choosenItemBatch = {};
     end
     newView.class = select(2, UnitClass("player"));
-    newView.spec = GetSpecialization() or 1;
+    if not WeakAuras.IsClassic() then
+      newView.spec = GetSpecialization() or 1;
+    else
+      newView.spec = "classic"
+    end
     newView.race = select(2, UnitRace('player'));
+
     createButtons();
   end
 

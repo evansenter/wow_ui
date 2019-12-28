@@ -1,3 +1,40 @@
+## v1.12.1
+
+* Classic bug fix
+
+## v1.12.0
+
+* Small classic bugfix, more to come
+
+## v1.11.10
+
+* ToC version bump
+
+## v1.11.9
+
+* Bug fixes
+
+## v1.11.8
+
+* Bug fixes
+
+## v1.11.7
+
+* Added new keybinds to hide/show assignment display
+
+## v1.11.6
+
+* Prevent assignment editor from being dragged offscreen
+
+## v1.11.5
+
+* Small bugfix with for {journal } substitutions
+
+## v1.11.4
+
+* ToC Bump
+* Small bug fixes
+
 ## v1.11.3
 
 * Small bug fixes

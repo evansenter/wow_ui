@@ -304,6 +304,7 @@ TitanSkinsCustomPath = TitanSkinsDefaultPath.."Custom\\"
 TitanSkinsPathEnd = "\\"
 TitanSkinsDefault = {
 	{ name = "Titan Default", titan=true, path = TitanSkinsDefaultPath},
+	{ name = "AllBlack", titan=true, path = TitanSkinsCustomPath.."AllBlack Skin"..TitanSkinsPathEnd},
 	{ name = "BlackPlusOne", titan=true, path = TitanSkinsCustomPath.."BlackPlusOne Skin"..TitanSkinsPathEnd},
 	{ name = "Christmas", titan=true, path = TitanSkinsCustomPath.."Christmas Skin"..TitanSkinsPathEnd},
 	{ name = "Charcoal Metal", titan=true, path = TitanSkinsCustomPath.."Charcoal Metal"..TitanSkinsPathEnd},

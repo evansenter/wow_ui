@@ -92,9 +92,9 @@ TwintopInsanityBarSettings = {
 		["alwaysShow"] = false,
 		["notZeroShow"] = true,
 	},
-	["showS2MSummary"] = true,
 	["version"] = 1,
 	["showSummary"] = false,
+	["showS2MSummary"] = true,
 	["summary"] = {
 		["show"] = false,
 		["simple"] = false,

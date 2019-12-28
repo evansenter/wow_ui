@@ -27,7 +27,7 @@ InFlightCharDB = {
 	["p"] = "TOP",
 	["confirmflight"] = false,
 	["inline"] = true,
-	["upload"] = 1548649609,
+	["upload"] = 1550020773,
 	["bordercolor"] = {
 		["a"] = 0.8,
 		["b"] = 0.6,
@@ -42,11 +42,11 @@ InFlightCharDB = {
 	},
 	["width"] = 230,
 	["y"] = -281,
-	["font"] = "ABF",
-	["dbinit"] = 806,
 	["x"] = 1,
-	["height"] = 14,
+	["dbinit"] = 806,
 	["chatlog"] = true,
+	["height"] = 14,
+	["font"] = "ABF",
 	["totext"] = "-->",
 	["rp"] = "TOP",
 }

@@ -1,15 +1,6 @@
-local folder,ns = ...
 local opt = KuiNameplatesCoreConfig
 local LSM = LibStub('LibSharedMedia-3.0')
 local L = opt:GetLocale()
-
-local version = opt:CreateFontString(nil, 'ARTWORK', 'GameFontHighlight')
-version:SetTextColor(.5,.5,.5)
-version:SetPoint('TOPRIGHT',-12,-10)
-version:SetText(string.format(
-    L.titles.version,
-    'KuiNameplates','Kesava','2.19'
-))
 
 opt:Initialise()
 -- create pages ################################################################
@@ -26,8 +17,7 @@ local classpowers = opt:CreateConfigPage('classpowers')
 local bossmod     = opt:CreateConfigPage('bossmod')
 local cvars       = opt:CreateConfigPage('cvars')
 
--- show inital page
-opt.pages[1]:ShowPage()
+opt:ShowPage(1)
 
 -- create elements #############################################################
 -- general #####################################################################
@@ -217,7 +207,7 @@ function healthbars:Initialise()
 
     function bar_texture:initialize()
         local list = {}
-        for k,f in ipairs(LSM:List(LSM.MediaType.STATUSBAR)) do
+        for _,f in ipairs(LSM:List(LSM.MediaType.STATUSBAR)) do
             tinsert(list,{
                 text = f,
                 value = f,
@@ -345,7 +335,7 @@ function text:Initialise()
 
     function font_face:initialize()
         local list = {}
-        for k,f in ipairs(LSM:List(LSM.MediaType.FONT)) do
+        for _,f in ipairs(LSM:List(LSM.MediaType.FONT)) do
             tinsert(list,{
                 text = f,
                 value = f,
@@ -423,7 +413,7 @@ function nameonly:Initialise()
     nameonly_all_enemies.enabled = function(p)
         return p.nameonly and p.nameonly_enemies
     end
-    nameonly_damaged_enemies.enabled = function(p) 
+    nameonly_damaged_enemies.enabled = function(p)
         return p.nameonly and (p.nameonly_neutral or p.nameonly_enemies or p.nameonly_hostile_players)
     end
     nameonly_combat_hostile.enabled = nameonly_damaged_enemies.enabled
@@ -548,7 +538,7 @@ function auras:Initialise()
     local auras_count_offset_x = self:CreateSlider('auras_count_offset_x',-20,20,nil,'offset_x')
     local auras_count_offset_y = self:CreateSlider('auras_count_offset_y',-20,20,nil,'offset_y')
 
-    local point_x_SelectTable = { 'LEFT', 'CENTER', 'RIGHT' }
+    local point_x_SelectTable = { 'LEFT', 'CENTER', 'RIGHT' } -- TODO l10n?
     local point_y_SelectTable = { 'TOP', 'CENTER', 'BOTTOM' }
 
     auras_cd_point_x.SelectTable = point_x_SelectTable
@@ -597,17 +587,27 @@ function castbars:Initialise()
     local castbar_all = self:CreateCheckBox('castbar_showall')
     local castbar_friend = self:CreateCheckBox('castbar_showfriend',true)
     local castbar_enemy = self:CreateCheckBox('castbar_showenemy',true)
-    local castbar_height = self:CreateSlider('castbar_height',3,20)
-    local name_v_offset = self:CreateSlider('castbar_name_vertical_offset',-20,20)
     local animate = self:CreateCheckBox('castbar_animate')
     local animate_cc = self:CreateCheckBox('castbar_animate_change_colour',true)
 
+    local castbar_layout_sep = self:CreateSeparator('castbar_layout_sep','layout')
+    local castbar_height = self:CreateSlider('castbar_height',3,30)
+    local name_v_offset = self:CreateSlider('castbar_name_vertical_offset',-20,20)
+    local castbar_detach = self:CreateCheckBox('castbar_detach')
+    local castbar_detach_width = self:CreateSlider('castbar_detach_width',6,200,nil,'width')
+    local castbar_detach_height = self:CreateSlider('castbar_detach_height',3,50,nil,'height')
+    local castbar_detach_offset = self:CreateSlider('castbar_detach_offset',1,20,nil,'offset')
+    local castbar_detach_combine = self:CreateCheckBox('castbar_detach_combine',true)
+    local castbar_icon_side = self:CreateDropDown('castbar_icon_side')
+    castbar_icon_side.SelectTable = { 'Left','Right' } -- TODO l10n
+
     castbar_enable:SetPoint('TOPLEFT',10,-10)
-    castbar_icon:SetPoint('TOPLEFT',castbar_enable,'BOTTOMLEFT')
-    castbar_name:SetPoint('TOPLEFT',castbar_icon,'BOTTOMLEFT')
+    castbar_name:SetPoint('TOPLEFT',castbar_enable,'BOTTOMLEFT')
     castbar_shield:SetPoint('TOPLEFT',castbar_name,'BOTTOMLEFT')
 
-    castbar_personal:SetPoint('TOPLEFT',castbar_shield,'BOTTOMLEFT',0,-10)
+    castbar_icon:SetPoint('TOPLEFT',castbar_shield,'BOTTOMLEFT',0,0)
+
+    castbar_personal:SetPoint('TOPLEFT',castbar_icon,'BOTTOMLEFT',0,-10)
     castbar_all:SetPoint('TOPLEFT',castbar_personal,'BOTTOMLEFT')
     castbar_friend:SetPoint('TOPLEFT',castbar_all,'BOTTOMLEFT',10,0)
     castbar_enemy:SetPoint('TOPLEFT',castbar_friend,'BOTTOMLEFT')
@@ -616,24 +616,47 @@ function castbars:Initialise()
     animate_cc:SetPoint('TOPLEFT',animate,'BOTTOMLEFT',10,0)
 
     castbar_colour:SetPoint('LEFT',castbar_enable,220,0)
-    castbar_unin_colour:SetPoint('LEFT',castbar_icon,220,0)
+    castbar_unin_colour:SetPoint('LEFT',castbar_name,220,0)
 
-    castbar_height:SetPoint('TOP',0,-260)
-    name_v_offset:SetPoint('TOP',castbar_height,'BOTTOM',0,-40)
+    castbar_detach_width:SetWidth(120)
+    castbar_detach_height:SetWidth(120)
+    castbar_detach_offset:SetWidth(120)
+
+    castbar_layout_sep:SetPoint('TOP',0,-260)
+    castbar_detach:SetPoint('TOPLEFT',10,-260-15)
+    castbar_detach_combine:SetPoint('TOPLEFT',castbar_detach,'BOTTOMLEFT',10,0)
+    castbar_icon_side:SetPoint('LEFT',castbar_detach,'RIGHT',170,-8)
+    castbar_detach_width:SetPoint('TOPLEFT',castbar_detach,'BOTTOMLEFT',0,-50)
+    castbar_detach_height:SetPoint('LEFT',castbar_detach_width,'RIGHT',22,0)
+    castbar_detach_offset:SetPoint('LEFT',castbar_detach_height,'RIGHT',22,0)
+
+    castbar_height:SetPoint('TOPLEFT',castbar_detach_width,'BOTTOMLEFT',0,-40)
+    name_v_offset:SetPoint('LEFT',castbar_height,'RIGHT',20,0)
 
     castbar_colour.enabled = function(p) return p.castbar_enable end
     castbar_unin_colour.enabled = castbar_colour.enabled
     castbar_personal.enabled = castbar_colour.enabled
     castbar_icon.enabled = castbar_colour.enabled
+    castbar_icon_side.enabled = function(p)
+        return p.castbar_icon and (not p.castbar_detach or not p.castbar_detach_combine)
+    end
     castbar_name.enabled = castbar_colour.enabled
     castbar_shield.enabled = castbar_colour.enabled
     castbar_all.enabled = castbar_colour.enabled
-    castbar_height.enabled = castbar_colour.enabled
+    castbar_height.enabled = function(p) return p.castbar_enable and not p.castbar_detach end
     castbar_friend.enabled = function(p) return p.castbar_enable and p.castbar_showall end
     castbar_enemy.enabled = castbar_friend.enabled
     name_v_offset.enabled = function(p) return p.castbar_enable and p.castbar_name end
     animate.enabled = castbar_colour.enabled
     animate_cc.enabled = function(p) return p.castbar_animate and p.castbar_enable end
+
+    castbar_detach.enabled = castbar_colour.enabled
+    castbar_detach_width.enabled = function(p) return p.castbar_enable and p.castbar_detach end
+    castbar_detach_height.enabled = castbar_detach_width.enabled
+    castbar_detach_offset.enabled = castbar_detach_width.enabled
+    castbar_detach_combine.enabled = function(p)
+        return p.castbar_enable and p.castbar_detach and p.castbar_icon
+    end
 end
 -- threat ######################################################################
 function threat:Initialise()
@@ -641,11 +664,14 @@ function threat:Initialise()
     local tankmode_force_enable = self:CreateCheckBox('tankmode_force_enable',true)
     local tankmode_force_offtank = self:CreateCheckBox('tankmode_force_offtank',true)
     local threatbracketsCheck = self:CreateCheckBox('threat_brackets')
+    local frame_glow_threat = self:CreateCheckBox('frame_glow_threat')
     local tankmode_colour_sep = self:CreateSeparator('tankmode_colour_sep')
     local tankmode_tank_colour = self:CreateColourPicker('tankmode_tank_colour')
     local tankmode_trans_colour = self:CreateColourPicker('tankmode_trans_colour')
     local tankmode_other_colour = self:CreateColourPicker('tankmode_other_colour')
-    local frame_glow_threat = self:CreateCheckBox('frame_glow_threat')
+    local tankmode_glow_colour_sep = self:CreateSeparator('tankmode_glow_colour_sep')
+    local tankmode_tank_glow_colour = self:CreateColourPicker('tankmode_tank_glow_colour')
+    local tankmode_trans_glow_colour = self:CreateColourPicker('tankmode_trans_glow_colour')
 
     tankmode_force_enable.enabled = function(p)
         return p.tank_mode
@@ -658,16 +684,27 @@ function threat:Initialise()
     tankmode_trans_colour.enabled = tankmode_force_enable.enabled
     tankmode_other_colour.enabled = tankmode_force_enable.enabled
 
+    tankmode_tank_glow_colour.enabled = function(p)
+        return p.threat_brackets or p.frame_glow_threat
+    end
+    tankmode_trans_glow_colour.enabled = tankmode_tank_glow_colour.enabled
+
     tankmodeCheck:SetPoint('TOPLEFT',10,-10)
     tankmode_force_enable:SetPoint('TOPLEFT',tankmodeCheck,'BOTTOMLEFT',10,0)
     tankmode_force_offtank:SetPoint('TOPLEFT',tankmode_force_enable,'BOTTOMLEFT')
     threatbracketsCheck:SetPoint('LEFT',tankmodeCheck,'RIGHT',190,0)
     frame_glow_threat:SetPoint('TOPLEFT',threatbracketsCheck,'BOTTOMLEFT')
 
-    tankmode_colour_sep:SetPoint('TOP',0,-110)
-    tankmode_tank_colour:SetPoint('TOPLEFT',15,-130)
-    tankmode_trans_colour:SetPoint('LEFT',tankmode_tank_colour,'RIGHT')
-    tankmode_other_colour:SetPoint('LEFT',tankmode_trans_colour,'RIGHT')
+    tankmode_colour_sep:SetWidth(190)
+    tankmode_colour_sep:SetPoint('TOPLEFT',10,-120)
+    tankmode_tank_colour:SetPoint('TOPLEFT',tankmode_colour_sep,'BOTTOMLEFT',10,-10)
+    tankmode_trans_colour:SetPoint('TOPLEFT',tankmode_tank_colour,'BOTTOMLEFT')
+    tankmode_other_colour:SetPoint('TOPLEFT',tankmode_trans_colour,'BOTTOMLEFT')
+
+    tankmode_glow_colour_sep:SetWidth(190)
+    tankmode_glow_colour_sep:SetPoint('LEFT',tankmode_colour_sep,210,0)
+    tankmode_tank_glow_colour:SetPoint('TOPLEFT',tankmode_glow_colour_sep,'BOTTOMLEFT',10,-10)
+    tankmode_trans_glow_colour:SetPoint('TOPLEFT',tankmode_tank_glow_colour,'BOTTOMLEFT')
 end
 -- classpowers #################################################################
 function classpowers:Initialise()
@@ -761,8 +798,8 @@ function bossmod:Initialise()
     bossmod_control_visibility:SetPoint('TOPLEFT',bossmod_enable,'BOTTOMLEFT',0,-10)
     bossmod_clickthrough:SetPoint('TOPLEFT',bossmod_control_visibility,'BOTTOMLEFT',10,0)
 
-    bossmod_icon_size:SetPoint('TOP',0,-125)
-    bossmod_x_offset:SetPoint('TOPLEFT',10,-(125+60))
+    bossmod_icon_size:SetPoint('TOP',0,-170)
+    bossmod_x_offset:SetPoint('TOPLEFT',10,-(170+50))
     bossmod_y_offset:SetPoint('LEFT',bossmod_x_offset,'RIGHT',20,0)
 end
 -- cvars #######################################################################
@@ -845,5 +882,4 @@ function cvars:Initialise()
     cb:SetPoint('TOPLEFT',ov,'BOTTOMLEFT',0,-35)
     self_clamp_top:SetPoint('TOPLEFT',ct,'BOTTOMLEFT',0,-35)
     self_clamp_bottom:SetPoint('TOPLEFT',cb,'BOTTOMLEFT',0,-35)
-
 end

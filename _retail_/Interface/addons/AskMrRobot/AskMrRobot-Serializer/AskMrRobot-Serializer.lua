@@ -1,6 +1,6 @@
 -- AskMrRobot-Serializer will serialize and communicate character data between users.
 
-local MAJOR, MINOR = "AskMrRobot-Serializer", 71
+local MAJOR, MINOR = "AskMrRobot-Serializer", 80
 local Amr, oldminor = LibStub:NewLibrary(MAJOR, MINOR)
 
 if not Amr then return end -- already loaded by something else
@@ -142,7 +142,9 @@ Amr.RaceIds = {
     ["VoidElf"] = 16,
 	["LightforgedDraenei"] = 17,
 	["DarkIronDwarf"] = 18,
-	["MagharOrc"] = 19
+	["MagharOrc"] = 19,
+	["ZandalariTroll"] = 20,
+	["KulTiran"] = 21
 }
 
 Amr.FactionIds = {
@@ -152,12 +154,18 @@ Amr.FactionIds = {
 }
 
 Amr.InstanceIds = {
-	Uldir = 1861
+	Uldir = 1861,
+	Dazar = 2070,
+	Storms = 2096,
+	Palace = 2164
 }
 
 -- instances that AskMrRobot currently supports logging for
 Amr.SupportedInstanceIds = {
-	[1861] = true
+	[1861] = true,
+	[2070] = true,
+	[2096] = true,
+	[2164] = true
 }
 
 
@@ -486,6 +494,10 @@ function Amr:GetPlayerData()
 	ret.Specs = {}
     ret.Talents = {}
 	readSpecs(ret)
+
+	-- these get updated later, since need to cache info for inactive specs
+	ret.UnlockedEssences = {}
+	ret.Essences = {}
 	
 	ret.Equipped = {}	
 	readEquippedItems(ret)
@@ -681,7 +693,15 @@ function Amr:SerializePlayerData(data, complete)
         if data.Specs[spec] and (complete or spec == data.ActiveSpec) then
             table.insert(fields, ".s" .. spec) -- indicates the start of a spec block
 			table.insert(fields, data.Specs[spec])
-            table.insert(fields, data.Talents[spec] or "")			
+			table.insert(fields, data.Talents[spec] or "")
+			
+			local essences = {}
+			if data.Essences and data.Essences[spec] then
+				for i, ess in ipairs(data.Essences[spec]) do
+					table.insert(essences, table.concat(ess, "."))
+				end
+			end
+			table.insert(fields, table.concat(essences, "_"))
         end
     end
     
@@ -700,6 +720,14 @@ function Amr:SerializePlayerData(data, complete)
                 appendItemsToExport(fields, itemObjects)
             end
         end
+	end
+
+	-- export unlocked essences
+	if data.UnlockedEssences then
+		table.insert(fields, ".ess")
+		for i, ess in ipairs(data.UnlockedEssences) do
+			table.insert(fields, table.concat(ess, "_"))
+		end
 	end
     
     -- if doing a complete export, include bank/bag items too
@@ -729,11 +757,13 @@ function Amr:SerializePlayerData(data, complete)
 
 end
 
+--[[
 -- Shortcut for the common use case: serialize the player's currently active setup with no extras.
 function Amr:SerializePlayer()
 	local data = self:GetPlayerData()
 	return self:SerializePlayerData(data)
 end
+]]
 
 --[[
 ----------------------------------------------------------------------------------------------------------------------

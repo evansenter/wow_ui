@@ -453,6 +453,13 @@ AngryAssign_Pages = {
 		["Backup"] = "Blue -> Red eggs\n\nHealing CD during Frigid Blows\n1: Comet / Dank\n2: Lil / Akroma\n3: Comet / Luu\n4: Everything else",
 		["Contents"] = "Blue -> Red eggs\n\nHealing CD during Frigid Blows\n1: Comet / Dank\n2: Lil / Akroma\n3: Comet / Luu\n4: Everything else",
 	},
+	[3163238579] = {
+		["Updated"] = 1543377138,
+		["Name"] = "Mythic Fetid",
+		["Id"] = 3163238579,
+		["UpdateId"] = 1626975826,
+		["Contents"] = "Group 1 - 3 dps (Large ADD)\n\nGroup 2 - 6 dps\n{moon} > {square} > {star} > {diamond} > {x} > {circle}\n\nGroup 3 - 5 dps\n{circle} > {x} > {diamond} > {star} > {square} > {moon}\n\nPull - 2min\nCorps 1 - 3min\nCorps 2 - 2min\nCorps 3 - Lust + Pot\nBurn boss",
+	},
 	[2563753241] = {
 		["Updated"] = 1516155060,
 		["Name"] = "High Command",
@@ -460,13 +467,6 @@ AngryAssign_Pages = {
 		["UpdateId"] = 188904191,
 		["Backup"] = "Pods:\n1: Xorn/Ambro\n2:Thenex/Akroma\n3: Hex/Crongust\n\nDJ\nAngel\nFay\nLuumi\nEvan\nLil",
 		["Contents"] = "Pods:\n1: Telfina/Ambro\n2:Cenzic/Sinestro\n3: Hex/Crongust\n\nDJ\nAngel\nFay\nLuumi\nEvan\nLil",
-	},
-	[223793571] = {
-		["Updated"] = 1420677848,
-		["Name"] = "Twins 5 heal",
-		["Id"] = 223793571,
-		["UpdateId"] = 191581569,
-		["Contents"] = "Whirlwind (emp):\n1) (emp) Dj(Tranq) + Hockey + Cexcells\n2) (emp) Twin(Hymn) + Lan(Barrier) + Cexcells + Azpek\n\nShout:\n2) Devo\n4) Devo\n\nRubble:\n2)  Scar  + Tokman + Hemo + Gandalf\n3)  Dj tranq + Bluto (Smoke) + \n4)  Twin + Lanfear + Cexcells + Hockey\n5)  Scar + Tokman + Hemo + Gandalf\n\nQuake\n2) Twin + Captain + NVs \n3) Akroma + HS + personals",
 	},
 	[2820660469] = {
 		["Updated"] = 1507690371,
@@ -518,12 +518,12 @@ AngryAssign_Pages = {
 		["UpdateId"] = 1964057399,
 		["Contents"] = "1 - Bubby,Shen,Dumbnara\n2 - Papa,Indoubt, Ray\n3 - Meta, Mebrick\n4 - Ouro, viudoo\n5 - dog, Luumi\n6 - chris, Chris\n7 - comet,hivalue\n8 - Sauce,Tawwxic\n9 - Lani, Initiate",
 	},
-	[3163238579] = {
-		["Updated"] = 1543377138,
-		["Name"] = "Mythic Fetid",
-		["Id"] = 3163238579,
-		["UpdateId"] = 1626975826,
-		["Contents"] = "Group 1 - 3 dps (Large ADD)\n\nGroup 2 - 6 dps\n{moon} > {square} > {star} > {diamond} > {x} > {circle}\n\nGroup 3 - 5 dps\n{circle} > {x} > {diamond} > {star} > {square} > {moon}\n\nPull - 2min\nCorps 1 - 3min\nCorps 2 - 2min\nCorps 3 - Lust + Pot\nBurn boss",
+	[223793571] = {
+		["Updated"] = 1420677848,
+		["Name"] = "Twins 5 heal",
+		["Id"] = 223793571,
+		["UpdateId"] = 191581569,
+		["Contents"] = "Whirlwind (emp):\n1) (emp) Dj(Tranq) + Hockey + Cexcells\n2) (emp) Twin(Hymn) + Lan(Barrier) + Cexcells + Azpek\n\nShout:\n2) Devo\n4) Devo\n\nRubble:\n2)  Scar  + Tokman + Hemo + Gandalf\n3)  Dj tranq + Bluto (Smoke) + \n4)  Twin + Lanfear + Cexcells + Hockey\n5)  Scar + Tokman + Hemo + Gandalf\n\nQuake\n2) Twin + Captain + NVs \n3) Akroma + HS + personals",
 	},
 	[3302637128] = {
 		["Updated"] = 1544148751,

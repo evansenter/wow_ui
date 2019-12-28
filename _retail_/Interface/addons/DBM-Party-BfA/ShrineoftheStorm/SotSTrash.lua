@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod("SotSTrash", "DBM-Party-BfA", 4)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 18060 $"):sub(12, -3))
+mod:SetRevision("20191011015318")
 --mod:SetModelID(47785)
 mod:SetZone()
 
@@ -85,7 +85,7 @@ function mod:SPELL_CAST_START(args)
 	elseif spellId == 268184 and self:AntiSpam(4, 7) then
 		specWarnMinorSwiftness:Show()
 		specWarnMinorSwiftness:Play("moveboss")
-	elseif spellId == 276292 and self:AntiSpam(4, 8) then
+	elseif spellId == 276292 and self:AntiSpam(5, 8) then
 		specWarnWhirlingSlam:Show()
 		specWarnWhirlingSlam:Play("justrun")
 	elseif spellId == 268211 and self:AntiSpam(4, 10) then
@@ -123,7 +123,7 @@ function mod:SPELL_AURA_APPLIED(args)
 			specWarnConsumingVoidStop:Show(args.destName)
 			specWarnConsumingVoidStop:Play("stopattack")
 		end
-	elseif spellId == 268322 and args:IsDestTypePlayer() and self:AntiSpam(2, 3) then
+	elseif spellId == 268322 and args:IsDestTypePlayer() and self:CheckDispelFilter() and self:AntiSpam(2, 3) then
 		specWarnTouchofDrowned:Show(args.destName)
 		specWarnTouchofDrowned:Play("helpdispel")
 	elseif spellId == 268214 then

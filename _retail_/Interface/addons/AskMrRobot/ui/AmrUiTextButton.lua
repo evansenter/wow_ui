@@ -19,9 +19,18 @@ local CreateFrame, UIParent = CreateFrame, UIParent
 --[[-----------------------------------------------------------------------------
 Scripts
 -------------------------------------------------------------------------------]]
-local function buttonOnClick(frame, ...)
+-- to facilitate some use cases, we have click fired on PostClick for this widget
+--[[local function buttonOnClick(frame, ...)
 	AceGUI:ClearFocus()
 	--PlaySound("igMainMenuOption")
+	frame.obj:Fire("OnClick", ...)
+end]]
+
+local function buttonPreClick(frame, ...)
+	frame.obj:Fire("PreClick", ...)
+end
+
+local function buttonPostClick(frame, ...)
 	frame.obj:Fire("OnClick", ...)
 end
 
@@ -181,6 +190,19 @@ local methods = {
 		else
 			self.frame:Hide()
 		end
+	end,
+
+	--
+	-- If text is specified, turns this into a button that calls a macro
+	--
+	["SetMacroText"] = function(self, text)
+		if text then
+			self.frame:SetAttribute("type", "macro")
+			self.frame:SetAttribute("macrotext", text)
+		else
+			self.frame:SetAttribute("type", nil)
+			self.frame:SetAttribute("macrotext", nil)
+		end
 	end
 }
 
@@ -189,7 +211,7 @@ Constructor
 -------------------------------------------------------------------------------]]
 local function Constructor()
 	local name = "AmrUiTextButton" .. AceGUI:GetNextWidgetNum(Type)
-	local frame = CreateFrame("Button", name, UIParent)
+	local frame = CreateFrame("Button", name, UIParent, "SecureActionButtonTemplate")
 	frame:Hide()
 	
 	local txt = frame:CreateFontString()
@@ -201,7 +223,9 @@ local function Constructor()
 	frame:EnableMouse(true)
 	frame:SetScript("OnEnter", buttonOnEnter)
 	frame:SetScript("OnLeave", buttonOnLeave)
-	frame:SetScript("OnClick", buttonOnClick)
+	--frame:SetScript("OnClick", buttonOnClick)
+	frame:SetScript("PreClick", buttonPreClick)
+	frame:SetScript("PostClick", buttonPostClick)
 	
 	local bg = frame:CreateTexture()
 	bg:SetAllPoints()

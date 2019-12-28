@@ -1,12 +1,17 @@
 # BigWigs
 
-## [v123](https://github.com/BigWigsMods/BigWigs/tree/v123) (2018-12-14)
-[Full Changelog](https://github.com/BigWigsMods/BigWigs/compare/v122...v123)
+## [v170](https://github.com/BigWigsMods/BigWigs/tree/v170) (2019-12-05)
+[Full Changelog](https://github.com/BigWigsMods/BigWigs/compare/v169...v170)
 
-- Uldir: Add trash warning for Bloodshot Rage  
-- Uldir/Zekvoz: UnregisterUnitEvent call is no longer needed.  
-- Uldir/Zekvoz: Encounter Event spell for stage changes is now live  
-- Uldir/Taloc: Tweak cudgel timers  
 - bump version  
-- bump toc  
-- Plugins/AutoReply: IsCharacterFriend() has been replaced by C\_FriendList.IsFriend()  
+- EternalPalace/QueenAzshara: Use spellId not spellName when checking essence duration, closes #727  
+- ruRU update (#728)  
+- Nyalotha/NZoth: Remove initial say from Gift of NZoth  
+- Nyalotha: Fix spell ids  
+- Nyalotha: Hivemind, Skitra and Nzoth updates for PTR  
+- Nyalotha/Wrathion: Add missing flag  
+- Nyalotha/Wrathion: Cleanups  
+- Nyalotha/Wrathion: Initial PTR update  
+- Nyalotha/Vexiona: Fix locale  
+- Nyalotha/Vexiona: Cleanups  
+- Nyalotha/Vexiona: PTR updates  

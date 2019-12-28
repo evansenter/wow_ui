@@ -46,12 +46,15 @@ local function initializeDb()
 			LastVersion = 0,           -- used to clean out old stuff	
 			FirstUse = true,           -- true if this is first time use, gets cleared after seeing the export help splash window
 			Talents = {},              -- for each spec, selected talents
+			Essences = {},             -- for each spec, selected essences
+			UnlockedEssences = {},     -- unlocked essences for this character
 			Equipped = {},             -- for each spec, slot id to item info
 			BagItems = {},             -- list of item info for bags
 			BankItems = {},            -- list of item info for bank
 			BagItemsAndCounts = {},    -- used mainly for the shopping list
 			BankItemsAndCounts = {},   -- used mainly for the shopping list			
 			GearSetups = {},           -- imported gear sets
+			JunkData = {},             -- imported data about items that can be vendored/scrapped/disenchanted
 			ExtraEnchantData = {},     -- enchant id to enchant display information and material information
 			Logging = {                -- character logging settings
 				Enabled = false,       -- whether logging is currently on or not
@@ -66,8 +69,10 @@ local function initializeDb()
 			},
 			window = {},               -- main window position settings
 			shopWindow = {},           -- shopping list window position settings
+			junkWindow = {},           -- junk list window position settings
 			options = {
 				autoGear = false,      -- auto-equip saved gear sets when changing specs
+				junkVendor = false,    -- auto-show junk list at vendor/scrapper
 				shopAh = false,        -- auto-show shopping list at AH
 				disableEm = false,     -- disable auto-creation of equipment manager sets
 				uiScale = 1            -- custom scale for AMR UI
@@ -245,6 +250,7 @@ local _slashMethods = {
 	toggle    = "Toggle",
 	equip     = "EquipGearSet",
 	version   = "PrintVersions",
+	junk      = "ShowJunkWindow",
 	--wipe      = "Wipe",
 	--undowipe  = "UndoWipe",
 	reset     = "Reset",

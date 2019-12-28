@@ -1,7 +1,7 @@
 -- **************************************************************************
 -- * TitanLootType.lua
 -- *
--- * By: TitanMod, Dark Imakuni, Adsertor and the Titan Development Team
+-- * By: TitanMod, Dark Imakuni, Adsertor and the Titan Panel Development Team
 -- **************************************************************************
 
 -- ******************************** Constants *******************************
@@ -344,7 +344,7 @@ function TitanPanelRightClickMenu_PrepareLootTypeMenu()
 		L_UIDropDownMenu_AddButton(info,_G["L_UIDROPDOWNMENU_MENU_LEVEL"]);
 
 
-	elseif _G["UIDROPDOWNMENU_MENU_LEVEL"] == 2  and _G["UIDROPDOWNMENU_MENU_VALUE"] == "SetRaidDiff" then
+	elseif _G["L_UIDROPDOWNMENU_MENU_LEVEL"] == 2  and _G["L_UIDROPDOWNMENU_MENU_VALUE"] == "SetRaidDiff" then
 		info = {};
 		info.text = _G["GREEN_FONT_COLOR_CODE"].._G["PLAYER_DIFFICULTY1"].."|r";
 		info.func = function() SetRaidDifficultyID(1) end

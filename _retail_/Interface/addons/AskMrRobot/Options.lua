@@ -4,6 +4,7 @@ local AceGUI = LibStub("AceGUI-3.0")
 
 local _chkMinimap
 local _chkAutoGear
+local _chkJunk
 local _chkAh
 local _chkEm
 local _txtScale
@@ -45,10 +46,10 @@ end
 local function createCheck(container, setting, text, description)
 
 	local chk = AceGUI:Create("AmrUiCheckBox")
+	container:AddChild(chk)
 	chk:SetUserData("setting", setting)
 	chk:SetText(text)
 	chk:SetCallback("OnClick", onCheckClick)
-	container:AddChild(chk)
 	
 	local desc = AceGUI:Create("AmrUiLabel")
 	container:AddChild(desc)
@@ -106,14 +107,17 @@ function Amr:RenderTabOptions(container)
 	_chkAutoGear, desc2 = createCheck(container, "autoGear", L.OptionsAutoGearName, L.OptionsAutoGearDesc)
 	_chkAutoGear:SetPoint("TOPLEFT", desc.frame, "BOTTOMLEFT", -24, -20)
 	
-	_chkAh, desc = createCheck(container, "shopAh", L.OptionsShopAhName, L.OptionsShopAhDesc)
-	_chkAh:SetPoint("TOPLEFT", desc2.frame, "BOTTOMLEFT", -24, -20)
+	_chkJunk, desc = createCheck(container, "junkVendor", L.OptionsJunkVendorName, L.OptionsJunkVendorDesc)
+	_chkJunk:SetPoint("TOPLEFT", desc2.frame, "BOTTOMLEFT", -24, -20)
+
+	_chkAh, desc2 = createCheck(container, "shopAh", L.OptionsShopAhName, L.OptionsShopAhDesc)
+	_chkAh:SetPoint("TOPLEFT", desc.frame, "BOTTOMLEFT", -24, -20)
 	
-	_chkEm, desc2 = createCheck(container, "disableEm", L.OptionsDisableEmName, L.OptionsDisableEmDesc)
-	_chkEm:SetPoint("TOPLEFT", desc.frame, "BOTTOMLEFT", -24, -20)
+	_chkEm, desc = createCheck(container, "disableEm", L.OptionsDisableEmName, L.OptionsDisableEmDesc)
+	_chkEm:SetPoint("TOPLEFT", desc2.frame, "BOTTOMLEFT", -24, -20)
 	
-	_txtScale, desc = createSmallTextbox(container, "uiScale", L.OptionsUiScaleName, L.OptionsUiScaleDesc)
-	_txtScale:SetPoint("TOPLEFT", desc2.frame, "BOTTOMLEFT", -43, -20)
+	_txtScale, desc2 = createSmallTextbox(container, "uiScale", L.OptionsUiScaleName, L.OptionsUiScaleDesc)
+	_txtScale:SetPoint("TOPLEFT", desc.frame, "BOTTOMLEFT", -43, -20)
 	
 	-- initialize state of controls
 	Amr:RefreshOptionsUi()
@@ -122,6 +126,7 @@ end
 function Amr:ReleaseTabOptions()
 	_chkMinimap = nil
 	_chkAutoGear = nil
+	_chkJunk = nil
 	_chkAh = nil
 	_chkEm = nil
 	_txtScale = nil
@@ -136,7 +141,11 @@ function Amr:RefreshOptionsUi()
 	if _chkAutoGear then
 		_chkAutoGear:SetChecked(self.db.profile.options.autoGear)
 	end
-	
+
+	if _chkJunk then
+		_chkJunk:SetChecked(self.db.profile.options.junkVendor)
+	end
+
 	if _chkAh then
 		_chkAh:SetChecked(self.db.profile.options.shopAh)
 	end

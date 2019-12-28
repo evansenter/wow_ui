@@ -71,7 +71,10 @@ L.StatsShort = {
 }
 
 L.InstanceNames = {
-	[1861] = "Uldir"
+    [1861] = "Uldir",
+    [2070] = "Dazar'alor",
+    [2096] = "Crucible of Storms",
+    [2164] = "The Eternal Palace"
 }
 
 L.DifficultyNames = {
@@ -160,6 +163,7 @@ L.GearBlank2 = "Va sur askmrrobot.com pour optimiser ton stuff. Ensuite, utilise
 L.GearButtonEquip = function(spec)
 	return string.format("Activer la spé %s et équipper le stuff", spec)
 end
+L.GearButtonJunk = "Voir Junk List"
 L.GearButtonShop = "Voir Shopping List"
 
 L.GearEquipErrorCombat = "Impossible de changer de spé/stuff pendant un combat !"
@@ -206,6 +210,25 @@ L.ImportErrorFaction = "On dirait que tu as changé de faction. Rends-toi sur le
 L.ImportErrorLevel = "On dirait que tu as changé de niveau. Rends-toi sur le site pour ré-optimiser."
 
 L.ImportOverwolfWait = "Performing Best in Bags optimization.  Please do not press Escape or close the addon until it has completed!"
+
+
+--[[----------------------------------------------------------------------
+Junk List
+------------------------------------------------------------------------]]
+L.JunkTitle = "Junk List"
+L.JunkEmpty = "You have no junk items"
+L.JunkScrap = "Click an item to add to the scrapper"
+L.JunkVendor = "Click an item to sell"
+L.JunkDisenchant = "Click an item to disenchant"
+L.JunkBankText = function(count)
+	return count .. " junk items are not in your bags"
+end
+L.JunkMissingText = function(count)
+    return "Warning! " .. count .. " junk items could not be found"
+end
+L.JunkButtonBank = "Retrieve from Bank"
+L.JunkOutOfSync = "An item in your junk list could not be found. Try opening your bank for a few seconds, then export to the website, then import again."
+L.JunkItemNotFound = "That item could not be found in your bags. Try closing and opening the Junk List to refresh it."
 
 
 --[[----------------------------------------------------------------------
@@ -278,6 +301,9 @@ L.OptionsHideMinimapDesc = "L'icône de minimap est là pour te simplifier la vi
 
 L.OptionsAutoGearName = "Equippe le stuff automatiquement lors d'un changement de spé"
 L.OptionsAutoGearDesc = "Quand tu changes de spé (via l'interface utilisateur, un autre add-on, etc.) le stuff importé depuis AMR (onglet Gear) pour cette spé est automatiquement équippé."
+
+L.OptionsJunkVendorName = "Automatically show junk list at vendors and scrapper"
+L.OptionsJunkVendorDesc = "Whenever you open the scrapper or a vendor, automatically show the junk list window if your list is not empty."
 
 L.OptionsShopAhName = "Voir la shopping list automatiquement à l'hôtel des ventes"
 L.OptionsShopAhDesc = "Quand tu ouvres l'hôtel des ventes, la fenêtre de la shopping list s'ouvre automatiquement. Tu peux cliquer sur un item dans la shopping list pour le chercher automatiquement dans l'hôtel des ventes."

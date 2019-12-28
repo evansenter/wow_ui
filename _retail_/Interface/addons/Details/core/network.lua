@@ -43,6 +43,8 @@
 	local CONST_CLOUD_DATARC = "CE"
 	local CONST_CLOUD_EQUALIZE = "EQ"
 	
+	local CONST_CLOUD_SHAREDATA = "SD"
+	
 	local CONST_PVP_ENEMY = "PP"
 	
 	local CONST_ROGUE_SR = "SR" --soul rip from akaari's soul (LEGION ONLY)
@@ -65,6 +67,8 @@
 		["PVP_ENEMY"] = CONST_PVP_ENEMY,
 		
 		["MISSDATA_ROGUE_SOULRIP"] = CONST_ROGUE_SR, --soul rip from akaari's soul (LEGION ONLY)
+		
+		["CLOUD_SHAREDATA"] = CONST_CLOUD_SHAREDATA,
 	}
 	
 	local plugins_registred = {}
@@ -79,6 +83,12 @@
 	function _detalhes:SendCharacterData()
 		--> only send if in group
 		if (not IsInGroup() and not IsInRaid()) then
+			return
+		end
+		
+		if (DetailsFramework.IsClassicWow()) then
+			--average item level doesn't exists
+			--talent information is very different
 			return
 		end
 		
@@ -112,10 +122,10 @@
 		end
 		
 		--> get the spec ID
-		local spec = GetSpecialization()
+		local spec = DetailsFramework.GetSpecialization()
 		local currentSpec
 		if (spec) then
-			local specID = GetSpecializationInfo (spec)
+			local specID = DetailsFramework.GetSpecializationInfo (spec)
 			if (specID and specID ~= 0) then
 				currentSpec = specID
 			end
@@ -343,6 +353,19 @@
 		end
 	end
 	
+	--received an entire segment data from a user that is sharing with  the 'player'
+	function _detalhes.network.Cloud_SharedData (player, realm, core_version, data)
+	
+		if (core_version ~= _detalhes.realversion) then
+			if (core_version > _detalhes.realversion) then
+				--_detalhes:Msg ("your Details! is out dated and cannot perform the action, please update it.")
+			end
+			return false
+		end
+
+		
+	end
+	
 	--guild sync R = someone pressed the sync button
 	--guild sync L = list of fights IDs
 	--guild sync G = requested a list of encounters
@@ -405,6 +428,7 @@
 					
 					local from = UnitName ("player")
 					local realm = GetRealmName()
+					--todo: need to check if the target is still online
 					_detalhes:SendCommMessage (CONST_DETAILS_PREFIX, _detalhes:Serialize (CONST_GUILD_SYNC, from, realm, _detalhes.realversion, "A", data), "WHISPER", task.Target)
 					
 					if (_detalhes.debug) then

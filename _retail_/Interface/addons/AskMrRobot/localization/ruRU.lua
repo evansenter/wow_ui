@@ -71,14 +71,17 @@ L.StatsShort = {
 }
 
 L.InstanceNames = {
-	[1861] = "Uldir"
+    [1861] = "Uldir",
+    [2070] = "Dazar'alor",
+    [2096] = "Crucible of Storms",
+    [2164] = "The Eternal Palace"
 }
 
 L.DifficultyNames = {
 	[17] = "ЛФР",
 	[14] = "Нормал",
-	[15] = "Героический",
-	[16] = "Мифический"
+	[15] = "Гер",
+	[16] = "Миф"
 }
 
 L.WeaponTypes = {
@@ -163,6 +166,7 @@ L.GearBlank2 = "Перейдите на askmrrobot.com для оптимизац
 L.GearButtonEquip = function(spec)
 	return string.format("Активировать %s спек и одеть экипировку", spec)
 end
+L.GearButtonJunk = "Show Junk List"
 L.GearButtonShop = "Показать список покупок"
 
 L.GearEquipErrorCombat = "Вы не можете сменить спек/экипировку в бою!"
@@ -209,6 +213,25 @@ L.ImportErrorFaction = "Похоже, что Вы изменили фракци�
 L.ImportErrorLevel = "Похоже, что у Вас изменился уровень.  Пожалуйста, посетите снова сайт и заново сделайте оптимизацию."
 
 L.ImportOverwolfWait = "Выполняется оптимизация BestInBag.  Пожалуйста не нажимайте Esc и не закрывайте аддон пока операция не будет завершена!"
+
+
+--[[----------------------------------------------------------------------
+Junk List
+------------------------------------------------------------------------]]
+L.JunkTitle = "Junk List"
+L.JunkEmpty = "You have no junk items"
+L.JunkScrap = "Click an item to add to the scrapper"
+L.JunkVendor = "Click an item to sell"
+L.JunkDisenchant = "Click an item to disenchant"
+L.JunkBankText = function(count)
+	return count .. " junk items are not in your bags"
+end
+L.JunkMissingText = function(count)
+    return "Warning! " .. count .. " junk items could not be found"
+end
+L.JunkButtonBank = "Retrieve from Bank"
+L.JunkOutOfSync = "An item in your junk list could not be found. Try opening your bank for a few seconds, then export to the website, then import again."
+L.JunkItemNotFound = "That item could not be found in your bags. Try closing and opening the Junk List to refresh it."
 
 
 --[[----------------------------------------------------------------------
@@ -281,6 +304,9 @@ L.OptionsHideMinimapDesc = "Значок около миникарты созд�
 
 L.OptionsAutoGearName = "Автоматически одевать экипировку при смене спека"
 L.OptionsAutoGearDesc = "Если вы смените спек (посредством игрового меню, другого аддона, и т.д.), Ваши загруженные наборы (вкладка Экипировка) будут автоматически экипированы."
+
+L.OptionsJunkVendorName = "Automatically show junk list at vendors and scrapper"
+L.OptionsJunkVendorDesc = "Whenever you open the scrapper or a vendor, automatically show the junk list window if your list is not empty."
 
 L.OptionsShopAhName = "Автоматически показывать список покупок при открытии аукциона"
 L.OptionsShopAhDesc = "При открытии окна аукциона, автоматически показывать список покупок.  Вы можете кликнуть по предмету в списке покупок для быстрого поиска на аукционе."

@@ -7,6 +7,7 @@ local mod, CL = BigWigs:NewBoss("Heartsbane Triad", 1862, 2125)
 if not mod then return end
 mod:RegisterEnableMob(131825, 131823, 131824) -- Sister Briar, Sister Malady, Sister Solena
 mod.engageId = 2113
+mod.respawnTime = 20
 
 --------------------------------------------------------------------------------
 -- Locals
@@ -35,7 +36,7 @@ function mod:GetOptions()
 end
 
 function mod:OnBossEnable()
-	self:Log("SPELL_CAST_SUCCESS", "JaggedNettles", 260741)
+	self:Log("SPELL_CAST_START", "JaggedNettles", 260741)
 	self:Log("SPELL_CAST_SUCCESS", "UnstableRunicMark", 260703)
 	self:Log("SPELL_AURA_APPLIED", "UnstableRunicMarkApplied", 260703)
 	self:Log("SPELL_AURA_REMOVED", "UnstableRunicMarkRemoved", 260703)
@@ -54,10 +55,16 @@ end
 -- Event Handlers
 --
 
-function mod:JaggedNettles(args)
-	self:Message2(args.spellId, "orange")
-	self:PlaySound(args.spellId, "alarm")
-	self:Bar(args.spellId, 13.5)
+do
+	local function printTarget(self, name, guid)
+		self:TargetMessage2(260741, "orange", name) -- Jagged Nettles
+		self:PlaySound(260741, "alarm", nil, name) -- Jagged Nettles
+	end
+
+	function mod:JaggedNettles(args)
+		self:GetBossTarget(printTarget, 0.4, args.sourceGUID)
+		self:Bar(args.spellId, 13.5)
+	end
 end
 
 function mod:UnstableRunicMark(args)
@@ -96,7 +103,7 @@ end
 
 function mod:SoulManipulationRemovedFromBoss(args)
 	-- Move the icon away from the player and back to the boss
-	self:PrimaryIcon(260805, self:GetBossIdByGUID(args.destGUID)) -- Focusing Iris
+	self:PrimaryIcon(260805, self:GetBossId(args.destGUID)) -- Focusing Iris
 end
 
 function mod:AuraOfDread(args)
@@ -111,7 +118,7 @@ end
 function mod:FocusingIris(args)
 	self:Message2(args.spellId, "cyan", CL.other:format(args.spellName, args.destName))
 	self:PlaySound(args.spellId, "long")
-	self:PrimaryIcon(args.spellId, self:GetBossIdByGUID(args.destGUID))
+	self:PrimaryIcon(args.spellId, self:GetBossId(args.destGUID))
 	self:StopBar(260741) -- Jagged Nettles
 	self:StopBar(260703) -- Unstable Runic Mark
 

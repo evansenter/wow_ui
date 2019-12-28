@@ -107,7 +107,6 @@ L.ShowGuildMessages 		= "Zeige Meldungen für Kampfbeginn/Siege/Niederlagen für
 L.ShowGuildMessagesPlus		= "Zeige auch Meldungen für Kampfbeginn/Siege/Niederlagen für Mythisch+ Gildengruppen (benötigt Schlachtzugeinstellung)"
 L.WhisperMessages			= "Flüstermeldungen"
 L.AutoRespond 				= "Aktiviere automatische Antwort während eines Bosskampfes"
-L.EnableStatus 				= "Antworte auf 'status'-Flüsteranfragen"
 L.WhisperStats 				= "Füge Sieg-/Niederlagestatistik den Flüsterantworten hinzu"
 L.DisableStatusWhisper 		= "Deaktiviere 'status'-Flüsteranfragen für die gesamte Gruppe (nur als Gruppenleiter; nur für normale/heroische/mythische Schlachtzüge und Mythisch+ Dungeons)"
 L.DisableGuildStatus 		= "Deaktiviere das Senden von Fortschrittsmeldungen an die Gilde für die gesamte Gruppe (nur als Gruppenleiter)"
@@ -198,7 +197,7 @@ L.SpecialWarnSound5			= "Sound für Spezialwarnungen mit Notizen die deinen Name
 
 -- Tab: Spoken Alerts Frame
 L.Panel_SpokenAlerts		= "Gesprochene Warnungen"
-L.Area_VoiceSelection		= "Stimmenauswahl für akustische Zählungen und gesprochene Warnungen (scrollbar per Mausrad)"
+L.Area_VoiceSelection		= "Stimmenauswahl für akustische Zählungen und gesprochene Warnungen"
 L.CountdownVoice			= "Primäre Stimme für Zählungen"
 L.CountdownVoice2			= "Sekundäre Stimme für Zählungen"
 L.CountdownVoice3			= "Tertiäre Stimme für Zählungen"
@@ -226,7 +225,6 @@ L.EventWipeSound			= "Sound gespielt nach Niederlage im Kampf"
 L.EventEngageSound			= "Sound gespielt bei Kampfbeginn"
 L.EventDungeonMusic			= "Musik gepielt innerhalb Dungeons/SZs"
 L.EventEngageMusic			= "Musik gepielt während Kämpfen"
-L.EventTurtleMusic			= "Musik gepielt während Schildkrötenquests am Strand"
 L.Area_EventSoundsExtras	= "Einstellungen für Ereignisklänge"
 L.EventMusicCombined		= "Alle Musikauswahlmöglichkeiten für Dungeons und Kämpfe zulassen (Änderungen dieser Einstellung werden erst nach \"/reload\" sichtbar.)"
 L.Area_EventSoundsFilters	= "Filter für Ereignisklänge"
@@ -293,11 +291,6 @@ L.AfterFirst				= "Nach jeweils einmaligem Abspielen"
 L.Always					= ALWAYS
 L.CombatOnly				= "im Kampf deaktivieren (alle)"
 L.RaidCombat				= "im Kampf deaktivieren (nur Bosse)"
-L.HideBonusHeader			= "Verstecke das Beutefenster für den Bonuswurf in ..."
-L.TrivialContent			= "NICHT-mythischen Dungeons (<340)"--Basically anything below 340
-L.NormalRaider				= "Dungeons unter Mythisch+5 und in Schlachtzügen auf Schwierigkeitsgrad LFR (<355)"--Basically, anything below 355
-L.HeroicRaider				= "Dungeons unter Mythisch+10, SZ unter Heroisch, Nicht-Kriegsfront Weltbosse (<370)"--Basically anything below 370
-L.MythicRaider				= "allem unterhalb Schlachtzügen auf Schwierigkeitsgrad Mythisch (<385)"--Basically anything below 385
 
 L.Panel_ExtraFeatures		= "Sonstige Funktionen"
 --
@@ -321,7 +314,7 @@ L.ShowQueuePop				= "Zeige verbleibende Zeit zur Annahme einer Warteschlangenein
 L.Area_AutoLogging			= "Automatische Aufzeichnungen"
 L.AutologBosses				= "Automatische Aufzeichnung von Bosskämpfen im spieleigenen Kampflog (/dbm pull vor Bossen wird benötigt um die Aufzeichnung rechtzeitig für \"Pre-Pots\" und andere Ereignisse zu starten)"
 L.AdvancedAutologBosses		= "Automatische Aufzeichnung von Bosskämpfen mit Addon \"Transcriptor\""
-L.LogOnlyRaidBosses			= "Nur Schlachtzugbosskämpfe der aktuellen Erweiterung aufzeichnen\n(ohne Schlachtzugsbrowser-/Dungeon-/Szenarienbosskämpfe/alte Spielinhalte)"
+L.LogOnlyNonTrivial			= "Nur Schlachtzugbosskämpfe der aktuellen Erweiterung aufzeichnen\n(ohne Schlachtzugsbrowser-/Dungeon-/Szenarienbosskämpfe/alte Spielinhalte)"
 --
 L.Area_3rdParty				= "Einstellungen für Addons von Drittanbietern"
 L.ShowBBOnCombatStart		= "Führe bei Kampfbeginn eine \"BigBrother\"-Buffprüfung durch"

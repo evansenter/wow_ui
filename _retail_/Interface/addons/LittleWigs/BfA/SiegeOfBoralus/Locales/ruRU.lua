@@ -11,6 +11,25 @@ if L then
 	L.halberd = "Кул-тирасский стражник"
 	L.raider = "Налетчик из братства Стальных Волн"
 	L.vanguard = "Кул-тирасский боец авангарда"
+	L.marksman = "Кул-тирасский стрелок"
+	L.buccaneer = "Буканьер из братства Трюмных Крыс"
+	L.invader = "Захватчик дома Эшвейнов"
+	L.dockhound = "Злобный портовый пес"
+	L.shredder = "Мастер клинков прилива"
+	L.packmaster = "Портовый заводчик"
+	L.bomber = "Метатель черной смолы"
+end
+
+L = BigWigs:NewBossLocale("Sergeant Bainbridge", "ruRU")
+if L then
+	-- L.remaining = "%s on %s, %d remaining"
+	-- L.remaining_boss = "%s on BOSS, %d remaining"
+end
+
+L = BigWigs:NewBossLocale("Chopper Redhook", "ruRU")
+if L then
+	-- L.remaining = "%s on %s, %d remaining"
+	-- L.remaining_boss = "%s on BOSS, %d remaining"
 end
 
 L = BigWigs:NewBossLocale("Viq'Goth", "ruRU")

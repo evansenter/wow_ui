@@ -19,7 +19,7 @@ L.already_registered = "|cffff0000경고:|r |cff00ff00%s|r (|cffffff00%s|r)|1은
 L.officialRelease = "당신은 BigWigs %s (%s)의 공식 배포 버전을 실행 중입니다"
 L.alphaRelease = "당신은 BigWigs %s (%s)의 알파 버전을 실행 중입니다"
 L.sourceCheckout = "당신은 저장소로부터 직접 가져온 BigWigs %s의 소스를 실행 중입니다."
-L.getNewRelease = "당신의 BigWigs는 구버전이지만 (/bwv) Twitch 클라이언트를 사용해 쉽게 업데이트할 수 있습니다. 또는 curse.com이나 wowinterface.com에서 직접 업데이트할 수 있습니다."
+L.getNewRelease = "당신의 BigWigs는 구버전이지만 (/bwv) Twitch 클라이언트를 사용해 쉽게 업데이트할 수 있습니다. 또는 curseforge.com이나 wowinterface.com에서 직접 업데이트할 수 있습니다."
 L.warnTwoReleases = "당신의 BigWigs는 최신 버전보다 2번 앞서 배포된 구버전입니다! 당신의 버전은 오류가 있거나, 기능이 누락됐거나, 완전히 틀린 타이머를 가지고 있을 수 있습니다. 업데이트를 강력히 권장합니다."
 L.warnSeveralReleases = "|cffff0000당신의 BigWigs는 최신 버전보다 %d번 앞서 배포된 구버전입니다!! 다른 플레이어와 동기화 문제를 방지하기 위해 업데이트를 강력히 권장합니다!|r"
 
@@ -37,6 +37,7 @@ L.missingAddOn = "이 지역에서 타이머를 표시하려면 |cFF436EEE%s|r �
 L.disabledAddOn = "|cFF436EEE%s|r 애드온이 비활성화 중이므로 타이머를 표시할 수 없습니다."
 
 L.removeAddon = "'|cFF436EEE%s|r'|1이;가; '|cFF436EEE%s|r'|1으로;로; 대체되었으므로 제거해주세요."
+L.alternativeName = "%s (|cFF436EEE%s|r)"
 
 -- Media.lua
 L.Beware = "조심해라 (알갈론)"
@@ -81,7 +82,7 @@ L.slashDescRange = "|cFFFED000/range:|r 거리 지시기를 엽니다."
 L.slashDescVersion = "|cFFFED000/bwv:|r BigWigs 버전 확인을 수행합니다."
 L.slashDescConfig = "|cFFFED000/bw:|r BigWigs 구성을 엽니다."
 
-L.gitHubDesc = "BigWigs는 GitHub에 호스트되는 오픈 소스 소프트웨어입니다. 우리는 우리를 도와줄 새로운 사람들을 항상 찾고 있으며 우리의 코드를 누구나 살펴보는 것을 환영합니다, 기고를 만들고 오류 보고를 제출하세요. BigWigs는 현재 WoW 커뮤니티로부터 큰 도움을 받고 있습니다.\n\n|cFF33FF99이제 문서화된 우리의 API를 GitHub 위키에서 자유롭게 읽을 수 있습니다.|r"
+L.gitHubDesc = "BigWigs는 GitHub에 호스트되는 오픈 소스 소프트웨어입니다. 우리는 우리를 도와줄 새로운 사람들을 항상 찾고 있으며 우리의 코드를 누구나 살펴보는 것을 환영합니다, 기고를 만들고 오류 보고를 제출하세요. BigWigs는 현재 WoW 커뮤니티로부터 큰 도움을 받고 있습니다."
 
 L.BAR = "바"
 L.MESSAGE = "메시지"
@@ -117,14 +118,14 @@ L.COUNTDOWN = "초읽기"
 L.COUNTDOWN_desc = "활성화하면, 마지막 5초에 음성과 시각적 초읽기가 추가됩니다. 화면 가운데에 \"5... 4... 3... 2... 1...\"의 큰 숫자와 함께 초읽기를 해줍니다."
 L.INFOBOX = L.infobox
 L.INFOBOX_desc = L.infobox_desc
---L.SOUND = "Sound"
---L.SOUND_desc = "Boss abilities usually play sounds to help you notice them. If you disable this option, none of the sounds attached to it will play."
---L.CASTBAR = "Cast Bars"
---L.CASTBAR_desc = "Cast bars are sometimes shown on certain bosses, usually to bring attention to a critical ability incoming. If this ability is accompanied by a cast bar that you want to hide, disable this option."
---L.SAY_COUNTDOWN = "Say Countdown"
---L.SAY_COUNTDOWN_desc = "Chat bubbles are easy to spot. BigWigs will use multiple say messages counting down to alert people nearby that an ability on you is about to expire."
---L.ME_ONLY_EMPHASIZE = "Emphasize (me only)"
---L.ME_ONLY_EMPHASIZE_desc = "Enabling this will emphasize any messages associated with this ability ONLY if it is casted on you, making them larger and more visible."
+L.SOUND = "소리 내기"
+L.SOUND_desc = "보스의 능력들을 소리를 통해서 알려줍니다. 이 옵션을 비활성화 한다면 이 능력에 해당하는 소리가 들리지 않을 것입니다."
+L.CASTBAR = "시전 바"
+L.CASTBAR_desc = "주로 특정 중요 능력들을 시전하는 보스들을 상대할 때는 시전바가 표시됩니다. 이 능력에 해당하는 시전바를 숨기고 싶다면 이 옵션을 비활성화하세요."
+L.SAY_COUNTDOWN = "카운트 표시"
+L.SAY_COUNTDOWN_desc = "말풍선은 매우 알아보기 쉽습니다. BigWigs는 여러가지 말풍선으로 주위 사람들에게 어떤 능력이 만료된다는 것을 알려줍니다."
+L.ME_ONLY_EMPHASIZE = "강조(나에게 걸렸을 때만)"
+L.ME_ONLY_EMPHASIZE_desc = "이 옵션을 활성화하면 이 능력이 자신에게 영향을 끼칠때 메세지를 더 크고 는에 띄게 표시합니다."
 
 L.advanced = "고급 옵션"
 L.back = "<< 뒤로"

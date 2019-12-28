@@ -1,14 +1,15 @@
 
 Details_StreamerDB = {
 	["characters"] = {
-		["Evan - Illidan"] = "Comet - Illidan",
 		["Cometstorm - Illidan"] = "Comet - Illidan",
 		["Metal - Illidan"] = "Comet - Illidan",
 		["Cometron - Illidan"] = "Comet - Illidan",
 		["Plane - Illidan"] = "Comet - Illidan",
-		["Natal - Illidan"] = "Comet - Illidan",
 		["Pandatal - Illidan"] = "Comet - Illidan",
 		["Comet - Illidan"] = "Comet - Illidan",
+		["Combustion - Illidan"] = "Comet - Illidan",
+		["Evan - Illidan"] = "Comet - Illidan",
+		["Natal - Illidan"] = "Comet - Illidan",
 	},
 	["profiles"] = {
 		["Comet - Illidan"] = {
@@ -56,6 +57,11 @@ Details_StreamerDB = {
 				0.4, -- [4]
 			},
 			["arrow_texture"] = "Interface\\CHATFRAME\\ChatFrameExpandArrow",
+			["use_spark"] = true,
+			["y"] = -4.577636718750e-05,
+			["x"] = 0,
+			["font_face"] = "Friz Quadrata TT",
+			["font_size"] = 10,
 			["per_second"] = {
 				["enabled"] = false,
 				["point"] = "CENTER",
@@ -67,11 +73,6 @@ Details_StreamerDB = {
 				["update_speed"] = 0.05,
 				["attribute_type"] = 1,
 			},
-			["font_size"] = 10,
-			["x"] = 0,
-			["font_face"] = "Friz Quadrata TT",
-			["y"] = -4.577636718750e-05,
-			["use_spark"] = true,
 			["main_frame_strata"] = "LOW",
 			["main_frame_locked"] = false,
 			["arrow_anchor_y"] = 0,

@@ -60,9 +60,9 @@ ElvUI_AddOnSkins: disabled
 ElvUI_Raidcooldowns: enabled
 ElvUI: disabled
 DBM-Core: disabled
-DBM-DefaultSkin: enabled
-DBM-GUI: enabled
-DBM-Brawlers: enabled
+DBM-DefaultSkin: disabled
+DBM-GUI: disabled
+DBM-Brawlers: disabled
 DBM-HeartofFear: enabled
 DBM-MogushanVaults: enabled
 DBM-Pandaria: enabled
@@ -71,7 +71,7 @@ DBM-PvP: enabled
 DBM-Scenario-MoP: enabled
 DBM-TerraceofEndlessSpring: enabled
 DBM-ThroneofThunder: enabled
-DBM-WorldEvents: enabled
+DBM-WorldEvents: disabled
 linkloot: enabled
 TidyPlates_ThreatPlates: disabled
 Masque_Trinity: disabled
@@ -114,8 +114,8 @@ SharedMedia: enabled
 SharedMediaAdditionalFonts: enabled
 SpellStealer: enabled
 ElvUI_Enhanced: enabled
-DBM-StatusBarTimers: enabled
-DBM-DMF: enabled
+DBM-StatusBarTimers: disabled
+DBM-DMF: disabled
 ShamanFriend: disabled
 ShockAndAwe: disabled
 Carbonite: enabled
@@ -206,7 +206,7 @@ MogIt_Accessories: disabled
 MoveAnything: enabled
 SavedInstances: enabled
 WoWNotifier: disabled
-DBM-RaidLeadTools: enabled
+DBM-RaidLeadTools: disabled
 Kui_Nameplates: enabled
 Kui_Nameplates_Core_Config: enabled
 Kui_Nameplates_Core: enabled
@@ -329,9 +329,9 @@ CrucibleWeight: disabled
 TwintopInsanityBar: disabled
 DBM-AntorusBurningThrone: enabled
 DBM-Argus: enabled
-DBM-Azeroth-BfA: enabled
-DBM-Party-BfA: enabled
-DBM-Uldir: enabled
+DBM-Azeroth-BfA: disabled
+DBM-Party-BfA: disabled
+DBM-Uldir: disabled
 TidyPlatesContinued: disabled
 TidyPlatesContinuedHub: disabled
 TidyPlatesContinuedWidgets: disabled
@@ -378,8 +378,8 @@ Details_TinyThreat: enabled
 Details_Vanguard: enabled
 Details_3DModelsPaths: enabled
 Details_Streamer: enabled
-DBM-ZuldazarRaid: enabled
-DBM-CrucibleofStorms: enabled
+DBM-ZuldazarRaid: disabled
+DBM-CrucibleofStorms: disabled
 AAP-Core: disabled
 AAP-Cata-MoP: disabled
 AAP-Legion: disabled
@@ -413,3 +413,8 @@ BigWigs_Core: enabled
 BigWigs_Options: enabled
 BigWigs_Plugins: enabled
 BigWigs_CommonAuras: enabled
+BigWigs_Uldir: enabled
+BigWigs_BattleOfDazaralor: enabled
+BigWigs_Azeroth: enabled
+BigWigs_CrucibleOfStorms: enabled
+LittleWigs: enabled

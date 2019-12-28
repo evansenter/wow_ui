@@ -259,6 +259,48 @@ local function scanVoid()
 end
 ]]
 
+local function scanEssences()
+	if not C_AzeriteEssence then return end
+
+	-- read which essences this player has unlocked
+	Amr.db.char.UnlockedEssences = {}
+
+	local essences = C_AzeriteEssence.GetEssences()
+	if essences then
+		for i, essence in ipairs(essences) do
+			if essence.unlocked then
+				table.insert(Amr.db.char.UnlockedEssences, { essence.ID, essence.rank })
+			end
+		end 
+	end
+
+	local specPos = GetSpecialization()	
+	if not specPos or specPos < 1 or specPos > 4 then return end
+
+	if not Amr.db.char.Essences then
+		Amr.db.char.Essences = {}
+	end
+
+	Amr.db.char.Essences[specPos] = {}
+	local active = Amr.db.char.Essences[specPos]
+
+	local milestones = C_AzeriteEssence.GetMilestones()
+	if milestones then
+		for i, milestone in ipairs(milestones) do
+			-- if no slot, it corresponds to the stamina nodes, skip those
+			if milestone.slot ~= nil then
+				if milestone.unlocked then
+					local essenceId = C_AzeriteEssence.GetMilestoneEssence(milestone.ID)
+					if essenceId then
+						local essence = C_AzeriteEssence.GetEssenceInfo(essenceId)
+						table.insert(active, { milestone.slot, essence.ID, essence.rank })
+					end
+				end
+			end
+		end
+	end
+end
+
 local function scanTalents()	
 	local specPos = GetSpecialization()	
 	if not specPos or specPos < 1 or specPos > 4 then return end
@@ -302,8 +344,13 @@ function Amr:ExportCharacter()
 	
 	-- scan current spec's talents just before exporting
 	scanTalents()
+
+	-- scan current spec's essences just before exporting
+	scanEssences()
 	
 	data.Talents = Amr.db.char.Talents	
+	data.UnlockedEssences = Amr.db.char.UnlockedEssences
+	data.Essences = Amr.db.char.Essences
 	data.Equipped = Amr.db.char.Equipped	
 	data.BagItems = Amr.db.char.BagItems
 
@@ -337,3 +384,7 @@ Amr:AddEventHandler("BAG_UPDATE", onBankUpdated)
 --Amr:AddEventHandler("VOID_STORAGE_UPDATE", scanVoid)
 
 Amr:AddEventHandler("PLAYER_TALENT_UPDATE", scanTalents)
+
+if C_AzeriteEssence then
+	Amr:AddEventHandler("AZERITE_ESSENCE_UPDATE", scanEssences)
+end

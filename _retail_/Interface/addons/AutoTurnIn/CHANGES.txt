@@ -1,12 +1,10 @@
-tag 35cc5db228e1456c471c0580ff3841e4ec46b898 7.4.2
+lightweight tag bf75d21eb74ad5a1e0c135a5c3ae442699fd6f6e 7.4.3
 Author:	Alex Shubert <alex.shubert@gmail.com>
-Date:	Wed Nov 28 21:55:57 2018 -0500
+Date:	Tue Apr 2 20:49:07 2019 -0400
 
-7.4.2
-
-commit baf86eeeacff9e5bb51b6bab5e026c267cd47fe7
+commit bf75d21eb74ad5a1e0c135a5c3ae442699fd6f6e
 Author: Alex Shubert <alex.shubert@gmail.com>
-Date:   Wed Nov 28 21:55:31 2018 -0500
+Date:   Tue Apr 2 20:49:07 2019 -0400
 
-    ignore seals of fate
+    battle pet healing (en, de, ru)
 

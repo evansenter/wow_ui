@@ -3,7 +3,7 @@
 -- @author	Potdisc
 -- Create Date : 12/16/2014 8:24:04 PM
 
-local addon = LibStub("AceAddon-3.0"):GetAddon("RCLootCouncil")
+local _,addon = ...
 local LootFrame = addon:NewModule("RCLootFrame", "AceTimer-3.0", "AceEvent-3.0")
 local LibDialog = LibStub("LibDialog-1.0")
 local L = LibStub("AceLocale-3.0"):GetLocale("RCLootCouncil")
@@ -49,6 +49,7 @@ function LootFrame:AddItem (offset, k, item, reRoll)
 		sessions = {item.session},
 		isRoll = item.isRoll,
 		owner = item.owner,
+		typeCode = item.typeCode,
 	}
 end
 
@@ -167,13 +168,13 @@ function LootFrame:OnRoll(entry, button)
 		-- target, session, response, isTier, isRelic, note, link, ilvl, equipLoc, relicType, sendAvgIlvl, sendSpecID
 		local isTier = item.isTier and addon.mldb.tierButtonsEnabled
 		local isRelic = item.isRelic and addon.mldb.relicButtonsEnabled
-		addon:Debug("LootFrame:Response", button, "Response:", addon:GetResponse(item.equipLoc, button).text)
+		addon:Debug("LootFrame:Response", button, "Response:", addon:GetResponse(item.typeCode or item.equipLoc, button).text)
 		for _, session in ipairs(item.sessions) do
 			addon:SendResponse("group", session, button, isTier, isRelic, item.note)
 		end
 		if addon:Getdb().printResponse then
 			addon:Print(string.format(L["Response to 'item'"], addon:GetItemTextWithCount(item.link, #item.sessions))..
-				": "..addon:GetResponse(item.equipLoc, button).text)
+				": "..addon:GetResponse(item.typeCode or item.equipLoc, button).text)
 		end
 		item.rolled = true
 		self.EntryManager:Trash(entry)
@@ -189,10 +190,11 @@ function LootFrame:OnRoll(entry, button)
 			entry.buttons[2]:Hide() -- Hide pass button
 			-- Hide the frame later
 		else
-			-- When frame is roll type, and we choose to not roll, do nothing.
+			-- When frame is roll type, and we choose to not roll, but send a "-"
 			item.rolled = true
 			self.EntryManager:Trash(entry)
 			self:Update()
+			addon:SendCommand("group", "roll", addon.playerName, "-", item.sessions)
 		end
 	end
 
@@ -527,7 +529,7 @@ do
 	function LootFrame.EntryManager:GetNewEntry(item)
 		--addon:DebugLog("Creating Entry:", "normal", item.link)
 		local Entry = setmetatable({}, mt)
-		Entry.type = item.equipLoc
+		Entry.type = item.typeCode or item.equipLoc
 		Entry:Create(LootFrame.frame.content)
 		Entry:Update(item)
 		return Entry

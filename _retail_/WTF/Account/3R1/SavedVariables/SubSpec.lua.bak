@@ -92,9 +92,9 @@ SubSpecStorage = {
 					["column"] = 3,
 				}, -- [1]
 				{
-					["id"] = 19818,
-					["name"] = "Chi Torpedo",
-					["column"] = 2,
+					["id"] = 19302,
+					["name"] = "Tiger's Lust",
+					["column"] = 3,
 				}, -- [2]
 				{
 					["id"] = 19771,
@@ -102,9 +102,9 @@ SubSpecStorage = {
 					["column"] = 2,
 				}, -- [3]
 				{
-					["id"] = 19995,
-					["name"] = "Ring of Peace",
-					["column"] = 3,
+					["id"] = 23364,
+					["name"] = "Good Karma",
+					["column"] = 2,
 				}, -- [4]
 				{
 					["id"] = 20175,
@@ -194,14 +194,14 @@ SubSpecStorage = {
 					["column"] = 2,
 				}, -- [5]
 				{
-					["id"] = 21719,
-					["name"] = "Mindbender",
-					["column"] = 2,
+					["id"] = 21718,
+					["name"] = "Lingering Insanity",
+					["column"] = 1,
 				}, -- [6]
 				{
-					["id"] = 21978,
-					["name"] = "Dark Ascension",
-					["column"] = 2,
+					["id"] = 21637,
+					["name"] = "Legacy of the Void",
+					["column"] = 1,
 				}, -- [7]
 			},
 		}, -- [1]
@@ -637,9 +637,9 @@ SubSpecStorage = {
 					["column"] = 3,
 				}, -- [4]
 				{
-					["id"] = 22327,
-					["name"] = "Binding Heal",
-					["column"] = 2,
+					["id"] = 21754,
+					["name"] = "Circle of Healing",
+					["column"] = 3,
 				}, -- [5]
 				{
 					["id"] = 19767,

@@ -43,13 +43,13 @@ VER 3 0100000000000023 "PW:R" "INV_Misc_QuestionMark"
 #showtooltip
 /use [@mouseover,help,nodead][]Power Word: Radiance
 END
-VER 3 010000000000002B "PW:S" "612968"
-#showtooltip
-/use [@mouseover,harm,nodead][harm,nodead][@mouseovertarget,harm,nodead][]Power Word: Solace
-END
 VER 3 0100000000000005 "PW:S" "INV_Misc_QuestionMark"
 #showtooltip
 /use [@mouseover,help,nodead][]Power Word: Shield
+END
+VER 3 010000000000002B "PW:S" "612968"
+#showtooltip
+/use [@mouseover,harm,nodead][harm,nodead][@mouseovertarget,harm,nodead][]Power Word: Solace
 END
 VER 3 0100000000000025 "Renew" "INV_Misc_QuestionMark"
 #showtooltip

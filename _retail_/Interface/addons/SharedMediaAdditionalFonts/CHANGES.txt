@@ -1,8 +1,10 @@
-------------------------------------------------------------------------
-r106 | AllInOneMighty | 2018-07-19 04:42:57 +0000 (Thu, 19 Jul 2018) | 1 line
-Changed paths:
-   M /trunk/SharedMediaAdditionalFonts.toc
+tag 38011c2f84a27b98dfa7a6b23853f4351bf5ff2f 8.2.5
+Author:	AllInOneMighty <emmanuel.cron@gmail.com>
+Date:	Fri Sep 27 00:00:17 2019 -0700
 
-Removed loading of MyAdditionalFonts.lua
-------------------------------------------------------------------------
+commit af79d69e611d1be20ab3b50bdc732368e25fccad
+Author: AllInOneMighty <emmanuel.cron@gmail.com>
+Date:   Fri Sep 27 00:00:08 2019 -0700
+
+    Updating TOC
 

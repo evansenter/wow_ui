@@ -1,14 +1,19 @@
 
 GoldSave = {
+	["Combustion_Illidan::Horde"] = {
+		["show"] = true,
+		["name"] = "Combustion",
+		["gold"] = 0,
+	},
 	["Comet_Illidan::Horde"] = {
 		["show"] = true,
 		["name"] = "Comet",
-		["gold"] = 286429572,
+		["gold"] = 925961674,
 	},
 	["Evan_Illidan::Horde"] = {
 		["show"] = true,
 		["name"] = "Evan",
-		["gold"] = 56137024,
+		["gold"] = 19237588,
 	},
 	["Plane_Illidan::Alliance"] = {
 		["show"] = true,

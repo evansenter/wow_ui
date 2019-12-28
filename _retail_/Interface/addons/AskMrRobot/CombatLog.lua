@@ -8,8 +8,9 @@ local _panelUndoWipe = nil
 local _chkAutoAll = nil
 local _autoChecks = nil
 
-local function createDifficultyCheckBox(instanceId, difficultyId)
+local function createDifficultyCheckBox(instanceId, difficultyId, container)
 	local chk = AceGUI:Create("AmrUiCheckBox")
+	container:AddChild(chk)
 	chk:SetText(L.DifficultyNames[difficultyId])
 	chk:SetCallback("OnClick", function(widget)
 		Amr:ToggleAutoLog(instanceId, difficultyId)
@@ -44,23 +45,19 @@ local function renderAutoLogSection(instanceId, container, i, autoLbls, autoChks
 	line:SetPoint("TOPLEFT", lbl.frame, "BOTTOMLEFT", 1, -7)
 	line:SetPoint("TOPRIGHT", lbl.frame, "BOTTOMRIGHT", 0, -7)
 	
-	local chkMythic = createDifficultyCheckBox(instanceId, Amr.Difficulties.Mythic)
-	container:AddChild(chkMythic)
+	local chkMythic = createDifficultyCheckBox(instanceId, Amr.Difficulties.Mythic, container)
 	chkMythic:SetPoint("TOPLEFT", line.frame, "BOTTOMLEFT", 0, -8)
-	
-	local chkNormal = createDifficultyCheckBox(instanceId, Amr.Difficulties.Normal)
-	container:AddChild(chkNormal)
+
+	local chkNormal = createDifficultyCheckBox(instanceId, Amr.Difficulties.Normal, container)
 	chkNormal:SetPoint("TOPLEFT", line.frame, "BOTTOMLEFT", 0, -30)
 
 	-- find the widest of mythic/normal
 	local w = math.max(chkMythic:GetWidth(), chkNormal:GetWidth())
 	
-	local chkHeroic = createDifficultyCheckBox(instanceId, Amr.Difficulties.Heroic)
-	container:AddChild(chkHeroic)
+	local chkHeroic = createDifficultyCheckBox(instanceId, Amr.Difficulties.Heroic, container)
 	chkHeroic:SetPoint("TOPLEFT", line.frame, "BOTTOMLEFT", w + 20, -8)
 	
-	local chkLfr = createDifficultyCheckBox(instanceId, Amr.Difficulties.Lfr)
-	container:AddChild(chkLfr)
+	local chkLfr = createDifficultyCheckBox(instanceId, Amr.Difficulties.Lfr, container)
 	chkLfr:SetPoint("TOPLEFT", line.frame, "BOTTOMLEFT", w + 20, -30)
 		
 	return lbl, chkNormal
@@ -71,13 +68,13 @@ function Amr:RenderTabLog(container)
 
 	-- main commands
 	_btnToggle = AceGUI:Create("AmrUiButton")
+	container:AddChild(_btnToggle)
 	_btnToggle:SetText(L.LogButtonStartText)
 	_btnToggle:SetBackgroundColor(Amr.Colors.Green)
 	_btnToggle:SetFont(Amr.CreateFont("Bold", 16, Amr.Colors.White))
 	_btnToggle:SetWidth(200)
 	_btnToggle:SetHeight(26)
 	_btnToggle:SetCallback("OnClick", function() Amr:ToggleLogging() end)
-	container:AddChild(_btnToggle)
 	_btnToggle:SetPoint("TOPLEFT", container.content, "TOPLEFT", 0, -40)
 	
 	_lblLogging = AceGUI:Create("AmrUiLabel")
@@ -89,13 +86,13 @@ function Amr:RenderTabLog(container)
 	_lblLogging:SetPoint("TOP", _btnToggle.frame, "BOTTOM", 0, -5)
 	
 	local btnReload = AceGUI:Create("AmrUiButton")
+	container:AddChild(btnReload)
 	btnReload:SetText(L.LogButtonReloadText)
 	btnReload:SetBackgroundColor(Amr.Colors.Blue)
 	btnReload:SetFont(Amr.CreateFont("Bold", 16, Amr.Colors.White))
 	btnReload:SetWidth(200)
 	btnReload:SetHeight(26)
 	btnReload:SetCallback("OnClick", ReloadUI)
-	container:AddChild(btnReload)
 	btnReload:SetPoint("TOPLEFT", _btnToggle.frame, "TOPRIGHT", 40, 0)
 	
 	--[[
@@ -176,9 +173,9 @@ function Amr:RenderTabLog(container)
 	lbl:SetPoint("TOPLEFT", _btnToggle.frame, "BOTTOMLEFT", 0, -40)
 	
 	_chkAutoAll = AceGUI:Create("AmrUiCheckBox")
+	container:AddChild(_chkAutoAll)
 	_chkAutoAll:SetText(L.LogAutoAllText)
 	_chkAutoAll:SetCallback("OnClick", function(widget) Amr:ToggleAllAutoLog() end)
-	container:AddChild(_chkAutoAll)
 	_chkAutoAll:SetPoint("TOPLEFT", lbl.frame, "BOTTOMLEFT", 1, -15)
 	
 	_autoChecks = {}
